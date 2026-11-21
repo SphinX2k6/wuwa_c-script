@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -15,14 +14,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020025AD RID: 9645
+// Token: 0x02001A98 RID: 6808
 [UClass("/Game/Aki/TypeScript/Game/Module/Photograph/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/Photograph/TsPhotographer.TsPhotographer_C")]
 public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700191B RID: 6427
-	// (get) Token: 0x0601386B RID: 79979 RVA: 0x004E0BC7 File Offset: 0x004DEDC7
-	// (set) Token: 0x0601386C RID: 79980 RVA: 0x004E0BDB File Offset: 0x004DEDDB
+	// Token: 0x17001955 RID: 6485
+	// (get) Token: 0x06010D4D RID: 68941 RVA: 0x004EF6FB File Offset: 0x004ED8FB
+	// (set) Token: 0x06010D4E RID: 68942 RVA: 0x004EF70F File Offset: 0x004ED90F
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UCapsuleComponent CapsuleCollision
@@ -39,9 +38,9 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700191C RID: 6428
-	// (get) Token: 0x0601386D RID: 79981 RVA: 0x004E0BF0 File Offset: 0x004DEDF0
-	// (set) Token: 0x0601386E RID: 79982 RVA: 0x004E0C04 File Offset: 0x004DEE04
+	// Token: 0x17001956 RID: 6486
+	// (get) Token: 0x06010D4F RID: 68943 RVA: 0x004EF724 File Offset: 0x004ED924
+	// (set) Token: 0x06010D50 RID: 68944 RVA: 0x004EF738 File Offset: 0x004ED938
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe USpringArmComponent CameraArm
@@ -58,9 +57,9 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700191D RID: 6429
-	// (get) Token: 0x0601386F RID: 79983 RVA: 0x004E0C19 File Offset: 0x004DEE19
-	// (set) Token: 0x06013870 RID: 79984 RVA: 0x004E0C29 File Offset: 0x004DEE29
+	// Token: 0x17001957 RID: 6487
+	// (get) Token: 0x06010D51 RID: 68945 RVA: 0x004EF74D File Offset: 0x004ED94D
+	// (set) Token: 0x06010D52 RID: 68946 RVA: 0x004EF75D File Offset: 0x004ED95D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CameraInitializeFov
 	{
@@ -74,9 +73,9 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700191E RID: 6430
-	// (get) Token: 0x06013871 RID: 79985 RVA: 0x004E0C3A File Offset: 0x004DEE3A
-	// (set) Token: 0x06013872 RID: 79986 RVA: 0x004E0C4E File Offset: 0x004DEE4E
+	// Token: 0x17001958 RID: 6488
+	// (get) Token: 0x06010D53 RID: 68947 RVA: 0x004EF76E File Offset: 0x004ED96E
+	// (set) Token: 0x06010D54 RID: 68948 RVA: 0x004EF782 File Offset: 0x004ED982
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector CameraArmInitializeSocketOffset
 	{
@@ -90,9 +89,9 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700191F RID: 6431
-	// (get) Token: 0x06013873 RID: 79987 RVA: 0x004E0C63 File Offset: 0x004DEE63
-	// (set) Token: 0x06013874 RID: 79988 RVA: 0x004E0C73 File Offset: 0x004DEE73
+	// Token: 0x17001959 RID: 6489
+	// (get) Token: 0x06010D55 RID: 68949 RVA: 0x004EF797 File Offset: 0x004ED997
+	// (set) Token: 0x06010D56 RID: 68950 RVA: 0x004EF7A7 File Offset: 0x004ED9A7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CameraUpAndDownMaxDistance
 	{
@@ -106,9 +105,9 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17001920 RID: 6432
-	// (get) Token: 0x06013875 RID: 79989 RVA: 0x004E0C84 File Offset: 0x004DEE84
-	// (set) Token: 0x06013876 RID: 79990 RVA: 0x004E0C94 File Offset: 0x004DEE94
+	// Token: 0x1700195A RID: 6490
+	// (get) Token: 0x06010D57 RID: 68951 RVA: 0x004EF7B8 File Offset: 0x004ED9B8
+	// (set) Token: 0x06010D58 RID: 68952 RVA: 0x004EF7C8 File Offset: 0x004ED9C8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CameraLeftAndRightMaxDistance
 	{
@@ -122,9 +121,9 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17001921 RID: 6433
-	// (get) Token: 0x06013877 RID: 79991 RVA: 0x004E0CA5 File Offset: 0x004DEEA5
-	// (set) Token: 0x06013878 RID: 79992 RVA: 0x004E0CB5 File Offset: 0x004DEEB5
+	// Token: 0x1700195B RID: 6491
+	// (get) Token: 0x06010D59 RID: 68953 RVA: 0x004EF7D9 File Offset: 0x004ED9D9
+	// (set) Token: 0x06010D5A RID: 68954 RVA: 0x004EF7E9 File Offset: 0x004ED9E9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CameraForwardAndBackMaxDistance
 	{
@@ -138,9 +137,9 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17001922 RID: 6434
-	// (get) Token: 0x06013879 RID: 79993 RVA: 0x004E0CC6 File Offset: 0x004DEEC6
-	// (set) Token: 0x0601387A RID: 79994 RVA: 0x004E0CD6 File Offset: 0x004DEED6
+	// Token: 0x1700195C RID: 6492
+	// (get) Token: 0x06010D5B RID: 68955 RVA: 0x004EF7FA File Offset: 0x004ED9FA
+	// (set) Token: 0x06010D5C RID: 68956 RVA: 0x004EF80A File Offset: 0x004EDA0A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CameraUpAndDownSpeed
 	{
@@ -154,9 +153,9 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17001923 RID: 6435
-	// (get) Token: 0x0601387B RID: 79995 RVA: 0x004E0CE7 File Offset: 0x004DEEE7
-	// (set) Token: 0x0601387C RID: 79996 RVA: 0x004E0CF7 File Offset: 0x004DEEF7
+	// Token: 0x1700195D RID: 6493
+	// (get) Token: 0x06010D5D RID: 68957 RVA: 0x004EF81B File Offset: 0x004EDA1B
+	// (set) Token: 0x06010D5E RID: 68958 RVA: 0x004EF82B File Offset: 0x004EDA2B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CameraLeftAndRightSpeed
 	{
@@ -170,9 +169,9 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17001924 RID: 6436
-	// (get) Token: 0x0601387D RID: 79997 RVA: 0x004E0D08 File Offset: 0x004DEF08
-	// (set) Token: 0x0601387E RID: 79998 RVA: 0x004E0D18 File Offset: 0x004DEF18
+	// Token: 0x1700195E RID: 6494
+	// (get) Token: 0x06010D5F RID: 68959 RVA: 0x004EF83C File Offset: 0x004EDA3C
+	// (set) Token: 0x06010D60 RID: 68960 RVA: 0x004EF84C File Offset: 0x004EDA4C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CameraForwardAndBackSpeed
 	{
@@ -186,9 +185,9 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17001925 RID: 6437
-	// (get) Token: 0x0601387F RID: 79999 RVA: 0x004E0D29 File Offset: 0x004DEF29
-	// (set) Token: 0x06013880 RID: 80000 RVA: 0x004E0D39 File Offset: 0x004DEF39
+	// Token: 0x1700195F RID: 6495
+	// (get) Token: 0x06010D61 RID: 68961 RVA: 0x004EF85D File Offset: 0x004EDA5D
+	// (set) Token: 0x06010D62 RID: 68962 RVA: 0x004EF86D File Offset: 0x004EDA6D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float MinFov
 	{
@@ -202,9 +201,9 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17001926 RID: 6438
-	// (get) Token: 0x06013881 RID: 80001 RVA: 0x004E0D4A File Offset: 0x004DEF4A
-	// (set) Token: 0x06013882 RID: 80002 RVA: 0x004E0D5A File Offset: 0x004DEF5A
+	// Token: 0x17001960 RID: 6496
+	// (get) Token: 0x06010D63 RID: 68963 RVA: 0x004EF87E File Offset: 0x004EDA7E
+	// (set) Token: 0x06010D64 RID: 68964 RVA: 0x004EF88E File Offset: 0x004EDA8E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float MaxFov
 	{
@@ -218,9 +217,9 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17001927 RID: 6439
-	// (get) Token: 0x06013883 RID: 80003 RVA: 0x004E0D6B File Offset: 0x004DEF6B
-	// (set) Token: 0x06013884 RID: 80004 RVA: 0x004E0D7B File Offset: 0x004DEF7B
+	// Token: 0x17001961 RID: 6497
+	// (get) Token: 0x06010D65 RID: 68965 RVA: 0x004EF89F File Offset: 0x004EDA9F
+	// (set) Token: 0x06010D66 RID: 68966 RVA: 0x004EF8AF File Offset: 0x004EDAAF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CurCameraUpAndDownDistance
 	{
@@ -234,9 +233,9 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17001928 RID: 6440
-	// (get) Token: 0x06013885 RID: 80005 RVA: 0x004E0D8C File Offset: 0x004DEF8C
-	// (set) Token: 0x06013886 RID: 80006 RVA: 0x004E0D9C File Offset: 0x004DEF9C
+	// Token: 0x17001962 RID: 6498
+	// (get) Token: 0x06010D67 RID: 68967 RVA: 0x004EF8C0 File Offset: 0x004EDAC0
+	// (set) Token: 0x06010D68 RID: 68968 RVA: 0x004EF8D0 File Offset: 0x004EDAD0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CurCameraLeftAndRightDistance
 	{
@@ -250,9 +249,9 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17001929 RID: 6441
-	// (get) Token: 0x06013887 RID: 80007 RVA: 0x004E0DAD File Offset: 0x004DEFAD
-	// (set) Token: 0x06013888 RID: 80008 RVA: 0x004E0DBD File Offset: 0x004DEFBD
+	// Token: 0x17001963 RID: 6499
+	// (get) Token: 0x06010D69 RID: 68969 RVA: 0x004EF8E1 File Offset: 0x004EDAE1
+	// (set) Token: 0x06010D6A RID: 68970 RVA: 0x004EF8F1 File Offset: 0x004EDAF1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CurCameraForwardAndBackDistance
 	{
@@ -266,27 +265,21 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06013889 RID: 80009 RVA: 0x004E0DD0 File Offset: 0x004DEFD0
+	// Token: 0x06010D6B RID: 68971 RVA: 0x004EF904 File Offset: 0x004EDB04
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void Initialize()
+	public virtual void Initialize()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("Initialize"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("Initialize"), TsPhotographer.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.Initialize_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601388A RID: 80010 RVA: 0x004E0E40 File Offset: 0x004DF040
+	// Token: 0x06010D6C RID: 68972 RVA: 0x004EF960 File Offset: 0x004EDB60
 	protected void Initialize_Implementation()
 	{
 		this.RelativeVectorCache = new FVector?(new FVector());
@@ -362,7 +355,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		this.RefreshDitherEffect();
 	}
 
-	// Token: 0x0601388B RID: 80011 RVA: 0x004E11BC File Offset: 0x004DF3BC
+	// Token: 0x06010D6D RID: 68973 RVA: 0x004EFCDC File Offset: 0x004EDEDC
 	private void InitCameraNpcSphereTrace()
 	{
 		this.CameraNpcSphereTrace = new UTraceSphereElement();
@@ -375,27 +368,21 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		this.CameraNpcSphereTrace.ActorsToIgnore.Add(this.Character);
 	}
 
-	// Token: 0x0601388C RID: 80012 RVA: 0x004E1240 File Offset: 0x004DF440
+	// Token: 0x06010D6E RID: 68974 RVA: 0x004EFD60 File Offset: 0x004EDF60
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void ReceiveDestroyed()
+	public override void ReceiveDestroyed()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveDestroyed"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveDestroyed"), TsPhotographer.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ReceiveDestroyed_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601388D RID: 80013 RVA: 0x004E12B0 File Offset: 0x004DF4B0
+	// Token: 0x06010D6F RID: 68975 RVA: 0x004EFDB9 File Offset: 0x004EDFB9
 	protected virtual void ReceiveDestroyed_Implementation()
 	{
 		this.Character = null;
@@ -407,28 +394,25 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x0601388E RID: 80014 RVA: 0x004E12DC File Offset: 0x004DF4DC
+	// Token: 0x06010D70 RID: 68976 RVA: 0x004EFDE4 File Offset: 0x004EDFE4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTick(float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		AActor.__ReceiveTick_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTick"), TsPhotographer.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((AActor.__ReceiveTick_FunctionParams*)ptr + 15L / (long)sizeof(AActor.__ReceiveTick_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTick_Implementation(deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		AActor.__ReceiveTick_FunctionParams* ptr = stackalloc AActor.__ReceiveTick_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(AActor.__ReceiveTick_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601388F RID: 80015 RVA: 0x004E1352 File Offset: 0x004DF552
+	// Token: 0x06010D71 RID: 68977 RVA: 0x004EFE70 File Offset: 0x004EE070
 	protected virtual void ReceiveTick_Implementation(float deltaSeconds)
 	{
 		this.RefreshPlayerLocation();
@@ -445,27 +429,21 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		this.RefreshCameraArm();
 	}
 
-	// Token: 0x06013890 RID: 80016 RVA: 0x004E1388 File Offset: 0x004DF588
+	// Token: 0x06010D72 RID: 68978 RVA: 0x004EFEA4 File Offset: 0x004EE0A4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void RefreshPlayerLocation()
+	public virtual void RefreshPlayerLocation()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RefreshPlayerLocation"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RefreshPlayerLocation"), TsPhotographer.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.RefreshPlayerLocation_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06013891 RID: 80017 RVA: 0x004E13F8 File Offset: 0x004DF5F8
+	// Token: 0x06010D73 RID: 68979 RVA: 0x004EFF00 File Offset: 0x004EE100
 	protected void RefreshPlayerLocation_Implementation()
 	{
 		if (this.PlayerLocation == null)
@@ -482,7 +460,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06013892 RID: 80018 RVA: 0x004E1454 File Offset: 0x004DF654
+	// Token: 0x06010D74 RID: 68980 RVA: 0x004EFF5C File Offset: 0x004EE15C
 	private void RefreshDitherEffect()
 	{
 		if (!this.IsLoadingConfigCompleted)
@@ -510,7 +488,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		this.Character.SetDitherEffect((float)characterDither, ECharacterDitherType.Fight);
 	}
 
-	// Token: 0x06013893 RID: 80019 RVA: 0x004E14E4 File Offset: 0x004DF6E4
+	// Token: 0x06010D75 RID: 68981 RVA: 0x004EFFEC File Offset: 0x004EE1EC
 	private void RefreshTeamDither()
 	{
 		if (!this.IsLoadingConfigCompleted)
@@ -560,7 +538,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06013894 RID: 80020 RVA: 0x004E1608 File Offset: 0x004DF808
+	// Token: 0x06010D76 RID: 68982 RVA: 0x004F0110 File Offset: 0x004EE310
 	private void RefreshCameraArm()
 	{
 		if (this.PitchInput == 0f && this.YawInput == 0f)
@@ -592,7 +570,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		this.YawInput = 0f;
 	}
 
-	// Token: 0x06013895 RID: 80021 RVA: 0x004E1788 File Offset: 0x004DF988
+	// Token: 0x06010D77 RID: 68983 RVA: 0x004F0290 File Offset: 0x004EE490
 	private void RefreshCameraPosition()
 	{
 		float rightValue = PhotographModel.Instance.RightValue;
@@ -607,7 +585,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		this.MoveForward(forwardValue);
 	}
 
-	// Token: 0x06013896 RID: 80022 RVA: 0x004E17E4 File Offset: 0x004DF9E4
+	// Token: 0x06010D78 RID: 68984 RVA: 0x004F02EC File Offset: 0x004EE4EC
 	private float GetArmPitch()
 	{
 		GravityUtils instance = GravityUtils.Instance;
@@ -620,7 +598,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		return (float)(Math.Asin(this.TmpVector.DotProduct(gravityUpForActor)) * 57.295780181884766);
 	}
 
-	// Token: 0x06013897 RID: 80023 RVA: 0x004E184C File Offset: 0x004DFA4C
+	// Token: 0x06010D79 RID: 68985 RVA: 0x004F0354 File Offset: 0x004EE554
 	[NullableContext(1)]
 	private double GetCharacterDither(TsBaseCharacter character, double distance, float cameraPitch)
 	{
@@ -645,141 +623,132 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		{
 			list.Add((double)MathUtils.Instance.RangeClamp(num2, this.StartHidePitch, this.CompleteHidePitch, this.StartDitherValue, 0.01f));
 		}
-		return list.Min();
+		double num3 = list[0];
+		for (int i = 1; i < list.Count; i++)
+		{
+			if (list[i] < num3)
+			{
+				num3 = list[i];
+			}
+		}
+		return num3;
 	}
 
-	// Token: 0x06013898 RID: 80024 RVA: 0x004E196C File Offset: 0x004DFB6C
+	// Token: 0x06010D7A RID: 68986 RVA: 0x004F04A0 File Offset: 0x004EE6A0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetPlayerSourceLocation(FVectorDouble location)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetPlayerSourceLocation"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsPhotographer.__SetPlayerSourceLocation_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetPlayerSourceLocation"), TsPhotographer.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsPhotographer.__SetPlayerSourceLocation_FunctionParams*)ptr + 15L / (long)sizeof(TsPhotographer.__SetPlayerSourceLocation_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->location = location;
+			this.SetPlayerSourceLocation_Implementation(location);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsPhotographer.__SetPlayerSourceLocation_FunctionParams* ptr = stackalloc TsPhotographer.__SetPlayerSourceLocation_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsPhotographer.__SetPlayerSourceLocation_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->location = location;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06013899 RID: 80025 RVA: 0x004E19E2 File Offset: 0x004DFBE2
+	// Token: 0x06010D7B RID: 68987 RVA: 0x004F052C File Offset: 0x004EE72C
 	protected void SetPlayerSourceLocation_Implementation(FVectorDouble location)
 	{
 		this.PlayerSourceLocation = new FVectorDouble?(location);
 	}
 
-	// Token: 0x0601389A RID: 80026 RVA: 0x004E19F0 File Offset: 0x004DFBF0
+	// Token: 0x06010D7C RID: 68988 RVA: 0x004F053C File Offset: 0x004EE73C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetCameraInitializeTransform(FTransformDouble transform)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetCameraInitializeTransform"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsPhotographer.__SetCameraInitializeTransform_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetCameraInitializeTransform"), TsPhotographer.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsPhotographer.__SetCameraInitializeTransform_FunctionParams*)ptr + 15L / (long)sizeof(TsPhotographer.__SetCameraInitializeTransform_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->transform = transform;
+			this.SetCameraInitializeTransform_Implementation(transform);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsPhotographer.__SetCameraInitializeTransform_FunctionParams* ptr = stackalloc TsPhotographer.__SetCameraInitializeTransform_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsPhotographer.__SetCameraInitializeTransform_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->transform = transform;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601389B RID: 80027 RVA: 0x004E1A66 File Offset: 0x004DFC66
+	// Token: 0x06010D7D RID: 68989 RVA: 0x004F05C8 File Offset: 0x004EE7C8
 	protected void SetCameraInitializeTransform_Implementation(FTransformDouble transform)
 	{
 		this.CameraInitializeTransform = new FTransformDouble?(transform);
 	}
 
-	// Token: 0x0601389C RID: 80028 RVA: 0x004E1A74 File Offset: 0x004DFC74
+	// Token: 0x06010D7E RID: 68990 RVA: 0x004F05D8 File Offset: 0x004EE7D8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual FTransformDouble GetCameraInitializeTransform()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetCameraInitializeTransform"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsPhotographer.__GetCameraInitializeTransform_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetCameraInitializeTransform"), TsPhotographer.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsPhotographer.__GetCameraInitializeTransform_FunctionParams*)ptr + 15L / (long)sizeof(TsPhotographer.__GetCameraInitializeTransform_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetCameraInitializeTransform_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		FTransformDouble _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsPhotographer.__GetCameraInitializeTransform_FunctionParams* ptr = stackalloc TsPhotographer.__GetCameraInitializeTransform_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsPhotographer.__GetCameraInitializeTransform_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		FTransformDouble _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601389D RID: 80029 RVA: 0x004E1AE9 File Offset: 0x004DFCE9
+	// Token: 0x06010D7F RID: 68991 RVA: 0x004F0662 File Offset: 0x004EE862
 	protected FTransformDouble GetCameraInitializeTransform_Implementation()
 	{
 		return this.CameraInitializeTransform.Value;
 	}
 
-	// Token: 0x0601389E RID: 80030 RVA: 0x004E1AF8 File Offset: 0x004DFCF8
+	// Token: 0x06010D80 RID: 68992 RVA: 0x004F0670 File Offset: 0x004EE870
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetCameraInitializeFov(float fov)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetCameraInitializeFov"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsPhotographer.__SetCameraInitializeFov_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetCameraInitializeFov"), TsPhotographer.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsPhotographer.__SetCameraInitializeFov_FunctionParams*)ptr + 15L / (long)sizeof(TsPhotographer.__SetCameraInitializeFov_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->fov = fov;
+			this.SetCameraInitializeFov_Implementation(fov);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsPhotographer.__SetCameraInitializeFov_FunctionParams* ptr = stackalloc TsPhotographer.__SetCameraInitializeFov_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsPhotographer.__SetCameraInitializeFov_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->fov = fov;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601389F RID: 80031 RVA: 0x004E1B6E File Offset: 0x004DFD6E
+	// Token: 0x06010D81 RID: 68993 RVA: 0x004F06FC File Offset: 0x004EE8FC
 	protected void SetCameraInitializeFov_Implementation(float fov)
 	{
 		this.CameraInitializeFov = fov;
 	}
 
-	// Token: 0x060138A0 RID: 80032 RVA: 0x004E1B78 File Offset: 0x004DFD78
+	// Token: 0x06010D82 RID: 68994 RVA: 0x004F0708 File Offset: 0x004EE908
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual float GetCameraInitializeFov()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetCameraInitializeFov"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsPhotographer.__GetCameraInitializeFov_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetCameraInitializeFov"), TsPhotographer.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsPhotographer.__GetCameraInitializeFov_FunctionParams*)ptr + 15L / (long)sizeof(TsPhotographer.__GetCameraInitializeFov_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetCameraInitializeFov_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		float _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsPhotographer.__GetCameraInitializeFov_FunctionParams* ptr = stackalloc TsPhotographer.__GetCameraInitializeFov_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsPhotographer.__GetCameraInitializeFov_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		float _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060138A1 RID: 80033 RVA: 0x004E1BED File Offset: 0x004DFDED
+	// Token: 0x06010D83 RID: 68995 RVA: 0x004F0792 File Offset: 0x004EE992
 	protected float GetCameraInitializeFov_Implementation()
 	{
 		if (this.CameraInitializeFov != -1f)
@@ -789,7 +758,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		return 60f;
 	}
 
-	// Token: 0x060138A2 RID: 80034 RVA: 0x004E1C08 File Offset: 0x004DFE08
+	// Token: 0x06010D84 RID: 68996 RVA: 0x004F07AD File Offset: 0x004EE9AD
 	[NullableContext(1)]
 	public void ActivateCamera(ACineCameraActor cameraActor)
 	{
@@ -801,7 +770,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x060138A3 RID: 80035 RVA: 0x004E1C3E File Offset: 0x004DFE3E
+	// Token: 0x06010D85 RID: 68997 RVA: 0x004F07E3 File Offset: 0x004EE9E3
 	public void DeactivateCamera()
 	{
 		ACineCameraActor cameraActor = this.CameraActor;
@@ -812,7 +781,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		this.CameraActor = null;
 	}
 
-	// Token: 0x060138A4 RID: 80036 RVA: 0x004E1C6C File Offset: 0x004DFE6C
+	// Token: 0x06010D86 RID: 68998 RVA: 0x004F0810 File Offset: 0x004EEA10
 	public void SetCameraTransform(FTransform transform)
 	{
 		FVector translation = transform.GetTranslation();
@@ -823,29 +792,26 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		base.K2_AddActorWorldOffset(this.RelativeVectorCache.Value, false, ref fhitResult, false);
 	}
 
-	// Token: 0x060138A5 RID: 80037 RVA: 0x004E1CE4 File Offset: 0x004DFEE4
+	// Token: 0x06010D87 RID: 68999 RVA: 0x004F0888 File Offset: 0x004EEA88
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetCameraArmTargetOffset(FVectorDouble cameraLocation, bool isInit = false)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetCameraArmTargetOffset"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsPhotographer.__SetCameraArmTargetOffset_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetCameraArmTargetOffset"), TsPhotographer.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsPhotographer.__SetCameraArmTargetOffset_FunctionParams*)ptr + 15L / (long)sizeof(TsPhotographer.__SetCameraArmTargetOffset_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->cameraLocation = cameraLocation;
-			ptr2->isInit = isInit;
+			this.SetCameraArmTargetOffset_Implementation(cameraLocation, isInit);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsPhotographer.__SetCameraArmTargetOffset_FunctionParams* ptr = stackalloc TsPhotographer.__SetCameraArmTargetOffset_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsPhotographer.__SetCameraArmTargetOffset_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->cameraLocation = cameraLocation;
+		ptr->isInit = isInit;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060138A6 RID: 80038 RVA: 0x004E1D64 File Offset: 0x004DFF64
+	// Token: 0x06010D88 RID: 69000 RVA: 0x004F091C File Offset: 0x004EEB1C
 	protected void SetCameraArmTargetOffset_Implementation(FVectorDouble cameraLocation, bool isInit = false)
 	{
 		FRotator frotator = this.CameraArm.K2_GetComponentRotation();
@@ -865,28 +831,25 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x060138A7 RID: 80039 RVA: 0x004E1E24 File Offset: 0x004E0024
+	// Token: 0x06010D89 RID: 69001 RVA: 0x004F09DC File Offset: 0x004EEBDC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void MoveUp(float addValue)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("MoveUp"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsPhotographer.__MoveUp_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("MoveUp"), TsPhotographer.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsPhotographer.__MoveUp_FunctionParams*)ptr + 15L / (long)sizeof(TsPhotographer.__MoveUp_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->addValue = addValue;
+			this.MoveUp_Implementation(addValue);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsPhotographer.__MoveUp_FunctionParams* ptr = stackalloc TsPhotographer.__MoveUp_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsPhotographer.__MoveUp_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->addValue = addValue;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060138A8 RID: 80040 RVA: 0x004E1E9C File Offset: 0x004E009C
+	// Token: 0x06010D8A RID: 69002 RVA: 0x004F0A68 File Offset: 0x004EEC68
 	protected void MoveUp_Implementation(float addValue)
 	{
 		float num = addValue * this.CameraUpAndDownSpeed;
@@ -903,28 +866,25 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x060138A9 RID: 80041 RVA: 0x004E1F44 File Offset: 0x004E0144
+	// Token: 0x06010D8B RID: 69003 RVA: 0x004F0B10 File Offset: 0x004EED10
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void MoveRight(float addValue)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("MoveRight"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsPhotographer.__MoveRight_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("MoveRight"), TsPhotographer.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsPhotographer.__MoveRight_FunctionParams*)ptr + 15L / (long)sizeof(TsPhotographer.__MoveRight_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->addValue = addValue;
+			this.MoveRight_Implementation(addValue);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsPhotographer.__MoveRight_FunctionParams* ptr = stackalloc TsPhotographer.__MoveRight_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsPhotographer.__MoveRight_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->addValue = addValue;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060138AA RID: 80042 RVA: 0x004E1FBC File Offset: 0x004E01BC
+	// Token: 0x06010D8C RID: 69004 RVA: 0x004F0B9C File Offset: 0x004EED9C
 	protected void MoveRight_Implementation(float addValue)
 	{
 		float num = addValue * this.CameraLeftAndRightSpeed;
@@ -941,28 +901,25 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x060138AB RID: 80043 RVA: 0x004E2064 File Offset: 0x004E0264
+	// Token: 0x06010D8D RID: 69005 RVA: 0x004F0C44 File Offset: 0x004EEE44
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void MoveForward(float addValue)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("MoveForward"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsPhotographer.__MoveForward_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("MoveForward"), TsPhotographer.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsPhotographer.__MoveForward_FunctionParams*)ptr + 15L / (long)sizeof(TsPhotographer.__MoveForward_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->addValue = addValue;
+			this.MoveForward_Implementation(addValue);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsPhotographer.__MoveForward_FunctionParams* ptr = stackalloc TsPhotographer.__MoveForward_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsPhotographer.__MoveForward_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->addValue = addValue;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060138AC RID: 80044 RVA: 0x004E20DC File Offset: 0x004E02DC
+	// Token: 0x06010D8E RID: 69006 RVA: 0x004F0CD0 File Offset: 0x004EEED0
 	protected void MoveForward_Implementation(float addValue)
 	{
 		float num = addValue * this.CameraForwardAndBackSpeed;
@@ -979,7 +936,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x060138AD RID: 80045 RVA: 0x004E2184 File Offset: 0x004E0384
+	// Token: 0x06010D8F RID: 69007 RVA: 0x004F0D78 File Offset: 0x004EEF78
 	public void AddCameraArmPitchInput(float pitch)
 	{
 		if (pitch == 0f)
@@ -998,7 +955,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		this.PitchInput = pitch;
 	}
 
-	// Token: 0x060138AE RID: 80046 RVA: 0x004E21D6 File Offset: 0x004E03D6
+	// Token: 0x06010D90 RID: 69008 RVA: 0x004F0DCA File Offset: 0x004EEFCA
 	public void AddCameraArmYawInput(float yaw)
 	{
 		if (yaw == 0f)
@@ -1008,7 +965,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		this.YawInput = yaw;
 	}
 
-	// Token: 0x060138AF RID: 80047 RVA: 0x004E21E8 File Offset: 0x004E03E8
+	// Token: 0x06010D91 RID: 69009 RVA: 0x004F0DDC File Offset: 0x004EEFDC
 	public void SetCameraArmRoll(float roll)
 	{
 		Rotator tmpRotator = this.TmpRotator;
@@ -1019,28 +976,25 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		this.CapsuleCollision.K2_SetRelativeRotation(this.TmpRotator.ToUeRotator(), true, ref fhitResult, false);
 	}
 
-	// Token: 0x060138B0 RID: 80048 RVA: 0x004E2244 File Offset: 0x004E0444
+	// Token: 0x06010D92 RID: 69010 RVA: 0x004F0E38 File Offset: 0x004EF038
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetFov(float fov)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetFov"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsPhotographer.__SetFov_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetFov"), TsPhotographer.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsPhotographer.__SetFov_FunctionParams*)ptr + 15L / (long)sizeof(TsPhotographer.__SetFov_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->fov = fov;
+			this.SetFov_Implementation(fov);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsPhotographer.__SetFov_FunctionParams* ptr = stackalloc TsPhotographer.__SetFov_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsPhotographer.__SetFov_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->fov = fov;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060138B1 RID: 80049 RVA: 0x004E22BC File Offset: 0x004E04BC
+	// Token: 0x06010D93 RID: 69011 RVA: 0x004F0EC4 File Offset: 0x004EF0C4
 	protected void SetFov_Implementation(float fov)
 	{
 		double num;
@@ -1055,55 +1009,45 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		this.CameraActor.CameraComponent.SetFieldOfView((float)num);
 	}
 
-	// Token: 0x060138B2 RID: 80050 RVA: 0x004E238C File Offset: 0x004E058C
+	// Token: 0x06010D94 RID: 69012 RVA: 0x004F0F94 File Offset: 0x004EF194
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual float GetFov()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetFov"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsPhotographer.__GetFov_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetFov"), TsPhotographer.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsPhotographer.__GetFov_FunctionParams*)ptr + 15L / (long)sizeof(TsPhotographer.__GetFov_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetFov_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		float _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsPhotographer.__GetFov_FunctionParams* ptr = stackalloc TsPhotographer.__GetFov_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsPhotographer.__GetFov_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		float _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060138B3 RID: 80051 RVA: 0x004E2401 File Offset: 0x004E0601
+	// Token: 0x06010D95 RID: 69013 RVA: 0x004F101E File Offset: 0x004EF21E
 	protected float GetFov_Implementation()
 	{
 		return this.CameraActor.CameraComponent.FieldOfView;
 	}
 
-	// Token: 0x060138B4 RID: 80052 RVA: 0x004E2414 File Offset: 0x004E0614
+	// Token: 0x06010D96 RID: 69014 RVA: 0x004F1030 File Offset: 0x004EF230
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ResetCamera()
+	public virtual void ResetCamera()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ResetCamera"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ResetCamera"), TsPhotographer.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ResetCamera_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x060138B5 RID: 80053 RVA: 0x004E2484 File Offset: 0x004E0684
+	// Token: 0x06010D97 RID: 69015 RVA: 0x004F108C File Offset: 0x004EF28C
 	protected void ResetCamera_Implementation()
 	{
 		FHitResult fhitResult = new FHitResult();
@@ -1123,29 +1067,26 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		this.YawInput = 0f;
 	}
 
-	// Token: 0x060138B6 RID: 80054 RVA: 0x004E2550 File Offset: 0x004E0750
+	// Token: 0x06010D98 RID: 69016 RVA: 0x004F1158 File Offset: 0x004EF358
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetCameraLUT(string texturePath)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetCameraLUT"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsPhotographer.__SetCameraLUT_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsPhotographer) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetCameraLUT"), TsPhotographer.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsPhotographer.__SetCameraLUT_FunctionParams*)ptr + 15L / (long)sizeof(TsPhotographer.__SetCameraLUT_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->texturePath), texturePath);
+			this.SetCameraLUT_Implementation(texturePath);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsPhotographer.__SetCameraLUT_FunctionParams* ptr = stackalloc TsPhotographer.__SetCameraLUT_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsPhotographer.__SetCameraLUT_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->texturePath), texturePath);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060138B7 RID: 80055 RVA: 0x004E25CC File Offset: 0x004E07CC
+	// Token: 0x06010D99 RID: 69017 RVA: 0x004F11EC File Offset: 0x004EF3EC
 	[NullableContext(1)]
 	protected void SetCameraLUT_Implementation(string texturePath)
 	{
@@ -1165,7 +1106,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}, 100, "Ui.PhotographUi");
 	}
 
-	// Token: 0x060138B8 RID: 80056 RVA: 0x004E2638 File Offset: 0x004E0838
+	// Token: 0x06010D9A RID: 69018 RVA: 0x004F1258 File Offset: 0x004EF458
 	private void UpdateNpcDither()
 	{
 		this.UpdateCameraCollisionRadius();
@@ -1203,7 +1144,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 				}
 			}
 		}
-		List<TsBaseCharacter> list = this.DitheredNpcSet.ToList<TsBaseCharacter>();
+		List<TsBaseCharacter> list = new List<TsBaseCharacter>(this.DitheredNpcSet);
 		for (int i = 0; i < this.DitheredNpcSet.Count - hitCount; i++)
 		{
 			TsBaseCharacter tsBaseCharacter = list[i];
@@ -1215,7 +1156,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x060138B9 RID: 80057 RVA: 0x004E27F4 File Offset: 0x004E09F4
+	// Token: 0x06010D9B RID: 69019 RVA: 0x004F1414 File Offset: 0x004EF614
 	private void UpdateCameraCollisionRadius()
 	{
 		if (MathUtils.Instance.IsNearlyEqual((double)this.CurrentCameraDitherFov, (double)this.GetFov(), null))
@@ -1229,7 +1170,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		this.CameraCollisionRadius = MathUtils.Instance.GetTriangleCircumradius((double)startHideDistance, (double)startHideDistance, (double)num);
 	}
 
-	// Token: 0x060138BA RID: 80058 RVA: 0x004E289C File Offset: 0x004E0A9C
+	// Token: 0x06010D9C RID: 69020 RVA: 0x004F14BC File Offset: 0x004EF6BC
 	private void UpdateCameraCollisionLocation()
 	{
 		FVectorDouble fvectorDouble = this.CameraActor.D_GetActorForwardVector();
@@ -1239,7 +1180,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		this.CameraLocation.Addition(this.TmpVector, this.CameraCollisionLocation);
 	}
 
-	// Token: 0x060138BB RID: 80059 RVA: 0x004E2914 File Offset: 0x004E0B14
+	// Token: 0x06010D9D RID: 69021 RVA: 0x004F1534 File Offset: 0x004EF734
 	[NullableContext(1)]
 	private bool IsCharacterIgnoreNpcDither(TsBaseCharacter character)
 	{
@@ -1252,7 +1193,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		return ((component != null) ? new bool?(component.HasTag(GameplayTagDefine.EGameplayTagId["功能.通用镜头.忽略碰撞隐藏"])) : null).GetValueOrDefault();
 	}
 
-	// Token: 0x060138BC RID: 80060 RVA: 0x004E2964 File Offset: 0x004E0B64
+	// Token: 0x06010D9E RID: 69022 RVA: 0x004F1584 File Offset: 0x004EF784
 	[NullableContext(1)]
 	private void UpdateDitheredNpcDistance(UKuroHitResult hitResult)
 	{
@@ -1275,7 +1216,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x060138BD RID: 80061 RVA: 0x004E2A1D File Offset: 0x004E0C1D
+	// Token: 0x06010D9F RID: 69023 RVA: 0x004F163D File Offset: 0x004EF83D
 	[NullableContext(1)]
 	private bool IsCharacterRenderingType(AActor actor)
 	{
@@ -1291,7 +1232,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		return false;
 	}
 
-	// Token: 0x060138BE RID: 80062 RVA: 0x004E2A5C File Offset: 0x004E0C5C
+	// Token: 0x06010DA0 RID: 69024 RVA: 0x004F167C File Offset: 0x004EF87C
 	[NullableContext(1)]
 	private double GetNpcDitherValue(TsBaseCharacter actor, double distance)
 	{
@@ -1307,7 +1248,7 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		return num;
 	}
 
-	// Token: 0x060138BF RID: 80063 RVA: 0x004E2ACC File Offset: 0x004E0CCC
+	// Token: 0x06010DA1 RID: 69025 RVA: 0x004F16EC File Offset: 0x004EF8EC
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsPhotographer._ClassPtr == IntPtr.Zero)
@@ -1317,36 +1258,24 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		return TsPhotographer._ClassPtr;
 	}
 
-	// Token: 0x060138C0 RID: 80064 RVA: 0x004E2AF0 File Offset: 0x004E0CF0
+	// Token: 0x06010DA2 RID: 69026 RVA: 0x004F1710 File Offset: 0x004EF910
 	public TsPhotographer() : this(BuiltinUtils.AllocNativeUObject(TsPhotographer.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060138C1 RID: 80065 RVA: 0x004E2B18 File Offset: 0x004E0D18
+	// Token: 0x06010DA3 RID: 69027 RVA: 0x004F1738 File Offset: 0x004EF938
 	[NullableContext(1)]
 	public TsPhotographer(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsPhotographer.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060138C2 RID: 80066 RVA: 0x004E2B4C File Offset: 0x004E0D4C
+	// Token: 0x06010DA4 RID: 69028 RVA: 0x004F176C File Offset: 0x004EF96C
 	protected TsPhotographer(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x1700192A RID: 6442
-	// (get) Token: 0x060138C3 RID: 80067 RVA: 0x004E2CA3 File Offset: 0x004E0EA3
-	[Nullable(1)]
-	public unsafe FPointerToUberGraphFrame UberGraphFrame
-	{
-		[NullableContext(1)]
-		get
-		{
-			return *(base.NativePtr + (IntPtr)TsPhotographer.__PropertyOffset_UberGraphFrame);
-		}
-	}
-
-	// Token: 0x1700192B RID: 6443
-	// (get) Token: 0x060138C4 RID: 80068 RVA: 0x004E2CB3 File Offset: 0x004E0EB3
+	// Token: 0x17001964 RID: 6500
+	// (get) Token: 0x06010DA5 RID: 69029 RVA: 0x004F18C3 File Offset: 0x004EFAC3
 	[Nullable(2)]
 	public unsafe USceneComponent DefaultSceneRoot
 	{
@@ -1357,445 +1286,442 @@ public class TsPhotographer : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x060138C5 RID: 80069 RVA: 0x004E2CC7 File Offset: 0x004E0EC7
+	// Token: 0x06010DA6 RID: 69030 RVA: 0x004F18D7 File Offset: 0x004EFAD7
 	protected virtual void __CPPCALL_Initialize_Implementation()
 	{
 		this.Initialize_Implementation();
 	}
 
-	// Token: 0x060138C6 RID: 80070 RVA: 0x004E2CCF File Offset: 0x004E0ECF
+	// Token: 0x06010DA7 RID: 69031 RVA: 0x004F18DF File Offset: 0x004EFADF
 	protected virtual void __CPPCALL_ReceiveDestroyed_Implementation()
 	{
 		this.ReceiveDestroyed_Implementation();
 	}
 
-	// Token: 0x060138C7 RID: 80071 RVA: 0x004E2CD7 File Offset: 0x004E0ED7
+	// Token: 0x06010DA8 RID: 69032 RVA: 0x004F18E7 File Offset: 0x004EFAE7
 	protected unsafe virtual void __CPPCALL_ReceiveTick_Implementation(AActor.__ReceiveTick_FunctionParams* __Params)
 	{
 		this.ReceiveTick_Implementation(__Params->DeltaSeconds);
 	}
 
-	// Token: 0x060138C8 RID: 80072 RVA: 0x004E2CE5 File Offset: 0x004E0EE5
+	// Token: 0x06010DA9 RID: 69033 RVA: 0x004F18F5 File Offset: 0x004EFAF5
 	protected virtual void __CPPCALL_RefreshPlayerLocation_Implementation()
 	{
 		this.RefreshPlayerLocation_Implementation();
 	}
 
-	// Token: 0x060138C9 RID: 80073 RVA: 0x004E2CED File Offset: 0x004E0EED
+	// Token: 0x06010DAA RID: 69034 RVA: 0x004F18FD File Offset: 0x004EFAFD
 	protected unsafe virtual void __CPPCALL_SetPlayerSourceLocation_Implementation(TsPhotographer.__SetPlayerSourceLocation_FunctionParams* __Params)
 	{
 		this.SetPlayerSourceLocation_Implementation(__Params->location);
 	}
 
-	// Token: 0x060138CA RID: 80074 RVA: 0x004E2CFB File Offset: 0x004E0EFB
+	// Token: 0x06010DAB RID: 69035 RVA: 0x004F190B File Offset: 0x004EFB0B
 	protected unsafe virtual void __CPPCALL_SetCameraInitializeTransform_Implementation(TsPhotographer.__SetCameraInitializeTransform_FunctionParams* __Params)
 	{
 		this.SetCameraInitializeTransform_Implementation(__Params->transform);
 	}
 
-	// Token: 0x060138CB RID: 80075 RVA: 0x004E2D09 File Offset: 0x004E0F09
+	// Token: 0x06010DAC RID: 69036 RVA: 0x004F1919 File Offset: 0x004EFB19
 	protected unsafe virtual void __CPPCALL_GetCameraInitializeTransform_Implementation(TsPhotographer.__GetCameraInitializeTransform_FunctionParams* __Params)
 	{
 		__Params->__Result = this.GetCameraInitializeTransform_Implementation();
 	}
 
-	// Token: 0x060138CC RID: 80076 RVA: 0x004E2D17 File Offset: 0x004E0F17
+	// Token: 0x06010DAD RID: 69037 RVA: 0x004F1927 File Offset: 0x004EFB27
 	protected unsafe virtual void __CPPCALL_SetCameraInitializeFov_Implementation(TsPhotographer.__SetCameraInitializeFov_FunctionParams* __Params)
 	{
 		this.SetCameraInitializeFov_Implementation(__Params->fov);
 	}
 
-	// Token: 0x060138CD RID: 80077 RVA: 0x004E2D25 File Offset: 0x004E0F25
+	// Token: 0x06010DAE RID: 69038 RVA: 0x004F1935 File Offset: 0x004EFB35
 	protected unsafe virtual void __CPPCALL_GetCameraInitializeFov_Implementation(TsPhotographer.__GetCameraInitializeFov_FunctionParams* __Params)
 	{
 		__Params->__Result = this.GetCameraInitializeFov_Implementation();
 	}
 
-	// Token: 0x060138CE RID: 80078 RVA: 0x004E2D33 File Offset: 0x004E0F33
+	// Token: 0x06010DAF RID: 69039 RVA: 0x004F1943 File Offset: 0x004EFB43
 	protected unsafe virtual void __CPPCALL_SetCameraArmTargetOffset_Implementation(TsPhotographer.__SetCameraArmTargetOffset_FunctionParams* __Params)
 	{
 		this.SetCameraArmTargetOffset_Implementation(__Params->cameraLocation, __Params->isInit);
 	}
 
-	// Token: 0x060138CF RID: 80079 RVA: 0x004E2D47 File Offset: 0x004E0F47
+	// Token: 0x06010DB0 RID: 69040 RVA: 0x004F1957 File Offset: 0x004EFB57
 	protected unsafe virtual void __CPPCALL_MoveUp_Implementation(TsPhotographer.__MoveUp_FunctionParams* __Params)
 	{
 		this.MoveUp_Implementation(__Params->addValue);
 	}
 
-	// Token: 0x060138D0 RID: 80080 RVA: 0x004E2D55 File Offset: 0x004E0F55
+	// Token: 0x06010DB1 RID: 69041 RVA: 0x004F1965 File Offset: 0x004EFB65
 	protected unsafe virtual void __CPPCALL_MoveRight_Implementation(TsPhotographer.__MoveRight_FunctionParams* __Params)
 	{
 		this.MoveRight_Implementation(__Params->addValue);
 	}
 
-	// Token: 0x060138D1 RID: 80081 RVA: 0x004E2D63 File Offset: 0x004E0F63
+	// Token: 0x06010DB2 RID: 69042 RVA: 0x004F1973 File Offset: 0x004EFB73
 	protected unsafe virtual void __CPPCALL_MoveForward_Implementation(TsPhotographer.__MoveForward_FunctionParams* __Params)
 	{
 		this.MoveForward_Implementation(__Params->addValue);
 	}
 
-	// Token: 0x060138D2 RID: 80082 RVA: 0x004E2D71 File Offset: 0x004E0F71
+	// Token: 0x06010DB3 RID: 69043 RVA: 0x004F1981 File Offset: 0x004EFB81
 	protected unsafe virtual void __CPPCALL_SetFov_Implementation(TsPhotographer.__SetFov_FunctionParams* __Params)
 	{
 		this.SetFov_Implementation(__Params->fov);
 	}
 
-	// Token: 0x060138D3 RID: 80083 RVA: 0x004E2D7F File Offset: 0x004E0F7F
+	// Token: 0x06010DB4 RID: 69044 RVA: 0x004F198F File Offset: 0x004EFB8F
 	protected unsafe virtual void __CPPCALL_GetFov_Implementation(TsPhotographer.__GetFov_FunctionParams* __Params)
 	{
 		__Params->__Result = this.GetFov_Implementation();
 	}
 
-	// Token: 0x060138D4 RID: 80084 RVA: 0x004E2D8D File Offset: 0x004E0F8D
+	// Token: 0x06010DB5 RID: 69045 RVA: 0x004F199D File Offset: 0x004EFB9D
 	protected virtual void __CPPCALL_ResetCamera_Implementation()
 	{
 		this.ResetCamera_Implementation();
 	}
 
-	// Token: 0x060138D5 RID: 80085 RVA: 0x004E2D98 File Offset: 0x004E0F98
+	// Token: 0x06010DB6 RID: 69046 RVA: 0x004F19A8 File Offset: 0x004EFBA8
 	protected unsafe virtual void __CPPCALL_SetCameraLUT_Implementation(TsPhotographer.__SetCameraLUT_FunctionParams* __Params)
 	{
 		string cameraLUT_Implementation = FString.ToString((void*)(&__Params->texturePath));
 		this.SetCameraLUT_Implementation(cameraLUT_Implementation);
 	}
 
-	// Token: 0x0400936D RID: 37741
+	// Token: 0x040094C5 RID: 38085
 	[Nullable(1)]
 	private const string CONFIG_PATH = "/Game/Aki/Data/Camera/DA_PhotographCameraConfig.DA_PhotographCameraConfig";
 
-	// Token: 0x0400936E RID: 37742
+	// Token: 0x040094C6 RID: 38086
 	[Nullable(1)]
 	private const string MOBILE_CONFIG_PATH = "/Game/Aki/Data/Camera/DA_PhotographCameraConfig_Mobile.DA_PhotographCameraConfig_Mobile";
 
-	// Token: 0x0400936F RID: 37743
+	// Token: 0x040094C7 RID: 38087
 	private const float MIN_DITHER = 0.01f;
 
-	// Token: 0x04009370 RID: 37744
+	// Token: 0x040094C8 RID: 38088
 	private const int HIDE_DISTANCE_OFFSET = 50;
 
-	// Token: 0x04009371 RID: 37745
+	// Token: 0x040094C9 RID: 38089
 	[Nullable(2)]
 	private ACineCameraActor CameraActor;
 
-	// Token: 0x04009372 RID: 37746
+	// Token: 0x040094CA RID: 38090
 	private FVector? RelativeVectorCache;
 
-	// Token: 0x04009373 RID: 37747
+	// Token: 0x040094CB RID: 38091
 	private FVectorDouble? PlayerSourceLocation;
 
-	// Token: 0x04009374 RID: 37748
+	// Token: 0x040094CC RID: 38092
 	private FTransformDouble? CameraInitializeTransform;
 
-	// Token: 0x04009375 RID: 37749
+	// Token: 0x040094CD RID: 38093
 	private FRotator? DefaultRotation;
 
-	// Token: 0x04009376 RID: 37750
+	// Token: 0x040094CE RID: 38094
 	private float InitialCapsuleRoll;
 
-	// Token: 0x04009377 RID: 37751
+	// Token: 0x040094CF RID: 38095
 	private float SourceMaxPitch;
 
-	// Token: 0x04009378 RID: 37752
+	// Token: 0x040094D0 RID: 38096
 	private float SourceMinPitch;
 
-	// Token: 0x04009379 RID: 37753
+	// Token: 0x040094D1 RID: 38097
 	[Nullable(2)]
 	private TsBaseCharacter Character;
 
-	// Token: 0x0400937A RID: 37754
+	// Token: 0x040094D2 RID: 38098
 	private float StartDitherValue;
 
-	// Token: 0x0400937B RID: 37755
+	// Token: 0x040094D3 RID: 38099
 	private float NpcStartDitherValue;
 
-	// Token: 0x0400937C RID: 37756
+	// Token: 0x040094D4 RID: 38100
 	private float StartHidePitch;
 
-	// Token: 0x0400937D RID: 37757
+	// Token: 0x040094D5 RID: 38101
 	private float CompleteHidePitch;
 
-	// Token: 0x0400937E RID: 37758
+	// Token: 0x040094D6 RID: 38102
 	private bool IsLoadingConfigCompleted;
 
-	// Token: 0x0400937F RID: 37759
+	// Token: 0x040094D7 RID: 38103
 	private double CurrentDither;
 
-	// Token: 0x04009380 RID: 37760
+	// Token: 0x040094D8 RID: 38104
 	[Nullable(2)]
 	private global::Vector PlayerLocation;
 
-	// Token: 0x04009381 RID: 37761
+	// Token: 0x040094D9 RID: 38105
 	[Nullable(2)]
 	private global::Vector CameraLocation;
 
-	// Token: 0x04009382 RID: 37762
+	// Token: 0x040094DA RID: 38106
 	private float StartHideDistance;
 
-	// Token: 0x04009383 RID: 37763
+	// Token: 0x040094DB RID: 38107
 	private float CompleteHideDistance;
 
-	// Token: 0x04009384 RID: 37764
+	// Token: 0x040094DC RID: 38108
 	private float StartHideSizeInFrame;
 
-	// Token: 0x04009385 RID: 37765
+	// Token: 0x040094DD RID: 38109
 	private float CompleteHideSizeInFrame;
 
-	// Token: 0x04009386 RID: 37766
+	// Token: 0x040094DE RID: 38110
 	private float NpcStartHideDistance;
 
-	// Token: 0x04009387 RID: 37767
+	// Token: 0x040094DF RID: 38111
 	private float NpcCompleteHideDistance;
 
-	// Token: 0x04009388 RID: 37768
+	// Token: 0x040094E0 RID: 38112
 	private float PitchInput;
 
-	// Token: 0x04009389 RID: 37769
+	// Token: 0x040094E1 RID: 38113
 	private float YawInput;
 
-	// Token: 0x0400938A RID: 37770
+	// Token: 0x040094E2 RID: 38114
 	[Nullable(1)]
 	private readonly global::Vector TmpVector = global::Vector.Create();
 
-	// Token: 0x0400938B RID: 37771
+	// Token: 0x040094E3 RID: 38115
 	[Nullable(1)]
 	private readonly global::Vector TmpVector2 = global::Vector.Create();
 
-	// Token: 0x0400938C RID: 37772
+	// Token: 0x040094E4 RID: 38116
 	[Nullable(1)]
 	private readonly Rotator TmpRotator = Rotator.Create();
 
-	// Token: 0x0400938D RID: 37773
+	// Token: 0x040094E5 RID: 38117
 	[Nullable(1)]
 	private readonly Rotator TmpRotator2 = Rotator.Create();
 
-	// Token: 0x0400938E RID: 37774
+	// Token: 0x040094E6 RID: 38118
 	[Nullable(1)]
 	private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400938F RID: 37775
+	// Token: 0x040094E7 RID: 38119
 	[Nullable(1)]
 	private readonly Quat TmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04009390 RID: 37776
+	// Token: 0x040094E8 RID: 38120
 	[Nullable(1)]
 	private readonly Quat TmpQuat3 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04009391 RID: 37777
+	// Token: 0x040094E9 RID: 38121
 	[Nullable(1)]
 	public readonly Quat GravityQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04009392 RID: 37778
+	// Token: 0x040094EA RID: 38122
 	[Nullable(1)]
 	public readonly Quat InverseGravityQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04009393 RID: 37779
+	// Token: 0x040094EB RID: 38123
 	[Nullable(2)]
 	private UTraceSphereElement CameraNpcSphereTrace;
 
-	// Token: 0x04009394 RID: 37780
+	// Token: 0x040094EC RID: 38124
 	[Nullable(1)]
 	private Dictionary<TsBaseCharacter, double> DitheredNpcDistanceMap = new Dictionary<TsBaseCharacter, double>();
 
-	// Token: 0x04009395 RID: 37781
+	// Token: 0x040094ED RID: 38125
 	private float CurrentCameraDitherFov;
 
-	// Token: 0x04009396 RID: 37782
+	// Token: 0x040094EE RID: 38126
 	private double CameraCollisionRadius;
 
-	// Token: 0x04009397 RID: 37783
+	// Token: 0x040094EF RID: 38127
 	[Nullable(1)]
 	private readonly global::Vector CameraCollisionLocation = global::Vector.Create();
 
-	// Token: 0x04009398 RID: 37784
+	// Token: 0x040094F0 RID: 38128
 	[Nullable(1)]
 	private HashSet<TsBaseCharacter> DitheredNpcSet = new HashSet<TsBaseCharacter>();
 
-	// Token: 0x04009399 RID: 37785
+	// Token: 0x040094F1 RID: 38129
 	[Nullable(1)]
 	private Dictionary<TsBaseCharacter, double> TeamMemberDitherMap = new Dictionary<TsBaseCharacter, double>();
 
-	// Token: 0x0400939A RID: 37786
+	// Token: 0x040094F2 RID: 38130
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/Photograph/TsPhotographer.TsPhotographer_C";
 
-	// Token: 0x0400939B RID: 37787
+	// Token: 0x040094F3 RID: 38131
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400939C RID: 37788
+	// Token: 0x040094F4 RID: 38132
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400939D RID: 37789
-	private static int __PropertyOffset_UberGraphFrame;
-
-	// Token: 0x0400939E RID: 37790
+	// Token: 0x040094F5 RID: 38133
 	private static int __PropertyOffset_DefaultSceneRoot;
 
-	// Token: 0x0400939F RID: 37791
+	// Token: 0x040094F6 RID: 38134
 	private static int __PropertyOffset_CapsuleCollision;
 
-	// Token: 0x040093A0 RID: 37792
+	// Token: 0x040094F7 RID: 38135
 	private static int __PropertyOffset_CameraArm;
 
-	// Token: 0x040093A1 RID: 37793
+	// Token: 0x040094F8 RID: 38136
 	private static int __PropertyOffset_CameraInitializeFov;
 
-	// Token: 0x040093A2 RID: 37794
+	// Token: 0x040094F9 RID: 38137
 	private static int __PropertyOffset_CameraArmInitializeSocketOffset;
 
-	// Token: 0x040093A3 RID: 37795
+	// Token: 0x040094FA RID: 38138
 	private static int __PropertyOffset_CameraUpAndDownMaxDistance;
 
-	// Token: 0x040093A4 RID: 37796
+	// Token: 0x040094FB RID: 38139
 	private static int __PropertyOffset_CameraLeftAndRightMaxDistance;
 
-	// Token: 0x040093A5 RID: 37797
+	// Token: 0x040094FC RID: 38140
 	private static int __PropertyOffset_CameraForwardAndBackMaxDistance;
 
-	// Token: 0x040093A6 RID: 37798
+	// Token: 0x040094FD RID: 38141
 	private static int __PropertyOffset_CameraUpAndDownSpeed;
 
-	// Token: 0x040093A7 RID: 37799
+	// Token: 0x040094FE RID: 38142
 	private static int __PropertyOffset_CameraLeftAndRightSpeed;
 
-	// Token: 0x040093A8 RID: 37800
+	// Token: 0x040094FF RID: 38143
 	private static int __PropertyOffset_CameraForwardAndBackSpeed;
 
-	// Token: 0x040093A9 RID: 37801
+	// Token: 0x04009500 RID: 38144
 	private static int __PropertyOffset_MinFov;
 
-	// Token: 0x040093AA RID: 37802
+	// Token: 0x04009501 RID: 38145
 	private static int __PropertyOffset_MaxFov;
 
-	// Token: 0x040093AB RID: 37803
+	// Token: 0x04009502 RID: 38146
 	private static int __PropertyOffset_CurCameraUpAndDownDistance;
 
-	// Token: 0x040093AC RID: 37804
+	// Token: 0x04009503 RID: 38147
 	private static int __PropertyOffset_CurCameraLeftAndRightDistance;
 
-	// Token: 0x040093AD RID: 37805
+	// Token: 0x04009504 RID: 38148
 	private static int __PropertyOffset_CurCameraForwardAndBackDistance;
 
-	// Token: 0x02008BA2 RID: 35746
+	// Token: 0x02007D2A RID: 32042
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __SetPlayerSourceLocation_FunctionParams
 	{
-		// Token: 0x0402D550 RID: 185680
+		// Token: 0x04028865 RID: 165989
 		[FieldOffset(0)]
 		public FVectorDouble location;
 	}
 
-	// Token: 0x02008BA3 RID: 35747
+	// Token: 0x02007D2B RID: 32043
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 64)]
 	protected ref struct __SetCameraInitializeTransform_FunctionParams
 	{
-		// Token: 0x0402D551 RID: 185681
+		// Token: 0x04028866 RID: 165990
 		[FieldOffset(0)]
 		public FTransformDouble transform;
 	}
 
-	// Token: 0x02008BA4 RID: 35748
+	// Token: 0x02007D2C RID: 32044
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 64)]
 	protected ref struct __GetCameraInitializeTransform_FunctionParams
 	{
-		// Token: 0x0402D552 RID: 185682
+		// Token: 0x04028867 RID: 165991
 		[FieldOffset(0)]
 		public FTransformDouble __Result;
 	}
 
-	// Token: 0x02008BA5 RID: 35749
+	// Token: 0x02007D2D RID: 32045
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __SetCameraInitializeFov_FunctionParams
 	{
-		// Token: 0x0402D553 RID: 185683
+		// Token: 0x04028868 RID: 165992
 		[FieldOffset(0)]
 		public float fov;
 	}
 
-	// Token: 0x02008BA6 RID: 35750
+	// Token: 0x02007D2E RID: 32046
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __GetCameraInitializeFov_FunctionParams
 	{
-		// Token: 0x0402D554 RID: 185684
+		// Token: 0x04028869 RID: 165993
 		[FieldOffset(0)]
 		public float __Result;
 	}
 
-	// Token: 0x02008BA7 RID: 35751
+	// Token: 0x02007D2F RID: 32047
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __SetCameraArmTargetOffset_FunctionParams
 	{
-		// Token: 0x0402D555 RID: 185685
+		// Token: 0x0402886A RID: 165994
 		[FieldOffset(0)]
 		public FVectorDouble cameraLocation;
 
-		// Token: 0x0402D556 RID: 185686
+		// Token: 0x0402886B RID: 165995
 		[FieldOffset(24)]
 		public bool isInit;
 	}
 
-	// Token: 0x02008BA8 RID: 35752
+	// Token: 0x02007D30 RID: 32048
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __MoveUp_FunctionParams
 	{
-		// Token: 0x0402D557 RID: 185687
+		// Token: 0x0402886C RID: 165996
 		[FieldOffset(0)]
 		public float addValue;
 	}
 
-	// Token: 0x02008BA9 RID: 35753
+	// Token: 0x02007D31 RID: 32049
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __MoveRight_FunctionParams
 	{
-		// Token: 0x0402D558 RID: 185688
+		// Token: 0x0402886D RID: 165997
 		[FieldOffset(0)]
 		public float addValue;
 	}
 
-	// Token: 0x02008BAA RID: 35754
+	// Token: 0x02007D32 RID: 32050
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __MoveForward_FunctionParams
 	{
-		// Token: 0x0402D559 RID: 185689
+		// Token: 0x0402886E RID: 165998
 		[FieldOffset(0)]
 		public float addValue;
 	}
 
-	// Token: 0x02008BAB RID: 35755
+	// Token: 0x02007D33 RID: 32051
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __SetFov_FunctionParams
 	{
-		// Token: 0x0402D55A RID: 185690
+		// Token: 0x0402886F RID: 165999
 		[FieldOffset(0)]
 		public float fov;
 	}
 
-	// Token: 0x02008BAC RID: 35756
+	// Token: 0x02007D34 RID: 32052
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __GetFov_FunctionParams
 	{
-		// Token: 0x0402D55B RID: 185691
+		// Token: 0x04028870 RID: 166000
 		[FieldOffset(0)]
 		public float __Result;
 	}
 
-	// Token: 0x02008BAD RID: 35757
+	// Token: 0x02007D35 RID: 32053
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetCameraLUT_FunctionParams
 	{
-		// Token: 0x0402D55C RID: 185692
+		// Token: 0x04028871 RID: 166001
 		[FieldOffset(0)]
 		public FString texturePath;
 	}

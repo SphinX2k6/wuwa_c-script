@@ -2,45 +2,45 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002843 RID: 10307
+// Token: 0x02001DBE RID: 7614
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class RoleFavorContentDataBase : IStaticVariableResetter
 {
-	// Token: 0x06015411 RID: 87057 RVA: 0x0055F150 File Offset: 0x0055D350
+	// Token: 0x06012E0F RID: 77327 RVA: 0x00589EAC File Offset: 0x005880AC
 	static RoleFavorContentDataBase()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleFavorContentDataBase.CreateStaticDefaultValue), new Action(RoleFavorContentDataBase.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06015412 RID: 87058 RVA: 0x0055F16F File Offset: 0x0055D36F
+	// Token: 0x06012E10 RID: 77328 RVA: 0x00589ECB File Offset: 0x005880CB
 	public RoleFavorContentDataBase(int roleId)
 	{
 		this.RoleId = roleId;
 		this.InstanceIdInternal = RoleFavorContentDataBase.IdCounter++;
 	}
 
-	// Token: 0x17001C49 RID: 7241
-	// (get) Token: 0x06015413 RID: 87059
+	// Token: 0x17001CA1 RID: 7329
+	// (get) Token: 0x06012E11 RID: 77329
 	public abstract int ConfigId { get; }
 
-	// Token: 0x17001C4A RID: 7242
-	// (get) Token: 0x06015414 RID: 87060
+	// Token: 0x17001CA2 RID: 7330
+	// (get) Token: 0x06012E12 RID: 77330
 	public abstract int ConfigConGroupId { get; }
 
-	// Token: 0x17001C4B RID: 7243
-	// (get) Token: 0x06015415 RID: 87061
+	// Token: 0x17001CA3 RID: 7331
+	// (get) Token: 0x06012E13 RID: 77331
 	public abstract string TitleTextId { get; }
 
-	// Token: 0x17001C4C RID: 7244
-	// (get) Token: 0x06015416 RID: 87062
+	// Token: 0x17001CA4 RID: 7332
+	// (get) Token: 0x06012E14 RID: 77332
 	public abstract string ContentTextId { get; }
 
-	// Token: 0x06015417 RID: 87063
+	// Token: 0x06012E15 RID: 77333
 	protected abstract EFavorContentType GetFavorContentType();
 
-	// Token: 0x17001C4D RID: 7245
-	// (get) Token: 0x06015418 RID: 87064 RVA: 0x0055F191 File Offset: 0x0055D391
+	// Token: 0x17001CA5 RID: 7333
+	// (get) Token: 0x06012E16 RID: 77334 RVA: 0x00589EED File Offset: 0x005880ED
 	public int InstanceId
 	{
 		get
@@ -49,8 +49,8 @@ public abstract class RoleFavorContentDataBase : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17001C4E RID: 7246
-	// (get) Token: 0x06015419 RID: 87065 RVA: 0x0055F199 File Offset: 0x0055D399
+	// Token: 0x17001CA6 RID: 7334
+	// (get) Token: 0x06012E17 RID: 77335 RVA: 0x00589EF5 File Offset: 0x005880F5
 	public string Title
 	{
 		get
@@ -63,8 +63,8 @@ public abstract class RoleFavorContentDataBase : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17001C4F RID: 7247
-	// (get) Token: 0x0601541A RID: 87066 RVA: 0x0055F1C8 File Offset: 0x0055D3C8
+	// Token: 0x17001CA7 RID: 7335
+	// (get) Token: 0x06012E18 RID: 77336 RVA: 0x00589F24 File Offset: 0x00588124
 	public string Content
 	{
 		get
@@ -77,8 +77,8 @@ public abstract class RoleFavorContentDataBase : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17001C50 RID: 7248
-	// (get) Token: 0x0601541B RID: 87067 RVA: 0x0055F1F7 File Offset: 0x0055D3F7
+	// Token: 0x17001CA8 RID: 7336
+	// (get) Token: 0x06012E19 RID: 77337 RVA: 0x00589F53 File Offset: 0x00588153
 	public EFavorContentType FavorContentType
 	{
 		get
@@ -87,24 +87,24 @@ public abstract class RoleFavorContentDataBase : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601541C RID: 87068 RVA: 0x0055F1FF File Offset: 0x0055D3FF
+	// Token: 0x06012E1A RID: 77338 RVA: 0x00589F5B File Offset: 0x0058815B
 	public static void CreateStaticDefaultValue()
 	{
 		RoleFavorContentDataBase.IdCounter = 0;
 	}
 
-	// Token: 0x0601541D RID: 87069 RVA: 0x0055F207 File Offset: 0x0055D407
+	// Token: 0x06012E1B RID: 77339 RVA: 0x00589F63 File Offset: 0x00588163
 	public static void ResetStaticDefaultValue()
 	{
 		RoleFavorContentDataBase.IdCounter = 0;
 	}
 
-	// Token: 0x04009EC3 RID: 40643
+	// Token: 0x0400A2AC RID: 41644
 	public int RoleId;
 
-	// Token: 0x04009EC4 RID: 40644
+	// Token: 0x0400A2AD RID: 41645
 	private readonly int InstanceIdInternal;
 
-	// Token: 0x04009EC5 RID: 40645
+	// Token: 0x0400A2AE RID: 41646
 	private static int IdCounter;
 }

@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Item;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F8B RID: 24459
+	// Token: 0x02004F72 RID: 20338
 	public class TotalTopUpWeaponPackageData
 	{
-		// Token: 0x0603E11D RID: 254237 RVA: 0x00EFC994 File Offset: 0x00EFAB94
+		// Token: 0x060330B7 RID: 209079 RVA: 0x00E4E64C File Offset: 0x00E4C84C
 		[NullableContext(2)]
 		public unsafe static TotalTopUpWeaponPackageData TryParseWeaponPackageData(int itemId)
 		{
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return totalTopUpWeaponPackageData;
 		}
 
-		// Token: 0x04020699 RID: 132761
+		// Token: 0x0401B16B RID: 110955
 		[Nullable(1)]
 		public List<int> WeaponTrialIdList = new List<int>();
 	}

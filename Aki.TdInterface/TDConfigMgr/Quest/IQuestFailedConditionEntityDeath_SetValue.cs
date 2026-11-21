@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001078 RID: 4216
+	// Token: 0x020011A6 RID: 4518
 	public class IQuestFailedConditionEntityDeath_SetValue
 	{
-		// Token: 0x0400395D RID: 14685
-		[Nullable(1)]
+		// Token: 0x04003CAA RID: 15530
 		public List<int> EntityIds;
 	}
 }

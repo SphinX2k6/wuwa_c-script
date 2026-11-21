@@ -12,12 +12,12 @@ using CSharpScript.Game.Module.TowerDefenseEvent;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A1F RID: 18975
+	// Token: 0x020039C7 RID: 14791
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBattleData : ISkillButtonUiEventInterface
 	{
-		// Token: 0x06031418 RID: 201752 RVA: 0x00B6C7C6 File Offset: 0x00B6A9C6
+		// Token: 0x060261A8 RID: 156072 RVA: 0x00AB07C2 File Offset: 0x00AAE9C2
 		public static TrapDefenseBattleData Create()
 		{
 			TrapDefenseBattleData trapDefenseBattleData = new TrapDefenseBattleData();
@@ -25,12 +25,12 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseBattleData;
 		}
 
-		// Token: 0x06031419 RID: 201753 RVA: 0x00B6C7D3 File Offset: 0x00B6A9D3
+		// Token: 0x060261A9 RID: 156073 RVA: 0x00AB07CF File Offset: 0x00AAE9CF
 		private void Init()
 		{
 		}
 
-		// Token: 0x0603141A RID: 201754 RVA: 0x00B6C7D8 File Offset: 0x00B6A9D8
+		// Token: 0x060261AA RID: 156074 RVA: 0x00AB07D4 File Offset: 0x00AAE9D4
 		private void AddTempTreeVarDelegate(ETrapDefenseSystemVarType key, TTreeVarUpdateDelegate @delegate)
 		{
 			HashSet<TTreeVarUpdateDelegate> hashSet;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			hashSet.Add(@delegate);
 		}
 
-		// Token: 0x0603141B RID: 201755 RVA: 0x00B6C810 File Offset: 0x00B6AA10
+		// Token: 0x060261AB RID: 156075 RVA: 0x00AB080C File Offset: 0x00AAEA0C
 		private void RemoveTempTreeVarDelegate(ETrapDefenseSystemVarType key, TTreeVarUpdateDelegate @delegate)
 		{
 			HashSet<TTreeVarUpdateDelegate> hashSet;
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603141C RID: 201756 RVA: 0x00B6C835 File Offset: 0x00B6AA35
+		// Token: 0x060261AC RID: 156076 RVA: 0x00AB0831 File Offset: 0x00AAEA31
 		private void ClearTempTreeVarDelegate()
 		{
 			this.TempTreeVarDelegateMap.Clear();
 		}
 
-		// Token: 0x0603141D RID: 201757 RVA: 0x00B6C842 File Offset: 0x00B6AA42
+		// Token: 0x060261AD RID: 156077 RVA: 0x00AB083E File Offset: 0x00AAEA3E
 		public void Clear()
 		{
 			this.BehaviorTreeVarMap.Clear();
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ClearTempTreeVarDelegate();
 		}
 
-		// Token: 0x0603141E RID: 201758 RVA: 0x00B6C86C File Offset: 0x00B6AA6C
+		// Token: 0x060261AE RID: 156078 RVA: 0x00AB0868 File Offset: 0x00AAEA68
 		public void AddTreeVarUpdateDelegate(ETrapDefenseSystemVarType key, TTreeVarUpdateDelegate @delegate)
 		{
 			InstanceDungeonInfo instanceDungeonInfo = InstanceDungeonModel.Instance.GetInstanceDungeonInfo();
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.AddTempTreeVarDelegate(key, @delegate);
 		}
 
-		// Token: 0x0603141F RID: 201759 RVA: 0x00B6C8B8 File Offset: 0x00B6AAB8
+		// Token: 0x060261AF RID: 156079 RVA: 0x00AB08B4 File Offset: 0x00AAEAB4
 		public void RemoveTreeVarUpdateDelegate(ETrapDefenseSystemVarType key, TTreeVarUpdateDelegate @delegate)
 		{
 			InstanceDungeonInfo instanceDungeonInfo = InstanceDungeonModel.Instance.GetInstanceDungeonInfo();
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.RemoveTempTreeVarDelegate(key, @delegate);
 		}
 
-		// Token: 0x06031420 RID: 201760 RVA: 0x00B6C904 File Offset: 0x00B6AB04
+		// Token: 0x060261B0 RID: 156080 RVA: 0x00AB0900 File Offset: 0x00AAEB00
 		public void SetBehaviorTreeVar(Dictionary<string, string> variableKeyNames)
 		{
 			this.BehaviorTreeVarMap.Clear();
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031421 RID: 201761 RVA: 0x00B6CA24 File Offset: 0x00B6AC24
+		// Token: 0x060261B1 RID: 156081 RVA: 0x00AB0A20 File Offset: 0x00AAEC20
 		[NullableContext(2)]
 		private VarDefinePb GetBehaviorTreeVar(ETrapDefenseSystemVarType key)
 		{
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return tree.GetTreeVarByKey(key2);
 		}
 
-		// Token: 0x06031422 RID: 201762 RVA: 0x00B6CA65 File Offset: 0x00B6AC65
+		// Token: 0x060261B2 RID: 156082 RVA: 0x00AB0A61 File Offset: 0x00AAEC61
 		public long GetBehaviorTreeVarToNumber(ETrapDefenseSystemVarType key)
 		{
 			VarDefinePb behaviorTreeVar = this.GetBehaviorTreeVar(key);
@@ -161,43 +161,43 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return behaviorTreeVar.Int;
 		}
 
-		// Token: 0x06031423 RID: 201763 RVA: 0x00B6CA7A File Offset: 0x00B6AC7A
+		// Token: 0x060261B3 RID: 156083 RVA: 0x00AB0A76 File Offset: 0x00AAEC76
 		public long GetGoldNum()
 		{
 			return this.GetBehaviorTreeVarToNumber(ETrapDefenseSystemVarType.Gold);
 		}
 
-		// Token: 0x06031424 RID: 201764 RVA: 0x00B6CA83 File Offset: 0x00B6AC83
+		// Token: 0x060261B4 RID: 156084 RVA: 0x00AB0A7F File Offset: 0x00AAEC7F
 		public long GetHealth()
 		{
 			return this.GetBehaviorTreeVarToNumber(ETrapDefenseSystemVarType.Health);
 		}
 
-		// Token: 0x06031425 RID: 201765 RVA: 0x00B6CA8C File Offset: 0x00B6AC8C
+		// Token: 0x060261B5 RID: 156085 RVA: 0x00AB0A88 File Offset: 0x00AAEC88
 		public int GetBatch()
 		{
 			return (int)this.GetBehaviorTreeVarToNumber(ETrapDefenseSystemVarType.Batch);
 		}
 
-		// Token: 0x06031426 RID: 201766 RVA: 0x00B6CA96 File Offset: 0x00B6AC96
+		// Token: 0x060261B6 RID: 156086 RVA: 0x00AB0A92 File Offset: 0x00AAEC92
 		public long GetMaxBatch()
 		{
 			return this.GetBehaviorTreeVarToNumber(ETrapDefenseSystemVarType.MaxBatch);
 		}
 
-		// Token: 0x06031427 RID: 201767 RVA: 0x00B6CA9F File Offset: 0x00B6AC9F
+		// Token: 0x060261B7 RID: 156087 RVA: 0x00AB0A9B File Offset: 0x00AAEC9B
 		public long GetTrapCount()
 		{
 			return this.GetBehaviorTreeVarToNumber(ETrapDefenseSystemVarType.TrapCount);
 		}
 
-		// Token: 0x06031428 RID: 201768 RVA: 0x00B6CAA8 File Offset: 0x00B6ACA8
+		// Token: 0x060261B8 RID: 156088 RVA: 0x00AB0AA4 File Offset: 0x00AAECA4
 		public long GetMaxTrapCount()
 		{
 			return this.GetBehaviorTreeVarToNumber(ETrapDefenseSystemVarType.MaxTrapCount);
 		}
 
-		// Token: 0x06031429 RID: 201769 RVA: 0x00B6CAB4 File Offset: 0x00B6ACB4
+		// Token: 0x060261B9 RID: 156089 RVA: 0x00AB0AB0 File Offset: 0x00AAECB0
 		public int GetCurrentPurificationItemCount()
 		{
 			TrapDefenseBattleItemData itemData = TrapDefenseModel.Instance.BattleInventoryData.GetItemData(1);
@@ -208,14 +208,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return itemData.InventoryCount;
 		}
 
-		// Token: 0x0603142A RID: 201770 RVA: 0x00B6CADD File Offset: 0x00B6ACDD
+		// Token: 0x060261BA RID: 156090 RVA: 0x00AB0AD9 File Offset: 0x00AAECD9
 		public int GetPurificationItemConsume()
 		{
 			return TowerDefenseEventController.Instance.RaycastResult.PollutedNum;
 		}
 
-		// Token: 0x17007A27 RID: 31271
-		// (get) Token: 0x0603142B RID: 201771 RVA: 0x00B6CAEE File Offset: 0x00B6ACEE
+		// Token: 0x17004DD4 RID: 19924
+		// (get) Token: 0x060261BB RID: 156091 RVA: 0x00AB0AEA File Offset: 0x00AAECEA
 		public bool IsPurificationItemEnough
 		{
 			get
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603142C RID: 201772 RVA: 0x00B6CB04 File Offset: 0x00B6AD04
+		// Token: 0x060261BC RID: 156092 RVA: 0x00AB0B00 File Offset: 0x00AAED00
 		public void SetTechParamMapVar(Dictionary<int, int> techParamMap)
 		{
 			if (techParamMap == null)
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603142D RID: 201773 RVA: 0x00B6CB7C File Offset: 0x00B6AD7C
+		// Token: 0x060261BD RID: 156093 RVA: 0x00AB0B78 File Offset: 0x00AAED78
 		public float GetSlotCount()
 		{
 			float result;
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return result;
 		}
 
-		// Token: 0x0603142E RID: 201774 RVA: 0x00B6CBA0 File Offset: 0x00B6ADA0
+		// Token: 0x060261BE RID: 156094 RVA: 0x00AB0B9C File Offset: 0x00AAED9C
 		public float GetAuxiliaryLimit()
 		{
 			float result;
@@ -265,8 +265,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return result;
 		}
 
-		// Token: 0x17007A28 RID: 31272
-		// (get) Token: 0x0603142F RID: 201775 RVA: 0x00B6CBC4 File Offset: 0x00B6ADC4
+		// Token: 0x17004DD5 RID: 19925
+		// (get) Token: 0x060261BF RID: 156095 RVA: 0x00AB0BC0 File Offset: 0x00AAEDC0
 		public bool IsCanBuildMachine
 		{
 			get
@@ -281,32 +281,32 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031430 RID: 201776 RVA: 0x00B6CC03 File Offset: 0x00B6AE03
+		// Token: 0x060261C0 RID: 156096 RVA: 0x00AB0BFF File Offset: 0x00AAEDFF
 		public void SetShopOpen(bool isOpen)
 		{
 			this.IsShopOpen = isOpen;
 		}
 
-		// Token: 0x06031431 RID: 201777 RVA: 0x00B6CC0C File Offset: 0x00B6AE0C
+		// Token: 0x060261C1 RID: 156097 RVA: 0x00AB0C08 File Offset: 0x00AAEE08
 		public void SetPreviewCountDown(float countDown)
 		{
 			this.PreviewCountDown = countDown;
 		}
 
-		// Token: 0x06031432 RID: 201778 RVA: 0x00B6CC15 File Offset: 0x00B6AE15
+		// Token: 0x060261C2 RID: 156098 RVA: 0x00AB0C11 File Offset: 0x00AAEE11
 		public void SetComboNum(int num)
 		{
 			this.ComboNum = num;
 			EventSystem.Instance.Emit<int>(EEventName.TrapDefenseComboNumChange, num);
 		}
 
-		// Token: 0x06031433 RID: 201779 RVA: 0x00B6CC2F File Offset: 0x00B6AE2F
+		// Token: 0x060261C3 RID: 156099 RVA: 0x00AB0C2B File Offset: 0x00AAEE2B
 		public void SetSpecialShow(bool isShow)
 		{
 			this.IsSpecialShow = isShow;
 		}
 
-		// Token: 0x06031434 RID: 201780 RVA: 0x00B6CC38 File Offset: 0x00B6AE38
+		// Token: 0x060261C4 RID: 156100 RVA: 0x00AB0C34 File Offset: 0x00AAEE34
 		public TrapDefenseBattleSkillData GetSkillData(string actionName)
 		{
 			TrapDefenseBattleSkillData trapDefenseBattleSkillData;
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseBattleSkillData;
 		}
 
-		// Token: 0x06031435 RID: 201781 RVA: 0x00B6CC88 File Offset: 0x00B6AE88
+		// Token: 0x060261C5 RID: 156101 RVA: 0x00AB0C84 File Offset: 0x00AAEE84
 		public void RefreshExploreSkillData()
 		{
 			int currentExploreSkillId = RouletteModel.Instance.CurrentExploreSkillId;
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			EventSystem.Instance.Emit<ESkillButtonType>(EEventName.OnSkillButtonSkillIdRefresh, trapDefenseBattleExploreSkillData.GetButtonType());
 		}
 
-		// Token: 0x06031436 RID: 201782 RVA: 0x00B6CD1C File Offset: 0x00B6AF1C
+		// Token: 0x060261C6 RID: 156102 RVA: 0x00AB0D18 File Offset: 0x00AAEF18
 		private void RefreshSkillCd(GroupSkillCdInfo groupSkillCdInfo)
 		{
 			foreach (int num in groupSkillCdInfo.SkillCdInfoMap.Keys)
@@ -359,25 +359,25 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031437 RID: 201783 RVA: 0x00B6CDD4 File Offset: 0x00B6AFD4
+		// Token: 0x060261C7 RID: 156103 RVA: 0x00AB0DD0 File Offset: 0x00AAEFD0
 		public void EquipExplorePhantomSkill()
 		{
 			this.RefreshExploreSkillData();
 		}
 
-		// Token: 0x06031438 RID: 201784 RVA: 0x00B6CDDC File Offset: 0x00B6AFDC
+		// Token: 0x060261C8 RID: 156104 RVA: 0x00AB0DD8 File Offset: 0x00AAEFD8
 		public void SkillCountChanged(GroupSkillCdInfo groupSkillCdInfo)
 		{
 			this.RefreshSkillCd(groupSkillCdInfo);
 		}
 
-		// Token: 0x06031439 RID: 201785 RVA: 0x00B6CDE5 File Offset: 0x00B6AFE5
+		// Token: 0x060261C9 RID: 156105 RVA: 0x00AB0DE1 File Offset: 0x00AAEFE1
 		public void SkillRemainCdChanged(GroupSkillCdInfo groupSkillCdInfo)
 		{
 			this.RefreshSkillCd(groupSkillCdInfo);
 		}
 
-		// Token: 0x0603143A RID: 201786 RVA: 0x00B6CDF0 File Offset: 0x00B6AFF0
+		// Token: 0x060261CA RID: 156106 RVA: 0x00AB0DEC File Offset: 0x00AAEFEC
 		public int? GetExploreSkillId()
 		{
 			TrapDefenseBattleExploreSkillData trapDefenseBattleExploreSkillData = this.GetSkillData("塔防道具") as TrapDefenseBattleExploreSkillData;
@@ -388,37 +388,37 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new int?(trapDefenseBattleExploreSkillData.GetSkillId());
 		}
 
-		// Token: 0x0603143B RID: 201787 RVA: 0x00B6CE25 File Offset: 0x00B6B025
+		// Token: 0x060261CB RID: 156107 RVA: 0x00AB0E21 File Offset: 0x00AAF021
 		public void SetHasStartAkEvent(bool value)
 		{
 			this.HasStartAkEvent = value;
 		}
 
-		// Token: 0x0401A55D RID: 107869
+		// Token: 0x04014EB4 RID: 85684
 		private readonly Dictionary<ETrapDefenseSystemVarType, string> BehaviorTreeVarMap = new Dictionary<ETrapDefenseSystemVarType, string>();
 
-		// Token: 0x0401A55E RID: 107870
+		// Token: 0x04014EB5 RID: 85685
 		private readonly Dictionary<ETrapDefenseSystemVarType, HashSet<TTreeVarUpdateDelegate>> TempTreeVarDelegateMap = new Dictionary<ETrapDefenseSystemVarType, HashSet<TTreeVarUpdateDelegate>>();
 
-		// Token: 0x0401A55F RID: 107871
+		// Token: 0x04014EB6 RID: 85686
 		private readonly Dictionary<TrapDefenseParamType, float> TechParamMap = new Dictionary<TrapDefenseParamType, float>();
 
-		// Token: 0x0401A560 RID: 107872
+		// Token: 0x04014EB7 RID: 85687
 		private readonly Dictionary<string, TrapDefenseBattleSkillData> BattleSkillData = new Dictionary<string, TrapDefenseBattleSkillData>();
 
-		// Token: 0x0401A561 RID: 107873
+		// Token: 0x04014EB8 RID: 85688
 		public bool IsShopOpen;
 
-		// Token: 0x0401A562 RID: 107874
+		// Token: 0x04014EB9 RID: 85689
 		public bool IsSpecialShow;
 
-		// Token: 0x0401A563 RID: 107875
+		// Token: 0x04014EBA RID: 85690
 		public float PreviewCountDown;
 
-		// Token: 0x0401A564 RID: 107876
+		// Token: 0x04014EBB RID: 85691
 		public int ComboNum;
 
-		// Token: 0x0401A565 RID: 107877
+		// Token: 0x04014EBC RID: 85692
 		public bool HasStartAkEvent;
 	}
 }

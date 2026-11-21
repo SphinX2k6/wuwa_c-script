@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EB8 RID: 3768
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FCE RID: 4046
 	public class IAddInteractOption
 	{
-		// Token: 0x06005312 RID: 21266 RVA: 0x000CC8F4 File Offset: 0x000CAAF4
+		// Token: 0x0600588E RID: 22670 RVA: 0x000D8A9C File Offset: 0x000D6C9C
 		private IAddInteractOption_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005313 RID: 21267 RVA: 0x000CC92C File Offset: 0x000CAB2C
+		// Token: 0x0600588F RID: 22671 RVA: 0x000D8AD4 File Offset: 0x000D6CD4
 		public static IAddInteractOption Create([Nullable(2)] IAddInteractOption instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005314 RID: 21268 RVA: 0x000CC93F File Offset: 0x000CAB3F
+		// Token: 0x06005890 RID: 22672 RVA: 0x000D8AE7 File Offset: 0x000D6CE7
 		public static IAddInteractOption CreateFromSetValue([Nullable(2)] IAddInteractOption_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005315 RID: 21269 RVA: 0x000CC954 File Offset: 0x000CAB54
+		// Token: 0x06005891 RID: 22673 RVA: 0x000D8AFC File Offset: 0x000D6CFC
 		public IAddInteractOption_SetValue ToSetValue()
 		{
 			return new IAddInteractOption_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001BF4 RID: 7156
-		// (get) Token: 0x06005316 RID: 21270 RVA: 0x000CC9A4 File Offset: 0x000CABA4
-		// (set) Token: 0x06005317 RID: 21271 RVA: 0x000CCA05 File Offset: 0x000CAC05
+		// Token: 0x17001D8C RID: 7564
+		// (get) Token: 0x06005892 RID: 22674 RVA: 0x000D8B4C File Offset: 0x000D6D4C
+		// (set) Token: 0x06005893 RID: 22675 RVA: 0x000D8BAD File Offset: 0x000D6DAD
 		public virtual IInteractOption Option
 		{
 			get
@@ -94,9 +92,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BF5 RID: 7157
-		// (get) Token: 0x06005318 RID: 21272 RVA: 0x000CCA1A File Offset: 0x000CAC1A
-		// (set) Token: 0x06005319 RID: 21273 RVA: 0x000CCA45 File Offset: 0x000CAC45
+		// Token: 0x17001D8D RID: 7565
+		// (get) Token: 0x06005894 RID: 22676 RVA: 0x000D8BC2 File Offset: 0x000D6DC2
+		// (set) Token: 0x06005895 RID: 22677 RVA: 0x000D8BED File Offset: 0x000D6DED
 		public virtual int EntityId
 		{
 			get
@@ -117,9 +115,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BF6 RID: 7158
-		// (get) Token: 0x0600531A RID: 21274 RVA: 0x000CCA54 File Offset: 0x000CAC54
-		// (set) Token: 0x0600531B RID: 21275 RVA: 0x000CCA8E File Offset: 0x000CAC8E
+		// Token: 0x17001D8E RID: 7566
+		// (get) Token: 0x06005896 RID: 22678 RVA: 0x000D8BFC File Offset: 0x000D6DFC
+		// (set) Token: 0x06005897 RID: 22679 RVA: 0x000D8C36 File Offset: 0x000D6E36
 		public virtual bool? IsManualFinish
 		{
 			get
@@ -141,9 +139,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BF7 RID: 7159
-		// (get) Token: 0x0600531C RID: 21276 RVA: 0x000CCA9C File Offset: 0x000CAC9C
-		// (set) Token: 0x0600531D RID: 21277 RVA: 0x000CCAD6 File Offset: 0x000CACD6
+		// Token: 0x17001D8F RID: 7567
+		// (get) Token: 0x06005898 RID: 22680 RVA: 0x000D8C44 File Offset: 0x000D6E44
+		// (set) Token: 0x06005899 RID: 22681 RVA: 0x000D8C7E File Offset: 0x000D6E7E
 		public virtual bool? IsManualDelete
 		{
 			get
@@ -165,9 +163,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BF8 RID: 7160
-		// (get) Token: 0x0600531E RID: 21278 RVA: 0x000CCAE4 File Offset: 0x000CACE4
-		// (set) Token: 0x0600531F RID: 21279 RVA: 0x000CCB0B File Offset: 0x000CAD0B
+		// Token: 0x17001D90 RID: 7568
+		// (get) Token: 0x0600589A RID: 22682 RVA: 0x000D8C8C File Offset: 0x000D6E8C
+		// (set) Token: 0x0600589B RID: 22683 RVA: 0x000D8CB3 File Offset: 0x000D6EB3
 		[Nullable(2)]
 		public virtual string InteractToken
 		{
@@ -192,18 +190,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400325C RID: 12892
+		// Token: 0x04003569 RID: 13673
 		[Nullable(2)]
 		protected IAddInteractOption FbInstance;
 
-		// Token: 0x0400325D RID: 12893
+		// Token: 0x0400356A RID: 13674
 		[Nullable(2)]
 		protected IAddInteractOption_SetValue PocoInterface;
 
-		// Token: 0x0400325E RID: 12894
+		// Token: 0x0400356B RID: 13675
 		private IInteractOption _OptionCache;
 
-		// Token: 0x0400325F RID: 12895
+		// Token: 0x0400356C RID: 13676
 		private bool _OptionInited;
 	}
 }

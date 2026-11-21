@@ -13,12 +13,12 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 {
-	// Token: 0x020069E6 RID: 27110
+	// Token: 0x02005B42 RID: 23362
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TimeTrackController : UiControllerBase
 	{
-		// Token: 0x060436E9 RID: 276201 RVA: 0x0107AA81 File Offset: 0x01078C81
+		// Token: 0x06039725 RID: 235301 RVA: 0x0101EF35 File Offset: 0x0101D135
 		protected override void OnAddEvents()
 		{
 			if (!EventSystem.Instance.Has(EEventName.CameraViewTargetChanged, new Action<float, string>(this.OnViewTargetChanged)))
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x060436EA RID: 276202 RVA: 0x0107AABC File Offset: 0x01078CBC
+		// Token: 0x06039726 RID: 235302 RVA: 0x0101EF70 File Offset: 0x0101D170
 		protected override void OnRemoveEvents()
 		{
 			if (EventSystem.Instance.Has(EEventName.CameraViewTargetChanged, new Action<float, string>(this.OnViewTargetChanged)))
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x060436EB RID: 276203 RVA: 0x0107AAF8 File Offset: 0x01078CF8
+		// Token: 0x06039727 RID: 235303 RVA: 0x0101EFAC File Offset: 0x0101D1AC
 		protected void SafeRegisterEvents(EntityHandle inEntity)
 		{
 			if (EventSystem.Instance.HasWithTarget(inEntity.Entity, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity)))
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			EventSystem.Instance.AddWithTarget(inEntity.Entity, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
 		}
 
-		// Token: 0x060436EC RID: 276204 RVA: 0x0107AB4C File Offset: 0x01078D4C
+		// Token: 0x06039728 RID: 235304 RVA: 0x0101F000 File Offset: 0x0101D200
 		protected void SafeUnRegisterEvents(EntityHandle inEntityHandle)
 		{
 			if (EventSystem.Instance.HasWithTarget(inEntityHandle.Entity, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity)))
@@ -55,13 +55,13 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x060436ED RID: 276205 RVA: 0x0107AB9E File Offset: 0x01078D9E
+		// Token: 0x06039729 RID: 235305 RVA: 0x0101F052 File Offset: 0x0101D252
 		private void CameraViewTargetEnd(float _)
 		{
 			this.FinishCallback(true);
 		}
 
-		// Token: 0x060436EE RID: 276206 RVA: 0x0107ABA8 File Offset: 0x01078DA8
+		// Token: 0x0603972A RID: 235306 RVA: 0x0101F05C File Offset: 0x0101D25C
 		protected void OnViewTargetChanged(float blendTime, string cameraName)
 		{
 			if (cameraName != "MainCamera")
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x060436EF RID: 276207 RVA: 0x0107AC34 File Offset: 0x01078E34
+		// Token: 0x0603972B RID: 235307 RVA: 0x0101F0E8 File Offset: 0x0101D2E8
 		[NullableContext(2)]
 		public void OpenTimeTrackControlView(long entityId, int index, Action<bool> callback = null)
 		{
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			this.TimelineTraceStartRequest(entityId, index);
 		}
 
-		// Token: 0x060436F0 RID: 276208 RVA: 0x0107AC94 File Offset: 0x01078E94
+		// Token: 0x0603972C RID: 235308 RVA: 0x0101F148 File Offset: 0x0101D348
 		public void HandleTimeTrackControlViewClose()
 		{
 			this.TimelineTraceExitRequest();
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			StaticSceneModel.Instance.IsForceKeepUi = false;
 		}
 
-		// Token: 0x060436F1 RID: 276209 RVA: 0x0107ACF4 File Offset: 0x01078EF4
+		// Token: 0x0603972D RID: 235309 RVA: 0x0101F1A8 File Offset: 0x0101D3A8
 		public void TimelineTraceStartRequest(long entityId, int index)
 		{
 			long creatureDataId = TimeTrackControlModel.Instance.CreatureDataId;
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			Net.Instance.Call(ERequestMessageId.TimelineTraceStartRequest, timelineTraceStartRequest, handle, 0);
 		}
 
-		// Token: 0x060436F2 RID: 276210 RVA: 0x0107AD70 File Offset: 0x01078F70
+		// Token: 0x0603972E RID: 235310 RVA: 0x0101F224 File Offset: 0x0101D424
 		public void TimelineTraceControlRequest(bool inForward)
 		{
 			long creatureDataId = TimeTrackControlModel.Instance.CreatureDataId;
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			Net.Instance.Call(ERequestMessageId.TimelineTraceControlRequest, timelineTraceControlRequest, handle, 0);
 		}
 
-		// Token: 0x060436F3 RID: 276211 RVA: 0x0107ADE4 File Offset: 0x01078FE4
+		// Token: 0x0603972F RID: 235311 RVA: 0x0101F298 File Offset: 0x0101D498
 		public void TimelineTraceExitRequest()
 		{
 			long creatureDataId = TimeTrackControlModel.Instance.CreatureDataId;
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			Net.Instance.Call(ERequestMessageId.TimelineTraceExitRequest, timelineTraceExitRequest, null, 0);
 		}
 
-		// Token: 0x060436F4 RID: 276212 RVA: 0x0107AE39 File Offset: 0x01079039
+		// Token: 0x06039730 RID: 235312 RVA: 0x0101F2ED File Offset: 0x0101D4ED
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			TimeTrackController.Instance.SafeUnRegisterEvents(handle);
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			UiManager.Instance.CloseView(EUiViewName.TimeTrackControlView, null);
 		}
 
-		// Token: 0x060436F5 RID: 276213 RVA: 0x0107AE68 File Offset: 0x01079068
+		// Token: 0x06039731 RID: 235313 RVA: 0x0101F31C File Offset: 0x0101D51C
 		private bool HandleStaticSceneSeq(IList<long> inIds, long entityId)
 		{
 			if (inIds == null || inIds.Count == 0)
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			return false;
 		}
 
-		// Token: 0x060436F6 RID: 276214 RVA: 0x0107AF60 File Offset: 0x01079160
+		// Token: 0x06039732 RID: 235314 RVA: 0x0101F414 File Offset: 0x0101D614
 		private void HandleControlEntitySeq(int oldPoint, int newPoint)
 		{
 			EntityHandle controllerEntity = TimeTrackControlModel.Instance.ControllerEntity;
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x060436F7 RID: 276215 RVA: 0x0107AFD8 File Offset: 0x010791D8
+		// Token: 0x06039733 RID: 235315 RVA: 0x0101F48C File Offset: 0x0101D68C
 		public void FinishCallback(bool value)
 		{
 			if (this.Callback != null)
@@ -310,8 +310,8 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x1700987B RID: 39035
-		// (get) Token: 0x060436F8 RID: 276216 RVA: 0x0107B01C File Offset: 0x0107921C
+		// Token: 0x17006D5B RID: 27995
+		// (get) Token: 0x06039734 RID: 235316 RVA: 0x0101F4D0 File Offset: 0x0101D6D0
 		public static TimeTrackController Instance
 		{
 			get
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x060436F9 RID: 276217 RVA: 0x0107B023 File Offset: 0x01079223
+		// Token: 0x06039735 RID: 235317 RVA: 0x0101F4D7 File Offset: 0x0101D6D7
 		public static TimeTrackController GetOrCreateInstance()
 		{
 			if (TimeTrackController._Instance == null)
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			return TimeTrackController._Instance;
 		}
 
-		// Token: 0x060436FA RID: 276218 RVA: 0x0107B037 File Offset: 0x01079237
+		// Token: 0x06039736 RID: 235318 RVA: 0x0101F4EB File Offset: 0x0101D6EB
 		public static bool CreateInstance()
 		{
 			if (TimeTrackController._Instance != null)
@@ -341,28 +341,28 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			return true;
 		}
 
-		// Token: 0x060436FB RID: 276219 RVA: 0x0107B04D File Offset: 0x0107924D
+		// Token: 0x06039737 RID: 235319 RVA: 0x0101F501 File Offset: 0x0101D701
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060436FC RID: 276220 RVA: 0x0107B04F File Offset: 0x0107924F
+		// Token: 0x06039738 RID: 235320 RVA: 0x0101F503 File Offset: 0x0101D703
 		public static void ResetStaticDefaultValue()
 		{
 			TimeTrackController._Instance = null;
 		}
 
-		// Token: 0x060436FD RID: 276221 RVA: 0x0107B057 File Offset: 0x01079257
+		// Token: 0x06039739 RID: 235321 RVA: 0x0101F50B File Offset: 0x0101D70B
 		static TimeTrackController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TimeTrackController.CreateStaticDefaultValue), new Action(TimeTrackController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023309 RID: 144137
+		// Token: 0x0401E4F9 RID: 124153
 		[Nullable(2)]
 		private Action<bool> Callback;
 
-		// Token: 0x0402330A RID: 144138
+		// Token: 0x0401E4FA RID: 124154
 		[Nullable(2)]
 		private static TimeTrackController _Instance;
 	}

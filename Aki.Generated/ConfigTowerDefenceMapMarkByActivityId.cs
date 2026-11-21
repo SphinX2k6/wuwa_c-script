@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009F7 RID: 2551
+	// Token: 0x02000ACC RID: 2764
 	public class ConfigTowerDefenceMapMarkByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003BDE RID: 15326 RVA: 0x001AC4A7 File Offset: 0x001AA6A7
+		// Token: 0x060040DC RID: 16604 RVA: 0x001CB83B File Offset: 0x001C9A3B
 		static ConfigTowerDefenceMapMarkByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTowerDefenceMapMarkByActivityId.CreateStaticDefaultValue), new Action(ConfigTowerDefenceMapMarkByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003BDF RID: 15327 RVA: 0x001AC4C8 File Offset: 0x001AA6C8
+		// Token: 0x060040DD RID: 16605 RVA: 0x001CB85C File Offset: 0x001C9A5C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTowerDefenceMapMarkByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003BE0 RID: 15328 RVA: 0x001AC547 File Offset: 0x001AA747
+		// Token: 0x060040DE RID: 16606 RVA: 0x001CB8DB File Offset: 0x001C9ADB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTowerDefenceMapMarkByActivityId.LogPair = null;
 			ConfigTowerDefenceMapMarkByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06003BE1 RID: 15329 RVA: 0x001AC555 File Offset: 0x001AA755
+		// Token: 0x060040DF RID: 16607 RVA: 0x001CB8E9 File Offset: 0x001C9AE9
 		public static void Init()
 		{
 			ConfigTowerDefenceMapMarkByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigTowerDefenceMapMarkByActivityId.HandleId, "db_towerdefense.db", "select BinData from `TowerDefenceMapMark` where ActivityId = ?");
 		}
 
-		// Token: 0x06003BE2 RID: 15330 RVA: 0x001AC570 File Offset: 0x001AA770
+		// Token: 0x060040E0 RID: 16608 RVA: 0x001CB904 File Offset: 0x001C9B04
 		public static TowerDefenceMapMark? GetConfig(int p0ActivityId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTowerDefenceMapMarkByActivityId.HandleId, ConfigTowerDefenceMapMarkByActivityId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TowerDefenceMapMark?(rootAsTowerDefenceMapMark);
 		}
 
-		// Token: 0x040045A7 RID: 17831
+		// Token: 0x04004B7A RID: 19322
 		private const string DB = "db_towerdefense.db";
 
-		// Token: 0x040045A8 RID: 17832
+		// Token: 0x04004B7B RID: 19323
 		private const string FILE = "l.联机塔防活动.xlsx";
 
-		// Token: 0x040045A9 RID: 17833
+		// Token: 0x04004B7C RID: 19324
 		private const string TABLE = "TowerDefenceMapMark";
 
-		// Token: 0x040045AA RID: 17834
+		// Token: 0x04004B7D RID: 19325
 		private const string COMMAND = "select BinData from `TowerDefenceMapMark` where ActivityId = ?";
 
-		// Token: 0x040045AB RID: 17835
+		// Token: 0x04004B7E RID: 19326
 		private const string KEY_PREFIX = "TowerDefenceMapMarkByActivityId";
 
-		// Token: 0x040045AC RID: 17836
+		// Token: 0x04004B7F RID: 19327
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040045AD RID: 17837
+		// Token: 0x04004B80 RID: 19328
 		private static int HandleId;
 	}
 }

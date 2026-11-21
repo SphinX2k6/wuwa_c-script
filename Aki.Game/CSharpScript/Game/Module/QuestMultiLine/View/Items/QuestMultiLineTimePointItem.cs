@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 {
-	// Token: 0x02004FC6 RID: 20422
+	// Token: 0x02003F8F RID: 16271
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 	})]
 	public class QuestMultiLineTimePointItem : GridProxyAbstract<QuestMultiLineTimePointData>
 	{
-		// Token: 0x0603442E RID: 214062 RVA: 0x00C45D74 File Offset: 0x00C43F74
+		// Token: 0x0602929C RID: 168604 RVA: 0x00B8F52C File Offset: 0x00B8D72C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			};
 		}
 
-		// Token: 0x0603442F RID: 214063 RVA: 0x00C45E78 File Offset: 0x00C44078
+		// Token: 0x0602929D RID: 168605 RVA: 0x00B8F630 File Offset: 0x00B8D830
 		public override void Refresh(QuestMultiLineTimePointData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.RefreshSelected(isSelected);
 		}
 
-		// Token: 0x06034430 RID: 214064 RVA: 0x00C45F24 File Offset: 0x00C44124
+		// Token: 0x0602929E RID: 168606 RVA: 0x00B8F6DC File Offset: 0x00B8D8DC
 		private UniTask RefreshPointSprite(QuestMultiLineTimePointData data)
 		{
 			QuestMultiLineTimePointItem.<RefreshPointSprite>d__4 <RefreshPointSprite>d__;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <RefreshPointSprite>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034431 RID: 214065 RVA: 0x00C45F70 File Offset: 0x00C44170
+		// Token: 0x0602929F RID: 168607 RVA: 0x00B8F728 File Offset: 0x00B8D928
 		private void RefreshRedDot()
 		{
 			QuestMultiLineTimePointData data = this.Data;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			base.GetItem(4).SetUIActive(uiactive);
 		}
 
-		// Token: 0x06034432 RID: 214066 RVA: 0x00C45FB7 File Offset: 0x00C441B7
+		// Token: 0x060292A0 RID: 168608 RVA: 0x00B8F76F File Offset: 0x00B8D96F
 		public override void OnSelected(bool fireEvent)
 		{
 			QuestMultiLineModel.Instance.ClearTimePointRedDot(this.Data.Id);
@@ -88,13 +88,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.RefreshSelected(true);
 		}
 
-		// Token: 0x06034433 RID: 214067 RVA: 0x00C45FDB File Offset: 0x00C441DB
+		// Token: 0x060292A1 RID: 168609 RVA: 0x00B8F793 File Offset: 0x00B8D993
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.RefreshSelected(false);
 		}
 
-		// Token: 0x06034434 RID: 214068 RVA: 0x00C45FE4 File Offset: 0x00C441E4
+		// Token: 0x060292A2 RID: 168610 RVA: 0x00B8F79C File Offset: 0x00B8D99C
 		public void RefreshSelected(bool selected)
 		{
 			UUIText text = base.GetText(3);
@@ -113,13 +113,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x06034435 RID: 214069 RVA: 0x00C4604A File Offset: 0x00C4424A
+		// Token: 0x060292A3 RID: 168611 RVA: 0x00B8F802 File Offset: 0x00B8DA02
 		public void SetFunction(Action<QuestMultiLineTimePointData> buttonFunction)
 		{
 			this.ButtonFunction = buttonFunction;
 		}
 
-		// Token: 0x06034436 RID: 214070 RVA: 0x00C46053 File Offset: 0x00C44253
+		// Token: 0x060292A4 RID: 168612 RVA: 0x00B8F80B File Offset: 0x00B8DA0B
 		private void OnClick()
 		{
 			Action<QuestMultiLineTimePointData> buttonFunction = this.ButtonFunction;
@@ -130,17 +130,17 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			buttonFunction(this.Data);
 		}
 
-		// Token: 0x06034437 RID: 214071 RVA: 0x00C4606B File Offset: 0x00C4426B
+		// Token: 0x060292A5 RID: 168613 RVA: 0x00B8F823 File Offset: 0x00B8DA23
 		private void OnToggleClick(EToggleState state)
 		{
 			this.OnClick();
 		}
 
-		// Token: 0x0401BCC4 RID: 113860
+		// Token: 0x04016699 RID: 91801
 		[Nullable(2)]
 		private QuestMultiLineTimePointData Data;
 
-		// Token: 0x0401BCC5 RID: 113861
+		// Token: 0x0401669A RID: 91802
 		[Nullable(new byte[]
 		{
 			2,

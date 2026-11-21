@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EEF RID: 3823
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001005 RID: 4101
 	public class ICheckMonsterBattleAttribute_SetValue
 	{
-		// Token: 0x0400331C RID: 13084
+		// Token: 0x04003629 RID: 13865
 		public ETargetBattleAttribute Type;
 
-		// Token: 0x0400331D RID: 13085
+		// Token: 0x0400362A RID: 13866
 		public IHealthAttributeToTarget Option;
 
-		// Token: 0x0400331E RID: 13086
+		// Token: 0x0400362B RID: 13867
 		public List<int> EntityIds;
 	}
 }

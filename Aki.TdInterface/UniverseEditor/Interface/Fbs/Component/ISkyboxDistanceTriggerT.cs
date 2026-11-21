@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200591E RID: 22814
+	// Token: 0x02005F2B RID: 24363
 	public class ISkyboxDistanceTriggerT
 	{
-		// Token: 0x1700AB22 RID: 43810
-		// (get) Token: 0x06026944 RID: 158020 RVA: 0x00550608 File Offset: 0x0054E808
-		// (set) Token: 0x06026945 RID: 158021 RVA: 0x00550610 File Offset: 0x0054E810
+		// Token: 0x1700B456 RID: 46166
+		// (get) Token: 0x06028EAE RID: 167598 RVA: 0x00597274 File Offset: 0x00595474
+		// (set) Token: 0x06028EAF RID: 167599 RVA: 0x0059727C File Offset: 0x0059547C
 		public ETriggerMode Type { get; set; }
 
-		// Token: 0x1700AB23 RID: 43811
-		// (get) Token: 0x06026946 RID: 158022 RVA: 0x00550619 File Offset: 0x0054E819
-		// (set) Token: 0x06026947 RID: 158023 RVA: 0x00550621 File Offset: 0x0054E821
+		// Token: 0x1700B457 RID: 46167
+		// (get) Token: 0x06028EB0 RID: 167600 RVA: 0x00597285 File Offset: 0x00595485
+		// (set) Token: 0x06028EB1 RID: 167601 RVA: 0x0059728D File Offset: 0x0059548D
 		public float Distance { get; set; }
 
-		// Token: 0x06026948 RID: 158024 RVA: 0x0055062A File Offset: 0x0054E82A
+		// Token: 0x06028EB2 RID: 167602 RVA: 0x00597296 File Offset: 0x00595496
 		public ISkyboxDistanceTriggerT()
 		{
 			this.Type = ETriggerMode.Distance;

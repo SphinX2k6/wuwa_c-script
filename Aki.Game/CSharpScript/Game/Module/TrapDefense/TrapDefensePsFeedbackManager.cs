@@ -9,43 +9,43 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A81 RID: 19073
+	// Token: 0x02003A29 RID: 14889
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefensePsFeedbackManager : IStaticVariableResetter
 	{
-		// Token: 0x060316E5 RID: 202469 RVA: 0x00B7436C File Offset: 0x00B7256C
+		// Token: 0x06026475 RID: 156789 RVA: 0x00AB82F0 File Offset: 0x00AB64F0
 		static TrapDefensePsFeedbackManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TrapDefensePsFeedbackManager.CreateStaticDefaultValue), new Action(TrapDefensePsFeedbackManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060316E6 RID: 202470 RVA: 0x00B7438B File Offset: 0x00B7258B
+		// Token: 0x06026476 RID: 156790 RVA: 0x00AB830F File Offset: 0x00AB650F
 		public static void CreateStaticDefaultValue()
 		{
 			TrapDefensePsFeedbackManager.IsInCombinationKey = false;
 		}
 
-		// Token: 0x060316E7 RID: 202471 RVA: 0x00B74393 File Offset: 0x00B72593
+		// Token: 0x06026477 RID: 156791 RVA: 0x00AB8317 File Offset: 0x00AB6517
 		public static void ResetStaticDefaultValue()
 		{
 			TrapDefensePsFeedbackManager.IsInCombinationKey = false;
 		}
 
-		// Token: 0x060316E8 RID: 202472 RVA: 0x00B7439B File Offset: 0x00B7259B
+		// Token: 0x06026478 RID: 156792 RVA: 0x00AB831F File Offset: 0x00AB651F
 		public static void Initialize()
 		{
 			TrapDefensePsFeedbackManager.AddEvent();
 		}
 
-		// Token: 0x060316E9 RID: 202473 RVA: 0x00B743A2 File Offset: 0x00B725A2
+		// Token: 0x06026479 RID: 156793 RVA: 0x00AB8326 File Offset: 0x00AB6526
 		public static void Clear()
 		{
 			TrapDefensePsFeedbackManager.RemoveEvent();
 			TrapDefensePsFeedbackManager.StopFeedback();
 		}
 
-		// Token: 0x060316EA RID: 202474 RVA: 0x00B743AE File Offset: 0x00B725AE
+		// Token: 0x0602647A RID: 156794 RVA: 0x00AB8332 File Offset: 0x00AB6532
 		public static void TryRefreshFeedback()
 		{
 			if (!TrapDefensePsFeedbackManager.CheckFeedbackCondition())
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			TrapDefensePsFeedbackManager.RefreshFeedback();
 		}
 
-		// Token: 0x060316EB RID: 202475 RVA: 0x00B743C4 File Offset: 0x00B725C4
+		// Token: 0x0602647B RID: 156795 RVA: 0x00AB8348 File Offset: 0x00AB6548
 		private static void AddEvent()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			instance4.BindAction(actionName, actionCallback);
 		}
 
-		// Token: 0x060316EC RID: 202476 RVA: 0x00B7447C File Offset: 0x00B7267C
+		// Token: 0x0602647C RID: 156796 RVA: 0x00AB8400 File Offset: 0x00AB6600
 		private static void RemoveEvent()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -130,19 +130,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			instance4.UnBindAction(actionName, actionCallback);
 		}
 
-		// Token: 0x060316ED RID: 202477 RVA: 0x00B74534 File Offset: 0x00B72734
+		// Token: 0x0602647D RID: 156797 RVA: 0x00AB84B8 File Offset: 0x00AB66B8
 		private static void OnInputDistributeTagChanged(IReadOnlyList<InputDistributeTag> inputDistributeTags)
 		{
 			TrapDefensePsFeedbackManager.TryRefreshFeedback();
 		}
 
-		// Token: 0x060316EE RID: 202478 RVA: 0x00B7453B File Offset: 0x00B7273B
+		// Token: 0x0602647E RID: 156798 RVA: 0x00AB84BF File Offset: 0x00AB66BF
 		private static void RefreshTrapDefensePsFeedback()
 		{
 			TrapDefensePsFeedbackManager.TryRefreshFeedback();
 		}
 
-		// Token: 0x060316EF RID: 202479 RVA: 0x00B74544 File Offset: 0x00B72744
+		// Token: 0x0602647F RID: 156799 RVA: 0x00AB84C8 File Offset: 0x00AB66C8
 		private static void OnCommonKeySettingKeyChange(KeySettingRowData keyData, CSharpScript.Game.Module.Menu.EInputControllerType inputControllerType)
 		{
 			GamepadConfig instance = GamepadConfig.Instance;
@@ -153,26 +153,26 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060316F0 RID: 202480 RVA: 0x00B745AB File Offset: 0x00B727AB
+		// Token: 0x06026480 RID: 156800 RVA: 0x00AB852F File Offset: 0x00AB672F
 		private static void OnInputCombineButton(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification identification)
 		{
 			TrapDefensePsFeedbackManager.IsInCombinationKey = (actionType == InputDistributeDefine.EActionType.Press);
 			TrapDefensePsFeedbackManager.TryRefreshFeedback();
 		}
 
-		// Token: 0x060316F1 RID: 202481 RVA: 0x00B745BB File Offset: 0x00B727BB
+		// Token: 0x06026481 RID: 156801 RVA: 0x00AB853F File Offset: 0x00AB673F
 		private static bool CheckInputDistribute()
 		{
 			return InputDistributeModel.Instance.IsTagMatchAnyCurrentInputTag("FightInputRoot", false);
 		}
 
-		// Token: 0x060316F2 RID: 202482 RVA: 0x00B745CD File Offset: 0x00B727CD
+		// Token: 0x06026482 RID: 156802 RVA: 0x00AB8551 File Offset: 0x00AB6751
 		private static bool CheckFeedbackCondition()
 		{
 			return TrapDefensePsFeedbackManager.CheckInputDistribute() && TowerDefensePlayerController.IsPlayerFollowerEnabled() && !TrapDefensePsFeedbackManager.IsInCombinationKey && TowerDefensePlayerController.Model.FollowerState == TDPlayerDefine.EFollowerState.CDReady;
 		}
 
-		// Token: 0x060316F3 RID: 202483 RVA: 0x00B745FC File Offset: 0x00B727FC
+		// Token: 0x06026483 RID: 156803 RVA: 0x00AB8580 File Offset: 0x00AB6780
 		[NullableContext(2)]
 		private static string GetDefaultFeedback()
 		{
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return auxiliaryTypeById.Value.PsFeedbackId;
 		}
 
-		// Token: 0x060316F4 RID: 202484 RVA: 0x00B74684 File Offset: 0x00B72884
+		// Token: 0x06026484 RID: 156804 RVA: 0x00AB8608 File Offset: 0x00AB6808
 		private static void RefreshFeedback()
 		{
 			bool flag = (TowerDefensePlayerController.Model.CurrentFollowerProxyId ?? 0) == 0;
@@ -216,20 +216,20 @@ namespace CSharpScript.Game.Module.TrapDefense
 			GamepadController.Instance.TryAddFeedbackReason(EGamepadPsFeedbackReason.TrapDefense, text);
 		}
 
-		// Token: 0x060316F5 RID: 202485 RVA: 0x00B746EB File Offset: 0x00B728EB
+		// Token: 0x06026485 RID: 156805 RVA: 0x00AB866F File Offset: 0x00AB686F
 		private static void StopFeedback()
 		{
 			GamepadController.Instance.RemoveFeedbackReason(EGamepadPsFeedbackReason.TrapDefense);
 		}
 
-		// Token: 0x0401A700 RID: 108288
+		// Token: 0x04015052 RID: 86098
 		private static bool IsInCombinationKey;
 
-		// Token: 0x0200ABD4 RID: 43988
+		// Token: 0x020095F4 RID: 38388
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04034387 RID: 213895
+			// Token: 0x0402ED38 RID: 191800
 			[Nullable(new byte[]
 			{
 				0,
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			})]
 			public static Action<IReadOnlyList<InputDistributeTag>> <0>__OnInputDistributeTagChanged;
 
-			// Token: 0x04034388 RID: 213896
+			// Token: 0x0402ED39 RID: 191801
 			[Nullable(new byte[]
 			{
 				0,
@@ -246,11 +246,11 @@ namespace CSharpScript.Game.Module.TrapDefense
 			})]
 			public static Action<KeySettingRowData, CSharpScript.Game.Module.Menu.EInputControllerType> <1>__OnCommonKeySettingKeyChange;
 
-			// Token: 0x04034389 RID: 213897
+			// Token: 0x0402ED3A RID: 191802
 			[Nullable(0)]
 			public static Action <2>__RefreshTrapDefensePsFeedback;
 
-			// Token: 0x0403438A RID: 213898
+			// Token: 0x0402ED3B RID: 191803
 			[Nullable(0)]
 			public static TInputHandle<InputDistributeDefine.EActionType> <3>__OnInputCombineButton;
 		}

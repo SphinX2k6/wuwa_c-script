@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Utils;
 
-// Token: 0x02002FF3 RID: 12275
+// Token: 0x02002548 RID: 9544
 [NullableContext(1)]
 [Nullable(0)]
 public class BuffVictimTrigger : Trigger
 {
-	// Token: 0x0601A030 RID: 106544 RVA: 0x006CF81C File Offset: 0x006CDA1C
+	// Token: 0x06017964 RID: 96612 RVA: 0x006F76B8 File Offset: 0x006F58B8
 	[NullableContext(2)]
 	public BuffVictimTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A031 RID: 106545 RVA: 0x006CF838 File Offset: 0x006CDA38
+	// Token: 0x06017965 RID: 96613 RVA: 0x006F76D4 File Offset: 0x006F58D4
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.TargetType = (ETriggerTargetType)Convert.ToInt32((triggerParams.Length != 0) ? triggerParams[0] : "0");
@@ -42,7 +42,7 @@ public class BuffVictimTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A032 RID: 106546 RVA: 0x006CF904 File Offset: 0x006CDB04
+	// Token: 0x06017966 RID: 96614 RVA: 0x006F77A0 File Offset: 0x006F59A0
 	private void AddBuffIdToListen(long buffId, int direction, int threshold)
 	{
 		List<ValueTuple<int, int>> list;
@@ -54,7 +54,7 @@ public class BuffVictimTrigger : Trigger
 		list.Add(new ValueTuple<int, int>(direction, threshold));
 	}
 
-	// Token: 0x0601A033 RID: 106547 RVA: 0x006CF944 File Offset: 0x006CDB44
+	// Token: 0x06017967 RID: 96615 RVA: 0x006F77E0 File Offset: 0x006F59E0
 	protected override void OnActive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -68,7 +68,7 @@ public class BuffVictimTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A034 RID: 106548 RVA: 0x006CF9D0 File Offset: 0x006CDBD0
+	// Token: 0x06017968 RID: 96616 RVA: 0x006F786C File Offset: 0x006F5A6C
 	protected override void OnInactive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -82,7 +82,7 @@ public class BuffVictimTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A035 RID: 106549 RVA: 0x006CFA5C File Offset: 0x006CDC5C
+	// Token: 0x06017969 RID: 96617 RVA: 0x006F78F8 File Offset: 0x006F5AF8
 	private void OnEvent(long buffId, int oldStack, int newStack, Entity victim)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -117,16 +117,16 @@ public class BuffVictimTrigger : Trigger
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x0601A036 RID: 106550 RVA: 0x006CFB43 File Offset: 0x006CDD43
+	// Token: 0x0601796A RID: 96618 RVA: 0x006F79DF File Offset: 0x006F5BDF
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4D9 RID: 50393
+	// Token: 0x0400C8A1 RID: 51361
 	protected ETriggerTargetType TargetType;
 
-	// Token: 0x0400C4DA RID: 50394
+	// Token: 0x0400C8A2 RID: 51362
 	[Nullable(new byte[]
 	{
 		1,
@@ -135,13 +135,13 @@ public class BuffVictimTrigger : Trigger
 	})]
 	protected readonly Dictionary<long, List<ValueTuple<int, int>>> ListenBuffIds = new Dictionary<long, List<ValueTuple<int, int>>>();
 
-	// Token: 0x02009625 RID: 38437
+	// Token: 0x02008846 RID: 34886
 	[NullableContext(0)]
 	protected enum EBuffVictimListenIdType
 	{
-		// Token: 0x040302C8 RID: 197320
+		// Token: 0x0402B955 RID: 178517
 		BuffId,
-		// Token: 0x040302C9 RID: 197321
+		// Token: 0x0402B956 RID: 178518
 		BuffGroupId
 	}
 }

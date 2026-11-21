@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000164 RID: 356
+	// Token: 0x02000168 RID: 360
 	public class PlatformReportGetEntitlementLabelList : PlatformSdkReportBaseData
 	{
-		// Token: 0x06000A68 RID: 2664 RVA: 0x00044E50 File Offset: 0x00043050
+		// Token: 0x06000A9C RID: 2716 RVA: 0x00047264 File Offset: 0x00045464
 		public PlatformReportGetEntitlementLabelList()
 		{
 			this.event_id = 60153;

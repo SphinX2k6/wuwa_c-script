@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200710D RID: 28941
+	// Token: 0x020078D9 RID: 30937
 	public class ISignalDeviceT
 	{
-		// Token: 0x1700D722 RID: 55074
-		// (get) Token: 0x060334EF RID: 210159 RVA: 0x006EABB6 File Offset: 0x006E8DB6
-		// (set) Token: 0x060334F0 RID: 210160 RVA: 0x006EABBE File Offset: 0x006E8DBE
+		// Token: 0x1700E305 RID: 58117
+		// (get) Token: 0x06036791 RID: 223121 RVA: 0x0074B1C2 File Offset: 0x007493C2
+		// (set) Token: 0x06036792 RID: 223122 RVA: 0x0074B1CA File Offset: 0x007493CA
 		public ESimpleGameplayType Type { get; set; }
 
-		// Token: 0x1700D723 RID: 55075
-		// (get) Token: 0x060334F1 RID: 210161 RVA: 0x006EABC7 File Offset: 0x006E8DC7
-		// (set) Token: 0x060334F2 RID: 210162 RVA: 0x006EABCF File Offset: 0x006E8DCF
+		// Token: 0x1700E306 RID: 58118
+		// (get) Token: 0x06036793 RID: 223123 RVA: 0x0074B1D3 File Offset: 0x007493D3
+		// (set) Token: 0x06036794 RID: 223124 RVA: 0x0074B1DB File Offset: 0x007493DB
 		public List<IColorPieceT> Config { get; set; }
 
-		// Token: 0x060334F3 RID: 210163 RVA: 0x006EABD8 File Offset: 0x006E8DD8
+		// Token: 0x06036795 RID: 223125 RVA: 0x0074B1E4 File Offset: 0x007493E4
 		public ISignalDeviceT()
 		{
 			this.Type = ESimpleGameplayType.Cipher;

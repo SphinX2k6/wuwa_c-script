@@ -4,12 +4,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 {
-	// Token: 0x02007029 RID: 28713
+	// Token: 0x020061AA RID: 25002
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MotorcycleStrengthComponent : EntityComponent
 	{
-		// Token: 0x06045E6B RID: 286315 RVA: 0x011652BC File Offset: 0x011634BC
+		// Token: 0x0603C042 RID: 245826 RVA: 0x0110F23C File Offset: 0x0110D43C
 		private void SetBannedSprint(bool banned)
 		{
 			if (this.BannedSprint == banned)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E6C RID: 286316 RVA: 0x01165327 File Offset: 0x01163527
+		// Token: 0x0603C043 RID: 245827 RVA: 0x0110F2A7 File Offset: 0x0110D4A7
 		private void RegisterStrengthListener()
 		{
 			if (this.IsListeningStrength)
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			FormationAttributeController.Instance.AddValueListener(EFormationAttributeId.MotorcycleStrength, new TValueListener(this.OnStrengthChanged), null);
 		}
 
-		// Token: 0x06045E6D RID: 286317 RVA: 0x01165352 File Offset: 0x01163552
+		// Token: 0x0603C044 RID: 245828 RVA: 0x0110F2D2 File Offset: 0x0110D4D2
 		private void UnregisterStrengthListener()
 		{
 			if (!this.IsListeningStrength)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			FormationAttributeController.Instance.RemoveValueListener(EFormationAttributeId.MotorcycleStrength, new TValueListener(this.OnStrengthChanged));
 		}
 
-		// Token: 0x06045E6E RID: 286318 RVA: 0x0116537C File Offset: 0x0116357C
+		// Token: 0x0603C045 RID: 245829 RVA: 0x0110F2FC File Offset: 0x0110D4FC
 		private void OnStrengthChanged(EFormationAttributeId attributeId, float newValue, float oldValue)
 		{
 			if (this.BannedSprint)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E6F RID: 286319 RVA: 0x011653A8 File Offset: 0x011635A8
+		// Token: 0x0603C046 RID: 245830 RVA: 0x0110F328 File Offset: 0x0110D528
 		private void OnVehicleDriverChange(Entity oldDriver, Entity newDriver)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E70 RID: 286320 RVA: 0x01165450 File Offset: 0x01163650
+		// Token: 0x0603C047 RID: 245831 RVA: 0x0110F3D0 File Offset: 0x0110D5D0
 		protected override bool OnStart()
 		{
 			this.TagComp = base.Entity.GetComponent<BaseTagComponent>();
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E71 RID: 286321 RVA: 0x011654A0 File Offset: 0x011636A0
+		// Token: 0x0603C048 RID: 245832 RVA: 0x0110F420 File Offset: 0x0110D620
 		protected override bool OnEnd()
 		{
 			this.UnregisterStrengthListener();
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E72 RID: 286322 RVA: 0x011654CC File Offset: 0x011636CC
+		// Token: 0x0603C049 RID: 245833 RVA: 0x0110F44C File Offset: 0x0110D64C
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -145,41 +145,52 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				return false;
 			}
 			MotorcycleStrengthComponent motorcycleStrengthComponent = (MotorcycleStrengthComponent)componentTemplate;
-			if (base.CanResetComponentProperty("TagComp"))
+			if (motorcycleStrengthComponent.TagComp == null)
 			{
-				if (motorcycleStrengthComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("BannedSprint"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				this.BannedSprint = motorcycleStrengthComponent.BannedSprint;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsListeningStrength"))
-			{
-				this.IsListeningStrength = motorcycleStrengthComponent.IsListeningStrength;
-			}
+			this.BannedSprint = motorcycleStrengthComponent.BannedSprint;
+			this.IsListeningStrength = motorcycleStrengthComponent.IsListeningStrength;
 			return true;
 		}
 
-		// Token: 0x040248CB RID: 149707
+		// Token: 0x1700712E RID: 28974
+		// (get) Token: 0x0603C04A RID: 245834 RVA: 0x0110F4AF File Offset: 0x0110D6AF
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700712F RID: 28975
+		// (get) Token: 0x0603C04B RID: 245835 RVA: 0x0110F4B2 File Offset: 0x0110D6B2
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FB81 RID: 129921
 		private const float BANNED_SPRINT_THRESHOLD_MIN = 1f;
 
-		// Token: 0x040248CC RID: 149708
+		// Token: 0x0401FB82 RID: 129922
 		private const float BANNED_SPRINT_THRESHOLD_MAX = 20f;
 
-		// Token: 0x040248CD RID: 149709
+		// Token: 0x0401FB83 RID: 129923
 		protected BaseTagComponent TagComp;
 
-		// Token: 0x040248CE RID: 149710
+		// Token: 0x0401FB84 RID: 129924
 		private bool BannedSprint;
 
-		// Token: 0x040248CF RID: 149711
+		// Token: 0x0401FB85 RID: 129925
 		private bool IsListeningStrength;
 	}
 }

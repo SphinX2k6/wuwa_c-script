@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E09 RID: 15881
+	// Token: 0x02004244 RID: 16964
 	public struct IEntityDistanceLimitingCondition : IFlatbufferObject
 	{
-		// Token: 0x17006DC0 RID: 28096
-		// (get) Token: 0x06016380 RID: 91008 RVA: 0x003354FC File Offset: 0x003336FC
+		// Token: 0x170073A6 RID: 29606
+		// (get) Token: 0x060179AD RID: 96685 RVA: 0x0035E0F4 File Offset: 0x0035C2F4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016381 RID: 91009 RVA: 0x00335509 File Offset: 0x00333709
+		// Token: 0x060179AE RID: 96686 RVA: 0x0035E101 File Offset: 0x0035C301
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016382 RID: 91010 RVA: 0x00335510 File Offset: 0x00333710
+		// Token: 0x060179AF RID: 96687 RVA: 0x0035E108 File Offset: 0x0035C308
 		public static IEntityDistanceLimitingCondition GetRootAsIEntityDistanceLimitingCondition(ByteBuffer _bb)
 		{
 			return IEntityDistanceLimitingCondition.GetRootAsIEntityDistanceLimitingCondition(_bb, default(IEntityDistanceLimitingCondition));
 		}
 
-		// Token: 0x06016383 RID: 91011 RVA: 0x0033552C File Offset: 0x0033372C
+		// Token: 0x060179B0 RID: 96688 RVA: 0x0035E124 File Offset: 0x0035C324
 		public static IEntityDistanceLimitingCondition GetRootAsIEntityDistanceLimitingCondition(ByteBuffer _bb, IEntityDistanceLimitingCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016384 RID: 91012 RVA: 0x00335549 File Offset: 0x00333749
+		// Token: 0x060179B1 RID: 96689 RVA: 0x0035E141 File Offset: 0x0035C341
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016385 RID: 91013 RVA: 0x00335558 File Offset: 0x00333758
+		// Token: 0x060179B2 RID: 96690 RVA: 0x0035E150 File Offset: 0x0035C350
 		public IEntityDistanceLimitingCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006DC1 RID: 28097
-		// (get) Token: 0x06016386 RID: 91014 RVA: 0x00335568 File Offset: 0x00333768
+		// Token: 0x170073A7 RID: 29607
+		// (get) Token: 0x060179B3 RID: 96691 RVA: 0x0035E160 File Offset: 0x0035C360
 		public int EntityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006DC2 RID: 28098
-		// (get) Token: 0x06016387 RID: 91015 RVA: 0x003355A4 File Offset: 0x003337A4
+		// Token: 0x170073A8 RID: 29608
+		// (get) Token: 0x060179B4 RID: 96692 RVA: 0x0035E19C File Offset: 0x0035C39C
 		public float MaxDistance
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006DC3 RID: 28099
-		// (get) Token: 0x06016388 RID: 91016 RVA: 0x003355E4 File Offset: 0x003337E4
+		// Token: 0x170073A9 RID: 29609
+		// (get) Token: 0x060179B5 RID: 96693 RVA: 0x0035E1DC File Offset: 0x0035C3DC
 		public float OverMaxCountdown
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016389 RID: 91017 RVA: 0x00335624 File Offset: 0x00333824
+		// Token: 0x060179B6 RID: 96694 RVA: 0x0035E21C File Offset: 0x0035C41C
 		public static Offset<IEntityDistanceLimitingCondition> CreateIEntityDistanceLimitingCondition(FlatBufferBuilder builder, int EntityId = 0, float MaxDistance = 0f, float OverMaxCountdown = 0f)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IEntityDistanceLimitingCondition.EndIEntityDistanceLimitingCondition(builder);
 		}
 
-		// Token: 0x0601638A RID: 91018 RVA: 0x00335648 File Offset: 0x00333848
+		// Token: 0x060179B7 RID: 96695 RVA: 0x0035E240 File Offset: 0x0035C440
 		public static void StartIEntityDistanceLimitingCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601638B RID: 91019 RVA: 0x00335651 File Offset: 0x00333851
+		// Token: 0x060179B8 RID: 96696 RVA: 0x0035E249 File Offset: 0x0035C449
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(0, entityId, 0);
 		}
 
-		// Token: 0x0601638C RID: 91020 RVA: 0x0033565C File Offset: 0x0033385C
+		// Token: 0x060179B9 RID: 96697 RVA: 0x0035E254 File Offset: 0x0035C454
 		public static void AddMaxDistance(FlatBufferBuilder builder, float maxDistance)
 		{
 			builder.AddFloat(1, maxDistance, 0.0);
 		}
 
-		// Token: 0x0601638D RID: 91021 RVA: 0x0033566F File Offset: 0x0033386F
+		// Token: 0x060179BA RID: 96698 RVA: 0x0035E267 File Offset: 0x0035C467
 		public static void AddOverMaxCountdown(FlatBufferBuilder builder, float overMaxCountdown)
 		{
 			builder.AddFloat(2, overMaxCountdown, 0.0);
 		}
 
-		// Token: 0x0601638E RID: 91022 RVA: 0x00335682 File Offset: 0x00333882
+		// Token: 0x060179BB RID: 96699 RVA: 0x0035E27A File Offset: 0x0035C47A
 		public static Offset<IEntityDistanceLimitingCondition> EndIEntityDistanceLimitingCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IEntityDistanceLimitingCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601638F RID: 91023 RVA: 0x00335690 File Offset: 0x00333890
+		// Token: 0x060179BC RID: 96700 RVA: 0x0035E288 File Offset: 0x0035C488
 		public IEntityDistanceLimitingConditionT UnPack()
 		{
 			IEntityDistanceLimitingConditionT entityDistanceLimitingConditionT = new IEntityDistanceLimitingConditionT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return entityDistanceLimitingConditionT;
 		}
 
-		// Token: 0x06016390 RID: 91024 RVA: 0x003356AB File Offset: 0x003338AB
+		// Token: 0x060179BD RID: 96701 RVA: 0x0035E2A3 File Offset: 0x0035C4A3
 		public void UnPackTo(IEntityDistanceLimitingConditionT _o)
 		{
 			_o.EntityId = this.EntityId;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.OverMaxCountdown = this.OverMaxCountdown;
 		}
 
-		// Token: 0x06016391 RID: 91025 RVA: 0x003356D4 File Offset: 0x003338D4
+		// Token: 0x060179BE RID: 96702 RVA: 0x0035E2CC File Offset: 0x0035C4CC
 		public static Offset<IEntityDistanceLimitingCondition> Pack(FlatBufferBuilder builder, IEntityDistanceLimitingConditionT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IEntityDistanceLimitingCondition.CreateIEntityDistanceLimitingCondition(builder, _o.EntityId, _o.MaxDistance, _o.OverMaxCountdown);
 		}
 
-		// Token: 0x0400B77A RID: 46970
+		// Token: 0x0400C152 RID: 49490
 		private Table __p;
 	}
 }

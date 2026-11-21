@@ -3,75 +3,75 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02000EB5 RID: 3765
+// Token: 0x0200036A RID: 874
 [NullableContext(2)]
 [Nullable(0)]
 public class PotatoActivityEntityModel : PotatoEntityModel, IPotatoActivityEntityInfo, IPotatoCombatInfo, IPotatoConfigInfo
 {
-	// Token: 0x1700070C RID: 1804
-	// (get) Token: 0x06005D24 RID: 23844 RVA: 0x00111939 File Offset: 0x0010FB39
-	// (set) Token: 0x06005D25 RID: 23845 RVA: 0x00111941 File Offset: 0x0010FB41
+	// Token: 0x17000730 RID: 1840
+	// (get) Token: 0x060030BB RID: 12475 RVA: 0x001195D5 File Offset: 0x001177D5
+	// (set) Token: 0x060030BC RID: 12476 RVA: 0x001195DD File Offset: 0x001177DD
 	public int ConfigId { get; set; }
 
-	// Token: 0x1700070D RID: 1805
-	// (get) Token: 0x06005D26 RID: 23846 RVA: 0x0011194A File Offset: 0x0010FB4A
-	// (set) Token: 0x06005D27 RID: 23847 RVA: 0x00111952 File Offset: 0x0010FB52
+	// Token: 0x17000731 RID: 1841
+	// (get) Token: 0x060030BD RID: 12477 RVA: 0x001195E6 File Offset: 0x001177E6
+	// (set) Token: 0x060030BE RID: 12478 RVA: 0x001195EE File Offset: 0x001177EE
 	public EPotatoMonsterDeathType DeathType { get; set; }
 
-	// Token: 0x1700070E RID: 1806
-	// (get) Token: 0x06005D28 RID: 23848 RVA: 0x0011195B File Offset: 0x0010FB5B
-	// (set) Token: 0x06005D29 RID: 23849 RVA: 0x00111963 File Offset: 0x0010FB63
+	// Token: 0x17000732 RID: 1842
+	// (get) Token: 0x060030BF RID: 12479 RVA: 0x001195F7 File Offset: 0x001177F7
+	// (set) Token: 0x060030C0 RID: 12480 RVA: 0x001195FF File Offset: 0x001177FF
 	public int BuffRadius { get; set; }
 
-	// Token: 0x1700070F RID: 1807
-	// (get) Token: 0x06005D2A RID: 23850 RVA: 0x0011196C File Offset: 0x0010FB6C
-	// (set) Token: 0x06005D2B RID: 23851 RVA: 0x00111974 File Offset: 0x0010FB74
+	// Token: 0x17000733 RID: 1843
+	// (get) Token: 0x060030C1 RID: 12481 RVA: 0x00119608 File Offset: 0x00117808
+	// (set) Token: 0x060030C2 RID: 12482 RVA: 0x00119610 File Offset: 0x00117810
 	public int[] BuffIds { get; set; }
 
-	// Token: 0x17000710 RID: 1808
-	// (get) Token: 0x06005D2C RID: 23852 RVA: 0x0011197D File Offset: 0x0010FB7D
-	// (set) Token: 0x06005D2D RID: 23853 RVA: 0x00111985 File Offset: 0x0010FB85
+	// Token: 0x17000734 RID: 1844
+	// (get) Token: 0x060030C3 RID: 12483 RVA: 0x00119619 File Offset: 0x00117819
+	// (set) Token: 0x060030C4 RID: 12484 RVA: 0x00119621 File Offset: 0x00117821
 	public int[] SpawnIds { get; set; }
 
-	// Token: 0x17000711 RID: 1809
-	// (get) Token: 0x06005D2E RID: 23854 RVA: 0x0011198E File Offset: 0x0010FB8E
-	// (set) Token: 0x06005D2F RID: 23855 RVA: 0x00111996 File Offset: 0x0010FB96
+	// Token: 0x17000735 RID: 1845
+	// (get) Token: 0x060030C5 RID: 12485 RVA: 0x0011962A File Offset: 0x0011782A
+	// (set) Token: 0x060030C6 RID: 12486 RVA: 0x00119632 File Offset: 0x00117832
 	public int PolluteRadius { get; set; }
 
-	// Token: 0x17000712 RID: 1810
-	// (get) Token: 0x06005D30 RID: 23856 RVA: 0x0011199F File Offset: 0x0010FB9F
-	// (set) Token: 0x06005D31 RID: 23857 RVA: 0x001119A7 File Offset: 0x0010FBA7
+	// Token: 0x17000736 RID: 1846
+	// (get) Token: 0x060030C7 RID: 12487 RVA: 0x0011963B File Offset: 0x0011783B
+	// (set) Token: 0x060030C8 RID: 12488 RVA: 0x00119643 File Offset: 0x00117843
 	public int IncId { get; set; }
 
-	// Token: 0x17000713 RID: 1811
-	// (get) Token: 0x06005D32 RID: 23858 RVA: 0x001119B0 File Offset: 0x0010FBB0
-	// (set) Token: 0x06005D33 RID: 23859 RVA: 0x001119B8 File Offset: 0x0010FBB8
+	// Token: 0x17000737 RID: 1847
+	// (get) Token: 0x060030C9 RID: 12489 RVA: 0x0011964C File Offset: 0x0011784C
+	// (set) Token: 0x060030CA RID: 12490 RVA: 0x00119654 File Offset: 0x00117854
 	public int SpawnConfigId { get; set; }
 
-	// Token: 0x17000714 RID: 1812
-	// (get) Token: 0x06005D34 RID: 23860 RVA: 0x001119C1 File Offset: 0x0010FBC1
-	// (set) Token: 0x06005D35 RID: 23861 RVA: 0x001119C9 File Offset: 0x0010FBC9
+	// Token: 0x17000738 RID: 1848
+	// (get) Token: 0x060030CB RID: 12491 RVA: 0x0011965D File Offset: 0x0011785D
+	// (set) Token: 0x060030CC RID: 12492 RVA: 0x00119665 File Offset: 0x00117865
 	public int SpawnConfigGroupIndex { get; set; }
 
-	// Token: 0x06005D36 RID: 23862 RVA: 0x001119D2 File Offset: 0x0010FBD2
+	// Token: 0x060030CD RID: 12493 RVA: 0x0011966E File Offset: 0x0011786E
 	static PotatoActivityEntityModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PotatoActivityEntityModel.CreateStaticDefaultValue), new Action(PotatoActivityEntityModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06005D37 RID: 23863 RVA: 0x001119F1 File Offset: 0x0010FBF1
+	// Token: 0x060030CE RID: 12494 RVA: 0x0011968D File Offset: 0x0011788D
 	public new static void CreateStaticDefaultValue()
 	{
 		PotatoActivityEntityModel.ActivityEntityPool = new Pool<PotatoActivityEntityModel>(100, () => new PotatoActivityEntityModel(), null);
 	}
 
-	// Token: 0x06005D38 RID: 23864 RVA: 0x00111A1F File Offset: 0x0010FC1F
+	// Token: 0x060030CF RID: 12495 RVA: 0x001196BB File Offset: 0x001178BB
 	public new static void ResetStaticDefaultValue()
 	{
 		PotatoActivityEntityModel.ActivityEntityPool = null;
 	}
 
-	// Token: 0x06005D39 RID: 23865 RVA: 0x00111A28 File Offset: 0x0010FC28
+	// Token: 0x060030D0 RID: 12496 RVA: 0x001196C4 File Offset: 0x001178C4
 	[NullableContext(1)]
 	public static PotatoActivityEntityModel InitFromConfigId(int configId)
 	{
@@ -87,7 +87,7 @@ public class PotatoActivityEntityModel : PotatoEntityModel, IPotatoActivityEntit
 		return potatoActivityEntityModel;
 	}
 
-	// Token: 0x06005D3A RID: 23866 RVA: 0x00111A5C File Offset: 0x0010FC5C
+	// Token: 0x060030D1 RID: 12497 RVA: 0x001196F8 File Offset: 0x001178F8
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public new static IPotatoCombatInfo BuildModel(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
@@ -113,13 +113,13 @@ public class PotatoActivityEntityModel : PotatoEntityModel, IPotatoActivityEntit
 		return potatoActivityEntityModel;
 	}
 
-	// Token: 0x06005D3B RID: 23867 RVA: 0x00111AC9 File Offset: 0x0010FCC9
+	// Token: 0x060030D2 RID: 12498 RVA: 0x00119765 File Offset: 0x00117965
 	public new static void Clear()
 	{
 		PotatoActivityEntityModel.ActivityEntityPool.Clear();
 	}
 
-	// Token: 0x06005D3C RID: 23868 RVA: 0x00111AD8 File Offset: 0x0010FCD8
+	// Token: 0x060030D3 RID: 12499 RVA: 0x00119774 File Offset: 0x00117974
 	[NullableContext(1)]
 	protected override void InitFromProto(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 	{
@@ -160,7 +160,7 @@ public class PotatoActivityEntityModel : PotatoEntityModel, IPotatoActivityEntit
 		}
 	}
 
-	// Token: 0x06005D3D RID: 23869 RVA: 0x00111BB0 File Offset: 0x0010FDB0
+	// Token: 0x060030D4 RID: 12500 RVA: 0x0011984C File Offset: 0x00117A4C
 	[NullableContext(1)]
 	public override void Update(IPotatoCombatInfo other)
 	{
@@ -176,7 +176,7 @@ public class PotatoActivityEntityModel : PotatoEntityModel, IPotatoActivityEntit
 		this.SpawnConfigGroupIndex = potatoActivityEntityInfo.SpawnConfigGroupIndex;
 	}
 
-	// Token: 0x06005D3E RID: 23870 RVA: 0x00111C2B File Offset: 0x0010FE2B
+	// Token: 0x060030D5 RID: 12501 RVA: 0x001198C7 File Offset: 0x00117AC7
 	public override void Reset()
 	{
 		base.Reset();
@@ -190,14 +190,14 @@ public class PotatoActivityEntityModel : PotatoEntityModel, IPotatoActivityEntit
 		this.SpawnConfigGroupIndex = 0;
 	}
 
-	// Token: 0x06005D3F RID: 23871 RVA: 0x00111C6B File Offset: 0x0010FE6B
+	// Token: 0x060030D6 RID: 12502 RVA: 0x00119907 File Offset: 0x00117B07
 	public override void Release()
 	{
 		this.Reset();
 		PotatoActivityEntityModel.ActivityEntityPool.Put(this);
 	}
 
-	// Token: 0x06005D40 RID: 23872 RVA: 0x00111C80 File Offset: 0x0010FE80
+	// Token: 0x060030D7 RID: 12503 RVA: 0x0011991C File Offset: 0x00117B1C
 	[NullableContext(1)]
 	public override IPotatoCombatInfo Clone()
 	{
@@ -213,7 +213,7 @@ public class PotatoActivityEntityModel : PotatoEntityModel, IPotatoActivityEntit
 		return potatoActivityEntityModel;
 	}
 
-	// Token: 0x04002A76 RID: 10870
+	// Token: 0x04002B11 RID: 11025
 	[Nullable(new byte[]
 	{
 		2,

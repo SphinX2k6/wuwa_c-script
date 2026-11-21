@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CD7 RID: 7383
+	// Token: 0x02001EDE RID: 7902
 	public class IPerformerRangeBoundaryActionTrigger_SetValue
 	{
-		// Token: 0x04005FC8 RID: 24520
+		// Token: 0x04006524 RID: 25892
 		public int Range;
 
-		// Token: 0x04005FC9 RID: 24521
-		[Nullable(1)]
+		// Token: 0x04006525 RID: 25893
 		public List<ActionInfo> Actions;
 	}
 }

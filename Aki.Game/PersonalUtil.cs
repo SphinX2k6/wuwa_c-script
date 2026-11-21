@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020023C1 RID: 9153
+// Token: 0x020018A6 RID: 6310
 [NullableContext(1)]
 [Nullable(0)]
 public class PersonalUtil
 {
-	// Token: 0x060124DF RID: 74975 RVA: 0x00482054 File Offset: 0x00480254
+	// Token: 0x0600F991 RID: 63889 RVA: 0x0048F538 File Offset: 0x0048D738
 	public static UniTask PreloadRoleSequence(int roleId, [Nullable(new byte[]
 	{
 		1,
@@ -32,7 +32,7 @@ public class PersonalUtil
 		return <PreloadRoleSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060124E0 RID: 74976 RVA: 0x004820A8 File Offset: 0x004802A8
+	// Token: 0x0600F992 RID: 63890 RVA: 0x0048F58C File Offset: 0x0048D78C
 	[NullableContext(2)]
 	public static void ApplyTickableWhenPausedOnRuntimeBindings(ALevelSequenceActor sequenceActor, bool retryNextTick = true)
 	{
@@ -76,7 +76,7 @@ public class PersonalUtil
 		}
 	}
 
-	// Token: 0x060124E1 RID: 74977 RVA: 0x00482190 File Offset: 0x00480390
+	// Token: 0x0600F993 RID: 63891 RVA: 0x0048F674 File Offset: 0x0048D874
 	public static void PlayRoleGachaSequence(IPersonalRoleSequencePlayContext context)
 	{
 		AActor sceneSequenceCamera = context.SceneSequenceCamera;
@@ -109,7 +109,18 @@ public class PersonalUtil
 		updateInteractBp.UpdateGachaShowItem(roleConfigId, Convert.ToByte(GachaConfig.Instance.GetRoleInfoById(roleConfigId).Value.QualityId));
 		ULevelSequencePlayer sequencePlayer = sequenceActor.SequencePlayer;
 		FFrameTime time = sequencePlayer.GetStartTime().Time;
-		sequencePlayer.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams(time, 0f, string.Empty, EMovieScenePositionType.Frame, EUpdatePositionMethod.Jump));
-		sequencePlayer.PlayTo(new FMovieSceneSequencePlaybackParams(time, 0f, "A", EMovieScenePositionType.MarkedFrame, EUpdatePositionMethod.Play));
+		sequencePlayer.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams
+		{
+			Frame = time,
+			PositionType = EMovieScenePositionType.Frame,
+			UpdateMethod = EUpdatePositionMethod.Jump
+		});
+		sequencePlayer.PlayTo(new FMovieSceneSequencePlaybackParams
+		{
+			Frame = time,
+			MarkedFrame = "A",
+			PositionType = EMovieScenePositionType.MarkedFrame,
+			UpdateMethod = EUpdatePositionMethod.Play
+		});
 	}
 }

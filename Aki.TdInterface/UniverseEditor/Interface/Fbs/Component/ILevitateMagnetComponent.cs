@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054F4 RID: 21748
+	// Token: 0x02005A7A RID: 23162
 	public struct ILevitateMagnetComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A07A RID: 41082
-		// (get) Token: 0x06023E5D RID: 147037 RVA: 0x004F6A66 File Offset: 0x004F4C66
+		// Token: 0x1700A8B4 RID: 43188
+		// (get) Token: 0x06025F17 RID: 155415 RVA: 0x00533B8A File Offset: 0x00531D8A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023E5E RID: 147038 RVA: 0x004F6A73 File Offset: 0x004F4C73
+		// Token: 0x06025F18 RID: 155416 RVA: 0x00533B97 File Offset: 0x00531D97
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023E5F RID: 147039 RVA: 0x004F6A7C File Offset: 0x004F4C7C
+		// Token: 0x06025F19 RID: 155417 RVA: 0x00533BA0 File Offset: 0x00531DA0
 		public static ILevitateMagnetComponent GetRootAsILevitateMagnetComponent(ByteBuffer _bb)
 		{
 			return ILevitateMagnetComponent.GetRootAsILevitateMagnetComponent(_bb, default(ILevitateMagnetComponent));
 		}
 
-		// Token: 0x06023E60 RID: 147040 RVA: 0x004F6A98 File Offset: 0x004F4C98
+		// Token: 0x06025F1A RID: 155418 RVA: 0x00533BBC File Offset: 0x00531DBC
 		public static ILevitateMagnetComponent GetRootAsILevitateMagnetComponent(ByteBuffer _bb, ILevitateMagnetComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023E61 RID: 147041 RVA: 0x004F6AB5 File Offset: 0x004F4CB5
+		// Token: 0x06025F1B RID: 155419 RVA: 0x00533BD9 File Offset: 0x00531DD9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023E62 RID: 147042 RVA: 0x004F6AC4 File Offset: 0x004F4CC4
+		// Token: 0x06025F1C RID: 155420 RVA: 0x00533BE8 File Offset: 0x00531DE8
 		public ILevitateMagnetComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A07B RID: 41083
-		// (get) Token: 0x06023E63 RID: 147043 RVA: 0x004F6AD4 File Offset: 0x004F4CD4
+		// Token: 0x1700A8B5 RID: 43189
+		// (get) Token: 0x06025F1D RID: 155421 RVA: 0x00533BF8 File Offset: 0x00531DF8
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A07C RID: 41084
-		// (get) Token: 0x06023E64 RID: 147044 RVA: 0x004F6B14 File Offset: 0x004F4D14
+		// Token: 0x1700A8B6 RID: 43190
+		// (get) Token: 0x06025F1E RID: 155422 RVA: 0x00533C38 File Offset: 0x00531E38
 		public int MoveSpeed
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A07D RID: 41085
-		// (get) Token: 0x06023E65 RID: 147045 RVA: 0x004F6B50 File Offset: 0x004F4D50
+		// Token: 0x1700A8B7 RID: 43191
+		// (get) Token: 0x06025F1F RID: 155423 RVA: 0x00533C74 File Offset: 0x00531E74
 		public int Test
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A07E RID: 41086
-		// (get) Token: 0x06023E66 RID: 147046 RVA: 0x004F6B8C File Offset: 0x004F4D8C
+		// Token: 0x1700A8B8 RID: 43192
+		// (get) Token: 0x06025F20 RID: 155424 RVA: 0x00533CB0 File Offset: 0x00531EB0
 		public byte NullMask
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023E67 RID: 147047 RVA: 0x004F6BC9 File Offset: 0x004F4DC9
+		// Token: 0x06025F21 RID: 155425 RVA: 0x00533CED File Offset: 0x00531EED
 		public static Offset<ILevitateMagnetComponent> CreateILevitateMagnetComponent(FlatBufferBuilder builder, bool Disabled = false, int MoveSpeed = 0, int Test = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -114,43 +114,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevitateMagnetComponent.EndILevitateMagnetComponent(builder);
 		}
 
-		// Token: 0x06023E68 RID: 147048 RVA: 0x004F6BF5 File Offset: 0x004F4DF5
+		// Token: 0x06025F22 RID: 155426 RVA: 0x00533D19 File Offset: 0x00531F19
 		public static void StartILevitateMagnetComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06023E69 RID: 147049 RVA: 0x004F6BFE File Offset: 0x004F4DFE
+		// Token: 0x06025F23 RID: 155427 RVA: 0x00533D22 File Offset: 0x00531F22
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06023E6A RID: 147050 RVA: 0x004F6C09 File Offset: 0x004F4E09
+		// Token: 0x06025F24 RID: 155428 RVA: 0x00533D2D File Offset: 0x00531F2D
 		public static void AddMoveSpeed(FlatBufferBuilder builder, int moveSpeed)
 		{
 			builder.AddInt(1, moveSpeed, 0);
 		}
 
-		// Token: 0x06023E6B RID: 147051 RVA: 0x004F6C14 File Offset: 0x004F4E14
+		// Token: 0x06025F25 RID: 155429 RVA: 0x00533D38 File Offset: 0x00531F38
 		public static void AddTest(FlatBufferBuilder builder, int test)
 		{
 			builder.AddInt(2, test, 0);
 		}
 
-		// Token: 0x06023E6C RID: 147052 RVA: 0x004F6C1F File Offset: 0x004F4E1F
+		// Token: 0x06025F26 RID: 155430 RVA: 0x00533D43 File Offset: 0x00531F43
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06023E6D RID: 147053 RVA: 0x004F6C2A File Offset: 0x004F4E2A
+		// Token: 0x06025F27 RID: 155431 RVA: 0x00533D4E File Offset: 0x00531F4E
 		public static Offset<ILevitateMagnetComponent> EndILevitateMagnetComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevitateMagnetComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06023E6E RID: 147054 RVA: 0x004F6C38 File Offset: 0x004F4E38
+		// Token: 0x06025F28 RID: 155432 RVA: 0x00533D5C File Offset: 0x00531F5C
 		public ILevitateMagnetComponentT UnPack()
 		{
 			ILevitateMagnetComponentT levitateMagnetComponentT = new ILevitateMagnetComponentT();
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return levitateMagnetComponentT;
 		}
 
-		// Token: 0x06023E6F RID: 147055 RVA: 0x004F6C53 File Offset: 0x004F4E53
+		// Token: 0x06025F29 RID: 155433 RVA: 0x00533D77 File Offset: 0x00531F77
 		public void UnPackTo(ILevitateMagnetComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06023E70 RID: 147056 RVA: 0x004F6C88 File Offset: 0x004F4E88
+		// Token: 0x06025F2A RID: 155434 RVA: 0x00533DAC File Offset: 0x00531FAC
 		public static Offset<ILevitateMagnetComponent> Pack(FlatBufferBuilder builder, ILevitateMagnetComponentT _o)
 		{
 			if (_o == null)
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevitateMagnetComponent.CreateILevitateMagnetComponent(builder, _o.Disabled, _o.MoveSpeed, _o.Test, _o.NullMask);
 		}
 
-		// Token: 0x0400E7D6 RID: 59350
+		// Token: 0x0400F407 RID: 62471
 		private Table __p;
 	}
 }

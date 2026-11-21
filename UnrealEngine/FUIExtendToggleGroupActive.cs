@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002169 RID: 8553
+	// Token: 0x02000701 RID: 1793
 	public sealed class FUIExtendToggleGroupActive : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060204A3 RID: 132259 RVA: 0x002FF381 File Offset: 0x002FD581
+		// Token: 0x060098D7 RID: 39127 RVA: 0x000E62CD File Offset: 0x000E44CD
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FUIExtendToggleGroupActive.StaticFunctionPtr();
 		}
 
-		// Token: 0x060204A4 RID: 132260 RVA: 0x002FF38D File Offset: 0x002FD58D
+		// Token: 0x060098D8 RID: 39128 RVA: 0x000E62D9 File Offset: 0x000E44D9
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FUIExtendToggleGroupActive._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FUIExtendToggleGroupActive._FunctionPtr;
 		}
 
-		// Token: 0x060204A5 RID: 132261 RVA: 0x002FF3B0 File Offset: 0x002FD5B0
+		// Token: 0x060098D9 RID: 39129 RVA: 0x000E62FC File Offset: 0x000E44FC
 		public FUIExtendToggleGroupActive()
 		{
 		}
 
-		// Token: 0x060204A6 RID: 132262 RVA: 0x002FF3B8 File Offset: 0x002FD5B8
+		// Token: 0x060098DA RID: 39130 RVA: 0x000E6304 File Offset: 0x000E4504
 		[NullableContext(2)]
 		public FUIExtendToggleGroupActive(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060204A7 RID: 132263 RVA: 0x002FF3C2 File Offset: 0x002FD5C2
+		// Token: 0x060098DB RID: 39131 RVA: 0x000E630E File Offset: 0x000E450E
 		public FUIExtendToggleGroupActive(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060204A8 RID: 132264 RVA: 0x002FF3CD File Offset: 0x002FD5CD
+		// Token: 0x060098DC RID: 39132 RVA: 0x000E6319 File Offset: 0x000E4519
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<UUIExtendToggleGroup, bool>) ?? ((Action<UUIExtendToggleGroup, bool>)Delegate.CreateDelegate(typeof(Action<UUIExtendToggleGroup, bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060204A9 RID: 132265 RVA: 0x002FF3FF File Offset: 0x002FD5FF
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060098DD RID: 39133 RVA: 0x000E634B File Offset: 0x000E454B
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FUIExtendToggleGroupActive.RegisterId);
 		}
 
-		// Token: 0x060204AA RID: 132266 RVA: 0x002FF43C File Offset: 0x002FD63C
+		// Token: 0x060098DE RID: 39134 RVA: 0x000E6388 File Offset: 0x000E4588
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(UUIExtendToggleGroup ExtendToggleGroup, bool bCreate)
 		{
 			FUIExtendToggleGroupActive.__FUIExtendToggleGroupActive_DelegateParams* ptr = stackalloc FUIExtendToggleGroupActive.__FUIExtendToggleGroupActive_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FUIExtendToggleGroupActive.__FUIExtendToggleGroupActive_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x060204AB RID: 132267 RVA: 0x002FF490 File Offset: 0x002FD690
+		// Token: 0x060098DF RID: 39135 RVA: 0x000E63DC File Offset: 0x000E45DC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UUIExtendToggleGroup, bool> action = target as Action<UUIExtendToggleGroup, bool>;
@@ -96,35 +93,35 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, ((FUIExtendToggleGroupActive.__FUIExtendToggleGroupActive_DelegateParams*)__Parameters)->bCreate);
 		}
 
-		// Token: 0x04011594 RID: 71060
+		// Token: 0x04004271 RID: 17009
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04011595 RID: 71061
+		// Token: 0x04004272 RID: 17010
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.UIExtendToggleGroupActive__DelegateSignature";
 
-		// Token: 0x04011596 RID: 71062
+		// Token: 0x04004273 RID: 17011
 		private static int RegisterId;
 
-		// Token: 0x020034F8 RID: 13560
+		// Token: 0x02000F1B RID: 3867
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FUIExtendToggleGroupActive_DelegateParams
+		private ref struct __FUIExtendToggleGroupActive_DelegateParams
 		{
-			// Token: 0x0401751C RID: 95516
+			// Token: 0x040062EA RID: 25322
 			[FieldOffset(0)]
 			public IntPtr ExtendToggleGroup;
 
-			// Token: 0x0401751D RID: 95517
+			// Token: 0x040062EB RID: 25323
 			[FieldOffset(8)]
 			public bool bCreate;
 		}
 
-		// Token: 0x020034F9 RID: 13561
+		// Token: 0x02000F1C RID: 3868
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401751E RID: 95518
+			// Token: 0x040062EC RID: 25324
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

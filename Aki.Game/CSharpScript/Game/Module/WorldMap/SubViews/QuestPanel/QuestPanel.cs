@@ -15,19 +15,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 {
-	// Token: 0x020047F4 RID: 18420
+	// Token: 0x02003725 RID: 14117
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class QuestPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x060303EE RID: 197614 RVA: 0x00B30362 File Offset: 0x00B2E562
+		// Token: 0x06024BBE RID: 150462 RVA: 0x00A60302 File Offset: 0x00A5E502
 		[NullableContext(1)]
 		public override string GetResourceId()
 		{
 			return "UiView_Task_Prefab";
 		}
 
-		// Token: 0x060303EF RID: 197615 RVA: 0x00B3036C File Offset: 0x00B2E56C
+		// Token: 0x06024BBF RID: 150463 RVA: 0x00A6030C File Offset: 0x00A5E50C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			QuestPanel.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060303F0 RID: 197616 RVA: 0x00B303B0 File Offset: 0x00B2E5B0
+		// Token: 0x06024BC0 RID: 150464 RVA: 0x00A60350 File Offset: 0x00A5E550
 		protected override void OnStart()
 		{
 			this.QuestRewardList = new List<TItem>();
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 			base.OnStart();
 		}
 
-		// Token: 0x060303F1 RID: 197617 RVA: 0x00B303FC File Offset: 0x00B2E5FC
+		// Token: 0x06024BC1 RID: 150465 RVA: 0x00A6039C File Offset: 0x00A5E59C
 		protected override void OnBeforeDestroy()
 		{
 			if (this.RewardItemList != null)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x060303F2 RID: 197618 RVA: 0x00B30465 File Offset: 0x00B2E665
+		// Token: 0x06024BC2 RID: 150466 RVA: 0x00A60405 File Offset: 0x00A5E605
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x060303F3 RID: 197619 RVA: 0x00B30494 File Offset: 0x00B2E694
+		// Token: 0x06024BC3 RID: 150467 RVA: 0x00A60434 File Offset: 0x00A5E634
 		[NullableContext(1)]
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 			}
 		}
 
-		// Token: 0x060303F4 RID: 197620 RVA: 0x00B30540 File Offset: 0x00B2E740
+		// Token: 0x06024BC4 RID: 150468 RVA: 0x00A604E0 File Offset: 0x00A5E6E0
 		protected override void OnCloseWorldMapSecondaryUi()
 		{
 			TipsListView conditionTipsView = this.ConditionTipsView;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 			conditionTipsView.Clear();
 		}
 
-		// Token: 0x060303F5 RID: 197621 RVA: 0x00B30552 File Offset: 0x00B2E752
+		// Token: 0x06024BC5 RID: 150469 RVA: 0x00A604F2 File Offset: 0x00A5E6F2
 		public override UUIItem GetGuideFocusUiItem()
 		{
 			UUIButtonComponent button = base.GetButton(29);
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 			return button.GetRootComponent();
 		}
 
-		// Token: 0x060303F6 RID: 197622 RVA: 0x00B30568 File Offset: 0x00B2E768
+		// Token: 0x06024BC6 RID: 150470 RVA: 0x00A60508 File Offset: 0x00A5E708
 		private void UpdateQuestInfo()
 		{
 			QuestNewModel instance = QuestNewModel.Instance;
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 			this.UpdateDetailsRewards();
 		}
 
-		// Token: 0x060303F7 RID: 197623 RVA: 0x00B306C4 File Offset: 0x00B2E8C4
+		// Token: 0x06024BC7 RID: 150471 RVA: 0x00A60664 File Offset: 0x00A5E864
 		protected override void OnTrackBtnClick(int index)
 		{
 			base.CheckAndShowCrossMapTips(this.SelectedMarkItem);
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 			});
 		}
 
-		// Token: 0x060303F8 RID: 197624 RVA: 0x00B307C0 File Offset: 0x00B2E9C0
+		// Token: 0x06024BC8 RID: 150472 RVA: 0x00A60760 File Offset: 0x00A5E960
 		private void UpdateDetailsBehavior(int questId, int nodeId)
 		{
 			QuestNewModel instance = QuestNewModel.Instance;
@@ -252,13 +252,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 			instanceDungeonCostTip.SetRightText(rightText);
 		}
 
-		// Token: 0x060303F9 RID: 197625 RVA: 0x00B3085D File Offset: 0x00B2EA5D
+		// Token: 0x06024BC9 RID: 150473 RVA: 0x00A607FD File Offset: 0x00A5E9FD
 		private bool NeedShowReward()
 		{
 			return this.SelectedMarkItem == null || this.SelectedMarkItem.BtType.GetValueOrDefault() != BtType.Recall;
 		}
 
-		// Token: 0x060303FA RID: 197626 RVA: 0x00B30880 File Offset: 0x00B2EA80
+		// Token: 0x06024BCA RID: 150474 RVA: 0x00A60820 File Offset: 0x00A5EA20
 		private void UpdateDetailsRewards()
 		{
 			this.QuestRewardList = new List<TItem>();
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 			uuiitem2.SetUIActive(false);
 		}
 
-		// Token: 0x060303FB RID: 197627 RVA: 0x00B30920 File Offset: 0x00B2EB20
+		// Token: 0x06024BCB RID: 150475 RVA: 0x00A608C0 File Offset: 0x00A5EAC0
 		private void UpdateTrackButton()
 		{
 			if (this.QuestBehaviorId != 0)
@@ -342,13 +342,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 			trackBtn.SetLocalText(this.IsQuestTracked ? "InstanceDungeonEntranceCancelTrack" : "InstanceDungeonEntranceTrack", Array.Empty<object>());
 		}
 
-		// Token: 0x060303FC RID: 197628 RVA: 0x00B30A7A File Offset: 0x00B2EC7A
+		// Token: 0x06024BCC RID: 150476 RVA: 0x00A60A1A File Offset: 0x00A5EC1A
 		protected override void OnRefreshPanel()
 		{
 			this.UpdateTrackButton();
 		}
 
-		// Token: 0x060303FD RID: 197629 RVA: 0x00B30A84 File Offset: 0x00B2EC84
+		// Token: 0x06024BCD RID: 150477 RVA: 0x00A60A24 File Offset: 0x00A5EC24
 		protected override void HandleQuickGoto()
 		{
 			if (this.QuestId != 0)
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 			base.HandleQuickGoto();
 		}
 
-		// Token: 0x060303FE RID: 197630 RVA: 0x00B30AD3 File Offset: 0x00B2ECD3
+		// Token: 0x06024BCE RID: 150478 RVA: 0x00A60A73 File Offset: 0x00A5EC73
 		protected override bool IsFastReturnAvailable()
 		{
 			if (this.QuestId == 0)
@@ -376,11 +376,11 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 			return FastReturnUtil.Resolve((quest != null) ? quest.Tree : null) != null;
 		}
 
-		// Token: 0x04019F89 RID: 106377
+		// Token: 0x0401463D RID: 83517
 		[Nullable(1)]
 		private const string QUEST_CONDITION_KEY = "questCondition";
 
-		// Token: 0x04019F8A RID: 106378
+		// Token: 0x0401463E RID: 83518
 		[Nullable(new byte[]
 		{
 			2,
@@ -388,32 +388,32 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.QuestPanel
 		})]
 		private CommonItemSmallItemGrid[] RewardItemList;
 
-		// Token: 0x04019F8B RID: 106379
+		// Token: 0x0401463F RID: 83519
 		private List<TItem> QuestRewardList;
 
-		// Token: 0x04019F8C RID: 106380
+		// Token: 0x04014640 RID: 83520
 		private bool IsQuestTracked;
 
-		// Token: 0x04019F8D RID: 106381
+		// Token: 0x04014641 RID: 83521
 		private int QuestId;
 
-		// Token: 0x04019F8E RID: 106382
+		// Token: 0x04014642 RID: 83522
 		private int QuestBehaviorId;
 
-		// Token: 0x04019F8F RID: 106383
+		// Token: 0x04014643 RID: 83523
 		private TaskMarkItem SelectedMarkItem;
 
-		// Token: 0x04019F90 RID: 106384
+		// Token: 0x04014644 RID: 83524
 		private RewardItemBar RewardItemsView;
 
-		// Token: 0x04019F91 RID: 106385
+		// Token: 0x04014645 RID: 83525
 		private TipsListView ConditionTipsView;
 
-		// Token: 0x0200AABC RID: 43708
+		// Token: 0x0200946D RID: 37997
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033EF0 RID: 212720
+			// Token: 0x0402E673 RID: 190067
 			public const int QuestPanel = 0;
 		}
 	}

@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A4D RID: 19021
+	// Token: 0x020039F5 RID: 14837
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TrapDefenseDevelopOpenParam : ITrapDefenseDevelopOpenParam
 	{
-		// Token: 0x17007A5B RID: 31323
-		// (get) Token: 0x060315AE RID: 202158 RVA: 0x00B7239F File Offset: 0x00B7059F
-		// (set) Token: 0x060315AF RID: 202159 RVA: 0x00B723A7 File Offset: 0x00B705A7
+		// Token: 0x17004E08 RID: 19976
+		// (get) Token: 0x0602633E RID: 156478 RVA: 0x00AB6323 File Offset: 0x00AB4523
+		// (set) Token: 0x0602633F RID: 156479 RVA: 0x00AB632B File Offset: 0x00AB452B
 		public bool IsInDungeon { get; set; }
 
-		// Token: 0x17007A5C RID: 31324
-		// (get) Token: 0x060315B0 RID: 202160 RVA: 0x00B723B0 File Offset: 0x00B705B0
-		// (set) Token: 0x060315B1 RID: 202161 RVA: 0x00B723B8 File Offset: 0x00B705B8
+		// Token: 0x17004E09 RID: 19977
+		// (get) Token: 0x06026340 RID: 156480 RVA: 0x00AB6334 File Offset: 0x00AB4534
+		// (set) Token: 0x06026341 RID: 156481 RVA: 0x00AB633C File Offset: 0x00AB453C
 		public int SelectedIndex { get; set; }
 
-		// Token: 0x17007A5D RID: 31325
-		// (get) Token: 0x060315B2 RID: 202162 RVA: 0x00B723C1 File Offset: 0x00B705C1
-		// (set) Token: 0x060315B3 RID: 202163 RVA: 0x00B723C9 File Offset: 0x00B705C9
+		// Token: 0x17004E0A RID: 19978
+		// (get) Token: 0x06026342 RID: 156482 RVA: 0x00AB6345 File Offset: 0x00AB4545
+		// (set) Token: 0x06026343 RID: 156483 RVA: 0x00AB634D File Offset: 0x00AB454D
 		public TrapDefenseLevelData LevelData { get; set; }
 	}
 }

@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.LogUpload
 {
-	// Token: 0x020001CE RID: 462
+	// Token: 0x020001D2 RID: 466
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SendLogReason : ISendLogReason
 	{
-		// Token: 0x1700013B RID: 315
-		// (get) Token: 0x06000C3C RID: 3132 RVA: 0x0004B67B File Offset: 0x0004987B
-		// (set) Token: 0x06000C3D RID: 3133 RVA: 0x0004B683 File Offset: 0x00049883
+		// Token: 0x17000141 RID: 321
+		// (get) Token: 0x06000C73 RID: 3187 RVA: 0x0004DE8F File Offset: 0x0004C08F
+		// (set) Token: 0x06000C74 RID: 3188 RVA: 0x0004DE97 File Offset: 0x0004C097
 		public ELauncherLogUploadReason Reason { get; set; }
 
-		// Token: 0x1700013C RID: 316
-		// (get) Token: 0x06000C3E RID: 3134 RVA: 0x0004B68C File Offset: 0x0004988C
-		// (set) Token: 0x06000C3F RID: 3135 RVA: 0x0004B694 File Offset: 0x00049894
+		// Token: 0x17000142 RID: 322
+		// (get) Token: 0x06000C75 RID: 3189 RVA: 0x0004DEA0 File Offset: 0x0004C0A0
+		// (set) Token: 0x06000C76 RID: 3190 RVA: 0x0004DEA8 File Offset: 0x0004C0A8
 		public string Info { get; set; }
 	}
 }

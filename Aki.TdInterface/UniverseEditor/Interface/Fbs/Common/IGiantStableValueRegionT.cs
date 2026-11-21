@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DD7 RID: 24023
+	// Token: 0x02006414 RID: 25620
 	public class IGiantStableValueRegionT
 	{
-		// Token: 0x1700B3D8 RID: 46040
-		// (get) Token: 0x060291EE RID: 168430 RVA: 0x005A4C81 File Offset: 0x005A2E81
-		// (set) Token: 0x060291EF RID: 168431 RVA: 0x005A4C89 File Offset: 0x005A2E89
+		// Token: 0x1700BD3E RID: 48446
+		// (get) Token: 0x0602B878 RID: 178296 RVA: 0x005ED9B1 File Offset: 0x005EBBB1
+		// (set) Token: 0x0602B879 RID: 178297 RVA: 0x005ED9B9 File Offset: 0x005EBBB9
 		public EGiantStableValueType Type { get; set; }
 
-		// Token: 0x1700B3D9 RID: 46041
-		// (get) Token: 0x060291F0 RID: 168432 RVA: 0x005A4C92 File Offset: 0x005A2E92
-		// (set) Token: 0x060291F1 RID: 168433 RVA: 0x005A4C9A File Offset: 0x005A2E9A
+		// Token: 0x1700BD3F RID: 48447
+		// (get) Token: 0x0602B87A RID: 178298 RVA: 0x005ED9C2 File Offset: 0x005EBBC2
+		// (set) Token: 0x0602B87B RID: 178299 RVA: 0x005ED9CA File Offset: 0x005EBBCA
 		public EGiantEcoType EcoType { get; set; }
 
-		// Token: 0x1700B3DA RID: 46042
-		// (get) Token: 0x060291F2 RID: 168434 RVA: 0x005A4CA3 File Offset: 0x005A2EA3
-		// (set) Token: 0x060291F3 RID: 168435 RVA: 0x005A4CAB File Offset: 0x005A2EAB
+		// Token: 0x1700BD40 RID: 48448
+		// (get) Token: 0x0602B87C RID: 178300 RVA: 0x005ED9D3 File Offset: 0x005EBBD3
+		// (set) Token: 0x0602B87D RID: 178301 RVA: 0x005ED9DB File Offset: 0x005EBBDB
 		public IGiantStableValueRangeT Range { get; set; }
 
-		// Token: 0x060291F4 RID: 168436 RVA: 0x005A4CB4 File Offset: 0x005A2EB4
+		// Token: 0x0602B87E RID: 178302 RVA: 0x005ED9E4 File Offset: 0x005EBBE4
 		public IGiantStableValueRegionT()
 		{
 			this.Type = EGiantStableValueType.Region;

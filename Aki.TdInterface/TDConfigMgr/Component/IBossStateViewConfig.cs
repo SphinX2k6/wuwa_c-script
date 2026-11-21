@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001F9 RID: 505
+	// Token: 0x02000222 RID: 546
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IBossStateViewConfig
 	{
-		// Token: 0x06000846 RID: 2118 RVA: 0x0002680C File Offset: 0x00024A0C
-		[NullableContext(1)]
+		// Token: 0x060008C6 RID: 2246 RVA: 0x00028160 File Offset: 0x00026360
+		[NullableContext(0)]
 		private IBossStateViewConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000847 RID: 2119 RVA: 0x00026844 File Offset: 0x00024A44
-		[NullableContext(1)]
+		// Token: 0x060008C7 RID: 2247 RVA: 0x00028198 File Offset: 0x00026398
+		[NullableContext(0)]
 		public static IBossStateViewConfig Create([Nullable(2)] IBossStateViewConfig instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000848 RID: 2120 RVA: 0x00026857 File Offset: 0x00024A57
-		[NullableContext(1)]
+		// Token: 0x060008C8 RID: 2248 RVA: 0x000281AB File Offset: 0x000263AB
+		[NullableContext(0)]
 		public static IBossStateViewConfig CreateFromSetValue([Nullable(2)] IBossStateViewConfig_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000849 RID: 2121 RVA: 0x0002686C File Offset: 0x00024A6C
-		[NullableContext(1)]
+		// Token: 0x060008C9 RID: 2249 RVA: 0x000281C0 File Offset: 0x000263C0
+		[NullableContext(0)]
 		public IBossStateViewConfig_SetValue ToSetValue()
 		{
 			return new IBossStateViewConfig_SetValue
@@ -72,9 +72,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700028B RID: 651
-		// (get) Token: 0x0600084A RID: 2122 RVA: 0x000268EA File Offset: 0x00024AEA
-		// (set) Token: 0x0600084B RID: 2123 RVA: 0x00026915 File Offset: 0x00024B15
+		// Token: 0x170002AD RID: 685
+		// (get) Token: 0x060008CA RID: 2250 RVA: 0x0002823E File Offset: 0x0002643E
+		// (set) Token: 0x060008CB RID: 2251 RVA: 0x00028269 File Offset: 0x00026469
 		public virtual EBossStateViewType BossStateViewType
 		{
 			get
@@ -95,9 +95,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700028C RID: 652
-		// (get) Token: 0x0600084C RID: 2124 RVA: 0x00026924 File Offset: 0x00024B24
-		// (set) Token: 0x0600084D RID: 2125 RVA: 0x00026985 File Offset: 0x00024B85
+		// Token: 0x170002AE RID: 686
+		// (get) Token: 0x060008CC RID: 2252 RVA: 0x00028278 File Offset: 0x00026478
+		// (set) Token: 0x060008CD RID: 2253 RVA: 0x000282D9 File Offset: 0x000264D9
 		public virtual IDoubleViewBossStateViewStyle BossStateViewStyle
 		{
 			get
@@ -125,13 +125,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700028D RID: 653
-		// (get) Token: 0x0600084E RID: 2126 RVA: 0x0002699A File Offset: 0x00024B9A
-		// (set) Token: 0x0600084F RID: 2127 RVA: 0x000269C5 File Offset: 0x00024BC5
-		[Nullable(1)]
+		// Token: 0x170002AF RID: 687
+		// (get) Token: 0x060008CE RID: 2254 RVA: 0x000282EE File Offset: 0x000264EE
+		// (set) Token: 0x060008CF RID: 2255 RVA: 0x00028319 File Offset: 0x00026519
+		[Nullable(0)]
 		public virtual string TidBossSubTitle
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -144,16 +144,16 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this.PocoInterface.TidBossSubTitle;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().TidBossSubTitle = value;
 			}
 		}
 
-		// Token: 0x1700028E RID: 654
-		// (get) Token: 0x06000850 RID: 2128 RVA: 0x000269D4 File Offset: 0x00024BD4
-		// (set) Token: 0x06000851 RID: 2129 RVA: 0x00026A0E File Offset: 0x00024C0E
+		// Token: 0x170002B0 RID: 688
+		// (get) Token: 0x060008D0 RID: 2256 RVA: 0x00028328 File Offset: 0x00026528
+		// (set) Token: 0x060008D1 RID: 2257 RVA: 0x00028362 File Offset: 0x00026562
 		public virtual EBossStateInfoShowType? BossStateInfoShowType
 		{
 			get
@@ -175,9 +175,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700028F RID: 655
-		// (get) Token: 0x06000852 RID: 2130 RVA: 0x00026A1C File Offset: 0x00024C1C
-		// (set) Token: 0x06000853 RID: 2131 RVA: 0x00026A43 File Offset: 0x00024C43
+		// Token: 0x170002B1 RID: 689
+		// (get) Token: 0x060008D2 RID: 2258 RVA: 0x00028370 File Offset: 0x00026570
+		// (set) Token: 0x060008D3 RID: 2259 RVA: 0x00028397 File Offset: 0x00026597
 		public virtual string TidLevelText
 		{
 			get
@@ -199,9 +199,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000290 RID: 656
-		// (get) Token: 0x06000854 RID: 2132 RVA: 0x00026A54 File Offset: 0x00024C54
-		// (set) Token: 0x06000855 RID: 2133 RVA: 0x00026A8E File Offset: 0x00024C8E
+		// Token: 0x170002B2 RID: 690
+		// (get) Token: 0x060008D4 RID: 2260 RVA: 0x000283A8 File Offset: 0x000265A8
+		// (set) Token: 0x060008D5 RID: 2261 RVA: 0x000283E2 File Offset: 0x000265E2
 		public virtual bool? OnlyShowInBattleState
 		{
 			get
@@ -223,9 +223,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000291 RID: 657
-		// (get) Token: 0x06000856 RID: 2134 RVA: 0x00026A9C File Offset: 0x00024C9C
-		// (set) Token: 0x06000857 RID: 2135 RVA: 0x00026AD6 File Offset: 0x00024CD6
+		// Token: 0x170002B3 RID: 691
+		// (get) Token: 0x060008D6 RID: 2262 RVA: 0x000283F0 File Offset: 0x000265F0
+		// (set) Token: 0x060008D7 RID: 2263 RVA: 0x0002842A File Offset: 0x0002662A
 		public virtual int? ShowDistance
 		{
 			get
@@ -247,9 +247,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000292 RID: 658
-		// (get) Token: 0x06000858 RID: 2136 RVA: 0x00026AE4 File Offset: 0x00024CE4
-		// (set) Token: 0x06000859 RID: 2137 RVA: 0x00026AFB File Offset: 0x00024CFB
+		// Token: 0x170002B4 RID: 692
+		// (get) Token: 0x060008D8 RID: 2264 RVA: 0x00028438 File Offset: 0x00026638
+		// (set) Token: 0x060008D9 RID: 2265 RVA: 0x0002844F File Offset: 0x0002664F
 		public virtual string EdTidBossSubTitle
 		{
 			get
@@ -266,9 +266,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000293 RID: 659
-		// (get) Token: 0x0600085A RID: 2138 RVA: 0x00026B09 File Offset: 0x00024D09
-		// (set) Token: 0x0600085B RID: 2139 RVA: 0x00026B20 File Offset: 0x00024D20
+		// Token: 0x170002B5 RID: 693
+		// (get) Token: 0x060008DA RID: 2266 RVA: 0x0002845D File Offset: 0x0002665D
+		// (set) Token: 0x060008DB RID: 2267 RVA: 0x00028474 File Offset: 0x00026674
 		public virtual string EdTidLevelText
 		{
 			get
@@ -285,17 +285,17 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400090F RID: 2319
+		// Token: 0x040009A0 RID: 2464
 		protected IBossStateViewConfig FbInstance;
 
-		// Token: 0x04000910 RID: 2320
+		// Token: 0x040009A1 RID: 2465
 		protected IBossStateViewConfig_SetValue PocoInterface;
 
-		// Token: 0x04000911 RID: 2321
-		[Nullable(1)]
+		// Token: 0x040009A2 RID: 2466
+		[Nullable(0)]
 		private IDoubleViewBossStateViewStyle _BossStateViewStyleCache;
 
-		// Token: 0x04000912 RID: 2322
+		// Token: 0x040009A3 RID: 2467
 		private bool _BossStateViewStyleInited;
 	}
 }

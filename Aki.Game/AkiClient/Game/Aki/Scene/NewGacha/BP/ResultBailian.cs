@@ -7,17 +7,17 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Scene.NewGacha.BP
 {
-	// Token: 0x02003A4F RID: 14927
+	// Token: 0x0200308D RID: 12429
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class ResultBailian : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F856 RID: 129110 RVA: 0x008BAE3E File Offset: 0x008B903E
+		// Token: 0x0601DB4C RID: 121676 RVA: 0x008FFA32 File Offset: 0x008FDC32
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return ResultBailian.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F857 RID: 129111 RVA: 0x008BAE4A File Offset: 0x008B904A
+		// Token: 0x0601DB4D RID: 121677 RVA: 0x008FFA3E File Offset: 0x008FDC3E
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_UpdateInteract_C.__ResultBailian__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace AkiClient.Game.Aki.Scene.NewGacha.BP
 			return BP_UpdateInteract_C.__ResultBailian__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F858 RID: 129112 RVA: 0x008BAE6D File Offset: 0x008B906D
+		// Token: 0x0601DB4E RID: 121678 RVA: 0x008FFA61 File Offset: 0x008FDC61
 		public ResultBailian()
 		{
 		}
 
-		// Token: 0x0601F859 RID: 129113 RVA: 0x008BAE75 File Offset: 0x008B9075
+		// Token: 0x0601DB4F RID: 121679 RVA: 0x008FFA69 File Offset: 0x008FDC69
 		[NullableContext(2)]
 		public ResultBailian(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F85A RID: 129114 RVA: 0x008BAE7F File Offset: 0x008B907F
+		// Token: 0x0601DB50 RID: 121680 RVA: 0x008FFA73 File Offset: 0x008FDC73
 		public ResultBailian(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F85B RID: 129115 RVA: 0x008BAE8A File Offset: 0x008B908A
+		// Token: 0x0601DB51 RID: 121681 RVA: 0x008FFA7E File Offset: 0x008FDC7E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F85C RID: 129116 RVA: 0x008BAEBC File Offset: 0x008B90BC
+		// Token: 0x0601DB52 RID: 121682 RVA: 0x008FFAB0 File Offset: 0x008FDCB0
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (ResultBailian.RegisterId == 0)
@@ -67,26 +66,23 @@ namespace AkiClient.Game.Aki.Scene.NewGacha.BP
 			base.Add(Callback, ResultBailian.RegisterId);
 		}
 
-		// Token: 0x0601F85D RID: 129117 RVA: 0x008BAEF6 File Offset: 0x008B90F6
+		// Token: 0x0601DB53 RID: 121683 RVA: 0x008FFAEA File Offset: 0x008FDCEA
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F85E RID: 129118 RVA: 0x008BAEFF File Offset: 0x008B90FF
+		// Token: 0x0601DB54 RID: 121684 RVA: 0x008FFAF3 File Offset: 0x008FDCF3
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x0601F85F RID: 129119 RVA: 0x008BAF0C File Offset: 0x008B910C
+		// Token: 0x0601DB55 RID: 121685 RVA: 0x008FFB00 File Offset: 0x008FDD00
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -97,18 +93,18 @@ namespace AkiClient.Game.Aki.Scene.NewGacha.BP
 			action();
 		}
 
-		// Token: 0x0400F2B8 RID: 62136
+		// Token: 0x0400FAED RID: 64237
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Scene/NewGacha/BP/BP_UpdateInteract.BP_UpdateInteract_C:ResultBailian__DelegateSignature";
 
-		// Token: 0x0400F2B9 RID: 62137
+		// Token: 0x0400FAEE RID: 64238
 		private static int RegisterId;
 
-		// Token: 0x02009AF7 RID: 39671
+		// Token: 0x02008D86 RID: 36230
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040310CA RID: 200906
+			// Token: 0x0402C93D RID: 182589
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

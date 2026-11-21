@@ -6,32 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020025EF RID: 9711
-	[NullableContext(1)]
+	// Token: 0x020007AA RID: 1962
+	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Niagara.NiagaraSystem")]
-	[UnrealStructLayout(2216, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2216)]
+	[UnrealStructLayout(2240, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2240)]
 	public class UNiagaraSystem : UFXSystemAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060241B4 RID: 147892 RVA: 0x00356F2A File Offset: 0x0035512A
+		// Token: 0x0600AA7E RID: 43646 RVA: 0x000FB759 File Offset: 0x000F9959
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UNiagaraSystem._ClassPtr;
 		}
 
-		// Token: 0x060241B5 RID: 147893 RVA: 0x00356F38 File Offset: 0x00355138
+		// Token: 0x0600AA7F RID: 43647 RVA: 0x000FB768 File Offset: 0x000F9968
 		public UNiagaraSystem() : this(BuiltinUtils.AllocNativeUObject(UNiagaraSystem.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060241B6 RID: 147894 RVA: 0x00356F60 File Offset: 0x00355160
+		// Token: 0x0600AA80 RID: 43648 RVA: 0x000FB790 File Offset: 0x000F9990
+		[NullableContext(1)]
 		public UNiagaraSystem(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UNiagaraSystem.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008AFF RID: 35583
-		// (get) Token: 0x060241B7 RID: 147895 RVA: 0x00356F93 File Offset: 0x00355193
-		// (set) Token: 0x060241B8 RID: 147896 RVA: 0x00356FA3 File Offset: 0x003551A3
+		// Token: 0x17001FBC RID: 8124
+		// (get) Token: 0x0600AA81 RID: 43649 RVA: 0x000FB7C3 File Offset: 0x000F99C3
+		// (set) Token: 0x0600AA82 RID: 43650 RVA: 0x000FB7D3 File Offset: 0x000F99D3
 		public unsafe bool bDumpDebugSystemInfo
 		{
 			get
@@ -44,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B00 RID: 35584
-		// (get) Token: 0x060241B9 RID: 147897 RVA: 0x00356FB4 File Offset: 0x003551B4
-		// (set) Token: 0x060241BA RID: 147898 RVA: 0x00356FC4 File Offset: 0x003551C4
+		// Token: 0x17001FBD RID: 8125
+		// (get) Token: 0x0600AA83 RID: 43651 RVA: 0x000FB7E4 File Offset: 0x000F99E4
+		// (set) Token: 0x0600AA84 RID: 43652 RVA: 0x000FB7F4 File Offset: 0x000F99F4
 		public unsafe bool bDumpDebugEmitterInfo
 		{
 			get
@@ -59,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B01 RID: 35585
-		// (get) Token: 0x060241BB RID: 147899 RVA: 0x00356FD5 File Offset: 0x003551D5
-		// (set) Token: 0x060241BC RID: 147900 RVA: 0x00356FE5 File Offset: 0x003551E5
+		// Token: 0x17001FBE RID: 8126
+		// (get) Token: 0x0600AA85 RID: 43653 RVA: 0x000FB805 File Offset: 0x000F9A05
+		// (set) Token: 0x0600AA86 RID: 43654 RVA: 0x000FB815 File Offset: 0x000F9A15
 		public unsafe bool bRequireCurrentFrameData
 		{
 			get
@@ -74,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B02 RID: 35586
-		// (get) Token: 0x060241BD RID: 147901 RVA: 0x00356FF6 File Offset: 0x003551F6
-		// (set) Token: 0x060241BE RID: 147902 RVA: 0x0035700F File Offset: 0x0035520F
+		// Token: 0x17001FBF RID: 8127
+		// (get) Token: 0x0600AA87 RID: 43655 RVA: 0x000FB826 File Offset: 0x000F9A26
+		// (set) Token: 0x0600AA88 RID: 43656 RVA: 0x000FB83F File Offset: 0x000F9A3F
 		public unsafe bool bEvenTickWhenPaused
 		{
 			get
@@ -89,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B03 RID: 35587
-		// (get) Token: 0x060241BF RID: 147903 RVA: 0x0035703F File Offset: 0x0035523F
-		// (set) Token: 0x060241C0 RID: 147904 RVA: 0x00357058 File Offset: 0x00355258
+		// Token: 0x17001FC0 RID: 8128
+		// (get) Token: 0x0600AA89 RID: 43657 RVA: 0x000FB86F File Offset: 0x000F9A6F
+		// (set) Token: 0x0600AA8A RID: 43658 RVA: 0x000FB888 File Offset: 0x000F9A88
 		public unsafe bool bFixedBounds
 		{
 			get
@@ -104,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B04 RID: 35588
-		// (get) Token: 0x060241C1 RID: 147905 RVA: 0x00357088 File Offset: 0x00355288
-		// (set) Token: 0x060241C2 RID: 147906 RVA: 0x003570A1 File Offset: 0x003552A1
+		// Token: 0x17001FC1 RID: 8129
+		// (get) Token: 0x0600AA8B RID: 43659 RVA: 0x000FB8B8 File Offset: 0x000F9AB8
+		// (set) Token: 0x0600AA8C RID: 43660 RVA: 0x000FB8D1 File Offset: 0x000F9AD1
 		public unsafe bool bDisableExperimentalVM
 		{
 			get
@@ -119,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B05 RID: 35589
-		// (get) Token: 0x060241C3 RID: 147907 RVA: 0x003570D1 File Offset: 0x003552D1
-		// (set) Token: 0x060241C4 RID: 147908 RVA: 0x003570E1 File Offset: 0x003552E1
+		// Token: 0x17001FC2 RID: 8130
+		// (get) Token: 0x0600AA8D RID: 43661 RVA: 0x000FB901 File Offset: 0x000F9B01
+		// (set) Token: 0x0600AA8E RID: 43662 RVA: 0x000FB911 File Offset: 0x000F9B11
 		public unsafe EKuroNiagaraEffectRegularType EffectRegularType
 		{
 			get
@@ -134,93 +135,39 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B06 RID: 35590
-		// (get) Token: 0x060241C5 RID: 147909 RVA: 0x003570F2 File Offset: 0x003552F2
-		// (set) Token: 0x060241C6 RID: 147910 RVA: 0x00357106 File Offset: 0x00355306
-		[Nullable(2)]
+		// Token: 0x17001FC3 RID: 8131
+		// (get) Token: 0x0600AA8F RID: 43663 RVA: 0x000FB922 File Offset: 0x000F9B22
+		// (set) Token: 0x0600AA90 RID: 43664 RVA: 0x000FB936 File Offset: 0x000F9B36
 		public unsafe UNiagaraEffectType EffectType
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UNiagaraEffectType>(base.NativePtr / (IntPtr)sizeof(void*) + UNiagaraSystem.__PropertyOffset_EffectType);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UNiagaraSystem.__PropertyOffset_EffectType, value);
 			}
 		}
 
-		// Token: 0x17008B07 RID: 35591
-		// (get) Token: 0x060241C7 RID: 147911 RVA: 0x0035711B File Offset: 0x0035531B
-		// (set) Token: 0x060241C8 RID: 147912 RVA: 0x0035712B File Offset: 0x0035532B
-		public unsafe EKuroNiagaraEffectTypePresets EffectTypePreset
-		{
-			get
-			{
-				return (EKuroNiagaraEffectTypePresets)(*(base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_EffectTypePreset));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_EffectTypePreset) = (byte)value;
-			}
-		}
-
-		// Token: 0x17008B08 RID: 35592
-		// (get) Token: 0x060241C9 RID: 147913 RVA: 0x0035713C File Offset: 0x0035533C
-		// (set) Token: 0x060241CA RID: 147914 RVA: 0x00357150 File Offset: 0x00355350
-		[Nullable(2)]
+		// Token: 0x17001FC4 RID: 8132
+		// (get) Token: 0x0600AA91 RID: 43665 RVA: 0x000FB94B File Offset: 0x000F9B4B
+		// (set) Token: 0x0600AA92 RID: 43666 RVA: 0x000FB95F File Offset: 0x000F9B5F
 		public unsafe UNiagaraEffectType EffectType_Override
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UNiagaraEffectType>(base.NativePtr / (IntPtr)sizeof(void*) + UNiagaraSystem.__PropertyOffset_EffectType_Override);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UNiagaraSystem.__PropertyOffset_EffectType_Override, value);
 			}
 		}
 
-		// Token: 0x17008B09 RID: 35593
-		// (get) Token: 0x060241CB RID: 147915 RVA: 0x00357165 File Offset: 0x00355365
-		// (set) Token: 0x060241CC RID: 147916 RVA: 0x00357175 File Offset: 0x00355375
-		public unsafe EKuroNiagaraTickTypePresets TickTypePreset
-		{
-			get
-			{
-				return (EKuroNiagaraTickTypePresets)(*(base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_TickTypePreset));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_TickTypePreset) = (byte)value;
-			}
-		}
-
-		// Token: 0x17008B0A RID: 35594
-		// (get) Token: 0x060241CD RID: 147917 RVA: 0x00357186 File Offset: 0x00355386
-		// (set) Token: 0x060241CE RID: 147918 RVA: 0x0035719A File Offset: 0x0035539A
-		[Nullable(2)]
-		public unsafe UKuroNiagaraTickType TickType_Override
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroNiagaraTickType>(base.NativePtr / (IntPtr)sizeof(void*) + UNiagaraSystem.__PropertyOffset_TickType_Override);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UNiagaraSystem.__PropertyOffset_TickType_Override, value);
-			}
-		}
-
-		// Token: 0x17008B0B RID: 35595
-		// (get) Token: 0x060241CF RID: 147919 RVA: 0x003571AF File Offset: 0x003553AF
-		// (set) Token: 0x060241D0 RID: 147920 RVA: 0x003571BF File Offset: 0x003553BF
+		// Token: 0x17001FC5 RID: 8133
+		// (get) Token: 0x0600AA93 RID: 43667 RVA: 0x000FB974 File Offset: 0x000F9B74
+		// (set) Token: 0x0600AA94 RID: 43668 RVA: 0x000FB984 File Offset: 0x000F9B84
 		public unsafe bool bOverrideScreenSizeCullRatio
 		{
 			get
@@ -233,9 +180,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B0C RID: 35596
-		// (get) Token: 0x060241D1 RID: 147921 RVA: 0x003571D0 File Offset: 0x003553D0
-		// (set) Token: 0x060241D2 RID: 147922 RVA: 0x003571E0 File Offset: 0x003553E0
+		// Token: 0x17001FC6 RID: 8134
+		// (get) Token: 0x0600AA95 RID: 43669 RVA: 0x000FB995 File Offset: 0x000F9B95
+		// (set) Token: 0x0600AA96 RID: 43670 RVA: 0x000FB9A5 File Offset: 0x000F9BA5
 		public unsafe float ScreenSizeCullRatio
 		{
 			get
@@ -248,9 +195,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B0D RID: 35597
-		// (get) Token: 0x060241D3 RID: 147923 RVA: 0x003571F1 File Offset: 0x003553F1
-		// (set) Token: 0x060241D4 RID: 147924 RVA: 0x00357201 File Offset: 0x00355401
+		// Token: 0x17001FC7 RID: 8135
+		// (get) Token: 0x0600AA97 RID: 43671 RVA: 0x000FB9B6 File Offset: 0x000F9BB6
+		// (set) Token: 0x0600AA98 RID: 43672 RVA: 0x000FB9C6 File Offset: 0x000F9BC6
 		public unsafe bool bUseNDCBatch
 		{
 			get
@@ -263,27 +210,24 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B0E RID: 35598
-		// (get) Token: 0x060241D5 RID: 147925 RVA: 0x00357212 File Offset: 0x00355412
-		// (set) Token: 0x060241D6 RID: 147926 RVA: 0x00357226 File Offset: 0x00355426
-		[Nullable(2)]
+		// Token: 0x17001FC8 RID: 8136
+		// (get) Token: 0x0600AA99 RID: 43673 RVA: 0x000FB9D7 File Offset: 0x000F9BD7
+		// (set) Token: 0x0600AA9A RID: 43674 RVA: 0x000FB9EB File Offset: 0x000F9BEB
 		public unsafe UNiagaraDataChannelAsset DataChannel
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UNiagaraDataChannelAsset>(base.NativePtr / (IntPtr)sizeof(void*) + UNiagaraSystem.__PropertyOffset_DataChannel);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UNiagaraSystem.__PropertyOffset_DataChannel, value);
 			}
 		}
 
-		// Token: 0x17008B0F RID: 35599
-		// (get) Token: 0x060241D7 RID: 147927 RVA: 0x0035723B File Offset: 0x0035543B
-		// (set) Token: 0x060241D8 RID: 147928 RVA: 0x0035724B File Offset: 0x0035544B
+		// Token: 0x17001FC9 RID: 8137
+		// (get) Token: 0x0600AA9B RID: 43675 RVA: 0x000FBA00 File Offset: 0x000F9C00
+		// (set) Token: 0x0600AA9C RID: 43676 RVA: 0x000FBA10 File Offset: 0x000F9C10
 		public unsafe int BatchLimitNum
 		{
 			get
@@ -296,9 +240,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B10 RID: 35600
-		// (get) Token: 0x060241D9 RID: 147929 RVA: 0x0035725C File Offset: 0x0035545C
-		// (set) Token: 0x060241DA RID: 147930 RVA: 0x0035726C File Offset: 0x0035546C
+		// Token: 0x17001FCA RID: 8138
+		// (get) Token: 0x0600AA9D RID: 43677 RVA: 0x000FBA21 File Offset: 0x000F9C21
+		// (set) Token: 0x0600AA9E RID: 43678 RVA: 0x000FBA31 File Offset: 0x000F9C31
 		public unsafe bool bOverrideMaxVisibleCullDeltaTime
 		{
 			get
@@ -311,9 +255,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B11 RID: 35601
-		// (get) Token: 0x060241DB RID: 147931 RVA: 0x0035727D File Offset: 0x0035547D
-		// (set) Token: 0x060241DC RID: 147932 RVA: 0x0035728D File Offset: 0x0035548D
+		// Token: 0x17001FCB RID: 8139
+		// (get) Token: 0x0600AA9F RID: 43679 RVA: 0x000FBA42 File Offset: 0x000F9C42
+		// (set) Token: 0x0600AAA0 RID: 43680 RVA: 0x000FBA52 File Offset: 0x000F9C52
 		public unsafe float MaxVisibleCullDeltaTime
 		{
 			get
@@ -326,9 +270,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B12 RID: 35602
-		// (get) Token: 0x060241DD RID: 147933 RVA: 0x0035729E File Offset: 0x0035549E
-		// (set) Token: 0x060241DE RID: 147934 RVA: 0x003572AE File Offset: 0x003554AE
+		// Token: 0x17001FCC RID: 8140
+		// (get) Token: 0x0600AAA1 RID: 43681 RVA: 0x000FBA63 File Offset: 0x000F9C63
+		// (set) Token: 0x0600AAA2 RID: 43682 RVA: 0x000FBA73 File Offset: 0x000F9C73
 		public unsafe bool bOverrideScalabilitySettings
 		{
 			get
@@ -341,171 +285,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B13 RID: 35603
-		// (get) Token: 0x060241DF RID: 147935 RVA: 0x003572C0 File Offset: 0x003554C0
-		// (set) Token: 0x060241E0 RID: 147936 RVA: 0x003572F9 File Offset: 0x003554F9
-		public TArray<FNiagaraSystemScalabilityOverride> ScalabilityOverrides_DEPRECATED
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FNiagaraSystemScalabilityOverride> result;
-				if ((result = this._ScalabilityOverrides_DEPRECATED) == null)
-				{
-					result = (this._ScalabilityOverrides_DEPRECATED = new TArray<FNiagaraSystemScalabilityOverride>(base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_ScalabilityOverrides_DEPRECATED, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ScalabilityOverrides_DEPRECATED.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17008B14 RID: 35604
-		// (get) Token: 0x060241E1 RID: 147937 RVA: 0x00357308 File Offset: 0x00355508
-		// (set) Token: 0x060241E2 RID: 147938 RVA: 0x00357341 File Offset: 0x00355541
-		public FNiagaraSystemScalabilityOverrides SystemScalabilityOverrides
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FNiagaraSystemScalabilityOverrides result;
-				if ((result = this._SystemScalabilityOverrides) == null)
-				{
-					result = (this._SystemScalabilityOverrides = new FNiagaraSystemScalabilityOverrides(base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_SystemScalabilityOverrides, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FNiagaraSystemScalabilityOverrides.StaticStruct(), base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_SystemScalabilityOverrides, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17008B15 RID: 35605
-		// (get) Token: 0x060241E3 RID: 147939 RVA: 0x00357364 File Offset: 0x00355564
-		// (set) Token: 0x060241E4 RID: 147940 RVA: 0x0035739D File Offset: 0x0035559D
-		public TArray<FNiagaraEmitterHandle> EmitterHandles
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FNiagaraEmitterHandle> result;
-				if ((result = this._EmitterHandles) == null)
-				{
-					result = (this._EmitterHandles = new TArray<FNiagaraEmitterHandle>(base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_EmitterHandles, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.EmitterHandles.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17008B16 RID: 35606
-		// (get) Token: 0x060241E5 RID: 147941 RVA: 0x003573AC File Offset: 0x003555AC
-		// (set) Token: 0x060241E6 RID: 147942 RVA: 0x003573E5 File Offset: 0x003555E5
-		public TArray<UNiagaraParameterCollectionInstance> ParameterCollectionOverrides
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<UNiagaraParameterCollectionInstance> result;
-				if ((result = this._ParameterCollectionOverrides) == null)
-				{
-					result = (this._ParameterCollectionOverrides = new TArray<UNiagaraParameterCollectionInstance>(base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_ParameterCollectionOverrides, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ParameterCollectionOverrides.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17008B17 RID: 35607
-		// (get) Token: 0x060241E7 RID: 147943 RVA: 0x003573F3 File Offset: 0x003555F3
-		// (set) Token: 0x060241E8 RID: 147944 RVA: 0x00357407 File Offset: 0x00355607
-		[Nullable(2)]
-		public unsafe UNiagaraScript SystemSpawnScript
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraScript>(base.NativePtr / (IntPtr)sizeof(void*) + UNiagaraSystem.__PropertyOffset_SystemSpawnScript);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UNiagaraSystem.__PropertyOffset_SystemSpawnScript, value);
-			}
-		}
-
-		// Token: 0x17008B18 RID: 35608
-		// (get) Token: 0x060241E9 RID: 147945 RVA: 0x0035741C File Offset: 0x0035561C
-		// (set) Token: 0x060241EA RID: 147946 RVA: 0x00357430 File Offset: 0x00355630
-		[Nullable(2)]
-		public unsafe UNiagaraScript SystemUpdateScript
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraScript>(base.NativePtr / (IntPtr)sizeof(void*) + UNiagaraSystem.__PropertyOffset_SystemUpdateScript);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UNiagaraSystem.__PropertyOffset_SystemUpdateScript, value);
-			}
-		}
-
-		// Token: 0x17008B19 RID: 35609
-		// (get) Token: 0x060241EB RID: 147947 RVA: 0x00357448 File Offset: 0x00355648
-		// (set) Token: 0x060241EC RID: 147948 RVA: 0x00357481 File Offset: 0x00355681
-		public FNiagaraSystemCompiledData SystemCompiledData
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FNiagaraSystemCompiledData result;
-				if ((result = this._SystemCompiledData) == null)
-				{
-					result = (this._SystemCompiledData = new FNiagaraSystemCompiledData(base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_SystemCompiledData, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FNiagaraSystemCompiledData.StaticStruct(), base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_SystemCompiledData, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17008B1A RID: 35610
-		// (get) Token: 0x060241ED RID: 147949 RVA: 0x003574A4 File Offset: 0x003556A4
-		// (set) Token: 0x060241EE RID: 147950 RVA: 0x003574DD File Offset: 0x003556DD
-		public FNiagaraUserRedirectionParameterStore ExposedParameters
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FNiagaraUserRedirectionParameterStore result;
-				if ((result = this._ExposedParameters) == null)
-				{
-					result = (this._ExposedParameters = new FNiagaraUserRedirectionParameterStore(base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_ExposedParameters, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FNiagaraUserRedirectionParameterStore.StaticStruct(), base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_ExposedParameters, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17008B1B RID: 35611
-		// (get) Token: 0x060241EF RID: 147951 RVA: 0x003574FE File Offset: 0x003556FE
-		// (set) Token: 0x060241F0 RID: 147952 RVA: 0x00357512 File Offset: 0x00355712
+		// Token: 0x17001FCD RID: 8141
+		// (get) Token: 0x0600AAA3 RID: 43683 RVA: 0x000FBA84 File Offset: 0x000F9C84
+		// (set) Token: 0x0600AAA4 RID: 43684 RVA: 0x000FBA98 File Offset: 0x000F9C98
 		public unsafe FBox FixedBounds
 		{
 			get
@@ -518,9 +300,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B1C RID: 35612
-		// (get) Token: 0x060241F1 RID: 147953 RVA: 0x00357527 File Offset: 0x00355727
-		// (set) Token: 0x060241F2 RID: 147954 RVA: 0x00357537 File Offset: 0x00355737
+		// Token: 0x17001FCE RID: 8142
+		// (get) Token: 0x0600AAA5 RID: 43685 RVA: 0x000FBAAD File Offset: 0x000F9CAD
+		// (set) Token: 0x0600AAA6 RID: 43686 RVA: 0x000FBABD File Offset: 0x000F9CBD
 		public unsafe bool bAutoDeactivate
 		{
 			get
@@ -533,9 +315,39 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B1D RID: 35613
-		// (get) Token: 0x060241F3 RID: 147955 RVA: 0x00357548 File Offset: 0x00355748
-		// (set) Token: 0x060241F4 RID: 147956 RVA: 0x00357558 File Offset: 0x00355758
+		// Token: 0x17001FCF RID: 8143
+		// (get) Token: 0x0600AAA7 RID: 43687 RVA: 0x000FBACE File Offset: 0x000F9CCE
+		// (set) Token: 0x0600AAA8 RID: 43688 RVA: 0x000FBADE File Offset: 0x000F9CDE
+		public unsafe bool bEnableWarmup
+		{
+			get
+			{
+				return *(base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_bEnableWarmup) != 0;
+			}
+			set
+			{
+				*(base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_bEnableWarmup) = (value ? 1 : 0);
+			}
+		}
+
+		// Token: 0x17001FD0 RID: 8144
+		// (get) Token: 0x0600AAA9 RID: 43689 RVA: 0x000FBAEF File Offset: 0x000F9CEF
+		// (set) Token: 0x0600AAAA RID: 43690 RVA: 0x000FBB03 File Offset: 0x000F9D03
+		public unsafe FName WarmupTimeScaleParameter
+		{
+			get
+			{
+				return *(base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_WarmupTimeScaleParameter);
+			}
+			set
+			{
+				*(base.NativePtr + (IntPtr)UNiagaraSystem.__PropertyOffset_WarmupTimeScaleParameter) = value;
+			}
+		}
+
+		// Token: 0x17001FD1 RID: 8145
+		// (get) Token: 0x0600AAAB RID: 43691 RVA: 0x000FBB18 File Offset: 0x000F9D18
+		// (set) Token: 0x0600AAAC RID: 43692 RVA: 0x000FBB28 File Offset: 0x000F9D28
 		public unsafe float WarmupTime
 		{
 			get
@@ -548,9 +360,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B1E RID: 35614
-		// (get) Token: 0x060241F5 RID: 147957 RVA: 0x00357569 File Offset: 0x00355769
-		// (set) Token: 0x060241F6 RID: 147958 RVA: 0x00357579 File Offset: 0x00355779
+		// Token: 0x17001FD2 RID: 8146
+		// (get) Token: 0x0600AAAD RID: 43693 RVA: 0x000FBB39 File Offset: 0x000F9D39
+		// (set) Token: 0x0600AAAE RID: 43694 RVA: 0x000FBB49 File Offset: 0x000F9D49
 		public unsafe int WarmupTickCount
 		{
 			get
@@ -563,9 +375,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B1F RID: 35615
-		// (get) Token: 0x060241F7 RID: 147959 RVA: 0x0035758A File Offset: 0x0035578A
-		// (set) Token: 0x060241F8 RID: 147960 RVA: 0x0035759A File Offset: 0x0035579A
+		// Token: 0x17001FD3 RID: 8147
+		// (get) Token: 0x0600AAAF RID: 43695 RVA: 0x000FBB5A File Offset: 0x000F9D5A
+		// (set) Token: 0x0600AAB0 RID: 43696 RVA: 0x000FBB6A File Offset: 0x000F9D6A
 		public unsafe float WarmupTickDelta
 		{
 			get
@@ -578,9 +390,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B20 RID: 35616
-		// (get) Token: 0x060241F9 RID: 147961 RVA: 0x003575AB File Offset: 0x003557AB
-		// (set) Token: 0x060241FA RID: 147962 RVA: 0x003575BB File Offset: 0x003557BB
+		// Token: 0x17001FD4 RID: 8148
+		// (get) Token: 0x0600AAB1 RID: 43697 RVA: 0x000FBB7B File Offset: 0x000F9D7B
+		// (set) Token: 0x0600AAB2 RID: 43698 RVA: 0x000FBB8B File Offset: 0x000F9D8B
 		public unsafe bool bHasSystemScriptDIsWithPerInstanceData
 		{
 			get
@@ -593,11 +405,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008B21 RID: 35617
-		// (get) Token: 0x060241FB RID: 147963 RVA: 0x003575CC File Offset: 0x003557CC
-		// (set) Token: 0x060241FC RID: 147964 RVA: 0x00357605 File Offset: 0x00355805
+		// Token: 0x17001FD5 RID: 8149
+		// (get) Token: 0x0600AAB3 RID: 43699 RVA: 0x000FBB9C File Offset: 0x000F9D9C
+		// (set) Token: 0x0600AAB4 RID: 43700 RVA: 0x000FBBD5 File Offset: 0x000F9DD5
+		[Nullable(1)]
 		public TArray<FName> UserDINamesReadInSystemScripts
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -608,184 +422,122 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				this.UserDINamesReadInSystemScripts.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x060241FD RID: 147965 RVA: 0x00357613 File Offset: 0x00355813
+		// Token: 0x0600AAB5 RID: 43701 RVA: 0x000FBBE3 File Offset: 0x000F9DE3
 		static UNiagaraSystem()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Niagara.NiagaraSystem");
 		}
 
-		// Token: 0x060241FE RID: 147966 RVA: 0x00357621 File Offset: 0x00355821
+		// Token: 0x0600AAB6 RID: 43702 RVA: 0x000FBBF1 File Offset: 0x000F9DF1
 		protected UNiagaraSystem(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040135ED RID: 79341
+		// Token: 0x040048FB RID: 18683
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Niagara.NiagaraSystem";
 
-		// Token: 0x040135EE RID: 79342
+		// Token: 0x040048FC RID: 18684
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040135EF RID: 79343
+		// Token: 0x040048FD RID: 18685
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040135F0 RID: 79344
+		// Token: 0x040048FE RID: 18686
 		internal static int __PropertyOffset_bDumpDebugSystemInfo;
 
-		// Token: 0x040135F1 RID: 79345
+		// Token: 0x040048FF RID: 18687
 		internal static int __PropertyOffset_bDumpDebugEmitterInfo;
 
-		// Token: 0x040135F2 RID: 79346
+		// Token: 0x04004900 RID: 18688
 		internal static int __PropertyOffset_bRequireCurrentFrameData;
 
-		// Token: 0x040135F3 RID: 79347
+		// Token: 0x04004901 RID: 18689
 		internal static int __PropertyOffset_bEvenTickWhenPaused;
 
-		// Token: 0x040135F4 RID: 79348
+		// Token: 0x04004902 RID: 18690
 		internal static byte __PropertyMask_bEvenTickWhenPaused;
 
-		// Token: 0x040135F5 RID: 79349
+		// Token: 0x04004903 RID: 18691
 		internal static int __PropertyOffset_bFixedBounds;
 
-		// Token: 0x040135F6 RID: 79350
+		// Token: 0x04004904 RID: 18692
 		internal static byte __PropertyMask_bFixedBounds;
 
-		// Token: 0x040135F7 RID: 79351
+		// Token: 0x04004905 RID: 18693
 		internal static int __PropertyOffset_bDisableExperimentalVM;
 
-		// Token: 0x040135F8 RID: 79352
+		// Token: 0x04004906 RID: 18694
 		internal static byte __PropertyMask_bDisableExperimentalVM;
 
-		// Token: 0x040135F9 RID: 79353
+		// Token: 0x04004907 RID: 18695
 		internal static int __PropertyOffset_EffectRegularType;
 
-		// Token: 0x040135FA RID: 79354
+		// Token: 0x04004908 RID: 18696
 		internal static int __PropertyOffset_EffectType;
 
-		// Token: 0x040135FB RID: 79355
-		internal static int __PropertyOffset_EffectTypePreset;
-
-		// Token: 0x040135FC RID: 79356
+		// Token: 0x04004909 RID: 18697
 		internal static int __PropertyOffset_EffectType_Override;
 
-		// Token: 0x040135FD RID: 79357
-		internal static int __PropertyOffset_TickTypePreset;
-
-		// Token: 0x040135FE RID: 79358
-		internal static int __PropertyOffset_TickType_Override;
-
-		// Token: 0x040135FF RID: 79359
+		// Token: 0x0400490A RID: 18698
 		internal static int __PropertyOffset_bOverrideScreenSizeCullRatio;
 
-		// Token: 0x04013600 RID: 79360
+		// Token: 0x0400490B RID: 18699
 		internal static int __PropertyOffset_ScreenSizeCullRatio;
 
-		// Token: 0x04013601 RID: 79361
+		// Token: 0x0400490C RID: 18700
 		internal static int __PropertyOffset_bUseNDCBatch;
 
-		// Token: 0x04013602 RID: 79362
+		// Token: 0x0400490D RID: 18701
 		internal static int __PropertyOffset_DataChannel;
 
-		// Token: 0x04013603 RID: 79363
+		// Token: 0x0400490E RID: 18702
 		internal static int __PropertyOffset_BatchLimitNum;
 
-		// Token: 0x04013604 RID: 79364
+		// Token: 0x0400490F RID: 18703
 		internal static int __PropertyOffset_bOverrideMaxVisibleCullDeltaTime;
 
-		// Token: 0x04013605 RID: 79365
+		// Token: 0x04004910 RID: 18704
 		internal static int __PropertyOffset_MaxVisibleCullDeltaTime;
 
-		// Token: 0x04013606 RID: 79366
+		// Token: 0x04004911 RID: 18705
 		internal static int __PropertyOffset_bOverrideScalabilitySettings;
 
-		// Token: 0x04013607 RID: 79367
-		internal static int __PropertyOffset_ScalabilityOverrides_DEPRECATED;
-
-		// Token: 0x04013608 RID: 79368
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FNiagaraSystemScalabilityOverride> _ScalabilityOverrides_DEPRECATED;
-
-		// Token: 0x04013609 RID: 79369
-		internal static int __PropertyOffset_SystemScalabilityOverrides;
-
-		// Token: 0x0401360A RID: 79370
-		[Nullable(2)]
-		private FNiagaraSystemScalabilityOverrides _SystemScalabilityOverrides;
-
-		// Token: 0x0401360B RID: 79371
-		internal static int __PropertyOffset_EmitterHandles;
-
-		// Token: 0x0401360C RID: 79372
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FNiagaraEmitterHandle> _EmitterHandles;
-
-		// Token: 0x0401360D RID: 79373
-		internal static int __PropertyOffset_ParameterCollectionOverrides;
-
-		// Token: 0x0401360E RID: 79374
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<UNiagaraParameterCollectionInstance> _ParameterCollectionOverrides;
-
-		// Token: 0x0401360F RID: 79375
-		internal static int __PropertyOffset_SystemSpawnScript;
-
-		// Token: 0x04013610 RID: 79376
-		internal static int __PropertyOffset_SystemUpdateScript;
-
-		// Token: 0x04013611 RID: 79377
-		internal static int __PropertyOffset_SystemCompiledData;
-
-		// Token: 0x04013612 RID: 79378
-		[Nullable(2)]
-		private FNiagaraSystemCompiledData _SystemCompiledData;
-
-		// Token: 0x04013613 RID: 79379
-		internal static int __PropertyOffset_ExposedParameters;
-
-		// Token: 0x04013614 RID: 79380
-		[Nullable(2)]
-		private FNiagaraUserRedirectionParameterStore _ExposedParameters;
-
-		// Token: 0x04013615 RID: 79381
+		// Token: 0x04004912 RID: 18706
 		internal static int __PropertyOffset_FixedBounds;
 
-		// Token: 0x04013616 RID: 79382
+		// Token: 0x04004913 RID: 18707
 		internal static int __PropertyOffset_bAutoDeactivate;
 
-		// Token: 0x04013617 RID: 79383
+		// Token: 0x04004914 RID: 18708
+		internal static int __PropertyOffset_bEnableWarmup;
+
+		// Token: 0x04004915 RID: 18709
+		internal static int __PropertyOffset_WarmupTimeScaleParameter;
+
+		// Token: 0x04004916 RID: 18710
 		internal static int __PropertyOffset_WarmupTime;
 
-		// Token: 0x04013618 RID: 79384
+		// Token: 0x04004917 RID: 18711
 		internal static int __PropertyOffset_WarmupTickCount;
 
-		// Token: 0x04013619 RID: 79385
+		// Token: 0x04004918 RID: 18712
 		internal static int __PropertyOffset_WarmupTickDelta;
 
-		// Token: 0x0401361A RID: 79386
+		// Token: 0x04004919 RID: 18713
 		internal static int __PropertyOffset_bHasSystemScriptDIsWithPerInstanceData;
 
-		// Token: 0x0401361B RID: 79387
+		// Token: 0x0400491A RID: 18714
 		internal static int __PropertyOffset_UserDINamesReadInSystemScripts;
 
-		// Token: 0x0401361C RID: 79388
-		[Nullable(2)]
+		// Token: 0x0400491B RID: 18715
 		private TArray<FName> _UserDINamesReadInSystemScripts;
 	}
 }

@@ -11,16 +11,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 {
-	// Token: 0x020062D1 RID: 25297
+	// Token: 0x0200524F RID: 21071
 	public class PinballLoadingView : LoadingViewBase
 	{
-		// Token: 0x0603FA95 RID: 260757 RVA: 0x00F671DB File Offset: 0x00F653DB
+		// Token: 0x06034756 RID: 214870 RVA: 0x00EAE137 File Offset: 0x00EAC337
 		[NullableContext(1)]
 		public PinballLoadingView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603FA96 RID: 260758 RVA: 0x00F671E4 File Offset: 0x00F653E4
+		// Token: 0x06034757 RID: 214871 RVA: 0x00EAE140 File Offset: 0x00EAC340
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FA97 RID: 260759 RVA: 0x00F672B0 File Offset: 0x00F654B0
+		// Token: 0x06034758 RID: 214872 RVA: 0x00EAE20C File Offset: 0x00EAC40C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballLoadingView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FA98 RID: 260760 RVA: 0x00F672F4 File Offset: 0x00F654F4
+		// Token: 0x06034759 RID: 214873 RVA: 0x00EAE250 File Offset: 0x00EAC450
 		private UniTask InitLoopAutoScrollViewAsync()
 		{
 			PinballLoadingView.<InitLoopAutoScrollViewAsync>d__5 <InitLoopAutoScrollViewAsync>d__;
@@ -62,14 +62,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			return <InitLoopAutoScrollViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FA99 RID: 260761 RVA: 0x00F67337 File Offset: 0x00F65537
+		// Token: 0x0603475A RID: 214874 RVA: 0x00EAE293 File Offset: 0x00EAC493
 		[NullableContext(1)]
 		private PinballLoadingTexView CreateGrid()
 		{
 			return new PinballLoadingTexView();
 		}
 
-		// Token: 0x0603FA9A RID: 260762 RVA: 0x00F6733E File Offset: 0x00F6553E
+		// Token: 0x0603475B RID: 214875 RVA: 0x00EAE29A File Offset: 0x00EAC49A
 		protected override void UpdateProgressRate(float rate)
 		{
 			UUISliderComponent slider = base.GetSlider(0);
@@ -80,13 +80,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			slider.SetValue(rate, true);
 		}
 
-		// Token: 0x0603FA9B RID: 260763 RVA: 0x00F67353 File Offset: 0x00F65553
+		// Token: 0x0603475C RID: 214876 RVA: 0x00EAE2AF File Offset: 0x00EAC4AF
 		protected override void UpdateProgressValue(float value)
 		{
 			this.SetTextProgressValue(1, value, "%");
 		}
 
-		// Token: 0x0603FA9C RID: 260764 RVA: 0x00F67364 File Offset: 0x00F65564
+		// Token: 0x0603475D RID: 214877 RVA: 0x00EAE2C0 File Offset: 0x00EAC4C0
 		private void SetDecorationTexture()
 		{
 			IReadOnlyList<string> stringArrayConfig = ConfigCommonParamById.GetStringArrayConfig("PinballLoadingDecorationTex");
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			base.TrySetTextureByPath(randomItem, base.GetTexture(4), new EUiViewName?(EUiViewName.PinballLoadingView), null);
 		}
 
-		// Token: 0x0603FA9D RID: 260765 RVA: 0x00F673E8 File Offset: 0x00F655E8
+		// Token: 0x0603475E RID: 214878 RVA: 0x00EAE344 File Offset: 0x00EAC544
 		protected override void OnBeforeDestroy()
 		{
 			LoopAutoScrollView<PinballLoadingTexView, string> loopAutoScrollView = this.LoopAutoScrollView;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.LoopAutoScrollView = null;
 		}
 
-		// Token: 0x04021433 RID: 136243
+		// Token: 0x0401BD62 RID: 114018
 		[Nullable(new byte[]
 		{
 			2,
@@ -122,18 +122,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 		})]
 		private LoopAutoScrollView<PinballLoadingTexView, string> LoopAutoScrollView;
 
-		// Token: 0x0200C4B8 RID: 50360
+		// Token: 0x0200AE9F RID: 44703
 		private enum EComponent
 		{
-			// Token: 0x0403B5C5 RID: 243141
+			// Token: 0x04035F27 RID: 220967
 			Slider,
-			// Token: 0x0403B5C6 RID: 243142
+			// Token: 0x04035F28 RID: 220968
 			TextProgress,
-			// Token: 0x0403B5C7 RID: 243143
+			// Token: 0x04035F29 RID: 220969
 			Scroll,
-			// Token: 0x0403B5C8 RID: 243144
+			// Token: 0x04035F2A RID: 220970
 			ScrollItem,
-			// Token: 0x0403B5C9 RID: 243145
+			// Token: 0x04035F2B RID: 220971
 			TexDecoration
 		}
 	}

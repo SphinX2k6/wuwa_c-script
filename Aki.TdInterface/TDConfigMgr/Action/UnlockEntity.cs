@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002263 RID: 8803
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024D0 RID: 9424
 	public class UnlockEntity : ActionParams
 	{
-		// Token: 0x0600C11C RID: 49436 RVA: 0x001BB448 File Offset: 0x001B9648
+		// Token: 0x0600CCE2 RID: 52450 RVA: 0x001D2BCC File Offset: 0x001D0DCC
 		private UnlockEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C11D RID: 49437 RVA: 0x001BB480 File Offset: 0x001B9680
+		// Token: 0x0600CCE3 RID: 52451 RVA: 0x001D2C04 File Offset: 0x001D0E04
 		public static UnlockEntity Create([Nullable(2)] UnlockEntity instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C11E RID: 49438 RVA: 0x001BB493 File Offset: 0x001B9693
+		// Token: 0x0600CCE4 RID: 52452 RVA: 0x001D2C17 File Offset: 0x001D0E17
 		public static UnlockEntity CreateFromSetValue([Nullable(2)] UnlockEntity_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C11F RID: 49439 RVA: 0x001BB4A6 File Offset: 0x001B96A6
+		// Token: 0x0600CCE5 RID: 52453 RVA: 0x001D2C2A File Offset: 0x001D0E2A
 		public UnlockEntity_SetValue ToSetValue()
 		{
 			return new UnlockEntity_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A67 RID: 14951
-		// (get) Token: 0x0600C120 RID: 49440 RVA: 0x001BB4B9 File Offset: 0x001B96B9
-		// (set) Token: 0x0600C121 RID: 49441 RVA: 0x001BB4E0 File Offset: 0x001B96E0
+		// Token: 0x17003D5E RID: 15710
+		// (get) Token: 0x0600CCE6 RID: 52454 RVA: 0x001D2C3D File Offset: 0x001D0E3D
+		// (set) Token: 0x0600CCE7 RID: 52455 RVA: 0x001D2C64 File Offset: 0x001D0E64
 		public virtual List<int> EntityIds
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007314 RID: 29460
+		// Token: 0x04007961 RID: 31073
 		[Nullable(2)]
 		protected new UnlockEntity FbInstance;
 
-		// Token: 0x04007315 RID: 29461
+		// Token: 0x04007962 RID: 31074
 		[Nullable(2)]
 		protected UnlockEntity_SetValue PocoInterface;
 	}

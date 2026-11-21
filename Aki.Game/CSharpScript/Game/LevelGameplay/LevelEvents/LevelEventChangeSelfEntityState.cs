@@ -4,15 +4,15 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AFF RID: 27391
+	// Token: 0x02005C77 RID: 23671
 	public class LevelEventChangeSelfEntityState : LevelEventBase
 	{
-		// Token: 0x0604403C RID: 278588 RVA: 0x010B5BA5 File Offset: 0x010B3DA5
+		// Token: 0x0603A18E RID: 237966 RVA: 0x0105F441 File Offset: 0x0105D641
 		public LevelEventChangeSelfEntityState(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604403D RID: 278589 RVA: 0x010B5BB0 File Offset: 0x010B3DB0
+		// Token: 0x0603A18F RID: 237967 RVA: 0x0105F44C File Offset: 0x0105D64C
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -48,24 +48,24 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.CreateWaitEntityTask(this.PbDataId);
 		}
 
-		// Token: 0x0604403E RID: 278590 RVA: 0x010B5C77 File Offset: 0x010B3E77
+		// Token: 0x0603A190 RID: 237968 RVA: 0x0105F513 File Offset: 0x0105D713
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			LevelGeneralCommons.PrechangeStateTag(this.PbDataId, this.StateId, "LevelEventChangeSelfEntityState");
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x0604403F RID: 278591 RVA: 0x010B5C98 File Offset: 0x010B3E98
+		// Token: 0x0603A191 RID: 237969 RVA: 0x0105F534 File Offset: 0x0105D734
 		protected override void OnReset()
 		{
 			this.StateId = 0;
 			this.PbDataId = 0;
 		}
 
-		// Token: 0x040238BB RID: 145595
+		// Token: 0x0401EB5D RID: 125789
 		private int StateId;
 
-		// Token: 0x040238BC RID: 145596
+		// Token: 0x0401EB5E RID: 125790
 		private int PbDataId;
 	}
 }

@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E28 RID: 24104
+	// Token: 0x02004E0D RID: 19981
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarSlot : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D4C9 RID: 251081 RVA: 0x00EC60B4 File Offset: 0x00EC42B4
+		// Token: 0x06032458 RID: 205912 RVA: 0x00E17614 File Offset: 0x00E15814
 		protected override void OnRegisterComponent()
 		{
 			this.SlotNum = this.Config.SlotNum;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D4CA RID: 251082 RVA: 0x00EC6140 File Offset: 0x00EC4340
+		// Token: 0x06032459 RID: 205913 RVA: 0x00E176A0 File Offset: 0x00E158A0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarSlot.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D4CB RID: 251083 RVA: 0x00EC6184 File Offset: 0x00EC4384
+		// Token: 0x0603245A RID: 205914 RVA: 0x00E176E4 File Offset: 0x00E158E4
 		protected virtual UniTask InitSlotItem(UUIItem slotItem)
 		{
 			SpecialEnergyBarSlot.<InitSlotItem>d__9 <InitSlotItem>d__;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitSlotItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D4CC RID: 251084 RVA: 0x00EC61D0 File Offset: 0x00EC43D0
+		// Token: 0x0603245B RID: 205915 RVA: 0x00E17730 File Offset: 0x00E15930
 		protected override void OnStart()
 		{
 			if (this.Config == null)
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBarPercent(true);
 		}
 
-		// Token: 0x0603D4CD RID: 251085 RVA: 0x00EC6358 File Offset: 0x00EC4558
+		// Token: 0x0603245C RID: 205916 RVA: 0x00E178B8 File Offset: 0x00E15AB8
 		protected virtual void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -120,19 +120,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(keyEnable, isStart);
 		}
 
-		// Token: 0x0603D4CE RID: 251086 RVA: 0x00EC63BF File Offset: 0x00EC45BF
+		// Token: 0x0603245D RID: 205917 RVA: 0x00E1791F File Offset: 0x00E15B1F
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D4CF RID: 251087 RVA: 0x00EC63C8 File Offset: 0x00EC45C8
+		// Token: 0x0603245E RID: 205918 RVA: 0x00E17928 File Offset: 0x00E15B28
 		protected override void OnKeyEnableChanged()
 		{
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D4D0 RID: 251088 RVA: 0x00EC63D4 File Offset: 0x00EC45D4
+		// Token: 0x0603245F RID: 205919 RVA: 0x00E17934 File Offset: 0x00E15B34
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D4D1 RID: 251089 RVA: 0x00EC642C File Offset: 0x00EC462C
+		// Token: 0x06032460 RID: 205920 RVA: 0x00E1798C File Offset: 0x00E15B8C
 		public override void ReplaceFullEffect(UNiagaraSystem niagara)
 		{
 			foreach (SpecialEnergyBarSlotItem specialEnergyBarSlotItem in this.SlotItemList)
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D4D2 RID: 251090 RVA: 0x00EC6480 File Offset: 0x00EC4680
+		// Token: 0x06032461 RID: 205921 RVA: 0x00E179E0 File Offset: 0x00E15BE0
 		public override void RevertFullEffect()
 		{
 			foreach (SpecialEnergyBarSlotItem specialEnergyBarSlotItem in this.SlotItemList)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D4D3 RID: 251091 RVA: 0x00EC64D0 File Offset: 0x00EC46D0
+		// Token: 0x06032462 RID: 205922 RVA: 0x00E17A30 File Offset: 0x00E15C30
 		public void UpdateFullEffectOffsetBySlotWidth()
 		{
 			foreach (SpecialEnergyBarSlotItem specialEnergyBarSlotItem in this.SlotItemList)
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D4D4 RID: 251092 RVA: 0x00EC6534 File Offset: 0x00EC4734
+		// Token: 0x06032463 RID: 205923 RVA: 0x00E17A94 File Offset: 0x00E15C94
 		public void SetCustomEffectBasePercent(float effectBasePercent)
 		{
 			foreach (SpecialEnergyBarSlotItem specialEnergyBarSlotItem in this.SlotItemList)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D4D5 RID: 251093 RVA: 0x00EC6588 File Offset: 0x00EC4788
+		// Token: 0x06032464 RID: 205924 RVA: 0x00E17AE8 File Offset: 0x00E15CE8
 		public void SetFullEffectVisible(int index, bool visible)
 		{
 			SpecialEnergyBarSlotItem valueOrDefault = this.SlotItemList.GetValueOrDefault(index);
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			valueOrDefault.SetFullEffectVisible(visible);
 		}
 
-		// Token: 0x0603D4D6 RID: 251094 RVA: 0x00EC65A4 File Offset: 0x00EC47A4
+		// Token: 0x06032465 RID: 205925 RVA: 0x00E17B04 File Offset: 0x00E15D04
 		public void SetUseEffectMode(EUseEffectMode mode)
 		{
 			foreach (SpecialEnergyBarSlotItem specialEnergyBarSlotItem in this.SlotItemList)
@@ -198,7 +198,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FF83 RID: 130947
+		// Token: 0x06032466 RID: 205926 RVA: 0x00E17B58 File Offset: 0x00E15D58
+		[NullableContext(2)]
+		public UUIItem GetKeyItem()
+		{
+			return base.GetItem(this.SlotNum);
+		}
+
+		// Token: 0x0401AA4A RID: 109130
 		[StaticVariableRuleIgnore]
 		private static readonly float[] effectBasePercents = new float[]
 		{
@@ -210,22 +217,22 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			0.14634146f
 		};
 
-		// Token: 0x0401FF84 RID: 130948
+		// Token: 0x0401AA4B RID: 109131
 		protected int SlotNum;
 
-		// Token: 0x0401FF85 RID: 130949
+		// Token: 0x0401AA4C RID: 109132
 		protected readonly List<SpecialEnergyBarSlotItem> SlotItemList = new List<SpecialEnergyBarSlotItem>();
 
-		// Token: 0x0401FF86 RID: 130950
+		// Token: 0x0401AA4D RID: 109133
 		public bool IsMorph;
 
-		// Token: 0x0401FF87 RID: 130951
+		// Token: 0x0401AA4E RID: 109134
 		public bool ForceHideBottomLine;
 
-		// Token: 0x0401FF88 RID: 130952
+		// Token: 0x0401AA4F RID: 109135
 		public float ForceEffectBasePercent = -1f;
 
-		// Token: 0x0401FF89 RID: 130953
+		// Token: 0x0401AA50 RID: 109136
 		public bool OverrideColor;
 	}
 }

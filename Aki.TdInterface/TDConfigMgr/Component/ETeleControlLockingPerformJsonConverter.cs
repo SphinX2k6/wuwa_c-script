@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A31 RID: 2609
+	// Token: 0x02000AF6 RID: 2806
 	public class ETeleControlLockingPerformJsonConverter : JsonConverter<ETeleControlLockingPerform>
 	{
-		// Token: 0x0600398F RID: 14735 RVA: 0x000949F8 File Offset: 0x00092BF8
+		// Token: 0x06003D67 RID: 15719 RVA: 0x0009D32C File Offset: 0x0009B52C
 		public override ETeleControlLockingPerform Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ETeleControlLockingPerformExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003990 RID: 14736 RVA: 0x00094A1C File Offset: 0x00092C1C
+		// Token: 0x06003D68 RID: 15720 RVA: 0x0009D350 File Offset: 0x0009B550
 		public override void Write(Utf8JsonWriter writer, ETeleControlLockingPerform value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

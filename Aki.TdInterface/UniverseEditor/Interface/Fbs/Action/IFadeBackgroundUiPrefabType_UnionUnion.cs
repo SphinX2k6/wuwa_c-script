@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006790 RID: 26512
+	// Token: 0x02006E10 RID: 28176
 	public class IFadeBackgroundUiPrefabType_UnionUnion
 	{
-		// Token: 0x1700C4C4 RID: 50372
-		// (get) Token: 0x0602E1FD RID: 188925 RVA: 0x0064CD9D File Offset: 0x0064AF9D
-		// (set) Token: 0x0602E1FE RID: 188926 RVA: 0x0064CDA5 File Offset: 0x0064AFA5
+		// Token: 0x1700CE7A RID: 52858
+		// (get) Token: 0x06030A43 RID: 199235 RVA: 0x0069A4E1 File Offset: 0x006986E1
+		// (set) Token: 0x06030A44 RID: 199236 RVA: 0x0069A4E9 File Offset: 0x006986E9
 		public IFadeBackgroundUiPrefabType_Union Type { get; set; }
 
-		// Token: 0x1700C4C5 RID: 50373
-		// (get) Token: 0x0602E1FF RID: 188927 RVA: 0x0064CDAE File Offset: 0x0064AFAE
-		// (set) Token: 0x0602E200 RID: 188928 RVA: 0x0064CDB6 File Offset: 0x0064AFB6
+		// Token: 0x1700CE7B RID: 52859
+		// (get) Token: 0x06030A45 RID: 199237 RVA: 0x0069A4F2 File Offset: 0x006986F2
+		// (set) Token: 0x06030A46 RID: 199238 RVA: 0x0069A4FA File Offset: 0x006986FA
 		public object Value { get; set; }
 
-		// Token: 0x0602E201 RID: 188929 RVA: 0x0064CDBF File Offset: 0x0064AFBF
+		// Token: 0x06030A47 RID: 199239 RVA: 0x0069A503 File Offset: 0x00698703
 		public IFadeBackgroundUiPrefabType_UnionUnion()
 		{
 			this.Type = IFadeBackgroundUiPrefabType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602E202 RID: 188930 RVA: 0x0064CDD5 File Offset: 0x0064AFD5
+		// Token: 0x06030A48 RID: 199240 RVA: 0x0069A519 File Offset: 0x00698719
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602E203 RID: 188931 RVA: 0x0064CDE7 File Offset: 0x0064AFE7
+		// Token: 0x06030A49 RID: 199241 RVA: 0x0069A52B File Offset: 0x0069872B
 		public IFadeBackgroundUiPrefabTypeT AsIFadeBackgroundUiPrefabType()
 		{
 			return this.As<IFadeBackgroundUiPrefabTypeT>();
 		}
 
-		// Token: 0x0602E204 RID: 188932 RVA: 0x0064CDEF File Offset: 0x0064AFEF
+		// Token: 0x06030A4A RID: 199242 RVA: 0x0069A533 File Offset: 0x00698733
 		public static IFadeBackgroundUiPrefabType_UnionUnion FromIFadeBackgroundUiPrefabType(IFadeBackgroundUiPrefabTypeT _ifadebackgrounduiprefabtype)
 		{
 			return new IFadeBackgroundUiPrefabType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E205 RID: 188933 RVA: 0x0064CE04 File Offset: 0x0064B004
+		// Token: 0x06030A4B RID: 199243 RVA: 0x0069A548 File Offset: 0x00698748
 		public IFadeBackgroundUiPrefabBlackScreenWhiteTextT AsIFadeBackgroundUiPrefabBlackScreenWhiteText()
 		{
 			return this.As<IFadeBackgroundUiPrefabBlackScreenWhiteTextT>();
 		}
 
-		// Token: 0x0602E206 RID: 188934 RVA: 0x0064CE0C File Offset: 0x0064B00C
+		// Token: 0x06030A4C RID: 199244 RVA: 0x0069A550 File Offset: 0x00698750
 		public static IFadeBackgroundUiPrefabType_UnionUnion FromIFadeBackgroundUiPrefabBlackScreenWhiteText(IFadeBackgroundUiPrefabBlackScreenWhiteTextT _ifadebackgrounduiprefabblackscreenwhitetext)
 		{
 			return new IFadeBackgroundUiPrefabType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E207 RID: 188935 RVA: 0x0064CE24 File Offset: 0x0064B024
+		// Token: 0x06030A4D RID: 199245 RVA: 0x0069A568 File Offset: 0x00698768
 		public static int Pack(FlatBufferBuilder builder, IFadeBackgroundUiPrefabType_UnionUnion _o)
 		{
 			IFadeBackgroundUiPrefabType_Union type = _o.Type;

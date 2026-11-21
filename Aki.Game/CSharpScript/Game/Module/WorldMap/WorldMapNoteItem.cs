@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x020047A9 RID: 18345
+	// Token: 0x020036DA RID: 14042
 	public class WorldMapNoteItem : UiPanelBase
 	{
-		// Token: 0x0602FFBD RID: 196541 RVA: 0x00B1B859 File Offset: 0x00B19A59
+		// Token: 0x0602478A RID: 149386 RVA: 0x00A4B7F5 File Offset: 0x00A499F5
 		[NullableContext(1)]
 		public WorldMapNoteItem(UUIItem item)
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.WorldMap
 			base.CreateThenShowByActor(item.GetOwner(), null);
 		}
 
-		// Token: 0x0602FFBE RID: 196542 RVA: 0x00B1B878 File Offset: 0x00B19A78
+		// Token: 0x0602478B RID: 149387 RVA: 0x00A4B814 File Offset: 0x00A49A14
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -52,12 +52,12 @@ namespace CSharpScript.Game.Module.WorldMap
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0602FFBF RID: 196543 RVA: 0x00B1B9C3 File Offset: 0x00B19BC3
+		// Token: 0x0602478C RID: 149388 RVA: 0x00A4B95F File Offset: 0x00A49B5F
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x0602FFC0 RID: 196544 RVA: 0x00B1B9C5 File Offset: 0x00B19BC5
+		// Token: 0x0602478D RID: 149389 RVA: 0x00A4B961 File Offset: 0x00A49B61
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer sequence = this.Sequence;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.WorldMap
 			this.Sequence = null;
 		}
 
-		// Token: 0x0602FFC1 RID: 196545 RVA: 0x00B1B9E0 File Offset: 0x00B19BE0
+		// Token: 0x0602478E RID: 149390 RVA: 0x00A4B97C File Offset: 0x00A49B7C
 		[NullableContext(1)]
 		public void UpdateNoteItem(int mapNoteId, Action<int> callback, int? mapMarkId = null, [Nullable(2)] string customDesc = null)
 		{
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.WorldMap
 			this.ClickCallback = callback;
 		}
 
-		// Token: 0x0602FFC2 RID: 196546 RVA: 0x00B1BAC2 File Offset: 0x00B19CC2
+		// Token: 0x0602478F RID: 149391 RVA: 0x00A4BA5E File Offset: 0x00A49C5E
 		private void OnClick()
 		{
 			Action<int> clickCallback = this.ClickCallback;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.WorldMap
 			clickCallback(this.MarkId);
 		}
 
-		// Token: 0x0602FFC3 RID: 196547 RVA: 0x00B1BADC File Offset: 0x00B19CDC
+		// Token: 0x06024790 RID: 149392 RVA: 0x00A4BA78 File Offset: 0x00A49C78
 		public void PlayStartToPause()
 		{
 			if (this.Sequence == null)
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.WorldMap
 			rootItem.SetUIActive(false);
 		}
 
-		// Token: 0x0602FFC4 RID: 196548 RVA: 0x00B1BB3C File Offset: 0x00B19D3C
+		// Token: 0x06024791 RID: 149393 RVA: 0x00A4BAD8 File Offset: 0x00A49CD8
 		public UniTask ResumeSequence(int index)
 		{
 			WorldMapNoteItem.<ResumeSequence>d__12 <ResumeSequence>d__;
@@ -133,49 +133,49 @@ namespace CSharpScript.Game.Module.WorldMap
 			return <ResumeSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04019E4D RID: 106061
+		// Token: 0x040144FD RID: 83197
 		private int MarkId;
 
-		// Token: 0x04019E4E RID: 106062
+		// Token: 0x040144FE RID: 83198
 		[Nullable(2)]
 		private Action<int> ClickCallback;
 
-		// Token: 0x04019E4F RID: 106063
+		// Token: 0x040144FF RID: 83199
 		[Nullable(2)]
 		private LevelSequencePlayer Sequence;
 
-		// Token: 0x0200AA37 RID: 43575
+		// Token: 0x020093EA RID: 37866
 		public static class EChildComponents
 		{
-			// Token: 0x04033CA0 RID: 212128
+			// Token: 0x0402E42C RID: 189484
 			public const int NoteIcon = 0;
 
-			// Token: 0x04033CA1 RID: 212129
+			// Token: 0x0402E42D RID: 189485
 			public const int NoteDesc = 1;
 
-			// Token: 0x04033CA2 RID: 212130
+			// Token: 0x0402E42E RID: 189486
 			public const int NoteButton = 2;
 
-			// Token: 0x04033CA3 RID: 212131
+			// Token: 0x0402E42F RID: 189487
 			public const int TexBg = 3;
 
-			// Token: 0x04033CA4 RID: 212132
+			// Token: 0x0402E430 RID: 189488
 			public const int TexReceivedBg = 4;
 
-			// Token: 0x04033CA5 RID: 212133
+			// Token: 0x0402E431 RID: 189489
 			public const int NiaAvailable = 5;
 
-			// Token: 0x04033CA6 RID: 212134
+			// Token: 0x0402E432 RID: 189490
 			public const int NiaUnAvailable = 6;
 		}
 
-		// Token: 0x0200AA38 RID: 43576
+		// Token: 0x020093EB RID: 37867
 		public static class EMapNoteStyle
 		{
-			// Token: 0x04033CA7 RID: 212135
+			// Token: 0x0402E433 RID: 189491
 			public static readonly int Normal = 0;
 
-			// Token: 0x04033CA8 RID: 212136
+			// Token: 0x0402E434 RID: 189492
 			public static readonly int Available = 1;
 		}
 	}

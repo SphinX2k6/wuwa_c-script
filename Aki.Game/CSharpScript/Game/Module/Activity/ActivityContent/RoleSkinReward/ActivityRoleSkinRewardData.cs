@@ -6,12 +6,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 {
-	// Token: 0x020061BA RID: 25018
+	// Token: 0x02005138 RID: 20792
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityRoleSkinRewardData : ActivityBaseData
 	{
-		// Token: 0x0603F31D RID: 258845 RVA: 0x00F44D3C File Offset: 0x00F42F3C
+		// Token: 0x06033FDE RID: 212958 RVA: 0x00E8BC94 File Offset: 0x00E89E94
 		protected override void PhraseEx(ActivityData data)
 		{
 			SkinRewardActivityData skinRewardActivityData = data.SkinRewardActivityData;
@@ -21,13 +21,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			}
 		}
 
-		// Token: 0x0603F31E RID: 258846 RVA: 0x00F44DA8 File Offset: 0x00F42FA8
+		// Token: 0x06033FDF RID: 212959 RVA: 0x00E8BD00 File Offset: 0x00E89F00
 		public void UpdateSkinRewardState(int configId, SkinRewardActivityRewardState state)
 		{
 			this.SkinRewardData[configId] = state;
 		}
 
-		// Token: 0x0603F31F RID: 258847 RVA: 0x00F44DB8 File Offset: 0x00F42FB8
+		// Token: 0x06033FE0 RID: 212960 RVA: 0x00E8BD10 File Offset: 0x00E89F10
 		public SkinRewardActivityRewardState? GetSkinRewardState(int configId)
 		{
 			SkinRewardActivityRewardState value;
@@ -38,21 +38,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			return null;
 		}
 
-		// Token: 0x0603F320 RID: 258848 RVA: 0x00F44DE8 File Offset: 0x00F42FE8
+		// Token: 0x06033FE1 RID: 212961 RVA: 0x00E8BD40 File Offset: 0x00E89F40
 		public bool CheckTransitionCondition(int configId)
 		{
 			SkinRewardActivityRewardState skinRewardActivityRewardState;
 			return this.SkinRewardData.TryGetValue(configId, out skinRewardActivityRewardState) && skinRewardActivityRewardState == SkinRewardActivityRewardState.InitState;
 		}
 
-		// Token: 0x0603F321 RID: 258849 RVA: 0x00F44E0C File Offset: 0x00F4300C
+		// Token: 0x06033FE2 RID: 212962 RVA: 0x00E8BD64 File Offset: 0x00E89F64
 		public bool CheckRewarded(int configId)
 		{
 			SkinRewardActivityRewardState skinRewardActivityRewardState;
 			return this.SkinRewardData.TryGetValue(configId, out skinRewardActivityRewardState) && skinRewardActivityRewardState == SkinRewardActivityRewardState.TaskRewarded;
 		}
 
-		// Token: 0x0603F322 RID: 258850 RVA: 0x00F44E30 File Offset: 0x00F43030
+		// Token: 0x06033FE3 RID: 212963 RVA: 0x00E8BD88 File Offset: 0x00E89F88
 		protected override bool GetExDataFinishShowState()
 		{
 			int activityId = ActivityRoleSkinRewardController.Instance.ActivityId;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			return this.SkinRewardData.TryGetValue(activityConfig.Value.Id, out skinRewardActivityRewardState) && skinRewardActivityRewardState == SkinRewardActivityRewardState.TaskRewarded;
 		}
 
-		// Token: 0x0603F323 RID: 258851 RVA: 0x00F44E78 File Offset: 0x00F43078
+		// Token: 0x06033FE4 RID: 212964 RVA: 0x00E8BDD0 File Offset: 0x00E89FD0
 		public override bool GetExDataRedPointShowState()
 		{
 			int activityId = ActivityRoleSkinRewardController.Instance.ActivityId;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			return this.SkinRewardData.TryGetValue(activityConfig.Value.Id, out skinRewardActivityRewardState) && skinRewardActivityRewardState == SkinRewardActivityRewardState.TaskComplete;
 		}
 
-		// Token: 0x04020EEE RID: 134894
+		// Token: 0x0401B81D RID: 112669
 		private readonly Dictionary<int, SkinRewardActivityRewardState> SkinRewardData = new Dictionary<int, SkinRewardActivityRewardState>();
 	}
 }

@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002456 RID: 9302
+// Token: 0x0200193B RID: 6459
 public class PhantomSortMetric
 {
-	// Token: 0x04008C8B RID: 35979
+	// Token: 0x04008DD2 RID: 36306
 	public bool HasRecommendMainProp;
 
-	// Token: 0x04008C8C RID: 35980
+	// Token: 0x04008DD3 RID: 36307
 	public bool HasRecommendSubProp;
 
-	// Token: 0x04008C8D RID: 35981
+	// Token: 0x04008DD4 RID: 36308
 	public int MainPropUsage;
 
-	// Token: 0x04008C8E RID: 35982
+	// Token: 0x04008DD5 RID: 36309
 	public int SubPropUsage;
 
-	// Token: 0x04008C8F RID: 35983
+	// Token: 0x04008DD6 RID: 36310
 	[TupleElementNames(new string[]
 	{
 		"AddType",

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002129 RID: 8489
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200238A RID: 9098
 	public class PreloadAction : ActionParams
 	{
-		// Token: 0x0600BB06 RID: 47878 RVA: 0x001B0200 File Offset: 0x001AE400
+		// Token: 0x0600C694 RID: 50836 RVA: 0x001C73B4 File Offset: 0x001C55B4
 		private PreloadAction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BB07 RID: 47879 RVA: 0x001B0238 File Offset: 0x001AE438
+		// Token: 0x0600C695 RID: 50837 RVA: 0x001C73EC File Offset: 0x001C55EC
 		public static PreloadAction Create([Nullable(2)] PreloadAction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB08 RID: 47880 RVA: 0x001B024B File Offset: 0x001AE44B
+		// Token: 0x0600C696 RID: 50838 RVA: 0x001C73FF File Offset: 0x001C55FF
 		public static PreloadAction CreateFromSetValue([Nullable(2)] PreloadAction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB09 RID: 47881 RVA: 0x001B025E File Offset: 0x001AE45E
+		// Token: 0x0600C697 RID: 50839 RVA: 0x001C7412 File Offset: 0x001C5612
 		public PreloadAction_SetValue ToSetValue()
 		{
 			return new PreloadAction_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700391F RID: 14623
-		// (get) Token: 0x0600BB0A RID: 47882 RVA: 0x001B0271 File Offset: 0x001AE471
-		// (set) Token: 0x0600BB0B RID: 47883 RVA: 0x001B0298 File Offset: 0x001AE498
+		// Token: 0x17003C0C RID: 15372
+		// (get) Token: 0x0600C698 RID: 50840 RVA: 0x001C7425 File Offset: 0x001C5625
+		// (set) Token: 0x0600C699 RID: 50841 RVA: 0x001C744C File Offset: 0x001C564C
 		public virtual IPreloadCharacterType PreloadObjectType
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006FE8 RID: 28648
+		// Token: 0x0400761D RID: 30237
 		[Nullable(2)]
 		protected new PreloadAction FbInstance;
 
-		// Token: 0x04006FE9 RID: 28649
+		// Token: 0x0400761E RID: 30238
 		[Nullable(2)]
 		protected PreloadAction_SetValue PocoInterface;
 	}

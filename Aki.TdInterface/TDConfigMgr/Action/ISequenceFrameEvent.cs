@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E00 RID: 7680
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002033 RID: 8243
 	public class ISequenceFrameEvent
 	{
-		// Token: 0x0600A44F RID: 42063 RVA: 0x00174AB4 File Offset: 0x00172CB4
+		// Token: 0x0600AEF7 RID: 44791 RVA: 0x0018A4BC File Offset: 0x001886BC
 		private ISequenceFrameEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A450 RID: 42064 RVA: 0x00174AEC File Offset: 0x00172CEC
+		// Token: 0x0600AEF8 RID: 44792 RVA: 0x0018A4F4 File Offset: 0x001886F4
 		public static ISequenceFrameEvent Create([Nullable(2)] ISequenceFrameEvent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A451 RID: 42065 RVA: 0x00174AFF File Offset: 0x00172CFF
+		// Token: 0x0600AEF9 RID: 44793 RVA: 0x0018A507 File Offset: 0x00188707
 		public static ISequenceFrameEvent CreateFromSetValue([Nullable(2)] ISequenceFrameEvent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A452 RID: 42066 RVA: 0x00174B12 File Offset: 0x00172D12
+		// Token: 0x0600AEFA RID: 44794 RVA: 0x0018A51A File Offset: 0x0018871A
 		public ISequenceFrameEvent_SetValue ToSetValue()
 		{
 			return new ISequenceFrameEvent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700327E RID: 12926
-		// (get) Token: 0x0600A453 RID: 42067 RVA: 0x00174B31 File Offset: 0x00172D31
-		// (set) Token: 0x0600A454 RID: 42068 RVA: 0x00174B5C File Offset: 0x00172D5C
+		// Token: 0x1700353D RID: 13629
+		// (get) Token: 0x0600AEFB RID: 44795 RVA: 0x0018A539 File Offset: 0x00188739
+		// (set) Token: 0x0600AEFC RID: 44796 RVA: 0x0018A564 File Offset: 0x00188764
 		public virtual string EventKey
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700327F RID: 12927
-		// (get) Token: 0x0600A455 RID: 42069 RVA: 0x00174B6C File Offset: 0x00172D6C
-		// (set) Token: 0x0600A456 RID: 42070 RVA: 0x00174BFF File Offset: 0x00172DFF
+		// Token: 0x1700353E RID: 13630
+		// (get) Token: 0x0600AEFD RID: 44797 RVA: 0x0018A574 File Offset: 0x00188774
+		// (set) Token: 0x0600AEFE RID: 44798 RVA: 0x0018A607 File Offset: 0x00188807
 		public virtual List<ActionInfo> EventActions
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006265 RID: 25189
+		// Token: 0x0400683C RID: 26684
 		[Nullable(2)]
 		protected ISequenceFrameEvent FbInstance;
 
-		// Token: 0x04006266 RID: 25190
+		// Token: 0x0400683D RID: 26685
 		[Nullable(2)]
 		protected ISequenceFrameEvent_SetValue PocoInterface;
 
-		// Token: 0x04006267 RID: 25191
+		// Token: 0x0400683E RID: 26686
 		private List<ActionInfo> _EventActionsCache;
 
-		// Token: 0x04006268 RID: 25192
+		// Token: 0x0400683F RID: 26687
 		private bool _EventActionsInited;
 	}
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -14,13 +13,13 @@ using CSharpScript.Game.Module.Reward;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001A98 RID: 6808
+// Token: 0x02000F57 RID: 3927
 [NullableContext(1)]
 [Nullable(0)]
 public class ExploreAreaData
 {
-	// Token: 0x1700107A RID: 4218
-	// (get) Token: 0x0600C927 RID: 51495 RVA: 0x002DE7AD File Offset: 0x002DC9AD
+	// Token: 0x1700109F RID: 4255
+	// (get) Token: 0x06009D38 RID: 40248 RVA: 0x002E98F9 File Offset: 0x002E7AF9
 	public bool IsReachMaxProgress
 	{
 		get
@@ -29,7 +28,7 @@ public class ExploreAreaData
 		}
 	}
 
-	// Token: 0x0600C928 RID: 51496 RVA: 0x002DE7C0 File Offset: 0x002DC9C0
+	// Token: 0x06009D39 RID: 40249 RVA: 0x002E990C File Offset: 0x002E7B0C
 	private void UpdateExploreProgress(int progress)
 	{
 		if (this.ExploreProgress == progress)
@@ -60,7 +59,7 @@ public class ExploreAreaData
 		}
 	}
 
-	// Token: 0x0600C929 RID: 51497 RVA: 0x002DE888 File Offset: 0x002DCA88
+	// Token: 0x06009D3A RID: 40250 RVA: 0x002E99D4 File Offset: 0x002E7BD4
 	public void Initialize(Area config)
 	{
 		this.AreaId = config.AreaId;
@@ -77,7 +76,7 @@ public class ExploreAreaData
 		}
 	}
 
-	// Token: 0x0600C92A RID: 51498 RVA: 0x002DE91C File Offset: 0x002DCB1C
+	// Token: 0x06009D3B RID: 40251 RVA: 0x002E9A68 File Offset: 0x002E7C68
 	private void InitStageReward()
 	{
 		IReadOnlyList<ExploreProgressReward> areaStageAwardConfigByAreaId = ExploreProgressConfig.Instance.GetAreaStageAwardConfigByAreaId(this.AreaId);
@@ -110,7 +109,7 @@ public class ExploreAreaData
 		this.NextStageNeedProgress = ((this.StageRewardDataList.Count > 0) ? this.StageRewardDataList[0].Goal : this.MaxExploreProgress);
 	}
 
-	// Token: 0x0600C92B RID: 51499 RVA: 0x002DEABC File Offset: 0x002DCCBC
+	// Token: 0x06009D3C RID: 40252 RVA: 0x002E9C08 File Offset: 0x002E7E08
 	public void Clear()
 	{
 		this.AreaId = 0;
@@ -119,7 +118,7 @@ public class ExploreAreaData
 		this.ExploreAreaItemDataMap.Clear();
 	}
 
-	// Token: 0x0600C92C RID: 51500 RVA: 0x002DEAE0 File Offset: 0x002DCCE0
+	// Token: 0x06009D3D RID: 40253 RVA: 0x002E9C2C File Offset: 0x002E7E2C
 	public void AddExploreAreaItemData(ExploreProgress exploreItemConfig)
 	{
 		EExploreType exploreType = (EExploreType)exploreItemConfig.ExploreType;
@@ -133,14 +132,14 @@ public class ExploreAreaData
 		this.ExploreAreaItemDataList.Add(exploreAreaItemData);
 	}
 
-	// Token: 0x0600C92D RID: 51501 RVA: 0x002DEB2A File Offset: 0x002DCD2A
+	// Token: 0x06009D3E RID: 40254 RVA: 0x002E9C76 File Offset: 0x002E7E76
 	public void AddExploreAreaItemDataFinish()
 	{
 		this.SortExploreAreaItemDataList(this.ExploreAreaItemDataList);
 		this.UpdateExploreAreaItemSubType();
 	}
 
-	// Token: 0x0600C92E RID: 51502 RVA: 0x002DEB3E File Offset: 0x002DCD3E
+	// Token: 0x06009D3F RID: 40255 RVA: 0x002E9C8A File Offset: 0x002E7E8A
 	public void SortExploreAreaItemDataList(List<ExploreAreaItemData> list)
 	{
 		list.Sort(delegate(ExploreAreaItemData aAreaItemData, ExploreAreaItemData bAreaItemData)
@@ -155,7 +154,7 @@ public class ExploreAreaData
 		});
 	}
 
-	// Token: 0x0600C92F RID: 51503 RVA: 0x002DEB68 File Offset: 0x002DCD68
+	// Token: 0x06009D40 RID: 40256 RVA: 0x002E9CB4 File Offset: 0x002E7EB4
 	private void UpdateExploreAreaItemSubType()
 	{
 		this.ExploreAreaItemSubTypeMap.Clear();
@@ -168,7 +167,7 @@ public class ExploreAreaData
 		}
 	}
 
-	// Token: 0x0600C930 RID: 51504 RVA: 0x002DEBEC File Offset: 0x002DCDEC
+	// Token: 0x06009D41 RID: 40257 RVA: 0x002E9D38 File Offset: 0x002E7F38
 	public void Refresh(AreaExploreInfo areaExploreInfo)
 	{
 		this.UpdateExploreProgress(areaExploreInfo.ExplorePercent);
@@ -185,7 +184,7 @@ public class ExploreAreaData
 		}
 	}
 
-	// Token: 0x0600C931 RID: 51505 RVA: 0x002DEC88 File Offset: 0x002DCE88
+	// Token: 0x06009D42 RID: 40258 RVA: 0x002E9DD4 File Offset: 0x002E7FD4
 	[NullableContext(2)]
 	public ExploreAreaItemData GetExploreAreaItemData(EExploreType exploreType)
 	{
@@ -194,50 +193,50 @@ public class ExploreAreaData
 		return result;
 	}
 
-	// Token: 0x0600C932 RID: 51506 RVA: 0x002DECA5 File Offset: 0x002DCEA5
+	// Token: 0x06009D43 RID: 40259 RVA: 0x002E9DF1 File Offset: 0x002E7FF1
 	public List<ExploreAreaItemData> GetAllExploreAreaItemData()
 	{
 		return this.ExploreAreaItemDataList;
 	}
 
-	// Token: 0x0600C933 RID: 51507 RVA: 0x002DECAD File Offset: 0x002DCEAD
+	// Token: 0x06009D44 RID: 40260 RVA: 0x002E9DF9 File Offset: 0x002E7FF9
 	public int GetProgress()
 	{
 		return this.ExploreProgress;
 	}
 
-	// Token: 0x0600C934 RID: 51508 RVA: 0x002DECB5 File Offset: 0x002DCEB5
+	// Token: 0x06009D45 RID: 40261 RVA: 0x002E9E01 File Offset: 0x002E8001
 	public string GetNameId()
 	{
 		return this.TitleId;
 	}
 
-	// Token: 0x0600C935 RID: 51509 RVA: 0x002DECBD File Offset: 0x002DCEBD
+	// Token: 0x06009D46 RID: 40262 RVA: 0x002E9E09 File Offset: 0x002E8009
 	public int GetSortIndex()
 	{
 		return this.AreaSortIndex;
 	}
 
-	// Token: 0x0600C936 RID: 51510 RVA: 0x002DECC5 File Offset: 0x002DCEC5
+	// Token: 0x06009D47 RID: 40263 RVA: 0x002E9E11 File Offset: 0x002E8011
 	public int GetNextStageNeedProgress()
 	{
 		return this.NextStageNeedProgress;
 	}
 
-	// Token: 0x0600C937 RID: 51511 RVA: 0x002DECD0 File Offset: 0x002DCED0
+	// Token: 0x06009D48 RID: 40264 RVA: 0x002E9E1C File Offset: 0x002E801C
 	public float GetStageProgress(bool isPercentage = false)
 	{
 		int num = isPercentage ? 100 : 1;
 		return (float)this.GetProgress() / (float)this.GetNextStageNeedProgress() * (float)num;
 	}
 
-	// Token: 0x0600C938 RID: 51512 RVA: 0x002DECF8 File Offset: 0x002DCEF8
+	// Token: 0x06009D49 RID: 40265 RVA: 0x002E9E44 File Offset: 0x002E8044
 	public List<DailyActivityDefine.IActivityGoalData> GetStageRewardDataList()
 	{
 		return this.StageRewardDataList;
 	}
 
-	// Token: 0x0600C939 RID: 51513 RVA: 0x002DED00 File Offset: 0x002DCF00
+	// Token: 0x06009D4A RID: 40266 RVA: 0x002E9E4C File Offset: 0x002E804C
 	public void UpdateAchievedStageReward(int rewardId)
 	{
 		DailyActivityDefine.IActivityGoalData activityGoalData;
@@ -248,7 +247,7 @@ public class ExploreAreaData
 		}
 	}
 
-	// Token: 0x0600C93A RID: 51514 RVA: 0x002DED2C File Offset: 0x002DCF2C
+	// Token: 0x06009D4B RID: 40267 RVA: 0x002E9E78 File Offset: 0x002E8078
 	public bool HasCanTakeStageReward()
 	{
 		using (List<DailyActivityDefine.IActivityGoalData>.Enumerator enumerator = this.StageRewardDataList.GetEnumerator())
@@ -264,7 +263,7 @@ public class ExploreAreaData
 		return false;
 	}
 
-	// Token: 0x0600C93B RID: 51515 RVA: 0x002DED88 File Offset: 0x002DCF88
+	// Token: 0x06009D4C RID: 40268 RVA: 0x002E9ED4 File Offset: 0x002E80D4
 	public bool IsCollectAllStageReward()
 	{
 		using (List<DailyActivityDefine.IActivityGoalData>.Enumerator enumerator = this.StageRewardDataList.GetEnumerator())
@@ -280,7 +279,7 @@ public class ExploreAreaData
 		return true;
 	}
 
-	// Token: 0x0600C93C RID: 51516 RVA: 0x002DEDE4 File Offset: 0x002DCFE4
+	// Token: 0x06009D4D RID: 40269 RVA: 0x002E9F30 File Offset: 0x002E8130
 	public bool IsShowRecommendPlayPoint()
 	{
 		using (List<ExploreAreaItemData>.Enumerator enumerator = this.ExploreAreaItemDataList.GetEnumerator())
@@ -296,7 +295,7 @@ public class ExploreAreaData
 		return false;
 	}
 
-	// Token: 0x0600C93D RID: 51517 RVA: 0x002DEE40 File Offset: 0x002DD040
+	// Token: 0x06009D4E RID: 40270 RVA: 0x002E9F8C File Offset: 0x002E818C
 	public List<ExploreAreaItemData> GetRecommendExploreItemDataList(bool hasNumLimit = true)
 	{
 		List<ExploreAreaItemData> list = new List<ExploreAreaItemData>();
@@ -314,7 +313,7 @@ public class ExploreAreaData
 		return list;
 	}
 
-	// Token: 0x0600C93E RID: 51518 RVA: 0x002DEEB0 File Offset: 0x002DD0B0
+	// Token: 0x06009D4F RID: 40271 RVA: 0x002E9FFC File Offset: 0x002E81FC
 	public List<ExploreAreaItemData> GetShowRecommendExploreItemDataList()
 	{
 		List<ExploreAreaItemData> list = new List<ExploreAreaItemData>();
@@ -406,7 +405,7 @@ public class ExploreAreaData
 		return list4;
 	}
 
-	// Token: 0x0600C93F RID: 51519 RVA: 0x002DF14C File Offset: 0x002DD34C
+	// Token: 0x06009D50 RID: 40272 RVA: 0x002EA298 File Offset: 0x002E8498
 	public void UpdatePlayPointData(Dictionary<int, LevelPlayStateMsg> idMap)
 	{
 		this.LogExploreAreaItemTypeInfo();
@@ -444,7 +443,7 @@ public class ExploreAreaData
 		EventSystem.Instance.Emit<int>(EEventName.AreaPlayPointUpdate, this.AreaId);
 	}
 
-	// Token: 0x0600C940 RID: 51520 RVA: 0x002DF2E8 File Offset: 0x002DD4E8
+	// Token: 0x06009D51 RID: 40273 RVA: 0x002EA434 File Offset: 0x002E8634
 	public void UpdateTraceEntities(int exploratoryDegree, int[] entities)
 	{
 		int key;
@@ -455,7 +454,7 @@ public class ExploreAreaData
 		}
 	}
 
-	// Token: 0x0600C941 RID: 51521 RVA: 0x002DF31C File Offset: 0x002DD51C
+	// Token: 0x06009D52 RID: 40274 RVA: 0x002EA468 File Offset: 0x002E8668
 	private EPlayPointState GetPlayPointState(int playIdNum, LevelPlayStateMsg playData, ExploreAreaItemData itemData)
 	{
 		EPlayPointState eplayPointState = ServerPlayState2Client.Map[playData.StateType];
@@ -482,7 +481,7 @@ public class ExploreAreaData
 		return eplayPointState;
 	}
 
-	// Token: 0x0600C942 RID: 51522 RVA: 0x002DF3A8 File Offset: 0x002DD5A8
+	// Token: 0x06009D53 RID: 40275 RVA: 0x002EA4F4 File Offset: 0x002E86F4
 	private Dictionary<int, List<int>> GetExploreTypeMapByIdMap(Dictionary<int, LevelPlayStateMsg> idMap)
 	{
 		Dictionary<int, List<int>> dictionary = new Dictionary<int, List<int>>();
@@ -503,7 +502,7 @@ public class ExploreAreaData
 		return dictionary;
 	}
 
-	// Token: 0x0600C943 RID: 51523 RVA: 0x002DF444 File Offset: 0x002DD644
+	// Token: 0x06009D54 RID: 40276 RVA: 0x002EA590 File Offset: 0x002E8790
 	[Conditional("UE_BUILD_SHIPPING")]
 	public void LogExploreAreaItemTypeInfo()
 	{
@@ -512,7 +511,7 @@ public class ExploreAreaData
 		}
 	}
 
-	// Token: 0x0600C944 RID: 51524 RVA: 0x002DF490 File Offset: 0x002DD690
+	// Token: 0x06009D55 RID: 40277 RVA: 0x002EA5DC File Offset: 0x002E87DC
 	public UniTask CheckUpdatePlayPointData()
 	{
 		ExploreAreaData.<CheckUpdatePlayPointData>d__49 <CheckUpdatePlayPointData>d__;
@@ -523,13 +522,13 @@ public class ExploreAreaData
 		return <CheckUpdatePlayPointData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C945 RID: 51525 RVA: 0x002DF4D3 File Offset: 0x002DD6D3
+	// Token: 0x06009D56 RID: 40278 RVA: 0x002EA61F File Offset: 0x002E881F
 	public void ClearFlagUpdatePlayPointData()
 	{
 		this.FlagUpdatePlayPointData = false;
 	}
 
-	// Token: 0x0600C946 RID: 51526 RVA: 0x002DF4DC File Offset: 0x002DD6DC
+	// Token: 0x06009D57 RID: 40279 RVA: 0x002EA628 File Offset: 0x002E8828
 	public UniTask RequestPlayPointData()
 	{
 		ExploreAreaData.<RequestPlayPointData>d__51 <RequestPlayPointData>d__;
@@ -540,13 +539,13 @@ public class ExploreAreaData
 		return <RequestPlayPointData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C947 RID: 51527 RVA: 0x002DF51F File Offset: 0x002DD71F
+	// Token: 0x06009D58 RID: 40280 RVA: 0x002EA66B File Offset: 0x002E886B
 	public int GetSceneId()
 	{
 		return this.MapId;
 	}
 
-	// Token: 0x0600C948 RID: 51528 RVA: 0x002DF528 File Offset: 0x002DD728
+	// Token: 0x06009D59 RID: 40281 RVA: 0x002EA674 File Offset: 0x002E8874
 	public List<IMapExploreStoryItemData> GetStoryList()
 	{
 		int progress = this.GetProgress();
@@ -575,7 +574,7 @@ public class ExploreAreaData
 		return list;
 	}
 
-	// Token: 0x0600C949 RID: 51529 RVA: 0x002DF618 File Offset: 0x002DD818
+	// Token: 0x06009D5A RID: 40282 RVA: 0x002EA764 File Offset: 0x002E8964
 	public float GetStoryProgress(bool isPercentage = false)
 	{
 		IReadOnlyList<AreaReport> storyList = AreaConfig.Instance.GetStoryList(this.AreaId);
@@ -608,7 +607,7 @@ public class ExploreAreaData
 		return (float)num4 / (float)num3 * (float)num;
 	}
 
-	// Token: 0x0600C94A RID: 51530 RVA: 0x002DF6CC File Offset: 0x002DD8CC
+	// Token: 0x06009D5B RID: 40283 RVA: 0x002EA818 File Offset: 0x002E8A18
 	public bool HasNewStoryUnlocked()
 	{
 		if (AreaConfig.Instance.GetStoryList(this.AreaId) == null)
@@ -624,13 +623,13 @@ public class ExploreAreaData
 		return false;
 	}
 
-	// Token: 0x0600C94B RID: 51531 RVA: 0x002DF708 File Offset: 0x002DD908
+	// Token: 0x06009D5C RID: 40284 RVA: 0x002EA854 File Offset: 0x002E8A54
 	public float GetLocalAreaStoryProgress()
 	{
 		return (LocalStorage.GetGlobal<Dictionary<int, float>>(ELocalStorageGlobalKey.AreaStoryProgress, null) ?? new Dictionary<int, float>()).GetValueOrDefault(this.AreaId, 0f);
 	}
 
-	// Token: 0x0600C94C RID: 51532 RVA: 0x002DF72C File Offset: 0x002DD92C
+	// Token: 0x06009D5D RID: 40285 RVA: 0x002EA878 File Offset: 0x002E8A78
 	public bool SaveLocalAreaStoryProgress()
 	{
 		if (!this.FlagSaveLocalAreaStoryProgress)
@@ -645,13 +644,13 @@ public class ExploreAreaData
 		return true;
 	}
 
-	// Token: 0x0600C94D RID: 51533 RVA: 0x002DF789 File Offset: 0x002DD989
+	// Token: 0x06009D5E RID: 40286 RVA: 0x002EA8D5 File Offset: 0x002E8AD5
 	private int GetIconPercentIndex()
 	{
 		return (int)((float)this.GetProgress() / 25f);
 	}
 
-	// Token: 0x0600C94E RID: 51534 RVA: 0x002DF79C File Offset: 0x002DD99C
+	// Token: 0x06009D5F RID: 40287 RVA: 0x002EA8E8 File Offset: 0x002E8AE8
 	public IMapAreaOnlyShowItemData GetIconPercentData(ELocalStorageGlobalKey key)
 	{
 		int iconPercentIndex = this.GetIconPercentIndex();
@@ -670,37 +669,37 @@ public class ExploreAreaData
 		};
 	}
 
-	// Token: 0x0600C94F RID: 51535 RVA: 0x002DF7FA File Offset: 0x002DD9FA
+	// Token: 0x06009D60 RID: 40288 RVA: 0x002EA946 File Offset: 0x002E8B46
 	public IMapAreaOnlyShowItemData GetIconPercentDataAreaShow()
 	{
 		return this.GetIconPercentData(ELocalStorageGlobalKey.IconPercentAreaShow);
 	}
 
-	// Token: 0x0600C950 RID: 51536 RVA: 0x002DF807 File Offset: 0x002DDA07
+	// Token: 0x06009D61 RID: 40289 RVA: 0x002EA953 File Offset: 0x002E8B53
 	public void SaveLocalIconPercentAreaShow()
 	{
 		this.SaveLocalIconPercent(ELocalStorageGlobalKey.IconPercentAreaShow);
 	}
 
-	// Token: 0x0600C951 RID: 51537 RVA: 0x002DF814 File Offset: 0x002DDA14
+	// Token: 0x06009D62 RID: 40290 RVA: 0x002EA960 File Offset: 0x002E8B60
 	public IMapAreaOnlyShowItemData GetIconPercentDataAreaStory()
 	{
 		return this.GetIconPercentData(ELocalStorageGlobalKey.IconPercentAreaStory);
 	}
 
-	// Token: 0x0600C952 RID: 51538 RVA: 0x002DF821 File Offset: 0x002DDA21
+	// Token: 0x06009D63 RID: 40291 RVA: 0x002EA96D File Offset: 0x002E8B6D
 	public void SaveLocalIconPercentAreaStory()
 	{
 		this.SaveLocalIconPercent(ELocalStorageGlobalKey.IconPercentAreaStory);
 	}
 
-	// Token: 0x0600C953 RID: 51539 RVA: 0x002DF82E File Offset: 0x002DDA2E
+	// Token: 0x06009D64 RID: 40292 RVA: 0x002EA97A File Offset: 0x002E8B7A
 	private int GetLocalIconPercent(ELocalStorageGlobalKey key)
 	{
 		return (LocalStorage.GetGlobal<Dictionary<int, int>>(key, null) ?? new Dictionary<int, int>()).GetValueOrDefault(this.AreaId, 0);
 	}
 
-	// Token: 0x0600C954 RID: 51540 RVA: 0x002DF84C File Offset: 0x002DDA4C
+	// Token: 0x06009D65 RID: 40293 RVA: 0x002EA998 File Offset: 0x002E8B98
 	private void SaveLocalIconPercent(ELocalStorageGlobalKey key)
 	{
 		if (!this.FlagSaveLocalIconPercent[key])
@@ -713,7 +712,7 @@ public class ExploreAreaData
 		this.FlagSaveLocalIconPercent[key] = false;
 	}
 
-	// Token: 0x0600C955 RID: 51541 RVA: 0x002DF8A0 File Offset: 0x002DDAA0
+	// Token: 0x06009D66 RID: 40294 RVA: 0x002EA9EC File Offset: 0x002E8BEC
 	public string GetStoryViewTitle()
 	{
 		string text = "AreaReportName_Text";
@@ -726,7 +725,7 @@ public class ExploreAreaData
 		});
 	}
 
-	// Token: 0x0600C956 RID: 51542 RVA: 0x002DF8E4 File Offset: 0x002DDAE4
+	// Token: 0x06009D67 RID: 40295 RVA: 0x002EAA30 File Offset: 0x002E8C30
 	public void SaveLocalAreaExplorePlayState()
 	{
 		if (this.FlagSaveLocalAreaExplorePlayState)
@@ -743,19 +742,19 @@ public class ExploreAreaData
 		this.FlagSaveLocalAreaExplorePlayState = true;
 	}
 
-	// Token: 0x0600C957 RID: 51543 RVA: 0x002DF93D File Offset: 0x002DDB3D
+	// Token: 0x06009D68 RID: 40296 RVA: 0x002EAA89 File Offset: 0x002E8C89
 	public void ClearFlagSaveLocalAreaExplorePlayState()
 	{
 		this.FlagSaveLocalAreaExplorePlayState = false;
 	}
 
-	// Token: 0x0600C958 RID: 51544 RVA: 0x002DF946 File Offset: 0x002DDB46
+	// Token: 0x06009D69 RID: 40297 RVA: 0x002EAA92 File Offset: 0x002E8C92
 	public void ClearLocalAreaExplorePlayState()
 	{
 		LocalStorage.SetGlobal<Dictionary<int, Dictionary<int, AreaExplorePlayState>>>(ELocalStorageGlobalKey.AreaExplorePlayState, new Dictionary<int, Dictionary<int, AreaExplorePlayState>>());
 	}
 
-	// Token: 0x0600C959 RID: 51545 RVA: 0x002DF958 File Offset: 0x002DDB58
+	// Token: 0x06009D6A RID: 40298 RVA: 0x002EAAA4 File Offset: 0x002E8CA4
 	private Dictionary<int, AreaExplorePlayState> GetAreaExplorePlayStateMap()
 	{
 		Dictionary<int, AreaExplorePlayState> dictionary = new Dictionary<int, AreaExplorePlayState>();
@@ -764,14 +763,14 @@ public class ExploreAreaData
 			AreaExplorePlayState value = new AreaExplorePlayState
 			{
 				ExploreType = exploreAreaItemData.ExploreType,
-				PlayPointStateList = exploreAreaItemData.GetPlayPointStateList().ToList<EPlayPointState>()
+				PlayPointStateList = new List<EPlayPointState>(exploreAreaItemData.GetPlayPointStateList())
 			};
 			dictionary[(int)exploreAreaItemData.ExploreType] = value;
 		}
 		return dictionary;
 	}
 
-	// Token: 0x0600C95A RID: 51546 RVA: 0x002DF9DC File Offset: 0x002DDBDC
+	// Token: 0x06009D6B RID: 40299 RVA: 0x002EAB28 File Offset: 0x002E8D28
 	public Dictionary<int, AreaExplorePlayState> GetLocalAreaExplorePlayStateMap()
 	{
 		Dictionary<int, AreaExplorePlayState> result;
@@ -782,13 +781,13 @@ public class ExploreAreaData
 		return new Dictionary<int, AreaExplorePlayState>();
 	}
 
-	// Token: 0x0600C95B RID: 51547 RVA: 0x002DFA13 File Offset: 0x002DDC13
+	// Token: 0x06009D6C RID: 40300 RVA: 0x002EAB5F File Offset: 0x002E8D5F
 	[Conditional("DEBUG")]
 	public void LogInfo()
 	{
 	}
 
-	// Token: 0x0600C95C RID: 51548 RVA: 0x002DFA18 File Offset: 0x002DDC18
+	// Token: 0x06009D6D RID: 40301 RVA: 0x002EAB64 File Offset: 0x002E8D64
 	public List<ExploreAreaItemData> GetLocalFinishRecommendExploreItems()
 	{
 		if (this.IsShowRecommendPlayPoint())
@@ -813,19 +812,19 @@ public class ExploreAreaData
 		return list;
 	}
 
-	// Token: 0x0600C95D RID: 51549 RVA: 0x002DFAA8 File Offset: 0x002DDCA8
+	// Token: 0x06009D6E RID: 40302 RVA: 0x002EABF4 File Offset: 0x002E8DF4
 	[Conditional("UE_BUILD_SHIPPING")]
 	private void LogNotLocalExploreItemData(IAreaExplorePlayState data)
 	{
 	}
 
-	// Token: 0x0600C95E RID: 51550 RVA: 0x002DFAAA File Offset: 0x002DDCAA
+	// Token: 0x06009D6F RID: 40303 RVA: 0x002EABF6 File Offset: 0x002E8DF6
 	[Conditional("UE_BUILD_SHIPPING")]
 	private void LogUnFinishLocalExploreItemData(IAreaExplorePlayState data)
 	{
 	}
 
-	// Token: 0x0600C95F RID: 51551 RVA: 0x002DFAAC File Offset: 0x002DDCAC
+	// Token: 0x06009D70 RID: 40304 RVA: 0x002EABF8 File Offset: 0x002E8DF8
 	public ExploreAreaData()
 	{
 		Dictionary<ELocalStorageGlobalKey, bool> dictionary = new Dictionary<ELocalStorageGlobalKey, bool>();
@@ -836,60 +835,60 @@ public class ExploreAreaData
 		base..ctor();
 	}
 
-	// Token: 0x04005C9F RID: 23711
+	// Token: 0x04005D6E RID: 23918
 	public int AreaId;
 
-	// Token: 0x04005CA0 RID: 23712
+	// Token: 0x04005D6F RID: 23919
 	public int CountryId;
 
-	// Token: 0x04005CA1 RID: 23713
+	// Token: 0x04005D70 RID: 23920
 	public int StateId;
 
-	// Token: 0x04005CA2 RID: 23714
+	// Token: 0x04005D71 RID: 23921
 	public int MapId;
 
-	// Token: 0x04005CA3 RID: 23715
+	// Token: 0x04005D72 RID: 23922
 	private int ExploreProgress;
 
-	// Token: 0x04005CA4 RID: 23716
+	// Token: 0x04005D73 RID: 23923
 	private int NextStageNeedProgress = 1;
 
-	// Token: 0x04005CA5 RID: 23717
+	// Token: 0x04005D74 RID: 23924
 	public readonly int MaxExploreProgress = 100;
 
-	// Token: 0x04005CA6 RID: 23718
+	// Token: 0x04005D75 RID: 23925
 	private readonly Dictionary<EExploreType, ExploreAreaItemData> ExploreAreaItemDataMap = new Dictionary<EExploreType, ExploreAreaItemData>();
 
-	// Token: 0x04005CA7 RID: 23719
+	// Token: 0x04005D76 RID: 23926
 	private readonly List<ExploreAreaItemData> ExploreAreaItemDataList = new List<ExploreAreaItemData>();
 
-	// Token: 0x04005CA8 RID: 23720
+	// Token: 0x04005D77 RID: 23927
 	private readonly Dictionary<int, int> ExploreAreaItemSubTypeMap = new Dictionary<int, int>();
 
-	// Token: 0x04005CA9 RID: 23721
+	// Token: 0x04005D78 RID: 23928
 	private string TitleId = "";
 
-	// Token: 0x04005CAA RID: 23722
+	// Token: 0x04005D79 RID: 23929
 	private int AreaSortIndex;
 
-	// Token: 0x04005CAB RID: 23723
+	// Token: 0x04005D7A RID: 23930
 	private readonly List<DailyActivityDefine.IActivityGoalData> StageRewardDataList = new List<DailyActivityDefine.IActivityGoalData>();
 
-	// Token: 0x04005CAC RID: 23724
+	// Token: 0x04005D7B RID: 23931
 	private readonly Dictionary<int, DailyActivityDefine.IActivityGoalData> StageRewardDataMap = new Dictionary<int, DailyActivityDefine.IActivityGoalData>();
 
-	// Token: 0x04005CAD RID: 23725
+	// Token: 0x04005D7C RID: 23932
 	private bool FlagUpdatePlayPointData;
 
-	// Token: 0x04005CAE RID: 23726
+	// Token: 0x04005D7D RID: 23933
 	private bool FlagSaveLocalAreaStoryProgress;
 
-	// Token: 0x04005CAF RID: 23727
+	// Token: 0x04005D7E RID: 23934
 	private readonly Dictionary<ELocalStorageGlobalKey, bool> FlagSaveLocalIconPercent;
 
-	// Token: 0x04005CB0 RID: 23728
+	// Token: 0x04005D7F RID: 23935
 	private bool FlagSaveLocalAreaExplorePlayState;
 
-	// Token: 0x04005CB1 RID: 23729
+	// Token: 0x04005D80 RID: 23936
 	public string PreviewImage;
 }

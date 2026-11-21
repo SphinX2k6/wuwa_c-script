@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000DDC RID: 3548
+// Token: 0x0200028E RID: 654
 public class GameSettingsInitValueSource
 {
-	// Token: 0x06005514 RID: 21780 RVA: 0x000F5410 File Offset: 0x000F3610
+	// Token: 0x060028A7 RID: 10407 RVA: 0x000FCAF6 File Offset: 0x000FACF6
 	public GameSettingsInitValueSource(EFunction functionId)
 	{
 		this.FunctionId = functionId;
 	}
 
-	// Token: 0x06005515 RID: 21781 RVA: 0x000F542C File Offset: 0x000F362C
+	// Token: 0x060028A8 RID: 10408 RVA: 0x000FCB10 File Offset: 0x000FAD10
 	public unsafe void CacheValue(OneOf<int, float, double> value, EGameSettingsInitSourceType sourceType)
 	{
 		if (!this.InitSourceMap.ContainsKey(sourceType))
@@ -36,7 +36,7 @@ public class GameSettingsInitValueSource
 		instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 	}
 
-	// Token: 0x06005516 RID: 21782 RVA: 0x000F5510 File Offset: 0x000F3710
+	// Token: 0x060028A9 RID: 10409 RVA: 0x000FCBF4 File Offset: 0x000FADF4
 	public unsafe void RefreshCacheValue(OneOf<int, float, double> value, EGameSettingsInitSourceType sourceType)
 	{
 		this.InitSourceMap[sourceType] = value;
@@ -51,13 +51,13 @@ public class GameSettingsInitValueSource
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x06005517 RID: 21783 RVA: 0x000F55AC File Offset: 0x000F37AC
+	// Token: 0x060028AA RID: 10410 RVA: 0x000FCC90 File Offset: 0x000FAE90
 	public bool HasCachedSource(EGameSettingsInitSourceType sourceType)
 	{
 		return this.InitSourceMap.ContainsKey(sourceType);
 	}
 
-	// Token: 0x06005518 RID: 21784 RVA: 0x000F55BC File Offset: 0x000F37BC
+	// Token: 0x060028AB RID: 10411 RVA: 0x000FCCA0 File Offset: 0x000FAEA0
 	public OneOf<int, float, double>? GetCachedValueBySourceType(EGameSettingsInitSourceType sourceType)
 	{
 		OneOf<int, float, double> value;
@@ -68,8 +68,8 @@ public class GameSettingsInitValueSource
 		return null;
 	}
 
-	// Token: 0x170005EE RID: 1518
-	// (get) Token: 0x06005519 RID: 21785 RVA: 0x000F55EC File Offset: 0x000F37EC
+	// Token: 0x17000614 RID: 1556
+	// (get) Token: 0x060028AC RID: 10412 RVA: 0x000FCCD0 File Offset: 0x000FAED0
 	public OneOf<int, float, double>? ValidInitValue
 	{
 		get
@@ -102,7 +102,7 @@ public class GameSettingsInitValueSource
 		}
 	}
 
-	// Token: 0x040026B1 RID: 9905
+	// Token: 0x0400273C RID: 10044
 	[Nullable(new byte[]
 	{
 		1,
@@ -110,6 +110,6 @@ public class GameSettingsInitValueSource
 	})]
 	private readonly Dictionary<EGameSettingsInitSourceType, OneOf<int, float, double>> InitSourceMap = new Dictionary<EGameSettingsInitSourceType, OneOf<int, float, double>>();
 
-	// Token: 0x040026B2 RID: 9906
+	// Token: 0x0400273D RID: 10045
 	private readonly EFunction FunctionId;
 }

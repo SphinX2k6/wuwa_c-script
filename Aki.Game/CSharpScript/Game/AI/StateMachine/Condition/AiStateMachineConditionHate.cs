@@ -6,17 +6,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Condition
 {
-	// Token: 0x0200733F RID: 29503
+	// Token: 0x020064C2 RID: 25794
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineConditionHate : AiStateMachineCondition
 	{
-		// Token: 0x06048644 RID: 296516 RVA: 0x0129F30B File Offset: 0x0129D50B
+		// Token: 0x0603EA91 RID: 256657 RVA: 0x01241D93 File Offset: 0x0123FF93
 		public AiStateMachineConditionHate(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index) : base(transition, condition, index)
 		{
 		}
 
-		// Token: 0x06048645 RID: 296517 RVA: 0x0129F318 File Offset: 0x0129D518
+		// Token: 0x0603EA92 RID: 256658 RVA: 0x01241DA0 File Offset: 0x0123FFA0
 		protected override bool RegisterEvents()
 		{
 			if (base.RegisterEvents())
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return false;
 		}
 
-		// Token: 0x06048646 RID: 296518 RVA: 0x0129F3F8 File Offset: 0x0129D5F8
+		// Token: 0x0603EA93 RID: 256659 RVA: 0x01241E80 File Offset: 0x01240080
 		protected override bool UnregisterEvents()
 		{
 			if (base.UnregisterEvents())
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return false;
 		}
 
-		// Token: 0x06048647 RID: 296519 RVA: 0x0129F4D8 File Offset: 0x0129D6D8
+		// Token: 0x0603EA94 RID: 256660 RVA: 0x01241F60 File Offset: 0x01240160
 		private void CheckTargetImpl()
 		{
 			this.ResultSelf = (this.Node.AiController.AiHateList.GetCurrentTarget() != null);
@@ -110,13 +110,13 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x06048648 RID: 296520 RVA: 0x0129F536 File Offset: 0x0129D736
+		// Token: 0x0603EA95 RID: 256661 RVA: 0x01241FBE File Offset: 0x012401BE
 		protected override void OnTick()
 		{
 			this.CheckTargetImpl();
 		}
 
-		// Token: 0x06048649 RID: 296521 RVA: 0x0129F540 File Offset: 0x0129D740
+		// Token: 0x0603EA96 RID: 256662 RVA: 0x01241FC8 File Offset: 0x012401C8
 		private void OnAiHateTargetChanged(int? newId, int? preId)
 		{
 			this.CheckTargetImpl();
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x0604864A RID: 296522 RVA: 0x0129F58D File Offset: 0x0129D78D
+		// Token: 0x0603EA97 RID: 256663 RVA: 0x01242015 File Offset: 0x01240215
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			base.ToString(outBuilder, depth);

@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020061A8 RID: 25000
+	// Token: 0x02005126 RID: 20774
 	public class RoverlikeTalentTreeUnlockView : UiViewBase
 	{
-		// Token: 0x0603F242 RID: 258626 RVA: 0x00F40D88 File Offset: 0x00F3EF88
+		// Token: 0x06033F02 RID: 212738 RVA: 0x00E87C50 File Offset: 0x00E85E50
 		[NullableContext(1)]
 		public RoverlikeTalentTreeUnlockView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603F243 RID: 258627 RVA: 0x00F40D94 File Offset: 0x00F3EF94
+		// Token: 0x06033F03 RID: 212739 RVA: 0x00E87C5C File Offset: 0x00E85E5C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F244 RID: 258628 RVA: 0x00F40E5C File Offset: 0x00F3F05C
+		// Token: 0x06033F04 RID: 212740 RVA: 0x00E87D24 File Offset: 0x00E85F24
 		protected override void OnStart()
 		{
 			RoverlikeTalentUnlockViewParam roverlikeTalentUnlockViewParam = this.OpenParam as RoverlikeTalentUnlockViewParam;
@@ -49,22 +49,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F245 RID: 258629 RVA: 0x00F40EA7 File Offset: 0x00F3F0A7
+		// Token: 0x06033F05 RID: 212741 RVA: 0x00E87D6F File Offset: 0x00E85F6F
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0200C3F9 RID: 50169
+		// Token: 0x0200ADE0 RID: 44512
 		private class EComponentDefine
 		{
-			// Token: 0x0403B257 RID: 242263
+			// Token: 0x04035BB8 RID: 220088
 			public const int BtnClose = 0;
 
-			// Token: 0x0403B258 RID: 242264
+			// Token: 0x04035BB9 RID: 220089
 			public const int TxtInfo = 1;
 
-			// Token: 0x0403B259 RID: 242265
+			// Token: 0x04035BBA RID: 220090
 			public const int TxtTips = 2;
 		}
 	}

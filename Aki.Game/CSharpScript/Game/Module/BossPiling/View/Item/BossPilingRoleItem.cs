@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View.Item
 {
-	// Token: 0x02005C2A RID: 23594
+	// Token: 0x02004C0A RID: 19466
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 	})]
 	public class BossPilingRoleItem : GridProxyAbstract<BossPilingTeamRoleInfo>
 	{
-		// Token: 0x0603B991 RID: 244113 RVA: 0x00E37AC8 File Offset: 0x00E35CC8
+		// Token: 0x060308DC RID: 198876 RVA: 0x00D87E30 File Offset: 0x00D86030
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B992 RID: 244114 RVA: 0x00E37BB0 File Offset: 0x00E35DB0
+		// Token: 0x060308DD RID: 198877 RVA: 0x00D87F18 File Offset: 0x00D86118
 		public override void Refresh(BossPilingTeamRoleInfo data, bool isSelected, int gridIndex)
 		{
 			this.RoleId = data.RoleId;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			sprite4.SetUIActive(false);
 		}
 
-		// Token: 0x0603B993 RID: 244115 RVA: 0x00E37D04 File Offset: 0x00E35F04
+		// Token: 0x060308DE RID: 198878 RVA: 0x00D8806C File Offset: 0x00D8626C
 		private void OnClicked()
 		{
 			Action<int, int> onClickedCb = this.OnClickedCb;
@@ -106,27 +106,27 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			onClickedCb(this.RoleId, base.GridIndex);
 		}
 
-		// Token: 0x0401F070 RID: 127088
+		// Token: 0x04019B21 RID: 105249
 		protected int RoleId;
 
-		// Token: 0x0401F071 RID: 127089
+		// Token: 0x04019B22 RID: 105250
 		[Nullable(2)]
 		public Action<int, int> OnClickedCb;
 
-		// Token: 0x0401F072 RID: 127090
+		// Token: 0x04019B23 RID: 105251
 		private readonly Rotator TagRotation = Rotator.Create();
 
-		// Token: 0x0200BE14 RID: 48660
+		// Token: 0x0200A81C RID: 43036
 		[NullableContext(0)]
 		private enum ERole
 		{
-			// Token: 0x0403951E RID: 234782
+			// Token: 0x04033EE1 RID: 212705
 			Btn,
-			// Token: 0x0403951F RID: 234783
+			// Token: 0x04033EE2 RID: 212706
 			SpriteIcon,
-			// Token: 0x04039520 RID: 234784
+			// Token: 0x04033EE3 RID: 212707
 			TexRole,
-			// Token: 0x04039521 RID: 234785
+			// Token: 0x04033EE4 RID: 212708
 			SpriteTag
 		}
 	}

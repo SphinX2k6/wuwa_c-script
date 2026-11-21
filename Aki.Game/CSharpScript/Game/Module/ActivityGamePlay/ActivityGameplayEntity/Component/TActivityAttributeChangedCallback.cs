@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Component
 {
-	// Token: 0x0200693B RID: 26939
-	// (Invoke) Token: 0x06043251 RID: 275025
+	// Token: 0x0200588C RID: 22668
+	// (Invoke) Token: 0x06037DAE RID: 228782
 	public delegate void TActivityAttributeChangedCallback(int oldValue, int newValue);
 }

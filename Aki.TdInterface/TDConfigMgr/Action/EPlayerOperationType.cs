@@ -4,16 +4,16 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001676 RID: 5750
+	// Token: 0x020017E9 RID: 6121
 	[JsonConverter(typeof(EPlayerOperationTypeJsonConverter))]
 	[EnumExtensions]
 	public enum EPlayerOperationType
 	{
-		// Token: 0x04004D0B RID: 19723
+		// Token: 0x04005110 RID: 20752
 		EnableAll,
-		// Token: 0x04004D0C RID: 19724
+		// Token: 0x04005111 RID: 20753
 		DisableAll,
-		// Token: 0x04004D0D RID: 19725
+		// Token: 0x04005112 RID: 20754
 		DisableModule
 	}
 }

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DeadRevive
 {
-	// Token: 0x02005ACF RID: 23247
+	// Token: 0x02004AB0 RID: 19120
 	public class TowerDefenceReviveItem : UiPanelBase
 	{
-		// Token: 0x0603AE05 RID: 241157 RVA: 0x00E09878 File Offset: 0x00E07A78
+		// Token: 0x0602FD77 RID: 195959 RVA: 0x00D5A558 File Offset: 0x00D58758
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,20 +22,20 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603AE06 RID: 241158 RVA: 0x00E098C0 File Offset: 0x00E07AC0
+		// Token: 0x0602FD78 RID: 195960 RVA: 0x00D5A5A0 File Offset: 0x00D587A0
 		protected override void OnStart()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "TowerDefence_end", Array.Empty<object>());
 		}
 
-		// Token: 0x0401EB9B RID: 125851
+		// Token: 0x04019657 RID: 104023
 		[Nullable(1)]
 		private const string BUTTON_TEXT_ID = "TowerDefence_end";
 
-		// Token: 0x0200BD22 RID: 48418
+		// Token: 0x0200A72A RID: 42794
 		private class EItemComponent
 		{
-			// Token: 0x040390B6 RID: 233654
+			// Token: 0x04033A80 RID: 211584
 			public const int ButtonText = 1;
 		}
 	}

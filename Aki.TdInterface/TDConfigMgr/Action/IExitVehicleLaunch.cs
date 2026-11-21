@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A27 RID: 6695
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BBC RID: 7100
 	public class IExitVehicleLaunch : IExitVehicleType
 	{
-		// Token: 0x06008F66 RID: 36710 RVA: 0x0014EE2C File Offset: 0x0014D02C
+		// Token: 0x060096D0 RID: 38608 RVA: 0x0015ED58 File Offset: 0x0015CF58
 		private IExitVehicleLaunch_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008F67 RID: 36711 RVA: 0x0014EE64 File Offset: 0x0014D064
+		// Token: 0x060096D1 RID: 38609 RVA: 0x0015ED90 File Offset: 0x0015CF90
 		public static IExitVehicleLaunch Create([Nullable(2)] IExitVehicleLaunch instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008F68 RID: 36712 RVA: 0x0014EE77 File Offset: 0x0014D077
+		// Token: 0x060096D2 RID: 38610 RVA: 0x0015EDA3 File Offset: 0x0015CFA3
 		public static IExitVehicleLaunch CreateFromSetValue([Nullable(2)] IExitVehicleLaunch_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008F69 RID: 36713 RVA: 0x0014EE8A File Offset: 0x0014D08A
+		// Token: 0x060096D3 RID: 38611 RVA: 0x0015EDB6 File Offset: 0x0015CFB6
 		public new IExitVehicleLaunch_SetValue ToSetValue()
 		{
 			return new IExitVehicleLaunch_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DCE RID: 11726
-		// (get) Token: 0x06008F6A RID: 36714 RVA: 0x0014EE9D File Offset: 0x0014D09D
-		// (set) Token: 0x06008F6B RID: 36715 RVA: 0x0014EEC8 File Offset: 0x0014D0C8
+		// Token: 0x17002FDB RID: 12251
+		// (get) Token: 0x060096D4 RID: 38612 RVA: 0x0015EDC9 File Offset: 0x0015CFC9
+		// (set) Token: 0x060096D5 RID: 38613 RVA: 0x0015EDF4 File Offset: 0x0015CFF4
 		public override EExitVehicleType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040058B9 RID: 22713
+		// Token: 0x04005D1E RID: 23838
 		[Nullable(2)]
 		protected new IExitVehicleLaunch FbInstance;
 
-		// Token: 0x040058BA RID: 22714
+		// Token: 0x04005D1F RID: 23839
 		[Nullable(2)]
 		protected new IExitVehicleLaunch_SetValue PocoInterface;
 	}

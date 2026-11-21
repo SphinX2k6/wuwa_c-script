@@ -4,27 +4,26 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014AC RID: 5292
+	// Token: 0x02001605 RID: 5637
 	public class BeginFlowTemplate_SetValue
 	{
-		// Token: 0x04004607 RID: 17927
+		// Token: 0x040049A2 RID: 18850
 		public bool? _Folded;
 
-		// Token: 0x04004608 RID: 17928
-		[Nullable(1)]
+		// Token: 0x040049A3 RID: 18851
 		public List<IFlowActorUnit> Actors;
 
-		// Token: 0x04004609 RID: 17929
+		// Token: 0x040049A4 RID: 18852
 		[Nullable(2)]
 		public List<int> MontageIds;
 
-		// Token: 0x0400460A RID: 17930
+		// Token: 0x040049A5 RID: 18853
 		public bool? UseFreeCamera;
 
-		// Token: 0x0400460B RID: 17931
+		// Token: 0x040049A6 RID: 18854
 		public bool? IsSwitchMainRole;
 
-		// Token: 0x0400460C RID: 17932
+		// Token: 0x040049A7 RID: 18855
 		public bool? IsUseSeqFace;
 	}
 }

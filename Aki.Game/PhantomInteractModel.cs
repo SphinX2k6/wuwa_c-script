@@ -8,14 +8,14 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002460 RID: 9312
+// Token: 0x02001945 RID: 6469
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class PhantomInteractModel : ModelBase
 {
-	// Token: 0x17001855 RID: 6229
-	// (get) Token: 0x06012AEF RID: 76527 RVA: 0x0049CDB4 File Offset: 0x0049AFB4
+	// Token: 0x1700188F RID: 6287
+	// (get) Token: 0x0600FFA7 RID: 65447 RVA: 0x004AA520 File Offset: 0x004A8720
 	public int SummonMonsterId
 	{
 		get
@@ -24,8 +24,8 @@ public class PhantomInteractModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001856 RID: 6230
-	// (get) Token: 0x06012AF0 RID: 76528 RVA: 0x0049CDBC File Offset: 0x0049AFBC
+	// Token: 0x17001890 RID: 6288
+	// (get) Token: 0x0600FFA8 RID: 65448 RVA: 0x004AA528 File Offset: 0x004A8728
 	[Nullable(0)]
 	public ValueTuple<int, long> OpenSkillInfo
 	{
@@ -36,13 +36,13 @@ public class PhantomInteractModel : ModelBase
 		}
 	}
 
-	// Token: 0x06012AF1 RID: 76529 RVA: 0x0049CDCF File Offset: 0x0049AFCF
+	// Token: 0x0600FFA9 RID: 65449 RVA: 0x004AA53B File Offset: 0x004A873B
 	public void SetSummonMonsterId(int monsterId)
 	{
 		this.SummonMonsterIdInternal = monsterId;
 	}
 
-	// Token: 0x06012AF2 RID: 76530 RVA: 0x0049CDD8 File Offset: 0x0049AFD8
+	// Token: 0x0600FFAA RID: 65450 RVA: 0x004AA544 File Offset: 0x004A8744
 	public void InitEditViewModel(int selectedItemIndex)
 	{
 		this.EditViewModel = new PhantomInteractEditViewModel();
@@ -52,14 +52,14 @@ public class PhantomInteractModel : ModelBase
 		this.EditViewModel.SetMoveNextSkinHandler(new Action<PhantomInteractEditViewModel>(this.MoveNextSkinHandler));
 	}
 
-	// Token: 0x06012AF3 RID: 76531 RVA: 0x0049CE47 File Offset: 0x0049B047
+	// Token: 0x0600FFAB RID: 65451 RVA: 0x004AA5B3 File Offset: 0x004A87B3
 	public void CacheOpenSkillInfo(int entityId, int skillId)
 	{
 		this.OpenEntityId = entityId;
 		this.OpenSkillId = (long)skillId;
 	}
 
-	// Token: 0x06012AF4 RID: 76532 RVA: 0x0049CE58 File Offset: 0x0049B058
+	// Token: 0x0600FFAC RID: 65452 RVA: 0x004AA5C4 File Offset: 0x004A87C4
 	public void DisableAutoExposureOnViewOpen()
 	{
 		this.ClearTimerHandle();
@@ -71,7 +71,7 @@ public class PhantomInteractModel : ModelBase
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Kuro.AutoExposure 0", null);
 	}
 
-	// Token: 0x06012AF5 RID: 76533 RVA: 0x0049CE84 File Offset: 0x0049B084
+	// Token: 0x0600FFAD RID: 65453 RVA: 0x004AA5F0 File Offset: 0x004A87F0
 	public void ReEnableAutoExposureOnViewClose()
 	{
 		if (!this.HasClosedAutoExposure)
@@ -86,7 +86,7 @@ public class PhantomInteractModel : ModelBase
 		}, 2000f, null, null, true, 1f);
 	}
 
-	// Token: 0x06012AF6 RID: 76534 RVA: 0x0049CEB8 File Offset: 0x0049B0B8
+	// Token: 0x0600FFAE RID: 65454 RVA: 0x004AA624 File Offset: 0x004A8824
 	private void EditConfirmHandler(PhantomInteractEditViewModel viewModel)
 	{
 		PhantomInteractEditGridViewModel selectedGridData = viewModel.SelectedGridData;
@@ -107,7 +107,7 @@ public class PhantomInteractModel : ModelBase
 		PhantomInteractController.Instance.UpdateEquippedPhantom();
 	}
 
-	// Token: 0x06012AF7 RID: 76535 RVA: 0x0049CF68 File Offset: 0x0049B168
+	// Token: 0x0600FFAF RID: 65455 RVA: 0x004AA6D4 File Offset: 0x004A88D4
 	private void EquipRecommendHandler(PhantomInteractEditViewModel viewModel)
 	{
 		List<int> recommendedIds = viewModel.GetFilteredRecommendedIdList();
@@ -126,7 +126,7 @@ public class PhantomInteractModel : ModelBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06012AF8 RID: 76536 RVA: 0x0049CFD8 File Offset: 0x0049B1D8
+	// Token: 0x0600FFB0 RID: 65456 RVA: 0x004AA744 File Offset: 0x004A8944
 	private void MoveNextSkinHandler(PhantomInteractEditViewModel viewModel)
 	{
 		if (viewModel.SelectedGridData == null)
@@ -150,7 +150,7 @@ public class PhantomInteractModel : ModelBase
 		PhantomInteractController.Instance.UpdateEquippedPhantomSkin(item, item2);
 	}
 
-	// Token: 0x06012AF9 RID: 76537 RVA: 0x0049D068 File Offset: 0x0049B268
+	// Token: 0x0600FFB1 RID: 65457 RVA: 0x004AA7D4 File Offset: 0x004A89D4
 	private void RemoveEquippedPhantom(int index)
 	{
 		PhantomInteractItemData phantomInteractItemData = this.InteractInfoData.EquippedVisionData[index];
@@ -165,7 +165,7 @@ public class PhantomInteractModel : ModelBase
 		phantomInteractItemData.LoadEmpty(index);
 	}
 
-	// Token: 0x06012AFA RID: 76538 RVA: 0x0049D0D8 File Offset: 0x0049B2D8
+	// Token: 0x0600FFB2 RID: 65458 RVA: 0x004AA844 File Offset: 0x004A8A44
 	private void AddEquippedPhantom(int index, int monsterId)
 	{
 		PhantomInteractItemData phantomInteractItemData = this.InteractInfoData.EquippedVisionData[index];
@@ -183,7 +183,7 @@ public class PhantomInteractModel : ModelBase
 		}
 	}
 
-	// Token: 0x06012AFB RID: 76539 RVA: 0x0049D14C File Offset: 0x0049B34C
+	// Token: 0x0600FFB3 RID: 65459 RVA: 0x004AA8B8 File Offset: 0x004A8AB8
 	public void SetEquippedPhantom(int index, int newMonsterId)
 	{
 		PhantomInteractItemData phantomInteractItemData = this.InteractInfoData.EquippedVisionData[index];
@@ -204,7 +204,7 @@ public class PhantomInteractModel : ModelBase
 		this.AddEquippedPhantom(index, newMonsterId);
 	}
 
-	// Token: 0x06012AFC RID: 76540 RVA: 0x0049D1D0 File Offset: 0x0049B3D0
+	// Token: 0x0600FFB4 RID: 65460 RVA: 0x004AA93C File Offset: 0x004A8B3C
 	public void FullReplaceEquippedPhantoms(List<int> monsterIds)
 	{
 		int i = 0;
@@ -234,7 +234,7 @@ public class PhantomInteractModel : ModelBase
 		}
 	}
 
-	// Token: 0x06012AFD RID: 76541 RVA: 0x0049D274 File Offset: 0x0049B474
+	// Token: 0x0600FFB5 RID: 65461 RVA: 0x004AA9E0 File Offset: 0x004A8BE0
 	[NullableContext(0)]
 	public ValueTuple<int, int> GridMoveToNextSkin(int monsterId)
 	{
@@ -254,14 +254,14 @@ public class PhantomInteractModel : ModelBase
 		return new ValueTuple<int, int>(monsterId, num2);
 	}
 
-	// Token: 0x06012AFE RID: 76542 RVA: 0x0049D328 File Offset: 0x0049B528
+	// Token: 0x0600FFB6 RID: 65462 RVA: 0x004AAA94 File Offset: 0x004A8C94
 	public bool CheckPhantomInteractUnlockRedDot(int monsterId)
 	{
 		bool flag;
 		return monsterId > 0 && ((LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.PhantomInteractNewUnlock, null) ?? new Dictionary<int, bool>()).TryGetValue(monsterId, out flag) && flag);
 	}
 
-	// Token: 0x06012AFF RID: 76543 RVA: 0x0049D35C File Offset: 0x0049B55C
+	// Token: 0x0600FFB7 RID: 65463 RVA: 0x004AAAC8 File Offset: 0x004A8CC8
 	public bool CheckAnyPhantomInteractUnlockRedDot()
 	{
 		foreach (IPhantomInteractGridData phantomInteractGridData in this.InteractInfoData.GridItemDataList)
@@ -274,7 +274,7 @@ public class PhantomInteractModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06012B00 RID: 76544 RVA: 0x0049D3C4 File Offset: 0x0049B5C4
+	// Token: 0x0600FFB8 RID: 65464 RVA: 0x004AAB30 File Offset: 0x004A8D30
 	public void SetPhantomInteractUnlockRedDot(int monsterId, bool value)
 	{
 		if (monsterId <= 0)
@@ -287,13 +287,13 @@ public class PhantomInteractModel : ModelBase
 		EventSystem.Instance.Emit<int>(EEventName.PhantomInteractNewUnlock, monsterId);
 	}
 
-	// Token: 0x06012B01 RID: 76545 RVA: 0x0049D410 File Offset: 0x0049B610
+	// Token: 0x0600FFB9 RID: 65465 RVA: 0x004AAB7C File Offset: 0x004A8D7C
 	public bool CheckIsPhantomInteractExploreTool(int skillId)
 	{
 		return this.phantomInteractExploreIdSet.Contains(skillId);
 	}
 
-	// Token: 0x06012B02 RID: 76546 RVA: 0x0049D41E File Offset: 0x0049B61E
+	// Token: 0x0600FFBA RID: 65466 RVA: 0x004AAB8A File Offset: 0x004A8D8A
 	private void ClearTimerHandle()
 	{
 		if (this.TimerHandle != null)
@@ -303,20 +303,20 @@ public class PhantomInteractModel : ModelBase
 		}
 	}
 
-	// Token: 0x06012B03 RID: 76547 RVA: 0x0049D440 File Offset: 0x0049B640
+	// Token: 0x0600FFBB RID: 65467 RVA: 0x004AABAC File Offset: 0x004A8DAC
 	protected override bool OnClear()
 	{
 		this.ClearTimerHandle();
 		return true;
 	}
 
-	// Token: 0x06012B04 RID: 76548 RVA: 0x0049D449 File Offset: 0x0049B649
+	// Token: 0x0600FFBC RID: 65468 RVA: 0x004AABB5 File Offset: 0x004A8DB5
 	public void AddVisionDisplayTargetPoint(int entityId, global::Vector pointLocation)
 	{
 		this.VisionDisplayTargetPointMap[entityId] = pointLocation;
 	}
 
-	// Token: 0x06012B05 RID: 76549 RVA: 0x0049D458 File Offset: 0x0049B658
+	// Token: 0x0600FFBD RID: 65469 RVA: 0x004AABC4 File Offset: 0x004A8DC4
 	public void RemoveVisionDisplayTargetPoint(int entityId)
 	{
 		if (this.VisionDisplayTargetPointMap.ContainsKey(entityId))
@@ -325,7 +325,7 @@ public class PhantomInteractModel : ModelBase
 		}
 	}
 
-	// Token: 0x06012B06 RID: 76550 RVA: 0x0049D478 File Offset: 0x0049B678
+	// Token: 0x0600FFBE RID: 65470 RVA: 0x004AABE4 File Offset: 0x004A8DE4
 	[NullableContext(2)]
 	public global::Vector GetClosetVisionDisplayTargetPoint()
 	{
@@ -348,26 +348,26 @@ public class PhantomInteractModel : ModelBase
 		return vector;
 	}
 
-	// Token: 0x06012B07 RID: 76551 RVA: 0x0049D51C File Offset: 0x0049B71C
+	// Token: 0x0600FFBF RID: 65471 RVA: 0x004AAC88 File Offset: 0x004A8E88
 	public void AddVisionDisplayHighlightExploreType(EVisionDisplayType type)
 	{
 		this.VisionDisplayHighlightExploreTypes.Add(type);
 	}
 
-	// Token: 0x06012B08 RID: 76552 RVA: 0x0049D52B File Offset: 0x0049B72B
+	// Token: 0x0600FFC0 RID: 65472 RVA: 0x004AAC97 File Offset: 0x004A8E97
 	public void RemoveVisionDisplayHighlightExploreType(EVisionDisplayType type)
 	{
 		this.VisionDisplayHighlightExploreTypes.Remove(type);
 	}
 
-	// Token: 0x06012B09 RID: 76553 RVA: 0x0049D53A File Offset: 0x0049B73A
+	// Token: 0x0600FFC1 RID: 65473 RVA: 0x004AACA6 File Offset: 0x004A8EA6
 	public List<EVisionDisplayType> GetVisionDisplayHighlightExploreTypes()
 	{
 		return new List<EVisionDisplayType>(this.VisionDisplayHighlightExploreTypes);
 	}
 
-	// Token: 0x17001857 RID: 6231
-	// (get) Token: 0x06012B0A RID: 76554 RVA: 0x0049D547 File Offset: 0x0049B747
+	// Token: 0x17001891 RID: 6289
+	// (get) Token: 0x0600FFC2 RID: 65474 RVA: 0x004AACB3 File Offset: 0x004A8EB3
 	public static PhantomInteractModel Instance
 	{
 		get
@@ -376,7 +376,7 @@ public class PhantomInteractModel : ModelBase
 		}
 	}
 
-	// Token: 0x06012B0B RID: 76555 RVA: 0x0049D54E File Offset: 0x0049B74E
+	// Token: 0x0600FFC3 RID: 65475 RVA: 0x004AACBA File Offset: 0x004A8EBA
 	public static PhantomInteractModel GetOrCreateInstance()
 	{
 		if (PhantomInteractModel._Instance == null)
@@ -386,7 +386,7 @@ public class PhantomInteractModel : ModelBase
 		return PhantomInteractModel._Instance;
 	}
 
-	// Token: 0x06012B0C RID: 76556 RVA: 0x0049D562 File Offset: 0x0049B762
+	// Token: 0x0600FFC4 RID: 65476 RVA: 0x004AACCE File Offset: 0x004A8ECE
 	public static bool CreateInstance()
 	{
 		if (PhantomInteractModel._Instance != null)
@@ -397,62 +397,62 @@ public class PhantomInteractModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06012B0D RID: 76557 RVA: 0x0049D578 File Offset: 0x0049B778
+	// Token: 0x0600FFC5 RID: 65477 RVA: 0x004AACE4 File Offset: 0x004A8EE4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06012B0E RID: 76558 RVA: 0x0049D57A File Offset: 0x0049B77A
+	// Token: 0x0600FFC6 RID: 65478 RVA: 0x004AACE6 File Offset: 0x004A8EE6
 	public static void ResetStaticDefaultValue()
 	{
 		PhantomInteractModel._Instance = null;
 	}
 
-	// Token: 0x06012B0F RID: 76559 RVA: 0x0049D582 File Offset: 0x0049B782
+	// Token: 0x0600FFC7 RID: 65479 RVA: 0x004AACEE File Offset: 0x004A8EEE
 	static PhantomInteractModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhantomInteractModel.CreateStaticDefaultValue), new Action(PhantomInteractModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008CBD RID: 36029
+	// Token: 0x04008E04 RID: 36356
 	private readonly HashSet<int> phantomInteractExploreIdSet = new HashSet<int>
 	{
 		1007,
 		6008
 	};
 
-	// Token: 0x04008CBE RID: 36030
+	// Token: 0x04008E05 RID: 36357
 	private const int REOPEN_AUTO_EXPOSURE_DELAY = 2000;
 
-	// Token: 0x04008CBF RID: 36031
+	// Token: 0x04008E06 RID: 36358
 	public PhantomInteractInfoData InteractInfoData = new PhantomInteractInfoData();
 
-	// Token: 0x04008CC0 RID: 36032
+	// Token: 0x04008E07 RID: 36359
 	public PhantomInteractEditViewModel EditViewModel = new PhantomInteractEditViewModel();
 
-	// Token: 0x04008CC1 RID: 36033
+	// Token: 0x04008E08 RID: 36360
 	private int SummonMonsterIdInternal;
 
-	// Token: 0x04008CC2 RID: 36034
+	// Token: 0x04008E09 RID: 36361
 	private long OpenSkillId;
 
-	// Token: 0x04008CC3 RID: 36035
+	// Token: 0x04008E0A RID: 36362
 	private int OpenEntityId;
 
-	// Token: 0x04008CC4 RID: 36036
+	// Token: 0x04008E0B RID: 36363
 	private readonly Dictionary<int, global::Vector> VisionDisplayTargetPointMap = new Dictionary<int, global::Vector>();
 
-	// Token: 0x04008CC5 RID: 36037
+	// Token: 0x04008E0C RID: 36364
 	private readonly HashSet<EVisionDisplayType> VisionDisplayHighlightExploreTypes = new HashSet<EVisionDisplayType>();
 
-	// Token: 0x04008CC6 RID: 36038
+	// Token: 0x04008E0D RID: 36365
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04008CC7 RID: 36039
+	// Token: 0x04008E0E RID: 36366
 	private bool HasClosedAutoExposure;
 
-	// Token: 0x04008CC8 RID: 36040
+	// Token: 0x04008E0F RID: 36367
 	[Nullable(2)]
 	private static PhantomInteractModel _Instance;
 }

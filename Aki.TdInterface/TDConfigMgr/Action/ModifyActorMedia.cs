@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020D7 RID: 8407
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002334 RID: 9012
 	public class ModifyActorMedia : ActionParams
 	{
-		// Token: 0x0600B8B8 RID: 47288 RVA: 0x001AB3D8 File Offset: 0x001A95D8
+		// Token: 0x0600C430 RID: 50224 RVA: 0x001C2300 File Offset: 0x001C0500
 		private ModifyActorMedia_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B8B9 RID: 47289 RVA: 0x001AB410 File Offset: 0x001A9610
+		// Token: 0x0600C431 RID: 50225 RVA: 0x001C2338 File Offset: 0x001C0538
 		public static ModifyActorMedia Create([Nullable(2)] ModifyActorMedia instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B8BA RID: 47290 RVA: 0x001AB423 File Offset: 0x001A9623
+		// Token: 0x0600C432 RID: 50226 RVA: 0x001C234B File Offset: 0x001C054B
 		public static ModifyActorMedia CreateFromSetValue([Nullable(2)] ModifyActorMedia_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B8BB RID: 47291 RVA: 0x001AB436 File Offset: 0x001A9636
+		// Token: 0x0600C433 RID: 50227 RVA: 0x001C235E File Offset: 0x001C055E
 		public ModifyActorMedia_SetValue ToSetValue()
 		{
 			return new ModifyActorMedia_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003872 RID: 14450
-		// (get) Token: 0x0600B8BC RID: 47292 RVA: 0x001AB44C File Offset: 0x001A964C
-		// (set) Token: 0x0600B8BD RID: 47293 RVA: 0x001AB4AD File Offset: 0x001A96AD
+		// Token: 0x17003B5A RID: 15194
+		// (get) Token: 0x0600C434 RID: 50228 RVA: 0x001C2374 File Offset: 0x001C0574
+		// (set) Token: 0x0600C435 RID: 50229 RVA: 0x001C23D5 File Offset: 0x001C05D5
 		public virtual IChangeMediaPlayDa Config
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006EA9 RID: 28329
+		// Token: 0x040074D3 RID: 29907
 		[Nullable(2)]
 		protected new ModifyActorMedia FbInstance;
 
-		// Token: 0x04006EAA RID: 28330
+		// Token: 0x040074D4 RID: 29908
 		[Nullable(2)]
 		protected ModifyActorMedia_SetValue PocoInterface;
 
-		// Token: 0x04006EAB RID: 28331
+		// Token: 0x040074D5 RID: 29909
 		private IChangeMediaPlayDa _ConfigCache;
 
-		// Token: 0x04006EAC RID: 28332
+		// Token: 0x040074D6 RID: 29910
 		private bool _ConfigInited;
 	}
 }

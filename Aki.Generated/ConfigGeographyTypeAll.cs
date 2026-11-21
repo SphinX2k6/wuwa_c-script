@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200038D RID: 909
+	// Token: 0x020003A3 RID: 931
 	public class ConfigGeographyTypeAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001554 RID: 5460 RVA: 0x000D236C File Offset: 0x000D056C
+		// Token: 0x060015D8 RID: 5592 RVA: 0x000D8AC0 File Offset: 0x000D6CC0
 		static ConfigGeographyTypeAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGeographyTypeAll.CreateStaticDefaultValue), new Action(ConfigGeographyTypeAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001555 RID: 5461 RVA: 0x000D238C File Offset: 0x000D058C
+		// Token: 0x060015D9 RID: 5593 RVA: 0x000D8AE0 File Offset: 0x000D6CE0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGeographyTypeAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001556 RID: 5462 RVA: 0x000D240B File Offset: 0x000D060B
+		// Token: 0x060015DA RID: 5594 RVA: 0x000D8B5F File Offset: 0x000D6D5F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGeographyTypeAll.LogPair = null;
 			ConfigGeographyTypeAll.HandleId = 0;
 		}
 
-		// Token: 0x06001557 RID: 5463 RVA: 0x000D2419 File Offset: 0x000D0619
+		// Token: 0x060015DB RID: 5595 RVA: 0x000D8B6D File Offset: 0x000D6D6D
 		public static void Init()
 		{
 			ConfigGeographyTypeAll.HandleId = ConfigCommon.InitDataStatement(ConfigGeographyTypeAll.HandleId, "db_handbook.db", "select BinData from `GeographyType`");
 		}
 
-		// Token: 0x06001558 RID: 5464 RVA: 0x000D2434 File Offset: 0x000D0634
+		// Token: 0x060015DC RID: 5596 RVA: 0x000D8B88 File Offset: 0x000D6D88
 		[NullableContext(2)]
 		public static IReadOnlyList<GeographyType> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040018BF RID: 6335
+		// Token: 0x04001959 RID: 6489
 		private const string DB = "db_handbook.db";
 
-		// Token: 0x040018C0 RID: 6336
+		// Token: 0x0400195A RID: 6490
 		private const string FILE = "t.图鉴系统.xlsx";
 
-		// Token: 0x040018C1 RID: 6337
+		// Token: 0x0400195B RID: 6491
 		private const string TABLE = "GeographyType";
 
-		// Token: 0x040018C2 RID: 6338
+		// Token: 0x0400195C RID: 6492
 		private const string COMMAND = "select BinData from `GeographyType`";
 
-		// Token: 0x040018C3 RID: 6339
+		// Token: 0x0400195D RID: 6493
 		private const string KEY_PREFIX = "GeographyTypeAll";
 
-		// Token: 0x040018C4 RID: 6340
+		// Token: 0x0400195E RID: 6494
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040018C5 RID: 6341
+		// Token: 0x0400195F RID: 6495
 		private static int HandleId;
 	}
 }

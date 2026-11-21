@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004844 RID: 18500
+	// Token: 0x02004CAC RID: 19628
 	public struct ICustomScanDirectoryData : IFlatbufferObject
 	{
-		// Token: 0x170084C6 RID: 33990
-		// (get) Token: 0x0601C9AF RID: 117167 RVA: 0x0040B1E9 File Offset: 0x004093E9
+		// Token: 0x17008B11 RID: 35601
+		// (get) Token: 0x0601E1AC RID: 123308 RVA: 0x00437B39 File Offset: 0x00435D39
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C9B0 RID: 117168 RVA: 0x0040B1F6 File Offset: 0x004093F6
+		// Token: 0x0601E1AD RID: 123309 RVA: 0x00437B46 File Offset: 0x00435D46
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601C9B1 RID: 117169 RVA: 0x0040B200 File Offset: 0x00409400
+		// Token: 0x0601E1AE RID: 123310 RVA: 0x00437B50 File Offset: 0x00435D50
 		public static ICustomScanDirectoryData GetRootAsICustomScanDirectoryData(ByteBuffer _bb)
 		{
 			return ICustomScanDirectoryData.GetRootAsICustomScanDirectoryData(_bb, default(ICustomScanDirectoryData));
 		}
 
-		// Token: 0x0601C9B2 RID: 117170 RVA: 0x0040B21C File Offset: 0x0040941C
+		// Token: 0x0601E1AF RID: 123311 RVA: 0x00437B6C File Offset: 0x00435D6C
 		public static ICustomScanDirectoryData GetRootAsICustomScanDirectoryData(ByteBuffer _bb, ICustomScanDirectoryData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601C9B3 RID: 117171 RVA: 0x0040B239 File Offset: 0x00409439
+		// Token: 0x0601E1B0 RID: 123312 RVA: 0x00437B89 File Offset: 0x00435D89
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601C9B4 RID: 117172 RVA: 0x0040B248 File Offset: 0x00409448
+		// Token: 0x0601E1B1 RID: 123313 RVA: 0x00437B98 File Offset: 0x00435D98
 		public ICustomScanDirectoryData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170084C7 RID: 33991
-		// (get) Token: 0x0601C9B5 RID: 117173 RVA: 0x0040B258 File Offset: 0x00409458
+		// Token: 0x17008B12 RID: 35602
+		// (get) Token: 0x0601E1B2 RID: 123314 RVA: 0x00437BA8 File Offset: 0x00435DA8
 		public bool IsEnable
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x170084C8 RID: 33992
-		// (get) Token: 0x0601C9B6 RID: 117174 RVA: 0x0040B298 File Offset: 0x00409498
+		// Token: 0x17008B13 RID: 35603
+		// (get) Token: 0x0601E1B3 RID: 123315 RVA: 0x00437BE8 File Offset: 0x00435DE8
 		public bool IsEnableBaseDirs
 		{
 			get
@@ -70,7 +70,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C9B7 RID: 117175 RVA: 0x0040B2D8 File Offset: 0x004094D8
+		// Token: 0x0601E1B4 RID: 123316 RVA: 0x00437C28 File Offset: 0x00435E28
 		public string DisabledBaseDirs(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -81,8 +81,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170084C9 RID: 33993
-		// (get) Token: 0x0601C9B8 RID: 117176 RVA: 0x0040B314 File Offset: 0x00409514
+		// Token: 0x17008B14 RID: 35604
+		// (get) Token: 0x0601E1B5 RID: 123317 RVA: 0x00437C64 File Offset: 0x00435E64
 		public int DisabledBaseDirsLength
 		{
 			get
@@ -96,7 +96,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C9B9 RID: 117177 RVA: 0x0040B340 File Offset: 0x00409540
+		// Token: 0x0601E1B6 RID: 123318 RVA: 0x00437C90 File Offset: 0x00435E90
 		public IScanDirectory? AppendDirs(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return new IScanDirectory?(default(IScanDirectory).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170084CA RID: 33994
-		// (get) Token: 0x0601C9BA RID: 117178 RVA: 0x0040B3A4 File Offset: 0x004095A4
+		// Token: 0x17008B15 RID: 35605
+		// (get) Token: 0x0601E1B7 RID: 123319 RVA: 0x00437CF4 File Offset: 0x00435EF4
 		public int AppendDirsLength
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x170084CB RID: 33995
-		// (get) Token: 0x0601C9BB RID: 117179 RVA: 0x0040B3D0 File Offset: 0x004095D0
+		// Token: 0x17008B16 RID: 35606
+		// (get) Token: 0x0601E1B8 RID: 123320 RVA: 0x00437D20 File Offset: 0x00435F20
 		public bool IsSwarmDirs
 		{
 			get
@@ -133,7 +133,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C9BC RID: 117180 RVA: 0x0040B410 File Offset: 0x00409610
+		// Token: 0x0601E1B9 RID: 123321 RVA: 0x00437D60 File Offset: 0x00435F60
 		public static Offset<ICustomScanDirectoryData> CreateICustomScanDirectoryData(FlatBufferBuilder builder, bool IsEnable = false, bool IsEnableBaseDirs = false, VectorOffset DisabledBaseDirsOffset = default(VectorOffset), VectorOffset AppendDirsOffset = default(VectorOffset), bool IsSwarmDirs = false)
 		{
 			builder.StartTable(5);
@@ -145,31 +145,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return ICustomScanDirectoryData.EndICustomScanDirectoryData(builder);
 		}
 
-		// Token: 0x0601C9BD RID: 117181 RVA: 0x0040B444 File Offset: 0x00409644
+		// Token: 0x0601E1BA RID: 123322 RVA: 0x00437D94 File Offset: 0x00435F94
 		public static void StartICustomScanDirectoryData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601C9BE RID: 117182 RVA: 0x0040B44D File Offset: 0x0040964D
+		// Token: 0x0601E1BB RID: 123323 RVA: 0x00437D9D File Offset: 0x00435F9D
 		public static void AddIsEnable(FlatBufferBuilder builder, bool isEnable)
 		{
 			builder.AddBool(0, isEnable, false);
 		}
 
-		// Token: 0x0601C9BF RID: 117183 RVA: 0x0040B458 File Offset: 0x00409658
+		// Token: 0x0601E1BC RID: 123324 RVA: 0x00437DA8 File Offset: 0x00435FA8
 		public static void AddIsEnableBaseDirs(FlatBufferBuilder builder, bool isEnableBaseDirs)
 		{
 			builder.AddBool(1, isEnableBaseDirs, false);
 		}
 
-		// Token: 0x0601C9C0 RID: 117184 RVA: 0x0040B463 File Offset: 0x00409663
+		// Token: 0x0601E1BD RID: 123325 RVA: 0x00437DB3 File Offset: 0x00435FB3
 		public static void AddDisabledBaseDirs(FlatBufferBuilder builder, VectorOffset disabledBaseDirsOffset)
 		{
 			builder.AddOffset(2, disabledBaseDirsOffset.Value, 0);
 		}
 
-		// Token: 0x0601C9C1 RID: 117185 RVA: 0x0040B474 File Offset: 0x00409674
+		// Token: 0x0601E1BE RID: 123326 RVA: 0x00437DC4 File Offset: 0x00435FC4
 		public static VectorOffset CreateDisabledBaseDirsVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -180,7 +180,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C9C2 RID: 117186 RVA: 0x0040B4B4 File Offset: 0x004096B4
+		// Token: 0x0601E1BF RID: 123327 RVA: 0x00437E04 File Offset: 0x00436004
 		public static VectorOffset CreateDisabledBaseDirsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -188,7 +188,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C9C3 RID: 117187 RVA: 0x0040B4CE File Offset: 0x004096CE
+		// Token: 0x0601E1C0 RID: 123328 RVA: 0x00437E1E File Offset: 0x0043601E
 		public static VectorOffset CreateDisabledBaseDirsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -196,7 +196,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C9C4 RID: 117188 RVA: 0x0040B4EC File Offset: 0x004096EC
+		// Token: 0x0601E1C1 RID: 123329 RVA: 0x00437E3C File Offset: 0x0043603C
 		public static VectorOffset CreateDisabledBaseDirsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -204,19 +204,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C9C5 RID: 117189 RVA: 0x0040B505 File Offset: 0x00409705
+		// Token: 0x0601E1C2 RID: 123330 RVA: 0x00437E55 File Offset: 0x00436055
 		public static void StartDisabledBaseDirsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601C9C6 RID: 117190 RVA: 0x0040B510 File Offset: 0x00409710
+		// Token: 0x0601E1C3 RID: 123331 RVA: 0x00437E60 File Offset: 0x00436060
 		public static void AddAppendDirs(FlatBufferBuilder builder, VectorOffset appendDirsOffset)
 		{
 			builder.AddOffset(3, appendDirsOffset.Value, 0);
 		}
 
-		// Token: 0x0601C9C7 RID: 117191 RVA: 0x0040B520 File Offset: 0x00409720
+		// Token: 0x0601E1C4 RID: 123332 RVA: 0x00437E70 File Offset: 0x00436070
 		public static VectorOffset CreateAppendDirsVector(FlatBufferBuilder builder, Offset<IScanDirectory>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -227,7 +227,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C9C8 RID: 117192 RVA: 0x0040B560 File Offset: 0x00409760
+		// Token: 0x0601E1C5 RID: 123333 RVA: 0x00437EB0 File Offset: 0x004360B0
 		public static VectorOffset CreateAppendDirsVectorBlock(FlatBufferBuilder builder, Offset<IScanDirectory>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -235,7 +235,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C9C9 RID: 117193 RVA: 0x0040B57A File Offset: 0x0040977A
+		// Token: 0x0601E1C6 RID: 123334 RVA: 0x00437ECA File Offset: 0x004360CA
 		public static VectorOffset CreateAppendDirsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IScanDirectory>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -243,7 +243,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C9CA RID: 117194 RVA: 0x0040B598 File Offset: 0x00409798
+		// Token: 0x0601E1C7 RID: 123335 RVA: 0x00437EE8 File Offset: 0x004360E8
 		public static VectorOffset CreateAppendDirsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -251,25 +251,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C9CB RID: 117195 RVA: 0x0040B5B1 File Offset: 0x004097B1
+		// Token: 0x0601E1C8 RID: 123336 RVA: 0x00437F01 File Offset: 0x00436101
 		public static void StartAppendDirsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601C9CC RID: 117196 RVA: 0x0040B5BC File Offset: 0x004097BC
+		// Token: 0x0601E1C9 RID: 123337 RVA: 0x00437F0C File Offset: 0x0043610C
 		public static void AddIsSwarmDirs(FlatBufferBuilder builder, bool isSwarmDirs)
 		{
 			builder.AddBool(4, isSwarmDirs, false);
 		}
 
-		// Token: 0x0601C9CD RID: 117197 RVA: 0x0040B5C7 File Offset: 0x004097C7
+		// Token: 0x0601E1CA RID: 123338 RVA: 0x00437F17 File Offset: 0x00436117
 		public static Offset<ICustomScanDirectoryData> EndICustomScanDirectoryData(FlatBufferBuilder builder)
 		{
 			return new Offset<ICustomScanDirectoryData>(builder.EndTable());
 		}
 
-		// Token: 0x0601C9CE RID: 117198 RVA: 0x0040B5D4 File Offset: 0x004097D4
+		// Token: 0x0601E1CB RID: 123339 RVA: 0x00437F24 File Offset: 0x00436124
 		public ICustomScanDirectoryDataT UnPack()
 		{
 			ICustomScanDirectoryDataT customScanDirectoryDataT = new ICustomScanDirectoryDataT();
@@ -277,7 +277,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return customScanDirectoryDataT;
 		}
 
-		// Token: 0x0601C9CF RID: 117199 RVA: 0x0040B5F0 File Offset: 0x004097F0
+		// Token: 0x0601E1CC RID: 123340 RVA: 0x00437F40 File Offset: 0x00436140
 		public void UnPackTo(ICustomScanDirectoryDataT _o)
 		{
 			_o.IsEnable = this.IsEnable;
@@ -295,7 +295,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			_o.IsSwarmDirs = this.IsSwarmDirs;
 		}
 
-		// Token: 0x0601C9D0 RID: 117200 RVA: 0x0040B6A4 File Offset: 0x004098A4
+		// Token: 0x0601E1CD RID: 123341 RVA: 0x00437FF4 File Offset: 0x004361F4
 		public static Offset<ICustomScanDirectoryData> Pack(FlatBufferBuilder builder, ICustomScanDirectoryDataT _o)
 		{
 			if (_o == null)
@@ -325,7 +325,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return ICustomScanDirectoryData.CreateICustomScanDirectoryData(builder, _o.IsEnable, _o.IsEnableBaseDirs, disabledBaseDirsOffset, appendDirsOffset, _o.IsSwarmDirs);
 		}
 
-		// Token: 0x0400CD73 RID: 52595
+		// Token: 0x0400D7AE RID: 55214
 		private Table __p;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.BattleUi.Views;
@@ -12,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B4A RID: 19274
+	// Token: 0x02003AF2 RID: 15090
 	internal class TowerDefenseInBattlePanel : BattleChildView
 	{
-		// Token: 0x06031E95 RID: 204437 RVA: 0x00B931FC File Offset: 0x00B913FC
+		// Token: 0x06026C25 RID: 158757 RVA: 0x00AD7260 File Offset: 0x00AD5460
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -37,14 +36,14 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031E96 RID: 204438 RVA: 0x00B932EC File Offset: 0x00B914EC
+		// Token: 0x06026C26 RID: 158758 RVA: 0x00AD7350 File Offset: 0x00AD5550
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new UiSequencePlayer(this.RootItem);
 			this.ContentLayout = new GenericLayout<TowerDefenseInBattleInfoItem, ITowerDefensePhantomSkillItemInBattleData>(base.GetVerticalLayout(4), new Func<TowerDefenseInBattleInfoItem>(TowerDefenseController.Instance.BuildPhantomSkillInBattleItem), base.GetItem(5).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x06031E97 RID: 204439 RVA: 0x00B9333F File Offset: 0x00B9153F
+		// Token: 0x06026C27 RID: 158759 RVA: 0x00AD73A3 File Offset: 0x00AD55A3
 		protected override void OnAfterShow()
 		{
 			UiSequencePlayer seqPlayer = this.SeqPlayer;
@@ -60,7 +59,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			seqPlayer2.LitePlayAsync("Start", false, false);
 		}
 
-		// Token: 0x06031E98 RID: 204440 RVA: 0x00B9336C File Offset: 0x00B9156C
+		// Token: 0x06026C28 RID: 158760 RVA: 0x00AD73D0 File Offset: 0x00AD55D0
 		protected override UniTask OnBeforeHideAsync()
 		{
 			TowerDefenseInBattlePanel.<OnBeforeHideAsync>d__6 <OnBeforeHideAsync>d__;
@@ -71,7 +70,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031E99 RID: 204441 RVA: 0x00B933AF File Offset: 0x00B915AF
+		// Token: 0x06026C29 RID: 158761 RVA: 0x00AD7413 File Offset: 0x00AD5613
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer seqPlayer = this.SeqPlayer;
@@ -82,7 +81,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.SeqPlayer = null;
 		}
 
-		// Token: 0x06031E9A RID: 204442 RVA: 0x00B933CC File Offset: 0x00B915CC
+		// Token: 0x06026C2A RID: 158762 RVA: 0x00AD7430 File Offset: 0x00AD5630
 		[NullableContext(1)]
 		public UniTask GetOrCreateAsync(UUIItem parent, string resourceId)
 		{
@@ -96,7 +95,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <GetOrCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031E9B RID: 204443 RVA: 0x00B93420 File Offset: 0x00B91620
+		// Token: 0x06026C2B RID: 158763 RVA: 0x00AD7484 File Offset: 0x00AD5684
 		public void Refresh()
 		{
 			int currentPhantomItemIdInBattle = TowerDefenseController.Instance.GetCurrentPhantomItemIdInBattle();
@@ -111,23 +110,23 @@ namespace CSharpScript.Game.Module.TowerDefence
 			{
 				LguiUtil.Instance.SetLocalTextNew(text, TowerDefenseController.Instance.GetNextLevelUnlockDescriptionInBattle() ?? "", Array.Empty<object>());
 			}
-			List<ITowerDefensePhantomSkillItemInBattleData> source = TowerDefenseController.Instance.BuildPhantomSkillInBattleLayoutData();
+			List<ITowerDefensePhantomSkillItemInBattleData> data = TowerDefenseController.Instance.BuildPhantomSkillInBattleLayoutData();
 			GenericLayout<TowerDefenseInBattleInfoItem, ITowerDefensePhantomSkillItemInBattleData> contentLayout = this.ContentLayout;
 			if (contentLayout == null)
 			{
 				return;
 			}
-			contentLayout.RefreshByData(source.ToList<ITowerDefensePhantomSkillItemInBattleData>(), null, false);
+			contentLayout.RefreshByData(data, null, false);
 		}
 
-		// Token: 0x0401A9E7 RID: 109031
+		// Token: 0x04015339 RID: 86841
 		private bool Created;
 
-		// Token: 0x0401A9E8 RID: 109032
+		// Token: 0x0401533A RID: 86842
 		[Nullable(2)]
 		private UiSequencePlayer SeqPlayer;
 
-		// Token: 0x0401A9E9 RID: 109033
+		// Token: 0x0401533B RID: 86843
 		[Nullable(new byte[]
 		{
 			2,
@@ -136,25 +135,25 @@ namespace CSharpScript.Game.Module.TowerDefence
 		})]
 		private GenericLayout<TowerDefenseInBattleInfoItem, ITowerDefensePhantomSkillItemInBattleData> ContentLayout;
 
-		// Token: 0x0200ACC6 RID: 44230
+		// Token: 0x020096E6 RID: 38630
 		private class EPanelComponent
 		{
-			// Token: 0x040347D6 RID: 214998
+			// Token: 0x0402F187 RID: 192903
 			public const int IconTex = 0;
 
-			// Token: 0x040347D7 RID: 214999
+			// Token: 0x0402F188 RID: 192904
 			public const int QualitySprite = 1;
 
-			// Token: 0x040347D8 RID: 215000
+			// Token: 0x0402F189 RID: 192905
 			public const int NameTxt = 2;
 
-			// Token: 0x040347D9 RID: 215001
+			// Token: 0x0402F18A RID: 192906
 			public const int DescTxt = 3;
 
-			// Token: 0x040347DA RID: 215002
+			// Token: 0x0402F18B RID: 192907
 			public const int InfoLayout = 4;
 
-			// Token: 0x040347DB RID: 215003
+			// Token: 0x0402F18C RID: 192908
 			public const int InfoItem = 5;
 		}
 	}

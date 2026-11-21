@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200122E RID: 4654
+	// Token: 0x0200136A RID: 4970
 	public static class ECheckPlayerInputTypeExtensions
 	{
-		// Token: 0x06006976 RID: 26998 RVA: 0x000FB680 File Offset: 0x000F9880
+		// Token: 0x06006FB7 RID: 28599 RVA: 0x00108F8C File Offset: 0x0010718C
 		public static string ToEnumString(this ECheckPlayerInputType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006977 RID: 26999 RVA: 0x000FB6A8 File Offset: 0x000F98A8
+		// Token: 0x06006FB8 RID: 28600 RVA: 0x00108FB4 File Offset: 0x001071B4
 		public static ECheckPlayerInputType FromString(string name)
 		{
 			ECheckPlayerInputType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006978 RID: 27000 RVA: 0x000FB6D1 File Offset: 0x000F98D1
+		// Token: 0x06006FB9 RID: 28601 RVA: 0x00108FDD File Offset: 0x001071DD
 		public static bool TryFromString(string name, out ECheckPlayerInputType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006979 RID: 27001 RVA: 0x000FB6F6 File Offset: 0x000F98F6
+		// Token: 0x06006FBA RID: 28602 RVA: 0x00109002 File Offset: 0x00107202
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600697A RID: 27002 RVA: 0x000FB706 File Offset: 0x000F9906
+		// Token: 0x06006FBB RID: 28603 RVA: 0x00109012 File Offset: 0x00107212
 		public static ECheckPlayerInputType[] GetValues()
 		{
 			return new ECheckPlayerInputType[1];
 		}
 
-		// Token: 0x0600697B RID: 27003 RVA: 0x000FB70E File Offset: 0x000F990E
+		// Token: 0x06006FBC RID: 28604 RVA: 0x0010901A File Offset: 0x0010721A
 		public static string[] GetNames()
 		{
 			return new string[]

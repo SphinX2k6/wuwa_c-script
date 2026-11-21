@@ -5,13 +5,13 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Core.Fight;
 using UnrealEngine;
 
-// Token: 0x02002DAF RID: 11695
+// Token: 0x02002309 RID: 8969
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletDataMove
 {
-	// Token: 0x1700217F RID: 8575
-	// (get) Token: 0x06018969 RID: 100713 RVA: 0x00648B64 File Offset: 0x00646D64
+	// Token: 0x170021DB RID: 8667
+	// (get) Token: 0x06016211 RID: 90641 RVA: 0x0066E94C File Offset: 0x0066CB4C
 	public EInitialVelocityDirection InitVelocityDirStandard
 	{
 		get
@@ -24,8 +24,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002180 RID: 8576
-	// (get) Token: 0x0601896A RID: 100714 RVA: 0x00648B99 File Offset: 0x00646D99
+	// Token: 0x170021DC RID: 8668
+	// (get) Token: 0x06016212 RID: 90642 RVA: 0x0066E981 File Offset: 0x0066CB81
 	public bool InitVelocityKeepUp
 	{
 		get
@@ -38,8 +38,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002181 RID: 8577
-	// (get) Token: 0x0601896B RID: 100715 RVA: 0x00648BC9 File Offset: 0x00646DC9
+	// Token: 0x170021DD RID: 8669
+	// (get) Token: 0x06016213 RID: 90643 RVA: 0x0066E9B1 File Offset: 0x0066CBB1
 	public string InitVelocityDirParam
 	{
 		get
@@ -52,8 +52,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002182 RID: 8578
-	// (get) Token: 0x0601896C RID: 100716 RVA: 0x00648BEA File Offset: 0x00646DEA
+	// Token: 0x170021DE RID: 8670
+	// (get) Token: 0x06016214 RID: 90644 RVA: 0x0066E9D2 File Offset: 0x0066CBD2
 	public Rotator InitVelocityRot
 	{
 		get
@@ -66,8 +66,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002183 RID: 8579
-	// (get) Token: 0x0601896D RID: 100717 RVA: 0x00648C15 File Offset: 0x00646E15
+	// Token: 0x170021DF RID: 8671
+	// (get) Token: 0x06016215 RID: 90645 RVA: 0x0066E9FD File Offset: 0x0066CBFD
 	public Vector InitVelocityDirRandom
 	{
 		get
@@ -80,8 +80,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002184 RID: 8580
-	// (get) Token: 0x0601896E RID: 100718 RVA: 0x00648C40 File Offset: 0x00646E40
+	// Token: 0x170021E0 RID: 8672
+	// (get) Token: 0x06016216 RID: 90646 RVA: 0x0066EA28 File Offset: 0x0066CC28
 	public float UpDownAngleLimit
 	{
 		get
@@ -94,8 +94,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002185 RID: 8581
-	// (get) Token: 0x0601896F RID: 100719 RVA: 0x00648C70 File Offset: 0x00646E70
+	// Token: 0x170021E1 RID: 8673
+	// (get) Token: 0x06016217 RID: 90647 RVA: 0x0066EA58 File Offset: 0x0066CC58
 	public EBulletFollowType FollowType
 	{
 		get
@@ -108,8 +108,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002186 RID: 8582
-	// (get) Token: 0x06018970 RID: 100720 RVA: 0x00648CA5 File Offset: 0x00646EA5
+	// Token: 0x170021E2 RID: 8674
+	// (get) Token: 0x06016218 RID: 90648 RVA: 0x0066EA8D File Offset: 0x0066CC8D
 	public bool IsLockScale
 	{
 		get
@@ -122,8 +122,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002187 RID: 8583
-	// (get) Token: 0x06018971 RID: 100721 RVA: 0x00648CD5 File Offset: 0x00646ED5
+	// Token: 0x170021E3 RID: 8675
+	// (get) Token: 0x06016219 RID: 90649 RVA: 0x0066EABD File Offset: 0x0066CCBD
 	public bool IsDetachOnSkillEnd
 	{
 		get
@@ -136,8 +136,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002188 RID: 8584
-	// (get) Token: 0x06018972 RID: 100722 RVA: 0x00648D05 File Offset: 0x00646F05
+	// Token: 0x170021E4 RID: 8676
+	// (get) Token: 0x0601621A RID: 90650 RVA: 0x0066EAED File Offset: 0x0066CCED
 	public float Speed
 	{
 		get
@@ -150,8 +150,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002189 RID: 8585
-	// (get) Token: 0x06018973 RID: 100723 RVA: 0x00648D35 File Offset: 0x00646F35
+	// Token: 0x170021E5 RID: 8677
+	// (get) Token: 0x0601621B RID: 90651 RVA: 0x0066EB1D File Offset: 0x0066CD1D
 	public UCurveFloat SpeedCurve
 	{
 		get
@@ -165,8 +165,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x1700218A RID: 8586
-	// (get) Token: 0x06018974 RID: 100724 RVA: 0x00648D5D File Offset: 0x00646F5D
+	// Token: 0x170021E6 RID: 8678
+	// (get) Token: 0x0601621C RID: 90652 RVA: 0x0066EB45 File Offset: 0x0066CD45
 	public Vector FollowSkeletonRotLimit
 	{
 		get
@@ -179,8 +179,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x1700218B RID: 8587
-	// (get) Token: 0x06018975 RID: 100725 RVA: 0x00648D88 File Offset: 0x00646F88
+	// Token: 0x170021E7 RID: 8679
+	// (get) Token: 0x0601621D RID: 90653 RVA: 0x0066EB70 File Offset: 0x0066CD70
 	public Vector[] TrackParams
 	{
 		get
@@ -200,8 +200,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x1700218C RID: 8588
-	// (get) Token: 0x06018976 RID: 100726 RVA: 0x00648DEC File Offset: 0x00646FEC
+	// Token: 0x170021E8 RID: 8680
+	// (get) Token: 0x0601621E RID: 90654 RVA: 0x0066EBD4 File Offset: 0x0066CDD4
 	public UCurveVector[] TrackCurves
 	{
 		get
@@ -220,8 +220,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x1700218D RID: 8589
-	// (get) Token: 0x06018977 RID: 100727 RVA: 0x00648E41 File Offset: 0x00647041
+	// Token: 0x170021E9 RID: 8681
+	// (get) Token: 0x0601621F RID: 90655 RVA: 0x0066EC29 File Offset: 0x0066CE29
 	public EBulletTarget TrackTarget
 	{
 		get
@@ -234,8 +234,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x1700218E RID: 8590
-	// (get) Token: 0x06018978 RID: 100728 RVA: 0x00648E76 File Offset: 0x00647076
+	// Token: 0x170021EA RID: 8682
+	// (get) Token: 0x06016220 RID: 90656 RVA: 0x0066EC5E File Offset: 0x0066CE5E
 	public string TrackTargetBlackboardKey
 	{
 		get
@@ -248,8 +248,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x1700218F RID: 8591
-	// (get) Token: 0x06018979 RID: 100729 RVA: 0x00648E97 File Offset: 0x00647097
+	// Token: 0x170021EB RID: 8683
+	// (get) Token: 0x06016221 RID: 90657 RVA: 0x0066EC7F File Offset: 0x0066CE7F
 	public EMoveTrajectory Trajectory
 	{
 		get
@@ -262,8 +262,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002190 RID: 8592
-	// (get) Token: 0x0601897A RID: 100730 RVA: 0x00648ECC File Offset: 0x006470CC
+	// Token: 0x170021EC RID: 8684
+	// (get) Token: 0x06016222 RID: 90658 RVA: 0x0066ECB4 File Offset: 0x0066CEB4
 	public FName BoneName
 	{
 		get
@@ -276,8 +276,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002191 RID: 8593
-	// (get) Token: 0x0601897B RID: 100731 RVA: 0x00648EFC File Offset: 0x006470FC
+	// Token: 0x170021ED RID: 8685
+	// (get) Token: 0x06016223 RID: 90659 RVA: 0x0066ECE4 File Offset: 0x0066CEE4
 	public string BoneNameString
 	{
 		get
@@ -290,8 +290,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002192 RID: 8594
-	// (get) Token: 0x0601897C RID: 100732 RVA: 0x00648F31 File Offset: 0x00647131
+	// Token: 0x170021EE RID: 8686
+	// (get) Token: 0x06016224 RID: 90660 RVA: 0x0066ED19 File Offset: 0x0066CF19
 	public string SkeletonComponentName
 	{
 		get
@@ -304,8 +304,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002193 RID: 8595
-	// (get) Token: 0x0601897D RID: 100733 RVA: 0x00648F54 File Offset: 0x00647154
+	// Token: 0x170021EF RID: 8687
+	// (get) Token: 0x06016225 RID: 90661 RVA: 0x0066ED3C File Offset: 0x0066CF3C
 	public Dictionary<EBulletBeginVelocityLimit, float> BeginVelocityLimitMap
 	{
 		get
@@ -328,8 +328,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002194 RID: 8596
-	// (get) Token: 0x0601897E RID: 100734 RVA: 0x00648FDC File Offset: 0x006471DC
+	// Token: 0x170021F0 RID: 8688
+	// (get) Token: 0x06016226 RID: 90662 RVA: 0x0066EDCC File Offset: 0x0066CFCC
 	public EBulletDestOffset DestOffsetForward
 	{
 		get
@@ -342,8 +342,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002195 RID: 8597
-	// (get) Token: 0x0601897F RID: 100735 RVA: 0x00649011 File Offset: 0x00647211
+	// Token: 0x170021F1 RID: 8689
+	// (get) Token: 0x06016227 RID: 90663 RVA: 0x0066EE01 File Offset: 0x0066D001
 	public Vector DestOffset
 	{
 		get
@@ -356,8 +356,8 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x17002196 RID: 8598
-	// (get) Token: 0x06018980 RID: 100736 RVA: 0x0064903C File Offset: 0x0064723C
+	// Token: 0x170021F2 RID: 8690
+	// (get) Token: 0x06016228 RID: 90664 RVA: 0x0066EE2C File Offset: 0x0066D02C
 	public string TrackTargetBone
 	{
 		get
@@ -370,13 +370,13 @@ public class BulletDataMove
 		}
 	}
 
-	// Token: 0x06018981 RID: 100737 RVA: 0x0064905D File Offset: 0x0064725D
+	// Token: 0x06016229 RID: 90665 RVA: 0x0066EE4D File Offset: 0x0066D04D
 	public BulletDataMove(SReBulletDataMove data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x06018982 RID: 100738 RVA: 0x0064906C File Offset: 0x0064726C
+	// Token: 0x0601622A RID: 90666 RVA: 0x0066EE5C File Offset: 0x0066D05C
 	public bool Preload()
 	{
 		EInitialVelocityDirection initVelocityDirStandard = this.InitVelocityDirStandard;
@@ -394,54 +394,54 @@ public class BulletDataMove
 		return true;
 	}
 
-	// Token: 0x0400B696 RID: 46742
+	// Token: 0x0400BA10 RID: 47632
 	private readonly SReBulletDataMove Data;
 
-	// Token: 0x0400B697 RID: 46743
+	// Token: 0x0400BA11 RID: 47633
 	private EInitialVelocityDirection? InitVelocityDirStandardInternal;
 
-	// Token: 0x0400B698 RID: 46744
+	// Token: 0x0400BA12 RID: 47634
 	private bool? InitVelocityKeepUpInternal;
 
-	// Token: 0x0400B699 RID: 46745
+	// Token: 0x0400BA13 RID: 47635
 	[Nullable(2)]
 	private string InitVelocityDirParamInternal;
 
-	// Token: 0x0400B69A RID: 46746
+	// Token: 0x0400BA14 RID: 47636
 	[Nullable(2)]
 	private Rotator InitVelocityRotInternal;
 
-	// Token: 0x0400B69B RID: 46747
+	// Token: 0x0400BA15 RID: 47637
 	[Nullable(2)]
 	private Vector InitVelocityDirRandomInternal;
 
-	// Token: 0x0400B69C RID: 46748
+	// Token: 0x0400BA16 RID: 47638
 	private float? UpDownAngleLimitInternal;
 
-	// Token: 0x0400B69D RID: 46749
+	// Token: 0x0400BA17 RID: 47639
 	private EBulletFollowType? FollowTypeInternal;
 
-	// Token: 0x0400B69E RID: 46750
+	// Token: 0x0400BA18 RID: 47640
 	private bool? IsLockScaleInternal;
 
-	// Token: 0x0400B69F RID: 46751
+	// Token: 0x0400BA19 RID: 47641
 	private bool? IsDetachOnSkillEndInternal;
 
-	// Token: 0x0400B6A0 RID: 46752
+	// Token: 0x0400BA1A RID: 47642
 	private float? SpeedInternal;
 
-	// Token: 0x0400B6A1 RID: 46753
+	// Token: 0x0400BA1B RID: 47643
 	[Nullable(2)]
 	private UCurveFloat SpeedCurveInternal;
 
-	// Token: 0x0400B6A2 RID: 46754
+	// Token: 0x0400BA1C RID: 47644
 	private bool SpeedCurveInit;
 
-	// Token: 0x0400B6A3 RID: 46755
+	// Token: 0x0400BA1D RID: 47645
 	[Nullable(2)]
 	private Vector FollowSkeletonRotLimitInternal;
 
-	// Token: 0x0400B6A4 RID: 46756
+	// Token: 0x0400BA1E RID: 47646
 	[Nullable(new byte[]
 	{
 		2,
@@ -449,7 +449,7 @@ public class BulletDataMove
 	})]
 	private Vector[] TrackParamsInternal;
 
-	// Token: 0x0400B6A5 RID: 46757
+	// Token: 0x0400BA1F RID: 47647
 	[Nullable(new byte[]
 	{
 		2,
@@ -457,39 +457,39 @@ public class BulletDataMove
 	})]
 	private UCurveVector[] TrackCurvesInternal;
 
-	// Token: 0x0400B6A6 RID: 46758
+	// Token: 0x0400BA20 RID: 47648
 	private EBulletTarget? TrackTargetInternal;
 
-	// Token: 0x0400B6A7 RID: 46759
+	// Token: 0x0400BA21 RID: 47649
 	[Nullable(2)]
 	private string TrackTargetBlackboardKeyInternal;
 
-	// Token: 0x0400B6A8 RID: 46760
+	// Token: 0x0400BA22 RID: 47650
 	private EMoveTrajectory? TrajectoryInternal;
 
-	// Token: 0x0400B6A9 RID: 46761
+	// Token: 0x0400BA23 RID: 47651
 	private FName? BoneNameInternal;
 
-	// Token: 0x0400B6AA RID: 46762
+	// Token: 0x0400BA24 RID: 47652
 	[Nullable(2)]
 	private string BoneNameStringInternal;
 
-	// Token: 0x0400B6AB RID: 46763
+	// Token: 0x0400BA25 RID: 47653
 	[Nullable(2)]
 	private string SkeletonComponentNameInternal;
 
-	// Token: 0x0400B6AC RID: 46764
+	// Token: 0x0400BA26 RID: 47654
 	[Nullable(2)]
 	private Dictionary<EBulletBeginVelocityLimit, float> BeginVelocityLimitMapInternal;
 
-	// Token: 0x0400B6AD RID: 46765
+	// Token: 0x0400BA27 RID: 47655
 	private EBulletDestOffset? DestOffsetForwardInternal;
 
-	// Token: 0x0400B6AE RID: 46766
+	// Token: 0x0400BA28 RID: 47656
 	[Nullable(2)]
 	private Vector DestOffsetInternal;
 
-	// Token: 0x0400B6AF RID: 46767
+	// Token: 0x0400BA29 RID: 47657
 	[Nullable(2)]
 	private string TrackTargetBoneInternal;
 }

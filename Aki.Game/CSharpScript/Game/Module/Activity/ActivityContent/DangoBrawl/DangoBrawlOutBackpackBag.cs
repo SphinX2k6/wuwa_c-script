@@ -5,13 +5,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006825 RID: 26661
+	// Token: 0x02005775 RID: 22389
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DangoBrawlOutBackpackBag : DangoBrawlOutBackpackItemBase
 	{
-		// Token: 0x17009740 RID: 38720
-		// (get) Token: 0x06042885 RID: 272517 RVA: 0x0102B0F1 File Offset: 0x010292F1
+		// Token: 0x17006A81 RID: 27265
+		// (get) Token: 0x060373D9 RID: 226265 RVA: 0x00F6C62D File Offset: 0x00F6A82D
 		private UUITexture SprIconMask02
 		{
 			get
@@ -20,8 +20,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x17009741 RID: 38721
-		// (get) Token: 0x06042886 RID: 272518 RVA: 0x0102B0FB File Offset: 0x010292FB
+		// Token: 0x17006A82 RID: 27266
+		// (get) Token: 0x060373DA RID: 226266 RVA: 0x00F6C637 File Offset: 0x00F6A837
 		private UUITexture SprIconMask03
 		{
 			get
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042887 RID: 272519 RVA: 0x0102B105 File Offset: 0x01029305
+		// Token: 0x060373DB RID: 226267 RVA: 0x00F6C641 File Offset: 0x00F6A841
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(11, typeof(UUITexture)));
 		}
 
-		// Token: 0x06042888 RID: 272520 RVA: 0x0102B145 File Offset: 0x01029345
+		// Token: 0x060373DC RID: 226268 RVA: 0x00F6C681 File Offset: 0x00F6A881
 		[NullableContext(1)]
 		protected override void CollectIconTextures(List<UUITexture> textures)
 		{
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x0200C9C6 RID: 51654
+		// Token: 0x0200B392 RID: 45970
 		[NullableContext(0)]
 		private enum EBagComponents
 		{
-			// Token: 0x0403CF52 RID: 249682
+			// Token: 0x0403783C RID: 227388
 			SprIconMask03 = 10,
-			// Token: 0x0403CF53 RID: 249683
+			// Token: 0x0403783D RID: 227389
 			SprIconMask02
 		}
 	}

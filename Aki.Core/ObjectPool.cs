@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020000B5 RID: 181
+// Token: 0x020000B7 RID: 183
 [NullableContext(1)]
 [Nullable(0)]
 public class ObjectPool<[Nullable(0)] T> where T : ObjectBase
 {
-	// Token: 0x060005B9 RID: 1465 RVA: 0x0001EA68 File Offset: 0x0001CC68
+	// Token: 0x060005FA RID: 1530 RVA: 0x0001F10C File Offset: 0x0001D30C
 	public T Spawn(Func<int, int, T> ctor)
 	{
 		if (this.PoolInternal.Count == 0)
@@ -19,18 +19,18 @@ public class ObjectPool<[Nullable(0)] T> where T : ObjectBase
 		return result;
 	}
 
-	// Token: 0x060005BA RID: 1466 RVA: 0x0001EABD File Offset: 0x0001CCBD
+	// Token: 0x060005FB RID: 1531 RVA: 0x0001F161 File Offset: 0x0001D361
 	public void DeSpawn(T obj)
 	{
 		this.PoolInternal.Add(obj);
 	}
 
-	// Token: 0x060005BB RID: 1467 RVA: 0x0001EACB File Offset: 0x0001CCCB
+	// Token: 0x060005FC RID: 1532 RVA: 0x0001F16F File Offset: 0x0001D36F
 	public bool IsEmpty()
 	{
 		return this.PoolInternal.Count == 0;
 	}
 
-	// Token: 0x0400049F RID: 1183
+	// Token: 0x040004AD RID: 1197
 	private readonly List<T> PoolInternal = new List<T>();
 }

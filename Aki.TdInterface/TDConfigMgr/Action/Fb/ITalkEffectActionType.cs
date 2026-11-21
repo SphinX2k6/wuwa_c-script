@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200253B RID: 9531
+	// Token: 0x020027E2 RID: 10210
 	public class ITalkEffectActionType
 	{
-		// Token: 0x0600D468 RID: 54376 RVA: 0x001F712E File Offset: 0x001F532E
-		[NullableContext(1)]
+		// Token: 0x0600E1C8 RID: 57800 RVA: 0x00212B8E File Offset: 0x00210D8E
 		public static ITalkEffectActionType Create(ITalkEffectActionType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003BB4 RID: 15284
-		// (get) Token: 0x0600D469 RID: 54377 RVA: 0x001F714D File Offset: 0x001F534D
+		// Token: 0x17003EB2 RID: 16050
+		// (get) Token: 0x0600E1C9 RID: 57801 RVA: 0x00212BAD File Offset: 0x00210DAD
 		public virtual ETalkEffectActionType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007459 RID: 29785
+		// Token: 0x04007AAE RID: 31406
 		private ITalkEffectActionType Instance;
 	}
 }

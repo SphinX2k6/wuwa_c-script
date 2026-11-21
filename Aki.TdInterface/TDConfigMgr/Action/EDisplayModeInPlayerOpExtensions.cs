@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002303 RID: 8963
+	// Token: 0x02002572 RID: 9586
 	public static class EDisplayModeInPlayerOpExtensions
 	{
-		// Token: 0x0600C40C RID: 50188 RVA: 0x001C9FE4 File Offset: 0x001C81E4
+		// Token: 0x0600CFDB RID: 53211 RVA: 0x001E1EAC File Offset: 0x001E00AC
 		public static string ToEnumString(this EDisplayModeInPlayerOp value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C40D RID: 50189 RVA: 0x001CA01C File Offset: 0x001C821C
+		// Token: 0x0600CFDC RID: 53212 RVA: 0x001E1EE4 File Offset: 0x001E00E4
 		public static EDisplayModeInPlayerOp FromString(string name)
 		{
 			EDisplayModeInPlayerOp result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C40E RID: 50190 RVA: 0x001CA045 File Offset: 0x001C8245
+		// Token: 0x0600CFDD RID: 53213 RVA: 0x001E1F0D File Offset: 0x001E010D
 		public static bool TryFromString(string name, out EDisplayModeInPlayerOp value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C40F RID: 50191 RVA: 0x001CA07E File Offset: 0x001C827E
+		// Token: 0x0600CFDE RID: 53214 RVA: 0x001E1F46 File Offset: 0x001E0146
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C410 RID: 50192 RVA: 0x001CA096 File Offset: 0x001C8296
+		// Token: 0x0600CFDF RID: 53215 RVA: 0x001E1F5E File Offset: 0x001E015E
 		public static EDisplayModeInPlayerOp[] GetValues()
 		{
 			return new EDisplayModeInPlayerOp[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C411 RID: 50193 RVA: 0x001CA0A2 File Offset: 0x001C82A2
+		// Token: 0x0600CFE0 RID: 53216 RVA: 0x001E1F6A File Offset: 0x001E016A
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005EE5 RID: 24293
+	// Token: 0x02004ECC RID: 20172
 	public class ShipTowerItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603DBD1 RID: 252881 RVA: 0x00EEBA3C File Offset: 0x00EE9C3C
+		// Token: 0x06032B6C RID: 207724 RVA: 0x00E3D6E8 File Offset: 0x00E3B8E8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DBD2 RID: 252882 RVA: 0x00EEBB08 File Offset: 0x00EE9D08
+		// Token: 0x06032B6D RID: 207725 RVA: 0x00E3D7B4 File Offset: 0x00E3B9B4
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			ShipTowerStageData stageDataById = ShipTowerModel.Instance.GetStageDataById(data);
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DBD3 RID: 252883 RVA: 0x00EEBC07 File Offset: 0x00EE9E07
+		// Token: 0x06032B6E RID: 207726 RVA: 0x00E3D8B3 File Offset: 0x00E3BAB3
 		public void SetNextItemClose()
 		{
 			base.GetItem(4).SetUIActive(false);

@@ -4,26 +4,26 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A59 RID: 2649
+	// Token: 0x020001DE RID: 478
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EDOFMode")]
 	public enum EDOFMode
 	{
-		// Token: 0x0400471D RID: 18205
+		// Token: 0x04000BCA RID: 3018
 		Default,
-		// Token: 0x0400471E RID: 18206
+		// Token: 0x04000BCB RID: 3019
 		SixDOF,
-		// Token: 0x0400471F RID: 18207
+		// Token: 0x04000BCC RID: 3020
 		YZPlane,
-		// Token: 0x04004720 RID: 18208
+		// Token: 0x04000BCD RID: 3021
 		XZPlane,
-		// Token: 0x04004721 RID: 18209
+		// Token: 0x04000BCE RID: 3022
 		XYPlane,
-		// Token: 0x04004722 RID: 18210
+		// Token: 0x04000BCF RID: 3023
 		CustomPlane,
-		// Token: 0x04004723 RID: 18211
+		// Token: 0x04000BD0 RID: 3024
 		None,
-		// Token: 0x04004724 RID: 18212
+		// Token: 0x04000BD1 RID: 3025
 		EDOFMode_MAX
 	}
 }

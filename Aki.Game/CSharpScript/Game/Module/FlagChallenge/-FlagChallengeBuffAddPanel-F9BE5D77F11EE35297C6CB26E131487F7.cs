@@ -2,26 +2,26 @@
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A56 RID: 23126
+	// Token: 0x02004A32 RID: 18994
 	internal enum <FlagChallengeBuffAddPanel>F9BE5D77F11EE35297C6CB26E131487F7B3733CAD2A32C59BC68F411BC5E34941__EComponentType
 	{
-		// Token: 0x0401E8F5 RID: 125173
+		// Token: 0x0401939C RID: 103324
 		BtnMask,
-		// Token: 0x0401E8F6 RID: 125174
+		// Token: 0x0401939D RID: 103325
 		LayoutContainer,
-		// Token: 0x0401E8F7 RID: 125175
+		// Token: 0x0401939E RID: 103326
 		ItemInfoTemplate,
-		// Token: 0x0401E8F8 RID: 125176
+		// Token: 0x0401939F RID: 103327
 		ItemRoot,
-		// Token: 0x0401E8F9 RID: 125177
+		// Token: 0x040193A0 RID: 103328
 		TextTitle,
-		// Token: 0x0401E8FA RID: 125178
+		// Token: 0x040193A1 RID: 103329
 		TextSubTitle,
-		// Token: 0x0401E8FB RID: 125179
+		// Token: 0x040193A2 RID: 103330
 		LayoutAreaBuffRoot,
-		// Token: 0x0401E8FC RID: 125180
+		// Token: 0x040193A3 RID: 103331
 		ItemAreaBuffTemplate,
-		// Token: 0x0401E8FD RID: 125181
+		// Token: 0x040193A4 RID: 103332
 		TextAreaTitle
 	}
 }

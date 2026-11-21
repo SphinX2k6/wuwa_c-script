@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 // Token: 0x0200010F RID: 271
 public class ELogLevelJsonConverter : JsonConverter<ELogLevel>
 {
-	// Token: 0x06000A04 RID: 2564 RVA: 0x00032D74 File Offset: 0x00030F74
+	// Token: 0x06000A55 RID: 2645 RVA: 0x000336D0 File Offset: 0x000318D0
 	public override ELogLevel Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 	{
 		string @string = reader.GetString();
@@ -16,7 +16,7 @@ public class ELogLevelJsonConverter : JsonConverter<ELogLevel>
 		return ELogLevelExtensions.FromString(@string);
 	}
 
-	// Token: 0x06000A05 RID: 2565 RVA: 0x00032D98 File Offset: 0x00030F98
+	// Token: 0x06000A56 RID: 2646 RVA: 0x000336F4 File Offset: 0x000318F4
 	public override void Write(Utf8JsonWriter writer, ELogLevel value, JsonSerializerOptions options)
 	{
 		writer.WriteStringValue(value.ToEnumString());

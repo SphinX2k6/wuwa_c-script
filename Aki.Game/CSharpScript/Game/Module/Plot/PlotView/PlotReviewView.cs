@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200505F RID: 20575
+	// Token: 0x0200402F RID: 16431
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotReviewView : UiViewBase
 	{
-		// Token: 0x06034A60 RID: 215648 RVA: 0x00C70F15 File Offset: 0x00C6F115
+		// Token: 0x06029953 RID: 170323 RVA: 0x00BBE1ED File Offset: 0x00BBC3ED
 		[NullableContext(1)]
 		public PlotReviewView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06034A61 RID: 215649 RVA: 0x00C70F28 File Offset: 0x00C6F128
+		// Token: 0x06029954 RID: 170324 RVA: 0x00BBE200 File Offset: 0x00BBC400
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034A62 RID: 215650 RVA: 0x00C70FB4 File Offset: 0x00C6F1B4
+		// Token: 0x06029955 RID: 170325 RVA: 0x00BBE28C File Offset: 0x00BBC48C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PlotReviewView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034A63 RID: 215651 RVA: 0x00C70FF7 File Offset: 0x00C6F1F7
+		// Token: 0x06029956 RID: 170326 RVA: 0x00BBE2CF File Offset: 0x00BBC4CF
 		private void ScrollToBottom(float _)
 		{
 			if (this.HasScrollToBottom)
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			base.GetUIDynScrollViewComponent(1).SetScrollProgress(1f);
 		}
 
-		// Token: 0x06034A64 RID: 215652 RVA: 0x00C7101A File Offset: 0x00C6F21A
+		// Token: 0x06029957 RID: 170327 RVA: 0x00BBE2F2 File Offset: 0x00BBC4F2
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06034A65 RID: 215653 RVA: 0x00C71023 File Offset: 0x00C6F223
+		// Token: 0x06029958 RID: 170328 RVA: 0x00BBE2FB File Offset: 0x00BBC4FB
 		[NullableContext(1)]
 		private PlotReviewDynamicScrollItem CreatePlotReviewItem(PlotReviewItemData data, UUIItem uiItem, int index)
 		{
@@ -77,19 +77,19 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return plotReviewDynamicScrollItem;
 		}
 
-		// Token: 0x06034A66 RID: 215654 RVA: 0x00C7104E File Offset: 0x00C6F24E
+		// Token: 0x06029959 RID: 170329 RVA: 0x00BBE326 File Offset: 0x00BBC526
 		private void OnTalkItemToggleClick(int index)
 		{
 			this.PlayPlotAudioByIndex(index);
 		}
 
-		// Token: 0x06034A67 RID: 215655 RVA: 0x00C71057 File Offset: 0x00C6F257
+		// Token: 0x0602995A RID: 170330 RVA: 0x00BBE32F File Offset: 0x00BBC52F
 		private bool CanTalkItemToggleChange(int index)
 		{
 			return this.CheckCanPlayPlotAudio(index);
 		}
 
-		// Token: 0x06034A68 RID: 215656 RVA: 0x00C71060 File Offset: 0x00C6F260
+		// Token: 0x0602995B RID: 170331 RVA: 0x00BBE338 File Offset: 0x00BBC538
 		private bool CheckCanPlayPlotAudio(int index)
 		{
 			if (this.Data == null)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return !string.IsNullOrEmpty(text) && ConfigPlotAudioById.GetConfig(text, true) != null;
 		}
 
-		// Token: 0x06034A69 RID: 215657 RVA: 0x00C710FC File Offset: 0x00C6F2FC
+		// Token: 0x0602995C RID: 170332 RVA: 0x00BBE3D4 File Offset: 0x00BBC5D4
 		private void PlayPlotAudioByIndex(int index)
 		{
 			if (!this.CheckCanPlayPlotAudio(index))
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}));
 		}
 
-		// Token: 0x06034A6A RID: 215658 RVA: 0x00C71208 File Offset: 0x00C6F408
+		// Token: 0x0602995D RID: 170333 RVA: 0x00BBE4E0 File Offset: 0x00BBC6E0
 		public void ClearCurPlayAudio()
 		{
 			if (this.PlotPlayEventResult == 0)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.OnAudioEnd();
 		}
 
-		// Token: 0x06034A6B RID: 215659 RVA: 0x00C71250 File Offset: 0x00C6F450
+		// Token: 0x0602995E RID: 170334 RVA: 0x00BBE528 File Offset: 0x00BBC728
 		private void OnAudioEnd()
 		{
 			if (this.CurrentPlayAudioIndex >= 0)
@@ -171,13 +171,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.CurrentPlayAudioIndex = -1;
 		}
 
-		// Token: 0x06034A6C RID: 215660 RVA: 0x00C71276 File Offset: 0x00C6F476
+		// Token: 0x0602995F RID: 170335 RVA: 0x00BBE54E File Offset: 0x00BBC74E
 		public bool IsPlayingAudio()
 		{
 			return this.PlotPlayEventResult != 0;
 		}
 
-		// Token: 0x06034A6D RID: 215661 RVA: 0x00C71284 File Offset: 0x00C6F484
+		// Token: 0x06029960 RID: 170336 RVA: 0x00BBE55C File Offset: 0x00BBC75C
 		private void UpdateTalkItemPlayingState(int index, bool isPlaying)
 		{
 			((PlotReviewTalkItemData)this.Data.PlotReviewItemDataList[index].Data).IsPlaying = isPlaying;
@@ -190,22 +190,22 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034A6E RID: 215662 RVA: 0x00C712D8 File Offset: 0x00C6F4D8
+		// Token: 0x06029961 RID: 170337 RVA: 0x00BBE5B0 File Offset: 0x00BBC7B0
 		protected override void OnBeforeHide()
 		{
 			this.ClearCurPlayAudio();
 		}
 
-		// Token: 0x0401C0F1 RID: 114929
+		// Token: 0x04016B1C RID: 92956
 		private PlotReviewViewData Data;
 
-		// Token: 0x0401C0F2 RID: 114930
+		// Token: 0x04016B1D RID: 92957
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401C0F3 RID: 114931
+		// Token: 0x04016B1E RID: 92958
 		private PlotReviewDynamicScrollBaseItem PlotReviewDynamicScrollBaseItem;
 
-		// Token: 0x0401C0F4 RID: 114932
+		// Token: 0x04016B1F RID: 92959
 		[Nullable(new byte[]
 		{
 			2,
@@ -215,26 +215,26 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 		})]
 		protected DynamicScrollView<PlotReviewDynamicScrollItem, PlotReviewDynamicScrollBaseItem, PlotReviewItemData> PlotReviewDynamicScrollView;
 
-		// Token: 0x0401C0F5 RID: 114933
+		// Token: 0x04016B20 RID: 92960
 		private int CurrentPlayAudioIndex = -1;
 
-		// Token: 0x0401C0F6 RID: 114934
+		// Token: 0x04016B21 RID: 92961
 		private int PlotPlayEventResult;
 
-		// Token: 0x0401C0F7 RID: 114935
+		// Token: 0x04016B22 RID: 92962
 		private bool HasScrollToBottom;
 
-		// Token: 0x0200B1C4 RID: 45508
+		// Token: 0x02009BFE RID: 39934
 		[NullableContext(0)]
 		private static class EComponent
 		{
-			// Token: 0x04035E8E RID: 220814
+			// Token: 0x040308E3 RID: 198883
 			public const int CaptionItem = 0;
 
-			// Token: 0x04035E8F RID: 220815
+			// Token: 0x040308E4 RID: 198884
 			public const int PlotReviewDynamicScrollView = 1;
 
-			// Token: 0x04035E90 RID: 220816
+			// Token: 0x040308E5 RID: 198885
 			public const int PlotReviewItem = 2;
 		}
 	}

@@ -8,19 +8,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200249D RID: 9373
+// Token: 0x02001984 RID: 6532
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionDetailInfoComponent : UiPanelBase
 {
-	// Token: 0x06012D1A RID: 77082 RVA: 0x004A51ED File Offset: 0x004A33ED
+	// Token: 0x060101DB RID: 66011 RVA: 0x004B2CF5 File Offset: 0x004B0EF5
 	[NullableContext(1)]
 	public VisionDetailInfoComponent(UUIItem actor)
 	{
 		this.SourceItem = actor;
 	}
 
-	// Token: 0x06012D1B RID: 77083 RVA: 0x004A51FC File Offset: 0x004A33FC
+	// Token: 0x060101DC RID: 66012 RVA: 0x004B2D04 File Offset: 0x004B0F04
 	public UniTask Init()
 	{
 		VisionDetailInfoComponent.<Init>d__9 <Init>d__;
@@ -31,7 +31,7 @@ public class VisionDetailInfoComponent : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012D1C RID: 77084 RVA: 0x004A5240 File Offset: 0x004A3440
+	// Token: 0x060101DD RID: 66013 RVA: 0x004B2D48 File Offset: 0x004B0F48
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -49,7 +49,7 @@ public class VisionDetailInfoComponent : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06012D1D RID: 77085 RVA: 0x004A52EC File Offset: 0x004A34EC
+	// Token: 0x060101DE RID: 66014 RVA: 0x004B2DF4 File Offset: 0x004B0FF4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionDetailInfoComponent.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -60,21 +60,21 @@ public class VisionDetailInfoComponent : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012D1E RID: 77086 RVA: 0x004A532F File Offset: 0x004A352F
+	// Token: 0x060101DF RID: 66015 RVA: 0x004B2E37 File Offset: 0x004B1037
 	protected override void OnStart()
 	{
 		this.RoleVisionAttribute = new RoleVisionAttribute(base.GetItem(1));
 		this.RoleVisionAttribute.Init();
 	}
 
-	// Token: 0x06012D1F RID: 77087 RVA: 0x004A534E File Offset: 0x004A354E
+	// Token: 0x060101E0 RID: 66016 RVA: 0x004B2E56 File Offset: 0x004B1056
 	[NullableContext(1)]
 	public void SetClickCallBack(Action call)
 	{
 		this.OnClickMainItemCall = call;
 	}
 
-	// Token: 0x06012D20 RID: 77088 RVA: 0x004A5357 File Offset: 0x004A3557
+	// Token: 0x060101E1 RID: 66017 RVA: 0x004B2E5F File Offset: 0x004B105F
 	protected void OnClickArrow()
 	{
 		Action onClickMainItemCall = this.OnClickMainItemCall;
@@ -85,7 +85,7 @@ public class VisionDetailInfoComponent : UiPanelBase
 		onClickMainItemCall();
 	}
 
-	// Token: 0x06012D21 RID: 77089 RVA: 0x004A5369 File Offset: 0x004A3569
+	// Token: 0x060101E2 RID: 66018 RVA: 0x004B2E71 File Offset: 0x004B1071
 	[NullableContext(1)]
 	public void Refresh(VisionDetailInfoComponentData data, bool ifCompare, bool ifSimple)
 	{
@@ -97,7 +97,7 @@ public class VisionDetailInfoComponent : UiPanelBase
 		this.RefreshDescComponent();
 	}
 
-	// Token: 0x06012D22 RID: 77090 RVA: 0x004A53A6 File Offset: 0x004A35A6
+	// Token: 0x060101E3 RID: 66019 RVA: 0x004B2EAE File Offset: 0x004B10AE
 	public UUIItem GetTxtItemByIndex(int index)
 	{
 		VisionDetailDescComponent visionDetailDescComponent = this.VisionDetailDescComponent;
@@ -108,14 +108,14 @@ public class VisionDetailInfoComponent : UiPanelBase
 		return visionDetailDescComponent.GetTxtItemByIndex(index);
 	}
 
-	// Token: 0x06012D23 RID: 77091 RVA: 0x004A53BA File Offset: 0x004A35BA
+	// Token: 0x060101E4 RID: 66020 RVA: 0x004B2EC2 File Offset: 0x004B10C2
 	private void RefreshDescComponent()
 	{
 		this.VisionDetailDescComponent.Refresh(this.CurrentData.DescData, false);
 		this.VisionDetailDescComponent.SetActive(true);
 	}
 
-	// Token: 0x06012D24 RID: 77092 RVA: 0x004A53E0 File Offset: 0x004A35E0
+	// Token: 0x060101E5 RID: 66021 RVA: 0x004B2EE8 File Offset: 0x004B10E8
 	private void RefreshMain()
 	{
 		VisionAttrRecommendInfo roleCostAttrRecommendInfo = VisionRecommendModel.Instance.GetRoleCostAttrRecommendInfo(this.CurrentData.RoleId, this.CurrentData.Cost);
@@ -140,7 +140,7 @@ public class VisionDetailInfoComponent : UiPanelBase
 		this.RoleVisionAttribute.Refresh(mainPropData, false);
 	}
 
-	// Token: 0x06012D25 RID: 77093 RVA: 0x004A54C0 File Offset: 0x004A36C0
+	// Token: 0x060101E6 RID: 66022 RVA: 0x004B2FC8 File Offset: 0x004B11C8
 	private void RefreshSub()
 	{
 		List<VisionSubPropData> subPropData = this.CurrentData.GetSubPropData();
@@ -156,38 +156,38 @@ public class VisionDetailInfoComponent : UiPanelBase
 		this.RoleVisionSubAttribute.SetActive(false);
 	}
 
-	// Token: 0x04008DB7 RID: 36279
+	// Token: 0x04008F01 RID: 36609
 	private VisionDetailTop VisionDetailTop;
 
-	// Token: 0x04008DB8 RID: 36280
+	// Token: 0x04008F02 RID: 36610
 	private VisionDetailInfoComponentData CurrentData;
 
-	// Token: 0x04008DB9 RID: 36281
+	// Token: 0x04008F03 RID: 36611
 	private RoleVisionAttribute RoleVisionAttribute;
 
-	// Token: 0x04008DBA RID: 36282
+	// Token: 0x04008F04 RID: 36612
 	private RoleVisionIdentifyAttribute RoleVisionSubAttribute;
 
-	// Token: 0x04008DBB RID: 36283
+	// Token: 0x04008F05 RID: 36613
 	private VisionDetailDescComponent VisionDetailDescComponent;
 
-	// Token: 0x04008DBC RID: 36284
+	// Token: 0x04008F06 RID: 36614
 	private Action OnClickMainItemCall;
 
-	// Token: 0x04008DBD RID: 36285
+	// Token: 0x04008F07 RID: 36615
 	private readonly UUIItem SourceItem;
 
-	// Token: 0x02008A1D RID: 35357
+	// Token: 0x02007BA7 RID: 31655
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CD9A RID: 183706
+		// Token: 0x040280BA RID: 164026
 		TopPanel,
-		// Token: 0x0402CD9B RID: 183707
+		// Token: 0x040280BB RID: 164027
 		AttributeItem,
-		// Token: 0x0402CD9C RID: 183708
+		// Token: 0x040280BC RID: 164028
 		AttributeItemSub,
-		// Token: 0x0402CD9D RID: 183709
+		// Token: 0x040280BD RID: 164029
 		ItemParent
 	}
 }

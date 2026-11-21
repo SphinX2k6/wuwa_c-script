@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DF9 RID: 3577
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000EF5 RID: 3829
 	public class DollGrabMachineComponent : IComponentBase
 	{
-		// Token: 0x06005104 RID: 20740 RVA: 0x000C7FBE File Offset: 0x000C61BE
-		[NullableContext(1)]
+		// Token: 0x0600562B RID: 22059 RVA: 0x000D3886 File Offset: 0x000D1A86
 		public static DollGrabMachineComponent Create(IDollGrabMachineComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001ACF RID: 6863
-		// (get) Token: 0x06005105 RID: 20741 RVA: 0x000C7FE0 File Offset: 0x000C61E0
+		// Token: 0x17001C3C RID: 7228
+		// (get) Token: 0x0600562C RID: 22060 RVA: 0x000D38A8 File Offset: 0x000D1AA8
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AD0 RID: 6864
-		// (get) Token: 0x06005106 RID: 20742 RVA: 0x000C8018 File Offset: 0x000C6218
+		// Token: 0x17001C3D RID: 7229
+		// (get) Token: 0x0600562D RID: 22061 RVA: 0x000D38E0 File Offset: 0x000D1AE0
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AD1 RID: 6865
-		// (get) Token: 0x06005107 RID: 20743 RVA: 0x000C802E File Offset: 0x000C622E
+		// Token: 0x17001C3E RID: 7230
+		// (get) Token: 0x0600562E RID: 22062 RVA: 0x000D38F6 File Offset: 0x000D1AF6
 		public virtual EDollGrabShowcaseBelongType BelongType
 		{
 			get
@@ -58,8 +55,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AD2 RID: 6866
-		// (get) Token: 0x06005108 RID: 20744 RVA: 0x000C803B File Offset: 0x000C623B
+		// Token: 0x17001C3F RID: 7231
+		// (get) Token: 0x0600562F RID: 22063 RVA: 0x000D3903 File Offset: 0x000D1B03
 		public virtual float TimeLimit
 		{
 			get
@@ -68,8 +65,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AD3 RID: 6867
-		// (get) Token: 0x06005109 RID: 20745 RVA: 0x000C8048 File Offset: 0x000C6248
+		// Token: 0x17001C40 RID: 7232
+		// (get) Token: 0x06005630 RID: 22064 RVA: 0x000D3910 File Offset: 0x000D1B10
 		public virtual float? PlayCost
 		{
 			get
@@ -82,12 +79,10 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AD4 RID: 6868
-		// (get) Token: 0x0600510A RID: 20746 RVA: 0x000C8080 File Offset: 0x000C6280
-		[Nullable(1)]
+		// Token: 0x17001C41 RID: 7233
+		// (get) Token: 0x06005631 RID: 22065 RVA: 0x000D3948 File Offset: 0x000D1B48
 		public virtual List<IDollGrabItem> Items
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._ItemsInited)
@@ -105,10 +100,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AD5 RID: 6869
-		// (get) Token: 0x0600510B RID: 20747 RVA: 0x000C80E9 File Offset: 0x000C62E9
+		// Token: 0x17001C42 RID: 7234
+		// (get) Token: 0x06005632 RID: 22066 RVA: 0x000D39B1 File Offset: 0x000D1BB1
+		[Nullable(2)]
 		public virtual IDollGrabInfiniteModeData InfiniteModeData
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._InfiniteModeDataInited)
@@ -121,30 +118,32 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AD6 RID: 6870
-		// (get) Token: 0x0600510C RID: 20748 RVA: 0x000C811D File Offset: 0x000C631D
+		// Token: 0x17001C43 RID: 7235
+		// (get) Token: 0x06005633 RID: 22067 RVA: 0x000D39E5 File Offset: 0x000D1BE5
+		[Nullable(2)]
 		public virtual string AkEvent
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.Instance.AkEvent;
 			}
 		}
 
-		// Token: 0x04002E94 RID: 11924
+		// Token: 0x0400315C RID: 12636
 		private IDollGrabMachineComponent Instance;
 
-		// Token: 0x04002E95 RID: 11925
-		[Nullable(1)]
+		// Token: 0x0400315D RID: 12637
 		private List<IDollGrabItem> _ItemsCache;
 
-		// Token: 0x04002E96 RID: 11926
+		// Token: 0x0400315E RID: 12638
 		private bool _ItemsInited;
 
-		// Token: 0x04002E97 RID: 11927
+		// Token: 0x0400315F RID: 12639
+		[Nullable(2)]
 		private IDollGrabInfiniteModeData _InfiniteModeDataCache;
 
-		// Token: 0x04002E98 RID: 11928
+		// Token: 0x04003160 RID: 12640
 		private bool _InfiniteModeDataInited;
 	}
 }

@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006991 RID: 27025
+	// Token: 0x02005AED RID: 23277
 	public class LevelConditionExParams
 	{
 	}

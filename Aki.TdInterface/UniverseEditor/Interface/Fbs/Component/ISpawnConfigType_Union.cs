@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005944 RID: 22852
+	// Token: 0x02005F51 RID: 24401
 	public enum ISpawnConfigType_Union : byte
 	{
-		// Token: 0x0400EF16 RID: 61206
+		// Token: 0x0400FC0B RID: 64523
 		NONE,
-		// Token: 0x0400EF17 RID: 61207
+		// Token: 0x0400FC0C RID: 64524
 		ISpawnConfigType,
-		// Token: 0x0400EF18 RID: 61208
+		// Token: 0x0400FC0D RID: 64525
 		ITemplateMatrix
 	}
 }

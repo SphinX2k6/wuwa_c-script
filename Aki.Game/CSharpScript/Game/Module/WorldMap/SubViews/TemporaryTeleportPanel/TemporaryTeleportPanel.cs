@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.TemporaryTeleportPanel
 {
-	// Token: 0x020047EB RID: 18411
+	// Token: 0x0200371C RID: 14108
 	public class TemporaryTeleportPanel : WorldMapSecondaryUiLayoutB
 	{
-		// Token: 0x0603038E RID: 197518 RVA: 0x00B2D1A9 File Offset: 0x00B2B3A9
+		// Token: 0x06024B5E RID: 150366 RVA: 0x00A5D0ED File Offset: 0x00A5B2ED
 		[NullableContext(1)]
 		public override string GetResourceId()
 		{
 			return "UiItem_TemporaryTeleportPanel_Prefab";
 		}
 
-		// Token: 0x0603038F RID: 197519 RVA: 0x00B2D1B0 File Offset: 0x00B2B3B0
+		// Token: 0x06024B5F RID: 150367 RVA: 0x00A5D0F4 File Offset: 0x00A5B2F4
 		protected override void OnStart()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TemporaryTeleportPanel
 			base.OnStart();
 		}
 
-		// Token: 0x06030390 RID: 197520 RVA: 0x00B2D1CC File Offset: 0x00B2B3CC
+		// Token: 0x06024B60 RID: 150368 RVA: 0x00A5D110 File Offset: 0x00A5B310
 		[NullableContext(1)]
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TemporaryTeleportPanel
 			}
 		}
 
-		// Token: 0x06030391 RID: 197521 RVA: 0x00B2D327 File Offset: 0x00B2B527
+		// Token: 0x06024B61 RID: 150369 RVA: 0x00A5D26B File Offset: 0x00A5B46B
 		protected override void OnMiddleCenterBtnClick(int index)
 		{
 			if (this.SelectedMarkItem != null)
@@ -104,13 +104,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TemporaryTeleportPanel
 			}
 		}
 
-		// Token: 0x06030392 RID: 197522 RVA: 0x00B2D353 File Offset: 0x00B2B553
+		// Token: 0x06024B62 RID: 150370 RVA: 0x00A5D297 File Offset: 0x00A5B497
 		protected override void OnDelBtnClick()
 		{
 			this.OpenSureRemoveTemporaryTeleport();
 		}
 
-		// Token: 0x06030393 RID: 197523 RVA: 0x00B2D35C File Offset: 0x00B2B55C
+		// Token: 0x06024B63 RID: 150371 RVA: 0x00A5D2A0 File Offset: 0x00A5B4A0
 		private void OpenSureRemoveTemporaryTeleport()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.DestroyTemporaryTeleport);
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TemporaryTeleportPanel
 			instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06030394 RID: 197524 RVA: 0x00B2D39D File Offset: 0x00B2B59D
+		// Token: 0x06024B64 RID: 150372 RVA: 0x00A5D2E1 File Offset: 0x00A5B4E1
 		private void RemoveTemporaryTeleport()
 		{
 			if (this.SelectedMarkItem != null)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TemporaryTeleportPanel
 			}
 		}
 
-		// Token: 0x06030395 RID: 197525 RVA: 0x00B2D3D4 File Offset: 0x00B2B5D4
+		// Token: 0x06024B65 RID: 150373 RVA: 0x00A5D318 File Offset: 0x00A5B518
 		private void UpdateButtonState()
 		{
 			ButtonItem middleCenterBtn = this.MiddleCenterBtn;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TemporaryTeleportPanel
 			middleCenterBtn2.SetEnableClick(selectedMarkItem == null || !selectedMarkItem.IsServerDisable);
 		}
 
-		// Token: 0x06030396 RID: 197526 RVA: 0x00B2D450 File Offset: 0x00B2B650
+		// Token: 0x06024B66 RID: 150374 RVA: 0x00A5D394 File Offset: 0x00A5B594
 		private void UpdateMultiMap()
 		{
 			if (this.SelectedMarkItem == null)
@@ -182,14 +182,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TemporaryTeleportPanel
 			this.SetSpriteByPath(path, base.GetSprite(11), false, null, null);
 		}
 
-		// Token: 0x04019F68 RID: 106344
+		// Token: 0x0401461C RID: 83484
 		[Nullable(2)]
 		private TemporaryTeleportMarkItem SelectedMarkItem;
 
-		// Token: 0x0200AAAE RID: 43694
+		// Token: 0x02009460 RID: 37984
 		public static class EComponents
 		{
-			// Token: 0x04033EC1 RID: 212673
+			// Token: 0x0402E647 RID: 190023
 			public const int TemporaryTeleportPanel = 0;
 		}
 	}

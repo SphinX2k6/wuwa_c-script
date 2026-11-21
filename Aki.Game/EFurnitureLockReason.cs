@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02000F8E RID: 3982
+// Token: 0x02000443 RID: 1091
 public enum EFurnitureLockReason
 {
-	// Token: 0x04002E58 RID: 11864
+	// Token: 0x04002EF1 RID: 12017
 	None,
-	// Token: 0x04002E59 RID: 11865
+	// Token: 0x04002EF2 RID: 12018
 	Occupied,
-	// Token: 0x04002E5A RID: 11866
+	// Token: 0x04002EF3 RID: 12019
 	Shop,
-	// Token: 0x04002E5B RID: 11867
+	// Token: 0x04002EF4 RID: 12020
 	Gift,
-	// Token: 0x04002E5C RID: 11868
+	// Token: 0x04002EF5 RID: 12021
 	Atmosphere
 }

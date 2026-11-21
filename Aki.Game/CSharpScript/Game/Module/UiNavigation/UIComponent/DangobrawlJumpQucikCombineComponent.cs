@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 {
-	// Token: 0x020049FA RID: 18938
+	// Token: 0x02003974 RID: 14708
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangobrawlJumpQucikCombineComponent : HotKeyComponent
 	{
-		// Token: 0x060312AB RID: 201387 RVA: 0x00B6766E File Offset: 0x00B6586E
+		// Token: 0x06025DE1 RID: 155105 RVA: 0x00AA262A File Offset: 0x00AA082A
 		public DangobrawlJumpQucikCombineComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060312AC RID: 201388 RVA: 0x00B6768C File Offset: 0x00B6588C
+		// Token: 0x06025DE2 RID: 155106 RVA: 0x00AA2648 File Offset: 0x00AA0848
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnDangoBrawlBackpackModified, new Action<EDangoBrawlModifyType, int>(this.OnDangoBrawlBackpackModified));
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 			EventSystem.Instance.Add(EEventName.OnDangoBrawlBagUpdated, new Action(this.OnDangoBrawlBagUpdated));
 		}
 
-		// Token: 0x060312AD RID: 201389 RVA: 0x00B676F0 File Offset: 0x00B658F0
+		// Token: 0x06025DE3 RID: 155107 RVA: 0x00AA26AC File Offset: 0x00AA08AC
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnDangoBrawlBackpackModified, new Action<EDangoBrawlModifyType, int>(this.OnDangoBrawlBackpackModified));
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 			EventSystem.Instance.Remove(EEventName.OnDangoBrawlBagUpdated, new Action(this.OnDangoBrawlBagUpdated));
 		}
 
-		// Token: 0x060312AE RID: 201390 RVA: 0x00B67754 File Offset: 0x00B65954
+		// Token: 0x06025DE4 RID: 155108 RVA: 0x00AA2710 File Offset: 0x00AA0910
 		protected override void OnRelease(HotKeyMap config)
 		{
 			DangoBrawlItemViewRegistry viewRegistry = DangoBrawlModel.Instance.GetViewRegistry();
@@ -56,31 +56,31 @@ namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 			UiNavigationNewController.Instance.SetNavigationMousePositionForView(uuiitem2);
 		}
 
-		// Token: 0x060312AF RID: 201391 RVA: 0x00B6779B File Offset: 0x00B6599B
+		// Token: 0x06025DE5 RID: 155109 RVA: 0x00AA2757 File Offset: 0x00AA0957
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
 			this.RefreshVisibleMode();
 		}
 
-		// Token: 0x060312B0 RID: 201392 RVA: 0x00B677A3 File Offset: 0x00B659A3
+		// Token: 0x06025DE6 RID: 155110 RVA: 0x00AA275F File Offset: 0x00AA095F
 		private void OnDangoBrawlBackpackModified(EDangoBrawlModifyType modifyType, int uid)
 		{
 			this.RefreshVisibleMode();
 		}
 
-		// Token: 0x060312B1 RID: 201393 RVA: 0x00B677AB File Offset: 0x00B659AB
+		// Token: 0x06025DE7 RID: 155111 RVA: 0x00AA2767 File Offset: 0x00AA0967
 		private void OnDangoBrawlBenchModified(EDangoBrawlModifyType modifyType, int uid)
 		{
 			this.RefreshVisibleMode();
 		}
 
-		// Token: 0x060312B2 RID: 201394 RVA: 0x00B677B3 File Offset: 0x00B659B3
+		// Token: 0x06025DE8 RID: 155112 RVA: 0x00AA276F File Offset: 0x00AA096F
 		private void OnDangoBrawlBagUpdated()
 		{
 			this.RefreshVisibleMode();
 		}
 
-		// Token: 0x060312B3 RID: 201395 RVA: 0x00B677BC File Offset: 0x00B659BC
+		// Token: 0x06025DE9 RID: 155113 RVA: 0x00AA2778 File Offset: 0x00AA0978
 		private void RefreshVisibleMode()
 		{
 			ActivityDangoBrawlController instance = ActivityDangoBrawlController.Instance;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, isActive, false);
 		}
 
-		// Token: 0x0401A4E9 RID: 107753
+		// Token: 0x04014D5B RID: 85339
 		private EDragSourceKind[] SourceKinds = new EDragSourceKind[]
 		{
 			EDragSourceKind.Bag,

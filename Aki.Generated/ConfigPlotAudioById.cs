@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000749 RID: 1865
+	// Token: 0x02000761 RID: 1889
 	public class ConfigPlotAudioById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002BC7 RID: 11207 RVA: 0x00150EF3 File Offset: 0x0014F0F3
+		// Token: 0x06002C57 RID: 11351 RVA: 0x0015796F File Offset: 0x00155B6F
 		static ConfigPlotAudioById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPlotAudioById.CreateStaticDefaultValue), new Action(ConfigPlotAudioById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002BC8 RID: 11208 RVA: 0x00150F14 File Offset: 0x0014F114
+		// Token: 0x06002C58 RID: 11352 RVA: 0x00157990 File Offset: 0x00155B90
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPlotAudioById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002BC9 RID: 11209 RVA: 0x00150F93 File Offset: 0x0014F193
+		// Token: 0x06002C59 RID: 11353 RVA: 0x00157A0F File Offset: 0x00155C0F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPlotAudioById.LogPair = null;
 			ConfigPlotAudioById.HandleId = 0;
 		}
 
-		// Token: 0x06002BCA RID: 11210 RVA: 0x00150FA1 File Offset: 0x0014F1A1
+		// Token: 0x06002C5A RID: 11354 RVA: 0x00157A1D File Offset: 0x00155C1D
 		public static void Init()
 		{
 			ConfigPlotAudioById.HandleId = ConfigCommon.InitDataStatement(ConfigPlotAudioById.HandleId, "db_plot_audio.db", "select BinData from `PlotAudio` where Id=?");
 		}
 
-		// Token: 0x06002BCB RID: 11211 RVA: 0x00150FBC File Offset: 0x0014F1BC
+		// Token: 0x06002C5B RID: 11355 RVA: 0x00157A38 File Offset: 0x00155C38
 		public static PlotAudio? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPlotAudioById.HandleId, ConfigPlotAudioById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new PlotAudio?(rootAsPlotAudio);
 		}
 
-		// Token: 0x040032E5 RID: 13029
+		// Token: 0x0400338D RID: 13197
 		private const string DB = "db_plot_audio.db";
 
-		// Token: 0x040032E6 RID: 13030
+		// Token: 0x0400338E RID: 13198
 		private const string FILE = "j.剧情语音.xlsx";
 
-		// Token: 0x040032E7 RID: 13031
+		// Token: 0x0400338F RID: 13199
 		private const string TABLE = "PlotAudio";
 
-		// Token: 0x040032E8 RID: 13032
+		// Token: 0x04003390 RID: 13200
 		private const string COMMAND = "select BinData from `PlotAudio` where Id=?";
 
-		// Token: 0x040032E9 RID: 13033
+		// Token: 0x04003391 RID: 13201
 		private const string KEY_PREFIX = "PlotAudioById";
 
-		// Token: 0x040032EA RID: 13034
+		// Token: 0x04003392 RID: 13202
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040032EB RID: 13035
+		// Token: 0x04003393 RID: 13203
 		private static int HandleId;
 	}
 }

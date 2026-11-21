@@ -5,12 +5,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 {
-	// Token: 0x020070AD RID: 28845
+	// Token: 0x0200630C RID: 25356
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SafetyLocationComponent : EntityComponent
 	{
-		// Token: 0x0604654B RID: 288075 RVA: 0x011A11E0 File Offset: 0x0119F3E0
+		// Token: 0x0603D5F1 RID: 251377 RVA: 0x011BEAF4 File Offset: 0x011BCCF4
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			LocationSafetyComponent compConfig = args.GetP1<CreateEntityData>().GetParam<SafetyLocationComponent>() as LocationSafetyComponent;
@@ -18,14 +18,14 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return true;
 		}
 
-		// Token: 0x0604654C RID: 288076 RVA: 0x011A1206 File Offset: 0x0119F406
+		// Token: 0x0603D5F2 RID: 251378 RVA: 0x011BEB1A File Offset: 0x011BCD1A
 		protected override bool OnStart()
 		{
 			EventSystem.Instance.AddWithTarget(base.Entity, EEventName.OnMyPlayerInOutRangeLocal, new Action<bool>(this.OnMyPlayerOverlapCallback));
 			return true;
 		}
 
-		// Token: 0x0604654D RID: 288077 RVA: 0x011A122B File Offset: 0x0119F42B
+		// Token: 0x0603D5F3 RID: 251379 RVA: 0x011BEB3F File Offset: 0x011BCD3F
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.OnMyPlayerInOutRangeLocal, new Action<bool>(this.OnMyPlayerOverlapCallback));
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return true;
 		}
 
-		// Token: 0x0604654E RID: 288078 RVA: 0x011A1260 File Offset: 0x0119F460
+		// Token: 0x0603D5F4 RID: 251380 RVA: 0x011BEB74 File Offset: 0x011BCD74
 		private void OnMyPlayerOverlapCallback(bool isEnter)
 		{
 			this.IsMyPlayerInRange = isEnter;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			roleLocationSafetyComponent2.RemoveSafetyLocationConfig(base.Entity);
 		}
 
-		// Token: 0x0604654F RID: 288079 RVA: 0x011A12B8 File Offset: 0x0119F4B8
+		// Token: 0x0603D5F5 RID: 251381 RVA: 0x011BEBCC File Offset: 0x011BCDCC
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -73,28 +73,42 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 				return false;
 			}
 			SafetyLocationComponent safetyLocationComponent = (SafetyLocationComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CompConfig"))
+			if (safetyLocationComponent.CompConfig == null)
 			{
-				if (safetyLocationComponent.CompConfig == null)
-				{
-					this.CompConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LocationSafetyComponent>(this.CompConfig), "CompConfig"))
-				{
-					return false;
-				}
+				this.CompConfig = null;
 			}
-			if (base.CanResetComponentProperty("IsMyPlayerInRange"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CompConfig), "CompConfig"))
 			{
-				this.IsMyPlayerInRange = safetyLocationComponent.IsMyPlayerInRange;
+				return false;
 			}
+			this.IsMyPlayerInRange = safetyLocationComponent.IsMyPlayerInRange;
 			return true;
 		}
 
-		// Token: 0x04024DAB RID: 150955
+		// Token: 0x17007447 RID: 29767
+		// (get) Token: 0x0603D5F6 RID: 251382 RVA: 0x011BEC23 File Offset: 0x011BCE23
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007448 RID: 29768
+		// (get) Token: 0x0603D5F7 RID: 251383 RVA: 0x011BEC26 File Offset: 0x011BCE26
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040208D2 RID: 133330
 		private LocationSafetyComponent CompConfig;
 
-		// Token: 0x04024DAC RID: 150956
+		// Token: 0x040208D3 RID: 133331
 		private bool IsMyPlayerInRange;
 	}
 }

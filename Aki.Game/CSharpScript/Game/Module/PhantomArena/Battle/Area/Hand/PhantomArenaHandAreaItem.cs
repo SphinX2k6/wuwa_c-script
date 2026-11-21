@@ -6,22 +6,22 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Hand
 {
-	// Token: 0x020052CA RID: 21194
+	// Token: 0x0200429A RID: 17050
 	public class PhantomArenaHandAreaItem : UiPanelBase
 	{
-		// Token: 0x0603639C RID: 222108 RVA: 0x00CD4568 File Offset: 0x00CD2768
+		// Token: 0x0602B297 RID: 176791 RVA: 0x00C21C90 File Offset: 0x00C1FE90
 		protected override void OnStart()
 		{
 			this.Sequence = new UiSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603639D RID: 222109 RVA: 0x00CD457B File Offset: 0x00CD277B
+		// Token: 0x0602B298 RID: 176792 RVA: 0x00C21CA3 File Offset: 0x00C1FEA3
 		protected override void OnBeforeDestroy()
 		{
 			this.Sequence.Clear();
 		}
 
-		// Token: 0x0603639E RID: 222110 RVA: 0x00CD4588 File Offset: 0x00CD2788
+		// Token: 0x0602B299 RID: 176793 RVA: 0x00C21CB0 File Offset: 0x00C1FEB0
 		public UniTask PlayMoveOutSequence()
 		{
 			PhantomArenaHandAreaItem.<PlayMoveOutSequence>d__3 <PlayMoveOutSequence>d__;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Hand
 			return <PlayMoveOutSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603639F RID: 222111 RVA: 0x00CD45CC File Offset: 0x00CD27CC
+		// Token: 0x0602B29A RID: 176794 RVA: 0x00C21CF4 File Offset: 0x00C1FEF4
 		public UniTask PlayMoveInSequence()
 		{
 			PhantomArenaHandAreaItem.<PlayMoveInSequence>d__4 <PlayMoveInSequence>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Hand
 			return <PlayMoveInSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401CAC9 RID: 117449
+		// Token: 0x040174FE RID: 95486
 		[Nullable(1)]
 		protected UiSequencePlayer Sequence;
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002CB RID: 715
+	// Token: 0x020002E0 RID: 736
 	public class ConfigFilterSettingById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060010C7 RID: 4295 RVA: 0x000B83DB File Offset: 0x000B65DB
+		// Token: 0x06001145 RID: 4421 RVA: 0x000BE8E7 File Offset: 0x000BCAE7
 		static ConfigFilterSettingById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFilterSettingById.CreateStaticDefaultValue), new Action(ConfigFilterSettingById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060010C8 RID: 4296 RVA: 0x000B83FC File Offset: 0x000B65FC
+		// Token: 0x06001146 RID: 4422 RVA: 0x000BE908 File Offset: 0x000BCB08
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFilterSettingById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060010C9 RID: 4297 RVA: 0x000B847B File Offset: 0x000B667B
+		// Token: 0x06001147 RID: 4423 RVA: 0x000BE987 File Offset: 0x000BCB87
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFilterSettingById.LogPair = null;
 			ConfigFilterSettingById.HandleId = 0;
 		}
 
-		// Token: 0x060010CA RID: 4298 RVA: 0x000B8489 File Offset: 0x000B6689
+		// Token: 0x06001148 RID: 4424 RVA: 0x000BE995 File Offset: 0x000BCB95
 		public static void Init()
 		{
 			ConfigFilterSettingById.HandleId = ConfigCommon.InitDataStatement(ConfigFilterSettingById.HandleId, "db_menu.db", "select BinData from `FilterSetting` where Id=?");
 		}
 
-		// Token: 0x060010CB RID: 4299 RVA: 0x000B84A4 File Offset: 0x000B66A4
+		// Token: 0x06001149 RID: 4425 RVA: 0x000BE9B0 File Offset: 0x000BCBB0
 		public static FilterSetting? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFilterSettingById.HandleId, ConfigFilterSettingById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FilterSetting?(rootAsFilterSetting);
 		}
 
-		// Token: 0x04001371 RID: 4977
+		// Token: 0x04001404 RID: 5124
 		private const string DB = "db_menu.db";
 
-		// Token: 0x04001372 RID: 4978
+		// Token: 0x04001405 RID: 5125
 		private const string FILE = "s.设置系统.xlsx";
 
-		// Token: 0x04001373 RID: 4979
+		// Token: 0x04001406 RID: 5126
 		private const string TABLE = "FilterSetting";
 
-		// Token: 0x04001374 RID: 4980
+		// Token: 0x04001407 RID: 5127
 		private const string COMMAND = "select BinData from `FilterSetting` where Id=?";
 
-		// Token: 0x04001375 RID: 4981
+		// Token: 0x04001408 RID: 5128
 		private const string KEY_PREFIX = "FilterSettingById";
 
-		// Token: 0x04001376 RID: 4982
+		// Token: 0x04001409 RID: 5129
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001377 RID: 4983
+		// Token: 0x0400140A RID: 5130
 		private static int HandleId;
 	}
 }

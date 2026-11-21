@@ -12,67 +12,67 @@ namespace Aki.TDConfigMgr.Component
 	[Nullable(0)]
 	public class DestructibleItem_SetValue
 	{
-		// Token: 0x040001B1 RID: 433
+		// Token: 0x040001B6 RID: 438
 		public bool? Disabled;
 
-		// Token: 0x040001B2 RID: 434
+		// Token: 0x040001B7 RID: 439
 		public IHitBulletType HitBullet;
 
-		// Token: 0x040001B3 RID: 435
+		// Token: 0x040001B8 RID: 440
 		public IHitTimeScaleRatio AttackerHitTimeScaleRatio;
 
-		// Token: 0x040001B4 RID: 436
+		// Token: 0x040001B9 RID: 441
 		public IHitTimeScaleRatio VictimHitTimeScaleRatio;
 
-		// Token: 0x040001B5 RID: 437
+		// Token: 0x040001BA RID: 442
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IAimPart> AimParts;
 
-		// Token: 0x040001B6 RID: 438
+		// Token: 0x040001BB RID: 443
 		public bool? EdIsLocked;
 
-		// Token: 0x040001B7 RID: 439
+		// Token: 0x040001BC RID: 444
 		public int DurabilityId;
 
-		// Token: 0x040001B8 RID: 440
+		// Token: 0x040001BD RID: 445
 		public int Durability;
 
-		// Token: 0x040001B9 RID: 441
+		// Token: 0x040001BE RID: 446
 		public IDurabilityWorn DurabilityWorn;
 
-		// Token: 0x040001BA RID: 442
+		// Token: 0x040001BF RID: 447
 		public IDurabilityStateConfig DurabilityStateConfig;
 
-		// Token: 0x040001BB RID: 443
-		[Nullable(1)]
+		// Token: 0x040001C0 RID: 448
+		[Nullable(0)]
 		public VectorInfo HitPoint;
 
-		// Token: 0x040001BC RID: 444
+		// Token: 0x040001C1 RID: 449
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> DestructionActions;
 
-		// Token: 0x040001BD RID: 445
+		// Token: 0x040001C2 RID: 450
 		public ISkillDamage SkillDamage;
 
-		// Token: 0x040001BE RID: 446
+		// Token: 0x040001C3 RID: 451
 		public IElementDamage ElementDamage;
 
-		// Token: 0x040001BF RID: 447
+		// Token: 0x040001C4 RID: 452
 		public IWeaponDamage WeaponDamage;
 
-		// Token: 0x040001C0 RID: 448
+		// Token: 0x040001C5 RID: 453
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IMatchRoleType> MatchRoleOption;
 	}

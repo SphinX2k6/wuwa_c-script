@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C49 RID: 19529
+	// Token: 0x02003BFA RID: 15354
 	public interface ISheriffReportPopViewParam
 	{
-		// Token: 0x17007CC2 RID: 31938
-		// (get) Token: 0x060327F8 RID: 206840
-		// (set) Token: 0x060327F9 RID: 206841
+		// Token: 0x1700506C RID: 20588
+		// (get) Token: 0x060275AB RID: 161195
+		// (set) Token: 0x060275AC RID: 161196
 		int CriminalId { get; set; }
 
-		// Token: 0x17007CC3 RID: 31939
-		// (get) Token: 0x060327FA RID: 206842
-		// (set) Token: 0x060327FB RID: 206843
+		// Token: 0x1700506D RID: 20589
+		// (get) Token: 0x060275AD RID: 161197
+		// (set) Token: 0x060275AE RID: 161198
 		bool BothPage { get; set; }
 	}
 }

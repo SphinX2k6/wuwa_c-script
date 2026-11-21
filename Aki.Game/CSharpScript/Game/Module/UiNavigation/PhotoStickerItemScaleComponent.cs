@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049B1 RID: 18865
+	// Token: 0x0200392B RID: 14635
 	public class PhotoStickerItemScaleComponent : HotKeyComponent
 	{
-		// Token: 0x06031195 RID: 201109 RVA: 0x00B6476D File Offset: 0x00B6296D
+		// Token: 0x06025CCB RID: 154827 RVA: 0x00A9F6BD File Offset: 0x00A9D8BD
 		public PhotoStickerItemScaleComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031196 RID: 201110 RVA: 0x00B64776 File Offset: 0x00B62976
+		// Token: 0x06025CCC RID: 154828 RVA: 0x00A9F6C6 File Offset: 0x00A9D8C6
 		protected void ChangeScale(float ratio)
 		{
 			PhotographController.Instance.RequestChangeStickerScale(ratio);
 		}
 
-		// Token: 0x06031197 RID: 201111 RVA: 0x00B64783 File Offset: 0x00B62983
+		// Token: 0x06025CCD RID: 154829 RVA: 0x00A9F6D3 File Offset: 0x00A9D8D3
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, true, false);
 		}
 
-		// Token: 0x0401A4B8 RID: 107704
+		// Token: 0x04014D2A RID: 85290
 		protected const float DEAD_AREA = 0.4f;
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A45 RID: 2629
+	// Token: 0x02000B0E RID: 2830
 	public class EViewDistanceTypeJsonConverter : JsonConverter<EViewDistanceType>
 	{
-		// Token: 0x060039E9 RID: 14825 RVA: 0x0009553C File Offset: 0x0009373C
+		// Token: 0x06003DD3 RID: 15827 RVA: 0x0009E10C File Offset: 0x0009C30C
 		public override EViewDistanceType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EViewDistanceTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060039EA RID: 14826 RVA: 0x00095560 File Offset: 0x00093760
+		// Token: 0x06003DD4 RID: 15828 RVA: 0x0009E130 File Offset: 0x0009C330
 		public override void Write(Utf8JsonWriter writer, EViewDistanceType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

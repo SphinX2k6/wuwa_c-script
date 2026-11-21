@@ -3,47 +3,47 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.StaticScene
 {
-	// Token: 0x02006A0E RID: 27150
+	// Token: 0x02005B6B RID: 23403
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DefaultLevelSequencePlayParam
 	{
-		// Token: 0x170098A1 RID: 39073
-		// (get) Token: 0x06043892 RID: 276626 RVA: 0x01084389 File Offset: 0x01082589
-		// (set) Token: 0x06043893 RID: 276627 RVA: 0x01084391 File Offset: 0x01082591
+		// Token: 0x17006D86 RID: 28038
+		// (get) Token: 0x060398DE RID: 235742 RVA: 0x010289AD File Offset: 0x01026BAD
+		// (set) Token: 0x060398DF RID: 235743 RVA: 0x010289B5 File Offset: 0x01026BB5
 		public float InTime { get; set; }
 
-		// Token: 0x170098A2 RID: 39074
-		// (get) Token: 0x06043894 RID: 276628 RVA: 0x0108439A File Offset: 0x0108259A
-		// (set) Token: 0x06043895 RID: 276629 RVA: 0x010843A2 File Offset: 0x010825A2
+		// Token: 0x17006D87 RID: 28039
+		// (get) Token: 0x060398E0 RID: 235744 RVA: 0x010289BE File Offset: 0x01026BBE
+		// (set) Token: 0x060398E1 RID: 235745 RVA: 0x010289C6 File Offset: 0x01026BC6
 		public float OutTime { get; set; }
 
-		// Token: 0x170098A3 RID: 39075
-		// (get) Token: 0x06043896 RID: 276630 RVA: 0x010843AB File Offset: 0x010825AB
-		// (set) Token: 0x06043897 RID: 276631 RVA: 0x010843B3 File Offset: 0x010825B3
+		// Token: 0x17006D88 RID: 28040
+		// (get) Token: 0x060398E2 RID: 235746 RVA: 0x010289CF File Offset: 0x01026BCF
+		// (set) Token: 0x060398E3 RID: 235747 RVA: 0x010289D7 File Offset: 0x01026BD7
 		public float SmoothFactor { get; set; }
 
-		// Token: 0x170098A4 RID: 39076
-		// (get) Token: 0x06043898 RID: 276632 RVA: 0x010843BC File Offset: 0x010825BC
-		// (set) Token: 0x06043899 RID: 276633 RVA: 0x010843C4 File Offset: 0x010825C4
+		// Token: 0x17006D89 RID: 28041
+		// (get) Token: 0x060398E4 RID: 235748 RVA: 0x010289E0 File Offset: 0x01026BE0
+		// (set) Token: 0x060398E5 RID: 235749 RVA: 0x010289E8 File Offset: 0x01026BE8
 		public float SmoothDelta { get; set; }
 
-		// Token: 0x170098A5 RID: 39077
-		// (get) Token: 0x0604389A RID: 276634 RVA: 0x010843CD File Offset: 0x010825CD
-		// (set) Token: 0x0604389B RID: 276635 RVA: 0x010843D5 File Offset: 0x010825D5
+		// Token: 0x17006D8A RID: 28042
+		// (get) Token: 0x060398E6 RID: 235750 RVA: 0x010289F1 File Offset: 0x01026BF1
+		// (set) Token: 0x060398E7 RID: 235751 RVA: 0x010289F9 File Offset: 0x01026BF9
 		public BindTargetSetting BindSetting { get; set; }
 
-		// Token: 0x170098A6 RID: 39078
-		// (get) Token: 0x0604389C RID: 276636 RVA: 0x010843DE File Offset: 0x010825DE
-		// (set) Token: 0x0604389D RID: 276637 RVA: 0x010843E6 File Offset: 0x010825E6
+		// Token: 0x17006D8B RID: 28043
+		// (get) Token: 0x060398E8 RID: 235752 RVA: 0x01028A02 File Offset: 0x01026C02
+		// (set) Token: 0x060398E9 RID: 235753 RVA: 0x01028A0A File Offset: 0x01026C0A
 		public FollowTargetSetting FollowSetting { get; set; }
 
-		// Token: 0x170098A7 RID: 39079
-		// (get) Token: 0x0604389E RID: 276638 RVA: 0x010843EF File Offset: 0x010825EF
-		// (set) Token: 0x0604389F RID: 276639 RVA: 0x010843F7 File Offset: 0x010825F7
+		// Token: 0x17006D8C RID: 28044
+		// (get) Token: 0x060398EA RID: 235754 RVA: 0x01028A13 File Offset: 0x01026C13
+		// (set) Token: 0x060398EB RID: 235755 RVA: 0x01028A1B File Offset: 0x01026C1B
 		public TsBaseCharacter Target { get; set; }
 
-		// Token: 0x060438A0 RID: 276640 RVA: 0x01084400 File Offset: 0x01082600
+		// Token: 0x060398EC RID: 235756 RVA: 0x01028A24 File Offset: 0x01026C24
 		public DefaultLevelSequencePlayParam(float inTime, float outTime, float smoothFactor, float smoothDelta, BindTargetSetting bindSetting, FollowTargetSetting followSetting, TsBaseCharacter target)
 		{
 			this.InTime = inTime;
@@ -55,28 +55,28 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.Target = target;
 		}
 
-		// Token: 0x04023421 RID: 144417
+		// Token: 0x0401E613 RID: 124435
 		public readonly int MaxDelayUpdateFrame = 4;
 
-		// Token: 0x04023422 RID: 144418
+		// Token: 0x0401E614 RID: 124436
 		public Rotator InitPlayerRotator = Rotator.Create();
 
-		// Token: 0x04023423 RID: 144419
+		// Token: 0x0401E615 RID: 124437
 		public Vector InitPlayerFloorLocation = Vector.Create();
 
-		// Token: 0x04023424 RID: 144420
+		// Token: 0x0401E616 RID: 124438
 		public int DelayUpdateFrame;
 
-		// Token: 0x04023425 RID: 144421
+		// Token: 0x0401E617 RID: 124439
 		public float PlayedTime;
 
-		// Token: 0x04023426 RID: 144422
+		// Token: 0x0401E618 RID: 124440
 		public float TimeLength;
 
-		// Token: 0x04023427 RID: 144423
+		// Token: 0x0401E619 RID: 124441
 		public bool HasLastFrameFloorLocationZ;
 
-		// Token: 0x04023428 RID: 144424
+		// Token: 0x0401E61A RID: 124442
 		public double LastFrameFloorLocationZ;
 	}
 }

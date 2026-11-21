@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077E2 RID: 30690
+	// Token: 0x0200801D RID: 32797
 	public static class TToggleMapMarkStateVerify
 	{
-		// Token: 0x06037AA7 RID: 228007 RVA: 0x00786FF4 File Offset: 0x007851F4
+		// Token: 0x0603B03A RID: 241722 RVA: 0x007EC7A4 File Offset: 0x007EA9A4
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

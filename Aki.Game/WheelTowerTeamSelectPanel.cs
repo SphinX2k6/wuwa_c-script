@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015FB RID: 5627
+// Token: 0x02000AB3 RID: 2739
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerTeamSelectPanel : UiPanelBase
 {
-	// Token: 0x06009EB9 RID: 40633 RVA: 0x0022AB3C File Offset: 0x00228D3C
+	// Token: 0x06007297 RID: 29335 RVA: 0x00234914 File Offset: 0x00232B14
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -34,7 +34,7 @@ public class WheelTowerTeamSelectPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009EBA RID: 40634 RVA: 0x0022AC04 File Offset: 0x00228E04
+	// Token: 0x06007298 RID: 29336 RVA: 0x002349DC File Offset: 0x00232BDC
 	protected override void OnStart()
 	{
 		this.ScrollView = new GenericScrollViewNew<WheelTowerTeamSelectItem, int>(base.GetScrollViewWithScrollbar(0), new Func<WheelTowerTeamSelectItem>(this.CreateTeamItem), null, false, null);
@@ -46,7 +46,7 @@ public class WheelTowerTeamSelectPanel : UiPanelBase
 		this.ScrollView.RefreshByData(this.TeamIdList, null, false);
 	}
 
-	// Token: 0x06009EBB RID: 40635 RVA: 0x0022AC68 File Offset: 0x00228E68
+	// Token: 0x06007299 RID: 29337 RVA: 0x00234A40 File Offset: 0x00232C40
 	public void Refresh()
 	{
 		int selectedIndex = this.ScrollView.GetSelectedIndex();
@@ -58,7 +58,7 @@ public class WheelTowerTeamSelectPanel : UiPanelBase
 		this.ScrollView.RefreshByData(this.TeamIdList, null, false);
 	}
 
-	// Token: 0x06009EBC RID: 40636 RVA: 0x0022ACAD File Offset: 0x00228EAD
+	// Token: 0x0600729A RID: 29338 RVA: 0x00234A85 File Offset: 0x00232C85
 	private WheelTowerTeamSelectItem CreateTeamItem()
 	{
 		return new WheelTowerTeamSelectItem
@@ -67,7 +67,7 @@ public class WheelTowerTeamSelectPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06009EBD RID: 40637 RVA: 0x0022ACC8 File Offset: 0x00228EC8
+	// Token: 0x0600729B RID: 29339 RVA: 0x00234AA0 File Offset: 0x00232CA0
 	private void OnTeamSelect(int teamId, int index)
 	{
 		Action<int> onTeamSelectCallback = this.OnTeamSelectCallback;
@@ -92,17 +92,17 @@ public class WheelTowerTeamSelectPanel : UiPanelBase
 		scrollView2.SelectGridProxy(index, false);
 	}
 
-	// Token: 0x06009EBE RID: 40638 RVA: 0x0022AD15 File Offset: 0x00228F15
+	// Token: 0x0600729C RID: 29340 RVA: 0x00234AED File Offset: 0x00232CED
 	private void OnBtnClick()
 	{
 		FormationController.Instance.OpenFormationView(false, null);
 	}
 
-	// Token: 0x04004700 RID: 18176
+	// Token: 0x040047A6 RID: 18342
 	[Nullable(2)]
 	public Action<int> OnTeamSelectCallback;
 
-	// Token: 0x04004701 RID: 18177
+	// Token: 0x040047A7 RID: 18343
 	[Nullable(new byte[]
 	{
 		2,
@@ -110,6 +110,6 @@ public class WheelTowerTeamSelectPanel : UiPanelBase
 	})]
 	private GenericScrollViewNew<WheelTowerTeamSelectItem, int> ScrollView;
 
-	// Token: 0x04004702 RID: 18178
+	// Token: 0x040047A8 RID: 18344
 	private readonly List<int> TeamIdList = new List<int>();
 }

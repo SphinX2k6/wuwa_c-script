@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001927 RID: 6439
+// Token: 0x02000DE0 RID: 3552
 public class MediumItemGridProhibitComponent : MediumItemGridVisibleComponent
 {
-	// Token: 0x0600BC84 RID: 48260 RVA: 0x002AAC22 File Offset: 0x002A8E22
+	// Token: 0x0600906E RID: 36974 RVA: 0x002B537E File Offset: 0x002B357E
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemLock";
 	}
 
-	// Token: 0x0600BC85 RID: 48261 RVA: 0x002AAC2C File Offset: 0x002A8E2C
+	// Token: 0x0600906F RID: 36975 RVA: 0x002B5388 File Offset: 0x002B3588
 	public UniTask PlayUnlockAnim()
 	{
 		MediumItemGridProhibitComponent.<PlayUnlockAnim>d__1 <PlayUnlockAnim>d__;

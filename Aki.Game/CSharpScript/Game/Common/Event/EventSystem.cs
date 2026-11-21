@@ -1,167 +1,166 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Common.Event
 {
-	// Token: 0x02007298 RID: 29336
+	// Token: 0x02006417 RID: 25623
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EventSystem : Singleton
 	{
-		// Token: 0x06047EEA RID: 294634 RVA: 0x0126E2A8 File Offset: 0x0126C4A8
+		// Token: 0x0603E2C0 RID: 254656 RVA: 0x0120FC6E File Offset: 0x0120DE6E
 		public bool Has(EEventName name, Delegate handle)
 		{
 			return this.EventInstance.Has(name, handle);
 		}
 
-		// Token: 0x06047EEB RID: 294635 RVA: 0x0126E2B7 File Offset: 0x0126C4B7
+		// Token: 0x0603E2C1 RID: 254657 RVA: 0x0120FC7D File Offset: 0x0120DE7D
 		public bool Has(EEventName name, Action handle)
 		{
 			return this.Has(name, handle);
 		}
 
-		// Token: 0x06047EEC RID: 294636 RVA: 0x0126E2C1 File Offset: 0x0126C4C1
+		// Token: 0x0603E2C2 RID: 254658 RVA: 0x0120FC87 File Offset: 0x0120DE87
 		public bool Has<[Nullable(2)] T1>(EEventName name, Action<T1> handle)
 		{
 			return this.Has(name, handle);
 		}
 
-		// Token: 0x06047EED RID: 294637 RVA: 0x0126E2CB File Offset: 0x0126C4CB
+		// Token: 0x0603E2C3 RID: 254659 RVA: 0x0120FC91 File Offset: 0x0120DE91
 		[NullableContext(2)]
 		public bool Has<T1, T2>(EEventName name, [Nullable(1)] Action<T1, T2> handle)
 		{
 			return this.Has(name, handle);
 		}
 
-		// Token: 0x06047EEE RID: 294638 RVA: 0x0126E2D5 File Offset: 0x0126C4D5
+		// Token: 0x0603E2C4 RID: 254660 RVA: 0x0120FC9B File Offset: 0x0120DE9B
 		[NullableContext(2)]
 		public bool Has<T1, T2, T3>(EEventName name, [Nullable(1)] Action<T1, T2, T3> handle)
 		{
 			return this.Has(name, handle);
 		}
 
-		// Token: 0x06047EEF RID: 294639 RVA: 0x0126E2DF File Offset: 0x0126C4DF
+		// Token: 0x0603E2C5 RID: 254661 RVA: 0x0120FCA5 File Offset: 0x0120DEA5
 		[NullableContext(2)]
 		public bool Has<T1, T2, T3, T4>(EEventName name, [Nullable(1)] Action<T1, T2, T3, T4> handle)
 		{
 			return this.Has(name, handle);
 		}
 
-		// Token: 0x06047EF0 RID: 294640 RVA: 0x0126E2E9 File Offset: 0x0126C4E9
+		// Token: 0x0603E2C6 RID: 254662 RVA: 0x0120FCAF File Offset: 0x0120DEAF
 		[NullableContext(2)]
 		public bool Has<T1, T2, T3, T4, T5>(EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5> handle)
 		{
 			return this.Has(name, handle);
 		}
 
-		// Token: 0x06047EF1 RID: 294641 RVA: 0x0126E2F3 File Offset: 0x0126C4F3
+		// Token: 0x0603E2C7 RID: 254663 RVA: 0x0120FCB9 File Offset: 0x0120DEB9
 		[NullableContext(2)]
 		public bool Has<T1, T2, T3, T4, T5, T6>(EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5, T6> handle)
 		{
 			return this.Has(name, handle);
 		}
 
-		// Token: 0x06047EF2 RID: 294642 RVA: 0x0126E2FD File Offset: 0x0126C4FD
+		// Token: 0x0603E2C8 RID: 254664 RVA: 0x0120FCC3 File Offset: 0x0120DEC3
 		[NullableContext(2)]
 		public bool Has<T1, T2, T3, T4, T5, T6, T7>(EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5, T6, T7> handle)
 		{
 			return this.Has(name, handle);
 		}
 
-		// Token: 0x06047EF3 RID: 294643 RVA: 0x0126E307 File Offset: 0x0126C507
+		// Token: 0x0603E2C9 RID: 254665 RVA: 0x0120FCCD File Offset: 0x0120DECD
 		public bool HasAny(EEventName name)
 		{
 			return this.EventInstance.HasAny(name);
 		}
 
-		// Token: 0x06047EF4 RID: 294644 RVA: 0x0126E318 File Offset: 0x0126C518
+		// Token: 0x0603E2CA RID: 254666 RVA: 0x0120FCDC File Offset: 0x0120DEDC
 		public bool HasAnyWithTarget(object target, EEventName name)
 		{
 			Event<EEventName, Delegate> targetEvent = this.GetTargetEvent(target);
 			return targetEvent != null && targetEvent.HasAny(name);
 		}
 
-		// Token: 0x06047EF5 RID: 294645 RVA: 0x0126E339 File Offset: 0x0126C539
+		// Token: 0x0603E2CB RID: 254667 RVA: 0x0120FCFD File Offset: 0x0120DEFD
 		public void RemoveTargetEvents(object target)
 		{
 			this.TargetEvents.Remove(target);
 		}
 
-		// Token: 0x06047EF6 RID: 294646 RVA: 0x0126E348 File Offset: 0x0126C548
+		// Token: 0x0603E2CC RID: 254668 RVA: 0x0120FD0C File Offset: 0x0120DF0C
 		public bool HasWithTarget(object target, EEventName name, Delegate handle)
 		{
 			Event<EEventName, Delegate> targetEvent = this.GetTargetEvent(target);
 			return targetEvent != null && targetEvent.Has(name, handle);
 		}
 
-		// Token: 0x06047EF7 RID: 294647 RVA: 0x0126E36A File Offset: 0x0126C56A
+		// Token: 0x0603E2CD RID: 254669 RVA: 0x0120FD2E File Offset: 0x0120DF2E
 		public bool HasWithTarget(object target, EEventName name, Action handle)
 		{
 			return this.HasWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047EF8 RID: 294648 RVA: 0x0126E375 File Offset: 0x0126C575
+		// Token: 0x0603E2CE RID: 254670 RVA: 0x0120FD39 File Offset: 0x0120DF39
 		public bool HasWithTarget<[Nullable(2)] T1>(object target, EEventName name, Action<T1> handle)
 		{
 			return this.HasWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047EF9 RID: 294649 RVA: 0x0126E380 File Offset: 0x0126C580
+		// Token: 0x0603E2CF RID: 254671 RVA: 0x0120FD44 File Offset: 0x0120DF44
 		public bool HasWithTarget<[Nullable(2)] T1, [Nullable(2)] T2>(object target, EEventName name, Action<T1, T2> handle)
 		{
 			return this.HasWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047EFA RID: 294650 RVA: 0x0126E38B File Offset: 0x0126C58B
+		// Token: 0x0603E2D0 RID: 254672 RVA: 0x0120FD4F File Offset: 0x0120DF4F
 		[NullableContext(2)]
 		public bool HasWithTarget<T1, T2, T3>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3> handle)
 		{
 			return this.HasWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047EFB RID: 294651 RVA: 0x0126E396 File Offset: 0x0126C596
+		// Token: 0x0603E2D1 RID: 254673 RVA: 0x0120FD5A File Offset: 0x0120DF5A
 		[NullableContext(2)]
 		public bool HasWithTarget<T1, T2, T3, T4>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4> handle)
 		{
 			return this.HasWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047EFC RID: 294652 RVA: 0x0126E3A1 File Offset: 0x0126C5A1
+		// Token: 0x0603E2D2 RID: 254674 RVA: 0x0120FD65 File Offset: 0x0120DF65
 		[NullableContext(2)]
 		public bool HasWithTarget<T1, T2, T3, T4, T5>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5> handle)
 		{
 			return this.HasWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047EFD RID: 294653 RVA: 0x0126E3AC File Offset: 0x0126C5AC
+		// Token: 0x0603E2D3 RID: 254675 RVA: 0x0120FD70 File Offset: 0x0120DF70
 		[NullableContext(2)]
 		public bool HasWithTarget<T1, T2, T3, T4, T5, T6>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5, T6> handle)
 		{
 			return this.HasWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047EFE RID: 294654 RVA: 0x0126E3B7 File Offset: 0x0126C5B7
+		// Token: 0x0603E2D4 RID: 254676 RVA: 0x0120FD7B File Offset: 0x0120DF7B
 		[NullableContext(2)]
 		public bool HasWithTarget<T1, T2, T3, T4, T5, T6, T7>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5, T6, T7> handle)
 		{
 			return this.HasWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047EFF RID: 294655 RVA: 0x0126E3C2 File Offset: 0x0126C5C2
+		// Token: 0x0603E2D5 RID: 254677 RVA: 0x0120FD86 File Offset: 0x0120DF86
 		public bool Add(EEventName name, Delegate handle)
 		{
 			return this.EventInstance.Add(name, handle);
 		}
 
-		// Token: 0x06047F00 RID: 294656 RVA: 0x0126E3D1 File Offset: 0x0126C5D1
+		// Token: 0x0603E2D6 RID: 254678 RVA: 0x0120FD95 File Offset: 0x0120DF95
 		public bool Add(EEventName name, GenericEventHandler handle)
 		{
 			return this.EventInstance.Add(name, handle);
 		}
 
-		// Token: 0x06047F01 RID: 294657 RVA: 0x0126E3E0 File Offset: 0x0126C5E0
+		// Token: 0x0603E2D7 RID: 254679 RVA: 0x0120FDA4 File Offset: 0x0120DFA4
 		public bool AddWithTargetUseHoldKey(object key, object target, EEventName name, Delegate handle)
 		{
 			Event<EEventName, Delegate> orCreateTargetEvent = this.GetOrCreateTargetEvent(target);
@@ -187,250 +186,224 @@ namespace CSharpScript.Game.Common.Event
 			return true;
 		}
 
-		// Token: 0x06047F02 RID: 294658 RVA: 0x0126E45A File Offset: 0x0126C65A
+		// Token: 0x0603E2D8 RID: 254680 RVA: 0x0120FE1E File Offset: 0x0120E01E
 		public bool AddWithTarget(object target, EEventName name, Delegate handle)
 		{
 			return this.GetOrCreateTargetEvent(target).Add(name, handle);
 		}
 
-		// Token: 0x06047F03 RID: 294659 RVA: 0x0126E46A File Offset: 0x0126C66A
+		// Token: 0x0603E2D9 RID: 254681 RVA: 0x0120FE2E File Offset: 0x0120E02E
 		public bool Once(EEventName name, Delegate handle)
 		{
 			return this.EventInstance.Once(name, handle);
 		}
 
-		// Token: 0x06047F04 RID: 294660 RVA: 0x0126E479 File Offset: 0x0126C679
+		// Token: 0x0603E2DA RID: 254682 RVA: 0x0120FE3D File Offset: 0x0120E03D
 		public bool Once(EEventName name, Action handle)
 		{
 			return this.Once(name, handle);
 		}
 
-		// Token: 0x06047F05 RID: 294661 RVA: 0x0126E483 File Offset: 0x0126C683
+		// Token: 0x0603E2DB RID: 254683 RVA: 0x0120FE47 File Offset: 0x0120E047
 		public bool Once<[Nullable(2)] T1>(EEventName name, Action<T1> handle)
 		{
 			return this.Once(name, handle);
 		}
 
-		// Token: 0x06047F06 RID: 294662 RVA: 0x0126E48D File Offset: 0x0126C68D
+		// Token: 0x0603E2DC RID: 254684 RVA: 0x0120FE51 File Offset: 0x0120E051
 		[NullableContext(2)]
 		public bool Once<T1, T2>(EEventName name, [Nullable(1)] Action<T1, T2> handle)
 		{
 			return this.Once(name, handle);
 		}
 
-		// Token: 0x06047F07 RID: 294663 RVA: 0x0126E497 File Offset: 0x0126C697
+		// Token: 0x0603E2DD RID: 254685 RVA: 0x0120FE5B File Offset: 0x0120E05B
 		[NullableContext(2)]
 		public bool Once<T1, T2, T3>(EEventName name, [Nullable(1)] Action<T1, T2, T3> handle)
 		{
 			return this.Once(name, handle);
 		}
 
-		// Token: 0x06047F08 RID: 294664 RVA: 0x0126E4A1 File Offset: 0x0126C6A1
+		// Token: 0x0603E2DE RID: 254686 RVA: 0x0120FE65 File Offset: 0x0120E065
 		[NullableContext(2)]
 		public bool Once<T1, T2, T3, T4>(EEventName name, [Nullable(1)] Action<T1, T2, T3, T4> handle)
 		{
 			return this.Once(name, handle);
 		}
 
-		// Token: 0x06047F09 RID: 294665 RVA: 0x0126E4AB File Offset: 0x0126C6AB
+		// Token: 0x0603E2DF RID: 254687 RVA: 0x0120FE6F File Offset: 0x0120E06F
 		[NullableContext(2)]
 		public bool Once<T1, T2, T3, T4, T5>(EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5> handle)
 		{
 			return this.Once(name, handle);
 		}
 
-		// Token: 0x06047F0A RID: 294666 RVA: 0x0126E4B5 File Offset: 0x0126C6B5
+		// Token: 0x0603E2E0 RID: 254688 RVA: 0x0120FE79 File Offset: 0x0120E079
 		public bool OnceWithTarget(object target, EEventName name, Delegate handle)
 		{
 			return this.GetOrCreateTargetEvent(target).Once(name, handle);
 		}
 
-		// Token: 0x06047F0B RID: 294667 RVA: 0x0126E4C5 File Offset: 0x0126C6C5
+		// Token: 0x0603E2E1 RID: 254689 RVA: 0x0120FE89 File Offset: 0x0120E089
 		public bool OnceWithTarget<[Nullable(2)] T1>(object target, EEventName name, Action<T1> handle)
 		{
 			return this.OnceWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F0C RID: 294668 RVA: 0x0126E4D0 File Offset: 0x0126C6D0
+		// Token: 0x0603E2E2 RID: 254690 RVA: 0x0120FE94 File Offset: 0x0120E094
 		public bool OnceWithTarget<[Nullable(2)] T1, [Nullable(2)] T2>(object target, EEventName name, Action<T1, T2> handle)
 		{
 			return this.OnceWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F0D RID: 294669 RVA: 0x0126E4DB File Offset: 0x0126C6DB
+		// Token: 0x0603E2E3 RID: 254691 RVA: 0x0120FE9F File Offset: 0x0120E09F
 		[NullableContext(2)]
 		public bool OnceWithTarget<T1, T2, T3>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3> handle)
 		{
 			return this.OnceWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F0E RID: 294670 RVA: 0x0126E4E6 File Offset: 0x0126C6E6
+		// Token: 0x0603E2E4 RID: 254692 RVA: 0x0120FEAA File Offset: 0x0120E0AA
 		[NullableContext(2)]
 		public bool OnceWithTarget<T1, T2, T3, T4>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4> handle)
 		{
 			return this.OnceWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F0F RID: 294671 RVA: 0x0126E4F1 File Offset: 0x0126C6F1
+		// Token: 0x0603E2E5 RID: 254693 RVA: 0x0120FEB5 File Offset: 0x0120E0B5
 		[NullableContext(2)]
 		public bool OnceWithTarget<T1, T2, T3, T4, T5>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5> handle)
 		{
 			return this.OnceWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F10 RID: 294672 RVA: 0x0126E4FC File Offset: 0x0126C6FC
+		// Token: 0x0603E2E6 RID: 254694 RVA: 0x0120FEC0 File Offset: 0x0120E0C0
 		public bool Remove(EEventName name, Delegate handle)
 		{
-			bool result = this.EventInstance.Remove(name, handle);
-			if (!this.EventInstance.HasAny(name) && this.BridgeActionNames.Contains(name))
-			{
-				this.BridgeActionNames.Remove(name);
-				EventSystemBridge.UnregisterEvent((uint)name);
-			}
-			return result;
+			return this.EventInstance.Remove(name, handle);
 		}
 
-		// Token: 0x06047F11 RID: 294673 RVA: 0x0126E53A File Offset: 0x0126C73A
+		// Token: 0x0603E2E7 RID: 254695 RVA: 0x0120FECF File Offset: 0x0120E0CF
 		public bool Remove(EEventName name, GenericEventHandler handle)
 		{
 			return this.Remove(name, handle);
 		}
 
-		// Token: 0x06047F12 RID: 294674 RVA: 0x0126E544 File Offset: 0x0126C744
+		// Token: 0x0603E2E8 RID: 254696 RVA: 0x0120FED9 File Offset: 0x0120E0D9
 		public bool Remove(EEventName name, Action handle)
 		{
 			return this.Remove(name, handle);
 		}
 
-		// Token: 0x06047F13 RID: 294675 RVA: 0x0126E54E File Offset: 0x0126C74E
+		// Token: 0x0603E2E9 RID: 254697 RVA: 0x0120FEE3 File Offset: 0x0120E0E3
 		public bool Remove<[Nullable(2)] T1>(EEventName name, Action<T1> handle)
 		{
 			return this.Remove(name, handle);
 		}
 
-		// Token: 0x06047F14 RID: 294676 RVA: 0x0126E558 File Offset: 0x0126C758
+		// Token: 0x0603E2EA RID: 254698 RVA: 0x0120FEED File Offset: 0x0120E0ED
 		[NullableContext(2)]
 		public bool Remove<T1, T2>(EEventName name, [Nullable(1)] Action<T1, T2> handle)
 		{
 			return this.Remove(name, handle);
 		}
 
-		// Token: 0x06047F15 RID: 294677 RVA: 0x0126E562 File Offset: 0x0126C762
+		// Token: 0x0603E2EB RID: 254699 RVA: 0x0120FEF7 File Offset: 0x0120E0F7
 		[NullableContext(2)]
 		public bool Remove<T1, T2, T3>(EEventName name, [Nullable(1)] Action<T1, T2, T3> handle)
 		{
 			return this.Remove(name, handle);
 		}
 
-		// Token: 0x06047F16 RID: 294678 RVA: 0x0126E56C File Offset: 0x0126C76C
+		// Token: 0x0603E2EC RID: 254700 RVA: 0x0120FF01 File Offset: 0x0120E101
 		[NullableContext(2)]
 		public bool Remove<T1, T2, T3, T4>(EEventName name, [Nullable(1)] Action<T1, T2, T3, T4> handle)
 		{
 			return this.Remove(name, handle);
 		}
 
-		// Token: 0x06047F17 RID: 294679 RVA: 0x0126E576 File Offset: 0x0126C776
+		// Token: 0x0603E2ED RID: 254701 RVA: 0x0120FF0B File Offset: 0x0120E10B
 		[NullableContext(2)]
 		public bool Remove<T1, T2, T3, T4, T5>(EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5> handle)
 		{
 			return this.Remove(name, handle);
 		}
 
-		// Token: 0x06047F18 RID: 294680 RVA: 0x0126E580 File Offset: 0x0126C780
+		// Token: 0x0603E2EE RID: 254702 RVA: 0x0120FF15 File Offset: 0x0120E115
 		[NullableContext(2)]
 		public bool Remove<T1, T2, T3, T4, T5, T6>(EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5, T6> handle)
 		{
 			return this.Remove(name, handle);
 		}
 
-		// Token: 0x06047F19 RID: 294681 RVA: 0x0126E58A File Offset: 0x0126C78A
+		// Token: 0x0603E2EF RID: 254703 RVA: 0x0120FF1F File Offset: 0x0120E11F
 		[NullableContext(2)]
 		public bool Remove<T1, T2, T3, T4, T5, T6, T7>(EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5, T6, T7> handle)
 		{
 			return this.Remove(name, handle);
 		}
 
-		// Token: 0x06047F1A RID: 294682 RVA: 0x0126E594 File Offset: 0x0126C794
+		// Token: 0x0603E2F0 RID: 254704 RVA: 0x0120FF2C File Offset: 0x0120E12C
 		public bool RemoveWithTarget(object target, EEventName name, Delegate handle)
 		{
 			Event<EEventName, Delegate> targetEvent = this.GetTargetEvent(target);
-			if (targetEvent != null)
-			{
-				if (Info.Instance.IsBuildDevelopmentOrDebug)
-				{
-					object holdKeyByHandle = targetEvent.GetHoldKeyByHandle(name, handle);
-					if (holdKeyByHandle != null)
-					{
-						EventSystem.Instance.RemoveWithTargetUseKeyInternal(holdKeyByHandle, target, name, handle);
-						targetEvent.RemoveHoldKeyHandle(name, handle);
-						Log instance = Log.Instance;
-						ELogModule module = ELogModule.Event;
-						ELogAuthor author = ELogAuthor.HJJ;
-						string message = "事件系统调用错误,请使用[RemoveWithTargetUseKey]";
-						ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("target", target);
-						instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-						return true;
-					}
-				}
-				return targetEvent.Remove(name, handle);
-			}
-			return false;
+			return targetEvent != null && targetEvent.Remove(name, handle);
 		}
 
-		// Token: 0x06047F1B RID: 294683 RVA: 0x0126E60D File Offset: 0x0126C80D
+		// Token: 0x0603E2F1 RID: 254705 RVA: 0x0120FF4E File Offset: 0x0120E14E
 		public bool RemoveWithTarget(object target, EEventName name, Action handle)
 		{
 			return this.RemoveWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F1C RID: 294684 RVA: 0x0126E618 File Offset: 0x0126C818
+		// Token: 0x0603E2F2 RID: 254706 RVA: 0x0120FF59 File Offset: 0x0120E159
 		public bool RemoveWithTarget<[Nullable(2)] T1>(object target, EEventName name, Action<T1> handle)
 		{
 			return this.RemoveWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F1D RID: 294685 RVA: 0x0126E623 File Offset: 0x0126C823
+		// Token: 0x0603E2F3 RID: 254707 RVA: 0x0120FF64 File Offset: 0x0120E164
 		public bool RemoveWithTarget<[Nullable(2)] T1, [Nullable(2)] T2>(object target, EEventName name, Action<T1, T2> handle)
 		{
 			return this.RemoveWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F1E RID: 294686 RVA: 0x0126E62E File Offset: 0x0126C82E
+		// Token: 0x0603E2F4 RID: 254708 RVA: 0x0120FF6F File Offset: 0x0120E16F
 		[NullableContext(2)]
 		public bool RemoveWithTarget<T1, T2, T3>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3> handle)
 		{
 			return this.RemoveWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F1F RID: 294687 RVA: 0x0126E639 File Offset: 0x0126C839
+		// Token: 0x0603E2F5 RID: 254709 RVA: 0x0120FF7A File Offset: 0x0120E17A
 		[NullableContext(2)]
 		public bool RemoveWithTarget<T1, T2, T3, T4>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4> handle)
 		{
 			return this.RemoveWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F20 RID: 294688 RVA: 0x0126E644 File Offset: 0x0126C844
+		// Token: 0x0603E2F6 RID: 254710 RVA: 0x0120FF85 File Offset: 0x0120E185
 		[NullableContext(2)]
 		public bool RemoveWithTarget<T1, T2, T3, T4, T5>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5> handle)
 		{
 			return this.RemoveWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F21 RID: 294689 RVA: 0x0126E64F File Offset: 0x0126C84F
+		// Token: 0x0603E2F7 RID: 254711 RVA: 0x0120FF90 File Offset: 0x0120E190
 		[NullableContext(2)]
 		public bool RemoveWithTarget<T1, T2, T3, T4, T5, T6>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5, T6> handle)
 		{
 			return this.RemoveWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F22 RID: 294690 RVA: 0x0126E65A File Offset: 0x0126C85A
+		// Token: 0x0603E2F8 RID: 254712 RVA: 0x0120FF9B File Offset: 0x0120E19B
 		[NullableContext(2)]
 		public bool RemoveWithTarget<T1, T2, T3, T4, T5, T6, T7>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5, T6, T7> handle)
 		{
 			return this.RemoveWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F23 RID: 294691 RVA: 0x0126E668 File Offset: 0x0126C868
+		// Token: 0x0603E2F9 RID: 254713 RVA: 0x0120FFA8 File Offset: 0x0120E1A8
 		private bool RemoveWithTargetUseKeyInternal(object key, object target, EEventName name, Delegate handle)
 		{
 			List<IEventSystemCacheKeyNode> list;
@@ -461,45 +434,45 @@ namespace CSharpScript.Game.Common.Event
 			return false;
 		}
 
-		// Token: 0x06047F24 RID: 294692 RVA: 0x0126E71D File Offset: 0x0126C91D
+		// Token: 0x0603E2FA RID: 254714 RVA: 0x0121005D File Offset: 0x0120E25D
 		public bool RemoveWithTargetUseKey(object key, object target, EEventName name, Delegate handle)
 		{
 			return this.RemoveWithTargetUseKeyInternal(key, target, name, handle);
 		}
 
-		// Token: 0x06047F25 RID: 294693 RVA: 0x0126E72A File Offset: 0x0126C92A
+		// Token: 0x0603E2FB RID: 254715 RVA: 0x0121006A File Offset: 0x0120E26A
 		public bool RemoveWithTargetUseKey<[Nullable(2)] T1>(object key, object target, EEventName name, Action<T1> handle)
 		{
 			return this.RemoveWithTargetUseKey(key, target, name, handle);
 		}
 
-		// Token: 0x06047F26 RID: 294694 RVA: 0x0126E737 File Offset: 0x0126C937
+		// Token: 0x0603E2FC RID: 254716 RVA: 0x01210077 File Offset: 0x0120E277
 		public bool RemoveWithTargetUseKey<[Nullable(2)] T1, [Nullable(2)] T2>(object key, object target, EEventName name, Action<T1, T2> handle)
 		{
 			return this.RemoveWithTargetUseKey(key, target, name, handle);
 		}
 
-		// Token: 0x06047F27 RID: 294695 RVA: 0x0126E744 File Offset: 0x0126C944
+		// Token: 0x0603E2FD RID: 254717 RVA: 0x01210084 File Offset: 0x0120E284
 		public bool RemoveWithTargetUseKey<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3>(object key, object target, EEventName name, Action<T1, T2, T3> handle)
 		{
 			return this.RemoveWithTargetUseKey(key, target, name, handle);
 		}
 
-		// Token: 0x06047F28 RID: 294696 RVA: 0x0126E751 File Offset: 0x0126C951
+		// Token: 0x0603E2FE RID: 254718 RVA: 0x01210091 File Offset: 0x0120E291
 		[NullableContext(2)]
 		public bool RemoveWithTargetUseKey<T1, T2, T3, T4>([Nullable(1)] object key, [Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4> handle)
 		{
 			return this.RemoveWithTargetUseKey(key, target, name, handle);
 		}
 
-		// Token: 0x06047F29 RID: 294697 RVA: 0x0126E75E File Offset: 0x0126C95E
+		// Token: 0x0603E2FF RID: 254719 RVA: 0x0121009E File Offset: 0x0120E29E
 		[NullableContext(2)]
 		public bool RemoveWithTargetUseKey<T1, T2, T3, T4, T5>([Nullable(1)] object key, [Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5> handle)
 		{
 			return this.RemoveWithTargetUseKey(key, target, name, handle);
 		}
 
-		// Token: 0x06047F2A RID: 294698 RVA: 0x0126E76C File Offset: 0x0126C96C
+		// Token: 0x0603E300 RID: 254720 RVA: 0x012100AC File Offset: 0x0120E2AC
 		public bool RemoveAllTargetUseKey(object key)
 		{
 			List<IEventSystemCacheKeyNode> list;
@@ -522,7 +495,7 @@ namespace CSharpScript.Game.Common.Event
 			return true;
 		}
 
-		// Token: 0x06047F2B RID: 294699 RVA: 0x0126E7EC File Offset: 0x0126C9EC
+		// Token: 0x0603E301 RID: 254721 RVA: 0x0121012C File Offset: 0x0120E32C
 		public bool Emit(EEventName name)
 		{
 			bool result;
@@ -538,7 +511,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F2C RID: 294700 RVA: 0x0126E850 File Offset: 0x0126CA50
+		// Token: 0x0603E302 RID: 254722 RVA: 0x01210190 File Offset: 0x0120E390
 		public bool Emit<[Nullable(2)] T1>(EEventName name, T1 p1)
 		{
 			bool result;
@@ -554,7 +527,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F2D RID: 294701 RVA: 0x0126E8B4 File Offset: 0x0126CAB4
+		// Token: 0x0603E303 RID: 254723 RVA: 0x012101F4 File Offset: 0x0120E3F4
 		public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2>(EEventName name, T1 p1, T2 p2)
 		{
 			bool result;
@@ -570,7 +543,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F2E RID: 294702 RVA: 0x0126E918 File Offset: 0x0126CB18
+		// Token: 0x0603E304 RID: 254724 RVA: 0x01210258 File Offset: 0x0120E458
 		public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3>(EEventName name, T1 p1, T2 p2, T3 p3)
 		{
 			bool result;
@@ -586,7 +559,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F2F RID: 294703 RVA: 0x0126E980 File Offset: 0x0126CB80
+		// Token: 0x0603E305 RID: 254725 RVA: 0x012102C0 File Offset: 0x0120E4C0
 		public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4>(EEventName name, T1 p1, T2 p2, T3 p3, T4 p4)
 		{
 			bool result;
@@ -602,7 +575,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F30 RID: 294704 RVA: 0x0126E9E8 File Offset: 0x0126CBE8
+		// Token: 0x0603E306 RID: 254726 RVA: 0x01210328 File Offset: 0x0120E528
 		public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5>(EEventName name, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5)
 		{
 			bool result;
@@ -618,7 +591,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F31 RID: 294705 RVA: 0x0126EA54 File Offset: 0x0126CC54
+		// Token: 0x0603E307 RID: 254727 RVA: 0x01210394 File Offset: 0x0120E594
 		public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5, [Nullable(2)] T6>(EEventName name, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6)
 		{
 			bool result;
@@ -634,7 +607,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F32 RID: 294706 RVA: 0x0126EAC0 File Offset: 0x0126CCC0
+		// Token: 0x0603E308 RID: 254728 RVA: 0x01210400 File Offset: 0x0120E600
 		public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5, [Nullable(2)] T6, [Nullable(2)] T7>(EEventName name, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6, T7 p7)
 		{
 			bool result;
@@ -650,7 +623,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F33 RID: 294707 RVA: 0x0126EB30 File Offset: 0x0126CD30
+		// Token: 0x0603E309 RID: 254729 RVA: 0x01210470 File Offset: 0x0120E670
 		public bool EmitWithTarget(object target, EEventName name)
 		{
 			bool result;
@@ -667,7 +640,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F34 RID: 294708 RVA: 0x0126EB9C File Offset: 0x0126CD9C
+		// Token: 0x0603E30A RID: 254730 RVA: 0x012104DC File Offset: 0x0120E6DC
 		public bool EmitWithTarget<[Nullable(2)] T1>(object target, EEventName name, T1 p1)
 		{
 			bool result;
@@ -684,7 +657,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F35 RID: 294709 RVA: 0x0126EC08 File Offset: 0x0126CE08
+		// Token: 0x0603E30B RID: 254731 RVA: 0x01210548 File Offset: 0x0120E748
 		public bool EmitWithTarget<[Nullable(2)] T1, [Nullable(2)] T2>(object target, EEventName name, T1 p1, T2 p2)
 		{
 			bool result;
@@ -701,7 +674,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F36 RID: 294710 RVA: 0x0126EC78 File Offset: 0x0126CE78
+		// Token: 0x0603E30C RID: 254732 RVA: 0x012105B8 File Offset: 0x0120E7B8
 		public bool EmitWithTarget<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3>(object target, EEventName name, T1 p1, T2 p2, T3 p3)
 		{
 			bool result;
@@ -718,7 +691,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F37 RID: 294711 RVA: 0x0126ECE8 File Offset: 0x0126CEE8
+		// Token: 0x0603E30D RID: 254733 RVA: 0x01210628 File Offset: 0x0120E828
 		public bool EmitWithTarget<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4>(object target, EEventName name, T1 p1, T2 p2, T3 p3, T4 p4)
 		{
 			bool result;
@@ -735,7 +708,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F38 RID: 294712 RVA: 0x0126ED5C File Offset: 0x0126CF5C
+		// Token: 0x0603E30E RID: 254734 RVA: 0x0121069C File Offset: 0x0120E89C
 		public bool EmitWithTarget<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5>(object target, EEventName name, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5)
 		{
 			bool result;
@@ -752,7 +725,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F39 RID: 294713 RVA: 0x0126EDD0 File Offset: 0x0126CFD0
+		// Token: 0x0603E30F RID: 254735 RVA: 0x01210710 File Offset: 0x0120E910
 		public bool EmitWithTarget<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5, [Nullable(2)] T6>(object target, EEventName name, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6)
 		{
 			bool result;
@@ -769,7 +742,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F3A RID: 294714 RVA: 0x0126EE48 File Offset: 0x0126D048
+		// Token: 0x0603E310 RID: 254736 RVA: 0x01210788 File Offset: 0x0120E988
 		public bool EmitWithTarget<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5, [Nullable(2)] T6, [Nullable(2)] T7>(object target, EEventName name, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6, T7 p7)
 		{
 			bool result;
@@ -786,7 +759,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F3B RID: 294715 RVA: 0x0126EEC0 File Offset: 0x0126D0C0
+		// Token: 0x0603E311 RID: 254737 RVA: 0x01210800 File Offset: 0x0120EA00
 		public void EmitWithTargets([Nullable(new byte[]
 		{
 			2,
@@ -807,7 +780,7 @@ namespace CSharpScript.Game.Common.Event
 			}
 		}
 
-		// Token: 0x06047F3C RID: 294716 RVA: 0x0126EF00 File Offset: 0x0126D100
+		// Token: 0x0603E312 RID: 254738 RVA: 0x01210840 File Offset: 0x0120EA40
 		public void EmitWithTargets<[Nullable(2)] T1>([Nullable(new byte[]
 		{
 			2,
@@ -828,7 +801,7 @@ namespace CSharpScript.Game.Common.Event
 			}
 		}
 
-		// Token: 0x06047F3D RID: 294717 RVA: 0x0126EF40 File Offset: 0x0126D140
+		// Token: 0x0603E313 RID: 254739 RVA: 0x01210880 File Offset: 0x0120EA80
 		public void EmitWithTargets<[Nullable(2)] T1, [Nullable(2)] T2>([Nullable(new byte[]
 		{
 			2,
@@ -849,7 +822,7 @@ namespace CSharpScript.Game.Common.Event
 			}
 		}
 
-		// Token: 0x06047F3E RID: 294718 RVA: 0x0126EF80 File Offset: 0x0126D180
+		// Token: 0x0603E314 RID: 254740 RVA: 0x012108C0 File Offset: 0x0120EAC0
 		public void EmitWithTargets<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3>([Nullable(new byte[]
 		{
 			2,
@@ -870,7 +843,7 @@ namespace CSharpScript.Game.Common.Event
 			}
 		}
 
-		// Token: 0x06047F3F RID: 294719 RVA: 0x0126EFC4 File Offset: 0x0126D1C4
+		// Token: 0x0603E315 RID: 254741 RVA: 0x01210904 File Offset: 0x0120EB04
 		public void EmitWithTargets<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4>([Nullable(new byte[]
 		{
 			2,
@@ -891,7 +864,7 @@ namespace CSharpScript.Game.Common.Event
 			}
 		}
 
-		// Token: 0x06047F40 RID: 294720 RVA: 0x0126F008 File Offset: 0x0126D208
+		// Token: 0x0603E316 RID: 254742 RVA: 0x01210948 File Offset: 0x0120EB48
 		public void EmitWithTargets<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5>([Nullable(new byte[]
 		{
 			2,
@@ -912,7 +885,7 @@ namespace CSharpScript.Game.Common.Event
 			}
 		}
 
-		// Token: 0x06047F41 RID: 294721 RVA: 0x0126F050 File Offset: 0x0126D250
+		// Token: 0x0603E317 RID: 254743 RVA: 0x01210990 File Offset: 0x0120EB90
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -936,7 +909,7 @@ namespace CSharpScript.Game.Common.Event
 			return result;
 		}
 
-		// Token: 0x06047F42 RID: 294722 RVA: 0x0126F098 File Offset: 0x0126D298
+		// Token: 0x0603E318 RID: 254744 RVA: 0x012109D8 File Offset: 0x0120EBD8
 		private Event<EEventName, Delegate> GetOrCreateTargetEvent(object target)
 		{
 			Event<EEventName, Delegate> @event = this.GetTargetEvent(target);
@@ -948,571 +921,166 @@ namespace CSharpScript.Game.Common.Event
 			return @event;
 		}
 
-		// Token: 0x06047F43 RID: 294723 RVA: 0x0126F0C4 File Offset: 0x0126D2C4
+		// Token: 0x0603E319 RID: 254745 RVA: 0x01210A04 File Offset: 0x0120EC04
 		public bool Add(EEventName name, Action handle)
 		{
-			if (this.BridgeActionNames.Add(name))
-			{
-				Action<uint> eventAction;
-				if ((eventAction = EventSystem.<>O.<0>__EmitFromBridge) == null)
-				{
-					eventAction = (EventSystem.<>O.<0>__EmitFromBridge = new Action<uint>(EventSystem.EmitFromBridge));
-				}
-				EventSystemBridge.RegisterEvent((uint)name, eventAction);
-			}
 			return this.Add(name, handle);
 		}
 
-		// Token: 0x06047F44 RID: 294724 RVA: 0x0126F100 File Offset: 0x0126D300
+		// Token: 0x0603E31A RID: 254746 RVA: 0x01210A0E File Offset: 0x0120EC0E
 		public bool Add<[Nullable(2)] T1>(EEventName name, Action<T1> handle)
 		{
-			if (this.BridgeActionNames.Add(name))
-			{
-				Action<uint, T1> eventAction;
-				if ((eventAction = EventSystem.<Add>O__96_0<T1>.<0>__EmitFromBridge) == null)
-				{
-					Action<uint, T1> action = EventSystem.<Add>O__96_0<T1>.<0>__EmitFromBridge = new Action<uint, T1>(EventSystem.EmitFromBridge<T1>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEvent<T1>((uint)name, eventAction);
-			}
 			return this.Add(name, handle);
 		}
 
-		// Token: 0x06047F45 RID: 294725 RVA: 0x0126F148 File Offset: 0x0126D348
+		// Token: 0x0603E31B RID: 254747 RVA: 0x01210A18 File Offset: 0x0120EC18
 		[NullableContext(2)]
 		public bool Add<T1, T2>(EEventName name, [Nullable(1)] Action<T1, T2> handle)
 		{
-			if (this.BridgeActionNames.Add(name))
-			{
-				Action<uint, T1, T2> eventAction;
-				if ((eventAction = EventSystem.<Add>O__97_0<T1, T2>.<0>__EmitFromBridge) == null)
-				{
-					Action<uint, T1, T2> action = EventSystem.<Add>O__97_0<T1, T2>.<0>__EmitFromBridge = new Action<uint, T1, T2>(EventSystem.EmitFromBridge<T1, T2>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEvent<T1, T2>((uint)name, eventAction);
-			}
 			return this.Add(name, handle);
 		}
 
-		// Token: 0x06047F46 RID: 294726 RVA: 0x0126F190 File Offset: 0x0126D390
+		// Token: 0x0603E31C RID: 254748 RVA: 0x01210A22 File Offset: 0x0120EC22
 		[NullableContext(2)]
 		public bool Add<T1, T2, T3>(EEventName name, [Nullable(1)] Action<T1, T2, T3> handle)
 		{
-			if (this.BridgeActionNames.Add(name))
-			{
-				Action<uint, T1, T2, T3> eventAction;
-				if ((eventAction = EventSystem.<Add>O__98_0<T1, T2, T3>.<0>__EmitFromBridge) == null)
-				{
-					Action<uint, T1, T2, T3> action = EventSystem.<Add>O__98_0<T1, T2, T3>.<0>__EmitFromBridge = new Action<uint, T1, T2, T3>(EventSystem.EmitFromBridge<T1, T2, T3>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEvent<T1, T2, T3>((uint)name, eventAction);
-			}
 			return this.Add(name, handle);
 		}
 
-		// Token: 0x06047F47 RID: 294727 RVA: 0x0126F1D8 File Offset: 0x0126D3D8
+		// Token: 0x0603E31D RID: 254749 RVA: 0x01210A2C File Offset: 0x0120EC2C
 		[NullableContext(2)]
 		public bool Add<T1, T2, T3, T4>(EEventName name, [Nullable(1)] Action<T1, T2, T3, T4> handle)
 		{
-			if (this.BridgeActionNames.Add(name))
-			{
-				Action<uint, T1, T2, T3, T4> eventAction;
-				if ((eventAction = EventSystem.<Add>O__99_0<T1, T2, T3, T4>.<0>__EmitFromBridge) == null)
-				{
-					Action<uint, T1, T2, T3, T4> action = EventSystem.<Add>O__99_0<T1, T2, T3, T4>.<0>__EmitFromBridge = new Action<uint, T1, T2, T3, T4>(EventSystem.EmitFromBridge<T1, T2, T3, T4>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEvent<T1, T2, T3, T4>((uint)name, eventAction);
-			}
 			return this.Add(name, handle);
 		}
 
-		// Token: 0x06047F48 RID: 294728 RVA: 0x0126F220 File Offset: 0x0126D420
+		// Token: 0x0603E31E RID: 254750 RVA: 0x01210A36 File Offset: 0x0120EC36
 		[NullableContext(2)]
 		public bool Add<T1, T2, T3, T4, T5>(EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5> handle)
 		{
-			if (this.BridgeActionNames.Add(name))
-			{
-				Action<uint, T1, T2, T3, T4, T5> eventAction;
-				if ((eventAction = EventSystem.<Add>O__100_0<T1, T2, T3, T4, T5>.<0>__EmitFromBridge) == null)
-				{
-					Action<uint, T1, T2, T3, T4, T5> action = EventSystem.<Add>O__100_0<T1, T2, T3, T4, T5>.<0>__EmitFromBridge = new Action<uint, T1, T2, T3, T4, T5>(EventSystem.EmitFromBridge<T1, T2, T3, T4, T5>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEvent<T1, T2, T3, T4, T5>((uint)name, eventAction);
-			}
 			return this.Add(name, handle);
 		}
 
-		// Token: 0x06047F49 RID: 294729 RVA: 0x0126F268 File Offset: 0x0126D468
+		// Token: 0x0603E31F RID: 254751 RVA: 0x01210A40 File Offset: 0x0120EC40
 		[NullableContext(2)]
 		public bool Add<T1, T2, T3, T4, T5, T6>(EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5, T6> handle)
 		{
-			if (this.BridgeActionNames.Add(name))
-			{
-				Action<uint, T1, T2, T3, T4, T5, T6> eventAction;
-				if ((eventAction = EventSystem.<Add>O__101_0<T1, T2, T3, T4, T5, T6>.<0>__EmitFromBridge) == null)
-				{
-					Action<uint, T1, T2, T3, T4, T5, T6> action = EventSystem.<Add>O__101_0<T1, T2, T3, T4, T5, T6>.<0>__EmitFromBridge = new Action<uint, T1, T2, T3, T4, T5, T6>(EventSystem.EmitFromBridge<T1, T2, T3, T4, T5, T6>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEvent<T1, T2, T3, T4, T5, T6>((uint)name, eventAction);
-			}
 			return this.Add(name, handle);
 		}
 
-		// Token: 0x06047F4A RID: 294730 RVA: 0x0126F2B0 File Offset: 0x0126D4B0
+		// Token: 0x0603E320 RID: 254752 RVA: 0x01210A4A File Offset: 0x0120EC4A
 		[NullableContext(2)]
 		public bool Add<T1, T2, T3, T4, T5, T6, T7>(EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5, T6, T7> handle)
 		{
-			if (this.BridgeActionNames.Add(name))
-			{
-				Action<uint, T1, T2, T3, T4, T5, T6, T7> eventAction;
-				if ((eventAction = EventSystem.<Add>O__102_0<T1, T2, T3, T4, T5, T6, T7>.<0>__EmitFromBridge) == null)
-				{
-					Action<uint, T1, T2, T3, T4, T5, T6, T7> action = EventSystem.<Add>O__102_0<T1, T2, T3, T4, T5, T6, T7>.<0>__EmitFromBridge = new Action<uint, T1, T2, T3, T4, T5, T6, T7>(EventSystem.EmitFromBridge<T1, T2, T3, T4, T5, T6, T7>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEvent<T1, T2, T3, T4, T5, T6, T7>((uint)name, eventAction);
-			}
 			return this.Add(name, handle);
 		}
 
-		// Token: 0x06047F4B RID: 294731 RVA: 0x0126F2F8 File Offset: 0x0126D4F8
+		// Token: 0x0603E321 RID: 254753 RVA: 0x01210A54 File Offset: 0x0120EC54
 		public bool AddWithTarget(object target, EEventName name, Action handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int> eventAction;
-				if ((eventAction = EventSystem.<>O.<1>__EmitWithTargetFromBridge) == null)
-				{
-					eventAction = (EventSystem.<>O.<1>__EmitWithTargetFromBridge = new Action<uint, int>(EventSystem.EmitWithTargetFromBridge));
-				}
-				EventSystemBridge.RegisterEventWithTarget((uint)name, eventAction);
-			}
 			return this.AddWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F4C RID: 294732 RVA: 0x0126F348 File Offset: 0x0126D548
+		// Token: 0x0603E322 RID: 254754 RVA: 0x01210A5F File Offset: 0x0120EC5F
 		public bool AddWithTarget<[Nullable(2)] T1>(object target, EEventName name, Action<T1> handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int, T1> eventAction;
-				if ((eventAction = EventSystem.<AddWithTarget>O__104_0<T1>.<0>__EmitWithTargetFromBridge) == null)
-				{
-					Action<uint, int, T1> action = EventSystem.<AddWithTarget>O__104_0<T1>.<0>__EmitWithTargetFromBridge = new Action<uint, int, T1>(EventSystem.EmitWithTargetFromBridge<T1>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEventWithTarget<T1>((uint)name, eventAction);
-			}
 			return this.AddWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F4D RID: 294733 RVA: 0x0126F398 File Offset: 0x0126D598
+		// Token: 0x0603E323 RID: 254755 RVA: 0x01210A6A File Offset: 0x0120EC6A
 		public bool AddWithTarget<[Nullable(2)] T1, [Nullable(2)] T2>(object target, EEventName name, Action<T1, T2> handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int, T1, T2> eventAction;
-				if ((eventAction = EventSystem.<AddWithTarget>O__105_0<T1, T2>.<0>__EmitWithTargetFromBridge) == null)
-				{
-					Action<uint, int, T1, T2> action = EventSystem.<AddWithTarget>O__105_0<T1, T2>.<0>__EmitWithTargetFromBridge = new Action<uint, int, T1, T2>(EventSystem.EmitWithTargetFromBridge<T1, T2>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEventWithTarget<T1, T2>((uint)name, eventAction);
-			}
 			return this.AddWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F4E RID: 294734 RVA: 0x0126F3E8 File Offset: 0x0126D5E8
+		// Token: 0x0603E324 RID: 254756 RVA: 0x01210A75 File Offset: 0x0120EC75
 		[NullableContext(2)]
 		public bool AddWithTarget<T1, T2, T3>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3> handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int, T1, T2, T3> eventAction;
-				if ((eventAction = EventSystem.<AddWithTarget>O__106_0<T1, T2, T3>.<0>__EmitWithTargetFromBridge) == null)
-				{
-					Action<uint, int, T1, T2, T3> action = EventSystem.<AddWithTarget>O__106_0<T1, T2, T3>.<0>__EmitWithTargetFromBridge = new Action<uint, int, T1, T2, T3>(EventSystem.EmitWithTargetFromBridge<T1, T2, T3>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEventWithTarget<T1, T2, T3>((uint)name, eventAction);
-			}
 			return this.AddWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F4F RID: 294735 RVA: 0x0126F438 File Offset: 0x0126D638
+		// Token: 0x0603E325 RID: 254757 RVA: 0x01210A80 File Offset: 0x0120EC80
 		[NullableContext(2)]
 		public bool AddWithTarget<T1, T2, T3, T4>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4> handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int, T1, T2, T3, T4> eventAction;
-				if ((eventAction = EventSystem.<AddWithTarget>O__107_0<T1, T2, T3, T4>.<0>__EmitWithTargetFromBridge) == null)
-				{
-					Action<uint, int, T1, T2, T3, T4> action = EventSystem.<AddWithTarget>O__107_0<T1, T2, T3, T4>.<0>__EmitWithTargetFromBridge = new Action<uint, int, T1, T2, T3, T4>(EventSystem.EmitWithTargetFromBridge<T1, T2, T3, T4>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEventWithTarget<T1, T2, T3, T4>((uint)name, eventAction);
-			}
 			return this.AddWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F50 RID: 294736 RVA: 0x0126F488 File Offset: 0x0126D688
+		// Token: 0x0603E326 RID: 254758 RVA: 0x01210A8B File Offset: 0x0120EC8B
 		[NullableContext(2)]
 		public bool AddWithTarget<T1, T2, T3, T4, T5>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5> handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int, T1, T2, T3, T4, T5> eventAction;
-				if ((eventAction = EventSystem.<AddWithTarget>O__108_0<T1, T2, T3, T4, T5>.<0>__EmitWithTargetFromBridge) == null)
-				{
-					Action<uint, int, T1, T2, T3, T4, T5> action = EventSystem.<AddWithTarget>O__108_0<T1, T2, T3, T4, T5>.<0>__EmitWithTargetFromBridge = new Action<uint, int, T1, T2, T3, T4, T5>(EventSystem.EmitWithTargetFromBridge<T1, T2, T3, T4, T5>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEventWithTarget<T1, T2, T3, T4, T5>((uint)name, eventAction);
-			}
 			return this.AddWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F51 RID: 294737 RVA: 0x0126F4D8 File Offset: 0x0126D6D8
+		// Token: 0x0603E327 RID: 254759 RVA: 0x01210A96 File Offset: 0x0120EC96
 		[NullableContext(2)]
 		public bool AddWithTarget<T1, T2, T3, T4, T5, T6>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5, T6> handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int, T1, T2, T3, T4, T5, T6> eventAction;
-				if ((eventAction = EventSystem.<AddWithTarget>O__109_0<T1, T2, T3, T4, T5, T6>.<0>__EmitWithTargetFromBridge) == null)
-				{
-					Action<uint, int, T1, T2, T3, T4, T5, T6> action = EventSystem.<AddWithTarget>O__109_0<T1, T2, T3, T4, T5, T6>.<0>__EmitWithTargetFromBridge = new Action<uint, int, T1, T2, T3, T4, T5, T6>(EventSystem.EmitWithTargetFromBridge<T1, T2, T3, T4, T5, T6>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEventWithTarget<T1, T2, T3, T4, T5, T6>((uint)name, eventAction);
-			}
 			return this.AddWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F52 RID: 294738 RVA: 0x0126F528 File Offset: 0x0126D728
+		// Token: 0x0603E328 RID: 254760 RVA: 0x01210AA1 File Offset: 0x0120ECA1
 		[NullableContext(2)]
 		public bool AddWithTarget<T1, T2, T3, T4, T5, T6, T7>([Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5, T6, T7> handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int, T1, T2, T3, T4, T5, T6> eventAction;
-				if ((eventAction = EventSystem.<AddWithTarget>O__110_0<T1, T2, T3, T4, T5, T6, T7>.<0>__EmitWithTargetFromBridge) == null)
-				{
-					Action<uint, int, T1, T2, T3, T4, T5, T6> action = EventSystem.<AddWithTarget>O__110_0<T1, T2, T3, T4, T5, T6, T7>.<0>__EmitWithTargetFromBridge = new Action<uint, int, T1, T2, T3, T4, T5, T6>(EventSystem.EmitWithTargetFromBridge<T1, T2, T3, T4, T5, T6>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEventWithTarget<T1, T2, T3, T4, T5, T6>((uint)name, eventAction);
-			}
 			return this.AddWithTarget(target, name, handle);
 		}
 
-		// Token: 0x06047F53 RID: 294739 RVA: 0x0126F578 File Offset: 0x0126D778
+		// Token: 0x0603E329 RID: 254761 RVA: 0x01210AAC File Offset: 0x0120ECAC
 		public bool AddWithTargetUseHoldKey(object key, object target, EEventName name, Action handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int> eventAction;
-				if ((eventAction = EventSystem.<>O.<1>__EmitWithTargetFromBridge) == null)
-				{
-					eventAction = (EventSystem.<>O.<1>__EmitWithTargetFromBridge = new Action<uint, int>(EventSystem.EmitWithTargetFromBridge));
-				}
-				EventSystemBridge.RegisterEventWithTarget((uint)name, eventAction);
-			}
 			return this.AddWithTargetUseHoldKey(key, target, name, handle);
 		}
 
-		// Token: 0x06047F54 RID: 294740 RVA: 0x0126F5C8 File Offset: 0x0126D7C8
+		// Token: 0x0603E32A RID: 254762 RVA: 0x01210AB9 File Offset: 0x0120ECB9
 		public bool AddWithTargetUseHoldKey<[Nullable(2)] T1>(object key, object target, EEventName name, Action<T1> handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int, T1> eventAction;
-				if ((eventAction = EventSystem.<AddWithTargetUseHoldKey>O__112_0<T1>.<0>__EmitWithTargetFromBridge) == null)
-				{
-					Action<uint, int, T1> action = EventSystem.<AddWithTargetUseHoldKey>O__112_0<T1>.<0>__EmitWithTargetFromBridge = new Action<uint, int, T1>(EventSystem.EmitWithTargetFromBridge<T1>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEventWithTarget<T1>((uint)name, eventAction);
-			}
 			return this.AddWithTargetUseHoldKey(key, target, name, handle);
 		}
 
-		// Token: 0x06047F55 RID: 294741 RVA: 0x0126F61C File Offset: 0x0126D81C
+		// Token: 0x0603E32B RID: 254763 RVA: 0x01210AC6 File Offset: 0x0120ECC6
 		public bool AddWithTargetUseHoldKey<[Nullable(2)] T1, [Nullable(2)] T2>(object key, object target, EEventName name, Action<T1, T2> handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int, T1, T2> eventAction;
-				if ((eventAction = EventSystem.<AddWithTargetUseHoldKey>O__113_0<T1, T2>.<0>__EmitWithTargetFromBridge) == null)
-				{
-					Action<uint, int, T1, T2> action = EventSystem.<AddWithTargetUseHoldKey>O__113_0<T1, T2>.<0>__EmitWithTargetFromBridge = new Action<uint, int, T1, T2>(EventSystem.EmitWithTargetFromBridge<T1, T2>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEventWithTarget<T1, T2>((uint)name, eventAction);
-			}
 			return this.AddWithTargetUseHoldKey(key, target, name, handle);
 		}
 
-		// Token: 0x06047F56 RID: 294742 RVA: 0x0126F670 File Offset: 0x0126D870
+		// Token: 0x0603E32C RID: 254764 RVA: 0x01210AD3 File Offset: 0x0120ECD3
 		public bool AddWithTargetUseHoldKey<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3>(object key, object target, EEventName name, Action<T1, T2, T3> handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int, T1, T2, T3> eventAction;
-				if ((eventAction = EventSystem.<AddWithTargetUseHoldKey>O__114_0<T1, T2, T3>.<0>__EmitWithTargetFromBridge) == null)
-				{
-					Action<uint, int, T1, T2, T3> action = EventSystem.<AddWithTargetUseHoldKey>O__114_0<T1, T2, T3>.<0>__EmitWithTargetFromBridge = new Action<uint, int, T1, T2, T3>(EventSystem.EmitWithTargetFromBridge<T1, T2, T3>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEventWithTarget<T1, T2, T3>((uint)name, eventAction);
-			}
 			return this.AddWithTargetUseHoldKey(key, target, name, handle);
 		}
 
-		// Token: 0x06047F57 RID: 294743 RVA: 0x0126F6C4 File Offset: 0x0126D8C4
+		// Token: 0x0603E32D RID: 254765 RVA: 0x01210AE0 File Offset: 0x0120ECE0
 		[NullableContext(2)]
 		public bool AddWithTargetUseHoldKey<T1, T2, T3, T4>([Nullable(1)] object key, [Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4> handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int, T1, T2, T3, T4> eventAction;
-				if ((eventAction = EventSystem.<AddWithTargetUseHoldKey>O__115_0<T1, T2, T3, T4>.<0>__EmitWithTargetFromBridge) == null)
-				{
-					Action<uint, int, T1, T2, T3, T4> action = EventSystem.<AddWithTargetUseHoldKey>O__115_0<T1, T2, T3, T4>.<0>__EmitWithTargetFromBridge = new Action<uint, int, T1, T2, T3, T4>(EventSystem.EmitWithTargetFromBridge<T1, T2, T3, T4>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEventWithTarget<T1, T2, T3, T4>((uint)name, eventAction);
-			}
 			return this.AddWithTargetUseHoldKey(key, target, name, handle);
 		}
 
-		// Token: 0x06047F58 RID: 294744 RVA: 0x0126F718 File Offset: 0x0126D918
+		// Token: 0x0603E32E RID: 254766 RVA: 0x01210AED File Offset: 0x0120ECED
 		[NullableContext(2)]
 		public bool AddWithTargetUseHoldKey<T1, T2, T3, T4, T5>([Nullable(1)] object key, [Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5> handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int, T1, T2, T3, T4, T5> eventAction;
-				if ((eventAction = EventSystem.<AddWithTargetUseHoldKey>O__116_0<T1, T2, T3, T4, T5>.<0>__EmitWithTargetFromBridge) == null)
-				{
-					Action<uint, int, T1, T2, T3, T4, T5> action = EventSystem.<AddWithTargetUseHoldKey>O__116_0<T1, T2, T3, T4, T5>.<0>__EmitWithTargetFromBridge = new Action<uint, int, T1, T2, T3, T4, T5>(EventSystem.EmitWithTargetFromBridge<T1, T2, T3, T4, T5>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEventWithTarget<T1, T2, T3, T4, T5>((uint)name, eventAction);
-			}
 			return this.AddWithTargetUseHoldKey(key, target, name, handle);
 		}
 
-		// Token: 0x06047F59 RID: 294745 RVA: 0x0126F76C File Offset: 0x0126D96C
+		// Token: 0x0603E32F RID: 254767 RVA: 0x01210AFA File Offset: 0x0120ECFA
 		[NullableContext(2)]
 		public bool AddWithTargetUseHoldKey<T1, T2, T3, T4, T5, T6>([Nullable(1)] object key, [Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5, T6> handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int, T1, T2, T3, T4, T5, T6> eventAction;
-				if ((eventAction = EventSystem.<AddWithTargetUseHoldKey>O__117_0<T1, T2, T3, T4, T5, T6>.<0>__EmitWithTargetFromBridge) == null)
-				{
-					Action<uint, int, T1, T2, T3, T4, T5, T6> action = EventSystem.<AddWithTargetUseHoldKey>O__117_0<T1, T2, T3, T4, T5, T6>.<0>__EmitWithTargetFromBridge = new Action<uint, int, T1, T2, T3, T4, T5, T6>(EventSystem.EmitWithTargetFromBridge<T1, T2, T3, T4, T5, T6>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEventWithTarget<T1, T2, T3, T4, T5, T6>((uint)name, eventAction);
-			}
 			return this.AddWithTargetUseHoldKey(key, target, name, handle);
 		}
 
-		// Token: 0x06047F5A RID: 294746 RVA: 0x0126F7C0 File Offset: 0x0126D9C0
+		// Token: 0x0603E330 RID: 254768 RVA: 0x01210B07 File Offset: 0x0120ED07
 		[NullableContext(2)]
 		public bool AddWithTargetUseHoldKey<T1, T2, T3, T4, T5, T6, T7>([Nullable(1)] object key, [Nullable(1)] object target, EEventName name, [Nullable(1)] Action<T1, T2, T3, T4, T5, T6, T7> handle)
 		{
-			if (target is Entity && this.BridgeActionWithTargetNames.Add(name))
-			{
-				Action<uint, int, T1, T2, T3, T4, T5, T6, T7> eventAction;
-				if ((eventAction = EventSystem.<AddWithTargetUseHoldKey>O__118_0<T1, T2, T3, T4, T5, T6, T7>.<0>__EmitWithTargetFromBridge) == null)
-				{
-					Action<uint, int, T1, T2, T3, T4, T5, T6, T7> action = EventSystem.<AddWithTargetUseHoldKey>O__118_0<T1, T2, T3, T4, T5, T6, T7>.<0>__EmitWithTargetFromBridge = new Action<uint, int, T1, T2, T3, T4, T5, T6, T7>(EventSystem.EmitWithTargetFromBridge<T1, T2, T3, T4, T5, T6, T7>);
-					eventAction = action;
-				}
-				EventSystemBridge.RegisterEventWithTarget<T1, T2, T3, T4, T5, T6, T7>((uint)name, eventAction);
-			}
 			return this.AddWithTargetUseHoldKey(key, target, name, handle);
 		}
 
-		// Token: 0x06047F5B RID: 294747 RVA: 0x0126F811 File Offset: 0x0126DA11
-		private static void EmitFromBridge(uint name)
-		{
-			EventSystem.Instance.EventInstance.Emit((EEventName)name);
-		}
-
-		// Token: 0x06047F5C RID: 294748 RVA: 0x0126F824 File Offset: 0x0126DA24
-		private static void EmitFromBridge<[Nullable(2)] T1>(uint name, T1 p1)
-		{
-			EventSystem.Instance.EventInstance.Emit<T1>((EEventName)name, p1);
-		}
-
-		// Token: 0x06047F5D RID: 294749 RVA: 0x0126F838 File Offset: 0x0126DA38
-		private static void EmitFromBridge<[Nullable(2)] T1, [Nullable(2)] T2>(uint name, T1 p1, T2 p2)
-		{
-			EventSystem.Instance.EventInstance.Emit<T1, T2>((EEventName)name, p1, p2);
-		}
-
-		// Token: 0x06047F5E RID: 294750 RVA: 0x0126F84D File Offset: 0x0126DA4D
-		private static void EmitFromBridge<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3>(uint name, T1 p1, T2 p2, T3 p3)
-		{
-			EventSystem.Instance.EventInstance.Emit<T1, T2, T3>((EEventName)name, p1, p2, p3);
-		}
-
-		// Token: 0x06047F5F RID: 294751 RVA: 0x0126F863 File Offset: 0x0126DA63
-		private static void EmitFromBridge<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4>(uint name, T1 p1, T2 p2, T3 p3, T4 p4)
-		{
-			EventSystem.Instance.EventInstance.Emit<T1, T2, T3, T4>((EEventName)name, p1, p2, p3, p4);
-		}
-
-		// Token: 0x06047F60 RID: 294752 RVA: 0x0126F87B File Offset: 0x0126DA7B
-		private static void EmitFromBridge<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5>(uint name, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5)
-		{
-			EventSystem.Instance.EventInstance.Emit<T1, T2, T3, T4, T5>((EEventName)name, p1, p2, p3, p4, p5);
-		}
-
-		// Token: 0x06047F61 RID: 294753 RVA: 0x0126F895 File Offset: 0x0126DA95
-		private static void EmitFromBridge<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5, [Nullable(2)] T6>(uint name, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6)
-		{
-			EventSystem.Instance.EventInstance.Emit<T1, T2, T3, T4, T5, T6>((EEventName)name, p1, p2, p3, p4, p5, p6);
-		}
-
-		// Token: 0x06047F62 RID: 294754 RVA: 0x0126F8B4 File Offset: 0x0126DAB4
-		private static void EmitFromBridge<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5, [Nullable(2)] T6, [Nullable(2)] T7>(uint name, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6, T7 p7)
-		{
-			EventSystem.Instance.EventInstance.Emit<T1, T2, T3, T4, T5, T6, T7>((EEventName)name, p1, p2, p3, p4, p5, p6, p7);
-		}
-
-		// Token: 0x06047F63 RID: 294755 RVA: 0x0126F8E0 File Offset: 0x0126DAE0
-		private static void EmitWithTargetFromBridge(uint name, int targetId)
-		{
-			Entity entity = EntitySystem.Instance.Get<Entity>(targetId);
-			if (entity != null)
-			{
-				Event<EEventName, Delegate> targetEvent = EventSystem.Instance.GetTargetEvent(entity);
-				if (targetEvent == null)
-				{
-					return;
-				}
-				targetEvent.Emit((EEventName)name);
-			}
-		}
-
-		// Token: 0x06047F64 RID: 294756 RVA: 0x0126F914 File Offset: 0x0126DB14
-		private static void EmitWithTargetFromBridge<[Nullable(2)] T1>(uint name, int targetId, T1 p1)
-		{
-			Entity entity = EntitySystem.Instance.Get<Entity>(targetId);
-			if (entity != null)
-			{
-				Event<EEventName, Delegate> targetEvent = EventSystem.Instance.GetTargetEvent(entity);
-				if (targetEvent == null)
-				{
-					return;
-				}
-				targetEvent.Emit<T1>((EEventName)name, p1);
-			}
-		}
-
-		// Token: 0x06047F65 RID: 294757 RVA: 0x0126F948 File Offset: 0x0126DB48
-		private static void EmitWithTargetFromBridge<[Nullable(2)] T1, [Nullable(2)] T2>(uint name, int targetId, T1 p1, T2 p2)
-		{
-			Entity entity = EntitySystem.Instance.Get<Entity>(targetId);
-			if (entity != null)
-			{
-				Event<EEventName, Delegate> targetEvent = EventSystem.Instance.GetTargetEvent(entity);
-				if (targetEvent == null)
-				{
-					return;
-				}
-				targetEvent.Emit<T1, T2>((EEventName)name, p1, p2);
-			}
-		}
-
-		// Token: 0x06047F66 RID: 294758 RVA: 0x0126F980 File Offset: 0x0126DB80
-		private static void EmitWithTargetFromBridge<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3>(uint name, int targetId, T1 p1, T2 p2, T3 p3)
-		{
-			Entity entity = EntitySystem.Instance.Get<Entity>(targetId);
-			if (entity != null)
-			{
-				Event<EEventName, Delegate> targetEvent = EventSystem.Instance.GetTargetEvent(entity);
-				if (targetEvent == null)
-				{
-					return;
-				}
-				targetEvent.Emit<T1, T2, T3>((EEventName)name, p1, p2, p3);
-			}
-		}
-
-		// Token: 0x06047F67 RID: 294759 RVA: 0x0126F9B8 File Offset: 0x0126DBB8
-		private static void EmitWithTargetFromBridge<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4>(uint name, int targetId, T1 p1, T2 p2, T3 p3, T4 p4)
-		{
-			Entity entity = EntitySystem.Instance.Get<Entity>(targetId);
-			if (entity != null)
-			{
-				Event<EEventName, Delegate> targetEvent = EventSystem.Instance.GetTargetEvent(entity);
-				if (targetEvent == null)
-				{
-					return;
-				}
-				targetEvent.Emit<T1, T2, T3, T4>((EEventName)name, p1, p2, p3, p4);
-			}
-		}
-
-		// Token: 0x06047F68 RID: 294760 RVA: 0x0126F9F4 File Offset: 0x0126DBF4
-		private static void EmitWithTargetFromBridge<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5>(uint name, int targetId, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5)
-		{
-			Entity entity = EntitySystem.Instance.Get<Entity>(targetId);
-			if (entity != null)
-			{
-				Event<EEventName, Delegate> targetEvent = EventSystem.Instance.GetTargetEvent(entity);
-				if (targetEvent == null)
-				{
-					return;
-				}
-				targetEvent.Emit<T1, T2, T3, T4, T5>((EEventName)name, p1, p2, p3, p4, p5);
-			}
-		}
-
-		// Token: 0x06047F69 RID: 294761 RVA: 0x0126FA30 File Offset: 0x0126DC30
-		private static void EmitWithTargetFromBridge<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5, [Nullable(2)] T6>(uint name, int targetId, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6)
-		{
-			Entity entity = EntitySystem.Instance.Get<Entity>(targetId);
-			if (entity != null)
-			{
-				Event<EEventName, Delegate> targetEvent = EventSystem.Instance.GetTargetEvent(entity);
-				if (targetEvent == null)
-				{
-					return;
-				}
-				targetEvent.Emit<T1, T2, T3, T4, T5, T6>((EEventName)name, p1, p2, p3, p4, p5, p6);
-			}
-		}
-
-		// Token: 0x06047F6A RID: 294762 RVA: 0x0126FA70 File Offset: 0x0126DC70
-		private static void EmitWithTargetFromBridge<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5, [Nullable(2)] T6, [Nullable(2)] T7>(uint name, int targetId, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6, T7 p7)
-		{
-			Entity entity = EntitySystem.Instance.Get<Entity>(targetId);
-			if (entity != null)
-			{
-				Event<EEventName, Delegate> targetEvent = EventSystem.Instance.GetTargetEvent(entity);
-				if (targetEvent == null)
-				{
-					return;
-				}
-				targetEvent.Emit<T1, T2, T3, T4, T5, T6, T7>((EEventName)name, p1, p2, p3, p4, p5, p6, p7);
-			}
-		}
-
-		// Token: 0x06047F6B RID: 294763 RVA: 0x0126FAB0 File Offset: 0x0126DCB0
+		// Token: 0x0603E331 RID: 254769 RVA: 0x01210B14 File Offset: 0x0120ED14
 		public bool AddWithCondition<[Nullable(2)] T1>(EEventName name, Action<T1> handle, T1 conditionParam)
 		{
 			if (conditionParam == null)
@@ -1528,7 +1096,7 @@ namespace CSharpScript.Game.Common.Event
 			return this.EventInstance.AddWithCondition<T1>(name, handle, conditionParam);
 		}
 
-		// Token: 0x06047F6C RID: 294764 RVA: 0x0126FB04 File Offset: 0x0126DD04
+		// Token: 0x0603E332 RID: 254770 RVA: 0x01210B68 File Offset: 0x0120ED68
 		public bool OnceWithCondition<[Nullable(2)] T1>(EEventName name, Action<T1> handle, T1 conditionParam)
 		{
 			if (conditionParam == null)
@@ -1544,7 +1112,7 @@ namespace CSharpScript.Game.Common.Event
 			return this.EventInstance.OnceWithCondition<T1>(name, handle, conditionParam);
 		}
 
-		// Token: 0x06047F6D RID: 294765 RVA: 0x0126FB58 File Offset: 0x0126DD58
+		// Token: 0x0603E333 RID: 254771 RVA: 0x01210BBC File Offset: 0x0120EDBC
 		public bool RemoveWithCondition<[Nullable(2)] T1>(EEventName name, Action<T1> handle, T1 conditionParam)
 		{
 			if (conditionParam == null)
@@ -1560,7 +1128,7 @@ namespace CSharpScript.Game.Common.Event
 			return this.EventInstance.RemoveWithCondition<T1>(name, handle, conditionParam);
 		}
 
-		// Token: 0x06047F6E RID: 294766 RVA: 0x0126FBAC File Offset: 0x0126DDAC
+		// Token: 0x0603E334 RID: 254772 RVA: 0x01210C10 File Offset: 0x0120EE10
 		public bool HasWithCondition<[Nullable(2)] T1>(EEventName name, Action<T1> handle, T1 conditionParam)
 		{
 			if (conditionParam == null)
@@ -1576,8 +1144,8 @@ namespace CSharpScript.Game.Common.Event
 			return this.EventInstance.HasWithCondition<T1>(name, handle, conditionParam);
 		}
 
-		// Token: 0x17009F02 RID: 40706
-		// (get) Token: 0x06047F6F RID: 294767 RVA: 0x0126FBFD File Offset: 0x0126DDFD
+		// Token: 0x17007664 RID: 30308
+		// (get) Token: 0x0603E335 RID: 254773 RVA: 0x01210C61 File Offset: 0x0120EE61
 		public static EventSystem Instance
 		{
 			get
@@ -1591,12 +1159,12 @@ namespace CSharpScript.Game.Common.Event
 			}
 		}
 
-		// Token: 0x06047F70 RID: 294768 RVA: 0x0126FC20 File Offset: 0x0126DE20
+		// Token: 0x0603E336 RID: 254774 RVA: 0x01210C84 File Offset: 0x0120EE84
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047F71 RID: 294769 RVA: 0x0126FC22 File Offset: 0x0126DE22
+		// Token: 0x0603E337 RID: 254775 RVA: 0x01210C86 File Offset: 0x0120EE86
 		public static void ResetStaticDefaultValue()
 		{
 			EventSystem instance = EventSystem._instance;
@@ -1607,234 +1175,26 @@ namespace CSharpScript.Game.Common.Event
 			EventSystem._instance = null;
 		}
 
-		// Token: 0x06047F72 RID: 294770 RVA: 0x0126FC3B File Offset: 0x0126DE3B
+		// Token: 0x0603E338 RID: 254776 RVA: 0x01210C9F File Offset: 0x0120EE9F
 		static EventSystem()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(EventSystem.CreateStaticDefaultValue), new Action(EventSystem.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025ED4 RID: 155348
-		private readonly HashSet<EEventName> BridgeActionNames = new HashSet<EEventName>();
-
-		// Token: 0x04025ED5 RID: 155349
-		private readonly HashSet<EEventName> BridgeActionWithTargetNames = new HashSet<EEventName>();
-
-		// Token: 0x04025ED6 RID: 155350
+		// Token: 0x040211A9 RID: 135593
 		private readonly Event<EEventName, Delegate> EventInstance = new Event<EEventName, Delegate>();
 
-		// Token: 0x04025ED7 RID: 155351
+		// Token: 0x040211AA RID: 135594
 		private readonly WeakMap<object, Event<EEventName, Delegate>> TargetEvents = new WeakMap<object, Event<EEventName, Delegate>>();
 
-		// Token: 0x04025ED8 RID: 155352
+		// Token: 0x040211AB RID: 135595
 		private readonly WeakMap<object, List<IEventSystemCacheKeyNode>> TargetToEventsKeyCache = new WeakMap<object, List<IEventSystemCacheKeyNode>>();
 
-		// Token: 0x04025ED9 RID: 155353
+		// Token: 0x040211AC RID: 135596
 		private readonly Stat RemoveStat = Stat.Create("EventSystem.RemoveWithTargetUseKey", "", "");
 
-		// Token: 0x04025EDA RID: 155354
+		// Token: 0x040211AD RID: 135597
 		[Nullable(2)]
 		private static EventSystem _instance;
-
-		// Token: 0x0200CFA4 RID: 53156
-		[CompilerGenerated]
-		private static class <>O
-		{
-			// Token: 0x0403E770 RID: 255856
-			[Nullable(0)]
-			public static Action<uint> <0>__EmitFromBridge;
-
-			// Token: 0x0403E771 RID: 255857
-			[Nullable(0)]
-			public static Action<uint, int> <1>__EmitWithTargetFromBridge;
-		}
-
-		// Token: 0x0200CFA5 RID: 53157
-		[CompilerGenerated]
-		private static class <Add>O__100_0<T1, T2, T3, T4, T5>
-		{
-			// Token: 0x0403E772 RID: 255858
-			[Nullable(0)]
-			public static Action<uint, T1, T2, T3, T4, T5> <0>__EmitFromBridge;
-		}
-
-		// Token: 0x0200CFA6 RID: 53158
-		[CompilerGenerated]
-		private static class <Add>O__101_0<T1, T2, T3, T4, T5, T6>
-		{
-			// Token: 0x0403E773 RID: 255859
-			[Nullable(0)]
-			public static Action<uint, T1, T2, T3, T4, T5, T6> <0>__EmitFromBridge;
-		}
-
-		// Token: 0x0200CFA7 RID: 53159
-		[CompilerGenerated]
-		private static class <Add>O__102_0<T1, T2, T3, T4, T5, T6, T7>
-		{
-			// Token: 0x0403E774 RID: 255860
-			[Nullable(0)]
-			public static Action<uint, T1, T2, T3, T4, T5, T6, T7> <0>__EmitFromBridge;
-		}
-
-		// Token: 0x0200CFA8 RID: 53160
-		[CompilerGenerated]
-		private static class <Add>O__96_0<T1>
-		{
-			// Token: 0x0403E775 RID: 255861
-			[Nullable(0)]
-			public static Action<uint, T1> <0>__EmitFromBridge;
-		}
-
-		// Token: 0x0200CFA9 RID: 53161
-		[CompilerGenerated]
-		private static class <Add>O__97_0<T1, T2>
-		{
-			// Token: 0x0403E776 RID: 255862
-			[Nullable(0)]
-			public static Action<uint, T1, T2> <0>__EmitFromBridge;
-		}
-
-		// Token: 0x0200CFAA RID: 53162
-		[CompilerGenerated]
-		private static class <Add>O__98_0<T1, T2, T3>
-		{
-			// Token: 0x0403E777 RID: 255863
-			[Nullable(0)]
-			public static Action<uint, T1, T2, T3> <0>__EmitFromBridge;
-		}
-
-		// Token: 0x0200CFAB RID: 53163
-		[CompilerGenerated]
-		private static class <Add>O__99_0<T1, T2, T3, T4>
-		{
-			// Token: 0x0403E778 RID: 255864
-			[Nullable(0)]
-			public static Action<uint, T1, T2, T3, T4> <0>__EmitFromBridge;
-		}
-
-		// Token: 0x0200CFAC RID: 53164
-		[CompilerGenerated]
-		private static class <AddWithTarget>O__104_0<T1>
-		{
-			// Token: 0x0403E779 RID: 255865
-			[Nullable(0)]
-			public static Action<uint, int, T1> <0>__EmitWithTargetFromBridge;
-		}
-
-		// Token: 0x0200CFAD RID: 53165
-		[CompilerGenerated]
-		private static class <AddWithTarget>O__105_0<T1, T2>
-		{
-			// Token: 0x0403E77A RID: 255866
-			[Nullable(0)]
-			public static Action<uint, int, T1, T2> <0>__EmitWithTargetFromBridge;
-		}
-
-		// Token: 0x0200CFAE RID: 53166
-		[CompilerGenerated]
-		private static class <AddWithTarget>O__106_0<T1, T2, T3>
-		{
-			// Token: 0x0403E77B RID: 255867
-			[Nullable(0)]
-			public static Action<uint, int, T1, T2, T3> <0>__EmitWithTargetFromBridge;
-		}
-
-		// Token: 0x0200CFAF RID: 53167
-		[CompilerGenerated]
-		private static class <AddWithTarget>O__107_0<T1, T2, T3, T4>
-		{
-			// Token: 0x0403E77C RID: 255868
-			[Nullable(0)]
-			public static Action<uint, int, T1, T2, T3, T4> <0>__EmitWithTargetFromBridge;
-		}
-
-		// Token: 0x0200CFB0 RID: 53168
-		[CompilerGenerated]
-		private static class <AddWithTarget>O__108_0<T1, T2, T3, T4, T5>
-		{
-			// Token: 0x0403E77D RID: 255869
-			[Nullable(0)]
-			public static Action<uint, int, T1, T2, T3, T4, T5> <0>__EmitWithTargetFromBridge;
-		}
-
-		// Token: 0x0200CFB1 RID: 53169
-		[CompilerGenerated]
-		private static class <AddWithTarget>O__109_0<T1, T2, T3, T4, T5, T6>
-		{
-			// Token: 0x0403E77E RID: 255870
-			[Nullable(0)]
-			public static Action<uint, int, T1, T2, T3, T4, T5, T6> <0>__EmitWithTargetFromBridge;
-		}
-
-		// Token: 0x0200CFB2 RID: 53170
-		[CompilerGenerated]
-		private static class <AddWithTarget>O__110_0<T1, T2, T3, T4, T5, T6, T7>
-		{
-			// Token: 0x0403E77F RID: 255871
-			[Nullable(0)]
-			public static Action<uint, int, T1, T2, T3, T4, T5, T6> <0>__EmitWithTargetFromBridge;
-		}
-
-		// Token: 0x0200CFB3 RID: 53171
-		[CompilerGenerated]
-		private static class <AddWithTargetUseHoldKey>O__112_0<T1>
-		{
-			// Token: 0x0403E780 RID: 255872
-			[Nullable(0)]
-			public static Action<uint, int, T1> <0>__EmitWithTargetFromBridge;
-		}
-
-		// Token: 0x0200CFB4 RID: 53172
-		[CompilerGenerated]
-		private static class <AddWithTargetUseHoldKey>O__113_0<T1, T2>
-		{
-			// Token: 0x0403E781 RID: 255873
-			[Nullable(0)]
-			public static Action<uint, int, T1, T2> <0>__EmitWithTargetFromBridge;
-		}
-
-		// Token: 0x0200CFB5 RID: 53173
-		[CompilerGenerated]
-		private static class <AddWithTargetUseHoldKey>O__114_0<T1, T2, T3>
-		{
-			// Token: 0x0403E782 RID: 255874
-			[Nullable(0)]
-			public static Action<uint, int, T1, T2, T3> <0>__EmitWithTargetFromBridge;
-		}
-
-		// Token: 0x0200CFB6 RID: 53174
-		[CompilerGenerated]
-		private static class <AddWithTargetUseHoldKey>O__115_0<T1, T2, T3, T4>
-		{
-			// Token: 0x0403E783 RID: 255875
-			[Nullable(0)]
-			public static Action<uint, int, T1, T2, T3, T4> <0>__EmitWithTargetFromBridge;
-		}
-
-		// Token: 0x0200CFB7 RID: 53175
-		[CompilerGenerated]
-		private static class <AddWithTargetUseHoldKey>O__116_0<T1, T2, T3, T4, T5>
-		{
-			// Token: 0x0403E784 RID: 255876
-			[Nullable(0)]
-			public static Action<uint, int, T1, T2, T3, T4, T5> <0>__EmitWithTargetFromBridge;
-		}
-
-		// Token: 0x0200CFB8 RID: 53176
-		[CompilerGenerated]
-		private static class <AddWithTargetUseHoldKey>O__117_0<T1, T2, T3, T4, T5, T6>
-		{
-			// Token: 0x0403E785 RID: 255877
-			[Nullable(0)]
-			public static Action<uint, int, T1, T2, T3, T4, T5, T6> <0>__EmitWithTargetFromBridge;
-		}
-
-		// Token: 0x0200CFB9 RID: 53177
-		[CompilerGenerated]
-		private static class <AddWithTargetUseHoldKey>O__118_0<T1, T2, T3, T4, T5, T6, T7>
-		{
-			// Token: 0x0403E786 RID: 255878
-			[Nullable(0)]
-			public static Action<uint, int, T1, T2, T3, T4, T5, T6, T7> <0>__EmitWithTargetFromBridge;
-		}
 	}
 }

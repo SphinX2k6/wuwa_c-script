@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x0200003F RID: 63
 	public class ClientConditionListenerComponent_SetValue
 	{
-		// Token: 0x04000161 RID: 353
+		// Token: 0x04000166 RID: 358
 		public bool? Disabled;
 
-		// Token: 0x04000162 RID: 354
+		// Token: 0x04000167 RID: 359
 		public bool? EdIsLocked;
 
-		// Token: 0x04000163 RID: 355
-		[Nullable(1)]
+		// Token: 0x04000168 RID: 360
 		public List<IClientConditionListener> Listeners;
 	}
 }

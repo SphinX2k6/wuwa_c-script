@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007218 RID: 29208
+	// Token: 0x020079ED RID: 31213
 	public class ISubScreenModeExitT
 	{
-		// Token: 0x1700D8D3 RID: 55507
-		// (get) Token: 0x06033CF0 RID: 212208 RVA: 0x006F8EE3 File Offset: 0x006F70E3
-		// (set) Token: 0x06033CF1 RID: 212209 RVA: 0x006F8EEB File Offset: 0x006F70EB
+		// Token: 0x1700E4CC RID: 58572
+		// (get) Token: 0x06036FF2 RID: 225266 RVA: 0x0075A243 File Offset: 0x00758443
+		// (set) Token: 0x06036FF3 RID: 225267 RVA: 0x0075A24B File Offset: 0x0075844B
 		public ESubScreenOperationType Type { get; set; }
 
-		// Token: 0x1700D8D4 RID: 55508
-		// (get) Token: 0x06033CF2 RID: 212210 RVA: 0x006F8EF4 File Offset: 0x006F70F4
-		// (set) Token: 0x06033CF3 RID: 212211 RVA: 0x006F8EFC File Offset: 0x006F70FC
+		// Token: 0x1700E4CD RID: 58573
+		// (get) Token: 0x06036FF4 RID: 225268 RVA: 0x0075A254 File Offset: 0x00758454
+		// (set) Token: 0x06036FF5 RID: 225269 RVA: 0x0075A25C File Offset: 0x0075845C
 		public List<ISetSubScreenDataT> ExitConfigs { get; set; }
 
-		// Token: 0x06033CF4 RID: 212212 RVA: 0x006F8F05 File Offset: 0x006F7105
+		// Token: 0x06036FF6 RID: 225270 RVA: 0x0075A265 File Offset: 0x00758465
 		public ISubScreenModeExitT()
 		{
 			this.Type = ESubScreenOperationType.Init;

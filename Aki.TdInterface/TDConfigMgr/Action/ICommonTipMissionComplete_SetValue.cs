@@ -3,25 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200191F RID: 6431
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AA8 RID: 6824
 	public class ICommonTipMissionComplete_SetValue
 	{
-		// Token: 0x04005649 RID: 22089
+		// Token: 0x04005A99 RID: 23193
 		public ECommonTipType Type;
 
-		// Token: 0x0400564A RID: 22090
+		// Token: 0x04005A9A RID: 23194
 		public string TidMainText;
 
-		// Token: 0x0400564B RID: 22091
+		// Token: 0x04005A9B RID: 23195
 		public string TidSubText;
 
-		// Token: 0x0400564C RID: 22092
+		// Token: 0x04005A9C RID: 23196
 		[Nullable(2)]
 		public string EdTidMainText;
 
-		// Token: 0x0400564D RID: 22093
+		// Token: 0x04005A9D RID: 23197
 		[Nullable(2)]
 		public string EdTidSubText;
 	}

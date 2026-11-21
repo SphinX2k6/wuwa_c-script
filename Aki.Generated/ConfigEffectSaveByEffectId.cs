@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000258 RID: 600
+	// Token: 0x0200026C RID: 620
 	public class ConfigEffectSaveByEffectId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000E14 RID: 3604 RVA: 0x000A912C File Offset: 0x000A732C
+		// Token: 0x06000E8C RID: 3724 RVA: 0x000AF3F0 File Offset: 0x000AD5F0
 		static ConfigEffectSaveByEffectId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEffectSaveByEffectId.CreateStaticDefaultValue), new Action(ConfigEffectSaveByEffectId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000E15 RID: 3605 RVA: 0x000A914C File Offset: 0x000A734C
+		// Token: 0x06000E8D RID: 3725 RVA: 0x000AF410 File Offset: 0x000AD610
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEffectSaveByEffectId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000E16 RID: 3606 RVA: 0x000A91CB File Offset: 0x000A73CB
+		// Token: 0x06000E8E RID: 3726 RVA: 0x000AF48F File Offset: 0x000AD68F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEffectSaveByEffectId.LogPair = null;
 			ConfigEffectSaveByEffectId.HandleId = 0;
 		}
 
-		// Token: 0x06000E17 RID: 3607 RVA: 0x000A91D9 File Offset: 0x000A73D9
+		// Token: 0x06000E8F RID: 3727 RVA: 0x000AF49D File Offset: 0x000AD69D
 		public static void Init()
 		{
 			ConfigEffectSaveByEffectId.HandleId = ConfigCommon.InitDataStatement(ConfigEffectSaveByEffectId.HandleId, "db_effectsave.db", "select BinData from `EffectSave` where EffectId = ?");
 		}
 
-		// Token: 0x06000E18 RID: 3608 RVA: 0x000A91F4 File Offset: 0x000A73F4
+		// Token: 0x06000E90 RID: 3728 RVA: 0x000AF4B8 File Offset: 0x000AD6B8
 		public static EffectSave? GetConfig(int p0EffectId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEffectSaveByEffectId.HandleId, ConfigEffectSaveByEffectId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new EffectSave?(rootAsEffectSave);
 		}
 
-		// Token: 0x0400104C RID: 4172
+		// Token: 0x040010D8 RID: 4312
 		private const string DB = "db_effectsave.db";
 
-		// Token: 0x0400104D RID: 4173
+		// Token: 0x040010D9 RID: 4313
 		private const string FILE = "t.特效保留.xlsx";
 
-		// Token: 0x0400104E RID: 4174
+		// Token: 0x040010DA RID: 4314
 		private const string TABLE = "EffectSave";
 
-		// Token: 0x0400104F RID: 4175
+		// Token: 0x040010DB RID: 4315
 		private const string COMMAND = "select BinData from `EffectSave` where EffectId = ?";
 
-		// Token: 0x04001050 RID: 4176
+		// Token: 0x040010DC RID: 4316
 		private const string KEY_PREFIX = "EffectSaveByEffectId";
 
-		// Token: 0x04001051 RID: 4177
+		// Token: 0x040010DD RID: 4317
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001052 RID: 4178
+		// Token: 0x040010DE RID: 4318
 		private static int HandleId;
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009D5 RID: 2517
+	// Token: 0x02000A9A RID: 2714
 	public class EPilotThrowPointVisualTypeJsonConverter : JsonConverter<EPilotThrowPointVisualType>
 	{
-		// Token: 0x060037F1 RID: 14321 RVA: 0x000913C8 File Offset: 0x0008F5C8
+		// Token: 0x06003BC9 RID: 15305 RVA: 0x00099C88 File Offset: 0x00097E88
 		public override EPilotThrowPointVisualType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EPilotThrowPointVisualTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060037F2 RID: 14322 RVA: 0x000913EC File Offset: 0x0008F5EC
+		// Token: 0x06003BCA RID: 15306 RVA: 0x00099CAC File Offset: 0x00097EAC
 		public override void Write(Utf8JsonWriter writer, EPilotThrowPointVisualType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006951 RID: 26961
+	// Token: 0x02007004 RID: 28676
 	public struct IInfrActivityRoadProcess : IFlatbufferObject
 	{
-		// Token: 0x1700C7FE RID: 51198
-		// (get) Token: 0x0602F12E RID: 192814 RVA: 0x0066A626 File Offset: 0x00668826
+		// Token: 0x1700D201 RID: 53761
+		// (get) Token: 0x06031AFE RID: 203518 RVA: 0x006BAB0E File Offset: 0x006B8D0E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F12F RID: 192815 RVA: 0x0066A633 File Offset: 0x00668833
+		// Token: 0x06031AFF RID: 203519 RVA: 0x006BAB1B File Offset: 0x006B8D1B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F130 RID: 192816 RVA: 0x0066A63C File Offset: 0x0066883C
+		// Token: 0x06031B00 RID: 203520 RVA: 0x006BAB24 File Offset: 0x006B8D24
 		public static IInfrActivityRoadProcess GetRootAsIInfrActivityRoadProcess(ByteBuffer _bb)
 		{
 			return IInfrActivityRoadProcess.GetRootAsIInfrActivityRoadProcess(_bb, default(IInfrActivityRoadProcess));
 		}
 
-		// Token: 0x0602F131 RID: 192817 RVA: 0x0066A658 File Offset: 0x00668858
+		// Token: 0x06031B01 RID: 203521 RVA: 0x006BAB40 File Offset: 0x006B8D40
 		public static IInfrActivityRoadProcess GetRootAsIInfrActivityRoadProcess(ByteBuffer _bb, IInfrActivityRoadProcess obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F132 RID: 192818 RVA: 0x0066A675 File Offset: 0x00668875
+		// Token: 0x06031B02 RID: 203522 RVA: 0x006BAB5D File Offset: 0x006B8D5D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F133 RID: 192819 RVA: 0x0066A684 File Offset: 0x00668884
+		// Token: 0x06031B03 RID: 203523 RVA: 0x006BAB6C File Offset: 0x006B8D6C
 		public IInfrActivityRoadProcess __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C7FF RID: 51199
-		// (get) Token: 0x0602F134 RID: 192820 RVA: 0x0066A694 File Offset: 0x00668894
+		// Token: 0x1700D202 RID: 53762
+		// (get) Token: 0x06031B04 RID: 203524 RVA: 0x006BAB7C File Offset: 0x006B8D7C
 		public EInfrActivityBuildStageType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C800 RID: 51200
-		// (get) Token: 0x0602F135 RID: 192821 RVA: 0x0066A6D0 File Offset: 0x006688D0
+		// Token: 0x1700D203 RID: 53763
+		// (get) Token: 0x06031B05 RID: 203525 RVA: 0x006BABB8 File Offset: 0x006B8DB8
 		public int Id
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F136 RID: 192822 RVA: 0x0066A70C File Offset: 0x0066890C
+		// Token: 0x06031B06 RID: 203526 RVA: 0x006BABF4 File Offset: 0x006B8DF4
 		public static Offset<IInfrActivityRoadProcess> CreateIInfrActivityRoadProcess(FlatBufferBuilder builder, EInfrActivityBuildStageType Type = EInfrActivityBuildStageType.Infrastructure, int Id = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInfrActivityRoadProcess.EndIInfrActivityRoadProcess(builder);
 		}
 
-		// Token: 0x0602F137 RID: 192823 RVA: 0x0066A729 File Offset: 0x00668929
+		// Token: 0x06031B07 RID: 203527 RVA: 0x006BAC11 File Offset: 0x006B8E11
 		public static void StartIInfrActivityRoadProcess(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602F138 RID: 192824 RVA: 0x0066A732 File Offset: 0x00668932
+		// Token: 0x06031B08 RID: 203528 RVA: 0x006BAC1A File Offset: 0x006B8E1A
 		public static void AddType(FlatBufferBuilder builder, EInfrActivityBuildStageType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602F139 RID: 192825 RVA: 0x0066A73D File Offset: 0x0066893D
+		// Token: 0x06031B09 RID: 203529 RVA: 0x006BAC25 File Offset: 0x006B8E25
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x0602F13A RID: 192826 RVA: 0x0066A748 File Offset: 0x00668948
+		// Token: 0x06031B0A RID: 203530 RVA: 0x006BAC30 File Offset: 0x006B8E30
 		public static Offset<IInfrActivityRoadProcess> EndIInfrActivityRoadProcess(FlatBufferBuilder builder)
 		{
 			return new Offset<IInfrActivityRoadProcess>(builder.EndTable());
 		}
 
-		// Token: 0x0602F13B RID: 192827 RVA: 0x0066A758 File Offset: 0x00668958
+		// Token: 0x06031B0B RID: 203531 RVA: 0x006BAC40 File Offset: 0x006B8E40
 		public IInfrActivityRoadProcessT UnPack()
 		{
 			IInfrActivityRoadProcessT infrActivityRoadProcessT = new IInfrActivityRoadProcessT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return infrActivityRoadProcessT;
 		}
 
-		// Token: 0x0602F13C RID: 192828 RVA: 0x0066A773 File Offset: 0x00668973
+		// Token: 0x06031B0C RID: 203532 RVA: 0x006BAC5B File Offset: 0x006B8E5B
 		public void UnPackTo(IInfrActivityRoadProcessT _o)
 		{
 			_o.Type = this.Type;
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x0602F13D RID: 192829 RVA: 0x0066A790 File Offset: 0x00668990
+		// Token: 0x06031B0D RID: 203533 RVA: 0x006BAC78 File Offset: 0x006B8E78
 		public static Offset<IInfrActivityRoadProcess> Pack(FlatBufferBuilder builder, IInfrActivityRoadProcessT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInfrActivityRoadProcess.CreateIInfrActivityRoadProcess(builder, _o.Type, _o.Id);
 		}
 
-		// Token: 0x040110D2 RID: 69842
+		// Token: 0x04011F3E RID: 73534
 		private Table __p;
 	}
 }

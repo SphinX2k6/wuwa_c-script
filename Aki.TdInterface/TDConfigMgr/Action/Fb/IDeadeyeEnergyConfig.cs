@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AB7 RID: 10935
+	// Token: 0x02002DAB RID: 11691
 	public class IDeadeyeEnergyConfig
 	{
-		// Token: 0x0600F001 RID: 61441 RVA: 0x0022DE07 File Offset: 0x0022C007
-		[NullableContext(1)]
+		// Token: 0x0600FEB7 RID: 65207 RVA: 0x0024BB13 File Offset: 0x00249D13
 		public static IDeadeyeEnergyConfig Create(IDeadeyeEnergyConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C55 RID: 19541
-		// (get) Token: 0x0600F002 RID: 61442 RVA: 0x0022DE26 File Offset: 0x0022C026
+		// Token: 0x1700500F RID: 20495
+		// (get) Token: 0x0600FEB8 RID: 65208 RVA: 0x0024BB32 File Offset: 0x00249D32
 		public virtual int MaxEnergy
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C56 RID: 19542
-		// (get) Token: 0x0600F003 RID: 61443 RVA: 0x0022DE33 File Offset: 0x0022C033
+		// Token: 0x17005010 RID: 20496
+		// (get) Token: 0x0600FEB9 RID: 65209 RVA: 0x0024BB3F File Offset: 0x00249D3F
 		public virtual int BulletConsumption
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C57 RID: 19543
-		// (get) Token: 0x0600F004 RID: 61444 RVA: 0x0022DE40 File Offset: 0x0022C040
+		// Token: 0x17005011 RID: 20497
+		// (get) Token: 0x0600FEBA RID: 65210 RVA: 0x0024BB4C File Offset: 0x00249D4C
 		public virtual int TimeConsumption
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008405 RID: 33797
+		// Token: 0x04008B09 RID: 35593
 		private IDeadeyeEnergyConfig Instance;
 	}
 }

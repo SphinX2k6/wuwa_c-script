@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001673 RID: 5747
+	// Token: 0x020017E6 RID: 6118
 	[EnumExtensions]
 	public enum EPlayerInputConstraintType
 	{
-		// Token: 0x04004CFB RID: 19707
+		// Token: 0x04005100 RID: 20736
 		Left,
-		// Token: 0x04004CFC RID: 19708
+		// Token: 0x04005101 RID: 20737
 		Right
 	}
 }

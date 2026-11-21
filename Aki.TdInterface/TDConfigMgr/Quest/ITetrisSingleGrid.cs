@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200119C RID: 4508
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012D6 RID: 4822
 	public class ITetrisSingleGrid
 	{
-		// Token: 0x06006658 RID: 26200 RVA: 0x000F546C File Offset: 0x000F366C
+		// Token: 0x06006C8F RID: 27791 RVA: 0x00102C38 File Offset: 0x00100E38
 		private ITetrisSingleGrid_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006659 RID: 26201 RVA: 0x000F54A4 File Offset: 0x000F36A4
+		// Token: 0x06006C90 RID: 27792 RVA: 0x00102C70 File Offset: 0x00100E70
 		public static ITetrisSingleGrid Create([Nullable(2)] ITetrisSingleGrid instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600665A RID: 26202 RVA: 0x000F54B7 File Offset: 0x000F36B7
+		// Token: 0x06006C91 RID: 27793 RVA: 0x00102C83 File Offset: 0x00100E83
 		public static ITetrisSingleGrid CreateFromSetValue([Nullable(2)] ITetrisSingleGrid_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600665B RID: 26203 RVA: 0x000F54CA File Offset: 0x000F36CA
+		// Token: 0x06006C92 RID: 27794 RVA: 0x00102C96 File Offset: 0x00100E96
 		public ITetrisSingleGrid_SetValue ToSetValue()
 		{
 			return new ITetrisSingleGrid_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002147 RID: 8519
-		// (get) Token: 0x0600665C RID: 26204 RVA: 0x000F54E0 File Offset: 0x000F36E0
-		// (set) Token: 0x0600665D RID: 26205 RVA: 0x000F5541 File Offset: 0x000F3741
+		// Token: 0x17002306 RID: 8966
+		// (get) Token: 0x06006C93 RID: 27795 RVA: 0x00102CAC File Offset: 0x00100EAC
+		// (set) Token: 0x06006C94 RID: 27796 RVA: 0x00102D0D File Offset: 0x00100F0D
 		[Nullable(2)]
 		public virtual ITetrisSingleBlock Block
 		{
@@ -92,18 +90,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003D66 RID: 15718
+		// Token: 0x040040CE RID: 16590
 		[Nullable(2)]
 		protected ITetrisSingleGrid FbInstance;
 
-		// Token: 0x04003D67 RID: 15719
+		// Token: 0x040040CF RID: 16591
 		[Nullable(2)]
 		protected ITetrisSingleGrid_SetValue PocoInterface;
 
-		// Token: 0x04003D68 RID: 15720
+		// Token: 0x040040D0 RID: 16592
 		private ITetrisSingleBlock _BlockCache;
 
-		// Token: 0x04003D69 RID: 15721
+		// Token: 0x040040D1 RID: 16593
 		private bool _BlockInited;
 	}
 }

@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200604B RID: 24651
+	// Token: 0x02004FC9 RID: 20425
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 	})]
 	public class SpringManorPhantomExhibitGrid : GridProxyAbstract<SpringManorPhantomDisplayItem>
 	{
-		// Token: 0x0603E61F RID: 255519 RVA: 0x00F11038 File Offset: 0x00F0F238
+		// Token: 0x060332E3 RID: 209635 RVA: 0x00E57DFC File Offset: 0x00E55FFC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E620 RID: 255520 RVA: 0x00F110E4 File Offset: 0x00F0F2E4
+		// Token: 0x060332E4 RID: 209636 RVA: 0x00E57EA8 File Offset: 0x00E560A8
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0603E621 RID: 255521 RVA: 0x00F11154 File Offset: 0x00F0F354
+		// Token: 0x060332E5 RID: 209637 RVA: 0x00E57F18 File Offset: 0x00E56118
 		[NullableContext(1)]
 		public override void Refresh(SpringManorPhantomDisplayItem data, bool isSelected, int gridIndex)
 		{
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			item.SetUIActive(data.IsSelected);
 		}
 
-		// Token: 0x0603E622 RID: 255522 RVA: 0x00F111F2 File Offset: 0x00F0F3F2
+		// Token: 0x060332E6 RID: 209638 RVA: 0x00E57FB6 File Offset: 0x00E561B6
 		private void ToggleClick(EToggleState state)
 		{
 			if (this.Data == null)
@@ -94,13 +94,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			onToggleClick(this.Data.PhantomId, base.GridIndex);
 		}
 
-		// Token: 0x0603E623 RID: 255523 RVA: 0x00F1121E File Offset: 0x00F0F41E
+		// Token: 0x060332E7 RID: 209639 RVA: 0x00E57FE2 File Offset: 0x00E561E2
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x0603E624 RID: 255524 RVA: 0x00F11231 File Offset: 0x00F0F431
+		// Token: 0x060332E8 RID: 209640 RVA: 0x00E57FF5 File Offset: 0x00E561F5
 		public override void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -111,16 +111,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x04020978 RID: 133496
+		// Token: 0x0401B2A5 RID: 111269
 		private SpringManorPhantomExhibitIconItem MonsterItem;
 
-		// Token: 0x04020979 RID: 133497
+		// Token: 0x0401B2A6 RID: 111270
 		public Func<int, bool> CanToggleChange;
 
-		// Token: 0x0402097A RID: 133498
+		// Token: 0x0401B2A7 RID: 111271
 		public Action<int, int> OnToggleClick;
 
-		// Token: 0x0402097B RID: 133499
+		// Token: 0x0401B2A8 RID: 111272
 		private SpringManorPhantomDisplayItem Data;
 	}
 }

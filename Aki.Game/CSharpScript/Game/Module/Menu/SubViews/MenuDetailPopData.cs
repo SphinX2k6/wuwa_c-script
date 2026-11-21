@@ -4,21 +4,21 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005424 RID: 21540
+	// Token: 0x02004407 RID: 17415
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MenuDetailPopData
 	{
-		// Token: 0x0401D0A4 RID: 118948
+		// Token: 0x04017B3D RID: 97085
 		public string Title = "";
 
-		// Token: 0x0401D0A5 RID: 118949
+		// Token: 0x04017B3E RID: 97086
 		public string Description = "";
 
-		// Token: 0x0401D0A6 RID: 118950
+		// Token: 0x04017B3F RID: 97087
 		public bool IsMulti;
 
-		// Token: 0x0401D0A7 RID: 118951
+		// Token: 0x04017B40 RID: 97088
 		public List<MenuDetailPopItemData> ItemList = new List<MenuDetailPopItemData>();
 	}
 }

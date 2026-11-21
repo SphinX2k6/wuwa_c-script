@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200667E RID: 26238
+	// Token: 0x02006CF8 RID: 27896
 	public struct IEnableSectionalCameraOperation : IFlatbufferObject
 	{
-		// Token: 0x1700C2E3 RID: 49891
-		// (get) Token: 0x0602D953 RID: 186707 RVA: 0x0063D725 File Offset: 0x0063B925
+		// Token: 0x1700CC94 RID: 52372
+		// (get) Token: 0x06030170 RID: 196976 RVA: 0x0068A9D9 File Offset: 0x00688BD9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D954 RID: 186708 RVA: 0x0063D732 File Offset: 0x0063B932
+		// Token: 0x06030171 RID: 196977 RVA: 0x0068A9E6 File Offset: 0x00688BE6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D955 RID: 186709 RVA: 0x0063D73C File Offset: 0x0063B93C
+		// Token: 0x06030172 RID: 196978 RVA: 0x0068A9F0 File Offset: 0x00688BF0
 		public static IEnableSectionalCameraOperation GetRootAsIEnableSectionalCameraOperation(ByteBuffer _bb)
 		{
 			return IEnableSectionalCameraOperation.GetRootAsIEnableSectionalCameraOperation(_bb, default(IEnableSectionalCameraOperation));
 		}
 
-		// Token: 0x0602D956 RID: 186710 RVA: 0x0063D758 File Offset: 0x0063B958
+		// Token: 0x06030173 RID: 196979 RVA: 0x0068AA0C File Offset: 0x00688C0C
 		public static IEnableSectionalCameraOperation GetRootAsIEnableSectionalCameraOperation(ByteBuffer _bb, IEnableSectionalCameraOperation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D957 RID: 186711 RVA: 0x0063D775 File Offset: 0x0063B975
+		// Token: 0x06030174 RID: 196980 RVA: 0x0068AA29 File Offset: 0x00688C29
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D958 RID: 186712 RVA: 0x0063D784 File Offset: 0x0063B984
+		// Token: 0x06030175 RID: 196981 RVA: 0x0068AA38 File Offset: 0x00688C38
 		public IEnableSectionalCameraOperation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C2E4 RID: 49892
-		// (get) Token: 0x0602D959 RID: 186713 RVA: 0x0063D794 File Offset: 0x0063B994
+		// Token: 0x1700CC95 RID: 52373
+		// (get) Token: 0x06030176 RID: 196982 RVA: 0x0068AA48 File Offset: 0x00688C48
 		public ECameraOperationType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C2E5 RID: 49893
-		// (get) Token: 0x0602D95A RID: 186714 RVA: 0x0063D7D0 File Offset: 0x0063B9D0
+		// Token: 0x1700CC96 RID: 52374
+		// (get) Token: 0x06030177 RID: 196983 RVA: 0x0068AA84 File Offset: 0x00688C84
 		public bool EnableRotate
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C2E6 RID: 49894
-		// (get) Token: 0x0602D95B RID: 186715 RVA: 0x0063D810 File Offset: 0x0063BA10
+		// Token: 0x1700CC97 RID: 52375
+		// (get) Token: 0x06030178 RID: 196984 RVA: 0x0068AAC4 File Offset: 0x00688CC4
 		public bool EnableZoom
 		{
 			get
@@ -84,8 +84,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C2E7 RID: 49895
-		// (get) Token: 0x0602D95C RID: 186716 RVA: 0x0063D850 File Offset: 0x0063BA50
+		// Token: 0x1700CC98 RID: 52376
+		// (get) Token: 0x06030179 RID: 196985 RVA: 0x0068AB04 File Offset: 0x00688D04
 		public byte NullMask
 		{
 			get
@@ -99,7 +99,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D95D RID: 186717 RVA: 0x0063D88D File Offset: 0x0063BA8D
+		// Token: 0x0603017A RID: 196986 RVA: 0x0068AB41 File Offset: 0x00688D41
 		public static Offset<IEnableSectionalCameraOperation> CreateIEnableSectionalCameraOperation(FlatBufferBuilder builder, ECameraOperationType Type = ECameraOperationType.Enable, bool EnableRotate = false, bool EnableZoom = false, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -110,43 +110,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnableSectionalCameraOperation.EndIEnableSectionalCameraOperation(builder);
 		}
 
-		// Token: 0x0602D95E RID: 186718 RVA: 0x0063D8B9 File Offset: 0x0063BAB9
+		// Token: 0x0603017B RID: 196987 RVA: 0x0068AB6D File Offset: 0x00688D6D
 		public static void StartIEnableSectionalCameraOperation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602D95F RID: 186719 RVA: 0x0063D8C2 File Offset: 0x0063BAC2
+		// Token: 0x0603017C RID: 196988 RVA: 0x0068AB76 File Offset: 0x00688D76
 		public static void AddType(FlatBufferBuilder builder, ECameraOperationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D960 RID: 186720 RVA: 0x0063D8CD File Offset: 0x0063BACD
+		// Token: 0x0603017D RID: 196989 RVA: 0x0068AB81 File Offset: 0x00688D81
 		public static void AddEnableRotate(FlatBufferBuilder builder, bool enableRotate)
 		{
 			builder.AddBool(1, enableRotate, false);
 		}
 
-		// Token: 0x0602D961 RID: 186721 RVA: 0x0063D8D8 File Offset: 0x0063BAD8
+		// Token: 0x0603017E RID: 196990 RVA: 0x0068AB8C File Offset: 0x00688D8C
 		public static void AddEnableZoom(FlatBufferBuilder builder, bool enableZoom)
 		{
 			builder.AddBool(2, enableZoom, false);
 		}
 
-		// Token: 0x0602D962 RID: 186722 RVA: 0x0063D8E3 File Offset: 0x0063BAE3
+		// Token: 0x0603017F RID: 196991 RVA: 0x0068AB97 File Offset: 0x00688D97
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0602D963 RID: 186723 RVA: 0x0063D8EE File Offset: 0x0063BAEE
+		// Token: 0x06030180 RID: 196992 RVA: 0x0068ABA2 File Offset: 0x00688DA2
 		public static Offset<IEnableSectionalCameraOperation> EndIEnableSectionalCameraOperation(FlatBufferBuilder builder)
 		{
 			return new Offset<IEnableSectionalCameraOperation>(builder.EndTable());
 		}
 
-		// Token: 0x0602D964 RID: 186724 RVA: 0x0063D8FC File Offset: 0x0063BAFC
+		// Token: 0x06030181 RID: 196993 RVA: 0x0068ABB0 File Offset: 0x00688DB0
 		public IEnableSectionalCameraOperationT UnPack()
 		{
 			IEnableSectionalCameraOperationT enableSectionalCameraOperationT = new IEnableSectionalCameraOperationT();
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return enableSectionalCameraOperationT;
 		}
 
-		// Token: 0x0602D965 RID: 186725 RVA: 0x0063D917 File Offset: 0x0063BB17
+		// Token: 0x06030182 RID: 196994 RVA: 0x0068ABCB File Offset: 0x00688DCB
 		public void UnPackTo(IEnableSectionalCameraOperationT _o)
 		{
 			_o.Type = this.Type;
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602D966 RID: 186726 RVA: 0x0063D94C File Offset: 0x0063BB4C
+		// Token: 0x06030183 RID: 196995 RVA: 0x0068AC00 File Offset: 0x00688E00
 		public static Offset<IEnableSectionalCameraOperation> Pack(FlatBufferBuilder builder, IEnableSectionalCameraOperationT _o)
 		{
 			if (_o == null)
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnableSectionalCameraOperation.CreateIEnableSectionalCameraOperation(builder, _o.Type, _o.EnableRotate, _o.EnableZoom, _o.NullMask);
 		}
 
-		// Token: 0x04010D24 RID: 68900
+		// Token: 0x04011B4A RID: 72522
 		private Table __p;
 	}
 }

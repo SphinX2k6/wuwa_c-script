@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000144 RID: 324
+	// Token: 0x02000153 RID: 339
 	public class ConfigCharacterPreloadByAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000799 RID: 1945 RVA: 0x00084AE0 File Offset: 0x00082CE0
+		// Token: 0x060007F3 RID: 2035 RVA: 0x0008A444 File Offset: 0x00088644
 		static ConfigCharacterPreloadByAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCharacterPreloadByAll.CreateStaticDefaultValue), new Action(ConfigCharacterPreloadByAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600079A RID: 1946 RVA: 0x00084B00 File Offset: 0x00082D00
+		// Token: 0x060007F4 RID: 2036 RVA: 0x0008A464 File Offset: 0x00088664
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCharacterPreloadByAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600079B RID: 1947 RVA: 0x00084B7F File Offset: 0x00082D7F
+		// Token: 0x060007F5 RID: 2037 RVA: 0x0008A4E3 File Offset: 0x000886E3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCharacterPreloadByAll.LogPair = null;
 			ConfigCharacterPreloadByAll.HandleId = 0;
 		}
 
-		// Token: 0x0600079C RID: 1948 RVA: 0x00084B8D File Offset: 0x00082D8D
+		// Token: 0x060007F6 RID: 2038 RVA: 0x0008A4F1 File Offset: 0x000886F1
 		public static void Init()
 		{
 			ConfigCharacterPreloadByAll.HandleId = ConfigCommon.InitDataStatement(ConfigCharacterPreloadByAll.HandleId, "db_character_preload.db", "select BinData from `CharacterPreload`");
 		}
 
-		// Token: 0x0600079D RID: 1949 RVA: 0x00084BA8 File Offset: 0x00082DA8
+		// Token: 0x060007F7 RID: 2039 RVA: 0x0008A50C File Offset: 0x0008870C
 		[NullableContext(2)]
 		public static IReadOnlyList<CharacterPreload> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040008C0 RID: 2240
+		// Token: 0x04000929 RID: 2345
 		private const string DB = "db_character_preload.db";
 
-		// Token: 0x040008C1 RID: 2241
+		// Token: 0x0400092A RID: 2346
 		private const string FILE = "Preload/CharacterPreload.csv";
 
-		// Token: 0x040008C2 RID: 2242
+		// Token: 0x0400092B RID: 2347
 		private const string TABLE = "CharacterPreload";
 
-		// Token: 0x040008C3 RID: 2243
+		// Token: 0x0400092C RID: 2348
 		private const string COMMAND = "select BinData from `CharacterPreload`";
 
-		// Token: 0x040008C4 RID: 2244
+		// Token: 0x0400092D RID: 2349
 		private const string KEY_PREFIX = "CharacterPreloadByAll";
 
-		// Token: 0x040008C5 RID: 2245
+		// Token: 0x0400092E RID: 2350
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040008C6 RID: 2246
+		// Token: 0x0400092F RID: 2351
 		private static int HandleId;
 	}
 }

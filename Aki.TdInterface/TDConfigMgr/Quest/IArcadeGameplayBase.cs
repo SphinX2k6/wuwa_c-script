@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EC2 RID: 3778
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FD8 RID: 4056
 	public class IArcadeGameplayBase
 	{
-		// Token: 0x06005372 RID: 21362 RVA: 0x000CD604 File Offset: 0x000CB804
+		// Token: 0x060058EE RID: 22766 RVA: 0x000D97AC File Offset: 0x000D79AC
 		private IArcadeGameplayBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005373 RID: 21363 RVA: 0x000CD63C File Offset: 0x000CB83C
+		// Token: 0x060058EF RID: 22767 RVA: 0x000D97E4 File Offset: 0x000D79E4
 		public static IArcadeGameplayBase Create([Nullable(2)] IArcadeGameplayBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005374 RID: 21364 RVA: 0x000CD64F File Offset: 0x000CB84F
+		// Token: 0x060058F0 RID: 22768 RVA: 0x000D97F7 File Offset: 0x000D79F7
 		public static IArcadeGameplayBase CreateFromSetValue([Nullable(2)] IArcadeGameplayBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005375 RID: 21365 RVA: 0x000CD662 File Offset: 0x000CB862
+		// Token: 0x060058F1 RID: 22769 RVA: 0x000D980A File Offset: 0x000D7A0A
 		public IArcadeGameplayBase_SetValue ToSetValue()
 		{
 			return new IArcadeGameplayBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C15 RID: 7189
-		// (get) Token: 0x06005376 RID: 21366 RVA: 0x000CD675 File Offset: 0x000CB875
-		// (set) Token: 0x06005377 RID: 21367 RVA: 0x000CD6A0 File Offset: 0x000CB8A0
+		// Token: 0x17001DAD RID: 7597
+		// (get) Token: 0x060058F2 RID: 22770 RVA: 0x000D981D File Offset: 0x000D7A1D
+		// (set) Token: 0x060058F3 RID: 22771 RVA: 0x000D9848 File Offset: 0x000D7A48
 		public virtual EArcadeGameplayType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003293 RID: 12947
+		// Token: 0x040035A0 RID: 13728
 		[Nullable(2)]
 		protected IArcadeGameplayBase FbInstance;
 
-		// Token: 0x04003294 RID: 12948
+		// Token: 0x040035A1 RID: 13729
 		[Nullable(2)]
 		protected IArcadeGameplayBase_SetValue PocoInterface;
 	}

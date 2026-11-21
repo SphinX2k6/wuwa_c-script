@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006E2 RID: 1762
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000783 RID: 1923
 	public class ISpawnConfigType
 	{
-		// Token: 0x060025F8 RID: 9720 RVA: 0x00065FD0 File Offset: 0x000641D0
+		// Token: 0x06002918 RID: 10520 RVA: 0x0006D040 File Offset: 0x0006B240
 		private ISpawnConfigType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060025F9 RID: 9721 RVA: 0x00066008 File Offset: 0x00064208
+		// Token: 0x06002919 RID: 10521 RVA: 0x0006D078 File Offset: 0x0006B278
 		public static ISpawnConfigType Create([Nullable(2)] ISpawnConfigType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060025FA RID: 9722 RVA: 0x0006601B File Offset: 0x0006421B
+		// Token: 0x0600291A RID: 10522 RVA: 0x0006D08B File Offset: 0x0006B28B
 		public static ISpawnConfigType CreateFromSetValue([Nullable(2)] ISpawnConfigType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060025FB RID: 9723 RVA: 0x0006602E File Offset: 0x0006422E
+		// Token: 0x0600291B RID: 10523 RVA: 0x0006D09E File Offset: 0x0006B29E
 		public ISpawnConfigType_SetValue ToSetValue()
 		{
 			return new ISpawnConfigType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A08 RID: 2568
-		// (get) Token: 0x060025FC RID: 9724 RVA: 0x00066041 File Offset: 0x00064241
-		// (set) Token: 0x060025FD RID: 9725 RVA: 0x0006606C File Offset: 0x0006426C
+		// Token: 0x17000AC6 RID: 2758
+		// (get) Token: 0x0600291C RID: 10524 RVA: 0x0006D0B1 File Offset: 0x0006B2B1
+		// (set) Token: 0x0600291D RID: 10525 RVA: 0x0006D0DC File Offset: 0x0006B2DC
 		public virtual ESpawnConfigType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040019DC RID: 6620
+		// Token: 0x04001BDB RID: 7131
 		[Nullable(2)]
 		protected ISpawnConfigType FbInstance;
 
-		// Token: 0x040019DD RID: 6621
+		// Token: 0x04001BDC RID: 7132
 		[Nullable(2)]
 		protected ISpawnConfigType_SetValue PocoInterface;
 	}

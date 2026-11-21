@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005C4 RID: 1476
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000635 RID: 1589
 	public class IPasserbyNpcFixIntervalSpawn : IPasserbyNpcSpawnBase
 	{
-		// Token: 0x06001F3C RID: 7996 RVA: 0x00057DC8 File Offset: 0x00055FC8
+		// Token: 0x06002164 RID: 8548 RVA: 0x0005D028 File Offset: 0x0005B228
 		private IPasserbyNpcFixIntervalSpawn_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001F3D RID: 7997 RVA: 0x00057E00 File Offset: 0x00056000
+		// Token: 0x06002165 RID: 8549 RVA: 0x0005D060 File Offset: 0x0005B260
 		public static IPasserbyNpcFixIntervalSpawn Create([Nullable(2)] IPasserbyNpcFixIntervalSpawn instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001F3E RID: 7998 RVA: 0x00057E13 File Offset: 0x00056013
+		// Token: 0x06002166 RID: 8550 RVA: 0x0005D073 File Offset: 0x0005B273
 		public static IPasserbyNpcFixIntervalSpawn CreateFromSetValue([Nullable(2)] IPasserbyNpcFixIntervalSpawn_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001F3F RID: 7999 RVA: 0x00057E26 File Offset: 0x00056026
+		// Token: 0x06002167 RID: 8551 RVA: 0x0005D086 File Offset: 0x0005B286
 		public new IPasserbyNpcFixIntervalSpawn_SetValue ToSetValue()
 		{
 			return new IPasserbyNpcFixIntervalSpawn_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000857 RID: 2135
-		// (get) Token: 0x06001F40 RID: 8000 RVA: 0x00057E5D File Offset: 0x0005605D
-		// (set) Token: 0x06001F41 RID: 8001 RVA: 0x00057E88 File Offset: 0x00056088
+		// Token: 0x170008E1 RID: 2273
+		// (get) Token: 0x06002168 RID: 8552 RVA: 0x0005D0BD File Offset: 0x0005B2BD
+		// (set) Token: 0x06002169 RID: 8553 RVA: 0x0005D0E8 File Offset: 0x0005B2E8
 		public override EPasserbyNpcSpawnType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000858 RID: 2136
-		// (get) Token: 0x06001F42 RID: 8002 RVA: 0x00057E96 File Offset: 0x00056096
-		// (set) Token: 0x06001F43 RID: 8003 RVA: 0x00057EC1 File Offset: 0x000560C1
+		// Token: 0x170008E2 RID: 2274
+		// (get) Token: 0x0600216A RID: 8554 RVA: 0x0005D0F6 File Offset: 0x0005B2F6
+		// (set) Token: 0x0600216B RID: 8555 RVA: 0x0005D121 File Offset: 0x0005B321
 		public override int MaxSpawnCount
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000859 RID: 2137
-		// (get) Token: 0x06001F44 RID: 8004 RVA: 0x00057ED0 File Offset: 0x000560D0
-		// (set) Token: 0x06001F45 RID: 8005 RVA: 0x00057F0A File Offset: 0x0005610A
+		// Token: 0x170008E3 RID: 2275
+		// (get) Token: 0x0600216C RID: 8556 RVA: 0x0005D130 File Offset: 0x0005B330
+		// (set) Token: 0x0600216D RID: 8557 RVA: 0x0005D16A File Offset: 0x0005B36A
 		public override int? MinDistance
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700085A RID: 2138
-		// (get) Token: 0x06001F46 RID: 8006 RVA: 0x00057F18 File Offset: 0x00056118
-		// (set) Token: 0x06001F47 RID: 8007 RVA: 0x00057F47 File Offset: 0x00056147
+		// Token: 0x170008E4 RID: 2276
+		// (get) Token: 0x0600216E RID: 8558 RVA: 0x0005D178 File Offset: 0x0005B378
+		// (set) Token: 0x0600216F RID: 8559 RVA: 0x0005D1A7 File Offset: 0x0005B3A7
 		public virtual float Interval
 		{
 			get
@@ -155,11 +153,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001623 RID: 5667
+		// Token: 0x040017A0 RID: 6048
 		[Nullable(2)]
 		protected new IPasserbyNpcFixIntervalSpawn FbInstance;
 
-		// Token: 0x04001624 RID: 5668
+		// Token: 0x040017A1 RID: 6049
 		[Nullable(2)]
 		protected new IPasserbyNpcFixIntervalSpawn_SetValue PocoInterface;
 	}

@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C47 RID: 19527
+	// Token: 0x02003BF8 RID: 15352
 	[NullableContext(1)]
 	public interface ISheriffReportPopParam
 	{
-		// Token: 0x17007CBE RID: 31934
-		// (get) Token: 0x060327EF RID: 206831
-		// (set) Token: 0x060327F0 RID: 206832
+		// Token: 0x17005068 RID: 20584
+		// (get) Token: 0x060275A2 RID: 161186
+		// (set) Token: 0x060275A3 RID: 161187
 		int CriminalId { get; set; }
 
-		// Token: 0x17007CBF RID: 31935
-		// (get) Token: 0x060327F1 RID: 206833
-		// (set) Token: 0x060327F2 RID: 206834
+		// Token: 0x17005069 RID: 20585
+		// (get) Token: 0x060275A4 RID: 161188
+		// (set) Token: 0x060275A5 RID: 161189
 		Action CloseCallback { get; set; }
 	}
 }

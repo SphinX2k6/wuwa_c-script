@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068E9 RID: 26857
+	// Token: 0x02005839 RID: 22585
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CoopUpGrateView : UiViewBase
 	{
-		// Token: 0x06042FF2 RID: 274418 RVA: 0x010519A6 File Offset: 0x0104FBA6
+		// Token: 0x06037B4A RID: 228170 RVA: 0x00F92FCE File Offset: 0x00F911CE
 		[NullableContext(1)]
 		public CoopUpGrateView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06042FF3 RID: 274419 RVA: 0x010519BC File Offset: 0x0104FBBC
+		// Token: 0x06037B4B RID: 228171 RVA: 0x00F92FE4 File Offset: 0x00F911E4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042FF4 RID: 274420 RVA: 0x01051AC0 File Offset: 0x0104FCC0
+		// Token: 0x06037B4C RID: 228172 RVA: 0x00F930E8 File Offset: 0x00F912E8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CoopUpGrateView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042FF5 RID: 274421 RVA: 0x01051B04 File Offset: 0x0104FD04
+		// Token: 0x06037B4D RID: 228173 RVA: 0x00F9312C File Offset: 0x00F9132C
 		protected override void OnStart()
 		{
 			CoopUpGrateViewParams coopUpGrateViewParams = this.OpenParam as CoopUpGrateViewParams;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.RefreshLevelTogItemList();
 		}
 
-		// Token: 0x06042FF6 RID: 274422 RVA: 0x01051CB8 File Offset: 0x0104FEB8
+		// Token: 0x06037B4E RID: 228174 RVA: 0x00F932E0 File Offset: 0x00F914E0
 		private void RefreshLevelTogItemList()
 		{
 			if (this.RoleId == null || this.RoleId.Value == 0)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.RefreshFiveLevelTogItem(coopLevelDataList);
 		}
 
-		// Token: 0x06042FF7 RID: 274423 RVA: 0x01051D28 File Offset: 0x0104FF28
+		// Token: 0x06037B4F RID: 228175 RVA: 0x00F93350 File Offset: 0x00F91550
 		[NullableContext(1)]
 		private void RefreshOneLevelTogItem(List<CoopLevelData> levelDataList)
 		{
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042FF8 RID: 274424 RVA: 0x01051D94 File Offset: 0x0104FF94
+		// Token: 0x06037B50 RID: 228176 RVA: 0x00F933BC File Offset: 0x00F915BC
 		[NullableContext(1)]
 		private void RefreshFiveLevelTogItem(List<CoopLevelData> levelDataList)
 		{
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042FF9 RID: 274425 RVA: 0x01051E10 File Offset: 0x01050010
+		// Token: 0x06037B51 RID: 228177 RVA: 0x00F93438 File Offset: 0x00F91638
 		protected void OnClickGoBtn()
 		{
 			CoopActivityData activityData = this.ActivityData;
@@ -169,28 +169,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			UiManager.Instance.OpenView(EUiViewName.CoopRoleSelectView, param, null);
 		}
 
-		// Token: 0x04022E10 RID: 142864
+		// Token: 0x0401D66C RID: 120428
 		private CoopActivityData ActivityData;
 
-		// Token: 0x04022E11 RID: 142865
+		// Token: 0x0401D66D RID: 120429
 		private int? RoleId;
 
-		// Token: 0x04022E12 RID: 142866
+		// Token: 0x0401D66E RID: 120430
 		private CoopUpLevelTogItem LevelTogItem1;
 
-		// Token: 0x04022E13 RID: 142867
+		// Token: 0x0401D66F RID: 120431
 		private CoopUpLevelTogItem LevelTogItem2;
 
-		// Token: 0x04022E14 RID: 142868
+		// Token: 0x0401D670 RID: 120432
 		private CoopUpLevelTogItem LevelTogItem3;
 
-		// Token: 0x04022E15 RID: 142869
+		// Token: 0x0401D671 RID: 120433
 		private CoopUpLevelTogItem LevelTogItem4;
 
-		// Token: 0x04022E16 RID: 142870
+		// Token: 0x0401D672 RID: 120434
 		private CoopUpLevelTogItem LevelTogItem5;
 
-		// Token: 0x04022E17 RID: 142871
+		// Token: 0x0401D673 RID: 120435
 		[Nullable(1)]
 		private List<CoopUpLevelTogItem> LevelTogItemList = new List<CoopUpLevelTogItem>();
 	}

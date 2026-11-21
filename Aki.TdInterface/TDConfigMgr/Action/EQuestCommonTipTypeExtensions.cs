@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023E3 RID: 9187
+	// Token: 0x0200267A RID: 9850
 	public static class EQuestCommonTipTypeExtensions
 	{
-		// Token: 0x0600C7FC RID: 51196 RVA: 0x001D4670 File Offset: 0x001D2870
+		// Token: 0x0600D47F RID: 54399 RVA: 0x001EDE1C File Offset: 0x001EC01C
 		public static string ToEnumString(this EQuestCommonTipType value)
 		{
 			string result;
@@ -39,7 +39,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C7FD RID: 51197 RVA: 0x001D46E8 File Offset: 0x001D28E8
+		// Token: 0x0600D480 RID: 54400 RVA: 0x001EDE94 File Offset: 0x001EC094
 		public static EQuestCommonTipType FromString(string name)
 		{
 			EQuestCommonTipType result;
@@ -50,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C7FE RID: 51198 RVA: 0x001D4714 File Offset: 0x001D2914
+		// Token: 0x0600D481 RID: 54401 RVA: 0x001EDEC0 File Offset: 0x001EC0C0
 		public static bool TryFromString(string name, out EQuestCommonTipType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -131,7 +131,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C7FF RID: 51199 RVA: 0x001D481E File Offset: 0x001D2A1E
+		// Token: 0x0600D482 RID: 54402 RVA: 0x001EDFCA File Offset: 0x001EC1CA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -146,7 +146,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C800 RID: 51200 RVA: 0x001D485E File Offset: 0x001D2A5E
+		// Token: 0x0600D483 RID: 54403 RVA: 0x001EE00A File Offset: 0x001EC20A
 		public static EQuestCommonTipType[] GetValues()
 		{
 			return new EQuestCommonTipType[]
@@ -161,7 +161,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C801 RID: 51201 RVA: 0x001D4871 File Offset: 0x001D2A71
+		// Token: 0x0600D484 RID: 54404 RVA: 0x001EE01D File Offset: 0x001EC21D
 		public static string[] GetNames()
 		{
 			return new string[]

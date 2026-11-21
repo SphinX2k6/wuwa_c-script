@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200233E RID: 9022
+	// Token: 0x020025AF RID: 9647
 	public class EFixedLookAtTargetTypeJsonConverter : JsonConverter<EFixedLookAtTargetType>
 	{
-		// Token: 0x0600C517 RID: 50455 RVA: 0x001CC500 File Offset: 0x001CA700
+		// Token: 0x0600D0EF RID: 53487 RVA: 0x001E45B8 File Offset: 0x001E27B8
 		public override EFixedLookAtTargetType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EFixedLookAtTargetTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C518 RID: 50456 RVA: 0x001CC524 File Offset: 0x001CA724
+		// Token: 0x0600D0F0 RID: 53488 RVA: 0x001E45DC File Offset: 0x001E27DC
 		public override void Write(Utf8JsonWriter writer, EFixedLookAtTargetType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

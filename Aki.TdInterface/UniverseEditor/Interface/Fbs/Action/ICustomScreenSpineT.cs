@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200650B RID: 25867
+	// Token: 0x02006B79 RID: 27513
 	public class ICustomScreenSpineT
 	{
-		// Token: 0x1700C05A RID: 49242
-		// (get) Token: 0x0602CDF1 RID: 183793 RVA: 0x00629D10 File Offset: 0x00627F10
-		// (set) Token: 0x0602CDF2 RID: 183794 RVA: 0x00629D18 File Offset: 0x00627F18
+		// Token: 0x1700C9EA RID: 51690
+		// (get) Token: 0x0602F587 RID: 193927 RVA: 0x00675FB0 File Offset: 0x006741B0
+		// (set) Token: 0x0602F588 RID: 193928 RVA: 0x00675FB8 File Offset: 0x006741B8
 		public ECustomScreenType Type { get; set; }
 
-		// Token: 0x1700C05B RID: 49243
-		// (get) Token: 0x0602CDF3 RID: 183795 RVA: 0x00629D21 File Offset: 0x00627F21
-		// (set) Token: 0x0602CDF4 RID: 183796 RVA: 0x00629D29 File Offset: 0x00627F29
+		// Token: 0x1700C9EB RID: 51691
+		// (get) Token: 0x0602F589 RID: 193929 RVA: 0x00675FC1 File Offset: 0x006741C1
+		// (set) Token: 0x0602F58A RID: 193930 RVA: 0x00675FC9 File Offset: 0x006741C9
 		public int SpineId { get; set; }
 
-		// Token: 0x0602CDF5 RID: 183797 RVA: 0x00629D32 File Offset: 0x00627F32
+		// Token: 0x0602F58B RID: 193931 RVA: 0x00675FD2 File Offset: 0x006741D2
 		public ICustomScreenSpineT()
 		{
 			this.Type = ECustomScreenType.Spine;

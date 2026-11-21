@@ -3,31 +3,31 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002C78 RID: 11384
+// Token: 0x020021D1 RID: 8657
 [NullableContext(2)]
 [Nullable(0)]
 public class UiModelAnimationComponent : UiModelComponentBase
 {
-	// Token: 0x06017C87 RID: 97415 RVA: 0x0060D042 File Offset: 0x0060B242
+	// Token: 0x060154FA RID: 87290 RVA: 0x00632B26 File Offset: 0x00630D26
 	protected override void OnInit()
 	{
 		this.ActorComponent = base.Owner.CheckGetComponent<UiModelActorComponent>();
 		this.ModelDataComponent = base.Owner.CheckGetComponent<UiModelDataComponent>();
 	}
 
-	// Token: 0x06017C88 RID: 97416 RVA: 0x0060D066 File Offset: 0x0060B266
+	// Token: 0x060154FB RID: 87291 RVA: 0x00632B4A File Offset: 0x00630D4A
 	protected override void OnStart()
 	{
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnModelLoadComplete));
 	}
 
-	// Token: 0x06017C89 RID: 97417 RVA: 0x0060D08A File Offset: 0x0060B28A
+	// Token: 0x060154FC RID: 87292 RVA: 0x00632B6E File Offset: 0x00630D6E
 	protected override void OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnModelLoadComplete));
 	}
 
-	// Token: 0x06017C8A RID: 97418 RVA: 0x0060D0B0 File Offset: 0x0060B2B0
+	// Token: 0x060154FD RID: 87293 RVA: 0x00632B94 File Offset: 0x00630D94
 	private void OnModelLoadComplete()
 	{
 		this.UpdateAnimInstance();
@@ -48,7 +48,7 @@ public class UiModelAnimationComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017C8B RID: 97419 RVA: 0x0060D12C File Offset: 0x0060B32C
+	// Token: 0x060154FE RID: 87294 RVA: 0x00632C10 File Offset: 0x00630E10
 	private unsafe void CheckLinkAnimInstance()
 	{
 		UiModelActorComponent actorComponent = this.ActorComponent;
@@ -79,7 +79,7 @@ public class UiModelAnimationComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017C8C RID: 97420 RVA: 0x0060D1DC File Offset: 0x0060B3DC
+	// Token: 0x060154FF RID: 87295 RVA: 0x00632CC0 File Offset: 0x00630EC0
 	protected void UpdateAnimInstance()
 	{
 		UiModelActorComponent actorComponent = this.ActorComponent;
@@ -96,14 +96,14 @@ public class UiModelAnimationComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017C8D RID: 97421 RVA: 0x0060D230 File Offset: 0x0060B430
+	// Token: 0x06015500 RID: 87296 RVA: 0x00632D14 File Offset: 0x00630F14
 	public bool IsMontagePlaying()
 	{
 		UAnimInstance mainAnimInstanceInternal = this.MainAnimInstanceInternal;
 		return mainAnimInstanceInternal != null && mainAnimInstanceInternal.IsAnyMontagePlaying();
 	}
 
-	// Token: 0x06017C8E RID: 97422 RVA: 0x0060D243 File Offset: 0x0060B443
+	// Token: 0x06015501 RID: 87297 RVA: 0x00632D27 File Offset: 0x00630F27
 	[NullableContext(1)]
 	public void PlayMontage(UAnimMontage asset)
 	{
@@ -116,7 +116,7 @@ public class UiModelAnimationComponent : UiModelComponentBase
 		this.MainAnimInstanceInternal.Montage_Play(asset, 1f, EMontagePlayReturnType.MontageLength, 0f, true);
 	}
 
-	// Token: 0x06017C8F RID: 97423 RVA: 0x0060D280 File Offset: 0x0060B480
+	// Token: 0x06015502 RID: 87298 RVA: 0x00632D64 File Offset: 0x00630F64
 	public void StopMontage(float blendOutTime = 0f)
 	{
 		UiModelDataComponent modelDataComponent = this.ModelDataComponent;
@@ -128,7 +128,7 @@ public class UiModelAnimationComponent : UiModelComponentBase
 		this.MainAnimInstanceInternal.Montage_Stop(blendOutTime, null);
 	}
 
-	// Token: 0x06017C90 RID: 97424 RVA: 0x0060D2B1 File Offset: 0x0060B4B1
+	// Token: 0x06015503 RID: 87299 RVA: 0x00632D95 File Offset: 0x00630F95
 	[NullableContext(1)]
 	public void JumpToSection(FName sectionName, UAnimMontage montage)
 	{
@@ -140,7 +140,7 @@ public class UiModelAnimationComponent : UiModelComponentBase
 		mainAnimInstanceInternal.Montage_JumpToSection(sectionName, montage);
 	}
 
-	// Token: 0x06017C91 RID: 97425 RVA: 0x0060D2C8 File Offset: 0x0060B4C8
+	// Token: 0x06015504 RID: 87300 RVA: 0x00632DAC File Offset: 0x00630FAC
 	public FName? GetCurrentSection()
 	{
 		UAnimInstance mainAnimInstanceInternal = this.MainAnimInstanceInternal;
@@ -151,7 +151,7 @@ public class UiModelAnimationComponent : UiModelComponentBase
 		return new FName?(mainAnimInstanceInternal.Montage_GetCurrentSection(null));
 	}
 
-	// Token: 0x06017C92 RID: 97426 RVA: 0x0060D2F4 File Offset: 0x0060B4F4
+	// Token: 0x06015505 RID: 87301 RVA: 0x00632DD8 File Offset: 0x00630FD8
 	public bool IsAnimationPlaying()
 	{
 		UiModelActorComponent actorComponent = this.ActorComponent;
@@ -169,7 +169,7 @@ public class UiModelAnimationComponent : UiModelComponentBase
 		return flag2.GetValueOrDefault();
 	}
 
-	// Token: 0x06017C93 RID: 97427 RVA: 0x0060D33C File Offset: 0x0060B53C
+	// Token: 0x06015506 RID: 87302 RVA: 0x00632E20 File Offset: 0x00631020
 	[NullableContext(1)]
 	public void PlayAnimation(UAnimationAsset asset, bool bLoop = true)
 	{
@@ -183,7 +183,7 @@ public class UiModelAnimationComponent : UiModelComponentBase
 		this.ActorComponent.MainMeshComponent.PlayAnimation(asset, bLoop);
 	}
 
-	// Token: 0x06017C94 RID: 97428 RVA: 0x0060D379 File Offset: 0x0060B579
+	// Token: 0x06015507 RID: 87303 RVA: 0x00632E5D File Offset: 0x0063105D
 	public void StopAnimation()
 	{
 		UiModelDataComponent modelDataComponent = this.ModelDataComponent;
@@ -195,7 +195,7 @@ public class UiModelAnimationComponent : UiModelComponentBase
 		this.ActorComponent.MainMeshComponent.Stop();
 	}
 
-	// Token: 0x06017C95 RID: 97429 RVA: 0x0060D3AD File Offset: 0x0060B5AD
+	// Token: 0x06015508 RID: 87304 RVA: 0x00632E91 File Offset: 0x00631091
 	public void SetAnimationMode(EAnimationMode animationMode)
 	{
 		UiModelDataComponent modelDataComponent = this.ModelDataComponent;
@@ -207,24 +207,24 @@ public class UiModelAnimationComponent : UiModelComponentBase
 		this.ActorComponent.MainMeshComponent.SetAnimationMode(animationMode);
 	}
 
-	// Token: 0x0400B138 RID: 45368
+	// Token: 0x0400B4A3 RID: 46243
 	private UiModelDataComponent ModelDataComponent;
 
-	// Token: 0x0400B139 RID: 45369
+	// Token: 0x0400B4A4 RID: 46244
 	private UiModelActorComponent ActorComponent;
 
-	// Token: 0x0400B13A RID: 45370
+	// Token: 0x0400B4A5 RID: 46245
 	private UAnimInstance MainAnimInstanceInternal;
 
-	// Token: 0x0400B13B RID: 45371
+	// Token: 0x0400B4A6 RID: 46246
 	private UAnimMontage MontageWaitToPlay;
 
-	// Token: 0x0400B13C RID: 45372
+	// Token: 0x0400B4A7 RID: 46247
 	private UAnimationAsset AnimationWaitToPlay;
 
-	// Token: 0x0400B13D RID: 45373
+	// Token: 0x0400B4A8 RID: 46248
 	private bool IsAnimationLoop = true;
 
-	// Token: 0x0400B13E RID: 45374
+	// Token: 0x0400B4A9 RID: 46249
 	private EAnimationMode? AnimationMode;
 }

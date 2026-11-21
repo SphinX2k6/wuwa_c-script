@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001089 RID: 4233
+// Token: 0x0200053D RID: 1341
 public class RhythmGameRoleInfoPanel : UiPanelBase
 {
-	// Token: 0x06006E13 RID: 28179 RVA: 0x00166230 File Offset: 0x00164430
+	// Token: 0x060041A8 RID: 16808 RVA: 0x0016EB64 File Offset: 0x0016CD64
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ public class RhythmGameRoleInfoPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006E14 RID: 28180 RVA: 0x0016628C File Offset: 0x0016448C
+	// Token: 0x060041A9 RID: 16809 RVA: 0x0016EBC0 File Offset: 0x0016CDC0
 	protected override void OnBeforeShow()
 	{
 		int? num = this.OpenParam as int?;
@@ -41,7 +41,7 @@ public class RhythmGameRoleInfoPanel : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), rhythmRoleById.Value.RoleSkillText, Array.Empty<object>());
 	}
 
-	// Token: 0x06006E15 RID: 28181 RVA: 0x0016635F File Offset: 0x0016455F
+	// Token: 0x060041AA RID: 16810 RVA: 0x0016EC93 File Offset: 0x0016CE93
 	protected override void OnAfterShow()
 	{
 		UUIItem rootItem = this.RootItem;
@@ -52,7 +52,7 @@ public class RhythmGameRoleInfoPanel : UiPanelBase
 		rootItem.SetUIActive(this.roleId != 0);
 	}
 
-	// Token: 0x06006E16 RID: 28182 RVA: 0x0016637C File Offset: 0x0016457C
+	// Token: 0x060041AB RID: 16811 RVA: 0x0016ECB0 File Offset: 0x0016CEB0
 	public void ShowRoleFeverInfo()
 	{
 		base.GetItem(1).SetUIActive(true);
@@ -71,24 +71,24 @@ public class RhythmGameRoleInfoPanel : UiPanelBase
 		}, (float)this.RhythmGameRoleFeverAudioDelayTime, null, null, true, 1f);
 	}
 
-	// Token: 0x040032F7 RID: 13047
+	// Token: 0x04003390 RID: 13200
 	private readonly int RhythmGameRoleFeverAudioDelayTime = 4000;
 
-	// Token: 0x040032F8 RID: 13048
+	// Token: 0x04003391 RID: 13201
 	[Nullable(1)]
 	private string RoleSkillAudio = "";
 
-	// Token: 0x040032F9 RID: 13049
+	// Token: 0x04003392 RID: 13202
 	private int roleId;
 
-	// Token: 0x02007681 RID: 30337
+	// Token: 0x02006815 RID: 26645
 	private enum EComponent
 	{
-		// Token: 0x040271A9 RID: 160169
+		// Token: 0x040224F4 RID: 140532
 		IconRole,
-		// Token: 0x040271AA RID: 160170
+		// Token: 0x040224F5 RID: 140533
 		InfoItem,
-		// Token: 0x040271AB RID: 160171
+		// Token: 0x040224F6 RID: 140534
 		RoleSkillText
 	}
 }

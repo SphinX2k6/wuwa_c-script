@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02003048 RID: 12360
+// Token: 0x0200259E RID: 9630
 public enum ECameraPositionType
 {
-	// Token: 0x0400C7BE RID: 51134
+	// Token: 0x0400CB98 RID: 52120
 	CameraPosition,
-	// Token: 0x0400C7BF RID: 51135
+	// Token: 0x0400CB99 RID: 52121
 	HitCase,
-	// Token: 0x0400C7C0 RID: 51136
+	// Token: 0x0400CB9A RID: 52122
 	Default
 }

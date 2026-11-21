@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200284D RID: 10317
+	// Token: 0x02002B20 RID: 11040
 	public class IInteractPointInteraction
 	{
-		// Token: 0x0600E4B1 RID: 58545 RVA: 0x0021A77A File Offset: 0x0021897A
-		[NullableContext(1)]
+		// Token: 0x0600F2D6 RID: 62166 RVA: 0x002375DE File Offset: 0x002357DE
 		public static IInteractPointInteraction Create(IInteractPointInteraction? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045D9 RID: 17881
-		// (get) Token: 0x0600E4B2 RID: 58546 RVA: 0x0021A799 File Offset: 0x00218999
+		// Token: 0x17004944 RID: 18756
+		// (get) Token: 0x0600F2D7 RID: 62167 RVA: 0x002375FD File Offset: 0x002357FD
 		public virtual EInteractPointInteractionType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E87 RID: 32391
+		// Token: 0x04008544 RID: 34116
 		private IInteractPointInteraction Instance;
 	}
 }

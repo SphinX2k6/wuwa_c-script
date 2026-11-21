@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FCE RID: 8142
+// Token: 0x020014A1 RID: 5281
 [NullableContext(2)]
 [Nullable(0)]
 public class ItemExpiredAutoConvertTipsView : UiViewBase
 {
-	// Token: 0x0600FF31 RID: 65329 RVA: 0x003E22AC File Offset: 0x003E04AC
+	// Token: 0x0600D399 RID: 54169 RVA: 0x003EE888 File Offset: 0x003ECA88
 	[NullableContext(1)]
 	public ItemExpiredAutoConvertTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FF32 RID: 65330 RVA: 0x003E22B8 File Offset: 0x003E04B8
+	// Token: 0x0600D39A RID: 54170 RVA: 0x003EE894 File Offset: 0x003ECA94
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -38,7 +38,7 @@ public class ItemExpiredAutoConvertTipsView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600FF33 RID: 65331 RVA: 0x003E2384 File Offset: 0x003E0584
+	// Token: 0x0600D39B RID: 54171 RVA: 0x003EE960 File Offset: 0x003ECB60
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ItemExpiredAutoConvertTipsView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ public class ItemExpiredAutoConvertTipsView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FF34 RID: 65332 RVA: 0x003E23C8 File Offset: 0x003E05C8
+	// Token: 0x0600D39C RID: 54172 RVA: 0x003EE9A4 File Offset: 0x003ECBA4
 	protected override void OnBeforeShow()
 	{
 		this.CancelButton.SetActive(this.Data.OnCancelCallBack != null);
@@ -58,18 +58,18 @@ public class ItemExpiredAutoConvertTipsView : UiViewBase
 		base.GetText(0).ShowTextNew(this.Data.TitleText);
 	}
 
-	// Token: 0x04007613 RID: 30227
+	// Token: 0x040076FC RID: 30460
 	private ItemExpiredAutoConvertTipsViewDefine Data;
 
-	// Token: 0x04007614 RID: 30228
+	// Token: 0x040076FD RID: 30461
 	private ButtonItem CancelButton;
 
-	// Token: 0x04007615 RID: 30229
+	// Token: 0x040076FE RID: 30462
 	private ButtonItem ConfirmButton;
 
-	// Token: 0x04007616 RID: 30230
+	// Token: 0x040076FF RID: 30463
 	private ConvertShowItem BeforeConvertShowItem;
 
-	// Token: 0x04007617 RID: 30231
+	// Token: 0x04007700 RID: 30464
 	private ConvertShowItem AfterConvertShowItem;
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -10,15 +9,15 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.TowerDefence;
 using CSharpScript.Module.InstanceDungeon;
 
-// Token: 0x02002BC0 RID: 11200
+// Token: 0x0200213B RID: 8507
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class TowerDefenseModel : ModelBase
 {
-	// Token: 0x17001F5F RID: 8031
-	// (get) Token: 0x060173FE RID: 95230 RVA: 0x005E63EC File Offset: 0x005E45EC
-	// (set) Token: 0x060173FF RID: 95231 RVA: 0x005E644C File Offset: 0x005E464C
+	// Token: 0x17001FB7 RID: 8119
+	// (get) Token: 0x06014E2F RID: 85551 RVA: 0x00612FB8 File Offset: 0x006111B8
+	// (set) Token: 0x06014E30 RID: 85552 RVA: 0x00613018 File Offset: 0x00611218
 	public bool IsEnterInActivityClicked
 	{
 		get
@@ -46,15 +45,15 @@ public class TowerDefenseModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001F60 RID: 8032
-	// (get) Token: 0x06017400 RID: 95232 RVA: 0x005E648B File Offset: 0x005E468B
+	// Token: 0x17001FB8 RID: 8120
+	// (get) Token: 0x06014E31 RID: 85553 RVA: 0x00613057 File Offset: 0x00611257
 	public Dictionary<int, ITowerDefensePhantomConfig> PhantomConfigCache { get; } = new Dictionary<int, ITowerDefensePhantomConfig>();
 
-	// Token: 0x17001F61 RID: 8033
-	// (get) Token: 0x06017401 RID: 95233 RVA: 0x005E6493 File Offset: 0x005E4693
+	// Token: 0x17001FB9 RID: 8121
+	// (get) Token: 0x06014E32 RID: 85554 RVA: 0x0061305F File Offset: 0x0061125F
 	public List<ITowerDefensePhantomConfig> SortedPhantomConfigCache { get; } = new List<ITowerDefensePhantomConfig>();
 
-	// Token: 0x06017402 RID: 95234 RVA: 0x005E649C File Offset: 0x005E469C
+	// Token: 0x06014E33 RID: 85555 RVA: 0x00613068 File Offset: 0x00611268
 	public unsafe int GetCurrentPhantomIdInBattle()
 	{
 		SceneTeamItem currentSceneTeamItem = TowerDefenseController.Instance.GetCurrentSceneTeamItem();
@@ -89,7 +88,7 @@ public class TowerDefenseModel : ModelBase
 		return ownerData.PhantomId;
 	}
 
-	// Token: 0x06017403 RID: 95235 RVA: 0x005E65D0 File Offset: 0x005E47D0
+	// Token: 0x06014E34 RID: 85556 RVA: 0x0061319C File Offset: 0x0061139C
 	private List<ITowerDefensePhantomConfigSkillData> GetCurrentPhantomSkillCfgCore(int phantomId)
 	{
 		ITowerDefensePhantomConfig towerDefensePhantomConfig;
@@ -106,14 +105,14 @@ public class TowerDefenseModel : ModelBase
 		return towerDefensePhantomConfig.SkillDataList;
 	}
 
-	// Token: 0x06017404 RID: 95236 RVA: 0x005E6628 File Offset: 0x005E4828
+	// Token: 0x06014E35 RID: 85557 RVA: 0x006131F4 File Offset: 0x006113F4
 	public List<ITowerDefensePhantomConfigSkillData> GetCurrentPhantomSkillCfgListInBattle()
 	{
 		int currentPhantomIdInBattle = this.GetCurrentPhantomIdInBattle();
 		return this.GetCurrentPhantomSkillCfgCore(currentPhantomIdInBattle);
 	}
 
-	// Token: 0x06017405 RID: 95237 RVA: 0x005E6644 File Offset: 0x005E4844
+	// Token: 0x06014E36 RID: 85558 RVA: 0x00613210 File Offset: 0x00611410
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -123,14 +122,14 @@ public class TowerDefenseModel : ModelBase
 	{
 		int currentPhantomIdInBattle = this.GetCurrentPhantomIdInBattle();
 		string[] phantomSkillDescriptionArgsByPhantomId = TowerDefenseController.Instance.GetPhantomSkillDescriptionArgsByPhantomId(currentPhantomIdInBattle);
-		if (phantomSkillDescriptionArgsByPhantomId == null)
+		if (phantomSkillDescriptionArgsByPhantomId != null)
 		{
-			return null;
+			return new List<string>(phantomSkillDescriptionArgsByPhantomId);
 		}
-		return phantomSkillDescriptionArgsByPhantomId.ToList<string>();
+		return null;
 	}
 
-	// Token: 0x06017406 RID: 95238 RVA: 0x005E6670 File Offset: 0x005E4870
+	// Token: 0x06014E37 RID: 85559 RVA: 0x0061323C File Offset: 0x0061143C
 	public int GetCurrentPhantomLevelInBattle()
 	{
 		int currentPhantomIdInBattle = this.GetCurrentPhantomIdInBattle();
@@ -142,7 +141,7 @@ public class TowerDefenseModel : ModelBase
 		return 1;
 	}
 
-	// Token: 0x06017407 RID: 95239 RVA: 0x005E66A4 File Offset: 0x005E48A4
+	// Token: 0x06014E38 RID: 85560 RVA: 0x00613270 File Offset: 0x00611470
 	public ITowerDefensePhantomExp GetCurrentPhantomExpPairInBattle()
 	{
 		int currentPhantomIdInBattle = this.GetCurrentPhantomIdInBattle();
@@ -188,7 +187,7 @@ public class TowerDefenseModel : ModelBase
 		return towerDefensePhantomExp;
 	}
 
-	// Token: 0x06017408 RID: 95240 RVA: 0x005E6814 File Offset: 0x005E4A14
+	// Token: 0x06014E39 RID: 85561 RVA: 0x006133E0 File Offset: 0x006115E0
 	public string GetCurrentPhantomNameTextId()
 	{
 		TowerDefencePhantom? config = ConfigTowerDefencePhantomById.GetConfig(this.GetCurrentPhantomIdInBattle(), true);
@@ -199,13 +198,13 @@ public class TowerDefenseModel : ModelBase
 		return "";
 	}
 
-	// Token: 0x06017409 RID: 95241 RVA: 0x005E684C File Offset: 0x005E4A4C
+	// Token: 0x06014E3A RID: 85562 RVA: 0x00613418 File Offset: 0x00611618
 	public List<ITowerDefensePhantomConfigSkillData> GetCurrentPhantomSkillCfgTemp()
 	{
 		return this.GetCurrentPhantomSkillCfgCore(this.CurrentSelfPhantomIdInUiTemp);
 	}
 
-	// Token: 0x0601740A RID: 95242 RVA: 0x005E685A File Offset: 0x005E4A5A
+	// Token: 0x06014E3B RID: 85563 RVA: 0x00613426 File Offset: 0x00611626
 	public ParsedTowerDefenseMsg GetOrCreateParsedTowerDefenseMsg()
 	{
 		if (this.PhantomMessageCache == null)
@@ -215,7 +214,7 @@ public class TowerDefenseModel : ModelBase
 		return this.PhantomMessageCache;
 	}
 
-	// Token: 0x0601740B RID: 95243 RVA: 0x005E6878 File Offset: 0x005E4A78
+	// Token: 0x06014E3C RID: 85564 RVA: 0x00613444 File Offset: 0x00611644
 	[return: Nullable(2)]
 	public List<int> GetProtocolPhantomIdList(List<int> roleCfgIdList)
 	{
@@ -233,7 +232,7 @@ public class TowerDefenseModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0601740C RID: 95244 RVA: 0x005E690C File Offset: 0x005E4B0C
+	// Token: 0x06014E3D RID: 85565 RVA: 0x006134D8 File Offset: 0x006116D8
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -271,7 +270,7 @@ public class TowerDefenseModel : ModelBase
 		return new ValueTuple<int, int>(num, num2);
 	}
 
-	// Token: 0x0601740D RID: 95245 RVA: 0x005E69FC File Offset: 0x005E4BFC
+	// Token: 0x06014E3E RID: 85566 RVA: 0x006135C8 File Offset: 0x006117C8
 	public IActivityRewardViewData GetPreviewRewardData()
 	{
 		IReadOnlyList<TowerDefenceReward> configList = ConfigTowerDefenceRewardAll.GetConfigList(true);
@@ -406,7 +405,7 @@ public class TowerDefenseModel : ModelBase
 		};
 	}
 
-	// Token: 0x0601740E RID: 95246 RVA: 0x005E6FE8 File Offset: 0x005E51E8
+	// Token: 0x06014E3F RID: 85567 RVA: 0x00613BB4 File Offset: 0x00611DB4
 	private List<int> CollectClaimableScoreRewardIds()
 	{
 		List<int> list = new List<int>();
@@ -424,7 +423,7 @@ public class TowerDefenseModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0601740F RID: 95247 RVA: 0x005E7070 File Offset: 0x005E5270
+	// Token: 0x06014E40 RID: 85568 RVA: 0x00613C3C File Offset: 0x00611E3C
 	private List<int> CollectClaimableInstanceRewardIds(bool isDifficult)
 	{
 		List<int> list = new List<int>();
@@ -439,7 +438,7 @@ public class TowerDefenseModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06017410 RID: 95248 RVA: 0x005E7114 File Offset: 0x005E5314
+	// Token: 0x06014E41 RID: 85569 RVA: 0x00613CE0 File Offset: 0x00611EE0
 	private string BuildScoreProgressText(int requiredScore, int current = -1)
 	{
 		int value = Math.Min((current < 0) ? this.PhantomMessageCache.TotalScore : current, requiredScore);
@@ -450,7 +449,7 @@ public class TowerDefenseModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06017411 RID: 95249 RVA: 0x005E7168 File Offset: 0x005E5368
+	// Token: 0x06014E42 RID: 85570 RVA: 0x00613D34 File Offset: 0x00611F34
 	private int SortRewardHandler(IActivityRewardData a, IActivityRewardData b)
 	{
 		if (a.RewardState == b.RewardState)
@@ -476,7 +475,7 @@ public class TowerDefenseModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06017412 RID: 95250 RVA: 0x005E71CC File Offset: 0x005E53CC
+	// Token: 0x06014E43 RID: 85571 RVA: 0x00613D98 File Offset: 0x00611F98
 	private string GetPreviewButtonTextByState(EActivityRewardState state)
 	{
 		switch (state)
@@ -492,7 +491,7 @@ public class TowerDefenseModel : ModelBase
 		}
 	}
 
-	// Token: 0x06017413 RID: 95251 RVA: 0x005E7234 File Offset: 0x005E5434
+	// Token: 0x06014E44 RID: 85572 RVA: 0x00613E00 File Offset: 0x00612000
 	public void ResetCurrentPhantomIdInUiTempToFirstAvailable()
 	{
 		foreach (ITowerDefensePhantomConfig towerDefensePhantomConfig in this.SortedPhantomConfigCache)
@@ -521,7 +520,7 @@ public class TowerDefenseModel : ModelBase
 		this.CurrentSelfPhantomIdInUiTemp = 0;
 	}
 
-	// Token: 0x06017414 RID: 95252 RVA: 0x005E72F8 File Offset: 0x005E54F8
+	// Token: 0x06014E45 RID: 85573 RVA: 0x00613EC4 File Offset: 0x006120C4
 	public void ResetPhantomOwnerDataList()
 	{
 		this.PhantomOwnerDataList.Clear();
@@ -538,7 +537,7 @@ public class TowerDefenseModel : ModelBase
 		}
 	}
 
-	// Token: 0x06017415 RID: 95253 RVA: 0x005E7364 File Offset: 0x005E5564
+	// Token: 0x06014E46 RID: 85574 RVA: 0x00613F30 File Offset: 0x00612130
 	public void ResetPhantomOwnerDataByIndex(int index)
 	{
 		this.PhantomOwnerDataList[index].PlayerId = (long)PlayerInfoModel.Instance.GetId().Value;
@@ -548,7 +547,7 @@ public class TowerDefenseModel : ModelBase
 		this.PhantomOwnerDataList[index].PhantomId = 0;
 	}
 
-	// Token: 0x06017416 RID: 95254 RVA: 0x005E73E0 File Offset: 0x005E55E0
+	// Token: 0x06014E47 RID: 85575 RVA: 0x00613FAC File Offset: 0x006121AC
 	public void ResetAllCache()
 	{
 		this.CurrentSelfPhantomIdInUiTemp = 0;
@@ -559,7 +558,7 @@ public class TowerDefenseModel : ModelBase
 		this.RoleCfgId2PhantomIdMapCache.Clear();
 	}
 
-	// Token: 0x06017417 RID: 95255 RVA: 0x005E741C File Offset: 0x005E561C
+	// Token: 0x06014E48 RID: 85576 RVA: 0x00613FE8 File Offset: 0x006121E8
 	public void ResetPhantomOwnerDataByConfigId(int configId)
 	{
 		for (int i = 0; i < this.PhantomOwnerDataList.Count; i++)
@@ -574,7 +573,7 @@ public class TowerDefenseModel : ModelBase
 		this.RoleCfgId2PhantomIdMapCache.Remove(configId);
 	}
 
-	// Token: 0x06017418 RID: 95256 RVA: 0x005E7474 File Offset: 0x005E5674
+	// Token: 0x06014E49 RID: 85577 RVA: 0x00614040 File Offset: 0x00612240
 	public void ResetTimerCacheInBattle()
 	{
 		foreach (KeyValuePair<int, Dictionary<int, TimerHandle>> keyValuePair in this.TimerCacheInBattle)
@@ -588,7 +587,7 @@ public class TowerDefenseModel : ModelBase
 		this.TimerCacheInBattle.Clear();
 	}
 
-	// Token: 0x06017419 RID: 95257 RVA: 0x005E7520 File Offset: 0x005E5720
+	// Token: 0x06014E4A RID: 85578 RVA: 0x006140EC File Offset: 0x006122EC
 	[NullableContext(2)]
 	public unsafe void TryAddTimerInBattle(TimerHandle handle, int playerId, int roleId)
 	{
@@ -616,7 +615,7 @@ public class TowerDefenseModel : ModelBase
 		dictionary[roleId] = handle;
 	}
 
-	// Token: 0x0601741A RID: 95258 RVA: 0x005E75DC File Offset: 0x005E57DC
+	// Token: 0x06014E4B RID: 85579 RVA: 0x006141A8 File Offset: 0x006123A8
 	public void TryRemoveTimerInBattle(int playerId, int? roleId = null)
 	{
 		Dictionary<int, TimerHandle> dictionary;
@@ -646,13 +645,13 @@ public class TowerDefenseModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601741B RID: 95259 RVA: 0x005E7694 File Offset: 0x005E5894
+	// Token: 0x06014E4C RID: 85580 RVA: 0x00614260 File Offset: 0x00612460
 	public bool CheckHasReward()
 	{
 		return this.CheckHasPassReward() || this.CheckHasScoreReward();
 	}
 
-	// Token: 0x0601741C RID: 95260 RVA: 0x005E76A8 File Offset: 0x005E58A8
+	// Token: 0x06014E4D RID: 85581 RVA: 0x00614274 File Offset: 0x00612474
 	public bool CheckHasScoreReward()
 	{
 		IEnumerable<TowerDefenceReward> configList = ConfigTowerDefenceRewardAll.GetConfigList(true);
@@ -667,7 +666,7 @@ public class TowerDefenseModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0601741D RID: 95261 RVA: 0x005E7734 File Offset: 0x005E5934
+	// Token: 0x06014E4E RID: 85582 RVA: 0x00614300 File Offset: 0x00612500
 	public int GetMaxScoreRewardThreshold()
 	{
 		IReadOnlyList<TowerDefenceReward> configList = ConfigTowerDefenceRewardAll.GetConfigList(true);
@@ -686,7 +685,7 @@ public class TowerDefenseModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0601741E RID: 95262 RVA: 0x005E77AC File Offset: 0x005E59AC
+	// Token: 0x06014E4F RID: 85583 RVA: 0x00614378 File Offset: 0x00612578
 	public bool CheckHasPassReward()
 	{
 		foreach (ITowerDefenseParsedStageMessage towerDefenseParsedStageMessage in this.PhantomMessageCache.StageListCache)
@@ -711,7 +710,7 @@ public class TowerDefenseModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0601741F RID: 95263 RVA: 0x005E7854 File Offset: 0x005E5A54
+	// Token: 0x06014E50 RID: 85584 RVA: 0x00614420 File Offset: 0x00612620
 	public bool CheckHasNewStage()
 	{
 		double serverTimeStamp = TimeUtil.Instance.GetServerTimeStamp();
@@ -725,7 +724,7 @@ public class TowerDefenseModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06017420 RID: 95264 RVA: 0x005E78CC File Offset: 0x005E5ACC
+	// Token: 0x06014E51 RID: 85585 RVA: 0x00614498 File Offset: 0x00612698
 	private bool CheckLevelHasClickByInstanceId(int instanceId)
 	{
 		Dictionary<int, bool> dictionary = LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.TowerDefenseNewLevel, null);
@@ -739,7 +738,7 @@ public class TowerDefenseModel : ModelBase
 		return dictionary.TryGetValue(instanceId, out flag) && flag;
 	}
 
-	// Token: 0x06017421 RID: 95265 RVA: 0x005E7904 File Offset: 0x005E5B04
+	// Token: 0x06014E52 RID: 85586 RVA: 0x006144D0 File Offset: 0x006126D0
 	public bool CheckTowerDefenseInstanceHasRedDot(int instanceId)
 	{
 		TowerDefenceInstance? towerDefenceInstance;
@@ -747,7 +746,7 @@ public class TowerDefenseModel : ModelBase
 		return num > 0 && TowerDefenseController.Instance.CheckStageUnlockById(num) && !this.CheckLevelHasClickByInstanceId(instanceId);
 	}
 
-	// Token: 0x06017422 RID: 95266 RVA: 0x005E7954 File Offset: 0x005E5B54
+	// Token: 0x06014E53 RID: 85587 RVA: 0x00614520 File Offset: 0x00612720
 	public void SetLevelHasClickByInstanceId(int instanceId)
 	{
 		List<ITowerDefenseParsedStageMessage> stageListCache = this.PhantomMessageCache.StageListCache;
@@ -781,7 +780,7 @@ public class TowerDefenseModel : ModelBase
 		EventSystem.Instance.Emit<int>(EEventName.OnChallengeInstanceRedDot, instanceId);
 	}
 
-	// Token: 0x06017423 RID: 95267 RVA: 0x005E7A40 File Offset: 0x005E5C40
+	// Token: 0x06014E54 RID: 85588 RVA: 0x0061460C File Offset: 0x0061280C
 	public bool HasNotClickNewLevel()
 	{
 		if (!this.PhantomMessageCache.GetPreGuideQuestFinishState())
@@ -800,13 +799,13 @@ public class TowerDefenseModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06017424 RID: 95268 RVA: 0x005E7ADC File Offset: 0x005E5CDC
+	// Token: 0x06014E55 RID: 85589 RVA: 0x006146A8 File Offset: 0x006128A8
 	public bool CheckPhantomAvailableInActivityByActivityId(int id)
 	{
 		return id == this.PhantomMessageCache.Id;
 	}
 
-	// Token: 0x06017425 RID: 95269 RVA: 0x005E7AEC File Offset: 0x005E5CEC
+	// Token: 0x06014E56 RID: 85590 RVA: 0x006146B8 File Offset: 0x006128B8
 	public bool CheckCurrentActivityShowDifferent()
 	{
 		TowerDefenseConfig? currentActivityConfig = this.GetCurrentActivityConfig();
@@ -823,13 +822,13 @@ public class TowerDefenseModel : ModelBase
 		return currentActivityConfig.Value.ShowDifferent;
 	}
 
-	// Token: 0x06017426 RID: 95270 RVA: 0x005E7B53 File Offset: 0x005E5D53
+	// Token: 0x06014E57 RID: 85591 RVA: 0x0061471F File Offset: 0x0061291F
 	public bool CheckPhantomIsOccupied(int id)
 	{
 		return false;
 	}
 
-	// Token: 0x06017427 RID: 95271 RVA: 0x005E7B58 File Offset: 0x005E5D58
+	// Token: 0x06014E58 RID: 85592 RVA: 0x00614724 File Offset: 0x00612924
 	[NullableContext(2)]
 	public ITowerDefensePhantomDataOwner GetOwnerData(int playerId, int roleCfgId)
 	{
@@ -843,7 +842,7 @@ public class TowerDefenseModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06017428 RID: 95272 RVA: 0x005E7BC0 File Offset: 0x005E5DC0
+	// Token: 0x06014E59 RID: 85593 RVA: 0x0061478C File Offset: 0x0061298C
 	public List<ITowerDefensePhantomDataOwner> GetOwnerDataListByPlayerId(int playerId)
 	{
 		List<ITowerDefensePhantomDataOwner> list = new List<ITowerDefensePhantomDataOwner>();
@@ -857,7 +856,7 @@ public class TowerDefenseModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06017429 RID: 95273 RVA: 0x005E7C24 File Offset: 0x005E5E24
+	// Token: 0x06014E5A RID: 85594 RVA: 0x006147F0 File Offset: 0x006129F0
 	public bool CheckHasSurvivalPhantom()
 	{
 		int value = PlayerInfoModel.Instance.GetId().Value;
@@ -875,7 +874,7 @@ public class TowerDefenseModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0601742A RID: 95274 RVA: 0x005E7CC8 File Offset: 0x005E5EC8
+	// Token: 0x06014E5B RID: 85595 RVA: 0x00614894 File Offset: 0x00612A94
 	public TowerDefenseConfig? GetCurrentActivityConfig()
 	{
 		TowerDefenseConfig? towerDefenseConfigByActivityId = InstanceDungeonConfig.Instance.GetTowerDefenseConfigByActivityId(this.PhantomMessageCache.Id);
@@ -892,7 +891,7 @@ public class TowerDefenseModel : ModelBase
 		return towerDefenseConfigByActivityId;
 	}
 
-	// Token: 0x0601742B RID: 95275 RVA: 0x005E7D38 File Offset: 0x005E5F38
+	// Token: 0x06014E5C RID: 85596 RVA: 0x00614904 File Offset: 0x00612B04
 	[NullableContext(2)]
 	public Dictionary<int, int> GetSortedByTitleEntranceInstanceIdList()
 	{
@@ -909,7 +908,7 @@ public class TowerDefenseModel : ModelBase
 		return dictionary;
 	}
 
-	// Token: 0x0601742C RID: 95276 RVA: 0x005E7DBC File Offset: 0x005E5FBC
+	// Token: 0x06014E5D RID: 85597 RVA: 0x00614988 File Offset: 0x00612B88
 	public bool GetInstanceUnlockState(int preConfigId, int configId)
 	{
 		TowerDefenceInstance? towerDefenseConfigById = InstanceDungeonConfig.Instance.GetTowerDefenseConfigById(configId);
@@ -928,7 +927,7 @@ public class TowerDefenseModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601742D RID: 95277 RVA: 0x005E7E25 File Offset: 0x005E6025
+	// Token: 0x06014E5E RID: 85598 RVA: 0x006149F1 File Offset: 0x00612BF1
 	protected override bool OnInit()
 	{
 		this.ParseTowerDefensePhantomCfg();
@@ -937,14 +936,14 @@ public class TowerDefenseModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601742E RID: 95278 RVA: 0x005E7E3A File Offset: 0x005E603A
+	// Token: 0x06014E5F RID: 85599 RVA: 0x00614A06 File Offset: 0x00612C06
 	protected override bool OnLeaveLevel()
 	{
 		this.PhantomMessageCache.OwnPhantomInBattleDataCache.Clear();
 		return true;
 	}
 
-	// Token: 0x0601742F RID: 95279 RVA: 0x005E7E50 File Offset: 0x005E6050
+	// Token: 0x06014E60 RID: 85600 RVA: 0x00614A1C File Offset: 0x00612C1C
 	private void ParseTowerDefensePhantomCfg()
 	{
 		IReadOnlyList<TowerDefencePhantom> configList = ConfigTowerDefencePhantomAll.GetConfigList(true);
@@ -989,14 +988,14 @@ public class TowerDefenseModel : ModelBase
 		this.SortedPhantomConfigCache.Sort(new Comparison<ITowerDefensePhantomConfig>(this.SortCache));
 	}
 
-	// Token: 0x06017430 RID: 95280 RVA: 0x005E8024 File Offset: 0x005E6224
+	// Token: 0x06014E61 RID: 85601 RVA: 0x00614BF0 File Offset: 0x00612DF0
 	private int SortCache(ITowerDefensePhantomConfig a, ITowerDefensePhantomConfig b)
 	{
 		return a.Id.CompareTo(b.Id);
 	}
 
-	// Token: 0x17001F62 RID: 8034
-	// (get) Token: 0x06017431 RID: 95281 RVA: 0x005E8045 File Offset: 0x005E6245
+	// Token: 0x17001FBA RID: 8122
+	// (get) Token: 0x06014E62 RID: 85602 RVA: 0x00614C11 File Offset: 0x00612E11
 	public static TowerDefenseModel Instance
 	{
 		get
@@ -1005,7 +1004,7 @@ public class TowerDefenseModel : ModelBase
 		}
 	}
 
-	// Token: 0x06017432 RID: 95282 RVA: 0x005E804C File Offset: 0x005E624C
+	// Token: 0x06014E63 RID: 85603 RVA: 0x00614C18 File Offset: 0x00612E18
 	public static TowerDefenseModel GetOrCreateInstance()
 	{
 		if (TowerDefenseModel._Instance == null)
@@ -1015,7 +1014,7 @@ public class TowerDefenseModel : ModelBase
 		return TowerDefenseModel._Instance;
 	}
 
-	// Token: 0x06017433 RID: 95283 RVA: 0x005E8060 File Offset: 0x005E6260
+	// Token: 0x06014E64 RID: 85604 RVA: 0x00614C2C File Offset: 0x00612E2C
 	public static bool CreateInstance()
 	{
 		if (TowerDefenseModel._Instance != null)
@@ -1026,61 +1025,61 @@ public class TowerDefenseModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06017434 RID: 95284 RVA: 0x005E8076 File Offset: 0x005E6276
+	// Token: 0x06014E65 RID: 85605 RVA: 0x00614C42 File Offset: 0x00612E42
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06017435 RID: 95285 RVA: 0x005E8078 File Offset: 0x005E6278
+	// Token: 0x06014E66 RID: 85606 RVA: 0x00614C44 File Offset: 0x00612E44
 	public static void ResetStaticDefaultValue()
 	{
 		TowerDefenseModel._Instance = null;
 	}
 
-	// Token: 0x06017436 RID: 95286 RVA: 0x005E8080 File Offset: 0x005E6280
+	// Token: 0x06014E67 RID: 85607 RVA: 0x00614C4C File Offset: 0x00612E4C
 	static TowerDefenseModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TowerDefenseModel.CreateStaticDefaultValue), new Action(TowerDefenseModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400ADE3 RID: 44515
+	// Token: 0x0400B1E8 RID: 45544
 	public int CurrentSelfPhantomIdInUiTemp;
 
-	// Token: 0x0400ADE4 RID: 44516
+	// Token: 0x0400B1E9 RID: 45545
 	[Nullable(2)]
 	public TowerDefenceEndNotify DelayedEndNotify;
 
-	// Token: 0x0400ADE5 RID: 44517
+	// Token: 0x0400B1EA RID: 45546
 	private bool? IsEnterInActivityClickedCache;
 
-	// Token: 0x0400ADE6 RID: 44518
+	// Token: 0x0400B1EB RID: 45547
 	public bool IsPhantomViewOpened;
 
-	// Token: 0x0400ADE7 RID: 44519
+	// Token: 0x0400B1EC RID: 45548
 	public bool IsNeedShowMainView;
 
-	// Token: 0x0400ADE8 RID: 44520
+	// Token: 0x0400B1ED RID: 45549
 	public bool IsUiFlowOpen;
 
-	// Token: 0x0400ADE9 RID: 44521
+	// Token: 0x0400B1EE RID: 45550
 	public ParsedTowerDefenseMsg PhantomMessageCache = new ParsedTowerDefenseMsg();
 
-	// Token: 0x0400ADEA RID: 44522
+	// Token: 0x0400B1EF RID: 45551
 	public List<ITowerDefensePhantomDataOwner> PhantomOwnerDataList = new List<ITowerDefensePhantomDataOwner>();
 
-	// Token: 0x0400ADEB RID: 44523
+	// Token: 0x0400B1F0 RID: 45552
 	public TowerDefenseRankGlobalData RankData = new TowerDefenseRankGlobalData();
 
-	// Token: 0x0400ADEC RID: 44524
+	// Token: 0x0400B1F1 RID: 45553
 	public Dictionary<int, int> RoleCfgId2PhantomIdMapCache = new Dictionary<int, int>();
 
-	// Token: 0x0400ADED RID: 44525
+	// Token: 0x0400B1F2 RID: 45554
 	public long? SelfReviveTargetTimestampForUi;
 
-	// Token: 0x0400ADEE RID: 44526
+	// Token: 0x0400B1F3 RID: 45555
 	public Dictionary<int, Dictionary<int, TimerHandle>> TimerCacheInBattle = new Dictionary<int, Dictionary<int, TimerHandle>>();
 
-	// Token: 0x0400ADF1 RID: 44529
+	// Token: 0x0400B1F6 RID: 45558
 	[Nullable(2)]
 	private static TowerDefenseModel _Instance;
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013FE RID: 5118
+	// Token: 0x02001555 RID: 5461
 	public class IPhotographTarget
 	{
-		// Token: 0x0600746C RID: 29804 RVA: 0x00116834 File Offset: 0x00114A34
-		[NullableContext(1)]
+		// Token: 0x06007B2D RID: 31533 RVA: 0x00125218 File Offset: 0x00123418
 		public static IPhotographTarget Create(IPhotographTarget? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002643 RID: 9795
-		// (get) Token: 0x0600746D RID: 29805 RVA: 0x00116853 File Offset: 0x00114A53
+		// Token: 0x17002825 RID: 10277
+		// (get) Token: 0x06007B2E RID: 31534 RVA: 0x00125237 File Offset: 0x00123437
 		public virtual EPhotographTargetType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004360 RID: 17248
+		// Token: 0x040046F1 RID: 18161
 		private IPhotographTarget Instance;
 	}
 }

@@ -4,34 +4,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B3C RID: 19260
+	// Token: 0x02003AE4 RID: 15076
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseTipsContentInBattle : ITowerDefenseTipsContentInBattle
 	{
-		// Token: 0x17007BB2 RID: 31666
-		// (get) Token: 0x06031E25 RID: 204325 RVA: 0x00B92943 File Offset: 0x00B90B43
-		// (set) Token: 0x06031E26 RID: 204326 RVA: 0x00B9294B File Offset: 0x00B90B4B
+		// Token: 0x17004F5F RID: 20319
+		// (get) Token: 0x06026BB5 RID: 158645 RVA: 0x00AD69A7 File Offset: 0x00AD4BA7
+		// (set) Token: 0x06026BB6 RID: 158646 RVA: 0x00AD69AF File Offset: 0x00AD4BAF
 		public string TitleTextId { get; set; }
 
-		// Token: 0x17007BB3 RID: 31667
-		// (get) Token: 0x06031E27 RID: 204327 RVA: 0x00B92954 File Offset: 0x00B90B54
-		// (set) Token: 0x06031E28 RID: 204328 RVA: 0x00B9295C File Offset: 0x00B90B5C
+		// Token: 0x17004F60 RID: 20320
+		// (get) Token: 0x06026BB7 RID: 158647 RVA: 0x00AD69B8 File Offset: 0x00AD4BB8
+		// (set) Token: 0x06026BB8 RID: 158648 RVA: 0x00AD69C0 File Offset: 0x00AD4BC0
 		public string PhantomTextId { get; set; }
 
-		// Token: 0x17007BB4 RID: 31668
-		// (get) Token: 0x06031E29 RID: 204329 RVA: 0x00B92965 File Offset: 0x00B90B65
-		// (set) Token: 0x06031E2A RID: 204330 RVA: 0x00B9296D File Offset: 0x00B90B6D
+		// Token: 0x17004F61 RID: 20321
+		// (get) Token: 0x06026BB9 RID: 158649 RVA: 0x00AD69C9 File Offset: 0x00AD4BC9
+		// (set) Token: 0x06026BBA RID: 158650 RVA: 0x00AD69D1 File Offset: 0x00AD4BD1
 		public int Level { get; set; }
 
-		// Token: 0x17007BB5 RID: 31669
-		// (get) Token: 0x06031E2B RID: 204331 RVA: 0x00B92976 File Offset: 0x00B90B76
-		// (set) Token: 0x06031E2C RID: 204332 RVA: 0x00B9297E File Offset: 0x00B90B7E
+		// Token: 0x17004F62 RID: 20322
+		// (get) Token: 0x06026BBB RID: 158651 RVA: 0x00AD69DA File Offset: 0x00AD4BDA
+		// (set) Token: 0x06026BBC RID: 158652 RVA: 0x00AD69E2 File Offset: 0x00AD4BE2
 		public string DescTextId { get; set; }
 
-		// Token: 0x17007BB6 RID: 31670
-		// (get) Token: 0x06031E2D RID: 204333 RVA: 0x00B92987 File Offset: 0x00B90B87
-		// (set) Token: 0x06031E2E RID: 204334 RVA: 0x00B9298F File Offset: 0x00B90B8F
+		// Token: 0x17004F63 RID: 20323
+		// (get) Token: 0x06026BBD RID: 158653 RVA: 0x00AD69EB File Offset: 0x00AD4BEB
+		// (set) Token: 0x06026BBE RID: 158654 RVA: 0x00AD69F3 File Offset: 0x00AD4BF3
 		[Nullable(new byte[]
 		{
 			2,

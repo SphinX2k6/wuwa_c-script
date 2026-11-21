@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002912 RID: 10514
+// Token: 0x02001E8D RID: 7821
 public class AssemblyGridData
 {
-	// Token: 0x06015AEF RID: 88815 RVA: 0x00578601 File Offset: 0x00576801
+	// Token: 0x060134F3 RID: 79091 RVA: 0x005A34F5 File Offset: 0x005A16F5
 	public AssemblyGridData()
 	{
 		this.Id = 0;
@@ -16,25 +16,25 @@ public class AssemblyGridData
 		this.RelativeIndex = 0;
 	}
 
-	// Token: 0x0400A185 RID: 41349
+	// Token: 0x0400A570 RID: 42352
 	public int Id;
 
-	// Token: 0x0400A186 RID: 41350
+	// Token: 0x0400A571 RID: 42353
 	public int Index;
 
-	// Token: 0x0400A187 RID: 41351
+	// Token: 0x0400A572 RID: 42354
 	public ERouletteGridType GridType;
 
-	// Token: 0x0400A188 RID: 41352
+	// Token: 0x0400A573 RID: 42355
 	[Nullable(1)]
 	public string Name;
 
-	// Token: 0x0400A189 RID: 41353
+	// Token: 0x0400A574 RID: 42356
 	public EAssemblyGridState State;
 
-	// Token: 0x0400A18A RID: 41354
+	// Token: 0x0400A575 RID: 42357
 	public int SortId;
 
-	// Token: 0x0400A18B RID: 41355
+	// Token: 0x0400A576 RID: 42358
 	public int RelativeIndex;
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200701C RID: 28700
+	// Token: 0x020077E5 RID: 30693
 	public struct ISetMonsterMoveWithSpline : IFlatbufferObject
 	{
-		// Token: 0x1700D51E RID: 54558
-		// (get) Token: 0x06032C39 RID: 207929 RVA: 0x006D92FA File Offset: 0x006D74FA
+		// Token: 0x1700E0F2 RID: 57586
+		// (get) Token: 0x06035E9F RID: 220831 RVA: 0x00738F3E File Offset: 0x0073713E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032C3A RID: 207930 RVA: 0x006D9307 File Offset: 0x006D7507
+		// Token: 0x06035EA0 RID: 220832 RVA: 0x00738F4B File Offset: 0x0073714B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032C3B RID: 207931 RVA: 0x006D9310 File Offset: 0x006D7510
+		// Token: 0x06035EA1 RID: 220833 RVA: 0x00738F54 File Offset: 0x00737154
 		public static ISetMonsterMoveWithSpline GetRootAsISetMonsterMoveWithSpline(ByteBuffer _bb)
 		{
 			return ISetMonsterMoveWithSpline.GetRootAsISetMonsterMoveWithSpline(_bb, default(ISetMonsterMoveWithSpline));
 		}
 
-		// Token: 0x06032C3C RID: 207932 RVA: 0x006D932C File Offset: 0x006D752C
+		// Token: 0x06035EA2 RID: 220834 RVA: 0x00738F70 File Offset: 0x00737170
 		public static ISetMonsterMoveWithSpline GetRootAsISetMonsterMoveWithSpline(ByteBuffer _bb, ISetMonsterMoveWithSpline obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032C3D RID: 207933 RVA: 0x006D9349 File Offset: 0x006D7549
+		// Token: 0x06035EA3 RID: 220835 RVA: 0x00738F8D File Offset: 0x0073718D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032C3E RID: 207934 RVA: 0x006D9358 File Offset: 0x006D7558
+		// Token: 0x06035EA4 RID: 220836 RVA: 0x00738F9C File Offset: 0x0073719C
 		public ISetMonsterMoveWithSpline __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D51F RID: 54559
-		// (get) Token: 0x06032C3F RID: 207935 RVA: 0x006D9368 File Offset: 0x006D7568
+		// Token: 0x1700E0F3 RID: 57587
+		// (get) Token: 0x06035EA5 RID: 220837 RVA: 0x00738FAC File Offset: 0x007371AC
 		public EExecBattleActionType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032C40 RID: 207936 RVA: 0x006D93A4 File Offset: 0x006D75A4
+		// Token: 0x06035EA6 RID: 220838 RVA: 0x00738FE8 File Offset: 0x007371E8
 		public IMonsterMoveSplineConfig? MoveSplineConfigs(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IMonsterMoveSplineConfig?(default(IMonsterMoveSplineConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700D520 RID: 54560
-		// (get) Token: 0x06032C41 RID: 207937 RVA: 0x006D9404 File Offset: 0x006D7604
+		// Token: 0x1700E0F4 RID: 57588
+		// (get) Token: 0x06035EA7 RID: 220839 RVA: 0x00739048 File Offset: 0x00737248
 		public int MoveSplineConfigsLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032C42 RID: 207938 RVA: 0x006D942F File Offset: 0x006D762F
+		// Token: 0x06035EA8 RID: 220840 RVA: 0x00739073 File Offset: 0x00737273
 		public static Offset<ISetMonsterMoveWithSpline> CreateISetMonsterMoveWithSpline(FlatBufferBuilder builder, EExecBattleActionType Type = EExecBattleActionType.SetBattleTags, VectorOffset MoveSplineConfigsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetMonsterMoveWithSpline.EndISetMonsterMoveWithSpline(builder);
 		}
 
-		// Token: 0x06032C43 RID: 207939 RVA: 0x006D944C File Offset: 0x006D764C
+		// Token: 0x06035EA9 RID: 220841 RVA: 0x00739090 File Offset: 0x00737290
 		public static void StartISetMonsterMoveWithSpline(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06032C44 RID: 207940 RVA: 0x006D9455 File Offset: 0x006D7655
+		// Token: 0x06035EAA RID: 220842 RVA: 0x00739099 File Offset: 0x00737299
 		public static void AddType(FlatBufferBuilder builder, EExecBattleActionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06032C45 RID: 207941 RVA: 0x006D9460 File Offset: 0x006D7660
+		// Token: 0x06035EAB RID: 220843 RVA: 0x007390A4 File Offset: 0x007372A4
 		public static void AddMoveSplineConfigs(FlatBufferBuilder builder, VectorOffset moveSplineConfigsOffset)
 		{
 			builder.AddOffset(1, moveSplineConfigsOffset.Value, 0);
 		}
 
-		// Token: 0x06032C46 RID: 207942 RVA: 0x006D9470 File Offset: 0x006D7670
+		// Token: 0x06035EAC RID: 220844 RVA: 0x007390B4 File Offset: 0x007372B4
 		public static VectorOffset CreateMoveSplineConfigsVector(FlatBufferBuilder builder, Offset<IMonsterMoveSplineConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032C47 RID: 207943 RVA: 0x006D94B0 File Offset: 0x006D76B0
+		// Token: 0x06035EAD RID: 220845 RVA: 0x007390F4 File Offset: 0x007372F4
 		public static VectorOffset CreateMoveSplineConfigsVectorBlock(FlatBufferBuilder builder, Offset<IMonsterMoveSplineConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032C48 RID: 207944 RVA: 0x006D94CA File Offset: 0x006D76CA
+		// Token: 0x06035EAE RID: 220846 RVA: 0x0073910E File Offset: 0x0073730E
 		public static VectorOffset CreateMoveSplineConfigsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IMonsterMoveSplineConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032C49 RID: 207945 RVA: 0x006D94E8 File Offset: 0x006D76E8
+		// Token: 0x06035EAF RID: 220847 RVA: 0x0073912C File Offset: 0x0073732C
 		public static VectorOffset CreateMoveSplineConfigsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032C4A RID: 207946 RVA: 0x006D9501 File Offset: 0x006D7701
+		// Token: 0x06035EB0 RID: 220848 RVA: 0x00739145 File Offset: 0x00737345
 		public static void StartMoveSplineConfigsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06032C4B RID: 207947 RVA: 0x006D950C File Offset: 0x006D770C
+		// Token: 0x06035EB1 RID: 220849 RVA: 0x00739150 File Offset: 0x00737350
 		public static Offset<ISetMonsterMoveWithSpline> EndISetMonsterMoveWithSpline(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetMonsterMoveWithSpline>(builder.EndTable());
 		}
 
-		// Token: 0x06032C4C RID: 207948 RVA: 0x006D951C File Offset: 0x006D771C
+		// Token: 0x06035EB2 RID: 220850 RVA: 0x00739160 File Offset: 0x00737360
 		public ISetMonsterMoveWithSplineT UnPack()
 		{
 			ISetMonsterMoveWithSplineT setMonsterMoveWithSplineT = new ISetMonsterMoveWithSplineT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setMonsterMoveWithSplineT;
 		}
 
-		// Token: 0x06032C4D RID: 207949 RVA: 0x006D9538 File Offset: 0x006D7738
+		// Token: 0x06035EB3 RID: 220851 RVA: 0x0073917C File Offset: 0x0073737C
 		public void UnPackTo(ISetMonsterMoveWithSplineT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032C4E RID: 207950 RVA: 0x006D95A4 File Offset: 0x006D77A4
+		// Token: 0x06035EB4 RID: 220852 RVA: 0x007391E8 File Offset: 0x007373E8
 		public static Offset<ISetMonsterMoveWithSpline> Pack(FlatBufferBuilder builder, ISetMonsterMoveWithSplineT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetMonsterMoveWithSpline.CreateISetMonsterMoveWithSpline(builder, _o.Type, moveSplineConfigsOffset);
 		}
 
-		// Token: 0x04011A45 RID: 72261
+		// Token: 0x04012A2A RID: 76330
 		private Table __p;
 	}
 }

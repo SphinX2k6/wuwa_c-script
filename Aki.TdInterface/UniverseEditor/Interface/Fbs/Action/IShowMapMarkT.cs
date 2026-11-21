@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070E3 RID: 28899
+	// Token: 0x020078AF RID: 30895
 	public class IShowMapMarkT
 	{
-		// Token: 0x1700D6C2 RID: 54978
-		// (get) Token: 0x0603333D RID: 209725 RVA: 0x006E7088 File Offset: 0x006E5288
-		// (set) Token: 0x0603333E RID: 209726 RVA: 0x006E7090 File Offset: 0x006E5290
+		// Token: 0x1700E2A5 RID: 58021
+		// (get) Token: 0x060365DF RID: 222687 RVA: 0x00747694 File Offset: 0x00745894
+		// (set) Token: 0x060365E0 RID: 222688 RVA: 0x0074769C File Offset: 0x0074589C
 		public EMapMarkState Type { get; set; }
 
-		// Token: 0x1700D6C3 RID: 54979
-		// (get) Token: 0x0603333F RID: 209727 RVA: 0x006E7099 File Offset: 0x006E5299
-		// (set) Token: 0x06033340 RID: 209728 RVA: 0x006E70A1 File Offset: 0x006E52A1
+		// Token: 0x1700E2A6 RID: 58022
+		// (get) Token: 0x060365E1 RID: 222689 RVA: 0x007476A5 File Offset: 0x007458A5
+		// (set) Token: 0x060365E2 RID: 222690 RVA: 0x007476AD File Offset: 0x007458AD
 		public int MarkId { get; set; }
 
-		// Token: 0x1700D6C4 RID: 54980
-		// (get) Token: 0x06033341 RID: 209729 RVA: 0x006E70AA File Offset: 0x006E52AA
-		// (set) Token: 0x06033342 RID: 209730 RVA: 0x006E70B2 File Offset: 0x006E52B2
+		// Token: 0x1700E2A7 RID: 58023
+		// (get) Token: 0x060365E3 RID: 222691 RVA: 0x007476B6 File Offset: 0x007458B6
+		// (set) Token: 0x060365E4 RID: 222692 RVA: 0x007476BE File Offset: 0x007458BE
 		public bool IsFocusOnFirstShow { get; set; }
 
-		// Token: 0x1700D6C5 RID: 54981
-		// (get) Token: 0x06033343 RID: 209731 RVA: 0x006E70BB File Offset: 0x006E52BB
-		// (set) Token: 0x06033344 RID: 209732 RVA: 0x006E70C3 File Offset: 0x006E52C3
+		// Token: 0x1700E2A8 RID: 58024
+		// (get) Token: 0x060365E5 RID: 222693 RVA: 0x007476C7 File Offset: 0x007458C7
+		// (set) Token: 0x060365E6 RID: 222694 RVA: 0x007476CF File Offset: 0x007458CF
 		public byte NullMask { get; set; }
 
-		// Token: 0x06033345 RID: 209733 RVA: 0x006E70CC File Offset: 0x006E52CC
+		// Token: 0x060365E7 RID: 222695 RVA: 0x007476D8 File Offset: 0x007458D8
 		public IShowMapMarkT()
 		{
 			this.Type = EMapMarkState.Show;

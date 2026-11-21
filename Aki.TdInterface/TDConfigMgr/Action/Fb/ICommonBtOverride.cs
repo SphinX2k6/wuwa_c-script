@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A7D RID: 10877
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D71 RID: 11633
 	public class ICommonBtOverride
 	{
-		// Token: 0x0600EF19 RID: 61209 RVA: 0x0022C67D File Offset: 0x0022A87D
+		// Token: 0x0600FDCF RID: 64975 RVA: 0x0024A389 File Offset: 0x00248589
 		public static ICommonBtOverride Create(ICommonBtOverride? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BE1 RID: 19425
-		// (get) Token: 0x0600EF1A RID: 61210 RVA: 0x0022C69C File Offset: 0x0022A89C
+		// Token: 0x17004F9B RID: 20379
+		// (get) Token: 0x0600FDD0 RID: 64976 RVA: 0x0024A3A8 File Offset: 0x002485A8
 		public virtual int CommonBtId
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BE2 RID: 19426
-		// (get) Token: 0x0600EF1B RID: 61211 RVA: 0x0022C6AC File Offset: 0x0022A8AC
+		// Token: 0x17004F9C RID: 20380
+		// (get) Token: 0x0600FDD1 RID: 64977 RVA: 0x0024A3B8 File Offset: 0x002485B8
 		public virtual List<ICommonBtPlaceholder> OverridePlaceholders
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BE3 RID: 19427
-		// (get) Token: 0x0600EF1C RID: 61212 RVA: 0x0022C718 File Offset: 0x0022A918
+		// Token: 0x17004F9D RID: 20381
+		// (get) Token: 0x0600FDD2 RID: 64978 RVA: 0x0024A424 File Offset: 0x00248624
 		public virtual List<ICommonBtClientOverrideData> ClientOverrideData
 		{
 			get
@@ -75,19 +72,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400838F RID: 33679
+		// Token: 0x04008A93 RID: 35475
 		private ICommonBtOverride Instance;
 
-		// Token: 0x04008390 RID: 33680
+		// Token: 0x04008A94 RID: 35476
 		private List<ICommonBtPlaceholder> _OverridePlaceholdersCache;
 
-		// Token: 0x04008391 RID: 33681
+		// Token: 0x04008A95 RID: 35477
 		private bool _OverridePlaceholdersInited;
 
-		// Token: 0x04008392 RID: 33682
+		// Token: 0x04008A96 RID: 35478
 		private List<ICommonBtClientOverrideData> _ClientOverrideDataCache;
 
-		// Token: 0x04008393 RID: 33683
+		// Token: 0x04008A97 RID: 35479
 		private bool _ClientOverrideDataInited;
 	}
 }

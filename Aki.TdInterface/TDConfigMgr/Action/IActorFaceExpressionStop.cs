@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001762 RID: 5986
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018E3 RID: 6371
 	public class IActorFaceExpressionStop : IActorFaceExpressionType
 	{
-		// Token: 0x06007EBD RID: 32445 RVA: 0x0012F5A8 File Offset: 0x0012D7A8
+		// Token: 0x060085AD RID: 34221 RVA: 0x0013E808 File Offset: 0x0013CA08
 		private IActorFaceExpressionStop_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007EBE RID: 32446 RVA: 0x0012F5E0 File Offset: 0x0012D7E0
+		// Token: 0x060085AE RID: 34222 RVA: 0x0013E840 File Offset: 0x0013CA40
 		public static IActorFaceExpressionStop Create([Nullable(2)] IActorFaceExpressionStop instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007EBF RID: 32447 RVA: 0x0012F5F3 File Offset: 0x0012D7F3
+		// Token: 0x060085AF RID: 34223 RVA: 0x0013E853 File Offset: 0x0013CA53
 		public static IActorFaceExpressionStop CreateFromSetValue([Nullable(2)] IActorFaceExpressionStop_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007EC0 RID: 32448 RVA: 0x0012F606 File Offset: 0x0012D806
+		// Token: 0x060085B0 RID: 34224 RVA: 0x0013E866 File Offset: 0x0013CA66
 		public new IActorFaceExpressionStop_SetValue ToSetValue()
 		{
 			return new IActorFaceExpressionStop_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029A0 RID: 10656
-		// (get) Token: 0x06007EC1 RID: 32449 RVA: 0x0012F625 File Offset: 0x0012D825
-		// (set) Token: 0x06007EC2 RID: 32450 RVA: 0x0012F650 File Offset: 0x0012D850
+		// Token: 0x17002B8E RID: 11150
+		// (get) Token: 0x060085B1 RID: 34225 RVA: 0x0013E885 File Offset: 0x0013CA85
+		// (set) Token: 0x060085B2 RID: 34226 RVA: 0x0013E8B0 File Offset: 0x0013CAB0
 		public override EActorFaceExpressionType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029A1 RID: 10657
-		// (get) Token: 0x06007EC3 RID: 32451 RVA: 0x0012F660 File Offset: 0x0012D860
-		// (set) Token: 0x06007EC4 RID: 32452 RVA: 0x0012F69A File Offset: 0x0012D89A
+		// Token: 0x17002B8F RID: 11151
+		// (get) Token: 0x060085B3 RID: 34227 RVA: 0x0013E8C0 File Offset: 0x0013CAC0
+		// (set) Token: 0x060085B4 RID: 34228 RVA: 0x0013E8FA File Offset: 0x0013CAFA
 		public virtual float? DelayTime
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040050AB RID: 20651
+		// Token: 0x040054E1 RID: 21729
 		[Nullable(2)]
 		protected new IActorFaceExpressionStop FbInstance;
 
-		// Token: 0x040050AC RID: 20652
+		// Token: 0x040054E2 RID: 21730
 		[Nullable(2)]
 		protected new IActorFaceExpressionStop_SetValue PocoInterface;
 	}

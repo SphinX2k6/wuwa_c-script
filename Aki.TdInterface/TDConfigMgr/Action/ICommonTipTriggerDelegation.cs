@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001926 RID: 6438
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AAF RID: 6831
 	public class ICommonTipTriggerDelegation : ICommonTipType
 	{
-		// Token: 0x06008A05 RID: 35333 RVA: 0x00145658 File Offset: 0x00143858
+		// Token: 0x06009131 RID: 37169 RVA: 0x00154F98 File Offset: 0x00153198
 		private ICommonTipTriggerDelegation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008A06 RID: 35334 RVA: 0x00145690 File Offset: 0x00143890
+		// Token: 0x06009132 RID: 37170 RVA: 0x00154FD0 File Offset: 0x001531D0
 		public static ICommonTipTriggerDelegation Create([Nullable(2)] ICommonTipTriggerDelegation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A07 RID: 35335 RVA: 0x001456A3 File Offset: 0x001438A3
+		// Token: 0x06009133 RID: 37171 RVA: 0x00154FE3 File Offset: 0x001531E3
 		public static ICommonTipTriggerDelegation CreateFromSetValue([Nullable(2)] ICommonTipTriggerDelegation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A08 RID: 35336 RVA: 0x001456B8 File Offset: 0x001438B8
+		// Token: 0x06009134 RID: 37172 RVA: 0x00154FF8 File Offset: 0x001531F8
 		public new ICommonTipTriggerDelegation_SetValue ToSetValue()
 		{
 			return new ICommonTipTriggerDelegation_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C9E RID: 11422
-		// (get) Token: 0x06008A09 RID: 35337 RVA: 0x00145706 File Offset: 0x00143906
-		// (set) Token: 0x06008A0A RID: 35338 RVA: 0x00145731 File Offset: 0x00143931
+		// Token: 0x17002E9E RID: 11934
+		// (get) Token: 0x06009135 RID: 37173 RVA: 0x00155046 File Offset: 0x00153246
+		// (set) Token: 0x06009136 RID: 37174 RVA: 0x00155071 File Offset: 0x00153271
 		public override ECommonTipType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C9F RID: 11423
-		// (get) Token: 0x06008A0B RID: 35339 RVA: 0x0014573F File Offset: 0x0014393F
-		// (set) Token: 0x06008A0C RID: 35340 RVA: 0x0014576A File Offset: 0x0014396A
+		// Token: 0x17002E9F RID: 11935
+		// (get) Token: 0x06009137 RID: 37175 RVA: 0x0015507F File Offset: 0x0015327F
+		// (set) Token: 0x06009138 RID: 37176 RVA: 0x001550AA File Offset: 0x001532AA
 		public virtual string TidMainText
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CA0 RID: 11424
-		// (get) Token: 0x06008A0D RID: 35341 RVA: 0x00145778 File Offset: 0x00143978
-		// (set) Token: 0x06008A0E RID: 35342 RVA: 0x001457A3 File Offset: 0x001439A3
+		// Token: 0x17002EA0 RID: 11936
+		// (get) Token: 0x06009139 RID: 37177 RVA: 0x001550B8 File Offset: 0x001532B8
+		// (set) Token: 0x0600913A RID: 37178 RVA: 0x001550E3 File Offset: 0x001532E3
 		public virtual string TidSubText
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CA1 RID: 11425
-		// (get) Token: 0x06008A0F RID: 35343 RVA: 0x001457B1 File Offset: 0x001439B1
-		// (set) Token: 0x06008A10 RID: 35344 RVA: 0x001457C8 File Offset: 0x001439C8
+		// Token: 0x17002EA1 RID: 11937
+		// (get) Token: 0x0600913B RID: 37179 RVA: 0x001550F1 File Offset: 0x001532F1
+		// (set) Token: 0x0600913C RID: 37180 RVA: 0x00155108 File Offset: 0x00153308
 		[Nullable(2)]
 		public virtual string EdTidMainText
 		{
@@ -154,9 +152,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CA2 RID: 11426
-		// (get) Token: 0x06008A11 RID: 35345 RVA: 0x001457D6 File Offset: 0x001439D6
-		// (set) Token: 0x06008A12 RID: 35346 RVA: 0x001457ED File Offset: 0x001439ED
+		// Token: 0x17002EA2 RID: 11938
+		// (get) Token: 0x0600913D RID: 37181 RVA: 0x00155116 File Offset: 0x00153316
+		// (set) Token: 0x0600913E RID: 37182 RVA: 0x0015512D File Offset: 0x0015332D
 		[Nullable(2)]
 		public virtual string EdTidSubText
 		{
@@ -176,11 +174,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400565B RID: 22107
+		// Token: 0x04005AAB RID: 23211
 		[Nullable(2)]
 		protected new ICommonTipTriggerDelegation FbInstance;
 
-		// Token: 0x0400565C RID: 22108
+		// Token: 0x04005AAC RID: 23212
 		[Nullable(2)]
 		protected new ICommonTipTriggerDelegation_SetValue PocoInterface;
 	}

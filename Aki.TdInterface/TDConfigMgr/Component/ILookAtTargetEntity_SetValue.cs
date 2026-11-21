@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004D3 RID: 1235
+	// Token: 0x0200052C RID: 1324
 	public class ILookAtTargetEntity_SetValue
 	{
-		// Token: 0x04001278 RID: 4728
+		// Token: 0x0400139A RID: 5018
 		public ELookAtTargetType Type;
 
-		// Token: 0x04001279 RID: 4729
+		// Token: 0x0400139B RID: 5019
 		public int EntityId;
 	}
 }

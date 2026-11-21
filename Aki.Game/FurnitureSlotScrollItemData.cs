@@ -1,55 +1,55 @@
 ﻿using System;
 
-// Token: 0x02000F83 RID: 3971
+// Token: 0x02000438 RID: 1080
 public class FurnitureSlotScrollItemData : IFurnitureSlotScrollItemData
 {
-	// Token: 0x170007CC RID: 1996
-	// (get) Token: 0x060065D1 RID: 26065 RVA: 0x00143D62 File Offset: 0x00141F62
-	// (set) Token: 0x060065D2 RID: 26066 RVA: 0x00143D6A File Offset: 0x00141F6A
+	// Token: 0x170007EE RID: 2030
+	// (get) Token: 0x06003969 RID: 14697 RVA: 0x0014C5F6 File Offset: 0x0014A7F6
+	// (set) Token: 0x0600396A RID: 14698 RVA: 0x0014C5FE File Offset: 0x0014A7FE
 	public int SceneSlotEntityId { get; set; }
 
-	// Token: 0x170007CD RID: 1997
-	// (get) Token: 0x060065D3 RID: 26067 RVA: 0x00143D73 File Offset: 0x00141F73
-	// (set) Token: 0x060065D4 RID: 26068 RVA: 0x00143D7B File Offset: 0x00141F7B
+	// Token: 0x170007EF RID: 2031
+	// (get) Token: 0x0600396B RID: 14699 RVA: 0x0014C607 File Offset: 0x0014A807
+	// (set) Token: 0x0600396C RID: 14700 RVA: 0x0014C60F File Offset: 0x0014A80F
 	public int PlacedFurnitureId { get; set; }
 
-	// Token: 0x170007CE RID: 1998
-	// (get) Token: 0x060065D5 RID: 26069 RVA: 0x00143D84 File Offset: 0x00141F84
-	// (set) Token: 0x060065D6 RID: 26070 RVA: 0x00143D8C File Offset: 0x00141F8C
+	// Token: 0x170007F0 RID: 2032
+	// (get) Token: 0x0600396D RID: 14701 RVA: 0x0014C618 File Offset: 0x0014A818
+	// (set) Token: 0x0600396E RID: 14702 RVA: 0x0014C620 File Offset: 0x0014A820
 	public int SubSlotIndex { get; set; }
 
-	// Token: 0x170007CF RID: 1999
-	// (get) Token: 0x060065D7 RID: 26071 RVA: 0x00143D95 File Offset: 0x00141F95
-	// (set) Token: 0x060065D8 RID: 26072 RVA: 0x00143D9D File Offset: 0x00141F9D
+	// Token: 0x170007F1 RID: 2033
+	// (get) Token: 0x0600396F RID: 14703 RVA: 0x0014C629 File Offset: 0x0014A829
+	// (set) Token: 0x06003970 RID: 14704 RVA: 0x0014C631 File Offset: 0x0014A831
 	public EFurnitureSlotType SlotType { get; set; }
 
-	// Token: 0x170007D0 RID: 2000
-	// (get) Token: 0x060065D9 RID: 26073 RVA: 0x00143DA6 File Offset: 0x00141FA6
-	// (set) Token: 0x060065DA RID: 26074 RVA: 0x00143DAE File Offset: 0x00141FAE
+	// Token: 0x170007F2 RID: 2034
+	// (get) Token: 0x06003971 RID: 14705 RVA: 0x0014C63A File Offset: 0x0014A83A
+	// (set) Token: 0x06003972 RID: 14706 RVA: 0x0014C642 File Offset: 0x0014A842
 	public int TagId { get; set; }
 
-	// Token: 0x170007D1 RID: 2001
-	// (get) Token: 0x060065DB RID: 26075 RVA: 0x00143DB7 File Offset: 0x00141FB7
-	// (set) Token: 0x060065DC RID: 26076 RVA: 0x00143DBF File Offset: 0x00141FBF
+	// Token: 0x170007F3 RID: 2035
+	// (get) Token: 0x06003973 RID: 14707 RVA: 0x0014C64B File Offset: 0x0014A84B
+	// (set) Token: 0x06003974 RID: 14708 RVA: 0x0014C653 File Offset: 0x0014A853
 	public int TagIndex { get; set; }
 
-	// Token: 0x170007D2 RID: 2002
-	// (get) Token: 0x060065DD RID: 26077 RVA: 0x00143DC8 File Offset: 0x00141FC8
-	// (set) Token: 0x060065DE RID: 26078 RVA: 0x00143DD0 File Offset: 0x00141FD0
+	// Token: 0x170007F4 RID: 2036
+	// (get) Token: 0x06003975 RID: 14709 RVA: 0x0014C65C File Offset: 0x0014A85C
+	// (set) Token: 0x06003976 RID: 14710 RVA: 0x0014C664 File Offset: 0x0014A864
 	public bool ShowTagIndex { get; set; }
 
-	// Token: 0x170007D3 RID: 2003
-	// (get) Token: 0x060065DF RID: 26079 RVA: 0x00143DD9 File Offset: 0x00141FD9
-	// (set) Token: 0x060065E0 RID: 26080 RVA: 0x00143DE1 File Offset: 0x00141FE1
+	// Token: 0x170007F5 RID: 2037
+	// (get) Token: 0x06003977 RID: 14711 RVA: 0x0014C66D File Offset: 0x0014A86D
+	// (set) Token: 0x06003978 RID: 14712 RVA: 0x0014C675 File Offset: 0x0014A875
 	public bool IsSelected { get; set; }
 
-	// Token: 0x170007D4 RID: 2004
-	// (get) Token: 0x060065E1 RID: 26081 RVA: 0x00143DEA File Offset: 0x00141FEA
-	// (set) Token: 0x060065E2 RID: 26082 RVA: 0x00143DF2 File Offset: 0x00141FF2
+	// Token: 0x170007F6 RID: 2038
+	// (get) Token: 0x06003979 RID: 14713 RVA: 0x0014C67E File Offset: 0x0014A87E
+	// (set) Token: 0x0600397A RID: 14714 RVA: 0x0014C686 File Offset: 0x0014A886
 	public bool LineShowState { get; set; }
 
-	// Token: 0x170007D5 RID: 2005
-	// (get) Token: 0x060065E3 RID: 26083 RVA: 0x00143DFB File Offset: 0x00141FFB
-	// (set) Token: 0x060065E4 RID: 26084 RVA: 0x00143E03 File Offset: 0x00142003
+	// Token: 0x170007F7 RID: 2039
+	// (get) Token: 0x0600397B RID: 14715 RVA: 0x0014C68F File Offset: 0x0014A88F
+	// (set) Token: 0x0600397C RID: 14716 RVA: 0x0014C697 File Offset: 0x0014A897
 	public bool RedDotShowState { get; set; }
 }

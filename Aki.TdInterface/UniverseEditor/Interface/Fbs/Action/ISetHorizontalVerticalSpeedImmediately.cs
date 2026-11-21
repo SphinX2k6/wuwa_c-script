@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007001 RID: 28673
+	// Token: 0x020077CA RID: 30666
 	public struct ISetHorizontalVerticalSpeedImmediately : IFlatbufferObject
 	{
-		// Token: 0x1700D4F9 RID: 54521
-		// (get) Token: 0x06032B7B RID: 207739 RVA: 0x006D7E48 File Offset: 0x006D6048
+		// Token: 0x1700E0CD RID: 57549
+		// (get) Token: 0x06035DE1 RID: 220641 RVA: 0x00737A8C File Offset: 0x00735C8C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032B7C RID: 207740 RVA: 0x006D7E55 File Offset: 0x006D6055
+		// Token: 0x06035DE2 RID: 220642 RVA: 0x00737A99 File Offset: 0x00735C99
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032B7D RID: 207741 RVA: 0x006D7E5C File Offset: 0x006D605C
+		// Token: 0x06035DE3 RID: 220643 RVA: 0x00737AA0 File Offset: 0x00735CA0
 		public static ISetHorizontalVerticalSpeedImmediately GetRootAsISetHorizontalVerticalSpeedImmediately(ByteBuffer _bb)
 		{
 			return ISetHorizontalVerticalSpeedImmediately.GetRootAsISetHorizontalVerticalSpeedImmediately(_bb, default(ISetHorizontalVerticalSpeedImmediately));
 		}
 
-		// Token: 0x06032B7E RID: 207742 RVA: 0x006D7E78 File Offset: 0x006D6078
+		// Token: 0x06035DE4 RID: 220644 RVA: 0x00737ABC File Offset: 0x00735CBC
 		public static ISetHorizontalVerticalSpeedImmediately GetRootAsISetHorizontalVerticalSpeedImmediately(ByteBuffer _bb, ISetHorizontalVerticalSpeedImmediately obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032B7F RID: 207743 RVA: 0x006D7E95 File Offset: 0x006D6095
+		// Token: 0x06035DE5 RID: 220645 RVA: 0x00737AD9 File Offset: 0x00735CD9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032B80 RID: 207744 RVA: 0x006D7EA4 File Offset: 0x006D60A4
+		// Token: 0x06035DE6 RID: 220646 RVA: 0x00737AE8 File Offset: 0x00735CE8
 		public ISetHorizontalVerticalSpeedImmediately __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D4FA RID: 54522
-		// (get) Token: 0x06032B81 RID: 207745 RVA: 0x006D7EB4 File Offset: 0x006D60B4
+		// Token: 0x1700E0CE RID: 57550
+		// (get) Token: 0x06035DE7 RID: 220647 RVA: 0x00737AF8 File Offset: 0x00735CF8
 		public ESetVehicleSpeedImmediatelyType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D4FB RID: 54523
-		// (get) Token: 0x06032B82 RID: 207746 RVA: 0x006D7EF0 File Offset: 0x006D60F0
+		// Token: 0x1700E0CF RID: 57551
+		// (get) Token: 0x06035DE8 RID: 220648 RVA: 0x00737B34 File Offset: 0x00735D34
 		public TProcessedValue HorizontalSpeedType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032B83 RID: 207747 RVA: 0x006D7F2C File Offset: 0x006D612C
+		// Token: 0x06035DE9 RID: 220649 RVA: 0x00737B70 File Offset: 0x00735D70
 		public TTable? HorizontalSpeed<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06032B84 RID: 207748 RVA: 0x006D7F70 File Offset: 0x006D6170
+		// Token: 0x06035DEA RID: 220650 RVA: 0x00737BB4 File Offset: 0x00735DB4
 		public IProcessedValueConstant HorizontalSpeedAsIProcessedValueConstant()
 		{
 			return this.HorizontalSpeed<IProcessedValueConstant>().Value;
 		}
 
-		// Token: 0x06032B85 RID: 207749 RVA: 0x006D7F8C File Offset: 0x006D618C
+		// Token: 0x06035DEB RID: 220651 RVA: 0x00737BD0 File Offset: 0x00735DD0
 		public IProcessedValueConstraint HorizontalSpeedAsIProcessedValueConstraint()
 		{
 			return this.HorizontalSpeed<IProcessedValueConstraint>().Value;
 		}
 
-		// Token: 0x1700D4FC RID: 54524
-		// (get) Token: 0x06032B86 RID: 207750 RVA: 0x006D7FA8 File Offset: 0x006D61A8
+		// Token: 0x1700E0D0 RID: 57552
+		// (get) Token: 0x06035DEC RID: 220652 RVA: 0x00737BEC File Offset: 0x00735DEC
 		public TProcessedValue VerticalSpeedType
 		{
 			get
@@ -116,7 +116,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032B87 RID: 207751 RVA: 0x006D7FE8 File Offset: 0x006D61E8
+		// Token: 0x06035DED RID: 220653 RVA: 0x00737C2C File Offset: 0x00735E2C
 		public TTable? VerticalSpeed<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -127,19 +127,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06032B88 RID: 207752 RVA: 0x006D8030 File Offset: 0x006D6230
+		// Token: 0x06035DEE RID: 220654 RVA: 0x00737C74 File Offset: 0x00735E74
 		public IProcessedValueConstant VerticalSpeedAsIProcessedValueConstant()
 		{
 			return this.VerticalSpeed<IProcessedValueConstant>().Value;
 		}
 
-		// Token: 0x06032B89 RID: 207753 RVA: 0x006D804C File Offset: 0x006D624C
+		// Token: 0x06035DEF RID: 220655 RVA: 0x00737C90 File Offset: 0x00735E90
 		public IProcessedValueConstraint VerticalSpeedAsIProcessedValueConstraint()
 		{
 			return this.VerticalSpeed<IProcessedValueConstraint>().Value;
 		}
 
-		// Token: 0x06032B8A RID: 207754 RVA: 0x006D8067 File Offset: 0x006D6267
+		// Token: 0x06035DF0 RID: 220656 RVA: 0x00737CAB File Offset: 0x00735EAB
 		public static Offset<ISetHorizontalVerticalSpeedImmediately> CreateISetHorizontalVerticalSpeedImmediately(FlatBufferBuilder builder, ESetVehicleSpeedImmediatelyType Type = ESetVehicleSpeedImmediatelyType.TotalSpeed, TProcessedValue HorizontalSpeed_type = TProcessedValue.NONE, int HorizontalSpeedOffset = 0, TProcessedValue VerticalSpeed_type = TProcessedValue.NONE, int VerticalSpeedOffset = 0)
 		{
 			builder.StartTable(5);
@@ -151,49 +151,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetHorizontalVerticalSpeedImmediately.EndISetHorizontalVerticalSpeedImmediately(builder);
 		}
 
-		// Token: 0x06032B8B RID: 207755 RVA: 0x006D809B File Offset: 0x006D629B
+		// Token: 0x06035DF1 RID: 220657 RVA: 0x00737CDF File Offset: 0x00735EDF
 		public static void StartISetHorizontalVerticalSpeedImmediately(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06032B8C RID: 207756 RVA: 0x006D80A4 File Offset: 0x006D62A4
+		// Token: 0x06035DF2 RID: 220658 RVA: 0x00737CE8 File Offset: 0x00735EE8
 		public static void AddType(FlatBufferBuilder builder, ESetVehicleSpeedImmediatelyType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06032B8D RID: 207757 RVA: 0x006D80AF File Offset: 0x006D62AF
+		// Token: 0x06035DF3 RID: 220659 RVA: 0x00737CF3 File Offset: 0x00735EF3
 		public static void AddHorizontalSpeedType(FlatBufferBuilder builder, TProcessedValue horizontalSpeedType)
 		{
 			builder.AddByte(1, (byte)horizontalSpeedType, 0);
 		}
 
-		// Token: 0x06032B8E RID: 207758 RVA: 0x006D80BA File Offset: 0x006D62BA
+		// Token: 0x06035DF4 RID: 220660 RVA: 0x00737CFE File Offset: 0x00735EFE
 		public static void AddHorizontalSpeed(FlatBufferBuilder builder, int horizontalSpeedOffset)
 		{
 			builder.AddOffset(2, horizontalSpeedOffset, 0);
 		}
 
-		// Token: 0x06032B8F RID: 207759 RVA: 0x006D80C5 File Offset: 0x006D62C5
+		// Token: 0x06035DF5 RID: 220661 RVA: 0x00737D09 File Offset: 0x00735F09
 		public static void AddVerticalSpeedType(FlatBufferBuilder builder, TProcessedValue verticalSpeedType)
 		{
 			builder.AddByte(3, (byte)verticalSpeedType, 0);
 		}
 
-		// Token: 0x06032B90 RID: 207760 RVA: 0x006D80D0 File Offset: 0x006D62D0
+		// Token: 0x06035DF6 RID: 220662 RVA: 0x00737D14 File Offset: 0x00735F14
 		public static void AddVerticalSpeed(FlatBufferBuilder builder, int verticalSpeedOffset)
 		{
 			builder.AddOffset(4, verticalSpeedOffset, 0);
 		}
 
-		// Token: 0x06032B91 RID: 207761 RVA: 0x006D80DB File Offset: 0x006D62DB
+		// Token: 0x06035DF7 RID: 220663 RVA: 0x00737D1F File Offset: 0x00735F1F
 		public static Offset<ISetHorizontalVerticalSpeedImmediately> EndISetHorizontalVerticalSpeedImmediately(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetHorizontalVerticalSpeedImmediately>(builder.EndTable());
 		}
 
-		// Token: 0x06032B92 RID: 207762 RVA: 0x006D80E8 File Offset: 0x006D62E8
+		// Token: 0x06035DF8 RID: 220664 RVA: 0x00737D2C File Offset: 0x00735F2C
 		public ISetHorizontalVerticalSpeedImmediatelyT UnPack()
 		{
 			ISetHorizontalVerticalSpeedImmediatelyT setHorizontalVerticalSpeedImmediatelyT = new ISetHorizontalVerticalSpeedImmediatelyT();
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setHorizontalVerticalSpeedImmediatelyT;
 		}
 
-		// Token: 0x06032B93 RID: 207763 RVA: 0x006D8104 File Offset: 0x006D6304
+		// Token: 0x06035DF9 RID: 220665 RVA: 0x00737D48 File Offset: 0x00735F48
 		public void UnPackTo(ISetHorizontalVerticalSpeedImmediatelyT _o)
 		{
 			_o.Type = this.Type;
@@ -234,7 +234,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.VerticalSpeed.Value = ((this.VerticalSpeed<IProcessedValueConstraint>() != null) ? this.VerticalSpeed<IProcessedValueConstraint>().Value.UnPack() : null);
 		}
 
-		// Token: 0x06032B94 RID: 207764 RVA: 0x006D824C File Offset: 0x006D644C
+		// Token: 0x06035DFA RID: 220666 RVA: 0x00737E90 File Offset: 0x00736090
 		public static Offset<ISetHorizontalVerticalSpeedImmediately> Pack(FlatBufferBuilder builder, ISetHorizontalVerticalSpeedImmediatelyT _o)
 		{
 			if (_o == null)
@@ -248,7 +248,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetHorizontalVerticalSpeedImmediately.CreateISetHorizontalVerticalSpeedImmediately(builder, _o.Type, horizontalSpeed_type, horizontalSpeedOffset, verticalSpeed_type, verticalSpeedOffset);
 		}
 
-		// Token: 0x04011A25 RID: 72229
+		// Token: 0x04012A0A RID: 76298
 		private Table __p;
 	}
 }

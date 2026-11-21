@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.VehicleStream
 {
-	// Token: 0x020048A4 RID: 18596
+	// Token: 0x0200381B RID: 14363
 	public enum EStateContainerType
 	{
-		// Token: 0x0401A1F9 RID: 107001
+		// Token: 0x04014A6C RID: 84588
 		Vehicle,
-		// Token: 0x0401A1FA RID: 107002
+		// Token: 0x04014A6D RID: 84589
 		VehicleTeam
 	}
 }

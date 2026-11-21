@@ -8,19 +8,19 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F84 RID: 28548
+	// Token: 0x02006105 RID: 24837
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowEnterMovieMode : LevelFlowActionBase
 	{
-		// Token: 0x060456E4 RID: 284388 RVA: 0x011376DA File Offset: 0x011358DA
+		// Token: 0x0603B892 RID: 243858 RVA: 0x010E14DE File Offset: 0x010DF6DE
 		public LevelFlowEnterMovieMode Init(EnterMovieMode params_)
 		{
 			this.Params = params_;
 			return this;
 		}
 
-		// Token: 0x060456E5 RID: 284389 RVA: 0x011376E4 File Offset: 0x011358E4
+		// Token: 0x0603B893 RID: 243859 RVA: 0x010E14E8 File Offset: 0x010DF6E8
 		protected override void OnExecute()
 		{
 			if (this.Params == null)
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			this.ExecuteEnterMovieMode(params_, this.Params.DurationType);
 		}
 
-		// Token: 0x060456E6 RID: 284390 RVA: 0x011377E8 File Offset: 0x011359E8
+		// Token: 0x0603B894 RID: 243860 RVA: 0x010E15EC File Offset: 0x010DF7EC
 		private UniTask ExecuteEnterMovieMode(IEnterMovieModeParams params_, [Nullable(2)] IEnterMovieModeDurationType durationType)
 		{
 			LevelFlowEnterMovieMode.<ExecuteEnterMovieMode>d__3 <ExecuteEnterMovieMode>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return <ExecuteEnterMovieMode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x040243B6 RID: 148406
+		// Token: 0x0401F66B RID: 128619
 		[Nullable(2)]
 		private EnterMovieMode Params;
 	}

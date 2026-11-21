@@ -11,13 +11,13 @@ using CSharpScript.Game.Module.Teleport;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x02003060 RID: 12384
+// Token: 0x020025B6 RID: 9654
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterGlideComponent : EntityComponent
 {
-	// Token: 0x17002444 RID: 9284
-	// (get) Token: 0x0601A58C RID: 107916 RVA: 0x00700260 File Offset: 0x006FE460
+	// Token: 0x17002570 RID: 9584
+	// (get) Token: 0x06017F39 RID: 98105 RVA: 0x00726F60 File Offset: 0x00725160
 	public bool SoarBoostOn
 	{
 		get
@@ -26,7 +26,7 @@ public class CharacterGlideComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A58D RID: 107917 RVA: 0x00700268 File Offset: 0x006FE468
+	// Token: 0x06017F3A RID: 98106 RVA: 0x00726F68 File Offset: 0x00725168
 	public void RefreshSoarBoost()
 	{
 		bool flag = (this.SoarBoostOnNormal || this.SoarBoostOnSpec) && this.TagComponent != null && this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.动作状态.XA"]);
@@ -57,7 +57,7 @@ public class CharacterGlideComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A58E RID: 107918 RVA: 0x0070030E File Offset: 0x006FE50E
+	// Token: 0x06017F3B RID: 98107 RVA: 0x0072700E File Offset: 0x0072520E
 	private void OnPositionStateChanged(ECharPositionState oldMoveState, ECharPositionState newMoveState)
 	{
 		this.RefreshSoarBoost();
@@ -65,7 +65,7 @@ public class CharacterGlideComponent : EntityComponent
 		this.RefreshSoarExploreIcon();
 	}
 
-	// Token: 0x0601A58F RID: 107919 RVA: 0x00700324 File Offset: 0x006FE524
+	// Token: 0x06017F3C RID: 98108 RVA: 0x00727024 File Offset: 0x00725224
 	private void OnMoveStateChanged(ECharMoveState oldMoveState, ECharMoveState newMoveState)
 	{
 		if (newMoveState == ECharMoveState.Soar)
@@ -96,9 +96,9 @@ public class CharacterGlideComponent : EntityComponent
 		this.RefreshEnableAutoFlight();
 	}
 
-	// Token: 0x17002445 RID: 9285
-	// (get) Token: 0x0601A590 RID: 107920 RVA: 0x007003EA File Offset: 0x006FE5EA
-	// (set) Token: 0x0601A591 RID: 107921 RVA: 0x007003F4 File Offset: 0x006FE5F4
+	// Token: 0x17002571 RID: 9585
+	// (get) Token: 0x06017F3D RID: 98109 RVA: 0x007270EA File Offset: 0x007252EA
+	// (set) Token: 0x06017F3E RID: 98110 RVA: 0x007270F4 File Offset: 0x007252F4
 	private bool InSoarSplineMove
 	{
 		get
@@ -150,9 +150,9 @@ public class CharacterGlideComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002446 RID: 9286
-	// (get) Token: 0x0601A592 RID: 107922 RVA: 0x007005C8 File Offset: 0x006FE7C8
-	// (set) Token: 0x0601A593 RID: 107923 RVA: 0x007005D0 File Offset: 0x006FE7D0
+	// Token: 0x17002572 RID: 9586
+	// (get) Token: 0x06017F3F RID: 98111 RVA: 0x007272C8 File Offset: 0x007254C8
+	// (set) Token: 0x06017F40 RID: 98112 RVA: 0x007272D0 File Offset: 0x007254D0
 	private bool EnableAutoFlight
 	{
 		get
@@ -192,15 +192,15 @@ public class CharacterGlideComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A594 RID: 107924 RVA: 0x00700630 File Offset: 0x006FE830
+	// Token: 0x06017F41 RID: 98113 RVA: 0x00727330 File Offset: 0x00725530
 	private void RefreshEnableAutoFlight()
 	{
 		this.EnableAutoFlight = (!this.InSoarSplineMove && this.TagComponent != null && this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.动作状态.XA"]));
 	}
 
-	// Token: 0x17002447 RID: 9287
-	// (get) Token: 0x0601A595 RID: 107925 RVA: 0x00700665 File Offset: 0x006FE865
-	// (set) Token: 0x0601A596 RID: 107926 RVA: 0x00700670 File Offset: 0x006FE870
+	// Token: 0x17002573 RID: 9587
+	// (get) Token: 0x06017F42 RID: 98114 RVA: 0x00727365 File Offset: 0x00725565
+	// (set) Token: 0x06017F43 RID: 98115 RVA: 0x00727370 File Offset: 0x00725570
 	private CharacterGlideComponent.ESoarUpDownState SoarUpDownState
 	{
 		get
@@ -236,7 +236,7 @@ public class CharacterGlideComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A597 RID: 107927 RVA: 0x00700734 File Offset: 0x006FE934
+	// Token: 0x06017F44 RID: 98116 RVA: 0x00727434 File Offset: 0x00725634
 	private void ReceiveGlideEvent(float deltaSeconds)
 	{
 		if (SeamlessTravelModel.Instance.GetIsKeepingCurrentMovementMode() || TeleportModel.Instance.GetIsKeepingCurrentMovementMode())
@@ -258,7 +258,7 @@ public class CharacterGlideComponent : EntityComponent
 		this.MoveComponent.CharacterMovement.KuroFlying(deltaSeconds, 15f, 0.1f, 0.068f, 55f, 650f, 250f);
 	}
 
-	// Token: 0x0601A598 RID: 107928 RVA: 0x0070080C File Offset: 0x006FEA0C
+	// Token: 0x06017F45 RID: 98117 RVA: 0x0072750C File Offset: 0x0072570C
 	private void ReceiveSoarEvent(float deltaSeconds)
 	{
 		if (SeamlessTravelModel.Instance.GetIsKeepingCurrentMovementMode() || TeleportModel.Instance.GetIsKeepingCurrentMovementMode())
@@ -320,7 +320,7 @@ public class CharacterGlideComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A599 RID: 107929 RVA: 0x007009C8 File Offset: 0x006FEBC8
+	// Token: 0x06017F46 RID: 98118 RVA: 0x007276C8 File Offset: 0x007258C8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -363,7 +363,7 @@ public class CharacterGlideComponent : EntityComponent
 		return new ValueTuple<bool, string>(true, null);
 	}
 
-	// Token: 0x0601A59A RID: 107930 RVA: 0x00700AF4 File Offset: 0x006FECF4
+	// Token: 0x06017F47 RID: 98119 RVA: 0x007277F4 File Offset: 0x007259F4
 	private void SoarMove(float deltaSeconds)
 	{
 		if (this.ActorComp == null || this.MoveComponent == null)
@@ -403,7 +403,7 @@ public class CharacterGlideComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A59B RID: 107931 RVA: 0x00700BB0 File Offset: 0x006FEDB0
+	// Token: 0x06017F48 RID: 98120 RVA: 0x007278B0 File Offset: 0x00725AB0
 	protected void OnStateInherit(Entity other, bool notInheritMoveAndAnim)
 	{
 		if (other == null || !other.Valid)
@@ -429,7 +429,7 @@ public class CharacterGlideComponent : EntityComponent
 		this.RefreshSoarExploreIcon();
 	}
 
-	// Token: 0x0601A59C RID: 107932 RVA: 0x00700C40 File Offset: 0x006FEE40
+	// Token: 0x06017F49 RID: 98121 RVA: 0x00727940 File Offset: 0x00725B40
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -453,7 +453,7 @@ public class CharacterGlideComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A59D RID: 107933 RVA: 0x00700DF8 File Offset: 0x006FEFF8
+	// Token: 0x06017F4A RID: 98122 RVA: 0x00727AF8 File Offset: 0x00725CF8
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget<ECharMoveState, ECharMoveState>(base.Entity, EEventName.CharOnUnifiedMoveStateChanged, new Action<ECharMoveState, ECharMoveState>(this.OnMoveStateChanged));
@@ -478,7 +478,7 @@ public class CharacterGlideComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A59E RID: 107934 RVA: 0x00700EFD File Offset: 0x006FF0FD
+	// Token: 0x06017F4B RID: 98123 RVA: 0x00727BFD File Offset: 0x00725DFD
 	private void OnAscentInWind(int tagId, bool tagExist)
 	{
 		CharacterWeaponComponent weaponComponent = this.WeaponComponent;
@@ -489,14 +489,14 @@ public class CharacterGlideComponent : EntityComponent
 		weaponComponent.SetParaglidingIsAscent(tagExist);
 	}
 
-	// Token: 0x0601A59F RID: 107935 RVA: 0x00700F10 File Offset: 0x006FF110
+	// Token: 0x06017F4C RID: 98124 RVA: 0x00727C10 File Offset: 0x00725E10
 	private void OnAscentBoostSpec(int tagId, bool tagExist)
 	{
 		this.SoarBoostOnSpec = tagExist;
 		this.RefreshSoarBoost();
 	}
 
-	// Token: 0x0601A5A0 RID: 107936 RVA: 0x00700F1F File Offset: 0x006FF11F
+	// Token: 0x06017F4D RID: 98125 RVA: 0x00727C1F File Offset: 0x00725E1F
 	public void EnterGlideState(string context = "CharacterGlideComponent")
 	{
 		this.ActorComp.Actor.KuroSetMovementMode(new SetMovementModeInfo
@@ -507,7 +507,7 @@ public class CharacterGlideComponent : EntityComponent
 		});
 	}
 
-	// Token: 0x0601A5A1 RID: 107937 RVA: 0x00700F4B File Offset: 0x006FF14B
+	// Token: 0x06017F4E RID: 98126 RVA: 0x00727C4B File Offset: 0x00725E4B
 	public void ExitGlideState(string context = "CharacterGlideComponent")
 	{
 		this.ActorComp.Actor.KuroSetMovementMode(new SetMovementModeInfo
@@ -518,7 +518,7 @@ public class CharacterGlideComponent : EntityComponent
 		});
 	}
 
-	// Token: 0x0601A5A2 RID: 107938 RVA: 0x00700F78 File Offset: 0x006FF178
+	// Token: 0x06017F4F RID: 98127 RVA: 0x00727C78 File Offset: 0x00725E78
 	public void EnterSoarState(string context = "CharacterGlideComponent")
 	{
 		global::Log instance = global::Log.Instance;
@@ -535,7 +535,7 @@ public class CharacterGlideComponent : EntityComponent
 		});
 	}
 
-	// Token: 0x0601A5A3 RID: 107939 RVA: 0x00700FE4 File Offset: 0x006FF1E4
+	// Token: 0x06017F50 RID: 98128 RVA: 0x00727CE4 File Offset: 0x00725EE4
 	public unsafe void ExitSoarState(EMovementMode newMovement = EMovementMode.MOVE_Falling, string context = "CharacterGlideComponent")
 	{
 		global::Log instance = global::Log.Instance;
@@ -555,7 +555,7 @@ public class CharacterGlideComponent : EntityComponent
 		});
 	}
 
-	// Token: 0x0601A5A4 RID: 107940 RVA: 0x00701088 File Offset: 0x006FF288
+	// Token: 0x06017F51 RID: 98129 RVA: 0x00727D88 File Offset: 0x00725F88
 	protected void CalculateSoarQuat()
 	{
 		if (this.ActorComp.ActorVelocityProxy.IsNearlyZero(9.999999747378752E-05))
@@ -584,7 +584,7 @@ public class CharacterGlideComponent : EntityComponent
 		instance.LookRotationForwardFirst(forward, (((actorComp != null) ? actorComp.MoveComp : null) != null) ? this.ActorComp.MoveComp.GravityUp : global::Vector.UpVectorProxy, this.CurrentSoarQuat);
 	}
 
-	// Token: 0x0601A5A5 RID: 107941 RVA: 0x007011A0 File Offset: 0x006FF3A0
+	// Token: 0x06017F52 RID: 98130 RVA: 0x00727EA0 File Offset: 0x007260A0
 	private void SoarTurn(UCharacterMovementComponent characterMovement, float deltaSeconds)
 	{
 		if (MathUtils.Instance.IsNearlyZero((double)this.OffsetTurnAngle, null) || this.ActorComp == null)
@@ -617,7 +617,7 @@ public class CharacterGlideComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A5A6 RID: 107942 RVA: 0x007013E4 File Offset: 0x006FF5E4
+	// Token: 0x06017F53 RID: 98131 RVA: 0x007280E4 File Offset: 0x007262E4
 	private void SoarBoost(UCharacterMovementComponent characterMovement, float deltaSeconds)
 	{
 		global::Vector actorVelocityProxy = this.ActorComp.ActorVelocityProxy;
@@ -633,7 +633,7 @@ public class CharacterGlideComponent : EntityComponent
 		this.ActorComp.SetActorVelocity(CharacterGlideComponent.TmpVector);
 	}
 
-	// Token: 0x0601A5A7 RID: 107943 RVA: 0x007014A4 File Offset: 0x006FF6A4
+	// Token: 0x06017F54 RID: 98132 RVA: 0x007281A4 File Offset: 0x007263A4
 	private void BalanceVelocity(UCharacterMovementComponent characterMovement, float deltaSeconds)
 	{
 		if (this.ActorComp == null || this.ActorComp.InputDirectProxy.X > 0.0)
@@ -682,7 +682,7 @@ public class CharacterGlideComponent : EntityComponent
 		this.ActorComp.SetActorVelocity(CharacterGlideComponent.TmpVector);
 	}
 
-	// Token: 0x0601A5A8 RID: 107944 RVA: 0x00701654 File Offset: 0x006FF854
+	// Token: 0x06017F55 RID: 98133 RVA: 0x00728354 File Offset: 0x00726554
 	public void SetSoarBoostOn(bool on)
 	{
 		bool soarBoostOnNormal = this.SoarBoostOnNormal;
@@ -698,7 +698,7 @@ public class CharacterGlideComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A5A9 RID: 107945 RVA: 0x007016D4 File Offset: 0x006FF8D4
+	// Token: 0x06017F56 RID: 98134 RVA: 0x007283D4 File Offset: 0x007265D4
 	private void TryPlayXaBoostShake()
 	{
 		if (!Info.Instance.IsInGamepad())
@@ -717,7 +717,7 @@ public class CharacterGlideComponent : EntityComponent
 		GamepadController.Instance.PlayKuroForceFeedback(this.XaBoostShakeAsset, CharacterGlideComponent.XaBoostShakeTag, false, false, false, "XaBoost");
 	}
 
-	// Token: 0x0601A5AA RID: 107946 RVA: 0x00701754 File Offset: 0x006FF954
+	// Token: 0x06017F57 RID: 98135 RVA: 0x00728454 File Offset: 0x00726654
 	private void UpdateSoarNormalWithoutInput(float deltaSeconds, UCharacterMovementComponent characterMovement)
 	{
 		if (this.ActorComp == null)
@@ -743,7 +743,7 @@ public class CharacterGlideComponent : EntityComponent
 		this.ActorComp.ActorQuatProxy.RotateVector(CharacterGlideComponent.TmpVector, this.CurrentSoarNormal);
 	}
 
-	// Token: 0x0601A5AB RID: 107947 RVA: 0x0070191C File Offset: 0x006FFB1C
+	// Token: 0x06017F58 RID: 98136 RVA: 0x0072861C File Offset: 0x0072681C
 	private void UpdateSoarNormalWithInput(float deltaSeconds, UCharacterMovementComponent characterMovement, float currentSpeed)
 	{
 		if (this.ActorComp == null)
@@ -788,7 +788,7 @@ public class CharacterGlideComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A5AC RID: 107948 RVA: 0x00701C30 File Offset: 0x006FFE30
+	// Token: 0x06017F59 RID: 98137 RVA: 0x00728930 File Offset: 0x00726B30
 	private EMoveHitType SoarMoveNormal(float deltaSeconds, UCharacterMovementComponent characterMovement)
 	{
 		if (this.ActorComp == null)
@@ -851,7 +851,7 @@ public class CharacterGlideComponent : EntityComponent
 		return UKuroMovementBPLibrary.KuroSoar(deltaSeconds, characterMovement, this.SoarConfigParams.SoarAirFriction, (float)MathUtils.Instance.RangeClamp(num, (double)this.SoarConfigParams.SoarSpeedThresholdMin, (double)this.SoarConfigParams.SoarSpeedThresholdMax, (double)this.SoarConfigParams.SoarAerodynamicsMin, (double)this.SoarConfigParams.SoarAerodynamicsMax), CharacterGlideComponent.TmpVector.ToUeVectorOld(), this.CurrentSoarNormal.ToUeVectorOld(), this.SoarConfigParams.SoarMaxSpeed);
 	}
 
-	// Token: 0x0601A5AD RID: 107949 RVA: 0x00701F4C File Offset: 0x0070014C
+	// Token: 0x06017F5A RID: 98138 RVA: 0x00728C4C File Offset: 0x00726E4C
 	private unsafe EMoveHitType SoarMoveSpline(float deltaSeconds, UCharacterMovementComponent characterMovement)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -890,7 +890,14 @@ public class CharacterGlideComponent : EntityComponent
 			{
 				CharacterGlideComponent.TmpVector.MultiplyEqual(-1.0);
 			}
-			MathUtils.Instance.SqInterpToVector(this.SoarSplineTargetDirect, CharacterGlideComponent.TmpVector, this.SoarConfigParams.SoarSplineRotateAngleSpeedWithoutInput * deltaSeconds, this.SoarSplineTargetDirect);
+			if (flag)
+			{
+				this.InterpSoarSplineTargetDirectPlanar(CharacterGlideComponent.TmpVector, this.SoarConfigParams.SoarSplineRotateAngleSpeedWithoutInput * deltaSeconds);
+			}
+			else
+			{
+				MathUtils.Instance.SqInterpToVector(this.SoarSplineTargetDirect, CharacterGlideComponent.TmpVector, this.SoarConfigParams.SoarSplineRotateAngleSpeedWithoutInput * deltaSeconds, this.SoarSplineTargetDirect);
+			}
 		}
 		else
 		{
@@ -951,7 +958,31 @@ public class CharacterGlideComponent : EntityComponent
 		return UKuroMovementBPLibrary.KuroSoar(deltaSeconds, characterMovement, currentSplineMoveParams.SoarFriction, 0f, global::Vector.ZeroVector, global::Vector.ZeroVector, (this.SoarBoostOn && currentSplineMoveParams.SoarSprintLimit > 0f) ? currentSplineMoveParams.SoarSprintLimit : currentSplineMoveParams.MaxSoarSplineSpeed);
 	}
 
-	// Token: 0x0601A5AE RID: 107950 RVA: 0x007025A4 File Offset: 0x007007A4
+	// Token: 0x06017F5B RID: 98139 RVA: 0x007292CC File Offset: 0x007274CC
+	private void InterpSoarSplineTargetDirectPlanar(global::Vector targetDirect, float maxAngle)
+	{
+		global::Vector gravityUp = this.ActorComp.MoveComp.GravityUp;
+		double inB = gravityUp.DotProduct(targetDirect);
+		global::Vector.VectorPlaneProject(targetDirect, gravityUp, CharacterGlideComponent.TmpVector2);
+		double inB2 = CharacterGlideComponent.TmpVector2.Size();
+		bool flag = CharacterGlideComponent.TmpVector2.Normalize(9.99999993922529E-09);
+		global::Vector.VectorPlaneProject(this.SoarSplineTargetDirect, gravityUp, CharacterGlideComponent.TmpVector);
+		bool flag2 = CharacterGlideComponent.TmpVector.Normalize(9.99999993922529E-09);
+		if (flag && flag2)
+		{
+			MathUtils.Instance.SqInterpToVector(CharacterGlideComponent.TmpVector, CharacterGlideComponent.TmpVector2, maxAngle, CharacterGlideComponent.TmpVector);
+		}
+		else if (flag)
+		{
+			CharacterGlideComponent.TmpVector.DeepCopy(CharacterGlideComponent.TmpVector2);
+		}
+		CharacterGlideComponent.TmpVector.Multiply(inB2, this.SoarSplineTargetDirect);
+		gravityUp.Multiply(inB, CharacterGlideComponent.TmpVector2);
+		this.SoarSplineTargetDirect.AdditionEqual(CharacterGlideComponent.TmpVector2);
+		this.SoarSplineTargetDirect.Normalize(9.99999993922529E-09);
+	}
+
+	// Token: 0x06017F5C RID: 98140 RVA: 0x007293BC File Offset: 0x007275BC
 	public void SwitchCurrentSoarType(ESoarType newType)
 	{
 		if (this.CurrentSoarType == newType)
@@ -963,7 +994,7 @@ public class CharacterGlideComponent : EntityComponent
 		EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.SoarTypeChange);
 	}
 
-	// Token: 0x0601A5AF RID: 107951 RVA: 0x007025D4 File Offset: 0x007007D4
+	// Token: 0x06017F5D RID: 98141 RVA: 0x007293EC File Offset: 0x007275EC
 	private void RefreshSoarMaterialEffect()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -1009,7 +1040,7 @@ public class CharacterGlideComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A5B0 RID: 107952 RVA: 0x007026D8 File Offset: 0x007008D8
+	// Token: 0x06017F5E RID: 98142 RVA: 0x007294F0 File Offset: 0x007276F0
 	private void RefreshSoarExploreIcon()
 	{
 		bool flag = RouletteModel.Instance.CurrentExploreSkillId == 1015;
@@ -1041,7 +1072,7 @@ public class CharacterGlideComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A5B1 RID: 107953 RVA: 0x0070277C File Offset: 0x0070097C
+	// Token: 0x06017F5F RID: 98143 RVA: 0x00729594 File Offset: 0x00727794
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1049,377 +1080,331 @@ public class CharacterGlideComponent : EntityComponent
 			return false;
 		}
 		CharacterGlideComponent characterGlideComponent = (CharacterGlideComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterGlideComponent.ActorComp == null)
 		{
-			if (characterGlideComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("MoveComponent"))
-		{
-			if (characterGlideComponent.MoveComponent == null)
-			{
-				this.MoveComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComponent), "MoveComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("WeaponComponent"))
-		{
-			if (characterGlideComponent.WeaponComponent == null)
-			{
-				this.WeaponComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterWeaponComponent>(this.WeaponComponent), "WeaponComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagComponent"))
-		{
-			if (characterGlideComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AnimComp"))
-		{
-			if (characterGlideComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SplineMoveComp"))
-		{
-			if (characterGlideComponent.SplineMoveComp == null)
-			{
-				this.SplineMoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterSplineMoveComponent>(this.SplineMoveComp), "SplineMoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OnAscentInWindTask"))
-		{
-			if (characterGlideComponent.OnAscentInWindTask == null)
-			{
-				this.OnAscentInWindTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnAscentInWindTask), "OnAscentInWindTask"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OnAscentBoostSpecTask"))
-		{
-			if (characterGlideComponent.OnAscentBoostSpecTask == null)
-			{
-				this.OnAscentBoostSpecTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnAscentBoostSpecTask), "OnAscentBoostSpecTask"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SoarBoostOnNormal"))
-		{
-			this.SoarBoostOnNormal = characterGlideComponent.SoarBoostOnNormal;
-		}
-		if (base.CanResetComponentProperty("SoarBoostOnSpec"))
-		{
-			this.SoarBoostOnSpec = characterGlideComponent.SoarBoostOnSpec;
-		}
-		if (base.CanResetComponentProperty("SoarBoostOnInternal"))
-		{
-			this.SoarBoostOnInternal = characterGlideComponent.SoarBoostOnInternal;
-		}
-		if (base.CanResetComponentProperty("SoarBalanceOn"))
-		{
-			this.SoarBalanceOn = characterGlideComponent.SoarBalanceOn;
-		}
-		if (base.CanResetComponentProperty("LastNotHitTime"))
-		{
-			this.LastNotHitTime = characterGlideComponent.LastNotHitTime;
-		}
-		if (base.CanResetComponentProperty("SoarConfigParams"))
-		{
-			if (characterGlideComponent.SoarConfigParams == null)
-			{
-				this.SoarConfigParams = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SoarConfigParams>(this.SoarConfigParams), "SoarConfigParams"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CurrentSoarType"))
-		{
-			this.CurrentSoarType = characterGlideComponent.CurrentSoarType;
-		}
-		if (base.CanResetComponentProperty("OffsetNormalAngle"))
-		{
-			this.OffsetNormalAngle = characterGlideComponent.OffsetNormalAngle;
-		}
-		if (base.CanResetComponentProperty("OffsetTurnAngle"))
-		{
-			this.OffsetTurnAngle = characterGlideComponent.OffsetTurnAngle;
-		}
-		if (base.CanResetComponentProperty("CurrentSoarNormal") && characterGlideComponent.CurrentSoarNormal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CurrentSoarNormal), "CurrentSoarNormal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CurrentSoarQuat") && characterGlideComponent.CurrentSoarQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.CurrentSoarQuat), "CurrentSoarQuat"))
+		if (characterGlideComponent.MoveComponent == null)
+		{
+			this.MoveComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComponent), "MoveComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpInputDirect") && characterGlideComponent.TmpInputDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpInputDirect), "TmpInputDirect"))
+		if (characterGlideComponent.WeaponComponent == null)
+		{
+			this.WeaponComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WeaponComponent), "WeaponComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("XaBoostShakeAsset"))
+		if (characterGlideComponent.TagComponent == null)
 		{
-			if (characterGlideComponent.XaBoostShakeAsset == null)
-			{
-				this.XaBoostShakeAsset = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroForceFeedbackEffect>(this.XaBoostShakeAsset), "XaBoostShakeAsset"))
-			{
-				return false;
-			}
+			this.TagComponent = null;
 		}
-		if (base.CanResetComponentProperty("InSoarSplineMoveInternal"))
-		{
-			this.InSoarSplineMoveInternal = characterGlideComponent.InSoarSplineMoveInternal;
-		}
-		if (base.CanResetComponentProperty("JustEnterSoarSplineMove"))
-		{
-			this.JustEnterSoarSplineMove = characterGlideComponent.JustEnterSoarSplineMove;
-		}
-		if (base.CanResetComponentProperty("SoarSplineTargetDirect") && characterGlideComponent.SoarSplineTargetDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SoarSplineTargetDirect), "SoarSplineTargetDirect"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("EnableAutoFlightInternal"))
+		if (characterGlideComponent.AnimComp == null)
 		{
-			this.EnableAutoFlightInternal = characterGlideComponent.EnableAutoFlightInternal;
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("SoarUpDownStateInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
-			this.SoarUpDownStateInternal = characterGlideComponent.SoarUpDownStateInternal;
+			return false;
 		}
+		if (characterGlideComponent.SplineMoveComp == null)
+		{
+			this.SplineMoveComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineMoveComp), "SplineMoveComp"))
+		{
+			return false;
+		}
+		if (characterGlideComponent.OnAscentInWindTask == null)
+		{
+			this.OnAscentInWindTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnAscentInWindTask), "OnAscentInWindTask"))
+		{
+			return false;
+		}
+		if (characterGlideComponent.OnAscentBoostSpecTask == null)
+		{
+			this.OnAscentBoostSpecTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnAscentBoostSpecTask), "OnAscentBoostSpecTask"))
+		{
+			return false;
+		}
+		this.SoarBoostOnNormal = characterGlideComponent.SoarBoostOnNormal;
+		this.SoarBoostOnSpec = characterGlideComponent.SoarBoostOnSpec;
+		this.SoarBoostOnInternal = characterGlideComponent.SoarBoostOnInternal;
+		this.SoarBalanceOn = characterGlideComponent.SoarBalanceOn;
+		this.LastNotHitTime = characterGlideComponent.LastNotHitTime;
+		if (characterGlideComponent.SoarConfigParams == null)
+		{
+			this.SoarConfigParams = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SoarConfigParams), "SoarConfigParams"))
+		{
+			return false;
+		}
+		this.CurrentSoarType = characterGlideComponent.CurrentSoarType;
+		this.OffsetNormalAngle = characterGlideComponent.OffsetNormalAngle;
+		this.OffsetTurnAngle = characterGlideComponent.OffsetTurnAngle;
+		if (characterGlideComponent.CurrentSoarNormal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentSoarNormal), "CurrentSoarNormal"))
+		{
+			return false;
+		}
+		if (characterGlideComponent.CurrentSoarQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentSoarQuat), "CurrentSoarQuat"))
+		{
+			return false;
+		}
+		if (characterGlideComponent.TmpInputDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpInputDirect), "TmpInputDirect"))
+		{
+			return false;
+		}
+		if (characterGlideComponent.XaBoostShakeAsset == null)
+		{
+			this.XaBoostShakeAsset = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.XaBoostShakeAsset), "XaBoostShakeAsset"))
+		{
+			return false;
+		}
+		this.InSoarSplineMoveInternal = characterGlideComponent.InSoarSplineMoveInternal;
+		this.JustEnterSoarSplineMove = characterGlideComponent.JustEnterSoarSplineMove;
+		if (characterGlideComponent.SoarSplineTargetDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SoarSplineTargetDirect), "SoarSplineTargetDirect"))
+		{
+			return false;
+		}
+		this.EnableAutoFlightInternal = characterGlideComponent.EnableAutoFlightInternal;
+		this.SoarUpDownStateInternal = characterGlideComponent.SoarUpDownStateInternal;
 		return true;
 	}
 
-	// Token: 0x0400C95E RID: 51550
+	// Token: 0x17002574 RID: 9588
+	// (get) Token: 0x06017F60 RID: 98144 RVA: 0x0072987A File Offset: 0x00727A7A
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002575 RID: 9589
+	// (get) Token: 0x06017F61 RID: 98145 RVA: 0x0072987D File Offset: 0x00727A7D
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CD38 RID: 52536
 	private const float FLYING_GRAVITY = 15f;
 
-	// Token: 0x0400C95F RID: 51551
+	// Token: 0x0400CD39 RID: 52537
 	private const float FLYING_FRICTION = 0.1f;
 
-	// Token: 0x0400C960 RID: 51552
+	// Token: 0x0400CD3A RID: 52538
 	private const float FLYING_DECELERATION = 0.068f;
 
-	// Token: 0x0400C961 RID: 51553
+	// Token: 0x0400CD3B RID: 52539
 	private const float FLYING_ACCELERATOR = 55f;
 
-	// Token: 0x0400C962 RID: 51554
+	// Token: 0x0400CD3C RID: 52540
 	private const float FLYING_MAX_SPEED = 650f;
 
-	// Token: 0x0400C963 RID: 51555
+	// Token: 0x0400CD3D RID: 52541
 	private const float FLYING_MAX_FALLING_SPEED = 250f;
 
-	// Token: 0x0400C964 RID: 51556
+	// Token: 0x0400CD3E RID: 52542
 	private const long ROAM_EFFECT_BUFF_ID = 613670000L;
 
-	// Token: 0x0400C965 RID: 51557
+	// Token: 0x0400CD3F RID: 52543
 	private const int DETECT_VOXEL_DOWN_OFFSET = 2500;
 
-	// Token: 0x0400C966 RID: 51558
+	// Token: 0x0400CD40 RID: 52544
 	public const string SOAR_CONFIG_BASE_PATH = "/Game/Aki/Data/Fight/Movement/DA_SoarConfigBase.DA_SoarConfigBase";
 
-	// Token: 0x0400C967 RID: 51559
+	// Token: 0x0400CD41 RID: 52545
 	public const string SOAR_CAMERA_SHAKE_PATH = "/Game/Aki/Character/Role/Common/Data/CameraShake/Camera/NCS_Role_Soar.NCS_Role_Soar_C";
 
-	// Token: 0x0400C968 RID: 51560
+	// Token: 0x0400CD42 RID: 52546
 	public const string SOAR_CAMERA_SHAKE_CURVE_PATH = "/Game/Aki/Character/Role/Common/Data/CameraShake/Camera/CameraShake_Curve.CameraShake_Curve";
 
-	// Token: 0x0400C969 RID: 51561
+	// Token: 0x0400CD43 RID: 52547
 	public const string SOAR_AUTO_FLIGHT_PATH = "/Game/Aki/Character/Input/DataAsset/DA_CameraDrivenAutoFlightData.DA_CameraDrivenAutoFlightData";
 
-	// Token: 0x0400C96A RID: 51562
+	// Token: 0x0400CD44 RID: 52548
 	public const int SOAR_CAMERA_SHAKE_SPEED_THRESHOLD = 1000;
 
-	// Token: 0x0400C96B RID: 51563
+	// Token: 0x0400CD45 RID: 52549
 	public const int SOAR_CAMERA_SHAKE_SPEED_THRESHOLD_MAX = 3000;
 
-	// Token: 0x0400C96C RID: 51564
+	// Token: 0x0400CD46 RID: 52550
 	private const float COS_45 = 0.70710677f;
 
-	// Token: 0x0400C96D RID: 51565
+	// Token: 0x0400CD47 RID: 52551
 	private const float SOAR_MAX_DELTA = 0.033333335f;
 
-	// Token: 0x0400C96E RID: 51566
+	// Token: 0x0400CD48 RID: 52552
 	private const int SOAR_MAX_ITER = 4;
 
-	// Token: 0x0400C96F RID: 51567
+	// Token: 0x0400CD49 RID: 52553
 	private const float SOAR_TURN_SPEED_SQR_THRESHOLD = 10000f;
 
-	// Token: 0x0400C970 RID: 51568
+	// Token: 0x0400CD4A RID: 52554
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor redColor = new FLinearColor(1f, 0f, 0f, 1f);
 
-	// Token: 0x0400C971 RID: 51569
+	// Token: 0x0400CD4B RID: 52555
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor greenColor = new FLinearColor(0f, 1f, 0f, 1f);
 
-	// Token: 0x0400C972 RID: 51570
+	// Token: 0x0400CD4C RID: 52556
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor blueColor = new FLinearColor(0f, 0f, 1f, 1f);
 
-	// Token: 0x0400C973 RID: 51571
+	// Token: 0x0400CD4D RID: 52557
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor yellowColor = new FLinearColor(1f, 1f, 0f, 1f);
 
-	// Token: 0x0400C974 RID: 51572
+	// Token: 0x0400CD4E RID: 52558
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400C975 RID: 51573
+	// Token: 0x0400CD4F RID: 52559
 	[Nullable(2)]
 	private CharacterMoveComponent MoveComponent;
 
-	// Token: 0x0400C976 RID: 51574
+	// Token: 0x0400CD50 RID: 52560
 	[Nullable(2)]
 	private CharacterWeaponComponent WeaponComponent;
 
-	// Token: 0x0400C977 RID: 51575
+	// Token: 0x0400CD51 RID: 52561
 	[Nullable(2)]
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400C978 RID: 51576
+	// Token: 0x0400CD52 RID: 52562
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400C979 RID: 51577
+	// Token: 0x0400CD53 RID: 52563
 	[Nullable(2)]
 	private CharacterSplineMoveComponent SplineMoveComp;
 
-	// Token: 0x0400C97A RID: 51578
+	// Token: 0x0400CD54 RID: 52564
 	[Nullable(2)]
 	private ITagTask OnAscentInWindTask;
 
-	// Token: 0x0400C97B RID: 51579
+	// Token: 0x0400CD55 RID: 52565
 	[Nullable(2)]
 	private ITagTask OnAscentBoostSpecTask;
 
-	// Token: 0x0400C97C RID: 51580
+	// Token: 0x0400CD56 RID: 52566
 	private bool SoarBoostOnNormal;
 
-	// Token: 0x0400C97D RID: 51581
+	// Token: 0x0400CD57 RID: 52567
 	private bool SoarBoostOnSpec;
 
-	// Token: 0x0400C97E RID: 51582
+	// Token: 0x0400CD58 RID: 52568
 	private bool SoarBoostOnInternal;
 
-	// Token: 0x0400C97F RID: 51583
+	// Token: 0x0400CD59 RID: 52569
 	public bool SoarBalanceOn;
 
-	// Token: 0x0400C980 RID: 51584
+	// Token: 0x0400CD5A RID: 52570
 	private double LastNotHitTime;
 
-	// Token: 0x0400C981 RID: 51585
+	// Token: 0x0400CD5B RID: 52571
 	[Nullable(2)]
 	private SoarConfigParams SoarConfigParams;
 
-	// Token: 0x0400C982 RID: 51586
+	// Token: 0x0400CD5C RID: 52572
 	public ESoarType CurrentSoarType;
 
-	// Token: 0x0400C983 RID: 51587
+	// Token: 0x0400CD5D RID: 52573
 	private float OffsetNormalAngle;
 
-	// Token: 0x0400C984 RID: 51588
+	// Token: 0x0400CD5E RID: 52574
 	private float OffsetTurnAngle;
 
-	// Token: 0x0400C985 RID: 51589
+	// Token: 0x0400CD5F RID: 52575
 	private readonly global::Vector CurrentSoarNormal = global::Vector.Create();
 
-	// Token: 0x0400C986 RID: 51590
+	// Token: 0x0400CD60 RID: 52576
 	private readonly Quat CurrentSoarQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400C987 RID: 51591
+	// Token: 0x0400CD61 RID: 52577
 	private readonly global::Vector TmpInputDirect = global::Vector.Create();
 
-	// Token: 0x0400C988 RID: 51592
+	// Token: 0x0400CD62 RID: 52578
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector TmpVector = global::Vector.Create();
 
-	// Token: 0x0400C989 RID: 51593
+	// Token: 0x0400CD63 RID: 52579
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector TmpVector2 = global::Vector.Create();
 
-	// Token: 0x0400C98A RID: 51594
+	// Token: 0x0400CD64 RID: 52580
 	[StaticVariableRuleIgnore]
 	private static readonly Rotator TmpRotator = Rotator.Create();
 
-	// Token: 0x0400C98B RID: 51595
+	// Token: 0x0400CD65 RID: 52581
 	[StaticVariableRuleIgnore]
 	private static readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400C98C RID: 51596
+	// Token: 0x0400CD66 RID: 52582
 	[StaticVariableRuleIgnore]
 	private static readonly Quat TmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400C98D RID: 51597
+	// Token: 0x0400CD67 RID: 52583
 	private const string XaBoostShakePath = "/Game/Aki/Character/Role/Common/Data/GamePadShake/ABP_GamePlay/FF_BaseAnim_XA_Shake.FF_BaseAnim_XA_Shake";
 
-	// Token: 0x0400C98E RID: 51598
+	// Token: 0x0400CD68 RID: 52584
 	[StaticVariableRuleIgnore]
 	private static readonly FName? XaBoostShakeTag = FNameUtil.GetDynamicFName("CharacterGlide.XaBoostShake");
 
-	// Token: 0x0400C98F RID: 51599
+	// Token: 0x0400CD69 RID: 52585
 	[Nullable(2)]
 	private UKuroForceFeedbackEffect XaBoostShakeAsset;
 
-	// Token: 0x0400C990 RID: 51600
+	// Token: 0x0400CD6A RID: 52586
 	private bool InSoarSplineMoveInternal;
 
-	// Token: 0x0400C991 RID: 51601
+	// Token: 0x0400CD6B RID: 52587
 	protected bool JustEnterSoarSplineMove;
 
-	// Token: 0x0400C992 RID: 51602
+	// Token: 0x0400CD6C RID: 52588
 	private readonly global::Vector SoarSplineTargetDirect = global::Vector.Create();
 
-	// Token: 0x0400C993 RID: 51603
+	// Token: 0x0400CD6D RID: 52589
 	private bool EnableAutoFlightInternal;
 
-	// Token: 0x0400C994 RID: 51604
+	// Token: 0x0400CD6E RID: 52590
 	private CharacterGlideComponent.ESoarUpDownState SoarUpDownStateInternal = CharacterGlideComponent.ESoarUpDownState.Normal;
 
-	// Token: 0x0200964B RID: 38475
+	// Token: 0x0200886C RID: 34924
 	[NullableContext(0)]
 	private enum ESoarUpDownState
 	{
-		// Token: 0x04030381 RID: 197505
+		// Token: 0x0402BA0E RID: 178702
 		Down,
-		// Token: 0x04030382 RID: 197506
+		// Token: 0x0402BA0F RID: 178703
 		Normal,
-		// Token: 0x04030383 RID: 197507
+		// Token: 0x0402BA10 RID: 178704
 		Up
 	}
 }

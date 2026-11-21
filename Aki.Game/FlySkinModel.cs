@@ -9,20 +9,20 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Skin;
 using Google.Protobuf.Collections;
 
-// Token: 0x02002A51 RID: 10833
+// Token: 0x02001FCC RID: 8140
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class FlySkinModel : ModelBase
 {
-	// Token: 0x06016900 RID: 92416 RVA: 0x005B7C2D File Offset: 0x005B5E2D
+	// Token: 0x06014321 RID: 82721 RVA: 0x005E3D71 File Offset: 0x005E1F71
 	protected override bool OnClear()
 	{
 		NewFlagModel.Instance.SaveNewFlagConfig(ELocalStoragePlayerKey.FlySkinRedDot);
 		return true;
 	}
 
-	// Token: 0x06016901 RID: 92417 RVA: 0x005B7C40 File Offset: 0x005B5E40
+	// Token: 0x06014322 RID: 82722 RVA: 0x005E3D84 File Offset: 0x005E1F84
 	public void UpdateFlySkinEquipDataList(IReadOnlyList<FlyEquipData> dataList)
 	{
 		this.SkinIdToRoleIds.Clear();
@@ -41,7 +41,7 @@ public class FlySkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016902 RID: 92418 RVA: 0x005B7D10 File Offset: 0x005B5F10
+	// Token: 0x06014323 RID: 82723 RVA: 0x005E3E54 File Offset: 0x005E2054
 	public void AddUnlockSkinId(int skinId)
 	{
 		if (skinId > 0)
@@ -51,7 +51,7 @@ public class FlySkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016903 RID: 92419 RVA: 0x005B7D25 File Offset: 0x005B5F25
+	// Token: 0x06014324 RID: 82724 RVA: 0x005E3E69 File Offset: 0x005E2069
 	private void AddUnlockSkinIdInternal(int skinId)
 	{
 		if (skinId > 0)
@@ -60,13 +60,13 @@ public class FlySkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016904 RID: 92420 RVA: 0x005B7D38 File Offset: 0x005B5F38
+	// Token: 0x06014325 RID: 82725 RVA: 0x005E3E7C File Offset: 0x005E207C
 	public bool CheckSkinIsUnlock(int skinId)
 	{
 		return skinId == 0 || this.UnlockSkinIdSet.Contains(skinId);
 	}
 
-	// Token: 0x06016905 RID: 92421 RVA: 0x005B7D4B File Offset: 0x005B5F4B
+	// Token: 0x06014326 RID: 82726 RVA: 0x005E3E8F File Offset: 0x005E208F
 	public int GetFlySkinItemCount(int skinItemId)
 	{
 		if (this.CheckSkinIsUnlock(skinItemId))
@@ -76,7 +76,7 @@ public class FlySkinModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06016906 RID: 92422 RVA: 0x005B7D5C File Offset: 0x005B5F5C
+	// Token: 0x06014327 RID: 82727 RVA: 0x005E3EA0 File Offset: 0x005E20A0
 	public void EquipFlySkin(int roleDataId, int skinId)
 	{
 		if (skinId <= 0)
@@ -94,7 +94,7 @@ public class FlySkinModel : ModelBase
 		EventSystem.Instance.Emit<int, EFlySkinType, int, int>(EEventName.OnRoleFlySkinChange, roleDataId, (EFlySkinType)skinType, roleEquipFlySkinId, skinId);
 	}
 
-	// Token: 0x06016907 RID: 92423 RVA: 0x005B7DC0 File Offset: 0x005B5FC0
+	// Token: 0x06014328 RID: 82728 RVA: 0x005E3F04 File Offset: 0x005E2104
 	public void UnLoadRoleFlySkinBySkinId(int roleDataId, int skinId)
 	{
 		int skinType = SkinConfig.Instance.GetFlySkinConfig(skinId).Value.SkinType;
@@ -104,7 +104,7 @@ public class FlySkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016908 RID: 92424 RVA: 0x005B7E08 File Offset: 0x005B6008
+	// Token: 0x06014329 RID: 82729 RVA: 0x005E3F4C File Offset: 0x005E214C
 	public void UnLoadRoleFlySkinBySkinType(int roleDataId, EFlySkinType skinType)
 	{
 		RoleFlySkinEquipData roleFlySkinEquipData;
@@ -123,7 +123,7 @@ public class FlySkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016909 RID: 92425 RVA: 0x005B7E58 File Offset: 0x005B6058
+	// Token: 0x0601432A RID: 82730 RVA: 0x005E3F9C File Offset: 0x005E219C
 	private void AddRoleFlySkinEquipData(int roleDataId, int skinId, EFlySkinType skinType)
 	{
 		List<int> list;
@@ -152,7 +152,7 @@ public class FlySkinModel : ModelBase
 		roleFlySkinEquipData.SkinEquipSet.Add(skinId);
 	}
 
-	// Token: 0x0601690A RID: 92426 RVA: 0x005B7EDC File Offset: 0x005B60DC
+	// Token: 0x0601432B RID: 82731 RVA: 0x005E4020 File Offset: 0x005E2220
 	private bool DeleteRoleFlySkinEquipData(int roleDataId, int skinId, EFlySkinType skinType)
 	{
 		List<int> list;
@@ -176,7 +176,7 @@ public class FlySkinModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601690B RID: 92427 RVA: 0x005B7F5C File Offset: 0x005B615C
+	// Token: 0x0601432C RID: 82732 RVA: 0x005E40A0 File Offset: 0x005E22A0
 	public int GetRoleEquipFlySkinId(int roleDataId, EFlySkinType skinType)
 	{
 		RoleFlySkinEquipData roleFlySkinEquipData;
@@ -192,7 +192,7 @@ public class FlySkinModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x0601690C RID: 92428 RVA: 0x005B7F90 File Offset: 0x005B6190
+	// Token: 0x0601432D RID: 82733 RVA: 0x005E40D4 File Offset: 0x005E22D4
 	public bool CheckAllRoleEquipFlySkin(int skinId, EFlySkinType skinType)
 	{
 		foreach (RoleInstance roleInstance in RoleModel.Instance.GetOfficialRoleList())
@@ -206,25 +206,25 @@ public class FlySkinModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601690D RID: 92429 RVA: 0x005B7FCF File Offset: 0x005B61CF
+	// Token: 0x0601432E RID: 82734 RVA: 0x005E4113 File Offset: 0x005E2313
 	public bool CheckRoleEquipFlySkin(int roleDataId, int skinId, EFlySkinType skinType)
 	{
 		return this.GetRoleEquipFlySkinId(roleDataId, skinType) == skinId;
 	}
 
-	// Token: 0x0601690E RID: 92430 RVA: 0x005B7FDC File Offset: 0x005B61DC
+	// Token: 0x0601432F RID: 82735 RVA: 0x005E4120 File Offset: 0x005E2320
 	public int GetRoleEquipParaglidingSkinId(int roleDataId)
 	{
 		return this.GetRoleEquipFlySkinId(roleDataId, EFlySkinType.Paragliding);
 	}
 
-	// Token: 0x0601690F RID: 92431 RVA: 0x005B7FE6 File Offset: 0x005B61E6
+	// Token: 0x06014330 RID: 82736 RVA: 0x005E412A File Offset: 0x005E232A
 	public int GetRoleEquipSoarWingSkinId(int roleDataId)
 	{
 		return this.GetRoleEquipFlySkinId(roleDataId, EFlySkinType.SoarWing);
 	}
 
-	// Token: 0x06016910 RID: 92432 RVA: 0x005B7FF0 File Offset: 0x005B61F0
+	// Token: 0x06014331 RID: 82737 RVA: 0x005E4134 File Offset: 0x005E2334
 	private bool TryAddFlySkinRedDot(int skinId)
 	{
 		if (skinId == 0)
@@ -239,7 +239,7 @@ public class FlySkinModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06016911 RID: 92433 RVA: 0x005B8018 File Offset: 0x005B6218
+	// Token: 0x06014332 RID: 82738 RVA: 0x005E415C File Offset: 0x005E235C
 	public bool CheckFlySkinHasRedDotBySkinType(EFlySkinType skinType)
 	{
 		foreach (FlySkinConfig flySkinConfig in SkinConfig.Instance.GetFlySkinConfigListByType(skinType))
@@ -252,13 +252,13 @@ public class FlySkinModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06016912 RID: 92434 RVA: 0x005B8090 File Offset: 0x005B6290
+	// Token: 0x06014333 RID: 82739 RVA: 0x005E41D4 File Offset: 0x005E23D4
 	public bool CheckFlySkinHasRedDot()
 	{
 		return this.CheckFlySkinHasRedDotBySkinType(EFlySkinType.Paragliding) || this.CheckFlySkinHasRedDotBySkinType(EFlySkinType.SoarWing);
 	}
 
-	// Token: 0x06016913 RID: 92435 RVA: 0x005B80A4 File Offset: 0x005B62A4
+	// Token: 0x06014334 RID: 82740 RVA: 0x005E41E8 File Offset: 0x005E23E8
 	public FlySkinData GetFlySkinData(int itemId)
 	{
 		FlySkinData result;
@@ -281,8 +281,8 @@ public class FlySkinModel : ModelBase
 		return flySkinData;
 	}
 
-	// Token: 0x17001DF1 RID: 7665
-	// (get) Token: 0x06016914 RID: 92436 RVA: 0x005B811D File Offset: 0x005B631D
+	// Token: 0x17001E49 RID: 7753
+	// (get) Token: 0x06014335 RID: 82741 RVA: 0x005E4261 File Offset: 0x005E2461
 	public static FlySkinModel Instance
 	{
 		get
@@ -291,7 +291,7 @@ public class FlySkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016915 RID: 92437 RVA: 0x005B8124 File Offset: 0x005B6324
+	// Token: 0x06014336 RID: 82742 RVA: 0x005E4268 File Offset: 0x005E2468
 	public static FlySkinModel GetOrCreateInstance()
 	{
 		if (FlySkinModel._Instance == null)
@@ -301,7 +301,7 @@ public class FlySkinModel : ModelBase
 		return FlySkinModel._Instance;
 	}
 
-	// Token: 0x06016916 RID: 92438 RVA: 0x005B8138 File Offset: 0x005B6338
+	// Token: 0x06014337 RID: 82743 RVA: 0x005E427C File Offset: 0x005E247C
 	public static bool CreateInstance()
 	{
 		if (FlySkinModel._Instance != null)
@@ -312,36 +312,36 @@ public class FlySkinModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06016917 RID: 92439 RVA: 0x005B814E File Offset: 0x005B634E
+	// Token: 0x06014338 RID: 82744 RVA: 0x005E4292 File Offset: 0x005E2492
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06016918 RID: 92440 RVA: 0x005B8150 File Offset: 0x005B6350
+	// Token: 0x06014339 RID: 82745 RVA: 0x005E4294 File Offset: 0x005E2494
 	public static void ResetStaticDefaultValue()
 	{
 		FlySkinModel._Instance = null;
 	}
 
-	// Token: 0x06016919 RID: 92441 RVA: 0x005B8158 File Offset: 0x005B6358
+	// Token: 0x0601433A RID: 82746 RVA: 0x005E429C File Offset: 0x005E249C
 	static FlySkinModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FlySkinModel.CreateStaticDefaultValue), new Action(FlySkinModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A77C RID: 42876
+	// Token: 0x0400AB80 RID: 43904
 	private readonly HashSet<int> UnlockSkinIdSet = new HashSet<int>();
 
-	// Token: 0x0400A77D RID: 42877
+	// Token: 0x0400AB81 RID: 43905
 	private readonly Dictionary<int, List<int>> SkinIdToRoleIds = new Dictionary<int, List<int>>();
 
-	// Token: 0x0400A77E RID: 42878
+	// Token: 0x0400AB82 RID: 43906
 	private readonly Dictionary<int, RoleFlySkinEquipData> RoleIdToRoleEquipData = new Dictionary<int, RoleFlySkinEquipData>();
 
-	// Token: 0x0400A77F RID: 42879
+	// Token: 0x0400AB83 RID: 43907
 	private readonly Dictionary<int, FlySkinData> FlySkinMap = new Dictionary<int, FlySkinData>();
 
-	// Token: 0x0400A780 RID: 42880
+	// Token: 0x0400AB84 RID: 43908
 	[Nullable(2)]
 	private static FlySkinModel _Instance;
 }

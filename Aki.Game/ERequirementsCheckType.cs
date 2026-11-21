@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002F05 RID: 12037
+// Token: 0x02002458 RID: 9304
 public enum ERequirementsCheckType
 {
-	// Token: 0x0400C164 RID: 49508
+	// Token: 0x0400C506 RID: 50438
 	AND,
-	// Token: 0x0400C165 RID: 49509
+	// Token: 0x0400C507 RID: 50439
 	OR,
-	// Token: 0x0400C166 RID: 49510
+	// Token: 0x0400C508 RID: 50440
 	Other
 }

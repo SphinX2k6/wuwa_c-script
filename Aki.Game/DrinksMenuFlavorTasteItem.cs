@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000F60 RID: 3936
+// Token: 0x02000415 RID: 1045
 public class DrinksMenuFlavorTasteItem : UiPanelBase
 {
-	// Token: 0x060064B5 RID: 25781 RVA: 0x0013F20D File Offset: 0x0013D40D
+	// Token: 0x0600384D RID: 14413 RVA: 0x00147AA9 File Offset: 0x00145CA9
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ public class DrinksMenuFlavorTasteItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060064B6 RID: 25782 RVA: 0x0013F248 File Offset: 0x0013D448
+	// Token: 0x0600384E RID: 14414 RVA: 0x00147AE4 File Offset: 0x00145CE4
 	[NullableContext(2)]
 	public void Refresh(ITasteInfo data)
 	{
@@ -69,13 +69,13 @@ public class DrinksMenuFlavorTasteItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x020075AC RID: 30124
+	// Token: 0x02006740 RID: 26432
 	private static class EFlavor
 	{
-		// Token: 0x04026E4F RID: 159311
+		// Token: 0x0402219A RID: 139674
 		public const int Icon = 0;
 
-		// Token: 0x04026E50 RID: 159312
+		// Token: 0x0402219B RID: 139675
 		public const int Txt = 1;
 	}
 }

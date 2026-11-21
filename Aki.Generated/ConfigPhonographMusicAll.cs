@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006C4 RID: 1732
+	// Token: 0x020006DC RID: 1756
 	public class ConfigPhonographMusicAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060028A8 RID: 10408 RVA: 0x0013F634 File Offset: 0x0013D834
+		// Token: 0x06002938 RID: 10552 RVA: 0x001460B0 File Offset: 0x001442B0
 		static ConfigPhonographMusicAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhonographMusicAll.CreateStaticDefaultValue), new Action(ConfigPhonographMusicAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060028A9 RID: 10409 RVA: 0x0013F654 File Offset: 0x0013D854
+		// Token: 0x06002939 RID: 10553 RVA: 0x001460D0 File Offset: 0x001442D0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhonographMusicAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060028AA RID: 10410 RVA: 0x0013F6D3 File Offset: 0x0013D8D3
+		// Token: 0x0600293A RID: 10554 RVA: 0x0014614F File Offset: 0x0014434F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhonographMusicAll.LogPair = null;
 			ConfigPhonographMusicAll.HandleId = 0;
 		}
 
-		// Token: 0x060028AB RID: 10411 RVA: 0x0013F6E1 File Offset: 0x0013D8E1
+		// Token: 0x0600293B RID: 10555 RVA: 0x0014615D File Offset: 0x0014435D
 		public static void Init()
 		{
 			ConfigPhonographMusicAll.HandleId = ConfigCommon.InitDataStatement(ConfigPhonographMusicAll.HandleId, "db_phonograph.db", "select BinData from `PhonographMusic`");
 		}
 
-		// Token: 0x060028AC RID: 10412 RVA: 0x0013F6FC File Offset: 0x0013D8FC
+		// Token: 0x0600293C RID: 10556 RVA: 0x00146178 File Offset: 0x00144378
 		[NullableContext(2)]
 		public static IReadOnlyList<PhonographMusic> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002F42 RID: 12098
+		// Token: 0x04002FEA RID: 12266
 		private const string DB = "db_phonograph.db";
 
-		// Token: 0x04002F43 RID: 12099
+		// Token: 0x04002FEB RID: 12267
 		private const string FILE = "l.留声机.xlsx";
 
-		// Token: 0x04002F44 RID: 12100
+		// Token: 0x04002FEC RID: 12268
 		private const string TABLE = "PhonographMusic";
 
-		// Token: 0x04002F45 RID: 12101
+		// Token: 0x04002FED RID: 12269
 		private const string COMMAND = "select BinData from `PhonographMusic`";
 
-		// Token: 0x04002F46 RID: 12102
+		// Token: 0x04002FEE RID: 12270
 		private const string KEY_PREFIX = "PhonographMusicAll";
 
-		// Token: 0x04002F47 RID: 12103
+		// Token: 0x04002FEF RID: 12271
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002F48 RID: 12104
+		// Token: 0x04002FF0 RID: 12272
 		private static int HandleId;
 	}
 }

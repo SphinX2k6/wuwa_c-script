@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F9A RID: 12186
+// Token: 0x020024EE RID: 9454
 [NullableContext(1)]
 [Nullable(0)]
 public class InvokePeriod : PeriodExecution
 {
-	// Token: 0x06019DC9 RID: 105929 RVA: 0x006C1A6A File Offset: 0x006BFC6A
+	// Token: 0x060176DB RID: 95963 RVA: 0x006E8332 File Offset: 0x006E6532
 	public InvokePeriod(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019DCA RID: 105930 RVA: 0x006C1A80 File Offset: 0x006BFC80
+	// Token: 0x060176DC RID: 95964 RVA: 0x006E8348 File Offset: 0x006E6548
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -29,7 +29,7 @@ public class InvokePeriod : PeriodExecution
 		}
 	}
 
-	// Token: 0x06019DCB RID: 105931 RVA: 0x006C1AEC File Offset: 0x006BFCEC
+	// Token: 0x060176DD RID: 95965 RVA: 0x006E83B4 File Offset: 0x006E65B4
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -54,6 +54,6 @@ public class InvokePeriod : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x0400C371 RID: 50033
+	// Token: 0x0400C71A RID: 50970
 	private long[] SourceBuffIds = Array.Empty<long>();
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005927 RID: 22823
+	// Token: 0x02005F34 RID: 24372
 	public class ISkyboxTrigger_UnionUnion
 	{
-		// Token: 0x1700AB2A RID: 43818
-		// (get) Token: 0x0602696E RID: 158062 RVA: 0x00550965 File Offset: 0x0054EB65
-		// (set) Token: 0x0602696F RID: 158063 RVA: 0x0055096D File Offset: 0x0054EB6D
+		// Token: 0x1700B45E RID: 46174
+		// (get) Token: 0x06028ED8 RID: 167640 RVA: 0x005975D1 File Offset: 0x005957D1
+		// (set) Token: 0x06028ED9 RID: 167641 RVA: 0x005975D9 File Offset: 0x005957D9
 		public ISkyboxTrigger_Union Type { get; set; }
 
-		// Token: 0x1700AB2B RID: 43819
-		// (get) Token: 0x06026970 RID: 158064 RVA: 0x00550976 File Offset: 0x0054EB76
-		// (set) Token: 0x06026971 RID: 158065 RVA: 0x0055097E File Offset: 0x0054EB7E
+		// Token: 0x1700B45F RID: 46175
+		// (get) Token: 0x06028EDA RID: 167642 RVA: 0x005975E2 File Offset: 0x005957E2
+		// (set) Token: 0x06028EDB RID: 167643 RVA: 0x005975EA File Offset: 0x005957EA
 		public object Value { get; set; }
 
-		// Token: 0x06026972 RID: 158066 RVA: 0x00550987 File Offset: 0x0054EB87
+		// Token: 0x06028EDC RID: 167644 RVA: 0x005975F3 File Offset: 0x005957F3
 		public ISkyboxTrigger_UnionUnion()
 		{
 			this.Type = ISkyboxTrigger_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06026973 RID: 158067 RVA: 0x0055099D File Offset: 0x0054EB9D
+		// Token: 0x06028EDD RID: 167645 RVA: 0x00597609 File Offset: 0x00595809
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06026974 RID: 158068 RVA: 0x005509AF File Offset: 0x0054EBAF
+		// Token: 0x06028EDE RID: 167646 RVA: 0x0059761B File Offset: 0x0059581B
 		public ISkyboxTriggerT AsISkyboxTrigger()
 		{
 			return this.As<ISkyboxTriggerT>();
 		}
 
-		// Token: 0x06026975 RID: 158069 RVA: 0x005509B7 File Offset: 0x0054EBB7
+		// Token: 0x06028EDF RID: 167647 RVA: 0x00597623 File Offset: 0x00595823
 		public static ISkyboxTrigger_UnionUnion FromISkyboxTrigger(ISkyboxTriggerT _iskyboxtrigger)
 		{
 			return new ISkyboxTrigger_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06026976 RID: 158070 RVA: 0x005509CC File Offset: 0x0054EBCC
+		// Token: 0x06028EE0 RID: 167648 RVA: 0x00597638 File Offset: 0x00595838
 		public ISkyboxDistanceTriggerT AsISkyboxDistanceTrigger()
 		{
 			return this.As<ISkyboxDistanceTriggerT>();
 		}
 
-		// Token: 0x06026977 RID: 158071 RVA: 0x005509D4 File Offset: 0x0054EBD4
+		// Token: 0x06028EE1 RID: 167649 RVA: 0x00597640 File Offset: 0x00595840
 		public static ISkyboxTrigger_UnionUnion FromISkyboxDistanceTrigger(ISkyboxDistanceTriggerT _iskyboxdistancetrigger)
 		{
 			return new ISkyboxTrigger_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06026978 RID: 158072 RVA: 0x005509E9 File Offset: 0x0054EBE9
+		// Token: 0x06028EE2 RID: 167650 RVA: 0x00597655 File Offset: 0x00595855
 		public ISkyboxGlobalTriggerT AsISkyboxGlobalTrigger()
 		{
 			return this.As<ISkyboxGlobalTriggerT>();
 		}
 
-		// Token: 0x06026979 RID: 158073 RVA: 0x005509F1 File Offset: 0x0054EBF1
+		// Token: 0x06028EE3 RID: 167651 RVA: 0x0059765D File Offset: 0x0059585D
 		public static ISkyboxTrigger_UnionUnion FromISkyboxGlobalTrigger(ISkyboxGlobalTriggerT _iskyboxglobaltrigger)
 		{
 			return new ISkyboxTrigger_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602697A RID: 158074 RVA: 0x00550A08 File Offset: 0x0054EC08
+		// Token: 0x06028EE4 RID: 167652 RVA: 0x00597674 File Offset: 0x00595874
 		public static int Pack(FlatBufferBuilder builder, ISkyboxTrigger_UnionUnion _o)
 		{
 			switch (_o.Type)

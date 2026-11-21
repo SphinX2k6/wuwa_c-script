@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F91 RID: 24465
+	// Token: 0x020065D8 RID: 26072
 	public enum EItemGetUiType : byte
 	{
-		// Token: 0x0400FE1F RID: 65055
+		// Token: 0x04010BA9 RID: 68521
 		None,
-		// Token: 0x0400FE20 RID: 65056
+		// Token: 0x04010BAA RID: 68522
 		SpecialQuestItem
 	}
 }

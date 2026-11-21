@@ -6,14 +6,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02000183 RID: 387
+// Token: 0x02000187 RID: 391
 [UClass("/Game/Aki/TypeScript/Game/AnimNotifyState/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateVehicleAddTag.TsAnimNotifyStateVehicleAddTag_C")]
 public class TsAnimNotifyStateVehicleAddTag : TsAnimNotifyStateBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170003F6 RID: 1014
-	// (get) Token: 0x0600187A RID: 6266 RVA: 0x000826B7 File Offset: 0x000808B7
-	// (set) Token: 0x0600187B RID: 6267 RVA: 0x000826CB File Offset: 0x000808CB
+	// Token: 0x17000418 RID: 1048
+	// (get) Token: 0x06001917 RID: 6423 RVA: 0x0008871F File Offset: 0x0008691F
+	// (set) Token: 0x06001918 RID: 6424 RVA: 0x00088733 File Offset: 0x00086933
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FGameplayTag Tag
 	{
@@ -27,9 +27,9 @@ public class TsAnimNotifyStateVehicleAddTag : TsAnimNotifyStateBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x170003F7 RID: 1015
-	// (get) Token: 0x0600187C RID: 6268 RVA: 0x000826E0 File Offset: 0x000808E0
-	// (set) Token: 0x0600187D RID: 6269 RVA: 0x000826F0 File Offset: 0x000808F0
+	// Token: 0x17000419 RID: 1049
+	// (get) Token: 0x06001919 RID: 6425 RVA: 0x00088748 File Offset: 0x00086948
+	// (set) Token: 0x0600191A RID: 6426 RVA: 0x00088758 File Offset: 0x00086958
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool AddToVehicle
 	{
@@ -43,9 +43,9 @@ public class TsAnimNotifyStateVehicleAddTag : TsAnimNotifyStateBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x170003F8 RID: 1016
-	// (get) Token: 0x0600187E RID: 6270 RVA: 0x00082701 File Offset: 0x00080901
-	// (set) Token: 0x0600187F RID: 6271 RVA: 0x00082711 File Offset: 0x00080911
+	// Token: 0x1700041A RID: 1050
+	// (get) Token: 0x0600191B RID: 6427 RVA: 0x00088769 File Offset: 0x00086969
+	// (set) Token: 0x0600191C RID: 6428 RVA: 0x00088779 File Offset: 0x00086979
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool AddToDriver
 	{
@@ -59,9 +59,9 @@ public class TsAnimNotifyStateVehicleAddTag : TsAnimNotifyStateBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x170003F9 RID: 1017
-	// (get) Token: 0x06001880 RID: 6272 RVA: 0x00082722 File Offset: 0x00080922
-	// (set) Token: 0x06001881 RID: 6273 RVA: 0x00082732 File Offset: 0x00080932
+	// Token: 0x1700041B RID: 1051
+	// (get) Token: 0x0600191D RID: 6429 RVA: 0x0008878A File Offset: 0x0008698A
+	// (set) Token: 0x0600191E RID: 6430 RVA: 0x0008879A File Offset: 0x0008699A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool AddToPassengerExceptDriver
 	{
@@ -75,33 +75,29 @@ public class TsAnimNotifyStateVehicleAddTag : TsAnimNotifyStateBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x06001882 RID: 6274 RVA: 0x00082744 File Offset: 0x00080944
+	// Token: 0x0600191F RID: 6431 RVA: 0x000887AC File Offset: 0x000869AC
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyBegin(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyBegin"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateVehicleAddTag) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyBegin"), TsAnimNotifyStateVehicleAddTag.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
-			ptr2->TotalDuration = totalDuration;
+			return this.K2_NotifyBegin_Implementation(meshComp, animation, totalDuration);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		ptr->TotalDuration = totalDuration;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001883 RID: 6275 RVA: 0x000827EC File Offset: 0x000809EC
+	// Token: 0x06001920 RID: 6432 RVA: 0x0008886C File Offset: 0x00086A6C
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyBegin_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
@@ -140,32 +136,28 @@ public class TsAnimNotifyStateVehicleAddTag : TsAnimNotifyStateBase, IUnrealUObj
 		return true;
 	}
 
-	// Token: 0x06001884 RID: 6276 RVA: 0x000828F4 File Offset: 0x00080AF4
+	// Token: 0x06001921 RID: 6433 RVA: 0x00088974 File Offset: 0x00086B74
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyEnd(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyEnd"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateVehicleAddTag) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyEnd"), TsAnimNotifyStateVehicleAddTag.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_NotifyEnd_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001885 RID: 6277 RVA: 0x00082994 File Offset: 0x00080B94
+	// Token: 0x06001922 RID: 6434 RVA: 0x00088A2C File Offset: 0x00086C2C
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyEnd_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -208,37 +200,33 @@ public class TsAnimNotifyStateVehicleAddTag : TsAnimNotifyStateBase, IUnrealUObj
 		return true;
 	}
 
-	// Token: 0x06001886 RID: 6278 RVA: 0x00082AAC File Offset: 0x00080CAC
+	// Token: 0x06001923 RID: 6435 RVA: 0x00088B44 File Offset: 0x00086D44
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotifyState.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateVehicleAddTag) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyStateVehicleAddTag.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotifyState.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotifyState.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotifyState.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotifyState.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotifyState.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001887 RID: 6279 RVA: 0x00082B27 File Offset: 0x00080D27
+	// Token: 0x06001924 RID: 6436 RVA: 0x00088BD4 File Offset: 0x00086DD4
 	[NullableContext(1)]
 	protected override string GetNotifyName_Implementation()
 	{
 		return "载具添加TAG";
 	}
 
-	// Token: 0x06001888 RID: 6280 RVA: 0x00082B2E File Offset: 0x00080D2E
+	// Token: 0x06001925 RID: 6437 RVA: 0x00088BDB File Offset: 0x00086DDB
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyStateVehicleAddTag._ClassPtr == IntPtr.Zero)
@@ -248,23 +236,23 @@ public class TsAnimNotifyStateVehicleAddTag : TsAnimNotifyStateBase, IUnrealUObj
 		return TsAnimNotifyStateVehicleAddTag._ClassPtr;
 	}
 
-	// Token: 0x06001889 RID: 6281 RVA: 0x00082B54 File Offset: 0x00080D54
+	// Token: 0x06001926 RID: 6438 RVA: 0x00088C00 File Offset: 0x00086E00
 	public TsAnimNotifyStateVehicleAddTag() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateVehicleAddTag.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600188A RID: 6282 RVA: 0x00082B7C File Offset: 0x00080D7C
+	// Token: 0x06001927 RID: 6439 RVA: 0x00088C28 File Offset: 0x00086E28
 	[NullableContext(1)]
 	public TsAnimNotifyStateVehicleAddTag(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateVehicleAddTag.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600188B RID: 6283 RVA: 0x00082BAF File Offset: 0x00080DAF
+	// Token: 0x06001928 RID: 6440 RVA: 0x00088C5B File Offset: 0x00086E5B
 	protected TsAnimNotifyStateVehicleAddTag(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600188C RID: 6284 RVA: 0x00082BB8 File Offset: 0x00080DB8
+	// Token: 0x06001929 RID: 6441 RVA: 0x00088C64 File Offset: 0x00086E64
 	protected unsafe virtual void __CPPCALL_K2_NotifyBegin_Implementation(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -272,7 +260,7 @@ public class TsAnimNotifyStateVehicleAddTag : TsAnimNotifyStateBase, IUnrealUObj
 		__Params->__Result = this.K2_NotifyBegin_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->TotalDuration);
 	}
 
-	// Token: 0x0600188D RID: 6285 RVA: 0x00082BF4 File Offset: 0x00080DF4
+	// Token: 0x0600192A RID: 6442 RVA: 0x00088CA0 File Offset: 0x00086EA0
 	protected unsafe virtual void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -280,31 +268,31 @@ public class TsAnimNotifyStateVehicleAddTag : TsAnimNotifyStateBase, IUnrealUObj
 		__Params->__Result = this.K2_NotifyEnd_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0600188E RID: 6286 RVA: 0x00082C27 File Offset: 0x00080E27
+	// Token: 0x0600192B RID: 6443 RVA: 0x00088CD3 File Offset: 0x00086ED3
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotifyState.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x04001057 RID: 4183
+	// Token: 0x0400109A RID: 4250
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateVehicleAddTag.TsAnimNotifyStateVehicleAddTag_C";
 
-	// Token: 0x04001058 RID: 4184
+	// Token: 0x0400109B RID: 4251
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04001059 RID: 4185
+	// Token: 0x0400109C RID: 4252
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400105A RID: 4186
+	// Token: 0x0400109D RID: 4253
 	private static int __PropertyOffset_Tag;
 
-	// Token: 0x0400105B RID: 4187
+	// Token: 0x0400109E RID: 4254
 	private static int __PropertyOffset_AddToVehicle;
 
-	// Token: 0x0400105C RID: 4188
+	// Token: 0x0400109F RID: 4255
 	private static int __PropertyOffset_AddToDriver;
 
-	// Token: 0x0400105D RID: 4189
+	// Token: 0x040010A0 RID: 4256
 	private static int __PropertyOffset_AddToPassengerExceptDriver;
 }

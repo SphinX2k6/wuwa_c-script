@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021ED RID: 8685
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002458 RID: 9304
 	public class SetWayOccupancyState : ActionParams
 	{
-		// Token: 0x0600BEC3 RID: 48835 RVA: 0x001B6FA0 File Offset: 0x001B51A0
+		// Token: 0x0600CA7F RID: 51839 RVA: 0x001CE62C File Offset: 0x001CC82C
 		private SetWayOccupancyState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BEC4 RID: 48836 RVA: 0x001B6FD8 File Offset: 0x001B51D8
+		// Token: 0x0600CA80 RID: 51840 RVA: 0x001CE664 File Offset: 0x001CC864
 		public static SetWayOccupancyState Create([Nullable(2)] SetWayOccupancyState instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BEC5 RID: 48837 RVA: 0x001B6FEB File Offset: 0x001B51EB
+		// Token: 0x0600CA81 RID: 51841 RVA: 0x001CE677 File Offset: 0x001CC877
 		public static SetWayOccupancyState CreateFromSetValue([Nullable(2)] SetWayOccupancyState_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BEC6 RID: 48838 RVA: 0x001B6FFE File Offset: 0x001B51FE
+		// Token: 0x0600CA82 RID: 51842 RVA: 0x001CE68A File Offset: 0x001CC88A
 		public SetWayOccupancyState_SetValue ToSetValue()
 		{
 			return new SetWayOccupancyState_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039E0 RID: 14816
-		// (get) Token: 0x0600BEC7 RID: 48839 RVA: 0x001B701D File Offset: 0x001B521D
-		// (set) Token: 0x0600BEC8 RID: 48840 RVA: 0x001B7048 File Offset: 0x001B5248
+		// Token: 0x17003CD5 RID: 15573
+		// (get) Token: 0x0600CA83 RID: 51843 RVA: 0x001CE6A9 File Offset: 0x001CC8A9
+		// (set) Token: 0x0600CA84 RID: 51844 RVA: 0x001CE6D4 File Offset: 0x001CC8D4
 		public virtual bool Occupy
 		{
 			get
@@ -80,9 +78,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039E1 RID: 14817
-		// (get) Token: 0x0600BEC9 RID: 48841 RVA: 0x001B7056 File Offset: 0x001B5256
-		// (set) Token: 0x0600BECA RID: 48842 RVA: 0x001B707D File Offset: 0x001B527D
+		// Token: 0x17003CD6 RID: 15574
+		// (get) Token: 0x0600CA85 RID: 51845 RVA: 0x001CE6E2 File Offset: 0x001CC8E2
+		// (set) Token: 0x0600CA86 RID: 51846 RVA: 0x001CE709 File Offset: 0x001CC909
 		public virtual List<int> TargetWay
 		{
 			get
@@ -104,11 +102,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071CB RID: 29131
+		// Token: 0x04007814 RID: 30740
 		[Nullable(2)]
 		protected new SetWayOccupancyState FbInstance;
 
-		// Token: 0x040071CC RID: 29132
+		// Token: 0x04007815 RID: 30741
 		[Nullable(2)]
 		protected SetWayOccupancyState_SetValue PocoInterface;
 	}

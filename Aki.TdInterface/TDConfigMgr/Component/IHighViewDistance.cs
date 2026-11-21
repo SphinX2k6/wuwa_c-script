@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200040A RID: 1034
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000463 RID: 1123
 	public class IHighViewDistance : IViewDistanceMode
 	{
-		// Token: 0x060014E3 RID: 5347 RVA: 0x000422D8 File Offset: 0x000404D8
+		// Token: 0x0600167D RID: 5757 RVA: 0x00046020 File Offset: 0x00044220
 		private IHighViewDistance_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060014E4 RID: 5348 RVA: 0x00042310 File Offset: 0x00040510
+		// Token: 0x0600167E RID: 5758 RVA: 0x00046058 File Offset: 0x00044258
 		public static IHighViewDistance Create([Nullable(2)] IHighViewDistance instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014E5 RID: 5349 RVA: 0x00042323 File Offset: 0x00040523
+		// Token: 0x0600167F RID: 5759 RVA: 0x0004606B File Offset: 0x0004426B
 		public static IHighViewDistance CreateFromSetValue([Nullable(2)] IHighViewDistance_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014E6 RID: 5350 RVA: 0x00042336 File Offset: 0x00040536
+		// Token: 0x06001680 RID: 5760 RVA: 0x0004607E File Offset: 0x0004427E
 		public new IHighViewDistance_SetValue ToSetValue()
 		{
 			return new IHighViewDistance_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005C0 RID: 1472
-		// (get) Token: 0x060014E7 RID: 5351 RVA: 0x00042349 File Offset: 0x00040549
-		// (set) Token: 0x060014E8 RID: 5352 RVA: 0x00042374 File Offset: 0x00040574
+		// Token: 0x17000627 RID: 1575
+		// (get) Token: 0x06001681 RID: 5761 RVA: 0x00046091 File Offset: 0x00044291
+		// (set) Token: 0x06001682 RID: 5762 RVA: 0x000460BC File Offset: 0x000442BC
 		public override EViewDistanceType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400104F RID: 4175
+		// Token: 0x04001171 RID: 4465
 		[Nullable(2)]
 		protected new IHighViewDistance FbInstance;
 
-		// Token: 0x04001050 RID: 4176
+		// Token: 0x04001172 RID: 4466
 		[Nullable(2)]
 		protected new IHighViewDistance_SetValue PocoInterface;
 	}

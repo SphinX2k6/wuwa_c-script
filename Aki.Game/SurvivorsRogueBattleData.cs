@@ -7,25 +7,25 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Battle;
 using CSharpScript.Game.Module.SkillButtonUi;
 
-// Token: 0x02002AEC RID: 10988
+// Token: 0x02002068 RID: 8296
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueBattleData : ISkillButtonUiEventInterface
 {
-	// Token: 0x06016DD1 RID: 93649 RVA: 0x005CD529 File Offset: 0x005CB729
+	// Token: 0x06014802 RID: 83970 RVA: 0x005FA0A9 File Offset: 0x005F82A9
 	public static SurvivorsRogueBattleData Create()
 	{
 		return new SurvivorsRogueBattleData();
 	}
 
-	// Token: 0x06016DD2 RID: 93650 RVA: 0x005CD530 File Offset: 0x005CB730
+	// Token: 0x06014803 RID: 83971 RVA: 0x005FA0B0 File Offset: 0x005F82B0
 	public void InitBattleSkillData()
 	{
 		this.BattleSkillData["技能1"] = this.CreateSkillData(220003, "技能1");
 		this.BattleSkillData["闪避"] = this.CreateSkillData(100001, "闪避");
 	}
 
-	// Token: 0x06016DD3 RID: 93651 RVA: 0x005CD57D File Offset: 0x005CB77D
+	// Token: 0x06014804 RID: 83972 RVA: 0x005FA0FD File Offset: 0x005F82FD
 	private SurvivorsRogueBattleSkillData CreateSkillData(int skillId, string actionName)
 	{
 		SurvivorsRogueBattleSkillData survivorsRogueBattleSkillData = new SurvivorsRogueBattleSkillData(skillId);
@@ -33,7 +33,7 @@ public class SurvivorsRogueBattleData : ISkillButtonUiEventInterface
 		return survivorsRogueBattleSkillData;
 	}
 
-	// Token: 0x06016DD4 RID: 93652 RVA: 0x005CD58C File Offset: 0x005CB78C
+	// Token: 0x06014805 RID: 83973 RVA: 0x005FA10C File Offset: 0x005F830C
 	[return: Nullable(2)]
 	public SurvivorsRogueBattleSkillData GetBattleSkillData(string actionName)
 	{
@@ -45,7 +45,7 @@ public class SurvivorsRogueBattleData : ISkillButtonUiEventInterface
 		return result;
 	}
 
-	// Token: 0x06016DD5 RID: 93653 RVA: 0x005CD5AC File Offset: 0x005CB7AC
+	// Token: 0x06014806 RID: 83974 RVA: 0x005FA12C File Offset: 0x005F832C
 	public void Clear()
 	{
 		BehaviorTreeUpdateDelegateProxy behaviorDelegate = this.BehaviorDelegate;
@@ -56,13 +56,13 @@ public class SurvivorsRogueBattleData : ISkillButtonUiEventInterface
 		this.BattleSkillData.Clear();
 	}
 
-	// Token: 0x06016DD6 RID: 93654 RVA: 0x005CD5CA File Offset: 0x005CB7CA
+	// Token: 0x06014807 RID: 83975 RVA: 0x005FA14A File Offset: 0x005F834A
 	public bool IsCoinEfficiencyEnhance()
 	{
 		return true;
 	}
 
-	// Token: 0x06016DD7 RID: 93655 RVA: 0x005CD5D0 File Offset: 0x005CB7D0
+	// Token: 0x06014808 RID: 83976 RVA: 0x005FA150 File Offset: 0x005F8350
 	public void SetBehaviorTreeVar(Dictionary<string, string> variableKeyNames)
 	{
 		Dictionary<string, string> dictionary = new Dictionary<string, string>();
@@ -73,57 +73,57 @@ public class SurvivorsRogueBattleData : ISkillButtonUiEventInterface
 		this.BehaviorDelegate.SetBehaviorTreeVarRelation(dictionary);
 	}
 
-	// Token: 0x06016DD8 RID: 93656 RVA: 0x005CD640 File Offset: 0x005CB840
+	// Token: 0x06014809 RID: 83977 RVA: 0x005FA1C0 File Offset: 0x005F83C0
 	[NullableContext(2)]
 	public VarDefinePb GetBehaviorTreeVar(ESurvivorsRougeSystemVarType varType)
 	{
 		return this.BehaviorDelegate.GetBehaviorTreeVar(varType.ToEnumString());
 	}
 
-	// Token: 0x06016DD9 RID: 93657 RVA: 0x005CD653 File Offset: 0x005CB853
+	// Token: 0x0601480A RID: 83978 RVA: 0x005FA1D3 File Offset: 0x005F83D3
 	public int GetBehaviorTreeVarToNumber(ESurvivorsRougeSystemVarType varType)
 	{
 		return (int)this.BehaviorDelegate.GetBehaviorTreeVarToNumber(varType.ToEnumString());
 	}
 
-	// Token: 0x06016DDA RID: 93658 RVA: 0x005CD667 File Offset: 0x005CB867
+	// Token: 0x0601480B RID: 83979 RVA: 0x005FA1E7 File Offset: 0x005F83E7
 	public int GetCurrencyCount()
 	{
 		return this.GetBehaviorTreeVarToNumber(ESurvivorsRougeSystemVarType.Gold);
 	}
 
-	// Token: 0x06016DDB RID: 93659 RVA: 0x005CD670 File Offset: 0x005CB870
+	// Token: 0x0601480C RID: 83980 RVA: 0x005FA1F0 File Offset: 0x005F83F0
 	public int GetBatch()
 	{
 		return this.GetBehaviorTreeVarToNumber(ESurvivorsRougeSystemVarType.Batch);
 	}
 
-	// Token: 0x06016DDC RID: 93660 RVA: 0x005CD679 File Offset: 0x005CB879
+	// Token: 0x0601480D RID: 83981 RVA: 0x005FA1F9 File Offset: 0x005F83F9
 	public int GetMaxBatch()
 	{
 		return this.GetBehaviorTreeVarToNumber(ESurvivorsRougeSystemVarType.MaxBatch);
 	}
 
-	// Token: 0x06016DDD RID: 93661 RVA: 0x005CD682 File Offset: 0x005CB882
+	// Token: 0x0601480E RID: 83982 RVA: 0x005FA202 File Offset: 0x005F8402
 	public int GetChestCount()
 	{
 		return this.GetBehaviorTreeVarToNumber(ESurvivorsRougeSystemVarType.TreasureBoxCount);
 	}
 
-	// Token: 0x06016DDE RID: 93662 RVA: 0x005CD68B File Offset: 0x005CB88B
+	// Token: 0x0601480F RID: 83983 RVA: 0x005FA20B File Offset: 0x005F840B
 	public int GetComboKillCount()
 	{
 		return this.GetBehaviorTreeVarToNumber(ESurvivorsRougeSystemVarType.ConsecutiveKillCount);
 	}
 
-	// Token: 0x06016DDF RID: 93663 RVA: 0x005CD694 File Offset: 0x005CB894
+	// Token: 0x06014810 RID: 83984 RVA: 0x005FA214 File Offset: 0x005F8414
 	public int GetGoldGainEfficiency()
 	{
 		return this.GetBehaviorTreeVarToNumber(ESurvivorsRougeSystemVarType.GoldGainEfficiency);
 	}
 
-	// Token: 0x17001E78 RID: 7800
-	// (get) Token: 0x06016DE0 RID: 93664 RVA: 0x005CD69D File Offset: 0x005CB89D
+	// Token: 0x17001ED0 RID: 7888
+	// (get) Token: 0x06014811 RID: 83985 RVA: 0x005FA21D File Offset: 0x005F841D
 	public bool EndlessWaveEnabled
 	{
 		get
@@ -132,24 +132,24 @@ public class SurvivorsRogueBattleData : ISkillButtonUiEventInterface
 		}
 	}
 
-	// Token: 0x06016DE1 RID: 93665 RVA: 0x005CD6A9 File Offset: 0x005CB8A9
+	// Token: 0x06014812 RID: 83986 RVA: 0x005FA229 File Offset: 0x005F8429
 	public void EquipExplorePhantomSkill()
 	{
 	}
 
-	// Token: 0x06016DE2 RID: 93666 RVA: 0x005CD6AB File Offset: 0x005CB8AB
+	// Token: 0x06014813 RID: 83987 RVA: 0x005FA22B File Offset: 0x005F842B
 	public void SkillCountChanged(GroupSkillCdInfo groupSkillCdInfo)
 	{
 		this.RefreshSkillCd(groupSkillCdInfo);
 	}
 
-	// Token: 0x06016DE3 RID: 93667 RVA: 0x005CD6B4 File Offset: 0x005CB8B4
+	// Token: 0x06014814 RID: 83988 RVA: 0x005FA234 File Offset: 0x005F8434
 	public void SkillRemainCdChanged(GroupSkillCdInfo groupSkillCdInfo)
 	{
 		this.RefreshSkillCd(groupSkillCdInfo);
 	}
 
-	// Token: 0x06016DE4 RID: 93668 RVA: 0x005CD6C0 File Offset: 0x005CB8C0
+	// Token: 0x06014815 RID: 83989 RVA: 0x005FA240 File Offset: 0x005F8440
 	private void RefreshSkillCd(GroupSkillCdInfo groupSkillCdInfo)
 	{
 		foreach (int num in groupSkillCdInfo.SkillCdInfoMap.Keys)
@@ -165,15 +165,15 @@ public class SurvivorsRogueBattleData : ISkillButtonUiEventInterface
 		}
 	}
 
-	// Token: 0x0400A9C3 RID: 43459
+	// Token: 0x0400ADC9 RID: 44489
 	private const int ACTIVE_SKILL_ID = 220003;
 
-	// Token: 0x0400A9C4 RID: 43460
+	// Token: 0x0400ADCA RID: 44490
 	private const int DODGE_SKILL_ID = 100001;
 
-	// Token: 0x0400A9C5 RID: 43461
+	// Token: 0x0400ADCB RID: 44491
 	public BehaviorTreeUpdateDelegateProxy BehaviorDelegate = new BehaviorTreeUpdateDelegateProxy();
 
-	// Token: 0x0400A9C6 RID: 43462
+	// Token: 0x0400ADCC RID: 44492
 	private readonly Dictionary<string, SurvivorsRogueBattleSkillData> BattleSkillData = new Dictionary<string, SurvivorsRogueBattleSkillData>();
 }

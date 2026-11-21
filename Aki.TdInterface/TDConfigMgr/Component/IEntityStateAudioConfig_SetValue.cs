@@ -3,26 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000338 RID: 824
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200037F RID: 895
 	public class IEntityStateAudioConfig_SetValue
 	{
-		// Token: 0x04000DAA RID: 3498
+		// Token: 0x04000E95 RID: 3733
 		public string State;
 
-		// Token: 0x04000DAB RID: 3499
+		// Token: 0x04000E96 RID: 3734
 		public string AkEvent;
 
-		// Token: 0x04000DAC RID: 3500
+		// Token: 0x04000E97 RID: 3735
 		[Nullable(2)]
 		public string LeaveAkEvent;
 
-		// Token: 0x04000DAD RID: 3501
+		// Token: 0x04000E98 RID: 3736
 		[Nullable(2)]
 		public IAudioFade AudioFade;
 
-		// Token: 0x04000DAE RID: 3502
+		// Token: 0x04000E99 RID: 3737
 		public bool? IsBanVehicleRadio;
 	}
 }

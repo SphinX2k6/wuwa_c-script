@@ -2,24 +2,24 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077C8 RID: 30664
+	// Token: 0x02008000 RID: 32768
 	public enum TTalkOptionParam : byte
 	{
-		// Token: 0x040129CA RID: 76234
+		// Token: 0x04013A84 RID: 80516
 		NONE,
-		// Token: 0x040129CB RID: 76235
+		// Token: 0x04013A85 RID: 80517
 		ITalkOptionPhoneMessageEmoji,
-		// Token: 0x040129CC RID: 76236
+		// Token: 0x04013A86 RID: 80518
 		ITalkOptionQteFailed,
-		// Token: 0x040129CD RID: 76237
+		// Token: 0x04013A87 RID: 80519
 		ITalkOptionQteFailedDelayExec,
-		// Token: 0x040129CE RID: 76238
+		// Token: 0x04013A88 RID: 80520
 		ITalkOptionQteSucceed,
-		// Token: 0x040129CF RID: 76239
+		// Token: 0x04013A89 RID: 80521
 		ITalkOptionQteSucceedDelayExec,
-		// Token: 0x040129D0 RID: 76240
+		// Token: 0x04013A8A RID: 80522
 		ITalkOptionRogueRandomEvent,
-		// Token: 0x040129D1 RID: 76241
+		// Token: 0x04013A8B RID: 80523
 		ITalkOptionVisualNovel
 	}
 }

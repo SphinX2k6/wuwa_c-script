@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BDC RID: 3036
+	// Token: 0x02000CAB RID: 3243
 	public class IConveyorBeltMove
 	{
-		// Token: 0x060045C9 RID: 17865 RVA: 0x000B0933 File Offset: 0x000AEB33
-		[NullableContext(1)]
+		// Token: 0x06004A27 RID: 18983 RVA: 0x000BAAAF File Offset: 0x000B8CAF
 		public static IConveyorBeltMove Create(IConveyorBeltMove? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013CE RID: 5070
-		// (get) Token: 0x060045CA RID: 17866 RVA: 0x000B0952 File Offset: 0x000AEB52
+		// Token: 0x170014CC RID: 5324
+		// (get) Token: 0x06004A28 RID: 18984 RVA: 0x000BAACE File Offset: 0x000B8CCE
 		public virtual EConveyorBeltMoveType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027BD RID: 10173
+		// Token: 0x04002A08 RID: 10760
 		private IConveyorBeltMove Instance;
 	}
 }

@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 {
-	// Token: 0x02006A66 RID: 27238
+	// Token: 0x02005BC3 RID: 23491
 	public class SeekTraceStartView : UiViewBase
 	{
-		// Token: 0x06043B93 RID: 277395 RVA: 0x01093CD2 File Offset: 0x01091ED2
+		// Token: 0x06039BE1 RID: 236513 RVA: 0x01038506 File Offset: 0x01036706
 		[NullableContext(1)]
 		public SeekTraceStartView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06043B94 RID: 277396 RVA: 0x01093CDB File Offset: 0x01091EDB
+		// Token: 0x06039BE2 RID: 236514 RVA: 0x0103850F File Offset: 0x0103670F
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			};
 		}
 
-		// Token: 0x06043B95 RID: 277397 RVA: 0x01093D00 File Offset: 0x01091F00
+		// Token: 0x06039BE3 RID: 236515 RVA: 0x01038534 File Offset: 0x01036734
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SeekTraceStartView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043B96 RID: 277398 RVA: 0x01093D43 File Offset: 0x01091F43
+		// Token: 0x06039BE4 RID: 236516 RVA: 0x01038577 File Offset: 0x01036777
 		protected override void OnStart()
 		{
 			TimerSystem.Instance.Delay(delegate(float _)
@@ -47,17 +47,17 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			}, 2000f, null, null, true, 1f);
 		}
 
-		// Token: 0x04023619 RID: 144921
+		// Token: 0x0401E80B RID: 124939
 		public const int DELAY_TIME = 2000;
 
-		// Token: 0x0402361A RID: 144922
+		// Token: 0x0401E80C RID: 124940
 		[Nullable(2)]
 		private SeekTraceClawItem ClawItem;
 
-		// Token: 0x0200CB85 RID: 52101
+		// Token: 0x0200B764 RID: 46948
 		public enum EComponentType
 		{
-			// Token: 0x0403D717 RID: 251671
+			// Token: 0x04038AF9 RID: 232185
 			ClawItem
 		}
 	}

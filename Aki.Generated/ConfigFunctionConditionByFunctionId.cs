@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200035A RID: 858
+	// Token: 0x0200036F RID: 879
 	public class ConfigFunctionConditionByFunctionId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001421 RID: 5153 RVA: 0x000CB45C File Offset: 0x000C965C
+		// Token: 0x0600149F RID: 5279 RVA: 0x000D1968 File Offset: 0x000CFB68
 		static ConfigFunctionConditionByFunctionId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFunctionConditionByFunctionId.CreateStaticDefaultValue), new Action(ConfigFunctionConditionByFunctionId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001422 RID: 5154 RVA: 0x000CB47C File Offset: 0x000C967C
+		// Token: 0x060014A0 RID: 5280 RVA: 0x000D1988 File Offset: 0x000CFB88
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFunctionConditionByFunctionId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001423 RID: 5155 RVA: 0x000CB4FB File Offset: 0x000C96FB
+		// Token: 0x060014A1 RID: 5281 RVA: 0x000D1A07 File Offset: 0x000CFC07
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFunctionConditionByFunctionId.LogPair = null;
 			ConfigFunctionConditionByFunctionId.HandleId = 0;
 		}
 
-		// Token: 0x06001424 RID: 5156 RVA: 0x000CB509 File Offset: 0x000C9709
+		// Token: 0x060014A2 RID: 5282 RVA: 0x000D1A15 File Offset: 0x000CFC15
 		public static void Init()
 		{
 			ConfigFunctionConditionByFunctionId.HandleId = ConfigCommon.InitDataStatement(ConfigFunctionConditionByFunctionId.HandleId, "db_function.db", "select BinData from `FunctionCondition` where FunctionId=?");
 		}
 
-		// Token: 0x06001425 RID: 5157 RVA: 0x000CB524 File Offset: 0x000C9724
+		// Token: 0x060014A3 RID: 5283 RVA: 0x000D1A30 File Offset: 0x000CFC30
 		public static FunctionCondition? GetConfig(int p0FunctionId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFunctionConditionByFunctionId.HandleId, ConfigFunctionConditionByFunctionId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FunctionCondition?(rootAsFunctionCondition);
 		}
 
-		// Token: 0x0400175A RID: 5978
+		// Token: 0x040017ED RID: 6125
 		private const string DB = "db_function.db";
 
-		// Token: 0x0400175B RID: 5979
+		// Token: 0x040017EE RID: 6126
 		private const string FILE = "g.功能开启.xlsx";
 
-		// Token: 0x0400175C RID: 5980
+		// Token: 0x040017EF RID: 6127
 		private const string TABLE = "FunctionCondition";
 
-		// Token: 0x0400175D RID: 5981
+		// Token: 0x040017F0 RID: 6128
 		private const string COMMAND = "select BinData from `FunctionCondition` where FunctionId=?";
 
-		// Token: 0x0400175E RID: 5982
+		// Token: 0x040017F1 RID: 6129
 		private const string KEY_PREFIX = "FunctionConditionByFunctionId";
 
-		// Token: 0x0400175F RID: 5983
+		// Token: 0x040017F2 RID: 6130
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001760 RID: 5984
+		// Token: 0x040017F3 RID: 6131
 		private static int HandleId;
 	}
 }

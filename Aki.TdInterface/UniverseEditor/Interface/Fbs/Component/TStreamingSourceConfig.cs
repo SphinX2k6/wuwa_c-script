@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CB1 RID: 23729
+	// Token: 0x020062E2 RID: 25314
 	public enum TStreamingSourceConfig : byte
 	{
-		// Token: 0x0400F566 RID: 62822
+		// Token: 0x040102AD RID: 66221
 		NONE,
-		// Token: 0x0400F567 RID: 62823
+		// Token: 0x040102AE RID: 66222
 		IConditionalStreamingSource,
-		// Token: 0x0400F568 RID: 62824
+		// Token: 0x040102AF RID: 66223
 		IFixedStreamingSource
 	}
 }

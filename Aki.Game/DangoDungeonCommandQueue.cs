@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020026C6 RID: 9926
+// Token: 0x02001BB1 RID: 7089
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoDungeonCommandQueue
 {
-	// Token: 0x060145C3 RID: 83395 RVA: 0x00526F9F File Offset: 0x0052519F
+	// Token: 0x06011AA5 RID: 72357 RVA: 0x00535CD7 File Offset: 0x00533ED7
 	public void Init()
 	{
 		this.Reset();
 	}
 
-	// Token: 0x060145C4 RID: 83396 RVA: 0x00526FA7 File Offset: 0x005251A7
+	// Token: 0x06011AA6 RID: 72358 RVA: 0x00535CDF File Offset: 0x00533EDF
 	public void AddCommand(IDangoDungeonCommand command)
 	{
 		if (this.IsAborted)
@@ -25,7 +25,7 @@ public class DangoDungeonCommandQueue
 		this.CommandQueue.Push(command);
 	}
 
-	// Token: 0x060145C5 RID: 83397 RVA: 0x00526FBE File Offset: 0x005251BE
+	// Token: 0x06011AA7 RID: 72359 RVA: 0x00535CF6 File Offset: 0x00533EF6
 	public void Abort()
 	{
 		if (this.CurCommand != null)
@@ -35,7 +35,7 @@ public class DangoDungeonCommandQueue
 		this.IsAborted = true;
 	}
 
-	// Token: 0x060145C6 RID: 83398 RVA: 0x00526FDC File Offset: 0x005251DC
+	// Token: 0x06011AA8 RID: 72360 RVA: 0x00535D14 File Offset: 0x00533F14
 	public UniTask Execute()
 	{
 		DangoDungeonCommandQueue.<Execute>d__10 <Execute>d__;
@@ -46,17 +46,17 @@ public class DangoDungeonCommandQueue
 		return <Execute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060145C7 RID: 83399 RVA: 0x00527020 File Offset: 0x00525220
+	// Token: 0x06011AA9 RID: 72361 RVA: 0x00535D58 File Offset: 0x00533F58
 	private void RecordCommandExecuteTime(ERacingBetsCommandType commandType, double time)
 	{
 	}
 
-	// Token: 0x060145C8 RID: 83400 RVA: 0x00527030 File Offset: 0x00525230
+	// Token: 0x06011AAA RID: 72362 RVA: 0x00535D68 File Offset: 0x00533F68
 	private void PrintStatsInfo()
 	{
 	}
 
-	// Token: 0x060145C9 RID: 83401 RVA: 0x0052703D File Offset: 0x0052523D
+	// Token: 0x06011AAB RID: 72363 RVA: 0x00535D75 File Offset: 0x00533F75
 	public void OnEnd(bool isAborted)
 	{
 		Action<bool> onCommandQueueEndCallBack = this.OnCommandQueueEndCallBack;
@@ -67,7 +67,7 @@ public class DangoDungeonCommandQueue
 		this.Reset();
 	}
 
-	// Token: 0x060145CA RID: 83402 RVA: 0x00527057 File Offset: 0x00525257
+	// Token: 0x06011AAC RID: 72364 RVA: 0x00535D8F File Offset: 0x00533F8F
 	private void Reset()
 	{
 		this.TotalTime = 0.0;
@@ -78,32 +78,32 @@ public class DangoDungeonCommandQueue
 		this.OnCommandQueueEndCallBack = null;
 	}
 
-	// Token: 0x060145CB RID: 83403 RVA: 0x00527093 File Offset: 0x00525293
+	// Token: 0x06011AAD RID: 72365 RVA: 0x00535DCB File Offset: 0x00533FCB
 	public void BindCommandQueueEndCallBack(Action<bool> callBack)
 	{
 		this.OnCommandQueueEndCallBack = callBack;
 	}
 
-	// Token: 0x04009909 RID: 39177
+	// Token: 0x04009A61 RID: 39521
 	public int CurCommandActionIndex;
 
-	// Token: 0x0400990A RID: 39178
+	// Token: 0x04009A62 RID: 39522
 	private bool IsAborted;
 
-	// Token: 0x0400990B RID: 39179
+	// Token: 0x04009A63 RID: 39523
 	private Queue<IDangoDungeonCommand> CommandQueue = new Queue<IDangoDungeonCommand>(4);
 
-	// Token: 0x0400990C RID: 39180
+	// Token: 0x04009A64 RID: 39524
 	[Nullable(2)]
 	private Action<bool> OnCommandQueueEndCallBack;
 
-	// Token: 0x0400990D RID: 39181
+	// Token: 0x04009A65 RID: 39525
 	private readonly Dictionary<ERacingBetsCommandType, IDangoDungeonCommandStats> Stats = new Dictionary<ERacingBetsCommandType, IDangoDungeonCommandStats>();
 
-	// Token: 0x0400990E RID: 39182
+	// Token: 0x04009A66 RID: 39526
 	[Nullable(2)]
 	private IDangoDungeonCommand CurCommand;
 
-	// Token: 0x0400990F RID: 39183
+	// Token: 0x04009A67 RID: 39527
 	private double TotalTime;
 }

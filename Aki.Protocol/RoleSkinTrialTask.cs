@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020010C2 RID: 4290
+	// Token: 0x020010B2 RID: 4274
 	public sealed class RoleSkinTrialTask : IMessage<RoleSkinTrialTask>, IMessage, IEquatable<RoleSkinTrialTask>, IDeepCloneable<RoleSkinTrialTask>, IBufferMessage
 	{
-		// Token: 0x06016E55 RID: 93781 RVA: 0x00353265 File Offset: 0x00351465
+		// Token: 0x06016D70 RID: 93552 RVA: 0x00351B89 File Offset: 0x0034FD89
 		[NullableContext(1)]
 		public static RoleSkinTrialTask Create()
 		{
 			return new RoleSkinTrialTask();
 		}
 
-		// Token: 0x17004CB2 RID: 19634
-		// (get) Token: 0x06016E56 RID: 93782 RVA: 0x0035326C File Offset: 0x0035146C
+		// Token: 0x17004C88 RID: 19592
+		// (get) Token: 0x06016D71 RID: 93553 RVA: 0x00351B90 File Offset: 0x0034FD90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<RoleSkinTrialTask> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004CB3 RID: 19635
-		// (get) Token: 0x06016E57 RID: 93783 RVA: 0x00353273 File Offset: 0x00351473
+		// Token: 0x17004C89 RID: 19593
+		// (get) Token: 0x06016D72 RID: 93554 RVA: 0x00351B97 File Offset: 0x0034FD97
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004CB4 RID: 19636
-		// (get) Token: 0x06016E58 RID: 93784 RVA: 0x00353276 File Offset: 0x00351476
+		// Token: 0x17004C8A RID: 19594
+		// (get) Token: 0x06016D73 RID: 93555 RVA: 0x00351B9A File Offset: 0x0034FD9A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016E59 RID: 93785 RVA: 0x0035327D File Offset: 0x0035147D
+		// Token: 0x06016D74 RID: 93556 RVA: 0x00351BA1 File Offset: 0x0034FDA1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleSkinTrialTask()
 		{
 		}
 
-		// Token: 0x06016E5A RID: 93786 RVA: 0x00353285 File Offset: 0x00351485
+		// Token: 0x06016D75 RID: 93557 RVA: 0x00351BA9 File Offset: 0x0034FDA9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleSkinTrialTask(RoleSkinTrialTask other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06016E5B RID: 93787 RVA: 0x003532B6 File Offset: 0x003514B6
+		// Token: 0x06016D76 RID: 93558 RVA: 0x00351BDA File Offset: 0x0034FDDA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleSkinTrialTask Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new RoleSkinTrialTask(this);
 		}
 
-		// Token: 0x17004CB5 RID: 19637
-		// (get) Token: 0x06016E5C RID: 93788 RVA: 0x003532BE File Offset: 0x003514BE
-		// (set) Token: 0x06016E5D RID: 93789 RVA: 0x003532C6 File Offset: 0x003514C6
+		// Token: 0x17004C8B RID: 19595
+		// (get) Token: 0x06016D77 RID: 93559 RVA: 0x00351BE2 File Offset: 0x0034FDE2
+		// (set) Token: 0x06016D78 RID: 93560 RVA: 0x00351BEA File Offset: 0x0034FDEA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleSkinTrialInfoId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004CB6 RID: 19638
-		// (get) Token: 0x06016E5E RID: 93790 RVA: 0x003532CF File Offset: 0x003514CF
-		// (set) Token: 0x06016E5F RID: 93791 RVA: 0x003532D7 File Offset: 0x003514D7
+		// Token: 0x17004C8C RID: 19596
+		// (get) Token: 0x06016D79 RID: 93561 RVA: 0x00351BF3 File Offset: 0x0034FDF3
+		// (set) Token: 0x06016D7A RID: 93562 RVA: 0x00351BFB File Offset: 0x0034FDFB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ChallengeState ChallengeState
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016E60 RID: 93792 RVA: 0x003532E0 File Offset: 0x003514E0
+		// Token: 0x06016D7B RID: 93563 RVA: 0x00351C04 File Offset: 0x0034FE04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RoleSkinTrialTask);
 		}
 
-		// Token: 0x06016E61 RID: 93793 RVA: 0x003532EE File Offset: 0x003514EE
+		// Token: 0x06016D7C RID: 93564 RVA: 0x00351C12 File Offset: 0x0034FE12
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RoleSkinTrialTask other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.RoleSkinTrialInfoId == other.RoleSkinTrialInfoId && this.ChallengeState == other.ChallengeState && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06016E62 RID: 93794 RVA: 0x0035332C File Offset: 0x0035152C
+		// Token: 0x06016D7D RID: 93565 RVA: 0x00351C50 File Offset: 0x0034FE50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016E63 RID: 93795 RVA: 0x0035338A File Offset: 0x0035158A
+		// Token: 0x06016D7E RID: 93566 RVA: 0x00351CAE File Offset: 0x0034FEAE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06016E64 RID: 93796 RVA: 0x00353397 File Offset: 0x00351597
+		// Token: 0x06016D7F RID: 93567 RVA: 0x00351CBB File Offset: 0x0034FEBB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06016E65 RID: 93797 RVA: 0x003533A0 File Offset: 0x003515A0
+		// Token: 0x06016D80 RID: 93568 RVA: 0x00351CC4 File Offset: 0x0034FEC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016E66 RID: 93798 RVA: 0x003533F8 File Offset: 0x003515F8
+		// Token: 0x06016D81 RID: 93569 RVA: 0x00351D1C File Offset: 0x0034FF1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016E67 RID: 93799 RVA: 0x00353450 File Offset: 0x00351650
+		// Token: 0x06016D82 RID: 93570 RVA: 0x00351D74 File Offset: 0x0034FF74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RoleSkinTrialTask other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06016E68 RID: 93800 RVA: 0x003534A0 File Offset: 0x003516A0
+		// Token: 0x06016D83 RID: 93571 RVA: 0x00351DC4 File Offset: 0x0034FFC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06016E69 RID: 93801 RVA: 0x003534AC File Offset: 0x003516AC
+		// Token: 0x06016D84 RID: 93572 RVA: 0x00351DD0 File Offset: 0x0034FFD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -265,22 +265,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400887D RID: 34941
+		// Token: 0x040088A7 RID: 34983
 		private static readonly MessageParser<RoleSkinTrialTask> _parser = new MessageParser<RoleSkinTrialTask>(() => new RoleSkinTrialTask());
 
-		// Token: 0x0400887E RID: 34942
+		// Token: 0x040088A8 RID: 34984
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400887F RID: 34943
+		// Token: 0x040088A9 RID: 34985
 		public const int RoleSkinTrialInfoIdFieldNumber = 1;
 
-		// Token: 0x04008880 RID: 34944
+		// Token: 0x040088AA RID: 34986
 		private int roleSkinTrialInfoId_;
 
-		// Token: 0x04008881 RID: 34945
+		// Token: 0x040088AB RID: 34987
 		public const int ChallengeStateFieldNumber = 2;
 
-		// Token: 0x04008882 RID: 34946
+		// Token: 0x040088AC RID: 34988
 		private ChallengeState challengeState_;
 	}
 }

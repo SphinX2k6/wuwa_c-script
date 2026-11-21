@@ -8,20 +8,20 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace KuroSimpleCombat.KscAction
 {
-	// Token: 0x020044E1 RID: 17633
+	// Token: 0x0200302D RID: 12333
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class KscActionBase
 	{
-		// Token: 0x0602D6CC RID: 186060 RVA: 0x00A40B1B File Offset: 0x00A3ED1B
+		// Token: 0x0601D416 RID: 119830 RVA: 0x008EE9B3 File Offset: 0x008ECBB3
 		public KscActionBase(long entityId)
 		{
 			this.EntityId = entityId;
 			this.KscCtrl = KuroSimpleCombatController.Instance;
 		}
 
-		// Token: 0x170073AA RID: 29610
-		// (get) Token: 0x0602D6CD RID: 186061 RVA: 0x00A40B38 File Offset: 0x00A3ED38
+		// Token: 0x17002E6D RID: 11885
+		// (get) Token: 0x0601D417 RID: 119831 RVA: 0x008EE9D0 File Offset: 0x008ECBD0
 		public string Name
 		{
 			get
@@ -34,7 +34,7 @@ namespace KuroSimpleCombat.KscAction
 			}
 		}
 
-		// Token: 0x0602D6CE RID: 186062 RVA: 0x00A40B7C File Offset: 0x00A3ED7C
+		// Token: 0x0601D418 RID: 119832 RVA: 0x008EEA14 File Offset: 0x008ECC14
 		public UniTask Run()
 		{
 			KscActionBase.<Run>d__8 <Run>d__;
@@ -45,14 +45,14 @@ namespace KuroSimpleCombat.KscAction
 			return <Run>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D6CF RID: 186063 RVA: 0x00A40BBF File Offset: 0x00A3EDBF
+		// Token: 0x0601D419 RID: 119833 RVA: 0x008EEA57 File Offset: 0x008ECC57
 		public void Cancel()
 		{
 			this.IsCancel = true;
 			this.CancelContent();
 		}
 
-		// Token: 0x0602D6D0 RID: 186064 RVA: 0x00A40BCE File Offset: 0x00A3EDCE
+		// Token: 0x0601D41A RID: 119834 RVA: 0x008EEA66 File Offset: 0x008ECC66
 		protected void SetResult()
 		{
 			UniTaskCompletionSource promiseInternal = this.PromiseInternal;
@@ -63,8 +63,8 @@ namespace KuroSimpleCombat.KscAction
 			promiseInternal.TrySetResult();
 		}
 
-		// Token: 0x170073AB RID: 29611
-		// (get) Token: 0x0602D6D1 RID: 186065 RVA: 0x00A40BE1 File Offset: 0x00A3EDE1
+		// Token: 0x17002E6E RID: 11886
+		// (get) Token: 0x0601D41B RID: 119835 RVA: 0x008EEA79 File Offset: 0x008ECC79
 		public UiAsyncTask Task
 		{
 			get
@@ -77,7 +77,7 @@ namespace KuroSimpleCombat.KscAction
 			}
 		}
 
-		// Token: 0x0602D6D2 RID: 186066 RVA: 0x00A40C1C File Offset: 0x00A3EE1C
+		// Token: 0x0601D41C RID: 119836 RVA: 0x008EEAB4 File Offset: 0x008ECCB4
 		public string LogInfo()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(5, 2);
@@ -89,7 +89,7 @@ namespace KuroSimpleCombat.KscAction
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0602D6D3 RID: 186067 RVA: 0x00A40C89 File Offset: 0x00A3EE89
+		// Token: 0x0601D41D RID: 119837 RVA: 0x008EEB21 File Offset: 0x008ECD21
 		[Conditional("DEBUG")]
 		protected void Debug(KscLog.EModule flag, string log, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
@@ -101,7 +101,7 @@ namespace KuroSimpleCombat.KscAction
 		{
 		}
 
-		// Token: 0x0602D6D4 RID: 186068 RVA: 0x00A40C8B File Offset: 0x00A3EE8B
+		// Token: 0x0601D41E RID: 119838 RVA: 0x008EEB23 File Offset: 0x008ECD23
 		protected void Info(KscLog.EModule flag, string log, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -113,7 +113,7 @@ namespace KuroSimpleCombat.KscAction
 			KscLog.Info(flag, ELogAuthor.CX, KscEnv.Instance.KscWorld, log, pairs);
 		}
 
-		// Token: 0x0602D6D5 RID: 186069 RVA: 0x00A40CA1 File Offset: 0x00A3EEA1
+		// Token: 0x0601D41F RID: 119839 RVA: 0x008EEB39 File Offset: 0x008ECD39
 		protected void Warn(KscLog.EModule flag, string log, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -125,7 +125,7 @@ namespace KuroSimpleCombat.KscAction
 			KscLog.Warn(flag, ELogAuthor.CX, KscEnv.Instance.KscWorld, log, pairs);
 		}
 
-		// Token: 0x0602D6D6 RID: 186070 RVA: 0x00A40CB7 File Offset: 0x00A3EEB7
+		// Token: 0x0601D420 RID: 119840 RVA: 0x008EEB4F File Offset: 0x008ECD4F
 		protected void Error(KscLog.EModule flag, string log, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -137,29 +137,29 @@ namespace KuroSimpleCombat.KscAction
 			KscLog.Error(flag, ELogAuthor.CX, KscEnv.Instance.KscWorld, log, pairs);
 		}
 
-		// Token: 0x0602D6D7 RID: 186071
+		// Token: 0x0601D421 RID: 119841
 		protected abstract UniTask RunContent();
 
-		// Token: 0x0602D6D8 RID: 186072 RVA: 0x00A40CCD File Offset: 0x00A3EECD
+		// Token: 0x0601D422 RID: 119842 RVA: 0x008EEB65 File Offset: 0x008ECD65
 		protected virtual void CancelContent()
 		{
 		}
 
-		// Token: 0x040184A8 RID: 99496
+		// Token: 0x0400F673 RID: 63091
 		public long EntityId;
 
-		// Token: 0x040184A9 RID: 99497
+		// Token: 0x0400F674 RID: 63092
 		[Nullable(2)]
 		protected UniTaskCompletionSource PromiseInternal;
 
-		// Token: 0x040184AA RID: 99498
+		// Token: 0x0400F675 RID: 63093
 		protected bool IsCancel;
 
-		// Token: 0x040184AB RID: 99499
+		// Token: 0x0400F676 RID: 63094
 		[Nullable(2)]
 		protected UiAsyncTask TaskInternal;
 
-		// Token: 0x040184AC RID: 99500
+		// Token: 0x0400F677 RID: 63095
 		protected KuroSimpleCombatController KscCtrl;
 	}
 }

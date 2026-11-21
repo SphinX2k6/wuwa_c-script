@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AF0 RID: 23280
+	// Token: 0x020060FD RID: 24829
 	public struct ITriggerUe5Component : IFlatbufferObject
 	{
-		// Token: 0x1700AF9A RID: 44954
-		// (get) Token: 0x06027BCA RID: 162762 RVA: 0x00577556 File Offset: 0x00575756
+		// Token: 0x1700B8D6 RID: 47318
+		// (get) Token: 0x0602A156 RID: 172374 RVA: 0x005BEA1A File Offset: 0x005BCC1A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027BCB RID: 162763 RVA: 0x00577563 File Offset: 0x00575763
+		// Token: 0x0602A157 RID: 172375 RVA: 0x005BEA27 File Offset: 0x005BCC27
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027BCC RID: 162764 RVA: 0x0057756C File Offset: 0x0057576C
+		// Token: 0x0602A158 RID: 172376 RVA: 0x005BEA30 File Offset: 0x005BCC30
 		public static ITriggerUe5Component GetRootAsITriggerUe5Component(ByteBuffer _bb)
 		{
 			return ITriggerUe5Component.GetRootAsITriggerUe5Component(_bb, default(ITriggerUe5Component));
 		}
 
-		// Token: 0x06027BCD RID: 162765 RVA: 0x00577588 File Offset: 0x00575788
+		// Token: 0x0602A159 RID: 172377 RVA: 0x005BEA4C File Offset: 0x005BCC4C
 		public static ITriggerUe5Component GetRootAsITriggerUe5Component(ByteBuffer _bb, ITriggerUe5Component obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027BCE RID: 162766 RVA: 0x005775A5 File Offset: 0x005757A5
+		// Token: 0x0602A15A RID: 172378 RVA: 0x005BEA69 File Offset: 0x005BCC69
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027BCF RID: 162767 RVA: 0x005775B4 File Offset: 0x005757B4
+		// Token: 0x0602A15B RID: 172379 RVA: 0x005BEA78 File Offset: 0x005BCC78
 		public ITriggerUe5Component __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AF9B RID: 44955
-		// (get) Token: 0x06027BD0 RID: 162768 RVA: 0x005775C4 File Offset: 0x005757C4
+		// Token: 0x1700B8D7 RID: 47319
+		// (get) Token: 0x0602A15C RID: 172380 RVA: 0x005BEA88 File Offset: 0x005BCC88
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AF9C RID: 44956
-		// (get) Token: 0x06027BD1 RID: 162769 RVA: 0x00577604 File Offset: 0x00575804
+		// Token: 0x1700B8D8 RID: 47320
+		// (get) Token: 0x0602A15D RID: 172381 RVA: 0x005BEAC8 File Offset: 0x005BCCC8
 		public int MaxTriggerTimes
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AF9D RID: 44957
-		// (get) Token: 0x06027BD2 RID: 162770 RVA: 0x00577640 File Offset: 0x00575840
+		// Token: 0x1700B8D9 RID: 47321
+		// (get) Token: 0x0602A15E RID: 172382 RVA: 0x005BEB04 File Offset: 0x005BCD04
 		public bool IsNotLoad
 		{
 			get
@@ -85,8 +85,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AF9E RID: 44958
-		// (get) Token: 0x06027BD3 RID: 162771 RVA: 0x00577680 File Offset: 0x00575880
+		// Token: 0x1700B8DA RID: 47322
+		// (get) Token: 0x0602A15F RID: 172383 RVA: 0x005BEB44 File Offset: 0x005BCD44
 		public ITriggerActions? TriggerActions
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AF9F RID: 44959
-		// (get) Token: 0x06027BD4 RID: 162772 RVA: 0x005776E0 File Offset: 0x005758E0
+		// Token: 0x1700B8DB RID: 47323
+		// (get) Token: 0x0602A160 RID: 172384 RVA: 0x005BEBA4 File Offset: 0x005BCDA4
 		public byte NullMask
 		{
 			get
@@ -115,7 +115,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027BD5 RID: 162773 RVA: 0x0057771D File Offset: 0x0057591D
+		// Token: 0x0602A161 RID: 172385 RVA: 0x005BEBE1 File Offset: 0x005BCDE1
 		public static Offset<ITriggerUe5Component> CreateITriggerUe5Component(FlatBufferBuilder builder, bool Disabled = false, int MaxTriggerTimes = 0, bool IsNotLoad = false, Offset<ITriggerActions> TriggerActionsOffset = default(Offset<ITriggerActions>), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -127,49 +127,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITriggerUe5Component.EndITriggerUe5Component(builder);
 		}
 
-		// Token: 0x06027BD6 RID: 162774 RVA: 0x00577751 File Offset: 0x00575951
+		// Token: 0x0602A162 RID: 172386 RVA: 0x005BEC15 File Offset: 0x005BCE15
 		public static void StartITriggerUe5Component(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06027BD7 RID: 162775 RVA: 0x0057775A File Offset: 0x0057595A
+		// Token: 0x0602A163 RID: 172387 RVA: 0x005BEC1E File Offset: 0x005BCE1E
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06027BD8 RID: 162776 RVA: 0x00577765 File Offset: 0x00575965
+		// Token: 0x0602A164 RID: 172388 RVA: 0x005BEC29 File Offset: 0x005BCE29
 		public static void AddMaxTriggerTimes(FlatBufferBuilder builder, int maxTriggerTimes)
 		{
 			builder.AddInt(1, maxTriggerTimes, 0);
 		}
 
-		// Token: 0x06027BD9 RID: 162777 RVA: 0x00577770 File Offset: 0x00575970
+		// Token: 0x0602A165 RID: 172389 RVA: 0x005BEC34 File Offset: 0x005BCE34
 		public static void AddIsNotLoad(FlatBufferBuilder builder, bool isNotLoad)
 		{
 			builder.AddBool(2, isNotLoad, false);
 		}
 
-		// Token: 0x06027BDA RID: 162778 RVA: 0x0057777B File Offset: 0x0057597B
+		// Token: 0x0602A166 RID: 172390 RVA: 0x005BEC3F File Offset: 0x005BCE3F
 		public static void AddTriggerActions(FlatBufferBuilder builder, Offset<ITriggerActions> triggerActionsOffset)
 		{
 			builder.AddOffset(3, triggerActionsOffset.Value, 0);
 		}
 
-		// Token: 0x06027BDB RID: 162779 RVA: 0x0057778B File Offset: 0x0057598B
+		// Token: 0x0602A167 RID: 172391 RVA: 0x005BEC4F File Offset: 0x005BCE4F
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06027BDC RID: 162780 RVA: 0x00577796 File Offset: 0x00575996
+		// Token: 0x0602A168 RID: 172392 RVA: 0x005BEC5A File Offset: 0x005BCE5A
 		public static Offset<ITriggerUe5Component> EndITriggerUe5Component(FlatBufferBuilder builder)
 		{
 			return new Offset<ITriggerUe5Component>(builder.EndTable());
 		}
 
-		// Token: 0x06027BDD RID: 162781 RVA: 0x005777A4 File Offset: 0x005759A4
+		// Token: 0x0602A169 RID: 172393 RVA: 0x005BEC68 File Offset: 0x005BCE68
 		public ITriggerUe5ComponentT UnPack()
 		{
 			ITriggerUe5ComponentT triggerUe5ComponentT = new ITriggerUe5ComponentT();
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return triggerUe5ComponentT;
 		}
 
-		// Token: 0x06027BDE RID: 162782 RVA: 0x005777C0 File Offset: 0x005759C0
+		// Token: 0x0602A16A RID: 172394 RVA: 0x005BEC84 File Offset: 0x005BCE84
 		public void UnPackTo(ITriggerUe5ComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06027BDF RID: 162783 RVA: 0x0057782C File Offset: 0x00575A2C
+		// Token: 0x0602A16B RID: 172395 RVA: 0x005BECF0 File Offset: 0x005BCEF0
 		public static Offset<ITriggerUe5Component> Pack(FlatBufferBuilder builder, ITriggerUe5ComponentT _o)
 		{
 			if (_o == null)
@@ -198,7 +198,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITriggerUe5Component.CreateITriggerUe5Component(builder, _o.Disabled, _o.MaxTriggerTimes, _o.IsNotLoad, triggerActionsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400F1E7 RID: 61927
+		// Token: 0x0400FEE1 RID: 65249
 		private Table __p;
 	}
 }

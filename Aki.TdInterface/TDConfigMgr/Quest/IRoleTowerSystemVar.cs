@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001116 RID: 4374
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001244 RID: 4676
 	public class IRoleTowerSystemVar
 	{
-		// Token: 0x060062C4 RID: 25284 RVA: 0x000ED9B8 File Offset: 0x000EBBB8
+		// Token: 0x060068BF RID: 26815 RVA: 0x000FAB2C File Offset: 0x000F8D2C
 		private IRoleTowerSystemVar_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060062C5 RID: 25285 RVA: 0x000ED9F0 File Offset: 0x000EBBF0
+		// Token: 0x060068C0 RID: 26816 RVA: 0x000FAB64 File Offset: 0x000F8D64
 		public static IRoleTowerSystemVar Create([Nullable(2)] IRoleTowerSystemVar instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060062C6 RID: 25286 RVA: 0x000EDA03 File Offset: 0x000EBC03
+		// Token: 0x060068C1 RID: 26817 RVA: 0x000FAB77 File Offset: 0x000F8D77
 		public static IRoleTowerSystemVar CreateFromSetValue([Nullable(2)] IRoleTowerSystemVar_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060062C7 RID: 25287 RVA: 0x000EDA16 File Offset: 0x000EBC16
+		// Token: 0x060068C2 RID: 26818 RVA: 0x000FAB8A File Offset: 0x000F8D8A
 		public IRoleTowerSystemVar_SetValue ToSetValue()
 		{
 			return new IRoleTowerSystemVar_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002045 RID: 8261
-		// (get) Token: 0x060062C8 RID: 25288 RVA: 0x000EDA35 File Offset: 0x000EBC35
-		// (set) Token: 0x060062C9 RID: 25289 RVA: 0x000EDA60 File Offset: 0x000EBC60
+		// Token: 0x170021F8 RID: 8696
+		// (get) Token: 0x060068C3 RID: 26819 RVA: 0x000FABA9 File Offset: 0x000F8DA9
+		// (set) Token: 0x060068C4 RID: 26820 RVA: 0x000FABD4 File Offset: 0x000F8DD4
 		public virtual ERoleTowerSystemVarType VarType
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002046 RID: 8262
-		// (get) Token: 0x060062CA RID: 25290 RVA: 0x000EDA6E File Offset: 0x000EBC6E
-		// (set) Token: 0x060062CB RID: 25291 RVA: 0x000EDA95 File Offset: 0x000EBC95
+		// Token: 0x170021F9 RID: 8697
+		// (get) Token: 0x060068C5 RID: 26821 RVA: 0x000FABE2 File Offset: 0x000F8DE2
+		// (set) Token: 0x060068C6 RID: 26822 RVA: 0x000FAC09 File Offset: 0x000F8E09
 		public virtual VarRef VarRef
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B40 RID: 15168
+		// Token: 0x04003E8E RID: 16014
 		[Nullable(2)]
 		protected IRoleTowerSystemVar FbInstance;
 
-		// Token: 0x04003B41 RID: 15169
+		// Token: 0x04003E8F RID: 16015
 		[Nullable(2)]
 		protected IRoleTowerSystemVar_SetValue PocoInterface;
 	}

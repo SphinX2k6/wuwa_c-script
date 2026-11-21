@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006538 RID: 25912
+	// Token: 0x02006BA9 RID: 27561
 	public class IDartChampionOwnerInteractTypeT
 	{
-		// Token: 0x1700C09E RID: 49310
-		// (get) Token: 0x0602CF3D RID: 184125 RVA: 0x0062C078 File Offset: 0x0062A278
-		// (set) Token: 0x0602CF3E RID: 184126 RVA: 0x0062C080 File Offset: 0x0062A280
+		// Token: 0x1700CA35 RID: 51765
+		// (get) Token: 0x0602F6F1 RID: 194289 RVA: 0x00678724 File Offset: 0x00676924
+		// (set) Token: 0x0602F6F2 RID: 194290 RVA: 0x0067872C File Offset: 0x0067692C
 		public EDartInteractType Type { get; set; }
 
-		// Token: 0x1700C09F RID: 49311
-		// (get) Token: 0x0602CF3F RID: 184127 RVA: 0x0062C089 File Offset: 0x0062A289
-		// (set) Token: 0x0602CF40 RID: 184128 RVA: 0x0062C091 File Offset: 0x0062A291
+		// Token: 0x1700CA36 RID: 51766
+		// (get) Token: 0x0602F6F3 RID: 194291 RVA: 0x00678735 File Offset: 0x00676935
+		// (set) Token: 0x0602F6F4 RID: 194292 RVA: 0x0067873D File Offset: 0x0067693D
 		public int CompetitorId { get; set; }
 
-		// Token: 0x0602CF41 RID: 184129 RVA: 0x0062C09A File Offset: 0x0062A29A
+		// Token: 0x0602F6F5 RID: 194293 RVA: 0x00678746 File Offset: 0x00676946
 		public IDartChampionOwnerInteractTypeT()
 		{
 			this.Type = EDartInteractType.Machine;

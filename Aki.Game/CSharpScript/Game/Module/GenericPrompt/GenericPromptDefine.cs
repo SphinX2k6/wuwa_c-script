@@ -5,10 +5,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.GenericPrompt
 {
-	// Token: 0x02005996 RID: 22934
+	// Token: 0x0200496F RID: 18799
 	public class GenericPromptDefine
 	{
-		// Token: 0x0603A335 RID: 238389 RVA: 0x00DD4C6C File Offset: 0x00DD2E6C
+		// Token: 0x0602F25B RID: 193115 RVA: 0x00D240FC File Offset: 0x00D222FC
 		// Note: this type is marked as 'beforefieldinit'.
 		static GenericPromptDefine()
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			GenericPromptDefine.genericPromptView = dictionary;
 		}
 
-		// Token: 0x0401E5D8 RID: 124376
+		// Token: 0x04019076 RID: 102518
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly IReadOnlyDictionary<int, EUiViewName> genericPromptView;

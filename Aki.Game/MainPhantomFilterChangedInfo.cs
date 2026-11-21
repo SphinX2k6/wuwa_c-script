@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x020024AA RID: 9386
+// Token: 0x02001991 RID: 6545
 public class MainPhantomFilterChangedInfo : IMainPhantomFilterChangedInfo
 {
-	// Token: 0x170018A1 RID: 6305
-	// (get) Token: 0x06012D63 RID: 77155 RVA: 0x004A63E8 File Offset: 0x004A45E8
-	// (set) Token: 0x06012D64 RID: 77156 RVA: 0x004A63F0 File Offset: 0x004A45F0
+	// Token: 0x170018DB RID: 6363
+	// (get) Token: 0x06010224 RID: 66084 RVA: 0x004B3EE0 File Offset: 0x004B20E0
+	// (set) Token: 0x06010225 RID: 66085 RVA: 0x004B3EE8 File Offset: 0x004B20E8
 	public int MonsterId { get; set; }
 
-	// Token: 0x170018A2 RID: 6306
-	// (get) Token: 0x06012D65 RID: 77157 RVA: 0x004A63F9 File Offset: 0x004A45F9
-	// (set) Token: 0x06012D66 RID: 77158 RVA: 0x004A6401 File Offset: 0x004A4601
+	// Token: 0x170018DC RID: 6364
+	// (get) Token: 0x06010226 RID: 66086 RVA: 0x004B3EF1 File Offset: 0x004B20F1
+	// (set) Token: 0x06010227 RID: 66087 RVA: 0x004B3EF9 File Offset: 0x004B20F9
 	public int FetterGroupId { get; set; }
 
-	// Token: 0x170018A3 RID: 6307
-	// (get) Token: 0x06012D67 RID: 77159 RVA: 0x004A640A File Offset: 0x004A460A
-	// (set) Token: 0x06012D68 RID: 77160 RVA: 0x004A6412 File Offset: 0x004A4612
+	// Token: 0x170018DD RID: 6365
+	// (get) Token: 0x06010228 RID: 66088 RVA: 0x004B3F02 File Offset: 0x004B2102
+	// (set) Token: 0x06010229 RID: 66089 RVA: 0x004B3F0A File Offset: 0x004B210A
 	public int Cost { get; set; }
 
-	// Token: 0x170018A4 RID: 6308
-	// (get) Token: 0x06012D69 RID: 77161 RVA: 0x004A641B File Offset: 0x004A461B
-	// (set) Token: 0x06012D6A RID: 77162 RVA: 0x004A6423 File Offset: 0x004A4623
+	// Token: 0x170018DE RID: 6366
+	// (get) Token: 0x0601022A RID: 66090 RVA: 0x004B3F13 File Offset: 0x004B2113
+	// (set) Token: 0x0601022B RID: 66091 RVA: 0x004B3F1B File Offset: 0x004B211B
 	public bool IsDeselect { get; set; }
 }

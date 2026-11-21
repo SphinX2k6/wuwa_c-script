@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009E2 RID: 2530
+	// Token: 0x02000AA7 RID: 2727
 	public static class EProgressBarControlTypeExtensions
 	{
-		// Token: 0x0600382A RID: 14378 RVA: 0x000919D4 File Offset: 0x0008FBD4
+		// Token: 0x06003C02 RID: 15362 RVA: 0x0009A294 File Offset: 0x00098494
 		public static string ToEnumString(this EProgressBarControlType value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600382B RID: 14379 RVA: 0x00091A34 File Offset: 0x0008FC34
+		// Token: 0x06003C03 RID: 15363 RVA: 0x0009A2F4 File Offset: 0x000984F4
 		public static EProgressBarControlType FromString(string name)
 		{
 			EProgressBarControlType result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600382C RID: 14380 RVA: 0x00091A60 File Offset: 0x0008FC60
+		// Token: 0x06003C04 RID: 15364 RVA: 0x0009A320 File Offset: 0x00098520
 		public static bool TryFromString(string name, out EProgressBarControlType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600382D RID: 14381 RVA: 0x00091ADA File Offset: 0x0008FCDA
+		// Token: 0x06003C05 RID: 15365 RVA: 0x0009A39A File Offset: 0x0009859A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600382E RID: 14382 RVA: 0x00091B0A File Offset: 0x0008FD0A
+		// Token: 0x06003C06 RID: 15366 RVA: 0x0009A3CA File Offset: 0x000985CA
 		public static EProgressBarControlType[] GetValues()
 		{
 			return new EProgressBarControlType[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600382F RID: 14383 RVA: 0x00091B1D File Offset: 0x0008FD1D
+		// Token: 0x06003C07 RID: 15367 RVA: 0x0009A3DD File Offset: 0x000985DD
 		public static string[] GetNames()
 		{
 			return new string[]

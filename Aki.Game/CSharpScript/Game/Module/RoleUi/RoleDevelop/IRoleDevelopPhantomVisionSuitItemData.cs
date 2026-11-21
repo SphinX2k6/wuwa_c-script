@@ -4,68 +4,68 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D20 RID: 19744
+	// Token: 0x02003CD9 RID: 15577
 	[NullableContext(1)]
 	public interface IRoleDevelopPhantomVisionSuitItemData
 	{
-		// Token: 0x17007E19 RID: 32281
-		// (get) Token: 0x0603303A RID: 208954
-		// (set) Token: 0x0603303B RID: 208955
+		// Token: 0x170051C9 RID: 20937
+		// (get) Token: 0x06027E25 RID: 163365
+		// (set) Token: 0x06027E26 RID: 163366
 		string Name { get; set; }
 
-		// Token: 0x17007E1A RID: 32282
-		// (get) Token: 0x0603303C RID: 208956
-		// (set) Token: 0x0603303D RID: 208957
+		// Token: 0x170051CA RID: 20938
+		// (get) Token: 0x06027E27 RID: 163367
+		// (set) Token: 0x06027E28 RID: 163368
 		string ButtonName { get; set; }
 
-		// Token: 0x17007E1B RID: 32283
-		// (get) Token: 0x0603303E RID: 208958
-		// (set) Token: 0x0603303F RID: 208959
+		// Token: 0x170051CB RID: 20939
+		// (get) Token: 0x06027E29 RID: 163369
+		// (set) Token: 0x06027E2A RID: 163370
 		EPhantomSuitItemType ItemType { get; set; }
 
-		// Token: 0x17007E1C RID: 32284
-		// (get) Token: 0x06033040 RID: 208960
-		// (set) Token: 0x06033041 RID: 208961
+		// Token: 0x170051CC RID: 20940
+		// (get) Token: 0x06027E2B RID: 163371
+		// (set) Token: 0x06027E2C RID: 163372
 		string TypeIcon { get; set; }
 
-		// Token: 0x17007E1D RID: 32285
-		// (get) Token: 0x06033042 RID: 208962
-		// (set) Token: 0x06033043 RID: 208963
+		// Token: 0x170051CD RID: 20941
+		// (get) Token: 0x06027E2D RID: 163373
+		// (set) Token: 0x06027E2E RID: 163374
 		List<PhantomMonsterItemData> MonsterDataList { get; set; }
 
-		// Token: 0x17007E1E RID: 32286
-		// (get) Token: 0x06033044 RID: 208964
-		// (set) Token: 0x06033045 RID: 208965
+		// Token: 0x170051CE RID: 20942
+		// (get) Token: 0x06027E2F RID: 163375
+		// (set) Token: 0x06027E30 RID: 163376
 		List<DropRewardItemData> RewardDataList { get; set; }
 
-		// Token: 0x17007E1F RID: 32287
-		// (get) Token: 0x06033046 RID: 208966
-		// (set) Token: 0x06033047 RID: 208967
+		// Token: 0x170051CF RID: 20943
+		// (get) Token: 0x06027E31 RID: 163377
+		// (set) Token: 0x06027E32 RID: 163378
 		int DungeonId { get; set; }
 
-		// Token: 0x17007E20 RID: 32288
-		// (get) Token: 0x06033048 RID: 208968
-		// (set) Token: 0x06033049 RID: 208969
+		// Token: 0x170051D0 RID: 20944
+		// (get) Token: 0x06027E33 RID: 163379
+		// (set) Token: 0x06027E34 RID: 163380
 		int FetterGroupId { get; set; }
 
-		// Token: 0x17007E21 RID: 32289
-		// (get) Token: 0x0603304A RID: 208970
-		// (set) Token: 0x0603304B RID: 208971
+		// Token: 0x170051D1 RID: 20945
+		// (get) Token: 0x06027E35 RID: 163381
+		// (set) Token: 0x06027E36 RID: 163382
 		int RoleId { get; set; }
 
-		// Token: 0x17007E22 RID: 32290
-		// (get) Token: 0x0603304C RID: 208972
-		// (set) Token: 0x0603304D RID: 208973
+		// Token: 0x170051D2 RID: 20946
+		// (get) Token: 0x06027E37 RID: 163383
+		// (set) Token: 0x06027E38 RID: 163384
 		int? LogRoleId { get; set; }
 
-		// Token: 0x17007E23 RID: 32291
-		// (get) Token: 0x0603304E RID: 208974
-		// (set) Token: 0x0603304F RID: 208975
+		// Token: 0x170051D3 RID: 20947
+		// (get) Token: 0x06027E39 RID: 163385
+		// (set) Token: 0x06027E3A RID: 163386
 		ERoleDevelopCategoryType? LogMainPage { get; set; }
 
-		// Token: 0x17007E24 RID: 32292
-		// (get) Token: 0x06033050 RID: 208976
-		// (set) Token: 0x06033051 RID: 208977
+		// Token: 0x170051D4 RID: 20948
+		// (get) Token: 0x06027E3B RID: 163387
+		// (set) Token: 0x06027E3C RID: 163388
 		ERoleDevelopLogSubPage? LogSubPage { get; set; }
 	}
 }

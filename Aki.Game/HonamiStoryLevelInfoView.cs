@@ -13,13 +13,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EC5 RID: 7877
+// Token: 0x02001387 RID: 4999
 [NullableContext(2)]
 [Nullable(0)]
 public class HonamiStoryLevelInfoView : UiViewBase
 {
-	// Token: 0x170012EB RID: 4843
-	// (get) Token: 0x0600F23B RID: 62011 RVA: 0x003A5486 File Offset: 0x003A3686
+	// Token: 0x17001315 RID: 4885
+	// (get) Token: 0x0600C65A RID: 50778 RVA: 0x003B0F86 File Offset: 0x003AF186
 	public ETarget? GetCurTarget
 	{
 		get
@@ -28,8 +28,8 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x170012EC RID: 4844
-	// (get) Token: 0x0600F23C RID: 62012 RVA: 0x003A548E File Offset: 0x003A368E
+	// Token: 0x17001316 RID: 4886
+	// (get) Token: 0x0600C65B RID: 50779 RVA: 0x003B0F8E File Offset: 0x003AF18E
 	public int GetCurDangerLv
 	{
 		get
@@ -38,8 +38,8 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x170012ED RID: 4845
-	// (get) Token: 0x0600F23D RID: 62013 RVA: 0x003A5496 File Offset: 0x003A3696
+	// Token: 0x17001317 RID: 4887
+	// (get) Token: 0x0600C65C RID: 50780 RVA: 0x003B0F96 File Offset: 0x003AF196
 	public bool GetIsBuySafe
 	{
 		get
@@ -48,7 +48,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F23E RID: 62014 RVA: 0x003A54A0 File Offset: 0x003A36A0
+	// Token: 0x0600C65D RID: 50781 RVA: 0x003B0FA0 File Offset: 0x003AF1A0
 	[NullableContext(1)]
 	public HonamiStoryLevelInfoView(UiViewInfo viewInfo)
 	{
@@ -66,7 +66,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		base..ctor(viewInfo);
 	}
 
-	// Token: 0x0600F23F RID: 62015 RVA: 0x003A550C File Offset: 0x003A370C
+	// Token: 0x0600C65E RID: 50782 RVA: 0x003B100C File Offset: 0x003AF20C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 25;
@@ -137,7 +137,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F240 RID: 62016 RVA: 0x003A5904 File Offset: 0x003A3B04
+	// Token: 0x0600C65F RID: 50783 RVA: 0x003B1404 File Offset: 0x003AF604
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryLevelInfoView.<OnBeforeStartAsync>d__36 <OnBeforeStartAsync>d__;
@@ -148,7 +148,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F241 RID: 62017 RVA: 0x003A5948 File Offset: 0x003A3B48
+	// Token: 0x0600C660 RID: 50784 RVA: 0x003B1448 File Offset: 0x003AF648
 	protected override void OnBeforeShow()
 	{
 		this.PnlTeam.RefreshView();
@@ -162,7 +162,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		this.BtnGo.RefreshView();
 	}
 
-	// Token: 0x0600F242 RID: 62018 RVA: 0x003A59AC File Offset: 0x003A3BAC
+	// Token: 0x0600C661 RID: 50785 RVA: 0x003B14AC File Offset: 0x003AF6AC
 	protected override void OnAfterShow()
 	{
 		this.TryShowAreaUnLockTips();
@@ -176,19 +176,19 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		this.TalkPanel.SetTalkInfoTextAndPlayAudio(randomDialogData);
 	}
 
-	// Token: 0x0600F243 RID: 62019 RVA: 0x003A5A0D File Offset: 0x003A3C0D
+	// Token: 0x0600C662 RID: 50786 RVA: 0x003B150D File Offset: 0x003AF70D
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x0600F244 RID: 62020 RVA: 0x003A5A2B File Offset: 0x003A3C2B
+	// Token: 0x0600C663 RID: 50787 RVA: 0x003B152B File Offset: 0x003AF72B
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x0600F245 RID: 62021 RVA: 0x003A5A49 File Offset: 0x003A3C49
+	// Token: 0x0600C664 RID: 50788 RVA: 0x003B1549 File Offset: 0x003AF749
 	protected override void OnBeforeHide()
 	{
 		this.ActData.CurTarget = (int)this.CurTarget.Value;
@@ -196,7 +196,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		this.ActData.CurTowerLv = this.CurTowerDangerLv;
 	}
 
-	// Token: 0x0600F246 RID: 62022 RVA: 0x003A5A84 File Offset: 0x003A3C84
+	// Token: 0x0600C665 RID: 50789 RVA: 0x003B1584 File Offset: 0x003AF784
 	public int GetCurSafeLeavePrice()
 	{
 		if (this.IsOpenBuySafe)
@@ -211,7 +211,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		return 0;
 	}
 
-	// Token: 0x0600F247 RID: 62023 RVA: 0x003A5AE0 File Offset: 0x003A3CE0
+	// Token: 0x0600C666 RID: 50790 RVA: 0x003B15E0 File Offset: 0x003AF7E0
 	private void TryShowAreaUnLockTips()
 	{
 		Dictionary<int, bool> player = LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.HonamiStorySelectLvAreaUnLockTips, null);
@@ -240,7 +240,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F248 RID: 62024 RVA: 0x003A5BEC File Offset: 0x003A3DEC
+	// Token: 0x0600C667 RID: 50791 RVA: 0x003B16EC File Offset: 0x003AF8EC
 	private void TryShowHonamiTowerUnLockTips()
 	{
 		bool player = LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.HonamiStorySelectLvTowerUnLockTips, true);
@@ -257,7 +257,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F249 RID: 62025 RVA: 0x003A5C70 File Offset: 0x003A3E70
+	// Token: 0x0600C668 RID: 50792 RVA: 0x003B1770 File Offset: 0x003AF970
 	private void CheckHonamiTogRedDot()
 	{
 		if (!this.IsOpenFreeSelect)
@@ -275,7 +275,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F24A RID: 62026 RVA: 0x003A5CD4 File Offset: 0x003A3ED4
+	// Token: 0x0600C669 RID: 50793 RVA: 0x003B17D4 File Offset: 0x003AF9D4
 	private void CheckTowerFirstUnLockRedDot()
 	{
 		if (LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.HonamiStorySelectLvTowerUnLockTogRedDot, false))
@@ -288,19 +288,19 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F24B RID: 62027 RVA: 0x003A5D08 File Offset: 0x003A3F08
+	// Token: 0x0600C66A RID: 50794 RVA: 0x003B1808 File Offset: 0x003AFA08
 	private void OnClickHelpBtn()
 	{
 		HelpController.Instance.OpenHelpById(437);
 	}
 
-	// Token: 0x0600F24C RID: 62028 RVA: 0x003A5D19 File Offset: 0x003A3F19
+	// Token: 0x0600C66B RID: 50795 RVA: 0x003B1819 File Offset: 0x003AFA19
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600F24D RID: 62029 RVA: 0x003A5D24 File Offset: 0x003A3F24
+	// Token: 0x0600C66C RID: 50796 RVA: 0x003B1824 File Offset: 0x003AFA24
 	private void OnClickLeftToggle()
 	{
 		ETarget? curTarget = this.CurTarget;
@@ -311,7 +311,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F24E RID: 62030 RVA: 0x003A5D58 File Offset: 0x003A3F58
+	// Token: 0x0600C66D RID: 50797 RVA: 0x003B1858 File Offset: 0x003AFA58
 	private void OnClickRightToggle()
 	{
 		if (!this.IsOpenTower)
@@ -331,13 +331,13 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F24F RID: 62031 RVA: 0x003A5DD1 File Offset: 0x003A3FD1
+	// Token: 0x0600C66E RID: 50798 RVA: 0x003B18D1 File Offset: 0x003AFAD1
 	private bool CanToggleChange(ETarget target)
 	{
 		return target != this.CurTarget.Value;
 	}
 
-	// Token: 0x0600F250 RID: 62032 RVA: 0x003A5DE4 File Offset: 0x003A3FE4
+	// Token: 0x0600C66F RID: 50799 RVA: 0x003B18E4 File Offset: 0x003AFAE4
 	private void SwitchTarget(ETarget target)
 	{
 		if (target != ETarget.HonamiCity)
@@ -383,7 +383,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		this.BtnGo.SetCostData(value.ConsumeItems());
 	}
 
-	// Token: 0x0600F251 RID: 62033 RVA: 0x003A5F7C File Offset: 0x003A417C
+	// Token: 0x0600C670 RID: 50800 RVA: 0x003B1A7C File Offset: 0x003AFC7C
 	[NullableContext(1)]
 	private void OnActivitySequenceEmitEvent(string param)
 	{
@@ -393,7 +393,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F252 RID: 62034 RVA: 0x003A5FC0 File Offset: 0x003A41C0
+	// Token: 0x0600C671 RID: 50801 RVA: 0x003B1AC0 File Offset: 0x003AFCC0
 	private void OnClickBtnReduce()
 	{
 		ETarget value = this.CurTarget.Value;
@@ -426,7 +426,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		this.BtnGo.SetCostData(value2.ConsumeItems());
 	}
 
-	// Token: 0x0600F253 RID: 62035 RVA: 0x003A6088 File Offset: 0x003A4288
+	// Token: 0x0600C672 RID: 50802 RVA: 0x003B1B88 File Offset: 0x003AFD88
 	private void OnClickBtnAdd()
 	{
 		ETarget value = this.CurTarget.Value;
@@ -459,14 +459,14 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		this.BtnGo.SetCostData(value2.ConsumeItems());
 	}
 
-	// Token: 0x0600F254 RID: 62036 RVA: 0x003A614F File Offset: 0x003A434F
+	// Token: 0x0600C673 RID: 50803 RVA: 0x003B1C4F File Offset: 0x003AFE4F
 	private void OnBuySafeTogClick(EToggleState toggleState)
 	{
 		this.IsBuySafe = (base.GetExtendToggle(16).GetToggleState() == EToggleState.ETT_Checked);
 		this.BtnGo.RefreshView();
 	}
 
-	// Token: 0x0600F255 RID: 62037 RVA: 0x003A6174 File Offset: 0x003A4374
+	// Token: 0x0600C674 RID: 50804 RVA: 0x003B1C74 File Offset: 0x003AFE74
 	private void RefreshLevelInfo()
 	{
 		HonamiStoryDangerLevel? dangerLevelConfig = HonamiStoryConfig.Instance.GetDangerLevelConfig(this.CurDangerLv);
@@ -493,7 +493,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(6), dangerLevelConfig.Value.FallQuaId, Array.Empty<object>());
 	}
 
-	// Token: 0x0600F256 RID: 62038 RVA: 0x003A628C File Offset: 0x003A448C
+	// Token: 0x0600C675 RID: 50805 RVA: 0x003B1D8C File Offset: 0x003AFF8C
 	private void CheckBuySafeOrTowerLogShow()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(16);
@@ -536,7 +536,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(17), "HonamiStory_DepartAnytime", Array.Empty<object>());
 	}
 
-	// Token: 0x0600F257 RID: 62039 RVA: 0x003A646C File Offset: 0x003A466C
+	// Token: 0x0600C676 RID: 50806 RVA: 0x003B1F6C File Offset: 0x003B016C
 	private void RefreshCurDangerLvInfo()
 	{
 		UUIButtonComponent button = base.GetButton(13);
@@ -608,7 +608,7 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		base.SetTextureByPath(path, texture2, null, null);
 	}
 
-	// Token: 0x0600F258 RID: 62040 RVA: 0x003A66EE File Offset: 0x003A48EE
+	// Token: 0x0600C677 RID: 50807 RVA: 0x003B21EE File Offset: 0x003B03EE
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -619,94 +619,94 @@ public class HonamiStoryLevelInfoView : UiViewBase
 		this.SeqPlayer = null;
 	}
 
-	// Token: 0x04007015 RID: 28693
+	// Token: 0x040070F6 RID: 28918
 	[StaticVariableRuleIgnore]
 	private static readonly FColor safeColor = FColor.FromHex("#59859C");
 
-	// Token: 0x04007016 RID: 28694
+	// Token: 0x040070F7 RID: 28919
 	[StaticVariableRuleIgnore]
 	private static readonly FColor averageColor = FColor.FromHex("#6982D1");
 
-	// Token: 0x04007017 RID: 28695
+	// Token: 0x040070F8 RID: 28920
 	[StaticVariableRuleIgnore]
 	private static readonly FColor hardColor = FColor.FromHex("#A04661");
 
-	// Token: 0x04007018 RID: 28696
+	// Token: 0x040070F9 RID: 28921
 	private int MinHonamiLv;
 
-	// Token: 0x04007019 RID: 28697
+	// Token: 0x040070FA RID: 28922
 	private int MaxHonamiLv;
 
-	// Token: 0x0400701A RID: 28698
+	// Token: 0x040070FB RID: 28923
 	private int MinTowerLv;
 
-	// Token: 0x0400701B RID: 28699
+	// Token: 0x040070FC RID: 28924
 	private int MaxTowerLv;
 
-	// Token: 0x0400701C RID: 28700
+	// Token: 0x040070FD RID: 28925
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400701D RID: 28701
+	// Token: 0x040070FE RID: 28926
 	private HonamiStoryQuestPanel QuestPanel;
 
-	// Token: 0x0400701E RID: 28702
+	// Token: 0x040070FF RID: 28927
 	private TargetTog HonamiCityTog;
 
-	// Token: 0x0400701F RID: 28703
+	// Token: 0x04007100 RID: 28928
 	private TargetTog TowerTog;
 
-	// Token: 0x04007020 RID: 28704
+	// Token: 0x04007101 RID: 28929
 	private BtnGo BtnGo;
 
-	// Token: 0x04007021 RID: 28705
+	// Token: 0x04007102 RID: 28930
 	private PnlTeam PnlTeam;
 
-	// Token: 0x04007022 RID: 28706
+	// Token: 0x04007103 RID: 28931
 	[Nullable(1)]
 	private HonamiStoryBozaiTalkPanel TalkPanel;
 
-	// Token: 0x04007023 RID: 28707
+	// Token: 0x04007104 RID: 28932
 	[Nullable(1)]
 	private HonamiStoryProfitPanel PnlEnterProfit;
 
-	// Token: 0x04007024 RID: 28708
+	// Token: 0x04007105 RID: 28933
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x04007025 RID: 28709
+	// Token: 0x04007106 RID: 28934
 	[Nullable(1)]
 	private readonly Dictionary<int, EHonamiStoryOutDialogType> BoZaiTalkMap;
 
-	// Token: 0x04007026 RID: 28710
+	// Token: 0x04007107 RID: 28935
 	private HonamiStoryActivityData ActData;
 
-	// Token: 0x04007027 RID: 28711
+	// Token: 0x04007108 RID: 28936
 	private ETarget? CurTarget;
 
-	// Token: 0x04007028 RID: 28712
+	// Token: 0x04007109 RID: 28937
 	private int CurDangerLv;
 
-	// Token: 0x04007029 RID: 28713
+	// Token: 0x0400710A RID: 28938
 	private int CurHonamiDangerLv;
 
-	// Token: 0x0400702A RID: 28714
+	// Token: 0x0400710B RID: 28939
 	private int CurTowerDangerLv;
 
-	// Token: 0x0400702B RID: 28715
+	// Token: 0x0400710C RID: 28940
 	private bool IsBuySafe;
 
-	// Token: 0x0400702C RID: 28716
+	// Token: 0x0400710D RID: 28941
 	private EDangerLv? CurEnumDangerLv;
 
-	// Token: 0x0400702D RID: 28717
+	// Token: 0x0400710E RID: 28942
 	private bool IsOpenFreeSelect;
 
-	// Token: 0x0400702E RID: 28718
+	// Token: 0x0400710F RID: 28943
 	private bool IsOpenBuySafe;
 
-	// Token: 0x0400702F RID: 28719
+	// Token: 0x04007110 RID: 28944
 	private bool IsOpenTower;
 
-	// Token: 0x04007030 RID: 28720
+	// Token: 0x04007111 RID: 28945
 	[Nullable(1)]
 	private string TargetBgPath;
 }

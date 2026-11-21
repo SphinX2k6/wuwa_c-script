@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E02 RID: 7682
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002035 RID: 8245
 	public class ISequenceInteractStage
 	{
-		// Token: 0x0600A459 RID: 42073 RVA: 0x00174C24 File Offset: 0x00172E24
+		// Token: 0x0600AF01 RID: 44801 RVA: 0x0018A62C File Offset: 0x0018882C
 		private ISequenceInteractStage_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A45A RID: 42074 RVA: 0x00174C5C File Offset: 0x00172E5C
+		// Token: 0x0600AF02 RID: 44802 RVA: 0x0018A664 File Offset: 0x00188864
 		public static ISequenceInteractStage Create([Nullable(2)] ISequenceInteractStage instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A45B RID: 42075 RVA: 0x00174C6F File Offset: 0x00172E6F
+		// Token: 0x0600AF03 RID: 44803 RVA: 0x0018A677 File Offset: 0x00188877
 		public static ISequenceInteractStage CreateFromSetValue([Nullable(2)] ISequenceInteractStage_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A45C RID: 42076 RVA: 0x00174C82 File Offset: 0x00172E82
+		// Token: 0x0600AF04 RID: 44804 RVA: 0x0018A68A File Offset: 0x0018888A
 		public ISequenceInteractStage_SetValue ToSetValue()
 		{
 			return new ISequenceInteractStage_SetValue
@@ -63,20 +61,20 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003280 RID: 12928
-		// (get) Token: 0x0600A45D RID: 42077 RVA: 0x00174CB9 File Offset: 0x00172EB9
-		// (set) Token: 0x0600A45E RID: 42078 RVA: 0x00174CE0 File Offset: 0x00172EE0
+		// Token: 0x1700353F RID: 13631
+		// (get) Token: 0x0600AF05 RID: 44805 RVA: 0x0018A6C1 File Offset: 0x001888C1
+		// (set) Token: 0x0600AF06 RID: 44806 RVA: 0x0018A6E8 File Offset: 0x001888E8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IInteractEffect> EnterStageEffects
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -94,7 +92,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -102,9 +100,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003281 RID: 12929
-		// (get) Token: 0x0600A45F RID: 42079 RVA: 0x00174CF0 File Offset: 0x00172EF0
-		// (set) Token: 0x0600A460 RID: 42080 RVA: 0x00174D83 File Offset: 0x00172F83
+		// Token: 0x17003540 RID: 13632
+		// (get) Token: 0x0600AF07 RID: 44807 RVA: 0x0018A6F8 File Offset: 0x001888F8
+		// (set) Token: 0x0600AF08 RID: 44808 RVA: 0x0018A78B File Offset: 0x0018898B
 		public virtual List<IInteractPoint> InteractPoints
 		{
 			get
@@ -140,9 +138,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003282 RID: 12930
-		// (get) Token: 0x0600A461 RID: 42081 RVA: 0x00174D98 File Offset: 0x00172F98
-		// (set) Token: 0x0600A462 RID: 42082 RVA: 0x00174DBF File Offset: 0x00172FBF
+		// Token: 0x17003541 RID: 13633
+		// (get) Token: 0x0600AF09 RID: 44809 RVA: 0x0018A7A0 File Offset: 0x001889A0
+		// (set) Token: 0x0600AF0A RID: 44810 RVA: 0x0018A7C7 File Offset: 0x001889C7
 		[Nullable(2)]
 		public virtual string UiTipText
 		{
@@ -167,9 +165,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003283 RID: 12931
-		// (get) Token: 0x0600A463 RID: 42083 RVA: 0x00174DD0 File Offset: 0x00172FD0
-		// (set) Token: 0x0600A464 RID: 42084 RVA: 0x00174E0A File Offset: 0x0017300A
+		// Token: 0x17003542 RID: 13634
+		// (get) Token: 0x0600AF0B RID: 44811 RVA: 0x0018A7D8 File Offset: 0x001889D8
+		// (set) Token: 0x0600AF0C RID: 44812 RVA: 0x0018A812 File Offset: 0x00188A12
 		public virtual bool? IsResetAfterStageEnd
 		{
 			get
@@ -191,18 +189,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400626B RID: 25195
+		// Token: 0x04006842 RID: 26690
 		[Nullable(2)]
 		protected ISequenceInteractStage FbInstance;
 
-		// Token: 0x0400626C RID: 25196
+		// Token: 0x04006843 RID: 26691
 		[Nullable(2)]
 		protected ISequenceInteractStage_SetValue PocoInterface;
 
-		// Token: 0x0400626D RID: 25197
+		// Token: 0x04006844 RID: 26692
 		private List<IInteractPoint> _InteractPointsCache;
 
-		// Token: 0x0400626E RID: 25198
+		// Token: 0x04006845 RID: 26693
 		private bool _InteractPointsInited;
 	}
 }

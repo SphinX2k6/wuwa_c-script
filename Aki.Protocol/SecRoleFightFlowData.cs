@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020011B3 RID: 4531
+	// Token: 0x020011ED RID: 4589
 	public sealed class SecRoleFightFlowData : IMessage<SecRoleFightFlowData>, IMessage, IEquatable<SecRoleFightFlowData>, IDeepCloneable<SecRoleFightFlowData>, IBufferMessage
 	{
-		// Token: 0x0601827F RID: 98943 RVA: 0x00382E1E File Offset: 0x0038101E
+		// Token: 0x06018820 RID: 100384 RVA: 0x00392186 File Offset: 0x00390386
 		[NullableContext(1)]
 		public static SecRoleFightFlowData Create()
 		{
 			return new SecRoleFightFlowData();
 		}
 
-		// Token: 0x17005144 RID: 20804
-		// (get) Token: 0x06018280 RID: 98944 RVA: 0x00382E25 File Offset: 0x00381025
+		// Token: 0x170052B0 RID: 21168
+		// (get) Token: 0x06018821 RID: 100385 RVA: 0x0039218D File Offset: 0x0039038D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<SecRoleFightFlowData> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005145 RID: 20805
-		// (get) Token: 0x06018281 RID: 98945 RVA: 0x00382E2C File Offset: 0x0038102C
+		// Token: 0x170052B1 RID: 21169
+		// (get) Token: 0x06018822 RID: 100386 RVA: 0x00392194 File Offset: 0x00390394
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005146 RID: 20806
-		// (get) Token: 0x06018282 RID: 98946 RVA: 0x00382E2F File Offset: 0x0038102F
+		// Token: 0x170052B2 RID: 21170
+		// (get) Token: 0x06018823 RID: 100387 RVA: 0x00392197 File Offset: 0x00390397
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018283 RID: 98947 RVA: 0x00382E36 File Offset: 0x00381036
+		// Token: 0x06018824 RID: 100388 RVA: 0x0039219E File Offset: 0x0039039E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SecRoleFightFlowData()
 		{
 		}
 
-		// Token: 0x06018284 RID: 98948 RVA: 0x00382E4C File Offset: 0x0038104C
+		// Token: 0x06018825 RID: 100389 RVA: 0x003921B4 File Offset: 0x003903B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SecRoleFightFlowData(SecRoleFightFlowData other) : this()
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06018285 RID: 98949 RVA: 0x00382F5D File Offset: 0x0038115D
+		// Token: 0x06018826 RID: 100390 RVA: 0x003922C5 File Offset: 0x003904C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SecRoleFightFlowData Clone()
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			return new SecRoleFightFlowData(this);
 		}
 
-		// Token: 0x17005147 RID: 20807
-		// (get) Token: 0x06018286 RID: 98950 RVA: 0x00382F65 File Offset: 0x00381165
-		// (set) Token: 0x06018287 RID: 98951 RVA: 0x00382F6D File Offset: 0x0038116D
+		// Token: 0x170052B3 RID: 21171
+		// (get) Token: 0x06018827 RID: 100391 RVA: 0x003922CD File Offset: 0x003904CD
+		// (set) Token: 0x06018828 RID: 100392 RVA: 0x003922D5 File Offset: 0x003904D5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SrvFighterID
@@ -112,9 +112,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005148 RID: 20808
-		// (get) Token: 0x06018288 RID: 98952 RVA: 0x00382F76 File Offset: 0x00381176
-		// (set) Token: 0x06018289 RID: 98953 RVA: 0x00382F7E File Offset: 0x0038117E
+		// Token: 0x170052B4 RID: 21172
+		// (get) Token: 0x06018829 RID: 100393 RVA: 0x003922DE File Offset: 0x003904DE
+		// (set) Token: 0x0601882A RID: 100394 RVA: 0x003922E6 File Offset: 0x003904E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SrvFighterInfo FighterInfoMax
@@ -129,9 +129,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005149 RID: 20809
-		// (get) Token: 0x0601828A RID: 98954 RVA: 0x00382F87 File Offset: 0x00381187
-		// (set) Token: 0x0601828B RID: 98955 RVA: 0x00382F8F File Offset: 0x0038118F
+		// Token: 0x170052B5 RID: 21173
+		// (get) Token: 0x0601882B RID: 100395 RVA: 0x003922EF File Offset: 0x003904EF
+		// (set) Token: 0x0601882C RID: 100396 RVA: 0x003922F7 File Offset: 0x003904F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long ResidentTimeTotal
@@ -146,9 +146,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700514A RID: 20810
-		// (get) Token: 0x0601828C RID: 98956 RVA: 0x00382F98 File Offset: 0x00381198
-		// (set) Token: 0x0601828D RID: 98957 RVA: 0x00382FA0 File Offset: 0x003811A0
+		// Token: 0x170052B6 RID: 21174
+		// (get) Token: 0x0601882D RID: 100397 RVA: 0x00392300 File Offset: 0x00390500
+		// (set) Token: 0x0601882E RID: 100398 RVA: 0x00392308 File Offset: 0x00390508
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long RoundFighterDpsTotal
@@ -163,9 +163,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700514B RID: 20811
-		// (get) Token: 0x0601828E RID: 98958 RVA: 0x00382FA9 File Offset: 0x003811A9
-		// (set) Token: 0x0601828F RID: 98959 RVA: 0x00382FB1 File Offset: 0x003811B1
+		// Token: 0x170052B7 RID: 21175
+		// (get) Token: 0x0601882F RID: 100399 RVA: 0x00392311 File Offset: 0x00390511
+		// (set) Token: 0x06018830 RID: 100400 RVA: 0x00392319 File Offset: 0x00390519
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundFighterDpsCount
@@ -180,9 +180,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700514C RID: 20812
-		// (get) Token: 0x06018290 RID: 98960 RVA: 0x00382FBA File Offset: 0x003811BA
-		// (set) Token: 0x06018291 RID: 98961 RVA: 0x00382FC2 File Offset: 0x003811C2
+		// Token: 0x170052B8 RID: 21176
+		// (get) Token: 0x06018831 RID: 100401 RVA: 0x00392322 File Offset: 0x00390522
+		// (set) Token: 0x06018832 RID: 100402 RVA: 0x0039232A File Offset: 0x0039052A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundFighterAtkMissTotal
@@ -197,9 +197,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700514D RID: 20813
-		// (get) Token: 0x06018292 RID: 98962 RVA: 0x00382FCB File Offset: 0x003811CB
-		// (set) Token: 0x06018293 RID: 98963 RVA: 0x00382FD3 File Offset: 0x003811D3
+		// Token: 0x170052B9 RID: 21177
+		// (get) Token: 0x06018833 RID: 100403 RVA: 0x00392333 File Offset: 0x00390533
+		// (set) Token: 0x06018834 RID: 100404 RVA: 0x0039233B File Offset: 0x0039053B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundFighterDamage1Max
@@ -214,9 +214,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700514E RID: 20814
-		// (get) Token: 0x06018294 RID: 98964 RVA: 0x00382FDC File Offset: 0x003811DC
-		// (set) Token: 0x06018295 RID: 98965 RVA: 0x00382FE4 File Offset: 0x003811E4
+		// Token: 0x170052BA RID: 21178
+		// (get) Token: 0x06018835 RID: 100405 RVA: 0x00392344 File Offset: 0x00390544
+		// (set) Token: 0x06018836 RID: 100406 RVA: 0x0039234C File Offset: 0x0039054C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundFighterDamage1Min
@@ -231,9 +231,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700514F RID: 20815
-		// (get) Token: 0x06018296 RID: 98966 RVA: 0x00382FED File Offset: 0x003811ED
-		// (set) Token: 0x06018297 RID: 98967 RVA: 0x00382FF5 File Offset: 0x003811F5
+		// Token: 0x170052BB RID: 21179
+		// (get) Token: 0x06018837 RID: 100407 RVA: 0x00392355 File Offset: 0x00390555
+		// (set) Token: 0x06018838 RID: 100408 RVA: 0x0039235D File Offset: 0x0039055D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundFighterPlayerCritCount
@@ -248,9 +248,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005150 RID: 20816
-		// (get) Token: 0x06018298 RID: 98968 RVA: 0x00382FFE File Offset: 0x003811FE
-		// (set) Token: 0x06018299 RID: 98969 RVA: 0x00383006 File Offset: 0x00381206
+		// Token: 0x170052BC RID: 21180
+		// (get) Token: 0x06018839 RID: 100409 RVA: 0x00392366 File Offset: 0x00390566
+		// (set) Token: 0x0601883A RID: 100410 RVA: 0x0039236E File Offset: 0x0039056E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundFighterDamage2Max
@@ -265,9 +265,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005151 RID: 20817
-		// (get) Token: 0x0601829A RID: 98970 RVA: 0x0038300F File Offset: 0x0038120F
-		// (set) Token: 0x0601829B RID: 98971 RVA: 0x00383017 File Offset: 0x00381217
+		// Token: 0x170052BD RID: 21181
+		// (get) Token: 0x0601883B RID: 100411 RVA: 0x00392377 File Offset: 0x00390577
+		// (set) Token: 0x0601883C RID: 100412 RVA: 0x0039237F File Offset: 0x0039057F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundFighterDamage2Min
@@ -282,9 +282,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005152 RID: 20818
-		// (get) Token: 0x0601829C RID: 98972 RVA: 0x00383020 File Offset: 0x00381220
-		// (set) Token: 0x0601829D RID: 98973 RVA: 0x00383028 File Offset: 0x00381228
+		// Token: 0x170052BE RID: 21182
+		// (get) Token: 0x0601883D RID: 100413 RVA: 0x00392388 File Offset: 0x00390588
+		// (set) Token: 0x0601883E RID: 100414 RVA: 0x00392390 File Offset: 0x00390590
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundFighterButtonClickCountATK
@@ -299,9 +299,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005153 RID: 20819
-		// (get) Token: 0x0601829E RID: 98974 RVA: 0x00383031 File Offset: 0x00381231
-		// (set) Token: 0x0601829F RID: 98975 RVA: 0x00383039 File Offset: 0x00381239
+		// Token: 0x170052BF RID: 21183
+		// (get) Token: 0x0601883F RID: 100415 RVA: 0x00392399 File Offset: 0x00390599
+		// (set) Token: 0x06018840 RID: 100416 RVA: 0x003923A1 File Offset: 0x003905A1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundFighterButtonClickCount1
@@ -316,9 +316,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005154 RID: 20820
-		// (get) Token: 0x060182A0 RID: 98976 RVA: 0x00383042 File Offset: 0x00381242
-		// (set) Token: 0x060182A1 RID: 98977 RVA: 0x0038304A File Offset: 0x0038124A
+		// Token: 0x170052C0 RID: 21184
+		// (get) Token: 0x06018841 RID: 100417 RVA: 0x003923AA File Offset: 0x003905AA
+		// (set) Token: 0x06018842 RID: 100418 RVA: 0x003923B2 File Offset: 0x003905B2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundFighterButtonClickCount2
@@ -333,9 +333,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005155 RID: 20821
-		// (get) Token: 0x060182A2 RID: 98978 RVA: 0x00383053 File Offset: 0x00381253
-		// (set) Token: 0x060182A3 RID: 98979 RVA: 0x0038305B File Offset: 0x0038125B
+		// Token: 0x170052C1 RID: 21185
+		// (get) Token: 0x06018843 RID: 100419 RVA: 0x003923BB File Offset: 0x003905BB
+		// (set) Token: 0x06018844 RID: 100420 RVA: 0x003923C3 File Offset: 0x003905C3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundFighterButtonClickCount3
@@ -350,9 +350,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005156 RID: 20822
-		// (get) Token: 0x060182A4 RID: 98980 RVA: 0x00383064 File Offset: 0x00381264
-		// (set) Token: 0x060182A5 RID: 98981 RVA: 0x0038306C File Offset: 0x0038126C
+		// Token: 0x170052C2 RID: 21186
+		// (get) Token: 0x06018845 RID: 100421 RVA: 0x003923CC File Offset: 0x003905CC
+		// (set) Token: 0x06018846 RID: 100422 RVA: 0x003923D4 File Offset: 0x003905D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundFighterButtonClickCountJump
@@ -367,9 +367,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005157 RID: 20823
-		// (get) Token: 0x060182A6 RID: 98982 RVA: 0x00383075 File Offset: 0x00381275
-		// (set) Token: 0x060182A7 RID: 98983 RVA: 0x0038307D File Offset: 0x0038127D
+		// Token: 0x170052C3 RID: 21187
+		// (get) Token: 0x06018847 RID: 100423 RVA: 0x003923DD File Offset: 0x003905DD
+		// (set) Token: 0x06018848 RID: 100424 RVA: 0x003923E5 File Offset: 0x003905E5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundFighterButtonClickCountDodge
@@ -384,8 +384,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005158 RID: 20824
-		// (get) Token: 0x060182A8 RID: 98984 RVA: 0x00383086 File Offset: 0x00381286
+		// Token: 0x170052C4 RID: 21188
+		// (get) Token: 0x06018849 RID: 100425 RVA: 0x003923EE File Offset: 0x003905EE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<Vector> PosList
@@ -396,7 +396,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060182A9 RID: 98985 RVA: 0x0038308E File Offset: 0x0038128E
+		// Token: 0x0601884A RID: 100426 RVA: 0x003923F6 File Offset: 0x003905F6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -404,7 +404,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SecRoleFightFlowData);
 		}
 
-		// Token: 0x060182AA RID: 98986 RVA: 0x0038309C File Offset: 0x0038129C
+		// Token: 0x0601884B RID: 100427 RVA: 0x00392404 File Offset: 0x00390604
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SecRoleFightFlowData other)
@@ -412,7 +412,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.SrvFighterID == other.SrvFighterID && object.Equals(this.FighterInfoMax, other.FighterInfoMax) && this.ResidentTimeTotal == other.ResidentTimeTotal && this.RoundFighterDpsTotal == other.RoundFighterDpsTotal && this.RoundFighterDpsCount == other.RoundFighterDpsCount && this.RoundFighterAtkMissTotal == other.RoundFighterAtkMissTotal && this.RoundFighterDamage1Max == other.RoundFighterDamage1Max && this.RoundFighterDamage1Min == other.RoundFighterDamage1Min && this.RoundFighterPlayerCritCount == other.RoundFighterPlayerCritCount && this.RoundFighterDamage2Max == other.RoundFighterDamage2Max && this.RoundFighterDamage2Min == other.RoundFighterDamage2Min && this.RoundFighterButtonClickCountATK == other.RoundFighterButtonClickCountATK && this.RoundFighterButtonClickCount1 == other.RoundFighterButtonClickCount1 && this.RoundFighterButtonClickCount2 == other.RoundFighterButtonClickCount2 && this.RoundFighterButtonClickCount3 == other.RoundFighterButtonClickCount3 && this.RoundFighterButtonClickCountJump == other.RoundFighterButtonClickCountJump && this.RoundFighterButtonClickCountDodge == other.RoundFighterButtonClickCountDodge && this.posList_.Equals(other.posList_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060182AB RID: 98987 RVA: 0x003831F0 File Offset: 0x003813F0
+		// Token: 0x0601884C RID: 100428 RVA: 0x00392558 File Offset: 0x00390758
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -494,7 +494,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060182AC RID: 98988 RVA: 0x003833CA File Offset: 0x003815CA
+		// Token: 0x0601884D RID: 100429 RVA: 0x00392732 File Offset: 0x00390932
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -502,7 +502,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060182AD RID: 98989 RVA: 0x003833D7 File Offset: 0x003815D7
+		// Token: 0x0601884E RID: 100430 RVA: 0x0039273F File Offset: 0x0039093F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -510,7 +510,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060182AE RID: 98990 RVA: 0x003833E0 File Offset: 0x003815E0
+		// Token: 0x0601884F RID: 100431 RVA: 0x00392748 File Offset: 0x00390948
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -607,7 +607,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060182AF RID: 98991 RVA: 0x003835F8 File Offset: 0x003817F8
+		// Token: 0x06018850 RID: 100432 RVA: 0x00392960 File Offset: 0x00390B60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -689,7 +689,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060182B0 RID: 98992 RVA: 0x003837CC File Offset: 0x003819CC
+		// Token: 0x06018851 RID: 100433 RVA: 0x00392B34 File Offset: 0x00390D34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SecRoleFightFlowData other)
@@ -774,7 +774,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060182B1 RID: 98993 RVA: 0x00383971 File Offset: 0x00381B71
+		// Token: 0x06018852 RID: 100434 RVA: 0x00392CD9 File Offset: 0x00390ED9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -782,7 +782,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060182B2 RID: 98994 RVA: 0x0038397C File Offset: 0x00381B7C
+		// Token: 0x06018853 RID: 100435 RVA: 0x00392CE4 File Offset: 0x00390EE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -925,121 +925,121 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008F0F RID: 36623
+		// Token: 0x040091A2 RID: 37282
 		private static readonly MessageParser<SecRoleFightFlowData> _parser = new MessageParser<SecRoleFightFlowData>(() => new SecRoleFightFlowData());
 
-		// Token: 0x04008F10 RID: 36624
+		// Token: 0x040091A3 RID: 37283
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008F11 RID: 36625
+		// Token: 0x040091A4 RID: 37284
 		public const int SrvFighterIDFieldNumber = 1;
 
-		// Token: 0x04008F12 RID: 36626
+		// Token: 0x040091A5 RID: 37285
 		private int srvFighterID_;
 
-		// Token: 0x04008F13 RID: 36627
+		// Token: 0x040091A6 RID: 37286
 		public const int FighterInfoMaxFieldNumber = 2;
 
-		// Token: 0x04008F14 RID: 36628
+		// Token: 0x040091A7 RID: 37287
 		private SrvFighterInfo fighterInfoMax_;
 
-		// Token: 0x04008F15 RID: 36629
+		// Token: 0x040091A8 RID: 37288
 		public const int ResidentTimeTotalFieldNumber = 3;
 
-		// Token: 0x04008F16 RID: 36630
+		// Token: 0x040091A9 RID: 37289
 		private long residentTimeTotal_;
 
-		// Token: 0x04008F17 RID: 36631
+		// Token: 0x040091AA RID: 37290
 		public const int RoundFighterDpsTotalFieldNumber = 4;
 
-		// Token: 0x04008F18 RID: 36632
+		// Token: 0x040091AB RID: 37291
 		private long roundFighterDpsTotal_;
 
-		// Token: 0x04008F19 RID: 36633
+		// Token: 0x040091AC RID: 37292
 		public const int RoundFighterDpsCountFieldNumber = 5;
 
-		// Token: 0x04008F1A RID: 36634
+		// Token: 0x040091AD RID: 37293
 		private int roundFighterDpsCount_;
 
-		// Token: 0x04008F1B RID: 36635
+		// Token: 0x040091AE RID: 37294
 		public const int RoundFighterAtkMissTotalFieldNumber = 6;
 
-		// Token: 0x04008F1C RID: 36636
+		// Token: 0x040091AF RID: 37295
 		private int roundFighterAtkMissTotal_;
 
-		// Token: 0x04008F1D RID: 36637
+		// Token: 0x040091B0 RID: 37296
 		public const int RoundFighterDamage1MaxFieldNumber = 7;
 
-		// Token: 0x04008F1E RID: 36638
+		// Token: 0x040091B1 RID: 37297
 		private int roundFighterDamage1Max_;
 
-		// Token: 0x04008F1F RID: 36639
+		// Token: 0x040091B2 RID: 37298
 		public const int RoundFighterDamage1MinFieldNumber = 8;
 
-		// Token: 0x04008F20 RID: 36640
+		// Token: 0x040091B3 RID: 37299
 		private int roundFighterDamage1Min_;
 
-		// Token: 0x04008F21 RID: 36641
+		// Token: 0x040091B4 RID: 37300
 		public const int RoundFighterPlayerCritCountFieldNumber = 9;
 
-		// Token: 0x04008F22 RID: 36642
+		// Token: 0x040091B5 RID: 37301
 		private int roundFighterPlayerCritCount_;
 
-		// Token: 0x04008F23 RID: 36643
+		// Token: 0x040091B6 RID: 37302
 		public const int RoundFighterDamage2MaxFieldNumber = 10;
 
-		// Token: 0x04008F24 RID: 36644
+		// Token: 0x040091B7 RID: 37303
 		private int roundFighterDamage2Max_;
 
-		// Token: 0x04008F25 RID: 36645
+		// Token: 0x040091B8 RID: 37304
 		public const int RoundFighterDamage2MinFieldNumber = 11;
 
-		// Token: 0x04008F26 RID: 36646
+		// Token: 0x040091B9 RID: 37305
 		private int roundFighterDamage2Min_;
 
-		// Token: 0x04008F27 RID: 36647
+		// Token: 0x040091BA RID: 37306
 		public const int RoundFighterButtonClickCountATKFieldNumber = 12;
 
-		// Token: 0x04008F28 RID: 36648
+		// Token: 0x040091BB RID: 37307
 		private int roundFighterButtonClickCountATK_;
 
-		// Token: 0x04008F29 RID: 36649
+		// Token: 0x040091BC RID: 37308
 		public const int RoundFighterButtonClickCount1FieldNumber = 13;
 
-		// Token: 0x04008F2A RID: 36650
+		// Token: 0x040091BD RID: 37309
 		private int roundFighterButtonClickCount1_;
 
-		// Token: 0x04008F2B RID: 36651
+		// Token: 0x040091BE RID: 37310
 		public const int RoundFighterButtonClickCount2FieldNumber = 14;
 
-		// Token: 0x04008F2C RID: 36652
+		// Token: 0x040091BF RID: 37311
 		private int roundFighterButtonClickCount2_;
 
-		// Token: 0x04008F2D RID: 36653
+		// Token: 0x040091C0 RID: 37312
 		public const int RoundFighterButtonClickCount3FieldNumber = 15;
 
-		// Token: 0x04008F2E RID: 36654
+		// Token: 0x040091C1 RID: 37313
 		private int roundFighterButtonClickCount3_;
 
-		// Token: 0x04008F2F RID: 36655
+		// Token: 0x040091C2 RID: 37314
 		public const int RoundFighterButtonClickCountJumpFieldNumber = 16;
 
-		// Token: 0x04008F30 RID: 36656
+		// Token: 0x040091C3 RID: 37315
 		private int roundFighterButtonClickCountJump_;
 
-		// Token: 0x04008F31 RID: 36657
+		// Token: 0x040091C4 RID: 37316
 		public const int RoundFighterButtonClickCountDodgeFieldNumber = 17;
 
-		// Token: 0x04008F32 RID: 36658
+		// Token: 0x040091C5 RID: 37317
 		private int roundFighterButtonClickCountDodge_;
 
-		// Token: 0x04008F33 RID: 36659
+		// Token: 0x040091C6 RID: 37318
 		public const int PosListFieldNumber = 18;
 
-		// Token: 0x04008F34 RID: 36660
+		// Token: 0x040091C7 RID: 37319
 		private static readonly FieldCodec<Vector> _repeated_posList_codec = FieldCodec.ForMessage<Vector>(146U, Vector.Parser);
 
-		// Token: 0x04008F35 RID: 36661
+		// Token: 0x040091C8 RID: 37320
 		private readonly RepeatedField<Vector> posList_ = new RepeatedField<Vector>();
 	}
 }

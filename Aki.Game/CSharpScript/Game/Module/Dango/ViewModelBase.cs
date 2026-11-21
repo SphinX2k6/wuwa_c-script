@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Dango
 {
-	// Token: 0x02005AD5 RID: 23253
+	// Token: 0x02004AB6 RID: 19126
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ViewModelBase<[Nullable(2)] T>
 	{
-		// Token: 0x0603AE4C RID: 241228 RVA: 0x00E0AC76 File Offset: 0x00E08E76
+		// Token: 0x0602FDBE RID: 196030 RVA: 0x00D5B95E File Offset: 0x00D59B5E
 		protected void SetData(T key, [Nullable(2)] object value, bool notNotify = false)
 		{
 			this.DataMap[key] = value;
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Dango
 			}
 		}
 
-		// Token: 0x0603AE4D RID: 241229 RVA: 0x00E0AC90 File Offset: 0x00E08E90
+		// Token: 0x0602FDBF RID: 196031 RVA: 0x00D5B978 File Offset: 0x00D59B78
 		[return: Nullable(2)]
 		protected object GetData(T key)
 		{
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Dango
 			return null;
 		}
 
-		// Token: 0x0603AE4E RID: 241230 RVA: 0x00E0ACB0 File Offset: 0x00E08EB0
+		// Token: 0x0602FDC0 RID: 196032 RVA: 0x00D5B998 File Offset: 0x00D59B98
 		public void Bind(TCallback<T> callback)
 		{
 			if (!this.CallbackList.Contains(callback))
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Dango
 			}
 		}
 
-		// Token: 0x0603AE4F RID: 241231 RVA: 0x00E0ACCC File Offset: 0x00E08ECC
+		// Token: 0x0602FDC1 RID: 196033 RVA: 0x00D5B9B4 File Offset: 0x00D59BB4
 		public void UnBind(TCallback<T> callback)
 		{
 			int num = this.CallbackList.IndexOf(callback);
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.Dango
 			}
 		}
 
-		// Token: 0x0603AE50 RID: 241232 RVA: 0x00E0ACF6 File Offset: 0x00E08EF6
+		// Token: 0x0602FDC2 RID: 196034 RVA: 0x00D5B9DE File Offset: 0x00D59BDE
 		public void Clear()
 		{
 			this.CallbackList = new List<TCallback<T>>();
 		}
 
-		// Token: 0x0603AE51 RID: 241233 RVA: 0x00E0AD04 File Offset: 0x00E08F04
+		// Token: 0x0602FDC3 RID: 196035 RVA: 0x00D5B9EC File Offset: 0x00D59BEC
 		protected void Notify(T key)
 		{
 			foreach (TCallback<T> tcallback in this.CallbackList)
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Dango
 			}
 		}
 
-		// Token: 0x0401EBCE RID: 125902
+		// Token: 0x0401968A RID: 104074
 		[Nullable(new byte[]
 		{
 			1,
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Dango
 		})]
 		protected readonly Dictionary<T, object> DataMap = new Dictionary<T, object>();
 
-		// Token: 0x0401EBCF RID: 125903
+		// Token: 0x0401968B RID: 104075
 		protected List<TCallback<T>> CallbackList = new List<TCallback<T>>();
 	}
 }

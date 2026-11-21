@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F97 RID: 3991
+	// Token: 0x0200107E RID: 4222
 	public struct RandomSummon : IFlatbufferObject
 	{
-		// Token: 0x17002D03 RID: 11523
-		// (get) Token: 0x0600B91B RID: 47387 RVA: 0x002D78C8 File Offset: 0x002D5AC8
+		// Token: 0x17002D7B RID: 11643
+		// (get) Token: 0x0600BF58 RID: 48984 RVA: 0x002F40E0 File Offset: 0x002F22E0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B91C RID: 47388 RVA: 0x002D78D5 File Offset: 0x002D5AD5
+		// Token: 0x0600BF59 RID: 48985 RVA: 0x002F40ED File Offset: 0x002F22ED
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B91D RID: 47389 RVA: 0x002D78DC File Offset: 0x002D5ADC
+		// Token: 0x0600BF5A RID: 48986 RVA: 0x002F40F4 File Offset: 0x002F22F4
 		public static RandomSummon GetRootAsRandomSummon(ByteBuffer _bb)
 		{
 			return RandomSummon.GetRootAsRandomSummon(_bb, default(RandomSummon));
 		}
 
-		// Token: 0x0600B91E RID: 47390 RVA: 0x002D78F8 File Offset: 0x002D5AF8
+		// Token: 0x0600BF5B RID: 48987 RVA: 0x002F4110 File Offset: 0x002F2310
 		public static RandomSummon GetRootAsRandomSummon(ByteBuffer _bb, RandomSummon obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B91F RID: 47391 RVA: 0x002D7915 File Offset: 0x002D5B15
+		// Token: 0x0600BF5C RID: 48988 RVA: 0x002F412D File Offset: 0x002F232D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B920 RID: 47392 RVA: 0x002D7924 File Offset: 0x002D5B24
+		// Token: 0x0600BF5D RID: 48989 RVA: 0x002F413C File Offset: 0x002F233C
 		public RandomSummon __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002D04 RID: 11524
-		// (get) Token: 0x0600B921 RID: 47393 RVA: 0x002D7934 File Offset: 0x002D5B34
+		// Token: 0x17002D7C RID: 11644
+		// (get) Token: 0x0600BF5E RID: 48990 RVA: 0x002F414C File Offset: 0x002F234C
 		public int Id
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B922 RID: 47394 RVA: 0x002D7970 File Offset: 0x002D5B70
+		// Token: 0x0600BF5F RID: 48991 RVA: 0x002F4188 File Offset: 0x002F2388
 		public IntArray? Random(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.Config
 			return new IntArray?(default(IntArray).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17002D05 RID: 11525
-		// (get) Token: 0x0600B923 RID: 47395 RVA: 0x002D79D0 File Offset: 0x002D5BD0
+		// Token: 0x17002D7D RID: 11645
+		// (get) Token: 0x0600BF60 RID: 48992 RVA: 0x002F41E8 File Offset: 0x002F23E8
 		public int RandomLength
 		{
 			get
@@ -91,8 +91,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002D06 RID: 11526
-		// (get) Token: 0x0600B924 RID: 47396 RVA: 0x002D79FC File Offset: 0x002D5BFC
+		// Token: 0x17002D7E RID: 11646
+		// (get) Token: 0x0600BF61 RID: 48993 RVA: 0x002F4214 File Offset: 0x002F2414
 		public int Count
 		{
 			get
@@ -106,24 +106,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B925 RID: 47397 RVA: 0x002D7A38 File Offset: 0x002D5C38
+		// Token: 0x0600BF62 RID: 48994 RVA: 0x002F4250 File Offset: 0x002F2450
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RandomIter()或GetRandomBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly IntArray[] Random()
+		public IntArray[] Random()
 		{
 			return this.RandomIter().ToArray<IntArray>();
 		}
 
-		// Token: 0x0600B926 RID: 47398 RVA: 0x002D7A45 File Offset: 0x002D5C45
+		// Token: 0x0600BF63 RID: 48995 RVA: 0x002F425D File Offset: 0x002F245D
 		[NullableContext(1)]
-		public readonly IEnumerable<IntArray> RandomIter()
+		public IEnumerable<IntArray> RandomIter()
 		{
 			RandomSummon.<RandomIter>d__16 <RandomIter>d__ = new RandomSummon.<RandomIter>d__16(-2);
 			<RandomIter>d__.<>3__<>4__this = this;
 			return <RandomIter>d__;
 		}
 
-		// Token: 0x04005067 RID: 20583
+		// Token: 0x0400564E RID: 22094
 		private Table __p;
 	}
 }

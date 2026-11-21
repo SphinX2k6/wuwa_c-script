@@ -2,32 +2,32 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043DD RID: 17373
+	// Token: 0x02004842 RID: 18498
 	public enum ECamp : byte
 	{
-		// Token: 0x0400C244 RID: 49732
+		// Token: 0x0400CC68 RID: 52328
 		Player,
-		// Token: 0x0400C245 RID: 49733
+		// Token: 0x0400CC69 RID: 52329
 		Monster,
-		// Token: 0x0400C246 RID: 49734
+		// Token: 0x0400CC6A RID: 52330
 		CommonFriend,
-		// Token: 0x0400C247 RID: 49735
+		// Token: 0x0400CC6B RID: 52331
 		liufangzhe_e,
-		// Token: 0x0400C248 RID: 49736
+		// Token: 0x0400CC6C RID: 52332
 		liufangzhe_f,
-		// Token: 0x0400C249 RID: 49737
+		// Token: 0x0400CC6D RID: 52333
 		Animal_attack,
-		// Token: 0x0400C24A RID: 49738
+		// Token: 0x0400CC6E RID: 52334
 		Animal_unattack,
-		// Token: 0x0400C24B RID: 49739
+		// Token: 0x0400CC6F RID: 52335
 		Common_Enemy,
-		// Token: 0x0400C24C RID: 49740
+		// Token: 0x0400CC70 RID: 52336
 		Camp_yegui = 14,
-		// Token: 0x0400C24D RID: 49741
+		// Token: 0x0400CC71 RID: 52337
 		Camp_Fishingboat,
-		// Token: 0x0400C24E RID: 49742
+		// Token: 0x0400CC72 RID: 52338
 		Camp_FishingMonster,
-		// Token: 0x0400C24F RID: 49743
+		// Token: 0x0400CC73 RID: 52339
 		Common_enemypro
 	}
 }

@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A39 RID: 19001
+	// Token: 0x020039E1 RID: 14817
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseMonsterMarkItem : TrapDefenseMarkItem
 	{
-		// Token: 0x06031554 RID: 202068 RVA: 0x00B71400 File Offset: 0x00B6F600
+		// Token: 0x060262E4 RID: 156388 RVA: 0x00AB5374 File Offset: 0x00AB3574
 		[NullableContext(2)]
 		public TrapDefenseMonsterMarkItem(int markId, object extraParam = null) : base(markId, extraParam)
 		{
@@ -21,8 +21,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.EnemyTypeInner = ETrapDefenseEnemyType.Phantom;
 		}
 
-		// Token: 0x17007A40 RID: 31296
-		// (get) Token: 0x06031555 RID: 202069 RVA: 0x00B7143A File Offset: 0x00B6F63A
+		// Token: 0x17004DED RID: 19949
+		// (get) Token: 0x060262E5 RID: 156389 RVA: 0x00AB53AE File Offset: 0x00AB35AE
 		public override TrapDefenseDefine.ETrapDefenseMarkType MarkType
 		{
 			get
@@ -31,8 +31,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A41 RID: 31297
-		// (get) Token: 0x06031556 RID: 202070 RVA: 0x00B7143D File Offset: 0x00B6F63D
+		// Token: 0x17004DEE RID: 19950
+		// (get) Token: 0x060262E6 RID: 156390 RVA: 0x00AB53B1 File Offset: 0x00AB35B1
 		public override Vector WorldPosition
 		{
 			get
@@ -41,9 +41,9 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A42 RID: 31298
-		// (get) Token: 0x06031557 RID: 202071 RVA: 0x00B71445 File Offset: 0x00B6F645
-		// (set) Token: 0x06031558 RID: 202072 RVA: 0x00B7144D File Offset: 0x00B6F64D
+		// Token: 0x17004DEF RID: 19951
+		// (get) Token: 0x060262E7 RID: 156391 RVA: 0x00AB53B9 File Offset: 0x00AB35B9
+		// (set) Token: 0x060262E8 RID: 156392 RVA: 0x00AB53C1 File Offset: 0x00AB35C1
 		public ETrapDefenseEnemyType EnemyType
 		{
 			get
@@ -56,19 +56,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031559 RID: 202073 RVA: 0x00B71456 File Offset: 0x00B6F656
+		// Token: 0x060262E9 RID: 156393 RVA: 0x00AB53CA File Offset: 0x00AB35CA
 		protected override void OnInitialize()
 		{
 			this.EnableCachePosition = false;
 		}
 
-		// Token: 0x0603155A RID: 202074 RVA: 0x00B7145F File Offset: 0x00B6F65F
+		// Token: 0x060262EA RID: 156394 RVA: 0x00AB53D3 File Offset: 0x00AB35D3
 		public void SetWorldPosition(float x, float y, float z)
 		{
 			this.WorldPositionVector.Set((double)x, (double)y, (double)z);
 		}
 
-		// Token: 0x0401A5CD RID: 107981
+		// Token: 0x04014F1F RID: 85791
 		private ETrapDefenseEnemyType EnemyTypeInner = ETrapDefenseEnemyType.Phantom;
 	}
 }

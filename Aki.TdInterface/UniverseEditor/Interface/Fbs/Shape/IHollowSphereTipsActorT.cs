@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C20 RID: 15392
+	// Token: 0x0200402C RID: 16428
 	public class IHollowSphereTipsActorT
 	{
-		// Token: 0x170069F0 RID: 27120
-		// (get) Token: 0x060153C5 RID: 86981 RVA: 0x00313356 File Offset: 0x00311556
-		// (set) Token: 0x060153C6 RID: 86982 RVA: 0x0031335E File Offset: 0x0031155E
+		// Token: 0x17006F98 RID: 28568
+		// (get) Token: 0x060168BB RID: 92347 RVA: 0x00339EDE File Offset: 0x003380DE
+		// (set) Token: 0x060168BC RID: 92348 RVA: 0x00339EE6 File Offset: 0x003380E6
 		public ETipsActorType Type { get; set; }
 
-		// Token: 0x170069F1 RID: 27121
-		// (get) Token: 0x060153C7 RID: 86983 RVA: 0x00313367 File Offset: 0x00311567
-		// (set) Token: 0x060153C8 RID: 86984 RVA: 0x0031336F File Offset: 0x0031156F
+		// Token: 0x17006F99 RID: 28569
+		// (get) Token: 0x060168BD RID: 92349 RVA: 0x00339EEF File Offset: 0x003380EF
+		// (set) Token: 0x060168BE RID: 92350 RVA: 0x00339EF7 File Offset: 0x003380F7
 		public ETipsActorColorType ColorType { get; set; }
 
-		// Token: 0x170069F2 RID: 27122
-		// (get) Token: 0x060153C9 RID: 86985 RVA: 0x00313378 File Offset: 0x00311578
-		// (set) Token: 0x060153CA RID: 86986 RVA: 0x00313380 File Offset: 0x00311580
+		// Token: 0x17006F9A RID: 28570
+		// (get) Token: 0x060168BF RID: 92351 RVA: 0x00339F00 File Offset: 0x00338100
+		// (set) Token: 0x060168C0 RID: 92352 RVA: 0x00339F08 File Offset: 0x00338108
 		public float Radius { get; set; }
 
-		// Token: 0x170069F3 RID: 27123
-		// (get) Token: 0x060153CB RID: 86987 RVA: 0x00313389 File Offset: 0x00311589
-		// (set) Token: 0x060153CC RID: 86988 RVA: 0x00313391 File Offset: 0x00311591
+		// Token: 0x17006F9B RID: 28571
+		// (get) Token: 0x060168C1 RID: 92353 RVA: 0x00339F11 File Offset: 0x00338111
+		// (set) Token: 0x060168C2 RID: 92354 RVA: 0x00339F19 File Offset: 0x00338119
 		public float InnerRadius { get; set; }
 
-		// Token: 0x170069F4 RID: 27124
-		// (get) Token: 0x060153CD RID: 86989 RVA: 0x0031339A File Offset: 0x0031159A
-		// (set) Token: 0x060153CE RID: 86990 RVA: 0x003133A2 File Offset: 0x003115A2
+		// Token: 0x17006F9C RID: 28572
+		// (get) Token: 0x060168C3 RID: 92355 RVA: 0x00339F22 File Offset: 0x00338122
+		// (set) Token: 0x060168C4 RID: 92356 RVA: 0x00339F2A File Offset: 0x0033812A
 		public byte NullMask { get; set; }
 
-		// Token: 0x060153CF RID: 86991 RVA: 0x003133AB File Offset: 0x003115AB
+		// Token: 0x060168C5 RID: 92357 RVA: 0x00339F33 File Offset: 0x00338133
 		public IHollowSphereTipsActorT()
 		{
 			this.Type = ETipsActorType.Sphere;

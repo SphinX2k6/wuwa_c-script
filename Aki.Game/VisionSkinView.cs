@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -9,17 +8,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020024F5 RID: 9461
+// Token: 0x020019DC RID: 6620
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionSkinView : UiViewBase
 {
-	// Token: 0x06013069 RID: 77929 RVA: 0x004B5EFA File Offset: 0x004B40FA
+	// Token: 0x06010528 RID: 66856 RVA: 0x004C3BA2 File Offset: 0x004C1DA2
 	public VisionSkinView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601306A RID: 77930 RVA: 0x004B5F14 File Offset: 0x004B4114
+	// Token: 0x06010529 RID: 66857 RVA: 0x004C3BBC File Offset: 0x004C1DBC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +41,7 @@ public class VisionSkinView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601306B RID: 77931 RVA: 0x004B6048 File Offset: 0x004B4248
+	// Token: 0x0601052A RID: 66858 RVA: 0x004C3CF0 File Offset: 0x004C1EF0
 	protected override void OnStart()
 	{
 		UUIButtonComponent button = base.GetButton(1);
@@ -76,7 +75,7 @@ public class VisionSkinView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601306C RID: 77932 RVA: 0x004B618C File Offset: 0x004B438C
+	// Token: 0x0601052B RID: 66859 RVA: 0x004C3E34 File Offset: 0x004C2034
 	private void InitByUniqueId(int uniqueId)
 	{
 		this.CurrentUniqueId = uniqueId;
@@ -91,7 +90,7 @@ public class VisionSkinView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), monsterName, Array.Empty<object>());
 	}
 
-	// Token: 0x0601306D RID: 77933 RVA: 0x004B61FC File Offset: 0x004B43FC
+	// Token: 0x0601052C RID: 66860 RVA: 0x004C3EA4 File Offset: 0x004C20A4
 	private void InitByItemIdList(int[] itemIdList)
 	{
 		PhantomItem? phantomItemById = PhantomBattleConfig.Instance.GetPhantomItemById(itemIdList[0]);
@@ -119,19 +118,19 @@ public class VisionSkinView : UiViewBase
 		button2.RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x0601306E RID: 77934 RVA: 0x004B629A File Offset: 0x004B449A
+	// Token: 0x0601052D RID: 66861 RVA: 0x004C3F42 File Offset: 0x004C2142
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnVisionSkinEquip, new Action(this.RefreshItemCurrentEquipment));
 	}
 
-	// Token: 0x0601306F RID: 77935 RVA: 0x004B62B8 File Offset: 0x004B44B8
+	// Token: 0x0601052E RID: 66862 RVA: 0x004C3F60 File Offset: 0x004C2160
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnVisionSkinEquip, new Action(this.RefreshItemCurrentEquipment));
 	}
 
-	// Token: 0x06013070 RID: 77936 RVA: 0x004B62D6 File Offset: 0x004B44D6
+	// Token: 0x0601052F RID: 66863 RVA: 0x004C3F7E File Offset: 0x004C217E
 	protected override void OnBeforeShow()
 	{
 		if (this.CurrentMonsterId > 0)
@@ -146,7 +145,7 @@ public class VisionSkinView : UiViewBase
 		}
 	}
 
-	// Token: 0x06013071 RID: 77937 RVA: 0x004B6314 File Offset: 0x004B4514
+	// Token: 0x06010530 RID: 66864 RVA: 0x004C3FBC File Offset: 0x004C21BC
 	private void ShowByUniqueId(int uniqueId)
 	{
 		int[] phantomList = PhantomBattleModel.Instance.GetMonsterSkinListByMonsterId(uniqueId);
@@ -155,7 +154,7 @@ public class VisionSkinView : UiViewBase
 			return;
 		}
 		int selectIndex = 0;
-		selectIndex = ((this.CurrentEquipmentSkin != 0) ? phantomList.ToList<int>().IndexOf(this.CurrentEquipmentSkin) : 0);
+		selectIndex = ((this.CurrentEquipmentSkin != 0) ? Array.IndexOf<int>(phantomList, this.CurrentEquipmentSkin) : 0);
 		if (selectIndex == -1)
 		{
 			selectIndex = 0;
@@ -163,7 +162,7 @@ public class VisionSkinView : UiViewBase
 		LoopScrollView<VisionSkinItem, int> phantomLoopScrollView = this.PhantomLoopScrollView;
 		if (phantomLoopScrollView != null)
 		{
-			phantomLoopScrollView.RefreshByData(phantomList.ToList<int>(), false, delegate
+			phantomLoopScrollView.RefreshByData(phantomList, false, delegate
 			{
 				LoopScrollView<VisionSkinItem, int> phantomLoopScrollView2 = this.PhantomLoopScrollView;
 				if (phantomLoopScrollView2 != null)
@@ -189,7 +188,7 @@ public class VisionSkinView : UiViewBase
 		this.SetUseSkinBtnEnable(false);
 	}
 
-	// Token: 0x06013072 RID: 77938 RVA: 0x004B63C0 File Offset: 0x004B45C0
+	// Token: 0x06010531 RID: 66865 RVA: 0x004C405C File Offset: 0x004C225C
 	private void ShowByItemIdList(int[] configList)
 	{
 		int selectedIndex = Array.IndexOf<int>(configList, this.CurrentItemId);
@@ -202,7 +201,7 @@ public class VisionSkinView : UiViewBase
 		{
 			return;
 		}
-		phantomLoopScrollView.RefreshByData(configList.ToList<int>(), false, delegate
+		phantomLoopScrollView.RefreshByData(configList, false, delegate
 		{
 			LoopScrollView<VisionSkinItem, int> phantomLoopScrollView2 = this.PhantomLoopScrollView;
 			if (phantomLoopScrollView2 != null)
@@ -230,7 +229,7 @@ public class VisionSkinView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x06013073 RID: 77939 RVA: 0x004B6434 File Offset: 0x004B4634
+	// Token: 0x06010532 RID: 66866 RVA: 0x004C40C8 File Offset: 0x004C22C8
 	private void RefreshMesh(int itemId)
 	{
 		if (this.CurrentItemId == itemId)
@@ -245,7 +244,7 @@ public class VisionSkinView : UiViewBase
 		this.CurrentItemId = itemId;
 	}
 
-	// Token: 0x06013074 RID: 77940 RVA: 0x004B6494 File Offset: 0x004B4694
+	// Token: 0x06010533 RID: 66867 RVA: 0x004C4128 File Offset: 0x004C2328
 	private void PlayMeshEffect()
 	{
 		if (this.VisionSkeletalHandle == null)
@@ -261,7 +260,7 @@ public class VisionSkinView : UiViewBase
 		UiModelUtil.Instance.SetRenderingMaterial(model, "VisionStepupController");
 	}
 
-	// Token: 0x06013075 RID: 77941 RVA: 0x004B64DB File Offset: 0x004B46DB
+	// Token: 0x06010534 RID: 66868 RVA: 0x004C416F File Offset: 0x004C236F
 	private void CheckAndCreateVisionHandle()
 	{
 		if (!UiSceneManager.Instance.HasVisionSkeletalHandle())
@@ -271,7 +270,7 @@ public class VisionSkinView : UiViewBase
 		this.VisionSkeletalHandle = UiSceneManager.Instance.GetVisionSkeletalHandle();
 	}
 
-	// Token: 0x06013076 RID: 77942 RVA: 0x004B6504 File Offset: 0x004B4704
+	// Token: 0x06010535 RID: 66869 RVA: 0x004C4198 File Offset: 0x004C2398
 	private void OnClickUseSkinBtn()
 	{
 		PhantomItem? phantomItemById = PhantomBattleConfig.Instance.GetPhantomItemById(this.CurrentItemId);
@@ -279,19 +278,19 @@ public class VisionSkinView : UiViewBase
 		this.PlayMeshEffect();
 	}
 
-	// Token: 0x06013077 RID: 77943 RVA: 0x004B6562 File Offset: 0x004B4762
+	// Token: 0x06010536 RID: 66870 RVA: 0x004C41F6 File Offset: 0x004C23F6
 	private void OnClickBackBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06013078 RID: 77944 RVA: 0x004B656B File Offset: 0x004B476B
+	// Token: 0x06010537 RID: 66871 RVA: 0x004C41FF File Offset: 0x004C23FF
 	private void OnClickGetTipsBtn()
 	{
-		ItemController.Instance.OpenItemTipsByItemId(this.CurrentItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.CurrentItemId, true, null, false);
 	}
 
-	// Token: 0x06013079 RID: 77945 RVA: 0x004B657F File Offset: 0x004B477F
+	// Token: 0x06010538 RID: 66872 RVA: 0x004C4214 File Offset: 0x004C2414
 	private VisionSkinItem OnCreateItem()
 	{
 		VisionSkinItem visionSkinItem = new VisionSkinItem();
@@ -300,7 +299,7 @@ public class VisionSkinView : UiViewBase
 		return visionSkinItem;
 	}
 
-	// Token: 0x0601307A RID: 77946 RVA: 0x004B65AC File Offset: 0x004B47AC
+	// Token: 0x06010539 RID: 66873 RVA: 0x004C4240 File Offset: 0x004C2440
 	private void OnPhantomItemClick(int data, UUIExtendToggle toggle)
 	{
 		UUIExtendToggle currentToggle = this.CurrentToggle;
@@ -332,7 +331,7 @@ public class VisionSkinView : UiViewBase
 		this.SetUseSkinBtnEnable(phantomItemById.Value.ParentMonsterId > 0);
 	}
 
-	// Token: 0x0601307B RID: 77947 RVA: 0x004B66A0 File Offset: 0x004B48A0
+	// Token: 0x0601053A RID: 66874 RVA: 0x004C4334 File Offset: 0x004C2534
 	private void SetLockShow(bool isLock)
 	{
 		UUIItem item = base.GetItem(8);
@@ -353,7 +352,7 @@ public class VisionSkinView : UiViewBase
 		button2.RootUIComp.Get().SetUIActive(!isLock);
 	}
 
-	// Token: 0x0601307C RID: 77948 RVA: 0x004B6703 File Offset: 0x004B4903
+	// Token: 0x0601053B RID: 66875 RVA: 0x004C4397 File Offset: 0x004C2597
 	private void SetUseSkinBtnEnable(bool able)
 	{
 		UUIButtonComponent button = base.GetButton(4);
@@ -364,13 +363,13 @@ public class VisionSkinView : UiViewBase
 		button.SetSelfInteractive(able);
 	}
 
-	// Token: 0x0601307D RID: 77949 RVA: 0x004B6717 File Offset: 0x004B4917
+	// Token: 0x0601053C RID: 66876 RVA: 0x004C43AB File Offset: 0x004C25AB
 	private bool CanToggleChange(int currentItemId)
 	{
 		return this.CurrentItemId != currentItemId;
 	}
 
-	// Token: 0x0601307E RID: 77950 RVA: 0x004B6728 File Offset: 0x004B4928
+	// Token: 0x0601053D RID: 66877 RVA: 0x004C43BC File Offset: 0x004C25BC
 	private void RefreshItemCurrentEquipment()
 	{
 		if (this.OnlyShow)
@@ -388,7 +387,7 @@ public class VisionSkinView : UiViewBase
 			return;
 		}
 		this.CurrentEquipmentSkin = phantomItemDataByUniqueId.SkinId;
-		int num = (this.CurrentEquipmentSkin != 0) ? monsterSkinListByMonsterId.ToList<int>().IndexOf(this.CurrentEquipmentSkin) : 0;
+		int num = (this.CurrentEquipmentSkin != 0) ? Array.IndexOf<int>(monsterSkinListByMonsterId, this.CurrentEquipmentSkin) : 0;
 		if (num == -1)
 		{
 			num = 0;
@@ -408,7 +407,7 @@ public class VisionSkinView : UiViewBase
 		this.SetUseSkinBtnEnable(false);
 	}
 
-	// Token: 0x0601307F RID: 77951 RVA: 0x004B67DE File Offset: 0x004B49DE
+	// Token: 0x0601053E RID: 66878 RVA: 0x004C446D File Offset: 0x004C266D
 	protected override void OnAfterDestroy()
 	{
 		if (this.OnlyShow)
@@ -419,8 +418,8 @@ public class VisionSkinView : UiViewBase
 		EventSystem.Instance.Emit<bool>(EEventName.VisionSkinViewClose, this.CurrentItemId != this.OriginalItemId);
 	}
 
-	// Token: 0x170018C6 RID: 6342
-	// (get) Token: 0x06013080 RID: 77952 RVA: 0x004B6814 File Offset: 0x004B4A14
+	// Token: 0x17001900 RID: 6400
+	// (get) Token: 0x0601053F RID: 66879 RVA: 0x004C44A3 File Offset: 0x004C26A3
 	private bool OnlyShow
 	{
 		get
@@ -430,27 +429,27 @@ public class VisionSkinView : UiViewBase
 		}
 	}
 
-	// Token: 0x04008F2E RID: 36654
+	// Token: 0x04009078 RID: 36984
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04008F2F RID: 36655
+	// Token: 0x04009079 RID: 36985
 	[Nullable(2)]
 	private IVisionSkinViewOpenParam CurrentParam;
 
-	// Token: 0x04008F30 RID: 36656
+	// Token: 0x0400907A RID: 36986
 	private int CurrentUniqueId = -1;
 
-	// Token: 0x04008F31 RID: 36657
+	// Token: 0x0400907B RID: 36987
 	private int CurrentMonsterId = -1;
 
-	// Token: 0x04008F32 RID: 36658
+	// Token: 0x0400907C RID: 36988
 	private int CurrentItemId;
 
-	// Token: 0x04008F33 RID: 36659
+	// Token: 0x0400907D RID: 36989
 	private int OriginalItemId;
 
-	// Token: 0x04008F34 RID: 36660
+	// Token: 0x0400907E RID: 36990
 	[Nullable(new byte[]
 	{
 		2,
@@ -458,44 +457,44 @@ public class VisionSkinView : UiViewBase
 	})]
 	private LoopScrollView<VisionSkinItem, int> PhantomLoopScrollView;
 
-	// Token: 0x04008F35 RID: 36661
+	// Token: 0x0400907F RID: 36991
 	[Nullable(2)]
 	private VisionSkinItem CurrentPhantom;
 
-	// Token: 0x04008F36 RID: 36662
+	// Token: 0x04009080 RID: 36992
 	[Nullable(2)]
 	private SkeletalObserverHandle VisionSkeletalHandle;
 
-	// Token: 0x04008F37 RID: 36663
+	// Token: 0x04009081 RID: 36993
 	[Nullable(2)]
 	private UUIExtendToggle CurrentToggle;
 
-	// Token: 0x04008F38 RID: 36664
+	// Token: 0x04009082 RID: 36994
 	private int CurrentEquipmentSkin;
 
-	// Token: 0x02008A86 RID: 35462
+	// Token: 0x02007C0E RID: 31758
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CFBB RID: 184251
+		// Token: 0x040282D3 RID: 164563
 		CaptionItem,
-		// Token: 0x0402CFBC RID: 184252
+		// Token: 0x040282D4 RID: 164564
 		DefaultBtn,
-		// Token: 0x0402CFBD RID: 184253
+		// Token: 0x040282D5 RID: 164565
 		DefaultMarkItem,
-		// Token: 0x0402CFBE RID: 184254
+		// Token: 0x040282D6 RID: 164566
 		DefaultText,
-		// Token: 0x0402CFBF RID: 184255
+		// Token: 0x040282D7 RID: 164567
 		UseSkinBtn,
-		// Token: 0x0402CFC0 RID: 184256
+		// Token: 0x040282D8 RID: 164568
 		MonsterNameText,
-		// Token: 0x0402CFC1 RID: 184257
+		// Token: 0x040282D9 RID: 164569
 		MonsterLoopScrollView,
-		// Token: 0x0402CFC2 RID: 184258
+		// Token: 0x040282DA RID: 164570
 		MonsterItem,
-		// Token: 0x0402CFC3 RID: 184259
+		// Token: 0x040282DB RID: 164571
 		LockItem,
-		// Token: 0x0402CFC4 RID: 184260
+		// Token: 0x040282DC RID: 164572
 		GetTipsBtn
 	}
 }

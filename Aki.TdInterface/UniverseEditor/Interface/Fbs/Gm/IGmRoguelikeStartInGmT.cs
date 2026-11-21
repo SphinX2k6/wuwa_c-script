@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004667 RID: 18023
+	// Token: 0x02004ACF RID: 19151
 	public class IGmRoguelikeStartInGmT
 	{
-		// Token: 0x17007FF3 RID: 32755
-		// (get) Token: 0x0601B59B RID: 112027 RVA: 0x003E39AA File Offset: 0x003E1BAA
-		// (set) Token: 0x0601B59C RID: 112028 RVA: 0x003E39B2 File Offset: 0x003E1BB2
+		// Token: 0x17008634 RID: 34356
+		// (get) Token: 0x0601CD70 RID: 118128 RVA: 0x0040FC46 File Offset: 0x0040DE46
+		// (set) Token: 0x0601CD71 RID: 118129 RVA: 0x0040FC4E File Offset: 0x0040DE4E
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x17007FF4 RID: 32756
-		// (get) Token: 0x0601B59D RID: 112029 RVA: 0x003E39BB File Offset: 0x003E1BBB
-		// (set) Token: 0x0601B59E RID: 112030 RVA: 0x003E39C3 File Offset: 0x003E1BC3
+		// Token: 0x17008635 RID: 34357
+		// (get) Token: 0x0601CD72 RID: 118130 RVA: 0x0040FC57 File Offset: 0x0040DE57
+		// (set) Token: 0x0601CD73 RID: 118131 RVA: 0x0040FC5F File Offset: 0x0040DE5F
 		public int DungeonId { get; set; }
 
-		// Token: 0x17007FF5 RID: 32757
-		// (get) Token: 0x0601B59F RID: 112031 RVA: 0x003E39CC File Offset: 0x003E1BCC
-		// (set) Token: 0x0601B5A0 RID: 112032 RVA: 0x003E39D4 File Offset: 0x003E1BD4
+		// Token: 0x17008636 RID: 34358
+		// (get) Token: 0x0601CD74 RID: 118132 RVA: 0x0040FC68 File Offset: 0x0040DE68
+		// (set) Token: 0x0601CD75 RID: 118133 RVA: 0x0040FC70 File Offset: 0x0040DE70
 		public int SeasonId { get; set; }
 
-		// Token: 0x17007FF6 RID: 32758
-		// (get) Token: 0x0601B5A1 RID: 112033 RVA: 0x003E39DD File Offset: 0x003E1BDD
-		// (set) Token: 0x0601B5A2 RID: 112034 RVA: 0x003E39E5 File Offset: 0x003E1BE5
+		// Token: 0x17008637 RID: 34359
+		// (get) Token: 0x0601CD76 RID: 118134 RVA: 0x0040FC79 File Offset: 0x0040DE79
+		// (set) Token: 0x0601CD77 RID: 118135 RVA: 0x0040FC81 File Offset: 0x0040DE81
 		public int Inherit { get; set; }
 
-		// Token: 0x17007FF7 RID: 32759
-		// (get) Token: 0x0601B5A3 RID: 112035 RVA: 0x003E39EE File Offset: 0x003E1BEE
-		// (set) Token: 0x0601B5A4 RID: 112036 RVA: 0x003E39F6 File Offset: 0x003E1BF6
+		// Token: 0x17008638 RID: 34360
+		// (get) Token: 0x0601CD78 RID: 118136 RVA: 0x0040FC8A File Offset: 0x0040DE8A
+		// (set) Token: 0x0601CD79 RID: 118137 RVA: 0x0040FC92 File Offset: 0x0040DE92
 		public int RoleId { get; set; }
 
-		// Token: 0x0601B5A5 RID: 112037 RVA: 0x003E39FF File Offset: 0x003E1BFF
+		// Token: 0x0601CD7A RID: 118138 RVA: 0x0040FC9B File Offset: 0x0040DE9B
 		public IGmRoguelikeStartInGmT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

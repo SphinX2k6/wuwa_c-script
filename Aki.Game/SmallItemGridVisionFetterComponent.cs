@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001997 RID: 6551
+// Token: 0x02000E54 RID: 3668
 public class SmallItemGridVisionFetterComponent : SmallItemGridComponent
 {
-	// Token: 0x0600BF55 RID: 48981 RVA: 0x002B3BC6 File Offset: 0x002B1DC6
+	// Token: 0x0600935D RID: 37725 RVA: 0x002BEB4A File Offset: 0x002BCD4A
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemBElementB";
 	}
 
-	// Token: 0x0600BF56 RID: 48982 RVA: 0x002B3BD0 File Offset: 0x002B1DD0
+	// Token: 0x0600935E RID: 37726 RVA: 0x002BEB54 File Offset: 0x002BCD54
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -29,7 +29,7 @@ public class SmallItemGridVisionFetterComponent : SmallItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BF57 RID: 48983 RVA: 0x002B3C18 File Offset: 0x002B1E18
+	// Token: 0x0600935F RID: 37727 RVA: 0x002BEB9C File Offset: 0x002BCD9C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SmallItemGridVisionFetterComponent.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -40,7 +40,7 @@ public class SmallItemGridVisionFetterComponent : SmallItemGridComponent
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BF58 RID: 48984 RVA: 0x002B3C5C File Offset: 0x002B1E5C
+	// Token: 0x06009360 RID: 37728 RVA: 0x002BEBE0 File Offset: 0x002BCDE0
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -49,14 +49,14 @@ public class SmallItemGridVisionFetterComponent : SmallItemGridComponent
 		this.VisionFetterSuitItem.Update(new PhantomFetterGroup?(fetterGroupById));
 	}
 
-	// Token: 0x040055D6 RID: 21974
+	// Token: 0x04005683 RID: 22147
 	[Nullable(2)]
 	private VisionFetterSuitItem VisionFetterSuitItem;
 
-	// Token: 0x02007ECF RID: 32463
+	// Token: 0x0200705E RID: 28766
 	private enum EComponent
 	{
-		// Token: 0x0402971A RID: 169754
+		// Token: 0x04024A57 RID: 150103
 		ElementItem
 	}
 }

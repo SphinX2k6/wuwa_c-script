@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D66 RID: 3430
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E60 RID: 3680
 	public class IInhaledChangeSelfState : IInhaledPerResultType
 	{
-		// Token: 0x06004E13 RID: 19987 RVA: 0x000C1E89 File Offset: 0x000C0089
+		// Token: 0x0600532F RID: 21295 RVA: 0x000CD5CD File Offset: 0x000CB7CD
 		public static IInhaledChangeSelfState Create(IInhaledChangeSelfState? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001904 RID: 6404
-		// (get) Token: 0x06004E14 RID: 19988 RVA: 0x000C1EA8 File Offset: 0x000C00A8
+		// Token: 0x17001A6A RID: 6762
+		// (get) Token: 0x06005330 RID: 21296 RVA: 0x000CD5EC File Offset: 0x000CB7EC
 		public override EInhaledPerResultType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001905 RID: 6405
-		// (get) Token: 0x06004E15 RID: 19989 RVA: 0x000C1EB5 File Offset: 0x000C00B5
+		// Token: 0x17001A6B RID: 6763
+		// (get) Token: 0x06005331 RID: 21297 RVA: 0x000CD5F9 File Offset: 0x000CB7F9
 		public virtual string ChangeSelfState
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CC1 RID: 11457
+		// Token: 0x04002F81 RID: 12161
 		private IInhaledChangeSelfState Instance;
 	}
 }

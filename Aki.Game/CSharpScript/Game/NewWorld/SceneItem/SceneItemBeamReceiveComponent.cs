@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200716E RID: 29038
+	// Token: 0x02006222 RID: 25122
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemBeamReceiveComponent : EntityComponent
 	{
-		// Token: 0x06046E46 RID: 290374 RVA: 0x011E45D8 File Offset: 0x011E27D8
+		// Token: 0x0603C6A1 RID: 247457 RVA: 0x0113FD28 File Offset: 0x0113DF28
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E47 RID: 290375 RVA: 0x011E4678 File Offset: 0x011E2878
+		// Token: 0x0603C6A2 RID: 247458 RVA: 0x0113FDC8 File Offset: 0x0113DFC8
 		protected override void OnActivate()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.AddWithTarget<EntityHandle>(base.Entity, EEventName.BeamCastStop, new Action<EntityHandle>(this.OnStopReceiveBeam));
 		}
 
-		// Token: 0x06046E48 RID: 290376 RVA: 0x011E4724 File Offset: 0x011E2924
+		// Token: 0x0603C6A3 RID: 247459 RVA: 0x0113FE74 File Offset: 0x0113E074
 		private unsafe void OnSceneInteractionLoadCompleted()
 		{
 			BeamReceiveComponent config = this.Config;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E49 RID: 290377 RVA: 0x011E4838 File Offset: 0x011E2A38
+		// Token: 0x0603C6A4 RID: 247460 RVA: 0x0113FF88 File Offset: 0x0113E188
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.HasWithTarget<EntityHandle>(base.Entity, EEventName.BeamCastStart, new Action<EntityHandle>(this.OnStartReceiveBeam)))
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E4A RID: 290378 RVA: 0x011E4924 File Offset: 0x011E2B24
+		// Token: 0x0603C6A5 RID: 247461 RVA: 0x01140074 File Offset: 0x0113E274
 		protected override void OnChangeTimeDilation(float timeDilation)
 		{
 			if (this.ReceiveTimerHandle == null || !TimerSystem.Instance.Has(this.ReceiveTimerHandle))
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E4B RID: 290379 RVA: 0x011E49D8 File Offset: 0x011E2BD8
+		// Token: 0x0603C6A6 RID: 247462 RVA: 0x01140128 File Offset: 0x0113E328
 		private void ChangePerformByState(SceneItemBeamReceiveComponent.ECastingState castingState)
 		{
 			switch (castingState)
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E4C RID: 290380 RVA: 0x011E4BE4 File Offset: 0x011E2DE4
+		// Token: 0x0603C6A7 RID: 247463 RVA: 0x01140334 File Offset: 0x0113E534
 		[NullableContext(1)]
 		private void OnStartReceiveBeam(EntityHandle instigator)
 		{
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E4D RID: 290381 RVA: 0x011E4CA8 File Offset: 0x011E2EA8
+		// Token: 0x0603C6A8 RID: 247464 RVA: 0x011403F8 File Offset: 0x0113E5F8
 		private void OnStartReceiveBeamInternal()
 		{
 			if (this.CastingState == SceneItemBeamReceiveComponent.ECastingState.Complete)
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E4E RID: 290382 RVA: 0x011E4D18 File Offset: 0x011E2F18
+		// Token: 0x0603C6A9 RID: 247465 RVA: 0x01140468 File Offset: 0x0113E668
 		private void OnBeamCastActorChange()
 		{
 			if (this.CanReceiveBeamActor == null || this.BeamCastComp == null)
@@ -328,14 +328,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E4F RID: 290383 RVA: 0x011E4D76 File Offset: 0x011E2F76
+		// Token: 0x0603C6AA RID: 247466 RVA: 0x011404C6 File Offset: 0x0113E6C6
 		[NullableContext(1)]
 		private void OnStopReceiveBeam(EntityHandle instigator)
 		{
 			this.StopReceiveBeamInternal(true, true, instigator);
 		}
 
-		// Token: 0x06046E50 RID: 290384 RVA: 0x011E4D84 File Offset: 0x011E2F84
+		// Token: 0x0603C6AB RID: 247467 RVA: 0x011404D4 File Offset: 0x0113E6D4
 		[NullableContext(1)]
 		private void StopReceiveBeamInternal(bool beamLeave, bool needRequest, EntityHandle instigator)
 		{
@@ -371,7 +371,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.BeamReflectStop);
 		}
 
-		// Token: 0x06046E51 RID: 290385 RVA: 0x011E4E6C File Offset: 0x011E306C
+		// Token: 0x0603C6AC RID: 247468 RVA: 0x011405BC File Offset: 0x0113E7BC
 		private void OnCompleteReceiveBeam()
 		{
 			if (this.CastingState == SceneItemBeamReceiveComponent.ECastingState.Complete)
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E52 RID: 290386 RVA: 0x011E4F48 File Offset: 0x011E3148
+		// Token: 0x0603C6AD RID: 247469 RVA: 0x01140698 File Offset: 0x0113E898
 		[NullableContext(1)]
 		private void OnCompleteReceiveBeamInternal(EntityHandle instigator)
 		{
@@ -427,7 +427,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.RequestBeamReceiveAction(EntityBeamReceiveType.CompleteAction);
 		}
 
-		// Token: 0x06046E53 RID: 290387 RVA: 0x011E4FB7 File Offset: 0x011E31B7
+		// Token: 0x0603C6AE RID: 247470 RVA: 0x01140707 File Offset: 0x0113E907
 		[NullableContext(1)]
 		public void OnNotifyBeamReceive(BeamReceiveNotify notify)
 		{
@@ -446,7 +446,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E54 RID: 290388 RVA: 0x011E4FE8 File Offset: 0x011E31E8
+		// Token: 0x0603C6AF RID: 247471 RVA: 0x01140738 File Offset: 0x0113E938
 		private unsafe void RequestBeamReceiveAction(EntityBeamReceiveType actionType)
 		{
 			EntityBeamReceiveRequest entityBeamReceiveRequest = EntityBeamReceiveRequest.Create();
@@ -478,13 +478,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 0);
 		}
 
-		// Token: 0x06046E55 RID: 290389 RVA: 0x011E5049 File Offset: 0x011E3249
+		// Token: 0x0603C6B0 RID: 247472 RVA: 0x01140799 File Offset: 0x0113E999
 		private bool CheckCastingActor()
 		{
 			return this.BeamCastComp != null && this.BeamCastComp.GetBeamCastingActor(0) == this.CanReceiveBeamActor;
 		}
 
-		// Token: 0x06046E56 RID: 290390 RVA: 0x011E506C File Offset: 0x011E326C
+		// Token: 0x0603C6B1 RID: 247473 RVA: 0x011407BC File Offset: 0x0113E9BC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -526,7 +526,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E57 RID: 290391 RVA: 0x011E50C4 File Offset: 0x011E32C4
+		// Token: 0x0603C6B2 RID: 247474 RVA: 0x01140814 File Offset: 0x0113EA14
 		public global::Vector GetBeamReceiveDirection()
 		{
 			if (this.BeamCastComp == null)
@@ -536,7 +536,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.BeamCastComp.GetBeamCastWorldDir(0);
 		}
 
-		// Token: 0x06046E58 RID: 290392 RVA: 0x011E50DC File Offset: 0x011E32DC
+		// Token: 0x0603C6B3 RID: 247475 RVA: 0x0114082C File Offset: 0x0113EA2C
 		public global::Vector GetBeamReceiveEndPoint()
 		{
 			if (this.BeamCastComp == null)
@@ -546,13 +546,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.BeamCastComp.GetBeamCastEndPoint(0);
 		}
 
-		// Token: 0x06046E59 RID: 290393 RVA: 0x011E50F4 File Offset: 0x011E32F4
+		// Token: 0x0603C6B4 RID: 247476 RVA: 0x01140844 File Offset: 0x0113EA44
 		public bool CanReceiveBeam()
 		{
 			return this.CastingState > SceneItemBeamReceiveComponent.ECastingState.NotCasting;
 		}
 
-		// Token: 0x06046E5A RID: 290394 RVA: 0x011E5100 File Offset: 0x011E3300
+		// Token: 0x0603C6B5 RID: 247477 RVA: 0x01140850 File Offset: 0x0113EA50
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -561,152 +561,152 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemBeamReceiveComponent sceneItemBeamReceiveComponent = (SceneItemBeamReceiveComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemBeamReceiveComponent.Config == null)
 			{
-				if (sceneItemBeamReceiveComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BeamReceiveComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (sceneItemBeamReceiveComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (sceneItemBeamReceiveComponent.CreatureDataComp == null)
 			{
-				if (sceneItemBeamReceiveComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (sceneItemBeamReceiveComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CastingState"))
+			if (sceneItemBeamReceiveComponent.ActorComp == null)
 			{
-				this.CastingState = sceneItemBeamReceiveComponent.CastingState;
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("ReceiveDurationMs"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.ReceiveDurationMs = sceneItemBeamReceiveComponent.ReceiveDurationMs;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ReceiveTimerHandle"))
+			if (sceneItemBeamReceiveComponent.TagComp == null)
 			{
-				if (sceneItemBeamReceiveComponent.ReceiveTimerHandle == null)
-				{
-					this.ReceiveTimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.ReceiveTimerHandle), "ReceiveTimerHandle"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("BeamCastInstigator"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				if (sceneItemBeamReceiveComponent.BeamCastInstigator == null)
-				{
-					this.BeamCastInstigator = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.BeamCastInstigator), "BeamCastInstigator"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("BeamCastComp"))
+			this.CastingState = sceneItemBeamReceiveComponent.CastingState;
+			this.ReceiveDurationMs = sceneItemBeamReceiveComponent.ReceiveDurationMs;
+			if (sceneItemBeamReceiveComponent.ReceiveTimerHandle == null)
 			{
-				if (sceneItemBeamReceiveComponent.BeamCastComp == null)
-				{
-					this.BeamCastComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemBeamCastComponent>(this.BeamCastComp), "BeamCastComp"))
-				{
-					return false;
-				}
+				this.ReceiveTimerHandle = null;
 			}
-			if (base.CanResetComponentProperty("CanReceiveBeamActor"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ReceiveTimerHandle), "ReceiveTimerHandle"))
 			{
-				if (sceneItemBeamReceiveComponent.CanReceiveBeamActor == null)
-				{
-					this.CanReceiveBeamActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.CanReceiveBeamActor), "CanReceiveBeamActor"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (sceneItemBeamReceiveComponent.BeamCastInstigator == null)
+			{
+				this.BeamCastInstigator = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BeamCastInstigator), "BeamCastInstigator"))
+			{
+				return false;
+			}
+			if (sceneItemBeamReceiveComponent.BeamCastComp == null)
+			{
+				this.BeamCastComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BeamCastComp), "BeamCastComp"))
+			{
+				return false;
+			}
+			if (sceneItemBeamReceiveComponent.CanReceiveBeamActor == null)
+			{
+				this.CanReceiveBeamActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CanReceiveBeamActor), "CanReceiveBeamActor"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04025370 RID: 152432
+		// Token: 0x1700721A RID: 29210
+		// (get) Token: 0x0603C6B6 RID: 247478 RVA: 0x011409E0 File Offset: 0x0113EBE0
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700721B RID: 29211
+		// (get) Token: 0x0603C6B7 RID: 247479 RVA: 0x011409E3 File Offset: 0x0113EBE3
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700721C RID: 29212
+		// (get) Token: 0x0603C6B8 RID: 247480 RVA: 0x011409E6 File Offset: 0x0113EBE6
+		public override bool NeedChangeTimeDilationInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FFD7 RID: 131031
 		private static readonly int CASTING_PERFORM_TAG = GameplayTagDefine.EGameplayTagId["关卡.Common.表现.光线接收中"];
 
-		// Token: 0x04025371 RID: 152433
+		// Token: 0x0401FFD8 RID: 131032
 		private static readonly int STOP_CASTING_PERFORM_TAG = GameplayTagDefine.EGameplayTagId["关卡.Common.表现.光线离开中"];
 
-		// Token: 0x04025372 RID: 152434
+		// Token: 0x0401FFD9 RID: 131033
 		private BeamReceiveComponent Config;
 
-		// Token: 0x04025373 RID: 152435
+		// Token: 0x0401FFDA RID: 131034
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04025374 RID: 152436
+		// Token: 0x0401FFDB RID: 131035
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025375 RID: 152437
+		// Token: 0x0401FFDC RID: 131036
 		private LevelTagComponent TagComp;
 
-		// Token: 0x04025376 RID: 152438
+		// Token: 0x0401FFDD RID: 131037
 		private SceneItemBeamReceiveComponent.ECastingState CastingState;
 
-		// Token: 0x04025377 RID: 152439
+		// Token: 0x0401FFDE RID: 131038
 		private float ReceiveDurationMs;
 
-		// Token: 0x04025378 RID: 152440
+		// Token: 0x0401FFDF RID: 131039
 		private TimerHandle ReceiveTimerHandle;
 
-		// Token: 0x04025379 RID: 152441
+		// Token: 0x0401FFE0 RID: 131040
 		private EntityHandle BeamCastInstigator;
 
-		// Token: 0x0402537A RID: 152442
+		// Token: 0x0401FFE1 RID: 131041
 		private SceneItemBeamCastComponent BeamCastComp;
 
-		// Token: 0x0402537B RID: 152443
+		// Token: 0x0401FFE2 RID: 131042
 		private AActor CanReceiveBeamActor;
 
-		// Token: 0x0200CEA9 RID: 52905
+		// Token: 0x0200BA3F RID: 47679
 		[NullableContext(0)]
 		private enum ECastingState
 		{
-			// Token: 0x0403E315 RID: 254741
+			// Token: 0x0403963B RID: 235067
 			NotCasting,
-			// Token: 0x0403E316 RID: 254742
+			// Token: 0x0403963C RID: 235068
 			Casting,
-			// Token: 0x0403E317 RID: 254743
+			// Token: 0x0403963D RID: 235069
 			WaitingCompleteCondition,
-			// Token: 0x0403E318 RID: 254744
+			// Token: 0x0403963E RID: 235070
 			Complete
 		}
 	}

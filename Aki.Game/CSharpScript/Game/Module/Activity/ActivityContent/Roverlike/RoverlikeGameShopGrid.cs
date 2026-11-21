@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006157 RID: 24919
+	// Token: 0x020050D5 RID: 20693
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,19 +15,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeGameShopGrid : LoopScrollMediumItemGrid<IRoverlikeGameShopGridData>
 	{
-		// Token: 0x0603EFC5 RID: 257989 RVA: 0x00F37283 File Offset: 0x00F35483
+		// Token: 0x06033C85 RID: 212101 RVA: 0x00E7E157 File Offset: 0x00E7C357
 		public void BindOnSelect(Action<IRoverlikeGameShopGridData> cb)
 		{
 			this.OnSelect = cb;
 		}
 
-		// Token: 0x0603EFC6 RID: 257990 RVA: 0x00F3728C File Offset: 0x00F3548C
+		// Token: 0x06033C86 RID: 212102 RVA: 0x00E7E160 File Offset: 0x00E7C360
 		protected override void OnStart()
 		{
 			base.SetUseFixedAsync(true);
 		}
 
-		// Token: 0x0603EFC7 RID: 257991 RVA: 0x00F37298 File Offset: 0x00F35498
+		// Token: 0x06033C87 RID: 212103 RVA: 0x00E7E16C File Offset: 0x00E7C36C
 		protected override void OnRefresh(IRoverlikeGameShopGridData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.RefreshComponent(typeof(RoverlikeGameShopDiscountTagComponent), new bool?(value), data);
 		}
 
-		// Token: 0x0603EFC8 RID: 257992 RVA: 0x00F37392 File Offset: 0x00F35592
+		// Token: 0x06033C88 RID: 212104 RVA: 0x00E7E266 File Offset: 0x00E7C466
 		protected override void OnExtendToggleStateChanged(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked && this.Data != null)
@@ -67,17 +67,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EFC9 RID: 257993 RVA: 0x00F373B6 File Offset: 0x00F355B6
+		// Token: 0x06033C89 RID: 212105 RVA: 0x00E7E28A File Offset: 0x00E7C48A
 		public override object GetKey(IRoverlikeGameShopGridData data, int gridIndex)
 		{
 			return data.IncId;
 		}
 
-		// Token: 0x04020DDE RID: 134622
+		// Token: 0x0401B70B RID: 112395
 		[Nullable(2)]
 		public new IRoverlikeGameShopGridData Data;
 
-		// Token: 0x04020DDF RID: 134623
+		// Token: 0x0401B70C RID: 112396
 		[Nullable(new byte[]
 		{
 			2,

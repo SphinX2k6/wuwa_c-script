@@ -8,19 +8,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MonsterGroup
 {
-	// Token: 0x020053C3 RID: 21443
+	// Token: 0x020043A6 RID: 17318
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MonsterGroupEcologyInfo
 	{
-		// Token: 0x06036C86 RID: 224390 RVA: 0x00CF739C File Offset: 0x00CF559C
+		// Token: 0x0602BBCC RID: 179148 RVA: 0x00C46444 File Offset: 0x00C44644
 		public MonsterGroupEcologyInfo(int groupId)
 		{
 			this.GroupId = groupId;
 		}
 
-		// Token: 0x170083B7 RID: 33719
-		// (get) Token: 0x06036C87 RID: 224391 RVA: 0x00CF740D File Offset: 0x00CF560D
+		// Token: 0x17005783 RID: 22403
+		// (get) Token: 0x0602BBCD RID: 179149 RVA: 0x00C464B5 File Offset: 0x00C446B5
 		public int GroupMemberCount
 		{
 			get
@@ -29,8 +29,8 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x170083B8 RID: 33720
-		// (get) Token: 0x06036C88 RID: 224392 RVA: 0x00CF741C File Offset: 0x00CF561C
+		// Token: 0x17005784 RID: 22404
+		// (get) Token: 0x0602BBCE RID: 179150 RVA: 0x00C464C4 File Offset: 0x00C446C4
 		[Nullable(2)]
 		public MonsterEcologyInfo CaptainInfo
 		{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036C89 RID: 224393 RVA: 0x00CF7440 File Offset: 0x00CF5640
+		// Token: 0x0602BBCF RID: 179151 RVA: 0x00C464E8 File Offset: 0x00C446E8
 		public bool Init(GroupAiComponent groupComp, IReadOnlyList<int> initialPbDataIds)
 		{
 			if (groupComp.Option.Type != EGroupAiMode.MonsterEcology)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return this.GroupInfo.Count > 0;
 		}
 
-		// Token: 0x06036C8A RID: 224394 RVA: 0x00CF74C0 File Offset: 0x00CF56C0
+		// Token: 0x0602BBD0 RID: 179152 RVA: 0x00C46568 File Offset: 0x00C44768
 		public bool TryAddMember(int pbDataId)
 		{
 			CharacterActorComponent characterActorComponent = MonsterGroupEcologyInfo.TryResolveActorComp(pbDataId);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036C8B RID: 224395 RVA: 0x00CF7524 File Offset: 0x00CF5724
+		// Token: 0x0602BBD1 RID: 179153 RVA: 0x00C465CC File Offset: 0x00C447CC
 		public bool HasMemberByPbDataId(int pbDataId)
 		{
 			foreach (KeyValuePair<int, MonsterEcologyInfo> keyValuePair in this.GroupInfo)
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return false;
 		}
 
-		// Token: 0x06036C8C RID: 224396 RVA: 0x00CF7588 File Offset: 0x00CF5788
+		// Token: 0x0602BBD2 RID: 179154 RVA: 0x00C46630 File Offset: 0x00C44830
 		public bool RemoveMemberByEntityId(int entityId)
 		{
 			MonsterEcologyInfo monsterEcologyInfo;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036C8D RID: 224397 RVA: 0x00CF75D4 File Offset: 0x00CF57D4
+		// Token: 0x0602BBD3 RID: 179155 RVA: 0x00C4667C File Offset: 0x00C4487C
 		public void CheckMembersValid()
 		{
 			List<int> list = new List<int>();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036C8E RID: 224398 RVA: 0x00CF76A8 File Offset: 0x00CF58A8
+		// Token: 0x0602BBD4 RID: 179156 RVA: 0x00C46750 File Offset: 0x00C44950
 		public bool HasAnyInState(EGroupEcologyState state)
 		{
 			foreach (KeyValuePair<int, MonsterEcologyInfo> keyValuePair in this.GroupInfo)
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return false;
 		}
 
-		// Token: 0x06036C8F RID: 224399 RVA: 0x00CF770C File Offset: 0x00CF590C
+		// Token: 0x0602BBD5 RID: 179157 RVA: 0x00C467B4 File Offset: 0x00C449B4
 		public bool IsAllInState(EGroupEcologyState state)
 		{
 			if (this.GroupInfo.Count == 0)
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036C90 RID: 224400 RVA: 0x00CF7780 File Offset: 0x00CF5980
+		// Token: 0x0602BBD6 RID: 179158 RVA: 0x00C46828 File Offset: 0x00C44A28
 		public void Tick()
 		{
 			if (this.InGroupEcologyPerform && !this.IsAllInState(EGroupEcologyState.Ecology))
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036C91 RID: 224401 RVA: 0x00CF782C File Offset: 0x00CF5A2C
+		// Token: 0x0602BBD7 RID: 179159 RVA: 0x00C468D4 File Offset: 0x00C44AD4
 		protected virtual void OnGroupEcologyPerform()
 		{
 			foreach (KeyValuePair<int, MonsterEcologyInfo> keyValuePair in this.GroupInfo)
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036C92 RID: 224402 RVA: 0x00CF7890 File Offset: 0x00CF5A90
+		// Token: 0x0602BBD8 RID: 179160 RVA: 0x00C46938 File Offset: 0x00C44B38
 		[return: Nullable(2)]
 		protected virtual Vector GetMemberTargetLocation(MonsterEcologyInfo info)
 		{
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return this.TmpMemberTargetLocation;
 		}
 
-		// Token: 0x06036C93 RID: 224403 RVA: 0x00CF7914 File Offset: 0x00CF5B14
+		// Token: 0x0602BBD9 RID: 179161 RVA: 0x00C469BC File Offset: 0x00C44BBC
 		[return: Nullable(2)]
 		protected virtual Rotator GetMemberTargetRotation(MonsterEcologyInfo info)
 		{
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return this.TmpMemberTargetRotation;
 		}
 
-		// Token: 0x06036C94 RID: 224404 RVA: 0x00CF7998 File Offset: 0x00CF5B98
+		// Token: 0x0602BBDA RID: 179162 RVA: 0x00C46A40 File Offset: 0x00C44C40
 		private void MoveAllReadyMembersToTarget()
 		{
 			foreach (KeyValuePair<int, MonsterEcologyInfo> keyValuePair in this.GroupInfo)
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036C95 RID: 224405 RVA: 0x00CF7A18 File Offset: 0x00CF5C18
+		// Token: 0x0602BBDB RID: 179163 RVA: 0x00C46AC0 File Offset: 0x00C44CC0
 		private void MoveMemberToTarget(MonsterEcologyInfo info)
 		{
 			BaseMoveComponent moveComp = info.MoveComp;
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			moveComp.MoveController.NavigateMoveToLocation(moveConfig, new bool?(false), true, "MonsterGroupEcologyInfo.MoveMemberToTarget");
 		}
 
-		// Token: 0x06036C96 RID: 224406 RVA: 0x00CF7B0C File Offset: 0x00CF5D0C
+		// Token: 0x0602BBDC RID: 179164 RVA: 0x00C46BB4 File Offset: 0x00C44DB4
 		private unsafe void OnMoveToTargetCallback(ELevelEventState result, MonsterEcologyInfo info)
 		{
 			if (info.ActorComp == null || !this.GroupInfo.ContainsKey(info.EntityId))
@@ -343,13 +343,13 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			info.GroupEcologyState = EGroupEcologyState.Ecology;
 		}
 
-		// Token: 0x06036C97 RID: 224407 RVA: 0x00CF7D2C File Offset: 0x00CF5F2C
+		// Token: 0x0602BBDD RID: 179165 RVA: 0x00C46DD4 File Offset: 0x00C44FD4
 		public bool ShouldRemove()
 		{
 			return this.GroupInfo.Count == 0;
 		}
 
-		// Token: 0x06036C98 RID: 224408 RVA: 0x00CF7D3C File Offset: 0x00CF5F3C
+		// Token: 0x0602BBDE RID: 179166 RVA: 0x00C46DE4 File Offset: 0x00C44FE4
 		public void Clear()
 		{
 			foreach (KeyValuePair<int, MonsterEcologyInfo> keyValuePair in this.GroupInfo)
@@ -364,7 +364,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.InGroupEcologyPerform = false;
 		}
 
-		// Token: 0x06036C99 RID: 224409 RVA: 0x00CF7DB4 File Offset: 0x00CF5FB4
+		// Token: 0x0602BBDF RID: 179167 RVA: 0x00C46E5C File Offset: 0x00C4505C
 		[NullableContext(2)]
 		private static CharacterActorComponent TryResolveActorComp(int pbDataId)
 		{
@@ -388,37 +388,37 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return component;
 		}
 
-		// Token: 0x0401CEA6 RID: 118438
+		// Token: 0x0401793E RID: 96574
 		private const float TARGET_END_DISTANCE = 30f;
 
-		// Token: 0x0401CEA7 RID: 118439
+		// Token: 0x0401793F RID: 96575
 		private const float TARGET_RETURN_TIMEOUT_FAILED = 3f;
 
-		// Token: 0x0401CEA8 RID: 118440
+		// Token: 0x04017940 RID: 96576
 		private const float SET_ACTOR_ROTATION = 200f;
 
-		// Token: 0x0401CEA9 RID: 118441
+		// Token: 0x04017941 RID: 96577
 		public readonly int GroupId;
 
-		// Token: 0x0401CEAA RID: 118442
+		// Token: 0x04017942 RID: 96578
 		public Dictionary<int, MonsterEcologyInfo> GroupInfo = new Dictionary<int, MonsterEcologyInfo>();
 
-		// Token: 0x0401CEAB RID: 118443
+		// Token: 0x04017943 RID: 96579
 		private int CaptainId = -1;
 
-		// Token: 0x0401CEAC RID: 118444
+		// Token: 0x04017944 RID: 96580
 		private int LeaderPbDataId;
 
-		// Token: 0x0401CEAD RID: 118445
+		// Token: 0x04017945 RID: 96581
 		private bool InGroupEcologyPerform;
 
-		// Token: 0x0401CEAE RID: 118446
+		// Token: 0x04017946 RID: 96582
 		private readonly Vector TmpMemberTargetLocation = Vector.Create();
 
-		// Token: 0x0401CEAF RID: 118447
+		// Token: 0x04017947 RID: 96583
 		private readonly Rotator TmpMemberTargetRotation = Rotator.Create();
 
-		// Token: 0x0401CEB0 RID: 118448
+		// Token: 0x04017948 RID: 96584
 		private readonly Quat TmpCaptainQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 	}
 }

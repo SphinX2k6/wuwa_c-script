@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Core.Common;
 
-// Token: 0x02002403 RID: 9219
+// Token: 0x020018E8 RID: 6376
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class PhantomBattleConfig : ConfigBase
 {
-	// Token: 0x06012715 RID: 75541 RVA: 0x0048CA2B File Offset: 0x0048AC2B
+	// Token: 0x0600FBC7 RID: 64455 RVA: 0x00499F3B File Offset: 0x0049813B
 	public PhantomBattleConfig()
 	{
 		this.TrialPhantomPropMap = new Dictionary<int, TrailPhantomProp>();
 	}
 
-	// Token: 0x06012716 RID: 75542 RVA: 0x0048CA40 File Offset: 0x0048AC40
+	// Token: 0x0600FBC8 RID: 64456 RVA: 0x00499F50 File Offset: 0x00498150
 	public IReadOnlyList<PhantomItem> GetPhantomItemList()
 	{
 		IReadOnlyList<PhantomItem> configList = ConfigPhantomItemAll.GetConfigList(true);
@@ -28,7 +27,7 @@ public class PhantomBattleConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x06012717 RID: 75543 RVA: 0x0048CA74 File Offset: 0x0048AC74
+	// Token: 0x0600FBC9 RID: 64457 RVA: 0x00499F84 File Offset: 0x00498184
 	public PhantomItem? GetPhantomItemById(int id)
 	{
 		PhantomItem? config = ConfigPhantomItemByItemId.GetConfig(id, true);
@@ -44,21 +43,21 @@ public class PhantomBattleConfig : ConfigBase
 		return new PhantomItem?(config.Value);
 	}
 
-	// Token: 0x06012718 RID: 75544 RVA: 0x0048CACA File Offset: 0x0048ACCA
+	// Token: 0x0600FBCA RID: 64458 RVA: 0x00499FDA File Offset: 0x004981DA
 	[NullableContext(2)]
 	public IReadOnlyList<PhantomItem> GetPhantomItemByMonsterId(int monsterId)
 	{
 		return ConfigPhantomItemByMonsterId.GetConfigList(monsterId, true);
 	}
 
-	// Token: 0x06012719 RID: 75545 RVA: 0x0048CAD3 File Offset: 0x0048ACD3
+	// Token: 0x0600FBCB RID: 64459 RVA: 0x00499FE3 File Offset: 0x004981E3
 	[NullableContext(2)]
 	public IReadOnlyList<PhantomItem> GetPhantomItemByParentMonsterId(int parentMonsterId)
 	{
 		return ConfigPhantomItemByParentMonsterId.GetConfigList(parentMonsterId, true);
 	}
 
-	// Token: 0x0601271A RID: 75546 RVA: 0x0048CADC File Offset: 0x0048ACDC
+	// Token: 0x0600FBCC RID: 64460 RVA: 0x00499FEC File Offset: 0x004981EC
 	public IReadOnlyList<PhantomSkill> GetPhantomSkillList(int skillId)
 	{
 		IReadOnlyList<PhantomSkill> configList = ConfigPhantomSkillByPhantomSkillId.GetConfigList(skillId, true);
@@ -74,7 +73,7 @@ public class PhantomBattleConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0601271B RID: 75547 RVA: 0x0048CB20 File Offset: 0x0048AD20
+	// Token: 0x0600FBCD RID: 64461 RVA: 0x0049A030 File Offset: 0x00498230
 	public string[] GetPhantomSkillDescExByPhantomSkillIdAndQuality(int phantomSkillId, int quality = 2)
 	{
 		PhantomSkill phantomSkill = ConfigPhantomSkillByPhantomSkillId.GetConfigList(phantomSkillId, true)[0];
@@ -103,7 +102,7 @@ public class PhantomBattleConfig : ConfigBase
 		return new string[0];
 	}
 
-	// Token: 0x0601271C RID: 75548 RVA: 0x0048CBA8 File Offset: 0x0048ADA8
+	// Token: 0x0600FBCE RID: 64462 RVA: 0x0049A0B8 File Offset: 0x004982B8
 	public string[] GetPhantomSkillDescExBySkillIdAndQuality(int skillId, int quality = 2)
 	{
 		PhantomSkill value = ConfigPhantomSkillById.GetConfig(skillId, true).Value;
@@ -132,14 +131,14 @@ public class PhantomBattleConfig : ConfigBase
 		return new string[0];
 	}
 
-	// Token: 0x0601271D RID: 75549 RVA: 0x0048CC34 File Offset: 0x0048AE34
+	// Token: 0x0600FBCF RID: 64463 RVA: 0x0049A144 File Offset: 0x00498344
 	public string GetPhantomSkillDescStringBySkillIdAndQuality(int skillId, int quality = 2)
 	{
 		string[] phantomSkillDescExBySkillIdAndQuality = this.GetPhantomSkillDescExBySkillIdAndQuality(skillId, quality);
 		return StringUtils.Format(ConfigMultiTextLang.GetLocalTextNew(ConfigPhantomSkillById.GetConfig(skillId, true).Value.DescriptionEx, null), phantomSkillDescExBySkillIdAndQuality);
 	}
 
-	// Token: 0x0601271E RID: 75550 RVA: 0x0048CC70 File Offset: 0x0048AE70
+	// Token: 0x0600FBD0 RID: 64464 RVA: 0x0049A180 File Offset: 0x00498380
 	public PhantomSkill? GetPhantomSkillBySkillId(int skillId)
 	{
 		IReadOnlyList<PhantomSkill> configList = ConfigPhantomSkillByPhantomSkillId.GetConfigList(skillId, true);
@@ -156,13 +155,13 @@ public class PhantomBattleConfig : ConfigBase
 		return new PhantomSkill?(configList[0]);
 	}
 
-	// Token: 0x0601271F RID: 75551 RVA: 0x0048CCD2 File Offset: 0x0048AED2
+	// Token: 0x0600FBD1 RID: 64465 RVA: 0x0049A1E2 File Offset: 0x004983E2
 	public PhantomRarity? GetPhantomRareConfig(int rareId)
 	{
 		return ConfigPhantomRarityByRare.GetConfig(rareId, true);
 	}
 
-	// Token: 0x06012720 RID: 75552 RVA: 0x0048CCDC File Offset: 0x0048AEDC
+	// Token: 0x0600FBD2 RID: 64466 RVA: 0x0049A1EC File Offset: 0x004983EC
 	[NullableContext(2)]
 	public IReadOnlyList<PhantomRarity> GetPhantomRareConfigAll()
 	{
@@ -174,7 +173,7 @@ public class PhantomBattleConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x06012721 RID: 75553 RVA: 0x0048CD10 File Offset: 0x0048AF10
+	// Token: 0x0600FBD3 RID: 64467 RVA: 0x0049A220 File Offset: 0x00498420
 	[NullableContext(2)]
 	public IReadOnlyList<PhantomVicePolishConfig> GetPhantomVicePolishConfigAll()
 	{
@@ -186,7 +185,7 @@ public class PhantomBattleConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x06012722 RID: 75554 RVA: 0x0048CD44 File Offset: 0x0048AF44
+	// Token: 0x0600FBD4 RID: 64468 RVA: 0x0049A254 File Offset: 0x00498454
 	public PhantomQuality? GetPhantomQualityByItemQuality(int itemQuality)
 	{
 		PhantomQuality? config = ConfigPhantomQualityByQuality.GetConfig(itemQuality, true);
@@ -202,7 +201,7 @@ public class PhantomBattleConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06012723 RID: 75555 RVA: 0x0048CD90 File Offset: 0x0048AF90
+	// Token: 0x0600FBD5 RID: 64469 RVA: 0x0049A2A0 File Offset: 0x004984A0
 	public PhantomMainProperty? GetPhantomMainPropertyById(int id)
 	{
 		PhantomMainProperty? config = ConfigPhantomMainPropertyById.GetConfig(id, true);
@@ -218,7 +217,7 @@ public class PhantomBattleConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06012724 RID: 75556 RVA: 0x0048CDDC File Offset: 0x0048AFDC
+	// Token: 0x0600FBD6 RID: 64470 RVA: 0x0049A2EC File Offset: 0x004984EC
 	[NullableContext(2)]
 	public IReadOnlyList<PhantomMainProperty> GetPhantomMainPropertyByRandGroupId(int randGroupId)
 	{
@@ -236,7 +235,7 @@ public class PhantomBattleConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x06012725 RID: 75557 RVA: 0x0048CE24 File Offset: 0x0048B024
+	// Token: 0x0600FBD7 RID: 64471 RVA: 0x0049A334 File Offset: 0x00498534
 	public PhantomMainPropItem GetPhantomMainPropertyItemId(int id)
 	{
 		PhantomMainPropItem? config = ConfigPhantomMainPropItemById.GetConfig(id, true);
@@ -252,7 +251,7 @@ public class PhantomBattleConfig : ConfigBase
 		return config.Value;
 	}
 
-	// Token: 0x06012726 RID: 75558 RVA: 0x0048CE78 File Offset: 0x0048B078
+	// Token: 0x0600FBD8 RID: 64472 RVA: 0x0049A388 File Offset: 0x00498588
 	public PhantomSubProperty GetPhantomSubPropertyById(int id)
 	{
 		PhantomSubProperty? config = ConfigPhantomSubPropertyById.GetConfig(id, true);
@@ -268,7 +267,7 @@ public class PhantomBattleConfig : ConfigBase
 		return config.Value;
 	}
 
-	// Token: 0x06012727 RID: 75559 RVA: 0x0048CECC File Offset: 0x0048B0CC
+	// Token: 0x0600FBD9 RID: 64473 RVA: 0x0049A3DC File Offset: 0x004985DC
 	public IReadOnlyList<PhantomFetter> GetPhantomFetterList()
 	{
 		IReadOnlyList<PhantomFetter> configList = ConfigPhantomFetterAll.GetConfigList(true);
@@ -279,7 +278,7 @@ public class PhantomBattleConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x06012728 RID: 75560 RVA: 0x0048CF00 File Offset: 0x0048B100
+	// Token: 0x0600FBDA RID: 64474 RVA: 0x0049A410 File Offset: 0x00498610
 	public IReadOnlyList<PhantomFetterGroup> GetPhantomFetterGroupList()
 	{
 		IReadOnlyList<PhantomFetterGroup> configList = ConfigPhantomFetterGroupAll.GetConfigList(true);
@@ -290,7 +289,7 @@ public class PhantomBattleConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x06012729 RID: 75561 RVA: 0x0048CF34 File Offset: 0x0048B134
+	// Token: 0x0600FBDB RID: 64475 RVA: 0x0049A444 File Offset: 0x00498644
 	public PhantomFetter GetPhantomFetterById(int id)
 	{
 		PhantomFetter? config = ConfigPhantomFetterById.GetConfig(id, true);
@@ -306,7 +305,7 @@ public class PhantomBattleConfig : ConfigBase
 		return config.Value;
 	}
 
-	// Token: 0x0601272A RID: 75562 RVA: 0x0048CF88 File Offset: 0x0048B188
+	// Token: 0x0600FBDC RID: 64476 RVA: 0x0049A498 File Offset: 0x00498698
 	public unsafe int GetPhantomLevelExpByGroupIdAndLevel(int groupId, int level)
 	{
 		PhantomLevel? config = ConfigPhantomLevelByGroupIdAndLevel.GetConfig(groupId, level, true);
@@ -324,7 +323,7 @@ public class PhantomBattleConfig : ConfigBase
 		return config.Value.Exp;
 	}
 
-	// Token: 0x0601272B RID: 75563 RVA: 0x0048D014 File Offset: 0x0048B214
+	// Token: 0x0600FBDD RID: 64477 RVA: 0x0049A524 File Offset: 0x00498724
 	public IReadOnlyList<PhantomLevel> GetPhantomLevelListByGroupId(int groupId)
 	{
 		IReadOnlyList<PhantomLevel> configList = ConfigPhantomLevelByGroupId.GetConfigList(groupId, true);
@@ -340,7 +339,7 @@ public class PhantomBattleConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0601272C RID: 75564 RVA: 0x0048D058 File Offset: 0x0048B258
+	// Token: 0x0600FBDE RID: 64478 RVA: 0x0049A568 File Offset: 0x00498768
 	public ItemInfo GetItemInfoById(int itemId)
 	{
 		ItemInfo? config = ConfigItemInfoById.GetConfig(itemId, true);
@@ -356,7 +355,7 @@ public class PhantomBattleConfig : ConfigBase
 		return config.Value;
 	}
 
-	// Token: 0x0601272D RID: 75565 RVA: 0x0048D0AC File Offset: 0x0048B2AC
+	// Token: 0x0600FBDF RID: 64479 RVA: 0x0049A5BC File Offset: 0x004987BC
 	public PhantomExpItem GetPhantomExpItemById(int itemId)
 	{
 		PhantomExpItem? config = ConfigPhantomExpItemByItemId.GetConfig(itemId, true);
@@ -372,21 +371,21 @@ public class PhantomBattleConfig : ConfigBase
 		return config.Value;
 	}
 
-	// Token: 0x0601272E RID: 75566 RVA: 0x0048D0FD File Offset: 0x0048B2FD
+	// Token: 0x0600FBE0 RID: 64480 RVA: 0x0049A60D File Offset: 0x0049880D
 	[NullableContext(2)]
 	public IReadOnlyList<PhantomExpItem> GetPhantomExpItemList()
 	{
 		return ConfigPhantomExpItemAll.GetConfigList(true);
 	}
 
-	// Token: 0x0601272F RID: 75567 RVA: 0x0048D105 File Offset: 0x0048B305
+	// Token: 0x0600FBE1 RID: 64481 RVA: 0x0049A615 File Offset: 0x00498815
 	[NullableContext(2)]
 	public IReadOnlyList<PhantomWildItem> GetPhantomWildItem()
 	{
 		return ConfigPhantomWildItemAll.GetConfigList(true);
 	}
 
-	// Token: 0x06012730 RID: 75568 RVA: 0x0048D110 File Offset: 0x0048B310
+	// Token: 0x0600FBE2 RID: 64482 RVA: 0x0049A620 File Offset: 0x00498820
 	public unsafe int GetPhantomGrowthValueByGrowthIdAndLevel(int growthId, int level)
 	{
 		PhantomGrowth? config = ConfigPhantomGrowthByGrowthIdAndLevel.GetConfig(growthId, level, true);
@@ -404,20 +403,20 @@ public class PhantomBattleConfig : ConfigBase
 		return config.Value.Value;
 	}
 
-	// Token: 0x06012731 RID: 75569 RVA: 0x0048D19B File Offset: 0x0048B39B
+	// Token: 0x0600FBE3 RID: 64483 RVA: 0x0049A6AB File Offset: 0x004988AB
 	[NullableContext(2)]
 	public IReadOnlyList<PhantomSubProperty> GetPhantomSubPropertyByPropId(int propId)
 	{
 		return ConfigPhantomSubPropertyByPropId.GetConfigList(propId, true);
 	}
 
-	// Token: 0x06012732 RID: 75570 RVA: 0x0048D1A4 File Offset: 0x0048B3A4
+	// Token: 0x0600FBE4 RID: 64484 RVA: 0x0049A6B4 File Offset: 0x004988B4
 	public float GetPhantomLevelUpCostRatio()
 	{
 		return (float)ConfigCommonParamById.GetIntConfig("PhantomLevelUpCoinCost").Value / 1000f;
 	}
 
-	// Token: 0x06012733 RID: 75571 RVA: 0x0048D1CC File Offset: 0x0048B3CC
+	// Token: 0x0600FBE5 RID: 64485 RVA: 0x0049A6DC File Offset: 0x004988DC
 	public ConfigPropValue GetTrailPhantomPropItemById(int id)
 	{
 		TrialPhantomPropItem? config = ConfigTrialPhantomPropItemById.GetConfig(id, true);
@@ -433,19 +432,19 @@ public class PhantomBattleConfig : ConfigBase
 		return config.Value.Prop.Value;
 	}
 
-	// Token: 0x06012734 RID: 75572 RVA: 0x0048D230 File Offset: 0x0048B430
+	// Token: 0x0600FBE6 RID: 64486 RVA: 0x0049A740 File Offset: 0x00498940
 	public int GetQualityIdentifyCost(int quality)
 	{
 		return this.GetPhantomQualityByItemQuality(quality).Value.IdentifyCoin;
 	}
 
-	// Token: 0x06012735 RID: 75573 RVA: 0x0048D254 File Offset: 0x0048B454
+	// Token: 0x0600FBE7 RID: 64487 RVA: 0x0049A764 File Offset: 0x00498964
 	public PhantomFetterGroup GetFetterGroupById(int groupId)
 	{
 		return ConfigPhantomFetterGroupById.GetConfig(groupId, true).Value;
 	}
 
-	// Token: 0x06012736 RID: 75574 RVA: 0x0048D270 File Offset: 0x0048B470
+	// Token: 0x0600FBE8 RID: 64488 RVA: 0x0049A780 File Offset: 0x00498980
 	public int GetFetterGroupMaxCountById(int groupId)
 	{
 		PhantomFetterGroup fetterGroupById = this.GetFetterGroupById(groupId);
@@ -462,27 +461,27 @@ public class PhantomBattleConfig : ConfigBase
 		return num;
 	}
 
-	// Token: 0x06012737 RID: 75575 RVA: 0x0048D2C0 File Offset: 0x0048B4C0
+	// Token: 0x0600FBE9 RID: 64489 RVA: 0x0049A7D0 File Offset: 0x004989D0
 	public Dictionary<int, int> GetFetterGroupFetterDataById(int groupId)
 	{
 		return ConfigPhantomFetterGroupById.GetConfig(groupId, true).Value.FetterMap();
 	}
 
-	// Token: 0x06012738 RID: 75576 RVA: 0x0048D2E4 File Offset: 0x0048B4E4
+	// Token: 0x0600FBEA RID: 64490 RVA: 0x0049A7F4 File Offset: 0x004989F4
 	[NullableContext(2)]
 	public IReadOnlyList<PhantomFetterGroup> GetFetterGroupArray()
 	{
 		return ConfigPhantomFetterGroupAll.GetConfigList(true);
 	}
 
-	// Token: 0x06012739 RID: 75577 RVA: 0x0048D2EC File Offset: 0x0048B4EC
+	// Token: 0x0600FBEB RID: 64491 RVA: 0x0049A7FC File Offset: 0x004989FC
 	public int[] GetFetterGroupSourceMonster(int groupId)
 	{
 		IEnumerable<PhantomItem> phantomItemList = this.GetPhantomItemList();
 		List<int> list = new List<int>();
 		foreach (PhantomItem phantomItem in phantomItemList)
 		{
-			if (phantomItem.PhantomType == 1 && phantomItem.ParentMonsterId == 0 && phantomItem.FetterGroup().Contains(groupId))
+			if (phantomItem.PhantomType == 1 && phantomItem.ParentMonsterId == 0 && Array.IndexOf<int>(phantomItem.FetterGroup(), groupId) >= 0)
 			{
 				list.Add(phantomItem.MonsterId);
 			}
@@ -490,7 +489,7 @@ public class PhantomBattleConfig : ConfigBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0601273A RID: 75578 RVA: 0x0048D370 File Offset: 0x0048B570
+	// Token: 0x0600FBEC RID: 64492 RVA: 0x0049A880 File Offset: 0x00498A80
 	public Dictionary<int, Dictionary<int, int>> GetFetterMapResultBySuitMap(Dictionary<int, int> suitMap)
 	{
 		Dictionary<int, Dictionary<int, int>> dictionary = new Dictionary<int, Dictionary<int, int>>();
@@ -526,7 +525,7 @@ public class PhantomBattleConfig : ConfigBase
 		return dictionary;
 	}
 
-	// Token: 0x0601273B RID: 75579 RVA: 0x0048D478 File Offset: 0x0048B678
+	// Token: 0x0600FBED RID: 64493 RVA: 0x0049A988 File Offset: 0x00498B88
 	public List<int> GetFetterResultBySuitMap(Dictionary<int, int> suitMap)
 	{
 		List<int> list = new List<int>();
@@ -555,7 +554,7 @@ public class PhantomBattleConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x0601273C RID: 75580 RVA: 0x0048D558 File Offset: 0x0048B758
+	// Token: 0x0600FBEE RID: 64494 RVA: 0x0049AA68 File Offset: 0x00498C68
 	public string GetPhantomQualityBgSprite(int quality)
 	{
 		if (quality == 0)
@@ -565,97 +564,97 @@ public class PhantomBattleConfig : ConfigBase
 		return this.GetPhantomQualityByItemQuality(quality).Value.QualitySprite;
 	}
 
-	// Token: 0x0601273D RID: 75581 RVA: 0x0048D58C File Offset: 0x0048B78C
+	// Token: 0x0600FBEF RID: 64495 RVA: 0x0049AA9C File Offset: 0x00498C9C
 	public int[] GetPhantomSlotUnlockLevel(int quality)
 	{
 		return this.GetPhantomQualityByItemQuality(quality).Value.GetSlotUnlockLevelBytes().ToArray();
 	}
 
-	// Token: 0x0601273E RID: 75582 RVA: 0x0048D5B8 File Offset: 0x0048B7B8
+	// Token: 0x0600FBF0 RID: 64496 RVA: 0x0049AAC8 File Offset: 0x00498CC8
 	public Dictionary<int, int> GetPhantomIdentifyCost(int quality)
 	{
 		return this.GetPhantomQualityByItemQuality(quality).Value.IdentifyCost();
 	}
 
-	// Token: 0x0601273F RID: 75583 RVA: 0x0048D5DC File Offset: 0x0048B7DC
+	// Token: 0x0600FBF1 RID: 64497 RVA: 0x0049AAEC File Offset: 0x00498CEC
 	public string GetMonsterIdName(int monsterId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(this.GetPhantomItemByMonsterId(monsterId)[0].MonsterName, null);
 	}
 
-	// Token: 0x06012740 RID: 75584 RVA: 0x0048D604 File Offset: 0x0048B804
+	// Token: 0x0600FBF2 RID: 64498 RVA: 0x0049AB14 File Offset: 0x00498D14
 	public string GetFetterNameByFetterNameId(string fetterNameId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(fetterNameId, null);
 	}
 
-	// Token: 0x06012741 RID: 75585 RVA: 0x0048D60D File Offset: 0x0048B80D
+	// Token: 0x0600FBF3 RID: 64499 RVA: 0x0049AB1D File Offset: 0x00498D1D
 	public IReadOnlyList<PhantomManagePlanV2> GetPhantomManagerPlanByFetterId(int fetterId)
 	{
 		return ConfigPhantomManagePlanV2ByFetterId.GetConfigList(fetterId, true) ?? Array.Empty<PhantomManagePlanV2>();
 	}
 
-	// Token: 0x06012742 RID: 75586 RVA: 0x0048D61F File Offset: 0x0048B81F
+	// Token: 0x0600FBF4 RID: 64500 RVA: 0x0049AB2F File Offset: 0x00498D2F
 	public IReadOnlyList<PhantomManagePlanV2> GetPhantomManagerPlanAll()
 	{
 		return ConfigPhantomManagePlanV2All.GetConfigList(true) ?? Array.Empty<PhantomManagePlanV2>();
 	}
 
-	// Token: 0x06012743 RID: 75587 RVA: 0x0048D630 File Offset: 0x0048B830
+	// Token: 0x0600FBF5 RID: 64501 RVA: 0x0049AB40 File Offset: 0x00498D40
 	public int GetPhantomManagerShareCodeMax()
 	{
 		return ConfigCommonParamById.GetIntConfig("PhBaPlanCodeMaxCount").GetValueOrDefault(30);
 	}
 
-	// Token: 0x06012744 RID: 75588 RVA: 0x0048D654 File Offset: 0x0048B854
+	// Token: 0x0600FBF6 RID: 64502 RVA: 0x0049AB64 File Offset: 0x00498D64
 	public int GetPhantomManagerShareCodeMin()
 	{
 		return ConfigCommonParamById.GetIntConfig("PhBaPlanCodeMinCount").GetValueOrDefault(20);
 	}
 
-	// Token: 0x06012745 RID: 75589 RVA: 0x0048D675 File Offset: 0x0048B875
+	// Token: 0x0600FBF7 RID: 64503 RVA: 0x0049AB85 File Offset: 0x00498D85
 	public TrailPhantomProp? GetTrialPhantomPropConfig(int id)
 	{
 		return ConfigTrailPhantomPropById.GetConfig(id, true);
 	}
 
-	// Token: 0x06012746 RID: 75590 RVA: 0x0048D680 File Offset: 0x0048B880
+	// Token: 0x0600FBF8 RID: 64504 RVA: 0x0049AB90 File Offset: 0x00498D90
 	public int GetVisionLevelUpQualityLimit()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionHighQuality").Value;
 	}
 
-	// Token: 0x06012747 RID: 75591 RVA: 0x0048D6A0 File Offset: 0x0048B8A0
+	// Token: 0x0600FBF9 RID: 64505 RVA: 0x0049ABB0 File Offset: 0x00498DB0
 	public int GetVisionLevelUpRareLimit()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionHighRare").Value;
 	}
 
-	// Token: 0x06012748 RID: 75592 RVA: 0x0048D6C0 File Offset: 0x0048B8C0
+	// Token: 0x0600FBFA RID: 64506 RVA: 0x0049ABD0 File Offset: 0x00498DD0
 	public int GetVisionLevelUpLevelLimit()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionHighLevel").Value;
 	}
 
-	// Token: 0x06012749 RID: 75593 RVA: 0x0048D6E0 File Offset: 0x0048B8E0
+	// Token: 0x0600FBFB RID: 64507 RVA: 0x0049ABF0 File Offset: 0x00498DF0
 	public int GetVisionScrollerMoveDistance()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionScrollerMoveDistance").Value;
 	}
 
-	// Token: 0x0601274A RID: 75594 RVA: 0x0048D700 File Offset: 0x0048B900
+	// Token: 0x0600FBFC RID: 64508 RVA: 0x0049AC10 File Offset: 0x00498E10
 	public int GetVisionScrollerPressTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionScrollerLongPressTime").Value;
 	}
 
-	// Token: 0x0601274B RID: 75595 RVA: 0x0048D720 File Offset: 0x0048B920
+	// Token: 0x0600FBFD RID: 64509 RVA: 0x0049AC30 File Offset: 0x00498E30
 	public int GetVisionBeforeScrollerLongPressTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionBeforeScrollerLongPressTime").Value;
 	}
 
-	// Token: 0x0601274C RID: 75596 RVA: 0x0048D740 File Offset: 0x0048B940
+	// Token: 0x0600FBFE RID: 64510 RVA: 0x0049AC50 File Offset: 0x00498E50
 	public float GetVisionScrollerOffsetX()
 	{
 		if (!Info.Instance.IsInTouch())
@@ -665,7 +664,7 @@ public class PhantomBattleConfig : ConfigBase
 		return ConfigCommonParamById.GetFloatConfig("VisionScrollerOffsetX").Value;
 	}
 
-	// Token: 0x0601274D RID: 75597 RVA: 0x0048D774 File Offset: 0x0048B974
+	// Token: 0x0600FBFF RID: 64511 RVA: 0x0049AC84 File Offset: 0x00498E84
 	public float GetVisionScrollerOffsetY()
 	{
 		if (!Info.Instance.IsInTouch())
@@ -675,163 +674,211 @@ public class PhantomBattleConfig : ConfigBase
 		return ConfigCommonParamById.GetFloatConfig("VisionScrollerOffsetY").Value;
 	}
 
-	// Token: 0x0601274E RID: 75598 RVA: 0x0048D7A8 File Offset: 0x0048B9A8
+	// Token: 0x0600FC00 RID: 64512 RVA: 0x0049ACB8 File Offset: 0x00498EB8
 	public int GetVisionScrollerOffsetXDir()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionScrollerOffsetXDir").Value;
 	}
 
-	// Token: 0x0601274F RID: 75599 RVA: 0x0048D7C8 File Offset: 0x0048B9C8
+	// Token: 0x0600FC01 RID: 64513 RVA: 0x0049ACD8 File Offset: 0x00498ED8
 	public int GetVisionScrollerOffsetYDir()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionScrollerOffsetYDir").Value;
 	}
 
-	// Token: 0x06012750 RID: 75600 RVA: 0x0048D7E7 File Offset: 0x0048B9E7
+	// Token: 0x0600FC02 RID: 64514 RVA: 0x0049ACF7 File Offset: 0x00498EF7
 	public string GetVisionDragCurve()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionDragCurve");
 	}
 
-	// Token: 0x06012751 RID: 75601 RVA: 0x0048D7F4 File Offset: 0x0048B9F4
+	// Token: 0x0600FC03 RID: 64515 RVA: 0x0049AD04 File Offset: 0x00498F04
 	public int GetVisionDragCurveTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionDragAnimationTime").Value;
 	}
 
-	// Token: 0x06012752 RID: 75602 RVA: 0x0048D813 File Offset: 0x0048BA13
+	// Token: 0x0600FC04 RID: 64516 RVA: 0x0049AD23 File Offset: 0x00498F23
 	public string GetFilterOwnTexture()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionFilterSpriteOwn");
 	}
 
-	// Token: 0x06012753 RID: 75603 RVA: 0x0048D81F File Offset: 0x0048BA1F
+	// Token: 0x0600FC05 RID: 64517 RVA: 0x0049AD2F File Offset: 0x00498F2F
 	public string GetFilterNotOwnTexture()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionFilterSpriteNotOwn");
 	}
 
-	// Token: 0x06012754 RID: 75604 RVA: 0x0048D82B File Offset: 0x0048BA2B
+	// Token: 0x0600FC06 RID: 64518 RVA: 0x0049AD3B File Offset: 0x00498F3B
 	public string GetFilterEquipTexture()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionFilterSpriteEquipped");
 	}
 
-	// Token: 0x06012755 RID: 75605 RVA: 0x0048D837 File Offset: 0x0048BA37
+	// Token: 0x0600FC07 RID: 64519 RVA: 0x0049AD47 File Offset: 0x00498F47
 	public string GetFilterNoEquipTexture()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionFilterSpriteNotEquipped");
 	}
 
-	// Token: 0x06012756 RID: 75606 RVA: 0x0048D843 File Offset: 0x0048BA43
+	// Token: 0x0600FC08 RID: 64520 RVA: 0x0049AD53 File Offset: 0x00498F53
 	public string GetVisionLevelUpTexture()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionLevelUpUnlockTexture");
 	}
 
-	// Token: 0x06012757 RID: 75607 RVA: 0x0048D84F File Offset: 0x0048BA4F
+	// Token: 0x0600FC09 RID: 64521 RVA: 0x0049AD5F File Offset: 0x00498F5F
 	public string GetVisionHeadSprBgB()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionHeadSprBgB");
 	}
 
-	// Token: 0x06012758 RID: 75608 RVA: 0x0048D85B File Offset: 0x0048BA5B
+	// Token: 0x0600FC0A RID: 64522 RVA: 0x0049AD6B File Offset: 0x00498F6B
 	public string GetVisionHeadSprBgA()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionHeadSprBgA");
 	}
 
-	// Token: 0x06012759 RID: 75609 RVA: 0x0048D867 File Offset: 0x0048BA67
+	// Token: 0x0600FC0B RID: 64523 RVA: 0x0049AD77 File Offset: 0x00498F77
 	public string GetVisionHeadLightBgA()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionHeadLightBgA");
 	}
 
-	// Token: 0x0601275A RID: 75610 RVA: 0x0048D873 File Offset: 0x0048BA73
+	// Token: 0x0600FC0C RID: 64524 RVA: 0x0049AD83 File Offset: 0x00498F83
 	public string GetVisionHeadLightBgB()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionHeadLightBgB");
 	}
 
-	// Token: 0x0601275B RID: 75611 RVA: 0x0048D880 File Offset: 0x0048BA80
+	// Token: 0x0600FC0D RID: 64525 RVA: 0x0049AD8F File Offset: 0x00498F8F
+	public string GetVisionMainRoleHeadSprBgA()
+	{
+		return ConfigCommonParamById.GetStringConfig("VisionMainRoleHeadSprBgA");
+	}
+
+	// Token: 0x0600FC0E RID: 64526 RVA: 0x0049AD9B File Offset: 0x00498F9B
+	public string GetVisionMainRoleHeadSprBgB()
+	{
+		return ConfigCommonParamById.GetStringConfig("VisionMainRoleHeadSprBgB");
+	}
+
+	// Token: 0x0600FC0F RID: 64527 RVA: 0x0049ADA7 File Offset: 0x00498FA7
+	public string GetVisionMainRoleHeadFrameBgA()
+	{
+		return ConfigCommonParamById.GetStringConfig("VisionMainRoleHeadFrameBgA");
+	}
+
+	// Token: 0x0600FC10 RID: 64528 RVA: 0x0049ADB3 File Offset: 0x00498FB3
+	public string GetVisionMainRoleHeadFrameBgB()
+	{
+		return ConfigCommonParamById.GetStringConfig("VisionMainRoleHeadFrameBgB");
+	}
+
+	// Token: 0x0600FC11 RID: 64529 RVA: 0x0049ADC0 File Offset: 0x00498FC0
 	public int GetVisionReachableCostMax()
 	{
 		return ConfigCommonParamById.GetIntConfig("PhantomTotalCost").Value;
 	}
 
-	// Token: 0x0601275C RID: 75612 RVA: 0x0048D89F File Offset: 0x0048BA9F
+	// Token: 0x0600FC12 RID: 64530 RVA: 0x0049ADDF File Offset: 0x00498FDF
 	public string GetVisionFetterDefaultColor()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionFetterDefaultColor");
 	}
 
-	// Token: 0x0601275D RID: 75613 RVA: 0x0048D8AB File Offset: 0x0048BAAB
+	// Token: 0x0600FC13 RID: 64531 RVA: 0x0049ADEB File Offset: 0x00498FEB
 	public string GetVisionFetterDefaultTexture()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionFetterDefaultTexture");
 	}
 
-	// Token: 0x0601275E RID: 75614 RVA: 0x0048D8B8 File Offset: 0x0048BAB8
+	// Token: 0x0600FC14 RID: 64532 RVA: 0x0049ADF8 File Offset: 0x00498FF8
 	public int GetVisionLevelUpDelay()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionLevelUpDelay").Value;
 	}
 
-	// Token: 0x0601275F RID: 75615 RVA: 0x0048D8D8 File Offset: 0x0048BAD8
+	// Token: 0x0600FC15 RID: 64533 RVA: 0x0049AE18 File Offset: 0x00499018
 	public int GetVisionIdentifyDelay()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionIdentifyDelay").Value;
 	}
 
-	// Token: 0x06012760 RID: 75616 RVA: 0x0048D8F7 File Offset: 0x0048BAF7
+	// Token: 0x0600FC16 RID: 64534 RVA: 0x0049AE37 File Offset: 0x00499037
 	public string GetVisionCostColorBase()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionCostColorBase");
 	}
 
-	// Token: 0x06012761 RID: 75617 RVA: 0x0048D903 File Offset: 0x0048BB03
+	// Token: 0x0600FC17 RID: 64535 RVA: 0x0049AE43 File Offset: 0x00499043
 	public string GetVisionCostColorFull()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionCostColorFull");
 	}
 
-	// Token: 0x06012762 RID: 75618 RVA: 0x0048D90F File Offset: 0x0048BB0F
+	// Token: 0x0600FC18 RID: 64536 RVA: 0x0049AE4F File Offset: 0x0049904F
 	public string GetVisionCostColorAlert()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionCostColorAlert");
 	}
 
-	// Token: 0x06012763 RID: 75619 RVA: 0x0048D91C File Offset: 0x0048BB1C
+	// Token: 0x0600FC19 RID: 64537 RVA: 0x0049AE5C File Offset: 0x0049905C
 	public int GetVisionIdentifyAnimationTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionIdentifyAnimationTime").Value;
 	}
 
-	// Token: 0x06012764 RID: 75620 RVA: 0x0048D93B File Offset: 0x0048BB3B
+	// Token: 0x0600FC1A RID: 64538 RVA: 0x0049AE7C File Offset: 0x0049907C
 	public int[] GetVisionMainAttributeSortArray()
 	{
-		return ConfigCommonParamById.GetIntArrayConfig("VisionMainAttributeSortArray").ToArray<int>();
+		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("VisionMainAttributeSortArray");
+		int[] array = new int[intArrayConfig.Count];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = intArrayConfig[i];
+		}
+		return array;
 	}
 
-	// Token: 0x06012765 RID: 75621 RVA: 0x0048D94C File Offset: 0x0048BB4C
+	// Token: 0x0600FC1B RID: 64539 RVA: 0x0049AEBC File Offset: 0x004990BC
 	public int[] GetVisionMainPercentageAttributeSortArray()
 	{
-		return ConfigCommonParamById.GetIntArrayConfig("VisionMainPercentageAttributeSortArray").ToArray<int>();
+		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("VisionMainPercentageAttributeSortArray");
+		int[] array = new int[intArrayConfig.Count];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = intArrayConfig[i];
+		}
+		return array;
 	}
 
-	// Token: 0x06012766 RID: 75622 RVA: 0x0048D95D File Offset: 0x0048BB5D
+	// Token: 0x0600FC1C RID: 64540 RVA: 0x0049AEFC File Offset: 0x004990FC
 	public int[] GetVisionSubAttributeSortArray()
 	{
-		return ConfigCommonParamById.GetIntArrayConfig("VisionSubAttributeSortArray").ToArray<int>();
+		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("VisionSubAttributeSortArray");
+		int[] array = new int[intArrayConfig.Count];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = intArrayConfig[i];
+		}
+		return array;
 	}
 
-	// Token: 0x06012767 RID: 75623 RVA: 0x0048D96E File Offset: 0x0048BB6E
+	// Token: 0x0600FC1D RID: 64541 RVA: 0x0049AF3C File Offset: 0x0049913C
 	public int[] GetVisionSubPercentageAttributeSortArray()
 	{
-		return ConfigCommonParamById.GetIntArrayConfig("VisionSubPercentageAttributeSortArray").ToArray<int>();
+		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("VisionSubPercentageAttributeSortArray");
+		int[] array = new int[intArrayConfig.Count];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = intArrayConfig[i];
+		}
+		return array;
 	}
 
-	// Token: 0x06012768 RID: 75624 RVA: 0x0048D97F File Offset: 0x0048BB7F
+	// Token: 0x0600FC1E RID: 64542 RVA: 0x0049AF79 File Offset: 0x00499179
 	public string GetVisionDestroyCostSpriteByCost(int cost)
 	{
 		if (cost == 1)
@@ -845,87 +892,93 @@ public class PhantomBattleConfig : ConfigBase
 		return this.GetVisionDestroyCost4();
 	}
 
-	// Token: 0x06012769 RID: 75625 RVA: 0x0048D99D File Offset: 0x0048BB9D
+	// Token: 0x0600FC1F RID: 64543 RVA: 0x0049AF97 File Offset: 0x00499197
 	public string GetVisionDestroyCost1()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionFilterSpriteCost1");
 	}
 
-	// Token: 0x0601276A RID: 75626 RVA: 0x0048D9A9 File Offset: 0x0048BBA9
+	// Token: 0x0600FC20 RID: 64544 RVA: 0x0049AFA3 File Offset: 0x004991A3
 	public string GetVisionDestroyCost3()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionFilterSpriteCost3");
 	}
 
-	// Token: 0x0601276B RID: 75627 RVA: 0x0048D9B5 File Offset: 0x0048BBB5
+	// Token: 0x0600FC21 RID: 64545 RVA: 0x0049AFAF File Offset: 0x004991AF
 	public string GetVisionDestroyCost4()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionFilterSpriteCost4");
 	}
 
-	// Token: 0x0601276C RID: 75628 RVA: 0x0048D9C1 File Offset: 0x0048BBC1
+	// Token: 0x0600FC22 RID: 64546 RVA: 0x0049AFBB File Offset: 0x004991BB
 	public string GetVisionRecoveryUnDesperateIcon()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionRecoveryUnDesperate");
 	}
 
-	// Token: 0x0601276D RID: 75629 RVA: 0x0048D9CD File Offset: 0x0048BBCD
+	// Token: 0x0600FC23 RID: 64547 RVA: 0x0049AFC7 File Offset: 0x004991C7
 	public string GetVisionRecoveryDesperateIcon()
 	{
 		return ConfigCommonParamById.GetStringConfig("VisionRecoveryDesperate");
 	}
 
-	// Token: 0x0601276E RID: 75630 RVA: 0x0048D9DC File Offset: 0x0048BBDC
+	// Token: 0x0600FC24 RID: 64548 RVA: 0x0049AFD4 File Offset: 0x004991D4
 	public int GetVisionRecommendRuleLevel()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionRecommendRuleLevel").Value;
 	}
 
-	// Token: 0x0601276F RID: 75631 RVA: 0x0048D9FC File Offset: 0x0048BBFC
+	// Token: 0x0600FC25 RID: 64549 RVA: 0x0049AFF4 File Offset: 0x004991F4
 	public int GetPhantomEquipGroupCountMax()
 	{
 		return ConfigCommonParamById.GetIntConfig("PhantomEquipGroupCount").Value;
 	}
 
-	// Token: 0x06012770 RID: 75632 RVA: 0x0048DA1C File Offset: 0x0048BC1C
+	// Token: 0x0600FC26 RID: 64550 RVA: 0x0049B014 File Offset: 0x00499214
 	public int GetPhantomEquipHelpGroupId()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionEquipHelpGroupId").Value;
 	}
 
-	// Token: 0x06012771 RID: 75633 RVA: 0x0048DA3C File Offset: 0x0048BC3C
+	// Token: 0x0600FC27 RID: 64551 RVA: 0x0049B034 File Offset: 0x00499234
 	public int GetPhantomRecommendHelpGroupId()
 	{
 		return ConfigCommonParamById.GetIntConfig("VisionRecommendHelpId").Value;
 	}
 
-	// Token: 0x06012772 RID: 75634 RVA: 0x0048DA5B File Offset: 0x0048BC5B
+	// Token: 0x0600FC28 RID: 64552 RVA: 0x0049B054 File Offset: 0x00499254
 	public int[] GetVisionAttrSortArray()
 	{
-		return ConfigCommonParamById.GetIntArrayConfig("VisionMainViewExtraAttributeForPreset").ToArray<int>();
+		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("VisionMainViewExtraAttributeForPreset");
+		int[] array = new int[intArrayConfig.Count];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = intArrayConfig[i];
+		}
+		return array;
 	}
 
-	// Token: 0x06012773 RID: 75635 RVA: 0x0048DA6C File Offset: 0x0048BC6C
+	// Token: 0x0600FC29 RID: 64553 RVA: 0x0049B091 File Offset: 0x00499291
 	public PhantomVicePolishConfig? GetPhantomVicePolishCostByLockCount(int count)
 	{
 		return ConfigPhantomVicePolishConfigByPropCount.GetConfig(count, true);
 	}
 
-	// Token: 0x06012774 RID: 75636 RVA: 0x0048DA78 File Offset: 0x0048BC78
+	// Token: 0x0600FC2A RID: 64554 RVA: 0x0049B09C File Offset: 0x0049929C
 	public int GetPhantomSharedCodeCd()
 	{
 		return ConfigCommonParamById.GetIntConfig("PhBaPlanCodeShareCheckCD").GetValueOrDefault(30);
 	}
 
-	// Token: 0x06012775 RID: 75637 RVA: 0x0048DA99 File Offset: 0x0048BC99
+	// Token: 0x0600FC2B RID: 64555 RVA: 0x0049B0BD File Offset: 0x004992BD
 	protected override bool OnClear()
 	{
 		this.TrialPhantomPropMap.Clear();
 		return true;
 	}
 
-	// Token: 0x170017DE RID: 6110
-	// (get) Token: 0x06012776 RID: 75638 RVA: 0x0048DAA7 File Offset: 0x0048BCA7
+	// Token: 0x17001818 RID: 6168
+	// (get) Token: 0x0600FC2C RID: 64556 RVA: 0x0049B0CB File Offset: 0x004992CB
 	public static PhantomBattleConfig Instance
 	{
 		get
@@ -934,7 +987,7 @@ public class PhantomBattleConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06012777 RID: 75639 RVA: 0x0048DAAE File Offset: 0x0048BCAE
+	// Token: 0x0600FC2D RID: 64557 RVA: 0x0049B0D2 File Offset: 0x004992D2
 	public static PhantomBattleConfig GetOrCreateInstance()
 	{
 		if (PhantomBattleConfig._Instance == null)
@@ -944,7 +997,7 @@ public class PhantomBattleConfig : ConfigBase
 		return PhantomBattleConfig._Instance;
 	}
 
-	// Token: 0x06012778 RID: 75640 RVA: 0x0048DAC2 File Offset: 0x0048BCC2
+	// Token: 0x0600FC2E RID: 64558 RVA: 0x0049B0E6 File Offset: 0x004992E6
 	public static bool CreateInstance()
 	{
 		if (PhantomBattleConfig._Instance != null)
@@ -955,27 +1008,27 @@ public class PhantomBattleConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06012779 RID: 75641 RVA: 0x0048DAD8 File Offset: 0x0048BCD8
+	// Token: 0x0600FC2F RID: 64559 RVA: 0x0049B0FC File Offset: 0x004992FC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601277A RID: 75642 RVA: 0x0048DADA File Offset: 0x0048BCDA
+	// Token: 0x0600FC30 RID: 64560 RVA: 0x0049B0FE File Offset: 0x004992FE
 	public static void ResetStaticDefaultValue()
 	{
 		PhantomBattleConfig._Instance = null;
 	}
 
-	// Token: 0x0601277B RID: 75643 RVA: 0x0048DAE2 File Offset: 0x0048BCE2
+	// Token: 0x0600FC31 RID: 64561 RVA: 0x0049B106 File Offset: 0x00499306
 	static PhantomBattleConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhantomBattleConfig.CreateStaticDefaultValue), new Action(PhantomBattleConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008B68 RID: 35688
+	// Token: 0x04008CAF RID: 36015
 	private readonly Dictionary<int, TrailPhantomProp> TrialPhantomPropMap;
 
-	// Token: 0x04008B69 RID: 35689
+	// Token: 0x04008CB0 RID: 36016
 	[Nullable(2)]
 	private static PhantomBattleConfig _Instance;
 }

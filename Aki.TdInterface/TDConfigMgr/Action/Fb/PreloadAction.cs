@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029E4 RID: 10724
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CD1 RID: 11473
 	public class PreloadAction : ActionParams
 	{
-		// Token: 0x0600ECDE RID: 60638 RVA: 0x00229255 File Offset: 0x00227455
+		// Token: 0x0600FB75 RID: 64373 RVA: 0x00246BD9 File Offset: 0x00244DD9
 		public static PreloadAction Create(IPreloadAction? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AD8 RID: 19160
-		// (get) Token: 0x0600ECDF RID: 60639 RVA: 0x00229274 File Offset: 0x00227474
+		// Token: 0x17004E81 RID: 20097
+		// (get) Token: 0x0600FB76 RID: 64374 RVA: 0x00246BF8 File Offset: 0x00244DF8
 		public virtual IPreloadCharacterType PreloadObjectType
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008272 RID: 33394
+		// Token: 0x04008963 RID: 35171
 		private IPreloadAction Instance;
 
-		// Token: 0x04008273 RID: 33395
+		// Token: 0x04008964 RID: 35172
 		private IPreloadCharacterType _PreloadObjectTypeCache;
 
-		// Token: 0x04008274 RID: 33396
+		// Token: 0x04008965 RID: 35173
 		private bool _PreloadObjectTypeInited;
 	}
 }

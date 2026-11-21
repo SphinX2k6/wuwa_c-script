@@ -4,34 +4,34 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020016E7 RID: 5863
+// Token: 0x02000B9F RID: 2975
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class AntiCheatController : UiControllerBase
 {
-	// Token: 0x0600A822 RID: 43042 RVA: 0x0025D0AF File Offset: 0x0025B2AF
+	// Token: 0x06007C02 RID: 31746 RVA: 0x002674CF File Offset: 0x002656CF
 	protected override bool OnInit()
 	{
 		this.DataUndefinedError = false;
 		return true;
 	}
 
-	// Token: 0x0600A823 RID: 43043 RVA: 0x0025D0B9 File Offset: 0x0025B2B9
+	// Token: 0x06007C03 RID: 31747 RVA: 0x002674D9 File Offset: 0x002656D9
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.ChangePlayerInfoId, new Action<int>(this.OnChangePlayerInfoId));
 		EventSystem.Instance.Add(EEventName.SendHeartbeat, new Action(this.CheckHeartbeat));
 	}
 
-	// Token: 0x0600A824 RID: 43044 RVA: 0x0025D0F0 File Offset: 0x0025B2F0
+	// Token: 0x06007C04 RID: 31748 RVA: 0x00267510 File Offset: 0x00265710
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.ChangePlayerInfoId, new Action<int>(this.OnChangePlayerInfoId));
 		EventSystem.Instance.Remove(EEventName.SendHeartbeat, new Action(this.CheckHeartbeat));
 	}
 
-	// Token: 0x0600A825 RID: 43045 RVA: 0x0025D128 File Offset: 0x0025B328
+	// Token: 0x06007C05 RID: 31749 RVA: 0x00267548 File Offset: 0x00265748
 	private void OnChangePlayerInfoId(int id)
 	{
 		int value = PlayerInfoModel.Instance.GetId().Value;
@@ -39,7 +39,7 @@ public class AntiCheatController : UiControllerBase
 		this.ReportIOSBundleInfo();
 	}
 
-	// Token: 0x0600A826 RID: 43046 RVA: 0x0025D160 File Offset: 0x0025B360
+	// Token: 0x06007C06 RID: 31750 RVA: 0x00267580 File Offset: 0x00265780
 	private void ReportIOSBundleInfo()
 	{
 		if (Info.Instance.IsIosPlatform())
@@ -49,7 +49,7 @@ public class AntiCheatController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A827 RID: 43047 RVA: 0x0025D18C File Offset: 0x0025B38C
+	// Token: 0x06007C07 RID: 31751 RVA: 0x002675AC File Offset: 0x002657AC
 	private void CheckHeartbeat()
 	{
 		Number number = TimeUtil.Instance.GetServerTimeStamp();
@@ -91,8 +91,8 @@ public class AntiCheatController : UiControllerBase
 		this.LastHeartbeatTime = number;
 	}
 
-	// Token: 0x17000DEE RID: 3566
-	// (get) Token: 0x0600A828 RID: 43048 RVA: 0x0025D2C3 File Offset: 0x0025B4C3
+	// Token: 0x17000E0F RID: 3599
+	// (get) Token: 0x06007C08 RID: 31752 RVA: 0x002676E3 File Offset: 0x002658E3
 	public static AntiCheatController Instance
 	{
 		get
@@ -101,7 +101,7 @@ public class AntiCheatController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A829 RID: 43049 RVA: 0x0025D2CA File Offset: 0x0025B4CA
+	// Token: 0x06007C09 RID: 31753 RVA: 0x002676EA File Offset: 0x002658EA
 	public static AntiCheatController GetOrCreateInstance()
 	{
 		if (AntiCheatController._Instance == null)
@@ -111,7 +111,7 @@ public class AntiCheatController : UiControllerBase
 		return AntiCheatController._Instance;
 	}
 
-	// Token: 0x0600A82A RID: 43050 RVA: 0x0025D2DE File Offset: 0x0025B4DE
+	// Token: 0x06007C0A RID: 31754 RVA: 0x002676FE File Offset: 0x002658FE
 	public static bool CreateInstance()
 	{
 		if (AntiCheatController._Instance != null)
@@ -122,39 +122,39 @@ public class AntiCheatController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A82B RID: 43051 RVA: 0x0025D2F4 File Offset: 0x0025B4F4
+	// Token: 0x06007C0B RID: 31755 RVA: 0x00267714 File Offset: 0x00265914
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A82C RID: 43052 RVA: 0x0025D2F6 File Offset: 0x0025B4F6
+	// Token: 0x06007C0C RID: 31756 RVA: 0x00267716 File Offset: 0x00265916
 	public static void ResetStaticDefaultValue()
 	{
 		AntiCheatController._Instance = null;
 	}
 
-	// Token: 0x0600A82D RID: 43053 RVA: 0x0025D2FE File Offset: 0x0025B4FE
+	// Token: 0x06007C0D RID: 31757 RVA: 0x0026771E File Offset: 0x0026591E
 	static AntiCheatController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AntiCheatController.CreateStaticDefaultValue), new Action(AntiCheatController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004BB9 RID: 19385
+	// Token: 0x04004C60 RID: 19552
 	private const float HEARTBEAT_EXCEPTION_FACTOR = 0.5f;
 
-	// Token: 0x04004BBA RID: 19386
+	// Token: 0x04004C61 RID: 19553
 	private Number HEARTBEAT_REPORT_INTERVAL = TimeUtil.Instance.Hour;
 
-	// Token: 0x04004BBB RID: 19387
+	// Token: 0x04004C62 RID: 19554
 	private Number LastHeartbeatTime = 0;
 
-	// Token: 0x04004BBC RID: 19388
+	// Token: 0x04004C63 RID: 19555
 	private Number LastHeartbeatReportTime = 0;
 
-	// Token: 0x04004BBD RID: 19389
+	// Token: 0x04004C64 RID: 19556
 	private bool DataUndefinedError;
 
-	// Token: 0x04004BBE RID: 19390
+	// Token: 0x04004C65 RID: 19557
 	[Nullable(2)]
 	private static AntiCheatController _Instance;
 }

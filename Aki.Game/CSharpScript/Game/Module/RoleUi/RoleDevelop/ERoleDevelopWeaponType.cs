@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D07 RID: 19719
+	// Token: 0x02003CBA RID: 15546
 	public enum ERoleDevelopWeaponType
 	{
-		// Token: 0x0401B1CD RID: 111053
+		// Token: 0x04015B58 RID: 88920
 		Develop = 1,
-		// Token: 0x0401B1CE RID: 111054
+		// Token: 0x04015B59 RID: 88921
 		Recommend
 	}
 }

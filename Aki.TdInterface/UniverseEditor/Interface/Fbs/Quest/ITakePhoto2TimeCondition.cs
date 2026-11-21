@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041A5 RID: 16805
+	// Token: 0x020045FE RID: 17918
 	public struct ITakePhoto2TimeCondition : IFlatbufferObject
 	{
-		// Token: 0x1700772A RID: 30506
-		// (get) Token: 0x06018BBC RID: 101308 RVA: 0x0038FAF8 File Offset: 0x0038DCF8
+		// Token: 0x17007D56 RID: 32086
+		// (get) Token: 0x0601A312 RID: 107282 RVA: 0x003BAF4C File Offset: 0x003B914C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018BBD RID: 101309 RVA: 0x0038FB05 File Offset: 0x0038DD05
+		// Token: 0x0601A313 RID: 107283 RVA: 0x003BAF59 File Offset: 0x003B9159
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018BBE RID: 101310 RVA: 0x0038FB0C File Offset: 0x0038DD0C
+		// Token: 0x0601A314 RID: 107284 RVA: 0x003BAF60 File Offset: 0x003B9160
 		public static ITakePhoto2TimeCondition GetRootAsITakePhoto2TimeCondition(ByteBuffer _bb)
 		{
 			return ITakePhoto2TimeCondition.GetRootAsITakePhoto2TimeCondition(_bb, default(ITakePhoto2TimeCondition));
 		}
 
-		// Token: 0x06018BBF RID: 101311 RVA: 0x0038FB28 File Offset: 0x0038DD28
+		// Token: 0x0601A315 RID: 107285 RVA: 0x003BAF7C File Offset: 0x003B917C
 		public static ITakePhoto2TimeCondition GetRootAsITakePhoto2TimeCondition(ByteBuffer _bb, ITakePhoto2TimeCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018BC0 RID: 101312 RVA: 0x0038FB45 File Offset: 0x0038DD45
+		// Token: 0x0601A316 RID: 107286 RVA: 0x003BAF99 File Offset: 0x003B9199
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018BC1 RID: 101313 RVA: 0x0038FB54 File Offset: 0x0038DD54
+		// Token: 0x0601A317 RID: 107287 RVA: 0x003BAFA8 File Offset: 0x003B91A8
 		public ITakePhoto2TimeCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700772B RID: 30507
-		// (get) Token: 0x06018BC2 RID: 101314 RVA: 0x0038FB64 File Offset: 0x0038DD64
+		// Token: 0x17007D57 RID: 32087
+		// (get) Token: 0x0601A318 RID: 107288 RVA: 0x003BAFB8 File Offset: 0x003B91B8
 		public IHourToHour? TimeRange
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700772C RID: 30508
-		// (get) Token: 0x06018BC3 RID: 101315 RVA: 0x0038FBC4 File Offset: 0x0038DDC4
+		// Token: 0x17007D58 RID: 32088
+		// (get) Token: 0x0601A319 RID: 107289 RVA: 0x003BB018 File Offset: 0x003B9218
 		public ECompare Compare
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018BC4 RID: 101316 RVA: 0x0038FC00 File Offset: 0x0038DE00
+		// Token: 0x0601A31A RID: 107290 RVA: 0x003BB054 File Offset: 0x003B9254
 		public static Offset<ITakePhoto2TimeCondition> CreateITakePhoto2TimeCondition(FlatBufferBuilder builder, Offset<IHourToHour> TimeRangeOffset = default(Offset<IHourToHour>), ECompare Compare = ECompare.Eq)
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITakePhoto2TimeCondition.EndITakePhoto2TimeCondition(builder);
 		}
 
-		// Token: 0x06018BC5 RID: 101317 RVA: 0x0038FC1D File Offset: 0x0038DE1D
+		// Token: 0x0601A31B RID: 107291 RVA: 0x003BB071 File Offset: 0x003B9271
 		public static void StartITakePhoto2TimeCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06018BC6 RID: 101318 RVA: 0x0038FC26 File Offset: 0x0038DE26
+		// Token: 0x0601A31C RID: 107292 RVA: 0x003BB07A File Offset: 0x003B927A
 		public static void AddTimeRange(FlatBufferBuilder builder, Offset<IHourToHour> timeRangeOffset)
 		{
 			builder.AddOffset(0, timeRangeOffset.Value, 0);
 		}
 
-		// Token: 0x06018BC7 RID: 101319 RVA: 0x0038FC36 File Offset: 0x0038DE36
+		// Token: 0x0601A31D RID: 107293 RVA: 0x003BB08A File Offset: 0x003B928A
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(1, (byte)compare, 0);
 		}
 
-		// Token: 0x06018BC8 RID: 101320 RVA: 0x0038FC41 File Offset: 0x0038DE41
+		// Token: 0x0601A31E RID: 107294 RVA: 0x003BB095 File Offset: 0x003B9295
 		public static Offset<ITakePhoto2TimeCondition> EndITakePhoto2TimeCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ITakePhoto2TimeCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06018BC9 RID: 101321 RVA: 0x0038FC50 File Offset: 0x0038DE50
+		// Token: 0x0601A31F RID: 107295 RVA: 0x003BB0A4 File Offset: 0x003B92A4
 		public ITakePhoto2TimeConditionT UnPack()
 		{
 			ITakePhoto2TimeConditionT takePhoto2TimeConditionT = new ITakePhoto2TimeConditionT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return takePhoto2TimeConditionT;
 		}
 
-		// Token: 0x06018BCA RID: 101322 RVA: 0x0038FC6C File Offset: 0x0038DE6C
+		// Token: 0x0601A320 RID: 107296 RVA: 0x003BB0C0 File Offset: 0x003B92C0
 		public void UnPackTo(ITakePhoto2TimeConditionT _o)
 		{
 			_o.TimeRange = ((this.TimeRange != null) ? this.TimeRange.Value.UnPack() : null);
 			_o.Compare = this.Compare;
 		}
 
-		// Token: 0x06018BCB RID: 101323 RVA: 0x0038FCB4 File Offset: 0x0038DEB4
+		// Token: 0x0601A321 RID: 107297 RVA: 0x003BB108 File Offset: 0x003B9308
 		public static Offset<ITakePhoto2TimeCondition> Pack(FlatBufferBuilder builder, ITakePhoto2TimeConditionT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITakePhoto2TimeCondition.CreateITakePhoto2TimeCondition(builder, timeRangeOffset, _o.Compare);
 		}
 
-		// Token: 0x0400BDE2 RID: 48610
+		// Token: 0x0400C7EC RID: 51180
 		private Table __p;
 	}
 }

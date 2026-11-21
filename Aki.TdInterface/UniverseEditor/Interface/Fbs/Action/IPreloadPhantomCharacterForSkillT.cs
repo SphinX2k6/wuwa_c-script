@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D9C RID: 28060
+	// Token: 0x02007517 RID: 29975
 	public class IPreloadPhantomCharacterForSkillT
 	{
-		// Token: 0x1700D14E RID: 53582
-		// (get) Token: 0x0603191D RID: 203037 RVA: 0x006B7D64 File Offset: 0x006B5F64
-		// (set) Token: 0x0603191E RID: 203038 RVA: 0x006B7D6C File Offset: 0x006B5F6C
+		// Token: 0x1700DC96 RID: 56470
+		// (get) Token: 0x06034919 RID: 215321 RVA: 0x0071344C File Offset: 0x0071164C
+		// (set) Token: 0x0603491A RID: 215322 RVA: 0x00713454 File Offset: 0x00711654
 		public EPreloadObjectType Type { get; set; }
 
-		// Token: 0x1700D14F RID: 53583
-		// (get) Token: 0x0603191F RID: 203039 RVA: 0x006B7D75 File Offset: 0x006B5F75
-		// (set) Token: 0x06031920 RID: 203040 RVA: 0x006B7D7D File Offset: 0x006B5F7D
+		// Token: 0x1700DC97 RID: 56471
+		// (get) Token: 0x0603491B RID: 215323 RVA: 0x0071345D File Offset: 0x0071165D
+		// (set) Token: 0x0603491C RID: 215324 RVA: 0x00713465 File Offset: 0x00711665
 		public int Id { get; set; }
 
-		// Token: 0x06031921 RID: 203041 RVA: 0x006B7D86 File Offset: 0x006B5F86
+		// Token: 0x0603491D RID: 215325 RVA: 0x0071346E File Offset: 0x0071166E
 		public IPreloadPhantomCharacterForSkillT()
 		{
 			this.Type = EPreloadObjectType.PreloadTrialCharacterForSkill;

@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F78 RID: 20344
+	// Token: 0x02003F41 RID: 16193
 	public class QuickHackFixRamManager : QuickHackRamManager
 	{
-		// Token: 0x060341A4 RID: 213412 RVA: 0x00C3A23B File Offset: 0x00C3843B
+		// Token: 0x06029012 RID: 167954 RVA: 0x00B839E7 File Offset: 0x00B81BE7
 		[NullableContext(2)]
 		public override void Init(int param, Action<float> onCurrentRamChange = null, Action<float> onMaxRamChange = null)
 		{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.MaxRam = (float)param;
 		}
 
-		// Token: 0x060341A5 RID: 213413 RVA: 0x00C3A256 File Offset: 0x00C38456
+		// Token: 0x06029013 RID: 167955 RVA: 0x00B83A02 File Offset: 0x00B81C02
 		public override void Clear()
 		{
 			base.Clear();
@@ -23,19 +23,19 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.CurrentRam = 0f;
 		}
 
-		// Token: 0x060341A6 RID: 213414 RVA: 0x00C3A274 File Offset: 0x00C38474
+		// Token: 0x06029014 RID: 167956 RVA: 0x00B83A20 File Offset: 0x00B81C20
 		public override float GetCurrentRam()
 		{
 			return this.CurrentRam;
 		}
 
-		// Token: 0x060341A7 RID: 213415 RVA: 0x00C3A27C File Offset: 0x00C3847C
+		// Token: 0x06029015 RID: 167957 RVA: 0x00B83A28 File Offset: 0x00B81C28
 		public override float GetMaxRam()
 		{
 			return this.MaxRam;
 		}
 
-		// Token: 0x060341A8 RID: 213416 RVA: 0x00C3A284 File Offset: 0x00C38484
+		// Token: 0x06029016 RID: 167958 RVA: 0x00B83A30 File Offset: 0x00B81C30
 		public override void ChangeRam(float addValue)
 		{
 			this.CurrentRam += addValue;
@@ -47,10 +47,10 @@ namespace CSharpScript.Game.Module.QuickHack
 			onCurrentRamChange(this.CurrentRam);
 		}
 
-		// Token: 0x0401BB42 RID: 113474
+		// Token: 0x04016517 RID: 91415
 		private float MaxRam;
 
-		// Token: 0x0401BB43 RID: 113475
+		// Token: 0x04016518 RID: 91416
 		private float CurrentRam;
 	}
 }

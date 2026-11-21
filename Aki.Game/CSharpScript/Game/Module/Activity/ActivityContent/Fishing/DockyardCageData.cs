@@ -5,12 +5,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200659C RID: 26012
+	// Token: 0x0200551A RID: 21786
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardCageData
 	{
-		// Token: 0x06041395 RID: 267157 RVA: 0x00FCE46C File Offset: 0x00FCC66C
+		// Token: 0x0603605A RID: 221274 RVA: 0x00F15480 File Offset: 0x00F13680
 		public DockyardCageData(OneFishCage data)
 		{
 			this.Data = data;
@@ -21,22 +21,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041396 RID: 267158 RVA: 0x00FCE4E4 File Offset: 0x00FCC6E4
+		// Token: 0x0603605B RID: 221275 RVA: 0x00F154F8 File Offset: 0x00F136F8
 		public DockyardItemBlockOriginalData GetData(int uniqueId)
 		{
 			return this.ItemDataMap[uniqueId];
 		}
 
-		// Token: 0x06041397 RID: 267159 RVA: 0x00FCE4F2 File Offset: 0x00FCC6F2
+		// Token: 0x0603605C RID: 221276 RVA: 0x00F15506 File Offset: 0x00F13706
 		public List<DockyardItemBlockOriginalData> GetDataList()
 		{
 			return new List<DockyardItemBlockOriginalData>(this.ItemDataMap.Values);
 		}
 
-		// Token: 0x04021F4A RID: 139082
+		// Token: 0x0401C87B RID: 116859
 		public readonly OneFishCage Data;
 
-		// Token: 0x04021F4B RID: 139083
+		// Token: 0x0401C87C RID: 116860
 		private readonly Dictionary<int, DockyardItemBlockOriginalData> ItemDataMap = new Dictionary<int, DockyardItemBlockOriginalData>();
 	}
 }

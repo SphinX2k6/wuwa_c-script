@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200098C RID: 2444
+	// Token: 0x02000A61 RID: 2657
 	public class ConfigSpringRewardAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600395C RID: 14684 RVA: 0x0019DE7B File Offset: 0x0019C07B
+		// Token: 0x06003E5A RID: 15962 RVA: 0x001BD20F File Offset: 0x001BB40F
 		static ConfigSpringRewardAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSpringRewardAll.CreateStaticDefaultValue), new Action(ConfigSpringRewardAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600395D RID: 14685 RVA: 0x0019DE9C File Offset: 0x0019C09C
+		// Token: 0x06003E5B RID: 15963 RVA: 0x001BD230 File Offset: 0x001BB430
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSpringRewardAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600395E RID: 14686 RVA: 0x0019DF1B File Offset: 0x0019C11B
+		// Token: 0x06003E5C RID: 15964 RVA: 0x001BD2AF File Offset: 0x001BB4AF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSpringRewardAll.LogPair = null;
 			ConfigSpringRewardAll.HandleId = 0;
 		}
 
-		// Token: 0x0600395F RID: 14687 RVA: 0x0019DF29 File Offset: 0x0019C129
+		// Token: 0x06003E5D RID: 15965 RVA: 0x001BD2BD File Offset: 0x001BB4BD
 		public static void Init()
 		{
 			ConfigSpringRewardAll.HandleId = ConfigCommon.InitDataStatement(ConfigSpringRewardAll.HandleId, "db_sprintsign.db", "select BinData from `SpringReward`");
 		}
 
-		// Token: 0x06003960 RID: 14688 RVA: 0x0019DF44 File Offset: 0x0019C144
+		// Token: 0x06003E5E RID: 15966 RVA: 0x001BD2D8 File Offset: 0x001BB4D8
 		[NullableContext(2)]
 		public static IReadOnlyList<SpringReward> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040042BA RID: 17082
+		// Token: 0x0400488D RID: 18573
 		private const string DB = "db_sprintsign.db";
 
-		// Token: 0x040042BB RID: 17083
+		// Token: 0x0400488E RID: 18574
 		private const string FILE = "c.2.0春节签到.xlsx";
 
-		// Token: 0x040042BC RID: 17084
+		// Token: 0x0400488F RID: 18575
 		private const string TABLE = "SpringReward";
 
-		// Token: 0x040042BD RID: 17085
+		// Token: 0x04004890 RID: 18576
 		private const string COMMAND = "select BinData from `SpringReward`";
 
-		// Token: 0x040042BE RID: 17086
+		// Token: 0x04004891 RID: 18577
 		private const string KEY_PREFIX = "SpringRewardAll";
 
-		// Token: 0x040042BF RID: 17087
+		// Token: 0x04004892 RID: 18578
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040042C0 RID: 17088
+		// Token: 0x04004893 RID: 18579
 		private static int HandleId;
 	}
 }

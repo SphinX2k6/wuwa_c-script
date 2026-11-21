@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001532 RID: 5426
+// Token: 0x020009EA RID: 2538
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivitySubViewTurntable : ActivitySubViewBase
 {
-	// Token: 0x06009AE0 RID: 39648 RVA: 0x00217E20 File Offset: 0x00216020
+	// Token: 0x06006EBE RID: 28350 RVA: 0x00221BC0 File Offset: 0x0021FDC0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 15;
@@ -54,13 +54,13 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009AE1 RID: 39649 RVA: 0x0021803D File Offset: 0x0021623D
+	// Token: 0x06006EBF RID: 28351 RVA: 0x00221DDD File Offset: 0x0021FFDD
 	protected override void OnSetData()
 	{
 		this.ActivityTurntableData = (this.ActivityBaseData as ActivityTurntableData);
 	}
 
-	// Token: 0x06009AE2 RID: 39650 RVA: 0x00218050 File Offset: 0x00216250
+	// Token: 0x06006EC0 RID: 28352 RVA: 0x00221DF0 File Offset: 0x0021FFF0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewTurntable.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
@@ -71,7 +71,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009AE3 RID: 39651 RVA: 0x00218094 File Offset: 0x00216294
+	// Token: 0x06006EC1 RID: 28353 RVA: 0x00221E34 File Offset: 0x00220034
 	protected override void OnStart()
 	{
 		this.TitleComponent.SetActivityBaseData(this.ActivityBaseData);
@@ -83,7 +83,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		this.InitTitleSprite();
 	}
 
-	// Token: 0x06009AE4 RID: 39652 RVA: 0x00218110 File Offset: 0x00216310
+	// Token: 0x06006EC2 RID: 28354 RVA: 0x00221EB0 File Offset: 0x002200B0
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.TurntableStartRun, new Action<int>(this.OnTurntableStartRun));
@@ -91,7 +91,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		EventSystem.Instance.Add(EEventName.ActivityCrossDayRefresh, new Action(this.OnActivityCrossDayRefresh));
 	}
 
-	// Token: 0x06009AE5 RID: 39653 RVA: 0x00218174 File Offset: 0x00216374
+	// Token: 0x06006EC3 RID: 28355 RVA: 0x00221F14 File Offset: 0x00220114
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.TurntableStartRun, new Action<int>(this.OnTurntableStartRun));
@@ -99,7 +99,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		EventSystem.Instance.Remove(EEventName.ActivityCrossDayRefresh, new Action(this.OnActivityCrossDayRefresh));
 	}
 
-	// Token: 0x06009AE6 RID: 39654 RVA: 0x002181D8 File Offset: 0x002163D8
+	// Token: 0x06006EC4 RID: 28356 RVA: 0x00221F78 File Offset: 0x00220178
 	protected override void OnRefreshView()
 	{
 		this.RefreshPanel();
@@ -115,20 +115,20 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009AE7 RID: 39655 RVA: 0x00218242 File Offset: 0x00216442
+	// Token: 0x06006EC5 RID: 28357 RVA: 0x00221FE2 File Offset: 0x002201E2
 	protected override void OnBeforeDestroy()
 	{
 		this.SpriteLoaderList.Clear();
 		this.SpritePathList.Clear();
 	}
 
-	// Token: 0x06009AE8 RID: 39656 RVA: 0x0021825A File Offset: 0x0021645A
+	// Token: 0x06006EC6 RID: 28358 RVA: 0x00221FFA File Offset: 0x002201FA
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x06009AE9 RID: 39657 RVA: 0x00218262 File Offset: 0x00216462
+	// Token: 0x06006EC7 RID: 28359 RVA: 0x00222002 File Offset: 0x00220202
 	private void OnRefreshCommonActivityRedDot(int id)
 	{
 		if (id != this.ActivityTurntableData.Id)
@@ -141,7 +141,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009AEA RID: 39658 RVA: 0x00218288 File Offset: 0x00216488
+	// Token: 0x06006EC8 RID: 28360 RVA: 0x00222028 File Offset: 0x00220228
 	private void OnActivityCrossDayRefresh()
 	{
 		this.RefreshPanel();
@@ -165,7 +165,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06009AEB RID: 39659 RVA: 0x002182E6 File Offset: 0x002164E6
+	// Token: 0x06006EC9 RID: 28361 RVA: 0x00222086 File Offset: 0x00220286
 	private void RefreshPanel()
 	{
 		if (this.ActivityTurntableData.TurntableType == ETurntableType.Quest)
@@ -179,7 +179,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009AEC RID: 39660 RVA: 0x00218314 File Offset: 0x00216514
+	// Token: 0x06006ECA RID: 28362 RVA: 0x002220B4 File Offset: 0x002202B4
 	private void RefreshQuestRedDot()
 	{
 		bool redDot = this.ActivityTurntableData.IsHasNewQuestRedDot();
@@ -191,7 +191,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		questItem.SetRedDot(redDot);
 	}
 
-	// Token: 0x06009AED RID: 39661 RVA: 0x00218340 File Offset: 0x00216540
+	// Token: 0x06006ECB RID: 28363 RVA: 0x002220E0 File Offset: 0x002202E0
 	private void RefreshQuest()
 	{
 		this.IsQuestLockTimeShow = false;
@@ -248,7 +248,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		this.RefreshQuestRedDot();
 	}
 
-	// Token: 0x06009AEE RID: 39662 RVA: 0x0021850C File Offset: 0x0021670C
+	// Token: 0x06006ECC RID: 28364 RVA: 0x002222AC File Offset: 0x002204AC
 	private void RefreshTimerText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -268,7 +268,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009AEF RID: 39663 RVA: 0x00218574 File Offset: 0x00216774
+	// Token: 0x06006ECD RID: 28365 RVA: 0x00222314 File Offset: 0x00220514
 	private string GetRemainQuestUnlockTimeText(long endTime)
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -277,7 +277,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		return TimeUtil.Instance.GetCountDownDataFormat2(num, new CommonDefine.ETimeType?(questLockTimeTypeData.Item1), new CommonDefine.ETimeType?(questLockTimeTypeData.Item2)).CountDownText ?? "";
 	}
 
-	// Token: 0x06009AF0 RID: 39664 RVA: 0x002185D8 File Offset: 0x002167D8
+	// Token: 0x06006ECE RID: 28366 RVA: 0x00222378 File Offset: 0x00220578
 	[NullableContext(0)]
 	private ValueTuple<CommonDefine.ETimeType, CommonDefine.ETimeType> GetQuestLockTimeTypeData(double remainTime)
 	{
@@ -296,7 +296,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		return new ValueTuple<CommonDefine.ETimeType, CommonDefine.ETimeType>(CommonDefine.ETimeType.Second, CommonDefine.ETimeType.Second);
 	}
 
-	// Token: 0x06009AF1 RID: 39665 RVA: 0x00218628 File Offset: 0x00216828
+	// Token: 0x06006ECF RID: 28367 RVA: 0x002223C8 File Offset: 0x002205C8
 	private void RefreshDaily()
 	{
 		bool flag = this.ActivityTurntableData.IsActivityUnFinished();
@@ -308,7 +308,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		this.DailyPanel.Refresh();
 	}
 
-	// Token: 0x06009AF2 RID: 39666 RVA: 0x0021865C File Offset: 0x0021685C
+	// Token: 0x06006ED0 RID: 28368 RVA: 0x002223FC File Offset: 0x002205FC
 	private void RefreshFunctionState()
 	{
 		bool flag = this.ActivityTurntableData.GetCurrentRoundId() == this.CurrentSelectRoundId;
@@ -332,7 +332,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		this.RefreshFunctionalLock("TurntableActivity_ForbidTips01");
 	}
 
-	// Token: 0x06009AF3 RID: 39667 RVA: 0x002186C7 File Offset: 0x002168C7
+	// Token: 0x06006ED1 RID: 28369 RVA: 0x00222467 File Offset: 0x00220667
 	private void RefreshFunctionalFinished()
 	{
 		this.FunctionalArea.FunctionButton.SetActive(false);
@@ -340,7 +340,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		this.FunctionalArea.SetActivatePanelConditionVisible(true);
 	}
 
-	// Token: 0x06009AF4 RID: 39668 RVA: 0x002186F2 File Offset: 0x002168F2
+	// Token: 0x06006ED2 RID: 28370 RVA: 0x00222492 File Offset: 0x00220692
 	private void RefreshFunctionalLock(string textId)
 	{
 		this.FunctionalArea.FunctionButton.SetActive(false);
@@ -349,7 +349,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		this.FunctionalArea.SetActivatePanelConditionVisible(false);
 	}
 
-	// Token: 0x06009AF5 RID: 39669 RVA: 0x0021872E File Offset: 0x0021692E
+	// Token: 0x06006ED3 RID: 28371 RVA: 0x002224CE File Offset: 0x002206CE
 	private void RefreshFunctionalRun()
 	{
 		this.FunctionalArea.FunctionButton.SetActive(true);
@@ -357,7 +357,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		this.FunctionalArea.SetActivatePanelConditionVisible(false);
 	}
 
-	// Token: 0x06009AF6 RID: 39670 RVA: 0x00218759 File Offset: 0x00216959
+	// Token: 0x06006ED4 RID: 28372 RVA: 0x002224F9 File Offset: 0x002206F9
 	private ActivityTurntableToggleGroupItem InitToggleItem()
 	{
 		return new ActivityTurntableToggleGroupItem
@@ -366,7 +366,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06009AF7 RID: 39671 RVA: 0x00218774 File Offset: 0x00216974
+	// Token: 0x06006ED5 RID: 28373 RVA: 0x00222514 File Offset: 0x00220714
 	private void ToggleCallBack(int roundId, bool state)
 	{
 		if (!state)
@@ -381,7 +381,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		this.RefreshFunctionState();
 	}
 
-	// Token: 0x06009AF8 RID: 39672 RVA: 0x002187C8 File Offset: 0x002169C8
+	// Token: 0x06006ED6 RID: 28374 RVA: 0x00222568 File Offset: 0x00220768
 	private void RefreshToggleItem()
 	{
 		this.ToggleLayout.RefreshByData(this.ActivityTurntableData.RoundIdList, delegate
@@ -401,7 +401,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		}, false);
 	}
 
-	// Token: 0x06009AF9 RID: 39673 RVA: 0x002187ED File Offset: 0x002169ED
+	// Token: 0x06006ED7 RID: 28375 RVA: 0x0022258D File Offset: 0x0022078D
 	private void OnClickedTurntableRun()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -413,7 +413,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06009AFA RID: 39674 RVA: 0x0021880C File Offset: 0x00216A0C
+	// Token: 0x06006ED8 RID: 28376 RVA: 0x002225AC File Offset: 0x002207AC
 	private void InitTitleSprite()
 	{
 		ValueTuple<int, int, bool>[] array = new ValueTuple<int, int, bool>[]
@@ -451,7 +451,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009AFB RID: 39675 RVA: 0x0021895C File Offset: 0x00216B5C
+	// Token: 0x06006ED9 RID: 28377 RVA: 0x002226FC File Offset: 0x002208FC
 	private UniTask RefreshTitle(int roundId, int lastRoundId)
 	{
 		ActivitySubViewTurntable.<RefreshTitle>d__45 <RefreshTitle>d__;
@@ -464,7 +464,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		return <RefreshTitle>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009AFC RID: 39676 RVA: 0x002189B0 File Offset: 0x00216BB0
+	// Token: 0x06006EDA RID: 28378 RVA: 0x00222750 File Offset: 0x00220950
 	private UniTask RefreshRound(int roundId, int lastRoundId, bool needAnim = true)
 	{
 		ActivitySubViewTurntable.<RefreshRound>d__46 <RefreshRound>d__;
@@ -478,7 +478,7 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		return <RefreshRound>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009AFD RID: 39677 RVA: 0x00218A0C File Offset: 0x00216C0C
+	// Token: 0x06006EDB RID: 28379 RVA: 0x002227AC File Offset: 0x002209AC
 	private UniTask RefreshTurntable(int roundId, ActivityTurntableComponent turntable)
 	{
 		ActivitySubViewTurntable.<RefreshTurntable>d__47 <RefreshTurntable>d__;
@@ -491,14 +491,14 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		return <RefreshTurntable>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009AFE RID: 39678 RVA: 0x00218A60 File Offset: 0x00216C60
+	// Token: 0x06006EDC RID: 28380 RVA: 0x00222800 File Offset: 0x00220A00
 	public override void OnCommonViewStateChange(bool show)
 	{
 		string sequenceName = show ? "TurnTableOut" : "TurnTableIn";
 		this.LevelSequencePlayer.PlayLevelSequenceByName(sequenceName, true, null, false);
 	}
 
-	// Token: 0x06009AFF RID: 39679 RVA: 0x00218A94 File Offset: 0x00216C94
+	// Token: 0x06006EDD RID: 28381 RVA: 0x00222834 File Offset: 0x00220A34
 	private void OnTurntableStartRun(int rewardId)
 	{
 		int currentRoundId = this.ActivityTurntableData.GetCurrentRoundId();
@@ -528,35 +528,35 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x04004413 RID: 17427
+	// Token: 0x040044B9 RID: 17593
 	[Nullable(2)]
 	protected ActivityTurntableData ActivityTurntableData;
 
-	// Token: 0x04004414 RID: 17428
+	// Token: 0x040044BA RID: 17594
 	[Nullable(2)]
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x04004415 RID: 17429
+	// Token: 0x040044BB RID: 17595
 	[Nullable(2)]
 	private ActivityFunctionalTypeA FunctionalArea;
 
-	// Token: 0x04004416 RID: 17430
+	// Token: 0x040044BC RID: 17596
 	[Nullable(2)]
 	private ActivityTurntableQuestItem QuestItem;
 
-	// Token: 0x04004417 RID: 17431
+	// Token: 0x040044BD RID: 17597
 	[Nullable(2)]
 	private ActivityTurntableDailyPanel DailyPanel;
 
-	// Token: 0x04004418 RID: 17432
+	// Token: 0x040044BE RID: 17598
 	[Nullable(2)]
 	private ActivityTurntableComponent Turntable;
 
-	// Token: 0x04004419 RID: 17433
+	// Token: 0x040044BF RID: 17599
 	[Nullable(2)]
 	private ActivityTurntableComponent TurntableAnim;
 
-	// Token: 0x0400441A RID: 17434
+	// Token: 0x040044C0 RID: 17600
 	[Nullable(new byte[]
 	{
 		2,
@@ -564,19 +564,19 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 	})]
 	private GenericLayout<ActivityTurntableToggleGroupItem, int> ToggleLayout;
 
-	// Token: 0x0400441B RID: 17435
+	// Token: 0x040044C1 RID: 17601
 	private int CurrentSelectRoundId = -1;
 
-	// Token: 0x0400441C RID: 17436
+	// Token: 0x040044C2 RID: 17602
 	private bool IsQuestLockTimeShow;
 
-	// Token: 0x0400441D RID: 17437
+	// Token: 0x040044C3 RID: 17603
 	private long QuestLockTime;
 
-	// Token: 0x0400441E RID: 17438
+	// Token: 0x040044C4 RID: 17604
 	private bool InTurntableRun;
 
-	// Token: 0x0400441F RID: 17439
+	// Token: 0x040044C5 RID: 17605
 	private int[][] TitleIdNameList = new int[][]
 	{
 		new int[]
@@ -599,98 +599,98 @@ public class ActivitySubViewTurntable : ActivitySubViewBase
 		}
 	};
 
-	// Token: 0x04004420 RID: 17440
+	// Token: 0x040044C6 RID: 17606
 	private readonly List<ActivitySubViewTurntable.ISpriteLoader> SpriteLoaderList = new List<ActivitySubViewTurntable.ISpriteLoader>();
 
-	// Token: 0x04004421 RID: 17441
+	// Token: 0x040044C7 RID: 17607
 	private readonly List<string[]> SpritePathList = new List<string[]>();
 
-	// Token: 0x02007B5C RID: 31580
+	// Token: 0x02006CE7 RID: 27879
 	private interface ISpriteLoader
 	{
-		// Token: 0x1700A02E RID: 41006
-		// (get) Token: 0x060496AF RID: 300719
-		// (set) Token: 0x060496B0 RID: 300720
+		// Token: 0x170077CC RID: 30668
+		// (get) Token: 0x0603FAD6 RID: 260822
+		// (set) Token: 0x0603FAD7 RID: 260823
 		UUISprite Sprite { get; set; }
 
-		// Token: 0x1700A02F RID: 41007
-		// (get) Token: 0x060496B1 RID: 300721
-		// (set) Token: 0x060496B2 RID: 300722
+		// Token: 0x170077CD RID: 30669
+		// (get) Token: 0x0603FAD8 RID: 260824
+		// (set) Token: 0x0603FAD9 RID: 260825
 		int Index { get; set; }
 
-		// Token: 0x1700A030 RID: 41008
-		// (get) Token: 0x060496B3 RID: 300723
-		// (set) Token: 0x060496B4 RID: 300724
+		// Token: 0x170077CE RID: 30670
+		// (get) Token: 0x0603FADA RID: 260826
+		// (set) Token: 0x0603FADB RID: 260827
 		bool IsCurrent { get; set; }
 	}
 
-	// Token: 0x02007B5D RID: 31581
+	// Token: 0x02006CE8 RID: 27880
 	[Nullable(0)]
 	private class SpriteLoader : ActivitySubViewTurntable.ISpriteLoader
 	{
-		// Token: 0x1700A031 RID: 41009
-		// (get) Token: 0x060496B5 RID: 300725 RVA: 0x012FE05A File Offset: 0x012FC25A
-		// (set) Token: 0x060496B6 RID: 300726 RVA: 0x012FE062 File Offset: 0x012FC262
+		// Token: 0x170077CF RID: 30671
+		// (get) Token: 0x0603FADC RID: 260828 RVA: 0x012A1372 File Offset: 0x0129F572
+		// (set) Token: 0x0603FADD RID: 260829 RVA: 0x012A137A File Offset: 0x0129F57A
 		public UUISprite Sprite { get; set; }
 
-		// Token: 0x1700A032 RID: 41010
-		// (get) Token: 0x060496B7 RID: 300727 RVA: 0x012FE06B File Offset: 0x012FC26B
-		// (set) Token: 0x060496B8 RID: 300728 RVA: 0x012FE073 File Offset: 0x012FC273
+		// Token: 0x170077D0 RID: 30672
+		// (get) Token: 0x0603FADE RID: 260830 RVA: 0x012A1383 File Offset: 0x0129F583
+		// (set) Token: 0x0603FADF RID: 260831 RVA: 0x012A138B File Offset: 0x0129F58B
 		public int Index { get; set; }
 
-		// Token: 0x1700A033 RID: 41011
-		// (get) Token: 0x060496B9 RID: 300729 RVA: 0x012FE07C File Offset: 0x012FC27C
-		// (set) Token: 0x060496BA RID: 300730 RVA: 0x012FE084 File Offset: 0x012FC284
+		// Token: 0x170077D1 RID: 30673
+		// (get) Token: 0x0603FAE0 RID: 260832 RVA: 0x012A1394 File Offset: 0x0129F594
+		// (set) Token: 0x0603FAE1 RID: 260833 RVA: 0x012A139C File Offset: 0x0129F59C
 		public bool IsCurrent { get; set; }
 	}
 
-	// Token: 0x02007B5E RID: 31582
+	// Token: 0x02006CE9 RID: 27881
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402890C RID: 166156
+		// Token: 0x04023C47 RID: 146503
 		public const int PanelItem = 0;
 
-		// Token: 0x0402890D RID: 166157
+		// Token: 0x04023C48 RID: 146504
 		public const int TitleItem = 1;
 
-		// Token: 0x0402890E RID: 166158
+		// Token: 0x04023C49 RID: 146505
 		public const int PanelQuest = 2;
 
-		// Token: 0x0402890F RID: 166159
+		// Token: 0x04023C4A RID: 146506
 		public const int QuestItem = 3;
 
-		// Token: 0x04028910 RID: 166160
+		// Token: 0x04023C4B RID: 146507
 		public const int ToggleLayout = 4;
 
-		// Token: 0x04028911 RID: 166161
+		// Token: 0x04023C4C RID: 146508
 		public const int Turntable = 5;
 
-		// Token: 0x04028912 RID: 166162
+		// Token: 0x04023C4D RID: 146509
 		public const int Toggle = 6;
 
-		// Token: 0x04028913 RID: 166163
+		// Token: 0x04023C4E RID: 146510
 		public const int FunctionArea = 7;
 
-		// Token: 0x04028914 RID: 166164
+		// Token: 0x04023C4F RID: 146511
 		public const int TurntableAnim = 8;
 
-		// Token: 0x04028915 RID: 166165
+		// Token: 0x04023C50 RID: 146512
 		public const int Sprite01A = 9;
 
-		// Token: 0x04028916 RID: 166166
+		// Token: 0x04023C51 RID: 146513
 		public const int Sprite01B = 10;
 
-		// Token: 0x04028917 RID: 166167
+		// Token: 0x04023C52 RID: 146514
 		public const int Sprite02A = 11;
 
-		// Token: 0x04028918 RID: 166168
+		// Token: 0x04023C53 RID: 146515
 		public const int Sprite03A = 12;
 
-		// Token: 0x04028919 RID: 166169
+		// Token: 0x04023C54 RID: 146516
 		public const int SpriteIndex = 13;
 
-		// Token: 0x0402891A RID: 166170
+		// Token: 0x04023C55 RID: 146517
 		public const int PanelDaily = 14;
 	}
 }

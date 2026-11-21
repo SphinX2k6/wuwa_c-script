@@ -5,13 +5,13 @@ using Aki.Config;
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand
 {
-	// Token: 0x020069BE RID: 27070
+	// Token: 0x02005B1A RID: 23322
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class TuningStandConfig : ConfigBase
 	{
-		// Token: 0x060435DD RID: 275933 RVA: 0x01076064 File Offset: 0x01074264
+		// Token: 0x06039619 RID: 235033 RVA: 0x0101A4F8 File Offset: 0x010186F8
 		[return: Nullable(2)]
 		public string GetEvent(string node)
 		{
@@ -41,8 +41,8 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			return result;
 		}
 
-		// Token: 0x17009864 RID: 39012
-		// (get) Token: 0x060435DE RID: 275934 RVA: 0x01076118 File Offset: 0x01074318
+		// Token: 0x17006D44 RID: 27972
+		// (get) Token: 0x0603961A RID: 235034 RVA: 0x0101A5AC File Offset: 0x010187AC
 		public static TuningStandConfig Instance
 		{
 			get
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			}
 		}
 
-		// Token: 0x060435DF RID: 275935 RVA: 0x0107611F File Offset: 0x0107431F
+		// Token: 0x0603961B RID: 235035 RVA: 0x0101A5B3 File Offset: 0x010187B3
 		public static TuningStandConfig GetOrCreateInstance()
 		{
 			if (TuningStandConfig._Instance == null)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			return TuningStandConfig._Instance;
 		}
 
-		// Token: 0x060435E0 RID: 275936 RVA: 0x01076133 File Offset: 0x01074333
+		// Token: 0x0603961C RID: 235036 RVA: 0x0101A5C7 File Offset: 0x010187C7
 		public static bool CreateInstance()
 		{
 			if (TuningStandConfig._Instance != null)
@@ -72,24 +72,24 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			return true;
 		}
 
-		// Token: 0x060435E1 RID: 275937 RVA: 0x01076149 File Offset: 0x01074349
+		// Token: 0x0603961D RID: 235037 RVA: 0x0101A5DD File Offset: 0x010187DD
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060435E2 RID: 275938 RVA: 0x0107614B File Offset: 0x0107434B
+		// Token: 0x0603961E RID: 235038 RVA: 0x0101A5DF File Offset: 0x010187DF
 		public static void ResetStaticDefaultValue()
 		{
 			TuningStandConfig._Instance = null;
 		}
 
-		// Token: 0x060435E3 RID: 275939 RVA: 0x01076153 File Offset: 0x01074353
+		// Token: 0x0603961F RID: 235039 RVA: 0x0101A5E7 File Offset: 0x010187E7
 		static TuningStandConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TuningStandConfig.CreateStaticDefaultValue), new Action(TuningStandConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023230 RID: 143920
+		// Token: 0x0401E420 RID: 123936
 		[Nullable(new byte[]
 		{
 			2,
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 		})]
 		protected Dictionary<string, string> CacheMap;
 
-		// Token: 0x04023231 RID: 143921
+		// Token: 0x0401E421 RID: 123937
 		[Nullable(2)]
 		private static TuningStandConfig _Instance;
 	}

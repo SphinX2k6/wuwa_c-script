@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011A2 RID: 4514
+// Token: 0x02000656 RID: 1622
 [NullableContext(2)]
 [Nullable(0)]
 public class BeginnerCarnivalSubView : ActivitySubViewBase
 {
-	// Token: 0x0600777F RID: 30591 RVA: 0x0018F60C File Offset: 0x0018D80C
+	// Token: 0x06004B16 RID: 19222 RVA: 0x001981F0 File Offset: 0x001963F0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,13 +46,13 @@ public class BeginnerCarnivalSubView : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06007780 RID: 30592 RVA: 0x0018F7F7 File Offset: 0x0018D9F7
+	// Token: 0x06004B17 RID: 19223 RVA: 0x001983DB File Offset: 0x001965DB
 	protected override void OnSetData()
 	{
 		this.BeginnerCarnivalData = (this.ActivityBaseData as BeginnerCarnivalData);
 	}
 
-	// Token: 0x06007781 RID: 30593 RVA: 0x0018F80C File Offset: 0x0018DA0C
+	// Token: 0x06004B18 RID: 19224 RVA: 0x001983F0 File Offset: 0x001965F0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BeginnerCarnivalSubView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ public class BeginnerCarnivalSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007782 RID: 30594 RVA: 0x0018F850 File Offset: 0x0018DA50
+	// Token: 0x06004B19 RID: 19225 RVA: 0x00198434 File Offset: 0x00196634
 	protected override void OnStart()
 	{
 		EPlayerGender playerGender = PlayerInfoModel.Instance.GetPlayerGender();
@@ -72,7 +72,7 @@ public class BeginnerCarnivalSubView : ActivitySubViewBase
 		this.RefreshDesc();
 	}
 
-	// Token: 0x06007783 RID: 30595 RVA: 0x0018F890 File Offset: 0x0018DA90
+	// Token: 0x06004B1A RID: 19226 RVA: 0x00198474 File Offset: 0x00196674
 	private void RefreshDesc()
 	{
 		Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -87,7 +87,7 @@ public class BeginnerCarnivalSubView : ActivitySubViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), desc, Array.Empty<object>());
 	}
 
-	// Token: 0x06007784 RID: 30596 RVA: 0x0018F90C File Offset: 0x0018DB0C
+	// Token: 0x06004B1B RID: 19227 RVA: 0x001984F0 File Offset: 0x001966F0
 	private void RefreshTitle()
 	{
 		this.TitleComponent.SetActivityBaseData(this.ActivityBaseData);
@@ -102,7 +102,7 @@ public class BeginnerCarnivalSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007785 RID: 30597 RVA: 0x0018F970 File Offset: 0x0018DB70
+	// Token: 0x06004B1C RID: 19228 RVA: 0x00198554 File Offset: 0x00196754
 	protected override void OnRefreshView()
 	{
 		this.RefreshTitle();
@@ -160,7 +160,7 @@ public class BeginnerCarnivalSubView : ActivitySubViewBase
 		bottomComponent.SetFunctionRedDotVisible(beginnerCarnivalData.GetAnyTaskRedDotShow());
 	}
 
-	// Token: 0x06007786 RID: 30598 RVA: 0x0018FC3C File Offset: 0x0018DE3C
+	// Token: 0x06004B1D RID: 19229 RVA: 0x00198820 File Offset: 0x00196A20
 	private void OnClickTaskBtn()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -175,7 +175,7 @@ public class BeginnerCarnivalSubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06007787 RID: 30599 RVA: 0x0018FC5C File Offset: 0x0018DE5C
+	// Token: 0x06004B1E RID: 19230 RVA: 0x00198840 File Offset: 0x00196A40
 	private void OnClickSelectRoleBtn()
 	{
 		if (!this.ActivityBaseData.GetPreGuideQuestFinishState())
@@ -187,7 +187,7 @@ public class BeginnerCarnivalSubView : ActivitySubViewBase
 		UiManager.Instance.OpenView(EUiViewName.BeginnerCarnivalRoleTaskView, null, null);
 	}
 
-	// Token: 0x06007788 RID: 30600 RVA: 0x0018FCAC File Offset: 0x0018DEAC
+	// Token: 0x06004B1F RID: 19231 RVA: 0x00198890 File Offset: 0x00196A90
 	private void OnClickShopBtn()
 	{
 		if (!this.ActivityBaseData.GetPreGuideQuestFinishState())
@@ -201,7 +201,7 @@ public class BeginnerCarnivalSubView : ActivitySubViewBase
 		beginnerCarnivalData.SetShopEnter();
 	}
 
-	// Token: 0x06007789 RID: 30601 RVA: 0x0018FD04 File Offset: 0x0018DF04
+	// Token: 0x06004B20 RID: 19232 RVA: 0x001988E8 File Offset: 0x00196AE8
 	private void OnClickGachaBtn()
 	{
 		if (!this.ActivityBaseData.GetPreGuideQuestFinishState())
@@ -224,22 +224,22 @@ public class BeginnerCarnivalSubView : ActivitySubViewBase
 		beginnerCarnivalData.SetGachaEnter();
 	}
 
-	// Token: 0x040036F9 RID: 14073
+	// Token: 0x04003792 RID: 14226
 	private const int ROLE_TAB_INDEX = 5;
 
-	// Token: 0x040036FA RID: 14074
+	// Token: 0x04003793 RID: 14227
 	private const int CARNIVAL_SHOP_TAB_ID = 5;
 
-	// Token: 0x040036FB RID: 14075
+	// Token: 0x04003794 RID: 14228
 	private BeginnerCarnivalData BeginnerCarnivalData;
 
-	// Token: 0x040036FC RID: 14076
+	// Token: 0x04003795 RID: 14229
 	private ActivityFunctionalTypeA BottomComponent;
 
-	// Token: 0x040036FD RID: 14077
+	// Token: 0x04003796 RID: 14230
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x040036FE RID: 14078
+	// Token: 0x04003797 RID: 14231
 	[Nullable(new byte[]
 	{
 		2,

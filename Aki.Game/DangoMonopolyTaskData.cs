@@ -6,30 +6,30 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Module.SkipInterface;
 
-// Token: 0x0200124E RID: 4686
+// Token: 0x02000702 RID: 1794
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoMonopolyTaskData : IStaticVariableResetter
 {
-	// Token: 0x06007F3C RID: 32572 RVA: 0x001AF2AE File Offset: 0x001AD4AE
+	// Token: 0x060052D3 RID: 21203 RVA: 0x001B7F66 File Offset: 0x001B6166
 	static DangoMonopolyTaskData()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(global::DangoMonopolyTaskData.CreateStaticDefaultValue), new Action(global::DangoMonopolyTaskData.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06007F3D RID: 32573 RVA: 0x001AF2CD File Offset: 0x001AD4CD
+	// Token: 0x060052D4 RID: 21204 RVA: 0x001B7F85 File Offset: 0x001B6185
 	public static void CreateStaticDefaultValue()
 	{
 		global::DangoMonopolyTaskData.RecycleList = new List<global::DangoMonopolyTaskData>();
 	}
 
-	// Token: 0x06007F3E RID: 32574 RVA: 0x001AF2D9 File Offset: 0x001AD4D9
+	// Token: 0x060052D5 RID: 21205 RVA: 0x001B7F91 File Offset: 0x001B6191
 	public static void ResetStaticDefaultValue()
 	{
 		global::DangoMonopolyTaskData.RecycleList = null;
 	}
 
-	// Token: 0x06007F3F RID: 32575 RVA: 0x001AF2E4 File Offset: 0x001AD4E4
+	// Token: 0x060052D6 RID: 21206 RVA: 0x001B7F9C File Offset: 0x001B619C
 	public static global::DangoMonopolyTaskData Create(DangoMonopolyTask config)
 	{
 		if (global::DangoMonopolyTaskData.RecycleList != null && global::DangoMonopolyTaskData.RecycleList.Count > 0)
@@ -44,7 +44,7 @@ public class DangoMonopolyTaskData : IStaticVariableResetter
 		return dangoMonopolyTaskData2;
 	}
 
-	// Token: 0x06007F40 RID: 32576 RVA: 0x001AF336 File Offset: 0x001AD536
+	// Token: 0x060052D7 RID: 21207 RVA: 0x001B7FEE File Offset: 0x001B61EE
 	public void Recycle()
 	{
 		if (global::DangoMonopolyTaskData.RecycleList != null)
@@ -53,13 +53,13 @@ public class DangoMonopolyTaskData : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06007F41 RID: 32577 RVA: 0x001AF34A File Offset: 0x001AD54A
+	// Token: 0x060052D8 RID: 21208 RVA: 0x001B8002 File Offset: 0x001B6202
 	private DangoMonopolyTaskData(int id)
 	{
 		this.Id = id;
 	}
 
-	// Token: 0x06007F42 RID: 32578 RVA: 0x001AF364 File Offset: 0x001AD564
+	// Token: 0x060052D9 RID: 21209 RVA: 0x001B801C File Offset: 0x001B621C
 	private void Init(DangoMonopolyTask config)
 	{
 		this.Id = config.TaskId;
@@ -71,7 +71,7 @@ public class DangoMonopolyTaskData : IStaticVariableResetter
 		this.Source = config.Source;
 	}
 
-	// Token: 0x06007F43 RID: 32579 RVA: 0x001AF3CC File Offset: 0x001AD5CC
+	// Token: 0x060052DA RID: 21210 RVA: 0x001B8084 File Offset: 0x001B6284
 	public void ProtoUpdateData(Aki.Protocol.DangoMonopolyTaskData data)
 	{
 		this.TaskState = data.State;
@@ -79,7 +79,7 @@ public class DangoMonopolyTaskData : IStaticVariableResetter
 		this.TotalProgress = data.Target;
 	}
 
-	// Token: 0x06007F44 RID: 32580 RVA: 0x001AF3F2 File Offset: 0x001AD5F2
+	// Token: 0x060052DB RID: 21211 RVA: 0x001B80AA File Offset: 0x001B62AA
 	public int GetTaskStateSort()
 	{
 		if (this.TaskState == DangoMonopolyTaskState.Completed)
@@ -93,7 +93,7 @@ public class DangoMonopolyTaskData : IStaticVariableResetter
 		return 2;
 	}
 
-	// Token: 0x06007F45 RID: 32581 RVA: 0x001AF40A File Offset: 0x001AD60A
+	// Token: 0x060052DC RID: 21212 RVA: 0x001B80C2 File Offset: 0x001B62C2
 	public int GetSortResult(global::DangoMonopolyTaskData other)
 	{
 		if (this.TaskState != other.TaskState)
@@ -103,7 +103,7 @@ public class DangoMonopolyTaskData : IStaticVariableResetter
 		return this.Sort - other.Sort;
 	}
 
-	// Token: 0x06007F46 RID: 32582 RVA: 0x001AF435 File Offset: 0x001AD635
+	// Token: 0x060052DD RID: 21213 RVA: 0x001B80ED File Offset: 0x001B62ED
 	public void JumpSource()
 	{
 		if (this.Source == 0)
@@ -113,58 +113,58 @@ public class DangoMonopolyTaskData : IStaticVariableResetter
 		SkipTaskManager.RunByConfigId(this.Source, null);
 	}
 
-	// Token: 0x06007F47 RID: 32583 RVA: 0x001AF44C File Offset: 0x001AD64C
+	// Token: 0x060052DE RID: 21214 RVA: 0x001B8104 File Offset: 0x001B6304
 	public bool IsCanReceive()
 	{
 		return this.TaskState == DangoMonopolyTaskState.Completed;
 	}
 
-	// Token: 0x06007F48 RID: 32584 RVA: 0x001AF45A File Offset: 0x001AD65A
+	// Token: 0x060052DF RID: 21215 RVA: 0x001B8112 File Offset: 0x001B6312
 	public void SetEndTime(long endTime)
 	{
 		this.EndTime = endTime;
 	}
 
-	// Token: 0x06007F49 RID: 32585 RVA: 0x001AF463 File Offset: 0x001AD663
+	// Token: 0x060052E0 RID: 21216 RVA: 0x001B811B File Offset: 0x001B631B
 	[Conditional("DEBUG")]
 	public void LogInfo()
 	{
 	}
 
-	// Token: 0x040039E7 RID: 14823
+	// Token: 0x04003A7F RID: 14975
 	public int Id;
 
-	// Token: 0x040039E8 RID: 14824
+	// Token: 0x04003A80 RID: 14976
 	public EDangoMonopolyTaskType TaskType;
 
-	// Token: 0x040039E9 RID: 14825
+	// Token: 0x04003A81 RID: 14977
 	public string TaskDesc = "";
 
-	// Token: 0x040039EA RID: 14826
+	// Token: 0x04003A82 RID: 14978
 	public int RewardItemId;
 
-	// Token: 0x040039EB RID: 14827
+	// Token: 0x04003A83 RID: 14979
 	public int RewardItemCount;
 
-	// Token: 0x040039EC RID: 14828
+	// Token: 0x04003A84 RID: 14980
 	public DangoMonopolyTaskState TaskState;
 
-	// Token: 0x040039ED RID: 14829
+	// Token: 0x04003A85 RID: 14981
 	public long EndTime;
 
-	// Token: 0x040039EE RID: 14830
+	// Token: 0x04003A86 RID: 14982
 	public int Progress;
 
-	// Token: 0x040039EF RID: 14831
+	// Token: 0x04003A87 RID: 14983
 	public int TotalProgress;
 
-	// Token: 0x040039F0 RID: 14832
+	// Token: 0x04003A88 RID: 14984
 	public int Sort;
 
-	// Token: 0x040039F1 RID: 14833
+	// Token: 0x04003A89 RID: 14985
 	public int Source;
 
-	// Token: 0x040039F2 RID: 14834
+	// Token: 0x04003A8A RID: 14986
 	[Nullable(new byte[]
 	{
 		2,

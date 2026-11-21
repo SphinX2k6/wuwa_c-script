@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002753 RID: 10067
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A1F RID: 10783
 	public class IPunishReport : ICommonTipType
 	{
-		// Token: 0x0600E045 RID: 57413 RVA: 0x00212DF6 File Offset: 0x00210FF6
+		// Token: 0x0600EE45 RID: 60997 RVA: 0x0022F92E File Offset: 0x0022DB2E
 		public static IPunishReport Create(IPunishReport? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004361 RID: 17249
-		// (get) Token: 0x0600E046 RID: 57414 RVA: 0x00212E15 File Offset: 0x00211015
+		// Token: 0x170046B5 RID: 18101
+		// (get) Token: 0x0600EE46 RID: 60998 RVA: 0x0022F94D File Offset: 0x0022DB4D
 		public override ECommonTipType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004362 RID: 17250
-		// (get) Token: 0x0600E047 RID: 57415 RVA: 0x00212E22 File Offset: 0x00211022
+		// Token: 0x170046B6 RID: 18102
+		// (get) Token: 0x0600EE47 RID: 60999 RVA: 0x0022F95A File Offset: 0x0022DB5A
 		public virtual string MainText
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004363 RID: 17251
-		// (get) Token: 0x0600E048 RID: 57416 RVA: 0x00212E2F File Offset: 0x0021102F
+		// Token: 0x170046B7 RID: 18103
+		// (get) Token: 0x0600EE48 RID: 61000 RVA: 0x0022F967 File Offset: 0x0022DB67
 		public virtual string SubText
 		{
 			get
@@ -52,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004364 RID: 17252
-		// (get) Token: 0x0600E049 RID: 57417 RVA: 0x00212E3C File Offset: 0x0021103C
+		// Token: 0x170046B8 RID: 18104
+		// (get) Token: 0x0600EE49 RID: 61001 RVA: 0x0022F974 File Offset: 0x0022DB74
 		public virtual EPunishReportShowType? ShowType
 		{
 			get
@@ -66,7 +63,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C51 RID: 31825
+		// Token: 0x040082FF RID: 33535
 		private IPunishReport Instance;
 	}
 }

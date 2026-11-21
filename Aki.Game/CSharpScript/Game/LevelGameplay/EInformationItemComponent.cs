@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006981 RID: 27009
+	// Token: 0x02005ADD RID: 23261
 	public enum EInformationItemComponent
 	{
-		// Token: 0x04023046 RID: 143430
+		// Token: 0x0401E230 RID: 123440
 		Texture,
-		// Token: 0x04023047 RID: 143431
+		// Token: 0x0401E231 RID: 123441
 		Button,
-		// Token: 0x04023048 RID: 143432
+		// Token: 0x0401E232 RID: 123442
 		Text
 	}
 }

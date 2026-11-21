@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 {
-	// Token: 0x02004FC2 RID: 20418
+	// Token: 0x02003F8B RID: 16267
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class QuestMultiLineSelectPanel : UiPanelBase
 	{
-		// Token: 0x0603440F RID: 214031 RVA: 0x00C451DC File Offset: 0x00C433DC
+		// Token: 0x0602927D RID: 168573 RVA: 0x00B8E994 File Offset: 0x00B8CB94
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			};
 		}
 
-		// Token: 0x06034410 RID: 214032 RVA: 0x00C45290 File Offset: 0x00C43490
+		// Token: 0x0602927E RID: 168574 RVA: 0x00B8EA48 File Offset: 0x00B8CC48
 		protected override UniTask OnBeforeStartAsync()
 		{
 			QuestMultiLineSelectPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034411 RID: 214033 RVA: 0x00C452D3 File Offset: 0x00C434D3
+		// Token: 0x0602927F RID: 168575 RVA: 0x00B8EA8B File Offset: 0x00B8CC8B
 		protected override void OnStart()
 		{
 			this.AdjustItemsWidth();
 		}
 
-		// Token: 0x06034412 RID: 214034 RVA: 0x00C452DC File Offset: 0x00C434DC
+		// Token: 0x06029280 RID: 168576 RVA: 0x00B8EA94 File Offset: 0x00B8CC94
 		private void AdjustItemsWidth()
 		{
 			UUIItem item = base.GetItem(0);
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x06034413 RID: 214035 RVA: 0x00C4536C File Offset: 0x00C4356C
+		// Token: 0x06029281 RID: 168577 RVA: 0x00B8EB24 File Offset: 0x00B8CD24
 		[NullableContext(1)]
 		public unsafe void RefreshPanel(QuestMultiLineTimePointData timePoint)
 		{
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.RightSelectItem.SetClickFunction(new Action<int>(this.OnClickEnsure));
 		}
 
-		// Token: 0x06034414 RID: 214036 RVA: 0x00C454B0 File Offset: 0x00C436B0
+		// Token: 0x06029282 RID: 168578 RVA: 0x00B8EC68 File Offset: 0x00B8CE68
 		public void RefreshButton(int branchId)
 		{
 			bool flag = branchId == this.BranchPageData.BranchData[0].BranchId;
@@ -123,21 +123,21 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.RightSelectItem.SetUiActive(flag2);
 		}
 
-		// Token: 0x06034415 RID: 214037 RVA: 0x00C45527 File Offset: 0x00C43727
+		// Token: 0x06029283 RID: 168579 RVA: 0x00B8ECDF File Offset: 0x00B8CEDF
 		[NullableContext(1)]
 		public void SetClickFunction(Action<int, int> clickFunction)
 		{
 			this.ClickFunction = clickFunction;
 		}
 
-		// Token: 0x06034416 RID: 214038 RVA: 0x00C45530 File Offset: 0x00C43730
+		// Token: 0x06029284 RID: 168580 RVA: 0x00B8ECE8 File Offset: 0x00B8CEE8
 		[NullableContext(1)]
 		public void SetEnsureFunction(Action<int, int> clickFunction)
 		{
 			this.EnsureFunction = clickFunction;
 		}
 
-		// Token: 0x06034417 RID: 214039 RVA: 0x00C4553C File Offset: 0x00C4373C
+		// Token: 0x06029285 RID: 168581 RVA: 0x00B8ECF4 File Offset: 0x00B8CEF4
 		private void ResetButton()
 		{
 			this.LeftNormalItem.SetUiActive(true);
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.RightSelectItem.SetUiActive(false);
 		}
 
-		// Token: 0x06034418 RID: 214040 RVA: 0x00C4558F File Offset: 0x00C4378F
+		// Token: 0x06029286 RID: 168582 RVA: 0x00B8ED47 File Offset: 0x00B8CF47
 		private void OnClickItem(int branchId)
 		{
 			this.RefreshButton(branchId);
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			clickFunction(this.BranchPageData.Id, branchId);
 		}
 
-		// Token: 0x06034419 RID: 214041 RVA: 0x00C455B4 File Offset: 0x00C437B4
+		// Token: 0x06029287 RID: 168583 RVA: 0x00B8ED6C File Offset: 0x00B8CF6C
 		private void OnClickEnsure(int branchId)
 		{
 			Action<int, int> ensureFunction = this.EnsureFunction;
@@ -171,25 +171,25 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			ensureFunction(this.BranchPageData.Id, branchId);
 		}
 
-		// Token: 0x0401BCA1 RID: 113825
+		// Token: 0x04016676 RID: 91766
 		private Action<int, int> ClickFunction;
 
-		// Token: 0x0401BCA2 RID: 113826
+		// Token: 0x04016677 RID: 91767
 		private Action<int, int> EnsureFunction;
 
-		// Token: 0x0401BCA3 RID: 113827
+		// Token: 0x04016678 RID: 91768
 		private QuestMultiLineBranchPageData BranchPageData;
 
-		// Token: 0x0401BCA4 RID: 113828
+		// Token: 0x04016679 RID: 91769
 		private QuestMultiLineNormalItem LeftNormalItem;
 
-		// Token: 0x0401BCA5 RID: 113829
+		// Token: 0x0401667A RID: 91770
 		private QuestMultiLineNormalItem RightNormalItem;
 
-		// Token: 0x0401BCA6 RID: 113830
+		// Token: 0x0401667B RID: 91771
 		private QuestMultiLineSelectItem LeftSelectItem;
 
-		// Token: 0x0401BCA7 RID: 113831
+		// Token: 0x0401667C RID: 91772
 		private QuestMultiLineSelectItem RightSelectItem;
 	}
 }

@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.JoinTeam.View
 {
-	// Token: 0x020057AC RID: 22444
+	// Token: 0x02004783 RID: 18307
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class JoinTeamView : UiViewBase
 	{
-		// Token: 0x06039062 RID: 233570 RVA: 0x00D8D9E6 File Offset: 0x00D8BBE6
+		// Token: 0x0602DF72 RID: 188274 RVA: 0x00CDC7A2 File Offset: 0x00CDA9A2
 		public JoinTeamView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06039063 RID: 233571 RVA: 0x00D8D9F0 File Offset: 0x00D8BBF0
+		// Token: 0x0602DF73 RID: 188275 RVA: 0x00CDC7AC File Offset: 0x00CDA9AC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.JoinTeam.View
 			};
 		}
 
-		// Token: 0x06039064 RID: 233572 RVA: 0x00D8DAF4 File Offset: 0x00D8BCF4
+		// Token: 0x0602DF74 RID: 188276 RVA: 0x00CDC8B0 File Offset: 0x00CDAAB0
 		private void OnClickedDetailButton()
 		{
 			RoleModel instance = RoleModel.Instance;
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.Module.JoinTeam.View
 			}
 		}
 
-		// Token: 0x06039065 RID: 233573 RVA: 0x00D8DB5F File Offset: 0x00D8BD5F
+		// Token: 0x0602DF75 RID: 188277 RVA: 0x00CDC91B File Offset: 0x00CDAB1B
 		private void OnClickedCloseButton()
 		{
 			JoinTeamController.Instance.CloseJoinTeamView();
 		}
 
-		// Token: 0x06039066 RID: 233574 RVA: 0x00D8DB6C File Offset: 0x00D8BD6C
+		// Token: 0x0602DF76 RID: 188278 RVA: 0x00CDC928 File Offset: 0x00CDAB28
 		protected override void OnStart()
 		{
 			object openParam = this.OpenParam;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.JoinTeam.View
 			this.AddEvents();
 		}
 
-		// Token: 0x06039067 RID: 233575 RVA: 0x00D8DBE8 File Offset: 0x00D8BDE8
+		// Token: 0x0602DF77 RID: 188279 RVA: 0x00CDC9A4 File Offset: 0x00CDABA4
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEvents();
@@ -103,25 +103,25 @@ namespace CSharpScript.Game.Module.JoinTeam.View
 			}
 		}
 
-		// Token: 0x06039068 RID: 233576 RVA: 0x00D8DC0B File Offset: 0x00D8BE0B
+		// Token: 0x0602DF78 RID: 188280 RVA: 0x00CDC9C7 File Offset: 0x00CDABC7
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnRefreshJoinTeamRole, new Action(this.OnRefreshJoinTeamRole));
 		}
 
-		// Token: 0x06039069 RID: 233577 RVA: 0x00D8DC29 File Offset: 0x00D8BE29
+		// Token: 0x0602DF79 RID: 188281 RVA: 0x00CDC9E5 File Offset: 0x00CDABE5
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnRefreshJoinTeamRole, new Action(this.OnRefreshJoinTeamRole));
 		}
 
-		// Token: 0x0603906A RID: 233578 RVA: 0x00D8DC47 File Offset: 0x00D8BE47
+		// Token: 0x0602DF7A RID: 188282 RVA: 0x00CDCA03 File Offset: 0x00CDAC03
 		private void OnRefreshJoinTeamRole()
 		{
 			this.RefreshJoinTeamView();
 		}
 
-		// Token: 0x0603906B RID: 233579 RVA: 0x00D8DC50 File Offset: 0x00D8BE50
+		// Token: 0x0602DF7B RID: 188283 RVA: 0x00CDCA0C File Offset: 0x00CDAC0C
 		private void RefreshJoinTeamView()
 		{
 			int? roleDescriptionId = JoinTeamModel.Instance.GetRoleDescriptionId();
@@ -142,20 +142,20 @@ namespace CSharpScript.Game.Module.JoinTeam.View
 			this.SetTrial();
 		}
 
-		// Token: 0x0603906C RID: 233580 RVA: 0x00D8DCE8 File Offset: 0x00D8BEE8
+		// Token: 0x0602DF7C RID: 188284 RVA: 0x00CDCAA4 File Offset: 0x00CDACA4
 		private void InitializeMiniElement(int elementId)
 		{
 			AActor owner = base.GetItem(5).GetOwner();
 			this.MiniElement = new MiniElementItem(elementId, null, owner);
 		}
 
-		// Token: 0x0603906D RID: 233581 RVA: 0x00D8DD10 File Offset: 0x00D8BF10
+		// Token: 0x0602DF7D RID: 188285 RVA: 0x00CDCACC File Offset: 0x00CDACCC
 		private void SetRoleName(string roleNameId)
 		{
 			base.GetText(0).ShowTextNew(roleNameId);
 		}
 
-		// Token: 0x0603906E RID: 233582 RVA: 0x00D8DD20 File Offset: 0x00D8BF20
+		// Token: 0x0602DF7E RID: 188286 RVA: 0x00CDCADC File Offset: 0x00CDACDC
 		private void SetRoleTexture(string roleTexturePath)
 		{
 			base.SetTextureByPath(roleTexturePath, base.GetTexture(1), null, delegate(bool success)
@@ -172,13 +172,13 @@ namespace CSharpScript.Game.Module.JoinTeam.View
 			});
 		}
 
-		// Token: 0x0603906F RID: 233583 RVA: 0x00D8DD50 File Offset: 0x00D8BF50
+		// Token: 0x0602DF7F RID: 188287 RVA: 0x00CDCB0C File Offset: 0x00CDAD0C
 		private void SetRoleDescription(string descriptionId)
 		{
 			base.GetText(3).ShowTextNew(descriptionId);
 		}
 
-		// Token: 0x06039070 RID: 233584 RVA: 0x00D8DD5F File Offset: 0x00D8BF5F
+		// Token: 0x0602DF80 RID: 188288 RVA: 0x00CDCB1B File Offset: 0x00CDAD1B
 		private void SetTrial()
 		{
 			UUIItem item = base.GetItem(7);
@@ -189,39 +189,39 @@ namespace CSharpScript.Game.Module.JoinTeam.View
 			item.SetUIActive(this.IsTrial);
 		}
 
-		// Token: 0x0401DDF9 RID: 122361
+		// Token: 0x0401888F RID: 100495
 		[Nullable(2)]
 		private MiniElementItem MiniElement;
 
-		// Token: 0x0401DDFA RID: 122362
+		// Token: 0x04018890 RID: 100496
 		private bool IsTrial;
 
-		// Token: 0x0200B9C1 RID: 47553
+		// Token: 0x0200A3D7 RID: 41943
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04038299 RID: 230041
+			// Token: 0x04032C89 RID: 208009
 			public const int RoleName = 0;
 
-			// Token: 0x0403829A RID: 230042
+			// Token: 0x04032C8A RID: 208010
 			public const int RoleTexture = 1;
 
-			// Token: 0x0403829B RID: 230043
+			// Token: 0x04032C8B RID: 208011
 			public const int RoleEffect = 2;
 
-			// Token: 0x0403829C RID: 230044
+			// Token: 0x04032C8C RID: 208012
 			public const int RoleDescriptionText = 3;
 
-			// Token: 0x0403829D RID: 230045
+			// Token: 0x04032C8D RID: 208013
 			public const int DetailButton = 4;
 
-			// Token: 0x0403829E RID: 230046
+			// Token: 0x04032C8E RID: 208014
 			public const int MiniElementItem = 5;
 
-			// Token: 0x0403829F RID: 230047
+			// Token: 0x04032C8F RID: 208015
 			public const int CloseButton = 6;
 
-			// Token: 0x040382A0 RID: 230048
+			// Token: 0x04032C90 RID: 208016
 			public const int TrialPanel = 7;
 		}
 	}

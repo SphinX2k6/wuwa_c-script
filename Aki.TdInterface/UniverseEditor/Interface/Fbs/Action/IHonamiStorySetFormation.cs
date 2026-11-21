@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006933 RID: 26931
+	// Token: 0x02006FE6 RID: 28646
 	public struct IHonamiStorySetFormation : IFlatbufferObject
 	{
-		// Token: 0x1700C7CB RID: 51147
-		// (get) Token: 0x0602F040 RID: 192576 RVA: 0x00668C8E File Offset: 0x00666E8E
+		// Token: 0x1700D1CE RID: 53710
+		// (get) Token: 0x06031A10 RID: 203280 RVA: 0x006B9176 File Offset: 0x006B7376
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F041 RID: 192577 RVA: 0x00668C9B File Offset: 0x00666E9B
+		// Token: 0x06031A11 RID: 203281 RVA: 0x006B9183 File Offset: 0x006B7383
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F042 RID: 192578 RVA: 0x00668CA4 File Offset: 0x00666EA4
+		// Token: 0x06031A12 RID: 203282 RVA: 0x006B918C File Offset: 0x006B738C
 		public static IHonamiStorySetFormation GetRootAsIHonamiStorySetFormation(ByteBuffer _bb)
 		{
 			return IHonamiStorySetFormation.GetRootAsIHonamiStorySetFormation(_bb, default(IHonamiStorySetFormation));
 		}
 
-		// Token: 0x0602F043 RID: 192579 RVA: 0x00668CC0 File Offset: 0x00666EC0
+		// Token: 0x06031A13 RID: 203283 RVA: 0x006B91A8 File Offset: 0x006B73A8
 		public static IHonamiStorySetFormation GetRootAsIHonamiStorySetFormation(ByteBuffer _bb, IHonamiStorySetFormation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F044 RID: 192580 RVA: 0x00668CDD File Offset: 0x00666EDD
+		// Token: 0x06031A14 RID: 203284 RVA: 0x006B91C5 File Offset: 0x006B73C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F045 RID: 192581 RVA: 0x00668CEC File Offset: 0x00666EEC
+		// Token: 0x06031A15 RID: 203285 RVA: 0x006B91D4 File Offset: 0x006B73D4
 		public IHonamiStorySetFormation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C7CC RID: 51148
-		// (get) Token: 0x0602F046 RID: 192582 RVA: 0x00668CFC File Offset: 0x00666EFC
+		// Token: 0x1700D1CF RID: 53711
+		// (get) Token: 0x06031A16 RID: 203286 RVA: 0x006B91E4 File Offset: 0x006B73E4
 		public int ActivityId
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F047 RID: 192583 RVA: 0x00668D38 File Offset: 0x00666F38
+		// Token: 0x06031A17 RID: 203287 RVA: 0x006B9220 File Offset: 0x006B7420
 		public IHonamiStoryRoleSetting? RoleSetting(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IHonamiStoryRoleSetting?(default(IHonamiStoryRoleSetting).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700C7CD RID: 51149
-		// (get) Token: 0x0602F048 RID: 192584 RVA: 0x00668D98 File Offset: 0x00666F98
+		// Token: 0x1700D1D0 RID: 53712
+		// (get) Token: 0x06031A18 RID: 203288 RVA: 0x006B9280 File Offset: 0x006B7480
 		public int RoleSettingLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F049 RID: 192585 RVA: 0x00668DC4 File Offset: 0x00666FC4
+		// Token: 0x06031A19 RID: 203289 RVA: 0x006B92AC File Offset: 0x006B74AC
 		public IHonamiStoryWeaponEquipSetting? WeaponSetting(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IHonamiStoryWeaponEquipSetting?(default(IHonamiStoryWeaponEquipSetting).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700C7CE RID: 51150
-		// (get) Token: 0x0602F04A RID: 192586 RVA: 0x00668E24 File Offset: 0x00667024
+		// Token: 0x1700D1D1 RID: 53713
+		// (get) Token: 0x06031A1A RID: 203290 RVA: 0x006B930C File Offset: 0x006B750C
 		public int WeaponSettingLength
 		{
 			get
@@ -115,7 +115,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F04B RID: 192587 RVA: 0x00668E50 File Offset: 0x00667050
+		// Token: 0x06031A1B RID: 203291 RVA: 0x006B9338 File Offset: 0x006B7538
 		public IHonamiStoryPluginEquipSetting? PluginSetting(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -126,8 +126,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IHonamiStoryPluginEquipSetting?(default(IHonamiStoryPluginEquipSetting).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700C7CF RID: 51151
-		// (get) Token: 0x0602F04C RID: 192588 RVA: 0x00668EB4 File Offset: 0x006670B4
+		// Token: 0x1700D1D2 RID: 53714
+		// (get) Token: 0x06031A1C RID: 203292 RVA: 0x006B939C File Offset: 0x006B759C
 		public int PluginSettingLength
 		{
 			get
@@ -141,8 +141,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C7D0 RID: 51152
-		// (get) Token: 0x0602F04D RID: 192589 RVA: 0x00668EE0 File Offset: 0x006670E0
+		// Token: 0x1700D1D3 RID: 53715
+		// (get) Token: 0x06031A1D RID: 203293 RVA: 0x006B93C8 File Offset: 0x006B75C8
 		public byte NullMask
 		{
 			get
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F04E RID: 192590 RVA: 0x00668F1D File Offset: 0x0066711D
+		// Token: 0x06031A1E RID: 203294 RVA: 0x006B9405 File Offset: 0x006B7605
 		public static Offset<IHonamiStorySetFormation> CreateIHonamiStorySetFormation(FlatBufferBuilder builder, int ActivityId = 0, VectorOffset RoleSettingOffset = default(VectorOffset), VectorOffset WeaponSettingOffset = default(VectorOffset), VectorOffset PluginSettingOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -168,25 +168,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHonamiStorySetFormation.EndIHonamiStorySetFormation(builder);
 		}
 
-		// Token: 0x0602F04F RID: 192591 RVA: 0x00668F51 File Offset: 0x00667151
+		// Token: 0x06031A1F RID: 203295 RVA: 0x006B9439 File Offset: 0x006B7639
 		public static void StartIHonamiStorySetFormation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602F050 RID: 192592 RVA: 0x00668F5A File Offset: 0x0066715A
+		// Token: 0x06031A20 RID: 203296 RVA: 0x006B9442 File Offset: 0x006B7642
 		public static void AddActivityId(FlatBufferBuilder builder, int activityId)
 		{
 			builder.AddInt(0, activityId, 0);
 		}
 
-		// Token: 0x0602F051 RID: 192593 RVA: 0x00668F65 File Offset: 0x00667165
+		// Token: 0x06031A21 RID: 203297 RVA: 0x006B944D File Offset: 0x006B764D
 		public static void AddRoleSetting(FlatBufferBuilder builder, VectorOffset roleSettingOffset)
 		{
 			builder.AddOffset(1, roleSettingOffset.Value, 0);
 		}
 
-		// Token: 0x0602F052 RID: 192594 RVA: 0x00668F78 File Offset: 0x00667178
+		// Token: 0x06031A22 RID: 203298 RVA: 0x006B9460 File Offset: 0x006B7660
 		public static VectorOffset CreateRoleSettingVector(FlatBufferBuilder builder, Offset<IHonamiStoryRoleSetting>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -197,7 +197,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F053 RID: 192595 RVA: 0x00668FB8 File Offset: 0x006671B8
+		// Token: 0x06031A23 RID: 203299 RVA: 0x006B94A0 File Offset: 0x006B76A0
 		public static VectorOffset CreateRoleSettingVectorBlock(FlatBufferBuilder builder, Offset<IHonamiStoryRoleSetting>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F054 RID: 192596 RVA: 0x00668FD2 File Offset: 0x006671D2
+		// Token: 0x06031A24 RID: 203300 RVA: 0x006B94BA File Offset: 0x006B76BA
 		public static VectorOffset CreateRoleSettingVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IHonamiStoryRoleSetting>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -213,7 +213,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F055 RID: 192597 RVA: 0x00668FF0 File Offset: 0x006671F0
+		// Token: 0x06031A25 RID: 203301 RVA: 0x006B94D8 File Offset: 0x006B76D8
 		public static VectorOffset CreateRoleSettingVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -221,19 +221,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F056 RID: 192598 RVA: 0x00669009 File Offset: 0x00667209
+		// Token: 0x06031A26 RID: 203302 RVA: 0x006B94F1 File Offset: 0x006B76F1
 		public static void StartRoleSettingVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602F057 RID: 192599 RVA: 0x00669014 File Offset: 0x00667214
+		// Token: 0x06031A27 RID: 203303 RVA: 0x006B94FC File Offset: 0x006B76FC
 		public static void AddWeaponSetting(FlatBufferBuilder builder, VectorOffset weaponSettingOffset)
 		{
 			builder.AddOffset(2, weaponSettingOffset.Value, 0);
 		}
 
-		// Token: 0x0602F058 RID: 192600 RVA: 0x00669024 File Offset: 0x00667224
+		// Token: 0x06031A28 RID: 203304 RVA: 0x006B950C File Offset: 0x006B770C
 		public static VectorOffset CreateWeaponSettingVector(FlatBufferBuilder builder, Offset<IHonamiStoryWeaponEquipSetting>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -244,7 +244,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F059 RID: 192601 RVA: 0x00669064 File Offset: 0x00667264
+		// Token: 0x06031A29 RID: 203305 RVA: 0x006B954C File Offset: 0x006B774C
 		public static VectorOffset CreateWeaponSettingVectorBlock(FlatBufferBuilder builder, Offset<IHonamiStoryWeaponEquipSetting>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -252,7 +252,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F05A RID: 192602 RVA: 0x0066907E File Offset: 0x0066727E
+		// Token: 0x06031A2A RID: 203306 RVA: 0x006B9566 File Offset: 0x006B7766
 		public static VectorOffset CreateWeaponSettingVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IHonamiStoryWeaponEquipSetting>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -260,7 +260,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F05B RID: 192603 RVA: 0x0066909C File Offset: 0x0066729C
+		// Token: 0x06031A2B RID: 203307 RVA: 0x006B9584 File Offset: 0x006B7784
 		public static VectorOffset CreateWeaponSettingVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -268,19 +268,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F05C RID: 192604 RVA: 0x006690B5 File Offset: 0x006672B5
+		// Token: 0x06031A2C RID: 203308 RVA: 0x006B959D File Offset: 0x006B779D
 		public static void StartWeaponSettingVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602F05D RID: 192605 RVA: 0x006690C0 File Offset: 0x006672C0
+		// Token: 0x06031A2D RID: 203309 RVA: 0x006B95A8 File Offset: 0x006B77A8
 		public static void AddPluginSetting(FlatBufferBuilder builder, VectorOffset pluginSettingOffset)
 		{
 			builder.AddOffset(3, pluginSettingOffset.Value, 0);
 		}
 
-		// Token: 0x0602F05E RID: 192606 RVA: 0x006690D0 File Offset: 0x006672D0
+		// Token: 0x06031A2E RID: 203310 RVA: 0x006B95B8 File Offset: 0x006B77B8
 		public static VectorOffset CreatePluginSettingVector(FlatBufferBuilder builder, Offset<IHonamiStoryPluginEquipSetting>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -291,7 +291,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F05F RID: 192607 RVA: 0x00669110 File Offset: 0x00667310
+		// Token: 0x06031A2F RID: 203311 RVA: 0x006B95F8 File Offset: 0x006B77F8
 		public static VectorOffset CreatePluginSettingVectorBlock(FlatBufferBuilder builder, Offset<IHonamiStoryPluginEquipSetting>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -299,7 +299,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F060 RID: 192608 RVA: 0x0066912A File Offset: 0x0066732A
+		// Token: 0x06031A30 RID: 203312 RVA: 0x006B9612 File Offset: 0x006B7812
 		public static VectorOffset CreatePluginSettingVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IHonamiStoryPluginEquipSetting>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -307,7 +307,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F061 RID: 192609 RVA: 0x00669148 File Offset: 0x00667348
+		// Token: 0x06031A31 RID: 203313 RVA: 0x006B9630 File Offset: 0x006B7830
 		public static VectorOffset CreatePluginSettingVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -315,25 +315,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F062 RID: 192610 RVA: 0x00669161 File Offset: 0x00667361
+		// Token: 0x06031A32 RID: 203314 RVA: 0x006B9649 File Offset: 0x006B7849
 		public static void StartPluginSettingVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602F063 RID: 192611 RVA: 0x0066916C File Offset: 0x0066736C
+		// Token: 0x06031A33 RID: 203315 RVA: 0x006B9654 File Offset: 0x006B7854
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0602F064 RID: 192612 RVA: 0x00669177 File Offset: 0x00667377
+		// Token: 0x06031A34 RID: 203316 RVA: 0x006B965F File Offset: 0x006B785F
 		public static Offset<IHonamiStorySetFormation> EndIHonamiStorySetFormation(FlatBufferBuilder builder)
 		{
 			return new Offset<IHonamiStorySetFormation>(builder.EndTable());
 		}
 
-		// Token: 0x0602F065 RID: 192613 RVA: 0x00669184 File Offset: 0x00667384
+		// Token: 0x06031A35 RID: 203317 RVA: 0x006B966C File Offset: 0x006B786C
 		public IHonamiStorySetFormationT UnPack()
 		{
 			IHonamiStorySetFormationT honamiStorySetFormationT = new IHonamiStorySetFormationT();
@@ -341,7 +341,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return honamiStorySetFormationT;
 		}
 
-		// Token: 0x0602F066 RID: 192614 RVA: 0x006691A0 File Offset: 0x006673A0
+		// Token: 0x06031A36 RID: 203318 RVA: 0x006B9688 File Offset: 0x006B7888
 		public void UnPackTo(IHonamiStorySetFormationT _o)
 		{
 			_o.ActivityId = this.ActivityId;
@@ -363,7 +363,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602F067 RID: 192615 RVA: 0x006692C8 File Offset: 0x006674C8
+		// Token: 0x06031A37 RID: 203319 RVA: 0x006B97B0 File Offset: 0x006B79B0
 		public static Offset<IHonamiStorySetFormation> Pack(FlatBufferBuilder builder, IHonamiStorySetFormationT _o)
 		{
 			if (_o == null)
@@ -403,7 +403,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHonamiStorySetFormation.CreateIHonamiStorySetFormation(builder, _o.ActivityId, roleSettingOffset, weaponSettingOffset, pluginSettingOffset, _o.NullMask);
 		}
 
-		// Token: 0x040110AE RID: 69806
+		// Token: 0x04011F1A RID: 73498
 		private Table __p;
 	}
 }

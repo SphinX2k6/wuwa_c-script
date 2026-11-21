@@ -4,14 +4,14 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015DF RID: 5599
+	// Token: 0x0200173F RID: 5951
 	[JsonConverter(typeof(EFadeBackgroundFadeInEffectTypeJsonConverter))]
 	[EnumExtensions]
 	public enum EFadeBackgroundFadeInEffectType
 	{
-		// Token: 0x04004AB8 RID: 19128
+		// Token: 0x04004E78 RID: 20088
 		Black,
-		// Token: 0x04004AB9 RID: 19129
+		// Token: 0x04004E79 RID: 20089
 		ScreenEffect
 	}
 }

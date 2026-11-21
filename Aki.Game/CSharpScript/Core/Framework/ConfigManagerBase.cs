@@ -2,11 +2,11 @@
 
 namespace CSharpScript.Core.Framework
 {
-	// Token: 0x0200451E RID: 17694
+	// Token: 0x02003441 RID: 13377
 	[StaticVariableRuleIgnore]
 	public abstract class ConfigManagerBase : IConfigManagerBase
 	{
-		// Token: 0x0602D895 RID: 186517 RVA: 0x00A46CE0 File Offset: 0x00A44EE0
+		// Token: 0x06021F65 RID: 139109 RVA: 0x00972AF0 File Offset: 0x00970CF0
 		public bool CreateInstance()
 		{
 			try
@@ -32,7 +32,7 @@ namespace CSharpScript.Core.Framework
 			return false;
 		}
 
-		// Token: 0x0602D896 RID: 186518 RVA: 0x00A46D68 File Offset: 0x00A44F68
+		// Token: 0x06021F66 RID: 139110 RVA: 0x00972B78 File Offset: 0x00970D78
 		public bool Init()
 		{
 			try
@@ -58,7 +58,7 @@ namespace CSharpScript.Core.Framework
 			return false;
 		}
 
-		// Token: 0x0602D897 RID: 186519 RVA: 0x00A46DF0 File Offset: 0x00A44FF0
+		// Token: 0x06021F67 RID: 139111 RVA: 0x00972C00 File Offset: 0x00970E00
 		public bool Clear()
 		{
 			try
@@ -84,13 +84,13 @@ namespace CSharpScript.Core.Framework
 			return true;
 		}
 
-		// Token: 0x0602D898 RID: 186520 RVA: 0x00A46E78 File Offset: 0x00A45078
+		// Token: 0x06021F68 RID: 139112 RVA: 0x00972C88 File Offset: 0x00970E88
 		protected bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x0602D899 RID: 186521 RVA: 0x00A46E7B File Offset: 0x00A4507B
+		// Token: 0x06021F69 RID: 139113 RVA: 0x00972C8B File Offset: 0x00970E8B
 		protected bool OnClear()
 		{
 			return true;

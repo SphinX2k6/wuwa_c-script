@@ -4,10 +4,10 @@ using CSharpScript.Game.NewWorld.Character.Monster.Component;
 
 namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 {
-	// Token: 0x02004C20 RID: 19488
+	// Token: 0x02003BD1 RID: 15313
 	public class SkillButtonCustomHandleHackFollowAttach : SkillButtonCustomHandleBase
 	{
-		// Token: 0x06032713 RID: 206611 RVA: 0x00BC110F File Offset: 0x00BBF30F
+		// Token: 0x060274C6 RID: 160966 RVA: 0x00B05D4D File Offset: 0x00B03F4D
 		protected override void OnInit()
 		{
 			if (this.SkillButtonData == null)
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			this.HackComp = hackComp;
 		}
 
-		// Token: 0x06032714 RID: 206612 RVA: 0x00BC1144 File Offset: 0x00BBF344
+		// Token: 0x060274C7 RID: 160967 RVA: 0x00B05D84 File Offset: 0x00B03F84
 		public override void Refresh()
 		{
 			if (this.SkillButtonData == null || this.HackComp == null)
@@ -44,14 +44,14 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			this.SkillButtonData.RemainingCountCustom = ((gameplayTagComponent != null) ? gameplayTagComponent.GetTagCount(this.TagIds[0]) : 0);
 		}
 
-		// Token: 0x06032715 RID: 206613 RVA: 0x00BC11AC File Offset: 0x00BBF3AC
+		// Token: 0x060274C8 RID: 160968 RVA: 0x00B05DEC File Offset: 0x00B03FEC
 		public override void RefreshByTagChanged()
 		{
 			this.Refresh();
 			this.SkillCdModifyMark = true;
 		}
 
-		// Token: 0x0401ADB6 RID: 110006
+		// Token: 0x04015713 RID: 87827
 		[Nullable(2)]
 		private HackManagementComponent HackComp;
 	}

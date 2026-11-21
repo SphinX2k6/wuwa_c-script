@@ -4,13 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A63 RID: 2659
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000B2C RID: 2860
 	public class ICommonRotationConfig
 	{
-		// Token: 0x06003D45 RID: 15685 RVA: 0x0009D6A3 File Offset: 0x0009B8A3
-		[NullableContext(1)]
+		// Token: 0x06004165 RID: 16741 RVA: 0x000A6B1B File Offset: 0x000A4D1B
 		public static ICommonRotationConfig Create(ICommonRotationConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E3C RID: 3644
-		// (get) Token: 0x06003D46 RID: 15686 RVA: 0x0009D6C2 File Offset: 0x0009B8C2
+		// Token: 0x17000F08 RID: 3848
+		// (get) Token: 0x06004166 RID: 16742 RVA: 0x000A6B3A File Offset: 0x000A4D3A
 		public virtual ERotationType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E3D RID: 3645
-		// (get) Token: 0x06003D47 RID: 15687 RVA: 0x0009D6CF File Offset: 0x0009B8CF
+		// Token: 0x17000F09 RID: 3849
+		// (get) Token: 0x06004167 RID: 16743 RVA: 0x000A6B47 File Offset: 0x000A4D47
 		public virtual float Time
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E3E RID: 3646
-		// (get) Token: 0x06003D48 RID: 15688 RVA: 0x0009D6DC File Offset: 0x0009B8DC
+		// Token: 0x17000F0A RID: 3850
+		// (get) Token: 0x06004168 RID: 16744 RVA: 0x000A6B54 File Offset: 0x000A4D54
 		public virtual float? Cd
 		{
 			get
@@ -57,17 +54,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E3F RID: 3647
-		// (get) Token: 0x06003D49 RID: 15689 RVA: 0x0009D712 File Offset: 0x0009B912
+		// Token: 0x17000F0B RID: 3851
+		// (get) Token: 0x06004169 RID: 16745 RVA: 0x000A6B8A File Offset: 0x000A4D8A
+		[Nullable(2)]
 		public virtual string Curve
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.Instance.Curve;
 			}
 		}
 
-		// Token: 0x04002224 RID: 8740
+		// Token: 0x0400243B RID: 9275
 		private ICommonRotationConfig Instance;
 	}
 }

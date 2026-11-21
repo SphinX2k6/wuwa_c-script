@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200178E RID: 6030
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200190F RID: 6415
 	public class IActorLookAtUnLock : IActorLookAtData
 	{
-		// Token: 0x06007FA9 RID: 32681 RVA: 0x001310B0 File Offset: 0x0012F2B0
+		// Token: 0x06008699 RID: 34457 RVA: 0x00140310 File Offset: 0x0013E510
 		private IActorLookAtUnLock_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007FAA RID: 32682 RVA: 0x001310E8 File Offset: 0x0012F2E8
+		// Token: 0x0600869A RID: 34458 RVA: 0x00140348 File Offset: 0x0013E548
 		public static IActorLookAtUnLock Create([Nullable(2)] IActorLookAtUnLock instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007FAB RID: 32683 RVA: 0x001310FB File Offset: 0x0012F2FB
+		// Token: 0x0600869B RID: 34459 RVA: 0x0014035B File Offset: 0x0013E55B
 		public static IActorLookAtUnLock CreateFromSetValue([Nullable(2)] IActorLookAtUnLock_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007FAC RID: 32684 RVA: 0x0013110E File Offset: 0x0012F30E
+		// Token: 0x0600869C RID: 34460 RVA: 0x0014036E File Offset: 0x0013E56E
 		public new IActorLookAtUnLock_SetValue ToSetValue()
 		{
 			return new IActorLookAtUnLock_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029D4 RID: 10708
-		// (get) Token: 0x06007FAD RID: 32685 RVA: 0x00131121 File Offset: 0x0012F321
-		// (set) Token: 0x06007FAE RID: 32686 RVA: 0x0013114C File Offset: 0x0012F34C
+		// Token: 0x17002BC2 RID: 11202
+		// (get) Token: 0x0600869D RID: 34461 RVA: 0x00140381 File Offset: 0x0013E581
+		// (set) Token: 0x0600869E RID: 34462 RVA: 0x001403AC File Offset: 0x0013E5AC
 		public override EActorLookAtMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400511B RID: 20763
+		// Token: 0x04005551 RID: 21841
 		[Nullable(2)]
 		protected new IActorLookAtUnLock FbInstance;
 
-		// Token: 0x0400511C RID: 20764
+		// Token: 0x04005552 RID: 21842
 		[Nullable(2)]
 		protected new IActorLookAtUnLock_SetValue PocoInterface;
 	}

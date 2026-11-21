@@ -7,13 +7,13 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001958 RID: 6488
+// Token: 0x02000E15 RID: 3605
 [NullableContext(1)]
 [Nullable(0)]
 public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDataBase
 {
-	// Token: 0x17000FD5 RID: 4053
-	// (get) Token: 0x0600BD76 RID: 48502 RVA: 0x002ADABB File Offset: 0x002ABCBB
+	// Token: 0x17000FF9 RID: 4089
+	// (get) Token: 0x06009179 RID: 37241 RVA: 0x002B88FF File Offset: 0x002B6AFF
 	protected bool IsSelectFrameFollowClick
 	{
 		get
@@ -23,38 +23,38 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		}
 	}
 
-	// Token: 0x0600BD77 RID: 48503 RVA: 0x002ADACE File Offset: 0x002ABCCE
+	// Token: 0x0600917A RID: 37242 RVA: 0x002B8912 File Offset: 0x002B6B12
 	public void InitLoopScroller(UUILoopScrollViewComponent loopComponent, UUIItem templateActor, SelectableComponentData data)
 	{
 		this.LoopScrollView = new LoopScrollView<SelectablePropMediumItemGrid, SelectablePropData>(loopComponent, templateActor.GetOwner() as AUIBaseActor, new Func<SelectablePropMediumItemGrid>(this.InitItem), false);
 		this.SetData(data);
 	}
 
-	// Token: 0x0600BD78 RID: 48504 RVA: 0x002ADAFC File Offset: 0x002ABCFC
+	// Token: 0x0600917B RID: 37243 RVA: 0x002B8940 File Offset: 0x002B6B40
 	protected void SetData(SelectableComponentData data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x0600BD79 RID: 48505 RVA: 0x002ADB05 File Offset: 0x002ABD05
+	// Token: 0x0600917C RID: 37244 RVA: 0x002B8949 File Offset: 0x002B6B49
 	public void SetExpData(CommonIntensifyPropExpData expData)
 	{
 		this.SelectableExpData = SelectableExpData.PhraseData(expData);
 	}
 
-	// Token: 0x0600BD7A RID: 48506 RVA: 0x002ADB13 File Offset: 0x002ABD13
+	// Token: 0x0600917D RID: 37245 RVA: 0x002B8957 File Offset: 0x002B6B57
 	public void SetMaxSize(int size)
 	{
 		this.MaxSize = size;
 	}
 
-	// Token: 0x0600BD7B RID: 48507 RVA: 0x002ADB1C File Offset: 0x002ABD1C
+	// Token: 0x0600917E RID: 37246 RVA: 0x002B8960 File Offset: 0x002B6B60
 	public void SetOnlyGold(bool onlyGold)
 	{
 		this.OnlyGold = onlyGold;
 	}
 
-	// Token: 0x0600BD7C RID: 48508 RVA: 0x002ADB25 File Offset: 0x002ABD25
+	// Token: 0x0600917F RID: 37247 RVA: 0x002B8969 File Offset: 0x002B6B69
 	public void UpdateComponent(List<T> itemDataBaseList, List<ISelectedData> selectedDataList, [Nullable(2)] CommonIntensifyPropExpData expData = null)
 	{
 		this.InitSelectedData(selectedDataList);
@@ -66,19 +66,19 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		}
 	}
 
-	// Token: 0x0600BD7D RID: 48509 RVA: 0x002ADB45 File Offset: 0x002ABD45
+	// Token: 0x06009180 RID: 37248 RVA: 0x002B8989 File Offset: 0x002B6B89
 	public void RefreshPartByIndex(int index)
 	{
 		this.LoopScrollView.RefreshGridProxy(index);
 	}
 
-	// Token: 0x0600BD7E RID: 48510 RVA: 0x002ADB53 File Offset: 0x002ABD53
+	// Token: 0x06009181 RID: 37249 RVA: 0x002B8997 File Offset: 0x002B6B97
 	public void RefreshAllByDisplay()
 	{
 		this.LoopScrollView.RefreshAllGridProxies();
 	}
 
-	// Token: 0x0600BD7F RID: 48511 RVA: 0x002ADB60 File Offset: 0x002ABD60
+	// Token: 0x06009182 RID: 37250 RVA: 0x002B89A4 File Offset: 0x002B6BA4
 	private void InitSelectedData(List<ISelectedData> selectedDataList)
 	{
 		if (selectedDataList != null)
@@ -95,13 +95,13 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		}
 	}
 
-	// Token: 0x0600BD80 RID: 48512 RVA: 0x002ADB9F File Offset: 0x002ABD9F
+	// Token: 0x06009183 RID: 37251 RVA: 0x002B89E3 File Offset: 0x002B6BE3
 	public List<ISelectedData> GetCurrentSelectedData()
 	{
 		return this.SelectedDataList;
 	}
 
-	// Token: 0x0600BD81 RID: 48513 RVA: 0x002ADBA8 File Offset: 0x002ABDA8
+	// Token: 0x06009184 RID: 37252 RVA: 0x002B89EC File Offset: 0x002B6BEC
 	public void UpdateDataList(List<T> dataList)
 	{
 		this.ItemDataList = dataList;
@@ -112,7 +112,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		}
 	}
 
-	// Token: 0x0600BD82 RID: 48514 RVA: 0x002ADC00 File Offset: 0x002ABE00
+	// Token: 0x06009185 RID: 37253 RVA: 0x002B8A44 File Offset: 0x002B6C44
 	public void RefreshByData(List<T> dataList, bool keepContentPosition = false, [Nullable(2)] Action callBack = null)
 	{
 		this.ItemDataList = dataList;
@@ -132,7 +132,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		this.LoopScrollView.RefreshByData(list, keepContentPosition, callBack, false);
 	}
 
-	// Token: 0x0600BD83 RID: 48515 RVA: 0x002ADCA4 File Offset: 0x002ABEA4
+	// Token: 0x06009186 RID: 37254 RVA: 0x002B8AE8 File Offset: 0x002B6CE8
 	public void UpdateChangeItemSelectList()
 	{
 		Action<List<ISelectedData>, SelectableExpData> onChangeSelectedFunction = this.Data.OnChangeSelectedFunction;
@@ -143,7 +143,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		onChangeSelectedFunction(this.SelectedDataList, this.SelectableExpData);
 	}
 
-	// Token: 0x0600BD84 RID: 48516 RVA: 0x002ADCC8 File Offset: 0x002ABEC8
+	// Token: 0x06009187 RID: 37255 RVA: 0x002B8B0C File Offset: 0x002B6D0C
 	private SelectablePropData GetPropScrollViewData(int gridIndex)
 	{
 		SelectablePropData selectablePropData = SelectablePropDataUtil.GetSelectablePropData(this.ItemDataList[gridIndex]);
@@ -158,25 +158,25 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		return selectablePropData;
 	}
 
-	// Token: 0x0600BD85 RID: 48517 RVA: 0x002ADD1D File Offset: 0x002ABF1D
+	// Token: 0x06009188 RID: 37256 RVA: 0x002B8B61 File Offset: 0x002B6D61
 	[NullableContext(2)]
 	public ISelectedData GetFirstOperationItem()
 	{
 		return this.FirstOperationData;
 	}
 
-	// Token: 0x0600BD86 RID: 48518 RVA: 0x002ADD25 File Offset: 0x002ABF25
+	// Token: 0x06009189 RID: 37257 RVA: 0x002B8B69 File Offset: 0x002B6D69
 	public void SetFirstOperationData(ISelectedData data)
 	{
 		this.FirstOperationData = data;
 	}
 
-	// Token: 0x0600BD87 RID: 48519 RVA: 0x002ADD2E File Offset: 0x002ABF2E
+	// Token: 0x0600918A RID: 37258 RVA: 0x002B8B72 File Offset: 0x002B6D72
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x0600BD88 RID: 48520 RVA: 0x002ADD30 File Offset: 0x002ABF30
+	// Token: 0x0600918B RID: 37259 RVA: 0x002B8B74 File Offset: 0x002B6D74
 	protected virtual SelectablePropMediumItemGrid InitItem()
 	{
 		SelectablePropMediumItemGrid selectablePropMediumItemGrid = new SelectablePropMediumItemGrid();
@@ -193,12 +193,12 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		return selectablePropMediumItemGrid;
 	}
 
-	// Token: 0x0600BD89 RID: 48521 RVA: 0x002ADD97 File Offset: 0x002ABF97
+	// Token: 0x0600918C RID: 37260 RVA: 0x002B8BDB File Offset: 0x002B6DDB
 	protected void OnAfterApplyMediumItemGrid(SelectablePropMediumItemGrid selectablePropMediumItemGrid)
 	{
 	}
 
-	// Token: 0x0600BD8A RID: 48522 RVA: 0x002ADD9C File Offset: 0x002ABF9C
+	// Token: 0x0600918D RID: 37261 RVA: 0x002B8BE0 File Offset: 0x002B6DE0
 	[NullableContext(2)]
 	protected bool OnCanExecuteChange(object data, bool isForceSelected, EToggleState state)
 	{
@@ -206,14 +206,14 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		return selectablePropData != null && this.CanAddMaterial(selectablePropData, false);
 	}
 
-	// Token: 0x0600BD8B RID: 48523 RVA: 0x002ADDC0 File Offset: 0x002ABFC0
+	// Token: 0x0600918E RID: 37262 RVA: 0x002B8C04 File Offset: 0x002B6E04
 	protected bool CanItemLongPress(ItemGridBase itemGrid, [Nullable(2)] object data)
 	{
 		SelectablePropData selectablePropData = data as SelectablePropData;
 		return selectablePropData != null && this.CanAddMaterial(selectablePropData, false);
 	}
 
-	// Token: 0x0600BD8C RID: 48524 RVA: 0x002ADDE4 File Offset: 0x002ABFE4
+	// Token: 0x0600918F RID: 37263 RVA: 0x002B8C28 File Offset: 0x002B6E28
 	protected bool AddFunction(bool isShortPress, ItemGridBase itemGrid, [Nullable(2)] object data)
 	{
 		SelectablePropData selectablePropData = data as SelectablePropData;
@@ -262,7 +262,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		return true;
 	}
 
-	// Token: 0x0600BD8D RID: 48525 RVA: 0x002ADEE4 File Offset: 0x002AC0E4
+	// Token: 0x06009190 RID: 37264 RVA: 0x002B8D28 File Offset: 0x002B6F28
 	protected bool ReduceFunction(bool isShortPress, MediumItemGrid mediumItemGrid, [Nullable(2)] object data)
 	{
 		SelectablePropData selectablePropData = data as SelectablePropData;
@@ -317,7 +317,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		return true;
 	}
 
-	// Token: 0x0600BD8E RID: 48526 RVA: 0x002ADFD0 File Offset: 0x002AC1D0
+	// Token: 0x06009191 RID: 37265 RVA: 0x002B8E14 File Offset: 0x002B7014
 	protected void MoveSelectFrameTo(SelectablePropData propData)
 	{
 		if (!this.IsSelectFrameFollowClick)
@@ -332,7 +332,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		this.LoopScrollView.SelectGridProxy(loopScrollViewIndex, true);
 	}
 
-	// Token: 0x0600BD8F RID: 48527 RVA: 0x002AE00B File Offset: 0x002AC20B
+	// Token: 0x06009192 RID: 37266 RVA: 0x002B8E4F File Offset: 0x002B704F
 	protected void RefreshSelectFrame(SelectablePropMediumItemGrid grid, bool isSelected)
 	{
 		if (this.IsSelectFrameFollowClick)
@@ -342,7 +342,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		grid.SetSelected(isSelected, true);
 	}
 
-	// Token: 0x0600BD90 RID: 48528 RVA: 0x002AE020 File Offset: 0x002AC220
+	// Token: 0x06009193 RID: 37267 RVA: 0x002B8E64 File Offset: 0x002B7064
 	protected void SetPrevPropItemSelectedState(SelectablePropData propData)
 	{
 		if (this.IsSelectFrameFollowClick)
@@ -374,7 +374,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		selectablePropMediumItemGrid.OnDeselected(false);
 	}
 
-	// Token: 0x0600BD91 RID: 48529 RVA: 0x002AE09C File Offset: 0x002AC29C
+	// Token: 0x06009194 RID: 37268 RVA: 0x002B8EE0 File Offset: 0x002B70E0
 	protected virtual bool CanAddMaterial(SelectablePropData propData, bool isShowTip = false)
 	{
 		if (propData.GetIsLock())
@@ -410,7 +410,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		return this.Data.CheckIfCanAddFunction == null || this.Data.CheckIfCanAddFunction(this.SelectedDataList, propData.IncId, propData.ItemId, 1);
 	}
 
-	// Token: 0x0600BD92 RID: 48530 RVA: 0x002AE18C File Offset: 0x002AC38C
+	// Token: 0x06009195 RID: 37269 RVA: 0x002B8FD0 File Offset: 0x002B71D0
 	private bool IsSameLastAddItemData(ISelectedData selectedData)
 	{
 		if (this.LastAddData == null)
@@ -425,7 +425,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		return this.LastAddData.ItemId == selectedData.ItemId;
 	}
 
-	// Token: 0x0600BD93 RID: 48531 RVA: 0x002AE1D0 File Offset: 0x002AC3D0
+	// Token: 0x06009196 RID: 37270 RVA: 0x002B9014 File Offset: 0x002B7214
 	public int GetLoopScrollViewIndex(int incId, int configId)
 	{
 		if (incId > 0 || configId > 0)
@@ -452,7 +452,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		return -1;
 	}
 
-	// Token: 0x0600BD94 RID: 48532 RVA: 0x002AE22F File Offset: 0x002AC42F
+	// Token: 0x06009197 RID: 37271 RVA: 0x002B9073 File Offset: 0x002B7273
 	protected void DeleteLastData(SelectablePropData propData)
 	{
 		if (!this.IsSameLastAddItemData(propData))
@@ -461,7 +461,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		}
 	}
 
-	// Token: 0x0600BD95 RID: 48533 RVA: 0x002AE248 File Offset: 0x002AC448
+	// Token: 0x06009198 RID: 37272 RVA: 0x002B908C File Offset: 0x002B728C
 	private void RemoveSelectedData(ISelectedData selectedData)
 	{
 		if (selectedData == null)
@@ -477,7 +477,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		this.RemoveSelectedDataByConfigId(selectedData.ItemId);
 	}
 
-	// Token: 0x0600BD96 RID: 48534 RVA: 0x002AE278 File Offset: 0x002AC478
+	// Token: 0x06009199 RID: 37273 RVA: 0x002B90BC File Offset: 0x002B72BC
 	protected void RemoveSelectedDataByIncId(int incId)
 	{
 		for (int i = 0; i < this.SelectedDataList.Count; i++)
@@ -492,7 +492,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		}
 	}
 
-	// Token: 0x0600BD97 RID: 48535 RVA: 0x002AE2C8 File Offset: 0x002AC4C8
+	// Token: 0x0600919A RID: 37274 RVA: 0x002B910C File Offset: 0x002B730C
 	private void RemoveSelectedDataByConfigId(int configId)
 	{
 		for (int i = 0; i < this.SelectedDataList.Count; i++)
@@ -507,7 +507,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		}
 	}
 
-	// Token: 0x0600BD98 RID: 48536 RVA: 0x002AE318 File Offset: 0x002AC518
+	// Token: 0x0600919B RID: 37275 RVA: 0x002B915C File Offset: 0x002B735C
 	protected void CancelPropItemSelected(SelectablePropData propData)
 	{
 		if (this.LastAddData == null || this.IsSameLastAddItemData(propData))
@@ -533,7 +533,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		selectablePropMediumItemGrid.SetReduceButton(null);
 	}
 
-	// Token: 0x0600BD99 RID: 48537 RVA: 0x002AE390 File Offset: 0x002AC590
+	// Token: 0x0600919C RID: 37276 RVA: 0x002B91D4 File Offset: 0x002B73D4
 	private void SetLastAddData(ISelectedData selectedData)
 	{
 		this.LastAddData = selectedData;
@@ -544,7 +544,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		}
 	}
 
-	// Token: 0x0600BD9A RID: 48538 RVA: 0x002AE3B8 File Offset: 0x002AC5B8
+	// Token: 0x0600919D RID: 37277 RVA: 0x002B91FC File Offset: 0x002B73FC
 	protected void AddData(SelectablePropData propData)
 	{
 		ISelectedData selectedData = this.GetSelectedData(propData);
@@ -564,7 +564,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		}
 	}
 
-	// Token: 0x0600BD9B RID: 48539 RVA: 0x002AE414 File Offset: 0x002AC614
+	// Token: 0x0600919E RID: 37278 RVA: 0x002B9258 File Offset: 0x002B7458
 	private void AddSelectedData(ISelectedData selectedData)
 	{
 		int count = this.SelectedDataList.Count;
@@ -580,7 +580,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		this.SelectedDataList.Add(selectedData);
 	}
 
-	// Token: 0x0600BD9C RID: 48540 RVA: 0x002AE478 File Offset: 0x002AC678
+	// Token: 0x0600919F RID: 37279 RVA: 0x002B92BC File Offset: 0x002B74BC
 	[return: Nullable(2)]
 	protected ISelectedData GetSelectedData(ISelectedData selectedData)
 	{
@@ -614,7 +614,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		return null;
 	}
 
-	// Token: 0x0600BD9D RID: 48541 RVA: 0x002AE540 File Offset: 0x002AC740
+	// Token: 0x060091A0 RID: 37280 RVA: 0x002B9384 File Offset: 0x002B7584
 	private int GetSelectedDataCount(ISelectedData selectedData)
 	{
 		ISelectedData selectedData2 = this.GetSelectedData(selectedData);
@@ -625,7 +625,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		return selectedData2.SelectedCount;
 	}
 
-	// Token: 0x0600BD9E RID: 48542 RVA: 0x002AE560 File Offset: 0x002AC760
+	// Token: 0x060091A1 RID: 37281 RVA: 0x002B93A4 File Offset: 0x002B75A4
 	protected void UpdateExp()
 	{
 		CommonIntensifyPropExpData expData = this.ExpData;
@@ -640,13 +640,13 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		}
 	}
 
-	// Token: 0x0600BD9F RID: 48543 RVA: 0x002AE5EC File Offset: 0x002AC7EC
+	// Token: 0x060091A2 RID: 37282 RVA: 0x002B9430 File Offset: 0x002B7630
 	private void OnChangeItemSelectList()
 	{
 		this.UpdateChangeItemSelectList();
 	}
 
-	// Token: 0x0600BDA0 RID: 48544 RVA: 0x002AE5F4 File Offset: 0x002AC7F4
+	// Token: 0x060091A3 RID: 37283 RVA: 0x002B9438 File Offset: 0x002B7638
 	[NullableContext(2)]
 	public UUIItem GetGridByDisplayIndex(int index)
 	{
@@ -658,7 +658,7 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 		return loopScrollView.GetGridByDisplayIndex(index);
 	}
 
-	// Token: 0x0400557E RID: 21886
+	// Token: 0x0400562B RID: 22059
 	[Nullable(new byte[]
 	{
 		2,
@@ -667,14 +667,14 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 	})]
 	protected LoopScrollView<SelectablePropMediumItemGrid, SelectablePropData> LoopScrollView;
 
-	// Token: 0x0400557F RID: 21887
+	// Token: 0x0400562C RID: 22060
 	[Nullable(2)]
 	protected SelectableComponentData Data;
 
-	// Token: 0x04005580 RID: 21888
+	// Token: 0x0400562D RID: 22061
 	protected List<ISelectedData> SelectedDataList = new List<ISelectedData>();
 
-	// Token: 0x04005581 RID: 21889
+	// Token: 0x0400562E RID: 22062
 	[Nullable(new byte[]
 	{
 		2,
@@ -682,32 +682,32 @@ public class SelectableComponent<[Nullable(0)] T> : UiPanelBase where T : ItemDa
 	})]
 	protected List<T> ItemDataList;
 
-	// Token: 0x04005582 RID: 21890
+	// Token: 0x0400562F RID: 22063
 	[Nullable(2)]
 	protected ISelectedData LastAddData;
 
-	// Token: 0x04005583 RID: 21891
+	// Token: 0x04005630 RID: 22064
 	[Nullable(2)]
 	protected SelectablePropData LastSelectedPropData;
 
-	// Token: 0x04005584 RID: 21892
+	// Token: 0x04005631 RID: 22065
 	protected int MaxSize = 20;
 
-	// Token: 0x04005585 RID: 21893
+	// Token: 0x04005632 RID: 22066
 	[Nullable(2)]
 	protected SelectableExpData SelectableExpData;
 
-	// Token: 0x04005586 RID: 21894
+	// Token: 0x04005633 RID: 22067
 	[Nullable(2)]
 	protected ISelectedData FirstOperationData;
 
-	// Token: 0x04005587 RID: 21895
+	// Token: 0x04005634 RID: 22068
 	[Nullable(2)]
 	protected CommonIntensifyPropExpData ExpData;
 
-	// Token: 0x04005588 RID: 21896
+	// Token: 0x04005635 RID: 22069
 	protected int LastSelectedIndex;
 
-	// Token: 0x04005589 RID: 21897
+	// Token: 0x04005636 RID: 22070
 	protected bool OnlyGold;
 }

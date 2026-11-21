@@ -8,12 +8,12 @@ using CSharpScript.Typing;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02000EF6 RID: 3830
+// Token: 0x020003AB RID: 939
 [NullableContext(1)]
 [Nullable(0)]
 public class ThirdPartySdkManager : Singleton
 {
-	// Token: 0x06006020 RID: 24608 RVA: 0x001210F4 File Offset: 0x0011F2F4
+	// Token: 0x060033B8 RID: 13240 RVA: 0x001290F8 File Offset: 0x001272F8
 	public void Init()
 	{
 		string packageConfigOrDefault = BaseConfigController.Instance.GetPackageConfigOrDefault("Stream", null);
@@ -39,7 +39,7 @@ public class ThirdPartySdkManager : Singleton
 		this.TestCrashSight();
 	}
 
-	// Token: 0x06006021 RID: 24609 RVA: 0x001211BC File Offset: 0x0011F3BC
+	// Token: 0x060033B9 RID: 13241 RVA: 0x001291C0 File Offset: 0x001273C0
 	private void TestCrashSight()
 	{
 		if (UBlueprintPathsLibrary.FileExists(UKuroLauncherLibrary.GameSavedDir() + "crashes/trigger"))
@@ -49,7 +49,7 @@ public class ThirdPartySdkManager : Singleton
 		}
 	}
 
-	// Token: 0x06006022 RID: 24610 RVA: 0x00121200 File Offset: 0x0011F400
+	// Token: 0x060033BA RID: 13242 RVA: 0x00129204 File Offset: 0x00127404
 	public void SetUserInfo(string userId)
 	{
 		if (userId == "")
@@ -59,13 +59,13 @@ public class ThirdPartySdkManager : Singleton
 		this.SetUserIdForCrashSight(userId);
 	}
 
-	// Token: 0x06006023 RID: 24611 RVA: 0x00121217 File Offset: 0x0011F417
+	// Token: 0x060033BB RID: 13243 RVA: 0x0012921B File Offset: 0x0012741B
 	private void SetUserIdForCrashSight(string userId)
 	{
 		FCrashSightProxy.SetUserId(userId);
 	}
 
-	// Token: 0x06006024 RID: 24612 RVA: 0x00121220 File Offset: 0x0011F420
+	// Token: 0x060033BC RID: 13244 RVA: 0x00129224 File Offset: 0x00127424
 	public void SetUserInfoForTpSafe(string userId, int playerId)
 	{
 		FCrashSightProxy.SetCustomData("PlayerId", playerId.ToString());
@@ -77,7 +77,7 @@ public class ThirdPartySdkManager : Singleton
 		}
 	}
 
-	// Token: 0x06006025 RID: 24613 RVA: 0x0012125C File Offset: 0x0011F45C
+	// Token: 0x060033BD RID: 13245 RVA: 0x00129260 File Offset: 0x00127460
 	public void InitDataTransferTimerForTpSafe()
 	{
 		int num = 4000;
@@ -91,7 +91,7 @@ public class ThirdPartySdkManager : Singleton
 		}, (float)num, 1f, null, null, true);
 	}
 
-	// Token: 0x06006026 RID: 24614 RVA: 0x001212A4 File Offset: 0x0011F4A4
+	// Token: 0x060033BE RID: 13246 RVA: 0x001292A8 File Offset: 0x001274A8
 	private void SendAceData()
 	{
 		if (!Net.Instance.IsServerConnected())
@@ -107,7 +107,7 @@ public class ThirdPartySdkManager : Singleton
 		}
 	}
 
-	// Token: 0x06006027 RID: 24615 RVA: 0x001212F8 File Offset: 0x0011F4F8
+	// Token: 0x060033BF RID: 13247 RVA: 0x001292FC File Offset: 0x001274FC
 	[NullableContext(2)]
 	private unsafe void AceAntiDataNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -131,7 +131,7 @@ public class ThirdPartySdkManager : Singleton
 		array2 = null;
 	}
 
-	// Token: 0x06006028 RID: 24616 RVA: 0x00121355 File Offset: 0x0011F555
+	// Token: 0x060033C0 RID: 13248 RVA: 0x00129359 File Offset: 0x00127559
 	private int GetAccountTypeByChannel()
 	{
 		if (Platform.Instance.IsWindowsPlatform())
@@ -141,13 +141,13 @@ public class ThirdPartySdkManager : Singleton
 		return 99;
 	}
 
-	// Token: 0x06006029 RID: 24617 RVA: 0x0012136B File Offset: 0x0011F56B
+	// Token: 0x060033C1 RID: 13249 RVA: 0x0012936F File Offset: 0x0012756F
 	public void Logout()
 	{
 		FTpSafeProxy.Logout();
 	}
 
-	// Token: 0x0600602A RID: 24618 RVA: 0x00121372 File Offset: 0x0011F572
+	// Token: 0x060033C2 RID: 13250 RVA: 0x00129376 File Offset: 0x00127576
 	public void Clear()
 	{
 		if (this.AceDataTransferTimerId != null)
@@ -157,8 +157,8 @@ public class ThirdPartySdkManager : Singleton
 		}
 	}
 
-	// Token: 0x17000765 RID: 1893
-	// (get) Token: 0x0600602B RID: 24619 RVA: 0x00121394 File Offset: 0x0011F594
+	// Token: 0x17000787 RID: 1927
+	// (get) Token: 0x060033C3 RID: 13251 RVA: 0x00129398 File Offset: 0x00127598
 	public static ThirdPartySdkManager Instance
 	{
 		get
@@ -172,12 +172,12 @@ public class ThirdPartySdkManager : Singleton
 		}
 	}
 
-	// Token: 0x0600602C RID: 24620 RVA: 0x001213B7 File Offset: 0x0011F5B7
+	// Token: 0x060033C4 RID: 13252 RVA: 0x001293BB File Offset: 0x001275BB
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600602D RID: 24621 RVA: 0x001213B9 File Offset: 0x0011F5B9
+	// Token: 0x060033C5 RID: 13253 RVA: 0x001293BD File Offset: 0x001275BD
 	public static void ResetStaticDefaultValue()
 	{
 		ThirdPartySdkManager instance = ThirdPartySdkManager._instance;
@@ -188,23 +188,23 @@ public class ThirdPartySdkManager : Singleton
 		ThirdPartySdkManager._instance = null;
 	}
 
-	// Token: 0x0600602E RID: 24622 RVA: 0x001213D2 File Offset: 0x0011F5D2
+	// Token: 0x060033C6 RID: 13254 RVA: 0x001293D6 File Offset: 0x001275D6
 	static ThirdPartySdkManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ThirdPartySdkManager.CreateStaticDefaultValue), new Action(ThirdPartySdkManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002BF0 RID: 11248
+	// Token: 0x04002C89 RID: 11401
 	private const int ACE_DATA_TRANSFER_INTERVAL_PC = 100;
 
-	// Token: 0x04002BF1 RID: 11249
+	// Token: 0x04002C8A RID: 11402
 	private const int ACE_DATA_TRANSFER_INTERVAL_MOBILE = 4000;
 
-	// Token: 0x04002BF2 RID: 11250
+	// Token: 0x04002C8B RID: 11403
 	[Nullable(2)]
 	private TimerHandle AceDataTransferTimerId;
 
-	// Token: 0x04002BF3 RID: 11251
+	// Token: 0x04002C8C RID: 11404
 	[Nullable(2)]
 	private static ThirdPartySdkManager _instance;
 }

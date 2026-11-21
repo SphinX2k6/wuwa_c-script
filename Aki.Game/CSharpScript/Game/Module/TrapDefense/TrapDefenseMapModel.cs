@@ -9,14 +9,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A3C RID: 19004
+	// Token: 0x020039E4 RID: 14820
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseMapModel
 	{
-		// Token: 0x17007A4A RID: 31306
-		// (get) Token: 0x06031567 RID: 202087 RVA: 0x00B71579 File Offset: 0x00B6F779
-		// (set) Token: 0x06031568 RID: 202088 RVA: 0x00B71581 File Offset: 0x00B6F781
+		// Token: 0x17004DF7 RID: 19959
+		// (get) Token: 0x060262F7 RID: 156407 RVA: 0x00AB54F3 File Offset: 0x00AB36F3
+		// (set) Token: 0x060262F8 RID: 156408 RVA: 0x00AB54FB File Offset: 0x00AB36FB
 		public int MapId
 		{
 			get
@@ -29,8 +29,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A4B RID: 31307
-		// (get) Token: 0x06031569 RID: 202089 RVA: 0x00B7158C File Offset: 0x00B6F78C
+		// Token: 0x17004DF8 RID: 19960
+		// (get) Token: 0x060262F9 RID: 156409 RVA: 0x00AB5504 File Offset: 0x00AB3704
 		public global::Vector CampPosition
 		{
 			get
@@ -55,13 +55,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603156A RID: 202090 RVA: 0x00B7164C File Offset: 0x00B6F84C
+		// Token: 0x060262FA RID: 156410 RVA: 0x00AB55C4 File Offset: 0x00AB37C4
 		public static TrapDefenseMapModel Create()
 		{
 			return new TrapDefenseMapModel();
 		}
 
-		// Token: 0x0603156B RID: 202091 RVA: 0x00B71654 File Offset: 0x00B6F854
+		// Token: 0x060262FB RID: 156411 RVA: 0x00AB55CC File Offset: 0x00AB37CC
 		public TrapDefenseMarkItem GetDynamicMarkInfoByMarkId(int markId)
 		{
 			TrapDefenseMarkItem result;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return result;
 		}
 
-		// Token: 0x0603156C RID: 202092 RVA: 0x00B71674 File Offset: 0x00B6F874
+		// Token: 0x060262FC RID: 156412 RVA: 0x00AB55EC File Offset: 0x00AB37EC
 		public List<T> GetDynamicMarksByMarkType<[Nullable(0)] T>(TrapDefenseDefine.ETrapDefenseMarkType markType) where T : TrapDefenseMarkItem
 		{
 			List<TrapDefenseMarkItem> list;
@@ -85,13 +85,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new List<T>();
 		}
 
-		// Token: 0x0603156D RID: 202093 RVA: 0x00B716E4 File Offset: 0x00B6F8E4
+		// Token: 0x060262FD RID: 156413 RVA: 0x00AB565C File Offset: 0x00AB385C
 		public Dictionary<int, TrapDefenseMarkItem> GetAllDynamicMarkInfo()
 		{
 			return this.DynamicMarks;
 		}
 
-		// Token: 0x0603156E RID: 202094 RVA: 0x00B716EC File Offset: 0x00B6F8EC
+		// Token: 0x060262FE RID: 156414 RVA: 0x00AB5664 File Offset: 0x00AB3864
 		public void SetDynamicMarkInfoByMarkId(TrapDefenseMarkItem info)
 		{
 			this.DynamicMarks[info.MarkId] = info;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.MarksByType[info.MarkType].Add(info);
 		}
 
-		// Token: 0x0603156F RID: 202095 RVA: 0x00B7174C File Offset: 0x00B6F94C
+		// Token: 0x060262FF RID: 156415 RVA: 0x00AB56C4 File Offset: 0x00AB38C4
 		public void RemoveDynamicMarkInfoByMarkId(int markId)
 		{
 			TrapDefenseMarkItem trapDefenseMarkItem;
@@ -118,14 +118,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031570 RID: 202096 RVA: 0x00B717A4 File Offset: 0x00B6F9A4
+		// Token: 0x06026300 RID: 156416 RVA: 0x00AB571C File Offset: 0x00AB391C
 		public void ClearDynamicMarks()
 		{
 			this.DynamicMarks.Clear();
 			this.MarksByType.Clear();
 		}
 
-		// Token: 0x06031571 RID: 202097 RVA: 0x00B717BC File Offset: 0x00B6F9BC
+		// Token: 0x06026301 RID: 156417 RVA: 0x00AB5734 File Offset: 0x00AB3934
 		public void AddMark(ITrapDefenseMarkInfo createInfo)
 		{
 			TrapDefenseMarkItem trapDefenseMarkItem;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031572 RID: 202098 RVA: 0x00B718A4 File Offset: 0x00B6FAA4
+		// Token: 0x06026302 RID: 156418 RVA: 0x00AB581C File Offset: 0x00AB3A1C
 		public void CreateMarks()
 		{
 			List<ITrapDefenseMarkInfo> list = new List<ITrapDefenseMarkInfo>();
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031573 RID: 202099 RVA: 0x00B719BC File Offset: 0x00B6FBBC
+		// Token: 0x06026303 RID: 156419 RVA: 0x00AB5934 File Offset: 0x00AB3B34
 		public void InitMapData()
 		{
 			TrapDefenseLevelData curInstToLevelData = TrapDefenseModel.Instance.GetCurInstToLevelData();
@@ -218,7 +218,11 @@ namespace CSharpScript.Game.Module.TrapDefense
 				{
 					if (intArray.ArrayInt() != null && intArray.ArrayIntLength == 4)
 					{
-						tarray.Add(new FKSC_Segment(new FVector((float)intArray.ArrayInt(0), (float)intArray.ArrayInt(1), 0f), new FVector((float)intArray.ArrayInt(2), (float)intArray.ArrayInt(3), 0f)));
+						tarray.Add(new FKSC_Segment
+						{
+							PointA = new FVector((float)intArray.ArrayInt(0), (float)intArray.ArrayInt(1), 0f),
+							PointB = new FVector((float)intArray.ArrayInt(2), (float)intArray.ArrayInt(3), 0f)
+						});
 					}
 					else
 					{
@@ -248,14 +252,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.CreateMarks();
 		}
 
-		// Token: 0x06031574 RID: 202100 RVA: 0x00B71B70 File Offset: 0x00B6FD70
+		// Token: 0x06026304 RID: 156420 RVA: 0x00AB5AF4 File Offset: 0x00AB3CF4
 		public void ChangeMap(int mapId)
 		{
 			this.MapId = mapId;
 			this.MapChanged = true;
 		}
 
-		// Token: 0x06031575 RID: 202101 RVA: 0x00B71B80 File Offset: 0x00B6FD80
+		// Token: 0x06026305 RID: 156421 RVA: 0x00AB5B04 File Offset: 0x00AB3D04
 		public void InitSplineData()
 		{
 			TrapDefenseLevelData curInstToLevelData = TrapDefenseModel.Instance.GetCurInstToLevelData();
@@ -275,7 +279,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031576 RID: 202102 RVA: 0x00B71C58 File Offset: 0x00B6FE58
+		// Token: 0x06026306 RID: 156422 RVA: 0x00AB5BDC File Offset: 0x00AB3DDC
 		public void UpdateEnemyPositions(List<FKSC_MiniMapContext> positions)
 		{
 			List<TrapDefenseMonsterMarkItem> dynamicMarksByMarkType = this.GetDynamicMarksByMarkType<TrapDefenseMonsterMarkItem>(TrapDefenseDefine.ETrapDefenseMarkType.Phantom);
@@ -308,7 +312,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031577 RID: 202103 RVA: 0x00B71D8C File Offset: 0x00B6FF8C
+		// Token: 0x06026307 RID: 156423 RVA: 0x00AB5D10 File Offset: 0x00AB3F10
 		public USplineComponent GetSplineComponent(int splineId)
 		{
 			if (this.SplineComMap.ContainsKey(splineId))
@@ -319,13 +323,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.SplineComMap[splineId];
 		}
 
-		// Token: 0x06031578 RID: 202104 RVA: 0x00B71DBC File Offset: 0x00B6FFBC
+		// Token: 0x06026308 RID: 156424 RVA: 0x00AB5D40 File Offset: 0x00AB3F40
 		public Dictionary<int, USplineComponent> GetAllSplineComponent()
 		{
 			return this.SplineComMap;
 		}
 
-		// Token: 0x06031579 RID: 202105 RVA: 0x00B71DC4 File Offset: 0x00B6FFC4
+		// Token: 0x06026309 RID: 156425 RVA: 0x00AB5D48 File Offset: 0x00AB3F48
 		private void LoadSplineComponent(int splineId)
 		{
 			if (this.SplineComMap.ContainsKey(splineId))
@@ -338,7 +342,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SplineUid++;
 		}
 
-		// Token: 0x0603157A RID: 202106 RVA: 0x00B71E20 File Offset: 0x00B70020
+		// Token: 0x0602630A RID: 156426 RVA: 0x00AB5DA4 File Offset: 0x00AB3FA4
 		public void ClearAllSpline()
 		{
 			foreach (KeyValuePair<int, USplineComponent> keyValuePair in this.SplineComMap)
@@ -354,34 +358,34 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SplineUid = 0;
 		}
 
-		// Token: 0x0603157B RID: 202107 RVA: 0x00B71EB8 File Offset: 0x00B700B8
+		// Token: 0x0602630B RID: 156427 RVA: 0x00AB5E3C File Offset: 0x00AB403C
 		public void ClearMapChanged()
 		{
 			this.MapChanged = false;
 		}
 
-		// Token: 0x0401A5D0 RID: 107984
+		// Token: 0x04014F22 RID: 85794
 		private int MapIdInner;
 
-		// Token: 0x0401A5D1 RID: 107985
+		// Token: 0x04014F23 RID: 85795
 		private bool MapChanged;
 
-		// Token: 0x0401A5D2 RID: 107986
+		// Token: 0x04014F24 RID: 85796
 		private Dictionary<int, TrapDefenseMarkItem> DynamicMarks = new Dictionary<int, TrapDefenseMarkItem>();
 
-		// Token: 0x0401A5D3 RID: 107987
+		// Token: 0x04014F25 RID: 85797
 		private Dictionary<TrapDefenseDefine.ETrapDefenseMarkType, List<TrapDefenseMarkItem>> MarksByType = new Dictionary<TrapDefenseDefine.ETrapDefenseMarkType, List<TrapDefenseMarkItem>>();
 
-		// Token: 0x0401A5D4 RID: 107988
+		// Token: 0x04014F26 RID: 85798
 		public Dictionary<int, List<global::Vector>> PhantomRoutes = new Dictionary<int, List<global::Vector>>();
 
-		// Token: 0x0401A5D5 RID: 107989
+		// Token: 0x04014F27 RID: 85799
 		public Dictionary<int, USplineComponent> SplineComMap = new Dictionary<int, USplineComponent>();
 
-		// Token: 0x0401A5D6 RID: 107990
+		// Token: 0x04014F28 RID: 85800
 		private Dictionary<int, int> SplineUidMap = new Dictionary<int, int>();
 
-		// Token: 0x0401A5D7 RID: 107991
+		// Token: 0x04014F29 RID: 85801
 		private int SplineUid;
 	}
 }

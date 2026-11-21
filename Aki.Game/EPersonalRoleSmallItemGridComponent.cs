@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020023EB RID: 9195
+// Token: 0x020018D0 RID: 6352
 public enum EPersonalRoleSmallItemGridComponent
 {
-	// Token: 0x04008B0A RID: 35594
+	// Token: 0x04008C51 RID: 35921
 	RoleTexture,
-	// Token: 0x04008B0B RID: 35595
+	// Token: 0x04008C52 RID: 35922
 	SelectToggle,
-	// Token: 0x04008B0C RID: 35596
+	// Token: 0x04008C53 RID: 35923
 	InteractionGroup,
-	// Token: 0x04008B0D RID: 35597
+	// Token: 0x04008C54 RID: 35924
 	EquipHeadIconItem
 }

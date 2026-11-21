@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x0200639D RID: 25501
+	// Token: 0x0200531B RID: 21275
 	public class MultiMotorParkourTaskTabItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0604022E RID: 262702 RVA: 0x00F86D28 File Offset: 0x00F84F28
+		// Token: 0x06034EEF RID: 216815 RVA: 0x00ECDC60 File Offset: 0x00ECBE60
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -38,13 +38,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604022F RID: 262703 RVA: 0x00F86E31 File Offset: 0x00F85031
+		// Token: 0x06034EF0 RID: 216816 RVA: 0x00ECDD69 File Offset: 0x00ECBF69
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).bLockStateOnSelect = true;
 		}
 
-		// Token: 0x06040230 RID: 262704 RVA: 0x00F86E40 File Offset: 0x00F85040
+		// Token: 0x06034EF1 RID: 216817 RVA: 0x00ECDD78 File Offset: 0x00ECBF78
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.RefreshAsLevelTab(data);
 		}
 
-		// Token: 0x06040231 RID: 262705 RVA: 0x00F86E5C File Offset: 0x00F8505C
+		// Token: 0x06034EF2 RID: 216818 RVA: 0x00ECDD94 File Offset: 0x00ECBF94
 		private void RefreshAsGlobalTab()
 		{
 			UUISprite sprite = base.GetSprite(1);
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x06040232 RID: 262706 RVA: 0x00F86EF0 File Offset: 0x00F850F0
+		// Token: 0x06034EF3 RID: 216819 RVA: 0x00ECDE28 File Offset: 0x00ECC028
 		private void RefreshAsLevelTab(int levelId)
 		{
 			UUISprite sprite = base.GetSprite(1);
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			item.SetUIActive(multiMotorLevelData != null && multiMotorLevelData.HasRewardRedDot);
 		}
 
-		// Token: 0x06040233 RID: 262707 RVA: 0x00F86FC0 File Offset: 0x00F851C0
+		// Token: 0x06034EF4 RID: 216820 RVA: 0x00ECDEF8 File Offset: 0x00ECC0F8
 		private void OnToggleClick(EToggleState _)
 		{
 			Action<int> onToggleCallback = this.OnToggleCallback;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			onToggleCallback(this.Data);
 		}
 
-		// Token: 0x06040234 RID: 262708 RVA: 0x00F86FD8 File Offset: 0x00F851D8
+		// Token: 0x06034EF5 RID: 216821 RVA: 0x00ECDF10 File Offset: 0x00ECC110
 		public override void OnSelected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			extendToggle.SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x06040235 RID: 262709 RVA: 0x00F86FF0 File Offset: 0x00F851F0
+		// Token: 0x06034EF6 RID: 216822 RVA: 0x00ECDF28 File Offset: 0x00ECC128
 		public override void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -145,42 +145,42 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06040236 RID: 262710 RVA: 0x00F87008 File Offset: 0x00F85208
+		// Token: 0x06034EF7 RID: 216823 RVA: 0x00ECDF40 File Offset: 0x00ECC140
 		[NullableContext(1)]
 		public override object GetKey(int data, int displayIndex)
 		{
 			return data;
 		}
 
-		// Token: 0x040216AC RID: 136876
+		// Token: 0x0401BFDB RID: 114651
 		private int Data;
 
-		// Token: 0x040216AD RID: 136877
+		// Token: 0x0401BFDC RID: 114652
 		[Nullable(2)]
 		public MultiMotorData ActivityData;
 
-		// Token: 0x040216AE RID: 136878
+		// Token: 0x0401BFDD RID: 114653
 		[Nullable(1)]
 		public Action<int> OnToggleCallback = delegate(int data)
 		{
 		};
 
-		// Token: 0x0200C5B6 RID: 50614
+		// Token: 0x0200AF9D RID: 44957
 		private class EComponents
 		{
-			// Token: 0x0403BB19 RID: 244505
+			// Token: 0x04036478 RID: 222328
 			public const int ToggleRoot = 0;
 
-			// Token: 0x0403BB1A RID: 244506
+			// Token: 0x04036479 RID: 222329
 			public const int SpriteNum = 1;
 
-			// Token: 0x0403BB1B RID: 244507
+			// Token: 0x0403647A RID: 222330
 			public const int TextName = 2;
 
-			// Token: 0x0403BB1C RID: 244508
+			// Token: 0x0403647B RID: 222331
 			public const int SpriteTransitionNum = 3;
 
-			// Token: 0x0403BB1D RID: 244509
+			// Token: 0x0403647C RID: 222332
 			public const int ItemRedDot = 4;
 		}
 	}

@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200013B RID: 315
+	// Token: 0x0200014E RID: 334
 	[EnumExtensions]
 	public enum ESlashHitType
 	{
-		// Token: 0x04000626 RID: 1574
+		// Token: 0x0400066A RID: 1642
 		HeavySlash,
-		// Token: 0x04000627 RID: 1575
+		// Token: 0x0400066B RID: 1643
 		LightSlash,
-		// Token: 0x04000628 RID: 1576
+		// Token: 0x0400066C RID: 1644
 		QTELeft,
-		// Token: 0x04000629 RID: 1577
+		// Token: 0x0400066D RID: 1645
 		QTERight
 	}
 }

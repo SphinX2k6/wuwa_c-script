@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200278F RID: 10127
+// Token: 0x02001C7A RID: 7290
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class RoleSelectModel : ModelBase
 {
-	// Token: 0x06014C76 RID: 85110 RVA: 0x00543578 File Offset: 0x00541778
+	// Token: 0x06012161 RID: 74081 RVA: 0x0055265C File Offset: 0x0055085C
 	public int GetRoleIndex(int roleConfigId)
 	{
 		foreach (KeyValuePair<int, RoleDataBase> keyValuePair in this.RoleIndexMap)
@@ -21,15 +21,15 @@ public class RoleSelectModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06014C77 RID: 85111 RVA: 0x005435E0 File Offset: 0x005417E0
+	// Token: 0x06012162 RID: 74082 RVA: 0x005526C4 File Offset: 0x005508C4
 	public void ClearData()
 	{
 		this.SelectedRoleSet.Clear();
 		this.RoleIndexMap.Clear();
 	}
 
-	// Token: 0x17001B1F RID: 6943
-	// (get) Token: 0x06014C78 RID: 85112 RVA: 0x005435F8 File Offset: 0x005417F8
+	// Token: 0x17001B58 RID: 7000
+	// (get) Token: 0x06012163 RID: 74083 RVA: 0x005526DC File Offset: 0x005508DC
 	public static RoleSelectModel Instance
 	{
 		get
@@ -38,7 +38,7 @@ public class RoleSelectModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014C79 RID: 85113 RVA: 0x005435FF File Offset: 0x005417FF
+	// Token: 0x06012164 RID: 74084 RVA: 0x005526E3 File Offset: 0x005508E3
 	public static RoleSelectModel GetOrCreateInstance()
 	{
 		if (RoleSelectModel._Instance == null)
@@ -48,7 +48,7 @@ public class RoleSelectModel : ModelBase
 		return RoleSelectModel._Instance;
 	}
 
-	// Token: 0x06014C7A RID: 85114 RVA: 0x00543613 File Offset: 0x00541813
+	// Token: 0x06012165 RID: 74085 RVA: 0x005526F7 File Offset: 0x005508F7
 	public static bool CreateInstance()
 	{
 		if (RoleSelectModel._Instance != null)
@@ -59,30 +59,30 @@ public class RoleSelectModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06014C7B RID: 85115 RVA: 0x00543629 File Offset: 0x00541829
+	// Token: 0x06012166 RID: 74086 RVA: 0x0055270D File Offset: 0x0055090D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06014C7C RID: 85116 RVA: 0x0054362B File Offset: 0x0054182B
+	// Token: 0x06012167 RID: 74087 RVA: 0x0055270F File Offset: 0x0055090F
 	public static void ResetStaticDefaultValue()
 	{
 		RoleSelectModel._Instance = null;
 	}
 
-	// Token: 0x06014C7D RID: 85117 RVA: 0x00543633 File Offset: 0x00541833
+	// Token: 0x06012168 RID: 74088 RVA: 0x00552717 File Offset: 0x00550917
 	static RoleSelectModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleSelectModel.CreateStaticDefaultValue), new Action(RoleSelectModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009C60 RID: 40032
+	// Token: 0x04009DC4 RID: 40388
 	public readonly HashSet<int> SelectedRoleSet = new HashSet<int>();
 
-	// Token: 0x04009C61 RID: 40033
+	// Token: 0x04009DC5 RID: 40389
 	public readonly Dictionary<int, RoleDataBase> RoleIndexMap = new Dictionary<int, RoleDataBase>();
 
-	// Token: 0x04009C62 RID: 40034
+	// Token: 0x04009DC6 RID: 40390
 	[Nullable(2)]
 	private static RoleSelectModel _Instance;
 }

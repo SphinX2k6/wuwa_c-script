@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.SkillButtonUi.Custom;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C06 RID: 19462
+	// Token: 0x02003BB7 RID: 15287
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SkillButtonEntityDataBase
 	{
-		// Token: 0x060325D1 RID: 206289 RVA: 0x00BB7F74 File Offset: 0x00BB6174
+		// Token: 0x06027381 RID: 160641 RVA: 0x00AFCB04 File Offset: 0x00AFAD04
 		public virtual void Clear()
 		{
 			this.ClearAllTagSignificantChangedWithTagTasks();
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.AttributeChangedCallbackMap = null;
 		}
 
-		// Token: 0x060325D2 RID: 206290 RVA: 0x00BB8024 File Offset: 0x00BB6224
+		// Token: 0x06027382 RID: 160642 RVA: 0x00AFCBB4 File Offset: 0x00AFADB4
 		protected void ListenForTagSignificantChangedWithTag(int tag, Action<int, bool> callback)
 		{
 			if (tag == 0)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.TagSignificantChangedWithTagTasks.Add(tagTask);
 		}
 
-		// Token: 0x060325D3 RID: 206291 RVA: 0x00BB80A8 File Offset: 0x00BB62A8
+		// Token: 0x06027383 RID: 160643 RVA: 0x00AFCC38 File Offset: 0x00AFAE38
 		protected void ListenForTagAnyCountChanged(int tagId, Action<int, int, int, int> callback, bool checkExistImmediately = false)
 		{
 			if (tagId != 0)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060325D4 RID: 206292 RVA: 0x00BB8100 File Offset: 0x00BB6300
+		// Token: 0x06027384 RID: 160644 RVA: 0x00AFCC90 File Offset: 0x00AFAE90
 		protected void ClearAllTagSignificantChangedWithTagTasks()
 		{
 			foreach (ITagTask tagTask in this.TagSignificantChangedWithTagTasks)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.TagCallbackMap.Clear();
 		}
 
-		// Token: 0x060325D5 RID: 206293 RVA: 0x00BB816C File Offset: 0x00BB636C
+		// Token: 0x06027385 RID: 160645 RVA: 0x00AFCCFC File Offset: 0x00AFAEFC
 		protected void CheckCustomHdModify(SkillButtonCustomHandleBase customHd, SkillButtonData skillButtonData)
 		{
 			if (!this.IsCurEntity)
@@ -149,12 +149,12 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			customHd.ClearModifyMark();
 		}
 
-		// Token: 0x060325D6 RID: 206294 RVA: 0x00BB826E File Offset: 0x00BB646E
+		// Token: 0x06027386 RID: 160646 RVA: 0x00AFCDFE File Offset: 0x00AFAFFE
 		protected virtual void EnableNextTick()
 		{
 		}
 
-		// Token: 0x060325D7 RID: 206295 RVA: 0x00BB8270 File Offset: 0x00BB6470
+		// Token: 0x06027387 RID: 160647 RVA: 0x00AFCE00 File Offset: 0x00AFB000
 		protected void ListenForAttributeChanged(EAttributeType attributeId, Action<EAttributeType, float, float> onAttributeChanged)
 		{
 			if (this.AttributeChangedCallbackMap.ContainsKey(attributeId))
@@ -169,13 +169,9 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.AttributeChangedCallbackMap[attributeId] = onAttributeChanged;
 		}
 
-		// Token: 0x060325D8 RID: 206296 RVA: 0x00BB82A8 File Offset: 0x00BB64A8
+		// Token: 0x06027388 RID: 160648 RVA: 0x00AFCE38 File Offset: 0x00AFB038
 		protected void ClearAllAttributeChanged()
 		{
-			if (this.AttributeChangedCallbackMap == null)
-			{
-				return;
-			}
 			foreach (KeyValuePair<EAttributeType, Action<EAttributeType, float, float>> keyValuePair in this.AttributeChangedCallbackMap)
 			{
 				BaseAttributeComponent attributeComponent = this.AttributeComponent;
@@ -186,7 +182,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060325D9 RID: 206297 RVA: 0x00BB8320 File Offset: 0x00BB6520
+		// Token: 0x06027389 RID: 160649 RVA: 0x00AFCEA4 File Offset: 0x00AFB0A4
 		[NullableContext(2)]
 		public SkillButtonData GetSkillButtonDataByButton(ESkillButtonType buttonType)
 		{
@@ -198,7 +194,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return result;
 		}
 
-		// Token: 0x060325DA RID: 206298 RVA: 0x00BB8340 File Offset: 0x00BB6540
+		// Token: 0x0602738A RID: 160650 RVA: 0x00AFCEC4 File Offset: 0x00AFB0C4
 		[NullableContext(2)]
 		public SkillButtonData GetSkillButtonDataBySkillId(int skillId)
 		{
@@ -212,7 +208,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return null;
 		}
 
-		// Token: 0x060325DB RID: 206299 RVA: 0x00BB83A4 File Offset: 0x00BB65A4
+		// Token: 0x0602738B RID: 160651 RVA: 0x00AFCF28 File Offset: 0x00AFB128
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -223,7 +219,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return this.AttributeIdSkillButtonMapping.Get(attributeId);
 		}
 
-		// Token: 0x060325DC RID: 206300 RVA: 0x00BB83B2 File Offset: 0x00BB65B2
+		// Token: 0x0602738C RID: 160652 RVA: 0x00AFCF36 File Offset: 0x00AFB136
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -234,7 +230,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return this.DisableTagSkillButtonMapping.Get(tagId);
 		}
 
-		// Token: 0x060325DD RID: 206301 RVA: 0x00BB83C0 File Offset: 0x00BB65C0
+		// Token: 0x0602738D RID: 160653 RVA: 0x00AFCF44 File Offset: 0x00AFB144
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -245,7 +241,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return this.DisableSkillIdTagSkillButtonMapping.Get(tagId);
 		}
 
-		// Token: 0x060325DE RID: 206302 RVA: 0x00BB83CE File Offset: 0x00BB65CE
+		// Token: 0x0602738E RID: 160654 RVA: 0x00AFCF52 File Offset: 0x00AFB152
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -256,7 +252,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return this.SkillIdTagSkillButtonMapping.Get(tagId);
 		}
 
-		// Token: 0x060325DF RID: 206303 RVA: 0x00BB83DC File Offset: 0x00BB65DC
+		// Token: 0x0602738F RID: 160655 RVA: 0x00AFCF60 File Offset: 0x00AFB160
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -267,7 +263,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return this.SkillIconTagSkillButtonMapping.Get(tag);
 		}
 
-		// Token: 0x060325E0 RID: 206304 RVA: 0x00BB83EA File Offset: 0x00BB65EA
+		// Token: 0x06027390 RID: 160656 RVA: 0x00AFCF6E File Offset: 0x00AFB16E
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -278,30 +274,30 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return this.DynamicEffectTagSkillButtonMapping.Get(tag);
 		}
 
-		// Token: 0x0401ACBC RID: 109756
+		// Token: 0x04015618 RID: 87576
 		[StaticVariableRuleIgnore]
 		protected static readonly Stat NextTickStat = Stat.Create("SkillButtonEntityDataNextTick", "", "");
 
-		// Token: 0x0401ACBD RID: 109757
+		// Token: 0x04015619 RID: 87577
 		public bool IsCurEntity;
 
-		// Token: 0x0401ACBE RID: 109758
+		// Token: 0x0401561A RID: 87578
 		[Nullable(2)]
 		public EntityHandle EntityHandle;
 
-		// Token: 0x0401ACBF RID: 109759
+		// Token: 0x0401561B RID: 87579
 		[Nullable(2)]
 		public BaseTagComponent GameplayTagComponent;
 
-		// Token: 0x0401ACC0 RID: 109760
+		// Token: 0x0401561C RID: 87580
 		[Nullable(2)]
 		public BaseAttributeComponent AttributeComponent;
 
-		// Token: 0x0401ACC1 RID: 109761
+		// Token: 0x0401561D RID: 87581
 		[Nullable(2)]
 		public CharacterSkillComponent SkillComponent;
 
-		// Token: 0x0401ACC2 RID: 109762
+		// Token: 0x0401561E RID: 87582
 		[Nullable(new byte[]
 		{
 			2,
@@ -309,39 +305,39 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 		})]
 		public Dictionary<int, SkillButtonData> SkillButtonDataMap = new Dictionary<int, SkillButtonData>();
 
-		// Token: 0x0401ACC3 RID: 109763
+		// Token: 0x0401561F RID: 87583
 		[Nullable(2)]
 		public SkillButtonMapping<EAttributeType> AttributeIdSkillButtonMapping = new SkillButtonMapping<EAttributeType>();
 
-		// Token: 0x0401ACC4 RID: 109764
+		// Token: 0x04015620 RID: 87584
 		[Nullable(2)]
 		public SkillButtonMapping<int> AttributeIdTagSkillButtonMapping = new SkillButtonMapping<int>();
 
-		// Token: 0x0401ACC5 RID: 109765
+		// Token: 0x04015621 RID: 87585
 		[Nullable(2)]
 		public SkillButtonMapping<int> DisableTagSkillButtonMapping = new SkillButtonMapping<int>();
 
-		// Token: 0x0401ACC6 RID: 109766
+		// Token: 0x04015622 RID: 87586
 		[Nullable(2)]
 		public SkillButtonMapping<int> DisableSkillIdTagSkillButtonMapping = new SkillButtonMapping<int>();
 
-		// Token: 0x0401ACC7 RID: 109767
+		// Token: 0x04015623 RID: 87587
 		[Nullable(2)]
 		public SkillButtonMapping<int> DynamicEffectTagSkillButtonMapping = new SkillButtonMapping<int>();
 
-		// Token: 0x0401ACC8 RID: 109768
+		// Token: 0x04015624 RID: 87588
 		[Nullable(2)]
 		public SkillButtonMapping<int> SkillIconTagSkillButtonMapping = new SkillButtonMapping<int>();
 
-		// Token: 0x0401ACC9 RID: 109769
+		// Token: 0x04015625 RID: 87589
 		[Nullable(2)]
 		public SkillButtonMapping<int> SkillIdTagSkillButtonMapping = new SkillButtonMapping<int>();
 
-		// Token: 0x0401ACCA RID: 109770
+		// Token: 0x04015626 RID: 87590
 		[Nullable(2)]
 		public SkillButtonMapping<int> CustomHandleSkillButtonMapping = new SkillButtonMapping<int>();
 
-		// Token: 0x0401ACCB RID: 109771
+		// Token: 0x04015627 RID: 87591
 		[Nullable(new byte[]
 		{
 			2,
@@ -349,10 +345,10 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 		})]
 		protected Dictionary<EAttributeType, Action<EAttributeType, float, float>> AttributeChangedCallbackMap = new Dictionary<EAttributeType, Action<EAttributeType, float, float>>();
 
-		// Token: 0x0401ACCC RID: 109772
+		// Token: 0x04015628 RID: 87592
 		protected readonly Dictionary<int, HashSet<Action<int, bool>>> TagCallbackMap = new Dictionary<int, HashSet<Action<int, bool>>>();
 
-		// Token: 0x0401ACCD RID: 109773
+		// Token: 0x04015629 RID: 87593
 		[Nullable(new byte[]
 		{
 			2,
@@ -360,22 +356,22 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 		})]
 		protected HashSet<ITagTask> TagSignificantChangedWithTagTasks = new HashSet<ITagTask>();
 
-		// Token: 0x0401ACCE RID: 109774
+		// Token: 0x0401562A RID: 87594
 		protected readonly HashSet<SkillButtonData> EnableChanged = new HashSet<SkillButtonData>();
 
-		// Token: 0x0401ACCF RID: 109775
+		// Token: 0x0401562B RID: 87595
 		protected readonly HashSet<SkillButtonData> VisibleChanged = new HashSet<SkillButtonData>();
 
-		// Token: 0x0401ACD0 RID: 109776
+		// Token: 0x0401562C RID: 87596
 		protected readonly HashSet<SkillButtonData> SkillIdChanged = new HashSet<SkillButtonData>();
 
-		// Token: 0x0401ACD1 RID: 109777
+		// Token: 0x0401562D RID: 87597
 		protected readonly HashSet<SkillButtonData> SkillIconChanged = new HashSet<SkillButtonData>();
 
-		// Token: 0x0401ACD2 RID: 109778
+		// Token: 0x0401562E RID: 87598
 		protected readonly HashSet<SkillButtonData> DynamicEffectChanged = new HashSet<SkillButtonData>();
 
-		// Token: 0x0401ACD3 RID: 109779
+		// Token: 0x0401562F RID: 87599
 		[Nullable(new byte[]
 		{
 			1,
@@ -384,16 +380,16 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 		})]
 		protected readonly HashSet<ValueTuple<SkillButtonData, int, int>> CustomHdChanged = new HashSet<ValueTuple<SkillButtonData, int, int>>();
 
-		// Token: 0x0401ACD4 RID: 109780
+		// Token: 0x04015630 RID: 87600
 		protected readonly HashSet<SkillButtonData> SkillCdChanged = new HashSet<SkillButtonData>();
 
-		// Token: 0x0401ACD5 RID: 109781
+		// Token: 0x04015631 RID: 87601
 		protected readonly HashSet<SkillButtonData> AttributeChanged = new HashSet<SkillButtonData>();
 
-		// Token: 0x0401ACD6 RID: 109782
+		// Token: 0x04015632 RID: 87602
 		protected readonly HashSet<SkillButtonData> LongPressChanged = new HashSet<SkillButtonData>();
 
-		// Token: 0x0401ACD7 RID: 109783
+		// Token: 0x04015633 RID: 87603
 		protected readonly HashSet<SkillButtonData> EnableSlideControlChanged = new HashSet<SkillButtonData>();
 	}
 }

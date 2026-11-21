@@ -8,15 +8,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006BAB RID: 27563
+	// Token: 0x02005D23 RID: 23843
 	public class LevelEventTriggerCameraShake : LevelEventBase
 	{
-		// Token: 0x0604430F RID: 279311 RVA: 0x010CE89F File Offset: 0x010CCA9F
+		// Token: 0x0603A465 RID: 238693 RVA: 0x0107872B File Offset: 0x0107692B
 		public LevelEventTriggerCameraShake(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044310 RID: 279312 RVA: 0x010CE8A8 File Offset: 0x010CCAA8
+		// Token: 0x0603A466 RID: 238694 RVA: 0x01078734 File Offset: 0x01076934
 		[NullableContext(1)]
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 						return;
 					}
 					CameraController instance4 = CameraController.Instance;
-					TSubclassOf<UCameraShakeBase> shakeClass = csClass;
+					TSubclassOf<UCameraShakeBase>? shakeClass = new TSubclassOf<UCameraShakeBase>?(csClass);
 					FVector? fvector3 = fvector;
 					FVectorDouble? location;
 					if (fvector3 == null)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x04023972 RID: 145778
+		// Token: 0x0401EC14 RID: 125972
 		internal const float MAX_SHAKE_DURATION = 60f;
 	}
 }

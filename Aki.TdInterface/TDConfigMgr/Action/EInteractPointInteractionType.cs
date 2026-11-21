@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001601 RID: 5633
+	// Token: 0x02001763 RID: 5987
 	[EnumExtensions]
 	public enum EInteractPointInteractionType
 	{
-		// Token: 0x04004B68 RID: 19304
+		// Token: 0x04004F2E RID: 20270
 		Drag
 	}
 }

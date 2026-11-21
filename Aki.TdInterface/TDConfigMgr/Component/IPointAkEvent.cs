@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000606 RID: 1542
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020006A3 RID: 1699
 	public class IPointAkEvent : IAkEventTypeConfig
 	{
-		// Token: 0x060020EA RID: 8426 RVA: 0x0005B73C File Offset: 0x0005993C
-		[NullableContext(1)]
+		// Token: 0x060023F0 RID: 9200 RVA: 0x00062450 File Offset: 0x00060650
 		private IPointAkEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060020EB RID: 8427 RVA: 0x0005B774 File Offset: 0x00059974
-		[NullableContext(1)]
+		// Token: 0x060023F1 RID: 9201 RVA: 0x00062488 File Offset: 0x00060688
 		public static IPointAkEvent Create([Nullable(2)] IPointAkEvent instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060020EC RID: 8428 RVA: 0x0005B787 File Offset: 0x00059987
-		[NullableContext(1)]
+		// Token: 0x060023F2 RID: 9202 RVA: 0x0006249B File Offset: 0x0006069B
 		public static IPointAkEvent CreateFromSetValue([Nullable(2)] IPointAkEvent_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060020ED RID: 8429 RVA: 0x0005B79A File Offset: 0x0005999A
-		[NullableContext(1)]
+		// Token: 0x060023F3 RID: 9203 RVA: 0x000624AE File Offset: 0x000606AE
 		public new IPointAkEvent_SetValue ToSetValue()
 		{
 			return new IPointAkEvent_SetValue
@@ -67,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008CB RID: 2251
-		// (get) Token: 0x060020EE RID: 8430 RVA: 0x0005B7D1 File Offset: 0x000599D1
-		// (set) Token: 0x060020EF RID: 8431 RVA: 0x0005B7FC File Offset: 0x000599FC
+		// Token: 0x17000982 RID: 2434
+		// (get) Token: 0x060023F4 RID: 9204 RVA: 0x000624E5 File Offset: 0x000606E5
+		// (set) Token: 0x060023F5 RID: 9205 RVA: 0x00062510 File Offset: 0x00060710
 		public override EAkEventType Type
 		{
 			get
@@ -90,11 +84,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008CC RID: 2252
-		// (get) Token: 0x060020F0 RID: 8432 RVA: 0x0005B80A File Offset: 0x00059A0A
-		// (set) Token: 0x060020F1 RID: 8433 RVA: 0x0005B831 File Offset: 0x00059A31
+		// Token: 0x17000983 RID: 2435
+		// (get) Token: 0x060023F6 RID: 9206 RVA: 0x0006251E File Offset: 0x0006071E
+		// (set) Token: 0x060023F7 RID: 9207 RVA: 0x00062545 File Offset: 0x00060745
+		[Nullable(2)]
 		public virtual List<int> PointIds
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -108,15 +104,16 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.PointIds;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().PointIds = value;
 			}
 		}
 
-		// Token: 0x170008CD RID: 2253
-		// (get) Token: 0x060020F2 RID: 8434 RVA: 0x0005B840 File Offset: 0x00059A40
-		// (set) Token: 0x060020F3 RID: 8435 RVA: 0x0005B87A File Offset: 0x00059A7A
+		// Token: 0x17000984 RID: 2436
+		// (get) Token: 0x060023F8 RID: 9208 RVA: 0x00062554 File Offset: 0x00060754
+		// (set) Token: 0x060023F9 RID: 9209 RVA: 0x0006258E File Offset: 0x0006078E
 		public virtual bool? UseListenerCone
 		{
 			get
@@ -138,9 +135,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008CE RID: 2254
-		// (get) Token: 0x060020F4 RID: 8436 RVA: 0x0005B888 File Offset: 0x00059A88
-		// (set) Token: 0x060020F5 RID: 8437 RVA: 0x0005B8C2 File Offset: 0x00059AC2
+		// Token: 0x17000985 RID: 2437
+		// (get) Token: 0x060023FA RID: 9210 RVA: 0x0006259C File Offset: 0x0006079C
+		// (set) Token: 0x060023FB RID: 9211 RVA: 0x000625D6 File Offset: 0x000607D6
 		public virtual bool? EnableOcclusion
 		{
 			get
@@ -162,10 +159,12 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400170D RID: 5901
+		// Token: 0x040018FF RID: 6399
+		[Nullable(2)]
 		protected new IPointAkEvent FbInstance;
 
-		// Token: 0x0400170E RID: 5902
+		// Token: 0x04001900 RID: 6400
+		[Nullable(2)]
 		protected new IPointAkEvent_SetValue PocoInterface;
 	}
 }

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 {
-	// Token: 0x02006329 RID: 25385
+	// Token: 0x020052A7 RID: 21159
 	public class PinballMonsterRiskTypeTitleItem : SyncGridProxyAbstract<PinballMonsterRiskType>
 	{
-		// Token: 0x0603FDE7 RID: 261607 RVA: 0x00F74148 File Offset: 0x00F72348
+		// Token: 0x06034AA8 RID: 215720 RVA: 0x00EBB0A4 File Offset: 0x00EB92A4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FDE8 RID: 261608 RVA: 0x00F741D4 File Offset: 0x00F723D4
+		// Token: 0x06034AA9 RID: 215721 RVA: 0x00EBB130 File Offset: 0x00EB9330
 		public override void Refresh(PinballMonsterRiskType data)
 		{
 			this.Data = new PinballMonsterRiskType?(data);
@@ -39,17 +39,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			base.GetSprite(0).SetColor(color);
 		}
 
-		// Token: 0x04021521 RID: 136481
+		// Token: 0x0401BE50 RID: 114256
 		private PinballMonsterRiskType? Data;
 
-		// Token: 0x0200C528 RID: 50472
+		// Token: 0x0200AF0F RID: 44815
 		private enum EComponents
 		{
-			// Token: 0x0403B81A RID: 243738
+			// Token: 0x0403617C RID: 221564
 			BgSprite,
-			// Token: 0x0403B81B RID: 243739
+			// Token: 0x0403617D RID: 221565
 			TypeIconSprite,
-			// Token: 0x0403B81C RID: 243740
+			// Token: 0x0403617E RID: 221566
 			NameText
 		}
 	}

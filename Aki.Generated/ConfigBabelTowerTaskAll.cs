@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000DC RID: 220
+	// Token: 0x020000EB RID: 235
 	public class ConfigBabelTowerTaskAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000529 RID: 1321 RVA: 0x00076CF3 File Offset: 0x00074EF3
+		// Token: 0x06000583 RID: 1411 RVA: 0x0007C657 File Offset: 0x0007A857
 		static ConfigBabelTowerTaskAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBabelTowerTaskAll.CreateStaticDefaultValue), new Action(ConfigBabelTowerTaskAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600052A RID: 1322 RVA: 0x00076D14 File Offset: 0x00074F14
+		// Token: 0x06000584 RID: 1412 RVA: 0x0007C678 File Offset: 0x0007A878
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBabelTowerTaskAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600052B RID: 1323 RVA: 0x00076D93 File Offset: 0x00074F93
+		// Token: 0x06000585 RID: 1413 RVA: 0x0007C6F7 File Offset: 0x0007A8F7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBabelTowerTaskAll.LogPair = null;
 			ConfigBabelTowerTaskAll.HandleId = 0;
 		}
 
-		// Token: 0x0600052C RID: 1324 RVA: 0x00076DA1 File Offset: 0x00074FA1
+		// Token: 0x06000586 RID: 1414 RVA: 0x0007C705 File Offset: 0x0007A905
 		public static void Init()
 		{
 			ConfigBabelTowerTaskAll.HandleId = ConfigCommon.InitDataStatement(ConfigBabelTowerTaskAll.HandleId, "db_babeltower.db", "select BinData from `BabelTowerTask`");
 		}
 
-		// Token: 0x0600052D RID: 1325 RVA: 0x00076DBC File Offset: 0x00074FBC
+		// Token: 0x06000587 RID: 1415 RVA: 0x0007C720 File Offset: 0x0007A920
 		[NullableContext(2)]
 		public static IReadOnlyList<BabelTowerTask> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040005E8 RID: 1512
+		// Token: 0x04000651 RID: 1617
 		private const string DB = "db_babeltower.db";
 
-		// Token: 0x040005E9 RID: 1513
+		// Token: 0x04000652 RID: 1618
 		private const string FILE = "b.巴别塔活动.xlsx";
 
-		// Token: 0x040005EA RID: 1514
+		// Token: 0x04000653 RID: 1619
 		private const string TABLE = "BabelTowerTask";
 
-		// Token: 0x040005EB RID: 1515
+		// Token: 0x04000654 RID: 1620
 		private const string COMMAND = "select BinData from `BabelTowerTask`";
 
-		// Token: 0x040005EC RID: 1516
+		// Token: 0x04000655 RID: 1621
 		private const string KEY_PREFIX = "BabelTowerTaskAll";
 
-		// Token: 0x040005ED RID: 1517
+		// Token: 0x04000656 RID: 1622
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040005EE RID: 1518
+		// Token: 0x04000657 RID: 1623
 		private static int HandleId;
 	}
 }

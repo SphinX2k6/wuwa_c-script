@@ -9,16 +9,16 @@ using CSharpScript.Game.Module.Skin;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020027A4 RID: 10148
+// Token: 0x02001D1F RID: 7455
 public class RoleGenderChangeView : UiViewBase
 {
-	// Token: 0x06014D89 RID: 85385 RVA: 0x00549FF1 File Offset: 0x005481F1
+	// Token: 0x06012783 RID: 75651 RVA: 0x00574B78 File Offset: 0x00572D78
 	[NullableContext(1)]
 	public RoleGenderChangeView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014D8A RID: 85386 RVA: 0x00549FFC File Offset: 0x005481FC
+	// Token: 0x06012784 RID: 75652 RVA: 0x00574B84 File Offset: 0x00572D84
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class RoleGenderChangeView : UiViewBase
 		};
 	}
 
-	// Token: 0x06014D8B RID: 85387 RVA: 0x0054A100 File Offset: 0x00548300
+	// Token: 0x06012785 RID: 75653 RVA: 0x00574C88 File Offset: 0x00572E88
 	protected override void OnStart()
 	{
 		int? curSelectMainRoleId = RoleModel.Instance.GetCurSelectMainRoleId();
@@ -98,32 +98,32 @@ public class RoleGenderChangeView : UiViewBase
 		LguiUtil.Instance.SetLocalText(base.GetText(6), "Confirm", Array.Empty<object>());
 	}
 
-	// Token: 0x06014D8C RID: 85388 RVA: 0x0054A310 File Offset: 0x00548510
+	// Token: 0x06012786 RID: 75654 RVA: 0x00574E98 File Offset: 0x00573098
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnRoleChangeEnd, new Action(this.OnRoleChangeEnd));
 	}
 
-	// Token: 0x06014D8D RID: 85389 RVA: 0x0054A32E File Offset: 0x0054852E
+	// Token: 0x06012787 RID: 75655 RVA: 0x00574EB6 File Offset: 0x005730B6
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRoleChangeEnd, new Action(this.OnRoleChangeEnd));
 	}
 
-	// Token: 0x06014D8E RID: 85390 RVA: 0x0054A34C File Offset: 0x0054854C
+	// Token: 0x06012788 RID: 75656 RVA: 0x00574ED4 File Offset: 0x005730D4
 	private void OnRoleChangeEnd()
 	{
 		ScrollingTipsController.Instance.ShowTipsById("GenderTransferSuccess", Array.Empty<object>());
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06014D8F RID: 85391 RVA: 0x0054A369 File Offset: 0x00548569
+	// Token: 0x06012789 RID: 75657 RVA: 0x00574EF1 File Offset: 0x005730F1
 	protected void OnClickCancel()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06014D90 RID: 85392 RVA: 0x0054A374 File Offset: 0x00548574
+	// Token: 0x0601278A RID: 75658 RVA: 0x00574EFC File Offset: 0x005730FC
 	protected void OnClickConfirm()
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -158,14 +158,14 @@ public class RoleGenderChangeView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06014D91 RID: 85393 RVA: 0x0054A444 File Offset: 0x00548644
+	// Token: 0x0601278B RID: 75659 RVA: 0x00574FCC File Offset: 0x005731CC
 	private void SendRoleSexChangeRequest()
 	{
 		int sex = (WorldLevelModel.Instance.Sex != 1) ? 1 : 0;
 		MainRoleController.Instance.SendRoleSexChangeRequest(sex);
 	}
 
-	// Token: 0x06014D92 RID: 85394 RVA: 0x0054A470 File Offset: 0x00548670
+	// Token: 0x0601278C RID: 75660 RVA: 0x00574FF8 File Offset: 0x005731F8
 	[return: TupleElementNames(new string[]
 	{
 		"FromPath",
@@ -214,30 +214,30 @@ public class RoleGenderChangeView : UiViewBase
 		return new ValueTuple<string, string>(roleSkinData.GetRoleSkinConfig().RoleHeadIconBig, item);
 	}
 
-	// Token: 0x04009CD5 RID: 40149
+	// Token: 0x0400A0B8 RID: 41144
 	private const int MALE_CONFIGID = 1501;
 
-	// Token: 0x04009CD6 RID: 40150
+	// Token: 0x0400A0B9 RID: 41145
 	private const int FEMALE_CONFIGID = 1502;
 
-	// Token: 0x02008E1E RID: 36382
+	// Token: 0x02008067 RID: 32871
 	public enum ERoleGenderChangeViewDefine
 	{
-		// Token: 0x0402E1C3 RID: 188867
+		// Token: 0x040298BF RID: 170175
 		LeftIcon,
-		// Token: 0x0402E1C4 RID: 188868
+		// Token: 0x040298C0 RID: 170176
 		RightIcon,
-		// Token: 0x0402E1C5 RID: 188869
+		// Token: 0x040298C1 RID: 170177
 		CancelButton,
-		// Token: 0x0402E1C6 RID: 188870
+		// Token: 0x040298C2 RID: 170178
 		ConfirmButton,
-		// Token: 0x0402E1C7 RID: 188871
+		// Token: 0x040298C3 RID: 170179
 		TitleText,
-		// Token: 0x0402E1C8 RID: 188872
+		// Token: 0x040298C4 RID: 170180
 		LeftButtonText,
-		// Token: 0x0402E1C9 RID: 188873
+		// Token: 0x040298C5 RID: 170181
 		RightButtonText,
-		// Token: 0x0402E1CA RID: 188874
+		// Token: 0x040298C6 RID: 170182
 		ConfirmButtonInteractionGroup
 	}
 }

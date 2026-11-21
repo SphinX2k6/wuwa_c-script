@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011F9 RID: 4601
+// Token: 0x020006AD RID: 1709
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityCorniceMeetingSettleView : UiViewBase
 {
-	// Token: 0x06007B06 RID: 31494 RVA: 0x0019E9AC File Offset: 0x0019CBAC
+	// Token: 0x06004E9C RID: 20124 RVA: 0x001A7664 File Offset: 0x001A5864
 	public ActivityCorniceMeetingSettleView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06007B07 RID: 31495 RVA: 0x0019E9B8 File Offset: 0x0019CBB8
+	// Token: 0x06004E9D RID: 20125 RVA: 0x001A7670 File Offset: 0x001A5870
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -38,7 +38,7 @@ public class ActivityCorniceMeetingSettleView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007B08 RID: 31496 RVA: 0x0019EA88 File Offset: 0x0019CC88
+	// Token: 0x06004E9E RID: 20126 RVA: 0x001A7740 File Offset: 0x001A5940
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityCorniceMeetingSettleView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -49,20 +49,20 @@ public class ActivityCorniceMeetingSettleView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007B09 RID: 31497 RVA: 0x0019EACB File Offset: 0x0019CCCB
+	// Token: 0x06004E9F RID: 20127 RVA: 0x001A7783 File Offset: 0x001A5983
 	protected override void OnBeforeShow()
 	{
 		this.InitAutoLeaveTimer();
 		this.RefreshTitle();
 	}
 
-	// Token: 0x06007B0A RID: 31498 RVA: 0x0019EAD9 File Offset: 0x0019CCD9
+	// Token: 0x06004EA0 RID: 20128 RVA: 0x001A7791 File Offset: 0x001A5991
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearAutoLeaveTimer();
 	}
 
-	// Token: 0x06007B0B RID: 31499 RVA: 0x0019EAE4 File Offset: 0x0019CCE4
+	// Token: 0x06004EA1 RID: 20129 RVA: 0x001A779C File Offset: 0x001A599C
 	protected void RefreshTitle()
 	{
 		if (this.Data == null)
@@ -101,7 +101,7 @@ public class ActivityCorniceMeetingSettleView : UiViewBase
 		base.PlaySequence("Fail", null, false);
 	}
 
-	// Token: 0x06007B0C RID: 31500 RVA: 0x0019EC32 File Offset: 0x0019CE32
+	// Token: 0x06004EA2 RID: 20130 RVA: 0x001A78EA File Offset: 0x001A5AEA
 	private void ClearAutoLeaveTimer()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.AutoLeaveTimerId))
@@ -111,7 +111,7 @@ public class ActivityCorniceMeetingSettleView : UiViewBase
 		this.AutoLeaveTimerId = null;
 	}
 
-	// Token: 0x06007B0D RID: 31501 RVA: 0x0019EC5E File Offset: 0x0019CE5E
+	// Token: 0x06004EA3 RID: 20131 RVA: 0x001A7916 File Offset: 0x001A5B16
 	private void OnClickContinueButton()
 	{
 		base.CloseMe(delegate(bool success)
@@ -123,13 +123,13 @@ public class ActivityCorniceMeetingSettleView : UiViewBase
 		});
 	}
 
-	// Token: 0x06007B0E RID: 31502 RVA: 0x0019EC72 File Offset: 0x0019CE72
+	// Token: 0x06004EA4 RID: 20132 RVA: 0x001A792A File Offset: 0x001A5B2A
 	private void OnClickBtnLeave()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06007B0F RID: 31503 RVA: 0x0019EC7C File Offset: 0x0019CE7C
+	// Token: 0x06004EA5 RID: 20133 RVA: 0x001A7934 File Offset: 0x001A5B34
 	private void InitAutoLeaveTimer()
 	{
 		int leftSecondToAutoLeave = 31;
@@ -153,7 +153,7 @@ public class ActivityCorniceMeetingSettleView : UiViewBase
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x06007B10 RID: 31504 RVA: 0x0019ECC8 File Offset: 0x0019CEC8
+	// Token: 0x06004EA6 RID: 20134 RVA: 0x001A7980 File Offset: 0x001A5B80
 	private UniTask InitButtonAsync()
 	{
 		ActivityCorniceMeetingSettleView.<InitButtonAsync>d__23 <InitButtonAsync>d__;
@@ -164,7 +164,7 @@ public class ActivityCorniceMeetingSettleView : UiViewBase
 		return <InitButtonAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007B11 RID: 31505 RVA: 0x0019ED0C File Offset: 0x0019CF0C
+	// Token: 0x06004EA7 RID: 20135 RVA: 0x001A79C4 File Offset: 0x001A5BC4
 	private UniTask CreateButton(UUIItem uiItem, int buttonIndex, Action clickFunction)
 	{
 		ActivityCorniceMeetingSettleView.<CreateButton>d__24 <CreateButton>d__;
@@ -177,68 +177,68 @@ public class ActivityCorniceMeetingSettleView : UiViewBase
 		return <CreateButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04003850 RID: 14416
+	// Token: 0x040038E9 RID: 14569
 	private const int LEAVETIME = 30;
 
-	// Token: 0x04003851 RID: 14417
+	// Token: 0x040038EA RID: 14570
 	private const string ICON_PATH = "/Game/Aki/UI/UIResources/Common/Image/IconForceLogo/T_Logo_12_UI.T_Logo_12_UI";
 
-	// Token: 0x04003852 RID: 14418
+	// Token: 0x040038EB RID: 14571
 	private const string SUCCESS_OUTLINE_COLOR = "C48B29FF";
 
-	// Token: 0x04003853 RID: 14419
+	// Token: 0x040038EC RID: 14572
 	private const string FAIL_OUTLINE_COLOR = "B33100FF";
 
-	// Token: 0x04003854 RID: 14420
+	// Token: 0x040038ED RID: 14573
 	private const string FAIL_TEXT_COLOR = "F08086FF";
 
-	// Token: 0x04003855 RID: 14421
+	// Token: 0x040038EE RID: 14574
 	private const string SUCCESS_TEXT_COLOR = "f2efd5";
 
-	// Token: 0x04003856 RID: 14422
+	// Token: 0x040038EF RID: 14575
 	protected Dictionary<int, ActivityCorniceMeetingButton> ButtonMap;
 
-	// Token: 0x04003857 RID: 14423
+	// Token: 0x040038F0 RID: 14576
 	[Nullable(2)]
 	private TimerHandle AutoLeaveTimerId;
 
-	// Token: 0x04003858 RID: 14424
+	// Token: 0x040038F1 RID: 14577
 	protected CorniceChallengeEndNotify Data;
 
-	// Token: 0x04003859 RID: 14425
+	// Token: 0x040038F2 RID: 14578
 	protected ActivityCorniceMeetingSettleDetailPanel DetailPanel;
 
-	// Token: 0x0400385A RID: 14426
+	// Token: 0x040038F3 RID: 14579
 	protected RewardExploreDescription RewardExploreDescription;
 
-	// Token: 0x020077DB RID: 30683
+	// Token: 0x02006966 RID: 26982
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027832 RID: 161842
+		// Token: 0x04022B64 RID: 142180
 		public const int TxtTitle = 1;
 
-		// Token: 0x04027833 RID: 161843
+		// Token: 0x04022B65 RID: 142181
 		public const int TextureIcon = 2;
 
-		// Token: 0x04027834 RID: 161844
+		// Token: 0x04022B66 RID: 142182
 		public const int ButtonHorizontalItem = 4;
 
-		// Token: 0x04027835 RID: 161845
+		// Token: 0x04022B67 RID: 142183
 		public const int ButtonItem = 5;
 
-		// Token: 0x04027836 RID: 161846
+		// Token: 0x04022B68 RID: 142184
 		public const int Content = 20;
 	}
 
-	// Token: 0x020077DC RID: 30684
+	// Token: 0x02006967 RID: 26983
 	[NullableContext(0)]
 	private class EButtons
 	{
-		// Token: 0x04027837 RID: 161847
+		// Token: 0x04022B69 RID: 142185
 		public const int LeftButton = 0;
 
-		// Token: 0x04027838 RID: 161848
+		// Token: 0x04022B6A RID: 142186
 		public const int RightButton = 1;
 	}
 }

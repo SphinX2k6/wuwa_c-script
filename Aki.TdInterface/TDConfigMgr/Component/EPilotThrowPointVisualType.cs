@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000118 RID: 280
+	// Token: 0x02000129 RID: 297
 	[EnumExtensions]
 	public enum EPilotThrowPointVisualType
 	{
-		// Token: 0x040005B7 RID: 1463
+		// Token: 0x040005F4 RID: 1524
 		Normal,
-		// Token: 0x040005B8 RID: 1464
+		// Token: 0x040005F5 RID: 1525
 		MainStory,
-		// Token: 0x040005B9 RID: 1465
+		// Token: 0x040005F6 RID: 1526
 		PlantFlag
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D06 RID: 3334
+	// Token: 0x02000DFE RID: 3582
 	public class INoRenderPortalMode
 	{
-		// Token: 0x06004C1C RID: 19484 RVA: 0x000BDC22 File Offset: 0x000BBE22
-		[NullableContext(1)]
+		// Token: 0x0600512A RID: 20778 RVA: 0x000C9152 File Offset: 0x000C7352
 		public static INoRenderPortalMode Create(INoRenderPortalMode? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170017CD RID: 6093
-		// (get) Token: 0x06004C1D RID: 19485 RVA: 0x000BDC41 File Offset: 0x000BBE41
+		// Token: 0x17001929 RID: 6441
+		// (get) Token: 0x0600512B RID: 20779 RVA: 0x000C9171 File Offset: 0x000C7371
 		public virtual ENoRenderPortalType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017CE RID: 6094
-		// (get) Token: 0x06004C1E RID: 19486 RVA: 0x000BDC4E File Offset: 0x000BBE4E
+		// Token: 0x1700192A RID: 6442
+		// (get) Token: 0x0600512C RID: 20780 RVA: 0x000C917E File Offset: 0x000C737E
 		public virtual EPortalModel PortalModel
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B89 RID: 11145
+		// Token: 0x04002E43 RID: 11843
 		private INoRenderPortalMode Instance;
 	}
 }

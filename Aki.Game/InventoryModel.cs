@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -16,14 +15,14 @@ using CSharpScript.Game.ServerStorage;
 using CSharpScript.Game.ServerStorage.Container;
 using FilterDefine;
 
-// Token: 0x02001FB1 RID: 8113
+// Token: 0x02001473 RID: 5235
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class InventoryModel : ModelBase
 {
-	// Token: 0x17001357 RID: 4951
-	// (get) Token: 0x0600FCC7 RID: 64711 RVA: 0x003D62E4 File Offset: 0x003D44E4
+	// Token: 0x17001383 RID: 4995
+	// (get) Token: 0x0600D0ED RID: 53485 RVA: 0x003E1C98 File Offset: 0x003DFE98
 	private NormalInventoryDataProxy DefaultProxy
 	{
 		get
@@ -37,9 +36,9 @@ public class InventoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001358 RID: 4952
-	// (get) Token: 0x0600FCC8 RID: 64712 RVA: 0x003D630A File Offset: 0x003D450A
-	// (set) Token: 0x0600FCC9 RID: 64713 RVA: 0x003D631C File Offset: 0x003D451C
+	// Token: 0x17001384 RID: 4996
+	// (get) Token: 0x0600D0EE RID: 53486 RVA: 0x003E1CBE File Offset: 0x003DFEBE
+	// (set) Token: 0x0600D0EF RID: 53487 RVA: 0x003E1CD0 File Offset: 0x003DFED0
 	private InventoryDataProxy CurrentProxy
 	{
 		get
@@ -52,19 +51,19 @@ public class InventoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FCCA RID: 64714 RVA: 0x003D6325 File Offset: 0x003D4525
+	// Token: 0x0600D0F0 RID: 53488 RVA: 0x003E1CD9 File Offset: 0x003DFED9
 	public void SetItemNeedCount(int? itemNeedCount)
 	{
 		this.ItemNeedCount = itemNeedCount;
 	}
 
-	// Token: 0x0600FCCB RID: 64715 RVA: 0x003D632E File Offset: 0x003D452E
+	// Token: 0x0600D0F1 RID: 53489 RVA: 0x003E1CE2 File Offset: 0x003DFEE2
 	public int? GetItemNeedCount()
 	{
 		return this.ItemNeedCount;
 	}
 
-	// Token: 0x0600FCCC RID: 64716 RVA: 0x003D6336 File Offset: 0x003D4536
+	// Token: 0x0600D0F2 RID: 53490 RVA: 0x003E1CEA File Offset: 0x003DFEEA
 	protected override bool OnInit()
 	{
 		if (InventoryConfig.Instance.GetAllMainTypeConfig().Count <= 0)
@@ -75,7 +74,7 @@ public class InventoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600FCCD RID: 64717 RVA: 0x003D6354 File Offset: 0x003D4554
+	// Token: 0x0600D0F3 RID: 53491 RVA: 0x003E1D08 File Offset: 0x003DFF08
 	protected override bool OnClear()
 	{
 		this.ClearAllItemData();
@@ -87,7 +86,7 @@ public class InventoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600FCCE RID: 64718 RVA: 0x003D63C4 File Offset: 0x003D45C4
+	// Token: 0x0600D0F4 RID: 53492 RVA: 0x003E1D78 File Offset: 0x003DFF78
 	public void RefreshItemRedDotSet()
 	{
 		NewFlagModel instance = NewFlagModel.Instance;
@@ -173,19 +172,19 @@ public class InventoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FCCF RID: 64719 RVA: 0x003D65AC File Offset: 0x003D47AC
+	// Token: 0x0600D0F5 RID: 53493 RVA: 0x003E1F60 File Offset: 0x003E0160
 	public void SetInventoryTabOpenIdList(List<int> idList)
 	{
 		this.InventoryTabOpenIdList = idList;
 	}
 
-	// Token: 0x0600FCD0 RID: 64720 RVA: 0x003D65B5 File Offset: 0x003D47B5
+	// Token: 0x0600D0F6 RID: 53494 RVA: 0x003E1F69 File Offset: 0x003E0169
 	public List<ItemMainType> GetOpenIdMainTypeConfig()
 	{
 		return this.CurrentProxy.GetOpenIdMainTypeConfig();
 	}
 
-	// Token: 0x0600FCD1 RID: 64721 RVA: 0x003D65C4 File Offset: 0x003D47C4
+	// Token: 0x0600D0F7 RID: 53495 RVA: 0x003E1F78 File Offset: 0x003E0178
 	public List<ItemMainType> GetOpenIdMainTypeConfigBase()
 	{
 		List<ItemMainType> list = new List<ItemMainType>();
@@ -201,7 +200,7 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FCD2 RID: 64722 RVA: 0x003D6670 File Offset: 0x003D4870
+	// Token: 0x0600D0F8 RID: 53496 RVA: 0x003E2024 File Offset: 0x003E0224
 	public InventoryDefine.EItemMainTypeId? GetCurrentMainTypeId()
 	{
 		List<ItemMainType> openIdMainTypeConfig = this.GetOpenIdMainTypeConfig();
@@ -217,14 +216,14 @@ public class InventoryModel : ModelBase
 		return new InventoryDefine.EItemMainTypeId?((InventoryDefine.EItemMainTypeId)openIdMainTypeConfig[selectedTypeIndex].Id);
 	}
 
-	// Token: 0x0600FCD3 RID: 64723 RVA: 0x003D66CC File Offset: 0x003D48CC
+	// Token: 0x0600D0F9 RID: 53497 RVA: 0x003E2080 File Offset: 0x003E0280
 	public bool IsResourceOrMaterialTab()
 	{
 		InventoryDefine.EItemMainTypeId? currentMainTypeId = this.GetCurrentMainTypeId();
 		return currentMainTypeId.GetValueOrDefault() == InventoryDefine.EItemMainTypeId.Material || currentMainTypeId.GetValueOrDefault() == InventoryDefine.EItemMainTypeId.Collection;
 	}
 
-	// Token: 0x0600FCD4 RID: 64724 RVA: 0x003D66F8 File Offset: 0x003D48F8
+	// Token: 0x0600D0FA RID: 53498 RVA: 0x003E20AC File Offset: 0x003E02AC
 	private void AddToItemTypeMap(ItemDataBase itemDataBase)
 	{
 		InventoryDefine.EItemType? type = itemDataBase.GetType();
@@ -237,7 +236,7 @@ public class InventoryModel : ModelBase
 		hashSet.Add(itemDataBase);
 	}
 
-	// Token: 0x0600FCD5 RID: 64725 RVA: 0x003D6744 File Offset: 0x003D4944
+	// Token: 0x0600D0FB RID: 53499 RVA: 0x003E20F8 File Offset: 0x003E02F8
 	private void RemoveFromItemTypeMap(ItemDataBase itemDataBase)
 	{
 		InventoryDefine.EItemType? type = itemDataBase.GetType();
@@ -248,13 +247,13 @@ public class InventoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FCD6 RID: 64726 RVA: 0x003D6776 File Offset: 0x003D4976
+	// Token: 0x0600D0FC RID: 53500 RVA: 0x003E212A File Offset: 0x003E032A
 	private void ClearFromItemTypeMap(InventoryDefine.EItemType itemType)
 	{
 		this.ItemTypeMap.Remove(itemType);
 	}
 
-	// Token: 0x0600FCD7 RID: 64727 RVA: 0x003D6788 File Offset: 0x003D4988
+	// Token: 0x0600D0FD RID: 53501 RVA: 0x003E213C File Offset: 0x003E033C
 	private void AddToItemMainTypeMap(ItemDataBase itemDataBase)
 	{
 		InventoryDefine.EItemMainTypeId? mainType = itemDataBase.GetMainType();
@@ -267,7 +266,7 @@ public class InventoryModel : ModelBase
 		itemMainTypeMapping.Add(itemDataBase);
 	}
 
-	// Token: 0x0600FCD8 RID: 64728 RVA: 0x003D67DC File Offset: 0x003D49DC
+	// Token: 0x0600D0FE RID: 53502 RVA: 0x003E2190 File Offset: 0x003E0390
 	private void RemoveFromItemMainTypeMap(ItemDataBase itemDataBase)
 	{
 		InventoryDefine.EItemMainTypeId? mainType = itemDataBase.GetMainType();
@@ -278,13 +277,13 @@ public class InventoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FCD9 RID: 64729 RVA: 0x003D680D File Offset: 0x003D4A0D
+	// Token: 0x0600D0FF RID: 53503 RVA: 0x003E21C1 File Offset: 0x003E03C1
 	private void ClearFromItemMainTypeMap(InventoryDefine.EItemMainTypeId itemMainType)
 	{
 		this.ItemMainTypeMap.Remove(itemMainType);
 	}
 
-	// Token: 0x0600FCDA RID: 64730 RVA: 0x003D681C File Offset: 0x003D4A1C
+	// Token: 0x0600D100 RID: 53504 RVA: 0x003E21D0 File Offset: 0x003E03D0
 	private void AddToCommonItemByItemTypeMap(CommonItemData commonItemData)
 	{
 		InventoryDefine.EItemType? type = commonItemData.GetType();
@@ -297,7 +296,7 @@ public class InventoryModel : ModelBase
 		hashSet.Add(commonItemData);
 	}
 
-	// Token: 0x0600FCDB RID: 64731 RVA: 0x003D6868 File Offset: 0x003D4A68
+	// Token: 0x0600D101 RID: 53505 RVA: 0x003E221C File Offset: 0x003E041C
 	private void RemoveFromCommonItemByItemTypeMap(CommonItemData commonItemData)
 	{
 		InventoryDefine.EItemType? type = commonItemData.GetType();
@@ -309,13 +308,13 @@ public class InventoryModel : ModelBase
 		hashSet.Remove(commonItemData);
 	}
 
-	// Token: 0x0600FCDC RID: 64732 RVA: 0x003D689B File Offset: 0x003D4A9B
+	// Token: 0x0600D102 RID: 53506 RVA: 0x003E224F File Offset: 0x003E044F
 	private void ClearFromCommonItemByItemTypeMap(InventoryDefine.EItemType itemType)
 	{
 		this.CommonItemByItemTypeMap.Remove(itemType);
 	}
 
-	// Token: 0x0600FCDD RID: 64733 RVA: 0x003D68AC File Offset: 0x003D4AAC
+	// Token: 0x0600D103 RID: 53507 RVA: 0x003E2260 File Offset: 0x003E0460
 	public void NewCommonItemData(int configId, int count, int uniqueId = 0, long? endTime = null)
 	{
 		CommonItemData commonItemData = new CommonItemData(configId, uniqueId, count, InventoryDefine.EItemDataType.CommonItem, endTime);
@@ -337,7 +336,7 @@ public class InventoryModel : ModelBase
 		this.TryAddItemCoolDownTimer(commonItemData);
 	}
 
-	// Token: 0x0600FCDE RID: 64734 RVA: 0x003D691C File Offset: 0x003D4B1C
+	// Token: 0x0600D104 RID: 53508 RVA: 0x003E22D0 File Offset: 0x003E04D0
 	public void RemoveCommonItemData(int configId, int uniqueId = 0)
 	{
 		Dictionary<int, CommonItemData> dictionary;
@@ -360,7 +359,7 @@ public class InventoryModel : ModelBase
 		this.RemoveFromCommonItemByItemTypeMap(commonItemData);
 	}
 
-	// Token: 0x0600FCDF RID: 64735 RVA: 0x003D6978 File Offset: 0x003D4B78
+	// Token: 0x0600D105 RID: 53509 RVA: 0x003E232C File Offset: 0x003E052C
 	public void RemoveCommonItemDataAndSaveNewList(List<InventoryDefine.IGetItemData> commonItemList)
 	{
 		foreach (InventoryDefine.IGetItemData getItemData in commonItemList)
@@ -375,7 +374,7 @@ public class InventoryModel : ModelBase
 		this.SaveRedDotAttributeItemUniqueIdList();
 	}
 
-	// Token: 0x0600FCE0 RID: 64736 RVA: 0x003D6A14 File Offset: 0x003D4C14
+	// Token: 0x0600D106 RID: 53510 RVA: 0x003E23C8 File Offset: 0x003E05C8
 	private void TryAddItemCoolDownTimer(CommonItemData itemData)
 	{
 		if (itemData.GetEndTime() > 0L)
@@ -408,7 +407,7 @@ public class InventoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FCE1 RID: 64737 RVA: 0x003D6AF4 File Offset: 0x003D4CF4
+	// Token: 0x0600D107 RID: 53511 RVA: 0x003E24A8 File Offset: 0x003E06A8
 	private void CdTimeStampCheck(long endTime)
 	{
 		InventoryController.Instance.InvalidItemRemoveRequest();
@@ -421,7 +420,7 @@ public class InventoryModel : ModelBase
 		this.CdTimeStampSet.Remove(endTime);
 	}
 
-	// Token: 0x0600FCE2 RID: 64738 RVA: 0x003D6B44 File Offset: 0x003D4D44
+	// Token: 0x0600D108 RID: 53512 RVA: 0x003E24F8 File Offset: 0x003E06F8
 	[NullableContext(2)]
 	public CommonItemData GetCommonItemData(int configId, int uniqueId = 0)
 	{
@@ -442,7 +441,7 @@ public class InventoryModel : ModelBase
 		return commonItemData;
 	}
 
-	// Token: 0x0600FCE3 RID: 64739 RVA: 0x003D6B7C File Offset: 0x003D4D7C
+	// Token: 0x0600D109 RID: 53513 RVA: 0x003E2530 File Offset: 0x003E0730
 	public List<CommonItemData> GetAllCommonItemDataByConfigId(int configId)
 	{
 		List<CommonItemData> list = new List<CommonItemData>();
@@ -461,22 +460,22 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FCE4 RID: 64740 RVA: 0x003D6BF8 File Offset: 0x003D4DF8
+	// Token: 0x0600D10A RID: 53514 RVA: 0x003E25AC File Offset: 0x003E07AC
 	public List<ItemDataBase> GetItemDataBaseByConfigId(int configId)
 	{
 		InventoryDefine.EItemDataType itemDataTypeByConfigId = InventoryConfig.Instance.GetItemDataTypeByConfigId(new int?(configId));
 		if (itemDataTypeByConfigId == InventoryDefine.EItemDataType.WeaponItem)
 		{
-			return this.GetAllWeaponItemDataByConfigId(configId).Cast<ItemDataBase>().ToList<ItemDataBase>();
+			return new List<ItemDataBase>(this.GetAllWeaponItemDataByConfigId(configId));
 		}
 		if (itemDataTypeByConfigId != InventoryDefine.EItemDataType.PhantomItem)
 		{
-			return this.GetAllCommonItemDataByConfigId(configId).Cast<ItemDataBase>().ToList<ItemDataBase>();
+			return new List<ItemDataBase>(this.GetAllCommonItemDataByConfigId(configId));
 		}
-		return this.GetAllPhantomItemDataByConfigId(configId).Cast<ItemDataBase>().ToList<ItemDataBase>();
+		return new List<ItemDataBase>(this.GetAllPhantomItemDataByConfigId(configId));
 	}
 
-	// Token: 0x0600FCE5 RID: 64741 RVA: 0x003D6C58 File Offset: 0x003D4E58
+	// Token: 0x0600D10B RID: 53515 RVA: 0x003E25FC File Offset: 0x003E07FC
 	public List<PhantomItemData> GetAllPhantomItemDataByConfigId(int configId)
 	{
 		List<PhantomItemData> list = new List<PhantomItemData>();
@@ -490,7 +489,7 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FCE6 RID: 64742 RVA: 0x003D6CBC File Offset: 0x003D4EBC
+	// Token: 0x0600D10C RID: 53516 RVA: 0x003E2660 File Offset: 0x003E0860
 	public List<WeaponItemData> GetAllWeaponItemDataByConfigId(int configId)
 	{
 		List<WeaponItemData> list = new List<WeaponItemData>();
@@ -504,7 +503,7 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FCE7 RID: 64743 RVA: 0x003D6D20 File Offset: 0x003D4F20
+	// Token: 0x0600D10D RID: 53517 RVA: 0x003E26C4 File Offset: 0x003E08C4
 	public List<WeaponItemData> GetAllWeaponItemDataByQualityAndType(int quality, int weaponType)
 	{
 		List<WeaponItemData> list = new List<WeaponItemData>();
@@ -518,13 +517,13 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FCE8 RID: 64744 RVA: 0x003D6D9C File Offset: 0x003D4F9C
+	// Token: 0x0600D10E RID: 53518 RVA: 0x003E2740 File Offset: 0x003E0940
 	public int GetCommonItemCount(int configId, int uniqueId = 0)
 	{
 		return this.CurrentProxy.GetCommonItemCount(configId, uniqueId);
 	}
 
-	// Token: 0x0600FCE9 RID: 64745 RVA: 0x003D6DAC File Offset: 0x003D4FAC
+	// Token: 0x0600D10F RID: 53519 RVA: 0x003E2750 File Offset: 0x003E0950
 	public int GetCommonItemCountBase(int configId, int uniqueId = 0)
 	{
 		CommonItemData commonItemData = this.GetCommonItemData(configId, uniqueId);
@@ -535,7 +534,7 @@ public class InventoryModel : ModelBase
 		return commonItemData.GetCount();
 	}
 
-	// Token: 0x0600FCEA RID: 64746 RVA: 0x003D6DD0 File Offset: 0x003D4FD0
+	// Token: 0x0600D110 RID: 53520 RVA: 0x003E2774 File Offset: 0x003E0974
 	public void NewWeaponItemData(int configId, int uniqueId, int functionValue)
 	{
 		if (this.WeaponItemMap.ContainsKey(uniqueId))
@@ -548,7 +547,7 @@ public class InventoryModel : ModelBase
 		this.AddToItemMainTypeMap(weaponItemData);
 	}
 
-	// Token: 0x0600FCEB RID: 64747 RVA: 0x003D6E14 File Offset: 0x003D5014
+	// Token: 0x0600D111 RID: 53521 RVA: 0x003E27B8 File Offset: 0x003E09B8
 	public void RemoveWeaponItemData(int uniqueId)
 	{
 		WeaponItemData itemDataBase;
@@ -561,7 +560,7 @@ public class InventoryModel : ModelBase
 		this.RemoveFromItemMainTypeMap(itemDataBase);
 	}
 
-	// Token: 0x0600FCEC RID: 64748 RVA: 0x003D6E50 File Offset: 0x003D5050
+	// Token: 0x0600D112 RID: 53522 RVA: 0x003E27F4 File Offset: 0x003E09F4
 	public void RemoveWeaponItemDataAndSaveNewList(IReadOnlyList<int> weaponUniqueIdList)
 	{
 		foreach (int uniqueId in weaponUniqueIdList)
@@ -574,7 +573,7 @@ public class InventoryModel : ModelBase
 		this.SaveRedDotAttributeItemUniqueIdList();
 	}
 
-	// Token: 0x0600FCED RID: 64749 RVA: 0x003D6EB8 File Offset: 0x003D50B8
+	// Token: 0x0600D113 RID: 53523 RVA: 0x003E285C File Offset: 0x003E0A5C
 	[NullableContext(2)]
 	public WeaponItemData GetWeaponItemData(int uniqueId)
 	{
@@ -583,7 +582,7 @@ public class InventoryModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600FCEE RID: 64750 RVA: 0x003D6ED8 File Offset: 0x003D50D8
+	// Token: 0x0600D114 RID: 53524 RVA: 0x003E287C File Offset: 0x003E0A7C
 	public void NewPhantomItemData(int configId, int uniqueId, int functionValue, int stackCount = 0, long addTime = 0L)
 	{
 		if (this.PhantomItemMap.ContainsKey(uniqueId))
@@ -604,7 +603,7 @@ public class InventoryModel : ModelBase
 		this.AddToItemMainTypeMap(phantomItemData);
 	}
 
-	// Token: 0x0600FCEF RID: 64751 RVA: 0x003D6F34 File Offset: 0x003D5134
+	// Token: 0x0600D115 RID: 53525 RVA: 0x003E28D8 File Offset: 0x003E0AD8
 	public void UpdatePhantomItemData(Aki.Protocol.PhantomItem phantomItemInfo, string reason = "")
 	{
 		int id = phantomItemInfo.Id;
@@ -637,7 +636,7 @@ public class InventoryModel : ModelBase
 		this.NewPhantomItemData(id, incrId, funcValue, stackCount, addTime);
 	}
 
-	// Token: 0x0600FCF0 RID: 64752 RVA: 0x003D6FF4 File Offset: 0x003D51F4
+	// Token: 0x0600D116 RID: 53526 RVA: 0x003E2998 File Offset: 0x003E0B98
 	public void RemovePhantomItemData(int uniqueId)
 	{
 		PhantomItemData itemDataBase;
@@ -650,7 +649,7 @@ public class InventoryModel : ModelBase
 		this.RemoveFromItemMainTypeMap(itemDataBase);
 	}
 
-	// Token: 0x0600FCF1 RID: 64753 RVA: 0x003D7030 File Offset: 0x003D5230
+	// Token: 0x0600D117 RID: 53527 RVA: 0x003E29D4 File Offset: 0x003E0BD4
 	public void RemovePhantomItemDataAndSaveNewList(IReadOnlyList<int> phantomUniqueIdList)
 	{
 		foreach (int uniqueId in phantomUniqueIdList)
@@ -663,14 +662,14 @@ public class InventoryModel : ModelBase
 		this.SaveRedDotAttributeItemUniqueIdList();
 	}
 
-	// Token: 0x0600FCF2 RID: 64754 RVA: 0x003D7098 File Offset: 0x003D5298
+	// Token: 0x0600D118 RID: 53528 RVA: 0x003E2A3C File Offset: 0x003E0C3C
 	public void RemovePhantomItemDataAndNotify(IReadOnlyList<int> phantomUniqueIdList, string reason = "")
 	{
 		this.RemovePhantomItemDataAndSaveNewList(phantomUniqueIdList);
 		EventSystem.Instance.Emit<IReadOnlyList<int>>(EEventName.OnRemovePhantomItem, phantomUniqueIdList);
 	}
 
-	// Token: 0x0600FCF3 RID: 64755 RVA: 0x003D70B4 File Offset: 0x003D52B4
+	// Token: 0x0600D119 RID: 53529 RVA: 0x003E2A58 File Offset: 0x003E0C58
 	[NullableContext(2)]
 	public PhantomItemData GetPhantomItemData(int uniqueId)
 	{
@@ -679,7 +678,7 @@ public class InventoryModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600FCF4 RID: 64756 RVA: 0x003D70D4 File Offset: 0x003D52D4
+	// Token: 0x0600D11A RID: 53530 RVA: 0x003E2A78 File Offset: 0x003E0C78
 	public void NewCalabashSkinItemData(int configId)
 	{
 		if (this.CalabashSkinItemMap.ContainsKey(configId))
@@ -692,7 +691,7 @@ public class InventoryModel : ModelBase
 		this.AddToItemMainTypeMap(calabashSkinItemData);
 	}
 
-	// Token: 0x0600FCF5 RID: 64757 RVA: 0x003D7118 File Offset: 0x003D5318
+	// Token: 0x0600D11B RID: 53531 RVA: 0x003E2ABC File Offset: 0x003E0CBC
 	public void NewOrnamentItemData(int configId)
 	{
 		if (this.OrnamentItemMap.ContainsKey(configId))
@@ -705,7 +704,7 @@ public class InventoryModel : ModelBase
 		this.AddToItemMainTypeMap(ornamentItemData);
 	}
 
-	// Token: 0x0600FCF6 RID: 64758 RVA: 0x003D715C File Offset: 0x003D535C
+	// Token: 0x0600D11C RID: 53532 RVA: 0x003E2B00 File Offset: 0x003E0D00
 	public void ClearCommonItemData()
 	{
 		foreach (Dictionary<int, CommonItemData> dictionary in this.CommonItemMap.Values)
@@ -722,7 +721,7 @@ public class InventoryModel : ModelBase
 		this.CommonItemMap.Clear();
 	}
 
-	// Token: 0x0600FCF7 RID: 64759 RVA: 0x003D7224 File Offset: 0x003D5424
+	// Token: 0x0600D11D RID: 53533 RVA: 0x003E2BC8 File Offset: 0x003E0DC8
 	public void ClearWeaponItemData()
 	{
 		foreach (WeaponItemData weaponItemData in this.WeaponItemMap.Values)
@@ -735,7 +734,7 @@ public class InventoryModel : ModelBase
 		this.WeaponItemMap.Clear();
 	}
 
-	// Token: 0x0600FCF8 RID: 64760 RVA: 0x003D72A8 File Offset: 0x003D54A8
+	// Token: 0x0600D11E RID: 53534 RVA: 0x003E2C4C File Offset: 0x003E0E4C
 	public void ClearPhantomItemData()
 	{
 		foreach (PhantomItemData phantomItemData in this.PhantomItemMap.Values)
@@ -748,7 +747,7 @@ public class InventoryModel : ModelBase
 		this.PhantomItemMap.Clear();
 	}
 
-	// Token: 0x0600FCF9 RID: 64761 RVA: 0x003D732C File Offset: 0x003D552C
+	// Token: 0x0600D11F RID: 53535 RVA: 0x003E2CD0 File Offset: 0x003E0ED0
 	public void ClearCalabashSkinItemData()
 	{
 		foreach (CalabashSkinItemData calabashSkinItemData in this.CalabashSkinItemMap.Values)
@@ -761,7 +760,7 @@ public class InventoryModel : ModelBase
 		this.CalabashSkinItemMap.Clear();
 	}
 
-	// Token: 0x0600FCFA RID: 64762 RVA: 0x003D73B0 File Offset: 0x003D55B0
+	// Token: 0x0600D120 RID: 53536 RVA: 0x003E2D54 File Offset: 0x003E0F54
 	public void ClearOrnamentItemData()
 	{
 		foreach (OrnamentItemData ornamentItemData in this.OrnamentItemMap.Values)
@@ -774,7 +773,7 @@ public class InventoryModel : ModelBase
 		this.OrnamentItemMap.Clear();
 	}
 
-	// Token: 0x0600FCFB RID: 64763 RVA: 0x003D7434 File Offset: 0x003D5634
+	// Token: 0x0600D121 RID: 53537 RVA: 0x003E2DD8 File Offset: 0x003E0FD8
 	public void ClearAllItemData()
 	{
 		this.ClearCommonItemData();
@@ -787,7 +786,7 @@ public class InventoryModel : ModelBase
 		this.CommonItemByItemTypeMap.Clear();
 	}
 
-	// Token: 0x0600FCFC RID: 64764 RVA: 0x003D7480 File Offset: 0x003D5680
+	// Token: 0x0600D122 RID: 53538 RVA: 0x003E2E24 File Offset: 0x003E1024
 	[NullableContext(2)]
 	public AttributeItemData GetAttributeItemData(int uniqueId)
 	{
@@ -803,7 +802,7 @@ public class InventoryModel : ModelBase
 		return attributeItemData;
 	}
 
-	// Token: 0x0600FCFD RID: 64765 RVA: 0x003D74B0 File Offset: 0x003D56B0
+	// Token: 0x0600D123 RID: 53539 RVA: 0x003E2E54 File Offset: 0x003E1054
 	public List<WeaponItemData> GetWeaponItemDataList()
 	{
 		List<WeaponItemData> list = new List<WeaponItemData>();
@@ -817,7 +816,7 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FCFE RID: 64766 RVA: 0x003D751C File Offset: 0x003D571C
+	// Token: 0x0600D124 RID: 53540 RVA: 0x003E2EC0 File Offset: 0x003E10C0
 	public List<PhantomItemData> GetPhantomItemDataList()
 	{
 		List<PhantomItemData> list = new List<PhantomItemData>();
@@ -828,7 +827,7 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FCFF RID: 64767 RVA: 0x003D757C File Offset: 0x003D577C
+	// Token: 0x0600D125 RID: 53541 RVA: 0x003E2F20 File Offset: 0x003E1120
 	public List<PhantomItemData> GetUnEquipPhantomItemDataList()
 	{
 		List<PhantomItemData> phantomItemDataList = this.GetPhantomItemDataList();
@@ -843,7 +842,7 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FD00 RID: 64768 RVA: 0x003D75E8 File Offset: 0x003D57E8
+	// Token: 0x0600D126 RID: 53542 RVA: 0x003E2F8C File Offset: 0x003E118C
 	public List<PhantomItemData> GetPhantomItemDataListByPhantomItemId(int itemId)
 	{
 		List<PhantomItemData> list = new List<PhantomItemData>();
@@ -857,7 +856,7 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FD01 RID: 64769 RVA: 0x003D7650 File Offset: 0x003D5850
+	// Token: 0x0600D127 RID: 53543 RVA: 0x003E2FF4 File Offset: 0x003E11F4
 	public List<PhantomItemData> GetPhantomItemDataListByPhantomItem(List<Aki.Protocol.PhantomItem> phantomItemList)
 	{
 		List<PhantomItemData> list = new List<PhantomItemData>();
@@ -869,7 +868,7 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FD02 RID: 64770 RVA: 0x003D76B0 File Offset: 0x003D58B0
+	// Token: 0x0600D128 RID: 53544 RVA: 0x003E3054 File Offset: 0x003E1254
 	public PhantomItemData GetPhantomItemDataByPhantomItem(Aki.Protocol.PhantomItem data)
 	{
 		PhantomItemData phantomItemData = new PhantomItemData(data.Id, data.IncrId, data.FuncValue, InventoryDefine.EItemDataType.PhantomItem);
@@ -877,8 +876,8 @@ public class InventoryModel : ModelBase
 		return phantomItemData;
 	}
 
-	// Token: 0x0600FD03 RID: 64771 RVA: 0x003D76D8 File Offset: 0x003D58D8
-	public List<PhantomItemData> GetPhantomItemDataListByAddCountItemInfo(List<AddCountItemInfo> items)
+	// Token: 0x0600D129 RID: 53545 RVA: 0x003E307C File Offset: 0x003E127C
+	public List<PhantomItemData> GetPhantomItemDataListByAddCountItemInfo(IEnumerable<AddCountItemInfo> items)
 	{
 		List<PhantomItemData> list = new List<PhantomItemData>();
 		foreach (AddCountItemInfo addCountItemInfo in items)
@@ -889,7 +888,7 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FD04 RID: 64772 RVA: 0x003D7744 File Offset: 0x003D5944
+	// Token: 0x0600D12A RID: 53546 RVA: 0x003E30E0 File Offset: 0x003E12E0
 	public List<CommonItemData> GetCommonItemDataList()
 	{
 		List<CommonItemData> list = new List<CommonItemData>();
@@ -906,20 +905,26 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FD05 RID: 64773 RVA: 0x003D77E4 File Offset: 0x003D59E4
+	// Token: 0x0600D12B RID: 53547 RVA: 0x003E3180 File Offset: 0x003E1380
 	public List<CommonItemData> GetCommonItemByItemType(InventoryDefine.EItemType itemType)
 	{
-		HashSet<CommonItemData> source;
-		if (!this.CommonItemByItemTypeMap.TryGetValue(itemType, out source))
+		HashSet<CommonItemData> hashSet;
+		if (!this.CommonItemByItemTypeMap.TryGetValue(itemType, out hashSet))
 		{
 			return new List<CommonItemData>();
 		}
-		return (from commonItemData in source
-		where commonItemData.IsValid()
-		select commonItemData).ToList<CommonItemData>();
+		List<CommonItemData> list = new List<CommonItemData>();
+		foreach (CommonItemData commonItemData in hashSet)
+		{
+			if (commonItemData.IsValid())
+			{
+				list.Add(commonItemData);
+			}
+		}
+		return list;
 	}
 
-	// Token: 0x0600FD06 RID: 64774 RVA: 0x003D7834 File Offset: 0x003D5A34
+	// Token: 0x0600D12C RID: 53548 RVA: 0x003E31F4 File Offset: 0x003E13F4
 	public List<CommonItemData> GetCommonItemByShowType(InventoryDefine.EShowType showType)
 	{
 		List<CommonItemData> list = new List<CommonItemData>();
@@ -936,7 +941,7 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FD07 RID: 64775 RVA: 0x003D78E4 File Offset: 0x003D5AE4
+	// Token: 0x0600D12D RID: 53549 RVA: 0x003E32A4 File Offset: 0x003E14A4
 	public List<WeaponItemData> GetWeaponItemByItemType(InventoryDefine.EItemType itemType)
 	{
 		List<WeaponItemData> list = new List<WeaponItemData>();
@@ -951,7 +956,7 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FD08 RID: 64776 RVA: 0x003D7960 File Offset: 0x003D5B60
+	// Token: 0x0600D12E RID: 53550 RVA: 0x003E3320 File Offset: 0x003E1520
 	public List<PhantomItemData> GetPhantomItemByItemType(InventoryDefine.EItemType itemType)
 	{
 		List<PhantomItemData> list = new List<PhantomItemData>();
@@ -966,7 +971,7 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FD09 RID: 64777 RVA: 0x003D79E0 File Offset: 0x003D5BE0
+	// Token: 0x0600D12F RID: 53551 RVA: 0x003E33A0 File Offset: 0x003E15A0
 	public List<ItemDataBase> GetItemDataBase(InventoryDefine.IGetItemData getItemData)
 	{
 		int incId = getItemData.IncId;
@@ -980,7 +985,7 @@ public class InventoryModel : ModelBase
 		return this.GetItemDataBaseByConfigId(getItemData.ItemId);
 	}
 
-	// Token: 0x0600FD0A RID: 64778 RVA: 0x003D7A18 File Offset: 0x003D5C18
+	// Token: 0x0600D130 RID: 53552 RVA: 0x003E33D8 File Offset: 0x003E15D8
 	[NullableContext(2)]
 	public global::ItemMainTypeMapping GetItemMainTypeMapping(InventoryDefine.EItemMainTypeId mainType)
 	{
@@ -989,13 +994,13 @@ public class InventoryModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600FD0B RID: 64779 RVA: 0x003D7A35 File Offset: 0x003D5C35
+	// Token: 0x0600D131 RID: 53553 RVA: 0x003E33F5 File Offset: 0x003E15F5
 	public HashSet<ItemDataBase> GetItemDataBaseByMainType(InventoryDefine.EItemMainTypeId mainType)
 	{
 		return this.CurrentProxy.GetItemDataBaseByMainType(mainType);
 	}
 
-	// Token: 0x0600FD0C RID: 64780 RVA: 0x003D7A44 File Offset: 0x003D5C44
+	// Token: 0x0600D132 RID: 53554 RVA: 0x003E3404 File Offset: 0x003E1604
 	public HashSet<ItemDataBase> GetItemDataBaseByMainTypeBase(InventoryDefine.EItemMainTypeId mainType)
 	{
 		HashSet<ItemDataBase> hashSet = new HashSet<ItemDataBase>();
@@ -1014,13 +1019,13 @@ public class InventoryModel : ModelBase
 		return hashSet;
 	}
 
-	// Token: 0x0600FD0D RID: 64781 RVA: 0x003D7ABC File Offset: 0x003D5CBC
+	// Token: 0x0600D133 RID: 53555 RVA: 0x003E347C File Offset: 0x003E167C
 	public int GetInventoryItemGridCountByMainType(InventoryDefine.EItemMainTypeId mainType)
 	{
 		return this.CurrentProxy.GetInventoryItemGridCountByMainType(mainType);
 	}
 
-	// Token: 0x0600FD0E RID: 64782 RVA: 0x003D7ACC File Offset: 0x003D5CCC
+	// Token: 0x0600D134 RID: 53556 RVA: 0x003E348C File Offset: 0x003E168C
 	public int GetInventoryItemGridCountByMainTypeBase(InventoryDefine.EItemMainTypeId mainType)
 	{
 		HashSet<ItemDataBase> itemDataBaseByMainTypeBase = this.GetItemDataBaseByMainTypeBase(mainType);
@@ -1048,7 +1053,7 @@ public class InventoryModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600FD0F RID: 64783 RVA: 0x003D7B6C File Offset: 0x003D5D6C
+	// Token: 0x0600D135 RID: 53557 RVA: 0x003E352C File Offset: 0x003E172C
 	public HashSet<ItemDataBase> GetItemDataBaseByItemType(InventoryDefine.EItemType itemType)
 	{
 		HashSet<ItemDataBase> hashSet = new HashSet<ItemDataBase>();
@@ -1067,40 +1072,40 @@ public class InventoryModel : ModelBase
 		return hashSet;
 	}
 
-	// Token: 0x0600FD10 RID: 64784 RVA: 0x003D7BDC File Offset: 0x003D5DDC
+	// Token: 0x0600D136 RID: 53558 RVA: 0x003E359C File Offset: 0x003E179C
 	private Dictionary<int, WeaponItemData>.ValueCollection GetAllWeaponItemDataIterator()
 	{
 		return this.WeaponItemMap.Values;
 	}
 
-	// Token: 0x0600FD11 RID: 64785 RVA: 0x003D7BE9 File Offset: 0x003D5DE9
+	// Token: 0x0600D137 RID: 53559 RVA: 0x003E35A9 File Offset: 0x003E17A9
 	public Dictionary<int, PhantomItemData>.ValueCollection GetAllPhantomItemDataIterator()
 	{
 		return this.PhantomItemMap.Values;
 	}
 
-	// Token: 0x0600FD12 RID: 64786 RVA: 0x003D7BF6 File Offset: 0x003D5DF6
+	// Token: 0x0600D138 RID: 53560 RVA: 0x003E35B6 File Offset: 0x003E17B6
 	[NullableContext(2)]
 	public void SetSelectedItemViewData(global::ItemViewData itemViewData)
 	{
 		this.SelectedItemViewData = itemViewData;
 	}
 
-	// Token: 0x0600FD13 RID: 64787 RVA: 0x003D7BFF File Offset: 0x003D5DFF
+	// Token: 0x0600D139 RID: 53561 RVA: 0x003E35BF File Offset: 0x003E17BF
 	public void SetCurrentLockItemUniqueId(int uniqueId)
 	{
 		this.CurrentLockItemUniqueId = uniqueId;
 	}
 
-	// Token: 0x0600FD14 RID: 64788 RVA: 0x003D7C08 File Offset: 0x003D5E08
+	// Token: 0x0600D13A RID: 53562 RVA: 0x003E35C8 File Offset: 0x003E17C8
 	[NullableContext(2)]
 	public global::ItemViewData GetSelectedItemData()
 	{
 		return this.SelectedItemViewData;
 	}
 
-	// Token: 0x17001359 RID: 4953
-	// (get) Token: 0x0600FD15 RID: 64789 RVA: 0x003D7C10 File Offset: 0x003D5E10
+	// Token: 0x17001385 RID: 4997
+	// (get) Token: 0x0600D13B RID: 53563 RVA: 0x003E35D0 File Offset: 0x003E17D0
 	public int GetCurrentLockItemUniqueId
 	{
 		get
@@ -1109,43 +1114,43 @@ public class InventoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FD16 RID: 64790 RVA: 0x003D7C18 File Offset: 0x003D5E18
+	// Token: 0x0600D13C RID: 53564 RVA: 0x003E35D8 File Offset: 0x003E17D8
 	public void SetSelectedTypeIndex(int index)
 	{
 		this.CurrentProxy.SetSelectedTypeIndex(index);
 	}
 
-	// Token: 0x0600FD17 RID: 64791 RVA: 0x003D7C26 File Offset: 0x003D5E26
+	// Token: 0x0600D13D RID: 53565 RVA: 0x003E35E6 File Offset: 0x003E17E6
 	public int GetSelectedTypeIndex()
 	{
 		return this.CurrentProxy.GetSelectedTypeIndex();
 	}
 
-	// Token: 0x0600FD18 RID: 64792 RVA: 0x003D7C33 File Offset: 0x003D5E33
+	// Token: 0x0600D13E RID: 53566 RVA: 0x003E35F3 File Offset: 0x003E17F3
 	public void SetOutsideUniqueId(int uniqueId)
 	{
 		this.OutsideUniqueId = new int?(uniqueId);
 	}
 
-	// Token: 0x0600FD19 RID: 64793 RVA: 0x003D7C41 File Offset: 0x003D5E41
+	// Token: 0x0600D13F RID: 53567 RVA: 0x003E3601 File Offset: 0x003E1801
 	public int? GetOutsideUniqueId()
 	{
 		return this.OutsideUniqueId;
 	}
 
-	// Token: 0x0600FD1A RID: 64794 RVA: 0x003D7C49 File Offset: 0x003D5E49
+	// Token: 0x0600D140 RID: 53568 RVA: 0x003E3609 File Offset: 0x003E1809
 	public void ClearOutsideUniqueId()
 	{
 		this.OutsideUniqueId = null;
 	}
 
-	// Token: 0x0600FD1B RID: 64795 RVA: 0x003D7C57 File Offset: 0x003D5E57
+	// Token: 0x0600D141 RID: 53569 RVA: 0x003E3617 File Offset: 0x003E1817
 	public int GetItemCountByConfigId(int itemConfigId, int uniqueId = 0)
 	{
 		return this.CurrentProxy.GetItemCountByConfigId(itemConfigId, uniqueId);
 	}
 
-	// Token: 0x0600FD1C RID: 64796 RVA: 0x003D7C68 File Offset: 0x003D5E68
+	// Token: 0x0600D142 RID: 53570 RVA: 0x003E3628 File Offset: 0x003E1828
 	public int GetItemCountByConfigIdBase(int itemConfigId, int uniqueId = 0)
 	{
 		if (Enum.IsDefined(typeof(EItemId), itemConfigId))
@@ -1194,7 +1199,7 @@ public class InventoryModel : ModelBase
 		return this.GetCommonItemCount(itemConfigId, uniqueId);
 	}
 
-	// Token: 0x0600FD1D RID: 64797 RVA: 0x003D7DD0 File Offset: 0x003D5FD0
+	// Token: 0x0600D143 RID: 53571 RVA: 0x003E3790 File Offset: 0x003E1990
 	public List<IGetWayItemData> GetGetWayDataList(int itemId)
 	{
 		ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(itemId);
@@ -1230,7 +1235,7 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FD1E RID: 64798 RVA: 0x003D7EE8 File Offset: 0x003D60E8
+	// Token: 0x0600D144 RID: 53572 RVA: 0x003E38A8 File Offset: 0x003E1AA8
 	private int GetWeaponItemCount(int configId)
 	{
 		int num = 0;
@@ -1247,43 +1252,43 @@ public class InventoryModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600FD1F RID: 64799 RVA: 0x003D7F44 File Offset: 0x003D6144
+	// Token: 0x0600D145 RID: 53573 RVA: 0x003E3904 File Offset: 0x003E1B04
 	private int GetRogueCurrencyItemCount(int configId)
 	{
 		return RoguelikeModel.Instance.GetRoguelikeInventoryCurrency(configId);
 	}
 
-	// Token: 0x0600FD20 RID: 64800 RVA: 0x003D7F51 File Offset: 0x003D6151
+	// Token: 0x0600D146 RID: 53574 RVA: 0x003E3911 File Offset: 0x003E1B11
 	private int GetRogueResCurrencyItemCount(int configId)
 	{
 		return ActivityPermanentRogueModel.Instance.GetCurrency(configId);
 	}
 
-	// Token: 0x0600FD21 RID: 64801 RVA: 0x003D7F5E File Offset: 0x003D615E
+	// Token: 0x0600D147 RID: 53575 RVA: 0x003E391E File Offset: 0x003E1B1E
 	private int GetRoverRogueCurrencyItemCount(int configId)
 	{
 		return RoverlikeModel.Instance.GetCurrency(configId);
 	}
 
-	// Token: 0x0600FD22 RID: 64802 RVA: 0x003D7F6B File Offset: 0x003D616B
+	// Token: 0x0600D148 RID: 53576 RVA: 0x003E392B File Offset: 0x003E1B2B
 	private int GetWeaponSkinCount(int configId)
 	{
 		return WeaponSkinModel.Instance.GetSkinCountById(configId);
 	}
 
-	// Token: 0x0600FD23 RID: 64803 RVA: 0x003D7F78 File Offset: 0x003D6178
+	// Token: 0x0600D149 RID: 53577 RVA: 0x003E3938 File Offset: 0x003E1B38
 	private int GetRoleSkinCount(int configId)
 	{
 		return RoleSkinModel.Instance.GetSkinCountById(configId);
 	}
 
-	// Token: 0x0600FD24 RID: 64804 RVA: 0x003D7F85 File Offset: 0x003D6185
+	// Token: 0x0600D14A RID: 53578 RVA: 0x003E3945 File Offset: 0x003E1B45
 	private int GetFlySkinCount(int configId)
 	{
 		return FlySkinModel.Instance.GetFlySkinItemCount(configId);
 	}
 
-	// Token: 0x0600FD25 RID: 64805 RVA: 0x003D7F94 File Offset: 0x003D6194
+	// Token: 0x0600D14B RID: 53579 RVA: 0x003E3954 File Offset: 0x003E1B54
 	private int GetMotorSkinCount(int configId)
 	{
 		EOutLookState stickerState = MotorcycleDiyModel.Instance.GetStickerState(configId);
@@ -1294,13 +1299,13 @@ public class InventoryModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x0600FD26 RID: 64806 RVA: 0x003D7FB8 File Offset: 0x003D61B8
+	// Token: 0x0600D14C RID: 53580 RVA: 0x003E3978 File Offset: 0x003E1B78
 	private int GetOwnedMotorSkinCount(int configId)
 	{
 		return (MotorcycleDiyModel.Instance.HasSkin(configId) > false) ? 1 : 0;
 	}
 
-	// Token: 0x0600FD27 RID: 64807 RVA: 0x003D7FC8 File Offset: 0x003D61C8
+	// Token: 0x0600D14D RID: 53581 RVA: 0x003E3988 File Offset: 0x003E1B88
 	private int GetPhantomArenaCardCount(int configId)
 	{
 		if (!PhantomArenaModel.Instance.IsCardUnlock(configId))
@@ -1310,37 +1315,37 @@ public class InventoryModel : ModelBase
 		return PhantomArenaConfig.Instance.GetPhantomBattleCardConfig(configId).CardGroupNum;
 	}
 
-	// Token: 0x0600FD28 RID: 64808 RVA: 0x003D7FF7 File Offset: 0x003D61F7
+	// Token: 0x0600D14E RID: 53582 RVA: 0x003E39B7 File Offset: 0x003E1BB7
 	private int GetCalabashSkinCount(int configId)
 	{
 		return CalabashSkinModel.Instance.GetSkinCountById(configId);
 	}
 
-	// Token: 0x0600FD29 RID: 64809 RVA: 0x003D8004 File Offset: 0x003D6204
+	// Token: 0x0600D14F RID: 53583 RVA: 0x003E39C4 File Offset: 0x003E1BC4
 	private int GetFurnitureItemCount(int configId)
 	{
 		return (FurnitureModel.Instance.GetIsFurnitureUnlockById(configId) > false) ? 1 : 0;
 	}
 
-	// Token: 0x0600FD2A RID: 64810 RVA: 0x003D8014 File Offset: 0x003D6214
+	// Token: 0x0600D150 RID: 53584 RVA: 0x003E39D4 File Offset: 0x003E1BD4
 	private int GetOrnamentItemCount(int configId)
 	{
 		return RoleOrnamentModel.Instance.GetOrnamentCountById(configId);
 	}
 
-	// Token: 0x0600FD2B RID: 64811 RVA: 0x003D8021 File Offset: 0x003D6221
+	// Token: 0x0600D151 RID: 53585 RVA: 0x003E39E1 File Offset: 0x003E1BE1
 	private int GetPinballRoleItemCount(int configId)
 	{
 		return 0;
 	}
 
-	// Token: 0x0600FD2C RID: 64812 RVA: 0x003D8024 File Offset: 0x003D6224
+	// Token: 0x0600D152 RID: 53586 RVA: 0x003E39E4 File Offset: 0x003E1BE4
 	private int GetPinballWeaponItemCount(int configId)
 	{
 		return 0;
 	}
 
-	// Token: 0x0600FD2D RID: 64813 RVA: 0x003D8028 File Offset: 0x003D6228
+	// Token: 0x0600D153 RID: 53587 RVA: 0x003E39E8 File Offset: 0x003E1BE8
 	private int GetPhantomItemCount(int configId)
 	{
 		int num = 0;
@@ -1357,7 +1362,7 @@ public class InventoryModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600FD2E RID: 64814 RVA: 0x003D8084 File Offset: 0x003D6284
+	// Token: 0x0600D154 RID: 53588 RVA: 0x003E3A44 File Offset: 0x003E1C44
 	private int GetPlayerHeadItemCount(int configId)
 	{
 		PlayerHeadData playerHeadData = PersonalModel.Instance.GetPlayerHeadData(configId, true);
@@ -1368,7 +1373,7 @@ public class InventoryModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x0600FD2F RID: 64815 RVA: 0x003D80AC File Offset: 0x003D62AC
+	// Token: 0x0600D155 RID: 53589 RVA: 0x003E3A6C File Offset: 0x003E1C6C
 	private int GetCardItemCount(int configId)
 	{
 		List<PersonalCardData> cardDataList = PersonalModel.Instance.GetCardDataList();
@@ -1384,7 +1389,7 @@ public class InventoryModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x0600FD30 RID: 64816 RVA: 0x003D80F3 File Offset: 0x003D62F3
+	// Token: 0x0600D156 RID: 53590 RVA: 0x003E3AB3 File Offset: 0x003E1CB3
 	public bool TryAddNewCommonItem(int configId, int uniqueId = 0)
 	{
 		if (uniqueId != 0)
@@ -1400,7 +1405,7 @@ public class InventoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600FD31 RID: 64817 RVA: 0x003D812F File Offset: 0x003D632F
+	// Token: 0x0600D157 RID: 53591 RVA: 0x003E3AEF File Offset: 0x003E1CEF
 	public bool TryAddNewAttributeItem(int uniqueId)
 	{
 		if (NewFlagModel.Instance.HasNewFlag(ELocalStoragePlayerKey.InventoryAttributeItem, uniqueId))
@@ -1412,7 +1417,7 @@ public class InventoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600FD32 RID: 64818 RVA: 0x003D8160 File Offset: 0x003D6360
+	// Token: 0x0600D158 RID: 53592 RVA: 0x003E3B20 File Offset: 0x003E1D20
 	public bool RemoveNewCommonItem(int configId, int uniqueId = 0)
 	{
 		if (uniqueId != 0)
@@ -1422,25 +1427,25 @@ public class InventoryModel : ModelBase
 		return NewFlagModel.Instance.RemoveNewFlag(ELocalStoragePlayerKey.InventoryCommonItem, configId);
 	}
 
-	// Token: 0x0600FD33 RID: 64819 RVA: 0x003D8179 File Offset: 0x003D6379
+	// Token: 0x0600D159 RID: 53593 RVA: 0x003E3B39 File Offset: 0x003E1D39
 	public bool RemoveNewAttributeItem(int uniqueId)
 	{
 		return NewFlagModel.Instance.RemoveNewFlag(ELocalStoragePlayerKey.InventoryAttributeItem, uniqueId);
 	}
 
-	// Token: 0x0600FD34 RID: 64820 RVA: 0x003D8187 File Offset: 0x003D6387
+	// Token: 0x0600D15A RID: 53594 RVA: 0x003E3B47 File Offset: 0x003E1D47
 	public bool SaveNewCommonItemConfigIdList()
 	{
 		return NewFlagModel.Instance.SaveNewFlagConfig(ELocalStoragePlayerKey.InventoryCommonItem);
 	}
 
-	// Token: 0x0600FD35 RID: 64821 RVA: 0x003D8194 File Offset: 0x003D6394
+	// Token: 0x0600D15B RID: 53595 RVA: 0x003E3B54 File Offset: 0x003E1D54
 	public bool SaveNewAttributeItemUniqueIdList()
 	{
 		return NewFlagModel.Instance.SaveNewFlagConfig(ELocalStoragePlayerKey.InventoryAttributeItem);
 	}
 
-	// Token: 0x0600FD36 RID: 64822 RVA: 0x003D81A1 File Offset: 0x003D63A1
+	// Token: 0x0600D15C RID: 53596 RVA: 0x003E3B61 File Offset: 0x003E1D61
 	public bool IsNewCommonItem(int configId, int uniqueId = 0)
 	{
 		if (uniqueId != 0)
@@ -1450,20 +1455,20 @@ public class InventoryModel : ModelBase
 		return NewFlagModel.Instance.HasNewFlag(ELocalStoragePlayerKey.InventoryCommonItem, configId);
 	}
 
-	// Token: 0x0600FD37 RID: 64823 RVA: 0x003D81BA File Offset: 0x003D63BA
+	// Token: 0x0600D15D RID: 53597 RVA: 0x003E3B7A File Offset: 0x003E1D7A
 	public bool IsNewAttributeItem(int uniqueId)
 	{
 		return NewFlagModel.Instance.HasNewFlag(ELocalStoragePlayerKey.InventoryAttributeItem, uniqueId);
 	}
 
-	// Token: 0x0600FD38 RID: 64824 RVA: 0x003D81C8 File Offset: 0x003D63C8
+	// Token: 0x0600D15E RID: 53598 RVA: 0x003E3B88 File Offset: 0x003E1D88
 	[NullableContext(2)]
 	public HashSet<int> GetNewAttributeItemUniqueIdList()
 	{
 		return NewFlagModel.Instance.GetNewFlagSet(ELocalStoragePlayerKey.InventoryAttributeItem);
 	}
 
-	// Token: 0x0600FD39 RID: 64825 RVA: 0x003D81D8 File Offset: 0x003D63D8
+	// Token: 0x0600D15F RID: 53599 RVA: 0x003E3B98 File Offset: 0x003E1D98
 	public bool TryAddRedDotCommonItem(int configId, int uniqueId = 0)
 	{
 		CommonItemData commonItemData = this.GetCommonItemData(configId, uniqueId);
@@ -1492,7 +1497,7 @@ public class InventoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600FD3A RID: 64826 RVA: 0x003D822C File Offset: 0x003D642C
+	// Token: 0x0600D160 RID: 53600 RVA: 0x003E3BEC File Offset: 0x003E1DEC
 	private void TryAddCommonItemServerFirstSelectRedDot(int itemId)
 	{
 		ServerStorageMap serverStorageMap = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ItemBackpackFirstCheck) as ServerStorageMap;
@@ -1503,7 +1508,7 @@ public class InventoryModel : ModelBase
 		serverStorageMap.Set(itemId, 1);
 	}
 
-	// Token: 0x0600FD3B RID: 64827 RVA: 0x003D8260 File Offset: 0x003D6460
+	// Token: 0x0600D161 RID: 53601 RVA: 0x003E3C20 File Offset: 0x003E1E20
 	private bool TryClearCommonItemServerFirstSelectRedDot(int itemId)
 	{
 		ServerStorageMap serverStorageMap = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ItemBackpackFirstCheck) as ServerStorageMap;
@@ -1515,14 +1520,14 @@ public class InventoryModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600FD3C RID: 64828 RVA: 0x003D829C File Offset: 0x003D649C
+	// Token: 0x0600D162 RID: 53602 RVA: 0x003E3C5C File Offset: 0x003E1E5C
 	public bool HasCommonItemServerFirstSelectRedDot(int itemId)
 	{
 		ServerStorageMap serverStorageMap = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ItemBackpackFirstCheck) as ServerStorageMap;
 		return serverStorageMap != null && serverStorageMap.Get(itemId).GetValueOrDefault() == 1;
 	}
 
-	// Token: 0x0600FD3D RID: 64829 RVA: 0x003D82D4 File Offset: 0x003D64D4
+	// Token: 0x0600D163 RID: 53603 RVA: 0x003E3C94 File Offset: 0x003E1E94
 	public bool HasAnyCommonItemServerFirstSelectRedDot()
 	{
 		ServerStorageMap serverStorageMap = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ItemBackpackFirstCheck) as ServerStorageMap;
@@ -1530,10 +1535,20 @@ public class InventoryModel : ModelBase
 		{
 			return false;
 		}
-		return serverStorageMap.GetContainer().Values.Any((int value) => value == 1);
+		using (Dictionary<int, int>.ValueCollection.Enumerator enumerator = serverStorageMap.GetContainer().Values.GetEnumerator())
+		{
+			while (enumerator.MoveNext())
+			{
+				if (enumerator.Current == 1)
+				{
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 
-	// Token: 0x0600FD3E RID: 64830 RVA: 0x003D8328 File Offset: 0x003D6528
+	// Token: 0x0600D164 RID: 53604 RVA: 0x003E3D08 File Offset: 0x003E1F08
 	public bool TryAddRedDotAttributeItem(int uniqueId)
 	{
 		if (NewFlagModel.Instance.HasNewFlag(ELocalStoragePlayerKey.InventoryAttributeItemRedDot, uniqueId))
@@ -1553,7 +1568,7 @@ public class InventoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600FD3F RID: 64831 RVA: 0x003D836C File Offset: 0x003D656C
+	// Token: 0x0600D165 RID: 53605 RVA: 0x003E3D4C File Offset: 0x003E1F4C
 	public bool HasRedDot()
 	{
 		NewFlagModel instance = NewFlagModel.Instance;
@@ -1572,14 +1587,14 @@ public class InventoryModel : ModelBase
 		return num > 0 || num2 > 0 || this.HasAnyCommonItemServerFirstSelectRedDot();
 	}
 
-	// Token: 0x0600FD40 RID: 64832 RVA: 0x003D83B5 File Offset: 0x003D65B5
+	// Token: 0x0600D166 RID: 53606 RVA: 0x003E3D95 File Offset: 0x003E1F95
 	public bool IsMainTypeHasRedDot(InventoryDefine.EItemMainTypeId itemMainType)
 	{
 		global::ItemMainTypeMapping itemMainTypeMapping = this.GetItemMainTypeMapping(itemMainType);
 		return itemMainTypeMapping != null && itemMainTypeMapping.HasRedDot();
 	}
 
-	// Token: 0x0600FD41 RID: 64833 RVA: 0x003D83C9 File Offset: 0x003D65C9
+	// Token: 0x0600D167 RID: 53607 RVA: 0x003E3DA9 File Offset: 0x003E1FA9
 	public bool IsCommonItemHasRedDot(int configId, int uniqueId = 0)
 	{
 		if (uniqueId != 0)
@@ -1589,13 +1604,13 @@ public class InventoryModel : ModelBase
 		return NewFlagModel.Instance.HasNewFlag(ELocalStoragePlayerKey.InventoryCommonItemRedDot, configId) || this.HasCommonItemServerFirstSelectRedDot(configId);
 	}
 
-	// Token: 0x0600FD42 RID: 64834 RVA: 0x003D83ED File Offset: 0x003D65ED
+	// Token: 0x0600D168 RID: 53608 RVA: 0x003E3DCD File Offset: 0x003E1FCD
 	public bool IsAttributeItemHasRedDot(int uniqueId)
 	{
 		return NewFlagModel.Instance.HasNewFlag(ELocalStoragePlayerKey.InventoryAttributeItemRedDot, uniqueId);
 	}
 
-	// Token: 0x0600FD43 RID: 64835 RVA: 0x003D83FC File Offset: 0x003D65FC
+	// Token: 0x0600D169 RID: 53609 RVA: 0x003E3DDC File Offset: 0x003E1FDC
 	public bool RemoveRedDotCommonItem(int configId, int uniqueId = 0)
 	{
 		if (uniqueId != 0)
@@ -1612,7 +1627,7 @@ public class InventoryModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600FD44 RID: 64836 RVA: 0x003D843F File Offset: 0x003D663F
+	// Token: 0x0600D16A RID: 53610 RVA: 0x003E3E1F File Offset: 0x003E201F
 	public bool RemoveRedDotAttributeItem(int uniqueId)
 	{
 		if (!NewFlagModel.Instance.RemoveNewFlag(ELocalStoragePlayerKey.InventoryAttributeItemRedDot, uniqueId))
@@ -1623,33 +1638,33 @@ public class InventoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600FD45 RID: 64837 RVA: 0x003D8462 File Offset: 0x003D6662
+	// Token: 0x0600D16B RID: 53611 RVA: 0x003E3E42 File Offset: 0x003E2042
 	public bool SaveRedDotCommonItemConfigIdList()
 	{
 		return NewFlagModel.Instance.SaveNewFlagConfig(ELocalStoragePlayerKey.InventoryCommonItemRedDot);
 	}
 
-	// Token: 0x0600FD46 RID: 64838 RVA: 0x003D846F File Offset: 0x003D666F
+	// Token: 0x0600D16C RID: 53612 RVA: 0x003E3E4F File Offset: 0x003E204F
 	public bool SaveRedDotAttributeItemUniqueIdList()
 	{
 		return NewFlagModel.Instance.SaveNewFlagConfig(ELocalStoragePlayerKey.InventoryAttributeItemRedDot);
 	}
 
-	// Token: 0x0600FD47 RID: 64839 RVA: 0x003D847C File Offset: 0x003D667C
+	// Token: 0x0600D16D RID: 53613 RVA: 0x003E3E5C File Offset: 0x003E205C
 	[NullableContext(2)]
 	public void SetAcquireData(AcquireData acquireData)
 	{
 		this.CurrentAcquireData = acquireData;
 	}
 
-	// Token: 0x0600FD48 RID: 64840 RVA: 0x003D8485 File Offset: 0x003D6685
+	// Token: 0x0600D16E RID: 53614 RVA: 0x003E3E65 File Offset: 0x003E2065
 	[NullableContext(2)]
 	public AcquireData GetAcquireData()
 	{
 		return this.CurrentAcquireData;
 	}
 
-	// Token: 0x0600FD49 RID: 64841 RVA: 0x003D8490 File Offset: 0x003D6690
+	// Token: 0x0600D16F RID: 53615 RVA: 0x003E3E70 File Offset: 0x003E2070
 	public bool CheckIsCoinEnough(int coinItemId, IList<OneItemConfig> matList)
 	{
 		foreach (OneItemConfig oneItemConfig in matList)
@@ -1662,13 +1677,13 @@ public class InventoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600FD4A RID: 64842 RVA: 0x003D84F8 File Offset: 0x003D66F8
+	// Token: 0x0600D170 RID: 53616 RVA: 0x003E3ED8 File Offset: 0x003E20D8
 	public bool GetPhantomManageConfigClear()
 	{
 		return this.PhantomManageConfig.Count == 0;
 	}
 
-	// Token: 0x0600FD4B RID: 64843 RVA: 0x003D8508 File Offset: 0x003D6708
+	// Token: 0x0600D171 RID: 53617 RVA: 0x003E3EE8 File Offset: 0x003E20E8
 	public List<PhantomManageConfigData> GetPhantomManageConfigByType(PhantomSettingType type)
 	{
 		if (this.PhantomManageConfig.Count == 0 || !this.PhantomManageConfig.ContainsKey(type))
@@ -1679,7 +1694,7 @@ public class InventoryModel : ModelBase
 		return this.PhantomManageConfig[type];
 	}
 
-	// Token: 0x0600FD4C RID: 64844 RVA: 0x003D8560 File Offset: 0x003D6760
+	// Token: 0x0600D172 RID: 53618 RVA: 0x003E3F40 File Offset: 0x003E2140
 	[NullableContext(2)]
 	public PhantomManageConfigData GetPhantomManageConfigByTypeAndIndex(PhantomSettingType type, int index)
 	{
@@ -1694,7 +1709,7 @@ public class InventoryModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600FD4D RID: 64845 RVA: 0x003D85DC File Offset: 0x003D67DC
+	// Token: 0x0600D173 RID: 53619 RVA: 0x003E3FBC File Offset: 0x003E21BC
 	public void UpdatePhantomManageConfig(PhantomSettingType type, PhantomSettingUpdateResponse response)
 	{
 		OnePhantomSetting setting = response.Setting;
@@ -1716,8 +1731,8 @@ public class InventoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FD4E RID: 64846 RVA: 0x003D8678 File Offset: 0x003D6878
-	public void CoverAllPhantomManageConfig(List<PhantomSettingInfo> settingInfoList)
+	// Token: 0x0600D174 RID: 53620 RVA: 0x003E4058 File Offset: 0x003E2258
+	public void CoverAllPhantomManageConfig(IEnumerable<PhantomSettingInfo> settingInfoList)
 	{
 		this.PhantomManageConfig.Clear();
 		foreach (PhantomSettingInfo phantomSettingInfo in settingInfoList)
@@ -1756,15 +1771,15 @@ public class InventoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FD4F RID: 64847 RVA: 0x003D87D4 File Offset: 0x003D69D4
+	// Token: 0x0600D175 RID: 53621 RVA: 0x003E41B0 File Offset: 0x003E23B0
 	public void InitPhantomManageConfig(PhantomSettingResponse response)
 	{
 		this.PhantomManageConfig.Clear();
-		this.InitSettingsByType(PhantomSettingType.AutoLock, response.AutoLockSettings.ToList<OnePhantomSetting>());
-		this.InitSettingsByType(PhantomSettingType.AutoDisuse, response.AutoDisuseSettings.ToList<OnePhantomSetting>());
+		this.InitSettingsByType(PhantomSettingType.AutoLock, new List<OnePhantomSetting>(response.AutoLockSettings));
+		this.InitSettingsByType(PhantomSettingType.AutoDisuse, new List<OnePhantomSetting>(response.AutoDisuseSettings));
 	}
 
-	// Token: 0x0600FD50 RID: 64848 RVA: 0x003D8808 File Offset: 0x003D6A08
+	// Token: 0x0600D176 RID: 53622 RVA: 0x003E41E4 File Offset: 0x003E23E4
 	[return: Nullable(2)]
 	private OnePhantomSetting GetSettingByIndex(int index, List<OnePhantomSetting> settingList)
 	{
@@ -1778,7 +1793,7 @@ public class InventoryModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600FD51 RID: 64849 RVA: 0x003D8860 File Offset: 0x003D6A60
+	// Token: 0x0600D177 RID: 53623 RVA: 0x003E423C File Offset: 0x003E243C
 	private void InitSettingsByType(PhantomSettingType type, List<OnePhantomSetting> settings)
 	{
 		List<PhantomManageConfigData> list = new List<PhantomManageConfigData>();
@@ -1797,7 +1812,7 @@ public class InventoryModel : ModelBase
 		this.PhantomManageConfig[type] = list;
 	}
 
-	// Token: 0x0600FD52 RID: 64850 RVA: 0x003D88C0 File Offset: 0x003D6AC0
+	// Token: 0x0600D178 RID: 53624 RVA: 0x003E429C File Offset: 0x003E249C
 	public unsafe List<InventoryDefine.IManageConfigTitleItemData> GetSettingTitleItemDataList()
 	{
 		int filterIdConst = this.GetFilterIdConst();
@@ -1816,19 +1831,19 @@ public class InventoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FD53 RID: 64851 RVA: 0x003D893C File Offset: 0x003D6B3C
+	// Token: 0x0600D179 RID: 53625 RVA: 0x003E4318 File Offset: 0x003E2518
 	public int GetFilterIdConst()
 	{
 		return ConfigCommonParamById.GetIntConfig("PhantomAutoLockFilterId").GetValueOrDefault();
 	}
 
-	// Token: 0x0600FD54 RID: 64852 RVA: 0x003D895C File Offset: 0x003D6B5C
+	// Token: 0x0600D17A RID: 53626 RVA: 0x003E4338 File Offset: 0x003E2538
 	public int GetConfigMaxCountConst()
 	{
 		return ConfigCommonParamById.GetIntConfig("PhantomSettingFilterMaxCount").GetValueOrDefault(10);
 	}
 
-	// Token: 0x0600FD55 RID: 64853 RVA: 0x003D8980 File Offset: 0x003D6B80
+	// Token: 0x0600D17B RID: 53627 RVA: 0x003E435C File Offset: 0x003E255C
 	public InventoryDefine.ESettingGridType GetGridTypeByFilterRuleId(int filterRuleId)
 	{
 		InventoryDefine.ESettingGridType result = InventoryDefine.ESettingGridType.Small;
@@ -1836,45 +1851,45 @@ public class InventoryModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600FD56 RID: 64854 RVA: 0x003D89A0 File Offset: 0x003D6BA0
+	// Token: 0x0600D17C RID: 53628 RVA: 0x003E437C File Offset: 0x003E257C
 	[NullableContext(2)]
 	public void SetPhantomManageSelectSet(HashSet<int> selectSet)
 	{
 		this.PhantomManageSelectSet = selectSet;
 	}
 
-	// Token: 0x0600FD57 RID: 64855 RVA: 0x003D89A9 File Offset: 0x003D6BA9
+	// Token: 0x0600D17D RID: 53629 RVA: 0x003E4385 File Offset: 0x003E2585
 	[NullableContext(2)]
 	public HashSet<int> GetPhantomManageSelectSet()
 	{
 		return this.PhantomManageSelectSet;
 	}
 
-	// Token: 0x0600FD58 RID: 64856 RVA: 0x003D89B1 File Offset: 0x003D6BB1
+	// Token: 0x0600D17E RID: 53630 RVA: 0x003E438D File Offset: 0x003E258D
 	public void SetInventoryDataProxy(InventoryDataProxy proxy)
 	{
 		this.CurrentProxy = proxy;
 	}
 
-	// Token: 0x0600FD59 RID: 64857 RVA: 0x003D89BA File Offset: 0x003D6BBA
+	// Token: 0x0600D17F RID: 53631 RVA: 0x003E4396 File Offset: 0x003E2596
 	public void ResetInventoryDataProxy()
 	{
 		this._CurrentProxy = null;
 	}
 
-	// Token: 0x0600FD5A RID: 64858 RVA: 0x003D89C3 File Offset: 0x003D6BC3
+	// Token: 0x0600D180 RID: 53632 RVA: 0x003E439F File Offset: 0x003E259F
 	public bool SupportInventoryViewShowCurrency()
 	{
 		return this.CurrentProxy.SupportShowCurrency();
 	}
 
-	// Token: 0x0600FD5B RID: 64859 RVA: 0x003D89D0 File Offset: 0x003D6BD0
+	// Token: 0x0600D181 RID: 53633 RVA: 0x003E43AC File Offset: 0x003E25AC
 	public bool GetInteractiveItemsFunctionEnable()
 	{
 		return this.InteractiveItemsFunctionEnable;
 	}
 
-	// Token: 0x0600FD5C RID: 64860 RVA: 0x003D89D8 File Offset: 0x003D6BD8
+	// Token: 0x0600D182 RID: 53634 RVA: 0x003E43B4 File Offset: 0x003E25B4
 	public void SetInteractiveItemsFunctionEnable(bool enable)
 	{
 		bool flag = this.InteractiveItemsFunctionEnable != enable;
@@ -1885,8 +1900,8 @@ public class InventoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700135A RID: 4954
-	// (get) Token: 0x0600FD5D RID: 64861 RVA: 0x003D8A00 File Offset: 0x003D6C00
+	// Token: 0x17001386 RID: 4998
+	// (get) Token: 0x0600D183 RID: 53635 RVA: 0x003E43DC File Offset: 0x003E25DC
 	public static InventoryModel Instance
 	{
 		get
@@ -1895,7 +1910,7 @@ public class InventoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FD5E RID: 64862 RVA: 0x003D8A07 File Offset: 0x003D6C07
+	// Token: 0x0600D184 RID: 53636 RVA: 0x003E43E3 File Offset: 0x003E25E3
 	public static InventoryModel GetOrCreateInstance()
 	{
 		if (InventoryModel._Instance == null)
@@ -1905,7 +1920,7 @@ public class InventoryModel : ModelBase
 		return InventoryModel._Instance;
 	}
 
-	// Token: 0x0600FD5F RID: 64863 RVA: 0x003D8A1B File Offset: 0x003D6C1B
+	// Token: 0x0600D185 RID: 53637 RVA: 0x003E43F7 File Offset: 0x003E25F7
 	public static bool CreateInstance()
 	{
 		if (InventoryModel._Instance != null)
@@ -1916,99 +1931,99 @@ public class InventoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600FD60 RID: 64864 RVA: 0x003D8A31 File Offset: 0x003D6C31
+	// Token: 0x0600D186 RID: 53638 RVA: 0x003E440D File Offset: 0x003E260D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600FD61 RID: 64865 RVA: 0x003D8A33 File Offset: 0x003D6C33
+	// Token: 0x0600D187 RID: 53639 RVA: 0x003E440F File Offset: 0x003E260F
 	public static void ResetStaticDefaultValue()
 	{
 		InventoryModel._Instance = null;
 	}
 
-	// Token: 0x0600FD62 RID: 64866 RVA: 0x003D8A3B File Offset: 0x003D6C3B
+	// Token: 0x0600D188 RID: 53640 RVA: 0x003E4417 File Offset: 0x003E2617
 	static InventoryModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InventoryModel.CreateStaticDefaultValue), new Action(InventoryModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007573 RID: 30067
+	// Token: 0x04007655 RID: 30293
 	private string CD_TIME_REASON = "限时物品主动添加倒计时 [ConfigId:{0}, UniqueId:{1}]";
 
-	// Token: 0x04007574 RID: 30068
+	// Token: 0x04007656 RID: 30294
 	private int? OutsideUniqueId;
 
-	// Token: 0x04007575 RID: 30069
+	// Token: 0x04007657 RID: 30295
 	private int CurrentLockItemUniqueId;
 
-	// Token: 0x04007576 RID: 30070
+	// Token: 0x04007658 RID: 30296
 	[Nullable(2)]
 	private global::ItemViewData SelectedItemViewData;
 
-	// Token: 0x04007577 RID: 30071
+	// Token: 0x04007659 RID: 30297
 	[Nullable(2)]
 	private List<int> InventoryTabOpenIdList;
 
-	// Token: 0x04007578 RID: 30072
+	// Token: 0x0400765A RID: 30298
 	[Nullable(2)]
 	private NormalInventoryDataProxy _DefaultProxy;
 
-	// Token: 0x04007579 RID: 30073
+	// Token: 0x0400765B RID: 30299
 	[Nullable(2)]
 	private InventoryDataProxy _CurrentProxy;
 
-	// Token: 0x0400757A RID: 30074
+	// Token: 0x0400765C RID: 30300
 	private readonly Dictionary<int, Dictionary<int, CommonItemData>> CommonItemMap = new Dictionary<int, Dictionary<int, CommonItemData>>();
 
-	// Token: 0x0400757B RID: 30075
+	// Token: 0x0400765D RID: 30301
 	private readonly Dictionary<int, WeaponItemData> WeaponItemMap = new Dictionary<int, WeaponItemData>();
 
-	// Token: 0x0400757C RID: 30076
+	// Token: 0x0400765E RID: 30302
 	private readonly Dictionary<int, PhantomItemData> PhantomItemMap = new Dictionary<int, PhantomItemData>();
 
-	// Token: 0x0400757D RID: 30077
+	// Token: 0x0400765F RID: 30303
 	private readonly Dictionary<int, CalabashSkinItemData> CalabashSkinItemMap = new Dictionary<int, CalabashSkinItemData>();
 
-	// Token: 0x0400757E RID: 30078
+	// Token: 0x04007660 RID: 30304
 	private readonly Dictionary<int, OrnamentItemData> OrnamentItemMap = new Dictionary<int, OrnamentItemData>();
 
-	// Token: 0x0400757F RID: 30079
+	// Token: 0x04007661 RID: 30305
 	private readonly Dictionary<InventoryDefine.EItemType, HashSet<CommonItemData>> CommonItemByItemTypeMap = new Dictionary<InventoryDefine.EItemType, HashSet<CommonItemData>>();
 
-	// Token: 0x04007580 RID: 30080
+	// Token: 0x04007662 RID: 30306
 	private readonly Dictionary<InventoryDefine.EItemType, HashSet<ItemDataBase>> ItemTypeMap = new Dictionary<InventoryDefine.EItemType, HashSet<ItemDataBase>>();
 
-	// Token: 0x04007581 RID: 30081
+	// Token: 0x04007663 RID: 30307
 	private readonly Dictionary<InventoryDefine.EItemMainTypeId, global::ItemMainTypeMapping> ItemMainTypeMap = new Dictionary<InventoryDefine.EItemMainTypeId, global::ItemMainTypeMapping>();
 
-	// Token: 0x04007582 RID: 30082
+	// Token: 0x04007664 RID: 30308
 	[Nullable(2)]
 	private AcquireData CurrentAcquireData;
 
-	// Token: 0x04007583 RID: 30083
+	// Token: 0x04007665 RID: 30309
 	private readonly HashSet<long> CdTimeStampSet = new HashSet<long>();
 
-	// Token: 0x04007584 RID: 30084
+	// Token: 0x04007666 RID: 30310
 	private readonly Dictionary<long, TimerHandle> CdTimeStampHandleMap = new Dictionary<long, TimerHandle>();
 
-	// Token: 0x04007585 RID: 30085
+	// Token: 0x04007667 RID: 30311
 	public bool IsConfirmDestruction;
 
-	// Token: 0x04007586 RID: 30086
+	// Token: 0x04007668 RID: 30312
 	private int? ItemNeedCount;
 
-	// Token: 0x04007587 RID: 30087
+	// Token: 0x04007669 RID: 30313
 	private readonly Dictionary<PhantomSettingType, List<PhantomManageConfigData>> PhantomManageConfig = new Dictionary<PhantomSettingType, List<PhantomManageConfigData>>();
 
-	// Token: 0x04007588 RID: 30088
+	// Token: 0x0400766A RID: 30314
 	[Nullable(2)]
 	private HashSet<int> PhantomManageSelectSet;
 
-	// Token: 0x04007589 RID: 30089
+	// Token: 0x0400766B RID: 30315
 	private bool InteractiveItemsFunctionEnable = true;
 
-	// Token: 0x0400758A RID: 30090
+	// Token: 0x0400766C RID: 30316
 	[Nullable(2)]
 	private static InventoryModel _Instance;
 }

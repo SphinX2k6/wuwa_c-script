@@ -3,10 +3,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Sheriff.View
 {
-	// Token: 0x02004C5C RID: 19548
+	// Token: 0x02003C0D RID: 15373
 	public class SheriffStartTrackPopupViewData : UiViewData
 	{
-		// Token: 0x0401AE69 RID: 110185
+		// Token: 0x040157C6 RID: 88006
 		public int AnomalyId;
 	}
 }

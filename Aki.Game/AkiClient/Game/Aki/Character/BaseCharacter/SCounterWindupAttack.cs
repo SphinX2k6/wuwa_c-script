@@ -6,52 +6,52 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004308 RID: 17160
+	// Token: 0x02003346 RID: 13126
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/SCounterWindupAttack.SCounterWindupAttack")]
 	[UnrealStructLayout(144, 16, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 144)]
 	public class SCounterWindupAttack : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C605 RID: 181765 RVA: 0x00A1E6F4 File Offset: 0x00A1C8F4
+		// Token: 0x0602132E RID: 135982 RVA: 0x0095B7AF File Offset: 0x009599AF
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SCounterWindupAttack._ScriptStructPtr != 0) ? SCounterWindupAttack._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SCounterWindupAttack.SCounterWindupAttack", ref SCounterWindupAttack._ScriptStructPtr);
 		}
 
-		// Token: 0x17006EFC RID: 28412
-		// (get) Token: 0x0602C606 RID: 181766 RVA: 0x00A1E718 File Offset: 0x00A1C918
-		// (set) Token: 0x0602C607 RID: 181767 RVA: 0x00A1E737 File Offset: 0x00A1C937
+		// Token: 0x1700431A RID: 17178
+		// (get) Token: 0x0602132F RID: 135983 RVA: 0x0095B7D3 File Offset: 0x009599D3
+		// (set) Token: 0x06021330 RID: 135984 RVA: 0x0095B7F2 File Offset: 0x009599F2
 		public TSoftObjectPtr<UEffectModelBase> Effect
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_0, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_Effect, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_0, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_Effect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006EFD RID: 28413
-		// (get) Token: 0x0602C608 RID: 181768 RVA: 0x00A1E75C File Offset: 0x00A1C95C
-		// (set) Token: 0x0602C609 RID: 181769 RVA: 0x00A1E770 File Offset: 0x00A1C970
+		// Token: 0x1700431B RID: 17179
+		// (get) Token: 0x06021331 RID: 135985 RVA: 0x0095B817 File Offset: 0x00959A17
+		// (set) Token: 0x06021332 RID: 135986 RVA: 0x0095B82B File Offset: 0x00959A2B
 		public unsafe FGameplayTag Tag
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_Tag);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_Tag) = value;
 			}
 		}
 
-		// Token: 0x17006EFE RID: 28414
-		// (get) Token: 0x0602C60A RID: 181770 RVA: 0x00A1E788 File Offset: 0x00A1C988
-		// (set) Token: 0x0602C60B RID: 181771 RVA: 0x00A1E7CB File Offset: 0x00A1C9CB
+		// Token: 0x1700431C RID: 17180
+		// (get) Token: 0x06021333 RID: 135987 RVA: 0x0095B840 File Offset: 0x00959A40
+		// (set) Token: 0x06021334 RID: 135988 RVA: 0x0095B883 File Offset: 0x00959A83
 		public TArray<long> Buff
 		{
 			get
@@ -60,7 +60,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<long> result;
 				if ((result = this._Buff) == null)
 				{
-					result = (this._Buff = new TArray<long>(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._Buff = new TArray<long>(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_Buff, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -70,122 +70,111 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x17006EFF RID: 28415
-		// (get) Token: 0x0602C60C RID: 181772 RVA: 0x00A1E7D9 File Offset: 0x00A1C9D9
-		// (set) Token: 0x0602C60D RID: 181773 RVA: 0x00A1E7ED File Offset: 0x00A1C9ED
+		// Token: 0x1700431D RID: 17181
+		// (get) Token: 0x06021335 RID: 135989 RVA: 0x0095B891 File Offset: 0x00959A91
+		// (set) Token: 0x06021336 RID: 135990 RVA: 0x0095B8A5 File Offset: 0x00959AA5
 		public unsafe FName SocketName
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_SocketName);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_SocketName) = value;
 			}
 		}
 
-		// Token: 0x17006F00 RID: 28416
-		// (get) Token: 0x0602C60E RID: 181774 RVA: 0x00A1E802 File Offset: 0x00A1CA02
-		// (set) Token: 0x0602C60F RID: 181775 RVA: 0x00A1E812 File Offset: 0x00A1CA12
+		// Token: 0x1700431E RID: 17182
+		// (get) Token: 0x06021337 RID: 135991 RVA: 0x0095B8BA File Offset: 0x00959ABA
+		// (set) Token: 0x06021338 RID: 135992 RVA: 0x0095B8CA File Offset: 0x00959ACA
 		public unsafe bool EffectAttach
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_4) != 0;
+				return *(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_EffectAttach) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_4) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_EffectAttach) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006F01 RID: 28417
-		// (get) Token: 0x0602C610 RID: 181776 RVA: 0x00A1E823 File Offset: 0x00A1CA23
-		// (set) Token: 0x0602C611 RID: 181777 RVA: 0x00A1E837 File Offset: 0x00A1CA37
+		// Token: 0x1700431F RID: 17183
+		// (get) Token: 0x06021339 RID: 135993 RVA: 0x0095B8DB File Offset: 0x00959ADB
+		// (set) Token: 0x0602133A RID: 135994 RVA: 0x0095B8EF File Offset: 0x00959AEF
 		public unsafe FTransform RelativeTransform
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_RelativeTransform);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SCounterWindupAttack.__PropertyOffset_RelativeTransform) = value;
 			}
 		}
 
-		// Token: 0x0602C612 RID: 181778 RVA: 0x00A1E84C File Offset: 0x00A1CA4C
+		// Token: 0x0602133B RID: 135995 RVA: 0x0095B904 File Offset: 0x00959B04
 		public SCounterWindupAttack()
 		{
 		}
 
-		// Token: 0x0602C613 RID: 181779 RVA: 0x00A1E854 File Offset: 0x00A1CA54
-		public SCounterWindupAttack(TSoftObjectPtr<UEffectModelBase> Effect, FGameplayTag Tag, TArray<long> Buff, FName SocketName, bool EffectAttach, FTransform RelativeTransform)
-		{
-			this.Effect = Effect;
-			this.Tag = Tag;
-			this.Buff = Buff;
-			this.SocketName = SocketName;
-			this.EffectAttach = EffectAttach;
-			this.RelativeTransform = RelativeTransform;
-		}
-
-		// Token: 0x0602C614 RID: 181780 RVA: 0x00A1E889 File Offset: 0x00A1CA89
+		// Token: 0x0602133C RID: 135996 RVA: 0x0095B90C File Offset: 0x00959B0C
 		protected override IntPtr GetUStructPtr()
 		{
 			return SCounterWindupAttack.StaticStruct();
 		}
 
-		// Token: 0x0602C615 RID: 181781 RVA: 0x00A1E895 File Offset: 0x00A1CA95
+		// Token: 0x0602133D RID: 135997 RVA: 0x0095B918 File Offset: 0x00959B18
 		[NullableContext(2)]
 		public SCounterWindupAttack(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C616 RID: 181782 RVA: 0x00A1E89F File Offset: 0x00A1CA9F
+		// Token: 0x0602133E RID: 135998 RVA: 0x0095B922 File Offset: 0x00959B22
 		public SCounterWindupAttack(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C617 RID: 181783 RVA: 0x00A1E8AA File Offset: 0x00A1CAAA
+		// Token: 0x0602133F RID: 135999 RVA: 0x0095B92D File Offset: 0x00959B2D
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SCounterWindupAttack(Pointer, false, true);
 		}
 
-		// Token: 0x0602C618 RID: 181784 RVA: 0x00A1E8B4 File Offset: 0x00A1CAB4
+		// Token: 0x06021340 RID: 136000 RVA: 0x0095B937 File Offset: 0x00959B37
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SCounterWindupAttack(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017665 RID: 95845
+		// Token: 0x0401226E RID: 74350
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SCounterWindupAttack.SCounterWindupAttack";
 
-		// Token: 0x04017666 RID: 95846
+		// Token: 0x0401226F RID: 74351
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017667 RID: 95847
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012270 RID: 74352
+		internal static int __PropertyOffset_Effect;
 
-		// Token: 0x04017668 RID: 95848
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012271 RID: 74353
+		internal static int __PropertyOffset_Tag;
 
-		// Token: 0x04017669 RID: 95849
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012272 RID: 74354
+		internal static int __PropertyOffset_Buff;
 
-		// Token: 0x0401766A RID: 95850
+		// Token: 0x04012273 RID: 74355
 		[Nullable(2)]
 		private TArray<long> _Buff;
 
-		// Token: 0x0401766B RID: 95851
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012274 RID: 74356
+		internal static int __PropertyOffset_SocketName;
 
-		// Token: 0x0401766C RID: 95852
-		internal static int __PropertyOffset_4;
+		// Token: 0x04012275 RID: 74357
+		internal static int __PropertyOffset_EffectAttach;
 
-		// Token: 0x0401766D RID: 95853
-		internal static int __PropertyOffset_5;
+		// Token: 0x04012276 RID: 74358
+		internal static int __PropertyOffset_RelativeTransform;
 	}
 }

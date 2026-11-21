@@ -8,19 +8,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024A2 RID: 9378
+// Token: 0x02001989 RID: 6537
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionEquipmentDragItem : UiPanelBase
 {
-	// Token: 0x06012D3E RID: 77118 RVA: 0x004A5C0B File Offset: 0x004A3E0B
+	// Token: 0x060101FF RID: 66047 RVA: 0x004B36E5 File Offset: 0x004B18E5
 	[NullableContext(1)]
 	public VisionEquipmentDragItem(UUIItem uiItem)
 	{
 		this.SourceItem = uiItem;
 	}
 
-	// Token: 0x06012D3F RID: 77119 RVA: 0x004A5C1C File Offset: 0x004A3E1C
+	// Token: 0x06010200 RID: 66048 RVA: 0x004B36F4 File Offset: 0x004B18F4
 	public UniTask Init()
 	{
 		VisionEquipmentDragItem.<Init>d__4 <Init>d__;
@@ -31,7 +31,7 @@ public class VisionEquipmentDragItem : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012D40 RID: 77120 RVA: 0x004A5C60 File Offset: 0x004A3E60
+	// Token: 0x06010201 RID: 66049 RVA: 0x004B3738 File Offset: 0x004B1938
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,7 +43,7 @@ public class VisionEquipmentDragItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012D41 RID: 77121 RVA: 0x004A5CD0 File Offset: 0x004A3ED0
+	// Token: 0x06010202 RID: 66050 RVA: 0x004B37A8 File Offset: 0x004B19A8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionEquipmentDragItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -54,18 +54,18 @@ public class VisionEquipmentDragItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012D42 RID: 77122 RVA: 0x004A5D13 File Offset: 0x004A3F13
+	// Token: 0x06010203 RID: 66051 RVA: 0x004B37EB File Offset: 0x004B19EB
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06012D43 RID: 77123 RVA: 0x004A5D15 File Offset: 0x004A3F15
+	// Token: 0x06010204 RID: 66052 RVA: 0x004B37ED File Offset: 0x004B19ED
 	public UUIDraggableComponent GetDragComponent()
 	{
 		return base.GetDraggable(2);
 	}
 
-	// Token: 0x06012D44 RID: 77124 RVA: 0x004A5D20 File Offset: 0x004A3F20
+	// Token: 0x06010205 RID: 66053 RVA: 0x004B37F8 File Offset: 0x004B19F8
 	[NullableContext(1)]
 	public void UpdateItem(PhantomDataBase data)
 	{
@@ -78,23 +78,23 @@ public class VisionEquipmentDragItem : UiPanelBase
 		base.SetTextureByPath(itemConfigData.IconMiddle, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x04008DCF RID: 36303
+	// Token: 0x04008F19 RID: 36633
 	private readonly UUIItem SourceItem;
 
-	// Token: 0x04008DD0 RID: 36304
+	// Token: 0x04008F1A RID: 36634
 	private VisionFetterSuitItem VisionFetterSuitItem;
 
-	// Token: 0x02008A24 RID: 35364
+	// Token: 0x02007BAE RID: 31662
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CDB6 RID: 183734
+		// Token: 0x040280D6 RID: 164054
 		BgSprite,
-		// Token: 0x0402CDB7 RID: 183735
+		// Token: 0x040280D7 RID: 164055
 		Texture,
-		// Token: 0x0402CDB8 RID: 183736
+		// Token: 0x040280D8 RID: 164056
 		DragComponent,
-		// Token: 0x0402CDB9 RID: 183737
+		// Token: 0x040280D9 RID: 164057
 		SuitElementItem
 	}
 }

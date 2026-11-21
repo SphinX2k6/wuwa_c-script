@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F44 RID: 3908
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200106E RID: 4206
 	public class IDistributeParams
 	{
-		// Token: 0x060056D4 RID: 22228 RVA: 0x000D4994 File Offset: 0x000D2B94
+		// Token: 0x06005CA4 RID: 23716 RVA: 0x000E1358 File Offset: 0x000DF558
 		private IDistributeParams_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060056D5 RID: 22229 RVA: 0x000D49CC File Offset: 0x000D2BCC
+		// Token: 0x06005CA5 RID: 23717 RVA: 0x000E1390 File Offset: 0x000DF590
 		public static IDistributeParams Create([Nullable(2)] IDistributeParams instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060056D6 RID: 22230 RVA: 0x000D49DF File Offset: 0x000D2BDF
+		// Token: 0x06005CA6 RID: 23718 RVA: 0x000E13A3 File Offset: 0x000DF5A3
 		public static IDistributeParams CreateFromSetValue([Nullable(2)] IDistributeParams_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060056D7 RID: 22231 RVA: 0x000D49F2 File Offset: 0x000D2BF2
+		// Token: 0x06005CA7 RID: 23719 RVA: 0x000E13B6 File Offset: 0x000DF5B6
 		public IDistributeParams_SetValue ToSetValue()
 		{
 			return new IDistributeParams_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D05 RID: 7429
-		// (get) Token: 0x060056D8 RID: 22232 RVA: 0x000D4A14 File Offset: 0x000D2C14
-		// (set) Token: 0x060056D9 RID: 22233 RVA: 0x000D4A4E File Offset: 0x000D2C4E
+		// Token: 0x17001EA9 RID: 7849
+		// (get) Token: 0x06005CA8 RID: 23720 RVA: 0x000E13D8 File Offset: 0x000DF5D8
+		// (set) Token: 0x06005CA9 RID: 23721 RVA: 0x000E1412 File Offset: 0x000DF612
 		public virtual int? InformationViewCheck
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D06 RID: 7430
-		// (get) Token: 0x060056DA RID: 22234 RVA: 0x000D4A5C File Offset: 0x000D2C5C
-		// (set) Token: 0x060056DB RID: 22235 RVA: 0x000D4ABD File Offset: 0x000D2CBD
+		// Token: 0x17001EAA RID: 7850
+		// (get) Token: 0x06005CAA RID: 23722 RVA: 0x000E1420 File Offset: 0x000DF620
+		// (set) Token: 0x06005CAB RID: 23723 RVA: 0x000E1481 File Offset: 0x000DF681
 		[Nullable(2)]
 		public virtual IItemConfig UseItem
 		{
@@ -118,18 +116,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400349A RID: 13466
+		// Token: 0x040037C9 RID: 14281
 		[Nullable(2)]
 		protected IDistributeParams FbInstance;
 
-		// Token: 0x0400349B RID: 13467
+		// Token: 0x040037CA RID: 14282
 		[Nullable(2)]
 		protected IDistributeParams_SetValue PocoInterface;
 
-		// Token: 0x0400349C RID: 13468
+		// Token: 0x040037CB RID: 14283
 		private IItemConfig _UseItemCache;
 
-		// Token: 0x0400349D RID: 13469
+		// Token: 0x040037CC RID: 14284
 		private bool _UseItemInited;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012DA RID: 4826
+	// Token: 0x02001420 RID: 5152
 	public class IEnableSystemConfig
 	{
-		// Token: 0x06006E4E RID: 28238 RVA: 0x0010AA42 File Offset: 0x00108C42
-		[NullableContext(1)]
+		// Token: 0x060074CE RID: 29902 RVA: 0x00118D42 File Offset: 0x00116F42
 		public static IEnableSystemConfig Create(IEnableSystemConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700226D RID: 8813
-		// (get) Token: 0x06006E4F RID: 28239 RVA: 0x0010AA61 File Offset: 0x00108C61
+		// Token: 0x17002430 RID: 9264
+		// (get) Token: 0x060074CF RID: 29903 RVA: 0x00118D61 File Offset: 0x00116F61
 		public virtual EEnableSystemType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F30 RID: 16176
+		// Token: 0x0400429E RID: 17054
 		private IEnableSystemConfig Instance;
 	}
 }

@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002E9B RID: 11931
+// Token: 0x020023EE RID: 9198
 public static class CustomTimesConfigParser
 {
-	// Token: 0x060197CB RID: 104395 RVA: 0x006942F0 File Offset: 0x006924F0
+	// Token: 0x060170A1 RID: 94369 RVA: 0x006BA6B0 File Offset: 0x006B88B0
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -37,7 +36,7 @@ public static class CustomTimesConfigParser
 		return array2;
 	}
 
-	// Token: 0x060197CC RID: 104396 RVA: 0x00694360 File Offset: 0x00692560
+	// Token: 0x060170A2 RID: 94370 RVA: 0x006BA720 File Offset: 0x006B8920
 	[NullableContext(2)]
 	private unsafe static CustomTimesConfig ParseConfig(string config, long buffId)
 	{
@@ -45,9 +44,13 @@ public static class CustomTimesConfigParser
 		{
 			return null;
 		}
-		string[] array = (from v in config.Split('#', StringSplitOptions.None)
-		select v.Trim()).ToArray<string>();
-		if (array.Length < 6)
+		string[] array = config.Split('#', StringSplitOptions.None);
+		string[] array2 = new string[array.Length];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array2[i] = array[i].Trim();
+		}
+		if (array2.Length < 6)
 		{
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.Battle;
@@ -66,7 +69,7 @@ public static class CustomTimesConfigParser
 		int valueType;
 		float rate;
 		float limit;
-		if (!int.TryParse(array[num++], out calcType) || !int.TryParse(array[num++], out attributeId) || !int.TryParse(array[num++], out valueTarget) || !int.TryParse(array[num++], out valueType) || !float.TryParse(array[num++], out rate) || !float.TryParse(array[num++], out limit))
+		if (!int.TryParse(array2[num++], out calcType) || !int.TryParse(array2[num++], out attributeId) || !int.TryParse(array2[num++], out valueTarget) || !int.TryParse(array2[num++], out valueType) || !float.TryParse(array2[num++], out rate) || !float.TryParse(array2[num++], out limit))
 		{
 			Log instance2 = Log.Instance;
 			ELogModule module2 = ELogModule.Battle;
@@ -89,13 +92,13 @@ public static class CustomTimesConfigParser
 		};
 	}
 
-	// Token: 0x060197CD RID: 104397 RVA: 0x006944F9 File Offset: 0x006926F9
+	// Token: 0x060170A3 RID: 94371 RVA: 0x006BA8B9 File Offset: 0x006B8AB9
 	[NullableContext(1)]
 	public static float CalcCustomTimes(CustomTimesConfig config, BaseAttributeComponent attrComp)
 	{
 		return Math.Min((float)Math.Floor((double)(((config.ValueType == ECustomTimesValueType.CurrentValue) ? attrComp.GetCurrentValue((EAttributeType)config.AttributeId) : attrComp.GetBaseValue((EAttributeType)config.AttributeId)) * config.Rate)), config.Limit);
 	}
 
-	// Token: 0x0400BE2E RID: 48686
+	// Token: 0x0400C1C9 RID: 49609
 	private const int CUSTOM_TIMES_PARAM_COUNT = 6;
 }

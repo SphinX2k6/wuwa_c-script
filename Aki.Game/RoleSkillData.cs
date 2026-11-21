@@ -1,22 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.LevelGamePlay;
 
-// Token: 0x020027B7 RID: 10167
+// Token: 0x02001D32 RID: 7474
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleSkillData : RoleModuleDataBase
 {
-	// Token: 0x06014E85 RID: 85637 RVA: 0x0054F194 File Offset: 0x0054D394
+	// Token: 0x06012884 RID: 75908 RVA: 0x00579EBC File Offset: 0x005780BC
 	public RoleSkillData(int roleId) : base(roleId)
 	{
 	}
 
-	// Token: 0x06014E86 RID: 85638 RVA: 0x0054F1EC File Offset: 0x0054D3EC
+	// Token: 0x06012885 RID: 75909 RVA: 0x00579F14 File Offset: 0x00578114
 	public int GetSkillNodeLevel(SkillTree config)
 	{
 		int result = 0;
@@ -33,7 +32,7 @@ public class RoleSkillData : RoleModuleDataBase
 		return result;
 	}
 
-	// Token: 0x06014E87 RID: 85639 RVA: 0x0054F22F File Offset: 0x0054D42F
+	// Token: 0x06012886 RID: 75910 RVA: 0x00579F57 File Offset: 0x00578157
 	public int GetSkillLevel(int skillId)
 	{
 		if (!this.RoleSkillMap.ContainsKey(skillId))
@@ -43,7 +42,7 @@ public class RoleSkillData : RoleModuleDataBase
 		return this.RoleSkillMap[skillId];
 	}
 
-	// Token: 0x06014E88 RID: 85640 RVA: 0x0054F250 File Offset: 0x0054D450
+	// Token: 0x06012887 RID: 75911 RVA: 0x00579F78 File Offset: 0x00578178
 	public void SetSkillLevel(int key, int level)
 	{
 		this.RoleSkillMap[key] = level;
@@ -57,7 +56,7 @@ public class RoleSkillData : RoleModuleDataBase
 		}
 	}
 
-	// Token: 0x06014E89 RID: 85641 RVA: 0x0054F29C File Offset: 0x0054D49C
+	// Token: 0x06012888 RID: 75912 RVA: 0x00579FC4 File Offset: 0x005781C4
 	public int[] GetAllSkillLevel()
 	{
 		int[] array = new int[this.RoleSkillMap.Values.Count];
@@ -65,7 +64,7 @@ public class RoleSkillData : RoleModuleDataBase
 		return array;
 	}
 
-	// Token: 0x06014E8A RID: 85642 RVA: 0x0054F2D4 File Offset: 0x0054D4D4
+	// Token: 0x06012889 RID: 75913 RVA: 0x00579FFC File Offset: 0x005781FC
 	public Aki.Config.Skill[] GetSkillList()
 	{
 		if (this.SkillConfigList.Count > 0)
@@ -75,12 +74,12 @@ public class RoleSkillData : RoleModuleDataBase
 		int skillId = base.GetRoleConfig().SkillId;
 		List<Aki.Config.Skill> list = ConfigCommon.ToList<Aki.Config.Skill>(RoleSkillConfig.Instance.GetSkillList(skillId));
 		list.Sort((Aki.Config.Skill aSkill, Aki.Config.Skill bSkill) => aSkill.SortIndex - bSkill.SortIndex);
-		this.InitSkillConfigCache(list.ToList<Aki.Config.Skill>());
+		this.InitSkillConfigCache(list);
 		return list.ToArray();
 	}
 
-	// Token: 0x06014E8B RID: 85643 RVA: 0x0054F354 File Offset: 0x0054D554
-	private void InitSkillConfigCache(List<Aki.Config.Skill> skillConfigs)
+	// Token: 0x0601288A RID: 75914 RVA: 0x0057A078 File Offset: 0x00578278
+	private void InitSkillConfigCache(IReadOnlyList<Aki.Config.Skill> skillConfigs)
 	{
 		int count = skillConfigs.Count;
 		for (int i = 0; i < count; i++)
@@ -91,7 +90,7 @@ public class RoleSkillData : RoleModuleDataBase
 		}
 	}
 
-	// Token: 0x06014E8C RID: 85644 RVA: 0x0054F39C File Offset: 0x0054D59C
+	// Token: 0x0601288B RID: 75915 RVA: 0x0057A0C0 File Offset: 0x005782C0
 	public Aki.Config.Skill? GetSkillConfigFromCache(int id)
 	{
 		if (this.SkillConfigMap.Count == 0)
@@ -105,13 +104,13 @@ public class RoleSkillData : RoleModuleDataBase
 		return new Aki.Config.Skill?(this.SkillConfigMap[id]);
 	}
 
-	// Token: 0x06014E8D RID: 85645 RVA: 0x0054F3E6 File Offset: 0x0054D5E6
+	// Token: 0x0601288C RID: 75916 RVA: 0x0057A10A File Offset: 0x0057830A
 	public bool IsHasSkill(int id)
 	{
 		return this.RoleSkillMap.ContainsKey(id);
 	}
 
-	// Token: 0x06014E8E RID: 85646 RVA: 0x0054F3F4 File Offset: 0x0054D5F4
+	// Token: 0x0601288D RID: 75917 RVA: 0x0057A118 File Offset: 0x00578318
 	protected IList<long> GetReferenceList(int skillId, ERoleSkillReferenceType type)
 	{
 		Aki.Config.Skill? skillConfigById = RoleSkillConfig.Instance.GetSkillConfigById(skillId);
@@ -135,7 +134,7 @@ public class RoleSkillData : RoleModuleDataBase
 		}
 	}
 
-	// Token: 0x06014E8F RID: 85647 RVA: 0x0054F49C File Offset: 0x0054D69C
+	// Token: 0x0601288E RID: 75918 RVA: 0x0057A1C0 File Offset: 0x005783C0
 	protected int GetDefaultSkillLevel(ERoleSkillReferenceType type)
 	{
 		switch (type)
@@ -151,7 +150,7 @@ public class RoleSkillData : RoleModuleDataBase
 		}
 	}
 
-	// Token: 0x06014E90 RID: 85648 RVA: 0x0054F4BC File Offset: 0x0054D6BC
+	// Token: 0x0601288F RID: 75919 RVA: 0x0057A1E0 File Offset: 0x005783E0
 	public void SetSkillReferenceMapBySkillId(int skillId)
 	{
 		foreach (ERoleSkillReferenceType eroleSkillReferenceType in Enum.GetValues<ERoleSkillReferenceType>())
@@ -180,7 +179,7 @@ public class RoleSkillData : RoleModuleDataBase
 		}
 	}
 
-	// Token: 0x06014E91 RID: 85649 RVA: 0x0054F5A4 File Offset: 0x0054D7A4
+	// Token: 0x06012890 RID: 75920 RVA: 0x0057A2C8 File Offset: 0x005784C8
 	[NullableContext(2)]
 	public int GetReferencedSkillLevel(long id, ERoleSkillReferenceType type, Entity entity = null)
 	{
@@ -198,20 +197,20 @@ public class RoleSkillData : RoleModuleDataBase
 		return skillLevel;
 	}
 
-	// Token: 0x06014E92 RID: 85650 RVA: 0x0054F61A File Offset: 0x0054D81A
+	// Token: 0x06012891 RID: 75921 RVA: 0x0057A33E File Offset: 0x0057853E
 	public void SetSkillNodeStateData(Dictionary<int, SkillNodeDataInfo> skillNodeState)
 	{
 		this.SkillNodeDataMap = skillNodeState;
 		EventSystem.Instance.Emit(EEventName.SkillTreeRefresh);
 	}
 
-	// Token: 0x06014E93 RID: 85651 RVA: 0x0054F633 File Offset: 0x0054D833
+	// Token: 0x06012892 RID: 75922 RVA: 0x0057A357 File Offset: 0x00578557
 	public Dictionary<int, SkillNodeDataInfo> GetSkillNodeStateData()
 	{
 		return this.SkillNodeDataMap;
 	}
 
-	// Token: 0x06014E94 RID: 85652 RVA: 0x0054F63B File Offset: 0x0054D83B
+	// Token: 0x06012893 RID: 75923 RVA: 0x0057A35F File Offset: 0x0057855F
 	public ESkillTreeNodeState GetSkillTreeNodeState(SkillTree skillTree, int roleId)
 	{
 		if (skillTree.SkillId > 0 && skillTree.NodeType != 3)
@@ -221,7 +220,7 @@ public class RoleSkillData : RoleModuleDataBase
 		return this.GetSkillTreeAttributeNodeState(skillTree, roleId);
 	}
 
-	// Token: 0x06014E95 RID: 85653 RVA: 0x0054F664 File Offset: 0x0054D864
+	// Token: 0x06012894 RID: 75924 RVA: 0x0057A388 File Offset: 0x00578588
 	public ESkillTreeNodeState GetSkillTreeSkillNodeState(SkillTree skillTree, int roleId)
 	{
 		int skillId = skillTree.SkillId;
@@ -247,7 +246,7 @@ public class RoleSkillData : RoleModuleDataBase
 		return ESkillTreeNodeState.Inactive;
 	}
 
-	// Token: 0x06014E96 RID: 85654 RVA: 0x0054F6E8 File Offset: 0x0054D8E8
+	// Token: 0x06012895 RID: 75925 RVA: 0x0057A40C File Offset: 0x0057860C
 	public ESkillTreeNodeState GetSkillTreeAttributeNodeState(SkillTree skillTree, int roleId)
 	{
 		if (this.IsSkillTreeNodeActive(skillTree.Id))
@@ -269,7 +268,7 @@ public class RoleSkillData : RoleModuleDataBase
 		return ESkillTreeNodeState.Inactive;
 	}
 
-	// Token: 0x06014E97 RID: 85655 RVA: 0x0054F750 File Offset: 0x0054D950
+	// Token: 0x06012896 RID: 75926 RVA: 0x0057A474 File Offset: 0x00578674
 	[NullableContext(2)]
 	public string GetUnlockConditionTextId(SkillTree skillTree)
 	{
@@ -286,7 +285,7 @@ public class RoleSkillData : RoleModuleDataBase
 		return null;
 	}
 
-	// Token: 0x06014E98 RID: 85656 RVA: 0x0054F794 File Offset: 0x0054D994
+	// Token: 0x06012897 RID: 75927 RVA: 0x0057A4B8 File Offset: 0x005786B8
 	public int GetRoleSkillTreeNodeUnlockConditionId(SkillTree skillTree)
 	{
 		int skillId = skillTree.SkillId;
@@ -299,14 +298,14 @@ public class RoleSkillData : RoleModuleDataBase
 		return skillTree.UnLockCondition;
 	}
 
-	// Token: 0x06014E99 RID: 85657 RVA: 0x0054F7F8 File Offset: 0x0054D9F8
+	// Token: 0x06012898 RID: 75928 RVA: 0x0057A51C File Offset: 0x0057871C
 	public bool IsSkillTreeNodeActive(int id)
 	{
 		SkillNodeDataInfo valueOrDefault = this.GetSkillNodeStateData().GetValueOrDefault(id);
 		return valueOrDefault != null && valueOrDefault.IsActive;
 	}
 
-	// Token: 0x06014E9A RID: 85658 RVA: 0x0054F820 File Offset: 0x0054DA20
+	// Token: 0x06012899 RID: 75929 RVA: 0x0057A544 File Offset: 0x00578744
 	public SkillCondition? GetSkillTreeUnsatisfiedCondition(SkillTree skillTree)
 	{
 		foreach (int skillConditionId in skillTree.ConditionIter())
@@ -349,7 +348,7 @@ public class RoleSkillData : RoleModuleDataBase
 		return null;
 	}
 
-	// Token: 0x06014E9B RID: 85659 RVA: 0x0054F9A0 File Offset: 0x0054DBA0
+	// Token: 0x0601289A RID: 75930 RVA: 0x0057A6C4 File Offset: 0x005788C4
 	public bool IsSkillTreeNodeConsumeSatisfied(int nodeId)
 	{
 		int skillNodeLevel = this.GetSkillNodeLevel(RoleSkillConfig.Instance.GetSkillTreeNode(nodeId).Value);
@@ -370,7 +369,7 @@ public class RoleSkillData : RoleModuleDataBase
 		return true;
 	}
 
-	// Token: 0x06014E9C RID: 85660 RVA: 0x0054FA4C File Offset: 0x0054DC4C
+	// Token: 0x0601289B RID: 75931 RVA: 0x0057A770 File Offset: 0x00578970
 	public int GetSkillIdAfterUpgrade(int skillIdBeforeUpgrade)
 	{
 		if (!this.RoleUpgradeSkillMap.ContainsKey(skillIdBeforeUpgrade))
@@ -380,13 +379,13 @@ public class RoleSkillData : RoleModuleDataBase
 		return this.RoleUpgradeSkillMap[skillIdBeforeUpgrade];
 	}
 
-	// Token: 0x06014E9D RID: 85661 RVA: 0x0054FA6A File Offset: 0x0054DC6A
+	// Token: 0x0601289C RID: 75932 RVA: 0x0057A78E File Offset: 0x0057898E
 	public bool HasAnySkillUpgrade()
 	{
 		return this.RoleUpgradeSkillMap.Count > 0;
 	}
 
-	// Token: 0x06014E9E RID: 85662 RVA: 0x0054FA7C File Offset: 0x0054DC7C
+	// Token: 0x0601289D RID: 75933 RVA: 0x0057A7A0 File Offset: 0x005789A0
 	public ESkillShowTagType GetSkillShowTagType(int skillId)
 	{
 		Aki.Config.Skill? skillConfigById = RoleSkillConfig.Instance.GetSkillConfigById(skillId);
@@ -397,21 +396,21 @@ public class RoleSkillData : RoleModuleDataBase
 		return ESkillShowTagType.None;
 	}
 
-	// Token: 0x04009D11 RID: 40209
+	// Token: 0x0400A0F4 RID: 41204
 	protected Dictionary<int, int> RoleSkillMap = new Dictionary<int, int>();
 
-	// Token: 0x04009D12 RID: 40210
+	// Token: 0x0400A0F5 RID: 41205
 	protected Dictionary<int, int> RoleUpgradeSkillMap = new Dictionary<int, int>();
 
-	// Token: 0x04009D13 RID: 40211
+	// Token: 0x0400A0F6 RID: 41206
 	protected Dictionary<ERoleSkillReferenceType, Dictionary<long, int>> RoleSkillReferenceMap = new Dictionary<ERoleSkillReferenceType, Dictionary<long, int>>();
 
-	// Token: 0x04009D14 RID: 40212
+	// Token: 0x0400A0F7 RID: 41207
 	protected Dictionary<int, SkillNodeDataInfo> SkillNodeDataMap = new Dictionary<int, SkillNodeDataInfo>();
 
-	// Token: 0x04009D15 RID: 40213
+	// Token: 0x0400A0F8 RID: 41208
 	private readonly Dictionary<int, Aki.Config.Skill> SkillConfigMap = new Dictionary<int, Aki.Config.Skill>();
 
-	// Token: 0x04009D16 RID: 40214
+	// Token: 0x0400A0F9 RID: 41209
 	private readonly List<Aki.Config.Skill> SkillConfigList = new List<Aki.Config.Skill>();
 }

@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012AF RID: 4783
+// Token: 0x02000763 RID: 1891
 [NullableContext(1)]
 [Nullable(0)]
 public class SevenHillsMainView : UiViewBase
 {
-	// Token: 0x06008361 RID: 33633 RVA: 0x001BFAD0 File Offset: 0x001BDCD0
+	// Token: 0x060056F8 RID: 22264 RVA: 0x001C8860 File Offset: 0x001C6A60
 	public SevenHillsMainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06008362 RID: 33634 RVA: 0x001BFADC File Offset: 0x001BDCDC
+	// Token: 0x060056F9 RID: 22265 RVA: 0x001C886C File Offset: 0x001C6A6C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -46,7 +46,7 @@ public class SevenHillsMainView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06008363 RID: 33635 RVA: 0x001BFC0C File Offset: 0x001BDE0C
+	// Token: 0x060056FA RID: 22266 RVA: 0x001C899C File Offset: 0x001C6B9C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SevenHillsMainView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ public class SevenHillsMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008364 RID: 33636 RVA: 0x001BFC50 File Offset: 0x001BDE50
+	// Token: 0x060056FB RID: 22267 RVA: 0x001C89E0 File Offset: 0x001C6BE0
 	protected virtual void RefreshTitleIcon()
 	{
 		string stringConfig = ConfigCommonParamById.GetStringConfig("SevenHillsIconPath");
@@ -72,7 +72,7 @@ public class SevenHillsMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008365 RID: 33637 RVA: 0x001BFC84 File Offset: 0x001BDE84
+	// Token: 0x060056FC RID: 22268 RVA: 0x001C8A14 File Offset: 0x001C6C14
 	protected override void OnBeforeShow()
 	{
 		int scoreItemCount = this.ActivityBaseData.GetScoreItemCount();
@@ -93,7 +93,7 @@ public class SevenHillsMainView : UiViewBase
 		this.RewardBoxLayout.RefreshByData(this.ActivityBaseData.GetAllScoreRewardData(), null, false);
 	}
 
-	// Token: 0x06008366 RID: 33638 RVA: 0x001BFD14 File Offset: 0x001BDF14
+	// Token: 0x060056FD RID: 22269 RVA: 0x001C8AA4 File Offset: 0x001C6CA4
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<RewardPopupData>(EEventName.RefreshRewardPopUp, new Action<RewardPopupData>(this.OnRefreshRewardPopUp));
@@ -101,7 +101,7 @@ public class SevenHillsMainView : UiViewBase
 		EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x06008367 RID: 33639 RVA: 0x001BFD78 File Offset: 0x001BDF78
+	// Token: 0x060056FE RID: 22270 RVA: 0x001C8B08 File Offset: 0x001C6D08
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshRewardPopUp, new Action<RewardPopupData>(this.OnRefreshRewardPopUp));
@@ -109,7 +109,7 @@ public class SevenHillsMainView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x06008368 RID: 33640 RVA: 0x001BFDD9 File Offset: 0x001BDFD9
+	// Token: 0x060056FF RID: 22271 RVA: 0x001C8B69 File Offset: 0x001C6D69
 	private SevenHillsRewardBoxItem CreateRewardBoxItem()
 	{
 		return new SevenHillsRewardBoxItem
@@ -118,7 +118,7 @@ public class SevenHillsMainView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008369 RID: 33641 RVA: 0x001BFDEC File Offset: 0x001BDFEC
+	// Token: 0x06005700 RID: 22272 RVA: 0x001C8B7C File Offset: 0x001C6D7C
 	private SevenHillsStageItem CreateStageItem()
 	{
 		return new SevenHillsStageItem
@@ -128,13 +128,13 @@ public class SevenHillsMainView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600836A RID: 33642 RVA: 0x001BFE12 File Offset: 0x001BE012
+	// Token: 0x06005701 RID: 22273 RVA: 0x001C8BA2 File Offset: 0x001C6DA2
 	private void OnRefreshRewardPopUp(RewardPopupData data)
 	{
 		this.RewardPopup.Refresh(data);
 	}
 
-	// Token: 0x0600836B RID: 33643 RVA: 0x001BFE20 File Offset: 0x001BE020
+	// Token: 0x06005702 RID: 22274 RVA: 0x001C8BB0 File Offset: 0x001C6DB0
 	private void OnRefreshRewardLayout(int activityId)
 	{
 		if (this.ActivityBaseData != null && this.ActivityBaseData.Id == activityId)
@@ -143,7 +143,7 @@ public class SevenHillsMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600836C RID: 33644 RVA: 0x001BFE50 File Offset: 0x001BE050
+	// Token: 0x06005703 RID: 22275 RVA: 0x001C8BE0 File Offset: 0x001C6DE0
 	protected virtual void OnClickStageItem(int stageId)
 	{
 		UiManager.Instance.OpenView(EUiViewName.SevenHillsStageTaskView, new object[]
@@ -153,7 +153,7 @@ public class SevenHillsMainView : UiViewBase
 		}, null);
 	}
 
-	// Token: 0x0600836D RID: 33645 RVA: 0x001BFE7A File Offset: 0x001BE07A
+	// Token: 0x06005704 RID: 22276 RVA: 0x001C8C0A File Offset: 0x001C6E0A
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		if (param == "Start" || param == "showviewStart")
@@ -167,15 +167,15 @@ public class SevenHillsMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x04003B2E RID: 15150
+	// Token: 0x04003BC6 RID: 15302
 	[Nullable(2)]
 	protected ActivityLongShanData ActivityBaseData;
 
-	// Token: 0x04003B2F RID: 15151
+	// Token: 0x04003BC7 RID: 15303
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003B30 RID: 15152
+	// Token: 0x04003BC8 RID: 15304
 	[Nullable(new byte[]
 	{
 		2,
@@ -184,7 +184,7 @@ public class SevenHillsMainView : UiViewBase
 	})]
 	private GenericLayout<SevenHillsRewardBoxItem, LongShanScoreRewardData> RewardBoxLayout;
 
-	// Token: 0x04003B31 RID: 15153
+	// Token: 0x04003BC9 RID: 15305
 	[Nullable(new byte[]
 	{
 		2,
@@ -192,36 +192,36 @@ public class SevenHillsMainView : UiViewBase
 	})]
 	private GenericLayout<SevenHillsStageItem, int> StageLayout;
 
-	// Token: 0x04003B32 RID: 15154
+	// Token: 0x04003BCA RID: 15306
 	[Nullable(2)]
 	private CommonRewardPopup RewardPopup;
 
-	// Token: 0x020078D0 RID: 30928
+	// Token: 0x02006A5A RID: 27226
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027CD8 RID: 163032
+		// Token: 0x04023006 RID: 143366
 		public const int ItemCaption = 0;
 
-		// Token: 0x04027CD9 RID: 163033
+		// Token: 0x04023007 RID: 143367
 		public const int LayoutRewardBox = 1;
 
-		// Token: 0x04027CDA RID: 163034
+		// Token: 0x04023008 RID: 143368
 		public const int ItemRewardBox = 2;
 
-		// Token: 0x04027CDB RID: 163035
+		// Token: 0x04023009 RID: 143369
 		public const int TextCount = 3;
 
-		// Token: 0x04027CDC RID: 163036
+		// Token: 0x0402300A RID: 143370
 		public const int TextTotal = 4;
 
-		// Token: 0x04027CDD RID: 163037
+		// Token: 0x0402300B RID: 143371
 		public const int LayoutStage = 5;
 
-		// Token: 0x04027CDE RID: 163038
+		// Token: 0x0402300C RID: 143372
 		public const int ItemStage = 6;
 
-		// Token: 0x04027CDF RID: 163039
+		// Token: 0x0402300D RID: 143373
 		public const int ListAnimController = 7;
 	}
 }

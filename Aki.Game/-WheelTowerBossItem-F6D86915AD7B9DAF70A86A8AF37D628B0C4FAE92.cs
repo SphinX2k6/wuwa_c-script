@@ -1,34 +1,34 @@
 ﻿using System;
 
-// Token: 0x020015B7 RID: 5559
+// Token: 0x02000A6F RID: 2671
 internal enum <WheelTowerBossItem>F6D86915AD7B9DAF70A86A8AF37D628B0C4FAE92C5C41F582C514549C65F63D80__EWheelTowerBossItemComponent
 {
-	// Token: 0x040045BA RID: 17850
+	// Token: 0x04004660 RID: 18016
 	Button,
-	// Token: 0x040045BB RID: 17851
+	// Token: 0x04004661 RID: 18017
 	Number,
-	// Token: 0x040045BC RID: 17852
+	// Token: 0x04004662 RID: 18018
 	Name,
-	// Token: 0x040045BD RID: 17853
+	// Token: 0x04004663 RID: 18019
 	BtnHelpInfo,
-	// Token: 0x040045BE RID: 17854
+	// Token: 0x04004664 RID: 18020
 	HpBar,
-	// Token: 0x040045BF RID: 17855
+	// Token: 0x04004665 RID: 18021
 	HpText,
-	// Token: 0x040045C0 RID: 17856
+	// Token: 0x04004666 RID: 18022
 	FinishedIcon,
-	// Token: 0x040045C1 RID: 17857
+	// Token: 0x04004667 RID: 18023
 	TexBoss,
-	// Token: 0x040045C2 RID: 17858
+	// Token: 0x04004668 RID: 18024
 	Arrow,
-	// Token: 0x040045C3 RID: 17859
+	// Token: 0x04004669 RID: 18025
 	SubHpBar,
-	// Token: 0x040045C4 RID: 17860
+	// Token: 0x0400466A RID: 18026
 	RoundPanel,
-	// Token: 0x040045C5 RID: 17861
+	// Token: 0x0400466B RID: 18027
 	RoundBg,
-	// Token: 0x040045C6 RID: 17862
+	// Token: 0x0400466C RID: 18028
 	RoundNum,
-	// Token: 0x040045C7 RID: 17863
+	// Token: 0x0400466D RID: 18029
 	Tag
 }

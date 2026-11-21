@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001AC1 RID: 6849
+// Token: 0x02000F80 RID: 3968
 [NullableContext(1)]
 [Nullable(0)]
 public class MapAreaRewardPanel : UiPanelBase
 {
-	// Token: 0x0600CB07 RID: 51975 RVA: 0x002E45C4 File Offset: 0x002E27C4
+	// Token: 0x06009F18 RID: 40728 RVA: 0x002EF748 File Offset: 0x002ED948
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -35,7 +35,7 @@ public class MapAreaRewardPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600CB08 RID: 51976 RVA: 0x002E46D4 File Offset: 0x002E28D4
+	// Token: 0x06009F19 RID: 40729 RVA: 0x002EF858 File Offset: 0x002EDA58
 	protected override void OnStart()
 	{
 		this.RewardLayout = new GenericLayout<MapAreaRewardItem, DailyActivityDefine.IActivityGoalData>(base.GetHorizontalLayout(3), new Func<MapAreaRewardItem>(this.OnCreateRewardItem), null, false, true);
@@ -44,7 +44,7 @@ public class MapAreaRewardPanel : UiPanelBase
 		this.ProgressBarItem = base.GetItem(0);
 	}
 
-	// Token: 0x0600CB09 RID: 51977 RVA: 0x002E4723 File Offset: 0x002E2923
+	// Token: 0x06009F1A RID: 40730 RVA: 0x002EF8A7 File Offset: 0x002EDAA7
 	protected override void OnBeforeDestroy()
 	{
 		this.ProgressBarItem = null;
@@ -52,19 +52,19 @@ public class MapAreaRewardPanel : UiPanelBase
 		this.RewardPopup = null;
 	}
 
-	// Token: 0x0600CB0A RID: 51978 RVA: 0x002E473A File Offset: 0x002E293A
+	// Token: 0x06009F1B RID: 40731 RVA: 0x002EF8BE File Offset: 0x002EDABE
 	public void Init(IMapAreaRewardParam param)
 	{
 		this.ChangeParamData(param);
 	}
 
-	// Token: 0x0600CB0B RID: 51979 RVA: 0x002E4743 File Offset: 0x002E2943
+	// Token: 0x06009F1C RID: 40732 RVA: 0x002EF8C7 File Offset: 0x002EDAC7
 	public void InitCommonRewardPopup(UUIItem rootItem)
 	{
 		this.RewardPopup = new CommonRewardPopup(rootItem);
 	}
 
-	// Token: 0x0600CB0C RID: 51980 RVA: 0x002E4754 File Offset: 0x002E2954
+	// Token: 0x06009F1D RID: 40733 RVA: 0x002EF8D8 File Offset: 0x002EDAD8
 	public void ChangeParamData(IMapAreaRewardParam param)
 	{
 		this.ParamData = param;
@@ -98,7 +98,7 @@ public class MapAreaRewardPanel : UiPanelBase
 		rootItem.SetUIActive(false);
 	}
 
-	// Token: 0x0600CB0D RID: 51981 RVA: 0x002E4870 File Offset: 0x002E2A70
+	// Token: 0x06009F1E RID: 40734 RVA: 0x002EF9F4 File Offset: 0x002EDBF4
 	public void OnTickRefresh(float deltaTime)
 	{
 		if (!this.IsShowAnimate)
@@ -117,7 +117,7 @@ public class MapAreaRewardPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600CB0E RID: 51982 RVA: 0x002E4940 File Offset: 0x002E2B40
+	// Token: 0x06009F1F RID: 40735 RVA: 0x002EFAC4 File Offset: 0x002EDCC4
 	public void RefreshProgressBarDynamic(int value)
 	{
 		if (value <= this.CurrentValue)
@@ -139,7 +139,7 @@ public class MapAreaRewardPanel : UiPanelBase
 		this.StartProgressAnimate(value);
 	}
 
-	// Token: 0x0600CB0F RID: 51983 RVA: 0x002E49F0 File Offset: 0x002E2BF0
+	// Token: 0x06009F20 RID: 40736 RVA: 0x002EFB74 File Offset: 0x002EDD74
 	public void UpdateRewardIds(IReadOnlyList<int> ids)
 	{
 		foreach (int goalId in ids)
@@ -148,7 +148,7 @@ public class MapAreaRewardPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600CB10 RID: 51984 RVA: 0x002E4A38 File Offset: 0x002E2C38
+	// Token: 0x06009F21 RID: 40737 RVA: 0x002EFBBC File Offset: 0x002EDDBC
 	protected override void OnBeforeHide()
 	{
 		CommonRewardPopup rewardPopup = this.RewardPopup;
@@ -159,7 +159,7 @@ public class MapAreaRewardPanel : UiPanelBase
 		rewardPopup.SetActive(false);
 	}
 
-	// Token: 0x0600CB11 RID: 51985 RVA: 0x002E4A4C File Offset: 0x002E2C4C
+	// Token: 0x06009F22 RID: 40738 RVA: 0x002EFBD0 File Offset: 0x002EDDD0
 	private void RefreshAllRewardItem()
 	{
 		int num = 0;
@@ -174,7 +174,7 @@ public class MapAreaRewardPanel : UiPanelBase
 		this.CurrentFinishedRewardCount = num;
 	}
 
-	// Token: 0x0600CB12 RID: 51986 RVA: 0x002E4AC0 File Offset: 0x002E2CC0
+	// Token: 0x06009F23 RID: 40739 RVA: 0x002EFC44 File Offset: 0x002EDE44
 	private void RefreshRewardItem(int goalId)
 	{
 		int index;
@@ -189,7 +189,7 @@ public class MapAreaRewardPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600CB13 RID: 51987 RVA: 0x002E4AF4 File Offset: 0x002E2CF4
+	// Token: 0x06009F24 RID: 40740 RVA: 0x002EFC78 File Offset: 0x002EDE78
 	private void RefreshRewardItemDynamic(int value)
 	{
 		if (this.RefreshIdContainer.Count == 0)
@@ -205,7 +205,7 @@ public class MapAreaRewardPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600CB14 RID: 51988 RVA: 0x002E4B4C File Offset: 0x002E2D4C
+	// Token: 0x06009F25 RID: 40741 RVA: 0x002EFCD0 File Offset: 0x002EDED0
 	private void SetProgressBarPercent(float percent)
 	{
 		int count = this.ParamData.RewardDataList.Count;
@@ -215,7 +215,7 @@ public class MapAreaRewardPanel : UiPanelBase
 		this.ProgressBarItem.SetStretchRight(stretchRight);
 	}
 
-	// Token: 0x0600CB15 RID: 51989 RVA: 0x002E4BAE File Offset: 0x002E2DAE
+	// Token: 0x06009F26 RID: 40742 RVA: 0x002EFD32 File Offset: 0x002EDF32
 	private void StartProgressAnimate(int goalValue)
 	{
 		this.GoalValue = goalValue;
@@ -224,7 +224,7 @@ public class MapAreaRewardPanel : UiPanelBase
 		this.IsShowAnimate = true;
 	}
 
-	// Token: 0x0600CB16 RID: 51990 RVA: 0x002E4BDC File Offset: 0x002E2DDC
+	// Token: 0x06009F27 RID: 40743 RVA: 0x002EFD60 File Offset: 0x002EDF60
 	private void EndProgressAnimate()
 	{
 		this.IsShowAnimate = false;
@@ -234,7 +234,7 @@ public class MapAreaRewardPanel : UiPanelBase
 		this.SetProgressBarPercent(progressBarPercent);
 	}
 
-	// Token: 0x0600CB17 RID: 51991 RVA: 0x002E4C34 File Offset: 0x002E2E34
+	// Token: 0x06009F28 RID: 40744 RVA: 0x002EFDB8 File Offset: 0x002EDFB8
 	private MapAreaRewardItem OnCreateRewardItem()
 	{
 		UUISprite sprite = base.GetSprite(2);
@@ -246,7 +246,7 @@ public class MapAreaRewardPanel : UiPanelBase
 		return new MapAreaRewardItem(this.ParamData.GetRewardCallback, new Action<RewardPopupData>(this.OpenRewardCallback));
 	}
 
-	// Token: 0x0600CB18 RID: 51992 RVA: 0x002E4C97 File Offset: 0x002E2E97
+	// Token: 0x06009F29 RID: 40745 RVA: 0x002EFE1B File Offset: 0x002EE01B
 	private void OpenRewardCallback(RewardPopupData data)
 	{
 		CommonRewardPopup rewardPopup = this.RewardPopup;
@@ -257,38 +257,38 @@ public class MapAreaRewardPanel : UiPanelBase
 		rewardPopup.Refresh(data);
 	}
 
-	// Token: 0x04005D6F RID: 23919
+	// Token: 0x04005E3E RID: 24126
 	private const float PROGRESS_ANIMATE_TIME = 0.5f;
 
-	// Token: 0x04005D70 RID: 23920
+	// Token: 0x04005E3F RID: 24127
 	private const int REWARD_WIDTH = 120;
 
-	// Token: 0x04005D71 RID: 23921
+	// Token: 0x04005E40 RID: 24128
 	private IMapAreaRewardParam ParamData;
 
-	// Token: 0x04005D72 RID: 23922
+	// Token: 0x04005E41 RID: 24129
 	private GenericLayout<MapAreaRewardItem, DailyActivityDefine.IActivityGoalData> RewardLayout;
 
-	// Token: 0x04005D73 RID: 23923
+	// Token: 0x04005E42 RID: 24130
 	[Nullable(2)]
 	private UUIItem ProgressBarItem;
 
-	// Token: 0x04005D74 RID: 23924
+	// Token: 0x04005E43 RID: 24131
 	private int CurrentValue;
 
-	// Token: 0x04005D75 RID: 23925
+	// Token: 0x04005E44 RID: 24132
 	private int GoalValue;
 
-	// Token: 0x04005D76 RID: 23926
+	// Token: 0x04005E45 RID: 24133
 	private int CurrentSaveValue;
 
-	// Token: 0x04005D77 RID: 23927
+	// Token: 0x04005E46 RID: 24134
 	private bool IsShowAnimate;
 
-	// Token: 0x04005D78 RID: 23928
+	// Token: 0x04005E47 RID: 24135
 	private double AnimateRunTime;
 
-	// Token: 0x04005D79 RID: 23929
+	// Token: 0x04005E48 RID: 24136
 	[Nullable(new byte[]
 	{
 		2,
@@ -296,42 +296,42 @@ public class MapAreaRewardPanel : UiPanelBase
 	})]
 	private List<ValueTuple<int, int>> RefreshIdContainer = new List<ValueTuple<int, int>>();
 
-	// Token: 0x04005D7A RID: 23930
+	// Token: 0x04005E49 RID: 24137
 	private readonly Dictionary<int, int> IdToIndexMap = new Dictionary<int, int>();
 
-	// Token: 0x04005D7B RID: 23931
+	// Token: 0x04005E4A RID: 24138
 	private int CurrentFinishedRewardCount;
 
-	// Token: 0x04005D7C RID: 23932
+	// Token: 0x04005E4B RID: 24139
 	private float MaxProgressWidth;
 
-	// Token: 0x04005D7D RID: 23933
+	// Token: 0x04005E4C RID: 24140
 	private float RewardWidth;
 
-	// Token: 0x04005D7E RID: 23934
+	// Token: 0x04005E4D RID: 24141
 	private float LineWidth;
 
-	// Token: 0x04005D7F RID: 23935
+	// Token: 0x04005E4E RID: 24142
 	[Nullable(2)]
 	private CommonRewardPopup RewardPopup;
 
-	// Token: 0x02008017 RID: 32791
+	// Token: 0x020071A6 RID: 29094
 	[NullableContext(0)]
 	private enum EActivityPanelItem
 	{
-		// Token: 0x04029D14 RID: 171284
+		// Token: 0x0402504D RID: 151629
 		ProgressPanel,
-		// Token: 0x04029D15 RID: 171285
+		// Token: 0x0402504E RID: 151630
 		BarPanel,
-		// Token: 0x04029D16 RID: 171286
+		// Token: 0x0402504F RID: 151631
 		BarSprite,
-		// Token: 0x04029D17 RID: 171287
+		// Token: 0x04025050 RID: 151632
 		RewardPanel,
-		// Token: 0x04029D18 RID: 171288
+		// Token: 0x04025051 RID: 151633
 		RewardItem,
-		// Token: 0x04029D19 RID: 171289
+		// Token: 0x04025052 RID: 151634
 		PanelBackground,
-		// Token: 0x04029D1A RID: 171290
+		// Token: 0x04025053 RID: 151635
 		BackgroundSprite
 	}
 }

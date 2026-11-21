@@ -6,16 +6,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002DF9 RID: 11769
+// Token: 0x02002354 RID: 9044
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataForce.LogicDataForce_C")]
 public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170021E7 RID: 8679
-	// (get) Token: 0x06018B8B RID: 101259 RVA: 0x0065864C File Offset: 0x0065684C
-	// (set) Token: 0x06018B8C RID: 101260 RVA: 0x0065865C File Offset: 0x0065685C
+	// Token: 0x1700224B RID: 8779
+	// (get) Token: 0x06016440 RID: 91200 RVA: 0x0067E6D0 File Offset: 0x0067C8D0
+	// (set) Token: 0x06016441 RID: 91201 RVA: 0x0067E6E0 File Offset: 0x0067C8E0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float ForceBase
 	{
@@ -29,9 +29,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021E8 RID: 8680
-	// (get) Token: 0x06018B8D RID: 101261 RVA: 0x0065866D File Offset: 0x0065686D
-	// (set) Token: 0x06018B8E RID: 101262 RVA: 0x0065867D File Offset: 0x0065687D
+	// Token: 0x1700224C RID: 8780
+	// (get) Token: 0x06016442 RID: 91202 RVA: 0x0067E6F1 File Offset: 0x0067C8F1
+	// (set) Token: 0x06016443 RID: 91203 RVA: 0x0067E701 File Offset: 0x0067C901
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float ForceDampingRatio
 	{
@@ -45,9 +45,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021E9 RID: 8681
-	// (get) Token: 0x06018B8F RID: 101263 RVA: 0x0065868E File Offset: 0x0065688E
-	// (set) Token: 0x06018B90 RID: 101264 RVA: 0x0065869E File Offset: 0x0065689E
+	// Token: 0x1700224D RID: 8781
+	// (get) Token: 0x06016444 RID: 91204 RVA: 0x0067E712 File Offset: 0x0067C912
+	// (set) Token: 0x06016445 RID: 91205 RVA: 0x0067E722 File Offset: 0x0067C922
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float InnerRadius
 	{
@@ -61,9 +61,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021EA RID: 8682
-	// (get) Token: 0x06018B91 RID: 101265 RVA: 0x006586AF File Offset: 0x006568AF
-	// (set) Token: 0x06018B92 RID: 101266 RVA: 0x006586BF File Offset: 0x006568BF
+	// Token: 0x1700224E RID: 8782
+	// (get) Token: 0x06016446 RID: 91206 RVA: 0x0067E733 File Offset: 0x0067C933
+	// (set) Token: 0x06016447 RID: 91207 RVA: 0x0067E743 File Offset: 0x0067C943
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float OuterRadius
 	{
@@ -77,9 +77,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021EB RID: 8683
-	// (get) Token: 0x06018B93 RID: 101267 RVA: 0x006586D0 File Offset: 0x006568D0
-	// (set) Token: 0x06018B94 RID: 101268 RVA: 0x006586E0 File Offset: 0x006568E0
+	// Token: 0x1700224F RID: 8783
+	// (get) Token: 0x06016448 RID: 91208 RVA: 0x0067E754 File Offset: 0x0067C954
+	// (set) Token: 0x06016449 RID: 91209 RVA: 0x0067E764 File Offset: 0x0067C964
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int LimitWeight
 	{
@@ -93,9 +93,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021EC RID: 8684
-	// (get) Token: 0x06018B95 RID: 101269 RVA: 0x006586F1 File Offset: 0x006568F1
-	// (set) Token: 0x06018B96 RID: 101270 RVA: 0x00658701 File Offset: 0x00656901
+	// Token: 0x17002250 RID: 8784
+	// (get) Token: 0x0601644A RID: 91210 RVA: 0x0067E775 File Offset: 0x0067C975
+	// (set) Token: 0x0601644B RID: 91211 RVA: 0x0067E785 File Offset: 0x0067C985
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool ConstantForce
 	{
@@ -109,9 +109,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021ED RID: 8685
-	// (get) Token: 0x06018B97 RID: 101271 RVA: 0x00658712 File Offset: 0x00656912
-	// (set) Token: 0x06018B98 RID: 101272 RVA: 0x00658722 File Offset: 0x00656922
+	// Token: 0x17002251 RID: 8785
+	// (get) Token: 0x0601644C RID: 91212 RVA: 0x0067E796 File Offset: 0x0067C996
+	// (set) Token: 0x0601644D RID: 91213 RVA: 0x0067E7A6 File Offset: 0x0067C9A6
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool TowardsBullet
 	{
@@ -125,9 +125,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021EE RID: 8686
-	// (get) Token: 0x06018B99 RID: 101273 RVA: 0x00658733 File Offset: 0x00656933
-	// (set) Token: 0x06018B9A RID: 101274 RVA: 0x00658743 File Offset: 0x00656943
+	// Token: 0x17002252 RID: 8786
+	// (get) Token: 0x0601644E RID: 91214 RVA: 0x0067E7B7 File Offset: 0x0067C9B7
+	// (set) Token: 0x0601644F RID: 91215 RVA: 0x0067E7C7 File Offset: 0x0067C9C7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool HaveTopArea
 	{
@@ -141,9 +141,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021EF RID: 8687
-	// (get) Token: 0x06018B9B RID: 101275 RVA: 0x00658754 File Offset: 0x00656954
-	// (set) Token: 0x06018B9C RID: 101276 RVA: 0x00658764 File Offset: 0x00656964
+	// Token: 0x17002253 RID: 8787
+	// (get) Token: 0x06016450 RID: 91216 RVA: 0x0067E7D8 File Offset: 0x0067C9D8
+	// (set) Token: 0x06016451 RID: 91217 RVA: 0x0067E7E8 File Offset: 0x0067C9E8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float TopAreaHeight
 	{
@@ -157,9 +157,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021F0 RID: 8688
-	// (get) Token: 0x06018B9D RID: 101277 RVA: 0x00658775 File Offset: 0x00656975
-	// (set) Token: 0x06018B9E RID: 101278 RVA: 0x00658785 File Offset: 0x00656985
+	// Token: 0x17002254 RID: 8788
+	// (get) Token: 0x06016452 RID: 91218 RVA: 0x0067E7F9 File Offset: 0x0067C9F9
+	// (set) Token: 0x06016453 RID: 91219 RVA: 0x0067E809 File Offset: 0x0067CA09
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float ContinueTime
 	{
@@ -173,9 +173,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021F1 RID: 8689
-	// (get) Token: 0x06018B9F RID: 101279 RVA: 0x00658796 File Offset: 0x00656996
-	// (set) Token: 0x06018BA0 RID: 101280 RVA: 0x006587AA File Offset: 0x006569AA
+	// Token: 0x17002255 RID: 8789
+	// (get) Token: 0x06016454 RID: 91220 RVA: 0x0067E81A File Offset: 0x0067CA1A
+	// (set) Token: 0x06016455 RID: 91221 RVA: 0x0067E82E File Offset: 0x0067CA2E
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UCurveFloat ContinueTimeCurve
@@ -192,9 +192,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021F2 RID: 8690
-	// (get) Token: 0x06018BA1 RID: 101281 RVA: 0x006587BF File Offset: 0x006569BF
-	// (set) Token: 0x06018BA2 RID: 101282 RVA: 0x006587CF File Offset: 0x006569CF
+	// Token: 0x17002256 RID: 8790
+	// (get) Token: 0x06016456 RID: 91222 RVA: 0x0067E843 File Offset: 0x0067CA43
+	// (set) Token: 0x06016457 RID: 91223 RVA: 0x0067E853 File Offset: 0x0067CA53
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsLaunching
 	{
@@ -208,9 +208,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021F3 RID: 8691
-	// (get) Token: 0x06018BA3 RID: 101283 RVA: 0x006587E0 File Offset: 0x006569E0
-	// (set) Token: 0x06018BA4 RID: 101284 RVA: 0x006587F0 File Offset: 0x006569F0
+	// Token: 0x17002257 RID: 8791
+	// (get) Token: 0x06016458 RID: 91224 RVA: 0x0067E864 File Offset: 0x0067CA64
+	// (set) Token: 0x06016459 RID: 91225 RVA: 0x0067E874 File Offset: 0x0067CA74
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool ForceHorizontal
 	{
@@ -224,9 +224,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021F4 RID: 8692
-	// (get) Token: 0x06018BA5 RID: 101285 RVA: 0x00658804 File Offset: 0x00656A04
-	// (set) Token: 0x06018BA6 RID: 101286 RVA: 0x0065883D File Offset: 0x00656A3D
+	// Token: 0x17002258 RID: 8792
+	// (get) Token: 0x0601645A RID: 91226 RVA: 0x0067E888 File Offset: 0x0067CA88
+	// (set) Token: 0x0601645B RID: 91227 RVA: 0x0067E8C1 File Offset: 0x0067CAC1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FGameplayTagContainer WorkHaveTag
 	{
@@ -246,9 +246,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021F5 RID: 8693
-	// (get) Token: 0x06018BA7 RID: 101287 RVA: 0x00658865 File Offset: 0x00656A65
-	// (set) Token: 0x06018BA8 RID: 101288 RVA: 0x00658875 File Offset: 0x00656A75
+	// Token: 0x17002259 RID: 8793
+	// (get) Token: 0x0601645C RID: 91228 RVA: 0x0067E8E9 File Offset: 0x0067CAE9
+	// (set) Token: 0x0601645D RID: 91229 RVA: 0x0067E8F9 File Offset: 0x0067CAF9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsResetOnLast
 	{
@@ -262,9 +262,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021F6 RID: 8694
-	// (get) Token: 0x06018BA9 RID: 101289 RVA: 0x00658886 File Offset: 0x00656A86
-	// (set) Token: 0x06018BAA RID: 101290 RVA: 0x00658896 File Offset: 0x00656A96
+	// Token: 0x1700225A RID: 8794
+	// (get) Token: 0x0601645E RID: 91230 RVA: 0x0067E90A File Offset: 0x0067CB0A
+	// (set) Token: 0x0601645F RID: 91231 RVA: 0x0067E91A File Offset: 0x0067CB1A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int Group
 	{
@@ -278,9 +278,9 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021F7 RID: 8695
-	// (get) Token: 0x06018BAB RID: 101291 RVA: 0x006588A7 File Offset: 0x00656AA7
-	// (set) Token: 0x06018BAC RID: 101292 RVA: 0x006588B7 File Offset: 0x00656AB7
+	// Token: 0x1700225B RID: 8795
+	// (get) Token: 0x06016460 RID: 91232 RVA: 0x0067E92B File Offset: 0x0067CB2B
+	// (set) Token: 0x06016461 RID: 91233 RVA: 0x0067E93B File Offset: 0x0067CB3B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float ImmuneStopDuration
 	{
@@ -294,7 +294,7 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06018BAD RID: 101293 RVA: 0x006588C8 File Offset: 0x00656AC8
+	// Token: 0x06016462 RID: 91234 RVA: 0x0067E94C File Offset: 0x0067CB4C
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LogicDataForce._ClassPtr == IntPtr.Zero)
@@ -304,82 +304,82 @@ public class LogicDataForce : LogicDataBase, IUnrealUObject, IUnrealObject
 		return LogicDataForce._ClassPtr;
 	}
 
-	// Token: 0x06018BAE RID: 101294 RVA: 0x006588EC File Offset: 0x00656AEC
+	// Token: 0x06016463 RID: 91235 RVA: 0x0067E970 File Offset: 0x0067CB70
 	public LogicDataForce() : this(BuiltinUtils.AllocNativeUObject(LogicDataForce.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018BAF RID: 101295 RVA: 0x00658914 File Offset: 0x00656B14
+	// Token: 0x06016464 RID: 91236 RVA: 0x0067E998 File Offset: 0x0067CB98
 	public LogicDataForce(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataForce.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018BB0 RID: 101296 RVA: 0x00658947 File Offset: 0x00656B47
+	// Token: 0x06016465 RID: 91237 RVA: 0x0067E9CB File Offset: 0x0067CBCB
 	protected LogicDataForce(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B86A RID: 47210
+	// Token: 0x0400BBF0 RID: 48112
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataForce.LogicDataForce_C";
 
-	// Token: 0x0400B86B RID: 47211
+	// Token: 0x0400BBF1 RID: 48113
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B86C RID: 47212
+	// Token: 0x0400BBF2 RID: 48114
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B86D RID: 47213
+	// Token: 0x0400BBF3 RID: 48115
 	private static int __PropertyOffset_ForceBase;
 
-	// Token: 0x0400B86E RID: 47214
+	// Token: 0x0400BBF4 RID: 48116
 	private static int __PropertyOffset_ForceDampingRatio;
 
-	// Token: 0x0400B86F RID: 47215
+	// Token: 0x0400BBF5 RID: 48117
 	private static int __PropertyOffset_InnerRadius;
 
-	// Token: 0x0400B870 RID: 47216
+	// Token: 0x0400BBF6 RID: 48118
 	private static int __PropertyOffset_OuterRadius;
 
-	// Token: 0x0400B871 RID: 47217
+	// Token: 0x0400BBF7 RID: 48119
 	private static int __PropertyOffset_LimitWeight;
 
-	// Token: 0x0400B872 RID: 47218
+	// Token: 0x0400BBF8 RID: 48120
 	private static int __PropertyOffset_ConstantForce;
 
-	// Token: 0x0400B873 RID: 47219
+	// Token: 0x0400BBF9 RID: 48121
 	private static int __PropertyOffset_TowardsBullet;
 
-	// Token: 0x0400B874 RID: 47220
+	// Token: 0x0400BBFA RID: 48122
 	private static int __PropertyOffset_HaveTopArea;
 
-	// Token: 0x0400B875 RID: 47221
+	// Token: 0x0400BBFB RID: 48123
 	private static int __PropertyOffset_TopAreaHeight;
 
-	// Token: 0x0400B876 RID: 47222
+	// Token: 0x0400BBFC RID: 48124
 	private static int __PropertyOffset_ContinueTime;
 
-	// Token: 0x0400B877 RID: 47223
+	// Token: 0x0400BBFD RID: 48125
 	private static int __PropertyOffset_ContinueTimeCurve;
 
-	// Token: 0x0400B878 RID: 47224
+	// Token: 0x0400BBFE RID: 48126
 	private static int __PropertyOffset_IsLaunching;
 
-	// Token: 0x0400B879 RID: 47225
+	// Token: 0x0400BBFF RID: 48127
 	private static int __PropertyOffset_ForceHorizontal;
 
-	// Token: 0x0400B87A RID: 47226
+	// Token: 0x0400BC00 RID: 48128
 	private static int __PropertyOffset_WorkHaveTag;
 
-	// Token: 0x0400B87B RID: 47227
+	// Token: 0x0400BC01 RID: 48129
 	[Nullable(2)]
 	private FGameplayTagContainer _WorkHaveTag;
 
-	// Token: 0x0400B87C RID: 47228
+	// Token: 0x0400BC02 RID: 48130
 	private static int __PropertyOffset_IsResetOnLast;
 
-	// Token: 0x0400B87D RID: 47229
+	// Token: 0x0400BC03 RID: 48131
 	private static int __PropertyOffset_Group;
 
-	// Token: 0x0400B87E RID: 47230
+	// Token: 0x0400BC04 RID: 48132
 	private static int __PropertyOffset_ImmuneStopDuration;
 }

@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C06 RID: 23558
+	// Token: 0x02006225 RID: 25125
 	public enum TElementalMatchConfig : byte
 	{
-		// Token: 0x0400F3B0 RID: 62384
+		// Token: 0x040100CB RID: 65739
 		NONE,
-		// Token: 0x0400F3B1 RID: 62385
+		// Token: 0x040100CC RID: 65740
 		IFireElementalMatch,
-		// Token: 0x0400F3B2 RID: 62386
+		// Token: 0x040100CD RID: 65741
 		IWaterElementalMatch,
-		// Token: 0x0400F3B3 RID: 62387
+		// Token: 0x040100CE RID: 65742
 		IWoodElementalMatch
 	}
 }

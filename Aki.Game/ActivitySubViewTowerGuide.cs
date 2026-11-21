@@ -11,13 +11,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001522 RID: 5410
+// Token: 0x020009DA RID: 2522
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewTowerGuide : ActivitySubViewBase
 {
-	// Token: 0x17000D43 RID: 3395
-	// (get) Token: 0x06009A4A RID: 39498 RVA: 0x002163D6 File Offset: 0x002145D6
+	// Token: 0x17000D64 RID: 3428
+	// (get) Token: 0x06006E28 RID: 28200 RVA: 0x00220173 File Offset: 0x0021E373
 	private ActivityTowerGuideData TowerGuideData
 	{
 		get
@@ -26,7 +26,7 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009A4B RID: 39499 RVA: 0x002163E4 File Offset: 0x002145E4
+	// Token: 0x06006E29 RID: 28201 RVA: 0x00220180 File Offset: 0x0021E380
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -67,12 +67,12 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06009A4C RID: 39500 RVA: 0x002166BA File Offset: 0x002148BA
+	// Token: 0x06006E2A RID: 28202 RVA: 0x00220456 File Offset: 0x0021E656
 	protected override void OnSetData()
 	{
 	}
 
-	// Token: 0x06009A4D RID: 39501 RVA: 0x002166BC File Offset: 0x002148BC
+	// Token: 0x06006E2B RID: 28203 RVA: 0x00220458 File Offset: 0x0021E658
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewTowerGuide.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -83,26 +83,26 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009A4E RID: 39502 RVA: 0x002166FF File Offset: 0x002148FF
+	// Token: 0x06006E2C RID: 28204 RVA: 0x0022049B File Offset: 0x0021E69B
 	[NullableContext(1)]
 	private ActivityTowerGuideRewardGrid CreateGridItem()
 	{
 		return new ActivityTowerGuideRewardGrid();
 	}
 
-	// Token: 0x06009A4F RID: 39503 RVA: 0x00216706 File Offset: 0x00214906
+	// Token: 0x06006E2D RID: 28205 RVA: 0x002204A2 File Offset: 0x0021E6A2
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x06009A50 RID: 39504 RVA: 0x00216724 File Offset: 0x00214924
+	// Token: 0x06006E2E RID: 28206 RVA: 0x002204C0 File Offset: 0x0021E6C0
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x06009A51 RID: 39505 RVA: 0x00216742 File Offset: 0x00214942
+	// Token: 0x06006E2F RID: 28207 RVA: 0x002204DE File Offset: 0x0021E6DE
 	private void OnRefreshCommonActivityRedDot(int id)
 	{
 		if (this.TowerGuideData != null && id == this.TowerGuideData.Id)
@@ -111,7 +111,7 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009A52 RID: 39506 RVA: 0x00216760 File Offset: 0x00214960
+	// Token: 0x06006E30 RID: 28208 RVA: 0x002204FC File Offset: 0x0021E6FC
 	protected override void OnStart()
 	{
 		this.SetTitlePart();
@@ -119,7 +119,7 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		this.OnRefreshView();
 	}
 
-	// Token: 0x06009A53 RID: 39507 RVA: 0x00216774 File Offset: 0x00214974
+	// Token: 0x06006E31 RID: 28209 RVA: 0x00220510 File Offset: 0x0021E710
 	protected override void OnBeforeDestroy()
 	{
 		if (this.RewardLayout != null)
@@ -131,7 +131,7 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009A54 RID: 39508 RVA: 0x002167D4 File Offset: 0x002149D4
+	// Token: 0x06006E32 RID: 28210 RVA: 0x00220570 File Offset: 0x0021E770
 	protected override void OnRefreshView()
 	{
 		if (this.TowerGuideData == null)
@@ -143,7 +143,7 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		this.SetViewState(viewState);
 	}
 
-	// Token: 0x06009A55 RID: 39509 RVA: 0x00216804 File Offset: 0x00214A04
+	// Token: 0x06006E33 RID: 28211 RVA: 0x002205A0 File Offset: 0x0021E7A0
 	private void SetTitlePart()
 	{
 		if (this.TowerGuideData == null)
@@ -154,7 +154,7 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		base.GetText(19).ShowTextNew(this.TowerGuideData.LocalConfig.Value.Desc);
 	}
 
-	// Token: 0x06009A56 RID: 39510 RVA: 0x00216858 File Offset: 0x00214A58
+	// Token: 0x06006E34 RID: 28212 RVA: 0x002205F4 File Offset: 0x0021E7F4
 	private void SetRolePart()
 	{
 		if (this.TowerGuideData == null)
@@ -170,7 +170,7 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		base.GetText(17).SetText(trialRoleData.GetName(null), true);
 	}
 
-	// Token: 0x06009A57 RID: 39511 RVA: 0x002168AC File Offset: 0x00214AAC
+	// Token: 0x06006E35 RID: 28213 RVA: 0x00220648 File Offset: 0x0021E848
 	private void SetViewState(ETowerGuideViewState state)
 	{
 		if (this.TowerGuideData == null)
@@ -223,13 +223,13 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		base.GetItem(15).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06009A58 RID: 39512 RVA: 0x00216AA5 File Offset: 0x00214CA5
+	// Token: 0x06006E36 RID: 28214 RVA: 0x00220841 File Offset: 0x0021EA41
 	protected override void OnTimer(float gap)
 	{
 		this.SetRemainTimeText();
 	}
 
-	// Token: 0x06009A59 RID: 39513 RVA: 0x00216AAD File Offset: 0x00214CAD
+	// Token: 0x06006E37 RID: 28215 RVA: 0x00220849 File Offset: 0x0021EA49
 	private void SetRemainTimeActive(bool isActive)
 	{
 		if (this.IsRemainTimeActive == isActive)
@@ -240,7 +240,7 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		base.GetItem(21).SetUIActive(isActive);
 	}
 
-	// Token: 0x06009A5A RID: 39514 RVA: 0x00216AD0 File Offset: 0x00214CD0
+	// Token: 0x06006E38 RID: 28216 RVA: 0x0022086C File Offset: 0x0021EA6C
 	private void SetRemainTimeText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -253,7 +253,7 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009A5B RID: 39515 RVA: 0x00216B10 File Offset: 0x00214D10
+	// Token: 0x06006E39 RID: 28217 RVA: 0x002208AC File Offset: 0x0021EAAC
 	private void RefreshRewardLayout(bool isLock, bool isReceivableVisible)
 	{
 		TowerGuide? towerGuideById = ActivityTowerGuideConfig.Instance.GetTowerGuideById(2);
@@ -282,7 +282,7 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		this.RewardLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x06009A5C RID: 39516 RVA: 0x00216BD4 File Offset: 0x00214DD4
+	// Token: 0x06006E3A RID: 28218 RVA: 0x00220970 File Offset: 0x0021EB70
 	private unsafe void ButtonRolePreviewClick()
 	{
 		RoleController instance = RoleController.Instance;
@@ -297,7 +297,7 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		instance.OpenRoleMainView(agentType, selectRoleId, list, null, null);
 	}
 
-	// Token: 0x06009A5D RID: 39517 RVA: 0x00216C1E File Offset: 0x00214E1E
+	// Token: 0x06006E3B RID: 28219 RVA: 0x002209BA File Offset: 0x0021EBBA
 	private void ButtonReward1Click()
 	{
 		if (this.TowerGuideData == null)
@@ -310,7 +310,7 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009A5E RID: 39518 RVA: 0x00216C43 File Offset: 0x00214E43
+	// Token: 0x06006E3C RID: 28220 RVA: 0x002209DF File Offset: 0x0021EBDF
 	private void ButtonReward2Click()
 	{
 		if (this.TowerGuideData == null)
@@ -323,7 +323,7 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009A5F RID: 39519 RVA: 0x00216C68 File Offset: 0x00214E68
+	// Token: 0x06006E3D RID: 28221 RVA: 0x00220A04 File Offset: 0x0021EC04
 	private void ButtonJumpClick()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -342,7 +342,7 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06009A60 RID: 39520 RVA: 0x00216C86 File Offset: 0x00214E86
+	// Token: 0x06006E3E RID: 28222 RVA: 0x00220A22 File Offset: 0x0021EC22
 	private void ButtonLockClick()
 	{
 		if (this.TowerGuideData == null)
@@ -352,13 +352,13 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 		ActivityController.Instance.OpenActivityConditionView(this.TowerGuideData.Id);
 	}
 
-	// Token: 0x040043EA RID: 17386
+	// Token: 0x04004490 RID: 17552
 	private int TrialRoleId;
 
-	// Token: 0x040043EB RID: 17387
+	// Token: 0x04004491 RID: 17553
 	protected ETowerGuideViewState ViewState;
 
-	// Token: 0x040043EC RID: 17388
+	// Token: 0x04004492 RID: 17554
 	[Nullable(new byte[]
 	{
 		2,
@@ -367,92 +367,92 @@ public class ActivitySubViewTowerGuide : ActivitySubViewBase
 	})]
 	private GenericLayout<ActivityTowerGuideRewardGrid, ITowerGuideRewardItem> RewardLayout;
 
-	// Token: 0x040043ED RID: 17389
+	// Token: 0x04004493 RID: 17555
 	private UUIText RemainTime;
 
-	// Token: 0x040043EE RID: 17390
+	// Token: 0x04004494 RID: 17556
 	private bool IsRemainTimeActive = true;
 
-	// Token: 0x040043EF RID: 17391
+	// Token: 0x04004495 RID: 17557
 	private TowerGuideProgress ProgressComponent1;
 
-	// Token: 0x040043F0 RID: 17392
+	// Token: 0x04004496 RID: 17558
 	private TowerGuideProgress ProgressComponent2;
 
-	// Token: 0x02007B53 RID: 31571
+	// Token: 0x02006CDE RID: 27870
 	[NullableContext(0)]
 	private class ETowerGuideComponents
 	{
-		// Token: 0x040288C9 RID: 166089
+		// Token: 0x04023C04 RID: 146436
 		public const int LockLow1 = 0;
 
-		// Token: 0x040288CA RID: 166090
+		// Token: 0x04023C05 RID: 146437
 		public const int LockLow2 = 1;
 
-		// Token: 0x040288CB RID: 166091
+		// Token: 0x04023C06 RID: 146438
 		public const int LockLow3 = 2;
 
-		// Token: 0x040288CC RID: 166092
+		// Token: 0x04023C07 RID: 146439
 		public const int ClaimedLow = 3;
 
-		// Token: 0x040288CD RID: 166093
+		// Token: 0x04023C08 RID: 146440
 		public const int Progress1 = 4;
 
-		// Token: 0x040288CE RID: 166094
+		// Token: 0x04023C09 RID: 146441
 		public const int ButtonRolePreview1 = 5;
 
-		// Token: 0x040288CF RID: 166095
+		// Token: 0x04023C0A RID: 146442
 		public const int ButtonReward1 = 6;
 
-		// Token: 0x040288D0 RID: 166096
+		// Token: 0x04023C0B RID: 146443
 		public const int ClaimedHigh = 7;
 
-		// Token: 0x040288D1 RID: 166097
+		// Token: 0x04023C0C RID: 146444
 		public const int LockHigh1 = 8;
 
-		// Token: 0x040288D2 RID: 166098
+		// Token: 0x04023C0D RID: 146445
 		public const int RewardLayout = 9;
 
-		// Token: 0x040288D3 RID: 166099
+		// Token: 0x04023C0E RID: 146446
 		public const int Progress2 = 10;
 
-		// Token: 0x040288D4 RID: 166100
+		// Token: 0x04023C0F RID: 146447
 		public const int ButtonReward2 = 11;
 
-		// Token: 0x040288D5 RID: 166101
+		// Token: 0x04023C10 RID: 146448
 		public const int ButtonJump = 12;
 
-		// Token: 0x040288D6 RID: 166102
+		// Token: 0x04023C11 RID: 146449
 		public const int ConditionPanel = 13;
 
-		// Token: 0x040288D7 RID: 166103
+		// Token: 0x04023C12 RID: 146450
 		public const int TxtCondition = 14;
 
-		// Token: 0x040288D8 RID: 166104
+		// Token: 0x04023C13 RID: 146451
 		public const int FinishedPanel = 15;
 
-		// Token: 0x040288D9 RID: 166105
+		// Token: 0x04023C14 RID: 146452
 		public const int ButtonRolePreview2 = 16;
 
-		// Token: 0x040288DA RID: 166106
+		// Token: 0x04023C15 RID: 146453
 		public const int RoleName = 17;
 
-		// Token: 0x040288DB RID: 166107
+		// Token: 0x04023C16 RID: 146454
 		public const int Title = 18;
 
-		// Token: 0x040288DC RID: 166108
+		// Token: 0x04023C17 RID: 146455
 		public const int TxtDesc = 19;
 
-		// Token: 0x040288DD RID: 166109
+		// Token: 0x04023C18 RID: 146456
 		public const int TxtButton = 20;
 
-		// Token: 0x040288DE RID: 166110
+		// Token: 0x04023C19 RID: 146457
 		public const int PanelTime = 21;
 
-		// Token: 0x040288DF RID: 166111
+		// Token: 0x04023C1A RID: 146458
 		public const int TxtTime = 22;
 
-		// Token: 0x040288E0 RID: 166112
+		// Token: 0x04023C1B RID: 146459
 		public const int ButtonLock = 23;
 	}
 }

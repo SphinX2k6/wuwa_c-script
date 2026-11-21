@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200074C RID: 1868
+	// Token: 0x02000764 RID: 1892
 	public class ConfigPlotHandBookConfigByQuestId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002BD9 RID: 11225 RVA: 0x001514C7 File Offset: 0x0014F6C7
+		// Token: 0x06002C69 RID: 11369 RVA: 0x00157F43 File Offset: 0x00156143
 		static ConfigPlotHandBookConfigByQuestId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPlotHandBookConfigByQuestId.CreateStaticDefaultValue), new Action(ConfigPlotHandBookConfigByQuestId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002BDA RID: 11226 RVA: 0x001514E8 File Offset: 0x0014F6E8
+		// Token: 0x06002C6A RID: 11370 RVA: 0x00157F64 File Offset: 0x00156164
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPlotHandBookConfigByQuestId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002BDB RID: 11227 RVA: 0x00151567 File Offset: 0x0014F767
+		// Token: 0x06002C6B RID: 11371 RVA: 0x00157FE3 File Offset: 0x001561E3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPlotHandBookConfigByQuestId.LogPair = null;
 			ConfigPlotHandBookConfigByQuestId.HandleId = 0;
 		}
 
-		// Token: 0x06002BDC RID: 11228 RVA: 0x00151575 File Offset: 0x0014F775
+		// Token: 0x06002C6C RID: 11372 RVA: 0x00157FF1 File Offset: 0x001561F1
 		public static void Init()
 		{
 			ConfigPlotHandBookConfigByQuestId.HandleId = ConfigCommon.InitDataStatement(ConfigPlotHandBookConfigByQuestId.HandleId, "db_plothandbook.db", "select BinData from `PlotHandBookConfig` where QuestId=?");
 		}
 
-		// Token: 0x06002BDD RID: 11229 RVA: 0x00151590 File Offset: 0x0014F790
+		// Token: 0x06002C6D RID: 11373 RVA: 0x0015800C File Offset: 0x0015620C
 		public static PlotHandBookConfig? GetConfig(int p0QuestId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPlotHandBookConfigByQuestId.HandleId, ConfigPlotHandBookConfigByQuestId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PlotHandBookConfig?(rootAsPlotHandBookConfig);
 		}
 
-		// Token: 0x040032FA RID: 13050
+		// Token: 0x040033A2 RID: 13218
 		private const string DB = "db_plothandbook.db";
 
-		// Token: 0x040032FB RID: 13051
+		// Token: 0x040033A3 RID: 13219
 		private const string FILE = "UniverseEditor/PlotHandBook/剧情图鉴_Json_PlotHandBook.csv";
 
-		// Token: 0x040032FC RID: 13052
+		// Token: 0x040033A4 RID: 13220
 		private const string TABLE = "PlotHandBookConfig";
 
-		// Token: 0x040032FD RID: 13053
+		// Token: 0x040033A5 RID: 13221
 		private const string COMMAND = "select BinData from `PlotHandBookConfig` where QuestId=?";
 
-		// Token: 0x040032FE RID: 13054
+		// Token: 0x040033A6 RID: 13222
 		private const string KEY_PREFIX = "PlotHandBookConfigByQuestId";
 
-		// Token: 0x040032FF RID: 13055
+		// Token: 0x040033A7 RID: 13223
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003300 RID: 13056
+		// Token: 0x040033A8 RID: 13224
 		private static int HandleId;
 	}
 }

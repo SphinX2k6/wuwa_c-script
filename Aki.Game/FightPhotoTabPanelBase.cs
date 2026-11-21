@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020025C1 RID: 9665
+// Token: 0x02001AAC RID: 6828
 public class FightPhotoTabPanelBase : UiPanelBase
 {
-	// Token: 0x0601398C RID: 80268 RVA: 0x004E683B File Offset: 0x004E4A3B
+	// Token: 0x06010E6C RID: 69228 RVA: 0x004F543B File Offset: 0x004F363B
 	public void PlaySwitchAnim()
 	{
 		this.PlaySequence("Switch");
 	}
 
-	// Token: 0x0601398D RID: 80269 RVA: 0x004E6848 File Offset: 0x004E4A48
+	// Token: 0x06010E6D RID: 69229 RVA: 0x004F5448 File Offset: 0x004F3648
 	[NullableContext(1)]
 	protected void PlaySequence(string sequenceName)
 	{
@@ -23,7 +23,7 @@ public class FightPhotoTabPanelBase : UiPanelBase
 		this.SequencePlayer.PlayLevelSequenceByName(sequenceName, false, null, false);
 	}
 
-	// Token: 0x0601398E RID: 80270 RVA: 0x004E6892 File Offset: 0x004E4A92
+	// Token: 0x06010E6E RID: 69230 RVA: 0x004F5492 File Offset: 0x004F3692
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -34,7 +34,7 @@ public class FightPhotoTabPanelBase : UiPanelBase
 		this.SequencePlayer = null;
 	}
 
-	// Token: 0x040093DC RID: 37852
+	// Token: 0x04009532 RID: 38194
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 }

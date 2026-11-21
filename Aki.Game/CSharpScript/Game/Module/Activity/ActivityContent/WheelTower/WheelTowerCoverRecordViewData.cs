@@ -3,40 +3,40 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F38 RID: 24376
+	// Token: 0x02004F1F RID: 20255
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WheelTowerCoverRecordViewData : IWheelTowerCoverRecordViewData
 	{
-		// Token: 0x17008F4E RID: 36686
-		// (get) Token: 0x0603DEC1 RID: 253633 RVA: 0x00EF57C8 File Offset: 0x00EF39C8
-		// (set) Token: 0x0603DEC2 RID: 253634 RVA: 0x00EF57D0 File Offset: 0x00EF39D0
+		// Token: 0x17006320 RID: 25376
+		// (get) Token: 0x06032E5C RID: 208476 RVA: 0x00E474F4 File Offset: 0x00E456F4
+		// (set) Token: 0x06032E5D RID: 208477 RVA: 0x00E474FC File Offset: 0x00E456FC
 		public IWheelTowerCoverRecordData BeforeData { get; set; } = new WheelTowerCoverRecordData();
 
-		// Token: 0x17008F4F RID: 36687
-		// (get) Token: 0x0603DEC3 RID: 253635 RVA: 0x00EF57D9 File Offset: 0x00EF39D9
-		// (set) Token: 0x0603DEC4 RID: 253636 RVA: 0x00EF57E1 File Offset: 0x00EF39E1
+		// Token: 0x17006321 RID: 25377
+		// (get) Token: 0x06032E5E RID: 208478 RVA: 0x00E47505 File Offset: 0x00E45705
+		// (set) Token: 0x06032E5F RID: 208479 RVA: 0x00E4750D File Offset: 0x00E4570D
 		public IWheelTowerCoverRecordData AfterData { get; set; } = new WheelTowerCoverRecordData();
 
-		// Token: 0x17008F50 RID: 36688
-		// (get) Token: 0x0603DEC5 RID: 253637 RVA: 0x00EF57EA File Offset: 0x00EF39EA
-		// (set) Token: 0x0603DEC6 RID: 253638 RVA: 0x00EF57F2 File Offset: 0x00EF39F2
+		// Token: 0x17006322 RID: 25378
+		// (get) Token: 0x06032E60 RID: 208480 RVA: 0x00E47516 File Offset: 0x00E45716
+		// (set) Token: 0x06032E61 RID: 208481 RVA: 0x00E4751E File Offset: 0x00E4571E
 		public int TeamNum { get; set; }
 
-		// Token: 0x17008F51 RID: 36689
-		// (get) Token: 0x0603DEC7 RID: 253639 RVA: 0x00EF57FB File Offset: 0x00EF39FB
-		// (set) Token: 0x0603DEC8 RID: 253640 RVA: 0x00EF5803 File Offset: 0x00EF3A03
+		// Token: 0x17006323 RID: 25379
+		// (get) Token: 0x06032E62 RID: 208482 RVA: 0x00E47527 File Offset: 0x00E45727
+		// (set) Token: 0x06032E63 RID: 208483 RVA: 0x00E4752F File Offset: 0x00E4572F
 		public bool IsEndless { get; set; }
 
-		// Token: 0x17008F52 RID: 36690
-		// (get) Token: 0x0603DEC9 RID: 253641 RVA: 0x00EF580C File Offset: 0x00EF3A0C
-		// (set) Token: 0x0603DECA RID: 253642 RVA: 0x00EF5814 File Offset: 0x00EF3A14
+		// Token: 0x17006324 RID: 25380
+		// (get) Token: 0x06032E64 RID: 208484 RVA: 0x00E47538 File Offset: 0x00E45738
+		// (set) Token: 0x06032E65 RID: 208485 RVA: 0x00E47540 File Offset: 0x00E45740
 		[Nullable(2)]
 		public Action OnClickConfirm { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008F53 RID: 36691
-		// (get) Token: 0x0603DECB RID: 253643 RVA: 0x00EF581D File Offset: 0x00EF3A1D
-		// (set) Token: 0x0603DECC RID: 253644 RVA: 0x00EF5825 File Offset: 0x00EF3A25
+		// Token: 0x17006325 RID: 25381
+		// (get) Token: 0x06032E66 RID: 208486 RVA: 0x00E47549 File Offset: 0x00E45749
+		// (set) Token: 0x06032E67 RID: 208487 RVA: 0x00E47551 File Offset: 0x00E45751
 		[Nullable(2)]
 		public Action OnClickCancel { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

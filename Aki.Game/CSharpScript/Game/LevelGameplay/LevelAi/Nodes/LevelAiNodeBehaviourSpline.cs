@@ -11,12 +11,12 @@ using CSharpScript.Game.LevelGamePlay.LevelAi.Tasks;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 {
-	// Token: 0x02006DCC RID: 28108
+	// Token: 0x02005F4B RID: 24395
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelAiNodeBehaviourSpline : LevelAiStandaloneNode
 	{
-		// Token: 0x060448FD RID: 280829 RVA: 0x010E8F10 File Offset: 0x010E7110
+		// Token: 0x0603AA61 RID: 240225 RVA: 0x01093160 File Offset: 0x01091360
 		public unsafe override void MakePlanExpansions(PlanningContext context, LevelAiWorldState worldState)
 		{
 			if (this.SplineId == null)
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 			context.SubmitCandidatePlan(item);
 		}
 
-		// Token: 0x060448FE RID: 280830 RVA: 0x010E8FDC File Offset: 0x010E71DC
+		// Token: 0x0603AA62 RID: 240226 RVA: 0x0109322C File Offset: 0x0109142C
 		public override void GetNextSteps(GetNextStepsContext context, LevelAiPlanStepId thisStepId)
 		{
 			if (!this.LastAbortedSubLevelStepId.Equal(LevelAiPlanStepId.None))
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 			context.AddNextStepsAfter(new LevelAiPlanStepId(step.SubLevelIndex, -1));
 		}
 
-		// Token: 0x060448FF RID: 280831 RVA: 0x010E905A File Offset: 0x010E725A
+		// Token: 0x0603AA63 RID: 240227 RVA: 0x010932AA File Offset: 0x010914AA
 		public override bool OnSubLevelStepFinished(LevelAiPlanInstance planInstance, LevelAiPlanStepId thisStepId, LevelAiPlanStepId finishedSubLevelStepId, ELevelAiNodeResult result, bool bFinishedLevel)
 		{
 			if (result == ELevelAiNodeResult.Aborted)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 			return true;
 		}
 
-		// Token: 0x06044900 RID: 280832 RVA: 0x010E9070 File Offset: 0x010E7270
+		// Token: 0x0603AA64 RID: 240228 RVA: 0x010932C0 File Offset: 0x010914C0
 		private unsafe void InitSpline()
 		{
 			GameSplineComponent gameSplineComponent = new GameSplineComponent(this.SplineId.Value);
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 			this.SplineInited = true;
 		}
 
-		// Token: 0x06044901 RID: 280833 RVA: 0x010E940C File Offset: 0x010E760C
+		// Token: 0x0603AA65 RID: 240229 RVA: 0x0109365C File Offset: 0x0109185C
 		[return: TupleElementNames(new string[]
 		{
 			"First",
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 			return new ValueTuple<LevelAiTask, LevelAiTask>(levelAiTaskMoveAlong, levelAiTaskMoveAlong);
 		}
 
-		// Token: 0x06044902 RID: 280834 RVA: 0x010E963F File Offset: 0x010E783F
+		// Token: 0x0603AA66 RID: 240230 RVA: 0x0109388F File Offset: 0x01091A8F
 		private ECharPositionState GetPosStateType(ECharPositionStateType type)
 		{
 			if (type == ECharPositionStateType.Ground)
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 			return ECharPositionState.Air;
 		}
 
-		// Token: 0x06044903 RID: 280835 RVA: 0x010E9650 File Offset: 0x010E7850
+		// Token: 0x0603AA67 RID: 240231 RVA: 0x010938A0 File Offset: 0x01091AA0
 		private int GetNearestPatrolPointIndex(List<ILevelAISplinePoint> points, GameSplineComponent splineComp)
 		{
 			CharacterActorComponent component = base.CreatureDataComponent.Entity.GetComponent<CharacterActorComponent>();
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 			return num;
 		}
 
-		// Token: 0x06044904 RID: 280836 RVA: 0x010E9914 File Offset: 0x010E7B14
+		// Token: 0x0603AA68 RID: 240232 RVA: 0x01093B64 File Offset: 0x01091D64
 		[return: TupleElementNames(new string[]
 		{
 			"First",
@@ -340,7 +340,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 			return new ValueTuple<LevelAiTask, LevelAiTask>(item, levelAiTask);
 		}
 
-		// Token: 0x06044905 RID: 280837 RVA: 0x010E9968 File Offset: 0x010E7B68
+		// Token: 0x0603AA69 RID: 240233 RVA: 0x01093BB8 File Offset: 0x01091DB8
 		private LevelAiTask CreateActionStep(ActionInfo action, int pointIndex, int actionIndex)
 		{
 			LevelAiTask levelAiTask = LevelAiRegistry.Instance.FindTaskCtor(action.Name)();
@@ -355,28 +355,28 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 			return levelAiTask;
 		}
 
-		// Token: 0x04023A80 RID: 146048
+		// Token: 0x0401ED22 RID: 126242
 		private const float MAX_DISTANCE = 200f;
 
-		// Token: 0x04023A81 RID: 146049
+		// Token: 0x0401ED23 RID: 126243
 		public int? SplineId;
 
-		// Token: 0x04023A82 RID: 146050
+		// Token: 0x0401ED24 RID: 126244
 		public bool CanRecordPlanProgress;
 
-		// Token: 0x04023A83 RID: 146051
+		// Token: 0x0401ED25 RID: 126245
 		public int Cost;
 
-		// Token: 0x04023A84 RID: 146052
+		// Token: 0x0401ED26 RID: 126246
 		private bool SplineInited;
 
-		// Token: 0x04023A85 RID: 146053
+		// Token: 0x0401ED27 RID: 126247
 		private readonly LevelAiPlanStepId LastAbortedSubLevelStepId = new LevelAiPlanStepId(-1, -1);
 
-		// Token: 0x04023A86 RID: 146054
+		// Token: 0x0401ED28 RID: 126248
 		private readonly Vector CacheVector = Vector.Create();
 
-		// Token: 0x04023A87 RID: 146055
+		// Token: 0x0401ED29 RID: 126249
 		private readonly Vector CacheVector2 = Vector.Create();
 	}
 }

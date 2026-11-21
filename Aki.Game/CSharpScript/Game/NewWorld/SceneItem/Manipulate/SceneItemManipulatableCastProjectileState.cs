@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071E1 RID: 29153
+	// Token: 0x02006296 RID: 25238
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemManipulatableCastProjectileState : SceneItemManipulableCastState
 	{
-		// Token: 0x060475B6 RID: 292278 RVA: 0x01224BB4 File Offset: 0x01222DB4
+		// Token: 0x0603CEB8 RID: 249528 RVA: 0x0117E9E8 File Offset: 0x0117CBE8
 		[NullableContext(1)]
 		public SceneItemManipulatableCastProjectileState(SceneItemManipulatableComponent SceneItem, [Nullable(new byte[]
 		{
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 		{
 		}
 
-		// Token: 0x060475B7 RID: 292279 RVA: 0x01224BD8 File Offset: 0x01222DD8
+		// Token: 0x0603CEB9 RID: 249529 RVA: 0x0117EA0C File Offset: 0x0117CC0C
 		protected override void OnEnter()
 		{
 			base.OnEnter();
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475B8 RID: 292280 RVA: 0x01224C68 File Offset: 0x01222E68
+		// Token: 0x0603CEBA RID: 249530 RVA: 0x0117EA9C File Offset: 0x0117CC9C
 		protected override void OnTick(float delta)
 		{
 			float num = this.MoveSpeed * delta;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.LastLocation = global::Vector.Create(this.SceneItem.ActorComp.ActorLocation);
 		}
 
-		// Token: 0x060475B9 RID: 292281 RVA: 0x01224E08 File Offset: 0x01223008
+		// Token: 0x0603CEBB RID: 249531 RVA: 0x0117EC3C File Offset: 0x0117CE3C
 		protected override void OnExit()
 		{
 			base.OnExit();
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475BA RID: 292282 RVA: 0x01224EC4 File Offset: 0x012230C4
+		// Token: 0x0603CEBC RID: 249532 RVA: 0x0117ECF8 File Offset: 0x0117CEF8
 		private void GeneratePredictProjectilePoints()
 		{
 			FVectorDouble newLocation = this.SceneItem.LastHoldingLocation.ToUeVector(false);
@@ -149,39 +149,39 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475BB RID: 292283 RVA: 0x012250D2 File Offset: 0x012232D2
+		// Token: 0x0603CEBD RID: 249533 RVA: 0x0117EF06 File Offset: 0x0117D106
 		public override bool IsNoLockCasting()
 		{
 			return true;
 		}
 
-		// Token: 0x0402584A RID: 153674
+		// Token: 0x040204B9 RID: 132281
 		private USplineComponent SplineComponent;
 
-		// Token: 0x0402584B RID: 153675
+		// Token: 0x040204BA RID: 132282
 		private AActor SplineActor;
 
-		// Token: 0x0402584C RID: 153676
+		// Token: 0x040204BB RID: 132283
 		private USplineComponent AfterPortalSplineComponent;
 
-		// Token: 0x0402584D RID: 153677
+		// Token: 0x040204BC RID: 132284
 		private AActor AfterPortalSplineActor;
 
-		// Token: 0x0402584E RID: 153678
+		// Token: 0x040204BD RID: 132285
 		private float MoveSpeed;
 
-		// Token: 0x0402584F RID: 153679
+		// Token: 0x040204BE RID: 132286
 		private float Distance;
 
-		// Token: 0x04025850 RID: 153680
+		// Token: 0x040204BF RID: 132287
 		[Nullable(1)]
 		private global::Vector LastLocation = global::Vector.Create();
 
-		// Token: 0x04025851 RID: 153681
+		// Token: 0x040204C0 RID: 132288
 		[Nullable(1)]
 		private global::Vector CurrentDirection = global::Vector.Create();
 
-		// Token: 0x04025852 RID: 153682
+		// Token: 0x040204C1 RID: 132289
 		private bool IsAfterPortal;
 	}
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A5D RID: 27229
+	// Token: 0x0200717F RID: 29055
 	public class ILookAtPerformOverlapMontageConfigT
 	{
-		// Token: 0x1700CA01 RID: 51713
-		// (get) Token: 0x0602FAEE RID: 195310 RVA: 0x0067D4E6 File Offset: 0x0067B6E6
-		// (set) Token: 0x0602FAEF RID: 195311 RVA: 0x0067D4EE File Offset: 0x0067B6EE
+		// Token: 0x1700D4AC RID: 54444
+		// (get) Token: 0x06032814 RID: 206868 RVA: 0x006D35A6 File Offset: 0x006D17A6
+		// (set) Token: 0x06032815 RID: 206869 RVA: 0x006D35AE File Offset: 0x006D17AE
 		public float OverlapMontageLoopDuration { get; set; }
 
-		// Token: 0x1700CA02 RID: 51714
-		// (get) Token: 0x0602FAF0 RID: 195312 RVA: 0x0067D4F7 File Offset: 0x0067B6F7
-		// (set) Token: 0x0602FAF1 RID: 195313 RVA: 0x0067D4FF File Offset: 0x0067B6FF
+		// Token: 0x1700D4AD RID: 54445
+		// (get) Token: 0x06032816 RID: 206870 RVA: 0x006D35B7 File Offset: 0x006D17B7
+		// (set) Token: 0x06032817 RID: 206871 RVA: 0x006D35BF File Offset: 0x006D17BF
 		public int OverlapMontageRepeatTimes { get; set; }
 
-		// Token: 0x1700CA03 RID: 51715
-		// (get) Token: 0x0602FAF2 RID: 195314 RVA: 0x0067D508 File Offset: 0x0067B708
-		// (set) Token: 0x0602FAF3 RID: 195315 RVA: 0x0067D510 File Offset: 0x0067B710
+		// Token: 0x1700D4AE RID: 54446
+		// (get) Token: 0x06032818 RID: 206872 RVA: 0x006D35C8 File Offset: 0x006D17C8
+		// (set) Token: 0x06032819 RID: 206873 RVA: 0x006D35D0 File Offset: 0x006D17D0
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602FAF4 RID: 195316 RVA: 0x0067D519 File Offset: 0x0067B719
+		// Token: 0x0603281A RID: 206874 RVA: 0x006D35D9 File Offset: 0x006D17D9
 		public ILookAtPerformOverlapMontageConfigT()
 		{
 			this.OverlapMontageLoopDuration = 0f;

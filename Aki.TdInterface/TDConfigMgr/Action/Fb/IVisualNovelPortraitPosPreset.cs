@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002571 RID: 9585
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200281A RID: 10266
 	public class IVisualNovelPortraitPosPreset
 	{
-		// Token: 0x0600D718 RID: 55064 RVA: 0x00200BA2 File Offset: 0x001FEDA2
+		// Token: 0x0600E483 RID: 58499 RVA: 0x0021C7AE File Offset: 0x0021A9AE
 		public static IVisualNovelPortraitPosPreset Create(IVisualNovelPortraitPosPreset? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003DF8 RID: 15864
-		// (get) Token: 0x0600D719 RID: 55065 RVA: 0x00200BC1 File Offset: 0x001FEDC1
+		// Token: 0x170040FD RID: 16637
+		// (get) Token: 0x0600E484 RID: 58500 RVA: 0x0021C7CD File Offset: 0x0021A9CD
 		public virtual string Name
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003DF9 RID: 15865
-		// (get) Token: 0x0600D71A RID: 55066 RVA: 0x00200BCE File Offset: 0x001FEDCE
+		// Token: 0x170040FE RID: 16638
+		// (get) Token: 0x0600E485 RID: 58501 RVA: 0x0021C7DA File Offset: 0x0021A9DA
 		public virtual int PosX
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003DFA RID: 15866
-		// (get) Token: 0x0600D71B RID: 55067 RVA: 0x00200BDB File Offset: 0x001FEDDB
+		// Token: 0x170040FF RID: 16639
+		// (get) Token: 0x0600E486 RID: 58502 RVA: 0x0021C7E7 File Offset: 0x0021A9E7
 		public virtual int PosY
 		{
 			get
@@ -52,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007713 RID: 30483
+		// Token: 0x04007D70 RID: 32112
 		private IVisualNovelPortraitPosPreset Instance;
 	}
 }

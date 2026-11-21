@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Components
 {
-	// Token: 0x020062A6 RID: 25254
+	// Token: 0x02005224 RID: 21028
 	internal enum ERecordItemType
 	{
-		// Token: 0x0402136A RID: 136042
+		// Token: 0x0401BC99 RID: 113817
 		TxtNum,
-		// Token: 0x0402136B RID: 136043
+		// Token: 0x0401BC9A RID: 113818
 		PnlGot
 	}
 }

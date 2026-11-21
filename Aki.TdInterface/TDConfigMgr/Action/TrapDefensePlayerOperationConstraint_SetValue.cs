@@ -3,21 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002255 RID: 8789
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024C2 RID: 9410
 	public class TrapDefensePlayerOperationConstraint_SetValue
 	{
-		// Token: 0x040072E8 RID: 29416
+		// Token: 0x04007935 RID: 31029
 		public ITrapDefensePlayerOperationType DisableOperation;
 
-		// Token: 0x040072E9 RID: 29417
+		// Token: 0x04007936 RID: 31030
 		public bool IsConstrained;
 
-		// Token: 0x040072EA RID: 29418
+		// Token: 0x04007937 RID: 31031
 		public string TidPromptTxt;
 
-		// Token: 0x040072EB RID: 29419
+		// Token: 0x04007938 RID: 31032
 		[Nullable(2)]
 		public string EdTidPromptTxt;
 	}

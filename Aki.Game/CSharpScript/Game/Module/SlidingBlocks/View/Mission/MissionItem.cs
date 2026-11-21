@@ -14,10 +14,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 {
-	// Token: 0x02004B99 RID: 19353
+	// Token: 0x02003B43 RID: 15171
 	public class MissionItem : UiPanelBase
 	{
-		// Token: 0x06032260 RID: 205408 RVA: 0x00BA6BF4 File Offset: 0x00BA4DF4
+		// Token: 0x06026FF0 RID: 159728 RVA: 0x00AEAD40 File Offset: 0x00AE8F40
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06032261 RID: 205409 RVA: 0x00BA6DE8 File Offset: 0x00BA4FE8
+		// Token: 0x06026FF1 RID: 159729 RVA: 0x00AEAF34 File Offset: 0x00AE9134
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MissionItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032262 RID: 205410 RVA: 0x00BA6E2B File Offset: 0x00BA502B
+		// Token: 0x06026FF2 RID: 159730 RVA: 0x00AEAF77 File Offset: 0x00AE9177
 		protected override void OnAfterShow()
 		{
 			base.OnAfterShow();
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			}
 		}
 
-		// Token: 0x06032263 RID: 205411 RVA: 0x00BA6E5C File Offset: 0x00BA505C
+		// Token: 0x06026FF3 RID: 159731 RVA: 0x00AEAFA8 File Offset: 0x00AE91A8
 		protected override void OnBeforeHide()
 		{
 			base.OnBeforeHide();
@@ -89,19 +89,19 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			}
 		}
 
-		// Token: 0x06032264 RID: 205412 RVA: 0x00BA6EA8 File Offset: 0x00BA50A8
+		// Token: 0x06026FF4 RID: 159732 RVA: 0x00AEAFF4 File Offset: 0x00AE91F4
 		private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			this.SetShortcutKey();
 		}
 
-		// Token: 0x06032265 RID: 205413 RVA: 0x00BA6EB0 File Offset: 0x00BA50B0
+		// Token: 0x06026FF5 RID: 159733 RVA: 0x00AEAFFC File Offset: 0x00AE91FC
 		protected override void OnBeforeDestroy()
 		{
 			InputDistributeController.Instance.UnBindAction("玩法放弃", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 		}
 
-		// Token: 0x06032266 RID: 205414 RVA: 0x00BA6ECD File Offset: 0x00BA50CD
+		// Token: 0x06026FF6 RID: 159734 RVA: 0x00AEB019 File Offset: 0x00AE9219
 		public void OnTick(float delta)
 		{
 			ParentStepItem missionStep = this.MissionStep;
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			missionStep.OnTick(delta);
 		}
 
-		// Token: 0x06032267 RID: 205415 RVA: 0x00BA6EE0 File Offset: 0x00BA50E0
+		// Token: 0x06026FF7 RID: 159735 RVA: 0x00AEB02C File Offset: 0x00AE922C
 		private void SetMainTitleText()
 		{
 			SlidingBlocksGameServerData serverData = SlidingBlocksModel.Instance.GameData.ServerData;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			text.ShowTextNew(serverData.MainTitleTextKey ?? "");
 		}
 
-		// Token: 0x06032268 RID: 205416 RVA: 0x00BA6F20 File Offset: 0x00BA5120
+		// Token: 0x06026FF8 RID: 159736 RVA: 0x00AEB06C File Offset: 0x00AE926C
 		private UniTask SetProgressText()
 		{
 			MissionItem.<SetProgressText>d__11 <SetProgressText>d__;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			return <SetProgressText>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032269 RID: 205417 RVA: 0x00BA6F64 File Offset: 0x00BA5164
+		// Token: 0x06026FF9 RID: 159737 RVA: 0x00AEB0B0 File Offset: 0x00AE92B0
 		private void SetShortcutKey()
 		{
 			UUIItem item = base.GetItem(11);
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			InputDistributeController.Instance.BindAction("玩法放弃", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 		}
 
-		// Token: 0x0603226A RID: 205418 RVA: 0x00BA7104 File Offset: 0x00BA5304
+		// Token: 0x06026FFA RID: 159738 RVA: 0x00AEB250 File Offset: 0x00AE9450
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private string GetGamepadShortcutString(string actionName, string sourceString)
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0603226B RID: 205419 RVA: 0x00BA7210 File Offset: 0x00BA5410
+		// Token: 0x06026FFB RID: 159739 RVA: 0x00AEB35C File Offset: 0x00AE955C
 		private void OnTrackBtnClick()
 		{
 			if (this.IsRequesting)
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603226C RID: 205420 RVA: 0x00BA7299 File Offset: 0x00BA5499
+		// Token: 0x06026FFC RID: 159740 RVA: 0x00AEB3E5 File Offset: 0x00AE95E5
 		[NullableContext(1)]
 		private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
@@ -296,39 +296,39 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			this.OnTrackBtnClick();
 		}
 
-		// Token: 0x0401AB6A RID: 109418
+		// Token: 0x040154BE RID: 87230
 		[Nullable(2)]
 		private ParentStepItem MissionStep;
 
-		// Token: 0x0401AB6B RID: 109419
+		// Token: 0x040154BF RID: 87231
 		private bool IsRequesting;
 
-		// Token: 0x0200ADB8 RID: 44472
+		// Token: 0x020097D7 RID: 38871
 		private enum EViewComponent
 		{
-			// Token: 0x04034C35 RID: 216117
+			// Token: 0x0402F5DC RID: 194012
 			Icon,
-			// Token: 0x04034C36 RID: 216118
+			// Token: 0x0402F5DD RID: 194013
 			ParentItem,
-			// Token: 0x04034C37 RID: 216119
+			// Token: 0x0402F5DE RID: 194014
 			ShortcutKeyText,
-			// Token: 0x04034C38 RID: 216120
+			// Token: 0x0402F5DF RID: 194015
 			BtnTrack,
-			// Token: 0x04034C39 RID: 216121
+			// Token: 0x0402F5E0 RID: 194016
 			CompleteItem,
-			// Token: 0x04034C3A RID: 216122
+			// Token: 0x0402F5E1 RID: 194017
 			ProcessItem,
-			// Token: 0x04034C3B RID: 216123
+			// Token: 0x0402F5E2 RID: 194018
 			CompleteText,
-			// Token: 0x04034C3C RID: 216124
+			// Token: 0x0402F5E3 RID: 194019
 			Niagara,
-			// Token: 0x04034C3D RID: 216125
+			// Token: 0x0402F5E4 RID: 194020
 			TitleText,
-			// Token: 0x04034C3E RID: 216126
+			// Token: 0x0402F5E5 RID: 194021
 			TitleItem,
-			// Token: 0x04034C3F RID: 216127
+			// Token: 0x0402F5E6 RID: 194022
 			ShortcutSprite,
-			// Token: 0x04034C40 RID: 216128
+			// Token: 0x0402F5E7 RID: 194023
 			ShortcutNode
 		}
 	}

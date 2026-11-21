@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200300F RID: 12303
+// Token: 0x02002565 RID: 9573
 [Nullable(new byte[]
 {
 	0,

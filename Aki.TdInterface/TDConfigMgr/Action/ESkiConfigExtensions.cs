@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002419 RID: 9241
+	// Token: 0x020026B8 RID: 9912
 	public static class ESkiConfigExtensions
 	{
-		// Token: 0x0600C8EF RID: 51439 RVA: 0x001D6DC0 File Offset: 0x001D4FC0
+		// Token: 0x0600D596 RID: 54678 RVA: 0x001F0A94 File Offset: 0x001EEC94
 		public static string ToEnumString(this ESkiConfig value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8F0 RID: 51440 RVA: 0x001D6E08 File Offset: 0x001D5008
+		// Token: 0x0600D597 RID: 54679 RVA: 0x001F0ADC File Offset: 0x001EECDC
 		public static ESkiConfig FromString(string name)
 		{
 			ESkiConfig result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8F1 RID: 51441 RVA: 0x001D6E34 File Offset: 0x001D5034
+		// Token: 0x0600D598 RID: 54680 RVA: 0x001F0B08 File Offset: 0x001EED08
 		public static bool TryFromString(string name, out ESkiConfig value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C8F2 RID: 51442 RVA: 0x001D6E8A File Offset: 0x001D508A
+		// Token: 0x0600D599 RID: 54681 RVA: 0x001F0B5E File Offset: 0x001EED5E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C8F3 RID: 51443 RVA: 0x001D6EAA File Offset: 0x001D50AA
+		// Token: 0x0600D59A RID: 54682 RVA: 0x001F0B7E File Offset: 0x001EED7E
 		public static ESkiConfig[] GetValues()
 		{
 			return new ESkiConfig[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C8F4 RID: 51444 RVA: 0x001D6EBA File Offset: 0x001D50BA
+		// Token: 0x0600D59B RID: 54683 RVA: 0x001F0B8E File Offset: 0x001EED8E
 		public static string[] GetNames()
 		{
 			return new string[]

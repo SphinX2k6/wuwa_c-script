@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200008B RID: 139
+	// Token: 0x02000093 RID: 147
 	public class ConfigAiSkillPreconditionById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000342 RID: 834 RVA: 0x0006BF94 File Offset: 0x0006A194
+		// Token: 0x06000372 RID: 882 RVA: 0x00070848 File Offset: 0x0006EA48
 		static ConfigAiSkillPreconditionById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAiSkillPreconditionById.CreateStaticDefaultValue), new Action(ConfigAiSkillPreconditionById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000343 RID: 835 RVA: 0x0006BFB4 File Offset: 0x0006A1B4
+		// Token: 0x06000373 RID: 883 RVA: 0x00070868 File Offset: 0x0006EA68
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAiSkillPreconditionById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000344 RID: 836 RVA: 0x0006C033 File Offset: 0x0006A233
+		// Token: 0x06000374 RID: 884 RVA: 0x000708E7 File Offset: 0x0006EAE7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAiSkillPreconditionById.LogPair = null;
 			ConfigAiSkillPreconditionById.HandleId = 0;
 		}
 
-		// Token: 0x06000345 RID: 837 RVA: 0x0006C041 File Offset: 0x0006A241
+		// Token: 0x06000375 RID: 885 RVA: 0x000708F5 File Offset: 0x0006EAF5
 		public static void Init()
 		{
 			ConfigAiSkillPreconditionById.HandleId = ConfigCommon.InitDataStatement(ConfigAiSkillPreconditionById.HandleId, "db_ai.db", "select BinData from `AiSkillPrecondition` where Id=?");
 		}
 
-		// Token: 0x06000346 RID: 838 RVA: 0x0006C05C File Offset: 0x0006A25C
+		// Token: 0x06000376 RID: 886 RVA: 0x00070910 File Offset: 0x0006EB10
 		public static AiSkillPrecondition? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAiSkillPreconditionById.HandleId, ConfigAiSkillPreconditionById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AiSkillPrecondition?(rootAsAiSkillPrecondition);
 		}
 
-		// Token: 0x040003B1 RID: 945
+		// Token: 0x040003E9 RID: 1001
 		private const string DB = "db_ai.db";
 
-		// Token: 0x040003B2 RID: 946
+		// Token: 0x040003EA RID: 1002
 		private const string FILE = "a.AI随机技能前置条件.xlsx";
 
-		// Token: 0x040003B3 RID: 947
+		// Token: 0x040003EB RID: 1003
 		private const string TABLE = "AiSkillPrecondition";
 
-		// Token: 0x040003B4 RID: 948
+		// Token: 0x040003EC RID: 1004
 		private const string COMMAND = "select BinData from `AiSkillPrecondition` where Id=?";
 
-		// Token: 0x040003B5 RID: 949
+		// Token: 0x040003ED RID: 1005
 		private const string KEY_PREFIX = "AiSkillPreconditionById";
 
-		// Token: 0x040003B6 RID: 950
+		// Token: 0x040003EE RID: 1006
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040003B7 RID: 951
+		// Token: 0x040003EF RID: 1007
 		private static int HandleId;
 	}
 }

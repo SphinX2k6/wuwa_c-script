@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C22 RID: 7202
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E19 RID: 7705
 	public class IMotorRadioUiFunction : EnableFunction
 	{
-		// Token: 0x06009A87 RID: 39559 RVA: 0x0016361C File Offset: 0x0016181C
+		// Token: 0x0600A3DF RID: 41951 RVA: 0x0017695C File Offset: 0x00174B5C
 		private IMotorRadioUiFunction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009A88 RID: 39560 RVA: 0x00163654 File Offset: 0x00161854
+		// Token: 0x0600A3E0 RID: 41952 RVA: 0x00176994 File Offset: 0x00174B94
 		public static IMotorRadioUiFunction Create([Nullable(2)] IMotorRadioUiFunction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A89 RID: 39561 RVA: 0x00163667 File Offset: 0x00161867
+		// Token: 0x0600A3E1 RID: 41953 RVA: 0x001769A7 File Offset: 0x00174BA7
 		public static IMotorRadioUiFunction CreateFromSetValue([Nullable(2)] IMotorRadioUiFunction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A8A RID: 39562 RVA: 0x0016367A File Offset: 0x0016187A
+		// Token: 0x0600A3E2 RID: 41954 RVA: 0x001769BA File Offset: 0x00174BBA
 		public new IMotorRadioUiFunction_SetValue ToSetValue()
 		{
 			return new IMotorRadioUiFunction_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003067 RID: 12391
-		// (get) Token: 0x06009A8B RID: 39563 RVA: 0x00163699 File Offset: 0x00161899
-		// (set) Token: 0x06009A8C RID: 39564 RVA: 0x001636C4 File Offset: 0x001618C4
+		// Token: 0x170032D8 RID: 13016
+		// (get) Token: 0x0600A3E3 RID: 41955 RVA: 0x001769D9 File Offset: 0x00174BD9
+		// (set) Token: 0x0600A3E4 RID: 41956 RVA: 0x00176A04 File Offset: 0x00174C04
 		public override EEnableFunctionType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003068 RID: 12392
-		// (get) Token: 0x06009A8D RID: 39565 RVA: 0x001636D2 File Offset: 0x001618D2
-		// (set) Token: 0x06009A8E RID: 39566 RVA: 0x001636F9 File Offset: 0x001618F9
+		// Token: 0x170032D9 RID: 13017
+		// (get) Token: 0x0600A3E5 RID: 41957 RVA: 0x00176A12 File Offset: 0x00174C12
+		// (set) Token: 0x0600A3E6 RID: 41958 RVA: 0x00176A39 File Offset: 0x00174C39
 		public virtual IMotorRadioOperationRestriction DisplayMode
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005DFA RID: 24058
+		// Token: 0x04006331 RID: 25393
 		[Nullable(2)]
 		protected new IMotorRadioUiFunction FbInstance;
 
-		// Token: 0x04005DFB RID: 24059
+		// Token: 0x04006332 RID: 25394
 		[Nullable(2)]
 		protected new IMotorRadioUiFunction_SetValue PocoInterface;
 	}

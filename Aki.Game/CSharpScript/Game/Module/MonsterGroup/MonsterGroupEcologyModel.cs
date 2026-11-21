@@ -5,19 +5,19 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.Module.MonsterGroup
 {
-	// Token: 0x020053C4 RID: 21444
+	// Token: 0x020043A7 RID: 17319
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class MonsterGroupEcologyModel : ModelBase
 	{
-		// Token: 0x06036C9A RID: 224410 RVA: 0x00CF7E17 File Offset: 0x00CF6017
+		// Token: 0x0602BBE0 RID: 179168 RVA: 0x00C46EBF File Offset: 0x00C450BF
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x06036C9B RID: 224411 RVA: 0x00CF7E1C File Offset: 0x00CF601C
+		// Token: 0x0602BBE1 RID: 179169 RVA: 0x00C46EC4 File Offset: 0x00C450C4
 		protected override bool OnClear()
 		{
 			foreach (KeyValuePair<int, MonsterGroupEcologyInfo> keyValuePair in this.EcologyGroups)
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036C9C RID: 224412 RVA: 0x00CF7E80 File Offset: 0x00CF6080
+		// Token: 0x0602BBE2 RID: 179170 RVA: 0x00C46F28 File Offset: 0x00C45128
 		[NullableContext(2)]
 		public MonsterGroupEcologyInfo GetEcologyGroup(int groupEntityId)
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return result;
 		}
 
-		// Token: 0x06036C9D RID: 224413 RVA: 0x00CF7EA0 File Offset: 0x00CF60A0
+		// Token: 0x0602BBE3 RID: 179171 RVA: 0x00C46F48 File Offset: 0x00C45148
 		public void RemoveEcologyGroup(int groupEntityId)
 		{
 			MonsterGroupEcologyInfo monsterGroupEcologyInfo;
@@ -49,21 +49,21 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.EcologyGroups.Remove(groupEntityId);
 		}
 
-		// Token: 0x06036C9E RID: 224414 RVA: 0x00CF7ED4 File Offset: 0x00CF60D4
+		// Token: 0x0602BBE4 RID: 179172 RVA: 0x00C46F7C File Offset: 0x00C4517C
 		public bool RemoveMemberOnEntityDestroyed(int groupEntityId, int memberEntityId)
 		{
 			MonsterGroupEcologyInfo monsterGroupEcologyInfo;
 			return this.EcologyGroups.TryGetValue(groupEntityId, out monsterGroupEcologyInfo) && monsterGroupEcologyInfo.RemoveMemberByEntityId(memberEntityId);
 		}
 
-		// Token: 0x06036C9F RID: 224415 RVA: 0x00CF7EFC File Offset: 0x00CF60FC
+		// Token: 0x0602BBE5 RID: 179173 RVA: 0x00C46FA4 File Offset: 0x00C451A4
 		public bool TryAddMemberToEcologyGroup(int groupEntityId, int pbDataId)
 		{
 			MonsterGroupEcologyInfo monsterGroupEcologyInfo;
 			return this.EcologyGroups.TryGetValue(groupEntityId, out monsterGroupEcologyInfo) && monsterGroupEcologyInfo.TryAddMember(pbDataId);
 		}
 
-		// Token: 0x06036CA0 RID: 224416 RVA: 0x00CF7F24 File Offset: 0x00CF6124
+		// Token: 0x0602BBE6 RID: 179174 RVA: 0x00C46FCC File Offset: 0x00C451CC
 		public bool GenerateAddEcologyGroup(int entityId, GroupAiComponent groupComp, IReadOnlyList<int> registeredPbDataIds)
 		{
 			MonsterGroupEcologyInfo monsterGroupEcologyInfo = new MonsterGroupEcologyInfo(entityId);
@@ -75,8 +75,8 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x170083B9 RID: 33721
-		// (get) Token: 0x06036CA1 RID: 224417 RVA: 0x00CF7F52 File Offset: 0x00CF6152
+		// Token: 0x17005785 RID: 22405
+		// (get) Token: 0x0602BBE7 RID: 179175 RVA: 0x00C46FFA File Offset: 0x00C451FA
 		public static MonsterGroupEcologyModel Instance
 		{
 			get
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CA2 RID: 224418 RVA: 0x00CF7F59 File Offset: 0x00CF6159
+		// Token: 0x0602BBE8 RID: 179176 RVA: 0x00C47001 File Offset: 0x00C45201
 		public static MonsterGroupEcologyModel GetOrCreateInstance()
 		{
 			if (MonsterGroupEcologyModel._Instance == null)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return MonsterGroupEcologyModel._Instance;
 		}
 
-		// Token: 0x06036CA3 RID: 224419 RVA: 0x00CF7F6D File Offset: 0x00CF616D
+		// Token: 0x0602BBE9 RID: 179177 RVA: 0x00C47015 File Offset: 0x00C45215
 		public static bool CreateInstance()
 		{
 			if (MonsterGroupEcologyModel._Instance != null)
@@ -106,27 +106,27 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036CA4 RID: 224420 RVA: 0x00CF7F83 File Offset: 0x00CF6183
+		// Token: 0x0602BBEA RID: 179178 RVA: 0x00C4702B File Offset: 0x00C4522B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06036CA5 RID: 224421 RVA: 0x00CF7F85 File Offset: 0x00CF6185
+		// Token: 0x0602BBEB RID: 179179 RVA: 0x00C4702D File Offset: 0x00C4522D
 		public static void ResetStaticDefaultValue()
 		{
 			MonsterGroupEcologyModel._Instance = null;
 		}
 
-		// Token: 0x06036CA6 RID: 224422 RVA: 0x00CF7F8D File Offset: 0x00CF618D
+		// Token: 0x0602BBEC RID: 179180 RVA: 0x00C47035 File Offset: 0x00C45235
 		static MonsterGroupEcologyModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MonsterGroupEcologyModel.CreateStaticDefaultValue), new Action(MonsterGroupEcologyModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401CEB1 RID: 118449
+		// Token: 0x04017949 RID: 96585
 		public readonly Dictionary<int, MonsterGroupEcologyInfo> EcologyGroups = new Dictionary<int, MonsterGroupEcologyInfo>();
 
-		// Token: 0x0401CEB2 RID: 118450
+		// Token: 0x0401794A RID: 96586
 		[Nullable(2)]
 		private static MonsterGroupEcologyModel _Instance;
 	}

@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x02006315 RID: 25365
+	// Token: 0x02005293 RID: 21139
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 	})]
 	public class PinballRoleSelectGridItem : PinballItemGridView<IPinballRoleSelectGridItemData>
 	{
-		// Token: 0x0603FD09 RID: 261385 RVA: 0x00F700D0 File Offset: 0x00F6E2D0
+		// Token: 0x060349CA RID: 215498 RVA: 0x00EB702C File Offset: 0x00EB522C
 		public override UniTask RefreshAsync(IPinballRoleSelectGridItemData data, bool isSelected, int gridIndex)
 		{
 			PinballRoleSelectGridItem.<RefreshAsync>d__1 <RefreshAsync>d__;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FD0A RID: 261386 RVA: 0x00F7011C File Offset: 0x00F6E31C
+		// Token: 0x060349CB RID: 215499 RVA: 0x00EB7078 File Offset: 0x00EB5278
 		public override void Refresh(IPinballRoleSelectGridItemData data, bool isSelected, int gridIndex)
 		{
 			PinballRoleSelectGridItem.<>c__DisplayClass2_0 CS$<>8__locals1 = new PinballRoleSelectGridItem.<>c__DisplayClass2_0();
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x0603FD0B RID: 261387 RVA: 0x00F70170 File Offset: 0x00F6E370
+		// Token: 0x060349CC RID: 215500 RVA: 0x00EB70CC File Offset: 0x00EB52CC
 		public void RefreshSelectedState(bool bJumpToLastFrame)
 		{
 			EToggleState state = this.GridData.IsSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			itemToggle.SetToggleState(state, false, false, bJumpToLastFrame);
 		}
 
-		// Token: 0x040214CC RID: 136396
+		// Token: 0x0401BDFB RID: 114171
 		[Nullable(2)]
 		protected IPinballRoleSelectGridItemData GridData;
 	}

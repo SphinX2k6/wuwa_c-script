@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200225A RID: 8794
+// Token: 0x0200173E RID: 5950
 public class MotorTechTaskProcess
 {
-	// Token: 0x170015D8 RID: 5592
-	// (get) Token: 0x06011269 RID: 70249 RVA: 0x0042E336 File Offset: 0x0042C536
-	// (set) Token: 0x0601126A RID: 70250 RVA: 0x0042E33E File Offset: 0x0042C53E
+	// Token: 0x1700160F RID: 5647
+	// (get) Token: 0x0600E6FF RID: 59135 RVA: 0x0043AED6 File Offset: 0x004390D6
+	// (set) Token: 0x0600E700 RID: 59136 RVA: 0x0043AEDE File Offset: 0x004390DE
 	public int Current { get; set; }
 
-	// Token: 0x170015D9 RID: 5593
-	// (get) Token: 0x0601126B RID: 70251 RVA: 0x0042E347 File Offset: 0x0042C547
-	// (set) Token: 0x0601126C RID: 70252 RVA: 0x0042E34F File Offset: 0x0042C54F
+	// Token: 0x17001610 RID: 5648
+	// (get) Token: 0x0600E701 RID: 59137 RVA: 0x0043AEE7 File Offset: 0x004390E7
+	// (set) Token: 0x0600E702 RID: 59138 RVA: 0x0043AEEF File Offset: 0x004390EF
 	public int Target { get; set; }
 }

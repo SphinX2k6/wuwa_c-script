@@ -6,17 +6,17 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 
-// Token: 0x02002D87 RID: 11655
+// Token: 0x020022E1 RID: 8929
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletActionDestroyBullet : BulletActionBase
 {
-	// Token: 0x060187E7 RID: 100327 RVA: 0x0063C274 File Offset: 0x0063A474
+	// Token: 0x06016089 RID: 90249 RVA: 0x00661FAC File Offset: 0x006601AC
 	public BulletActionDestroyBullet(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x060187E8 RID: 100328 RVA: 0x0063C280 File Offset: 0x0063A480
+	// Token: 0x0601608A RID: 90250 RVA: 0x00661FB8 File Offset: 0x006601B8
 	protected override void OnExecute()
 	{
 		BulletActionInfoDestroyBullet bulletActionInfoDestroyBullet = (BulletActionInfoDestroyBullet)this.ActionInfo;
@@ -76,7 +76,7 @@ public class BulletActionDestroyBullet : BulletActionBase
 		}
 	}
 
-	// Token: 0x060187E9 RID: 100329 RVA: 0x0063C46C File Offset: 0x0063A66C
+	// Token: 0x0601608B RID: 90251 RVA: 0x006621A4 File Offset: 0x006603A4
 	private void OnParentDestroy()
 	{
 		if (BulletHitCountUtil.CheckHitCountTotal(this.BulletInfo))
@@ -91,7 +91,7 @@ public class BulletActionDestroyBullet : BulletActionBase
 		}
 	}
 
-	// Token: 0x060187EA RID: 100330 RVA: 0x0063C4A4 File Offset: 0x0063A6A4
+	// Token: 0x0601608C RID: 90252 RVA: 0x006621DC File Offset: 0x006603DC
 	private void SendBulletDataEndEvent()
 	{
 		BaseActorComponent attackerActorComp = this.BulletInfo.AttackerActorComp;
@@ -118,7 +118,7 @@ public class BulletActionDestroyBullet : BulletActionBase
 		}
 	}
 
-	// Token: 0x060187EB RID: 100331 RVA: 0x0063C560 File Offset: 0x0063A760
+	// Token: 0x0601608D RID: 90253 RVA: 0x00662298 File Offset: 0x00660498
 	private void DestroySummon()
 	{
 		BulletDataMain bulletDataMain = this.BulletInfo.BulletDataMain;
@@ -129,7 +129,7 @@ public class BulletActionDestroyBullet : BulletActionBase
 		CreatureController.Instance.RemoveSummonEntityByServerIdRequest(this.BulletInfo.BulletInitParams.SkillId, this.BulletInfo.SummonAttackerId, this.BulletInfo.SummonServerEntityId);
 	}
 
-	// Token: 0x060187EC RID: 100332 RVA: 0x0063C5D4 File Offset: 0x0063A7D4
+	// Token: 0x0601608E RID: 90254 RVA: 0x0066230C File Offset: 0x0066050C
 	private void SummonChildBulletOnDestroy()
 	{
 		BulletChildInfo childInfo = this.BulletInfo.ChildInfo;
@@ -163,7 +163,7 @@ public class BulletActionDestroyBullet : BulletActionBase
 		}
 	}
 
-	// Token: 0x060187ED RID: 100333 RVA: 0x0063C780 File Offset: 0x0063A980
+	// Token: 0x0601608F RID: 90255 RVA: 0x006624B8 File Offset: 0x006606B8
 	private void BulletEffectOnDestroy()
 	{
 		if (this.BulletInfo.IsDestroyByCharSkillEnd)
@@ -182,23 +182,23 @@ public class BulletActionDestroyBullet : BulletActionBase
 		BulletStaticFunction.DestroyEffect(this.BulletInfo, true);
 	}
 
-	// Token: 0x0400B589 RID: 46473
+	// Token: 0x0400B8FE RID: 47358
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ChildOnDestroyStat = Stat.Create("BulletDataComp.ChildOnDestroy", "", "");
 
-	// Token: 0x0400B58A RID: 46474
+	// Token: 0x0400B8FF RID: 47359
 	[StaticVariableRuleIgnore]
 	private static readonly Stat EffectOnDestroyStat = Stat.Create("BulletDataComp.EffectOnDestroy", "", "");
 
-	// Token: 0x0400B58B RID: 46475
+	// Token: 0x0400B900 RID: 47360
 	[StaticVariableRuleIgnore]
 	private static readonly Stat SpawnHitEffectStat = Stat.Create("SpawnHitEffect", "", "");
 
-	// Token: 0x0400B58C RID: 46476
+	// Token: 0x0400B901 RID: 47361
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ActionDestroyStat = Stat.Create("ActionDestroy", "", "");
 
-	// Token: 0x0400B58D RID: 46477
+	// Token: 0x0400B902 RID: 47362
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ActionBreakEffect = Stat.Create("ActionBreakEffect", "", "");
 }

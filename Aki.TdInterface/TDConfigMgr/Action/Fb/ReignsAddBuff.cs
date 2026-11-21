@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A54 RID: 10836
+	// Token: 0x02002D41 RID: 11585
 	public class ReignsAddBuff : ActionParams
 	{
-		// Token: 0x0600EE6F RID: 61039 RVA: 0x0022B543 File Offset: 0x00229743
-		[NullableContext(1)]
+		// Token: 0x0600FD07 RID: 64775 RVA: 0x00248EF7 File Offset: 0x002470F7
 		public static ReignsAddBuff Create(IReignsAddBuff? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B89 RID: 19337
-		// (get) Token: 0x0600EE70 RID: 61040 RVA: 0x0022B562 File Offset: 0x00229762
+		// Token: 0x17004F33 RID: 20275
+		// (get) Token: 0x0600FD08 RID: 64776 RVA: 0x00248F16 File Offset: 0x00247116
 		public virtual int BuffId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008330 RID: 33584
+		// Token: 0x04008A23 RID: 35363
 		private IReignsAddBuff Instance;
 	}
 }

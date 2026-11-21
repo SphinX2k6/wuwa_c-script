@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067E8 RID: 26600
+	// Token: 0x02005738 RID: 22328
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlCombineEnsureLineItem : UiPanelBase
 	{
-		// Token: 0x0604244E RID: 271438 RVA: 0x01015964 File Offset: 0x01013B64
+		// Token: 0x06036FA4 RID: 225188 RVA: 0x00F56DFC File Offset: 0x00F54FFC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604244F RID: 271439 RVA: 0x010159F0 File Offset: 0x01013BF0
+		// Token: 0x06036FA5 RID: 225189 RVA: 0x00F56E88 File Offset: 0x00F55088
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlCombineEnsureLineItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042450 RID: 271440 RVA: 0x01015A33 File Offset: 0x01013C33
+		// Token: 0x06036FA6 RID: 225190 RVA: 0x00F56ECB File Offset: 0x00F550CB
 		public void Refresh(DangoBrawlCombineLineCluster cluster)
 		{
 			this.Cluster = cluster;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshLines();
 		}
 
-		// Token: 0x06042451 RID: 271441 RVA: 0x01015A48 File Offset: 0x01013C48
+		// Token: 0x06036FA7 RID: 225191 RVA: 0x00F56EE0 File Offset: 0x00F550E0
 		private FVector2D? GetItemLinkLguiPos(int uid)
 		{
 			FVector2D value;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return null;
 		}
 
-		// Token: 0x06042452 RID: 271442 RVA: 0x01015A7C File Offset: 0x01013C7C
+		// Token: 0x06036FA8 RID: 225192 RVA: 0x00F56F14 File Offset: 0x00F55114
 		private void SetChildLocalByLgui(UUIItem child, FVector2D lguiPos)
 		{
 			if (this.RootItem == null || !this.RootItem.IsValid())
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			child.SetUIRelativeLocation(new FVector(lguiPos.X - lguispaceAbsolutePosition.X, lguiPos.Y - lguispaceAbsolutePosition.Y, 0f));
 		}
 
-		// Token: 0x06042453 RID: 271443 RVA: 0x01015AF4 File Offset: 0x01013CF4
+		// Token: 0x06036FA9 RID: 225193 RVA: 0x00F56F8C File Offset: 0x00F5518C
 		private static float CalcDistance(FVector2D a, FVector2D b)
 		{
 			float num = b.X - a.X;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return (float)Math.Sqrt((double)(num * num + num2 * num2));
 		}
 
-		// Token: 0x06042454 RID: 271444 RVA: 0x01015B2C File Offset: 0x01013D2C
+		// Token: 0x06036FAA RID: 225194 RVA: 0x00F56FC4 File Offset: 0x00F551C4
 		private UniTask CreateCombineButton()
 		{
 			DangoBrawlCombineEnsureLineItem.<CreateCombineButton>d__11 <CreateCombineButton>d__;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <CreateCombineButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042455 RID: 271445 RVA: 0x01015B70 File Offset: 0x01013D70
+		// Token: 0x06036FAB RID: 225195 RVA: 0x00F57008 File Offset: 0x00F55208
 		private void RefreshButton()
 		{
 			DangoBrawlCombineEnsureLineItemButton button = this.Button;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			uuiitem.SetUIActive(true);
 		}
 
-		// Token: 0x06042456 RID: 271446 RVA: 0x01015C40 File Offset: 0x01013E40
+		// Token: 0x06036FAC RID: 225196 RVA: 0x00F570D8 File Offset: 0x00F552D8
 		private unsafe void RefreshLines()
 		{
 			if (this.RootItem == null || !this.RootItem.IsValid())
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042457 RID: 271447 RVA: 0x01015E2C File Offset: 0x0101402C
+		// Token: 0x06036FAD RID: 225197 RVA: 0x00F572C4 File Offset: 0x00F554C4
 		private void ApplyLineTransform(UUIItem line, FVector2D from, FVector2D to)
 		{
 			this.SetChildLocalByLgui(line, from);
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			line.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x06042458 RID: 271448 RVA: 0x01015E70 File Offset: 0x01014070
+		// Token: 0x06036FAE RID: 225198 RVA: 0x00F57308 File Offset: 0x00F55508
 		private void EnsurePoolSize(int size)
 		{
 			UUIItem item = base.GetItem(2);
@@ -191,28 +191,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x04022932 RID: 141618
+		// Token: 0x0401D18F RID: 119183
 		private ActivityDangoBrawlData ActData;
 
-		// Token: 0x04022933 RID: 141619
+		// Token: 0x0401D190 RID: 119184
 		private DangoBrawlCombineLineCluster Cluster;
 
-		// Token: 0x04022934 RID: 141620
+		// Token: 0x0401D191 RID: 119185
 		[Nullable(2)]
 		private DangoBrawlCombineEnsureLineItemButton Button;
 
-		// Token: 0x04022935 RID: 141621
+		// Token: 0x0401D192 RID: 119186
 		private readonly List<UUIItem> LinePool = new List<UUIItem>();
 
-		// Token: 0x0200C917 RID: 51479
+		// Token: 0x0200B2E5 RID: 45797
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403CB69 RID: 248681
+			// Token: 0x0403745A RID: 226394
 			BtnCombine,
-			// Token: 0x0403CB6A RID: 248682
+			// Token: 0x0403745B RID: 226395
 			ContentLine,
-			// Token: 0x0403CB6B RID: 248683
+			// Token: 0x0403745C RID: 226396
 			TemplateLine
 		}
 	}

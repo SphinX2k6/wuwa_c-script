@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A02 RID: 10754
+	// Token: 0x02002CEF RID: 11503
 	public class IDungeonEventType
 	{
-		// Token: 0x0600ED51 RID: 60753 RVA: 0x00229B4B File Offset: 0x00227D4B
-		[NullableContext(1)]
+		// Token: 0x0600FBE8 RID: 64488 RVA: 0x002474CF File Offset: 0x002456CF
 		public static IDungeonEventType Create(IDungeonEventType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B0F RID: 19215
-		// (get) Token: 0x0600ED52 RID: 60754 RVA: 0x00229B6A File Offset: 0x00227D6A
+		// Token: 0x17004EB8 RID: 20152
+		// (get) Token: 0x0600FBE9 RID: 64489 RVA: 0x002474EE File Offset: 0x002456EE
 		public virtual EDungeonEventType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082A4 RID: 33444
+		// Token: 0x04008995 RID: 35221
 		private IDungeonEventType Instance;
 	}
 }

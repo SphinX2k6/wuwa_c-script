@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Core.Container
 {
-	// Token: 0x0200014D RID: 333
+	// Token: 0x02000151 RID: 337
 	public interface IGraphRuntimeEdge
 	{
-		// Token: 0x17000110 RID: 272
-		// (get) Token: 0x06000B9B RID: 2971
-		// (set) Token: 0x06000B9C RID: 2972
+		// Token: 0x17000123 RID: 291
+		// (get) Token: 0x06000BF7 RID: 3063
+		// (set) Token: 0x06000BF8 RID: 3064
 		int Id { get; set; }
 
-		// Token: 0x17000111 RID: 273
-		// (get) Token: 0x06000B9D RID: 2973
-		// (set) Token: 0x06000B9E RID: 2974
+		// Token: 0x17000124 RID: 292
+		// (get) Token: 0x06000BF9 RID: 3065
+		// (set) Token: 0x06000BFA RID: 3066
 		int From { get; set; }
 
-		// Token: 0x17000112 RID: 274
-		// (get) Token: 0x06000B9F RID: 2975
-		// (set) Token: 0x06000BA0 RID: 2976
+		// Token: 0x17000125 RID: 293
+		// (get) Token: 0x06000BFB RID: 3067
+		// (set) Token: 0x06000BFC RID: 3068
 		int To { get; set; }
 	}
 }

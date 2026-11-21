@@ -5,12 +5,12 @@ using Aki.TDConfigMgr.Component;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.Manager;
 using UnrealEngine;
 
-// Token: 0x020031D9 RID: 12761
+// Token: 0x02002748 RID: 10056
 [NullableContext(1)]
 [Nullable(0)]
 public class NpcPawnPassThroughComponent : EntityComponent
 {
-	// Token: 0x0601B853 RID: 112723 RVA: 0x0078C744 File Offset: 0x0078A944
+	// Token: 0x060193BE RID: 103358 RVA: 0x007B4B8C File Offset: 0x007B2D8C
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<BaseCharacterComponent>();
@@ -67,7 +67,7 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B854 RID: 112724 RVA: 0x0078C880 File Offset: 0x0078AA80
+	// Token: 0x060193BF RID: 103359 RVA: 0x007B4CC8 File Offset: 0x007B2EC8
 	protected override bool OnEnd()
 	{
 		UCapsuleComponent capsule = this.Capsule;
@@ -86,7 +86,7 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B855 RID: 112725 RVA: 0x0078C918 File Offset: 0x0078AB18
+	// Token: 0x060193C0 RID: 103360 RVA: 0x007B4D60 File Offset: 0x007B2F60
 	protected override void OnTick(float delta)
 	{
 		if (this.OverlapActorComps.Count == 0)
@@ -121,7 +121,7 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		this.SetSelfDither(num);
 	}
 
-	// Token: 0x0601B856 RID: 112726 RVA: 0x0078CA00 File Offset: 0x0078AC00
+	// Token: 0x060193C1 RID: 103361 RVA: 0x007B4E48 File Offset: 0x007B3048
 	private void InitReferenceRadius()
 	{
 		float scaledRadius = this.ActorComp.ScaledRadius;
@@ -149,7 +149,7 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		this.ReferenceRadius = ((num3 > 0f) ? num3 : scaledRadius);
 	}
 
-	// Token: 0x0601B857 RID: 112727 RVA: 0x0078CAA0 File Offset: 0x0078ACA0
+	// Token: 0x060193C2 RID: 103362 RVA: 0x007B4EE8 File Offset: 0x007B30E8
 	private void DowngradeCollision()
 	{
 		foreach (ECollisionChannel ecollisionChannel in NpcPawnPassThroughComponent.PASS_THROUGH_CHANNELS)
@@ -162,7 +162,7 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B858 RID: 112728 RVA: 0x0078CAF8 File Offset: 0x0078ACF8
+	// Token: 0x060193C3 RID: 103363 RVA: 0x007B4F40 File Offset: 0x007B3140
 	private void RestoreCollision()
 	{
 		foreach (ECollisionChannel channel in this.DowngradedChannels)
@@ -171,7 +171,7 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B859 RID: 112729 RVA: 0x0078CB54 File Offset: 0x0078AD54
+	// Token: 0x060193C4 RID: 103364 RVA: 0x007B4F9C File Offset: 0x007B319C
 	[NullableContext(2)]
 	private void OnCapsuleBeginOverlap(UPrimitiveComponent overlappedComponent, AActor otherActor, UPrimitiveComponent otherComp, int otherBodyIndex, bool bFromSweep, [Nullable(1)] FHitResult sweepResult)
 	{
@@ -188,7 +188,7 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B85A RID: 112730 RVA: 0x0078CBB0 File Offset: 0x0078ADB0
+	// Token: 0x060193C5 RID: 103365 RVA: 0x007B4FF8 File Offset: 0x007B31F8
 	[NullableContext(2)]
 	private void OnCapsuleEndOverlap(UPrimitiveComponent overlappedComponent, AActor otherActor, UPrimitiveComponent otherComp, int otherBodyIndex)
 	{
@@ -208,7 +208,7 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B85B RID: 112731 RVA: 0x0078CBF4 File Offset: 0x0078ADF4
+	// Token: 0x060193C6 RID: 103366 RVA: 0x007B503C File Offset: 0x007B323C
 	[NullableContext(2)]
 	private BaseCharacterComponent GetCharacterActorComp(AActor otherActor)
 	{
@@ -225,7 +225,7 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		return component;
 	}
 
-	// Token: 0x0601B85C RID: 112732 RVA: 0x0078CC3C File Offset: 0x0078AE3C
+	// Token: 0x060193C7 RID: 103367 RVA: 0x007B5084 File Offset: 0x007B3284
 	private void MarkOverlapEmpty()
 	{
 		if (this.DisableHandle == null)
@@ -234,14 +234,14 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B85D RID: 112733 RVA: 0x0078CC64 File Offset: 0x0078AE64
+	// Token: 0x060193C8 RID: 103368 RVA: 0x007B50AC File Offset: 0x007B32AC
 	private float CalcDitherAlpha(BaseCharacterComponent otherActorComp)
 	{
 		float val = this.GetSegmentDistToOwnCapsule(otherActorComp) - otherActorComp.ScaledRadius;
 		return MathUtils.Instance.RangeClamp(Math.Max(0f, val) / this.ReferenceRadius, 0f, 1f, 0.3f, 1f);
 	}
 
-	// Token: 0x0601B85E RID: 112734 RVA: 0x0078CCB0 File Offset: 0x0078AEB0
+	// Token: 0x060193C9 RID: 103369 RVA: 0x007B50F8 File Offset: 0x007B32F8
 	private void UpdateSelfCapsuleSegment()
 	{
 		Vector actorLocationProxy = this.ActorComp.ActorLocationProxy;
@@ -252,7 +252,7 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		actorLocationProxy.Subtraction(this.TmpSeg, this.SelfPointB);
 	}
 
-	// Token: 0x0601B85F RID: 112735 RVA: 0x0078CD28 File Offset: 0x0078AF28
+	// Token: 0x060193CA RID: 103370 RVA: 0x007B5170 File Offset: 0x007B3370
 	private float GetSegmentDistToOwnCapsule(BaseCharacterComponent otherActorComp)
 	{
 		Vector actorLocationProxy = otherActorComp.ActorLocationProxy;
@@ -264,7 +264,7 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		return (float)MathUtils.Instance.SegmentToSegmentDistance(this.SelfPointA, this.SelfPointB, this.OtherPointA, this.OtherPointB);
 	}
 
-	// Token: 0x0601B860 RID: 112736 RVA: 0x0078CDAF File Offset: 0x0078AFAF
+	// Token: 0x060193CB RID: 103371 RVA: 0x007B51F7 File Offset: 0x007B33F7
 	private void SetSelfDither(float alpha)
 	{
 		BaseCharacterComponent actorComp = this.ActorComp;
@@ -280,7 +280,7 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		actor.SetDitherEffect(alpha, ECharacterDitherType.CanBePassedThrough);
 	}
 
-	// Token: 0x0601B861 RID: 112737 RVA: 0x0078CDD0 File Offset: 0x0078AFD0
+	// Token: 0x060193CC RID: 103372 RVA: 0x007B5218 File Offset: 0x007B3418
 	private void ResetSelfDither()
 	{
 		BaseCharacterComponent actorComp = this.ActorComp;
@@ -294,7 +294,7 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B862 RID: 112738 RVA: 0x0078CE20 File Offset: 0x0078B020
+	// Token: 0x060193CD RID: 103373 RVA: 0x007B5268 File Offset: 0x007B3468
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -302,48 +302,66 @@ public class NpcPawnPassThroughComponent : EntityComponent
 			return false;
 		}
 		NpcPawnPassThroughComponent npcPawnPassThroughComponent = (NpcPawnPassThroughComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (npcPawnPassThroughComponent.ActorComp == null)
 		{
-			if (npcPawnPassThroughComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseCharacterComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("Capsule"))
-		{
-			if (npcPawnPassThroughComponent.Capsule == null)
-			{
-				this.Capsule = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCapsuleComponent>(this.Capsule), "Capsule"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ReferenceRadius"))
-		{
-			this.ReferenceRadius = npcPawnPassThroughComponent.ReferenceRadius;
-		}
-		if (base.CanResetComponentProperty("OverlapActorComps") && npcPawnPassThroughComponent.OverlapActorComps != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<BaseCharacterComponent>(this.OverlapActorComps), "OverlapActorComps"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("DowngradedChannels") && npcPawnPassThroughComponent.DowngradedChannels != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ECollisionChannel>>(this.DowngradedChannels), "DowngradedChannels"))
+		if (npcPawnPassThroughComponent.Capsule == null)
+		{
+			this.Capsule = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Capsule), "Capsule"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("DisableHandle"))
+		this.ReferenceRadius = npcPawnPassThroughComponent.ReferenceRadius;
+		if (npcPawnPassThroughComponent.OverlapActorComps != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<BaseCharacterComponent>(this.OverlapActorComps), "OverlapActorComps"))
 		{
-			this.DisableHandle = npcPawnPassThroughComponent.DisableHandle;
+			return false;
 		}
-		return (!base.CanResetComponentProperty("SelfPointA") || npcPawnPassThroughComponent.SelfPointA == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.SelfPointA), "SelfPointA")) && (!base.CanResetComponentProperty("SelfPointB") || npcPawnPassThroughComponent.SelfPointB == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.SelfPointB), "SelfPointB")) && (!base.CanResetComponentProperty("TmpSeg") || npcPawnPassThroughComponent.TmpSeg == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpSeg), "TmpSeg")) && (!base.CanResetComponentProperty("OtherPointA") || npcPawnPassThroughComponent.OtherPointA == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.OtherPointA), "OtherPointA")) && (!base.CanResetComponentProperty("OtherPointB") || npcPawnPassThroughComponent.OtherPointB == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.OtherPointB), "OtherPointB"));
+		if (npcPawnPassThroughComponent.DowngradedChannels != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DowngradedChannels), "DowngradedChannels"))
+		{
+			return false;
+		}
+		this.DisableHandle = npcPawnPassThroughComponent.DisableHandle;
+		return (npcPawnPassThroughComponent.SelfPointA == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.SelfPointA), "SelfPointA")) && (npcPawnPassThroughComponent.SelfPointB == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.SelfPointB), "SelfPointB")) && (npcPawnPassThroughComponent.TmpSeg == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpSeg), "TmpSeg")) && (npcPawnPassThroughComponent.OtherPointA == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.OtherPointA), "OtherPointA")) && (npcPawnPassThroughComponent.OtherPointB == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.OtherPointB), "OtherPointB"));
 	}
 
-	// Token: 0x0400D825 RID: 55333
+	// Token: 0x17002834 RID: 10292
+	// (get) Token: 0x060193CE RID: 103374 RVA: 0x007B53E4 File Offset: 0x007B35E4
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002835 RID: 10293
+	// (get) Token: 0x060193CF RID: 103375 RVA: 0x007B53E7 File Offset: 0x007B35E7
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002836 RID: 10294
+	// (get) Token: 0x060193D0 RID: 103376 RVA: 0x007B53EA File Offset: 0x007B35EA
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DCB7 RID: 56503
 	[StaticVariableRuleIgnore]
 	private static readonly ECollisionChannel[] PASS_THROUGH_CHANNELS = new ECollisionChannel[]
 	{
@@ -353,41 +371,41 @@ public class NpcPawnPassThroughComponent : EntityComponent
 		KuroCollisionChannel.Vehicle
 	};
 
-	// Token: 0x0400D826 RID: 55334
+	// Token: 0x0400DCB8 RID: 56504
 	private const float MIN_DITHER_ALPHA = 0.3f;
 
-	// Token: 0x0400D827 RID: 55335
+	// Token: 0x0400DCB9 RID: 56505
 	[Nullable(2)]
 	private BaseCharacterComponent ActorComp;
 
-	// Token: 0x0400D828 RID: 55336
+	// Token: 0x0400DCBA RID: 56506
 	[Nullable(2)]
 	private UCapsuleComponent Capsule;
 
-	// Token: 0x0400D829 RID: 55337
+	// Token: 0x0400DCBB RID: 56507
 	private float ReferenceRadius;
 
-	// Token: 0x0400D82A RID: 55338
+	// Token: 0x0400DCBC RID: 56508
 	private readonly HashSet<BaseCharacterComponent> OverlapActorComps = new HashSet<BaseCharacterComponent>();
 
-	// Token: 0x0400D82B RID: 55339
+	// Token: 0x0400DCBD RID: 56509
 	private readonly List<ECollisionChannel> DowngradedChannels = new List<ECollisionChannel>();
 
-	// Token: 0x0400D82C RID: 55340
+	// Token: 0x0400DCBE RID: 56510
 	private int? DisableHandle;
 
-	// Token: 0x0400D82D RID: 55341
+	// Token: 0x0400DCBF RID: 56511
 	private readonly Vector SelfPointA = Vector.Create();
 
-	// Token: 0x0400D82E RID: 55342
+	// Token: 0x0400DCC0 RID: 56512
 	private readonly Vector SelfPointB = Vector.Create();
 
-	// Token: 0x0400D82F RID: 55343
+	// Token: 0x0400DCC1 RID: 56513
 	private readonly Vector TmpSeg = Vector.Create();
 
-	// Token: 0x0400D830 RID: 55344
+	// Token: 0x0400DCC2 RID: 56514
 	private readonly Vector OtherPointA = Vector.Create();
 
-	// Token: 0x0400D831 RID: 55345
+	// Token: 0x0400DCC3 RID: 56515
 	private readonly Vector OtherPointB = Vector.Create();
 }

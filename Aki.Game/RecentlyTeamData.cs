@@ -4,12 +4,12 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001C32 RID: 7218
+// Token: 0x020010F1 RID: 4337
 [NullableContext(1)]
 [Nullable(0)]
 public class RecentlyTeamData
 {
-	// Token: 0x0600D910 RID: 55568 RVA: 0x00324EB8 File Offset: 0x003230B8
+	// Token: 0x0600AD26 RID: 44326 RVA: 0x003302B8 File Offset: 0x0032E4B8
 	public UniTask InitData(RecentlyTeamInfo data)
 	{
 		RecentlyTeamData.<InitData>d__2 <InitData>d__;
@@ -21,16 +21,16 @@ public class RecentlyTeamData
 		return <InitData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D911 RID: 55569 RVA: 0x00324F04 File Offset: 0x00323104
+	// Token: 0x0600AD27 RID: 44327 RVA: 0x00330304 File Offset: 0x0032E504
 	public int GetOfflineDay()
 	{
 		long teamTime = this.TeamTime;
 		return TimeUtil.Instance.CalculateDayTimeStampGapBetweenNow((double)teamTime, false);
 	}
 
-	// Token: 0x040062ED RID: 25325
+	// Token: 0x040063BF RID: 25535
 	public FriendData PlayerData = new FriendData();
 
-	// Token: 0x040062EE RID: 25326
+	// Token: 0x040063C0 RID: 25536
 	public long TeamTime;
 }

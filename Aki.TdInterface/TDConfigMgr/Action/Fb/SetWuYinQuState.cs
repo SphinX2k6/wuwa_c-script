@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002674 RID: 9844
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002933 RID: 10547
 	public class SetWuYinQuState : ActionParams
 	{
-		// Token: 0x0600DCA1 RID: 56481 RVA: 0x0020D046 File Offset: 0x0020B246
+		// Token: 0x0600EA6D RID: 60013 RVA: 0x00229756 File Offset: 0x00227956
 		public static SetWuYinQuState Create(ISetWuYinQuState? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700417B RID: 16763
-		// (get) Token: 0x0600DCA2 RID: 56482 RVA: 0x0020D065 File Offset: 0x0020B265
+		// Token: 0x170044B5 RID: 17589
+		// (get) Token: 0x0600EA6E RID: 60014 RVA: 0x00229775 File Offset: 0x00227975
 		public virtual string WuYinQuName
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700417C RID: 16764
-		// (get) Token: 0x0600DCA3 RID: 56483 RVA: 0x0020D072 File Offset: 0x0020B272
+		// Token: 0x170044B6 RID: 17590
+		// (get) Token: 0x0600EA6F RID: 60015 RVA: 0x00229782 File Offset: 0x00227982
 		public virtual EWuYinQuState State
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A9E RID: 31390
+		// Token: 0x04008135 RID: 33077
 		private ISetWuYinQuState Instance;
 	}
 }

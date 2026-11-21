@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C7C RID: 3196
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D5B RID: 3419
 	public class IActorAttachTarget : IAttachTarget
 	{
-		// Token: 0x06004936 RID: 18742 RVA: 0x000B7BBD File Offset: 0x000B5DBD
+		// Token: 0x06004DD5 RID: 19925 RVA: 0x000C23C1 File Offset: 0x000C05C1
 		public static IActorAttachTarget Create(IActorAttachTarget? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015FB RID: 5627
-		// (get) Token: 0x06004937 RID: 18743 RVA: 0x000B7BDC File Offset: 0x000B5DDC
+		// Token: 0x1700171A RID: 5914
+		// (get) Token: 0x06004DD6 RID: 19926 RVA: 0x000C23E0 File Offset: 0x000C05E0
 		public override EAttachType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015FC RID: 5628
-		// (get) Token: 0x06004938 RID: 18744 RVA: 0x000B7BE9 File Offset: 0x000B5DE9
+		// Token: 0x1700171B RID: 5915
+		// (get) Token: 0x06004DD7 RID: 19927 RVA: 0x000C23ED File Offset: 0x000C05ED
 		public virtual IActorRef ActorRef
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029C5 RID: 10693
+		// Token: 0x04002C32 RID: 11314
 		private IActorAttachTarget Instance;
 
-		// Token: 0x040029C6 RID: 10694
+		// Token: 0x04002C33 RID: 11315
 		[Nullable(2)]
 		private IActorRef _ActorRefCache;
 
-		// Token: 0x040029C7 RID: 10695
+		// Token: 0x04002C34 RID: 11316
 		private bool _ActorRefInited;
 	}
 }

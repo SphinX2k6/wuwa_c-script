@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BE8 RID: 23528
+	// Token: 0x02004BC8 RID: 19400
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CiacconaGalChapterRestartChoiceParam : ICiacconaGalChapterRestartChoiceParam
 	{
-		// Token: 0x17008D67 RID: 36199
-		// (get) Token: 0x0603B78F RID: 243599 RVA: 0x00E2EB97 File Offset: 0x00E2CD97
-		// (set) Token: 0x0603B790 RID: 243600 RVA: 0x00E2EB9F File Offset: 0x00E2CD9F
+		// Token: 0x17006139 RID: 24889
+		// (get) Token: 0x060306DA RID: 198362 RVA: 0x00D7EEA7 File Offset: 0x00D7D0A7
+		// (set) Token: 0x060306DB RID: 198363 RVA: 0x00D7EEAF File Offset: 0x00D7D0AF
 		public ECiacconaGalChapterRestartChoiceType Type { get; set; }
 
-		// Token: 0x17008D68 RID: 36200
-		// (get) Token: 0x0603B791 RID: 243601 RVA: 0x00E2EBA8 File Offset: 0x00E2CDA8
-		// (set) Token: 0x0603B792 RID: 243602 RVA: 0x00E2EBB0 File Offset: 0x00E2CDB0
+		// Token: 0x1700613A RID: 24890
+		// (get) Token: 0x060306DC RID: 198364 RVA: 0x00D7EEB8 File Offset: 0x00D7D0B8
+		// (set) Token: 0x060306DD RID: 198365 RVA: 0x00D7EEC0 File Offset: 0x00D7D0C0
 		public string Desc { get; set; }
 
-		// Token: 0x17008D69 RID: 36201
-		// (get) Token: 0x0603B793 RID: 243603 RVA: 0x00E2EBB9 File Offset: 0x00E2CDB9
-		// (set) Token: 0x0603B794 RID: 243604 RVA: 0x00E2EBC1 File Offset: 0x00E2CDC1
+		// Token: 0x1700613B RID: 24891
+		// (get) Token: 0x060306DE RID: 198366 RVA: 0x00D7EEC9 File Offset: 0x00D7D0C9
+		// (set) Token: 0x060306DF RID: 198367 RVA: 0x00D7EED1 File Offset: 0x00D7D0D1
 		public CiacconaGalChapterData ChapterData { get; set; }
 	}
 }

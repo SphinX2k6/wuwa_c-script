@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001477 RID: 5239
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015D0 RID: 5584
 	public class IFinishJellyfishReturnCondition : IQuestCondition
 	{
-		// Token: 0x0600772A RID: 30506 RVA: 0x0011CBAC File Offset: 0x0011ADAC
+		// Token: 0x06007DF8 RID: 32248 RVA: 0x0012B7C4 File Offset: 0x001299C4
 		public static IFinishJellyfishReturnCondition Create(IFinishJellyfishReturnCondition? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700280F RID: 10255
-		// (get) Token: 0x0600772B RID: 30507 RVA: 0x0011CBCB File Offset: 0x0011ADCB
+		// Token: 0x170029FA RID: 10746
+		// (get) Token: 0x06007DF9 RID: 32249 RVA: 0x0012B7E3 File Offset: 0x001299E3
 		public override EChildQuest Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002810 RID: 10256
-		// (get) Token: 0x0600772C RID: 30508 RVA: 0x0011CBD8 File Offset: 0x0011ADD8
+		// Token: 0x170029FB RID: 10747
+		// (get) Token: 0x06007DFA RID: 32250 RVA: 0x0012B7F0 File Offset: 0x001299F0
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002811 RID: 10257
-		// (get) Token: 0x0600772D RID: 30509 RVA: 0x0011CC0C File Offset: 0x0011AE0C
+		// Token: 0x170029FC RID: 10748
+		// (get) Token: 0x06007DFB RID: 32251 RVA: 0x0012B824 File Offset: 0x00129A24
 		public virtual int StartPosEntityId
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002812 RID: 10258
-		// (get) Token: 0x0600772E RID: 30510 RVA: 0x0011CC19 File Offset: 0x0011AE19
+		// Token: 0x170029FD RID: 10749
+		// (get) Token: 0x06007DFC RID: 32252 RVA: 0x0012B831 File Offset: 0x00129A31
 		public virtual float StartRadius
 		{
 			get
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002813 RID: 10259
-		// (get) Token: 0x0600772F RID: 30511 RVA: 0x0011CC26 File Offset: 0x0011AE26
+		// Token: 0x170029FE RID: 10750
+		// (get) Token: 0x06007DFD RID: 32253 RVA: 0x0012B83E File Offset: 0x00129A3E
 		public virtual int EndPosEntityId
 		{
 			get
@@ -81,8 +79,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002814 RID: 10260
-		// (get) Token: 0x06007730 RID: 30512 RVA: 0x0011CC33 File Offset: 0x0011AE33
+		// Token: 0x170029FF RID: 10751
+		// (get) Token: 0x06007DFE RID: 32254 RVA: 0x0012B84B File Offset: 0x00129A4B
 		public virtual float EndRadius
 		{
 			get
@@ -91,8 +89,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002815 RID: 10261
-		// (get) Token: 0x06007731 RID: 30513 RVA: 0x0011CC40 File Offset: 0x0011AE40
+		// Token: 0x17002A00 RID: 10752
+		// (get) Token: 0x06007DFF RID: 32255 RVA: 0x0012B858 File Offset: 0x00129A58
 		public virtual string LevelConfigDa
 		{
 			get
@@ -101,24 +99,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002816 RID: 10262
-		// (get) Token: 0x06007732 RID: 30514 RVA: 0x0011CC4D File Offset: 0x0011AE4D
-		public virtual string EffectDa
-		{
-			get
-			{
-				return this.Instance.EffectDa;
-			}
-		}
-
-		// Token: 0x0400454D RID: 17741
+		// Token: 0x040048E8 RID: 18664
 		private IFinishJellyfishReturnCondition Instance;
 
-		// Token: 0x0400454E RID: 17742
+		// Token: 0x040048E9 RID: 18665
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400454F RID: 17743
+		// Token: 0x040048EA RID: 18666
 		private bool _PreConditionsInited;
 	}
 }

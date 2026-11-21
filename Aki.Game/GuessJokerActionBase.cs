@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200101A RID: 4122
+// Token: 0x020004CE RID: 1230
 public abstract class GuessJokerActionBase
 {
-	// Token: 0x060069F5 RID: 27125 RVA: 0x00153DFD File Offset: 0x00151FFD
+	// Token: 0x06003D8A RID: 15754 RVA: 0x0015C725 File Offset: 0x0015A925
 	public GuessJokerActionBase()
 	{
 		this.ActionId = GuessJokerActionBase.SelfIncrementId++;
 	}
 
-	// Token: 0x060069F6 RID: 27126 RVA: 0x00153E18 File Offset: 0x00152018
+	// Token: 0x06003D8B RID: 15755 RVA: 0x0015C740 File Offset: 0x0015A940
 	public void Start()
 	{
 		this.Done = false;
@@ -20,7 +20,7 @@ public abstract class GuessJokerActionBase
 		this.OnStart();
 	}
 
-	// Token: 0x060069F7 RID: 27127 RVA: 0x00153E38 File Offset: 0x00152038
+	// Token: 0x06003D8C RID: 15756 RVA: 0x0015C760 File Offset: 0x0015A960
 	public void Tick(float delta)
 	{
 		if (this.Done)
@@ -39,45 +39,45 @@ public abstract class GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x060069F8 RID: 27128 RVA: 0x00153E86 File Offset: 0x00152086
+	// Token: 0x06003D8D RID: 15757 RVA: 0x0015C7AE File Offset: 0x0015A9AE
 	public void Finish()
 	{
 		this.OnFinish();
 		this.OnRemoveEventListener();
 	}
 
-	// Token: 0x060069F9 RID: 27129 RVA: 0x00153E94 File Offset: 0x00152094
+	// Token: 0x06003D8E RID: 15758 RVA: 0x0015C7BC File Offset: 0x0015A9BC
 	public bool IsDone()
 	{
 		return this.Done;
 	}
 
-	// Token: 0x060069FA RID: 27130 RVA: 0x00153E9C File Offset: 0x0015209C
+	// Token: 0x06003D8F RID: 15759 RVA: 0x0015C7C4 File Offset: 0x0015A9C4
 	protected virtual void OnAddEventListener()
 	{
 	}
 
-	// Token: 0x060069FB RID: 27131 RVA: 0x00153E9E File Offset: 0x0015209E
+	// Token: 0x06003D90 RID: 15760 RVA: 0x0015C7C6 File Offset: 0x0015A9C6
 	protected virtual void OnRemoveEventListener()
 	{
 	}
 
-	// Token: 0x060069FC RID: 27132 RVA: 0x00153EA0 File Offset: 0x001520A0
+	// Token: 0x06003D91 RID: 15761 RVA: 0x0015C7C8 File Offset: 0x0015A9C8
 	protected virtual void OnStart()
 	{
 	}
 
-	// Token: 0x060069FD RID: 27133 RVA: 0x00153EA2 File Offset: 0x001520A2
+	// Token: 0x06003D92 RID: 15762 RVA: 0x0015C7CA File Offset: 0x0015A9CA
 	protected virtual void OnTick(float delta)
 	{
 	}
 
-	// Token: 0x060069FE RID: 27134 RVA: 0x00153EA4 File Offset: 0x001520A4
+	// Token: 0x06003D93 RID: 15763 RVA: 0x0015C7CC File Offset: 0x0015A9CC
 	protected virtual void OnFinish()
 	{
 	}
 
-	// Token: 0x060069FF RID: 27135 RVA: 0x00153EA8 File Offset: 0x001520A8
+	// Token: 0x06003D94 RID: 15764 RVA: 0x0015C7D0 File Offset: 0x0015A9D0
 	[NullableContext(1)]
 	protected void AnimateCardsToTarget(ECardPositionType targetPosition, [Nullable(2)] GuessJokerPositionPanelBase targetPanel, Action onComplete)
 	{
@@ -125,19 +125,19 @@ public abstract class GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x040030D3 RID: 12499
+	// Token: 0x0400316C RID: 12652
 	public readonly int ActionId;
 
-	// Token: 0x040030D4 RID: 12500
+	// Token: 0x0400316D RID: 12653
 	[StaticVariableRuleIgnore]
 	private static int SelfIncrementId = 0;
 
-	// Token: 0x040030D5 RID: 12501
+	// Token: 0x0400316E RID: 12654
 	protected bool Done;
 
-	// Token: 0x040030D6 RID: 12502
+	// Token: 0x0400316F RID: 12655
 	private float Elapsed;
 
-	// Token: 0x040030D7 RID: 12503
+	// Token: 0x04003170 RID: 12656
 	protected float Duration;
 }

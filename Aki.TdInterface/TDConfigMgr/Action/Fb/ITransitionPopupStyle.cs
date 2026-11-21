@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200265C RID: 9820
+	// Token: 0x02002920 RID: 10528
 	public class ITransitionPopupStyle
 	{
-		// Token: 0x0600DC20 RID: 56352 RVA: 0x0020C14E File Offset: 0x0020A34E
-		[NullableContext(1)]
+		// Token: 0x0600E9FC RID: 59900 RVA: 0x00228A26 File Offset: 0x00226C26
 		public static ITransitionPopupStyle Create(ITransitionPopupStyle? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700412A RID: 16682
-		// (get) Token: 0x0600DC21 RID: 56353 RVA: 0x0020C16D File Offset: 0x0020A36D
+		// Token: 0x1700446A RID: 17514
+		// (get) Token: 0x0600E9FD RID: 59901 RVA: 0x00228A45 File Offset: 0x00226C45
 		public virtual ETransitionPopupStyleType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A5A RID: 31322
+		// Token: 0x040080FC RID: 33020
 		private ITransitionPopupStyle Instance;
 	}
 }

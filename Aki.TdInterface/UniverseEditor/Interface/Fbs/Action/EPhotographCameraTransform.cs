@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FCF RID: 24527
+	// Token: 0x02006626 RID: 26150
 	public enum EPhotographCameraTransform : byte
 	{
-		// Token: 0x0400FF38 RID: 65336
+		// Token: 0x04010CFE RID: 68862
 		Absolute
 	}
 }

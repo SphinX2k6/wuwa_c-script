@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045A8 RID: 17832
+	// Token: 0x02004A10 RID: 18960
 	public struct IRollBlockPathNode : IFlatbufferObject
 	{
-		// Token: 0x17007EBD RID: 32445
-		// (get) Token: 0x0601AF4F RID: 110415 RVA: 0x003D859C File Offset: 0x003D679C
+		// Token: 0x170084FE RID: 34046
+		// (get) Token: 0x0601C724 RID: 116516 RVA: 0x00404838 File Offset: 0x00402A38
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AF50 RID: 110416 RVA: 0x003D85A9 File Offset: 0x003D67A9
+		// Token: 0x0601C725 RID: 116517 RVA: 0x00404845 File Offset: 0x00402A45
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601AF51 RID: 110417 RVA: 0x003D85B0 File Offset: 0x003D67B0
+		// Token: 0x0601C726 RID: 116518 RVA: 0x0040484C File Offset: 0x00402A4C
 		public static IRollBlockPathNode GetRootAsIRollBlockPathNode(ByteBuffer _bb)
 		{
 			return IRollBlockPathNode.GetRootAsIRollBlockPathNode(_bb, default(IRollBlockPathNode));
 		}
 
-		// Token: 0x0601AF52 RID: 110418 RVA: 0x003D85CC File Offset: 0x003D67CC
+		// Token: 0x0601C727 RID: 116519 RVA: 0x00404868 File Offset: 0x00402A68
 		public static IRollBlockPathNode GetRootAsIRollBlockPathNode(ByteBuffer _bb, IRollBlockPathNode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601AF53 RID: 110419 RVA: 0x003D85E9 File Offset: 0x003D67E9
+		// Token: 0x0601C728 RID: 116520 RVA: 0x00404885 File Offset: 0x00402A85
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601AF54 RID: 110420 RVA: 0x003D85F8 File Offset: 0x003D67F8
+		// Token: 0x0601C729 RID: 116521 RVA: 0x00404894 File Offset: 0x00402A94
 		public IRollBlockPathNode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007EBE RID: 32446
-		// (get) Token: 0x0601AF55 RID: 110421 RVA: 0x003D8608 File Offset: 0x003D6808
+		// Token: 0x170084FF RID: 34047
+		// (get) Token: 0x0601C72A RID: 116522 RVA: 0x004048A4 File Offset: 0x00402AA4
 		public int X
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007EBF RID: 32447
-		// (get) Token: 0x0601AF56 RID: 110422 RVA: 0x003D8644 File Offset: 0x003D6844
+		// Token: 0x17008500 RID: 34048
+		// (get) Token: 0x0601C72B RID: 116523 RVA: 0x004048E0 File Offset: 0x00402AE0
 		public int Y
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AF57 RID: 110423 RVA: 0x003D8680 File Offset: 0x003D6880
+		// Token: 0x0601C72C RID: 116524 RVA: 0x0040491C File Offset: 0x00402B1C
 		public static Offset<IRollBlockPathNode> CreateIRollBlockPathNode(FlatBufferBuilder builder, int X = 0, int Y = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IRollBlockPathNode.EndIRollBlockPathNode(builder);
 		}
 
-		// Token: 0x0601AF58 RID: 110424 RVA: 0x003D869D File Offset: 0x003D689D
+		// Token: 0x0601C72D RID: 116525 RVA: 0x00404939 File Offset: 0x00402B39
 		public static void StartIRollBlockPathNode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601AF59 RID: 110425 RVA: 0x003D86A6 File Offset: 0x003D68A6
+		// Token: 0x0601C72E RID: 116526 RVA: 0x00404942 File Offset: 0x00402B42
 		public static void AddX(FlatBufferBuilder builder, int x)
 		{
 			builder.AddInt(0, x, 0);
 		}
 
-		// Token: 0x0601AF5A RID: 110426 RVA: 0x003D86B1 File Offset: 0x003D68B1
+		// Token: 0x0601C72F RID: 116527 RVA: 0x0040494D File Offset: 0x00402B4D
 		public static void AddY(FlatBufferBuilder builder, int y)
 		{
 			builder.AddInt(1, y, 0);
 		}
 
-		// Token: 0x0601AF5B RID: 110427 RVA: 0x003D86BC File Offset: 0x003D68BC
+		// Token: 0x0601C730 RID: 116528 RVA: 0x00404958 File Offset: 0x00402B58
 		public static Offset<IRollBlockPathNode> EndIRollBlockPathNode(FlatBufferBuilder builder)
 		{
 			return new Offset<IRollBlockPathNode>(builder.EndTable());
 		}
 
-		// Token: 0x0601AF5C RID: 110428 RVA: 0x003D86CC File Offset: 0x003D68CC
+		// Token: 0x0601C731 RID: 116529 RVA: 0x00404968 File Offset: 0x00402B68
 		public IRollBlockPathNodeT UnPack()
 		{
 			IRollBlockPathNodeT rollBlockPathNodeT = new IRollBlockPathNodeT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return rollBlockPathNodeT;
 		}
 
-		// Token: 0x0601AF5D RID: 110429 RVA: 0x003D86E7 File Offset: 0x003D68E7
+		// Token: 0x0601C732 RID: 116530 RVA: 0x00404983 File Offset: 0x00402B83
 		public void UnPackTo(IRollBlockPathNodeT _o)
 		{
 			_o.X = this.X;
 			_o.Y = this.Y;
 		}
 
-		// Token: 0x0601AF5E RID: 110430 RVA: 0x003D8704 File Offset: 0x003D6904
+		// Token: 0x0601C733 RID: 116531 RVA: 0x004049A0 File Offset: 0x00402BA0
 		public static Offset<IRollBlockPathNode> Pack(FlatBufferBuilder builder, IRollBlockPathNodeT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IRollBlockPathNode.CreateIRollBlockPathNode(builder, _o.X, _o.Y);
 		}
 
-		// Token: 0x0400C670 RID: 50800
+		// Token: 0x0400D09F RID: 53407
 		private Table __p;
 	}
 }

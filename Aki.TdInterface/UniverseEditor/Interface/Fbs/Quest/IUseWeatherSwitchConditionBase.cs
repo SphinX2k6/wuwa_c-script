@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004265 RID: 16997
+	// Token: 0x020046C1 RID: 18113
 	public struct IUseWeatherSwitchConditionBase : IFlatbufferObject
 	{
-		// Token: 0x170078AF RID: 30895
-		// (get) Token: 0x0601927D RID: 103037 RVA: 0x0039DA99 File Offset: 0x0039BC99
+		// Token: 0x17007EE0 RID: 32480
+		// (get) Token: 0x0601A9E9 RID: 109033 RVA: 0x003C9171 File Offset: 0x003C7371
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601927E RID: 103038 RVA: 0x0039DAA6 File Offset: 0x0039BCA6
+		// Token: 0x0601A9EA RID: 109034 RVA: 0x003C917E File Offset: 0x003C737E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601927F RID: 103039 RVA: 0x0039DAB0 File Offset: 0x0039BCB0
+		// Token: 0x0601A9EB RID: 109035 RVA: 0x003C9188 File Offset: 0x003C7388
 		public static IUseWeatherSwitchConditionBase GetRootAsIUseWeatherSwitchConditionBase(ByteBuffer _bb)
 		{
 			return IUseWeatherSwitchConditionBase.GetRootAsIUseWeatherSwitchConditionBase(_bb, default(IUseWeatherSwitchConditionBase));
 		}
 
-		// Token: 0x06019280 RID: 103040 RVA: 0x0039DACC File Offset: 0x0039BCCC
+		// Token: 0x0601A9EC RID: 109036 RVA: 0x003C91A4 File Offset: 0x003C73A4
 		public static IUseWeatherSwitchConditionBase GetRootAsIUseWeatherSwitchConditionBase(ByteBuffer _bb, IUseWeatherSwitchConditionBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019281 RID: 103041 RVA: 0x0039DAE9 File Offset: 0x0039BCE9
+		// Token: 0x0601A9ED RID: 109037 RVA: 0x003C91C1 File Offset: 0x003C73C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019282 RID: 103042 RVA: 0x0039DAF8 File Offset: 0x0039BCF8
+		// Token: 0x0601A9EE RID: 109038 RVA: 0x003C91D0 File Offset: 0x003C73D0
 		public IUseWeatherSwitchConditionBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170078B0 RID: 30896
-		// (get) Token: 0x06019283 RID: 103043 RVA: 0x0039DB08 File Offset: 0x0039BD08
+		// Token: 0x17007EE1 RID: 32481
+		// (get) Token: 0x0601A9EF RID: 109039 RVA: 0x003C91E0 File Offset: 0x003C73E0
 		public EUseWeatherSwitchCheckType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06019284 RID: 103044 RVA: 0x0039DB44 File Offset: 0x0039BD44
+		// Token: 0x0601A9F0 RID: 109040 RVA: 0x003C921C File Offset: 0x003C741C
 		public static Offset<IUseWeatherSwitchConditionBase> CreateIUseWeatherSwitchConditionBase(FlatBufferBuilder builder, EUseWeatherSwitchCheckType Type = EUseWeatherSwitchCheckType.SpecifiedWeather)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IUseWeatherSwitchConditionBase.EndIUseWeatherSwitchConditionBase(builder);
 		}
 
-		// Token: 0x06019285 RID: 103045 RVA: 0x0039DB5A File Offset: 0x0039BD5A
+		// Token: 0x0601A9F1 RID: 109041 RVA: 0x003C9232 File Offset: 0x003C7432
 		public static void StartIUseWeatherSwitchConditionBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06019286 RID: 103046 RVA: 0x0039DB63 File Offset: 0x0039BD63
+		// Token: 0x0601A9F2 RID: 109042 RVA: 0x003C923B File Offset: 0x003C743B
 		public static void AddType(FlatBufferBuilder builder, EUseWeatherSwitchCheckType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06019287 RID: 103047 RVA: 0x0039DB6E File Offset: 0x0039BD6E
+		// Token: 0x0601A9F3 RID: 109043 RVA: 0x003C9246 File Offset: 0x003C7446
 		public static Offset<IUseWeatherSwitchConditionBase> EndIUseWeatherSwitchConditionBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IUseWeatherSwitchConditionBase>(builder.EndTable());
 		}
 
-		// Token: 0x06019288 RID: 103048 RVA: 0x0039DB7C File Offset: 0x0039BD7C
+		// Token: 0x0601A9F4 RID: 109044 RVA: 0x003C9254 File Offset: 0x003C7454
 		public IUseWeatherSwitchConditionBaseT UnPack()
 		{
 			IUseWeatherSwitchConditionBaseT useWeatherSwitchConditionBaseT = new IUseWeatherSwitchConditionBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return useWeatherSwitchConditionBaseT;
 		}
 
-		// Token: 0x06019289 RID: 103049 RVA: 0x0039DB97 File Offset: 0x0039BD97
+		// Token: 0x0601A9F5 RID: 109045 RVA: 0x003C926F File Offset: 0x003C746F
 		public void UnPackTo(IUseWeatherSwitchConditionBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601928A RID: 103050 RVA: 0x0039DBA8 File Offset: 0x0039BDA8
+		// Token: 0x0601A9F6 RID: 109046 RVA: 0x003C9280 File Offset: 0x003C7480
 		public static Offset<IUseWeatherSwitchConditionBase> Pack(FlatBufferBuilder builder, IUseWeatherSwitchConditionBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IUseWeatherSwitchConditionBase.CreateIUseWeatherSwitchConditionBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400BEF4 RID: 48884
+		// Token: 0x0400C901 RID: 51457
 		private Table __p;
 	}
 }

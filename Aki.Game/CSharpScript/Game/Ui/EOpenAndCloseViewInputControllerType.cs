@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046A8 RID: 18088
+	// Token: 0x020035D9 RID: 13785
 	public enum EOpenAndCloseViewInputControllerType
 	{
-		// Token: 0x0401967D RID: 104061
+		// Token: 0x04013D22 RID: 81186
 		Common,
-		// Token: 0x0401967E RID: 104062
+		// Token: 0x04013D23 RID: 81187
 		Keyboard,
-		// Token: 0x0401967F RID: 104063
+		// Token: 0x04013D24 RID: 81188
 		Gamepad
 	}
 }

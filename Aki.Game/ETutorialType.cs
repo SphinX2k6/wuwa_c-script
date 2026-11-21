@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002C26 RID: 11302
+// Token: 0x020021A1 RID: 8609
 public enum ETutorialType
 {
-	// Token: 0x0400AFA6 RID: 44966
+	// Token: 0x0400B3AB RID: 45995
 	All,
-	// Token: 0x0400AFA7 RID: 44967
+	// Token: 0x0400B3AC RID: 45996
 	QteReaction,
-	// Token: 0x0400AFA8 RID: 44968
+	// Token: 0x0400B3AD RID: 45997
 	Enemy,
-	// Token: 0x0400AFA9 RID: 44969
+	// Token: 0x0400B3AE RID: 45998
 	System,
-	// Token: 0x0400AFAA RID: 44970
+	// Token: 0x0400B3AF RID: 45999
 	Adventure,
-	// Token: 0x0400AFAB RID: 44971
+	// Token: 0x0400B3B0 RID: 46000
 	BuffOnEnemy,
-	// Token: 0x0400AFAC RID: 44972
+	// Token: 0x0400B3B1 RID: 46001
 	Recall
 }

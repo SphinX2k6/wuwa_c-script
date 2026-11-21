@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009AD RID: 2477
+	// Token: 0x02000A82 RID: 2690
 	public class ConfigSurvivorsTaskById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003A22 RID: 14882 RVA: 0x001A27EF File Offset: 0x001A09EF
+		// Token: 0x06003F20 RID: 16160 RVA: 0x001C1B83 File Offset: 0x001BFD83
 		static ConfigSurvivorsTaskById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSurvivorsTaskById.CreateStaticDefaultValue), new Action(ConfigSurvivorsTaskById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003A23 RID: 14883 RVA: 0x001A2810 File Offset: 0x001A0A10
+		// Token: 0x06003F21 RID: 16161 RVA: 0x001C1BA4 File Offset: 0x001BFDA4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSurvivorsTaskById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003A24 RID: 14884 RVA: 0x001A288F File Offset: 0x001A0A8F
+		// Token: 0x06003F22 RID: 16162 RVA: 0x001C1C23 File Offset: 0x001BFE23
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSurvivorsTaskById.LogPair = null;
 			ConfigSurvivorsTaskById.HandleId = 0;
 		}
 
-		// Token: 0x06003A25 RID: 14885 RVA: 0x001A289D File Offset: 0x001A0A9D
+		// Token: 0x06003F23 RID: 16163 RVA: 0x001C1C31 File Offset: 0x001BFE31
 		public static void Init()
 		{
 			ConfigSurvivorsTaskById.HandleId = ConfigCommon.InitDataStatement(ConfigSurvivorsTaskById.HandleId, "db_survivors.db", "select BinData from `SurvivorsTask` where Id=?");
 		}
 
-		// Token: 0x06003A26 RID: 14886 RVA: 0x001A28B8 File Offset: 0x001A0AB8
+		// Token: 0x06003F24 RID: 16164 RVA: 0x001C1C4C File Offset: 0x001BFE4C
 		public static SurvivorsTask? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSurvivorsTaskById.HandleId, ConfigSurvivorsTaskById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SurvivorsTask?(rootAsSurvivorsTask);
 		}
 
-		// Token: 0x040043A1 RID: 17313
+		// Token: 0x04004974 RID: 18804
 		private const string DB = "db_survivors.db";
 
-		// Token: 0x040043A2 RID: 17314
+		// Token: 0x04004975 RID: 18805
 		private const string FILE = "x.幸存者_活动.xlsx";
 
-		// Token: 0x040043A3 RID: 17315
+		// Token: 0x04004976 RID: 18806
 		private const string TABLE = "SurvivorsTask";
 
-		// Token: 0x040043A4 RID: 17316
+		// Token: 0x04004977 RID: 18807
 		private const string COMMAND = "select BinData from `SurvivorsTask` where Id=?";
 
-		// Token: 0x040043A5 RID: 17317
+		// Token: 0x04004978 RID: 18808
 		private const string KEY_PREFIX = "SurvivorsTaskById";
 
-		// Token: 0x040043A6 RID: 17318
+		// Token: 0x04004979 RID: 18809
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040043A7 RID: 17319
+		// Token: 0x0400497A RID: 18810
 		private static int HandleId;
 	}
 }

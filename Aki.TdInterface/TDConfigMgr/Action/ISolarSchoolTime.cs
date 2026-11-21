@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E97 RID: 7831
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020CC RID: 8396
 	public class ISolarSchoolTime
 	{
-		// Token: 0x0600A78A RID: 42890 RVA: 0x0017A998 File Offset: 0x00178B98
+		// Token: 0x0600B242 RID: 45634 RVA: 0x00190698 File Offset: 0x0018E898
 		private ISolarSchoolTime_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A78B RID: 42891 RVA: 0x0017A9D0 File Offset: 0x00178BD0
+		// Token: 0x0600B243 RID: 45635 RVA: 0x001906D0 File Offset: 0x0018E8D0
 		public static ISolarSchoolTime Create([Nullable(2)] ISolarSchoolTime instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A78C RID: 42892 RVA: 0x0017A9E3 File Offset: 0x00178BE3
+		// Token: 0x0600B244 RID: 45636 RVA: 0x001906E3 File Offset: 0x0018E8E3
 		public static ISolarSchoolTime CreateFromSetValue([Nullable(2)] ISolarSchoolTime_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A78D RID: 42893 RVA: 0x0017A9F6 File Offset: 0x00178BF6
+		// Token: 0x0600B245 RID: 45637 RVA: 0x001906F6 File Offset: 0x0018E8F6
 		public ISolarSchoolTime_SetValue ToSetValue()
 		{
 			return new ISolarSchoolTime_SetValue
@@ -60,11 +58,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700333A RID: 13114
-		// (get) Token: 0x0600A78E RID: 42894 RVA: 0x0017AA18 File Offset: 0x00178C18
-		// (set) Token: 0x0600A78F RID: 42895 RVA: 0x0017AA79 File Offset: 0x00178C79
+		// Token: 0x170035FE RID: 13822
+		// (get) Token: 0x0600B246 RID: 45638 RVA: 0x00190718 File Offset: 0x0018E918
+		// (set) Token: 0x0600B247 RID: 45639 RVA: 0x00190779 File Offset: 0x0018E979
+		[Nullable(2)]
 		public virtual IVisualNovelDate Date
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._DateInited)
@@ -83,6 +83,7 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return this._DateCache;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().Date = value;
@@ -90,9 +91,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700333B RID: 13115
-		// (get) Token: 0x0600A790 RID: 42896 RVA: 0x0017AA8E File Offset: 0x00178C8E
-		// (set) Token: 0x0600A791 RID: 42897 RVA: 0x0017AAB9 File Offset: 0x00178CB9
+		// Token: 0x170035FF RID: 13823
+		// (get) Token: 0x0600B248 RID: 45640 RVA: 0x0019078E File Offset: 0x0018E98E
+		// (set) Token: 0x0600B249 RID: 45641 RVA: 0x001907B9 File Offset: 0x0018E9B9
 		public virtual int PeriodId
 		{
 			get
@@ -113,18 +114,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063E9 RID: 25577
+		// Token: 0x040069CD RID: 27085
 		[Nullable(2)]
 		protected ISolarSchoolTime FbInstance;
 
-		// Token: 0x040063EA RID: 25578
+		// Token: 0x040069CE RID: 27086
 		[Nullable(2)]
 		protected ISolarSchoolTime_SetValue PocoInterface;
 
-		// Token: 0x040063EB RID: 25579
+		// Token: 0x040069CF RID: 27087
 		private IVisualNovelDate _DateCache;
 
-		// Token: 0x040063EC RID: 25580
+		// Token: 0x040069D0 RID: 27088
 		private bool _DateInited;
 	}
 }

@@ -8,24 +8,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x0200006A RID: 106
+	// Token: 0x0200006C RID: 108
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LauncherGameSettingLib : Singleton
 	{
-		// Token: 0x060002CA RID: 714 RVA: 0x0000E6A1 File Offset: 0x0000C8A1
+		// Token: 0x060002CC RID: 716 RVA: 0x0000EA4D File Offset: 0x0000CC4D
 		public void Initialize()
 		{
 			this.ApplyGameSettings();
 		}
 
-		// Token: 0x060002CB RID: 715 RVA: 0x0000E6A9 File Offset: 0x0000C8A9
+		// Token: 0x060002CD RID: 717 RVA: 0x0000EA55 File Offset: 0x0000CC55
 		public void InitInLaunch(UWorld world)
 		{
+			if (Platform.Instance.IsOpenHarmonyPlatform())
+			{
+				this.GetDefaultMobileContentScaleFactor();
+			}
 			this.TryApplyMobileContentScaleFactor(world);
 		}
 
-		// Token: 0x060002CC RID: 716 RVA: 0x0000E6B4 File Offset: 0x0000C8B4
+		// Token: 0x060002CE RID: 718 RVA: 0x0000EA74 File Offset: 0x0000CC74
 		private void ApplyGameSettings()
 		{
 			Dictionary<int, double> dictionary = this.LoadGameSetting();
@@ -42,7 +46,7 @@ namespace CSharpScript.Launcher.Util
 			this.Apply(dictionary, 6);
 		}
 
-		// Token: 0x060002CD RID: 717 RVA: 0x0000E708 File Offset: 0x0000C908
+		// Token: 0x060002CF RID: 719 RVA: 0x0000EAC8 File Offset: 0x0000CCC8
 		[NullableContext(2)]
 		public Dictionary<int, double> LoadPlayMenuInfo()
 		{
@@ -58,7 +62,7 @@ namespace CSharpScript.Launcher.Util
 			return global;
 		}
 
-		// Token: 0x060002CE RID: 718 RVA: 0x0000E750 File Offset: 0x0000C950
+		// Token: 0x060002D0 RID: 720 RVA: 0x0000EB10 File Offset: 0x0000CD10
 		[NullableContext(2)]
 		private Dictionary<int, double> LoadGameSetting()
 		{
@@ -82,7 +86,7 @@ namespace CSharpScript.Launcher.Util
 			return dictionary;
 		}
 
-		// Token: 0x060002CF RID: 719 RVA: 0x0000E7F8 File Offset: 0x0000C9F8
+		// Token: 0x060002D1 RID: 721 RVA: 0x0000EBB8 File Offset: 0x0000CDB8
 		private unsafe void SetGameDataMap(Dictionary<int, double> gameDataMapRef, int functionId, ELauncherStorageGlobalKey launcherStorageGlobalKey, int NotFoundValue = 0)
 		{
 			double? global = LauncherStorageLib.Instance.GetGlobal<double?>(launcherStorageGlobalKey, null);
@@ -120,7 +124,7 @@ namespace CSharpScript.Launcher.Util
 			gameDataMapRef[functionId] = (double)defaultValue;
 		}
 
-		// Token: 0x060002D0 RID: 720 RVA: 0x0000E988 File Offset: 0x0000CB88
+		// Token: 0x060002D2 RID: 722 RVA: 0x0000ED48 File Offset: 0x0000CF48
 		private unsafe void Apply(Dictionary<int, double> gameDataMap, int functionId)
 		{
 			double num;
@@ -174,13 +178,13 @@ namespace CSharpScript.Launcher.Util
 			}
 		}
 
-		// Token: 0x060002D1 RID: 721 RVA: 0x0000EAD5 File Offset: 0x0000CCD5
+		// Token: 0x060002D3 RID: 723 RVA: 0x0000EE95 File Offset: 0x0000D095
 		private void ApplyRTPCValue(string rtpc, float value)
 		{
 			UAkGameplayStatics.SetRTPCValue(null, value, 0, null, new FName(rtpc));
 		}
 
-		// Token: 0x060002D2 RID: 722 RVA: 0x0000EAE8 File Offset: 0x0000CCE8
+		// Token: 0x060002D4 RID: 724 RVA: 0x0000EEA8 File Offset: 0x0000D0A8
 		private unsafe void ApplyResolution(int value)
 		{
 			List<FIntPoint> resolutionList = this.GetResolutionList();
@@ -206,7 +210,7 @@ namespace CSharpScript.Launcher.Util
 			gameUserSettings.ApplySettings(true);
 		}
 
-		// Token: 0x060002D3 RID: 723 RVA: 0x0000EBD4 File Offset: 0x0000CDD4
+		// Token: 0x060002D5 RID: 725 RVA: 0x0000EF94 File Offset: 0x0000D194
 		public List<FIntPoint> GetResolutionList()
 		{
 			List<FIntPoint> list = new List<FIntPoint>();
@@ -249,7 +253,7 @@ namespace CSharpScript.Launcher.Util
 			return list;
 		}
 
-		// Token: 0x060002D4 RID: 724 RVA: 0x0000ECF6 File Offset: 0x0000CEF6
+		// Token: 0x060002D6 RID: 726 RVA: 0x0000F0B6 File Offset: 0x0000D2B6
 		private static int CompareResolution(FIntPoint a, FIntPoint b)
 		{
 			if (a.X == b.X)
@@ -259,7 +263,61 @@ namespace CSharpScript.Launcher.Util
 			return b.X - a.X;
 		}
 
-		// Token: 0x060002D5 RID: 725 RVA: 0x0000ED24 File Offset: 0x0000CF24
+		// Token: 0x060002D7 RID: 727 RVA: 0x0000F0E4 File Offset: 0x0000D2E4
+		private float GetDefaultMobileContentScaleFactor()
+		{
+			float value = this.DefaultMobileContentScaleFactor.GetValueOrDefault();
+			if (this.DefaultMobileContentScaleFactor == null)
+			{
+				value = UKismetSystemLibrary.GetConsoleVariableFloatValue("r.MobileContentScaleFactor");
+				this.DefaultMobileContentScaleFactor = new float?(value);
+			}
+			return this.DefaultMobileContentScaleFactor.Value;
+		}
+
+		// Token: 0x060002D8 RID: 728 RVA: 0x0000F12C File Offset: 0x0000D32C
+		public unsafe void ApplyFoldStateMobileContentScaleFactor(UWorld world, bool isFolded)
+		{
+			if (!Platform.Instance.IsOpenHarmonyPlatform() || Platform.Instance.IsRedMagicDevice())
+			{
+				return;
+			}
+			float num = this.GetDefaultMobileContentScaleFactor();
+			if (!isFolded)
+			{
+				string deviceProfileBaseProfileName = UKuroRenderingRuntimeBPPluginBPLibrary.GetDeviceProfileBaseProfileName();
+				if (deviceProfileBaseProfileName == "Android_Mid")
+				{
+					num = 2.5f;
+				}
+				else if (deviceProfileBaseProfileName == "Android_High" || deviceProfileBaseProfileName == "Android_VeryHigh")
+				{
+					num = 3f;
+				}
+				else
+				{
+					num = 2f;
+				}
+			}
+			float consoleVariableFloatValue = UKismetSystemLibrary.GetConsoleVariableFloatValue("r.MobileContentScaleFactor");
+			if (consoleVariableFloatValue == num)
+			{
+				return;
+			}
+			UKismetSystemLibrary.ExecuteConsoleCommand(world, FormattableString.Invariant(FormattableStringFactory.Create("r.MobileContentScaleFactor {0}", new object[]
+			{
+				num
+			})), null);
+			LauncherLog instance = LauncherLog.Instance;
+			string message = "折叠屏适配更新ScaleFactor";
+			<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("isFolded", isFolded);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("previousScaleFactor", consoleVariableFloatValue);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("scaleFactor", num);
+			instance.Info(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
+		}
+
+		// Token: 0x060002D9 RID: 729 RVA: 0x0000F24C File Offset: 0x0000D44C
 		private void TryApplyMobileContentScaleFactor(UWorld world)
 		{
 			if (Platform.Instance.IsRedMagicDevice())
@@ -289,7 +347,7 @@ namespace CSharpScript.Launcher.Util
 		}
 
 		// Token: 0x17000043 RID: 67
-		// (get) Token: 0x060002D6 RID: 726 RVA: 0x0000EDD2 File Offset: 0x0000CFD2
+		// (get) Token: 0x060002DA RID: 730 RVA: 0x0000F2FA File Offset: 0x0000D4FA
 		public static LauncherGameSettingLib Instance
 		{
 			get
@@ -303,12 +361,12 @@ namespace CSharpScript.Launcher.Util
 			}
 		}
 
-		// Token: 0x060002D7 RID: 727 RVA: 0x0000EDF5 File Offset: 0x0000CFF5
+		// Token: 0x060002DB RID: 731 RVA: 0x0000F31D File Offset: 0x0000D51D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060002D8 RID: 728 RVA: 0x0000EDF7 File Offset: 0x0000CFF7
+		// Token: 0x060002DC RID: 732 RVA: 0x0000F31F File Offset: 0x0000D51F
 		public static void ResetStaticDefaultValue()
 		{
 			LauncherGameSettingLib instance = LauncherGameSettingLib._instance;
@@ -319,45 +377,48 @@ namespace CSharpScript.Launcher.Util
 			LauncherGameSettingLib._instance = null;
 		}
 
-		// Token: 0x060002D9 RID: 729 RVA: 0x0000EE10 File Offset: 0x0000D010
+		// Token: 0x060002DD RID: 733 RVA: 0x0000F338 File Offset: 0x0000D538
 		static LauncherGameSettingLib()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LauncherGameSettingLib.CreateStaticDefaultValue), new Action(LauncherGameSettingLib.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040001C4 RID: 452
+		// Token: 0x040001EB RID: 491
 		private const int MASTERVOLUMEFUNCTION = 1;
 
-		// Token: 0x040001C5 RID: 453
+		// Token: 0x040001EC RID: 492
 		private const int VOICEVOLUMEFUNCTION = 2;
 
-		// Token: 0x040001C6 RID: 454
+		// Token: 0x040001ED RID: 493
 		private const int MUSICVOLUMEFUNCTION = 3;
 
-		// Token: 0x040001C7 RID: 455
+		// Token: 0x040001EE RID: 494
 		private const int SFXVOLUMEFUNCTION = 4;
 
-		// Token: 0x040001C8 RID: 456
+		// Token: 0x040001EF RID: 495
 		private const int RESOLUTION = 6;
 
-		// Token: 0x040001C9 RID: 457
+		// Token: 0x040001F0 RID: 496
 		private const int AMBVOLUMEFUNCTION = 69;
 
-		// Token: 0x040001CA RID: 458
+		// Token: 0x040001F1 RID: 497
 		private const int UIVOLUMEFUNCTION = 70;
 
-		// Token: 0x040001CB RID: 459
+		// Token: 0x040001F2 RID: 498
 		private const int DEFAULT_VALUE_VALUE = 100;
 
-		// Token: 0x040001CC RID: 460
+		// Token: 0x040001F3 RID: 499
+		private float? DefaultMobileContentScaleFactor;
+
+		// Token: 0x040001F4 RID: 500
 		[Nullable(2)]
 		private static LauncherGameSettingLib _instance;
 
-		// Token: 0x020002C4 RID: 708
+		// Token: 0x020002CD RID: 717
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04000AFE RID: 2814
+			// Token: 0x04000B4E RID: 2894
 			[Nullable(0)]
 			public static Comparison<FIntPoint> <0>__CompareResolution;
 		}

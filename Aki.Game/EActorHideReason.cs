@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02002E34 RID: 11828
+// Token: 0x02002390 RID: 9104
 public enum EActorHideReason
 {
-	// Token: 0x0400BB09 RID: 47881
+	// Token: 0x0400BE97 RID: 48791
 	ANS
 }

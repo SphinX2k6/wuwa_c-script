@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.AutoAttach;
 using UnrealEngine;
 
-// Token: 0x02002236 RID: 8758
+// Token: 0x0200171A RID: 5914
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class MotorcycleLevelAttachItem : AutoAttachItem<IMotorLevelAttachData>
 {
-	// Token: 0x0601116B RID: 69995 RVA: 0x0042A8C4 File Offset: 0x00428AC4
+	// Token: 0x0600E601 RID: 58881 RVA: 0x00437468 File Offset: 0x00435668
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class MotorcycleLevelAttachItem : AutoAttachItem<IMotorLevelAttachData>
 		};
 	}
 
-	// Token: 0x0601116C RID: 69996 RVA: 0x0042A999 File Offset: 0x00428B99
+	// Token: 0x0600E602 RID: 58882 RVA: 0x0043753D File Offset: 0x0043573D
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		Action<MotorcycleLevelAttachItem> onClickAttachItem = this.OnClickAttachItem;
@@ -43,19 +43,19 @@ public class MotorcycleLevelAttachItem : AutoAttachItem<IMotorLevelAttachData>
 		onClickAttachItem(this);
 	}
 
-	// Token: 0x0601116D RID: 69997 RVA: 0x0042A9AC File Offset: 0x00428BAC
+	// Token: 0x0600E603 RID: 58883 RVA: 0x00437550 File Offset: 0x00435750
 	private bool CheckCanClick()
 	{
 		return this.Data != null && (this.CheckToggleCanClick == null || this.CheckToggleCanClick(this.Data));
 	}
 
-	// Token: 0x0601116E RID: 69998 RVA: 0x0042A9D3 File Offset: 0x00428BD3
+	// Token: 0x0600E604 RID: 58884 RVA: 0x00437577 File Offset: 0x00435777
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.CheckCanClick));
 	}
 
-	// Token: 0x0601116F RID: 69999 RVA: 0x0042A9F4 File Offset: 0x00428BF4
+	// Token: 0x0600E605 RID: 58885 RVA: 0x00437598 File Offset: 0x00435798
 	protected override void OnRefreshItem(IMotorLevelAttachData data)
 	{
 		if (data == null)
@@ -93,7 +93,7 @@ public class MotorcycleLevelAttachItem : AutoAttachItem<IMotorLevelAttachData>
 		base.GetSprite(2).SetFillAmount(fillAmount);
 	}
 
-	// Token: 0x06011170 RID: 70000 RVA: 0x0042AB2C File Offset: 0x00428D2C
+	// Token: 0x0600E606 RID: 58886 RVA: 0x004376D0 File Offset: 0x004358D0
 	public override void OnSelect()
 	{
 		if (this.GetSelectAnimEnable == null || this.GetSelectAnimEnable())
@@ -123,7 +123,7 @@ public class MotorcycleLevelAttachItem : AutoAttachItem<IMotorLevelAttachData>
 		onSelectAttachItem(this);
 	}
 
-	// Token: 0x06011171 RID: 70001 RVA: 0x0042ABB8 File Offset: 0x00428DB8
+	// Token: 0x0600E607 RID: 58887 RVA: 0x0043775C File Offset: 0x0043595C
 	public void PlaySelectTween()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -144,7 +144,7 @@ public class MotorcycleLevelAttachItem : AutoAttachItem<IMotorLevelAttachData>
 		seqPlayer2.PlaySequencePurely("Select", false, false, null, null, false);
 	}
 
-	// Token: 0x06011172 RID: 70002 RVA: 0x0042AC10 File Offset: 0x00428E10
+	// Token: 0x0600E608 RID: 58888 RVA: 0x004377B4 File Offset: 0x004359B4
 	protected override void OnUnSelect()
 	{
 		if (this.CurrentSelectState)
@@ -168,7 +168,7 @@ public class MotorcycleLevelAttachItem : AutoAttachItem<IMotorLevelAttachData>
 		this.CurrentSelectState = false;
 	}
 
-	// Token: 0x06011173 RID: 70003 RVA: 0x0042AC78 File Offset: 0x00428E78
+	// Token: 0x0600E609 RID: 58889 RVA: 0x0043781C File Offset: 0x00435A1C
 	protected override void OnMoveItem()
 	{
 		if (this.CurrentSelectState)
@@ -192,7 +192,7 @@ public class MotorcycleLevelAttachItem : AutoAttachItem<IMotorLevelAttachData>
 		this.CurrentSelectState = false;
 	}
 
-	// Token: 0x06011174 RID: 70004 RVA: 0x0042ACE0 File Offset: 0x00428EE0
+	// Token: 0x0600E60A RID: 58890 RVA: 0x00437884 File Offset: 0x00435A84
 	private void TryInitLevelSequencePlayer()
 	{
 		if (this.SeqPlayer == null)
@@ -212,12 +212,12 @@ public class MotorcycleLevelAttachItem : AutoAttachItem<IMotorLevelAttachData>
 		}
 	}
 
-	// Token: 0x06011175 RID: 70005 RVA: 0x0042AD3B File Offset: 0x00428F3B
+	// Token: 0x0600E60B RID: 58891 RVA: 0x004378DF File Offset: 0x00435ADF
 	public MotorcycleLevelAttachItem() : base(null)
 	{
 	}
 
-	// Token: 0x0400822A RID: 33322
+	// Token: 0x04008368 RID: 33640
 	[Nullable(new byte[]
 	{
 		2,
@@ -225,7 +225,7 @@ public class MotorcycleLevelAttachItem : AutoAttachItem<IMotorLevelAttachData>
 	})]
 	public Action<MotorcycleLevelAttachItem> OnClickAttachItem;
 
-	// Token: 0x0400822B RID: 33323
+	// Token: 0x04008369 RID: 33641
 	[Nullable(new byte[]
 	{
 		2,
@@ -233,7 +233,7 @@ public class MotorcycleLevelAttachItem : AutoAttachItem<IMotorLevelAttachData>
 	})]
 	public Action<MotorcycleLevelAttachItem> OnSelectAttachItem;
 
-	// Token: 0x0400822C RID: 33324
+	// Token: 0x0400836A RID: 33642
 	[Nullable(new byte[]
 	{
 		2,
@@ -241,41 +241,41 @@ public class MotorcycleLevelAttachItem : AutoAttachItem<IMotorLevelAttachData>
 	})]
 	public Func<IMotorLevelAttachData, bool> CheckToggleCanClick;
 
-	// Token: 0x0400822D RID: 33325
+	// Token: 0x0400836B RID: 33643
 	public Func<bool> GetSelectAnimEnable;
 
-	// Token: 0x0400822E RID: 33326
+	// Token: 0x0400836C RID: 33644
 	private IMotorLevelAttachData Data;
 
-	// Token: 0x0400822F RID: 33327
+	// Token: 0x0400836D RID: 33645
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x04008230 RID: 33328
+	// Token: 0x0400836E RID: 33646
 	private bool CurrentSelectState;
 
-	// Token: 0x0200876A RID: 34666
+	// Token: 0x020078F3 RID: 30963
 	[NullableContext(0)]
 	private class EMotorLevelAttachItemComponent
 	{
-		// Token: 0x0402C039 RID: 180281
+		// Token: 0x04027351 RID: 160593
 		public const int TogLevel = 0;
 
-		// Token: 0x0402C03A RID: 180282
+		// Token: 0x04027352 RID: 160594
 		public const int ArtLevel = 1;
 
-		// Token: 0x0402C03B RID: 180283
+		// Token: 0x04027353 RID: 160595
 		public const int SprProgress = 2;
 
-		// Token: 0x0402C03C RID: 180284
+		// Token: 0x04027354 RID: 160596
 		public const int CurLevelItem = 3;
 
-		// Token: 0x0402C03D RID: 180285
+		// Token: 0x04027355 RID: 160597
 		public const int PassLevelItem = 4;
 
-		// Token: 0x0402C03E RID: 180286
+		// Token: 0x04027356 RID: 160598
 		public const int ArrowItem = 5;
 
-		// Token: 0x0402C03F RID: 180287
+		// Token: 0x04027357 RID: 160599
 		public const int ScaleItem = 6;
 	}
 }

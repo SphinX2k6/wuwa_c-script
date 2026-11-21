@@ -1,42 +1,42 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020012C6 RID: 4806
+// Token: 0x0200077A RID: 1914
 [NullableContext(1)]
 public interface IActivitySubMapExploreItemData
 {
-	// Token: 0x17000B38 RID: 2872
-	// (get) Token: 0x0600840E RID: 33806
-	// (set) Token: 0x0600840F RID: 33807
+	// Token: 0x17000B58 RID: 2904
+	// (get) Token: 0x060057A9 RID: 22441
+	// (set) Token: 0x060057AA RID: 22442
 	int TaskId { get; set; }
 
-	// Token: 0x17000B39 RID: 2873
-	// (get) Token: 0x06008410 RID: 33808
-	// (set) Token: 0x06008411 RID: 33809
+	// Token: 0x17000B59 RID: 2905
+	// (get) Token: 0x060057AB RID: 22443
+	// (set) Token: 0x060057AC RID: 22444
 	string RewardDesc { get; set; }
 
-	// Token: 0x17000B3A RID: 2874
-	// (get) Token: 0x06008412 RID: 33810
-	// (set) Token: 0x06008413 RID: 33811
+	// Token: 0x17000B5A RID: 2906
+	// (get) Token: 0x060057AD RID: 22445
+	// (set) Token: 0x060057AE RID: 22446
 	int RewardItemId { get; set; }
 
-	// Token: 0x17000B3B RID: 2875
-	// (get) Token: 0x06008414 RID: 33812
-	// (set) Token: 0x06008415 RID: 33813
+	// Token: 0x17000B5B RID: 2907
+	// (get) Token: 0x060057AF RID: 22447
+	// (set) Token: 0x060057B0 RID: 22448
 	int? RewardItemCount { get; set; }
 
-	// Token: 0x17000B3C RID: 2876
-	// (get) Token: 0x06008416 RID: 33814
-	// (set) Token: 0x06008417 RID: 33815
+	// Token: 0x17000B5C RID: 2908
+	// (get) Token: 0x060057B1 RID: 22449
+	// (set) Token: 0x060057B2 RID: 22450
 	bool IsComplete { get; set; }
 
-	// Token: 0x17000B3D RID: 2877
-	// (get) Token: 0x06008418 RID: 33816
-	// (set) Token: 0x06008419 RID: 33817
+	// Token: 0x17000B5D RID: 2909
+	// (get) Token: 0x060057B3 RID: 22451
+	// (set) Token: 0x060057B4 RID: 22452
 	bool IsCanGet { get; set; }
 
-	// Token: 0x17000B3E RID: 2878
-	// (get) Token: 0x0600841A RID: 33818
-	// (set) Token: 0x0600841B RID: 33819
+	// Token: 0x17000B5E RID: 2910
+	// (get) Token: 0x060057B5 RID: 22453
+	// (set) Token: 0x060057B6 RID: 22454
 	bool IsRunning { get; set; }
 }

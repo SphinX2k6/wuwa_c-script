@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C37 RID: 19511
+	// Token: 0x0200512A RID: 20778
 	public struct IHasUpgradableVision : IFlatbufferObject
 	{
-		// Token: 0x17008DBD RID: 36285
-		// (get) Token: 0x0601EEBD RID: 126653 RVA: 0x0045394A File Offset: 0x00451B4A
+		// Token: 0x170094E6 RID: 38118
+		// (get) Token: 0x06020AC1 RID: 133825 RVA: 0x00487226 File Offset: 0x00485426
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EEBE RID: 126654 RVA: 0x00453957 File Offset: 0x00451B57
+		// Token: 0x06020AC2 RID: 133826 RVA: 0x00487233 File Offset: 0x00485433
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601EEBF RID: 126655 RVA: 0x00453960 File Offset: 0x00451B60
+		// Token: 0x06020AC3 RID: 133827 RVA: 0x0048723C File Offset: 0x0048543C
 		public static IHasUpgradableVision GetRootAsIHasUpgradableVision(ByteBuffer _bb)
 		{
 			return IHasUpgradableVision.GetRootAsIHasUpgradableVision(_bb, default(IHasUpgradableVision));
 		}
 
-		// Token: 0x0601EEC0 RID: 126656 RVA: 0x0045397C File Offset: 0x00451B7C
+		// Token: 0x06020AC4 RID: 133828 RVA: 0x00487258 File Offset: 0x00485458
 		public static IHasUpgradableVision GetRootAsIHasUpgradableVision(ByteBuffer _bb, IHasUpgradableVision obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601EEC1 RID: 126657 RVA: 0x00453999 File Offset: 0x00451B99
+		// Token: 0x06020AC5 RID: 133829 RVA: 0x00487275 File Offset: 0x00485475
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601EEC2 RID: 126658 RVA: 0x004539A8 File Offset: 0x00451BA8
+		// Token: 0x06020AC6 RID: 133830 RVA: 0x00487284 File Offset: 0x00485484
 		public IHasUpgradableVision __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008DBE RID: 36286
-		// (get) Token: 0x0601EEC3 RID: 126659 RVA: 0x004539B8 File Offset: 0x00451BB8
+		// Token: 0x170094E7 RID: 38119
+		// (get) Token: 0x06020AC7 RID: 133831 RVA: 0x00487294 File Offset: 0x00485494
 		public EFormationRoleInfoType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008DBF RID: 36287
-		// (get) Token: 0x0601EEC4 RID: 126660 RVA: 0x004539F4 File Offset: 0x00451BF4
+		// Token: 0x170094E8 RID: 38120
+		// (get) Token: 0x06020AC8 RID: 133832 RVA: 0x004872D0 File Offset: 0x004854D0
 		public EHasUpgradableVisionType Option
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EEC5 RID: 126661 RVA: 0x00453A30 File Offset: 0x00451C30
+		// Token: 0x06020AC9 RID: 133833 RVA: 0x0048730C File Offset: 0x0048550C
 		public static Offset<IHasUpgradableVision> CreateIHasUpgradableVision(FlatBufferBuilder builder, EFormationRoleInfoType Type = EFormationRoleInfoType.RoleLevel, EHasUpgradableVisionType Option = EHasUpgradableVisionType.AnyRole)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IHasUpgradableVision.EndIHasUpgradableVision(builder);
 		}
 
-		// Token: 0x0601EEC6 RID: 126662 RVA: 0x00453A4D File Offset: 0x00451C4D
+		// Token: 0x06020ACA RID: 133834 RVA: 0x00487329 File Offset: 0x00485529
 		public static void StartIHasUpgradableVision(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601EEC7 RID: 126663 RVA: 0x00453A56 File Offset: 0x00451C56
+		// Token: 0x06020ACB RID: 133835 RVA: 0x00487332 File Offset: 0x00485532
 		public static void AddType(FlatBufferBuilder builder, EFormationRoleInfoType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601EEC8 RID: 126664 RVA: 0x00453A61 File Offset: 0x00451C61
+		// Token: 0x06020ACC RID: 133836 RVA: 0x0048733D File Offset: 0x0048553D
 		public static void AddOption(FlatBufferBuilder builder, EHasUpgradableVisionType option)
 		{
 			builder.AddByte(1, (byte)option, 0);
 		}
 
-		// Token: 0x0601EEC9 RID: 126665 RVA: 0x00453A6C File Offset: 0x00451C6C
+		// Token: 0x06020ACD RID: 133837 RVA: 0x00487348 File Offset: 0x00485548
 		public static Offset<IHasUpgradableVision> EndIHasUpgradableVision(FlatBufferBuilder builder)
 		{
 			return new Offset<IHasUpgradableVision>(builder.EndTable());
 		}
 
-		// Token: 0x0601EECA RID: 126666 RVA: 0x00453A7C File Offset: 0x00451C7C
+		// Token: 0x06020ACE RID: 133838 RVA: 0x00487358 File Offset: 0x00485558
 		public IHasUpgradableVisionT UnPack()
 		{
 			IHasUpgradableVisionT hasUpgradableVisionT = new IHasUpgradableVisionT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return hasUpgradableVisionT;
 		}
 
-		// Token: 0x0601EECB RID: 126667 RVA: 0x00453A97 File Offset: 0x00451C97
+		// Token: 0x06020ACF RID: 133839 RVA: 0x00487373 File Offset: 0x00485573
 		public void UnPackTo(IHasUpgradableVisionT _o)
 		{
 			_o.Type = this.Type;
 			_o.Option = this.Option;
 		}
 
-		// Token: 0x0601EECC RID: 126668 RVA: 0x00453AB4 File Offset: 0x00451CB4
+		// Token: 0x06020AD0 RID: 133840 RVA: 0x00487390 File Offset: 0x00485590
 		public static Offset<IHasUpgradableVision> Pack(FlatBufferBuilder builder, IHasUpgradableVisionT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IHasUpgradableVision.CreateIHasUpgradableVision(builder, _o.Type, _o.Option);
 		}
 
-		// Token: 0x0400D5DB RID: 54747
+		// Token: 0x0400E0FA RID: 57594
 		private Table __p;
 	}
 }

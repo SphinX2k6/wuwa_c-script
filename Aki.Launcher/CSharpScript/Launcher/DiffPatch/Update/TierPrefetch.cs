@@ -5,10 +5,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.DiffPatch.Update
 {
-	// Token: 0x02000207 RID: 519
+	// Token: 0x0200020C RID: 524
 	public static class TierPrefetch
 	{
-		// Token: 0x06000D65 RID: 3429 RVA: 0x00051640 File Offset: 0x0004F840
+		// Token: 0x06000DA6 RID: 3494 RVA: 0x00054134 File Offset: 0x00052334
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -25,7 +25,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return <FetchTierConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D66 RID: 3430 RVA: 0x00051684 File Offset: 0x0004F884
+		// Token: 0x06000DA7 RID: 3495 RVA: 0x00054178 File Offset: 0x00052378
 		public static UniTask<long> CalcTierDownloadSize([Nullable(2)] string tierLabel)
 		{
 			TierPrefetch.<CalcTierDownloadSize>d__1 <CalcTierDownloadSize>d__;

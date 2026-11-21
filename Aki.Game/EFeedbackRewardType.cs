@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001AD4 RID: 6868
+// Token: 0x02000F93 RID: 3987
 public enum EFeedbackRewardType
 {
-	// Token: 0x04005DB1 RID: 23985
+	// Token: 0x04005E80 RID: 24192
 	Normal = 1,
-	// Token: 0x04005DB2 RID: 23986
+	// Token: 0x04005E81 RID: 24193
 	Skin,
-	// Token: 0x04005DB3 RID: 23987
+	// Token: 0x04005E82 RID: 24194
 	PlayerTitle,
-	// Token: 0x04005DB4 RID: 23988
+	// Token: 0x04005E83 RID: 24195
 	BusinessCard
 }

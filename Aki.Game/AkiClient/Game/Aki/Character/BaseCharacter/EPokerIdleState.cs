@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042C8 RID: 17096
+	// Token: 0x0200331E RID: 13086
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/EPokerIdleState.EPokerIdleState")]
 	public enum EPokerIdleState : byte
 	{
-		// Token: 0x04017421 RID: 95265
+		// Token: 0x04012103 RID: 73987
 		Normal,
-		// Token: 0x04017422 RID: 95266
+		// Token: 0x04012104 RID: 73988
 		Disadvantage,
-		// Token: 0x04017423 RID: 95267
+		// Token: 0x04012105 RID: 73989
 		Advantage,
-		// Token: 0x04017424 RID: 95268
+		// Token: 0x04012106 RID: 73990
 		EPokerIdleState_MAX
 	}
 }

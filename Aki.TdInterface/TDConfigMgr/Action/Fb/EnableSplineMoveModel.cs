@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028D5 RID: 10453
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BAA RID: 11178
 	public class EnableSplineMoveModel : ActionParams
 	{
-		// Token: 0x0600E823 RID: 59427 RVA: 0x0022122D File Offset: 0x0021F42D
+		// Token: 0x0600F652 RID: 63058 RVA: 0x0023E1AD File Offset: 0x0023C3AD
 		public static EnableSplineMoveModel Create(IEnableSplineMoveModel? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700483B RID: 18491
-		// (get) Token: 0x0600E824 RID: 59428 RVA: 0x0022124C File Offset: 0x0021F44C
+		// Token: 0x17004BAC RID: 19372
+		// (get) Token: 0x0600F653 RID: 63059 RVA: 0x0023E1CC File Offset: 0x0023C3CC
 		public virtual ISplineMoveConfig Config
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008051 RID: 32849
+		// Token: 0x04008710 RID: 34576
 		private IEnableSplineMoveModel Instance;
 
-		// Token: 0x04008052 RID: 32850
+		// Token: 0x04008711 RID: 34577
 		private ISplineMoveConfig _ConfigCache;
 
-		// Token: 0x04008053 RID: 32851
+		// Token: 0x04008712 RID: 34578
 		private bool _ConfigInited;
 	}
 }

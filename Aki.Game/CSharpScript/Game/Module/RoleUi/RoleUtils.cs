@@ -6,18 +6,18 @@ using CSharpScript.Game.Module.Skin;
 
 namespace CSharpScript.Game.Module.RoleUi
 {
-	// Token: 0x02004CE5 RID: 19685
+	// Token: 0x02003C97 RID: 15511
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class RoleUtils
 	{
-		// Token: 0x06032D5E RID: 208222 RVA: 0x00BD9040 File Offset: 0x00BD7240
+		// Token: 0x06027B39 RID: 162617 RVA: 0x00B1E948 File Offset: 0x00B1CB48
 		public static bool IsTrialRole(int id)
 		{
 			return id > 100000;
 		}
 
-		// Token: 0x06032D5F RID: 208223 RVA: 0x00BD904C File Offset: 0x00BD724C
+		// Token: 0x06027B3A RID: 162618 RVA: 0x00B1E954 File Offset: 0x00B1CB54
 		public static ETrialRoleType GetTrialRoleType(int id)
 		{
 			TrialRoleInfo? trialRoleConfig = RoleConfig.Instance.GetTrialRoleConfig(id);
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return (ETrialRoleType)trialRoleConfig.Value.Type;
 		}
 
-		// Token: 0x06032D60 RID: 208224 RVA: 0x00BD9080 File Offset: 0x00BD7280
+		// Token: 0x06027B3B RID: 162619 RVA: 0x00B1E988 File Offset: 0x00B1CB88
 		public static bool IsSpecialTrialRole(int id)
 		{
 			if (!RoleUtils.IsTrialRole(id))
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.RoleUi
 			return trialRoleType != ETrialRoleType.None && trialRoleType != ETrialRoleType.NormalTrial;
 		}
 
-		// Token: 0x06032D61 RID: 208225 RVA: 0x00BD90AC File Offset: 0x00BD72AC
+		// Token: 0x06027B3C RID: 162620 RVA: 0x00B1E9B4 File Offset: 0x00B1CBB4
 		public static int GetTrailRoleRealRoleId(int id)
 		{
 			return RoleConfig.Instance.GetTrialRoleConfig(id).Value.ParentId;
 		}
 
-		// Token: 0x06032D62 RID: 208226 RVA: 0x00BD90D4 File Offset: 0x00BD72D4
+		// Token: 0x06027B3D RID: 162621 RVA: 0x00B1E9DC File Offset: 0x00B1CBDC
 		public static string GetTrailRoleLabelIconById(int trialRoleId)
 		{
 			TrialRoleInfo? trialRoleConfig = RoleConfig.Instance.GetTrialRoleConfig(trialRoleId);
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return RoleUtils.GetTrialRoleLabelIconByType((ETrialRoleType)trialRoleConfig.Value.Type);
 		}
 
-		// Token: 0x06032D63 RID: 208227 RVA: 0x00BD9110 File Offset: 0x00BD7310
+		// Token: 0x06027B3E RID: 162622 RVA: 0x00B1EA18 File Offset: 0x00B1CC18
 		public static string GetTrialRoleLabelIconByType(ETrialRoleType trialRoleType)
 		{
 			switch (trialRoleType)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032D64 RID: 208228 RVA: 0x00BD9149 File Offset: 0x00BD7349
+		// Token: 0x06027B3F RID: 162623 RVA: 0x00B1EA51 File Offset: 0x00B1CC51
 		public static int GetRoleRealId(int roleId)
 		{
 			if (!RoleUtils.IsTrialRole(roleId))
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return RoleUtils.GetTrailRoleRealRoleId(roleId);
 		}
 
-		// Token: 0x06032D65 RID: 208229 RVA: 0x00BD915C File Offset: 0x00BD735C
+		// Token: 0x06027B40 RID: 162624 RVA: 0x00B1EA64 File Offset: 0x00B1CC64
 		public static bool NeedInstantAttributeBlend(int roleId)
 		{
 			int roleRealId = RoleUtils.GetRoleRealId(roleId);
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return roleConfig != null && roleConfig.GetValueOrDefault().InstantAttributeBlend;
 		}
 
-		// Token: 0x06032D66 RID: 208230 RVA: 0x00BD9198 File Offset: 0x00BD7398
+		// Token: 0x06027B41 RID: 162625 RVA: 0x00B1EAA0 File Offset: 0x00B1CCA0
 		public static bool HasMultiTrialRole(int roleId, int[] roleIdList, int? replaceIndex = null)
 		{
 			if (RoleUtils.FindRoleIdIndex(roleId, roleIdList) != -1)
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return false;
 		}
 
-		// Token: 0x06032D67 RID: 208231 RVA: 0x00BD91E8 File Offset: 0x00BD73E8
+		// Token: 0x06027B42 RID: 162626 RVA: 0x00B1EAF0 File Offset: 0x00B1CCF0
 		public static bool HasSameRole(int roleId, int[] roleIdList, int? replaceIndex = null)
 		{
 			if (RoleUtils.FindRoleIdIndex(roleId, roleIdList) != -1)
@@ -130,13 +130,13 @@ namespace CSharpScript.Game.Module.RoleUi
 			return false;
 		}
 
-		// Token: 0x06032D68 RID: 208232 RVA: 0x00BD9231 File Offset: 0x00BD7431
+		// Token: 0x06027B43 RID: 162627 RVA: 0x00B1EB39 File Offset: 0x00B1CD39
 		public static List<int> MergeDefaultOrnaments(List<int> serverWearList, int skinId)
 		{
 			return RoleOrnamentModel.Instance.MergeDefaultOrnaments(serverWearList, skinId);
 		}
 
-		// Token: 0x06032D69 RID: 208233 RVA: 0x00BD9240 File Offset: 0x00BD7440
+		// Token: 0x06027B44 RID: 162628 RVA: 0x00B1EB48 File Offset: 0x00B1CD48
 		public static int GetSkinOrnamentModelId(int skinId, int ornamentId)
 		{
 			Ornament value = RoleConfig.Instance.GetOrnamentConfig(ornamentId).Value;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return value.ModelId(0);
 		}
 
-		// Token: 0x06032D6A RID: 208234 RVA: 0x00BD92C8 File Offset: 0x00BD74C8
+		// Token: 0x06027B45 RID: 162629 RVA: 0x00B1EBD0 File Offset: 0x00B1CDD0
 		private static int FindRoleIdIndex(int roleId, int[] roleIdList)
 		{
 			for (int i = 0; i < roleIdList.Length; i++)
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return -1;
 		}
 
-		// Token: 0x06032D6B RID: 208235 RVA: 0x00BD92EC File Offset: 0x00BD74EC
+		// Token: 0x06027B46 RID: 162630 RVA: 0x00B1EBF4 File Offset: 0x00B1CDF4
 		private static int[] BuildSimulatedList(int roleId, int[] roleIdList, int? replaceIndex)
 		{
 			if (replaceIndex != null)
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return roleIdList;
 		}
 
-		// Token: 0x06032D6C RID: 208236 RVA: 0x00BD9358 File Offset: 0x00BD7558
+		// Token: 0x06027B47 RID: 162631 RVA: 0x00B1EC60 File Offset: 0x00B1CE60
 		public static bool IsRoleDead(int roleConfigId)
 		{
 			SceneTeamItem teamItem = SceneTeamModel.Instance.GetTeamItem((long)roleConfigId, new GetTeamItemOptions
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return roleDataById == null || roleDataById.GetAttributeData().GetAttrValueById(3) <= 0;
 		}
 
-		// Token: 0x0401B0DA RID: 110810
+		// Token: 0x04015A5F RID: 88671
 		private const int HEALTH_ATTR_ID = 3;
 	}
 }

@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004226 RID: 16934
+	// Token: 0x02004682 RID: 18050
 	public enum ITrapDefenseConditionStepBase_Union : byte
 	{
-		// Token: 0x0400BEA7 RID: 48807
+		// Token: 0x0400C8B4 RID: 51380
 		NONE,
-		// Token: 0x0400BEA8 RID: 48808
+		// Token: 0x0400C8B5 RID: 51381
 		ITrapDefenseConditionStepBase,
-		// Token: 0x0400BEA9 RID: 48809
+		// Token: 0x0400C8B6 RID: 51382
 		ITrapDefenseConditionStepReward,
-		// Token: 0x0400BEAA RID: 48810
+		// Token: 0x0400C8B7 RID: 51383
 		ITrapDefenseConditionStepMapChange,
-		// Token: 0x0400BEAB RID: 48811
+		// Token: 0x0400C8B8 RID: 51384
 		ITrapDefenseConditionStepPreview,
-		// Token: 0x0400BEAC RID: 48812
+		// Token: 0x0400C8B9 RID: 51385
 		ITrapDefenseConditionStepSpawnMonster,
-		// Token: 0x0400BEAD RID: 48813
+		// Token: 0x0400C8BA RID: 51386
 		ITrapDefenseConditionStepLoadAndRestoreMap
 	}
 }

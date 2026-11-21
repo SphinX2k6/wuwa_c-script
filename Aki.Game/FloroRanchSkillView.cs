@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B79 RID: 7033
+// Token: 0x02001038 RID: 4152
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchSkillView : UiViewBase
 {
-	// Token: 0x0600D142 RID: 53570 RVA: 0x002FED88 File Offset: 0x002FCF88
+	// Token: 0x0600A553 RID: 42323 RVA: 0x00309E60 File Offset: 0x00308060
 	public FloroRanchSkillView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D143 RID: 53571 RVA: 0x002FED94 File Offset: 0x002FCF94
+	// Token: 0x0600A554 RID: 42324 RVA: 0x00309E6C File Offset: 0x0030806C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -51,7 +51,7 @@ public class FloroRanchSkillView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D144 RID: 53572 RVA: 0x002FEEE4 File Offset: 0x002FD0E4
+	// Token: 0x0600A555 RID: 42325 RVA: 0x00309FBC File Offset: 0x003081BC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchSkillView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -62,7 +62,7 @@ public class FloroRanchSkillView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D145 RID: 53573 RVA: 0x002FEF28 File Offset: 0x002FD128
+	// Token: 0x0600A556 RID: 42326 RVA: 0x0030A000 File Offset: 0x00308200
 	private void ResolveOpenParam()
 	{
 		object openParam = this.OpenParam;
@@ -85,20 +85,20 @@ public class FloroRanchSkillView : UiViewBase
 		this.ActivityDataType = EFloroRanchActivityDataType.Normal;
 	}
 
-	// Token: 0x0600D146 RID: 53574 RVA: 0x002FEF97 File Offset: 0x002FD197
+	// Token: 0x0600A557 RID: 42327 RVA: 0x0030A06F File Offset: 0x0030826F
 	private bool OnCanExecuteChange(int skillId)
 	{
 		return this.SelectedSkillId != skillId;
 	}
 
-	// Token: 0x0600D147 RID: 53575 RVA: 0x002FEFA5 File Offset: 0x002FD1A5
+	// Token: 0x0600A558 RID: 42328 RVA: 0x0030A07D File Offset: 0x0030827D
 	private void OnToggleCallback(int skillId)
 	{
 		this.SelectedSkillId = skillId;
 		this.SkillLayout.SelectGridProxyByKey(skillId, false);
 	}
 
-	// Token: 0x0600D148 RID: 53576 RVA: 0x002FEFC0 File Offset: 0x002FD1C0
+	// Token: 0x0600A559 RID: 42329 RVA: 0x0030A098 File Offset: 0x00308298
 	private FloroRanchSkillCardItem CreateSkillCard()
 	{
 		return new FloroRanchSkillCardItem
@@ -110,7 +110,7 @@ public class FloroRanchSkillView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600D149 RID: 53577 RVA: 0x002FF010 File Offset: 0x002FD210
+	// Token: 0x0600A55A RID: 42330 RVA: 0x0030A0E8 File Offset: 0x003082E8
 	private void OnConfirmBtnClick()
 	{
 		LocalStorage.SetPlayer<int>(FloroRanchModel.Instance.GetSkillStorageKeyByActivityType(this.ActivityDataType), this.SelectedSkillId);
@@ -119,7 +119,7 @@ public class FloroRanchSkillView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600D14A RID: 53578 RVA: 0x002FF072 File Offset: 0x002FD272
+	// Token: 0x0600A55B RID: 42331 RVA: 0x0030A14A File Offset: 0x0030834A
 	private void OnCloseBtnClick()
 	{
 		FloroRanchModel.Instance.GetActivityData(this.ActivityDataType, true).SaveSkillRedDot();
@@ -127,7 +127,7 @@ public class FloroRanchSkillView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600D14B RID: 53579 RVA: 0x002FF0A8 File Offset: 0x002FD2A8
+	// Token: 0x0600A55C RID: 42332 RVA: 0x0030A180 File Offset: 0x00308380
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -161,16 +161,16 @@ public class FloroRanchSkillView : UiViewBase
 		};
 	}
 
-	// Token: 0x04006008 RID: 24584
+	// Token: 0x040060D7 RID: 24791
 	private int SelectedSkillId;
 
-	// Token: 0x04006009 RID: 24585
+	// Token: 0x040060D8 RID: 24792
 	private EFloroRanchActivityDataType ActivityDataType;
 
-	// Token: 0x0400600A RID: 24586
+	// Token: 0x040060D9 RID: 24793
 	private bool CanSelect;
 
-	// Token: 0x0400600B RID: 24587
+	// Token: 0x040060DA RID: 24794
 	[Nullable(new byte[]
 	{
 		2,
@@ -179,26 +179,26 @@ public class FloroRanchSkillView : UiViewBase
 	})]
 	private GenericLayout<FloroRanchSkillCardItem, FloroRanchSkillData> SkillLayout;
 
-	// Token: 0x020080F9 RID: 33017
+	// Token: 0x02007287 RID: 29319
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A160 RID: 172384
+		// Token: 0x04025494 RID: 152724
 		public const int SpineRole = 2;
 
-		// Token: 0x0402A161 RID: 172385
+		// Token: 0x04025495 RID: 152725
 		public const int LayoutSkillCard = 4;
 
-		// Token: 0x0402A162 RID: 172386
+		// Token: 0x04025496 RID: 152726
 		public const int ItemSkillCard = 5;
 
-		// Token: 0x0402A163 RID: 172387
+		// Token: 0x04025497 RID: 152727
 		public const int ButtonConfirm = 6;
 
-		// Token: 0x0402A164 RID: 172388
+		// Token: 0x04025498 RID: 152728
 		public const int ButtonClose = 7;
 
-		// Token: 0x0402A165 RID: 172389
+		// Token: 0x04025499 RID: 152729
 		public const int ItemTip = 8;
 	}
 }

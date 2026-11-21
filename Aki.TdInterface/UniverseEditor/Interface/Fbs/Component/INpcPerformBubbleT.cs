@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005630 RID: 22064
+	// Token: 0x02005BCE RID: 23502
 	public class INpcPerformBubbleT
 	{
-		// Token: 0x1700A349 RID: 41801
-		// (get) Token: 0x06024A29 RID: 150057 RVA: 0x0050DCBF File Offset: 0x0050BEBF
-		// (set) Token: 0x06024A2A RID: 150058 RVA: 0x0050DCC7 File Offset: 0x0050BEC7
+		// Token: 0x1700ABD1 RID: 43985
+		// (get) Token: 0x06026C3C RID: 158780 RVA: 0x0054E37F File Offset: 0x0054C57F
+		// (set) Token: 0x06026C3D RID: 158781 RVA: 0x0054E387 File Offset: 0x0054C587
 		public IBubbleIndexT Bubble { get; set; }
 
-		// Token: 0x1700A34A RID: 41802
-		// (get) Token: 0x06024A2B RID: 150059 RVA: 0x0050DCD0 File Offset: 0x0050BED0
-		// (set) Token: 0x06024A2C RID: 150060 RVA: 0x0050DCD8 File Offset: 0x0050BED8
+		// Token: 0x1700ABD2 RID: 43986
+		// (get) Token: 0x06026C3E RID: 158782 RVA: 0x0054E390 File Offset: 0x0054C590
+		// (set) Token: 0x06026C3F RID: 158783 RVA: 0x0054E398 File Offset: 0x0054C598
 		public int Rate { get; set; }
 
-		// Token: 0x06024A2D RID: 150061 RVA: 0x0050DCE1 File Offset: 0x0050BEE1
+		// Token: 0x06026C40 RID: 158784 RVA: 0x0054E3A1 File Offset: 0x0054C5A1
 		public INpcPerformBubbleT()
 		{
 			this.Bubble = null;

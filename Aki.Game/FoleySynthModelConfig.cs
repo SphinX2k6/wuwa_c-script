@@ -1,12 +1,12 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02003020 RID: 12320
+// Token: 0x02002576 RID: 9590
 public class FoleySynthModelConfig
 {
-	// Token: 0x0400C5DC RID: 50652
+	// Token: 0x0400C9A9 RID: 51625
 	public FName? BoneName;
 
-	// Token: 0x0400C5DD RID: 50653
+	// Token: 0x0400C9AA RID: 51626
 	public int Model;
 }

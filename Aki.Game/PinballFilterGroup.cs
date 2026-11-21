@@ -9,18 +9,18 @@ using CSharpScript.Game.Ui;
 using FilterDefine;
 using UnrealEngine;
 
-// Token: 0x0200186D RID: 6253
+// Token: 0x02000D26 RID: 3366
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballFilterGroup : UiPanelBase
 {
-	// Token: 0x0600B782 RID: 46978 RVA: 0x002983DD File Offset: 0x002965DD
+	// Token: 0x06008B6B RID: 35691 RVA: 0x002A2AFC File Offset: 0x002A0CFC
 	public PinballFilterGroup(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600B783 RID: 46979 RVA: 0x002983FC File Offset: 0x002965FC
+	// Token: 0x06008B6C RID: 35692 RVA: 0x002A2B18 File Offset: 0x002A0D18
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -36,13 +36,13 @@ public class PinballFilterGroup : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B784 RID: 46980 RVA: 0x00298486 File Offset: 0x00296686
+	// Token: 0x06008B6D RID: 35693 RVA: 0x002A2BA2 File Offset: 0x002A0DA2
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayoutNew<PinballFilterItem>(base.GetLayoutBase(1), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<PinballFilterItem>(this.InitFilterItem), base.GetItem(2));
 	}
 
-	// Token: 0x0600B785 RID: 46981 RVA: 0x002984B0 File Offset: 0x002966B0
+	// Token: 0x06008B6E RID: 35694 RVA: 0x002A2BCC File Offset: 0x002A0DCC
 	private ILayoutItem<PinballFilterItem> InitFilterItem(object tempData, UUIItem uiItem, int index)
 	{
 		FilterItemData filterItemData = (FilterItemData)tempData;
@@ -57,7 +57,7 @@ public class PinballFilterGroup : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600B786 RID: 46982 RVA: 0x0029850A File Offset: 0x0029670A
+	// Token: 0x06008B6F RID: 35695 RVA: 0x002A2C26 File Offset: 0x002A0E26
 	private void FilterItemToggleEvent(EToggleState state, int filterId, string name)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -76,37 +76,37 @@ public class PinballFilterGroup : UiPanelBase
 		toggleFunction(state, filterId, name);
 	}
 
-	// Token: 0x0600B787 RID: 46983 RVA: 0x0029853F File Offset: 0x0029673F
+	// Token: 0x06008B70 RID: 35696 RVA: 0x002A2C5B File Offset: 0x002A0E5B
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x0600B788 RID: 46984 RVA: 0x00298541 File Offset: 0x00296741
+	// Token: 0x06008B71 RID: 35697 RVA: 0x002A2C5D File Offset: 0x002A0E5D
 	public void SetToggleFunction(TFilterItemToggleEvent toggleFunction)
 	{
 		this.ToggleFunction = toggleFunction;
 	}
 
-	// Token: 0x0600B789 RID: 46985 RVA: 0x0029854C File Offset: 0x0029674C
+	// Token: 0x06008B72 RID: 35698 RVA: 0x002A2C68 File Offset: 0x002A0E68
 	private void InitConfigId()
 	{
 		FilterResultData filterResultData = FilterModel.Instance.GetFilterResultData(this.UniqueId);
 		this.ConfigId = filterResultData.ConfigId;
 	}
 
-	// Token: 0x0600B78A RID: 46986 RVA: 0x00298576 File Offset: 0x00296776
+	// Token: 0x06008B73 RID: 35699 RVA: 0x002A2C92 File Offset: 0x002A0E92
 	private void InitCurrentFilterItemArray()
 	{
 		this.CurrentFilterItemArray = FilterModel.Instance.GetFilterItemDataList(this.RuleId, this.ConfigId);
 	}
 
-	// Token: 0x0600B78B RID: 46987 RVA: 0x00298594 File Offset: 0x00296794
+	// Token: 0x06008B74 RID: 35700 RVA: 0x002A2CB0 File Offset: 0x002A0EB0
 	private void SetFilterType()
 	{
 		this.FilterType = (FilterDefine.EFilterType)FilterConfig.Instance.GetFilterRuleConfig(this.RuleId).Value.FilterType;
 	}
 
-	// Token: 0x0600B78C RID: 46988 RVA: 0x002985C8 File Offset: 0x002967C8
+	// Token: 0x06008B75 RID: 35701 RVA: 0x002A2CE4 File Offset: 0x002A0EE4
 	private void InitTempFilterIdSet()
 	{
 		this.TempFilterDataMap = new Dictionary<int, string>();
@@ -121,7 +121,7 @@ public class PinballFilterGroup : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B78D RID: 46989 RVA: 0x00298654 File Offset: 0x00296854
+	// Token: 0x06008B76 RID: 35702 RVA: 0x002A2D70 File Offset: 0x002A0F70
 	public void AddCurrentSelectedFilterData()
 	{
 		foreach (FilterItemData filterItemData in this.CurrentFilterItemArray)
@@ -135,33 +135,33 @@ public class PinballFilterGroup : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B78E RID: 46990 RVA: 0x002986CC File Offset: 0x002968CC
+	// Token: 0x06008B77 RID: 35703 RVA: 0x002A2DE8 File Offset: 0x002A0FE8
 	private void SetTitle()
 	{
 		FilterRule? filterRuleConfig = FilterConfig.Instance.GetFilterRuleConfig(this.RuleId);
 		base.GetText(0).ShowTextNew(filterRuleConfig.Value.Title);
 	}
 
-	// Token: 0x0600B78F RID: 46991 RVA: 0x00298708 File Offset: 0x00296908
+	// Token: 0x06008B78 RID: 35704 RVA: 0x002A2E24 File Offset: 0x002A1024
 	private void InitFilter()
 	{
 		this.Layout.RebuildLayoutByDataNew<FilterItemData>(this.CurrentFilterItemArray, null);
 	}
 
-	// Token: 0x0600B790 RID: 46992 RVA: 0x0029872F File Offset: 0x0029692F
+	// Token: 0x06008B79 RID: 35705 RVA: 0x002A2E4B File Offset: 0x002A104B
 	public void SetSelectedDataMap(Dictionary<int, string> data)
 	{
 		this.CurrentSelectedDataMap = data;
 	}
 
-	// Token: 0x0600B791 RID: 46993 RVA: 0x00298738 File Offset: 0x00296938
+	// Token: 0x06008B7A RID: 35706 RVA: 0x002A2E54 File Offset: 0x002A1054
 	public void InitFilterSetData()
 	{
 		this.InitTempFilterIdSet();
 		this.AddCurrentSelectedFilterData();
 	}
 
-	// Token: 0x0600B792 RID: 46994 RVA: 0x00298746 File Offset: 0x00296946
+	// Token: 0x06008B7B RID: 35707 RVA: 0x002A2E62 File Offset: 0x002A1062
 	public void ShowTemp(int ruleId, int uniqueId)
 	{
 		this.RuleId = ruleId;
@@ -174,7 +174,7 @@ public class PinballFilterGroup : UiPanelBase
 		this.InitFilter();
 	}
 
-	// Token: 0x0600B793 RID: 46995 RVA: 0x0029877C File Offset: 0x0029697C
+	// Token: 0x06008B7C RID: 35708 RVA: 0x002A2E98 File Offset: 0x002A1098
 	public void RefreshGroupItem()
 	{
 		foreach (KeyValuePair<object, PinballFilterItem> keyValuePair in this.Layout.GetLayoutItemMap())
@@ -184,31 +184,31 @@ public class PinballFilterGroup : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B794 RID: 46996 RVA: 0x002987F8 File Offset: 0x002969F8
+	// Token: 0x06008B7D RID: 35709 RVA: 0x002A2F14 File Offset: 0x002A1114
 	public Dictionary<int, string> GetTempFilterDataMap()
 	{
 		return this.TempFilterDataMap;
 	}
 
-	// Token: 0x0600B795 RID: 46997 RVA: 0x00298800 File Offset: 0x00296A00
+	// Token: 0x06008B7E RID: 35710 RVA: 0x002A2F1C File Offset: 0x002A111C
 	public void ResetTempFilterDataMap()
 	{
 		this.TempFilterDataMap.Clear();
 	}
 
-	// Token: 0x0600B796 RID: 46998 RVA: 0x0029880D File Offset: 0x00296A0D
+	// Token: 0x06008B7F RID: 35711 RVA: 0x002A2F29 File Offset: 0x002A1129
 	public FilterDefine.EFilterType GetFilterType()
 	{
 		return this.FilterType;
 	}
 
-	// Token: 0x040052C8 RID: 21192
+	// Token: 0x04005373 RID: 21363
 	private int RuleId;
 
-	// Token: 0x040052C9 RID: 21193
+	// Token: 0x04005374 RID: 21364
 	private FilterDefine.EFilterType FilterType = FilterDefine.EFilterType.Weapon;
 
-	// Token: 0x040052CA RID: 21194
+	// Token: 0x04005375 RID: 21365
 	[Nullable(new byte[]
 	{
 		2,
@@ -216,17 +216,17 @@ public class PinballFilterGroup : UiPanelBase
 	})]
 	private Dictionary<int, string> TempFilterDataMap;
 
-	// Token: 0x040052CB RID: 21195
+	// Token: 0x04005376 RID: 21366
 	[Nullable(2)]
 	private TFilterItemToggleEvent ToggleFunction;
 
-	// Token: 0x040052CC RID: 21196
+	// Token: 0x04005377 RID: 21367
 	private int ConfigId;
 
-	// Token: 0x040052CD RID: 21197
+	// Token: 0x04005378 RID: 21368
 	private int UniqueId;
 
-	// Token: 0x040052CE RID: 21198
+	// Token: 0x04005379 RID: 21369
 	[Nullable(new byte[]
 	{
 		2,
@@ -234,7 +234,7 @@ public class PinballFilterGroup : UiPanelBase
 	})]
 	protected GenericLayoutNew<PinballFilterItem> Layout;
 
-	// Token: 0x040052CF RID: 21199
+	// Token: 0x0400537A RID: 21370
 	[Nullable(new byte[]
 	{
 		2,
@@ -242,7 +242,7 @@ public class PinballFilterGroup : UiPanelBase
 	})]
 	protected Dictionary<int, string> CurrentSelectedDataMap;
 
-	// Token: 0x040052D0 RID: 21200
+	// Token: 0x0400537B RID: 21371
 	[Nullable(new byte[]
 	{
 		2,
@@ -250,15 +250,15 @@ public class PinballFilterGroup : UiPanelBase
 	})]
 	private List<FilterItemData> CurrentFilterItemArray;
 
-	// Token: 0x02007E32 RID: 32306
+	// Token: 0x02006FB9 RID: 28601
 	[NullableContext(0)]
 	private enum EPinballFilterGroupComponent
 	{
-		// Token: 0x040294D4 RID: 169172
+		// Token: 0x04024801 RID: 149505
 		Title,
-		// Token: 0x040294D5 RID: 169173
+		// Token: 0x04024802 RID: 149506
 		Layout,
-		// Token: 0x040294D6 RID: 169174
+		// Token: 0x04024803 RID: 149507
 		FilterItem
 	}
 }

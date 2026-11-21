@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Flow
 {
-	// Token: 0x0200472B RID: 18219
+	// Token: 0x02004B93 RID: 19347
 	public class ICameraFlowTemplateConfigT
 	{
-		// Token: 0x17008294 RID: 33428
-		// (get) Token: 0x0601BFEF RID: 114671 RVA: 0x003F7A6D File Offset: 0x003F5C6D
-		// (set) Token: 0x0601BFF0 RID: 114672 RVA: 0x003F7A75 File Offset: 0x003F5C75
+		// Token: 0x170088D5 RID: 35029
+		// (get) Token: 0x0601D7C4 RID: 120772 RVA: 0x00423D09 File Offset: 0x00421F09
+		// (set) Token: 0x0601D7C5 RID: 120773 RVA: 0x00423D11 File Offset: 0x00421F11
 		public List<ICameraTemplateT> List { get; set; }
 
-		// Token: 0x0601BFF1 RID: 114673 RVA: 0x003F7A7E File Offset: 0x003F5C7E
+		// Token: 0x0601D7C6 RID: 120774 RVA: 0x00423D1A File Offset: 0x00421F1A
 		public ICameraFlowTemplateConfigT()
 		{
 			this.List = null;

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011C0 RID: 4544
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012FC RID: 4860
 	public class ITrackQuestBranchBoardConfig
 	{
-		// Token: 0x0600674A RID: 26442 RVA: 0x000F7668 File Offset: 0x000F5868
+		// Token: 0x06006D8B RID: 28043 RVA: 0x00104F74 File Offset: 0x00103174
 		private ITrackQuestBranchBoardConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600674B RID: 26443 RVA: 0x000F76A0 File Offset: 0x000F58A0
+		// Token: 0x06006D8C RID: 28044 RVA: 0x00104FAC File Offset: 0x001031AC
 		public static ITrackQuestBranchBoardConfig Create([Nullable(2)] ITrackQuestBranchBoardConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600674C RID: 26444 RVA: 0x000F76B3 File Offset: 0x000F58B3
+		// Token: 0x06006D8D RID: 28045 RVA: 0x00104FBF File Offset: 0x001031BF
 		public static ITrackQuestBranchBoardConfig CreateFromSetValue([Nullable(2)] ITrackQuestBranchBoardConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600674D RID: 26445 RVA: 0x000F76C6 File Offset: 0x000F58C6
+		// Token: 0x06006D8E RID: 28046 RVA: 0x00104FD2 File Offset: 0x001031D2
 		public ITrackQuestBranchBoardConfig_SetValue ToSetValue()
 		{
 			return new ITrackQuestBranchBoardConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700218A RID: 8586
-		// (get) Token: 0x0600674E RID: 26446 RVA: 0x000F76E5 File Offset: 0x000F58E5
-		// (set) Token: 0x0600674F RID: 26447 RVA: 0x000F7710 File Offset: 0x000F5910
+		// Token: 0x1700234B RID: 9035
+		// (get) Token: 0x06006D8F RID: 28047 RVA: 0x00104FF1 File Offset: 0x001031F1
+		// (set) Token: 0x06006D90 RID: 28048 RVA: 0x0010501C File Offset: 0x0010321C
 		public virtual int Id
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700218B RID: 8587
-		// (get) Token: 0x06006750 RID: 26448 RVA: 0x000F7720 File Offset: 0x000F5920
-		// (set) Token: 0x06006751 RID: 26449 RVA: 0x000F775A File Offset: 0x000F595A
+		// Token: 0x1700234C RID: 9036
+		// (get) Token: 0x06006D91 RID: 28049 RVA: 0x0010502C File Offset: 0x0010322C
+		// (set) Token: 0x06006D92 RID: 28050 RVA: 0x00105066 File Offset: 0x00103266
 		public virtual bool? EnableAnimation
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E07 RID: 15879
+		// Token: 0x04004175 RID: 16757
 		[Nullable(2)]
 		protected ITrackQuestBranchBoardConfig FbInstance;
 
-		// Token: 0x04003E08 RID: 15880
+		// Token: 0x04004176 RID: 16758
 		[Nullable(2)]
 		protected ITrackQuestBranchBoardConfig_SetValue PocoInterface;
 	}

@@ -9,17 +9,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x020039FE RID: 14846
+	// Token: 0x02003055 RID: 12373
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 武器交互场景时 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F19C RID: 127388 RVA: 0x008AA996 File Offset: 0x008A8B96
+		// Token: 0x0601D5FD RID: 120317 RVA: 0x008F2FF6 File Offset: 0x008F11F6
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 武器交互场景时.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F19D RID: 127389 RVA: 0x008AA9A2 File Offset: 0x008A8BA2
+		// Token: 0x0601D5FE RID: 120318 RVA: 0x008F3002 File Offset: 0x008F1202
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__武器交互场景时__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -29,31 +29,30 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__武器交互场景时__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F19E RID: 127390 RVA: 0x008AA9C5 File Offset: 0x008A8BC5
+		// Token: 0x0601D5FF RID: 120319 RVA: 0x008F3025 File Offset: 0x008F1225
 		public 武器交互场景时()
 		{
 		}
 
-		// Token: 0x0601F19F RID: 127391 RVA: 0x008AA9CD File Offset: 0x008A8BCD
+		// Token: 0x0601D600 RID: 120320 RVA: 0x008F302D File Offset: 0x008F122D
 		[NullableContext(2)]
 		public 武器交互场景时(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F1A0 RID: 127392 RVA: 0x008AA9D7 File Offset: 0x008A8BD7
+		// Token: 0x0601D601 RID: 120321 RVA: 0x008F3037 File Offset: 0x008F1237
 		public 武器交互场景时(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F1A1 RID: 127393 RVA: 0x008AA9E2 File Offset: 0x008A8BE2
+		// Token: 0x0601D602 RID: 120322 RVA: 0x008F3042 File Offset: 0x008F1242
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<FVectorDouble, BP_SceneBattleInteract_C, int>) ?? ((Action<FVectorDouble, BP_SceneBattleInteract_C, int>)Delegate.CreateDelegate(typeof(Action<FVectorDouble, BP_SceneBattleInteract_C, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F1A2 RID: 127394 RVA: 0x008AAA14 File Offset: 0x008A8C14
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D603 RID: 120323 RVA: 0x008F3074 File Offset: 0x008F1274
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -72,8 +71,7 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, 武器交互场景时.RegisterId);
 		}
 
-		// Token: 0x0601F1A3 RID: 127395 RVA: 0x008AAA4E File Offset: 0x008A8C4E
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D604 RID: 120324 RVA: 0x008F30AE File Offset: 0x008F12AE
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -83,10 +81,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F1A4 RID: 127396 RVA: 0x008AAA58 File Offset: 0x008A8C58
+		// Token: 0x0601D605 RID: 120325 RVA: 0x008F30B8 File Offset: 0x008F12B8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(FVectorDouble OriginPoint, BP_SceneBattleInteract_C Config, int Id)
 		{
 			武器交互场景时.__武器交互场景时_DelegateParams* ptr = stackalloc 武器交互场景时.__武器交互场景时_DelegateParams[(UIntPtr)55] + 15L / (long)sizeof(武器交互场景时.__武器交互场景时_DelegateParams) & -16L;
@@ -97,10 +94,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F1A5 RID: 127397 RVA: 0x008AAAB4 File Offset: 0x008A8CB4
+		// Token: 0x0601D606 RID: 120326 RVA: 0x008F3114 File Offset: 0x008F1314
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FVectorDouble, BP_SceneBattleInteract_C, int> action = target as Action<FVectorDouble, BP_SceneBattleInteract_C, int>;
@@ -112,36 +108,36 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(((武器交互场景时.__武器交互场景时_DelegateParams*)__Parameters)->OriginPoint, orCreateUObjectByNativePointer, ((武器交互场景时.__武器交互场景时_DelegateParams*)__Parameters)->Id);
 		}
 
-		// Token: 0x0400EE3E RID: 60990
+		// Token: 0x0400F766 RID: 63334
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:武器交互场景时__DelegateSignature";
 
-		// Token: 0x0400EE3F RID: 60991
+		// Token: 0x0400F767 RID: 63335
 		private static int RegisterId;
 
-		// Token: 0x02009A07 RID: 39431
+		// Token: 0x02008CBB RID: 36027
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
-		protected ref struct __武器交互场景时_DelegateParams
+		private ref struct __武器交互场景时_DelegateParams
 		{
-			// Token: 0x04030EE4 RID: 200420
+			// Token: 0x0402C7C4 RID: 182212
 			[FieldOffset(0)]
 			public FVectorDouble OriginPoint;
 
-			// Token: 0x04030EE5 RID: 200421
+			// Token: 0x0402C7C5 RID: 182213
 			[FieldOffset(24)]
 			public IntPtr Config;
 
-			// Token: 0x04030EE6 RID: 200422
+			// Token: 0x0402C7C6 RID: 182214
 			[FieldOffset(32)]
 			public int Id;
 		}
 
-		// Token: 0x02009A08 RID: 39432
+		// Token: 0x02008CBC RID: 36028
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030EE7 RID: 200423
+			// Token: 0x0402C7C7 RID: 182215
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

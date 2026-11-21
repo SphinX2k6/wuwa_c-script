@@ -5,17 +5,17 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028C7 RID: 10439
+// Token: 0x02001E42 RID: 7746
 public class RoleSkillTreeSkillSpriteItem : UiPanelBase
 {
-	// Token: 0x060158DF RID: 88287 RVA: 0x0057176B File Offset: 0x0056F96B
+	// Token: 0x060132DF RID: 78559 RVA: 0x0059C62F File Offset: 0x0059A82F
 	[NullableContext(1)]
 	public RoleSkillTreeSkillSpriteItem(AActor actor)
 	{
 		base.CreateThenShowByActor(actor, null);
 	}
 
-	// Token: 0x060158E0 RID: 88288 RVA: 0x0057177C File Offset: 0x0056F97C
+	// Token: 0x060132E0 RID: 78560 RVA: 0x0059C640 File Offset: 0x0059A840
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -27,16 +27,16 @@ public class RoleSkillTreeSkillSpriteItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060158E1 RID: 88289 RVA: 0x005717C4 File Offset: 0x0056F9C4
+	// Token: 0x060132E1 RID: 78561 RVA: 0x0059C688 File Offset: 0x0059A888
 	public void Update(int skillId)
 	{
 		this.SetSpriteByPath(RoleSkillConfig.Instance.GetSkillConfigById(skillId).Value.Icon, base.GetSprite(0), false, null, null);
 	}
 
-	// Token: 0x02008ED9 RID: 36569
+	// Token: 0x02008121 RID: 33057
 	private enum EComponents
 	{
-		// Token: 0x0402E53E RID: 189758
+		// Token: 0x04029C39 RID: 171065
 		IconSprite
 	}
 }

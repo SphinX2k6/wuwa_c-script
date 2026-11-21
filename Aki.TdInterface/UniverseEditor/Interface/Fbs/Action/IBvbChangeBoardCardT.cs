@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200623A RID: 25146
+	// Token: 0x020068AB RID: 26795
 	public class IBvbChangeBoardCardT
 	{
-		// Token: 0x1700BB61 RID: 47969
-		// (get) Token: 0x0602B5A2 RID: 177570 RVA: 0x005F8053 File Offset: 0x005F6253
-		// (set) Token: 0x0602B5A3 RID: 177571 RVA: 0x005F805B File Offset: 0x005F625B
+		// Token: 0x1700C4E9 RID: 50409
+		// (get) Token: 0x0602DD03 RID: 187651 RVA: 0x00642E5B File Offset: 0x0064105B
+		// (set) Token: 0x0602DD04 RID: 187652 RVA: 0x00642E63 File Offset: 0x00641063
 		public EBvbPlayerOperationType Type { get; set; }
 
-		// Token: 0x1700BB62 RID: 47970
-		// (get) Token: 0x0602B5A4 RID: 177572 RVA: 0x005F8064 File Offset: 0x005F6264
-		// (set) Token: 0x0602B5A5 RID: 177573 RVA: 0x005F806C File Offset: 0x005F626C
+		// Token: 0x1700C4EA RID: 50410
+		// (get) Token: 0x0602DD05 RID: 187653 RVA: 0x00642E6C File Offset: 0x0064106C
+		// (set) Token: 0x0602DD06 RID: 187654 RVA: 0x00642E74 File Offset: 0x00641074
 		public int BoardPosIndex { get; set; }
 
-		// Token: 0x1700BB63 RID: 47971
-		// (get) Token: 0x0602B5A6 RID: 177574 RVA: 0x005F8075 File Offset: 0x005F6275
-		// (set) Token: 0x0602B5A7 RID: 177575 RVA: 0x005F807D File Offset: 0x005F627D
+		// Token: 0x1700C4EB RID: 50411
+		// (get) Token: 0x0602DD07 RID: 187655 RVA: 0x00642E7D File Offset: 0x0064107D
+		// (set) Token: 0x0602DD08 RID: 187656 RVA: 0x00642E85 File Offset: 0x00641085
 		public List<int> BoardPosIndexList { get; set; }
 
-		// Token: 0x1700BB64 RID: 47972
-		// (get) Token: 0x0602B5A8 RID: 177576 RVA: 0x005F8086 File Offset: 0x005F6286
-		// (set) Token: 0x0602B5A9 RID: 177577 RVA: 0x005F808E File Offset: 0x005F628E
+		// Token: 0x1700C4EC RID: 50412
+		// (get) Token: 0x0602DD09 RID: 187657 RVA: 0x00642E8E File Offset: 0x0064108E
+		// (set) Token: 0x0602DD0A RID: 187658 RVA: 0x00642E96 File Offset: 0x00641096
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602B5AA RID: 177578 RVA: 0x005F8097 File Offset: 0x005F6297
+		// Token: 0x0602DD0B RID: 187659 RVA: 0x00642E9F File Offset: 0x0064109F
 		public IBvbChangeBoardCardT()
 		{
 			this.Type = EBvbPlayerOperationType.BvbDeploy;

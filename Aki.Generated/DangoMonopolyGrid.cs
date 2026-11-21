@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BD9 RID: 3033
+	// Token: 0x02000CBB RID: 3259
 	public struct DangoMonopolyGrid : IFlatbufferObject
 	{
-		// Token: 0x17000BEE RID: 3054
-		// (get) Token: 0x06006074 RID: 24692 RVA: 0x0020F9C8 File Offset: 0x0020DBC8
+		// Token: 0x17000C34 RID: 3124
+		// (get) Token: 0x0600664D RID: 26189 RVA: 0x0022F04C File Offset: 0x0022D24C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006075 RID: 24693 RVA: 0x0020F9D5 File Offset: 0x0020DBD5
+		// Token: 0x0600664E RID: 26190 RVA: 0x0022F059 File Offset: 0x0022D259
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006076 RID: 24694 RVA: 0x0020F9DC File Offset: 0x0020DBDC
+		// Token: 0x0600664F RID: 26191 RVA: 0x0022F060 File Offset: 0x0022D260
 		public static DangoMonopolyGrid GetRootAsDangoMonopolyGrid(ByteBuffer _bb)
 		{
 			return DangoMonopolyGrid.GetRootAsDangoMonopolyGrid(_bb, default(DangoMonopolyGrid));
 		}
 
-		// Token: 0x06006077 RID: 24695 RVA: 0x0020F9F8 File Offset: 0x0020DBF8
+		// Token: 0x06006650 RID: 26192 RVA: 0x0022F07C File Offset: 0x0022D27C
 		public static DangoMonopolyGrid GetRootAsDangoMonopolyGrid(ByteBuffer _bb, DangoMonopolyGrid obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006078 RID: 24696 RVA: 0x0020FA15 File Offset: 0x0020DC15
+		// Token: 0x06006651 RID: 26193 RVA: 0x0022F099 File Offset: 0x0022D299
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006079 RID: 24697 RVA: 0x0020FA24 File Offset: 0x0020DC24
+		// Token: 0x06006652 RID: 26194 RVA: 0x0022F0A8 File Offset: 0x0022D2A8
 		public DangoMonopolyGrid __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000BEF RID: 3055
-		// (get) Token: 0x0600607A RID: 24698 RVA: 0x0020FA34 File Offset: 0x0020DC34
+		// Token: 0x17000C35 RID: 3125
+		// (get) Token: 0x06006653 RID: 26195 RVA: 0x0022F0B8 File Offset: 0x0022D2B8
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000BF0 RID: 3056
-		// (get) Token: 0x0600607B RID: 24699 RVA: 0x0020FA70 File Offset: 0x0020DC70
+		// Token: 0x17000C36 RID: 3126
+		// (get) Token: 0x06006654 RID: 26196 RVA: 0x0022F0F4 File Offset: 0x0022D2F4
 		public int GridId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000BF1 RID: 3057
-		// (get) Token: 0x0600607C RID: 24700 RVA: 0x0020FAAC File Offset: 0x0020DCAC
+		// Token: 0x17000C37 RID: 3127
+		// (get) Token: 0x06006655 RID: 26197 RVA: 0x0022F130 File Offset: 0x0022D330
 		public int GridGroupId
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600607D RID: 24701 RVA: 0x0020FAE8 File Offset: 0x0020DCE8
+		// Token: 0x06006656 RID: 26198 RVA: 0x0022F16C File Offset: 0x0022D36C
 		public int GridInfo(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -105,8 +105,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000BF2 RID: 3058
-		// (get) Token: 0x0600607E RID: 24702 RVA: 0x0020FB28 File Offset: 0x0020DD28
+		// Token: 0x17000C38 RID: 3128
+		// (get) Token: 0x06006657 RID: 26199 RVA: 0x0022F1AC File Offset: 0x0022D3AC
 		public int GridInfoLength
 		{
 			get
@@ -120,20 +120,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600607F RID: 24703 RVA: 0x0020FB54 File Offset: 0x0020DD54
+		// Token: 0x06006658 RID: 26200 RVA: 0x0022F1D8 File Offset: 0x0022D3D8
 		public Span<int> GetGridInfoBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06006080 RID: 24704 RVA: 0x0020FB64 File Offset: 0x0020DD64
+		// Token: 0x06006659 RID: 26201 RVA: 0x0022F1E8 File Offset: 0x0022D3E8
 		public int[] GetGridInfoArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17000BF3 RID: 3059
-		// (get) Token: 0x06006081 RID: 24705 RVA: 0x0020FB7C File Offset: 0x0020DD7C
+		// Token: 0x17000C39 RID: 3129
+		// (get) Token: 0x0600665A RID: 26202 RVA: 0x0022F200 File Offset: 0x0022D400
 		public int AddPropertyId
 		{
 			get
@@ -147,8 +147,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000BF4 RID: 3060
-		// (get) Token: 0x06006082 RID: 24706 RVA: 0x0020FBBC File Offset: 0x0020DDBC
+		// Token: 0x17000C3A RID: 3130
+		// (get) Token: 0x0600665B RID: 26203 RVA: 0x0022F240 File Offset: 0x0022D440
 		public int RemovePropertyId
 		{
 			get
@@ -162,25 +162,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006083 RID: 24707 RVA: 0x0020FBFC File Offset: 0x0020DDFC
+		// Token: 0x0600665C RID: 26204 RVA: 0x0022F27D File Offset: 0x0022D47D
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用GridInfoIter()或GetGridInfoBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] GridInfo()
+		public int[] GridInfo()
 		{
-			DangoMonopolyGrid dangoMonopolyGrid = this;
-			return dangoMonopolyGrid.GetGridInfoArray() ?? Array.Empty<int>();
+			return this.GetGridInfoArray();
 		}
 
-		// Token: 0x06006084 RID: 24708 RVA: 0x0020FC20 File Offset: 0x0020DE20
+		// Token: 0x0600665D RID: 26205 RVA: 0x0022F285 File Offset: 0x0022D485
 		[NullableContext(1)]
-		public readonly IEnumerable<int> GridInfoIter()
+		public IEnumerable<int> GridInfoIter()
 		{
 			DangoMonopolyGrid.<GridInfoIter>d__24 <GridInfoIter>d__ = new DangoMonopolyGrid.<GridInfoIter>d__24(-2);
 			<GridInfoIter>d__.<>3__<>4__this = this;
 			return <GridInfoIter>d__;
 		}
 
-		// Token: 0x04004C06 RID: 19462
+		// Token: 0x040051E8 RID: 20968
 		private Table __p;
 	}
 }

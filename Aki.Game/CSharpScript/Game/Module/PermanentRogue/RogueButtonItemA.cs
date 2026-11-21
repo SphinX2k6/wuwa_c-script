@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005324 RID: 21284
+	// Token: 0x020042F4 RID: 17140
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueButtonItemA : UiPanelBase
 	{
-		// Token: 0x060366CE RID: 222926 RVA: 0x00CE1FC4 File Offset: 0x00CE01C4
+		// Token: 0x0602B5CA RID: 177610 RVA: 0x00C2F994 File Offset: 0x00C2DB94
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x060366CF RID: 222927 RVA: 0x00CE2070 File Offset: 0x00CE0270
+		// Token: 0x0602B5CB RID: 177611 RVA: 0x00C2FA40 File Offset: 0x00C2DC40
 		public void BindRedDot(ERedDotName redDotName, int? uid = null)
 		{
 			this.RedDotName = new ERedDotName?(redDotName);
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			RedDotController.Instance.BindRedDot(redDotName, item, null, uid.GetValueOrDefault());
 		}
 
-		// Token: 0x060366D0 RID: 222928 RVA: 0x00CE20A8 File Offset: 0x00CE02A8
+		// Token: 0x0602B5CC RID: 177612 RVA: 0x00C2FA78 File Offset: 0x00C2DC78
 		public void UnBindRedDot()
 		{
 			if (this.RedDotName == null)
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			RedDotController.Instance.UnBindGivenUi(this.RedDotName.Value, item, 0);
 		}
 
-		// Token: 0x060366D1 RID: 222929 RVA: 0x00CE20E4 File Offset: 0x00CE02E4
+		// Token: 0x0602B5CD RID: 177613 RVA: 0x00C2FAB4 File Offset: 0x00C2DCB4
 		public void SetNameById(string name)
 		{
 			TextConfig instance = TextConfig.Instance;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			text.SetText(newText, true);
 		}
 
-		// Token: 0x060366D2 RID: 222930 RVA: 0x00CE2117 File Offset: 0x00CE0317
+		// Token: 0x0602B5CE RID: 177614 RVA: 0x00C2FAE7 File Offset: 0x00C2DCE7
 		public void SetName(string name)
 		{
 			UUIText text = base.GetText(1);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			text.SetText(name, true);
 		}
 
-		// Token: 0x060366D3 RID: 222931 RVA: 0x00CE212C File Offset: 0x00CE032C
+		// Token: 0x0602B5CF RID: 177615 RVA: 0x00C2FAFC File Offset: 0x00C2DCFC
 		public void SetNum(string num)
 		{
 			UUIText text = base.GetText(2);
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			text.SetText(num, true);
 		}
 
-		// Token: 0x060366D4 RID: 222932 RVA: 0x00CE2141 File Offset: 0x00CE0341
+		// Token: 0x0602B5D0 RID: 177616 RVA: 0x00C2FB11 File Offset: 0x00C2DD11
 		public void SetLimitTime(string time)
 		{
 			UUIText text = base.GetText(4);
@@ -98,24 +98,24 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			text2.SetText(time, true);
 		}
 
-		// Token: 0x060366D5 RID: 222933 RVA: 0x00CE2169 File Offset: 0x00CE0369
+		// Token: 0x0602B5D1 RID: 177617 RVA: 0x00C2FB39 File Offset: 0x00C2DD39
 		public void SetOnClickCall(Action cb)
 		{
 			this.OnClickCall = cb;
 		}
 
-		// Token: 0x060366D6 RID: 222934 RVA: 0x00CE2172 File Offset: 0x00CE0372
+		// Token: 0x0602B5D2 RID: 177618 RVA: 0x00C2FB42 File Offset: 0x00C2DD42
 		private void OnClick()
 		{
 			this.OnClickCall();
 		}
 
-		// Token: 0x0401CC5A RID: 117850
+		// Token: 0x04017690 RID: 95888
 		private Action OnClickCall = delegate()
 		{
 		};
 
-		// Token: 0x0401CC5B RID: 117851
+		// Token: 0x04017691 RID: 95889
 		private ERedDotName? RedDotName;
 	}
 }

@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 {
-	// Token: 0x02006327 RID: 25383
+	// Token: 0x020052A5 RID: 21157
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballMonsterDetailView : UiViewBase
 	{
-		// Token: 0x0603FDCC RID: 261580 RVA: 0x00F735D8 File Offset: 0x00F717D8
+		// Token: 0x06034A8D RID: 215693 RVA: 0x00EBA534 File Offset: 0x00EB8734
 		public PinballMonsterDetailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603FDCD RID: 261581 RVA: 0x00F735E4 File Offset: 0x00F717E4
+		// Token: 0x06034A8E RID: 215694 RVA: 0x00EBA540 File Offset: 0x00EB8740
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 15;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FDCE RID: 261582 RVA: 0x00F73804 File Offset: 0x00F71A04
+		// Token: 0x06034A8F RID: 215695 RVA: 0x00EBA760 File Offset: 0x00EB8960
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballMonsterDetailView.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FDCF RID: 261583 RVA: 0x00F73848 File Offset: 0x00F71A48
+		// Token: 0x06034A90 RID: 215696 RVA: 0x00EBA7A4 File Offset: 0x00EB89A4
 		protected override void OnBeforeShow()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			uiViewSequence.PlayOrReplaySequenceByName("Switch01", false, null);
 		}
 
-		// Token: 0x0603FDD0 RID: 261584 RVA: 0x00F73874 File Offset: 0x00F71A74
+		// Token: 0x06034A91 RID: 215697 RVA: 0x00EBA7D0 File Offset: 0x00EB89D0
 		public void UpdateGridDataList()
 		{
 			HashSet<int> hashSet = PinballModel.Instance.CollectMonsterTypesByLevel(this.LevelId);
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			}
 		}
 
-		// Token: 0x0603FDD1 RID: 261585 RVA: 0x00F73AC4 File Offset: 0x00F71CC4
+		// Token: 0x06034A92 RID: 215698 RVA: 0x00EBAA20 File Offset: 0x00EB8C20
 		public void SetSelectedGridData(int index)
 		{
 			if (index < 0 || index >= this.GridDataList.Count)
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			this.SetSelectedSkillIndex(0);
 		}
 
-		// Token: 0x0603FDD2 RID: 261586 RVA: 0x00F73B5C File Offset: 0x00F71D5C
+		// Token: 0x06034A93 RID: 215699 RVA: 0x00EBAAB8 File Offset: 0x00EB8CB8
 		public void UpdateSkillDataList()
 		{
 			if (this.SelectedGridData == null || this.SelectedMonsterTypeConfig == null)
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			}
 		}
 
-		// Token: 0x0603FDD3 RID: 261587 RVA: 0x00F73C24 File Offset: 0x00F71E24
+		// Token: 0x06034A94 RID: 215700 RVA: 0x00EBAB80 File Offset: 0x00EB8D80
 		public void SetSelectedSkillIndex(int index)
 		{
 			if (index < 0 || index >= this.SkillTabItemDataList.Count)
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			this.SkillTabItemDataList[index].IsSelected = true;
 		}
 
-		// Token: 0x0603FDD4 RID: 261588 RVA: 0x00F73C7C File Offset: 0x00F71E7C
+		// Token: 0x06034A95 RID: 215701 RVA: 0x00EBABD8 File Offset: 0x00EB8DD8
 		public void RefreshGrids()
 		{
 			MultiTemplateScrollViewRefreshContext context = new MultiTemplateScrollViewRefreshContext(this.GridDataList);
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			gridScrollView.RefreshByData(context);
 		}
 
-		// Token: 0x0603FDD5 RID: 261589 RVA: 0x00F73CA8 File Offset: 0x00F71EA8
+		// Token: 0x06034A96 RID: 215702 RVA: 0x00EBAC04 File Offset: 0x00EB8E04
 		public void SelectGrid(int index)
 		{
 			int selectedGridIndex = this.SelectedGridIndex;
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			uiViewSequence.PlayOrReplaySequenceByName("Switch01", false, null);
 		}
 
-		// Token: 0x0603FDD6 RID: 261590 RVA: 0x00F73D30 File Offset: 0x00F71F30
+		// Token: 0x06034A97 RID: 215703 RVA: 0x00EBAC8C File Offset: 0x00EB8E8C
 		public void SelectSkill(int index)
 		{
 			if (index < 0 || index >= this.SkillConfigList.Count)
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			uiViewSequence.PlayOrReplaySequenceByName("Switch02", false, null);
 		}
 
-		// Token: 0x0603FDD7 RID: 261591 RVA: 0x00F73DC4 File Offset: 0x00F71FC4
+		// Token: 0x06034A98 RID: 215704 RVA: 0x00EBAD20 File Offset: 0x00EB8F20
 		public void RefreshMonsterInfo()
 		{
 			if (this.SelectedGridData == null || this.SelectedMonsterTypeConfig == null)
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			this.RefreshNormalMonsterInfo();
 		}
 
-		// Token: 0x0603FDD8 RID: 261592 RVA: 0x00F73F60 File Offset: 0x00F72160
+		// Token: 0x06034A99 RID: 215705 RVA: 0x00EBAEBC File Offset: 0x00EB90BC
 		public void RefreshSkillInfo()
 		{
 			if (this.SelectedGridData == null)
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			this.MediaPlayer.PlayVideo(pinballMonsterSkillDisplay.VideoName, pinballMonsterSkillDisplay.VideoPath, true);
 		}
 
-		// Token: 0x0603FDD9 RID: 261593 RVA: 0x00F73FC0 File Offset: 0x00F721C0
+		// Token: 0x06034A9A RID: 215706 RVA: 0x00EBAF1C File Offset: 0x00EB911C
 		public void RefreshNormalMonsterInfo()
 		{
 			if (this.SelectedGridData == null || this.SelectedMonsterTypeConfig == null)
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			base.SetTextureByPath(this.SelectedMonsterTypeConfig.Value.SpineBg, base.GetTexture(9), null, null);
 		}
 
-		// Token: 0x0603FDDA RID: 261594 RVA: 0x00F74074 File Offset: 0x00F72274
+		// Token: 0x06034A9B RID: 215707 RVA: 0x00EBAFD0 File Offset: 0x00EB91D0
 		private void OnMonsterGridStateChange(IPinballItemToggleCallback callbackParameter)
 		{
 			if (callbackParameter.State == EToggleState.ETT_Checked)
@@ -358,25 +358,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			}
 		}
 
-		// Token: 0x0603FDDB RID: 261595 RVA: 0x00F740A2 File Offset: 0x00F722A2
+		// Token: 0x06034A9C RID: 215708 RVA: 0x00EBAFFE File Offset: 0x00EB91FE
 		private void OnSkillTabItemSelected(int gridIndex)
 		{
 			this.SelectSkill(gridIndex);
 		}
 
-		// Token: 0x0603FDDC RID: 261596 RVA: 0x00F740AB File Offset: 0x00F722AB
+		// Token: 0x06034A9D RID: 215709 RVA: 0x00EBB007 File Offset: 0x00EB9207
 		private PinballMonsterSkillTabItem CreateSkillItem()
 		{
 			return new PinballMonsterSkillTabItem();
 		}
 
-		// Token: 0x0603FDDD RID: 261597 RVA: 0x00F740B2 File Offset: 0x00F722B2
+		// Token: 0x06034A9E RID: 215710 RVA: 0x00EBB00E File Offset: 0x00EB920E
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603FDDE RID: 261598 RVA: 0x00F740BB File Offset: 0x00F722BB
+		// Token: 0x06034A9F RID: 215711 RVA: 0x00EBB017 File Offset: 0x00EB9217
 		private void OnEventSequence(string sequenceName, string eventName)
 		{
 			if (sequenceName == "Switch02" && eventName == "Switch02" && this.SkillInfoDirty)
@@ -386,7 +386,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			}
 		}
 
-		// Token: 0x0603FDDF RID: 261599 RVA: 0x00F740EC File Offset: 0x00F722EC
+		// Token: 0x06034AA0 RID: 215712 RVA: 0x00EBB048 File Offset: 0x00EB9248
 		protected override void OnBeforeDestroy()
 		{
 			MediaPlayer mediaPlayer = this.MediaPlayer;
@@ -397,49 +397,49 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			this.MediaPlayer = null;
 		}
 
-		// Token: 0x0402150F RID: 136463
+		// Token: 0x0401BE3E RID: 114238
 		protected int LevelId;
 
-		// Token: 0x04021510 RID: 136464
+		// Token: 0x0401BE3F RID: 114239
 		protected int SelectedGridIndex;
 
-		// Token: 0x04021511 RID: 136465
+		// Token: 0x0401BE40 RID: 114240
 		[Nullable(2)]
 		protected PinballMonsterMultiTemplateGridData SelectedGridData;
 
-		// Token: 0x04021512 RID: 136466
+		// Token: 0x0401BE41 RID: 114241
 		protected PinballMonsterType? SelectedMonsterTypeConfig;
 
-		// Token: 0x04021513 RID: 136467
+		// Token: 0x0401BE42 RID: 114242
 		protected int SelectedSkillIndex;
 
-		// Token: 0x04021514 RID: 136468
+		// Token: 0x0401BE43 RID: 114243
 		protected List<IMultiTemplateGridData> GridDataList;
 
-		// Token: 0x04021515 RID: 136469
+		// Token: 0x0401BE44 RID: 114244
 		protected Dictionary<EPinballMonsterRiskType, PinballMonsterRiskTypeTitleGridData> TitleDataMap;
 
-		// Token: 0x04021516 RID: 136470
+		// Token: 0x0401BE45 RID: 114245
 		protected Dictionary<EPinballMonsterRiskType, List<PinballMonsterMultiTemplateGridData>> MonsterDataMap;
 
-		// Token: 0x04021517 RID: 136471
+		// Token: 0x0401BE46 RID: 114246
 		protected List<IPinballMonsterSkillTabItemData> SkillTabItemDataList;
 
-		// Token: 0x04021518 RID: 136472
+		// Token: 0x0401BE47 RID: 114247
 		protected List<PinballMonsterSkillDisplay> SkillConfigList;
 
-		// Token: 0x04021519 RID: 136473
+		// Token: 0x0401BE48 RID: 114248
 		private string[] SkillTabNameList;
 
-		// Token: 0x0402151A RID: 136474
+		// Token: 0x0401BE49 RID: 114249
 		[Nullable(2)]
 		private MediaPlayer MediaPlayer;
 
-		// Token: 0x0402151B RID: 136475
+		// Token: 0x0401BE4A RID: 114250
 		[Nullable(2)]
 		protected MultiTemplateScrollView GridScrollView;
 
-		// Token: 0x0402151C RID: 136476
+		// Token: 0x0401BE4B RID: 114251
 		[Nullable(new byte[]
 		{
 			2,
@@ -448,50 +448,50 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 		})]
 		protected GenericLayout<PinballMonsterSkillTabItem, IPinballMonsterSkillTabItemData> SkillLayout;
 
-		// Token: 0x0402151D RID: 136477
+		// Token: 0x0401BE4C RID: 114252
 		[Nullable(2)]
 		protected PinballRoleClassItem BdItem;
 
-		// Token: 0x0402151E RID: 136478
+		// Token: 0x0401BE4D RID: 114253
 		[Nullable(2)]
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x0402151F RID: 136479
+		// Token: 0x0401BE4E RID: 114254
 		private bool SkillInfoDirty;
 
-		// Token: 0x0200C525 RID: 50469
+		// Token: 0x0200AF0C RID: 44812
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403B803 RID: 243715
+			// Token: 0x04036165 RID: 221541
 			CaptionItem,
-			// Token: 0x0403B804 RID: 243716
+			// Token: 0x04036166 RID: 221542
 			MultiTemplateScrollView,
-			// Token: 0x0403B805 RID: 243717
+			// Token: 0x04036167 RID: 221543
 			TitleTemplateItem,
-			// Token: 0x0403B806 RID: 243718
+			// Token: 0x04036168 RID: 221544
 			MonsterGridTemplateItem,
-			// Token: 0x0403B807 RID: 243719
+			// Token: 0x04036169 RID: 221545
 			NameText,
-			// Token: 0x0403B808 RID: 243720
+			// Token: 0x0403616A RID: 221546
 			BdItem,
-			// Token: 0x0403B809 RID: 243721
+			// Token: 0x0403616B RID: 221547
 			SkillLayout,
-			// Token: 0x0403B80A RID: 243722
+			// Token: 0x0403616C RID: 221548
 			SkillItem,
-			// Token: 0x0403B80B RID: 243723
+			// Token: 0x0403616D RID: 221549
 			MonsterSpineRootItem,
-			// Token: 0x0403B80C RID: 243724
+			// Token: 0x0403616E RID: 221550
 			MonsterBgTexture,
-			// Token: 0x0403B80D RID: 243725
+			// Token: 0x0403616F RID: 221551
 			MonsterSpine,
-			// Token: 0x0403B80E RID: 243726
+			// Token: 0x04036170 RID: 221552
 			CGTexture,
-			// Token: 0x0403B80F RID: 243727
+			// Token: 0x04036171 RID: 221553
 			InfoScrollView,
-			// Token: 0x0403B810 RID: 243728
+			// Token: 0x04036172 RID: 221554
 			DescText,
-			// Token: 0x0403B811 RID: 243729
+			// Token: 0x04036173 RID: 221555
 			TypeIconSprite
 		}
 	}

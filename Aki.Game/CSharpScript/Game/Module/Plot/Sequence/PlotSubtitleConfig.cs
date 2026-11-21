@@ -4,10 +4,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.Sequence
 {
-	// Token: 0x02005014 RID: 20500
+	// Token: 0x02003FDE RID: 16350
 	public class PlotSubtitleConfig
 	{
-		// Token: 0x0603477D RID: 214909 RVA: 0x00C5BBD2 File Offset: 0x00C59DD2
+		// Token: 0x06029620 RID: 169504 RVA: 0x00BA7112 File Offset: 0x00BA5312
 		[NullableContext(1)]
 		public void CopyFrom(PlotSubtitleConfig other)
 		{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			this.AutoPlayDelay = other.AutoPlayDelay;
 		}
 
-		// Token: 0x0603477E RID: 214910 RVA: 0x00C5BC10 File Offset: 0x00C59E10
+		// Token: 0x06029621 RID: 169505 RVA: 0x00BA7150 File Offset: 0x00BA5350
 		public void Clear()
 		{
 			this.Subtitles = null;
@@ -28,20 +28,20 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			this.AutoPlayDelay = 0f;
 		}
 
-		// Token: 0x0401BF2B RID: 114475
+		// Token: 0x04016914 RID: 92436
 		[Nullable(2)]
 		public ITalkItem Subtitles;
 
-		// Token: 0x0401BF2C RID: 114476
+		// Token: 0x04016915 RID: 92437
 		public float GuardTime;
 
-		// Token: 0x0401BF2D RID: 114477
+		// Token: 0x04016916 RID: 92438
 		public float AudioDelay;
 
-		// Token: 0x0401BF2E RID: 114478
+		// Token: 0x04016917 RID: 92439
 		public float AudioTransitionDuration;
 
-		// Token: 0x0401BF2F RID: 114479
+		// Token: 0x04016918 RID: 92440
 		public float AutoPlayDelay;
 	}
 }

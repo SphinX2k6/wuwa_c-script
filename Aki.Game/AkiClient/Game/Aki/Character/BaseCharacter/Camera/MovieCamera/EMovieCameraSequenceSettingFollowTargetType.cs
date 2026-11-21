@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera.MovieCamera
 {
-	// Token: 0x020043D8 RID: 17368
+	// Token: 0x020033EE RID: 13294
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/MovieCamera/EMovieCameraSequenceSettingFollowTargetType.EMovieCameraSequenceSettingFollowTargetType")]
 	public enum EMovieCameraSequenceSettingFollowTargetType : byte
 	{
-		// Token: 0x04017E01 RID: 97793
+		// Token: 0x0401293F RID: 76095
 		俯仰跟随,
-		// Token: 0x04017E02 RID: 97794
+		// Token: 0x04012940 RID: 76096
 		偏航跟随,
-		// Token: 0x04017E03 RID: 97795
+		// Token: 0x04012941 RID: 76097
 		俯仰_偏航跟随,
-		// Token: 0x04017E04 RID: 97796
+		// Token: 0x04012942 RID: 76098
 		EMovieCameraSequenceSettingFollowTargetType_MAX
 	}
 }

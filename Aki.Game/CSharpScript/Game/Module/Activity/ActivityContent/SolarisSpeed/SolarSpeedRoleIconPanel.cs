@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060D4 RID: 24788
+	// Token: 0x02005052 RID: 20562
 	public class SolarSpeedRoleIconPanel : UiPanelBase
 	{
-		// Token: 0x0603EA9E RID: 256670 RVA: 0x00F22827 File Offset: 0x00F20A27
+		// Token: 0x06033762 RID: 210786 RVA: 0x00E695EF File Offset: 0x00E677EF
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,17 +18,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			};
 		}
 
-		// Token: 0x0603EA9F RID: 256671 RVA: 0x00F2284C File Offset: 0x00F20A4C
+		// Token: 0x06033763 RID: 210787 RVA: 0x00E69614 File Offset: 0x00E67814
 		[NullableContext(1)]
 		public void Refresh(ISolarSpeedRoleIconPanelData data)
 		{
 			base.SetTextureByPath(data.IconPath, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x0200C327 RID: 49959
+		// Token: 0x0200AD12 RID: 44306
 		private enum ERoleIconComponent
 		{
-			// Token: 0x0403AECE RID: 241358
+			// Token: 0x04035836 RID: 219190
 			IconTexture
 		}
 	}

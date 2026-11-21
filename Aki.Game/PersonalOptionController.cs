@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Core.Common;
@@ -12,19 +11,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020023C0 RID: 9152
+// Token: 0x020018A5 RID: 6309
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PersonalOptionController : UiControllerBase
 {
-	// Token: 0x060124C5 RID: 74949 RVA: 0x004816AC File Offset: 0x0047F8AC
+	// Token: 0x0600F977 RID: 63863 RVA: 0x0048EB90 File Offset: 0x0048CD90
 	public PersonalOptionController()
 	{
 		this.InitOptionMap();
 	}
 
-	// Token: 0x060124C6 RID: 74950 RVA: 0x004816BC File Offset: 0x0047F8BC
+	// Token: 0x0600F978 RID: 63864 RVA: 0x0048EBA0 File Offset: 0x0048CDA0
 	protected void InitOptionMap()
 	{
 		this.OptionMap = new Dictionary<int, Action>();
@@ -158,7 +157,7 @@ public class PersonalOptionController : UiControllerBase
 		optionMap16.TryAdd(key16, value16);
 	}
 
-	// Token: 0x060124C7 RID: 74951 RVA: 0x0048195C File Offset: 0x0047FB5C
+	// Token: 0x0600F979 RID: 63865 RVA: 0x0048EE40 File Offset: 0x0048D040
 	public Action GetOptionFunc(EPersonalOptionDefine optionId)
 	{
 		if (this.OptionMap.Count == 0)
@@ -170,7 +169,7 @@ public class PersonalOptionController : UiControllerBase
 		return result;
 	}
 
-	// Token: 0x060124C8 RID: 74952 RVA: 0x0048198C File Offset: 0x0047FB8C
+	// Token: 0x0600F97A RID: 63866 RVA: 0x0048EE70 File Offset: 0x0048D070
 	private static void OnClickShieldBtn()
 	{
 		IPlayerData playerData;
@@ -198,7 +197,7 @@ public class PersonalOptionController : UiControllerBase
 		ChatController.Instance.ChatMutePlayerRequest(playerData2.PlayerId, true);
 	}
 
-	// Token: 0x060124C9 RID: 74953 RVA: 0x00481A24 File Offset: 0x0047FC24
+	// Token: 0x0600F97B RID: 63867 RVA: 0x0048EF08 File Offset: 0x0048D108
 	private static void OnClickReportBtn()
 	{
 		IPlayerData playerData;
@@ -216,7 +215,7 @@ public class PersonalOptionController : UiControllerBase
 		ReportController.Instance.OpenReportView(friendData, EReportSourceType.FriendSystem);
 	}
 
-	// Token: 0x060124CA RID: 74954 RVA: 0x00481A6C File Offset: 0x0047FC6C
+	// Token: 0x0600F97C RID: 63868 RVA: 0x0048EF50 File Offset: 0x0048D150
 	private static void OnClickDeleteBtn()
 	{
 		PersonalOptionController.<>c__DisplayClass6_0 CS$<>8__locals1 = new PersonalOptionController.<>c__DisplayClass6_0();
@@ -251,7 +250,7 @@ public class PersonalOptionController : UiControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060124CB RID: 74955 RVA: 0x00481B30 File Offset: 0x0047FD30
+	// Token: 0x0600F97D RID: 63869 RVA: 0x0048F014 File Offset: 0x0048D214
 	private static void OnClickBlockBtn()
 	{
 		FriendData player = FriendModel.Instance.CachePlayerData;
@@ -267,58 +266,58 @@ public class PersonalOptionController : UiControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060124CC RID: 74956 RVA: 0x00481B9C File Offset: 0x0047FD9C
+	// Token: 0x0600F97E RID: 63870 RVA: 0x0048F080 File Offset: 0x0048D280
 	private static void CopyUidClick()
 	{
 		GenericPromptController.Instance.ShowPromptByCode("CopiedMyUid", Array.Empty<object>());
 		ULGUIBPLibrary.ClipBoardCopy(PlayerInfoModel.Instance.GetId().ToString());
 	}
 
-	// Token: 0x060124CD RID: 74957 RVA: 0x00481BDA File Offset: 0x0047FDDA
+	// Token: 0x0600F97F RID: 63871 RVA: 0x0048F0BE File Offset: 0x0048D2BE
 	private static void ChangeHeadIcon()
 	{
 		UiManager.Instance.OpenView(EUiViewName.PersonalEditView, EPersonalEditDefine.HeadPhoto, null);
 	}
 
-	// Token: 0x060124CE RID: 74958 RVA: 0x00481BF2 File Offset: 0x0047FDF2
+	// Token: 0x0600F980 RID: 63872 RVA: 0x0048F0D6 File Offset: 0x0048D2D6
 	private static void ChangeCard()
 	{
 		UiManager.Instance.OpenView(EUiViewName.PersonalEditView, EPersonalEditDefine.Card, null);
 	}
 
-	// Token: 0x060124CF RID: 74959 RVA: 0x00481C0A File Offset: 0x0047FE0A
+	// Token: 0x0600F981 RID: 63873 RVA: 0x0048F0EE File Offset: 0x0048D2EE
 	private static void ChangePlayerTitle()
 	{
 		UiManager.Instance.OpenView(EUiViewName.PersonalEditView, EPersonalEditDefine.PlayerTitle, null);
 	}
 
-	// Token: 0x060124D0 RID: 74960 RVA: 0x00481C22 File Offset: 0x0047FE22
+	// Token: 0x0600F982 RID: 63874 RVA: 0x0048F106 File Offset: 0x0048D306
 	private static void OpenPersonalRootView()
 	{
 		UiManager.Instance.OpenView(EUiViewName.PersonalRootView, PersonalModel.Instance.GetPersonalInfoData(), null);
 		UiManager.Instance.CloseView(EUiViewName.PersonalOptionView, null);
 	}
 
-	// Token: 0x060124D1 RID: 74961 RVA: 0x00481C4E File Offset: 0x0047FE4E
+	// Token: 0x0600F983 RID: 63875 RVA: 0x0048F132 File Offset: 0x0048D332
 	private static void OpenFeedBackMainView()
 	{
 		UiManager.Instance.OpenView(EUiViewName.FeedbackRewardMainView, null, null);
 		UiManager.Instance.CloseView(EUiViewName.PersonalOptionView, null);
 	}
 
-	// Token: 0x060124D2 RID: 74962 RVA: 0x00481C71 File Offset: 0x0047FE71
+	// Token: 0x0600F984 RID: 63876 RVA: 0x0048F155 File Offset: 0x0048D355
 	private static void ChangeName()
 	{
 		CommonInputViewController.Instance.OpenSetRoleNameInputView();
 	}
 
-	// Token: 0x060124D3 RID: 74963 RVA: 0x00481C7D File Offset: 0x0047FE7D
+	// Token: 0x0600F985 RID: 63877 RVA: 0x0048F161 File Offset: 0x0048D361
 	private static void ChangeSign()
 	{
 		CommonInputViewController.Instance.OpenPersonalSignInputView();
 	}
 
-	// Token: 0x060124D4 RID: 74964 RVA: 0x00481C89 File Offset: 0x0047FE89
+	// Token: 0x0600F986 RID: 63878 RVA: 0x0048F16D File Offset: 0x0048D36D
 	private static void SetBirth()
 	{
 		if (!FunctionModel.Instance.IsOpen(10084))
@@ -329,13 +328,13 @@ public class PersonalOptionController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.PersonalBirthView, null, null);
 	}
 
-	// Token: 0x060124D5 RID: 74965 RVA: 0x00481CC2 File Offset: 0x0047FEC2
+	// Token: 0x0600F987 RID: 63879 RVA: 0x0048F1A6 File Offset: 0x0048D3A6
 	private static void LookCard()
 	{
 		PersonalOptionController.CheckOpenLookCardView().Forget();
 	}
 
-	// Token: 0x060124D6 RID: 74966 RVA: 0x00481CD0 File Offset: 0x0047FED0
+	// Token: 0x0600F988 RID: 63880 RVA: 0x0048F1B4 File Offset: 0x0048D3B4
 	private static UniTask CheckOpenLookCardView()
 	{
 		PersonalOptionController.<CheckOpenLookCardView>d__18 <CheckOpenLookCardView>d__;
@@ -345,13 +344,13 @@ public class PersonalOptionController : UiControllerBase
 		return <CheckOpenLookCardView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060124D7 RID: 74967 RVA: 0x00481D0B File Offset: 0x0047FF0B
+	// Token: 0x0600F989 RID: 63881 RVA: 0x0048F1EF File Offset: 0x0048D3EF
 	private static void ChangeRemark()
 	{
 		CommonInputViewController.Instance.OpenSetPlayerRemarkNameInputView();
 	}
 
-	// Token: 0x060124D8 RID: 74968 RVA: 0x00481D18 File Offset: 0x0047FF18
+	// Token: 0x0600F98A RID: 63882 RVA: 0x0048F1FC File Offset: 0x0048D3FC
 	public PersonalInfoData GetPersonalData()
 	{
 		PersonalInfoData personalInfoData = new PersonalInfoData();
@@ -387,7 +386,7 @@ public class PersonalOptionController : UiControllerBase
 				list.Add(item);
 			}
 			personalInfoData.RoleShowList = list;
-			personalInfoData.CardShowList = playerDetails.CardShowList.ToList<int>();
+			personalInfoData.CardShowList = new List<int>(playerDetails.CardShowList);
 			personalInfoData.CurCardId = new int?(playerDetails.CurCard);
 			personalInfoData.Birthday = playerDetails.Birthday;
 			personalInfoData.IsBirthdayDisplay = playerDetails.DisplayBirthday;
@@ -410,8 +409,8 @@ public class PersonalOptionController : UiControllerBase
 		return personalInfoData;
 	}
 
-	// Token: 0x170017C8 RID: 6088
-	// (get) Token: 0x060124D9 RID: 74969 RVA: 0x00481FF8 File Offset: 0x004801F8
+	// Token: 0x17001802 RID: 6146
+	// (get) Token: 0x0600F98B RID: 63883 RVA: 0x0048F4DC File Offset: 0x0048D6DC
 	public static PersonalOptionController Instance
 	{
 		get
@@ -420,7 +419,7 @@ public class PersonalOptionController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060124DA RID: 74970 RVA: 0x00481FFF File Offset: 0x004801FF
+	// Token: 0x0600F98C RID: 63884 RVA: 0x0048F4E3 File Offset: 0x0048D6E3
 	public static PersonalOptionController GetOrCreateInstance()
 	{
 		if (PersonalOptionController._Instance == null)
@@ -430,7 +429,7 @@ public class PersonalOptionController : UiControllerBase
 		return PersonalOptionController._Instance;
 	}
 
-	// Token: 0x060124DB RID: 74971 RVA: 0x00482013 File Offset: 0x00480213
+	// Token: 0x0600F98D RID: 63885 RVA: 0x0048F4F7 File Offset: 0x0048D6F7
 	public static bool CreateInstance()
 	{
 		if (PersonalOptionController._Instance != null)
@@ -441,24 +440,24 @@ public class PersonalOptionController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060124DC RID: 74972 RVA: 0x00482029 File Offset: 0x00480229
+	// Token: 0x0600F98E RID: 63886 RVA: 0x0048F50D File Offset: 0x0048D70D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060124DD RID: 74973 RVA: 0x0048202B File Offset: 0x0048022B
+	// Token: 0x0600F98F RID: 63887 RVA: 0x0048F50F File Offset: 0x0048D70F
 	public static void ResetStaticDefaultValue()
 	{
 		PersonalOptionController._Instance = null;
 	}
 
-	// Token: 0x060124DE RID: 74974 RVA: 0x00482033 File Offset: 0x00480233
+	// Token: 0x0600F990 RID: 63888 RVA: 0x0048F517 File Offset: 0x0048D717
 	static PersonalOptionController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PersonalOptionController.CreateStaticDefaultValue), new Action(PersonalOptionController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008A43 RID: 35395
+	// Token: 0x04008B8A RID: 35722
 	[Nullable(new byte[]
 	{
 		2,
@@ -466,71 +465,71 @@ public class PersonalOptionController : UiControllerBase
 	})]
 	private Dictionary<int, Action> OptionMap;
 
-	// Token: 0x04008A44 RID: 35396
+	// Token: 0x04008B8B RID: 35723
 	[Nullable(2)]
 	private static PersonalOptionController _Instance;
 
-	// Token: 0x02008966 RID: 35174
+	// Token: 0x02007AEF RID: 31471
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402CA70 RID: 182896
+		// Token: 0x04027D8B RID: 163211
 		[Nullable(0)]
 		public static Action <0>__OnClickShieldBtn;
 
-		// Token: 0x0402CA71 RID: 182897
+		// Token: 0x04027D8C RID: 163212
 		[Nullable(0)]
 		public static Action <1>__OnClickBlockBtn;
 
-		// Token: 0x0402CA72 RID: 182898
+		// Token: 0x04027D8D RID: 163213
 		[Nullable(0)]
 		public static Action <2>__OnClickDeleteBtn;
 
-		// Token: 0x0402CA73 RID: 182899
+		// Token: 0x04027D8E RID: 163214
 		[Nullable(0)]
 		public static Action <3>__OnClickReportBtn;
 
-		// Token: 0x0402CA74 RID: 182900
+		// Token: 0x04027D8F RID: 163215
 		[Nullable(0)]
 		public static Action <4>__CopyUidClick;
 
-		// Token: 0x0402CA75 RID: 182901
+		// Token: 0x04027D90 RID: 163216
 		[Nullable(0)]
 		public static Action <5>__ChangeHeadIcon;
 
-		// Token: 0x0402CA76 RID: 182902
+		// Token: 0x04027D91 RID: 163217
 		[Nullable(0)]
 		public static Action <6>__ChangeCard;
 
-		// Token: 0x0402CA77 RID: 182903
+		// Token: 0x04027D92 RID: 163218
 		[Nullable(0)]
 		public static Action <7>__ChangeName;
 
-		// Token: 0x0402CA78 RID: 182904
+		// Token: 0x04027D93 RID: 163219
 		[Nullable(0)]
 		public static Action <8>__ChangeSign;
 
-		// Token: 0x0402CA79 RID: 182905
+		// Token: 0x04027D94 RID: 163220
 		[Nullable(0)]
 		public static Action <9>__SetBirth;
 
-		// Token: 0x0402CA7A RID: 182906
+		// Token: 0x04027D95 RID: 163221
 		[Nullable(0)]
 		public static Action <10>__LookCard;
 
-		// Token: 0x0402CA7B RID: 182907
+		// Token: 0x04027D96 RID: 163222
 		[Nullable(0)]
 		public static Action <11>__ChangeRemark;
 
-		// Token: 0x0402CA7C RID: 182908
+		// Token: 0x04027D97 RID: 163223
 		[Nullable(0)]
 		public static Action <12>__ChangePlayerTitle;
 
-		// Token: 0x0402CA7D RID: 182909
+		// Token: 0x04027D98 RID: 163224
 		[Nullable(0)]
 		public static Action <13>__OpenPersonalRootView;
 
-		// Token: 0x0402CA7E RID: 182910
+		// Token: 0x04027D99 RID: 163225
 		[Nullable(0)]
 		public static Action <14>__OpenFeedBackMainView;
 	}

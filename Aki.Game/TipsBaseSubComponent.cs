@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020018ED RID: 6381
+// Token: 0x02000DA6 RID: 3494
 [NullableContext(1)]
 [Nullable(0)]
 public class TipsBaseSubComponent : UiPanelBase
 {
-	// Token: 0x0600BB01 RID: 47873 RVA: 0x002A5809 File Offset: 0x002A3A09
+	// Token: 0x06008EEB RID: 36587 RVA: 0x002AFF79 File Offset: 0x002AE179
 	public TipsBaseSubComponent(UUIItem rootUiItem)
 	{
 	}
 
-	// Token: 0x0600BB02 RID: 47874 RVA: 0x002A581C File Offset: 0x002A3A1C
+	// Token: 0x06008EEC RID: 36588 RVA: 0x002AFF8C File Offset: 0x002AE18C
 	protected override void OnBeforeShowImplement()
 	{
 		foreach (Action action in this.OperationMap.Values)
@@ -24,18 +24,18 @@ public class TipsBaseSubComponent : UiPanelBase
 		this.OperationMap.Clear();
 	}
 
-	// Token: 0x0600BB03 RID: 47875 RVA: 0x002A587C File Offset: 0x002A3A7C
+	// Token: 0x06008EED RID: 36589 RVA: 0x002AFFEC File Offset: 0x002AE1EC
 	protected override void OnBeforeDestroy()
 	{
 		this.OperationMap.Clear();
 	}
 
-	// Token: 0x0600BB04 RID: 47876 RVA: 0x002A5889 File Offset: 0x002A3A89
+	// Token: 0x06008EEE RID: 36590 RVA: 0x002AFFF9 File Offset: 0x002AE1F9
 	public virtual void Refresh(ItemTipsData data)
 	{
 	}
 
-	// Token: 0x0600BB05 RID: 47877 RVA: 0x002A588C File Offset: 0x002A3A8C
+	// Token: 0x06008EEF RID: 36591 RVA: 0x002AFFFC File Offset: 0x002AE1FC
 	public void SetVisible(bool isShow)
 	{
 		Action action = delegate()
@@ -50,16 +50,16 @@ public class TipsBaseSubComponent : UiPanelBase
 		action();
 	}
 
-	// Token: 0x0600BB06 RID: 47878 RVA: 0x002A58D8 File Offset: 0x002A3AD8
+	// Token: 0x06008EF0 RID: 36592 RVA: 0x002B0048 File Offset: 0x002AE248
 	public virtual void SetLockButtonShow(bool isShow)
 	{
 	}
 
-	// Token: 0x0600BB07 RID: 47879 RVA: 0x002A58DA File Offset: 0x002A3ADA
+	// Token: 0x06008EF1 RID: 36593 RVA: 0x002B004A File Offset: 0x002AE24A
 	public virtual void SetPanelNumVisible(bool isShow)
 	{
 	}
 
-	// Token: 0x040054F2 RID: 21746
+	// Token: 0x0400559D RID: 21917
 	protected readonly Dictionary<string, Action> OperationMap = new Dictionary<string, Action>();
 }

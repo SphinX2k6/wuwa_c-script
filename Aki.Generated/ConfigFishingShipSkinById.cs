@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002EC RID: 748
+	// Token: 0x02000301 RID: 769
 	public class ConfigFishingShipSkinById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600118D RID: 4493 RVA: 0x000BCAD3 File Offset: 0x000BACD3
+		// Token: 0x0600120B RID: 4619 RVA: 0x000C2FDF File Offset: 0x000C11DF
 		static ConfigFishingShipSkinById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFishingShipSkinById.CreateStaticDefaultValue), new Action(ConfigFishingShipSkinById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600118E RID: 4494 RVA: 0x000BCAF4 File Offset: 0x000BACF4
+		// Token: 0x0600120C RID: 4620 RVA: 0x000C3000 File Offset: 0x000C1200
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFishingShipSkinById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600118F RID: 4495 RVA: 0x000BCB73 File Offset: 0x000BAD73
+		// Token: 0x0600120D RID: 4621 RVA: 0x000C307F File Offset: 0x000C127F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFishingShipSkinById.LogPair = null;
 			ConfigFishingShipSkinById.HandleId = 0;
 		}
 
-		// Token: 0x06001190 RID: 4496 RVA: 0x000BCB81 File Offset: 0x000BAD81
+		// Token: 0x0600120E RID: 4622 RVA: 0x000C308D File Offset: 0x000C128D
 		public static void Init()
 		{
 			ConfigFishingShipSkinById.HandleId = ConfigCommon.InitDataStatement(ConfigFishingShipSkinById.HandleId, "db_fishing.db", "select BinData from `FishingShipSkin` where Id=?");
 		}
 
-		// Token: 0x06001191 RID: 4497 RVA: 0x000BCB9C File Offset: 0x000BAD9C
+		// Token: 0x0600120F RID: 4623 RVA: 0x000C30A8 File Offset: 0x000C12A8
 		public static FishingShipSkin? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFishingShipSkinById.HandleId, ConfigFishingShipSkinById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FishingShipSkin?(rootAsFishingShipSkin);
 		}
 
-		// Token: 0x04001458 RID: 5208
+		// Token: 0x040014EB RID: 5355
 		private const string DB = "db_fishing.db";
 
-		// Token: 0x04001459 RID: 5209
+		// Token: 0x040014EC RID: 5356
 		private const string FILE = "b.捕鱼船坞.xlsx";
 
-		// Token: 0x0400145A RID: 5210
+		// Token: 0x040014ED RID: 5357
 		private const string TABLE = "FishingShipSkin";
 
-		// Token: 0x0400145B RID: 5211
+		// Token: 0x040014EE RID: 5358
 		private const string COMMAND = "select BinData from `FishingShipSkin` where Id=?";
 
-		// Token: 0x0400145C RID: 5212
+		// Token: 0x040014EF RID: 5359
 		private const string KEY_PREFIX = "FishingShipSkinById";
 
-		// Token: 0x0400145D RID: 5213
+		// Token: 0x040014F0 RID: 5360
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400145E RID: 5214
+		// Token: 0x040014F1 RID: 5361
 		private static int HandleId;
 	}
 }

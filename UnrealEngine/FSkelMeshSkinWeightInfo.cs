@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200110F RID: 4367
+	// Token: 0x02000283 RID: 643
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.SkelMeshSkinWeightInfo")]
 	[UnrealStructLayout(60, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 60)]
 	public class FSkelMeshSkinWeightInfo : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0600FD63 RID: 64867 RVA: 0x00176350 File Offset: 0x00174550
+		// Token: 0x060044B2 RID: 17586 RVA: 0x00061725 File Offset: 0x0005F925
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSkelMeshSkinWeightInfo._ScriptStructPtr != 0) ? FSkelMeshSkinWeightInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.SkelMeshSkinWeightInfo", ref FSkelMeshSkinWeightInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x17003DD2 RID: 15826
-		// (get) Token: 0x0600FD64 RID: 64868 RVA: 0x00176374 File Offset: 0x00174574
-		// (set) Token: 0x0600FD65 RID: 64869 RVA: 0x001763B9 File Offset: 0x001745B9
+		// Token: 0x17000CCE RID: 3278
+		// (get) Token: 0x060044B3 RID: 17587 RVA: 0x0006174C File Offset: 0x0005F94C
+		// (set) Token: 0x060044B4 RID: 17588 RVA: 0x00061791 File Offset: 0x0005F991
 		public TFixedArray<int> Bones
 		{
 			get
@@ -39,9 +39,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DD3 RID: 15827
-		// (get) Token: 0x0600FD66 RID: 64870 RVA: 0x001763C8 File Offset: 0x001745C8
-		// (set) Token: 0x0600FD67 RID: 64871 RVA: 0x0017640D File Offset: 0x0017460D
+		// Token: 0x17000CCF RID: 3279
+		// (get) Token: 0x060044B5 RID: 17589 RVA: 0x000617A0 File Offset: 0x0005F9A0
+		// (set) Token: 0x060044B6 RID: 17590 RVA: 0x000617E5 File Offset: 0x0005F9E5
 		public TFixedArray<byte> Weights
 		{
 			get
@@ -60,64 +60,57 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600FD68 RID: 64872 RVA: 0x0017641B File Offset: 0x0017461B
+		// Token: 0x060044B7 RID: 17591 RVA: 0x000617F3 File Offset: 0x0005F9F3
 		public FSkelMeshSkinWeightInfo()
 		{
 		}
 
-		// Token: 0x0600FD69 RID: 64873 RVA: 0x00176423 File Offset: 0x00174623
-		public FSkelMeshSkinWeightInfo(TFixedArray<int> Bones, TFixedArray<byte> Weights)
-		{
-			this.Bones = Bones;
-			this.Weights = Weights;
-		}
-
-		// Token: 0x0600FD6A RID: 64874 RVA: 0x00176439 File Offset: 0x00174639
+		// Token: 0x060044B8 RID: 17592 RVA: 0x000617FB File Offset: 0x0005F9FB
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSkelMeshSkinWeightInfo.StaticStruct();
 		}
 
-		// Token: 0x0600FD6B RID: 64875 RVA: 0x00176445 File Offset: 0x00174645
+		// Token: 0x060044B9 RID: 17593 RVA: 0x00061807 File Offset: 0x0005FA07
 		[NullableContext(2)]
 		public FSkelMeshSkinWeightInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600FD6C RID: 64876 RVA: 0x0017644F File Offset: 0x0017464F
+		// Token: 0x060044BA RID: 17594 RVA: 0x00061811 File Offset: 0x0005FA11
 		public FSkelMeshSkinWeightInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600FD6D RID: 64877 RVA: 0x0017645A File Offset: 0x0017465A
+		// Token: 0x060044BB RID: 17595 RVA: 0x0006181C File Offset: 0x0005FA1C
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSkelMeshSkinWeightInfo(Pointer, false, true);
 		}
 
-		// Token: 0x0600FD6E RID: 64878 RVA: 0x00176464 File Offset: 0x00174664
+		// Token: 0x060044BC RID: 17596 RVA: 0x00061826 File Offset: 0x0005FA26
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSkelMeshSkinWeightInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040088A0 RID: 34976
+		// Token: 0x04001AE1 RID: 6881
 		public const string __ObjectPath = "/Script/Engine.SkelMeshSkinWeightInfo";
 
-		// Token: 0x040088A1 RID: 34977
+		// Token: 0x04001AE2 RID: 6882
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040088A2 RID: 34978
+		// Token: 0x04001AE3 RID: 6883
 		internal static int __PropertyOffset_Bones;
 
-		// Token: 0x040088A3 RID: 34979
+		// Token: 0x04001AE4 RID: 6884
 		[Nullable(2)]
 		private TFixedArray<int> _Bones;
 
-		// Token: 0x040088A4 RID: 34980
+		// Token: 0x04001AE5 RID: 6885
 		internal static int __PropertyOffset_Weights;
 
-		// Token: 0x040088A5 RID: 34981
+		// Token: 0x04001AE6 RID: 6886
 		[Nullable(2)]
 		private TFixedArray<byte> _Weights;
 	}

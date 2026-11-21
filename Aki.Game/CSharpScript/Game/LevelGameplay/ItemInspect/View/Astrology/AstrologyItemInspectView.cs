@@ -16,17 +16,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 {
-	// Token: 0x02006DEB RID: 28139
+	// Token: 0x02005F6A RID: 24426
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AstrologyItemInspectView : ItemInspectViewBase
 	{
-		// Token: 0x06044A51 RID: 281169 RVA: 0x010F0B28 File Offset: 0x010EED28
+		// Token: 0x0603ABB5 RID: 240565 RVA: 0x0109AD74 File Offset: 0x01098F74
 		public AstrologyItemInspectView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06044A52 RID: 281170 RVA: 0x010F0BFC File Offset: 0x010EEDFC
+		// Token: 0x0603ABB6 RID: 240566 RVA: 0x0109AE48 File Offset: 0x01099048
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -67,18 +67,18 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			};
 		}
 
-		// Token: 0x06044A53 RID: 281171 RVA: 0x010F0ED0 File Offset: 0x010EF0D0
-		protected override string OnGetLoopAudioEvent()
+		// Token: 0x0603ABB7 RID: 240567 RVA: 0x0109B11C File Offset: 0x0109931C
+		protected override string OnGetBgm()
 		{
 			string loopAudioEvent = ((IAstrologyTextUiConfig)this.OpenParam).LoopAudioEvent;
 			if (loopAudioEvent != null)
 			{
 				return loopAudioEvent;
 			}
-			return base.OnGetLoopAudioEvent();
+			return base.OnGetBgm();
 		}
 
-		// Token: 0x06044A54 RID: 281172 RVA: 0x010F0EFC File Offset: 0x010EF0FC
+		// Token: 0x0603ABB8 RID: 240568 RVA: 0x0109B148 File Offset: 0x01099348
 		protected override UniTask OnBeforeStartAsync()
 		{
 			AstrologyItemInspectView.<OnBeforeStartAsync>d__50 <OnBeforeStartAsync>d__;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044A55 RID: 281173 RVA: 0x010F0F40 File Offset: 0x010EF140
+		// Token: 0x0603ABB9 RID: 240569 RVA: 0x0109B18C File Offset: 0x0109938C
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			action();
 		}
 
-		// Token: 0x06044A56 RID: 281174 RVA: 0x010F1160 File Offset: 0x010EF360
+		// Token: 0x0603ABBA RID: 240570 RVA: 0x0109B3AC File Offset: 0x010995AC
 		protected override void OnBeforeDestroy()
 		{
 			base.ClearDrag();
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.ClearFocusCamera(null, true);
 		}
 
-		// Token: 0x06044A57 RID: 281175 RVA: 0x010F11C0 File Offset: 0x010EF3C0
+		// Token: 0x0603ABBB RID: 240571 RVA: 0x0109B40C File Offset: 0x0109960C
 		protected override void OnTick(float delta)
 		{
 			base.OnTick(delta);
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.VisibleTagIdSet.Clear();
 		}
 
-		// Token: 0x06044A58 RID: 281176 RVA: 0x010F1450 File Offset: 0x010EF650
+		// Token: 0x0603ABBC RID: 240572 RVA: 0x0109B69C File Offset: 0x0109989C
 		[NullableContext(2)]
 		private AstrologyDotView GetDotView(int pointTagId)
 		{
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			return result;
 		}
 
-		// Token: 0x06044A59 RID: 281177 RVA: 0x010F14D4 File Offset: 0x010EF6D4
+		// Token: 0x0603ABBD RID: 240573 RVA: 0x0109B720 File Offset: 0x01099920
 		private int GetRegionIndex(float centerX, float centerY, float positionX, float positionY)
 		{
 			if (positionX > centerX)
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}
 		}
 
-		// Token: 0x06044A5A RID: 281178 RVA: 0x010F14EC File Offset: 0x010EF6EC
+		// Token: 0x0603ABBE RID: 240574 RVA: 0x0109B738 File Offset: 0x01099938
 		private void RefreshInteractView(AstrologyDotView dotView, int regionIndex, Vector2D screenPosition, int tagId, bool isChecked)
 		{
 			AstrologyPointView astrologyPointView = this.PointViews[regionIndex];
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			astrologyPointView.SetPointActive(flag);
 		}
 
-		// Token: 0x06044A5B RID: 281179 RVA: 0x010F16F4 File Offset: 0x010EF8F4
+		// Token: 0x0603ABBF RID: 240575 RVA: 0x0109B940 File Offset: 0x01099B40
 		private void SetInteractAndViewEnable(bool enable)
 		{
 			bool flag = enable && ItemInspectController.Instance.IsStageInteractionEnabled();
@@ -358,7 +358,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}
 		}
 
-		// Token: 0x06044A5C RID: 281180 RVA: 0x010F1778 File Offset: 0x010EF978
+		// Token: 0x0603ABC0 RID: 240576 RVA: 0x0109B9C4 File Offset: 0x01099BC4
 		private void SetInteractEnable(bool enable)
 		{
 			this.IsInteractEnable = enable;
@@ -366,7 +366,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.UpdateGamepadTipsItem(enable);
 		}
 
-		// Token: 0x06044A5D RID: 281181 RVA: 0x010F1790 File Offset: 0x010EF990
+		// Token: 0x0603ABC1 RID: 240577 RVA: 0x0109B9DC File Offset: 0x01099BDC
 		private void UpdateGamepadTipsItem(bool enable)
 		{
 			bool flag = ItemInspectController.Instance.IsCurrentStageDragInteraction();
@@ -374,21 +374,21 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			base.GetItem(25).SetUIActive(enable && flag);
 		}
 
-		// Token: 0x06044A5E RID: 281182 RVA: 0x010F17D0 File Offset: 0x010EF9D0
+		// Token: 0x0603ABC2 RID: 240578 RVA: 0x0109BA1C File Offset: 0x01099C1C
 		private void OnPreInteractPoint()
 		{
 			this.SetInteractEnable(false);
 			base.GetButton(12).RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x06044A5F RID: 281183 RVA: 0x010F17FF File Offset: 0x010EF9FF
+		// Token: 0x0603ABC3 RID: 240579 RVA: 0x0109BA4B File Offset: 0x01099C4B
 		private void OnInteractPoint(int tagId)
 		{
 			this.SetInteractAndViewEnable(false);
 			ItemInspectController.Instance.InteractPoint(tagId, new Action(this.UpdateValidCount));
 		}
 
-		// Token: 0x06044A60 RID: 281184 RVA: 0x010F1820 File Offset: 0x010EFA20
+		// Token: 0x0603ABC4 RID: 240580 RVA: 0x0109BA6C File Offset: 0x01099C6C
 		private void UpdateDragTargetView(APlayerController playerController, float widthRatio, float heightRatio)
 		{
 			if (!ItemInspectController.Instance.IsCurrentStageDragInteraction())
@@ -461,13 +461,13 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.DragTargetView.SetScreenPosition(position2D);
 		}
 
-		// Token: 0x06044A61 RID: 281185 RVA: 0x010F1978 File Offset: 0x010EFB78
+		// Token: 0x0603ABC5 RID: 240581 RVA: 0x0109BBC4 File Offset: 0x01099DC4
 		private bool ShouldShowDragTargetView()
 		{
 			return Info.Instance.IsInGamepad() || ItemInspectController.Instance.IsDragInteractionActive();
 		}
 
-		// Token: 0x06044A62 RID: 281186 RVA: 0x010F1994 File Offset: 0x010EFB94
+		// Token: 0x0603ABC6 RID: 240582 RVA: 0x0109BBE0 File Offset: 0x01099DE0
 		protected override void HandleDragInteractSuccess(int tagId)
 		{
 			this.DragSucceedTagId = tagId;
@@ -490,7 +490,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			});
 		}
 
-		// Token: 0x06044A63 RID: 281187 RVA: 0x010F19DE File Offset: 0x010EFBDE
+		// Token: 0x0603ABC7 RID: 240583 RVA: 0x0109BC2A File Offset: 0x01099E2A
 		private void FinishDragInteractPoint()
 		{
 			ItemInspectController.Instance.InteractPoint(this.DragSucceedTagId, delegate
@@ -500,7 +500,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			});
 		}
 
-		// Token: 0x06044A64 RID: 281188 RVA: 0x010F19FC File Offset: 0x010EFBFC
+		// Token: 0x0603ABC8 RID: 240584 RVA: 0x0109BC48 File Offset: 0x01099E48
 		private void CloseDragTargetView(Action onClosed)
 		{
 			AstrologyDragTargetView dragTargetView = this.DragTargetView;
@@ -522,13 +522,13 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			});
 		}
 
-		// Token: 0x06044A65 RID: 281189 RVA: 0x010F1A62 File Offset: 0x010EFC62
+		// Token: 0x0603ABC9 RID: 240585 RVA: 0x0109BCAE File Offset: 0x01099EAE
 		private bool IsPointInteractEnable()
 		{
 			return this.IsInteractEnable && ItemInspectController.Instance.IsStageInteractionEnabled();
 		}
 
-		// Token: 0x06044A66 RID: 281190 RVA: 0x010F1A78 File Offset: 0x010EFC78
+		// Token: 0x0603ABCA RID: 240586 RVA: 0x0109BCC4 File Offset: 0x01099EC4
 		private void UpdateValidCountText()
 		{
 			int maxValidPointCount = ItemInspectModel.Instance.GetMaxValidPointCount();
@@ -541,7 +541,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			base.GetText(9).SetText(checkedValidPointCount.ToString(), true);
 		}
 
-		// Token: 0x06044A67 RID: 281191 RVA: 0x010F1AE4 File Offset: 0x010EFCE4
+		// Token: 0x0603ABCB RID: 240587 RVA: 0x0109BD30 File Offset: 0x01099F30
 		private void UpdateValidCount()
 		{
 			bool finishByDrag = this.IsFinishByDrag;
@@ -569,7 +569,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			base.GetButton(12).RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x06044A68 RID: 281192 RVA: 0x010F1BB0 File Offset: 0x010EFDB0
+		// Token: 0x0603ABCC RID: 240588 RVA: 0x0109BDFC File Offset: 0x01099FFC
 		private void OnFinishClick()
 		{
 			BP_CineCamera_C focusCineCamera = this.FocusCineCamera;
@@ -586,7 +586,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			ItemInspectController.Instance.FinishItemInspect(true);
 		}
 
-		// Token: 0x06044A69 RID: 281193 RVA: 0x010F1BEC File Offset: 0x010EFDEC
+		// Token: 0x0603ABCD RID: 240589 RVA: 0x0109BE38 File Offset: 0x0109A038
 		private void OnNextPageClick()
 		{
 			if (!this.IsShowAllText && this.TipAnimDataComp.GetSelectorOffset() != 0f)
@@ -597,7 +597,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.NextTalk();
 		}
 
-		// Token: 0x06044A6A RID: 281194 RVA: 0x010F1C15 File Offset: 0x010EFE15
+		// Token: 0x0603ABCE RID: 240590 RVA: 0x0109BE61 File Offset: 0x0109A061
 		private void OnResetClick()
 		{
 			if (!this.IsInteractEnable)
@@ -611,7 +611,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			});
 		}
 
-		// Token: 0x06044A6B RID: 281195 RVA: 0x010F1C40 File Offset: 0x010EFE40
+		// Token: 0x0603ABCF RID: 240591 RVA: 0x0109BE8C File Offset: 0x0109A08C
 		private void OnSkipClick()
 		{
 			if (ItemInspectModel.Instance.CloseSkipConfirmBox)
@@ -643,13 +643,13 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06044A6C RID: 281196 RVA: 0x010F1D03 File Offset: 0x010EFF03
+		// Token: 0x0603ABD0 RID: 240592 RVA: 0x0109BF4F File Offset: 0x0109A14F
 		private void OnSkipToggle(bool isSelectOn)
 		{
 			this.CloseSkipConfirmBox = isSelectOn;
 		}
 
-		// Token: 0x06044A6D RID: 281197 RVA: 0x010F1D0C File Offset: 0x010EFF0C
+		// Token: 0x0603ABD1 RID: 240593 RVA: 0x0109BF58 File Offset: 0x0109A158
 		public override void ExecuteTriggerDialogues(ITriggerDialogues @params, Action onFinish)
 		{
 			IFocusObject focusObject = @params.FocusObject;
@@ -692,7 +692,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.StartDialogues(@params.Talks, onFinish);
 		}
 
-		// Token: 0x06044A6E RID: 281198 RVA: 0x010F1DE0 File Offset: 0x010EFFE0
+		// Token: 0x0603ABD2 RID: 240594 RVA: 0x0109C02C File Offset: 0x0109A22C
 		public override void ExecuteTriggerVoiceDialogues(ITriggerVoiceDialogues @params, Action onFinish)
 		{
 			List<ITalkItem> talkItemsOfFlow = PlotController.Instance.GetTalkItemsOfFlow(@params.Flow);
@@ -726,7 +726,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.StartDialogueItems(list, onFinish);
 		}
 
-		// Token: 0x06044A6F RID: 281199 RVA: 0x010F1ED8 File Offset: 0x010F00D8
+		// Token: 0x0603ABD3 RID: 240595 RVA: 0x0109C124 File Offset: 0x0109A324
 		private void StartDialogues(List<string> talks, Action onFinish)
 		{
 			List<ItemInspectDialogueData> list = new List<ItemInspectDialogueData>();
@@ -740,7 +740,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.StartDialogueItems(list, onFinish);
 		}
 
-		// Token: 0x06044A70 RID: 281200 RVA: 0x010F1F40 File Offset: 0x010F0140
+		// Token: 0x0603ABD4 RID: 240596 RVA: 0x0109C18C File Offset: 0x0109A38C
 		private void StartDialogueItems(List<ItemInspectDialogueData> dialogues, Action onFinish)
 		{
 			if (dialogues.Count <= 0 || this.IsTalking)
@@ -763,7 +763,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.NextTalk();
 		}
 
-		// Token: 0x06044A71 RID: 281201 RVA: 0x010F202C File Offset: 0x010F022C
+		// Token: 0x0603ABD5 RID: 240597 RVA: 0x0109C278 File Offset: 0x0109A478
 		private void NextTalk()
 		{
 			double serverTimeStamp = TimeUtil.Instance.GetServerTimeStamp();
@@ -814,7 +814,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}
 		}
 
-		// Token: 0x06044A72 RID: 281202 RVA: 0x010F21AC File Offset: 0x010F03AC
+		// Token: 0x0603ABD6 RID: 240598 RVA: 0x0109C3F8 File Offset: 0x0109A5F8
 		private void ShowAllText()
 		{
 			this.RemoveTextAnimTimer();
@@ -825,7 +825,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.RefreshNextTalkState();
 		}
 
-		// Token: 0x06044A73 RID: 281203 RVA: 0x010F2204 File Offset: 0x010F0404
+		// Token: 0x0603ABD7 RID: 240599 RVA: 0x0109C450 File Offset: 0x0109A650
 		private void FinishDialogues()
 		{
 			this.TalkAudioPlayer.Stop();
@@ -871,7 +871,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.FocusLeaveIndex = null;
 		}
 
-		// Token: 0x06044A74 RID: 281204 RVA: 0x010F2305 File Offset: 0x010F0505
+		// Token: 0x0603ABD8 RID: 240600 RVA: 0x0109C551 File Offset: 0x0109A751
 		private void PlayDialogueAudio(ItemInspectDialogueData dialogue)
 		{
 			if (dialogue.VoiceTalkItem == null)
@@ -881,7 +881,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.TalkAudioPlayer.Play(dialogue.VoiceTalkItem);
 		}
 
-		// Token: 0x06044A75 RID: 281205 RVA: 0x010F2324 File Offset: 0x010F0524
+		// Token: 0x0603ABD9 RID: 240601 RVA: 0x0109C570 File Offset: 0x0109A770
 		private string GetDialogueText(ItemInspectDialogueData dialogue)
 		{
 			if (dialogue.VoiceTalkItem == null)
@@ -902,7 +902,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			return dialogue.TextKey;
 		}
 
-		// Token: 0x06044A76 RID: 281206 RVA: 0x010F2394 File Offset: 0x010F0594
+		// Token: 0x0603ABDA RID: 240602 RVA: 0x0109C5E0 File Offset: 0x0109A7E0
 		private float GetDialogueWaitTime(ItemInspectDialogueData dialogue)
 		{
 			ITalkItem voiceTalkItem = dialogue.VoiceTalkItem;
@@ -914,7 +914,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			return (float)Math.Max(0.0, TimeUtil.Instance.SetTimeMillisecond((double)num.Value));
 		}
 
-		// Token: 0x06044A77 RID: 281207 RVA: 0x010F23EC File Offset: 0x010F05EC
+		// Token: 0x0603ABDB RID: 240603 RVA: 0x0109C638 File Offset: 0x0109A838
 		private void WaitNextTalk(float waitTime)
 		{
 			TimerHandle waitingTalkTimer = this.WaitingTalkTimer;
@@ -937,7 +937,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}, waitTime, null, null, true, 1f);
 		}
 
-		// Token: 0x06044A78 RID: 281208 RVA: 0x010F2464 File Offset: 0x010F0664
+		// Token: 0x0603ABDC RID: 240604 RVA: 0x0109C6B0 File Offset: 0x0109A8B0
 		private void RefreshNextTalkState()
 		{
 			double serverTimeStamp = TimeUtil.Instance.GetServerTimeStamp();
@@ -956,7 +956,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			base.GetItem(21).SetUIActive(false);
 		}
 
-		// Token: 0x06044A79 RID: 281209 RVA: 0x010F24CC File Offset: 0x010F06CC
+		// Token: 0x0603ABDD RID: 240605 RVA: 0x0109C718 File Offset: 0x0109A918
 		private void HandleContentScroll(float _)
 		{
 			this.RemoveTextAnimTimer();
@@ -1005,7 +1005,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.DelayTextScrollAnimTimer = TimerSystem.Instance.Delay(new TTimerAction(this.StartAutoScrollAnim), interval, null, null, true, 1f);
 		}
 
-		// Token: 0x06044A7A RID: 281210 RVA: 0x010F2614 File Offset: 0x010F0814
+		// Token: 0x0603ABDE RID: 240606 RVA: 0x0109C860 File Offset: 0x0109AA60
 		private void StartAutoScrollAnim(float _)
 		{
 			this.CurrentAnimTime = 0f;
@@ -1026,7 +1026,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}, (float)intervalTime, 1f, null, null, true);
 		}
 
-		// Token: 0x06044A7B RID: 281211 RVA: 0x010F266C File Offset: 0x010F086C
+		// Token: 0x0603ABDF RID: 240607 RVA: 0x0109C8B8 File Offset: 0x0109AAB8
 		private void RemoveTextAnimTimer()
 		{
 			if (TimerSystem.Instance.Has(this.TextScrollAnimTimer))
@@ -1039,19 +1039,19 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}
 		}
 
-		// Token: 0x06044A7C RID: 281212 RVA: 0x010F26BF File Offset: 0x010F08BF
+		// Token: 0x0603ABE0 RID: 240608 RVA: 0x0109C90B File Offset: 0x0109AB0B
 		private string GetLocalText(string textKey)
 		{
 			return ConfigMultiTextLang.GetLocalTextNew(textKey, null) ?? "";
 		}
 
-		// Token: 0x06044A7D RID: 281213 RVA: 0x010F26D1 File Offset: 0x010F08D1
+		// Token: 0x0603ABE1 RID: 240609 RVA: 0x0109C91D File Offset: 0x0109AB1D
 		private void ExecuteFocusRotation(IFocusObjectRotationConfig rotationConfig, Action onFinish)
 		{
 			ItemInspectController.Instance.ExecuteFocusRotation(rotationConfig.TargetRotation, rotationConfig.SpeedCurve, onFinish);
 		}
 
-		// Token: 0x06044A7E RID: 281214 RVA: 0x010F26EC File Offset: 0x010F08EC
+		// Token: 0x0603ABE2 RID: 240610 RVA: 0x0109C938 File Offset: 0x0109AB38
 		private void ExecuteFocusCamera(IFocusObjectCameraConfig cameraConfig, Action onFinish)
 		{
 			ECustomCameraMode? cameraMode = CameraController.Instance.MainModel.CameraMode;
@@ -1152,7 +1152,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			onFinish();
 		}
 
-		// Token: 0x06044A7F RID: 281215 RVA: 0x010F2AF8 File Offset: 0x010F0CF8
+		// Token: 0x0603ABE3 RID: 240611 RVA: 0x0109CD44 File Offset: 0x0109AF44
 		[NullableContext(2)]
 		private void ClearFocusCamera(Action onFinish = null, bool skipBlendTime = false)
 		{
@@ -1176,7 +1176,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}, num * 1000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06044A80 RID: 281216 RVA: 0x010F2BD0 File Offset: 0x010F0DD0
+		// Token: 0x0603ABE4 RID: 240612 RVA: 0x0109CE1C File Offset: 0x0109B01C
 		[NullableContext(2)]
 		private void DestroyCameraAndCallback(Action onFinish = null)
 		{
@@ -1193,246 +1193,246 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}
 		}
 
-		// Token: 0x04023B53 RID: 146259
+		// Token: 0x0401EDF5 RID: 126453
 		private const int NEXT_PAGE_DELAY_TIME = 100;
 
-		// Token: 0x04023B54 RID: 146260
+		// Token: 0x0401EDF6 RID: 126454
 		private const int DEFAULT_TIP_SCROLL_HEIGHT = 174;
 
-		// Token: 0x04023B55 RID: 146261
+		// Token: 0x0401EDF7 RID: 126455
 		private const int DEFAULT_DELAY_CHAR_NUM = 25;
 
-		// Token: 0x04023B56 RID: 146262
+		// Token: 0x0401EDF8 RID: 126456
 		private const string DRAG_TARGET_UI_PATH = "/Game/Aki/UI/UIResources/UiFight/Prefabs/PlotQTE/UiItem_QteHollowBtnCheck.UiItem_QteHollowBtnCheck";
 
-		// Token: 0x04023B57 RID: 146263
+		// Token: 0x0401EDF9 RID: 126457
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04023B58 RID: 146264
+		// Token: 0x0401EDFA RID: 126458
 		private readonly List<AstrologyPointView> PointViews = new List<AstrologyPointView>();
 
-		// Token: 0x04023B59 RID: 146265
+		// Token: 0x0401EDFB RID: 126459
 		private readonly List<AstrologyDotView> DotViews = new List<AstrologyDotView>();
 
-		// Token: 0x04023B5A RID: 146266
+		// Token: 0x0401EDFC RID: 126460
 		private readonly List<AstrologyLineView> LineViews = new List<AstrologyLineView>();
 
-		// Token: 0x04023B5B RID: 146267
+		// Token: 0x0401EDFD RID: 126461
 		private bool PointVisible;
 
-		// Token: 0x04023B5C RID: 146268
+		// Token: 0x0401EDFE RID: 126462
 		[Nullable(2)]
 		private AstrologyDragTargetView DragTargetView;
 
-		// Token: 0x04023B5D RID: 146269
+		// Token: 0x0401EDFF RID: 126463
 		private bool DragTargetViewCreating;
 
-		// Token: 0x04023B5E RID: 146270
+		// Token: 0x0401EE00 RID: 126464
 		private bool DragTargetVisible;
 
-		// Token: 0x04023B5F RID: 146271
+		// Token: 0x0401EE01 RID: 126465
 		private int DragSucceedTagId;
 
-		// Token: 0x04023B60 RID: 146272
+		// Token: 0x0401EE02 RID: 126466
 		private bool IsFinishByDrag;
 
-		// Token: 0x04023B61 RID: 146273
+		// Token: 0x0401EE03 RID: 126467
 		private readonly HashSet<int> VisibleTagIdSet = new HashSet<int>();
 
-		// Token: 0x04023B62 RID: 146274
+		// Token: 0x0401EE04 RID: 126468
 		private readonly HashSet<int> ShowedRegionIndexSet = new HashSet<int>();
 
-		// Token: 0x04023B63 RID: 146275
+		// Token: 0x0401EE05 RID: 126469
 		private int RefViewportSizeX;
 
-		// Token: 0x04023B64 RID: 146276
+		// Token: 0x0401EE06 RID: 126470
 		private int RefViewportSizeY;
 
-		// Token: 0x04023B65 RID: 146277
+		// Token: 0x0401EE07 RID: 126471
 		private FVector2D RefViewportPosition = new FVector2D();
 
-		// Token: 0x04023B66 RID: 146278
+		// Token: 0x0401EE08 RID: 126472
 		private readonly global::Vector TempVector = global::Vector.Create();
 
-		// Token: 0x04023B67 RID: 146279
+		// Token: 0x0401EE09 RID: 126473
 		private readonly global::Vector TempVector2 = global::Vector.Create();
 
-		// Token: 0x04023B68 RID: 146280
+		// Token: 0x0401EE0A RID: 126474
 		private readonly Rotator TempRotator = Rotator.Create();
 
-		// Token: 0x04023B69 RID: 146281
+		// Token: 0x0401EE0B RID: 126475
 		private readonly Vector2D Position2D = Vector2D.Create();
 
-		// Token: 0x04023B6A RID: 146282
+		// Token: 0x0401EE0C RID: 126476
 		private readonly Vector2D PointTransport = Vector2D.Create(1.0, -1.0);
 
-		// Token: 0x04023B6B RID: 146283
+		// Token: 0x0401EE0D RID: 126477
 		private readonly Vector2D ScreenPointOffset = Vector2D.Create();
 
-		// Token: 0x04023B6C RID: 146284
+		// Token: 0x0401EE0E RID: 126478
 		private bool IsShowAllText;
 
-		// Token: 0x04023B6D RID: 146285
+		// Token: 0x0401EE0F RID: 126479
 		private double EnableNextPageTime;
 
-		// Token: 0x04023B6E RID: 146286
+		// Token: 0x0401EE10 RID: 126480
 		private double EnableNextTalkTime;
 
-		// Token: 0x04023B6F RID: 146287
+		// Token: 0x0401EE11 RID: 126481
 		private float TipScrollViewPrefabHeight;
 
-		// Token: 0x04023B70 RID: 146288
+		// Token: 0x0401EE12 RID: 126482
 		[Nullable(2)]
 		private ULGUIPlayTweenComponent TipAnimation;
 
-		// Token: 0x04023B71 RID: 146289
+		// Token: 0x0401EE13 RID: 126483
 		[Nullable(2)]
 		private UUIEffectTextAnimation TipAnimDataComp;
 
-		// Token: 0x04023B72 RID: 146290
+		// Token: 0x0401EE14 RID: 126484
 		private readonly Queue<ItemInspectDialogueData> DialogueQueue = new Queue<ItemInspectDialogueData>(4);
 
-		// Token: 0x04023B73 RID: 146291
+		// Token: 0x0401EE15 RID: 126485
 		private readonly ItemInspectTalkAudioPlayer TalkAudioPlayer = new ItemInspectTalkAudioPlayer();
 
-		// Token: 0x04023B74 RID: 146292
+		// Token: 0x0401EE16 RID: 126486
 		[Nullable(2)]
 		private Action OnDialoguesFinish;
 
-		// Token: 0x04023B75 RID: 146293
+		// Token: 0x0401EE17 RID: 126487
 		private bool IsInteractEnable;
 
-		// Token: 0x04023B76 RID: 146294
+		// Token: 0x0401EE18 RID: 126488
 		private bool IsTalking;
 
-		// Token: 0x04023B77 RID: 146295
+		// Token: 0x0401EE19 RID: 126489
 		private string SkipToggleText = "";
 
-		// Token: 0x04023B78 RID: 146296
+		// Token: 0x0401EE1A RID: 126490
 		private bool CloseSkipConfirmBox;
 
-		// Token: 0x04023B79 RID: 146297
+		// Token: 0x0401EE1B RID: 126491
 		[Nullable(2)]
 		private TimerHandle WaitingTalkTimer;
 
-		// Token: 0x04023B7A RID: 146298
+		// Token: 0x0401EE1C RID: 126492
 		private int SkipConfirmBoxId;
 
-		// Token: 0x04023B7B RID: 146299
+		// Token: 0x0401EE1D RID: 126493
 		[Nullable(2)]
 		private BP_CineCamera_C FocusCineCamera;
 
-		// Token: 0x04023B7C RID: 146300
+		// Token: 0x0401EE1E RID: 126494
 		[Nullable(2)]
 		private AActor OriginalCameraActor;
 
-		// Token: 0x04023B7D RID: 146301
+		// Token: 0x0401EE1F RID: 126495
 		private float FocusCameraBlendTime;
 
-		// Token: 0x04023B7E RID: 146302
+		// Token: 0x0401EE20 RID: 126496
 		private readonly UnrealEngine.EViewTargetBlendFunction FocusCameraBlendFunction = UnrealEngine.EViewTargetBlendFunction.VTBlend_Cubic;
 
-		// Token: 0x04023B7F RID: 146303
+		// Token: 0x0401EE21 RID: 126497
 		private int? FocusLeaveIndex;
 
-		// Token: 0x04023B80 RID: 146304
+		// Token: 0x0401EE22 RID: 126498
 		private int CurrentDialogueIndex;
 
-		// Token: 0x04023B81 RID: 146305
+		// Token: 0x0401EE23 RID: 126499
 		private float ScrollTotalTime;
 
-		// Token: 0x04023B82 RID: 146306
+		// Token: 0x0401EE24 RID: 126500
 		private float CurrentAnimTime;
 
-		// Token: 0x04023B83 RID: 146307
+		// Token: 0x0401EE25 RID: 126501
 		[Nullable(2)]
 		private TimerHandle TextScrollAnimTimer;
 
-		// Token: 0x04023B84 RID: 146308
+		// Token: 0x0401EE26 RID: 126502
 		[Nullable(2)]
 		private TimerHandle DelayTextScrollAnimTimer;
 
-		// Token: 0x0200CCBE RID: 52414
+		// Token: 0x0200B8AE RID: 47278
 		[NullableContext(0)]
 		private class EComponentType
 		{
-			// Token: 0x0403DC01 RID: 252929
+			// Token: 0x04039023 RID: 233507
 			public const int DragComponent = 0;
 
-			// Token: 0x0403DC02 RID: 252930
+			// Token: 0x04039024 RID: 233508
 			public const int TopLeftInteractPoint = 1;
 
-			// Token: 0x0403DC03 RID: 252931
+			// Token: 0x04039025 RID: 233509
 			public const int TopRightInteractPoint = 2;
 
-			// Token: 0x0403DC04 RID: 252932
+			// Token: 0x04039026 RID: 233510
 			public const int BottomLeftInteractPoint = 3;
 
-			// Token: 0x0403DC05 RID: 252933
+			// Token: 0x04039027 RID: 233511
 			public const int BottomRightInteractPoint = 4;
 
-			// Token: 0x0403DC06 RID: 252934
+			// Token: 0x04039028 RID: 233512
 			public const int DotPanel = 5;
 
-			// Token: 0x0403DC07 RID: 252935
+			// Token: 0x04039029 RID: 233513
 			public const int DotItem = 6;
 
-			// Token: 0x0403DC08 RID: 252936
+			// Token: 0x0403902A RID: 233514
 			public const int LinePanel = 7;
 
-			// Token: 0x0403DC09 RID: 252937
+			// Token: 0x0403902B RID: 233515
 			public const int LineItem = 8;
 
-			// Token: 0x0403DC0A RID: 252938
+			// Token: 0x0403902C RID: 233516
 			public const int CheckedValidCountText = 9;
 
-			// Token: 0x0403DC0B RID: 252939
+			// Token: 0x0403902D RID: 233517
 			public const int MaxValidCountText = 10;
 
-			// Token: 0x0403DC0C RID: 252940
+			// Token: 0x0403902E RID: 233518
 			public const int CountBackgroundTexture = 11;
 
-			// Token: 0x0403DC0D RID: 252941
+			// Token: 0x0403902F RID: 233519
 			public const int FinishButton = 12;
 
-			// Token: 0x0403DC0E RID: 252942
+			// Token: 0x04039030 RID: 233520
 			public const int TipPanel = 13;
 
-			// Token: 0x0403DC0F RID: 252943
+			// Token: 0x04039031 RID: 233521
 			public const int NextPageButton = 14;
 
-			// Token: 0x0403DC10 RID: 252944
+			// Token: 0x04039032 RID: 233522
 			public const int TipText = 15;
 
-			// Token: 0x0403DC11 RID: 252945
+			// Token: 0x04039033 RID: 233523
 			public const int TitleText = 16;
 
-			// Token: 0x0403DC12 RID: 252946
+			// Token: 0x04039034 RID: 233524
 			public const int TipScrollView = 17;
 
-			// Token: 0x0403DC13 RID: 252947
+			// Token: 0x04039035 RID: 233525
 			public const int ResetButton = 18;
 
-			// Token: 0x0403DC14 RID: 252948
+			// Token: 0x04039036 RID: 233526
 			public const int SkipButton = 19;
 
-			// Token: 0x0403DC15 RID: 252949
+			// Token: 0x04039037 RID: 233527
 			public const int GamepadTipsItem = 20;
 
-			// Token: 0x0403DC16 RID: 252950
+			// Token: 0x04039038 RID: 233528
 			public const int WaitingItem = 21;
 
-			// Token: 0x0403DC17 RID: 252951
+			// Token: 0x04039039 RID: 233529
 			public const int NextItem = 22;
 
-			// Token: 0x0403DC18 RID: 252952
+			// Token: 0x0403903A RID: 233530
 			public const int FinishText = 23;
 
-			// Token: 0x0403DC19 RID: 252953
+			// Token: 0x0403903B RID: 233531
 			public const int SkipText = 24;
 
-			// Token: 0x0403DC1A RID: 252954
+			// Token: 0x0403903C RID: 233532
 			public const int DragGamepadTipsItem = 25;
 		}
 	}

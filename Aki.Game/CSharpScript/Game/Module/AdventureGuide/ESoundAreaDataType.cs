@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005EBD RID: 24253
+	// Token: 0x02004EA2 RID: 20130
 	public enum ESoundAreaDataType
 	{
-		// Token: 0x0402031D RID: 131869
+		// Token: 0x0401ADE4 RID: 110052
 		Dungeon,
-		// Token: 0x0402031E RID: 131870
+		// Token: 0x0401ADE5 RID: 110053
 		SilentArea
 	}
 }

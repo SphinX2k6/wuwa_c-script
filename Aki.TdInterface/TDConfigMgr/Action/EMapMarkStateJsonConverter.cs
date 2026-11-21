@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200237E RID: 9086
+	// Token: 0x02002607 RID: 9735
 	public class EMapMarkStateJsonConverter : JsonConverter<EMapMarkState>
 	{
-		// Token: 0x0600C637 RID: 50743 RVA: 0x001D0968 File Offset: 0x001CEB68
+		// Token: 0x0600D27B RID: 53883 RVA: 0x001E993C File Offset: 0x001E7B3C
 		public override EMapMarkState Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EMapMarkStateExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C638 RID: 50744 RVA: 0x001D098C File Offset: 0x001CEB8C
+		// Token: 0x0600D27C RID: 53884 RVA: 0x001E9960 File Offset: 0x001E7B60
 		public override void Write(Utf8JsonWriter writer, EMapMarkState value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

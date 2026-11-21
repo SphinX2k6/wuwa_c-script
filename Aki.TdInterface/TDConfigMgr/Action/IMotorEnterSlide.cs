@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C1A RID: 7194
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E09 RID: 7689
 	public class IMotorEnterSlide : ILeisureInteractType
 	{
-		// Token: 0x06009A5F RID: 39519 RVA: 0x00163210 File Offset: 0x00161410
+		// Token: 0x0600A38F RID: 41871 RVA: 0x0017615C File Offset: 0x0017435C
 		private IMotorEnterSlide_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009A60 RID: 39520 RVA: 0x00163248 File Offset: 0x00161448
+		// Token: 0x0600A390 RID: 41872 RVA: 0x00176194 File Offset: 0x00174394
 		public static IMotorEnterSlide Create([Nullable(2)] IMotorEnterSlide instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A61 RID: 39521 RVA: 0x0016325B File Offset: 0x0016145B
+		// Token: 0x0600A391 RID: 41873 RVA: 0x001761A7 File Offset: 0x001743A7
 		public static IMotorEnterSlide CreateFromSetValue([Nullable(2)] IMotorEnterSlide_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A62 RID: 39522 RVA: 0x0016326E File Offset: 0x0016146E
+		// Token: 0x0600A392 RID: 41874 RVA: 0x001761BA File Offset: 0x001743BA
 		public new IMotorEnterSlide_SetValue ToSetValue()
 		{
 			return new IMotorEnterSlide_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700305F RID: 12383
-		// (get) Token: 0x06009A63 RID: 39523 RVA: 0x00163299 File Offset: 0x00161499
-		// (set) Token: 0x06009A64 RID: 39524 RVA: 0x001632C4 File Offset: 0x001614C4
+		// Token: 0x170032C8 RID: 13000
+		// (get) Token: 0x0600A393 RID: 41875 RVA: 0x001761E5 File Offset: 0x001743E5
+		// (set) Token: 0x0600A394 RID: 41876 RVA: 0x00176210 File Offset: 0x00174410
 		public override ELeisureInteract Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003060 RID: 12384
-		// (get) Token: 0x06009A65 RID: 39525 RVA: 0x001632D2 File Offset: 0x001614D2
-		// (set) Token: 0x06009A66 RID: 39526 RVA: 0x001632FD File Offset: 0x001614FD
+		// Token: 0x170032C9 RID: 13001
+		// (get) Token: 0x0600A395 RID: 41877 RVA: 0x0017621E File Offset: 0x0017441E
+		// (set) Token: 0x0600A396 RID: 41878 RVA: 0x00176249 File Offset: 0x00174449
 		public virtual int EntityId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003061 RID: 12385
-		// (get) Token: 0x06009A67 RID: 39527 RVA: 0x0016330C File Offset: 0x0016150C
-		// (set) Token: 0x06009A68 RID: 39528 RVA: 0x00163346 File Offset: 0x00161546
+		// Token: 0x170032CA RID: 13002
+		// (get) Token: 0x0600A397 RID: 41879 RVA: 0x00176258 File Offset: 0x00174458
+		// (set) Token: 0x0600A398 RID: 41880 RVA: 0x00176292 File Offset: 0x00174492
 		public virtual EMotorEnterSlideMode? EnterMode
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005DEA RID: 24042
+		// Token: 0x04006311 RID: 25361
 		[Nullable(2)]
 		protected new IMotorEnterSlide FbInstance;
 
-		// Token: 0x04005DEB RID: 24043
+		// Token: 0x04006312 RID: 25362
 		[Nullable(2)]
 		protected new IMotorEnterSlide_SetValue PocoInterface;
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000453 RID: 1107
+	// Token: 0x020004AC RID: 1196
 	public class IImmediateStartCondition_SetValue
 	{
-		// Token: 0x0400111A RID: 4378
+		// Token: 0x0400123C RID: 4668
 		public ESpawnMonsterStartCondition Type;
 	}
 }

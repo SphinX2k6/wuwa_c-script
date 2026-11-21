@@ -1,28 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using CSharpScript.Game;
 
-// Token: 0x020017CB RID: 6091
+// Token: 0x02000C84 RID: 3204
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseCheckCondition
 {
-	// Token: 0x17000EEB RID: 3819
-	// (get) Token: 0x0600B215 RID: 45589 RVA: 0x00284285 File Offset: 0x00282485
-	// (set) Token: 0x0600B216 RID: 45590 RVA: 0x0028428D File Offset: 0x0028248D
+	// Token: 0x17000F0E RID: 3854
+	// (get) Token: 0x060085FD RID: 34301 RVA: 0x0028E971 File Offset: 0x0028CB71
+	// (set) Token: 0x060085FE RID: 34302 RVA: 0x0028E979 File Offset: 0x0028CB79
 	public virtual EComboTeachingCheckType Type { get; set; }
 
-	// Token: 0x17000EEC RID: 3820
-	// (get) Token: 0x0600B217 RID: 45591 RVA: 0x00284296 File Offset: 0x00282496
-	// (set) Token: 0x0600B218 RID: 45592 RVA: 0x0028429E File Offset: 0x0028249E
+	// Token: 0x17000F0F RID: 3855
+	// (get) Token: 0x060085FF RID: 34303 RVA: 0x0028E982 File Offset: 0x0028CB82
+	// (set) Token: 0x06008600 RID: 34304 RVA: 0x0028E98A File Offset: 0x0028CB8A
 	protected virtual EComboTeachingSuccessCondition SuccessType { get; set; } = EComboTeachingSuccessCondition.Base;
 
-	// Token: 0x17000EED RID: 3821
-	// (get) Token: 0x0600B219 RID: 45593 RVA: 0x002842A7 File Offset: 0x002824A7
-	// (set) Token: 0x0600B21A RID: 45594 RVA: 0x002842AF File Offset: 0x002824AF
+	// Token: 0x17000F10 RID: 3856
+	// (get) Token: 0x06008601 RID: 34305 RVA: 0x0028E993 File Offset: 0x0028CB93
+	// (set) Token: 0x06008602 RID: 34306 RVA: 0x0028E99B File Offset: 0x0028CB9B
 	protected virtual EComboTeachingFailCondition FailType { get; set; } = EComboTeachingFailCondition.Base;
 
-	// Token: 0x0600B21B RID: 45595 RVA: 0x002842B8 File Offset: 0x002824B8
+	// Token: 0x06008603 RID: 34307 RVA: 0x0028E9A4 File Offset: 0x0028CBA4
 	public int GetConditionType()
 	{
 		if (!this.IsSuccessNode)
@@ -32,7 +33,7 @@ public class BaseCheckCondition
 		return (int)this.SuccessType;
 	}
 
-	// Token: 0x0600B21C RID: 45596 RVA: 0x002842D0 File Offset: 0x002824D0
+	// Token: 0x06008604 RID: 34308 RVA: 0x0028E9BC File Offset: 0x0028CBBC
 	public BaseCheckCondition(string paramsString, bool isSuccessNode)
 	{
 		this.OriginString = paramsString;
@@ -56,7 +57,7 @@ public class BaseCheckCondition
 		}
 	}
 
-	// Token: 0x0600B21D RID: 45597 RVA: 0x00284384 File Offset: 0x00282584
+	// Token: 0x06008605 RID: 34309 RVA: 0x0028EA70 File Offset: 0x0028CC70
 	public virtual bool Check(IComboTeachingInfo data, [Nullable(2)] IBaseCheckConditionInfo param = null)
 	{
 		if (!this.IsSuccessNode)
@@ -66,19 +67,28 @@ public class BaseCheckCondition
 		return this.CheckSuccess(data, param);
 	}
 
-	// Token: 0x0600B21E RID: 45598 RVA: 0x0028439F File Offset: 0x0028259F
+	// Token: 0x06008606 RID: 34310 RVA: 0x0028EA8B File Offset: 0x0028CC8B
 	protected virtual bool CheckSuccess(IComboTeachingInfo data, [Nullable(2)] IBaseCheckConditionInfo param = null)
 	{
 		return false;
 	}
 
-	// Token: 0x0600B21F RID: 45599 RVA: 0x002843A2 File Offset: 0x002825A2
+	// Token: 0x06008607 RID: 34311 RVA: 0x0028EA8E File Offset: 0x0028CC8E
 	protected virtual bool CheckFail(IComboTeachingInfo data, [Nullable(2)] IBaseCheckConditionInfo param = null)
 	{
 		return false;
 	}
 
-	// Token: 0x040050CD RID: 20685
+	// Token: 0x06008608 RID: 34312 RVA: 0x0028EA94 File Offset: 0x0028CC94
+	[NullableContext(0)]
+	[return: Nullable(2)]
+	protected static T GetPlayerComponent<T>() where T : EntityComponent
+	{
+		int entityIdNoBlueprint = Global.BaseCharacter.GetEntityIdNoBlueprint();
+		return EntitySystem.Instance.GetComponent<T>(entityIdNoBlueprint);
+	}
+
+	// Token: 0x04005178 RID: 20856
 	[Nullable(new byte[]
 	{
 		2,
@@ -86,7 +96,7 @@ public class BaseCheckCondition
 	})]
 	public List<string> ParamsArray;
 
-	// Token: 0x040050CE RID: 20686
+	// Token: 0x04005179 RID: 20857
 	[Nullable(new byte[]
 	{
 		2,
@@ -95,9 +105,9 @@ public class BaseCheckCondition
 	})]
 	public List<List<string>> SuccessParamsArray;
 
-	// Token: 0x040050CF RID: 20687
+	// Token: 0x0400517A RID: 20858
 	public string OriginString = "";
 
-	// Token: 0x040050D1 RID: 20689
+	// Token: 0x0400517C RID: 20860
 	protected bool IsSuccessNode;
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200038C RID: 908
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003D5 RID: 981
 	public class IFishingPointAdditionalInfo : IInteractAdditionalInfo
 	{
-		// Token: 0x06001201 RID: 4609 RVA: 0x0003BED4 File Offset: 0x0003A0D4
+		// Token: 0x06001345 RID: 4933 RVA: 0x0003F1B8 File Offset: 0x0003D3B8
 		private IFishingPointAdditionalInfo_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001202 RID: 4610 RVA: 0x0003BF0C File Offset: 0x0003A10C
+		// Token: 0x06001346 RID: 4934 RVA: 0x0003F1F0 File Offset: 0x0003D3F0
 		public static IFishingPointAdditionalInfo Create([Nullable(2)] IFishingPointAdditionalInfo instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001203 RID: 4611 RVA: 0x0003BF1F File Offset: 0x0003A11F
+		// Token: 0x06001347 RID: 4935 RVA: 0x0003F203 File Offset: 0x0003D403
 		public static IFishingPointAdditionalInfo CreateFromSetValue([Nullable(2)] IFishingPointAdditionalInfo_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001204 RID: 4612 RVA: 0x0003BF32 File Offset: 0x0003A132
+		// Token: 0x06001348 RID: 4936 RVA: 0x0003F216 File Offset: 0x0003D416
 		public new IFishingPointAdditionalInfo_SetValue ToSetValue()
 		{
 			return new IFishingPointAdditionalInfo_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700050C RID: 1292
-		// (get) Token: 0x06001205 RID: 4613 RVA: 0x0003BF45 File Offset: 0x0003A145
-		// (set) Token: 0x06001206 RID: 4614 RVA: 0x0003BF70 File Offset: 0x0003A170
+		// Token: 0x17000560 RID: 1376
+		// (get) Token: 0x06001349 RID: 4937 RVA: 0x0003F229 File Offset: 0x0003D429
+		// (set) Token: 0x0600134A RID: 4938 RVA: 0x0003F254 File Offset: 0x0003D454
 		public override EInteractAdditionalInfoType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E99 RID: 3737
+		// Token: 0x04000F90 RID: 3984
 		[Nullable(2)]
 		protected new IFishingPointAdditionalInfo FbInstance;
 
-		// Token: 0x04000E9A RID: 3738
+		// Token: 0x04000F91 RID: 3985
 		[Nullable(2)]
 		protected new IFishingPointAdditionalInfo_SetValue PocoInterface;
 	}

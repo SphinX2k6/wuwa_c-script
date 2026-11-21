@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004F03 RID: 20227
+	// Token: 0x02003ECC RID: 16076
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleShopView : UiViewBase
 	{
-		// Token: 0x06033DE7 RID: 212455 RVA: 0x00C2709B File Offset: 0x00C2529B
+		// Token: 0x06028C52 RID: 166994 RVA: 0x00B7063B File Offset: 0x00B6E83B
 		public RogueBattleShopView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06033DE8 RID: 212456 RVA: 0x00C270A4 File Offset: 0x00C252A4
+		// Token: 0x06028C53 RID: 166995 RVA: 0x00B70644 File Offset: 0x00B6E844
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,19 +43,19 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033DE9 RID: 212457 RVA: 0x00C271BD File Offset: 0x00C253BD
+		// Token: 0x06028C54 RID: 166996 RVA: 0x00B7075D File Offset: 0x00B6E95D
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.RogueBattleSelectOption, new Action(this.OnBuyItem));
 		}
 
-		// Token: 0x06033DEA RID: 212458 RVA: 0x00C271DB File Offset: 0x00C253DB
+		// Token: 0x06028C55 RID: 166997 RVA: 0x00B7077B File Offset: 0x00B6E97B
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RogueBattleSelectOption, new Action(this.OnBuyItem));
 		}
 
-		// Token: 0x06033DEB RID: 212459 RVA: 0x00C271FC File Offset: 0x00C253FC
+		// Token: 0x06028C56 RID: 166998 RVA: 0x00B7079C File Offset: 0x00B6E99C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleShopView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -66,13 +66,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033DEC RID: 212460 RVA: 0x00C27240 File Offset: 0x00C25440
+		// Token: 0x06028C57 RID: 166999 RVA: 0x00B707E0 File Offset: 0x00B6E9E0
 		protected override void OnAfterShow()
 		{
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Show", false, null, false);
 		}
 
-		// Token: 0x06033DED RID: 212461 RVA: 0x00C27268 File Offset: 0x00C25468
+		// Token: 0x06028C58 RID: 167000 RVA: 0x00B70808 File Offset: 0x00B6EA08
 		private void OnSelectItem(int gridIndex, RogueResGainData data)
 		{
 			this.DetailPanel.Refresh(data);
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			goodsLayout.SelectGridProxy(gridIndex, false);
 		}
 
-		// Token: 0x06033DEE RID: 212462 RVA: 0x00C27288 File Offset: 0x00C25488
+		// Token: 0x06028C59 RID: 167001 RVA: 0x00B70828 File Offset: 0x00B6EA28
 		private void OnBuyItem()
 		{
 			UiAsyncTask task = new UiAsyncTask("RefreshWeeklyRogueShop", delegate()
@@ -99,12 +99,12 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x06033DEF RID: 212463 RVA: 0x00C272B5 File Offset: 0x00C254B5
+		// Token: 0x06028C5A RID: 167002 RVA: 0x00B70855 File Offset: 0x00B6EA55
 		private void OnBtnInfo()
 		{
 		}
 
-		// Token: 0x06033DF0 RID: 212464 RVA: 0x00C272B7 File Offset: 0x00C254B7
+		// Token: 0x06028C5B RID: 167003 RVA: 0x00B70857 File Offset: 0x00B6EA57
 		private RogueBattleShopGrid CreateGoodsItem()
 		{
 			return new RogueBattleShopGrid
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033DF1 RID: 212465 RVA: 0x00C272D0 File Offset: 0x00C254D0
+		// Token: 0x06028C5C RID: 167004 RVA: 0x00B70870 File Offset: 0x00B6EA70
 		public UniTask RefreshItemList()
 		{
 			RogueBattleShopView.<RefreshItemList>d__14 <RefreshItemList>d__;
@@ -124,19 +124,19 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <RefreshItemList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401B923 RID: 112931
+		// Token: 0x040162F6 RID: 90870
 		[Nullable(2)]
 		public LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401B924 RID: 112932
+		// Token: 0x040162F7 RID: 90871
 		[Nullable(2)]
 		public PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401B925 RID: 112933
+		// Token: 0x040162F8 RID: 90872
 		[Nullable(2)]
 		public RogueBattleShopDetail DetailPanel;
 
-		// Token: 0x0401B926 RID: 112934
+		// Token: 0x040162F9 RID: 90873
 		[Nullable(new byte[]
 		{
 			2,

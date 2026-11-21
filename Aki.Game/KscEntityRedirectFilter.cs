@@ -2,34 +2,33 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.KuroSimpleCombat;
 using UnrealEngine;
 
-// Token: 0x02000E86 RID: 3718
+// Token: 0x0200033B RID: 827
 [NullableContext(1)]
 [Nullable(0)]
 public class KscEntityRedirectFilter : CreatureController.IEntityRedirectFilter, IStaticVariableResetter
 {
-	// Token: 0x06005ACD RID: 23245 RVA: 0x00108B84 File Offset: 0x00106D84
+	// Token: 0x06002E64 RID: 11876 RVA: 0x00110834 File Offset: 0x0010EA34
 	static KscEntityRedirectFilter()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(KscEntityRedirectFilter.CreateStaticDefaultValue), new Action(KscEntityRedirectFilter.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06005ACE RID: 23246 RVA: 0x00108BA3 File Offset: 0x00106DA3
+	// Token: 0x06002E65 RID: 11877 RVA: 0x00110853 File Offset: 0x0010EA53
 	public static void CreateStaticDefaultValue()
 	{
 		KscEntityRedirectFilter.ComponentDataMap = new Dictionary<string, EntityComponentPb>();
 	}
 
-	// Token: 0x06005ACF RID: 23247 RVA: 0x00108BAF File Offset: 0x00106DAF
+	// Token: 0x06002E66 RID: 11878 RVA: 0x0011085F File Offset: 0x0010EA5F
 	public static void ResetStaticDefaultValue()
 	{
 		KscEntityRedirectFilter.ComponentDataMap = null;
 	}
 
-	// Token: 0x06005AD0 RID: 23248 RVA: 0x00108BB8 File Offset: 0x00106DB8
+	// Token: 0x06002E67 RID: 11879 RVA: 0x00110868 File Offset: 0x0010EA68
 	public bool TryCreateEntity(EntityPb entityData)
 	{
 		KscEntityRedirectFilter.ComponentDataMap.Clear();
@@ -65,7 +64,6 @@ public class KscEntityRedirectFilter : CreatureController.IEntityRedirectFilter,
 			}
 			if (flag2)
 			{
-				bool isBuildDevelopmentOrDebug = Info.Instance.IsBuildDevelopmentOrDebug;
 				return false;
 			}
 		}
@@ -86,13 +84,13 @@ public class KscEntityRedirectFilter : CreatureController.IEntityRedirectFilter,
 		return flag;
 	}
 
-	// Token: 0x06005AD1 RID: 23249 RVA: 0x00108CE4 File Offset: 0x00106EE4
+	// Token: 0x06002E68 RID: 11880 RVA: 0x00110988 File Offset: 0x0010EB88
 	public void InstantiateEntities()
 	{
 		this.OnInstantiateEntities();
 	}
 
-	// Token: 0x06005AD2 RID: 23250 RVA: 0x00108CEC File Offset: 0x00106EEC
+	// Token: 0x06002E69 RID: 11881 RVA: 0x00110990 File Offset: 0x0010EB90
 	public bool TryRemoveEntity(long creatureDataId)
 	{
 		if (this.FilteredEntities.Contains((long)((int)creatureDataId)))
@@ -112,32 +110,32 @@ public class KscEntityRedirectFilter : CreatureController.IEntityRedirectFilter,
 		return false;
 	}
 
-	// Token: 0x06005AD3 RID: 23251 RVA: 0x00108D4C File Offset: 0x00106F4C
+	// Token: 0x06002E6A RID: 11882 RVA: 0x001109F0 File Offset: 0x0010EBF0
 	public virtual void Reset()
 	{
 		this.FilteredEntities.Clear();
 	}
 
-	// Token: 0x06005AD4 RID: 23252 RVA: 0x00108D59 File Offset: 0x00106F59
+	// Token: 0x06002E6B RID: 11883 RVA: 0x001109FD File Offset: 0x0010EBFD
 	protected virtual bool OnCreateEntity(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 	{
 		return false;
 	}
 
-	// Token: 0x06005AD5 RID: 23253 RVA: 0x00108D5C File Offset: 0x00106F5C
+	// Token: 0x06002E6C RID: 11884 RVA: 0x00110A00 File Offset: 0x0010EC00
 	protected virtual void OnInstantiateEntities()
 	{
 	}
 
-	// Token: 0x06005AD6 RID: 23254 RVA: 0x00108D5E File Offset: 0x00106F5E
+	// Token: 0x06002E6D RID: 11885 RVA: 0x00110A02 File Offset: 0x0010EC02
 	protected virtual bool OnRemoveEntity(int creatureDataId)
 	{
 		return false;
 	}
 
-	// Token: 0x04002983 RID: 10627
+	// Token: 0x04002A1E RID: 10782
 	private static Dictionary<string, EntityComponentPb> ComponentDataMap;
 
-	// Token: 0x04002984 RID: 10628
+	// Token: 0x04002A1F RID: 10783
 	private readonly HashSet<long> FilteredEntities = new HashSet<long>();
 }

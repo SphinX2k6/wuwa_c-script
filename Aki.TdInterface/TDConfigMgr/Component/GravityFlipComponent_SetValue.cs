@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200018A RID: 394
+	// Token: 0x020001A1 RID: 417
 	public class GravityFlipComponent_SetValue
 	{
-		// Token: 0x0400077D RID: 1917
+		// Token: 0x040007D3 RID: 2003
 		public bool? Disabled;
 
-		// Token: 0x0400077E RID: 1918
+		// Token: 0x040007D4 RID: 2004
 		public bool? EdIsLocked;
 
-		// Token: 0x0400077F RID: 1919
-		[Nullable(1)]
+		// Token: 0x040007D5 RID: 2005
 		public List<IGravityFlipConfig> Config;
 
-		// Token: 0x04000780 RID: 1920
+		// Token: 0x040007D6 RID: 2006
 		public EGravityFlipType DefaultGravity;
 	}
 }

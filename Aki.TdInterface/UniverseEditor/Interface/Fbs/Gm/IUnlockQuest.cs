@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046D2 RID: 18130
+	// Token: 0x02004B3A RID: 19258
 	public struct IUnlockQuest : IFlatbufferObject
 	{
-		// Token: 0x170080CF RID: 32975
-		// (get) Token: 0x0601B90B RID: 112907 RVA: 0x003E905F File Offset: 0x003E725F
+		// Token: 0x17008710 RID: 34576
+		// (get) Token: 0x0601D0E0 RID: 119008 RVA: 0x004152FB File Offset: 0x004134FB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B90C RID: 112908 RVA: 0x003E906C File Offset: 0x003E726C
+		// Token: 0x0601D0E1 RID: 119009 RVA: 0x00415308 File Offset: 0x00413508
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B90D RID: 112909 RVA: 0x003E9074 File Offset: 0x003E7274
+		// Token: 0x0601D0E2 RID: 119010 RVA: 0x00415310 File Offset: 0x00413510
 		public static IUnlockQuest GetRootAsIUnlockQuest(ByteBuffer _bb)
 		{
 			return IUnlockQuest.GetRootAsIUnlockQuest(_bb, default(IUnlockQuest));
 		}
 
-		// Token: 0x0601B90E RID: 112910 RVA: 0x003E9090 File Offset: 0x003E7290
+		// Token: 0x0601D0E3 RID: 119011 RVA: 0x0041532C File Offset: 0x0041352C
 		public static IUnlockQuest GetRootAsIUnlockQuest(ByteBuffer _bb, IUnlockQuest obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B90F RID: 112911 RVA: 0x003E90AD File Offset: 0x003E72AD
+		// Token: 0x0601D0E4 RID: 119012 RVA: 0x00415349 File Offset: 0x00413549
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B910 RID: 112912 RVA: 0x003E90BC File Offset: 0x003E72BC
+		// Token: 0x0601D0E5 RID: 119013 RVA: 0x00415358 File Offset: 0x00413558
 		public IUnlockQuest __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170080D0 RID: 32976
-		// (get) Token: 0x0601B911 RID: 112913 RVA: 0x003E90CC File Offset: 0x003E72CC
+		// Token: 0x17008711 RID: 34577
+		// (get) Token: 0x0601D0E6 RID: 119014 RVA: 0x00415368 File Offset: 0x00413568
 		public EGmCommand Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x170080D1 RID: 32977
-		// (get) Token: 0x0601B912 RID: 112914 RVA: 0x003E9108 File Offset: 0x003E7308
+		// Token: 0x17008712 RID: 34578
+		// (get) Token: 0x0601D0E7 RID: 119015 RVA: 0x004153A4 File Offset: 0x004135A4
 		public int QuestId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B913 RID: 112915 RVA: 0x003E9144 File Offset: 0x003E7344
+		// Token: 0x0601D0E8 RID: 119016 RVA: 0x004153E0 File Offset: 0x004135E0
 		public static Offset<IUnlockQuest> CreateIUnlockQuest(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode, int QuestId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IUnlockQuest.EndIUnlockQuest(builder);
 		}
 
-		// Token: 0x0601B914 RID: 112916 RVA: 0x003E9161 File Offset: 0x003E7361
+		// Token: 0x0601D0E9 RID: 119017 RVA: 0x004153FD File Offset: 0x004135FD
 		public static void StartIUnlockQuest(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601B915 RID: 112917 RVA: 0x003E916A File Offset: 0x003E736A
+		// Token: 0x0601D0EA RID: 119018 RVA: 0x00415406 File Offset: 0x00413606
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B916 RID: 112918 RVA: 0x003E9175 File Offset: 0x003E7375
+		// Token: 0x0601D0EB RID: 119019 RVA: 0x00415411 File Offset: 0x00413611
 		public static void AddQuestId(FlatBufferBuilder builder, int questId)
 		{
 			builder.AddInt(1, questId, 0);
 		}
 
-		// Token: 0x0601B917 RID: 112919 RVA: 0x003E9180 File Offset: 0x003E7380
+		// Token: 0x0601D0EC RID: 119020 RVA: 0x0041541C File Offset: 0x0041361C
 		public static Offset<IUnlockQuest> EndIUnlockQuest(FlatBufferBuilder builder)
 		{
 			return new Offset<IUnlockQuest>(builder.EndTable());
 		}
 
-		// Token: 0x0601B918 RID: 112920 RVA: 0x003E9190 File Offset: 0x003E7390
+		// Token: 0x0601D0ED RID: 119021 RVA: 0x0041542C File Offset: 0x0041362C
 		public IUnlockQuestT UnPack()
 		{
 			IUnlockQuestT unlockQuestT = new IUnlockQuestT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return unlockQuestT;
 		}
 
-		// Token: 0x0601B919 RID: 112921 RVA: 0x003E91AB File Offset: 0x003E73AB
+		// Token: 0x0601D0EE RID: 119022 RVA: 0x00415447 File Offset: 0x00413647
 		public void UnPackTo(IUnlockQuestT _o)
 		{
 			_o.Type = this.Type;
 			_o.QuestId = this.QuestId;
 		}
 
-		// Token: 0x0601B91A RID: 112922 RVA: 0x003E91C8 File Offset: 0x003E73C8
+		// Token: 0x0601D0EF RID: 119023 RVA: 0x00415464 File Offset: 0x00413664
 		public static Offset<IUnlockQuest> Pack(FlatBufferBuilder builder, IUnlockQuestT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IUnlockQuest.CreateIUnlockQuest(builder, _o.Type, _o.QuestId);
 		}
 
-		// Token: 0x0400C8A4 RID: 51364
+		// Token: 0x0400D2D3 RID: 53971
 		private Table __p;
 	}
 }

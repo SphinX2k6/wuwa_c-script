@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007157 RID: 29015
+	// Token: 0x02007923 RID: 31011
 	public struct ISlideTrackMove : IFlatbufferObject
 	{
-		// Token: 0x1700D78E RID: 55182
-		// (get) Token: 0x060336FE RID: 210686 RVA: 0x006EE3E6 File Offset: 0x006EC5E6
+		// Token: 0x1700E373 RID: 58227
+		// (get) Token: 0x060369A8 RID: 223656 RVA: 0x0074EBF2 File Offset: 0x0074CDF2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060336FF RID: 210687 RVA: 0x006EE3F3 File Offset: 0x006EC5F3
+		// Token: 0x060369A9 RID: 223657 RVA: 0x0074EBFF File Offset: 0x0074CDFF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033700 RID: 210688 RVA: 0x006EE3FC File Offset: 0x006EC5FC
+		// Token: 0x060369AA RID: 223658 RVA: 0x0074EC08 File Offset: 0x0074CE08
 		public static ISlideTrackMove GetRootAsISlideTrackMove(ByteBuffer _bb)
 		{
 			return ISlideTrackMove.GetRootAsISlideTrackMove(_bb, default(ISlideTrackMove));
 		}
 
-		// Token: 0x06033701 RID: 210689 RVA: 0x006EE418 File Offset: 0x006EC618
+		// Token: 0x060369AB RID: 223659 RVA: 0x0074EC24 File Offset: 0x0074CE24
 		public static ISlideTrackMove GetRootAsISlideTrackMove(ByteBuffer _bb, ISlideTrackMove obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033702 RID: 210690 RVA: 0x006EE435 File Offset: 0x006EC635
+		// Token: 0x060369AC RID: 223660 RVA: 0x0074EC41 File Offset: 0x0074CE41
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033703 RID: 210691 RVA: 0x006EE444 File Offset: 0x006EC644
+		// Token: 0x060369AD RID: 223661 RVA: 0x0074EC50 File Offset: 0x0074CE50
 		public ISlideTrackMove __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D78F RID: 55183
-		// (get) Token: 0x06033704 RID: 210692 RVA: 0x006EE454 File Offset: 0x006EC654
+		// Token: 0x1700E374 RID: 58228
+		// (get) Token: 0x060369AE RID: 223662 RVA: 0x0074EC60 File Offset: 0x0074CE60
 		public ESplineMovePattern Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D790 RID: 55184
-		// (get) Token: 0x06033705 RID: 210693 RVA: 0x006EE490 File Offset: 0x006EC690
+		// Token: 0x1700E375 RID: 58229
+		// (get) Token: 0x060369AF RID: 223663 RVA: 0x0074EC9C File Offset: 0x0074CE9C
 		public float MaxOffsetDistance
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D791 RID: 55185
-		// (get) Token: 0x06033706 RID: 210694 RVA: 0x006EE4D0 File Offset: 0x006EC6D0
+		// Token: 0x1700E376 RID: 58230
+		// (get) Token: 0x060369B0 RID: 223664 RVA: 0x0074ECDC File Offset: 0x0074CEDC
 		public bool IsOneWay
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D792 RID: 55186
-		// (get) Token: 0x06033707 RID: 210695 RVA: 0x006EE510 File Offset: 0x006EC710
+		// Token: 0x1700E377 RID: 58231
+		// (get) Token: 0x060369B1 RID: 223665 RVA: 0x0074ED1C File Offset: 0x0074CF1C
 		public float LayerVerticalLimit
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D793 RID: 55187
-		// (get) Token: 0x06033708 RID: 210696 RVA: 0x006EE554 File Offset: 0x006EC754
+		// Token: 0x1700E378 RID: 58232
+		// (get) Token: 0x060369B2 RID: 223666 RVA: 0x0074ED60 File Offset: 0x0074CF60
 		public bool DynamicGravity
 		{
 			get
@@ -114,8 +114,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D794 RID: 55188
-		// (get) Token: 0x06033709 RID: 210697 RVA: 0x006EE594 File Offset: 0x006EC794
+		// Token: 0x1700E379 RID: 58233
+		// (get) Token: 0x060369B3 RID: 223667 RVA: 0x0074EDA0 File Offset: 0x0074CFA0
 		public float GravitySwitchAngularVelocity
 		{
 			get
@@ -129,8 +129,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D795 RID: 55189
-		// (get) Token: 0x0603370A RID: 210698 RVA: 0x006EE5D8 File Offset: 0x006EC7D8
+		// Token: 0x1700E37A RID: 58234
+		// (get) Token: 0x060369B4 RID: 223668 RVA: 0x0074EDE4 File Offset: 0x0074CFE4
 		public int AutoExitDistance
 		{
 			get
@@ -144,8 +144,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D796 RID: 55190
-		// (get) Token: 0x0603370B RID: 210699 RVA: 0x006EE618 File Offset: 0x006EC818
+		// Token: 0x1700E37B RID: 58235
+		// (get) Token: 0x060369B5 RID: 223669 RVA: 0x0074EE24 File Offset: 0x0074D024
 		public float DirectionAngleLimit
 		{
 			get
@@ -159,8 +159,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D797 RID: 55191
-		// (get) Token: 0x0603370C RID: 210700 RVA: 0x006EE65C File Offset: 0x006EC85C
+		// Token: 0x1700E37C RID: 58236
+		// (get) Token: 0x060369B6 RID: 223670 RVA: 0x0074EE68 File Offset: 0x0074D068
 		public float EdgeLimitCurveFactor
 		{
 			get
@@ -174,8 +174,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D798 RID: 55192
-		// (get) Token: 0x0603370D RID: 210701 RVA: 0x006EE6A0 File Offset: 0x006EC8A0
+		// Token: 0x1700E37D RID: 58237
+		// (get) Token: 0x060369B7 RID: 223671 RVA: 0x0074EEAC File Offset: 0x0074D0AC
 		public byte NullMask
 		{
 			get
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603370E RID: 210702 RVA: 0x006EE6E0 File Offset: 0x006EC8E0
+		// Token: 0x060369B8 RID: 223672 RVA: 0x0074EEEC File Offset: 0x0074D0EC
 		public static Offset<ISlideTrackMove> CreateISlideTrackMove(FlatBufferBuilder builder, ESplineMovePattern Type = ESplineMovePattern.PathLine, float MaxOffsetDistance = 0f, bool IsOneWay = false, float LayerVerticalLimit = 0f, bool DynamicGravity = false, float GravitySwitchAngularVelocity = 0f, int AutoExitDistance = 0, float DirectionAngleLimit = 0f, float EdgeLimitCurveFactor = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(10);
@@ -206,79 +206,79 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISlideTrackMove.EndISlideTrackMove(builder);
 		}
 
-		// Token: 0x0603370F RID: 210703 RVA: 0x006EE748 File Offset: 0x006EC948
+		// Token: 0x060369B9 RID: 223673 RVA: 0x0074EF54 File Offset: 0x0074D154
 		public static void StartISlideTrackMove(FlatBufferBuilder builder)
 		{
 			builder.StartTable(10);
 		}
 
-		// Token: 0x06033710 RID: 210704 RVA: 0x006EE752 File Offset: 0x006EC952
+		// Token: 0x060369BA RID: 223674 RVA: 0x0074EF5E File Offset: 0x0074D15E
 		public static void AddType(FlatBufferBuilder builder, ESplineMovePattern type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033711 RID: 210705 RVA: 0x006EE75D File Offset: 0x006EC95D
+		// Token: 0x060369BB RID: 223675 RVA: 0x0074EF69 File Offset: 0x0074D169
 		public static void AddMaxOffsetDistance(FlatBufferBuilder builder, float maxOffsetDistance)
 		{
 			builder.AddFloat(1, maxOffsetDistance, 0.0);
 		}
 
-		// Token: 0x06033712 RID: 210706 RVA: 0x006EE770 File Offset: 0x006EC970
+		// Token: 0x060369BC RID: 223676 RVA: 0x0074EF7C File Offset: 0x0074D17C
 		public static void AddIsOneWay(FlatBufferBuilder builder, bool isOneWay)
 		{
 			builder.AddBool(2, isOneWay, false);
 		}
 
-		// Token: 0x06033713 RID: 210707 RVA: 0x006EE77B File Offset: 0x006EC97B
+		// Token: 0x060369BD RID: 223677 RVA: 0x0074EF87 File Offset: 0x0074D187
 		public static void AddLayerVerticalLimit(FlatBufferBuilder builder, float layerVerticalLimit)
 		{
 			builder.AddFloat(3, layerVerticalLimit, 0.0);
 		}
 
-		// Token: 0x06033714 RID: 210708 RVA: 0x006EE78E File Offset: 0x006EC98E
+		// Token: 0x060369BE RID: 223678 RVA: 0x0074EF9A File Offset: 0x0074D19A
 		public static void AddDynamicGravity(FlatBufferBuilder builder, bool dynamicGravity)
 		{
 			builder.AddBool(4, dynamicGravity, false);
 		}
 
-		// Token: 0x06033715 RID: 210709 RVA: 0x006EE799 File Offset: 0x006EC999
+		// Token: 0x060369BF RID: 223679 RVA: 0x0074EFA5 File Offset: 0x0074D1A5
 		public static void AddGravitySwitchAngularVelocity(FlatBufferBuilder builder, float gravitySwitchAngularVelocity)
 		{
 			builder.AddFloat(5, gravitySwitchAngularVelocity, 0.0);
 		}
 
-		// Token: 0x06033716 RID: 210710 RVA: 0x006EE7AC File Offset: 0x006EC9AC
+		// Token: 0x060369C0 RID: 223680 RVA: 0x0074EFB8 File Offset: 0x0074D1B8
 		public static void AddAutoExitDistance(FlatBufferBuilder builder, int autoExitDistance)
 		{
 			builder.AddInt(6, autoExitDistance, 0);
 		}
 
-		// Token: 0x06033717 RID: 210711 RVA: 0x006EE7B7 File Offset: 0x006EC9B7
+		// Token: 0x060369C1 RID: 223681 RVA: 0x0074EFC3 File Offset: 0x0074D1C3
 		public static void AddDirectionAngleLimit(FlatBufferBuilder builder, float directionAngleLimit)
 		{
 			builder.AddFloat(7, directionAngleLimit, 0.0);
 		}
 
-		// Token: 0x06033718 RID: 210712 RVA: 0x006EE7CA File Offset: 0x006EC9CA
+		// Token: 0x060369C2 RID: 223682 RVA: 0x0074EFD6 File Offset: 0x0074D1D6
 		public static void AddEdgeLimitCurveFactor(FlatBufferBuilder builder, float edgeLimitCurveFactor)
 		{
 			builder.AddFloat(8, edgeLimitCurveFactor, 0.0);
 		}
 
-		// Token: 0x06033719 RID: 210713 RVA: 0x006EE7DD File Offset: 0x006EC9DD
+		// Token: 0x060369C3 RID: 223683 RVA: 0x0074EFE9 File Offset: 0x0074D1E9
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(9, nullMask, 0);
 		}
 
-		// Token: 0x0603371A RID: 210714 RVA: 0x006EE7E9 File Offset: 0x006EC9E9
+		// Token: 0x060369C4 RID: 223684 RVA: 0x0074EFF5 File Offset: 0x0074D1F5
 		public static Offset<ISlideTrackMove> EndISlideTrackMove(FlatBufferBuilder builder)
 		{
 			return new Offset<ISlideTrackMove>(builder.EndTable());
 		}
 
-		// Token: 0x0603371B RID: 210715 RVA: 0x006EE7F8 File Offset: 0x006EC9F8
+		// Token: 0x060369C5 RID: 223685 RVA: 0x0074F004 File Offset: 0x0074D204
 		public ISlideTrackMoveT UnPack()
 		{
 			ISlideTrackMoveT slideTrackMoveT = new ISlideTrackMoveT();
@@ -286,7 +286,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return slideTrackMoveT;
 		}
 
-		// Token: 0x0603371C RID: 210716 RVA: 0x006EE814 File Offset: 0x006ECA14
+		// Token: 0x060369C6 RID: 223686 RVA: 0x0074F020 File Offset: 0x0074D220
 		public void UnPackTo(ISlideTrackMoveT _o)
 		{
 			_o.Type = this.Type;
@@ -301,7 +301,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0603371D RID: 210717 RVA: 0x006EE89C File Offset: 0x006ECA9C
+		// Token: 0x060369C7 RID: 223687 RVA: 0x0074F0A8 File Offset: 0x0074D2A8
 		public static Offset<ISlideTrackMove> Pack(FlatBufferBuilder builder, ISlideTrackMoveT _o)
 		{
 			if (_o == null)
@@ -311,7 +311,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISlideTrackMove.CreateISlideTrackMove(builder, _o.Type, _o.MaxOffsetDistance, _o.IsOneWay, _o.LayerVerticalLimit, _o.DynamicGravity, _o.GravitySwitchAngularVelocity, _o.AutoExitDistance, _o.DirectionAngleLimit, _o.EdgeLimitCurveFactor, _o.NullMask);
 		}
 
-		// Token: 0x04011BF5 RID: 72693
+		// Token: 0x04012BE4 RID: 76772
 		private Table __p;
 	}
 }

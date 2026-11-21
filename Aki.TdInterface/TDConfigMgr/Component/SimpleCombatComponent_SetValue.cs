@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000898 RID: 2200
+	// Token: 0x0200093B RID: 2363
 	public class SimpleCombatComponent_SetValue
 	{
-		// Token: 0x04002048 RID: 8264
+		// Token: 0x0400225A RID: 8794
 		public bool? Disabled;
 
-		// Token: 0x04002049 RID: 8265
+		// Token: 0x0400225B RID: 8795
 		public bool? EdIsLocked;
 
-		// Token: 0x0400204A RID: 8266
+		// Token: 0x0400225C RID: 8796
 		public int Id;
 	}
 }

@@ -3,11 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016FD RID: 5885
+	// Token: 0x02001879 RID: 6265
 	[EnumExtensions]
 	public enum EVisualNovelOptionGroupType
 	{
-		// Token: 0x04004FAA RID: 20394
-		SolarSchoolExam
+		// Token: 0x040053D7 RID: 21463
+		Normal,
+		// Token: 0x040053D8 RID: 21464
+		FullScreen
 	}
 }

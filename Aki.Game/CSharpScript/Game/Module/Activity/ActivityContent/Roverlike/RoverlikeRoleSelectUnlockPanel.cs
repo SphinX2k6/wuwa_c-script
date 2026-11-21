@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200617C RID: 24956
+	// Token: 0x020050FA RID: 20730
 	public class RoverlikeRoleSelectUnlockPanel : UiPanelBase
 	{
-		// Token: 0x0603F13A RID: 258362 RVA: 0x00F3E290 File Offset: 0x00F3C490
+		// Token: 0x06033DFA RID: 212474 RVA: 0x00E85158 File Offset: 0x00E83358
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,14 +33,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F13B RID: 258363 RVA: 0x00F3E357 File Offset: 0x00F3C557
+		// Token: 0x06033DFB RID: 212475 RVA: 0x00E8521F File Offset: 0x00E8341F
 		[NullableContext(1)]
 		public void SetFunctionCallback(Action callback)
 		{
 			this.FunctionCallback = callback;
 		}
 
-		// Token: 0x0603F13C RID: 258364 RVA: 0x00F3E360 File Offset: 0x00F3C560
+		// Token: 0x06033DFC RID: 212476 RVA: 0x00E85228 File Offset: 0x00E83428
 		public void SetFunctionButtonActive(bool active)
 		{
 			UUIButtonComponent button = base.GetButton(2);
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			uiitem.SetUIActive(active);
 		}
 
-		// Token: 0x0603F13D RID: 258365 RVA: 0x00F3E390 File Offset: 0x00F3C590
+		// Token: 0x06033DFD RID: 212477 RVA: 0x00E85258 File Offset: 0x00E83458
 		[NullableContext(1)]
 		public void RefreshUnlockDesc(string textId)
 		{
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			text.SetText("", true);
 		}
 
-		// Token: 0x0603F13E RID: 258366 RVA: 0x00F3E3CF File Offset: 0x00F3C5CF
+		// Token: 0x06033DFE RID: 212478 RVA: 0x00E85297 File Offset: 0x00E83497
 		private void OnClickFunction()
 		{
 			Action functionCallback = this.FunctionCallback;
@@ -85,20 +85,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			functionCallback();
 		}
 
-		// Token: 0x04020E45 RID: 134725
+		// Token: 0x0401B772 RID: 112498
 		[Nullable(2)]
 		private Action FunctionCallback;
 
-		// Token: 0x0200C3E7 RID: 50151
+		// Token: 0x0200ADCE RID: 44494
 		private class EComponents
 		{
-			// Token: 0x0403B1D2 RID: 242130
+			// Token: 0x04035B33 RID: 219955
 			public const int SprLock = 0;
 
-			// Token: 0x0403B1D3 RID: 242131
+			// Token: 0x04035B34 RID: 219956
 			public const int TxtActivated = 1;
 
-			// Token: 0x0403B1D4 RID: 242132
+			// Token: 0x04035B35 RID: 219957
 			public const int BtnFunctionA = 2;
 		}
 	}

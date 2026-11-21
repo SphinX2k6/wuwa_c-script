@@ -1,26 +1,23 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D3B RID: 7483
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F4C RID: 8012
 	public class IPostAkEventMusicSubtitle_SetValue
 	{
-		// Token: 0x040060C1 RID: 24769
+		// Token: 0x0400663D RID: 26173
 		public EPostAkEvent Type;
 
-		// Token: 0x040060C2 RID: 24770
+		// Token: 0x0400663E RID: 26174
 		public string MusicSubtitleGroupTag;
 
-		// Token: 0x040060C3 RID: 24771
+		// Token: 0x0400663F RID: 26175
 		public string AkEvent;
 
-		// Token: 0x040060C4 RID: 24772
+		// Token: 0x04006640 RID: 26176
 		public bool? IsLoop;
 
-		// Token: 0x040060C5 RID: 24773
+		// Token: 0x04006641 RID: 26177
 		public bool? IsEndAkEvent;
 	}
 }

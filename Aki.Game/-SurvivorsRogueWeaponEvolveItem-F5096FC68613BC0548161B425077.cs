@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02002B6C RID: 11116
+// Token: 0x020020E8 RID: 8424
 internal enum <SurvivorsRogueWeaponEvolveItem>F5096FC68613BC0548161B42507716F60E2E9E78DADC6383A5F2E758B215C8B20__EComponents
 {
-	// Token: 0x0400AC2F RID: 44079
+	// Token: 0x0400B035 RID: 45109
 	PanelSelf,
-	// Token: 0x0400AC30 RID: 44080
+	// Token: 0x0400B036 RID: 45110
 	SpriteBgNormal,
-	// Token: 0x0400AC31 RID: 44081
+	// Token: 0x0400B037 RID: 45111
 	PanelGot,
-	// Token: 0x0400AC32 RID: 44082
+	// Token: 0x0400B038 RID: 45112
 	SpriteBgGot,
-	// Token: 0x0400AC33 RID: 44083
+	// Token: 0x0400B039 RID: 45113
 	NormalLine,
-	// Token: 0x0400AC34 RID: 44084
+	// Token: 0x0400B03A RID: 45114
 	GotLine
 }

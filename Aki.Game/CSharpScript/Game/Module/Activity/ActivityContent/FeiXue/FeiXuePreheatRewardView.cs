@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 {
-	// Token: 0x02006648 RID: 26184
+	// Token: 0x020055C6 RID: 21958
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FeiXuePreheatRewardView : UiTickViewBase
 	{
-		// Token: 0x060419D6 RID: 268758 RVA: 0x00FEA379 File Offset: 0x00FE8579
+		// Token: 0x0603669B RID: 222875 RVA: 0x00F31432 File Offset: 0x00F2F632
 		public FeiXuePreheatRewardView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060419D7 RID: 268759 RVA: 0x00FEA384 File Offset: 0x00FE8584
+		// Token: 0x0603669C RID: 222876 RVA: 0x00F3143C File Offset: 0x00F2F63C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			};
 		}
 
-		// Token: 0x060419D8 RID: 268760 RVA: 0x00FEA3F4 File Offset: 0x00FE85F4
+		// Token: 0x0603669D RID: 222877 RVA: 0x00F314AC File Offset: 0x00F2F6AC
 		protected override void OnStart()
 		{
 			this.ActivityData = (this.OpenParam as ActivityFeiXuePreheatData);
@@ -40,19 +40,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			this.RefreshTaskLayout(true);
 		}
 
-		// Token: 0x060419D9 RID: 268761 RVA: 0x00FEA457 File Offset: 0x00FE8657
+		// Token: 0x0603669E RID: 222878 RVA: 0x00F3150F File Offset: 0x00F2F70F
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x060419DA RID: 268762 RVA: 0x00FEA475 File Offset: 0x00FE8675
+		// Token: 0x0603669F RID: 222879 RVA: 0x00F3152D File Offset: 0x00F2F72D
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x060419DB RID: 268763 RVA: 0x00FEA494 File Offset: 0x00FE8694
+		// Token: 0x060366A0 RID: 222880 RVA: 0x00F3154C File Offset: 0x00F2F74C
 		protected override void OnTick(float delta)
 		{
 			string localTextNew = ConfigMultiTextLang.GetLocalTextNew("ActivityRemainingTime", null);
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			text.SetText(remainTimeText, true);
 		}
 
-		// Token: 0x060419DC RID: 268764 RVA: 0x00FEA4D7 File Offset: 0x00FE86D7
+		// Token: 0x060366A1 RID: 222881 RVA: 0x00F3158F File Offset: 0x00F2F78F
 		private void OnRefreshCommonActivityRedDot(int id)
 		{
 			if (id != this.ActivityData.Id)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			this.RefreshTaskLayout(false);
 		}
 
-		// Token: 0x060419DD RID: 268765 RVA: 0x00FEA4EF File Offset: 0x00FE86EF
+		// Token: 0x060366A2 RID: 222882 RVA: 0x00F315A7 File Offset: 0x00F2F7A7
 		private void RefreshTaskLayout(bool isPlayAnim = false)
 		{
 			this.TaskLayout.RefreshByData(this.ActivityData.GetTaskDataSortList(), delegate
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			}, isPlayAnim);
 		}
 
-		// Token: 0x060419DE RID: 268766 RVA: 0x00FEA514 File Offset: 0x00FE8714
+		// Token: 0x060366A3 RID: 222883 RVA: 0x00F315CC File Offset: 0x00F2F7CC
 		private FeiXuePreheatTaskItem CreateTaskItem()
 		{
 			return new FeiXuePreheatTaskItem
@@ -98,23 +98,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			};
 		}
 
-		// Token: 0x060419DF RID: 268767 RVA: 0x00FEA52D File Offset: 0x00FE872D
+		// Token: 0x060366A4 RID: 222884 RVA: 0x00F315E5 File Offset: 0x00F2F7E5
 		private void OnRewardBtnClick()
 		{
 			ActivityFeiXuePreheatController.Instance.RequestTaskReward(this.ActivityData.Id, null);
 		}
 
-		// Token: 0x060419E0 RID: 268768 RVA: 0x00FEA545 File Offset: 0x00FE8745
+		// Token: 0x060366A5 RID: 222885 RVA: 0x00F315FD File Offset: 0x00F2F7FD
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04022270 RID: 139888
+		// Token: 0x0401CBA1 RID: 117665
 		[Nullable(2)]
 		private ActivityFeiXuePreheatData ActivityData;
 
-		// Token: 0x04022271 RID: 139889
+		// Token: 0x0401CBA2 RID: 117666
 		private GenericScrollViewNew<FeiXuePreheatTaskItem, FeiXuePreheatTaskData> TaskLayout;
 	}
 }

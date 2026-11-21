@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000942 RID: 2370
+	// Token: 0x0200098D RID: 2445
 	public class ConfigSkillGameplayButtonByGameplayType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600379F RID: 14239 RVA: 0x00193DB3 File Offset: 0x00191FB3
+		// Token: 0x06003961 RID: 14689 RVA: 0x001A0FD3 File Offset: 0x0019F1D3
 		static ConfigSkillGameplayButtonByGameplayType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSkillGameplayButtonByGameplayType.CreateStaticDefaultValue), new Action(ConfigSkillGameplayButtonByGameplayType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060037A0 RID: 14240 RVA: 0x00193DD4 File Offset: 0x00191FD4
+		// Token: 0x06003962 RID: 14690 RVA: 0x001A0FF4 File Offset: 0x0019F1F4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSkillGameplayButtonByGameplayType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060037A1 RID: 14241 RVA: 0x00193E53 File Offset: 0x00192053
+		// Token: 0x06003963 RID: 14691 RVA: 0x001A1073 File Offset: 0x0019F273
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSkillGameplayButtonByGameplayType.LogPair = null;
 			ConfigSkillGameplayButtonByGameplayType.HandleId = 0;
 		}
 
-		// Token: 0x060037A2 RID: 14242 RVA: 0x00193E61 File Offset: 0x00192061
+		// Token: 0x06003964 RID: 14692 RVA: 0x001A1081 File Offset: 0x0019F281
 		public static void Init()
 		{
 			ConfigSkillGameplayButtonByGameplayType.HandleId = ConfigCommon.InitDataStatement(ConfigSkillGameplayButtonByGameplayType.HandleId, "db_skillbutton.db", "select BinData from `SkillGameplayButton` where GameplayType=?");
 		}
 
-		// Token: 0x060037A3 RID: 14243 RVA: 0x00193E7C File Offset: 0x0019207C
+		// Token: 0x06003965 RID: 14693 RVA: 0x001A109C File Offset: 0x0019F29C
 		[NullableContext(2)]
 		public static IReadOnlyList<SkillGameplayButton> GetConfigList(int p0GameplayType, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040040B4 RID: 16564
+		// Token: 0x040042C1 RID: 17089
 		private const string DB = "db_skillbutton.db";
 
-		// Token: 0x040040B5 RID: 16565
+		// Token: 0x040042C2 RID: 17090
 		private const string FILE = "j.技能按钮.xlsx";
 
-		// Token: 0x040040B6 RID: 16566
+		// Token: 0x040042C3 RID: 17091
 		private const string TABLE = "SkillGameplayButton";
 
-		// Token: 0x040040B7 RID: 16567
+		// Token: 0x040042C4 RID: 17092
 		private const string COMMAND = "select BinData from `SkillGameplayButton` where GameplayType=?";
 
-		// Token: 0x040040B8 RID: 16568
+		// Token: 0x040042C5 RID: 17093
 		private const string KEY_PREFIX = "SkillGameplayButtonByGameplayType";
 
-		// Token: 0x040040B9 RID: 16569
+		// Token: 0x040042C6 RID: 17094
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040040BA RID: 16570
+		// Token: 0x040042C7 RID: 17095
 		private static int HandleId;
 	}
 }

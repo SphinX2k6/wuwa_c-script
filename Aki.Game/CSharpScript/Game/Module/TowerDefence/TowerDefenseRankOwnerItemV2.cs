@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B2B RID: 19243
+	// Token: 0x02003AD3 RID: 15059
 	public class TowerDefenseRankOwnerItemV2 : TowerDefenseRankItemV2
 	{
-		// Token: 0x06031D6E RID: 204142 RVA: 0x00B92520 File Offset: 0x00B90720
+		// Token: 0x06026AFE RID: 158462 RVA: 0x00AD6584 File Offset: 0x00AD4784
 		protected override void RefreshRankBg()
 		{
 			UUITexture texture = base.GetTexture(0);
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			base.SetTextureByPath(resourcePath, texture, null, null);
 		}
 
-		// Token: 0x0401A982 RID: 108930
+		// Token: 0x040152D4 RID: 86740
 		[Nullable(1)]
 		private const string OwnerNormalRankBg = "T_oNlineLordGymRankBgNor";
 	}

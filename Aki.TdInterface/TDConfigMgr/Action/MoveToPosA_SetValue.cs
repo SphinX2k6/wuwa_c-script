@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020E0 RID: 8416
+	// Token: 0x02002341 RID: 9025
 	public class MoveToPosA_SetValue
 	{
-		// Token: 0x04006EC0 RID: 28352
+		// Token: 0x040074F1 RID: 29937
 		public float Timeout;
 
-		// Token: 0x04006EC1 RID: 28353
-		[Nullable(1)]
+		// Token: 0x040074F2 RID: 29938
 		public PosA Pos;
 	}
 }

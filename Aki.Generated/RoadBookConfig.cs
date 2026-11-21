@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FD1 RID: 4049
+	// Token: 0x020010B9 RID: 4281
 	public struct RoadBookConfig : IFlatbufferObject
 	{
-		// Token: 0x17002EB6 RID: 11958
-		// (get) Token: 0x0600BDB3 RID: 48563 RVA: 0x002E1E7D File Offset: 0x002E007D
+		// Token: 0x17002F31 RID: 12081
+		// (get) Token: 0x0600C3FD RID: 50173 RVA: 0x002FE449 File Offset: 0x002FC649
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BDB4 RID: 48564 RVA: 0x002E1E8A File Offset: 0x002E008A
+		// Token: 0x0600C3FE RID: 50174 RVA: 0x002FE456 File Offset: 0x002FC656
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BDB5 RID: 48565 RVA: 0x002E1E94 File Offset: 0x002E0094
+		// Token: 0x0600C3FF RID: 50175 RVA: 0x002FE460 File Offset: 0x002FC660
 		public static RoadBookConfig GetRootAsRoadBookConfig(ByteBuffer _bb)
 		{
 			return RoadBookConfig.GetRootAsRoadBookConfig(_bb, default(RoadBookConfig));
 		}
 
-		// Token: 0x0600BDB6 RID: 48566 RVA: 0x002E1EB0 File Offset: 0x002E00B0
+		// Token: 0x0600C400 RID: 50176 RVA: 0x002FE47C File Offset: 0x002FC67C
 		public static RoadBookConfig GetRootAsRoadBookConfig(ByteBuffer _bb, RoadBookConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BDB7 RID: 48567 RVA: 0x002E1ECD File Offset: 0x002E00CD
+		// Token: 0x0600C401 RID: 50177 RVA: 0x002FE499 File Offset: 0x002FC699
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BDB8 RID: 48568 RVA: 0x002E1EDC File Offset: 0x002E00DC
+		// Token: 0x0600C402 RID: 50178 RVA: 0x002FE4A8 File Offset: 0x002FC6A8
 		public RoadBookConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002EB7 RID: 11959
-		// (get) Token: 0x0600BDB9 RID: 48569 RVA: 0x002E1EEC File Offset: 0x002E00EC
+		// Token: 0x17002F32 RID: 12082
+		// (get) Token: 0x0600C403 RID: 50179 RVA: 0x002FE4B8 File Offset: 0x002FC6B8
 		public int ActivityId
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002EB8 RID: 11960
-		// (get) Token: 0x0600BDBA RID: 48570 RVA: 0x002E1F28 File Offset: 0x002E0128
+		// Token: 0x17002F33 RID: 12083
+		// (get) Token: 0x0600C404 RID: 50180 RVA: 0x002FE4F4 File Offset: 0x002FC6F4
 		public int MaxLevel
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002EB9 RID: 11961
-		// (get) Token: 0x0600BDBB RID: 48571 RVA: 0x002E1F64 File Offset: 0x002E0164
+		// Token: 0x17002F34 RID: 12084
+		// (get) Token: 0x0600C405 RID: 50181 RVA: 0x002FE530 File Offset: 0x002FC730
 		public int ExpItemId
 		{
 			get
@@ -96,8 +96,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002EBA RID: 11962
-		// (get) Token: 0x0600BDBC RID: 48572 RVA: 0x002E1FA0 File Offset: 0x002E01A0
+		// Token: 0x17002F35 RID: 12085
+		// (get) Token: 0x0600C406 RID: 50182 RVA: 0x002FE56C File Offset: 0x002FC76C
 		public int FinalRewardId
 		{
 			get
@@ -111,7 +111,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BDBD RID: 48573 RVA: 0x002E1FE0 File Offset: 0x002E01E0
+		// Token: 0x0600C407 RID: 50183 RVA: 0x002FE5AC File Offset: 0x002FC7AC
 		public DicIntString? VehicleClassificationName(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -122,8 +122,8 @@ namespace Aki.Config
 			return new DicIntString?(default(DicIntString).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17002EBB RID: 11963
-		// (get) Token: 0x0600BDBE RID: 48574 RVA: 0x002E2044 File Offset: 0x002E0244
+		// Token: 0x17002F36 RID: 12086
+		// (get) Token: 0x0600C408 RID: 50184 RVA: 0x002FE610 File Offset: 0x002FC810
 		public int VehicleClassificationNameLength
 		{
 			get
@@ -137,24 +137,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BDBF RID: 48575 RVA: 0x002E2070 File Offset: 0x002E0270
+		// Token: 0x0600C409 RID: 50185 RVA: 0x002FE63C File Offset: 0x002FC83C
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用VehicleClassificationNameFrozenDict()缓存字典，遍历请使用VehicleClassificationNameIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, string> VehicleClassificationName()
+		public Dictionary<int, string> VehicleClassificationName()
 		{
 			return this.VehicleClassificationNameIter().ToDictionary((DicIntString element) => element.Key, (DicIntString element) => element.Value);
 		}
 
-		// Token: 0x0600BDC0 RID: 48576 RVA: 0x002E20C6 File Offset: 0x002E02C6
+		// Token: 0x0600C40A RID: 50186 RVA: 0x002FE692 File Offset: 0x002FC892
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntString> VehicleClassificationNameIter()
+		public IEnumerable<DicIntString> VehicleClassificationNameIter()
 		{
 			RoadBookConfig.<VehicleClassificationNameIter>d__20 <VehicleClassificationNameIter>d__ = new RoadBookConfig.<VehicleClassificationNameIter>d__20(-2);
 			<VehicleClassificationNameIter>d__.<>3__<>4__this = this;
 			return <VehicleClassificationNameIter>d__;
 		}
 
-		// Token: 0x0600BDC1 RID: 48577 RVA: 0x002E20DC File Offset: 0x002E02DC
+		// Token: 0x0600C40B RID: 50187 RVA: 0x002FE6A8 File Offset: 0x002FC8A8
 		[NullableContext(2)]
 		public string GetVehicleClassificationName(int key)
 		{
@@ -167,7 +166,7 @@ namespace Aki.Config
 			return result;
 		}
 
-		// Token: 0x0600BDC2 RID: 48578 RVA: 0x002E2104 File Offset: 0x002E0304
+		// Token: 0x0600C40C RID: 50188 RVA: 0x002FE6D0 File Offset: 0x002FC8D0
 		private void EnsureVehicleClassificationNameCacheIfNeeded()
 		{
 			if (this.VehicleClassificationNameCache != null)
@@ -177,22 +176,18 @@ namespace Aki.Config
 			this.VehicleClassificationNameCache = this.VehicleClassificationNameIter().ToFrozenDictionary((DicIntString kvp) => kvp.Key, (DicIntString kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600BDC3 RID: 48579 RVA: 0x002E216A File Offset: 0x002E036A
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		public FrozenDictionary<int, string> GetVehicleClassificationNameFrozenDict(int key)
+		// Token: 0x0600C40D RID: 50189 RVA: 0x002FE736 File Offset: 0x002FC936
+		[NullableContext(1)]
+		public FrozenDictionary<int, string> GetVehicleClassificationNameFrozenDict()
 		{
 			this.EnsureVehicleClassificationNameCacheIfNeeded();
 			return this.VehicleClassificationNameCache;
 		}
 
-		// Token: 0x040050AC RID: 20652
+		// Token: 0x04005694 RID: 22164
 		private Table __p;
 
-		// Token: 0x040050AD RID: 20653
+		// Token: 0x04005695 RID: 22165
 		[Nullable(new byte[]
 		{
 			2,

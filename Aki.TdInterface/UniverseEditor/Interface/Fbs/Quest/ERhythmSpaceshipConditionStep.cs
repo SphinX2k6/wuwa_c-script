@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CC2 RID: 15554
+	// Token: 0x020040D6 RID: 16598
 	public enum ERhythmSpaceshipConditionStep : byte
 	{
-		// Token: 0x0400B48C RID: 46220
+		// Token: 0x0400BE2E RID: 48686
 		Interact
 	}
 }

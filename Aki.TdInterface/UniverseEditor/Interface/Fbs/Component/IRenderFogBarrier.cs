@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005846 RID: 22598
+	// Token: 0x02005E50 RID: 24144
 	public struct IRenderFogBarrier : IFlatbufferObject
 	{
-		// Token: 0x1700A8D7 RID: 43223
-		// (get) Token: 0x06026057 RID: 155735 RVA: 0x0053DC24 File Offset: 0x0053BE24
+		// Token: 0x1700B202 RID: 45570
+		// (get) Token: 0x0602859E RID: 165278 RVA: 0x00584488 File Offset: 0x00582688
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026058 RID: 155736 RVA: 0x0053DC31 File Offset: 0x0053BE31
+		// Token: 0x0602859F RID: 165279 RVA: 0x00584495 File Offset: 0x00582695
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026059 RID: 155737 RVA: 0x0053DC38 File Offset: 0x0053BE38
+		// Token: 0x060285A0 RID: 165280 RVA: 0x0058449C File Offset: 0x0058269C
 		public static IRenderFogBarrier GetRootAsIRenderFogBarrier(ByteBuffer _bb)
 		{
 			return IRenderFogBarrier.GetRootAsIRenderFogBarrier(_bb, default(IRenderFogBarrier));
 		}
 
-		// Token: 0x0602605A RID: 155738 RVA: 0x0053DC54 File Offset: 0x0053BE54
+		// Token: 0x060285A1 RID: 165281 RVA: 0x005844B8 File Offset: 0x005826B8
 		public static IRenderFogBarrier GetRootAsIRenderFogBarrier(ByteBuffer _bb, IRenderFogBarrier obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602605B RID: 155739 RVA: 0x0053DC71 File Offset: 0x0053BE71
+		// Token: 0x060285A2 RID: 165282 RVA: 0x005844D5 File Offset: 0x005826D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602605C RID: 155740 RVA: 0x0053DC80 File Offset: 0x0053BE80
+		// Token: 0x060285A3 RID: 165283 RVA: 0x005844E4 File Offset: 0x005826E4
 		public IRenderFogBarrier __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A8D8 RID: 43224
-		// (get) Token: 0x0602605D RID: 155741 RVA: 0x0053DC90 File Offset: 0x0053BE90
+		// Token: 0x1700B203 RID: 45571
+		// (get) Token: 0x060285A4 RID: 165284 RVA: 0x005844F4 File Offset: 0x005826F4
 		public ERenderSpecifiedRangeType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A8D9 RID: 43225
-		// (get) Token: 0x0602605E RID: 155742 RVA: 0x0053DCCC File Offset: 0x0053BECC
+		// Token: 0x1700B204 RID: 45572
+		// (get) Token: 0x060285A5 RID: 165285 RVA: 0x00584530 File Offset: 0x00582730
 		public TTargetEntity CenterTargetType
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602605F RID: 155743 RVA: 0x0053DD08 File Offset: 0x0053BF08
+		// Token: 0x060285A6 RID: 165286 RVA: 0x0058456C File Offset: 0x0058276C
 		public TTable? CenterTarget<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -90,38 +90,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06026060 RID: 155744 RVA: 0x0053DD4C File Offset: 0x0053BF4C
+		// Token: 0x060285A7 RID: 165287 RVA: 0x005845B0 File Offset: 0x005827B0
 		public IPlayerEntity CenterTargetAsIPlayerEntity()
 		{
 			return this.CenterTarget<IPlayerEntity>().Value;
 		}
 
-		// Token: 0x06026061 RID: 155745 RVA: 0x0053DD68 File Offset: 0x0053BF68
+		// Token: 0x060285A8 RID: 165288 RVA: 0x005845CC File Offset: 0x005827CC
 		public ISelfEntity CenterTargetAsISelfEntity()
 		{
 			return this.CenterTarget<ISelfEntity>().Value;
 		}
 
-		// Token: 0x06026062 RID: 155746 RVA: 0x0053DD84 File Offset: 0x0053BF84
+		// Token: 0x060285A9 RID: 165289 RVA: 0x005845E8 File Offset: 0x005827E8
 		public ITargetEntity CenterTargetAsITargetEntity()
 		{
 			return this.CenterTarget<ITargetEntity>().Value;
 		}
 
-		// Token: 0x06026063 RID: 155747 RVA: 0x0053DDA0 File Offset: 0x0053BFA0
+		// Token: 0x060285AA RID: 165290 RVA: 0x00584604 File Offset: 0x00582804
 		public ITriggeredEntity CenterTargetAsITriggeredEntity()
 		{
 			return this.CenterTarget<ITriggeredEntity>().Value;
 		}
 
-		// Token: 0x06026064 RID: 155748 RVA: 0x0053DDBC File Offset: 0x0053BFBC
+		// Token: 0x060285AB RID: 165291 RVA: 0x00584620 File Offset: 0x00582820
 		public IVehicleEntity CenterTargetAsIVehicleEntity()
 		{
 			return this.CenterTarget<IVehicleEntity>().Value;
 		}
 
-		// Token: 0x1700A8DA RID: 43226
-		// (get) Token: 0x06026065 RID: 155749 RVA: 0x0053DDD8 File Offset: 0x0053BFD8
+		// Token: 0x1700B205 RID: 45573
+		// (get) Token: 0x060285AC RID: 165292 RVA: 0x0058463C File Offset: 0x0058283C
 		public IVectorInfo? Center
 		{
 			get
@@ -135,8 +135,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A8DB RID: 43227
-		// (get) Token: 0x06026066 RID: 155750 RVA: 0x0053DE38 File Offset: 0x0053C038
+		// Token: 0x1700B206 RID: 45574
+		// (get) Token: 0x060285AD RID: 165293 RVA: 0x0058469C File Offset: 0x0058289C
 		public IVectorInfo? Size
 		{
 			get
@@ -150,8 +150,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A8DC RID: 43228
-		// (get) Token: 0x06026067 RID: 155751 RVA: 0x0053DE98 File Offset: 0x0053C098
+		// Token: 0x1700B207 RID: 45575
+		// (get) Token: 0x060285AE RID: 165294 RVA: 0x005846FC File Offset: 0x005828FC
 		public IVectorInfo? Rotator
 		{
 			get
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026068 RID: 155752 RVA: 0x0053DEF6 File Offset: 0x0053C0F6
+		// Token: 0x060285AF RID: 165295 RVA: 0x0058475A File Offset: 0x0058295A
 		public static Offset<IRenderFogBarrier> CreateIRenderFogBarrier(FlatBufferBuilder builder, ERenderSpecifiedRangeType Type = ERenderSpecifiedRangeType.FlowerBridge, TTargetEntity CenterTarget_type = TTargetEntity.NONE, int CenterTargetOffset = 0, Offset<IVectorInfo> CenterOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> SizeOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> RotatorOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(6);
@@ -178,55 +178,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRenderFogBarrier.EndIRenderFogBarrier(builder);
 		}
 
-		// Token: 0x06026069 RID: 155753 RVA: 0x0053DF32 File Offset: 0x0053C132
+		// Token: 0x060285B0 RID: 165296 RVA: 0x00584796 File Offset: 0x00582996
 		public static void StartIRenderFogBarrier(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0602606A RID: 155754 RVA: 0x0053DF3B File Offset: 0x0053C13B
+		// Token: 0x060285B1 RID: 165297 RVA: 0x0058479F File Offset: 0x0058299F
 		public static void AddType(FlatBufferBuilder builder, ERenderSpecifiedRangeType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602606B RID: 155755 RVA: 0x0053DF46 File Offset: 0x0053C146
+		// Token: 0x060285B2 RID: 165298 RVA: 0x005847AA File Offset: 0x005829AA
 		public static void AddCenterTargetType(FlatBufferBuilder builder, TTargetEntity centerTargetType)
 		{
 			builder.AddByte(1, (byte)centerTargetType, 0);
 		}
 
-		// Token: 0x0602606C RID: 155756 RVA: 0x0053DF51 File Offset: 0x0053C151
+		// Token: 0x060285B3 RID: 165299 RVA: 0x005847B5 File Offset: 0x005829B5
 		public static void AddCenterTarget(FlatBufferBuilder builder, int centerTargetOffset)
 		{
 			builder.AddOffset(2, centerTargetOffset, 0);
 		}
 
-		// Token: 0x0602606D RID: 155757 RVA: 0x0053DF5C File Offset: 0x0053C15C
+		// Token: 0x060285B4 RID: 165300 RVA: 0x005847C0 File Offset: 0x005829C0
 		public static void AddCenter(FlatBufferBuilder builder, Offset<IVectorInfo> centerOffset)
 		{
 			builder.AddOffset(3, centerOffset.Value, 0);
 		}
 
-		// Token: 0x0602606E RID: 155758 RVA: 0x0053DF6C File Offset: 0x0053C16C
+		// Token: 0x060285B5 RID: 165301 RVA: 0x005847D0 File Offset: 0x005829D0
 		public static void AddSize(FlatBufferBuilder builder, Offset<IVectorInfo> sizeOffset)
 		{
 			builder.AddOffset(4, sizeOffset.Value, 0);
 		}
 
-		// Token: 0x0602606F RID: 155759 RVA: 0x0053DF7C File Offset: 0x0053C17C
+		// Token: 0x060285B6 RID: 165302 RVA: 0x005847E0 File Offset: 0x005829E0
 		public static void AddRotator(FlatBufferBuilder builder, Offset<IVectorInfo> rotatorOffset)
 		{
 			builder.AddOffset(5, rotatorOffset.Value, 0);
 		}
 
-		// Token: 0x06026070 RID: 155760 RVA: 0x0053DF8C File Offset: 0x0053C18C
+		// Token: 0x060285B7 RID: 165303 RVA: 0x005847F0 File Offset: 0x005829F0
 		public static Offset<IRenderFogBarrier> EndIRenderFogBarrier(FlatBufferBuilder builder)
 		{
 			return new Offset<IRenderFogBarrier>(builder.EndTable());
 		}
 
-		// Token: 0x06026071 RID: 155761 RVA: 0x0053DF9C File Offset: 0x0053C19C
+		// Token: 0x060285B8 RID: 165304 RVA: 0x00584800 File Offset: 0x00582A00
 		public IRenderFogBarrierT UnPack()
 		{
 			IRenderFogBarrierT renderFogBarrierT = new IRenderFogBarrierT();
@@ -234,7 +234,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return renderFogBarrierT;
 		}
 
-		// Token: 0x06026072 RID: 155762 RVA: 0x0053DFB8 File Offset: 0x0053C1B8
+		// Token: 0x060285B9 RID: 165305 RVA: 0x0058481C File Offset: 0x00582A1C
 		public void UnPackTo(IRenderFogBarrierT _o)
 		{
 			_o.Type = this.Type;
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.Rotator = ((this.Rotator != null) ? this.Rotator.Value.UnPack() : null);
 		}
 
-		// Token: 0x06026073 RID: 155763 RVA: 0x0053E1C8 File Offset: 0x0053C3C8
+		// Token: 0x060285BA RID: 165306 RVA: 0x00584A2C File Offset: 0x00582C2C
 		public static Offset<IRenderFogBarrier> Pack(FlatBufferBuilder builder, IRenderFogBarrierT _o)
 		{
 			if (_o == null)
@@ -278,7 +278,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRenderFogBarrier.CreateIRenderFogBarrier(builder, _o.Type, centerTarget_type, centerTargetOffset, centerOffset, sizeOffset, rotatorOffset);
 		}
 
-		// Token: 0x0400ED65 RID: 60773
+		// Token: 0x0400FA54 RID: 64084
 		private Table __p;
 	}
 }

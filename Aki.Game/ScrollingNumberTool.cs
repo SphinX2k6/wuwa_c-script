@@ -4,36 +4,39 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B7D RID: 11133
-[NullableContext(1)]
+// Token: 0x020020F9 RID: 8441
+[NullableContext(2)]
 [Nullable(0)]
 public class ScrollingNumberTool
 {
-	// Token: 0x060170F9 RID: 94457 RVA: 0x005DAEB0 File Offset: 0x005D90B0
+	// Token: 0x06014B2A RID: 84778 RVA: 0x00607A20 File Offset: 0x00605C20
+	[NullableContext(1)]
 	public UniTask InitCurve(string curveResId = "UiCurve_ScrollingTime")
 	{
-		ScrollingNumberTool.<InitCurve>d__9 <InitCurve>d__;
+		ScrollingNumberTool.<InitCurve>d__10 <InitCurve>d__;
 		<InitCurve>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<InitCurve>d__.<>4__this = this;
 		<InitCurve>d__.curveResId = curveResId;
 		<InitCurve>d__.<>1__state = -1;
-		<InitCurve>d__.<>t__builder.Start<ScrollingNumberTool.<InitCurve>d__9>(ref <InitCurve>d__);
+		<InitCurve>d__.<>t__builder.Start<ScrollingNumberTool.<InitCurve>d__10>(ref <InitCurve>d__);
 		return <InitCurve>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060170FA RID: 94458 RVA: 0x005DAEFB File Offset: 0x005D90FB
-	public void Init(int startValue, int endValue, Action<float> onUpdateCallback, int duration = 1000)
+	// Token: 0x06014B2B RID: 84779 RVA: 0x00607A6B File Offset: 0x00605C6B
+	[NullableContext(1)]
+	public void Init(float startValue, float endValue, Action<float> onUpdateCallback, int duration = 1000, [Nullable(2)] Action onCompleteCallback = null)
 	{
 		this.RemoveTimer();
 		this.OnUpdateCallback = onUpdateCallback;
-		this.StartValue = (float)startValue;
-		this.EndValue = (float)endValue;
+		this.OnCompleteCallback = onCompleteCallback;
+		this.StartValue = startValue;
+		this.EndValue = endValue;
 		this.Duration = (float)duration;
-		this.CurrentValue = (float)startValue;
+		this.CurrentValue = startValue;
 		this.UpdateDisplay();
 	}
 
-	// Token: 0x060170FB RID: 94459 RVA: 0x005DAF34 File Offset: 0x005D9134
+	// Token: 0x06014B2C RID: 84780 RVA: 0x00607AA8 File Offset: 0x00605CA8
 	public void StartScrolling()
 	{
 		this.IsScrolling = true;
@@ -43,15 +46,17 @@ public class ScrollingNumberTool
 		this.ScrollingPlayerTimer = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.Update), 20f, 1f, null, null, true);
 	}
 
-	// Token: 0x060170FC RID: 94460 RVA: 0x005DAF8E File Offset: 0x005D918E
+	// Token: 0x06014B2D RID: 84781 RVA: 0x00607B02 File Offset: 0x00605D02
 	public void Clear()
 	{
 		this.UiCurveNumber = null;
 		this.OnUpdateCallback = null;
+		this.OnCompleteCallback = null;
 		this.RemoveTimer();
 	}
 
-	// Token: 0x060170FD RID: 94461 RVA: 0x005DAFA4 File Offset: 0x005D91A4
+	// Token: 0x06014B2E RID: 84782 RVA: 0x00607B20 File Offset: 0x00605D20
+	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -59,15 +64,15 @@ public class ScrollingNumberTool
 	})]
 	private UniTask<UCurveFloat> LoadCurveFloat(string resId)
 	{
-		ScrollingNumberTool.<LoadCurveFloat>d__13 <LoadCurveFloat>d__;
+		ScrollingNumberTool.<LoadCurveFloat>d__14 <LoadCurveFloat>d__;
 		<LoadCurveFloat>d__.<>t__builder = AsyncUniTaskMethodBuilder<UCurveFloat>.Create();
 		<LoadCurveFloat>d__.resId = resId;
 		<LoadCurveFloat>d__.<>1__state = -1;
-		<LoadCurveFloat>d__.<>t__builder.Start<ScrollingNumberTool.<LoadCurveFloat>d__13>(ref <LoadCurveFloat>d__);
+		<LoadCurveFloat>d__.<>t__builder.Start<ScrollingNumberTool.<LoadCurveFloat>d__14>(ref <LoadCurveFloat>d__);
 		return <LoadCurveFloat>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060170FE RID: 94462 RVA: 0x005DAFE7 File Offset: 0x005D91E7
+	// Token: 0x06014B2F RID: 84783 RVA: 0x00607B63 File Offset: 0x00605D63
 	private void RemoveTimer()
 	{
 		if (this.ScrollingPlayerTimer != null && TimerSystem.GameplayTimeInstance.Has(this.ScrollingPlayerTimer))
@@ -77,7 +82,7 @@ public class ScrollingNumberTool
 		this.ScrollingPlayerTimer = null;
 	}
 
-	// Token: 0x060170FF RID: 94463 RVA: 0x005DB01C File Offset: 0x005D921C
+	// Token: 0x06014B30 RID: 84784 RVA: 0x00607B98 File Offset: 0x00605D98
 	private void Update(float deltaTime)
 	{
 		if (!this.IsScrolling)
@@ -103,10 +108,17 @@ public class ScrollingNumberTool
 			this.IsScrolling = false;
 			this.CurrentValue = this.EndValue;
 			this.UpdateDisplay();
+			Action onCompleteCallback = this.OnCompleteCallback;
+			this.OnCompleteCallback = null;
+			if (onCompleteCallback == null)
+			{
+				return;
+			}
+			onCompleteCallback();
 		}
 	}
 
-	// Token: 0x06017100 RID: 94464 RVA: 0x005DB0C0 File Offset: 0x005D92C0
+	// Token: 0x06014B31 RID: 84785 RVA: 0x00607C53 File Offset: 0x00605E53
 	private void UpdateDisplay()
 	{
 		Action<float> onUpdateCallback = this.OnUpdateCallback;
@@ -117,13 +129,13 @@ public class ScrollingNumberTool
 		onUpdateCallback(this.CurrentValue);
 	}
 
-	// Token: 0x06017101 RID: 94465 RVA: 0x005DB0D8 File Offset: 0x005D92D8
+	// Token: 0x06014B32 RID: 84786 RVA: 0x00607C6B File Offset: 0x00605E6B
 	private float EaseOutQuad(float t)
 	{
 		return t * (2f - t);
 	}
 
-	// Token: 0x06017102 RID: 94466 RVA: 0x005DB0E3 File Offset: 0x005D92E3
+	// Token: 0x06014B33 RID: 84787 RVA: 0x00607C76 File Offset: 0x00605E76
 	public void SetTargetNumber(int targetNumber, int? duration = null)
 	{
 		this.EndValue = (float)targetNumber;
@@ -134,39 +146,39 @@ public class ScrollingNumberTool
 		this.StartScrolling();
 	}
 
-	// Token: 0x06017103 RID: 94467 RVA: 0x005DB10A File Offset: 0x005D930A
+	// Token: 0x06014B34 RID: 84788 RVA: 0x00607C9D File Offset: 0x00605E9D
 	public float GetCurrentValue()
 	{
 		return this.CurrentValue;
 	}
 
-	// Token: 0x0400ACA0 RID: 44192
-	[Nullable(2)]
+	// Token: 0x0400B0A6 RID: 45222
 	private UCurveFloat UiCurveNumber;
 
-	// Token: 0x0400ACA1 RID: 44193
-	[Nullable(2)]
+	// Token: 0x0400B0A7 RID: 45223
 	private TimerHandle ScrollingPlayerTimer;
 
-	// Token: 0x0400ACA2 RID: 44194
-	[Nullable(2)]
+	// Token: 0x0400B0A8 RID: 45224
 	private Action<float> OnUpdateCallback;
 
-	// Token: 0x0400ACA3 RID: 44195
+	// Token: 0x0400B0A9 RID: 45225
+	private Action OnCompleteCallback;
+
+	// Token: 0x0400B0AA RID: 45226
 	private float StartValue;
 
-	// Token: 0x0400ACA4 RID: 44196
+	// Token: 0x0400B0AB RID: 45227
 	private float EndValue;
 
-	// Token: 0x0400ACA5 RID: 44197
+	// Token: 0x0400B0AC RID: 45228
 	private float CurrentValue;
 
-	// Token: 0x0400ACA6 RID: 44198
+	// Token: 0x0400B0AD RID: 45229
 	private float Duration;
 
-	// Token: 0x0400ACA7 RID: 44199
+	// Token: 0x0400B0AE RID: 45230
 	private float ElapsedTime;
 
-	// Token: 0x0400ACA8 RID: 44200
+	// Token: 0x0400B0AF RID: 45231
 	private bool IsScrolling;
 }

@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001925 RID: 6437
+// Token: 0x02000DDE RID: 3550
 public class MediumItemGridPhantomSortNumComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BC7C RID: 48252 RVA: 0x002AAAD0 File Offset: 0x002A8CD0
+	// Token: 0x06009066 RID: 36966 RVA: 0x002B522C File Offset: 0x002B342C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -19,14 +19,14 @@ public class MediumItemGridPhantomSortNumComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BC7D RID: 48253 RVA: 0x002AAB18 File Offset: 0x002A8D18
+	// Token: 0x06009067 RID: 36967 RVA: 0x002B5274 File Offset: 0x002B3474
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemBSortNumA";
 	}
 
-	// Token: 0x0600BC7E RID: 48254 RVA: 0x002AAB20 File Offset: 0x002A8D20
+	// Token: 0x06009068 RID: 36968 RVA: 0x002B527C File Offset: 0x002B347C
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -43,10 +43,10 @@ public class MediumItemGridPhantomSortNumComponent : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x02007E8E RID: 32398
+	// Token: 0x02007015 RID: 28693
 	private class EComponent
 	{
-		// Token: 0x04029664 RID: 169572
+		// Token: 0x04024990 RID: 149904
 		public const int TxtSortNum = 0;
 	}
 }

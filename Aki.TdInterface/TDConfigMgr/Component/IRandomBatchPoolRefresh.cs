@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200064A RID: 1610
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006E7 RID: 1767
 	public class IRandomBatchPoolRefresh : IEntityBatchRefreshMode
 	{
-		// Token: 0x06002272 RID: 8818 RVA: 0x0005EC68 File Offset: 0x0005CE68
+		// Token: 0x06002578 RID: 9592 RVA: 0x0006597C File Offset: 0x00063B7C
 		private IRandomBatchPoolRefresh_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002273 RID: 8819 RVA: 0x0005ECA0 File Offset: 0x0005CEA0
+		// Token: 0x06002579 RID: 9593 RVA: 0x000659B4 File Offset: 0x00063BB4
 		public static IRandomBatchPoolRefresh Create([Nullable(2)] IRandomBatchPoolRefresh instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002274 RID: 8820 RVA: 0x0005ECB3 File Offset: 0x0005CEB3
+		// Token: 0x0600257A RID: 9594 RVA: 0x000659C7 File Offset: 0x00063BC7
 		public static IRandomBatchPoolRefresh CreateFromSetValue([Nullable(2)] IRandomBatchPoolRefresh_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002275 RID: 8821 RVA: 0x0005ECC6 File Offset: 0x0005CEC6
+		// Token: 0x0600257B RID: 9595 RVA: 0x000659DA File Offset: 0x00063BDA
 		public new IRandomBatchPoolRefresh_SetValue ToSetValue()
 		{
 			return new IRandomBatchPoolRefresh_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000929 RID: 2345
-		// (get) Token: 0x06002276 RID: 8822 RVA: 0x0005ECF1 File Offset: 0x0005CEF1
-		// (set) Token: 0x06002277 RID: 8823 RVA: 0x0005ED1C File Offset: 0x0005CF1C
+		// Token: 0x170009E0 RID: 2528
+		// (get) Token: 0x0600257C RID: 9596 RVA: 0x00065A05 File Offset: 0x00063C05
+		// (set) Token: 0x0600257D RID: 9597 RVA: 0x00065A30 File Offset: 0x00063C30
 		public override EEntityBatchRefreshMode Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700092A RID: 2346
-		// (get) Token: 0x06002278 RID: 8824 RVA: 0x0005ED2C File Offset: 0x0005CF2C
-		// (set) Token: 0x06002279 RID: 8825 RVA: 0x0005EDBF File Offset: 0x0005CFBF
+		// Token: 0x170009E1 RID: 2529
+		// (get) Token: 0x0600257E RID: 9598 RVA: 0x00065A40 File Offset: 0x00063C40
+		// (set) Token: 0x0600257F RID: 9599 RVA: 0x00065AD3 File Offset: 0x00063CD3
 		public override List<IEntityListBatch> EntityBatches
 		{
 			get
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700092B RID: 2347
-		// (get) Token: 0x0600227A RID: 8826 RVA: 0x0005EDD4 File Offset: 0x0005CFD4
-		// (set) Token: 0x0600227B RID: 8827 RVA: 0x0005EE0E File Offset: 0x0005D00E
+		// Token: 0x170009E2 RID: 2530
+		// (get) Token: 0x06002580 RID: 9600 RVA: 0x00065AE8 File Offset: 0x00063CE8
+		// (set) Token: 0x06002581 RID: 9601 RVA: 0x00065B22 File Offset: 0x00063D22
 		public virtual bool? IsRestartAfterAllBatchesFinished
 		{
 			get
@@ -147,18 +145,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040017F3 RID: 6131
+		// Token: 0x040019E5 RID: 6629
 		[Nullable(2)]
 		protected new IRandomBatchPoolRefresh FbInstance;
 
-		// Token: 0x040017F4 RID: 6132
+		// Token: 0x040019E6 RID: 6630
 		[Nullable(2)]
 		protected new IRandomBatchPoolRefresh_SetValue PocoInterface;
 
-		// Token: 0x040017F5 RID: 6133
+		// Token: 0x040019E7 RID: 6631
 		private List<IEntityListBatch> _EntityBatchesCache;
 
-		// Token: 0x040017F6 RID: 6134
+		// Token: 0x040019E8 RID: 6632
 		private bool _EntityBatchesInited;
 	}
 }

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C62 RID: 23650
+	// Token: 0x02004C42 RID: 19522
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PassiveSkillCdInfo
 	{
-		// Token: 0x0603BC83 RID: 244867 RVA: 0x00E475B8 File Offset: 0x00E457B8
+		// Token: 0x06030BCE RID: 199630 RVA: 0x00D97998 File Offset: 0x00D95B98
 		public double GetCurRemainingCd(int entityId)
 		{
 			double valueOrDefault = this.SkillCdFinishStampMap.GetValueOrDefault(entityId, 0.0);
@@ -20,13 +20,13 @@ namespace CSharpScript.Game.Module.Battle
 			return 0.0;
 		}
 
-		// Token: 0x0603BC84 RID: 244868 RVA: 0x00E47608 File Offset: 0x00E45808
+		// Token: 0x06030BCF RID: 199631 RVA: 0x00D979E8 File Offset: 0x00D95BE8
 		public bool IsInCd(int entityId)
 		{
 			return this.GetCurRemainingCd(entityId) > (double)Math.Max(this.Threshold, 0f);
 		}
 
-		// Token: 0x0603BC85 RID: 244869 RVA: 0x00E47624 File Offset: 0x00E45824
+		// Token: 0x06030BD0 RID: 199632 RVA: 0x00D97A04 File Offset: 0x00D95C04
 		private unsafe void RemoveInvalidCd()
 		{
 			List<int> list = new List<int>();
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC86 RID: 244870 RVA: 0x00E477A0 File Offset: 0x00E459A0
+		// Token: 0x06030BD1 RID: 199633 RVA: 0x00D97B80 File Offset: 0x00D95D80
 		public bool StartCd(long skillId, int entityId, float cdTime = -1f)
 		{
 			if (this.IsInCd(entityId))
@@ -93,34 +93,34 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BC87 RID: 244871 RVA: 0x00E4783B File Offset: 0x00E45A3B
+		// Token: 0x06030BD2 RID: 199634 RVA: 0x00D97C1B File Offset: 0x00D95E1B
 		public void ResetAllCd()
 		{
 			this.SkillCdFinishStampMap.Clear();
 		}
 
-		// Token: 0x0401F214 RID: 127508
+		// Token: 0x04019CC5 RID: 105669
 		private const int MAX_CD_COUNT = 20;
 
-		// Token: 0x0401F215 RID: 127509
+		// Token: 0x04019CC6 RID: 105670
 		public long SkillId;
 
-		// Token: 0x0401F216 RID: 127510
+		// Token: 0x04019CC7 RID: 105671
 		public float SkillCd;
 
-		// Token: 0x0401F217 RID: 127511
+		// Token: 0x04019CC8 RID: 105672
 		public float Threshold;
 
-		// Token: 0x0401F218 RID: 127512
+		// Token: 0x04019CC9 RID: 105673
 		public bool IsShareAllCdSkill;
 
-		// Token: 0x0401F219 RID: 127513
+		// Token: 0x04019CCA RID: 105674
 		public readonly HashSet<int> EntityIds = new HashSet<int>();
 
-		// Token: 0x0401F21A RID: 127514
+		// Token: 0x04019CCB RID: 105675
 		public float CurMaxCd;
 
-		// Token: 0x0401F21B RID: 127515
+		// Token: 0x04019CCC RID: 105676
 		public readonly OrderedDictionary<int, double> SkillCdFinishStampMap = new OrderedDictionary<int, double>();
 	}
 }

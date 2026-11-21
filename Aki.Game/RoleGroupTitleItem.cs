@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x0200116A RID: 4458
+// Token: 0x0200061E RID: 1566
 [Nullable(new byte[]
 {
 	0,
@@ -12,7 +12,7 @@ using UnrealEngine;
 })]
 public class RoleGroupTitleItem : SyncGridProxyAbstract<RoleGroupTitleData_Data>
 {
-	// Token: 0x060075B7 RID: 30135 RVA: 0x001854DC File Offset: 0x001836DC
+	// Token: 0x0600494E RID: 18766 RVA: 0x0018E094 File Offset: 0x0018C294
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -26,7 +26,7 @@ public class RoleGroupTitleItem : SyncGridProxyAbstract<RoleGroupTitleData_Data>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060075B8 RID: 30136 RVA: 0x00185548 File Offset: 0x00183748
+	// Token: 0x0600494F RID: 18767 RVA: 0x0018E100 File Offset: 0x0018C300
 	[NullableContext(1)]
 	public override void Refresh(RoleGroupTitleData_Data data)
 	{
@@ -63,13 +63,13 @@ public class RoleGroupTitleItem : SyncGridProxyAbstract<RoleGroupTitleData_Data>
 		}
 	}
 
-	// Token: 0x0200773E RID: 30526
+	// Token: 0x020068CB RID: 26827
 	private class ETitleComp
 	{
-		// Token: 0x04027554 RID: 161108
+		// Token: 0x0402288D RID: 141453
 		public const int TxtTitle = 0;
 
-		// Token: 0x04027555 RID: 161109
+		// Token: 0x0402288E RID: 141454
 		public const int UiItemEmpty = 3;
 	}
 }

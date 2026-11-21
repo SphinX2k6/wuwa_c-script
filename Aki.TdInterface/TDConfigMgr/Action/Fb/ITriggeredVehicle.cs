@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029C6 RID: 10694
+	// Token: 0x02002CB3 RID: 11443
 	public class ITriggeredVehicle : ITargetVehicle
 	{
-		// Token: 0x0600EC68 RID: 60520 RVA: 0x002285D1 File Offset: 0x002267D1
-		[NullableContext(1)]
+		// Token: 0x0600FAFF RID: 64255 RVA: 0x00245F55 File Offset: 0x00244155
 		public static ITriggeredVehicle Create(ITriggeredVehicle? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A9E RID: 19102
-		// (get) Token: 0x0600EC69 RID: 60521 RVA: 0x002285F0 File Offset: 0x002267F0
+		// Token: 0x17004E47 RID: 20039
+		// (get) Token: 0x0600FB00 RID: 64256 RVA: 0x00245F74 File Offset: 0x00244174
 		public override ETargetVehicle Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008226 RID: 33318
+		// Token: 0x04008917 RID: 35095
 		private ITriggeredVehicle Instance;
 	}
 }

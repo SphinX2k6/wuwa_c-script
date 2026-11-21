@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Item;
@@ -9,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200175B RID: 5979
+// Token: 0x02000C14 RID: 3092
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionRecoveryResultView : UiViewBase
 {
-	// Token: 0x0600AD04 RID: 44292 RVA: 0x0026E55A File Offset: 0x0026C75A
+	// Token: 0x060080EB RID: 33003 RVA: 0x002789D6 File Offset: 0x00276BD6
 	public VisionRecoveryResultView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600AD05 RID: 44293 RVA: 0x0026E570 File Offset: 0x0026C770
+	// Token: 0x060080EC RID: 33004 RVA: 0x002789EC File Offset: 0x00276BEC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +36,7 @@ public class VisionRecoveryResultView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600AD06 RID: 44294 RVA: 0x0026E630 File Offset: 0x0026C830
+	// Token: 0x060080ED RID: 33005 RVA: 0x00278AAC File Offset: 0x00276CAC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionRecoveryResultView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -48,7 +47,7 @@ public class VisionRecoveryResultView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AD07 RID: 44295 RVA: 0x0026E674 File Offset: 0x0026C874
+	// Token: 0x060080EE RID: 33006 RVA: 0x00278AF0 File Offset: 0x00276CF0
 	private void RefreshRecoverySlotPanel(IReadOnlyList<PhantomItem> costPhantoms)
 	{
 		InventoryModel instance = InventoryModel.Instance;
@@ -71,10 +70,10 @@ public class VisionRecoveryResultView : UiViewBase
 		this.RecoverySlotPanel.RefreshUi(list);
 	}
 
-	// Token: 0x0600AD08 RID: 44296 RVA: 0x0026E710 File Offset: 0x0026C910
+	// Token: 0x060080EF RID: 33007 RVA: 0x00278B8C File Offset: 0x00276D8C
 	private void RefreshMainReward(IReadOnlyList<AddCountItemInfo> items)
 	{
-		List<PhantomItemData> phantomItemDataListByAddCountItemInfo = InventoryModel.Instance.GetPhantomItemDataListByAddCountItemInfo(items.ToList<AddCountItemInfo>());
+		List<PhantomItemData> phantomItemDataListByAddCountItemInfo = InventoryModel.Instance.GetPhantomItemDataListByAddCountItemInfo(items);
 		if (phantomItemDataListByAddCountItemInfo.Count <= 0)
 		{
 			Log.Instance.Info(ELogModule.Calabash, ELogAuthor.BB, "VisionRecoveryResultView 主奖励为空", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -83,7 +82,7 @@ public class VisionRecoveryResultView : UiViewBase
 		this.MainRewardVision.RefreshUi(phantomItemDataListByAddCountItemInfo[0]);
 	}
 
-	// Token: 0x0600AD09 RID: 44297 RVA: 0x0026E76C File Offset: 0x0026C96C
+	// Token: 0x060080F0 RID: 33008 RVA: 0x00278BE0 File Offset: 0x00276DE0
 	private UniTask RefreshSubReward(IReadOnlyList<AddCountItemInfo> items)
 	{
 		VisionRecoveryResultView.<RefreshSubReward>d__9 <RefreshSubReward>d__;
@@ -95,7 +94,7 @@ public class VisionRecoveryResultView : UiViewBase
 		return <RefreshSubReward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AD0A RID: 44298 RVA: 0x0026E7B8 File Offset: 0x0026C9B8
+	// Token: 0x060080F1 RID: 33009 RVA: 0x00278C2C File Offset: 0x00276E2C
 	private void BindStartAnimationCallBack(IReadOnlyList<AddCountItemInfo> items)
 	{
 		if (items.Count <= 0)
@@ -126,13 +125,13 @@ public class VisionRecoveryResultView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x0600AD0B RID: 44299 RVA: 0x0026E805 File Offset: 0x0026CA05
+	// Token: 0x060080F2 RID: 33010 RVA: 0x00278C79 File Offset: 0x00276E79
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600AD0C RID: 44300 RVA: 0x0026E80E File Offset: 0x0026CA0E
+	// Token: 0x060080F3 RID: 33011 RVA: 0x00278C82 File Offset: 0x00276E82
 	[NullableContext(2)]
 	private void OnClickRewardCallback(bool isAddVision, PhantomItemData data)
 	{
@@ -143,32 +142,32 @@ public class VisionRecoveryResultView : UiViewBase
 		ItemController.Instance.OpenItemTipsByItemUid(data.GetUniqueId(), data.GetConfigId(), true, null);
 	}
 
-	// Token: 0x04004EB0 RID: 20144
+	// Token: 0x04004F59 RID: 20313
 	[Nullable(2)]
 	private VisionRecoverySlotPanel RecoverySlotPanel;
 
-	// Token: 0x04004EB1 RID: 20145
+	// Token: 0x04004F5A RID: 20314
 	[Nullable(2)]
 	private VisionRecoverySlotItem MainRewardVision;
 
-	// Token: 0x04004EB2 RID: 20146
+	// Token: 0x04004F5B RID: 20315
 	private readonly List<VisionRecoverySlotItem> SubRewardVisionList = new List<VisionRecoverySlotItem>();
 
-	// Token: 0x02007D41 RID: 32065
+	// Token: 0x02006EC7 RID: 28359
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402903C RID: 167996
+		// Token: 0x04024367 RID: 148327
 		RecoverySlotPanel,
-		// Token: 0x0402903D RID: 167997
+		// Token: 0x04024368 RID: 148328
 		RecoveryMainReward,
-		// Token: 0x0402903E RID: 167998
+		// Token: 0x04024369 RID: 148329
 		RecoverySubRewardRoot,
-		// Token: 0x0402903F RID: 167999
+		// Token: 0x0402436A RID: 148330
 		RecoverySubRewardItemRoot,
-		// Token: 0x04029040 RID: 168000
+		// Token: 0x0402436B RID: 148331
 		RecoverySubRewardItem,
-		// Token: 0x04029041 RID: 168001
+		// Token: 0x0402436C RID: 148332
 		MaskBtn
 	}
 }

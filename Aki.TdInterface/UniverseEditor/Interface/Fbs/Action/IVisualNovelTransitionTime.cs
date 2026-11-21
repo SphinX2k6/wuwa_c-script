@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075F2 RID: 30194
+	// Token: 0x02007E00 RID: 32256
 	public struct IVisualNovelTransitionTime : IFlatbufferObject
 	{
-		// Token: 0x1700E559 RID: 58713
-		// (get) Token: 0x06036FF4 RID: 225268 RVA: 0x007765E8 File Offset: 0x007747E8
+		// Token: 0x1700F197 RID: 61847
+		// (get) Token: 0x0603A499 RID: 238745 RVA: 0x007DA6E4 File Offset: 0x007D88E4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036FF5 RID: 225269 RVA: 0x007765F5 File Offset: 0x007747F5
+		// Token: 0x0603A49A RID: 238746 RVA: 0x007DA6F1 File Offset: 0x007D88F1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036FF6 RID: 225270 RVA: 0x007765FC File Offset: 0x007747FC
+		// Token: 0x0603A49B RID: 238747 RVA: 0x007DA6F8 File Offset: 0x007D88F8
 		public static IVisualNovelTransitionTime GetRootAsIVisualNovelTransitionTime(ByteBuffer _bb)
 		{
 			return IVisualNovelTransitionTime.GetRootAsIVisualNovelTransitionTime(_bb, default(IVisualNovelTransitionTime));
 		}
 
-		// Token: 0x06036FF7 RID: 225271 RVA: 0x00776618 File Offset: 0x00774818
+		// Token: 0x0603A49C RID: 238748 RVA: 0x007DA714 File Offset: 0x007D8914
 		public static IVisualNovelTransitionTime GetRootAsIVisualNovelTransitionTime(ByteBuffer _bb, IVisualNovelTransitionTime obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036FF8 RID: 225272 RVA: 0x00776635 File Offset: 0x00774835
+		// Token: 0x0603A49D RID: 238749 RVA: 0x007DA731 File Offset: 0x007D8931
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036FF9 RID: 225273 RVA: 0x00776644 File Offset: 0x00774844
+		// Token: 0x0603A49E RID: 238750 RVA: 0x007DA740 File Offset: 0x007D8940
 		public IVisualNovelTransitionTime __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E55A RID: 58714
-		// (get) Token: 0x06036FFA RID: 225274 RVA: 0x00776654 File Offset: 0x00774854
+		// Token: 0x1700F198 RID: 61848
+		// (get) Token: 0x0603A49F RID: 238751 RVA: 0x007DA750 File Offset: 0x007D8950
 		public EVisualNovelTransitionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E55B RID: 58715
-		// (get) Token: 0x06036FFB RID: 225275 RVA: 0x00776690 File Offset: 0x00774890
+		// Token: 0x1700F199 RID: 61849
+		// (get) Token: 0x0603A4A0 RID: 238752 RVA: 0x007DA78C File Offset: 0x007D898C
 		public IVisualNovelDate? EndDate
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E55C RID: 58716
-		// (get) Token: 0x06036FFC RID: 225276 RVA: 0x007766F0 File Offset: 0x007748F0
+		// Token: 0x1700F19A RID: 61850
+		// (get) Token: 0x0603A4A1 RID: 238753 RVA: 0x007DA7EC File Offset: 0x007D89EC
 		public int EndPeriodId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E55D RID: 58717
-		// (get) Token: 0x06036FFD RID: 225277 RVA: 0x0077672C File Offset: 0x0077492C
+		// Token: 0x1700F19B RID: 61851
+		// (get) Token: 0x0603A4A2 RID: 238754 RVA: 0x007DA828 File Offset: 0x007D8A28
 		public bool IsFullScreen
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E55E RID: 58718
-		// (get) Token: 0x06036FFE RID: 225278 RVA: 0x0077676C File Offset: 0x0077496C
+		// Token: 0x1700F19C RID: 61852
+		// (get) Token: 0x0603A4A3 RID: 238755 RVA: 0x007DA868 File Offset: 0x007D8A68
 		public byte NullMask
 		{
 			get
@@ -118,7 +118,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036FFF RID: 225279 RVA: 0x007767A9 File Offset: 0x007749A9
+		// Token: 0x0603A4A4 RID: 238756 RVA: 0x007DA8A5 File Offset: 0x007D8AA5
 		public static Offset<IVisualNovelTransitionTime> CreateIVisualNovelTransitionTime(FlatBufferBuilder builder, EVisualNovelTransitionType Type = EVisualNovelTransitionType.Location, Offset<IVisualNovelDate> EndDateOffset = default(Offset<IVisualNovelDate>), int EndPeriodId = 0, bool IsFullScreen = false, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -130,49 +130,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelTransitionTime.EndIVisualNovelTransitionTime(builder);
 		}
 
-		// Token: 0x06037000 RID: 225280 RVA: 0x007767DD File Offset: 0x007749DD
+		// Token: 0x0603A4A5 RID: 238757 RVA: 0x007DA8D9 File Offset: 0x007D8AD9
 		public static void StartIVisualNovelTransitionTime(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06037001 RID: 225281 RVA: 0x007767E6 File Offset: 0x007749E6
+		// Token: 0x0603A4A6 RID: 238758 RVA: 0x007DA8E2 File Offset: 0x007D8AE2
 		public static void AddType(FlatBufferBuilder builder, EVisualNovelTransitionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06037002 RID: 225282 RVA: 0x007767F1 File Offset: 0x007749F1
+		// Token: 0x0603A4A7 RID: 238759 RVA: 0x007DA8ED File Offset: 0x007D8AED
 		public static void AddEndDate(FlatBufferBuilder builder, Offset<IVisualNovelDate> endDateOffset)
 		{
 			builder.AddOffset(1, endDateOffset.Value, 0);
 		}
 
-		// Token: 0x06037003 RID: 225283 RVA: 0x00776801 File Offset: 0x00774A01
+		// Token: 0x0603A4A8 RID: 238760 RVA: 0x007DA8FD File Offset: 0x007D8AFD
 		public static void AddEndPeriodId(FlatBufferBuilder builder, int endPeriodId)
 		{
 			builder.AddInt(2, endPeriodId, 0);
 		}
 
-		// Token: 0x06037004 RID: 225284 RVA: 0x0077680C File Offset: 0x00774A0C
+		// Token: 0x0603A4A9 RID: 238761 RVA: 0x007DA908 File Offset: 0x007D8B08
 		public static void AddIsFullScreen(FlatBufferBuilder builder, bool isFullScreen)
 		{
 			builder.AddBool(3, isFullScreen, false);
 		}
 
-		// Token: 0x06037005 RID: 225285 RVA: 0x00776817 File Offset: 0x00774A17
+		// Token: 0x0603A4AA RID: 238762 RVA: 0x007DA913 File Offset: 0x007D8B13
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06037006 RID: 225286 RVA: 0x00776822 File Offset: 0x00774A22
+		// Token: 0x0603A4AB RID: 238763 RVA: 0x007DA91E File Offset: 0x007D8B1E
 		public static Offset<IVisualNovelTransitionTime> EndIVisualNovelTransitionTime(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisualNovelTransitionTime>(builder.EndTable());
 		}
 
-		// Token: 0x06037007 RID: 225287 RVA: 0x00776830 File Offset: 0x00774A30
+		// Token: 0x0603A4AC RID: 238764 RVA: 0x007DA92C File Offset: 0x007D8B2C
 		public IVisualNovelTransitionTimeT UnPack()
 		{
 			IVisualNovelTransitionTimeT visualNovelTransitionTimeT = new IVisualNovelTransitionTimeT();
@@ -180,7 +180,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return visualNovelTransitionTimeT;
 		}
 
-		// Token: 0x06037008 RID: 225288 RVA: 0x0077684C File Offset: 0x00774A4C
+		// Token: 0x0603A4AD RID: 238765 RVA: 0x007DA948 File Offset: 0x007D8B48
 		public void UnPackTo(IVisualNovelTransitionTimeT _o)
 		{
 			_o.Type = this.Type;
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06037009 RID: 225289 RVA: 0x007768B8 File Offset: 0x00774AB8
+		// Token: 0x0603A4AE RID: 238766 RVA: 0x007DA9B4 File Offset: 0x007D8BB4
 		public static Offset<IVisualNovelTransitionTime> Pack(FlatBufferBuilder builder, IVisualNovelTransitionTimeT _o)
 		{
 			if (_o == null)
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelTransitionTime.CreateIVisualNovelTransitionTime(builder, _o.Type, endDateOffset, _o.EndPeriodId, _o.IsFullScreen, _o.NullMask);
 		}
 
-		// Token: 0x04012560 RID: 75104
+		// Token: 0x040135AA RID: 79274
 		private Table __p;
 	}
 }

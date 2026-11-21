@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200294B RID: 10571
+	// Token: 0x02002C2D RID: 11309
 	public class IEnableSectionalCameraOperation : ICameraOperationType
 	{
-		// Token: 0x0600EA72 RID: 60018 RVA: 0x00225596 File Offset: 0x00223796
-		[NullableContext(1)]
+		// Token: 0x0600F8DD RID: 63709 RVA: 0x00242B76 File Offset: 0x00240D76
 		public static IEnableSectionalCameraOperation Create(IEnableSectionalCameraOperation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700499E RID: 18846
-		// (get) Token: 0x0600EA73 RID: 60019 RVA: 0x002255B5 File Offset: 0x002237B5
+		// Token: 0x17004D31 RID: 19761
+		// (get) Token: 0x0600F8DE RID: 63710 RVA: 0x00242B95 File Offset: 0x00240D95
 		public override ECameraOperationType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700499F RID: 18847
-		// (get) Token: 0x0600EA74 RID: 60020 RVA: 0x002255C4 File Offset: 0x002237C4
+		// Token: 0x17004D32 RID: 19762
+		// (get) Token: 0x0600F8DF RID: 63711 RVA: 0x00242BA4 File Offset: 0x00240DA4
 		public virtual bool? EnableRotate
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049A0 RID: 18848
-		// (get) Token: 0x0600EA75 RID: 60021 RVA: 0x002255FC File Offset: 0x002237FC
+		// Token: 0x17004D33 RID: 19763
+		// (get) Token: 0x0600F8E0 RID: 63712 RVA: 0x00242BDC File Offset: 0x00240DDC
 		public virtual bool? EnableZoom
 		{
 			get
@@ -59,7 +57,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400813B RID: 33083
+		// Token: 0x04008817 RID: 34839
 		private IEnableSectionalCameraOperation Instance;
 	}
 }

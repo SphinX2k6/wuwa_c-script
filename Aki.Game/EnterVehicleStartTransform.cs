@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020031F6 RID: 12790
+// Token: 0x02002765 RID: 10085
 public class EnterVehicleStartTransform
 {
-	// Token: 0x0400D8E6 RID: 55526
+	// Token: 0x0400DD84 RID: 56708
 	[Nullable(1)]
 	public readonly Vector RootPos = Vector.Create();
 
-	// Token: 0x0400D8E7 RID: 55527
+	// Token: 0x0400DD85 RID: 56709
 	public float Yaw;
 }

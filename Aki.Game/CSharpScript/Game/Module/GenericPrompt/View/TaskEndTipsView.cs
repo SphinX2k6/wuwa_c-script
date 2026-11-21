@@ -9,24 +9,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GenericPrompt.View
 {
-	// Token: 0x020059AF RID: 22959
+	// Token: 0x02004988 RID: 18824
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TaskEndTipsView : GenericPromptFloatTipsBase
 	{
-		// Token: 0x0603A393 RID: 238483 RVA: 0x00DD67D4 File Offset: 0x00DD49D4
+		// Token: 0x0602F2B9 RID: 193209 RVA: 0x00D25C64 File Offset: 0x00D23E64
 		public TaskEndTipsView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A394 RID: 238484 RVA: 0x00DD67DD File Offset: 0x00DD49DD
+		// Token: 0x0602F2BA RID: 193210 RVA: 0x00D25C6D File Offset: 0x00D23E6D
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(2, typeof(UUISprite)));
 		}
 
-		// Token: 0x0603A395 RID: 238485 RVA: 0x00DD6800 File Offset: 0x00DD4A00
+		// Token: 0x0602F2BB RID: 193211 RVA: 0x00D25C90 File Offset: 0x00D23E90
 		protected override void OnBeforeCreate()
 		{
 			this._viewData = (this.OpenParam as TaskEndTipsViewData);
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			this.OpenParam = this._viewData;
 		}
 
-		// Token: 0x0603A396 RID: 238486 RVA: 0x00DD6887 File Offset: 0x00DD4A87
+		// Token: 0x0602F2BC RID: 193212 RVA: 0x00D25D17 File Offset: 0x00D23F17
 		protected override void SetMainText([ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			LguiUtil.Instance.TrySetLocalTextNew(base.MainText, this._viewData.TipTextKey, Array.Empty<object>());
 		}
 
-		// Token: 0x0603A397 RID: 238487 RVA: 0x00DD68B2 File Offset: 0x00DD4AB2
+		// Token: 0x0602F2BD RID: 193213 RVA: 0x00D25D42 File Offset: 0x00D23F42
 		protected override void SetExtraText([ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			extraText.SetUIActive(false);
 		}
 
-		// Token: 0x0603A398 RID: 238488 RVA: 0x00DD68C8 File Offset: 0x00DD4AC8
+		// Token: 0x0602F2BE RID: 193214 RVA: 0x00D25D58 File Offset: 0x00D23F58
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TaskEndTipsView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -82,10 +82,10 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401E5F0 RID: 124400
+		// Token: 0x0401908E RID: 102542
 		private const int IconIndex = 2;
 
-		// Token: 0x0401E5F1 RID: 124401
+		// Token: 0x0401908F RID: 102543
 		[StaticVariableRuleIgnore]
 		private static readonly IReadOnlyDictionary<EQuestCommonTipType, string> TaskEndIconSp = new Dictionary<EQuestCommonTipType, string>
 		{
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			}
 		};
 
-		// Token: 0x0401E5F2 RID: 124402
+		// Token: 0x04019090 RID: 102544
 		[Nullable(2)]
 		private TaskEndTipsViewData _viewData;
 	}

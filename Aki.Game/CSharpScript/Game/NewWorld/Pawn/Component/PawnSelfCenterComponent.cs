@@ -8,13 +8,13 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.NewWorld.Pawn.Component
 {
-	// Token: 0x0200706D RID: 28781
+	// Token: 0x020061EE RID: 25070
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PawnSelfCenterComponent : EntityComponent
 	{
-		// Token: 0x17009C0F RID: 39951
-		// (get) Token: 0x0604614D RID: 287053 RVA: 0x0117CCDC File Offset: 0x0117AEDC
+		// Token: 0x1700719C RID: 29084
+		// (get) Token: 0x0603C34F RID: 246607 RVA: 0x01126658 File Offset: 0x01124858
 		public float ExtraTimeDilationInSelfCenteredMode
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x0604614E RID: 287054 RVA: 0x0117CCF4 File Offset: 0x0117AEF4
+		// Token: 0x0603C350 RID: 246608 RVA: 0x01126670 File Offset: 0x01124870
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return true;
 		}
 
-		// Token: 0x0604614F RID: 287055 RVA: 0x0117CD6C File Offset: 0x0117AF6C
+		// Token: 0x0603C351 RID: 246609 RVA: 0x011266E8 File Offset: 0x011248E8
 		protected override bool OnStart()
 		{
 			this.TimeScaleComp = base.Entity.GetComponent<PawnTimeScaleComponent>();
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return true;
 		}
 
-		// Token: 0x06046150 RID: 287056 RVA: 0x0117CDE7 File Offset: 0x0117AFE7
+		// Token: 0x0603C352 RID: 246610 RVA: 0x01126763 File Offset: 0x01124963
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.Has<ESelfCenteredMode, float>(EEventName.OnSwitchSelfCenteredMode, new Action<ESelfCenteredMode, float>(this.OnSwitchSelfCenteredMode)))
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return true;
 		}
 
-		// Token: 0x06046151 RID: 287057 RVA: 0x0117CE24 File Offset: 0x0117B024
+		// Token: 0x0603C353 RID: 246611 RVA: 0x011267A0 File Offset: 0x011249A0
 		private void OnSwitchSelfCenteredMode(ESelfCenteredMode selfCenterMode, float globalTimeDilation)
 		{
 			PawnTimeScaleComponent timeScaleComp = this.TimeScaleComp;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			this.ForeverTimeScaleIdInSelfCenteredMode = ((timeScaleComp3 != null) ? timeScaleComp3.SetForeverTimeScale(ETimeScaleSourceType.SelfCentered, this.ExtraTimeDilationInSelfCenteredModeInternal, 0, false) : 0);
 		}
 
-		// Token: 0x06046152 RID: 287058 RVA: 0x0117CEC4 File Offset: 0x0117B0C4
+		// Token: 0x0603C354 RID: 246612 RVA: 0x01126840 File Offset: 0x01124A40
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -118,63 +118,65 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 				return false;
 			}
 			PawnSelfCenterComponent pawnSelfCenterComponent = (PawnSelfCenterComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (pawnSelfCenterComponent.CreatureDataComp == null)
 			{
-				if (pawnSelfCenterComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("TimeScaleComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (pawnSelfCenterComponent.TimeScaleComp == null)
-				{
-					this.TimeScaleComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnTimeScaleComponent>(this.TimeScaleComp), "TimeScaleComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SeparatelyHandleSelfCenteredMode"))
+			if (pawnSelfCenterComponent.TimeScaleComp == null)
 			{
-				this.SeparatelyHandleSelfCenteredMode = pawnSelfCenterComponent.SeparatelyHandleSelfCenteredMode;
+				this.TimeScaleComp = null;
 			}
-			if (base.CanResetComponentProperty("FinalTimeDilationInSelfCenteredMode"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimeScaleComp), "TimeScaleComp"))
 			{
-				this.FinalTimeDilationInSelfCenteredMode = pawnSelfCenterComponent.FinalTimeDilationInSelfCenteredMode;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ExtraTimeDilationInSelfCenteredModeInternal"))
-			{
-				this.ExtraTimeDilationInSelfCenteredModeInternal = pawnSelfCenterComponent.ExtraTimeDilationInSelfCenteredModeInternal;
-			}
-			if (base.CanResetComponentProperty("ForeverTimeScaleIdInSelfCenteredMode"))
-			{
-				this.ForeverTimeScaleIdInSelfCenteredMode = pawnSelfCenterComponent.ForeverTimeScaleIdInSelfCenteredMode;
-			}
+			this.SeparatelyHandleSelfCenteredMode = pawnSelfCenterComponent.SeparatelyHandleSelfCenteredMode;
+			this.FinalTimeDilationInSelfCenteredMode = pawnSelfCenterComponent.FinalTimeDilationInSelfCenteredMode;
+			this.ExtraTimeDilationInSelfCenteredModeInternal = pawnSelfCenterComponent.ExtraTimeDilationInSelfCenteredModeInternal;
+			this.ForeverTimeScaleIdInSelfCenteredMode = pawnSelfCenterComponent.ForeverTimeScaleIdInSelfCenteredMode;
 			return true;
 		}
 
-		// Token: 0x04024B26 RID: 150310
+		// Token: 0x1700719D RID: 29085
+		// (get) Token: 0x0603C355 RID: 246613 RVA: 0x011268E6 File Offset: 0x01124AE6
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700719E RID: 29086
+		// (get) Token: 0x0603C356 RID: 246614 RVA: 0x011268E9 File Offset: 0x01124AE9
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FDE1 RID: 130529
 		protected CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04024B27 RID: 150311
+		// Token: 0x0401FDE2 RID: 130530
 		protected PawnTimeScaleComponent TimeScaleComp;
 
-		// Token: 0x04024B28 RID: 150312
+		// Token: 0x0401FDE3 RID: 130531
 		public bool SeparatelyHandleSelfCenteredMode;
 
-		// Token: 0x04024B29 RID: 150313
+		// Token: 0x0401FDE4 RID: 130532
 		protected float FinalTimeDilationInSelfCenteredMode = 1f;
 
-		// Token: 0x04024B2A RID: 150314
+		// Token: 0x0401FDE5 RID: 130533
 		protected float ExtraTimeDilationInSelfCenteredModeInternal = 1f;
 
-		// Token: 0x04024B2B RID: 150315
+		// Token: 0x0401FDE6 RID: 130534
 		protected int ForeverTimeScaleIdInSelfCenteredMode;
 	}
 }

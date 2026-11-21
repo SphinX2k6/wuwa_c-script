@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-// Token: 0x02003285 RID: 12933
+// Token: 0x020027F6 RID: 10230
 public static class KuroPlayerPerceptionInterface
 {
-	// Token: 0x0601BFD0 RID: 114640 RVA: 0x007C7244 File Offset: 0x007C5444
+	// Token: 0x06019BD4 RID: 105428 RVA: 0x007EE5D4 File Offset: 0x007EC7D4
 	public static void OnEnter(IntPtr gcHandlePtr)
 	{
 		PlayerPerceptionEvent playerPerceptionEvent = GCHandle.FromIntPtr(gcHandlePtr).Target as PlayerPerceptionEvent;
@@ -14,7 +14,7 @@ public static class KuroPlayerPerceptionInterface
 		}
 	}
 
-	// Token: 0x0601BFD1 RID: 114641 RVA: 0x007C7270 File Offset: 0x007C5470
+	// Token: 0x06019BD5 RID: 105429 RVA: 0x007EE600 File Offset: 0x007EC800
 	public static void OnLeave(IntPtr gcHandlePtr)
 	{
 		PlayerPerceptionEvent playerPerceptionEvent = GCHandle.FromIntPtr(gcHandlePtr).Target as PlayerPerceptionEvent;
@@ -24,7 +24,7 @@ public static class KuroPlayerPerceptionInterface
 		}
 	}
 
-	// Token: 0x0601BFD2 RID: 114642 RVA: 0x007C729C File Offset: 0x007C549C
+	// Token: 0x06019BD6 RID: 105430 RVA: 0x007EE62C File Offset: 0x007EC82C
 	public unsafe static void EnterCondition(IntPtr gcHandlePtr, void** resultPtr)
 	{
 		bool* ptr = *(IntPtr*)resultPtr;
@@ -35,7 +35,7 @@ public static class KuroPlayerPerceptionInterface
 		}
 	}
 
-	// Token: 0x0601BFD3 RID: 114643 RVA: 0x007C72CC File Offset: 0x007C54CC
+	// Token: 0x06019BD7 RID: 105431 RVA: 0x007EE65C File Offset: 0x007EC85C
 	public static void OnDestroy(IntPtr gcHandlePtr)
 	{
 		PlayerPerceptionEvent playerPerceptionEvent = GCHandle.FromIntPtr(gcHandlePtr).Target as PlayerPerceptionEvent;

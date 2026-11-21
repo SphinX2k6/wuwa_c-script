@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E65 RID: 24165
+	// Token: 0x020064A5 RID: 25765
 	public static class IUnlockNounAtlasV2Verify
 	{
-		// Token: 0x0602962A RID: 169514 RVA: 0x005AC2FC File Offset: 0x005AA4FC
+		// Token: 0x0602BCC6 RID: 179398 RVA: 0x005F51A4 File Offset: 0x005F33A4
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			return verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 6, 4UL, 4UL, false) && verifier.VerifyTableEnd(tablePos);

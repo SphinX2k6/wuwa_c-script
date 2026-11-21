@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020020A7 RID: 8359
+	// Token: 0x020006B2 RID: 1714
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.LGUIPointerEventData")]
 	[UnrealStructLayout(512, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 512)]
 	public class ULGUIPointerEventData : ULGUIBaseEventData, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601F806 RID: 129030 RVA: 0x002ED38E File Offset: 0x002EB58E
+		// Token: 0x060092FA RID: 37626 RVA: 0x000DD64E File Offset: 0x000DB84E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ULGUIPointerEventData._ClassPtr;
 		}
 
-		// Token: 0x0601F807 RID: 129031 RVA: 0x002ED39C File Offset: 0x002EB59C
+		// Token: 0x060092FB RID: 37627 RVA: 0x000DD65C File Offset: 0x000DB85C
 		public ULGUIPointerEventData() : this(BuiltinUtils.AllocNativeUObject(ULGUIPointerEventData.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601F808 RID: 129032 RVA: 0x002ED3C4 File Offset: 0x002EB5C4
+		// Token: 0x060092FC RID: 37628 RVA: 0x000DD684 File Offset: 0x000DB884
 		[NullableContext(1)]
 		public ULGUIPointerEventData(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ULGUIPointerEventData.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007C3C RID: 31804
-		// (get) Token: 0x0601F809 RID: 129033 RVA: 0x002ED3F7 File Offset: 0x002EB5F7
-		// (set) Token: 0x0601F80A RID: 129034 RVA: 0x002ED407 File Offset: 0x002EB607
+		// Token: 0x17001B66 RID: 7014
+		// (get) Token: 0x060092FD RID: 37629 RVA: 0x000DD6B7 File Offset: 0x000DB8B7
+		// (set) Token: 0x060092FE RID: 37630 RVA: 0x000DD6C7 File Offset: 0x000DB8C7
 		public unsafe ELGUIPointerInputType inputType
 		{
 			get
@@ -45,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C3D RID: 31805
-		// (get) Token: 0x0601F80B RID: 129035 RVA: 0x002ED418 File Offset: 0x002EB618
-		// (set) Token: 0x0601F80C RID: 129036 RVA: 0x002ED428 File Offset: 0x002EB628
+		// Token: 0x17001B67 RID: 7015
+		// (get) Token: 0x060092FF RID: 37631 RVA: 0x000DD6D8 File Offset: 0x000DB8D8
+		// (set) Token: 0x06009300 RID: 37632 RVA: 0x000DD6E8 File Offset: 0x000DB8E8
 		public unsafe int pointerID
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C3E RID: 31806
-		// (get) Token: 0x0601F80D RID: 129037 RVA: 0x002ED439 File Offset: 0x002EB639
-		// (set) Token: 0x0601F80E RID: 129038 RVA: 0x002ED44D File Offset: 0x002EB64D
+		// Token: 0x17001B68 RID: 7016
+		// (get) Token: 0x06009301 RID: 37633 RVA: 0x000DD6F9 File Offset: 0x000DB8F9
+		// (set) Token: 0x06009302 RID: 37634 RVA: 0x000DD70D File Offset: 0x000DB90D
 		public unsafe FVector pointerPosition
 		{
 			get
@@ -75,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C3F RID: 31807
-		// (get) Token: 0x0601F80F RID: 129039 RVA: 0x002ED462 File Offset: 0x002EB662
-		// (set) Token: 0x0601F810 RID: 129040 RVA: 0x002ED476 File Offset: 0x002EB676
+		// Token: 0x17001B69 RID: 7017
+		// (get) Token: 0x06009303 RID: 37635 RVA: 0x000DD722 File Offset: 0x000DB922
+		// (set) Token: 0x06009304 RID: 37636 RVA: 0x000DD736 File Offset: 0x000DB936
 		public unsafe USceneComponent currentComponent_DEPRECATED
 		{
 			get
@@ -90,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C40 RID: 31808
-		// (get) Token: 0x0601F811 RID: 129041 RVA: 0x002ED48B File Offset: 0x002EB68B
-		// (set) Token: 0x0601F812 RID: 129042 RVA: 0x002ED49F File Offset: 0x002EB69F
+		// Token: 0x17001B6A RID: 7018
+		// (get) Token: 0x06009305 RID: 37637 RVA: 0x000DD74B File Offset: 0x000DB94B
+		// (set) Token: 0x06009306 RID: 37638 RVA: 0x000DD75F File Offset: 0x000DB95F
 		public unsafe USceneComponent enterComponent
 		{
 			get
@@ -105,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C41 RID: 31809
-		// (get) Token: 0x0601F813 RID: 129043 RVA: 0x002ED4B4 File Offset: 0x002EB6B4
-		// (set) Token: 0x0601F814 RID: 129044 RVA: 0x002ED4ED File Offset: 0x002EB6ED
+		// Token: 0x17001B6B RID: 7019
+		// (get) Token: 0x06009307 RID: 37639 RVA: 0x000DD774 File Offset: 0x000DB974
+		// (set) Token: 0x06009308 RID: 37640 RVA: 0x000DD7AD File Offset: 0x000DB9AD
 		[Nullable(1)]
 		public TArray<USceneComponent> enterComponentStack
 		{
@@ -129,9 +129,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C42 RID: 31810
-		// (get) Token: 0x0601F815 RID: 129045 RVA: 0x002ED4FC File Offset: 0x002EB6FC
-		// (set) Token: 0x0601F816 RID: 129046 RVA: 0x002ED535 File Offset: 0x002EB735
+		// Token: 0x17001B6C RID: 7020
+		// (get) Token: 0x06009309 RID: 37641 RVA: 0x000DD7BC File Offset: 0x000DB9BC
+		// (set) Token: 0x0600930A RID: 37642 RVA: 0x000DD7F5 File Offset: 0x000DB9F5
 		[Nullable(1)]
 		public TArray<USceneComponent> hoverComponentArray
 		{
@@ -153,9 +153,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C43 RID: 31811
-		// (get) Token: 0x0601F817 RID: 129047 RVA: 0x002ED543 File Offset: 0x002EB743
-		// (set) Token: 0x0601F818 RID: 129048 RVA: 0x002ED557 File Offset: 0x002EB757
+		// Token: 0x17001B6D RID: 7021
+		// (get) Token: 0x0600930B RID: 37643 RVA: 0x000DD803 File Offset: 0x000DBA03
+		// (set) Token: 0x0600930C RID: 37644 RVA: 0x000DD817 File Offset: 0x000DBA17
 		public unsafe FVector worldPoint
 		{
 			get
@@ -168,9 +168,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C44 RID: 31812
-		// (get) Token: 0x0601F819 RID: 129049 RVA: 0x002ED56C File Offset: 0x002EB76C
-		// (set) Token: 0x0601F81A RID: 129050 RVA: 0x002ED580 File Offset: 0x002EB780
+		// Token: 0x17001B6E RID: 7022
+		// (get) Token: 0x0600930D RID: 37645 RVA: 0x000DD82C File Offset: 0x000DBA2C
+		// (set) Token: 0x0600930E RID: 37646 RVA: 0x000DD840 File Offset: 0x000DBA40
 		public unsafe FVector worldNormal
 		{
 			get
@@ -183,9 +183,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C45 RID: 31813
-		// (get) Token: 0x0601F81B RID: 129051 RVA: 0x002ED595 File Offset: 0x002EB795
-		// (set) Token: 0x0601F81C RID: 129052 RVA: 0x002ED5A5 File Offset: 0x002EB7A5
+		// Token: 0x17001B6F RID: 7023
+		// (get) Token: 0x0600930F RID: 37647 RVA: 0x000DD855 File Offset: 0x000DBA55
+		// (set) Token: 0x06009310 RID: 37648 RVA: 0x000DD865 File Offset: 0x000DBA65
 		public unsafe int faceIndex
 		{
 			get
@@ -198,9 +198,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C46 RID: 31814
-		// (get) Token: 0x0601F81D RID: 129053 RVA: 0x002ED5B6 File Offset: 0x002EB7B6
-		// (set) Token: 0x0601F81E RID: 129054 RVA: 0x002ED5C6 File Offset: 0x002EB7C6
+		// Token: 0x17001B70 RID: 7024
+		// (get) Token: 0x06009311 RID: 37649 RVA: 0x000DD876 File Offset: 0x000DBA76
+		// (set) Token: 0x06009312 RID: 37650 RVA: 0x000DD886 File Offset: 0x000DBA86
 		public unsafe byte elementIndex
 		{
 			get
@@ -213,9 +213,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C47 RID: 31815
-		// (get) Token: 0x0601F81F RID: 129055 RVA: 0x002ED5D7 File Offset: 0x002EB7D7
-		// (set) Token: 0x0601F820 RID: 129056 RVA: 0x002ED5E7 File Offset: 0x002EB7E7
+		// Token: 0x17001B71 RID: 7025
+		// (get) Token: 0x06009313 RID: 37651 RVA: 0x000DD897 File Offset: 0x000DBA97
+		// (set) Token: 0x06009314 RID: 37652 RVA: 0x000DD8A7 File Offset: 0x000DBAA7
 		public unsafe int Item
 		{
 			get
@@ -228,9 +228,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C48 RID: 31816
-		// (get) Token: 0x0601F821 RID: 129057 RVA: 0x002ED5F8 File Offset: 0x002EB7F8
-		// (set) Token: 0x0601F822 RID: 129058 RVA: 0x002ED60C File Offset: 0x002EB80C
+		// Token: 0x17001B72 RID: 7026
+		// (get) Token: 0x06009315 RID: 37653 RVA: 0x000DD8B8 File Offset: 0x000DBAB8
+		// (set) Token: 0x06009316 RID: 37654 RVA: 0x000DD8CC File Offset: 0x000DBACC
 		public unsafe FVector moveDelta_DEPRECATED
 		{
 			get
@@ -243,9 +243,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C49 RID: 31817
-		// (get) Token: 0x0601F823 RID: 129059 RVA: 0x002ED621 File Offset: 0x002EB821
-		// (set) Token: 0x0601F824 RID: 129060 RVA: 0x002ED635 File Offset: 0x002EB835
+		// Token: 0x17001B73 RID: 7027
+		// (get) Token: 0x06009317 RID: 37655 RVA: 0x000DD8E1 File Offset: 0x000DBAE1
+		// (set) Token: 0x06009318 RID: 37656 RVA: 0x000DD8F5 File Offset: 0x000DBAF5
 		public unsafe FVector cumulativeMoveDelta_DEPRECATED
 		{
 			get
@@ -258,9 +258,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C4A RID: 31818
-		// (get) Token: 0x0601F825 RID: 129061 RVA: 0x002ED64A File Offset: 0x002EB84A
-		// (set) Token: 0x0601F826 RID: 129062 RVA: 0x002ED65A File Offset: 0x002EB85A
+		// Token: 0x17001B74 RID: 7028
+		// (get) Token: 0x06009319 RID: 37657 RVA: 0x000DD90A File Offset: 0x000DBB0A
+		// (set) Token: 0x0600931A RID: 37658 RVA: 0x000DD91A File Offset: 0x000DBB1A
 		public unsafe float scrollAxisValue
 		{
 			get
@@ -273,9 +273,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C4B RID: 31819
-		// (get) Token: 0x0601F827 RID: 129063 RVA: 0x002ED66B File Offset: 0x002EB86B
-		// (set) Token: 0x0601F828 RID: 129064 RVA: 0x002ED67F File Offset: 0x002EB87F
+		// Token: 0x17001B75 RID: 7029
+		// (get) Token: 0x0600931B RID: 37659 RVA: 0x000DD92B File Offset: 0x000DBB2B
+		// (set) Token: 0x0600931C RID: 37660 RVA: 0x000DD93F File Offset: 0x000DBB3F
 		public unsafe FVector rayOrigin
 		{
 			get
@@ -288,9 +288,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C4C RID: 31820
-		// (get) Token: 0x0601F829 RID: 129065 RVA: 0x002ED694 File Offset: 0x002EB894
-		// (set) Token: 0x0601F82A RID: 129066 RVA: 0x002ED6A8 File Offset: 0x002EB8A8
+		// Token: 0x17001B76 RID: 7030
+		// (get) Token: 0x0600931D RID: 37661 RVA: 0x000DD954 File Offset: 0x000DBB54
+		// (set) Token: 0x0600931E RID: 37662 RVA: 0x000DD968 File Offset: 0x000DBB68
 		public unsafe FVector rayDirection
 		{
 			get
@@ -303,9 +303,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C4D RID: 31821
-		// (get) Token: 0x0601F82B RID: 129067 RVA: 0x002ED6BD File Offset: 0x002EB8BD
-		// (set) Token: 0x0601F82C RID: 129068 RVA: 0x002ED6D1 File Offset: 0x002EB8D1
+		// Token: 0x17001B77 RID: 7031
+		// (get) Token: 0x0600931F RID: 37663 RVA: 0x000DD97D File Offset: 0x000DBB7D
+		// (set) Token: 0x06009320 RID: 37664 RVA: 0x000DD991 File Offset: 0x000DBB91
 		public unsafe ULGUIBaseRaycaster raycaster
 		{
 			get
@@ -318,9 +318,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C4E RID: 31822
-		// (get) Token: 0x0601F82D RID: 129069 RVA: 0x002ED6E6 File Offset: 0x002EB8E6
-		// (set) Token: 0x0601F82E RID: 129070 RVA: 0x002ED6F6 File Offset: 0x002EB8F6
+		// Token: 0x17001B78 RID: 7032
+		// (get) Token: 0x06009321 RID: 37665 RVA: 0x000DD9A6 File Offset: 0x000DBBA6
+		// (set) Token: 0x06009322 RID: 37666 RVA: 0x000DD9B6 File Offset: 0x000DBBB6
 		public unsafe EMouseButtonType mouseButtonType
 		{
 			get
@@ -333,9 +333,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C4F RID: 31823
-		// (get) Token: 0x0601F82F RID: 129071 RVA: 0x002ED707 File Offset: 0x002EB907
-		// (set) Token: 0x0601F830 RID: 129072 RVA: 0x002ED71B File Offset: 0x002EB91B
+		// Token: 0x17001B79 RID: 7033
+		// (get) Token: 0x06009323 RID: 37667 RVA: 0x000DD9C7 File Offset: 0x000DBBC7
+		// (set) Token: 0x06009324 RID: 37668 RVA: 0x000DD9DB File Offset: 0x000DBBDB
 		public unsafe USceneComponent pressComponent
 		{
 			get
@@ -348,9 +348,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C50 RID: 31824
-		// (get) Token: 0x0601F831 RID: 129073 RVA: 0x002ED730 File Offset: 0x002EB930
-		// (set) Token: 0x0601F832 RID: 129074 RVA: 0x002ED744 File Offset: 0x002EB944
+		// Token: 0x17001B7A RID: 7034
+		// (get) Token: 0x06009325 RID: 37669 RVA: 0x000DD9F0 File Offset: 0x000DBBF0
+		// (set) Token: 0x06009326 RID: 37670 RVA: 0x000DDA04 File Offset: 0x000DBC04
 		public unsafe FVector pressWorldPoint
 		{
 			get
@@ -363,9 +363,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C51 RID: 31825
-		// (get) Token: 0x0601F833 RID: 129075 RVA: 0x002ED759 File Offset: 0x002EB959
-		// (set) Token: 0x0601F834 RID: 129076 RVA: 0x002ED76D File Offset: 0x002EB96D
+		// Token: 0x17001B7B RID: 7035
+		// (get) Token: 0x06009327 RID: 37671 RVA: 0x000DDA19 File Offset: 0x000DBC19
+		// (set) Token: 0x06009328 RID: 37672 RVA: 0x000DDA2D File Offset: 0x000DBC2D
 		public unsafe FVector pressWorldNormal
 		{
 			get
@@ -378,9 +378,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C52 RID: 31826
-		// (get) Token: 0x0601F835 RID: 129077 RVA: 0x002ED782 File Offset: 0x002EB982
-		// (set) Token: 0x0601F836 RID: 129078 RVA: 0x002ED792 File Offset: 0x002EB992
+		// Token: 0x17001B7C RID: 7036
+		// (get) Token: 0x06009329 RID: 37673 RVA: 0x000DDA42 File Offset: 0x000DBC42
+		// (set) Token: 0x0600932A RID: 37674 RVA: 0x000DDA52 File Offset: 0x000DBC52
 		public unsafe float pressDistance
 		{
 			get
@@ -393,9 +393,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C53 RID: 31827
-		// (get) Token: 0x0601F837 RID: 129079 RVA: 0x002ED7A3 File Offset: 0x002EB9A3
-		// (set) Token: 0x0601F838 RID: 129080 RVA: 0x002ED7B7 File Offset: 0x002EB9B7
+		// Token: 0x17001B7D RID: 7037
+		// (get) Token: 0x0600932B RID: 37675 RVA: 0x000DDA63 File Offset: 0x000DBC63
+		// (set) Token: 0x0600932C RID: 37676 RVA: 0x000DDA77 File Offset: 0x000DBC77
 		public unsafe FVector pressRayOrigin
 		{
 			get
@@ -408,9 +408,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C54 RID: 31828
-		// (get) Token: 0x0601F839 RID: 129081 RVA: 0x002ED7CC File Offset: 0x002EB9CC
-		// (set) Token: 0x0601F83A RID: 129082 RVA: 0x002ED7E0 File Offset: 0x002EB9E0
+		// Token: 0x17001B7E RID: 7038
+		// (get) Token: 0x0600932D RID: 37677 RVA: 0x000DDA8C File Offset: 0x000DBC8C
+		// (set) Token: 0x0600932E RID: 37678 RVA: 0x000DDAA0 File Offset: 0x000DBCA0
 		public unsafe FVector pressRayDirection
 		{
 			get
@@ -423,9 +423,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C55 RID: 31829
-		// (get) Token: 0x0601F83B RID: 129083 RVA: 0x002ED7F5 File Offset: 0x002EB9F5
-		// (set) Token: 0x0601F83C RID: 129084 RVA: 0x002ED809 File Offset: 0x002EBA09
+		// Token: 0x17001B7F RID: 7039
+		// (get) Token: 0x0600932F RID: 37679 RVA: 0x000DDAB5 File Offset: 0x000DBCB5
+		// (set) Token: 0x06009330 RID: 37680 RVA: 0x000DDAC9 File Offset: 0x000DBCC9
 		public unsafe FTransform pressWorldToLocalTransform
 		{
 			get
@@ -438,9 +438,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C56 RID: 31830
-		// (get) Token: 0x0601F83D RID: 129085 RVA: 0x002ED81E File Offset: 0x002EBA1E
-		// (set) Token: 0x0601F83E RID: 129086 RVA: 0x002ED832 File Offset: 0x002EBA32
+		// Token: 0x17001B80 RID: 7040
+		// (get) Token: 0x06009331 RID: 37681 RVA: 0x000DDADE File Offset: 0x000DBCDE
+		// (set) Token: 0x06009332 RID: 37682 RVA: 0x000DDAF2 File Offset: 0x000DBCF2
 		public unsafe ULGUIBaseRaycaster pressRaycaster
 		{
 			get
@@ -453,9 +453,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C57 RID: 31831
-		// (get) Token: 0x0601F83F RID: 129087 RVA: 0x002ED847 File Offset: 0x002EBA47
-		// (set) Token: 0x0601F840 RID: 129088 RVA: 0x002ED857 File Offset: 0x002EBA57
+		// Token: 0x17001B81 RID: 7041
+		// (get) Token: 0x06009333 RID: 37683 RVA: 0x000DDB07 File Offset: 0x000DBD07
+		// (set) Token: 0x06009334 RID: 37684 RVA: 0x000DDB17 File Offset: 0x000DBD17
 		public unsafe float clickTime
 		{
 			get
@@ -468,9 +468,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C58 RID: 31832
-		// (get) Token: 0x0601F841 RID: 129089 RVA: 0x002ED868 File Offset: 0x002EBA68
-		// (set) Token: 0x0601F842 RID: 129090 RVA: 0x002ED878 File Offset: 0x002EBA78
+		// Token: 0x17001B82 RID: 7042
+		// (get) Token: 0x06009335 RID: 37685 RVA: 0x000DDB28 File Offset: 0x000DBD28
+		// (set) Token: 0x06009336 RID: 37686 RVA: 0x000DDB38 File Offset: 0x000DBD38
 		public unsafe float pressTime
 		{
 			get
@@ -483,9 +483,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C59 RID: 31833
-		// (get) Token: 0x0601F843 RID: 129091 RVA: 0x002ED889 File Offset: 0x002EBA89
-		// (set) Token: 0x0601F844 RID: 129092 RVA: 0x002ED89D File Offset: 0x002EBA9D
+		// Token: 0x17001B83 RID: 7043
+		// (get) Token: 0x06009337 RID: 37687 RVA: 0x000DDB49 File Offset: 0x000DBD49
+		// (set) Token: 0x06009338 RID: 37688 RVA: 0x000DDB5D File Offset: 0x000DBD5D
 		public unsafe FVector2D prevMousePos
 		{
 			get
@@ -498,9 +498,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C5A RID: 31834
-		// (get) Token: 0x0601F845 RID: 129093 RVA: 0x002ED8B2 File Offset: 0x002EBAB2
-		// (set) Token: 0x0601F846 RID: 129094 RVA: 0x002ED8C2 File Offset: 0x002EBAC2
+		// Token: 0x17001B84 RID: 7044
+		// (get) Token: 0x06009339 RID: 37689 RVA: 0x000DDB72 File Offset: 0x000DBD72
+		// (set) Token: 0x0600933A RID: 37690 RVA: 0x000DDB82 File Offset: 0x000DBD82
 		public unsafe bool isDragging
 		{
 			get
@@ -513,9 +513,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C5B RID: 31835
-		// (get) Token: 0x0601F847 RID: 129095 RVA: 0x002ED8D3 File Offset: 0x002EBAD3
-		// (set) Token: 0x0601F848 RID: 129096 RVA: 0x002ED8E7 File Offset: 0x002EBAE7
+		// Token: 0x17001B85 RID: 7045
+		// (get) Token: 0x0600933B RID: 37691 RVA: 0x000DDB93 File Offset: 0x000DBD93
+		// (set) Token: 0x0600933C RID: 37692 RVA: 0x000DDBA7 File Offset: 0x000DBDA7
 		public unsafe USceneComponent dragComponent
 		{
 			get
@@ -528,9 +528,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C5C RID: 31836
-		// (get) Token: 0x0601F849 RID: 129097 RVA: 0x002ED8FC File Offset: 0x002EBAFC
-		// (set) Token: 0x0601F84A RID: 129098 RVA: 0x002ED910 File Offset: 0x002EBB10
+		// Token: 0x17001B86 RID: 7046
+		// (get) Token: 0x0600933D RID: 37693 RVA: 0x000DDBBC File Offset: 0x000DBDBC
+		// (set) Token: 0x0600933E RID: 37694 RVA: 0x000DDBD0 File Offset: 0x000DBDD0
 		public unsafe FVector dragRayOrigin_DEPRECATED
 		{
 			get
@@ -543,9 +543,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C5D RID: 31837
-		// (get) Token: 0x0601F84B RID: 129099 RVA: 0x002ED925 File Offset: 0x002EBB25
-		// (set) Token: 0x0601F84C RID: 129100 RVA: 0x002ED939 File Offset: 0x002EBB39
+		// Token: 0x17001B87 RID: 7047
+		// (get) Token: 0x0600933F RID: 37695 RVA: 0x000DDBE5 File Offset: 0x000DBDE5
+		// (set) Token: 0x06009340 RID: 37696 RVA: 0x000DDBF9 File Offset: 0x000DBDF9
 		public unsafe FVector dragRayDirection_DEPRECATED
 		{
 			get
@@ -558,9 +558,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C5E RID: 31838
-		// (get) Token: 0x0601F84D RID: 129101 RVA: 0x002ED94E File Offset: 0x002EBB4E
-		// (set) Token: 0x0601F84E RID: 129102 RVA: 0x002ED95E File Offset: 0x002EBB5E
+		// Token: 0x17001B88 RID: 7048
+		// (get) Token: 0x06009341 RID: 37697 RVA: 0x000DDC0E File Offset: 0x000DBE0E
+		// (set) Token: 0x06009342 RID: 37698 RVA: 0x000DDC1E File Offset: 0x000DBE1E
 		public unsafe bool nowIsTriggerPressed
 		{
 			get
@@ -573,9 +573,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C5F RID: 31839
-		// (get) Token: 0x0601F84F RID: 129103 RVA: 0x002ED96F File Offset: 0x002EBB6F
-		// (set) Token: 0x0601F850 RID: 129104 RVA: 0x002ED97F File Offset: 0x002EBB7F
+		// Token: 0x17001B89 RID: 7049
+		// (get) Token: 0x06009343 RID: 37699 RVA: 0x000DDC2F File Offset: 0x000DBE2F
+		// (set) Token: 0x06009344 RID: 37700 RVA: 0x000DDC3F File Offset: 0x000DBE3F
 		public unsafe bool dragDropTriggered
 		{
 			get
@@ -588,106 +588,106 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601F851 RID: 129105 RVA: 0x002ED990 File Offset: 0x002EBB90
+		// Token: 0x06009345 RID: 37701 RVA: 0x000DDC50 File Offset: 0x000DBE50
 		public FVector GetWorldPointSpherical()
 		{
 			return ULGUIPointerEventData.__GetWorldPointSpherical_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F852 RID: 129106 RVA: 0x002ED99D File Offset: 0x002EBB9D
+		// Token: 0x06009346 RID: 37702 RVA: 0x000DDC5D File Offset: 0x000DBE5D
 		public FVector GetWorldPointInPlane()
 		{
 			return ULGUIPointerEventData.__GetWorldPointInPlane_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F853 RID: 129107 RVA: 0x002ED9AA File Offset: 0x002EBBAA
+		// Token: 0x06009347 RID: 37703 RVA: 0x000DDC6A File Offset: 0x000DBE6A
 		public FVector GetLocalPointInPlane()
 		{
 			return ULGUIPointerEventData.__GetLocalPointInPlane_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F854 RID: 129108 RVA: 0x002ED9B7 File Offset: 0x002EBBB7
+		// Token: 0x06009348 RID: 37704 RVA: 0x000DDC77 File Offset: 0x000DBE77
 		public FVector GetDragRayOrigin()
 		{
 			return ULGUIPointerEventData.__GetDragRayOrigin_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F855 RID: 129109 RVA: 0x002ED9C4 File Offset: 0x002EBBC4
+		// Token: 0x06009349 RID: 37705 RVA: 0x000DDC84 File Offset: 0x000DBE84
 		public FVector GetDragRayDirection()
 		{
 			return ULGUIPointerEventData.__GetDragRayDirection_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F856 RID: 129110 RVA: 0x002ED9D1 File Offset: 0x002EBBD1
+		// Token: 0x0600934A RID: 37706 RVA: 0x000DDC91 File Offset: 0x000DBE91
 		public FVector GetCumulativeMoveDelta()
 		{
 			return ULGUIPointerEventData.__GetCumulativeMoveDelta_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F857 RID: 129111
+		// Token: 0x0600934B RID: 37707
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetWorldPointSpherical_Internal(IntPtr @this);
 
-		// Token: 0x0601F858 RID: 129112
+		// Token: 0x0600934C RID: 37708
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetWorldPointInPlane_Internal(IntPtr @this);
 
-		// Token: 0x0601F859 RID: 129113
+		// Token: 0x0600934D RID: 37709
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetLocalPointInPlane_Internal(IntPtr @this);
 
-		// Token: 0x0601F85A RID: 129114
+		// Token: 0x0600934E RID: 37710
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetDragRayOrigin_Internal(IntPtr @this);
 
-		// Token: 0x0601F85B RID: 129115
+		// Token: 0x0600934F RID: 37711
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetDragRayDirection_Internal(IntPtr @this);
 
-		// Token: 0x0601F85C RID: 129116
+		// Token: 0x06009350 RID: 37712
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetCumulativeMoveDelta_Internal(IntPtr @this);
 
-		// Token: 0x0601F85D RID: 129117 RVA: 0x002ED9DE File Offset: 0x002EBBDE
+		// Token: 0x06009351 RID: 37713 RVA: 0x000DDC9E File Offset: 0x000DBE9E
 		static ULGUIPointerEventData()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.LGUIPointerEventData");
 		}
 
-		// Token: 0x0601F85E RID: 129118 RVA: 0x002ED9EC File Offset: 0x002EBBEC
+		// Token: 0x06009352 RID: 37714 RVA: 0x000DDCAC File Offset: 0x000DBEAC
 		protected ULGUIPointerEventData(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011022 RID: 69666
+		// Token: 0x04004011 RID: 16401
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.LGUIPointerEventData";
 
-		// Token: 0x04011023 RID: 69667
+		// Token: 0x04004012 RID: 16402
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011024 RID: 69668
+		// Token: 0x04004013 RID: 16403
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04011025 RID: 69669
+		// Token: 0x04004014 RID: 16404
 		internal static int __PropertyOffset_inputType;
 
-		// Token: 0x04011026 RID: 69670
+		// Token: 0x04004015 RID: 16405
 		internal static int __PropertyOffset_pointerID;
 
-		// Token: 0x04011027 RID: 69671
+		// Token: 0x04004016 RID: 16406
 		internal static int __PropertyOffset_pointerPosition;
 
-		// Token: 0x04011028 RID: 69672
+		// Token: 0x04004017 RID: 16407
 		internal static int __PropertyOffset_currentComponent_DEPRECATED;
 
-		// Token: 0x04011029 RID: 69673
+		// Token: 0x04004018 RID: 16408
 		internal static int __PropertyOffset_enterComponent;
 
-		// Token: 0x0401102A RID: 69674
+		// Token: 0x04004019 RID: 16409
 		internal static int __PropertyOffset_enterComponentStack;
 
-		// Token: 0x0401102B RID: 69675
+		// Token: 0x0400401A RID: 16410
 		[Nullable(new byte[]
 		{
 			2,
@@ -695,10 +695,10 @@ namespace UnrealEngine
 		})]
 		private TArray<USceneComponent> _enterComponentStack;
 
-		// Token: 0x0401102C RID: 69676
+		// Token: 0x0400401B RID: 16411
 		internal static int __PropertyOffset_hoverComponentArray;
 
-		// Token: 0x0401102D RID: 69677
+		// Token: 0x0400401C RID: 16412
 		[Nullable(new byte[]
 		{
 			2,
@@ -706,91 +706,91 @@ namespace UnrealEngine
 		})]
 		private TArray<USceneComponent> _hoverComponentArray;
 
-		// Token: 0x0401102E RID: 69678
+		// Token: 0x0400401D RID: 16413
 		internal static int __PropertyOffset_worldPoint;
 
-		// Token: 0x0401102F RID: 69679
+		// Token: 0x0400401E RID: 16414
 		internal static int __PropertyOffset_worldNormal;
 
-		// Token: 0x04011030 RID: 69680
+		// Token: 0x0400401F RID: 16415
 		internal static int __PropertyOffset_faceIndex;
 
-		// Token: 0x04011031 RID: 69681
+		// Token: 0x04004020 RID: 16416
 		internal static int __PropertyOffset_elementIndex;
 
-		// Token: 0x04011032 RID: 69682
+		// Token: 0x04004021 RID: 16417
 		internal static int __PropertyOffset_Item;
 
-		// Token: 0x04011033 RID: 69683
+		// Token: 0x04004022 RID: 16418
 		internal static int __PropertyOffset_moveDelta_DEPRECATED;
 
-		// Token: 0x04011034 RID: 69684
+		// Token: 0x04004023 RID: 16419
 		internal static int __PropertyOffset_cumulativeMoveDelta_DEPRECATED;
 
-		// Token: 0x04011035 RID: 69685
+		// Token: 0x04004024 RID: 16420
 		internal static int __PropertyOffset_scrollAxisValue;
 
-		// Token: 0x04011036 RID: 69686
+		// Token: 0x04004025 RID: 16421
 		internal static int __PropertyOffset_rayOrigin;
 
-		// Token: 0x04011037 RID: 69687
+		// Token: 0x04004026 RID: 16422
 		internal static int __PropertyOffset_rayDirection;
 
-		// Token: 0x04011038 RID: 69688
+		// Token: 0x04004027 RID: 16423
 		internal static int __PropertyOffset_raycaster;
 
-		// Token: 0x04011039 RID: 69689
+		// Token: 0x04004028 RID: 16424
 		internal static int __PropertyOffset_mouseButtonType;
 
-		// Token: 0x0401103A RID: 69690
+		// Token: 0x04004029 RID: 16425
 		internal static int __PropertyOffset_pressComponent;
 
-		// Token: 0x0401103B RID: 69691
+		// Token: 0x0400402A RID: 16426
 		internal static int __PropertyOffset_pressWorldPoint;
 
-		// Token: 0x0401103C RID: 69692
+		// Token: 0x0400402B RID: 16427
 		internal static int __PropertyOffset_pressWorldNormal;
 
-		// Token: 0x0401103D RID: 69693
+		// Token: 0x0400402C RID: 16428
 		internal static int __PropertyOffset_pressDistance;
 
-		// Token: 0x0401103E RID: 69694
+		// Token: 0x0400402D RID: 16429
 		internal static int __PropertyOffset_pressRayOrigin;
 
-		// Token: 0x0401103F RID: 69695
+		// Token: 0x0400402E RID: 16430
 		internal static int __PropertyOffset_pressRayDirection;
 
-		// Token: 0x04011040 RID: 69696
+		// Token: 0x0400402F RID: 16431
 		internal static int __PropertyOffset_pressWorldToLocalTransform;
 
-		// Token: 0x04011041 RID: 69697
+		// Token: 0x04004030 RID: 16432
 		internal static int __PropertyOffset_pressRaycaster;
 
-		// Token: 0x04011042 RID: 69698
+		// Token: 0x04004031 RID: 16433
 		internal static int __PropertyOffset_clickTime;
 
-		// Token: 0x04011043 RID: 69699
+		// Token: 0x04004032 RID: 16434
 		internal static int __PropertyOffset_pressTime;
 
-		// Token: 0x04011044 RID: 69700
+		// Token: 0x04004033 RID: 16435
 		internal static int __PropertyOffset_prevMousePos;
 
-		// Token: 0x04011045 RID: 69701
+		// Token: 0x04004034 RID: 16436
 		internal static int __PropertyOffset_isDragging;
 
-		// Token: 0x04011046 RID: 69702
+		// Token: 0x04004035 RID: 16437
 		internal static int __PropertyOffset_dragComponent;
 
-		// Token: 0x04011047 RID: 69703
+		// Token: 0x04004036 RID: 16438
 		internal static int __PropertyOffset_dragRayOrigin_DEPRECATED;
 
-		// Token: 0x04011048 RID: 69704
+		// Token: 0x04004037 RID: 16439
 		internal static int __PropertyOffset_dragRayDirection_DEPRECATED;
 
-		// Token: 0x04011049 RID: 69705
+		// Token: 0x04004038 RID: 16440
 		internal static int __PropertyOffset_nowIsTriggerPressed;
 
-		// Token: 0x0401104A RID: 69706
+		// Token: 0x04004039 RID: 16441
 		internal static int __PropertyOffset_dragDropTriggered;
 	}
 }

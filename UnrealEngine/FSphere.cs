@@ -6,52 +6,52 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200003B RID: 59
+	// Token: 0x02000020 RID: 32
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(16, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 16)]
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 16)]
 	public struct FSphere : IEquatable<FSphere>, IEqualityOperators<FSphere, FSphere, bool>
 	{
-		// Token: 0x06000456 RID: 1110 RVA: 0x0000B279 File Offset: 0x00009479
+		// Token: 0x060003DB RID: 987 RVA: 0x00007AE5 File Offset: 0x00005CE5
 		public FSphere()
 		{
 			this.Center = FVector.ZeroVector;
 			this.W = 0f;
 		}
 
-		// Token: 0x06000457 RID: 1111 RVA: 0x0000B291 File Offset: 0x00009491
+		// Token: 0x060003DC RID: 988 RVA: 0x00007AFD File Offset: 0x00005CFD
 		public FSphere(in FVector center, float radius)
 		{
 			this.Center = center;
 			this.W = radius;
 		}
 
-		// Token: 0x06000458 RID: 1112 RVA: 0x0000B2A6 File Offset: 0x000094A6
+		// Token: 0x060003DD RID: 989 RVA: 0x00007B12 File Offset: 0x00005D12
 		[NullableContext(1)]
 		public FSphere(FVector[] points)
 		{
 			this = new FSphere(points.AsSpan<FVector>());
 		}
 
-		// Token: 0x06000459 RID: 1113 RVA: 0x0000B2B4 File Offset: 0x000094B4
+		// Token: 0x060003DE RID: 990 RVA: 0x00007B20 File Offset: 0x00005D20
 		public static bool operator ==(FSphere left, FSphere right)
 		{
 			return left.Center == right.Center && left.W == right.W;
 		}
 
-		// Token: 0x0600045A RID: 1114 RVA: 0x0000B2D9 File Offset: 0x000094D9
+		// Token: 0x060003DF RID: 991 RVA: 0x00007B45 File Offset: 0x00005D45
 		public static bool operator !=(FSphere left, FSphere right)
 		{
 			return left.Center != right.Center || left.W != right.W;
 		}
 
-		// Token: 0x0600045B RID: 1115 RVA: 0x0000B301 File Offset: 0x00009501
+		// Token: 0x060003E0 RID: 992 RVA: 0x00007B6D File Offset: 0x00005D6D
 		public readonly bool Equals(FSphere other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x0600045C RID: 1116 RVA: 0x0000B310 File Offset: 0x00009510
+		// Token: 0x060003E1 RID: 993 RVA: 0x00007B7C File Offset: 0x00005D7C
 		[NullableContext(2)]
 		public override readonly bool Equals(object obj)
 		{
@@ -63,13 +63,13 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x0600045D RID: 1117 RVA: 0x0000B33A File Offset: 0x0000953A
+		// Token: 0x060003E2 RID: 994 RVA: 0x00007BA6 File Offset: 0x00005DA6
 		public override readonly int GetHashCode()
 		{
 			return HashCode.Combine<FVector, float>(this.Center, this.W);
 		}
 
-		// Token: 0x0600045E RID: 1118 RVA: 0x0000B350 File Offset: 0x00009550
+		// Token: 0x060003E3 RID: 995 RVA: 0x00007BBC File Offset: 0x00005DBC
 		[NullableContext(1)]
 		public override readonly string ToString()
 		{
@@ -81,43 +81,43 @@ namespace UnrealEngine
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0600045F RID: 1119
+		// Token: 0x060003E4 RID: 996
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FSphere Internal_Ctor_FVectorArr(FVector* vectors, int count);
 
-		// Token: 0x06000460 RID: 1120
+		// Token: 0x060003E5 RID: 997
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_Equals(in FSphere a, in FSphere b, float tolerance);
 
-		// Token: 0x06000461 RID: 1121
+		// Token: 0x060003E6 RID: 998
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_IsInside_FSphere(in FSphere a, in FSphere b, float tolerance);
 
-		// Token: 0x06000462 RID: 1122
+		// Token: 0x060003E7 RID: 999
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_IsInside_FVector(in FSphere a, in FVector vector, float tolerance);
 
-		// Token: 0x06000463 RID: 1123
+		// Token: 0x060003E8 RID: 1000
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_Intersects(in FSphere a, in FSphere b, float tolerance);
 
-		// Token: 0x06000464 RID: 1124
+		// Token: 0x060003E9 RID: 1001
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FSphere Internal_TransformBy_FMatrix(in FSphere sphere, in FMatrix matrix);
 
-		// Token: 0x06000465 RID: 1125
+		// Token: 0x060003EA RID: 1002
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FSphere Internal_TransformBy_FTransform(in FSphere sphere, in FTransform transform);
 
-		// Token: 0x06000466 RID: 1126
+		// Token: 0x060003EB RID: 1003
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_GetVolume(in FSphere sphere);
 
-		// Token: 0x06000467 RID: 1127
+		// Token: 0x060003EC RID: 1004
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FSphere Internal_Add(in FSphere a, in FSphere b);
 
-		// Token: 0x06000468 RID: 1128 RVA: 0x0000B3A0 File Offset: 0x000095A0
+		// Token: 0x060003ED RID: 1005 RVA: 0x00007C0C File Offset: 0x00005E0C
 		public unsafe FSphere(Span<FVector> vectors)
 		{
 			fixed (FVector* pinnableReference = vectors.GetPinnableReference())
@@ -130,7 +130,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000469 RID: 1129 RVA: 0x0000B3D8 File Offset: 0x000095D8
+		// Token: 0x060003EE RID: 1006 RVA: 0x00007C44 File Offset: 0x00005E44
 		public unsafe readonly bool Equals(in FSphere other, float tolerance = 0.0001f)
 		{
 			fixed (FSphere* ptr = &this)
@@ -142,7 +142,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600046A RID: 1130 RVA: 0x0000B3F8 File Offset: 0x000095F8
+		// Token: 0x060003EF RID: 1007 RVA: 0x00007C64 File Offset: 0x00005E64
 		public unsafe readonly bool IsInside(in FSphere other, float tolerance = 0.0001f)
 		{
 			fixed (FSphere* ptr = &this)
@@ -154,7 +154,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600046B RID: 1131 RVA: 0x0000B418 File Offset: 0x00009618
+		// Token: 0x060003F0 RID: 1008 RVA: 0x00007C84 File Offset: 0x00005E84
 		public unsafe readonly bool IsInside(in FVector vector, float tolerance = 0.0001f)
 		{
 			fixed (FSphere* ptr = &this)
@@ -166,7 +166,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600046C RID: 1132 RVA: 0x0000B438 File Offset: 0x00009638
+		// Token: 0x060003F1 RID: 1009 RVA: 0x00007CA4 File Offset: 0x00005EA4
 		public unsafe readonly bool Intersects(in FSphere other, float tolerance = 0.0001f)
 		{
 			fixed (FSphere* ptr = &this)
@@ -178,7 +178,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600046D RID: 1133 RVA: 0x0000B458 File Offset: 0x00009658
+		// Token: 0x060003F2 RID: 1010 RVA: 0x00007CC4 File Offset: 0x00005EC4
 		public unsafe readonly FSphere TransformBy(in FMatrix matrix)
 		{
 			fixed (FSphere* ptr = &this)
@@ -190,7 +190,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600046E RID: 1134 RVA: 0x0000B474 File Offset: 0x00009674
+		// Token: 0x060003F3 RID: 1011 RVA: 0x00007CE0 File Offset: 0x00005EE0
 		public unsafe readonly FSphere TransformBy(in FTransform transform)
 		{
 			fixed (FSphere* ptr = &this)
@@ -202,7 +202,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600046F RID: 1135 RVA: 0x0000B490 File Offset: 0x00009690
+		// Token: 0x060003F4 RID: 1012 RVA: 0x00007CFC File Offset: 0x00005EFC
 		public unsafe readonly float GetVolume()
 		{
 			fixed (FSphere* ptr = &this)
@@ -211,7 +211,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000470 RID: 1136 RVA: 0x0000B4A8 File Offset: 0x000096A8
+		// Token: 0x060003F5 RID: 1013 RVA: 0x00007D14 File Offset: 0x00005F14
 		public unsafe static FSphere operator +(in FSphere a, in FSphere b)
 		{
 			fixed (FSphere* ptr = &a)
@@ -223,15 +223,15 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x040000F0 RID: 240
+		// Token: 0x040000A9 RID: 169
 		[FieldOffset(0)]
 		public FVector Center;
 
-		// Token: 0x040000F1 RID: 241
+		// Token: 0x040000AA RID: 170
 		[FieldOffset(12)]
 		public float W;
 
-		// Token: 0x040000F2 RID: 242
+		// Token: 0x040000AB RID: 171
 		public static readonly FSphere Empty = new FSphere();
 	}
 }

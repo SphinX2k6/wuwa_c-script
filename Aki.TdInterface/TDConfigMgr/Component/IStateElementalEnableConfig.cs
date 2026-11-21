@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200070F RID: 1807
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007B0 RID: 1968
 	public class IStateElementalEnableConfig
 	{
-		// Token: 0x060026E1 RID: 9953 RVA: 0x00067C0C File Offset: 0x00065E0C
+		// Token: 0x06002A01 RID: 10753 RVA: 0x0006EC7C File Offset: 0x0006CE7C
 		private IStateElementalEnableConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060026E2 RID: 9954 RVA: 0x00067C44 File Offset: 0x00065E44
+		// Token: 0x06002A02 RID: 10754 RVA: 0x0006ECB4 File Offset: 0x0006CEB4
 		public static IStateElementalEnableConfig Create([Nullable(2)] IStateElementalEnableConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060026E3 RID: 9955 RVA: 0x00067C57 File Offset: 0x00065E57
+		// Token: 0x06002A03 RID: 10755 RVA: 0x0006ECC7 File Offset: 0x0006CEC7
 		public static IStateElementalEnableConfig CreateFromSetValue([Nullable(2)] IStateElementalEnableConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060026E4 RID: 9956 RVA: 0x00067C6A File Offset: 0x00065E6A
+		// Token: 0x06002A04 RID: 10756 RVA: 0x0006ECDA File Offset: 0x0006CEDA
 		public IStateElementalEnableConfig_SetValue ToSetValue()
 		{
 			return new IStateElementalEnableConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A3A RID: 2618
-		// (get) Token: 0x060026E5 RID: 9957 RVA: 0x00067C89 File Offset: 0x00065E89
-		// (set) Token: 0x060026E6 RID: 9958 RVA: 0x00067CB4 File Offset: 0x00065EB4
+		// Token: 0x17000AF8 RID: 2808
+		// (get) Token: 0x06002A05 RID: 10757 RVA: 0x0006ECF9 File Offset: 0x0006CEF9
+		// (set) Token: 0x06002A06 RID: 10758 RVA: 0x0006ED24 File Offset: 0x0006CF24
 		public virtual string State
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A3B RID: 2619
-		// (get) Token: 0x060026E7 RID: 9959 RVA: 0x00067CC2 File Offset: 0x00065EC2
-		// (set) Token: 0x060026E8 RID: 9960 RVA: 0x00067CED File Offset: 0x00065EED
+		// Token: 0x17000AF9 RID: 2809
+		// (get) Token: 0x06002A07 RID: 10759 RVA: 0x0006ED32 File Offset: 0x0006CF32
+		// (set) Token: 0x06002A08 RID: 10760 RVA: 0x0006ED5D File Offset: 0x0006CF5D
 		public virtual bool ElementalEnable
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001A4C RID: 6732
+		// Token: 0x04001C4B RID: 7243
 		[Nullable(2)]
 		protected IStateElementalEnableConfig FbInstance;
 
-		// Token: 0x04001A4D RID: 6733
+		// Token: 0x04001C4C RID: 7244
 		[Nullable(2)]
 		protected IStateElementalEnableConfig_SetValue PocoInterface;
 	}

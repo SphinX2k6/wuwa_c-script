@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DBF RID: 19903
+	// Token: 0x02003D88 RID: 15752
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RoguelikePhantomAffixStateItem : GridProxyAbstract<IRoguelikePhantomAffixStateItemData>
 	{
-		// Token: 0x0603361F RID: 210463 RVA: 0x00BFF348 File Offset: 0x00BFD548
+		// Token: 0x0602848C RID: 165004 RVA: 0x00B48888 File Offset: 0x00B46A88
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,27 +29,27 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033620 RID: 210464 RVA: 0x00BFF3B1 File Offset: 0x00BFD5B1
+		// Token: 0x0602848D RID: 165005 RVA: 0x00B488F1 File Offset: 0x00B46AF1
 		[NullableContext(1)]
 		public override void Refresh(IRoguelikePhantomAffixStateItemData data, bool isSelected, int gridIndex)
 		{
 			this.SetUnlockState(data.IsUnlock);
 		}
 
-		// Token: 0x06033621 RID: 210465 RVA: 0x00BFF3BF File Offset: 0x00BFD5BF
+		// Token: 0x0602848E RID: 165006 RVA: 0x00B488FF File Offset: 0x00B46AFF
 		private void SetUnlockState(bool isUnlock)
 		{
 			base.GetItem(0).SetUIActive(isUnlock);
 			base.GetItem(1).SetUIActive(!isUnlock);
 		}
 
-		// Token: 0x0200AF37 RID: 44855
+		// Token: 0x0200996C RID: 39276
 		private class EComponents
 		{
-			// Token: 0x0403534E RID: 217934
+			// Token: 0x0402FD83 RID: 195971
 			public const int SprConfirm = 0;
 
-			// Token: 0x0403534F RID: 217935
+			// Token: 0x0402FD84 RID: 195972
 			public const int SprDis = 1;
 		}
 	}

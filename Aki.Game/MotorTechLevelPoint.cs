@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200225D RID: 8797
+// Token: 0x02001741 RID: 5953
 [NullableContext(2)]
 [Nullable(0)]
 public class MotorTechLevelPoint : IMotorTechLevelPoint
 {
-	// Token: 0x170015E1 RID: 5601
-	// (get) Token: 0x0601127D RID: 70269 RVA: 0x0042E39B File Offset: 0x0042C59B
-	// (set) Token: 0x0601127E RID: 70270 RVA: 0x0042E3A3 File Offset: 0x0042C5A3
+	// Token: 0x17001618 RID: 5656
+	// (get) Token: 0x0600E713 RID: 59155 RVA: 0x0043AF3B File Offset: 0x0043913B
+	// (set) Token: 0x0600E714 RID: 59156 RVA: 0x0043AF43 File Offset: 0x00439143
 	public string Title { get; set; }
 
-	// Token: 0x170015E2 RID: 5602
-	// (get) Token: 0x0601127F RID: 70271 RVA: 0x0042E3AC File Offset: 0x0042C5AC
-	// (set) Token: 0x06011280 RID: 70272 RVA: 0x0042E3B4 File Offset: 0x0042C5B4
+	// Token: 0x17001619 RID: 5657
+	// (get) Token: 0x0600E715 RID: 59157 RVA: 0x0043AF4C File Offset: 0x0043914C
+	// (set) Token: 0x0600E716 RID: 59158 RVA: 0x0043AF54 File Offset: 0x00439154
 	public string Desc { get; set; }
 
-	// Token: 0x170015E3 RID: 5603
-	// (get) Token: 0x06011281 RID: 70273 RVA: 0x0042E3BD File Offset: 0x0042C5BD
-	// (set) Token: 0x06011282 RID: 70274 RVA: 0x0042E3C5 File Offset: 0x0042C5C5
+	// Token: 0x1700161A RID: 5658
+	// (get) Token: 0x0600E717 RID: 59159 RVA: 0x0043AF5D File Offset: 0x0043915D
+	// (set) Token: 0x0600E718 RID: 59160 RVA: 0x0043AF65 File Offset: 0x00439165
 	public int TargetLevel { get; set; }
 
-	// Token: 0x170015E4 RID: 5604
-	// (get) Token: 0x06011283 RID: 70275 RVA: 0x0042E3CE File Offset: 0x0042C5CE
-	// (set) Token: 0x06011284 RID: 70276 RVA: 0x0042E3D6 File Offset: 0x0042C5D6
+	// Token: 0x1700161B RID: 5659
+	// (get) Token: 0x0600E719 RID: 59161 RVA: 0x0043AF6E File Offset: 0x0043916E
+	// (set) Token: 0x0600E71A RID: 59162 RVA: 0x0043AF76 File Offset: 0x00439176
 	public int CurLevel { get; set; }
 }

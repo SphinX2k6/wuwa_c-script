@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Util;
@@ -9,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024AB RID: 9387
+// Token: 0x02001992 RID: 6546
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionEquipmentRecommendItem : UiPanelBase
 {
-	// Token: 0x06012D6C RID: 77164 RVA: 0x004A6434 File Offset: 0x004A4634
+	// Token: 0x0601022D RID: 66093 RVA: 0x004B3F2C File Offset: 0x004B212C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +35,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012D6D RID: 77165 RVA: 0x004A6588 File Offset: 0x004A4788
+	// Token: 0x0601022E RID: 66094 RVA: 0x004B4080 File Offset: 0x004B2280
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionEquipmentRecommendItem.<OnBeforeStartAsync>d__28 <OnBeforeStartAsync>d__;
@@ -47,7 +46,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012D6E RID: 77166 RVA: 0x004A65CC File Offset: 0x004A47CC
+	// Token: 0x0601022F RID: 66095 RVA: 0x004B40C4 File Offset: 0x004B22C4
 	private void InitAllLayouts()
 	{
 		UUILayoutBase layoutBase = base.GetLayoutBase(0);
@@ -60,7 +59,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		this.UsageRecommendLayout = new GenericLayout<VisionRecommendBranchFetterItem, VisionFetterRecommendInfo>(layoutBase2, gridProxyCreateFunction2, ((item2 != null) ? item2.GetOwner() : null) as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x06012D6F RID: 77167 RVA: 0x004A6649 File Offset: 0x004A4849
+	// Token: 0x06010230 RID: 66096 RVA: 0x004B4141 File Offset: 0x004B2341
 	private VisionRecommendBranchFetterItem InitSystemRecommendItem()
 	{
 		VisionRecommendBranchFetterItem visionRecommendBranchFetterItem = new VisionRecommendBranchFetterItem();
@@ -69,7 +68,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		return visionRecommendBranchFetterItem;
 	}
 
-	// Token: 0x06012D70 RID: 77168 RVA: 0x004A666E File Offset: 0x004A486E
+	// Token: 0x06010231 RID: 66097 RVA: 0x004B4166 File Offset: 0x004B2366
 	private VisionRecommendBranchFetterItem InitUsageRecommendItem()
 	{
 		VisionRecommendBranchFetterItem visionRecommendBranchFetterItem = new VisionRecommendBranchFetterItem();
@@ -78,7 +77,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		return visionRecommendBranchFetterItem;
 	}
 
-	// Token: 0x06012D71 RID: 77169 RVA: 0x004A6694 File Offset: 0x004A4894
+	// Token: 0x06010232 RID: 66098 RVA: 0x004B418C File Offset: 0x004B238C
 	private void OnSystemRecommendItemSelected(int index)
 	{
 		List<VisionFetterRecommendInfo> roleSystemFetterRecommendList = VisionRecommendModel.Instance.GetRoleSystemFetterRecommendList(this.CurrentRoleId);
@@ -111,7 +110,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		sequencePlayer2.PlayOrReplaySequenceByName("Switch", false, null);
 	}
 
-	// Token: 0x06012D72 RID: 77170 RVA: 0x004A6728 File Offset: 0x004A4928
+	// Token: 0x06010233 RID: 66099 RVA: 0x004B4220 File Offset: 0x004B2420
 	private void OnUsageRecommendItemSelected(int index)
 	{
 		List<VisionFetterRecommendInfo> roleUsageFetterRecommendList = VisionRecommendModel.Instance.GetRoleUsageFetterRecommendList(this.CurrentRoleId);
@@ -144,14 +143,14 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		sequencePlayer2.PlayOrReplaySequenceByName("Switch", false, null);
 	}
 
-	// Token: 0x06012D73 RID: 77171 RVA: 0x004A67BC File Offset: 0x004A49BC
+	// Token: 0x06010234 RID: 66100 RVA: 0x004B42B4 File Offset: 0x004B24B4
 	private void RefreshSelectedRecommendDetail(VisionFetterRecommendInfo info)
 	{
 		bool isOfficial = info.GetUsage() == 0;
 		this.SetCurrentPlan(info, isOfficial);
 	}
 
-	// Token: 0x06012D74 RID: 77172 RVA: 0x004A67DB File Offset: 0x004A49DB
+	// Token: 0x06010235 RID: 66101 RVA: 0x004B42D3 File Offset: 0x004B24D3
 	protected override void OnBeforeDestroy()
 	{
 		VisionRecommendModel.Instance.CurrentSelectMainAttrArray = new List<VisionSelectRecommendData>();
@@ -159,13 +158,13 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		VisionRecommendModel.Instance.CurrentMainPhantom = null;
 	}
 
-	// Token: 0x06012D75 RID: 77173 RVA: 0x004A6806 File Offset: 0x004A4A06
+	// Token: 0x06010236 RID: 66102 RVA: 0x004B42FE File Offset: 0x004B24FE
 	public void BindOnChangeAttrCallBack(Action callback)
 	{
 		this.OnChangeAttrCallBack = callback;
 	}
 
-	// Token: 0x06012D76 RID: 77174 RVA: 0x004A6810 File Offset: 0x004A4A10
+	// Token: 0x06010237 RID: 66103 RVA: 0x004B4308 File Offset: 0x004B2508
 	public void ChangeCost(int cost, int roleId)
 	{
 		this.CurrentRoleId = roleId;
@@ -184,7 +183,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		this.RefreshRecommendLayout(visionFetterRecommendInfo);
 	}
 
-	// Token: 0x06012D77 RID: 77175 RVA: 0x004A6860 File Offset: 0x004A4A60
+	// Token: 0x06010238 RID: 66104 RVA: 0x004B4358 File Offset: 0x004B2558
 	private void RefreshRecommendLayout(VisionFetterRecommendInfo info)
 	{
 		List<VisionFetterRecommendInfo> roleSystemFetterRecommendList = VisionRecommendModel.Instance.GetRoleSystemFetterRecommendList(this.CurrentRoleId);
@@ -242,7 +241,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012D78 RID: 77176 RVA: 0x004A6928 File Offset: 0x004A4B28
+	// Token: 0x06010239 RID: 66105 RVA: 0x004B4420 File Offset: 0x004B2620
 	[NullableContext(2)]
 	public void SetCurrentPlan(VisionFetterRecommendInfo planInfo, bool isOfficial)
 	{
@@ -266,7 +265,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		onPlanChangedCallback(this.CurrentPlanInfo);
 	}
 
-	// Token: 0x06012D79 RID: 77177 RVA: 0x004A6999 File Offset: 0x004A4B99
+	// Token: 0x0601023A RID: 66106 RVA: 0x004B4491 File Offset: 0x004B2691
 	private void RefreshTopItemFetterIcons()
 	{
 		VisionEquipmentRecommendItemTop topItem = this.TopItem;
@@ -277,7 +276,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		topItem.Refresh(this.CurrentPlanInfo.BuildFetterItemDataList());
 	}
 
-	// Token: 0x06012D7A RID: 77178 RVA: 0x004A69B8 File Offset: 0x004A4BB8
+	// Token: 0x0601023B RID: 66107 RVA: 0x004B44B0 File Offset: 0x004B26B0
 	[NullableContext(2)]
 	public VisionFetterRecommendInfo MatchDefaultPlan(int roleId)
 	{
@@ -288,17 +287,22 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 			return null;
 		}
 		List<VisionFetterRecommendInfo> roleSystemFetterRecommendList = VisionRecommendModel.Instance.GetRoleSystemFetterRecommendList(roleId);
-		int coreGroupId = this.FindCoreGroupId(roleId);
+		int num = this.FindCoreGroupId(roleId);
 		VisionFetterRecommendInfo visionFetterRecommendInfo;
-		if (coreGroupId == 0)
+		if (num == 0)
 		{
 			visionFetterRecommendInfo = ((roleSystemFetterRecommendList.Count > 0) ? roleSystemFetterRecommendList[0] : null);
 		}
 		else
 		{
-			List<VisionFetterRecommendInfo> list = (from info in roleFetterRecommendInfo
-			where info.GetRecommendFetterGroupId() == coreGroupId
-			select info).ToList<VisionFetterRecommendInfo>();
+			List<VisionFetterRecommendInfo> list = new List<VisionFetterRecommendInfo>();
+			foreach (VisionFetterRecommendInfo visionFetterRecommendInfo2 in roleFetterRecommendInfo)
+			{
+				if (visionFetterRecommendInfo2.GetRecommendFetterGroupId() == num)
+				{
+					list.Add(visionFetterRecommendInfo2);
+				}
+			}
 			if (list.Count == 0)
 			{
 				visionFetterRecommendInfo = ((roleSystemFetterRecommendList.Count > 0) ? roleSystemFetterRecommendList[0] : null);
@@ -326,7 +330,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		return visionFetterRecommendInfo;
 	}
 
-	// Token: 0x06012D7B RID: 77179 RVA: 0x004A6B04 File Offset: 0x004A4D04
+	// Token: 0x0601023C RID: 66108 RVA: 0x004B462C File Offset: 0x004B282C
 	private int FindCoreGroupId(int roleId)
 	{
 		List<int> activatedFetterGroupIds = this.GetActivatedFetterGroupIds(roleId);
@@ -355,7 +359,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		return activatedFetterGroupIds[0];
 	}
 
-	// Token: 0x06012D7C RID: 77180 RVA: 0x004A6B78 File Offset: 0x004A4D78
+	// Token: 0x0601023D RID: 66109 RVA: 0x004B46A0 File Offset: 0x004B28A0
 	private List<int> GetActivatedFetterGroupIds(int roleId)
 	{
 		PhantomRoleEquipmentData battleDataById = PhantomBattleModel.Instance.GetBattleDataById(roleId);
@@ -400,7 +404,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x06012D7D RID: 77181 RVA: 0x004A6CDC File Offset: 0x004A4EDC
+	// Token: 0x0601023E RID: 66110 RVA: 0x004B4804 File Offset: 0x004B2A04
 	private int GetFetterGroupActivateCount(int roleId, int groupId)
 	{
 		PhantomRoleEquipmentData battleDataById = PhantomBattleModel.Instance.GetBattleDataById(roleId);
@@ -424,14 +428,14 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		return num;
 	}
 
-	// Token: 0x06012D7E RID: 77182 RVA: 0x004A6D60 File Offset: 0x004A4F60
+	// Token: 0x0601023F RID: 66111 RVA: 0x004B4888 File Offset: 0x004B2A88
 	public List<int> GetCurrentPlanFetterGroupIds()
 	{
 		VisionFetterRecommendInfo currentPlanInfo = this.CurrentPlanInfo;
 		return ((currentPlanInfo != null) ? currentPlanInfo.BuildFetterList() : null) ?? new List<int>();
 	}
 
-	// Token: 0x06012D7F RID: 77183 RVA: 0x004A6D80 File Offset: 0x004A4F80
+	// Token: 0x06010240 RID: 66112 RVA: 0x004B48A8 File Offset: 0x004B2AA8
 	public void RefreshSelectAllToggleState(List<int> currentFilteredGroupIds)
 	{
 		if (this.TopItem == null || this.CurrentPlanInfo == null)
@@ -473,7 +477,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012D80 RID: 77184 RVA: 0x004A6E74 File Offset: 0x004A5074
+	// Token: 0x06010241 RID: 66113 RVA: 0x004B499C File Offset: 0x004B2B9C
 	public void OnSelectAllBtnClick(EToggleState state)
 	{
 		List<int> currentPlanFetterGroupIds = this.GetCurrentPlanFetterGroupIds();
@@ -500,7 +504,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		this.OnChangeCurrentSelectAttr();
 	}
 
-	// Token: 0x06012D81 RID: 77185 RVA: 0x004A6EE4 File Offset: 0x004A50E4
+	// Token: 0x06010242 RID: 66114 RVA: 0x004B4A0C File Offset: 0x004B2C0C
 	public void OnMainAttrSelectAllBtnClick(EToggleState state)
 	{
 		this.CurrentSelectMainAttrArray.Clear();
@@ -517,13 +521,13 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		this.OnChangeCurrentSelectAttr();
 	}
 
-	// Token: 0x06012D82 RID: 77186 RVA: 0x004A6F70 File Offset: 0x004A5170
+	// Token: 0x06010243 RID: 66115 RVA: 0x004B4A98 File Offset: 0x004B2C98
 	private bool IsMainAttrAllSelected()
 	{
 		return this.CurrentShowMainAttrArray.Count > 0 && this.CurrentSelectMainAttrArray.Count == this.CurrentShowMainAttrArray.Count;
 	}
 
-	// Token: 0x06012D83 RID: 77187 RVA: 0x004A6F9C File Offset: 0x004A519C
+	// Token: 0x06010244 RID: 66116 RVA: 0x004B4AC4 File Offset: 0x004B2CC4
 	public void OnSubAttrSelectAllBtnClick(EToggleState state)
 	{
 		this.CurrentSelectSubAttrArray.Clear();
@@ -540,13 +544,13 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		this.OnChangeCurrentSelectAttr();
 	}
 
-	// Token: 0x06012D84 RID: 77188 RVA: 0x004A7028 File Offset: 0x004A5228
+	// Token: 0x06010245 RID: 66117 RVA: 0x004B4B50 File Offset: 0x004B2D50
 	private bool IsSubAttrAllSelected()
 	{
 		return this.CurrentShowSubAttrArray.Count > 0 && this.CurrentSelectSubAttrArray.Count == this.CurrentShowSubAttrArray.Count;
 	}
 
-	// Token: 0x06012D85 RID: 77189 RVA: 0x004A7054 File Offset: 0x004A5254
+	// Token: 0x06010246 RID: 66118 RVA: 0x004B4B7C File Offset: 0x004B2D7C
 	public void CheckAndUpdateMainPhantomByFilter(List<int> currentSuitGroupIds, List<string> currentMonsterNames)
 	{
 		if (this.CurrentSelectMainPhantom == null)
@@ -576,7 +580,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012D86 RID: 77190 RVA: 0x004A7128 File Offset: 0x004A5328
+	// Token: 0x06010247 RID: 66119 RVA: 0x004B4C50 File Offset: 0x004B2E50
 	private void RefreshAttrListData(int roleId)
 	{
 		int num = this.TabCost;
@@ -629,7 +633,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012D87 RID: 77191 RVA: 0x004A7310 File Offset: 0x004A5510
+	// Token: 0x06010248 RID: 66120 RVA: 0x004B4E38 File Offset: 0x004B3038
 	private void OnChangeCurrentSelectAttr()
 	{
 		this.RefreshMainPhantomRecommend();
@@ -641,7 +645,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012D88 RID: 77192 RVA: 0x004A7338 File Offset: 0x004A5538
+	// Token: 0x06010249 RID: 66121 RVA: 0x004B4E60 File Offset: 0x004B3060
 	private void RefreshMainPhantomRecommend()
 	{
 		MainRecommendPhantom mainPhantomRecommendItem = this.MainPhantomRecommendItem;
@@ -650,19 +654,30 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 			mainPhantomRecommendItem.SetUiActive(true);
 		}
 		VisionRecommendModel.Instance.CurrentMainPhantom = this.CurrentSelectMainPhantom;
-		int count = 2;
+		int num = 2;
 		VisionFetterRecommendInfo currentPlanInfo = this.CurrentPlanInfo;
-		List<MainPhantomRecommendInfo> list = ((currentPlanInfo != null) ? currentPlanInfo.GetMainPhantomList().Take(count).ToList<MainPhantomRecommendInfo>() : null) ?? new List<MainPhantomRecommendInfo>();
+		List<MainPhantomRecommendInfo> list = new List<MainPhantomRecommendInfo>();
+		if (currentPlanInfo != null)
+		{
+			foreach (MainPhantomRecommendInfo item in currentPlanInfo.GetMainPhantomList())
+			{
+				if (list.Count >= num)
+				{
+					break;
+				}
+				list.Add(item);
+			}
+		}
 		this.CurrentShowMainPhantomArray.Clear();
 		foreach (MainPhantomRecommendInfo info in list)
 		{
-			MainPhantomItemData item = new MainPhantomItemData
+			MainPhantomItemData item2 = new MainPhantomItemData
 			{
 				Info = info,
 				CurrentSelectMainPhantom = this.CurrentSelectMainPhantom,
 				OnMainPhantomCallBack = new Action<IMainPhantomItemData>(this.OnSelectMainAttr)
 			};
-			this.CurrentShowMainPhantomArray.Add(item);
+			this.CurrentShowMainPhantomArray.Add(item2);
 		}
 		MainRecommendPhantom mainPhantomRecommendItem2 = this.MainPhantomRecommendItem;
 		if (mainPhantomRecommendItem2 == null)
@@ -672,7 +687,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		mainPhantomRecommendItem2.Refresh(this.CurrentShowMainPhantomArray);
 	}
 
-	// Token: 0x06012D89 RID: 77193 RVA: 0x004A7420 File Offset: 0x004A5620
+	// Token: 0x0601024A RID: 66122 RVA: 0x004B4F88 File Offset: 0x004B3188
 	private void RefreshAttrRecommend()
 	{
 		VisionRecommendModel.Instance.CurrentSelectMainAttrArray = this.CurrentSelectMainAttrArray;
@@ -699,7 +714,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		subRecommendAttr.SetToggleAllState(this.IsSubAttrAllSelected());
 	}
 
-	// Token: 0x06012D8A RID: 77194 RVA: 0x004A749C File Offset: 0x004A569C
+	// Token: 0x0601024B RID: 66123 RVA: 0x004B5004 File Offset: 0x004B3204
 	private void RefreshMainAttrForAllCost()
 	{
 		List<int> list = new List<int>();
@@ -707,17 +722,20 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		list.Add(3);
 		list.Add(1);
 		this.CurrentShowMainAttrArray.Clear();
-		List<IMainRecommendAttrItemData> data = (from cost in list
-		select this.BuildMainAttrGroup(cost, true, new int?(1))).ToList<IMainRecommendAttrItemData>();
+		List<IMainRecommendAttrItemData> list2 = new List<IMainRecommendAttrItemData>();
+		foreach (int cost in list)
+		{
+			list2.Add(this.BuildMainAttrGroup(cost, true, new int?(1)));
+		}
 		MainRecommendAttr mainRecommendAttr = this.MainRecommendAttr;
 		if (mainRecommendAttr == null)
 		{
 			return;
 		}
-		mainRecommendAttr.Refresh(data);
+		mainRecommendAttr.Refresh(list2);
 	}
 
-	// Token: 0x06012D8B RID: 77195 RVA: 0x004A74F8 File Offset: 0x004A56F8
+	// Token: 0x0601024C RID: 66124 RVA: 0x004B509C File Offset: 0x004B329C
 	private void RefreshMainAttrForSpecificCost(int cost)
 	{
 		this.CurrentShowMainAttrArray.Clear();
@@ -732,7 +750,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x06012D8C RID: 77196 RVA: 0x004A753C File Offset: 0x004A573C
+	// Token: 0x0601024D RID: 66125 RVA: 0x004B50E0 File Offset: 0x004B32E0
 	private IMainRecommendAttrItemData BuildMainAttrGroup(int cost, bool showUsage, int? limit = null)
 	{
 		List<AttrRecommendInfo> roleMainAttrRecommendListByPlan = VisionRecommendModel.Instance.GetRoleMainAttrRecommendListByPlan(this.CurrentRoleId, cost, this.IsOfficialPlan);
@@ -741,7 +759,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		{
 			List<AttrRecommendInfo> list2 = new List<AttrRecommendInfo>(roleMainAttrRecommendListByPlan);
 			list2.Sort((AttrRecommendInfo a, AttrRecommendInfo b) => b.GetUsage() - a.GetUsage());
-			foreach (AttrRecommendInfo attrRecommendInfo in ((limit != null) ? list2.Take(limit.Value).ToList<AttrRecommendInfo>() : list2))
+			foreach (AttrRecommendInfo attrRecommendInfo in ((limit != null) ? list2.GetRange(0, (limit.Value < 0) ? 0 : ((limit.Value > list2.Count) ? list2.Count : limit.Value)) : list2))
 			{
 				RecommendItemData recommendItemData = new RecommendItemData();
 				recommendItemData.AttrId = attrRecommendInfo.GetAttrId();
@@ -761,7 +779,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012D8D RID: 77197 RVA: 0x004A7694 File Offset: 0x004A5894
+	// Token: 0x0601024E RID: 66126 RVA: 0x004B5258 File Offset: 0x004B3458
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -808,7 +826,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012D8E RID: 77198 RVA: 0x004A7768 File Offset: 0x004A5968
+	// Token: 0x0601024F RID: 66127 RVA: 0x004B532C File Offset: 0x004B352C
 	private void RefreshSubAttrRecommend()
 	{
 		List<AttrRecommendInfo> subAttrData = this.GetSubAttrData();
@@ -847,7 +865,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012D8F RID: 77199 RVA: 0x004A7860 File Offset: 0x004A5A60
+	// Token: 0x06010250 RID: 66128 RVA: 0x004B5424 File Offset: 0x004B3624
 	private void RefreshCostDistribution()
 	{
 		int firstCost = this.DetermineFirstVisionCost();
@@ -865,13 +883,13 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		otherCostLayout.RefreshByData(data, null, false);
 	}
 
-	// Token: 0x06012D90 RID: 77200 RVA: 0x004A78A9 File Offset: 0x004A5AA9
+	// Token: 0x06010251 RID: 66129 RVA: 0x004B546D File Offset: 0x004B366D
 	private CostDistributionItem InitCostDistributionItem()
 	{
 		return new CostDistributionItem();
 	}
 
-	// Token: 0x06012D91 RID: 77201 RVA: 0x004A78B0 File Offset: 0x004A5AB0
+	// Token: 0x06010252 RID: 66130 RVA: 0x004B5474 File Offset: 0x004B3674
 	private int DetermineFirstVisionCost()
 	{
 		if (this.CurrentSelectMainPhantom != null)
@@ -916,7 +934,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		return 0;
 	}
 
-	// Token: 0x06012D92 RID: 77202 RVA: 0x004A7A18 File Offset: 0x004A5C18
+	// Token: 0x06010253 RID: 66131 RVA: 0x004B55DC File Offset: 0x004B37DC
 	private List<int> DetermineOtherVisionCosts(int firstCost)
 	{
 		int calabashLevel = CalabashModel.Instance.GetCalabashLevel();
@@ -962,7 +980,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012D93 RID: 77203 RVA: 0x004A7AF0 File Offset: 0x004A5CF0
+	// Token: 0x06010254 RID: 66132 RVA: 0x004B56B4 File Offset: 0x004B38B4
 	private List<int> GetHighLevelOtherCosts(int firstCost)
 	{
 		if (this.CurrentPlanInfo == null)
@@ -990,7 +1008,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		return result;
 	}
 
-	// Token: 0x06012D94 RID: 77204 RVA: 0x004A7BA4 File Offset: 0x004A5DA4
+	// Token: 0x06010255 RID: 66133 RVA: 0x004B5768 File Offset: 0x004B3968
 	private int GetCostByMonsterId(int monsterId)
 	{
 		IReadOnlyList<PhantomItem> phantomItemByMonsterId = PhantomBattleConfig.Instance.GetPhantomItemByMonsterId(monsterId);
@@ -1005,7 +1023,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		return 0;
 	}
 
-	// Token: 0x06012D95 RID: 77205 RVA: 0x004A7C00 File Offset: 0x004A5E00
+	// Token: 0x06010256 RID: 66134 RVA: 0x004B57C4 File Offset: 0x004B39C4
 	private void OnSelectMainAttr(IMainPhantomItemData data)
 	{
 		if (this.CurrentSelectMainPhantom != null && data.Info.GetMonsterId() == this.CurrentSelectMainPhantom.MonsterId && data.Info.GetFetterGroupId() == this.CurrentSelectMainPhantom.FetterGroupId)
@@ -1024,7 +1042,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		this.NotifyMainPhantomFilterChanged(data, false);
 	}
 
-	// Token: 0x06012D96 RID: 77206 RVA: 0x004A7CA0 File Offset: 0x004A5EA0
+	// Token: 0x06010257 RID: 66135 RVA: 0x004B5864 File Offset: 0x004B3A64
 	private void NotifyMainPhantomFilterChanged(IMainPhantomItemData data, bool isDeselect)
 	{
 		if (this.OnMainPhantomFilterChanged == null)
@@ -1051,7 +1069,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x06012D97 RID: 77207 RVA: 0x004A7D54 File Offset: 0x004A5F54
+	// Token: 0x06010258 RID: 66136 RVA: 0x004B5918 File Offset: 0x004B3B18
 	private void OnSelectAttr(RecommendItemData data)
 	{
 		if (data.Type == 1)
@@ -1107,7 +1125,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		this.OnChangeCurrentSelectAttr();
 	}
 
-	// Token: 0x06012D98 RID: 77208 RVA: 0x004A7EA8 File Offset: 0x004A60A8
+	// Token: 0x06010259 RID: 66137 RVA: 0x004B5A6C File Offset: 0x004B3C6C
 	public void ClearSelectMainPhantom(bool bTriggerDeselectCallback = true)
 	{
 		bool flag = false;
@@ -1130,7 +1148,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		onDeselectMainPhantomCallback();
 	}
 
-	// Token: 0x06012D99 RID: 77209 RVA: 0x004A7EF0 File Offset: 0x004A60F0
+	// Token: 0x0601025A RID: 66138 RVA: 0x004B5AB4 File Offset: 0x004B3CB4
 	protected override void OnAfterShow()
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(13);
@@ -1151,7 +1169,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		sequencePlayer2.PlayLevelSequenceByName("Open", false, null, false);
 	}
 
-	// Token: 0x06012D9A RID: 77210 RVA: 0x004A7F48 File Offset: 0x004A6148
+	// Token: 0x0601025B RID: 66139 RVA: 0x004B5B0C File Offset: 0x004B3D0C
 	protected override UniTask OnBeforeHideAsync()
 	{
 		VisionEquipmentRecommendItem.<OnBeforeHideAsync>d__73 <OnBeforeHideAsync>d__;
@@ -1162,10 +1180,10 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04008DDE RID: 36318
+	// Token: 0x04008F28 RID: 36648
 	private const int CALABASH_LOW_LEVEL = 2;
 
-	// Token: 0x04008DDF RID: 36319
+	// Token: 0x04008F29 RID: 36649
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<int, string> costLabelTextIdMap = new Dictionary<int, string>
 	{
@@ -1183,11 +1201,11 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 		}
 	};
 
-	// Token: 0x04008DE0 RID: 36320
+	// Token: 0x04008F2A RID: 36650
 	[Nullable(2)]
 	private VisionEquipmentRecommendItemTop TopItem;
 
-	// Token: 0x04008DE1 RID: 36321
+	// Token: 0x04008F2B RID: 36651
 	[Nullable(new byte[]
 	{
 		2,
@@ -1196,7 +1214,7 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 	})]
 	private GenericLayout<VisionRecommendBranchFetterItem, VisionFetterRecommendInfo> SystemRecommendLayout;
 
-	// Token: 0x04008DE2 RID: 36322
+	// Token: 0x04008F2C RID: 36652
 	[Nullable(new byte[]
 	{
 		2,
@@ -1205,38 +1223,38 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 	})]
 	private GenericLayout<VisionRecommendBranchFetterItem, VisionFetterRecommendInfo> UsageRecommendLayout;
 
-	// Token: 0x04008DE3 RID: 36323
+	// Token: 0x04008F2D RID: 36653
 	private readonly List<VisionSelectRecommendData> CurrentSelectMainAttrArray = new List<VisionSelectRecommendData>();
 
-	// Token: 0x04008DE4 RID: 36324
+	// Token: 0x04008F2E RID: 36654
 	private readonly List<VisionSelectRecommendData> CurrentSelectSubAttrArray = new List<VisionSelectRecommendData>();
 
-	// Token: 0x04008DE5 RID: 36325
+	// Token: 0x04008F2F RID: 36655
 	[Nullable(2)]
 	private VisionMainSelectPhantomData CurrentSelectMainPhantom;
 
-	// Token: 0x04008DE6 RID: 36326
+	// Token: 0x04008F30 RID: 36656
 	private readonly List<RecommendItemData> CurrentShowMainAttrArray = new List<RecommendItemData>();
 
-	// Token: 0x04008DE7 RID: 36327
+	// Token: 0x04008F31 RID: 36657
 	private readonly List<RecommendItemData> CurrentShowSubAttrArray = new List<RecommendItemData>();
 
-	// Token: 0x04008DE8 RID: 36328
+	// Token: 0x04008F32 RID: 36658
 	private readonly List<IMainPhantomItemData> CurrentShowMainPhantomArray = new List<IMainPhantomItemData>();
 
-	// Token: 0x04008DE9 RID: 36329
+	// Token: 0x04008F33 RID: 36659
 	[Nullable(2)]
 	private MainRecommendPhantom MainPhantomRecommendItem;
 
-	// Token: 0x04008DEA RID: 36330
+	// Token: 0x04008F34 RID: 36660
 	[Nullable(2)]
 	private MainRecommendAttr MainRecommendAttr;
 
-	// Token: 0x04008DEB RID: 36331
+	// Token: 0x04008F35 RID: 36661
 	[Nullable(2)]
 	private SubRecommendAttr SubRecommendAttr;
 
-	// Token: 0x04008DEC RID: 36332
+	// Token: 0x04008F36 RID: 36662
 	[Nullable(new byte[]
 	{
 		2,
@@ -1244,31 +1262,31 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 	})]
 	private GenericLayout<CostDistributionItem, int> OtherCostLayout;
 
-	// Token: 0x04008DED RID: 36333
+	// Token: 0x04008F37 RID: 36663
 	private int TabCost;
 
-	// Token: 0x04008DEE RID: 36334
+	// Token: 0x04008F38 RID: 36664
 	private int CurrentCost;
 
-	// Token: 0x04008DEF RID: 36335
+	// Token: 0x04008F39 RID: 36665
 	private int CurrentRoleId;
 
-	// Token: 0x04008DF0 RID: 36336
+	// Token: 0x04008F3A RID: 36666
 	[Nullable(2)]
 	public VisionFetterRecommendInfo CurrentPlanInfo;
 
-	// Token: 0x04008DF1 RID: 36337
+	// Token: 0x04008F3B RID: 36667
 	private bool IsOfficialPlan;
 
-	// Token: 0x04008DF2 RID: 36338
+	// Token: 0x04008F3C RID: 36668
 	[Nullable(2)]
 	private Action OnChangeAttrCallBack;
 
-	// Token: 0x04008DF3 RID: 36339
+	// Token: 0x04008F3D RID: 36669
 	[Nullable(2)]
 	public Action OnDeselectMainPhantomCallback;
 
-	// Token: 0x04008DF4 RID: 36340
+	// Token: 0x04008F3E RID: 36670
 	[Nullable(new byte[]
 	{
 		2,
@@ -1276,11 +1294,11 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 	})]
 	public Action<IMainPhantomFilterChangedInfo> OnMainPhantomFilterChanged;
 
-	// Token: 0x04008DF5 RID: 36341
+	// Token: 0x04008F3F RID: 36671
 	[Nullable(2)]
 	public Action<VisionFetterRecommendInfo> OnPlanChangedCallback;
 
-	// Token: 0x04008DF6 RID: 36342
+	// Token: 0x04008F40 RID: 36672
 	[Nullable(new byte[]
 	{
 		2,
@@ -1288,41 +1306,41 @@ public class VisionEquipmentRecommendItem : UiPanelBase
 	})]
 	public Action<List<int>, bool> OnSelectAllCallback;
 
-	// Token: 0x04008DF7 RID: 36343
+	// Token: 0x04008F41 RID: 36673
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x02008A2D RID: 35373
+	// Token: 0x02007BB7 RID: 31671
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CDD4 RID: 183764
+		// Token: 0x040280F4 RID: 164084
 		SystemRecommendLayout,
-		// Token: 0x0402CDD5 RID: 183765
+		// Token: 0x040280F5 RID: 164085
 		SystemRecommendItem,
-		// Token: 0x0402CDD6 RID: 183766
+		// Token: 0x040280F6 RID: 164086
 		UsageRecommendLayout,
-		// Token: 0x0402CDD7 RID: 183767
+		// Token: 0x040280F7 RID: 164087
 		UsageRecommendItem,
-		// Token: 0x0402CDD8 RID: 183768
+		// Token: 0x040280F8 RID: 164088
 		TogTop,
-		// Token: 0x0402CDD9 RID: 183769
+		// Token: 0x040280F9 RID: 164089
 		PnlFirstVision,
-		// Token: 0x0402CDDA RID: 183770
+		// Token: 0x040280FA RID: 164090
 		PnlMainAttr,
-		// Token: 0x0402CDDB RID: 183771
+		// Token: 0x040280FB RID: 164091
 		PnlSubAttr,
-		// Token: 0x0402CDDC RID: 183772
+		// Token: 0x040280FC RID: 164092
 		TextFirstVisionCost,
-		// Token: 0x0402CDDD RID: 183773
+		// Token: 0x040280FD RID: 164093
 		OtherVisionCostLayout,
-		// Token: 0x0402CDDE RID: 183774
+		// Token: 0x040280FE RID: 164094
 		OtherVisionCostItem,
-		// Token: 0x0402CDDF RID: 183775
+		// Token: 0x040280FF RID: 164095
 		PnlSystemRecommend,
-		// Token: 0x0402CDE0 RID: 183776
+		// Token: 0x04028100 RID: 164096
 		PnlUsageRecommend,
-		// Token: 0x0402CDE1 RID: 183777
+		// Token: 0x04028101 RID: 164097
 		Scroll
 	}
 }

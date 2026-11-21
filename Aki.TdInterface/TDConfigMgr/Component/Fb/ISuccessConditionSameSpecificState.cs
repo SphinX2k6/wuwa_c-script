@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B9D RID: 2973
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C6B RID: 3179
 	public class ISuccessConditionSameSpecificState : ITargetGearGroupSuccessContdion
 	{
-		// Token: 0x06004450 RID: 17488 RVA: 0x000ADA0A File Offset: 0x000ABC0A
+		// Token: 0x060048A9 RID: 18601 RVA: 0x000B7ACE File Offset: 0x000B5CCE
 		public static ISuccessConditionSameSpecificState Create(ISuccessConditionSameSpecificState? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012D3 RID: 4819
-		// (get) Token: 0x06004451 RID: 17489 RVA: 0x000ADA29 File Offset: 0x000ABC29
+		// Token: 0x170013CE RID: 5070
+		// (get) Token: 0x060048AA RID: 18602 RVA: 0x000B7AED File Offset: 0x000B5CED
 		public override ETargetGearGroupSuccessCondition Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012D4 RID: 4820
-		// (get) Token: 0x06004452 RID: 17490 RVA: 0x000ADA36 File Offset: 0x000ABC36
+		// Token: 0x170013CF RID: 5071
+		// (get) Token: 0x060048AB RID: 18603 RVA: 0x000B7AFA File Offset: 0x000B5CFA
 		public virtual string State
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002694 RID: 9876
+		// Token: 0x040028DC RID: 10460
 		private ISuccessConditionSameSpecificState Instance;
 	}
 }

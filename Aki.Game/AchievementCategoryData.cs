@@ -2,65 +2,65 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000F13 RID: 3859
+// Token: 0x020003C8 RID: 968
 [NullableContext(1)]
 [Nullable(0)]
 public class AchievementCategoryData
 {
-	// Token: 0x17000795 RID: 1941
-	// (get) Token: 0x0600616C RID: 24940 RVA: 0x0012FEF2 File Offset: 0x0012E0F2
-	// (set) Token: 0x0600616D RID: 24941 RVA: 0x0012FEFA File Offset: 0x0012E0FA
+	// Token: 0x170007B7 RID: 1975
+	// (get) Token: 0x06003504 RID: 13572 RVA: 0x00138816 File Offset: 0x00136A16
+	// (set) Token: 0x06003505 RID: 13573 RVA: 0x0013881E File Offset: 0x00136A1E
 	public long UUID { get; set; }
 
-	// Token: 0x0600616E RID: 24942 RVA: 0x0012FF03 File Offset: 0x0012E103
+	// Token: 0x06003506 RID: 13574 RVA: 0x00138827 File Offset: 0x00136A27
 	public void OnSetUUID(long uuid)
 	{
 		this.Id = (int)this.UUID;
 	}
 
-	// Token: 0x0600616F RID: 24943 RVA: 0x0012FF12 File Offset: 0x0012E112
+	// Token: 0x06003507 RID: 13575 RVA: 0x00138836 File Offset: 0x00136A36
 	public AchievementCategoryData(int id)
 	{
 		this.Id = id;
 	}
 
-	// Token: 0x06006170 RID: 24944 RVA: 0x0012FF21 File Offset: 0x0012E121
+	// Token: 0x06003508 RID: 13576 RVA: 0x00138845 File Offset: 0x00136A45
 	public int GetId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x06006171 RID: 24945 RVA: 0x0012FF29 File Offset: 0x0012E129
+	// Token: 0x06003509 RID: 13577 RVA: 0x0013884D File Offset: 0x00136A4D
 	public EAchievementFunctionType GetFunctionType()
 	{
 		return (EAchievementFunctionType)AchievementConfig.Instance.GetCategoryFunctionType(this.Id);
 	}
 
-	// Token: 0x06006172 RID: 24946 RVA: 0x0012FF3B File Offset: 0x0012E13B
+	// Token: 0x0600350A RID: 13578 RVA: 0x0013885F File Offset: 0x00136A5F
 	public string GetOrignalTitle()
 	{
 		return AchievementConfig.Instance.GetCategoryOriginalTitle(this.Id);
 	}
 
-	// Token: 0x06006173 RID: 24947 RVA: 0x0012FF4D File Offset: 0x0012E14D
+	// Token: 0x0600350B RID: 13579 RVA: 0x00138871 File Offset: 0x00136A71
 	public string GetTitle()
 	{
 		return AchievementConfig.Instance.GetCategoryTitle(this.Id);
 	}
 
-	// Token: 0x06006174 RID: 24948 RVA: 0x0012FF5F File Offset: 0x0012E15F
+	// Token: 0x0600350C RID: 13580 RVA: 0x00138883 File Offset: 0x00136A83
 	public string GetTexture()
 	{
 		return AchievementConfig.Instance.GetCategoryTexture(this.Id);
 	}
 
-	// Token: 0x06006175 RID: 24949 RVA: 0x0012FF71 File Offset: 0x0012E171
+	// Token: 0x0600350D RID: 13581 RVA: 0x00138895 File Offset: 0x00136A95
 	public string GetSprite()
 	{
 		return AchievementConfig.Instance.GetCategorySprite(this.Id);
 	}
 
-	// Token: 0x06006176 RID: 24950 RVA: 0x0012FF84 File Offset: 0x0012E184
+	// Token: 0x0600350E RID: 13582 RVA: 0x001388A8 File Offset: 0x00136AA8
 	public string GetAchievementCategoryProgress()
 	{
 		List<AchievementGroupData> achievementCategoryGroups = AchievementModel.Instance.GetAchievementCategoryGroups(this.Id, true);
@@ -88,6 +88,6 @@ public class AchievementCategoryData
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x04002C4F RID: 11343
+	// Token: 0x04002CE8 RID: 11496
 	private int Id;
 }

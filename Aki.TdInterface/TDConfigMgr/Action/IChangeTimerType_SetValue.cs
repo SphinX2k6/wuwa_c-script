@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200187B RID: 6267
+	// Token: 0x02001A06 RID: 6662
 	public class IChangeTimerType_SetValue
 	{
-		// Token: 0x040054E6 RID: 21734
+		// Token: 0x04005933 RID: 22835
 		public EChangeTimerType Type;
 	}
 }

@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Framework
 {
-	// Token: 0x02003A0A RID: 14858
+	// Token: 0x02003062 RID: 12386
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class OnClickKey : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F26B RID: 127595 RVA: 0x008AE017 File Offset: 0x008AC217
+		// Token: 0x0601D6CE RID: 120526 RVA: 0x008F6237 File Offset: 0x008F4437
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return OnClickKey.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F26C RID: 127596 RVA: 0x008AE023 File Offset: 0x008AC223
+		// Token: 0x0601D6CF RID: 120527 RVA: 0x008F6243 File Offset: 0x008F4443
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (LGUIEventSystemActor_C.__OnClickKey__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,32 +28,31 @@ namespace AkiClient.Game.Aki.UI.Framework
 			return LGUIEventSystemActor_C.__OnClickKey__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F26D RID: 127597 RVA: 0x008AE046 File Offset: 0x008AC246
+		// Token: 0x0601D6D0 RID: 120528 RVA: 0x008F6266 File Offset: 0x008F4466
 		public OnClickKey()
 		{
 		}
 
-		// Token: 0x0601F26E RID: 127598 RVA: 0x008AE04E File Offset: 0x008AC24E
+		// Token: 0x0601D6D1 RID: 120529 RVA: 0x008F626E File Offset: 0x008F446E
 		[NullableContext(2)]
 		public OnClickKey(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F26F RID: 127599 RVA: 0x008AE058 File Offset: 0x008AC258
+		// Token: 0x0601D6D2 RID: 120530 RVA: 0x008F6278 File Offset: 0x008F4478
 		public OnClickKey(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F270 RID: 127600 RVA: 0x008AE063 File Offset: 0x008AC263
+		// Token: 0x0601D6D3 RID: 120531 RVA: 0x008F6283 File Offset: 0x008F4483
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<FKey, bool>) ?? ((Action<FKey, bool>)Delegate.CreateDelegate(typeof(Action<FKey, bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F271 RID: 127601 RVA: 0x008AE095 File Offset: 0x008AC295
+		// Token: 0x0601D6D4 RID: 120532 RVA: 0x008F62B5 File Offset: 0x008F44B5
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<FKey, bool> Callback)
 		{
 			if (OnClickKey.RegisterId == 0)
@@ -68,18 +67,16 @@ namespace AkiClient.Game.Aki.UI.Framework
 			base.Add(Callback, OnClickKey.RegisterId);
 		}
 
-		// Token: 0x0601F272 RID: 127602 RVA: 0x008AE0CF File Offset: 0x008AC2CF
+		// Token: 0x0601D6D5 RID: 120533 RVA: 0x008F62EF File Offset: 0x008F44EF
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<FKey, bool> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F273 RID: 127603 RVA: 0x008AE0D8 File Offset: 0x008AC2D8
+		// Token: 0x0601D6D6 RID: 120534 RVA: 0x008F62F8 File Offset: 0x008F44F8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(FKey KeyCode, bool IsPress)
 		{
 			OnClickKey.__OnClickKey_DelegateParams* ptr = stackalloc OnClickKey.__OnClickKey_DelegateParams[(UIntPtr)55] + 15L / (long)sizeof(OnClickKey.__OnClickKey_DelegateParams) & -16L;
@@ -93,10 +90,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(LGUIEventSystemActor_C.__OnClickKey__DelegateSignature_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F274 RID: 127604 RVA: 0x008AE148 File Offset: 0x008AC348
+		// Token: 0x0601D6D7 RID: 120535 RVA: 0x008F6368 File Offset: 0x008F4568
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FKey, bool> action = target as Action<FKey, bool>;
@@ -108,32 +104,32 @@ namespace AkiClient.Game.Aki.UI.Framework
 			action(arg, ((OnClickKey.__OnClickKey_DelegateParams*)__Parameters)->IsPress);
 		}
 
-		// Token: 0x0400EEB6 RID: 61110
+		// Token: 0x0400F7D8 RID: 63448
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Framework/LGUIEventSystemActor.LGUIEventSystemActor_C:OnClickKey__DelegateSignature";
 
-		// Token: 0x0400EEB7 RID: 61111
+		// Token: 0x0400F7D9 RID: 63449
 		private static int RegisterId;
 
-		// Token: 0x02009A59 RID: 39513
+		// Token: 0x02008D08 RID: 36104
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
-		protected ref struct __OnClickKey_DelegateParams
+		private ref struct __OnClickKey_DelegateParams
 		{
-			// Token: 0x04030F91 RID: 200593
+			// Token: 0x0402C855 RID: 182357
 			[FieldOffset(0)]
 			public byte KeyCode;
 
-			// Token: 0x04030F92 RID: 200594
+			// Token: 0x0402C856 RID: 182358
 			[FieldOffset(32)]
 			public bool IsPress;
 		}
 
-		// Token: 0x02009A5A RID: 39514
+		// Token: 0x02008D09 RID: 36105
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030F93 RID: 200595
+			// Token: 0x0402C857 RID: 182359
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

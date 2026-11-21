@@ -5,21 +5,21 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.EffectSave
 {
-	// Token: 0x02005A8F RID: 23183
+	// Token: 0x02004A6B RID: 19051
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class EffectSaveModel : ModelBase
 	{
-		// Token: 0x0603AB82 RID: 240514 RVA: 0x00DFCB62 File Offset: 0x00DFAD62
+		// Token: 0x0602FACB RID: 195275 RVA: 0x00D4D0F6 File Offset: 0x00D4B2F6
 		protected override bool OnInit()
 		{
 			this.EffectSaveMap.Clear();
 			return true;
 		}
 
-		// Token: 0x17008BFF RID: 35839
-		// (get) Token: 0x0603AB83 RID: 240515 RVA: 0x00DFCB70 File Offset: 0x00DFAD70
+		// Token: 0x17005FCD RID: 24525
+		// (get) Token: 0x0602FACC RID: 195276 RVA: 0x00D4D104 File Offset: 0x00D4B304
 		public static EffectSaveModel Instance
 		{
 			get
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.EffectSave
 			}
 		}
 
-		// Token: 0x0603AB84 RID: 240516 RVA: 0x00DFCB77 File Offset: 0x00DFAD77
+		// Token: 0x0602FACD RID: 195277 RVA: 0x00D4D10B File Offset: 0x00D4B30B
 		public static EffectSaveModel GetOrCreateInstance()
 		{
 			if (EffectSaveModel._Instance == null)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.EffectSave
 			return EffectSaveModel._Instance;
 		}
 
-		// Token: 0x0603AB85 RID: 240517 RVA: 0x00DFCB8B File Offset: 0x00DFAD8B
+		// Token: 0x0602FACE RID: 195278 RVA: 0x00D4D11F File Offset: 0x00D4B31F
 		public static bool CreateInstance()
 		{
 			if (EffectSaveModel._Instance != null)
@@ -49,36 +49,36 @@ namespace CSharpScript.Game.Module.EffectSave
 			return true;
 		}
 
-		// Token: 0x0603AB86 RID: 240518 RVA: 0x00DFCBA1 File Offset: 0x00DFADA1
+		// Token: 0x0602FACF RID: 195279 RVA: 0x00D4D135 File Offset: 0x00D4B335
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603AB87 RID: 240519 RVA: 0x00DFCBA3 File Offset: 0x00DFADA3
+		// Token: 0x0602FAD0 RID: 195280 RVA: 0x00D4D137 File Offset: 0x00D4B337
 		public static void ResetStaticDefaultValue()
 		{
 			EffectSaveModel._Instance = null;
 		}
 
-		// Token: 0x0603AB88 RID: 240520 RVA: 0x00DFCBAB File Offset: 0x00DFADAB
+		// Token: 0x0602FAD1 RID: 195281 RVA: 0x00D4D13F File Offset: 0x00D4B33F
 		static EffectSaveModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(EffectSaveModel.CreateStaticDefaultValue), new Action(EffectSaveModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EA62 RID: 125538
+		// Token: 0x04019509 RID: 103689
 		public FTransformDouble TempTransform = new FTransformDouble();
 
-		// Token: 0x0401EA63 RID: 125539
+		// Token: 0x0401950A RID: 103690
 		public FVectorDouble TempPosition = new FVectorDouble();
 
-		// Token: 0x0401EA64 RID: 125540
+		// Token: 0x0401950B RID: 103691
 		public FRotator TempRotation = new FRotator();
 
-		// Token: 0x0401EA65 RID: 125541
+		// Token: 0x0401950C RID: 103692
 		public Dictionary<long, int> EffectSaveMap = new Dictionary<long, int>();
 
-		// Token: 0x0401EA66 RID: 125542
+		// Token: 0x0401950D RID: 103693
 		[Nullable(2)]
 		private static EffectSaveModel _Instance;
 	}

@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001810 RID: 6160
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200199B RID: 6555
 	public class IBlendFunction
 	{
-		// Token: 0x06008435 RID: 33845 RVA: 0x0013B194 File Offset: 0x00139394
-		[NullableContext(1)]
+		// Token: 0x06008B59 RID: 35673 RVA: 0x0014A938 File Offset: 0x00148B38
 		private IBlendFunction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008436 RID: 33846 RVA: 0x0013B1CC File Offset: 0x001393CC
-		[NullableContext(1)]
+		// Token: 0x06008B5A RID: 35674 RVA: 0x0014A970 File Offset: 0x00148B70
 		public static IBlendFunction Create([Nullable(2)] IBlendFunction instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008437 RID: 33847 RVA: 0x0013B1DF File Offset: 0x001393DF
-		[NullableContext(1)]
+		// Token: 0x06008B5B RID: 35675 RVA: 0x0014A983 File Offset: 0x00148B83
 		public static IBlendFunction CreateFromSetValue([Nullable(2)] IBlendFunction_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008438 RID: 33848 RVA: 0x0013B1F2 File Offset: 0x001393F2
-		[NullableContext(1)]
+		// Token: 0x06008B5C RID: 35676 RVA: 0x0014A996 File Offset: 0x00148B96
 		public IBlendFunction_SetValue ToSetValue()
 		{
 			return new IBlendFunction_SetValue
@@ -65,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B57 RID: 11095
-		// (get) Token: 0x06008439 RID: 33849 RVA: 0x0013B21D File Offset: 0x0013941D
-		// (set) Token: 0x0600843A RID: 33850 RVA: 0x0013B248 File Offset: 0x00139448
+		// Token: 0x17002D50 RID: 11600
+		// (get) Token: 0x06008B5D RID: 35677 RVA: 0x0014A9C1 File Offset: 0x00148BC1
+		// (set) Token: 0x06008B5E RID: 35678 RVA: 0x0014A9EC File Offset: 0x00148BEC
 		public virtual EViewTargetBlendFunction Type
 		{
 			get
@@ -88,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B58 RID: 11096
-		// (get) Token: 0x0600843B RID: 33851 RVA: 0x0013B256 File Offset: 0x00139456
-		// (set) Token: 0x0600843C RID: 33852 RVA: 0x0013B285 File Offset: 0x00139485
+		// Token: 0x17002D51 RID: 11601
+		// (get) Token: 0x06008B5F RID: 35679 RVA: 0x0014A9FA File Offset: 0x00148BFA
+		// (set) Token: 0x06008B60 RID: 35680 RVA: 0x0014AA29 File Offset: 0x00148C29
 		public virtual float BlendExp
 		{
 			get
@@ -111,11 +105,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B59 RID: 11097
-		// (get) Token: 0x0600843D RID: 33853 RVA: 0x0013B293 File Offset: 0x00139493
-		// (set) Token: 0x0600843E RID: 33854 RVA: 0x0013B2BA File Offset: 0x001394BA
+		// Token: 0x17002D52 RID: 11602
+		// (get) Token: 0x06008B61 RID: 35681 RVA: 0x0014AA37 File Offset: 0x00148C37
+		// (set) Token: 0x06008B62 RID: 35682 RVA: 0x0014AA5E File Offset: 0x00148C5E
+		[Nullable(2)]
 		public virtual string CurveAsset
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -129,16 +125,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.CurveAsset;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().CurveAsset = value;
 			}
 		}
 
-		// Token: 0x040053B6 RID: 21430
+		// Token: 0x04005801 RID: 22529
+		[Nullable(2)]
 		protected IBlendFunction FbInstance;
 
-		// Token: 0x040053B7 RID: 21431
+		// Token: 0x04005802 RID: 22530
+		[Nullable(2)]
 		protected IBlendFunction_SetValue PocoInterface;
 	}
 }

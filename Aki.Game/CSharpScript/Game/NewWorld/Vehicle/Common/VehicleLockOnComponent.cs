@@ -3,14 +3,14 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Common
 {
-	// Token: 0x02007054 RID: 28756
+	// Token: 0x020061D5 RID: 25045
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VehicleLockOnComponent : BaseLockOnComponent
 	{
-		// Token: 0x17009BF0 RID: 39920
-		// (get) Token: 0x06045FC0 RID: 286656 RVA: 0x01171B65 File Offset: 0x0116FD65
-		public new static Type[] Dependencies
+		// Token: 0x17007166 RID: 29030
+		// (get) Token: 0x0603C1AB RID: 246187 RVA: 0x0111B875 File Offset: 0x01119A75
+		public override Type[] Dependencies
 		{
 			get
 			{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			}
 		}
 
-		// Token: 0x06045FC1 RID: 286657 RVA: 0x01171B7C File Offset: 0x0116FD7C
+		// Token: 0x0603C1AC RID: 246188 RVA: 0x0111B88C File Offset: 0x01119A8C
 		protected override bool OnStart()
 		{
 			base.OnStart();
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			return true;
 		}
 
-		// Token: 0x06045FC2 RID: 286658 RVA: 0x01171BE4 File Offset: 0x0116FDE4
+		// Token: 0x0603C1AD RID: 246189 RVA: 0x0111B8F4 File Offset: 0x01119AF4
 		protected override void OnTick(float delta)
 		{
 			this.TickMoveDir();
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			base.OnTick(delta);
 		}
 
-		// Token: 0x06045FC3 RID: 286659 RVA: 0x01171C00 File Offset: 0x0116FE00
+		// Token: 0x0603C1AE RID: 246190 RVA: 0x0111B910 File Offset: 0x01119B10
 		private void TickCurrentInfo()
 		{
 			if (base.IsHardLock || this.IsLookAt)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			}
 		}
 
-		// Token: 0x06045FC4 RID: 286660 RVA: 0x01171CC0 File Offset: 0x0116FEC0
+		// Token: 0x0603C1AF RID: 246191 RVA: 0x0111B9D0 File Offset: 0x01119BD0
 		private void TickMoveDir()
 		{
 			if (!this.InputComp)
@@ -93,14 +93,14 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			}
 		}
 
-		// Token: 0x06045FC5 RID: 286661 RVA: 0x01171D84 File Offset: 0x0116FF84
+		// Token: 0x0603C1B0 RID: 246192 RVA: 0x0111BA94 File Offset: 0x01119C94
 		public bool SpeedUpCleanTarget()
 		{
 			VehicleMoveComponent moveComp = this.MoveComp;
 			return moveComp != null && moveComp.Valid && this.MoveComp.Speed > 420f && !this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.技能中"]);
 		}
 
-		// Token: 0x06045FC6 RID: 286662 RVA: 0x01171DD8 File Offset: 0x0116FFD8
+		// Token: 0x0603C1B1 RID: 246193 RVA: 0x0111BAE8 File Offset: 0x01119CE8
 		protected override int GetSelfCamp()
 		{
 			if (this.ActorComp.Owner is TsBaseVehicle)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			return -1;
 		}
 
-		// Token: 0x06045FC7 RID: 286663 RVA: 0x01171E3C File Offset: 0x0117003C
+		// Token: 0x0603C1B2 RID: 246194 RVA: 0x0111BB4C File Offset: 0x01119D4C
 		[NullableContext(2)]
 		protected override void SetAndShowTarget(LockOnInfo bestInfo, bool showTarget)
 		{
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			}
 		}
 
-		// Token: 0x06045FC8 RID: 286664 RVA: 0x01171E9C File Offset: 0x0117009C
+		// Token: 0x0603C1B3 RID: 246195 RVA: 0x0111BBAC File Offset: 0x01119DAC
 		private bool SetShowTargetBySkill([Nullable(2)] EntityHandle target, string socketName = "")
 		{
 			if (base.IsHardLock)
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			return this.SetShowTarget(target, socketName, false);
 		}
 
-		// Token: 0x06045FC9 RID: 286665 RVA: 0x01171EE8 File Offset: 0x011700E8
+		// Token: 0x0603C1B4 RID: 246196 RVA: 0x0111BBF8 File Offset: 0x01119DF8
 		public override bool SetShowTarget([Nullable(2)] EntityHandle target, string socketName = "", bool isHardLock = false)
 		{
 			if (base.ShowTarget == target && base.ShowTargetSocket == socketName)
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			return true;
 		}
 
-		// Token: 0x06045FCA RID: 286666 RVA: 0x01171F24 File Offset: 0x01170124
+		// Token: 0x0603C1B5 RID: 246197 RVA: 0x0111BC34 File Offset: 0x01119E34
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -173,85 +173,106 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 				return false;
 			}
 			VehicleLockOnComponent vehicleLockOnComponent = (VehicleLockOnComponent)componentTemplate;
-			if (base.CanResetComponentProperty("StatTickMoveDir") && vehicleLockOnComponent.StatTickMoveDir != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatTickMoveDir), "StatTickMoveDir"))
+			if (vehicleLockOnComponent.StatTickMoveDir != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatTickMoveDir), "StatTickMoveDir"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("StatTickCurrentInfo") && vehicleLockOnComponent.StatTickCurrentInfo != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatTickCurrentInfo), "StatTickCurrentInfo"))
+			if (vehicleLockOnComponent.StatTickCurrentInfo != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatTickCurrentInfo), "StatTickCurrentInfo"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("StatCheck") && vehicleLockOnComponent.StatCheck != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatCheck), "StatCheck"))
+			if (vehicleLockOnComponent.StatCheck != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatCheck), "StatCheck"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (vehicleLockOnComponent.ActorComp == null)
 			{
-				if (vehicleLockOnComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("InputComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (vehicleLockOnComponent.InputComp == null)
-				{
-					this.InputComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleInputComponent>(this.InputComp), "InputComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("MoveComp"))
+			if (vehicleLockOnComponent.InputComp == null)
 			{
-				if (vehicleLockOnComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
+				this.InputComp = null;
 			}
-			return !base.CanResetComponentProperty("MoveDirCache") || vehicleLockOnComponent.MoveDirCache == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.MoveDirCache), "MoveDirCache");
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputComp), "InputComp"))
+			{
+				return false;
+			}
+			if (vehicleLockOnComponent.MoveComp == null)
+			{
+				this.MoveComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
+			{
+				return false;
+			}
+			return vehicleLockOnComponent.MoveDirCache == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveDirCache), "MoveDirCache");
 		}
 
-		// Token: 0x04024A28 RID: 150056
+		// Token: 0x17007167 RID: 29031
+		// (get) Token: 0x0603C1B6 RID: 246198 RVA: 0x0111BD5D File Offset: 0x01119F5D
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007168 RID: 29032
+		// (get) Token: 0x0603C1B7 RID: 246199 RVA: 0x0111BD60 File Offset: 0x01119F60
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007169 RID: 29033
+		// (get) Token: 0x0603C1B8 RID: 246200 RVA: 0x0111BD63 File Offset: 0x01119F63
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FCDE RID: 130270
 		private const int VEHICLE_SKILLTARGET_LOCKON_ID = 6;
 
-		// Token: 0x04024A29 RID: 150057
+		// Token: 0x0401FCDF RID: 130271
 		private const float VEHICLE_CLEAN_TARGET_SPEED_THRESHOLD = 420f;
 
-		// Token: 0x04024A2A RID: 150058
+		// Token: 0x0401FCE0 RID: 130272
 		[StaticVariableRuleIgnore]
 		private readonly Stat StatTickMoveDir = Stat.Create("VehicleLockOnComponent.StatTickMoveDir", "", "");
 
-		// Token: 0x04024A2B RID: 150059
+		// Token: 0x0401FCE1 RID: 130273
 		[StaticVariableRuleIgnore]
 		private readonly Stat StatTickCurrentInfo = Stat.Create("VehicleLockOnComponent.StatTickCurrentInfo", "", "");
 
-		// Token: 0x04024A2C RID: 150060
+		// Token: 0x0401FCE2 RID: 130274
 		[StaticVariableRuleIgnore]
 		private readonly Stat StatCheck = Stat.Create("VehicleLockOnComponent.StatCheck", "", "");
 
-		// Token: 0x04024A2D RID: 150061
+		// Token: 0x0401FCE3 RID: 130275
 		[Nullable(2)]
 		private VehicleActorComponent ActorComp;
 
-		// Token: 0x04024A2E RID: 150062
+		// Token: 0x0401FCE4 RID: 130276
 		[Nullable(2)]
 		private VehicleInputComponent InputComp;
 
-		// Token: 0x04024A2F RID: 150063
+		// Token: 0x0401FCE5 RID: 130277
 		[Nullable(2)]
 		private VehicleMoveComponent MoveComp;
 
-		// Token: 0x04024A30 RID: 150064
+		// Token: 0x0401FCE6 RID: 130278
 		private readonly Vector MoveDirCache = Vector.Create();
 	}
 }

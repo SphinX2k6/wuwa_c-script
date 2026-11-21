@@ -9,19 +9,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070C2 RID: 28866
+	// Token: 0x02006326 RID: 25382
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CharacterAnimationSyncComponent : EntityComponent, IStaticVariableResetter
 	{
-		// Token: 0x0604664F RID: 288335 RVA: 0x011A679C File Offset: 0x011A499C
+		// Token: 0x0603D72E RID: 251694 RVA: 0x011C5EBC File Offset: 0x011C40BC
 		static CharacterAnimationSyncComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CharacterAnimationSyncComponent.CreateStaticDefaultValue), new Action(CharacterAnimationSyncComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x17009C8C RID: 40076
-		// (get) Token: 0x06046650 RID: 288336 RVA: 0x011A68CC File Offset: 0x011A4ACC
+		// Token: 0x1700748A RID: 29834
+		// (get) Token: 0x0603D72F RID: 251695 RVA: 0x011C5FEC File Offset: 0x011C41EC
 		protected UAnimInstance MainAnimInstance
 		{
 			get
@@ -40,8 +40,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009C8D RID: 40077
-		// (get) Token: 0x06046651 RID: 288337 RVA: 0x011A692C File Offset: 0x011A4B2C
+		// Token: 0x1700748B RID: 29835
+		// (get) Token: 0x0603D730 RID: 251696 RVA: 0x011C604C File Offset: 0x011C424C
 		private UAnimInstance SpecialAnimInstance
 		{
 			get
@@ -60,14 +60,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046652 RID: 288338 RVA: 0x011A698B File Offset: 0x011A4B8B
+		// Token: 0x0603D731 RID: 251697 RVA: 0x011C60AB File Offset: 0x011C42AB
 		protected override bool OnEnd()
 		{
 			CombatMessageController.Instance.UnregisterAfterTick(this);
 			return true;
 		}
 
-		// Token: 0x06046653 RID: 288339 RVA: 0x011A699C File Offset: 0x011A4B9C
+		// Token: 0x0603D732 RID: 251698 RVA: 0x011C60BC File Offset: 0x011C42BC
 		protected override void OnActivate()
 		{
 			CombatMessageController.Instance.RegisterAfterTick(this, new Action<float>(this.AfterTickInternal));
@@ -91,19 +91,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046654 RID: 288340 RVA: 0x011A6A7A File Offset: 0x011A4C7A
+		// Token: 0x0603D733 RID: 251699 RVA: 0x011C619A File Offset: 0x011C439A
 		private void AfterTickInternal(float delta)
 		{
 			this.AfterTickInner(delta);
 		}
 
-		// Token: 0x06046655 RID: 288341 RVA: 0x011A6A83 File Offset: 0x011A4C83
+		// Token: 0x0603D734 RID: 251700 RVA: 0x011C61A3 File Offset: 0x011C43A3
 		protected virtual void AfterTickInner(float delta)
 		{
 			this.TryPushAnimationStateChanged();
 		}
 
-		// Token: 0x06046656 RID: 288342 RVA: 0x011A6A8C File Offset: 0x011A4C8C
+		// Token: 0x0603D735 RID: 251701 RVA: 0x011C61AC File Offset: 0x011C43AC
 		protected override bool OnClear()
 		{
 			foreach (ITagTask tagTask in this.ListenTagChangedHandles)
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046657 RID: 288343 RVA: 0x011A6AE0 File Offset: 0x011A4CE0
+		// Token: 0x0603D736 RID: 251702 RVA: 0x011C6200 File Offset: 0x011C4400
 		private unsafe void InitAnimationStates()
 		{
 			if (this.MainAnimInstance == null || !this.MainAnimInstance.IsValid())
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046658 RID: 288344 RVA: 0x011A6E1C File Offset: 0x011A501C
+		// Token: 0x0603D737 RID: 251703 RVA: 0x011C653C File Offset: 0x011C473C
 		private unsafe void TryPushAnimationStateChanged()
 		{
 			if (this.MainAnimInstance == null || !this.MainAnimInstance.IsValid())
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046659 RID: 288345 RVA: 0x011A6FAE File Offset: 0x011A51AE
+		// Token: 0x0603D738 RID: 251704 RVA: 0x011C66CE File Offset: 0x011C48CE
 		public void ClearOrders()
 		{
 			UAnimInstance mainAnimInstance = this.MainAnimInstance;
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			mainAnimInstance2.ClearStateOrdersSendPending();
 		}
 
-		// Token: 0x0604665A RID: 288346 RVA: 0x011A6FD4 File Offset: 0x011A51D4
+		// Token: 0x0603D739 RID: 251705 RVA: 0x011C66F4 File Offset: 0x011C48F4
 		private void AnimationGameplayTagRequest(int tagId, bool add)
 		{
 			if (!GameModeModel.Instance.IsMulti || !this.ActorComp.IsMoveAutonomousProxy)
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			CombatNet.Instance.Send(EPushMessageId.AnimationGameplayTagPush, base.Entity, animationGameplayTagPush, null, null, null);
 		}
 
-		// Token: 0x0604665B RID: 288347 RVA: 0x011A7044 File Offset: 0x011A5244
+		// Token: 0x0603D73A RID: 251706 RVA: 0x011C6764 File Offset: 0x011C4964
 		[NullableContext(1)]
 		public void AnimationGameplayTagHandle(AnimationGameplayTagNotify data)
 		{
@@ -336,7 +336,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.TagComp.RemoveTag(new int?(data.ChangedTagId));
 		}
 
-		// Token: 0x0604665C RID: 288348 RVA: 0x011A709D File Offset: 0x011A529D
+		// Token: 0x0603D73B RID: 251707 RVA: 0x011C67BD File Offset: 0x011C49BD
 		[CombatListen(ENotifyMessageId.AnimationGameplayTagNotify, true, false)]
 		public static void AnimationGameplayTagNotify(Entity entity, [Nullable(1)] AnimationGameplayTagNotify data, CombatCommon combatCommon = null)
 		{
@@ -351,7 +351,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604665D RID: 288349 RVA: 0x011A70B4 File Offset: 0x011A52B4
+		// Token: 0x0603D73C RID: 251708 RVA: 0x011C67D4 File Offset: 0x011C49D4
 		[NullableContext(1)]
 		public unsafe void AnimationStateChangedPush(Entity entity, IList<int> states, IList<int> specialStates)
 		{
@@ -376,7 +376,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			CombatNet.Instance.Send(EPushMessageId.AnimationStateChangedPush, entity, animationStateChangedPush, null, null, null);
 		}
 
-		// Token: 0x0604665E RID: 288350 RVA: 0x011A71B0 File Offset: 0x011A53B0
+		// Token: 0x0603D73D RID: 251709 RVA: 0x011C68D0 File Offset: 0x011C4AD0
 		public unsafe void AnimationStateInitPush()
 		{
 			if (!GameModeModel.Instance.IsMulti)
@@ -422,7 +422,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604665F RID: 288351 RVA: 0x011A7358 File Offset: 0x011A5558
+		// Token: 0x0603D73E RID: 251710 RVA: 0x011C6A78 File Offset: 0x011C4C78
 		[CombatListen(ENotifyMessageId.AnimationStateChangedNotify, true, false)]
 		public unsafe static void AnimationStateChangedNotify(Entity entity, [Nullable(1)] AnimationStateChangedNotify data, CombatCommon combatCommon = null)
 		{
@@ -464,7 +464,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046660 RID: 288352 RVA: 0x011A7458 File Offset: 0x011A5658
+		// Token: 0x0603D73F RID: 251711 RVA: 0x011C6B78 File Offset: 0x011C4D78
 		[CombatListen(ENotifyMessageId.PackAnimChangedNotify, false, false)]
 		public unsafe static void PackAnimChangedNotify(Entity entity, [Nullable(1)] PackAnimChangedNotify info, CombatCommon combatCommon = null)
 		{
@@ -534,7 +534,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046661 RID: 288353 RVA: 0x011A7634 File Offset: 0x011A5834
+		// Token: 0x0603D740 RID: 251712 RVA: 0x011C6D54 File Offset: 0x011C4F54
 		[CombatListen(ENotifyMessageId.AnimationStateInitNotify, false, false)]
 		public unsafe static void AnimationStateInitNotify(Entity entity, [Nullable(1)] AnimationStateInitNotify data, CombatCommon combatCommon = null)
 		{
@@ -570,7 +570,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046662 RID: 288354 RVA: 0x011A7740 File Offset: 0x011A5940
+		// Token: 0x0603D741 RID: 251713 RVA: 0x011C6E60 File Offset: 0x011C5060
 		[NullableContext(1)]
 		public static string OrderToString(IList<int> states)
 		{
@@ -605,7 +605,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x06046663 RID: 288355 RVA: 0x011A781C File Offset: 0x011A5A1C
+		// Token: 0x0603D742 RID: 251714 RVA: 0x011C6F3C File Offset: 0x011C513C
 		public void RebuildAnimationStates(bool needCheckModelId = true)
 		{
 			BaseAnimationComponent component = base.Entity.GetComponent<BaseAnimationComponent>();
@@ -628,7 +628,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.MainAnimInstanceInternal = null;
 		}
 
-		// Token: 0x06046664 RID: 288356 RVA: 0x011A7882 File Offset: 0x011A5A82
+		// Token: 0x0603D743 RID: 251715 RVA: 0x011C6FA2 File Offset: 0x011C51A2
 		public static void CreateStaticDefaultValue()
 		{
 			CharacterAnimationSyncComponent.animationStateListRef = new TArray<int>();
@@ -637,7 +637,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			CharacterAnimationSyncComponent.specialAnimationStates = new TArray<int>();
 		}
 
-		// Token: 0x06046665 RID: 288357 RVA: 0x011A78AC File Offset: 0x011A5AAC
+		// Token: 0x0603D744 RID: 251716 RVA: 0x011C6FCC File Offset: 0x011C51CC
 		public static void ResetStaticDefaultValue()
 		{
 			CharacterAnimationSyncComponent.animationStateListRef = null;
@@ -646,7 +646,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			CharacterAnimationSyncComponent.specialAnimationStates = null;
 		}
 
-		// Token: 0x06046666 RID: 288358 RVA: 0x011A78C8 File Offset: 0x011A5AC8
+		// Token: 0x0603D745 RID: 251717 RVA: 0x011C6FE8 File Offset: 0x011C51E8
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -655,93 +655,102 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				return false;
 			}
 			CharacterAnimationSyncComponent characterAnimationSyncComponent = (CharacterAnimationSyncComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (characterAnimationSyncComponent.ActorComp == null)
 			{
-				if (characterAnimationSyncComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (characterAnimationSyncComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
-			{
-				if (characterAnimationSyncComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ListenTagChangedHandles") && characterAnimationSyncComponent.ListenTagChangedHandles != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.ListenTagChangedHandles), "ListenTagChangedHandles"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CheckModelId"))
+			if (characterAnimationSyncComponent.TagComp == null)
 			{
-				this.CheckModelId = characterAnimationSyncComponent.CheckModelId;
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("MainAnimInstanceInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				if (characterAnimationSyncComponent.MainAnimInstanceInternal == null)
-				{
-					this.MainAnimInstanceInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimInstance>(this.MainAnimInstanceInternal), "MainAnimInstanceInternal"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SpecialAnimInstanceInternal"))
+			if (characterAnimationSyncComponent.CreatureDataComp == null)
 			{
-				if (characterAnimationSyncComponent.SpecialAnimInstanceInternal == null)
-				{
-					this.SpecialAnimInstanceInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimInstance>(this.SpecialAnimInstanceInternal), "SpecialAnimInstanceInternal"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("LastCleanSendPendingTime"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				this.LastCleanSendPendingTime = characterAnimationSyncComponent.LastCleanSendPendingTime;
+				return false;
 			}
+			if (characterAnimationSyncComponent.ListenTagChangedHandles != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ListenTagChangedHandles), "ListenTagChangedHandles"))
+			{
+				return false;
+			}
+			this.CheckModelId = characterAnimationSyncComponent.CheckModelId;
+			if (characterAnimationSyncComponent.MainAnimInstanceInternal == null)
+			{
+				this.MainAnimInstanceInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MainAnimInstanceInternal), "MainAnimInstanceInternal"))
+			{
+				return false;
+			}
+			if (characterAnimationSyncComponent.SpecialAnimInstanceInternal == null)
+			{
+				this.SpecialAnimInstanceInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SpecialAnimInstanceInternal), "SpecialAnimInstanceInternal"))
+			{
+				return false;
+			}
+			this.LastCleanSendPendingTime = characterAnimationSyncComponent.LastCleanSendPendingTime;
 			return true;
 		}
 
-		// Token: 0x04024E31 RID: 151089
+		// Token: 0x1700748C RID: 29836
+		// (get) Token: 0x0603D746 RID: 251718 RVA: 0x011C7119 File Offset: 0x011C5319
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700748D RID: 29837
+		// (get) Token: 0x0603D747 RID: 251719 RVA: 0x011C711C File Offset: 0x011C531C
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700748E RID: 29838
+		// (get) Token: 0x0603D748 RID: 251720 RVA: 0x011C711F File Offset: 0x011C531F
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402096F RID: 133487
 		[Nullable(1)]
 		private static TArray<int> animationStateListRef;
 
-		// Token: 0x04024E32 RID: 151090
+		// Token: 0x04020970 RID: 133488
 		[Nullable(1)]
 		private static TArray<int> specialStateListRef;
 
-		// Token: 0x04024E33 RID: 151091
+		// Token: 0x04020971 RID: 133489
 		[Nullable(1)]
 		private static TArray<int> animationStates;
 
-		// Token: 0x04024E34 RID: 151092
+		// Token: 0x04020972 RID: 133490
 		[Nullable(1)]
 		private static TArray<int> specialAnimationStates;
 
-		// Token: 0x04024E35 RID: 151093
+		// Token: 0x04020973 RID: 133491
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly int[] animationTagList = new int[]
@@ -761,38 +770,38 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.控物.进入投掷"]
 		};
 
-		// Token: 0x04024E36 RID: 151094
+		// Token: 0x04020974 RID: 133492
 		private const int MAX_ANIM_STATE_CHANGE_COUNT = 600;
 
-		// Token: 0x04024E37 RID: 151095
+		// Token: 0x04020975 RID: 133493
 		private static readonly int MaxStatesLength = 600;
 
-		// Token: 0x04024E38 RID: 151096
+		// Token: 0x04020976 RID: 133494
 		protected BaseActorComponent ActorComp;
 
-		// Token: 0x04024E39 RID: 151097
+		// Token: 0x04020977 RID: 133495
 		private BaseTagComponent TagComp;
 
-		// Token: 0x04024E3A RID: 151098
+		// Token: 0x04020978 RID: 133496
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04024E3B RID: 151099
+		// Token: 0x04020979 RID: 133497
 		[Nullable(1)]
 		private readonly List<ITagTask> ListenTagChangedHandles = new List<ITagTask>();
 
-		// Token: 0x04024E3C RID: 151100
+		// Token: 0x0402097A RID: 133498
 		private int CheckModelId;
 
-		// Token: 0x04024E3D RID: 151101
+		// Token: 0x0402097B RID: 133499
 		private UAnimInstance MainAnimInstanceInternal;
 
-		// Token: 0x04024E3E RID: 151102
+		// Token: 0x0402097C RID: 133500
 		private UAnimInstance SpecialAnimInstanceInternal;
 
-		// Token: 0x04024E3F RID: 151103
+		// Token: 0x0402097D RID: 133501
 		private double LastCleanSendPendingTime;
 
-		// Token: 0x04024E40 RID: 151104
+		// Token: 0x0402097E RID: 133502
 		private readonly float CleanSendPendingInterval = 5f;
 	}
 }

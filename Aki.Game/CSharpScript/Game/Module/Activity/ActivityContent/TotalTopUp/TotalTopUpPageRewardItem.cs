@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FBD RID: 24509
+	// Token: 0x02004FA4 RID: 20388
 	public class TotalTopUpPageRewardItem : UiPanelBase
 	{
-		// Token: 0x0603E20D RID: 254477 RVA: 0x00F01250 File Offset: 0x00EFF450
+		// Token: 0x060331A7 RID: 209319 RVA: 0x00E52F0C File Offset: 0x00E5110C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E20E RID: 254478 RVA: 0x00F0133B File Offset: 0x00EFF53B
+		// Token: 0x060331A8 RID: 209320 RVA: 0x00E52FF7 File Offset: 0x00E511F7
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(7);
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0603E20F RID: 254479 RVA: 0x00F01350 File Offset: 0x00EFF550
+		// Token: 0x060331A9 RID: 209321 RVA: 0x00E5300C File Offset: 0x00E5120C
 		[NullableContext(1)]
 		public void Refresh(TotalTopUpPageRewardViewModel viewModel)
 		{
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			item3.SetUIActive(uiactive2);
 		}
 
-		// Token: 0x0603E210 RID: 254480 RVA: 0x00F0140C File Offset: 0x00EFF60C
+		// Token: 0x060331AA RID: 209322 RVA: 0x00E530C8 File Offset: 0x00E512C8
 		private void OnClickReward()
 		{
 			if (this.ViewModel == null)
@@ -91,35 +91,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.ViewModel.PreviewReward();
 		}
 
-		// Token: 0x0402074C RID: 132940
+		// Token: 0x0401B21E RID: 111134
 		[Nullable(2)]
 		private TotalTopUpPageRewardViewModel ViewModel;
 
-		// Token: 0x0200C295 RID: 49813
+		// Token: 0x0200ACA0 RID: 44192
 		private class ENode
 		{
-			// Token: 0x0403AC80 RID: 240768
+			// Token: 0x0403565C RID: 218716
 			public const int BtnReward = 0;
 
-			// Token: 0x0403AC81 RID: 240769
+			// Token: 0x0403565D RID: 218717
 			public const int ItemNormalPanel = 1;
 
-			// Token: 0x0403AC82 RID: 240770
+			// Token: 0x0403565E RID: 218718
 			public const int ItemClaimedPanel = 2;
 
-			// Token: 0x0403AC83 RID: 240771
+			// Token: 0x0403565F RID: 218719
 			public const int TextureIcon = 3;
 
-			// Token: 0x0403AC84 RID: 240772
+			// Token: 0x04035660 RID: 218720
 			public const int TextScore = 4;
 
-			// Token: 0x0403AC85 RID: 240773
+			// Token: 0x04035661 RID: 218721
 			public const int TextRewardCount = 5;
 
-			// Token: 0x0403AC86 RID: 240774
+			// Token: 0x04035662 RID: 218722
 			public const int ItemCheckIcon = 6;
 
-			// Token: 0x0403AC87 RID: 240775
+			// Token: 0x04035663 RID: 218723
 			public const int ItemRedDot = 7;
 		}
 	}

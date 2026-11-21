@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F14 RID: 3860
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200102A RID: 4138
 	public class ICommonEventEntityStateChange : IEventTypeConfig
 	{
-		// Token: 0x0600555A RID: 21850 RVA: 0x000D13C4 File Offset: 0x000CF5C4
+		// Token: 0x06005AD6 RID: 23254 RVA: 0x000DD56C File Offset: 0x000DB76C
 		private ICommonEventEntityStateChange_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600555B RID: 21851 RVA: 0x000D13FC File Offset: 0x000CF5FC
+		// Token: 0x06005AD7 RID: 23255 RVA: 0x000DD5A4 File Offset: 0x000DB7A4
 		public static ICommonEventEntityStateChange Create([Nullable(2)] ICommonEventEntityStateChange instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600555C RID: 21852 RVA: 0x000D140F File Offset: 0x000CF60F
+		// Token: 0x06005AD8 RID: 23256 RVA: 0x000DD5B7 File Offset: 0x000DB7B7
 		public static ICommonEventEntityStateChange CreateFromSetValue([Nullable(2)] ICommonEventEntityStateChange_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600555D RID: 21853 RVA: 0x000D1422 File Offset: 0x000CF622
+		// Token: 0x06005AD9 RID: 23257 RVA: 0x000DD5CA File Offset: 0x000DB7CA
 		public new ICommonEventEntityStateChange_SetValue ToSetValue()
 		{
 			return new ICommonEventEntityStateChange_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C90 RID: 7312
-		// (get) Token: 0x0600555E RID: 21854 RVA: 0x000D1441 File Offset: 0x000CF641
-		// (set) Token: 0x0600555F RID: 21855 RVA: 0x000D146C File Offset: 0x000CF66C
+		// Token: 0x17001E28 RID: 7720
+		// (get) Token: 0x06005ADA RID: 23258 RVA: 0x000DD5E9 File Offset: 0x000DB7E9
+		// (set) Token: 0x06005ADB RID: 23259 RVA: 0x000DD614 File Offset: 0x000DB814
 		public override ECommonEventType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C91 RID: 7313
-		// (get) Token: 0x06005560 RID: 21856 RVA: 0x000D147A File Offset: 0x000CF67A
-		// (set) Token: 0x06005561 RID: 21857 RVA: 0x000D14A5 File Offset: 0x000CF6A5
+		// Token: 0x17001E29 RID: 7721
+		// (get) Token: 0x06005ADC RID: 23260 RVA: 0x000DD622 File Offset: 0x000DB822
+		// (set) Token: 0x06005ADD RID: 23261 RVA: 0x000DD64D File Offset: 0x000DB84D
 		public virtual int EntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040033A7 RID: 13223
+		// Token: 0x040036B4 RID: 14004
 		[Nullable(2)]
 		protected new ICommonEventEntityStateChange FbInstance;
 
-		// Token: 0x040033A8 RID: 13224
+		// Token: 0x040036B5 RID: 14005
 		[Nullable(2)]
 		protected new ICommonEventEntityStateChange_SetValue PocoInterface;
 	}

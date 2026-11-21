@@ -5,32 +5,32 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200023C RID: 572
+	// Token: 0x02000263 RID: 611
 	public class IChessmanPickInteraction_SetValue
 	{
-		// Token: 0x04000A40 RID: 2624
+		// Token: 0x04000ACA RID: 2762
 		public EPickInteraction Type;
 
-		// Token: 0x04000A41 RID: 2625
+		// Token: 0x04000ACB RID: 2763
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> CheckedActions;
 
-		// Token: 0x04000A42 RID: 2626
+		// Token: 0x04000ACC RID: 2764
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> UncheckedActions;
 
-		// Token: 0x04000A43 RID: 2627
+		// Token: 0x04000ACD RID: 2765
 		public int TargetChessboard;
 
-		// Token: 0x04000A44 RID: 2628
+		// Token: 0x04000ACE RID: 2766
 		[Nullable(2)]
 		public string AvailablePosEffect;
 	}

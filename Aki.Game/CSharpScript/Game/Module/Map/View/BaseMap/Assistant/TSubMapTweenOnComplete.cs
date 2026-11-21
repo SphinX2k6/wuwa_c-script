@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 {
-	// Token: 0x0200549A RID: 21658
-	// (Invoke) Token: 0x0603753E RID: 226622
+	// Token: 0x0200447D RID: 17533
+	// (Invoke) Token: 0x0602C494 RID: 181396
 	public delegate void TSubMapTweenOnComplete();
 }

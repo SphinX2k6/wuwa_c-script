@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C71 RID: 3185
+	// Token: 0x02000D55 RID: 3413
 	public struct FilterSortConfig : IFlatbufferObject
 	{
-		// Token: 0x1700110A RID: 4362
-		// (get) Token: 0x06006E79 RID: 28281 RVA: 0x0022F180 File Offset: 0x0022D380
+		// Token: 0x17001167 RID: 4455
+		// (get) Token: 0x06007484 RID: 29828 RVA: 0x0024E384 File Offset: 0x0024C584
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006E7A RID: 28282 RVA: 0x0022F18D File Offset: 0x0022D38D
+		// Token: 0x06007485 RID: 29829 RVA: 0x0024E391 File Offset: 0x0024C591
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006E7B RID: 28283 RVA: 0x0022F194 File Offset: 0x0022D394
+		// Token: 0x06007486 RID: 29830 RVA: 0x0024E398 File Offset: 0x0024C598
 		public static FilterSortConfig GetRootAsFilterSortConfig(ByteBuffer _bb)
 		{
 			return FilterSortConfig.GetRootAsFilterSortConfig(_bb, default(FilterSortConfig));
 		}
 
-		// Token: 0x06006E7C RID: 28284 RVA: 0x0022F1B0 File Offset: 0x0022D3B0
+		// Token: 0x06007487 RID: 29831 RVA: 0x0024E3B4 File Offset: 0x0024C5B4
 		public static FilterSortConfig GetRootAsFilterSortConfig(ByteBuffer _bb, FilterSortConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006E7D RID: 28285 RVA: 0x0022F1CD File Offset: 0x0022D3CD
+		// Token: 0x06007488 RID: 29832 RVA: 0x0024E3D1 File Offset: 0x0024C5D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006E7E RID: 28286 RVA: 0x0022F1DC File Offset: 0x0022D3DC
+		// Token: 0x06007489 RID: 29833 RVA: 0x0024E3E0 File Offset: 0x0024C5E0
 		public FilterSortConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700110B RID: 4363
-		// (get) Token: 0x06006E7F RID: 28287 RVA: 0x0022F1EC File Offset: 0x0022D3EC
+		// Token: 0x17001168 RID: 4456
+		// (get) Token: 0x0600748A RID: 29834 RVA: 0x0024E3F0 File Offset: 0x0024C5F0
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006E80 RID: 28288 RVA: 0x0022F228 File Offset: 0x0022D428
+		// Token: 0x0600748B RID: 29835 RVA: 0x0024E42C File Offset: 0x0024C62C
 		public int SaveGroupId(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700110C RID: 4364
-		// (get) Token: 0x06006E81 RID: 28289 RVA: 0x0022F268 File Offset: 0x0022D468
+		// Token: 0x17001169 RID: 4457
+		// (get) Token: 0x0600748C RID: 29836 RVA: 0x0024E46C File Offset: 0x0024C66C
 		public int SaveGroupIdLength
 		{
 			get
@@ -90,20 +90,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006E82 RID: 28290 RVA: 0x0022F293 File Offset: 0x0022D493
+		// Token: 0x0600748D RID: 29837 RVA: 0x0024E497 File Offset: 0x0024C697
 		public Span<int> GetSaveGroupIdBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x06006E83 RID: 28291 RVA: 0x0022F2A2 File Offset: 0x0022D4A2
+		// Token: 0x0600748E RID: 29838 RVA: 0x0024E4A6 File Offset: 0x0024C6A6
 		public int[] GetSaveGroupIdArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x1700110D RID: 4365
-		// (get) Token: 0x06006E84 RID: 28292 RVA: 0x0022F2BC File Offset: 0x0022D4BC
+		// Token: 0x1700116A RID: 4458
+		// (get) Token: 0x0600748F RID: 29839 RVA: 0x0024E4C0 File Offset: 0x0024C6C0
 		public int SaveMode
 		{
 			get
@@ -117,25 +117,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006E85 RID: 28293 RVA: 0x0022F2F8 File Offset: 0x0022D4F8
+		// Token: 0x06007490 RID: 29840 RVA: 0x0024E4FC File Offset: 0x0024C6FC
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SaveGroupIdIter()或GetSaveGroupIdBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SaveGroupId()
+		public int[] SaveGroupId()
 		{
-			FilterSortConfig filterSortConfig = this;
-			return filterSortConfig.GetSaveGroupIdArray() ?? Array.Empty<int>();
+			return this.GetSaveGroupIdArray();
 		}
 
-		// Token: 0x06006E86 RID: 28294 RVA: 0x0022F31C File Offset: 0x0022D51C
+		// Token: 0x06007491 RID: 29841 RVA: 0x0024E504 File Offset: 0x0024C704
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SaveGroupIdIter()
+		public IEnumerable<int> SaveGroupIdIter()
 		{
 			FilterSortConfig.<SaveGroupIdIter>d__18 <SaveGroupIdIter>d__ = new FilterSortConfig.<SaveGroupIdIter>d__18(-2);
 			<SaveGroupIdIter>d__.<>3__<>4__this = this;
 			return <SaveGroupIdIter>d__;
 		}
 
-		// Token: 0x04004CBC RID: 19644
+		// Token: 0x040052A0 RID: 21152
 		private Table __p;
 	}
 }

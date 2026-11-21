@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020CD RID: 8397
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200232A RID: 9002
 	public class LockEntity : ActionParams
 	{
-		// Token: 0x0600B88A RID: 47242 RVA: 0x001AAEFC File Offset: 0x001A90FC
+		// Token: 0x0600C402 RID: 50178 RVA: 0x001C1E24 File Offset: 0x001C0024
 		private LockEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B88B RID: 47243 RVA: 0x001AAF34 File Offset: 0x001A9134
+		// Token: 0x0600C403 RID: 50179 RVA: 0x001C1E5C File Offset: 0x001C005C
 		public static LockEntity Create([Nullable(2)] LockEntity instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B88C RID: 47244 RVA: 0x001AAF47 File Offset: 0x001A9147
+		// Token: 0x0600C404 RID: 50180 RVA: 0x001C1E6F File Offset: 0x001C006F
 		public static LockEntity CreateFromSetValue([Nullable(2)] LockEntity_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B88D RID: 47245 RVA: 0x001AAF5A File Offset: 0x001A915A
+		// Token: 0x0600C405 RID: 50181 RVA: 0x001C1E82 File Offset: 0x001C0082
 		public LockEntity_SetValue ToSetValue()
 		{
 			return new LockEntity_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700386A RID: 14442
-		// (get) Token: 0x0600B88E RID: 47246 RVA: 0x001AAF6D File Offset: 0x001A916D
-		// (set) Token: 0x0600B88F RID: 47247 RVA: 0x001AAF94 File Offset: 0x001A9194
+		// Token: 0x17003B52 RID: 15186
+		// (get) Token: 0x0600C406 RID: 50182 RVA: 0x001C1E95 File Offset: 0x001C0095
+		// (set) Token: 0x0600C407 RID: 50183 RVA: 0x001C1EBC File Offset: 0x001C00BC
 		public virtual List<int> EntityIds
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E95 RID: 28309
+		// Token: 0x040074BF RID: 29887
 		[Nullable(2)]
 		protected new LockEntity FbInstance;
 
-		// Token: 0x04006E96 RID: 28310
+		// Token: 0x040074C0 RID: 29888
 		[Nullable(2)]
 		protected LockEntity_SetValue PocoInterface;
 	}

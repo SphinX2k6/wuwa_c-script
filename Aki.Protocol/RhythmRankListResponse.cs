@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000F40 RID: 3904
+	// Token: 0x02000F30 RID: 3888
 	[NetMessage(EMessageId.RhythmRankListResponse)]
 	public sealed class RhythmRankListResponse : IMessage<RhythmRankListResponse>, IMessage, IEquatable<RhythmRankListResponse>, IDeepCloneable<RhythmRankListResponse>, IBufferMessage
 	{
-		// Token: 0x06014E33 RID: 85555 RVA: 0x00307A71 File Offset: 0x00305C71
+		// Token: 0x06014D4E RID: 85326 RVA: 0x003063B5 File Offset: 0x003045B5
 		[NullableContext(1)]
 		public static RhythmRankListResponse Create()
 		{
 			return new RhythmRankListResponse();
 		}
 
-		// Token: 0x17004573 RID: 17779
-		// (get) Token: 0x06014E34 RID: 85556 RVA: 0x00307A78 File Offset: 0x00305C78
+		// Token: 0x17004549 RID: 17737
+		// (get) Token: 0x06014D4F RID: 85327 RVA: 0x003063BC File Offset: 0x003045BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004574 RID: 17780
-		// (get) Token: 0x06014E35 RID: 85557 RVA: 0x00307A7B File Offset: 0x00305C7B
+		// Token: 0x1700454A RID: 17738
+		// (get) Token: 0x06014D50 RID: 85328 RVA: 0x003063BF File Offset: 0x003045BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014E36 RID: 85558 RVA: 0x00307A82 File Offset: 0x00305C82
+		// Token: 0x06014D51 RID: 85329 RVA: 0x003063C6 File Offset: 0x003045C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmRankListResponse()
 		{
 		}
 
-		// Token: 0x06014E37 RID: 85559 RVA: 0x00307A98 File Offset: 0x00305C98
+		// Token: 0x06014D52 RID: 85330 RVA: 0x003063DC File Offset: 0x003045DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmRankListResponse(RhythmRankListResponse other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06014E38 RID: 85560 RVA: 0x00307AF5 File Offset: 0x00305CF5
+		// Token: 0x06014D53 RID: 85331 RVA: 0x00306439 File Offset: 0x00304639
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmRankListResponse Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new RhythmRankListResponse(this);
 		}
 
-		// Token: 0x17004575 RID: 17781
-		// (get) Token: 0x06014E39 RID: 85561 RVA: 0x00307AFD File Offset: 0x00305CFD
-		// (set) Token: 0x06014E3A RID: 85562 RVA: 0x00307B05 File Offset: 0x00305D05
+		// Token: 0x1700454B RID: 17739
+		// (get) Token: 0x06014D54 RID: 85332 RVA: 0x00306441 File Offset: 0x00304641
+		// (set) Token: 0x06014D55 RID: 85333 RVA: 0x00306449 File Offset: 0x00304649
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -86,8 +86,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004576 RID: 17782
-		// (get) Token: 0x06014E3B RID: 85563 RVA: 0x00307B0E File Offset: 0x00305D0E
+		// Token: 0x1700454C RID: 17740
+		// (get) Token: 0x06014D56 RID: 85334 RVA: 0x00306452 File Offset: 0x00304652
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RhythmPlayerRankingInfo> FriendData
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004577 RID: 17783
-		// (get) Token: 0x06014E3C RID: 85564 RVA: 0x00307B16 File Offset: 0x00305D16
-		// (set) Token: 0x06014E3D RID: 85565 RVA: 0x00307B1E File Offset: 0x00305D1E
+		// Token: 0x1700454D RID: 17741
+		// (get) Token: 0x06014D57 RID: 85335 RVA: 0x0030645A File Offset: 0x0030465A
+		// (set) Token: 0x06014D58 RID: 85336 RVA: 0x00306462 File Offset: 0x00304662
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmPlayerRankingInfo SelfData
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014E3E RID: 85566 RVA: 0x00307B27 File Offset: 0x00305D27
+		// Token: 0x06014D59 RID: 85337 RVA: 0x0030646B File Offset: 0x0030466B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RhythmRankListResponse);
 		}
 
-		// Token: 0x06014E3F RID: 85567 RVA: 0x00307B38 File Offset: 0x00305D38
+		// Token: 0x06014D5A RID: 85338 RVA: 0x0030647C File Offset: 0x0030467C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RhythmRankListResponse other)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.friendData_.Equals(other.friendData_) && object.Equals(this.SelfData, other.SelfData) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06014E40 RID: 85568 RVA: 0x00307B9C File Offset: 0x00305D9C
+		// Token: 0x06014D5B RID: 85339 RVA: 0x003064E0 File Offset: 0x003046E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06014E41 RID: 85569 RVA: 0x00307C05 File Offset: 0x00305E05
+		// Token: 0x06014D5C RID: 85340 RVA: 0x00306549 File Offset: 0x00304749
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06014E42 RID: 85570 RVA: 0x00307C12 File Offset: 0x00305E12
+		// Token: 0x06014D5D RID: 85341 RVA: 0x00306556 File Offset: 0x00304756
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -169,29 +169,29 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06014E43 RID: 85571 RVA: 0x00307C1C File Offset: 0x00305E1C
+		// Token: 0x06014D5E RID: 85342 RVA: 0x00306560 File Offset: 0x00304760
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.friendData_.WriteTo(ref output, RhythmRankListResponse._repeated_friendData_codec);
-			if (this.ErrorCode != ErrorCode.Success)
-			{
-				output.WriteRawTag(40);
-				output.WriteEnum((int)this.ErrorCode);
-			}
 			if (this.selfData_ != null)
 			{
-				output.WriteRawTag(74);
+				output.WriteRawTag(10);
 				output.WriteMessage(this.SelfData);
 			}
+			if (this.ErrorCode != ErrorCode.Success)
+			{
+				output.WriteRawTag(24);
+				output.WriteEnum((int)this.ErrorCode);
+			}
+			this.friendData_.WriteTo(ref output, RhythmRankListResponse._repeated_friendData_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06014E44 RID: 85572 RVA: 0x00307C88 File Offset: 0x00305E88
+		// Token: 0x06014D5F RID: 85343 RVA: 0x003065CC File Offset: 0x003047CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06014E45 RID: 85573 RVA: 0x00307CF4 File Offset: 0x00305EF4
+		// Token: 0x06014D60 RID: 85344 RVA: 0x00306638 File Offset: 0x00304838
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RhythmRankListResponse other)
@@ -238,7 +238,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06014E46 RID: 85574 RVA: 0x00307D6D File Offset: 0x00305F6D
+		// Token: 0x06014D61 RID: 85345 RVA: 0x003066B1 File Offset: 0x003048B1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -246,7 +246,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06014E47 RID: 85575 RVA: 0x00307D78 File Offset: 0x00305F78
+		// Token: 0x06014D62 RID: 85346 RVA: 0x003066BC File Offset: 0x003048BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -260,7 +260,7 @@ namespace Aki.Protocol
 				}
 				if (num != 10U)
 				{
-					if (num != 40U)
+					if (num != 24U)
 					{
 						if (num != 74U)
 						{
@@ -268,11 +268,7 @@ namespace Aki.Protocol
 						}
 						else
 						{
-							if (this.selfData_ == null)
-							{
-								this.SelfData = new RhythmPlayerRankingInfo();
-							}
-							input.ReadMessage(this.SelfData);
+							this.friendData_.AddEntriesFrom(ref input, RhythmRankListResponse._repeated_friendData_codec);
 						}
 					}
 					else
@@ -282,33 +278,37 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					this.friendData_.AddEntriesFrom(ref input, RhythmRankListResponse._repeated_friendData_codec);
+					if (this.selfData_ == null)
+					{
+						this.SelfData = new RhythmPlayerRankingInfo();
+					}
+					input.ReadMessage(this.SelfData);
 				}
 			}
 		}
 
-		// Token: 0x04007DF8 RID: 32248
+		// Token: 0x04007E22 RID: 32290
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007DF9 RID: 32249
-		public const int ErrorCodeFieldNumber = 5;
+		// Token: 0x04007E23 RID: 32291
+		public const int ErrorCodeFieldNumber = 3;
 
-		// Token: 0x04007DFA RID: 32250
+		// Token: 0x04007E24 RID: 32292
 		private ErrorCode errorCode_;
 
-		// Token: 0x04007DFB RID: 32251
-		public const int FriendDataFieldNumber = 1;
+		// Token: 0x04007E25 RID: 32293
+		public const int FriendDataFieldNumber = 9;
 
-		// Token: 0x04007DFC RID: 32252
-		private static readonly FieldCodec<RhythmPlayerRankingInfo> _repeated_friendData_codec = FieldCodec.ForMessage<RhythmPlayerRankingInfo>(10U, RhythmPlayerRankingInfo.Parser);
+		// Token: 0x04007E26 RID: 32294
+		private static readonly FieldCodec<RhythmPlayerRankingInfo> _repeated_friendData_codec = FieldCodec.ForMessage<RhythmPlayerRankingInfo>(74U, RhythmPlayerRankingInfo.Parser);
 
-		// Token: 0x04007DFD RID: 32253
+		// Token: 0x04007E27 RID: 32295
 		private readonly RepeatedField<RhythmPlayerRankingInfo> friendData_ = new RepeatedField<RhythmPlayerRankingInfo>();
 
-		// Token: 0x04007DFE RID: 32254
-		public const int SelfDataFieldNumber = 9;
+		// Token: 0x04007E28 RID: 32296
+		public const int SelfDataFieldNumber = 1;
 
-		// Token: 0x04007DFF RID: 32255
+		// Token: 0x04007E29 RID: 32297
 		private RhythmPlayerRankingInfo selfData_;
 	}
 }

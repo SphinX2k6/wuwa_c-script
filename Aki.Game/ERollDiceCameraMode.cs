@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001259 RID: 4697
+// Token: 0x0200070D RID: 1805
 public enum ERollDiceCameraMode
 {
-	// Token: 0x04003A0C RID: 14860
+	// Token: 0x04003AA4 RID: 15012
 	RacingBets,
-	// Token: 0x04003A0D RID: 14861
+	// Token: 0x04003AA5 RID: 15013
 	DangoMonopoly
 }

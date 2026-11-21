@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020014F0 RID: 5360
+// Token: 0x020009A8 RID: 2472
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class ScratchTicketConditionItem : GridProxyAbstract<ScratchTicketConditionData>
 {
-	// Token: 0x060098CA RID: 39114 RVA: 0x0021036C File Offset: 0x0020E56C
+	// Token: 0x06006CA4 RID: 27812 RVA: 0x0021A058 File Offset: 0x00218258
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -29,7 +29,7 @@ public class ScratchTicketConditionItem : GridProxyAbstract<ScratchTicketConditi
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060098CB RID: 39115 RVA: 0x002103F6 File Offset: 0x0020E5F6
+	// Token: 0x06006CA5 RID: 27813 RVA: 0x0021A0E2 File Offset: 0x002182E2
 	[NullableContext(1)]
 	public override void Refresh(ScratchTicketConditionData data, bool isSelected, int gridIndex)
 	{
@@ -38,16 +38,16 @@ public class ScratchTicketConditionItem : GridProxyAbstract<ScratchTicketConditi
 		base.GetText(2).SetText(data.GetConditionTypeName(), true);
 	}
 
-	// Token: 0x02007B24 RID: 31524
+	// Token: 0x02006CB0 RID: 27824
 	private class EComponent
 	{
-		// Token: 0x040287FC RID: 165884
+		// Token: 0x04023B3A RID: 146234
 		public const int FinishItem = 0;
 
-		// Token: 0x040287FD RID: 165885
+		// Token: 0x04023B3B RID: 146235
 		public const int ConditionDesc = 1;
 
-		// Token: 0x040287FE RID: 165886
+		// Token: 0x04023B3C RID: 146236
 		public const int ConditionTypeName = 2;
 	}
 }

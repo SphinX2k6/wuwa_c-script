@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200561B RID: 22043
+	// Token: 0x02005BB9 RID: 23481
 	public class INpcBumpShowT
 	{
-		// Token: 0x1700A31A RID: 41754
-		// (get) Token: 0x06024959 RID: 149849 RVA: 0x0050C341 File Offset: 0x0050A541
-		// (set) Token: 0x0602495A RID: 149850 RVA: 0x0050C349 File Offset: 0x0050A549
+		// Token: 0x1700ABA2 RID: 43938
+		// (get) Token: 0x06026B69 RID: 158569 RVA: 0x0054C959 File Offset: 0x0054AB59
+		// (set) Token: 0x06026B6A RID: 158570 RVA: 0x0054C961 File Offset: 0x0054AB61
 		public INpcPerformBubbleT BumpBubble { get; set; }
 
-		// Token: 0x0602495B RID: 149851 RVA: 0x0050C352 File Offset: 0x0050A552
+		// Token: 0x06026B6B RID: 158571 RVA: 0x0054C96A File Offset: 0x0054AB6A
 		public INpcBumpShowT()
 		{
 			this.BumpBubble = null;

@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000FF6 RID: 4086
+// Token: 0x020004AA RID: 1194
 public class GolemHackingCodeGridInfo
 {
-	// Token: 0x04003012 RID: 12306
+	// Token: 0x040030A9 RID: 12457
 	[Nullable(1)]
 	public string Code;
 
-	// Token: 0x04003013 RID: 12307
+	// Token: 0x040030AA RID: 12458
 	public bool Correct;
 
-	// Token: 0x04003014 RID: 12308
+	// Token: 0x040030AB RID: 12459
 	public EGolemHackingBarState BarState;
 
-	// Token: 0x04003015 RID: 12309
+	// Token: 0x040030AC RID: 12460
 	public int AnimIndex;
 }

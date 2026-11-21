@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200208E RID: 8334
+	// Token: 0x020006A7 RID: 1703
 	public sealed class FLGUIMultiTemplateScrollViewItemRefreshDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F6FA RID: 128762 RVA: 0x002EB2BE File Offset: 0x002E94BE
+		// Token: 0x06009274 RID: 37492 RVA: 0x000DCA72 File Offset: 0x000DAC72
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIMultiTemplateScrollViewItemRefreshDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F6FB RID: 128763 RVA: 0x002EB2CA File Offset: 0x002E94CA
+		// Token: 0x06009275 RID: 37493 RVA: 0x000DCA7E File Offset: 0x000DAC7E
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIMultiTemplateScrollViewItemRefreshDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FLGUIMultiTemplateScrollViewItemRefreshDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F6FC RID: 128764 RVA: 0x002EB2ED File Offset: 0x002E94ED
+		// Token: 0x06009276 RID: 37494 RVA: 0x000DCAA1 File Offset: 0x000DACA1
 		public FLGUIMultiTemplateScrollViewItemRefreshDelegate()
 		{
 		}
 
-		// Token: 0x0601F6FD RID: 128765 RVA: 0x002EB2F5 File Offset: 0x002E94F5
+		// Token: 0x06009277 RID: 37495 RVA: 0x000DCAA9 File Offset: 0x000DACA9
 		[NullableContext(2)]
 		public FLGUIMultiTemplateScrollViewItemRefreshDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F6FE RID: 128766 RVA: 0x002EB2FF File Offset: 0x002E94FF
+		// Token: 0x06009278 RID: 37496 RVA: 0x000DCAB3 File Offset: 0x000DACB3
 		public FLGUIMultiTemplateScrollViewItemRefreshDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F6FF RID: 128767 RVA: 0x002EB30A File Offset: 0x002E950A
+		// Token: 0x06009279 RID: 37497 RVA: 0x000DCABE File Offset: 0x000DACBE
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int, AUIBaseActor>) ?? ((Action<int, AUIBaseActor>)Delegate.CreateDelegate(typeof(Action<int, AUIBaseActor>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F700 RID: 128768 RVA: 0x002EB33C File Offset: 0x002E953C
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600927A RID: 37498 RVA: 0x000DCAF0 File Offset: 0x000DACF0
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIMultiTemplateScrollViewItemRefreshDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F701 RID: 128769 RVA: 0x002EB378 File Offset: 0x002E9578
+		// Token: 0x0600927B RID: 37499 RVA: 0x000DCB2C File Offset: 0x000DAD2C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int GridIndex, AUIBaseActor Actor)
 		{
 			FLGUIMultiTemplateScrollViewItemRefreshDelegate.__FLGUIMultiTemplateScrollViewItemRefreshDelegate_DelegateParams* ptr = stackalloc FLGUIMultiTemplateScrollViewItemRefreshDelegate.__FLGUIMultiTemplateScrollViewItemRefreshDelegate_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FLGUIMultiTemplateScrollViewItemRefreshDelegate.__FLGUIMultiTemplateScrollViewItemRefreshDelegate_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F702 RID: 128770 RVA: 0x002EB3CC File Offset: 0x002E95CC
+		// Token: 0x0600927C RID: 37500 RVA: 0x000DCB80 File Offset: 0x000DAD80
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, AUIBaseActor> action = target as Action<int, AUIBaseActor>;
@@ -96,35 +93,35 @@ namespace UnrealEngine
 			action(((FLGUIMultiTemplateScrollViewItemRefreshDelegate.__FLGUIMultiTemplateScrollViewItemRefreshDelegate_DelegateParams*)__Parameters)->GridIndex, orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x04010FA6 RID: 69542
+		// Token: 0x04003FDC RID: 16348
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010FA7 RID: 69543
+		// Token: 0x04003FDD RID: 16349
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIMultiTemplateScrollViewItemRefreshDelegate__DelegateSignature";
 
-		// Token: 0x04010FA8 RID: 69544
+		// Token: 0x04003FDE RID: 16350
 		private static int RegisterId;
 
-		// Token: 0x02003490 RID: 13456
+		// Token: 0x02000ED3 RID: 3795
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FLGUIMultiTemplateScrollViewItemRefreshDelegate_DelegateParams
+		private ref struct __FLGUIMultiTemplateScrollViewItemRefreshDelegate_DelegateParams
 		{
-			// Token: 0x04017483 RID: 95363
+			// Token: 0x04006292 RID: 25234
 			[FieldOffset(0)]
 			public int GridIndex;
 
-			// Token: 0x04017484 RID: 95364
+			// Token: 0x04006293 RID: 25235
 			[FieldOffset(8)]
 			public IntPtr Actor;
 		}
 
-		// Token: 0x02003491 RID: 13457
+		// Token: 0x02000ED4 RID: 3796
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017485 RID: 95365
+			// Token: 0x04006294 RID: 25236
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009BE RID: 2494
+	// Token: 0x02000A7D RID: 2685
 	public static class EPasserbyNpcSourceExtensions
 	{
-		// Token: 0x06003788 RID: 14216 RVA: 0x00090798 File Offset: 0x0008E998
+		// Token: 0x06003B45 RID: 15173 RVA: 0x00098D54 File Offset: 0x00096F54
 		public static string ToEnumString(this EPasserbyNpcSource value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003789 RID: 14217 RVA: 0x000907C0 File Offset: 0x0008E9C0
+		// Token: 0x06003B46 RID: 15174 RVA: 0x00098D7C File Offset: 0x00096F7C
 		public static EPasserbyNpcSource FromString(string name)
 		{
 			EPasserbyNpcSource result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600378A RID: 14218 RVA: 0x000907E9 File Offset: 0x0008E9E9
+		// Token: 0x06003B47 RID: 15175 RVA: 0x00098DA5 File Offset: 0x00096FA5
 		public static bool TryFromString(string name, out EPasserbyNpcSource value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x0600378B RID: 14219 RVA: 0x0009080E File Offset: 0x0008EA0E
+		// Token: 0x06003B48 RID: 15176 RVA: 0x00098DCA File Offset: 0x00096FCA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600378C RID: 14220 RVA: 0x0009081E File Offset: 0x0008EA1E
+		// Token: 0x06003B49 RID: 15177 RVA: 0x00098DDA File Offset: 0x00096FDA
 		public static EPasserbyNpcSource[] GetValues()
 		{
 			return new EPasserbyNpcSource[1];
 		}
 
-		// Token: 0x0600378D RID: 14221 RVA: 0x00090826 File Offset: 0x0008EA26
+		// Token: 0x06003B4A RID: 15178 RVA: 0x00098DE2 File Offset: 0x00096FE2
 		public static string[] GetNames()
 		{
 			return new string[]

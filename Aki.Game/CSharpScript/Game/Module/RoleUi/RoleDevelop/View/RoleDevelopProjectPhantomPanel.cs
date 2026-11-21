@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D42 RID: 19778
+	// Token: 0x02003D0B RID: 15627
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopProjectPhantomPanel : RoleDevelopProjectBasePanel
 	{
-		// Token: 0x0603318F RID: 209295 RVA: 0x00BE8504 File Offset: 0x00BE6704
+		// Token: 0x06027FE7 RID: 163815 RVA: 0x00B31290 File Offset: 0x00B2F490
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033190 RID: 209296 RVA: 0x00BE86D8 File Offset: 0x00BE68D8
+		// Token: 0x06027FE8 RID: 163816 RVA: 0x00B31464 File Offset: 0x00B2F664
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleDevelopProjectPhantomPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033191 RID: 209297 RVA: 0x00BE871C File Offset: 0x00BE691C
+		// Token: 0x06027FE9 RID: 163817 RVA: 0x00B314A8 File Offset: 0x00B2F6A8
 		private UniTask InitPhantomItems()
 		{
 			RoleDevelopProjectPhantomPanel.<InitPhantomItems>d__9 <InitPhantomItems>d__;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return <InitPhantomItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033192 RID: 209298 RVA: 0x00BE8760 File Offset: 0x00BE6960
+		// Token: 0x06027FEA RID: 163818 RVA: 0x00B314EC File Offset: 0x00B2F6EC
 		private UniTask InitButtonItem()
 		{
 			RoleDevelopProjectPhantomPanel.<InitButtonItem>d__10 <InitButtonItem>d__;
@@ -88,13 +88,27 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return <InitButtonItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033193 RID: 209299 RVA: 0x00BE87A3 File Offset: 0x00BE69A3
+		// Token: 0x06027FEB RID: 163819 RVA: 0x00B3152F File Offset: 0x00B2F72F
 		private void InitLayout()
 		{
 			this.PhantomSuitLayout = new GenericLayout<RoleDevelopProjectPhantomSuitItem, RoleDevelopPhantomSuitData>(base.GetVerticalLayout(9), new Func<RoleDevelopProjectPhantomSuitItem>(this.CreatePhantomSuitItem), null, false, true);
 		}
 
-		// Token: 0x06033194 RID: 209300 RVA: 0x00BE87C8 File Offset: 0x00BE69C8
+		// Token: 0x06027FEC RID: 163820 RVA: 0x00B31554 File Offset: 0x00B2F754
+		protected override void OnDataChanged()
+		{
+			int id = this.Data.GetId();
+			if (this.FetterInitRoleId == id)
+			{
+				return;
+			}
+			RoleDevelopRoleBaseData developRoleData = this.Data.GetDevelopRoleData();
+			this.SelectPlanId = developRoleData.GetRecommendPlanId();
+			this.SelectFirstVisionMonsterId = new int?(developRoleData.GetRecommendFirstVisionMonsterId());
+			this.FetterInitRoleId = id;
+		}
+
+		// Token: 0x06027FED RID: 163821 RVA: 0x00B315A8 File Offset: 0x00B2F7A8
 		protected override void OnRefreshView(bool forceRefresh)
 		{
 			if (RoleDevelopUtil.IsAnyProspectRole(this.Data.GetId()))
@@ -104,13 +118,6 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 			this.RootItem.SetUIActive(true);
 			RoleDevelopRoleBaseData developRoleData = this.Data.GetDevelopRoleData();
-			int id = this.Data.GetId();
-			if (this.FetterInitRoleId != id)
-			{
-				this.SelectPlanId = developRoleData.GetRecommendPlanId();
-				this.SelectFirstVisionMonsterId = new int?(developRoleData.GetRecommendFirstVisionMonsterId());
-				this.FetterInitRoleId = id;
-			}
 			UUIItem item = base.GetItem(0);
 			this.RefreshPhantomSuitList(forceRefresh);
 			if (!developRoleData.CanDevelopPhantom())
@@ -123,7 +130,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.RefreshPhantomItems();
 		}
 
-		// Token: 0x06033195 RID: 209301 RVA: 0x00BE8880 File Offset: 0x00BE6A80
+		// Token: 0x06027FEE RID: 163822 RVA: 0x00B31624 File Offset: 0x00B2F824
 		private void RefreshPhantomSuitList(bool forceRefresh)
 		{
 			if (!forceRefresh && this.PhantomSuitLayout.GetDisplayGridNum() > 0)
@@ -139,18 +146,18 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.PhantomSuitLayout.RefreshByData(recommendPhantomSuits, null, false);
 		}
 
-		// Token: 0x06033196 RID: 209302 RVA: 0x00BE88F8 File Offset: 0x00BE6AF8
+		// Token: 0x06027FEF RID: 163823 RVA: 0x00B3169C File Offset: 0x00B2F89C
 		private void RefreshPhantomItems()
 		{
 			RoleDevelopData data = this.Data;
 			List<int> phantomIdList = data.GetDevelopRoleData().GetPhantomIdList();
 			for (int i = 0; i < this.PhantomItems.Count; i++)
 			{
-				this.PhantomItems[i].Refresh(data, (i < phantomIdList.Count) ? phantomIdList[i] : 0, i);
+				this.PhantomItems[i].Refresh(data, (i < phantomIdList.Count) ? phantomIdList[i] : 0, i, true);
 			}
 		}
 
-		// Token: 0x06033197 RID: 209303 RVA: 0x00BE8954 File Offset: 0x00BE6B54
+		// Token: 0x06027FF0 RID: 163824 RVA: 0x00B316FC File Offset: 0x00B2F8FC
 		private void OnClickSwitchButton()
 		{
 			if (this.Data == null)
@@ -169,7 +176,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			RoleController.Instance.LogRoleDevelopClick(this.Data.GetId(), ERoleDevelopCategoryType.Phantom, ERoleDevelopLogSubPage.PhantomDevelopSwitchSuit, null);
 		}
 
-		// Token: 0x06033198 RID: 209304 RVA: 0x00BE89F0 File Offset: 0x00BE6BF0
+		// Token: 0x06027FF1 RID: 163825 RVA: 0x00B31798 File Offset: 0x00B2F998
 		private void OnClickDevelop(int value)
 		{
 			if (this.Data == null)
@@ -185,13 +192,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			RoleController.Instance.LogRoleDevelopClick(id, ERoleDevelopCategoryType.Phantom, ERoleDevelopLogSubPage.PhantomDevelopJump, null);
 		}
 
-		// Token: 0x06033199 RID: 209305 RVA: 0x00BE8A5F File Offset: 0x00BE6C5F
+		// Token: 0x06027FF2 RID: 163826 RVA: 0x00B31807 File Offset: 0x00B2FA07
 		private RoleDevelopProjectPhantomSuitItem CreatePhantomSuitItem()
 		{
 			return new RoleDevelopProjectPhantomSuitItem();
 		}
 
-		// Token: 0x0603319A RID: 209306 RVA: 0x00BE8A66 File Offset: 0x00BE6C66
+		// Token: 0x06027FF3 RID: 163827 RVA: 0x00B3180E File Offset: 0x00B2FA0E
 		private void OnChangeFetterGroupSuccessCallBack(int roleId, int planId, int? firstVisionMonsterId)
 		{
 			this.SelectPlanId = planId;
@@ -203,72 +210,62 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 		}
 
-		// Token: 0x0603319B RID: 209307 RVA: 0x00BE8A9D File Offset: 0x00BE6C9D
+		// Token: 0x06027FF4 RID: 163828 RVA: 0x00B31845 File Offset: 0x00B2FA45
 		private int OnGetSelectedPlanIdCallBack(int roleId)
 		{
 			return this.SelectPlanId;
 		}
 
-		// Token: 0x0603319C RID: 209308 RVA: 0x00BE8AA5 File Offset: 0x00BE6CA5
+		// Token: 0x06027FF5 RID: 163829 RVA: 0x00B3184D File Offset: 0x00B2FA4D
 		private int OnGetSelectedFirstVisionMonsterIdCallBack(int roleId)
 		{
 			return this.SelectFirstVisionMonsterId.GetValueOrDefault();
 		}
 
-		// Token: 0x0401B2A0 RID: 111264
+		// Token: 0x04015C70 RID: 89200
 		private List<RoleDevelopProjectPhantomItem> PhantomItems = new List<RoleDevelopProjectPhantomItem>();
 
-		// Token: 0x0401B2A1 RID: 111265
+		// Token: 0x04015C71 RID: 89201
 		private ButtonItem ButtonDevelop;
 
-		// Token: 0x0401B2A2 RID: 111266
+		// Token: 0x04015C72 RID: 89202
 		public int SelectPlanId;
 
-		// Token: 0x0401B2A3 RID: 111267
+		// Token: 0x04015C73 RID: 89203
 		public int? SelectFirstVisionMonsterId = new int?(0);
 
-		// Token: 0x0401B2A4 RID: 111268
+		// Token: 0x04015C74 RID: 89204
 		private int FetterInitRoleId;
 
-		// Token: 0x0401B2A5 RID: 111269
+		// Token: 0x04015C75 RID: 89205
 		private GenericLayout<RoleDevelopProjectPhantomSuitItem, RoleDevelopPhantomSuitData> PhantomSuitLayout;
 
-		// Token: 0x0200AEA4 RID: 44708
+		// Token: 0x020098D7 RID: 39127
 		[NullableContext(0)]
-		public static class EComponentType
+		private enum EComponentType
 		{
-			// Token: 0x04035081 RID: 217217
-			public const int PanelPhantomDev = 0;
-
-			// Token: 0x04035082 RID: 217218
-			public const int BtnDevelop = 1;
-
-			// Token: 0x04035083 RID: 217219
-			public const int BtnPerfectDevelop = 2;
-
-			// Token: 0x04035084 RID: 217220
-			public const int SubPhantomCircle1 = 3;
-
-			// Token: 0x04035085 RID: 217221
-			public const int SubPhantomCircle2 = 4;
-
-			// Token: 0x04035086 RID: 217222
-			public const int SubPhantomCircle3 = 5;
-
-			// Token: 0x04035087 RID: 217223
-			public const int SubPhantomCircle4 = 6;
-
-			// Token: 0x04035088 RID: 217224
-			public const int SubPhantomCircle5 = 7;
-
-			// Token: 0x04035089 RID: 217225
-			public const int BtnSwitch = 8;
-
-			// Token: 0x0403508A RID: 217226
-			public const int PanelSuitLayout = 9;
-
-			// Token: 0x0403508B RID: 217227
-			public const int PanelSuit = 10;
+			// Token: 0x0402FA9E RID: 195230
+			PanelPhantomDev,
+			// Token: 0x0402FA9F RID: 195231
+			BtnDevelop,
+			// Token: 0x0402FAA0 RID: 195232
+			BtnPerfectDevelop,
+			// Token: 0x0402FAA1 RID: 195233
+			SubPhantomCircle1,
+			// Token: 0x0402FAA2 RID: 195234
+			SubPhantomCircle2,
+			// Token: 0x0402FAA3 RID: 195235
+			SubPhantomCircle3,
+			// Token: 0x0402FAA4 RID: 195236
+			SubPhantomCircle4,
+			// Token: 0x0402FAA5 RID: 195237
+			SubPhantomCircle5,
+			// Token: 0x0402FAA6 RID: 195238
+			BtnSwitch,
+			// Token: 0x0402FAA7 RID: 195239
+			PanelSuitLayout,
+			// Token: 0x0402FAA8 RID: 195240
+			PanelSuit
 		}
 	}
 }

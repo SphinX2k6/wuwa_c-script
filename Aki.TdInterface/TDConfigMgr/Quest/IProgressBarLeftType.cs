@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001063 RID: 4195
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001191 RID: 4497
 	public class IProgressBarLeftType
 	{
-		// Token: 0x06005DFC RID: 24060 RVA: 0x000E3594 File Offset: 0x000E1794
+		// Token: 0x060063EE RID: 25582 RVA: 0x000F0568 File Offset: 0x000EE768
 		private IProgressBarLeftType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005DFD RID: 24061 RVA: 0x000E35CC File Offset: 0x000E17CC
+		// Token: 0x060063EF RID: 25583 RVA: 0x000F05A0 File Offset: 0x000EE7A0
 		public static IProgressBarLeftType Create([Nullable(2)] IProgressBarLeftType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005DFE RID: 24062 RVA: 0x000E35DF File Offset: 0x000E17DF
+		// Token: 0x060063F0 RID: 25584 RVA: 0x000F05B3 File Offset: 0x000EE7B3
 		public static IProgressBarLeftType CreateFromSetValue([Nullable(2)] IProgressBarLeftType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005DFF RID: 24063 RVA: 0x000E35F2 File Offset: 0x000E17F2
+		// Token: 0x060063F1 RID: 25585 RVA: 0x000F05C6 File Offset: 0x000EE7C6
 		public IProgressBarLeftType_SetValue ToSetValue()
 		{
 			return new IProgressBarLeftType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001EEB RID: 7915
-		// (get) Token: 0x06005E00 RID: 24064 RVA: 0x000E3605 File Offset: 0x000E1805
-		// (set) Token: 0x06005E01 RID: 24065 RVA: 0x000E3630 File Offset: 0x000E1830
+		// Token: 0x1700209A RID: 8346
+		// (get) Token: 0x060063F2 RID: 25586 RVA: 0x000F05D9 File Offset: 0x000EE7D9
+		// (set) Token: 0x060063F3 RID: 25587 RVA: 0x000F0604 File Offset: 0x000EE804
 		public virtual EProgressBarLeftType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003896 RID: 14486
+		// Token: 0x04003BDE RID: 15326
 		[Nullable(2)]
 		protected IProgressBarLeftType FbInstance;
 
-		// Token: 0x04003897 RID: 14487
+		// Token: 0x04003BDF RID: 15327
 		[Nullable(2)]
 		protected IProgressBarLeftType_SetValue PocoInterface;
 	}

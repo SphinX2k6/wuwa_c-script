@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200008A RID: 138
+	// Token: 0x02000092 RID: 146
 	public class ConfigAiSkillInfosById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600033C RID: 828 RVA: 0x0006BD4C File Offset: 0x00069F4C
+		// Token: 0x0600036C RID: 876 RVA: 0x00070600 File Offset: 0x0006E800
 		static ConfigAiSkillInfosById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAiSkillInfosById.CreateStaticDefaultValue), new Action(ConfigAiSkillInfosById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600033D RID: 829 RVA: 0x0006BD6C File Offset: 0x00069F6C
+		// Token: 0x0600036D RID: 877 RVA: 0x00070620 File Offset: 0x0006E820
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAiSkillInfosById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600033E RID: 830 RVA: 0x0006BDEB File Offset: 0x00069FEB
+		// Token: 0x0600036E RID: 878 RVA: 0x0007069F File Offset: 0x0006E89F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAiSkillInfosById.LogPair = null;
 			ConfigAiSkillInfosById.HandleId = 0;
 		}
 
-		// Token: 0x0600033F RID: 831 RVA: 0x0006BDF9 File Offset: 0x00069FF9
+		// Token: 0x0600036F RID: 879 RVA: 0x000706AD File Offset: 0x0006E8AD
 		public static void Init()
 		{
 			ConfigAiSkillInfosById.HandleId = ConfigCommon.InitDataStatement(ConfigAiSkillInfosById.HandleId, "db_ai.db", "select BinData from `AiSkillInfos` where Id=?");
 		}
 
-		// Token: 0x06000340 RID: 832 RVA: 0x0006BE14 File Offset: 0x0006A014
+		// Token: 0x06000370 RID: 880 RVA: 0x000706C8 File Offset: 0x0006E8C8
 		public static AiSkillInfos? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAiSkillInfosById.HandleId, ConfigAiSkillInfosById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AiSkillInfos?(rootAsAiSkillInfos);
 		}
 
-		// Token: 0x040003AA RID: 938
+		// Token: 0x040003E2 RID: 994
 		private const string DB = "db_ai.db";
 
-		// Token: 0x040003AB RID: 939
+		// Token: 0x040003E3 RID: 995
 		private const string FILE = "a.AI随机技能表.xlsx";
 
-		// Token: 0x040003AC RID: 940
+		// Token: 0x040003E4 RID: 996
 		private const string TABLE = "AiSkillInfos";
 
-		// Token: 0x040003AD RID: 941
+		// Token: 0x040003E5 RID: 997
 		private const string COMMAND = "select BinData from `AiSkillInfos` where Id=?";
 
-		// Token: 0x040003AE RID: 942
+		// Token: 0x040003E6 RID: 998
 		private const string KEY_PREFIX = "AiSkillInfosById";
 
-		// Token: 0x040003AF RID: 943
+		// Token: 0x040003E7 RID: 999
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040003B0 RID: 944
+		// Token: 0x040003E8 RID: 1000
 		private static int HandleId;
 	}
 }

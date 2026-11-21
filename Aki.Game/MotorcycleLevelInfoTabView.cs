@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200226B RID: 8811
+// Token: 0x0200174F RID: 5967
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleLevelInfoTabView : UiTabViewBase
 {
-	// Token: 0x0601130C RID: 70412 RVA: 0x004308A8 File Offset: 0x0042EAA8
+	// Token: 0x0600E7A2 RID: 59298 RVA: 0x0043D4B4 File Offset: 0x0043B6B4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,7 +50,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x0601130D RID: 70413 RVA: 0x00430AF4 File Offset: 0x0042ECF4
+	// Token: 0x0600E7A3 RID: 59299 RVA: 0x0043D700 File Offset: 0x0043B900
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleLevelInfoTabView.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -61,26 +61,26 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601130E RID: 70414 RVA: 0x00430B37 File Offset: 0x0042ED37
+	// Token: 0x0600E7A4 RID: 59300 RVA: 0x0043D743 File Offset: 0x0043B943
 	protected override void OnBeforeShow()
 	{
 		this.RefreshActiveTreeItem();
 		MotorcycleDevelopModel.Instance.UpdateSelectedTreeType(0);
 	}
 
-	// Token: 0x0601130F RID: 70415 RVA: 0x00430B4A File Offset: 0x0042ED4A
+	// Token: 0x0600E7A5 RID: 59301 RVA: 0x0043D756 File Offset: 0x0043B956
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.MotorDevelopInfoUpdate, new Action(this.OnMotorLevelInfoUpdate));
 	}
 
-	// Token: 0x06011310 RID: 70416 RVA: 0x00430B68 File Offset: 0x0042ED68
+	// Token: 0x0600E7A6 RID: 59302 RVA: 0x0043D774 File Offset: 0x0043B974
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.MotorDevelopInfoUpdate, new Action(this.OnMotorLevelInfoUpdate));
 	}
 
-	// Token: 0x06011311 RID: 70417 RVA: 0x00430B88 File Offset: 0x0042ED88
+	// Token: 0x0600E7A7 RID: 59303 RVA: 0x0043D794 File Offset: 0x0043B994
 	private void InitLevelAttachDataList()
 	{
 		IReadOnlyList<MotorLvl> allMotorLevelList = MotorConfig.Instance.GetAllMotorLevelList();
@@ -97,7 +97,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06011312 RID: 70418 RVA: 0x00430C14 File Offset: 0x0042EE14
+	// Token: 0x0600E7A8 RID: 59304 RVA: 0x0043D820 File Offset: 0x0043BA20
 	private void RemoveLevelSwitchDebounceTimer()
 	{
 		if (this.AnimDebounceTimerId != null)
@@ -107,7 +107,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06011313 RID: 70419 RVA: 0x00430C38 File Offset: 0x0042EE38
+	// Token: 0x0600E7A9 RID: 59305 RVA: 0x0043D844 File Offset: 0x0043BA44
 	private void HandleLevelSwitchDebounce()
 	{
 		NoCircleAttachView<IMotorLevelAttachData, MotorcycleLevelAttachItem> levelAttachView = this.LevelAttachView;
@@ -132,7 +132,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		}, 420f, null, null, true, 1f);
 	}
 
-	// Token: 0x06011314 RID: 70420 RVA: 0x00430C89 File Offset: 0x0042EE89
+	// Token: 0x0600E7AA RID: 59306 RVA: 0x0043D895 File Offset: 0x0043BA95
 	private void PlaySequenceAfterRefresh()
 	{
 		new UiAsyncTask("RefreshSkillInfo", delegate()
@@ -146,7 +146,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		}, null).Run();
 	}
 
-	// Token: 0x06011315 RID: 70421 RVA: 0x00430CA8 File Offset: 0x0042EEA8
+	// Token: 0x0600E7AB RID: 59307 RVA: 0x0043D8B4 File Offset: 0x0043BAB4
 	private void OnLevelAttachMoveItems()
 	{
 		if (this.LevelAttachView == null)
@@ -162,7 +162,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		base.GetSprite(1).SetAnchorOffsetX(-currentPosition);
 	}
 
-	// Token: 0x06011316 RID: 70422 RVA: 0x00430CE3 File Offset: 0x0042EEE3
+	// Token: 0x0600E7AC RID: 59308 RVA: 0x0043D8EF File Offset: 0x0043BAEF
 	private void OnClickAttachItem(MotorcycleLevelAttachItem item)
 	{
 		this.HandleLevelSwitchDebounce();
@@ -170,14 +170,14 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		this.LevelAttachView.AttachToIndex(item.GetCurrentShowItemIndex(), false);
 	}
 
-	// Token: 0x06011317 RID: 70423 RVA: 0x00430D04 File Offset: 0x0042EF04
+	// Token: 0x0600E7AD RID: 59309 RVA: 0x0043D910 File Offset: 0x0043BB10
 	private void OnSelectAttachItem(MotorcycleLevelAttachItem item)
 	{
 		this.SelectedLevel = item.GetCurrentShowItemIndex() + 1;
 		this.PlaySequenceAfterRefresh();
 	}
 
-	// Token: 0x06011318 RID: 70424 RVA: 0x00430D1C File Offset: 0x0042EF1C
+	// Token: 0x0600E7AE RID: 59310 RVA: 0x0043D928 File Offset: 0x0043BB28
 	private bool CheckToggleCanClick(IMotorLevelAttachData data)
 	{
 		if (this.LevelAttachView.MovingState())
@@ -189,13 +189,13 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		return !(num.GetValueOrDefault() == selectedLevel & num != null);
 	}
 
-	// Token: 0x06011319 RID: 70425 RVA: 0x00430D6E File Offset: 0x0042EF6E
+	// Token: 0x0600E7AF RID: 59311 RVA: 0x0043D97A File Offset: 0x0043BB7A
 	private bool GetSelectAnimEnable()
 	{
 		return this.AnimDebounceTimerId == null;
 	}
 
-	// Token: 0x0601131A RID: 70426 RVA: 0x00430D7C File Offset: 0x0042EF7C
+	// Token: 0x0600E7B0 RID: 59312 RVA: 0x0043D988 File Offset: 0x0043BB88
 	private MotorcycleLevelAttachItem OnCreateAttachItem(AActor actor, int index, int showNum)
 	{
 		MotorcycleLevelAttachItem motorcycleLevelAttachItem = new MotorcycleLevelAttachItem();
@@ -207,7 +207,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		return motorcycleLevelAttachItem;
 	}
 
-	// Token: 0x0601131B RID: 70427 RVA: 0x00430DE0 File Offset: 0x0042EFE0
+	// Token: 0x0600E7B1 RID: 59313 RVA: 0x0043D9EC File Offset: 0x0043BBEC
 	private CommonItemSmallItemGrid InitGridItem()
 	{
 		return new CommonItemSmallItemGrid
@@ -216,13 +216,13 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x0601131C RID: 70428 RVA: 0x00430DF9 File Offset: 0x0042EFF9
+	// Token: 0x0600E7B2 RID: 59314 RVA: 0x0043DA05 File Offset: 0x0043BC05
 	private MotorcycleLevelAttrItem InitAttrItem()
 	{
 		return new MotorcycleLevelAttrItem();
 	}
 
-	// Token: 0x0601131D RID: 70429 RVA: 0x00430E00 File Offset: 0x0042F000
+	// Token: 0x0600E7B3 RID: 59315 RVA: 0x0043DA0C File Offset: 0x0043BC0C
 	private UniTask RefreshMotorLevelInfo()
 	{
 		MotorcycleLevelInfoTabView.<RefreshMotorLevelInfo>d__32 <RefreshMotorLevelInfo>d__;
@@ -233,7 +233,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		return <RefreshMotorLevelInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601131E RID: 70430 RVA: 0x00430E44 File Offset: 0x0042F044
+	// Token: 0x0600E7B4 RID: 59316 RVA: 0x0043DA50 File Offset: 0x0043BC50
 	private List<IMotorLevelAttrData> GetAttrParamList(bool isMain)
 	{
 		IEnumerable<MotorAttr> allMotorAttrList = MotorConfig.Instance.GetAllMotorAttrList();
@@ -284,14 +284,14 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		return list2;
 	}
 
-	// Token: 0x0601131F RID: 70431 RVA: 0x00430F98 File Offset: 0x0042F198
+	// Token: 0x0600E7B5 RID: 59317 RVA: 0x0043DBA4 File Offset: 0x0043BDA4
 	private void RefreshActiveTreeItem()
 	{
 		this.ActiveTreeItem.SetUiActive(MotorcycleDevelopModel.Instance.GetCurTreeType() != 0);
 		this.ActiveTreeItem.Refresh();
 	}
 
-	// Token: 0x06011320 RID: 70432 RVA: 0x00430FC0 File Offset: 0x0042F1C0
+	// Token: 0x0600E7B6 RID: 59318 RVA: 0x0043DBCC File Offset: 0x0043BDCC
 	private void RefreshLevelAndExp()
 	{
 		int curLevel = MotorcycleDevelopModel.Instance.GetCurLevel();
@@ -312,7 +312,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06011321 RID: 70433 RVA: 0x004310A0 File Offset: 0x0042F2A0
+	// Token: 0x0600E7B7 RID: 59319 RVA: 0x0043DCAC File Offset: 0x0043BEAC
 	private UniTask RefreshAttrAsync()
 	{
 		MotorcycleLevelInfoTabView.<RefreshAttrAsync>d__36 <RefreshAttrAsync>d__;
@@ -323,7 +323,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		return <RefreshAttrAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011322 RID: 70434 RVA: 0x004310E4 File Offset: 0x0042F2E4
+	// Token: 0x0600E7B8 RID: 59320 RVA: 0x0043DCF0 File Offset: 0x0043BEF0
 	private UniTask RefreshRewardLayoutAsync()
 	{
 		MotorcycleLevelInfoTabView.<RefreshRewardLayoutAsync>d__37 <RefreshRewardLayoutAsync>d__;
@@ -334,7 +334,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		return <RefreshRewardLayoutAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011323 RID: 70435 RVA: 0x00431128 File Offset: 0x0042F328
+	// Token: 0x0600E7B9 RID: 59321 RVA: 0x0043DD34 File Offset: 0x0043BF34
 	private void RefreshRewardBtnStatus()
 	{
 		int curLevel = MotorcycleDevelopModel.Instance.GetCurLevel();
@@ -348,7 +348,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		this.GetBtnItem.SetRedDotVisible(flag2);
 	}
 
-	// Token: 0x06011324 RID: 70436 RVA: 0x004311AC File Offset: 0x0042F3AC
+	// Token: 0x0600E7BA RID: 59322 RVA: 0x0043DDB8 File Offset: 0x0043BFB8
 	private int GetRecommendQuestLinkId(int[] checkQuestIdList)
 	{
 		for (int i = checkQuestIdList.Length - 1; i >= 0; i--)
@@ -369,7 +369,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		return checkQuestIdList[0];
 	}
 
-	// Token: 0x06011325 RID: 70437 RVA: 0x00431210 File Offset: 0x0042F410
+	// Token: 0x0600E7BB RID: 59323 RVA: 0x0043DE1C File Offset: 0x0043C01C
 	private void OnMotorLevelInfoUpdate()
 	{
 		int curLevel = MotorcycleDevelopModel.Instance.GetCurLevel();
@@ -378,7 +378,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		this.RefreshMotorLevelInfo();
 	}
 
-	// Token: 0x06011326 RID: 70438 RVA: 0x0043123C File Offset: 0x0042F43C
+	// Token: 0x0600E7BC RID: 59324 RVA: 0x0043DE48 File Offset: 0x0043C048
 	private void OnBtnAskClick()
 	{
 		List<IMotorLevelConditionData> list = new List<IMotorLevelConditionData>();
@@ -405,7 +405,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		UiManager.Instance.OpenView(EUiViewName.MotorcycleConditionView, list, null);
 	}
 
-	// Token: 0x06011327 RID: 70439 RVA: 0x00431328 File Offset: 0x0042F528
+	// Token: 0x0600E7BD RID: 59325 RVA: 0x0043DF34 File Offset: 0x0043C134
 	private void OnBtnArrowLeftClick()
 	{
 		this.HandleLevelSwitchDebounce();
@@ -413,7 +413,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		this.LevelAttachView.AttachToNextItem(-1);
 	}
 
-	// Token: 0x06011328 RID: 70440 RVA: 0x00431343 File Offset: 0x0042F543
+	// Token: 0x0600E7BE RID: 59326 RVA: 0x0043DF4F File Offset: 0x0043C14F
 	private void OnBtnArrowRightClick()
 	{
 		this.HandleLevelSwitchDebounce();
@@ -421,7 +421,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		this.LevelAttachView.AttachToNextItem(1);
 	}
 
-	// Token: 0x06011329 RID: 70441 RVA: 0x0043135E File Offset: 0x0042F55E
+	// Token: 0x0600E7BF RID: 59327 RVA: 0x0043DF6A File Offset: 0x0043C16A
 	private void OnReduce(bool _)
 	{
 		this.HandleLevelSwitchDebounce();
@@ -429,7 +429,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		this.LevelAttachView.AttachToNextItem(-1);
 	}
 
-	// Token: 0x0601132A RID: 70442 RVA: 0x00431379 File Offset: 0x0042F579
+	// Token: 0x0600E7C0 RID: 59328 RVA: 0x0043DF85 File Offset: 0x0043C185
 	private void OnAdd(bool _)
 	{
 		this.HandleLevelSwitchDebounce();
@@ -437,37 +437,37 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 		this.LevelAttachView.AttachToNextItem(1);
 	}
 
-	// Token: 0x0601132B RID: 70443 RVA: 0x00431394 File Offset: 0x0042F594
+	// Token: 0x0600E7C1 RID: 59329 RVA: 0x0043DFA0 File Offset: 0x0043C1A0
 	private void OnBtnAttrDetailClick()
 	{
 		List<IMotorLevelAttrData> attrParamList = this.GetAttrParamList(false);
 		UiManager.Instance.OpenView(EUiViewName.MotorcycleLevelAttrDetailView, attrParamList, null);
 	}
 
-	// Token: 0x0601132C RID: 70444 RVA: 0x004313BC File Offset: 0x0042F5BC
+	// Token: 0x0600E7C2 RID: 59330 RVA: 0x0043DFC8 File Offset: 0x0043C1C8
 	private void OnBtnAskRewardClick()
 	{
 		List<TItem> allPreviewReward = MotorcycleDevelopModel.Instance.GetAllPreviewReward();
 		UiManager.Instance.OpenView(EUiViewName.MotorcycleRewardPreviewView, allPreviewReward, null);
 	}
 
-	// Token: 0x0601132D RID: 70445 RVA: 0x004313E5 File Offset: 0x0042F5E5
+	// Token: 0x0600E7C3 RID: 59331 RVA: 0x0043DFF1 File Offset: 0x0043C1F1
 	private void OnBtnGetRewardClick(int _)
 	{
 		MotorcycleDevelopController.Instance.RequestMotorLevelOneKeyReward();
 	}
 
-	// Token: 0x0601132E RID: 70446 RVA: 0x004313F4 File Offset: 0x0042F5F4
+	// Token: 0x0600E7C4 RID: 59332 RVA: 0x0043E000 File Offset: 0x0043C200
 	private bool ShowReceivedCallBack(TItem data)
 	{
 		int curRewardedMaxLv = MotorcycleDevelopModel.Instance.GetCurRewardedMaxLv();
 		return this.SelectedLevel <= curRewardedMaxLv;
 	}
 
-	// Token: 0x040082D6 RID: 33494
+	// Token: 0x04008414 RID: 33812
 	private const int SHOW_GAP = 40;
 
-	// Token: 0x040082D7 RID: 33495
+	// Token: 0x04008415 RID: 33813
 	[Nullable(new byte[]
 	{
 		2,
@@ -476,7 +476,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 	})]
 	private NoCircleAttachView<IMotorLevelAttachData, MotorcycleLevelAttachItem> LevelAttachView;
 
-	// Token: 0x040082D8 RID: 33496
+	// Token: 0x04008416 RID: 33814
 	[Nullable(new byte[]
 	{
 		2,
@@ -485,7 +485,7 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 	})]
 	private GenericLayout<MotorcycleLevelAttrItem, IMotorLevelAttrData> AttrLayout;
 
-	// Token: 0x040082D9 RID: 33497
+	// Token: 0x04008417 RID: 33815
 	[Nullable(new byte[]
 	{
 		2,
@@ -493,110 +493,110 @@ public class MotorcycleLevelInfoTabView : UiTabViewBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> ItemLayout;
 
-	// Token: 0x040082DA RID: 33498
+	// Token: 0x04008418 RID: 33816
 	[Nullable(2)]
 	private MotorcycleLevelActiveTreeItem ActiveTreeItem;
 
-	// Token: 0x040082DB RID: 33499
+	// Token: 0x04008419 RID: 33817
 	[Nullable(2)]
 	private LongPressButtonItem LongPressAdd;
 
-	// Token: 0x040082DC RID: 33500
+	// Token: 0x0400841A RID: 33818
 	[Nullable(2)]
 	private LongPressButtonItem LongPressReduce;
 
-	// Token: 0x040082DD RID: 33501
+	// Token: 0x0400841B RID: 33819
 	[Nullable(2)]
 	private ButtonItem GetBtnItem;
 
-	// Token: 0x040082DE RID: 33502
+	// Token: 0x0400841C RID: 33820
 	[Nullable(2)]
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x040082DF RID: 33503
+	// Token: 0x0400841D RID: 33821
 	private readonly List<IMotorLevelAttachData> LevelAttachDataList = new List<IMotorLevelAttachData>();
 
-	// Token: 0x040082E0 RID: 33504
+	// Token: 0x0400841E RID: 33822
 	[Nullable(2)]
 	private TimerHandle AnimDebounceTimerId;
 
-	// Token: 0x040082E1 RID: 33505
+	// Token: 0x0400841F RID: 33823
 	private int SelectedLevel = -1;
 
-	// Token: 0x040082E2 RID: 33506
+	// Token: 0x04008420 RID: 33824
 	private int MaxLevel = 1;
 
-	// Token: 0x040082E3 RID: 33507
+	// Token: 0x04008421 RID: 33825
 	private bool CanPlayChangeTween;
 
-	// Token: 0x02008790 RID: 34704
+	// Token: 0x02007919 RID: 31001
 	[NullableContext(0)]
 	private class EMotorLevelInfoComponent
 	{
-		// Token: 0x0402C0F7 RID: 180471
+		// Token: 0x0402740F RID: 160783
 		public const int PnlRoll = 0;
 
-		// Token: 0x0402C0F8 RID: 180472
+		// Token: 0x04027410 RID: 160784
 		public const int SprRoll = 1;
 
-		// Token: 0x0402C0F9 RID: 180473
+		// Token: 0x04027411 RID: 160785
 		public const int DragComponent = 2;
 
-		// Token: 0x0402C0FA RID: 180474
+		// Token: 0x04027412 RID: 160786
 		public const int DragItem = 3;
 
-		// Token: 0x0402C0FB RID: 180475
+		// Token: 0x04027413 RID: 160787
 		public const int TxtExp = 4;
 
-		// Token: 0x0402C0FC RID: 180476
+		// Token: 0x04027414 RID: 160788
 		public const int BtnAsk = 5;
 
-		// Token: 0x0402C0FD RID: 180477
+		// Token: 0x04027415 RID: 160789
 		public const int BtnArrowLeft = 6;
 
-		// Token: 0x0402C0FE RID: 180478
+		// Token: 0x04027416 RID: 160790
 		public const int BtnArrowRight = 7;
 
-		// Token: 0x0402C0FF RID: 180479
+		// Token: 0x04027417 RID: 160791
 		public const int PnlAttrLayout = 8;
 
-		// Token: 0x0402C100 RID: 180480
+		// Token: 0x04027418 RID: 160792
 		public const int PnlAttrItem = 9;
 
-		// Token: 0x0402C101 RID: 180481
+		// Token: 0x04027419 RID: 160793
 		public const int BtnAttrDetail = 10;
 
-		// Token: 0x0402C102 RID: 180482
+		// Token: 0x0402741A RID: 160794
 		public const int BtnAskReward = 11;
 
-		// Token: 0x0402C103 RID: 180483
+		// Token: 0x0402741B RID: 160795
 		public const int ItemRewardLayout = 12;
 
-		// Token: 0x0402C104 RID: 180484
+		// Token: 0x0402741C RID: 160796
 		public const int ItemRewardItem = 13;
 
-		// Token: 0x0402C105 RID: 180485
+		// Token: 0x0402741D RID: 160797
 		public const int BtnGetReward = 14;
 
-		// Token: 0x0402C106 RID: 180486
+		// Token: 0x0402741E RID: 160798
 		public const int PnlLockTips = 15;
 
-		// Token: 0x0402C107 RID: 180487
+		// Token: 0x0402741F RID: 160799
 		public const int PnlUnLockTips = 16;
 
-		// Token: 0x0402C108 RID: 180488
+		// Token: 0x04027420 RID: 160800
 		public const int PnlTechTreeSwitch = 17;
 
-		// Token: 0x0402C109 RID: 180489
+		// Token: 0x04027421 RID: 160801
 		public const int TexPattern = 18;
 
-		// Token: 0x0402C10A RID: 180490
+		// Token: 0x04027422 RID: 160802
 		public const int TexMotorPattern = 19;
 
-		// Token: 0x0402C10B RID: 180491
+		// Token: 0x04027423 RID: 160803
 		public const int SprStar = 20;
 
-		// Token: 0x0402C10C RID: 180492
+		// Token: 0x04027424 RID: 160804
 		public const int PnlExpLimit = 21;
 	}
 }

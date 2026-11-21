@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x02005950 RID: 22864
+	// Token: 0x02004929 RID: 18729
 	internal enum EHonamiStorySuccessDescriptionNode
 	{
-		// Token: 0x0401E445 RID: 123973
+		// Token: 0x04018EE2 RID: 102114
 		TextDescription
 	}
 }

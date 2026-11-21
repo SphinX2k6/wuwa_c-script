@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200060A RID: 1546
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006A7 RID: 1703
 	public class IPointChooseType
 	{
-		// Token: 0x06002102 RID: 8450 RVA: 0x0005BA20 File Offset: 0x00059C20
+		// Token: 0x06002408 RID: 9224 RVA: 0x00062734 File Offset: 0x00060934
 		private IPointChooseType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002103 RID: 8451 RVA: 0x0005BA58 File Offset: 0x00059C58
+		// Token: 0x06002409 RID: 9225 RVA: 0x0006276C File Offset: 0x0006096C
 		public static IPointChooseType Create([Nullable(2)] IPointChooseType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002104 RID: 8452 RVA: 0x0005BA6B File Offset: 0x00059C6B
+		// Token: 0x0600240A RID: 9226 RVA: 0x0006277F File Offset: 0x0006097F
 		public static IPointChooseType CreateFromSetValue([Nullable(2)] IPointChooseType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002105 RID: 8453 RVA: 0x0005BA7E File Offset: 0x00059C7E
+		// Token: 0x0600240B RID: 9227 RVA: 0x00062792 File Offset: 0x00060992
 		public IPointChooseType_SetValue ToSetValue()
 		{
 			return new IPointChooseType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008D1 RID: 2257
-		// (get) Token: 0x06002106 RID: 8454 RVA: 0x0005BA91 File Offset: 0x00059C91
-		// (set) Token: 0x06002107 RID: 8455 RVA: 0x0005BABC File Offset: 0x00059CBC
+		// Token: 0x17000988 RID: 2440
+		// (get) Token: 0x0600240C RID: 9228 RVA: 0x000627A5 File Offset: 0x000609A5
+		// (set) Token: 0x0600240D RID: 9229 RVA: 0x000627D0 File Offset: 0x000609D0
 		public virtual EPointChooseType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001719 RID: 5913
+		// Token: 0x0400190B RID: 6411
 		[Nullable(2)]
 		protected IPointChooseType FbInstance;
 
-		// Token: 0x0400171A RID: 5914
+		// Token: 0x0400190C RID: 6412
 		[Nullable(2)]
 		protected IPointChooseType_SetValue PocoInterface;
 	}

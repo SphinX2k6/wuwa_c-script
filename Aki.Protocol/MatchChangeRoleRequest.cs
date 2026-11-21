@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020009B5 RID: 2485
+	// Token: 0x020009A4 RID: 2468
 	[NetMessage(EMessageId.MatchChangeRoleRequest)]
 	public sealed class MatchChangeRoleRequest : IMessage<MatchChangeRoleRequest>, IMessage, IEquatable<MatchChangeRoleRequest>, IDeepCloneable<MatchChangeRoleRequest>, IBufferMessage
 	{
-		// Token: 0x0600DA11 RID: 55825 RVA: 0x002004D8 File Offset: 0x001FE6D8
+		// Token: 0x0600D8F7 RID: 55543 RVA: 0x001FE2E4 File Offset: 0x001FC4E4
 		[NullableContext(1)]
 		public static MatchChangeRoleRequest Create()
 		{
 			return new MatchChangeRoleRequest();
 		}
 
-		// Token: 0x17002C29 RID: 11305
-		// (get) Token: 0x0600DA12 RID: 55826 RVA: 0x002004DF File Offset: 0x001FE6DF
+		// Token: 0x17002BEB RID: 11243
+		// (get) Token: 0x0600D8F8 RID: 55544 RVA: 0x001FE2EB File Offset: 0x001FC4EB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002C2A RID: 11306
-		// (get) Token: 0x0600DA13 RID: 55827 RVA: 0x002004E2 File Offset: 0x001FE6E2
+		// Token: 0x17002BEC RID: 11244
+		// (get) Token: 0x0600D8F9 RID: 55545 RVA: 0x001FE2EE File Offset: 0x001FC4EE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DA14 RID: 55828 RVA: 0x002004E9 File Offset: 0x001FE6E9
+		// Token: 0x0600D8FA RID: 55546 RVA: 0x001FE2F5 File Offset: 0x001FC4F5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MatchChangeRoleRequest()
 		{
 		}
 
-		// Token: 0x0600DA15 RID: 55829 RVA: 0x00200514 File Offset: 0x001FE714
+		// Token: 0x0600D8FB RID: 55547 RVA: 0x001FE320 File Offset: 0x001FC520
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MatchChangeRoleRequest(MatchChangeRoleRequest other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600DA16 RID: 55830 RVA: 0x00200587 File Offset: 0x001FE787
+		// Token: 0x0600D8FC RID: 55548 RVA: 0x001FE393 File Offset: 0x001FC593
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MatchChangeRoleRequest Clone()
@@ -70,8 +70,8 @@ namespace Aki.Protocol
 			return new MatchChangeRoleRequest(this);
 		}
 
-		// Token: 0x17002C2B RID: 11307
-		// (get) Token: 0x0600DA17 RID: 55831 RVA: 0x0020058F File Offset: 0x001FE78F
+		// Token: 0x17002BED RID: 11245
+		// (get) Token: 0x0600D8FD RID: 55549 RVA: 0x001FE39B File Offset: 0x001FC59B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> RoleId
@@ -82,8 +82,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002C2C RID: 11308
-		// (get) Token: 0x0600DA18 RID: 55832 RVA: 0x00200597 File Offset: 0x001FE797
+		// Token: 0x17002BEE RID: 11246
+		// (get) Token: 0x0600D8FE RID: 55550 RVA: 0x001FE3A3 File Offset: 0x001FC5A3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> SkillBranchId
@@ -94,8 +94,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002C2D RID: 11309
-		// (get) Token: 0x0600DA19 RID: 55833 RVA: 0x0020059F File Offset: 0x001FE79F
+		// Token: 0x17002BEF RID: 11247
+		// (get) Token: 0x0600D8FF RID: 55551 RVA: 0x001FE3AB File Offset: 0x001FC5AB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> TowerDefencePhantomId
@@ -106,9 +106,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002C2E RID: 11310
-		// (get) Token: 0x0600DA1A RID: 55834 RVA: 0x002005A7 File Offset: 0x001FE7A7
-		// (set) Token: 0x0600DA1B RID: 55835 RVA: 0x002005AF File Offset: 0x001FE7AF
+		// Token: 0x17002BF0 RID: 11248
+		// (get) Token: 0x0600D900 RID: 55552 RVA: 0x001FE3B3 File Offset: 0x001FC5B3
+		// (set) Token: 0x0600D901 RID: 55553 RVA: 0x001FE3BB File Offset: 0x001FC5BB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MatchChangeRoleContext RoleContext
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DA1C RID: 55836 RVA: 0x002005B8 File Offset: 0x001FE7B8
+		// Token: 0x0600D902 RID: 55554 RVA: 0x001FE3C4 File Offset: 0x001FC5C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MatchChangeRoleRequest);
 		}
 
-		// Token: 0x0600DA1D RID: 55837 RVA: 0x002005C8 File Offset: 0x001FE7C8
+		// Token: 0x0600D903 RID: 55555 RVA: 0x001FE3D4 File Offset: 0x001FC5D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MatchChangeRoleRequest other)
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.roleId_.Equals(other.roleId_) && this.skillBranchId_.Equals(other.skillBranchId_) && this.towerDefencePhantomId_.Equals(other.towerDefencePhantomId_) && object.Equals(this.RoleContext, other.RoleContext) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600DA1E RID: 55838 RVA: 0x00200648 File Offset: 0x001FE848
+		// Token: 0x0600D904 RID: 55556 RVA: 0x001FE454 File Offset: 0x001FC654
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -159,7 +159,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600DA1F RID: 55839 RVA: 0x002006AE File Offset: 0x001FE8AE
+		// Token: 0x0600D905 RID: 55557 RVA: 0x001FE4BA File Offset: 0x001FC6BA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600DA20 RID: 55840 RVA: 0x002006BB File Offset: 0x001FE8BB
+		// Token: 0x0600D906 RID: 55558 RVA: 0x001FE4C7 File Offset: 0x001FC6C7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -175,26 +175,26 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600DA21 RID: 55841 RVA: 0x002006C4 File Offset: 0x001FE8C4
+		// Token: 0x0600D907 RID: 55559 RVA: 0x001FE4D0 File Offset: 0x001FC6D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			this.roleId_.WriteTo(ref output, MatchChangeRoleRequest._repeated_roleId_codec);
+			this.towerDefencePhantomId_.WriteTo(ref output, MatchChangeRoleRequest._repeated_towerDefencePhantomId_codec);
+			this.skillBranchId_.WriteTo(ref output, MatchChangeRoleRequest._repeated_skillBranchId_codec);
 			if (this.roleContext_ != null)
 			{
-				output.WriteRawTag(26);
+				output.WriteRawTag(114);
 				output.WriteMessage(this.RoleContext);
 			}
-			this.towerDefencePhantomId_.WriteTo(ref output, MatchChangeRoleRequest._repeated_towerDefencePhantomId_codec);
-			this.roleId_.WriteTo(ref output, MatchChangeRoleRequest._repeated_roleId_codec);
-			this.skillBranchId_.WriteTo(ref output, MatchChangeRoleRequest._repeated_skillBranchId_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0600DA22 RID: 55842 RVA: 0x00200734 File Offset: 0x001FE934
+		// Token: 0x0600D908 RID: 55560 RVA: 0x001FE540 File Offset: 0x001FC740
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -214,7 +214,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600DA23 RID: 55843 RVA: 0x002007AC File Offset: 0x001FE9AC
+		// Token: 0x0600D909 RID: 55561 RVA: 0x001FE5B8 File Offset: 0x001FC7B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MatchChangeRoleRequest other)
@@ -237,7 +237,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600DA24 RID: 55844 RVA: 0x00200833 File Offset: 0x001FEA33
+		// Token: 0x0600D90A RID: 55562 RVA: 0x001FE63F File Offset: 0x001FC83F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -245,7 +245,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600DA25 RID: 55845 RVA: 0x0020083C File Offset: 0x001FEA3C
+		// Token: 0x0600D90B RID: 55563 RVA: 0x001FE648 File Offset: 0x001FC848
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -257,10 +257,25 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 42U)
+				if (num > 80U)
 				{
-					if (num == 26U)
+					if (num <= 88U)
 					{
+						if (num == 82U)
+						{
+							goto IL_64;
+						}
+						if (num != 88U)
+						{
+							goto IL_3D;
+						}
+					}
+					else if (num != 90U)
+					{
+						if (num != 114U)
+						{
+							goto IL_3D;
+						}
 						if (this.roleContext_ == null)
 						{
 							this.RoleContext = new MatchChangeRoleContext();
@@ -268,63 +283,60 @@ namespace Aki.Protocol
 						input.ReadMessage(this.RoleContext);
 						continue;
 					}
-					if (num == 40U || num == 42U)
-					{
-						this.towerDefencePhantomId_.AddEntriesFrom(ref input, MatchChangeRoleRequest._repeated_towerDefencePhantomId_codec);
-						continue;
-					}
-				}
-				else if (num <= 50U)
-				{
-					if (num == 48U || num == 50U)
-					{
-						this.roleId_.AddEntriesFrom(ref input, MatchChangeRoleRequest._repeated_roleId_codec);
-						continue;
-					}
-				}
-				else if (num == 56U || num == 58U)
-				{
 					this.skillBranchId_.AddEntriesFrom(ref input, MatchChangeRoleRequest._repeated_skillBranchId_codec);
 					continue;
 				}
+				if (num == 40U || num == 42U)
+				{
+					this.roleId_.AddEntriesFrom(ref input, MatchChangeRoleRequest._repeated_roleId_codec);
+					continue;
+				}
+				if (num == 80U)
+				{
+					goto IL_64;
+				}
+				IL_3D:
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
+				continue;
+				IL_64:
+				this.towerDefencePhantomId_.AddEntriesFrom(ref input, MatchChangeRoleRequest._repeated_towerDefencePhantomId_codec);
 			}
 		}
 
-		// Token: 0x04005A9A RID: 23194
+		// Token: 0x04005AA3 RID: 23203
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005A9B RID: 23195
-		public const int RoleIdFieldNumber = 6;
-
-		// Token: 0x04005A9C RID: 23196
-		private static readonly FieldCodec<int> _repeated_roleId_codec = FieldCodec.ForInt32(50U);
-
-		// Token: 0x04005A9D RID: 23197
-		private readonly RepeatedField<int> roleId_ = new RepeatedField<int>();
-
-		// Token: 0x04005A9E RID: 23198
-		public const int SkillBranchIdFieldNumber = 7;
-
-		// Token: 0x04005A9F RID: 23199
-		private static readonly FieldCodec<int> _repeated_skillBranchId_codec = FieldCodec.ForInt32(58U);
-
-		// Token: 0x04005AA0 RID: 23200
-		private readonly RepeatedField<int> skillBranchId_ = new RepeatedField<int>();
-
-		// Token: 0x04005AA1 RID: 23201
-		public const int TowerDefencePhantomIdFieldNumber = 5;
-
-		// Token: 0x04005AA2 RID: 23202
-		private static readonly FieldCodec<int> _repeated_towerDefencePhantomId_codec = FieldCodec.ForInt32(42U);
-
-		// Token: 0x04005AA3 RID: 23203
-		private readonly RepeatedField<int> towerDefencePhantomId_ = new RepeatedField<int>();
-
 		// Token: 0x04005AA4 RID: 23204
-		public const int RoleContextFieldNumber = 3;
+		public const int RoleIdFieldNumber = 5;
 
 		// Token: 0x04005AA5 RID: 23205
+		private static readonly FieldCodec<int> _repeated_roleId_codec = FieldCodec.ForInt32(42U);
+
+		// Token: 0x04005AA6 RID: 23206
+		private readonly RepeatedField<int> roleId_ = new RepeatedField<int>();
+
+		// Token: 0x04005AA7 RID: 23207
+		public const int SkillBranchIdFieldNumber = 11;
+
+		// Token: 0x04005AA8 RID: 23208
+		private static readonly FieldCodec<int> _repeated_skillBranchId_codec = FieldCodec.ForInt32(90U);
+
+		// Token: 0x04005AA9 RID: 23209
+		private readonly RepeatedField<int> skillBranchId_ = new RepeatedField<int>();
+
+		// Token: 0x04005AAA RID: 23210
+		public const int TowerDefencePhantomIdFieldNumber = 10;
+
+		// Token: 0x04005AAB RID: 23211
+		private static readonly FieldCodec<int> _repeated_towerDefencePhantomId_codec = FieldCodec.ForInt32(82U);
+
+		// Token: 0x04005AAC RID: 23212
+		private readonly RepeatedField<int> towerDefencePhantomId_ = new RepeatedField<int>();
+
+		// Token: 0x04005AAD RID: 23213
+		public const int RoleContextFieldNumber = 14;
+
+		// Token: 0x04005AAE RID: 23214
 		private MatchChangeRoleContext roleContext_;
 	}
 }

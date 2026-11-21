@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.Common.Consume
 {
-	// Token: 0x02005B84 RID: 23428
-	// (Invoke) Token: 0x0603B474 RID: 242804
+	// Token: 0x02004B64 RID: 19300
+	// (Invoke) Token: 0x060303C1 RID: 197569
 	public delegate void TCommonConditionFilterFunction(int qualityId, string text);
 }

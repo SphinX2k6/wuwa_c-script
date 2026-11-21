@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CA1 RID: 15521
+	// Token: 0x020040B5 RID: 16565
 	public enum EHandInItemType : byte
 	{
-		// Token: 0x0400B3D9 RID: 46041
+		// Token: 0x0400BD7B RID: 48507
 		ItemIds,
-		// Token: 0x0400B3DA RID: 46042
+		// Token: 0x0400BD7C RID: 48508
 		ItemType
 	}
 }

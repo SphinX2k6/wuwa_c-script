@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.Common.MediumItemGrid
 {
-	// Token: 0x02005B53 RID: 23379
+	// Token: 0x02004B32 RID: 19250
 	public enum EMediumItemGridType
 	{
-		// Token: 0x0401ED83 RID: 126339
+		// Token: 0x0401982F RID: 104495
 		None,
-		// Token: 0x0401ED84 RID: 126340
+		// Token: 0x04019830 RID: 104496
 		Empty,
-		// Token: 0x0401ED85 RID: 126341
+		// Token: 0x04019831 RID: 104497
 		Character,
-		// Token: 0x0401ED86 RID: 126342
+		// Token: 0x04019832 RID: 104498
 		Phantom,
-		// Token: 0x0401ED87 RID: 126343
+		// Token: 0x04019833 RID: 104499
 		Prop,
-		// Token: 0x0401ED88 RID: 126344
+		// Token: 0x04019834 RID: 104500
 		ForecastCharacter,
-		// Token: 0x0401ED89 RID: 126345
+		// Token: 0x04019835 RID: 104501
 		OnlyEmpty,
-		// Token: 0x0401ED8A RID: 126346
+		// Token: 0x04019836 RID: 104502
 		Kurotato
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EDC RID: 28380
+	// Token: 0x0200605C RID: 24668
 	internal enum EClawButtonState
 	{
-		// Token: 0x04024008 RID: 147464
+		// Token: 0x0401F2BB RID: 127675
 		InsertCoin,
-		// Token: 0x04024009 RID: 147465
+		// Token: 0x0401F2BC RID: 127676
 		Release,
-		// Token: 0x0402400A RID: 147466
+		// Token: 0x0401F2BD RID: 127677
 		Grab,
-		// Token: 0x0402400B RID: 147467
+		// Token: 0x0401F2BE RID: 127678
 		Idle
 	}
 }

@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x0200513F RID: 20799
+	// Token: 0x0200410F RID: 16655
 	public enum EPhantomArenaChildViewName
 	{
-		// Token: 0x0401C4E6 RID: 115942
+		// Token: 0x04016F1B RID: 93979
 		PhantomArenaRoleSelectTabView,
-		// Token: 0x0401C4E7 RID: 115943
+		// Token: 0x04016F1C RID: 93980
 		PhantomArenaChallengeDetailTabView,
-		// Token: 0x0401C4E8 RID: 115944
+		// Token: 0x04016F1D RID: 93981
 		PhantomArenaDeckOverviewTabView,
-		// Token: 0x0401C4E9 RID: 115945
+		// Token: 0x04016F1E RID: 93982
 		PhantomArenaDeckBuilderTabView,
-		// Token: 0x0401C4EA RID: 115946
+		// Token: 0x04016F1F RID: 93983
 		PhantomArenaEntranceRepeatTabView,
-		// Token: 0x0401C4EB RID: 115947
+		// Token: 0x04016F20 RID: 93984
 		PhantomArenaEntranceGymTabView,
-		// Token: 0x0401C4EC RID: 115948
+		// Token: 0x04016F21 RID: 93985
 		PhantomArenaNewDeckBuilderTabView,
-		// Token: 0x0401C4ED RID: 115949
+		// Token: 0x04016F22 RID: 93986
 		PhantomArenaChallengeDetailTabViewNew
 	}
 }

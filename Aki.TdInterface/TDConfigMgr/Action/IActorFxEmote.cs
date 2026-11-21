@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001766 RID: 5990
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018E7 RID: 6375
 	public class IActorFxEmote
 	{
-		// Token: 0x06007ECF RID: 32463 RVA: 0x0012F774 File Offset: 0x0012D974
+		// Token: 0x060085BF RID: 34239 RVA: 0x0013E9D4 File Offset: 0x0013CBD4
 		private IActorFxEmote_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007ED0 RID: 32464 RVA: 0x0012F7AC File Offset: 0x0012D9AC
+		// Token: 0x060085C0 RID: 34240 RVA: 0x0013EA0C File Offset: 0x0013CC0C
 		public static IActorFxEmote Create([Nullable(2)] IActorFxEmote instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007ED1 RID: 32465 RVA: 0x0012F7BF File Offset: 0x0012D9BF
+		// Token: 0x060085C1 RID: 34241 RVA: 0x0013EA1F File Offset: 0x0013CC1F
 		public static IActorFxEmote CreateFromSetValue([Nullable(2)] IActorFxEmote_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007ED2 RID: 32466 RVA: 0x0012F7D2 File Offset: 0x0012D9D2
+		// Token: 0x060085C2 RID: 34242 RVA: 0x0013EA32 File Offset: 0x0013CC32
 		public IActorFxEmote_SetValue ToSetValue()
 		{
 			return new IActorFxEmote_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029A3 RID: 10659
-		// (get) Token: 0x06007ED3 RID: 32467 RVA: 0x0012F7F1 File Offset: 0x0012D9F1
-		// (set) Token: 0x06007ED4 RID: 32468 RVA: 0x0012F81C File Offset: 0x0012DA1C
+		// Token: 0x17002B91 RID: 11153
+		// (get) Token: 0x060085C3 RID: 34243 RVA: 0x0013EA51 File Offset: 0x0013CC51
+		// (set) Token: 0x060085C4 RID: 34244 RVA: 0x0013EA7C File Offset: 0x0013CC7C
 		public virtual int ActorIndex
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029A4 RID: 10660
-		// (get) Token: 0x06007ED5 RID: 32469 RVA: 0x0012F82A File Offset: 0x0012DA2A
-		// (set) Token: 0x06007ED6 RID: 32470 RVA: 0x0012F851 File Offset: 0x0012DA51
+		// Token: 0x17002B92 RID: 11154
+		// (get) Token: 0x060085C5 RID: 34245 RVA: 0x0013EA8A File Offset: 0x0013CC8A
+		// (set) Token: 0x060085C6 RID: 34246 RVA: 0x0013EAB1 File Offset: 0x0013CCB1
 		public virtual IActorFxEmoteType FxEmote
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040050B2 RID: 20658
+		// Token: 0x040054E8 RID: 21736
 		[Nullable(2)]
 		protected IActorFxEmote FbInstance;
 
-		// Token: 0x040050B3 RID: 20659
+		// Token: 0x040054E9 RID: 21737
 		[Nullable(2)]
 		protected IActorFxEmote_SetValue PocoInterface;
 	}

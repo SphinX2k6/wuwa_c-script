@@ -17,20 +17,20 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DeadRevive
 {
-	// Token: 0x02005AC0 RID: 23232
+	// Token: 0x02004AA1 RID: 19105
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class DeadReviveController : UiControllerBase
 	{
-		// Token: 0x0603AD70 RID: 241008 RVA: 0x00E05935 File Offset: 0x00E03B35
+		// Token: 0x0602FCE2 RID: 195810 RVA: 0x00D56611 File Offset: 0x00D54811
 		protected override bool OnChangeMode()
 		{
 			this.CloseReviveView();
 			return true;
 		}
 
-		// Token: 0x0603AD71 RID: 241009 RVA: 0x00E05940 File Offset: 0x00E03B40
+		// Token: 0x0602FCE3 RID: 195811 RVA: 0x00D5661C File Offset: 0x00D5481C
 		protected override void OnAddEvents()
 		{
 			Net.Instance.Register(ENotifyMessageId.PlayerDeadNotify, new Action<IMessage, Net.CallbackStatus>(this.NotifyOnPlayerDead));
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			EventSystem.Instance.Add<Entity>(EEventName.OnRevive, new Action<Entity>(this.OnRoleRevive));
 		}
 
-		// Token: 0x0603AD72 RID: 241010 RVA: 0x00E059F8 File Offset: 0x00E03BF8
+		// Token: 0x0602FCE4 RID: 195812 RVA: 0x00D566D4 File Offset: 0x00D548D4
 		protected override void OnRemoveEvents()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.PlayerDeadNotify);
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			EventSystem.Instance.Remove(EEventName.OnRevive, new Action<Entity>(this.OnRoleRevive));
 		}
 
-		// Token: 0x0603AD73 RID: 241011 RVA: 0x00E05A80 File Offset: 0x00E03C80
+		// Token: 0x0602FCE5 RID: 195813 RVA: 0x00D5675C File Offset: 0x00D5495C
 		[NullableContext(2)]
 		public void ReviveRequest(bool useItem, Action<bool> finishCallback = null, int? customParam = null)
 		{
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 				}
 				else if (reviveResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(reviveResponse.ErrorCode, 29474, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(reviveResponse.ErrorCode, 24465, null, true, true);
 					Action<bool> finishCallback3 = finishCallback;
 					if (finishCallback3 == null)
 					{
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}, 0);
 		}
 
-		// Token: 0x0603AD74 RID: 241012 RVA: 0x00E05AF4 File Offset: 0x00E03CF4
+		// Token: 0x0602FCE6 RID: 195814 RVA: 0x00D567D0 File Offset: 0x00D549D0
 		public void TryReviveRole(long creatureDataId, int roleId, bool needChangeRole = false)
 		{
 			ReviveCooldownData reviveCooldownData = null;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.TryReviveRoleByShare(roleId, needChangeRole);
 		}
 
-		// Token: 0x0603AD75 RID: 241013 RVA: 0x00E05B80 File Offset: 0x00E03D80
+		// Token: 0x0602FCE7 RID: 195815 RVA: 0x00D5685C File Offset: 0x00D54A5C
 		public void TryReviveRoleWhenCurrentRoleDead(long creatureDataId, int roleId)
 		{
 			if (DeadReviveModel.Instance.ReviveMode != EReviveMode.ShareReviveTimes)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.TryReviveRole(creatureDataId, roleId, true);
 		}
 
-		// Token: 0x0603AD76 RID: 241014 RVA: 0x00E05C1C File Offset: 0x00E03E1C
+		// Token: 0x0602FCE8 RID: 195816 RVA: 0x00D568F8 File Offset: 0x00D54AF8
 		public void CheckOtherPlayerReviveCooldown(int playerId, long creatureDataId)
 		{
 			if (playerId == CreatureModel.Instance.GetPlayerId())
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603AD77 RID: 241015 RVA: 0x00E05CAC File Offset: 0x00E03EAC
+		// Token: 0x0602FCE9 RID: 195817 RVA: 0x00D56988 File Offset: 0x00D54B88
 		[NullableContext(2)]
 		private void NotifyOnPlayerDead(IMessage msg, Net.CallbackStatus status)
 		{
@@ -238,14 +238,14 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603AD78 RID: 241016 RVA: 0x00E05E40 File Offset: 0x00E04040
+		// Token: 0x0602FCEA RID: 195818 RVA: 0x00D56B1C File Offset: 0x00D54D1C
 		private void LoginDeadFinish()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.LoginDeadFinish));
 			DeadReviveModel.Instance.DeadDelayTimer = TimerSystem.GameplayTimeInstance.Delay(new TTimerAction(this.DeadFinish), 1000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603AD79 RID: 241017 RVA: 0x00E05E98 File Offset: 0x00E04098
+		// Token: 0x0602FCEB RID: 195819 RVA: 0x00D56B74 File Offset: 0x00D54D74
 		private void DeadFinish(float delta)
 		{
 			DeadReviveModel.Instance.DeadDelayTimer = null;
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.OpenReviveView();
 		}
 
-		// Token: 0x0603AD7A RID: 241018 RVA: 0x00E05EE8 File Offset: 0x00E040E8
+		// Token: 0x0602FCEC RID: 195820 RVA: 0x00D56BC4 File Offset: 0x00D54DC4
 		public void DoDeadFinish(bool needReviveRequest = true)
 		{
 			DeadReviveModel.Instance.BlockAllInput = false;
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603AD7B RID: 241019 RVA: 0x00E05F20 File Offset: 0x00E04120
+		// Token: 0x0602FCED RID: 195821 RVA: 0x00D56BFC File Offset: 0x00D54DFC
 		[NullableContext(2)]
 		private unsafe void NotifyOnPlayerRevive(IMessage msg, Net.CallbackStatus status)
 		{
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.OtherPlayerRevive(playerReviveNotify, fvectorDouble, frotator);
 		}
 
-		// Token: 0x0603AD7C RID: 241020 RVA: 0x00E060EC File Offset: 0x00E042EC
+		// Token: 0x0602FCEE RID: 195822 RVA: 0x00D56DC8 File Offset: 0x00D54FC8
 		private UniTask SelfRevive(PlayerReviveNotify notify, FVectorDouble location, FRotator rotator, [Nullable(2)] global::Vector gravity)
 		{
 			DeadReviveController.<SelfRevive>d__17 <SelfRevive>d__;
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			return <SelfRevive>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AD7D RID: 241021 RVA: 0x00E06150 File Offset: 0x00E04350
+		// Token: 0x0602FCEF RID: 195823 RVA: 0x00D56E2C File Offset: 0x00D5502C
 		private bool CanRevivePerform(FVectorDouble location)
 		{
 			if (!GameModeController.Instance.IsInInstance())
@@ -358,7 +358,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			return true;
 		}
 
-		// Token: 0x0603AD7E RID: 241022 RVA: 0x00E06214 File Offset: 0x00E04414
+		// Token: 0x0602FCF0 RID: 195824 RVA: 0x00D56EF0 File Offset: 0x00D550F0
 		private void OnPlotNetworkEnd(PlotResultInfo plotResult)
 		{
 			long reviveFlowIncId = DeadReviveModel.Instance.ReviveFlowIncId;
@@ -375,7 +375,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603AD7F RID: 241023 RVA: 0x00E062A4 File Offset: 0x00E044A4
+		// Token: 0x0602FCF1 RID: 195825 RVA: 0x00D56F80 File Offset: 0x00D55180
 		public void PlayerReviveEnded(float delta)
 		{
 			SceneTeamController.Instance.ShowControlledRole(PlayerInfoModel.Instance.GetId().Value);
@@ -404,7 +404,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603AD80 RID: 241024 RVA: 0x00E06350 File Offset: 0x00E04550
+		// Token: 0x0602FCF2 RID: 195826 RVA: 0x00D5702C File Offset: 0x00D5522C
 		private void OtherPlayerRevive(PlayerReviveNotify notify, FVectorDouble location, FRotator rotator)
 		{
 			foreach (ReviveRoleInformation reviveRoleInformation in notify.ReviveRoleInfos)
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			SceneTeamController.Instance.ShowControlledRole(notify.PlayerId);
 		}
 
-		// Token: 0x0603AD81 RID: 241025 RVA: 0x00E0644C File Offset: 0x00E0464C
+		// Token: 0x0602FCF3 RID: 195827 RVA: 0x00D57128 File Offset: 0x00D55328
 		private void OpenReviveView()
 		{
 			ValueTuple<EUiViewName?, object> reviveViewName = this.GetReviveViewName();
@@ -471,7 +471,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			});
 		}
 
-		// Token: 0x0603AD82 RID: 241026 RVA: 0x00E064C8 File Offset: 0x00E046C8
+		// Token: 0x0602FCF4 RID: 195828 RVA: 0x00D571A4 File Offset: 0x00D553A4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -556,13 +556,13 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603AD83 RID: 241027 RVA: 0x00E0671A File Offset: 0x00E0491A
+		// Token: 0x0602FCF5 RID: 195829 RVA: 0x00D573F6 File Offset: 0x00D555F6
 		private bool IsInstChallengeFinish()
 		{
 			return DangoAbyssModel.Instance.CheckInAbyss() && DangoAbyssModel.Instance.IsChallengeFinish();
 		}
 
-		// Token: 0x0603AD84 RID: 241028 RVA: 0x00E06734 File Offset: 0x00E04934
+		// Token: 0x0602FCF6 RID: 195830 RVA: 0x00D57410 File Offset: 0x00D55610
 		private void CloseReviveView()
 		{
 			EUiViewName? openedViewName = DeadReviveModel.Instance.OpenedViewName;
@@ -573,7 +573,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			DeadReviveModel.Instance.OpenedViewName = null;
 		}
 
-		// Token: 0x0603AD85 RID: 241029 RVA: 0x00E0678C File Offset: 0x00E0498C
+		// Token: 0x0602FCF7 RID: 195831 RVA: 0x00D57468 File Offset: 0x00D55668
 		private void NoLoadingTeleport(FVectorDouble location, FRotator? rotator, [Nullable(2)] global::Vector gravity, string reason)
 		{
 			ITeleportContextParam param = new ITeleportContextParam
@@ -608,7 +608,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}).Forget();
 		}
 
-		// Token: 0x0603AD86 RID: 241030 RVA: 0x00E06804 File Offset: 0x00E04A04
+		// Token: 0x0602FCF8 RID: 195832 RVA: 0x00D574E0 File Offset: 0x00D556E0
 		[NullableContext(2)]
 		private void AbyssReviveNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -627,7 +627,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			EventSystem.Instance.Emit(EEventName.OnShareReviveTimesChange);
 		}
 
-		// Token: 0x0603AD87 RID: 241031 RVA: 0x00E0685C File Offset: 0x00E04A5C
+		// Token: 0x0602FCF9 RID: 195833 RVA: 0x00D57538 File Offset: 0x00D55738
 		public void TryReviveCurrentRoleByShare()
 		{
 			SceneTeamItem getCurrentTeamItem = SceneTeamModel.Instance.GetCurrentTeamItem;
@@ -638,7 +638,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.RequestReviveRoleByShare(getCurrentTeamItem.GetConfigId);
 		}
 
-		// Token: 0x0603AD88 RID: 241032 RVA: 0x00E06884 File Offset: 0x00E04A84
+		// Token: 0x0602FCFA RID: 195834 RVA: 0x00D57560 File Offset: 0x00D55760
 		private void TryReviveRoleByShare(int roleId, bool needChangeRole)
 		{
 			if (DeadReviveModel.Instance.CurrentShareReviveTimes <= 0)
@@ -665,7 +665,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603AD89 RID: 241033 RVA: 0x00E06934 File Offset: 0x00E04B34
+		// Token: 0x0602FCFB RID: 195835 RVA: 0x00D57610 File Offset: 0x00D55810
 		private void RequestReviveRoleByShare(int roleId)
 		{
 			AbyssReviveCharacterRequest abyssReviveCharacterRequest = AbyssReviveCharacterRequest.Create();
@@ -675,7 +675,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}, 0);
 		}
 
-		// Token: 0x0603AD8A RID: 241034 RVA: 0x00E06980 File Offset: 0x00E04B80
+		// Token: 0x0602FCFC RID: 195836 RVA: 0x00D5765C File Offset: 0x00D5585C
 		[NullableContext(2)]
 		private void AbyssReviveTimeNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -685,7 +685,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603AD8B RID: 241035 RVA: 0x00E069E4 File Offset: 0x00E04BE4
+		// Token: 0x0602FCFD RID: 195837 RVA: 0x00D576C0 File Offset: 0x00D558C0
 		private void OnRoleRevive(Entity entity)
 		{
 			CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -693,8 +693,8 @@ namespace CSharpScript.Game.Module.DeadRevive
 			DeadReviveModel.Instance.UnRegisterCooldown(creatureDataId);
 		}
 
-		// Token: 0x17008C22 RID: 35874
-		// (get) Token: 0x0603AD8C RID: 241036 RVA: 0x00E06A10 File Offset: 0x00E04C10
+		// Token: 0x17005FFC RID: 24572
+		// (get) Token: 0x0602FCFE RID: 195838 RVA: 0x00D576EC File Offset: 0x00D558EC
 		public static DeadReviveController Instance
 		{
 			get
@@ -703,7 +703,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603AD8D RID: 241037 RVA: 0x00E06A17 File Offset: 0x00E04C17
+		// Token: 0x0602FCFF RID: 195839 RVA: 0x00D576F3 File Offset: 0x00D558F3
 		public static DeadReviveController GetOrCreateInstance()
 		{
 			if (DeadReviveController._Instance == null)
@@ -713,7 +713,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			return DeadReviveController._Instance;
 		}
 
-		// Token: 0x0603AD8E RID: 241038 RVA: 0x00E06A2B File Offset: 0x00E04C2B
+		// Token: 0x0602FD00 RID: 195840 RVA: 0x00D57707 File Offset: 0x00D55907
 		public static bool CreateInstance()
 		{
 			if (DeadReviveController._Instance != null)
@@ -724,39 +724,39 @@ namespace CSharpScript.Game.Module.DeadRevive
 			return true;
 		}
 
-		// Token: 0x0603AD8F RID: 241039 RVA: 0x00E06A41 File Offset: 0x00E04C41
+		// Token: 0x0602FD01 RID: 195841 RVA: 0x00D5771D File Offset: 0x00D5591D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603AD90 RID: 241040 RVA: 0x00E06A43 File Offset: 0x00E04C43
+		// Token: 0x0602FD02 RID: 195842 RVA: 0x00D5771F File Offset: 0x00D5591F
 		public static void ResetStaticDefaultValue()
 		{
 			DeadReviveController._Instance = null;
 		}
 
-		// Token: 0x0603AD91 RID: 241041 RVA: 0x00E06A4B File Offset: 0x00E04C4B
+		// Token: 0x0602FD03 RID: 195843 RVA: 0x00D57727 File Offset: 0x00D55927
 		static DeadReviveController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DeadReviveController.CreateStaticDefaultValue), new Action(DeadReviveController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EB3F RID: 125759
+		// Token: 0x040195FA RID: 103930
 		private const int TIME_TO_REVIVE = 3000;
 
-		// Token: 0x0401EB40 RID: 125760
+		// Token: 0x040195FB RID: 103931
 		private const int LOGIN_REVIVE = 1000;
 
-		// Token: 0x0401EB41 RID: 125761
+		// Token: 0x040195FC RID: 103932
 		private const float OPEN_FADE_DURATION = 0.1f;
 
-		// Token: 0x0401EB42 RID: 125762
+		// Token: 0x040195FD RID: 103933
 		private const float CLOSE_FADE_DURATION = 0.5f;
 
-		// Token: 0x0401EB43 RID: 125763
+		// Token: 0x040195FE RID: 103934
 		private bool IsReviving;
 
-		// Token: 0x0401EB44 RID: 125764
+		// Token: 0x040195FF RID: 103935
 		[Nullable(2)]
 		private static DeadReviveController _Instance;
 	}

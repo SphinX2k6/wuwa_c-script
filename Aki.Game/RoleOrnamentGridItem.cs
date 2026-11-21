@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002A59 RID: 10841
+// Token: 0x02001FD4 RID: 8148
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 })]
 public class RoleOrnamentGridItem : LoopScrollSmallItemGrid<IRoleOrnamentGridData>
 {
-	// Token: 0x06016975 RID: 92533 RVA: 0x005B9924 File Offset: 0x005B7B24
+	// Token: 0x06014396 RID: 82838 RVA: 0x005E5AA8 File Offset: 0x005E3CA8
 	public override void OnSelected(bool fireEvent)
 	{
 		if (fireEvent)
@@ -32,13 +32,13 @@ public class RoleOrnamentGridItem : LoopScrollSmallItemGrid<IRoleOrnamentGridDat
 		}
 	}
 
-	// Token: 0x06016976 RID: 92534 RVA: 0x005B997C File Offset: 0x005B7B7C
+	// Token: 0x06014397 RID: 82839 RVA: 0x005E5B00 File Offset: 0x005E3D00
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, true);
 	}
 
-	// Token: 0x06016977 RID: 92535 RVA: 0x005B9988 File Offset: 0x005B7B88
+	// Token: 0x06014398 RID: 82840 RVA: 0x005E5B0C File Offset: 0x005E3D0C
 	protected override void OnRefresh(IRoleOrnamentGridData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -57,7 +57,7 @@ public class RoleOrnamentGridItem : LoopScrollSmallItemGrid<IRoleOrnamentGridDat
 		this.RefreshRedDotVisible();
 	}
 
-	// Token: 0x06016978 RID: 92536 RVA: 0x005B9A24 File Offset: 0x005B7C24
+	// Token: 0x06014399 RID: 82841 RVA: 0x005E5BA8 File Offset: 0x005E3DA8
 	public void RefreshRedDotVisible()
 	{
 		IRoleOrnamentGridData roleOrnamentGridData = this.Data as IRoleOrnamentGridData;
@@ -71,7 +71,7 @@ public class RoleOrnamentGridItem : LoopScrollSmallItemGrid<IRoleOrnamentGridDat
 		base.SetRedDotVisible(new bool?(value));
 	}
 
-	// Token: 0x06016979 RID: 92537 RVA: 0x005B9A6E File Offset: 0x005B7C6E
+	// Token: 0x0601439A RID: 82842 RVA: 0x005E5BF2 File Offset: 0x005E3DF2
 	[return: Nullable(2)]
 	public override object GetKey(IRoleOrnamentGridData data, int gridIndex)
 	{

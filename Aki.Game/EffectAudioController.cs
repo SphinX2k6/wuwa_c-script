@@ -8,14 +8,14 @@ using CSharpScript.Core.Framework;
 using CSharpScript.Game.Module.Audio;
 using UnrealEngine;
 
-// Token: 0x02000269 RID: 617
+// Token: 0x0200026D RID: 621
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class EffectAudioController : ControllerBase
 {
-	// Token: 0x170005C3 RID: 1475
-	// (get) Token: 0x06002598 RID: 9624 RVA: 0x000E116E File Offset: 0x000DF36E
+	// Token: 0x170005EA RID: 1514
+	// (get) Token: 0x0600264F RID: 9807 RVA: 0x000E750A File Offset: 0x000E570A
 	protected override bool IsTickEvenPausedInternal
 	{
 		get
@@ -24,7 +24,7 @@ public class EffectAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x06002599 RID: 9625 RVA: 0x000E1174 File Offset: 0x000DF374
+	// Token: 0x06002650 RID: 9808 RVA: 0x000E7510 File Offset: 0x000E5710
 	protected override bool OnInit()
 	{
 		for (int i = 0; i < 20; i++)
@@ -39,7 +39,7 @@ public class EffectAudioController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600259A RID: 9626 RVA: 0x000E11C8 File Offset: 0x000DF3C8
+	// Token: 0x06002651 RID: 9809 RVA: 0x000E7564 File Offset: 0x000E5764
 	protected override void OnTick(float delta)
 	{
 		CharacterModel instance = CharacterModel.Instance;
@@ -54,7 +54,7 @@ public class EffectAudioController : ControllerBase
 		this.UpdateLocationOffsets();
 	}
 
-	// Token: 0x0600259B RID: 9627 RVA: 0x000E1224 File Offset: 0x000DF424
+	// Token: 0x06002652 RID: 9810 RVA: 0x000E75C0 File Offset: 0x000E57C0
 	private unsafe void UpdateLocationOffsets()
 	{
 		if (this.ActorInfoMap.Count == 0)
@@ -155,7 +155,7 @@ public class EffectAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600259C RID: 9628 RVA: 0x000E15C8 File Offset: 0x000DF7C8
+	// Token: 0x06002653 RID: 9811 RVA: 0x000E7964 File Offset: 0x000E5B64
 	private IAudioInfo CreateEffectModel(object effectModel)
 	{
 		EffectModelAudio effectModelAudio = effectModel as EffectModelAudio;
@@ -166,7 +166,7 @@ public class EffectAudioController : ControllerBase
 		return new EventModelInfo((effectModel as string) ?? "");
 	}
 
-	// Token: 0x0600259D RID: 9629 RVA: 0x000E15FA File Offset: 0x000DF7FA
+	// Token: 0x06002654 RID: 9812 RVA: 0x000E7996 File Offset: 0x000E5B96
 	[NullableContext(2)]
 	public int AddPlayEffectAudio([Nullable(new byte[]
 	{
@@ -182,7 +182,7 @@ public class EffectAudioController : ControllerBase
 		return this.AddPlayEffectAudioInternal(param, effectActor, effectType, priority, callback, isTransform);
 	}
 
-	// Token: 0x0600259E RID: 9630 RVA: 0x000E1618 File Offset: 0x000DF818
+	// Token: 0x06002655 RID: 9813 RVA: 0x000E79B4 File Offset: 0x000E5BB4
 	[NullableContext(2)]
 	private int AddPlayEffectAudioInternal([Nullable(1)] object param, object effectActor, EHitEffectType? effectType, ERoleAudioPriorityType? priority, Action callback, bool? isTransform)
 	{
@@ -236,13 +236,25 @@ public class EffectAudioController : ControllerBase
 		return num2;
 	}
 
-	// Token: 0x0600259F RID: 9631 RVA: 0x000E176C File Offset: 0x000DF96C
+	// Token: 0x06002656 RID: 9814 RVA: 0x000E7B08 File Offset: 0x000E5D08
 	[NullableContext(2)]
 	public unsafe void OnStopEffectAudio(int uid, string context = null, bool callback = true)
 	{
+		if (context == "HiddenFlagPause")
+		{
+			this.PauseEffectAudio(uid);
+			return;
+		}
+		if (context == "HiddenFlagResume")
+		{
+			this.ResumeEffectAudio(uid);
+			return;
+		}
+		bool flag = this.HiddenFlagPausedUidSet.Contains(uid);
+		this.HiddenFlagPausedUidSet.Remove(uid);
 		if (this.EffectModelAudioHandleMap.ContainsKey(uid))
 		{
-			this.StopAudioEventFromEffectModel(uid);
+			this.StopAudioEventFromEffectModel(uid, flag);
 			return;
 		}
 		if (this.PendingHandleMap.ContainsKey(uid))
@@ -294,7 +306,14 @@ public class EffectAudioController : ControllerBase
 			return;
 		}
 		effectActorInfo.EffectUidList.Remove(uid);
-		this.PlayTrailingAudioEvent(effectAudioInfo, effectActorInfo);
+		if (!flag)
+		{
+			this.PlayTrailingAudioEvent(effectAudioInfo, effectActorInfo);
+		}
+		if (effectActorInfo.EffectUidList.Count > 0)
+		{
+			this.RefreshInstancePausedState(effectActorInfo);
+		}
 		if (effectActorInfo.EffectUidList.Count == 0)
 		{
 			string audioEvent = effectActorInfo.EffectModel.GetAudioEvent();
@@ -302,14 +321,77 @@ public class EffectAudioController : ControllerBase
 			{
 				this.AudioEventMap.Remove(audioEvent);
 			}
-			this.StopAudioEvent(effectActorInfo);
+			this.StopAudioEvent(effectActorInfo, flag);
 			this.RecycleEffectActor(effectActorInfo, effectActorInfo.Priority);
 			this.ActorInfoMap.Remove(actorUid);
 		}
 		this.AudioInfoMap.Remove(uid);
 	}
 
-	// Token: 0x060025A0 RID: 9632 RVA: 0x000E196C File Offset: 0x000DFB6C
+	// Token: 0x06002657 RID: 9815 RVA: 0x000E7D64 File Offset: 0x000E5F64
+	[NullableContext(2)]
+	private void RefreshInstancePausedState(IEffectActorInfo actorHandle)
+	{
+		if (actorHandle == null || actorHandle.AudioHandle == 0)
+		{
+			return;
+		}
+		bool flag = false;
+		foreach (int item in actorHandle.EffectUidList)
+		{
+			if (!this.HiddenFlagPausedUidSet.Contains(item))
+			{
+				flag = true;
+				break;
+			}
+		}
+		AudioSystem.Instance.ExecuteAction(actorHandle.AudioHandle, flag ? EAudioActionType.Resume : EAudioActionType.Pause, new ExecuteActionArgs?(new ExecuteActionArgs(new int?(0), null, null)));
+	}
+
+	// Token: 0x06002658 RID: 9816 RVA: 0x000E7E04 File Offset: 0x000E6004
+	private void PauseEffectAudio(int uid)
+	{
+		if (this.HiddenFlagPausedUidSet.Contains(uid))
+		{
+			return;
+		}
+		this.HiddenFlagPausedUidSet.Add(uid);
+		EffectModelAudioHandleInfo effectModelAudioHandleInfo;
+		if (this.EffectModelAudioHandleMap.TryGetValue(uid, out effectModelAudioHandleInfo) && effectModelAudioHandleInfo.AudioHandle != 0)
+		{
+			AudioSystem.Instance.ExecuteAction(effectModelAudioHandleInfo.AudioHandle, EAudioActionType.Pause, new ExecuteActionArgs?(new ExecuteActionArgs(new int?(0), null, null)));
+			return;
+		}
+		IEffectAudioInfo effectAudioInfo;
+		if (!this.AudioInfoMap.TryGetValue(uid, out effectAudioInfo))
+		{
+			return;
+		}
+		this.RefreshInstancePausedState(this.ActorInfoMap.GetValueOrDefault(effectAudioInfo.ActorUid));
+	}
+
+	// Token: 0x06002659 RID: 9817 RVA: 0x000E7E9C File Offset: 0x000E609C
+	private void ResumeEffectAudio(int uid)
+	{
+		if (!this.HiddenFlagPausedUidSet.Remove(uid))
+		{
+			return;
+		}
+		EffectModelAudioHandleInfo effectModelAudioHandleInfo;
+		if (this.EffectModelAudioHandleMap.TryGetValue(uid, out effectModelAudioHandleInfo) && effectModelAudioHandleInfo.AudioHandle != 0)
+		{
+			AudioSystem.Instance.ExecuteAction(effectModelAudioHandleInfo.AudioHandle, EAudioActionType.Resume, new ExecuteActionArgs?(new ExecuteActionArgs(new int?(0), null, null)));
+			return;
+		}
+		IEffectAudioInfo effectAudioInfo;
+		if (!this.AudioInfoMap.TryGetValue(uid, out effectAudioInfo))
+		{
+			return;
+		}
+		this.RefreshInstancePausedState(this.ActorInfoMap.GetValueOrDefault(effectAudioInfo.ActorUid));
+	}
+
+	// Token: 0x0600265A RID: 9818 RVA: 0x000E7F24 File Offset: 0x000E6124
 	public bool CheckInSpecialInstanceDungeon()
 	{
 		GameModeModel instance = GameModeModel.Instance;
@@ -317,7 +399,7 @@ public class EffectAudioController : ControllerBase
 		return ((instance != null) ? ((instance.InstanceDungeon != null) ? new int?(instanceDungeon.GetValueOrDefault().MapConfigId) : null) : null).GetValueOrDefault() == 9300;
 	}
 
-	// Token: 0x060025A1 RID: 9633 RVA: 0x000E19CC File Offset: 0x000DFBCC
+	// Token: 0x0600265B RID: 9819 RVA: 0x000E7F84 File Offset: 0x000E6184
 	public bool CheckSpecialInstanceDungeonEvent(string name)
 	{
 		GameModeModel instance = GameModeModel.Instance;
@@ -336,7 +418,7 @@ public class EffectAudioController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x060025A2 RID: 9634 RVA: 0x000E1A58 File Offset: 0x000DFC58
+	// Token: 0x0600265C RID: 9820 RVA: 0x000E8010 File Offset: 0x000E6210
 	public bool CheckHitEffectCooldownTime(EHitEffectType? effectType, string @event)
 	{
 		GameModeModel instance = GameModeModel.Instance;
@@ -354,7 +436,7 @@ public class EffectAudioController : ControllerBase
 		return flag;
 	}
 
-	// Token: 0x060025A3 RID: 9635 RVA: 0x000E1B24 File Offset: 0x000DFD24
+	// Token: 0x0600265D RID: 9821 RVA: 0x000E80DC File Offset: 0x000E62DC
 	private void HandlePendingMap()
 	{
 		if (this.PendingHandleMap.Count == 0)
@@ -382,7 +464,7 @@ public class EffectAudioController : ControllerBase
 		this.OtherCtrlEffectModelMap.Clear();
 	}
 
-	// Token: 0x060025A4 RID: 9636 RVA: 0x000E1C38 File Offset: 0x000DFE38
+	// Token: 0x0600265E RID: 9822 RVA: 0x000E81F0 File Offset: 0x000E63F0
 	private unsafe void HandlePendingItem(int uid, IEffectAudioInfo effectInfo)
 	{
 		IPendingEffectInfo pendingEffectInfo;
@@ -424,9 +506,10 @@ public class EffectAudioController : ControllerBase
 		}
 		effectActorInfo.EffectUidList.Add(uid);
 		this.AudioInfoMap[uid] = effectInfo;
+		this.RefreshInstancePausedState(effectActorInfo);
 	}
 
-	// Token: 0x060025A5 RID: 9637 RVA: 0x000E1D8D File Offset: 0x000DFF8D
+	// Token: 0x0600265F RID: 9823 RVA: 0x000E834C File Offset: 0x000E654C
 	private bool CheckNeedSpawnActor(IAudioInfo effectModel, ERoleAudioPriorityType? priority)
 	{
 		if (priority.GetValueOrDefault() == ERoleAudioPriorityType.OtherControl)
@@ -436,7 +519,7 @@ public class EffectAudioController : ControllerBase
 		return !this.PlayerCtrlEffectModelMap.ContainsKey(effectModel.GetCompare());
 	}
 
-	// Token: 0x060025A6 RID: 9638 RVA: 0x000E1DC2 File Offset: 0x000DFFC2
+	// Token: 0x06002660 RID: 9824 RVA: 0x000E8381 File Offset: 0x000E6581
 	private int GetSpawnActorUid(IAudioInfo effectModel, ERoleAudioPriorityType? priority)
 	{
 		if (priority.GetValueOrDefault() == ERoleAudioPriorityType.OtherControl)
@@ -446,7 +529,7 @@ public class EffectAudioController : ControllerBase
 		return this.GetActorUidFromMap(effectModel, this.PlayerCtrlEffectModelMap, priority);
 	}
 
-	// Token: 0x060025A7 RID: 9639 RVA: 0x000E1DEC File Offset: 0x000DFFEC
+	// Token: 0x06002661 RID: 9825 RVA: 0x000E83AC File Offset: 0x000E65AC
 	private int GetActorUidFromMap(IAudioInfo effectModel, Dictionary<object, int> map, ERoleAudioPriorityType? priority)
 	{
 		object compare = effectModel.GetCompare();
@@ -480,7 +563,7 @@ public class EffectAudioController : ControllerBase
 		return map[compare];
 	}
 
-	// Token: 0x060025A8 RID: 9640 RVA: 0x000E1EC8 File Offset: 0x000E00C8
+	// Token: 0x06002662 RID: 9826 RVA: 0x000E8488 File Offset: 0x000E6688
 	[return: Nullable(2)]
 	private IEffectActorInfo CreateEffectActorInfo(IAudioInfo model, ERoleAudioPriorityType? priority)
 	{
@@ -512,7 +595,7 @@ public class EffectAudioController : ControllerBase
 		return effectActorInfo;
 	}
 
-	// Token: 0x060025A9 RID: 9641 RVA: 0x000E1FB8 File Offset: 0x000E01B8
+	// Token: 0x06002663 RID: 9827 RVA: 0x000E8578 File Offset: 0x000E6778
 	private void RecycleEffectActor(IEffectActorInfo actorHandle, ERoleAudioPriorityType? priority)
 	{
 		if (priority != null)
@@ -523,7 +606,7 @@ public class EffectAudioController : ControllerBase
 		ActorSystem.Instance.Put("特效音频播放完成Actor回池", actorHandle.Actor, null);
 	}
 
-	// Token: 0x060025AA RID: 9642 RVA: 0x000E1FF8 File Offset: 0x000E01F8
+	// Token: 0x06002664 RID: 9828 RVA: 0x000E85B8 File Offset: 0x000E67B8
 	private void PostAudioEvent(IEffectActorInfo actorHandle, IAudioInfo effectModel, string eventName)
 	{
 		UAkComponent akComponent = actorHandle.AkComponent;
@@ -552,12 +635,12 @@ public class EffectAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x060025AB RID: 9643 RVA: 0x000E208C File Offset: 0x000E028C
+	// Token: 0x06002665 RID: 9829 RVA: 0x000E864C File Offset: 0x000E684C
 	public int PostAudioEventFromEffectModel(AActor actor, EffectModelAudio effectModel, ERoleAudioPriorityType? priority = null)
 	{
-		EffectAudioController.<>c__DisplayClass43_0 CS$<>8__locals1 = new EffectAudioController.<>c__DisplayClass43_0();
+		EffectAudioController.<>c__DisplayClass49_0 CS$<>8__locals1 = new EffectAudioController.<>c__DisplayClass49_0();
 		CS$<>8__locals1.<>4__this = this;
-		EffectAudioController.<>c__DisplayClass43_0 CS$<>8__locals2 = CS$<>8__locals1;
+		EffectAudioController.<>c__DisplayClass49_0 CS$<>8__locals2 = CS$<>8__locals1;
 		int num = this.EffectAudioUid + 1;
 		this.EffectAudioUid = num;
 		CS$<>8__locals2.uid = num;
@@ -589,7 +672,7 @@ public class EffectAudioController : ControllerBase
 				{
 					return;
 				}
-				CS$<>8__locals1.<>4__this.StopAudioEventFromEffectModel(CS$<>8__locals1.uid);
+				CS$<>8__locals1.<>4__this.StopAudioEventFromEffectModel(CS$<>8__locals1.uid, false);
 			}
 		}));
 		this.EffectModelAudioHandleMap[CS$<>8__locals1.uid] = new EffectModelAudioHandleInfo
@@ -601,8 +684,8 @@ public class EffectAudioController : ControllerBase
 		return CS$<>8__locals1.uid;
 	}
 
-	// Token: 0x060025AC RID: 9644 RVA: 0x000E21DC File Offset: 0x000E03DC
-	private void StopAudioEventFromEffectModel(int uid)
+	// Token: 0x06002666 RID: 9830 RVA: 0x000E879C File Offset: 0x000E699C
+	private void StopAudioEventFromEffectModel(int uid, bool wasHiddenPaused = false)
 	{
 		EffectModelAudioHandleInfo effectModelAudioHandleInfo;
 		if (!this.EffectModelAudioHandleMap.TryGetValue(uid, out effectModelAudioHandleInfo))
@@ -612,9 +695,9 @@ public class EffectAudioController : ControllerBase
 		int audioHandle = effectModelAudioHandleInfo.AudioHandle;
 		UAkComponent akComponent = effectModelAudioHandleInfo.AkComponent;
 		EffectModelAudio effectModel = effectModelAudioHandleInfo.EffectModel;
-		if (audioHandle != 0 && (effectModel == null || !effectModel.KeepAlive))
+		if (audioHandle != 0 && (effectModel == null || !effectModel.KeepAlive || wasHiddenPaused))
 		{
-			AudioSystem.Instance.ExecuteAction(audioHandle, EAudioActionType.Stop, new ExecuteActionArgs?(new ExecuteActionArgs((effectModel != null) ? new int?(effectModel.FadeOutTime) : null, (effectModel != null) ? new EAudioFadeCurve?(effectModel.FadeOutCurve) : null, null)));
+			AudioSystem.Instance.ExecuteAction(audioHandle, EAudioActionType.Stop, new ExecuteActionArgs?(new ExecuteActionArgs(wasHiddenPaused ? new int?(0) : ((effectModel != null) ? new int?(effectModel.FadeOutTime) : null), (effectModel != null) ? new EAudioFadeCurve?(effectModel.FadeOutCurve) : null, null)));
 		}
 		string text;
 		if (effectModel == null)
@@ -628,7 +711,7 @@ public class EffectAudioController : ControllerBase
 		}
 		string text2 = text;
 		UAkAudioEvent uakAudioEvent = (effectModel != null) ? effectModel.TrailingAudioEvent : null;
-		if (!string.IsNullOrEmpty(text2) && uakAudioEvent != null && uakAudioEvent.IsValid() && akComponent != null)
+		if (!wasHiddenPaused && !string.IsNullOrEmpty(text2) && uakAudioEvent != null && uakAudioEvent.IsValid() && akComponent != null)
 		{
 			FVectorDouble fvectorDouble = akComponent.D_K2_GetComponentLocation();
 			FTransformDouble value = new FTransformDouble(ref fvectorDouble);
@@ -637,8 +720,8 @@ public class EffectAudioController : ControllerBase
 		this.EffectModelAudioHandleMap.Remove(uid);
 	}
 
-	// Token: 0x060025AD RID: 9645 RVA: 0x000E22EC File Offset: 0x000E04EC
-	private void StopAudioEvent(IEffectActorInfo actorHandle)
+	// Token: 0x06002667 RID: 9831 RVA: 0x000E88BC File Offset: 0x000E6ABC
+	private void StopAudioEvent(IEffectActorInfo actorHandle, bool wasHiddenPaused = false)
 	{
 		if (actorHandle.AudioHandle == 0)
 		{
@@ -657,20 +740,27 @@ public class EffectAudioController : ControllerBase
 				EffectModelAudio model = effectModelInfo.Model;
 				flag = !((model != null) ? new bool?(model.KeepAlive) : null).GetValueOrDefault();
 			}
-			if (flag)
+			if (flag || wasHiddenPaused)
 			{
 				AudioSystem instance = AudioSystem.Instance;
 				int audioHandle = actorHandle.AudioHandle;
 				EAudioActionType action = EAudioActionType.Stop;
 				int? transitionDuration;
-				if (effectModelInfo == null)
+				if (!wasHiddenPaused)
 				{
-					transitionDuration = null;
+					if (effectModelInfo == null)
+					{
+						transitionDuration = null;
+					}
+					else
+					{
+						EffectModelAudio model2 = effectModelInfo.Model;
+						transitionDuration = ((model2 != null) ? new int?(model2.FadeOutTime) : null);
+					}
 				}
 				else
 				{
-					EffectModelAudio model2 = effectModelInfo.Model;
-					transitionDuration = ((model2 != null) ? new int?(model2.FadeOutTime) : null);
+					transitionDuration = new int?(0);
 				}
 				EAudioFadeCurve? transitionFadeCurve;
 				if (effectModelInfo == null)
@@ -694,7 +784,7 @@ public class EffectAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x060025AE RID: 9646 RVA: 0x000E23F4 File Offset: 0x000E05F4
+	// Token: 0x06002668 RID: 9832 RVA: 0x000E89D0 File Offset: 0x000E6BD0
 	private unsafe void PlayTrailingAudioEvent(IEffectAudioInfo effect, IEffectActorInfo actorHandle)
 	{
 		EffectModelInfo effectModelInfo = actorHandle.EffectModel as EffectModelInfo;
@@ -767,7 +857,7 @@ public class EffectAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x060025AF RID: 9647 RVA: 0x000E2574 File Offset: 0x000E0774
+	// Token: 0x06002669 RID: 9833 RVA: 0x000E8B50 File Offset: 0x000E6D50
 	private bool CheckSpecialInstanceDungeonCooldown(string @event)
 	{
 		GameModeModel instance = GameModeModel.Instance;
@@ -776,7 +866,7 @@ public class EffectAudioController : ControllerBase
 		return ((instance != null) ? ((instance.InstanceDungeon != null) ? new int?(instanceDungeon.GetValueOrDefault().MapConfigId) : null) : null).GetValueOrDefault() == 9300 && this.AudioEventMap.TryGetValue(@event, out num) && Time.Instance.Now - num < 100.0;
 	}
 
-	// Token: 0x060025B0 RID: 9648 RVA: 0x000E2608 File Offset: 0x000E0808
+	// Token: 0x0600266A RID: 9834 RVA: 0x000E8BE4 File Offset: 0x000E6DE4
 	private string GetHitEffectTypeDesc(EHitEffectType type)
 	{
 		switch (type)
@@ -792,8 +882,8 @@ public class EffectAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x170005C4 RID: 1476
-	// (get) Token: 0x060025B1 RID: 9649 RVA: 0x000E263F File Offset: 0x000E083F
+	// Token: 0x170005EB RID: 1515
+	// (get) Token: 0x0600266B RID: 9835 RVA: 0x000E8C1B File Offset: 0x000E6E1B
 	public static EffectAudioController Instance
 	{
 		get
@@ -802,7 +892,7 @@ public class EffectAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x060025B2 RID: 9650 RVA: 0x000E2646 File Offset: 0x000E0846
+	// Token: 0x0600266C RID: 9836 RVA: 0x000E8C22 File Offset: 0x000E6E22
 	public static EffectAudioController GetOrCreateInstance()
 	{
 		if (EffectAudioController._Instance == null)
@@ -812,7 +902,7 @@ public class EffectAudioController : ControllerBase
 		return EffectAudioController._Instance;
 	}
 
-	// Token: 0x060025B3 RID: 9651 RVA: 0x000E265A File Offset: 0x000E085A
+	// Token: 0x0600266D RID: 9837 RVA: 0x000E8C36 File Offset: 0x000E6E36
 	public static bool CreateInstance()
 	{
 		if (EffectAudioController._Instance != null)
@@ -823,93 +913,102 @@ public class EffectAudioController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060025B4 RID: 9652 RVA: 0x000E2670 File Offset: 0x000E0870
+	// Token: 0x0600266E RID: 9838 RVA: 0x000E8C4C File Offset: 0x000E6E4C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060025B5 RID: 9653 RVA: 0x000E2672 File Offset: 0x000E0872
+	// Token: 0x0600266F RID: 9839 RVA: 0x000E8C4E File Offset: 0x000E6E4E
 	public static void ResetStaticDefaultValue()
 	{
 		EffectAudioController._Instance = null;
 	}
 
-	// Token: 0x060025B6 RID: 9654 RVA: 0x000E267A File Offset: 0x000E087A
+	// Token: 0x06002670 RID: 9840 RVA: 0x000E8C56 File Offset: 0x000E6E56
 	static EffectAudioController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(EffectAudioController.CreateStaticDefaultValue), new Action(EffectAudioController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002445 RID: 9285
+	// Token: 0x040024C3 RID: 9411
+	public const string HIDDEN_FLAG_PAUSE_CONTEXT = "HiddenFlagPause";
+
+	// Token: 0x040024C4 RID: 9412
+	public const string HIDDEN_FLAG_RESUME_CONTEXT = "HiddenFlagResume";
+
+	// Token: 0x040024C5 RID: 9413
+	private readonly HashSet<int> HiddenFlagPausedUidSet = new HashSet<int>();
+
+	// Token: 0x040024C6 RID: 9414
 	private const int SPECIAL_MAP_ID = 9300;
 
-	// Token: 0x04002446 RID: 9286
+	// Token: 0x040024C7 RID: 9415
 	private const int SPECIAL_MAP_AUDIO_CD = 80;
 
-	// Token: 0x04002447 RID: 9287
+	// Token: 0x040024C8 RID: 9416
 	private const int SPECIAL_MAP_EVENT_SPAWN_CD = 100;
 
-	// Token: 0x04002448 RID: 9288
+	// Token: 0x040024C9 RID: 9417
 	private const int DELTA_TIME_INTERVAL = 25;
 
-	// Token: 0x04002449 RID: 9289
+	// Token: 0x040024CA RID: 9418
 	private const int PRELOAD_ACTOR_COUNT = 20;
 
-	// Token: 0x0400244A RID: 9290
+	// Token: 0x040024CB RID: 9419
 	private const int SPAWN_ACTOR_COUNT = 2;
 
-	// Token: 0x0400244B RID: 9291
+	// Token: 0x040024CC RID: 9420
 	private int ActorUid;
 
-	// Token: 0x0400244C RID: 9292
+	// Token: 0x040024CD RID: 9421
 	private int EffectAudioUid;
 
-	// Token: 0x0400244D RID: 9293
+	// Token: 0x040024CE RID: 9422
 	private float DeltaTime;
 
-	// Token: 0x0400244E RID: 9294
+	// Token: 0x040024CF RID: 9423
 	private readonly Transform ZeroTransform = Transform.Create(FQuat.Identity, global::Vector.ZeroVector, global::Vector.ZeroVector);
 
-	// Token: 0x0400244F RID: 9295
+	// Token: 0x040024D0 RID: 9424
 	private readonly Dictionary<int, IEffectActorInfo> ActorInfoMap = new Dictionary<int, IEffectActorInfo>();
 
-	// Token: 0x04002450 RID: 9296
+	// Token: 0x040024D1 RID: 9425
 	private readonly Dictionary<int, IEffectAudioInfo> AudioInfoMap = new Dictionary<int, IEffectAudioInfo>();
 
-	// Token: 0x04002451 RID: 9297
+	// Token: 0x040024D2 RID: 9426
 	private readonly Dictionary<string, double> AudioEventMap = new Dictionary<string, double>();
 
-	// Token: 0x04002452 RID: 9298
+	// Token: 0x040024D3 RID: 9427
 	private readonly Stat EffectStat = Stat.Create("EffectAudioController.HandlePendingMap", "", "");
 
-	// Token: 0x04002453 RID: 9299
+	// Token: 0x040024D4 RID: 9428
 	private readonly Stat LocationStat = Stat.Create("EffectAudioController.UpdateLocationOffsets", "", "");
 
-	// Token: 0x04002454 RID: 9300
+	// Token: 0x040024D5 RID: 9429
 	private readonly Dictionary<int, IEffectAudioInfo> PendingHandleMap = new Dictionary<int, IEffectAudioInfo>();
 
-	// Token: 0x04002455 RID: 9301
+	// Token: 0x040024D6 RID: 9430
 	private readonly Dictionary<int, IPendingEffectInfo> PendingEffectModelMap = new Dictionary<int, IPendingEffectInfo>();
 
-	// Token: 0x04002456 RID: 9302
+	// Token: 0x040024D7 RID: 9431
 	private readonly Dictionary<EHitEffectType, double> HitEffectMap = new Dictionary<EHitEffectType, double>();
 
-	// Token: 0x04002457 RID: 9303
+	// Token: 0x040024D8 RID: 9432
 	private readonly Dictionary<object, int> PlayerCtrlEffectModelMap = new Dictionary<object, int>();
 
-	// Token: 0x04002458 RID: 9304
+	// Token: 0x040024D9 RID: 9433
 	private readonly Dictionary<object, int> OtherCtrlEffectModelMap = new Dictionary<object, int>();
 
-	// Token: 0x04002459 RID: 9305
+	// Token: 0x040024DA RID: 9434
 	private readonly List<int> DeletePendingList = new List<int>();
 
-	// Token: 0x0400245A RID: 9306
+	// Token: 0x040024DB RID: 9435
 	private int CurrentSpawnActorCount;
 
-	// Token: 0x0400245B RID: 9307
+	// Token: 0x040024DC RID: 9436
 	private readonly Dictionary<int, EffectModelAudioHandleInfo> EffectModelAudioHandleMap = new Dictionary<int, EffectModelAudioHandleInfo>();
 
-	// Token: 0x0400245C RID: 9308
+	// Token: 0x040024DD RID: 9437
 	[Nullable(2)]
 	private static EffectAudioController _Instance;
 }

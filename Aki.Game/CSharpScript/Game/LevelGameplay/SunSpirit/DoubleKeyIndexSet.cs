@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 {
-	// Token: 0x020069F1 RID: 27121
+	// Token: 0x02005B4E RID: 23374
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 	})]
 	public class DoubleKeyIndexSet<[Nullable(2)] TK1, [Nullable(2)] TK2, [Nullable(2)] TV> : Dictionary<TK1, Dictionary<TK2, HashSet<TV>>>
 	{
-		// Token: 0x06043789 RID: 276361 RVA: 0x0107E67C File Offset: 0x0107C87C
+		// Token: 0x060397D2 RID: 235474 RVA: 0x01022D30 File Offset: 0x01020F30
 		public void AddValToSet(TK1 key1, TK2 key2, TV val)
 		{
 			Dictionary<TK2, HashSet<TV>> dictionary;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			hashSet.Add(val);
 		}
 
-		// Token: 0x0604378A RID: 276362 RVA: 0x0107E6C4 File Offset: 0x0107C8C4
+		// Token: 0x060397D3 RID: 235475 RVA: 0x01022D78 File Offset: 0x01020F78
 		public void DeleteValFromSet(TK1 key1, TK2 key2, TV val)
 		{
 			Dictionary<TK2, HashSet<TV>> dictionary;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x0604378B RID: 276363 RVA: 0x0107E714 File Offset: 0x0107C914
+		// Token: 0x060397D4 RID: 235476 RVA: 0x01022DC8 File Offset: 0x01020FC8
 		[return: Nullable(new byte[]
 		{
 			2,

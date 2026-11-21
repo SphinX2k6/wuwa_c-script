@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200215F RID: 8543
+	// Token: 0x020023C0 RID: 9152
 	public class ResetEntityPos_SetValue
 	{
-		// Token: 0x04007051 RID: 28753
+		// Token: 0x04007686 RID: 30342
 		public int EntityId;
 	}
 }

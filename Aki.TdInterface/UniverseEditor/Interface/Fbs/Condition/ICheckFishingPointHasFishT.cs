@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A28 RID: 18984
+	// Token: 0x02004EEB RID: 20203
 	public class ICheckFishingPointHasFishT
 	{
-		// Token: 0x1700896D RID: 35181
-		// (get) Token: 0x0601DB55 RID: 121685 RVA: 0x0042DC28 File Offset: 0x0042BE28
-		// (set) Token: 0x0601DB56 RID: 121686 RVA: 0x0042DC30 File Offset: 0x0042BE30
+		// Token: 0x17009042 RID: 36930
+		// (get) Token: 0x0601F5DE RID: 128478 RVA: 0x0045EB20 File Offset: 0x0045CD20
+		// (set) Token: 0x0601F5DF RID: 128479 RVA: 0x0045EB28 File Offset: 0x0045CD28
 		public ECondition Type { get; set; }
 
-		// Token: 0x1700896E RID: 35182
-		// (get) Token: 0x0601DB57 RID: 121687 RVA: 0x0042DC39 File Offset: 0x0042BE39
-		// (set) Token: 0x0601DB58 RID: 121688 RVA: 0x0042DC41 File Offset: 0x0042BE41
+		// Token: 0x17009043 RID: 36931
+		// (get) Token: 0x0601F5E0 RID: 128480 RVA: 0x0045EB31 File Offset: 0x0045CD31
+		// (set) Token: 0x0601F5E1 RID: 128481 RVA: 0x0045EB39 File Offset: 0x0045CD39
 		public bool HasFish { get; set; }
 
-		// Token: 0x0601DB59 RID: 121689 RVA: 0x0042DC4A File Offset: 0x0042BE4A
+		// Token: 0x0601F5E2 RID: 128482 RVA: 0x0045EB42 File Offset: 0x0045CD42
 		public ICheckFishingPointHasFishT()
 		{
 			this.Type = ECondition.CompareVar;

@@ -8,30 +8,30 @@ using CSharpScript.Typing;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x0200208D RID: 8333
+// Token: 0x02001560 RID: 5472
 [NullableContext(1)]
 [Nullable(0)]
 public class Heartbeat : Singleton
 {
-	// Token: 0x0601065A RID: 67162 RVA: 0x003FF35D File Offset: 0x003FD55D
+	// Token: 0x0600DAC2 RID: 56002 RVA: 0x0040B7A5 File Offset: 0x004099A5
 	public int GetHeartbeatInterval()
 	{
 		return this.HeartbeatInterval;
 	}
 
-	// Token: 0x0601065B RID: 67163 RVA: 0x003FF365 File Offset: 0x003FD565
+	// Token: 0x0600DAC3 RID: 56003 RVA: 0x0040B7AD File Offset: 0x004099AD
 	public void SendHeartbeatImmediately()
 	{
 		this.SinceLastSendTimeMs = 9999999;
 	}
 
-	// Token: 0x0601065C RID: 67164 RVA: 0x003FF372 File Offset: 0x003FD572
+	// Token: 0x0600DAC4 RID: 56004 RVA: 0x0040B7BA File Offset: 0x004099BA
 	public void SetMaxTimeOutHandler(Action handler)
 	{
 		this.MaxTimeOutHandler = handler;
 	}
 
-	// Token: 0x0601065D RID: 67165 RVA: 0x003FF37C File Offset: 0x003FD57C
+	// Token: 0x0600DAC5 RID: 56005 RVA: 0x0040B7C4 File Offset: 0x004099C4
 	public unsafe void BeginHeartBeat(HeartbeatDefine.EBeginHeartbeat reason)
 	{
 		this.IsHeartBeatOpen = true;
@@ -53,7 +53,7 @@ public class Heartbeat : Singleton
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 	}
 
-	// Token: 0x0601065E RID: 67166 RVA: 0x003FF480 File Offset: 0x003FD680
+	// Token: 0x0600DAC6 RID: 56006 RVA: 0x0040B8C8 File Offset: 0x00409AC8
 	public void SetHeartBeatMode(HeartbeatDefine.EHeartBeatType type)
 	{
 		HeartbeatDefine.EHeartBeatType? currentHeartBeatState = this.CurrentHeartBeatState;
@@ -78,7 +78,7 @@ public class Heartbeat : Singleton
 		this.HeartbeatInterval = ConfigCommonParamById.GetIntConfig("battle_heartbeat_interval_ms").GetValueOrDefault(1000);
 	}
 
-	// Token: 0x0601065F RID: 67167 RVA: 0x003FF568 File Offset: 0x003FD768
+	// Token: 0x0600DAC7 RID: 56007 RVA: 0x0040B9B0 File Offset: 0x00409BB0
 	public unsafe void StopHeartBeat(HeartbeatDefine.EStopHeartbeat reason)
 	{
 		this.IsHeartBeatOpen = false;
@@ -102,7 +102,7 @@ public class Heartbeat : Singleton
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
 	}
 
-	// Token: 0x06010660 RID: 67168 RVA: 0x003FF670 File Offset: 0x003FD870
+	// Token: 0x0600DAC8 RID: 56008 RVA: 0x0040BAB8 File Offset: 0x00409CB8
 	private void AddTimeOutCount()
 	{
 		this.CurTimeOutCount++;
@@ -132,7 +132,7 @@ public class Heartbeat : Singleton
 		}, null, null);
 	}
 
-	// Token: 0x06010661 RID: 67169 RVA: 0x003FF6F5 File Offset: 0x003FD8F5
+	// Token: 0x0600DAC9 RID: 56009 RVA: 0x0040BB3D File Offset: 0x00409D3D
 	public void RegisterTick()
 	{
 		if (this.TickTimerHandle == null)
@@ -141,7 +141,7 @@ public class Heartbeat : Singleton
 		}
 	}
 
-	// Token: 0x06010662 RID: 67170 RVA: 0x003FF728 File Offset: 0x003FD928
+	// Token: 0x0600DACA RID: 56010 RVA: 0x0040BB70 File Offset: 0x00409D70
 	private void Tick(float deltaMs)
 	{
 		if (!this.IsHeartBeatOpen)
@@ -163,7 +163,7 @@ public class Heartbeat : Singleton
 		this.SendHeartbeat();
 	}
 
-	// Token: 0x06010663 RID: 67171 RVA: 0x003FF790 File Offset: 0x003FD990
+	// Token: 0x0600DACB RID: 56011 RVA: 0x0040BBD8 File Offset: 0x00409DD8
 	private void SendHeartbeat()
 	{
 		this.SinceLastSendTimeMs = 0;
@@ -178,7 +178,7 @@ public class Heartbeat : Singleton
 		EventSystem.Instance.Emit(EEventName.SendHeartbeat);
 	}
 
-	// Token: 0x06010664 RID: 67172 RVA: 0x003FF801 File Offset: 0x003FDA01
+	// Token: 0x0600DACC RID: 56012 RVA: 0x0040BC49 File Offset: 0x00409E49
 	[NullableContext(2)]
 	private void HeartbeatResponse(IMessage msg, Net.CallbackStatus status)
 	{
@@ -190,8 +190,8 @@ public class Heartbeat : Singleton
 		}
 	}
 
-	// Token: 0x17001446 RID: 5190
-	// (get) Token: 0x06010665 RID: 67173 RVA: 0x003FF818 File Offset: 0x003FDA18
+	// Token: 0x17001473 RID: 5235
+	// (get) Token: 0x0600DACD RID: 56013 RVA: 0x0040BC60 File Offset: 0x00409E60
 	public static Heartbeat Instance
 	{
 		get
@@ -205,12 +205,12 @@ public class Heartbeat : Singleton
 		}
 	}
 
-	// Token: 0x06010666 RID: 67174 RVA: 0x003FF83B File Offset: 0x003FDA3B
+	// Token: 0x0600DACE RID: 56014 RVA: 0x0040BC83 File Offset: 0x00409E83
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010667 RID: 67175 RVA: 0x003FF83D File Offset: 0x003FDA3D
+	// Token: 0x0600DACF RID: 56015 RVA: 0x0040BC85 File Offset: 0x00409E85
 	public static void ResetStaticDefaultValue()
 	{
 		Heartbeat instance = Heartbeat._instance;
@@ -221,47 +221,47 @@ public class Heartbeat : Singleton
 		Heartbeat._instance = null;
 	}
 
-	// Token: 0x06010668 RID: 67176 RVA: 0x003FF856 File Offset: 0x003FDA56
+	// Token: 0x0600DAD0 RID: 56016 RVA: 0x0040BC9E File Offset: 0x00409E9E
 	static Heartbeat()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(Heartbeat.CreateStaticDefaultValue), new Action(Heartbeat.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007921 RID: 31009
+	// Token: 0x04007A0A RID: 31242
 	private bool IsHeartBeatOpen;
 
-	// Token: 0x04007922 RID: 31010
+	// Token: 0x04007A0B RID: 31243
 	private bool IsWaitingResponse;
 
-	// Token: 0x04007923 RID: 31011
+	// Token: 0x04007A0C RID: 31244
 	private int CurTimeOutCount;
 
-	// Token: 0x04007924 RID: 31012
+	// Token: 0x04007A0D RID: 31245
 	public int TimeOutMaxCount;
 
-	// Token: 0x04007925 RID: 31013
+	// Token: 0x04007A0E RID: 31246
 	private int ConnectTimeOut;
 
-	// Token: 0x04007926 RID: 31014
+	// Token: 0x04007A0F RID: 31247
 	private int HeartbeatInterval;
 
-	// Token: 0x04007927 RID: 31015
+	// Token: 0x04007A10 RID: 31248
 	private int SinceLastSendTimeMs;
 
-	// Token: 0x04007928 RID: 31016
+	// Token: 0x04007A11 RID: 31249
 	private long LastTickMs;
 
-	// Token: 0x04007929 RID: 31017
+	// Token: 0x04007A12 RID: 31250
 	[Nullable(2)]
 	private TimerHandle TickTimerHandle;
 
-	// Token: 0x0400792A RID: 31018
+	// Token: 0x04007A13 RID: 31251
 	private Action MaxTimeOutHandler;
 
-	// Token: 0x0400792B RID: 31019
+	// Token: 0x04007A14 RID: 31252
 	private HeartbeatDefine.EHeartBeatType? CurrentHeartBeatState;
 
-	// Token: 0x0400792C RID: 31020
+	// Token: 0x04007A15 RID: 31253
 	[Nullable(2)]
 	private static Heartbeat _instance;
 }

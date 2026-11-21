@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022AC RID: 8876
+	// Token: 0x0200251B RID: 9499
 	public class EAvgRoleAnimationTypeJsonConverter : JsonConverter<EAvgRoleAnimationType>
 	{
-		// Token: 0x0600C286 RID: 49798 RVA: 0x001C6C84 File Offset: 0x001C4E84
+		// Token: 0x0600CE55 RID: 52821 RVA: 0x001DEA8C File Offset: 0x001DCC8C
 		public override EAvgRoleAnimationType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EAvgRoleAnimationTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C287 RID: 49799 RVA: 0x001C6CA8 File Offset: 0x001C4EA8
+		// Token: 0x0600CE56 RID: 52822 RVA: 0x001DEAB0 File Offset: 0x001DCCB0
 		public override void Write(Utf8JsonWriter writer, EAvgRoleAnimationType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

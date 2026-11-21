@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000F99 RID: 3993
+// Token: 0x0200044E RID: 1102
 public class FurnitureAreaCameraContext : IFurnitureAreaCameraContext
 {
-	// Token: 0x1700080D RID: 2061
-	// (get) Token: 0x06006640 RID: 26176 RVA: 0x0014401F File Offset: 0x0014221F
-	// (set) Token: 0x06006641 RID: 26177 RVA: 0x00144027 File Offset: 0x00142227
+	// Token: 0x1700082F RID: 2095
+	// (get) Token: 0x060039D8 RID: 14808 RVA: 0x0014C8B3 File Offset: 0x0014AAB3
+	// (set) Token: 0x060039D9 RID: 14809 RVA: 0x0014C8BB File Offset: 0x0014AABB
 	public int AreaCameraId { get; set; }
 }

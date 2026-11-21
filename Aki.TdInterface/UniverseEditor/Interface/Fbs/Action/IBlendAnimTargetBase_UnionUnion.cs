@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200620A RID: 25098
+	// Token: 0x0200687B RID: 26747
 	public class IBlendAnimTargetBase_UnionUnion
 	{
-		// Token: 0x1700BB13 RID: 47891
-		// (get) Token: 0x0602B437 RID: 177207 RVA: 0x005F5BA9 File Offset: 0x005F3DA9
-		// (set) Token: 0x0602B438 RID: 177208 RVA: 0x005F5BB1 File Offset: 0x005F3DB1
+		// Token: 0x1700C499 RID: 50329
+		// (get) Token: 0x0602DB90 RID: 187280 RVA: 0x00640795 File Offset: 0x0063E995
+		// (set) Token: 0x0602DB91 RID: 187281 RVA: 0x0064079D File Offset: 0x0063E99D
 		public IBlendAnimTargetBase_Union Type { get; set; }
 
-		// Token: 0x1700BB14 RID: 47892
-		// (get) Token: 0x0602B439 RID: 177209 RVA: 0x005F5BBA File Offset: 0x005F3DBA
-		// (set) Token: 0x0602B43A RID: 177210 RVA: 0x005F5BC2 File Offset: 0x005F3DC2
+		// Token: 0x1700C49A RID: 50330
+		// (get) Token: 0x0602DB92 RID: 187282 RVA: 0x006407A6 File Offset: 0x0063E9A6
+		// (set) Token: 0x0602DB93 RID: 187283 RVA: 0x006407AE File Offset: 0x0063E9AE
 		public object Value { get; set; }
 
-		// Token: 0x0602B43B RID: 177211 RVA: 0x005F5BCB File Offset: 0x005F3DCB
+		// Token: 0x0602DB94 RID: 187284 RVA: 0x006407B7 File Offset: 0x0063E9B7
 		public IBlendAnimTargetBase_UnionUnion()
 		{
 			this.Type = IBlendAnimTargetBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602B43C RID: 177212 RVA: 0x005F5BE1 File Offset: 0x005F3DE1
+		// Token: 0x0602DB95 RID: 187285 RVA: 0x006407CD File Offset: 0x0063E9CD
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602B43D RID: 177213 RVA: 0x005F5BF3 File Offset: 0x005F3DF3
+		// Token: 0x0602DB96 RID: 187286 RVA: 0x006407DF File Offset: 0x0063E9DF
 		public IBlendAnimTargetBaseT AsIBlendAnimTargetBase()
 		{
 			return this.As<IBlendAnimTargetBaseT>();
 		}
 
-		// Token: 0x0602B43E RID: 177214 RVA: 0x005F5BFB File Offset: 0x005F3DFB
+		// Token: 0x0602DB97 RID: 187287 RVA: 0x006407E7 File Offset: 0x0063E9E7
 		public static IBlendAnimTargetBase_UnionUnion FromIBlendAnimTargetBase(IBlendAnimTargetBaseT _iblendanimtargetbase)
 		{
 			return new IBlendAnimTargetBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B43F RID: 177215 RVA: 0x005F5C10 File Offset: 0x005F3E10
+		// Token: 0x0602DB98 RID: 187288 RVA: 0x006407FC File Offset: 0x0063E9FC
 		public IPlayerBlendAnimTargetT AsIPlayerBlendAnimTarget()
 		{
 			return this.As<IPlayerBlendAnimTargetT>();
 		}
 
-		// Token: 0x0602B440 RID: 177216 RVA: 0x005F5C18 File Offset: 0x005F3E18
+		// Token: 0x0602DB99 RID: 187289 RVA: 0x00640804 File Offset: 0x0063EA04
 		public static IBlendAnimTargetBase_UnionUnion FromIPlayerBlendAnimTarget(IPlayerBlendAnimTargetT _iplayerblendanimtarget)
 		{
 			return new IBlendAnimTargetBase_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B441 RID: 177217 RVA: 0x005F5C30 File Offset: 0x005F3E30
+		// Token: 0x0602DB9A RID: 187290 RVA: 0x0064081C File Offset: 0x0063EA1C
 		public static int Pack(FlatBufferBuilder builder, IBlendAnimTargetBase_UnionUnion _o)
 		{
 			IBlendAnimTargetBase_Union type = _o.Type;

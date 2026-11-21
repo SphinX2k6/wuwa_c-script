@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Letter.View
 {
-	// Token: 0x020056CB RID: 22219
+	// Token: 0x020046A2 RID: 18082
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LetterBackupDisplayView : UiViewBase
 	{
-		// Token: 0x06038839 RID: 231481 RVA: 0x00D6C64C File Offset: 0x00D6A84C
+		// Token: 0x0602D749 RID: 186185 RVA: 0x00CBAC04 File Offset: 0x00CB8E04
 		public LetterBackupDisplayView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603883A RID: 231482 RVA: 0x00D6C660 File Offset: 0x00D6A860
+		// Token: 0x0602D74A RID: 186186 RVA: 0x00CBAC18 File Offset: 0x00CB8E18
 		private static string BuildLetterTitleTid(int letterId)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(18, 1);
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0603883B RID: 231483 RVA: 0x00D6C6A0 File Offset: 0x00D6A8A0
+		// Token: 0x0602D74B RID: 186187 RVA: 0x00CBAC58 File Offset: 0x00CB8E58
 		private static List<ITalkItem> BuildSyntheticTalkItems([Nullable(new byte[]
 		{
 			2,
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			return list;
 		}
 
-		// Token: 0x0603883C RID: 231484 RVA: 0x00D6C73C File Offset: 0x00D6A93C
+		// Token: 0x0602D74C RID: 186188 RVA: 0x00CBACF4 File Offset: 0x00CB8EF4
 		[NullableContext(2)]
 		private static ILetterBackupDisplayViewOpenParam NormalizeOpenParam(object raw)
 		{
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			return null;
 		}
 
-		// Token: 0x0603883D RID: 231485 RVA: 0x00D6C79C File Offset: 0x00D6A99C
+		// Token: 0x0602D74D RID: 186189 RVA: 0x00CBAD54 File Offset: 0x00CB8F54
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603883E RID: 231486 RVA: 0x00D6C828 File Offset: 0x00D6AA28
+		// Token: 0x0602D74E RID: 186190 RVA: 0x00CBADE0 File Offset: 0x00CB8FE0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			LetterBackupDisplayView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -110,13 +110,13 @@ namespace CSharpScript.Game.Module.Letter.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603883F RID: 231487 RVA: 0x00D6C86B File Offset: 0x00D6AA6B
+		// Token: 0x0602D74F RID: 186191 RVA: 0x00CBAE23 File Offset: 0x00CB9023
 		private void OnClickClose()
 		{
 			this.CloseWithBlackScreen().Forget();
 		}
 
-		// Token: 0x06038840 RID: 231488 RVA: 0x00D6C878 File Offset: 0x00D6AA78
+		// Token: 0x0602D750 RID: 186192 RVA: 0x00CBAE30 File Offset: 0x00CB9030
 		private UniTask CloseWithBlackScreen()
 		{
 			LetterBackupDisplayView.<CloseWithBlackScreen>d__12 <CloseWithBlackScreen>d__;
@@ -127,37 +127,37 @@ namespace CSharpScript.Game.Module.Letter.View
 			return <CloseWithBlackScreen>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038841 RID: 231489 RVA: 0x00D6C8BB File Offset: 0x00D6AABB
+		// Token: 0x0602D751 RID: 186193 RVA: 0x00CBAE73 File Offset: 0x00CB9073
 		protected override void OnBeforeDestroy()
 		{
 			this.BlackScreenSuppressor.Restore().Forget();
 		}
 
-		// Token: 0x0401DAF9 RID: 121593
+		// Token: 0x0401858F RID: 99727
 		private const string LETTER_BACKUP_TITLE_TID = "Text_LetterBackupDisplay_Title";
 
-		// Token: 0x0401DAFA RID: 121594
+		// Token: 0x04018590 RID: 99728
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401DAFB RID: 121595
+		// Token: 0x04018591 RID: 99729
 		[Nullable(2)]
 		private LetterPanel InnerLetterPanel;
 
-		// Token: 0x0401DAFC RID: 121596
+		// Token: 0x04018592 RID: 99730
 		private readonly LetterBlackScreenSuppressor BlackScreenSuppressor = new LetterBlackScreenSuppressor();
 
-		// Token: 0x0200B8A2 RID: 47266
+		// Token: 0x0200A2C9 RID: 41673
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04037DF0 RID: 228848
+			// Token: 0x0403280A RID: 206858
 			public const int ItemTopBar = 0;
 
-			// Token: 0x04037DF1 RID: 228849
+			// Token: 0x0403280B RID: 206859
 			public const int TxtName = 1;
 
-			// Token: 0x04037DF2 RID: 228850
+			// Token: 0x0403280C RID: 206860
 			public const int ItemLetterPanel = 2;
 		}
 	}

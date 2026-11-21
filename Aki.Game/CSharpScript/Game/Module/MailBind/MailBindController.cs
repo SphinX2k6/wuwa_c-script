@@ -9,39 +9,39 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.MailBind
 {
-	// Token: 0x020056A3 RID: 22179
+	// Token: 0x02004679 RID: 18041
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class MailBindController : UiControllerBase
 	{
-		// Token: 0x060386EC RID: 231148 RVA: 0x00D66092 File Offset: 0x00D64292
+		// Token: 0x0602D5E9 RID: 185833 RVA: 0x00CB41E2 File Offset: 0x00CB23E2
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDone));
 			EventSystem.Instance.Add(EEventName.CrossDay, new Action(this.OnCrossDay));
 		}
 
-		// Token: 0x060386ED RID: 231149 RVA: 0x00D660CC File Offset: 0x00D642CC
+		// Token: 0x0602D5EA RID: 185834 RVA: 0x00CB421C File Offset: 0x00CB241C
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDone));
 			EventSystem.Instance.Remove(EEventName.CrossDay, new Action(this.OnCrossDay));
 		}
 
-		// Token: 0x060386EE RID: 231150 RVA: 0x00D66106 File Offset: 0x00D64306
+		// Token: 0x0602D5EB RID: 185835 RVA: 0x00CB4256 File Offset: 0x00CB2456
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.MailBindInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnMailBindInfoNotify));
 		}
 
-		// Token: 0x060386EF RID: 231151 RVA: 0x00D66124 File Offset: 0x00D64324
+		// Token: 0x0602D5EC RID: 185836 RVA: 0x00CB4274 File Offset: 0x00CB2474
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.MailBindInfoNotify);
 		}
 
-		// Token: 0x060386F0 RID: 231152 RVA: 0x00D66136 File Offset: 0x00D64336
+		// Token: 0x0602D5ED RID: 185837 RVA: 0x00CB4286 File Offset: 0x00CB2486
 		public void MainBindInfoRequest()
 		{
 			this.MailBindInfoRequestAsync().ContinueWith(delegate(bool result)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.MailBind
 			});
 		}
 
-		// Token: 0x060386F1 RID: 231153 RVA: 0x00D66164 File Offset: 0x00D64364
+		// Token: 0x0602D5EE RID: 185838 RVA: 0x00CB42B4 File Offset: 0x00CB24B4
 		[NullableContext(0)]
 		public UniTask<bool> MailBindInfoRequestAsync()
 		{
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.MailBind
 			return <MailBindInfoRequestAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060386F2 RID: 231154 RVA: 0x00D661A0 File Offset: 0x00D643A0
+		// Token: 0x0602D5EF RID: 185839 RVA: 0x00CB42F0 File Offset: 0x00CB24F0
 		public void MailBindRequest()
 		{
 			MailBindRequest message = Aki.Protocol.MailBindRequest.Create();
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.MailBind
 			}, 0);
 		}
 
-		// Token: 0x060386F3 RID: 231155 RVA: 0x00D661E4 File Offset: 0x00D643E4
+		// Token: 0x0602D5F0 RID: 185840 RVA: 0x00CB4334 File Offset: 0x00CB2534
 		public void MailBindRewardRequest()
 		{
 			MailBindRewardRequest message = Aki.Protocol.MailBindRewardRequest.Create();
@@ -91,14 +91,14 @@ namespace CSharpScript.Game.Module.MailBind
 				}
 				if (mailBindRewardResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(mailBindRewardResponse.ErrorCode, 19056, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(mailBindRewardResponse.ErrorCode, 28271, null, true, true);
 					return;
 				}
 				EventSystem.Instance.Emit(EEventName.OnMailBindRewardResponse);
 			}, 0);
 		}
 
-		// Token: 0x060386F4 RID: 231156 RVA: 0x00D66228 File Offset: 0x00D64428
+		// Token: 0x0602D5F1 RID: 185841 RVA: 0x00CB4378 File Offset: 0x00CB2578
 		[NullableContext(2)]
 		private void OnMailBindInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -111,13 +111,13 @@ namespace CSharpScript.Game.Module.MailBind
 			EventSystem.Instance.Emit(EEventName.OnMailBindInfoNotify);
 		}
 
-		// Token: 0x060386F5 RID: 231157 RVA: 0x00D66260 File Offset: 0x00D64460
+		// Token: 0x0602D5F2 RID: 185842 RVA: 0x00CB43B0 File Offset: 0x00CB25B0
 		private void OnWorldDone()
 		{
 			this.MainBindInfoRequest();
 		}
 
-		// Token: 0x060386F6 RID: 231158 RVA: 0x00D66268 File Offset: 0x00D64468
+		// Token: 0x0602D5F3 RID: 185843 RVA: 0x00CB43B8 File Offset: 0x00CB25B8
 		private void OnCrossDay()
 		{
 			if (!MailBindModel.Instance.GetIsBind())
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.MailBind
 			}
 		}
 
-		// Token: 0x060386F7 RID: 231159 RVA: 0x00D66288 File Offset: 0x00D64488
+		// Token: 0x0602D5F4 RID: 185844 RVA: 0x00CB43D8 File Offset: 0x00CB25D8
 		public void RecordMailBindNextShowRedDotTime()
 		{
 			double serverTimeStamp = TimeUtil.Instance.GetServerTimeStamp();
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.MailBind
 			EventSystem.Instance.Emit(EEventName.RefreshMailBindRedDot);
 		}
 
-		// Token: 0x060386F8 RID: 231160 RVA: 0x00D66350 File Offset: 0x00D64550
+		// Token: 0x0602D5F5 RID: 185845 RVA: 0x00CB44A0 File Offset: 0x00CB26A0
 		public void RecordMailBindClick()
 		{
 			MailBindClickEvent mailBindClickEvent = new MailBindClickEvent();
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.MailBind
 			LogReportController.Instance.LogReport(mailBindClickEvent);
 		}
 
-		// Token: 0x060386F9 RID: 231161 RVA: 0x00D663A0 File Offset: 0x00D645A0
+		// Token: 0x0602D5F6 RID: 185846 RVA: 0x00CB44F0 File Offset: 0x00CB26F0
 		public void RecordMailBindJumpToWebView()
 		{
 			MailBindJumpToWebViewEvent mailBindJumpToWebViewEvent = new MailBindJumpToWebViewEvent();
@@ -162,8 +162,8 @@ namespace CSharpScript.Game.Module.MailBind
 			LogReportController.Instance.LogReport(mailBindJumpToWebViewEvent);
 		}
 
-		// Token: 0x1700878C RID: 34700
-		// (get) Token: 0x060386FA RID: 231162 RVA: 0x00D663DD File Offset: 0x00D645DD
+		// Token: 0x17005B53 RID: 23379
+		// (get) Token: 0x0602D5F7 RID: 185847 RVA: 0x00CB452D File Offset: 0x00CB272D
 		public static MailBindController Instance
 		{
 			get
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.MailBind
 			}
 		}
 
-		// Token: 0x060386FB RID: 231163 RVA: 0x00D663E4 File Offset: 0x00D645E4
+		// Token: 0x0602D5F8 RID: 185848 RVA: 0x00CB4534 File Offset: 0x00CB2734
 		public static MailBindController GetOrCreateInstance()
 		{
 			if (MailBindController._Instance == null)
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.MailBind
 			return MailBindController._Instance;
 		}
 
-		// Token: 0x060386FC RID: 231164 RVA: 0x00D663F8 File Offset: 0x00D645F8
+		// Token: 0x0602D5F9 RID: 185849 RVA: 0x00CB4548 File Offset: 0x00CB2748
 		public static bool CreateInstance()
 		{
 			if (MailBindController._Instance != null)
@@ -193,24 +193,24 @@ namespace CSharpScript.Game.Module.MailBind
 			return true;
 		}
 
-		// Token: 0x060386FD RID: 231165 RVA: 0x00D6640E File Offset: 0x00D6460E
+		// Token: 0x0602D5FA RID: 185850 RVA: 0x00CB455E File Offset: 0x00CB275E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060386FE RID: 231166 RVA: 0x00D66410 File Offset: 0x00D64610
+		// Token: 0x0602D5FB RID: 185851 RVA: 0x00CB4560 File Offset: 0x00CB2760
 		public static void ResetStaticDefaultValue()
 		{
 			MailBindController._Instance = null;
 		}
 
-		// Token: 0x060386FF RID: 231167 RVA: 0x00D66418 File Offset: 0x00D64618
+		// Token: 0x0602D5FC RID: 185852 RVA: 0x00CB4568 File Offset: 0x00CB2768
 		static MailBindController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MailBindController.CreateStaticDefaultValue), new Action(MailBindController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401DA34 RID: 121396
+		// Token: 0x040184BF RID: 99519
 		[Nullable(2)]
 		private static MailBindController _Instance;
 	}

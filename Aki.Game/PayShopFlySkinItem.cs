@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.PayShop;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002381 RID: 9089
+// Token: 0x02001866 RID: 6246
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class PayShopFlySkinItem : GridProxyAbstract<PayShopGoods>, IGiftDisplayItem
 {
-	// Token: 0x0601229B RID: 74395 RVA: 0x00477698 File Offset: 0x00475898
+	// Token: 0x0600F74B RID: 63307 RVA: 0x00484818 File Offset: 0x00482A18
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -44,7 +44,7 @@ public class PayShopFlySkinItem : GridProxyAbstract<PayShopGoods>, IGiftDisplayI
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601229C RID: 74396 RVA: 0x0047780C File Offset: 0x00475A0C
+	// Token: 0x0600F74C RID: 63308 RVA: 0x0048498C File Offset: 0x00482B8C
 	[NullableContext(2)]
 	public override void Refresh(PayShopGoods data, bool isSelected, int gridIndex)
 	{
@@ -93,37 +93,37 @@ public class PayShopFlySkinItem : GridProxyAbstract<PayShopGoods>, IGiftDisplayI
 		base.SetTextureByPath(resourcePath, base.GetTexture(5), null, null);
 	}
 
-	// Token: 0x02008923 RID: 35107
+	// Token: 0x02007AAD RID: 31405
 	private class EComponent
 	{
-		// Token: 0x0402C92F RID: 182575
+		// Token: 0x04027C47 RID: 162887
 		public const int FlySkinTexture = 0;
 
-		// Token: 0x0402C930 RID: 182576
+		// Token: 0x04027C48 RID: 162888
 		public const int BuyItemIcon = 1;
 
-		// Token: 0x0402C931 RID: 182577
+		// Token: 0x04027C49 RID: 162889
 		public const int NowPrice = 2;
 
-		// Token: 0x0402C932 RID: 182578
+		// Token: 0x04027C4A RID: 162890
 		public const int BeforePrice = 3;
 
-		// Token: 0x0402C933 RID: 182579
+		// Token: 0x04027C4B RID: 162891
 		public const int SuitWeaponTexture = 4;
 
-		// Token: 0x0402C934 RID: 182580
+		// Token: 0x04027C4C RID: 162892
 		public const int TextureBg = 5;
 
-		// Token: 0x0402C935 RID: 182581
+		// Token: 0x04027C4D RID: 162893
 		public const int EffectAItem = 6;
 
-		// Token: 0x0402C936 RID: 182582
+		// Token: 0x04027C4E RID: 162894
 		public const int EffectBItem = 7;
 
-		// Token: 0x0402C937 RID: 182583
+		// Token: 0x04027C4F RID: 162895
 		public const int SpriteMask = 8;
 
-		// Token: 0x0402C938 RID: 182584
+		// Token: 0x04027C50 RID: 162896
 		public const int ItemWeaponPanel = 9;
 	}
 }

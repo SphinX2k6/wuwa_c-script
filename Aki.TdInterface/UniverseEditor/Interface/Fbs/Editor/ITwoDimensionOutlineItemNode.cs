@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048B6 RID: 18614
+	// Token: 0x02004D1B RID: 19739
 	public struct ITwoDimensionOutlineItemNode : IFlatbufferObject
 	{
-		// Token: 0x17008700 RID: 34560
-		// (get) Token: 0x0601D11A RID: 119066 RVA: 0x0041AD2A File Offset: 0x00418F2A
+		// Token: 0x17008D48 RID: 36168
+		// (get) Token: 0x0601E907 RID: 125191 RVA: 0x004474C6 File Offset: 0x004456C6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D11B RID: 119067 RVA: 0x0041AD37 File Offset: 0x00418F37
+		// Token: 0x0601E908 RID: 125192 RVA: 0x004474D3 File Offset: 0x004456D3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D11C RID: 119068 RVA: 0x0041AD40 File Offset: 0x00418F40
+		// Token: 0x0601E909 RID: 125193 RVA: 0x004474DC File Offset: 0x004456DC
 		public static ITwoDimensionOutlineItemNode GetRootAsITwoDimensionOutlineItemNode(ByteBuffer _bb)
 		{
 			return ITwoDimensionOutlineItemNode.GetRootAsITwoDimensionOutlineItemNode(_bb, default(ITwoDimensionOutlineItemNode));
 		}
 
-		// Token: 0x0601D11D RID: 119069 RVA: 0x0041AD5C File Offset: 0x00418F5C
+		// Token: 0x0601E90A RID: 125194 RVA: 0x004474F8 File Offset: 0x004456F8
 		public static ITwoDimensionOutlineItemNode GetRootAsITwoDimensionOutlineItemNode(ByteBuffer _bb, ITwoDimensionOutlineItemNode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D11E RID: 119070 RVA: 0x0041AD79 File Offset: 0x00418F79
+		// Token: 0x0601E90B RID: 125195 RVA: 0x00447515 File Offset: 0x00445715
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D11F RID: 119071 RVA: 0x0041AD88 File Offset: 0x00418F88
+		// Token: 0x0601E90C RID: 125196 RVA: 0x00447524 File Offset: 0x00445724
 		public ITwoDimensionOutlineItemNode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008701 RID: 34561
-		// (get) Token: 0x0601D120 RID: 119072 RVA: 0x0041AD98 File Offset: 0x00418F98
+		// Token: 0x17008D49 RID: 36169
+		// (get) Token: 0x0601E90D RID: 125197 RVA: 0x00447534 File Offset: 0x00445734
 		public ETwoDimensionOutlineNodeType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008702 RID: 34562
-		// (get) Token: 0x0601D121 RID: 119073 RVA: 0x0041ADD4 File Offset: 0x00418FD4
+		// Token: 0x17008D4A RID: 36170
+		// (get) Token: 0x0601E90E RID: 125198 RVA: 0x00447570 File Offset: 0x00445770
 		public int Id
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D122 RID: 119074 RVA: 0x0041AE10 File Offset: 0x00419010
+		// Token: 0x0601E90F RID: 125199 RVA: 0x004475AC File Offset: 0x004457AC
 		public static Offset<ITwoDimensionOutlineItemNode> CreateITwoDimensionOutlineItemNode(FlatBufferBuilder builder, ETwoDimensionOutlineNodeType Type = ETwoDimensionOutlineNodeType.Folder, int Id = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return ITwoDimensionOutlineItemNode.EndITwoDimensionOutlineItemNode(builder);
 		}
 
-		// Token: 0x0601D123 RID: 119075 RVA: 0x0041AE2D File Offset: 0x0041902D
+		// Token: 0x0601E910 RID: 125200 RVA: 0x004475C9 File Offset: 0x004457C9
 		public static void StartITwoDimensionOutlineItemNode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601D124 RID: 119076 RVA: 0x0041AE36 File Offset: 0x00419036
+		// Token: 0x0601E911 RID: 125201 RVA: 0x004475D2 File Offset: 0x004457D2
 		public static void AddType(FlatBufferBuilder builder, ETwoDimensionOutlineNodeType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601D125 RID: 119077 RVA: 0x0041AE41 File Offset: 0x00419041
+		// Token: 0x0601E912 RID: 125202 RVA: 0x004475DD File Offset: 0x004457DD
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x0601D126 RID: 119078 RVA: 0x0041AE4C File Offset: 0x0041904C
+		// Token: 0x0601E913 RID: 125203 RVA: 0x004475E8 File Offset: 0x004457E8
 		public static Offset<ITwoDimensionOutlineItemNode> EndITwoDimensionOutlineItemNode(FlatBufferBuilder builder)
 		{
 			return new Offset<ITwoDimensionOutlineItemNode>(builder.EndTable());
 		}
 
-		// Token: 0x0601D127 RID: 119079 RVA: 0x0041AE5C File Offset: 0x0041905C
+		// Token: 0x0601E914 RID: 125204 RVA: 0x004475F8 File Offset: 0x004457F8
 		public ITwoDimensionOutlineItemNodeT UnPack()
 		{
 			ITwoDimensionOutlineItemNodeT twoDimensionOutlineItemNodeT = new ITwoDimensionOutlineItemNodeT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return twoDimensionOutlineItemNodeT;
 		}
 
-		// Token: 0x0601D128 RID: 119080 RVA: 0x0041AE77 File Offset: 0x00419077
+		// Token: 0x0601E915 RID: 125205 RVA: 0x00447613 File Offset: 0x00445813
 		public void UnPackTo(ITwoDimensionOutlineItemNodeT _o)
 		{
 			_o.Type = this.Type;
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x0601D129 RID: 119081 RVA: 0x0041AE94 File Offset: 0x00419094
+		// Token: 0x0601E916 RID: 125206 RVA: 0x00447630 File Offset: 0x00445830
 		public static Offset<ITwoDimensionOutlineItemNode> Pack(FlatBufferBuilder builder, ITwoDimensionOutlineItemNodeT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return ITwoDimensionOutlineItemNode.CreateITwoDimensionOutlineItemNode(builder, _o.Type, _o.Id);
 		}
 
-		// Token: 0x0400CEAC RID: 52908
+		// Token: 0x0400D8E5 RID: 55525
 		private Table __p;
 	}
 }

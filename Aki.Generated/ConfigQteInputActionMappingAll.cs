@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200076A RID: 1898
+	// Token: 0x02000784 RID: 1924
 	public class ConfigQteInputActionMappingAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002C8D RID: 11405 RVA: 0x001550CC File Offset: 0x001532CC
+		// Token: 0x06002D29 RID: 11561 RVA: 0x0015BFD8 File Offset: 0x0015A1D8
 		static ConfigQteInputActionMappingAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQteInputActionMappingAll.CreateStaticDefaultValue), new Action(ConfigQteInputActionMappingAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002C8E RID: 11406 RVA: 0x001550EC File Offset: 0x001532EC
+		// Token: 0x06002D2A RID: 11562 RVA: 0x0015BFF8 File Offset: 0x0015A1F8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQteInputActionMappingAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002C8F RID: 11407 RVA: 0x0015516B File Offset: 0x0015336B
+		// Token: 0x06002D2B RID: 11563 RVA: 0x0015C077 File Offset: 0x0015A277
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQteInputActionMappingAll.LogPair = null;
 			ConfigQteInputActionMappingAll.HandleId = 0;
 		}
 
-		// Token: 0x06002C90 RID: 11408 RVA: 0x00155179 File Offset: 0x00153379
+		// Token: 0x06002D2C RID: 11564 RVA: 0x0015C085 File Offset: 0x0015A285
 		public static void Init()
 		{
 			ConfigQteInputActionMappingAll.HandleId = ConfigCommon.InitDataStatement(ConfigQteInputActionMappingAll.HandleId, "db_input_settings.db", "select BinData from `QteInputActionMapping`");
 		}
 
-		// Token: 0x06002C91 RID: 11409 RVA: 0x00155194 File Offset: 0x00153394
+		// Token: 0x06002D2D RID: 11565 RVA: 0x0015C0A0 File Offset: 0x0015A2A0
 		[NullableContext(2)]
 		public static IReadOnlyList<QteInputActionMapping> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040033CC RID: 13260
+		// Token: 0x04003482 RID: 13442
 		private const string DB = "db_input_settings.db";
 
-		// Token: 0x040033CD RID: 13261
+		// Token: 0x04003483 RID: 13443
 		private const string FILE = "s.输入配置.xlsx";
 
-		// Token: 0x040033CE RID: 13262
+		// Token: 0x04003484 RID: 13444
 		private const string TABLE = "QteInputActionMapping";
 
-		// Token: 0x040033CF RID: 13263
+		// Token: 0x04003485 RID: 13445
 		private const string COMMAND = "select BinData from `QteInputActionMapping`";
 
-		// Token: 0x040033D0 RID: 13264
+		// Token: 0x04003486 RID: 13446
 		private const string KEY_PREFIX = "QteInputActionMappingAll";
 
-		// Token: 0x040033D1 RID: 13265
+		// Token: 0x04003487 RID: 13447
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040033D2 RID: 13266
+		// Token: 0x04003488 RID: 13448
 		private static int HandleId;
 	}
 }

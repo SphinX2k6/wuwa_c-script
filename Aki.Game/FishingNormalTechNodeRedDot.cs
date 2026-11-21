@@ -3,30 +3,30 @@ using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Activity.ActivityContent.Fishing;
 
-// Token: 0x02003385 RID: 13189
+// Token: 0x020028F7 RID: 10487
 public class FishingNormalTechNodeRedDot : RedDotBase
 {
-	// Token: 0x0601CAAF RID: 117423 RVA: 0x008069D5 File Offset: 0x00804BD5
+	// Token: 0x0601A7A7 RID: 108455 RVA: 0x0082CF99 File Offset: 0x0082B199
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.FishingNormalTech);
 	}
 
-	// Token: 0x0601CAB0 RID: 117424 RVA: 0x008069E1 File Offset: 0x00804BE1
+	// Token: 0x0601A7A8 RID: 108456 RVA: 0x0082CFA5 File Offset: 0x0082B1A5
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnFishingTechNodeRefresh, new Action<int>(base.EventCheckWithUid));
 		EventSystem.Instance.Add<int>(EEventName.OnFishingTechNodeRedDotRefresh, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CAB1 RID: 117425 RVA: 0x00806A1B File Offset: 0x00804C1B
+	// Token: 0x0601A7A9 RID: 108457 RVA: 0x0082CFDF File Offset: 0x0082B1DF
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.OnFishingTechNodeRefresh, new Action<int>(base.EventCheckWithUid));
 		EventSystem.Instance.Remove<int>(EEventName.OnFishingTechNodeRedDotRefresh, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CAB2 RID: 117426 RVA: 0x00806A58 File Offset: 0x00804C58
+	// Token: 0x0601A7AA RID: 108458 RVA: 0x0082D01C File Offset: 0x0082B21C
 	protected override bool OnCheck(int uId = 0)
 	{
 		FishingTech fishingTechById = FishingConfig.Instance.GetFishingTechById(uId);

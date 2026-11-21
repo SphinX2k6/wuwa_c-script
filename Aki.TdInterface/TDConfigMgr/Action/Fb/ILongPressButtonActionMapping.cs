@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002617 RID: 9751
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028D7 RID: 10455
 	public class ILongPressButtonActionMapping
 	{
-		// Token: 0x0600DAE1 RID: 56033 RVA: 0x002098E1 File Offset: 0x00207AE1
+		// Token: 0x0600E8AE RID: 59566 RVA: 0x00226035 File Offset: 0x00224235
 		public static ILongPressButtonActionMapping Create(ILongPressButtonActionMapping? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004075 RID: 16501
-		// (get) Token: 0x0600DAE2 RID: 56034 RVA: 0x00209900 File Offset: 0x00207B00
+		// Token: 0x170043AE RID: 17326
+		// (get) Token: 0x0600E8AF RID: 59567 RVA: 0x00226054 File Offset: 0x00224254
 		public virtual int Id
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004076 RID: 16502
-		// (get) Token: 0x0600DAE3 RID: 56035 RVA: 0x0020990D File Offset: 0x00207B0D
+		// Token: 0x170043AF RID: 17327
+		// (get) Token: 0x0600E8B0 RID: 59568 RVA: 0x00226061 File Offset: 0x00224261
 		public virtual string ActionName
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400798D RID: 31117
+		// Token: 0x04008027 RID: 32807
 		private ILongPressButtonActionMapping Instance;
 	}
 }

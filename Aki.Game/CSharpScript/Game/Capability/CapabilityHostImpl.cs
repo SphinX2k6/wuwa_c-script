@@ -5,18 +5,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Capability
 {
-	// Token: 0x0200729E RID: 29342
+	// Token: 0x0200641D RID: 25629
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CapabilityHostImpl : ICapabilityGameObject, IClear
 	{
-		// Token: 0x06047FB8 RID: 294840 RVA: 0x012710E1 File Offset: 0x0126F2E1
+		// Token: 0x0603E37E RID: 254846 RVA: 0x012120DD File Offset: 0x012102DD
 		public CapabilityHostImpl(ICapabilityHostInitParam Init)
 		{
 			this.Init = Init;
 		}
 
-		// Token: 0x06047FB9 RID: 294841 RVA: 0x01271108 File Offset: 0x0126F308
+		// Token: 0x0603E37F RID: 254847 RVA: 0x01212104 File Offset: 0x01210304
 		public string GetId()
 		{
 			Func<string> func = this.Init.Id as Func<string>;
@@ -27,14 +27,14 @@ namespace CSharpScript.Game.Capability
 			return func();
 		}
 
-		// Token: 0x06047FBA RID: 294842 RVA: 0x01271140 File Offset: 0x0126F340
+		// Token: 0x0603E380 RID: 254848 RVA: 0x0121213C File Offset: 0x0121033C
 		public bool IsValid()
 		{
 			Func<bool> isValid = this.Init.IsValid;
 			return isValid == null || isValid();
 		}
 
-		// Token: 0x06047FBB RID: 294843 RVA: 0x01271158 File Offset: 0x0126F358
+		// Token: 0x0603E381 RID: 254849 RVA: 0x01212154 File Offset: 0x01210354
 		[NullableContext(2)]
 		public AActor GetBoundActor()
 		{
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Capability
 			return getBoundActor();
 		}
 
-		// Token: 0x06047FBC RID: 294844 RVA: 0x01271170 File Offset: 0x0126F370
+		// Token: 0x0603E382 RID: 254850 RVA: 0x0121216C File Offset: 0x0121036C
 		public T AddCapabilityData<[Nullable(0)] T>(Type ctor) where T : CapabilityData
 		{
 			if (this.DataComponents.ContainsKey(ctor))
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Capability
 			return t;
 		}
 
-		// Token: 0x06047FBD RID: 294845 RVA: 0x012711D8 File Offset: 0x0126F3D8
+		// Token: 0x0603E383 RID: 254851 RVA: 0x012121D4 File Offset: 0x012103D4
 		[return: Nullable(2)]
 		public T GetCapabilityData<[Nullable(0)] T>(Type ctor) where T : CapabilityData
 		{
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Capability
 			return default(T);
 		}
 
-		// Token: 0x06047FBE RID: 294846 RVA: 0x0127120A File Offset: 0x0126F40A
+		// Token: 0x0603E384 RID: 254852 RVA: 0x01212206 File Offset: 0x01210406
 		public T GetOrAddCapabilityData<[Nullable(0)] T>(Type ctor) where T : CapabilityData
 		{
 			T result;
@@ -85,13 +85,13 @@ namespace CSharpScript.Game.Capability
 			return result;
 		}
 
-		// Token: 0x06047FBF RID: 294847 RVA: 0x01271223 File Offset: 0x0126F423
+		// Token: 0x0603E385 RID: 254853 RVA: 0x0121221F File Offset: 0x0121041F
 		public bool HasCapabilityData<[Nullable(0)] T>(Type ctor) where T : CapabilityData
 		{
 			return this.DataComponents.ContainsKey(ctor);
 		}
 
-		// Token: 0x06047FC0 RID: 294848 RVA: 0x01271234 File Offset: 0x0126F434
+		// Token: 0x0603E386 RID: 254854 RVA: 0x01212230 File Offset: 0x01210430
 		public T AddCapability<[Nullable(0)] T>(Type ctor) where T : Capability
 		{
 			Capability valueOrDefault = this.Capabilities.GetValueOrDefault(ctor);
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Capability
 			return t;
 		}
 
-		// Token: 0x06047FC1 RID: 294849 RVA: 0x012712AC File Offset: 0x0126F4AC
+		// Token: 0x0603E387 RID: 254855 RVA: 0x012122A8 File Offset: 0x012104A8
 		public bool RemoveCapability<[Nullable(0)] T>(Type ctor) where T : Capability
 		{
 			Capability valueOrDefault = this.Capabilities.GetValueOrDefault(ctor);
@@ -128,20 +128,20 @@ namespace CSharpScript.Game.Capability
 			return true;
 		}
 
-		// Token: 0x06047FC2 RID: 294850 RVA: 0x012712F8 File Offset: 0x0126F4F8
+		// Token: 0x0603E388 RID: 254856 RVA: 0x012122F4 File Offset: 0x012104F4
 		public IReadOnlyDictionary<Type, Capability> GetCapabilities()
 		{
 			return this.Capabilities;
 		}
 
-		// Token: 0x06047FC3 RID: 294851 RVA: 0x01271300 File Offset: 0x0126F500
+		// Token: 0x0603E389 RID: 254857 RVA: 0x012122FC File Offset: 0x012104FC
 		[return: Nullable(2)]
 		public T GetCapability<[Nullable(0)] T>(Type ctor) where T : Capability
 		{
 			return this.Capabilities.GetValueOrDefault(ctor) as T;
 		}
 
-		// Token: 0x06047FC4 RID: 294852 RVA: 0x01271318 File Offset: 0x0126F518
+		// Token: 0x0603E38A RID: 254858 RVA: 0x01212314 File Offset: 0x01210514
 		public void BlockCapabilities(int tag, object instigator)
 		{
 			foreach (Capability capability in this.Capabilities.Values)
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Capability
 			}
 		}
 
-		// Token: 0x06047FC5 RID: 294853 RVA: 0x012713B8 File Offset: 0x0126F5B8
+		// Token: 0x0603E38B RID: 254859 RVA: 0x012123B4 File Offset: 0x012105B4
 		public void UnblockCapabilities(int tag, object instigator)
 		{
 			foreach (Capability capability in this.Capabilities.Values)
@@ -179,19 +179,19 @@ namespace CSharpScript.Game.Capability
 			}
 		}
 
-		// Token: 0x06047FC6 RID: 294854 RVA: 0x01271438 File Offset: 0x0126F638
+		// Token: 0x0603E38C RID: 254860 RVA: 0x01212434 File Offset: 0x01210634
 		public bool IsCapabilityState(Capability cap, CapabilityCommonDefine.ECapabilityState state)
 		{
 			return cap.GetState() == state;
 		}
 
-		// Token: 0x06047FC7 RID: 294855 RVA: 0x01271443 File Offset: 0x0126F643
+		// Token: 0x0603E38D RID: 254861 RVA: 0x0121243F File Offset: 0x0121063F
 		public void Register()
 		{
 			CapabilityController.Instance.RegisterGameObject(this);
 		}
 
-		// Token: 0x06047FC8 RID: 294856 RVA: 0x01271450 File Offset: 0x0126F650
+		// Token: 0x0603E38E RID: 254862 RVA: 0x0121244C File Offset: 0x0121064C
 		public void Unregister()
 		{
 			foreach (Capability capability in this.Capabilities.Values)
@@ -212,26 +212,26 @@ namespace CSharpScript.Game.Capability
 			CapabilityController.Instance.UnregisterGameObject(this);
 		}
 
-		// Token: 0x06047FC9 RID: 294857 RVA: 0x01271528 File Offset: 0x0126F728
+		// Token: 0x0603E38F RID: 254863 RVA: 0x01212524 File Offset: 0x01210724
 		public void TickOutside(float deltaMilliseconds)
 		{
 			CapabilityController.Instance.TickHostDefaultGroup(this, deltaMilliseconds);
 		}
 
-		// Token: 0x06047FCA RID: 294858 RVA: 0x01271536 File Offset: 0x0126F736
+		// Token: 0x0603E390 RID: 254864 RVA: 0x01212532 File Offset: 0x01210732
 		public bool ClearObject()
 		{
 			this.Unregister();
 			return true;
 		}
 
-		// Token: 0x04025EF1 RID: 155377
+		// Token: 0x040211C4 RID: 135620
 		private readonly Dictionary<Type, CapabilityData> DataComponents = new Dictionary<Type, CapabilityData>();
 
-		// Token: 0x04025EF2 RID: 155378
+		// Token: 0x040211C5 RID: 135621
 		private readonly Dictionary<Type, Capability> Capabilities = new Dictionary<Type, Capability>();
 
-		// Token: 0x04025EF3 RID: 155379
+		// Token: 0x040211C6 RID: 135622
 		private readonly ICapabilityHostInitParam Init;
 	}
 }

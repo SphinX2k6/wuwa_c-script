@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Match;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005438 RID: 21560
+	// Token: 0x020059BE RID: 22974
 	public class IInteractAudioComponentT
 	{
-		// Token: 0x17009E8E RID: 40590
-		// (get) Token: 0x060236B1 RID: 145073 RVA: 0x004E6593 File Offset: 0x004E4793
-		// (set) Token: 0x060236B2 RID: 145074 RVA: 0x004E659B File Offset: 0x004E479B
+		// Token: 0x1700A6C8 RID: 42696
+		// (get) Token: 0x06025769 RID: 153449 RVA: 0x005235BF File Offset: 0x005217BF
+		// (set) Token: 0x0602576A RID: 153450 RVA: 0x005235C7 File Offset: 0x005217C7
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009E8F RID: 40591
-		// (get) Token: 0x060236B3 RID: 145075 RVA: 0x004E65A4 File Offset: 0x004E47A4
-		// (set) Token: 0x060236B4 RID: 145076 RVA: 0x004E65AC File Offset: 0x004E47AC
+		// Token: 0x1700A6C9 RID: 42697
+		// (get) Token: 0x0602576B RID: 153451 RVA: 0x005235D0 File Offset: 0x005217D0
+		// (set) Token: 0x0602576C RID: 153452 RVA: 0x005235D8 File Offset: 0x005217D8
 		public EInteractAudioMaterial CollisionMaterial { get; set; }
 
-		// Token: 0x17009E90 RID: 40592
-		// (get) Token: 0x060236B5 RID: 145077 RVA: 0x004E65B5 File Offset: 0x004E47B5
-		// (set) Token: 0x060236B6 RID: 145078 RVA: 0x004E65BD File Offset: 0x004E47BD
+		// Token: 0x1700A6CA RID: 42698
+		// (get) Token: 0x0602576D RID: 153453 RVA: 0x005235E1 File Offset: 0x005217E1
+		// (set) Token: 0x0602576E RID: 153454 RVA: 0x005235E9 File Offset: 0x005217E9
 		public IAudioEventConfigT InteractEventConfig { get; set; }
 
-		// Token: 0x17009E91 RID: 40593
-		// (get) Token: 0x060236B7 RID: 145079 RVA: 0x004E65C6 File Offset: 0x004E47C6
-		// (set) Token: 0x060236B8 RID: 145080 RVA: 0x004E65CE File Offset: 0x004E47CE
+		// Token: 0x1700A6CB RID: 42699
+		// (get) Token: 0x0602576F RID: 153455 RVA: 0x005235F2 File Offset: 0x005217F2
+		// (set) Token: 0x06025770 RID: 153456 RVA: 0x005235FA File Offset: 0x005217FA
 		public byte NullMask { get; set; }
 
-		// Token: 0x060236B9 RID: 145081 RVA: 0x004E65D7 File Offset: 0x004E47D7
+		// Token: 0x06025771 RID: 153457 RVA: 0x00523603 File Offset: 0x00521803
 		public IInteractAudioComponentT()
 		{
 			this.Disabled = false;

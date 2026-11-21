@@ -6,13 +6,13 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Advice;
 
-// Token: 0x020016C5 RID: 5829
+// Token: 0x02000B7D RID: 2941
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class AdviceModel : ModelBase
 {
-	// Token: 0x0600A679 RID: 42617 RVA: 0x00253FB7 File Offset: 0x002521B7
+	// Token: 0x06007A59 RID: 31321 RVA: 0x0025E3C7 File Offset: 0x0025C5C7
 	public AdviceCreateActor GetAdviceCreateActor()
 	{
 		if (this.AdviceCreateActorField == null)
@@ -24,13 +24,13 @@ public class AdviceModel : ModelBase
 		return this.AdviceCreateActorField;
 	}
 
-	// Token: 0x0600A67A RID: 42618 RVA: 0x00253FE8 File Offset: 0x002521E8
+	// Token: 0x06007A5A RID: 31322 RVA: 0x0025E3F8 File Offset: 0x0025C5F8
 	public void OnAdviceCreateActorDestroy()
 	{
 		this.AdviceCreateActorField = null;
 	}
 
-	// Token: 0x0600A67B RID: 42619 RVA: 0x00253FF4 File Offset: 0x002521F4
+	// Token: 0x06007A5B RID: 31323 RVA: 0x0025E404 File Offset: 0x0025C604
 	public AdviceMotionActor GetAdviceMotionActor(int entityId)
 	{
 		AdviceMotionActor result;
@@ -52,31 +52,31 @@ public class AdviceModel : ModelBase
 		return adviceMotionActor;
 	}
 
-	// Token: 0x0600A67C RID: 42620 RVA: 0x00254054 File Offset: 0x00252254
+	// Token: 0x06007A5C RID: 31324 RVA: 0x0025E464 File Offset: 0x0025C664
 	public void AddPlayingMotionEntity(int entityId, AdviceMotionActor actor)
 	{
 		this.PlayingAdviceMotionEntities[entityId] = actor;
 	}
 
-	// Token: 0x0600A67D RID: 42621 RVA: 0x00254063 File Offset: 0x00252263
+	// Token: 0x06007A5D RID: 31325 RVA: 0x0025E473 File Offset: 0x0025C673
 	public void RemovePlayingMotionEntity(int entityId)
 	{
 		this.PlayingAdviceMotionEntities.Remove(entityId);
 	}
 
-	// Token: 0x0600A67E RID: 42622 RVA: 0x00254072 File Offset: 0x00252272
+	// Token: 0x06007A5E RID: 31326 RVA: 0x0025E482 File Offset: 0x0025C682
 	public void RecycleMotionActor(AdviceMotionActor actor)
 	{
 		this.AdviceMotionActorStack.Add(actor);
 	}
 
-	// Token: 0x0600A67F RID: 42623 RVA: 0x00254080 File Offset: 0x00252280
+	// Token: 0x06007A5F RID: 31327 RVA: 0x0025E490 File Offset: 0x0025C690
 	public void RemoveMotionActor(AdviceMotionActor actor)
 	{
 		this.AdviceMotionActorStack.Remove(actor);
 	}
 
-	// Token: 0x0600A680 RID: 42624 RVA: 0x00254090 File Offset: 0x00252290
+	// Token: 0x06007A60 RID: 31328 RVA: 0x0025E4A0 File Offset: 0x0025C6A0
 	public void PhraseAdviceData(AdviceResponse response)
 	{
 		this.UpVoteIds.Clear();
@@ -106,7 +106,7 @@ public class AdviceModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnReceiveAdviceData);
 	}
 
-	// Token: 0x0600A681 RID: 42625 RVA: 0x00254198 File Offset: 0x00252398
+	// Token: 0x06007A61 RID: 31329 RVA: 0x0025E5A8 File Offset: 0x0025C7A8
 	public void PhraseAdviceCreateData(AdviceCreateResponse response)
 	{
 		AdviceData adviceData = new AdviceData();
@@ -120,7 +120,7 @@ public class AdviceModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnCreateAdviceSuccess);
 	}
 
-	// Token: 0x0600A682 RID: 42626 RVA: 0x002541F4 File Offset: 0x002523F4
+	// Token: 0x06007A62 RID: 31330 RVA: 0x0025E604 File Offset: 0x0025C804
 	public void OnAdviceUpdateNotify(AdviceUpdateNotify response)
 	{
 		this.UpVoteIds.Clear();
@@ -135,14 +135,14 @@ public class AdviceModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnAdviceVoteNotify);
 	}
 
-	// Token: 0x0600A683 RID: 42627 RVA: 0x00254278 File Offset: 0x00252478
+	// Token: 0x06007A63 RID: 31331 RVA: 0x0025E688 File Offset: 0x0025C888
 	public void ResetVoteIds()
 	{
 		this.UpVoteIds.Clear();
 		EventSystem.Instance.Emit(EEventName.OnAdviceVoteNotify);
 	}
 
-	// Token: 0x0600A684 RID: 42628 RVA: 0x00254295 File Offset: 0x00252495
+	// Token: 0x06007A64 RID: 31332 RVA: 0x0025E6A5 File Offset: 0x0025C8A5
 	public void OnRequestVote(long id, PbAdviceVoteType type)
 	{
 		this.UpVoteIds.Remove(id);
@@ -153,7 +153,7 @@ public class AdviceModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnAdviceVoteNotify);
 	}
 
-	// Token: 0x0600A685 RID: 42629 RVA: 0x002542C4 File Offset: 0x002524C4
+	// Token: 0x06007A65 RID: 31333 RVA: 0x0025E6D4 File Offset: 0x0025C8D4
 	public void OnAdviceVoteUpdate(long id, AdviceVoteUpdateNotify notify)
 	{
 		AdviceData adviceData;
@@ -163,7 +163,7 @@ public class AdviceModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A686 RID: 42630 RVA: 0x002542F0 File Offset: 0x002524F0
+	// Token: 0x06007A66 RID: 31334 RVA: 0x0025E700 File Offset: 0x0025C900
 	public void OnModifyAdvice(long id, AdviceContentData[] adviceContent)
 	{
 		AdviceData adviceData;
@@ -175,7 +175,7 @@ public class AdviceModel : ModelBase
 		EventSystem.Instance.Emit<long>(EEventName.OnModifyAdviceSuccess, id);
 	}
 
-	// Token: 0x0600A687 RID: 42631 RVA: 0x00254331 File Offset: 0x00252531
+	// Token: 0x06007A67 RID: 31335 RVA: 0x0025E741 File Offset: 0x0025C941
 	public void OnDeleteAdvice(long id)
 	{
 		this.AdviceDataMap.Remove(id);
@@ -183,7 +183,7 @@ public class AdviceModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnDeleteAdviceSuccess);
 	}
 
-	// Token: 0x0600A688 RID: 42632 RVA: 0x00254358 File Offset: 0x00252558
+	// Token: 0x06007A68 RID: 31336 RVA: 0x0025E768 File Offset: 0x0025C968
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -204,7 +204,7 @@ public class AdviceModel : ModelBase
 		return this.AdviceArray;
 	}
 
-	// Token: 0x0600A689 RID: 42633 RVA: 0x002543D8 File Offset: 0x002525D8
+	// Token: 0x06007A69 RID: 31337 RVA: 0x0025E7E8 File Offset: 0x0025C9E8
 	public long[] GetUpVoteIds()
 	{
 		List<long> list = new List<long>();
@@ -215,7 +215,7 @@ public class AdviceModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600A68A RID: 42634 RVA: 0x00254438 File Offset: 0x00252638
+	// Token: 0x06007A6A RID: 31338 RVA: 0x0025E848 File Offset: 0x0025CA48
 	public bool GetIfCanCreateAdvice(ELineMode mode)
 	{
 		Dictionary<int, int> currentSentenceWordMap = this.CurrentSentenceWordMap;
@@ -234,7 +234,7 @@ public class AdviceModel : ModelBase
 		return mode != ELineMode.MutiLine || currentConjunctionId > 0;
 	}
 
-	// Token: 0x0600A68B RID: 42635 RVA: 0x002544D8 File Offset: 0x002526D8
+	// Token: 0x06007A6B RID: 31339 RVA: 0x0025E8E8 File Offset: 0x0025CAE8
 	public void SetCurrentEntityId(int entityId)
 	{
 		this.CurrentInteractEntityId = entityId;
@@ -250,20 +250,20 @@ public class AdviceModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A68C RID: 42636 RVA: 0x00254518 File Offset: 0x00252718
+	// Token: 0x06007A6C RID: 31340 RVA: 0x0025E928 File Offset: 0x0025CB28
 	[NullableContext(2)]
 	public AdviceEntityData GetCurrentEntityAdviceData()
 	{
 		return this.CurrentEntityAdviceData;
 	}
 
-	// Token: 0x0600A68D RID: 42637 RVA: 0x00254520 File Offset: 0x00252720
+	// Token: 0x06007A6D RID: 31341 RVA: 0x0025E930 File Offset: 0x0025CB30
 	public int GetCurrentEntityId()
 	{
 		return this.CurrentInteractEntityId;
 	}
 
-	// Token: 0x0600A68E RID: 42638 RVA: 0x00254528 File Offset: 0x00252728
+	// Token: 0x06007A6E RID: 31342 RVA: 0x0025E938 File Offset: 0x0025CB38
 	public void ResetWordData()
 	{
 		this.CurrentWordMap.Clear();
@@ -305,20 +305,20 @@ public class AdviceModel : ModelBase
 		this.RandomSecondSentenceWord();
 	}
 
-	// Token: 0x0600A68F RID: 42639 RVA: 0x0025463F File Offset: 0x0025283F
+	// Token: 0x06007A6F RID: 31343 RVA: 0x0025EA4F File Offset: 0x0025CC4F
 	public void SetAdviceShowSetting(bool state)
 	{
 		this.AdviceShowSetting = state;
 		EventSystem.Instance.Emit<EFunction>(EEventName.RefreshMenuSetting, EFunction.ADVICESETTING);
 	}
 
-	// Token: 0x0600A690 RID: 42640 RVA: 0x0025465A File Offset: 0x0025285A
+	// Token: 0x06007A70 RID: 31344 RVA: 0x0025EA6A File Offset: 0x0025CC6A
 	public bool GetAdviceShowSetting()
 	{
 		return this.AdviceShowSetting;
 	}
 
-	// Token: 0x0600A691 RID: 42641 RVA: 0x00254664 File Offset: 0x00252864
+	// Token: 0x06007A71 RID: 31345 RVA: 0x0025EA74 File Offset: 0x0025CC74
 	public bool GetCreateAdvicePreConditionState()
 	{
 		bool flag = true;
@@ -342,20 +342,20 @@ public class AdviceModel : ModelBase
 		return !component.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.进入战斗"]) && component.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.动作状态.站立"]) && flag;
 	}
 
-	// Token: 0x0600A692 RID: 42642 RVA: 0x002546EF File Offset: 0x002528EF
+	// Token: 0x06007A72 RID: 31346 RVA: 0x0025EAFF File Offset: 0x0025CCFF
 	public bool GetCreateConditionState()
 	{
 		return !AdviceController.Instance.CheckBehindAdviceActor() && !AdviceController.Instance.CheckInInValidArea() && !this.CheckIfMaxAdvice();
 	}
 
-	// Token: 0x0600A693 RID: 42643 RVA: 0x00254718 File Offset: 0x00252918
+	// Token: 0x06007A73 RID: 31347 RVA: 0x0025EB28 File Offset: 0x0025CD28
 	public bool CheckIfMaxAdvice()
 	{
 		int valueOrDefault = ConfigCommonParamById.GetIntConfig("AdviceCreateLimit").GetValueOrDefault();
 		return AdviceModel.Instance.GetAdviceArray() != null && AdviceModel.Instance.GetAdviceArray().Length >= valueOrDefault;
 	}
 
-	// Token: 0x0600A694 RID: 42644 RVA: 0x00254758 File Offset: 0x00252958
+	// Token: 0x06007A74 RID: 31348 RVA: 0x0025EB68 File Offset: 0x0025CD68
 	public string GetCreatePreConditionFailText()
 	{
 		if (GameModeController.Instance.IsInInstance())
@@ -386,7 +386,7 @@ public class AdviceModel : ModelBase
 		return "CurrentStateCannotPutAdvice";
 	}
 
-	// Token: 0x0600A695 RID: 42645 RVA: 0x00254800 File Offset: 0x00252A00
+	// Token: 0x06007A75 RID: 31349 RVA: 0x0025EC10 File Offset: 0x0025CE10
 	public string GetCreateConditionFailText()
 	{
 		if (AdviceController.Instance.CheckBehindAdviceActor())
@@ -405,20 +405,20 @@ public class AdviceModel : ModelBase
 		return "CurrentStateCannotPutAdvice";
 	}
 
-	// Token: 0x0600A696 RID: 42646 RVA: 0x0025486A File Offset: 0x00252A6A
+	// Token: 0x06007A76 RID: 31350 RVA: 0x0025EC7A File Offset: 0x0025CE7A
 	private bool CheckIfSystemOpen()
 	{
 		return FunctionModel.Instance.IsOpen(EFunctionType.Advice) && FunctionModel.Instance.IsOpen(EFunctionType.AdvicePut);
 	}
 
-	// Token: 0x0600A697 RID: 42647 RVA: 0x00254891 File Offset: 0x00252A91
+	// Token: 0x06007A77 RID: 31351 RVA: 0x0025ECA1 File Offset: 0x0025CEA1
 	public void OnChangeSentence(int sentenceKey)
 	{
 		AdviceModel.Instance.CurrentWordMap[sentenceKey] = 0;
 		EventSystem.Instance.Emit(EEventName.OnSelectAdviceWord);
 	}
 
-	// Token: 0x0600A698 RID: 42648 RVA: 0x002548B4 File Offset: 0x00252AB4
+	// Token: 0x06007A78 RID: 31352 RVA: 0x0025ECC4 File Offset: 0x0025CEC4
 	public AdviceMotionSelectData[] GetMotionSelectData()
 	{
 		List<AdviceMotionSelectData> list = new List<AdviceMotionSelectData>();
@@ -436,7 +436,7 @@ public class AdviceModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600A699 RID: 42649 RVA: 0x00254948 File Offset: 0x00252B48
+	// Token: 0x06007A79 RID: 31353 RVA: 0x0025ED58 File Offset: 0x0025CF58
 	public AdviceSelectItemData[] GetAdviceSelectData(ELineMode selectModel)
 	{
 		List<AdviceSelectItemData> list = new List<AdviceSelectItemData>();
@@ -465,7 +465,7 @@ public class AdviceModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600A69A RID: 42650 RVA: 0x002549E0 File Offset: 0x00252BE0
+	// Token: 0x06007A7A RID: 31354 RVA: 0x0025EDF0 File Offset: 0x0025CFF0
 	public void RandomSecondSentenceWord()
 	{
 		IReadOnlyList<AdviceSentence> adviceSentenceConfigs = AdviceConfig.Instance.GetAdviceSentenceConfigs();
@@ -479,7 +479,7 @@ public class AdviceModel : ModelBase
 		AdviceModel.Instance.CurrentSentenceWordMap[1] = adviceSentenceConfigs[this.CurrentRandomSecondLineId].Id;
 	}
 
-	// Token: 0x0600A69B RID: 42651 RVA: 0x00254A78 File Offset: 0x00252C78
+	// Token: 0x06007A7B RID: 31355 RVA: 0x0025EE88 File Offset: 0x0025D088
 	public string GetFirstLineText()
 	{
 		List<AdviceContentData> list = new List<AdviceContentData>();
@@ -491,7 +491,7 @@ public class AdviceModel : ModelBase
 		return adviceData.GetAdviceShowText();
 	}
 
-	// Token: 0x0600A69C RID: 42652 RVA: 0x00254AD0 File Offset: 0x00252CD0
+	// Token: 0x06007A7C RID: 31356 RVA: 0x0025EEE0 File Offset: 0x0025D0E0
 	public string GetSecondLineText()
 	{
 		List<AdviceContentData> list = new List<AdviceContentData>();
@@ -506,7 +506,7 @@ public class AdviceModel : ModelBase
 		return adviceData.GetAdviceShowText();
 	}
 
-	// Token: 0x0600A69D RID: 42653 RVA: 0x00254B44 File Offset: 0x00252D44
+	// Token: 0x06007A7D RID: 31357 RVA: 0x0025EF54 File Offset: 0x0025D154
 	public string GetCurrentShowText()
 	{
 		List<AdviceContentData> list = new List<AdviceContentData>();
@@ -533,7 +533,7 @@ public class AdviceModel : ModelBase
 		return adviceData.GetAdviceShowText();
 	}
 
-	// Token: 0x0600A69E RID: 42654 RVA: 0x00254C1C File Offset: 0x00252E1C
+	// Token: 0x06007A7E RID: 31358 RVA: 0x0025F02C File Offset: 0x0025D22C
 	public AdviceContentData[] GetCreateAdviceContent()
 	{
 		List<AdviceContentData> list = new List<AdviceContentData>();
@@ -579,8 +579,8 @@ public class AdviceModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x17000DEB RID: 3563
-	// (get) Token: 0x0600A69F RID: 42655 RVA: 0x00254D60 File Offset: 0x00252F60
+	// Token: 0x17000E0C RID: 3596
+	// (get) Token: 0x06007A7F RID: 31359 RVA: 0x0025F170 File Offset: 0x0025D370
 	public static AdviceModel Instance
 	{
 		get
@@ -589,7 +589,7 @@ public class AdviceModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A6A0 RID: 42656 RVA: 0x00254D67 File Offset: 0x00252F67
+	// Token: 0x06007A80 RID: 31360 RVA: 0x0025F177 File Offset: 0x0025D377
 	public static AdviceModel GetOrCreateInstance()
 	{
 		if (AdviceModel._Instance == null)
@@ -599,7 +599,7 @@ public class AdviceModel : ModelBase
 		return AdviceModel._Instance;
 	}
 
-	// Token: 0x0600A6A1 RID: 42657 RVA: 0x00254D7B File Offset: 0x00252F7B
+	// Token: 0x06007A81 RID: 31361 RVA: 0x0025F18B File Offset: 0x0025D38B
 	public static bool CreateInstance()
 	{
 		if (AdviceModel._Instance != null)
@@ -610,102 +610,102 @@ public class AdviceModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600A6A2 RID: 42658 RVA: 0x00254D91 File Offset: 0x00252F91
+	// Token: 0x06007A82 RID: 31362 RVA: 0x0025F1A1 File Offset: 0x0025D3A1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A6A3 RID: 42659 RVA: 0x00254D93 File Offset: 0x00252F93
+	// Token: 0x06007A83 RID: 31363 RVA: 0x0025F1A3 File Offset: 0x0025D3A3
 	public static void ResetStaticDefaultValue()
 	{
 		AdviceModel._Instance = null;
 	}
 
-	// Token: 0x0600A6A4 RID: 42660 RVA: 0x00254D9B File Offset: 0x00252F9B
+	// Token: 0x06007A84 RID: 31364 RVA: 0x0025F1AB File Offset: 0x0025D3AB
 	static AdviceModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AdviceModel.CreateStaticDefaultValue), new Action(AdviceModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004B2A RID: 19242
+	// Token: 0x04004BD1 RID: 19409
 	public Dictionary<int, int> CurrentSentenceWordMap = new Dictionary<int, int>();
 
-	// Token: 0x04004B2B RID: 19243
+	// Token: 0x04004BD2 RID: 19410
 	public Dictionary<int, int> CurrentPreSentenceWordMap = new Dictionary<int, int>();
 
-	// Token: 0x04004B2C RID: 19244
+	// Token: 0x04004BD3 RID: 19411
 	public int CurrentPreSelectWordId;
 
-	// Token: 0x04004B2D RID: 19245
+	// Token: 0x04004BD4 RID: 19412
 	public int CurrentSelectWordId;
 
-	// Token: 0x04004B2E RID: 19246
+	// Token: 0x04004BD5 RID: 19413
 	public int CurrentPreSelectSentenceIndex;
 
-	// Token: 0x04004B2F RID: 19247
+	// Token: 0x04004BD6 RID: 19414
 	public int CurrentConjunctionId;
 
-	// Token: 0x04004B30 RID: 19248
+	// Token: 0x04004BD7 RID: 19415
 	public EChangeWordType CurrentChangeWordType;
 
-	// Token: 0x04004B31 RID: 19249
+	// Token: 0x04004BD8 RID: 19416
 	public ELineMode CurrentLineModel;
 
-	// Token: 0x04004B32 RID: 19250
+	// Token: 0x04004BD9 RID: 19417
 	public int CurrentSentenceSelectIndex;
 
-	// Token: 0x04004B33 RID: 19251
+	// Token: 0x04004BDA RID: 19418
 	private int CurrentRandomSecondLineId;
 
-	// Token: 0x04004B34 RID: 19252
+	// Token: 0x04004BDB RID: 19419
 	public int PreSelectSortTypeId;
 
-	// Token: 0x04004B35 RID: 19253
+	// Token: 0x04004BDC RID: 19420
 	public int PreSelectSortWordId;
 
-	// Token: 0x04004B36 RID: 19254
+	// Token: 0x04004BDD RID: 19421
 	public int CurrentSelectSortWordId;
 
-	// Token: 0x04004B37 RID: 19255
+	// Token: 0x04004BDE RID: 19422
 	public int CurrentSelectSortTypeId;
 
-	// Token: 0x04004B38 RID: 19256
+	// Token: 0x04004BDF RID: 19423
 	public Dictionary<int, int> CurrentWordMap = new Dictionary<int, int>();
 
-	// Token: 0x04004B39 RID: 19257
+	// Token: 0x04004BE0 RID: 19424
 	public int CurrentSelectWordIndex;
 
-	// Token: 0x04004B3A RID: 19258
+	// Token: 0x04004BE1 RID: 19425
 	public int PreSelectExpressionId;
 
-	// Token: 0x04004B3B RID: 19259
+	// Token: 0x04004BE2 RID: 19426
 	public int CurrentExpressionId;
 
-	// Token: 0x04004B3C RID: 19260
+	// Token: 0x04004BE3 RID: 19427
 	public int CurrentSelectRoleId;
 
-	// Token: 0x04004B3D RID: 19261
+	// Token: 0x04004BE4 RID: 19428
 	public int PreSelectRoleId;
 
-	// Token: 0x04004B3E RID: 19262
+	// Token: 0x04004BE5 RID: 19429
 	public int CurrentSelectMotionId;
 
-	// Token: 0x04004B3F RID: 19263
+	// Token: 0x04004BE6 RID: 19430
 	public int PreSelectMotionId;
 
-	// Token: 0x04004B40 RID: 19264
+	// Token: 0x04004BE7 RID: 19431
 	public int PreSelectAdviceItemId;
 
-	// Token: 0x04004B41 RID: 19265
+	// Token: 0x04004BE8 RID: 19432
 	public long? AdviceViewShowId;
 
-	// Token: 0x04004B42 RID: 19266
+	// Token: 0x04004BE9 RID: 19433
 	private readonly HashSet<long> UpVoteIds = new HashSet<long>();
 
-	// Token: 0x04004B43 RID: 19267
+	// Token: 0x04004BEA RID: 19434
 	private readonly Dictionary<long, AdviceData> AdviceDataMap = new Dictionary<long, AdviceData>();
 
-	// Token: 0x04004B44 RID: 19268
+	// Token: 0x04004BEB RID: 19435
 	[Nullable(new byte[]
 	{
 		2,
@@ -713,30 +713,30 @@ public class AdviceModel : ModelBase
 	})]
 	private AdviceData[] AdviceArray;
 
-	// Token: 0x04004B45 RID: 19269
+	// Token: 0x04004BEC RID: 19436
 	private bool DataMapChangeDirty;
 
-	// Token: 0x04004B46 RID: 19270
+	// Token: 0x04004BED RID: 19437
 	private int CurrentInteractEntityId;
 
-	// Token: 0x04004B47 RID: 19271
+	// Token: 0x04004BEE RID: 19438
 	[Nullable(2)]
 	private AdviceEntityData CurrentEntityAdviceData;
 
-	// Token: 0x04004B48 RID: 19272
+	// Token: 0x04004BEF RID: 19439
 	private bool AdviceShowSetting;
 
-	// Token: 0x04004B49 RID: 19273
+	// Token: 0x04004BF0 RID: 19440
 	private readonly List<AdviceMotionActor> AdviceMotionActorStack = new List<AdviceMotionActor>();
 
-	// Token: 0x04004B4A RID: 19274
+	// Token: 0x04004BF1 RID: 19441
 	private readonly Dictionary<int, AdviceMotionActor> PlayingAdviceMotionEntities = new Dictionary<int, AdviceMotionActor>();
 
-	// Token: 0x04004B4B RID: 19275
+	// Token: 0x04004BF2 RID: 19442
 	[Nullable(2)]
 	private AdviceCreateActor AdviceCreateActorField;
 
-	// Token: 0x04004B4C RID: 19276
+	// Token: 0x04004BF3 RID: 19443
 	[Nullable(2)]
 	private static AdviceModel _Instance;
 }

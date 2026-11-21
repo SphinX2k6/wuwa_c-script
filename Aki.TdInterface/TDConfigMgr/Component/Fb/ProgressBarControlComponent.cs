@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CAB RID: 3243
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D8D RID: 3469
 	public class ProgressBarControlComponent : IHitComponentBase
 	{
-		// Token: 0x06004A3C RID: 19004 RVA: 0x000B9E22 File Offset: 0x000B8022
+		// Token: 0x06004EEA RID: 20202 RVA: 0x000C4832 File Offset: 0x000C2A32
 		public static ProgressBarControlComponent Create(IProgressBarControlComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016A3 RID: 5795
-		// (get) Token: 0x06004A3D RID: 19005 RVA: 0x000B9E44 File Offset: 0x000B8044
+		// Token: 0x170017CB RID: 6091
+		// (get) Token: 0x06004EEB RID: 20203 RVA: 0x000C4854 File Offset: 0x000C2A54
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016A4 RID: 5796
-		// (get) Token: 0x06004A3E RID: 19006 RVA: 0x000B9E7A File Offset: 0x000B807A
+		// Token: 0x170017CC RID: 6092
+		// (get) Token: 0x06004EEC RID: 20204 RVA: 0x000C488A File Offset: 0x000C2A8A
 		public override IHitBulletType HitBullet
 		{
 			get
@@ -53,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016A5 RID: 5797
-		// (get) Token: 0x06004A3F RID: 19007 RVA: 0x000B9EA9 File Offset: 0x000B80A9
+		// Token: 0x170017CD RID: 6093
+		// (get) Token: 0x06004EED RID: 20205 RVA: 0x000C48B9 File Offset: 0x000C2AB9
 		[Nullable(2)]
 		public override IHitTimeScaleRatio AttackerHitTimeScaleRatio
 		{
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016A6 RID: 5798
-		// (get) Token: 0x06004A40 RID: 19008 RVA: 0x000B9EDD File Offset: 0x000B80DD
+		// Token: 0x170017CE RID: 6094
+		// (get) Token: 0x06004EEE RID: 20206 RVA: 0x000C48ED File Offset: 0x000C2AED
 		[Nullable(2)]
 		public override IHitTimeScaleRatio VictimHitTimeScaleRatio
 		{
@@ -89,19 +87,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016A7 RID: 5799
-		// (get) Token: 0x06004A41 RID: 19009 RVA: 0x000B9F14 File Offset: 0x000B8114
+		// Token: 0x170017CF RID: 6095
+		// (get) Token: 0x06004EEF RID: 20207 RVA: 0x000C4924 File Offset: 0x000C2B24
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<IAimPart> AimParts
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -124,8 +122,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016A8 RID: 5800
-		// (get) Token: 0x06004A42 RID: 19010 RVA: 0x000B9F90 File Offset: 0x000B8190
+		// Token: 0x170017D0 RID: 6096
+		// (get) Token: 0x06004EF0 RID: 20208 RVA: 0x000C49A0 File Offset: 0x000C2BA0
 		public override bool? EdIsLocked
 		{
 			get
@@ -134,8 +132,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016A9 RID: 5801
-		// (get) Token: 0x06004A43 RID: 19011 RVA: 0x000B9FA6 File Offset: 0x000B81A6
+		// Token: 0x170017D1 RID: 6097
+		// (get) Token: 0x06004EF1 RID: 20209 RVA: 0x000C49B6 File Offset: 0x000C2BB6
 		public virtual IProgressBarControl Control
 		{
 			get
@@ -150,44 +148,44 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A58 RID: 10840
+		// Token: 0x04002CD2 RID: 11474
 		private IProgressBarControlComponent Instance;
 
-		// Token: 0x04002A59 RID: 10841
+		// Token: 0x04002CD3 RID: 11475
 		private IHitBulletType _HitBulletCache;
 
-		// Token: 0x04002A5A RID: 10842
+		// Token: 0x04002CD4 RID: 11476
 		private bool _HitBulletInited;
 
-		// Token: 0x04002A5B RID: 10843
+		// Token: 0x04002CD5 RID: 11477
 		[Nullable(2)]
 		private IHitTimeScaleRatio _AttackerHitTimeScaleRatioCache;
 
-		// Token: 0x04002A5C RID: 10844
+		// Token: 0x04002CD6 RID: 11478
 		private bool _AttackerHitTimeScaleRatioInited;
 
-		// Token: 0x04002A5D RID: 10845
+		// Token: 0x04002CD7 RID: 11479
 		[Nullable(2)]
 		private IHitTimeScaleRatio _VictimHitTimeScaleRatioCache;
 
-		// Token: 0x04002A5E RID: 10846
+		// Token: 0x04002CD8 RID: 11480
 		private bool _VictimHitTimeScaleRatioInited;
 
-		// Token: 0x04002A5F RID: 10847
+		// Token: 0x04002CD9 RID: 11481
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IAimPart> _AimPartsCache;
 
-		// Token: 0x04002A60 RID: 10848
+		// Token: 0x04002CDA RID: 11482
 		private bool _AimPartsInited;
 
-		// Token: 0x04002A61 RID: 10849
+		// Token: 0x04002CDB RID: 11483
 		private IProgressBarControl _ControlCache;
 
-		// Token: 0x04002A62 RID: 10850
+		// Token: 0x04002CDC RID: 11484
 		private bool _ControlInited;
 	}
 }

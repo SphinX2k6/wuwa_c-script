@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006991 RID: 27025
+	// Token: 0x02007044 RID: 28740
 	public class IInteractiveItemsFunctionT
 	{
-		// Token: 0x1700C865 RID: 51301
-		// (get) Token: 0x0602F328 RID: 193320 RVA: 0x0066DAB0 File Offset: 0x0066BCB0
-		// (set) Token: 0x0602F329 RID: 193321 RVA: 0x0066DAB8 File Offset: 0x0066BCB8
+		// Token: 0x1700D268 RID: 53864
+		// (get) Token: 0x06031CF8 RID: 204024 RVA: 0x006BDF98 File Offset: 0x006BC198
+		// (set) Token: 0x06031CF9 RID: 204025 RVA: 0x006BDFA0 File Offset: 0x006BC1A0
 		public EEnableFunctionType Type { get; set; }
 
-		// Token: 0x1700C866 RID: 51302
-		// (get) Token: 0x0602F32A RID: 193322 RVA: 0x0066DAC1 File Offset: 0x0066BCC1
-		// (set) Token: 0x0602F32B RID: 193323 RVA: 0x0066DAC9 File Offset: 0x0066BCC9
+		// Token: 0x1700D269 RID: 53865
+		// (get) Token: 0x06031CFA RID: 204026 RVA: 0x006BDFA9 File Offset: 0x006BC1A9
+		// (set) Token: 0x06031CFB RID: 204027 RVA: 0x006BDFB1 File Offset: 0x006BC1B1
 		public bool Enable { get; set; }
 
-		// Token: 0x0602F32C RID: 193324 RVA: 0x0066DAD2 File Offset: 0x0066BCD2
+		// Token: 0x06031CFC RID: 204028 RVA: 0x006BDFBA File Offset: 0x006BC1BA
 		public IInteractiveItemsFunctionT()
 		{
 			this.Type = EEnableFunctionType.TeleportDungeon;

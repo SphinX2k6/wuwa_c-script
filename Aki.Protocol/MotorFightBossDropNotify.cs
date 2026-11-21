@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000A39 RID: 2617
+	// Token: 0x02000A28 RID: 2600
 	[NetMessage(EMessageId.MotorFightBossDropNotify)]
 	public sealed class MotorFightBossDropNotify : IMessage<MotorFightBossDropNotify>, IMessage, IEquatable<MotorFightBossDropNotify>, IDeepCloneable<MotorFightBossDropNotify>, IBufferMessage
 	{
-		// Token: 0x0600E481 RID: 58497 RVA: 0x00216A71 File Offset: 0x00214C71
+		// Token: 0x0600E367 RID: 58215 RVA: 0x00214881 File Offset: 0x00212A81
 		[NullableContext(1)]
 		public static MotorFightBossDropNotify Create()
 		{
 			return new MotorFightBossDropNotify();
 		}
 
-		// Token: 0x17002E51 RID: 11857
-		// (get) Token: 0x0600E482 RID: 58498 RVA: 0x00216A78 File Offset: 0x00214C78
+		// Token: 0x17002E13 RID: 11795
+		// (get) Token: 0x0600E368 RID: 58216 RVA: 0x00214888 File Offset: 0x00212A88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002E52 RID: 11858
-		// (get) Token: 0x0600E483 RID: 58499 RVA: 0x00216A7B File Offset: 0x00214C7B
+		// Token: 0x17002E14 RID: 11796
+		// (get) Token: 0x0600E369 RID: 58217 RVA: 0x0021488B File Offset: 0x00212A8B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600E484 RID: 58500 RVA: 0x00216A82 File Offset: 0x00214C82
+		// Token: 0x0600E36A RID: 58218 RVA: 0x00214892 File Offset: 0x00212A92
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorFightBossDropNotify()
 		{
 		}
 
-		// Token: 0x0600E485 RID: 58501 RVA: 0x00216A98 File Offset: 0x00214C98
+		// Token: 0x0600E36B RID: 58219 RVA: 0x002148A8 File Offset: 0x00212AA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorFightBossDropNotify(MotorFightBossDropNotify other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600E486 RID: 58502 RVA: 0x00216AF1 File Offset: 0x00214CF1
+		// Token: 0x0600E36C RID: 58220 RVA: 0x00214901 File Offset: 0x00212B01
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorFightBossDropNotify Clone()
@@ -70,9 +70,9 @@ namespace Aki.Protocol
 			return new MotorFightBossDropNotify(this);
 		}
 
-		// Token: 0x17002E53 RID: 11859
-		// (get) Token: 0x0600E487 RID: 58503 RVA: 0x00216AF9 File Offset: 0x00214CF9
-		// (set) Token: 0x0600E488 RID: 58504 RVA: 0x00216B01 File Offset: 0x00214D01
+		// Token: 0x17002E15 RID: 11797
+		// (get) Token: 0x0600E36D RID: 58221 RVA: 0x00214909 File Offset: 0x00212B09
+		// (set) Token: 0x0600E36E RID: 58222 RVA: 0x00214911 File Offset: 0x00212B11
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SubLevelIndex
@@ -87,9 +87,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002E54 RID: 11860
-		// (get) Token: 0x0600E489 RID: 58505 RVA: 0x00216B0A File Offset: 0x00214D0A
-		// (set) Token: 0x0600E48A RID: 58506 RVA: 0x00216B12 File Offset: 0x00214D12
+		// Token: 0x17002E16 RID: 11798
+		// (get) Token: 0x0600E36F RID: 58223 RVA: 0x0021491A File Offset: 0x00212B1A
+		// (set) Token: 0x0600E370 RID: 58224 RVA: 0x00214922 File Offset: 0x00212B22
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int WaveGroupIndex
@@ -104,9 +104,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002E55 RID: 11861
-		// (get) Token: 0x0600E48B RID: 58507 RVA: 0x00216B1B File Offset: 0x00214D1B
-		// (set) Token: 0x0600E48C RID: 58508 RVA: 0x00216B23 File Offset: 0x00214D23
+		// Token: 0x17002E17 RID: 11799
+		// (get) Token: 0x0600E371 RID: 58225 RVA: 0x0021492B File Offset: 0x00212B2B
+		// (set) Token: 0x0600E372 RID: 58226 RVA: 0x00214933 File Offset: 0x00212B33
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int BossId
@@ -121,8 +121,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002E56 RID: 11862
-		// (get) Token: 0x0600E48D RID: 58509 RVA: 0x00216B2C File Offset: 0x00214D2C
+		// Token: 0x17002E18 RID: 11800
+		// (get) Token: 0x0600E373 RID: 58227 RVA: 0x0021493C File Offset: 0x00212B3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<MotorFightCollectionDrop> Drops
@@ -133,7 +133,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600E48E RID: 58510 RVA: 0x00216B34 File Offset: 0x00214D34
+		// Token: 0x0600E374 RID: 58228 RVA: 0x00214944 File Offset: 0x00212B44
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -141,7 +141,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MotorFightBossDropNotify);
 		}
 
-		// Token: 0x0600E48F RID: 58511 RVA: 0x00216B44 File Offset: 0x00214D44
+		// Token: 0x0600E375 RID: 58229 RVA: 0x00214954 File Offset: 0x00212B54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MotorFightBossDropNotify other)
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.SubLevelIndex == other.SubLevelIndex && this.WaveGroupIndex == other.WaveGroupIndex && this.BossId == other.BossId && this.drops_.Equals(other.drops_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600E490 RID: 58512 RVA: 0x00216BB4 File Offset: 0x00214DB4
+		// Token: 0x0600E376 RID: 58230 RVA: 0x002149C4 File Offset: 0x00212BC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600E491 RID: 58513 RVA: 0x00216C33 File Offset: 0x00214E33
+		// Token: 0x0600E377 RID: 58231 RVA: 0x00214A43 File Offset: 0x00212C43
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -183,7 +183,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600E492 RID: 58514 RVA: 0x00216C40 File Offset: 0x00214E40
+		// Token: 0x0600E378 RID: 58232 RVA: 0x00214A50 File Offset: 0x00212C50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -191,25 +191,25 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600E493 RID: 58515 RVA: 0x00216C4C File Offset: 0x00214E4C
+		// Token: 0x0600E379 RID: 58233 RVA: 0x00214A5C File Offset: 0x00212C5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.SubLevelIndex != 0)
 			{
-				output.WriteRawTag(8);
+				output.WriteRawTag(16);
 				output.WriteInt32(this.SubLevelIndex);
 			}
-			this.drops_.WriteTo(ref output, MotorFightBossDropNotify._repeated_drops_codec);
 			if (this.WaveGroupIndex != 0)
 			{
-				output.WriteRawTag(96);
+				output.WriteRawTag(32);
 				output.WriteInt32(this.WaveGroupIndex);
 			}
+			this.drops_.WriteTo(ref output, MotorFightBossDropNotify._repeated_drops_codec);
 			if (this.BossId != 0)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(72);
 				output.WriteInt32(this.BossId);
 			}
 			if (this._unknownFields != null)
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600E494 RID: 58516 RVA: 0x00216CD4 File Offset: 0x00214ED4
+		// Token: 0x0600E37A RID: 58234 RVA: 0x00214AE4 File Offset: 0x00212CE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -244,7 +244,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600E495 RID: 58517 RVA: 0x00216D58 File Offset: 0x00214F58
+		// Token: 0x0600E37B RID: 58235 RVA: 0x00214B68 File Offset: 0x00212D68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MotorFightBossDropNotify other)
@@ -269,7 +269,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600E496 RID: 58518 RVA: 0x00216DCD File Offset: 0x00214FCD
+		// Token: 0x0600E37C RID: 58236 RVA: 0x00214BDD File Offset: 0x00212DDD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -277,7 +277,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600E497 RID: 58519 RVA: 0x00216DD8 File Offset: 0x00214FD8
+		// Token: 0x0600E37D RID: 58237 RVA: 0x00214BE8 File Offset: 0x00212DE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -289,27 +289,27 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 66U)
+				if (num <= 32U)
 				{
-					if (num == 8U)
+					if (num == 16U)
 					{
 						this.SubLevelIndex = input.ReadInt32();
 						continue;
 					}
-					if (num == 66U)
+					if (num == 32U)
 					{
-						this.drops_.AddEntriesFrom(ref input, MotorFightBossDropNotify._repeated_drops_codec);
+						this.WaveGroupIndex = input.ReadInt32();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 96U)
+					if (num == 66U)
 					{
-						this.WaveGroupIndex = input.ReadInt32();
+						this.drops_.AddEntriesFrom(ref input, MotorFightBossDropNotify._repeated_drops_codec);
 						continue;
 					}
-					if (num == 120U)
+					if (num == 72U)
 					{
 						this.BossId = input.ReadInt32();
 						continue;
@@ -319,34 +319,34 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005D7C RID: 23932
+		// Token: 0x04005D85 RID: 23941
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005D7D RID: 23933
-		public const int SubLevelIndexFieldNumber = 1;
+		// Token: 0x04005D86 RID: 23942
+		public const int SubLevelIndexFieldNumber = 2;
 
-		// Token: 0x04005D7E RID: 23934
+		// Token: 0x04005D87 RID: 23943
 		private int subLevelIndex_;
 
-		// Token: 0x04005D7F RID: 23935
-		public const int WaveGroupIndexFieldNumber = 12;
+		// Token: 0x04005D88 RID: 23944
+		public const int WaveGroupIndexFieldNumber = 4;
 
-		// Token: 0x04005D80 RID: 23936
+		// Token: 0x04005D89 RID: 23945
 		private int waveGroupIndex_;
 
-		// Token: 0x04005D81 RID: 23937
-		public const int BossIdFieldNumber = 15;
+		// Token: 0x04005D8A RID: 23946
+		public const int BossIdFieldNumber = 9;
 
-		// Token: 0x04005D82 RID: 23938
+		// Token: 0x04005D8B RID: 23947
 		private int bossId_;
 
-		// Token: 0x04005D83 RID: 23939
+		// Token: 0x04005D8C RID: 23948
 		public const int DropsFieldNumber = 8;
 
-		// Token: 0x04005D84 RID: 23940
+		// Token: 0x04005D8D RID: 23949
 		private static readonly FieldCodec<MotorFightCollectionDrop> _repeated_drops_codec = FieldCodec.ForMessage<MotorFightCollectionDrop>(66U, MotorFightCollectionDrop.Parser);
 
-		// Token: 0x04005D85 RID: 23941
+		// Token: 0x04005D8E RID: 23950
 		private readonly RepeatedField<MotorFightCollectionDrop> drops_ = new RepeatedField<MotorFightCollectionDrop>();
 	}
 }

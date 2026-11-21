@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000C9B RID: 3227
+	// Token: 0x02000C8B RID: 3211
 	[NetMessage(EMessageId.PhantomBattleNpcShowOverRequest)]
 	public sealed class PhantomBattleNpcShowOverRequest : IMessage<PhantomBattleNpcShowOverRequest>, IMessage, IEquatable<PhantomBattleNpcShowOverRequest>, IDeepCloneable<PhantomBattleNpcShowOverRequest>, IBufferMessage
 	{
-		// Token: 0x060117D5 RID: 71637 RVA: 0x002900A7 File Offset: 0x0028E2A7
+		// Token: 0x060116D5 RID: 71381 RVA: 0x0028E33B File Offset: 0x0028C53B
 		[NullableContext(1)]
 		public static PhantomBattleNpcShowOverRequest Create()
 		{
 			return new PhantomBattleNpcShowOverRequest();
 		}
 
-		// Token: 0x170039F0 RID: 14832
-		// (get) Token: 0x060117D6 RID: 71638 RVA: 0x002900AE File Offset: 0x0028E2AE
+		// Token: 0x170039B9 RID: 14777
+		// (get) Token: 0x060116D6 RID: 71382 RVA: 0x0028E342 File Offset: 0x0028C542
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170039F1 RID: 14833
-		// (get) Token: 0x060117D7 RID: 71639 RVA: 0x002900B1 File Offset: 0x0028E2B1
+		// Token: 0x170039BA RID: 14778
+		// (get) Token: 0x060116D7 RID: 71383 RVA: 0x0028E345 File Offset: 0x0028C545
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060117D8 RID: 71640 RVA: 0x002900B8 File Offset: 0x0028E2B8
+		// Token: 0x060116D8 RID: 71384 RVA: 0x0028E34C File Offset: 0x0028C54C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleNpcShowOverRequest()
 		{
 		}
 
-		// Token: 0x060117D9 RID: 71641 RVA: 0x002900C0 File Offset: 0x0028E2C0
+		// Token: 0x060116D9 RID: 71385 RVA: 0x0028E354 File Offset: 0x0028C554
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleNpcShowOverRequest(PhantomBattleNpcShowOverRequest other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060117DA RID: 71642 RVA: 0x002900D9 File Offset: 0x0028E2D9
+		// Token: 0x060116DA RID: 71386 RVA: 0x0028E36D File Offset: 0x0028C56D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleNpcShowOverRequest Clone()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			return new PhantomBattleNpcShowOverRequest(this);
 		}
 
-		// Token: 0x060117DB RID: 71643 RVA: 0x002900E1 File Offset: 0x0028E2E1
+		// Token: 0x060116DB RID: 71387 RVA: 0x0028E375 File Offset: 0x0028C575
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PhantomBattleNpcShowOverRequest);
 		}
 
-		// Token: 0x060117DC RID: 71644 RVA: 0x002900EF File Offset: 0x0028E2EF
+		// Token: 0x060116DC RID: 71388 RVA: 0x0028E383 File Offset: 0x0028C583
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PhantomBattleNpcShowOverRequest other)
@@ -81,7 +81,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x060117DD RID: 71645 RVA: 0x00290110 File Offset: 0x0028E310
+		// Token: 0x060116DD RID: 71389 RVA: 0x0028E3A4 File Offset: 0x0028C5A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060117DE RID: 71646 RVA: 0x00290136 File Offset: 0x0028E336
+		// Token: 0x060116DE RID: 71390 RVA: 0x0028E3CA File Offset: 0x0028C5CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -102,7 +102,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060117DF RID: 71647 RVA: 0x00290143 File Offset: 0x0028E343
+		// Token: 0x060116DF RID: 71391 RVA: 0x0028E3D7 File Offset: 0x0028C5D7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060117E0 RID: 71648 RVA: 0x0029014C File Offset: 0x0028E34C
+		// Token: 0x060116E0 RID: 71392 RVA: 0x0028E3E0 File Offset: 0x0028C5E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -121,7 +121,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060117E1 RID: 71649 RVA: 0x00290164 File Offset: 0x0028E364
+		// Token: 0x060116E1 RID: 71393 RVA: 0x0028E3F8 File Offset: 0x0028C5F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060117E2 RID: 71650 RVA: 0x0029018A File Offset: 0x0028E38A
+		// Token: 0x060116E2 RID: 71394 RVA: 0x0028E41E File Offset: 0x0028C61E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PhantomBattleNpcShowOverRequest other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060117E3 RID: 71651 RVA: 0x002901A7 File Offset: 0x0028E3A7
+		// Token: 0x060116E3 RID: 71395 RVA: 0x0028E43B File Offset: 0x0028C63B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060117E4 RID: 71652 RVA: 0x002901B0 File Offset: 0x0028E3B0
+		// Token: 0x060116E4 RID: 71396 RVA: 0x0028E444 File Offset: 0x0028C644
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -170,7 +170,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006E58 RID: 28248
+		// Token: 0x04006E6C RID: 28268
 		private UnknownFieldSet _unknownFields;
 	}
 }

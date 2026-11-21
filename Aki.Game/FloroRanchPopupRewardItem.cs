@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B97 RID: 7063
+// Token: 0x02001056 RID: 4182
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchPopupRewardItem : UiPanelBase
 {
-	// Token: 0x0600D249 RID: 53833 RVA: 0x003046F4 File Offset: 0x003028F4
+	// Token: 0x0600A65A RID: 42586 RVA: 0x0030F7CC File Offset: 0x0030D9CC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -28,7 +28,7 @@ public class FloroRanchPopupRewardItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D24A RID: 53834 RVA: 0x00304780 File Offset: 0x00302980
+	// Token: 0x0600A65B RID: 42587 RVA: 0x0030F858 File Offset: 0x0030DA58
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchPopupRewardItem.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
@@ -39,13 +39,13 @@ public class FloroRanchPopupRewardItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D24B RID: 53835 RVA: 0x003047C3 File Offset: 0x003029C3
+	// Token: 0x0600A65C RID: 42588 RVA: 0x0030F89B File Offset: 0x0030DA9B
 	public void InitCurve(UCurveFloat lerpCurve)
 	{
 		this.LerpCurve = lerpCurve;
 	}
 
-	// Token: 0x0600D24C RID: 53836 RVA: 0x003047CC File Offset: 0x003029CC
+	// Token: 0x0600A65D RID: 42589 RVA: 0x0030F8A4 File Offset: 0x0030DAA4
 	public void Tick(float delta)
 	{
 		if (this.IsPlayingPopup)
@@ -95,7 +95,7 @@ public class FloroRanchPopupRewardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600D24D RID: 53837 RVA: 0x00304934 File Offset: 0x00302B34
+	// Token: 0x0600A65E RID: 42590 RVA: 0x0030FA0C File Offset: 0x0030DC0C
 	public void PopupReward(Vector pointA, Vector pointB, [Nullable(2)] Action finishCallback = null)
 	{
 		if (FloroRanchGamePlayModel.Instance.IsSkip)
@@ -119,7 +119,7 @@ public class FloroRanchPopupRewardItem : UiPanelBase
 		this.PopUpFinishCallback = finishCallback;
 	}
 
-	// Token: 0x0600D24E RID: 53838 RVA: 0x003049BC File Offset: 0x00302BBC
+	// Token: 0x0600A65F RID: 42591 RVA: 0x0030FA94 File Offset: 0x0030DC94
 	public void PlayBezierCurve(Vector pointA, Vector pointB, Action finishCallback)
 	{
 		if (FloroRanchGamePlayModel.Instance.IsSkip)
@@ -141,7 +141,7 @@ public class FloroRanchPopupRewardItem : UiPanelBase
 		this.BezierFinishCallback = finishCallback;
 	}
 
-	// Token: 0x0600D24F RID: 53839 RVA: 0x00304A74 File Offset: 0x00302C74
+	// Token: 0x0600A660 RID: 42592 RVA: 0x0030FB4C File Offset: 0x0030DD4C
 	public void Refresh(long count, string icon)
 	{
 		UUIArtText artText = base.GetArtText(2);
@@ -163,7 +163,7 @@ public class FloroRanchPopupRewardItem : UiPanelBase
 		base.SetTextureByPath(icon, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x0600D250 RID: 53840 RVA: 0x00304AFC File Offset: 0x00302CFC
+	// Token: 0x0600A661 RID: 42593 RVA: 0x0030FBD4 File Offset: 0x0030DDD4
 	public void PlayShowRewardAnim()
 	{
 		if (this.LevelSequencePlayer == null)
@@ -174,7 +174,7 @@ public class FloroRanchPopupRewardItem : UiPanelBase
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x0600D251 RID: 53841 RVA: 0x00304B4C File Offset: 0x00302D4C
+	// Token: 0x0600A662 RID: 42594 RVA: 0x0030FC24 File Offset: 0x0030DE24
 	public UniTask PlayHideRewardAnim()
 	{
 		FloroRanchPopupRewardItem.<PlayHideRewardAnim>d__25 <PlayHideRewardAnim>d__;
@@ -185,7 +185,7 @@ public class FloroRanchPopupRewardItem : UiPanelBase
 		return <PlayHideRewardAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D252 RID: 53842 RVA: 0x00304B90 File Offset: 0x00302D90
+	// Token: 0x0600A663 RID: 42595 RVA: 0x0030FC68 File Offset: 0x0030DE68
 	public UniTask PlayCloseRewardAnim()
 	{
 		FloroRanchPopupRewardItem.<PlayCloseRewardAnim>d__26 <PlayCloseRewardAnim>d__;
@@ -196,7 +196,7 @@ public class FloroRanchPopupRewardItem : UiPanelBase
 		return <PlayCloseRewardAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D253 RID: 53843 RVA: 0x00304BD4 File Offset: 0x00302DD4
+	// Token: 0x0600A664 RID: 42596 RVA: 0x0030FCAC File Offset: 0x0030DEAC
 	public void FollowPosition(Vector position)
 	{
 		UUIItem rootItem = base.GetRootItem();
@@ -204,14 +204,14 @@ public class FloroRanchPopupRewardItem : UiPanelBase
 		rootItem.SetUIWorldLocation(fvector);
 	}
 
-	// Token: 0x0600D254 RID: 53844 RVA: 0x00304BF5 File Offset: 0x00302DF5
+	// Token: 0x0600A665 RID: 42597 RVA: 0x0030FCCD File Offset: 0x0030DECD
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearBezierCurve();
 		this.ClearPopupCurve();
 	}
 
-	// Token: 0x0600D255 RID: 53845 RVA: 0x00304C03 File Offset: 0x00302E03
+	// Token: 0x0600A666 RID: 42598 RVA: 0x0030FCDB File Offset: 0x0030DEDB
 	private void ClearBezierCurve()
 	{
 		this.StartTime = 0f;
@@ -220,7 +220,7 @@ public class FloroRanchPopupRewardItem : UiPanelBase
 		this.IsPlayingBezier = false;
 	}
 
-	// Token: 0x0600D256 RID: 53846 RVA: 0x00304C29 File Offset: 0x00302E29
+	// Token: 0x0600A667 RID: 42599 RVA: 0x0030FD01 File Offset: 0x0030DF01
 	private void ClearPopupCurve()
 	{
 		this.StartTime = 0f;
@@ -228,71 +228,71 @@ public class FloroRanchPopupRewardItem : UiPanelBase
 		this.IsPlayingPopup = false;
 	}
 
-	// Token: 0x04006060 RID: 24672
+	// Token: 0x0400612F RID: 24879
 	public bool IsPlayingBezier;
 
-	// Token: 0x04006061 RID: 24673
+	// Token: 0x04006130 RID: 24880
 	private bool IsPlayingPopup;
 
-	// Token: 0x04006062 RID: 24674
+	// Token: 0x04006131 RID: 24881
 	private UCurveFloat LerpCurve;
 
-	// Token: 0x04006063 RID: 24675
+	// Token: 0x04006132 RID: 24882
 	private Vector StartPoint = Vector.Create();
 
-	// Token: 0x04006064 RID: 24676
+	// Token: 0x04006133 RID: 24883
 	private Vector EndPoint = Vector.Create();
 
-	// Token: 0x04006065 RID: 24677
+	// Token: 0x04006134 RID: 24884
 	private readonly Vector TempVector = Vector.Create();
 
-	// Token: 0x04006066 RID: 24678
+	// Token: 0x04006135 RID: 24885
 	private readonly BeizerQuadraticCurve BezierCurve = new BeizerQuadraticCurve();
 
-	// Token: 0x04006067 RID: 24679
+	// Token: 0x04006136 RID: 24886
 	private float StartTime;
 
-	// Token: 0x04006068 RID: 24680
+	// Token: 0x04006137 RID: 24887
 	private float Duration;
 
-	// Token: 0x04006069 RID: 24681
+	// Token: 0x04006138 RID: 24888
 	private float StayTime;
 
-	// Token: 0x0400606A RID: 24682
+	// Token: 0x04006139 RID: 24889
 	[Nullable(2)]
 	private Action BezierFinishCallback;
 
-	// Token: 0x0400606B RID: 24683
+	// Token: 0x0400613A RID: 24890
 	[Nullable(2)]
 	private Action PopUpFinishCallback;
 
-	// Token: 0x0400606C RID: 24684
+	// Token: 0x0400613B RID: 24891
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400606D RID: 24685
+	// Token: 0x0400613C RID: 24892
 	[Nullable(2)]
 	private ULGUIArtTextData NormalArtTextData;
 
-	// Token: 0x0400606E RID: 24686
+	// Token: 0x0400613D RID: 24893
 	[Nullable(2)]
 	private ULGUIArtTextData YellowArtTextData;
 
-	// Token: 0x0400606F RID: 24687
+	// Token: 0x0400613E RID: 24894
 	[Nullable(2)]
 	private ULGUIArtTextData RedArtTextData;
 
-	// Token: 0x02008125 RID: 33061
+	// Token: 0x020072B3 RID: 29363
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402A27A RID: 172666
+		// Token: 0x040255AE RID: 153006
 		public const int MapIcon = 0;
 
-		// Token: 0x0402A27B RID: 172667
+		// Token: 0x040255AF RID: 153007
 		public const int Icon = 1;
 
-		// Token: 0x0402A27C RID: 172668
+		// Token: 0x040255B0 RID: 153008
 		public const int Count = 2;
 	}
 }

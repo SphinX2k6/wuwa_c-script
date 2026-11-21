@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Extension;
 using CSharpScript.Game.Common.Event;
@@ -10,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048D7 RID: 18647
+	// Token: 0x0200384E RID: 14414
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DynamicScrollView<T, TBase, [Nullable(2)] TData> : IGridPreserver where T : class, IDynamicScrollItem<TData> where TBase : class, IDynamicScrollBaseItem<TData>
 	{
-		// Token: 0x06030BAA RID: 199594 RVA: 0x00B50C10 File Offset: 0x00B4EE10
+		// Token: 0x060256D6 RID: 153302 RVA: 0x00A8BA18 File Offset: 0x00A89C18
 		public DynamicScrollView(UUIDynScrollViewComponent scrollView, UUIItem templateActor, TBase templateContent, TDynamicScrollViewCreate<T, TData> createFunction)
 		{
 			this.CreateFunction = createFunction;
@@ -32,7 +31,7 @@ namespace CSharpScript.Game.Module.Util
 			this.GridsController.RegisterAnimController();
 		}
 
-		// Token: 0x06030BAB RID: 199595 RVA: 0x00B50D1C File Offset: 0x00B4EF1C
+		// Token: 0x060256D7 RID: 153303 RVA: 0x00A8BB24 File Offset: 0x00A89D24
 		public UniTask Init()
 		{
 			DynamicScrollView<T, TBase, TData>.<Init>d__14 <Init>d__;
@@ -43,19 +42,19 @@ namespace CSharpScript.Game.Module.Util
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030BAC RID: 199596 RVA: 0x00B50D5F File Offset: 0x00B4EF5F
+		// Token: 0x060256D8 RID: 153304 RVA: 0x00A8BB67 File Offset: 0x00A89D67
 		public int GetDisplayGridNum()
 		{
 			return this.DynamicScroll.DisplayItemArray.Num();
 		}
 
-		// Token: 0x06030BAD RID: 199597 RVA: 0x00B50D71 File Offset: 0x00B4EF71
+		// Token: 0x060256D9 RID: 153305 RVA: 0x00A8BB79 File Offset: 0x00A89D79
 		public int GetPreservedGridNum()
 		{
 			return this.DynamicScroll.DisplayItemArray.Num() + this.DynamicScroll.IdleItemArray.Num();
 		}
 
-		// Token: 0x06030BAE RID: 199598 RVA: 0x00B50D94 File Offset: 0x00B4EF94
+		// Token: 0x060256DA RID: 153306 RVA: 0x00A8BB9C File Offset: 0x00A89D9C
 		public int GetDisplayGridStartIndex()
 		{
 			int result = 0;
@@ -63,7 +62,7 @@ namespace CSharpScript.Game.Module.Util
 			return result;
 		}
 
-		// Token: 0x06030BAF RID: 199599 RVA: 0x00B50DB4 File Offset: 0x00B4EFB4
+		// Token: 0x060256DB RID: 153307 RVA: 0x00A8BBBC File Offset: 0x00A89DBC
 		public int GetDisplayGridEndIndex()
 		{
 			int num = this.DynamicScroll.DisplayItemArray.Num() - 1;
@@ -76,7 +75,7 @@ namespace CSharpScript.Game.Module.Util
 			return result;
 		}
 
-		// Token: 0x06030BB0 RID: 199600 RVA: 0x00B50DEC File Offset: 0x00B4EFEC
+		// Token: 0x060256DC RID: 153308 RVA: 0x00A8BBF4 File Offset: 0x00A89DF4
 		[NullableContext(2)]
 		public UUIItem GetGrid(int gridIndex)
 		{
@@ -88,7 +87,7 @@ namespace CSharpScript.Game.Module.Util
 			return item.GetUIItem();
 		}
 
-		// Token: 0x06030BB1 RID: 199601 RVA: 0x00B50E08 File Offset: 0x00B4F008
+		// Token: 0x060256DD RID: 153309 RVA: 0x00A8BC10 File Offset: 0x00A89E10
 		public void LateScrollTo(int index)
 		{
 			this.BindLateUpdate(delegate(float delta)
@@ -98,7 +97,7 @@ namespace CSharpScript.Game.Module.Util
 			});
 		}
 
-		// Token: 0x06030BB2 RID: 199602 RVA: 0x00B50E3C File Offset: 0x00B4F03C
+		// Token: 0x060256DE RID: 153310 RVA: 0x00A8BC44 File Offset: 0x00A89E44
 		[NullableContext(2)]
 		public UUIItem GetGridByDisplayIndex(int gridIndex)
 		{
@@ -107,31 +106,31 @@ namespace CSharpScript.Game.Module.Util
 			return this.DynamicScroll.DisplayItemArray.Get(index).Get().GetUIItem();
 		}
 
-		// Token: 0x06030BB3 RID: 199603 RVA: 0x00B50E78 File Offset: 0x00B4F078
+		// Token: 0x060256DF RID: 153311 RVA: 0x00A8BC80 File Offset: 0x00A89E80
 		public float GetGridAnimationInterval()
 		{
 			return this.DynamicScroll.GetGridAnimationInterval();
 		}
 
-		// Token: 0x06030BB4 RID: 199604 RVA: 0x00B50E85 File Offset: 0x00B4F085
+		// Token: 0x060256E0 RID: 153312 RVA: 0x00A8BC8D File Offset: 0x00A89E8D
 		public float GetGridAnimationStartTime()
 		{
 			return this.DynamicScroll.GetGridAnimationStartTime();
 		}
 
-		// Token: 0x06030BB5 RID: 199605 RVA: 0x00B50E92 File Offset: 0x00B4F092
+		// Token: 0x060256E1 RID: 153313 RVA: 0x00A8BC9A File Offset: 0x00A89E9A
 		public void NotifyAnimationStart()
 		{
 			this.DynamicScroll.SetInAnimation(true);
 		}
 
-		// Token: 0x06030BB6 RID: 199606 RVA: 0x00B50EA0 File Offset: 0x00B4F0A0
+		// Token: 0x060256E2 RID: 153314 RVA: 0x00A8BCA8 File Offset: 0x00A89EA8
 		public void NotifyAnimationEnd()
 		{
 			this.DynamicScroll.SetInAnimation(false);
 		}
 
-		// Token: 0x06030BB7 RID: 199607 RVA: 0x00B50EB0 File Offset: 0x00B4F0B0
+		// Token: 0x060256E3 RID: 153315 RVA: 0x00A8BCB8 File Offset: 0x00A89EB8
 		public void RefreshByData(IReadOnlyList<TData> data, bool keepContentPosition = false, bool skipGridAnim = false)
 		{
 			this.DataArray = data;
@@ -151,7 +150,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030BB8 RID: 199608 RVA: 0x00B50F44 File Offset: 0x00B4F144
+		// Token: 0x060256E4 RID: 153316 RVA: 0x00A8BD4C File Offset: 0x00A89F4C
 		public bool CheckIfAllRefreshFinished()
 		{
 			UUIDynScrollViewComponent dynamicScroll = this.DynamicScroll;
@@ -170,7 +169,7 @@ namespace CSharpScript.Game.Module.Util
 			return true;
 		}
 
-		// Token: 0x06030BB9 RID: 199609 RVA: 0x00B50FB0 File Offset: 0x00B4F1B0
+		// Token: 0x060256E5 RID: 153317 RVA: 0x00A8BDBC File Offset: 0x00A89FBC
 		private void CheckUnBindDynScollLateUpdate()
 		{
 			if (this.LateUpdateBindState)
@@ -180,7 +179,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030BBA RID: 199610 RVA: 0x00B50FD1 File Offset: 0x00B4F1D1
+		// Token: 0x060256E6 RID: 153318 RVA: 0x00A8BDDD File Offset: 0x00A89FDD
 		private void CheckBindDynScrollLateUpdateStateAndBind()
 		{
 			if (!this.LateUpdateBindState)
@@ -190,7 +189,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030BBB RID: 199611 RVA: 0x00B51000 File Offset: 0x00B4F200
+		// Token: 0x060256E7 RID: 153319 RVA: 0x00A8BE0C File Offset: 0x00A8A00C
 		[NullableContext(2)]
 		private AUIBaseActor OnItemUpdate(int index, AUIBaseActor actor)
 		{
@@ -224,7 +223,7 @@ namespace CSharpScript.Game.Module.Util
 			return tempItem.GetUsingItem(data);
 		}
 
-		// Token: 0x06030BBC RID: 199612 RVA: 0x00B51140 File Offset: 0x00B4F340
+		// Token: 0x060256E8 RID: 153320 RVA: 0x00A8BF4C File Offset: 0x00A8A14C
 		private UniTask WaitForUpdateItem(TData data, int index, AUIBaseActor actor)
 		{
 			DynamicScrollView<T, TBase, TData>.<WaitForUpdateItem>d__33 <WaitForUpdateItem>d__;
@@ -238,13 +237,13 @@ namespace CSharpScript.Game.Module.Util
 			return <WaitForUpdateItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030BBD RID: 199613 RVA: 0x00B5119B File Offset: 0x00B4F39B
+		// Token: 0x060256E9 RID: 153321 RVA: 0x00A8BFA7 File Offset: 0x00A8A1A7
 		private void CheckIfNeedSetItemActiveWhenInit(T item, int index)
 		{
 			item.SetUiActive(true);
 		}
 
-		// Token: 0x06030BBE RID: 199614 RVA: 0x00B511AC File Offset: 0x00B4F3AC
+		// Token: 0x060256EA RID: 153322 RVA: 0x00A8BFB8 File Offset: 0x00A8A1B8
 		[NullableContext(2)]
 		private void OnItemClear(int index, AUIBaseActor actor)
 		{
@@ -259,26 +258,26 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030BBF RID: 199615 RVA: 0x00B511FF File Offset: 0x00B4F3FF
+		// Token: 0x060256EB RID: 153323 RVA: 0x00A8C00B File Offset: 0x00A8A20B
 		private void OnItemDestroy()
 		{
 			this.CheckUnBindDynScollLateUpdate();
 		}
 
-		// Token: 0x06030BC0 RID: 199616 RVA: 0x00B51208 File Offset: 0x00B4F408
+		// Token: 0x060256EC RID: 153324 RVA: 0x00A8C014 File Offset: 0x00A8A214
 		private FVector2D GetItemSize(int index)
 		{
 			TData data = this.DataArray[index];
 			return this.TemplateContent.GetItemSize(data);
 		}
 
-		// Token: 0x06030BC1 RID: 199617 RVA: 0x00B51233 File Offset: 0x00B4F433
+		// Token: 0x060256ED RID: 153325 RVA: 0x00A8C03F File Offset: 0x00A8A23F
 		public FVector2D GetItemSizeFromData(TData data)
 		{
 			return this.TemplateContent.GetItemSize(data);
 		}
 
-		// Token: 0x06030BC2 RID: 199618 RVA: 0x00B51248 File Offset: 0x00B4F448
+		// Token: 0x060256EE RID: 153326 RVA: 0x00A8C054 File Offset: 0x00A8A254
 		[NullableContext(2)]
 		public T GetScrollItemFromIndex(int index)
 		{
@@ -287,19 +286,21 @@ namespace CSharpScript.Game.Module.Util
 			return result;
 		}
 
-		// Token: 0x06030BC3 RID: 199619 RVA: 0x00B51265 File Offset: 0x00B4F465
+		// Token: 0x060256EF RID: 153327 RVA: 0x00A8C071 File Offset: 0x00A8A271
 		public int GetScrollItemCount()
 		{
 			return this.ScrollItemMap.Count;
 		}
 
-		// Token: 0x06030BC4 RID: 199620 RVA: 0x00B51272 File Offset: 0x00B4F472
+		// Token: 0x060256F0 RID: 153328 RVA: 0x00A8C080 File Offset: 0x00A8A280
 		public T[] GetScrollItemItems()
 		{
-			return this.ScrollItemMap.Values.ToArray<T>();
+			T[] array = new T[this.ScrollItemMap.Count];
+			this.ScrollItemMap.Values.CopyTo(array, 0);
+			return array;
 		}
 
-		// Token: 0x06030BC5 RID: 199621 RVA: 0x00B51284 File Offset: 0x00B4F484
+		// Token: 0x060256F1 RID: 153329 RVA: 0x00A8C0B1 File Offset: 0x00A8A2B1
 		private void OnLateUpdate(float deltaTime)
 		{
 			Action<float> lateUpdateCallBack = this.LateUpdateCallBack;
@@ -315,7 +316,7 @@ namespace CSharpScript.Game.Module.Util
 			this.CheckAndUnbindLateUpdate();
 		}
 
-		// Token: 0x06030BC6 RID: 199622 RVA: 0x00B512B0 File Offset: 0x00B4F4B0
+		// Token: 0x060256F2 RID: 153330 RVA: 0x00A8C0DD File Offset: 0x00A8A2DD
 		private void PlayGridAnimate()
 		{
 			if (this.GridsController != null)
@@ -324,7 +325,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030BC7 RID: 199623 RVA: 0x00B512D6 File Offset: 0x00B4F4D6
+		// Token: 0x060256F3 RID: 153331 RVA: 0x00A8C103 File Offset: 0x00A8A303
 		private void CheckAndUnbindLateUpdate()
 		{
 			if (this.LateUpdateCallBack == null && this.ReloadLateUpdateCallBack == null)
@@ -333,33 +334,33 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030BC8 RID: 199624 RVA: 0x00B512EE File Offset: 0x00B4F4EE
+		// Token: 0x060256F4 RID: 153332 RVA: 0x00A8C11B File Offset: 0x00A8A31B
 		private void BindReloadLateUpdate(Action<float> callback)
 		{
 			this.ReloadLateUpdateCallBack = callback;
 			this.CheckBindDynScrollLateUpdateStateAndBind();
 		}
 
-		// Token: 0x06030BC9 RID: 199625 RVA: 0x00B512FD File Offset: 0x00B4F4FD
+		// Token: 0x060256F5 RID: 153333 RVA: 0x00A8C12A File Offset: 0x00A8A32A
 		public void UnBindReloadLateUpdate()
 		{
 			this.ReloadLateUpdateCallBack = null;
 		}
 
-		// Token: 0x06030BCA RID: 199626 RVA: 0x00B51306 File Offset: 0x00B4F506
+		// Token: 0x060256F6 RID: 153334 RVA: 0x00A8C133 File Offset: 0x00A8A333
 		public void BindLateUpdate(Action<float> callback)
 		{
 			this.LateUpdateCallBack = callback;
 			this.CheckBindDynScrollLateUpdateStateAndBind();
 		}
 
-		// Token: 0x06030BCB RID: 199627 RVA: 0x00B51315 File Offset: 0x00B4F515
+		// Token: 0x060256F7 RID: 153335 RVA: 0x00A8C142 File Offset: 0x00A8A342
 		public void UnBindLateUpdate()
 		{
 			this.LateUpdateCallBack = null;
 		}
 
-		// Token: 0x06030BCC RID: 199628 RVA: 0x00B5131E File Offset: 0x00B4F51E
+		// Token: 0x060256F8 RID: 153336 RVA: 0x00A8C14B File Offset: 0x00A8A34B
 		public void AddListenerOnItemClear(int index, Action action)
 		{
 			if (this.ScrollItemClearActionsMap.ContainsKey(index))
@@ -370,7 +371,7 @@ namespace CSharpScript.Game.Module.Util
 			this.ScrollItemClearActionsMap.Add(index, action);
 		}
 
-		// Token: 0x06030BCD RID: 199629 RVA: 0x00B5134C File Offset: 0x00B4F54C
+		// Token: 0x060256F9 RID: 153337 RVA: 0x00A8C178 File Offset: 0x00A8A378
 		public void ClearChildren()
 		{
 			this.ScrollItemMap.Clear();
@@ -388,7 +389,7 @@ namespace CSharpScript.Game.Module.Util
 			gridsController.Clear();
 		}
 
-		// Token: 0x06030BCE RID: 199630 RVA: 0x00B513C8 File Offset: 0x00B4F5C8
+		// Token: 0x060256FA RID: 153338 RVA: 0x00A8C1F4 File Offset: 0x00A8A3F4
 		public UniTask ScrollToItemIndex(int index, bool playGridAnim = true, bool resetAlpha = false)
 		{
 			DynamicScrollView<T, TBase, TData>.<ScrollToItemIndex>d__51 <ScrollToItemIndex>d__;
@@ -402,14 +403,14 @@ namespace CSharpScript.Game.Module.Util
 			return <ScrollToItemIndex>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030BCF RID: 199631 RVA: 0x00B51423 File Offset: 0x00B4F623
+		// Token: 0x060256FB RID: 153339 RVA: 0x00A8C24F File Offset: 0x00A8A44F
 		public bool IsValid()
 		{
 			UUIDynScrollViewComponent dynamicScroll = this.DynamicScroll;
 			return dynamicScroll != null && dynamicScroll.IsValid();
 		}
 
-		// Token: 0x06030BD0 RID: 199632 RVA: 0x00B51438 File Offset: 0x00B4F638
+		// Token: 0x060256FC RID: 153340 RVA: 0x00A8C264 File Offset: 0x00A8A464
 		public void ScrollToItemIndexByOffset(int index)
 		{
 			float num = this.DynamicScroll.PaddingVertical;
@@ -461,7 +462,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030BD1 RID: 199633 RVA: 0x00B51598 File Offset: 0x00B4F798
+		// Token: 0x060256FD RID: 153341 RVA: 0x00A8C3C4 File Offset: 0x00A8A5C4
 		public UniTask WaitForInit()
 		{
 			DynamicScrollView<T, TBase, TData>.<WaitForInit>d__54 <WaitForInit>d__;
@@ -472,7 +473,7 @@ namespace CSharpScript.Game.Module.Util
 			return <WaitForInit>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030BD2 RID: 199634 RVA: 0x00B515DC File Offset: 0x00B4F7DC
+		// Token: 0x060256FE RID: 153342 RVA: 0x00A8C408 File Offset: 0x00A8A608
 		public void ScrollToBottom(UUIItem uiItem)
 		{
 			FVector relativeLocation = this.DynamicScroll.ContentUIItem.Get().RelativeLocation;
@@ -480,7 +481,7 @@ namespace CSharpScript.Game.Module.Util
 			this.DynamicScroll.ScrollToBottom(ref fvector2D, uiItem, false);
 		}
 
-		// Token: 0x06030BD3 RID: 199635 RVA: 0x00B51624 File Offset: 0x00B4F824
+		// Token: 0x060256FF RID: 153343 RVA: 0x00A8C450 File Offset: 0x00A8A650
 		private UniTask WaitInitThenScrollToIndex(int index, bool playGridAnim = true, bool resetAlpha = false)
 		{
 			DynamicScrollView<T, TBase, TData>.<WaitInitThenScrollToIndex>d__56 <WaitInitThenScrollToIndex>d__;
@@ -494,7 +495,7 @@ namespace CSharpScript.Game.Module.Util
 			return <WaitInitThenScrollToIndex>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030BD4 RID: 199636 RVA: 0x00B5167F File Offset: 0x00B4F87F
+		// Token: 0x06025700 RID: 153344 RVA: 0x00A8C4AB File Offset: 0x00A8A6AB
 		public void ResetGridController()
 		{
 			if (this.GridsController != null)
@@ -503,7 +504,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030BD5 RID: 199637 RVA: 0x00B5169B File Offset: 0x00B4F89B
+		// Token: 0x06025701 RID: 153345 RVA: 0x00A8C4C7 File Offset: 0x00A8A6C7
 		[NullableContext(2)]
 		public UUIInturnAnimController GetUiAnimController()
 		{
@@ -512,7 +513,7 @@ namespace CSharpScript.Game.Module.Util
 			return ((auibaseActor != null) ? auibaseActor.GetComponentByClass(UUIInturnAnimController.StaticClass()) : null) as UUIInturnAnimController;
 		}
 
-		// Token: 0x0401A2CD RID: 107213
+		// Token: 0x04014B40 RID: 84800
 		[Nullable(new byte[]
 		{
 			2,
@@ -521,21 +522,21 @@ namespace CSharpScript.Game.Module.Util
 		})]
 		private readonly TDynamicScrollViewCreate<T, TData> CreateFunction;
 
-		// Token: 0x0401A2CE RID: 107214
+		// Token: 0x04014B41 RID: 84801
 		[Nullable(2)]
 		private readonly UUIDynScrollViewComponent DynamicScroll;
 
-		// Token: 0x0401A2CF RID: 107215
+		// Token: 0x04014B42 RID: 84802
 		[Nullable(2)]
 		private readonly TBase TemplateContent;
 
-		// Token: 0x0401A2D0 RID: 107216
+		// Token: 0x04014B43 RID: 84803
 		private readonly Dictionary<int, T> ScrollItemMap = new Dictionary<int, T>();
 
-		// Token: 0x0401A2D1 RID: 107217
+		// Token: 0x04014B44 RID: 84804
 		private readonly Dictionary<int, Action> ScrollItemClearActionsMap = new Dictionary<int, Action>();
 
-		// Token: 0x0401A2D2 RID: 107218
+		// Token: 0x04014B45 RID: 84805
 		[Nullable(new byte[]
 		{
 			2,
@@ -543,32 +544,32 @@ namespace CSharpScript.Game.Module.Util
 		})]
 		private IReadOnlyList<TData> DataArray;
 
-		// Token: 0x0401A2D3 RID: 107219
+		// Token: 0x04014B46 RID: 84806
 		[Nullable(2)]
 		private readonly UUIItem TemplateActor;
 
-		// Token: 0x0401A2D4 RID: 107220
+		// Token: 0x04014B47 RID: 84807
 		[Nullable(2)]
 		private readonly GridAppearAnimationBase GridsController;
 
-		// Token: 0x0401A2D5 RID: 107221
+		// Token: 0x04014B48 RID: 84808
 		private readonly Dictionary<AUIBaseActor, T> InitedActorMap = new Dictionary<AUIBaseActor, T>();
 
-		// Token: 0x0401A2D6 RID: 107222
+		// Token: 0x04014B49 RID: 84809
 		[Nullable(2)]
 		public Action<float> LateUpdateCallBack;
 
-		// Token: 0x0401A2D7 RID: 107223
+		// Token: 0x04014B4A RID: 84810
 		[Nullable(2)]
 		private Action<float> ReloadLateUpdateCallBack;
 
-		// Token: 0x0401A2D8 RID: 107224
+		// Token: 0x04014B4B RID: 84811
 		private readonly Dictionary<AUIBaseActor, UniTask> ActorInitPromise = new Dictionary<AUIBaseActor, UniTask>();
 
-		// Token: 0x0401A2D9 RID: 107225
+		// Token: 0x04014B4C RID: 84812
 		private bool LateUpdateBindState;
 
-		// Token: 0x0401A2DA RID: 107226
+		// Token: 0x04014B4D RID: 84813
 		[Nullable(new byte[]
 		{
 			1,
@@ -576,7 +577,7 @@ namespace CSharpScript.Game.Module.Util
 		})]
 		private Dictionary<int, AUIBaseActor> _tempActorCache = new Dictionary<int, AUIBaseActor>();
 
-		// Token: 0x0401A2DB RID: 107227
+		// Token: 0x04014B4E RID: 84814
 		private bool Refreshing;
 	}
 }

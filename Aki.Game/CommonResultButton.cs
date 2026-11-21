@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001960 RID: 6496
+// Token: 0x02000E1D RID: 3613
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonResultButton : UiPanelBase
 {
-	// Token: 0x0600BDFB RID: 48635 RVA: 0x002AF99B File Offset: 0x002ADB9B
+	// Token: 0x060091FE RID: 37374 RVA: 0x002BA7DF File Offset: 0x002B89DF
 	public CommonResultButton(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600BDFC RID: 48636 RVA: 0x002AF9B0 File Offset: 0x002ADBB0
+	// Token: 0x060091FF RID: 37375 RVA: 0x002BA7F4 File Offset: 0x002B89F4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class CommonResultButton : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600BDFD RID: 48637 RVA: 0x002AFA6F File Offset: 0x002ADC6F
+	// Token: 0x06009200 RID: 37376 RVA: 0x002BA8B3 File Offset: 0x002B8AB3
 	private void ButtonClick()
 	{
 		if (this.BtnFunction != null)
@@ -43,26 +43,26 @@ public class CommonResultButton : UiPanelBase
 		this.DoClickCallBack();
 	}
 
-	// Token: 0x0600BDFE RID: 48638 RVA: 0x002AFA8A File Offset: 0x002ADC8A
+	// Token: 0x06009201 RID: 37377 RVA: 0x002BA8CE File Offset: 0x002B8ACE
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearBtnTimer();
 		this.BtnFunction = null;
 	}
 
-	// Token: 0x0600BDFF RID: 48639 RVA: 0x002AFA99 File Offset: 0x002ADC99
+	// Token: 0x06009202 RID: 37378 RVA: 0x002BA8DD File Offset: 0x002B8ADD
 	public void ResetData()
 	{
 		this.CommonResultButtonData = null;
 	}
 
-	// Token: 0x0600BE00 RID: 48640 RVA: 0x002AFAA2 File Offset: 0x002ADCA2
+	// Token: 0x06009203 RID: 37379 RVA: 0x002BA8E6 File Offset: 0x002B8AE6
 	public void SetData(CommonResultButtonData data)
 	{
 		this.CommonResultButtonData = data;
 	}
 
-	// Token: 0x0600BE01 RID: 48641 RVA: 0x002AFAAB File Offset: 0x002ADCAB
+	// Token: 0x06009204 RID: 37380 RVA: 0x002BA8EF File Offset: 0x002B8AEF
 	public void DoClickCallBack()
 	{
 		CommonResultButtonData commonResultButtonData = this.CommonResultButtonData;
@@ -78,7 +78,7 @@ public class CommonResultButton : UiPanelBase
 		buttonClickCallBack();
 	}
 
-	// Token: 0x0600BE02 RID: 48642 RVA: 0x002AFAC7 File Offset: 0x002ADCC7
+	// Token: 0x06009205 RID: 37381 RVA: 0x002BA90B File Offset: 0x002B8B0B
 	public void DoTimerCallBack(int hasRunTime)
 	{
 		CommonResultButtonData commonResultButtonData = this.CommonResultButtonData;
@@ -94,7 +94,7 @@ public class CommonResultButton : UiPanelBase
 		buttonTimerCallBack(hasRunTime, this);
 	}
 
-	// Token: 0x0600BE03 RID: 48643 RVA: 0x002AFAE5 File Offset: 0x002ADCE5
+	// Token: 0x06009206 RID: 37382 RVA: 0x002BA929 File Offset: 0x002B8B29
 	public void DoRefreshCallBack()
 	{
 		CommonResultButtonData commonResultButtonData = this.CommonResultButtonData;
@@ -110,13 +110,13 @@ public class CommonResultButton : UiPanelBase
 		buttonRefreshCallBack(this);
 	}
 
-	// Token: 0x0600BE04 RID: 48644 RVA: 0x002AFB02 File Offset: 0x002ADD02
+	// Token: 0x06009207 RID: 37383 RVA: 0x002BA946 File Offset: 0x002B8B46
 	public void SetBtnFunction(Action btnFunction)
 	{
 		this.BtnFunction = btnFunction;
 	}
 
-	// Token: 0x0600BE05 RID: 48645 RVA: 0x002AFB0C File Offset: 0x002ADD0C
+	// Token: 0x06009208 RID: 37384 RVA: 0x002BA950 File Offset: 0x002B8B50
 	public void SetBtnCanClick(bool canClick)
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -126,19 +126,19 @@ public class CommonResultButton : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BE06 RID: 48646 RVA: 0x002AFB31 File Offset: 0x002ADD31
+	// Token: 0x06009209 RID: 37385 RVA: 0x002BA975 File Offset: 0x002B8B75
 	public void SetBtnText(string textId, params object[] args)
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(1), textId, args);
 	}
 
-	// Token: 0x0600BE07 RID: 48647 RVA: 0x002AFB46 File Offset: 0x002ADD46
+	// Token: 0x0600920A RID: 37386 RVA: 0x002BA98A File Offset: 0x002B8B8A
 	public UUIText GetBtnText()
 	{
 		return base.GetText(1);
 	}
 
-	// Token: 0x0600BE08 RID: 48648 RVA: 0x002AFB50 File Offset: 0x002ADD50
+	// Token: 0x0600920B RID: 37387 RVA: 0x002BA994 File Offset: 0x002B8B94
 	[NullableContext(2)]
 	public void SetTipsItem(int itemId, string countText = null)
 	{
@@ -148,27 +148,27 @@ public class CommonResultButton : UiPanelBase
 		base.GetItem(5).SetUIActive(true);
 	}
 
-	// Token: 0x0600BE09 RID: 48649 RVA: 0x002AFBBA File Offset: 0x002ADDBA
+	// Token: 0x0600920C RID: 37388 RVA: 0x002BA9FE File Offset: 0x002B8BFE
 	public void SetTipsItemTextColor(FColor color)
 	{
 		base.GetText(4).SetColor(color);
 	}
 
-	// Token: 0x0600BE0A RID: 48650 RVA: 0x002AFBC9 File Offset: 0x002ADDC9
+	// Token: 0x0600920D RID: 37389 RVA: 0x002BAA0D File Offset: 0x002B8C0D
 	public void SetFloatText(string textId, params object[] args)
 	{
 		base.GetText(2).SetUIActive(true);
 		LguiUtil.Instance.SetLocalText(base.GetText(2), textId, args);
 	}
 
-	// Token: 0x0600BE0B RID: 48651 RVA: 0x002AFBEB File Offset: 0x002ADDEB
+	// Token: 0x0600920E RID: 37390 RVA: 0x002BAA2F File Offset: 0x002B8C2F
 	public UUIText GetBtnFloatText()
 	{
 		base.GetText(2).SetUIActive(true);
 		return base.GetText(2);
 	}
 
-	// Token: 0x0600BE0C RID: 48652 RVA: 0x002AFC04 File Offset: 0x002ADE04
+	// Token: 0x0600920F RID: 37391 RVA: 0x002BAA48 File Offset: 0x002B8C48
 	public void SetFloatTextWithTimer(int delayTime, bool canClickDuringTimer, string textId)
 	{
 		this.ClearBtnTimer();
@@ -200,7 +200,7 @@ public class CommonResultButton : UiPanelBase
 		base.GetText(2).SetUIActive(true);
 	}
 
-	// Token: 0x0600BE0D RID: 48653 RVA: 0x002AFC86 File Offset: 0x002ADE86
+	// Token: 0x06009210 RID: 37392 RVA: 0x002BAACA File Offset: 0x002B8CCA
 	protected void ClearBtnTimer()
 	{
 		if (this.TimerId != null && TimerSystem.GameplayTimeInstance.Has(this.TimerId))
@@ -210,36 +210,36 @@ public class CommonResultButton : UiPanelBase
 		this.TimerId = null;
 	}
 
-	// Token: 0x040055AC RID: 21932
+	// Token: 0x04005659 RID: 22105
 	[Nullable(2)]
 	private TimerHandle TimerId;
 
-	// Token: 0x040055AD RID: 21933
+	// Token: 0x0400565A RID: 22106
 	private int DelayTime;
 
-	// Token: 0x040055AE RID: 21934
+	// Token: 0x0400565B RID: 22107
 	[Nullable(2)]
 	private Action BtnFunction;
 
-	// Token: 0x040055AF RID: 21935
+	// Token: 0x0400565C RID: 22108
 	[Nullable(2)]
 	private CommonResultButtonData CommonResultButtonData;
 
-	// Token: 0x02007EB5 RID: 32437
+	// Token: 0x02007044 RID: 28740
 	[NullableContext(0)]
 	private enum ECommonResultButton
 	{
-		// Token: 0x040296C9 RID: 169673
+		// Token: 0x04024A06 RID: 150022
 		Button,
-		// Token: 0x040296CA RID: 169674
+		// Token: 0x04024A07 RID: 150023
 		ButtonText,
-		// Token: 0x040296CB RID: 169675
+		// Token: 0x04024A08 RID: 150024
 		FloatText,
-		// Token: 0x040296CC RID: 169676
+		// Token: 0x04024A09 RID: 150025
 		TipsIcon,
-		// Token: 0x040296CD RID: 169677
+		// Token: 0x04024A0A RID: 150026
 		TipsCount,
-		// Token: 0x040296CE RID: 169678
+		// Token: 0x04024A0B RID: 150027
 		TipsItem
 	}
 }

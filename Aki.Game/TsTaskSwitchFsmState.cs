@@ -13,9 +13,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskSwitchFsmState.TsTaskSwitchFsmState_C")]
 public class TsTaskSwitchFsmState : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700020E RID: 526
-	// (get) Token: 0x06000B42 RID: 2882 RVA: 0x0003841C File Offset: 0x0003661C
-	// (set) Token: 0x06000B43 RID: 2883 RVA: 0x00038455 File Offset: 0x00036655
+	// Token: 0x17000211 RID: 529
+	// (get) Token: 0x06000B48 RID: 2888 RVA: 0x000395F4 File Offset: 0x000377F4
+	// (set) Token: 0x06000B49 RID: 2889 RVA: 0x0003962D File Offset: 0x0003782D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<string> States
 	{
@@ -35,31 +35,28 @@ public class TsTaskSwitchFsmState : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		}
 	}
 
-	// Token: 0x06000B44 RID: 2884 RVA: 0x00038464 File Offset: 0x00036664
+	// Token: 0x06000B4A RID: 2890 RVA: 0x0003963C File Offset: 0x0003783C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskSwitchFsmState) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskSwitchFsmState.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000B45 RID: 2885 RVA: 0x00038504 File Offset: 0x00036704
+	// Token: 0x06000B4B RID: 2891 RVA: 0x000396F4 File Offset: 0x000378F4
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -77,7 +74,7 @@ public class TsTaskSwitchFsmState : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000B46 RID: 2886 RVA: 0x00038566 File Offset: 0x00036766
+	// Token: 0x06000B4C RID: 2892 RVA: 0x00039756 File Offset: 0x00037956
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskSwitchFsmState._ClassPtr == IntPtr.Zero)
@@ -87,22 +84,22 @@ public class TsTaskSwitchFsmState : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		return TsTaskSwitchFsmState._ClassPtr;
 	}
 
-	// Token: 0x06000B47 RID: 2887 RVA: 0x0003858C File Offset: 0x0003678C
+	// Token: 0x06000B4D RID: 2893 RVA: 0x0003977C File Offset: 0x0003797C
 	public TsTaskSwitchFsmState() : this(BuiltinUtils.AllocNativeUObject(TsTaskSwitchFsmState.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000B48 RID: 2888 RVA: 0x000385B4 File Offset: 0x000367B4
+	// Token: 0x06000B4E RID: 2894 RVA: 0x000397A4 File Offset: 0x000379A4
 	public TsTaskSwitchFsmState(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskSwitchFsmState.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000B49 RID: 2889 RVA: 0x000385E7 File Offset: 0x000367E7
+	// Token: 0x06000B4F RID: 2895 RVA: 0x000397D7 File Offset: 0x000379D7
 	protected TsTaskSwitchFsmState(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000B4A RID: 2890 RVA: 0x000385F0 File Offset: 0x000367F0
+	// Token: 0x06000B50 RID: 2896 RVA: 0x000397E0 File Offset: 0x000379E0
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -111,19 +108,19 @@ public class TsTaskSwitchFsmState : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		this.ReceiveTickAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x040008CD RID: 2253
+	// Token: 0x040008D5 RID: 2261
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskSwitchFsmState.TsTaskSwitchFsmState_C";
 
-	// Token: 0x040008CE RID: 2254
+	// Token: 0x040008D6 RID: 2262
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040008CF RID: 2255
+	// Token: 0x040008D7 RID: 2263
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040008D0 RID: 2256
+	// Token: 0x040008D8 RID: 2264
 	private static int __PropertyOffset_States;
 
-	// Token: 0x040008D1 RID: 2257
+	// Token: 0x040008D9 RID: 2265
 	[Nullable(new byte[]
 	{
 		2,

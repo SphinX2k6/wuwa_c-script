@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073DC RID: 29660
+	// Token: 0x02007BC6 RID: 31686
 	public struct ITimeLimitOptionGroupBaseStyle : IFlatbufferObject
 	{
-		// Token: 0x1700E152 RID: 57682
-		// (get) Token: 0x06035E1F RID: 220703 RVA: 0x00755813 File Offset: 0x00753A13
+		// Token: 0x1700ED67 RID: 60775
+		// (get) Token: 0x060391D2 RID: 233938 RVA: 0x007B7F87 File Offset: 0x007B6187
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035E20 RID: 220704 RVA: 0x00755820 File Offset: 0x00753A20
+		// Token: 0x060391D3 RID: 233939 RVA: 0x007B7F94 File Offset: 0x007B6194
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035E21 RID: 220705 RVA: 0x00755828 File Offset: 0x00753A28
+		// Token: 0x060391D4 RID: 233940 RVA: 0x007B7F9C File Offset: 0x007B619C
 		public static ITimeLimitOptionGroupBaseStyle GetRootAsITimeLimitOptionGroupBaseStyle(ByteBuffer _bb)
 		{
 			return ITimeLimitOptionGroupBaseStyle.GetRootAsITimeLimitOptionGroupBaseStyle(_bb, default(ITimeLimitOptionGroupBaseStyle));
 		}
 
-		// Token: 0x06035E22 RID: 220706 RVA: 0x00755844 File Offset: 0x00753A44
+		// Token: 0x060391D5 RID: 233941 RVA: 0x007B7FB8 File Offset: 0x007B61B8
 		public static ITimeLimitOptionGroupBaseStyle GetRootAsITimeLimitOptionGroupBaseStyle(ByteBuffer _bb, ITimeLimitOptionGroupBaseStyle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035E23 RID: 220707 RVA: 0x00755861 File Offset: 0x00753A61
+		// Token: 0x060391D6 RID: 233942 RVA: 0x007B7FD5 File Offset: 0x007B61D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035E24 RID: 220708 RVA: 0x00755870 File Offset: 0x00753A70
+		// Token: 0x060391D7 RID: 233943 RVA: 0x007B7FE4 File Offset: 0x007B61E4
 		public ITimeLimitOptionGroupBaseStyle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E153 RID: 57683
-		// (get) Token: 0x06035E25 RID: 220709 RVA: 0x00755880 File Offset: 0x00753A80
+		// Token: 0x1700ED68 RID: 60776
+		// (get) Token: 0x060391D8 RID: 233944 RVA: 0x007B7FF4 File Offset: 0x007B61F4
 		public ETimeLimitOptionGroupStyle Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035E26 RID: 220710 RVA: 0x007558BC File Offset: 0x00753ABC
+		// Token: 0x060391D9 RID: 233945 RVA: 0x007B8030 File Offset: 0x007B6230
 		public static Offset<ITimeLimitOptionGroupBaseStyle> CreateITimeLimitOptionGroupBaseStyle(FlatBufferBuilder builder, ETimeLimitOptionGroupStyle Type = ETimeLimitOptionGroupStyle.Default)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITimeLimitOptionGroupBaseStyle.EndITimeLimitOptionGroupBaseStyle(builder);
 		}
 
-		// Token: 0x06035E27 RID: 220711 RVA: 0x007558D2 File Offset: 0x00753AD2
+		// Token: 0x060391DA RID: 233946 RVA: 0x007B8046 File Offset: 0x007B6246
 		public static void StartITimeLimitOptionGroupBaseStyle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06035E28 RID: 220712 RVA: 0x007558DB File Offset: 0x00753ADB
+		// Token: 0x060391DB RID: 233947 RVA: 0x007B804F File Offset: 0x007B624F
 		public static void AddType(FlatBufferBuilder builder, ETimeLimitOptionGroupStyle type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035E29 RID: 220713 RVA: 0x007558E6 File Offset: 0x00753AE6
+		// Token: 0x060391DC RID: 233948 RVA: 0x007B805A File Offset: 0x007B625A
 		public static Offset<ITimeLimitOptionGroupBaseStyle> EndITimeLimitOptionGroupBaseStyle(FlatBufferBuilder builder)
 		{
 			return new Offset<ITimeLimitOptionGroupBaseStyle>(builder.EndTable());
 		}
 
-		// Token: 0x06035E2A RID: 220714 RVA: 0x007558F4 File Offset: 0x00753AF4
+		// Token: 0x060391DD RID: 233949 RVA: 0x007B8068 File Offset: 0x007B6268
 		public ITimeLimitOptionGroupBaseStyleT UnPack()
 		{
 			ITimeLimitOptionGroupBaseStyleT timeLimitOptionGroupBaseStyleT = new ITimeLimitOptionGroupBaseStyleT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return timeLimitOptionGroupBaseStyleT;
 		}
 
-		// Token: 0x06035E2B RID: 220715 RVA: 0x0075590F File Offset: 0x00753B0F
+		// Token: 0x060391DE RID: 233950 RVA: 0x007B8083 File Offset: 0x007B6283
 		public void UnPackTo(ITimeLimitOptionGroupBaseStyleT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06035E2C RID: 220716 RVA: 0x00755920 File Offset: 0x00753B20
+		// Token: 0x060391DF RID: 233951 RVA: 0x007B8094 File Offset: 0x007B6294
 		public static Offset<ITimeLimitOptionGroupBaseStyle> Pack(FlatBufferBuilder builder, ITimeLimitOptionGroupBaseStyleT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITimeLimitOptionGroupBaseStyle.CreateITimeLimitOptionGroupBaseStyle(builder, _o.Type);
 		}
 
-		// Token: 0x04012231 RID: 74289
+		// Token: 0x0401324D RID: 78413
 		private Table __p;
 	}
 }

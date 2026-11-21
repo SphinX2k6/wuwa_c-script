@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027E8 RID: 10216
+	// Token: 0x02002ABB RID: 10939
 	public class IGameplayPose1Interact : ILeisureInteractType
 	{
-		// Token: 0x0600E2FE RID: 58110 RVA: 0x00217E0F File Offset: 0x0021600F
-		[NullableContext(1)]
+		// Token: 0x0600F123 RID: 61731 RVA: 0x00234C72 File Offset: 0x00232E72
 		public static IGameplayPose1Interact Create(IGameplayPose1Interact? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044F0 RID: 17648
-		// (get) Token: 0x0600E2FF RID: 58111 RVA: 0x00217E2E File Offset: 0x0021602E
+		// Token: 0x1700485B RID: 18523
+		// (get) Token: 0x0600F124 RID: 61732 RVA: 0x00234C91 File Offset: 0x00232E91
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DCC RID: 32204
+		// Token: 0x04008489 RID: 33929
 		private IGameplayPose1Interact Instance;
 	}
 }

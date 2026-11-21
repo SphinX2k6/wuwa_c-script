@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DF9 RID: 24057
+	// Token: 0x02004DDE RID: 19934
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SpecialEnergyBarQianXiaoSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D27C RID: 250492 RVA: 0x00EBA554 File Offset: 0x00EB8754
+		// Token: 0x0603220B RID: 205323 RVA: 0x00E0BAA0 File Offset: 0x00E09CA0
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BarPercent = curPercent;
 		}
 
-		// Token: 0x0603D27D RID: 250493 RVA: 0x00EBA6F0 File Offset: 0x00EB88F0
+		// Token: 0x0603220C RID: 205324 RVA: 0x00E0BC3C File Offset: 0x00E09E3C
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D27E RID: 250494 RVA: 0x00EBA800 File Offset: 0x00EB8A00
+		// Token: 0x0603220D RID: 205325 RVA: 0x00E0BD4C File Offset: 0x00E09F4C
 		public void SetState(SpecialEnergyBarQianXiaoSlot.ESlotState state)
 		{
 			if (this.State == state)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CanPlayChangeEffect = true;
 		}
 
-		// Token: 0x0603D27F RID: 250495 RVA: 0x00EBA8EC File Offset: 0x00EB8AEC
+		// Token: 0x0603220E RID: 205326 RVA: 0x00E0BE38 File Offset: 0x00E0A038
 		public void SetFullEffectEnable(bool enable)
 		{
 			if (this.FullEffectEnable == enable)
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D280 RID: 250496 RVA: 0x00EBA921 File Offset: 0x00EB8B21
+		// Token: 0x0603220F RID: 205327 RVA: 0x00E0BE6D File Offset: 0x00E0A06D
 		[NullableContext(1)]
 		public void SetPointItem(UUIItem pointItem)
 		{
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PointItemLocation = pointItem.RelativeLocation;
 		}
 
-		// Token: 0x0603D281 RID: 250497 RVA: 0x00EBA936 File Offset: 0x00EB8B36
+		// Token: 0x06032210 RID: 205328 RVA: 0x00E0BE82 File Offset: 0x00E0A082
 		[NullableContext(1)]
 		public void SetGearItem(UUIItem gearItem)
 		{
@@ -189,14 +189,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.GearItemLocation = gearItem.RelativeLocation;
 		}
 
-		// Token: 0x0603D282 RID: 250498 RVA: 0x00EBA94B File Offset: 0x00EB8B4B
+		// Token: 0x06032211 RID: 205329 RVA: 0x00E0BE97 File Offset: 0x00E0A097
 		[NullableContext(1)]
 		public void SetGearRollbackCurve(UCurveFloat curve)
 		{
 			this.GearRollbackCurve = curve;
 		}
 
-		// Token: 0x0603D283 RID: 250499 RVA: 0x00EBA954 File Offset: 0x00EB8B54
+		// Token: 0x06032212 RID: 205330 RVA: 0x00E0BEA0 File Offset: 0x00E0A0A0
 		public void StopCoolDownState()
 		{
 			if (this.State == SpecialEnergyBarQianXiaoSlot.ESlotState.CoolDown)
@@ -221,81 +221,81 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D284 RID: 250500 RVA: 0x00EBA9C9 File Offset: 0x00EB8BC9
+		// Token: 0x06032213 RID: 205331 RVA: 0x00E0BF15 File Offset: 0x00E0A115
 		public bool IsInSlotState(SpecialEnergyBarQianXiaoSlot.ESlotState state)
 		{
 			return this.State == state;
 		}
 
-		// Token: 0x0401FE16 RID: 130582
+		// Token: 0x0401A8DD RID: 108765
 		private const int START_LOCATION_X = -181;
 
-		// Token: 0x0401FE17 RID: 130583
+		// Token: 0x0401A8DE RID: 108766
 		private const int END_LOCATION_X = 187;
 
-		// Token: 0x0401FE18 RID: 130584
+		// Token: 0x0401A8DF RID: 108767
 		private const int GEAR_ROLLBACK_DURATION = 300;
 
-		// Token: 0x0401FE19 RID: 130585
+		// Token: 0x0401A8E0 RID: 108768
 		private const double GLOW_EFFECT_DURATION = 1000.0;
 
-		// Token: 0x0401FE1A RID: 130586
+		// Token: 0x0401A8E1 RID: 108769
 		public UUIItem PointItem;
 
-		// Token: 0x0401FE1B RID: 130587
+		// Token: 0x0401A8E2 RID: 108770
 		public UUIItem GearItem;
 
-		// Token: 0x0401FE1C RID: 130588
+		// Token: 0x0401A8E3 RID: 108771
 		public UUIItem GlowItem;
 
-		// Token: 0x0401FE1D RID: 130589
+		// Token: 0x0401A8E4 RID: 108772
 		public UUISliderComponent GlowSlider;
 
-		// Token: 0x0401FE1E RID: 130590
+		// Token: 0x0401A8E5 RID: 108773
 		public UCurveFloat GearRollbackCurve;
 
-		// Token: 0x0401FE1F RID: 130591
+		// Token: 0x0401A8E6 RID: 108774
 		public bool FullEffectEnable;
 
-		// Token: 0x0401FE20 RID: 130592
+		// Token: 0x0401A8E7 RID: 108775
 		private SpecialEnergyBarQianXiaoSlot.ESlotState State;
 
-		// Token: 0x0401FE21 RID: 130593
+		// Token: 0x0401A8E8 RID: 108776
 		private int GearRollbackTime;
 
-		// Token: 0x0401FE22 RID: 130594
+		// Token: 0x0401A8E9 RID: 108777
 		private double GlowEffectFinishTime;
 
-		// Token: 0x0401FE23 RID: 130595
+		// Token: 0x0401A8EA RID: 108778
 		private bool CanPlayChangeEffect = true;
 
-		// Token: 0x0401FE24 RID: 130596
+		// Token: 0x0401A8EB RID: 108779
 		private bool MarkEmpty;
 
-		// Token: 0x0401FE25 RID: 130597
+		// Token: 0x0401A8EC RID: 108780
 		private bool MarkFull;
 
-		// Token: 0x0401FE26 RID: 130598
+		// Token: 0x0401A8ED RID: 108781
 		private FVector PointItemLocation;
 
-		// Token: 0x0401FE27 RID: 130599
+		// Token: 0x0401A8EE RID: 108782
 		private FVector GearItemLocation;
 
-		// Token: 0x0401FE28 RID: 130600
+		// Token: 0x0401A8EF RID: 108783
 		private float GearItemStartX;
 
-		// Token: 0x0401FE29 RID: 130601
+		// Token: 0x0401A8F0 RID: 108784
 		private float BarPercent;
 
-		// Token: 0x0200C140 RID: 49472
+		// Token: 0x0200AB4F RID: 43855
 		[NullableContext(0)]
 		public enum ESlotState
 		{
-			// Token: 0x0403A5E9 RID: 239081
+			// Token: 0x04034FDB RID: 217051
 			Normal,
-			// Token: 0x0403A5EA RID: 239082
+			// Token: 0x04034FDC RID: 217052
 			Special,
-			// Token: 0x0403A5EB RID: 239083
+			// Token: 0x04034FDD RID: 217053
 			CoolDown
 		}
 	}

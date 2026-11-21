@@ -1,36 +1,36 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003039 RID: 12345
+// Token: 0x0200258F RID: 9615
 [NullableContext(2)]
 [Nullable(0)]
 internal class ActionQueueEntry
 {
-	// Token: 0x0400C71B RID: 50971
+	// Token: 0x0400CAF4 RID: 51956
 	public EPerformMode Mode;
 
-	// Token: 0x0400C71C RID: 50972
+	// Token: 0x0400CAF5 RID: 51957
 	public EPerformAction ActionType;
 
-	// Token: 0x0400C71D RID: 50973
+	// Token: 0x0400CAF6 RID: 51958
 	[Nullable(1)]
 	public IActionParamMap Param;
 
-	// Token: 0x0400C71E RID: 50974
+	// Token: 0x0400CAF7 RID: 51959
 	public Action<int> OnBeforeExecute;
 
-	// Token: 0x0400C71F RID: 50975
+	// Token: 0x0400CAF8 RID: 51960
 	public Action<int> OnAfterExecute;
 
-	// Token: 0x0400C720 RID: 50976
+	// Token: 0x0400CAF9 RID: 51961
 	public bool Persistent;
 
-	// Token: 0x0400C721 RID: 50977
+	// Token: 0x0400CAFA RID: 51962
 	public EPerformGroup Group;
 
-	// Token: 0x0400C722 RID: 50978
+	// Token: 0x0400CAFB RID: 51963
 	public int LoadId;
 
-	// Token: 0x0400C723 RID: 50979
+	// Token: 0x0400CAFC RID: 51964
 	public bool Loaded;
 }

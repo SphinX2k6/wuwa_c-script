@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x02005941 RID: 22849
+	// Token: 0x0200491A RID: 18714
 	public interface IHonamiStoryPollution
 	{
-		// Token: 0x17008AFE RID: 35582
-		// (get) Token: 0x0603A00D RID: 237581
-		// (set) Token: 0x0603A00E RID: 237582
+		// Token: 0x17005ECA RID: 24266
+		// (get) Token: 0x0602EF30 RID: 192304
+		// (set) Token: 0x0602EF31 RID: 192305
 		int PollutionLevel { get; set; }
 
-		// Token: 0x17008AFF RID: 35583
-		// (get) Token: 0x0603A00F RID: 237583
-		// (set) Token: 0x0603A010 RID: 237584
+		// Token: 0x17005ECB RID: 24267
+		// (get) Token: 0x0602EF32 RID: 192306
+		// (set) Token: 0x0602EF33 RID: 192307
 		int PersistMilliseconds { get; set; }
 
-		// Token: 0x17008B00 RID: 35584
-		// (get) Token: 0x0603A011 RID: 237585
-		// (set) Token: 0x0603A012 RID: 237586
+		// Token: 0x17005ECC RID: 24268
+		// (get) Token: 0x0602EF34 RID: 192308
+		// (set) Token: 0x0602EF35 RID: 192309
 		int MonsterEnhanceLevel { get; set; }
 	}
 }

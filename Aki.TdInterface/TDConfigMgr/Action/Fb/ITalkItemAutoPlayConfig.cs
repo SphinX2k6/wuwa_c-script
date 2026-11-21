@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200252D RID: 9517
+	// Token: 0x020027D4 RID: 10196
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITalkItemAutoPlayConfig
 	{
-		// Token: 0x0600D42B RID: 54315 RVA: 0x001F6A82 File Offset: 0x001F4C82
-		[NullableContext(1)]
+		// Token: 0x0600E18B RID: 57739 RVA: 0x002124E2 File Offset: 0x002106E2
+		[NullableContext(0)]
 		public static ITalkItemAutoPlayConfig Create(ITalkItemAutoPlayConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B93 RID: 15251
-		// (get) Token: 0x0600D42C RID: 54316 RVA: 0x001F6AA1 File Offset: 0x001F4CA1
+		// Token: 0x17003E91 RID: 16017
+		// (get) Token: 0x0600E18C RID: 57740 RVA: 0x00212501 File Offset: 0x00210701
 		public virtual ITalkItemDisableAutoSelectOptionGroup DisableAutoSelectOptionGroup
 		{
 			get
@@ -39,13 +39,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007437 RID: 29751
+		// Token: 0x04007A8C RID: 31372
 		private ITalkItemAutoPlayConfig Instance;
 
-		// Token: 0x04007438 RID: 29752
+		// Token: 0x04007A8D RID: 31373
 		private ITalkItemDisableAutoSelectOptionGroup _DisableAutoSelectOptionGroupCache;
 
-		// Token: 0x04007439 RID: 29753
+		// Token: 0x04007A8E RID: 31374
 		private bool _DisableAutoSelectOptionGroupInited;
 	}
 }

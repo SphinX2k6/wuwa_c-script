@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.LevelGamePlay;
 
-// Token: 0x020030F1 RID: 12529
+// Token: 0x02002649 RID: 9801
 [NullableContext(2)]
 [Nullable(0)]
 public class PatrolRecord
 {
-	// Token: 0x0601AD95 RID: 109973 RVA: 0x00740F37 File Offset: 0x0073F137
+	// Token: 0x060187B6 RID: 100278 RVA: 0x007668DB File Offset: 0x00764ADB
 	[NullableContext(1)]
 	public PatrolRecord(IPatrolParams config)
 	{
@@ -19,19 +19,19 @@ public class PatrolRecord
 		this.OnResetLocationCallback = config.OnResetLocationCallback;
 	}
 
-	// Token: 0x0400CFBD RID: 53181
+	// Token: 0x0400D3AE RID: 54190
 	public bool IsActive;
 
-	// Token: 0x0400CFBE RID: 53182
+	// Token: 0x0400D3AF RID: 54191
 	public EPatrolState PatrolState;
 
-	// Token: 0x0400CFBF RID: 53183
+	// Token: 0x0400D3B0 RID: 54192
 	public int LastPointIndex = -1;
 
-	// Token: 0x0400CFC0 RID: 53184
+	// Token: 0x0400D3B1 RID: 54193
 	public Action<int> OnArrivePointHandle;
 
-	// Token: 0x0400CFC1 RID: 53185
+	// Token: 0x0400D3B2 RID: 54194
 	[Nullable(new byte[]
 	{
 		2,
@@ -40,9 +40,9 @@ public class PatrolRecord
 	})]
 	public Action<IList<ActionInfo>> OnTriggerActionsHandle;
 
-	// Token: 0x0400CFC2 RID: 53186
+	// Token: 0x0400D3B3 RID: 54195
 	public Action<ELevelEventState> OnPatrolEndHandle;
 
-	// Token: 0x0400CFC3 RID: 53187
+	// Token: 0x0400D3B4 RID: 54196
 	public Action OnResetLocationCallback;
 }

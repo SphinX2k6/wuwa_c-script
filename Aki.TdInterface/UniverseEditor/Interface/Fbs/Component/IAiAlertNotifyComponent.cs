@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E71 RID: 20081
+	// Token: 0x02005382 RID: 21378
 	public struct IAiAlertNotifyComponent : IFlatbufferObject
 	{
-		// Token: 0x17008FC6 RID: 36806
-		// (get) Token: 0x0601F8AE RID: 129198 RVA: 0x0046491B File Offset: 0x00462B1B
+		// Token: 0x170096FF RID: 38655
+		// (get) Token: 0x060214F9 RID: 136441 RVA: 0x00498933 File Offset: 0x00496B33
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F8AF RID: 129199 RVA: 0x00464928 File Offset: 0x00462B28
+		// Token: 0x060214FA RID: 136442 RVA: 0x00498940 File Offset: 0x00496B40
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F8B0 RID: 129200 RVA: 0x00464930 File Offset: 0x00462B30
+		// Token: 0x060214FB RID: 136443 RVA: 0x00498948 File Offset: 0x00496B48
 		public static IAiAlertNotifyComponent GetRootAsIAiAlertNotifyComponent(ByteBuffer _bb)
 		{
 			return IAiAlertNotifyComponent.GetRootAsIAiAlertNotifyComponent(_bb, default(IAiAlertNotifyComponent));
 		}
 
-		// Token: 0x0601F8B1 RID: 129201 RVA: 0x0046494C File Offset: 0x00462B4C
+		// Token: 0x060214FC RID: 136444 RVA: 0x00498964 File Offset: 0x00496B64
 		public static IAiAlertNotifyComponent GetRootAsIAiAlertNotifyComponent(ByteBuffer _bb, IAiAlertNotifyComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F8B2 RID: 129202 RVA: 0x00464969 File Offset: 0x00462B69
+		// Token: 0x060214FD RID: 136445 RVA: 0x00498981 File Offset: 0x00496B81
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F8B3 RID: 129203 RVA: 0x00464978 File Offset: 0x00462B78
+		// Token: 0x060214FE RID: 136446 RVA: 0x00498990 File Offset: 0x00496B90
 		public IAiAlertNotifyComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008FC7 RID: 36807
-		// (get) Token: 0x0601F8B4 RID: 129204 RVA: 0x00464988 File Offset: 0x00462B88
+		// Token: 0x17009700 RID: 38656
+		// (get) Token: 0x060214FF RID: 136447 RVA: 0x004989A0 File Offset: 0x00496BA0
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17008FC8 RID: 36808
-		// (get) Token: 0x0601F8B5 RID: 129205 RVA: 0x004649C8 File Offset: 0x00462BC8
+		// Token: 0x17009701 RID: 38657
+		// (get) Token: 0x06021500 RID: 136448 RVA: 0x004989E0 File Offset: 0x00496BE0
 		public IExtraAiAlert? ExtraAiAlert
 		{
 			get
@@ -74,7 +74,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F8B6 RID: 129206 RVA: 0x00464A28 File Offset: 0x00462C28
+		// Token: 0x06021501 RID: 136449 RVA: 0x00498A40 File Offset: 0x00496C40
 		public int ExcludeEntities(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -85,8 +85,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17008FC9 RID: 36809
-		// (get) Token: 0x0601F8B7 RID: 129207 RVA: 0x00464A68 File Offset: 0x00462C68
+		// Token: 0x17009702 RID: 38658
+		// (get) Token: 0x06021502 RID: 136450 RVA: 0x00498A80 File Offset: 0x00496C80
 		public int ExcludeEntitiesLength
 		{
 			get
@@ -100,20 +100,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F8B8 RID: 129208 RVA: 0x00464A93 File Offset: 0x00462C93
+		// Token: 0x06021503 RID: 136451 RVA: 0x00498AAB File Offset: 0x00496CAB
 		public Span<int> GetExcludeEntitiesBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0601F8B9 RID: 129209 RVA: 0x00464AA2 File Offset: 0x00462CA2
+		// Token: 0x06021504 RID: 136452 RVA: 0x00498ABA File Offset: 0x00496CBA
 		public int[] GetExcludeEntitiesArray()
 		{
 			return this.__p.__vector_as_array<int>(8);
 		}
 
-		// Token: 0x17008FCA RID: 36810
-		// (get) Token: 0x0601F8BA RID: 129210 RVA: 0x00464AB0 File Offset: 0x00462CB0
+		// Token: 0x17009703 RID: 38659
+		// (get) Token: 0x06021505 RID: 136453 RVA: 0x00498AC8 File Offset: 0x00496CC8
 		public string AlertSound
 		{
 			get
@@ -127,20 +127,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F8BB RID: 129211 RVA: 0x00464AE8 File Offset: 0x00462CE8
+		// Token: 0x06021506 RID: 136454 RVA: 0x00498B00 File Offset: 0x00496D00
 		public Span<byte> GetAlertSoundBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0601F8BC RID: 129212 RVA: 0x00464AF8 File Offset: 0x00462CF8
+		// Token: 0x06021507 RID: 136455 RVA: 0x00498B10 File Offset: 0x00496D10
 		public byte[] GetAlertSoundArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x17008FCB RID: 36811
-		// (get) Token: 0x0601F8BD RID: 129213 RVA: 0x00464B08 File Offset: 0x00462D08
+		// Token: 0x17009704 RID: 38660
+		// (get) Token: 0x06021508 RID: 136456 RVA: 0x00498B20 File Offset: 0x00496D20
 		public byte NullMask
 		{
 			get
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F8BE RID: 129214 RVA: 0x00464B45 File Offset: 0x00462D45
+		// Token: 0x06021509 RID: 136457 RVA: 0x00498B5D File Offset: 0x00496D5D
 		public static Offset<IAiAlertNotifyComponent> CreateIAiAlertNotifyComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<IExtraAiAlert> ExtraAiAlertOffset = default(Offset<IExtraAiAlert>), VectorOffset ExcludeEntitiesOffset = default(VectorOffset), StringOffset AlertSoundOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -166,31 +166,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAiAlertNotifyComponent.EndIAiAlertNotifyComponent(builder);
 		}
 
-		// Token: 0x0601F8BF RID: 129215 RVA: 0x00464B79 File Offset: 0x00462D79
+		// Token: 0x0602150A RID: 136458 RVA: 0x00498B91 File Offset: 0x00496D91
 		public static void StartIAiAlertNotifyComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601F8C0 RID: 129216 RVA: 0x00464B82 File Offset: 0x00462D82
+		// Token: 0x0602150B RID: 136459 RVA: 0x00498B9A File Offset: 0x00496D9A
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x0601F8C1 RID: 129217 RVA: 0x00464B8D File Offset: 0x00462D8D
+		// Token: 0x0602150C RID: 136460 RVA: 0x00498BA5 File Offset: 0x00496DA5
 		public static void AddExtraAiAlert(FlatBufferBuilder builder, Offset<IExtraAiAlert> extraAiAlertOffset)
 		{
 			builder.AddOffset(1, extraAiAlertOffset.Value, 0);
 		}
 
-		// Token: 0x0601F8C2 RID: 129218 RVA: 0x00464B9D File Offset: 0x00462D9D
+		// Token: 0x0602150D RID: 136461 RVA: 0x00498BB5 File Offset: 0x00496DB5
 		public static void AddExcludeEntities(FlatBufferBuilder builder, VectorOffset excludeEntitiesOffset)
 		{
 			builder.AddOffset(2, excludeEntitiesOffset.Value, 0);
 		}
 
-		// Token: 0x0601F8C3 RID: 129219 RVA: 0x00464BB0 File Offset: 0x00462DB0
+		// Token: 0x0602150E RID: 136462 RVA: 0x00498BC8 File Offset: 0x00496DC8
 		public static VectorOffset CreateExcludeEntitiesVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F8C4 RID: 129220 RVA: 0x00464BE7 File Offset: 0x00462DE7
+		// Token: 0x0602150F RID: 136463 RVA: 0x00498BFF File Offset: 0x00496DFF
 		public static VectorOffset CreateExcludeEntitiesVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -209,7 +209,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F8C5 RID: 129221 RVA: 0x00464C01 File Offset: 0x00462E01
+		// Token: 0x06021510 RID: 136464 RVA: 0x00498C19 File Offset: 0x00496E19
 		public static VectorOffset CreateExcludeEntitiesVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F8C6 RID: 129222 RVA: 0x00464C1F File Offset: 0x00462E1F
+		// Token: 0x06021511 RID: 136465 RVA: 0x00498C37 File Offset: 0x00496E37
 		public static VectorOffset CreateExcludeEntitiesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -225,31 +225,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F8C7 RID: 129223 RVA: 0x00464C38 File Offset: 0x00462E38
+		// Token: 0x06021512 RID: 136466 RVA: 0x00498C50 File Offset: 0x00496E50
 		public static void StartExcludeEntitiesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601F8C8 RID: 129224 RVA: 0x00464C43 File Offset: 0x00462E43
+		// Token: 0x06021513 RID: 136467 RVA: 0x00498C5B File Offset: 0x00496E5B
 		public static void AddAlertSound(FlatBufferBuilder builder, StringOffset alertSoundOffset)
 		{
 			builder.AddOffset(3, alertSoundOffset.Value, 0);
 		}
 
-		// Token: 0x0601F8C9 RID: 129225 RVA: 0x00464C53 File Offset: 0x00462E53
+		// Token: 0x06021514 RID: 136468 RVA: 0x00498C6B File Offset: 0x00496E6B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0601F8CA RID: 129226 RVA: 0x00464C5E File Offset: 0x00462E5E
+		// Token: 0x06021515 RID: 136469 RVA: 0x00498C76 File Offset: 0x00496E76
 		public static Offset<IAiAlertNotifyComponent> EndIAiAlertNotifyComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IAiAlertNotifyComponent>(builder.EndTable());
 		}
 
-		// Token: 0x0601F8CB RID: 129227 RVA: 0x00464C6C File Offset: 0x00462E6C
+		// Token: 0x06021516 RID: 136470 RVA: 0x00498C84 File Offset: 0x00496E84
 		public IAiAlertNotifyComponentT UnPack()
 		{
 			IAiAlertNotifyComponentT aiAlertNotifyComponentT = new IAiAlertNotifyComponentT();
@@ -257,7 +257,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return aiAlertNotifyComponentT;
 		}
 
-		// Token: 0x0601F8CC RID: 129228 RVA: 0x00464C88 File Offset: 0x00462E88
+		// Token: 0x06021517 RID: 136471 RVA: 0x00498CA0 File Offset: 0x00496EA0
 		public void UnPackTo(IAiAlertNotifyComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -271,7 +271,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601F8CD RID: 129229 RVA: 0x00464D18 File Offset: 0x00462F18
+		// Token: 0x06021518 RID: 136472 RVA: 0x00498D30 File Offset: 0x00496F30
 		public static Offset<IAiAlertNotifyComponent> Pack(FlatBufferBuilder builder, IAiAlertNotifyComponentT _o)
 		{
 			if (_o == null)
@@ -289,7 +289,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAiAlertNotifyComponent.CreateIAiAlertNotifyComponent(builder, _o.Disabled, extraAiAlertOffset, excludeEntitiesOffset, alertSoundOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400DC1E RID: 56350
+		// Token: 0x0400E798 RID: 59288
 		private Table __p;
 	}
 }

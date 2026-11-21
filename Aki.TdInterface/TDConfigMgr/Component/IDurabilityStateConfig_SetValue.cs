@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002D8 RID: 728
+	// Token: 0x0200031F RID: 799
 	public class IDurabilityStateConfig_SetValue
 	{
-		// Token: 0x04000C74 RID: 3188
+		// Token: 0x04000D5E RID: 3422
 		public bool? NonDestructable;
 
-		// Token: 0x04000C75 RID: 3189
-		[Nullable(1)]
+		// Token: 0x04000D5F RID: 3423
 		public List<IDurabilityState> DurabilityStates;
 	}
 }

@@ -9,17 +9,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x020039F9 RID: 14841
+	// Token: 0x02003050 RID: 12368
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 当触发对策事件时 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F16A RID: 127338 RVA: 0x008AA31A File Offset: 0x008A851A
+		// Token: 0x0601D5CB RID: 120267 RVA: 0x008F297A File Offset: 0x008F0B7A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 当触发对策事件时.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F16B RID: 127339 RVA: 0x008AA326 File Offset: 0x008A8526
+		// Token: 0x0601D5CC RID: 120268 RVA: 0x008F2986 File Offset: 0x008F0B86
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__当触发对策事件时__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -29,32 +29,31 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__当触发对策事件时__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F16C RID: 127340 RVA: 0x008AA349 File Offset: 0x008A8549
+		// Token: 0x0601D5CD RID: 120269 RVA: 0x008F29A9 File Offset: 0x008F0BA9
 		public 当触发对策事件时()
 		{
 		}
 
-		// Token: 0x0601F16D RID: 127341 RVA: 0x008AA351 File Offset: 0x008A8551
+		// Token: 0x0601D5CE RID: 120270 RVA: 0x008F29B1 File Offset: 0x008F0BB1
 		[NullableContext(2)]
 		public 当触发对策事件时(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F16E RID: 127342 RVA: 0x008AA35B File Offset: 0x008A855B
+		// Token: 0x0601D5CF RID: 120271 RVA: 0x008F29BB File Offset: 0x008F0BBB
 		public 当触发对策事件时(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F16F RID: 127343 RVA: 0x008AA366 File Offset: 0x008A8566
+		// Token: 0x0601D5D0 RID: 120272 RVA: 0x008F29C6 File Offset: 0x008F0BC6
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int, SHitInformation>) ?? ((Action<int, SHitInformation>)Delegate.CreateDelegate(typeof(Action<int, SHitInformation>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F170 RID: 127344 RVA: 0x008AA398 File Offset: 0x008A8598
+		// Token: 0x0601D5D1 RID: 120273 RVA: 0x008F29F8 File Offset: 0x008F0BF8
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<int, SHitInformation> Callback)
 		{
 			if (当触发对策事件时.RegisterId == 0)
@@ -69,18 +68,16 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, 当触发对策事件时.RegisterId);
 		}
 
-		// Token: 0x0601F171 RID: 127345 RVA: 0x008AA3D2 File Offset: 0x008A85D2
+		// Token: 0x0601D5D2 RID: 120274 RVA: 0x008F2A32 File Offset: 0x008F0C32
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<int, SHitInformation> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F172 RID: 127346 RVA: 0x008AA3DC File Offset: 0x008A85DC
+		// Token: 0x0601D5D3 RID: 120275 RVA: 0x008F2A3C File Offset: 0x008F0C3C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int 对策事件ID, SHitInformation 受击数据)
 		{
 			当触发对策事件时.__当触发对策事件时_DelegateParams* ptr = stackalloc 当触发对策事件时.__当触发对策事件时_DelegateParams[(UIntPtr)2295] + 15L / (long)sizeof(当触发对策事件时.__当触发对策事件时_DelegateParams) & -16L;
@@ -94,10 +91,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_EventManager_C.__当触发对策事件时__DelegateSignature_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F173 RID: 127347 RVA: 0x008AA450 File Offset: 0x008A8650
+		// Token: 0x0601D5D4 RID: 120276 RVA: 0x008F2AB0 File Offset: 0x008F0CB0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, SHitInformation> action = target as Action<int, SHitInformation>;
@@ -109,32 +105,32 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(((当触发对策事件时.__当触发对策事件时_DelegateParams*)__Parameters)->对策事件ID, arg);
 		}
 
-		// Token: 0x0400EE34 RID: 60980
+		// Token: 0x0400F75C RID: 63324
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:当触发对策事件时__DelegateSignature";
 
-		// Token: 0x0400EE35 RID: 60981
+		// Token: 0x0400F75D RID: 63325
 		private static int RegisterId;
 
-		// Token: 0x020099FF RID: 39423
+		// Token: 0x02008CB3 RID: 36019
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 2280)]
-		protected ref struct __当触发对策事件时_DelegateParams
+		private ref struct __当触发对策事件时_DelegateParams
 		{
-			// Token: 0x04030ED9 RID: 200409
+			// Token: 0x0402C7B9 RID: 182201
 			[FieldOffset(0)]
 			public int 对策事件ID;
 
-			// Token: 0x04030EDA RID: 200410
+			// Token: 0x0402C7BA RID: 182202
 			[FieldOffset(8)]
 			public byte 受击数据;
 		}
 
-		// Token: 0x02009A00 RID: 39424
+		// Token: 0x02008CB4 RID: 36020
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030EDB RID: 200411
+			// Token: 0x0402C7BB RID: 182203
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

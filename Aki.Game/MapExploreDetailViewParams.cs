@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02001AC8 RID: 6856
+// Token: 0x02000F87 RID: 3975
 public class MapExploreDetailViewParams
 {
-	// Token: 0x04005D91 RID: 23953
+	// Token: 0x04005E60 RID: 24160
 	public int AreaId;
 
-	// Token: 0x04005D92 RID: 23954
+	// Token: 0x04005E61 RID: 24161
 	public EExploreType? ExploreType;
 }

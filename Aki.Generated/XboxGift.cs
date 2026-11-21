@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011AD RID: 4525
+	// Token: 0x020012E3 RID: 4835
 	public struct XboxGift : IFlatbufferObject
 	{
-		// Token: 0x17003E9F RID: 16031
-		// (get) Token: 0x0600E9A3 RID: 59811 RVA: 0x003468CC File Offset: 0x00344ACC
+		// Token: 0x17004204 RID: 16900
+		// (get) Token: 0x0600F714 RID: 63252 RVA: 0x00371558 File Offset: 0x0036F758
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E9A4 RID: 59812 RVA: 0x003468D9 File Offset: 0x00344AD9
+		// Token: 0x0600F715 RID: 63253 RVA: 0x00371565 File Offset: 0x0036F765
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E9A5 RID: 59813 RVA: 0x003468E0 File Offset: 0x00344AE0
+		// Token: 0x0600F716 RID: 63254 RVA: 0x0037156C File Offset: 0x0036F76C
 		public static XboxGift GetRootAsXboxGift(ByteBuffer _bb)
 		{
 			return XboxGift.GetRootAsXboxGift(_bb, default(XboxGift));
 		}
 
-		// Token: 0x0600E9A6 RID: 59814 RVA: 0x003468FC File Offset: 0x00344AFC
+		// Token: 0x0600F717 RID: 63255 RVA: 0x00371588 File Offset: 0x0036F788
 		public static XboxGift GetRootAsXboxGift(ByteBuffer _bb, XboxGift obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E9A7 RID: 59815 RVA: 0x00346919 File Offset: 0x00344B19
+		// Token: 0x0600F718 RID: 63256 RVA: 0x003715A5 File Offset: 0x0036F7A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E9A8 RID: 59816 RVA: 0x00346928 File Offset: 0x00344B28
+		// Token: 0x0600F719 RID: 63257 RVA: 0x003715B4 File Offset: 0x0036F7B4
 		public XboxGift __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003EA0 RID: 16032
-		// (get) Token: 0x0600E9A9 RID: 59817 RVA: 0x00346938 File Offset: 0x00344B38
+		// Token: 0x17004205 RID: 16901
+		// (get) Token: 0x0600F71A RID: 63258 RVA: 0x003715C4 File Offset: 0x0036F7C4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003EA1 RID: 16033
-		// (get) Token: 0x0600E9AA RID: 59818 RVA: 0x00346974 File Offset: 0x00344B74
+		// Token: 0x17004206 RID: 16902
+		// (get) Token: 0x0600F71B RID: 63259 RVA: 0x00371600 File Offset: 0x0036F800
 		public int Type
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003EA2 RID: 16034
-		// (get) Token: 0x0600E9AB RID: 59819 RVA: 0x003469B0 File Offset: 0x00344BB0
+		// Token: 0x17004207 RID: 16903
+		// (get) Token: 0x0600F71C RID: 63260 RVA: 0x0037163C File Offset: 0x0036F83C
 		public int Content
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003EA3 RID: 16035
-		// (get) Token: 0x0600E9AC RID: 59820 RVA: 0x003469EC File Offset: 0x00344BEC
+		// Token: 0x17004208 RID: 16904
+		// (get) Token: 0x0600F71D RID: 63261 RVA: 0x00371678 File Offset: 0x0036F878
 		public int MailId
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x040052FA RID: 21242
+		// Token: 0x0400593D RID: 22845
 		private Table __p;
 	}
 }

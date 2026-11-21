@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001416 RID: 5142
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200156D RID: 5485
 	public class IStuckCheckCondition
 	{
-		// Token: 0x060074DD RID: 29917 RVA: 0x001174DD File Offset: 0x001156DD
+		// Token: 0x06007B9E RID: 31646 RVA: 0x00125EC1 File Offset: 0x001240C1
 		public static IStuckCheckCondition Create(IStuckCheckCondition? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002684 RID: 9860
-		// (get) Token: 0x060074DE RID: 29918 RVA: 0x001174FC File Offset: 0x001156FC
+		// Token: 0x17002866 RID: 10342
+		// (get) Token: 0x06007B9F RID: 31647 RVA: 0x00125EE0 File Offset: 0x001240E0
 		public virtual List<int> RangeEntities
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002685 RID: 9861
-		// (get) Token: 0x060074DF RID: 29919 RVA: 0x00117560 File Offset: 0x00115760
+		// Token: 0x17002867 RID: 10343
+		// (get) Token: 0x06007BA0 RID: 31648 RVA: 0x00125F44 File Offset: 0x00124144
 		public virtual float TriggerInterval
 		{
 			get
@@ -56,8 +54,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002686 RID: 9862
-		// (get) Token: 0x060074E0 RID: 29920 RVA: 0x0011756D File Offset: 0x0011576D
+		// Token: 0x17002868 RID: 10344
+		// (get) Token: 0x06007BA1 RID: 31649 RVA: 0x00125F51 File Offset: 0x00124151
 		public virtual int MaxTriggerTimes
 		{
 			get
@@ -66,8 +64,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002687 RID: 9863
-		// (get) Token: 0x060074E1 RID: 29921 RVA: 0x0011757A File Offset: 0x0011577A
+		// Token: 0x17002869 RID: 10345
+		// (get) Token: 0x06007BA2 RID: 31650 RVA: 0x00125F5E File Offset: 0x0012415E
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -82,8 +80,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002688 RID: 9864
-		// (get) Token: 0x060074E2 RID: 29922 RVA: 0x001175B0 File Offset: 0x001157B0
+		// Token: 0x1700286A RID: 10346
+		// (get) Token: 0x06007BA3 RID: 31651 RVA: 0x00125F94 File Offset: 0x00124194
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -103,26 +101,26 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040043A8 RID: 17320
+		// Token: 0x04004739 RID: 18233
 		private IStuckCheckCondition Instance;
 
-		// Token: 0x040043A9 RID: 17321
+		// Token: 0x0400473A RID: 18234
 		private List<int> _RangeEntitiesCache;
 
-		// Token: 0x040043AA RID: 17322
+		// Token: 0x0400473B RID: 18235
 		private bool _RangeEntitiesInited;
 
-		// Token: 0x040043AB RID: 17323
+		// Token: 0x0400473C RID: 18236
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x040043AC RID: 17324
+		// Token: 0x0400473D RID: 18237
 		private bool _ConditionInited;
 
-		// Token: 0x040043AD RID: 17325
+		// Token: 0x0400473E RID: 18238
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x040043AE RID: 17326
+		// Token: 0x0400473F RID: 18239
 		private bool _ActionsInited;
 	}
 }

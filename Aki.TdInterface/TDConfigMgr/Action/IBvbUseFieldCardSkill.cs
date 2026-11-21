@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001836 RID: 6198
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019C1 RID: 6593
 	public class IBvbUseFieldCardSkill : IBvbPlayerOperationType
 	{
-		// Token: 0x06008501 RID: 34049 RVA: 0x0013C814 File Offset: 0x0013AA14
+		// Token: 0x06008C27 RID: 35879 RVA: 0x0014C008 File Offset: 0x0014A208
 		private IBvbUseFieldCardSkill_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008502 RID: 34050 RVA: 0x0013C84C File Offset: 0x0013AA4C
+		// Token: 0x06008C28 RID: 35880 RVA: 0x0014C040 File Offset: 0x0014A240
 		public static IBvbUseFieldCardSkill Create([Nullable(2)] IBvbUseFieldCardSkill instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008503 RID: 34051 RVA: 0x0013C85F File Offset: 0x0013AA5F
+		// Token: 0x06008C29 RID: 35881 RVA: 0x0014C053 File Offset: 0x0014A253
 		public static IBvbUseFieldCardSkill CreateFromSetValue([Nullable(2)] IBvbUseFieldCardSkill_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008504 RID: 34052 RVA: 0x0013C872 File Offset: 0x0013AA72
+		// Token: 0x06008C2A RID: 35882 RVA: 0x0014C066 File Offset: 0x0014A266
 		public new IBvbUseFieldCardSkill_SetValue ToSetValue()
 		{
 			return new IBvbUseFieldCardSkill_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B84 RID: 11140
-		// (get) Token: 0x06008505 RID: 34053 RVA: 0x0013C885 File Offset: 0x0013AA85
-		// (set) Token: 0x06008506 RID: 34054 RVA: 0x0013C8B0 File Offset: 0x0013AAB0
+		// Token: 0x17002D7E RID: 11646
+		// (get) Token: 0x06008C2B RID: 35883 RVA: 0x0014C079 File Offset: 0x0014A279
+		// (set) Token: 0x06008C2C RID: 35884 RVA: 0x0014C0A4 File Offset: 0x0014A2A4
 		public override EBvbPlayerOperationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005411 RID: 21521
+		// Token: 0x0400585D RID: 22621
 		[Nullable(2)]
 		protected new IBvbUseFieldCardSkill FbInstance;
 
-		// Token: 0x04005412 RID: 21522
+		// Token: 0x0400585E RID: 22622
 		[Nullable(2)]
 		protected new IBvbUseFieldCardSkill_SetValue PocoInterface;
 	}

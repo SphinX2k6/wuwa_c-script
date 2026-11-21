@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006237 RID: 25143
+	// Token: 0x020068A8 RID: 26792
 	public class IBuyGoodsT
 	{
-		// Token: 0x1700BB5A RID: 47962
-		// (get) Token: 0x0602B580 RID: 177536 RVA: 0x005F7C64 File Offset: 0x005F5E64
-		// (set) Token: 0x0602B581 RID: 177537 RVA: 0x005F7C6C File Offset: 0x005F5E6C
+		// Token: 0x1700C4E2 RID: 50402
+		// (get) Token: 0x0602DCE1 RID: 187617 RVA: 0x00642A6C File Offset: 0x00640C6C
+		// (set) Token: 0x0602DCE2 RID: 187618 RVA: 0x00642A74 File Offset: 0x00640C74
 		public ESystemFunction Type { get; set; }
 
-		// Token: 0x1700BB5B RID: 47963
-		// (get) Token: 0x0602B582 RID: 177538 RVA: 0x005F7C75 File Offset: 0x005F5E75
-		// (set) Token: 0x0602B583 RID: 177539 RVA: 0x005F7C7D File Offset: 0x005F5E7D
+		// Token: 0x1700C4E3 RID: 50403
+		// (get) Token: 0x0602DCE3 RID: 187619 RVA: 0x00642A7D File Offset: 0x00640C7D
+		// (set) Token: 0x0602DCE4 RID: 187620 RVA: 0x00642A85 File Offset: 0x00640C85
 		public int GoodsId { get; set; }
 
-		// Token: 0x0602B584 RID: 177540 RVA: 0x005F7C86 File Offset: 0x005F5E86
+		// Token: 0x0602DCE5 RID: 187621 RVA: 0x00642A8E File Offset: 0x00640C8E
 		public IBuyGoodsT()
 		{
 			this.Type = ESystemFunction.BuyGoods;

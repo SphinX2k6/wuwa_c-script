@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000ED6 RID: 3798
+	// Token: 0x02000FBB RID: 4027
 	public struct PhantomBattleMasterLevel : IFlatbufferObject
 	{
-		// Token: 0x17002664 RID: 9828
-		// (get) Token: 0x0600A784 RID: 42884 RVA: 0x002B0C9A File Offset: 0x002AEE9A
+		// Token: 0x170026CA RID: 9930
+		// (get) Token: 0x0600ADA5 RID: 44453 RVA: 0x002CDD5A File Offset: 0x002CBF5A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A785 RID: 42885 RVA: 0x002B0CA7 File Offset: 0x002AEEA7
+		// Token: 0x0600ADA6 RID: 44454 RVA: 0x002CDD67 File Offset: 0x002CBF67
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A786 RID: 42886 RVA: 0x002B0CB0 File Offset: 0x002AEEB0
+		// Token: 0x0600ADA7 RID: 44455 RVA: 0x002CDD70 File Offset: 0x002CBF70
 		public static PhantomBattleMasterLevel GetRootAsPhantomBattleMasterLevel(ByteBuffer _bb)
 		{
 			return PhantomBattleMasterLevel.GetRootAsPhantomBattleMasterLevel(_bb, default(PhantomBattleMasterLevel));
 		}
 
-		// Token: 0x0600A787 RID: 42887 RVA: 0x002B0CCC File Offset: 0x002AEECC
+		// Token: 0x0600ADA8 RID: 44456 RVA: 0x002CDD8C File Offset: 0x002CBF8C
 		public static PhantomBattleMasterLevel GetRootAsPhantomBattleMasterLevel(ByteBuffer _bb, PhantomBattleMasterLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A788 RID: 42888 RVA: 0x002B0CE9 File Offset: 0x002AEEE9
+		// Token: 0x0600ADA9 RID: 44457 RVA: 0x002CDDA9 File Offset: 0x002CBFA9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A789 RID: 42889 RVA: 0x002B0CF8 File Offset: 0x002AEEF8
+		// Token: 0x0600ADAA RID: 44458 RVA: 0x002CDDB8 File Offset: 0x002CBFB8
 		public PhantomBattleMasterLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002665 RID: 9829
-		// (get) Token: 0x0600A78A RID: 42890 RVA: 0x002B0D08 File Offset: 0x002AEF08
+		// Token: 0x170026CB RID: 9931
+		// (get) Token: 0x0600ADAB RID: 44459 RVA: 0x002CDDC8 File Offset: 0x002CBFC8
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002666 RID: 9830
-		// (get) Token: 0x0600A78B RID: 42891 RVA: 0x002B0D44 File Offset: 0x002AEF44
+		// Token: 0x170026CC RID: 9932
+		// (get) Token: 0x0600ADAC RID: 44460 RVA: 0x002CDE04 File Offset: 0x002CC004
 		public int Level
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002667 RID: 9831
-		// (get) Token: 0x0600A78C RID: 42892 RVA: 0x002B0D80 File Offset: 0x002AEF80
+		// Token: 0x170026CD RID: 9933
+		// (get) Token: 0x0600ADAD RID: 44461 RVA: 0x002CDE40 File Offset: 0x002CC040
 		public int ActivityId
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002668 RID: 9832
-		// (get) Token: 0x0600A78D RID: 42893 RVA: 0x002B0DBC File Offset: 0x002AEFBC
+		// Token: 0x170026CE RID: 9934
+		// (get) Token: 0x0600ADAE RID: 44462 RVA: 0x002CDE7C File Offset: 0x002CC07C
 		public int Exp
 		{
 			get
@@ -110,8 +110,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002669 RID: 9833
-		// (get) Token: 0x0600A78E RID: 42894 RVA: 0x002B0DFC File Offset: 0x002AEFFC
+		// Token: 0x170026CF RID: 9935
+		// (get) Token: 0x0600ADAF RID: 44463 RVA: 0x002CDEBC File Offset: 0x002CC0BC
 		public int ExpNext
 		{
 			get
@@ -125,8 +125,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700266A RID: 9834
-		// (get) Token: 0x0600A78F RID: 42895 RVA: 0x002B0E3C File Offset: 0x002AF03C
+		// Token: 0x170026D0 RID: 9936
+		// (get) Token: 0x0600ADB0 RID: 44464 RVA: 0x002CDEFC File Offset: 0x002CC0FC
 		public int ExpNeed
 		{
 			get
@@ -140,8 +140,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700266B RID: 9835
-		// (get) Token: 0x0600A790 RID: 42896 RVA: 0x002B0E7C File Offset: 0x002AF07C
+		// Token: 0x170026D1 RID: 9937
+		// (get) Token: 0x0600ADB1 RID: 44465 RVA: 0x002CDF3C File Offset: 0x002CC13C
 		public int UnlockDropId
 		{
 			get
@@ -155,8 +155,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700266C RID: 9836
-		// (get) Token: 0x0600A791 RID: 42897 RVA: 0x002B0EBC File Offset: 0x002AF0BC
+		// Token: 0x170026D2 RID: 9938
+		// (get) Token: 0x0600ADB2 RID: 44466 RVA: 0x002CDF7C File Offset: 0x002CC17C
 		public int NormalDropId
 		{
 			get
@@ -170,8 +170,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700266D RID: 9837
-		// (get) Token: 0x0600A792 RID: 42898 RVA: 0x002B0EFC File Offset: 0x002AF0FC
+		// Token: 0x170026D3 RID: 9939
+		// (get) Token: 0x0600ADB3 RID: 44467 RVA: 0x002CDFBC File Offset: 0x002CC1BC
 		public int TitleId
 		{
 			get
@@ -185,7 +185,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A793 RID: 42899 RVA: 0x002B0F3C File Offset: 0x002AF13C
+		// Token: 0x0600ADB4 RID: 44468 RVA: 0x002CDFFC File Offset: 0x002CC1FC
 		public string Desc(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -196,8 +196,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700266E RID: 9838
-		// (get) Token: 0x0600A794 RID: 42900 RVA: 0x002B0F78 File Offset: 0x002AF178
+		// Token: 0x170026D4 RID: 9940
+		// (get) Token: 0x0600ADB5 RID: 44469 RVA: 0x002CE038 File Offset: 0x002CC238
 		public int DescLength
 		{
 			get
@@ -211,24 +211,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A795 RID: 42901 RVA: 0x002B0FA4 File Offset: 0x002AF1A4
+		// Token: 0x0600ADB6 RID: 44470 RVA: 0x002CE064 File Offset: 0x002CC264
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DescIter()或GetDescBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] Desc()
+		public string[] Desc()
 		{
 			return this.DescIter().ToArray<string>();
 		}
 
-		// Token: 0x0600A796 RID: 42902 RVA: 0x002B0FB1 File Offset: 0x002AF1B1
+		// Token: 0x0600ADB7 RID: 44471 RVA: 0x002CE071 File Offset: 0x002CC271
 		[NullableContext(1)]
-		public readonly IEnumerable<string> DescIter()
+		public IEnumerable<string> DescIter()
 		{
 			PhantomBattleMasterLevel.<DescIter>d__30 <DescIter>d__ = new PhantomBattleMasterLevel.<DescIter>d__30(-2);
 			<DescIter>d__.<>3__<>4__this = this;
 			return <DescIter>d__;
 		}
 
-		// Token: 0x04004F94 RID: 20372
+		// Token: 0x04005579 RID: 21881
 		private Table __p;
 	}
 }

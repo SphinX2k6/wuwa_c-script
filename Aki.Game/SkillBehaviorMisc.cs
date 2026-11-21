@@ -5,18 +5,18 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02003153 RID: 12627
+// Token: 0x020026C0 RID: 9920
 [NullableContext(1)]
 [Nullable(0)]
 public class SkillBehaviorMisc : IStaticVariableResetter
 {
-	// Token: 0x0601B2DA RID: 111322 RVA: 0x00767AA2 File Offset: 0x00765CA2
+	// Token: 0x06018DDF RID: 101855 RVA: 0x0078F46E File Offset: 0x0078D66E
 	static SkillBehaviorMisc()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SkillBehaviorMisc.CreateStaticDefaultValue), new Action(SkillBehaviorMisc.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601B2DB RID: 111323 RVA: 0x00767AD7 File Offset: 0x00765CD7
+	// Token: 0x06018DE0 RID: 101856 RVA: 0x0078F4A3 File Offset: 0x0078D6A3
 	public static List<EndSkillBehaviorParam> GetEndSkillBehaviorParamList(Skill skill)
 	{
 		if (!SkillBehaviorMisc.ParamMap.ContainsKey(skill))
@@ -26,14 +26,14 @@ public class SkillBehaviorMisc : IStaticVariableResetter
 		return SkillBehaviorMisc.ParamMap[skill];
 	}
 
-	// Token: 0x0601B2DC RID: 111324 RVA: 0x00767B01 File Offset: 0x00765D01
+	// Token: 0x06018DE1 RID: 101857 RVA: 0x0078F4CD File Offset: 0x0078D6CD
 	[NullableContext(0)]
 	public static ValueTuple<FVectorDouble, FVectorDouble> GetLocationAndDirection([Nullable(1)] AActor actor)
 	{
 		return new ValueTuple<FVectorDouble, FVectorDouble>(actor.D_K2_GetActorLocation(), actor.D_GetActorForwardVector());
 	}
 
-	// Token: 0x0601B2DD RID: 111325 RVA: 0x00767B14 File Offset: 0x00765D14
+	// Token: 0x06018DE2 RID: 101858 RVA: 0x0078F4E0 File Offset: 0x0078D6E0
 	private static void SetupLineTrace(UTraceLineElement lineTrace, FLinearColor traceColor, FLinearColor hitColor, object queryType)
 	{
 		lineTrace.bIsSingle = true;
@@ -53,7 +53,7 @@ public class SkillBehaviorMisc : IStaticVariableResetter
 		lineTrace.SetTraceTypeQuery((ETraceTypeQuery)queryType);
 	}
 
-	// Token: 0x0601B2DE RID: 111326 RVA: 0x00767B8C File Offset: 0x00765D8C
+	// Token: 0x06018DE3 RID: 101859 RVA: 0x0078F558 File Offset: 0x0078D758
 	private static UTraceLineElement GetLineTrace(AActor myActor, bool draw, SkillBehaviorMisc.ETraceType type)
 	{
 		UTraceLineElement utraceLineElement = null;
@@ -95,7 +95,7 @@ public class SkillBehaviorMisc : IStaticVariableResetter
 		return utraceLineElement;
 	}
 
-	// Token: 0x0601B2DF RID: 111327 RVA: 0x00767C40 File Offset: 0x00765E40
+	// Token: 0x06018DE4 RID: 101860 RVA: 0x0078F60C File Offset: 0x0078D80C
 	private static void Backward(float distance, Vector start, Vector end, Vector @out)
 	{
 		Vector vector = Vector.Create();
@@ -105,7 +105,7 @@ public class SkillBehaviorMisc : IStaticVariableResetter
 		@out.Subtraction(vector, @out);
 	}
 
-	// Token: 0x0601B2E0 RID: 111328 RVA: 0x00767C80 File Offset: 0x00765E80
+	// Token: 0x06018DE5 RID: 101861 RVA: 0x0078F64C File Offset: 0x0078D84C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -132,7 +132,7 @@ public class SkillBehaviorMisc : IStaticVariableResetter
 		return new ValueTuple<UKuroHitResult, Vector>?(new ValueTuple<UKuroHitResult, Vector>(hitResult, end));
 	}
 
-	// Token: 0x0601B2E1 RID: 111329 RVA: 0x00767D24 File Offset: 0x00765F24
+	// Token: 0x06018DE6 RID: 101862 RVA: 0x0078F6F0 File Offset: 0x0078D8F0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -154,7 +154,7 @@ public class SkillBehaviorMisc : IStaticVariableResetter
 		return new ValueTuple<bool, Vector>(false, null);
 	}
 
-	// Token: 0x0601B2E2 RID: 111330 RVA: 0x00767D9C File Offset: 0x00765F9C
+	// Token: 0x06018DE7 RID: 101863 RVA: 0x0078F768 File Offset: 0x0078D968
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -203,7 +203,7 @@ public class SkillBehaviorMisc : IStaticVariableResetter
 		return new ValueTuple<bool, Vector>(true, vector3);
 	}
 
-	// Token: 0x0601B2E3 RID: 111331 RVA: 0x00767F34 File Offset: 0x00766134
+	// Token: 0x06018DE8 RID: 101864 RVA: 0x0078F900 File Offset: 0x0078DB00
 	public static bool Compare(ESkillBehaviorComparisonLogic logic, float lValue, float rValue, float lRange, float rRange)
 	{
 		switch (logic)
@@ -225,13 +225,13 @@ public class SkillBehaviorMisc : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B2E4 RID: 111332 RVA: 0x00767F90 File Offset: 0x00766190
+	// Token: 0x06018DE9 RID: 101865 RVA: 0x0078F95C File Offset: 0x0078DB5C
 	public static void CreateStaticDefaultValue()
 	{
 		SkillBehaviorMisc.ParamMap = new Dictionary<Skill, List<EndSkillBehaviorParam>>();
 	}
 
-	// Token: 0x0601B2E5 RID: 111333 RVA: 0x00767F9C File Offset: 0x0076619C
+	// Token: 0x06018DEA RID: 101866 RVA: 0x0078F968 File Offset: 0x0078DB68
 	public static void ResetStaticDefaultValue()
 	{
 		SkillBehaviorMisc.ParamMap = null;
@@ -239,7 +239,7 @@ public class SkillBehaviorMisc : IStaticVariableResetter
 		SkillBehaviorMisc._lineTraceWater = null;
 	}
 
-	// Token: 0x0400D384 RID: 54148
+	// Token: 0x0400D7E7 RID: 55271
 	[StaticVariableRuleIgnore]
 	public static readonly int[] Angles = new int[]
 	{
@@ -249,33 +249,33 @@ public class SkillBehaviorMisc : IStaticVariableResetter
 		180
 	};
 
-	// Token: 0x0400D385 RID: 54149
+	// Token: 0x0400D7E8 RID: 55272
 	public static Dictionary<Skill, List<EndSkillBehaviorParam>> ParamMap;
 
-	// Token: 0x0400D386 RID: 54150
+	// Token: 0x0400D7E9 RID: 55273
 	public const string CONTEXT = "SkillBehaviorAction.SetLocation";
 
-	// Token: 0x0400D387 RID: 54151
+	// Token: 0x0400D7EA RID: 55274
 	private const float DELTA_HEIGHT = 2500f;
 
-	// Token: 0x0400D388 RID: 54152
+	// Token: 0x0400D7EB RID: 55275
 	private const float WATER_DETECT_HEIGHT = 500f;
 
-	// Token: 0x0400D389 RID: 54153
+	// Token: 0x0400D7EC RID: 55276
 	[Nullable(2)]
 	private static UTraceLineElement _lineTraceStatic;
 
-	// Token: 0x0400D38A RID: 54154
+	// Token: 0x0400D7ED RID: 55277
 	[Nullable(2)]
 	private static UTraceLineElement _lineTraceWater;
 
-	// Token: 0x020096B7 RID: 38583
+	// Token: 0x020088DD RID: 35037
 	[NullableContext(0)]
 	private enum ETraceType
 	{
-		// Token: 0x040304F0 RID: 197872
+		// Token: 0x0402BB85 RID: 179077
 		Static,
-		// Token: 0x040304F1 RID: 197873
+		// Token: 0x0402BB86 RID: 179078
 		Water
 	}
 }

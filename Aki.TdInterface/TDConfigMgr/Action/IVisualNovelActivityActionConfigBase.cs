@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002055 RID: 8277
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200229E RID: 8862
 	public class IVisualNovelActivityActionConfigBase
 	{
-		// Token: 0x0600B5E6 RID: 46566 RVA: 0x001A610C File Offset: 0x001A430C
+		// Token: 0x0600C10C RID: 49420 RVA: 0x001BC878 File Offset: 0x001BAA78
 		private IVisualNovelActivityActionConfigBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B5E7 RID: 46567 RVA: 0x001A6144 File Offset: 0x001A4344
+		// Token: 0x0600C10D RID: 49421 RVA: 0x001BC8B0 File Offset: 0x001BAAB0
 		public static IVisualNovelActivityActionConfigBase Create([Nullable(2)] IVisualNovelActivityActionConfigBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B5E8 RID: 46568 RVA: 0x001A6157 File Offset: 0x001A4357
+		// Token: 0x0600C10E RID: 49422 RVA: 0x001BC8C3 File Offset: 0x001BAAC3
 		public static IVisualNovelActivityActionConfigBase CreateFromSetValue([Nullable(2)] IVisualNovelActivityActionConfigBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B5E9 RID: 46569 RVA: 0x001A616A File Offset: 0x001A436A
+		// Token: 0x0600C10F RID: 49423 RVA: 0x001BC8D6 File Offset: 0x001BAAD6
 		public IVisualNovelActivityActionConfigBase_SetValue ToSetValue()
 		{
 			return new IVisualNovelActivityActionConfigBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037CC RID: 14284
-		// (get) Token: 0x0600B5EA RID: 46570 RVA: 0x001A617D File Offset: 0x001A437D
-		// (set) Token: 0x0600B5EB RID: 46571 RVA: 0x001A61A8 File Offset: 0x001A43A8
+		// Token: 0x17003AA9 RID: 15017
+		// (get) Token: 0x0600C110 RID: 49424 RVA: 0x001BC8E9 File Offset: 0x001BAAE9
+		// (set) Token: 0x0600C111 RID: 49425 RVA: 0x001BC914 File Offset: 0x001BAB14
 		public virtual EVisualNovelSubType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D5D RID: 27997
+		// Token: 0x04007366 RID: 29542
 		[Nullable(2)]
 		protected IVisualNovelActivityActionConfigBase FbInstance;
 
-		// Token: 0x04006D5E RID: 27998
+		// Token: 0x04007367 RID: 29543
 		[Nullable(2)]
 		protected IVisualNovelActivityActionConfigBase_SetValue PocoInterface;
 	}

@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AFA RID: 19194
+	// Token: 0x02004FD5 RID: 20437
 	public class ICheckPlayerRelativeAngleT
 	{
-		// Token: 0x17008B34 RID: 35636
-		// (get) Token: 0x0601E2C1 RID: 123585 RVA: 0x0043B3D0 File Offset: 0x004395D0
-		// (set) Token: 0x0601E2C2 RID: 123586 RVA: 0x0043B3D8 File Offset: 0x004395D8
+		// Token: 0x17009235 RID: 37429
+		// (get) Token: 0x0601FE02 RID: 130562 RVA: 0x0046D47C File Offset: 0x0046B67C
+		// (set) Token: 0x0601FE03 RID: 130563 RVA: 0x0046D484 File Offset: 0x0046B684
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008B35 RID: 35637
-		// (get) Token: 0x0601E2C3 RID: 123587 RVA: 0x0043B3E1 File Offset: 0x004395E1
-		// (set) Token: 0x0601E2C4 RID: 123588 RVA: 0x0043B3E9 File Offset: 0x004395E9
+		// Token: 0x17009236 RID: 37430
+		// (get) Token: 0x0601FE04 RID: 130564 RVA: 0x0046D48D File Offset: 0x0046B68D
+		// (set) Token: 0x0601FE05 RID: 130565 RVA: 0x0046D495 File Offset: 0x0046B695
 		public int TargetEntityId { get; set; }
 
-		// Token: 0x17008B36 RID: 35638
-		// (get) Token: 0x0601E2C5 RID: 123589 RVA: 0x0043B3F2 File Offset: 0x004395F2
-		// (set) Token: 0x0601E2C6 RID: 123590 RVA: 0x0043B3FA File Offset: 0x004395FA
+		// Token: 0x17009237 RID: 37431
+		// (get) Token: 0x0601FE06 RID: 130566 RVA: 0x0046D49E File Offset: 0x0046B69E
+		// (set) Token: 0x0601FE07 RID: 130567 RVA: 0x0046D4A6 File Offset: 0x0046B6A6
 		public IVectorInfoT BaseVector { get; set; }
 
-		// Token: 0x17008B37 RID: 35639
-		// (get) Token: 0x0601E2C7 RID: 123591 RVA: 0x0043B403 File Offset: 0x00439603
-		// (set) Token: 0x0601E2C8 RID: 123592 RVA: 0x0043B40B File Offset: 0x0043960B
+		// Token: 0x17009238 RID: 37432
+		// (get) Token: 0x0601FE08 RID: 130568 RVA: 0x0046D4AF File Offset: 0x0046B6AF
+		// (set) Token: 0x0601FE09 RID: 130569 RVA: 0x0046D4B7 File Offset: 0x0046B6B7
 		public EVectorSpace BaseVectorSpace { get; set; }
 
-		// Token: 0x17008B38 RID: 35640
-		// (get) Token: 0x0601E2C9 RID: 123593 RVA: 0x0043B414 File Offset: 0x00439614
-		// (set) Token: 0x0601E2CA RID: 123594 RVA: 0x0043B41C File Offset: 0x0043961C
+		// Token: 0x17009239 RID: 37433
+		// (get) Token: 0x0601FE0A RID: 130570 RVA: 0x0046D4C0 File Offset: 0x0046B6C0
+		// (set) Token: 0x0601FE0B RID: 130571 RVA: 0x0046D4C8 File Offset: 0x0046B6C8
 		public List<IAngleRangeT> ValidAngleRanges { get; set; }
 
-		// Token: 0x17008B39 RID: 35641
-		// (get) Token: 0x0601E2CB RID: 123595 RVA: 0x0043B425 File Offset: 0x00439625
-		// (set) Token: 0x0601E2CC RID: 123596 RVA: 0x0043B42D File Offset: 0x0043962D
+		// Token: 0x1700923A RID: 37434
+		// (get) Token: 0x0601FE0C RID: 130572 RVA: 0x0046D4D1 File Offset: 0x0046B6D1
+		// (set) Token: 0x0601FE0D RID: 130573 RVA: 0x0046D4D9 File Offset: 0x0046B6D9
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601E2CD RID: 123597 RVA: 0x0043B436 File Offset: 0x00439636
+		// Token: 0x0601FE0E RID: 130574 RVA: 0x0046D4E2 File Offset: 0x0046B6E2
 		public ICheckPlayerRelativeAngleT()
 		{
 			this.Type = ECondition.CompareVar;

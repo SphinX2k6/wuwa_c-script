@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D4C RID: 19788
+	// Token: 0x02003D15 RID: 15637
 	public interface IRoleDevelopProjectWeaponRecommendListItemData
 	{
-		// Token: 0x17007E56 RID: 32342
-		// (get) Token: 0x06033204 RID: 209412
-		// (set) Token: 0x06033205 RID: 209413
+		// Token: 0x17005206 RID: 20998
+		// (get) Token: 0x06028067 RID: 163943
+		// (set) Token: 0x06028068 RID: 163944
 		int DevelopRoleId { get; set; }
 
-		// Token: 0x17007E57 RID: 32343
-		// (get) Token: 0x06033206 RID: 209414
-		// (set) Token: 0x06033207 RID: 209415
+		// Token: 0x17005207 RID: 20999
+		// (get) Token: 0x06028069 RID: 163945
+		// (set) Token: 0x0602806A RID: 163946
 		int RecommendWeaponId { get; set; }
 
-		// Token: 0x17007E58 RID: 32344
-		// (get) Token: 0x06033208 RID: 209416
-		// (set) Token: 0x06033209 RID: 209417
+		// Token: 0x17005208 RID: 21000
+		// (get) Token: 0x0602806B RID: 163947
+		// (set) Token: 0x0602806C RID: 163948
 		int? LogRoleId { get; set; }
 
-		// Token: 0x17007E59 RID: 32345
-		// (get) Token: 0x0603320A RID: 209418
-		// (set) Token: 0x0603320B RID: 209419
+		// Token: 0x17005209 RID: 21001
+		// (get) Token: 0x0602806D RID: 163949
+		// (set) Token: 0x0602806E RID: 163950
 		ERoleDevelopCategoryType? LogMainPage { get; set; }
 
-		// Token: 0x17007E5A RID: 32346
-		// (get) Token: 0x0603320C RID: 209420
-		// (set) Token: 0x0603320D RID: 209421
+		// Token: 0x1700520A RID: 21002
+		// (get) Token: 0x0602806F RID: 163951
+		// (set) Token: 0x06028070 RID: 163952
 		ERoleDevelopLogSubPage? LogSubPage { get; set; }
 	}
 }

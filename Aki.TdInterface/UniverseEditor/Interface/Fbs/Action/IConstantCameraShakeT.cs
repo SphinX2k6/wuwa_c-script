@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064C6 RID: 25798
+	// Token: 0x02006B31 RID: 27441
 	public class IConstantCameraShakeT
 	{
-		// Token: 0x1700BFFA RID: 49146
-		// (get) Token: 0x0602CBFA RID: 183290 RVA: 0x006269FE File Offset: 0x00624BFE
-		// (set) Token: 0x0602CBFB RID: 183291 RVA: 0x00626A06 File Offset: 0x00624C06
+		// Token: 0x1700C987 RID: 51591
+		// (get) Token: 0x0602F37E RID: 193406 RVA: 0x00672B26 File Offset: 0x00670D26
+		// (set) Token: 0x0602F37F RID: 193407 RVA: 0x00672B2E File Offset: 0x00670D2E
 		public ECameraShakeType Type { get; set; }
 
-		// Token: 0x0602CBFC RID: 183292 RVA: 0x00626A0F File Offset: 0x00624C0F
+		// Token: 0x0602F380 RID: 193408 RVA: 0x00672B37 File Offset: 0x00670D37
 		public IConstantCameraShakeT()
 		{
 			this.Type = ECameraShakeType.Constant;

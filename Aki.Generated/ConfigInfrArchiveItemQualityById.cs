@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000424 RID: 1060
+	// Token: 0x0200043A RID: 1082
 	public class ConfigInfrArchiveItemQualityById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060018E1 RID: 6369 RVA: 0x000E6560 File Offset: 0x000E4760
+		// Token: 0x06001965 RID: 6501 RVA: 0x000ECCB4 File Offset: 0x000EAEB4
 		static ConfigInfrArchiveItemQualityById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfrArchiveItemQualityById.CreateStaticDefaultValue), new Action(ConfigInfrArchiveItemQualityById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060018E2 RID: 6370 RVA: 0x000E6580 File Offset: 0x000E4780
+		// Token: 0x06001966 RID: 6502 RVA: 0x000ECCD4 File Offset: 0x000EAED4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfrArchiveItemQualityById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060018E3 RID: 6371 RVA: 0x000E65FF File Offset: 0x000E47FF
+		// Token: 0x06001967 RID: 6503 RVA: 0x000ECD53 File Offset: 0x000EAF53
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfrArchiveItemQualityById.LogPair = null;
 			ConfigInfrArchiveItemQualityById.HandleId = 0;
 		}
 
-		// Token: 0x060018E4 RID: 6372 RVA: 0x000E660D File Offset: 0x000E480D
+		// Token: 0x06001968 RID: 6504 RVA: 0x000ECD61 File Offset: 0x000EAF61
 		public static void Init()
 		{
 			ConfigInfrArchiveItemQualityById.HandleId = ConfigCommon.InitDataStatement(ConfigInfrArchiveItemQualityById.HandleId, "db_infrastructure.db", "select BinData from `InfrArchiveItemQuality` where Id=?");
 		}
 
-		// Token: 0x060018E5 RID: 6373 RVA: 0x000E6628 File Offset: 0x000E4828
+		// Token: 0x06001969 RID: 6505 RVA: 0x000ECD7C File Offset: 0x000EAF7C
 		public static InfrArchiveItemQuality? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInfrArchiveItemQualityById.HandleId, ConfigInfrArchiveItemQualityById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new InfrArchiveItemQuality?(rootAsInfrArchiveItemQuality);
 		}
 
-		// Token: 0x04001CE0 RID: 7392
+		// Token: 0x04001D7A RID: 7546
 		private const string DB = "db_infrastructure.db";
 
-		// Token: 0x04001CE1 RID: 7393
+		// Token: 0x04001D7B RID: 7547
 		private const string FILE = "j.基建_档案馆.xlsx";
 
-		// Token: 0x04001CE2 RID: 7394
+		// Token: 0x04001D7C RID: 7548
 		private const string TABLE = "InfrArchiveItemQuality";
 
-		// Token: 0x04001CE3 RID: 7395
+		// Token: 0x04001D7D RID: 7549
 		private const string COMMAND = "select BinData from `InfrArchiveItemQuality` where Id=?";
 
-		// Token: 0x04001CE4 RID: 7396
+		// Token: 0x04001D7E RID: 7550
 		private const string KEY_PREFIX = "InfrArchiveItemQualityById";
 
-		// Token: 0x04001CE5 RID: 7397
+		// Token: 0x04001D7F RID: 7551
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001CE6 RID: 7398
+		// Token: 0x04001D80 RID: 7552
 		private static int HandleId;
 	}
 }

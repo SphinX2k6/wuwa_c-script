@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000964 RID: 2404
+	// Token: 0x02000A39 RID: 2617
 	public class ConfigSoundAreaPlayInfoAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600386C RID: 14444 RVA: 0x00198949 File Offset: 0x00196B49
+		// Token: 0x06003D6A RID: 15722 RVA: 0x001B7CDD File Offset: 0x001B5EDD
 		static ConfigSoundAreaPlayInfoAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSoundAreaPlayInfoAll.CreateStaticDefaultValue), new Action(ConfigSoundAreaPlayInfoAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600386D RID: 14445 RVA: 0x00198968 File Offset: 0x00196B68
+		// Token: 0x06003D6B RID: 15723 RVA: 0x001B7CFC File Offset: 0x001B5EFC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSoundAreaPlayInfoAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600386E RID: 14446 RVA: 0x001989E7 File Offset: 0x00196BE7
+		// Token: 0x06003D6C RID: 15724 RVA: 0x001B7D7B File Offset: 0x001B5F7B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSoundAreaPlayInfoAll.LogPair = null;
 			ConfigSoundAreaPlayInfoAll.HandleId = 0;
 		}
 
-		// Token: 0x0600386F RID: 14447 RVA: 0x001989F5 File Offset: 0x00196BF5
+		// Token: 0x06003D6D RID: 15725 RVA: 0x001B7D89 File Offset: 0x001B5F89
 		public static void Init()
 		{
 			ConfigSoundAreaPlayInfoAll.HandleId = ConfigCommon.InitDataStatement(ConfigSoundAreaPlayInfoAll.HandleId, "db_soundareaplayinfo.db", "select BinData from `SoundAreaPlayInfo`");
 		}
 
-		// Token: 0x06003870 RID: 14448 RVA: 0x00198A10 File Offset: 0x00196C10
+		// Token: 0x06003D6E RID: 15726 RVA: 0x001B7DA4 File Offset: 0x001B5FA4
 		[NullableContext(2)]
 		public static IReadOnlyList<SoundAreaPlayInfo> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040041A2 RID: 16802
+		// Token: 0x04004775 RID: 18293
 		private const string DB = "db_soundareaplayinfo.db";
 
-		// Token: 0x040041A3 RID: 16803
+		// Token: 0x04004776 RID: 18294
 		private const string FILE = "w.无音区玩法信息.xlsx";
 
-		// Token: 0x040041A4 RID: 16804
+		// Token: 0x04004777 RID: 18295
 		private const string TABLE = "SoundAreaPlayInfo";
 
-		// Token: 0x040041A5 RID: 16805
+		// Token: 0x04004778 RID: 18296
 		private const string COMMAND = "select BinData from `SoundAreaPlayInfo`";
 
-		// Token: 0x040041A6 RID: 16806
+		// Token: 0x04004779 RID: 18297
 		private const string KEY_PREFIX = "SoundAreaPlayInfoAll";
 
-		// Token: 0x040041A7 RID: 16807
+		// Token: 0x0400477A RID: 18298
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040041A8 RID: 16808
+		// Token: 0x0400477B RID: 18299
 		private static int HandleId;
 	}
 }

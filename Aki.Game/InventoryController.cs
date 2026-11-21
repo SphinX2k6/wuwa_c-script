@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -14,27 +13,27 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 
-// Token: 0x02001FAD RID: 8109
+// Token: 0x0200146F RID: 5231
 [NullableContext(2)]
 [Nullable(0)]
 [Controller(0)]
 public class InventoryController : UiControllerBase
 {
-	// Token: 0x0600FC6C RID: 64620 RVA: 0x003D37CE File Offset: 0x003D19CE
+	// Token: 0x0600D090 RID: 53392 RVA: 0x003DF3AA File Offset: 0x003DD5AA
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<EOperationType, EOperationType>(EEventName.ShowTypeChange, new Action<EOperationType, EOperationType>(this.ShowTypeChange));
 		EventSystem.Instance.Add(EEventName.OnLoadingNetDataDone, new Action(this.OnDataDone));
 	}
 
-	// Token: 0x0600FC6D RID: 64621 RVA: 0x003D3808 File Offset: 0x003D1A08
+	// Token: 0x0600D091 RID: 53393 RVA: 0x003DF3E4 File Offset: 0x003DD5E4
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.ShowTypeChange, new Action<EOperationType, EOperationType>(this.ShowTypeChange));
 		EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.OnDataDone));
 	}
 
-	// Token: 0x0600FC6E RID: 64622 RVA: 0x003D3844 File Offset: 0x003D1A44
+	// Token: 0x0600D092 RID: 53394 RVA: 0x003DF420 File Offset: 0x003DD620
 	protected override void OnRegisterNetEvent()
 	{
 		Net instance = Net.Instance;
@@ -151,7 +150,7 @@ public class InventoryController : UiControllerBase
 		instance14.Register(id14, callback14);
 	}
 
-	// Token: 0x0600FC6F RID: 64623 RVA: 0x003D3AAC File Offset: 0x003D1CAC
+	// Token: 0x0600D093 RID: 53395 RVA: 0x003DF688 File Offset: 0x003DD888
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.NormalItemUpdateNotify);
@@ -170,7 +169,7 @@ public class InventoryController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.BanItemUseNotify);
 	}
 
-	// Token: 0x0600FC70 RID: 64624 RVA: 0x003D3B99 File Offset: 0x003D1D99
+	// Token: 0x0600D094 RID: 53396 RVA: 0x003DF775 File Offset: 0x003DD975
 	protected override void OnAddOpenViewCheckFunction()
 	{
 		UiManager instance = UiManager.Instance;
@@ -183,7 +182,7 @@ public class InventoryController : UiControllerBase
 		instance.AddOpenViewCheckFunction(inventoryView, func, "InventoryController.CanOpenView");
 	}
 
-	// Token: 0x0600FC71 RID: 64625 RVA: 0x003D3BCA File Offset: 0x003D1DCA
+	// Token: 0x0600D095 RID: 53397 RVA: 0x003DF7A6 File Offset: 0x003DD9A6
 	protected override void OnRemoveOpenViewCheckFunction()
 	{
 		UiManager instance = UiManager.Instance;
@@ -196,7 +195,7 @@ public class InventoryController : UiControllerBase
 		instance.RemoveOpenViewCheckFunction(inventoryView, func);
 	}
 
-	// Token: 0x0600FC72 RID: 64626 RVA: 0x003D3BF6 File Offset: 0x003D1DF6
+	// Token: 0x0600D096 RID: 53398 RVA: 0x003DF7D2 File Offset: 0x003DD9D2
 	private void OnDataDone()
 	{
 		this.NormalItemRequest();
@@ -205,7 +204,7 @@ public class InventoryController : UiControllerBase
 		this.ValidTimeItemRequest();
 	}
 
-	// Token: 0x0600FC73 RID: 64627 RVA: 0x003D3C10 File Offset: 0x003D1E10
+	// Token: 0x0600D097 RID: 53399 RVA: 0x003DF7EC File Offset: 0x003DD9EC
 	private void ShowTypeChange(EOperationType last, EOperationType now)
 	{
 		if (UiManager.Instance.IsViewShow(EUiViewName.InventoryView))
@@ -215,7 +214,7 @@ public class InventoryController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600FC74 RID: 64628 RVA: 0x003D3C44 File Offset: 0x003D1E44
+	// Token: 0x0600D098 RID: 53400 RVA: 0x003DF820 File Offset: 0x003DDA20
 	public void ItemLockRequest(int uniqueId, bool bLock)
 	{
 		if (uniqueId <= 0)
@@ -241,7 +240,7 @@ public class InventoryController : UiControllerBase
 			ItemLockResponse itemLockResponse = (ItemLockResponse)msg;
 			if (itemLockResponse.ErrCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(itemLockResponse.ErrCode, 18915, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(itemLockResponse.ErrCode, 22732, null, true, true);
 				return;
 			}
 			if (!bLock)
@@ -260,7 +259,7 @@ public class InventoryController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600FC75 RID: 64629 RVA: 0x003D3CEC File Offset: 0x003D1EEC
+	// Token: 0x0600D099 RID: 53401 RVA: 0x003DF8C8 File Offset: 0x003DDAC8
 	public void ItemDeprecateRequest(int uniqueId, bool isDeprecate)
 	{
 		if (uniqueId <= 0)
@@ -285,7 +284,7 @@ public class InventoryController : UiControllerBase
 			ItemDisuseResponse itemDisuseResponse = (ItemDisuseResponse)msg;
 			if (itemDisuseResponse.ErrCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(itemDisuseResponse.ErrCode, 29774, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(itemDisuseResponse.ErrCode, 28866, null, true, true);
 				return;
 			}
 			if (!isDeprecate)
@@ -302,10 +301,10 @@ public class InventoryController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600FC76 RID: 64630 RVA: 0x003D3D6C File Offset: 0x003D1F6C
-	public void RequestItemUse(int configId, int count)
+	// Token: 0x0600D09A RID: 53402 RVA: 0x003DF948 File Offset: 0x003DDB48
+	public unsafe void RequestItemUse(int configId, int count)
 	{
-		InventoryController.<>c__DisplayClass17_0 CS$<>8__locals1 = new InventoryController.<>c__DisplayClass17_0();
+		InventoryController.<>c__DisplayClass16_0 CS$<>8__locals1 = new InventoryController.<>c__DisplayClass16_0();
 		CS$<>8__locals1.configId = configId;
 		CS$<>8__locals1.count = count;
 		CS$<>8__locals1.itemConfig = InventoryConfig.Instance.GetItemConfig(CS$<>8__locals1.configId).Value;
@@ -317,6 +316,15 @@ public class InventoryController : UiControllerBase
 			{
 				ScrollingTipsController.Instance.ShowTipsByTextId(conditionGroupHintText, Array.Empty<object>());
 			}
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.Inventory;
+			ELogAuthor author = ELogAuthor.CK;
+			string message = "[InventoryController.RequestItemUse] 道具使用被限制条件拦截";
+			<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("configId", CS$<>8__locals1.configId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("conditionGroupId", restrictConditionGroupId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("conditionIds", LevelGeneralCommons.GetReachedConditionIds(restrictConditionGroupId));
+			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 			return;
 		}
 		int skillId;
@@ -331,12 +339,12 @@ public class InventoryController : UiControllerBase
 		}
 		if (CS$<>8__locals1.itemConfig.SpecialItem && !SpecialItemController.Instance.AllowReqUseSpecialItem(CS$<>8__locals1.configId))
 		{
-			Log instance = Log.Instance;
-			ELogModule module = ELogModule.Inventory;
-			ELogAuthor author = ELogAuthor.ZYL;
-			string message = "试图请求使用的特殊道具被禁用";
+			Log instance2 = Log.Instance;
+			ELogModule module2 = ELogModule.Inventory;
+			ELogAuthor author2 = ELogAuthor.ZYL;
+			string message2 = "试图请求使用的特殊道具被禁用";
 			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("configId", CS$<>8__locals1.configId);
-			instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+			instance2.Warn(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			EventSystem.Instance.Emit(EEventName.OnSpecialItemNotAllow);
 			return;
 		}
@@ -348,11 +356,11 @@ public class InventoryController : UiControllerBase
 		InventoryController.StartRequestItemUse(CS$<>8__locals1.configId, CS$<>8__locals1.count, new Action<ErrorCode?>(CS$<>8__locals1.<RequestItemUse>g__onResponse|0));
 	}
 
-	// Token: 0x0600FC77 RID: 64631 RVA: 0x003D3EF0 File Offset: 0x003D20F0
+	// Token: 0x0600D09B RID: 53403 RVA: 0x003DFB54 File Offset: 0x003DDD54
 	[NullableContext(1)]
 	private static void StartRequestItemUse(int configId, int count, Action<ErrorCode?> callBack)
 	{
-		InventoryController.<>c__DisplayClass18_0 CS$<>8__locals1 = new InventoryController.<>c__DisplayClass18_0();
+		InventoryController.<>c__DisplayClass17_0 CS$<>8__locals1 = new InventoryController.<>c__DisplayClass17_0();
 		CS$<>8__locals1.callBack = callBack;
 		ItemUseRequest itemUseRequest = ItemUseRequest.Create();
 		itemUseRequest.ItemId = configId;
@@ -360,7 +368,7 @@ public class InventoryController : UiControllerBase
 		Net.Instance.Call(ERequestMessageId.ItemUseRequest, itemUseRequest, new Action<IMessage, Net.CallbackStatus>(CS$<>8__locals1.<StartRequestItemUse>g__responseItemUse|0), 0);
 	}
 
-	// Token: 0x0600FC78 RID: 64632 RVA: 0x003D3F3C File Offset: 0x003D213C
+	// Token: 0x0600D09C RID: 53404 RVA: 0x003DFBA0 File Offset: 0x003DDDA0
 	private static void InventoryBanItemUseNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		BanItemUseNotify banItemUseNotify = (BanItemUseNotify)msg;
@@ -379,7 +387,7 @@ public class InventoryController : UiControllerBase
 		});
 	}
 
-	// Token: 0x0600FC79 RID: 64633 RVA: 0x003D3FB8 File Offset: 0x003D21B8
+	// Token: 0x0600D09D RID: 53405 RVA: 0x003DFC1C File Offset: 0x003DDE1C
 	public void NormalItemRequest()
 	{
 		NormalItemRequest normalItemRequest = Aki.Protocol.NormalItemRequest.Create();
@@ -394,7 +402,7 @@ public class InventoryController : UiControllerBase
 		instance.Call(requestMessageId, message, handle, 0);
 	}
 
-	// Token: 0x0600FC7A RID: 64634 RVA: 0x003D3FF8 File Offset: 0x003D21F8
+	// Token: 0x0600D09E RID: 53406 RVA: 0x003DFC5C File Offset: 0x003DDE5C
 	private static void NormalItemResponse(IMessage msg, Net.CallbackStatus _)
 	{
 		NormalItemResponse normalItemResponse = (NormalItemResponse)msg;
@@ -417,7 +425,7 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnResponseCommonItemFinished);
 	}
 
-	// Token: 0x0600FC7B RID: 64635 RVA: 0x003D40B0 File Offset: 0x003D22B0
+	// Token: 0x0600D09F RID: 53407 RVA: 0x003DFD14 File Offset: 0x003DDF14
 	private static void NormalItemUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		NormalItemUpdateNotify normalItemUpdateNotify = (NormalItemUpdateNotify)msg;
@@ -461,7 +469,7 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RedDotRefreshItemData);
 	}
 
-	// Token: 0x0600FC7C RID: 64636 RVA: 0x003D41F0 File Offset: 0x003D23F0
+	// Token: 0x0600D0A0 RID: 53408 RVA: 0x003DFE54 File Offset: 0x003DE054
 	private static void NormalItemRemoveNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RepeatedField<int> normalItemIdList = ((NormalItemRemoveNotify)msg).NormalItemIdList;
@@ -483,7 +491,7 @@ public class InventoryController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600FC7D RID: 64637 RVA: 0x003D42BC File Offset: 0x003D24BC
+	// Token: 0x0600D0A1 RID: 53409 RVA: 0x003DFF20 File Offset: 0x003DE120
 	private static void NormalItemAddNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		NormalItemAddNotify normalItemAddNotify = (NormalItemAddNotify)msg;
@@ -524,7 +532,7 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RedDotRefreshItemData);
 	}
 
-	// Token: 0x0600FC7E RID: 64638 RVA: 0x003D4410 File Offset: 0x003D2610
+	// Token: 0x0600D0A2 RID: 53410 RVA: 0x003E0074 File Offset: 0x003DE274
 	public void ValidTimeItemRequest()
 	{
 		ValidTimeItemRequest validTimeItemRequest = Aki.Protocol.ValidTimeItemRequest.Create();
@@ -539,7 +547,7 @@ public class InventoryController : UiControllerBase
 		instance.Call(requestMessageId, message, handle, 0);
 	}
 
-	// Token: 0x0600FC7F RID: 64639 RVA: 0x003D4450 File Offset: 0x003D2650
+	// Token: 0x0600D0A3 RID: 53411 RVA: 0x003E00B4 File Offset: 0x003DE2B4
 	private static void ValidTimeItemResponse(IMessage msg, Net.CallbackStatus _)
 	{
 		ValidTimeItemResponse validTimeItemResponse = (ValidTimeItemResponse)msg;
@@ -563,7 +571,7 @@ public class InventoryController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600FC80 RID: 64640 RVA: 0x003D4504 File Offset: 0x003D2704
+	// Token: 0x0600D0A4 RID: 53412 RVA: 0x003E0168 File Offset: 0x003DE368
 	private static void ValidTimeItemUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RepeatedField<ValidTimeItem> itemList = ((ValidTimeItemUpdateNotify)msg).ItemList;
@@ -595,7 +603,7 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RedDotRefreshItemData);
 	}
 
-	// Token: 0x0600FC81 RID: 64641 RVA: 0x003D4618 File Offset: 0x003D2818
+	// Token: 0x0600D0A5 RID: 53413 RVA: 0x003E027C File Offset: 0x003DE47C
 	private static void ValidTimeItemRemoveNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RepeatedField<RemoveValidTimeItem> itemList = ((ValidTimeItemRemoveNotify)msg).ItemList;
@@ -619,7 +627,7 @@ public class InventoryController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600FC82 RID: 64642 RVA: 0x003D4710 File Offset: 0x003D2910
+	// Token: 0x0600D0A6 RID: 53414 RVA: 0x003E0374 File Offset: 0x003DE574
 	private static void ValidTimeItemAddNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RepeatedField<ValidTimeItem> itemList = ((ValidTimeItemAddNotify)msg).ItemList;
@@ -647,7 +655,7 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RedDotRefreshItemData);
 	}
 
-	// Token: 0x0600FC83 RID: 64643 RVA: 0x003D4820 File Offset: 0x003D2A20
+	// Token: 0x0600D0A7 RID: 53415 RVA: 0x003E0484 File Offset: 0x003DE684
 	public void WeaponItemRequest()
 	{
 		WeaponItemRequest weaponItemRequest = Aki.Protocol.WeaponItemRequest.Create();
@@ -662,7 +670,7 @@ public class InventoryController : UiControllerBase
 		instance.Call(requestMessageId, message, handle, 0);
 	}
 
-	// Token: 0x0600FC84 RID: 64644 RVA: 0x003D4860 File Offset: 0x003D2A60
+	// Token: 0x0600D0A8 RID: 53416 RVA: 0x003E04C4 File Offset: 0x003DE6C4
 	private static void WeaponItemResponse(IMessage msg, Net.CallbackStatus _)
 	{
 		WeaponItemResponse weaponItemResponse = (WeaponItemResponse)msg;
@@ -684,7 +692,7 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnResponseWeaponAll);
 	}
 
-	// Token: 0x0600FC85 RID: 64645 RVA: 0x003D490C File Offset: 0x003D2B0C
+	// Token: 0x0600D0A9 RID: 53417 RVA: 0x003E0570 File Offset: 0x003DE770
 	private static void WeaponItemAddNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		WeaponItemAddNotify weaponItemAddNotify = (WeaponItemAddNotify)msg;
@@ -711,7 +719,7 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RedDotRefreshItemData);
 	}
 
-	// Token: 0x0600FC86 RID: 64646 RVA: 0x003D4A0C File Offset: 0x003D2C0C
+	// Token: 0x0600D0AA RID: 53418 RVA: 0x003E0670 File Offset: 0x003DE870
 	private static void WeaponItemRemoveNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RepeatedField<int> weaponItemIncrIdList = ((WeaponItemRemoveNotify)msg).WeaponItemIncrIdList;
@@ -723,7 +731,7 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit<IReadOnlyList<int>>(EEventName.OnRemoveWeaponItem, weaponItemIncrIdList);
 	}
 
-	// Token: 0x0600FC87 RID: 64647 RVA: 0x003D4A50 File Offset: 0x003D2C50
+	// Token: 0x0600D0AB RID: 53419 RVA: 0x003E06B4 File Offset: 0x003DE8B4
 	public void PhantomItemRequest()
 	{
 		PhantomItemRequest phantomItemRequest = Aki.Protocol.PhantomItemRequest.Create();
@@ -738,7 +746,7 @@ public class InventoryController : UiControllerBase
 		instance.Call(requestMessageId, message, handle, 0);
 	}
 
-	// Token: 0x0600FC88 RID: 64648 RVA: 0x003D4A90 File Offset: 0x003D2C90
+	// Token: 0x0600D0AC RID: 53420 RVA: 0x003E06F4 File Offset: 0x003DE8F4
 	private static void PhantomItemResponse(IMessage msg, Net.CallbackStatus _)
 	{
 		PhantomItemResponse phantomItemResponse = (PhantomItemResponse)msg;
@@ -747,7 +755,9 @@ public class InventoryController : UiControllerBase
 		RepeatedField<int> repeatedField = (phantomItemResponse != null) ? phantomItemResponse.UnlockSkins : null;
 		if (repeatedField != null)
 		{
-			PhantomBattleModel.Instance.SetUnlockSkinList(repeatedField.ToArray<int>());
+			int[] array = new int[repeatedField.Count];
+			repeatedField.CopyTo(array, 0);
+			PhantomBattleModel.Instance.SetUnlockSkinList(array);
 		}
 		InventoryModel instance = InventoryModel.Instance;
 		instance.ClearPhantomItemData();
@@ -777,7 +787,7 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit<PhantomItemResponse>(EEventName.OnEquipPhantomItem, phantomItemResponse);
 	}
 
-	// Token: 0x0600FC89 RID: 64649 RVA: 0x003D4BE8 File Offset: 0x003D2DE8
+	// Token: 0x0600D0AD RID: 53421 RVA: 0x003E085C File Offset: 0x003DEA5C
 	private unsafe static void PhantomItemAddNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		PhantomItemAddNotify phantomItemAddNotify = (PhantomItemAddNotify)msg;
@@ -842,7 +852,7 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RedDotRefreshItemData);
 	}
 
-	// Token: 0x0600FC8A RID: 64650 RVA: 0x003D4DF8 File Offset: 0x003D2FF8
+	// Token: 0x0600D0AE RID: 53422 RVA: 0x003E0A6C File Offset: 0x003DEC6C
 	private static void PhantomItemRemoveNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RepeatedField<int> phantomItemIncrIdList = ((PhantomItemRemoveNotify)msg).PhantomItemIncrIdList;
@@ -853,7 +863,7 @@ public class InventoryController : UiControllerBase
 		InventoryModel.Instance.RemovePhantomItemDataAndNotify(phantomItemIncrIdList, "ItemRemoveNotify");
 	}
 
-	// Token: 0x0600FC8B RID: 64651 RVA: 0x003D4E30 File Offset: 0x003D3030
+	// Token: 0x0600D0AF RID: 53423 RVA: 0x003E0AA4 File Offset: 0x003DECA4
 	[NullableContext(1)]
 	public void ApplyPhantomStackSplitAndMerge([Nullable(new byte[]
 	{
@@ -918,7 +928,7 @@ public class InventoryController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600FC8C RID: 64652 RVA: 0x003D4FBC File Offset: 0x003D31BC
+	// Token: 0x0600D0B0 RID: 53424 RVA: 0x003E0C30 File Offset: 0x003DEE30
 	[NullableContext(1)]
 	public void InitCalabashSkinItemData(int[] skinIdList)
 	{
@@ -931,7 +941,7 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnResponseCommonItemFinished);
 	}
 
-	// Token: 0x0600FC8D RID: 64653 RVA: 0x003D5000 File Offset: 0x003D3200
+	// Token: 0x0600D0B1 RID: 53425 RVA: 0x003E0C74 File Offset: 0x003DEE74
 	[NullableContext(1)]
 	public void AddCalabashSkinItemData(int[] skinIdList)
 	{
@@ -948,7 +958,7 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RedDotRefreshItemData);
 	}
 
-	// Token: 0x0600FC8E RID: 64654 RVA: 0x003D5070 File Offset: 0x003D3270
+	// Token: 0x0600D0B2 RID: 53426 RVA: 0x003E0CE4 File Offset: 0x003DEEE4
 	[NullableContext(1)]
 	public void InitOrnamentItemData(int[] ornamentIdList)
 	{
@@ -960,7 +970,7 @@ public class InventoryController : UiControllerBase
 		instance.RefreshItemRedDotSet();
 	}
 
-	// Token: 0x0600FC8F RID: 64655 RVA: 0x003D50A4 File Offset: 0x003D32A4
+	// Token: 0x0600D0B3 RID: 53427 RVA: 0x003E0D18 File Offset: 0x003DEF18
 	[NullableContext(1)]
 	public void AddOrnamentItemData(int[] ornamentIdList)
 	{
@@ -977,7 +987,7 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RedDotRefreshItemData);
 	}
 
-	// Token: 0x0600FC90 RID: 64656 RVA: 0x003D5114 File Offset: 0x003D3314
+	// Token: 0x0600D0B4 RID: 53428 RVA: 0x003E0D88 File Offset: 0x003DEF88
 	private static void ItemFuncValueUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ItemFuncValueUpdateNotify itemFuncValueUpdateNotify = (ItemFuncValueUpdateNotify)msg;
@@ -992,20 +1002,20 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.OnItemFuncValueChange, incrId);
 	}
 
-	// Token: 0x0600FC91 RID: 64657 RVA: 0x003D5160 File Offset: 0x003D3360
+	// Token: 0x0600D0B5 RID: 53429 RVA: 0x003E0DD4 File Offset: 0x003DEFD4
 	private static void InventoryTabOpenNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ItemPkgOpenNotify itemPkgOpenNotify = (ItemPkgOpenNotify)msg;
-		InventoryModel.Instance.SetInventoryTabOpenIdList(itemPkgOpenNotify.OpenPkg.ToList<int>());
+		InventoryModel.Instance.SetInventoryTabOpenIdList(new List<int>(itemPkgOpenNotify.OpenPkg));
 	}
 
-	// Token: 0x0600FC92 RID: 64658 RVA: 0x003D5189 File Offset: 0x003D3389
+	// Token: 0x0600D0B6 RID: 53430 RVA: 0x003E0DFD File Offset: 0x003DEFFD
 	private static void InventoryFullNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ItemPkgFullNotify itemPkgFullNotify = (ItemPkgFullNotify)msg;
 	}
 
-	// Token: 0x0600FC93 RID: 64659 RVA: 0x003D5192 File Offset: 0x003D3392
+	// Token: 0x0600D0B7 RID: 53431 RVA: 0x003E0E06 File Offset: 0x003DF006
 	[NullableContext(1)]
 	private static bool CanOpenView(EUiViewName viewName, object param)
 	{
@@ -1017,7 +1027,7 @@ public class InventoryController : UiControllerBase
 		return FunctionModel.Instance.IsOpen(10002);
 	}
 
-	// Token: 0x0600FC94 RID: 64660 RVA: 0x003D51D4 File Offset: 0x003D33D4
+	// Token: 0x0600D0B8 RID: 53432 RVA: 0x003E0E48 File Offset: 0x003DF048
 	public void TryOpenPhantomFullConfirmBox(Action cancelFunc = null)
 	{
 		if (this.IsPhantomFullViewShow)
@@ -1038,7 +1048,7 @@ public class InventoryController : UiControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600FC95 RID: 64661 RVA: 0x003D5254 File Offset: 0x003D3454
+	// Token: 0x0600D0B9 RID: 53433 RVA: 0x003E0EC8 File Offset: 0x003DF0C8
 	[NullableContext(1)]
 	public void ItemDestructPreviewRequest(DecomposeItemInfo[] itemList)
 	{
@@ -1053,7 +1063,7 @@ public class InventoryController : UiControllerBase
 			}
 			if (itemDecomposePreviewResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(itemDecomposePreviewResponse.ErrorCode, 16088, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(itemDecomposePreviewResponse.ErrorCode, 16064, null, true, true);
 				return;
 			}
 			List<TItem> list = new List<TItem>();
@@ -1078,7 +1088,7 @@ public class InventoryController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600FC96 RID: 64662 RVA: 0x003D52A4 File Offset: 0x003D34A4
+	// Token: 0x0600D0BA RID: 53434 RVA: 0x003E0F18 File Offset: 0x003DF118
 	[NullableContext(1)]
 	public void ItemDestructRequest(DecomposeItemInfo[] itemList)
 	{
@@ -1093,13 +1103,13 @@ public class InventoryController : UiControllerBase
 			}
 			if (itemDecomposeResponse.ErrCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(itemDecomposeResponse.ErrCode, 23183, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(itemDecomposeResponse.ErrCode, 24230, null, true, true);
 				return;
 			}
 		}, 0);
 	}
 
-	// Token: 0x0600FC97 RID: 64663 RVA: 0x003D52F4 File Offset: 0x003D34F4
+	// Token: 0x0600D0BB RID: 53435 RVA: 0x003E0F68 File Offset: 0x003DF168
 	public void InvalidItemRemoveRequest()
 	{
 		if (this.InvalidItemRemoveRequestLock)
@@ -1127,7 +1137,7 @@ public class InventoryController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600FC98 RID: 64664 RVA: 0x003D5334 File Offset: 0x003D3534
+	// Token: 0x0600D0BC RID: 53436 RVA: 0x003E0FA8 File Offset: 0x003DF1A8
 	public void InvalidItemCheckRequest()
 	{
 		ShowInvalidItemRequest message = ShowInvalidItemRequest.Create();
@@ -1143,7 +1153,7 @@ public class InventoryController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600FC99 RID: 64665 RVA: 0x003D5364 File Offset: 0x003D3564
+	// Token: 0x0600D0BD RID: 53437 RVA: 0x003E0FD8 File Offset: 0x003DF1D8
 	[NullableContext(1)]
 	private void PhraseExpireConvertItem(ShowInvalidItemResponse response)
 	{
@@ -1191,7 +1201,7 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit<IReadOnlyList<TItem>, IReadOnlyList<TItem>>(EEventName.NotifyExpireConvertItem, list, list2);
 	}
 
-	// Token: 0x0600FC9A RID: 64666 RVA: 0x003D5594 File Offset: 0x003D3794
+	// Token: 0x0600D0BE RID: 53438 RVA: 0x003E1208 File Offset: 0x003DF408
 	[NullableContext(1)]
 	private void PhraseInvalidItem(ShowInvalidItemResponse response)
 	{
@@ -1227,40 +1237,38 @@ public class InventoryController : UiControllerBase
 		EventSystem.Instance.Emit<Dictionary<int, int>>(EEventName.NotifyInvalidItem, dictionary2);
 	}
 
-	// Token: 0x0600FC9B RID: 64667 RVA: 0x003D5724 File Offset: 0x003D3924
+	// Token: 0x0600D0BF RID: 53439 RVA: 0x003E1398 File Offset: 0x003DF598
 	public bool TryUseItem(int itemId, int num = 1)
 	{
-		Func<int, int, bool>[] useItemLogicList = this.UseItemLogicList;
-		for (int i = 0; i < useItemLogicList.Length; i++)
+		ItemUseLogicBase itemUseLogicBase = ItemUseLogicModel.Instance.Resolve(itemId);
+		if (itemUseLogicBase != null && itemUseLogicBase.CheckUseCondition(itemId, num))
 		{
-			if (useItemLogicList[i](itemId, num))
-			{
-				return true;
-			}
+			itemUseLogicBase.OnUse(itemId, num);
+			return true;
 		}
-		return false;
+		return ItemUseLogic.TryUseParameterItem(itemId, num);
 	}
 
-	// Token: 0x0600FC9C RID: 64668 RVA: 0x003D5755 File Offset: 0x003D3955
+	// Token: 0x0600D0C0 RID: 53440 RVA: 0x003E13CF File Offset: 0x003DF5CF
 	public bool TryUseGiftItemWithSelectedItem(int giftItemId, int itemId, int num = 1)
 	{
 		return ItemUseLogic.TryUseGiftItemWithSelectedItem(giftItemId, itemId, num);
 	}
 
-	// Token: 0x0600FC9D RID: 64669 RVA: 0x003D5760 File Offset: 0x003D3960
+	// Token: 0x0600D0C1 RID: 53441 RVA: 0x003E13DC File Offset: 0x003DF5DC
 	[NullableContext(0)]
 	public UniTask<bool> PhantomFuncValueBatchRequest([Nullable(1)] int[] uniqueIdList, PhantomBatchOper operate)
 	{
-		InventoryController.<PhantomFuncValueBatchRequest>d__56 <PhantomFuncValueBatchRequest>d__;
+		InventoryController.<PhantomFuncValueBatchRequest>d__55 <PhantomFuncValueBatchRequest>d__;
 		<PhantomFuncValueBatchRequest>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 		<PhantomFuncValueBatchRequest>d__.uniqueIdList = uniqueIdList;
 		<PhantomFuncValueBatchRequest>d__.operate = operate;
 		<PhantomFuncValueBatchRequest>d__.<>1__state = -1;
-		<PhantomFuncValueBatchRequest>d__.<>t__builder.Start<InventoryController.<PhantomFuncValueBatchRequest>d__56>(ref <PhantomFuncValueBatchRequest>d__);
+		<PhantomFuncValueBatchRequest>d__.<>t__builder.Start<InventoryController.<PhantomFuncValueBatchRequest>d__55>(ref <PhantomFuncValueBatchRequest>d__);
 		return <PhantomFuncValueBatchRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FC9E RID: 64670 RVA: 0x003D57AC File Offset: 0x003D39AC
+	// Token: 0x0600D0C2 RID: 53442 RVA: 0x003E1428 File Offset: 0x003DF628
 	public void PhantomManageConfigRequest(Action callback = null)
 	{
 		PhantomSettingRequest message = PhantomSettingRequest.Create();
@@ -1279,42 +1287,42 @@ public class InventoryController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600FC9F RID: 64671 RVA: 0x003D57EC File Offset: 0x003D39EC
+	// Token: 0x0600D0C3 RID: 53443 RVA: 0x003E1468 File Offset: 0x003DF668
 	public UniTask PhantomManageConfigRequestAsync()
 	{
-		InventoryController.<PhantomManageConfigRequestAsync>d__58 <PhantomManageConfigRequestAsync>d__;
+		InventoryController.<PhantomManageConfigRequestAsync>d__57 <PhantomManageConfigRequestAsync>d__;
 		<PhantomManageConfigRequestAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<PhantomManageConfigRequestAsync>d__.<>1__state = -1;
-		<PhantomManageConfigRequestAsync>d__.<>t__builder.Start<InventoryController.<PhantomManageConfigRequestAsync>d__58>(ref <PhantomManageConfigRequestAsync>d__);
+		<PhantomManageConfigRequestAsync>d__.<>t__builder.Start<InventoryController.<PhantomManageConfigRequestAsync>d__57>(ref <PhantomManageConfigRequestAsync>d__);
 		return <PhantomManageConfigRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FCA0 RID: 64672 RVA: 0x003D5828 File Offset: 0x003D3A28
+	// Token: 0x0600D0C4 RID: 53444 RVA: 0x003E14A4 File Offset: 0x003DF6A4
 	[NullableContext(0)]
 	public UniTask<ErrorCode> PhantomManageConfigUpdateRequest(PhantomSettingType type, [Nullable(2)] OnePhantomSetting setting)
 	{
-		InventoryController.<PhantomManageConfigUpdateRequest>d__59 <PhantomManageConfigUpdateRequest>d__;
+		InventoryController.<PhantomManageConfigUpdateRequest>d__58 <PhantomManageConfigUpdateRequest>d__;
 		<PhantomManageConfigUpdateRequest>d__.<>t__builder = AsyncUniTaskMethodBuilder<ErrorCode>.Create();
 		<PhantomManageConfigUpdateRequest>d__.type = type;
 		<PhantomManageConfigUpdateRequest>d__.setting = setting;
 		<PhantomManageConfigUpdateRequest>d__.<>1__state = -1;
-		<PhantomManageConfigUpdateRequest>d__.<>t__builder.Start<InventoryController.<PhantomManageConfigUpdateRequest>d__59>(ref <PhantomManageConfigUpdateRequest>d__);
+		<PhantomManageConfigUpdateRequest>d__.<>t__builder.Start<InventoryController.<PhantomManageConfigUpdateRequest>d__58>(ref <PhantomManageConfigUpdateRequest>d__);
 		return <PhantomManageConfigUpdateRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FCA1 RID: 64673 RVA: 0x003D5874 File Offset: 0x003D3A74
+	// Token: 0x0600D0C5 RID: 53445 RVA: 0x003E14F0 File Offset: 0x003DF6F0
 	[NullableContext(0)]
 	public UniTask<bool> PhantomSettingBatchUpdateRequestAsync([Nullable(1)] PhantomSettingInfo[] settings)
 	{
-		InventoryController.<PhantomSettingBatchUpdateRequestAsync>d__60 <PhantomSettingBatchUpdateRequestAsync>d__;
+		InventoryController.<PhantomSettingBatchUpdateRequestAsync>d__59 <PhantomSettingBatchUpdateRequestAsync>d__;
 		<PhantomSettingBatchUpdateRequestAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 		<PhantomSettingBatchUpdateRequestAsync>d__.settings = settings;
 		<PhantomSettingBatchUpdateRequestAsync>d__.<>1__state = -1;
-		<PhantomSettingBatchUpdateRequestAsync>d__.<>t__builder.Start<InventoryController.<PhantomSettingBatchUpdateRequestAsync>d__60>(ref <PhantomSettingBatchUpdateRequestAsync>d__);
+		<PhantomSettingBatchUpdateRequestAsync>d__.<>t__builder.Start<InventoryController.<PhantomSettingBatchUpdateRequestAsync>d__59>(ref <PhantomSettingBatchUpdateRequestAsync>d__);
 		return <PhantomSettingBatchUpdateRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FCA2 RID: 64674 RVA: 0x003D58B8 File Offset: 0x003D3AB8
+	// Token: 0x0600D0C6 RID: 53446 RVA: 0x003E1534 File Offset: 0x003DF734
 	public void OpenManageConfigView()
 	{
 		if (!FunctionModel.Instance.IsOpen(10096))
@@ -1329,7 +1337,7 @@ public class InventoryController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.CalabashRootView, param, null);
 	}
 
-	// Token: 0x0600FCA3 RID: 64675 RVA: 0x003D5900 File Offset: 0x003D3B00
+	// Token: 0x0600D0C7 RID: 53447 RVA: 0x003E157C File Offset: 0x003DF77C
 	public void OpenManageConfigNewView()
 	{
 		if (!FunctionModel.Instance.IsOpen(10096))
@@ -1345,7 +1353,7 @@ public class InventoryController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.CalabashRootView, param, null);
 	}
 
-	// Token: 0x0600FCA4 RID: 64676 RVA: 0x003D595C File Offset: 0x003D3B5C
+	// Token: 0x0600D0C8 RID: 53448 RVA: 0x003E15D8 File Offset: 0x003DF7D8
 	private int GetDeprecatedPhantomCount()
 	{
 		List<PhantomItemData> phantomItemDataList = InventoryModel.Instance.GetPhantomItemDataList();
@@ -1363,13 +1371,13 @@ public class InventoryController : UiControllerBase
 		return num;
 	}
 
-	// Token: 0x0600FCA5 RID: 64677 RVA: 0x003D59BC File Offset: 0x003D3BBC
+	// Token: 0x0600D0C9 RID: 53449 RVA: 0x003E1638 File Offset: 0x003DF838
 	private int GetTotalPhantomCount()
 	{
 		return InventoryModel.Instance.GetPhantomItemDataList().Count;
 	}
 
-	// Token: 0x0600FCA6 RID: 64678 RVA: 0x003D59D0 File Offset: 0x003D3BD0
+	// Token: 0x0600D0CA RID: 53450 RVA: 0x003E164C File Offset: 0x003DF84C
 	public bool CheckAndShowPhantomTips()
 	{
 		if (this.IsPhantomFullViewLoginNotShow)
@@ -1386,42 +1394,26 @@ public class InventoryController : UiControllerBase
 		}
 		int deprecatedPhantomCount = this.GetDeprecatedPhantomCount();
 		int totalPhantomCount = this.GetTotalPhantomCount();
-		if (deprecatedPhantomCount >= InventoryConfig.Instance.GetPhantomFusionThreshold())
-		{
-			this.ShowPhantomFusionTip(deprecatedPhantomCount);
-			return true;
-		}
 		if (totalPhantomCount >= InventoryConfig.Instance.GetPhantomDiscardThreshold())
 		{
-			this.ShowPhantomDiscardTip(totalPhantomCount);
+			this.ShowPhantomFusionOrDiscardTip(totalPhantomCount, deprecatedPhantomCount);
 			return true;
 		}
 		return false;
 	}
 
-	// Token: 0x0600FCA7 RID: 64679 RVA: 0x003D5A44 File Offset: 0x003D3C44
-	private void ShowPhantomFusionTip(int deprecatedCount)
+	// Token: 0x0600D0CB RID: 53451 RVA: 0x003E16AC File Offset: 0x003DF8AC
+	private void ShowPhantomFusionOrDiscardTip(int totalCount, int deprecatedCount)
 	{
-		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.PhantomFullFusionConfirm);
-		PhantomDiscardPlanRecycleReport logData = new PhantomDiscardPlanRecycleReport
-		{
-			i_type = 0
-		};
-		confirmBoxDataNew.FunctionMap.Add(1, delegate
-		{
-			logData.i_operation = 0;
-			LogReportController.Instance.LogReport(logData);
-		});
-		confirmBoxDataNew.FunctionMap.Add(2, delegate
-		{
-			logData.i_operation = 1;
-			LogReportController.Instance.LogReport(logData);
-			CalabashController.Instance.JumpToCalabashRootView(EUiTabViewName.VisionRecoveryTabView, null);
-		});
+		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.PhantomFusionOrDiscardConfirm);
 		confirmBoxDataNew.SetTextArgs(new string[]
 		{
+			totalCount.ToString(),
 			deprecatedCount.ToString()
 		});
+		confirmBoxDataNew.IsEscViewTriggerCallBack = false;
+		confirmBoxDataNew.FunctionMap.Add(1, new Action(this.OnClickPhantomFusionTip));
+		confirmBoxDataNew.FunctionMap.Add(2, new Action(this.OnClickPhantomDiscardTip));
 		confirmBoxDataNew.HasToggle = true;
 		confirmBoxDataNew.ToggleTextKey = "ConfirmBox_363_Desc";
 		confirmBoxDataNew.SetToggleFunction(delegate(bool isSelectOn)
@@ -1431,54 +1423,34 @@ public class InventoryController : UiControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600FCA8 RID: 64680 RVA: 0x003D5AF4 File Offset: 0x003D3CF4
-	private void ShowPhantomDiscardTip(int totalCount)
+	// Token: 0x0600D0CC RID: 53452 RVA: 0x003E174B File Offset: 0x003DF94B
+	private void OnClickPhantomFusionTip()
 	{
-		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.PhantomFullDiscardConfirm);
-		PhantomDiscardPlanRecycleReport logData = new PhantomDiscardPlanRecycleReport
-		{
-			i_type = 1
-		};
-		confirmBoxDataNew.FunctionMap.Add(1, delegate
-		{
-			logData.i_operation = 0;
-			LogReportController.Instance.LogReport(logData);
-		});
-		confirmBoxDataNew.FunctionMap.Add(2, delegate
-		{
-			logData.i_operation = 1;
-			LogReportController.Instance.LogReport(logData);
-			UiManager.Instance.OpenView(EUiViewName.PhantomSmartDiscardPopupView, null, delegate(bool success, int viewId)
-			{
-				UiViewBase uiViewBase = null;
-				if (UiManager.Instance.IsViewOpen(EUiViewName.PhantomManageView))
-				{
-					uiViewBase = UiManager.Instance.GetViewByName(EUiViewName.PhantomManageView);
-				}
-				else if (UiManager.Instance.IsViewOpen(EUiViewName.InventoryView))
-				{
-					uiViewBase = UiManager.Instance.GetViewByName(EUiViewName.InventoryView);
-				}
-				if (uiViewBase != null)
-				{
-					uiViewBase.AddChildViewById(viewId);
-				}
-			});
-		});
-		confirmBoxDataNew.SetTextArgs(new string[]
-		{
-			totalCount.ToString()
-		});
-		confirmBoxDataNew.HasToggle = true;
-		confirmBoxDataNew.ToggleTextKey = "ConfirmBox_363_Desc";
-		confirmBoxDataNew.SetToggleFunction(delegate(bool isSelectOn)
-		{
-			this.IsPhantomFullViewLoginNotShow = isSelectOn;
-		});
-		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
+		CalabashController.Instance.JumpToCalabashRootView(EUiTabViewName.VisionRecoveryTabView, null);
 	}
 
-	// Token: 0x0600FCA9 RID: 64681 RVA: 0x003D5BA4 File Offset: 0x003D3DA4
+	// Token: 0x0600D0CD RID: 53453 RVA: 0x003E175D File Offset: 0x003DF95D
+	private void OnClickPhantomDiscardTip()
+	{
+		UiManager.Instance.OpenView(EUiViewName.PhantomSmartDiscardPopupView, null, delegate(bool success, int viewId)
+		{
+			UiViewBase uiViewBase = null;
+			if (UiManager.Instance.IsViewOpen(EUiViewName.PhantomManageView))
+			{
+				uiViewBase = UiManager.Instance.GetViewByName(EUiViewName.PhantomManageView);
+			}
+			else if (UiManager.Instance.IsViewOpen(EUiViewName.InventoryView))
+			{
+				uiViewBase = UiManager.Instance.GetViewByName(EUiViewName.InventoryView);
+			}
+			if (uiViewBase != null)
+			{
+				uiViewBase.AddChildViewById(viewId);
+			}
+		});
+	}
+
+	// Token: 0x0600D0CE RID: 53454 RVA: 0x003E1790 File Offset: 0x003DF990
 	[NullableContext(0)]
 	public UniTask<bool> ShowPhantomDiscardFusionTip([Nullable(1)] int[] discardList)
 	{
@@ -1491,8 +1463,8 @@ public class InventoryController : UiControllerBase
 		return <ShowPhantomDiscardFusionTip>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x17001355 RID: 4949
-	// (get) Token: 0x0600FCAA RID: 64682 RVA: 0x003D5BEF File Offset: 0x003D3DEF
+	// Token: 0x17001381 RID: 4993
+	// (get) Token: 0x0600D0CF RID: 53455 RVA: 0x003E17DB File Offset: 0x003DF9DB
 	[Nullable(1)]
 	public static InventoryController Instance
 	{
@@ -1503,7 +1475,7 @@ public class InventoryController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600FCAB RID: 64683 RVA: 0x003D5BF6 File Offset: 0x003D3DF6
+	// Token: 0x0600D0D0 RID: 53456 RVA: 0x003E17E2 File Offset: 0x003DF9E2
 	[NullableContext(1)]
 	public static InventoryController GetOrCreateInstance()
 	{
@@ -1514,7 +1486,7 @@ public class InventoryController : UiControllerBase
 		return InventoryController._Instance;
 	}
 
-	// Token: 0x0600FCAC RID: 64684 RVA: 0x003D5C0A File Offset: 0x003D3E0A
+	// Token: 0x0600D0D1 RID: 53457 RVA: 0x003E17F6 File Offset: 0x003DF9F6
 	public static bool CreateInstance()
 	{
 		if (InventoryController._Instance != null)
@@ -1525,187 +1497,49 @@ public class InventoryController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600FCAD RID: 64685 RVA: 0x003D5C20 File Offset: 0x003D3E20
+	// Token: 0x0600D0D2 RID: 53458 RVA: 0x003E180C File Offset: 0x003DFA0C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600FCAE RID: 64686 RVA: 0x003D5C22 File Offset: 0x003D3E22
+	// Token: 0x0600D0D3 RID: 53459 RVA: 0x003E180E File Offset: 0x003DFA0E
 	public static void ResetStaticDefaultValue()
 	{
 		InventoryController._Instance = null;
 	}
 
-	// Token: 0x0600FCAF RID: 64687 RVA: 0x003D5C2A File Offset: 0x003D3E2A
+	// Token: 0x0600D0D4 RID: 53460 RVA: 0x003E1816 File Offset: 0x003DFA16
 	static InventoryController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InventoryController.CreateStaticDefaultValue), new Action(InventoryController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600FCB0 RID: 64688 RVA: 0x003D5C4C File Offset: 0x003D3E4C
-	public InventoryController()
-	{
-		Func<int, int, bool>[] array = new Func<int, int, bool>[18];
-		int num = 0;
-		Func<int, int, bool> func;
-		if ((func = InventoryController.<>O.<19>__TryUseOrnamentItem) == null)
-		{
-			func = (InventoryController.<>O.<19>__TryUseOrnamentItem = new Func<int, int, bool>(ItemUseLogic.TryUseOrnamentItem));
-		}
-		array[num] = func;
-		int num2 = 1;
-		Func<int, int, bool> func2;
-		if ((func2 = InventoryController.<>O.<20>__TryUseVisionRefineItem) == null)
-		{
-			func2 = (InventoryController.<>O.<20>__TryUseVisionRefineItem = new Func<int, int, bool>(ItemUseLogic.TryUseVisionRefineItem));
-		}
-		array[num2] = func2;
-		int num3 = 2;
-		Func<int, int, bool> func3;
-		if ((func3 = InventoryController.<>O.<21>__TryUseVisionRefineSubItem) == null)
-		{
-			func3 = (InventoryController.<>O.<21>__TryUseVisionRefineSubItem = new Func<int, int, bool>(ItemUseLogic.TryUseVisionRefineSubItem));
-		}
-		array[num3] = func3;
-		int num4 = 3;
-		Func<int, int, bool> func4;
-		if ((func4 = InventoryController.<>O.<22>__TryUseUiPlayItem) == null)
-		{
-			func4 = (InventoryController.<>O.<22>__TryUseUiPlayItem = new Func<int, int, bool>(ItemUseLogic.TryUseUiPlayItem));
-		}
-		array[num4] = func4;
-		int num5 = 4;
-		Func<int, int, bool> func5;
-		if ((func5 = InventoryController.<>O.<23>__TryUseBuffItem) == null)
-		{
-			func5 = (InventoryController.<>O.<23>__TryUseBuffItem = new Func<int, int, bool>(ItemUseLogic.TryUseBuffItem));
-		}
-		array[num5] = func5;
-		int num6 = 5;
-		Func<int, int, bool> func6;
-		if ((func6 = InventoryController.<>O.<24>__TryUsePowerItem) == null)
-		{
-			func6 = (InventoryController.<>O.<24>__TryUsePowerItem = new Func<int, int, bool>(ItemUseLogic.TryUsePowerItem));
-		}
-		array[num6] = func6;
-		int num7 = 6;
-		Func<int, int, bool> func7;
-		if ((func7 = InventoryController.<>O.<25>__TryUseTotalTopUpRolePickItem) == null)
-		{
-			func7 = (InventoryController.<>O.<25>__TryUseTotalTopUpRolePickItem = new Func<int, int, bool>(ItemUseLogic.TryUseTotalTopUpRolePickItem));
-		}
-		array[num7] = func7;
-		int num8 = 7;
-		Func<int, int, bool> func8;
-		if ((func8 = InventoryController.<>O.<26>__TryUseGiftItem) == null)
-		{
-			func8 = (InventoryController.<>O.<26>__TryUseGiftItem = new Func<int, int, bool>(ItemUseLogic.TryUseGiftItem));
-		}
-		array[num8] = func8;
-		int num9 = 8;
-		Func<int, int, bool> func9;
-		if ((func9 = InventoryController.<>O.<27>__TryUseResonantChainOptionalItem) == null)
-		{
-			func9 = (InventoryController.<>O.<27>__TryUseResonantChainOptionalItem = new Func<int, int, bool>(ItemUseLogic.TryUseResonantChainOptionalItem));
-		}
-		array[num9] = func9;
-		int num10 = 9;
-		Func<int, int, bool> func10;
-		if ((func10 = InventoryController.<>O.<28>__TryUseMonthCardItem) == null)
-		{
-			func10 = (InventoryController.<>O.<28>__TryUseMonthCardItem = new Func<int, int, bool>(ItemUseLogic.TryUseMonthCardItem));
-		}
-		array[num10] = func10;
-		int num11 = 10;
-		Func<int, int, bool> func11;
-		if ((func11 = InventoryController.<>O.<29>__TryUseBattlePassItem) == null)
-		{
-			func11 = (InventoryController.<>O.<29>__TryUseBattlePassItem = new Func<int, int, bool>(ItemUseLogic.TryUseBattlePassItem));
-		}
-		array[num11] = func11;
-		int num12 = 11;
-		Func<int, int, bool> func12;
-		if ((func12 = InventoryController.<>O.<30>__TryUseBirthdayItem) == null)
-		{
-			func12 = (InventoryController.<>O.<30>__TryUseBirthdayItem = new Func<int, int, bool>(ItemUseLogic.TryUseBirthdayItem));
-		}
-		array[num12] = func12;
-		int num13 = 12;
-		Func<int, int, bool> func13;
-		if ((func13 = InventoryController.<>O.<31>__TryUseBrochureItem) == null)
-		{
-			func13 = (InventoryController.<>O.<31>__TryUseBrochureItem = new Func<int, int, bool>(ItemUseLogic.TryUseBrochureItem));
-		}
-		array[num13] = func13;
-		int num14 = 13;
-		Func<int, int, bool> func14;
-		if ((func14 = InventoryController.<>O.<32>__TryUseBuffEquipItem) == null)
-		{
-			func14 = (InventoryController.<>O.<32>__TryUseBuffEquipItem = new Func<int, int, bool>(ItemUseLogic.TryUseBuffEquipItem));
-		}
-		array[num14] = func14;
-		int num15 = 14;
-		Func<int, int, bool> func15;
-		if ((func15 = InventoryController.<>O.<33>__TryUsePayShopCouponItem) == null)
-		{
-			func15 = (InventoryController.<>O.<33>__TryUsePayShopCouponItem = new Func<int, int, bool>(ItemUseLogic.TryUsePayShopCouponItem));
-		}
-		array[num15] = func15;
-		int num16 = 15;
-		Func<int, int, bool> func16;
-		if ((func16 = InventoryController.<>O.<34>__TryUseStudentCardItem) == null)
-		{
-			func16 = (InventoryController.<>O.<34>__TryUseStudentCardItem = new Func<int, int, bool>(ItemUseLogic.TryUseStudentCardItem));
-		}
-		array[num16] = func16;
-		int num17 = 16;
-		Func<int, int, bool> func17;
-		if ((func17 = InventoryController.<>O.<35>__TryUseParameterItem) == null)
-		{
-			func17 = (InventoryController.<>O.<35>__TryUseParameterItem = new Func<int, int, bool>(ItemUseLogic.TryUseParameterItem));
-		}
-		array[num17] = func17;
-		int num18 = 17;
-		Func<int, int, bool> func18;
-		if ((func18 = InventoryController.<>O.<36>__TryUseShipTowerItem) == null)
-		{
-			func18 = (InventoryController.<>O.<36>__TryUseShipTowerItem = new Func<int, int, bool>(ItemUseLogic.TryUseShipTowerItem));
-		}
-		array[num18] = func18;
-		this.UseItemLogicList = array;
-		base..ctor();
-	}
-
-	// Token: 0x04007561 RID: 30049
+	// Token: 0x04007644 RID: 30276
 	private const int VISION_CATCH_REASON = 19000;
 
-	// Token: 0x04007562 RID: 30050
+	// Token: 0x04007645 RID: 30277
 	private const int GACHA_REASON = 14000;
 
-	// Token: 0x04007563 RID: 30051
+	// Token: 0x04007646 RID: 30278
 	private bool IsPhantomFullViewShow = true;
 
-	// Token: 0x04007564 RID: 30052
+	// Token: 0x04007647 RID: 30279
 	private bool IsPhantomFullViewLoginNotShow;
 
-	// Token: 0x04007565 RID: 30053
+	// Token: 0x04007648 RID: 30280
 	private bool IsPhantomDiscardFuseLoginNotShow;
 
-	// Token: 0x04007566 RID: 30054
+	// Token: 0x04007649 RID: 30281
 	private bool InvalidItemRemoveRequestLock;
 
-	// Token: 0x04007567 RID: 30055
-	[Nullable(1)]
-	private readonly Func<int, int, bool>[] UseItemLogicList;
-
-	// Token: 0x04007568 RID: 30056
+	// Token: 0x0400764A RID: 30282
 	private static InventoryController _Instance;
 
-	// Token: 0x020085AA RID: 34218
+	// Token: 0x0200772E RID: 30510
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402B849 RID: 178249
+		// Token: 0x04026B69 RID: 158569
 		[Nullable(new byte[]
 		{
 			0,
@@ -1714,7 +1548,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <0>__NormalItemUpdateNotify;
 
-		// Token: 0x0402B84A RID: 178250
+		// Token: 0x04026B6A RID: 158570
 		[Nullable(new byte[]
 		{
 			0,
@@ -1723,7 +1557,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <1>__NormalItemRemoveNotify;
 
-		// Token: 0x0402B84B RID: 178251
+		// Token: 0x04026B6B RID: 158571
 		[Nullable(new byte[]
 		{
 			0,
@@ -1732,7 +1566,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <2>__NormalItemAddNotify;
 
-		// Token: 0x0402B84C RID: 178252
+		// Token: 0x04026B6C RID: 158572
 		[Nullable(new byte[]
 		{
 			0,
@@ -1741,7 +1575,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <3>__ValidTimeItemUpdateNotify;
 
-		// Token: 0x0402B84D RID: 178253
+		// Token: 0x04026B6D RID: 158573
 		[Nullable(new byte[]
 		{
 			0,
@@ -1750,7 +1584,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <4>__ValidTimeItemRemoveNotify;
 
-		// Token: 0x0402B84E RID: 178254
+		// Token: 0x04026B6E RID: 158574
 		[Nullable(new byte[]
 		{
 			0,
@@ -1759,7 +1593,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <5>__ValidTimeItemAddNotify;
 
-		// Token: 0x0402B84F RID: 178255
+		// Token: 0x04026B6F RID: 158575
 		[Nullable(new byte[]
 		{
 			0,
@@ -1768,7 +1602,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <6>__WeaponItemAddNotify;
 
-		// Token: 0x0402B850 RID: 178256
+		// Token: 0x04026B70 RID: 158576
 		[Nullable(new byte[]
 		{
 			0,
@@ -1777,7 +1611,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <7>__WeaponItemRemoveNotify;
 
-		// Token: 0x0402B851 RID: 178257
+		// Token: 0x04026B71 RID: 158577
 		[Nullable(new byte[]
 		{
 			0,
@@ -1786,7 +1620,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <8>__PhantomItemAddNotify;
 
-		// Token: 0x0402B852 RID: 178258
+		// Token: 0x04026B72 RID: 158578
 		[Nullable(new byte[]
 		{
 			0,
@@ -1795,7 +1629,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <9>__PhantomItemRemoveNotify;
 
-		// Token: 0x0402B853 RID: 178259
+		// Token: 0x04026B73 RID: 158579
 		[Nullable(new byte[]
 		{
 			0,
@@ -1804,7 +1638,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <10>__ItemFuncValueUpdateNotify;
 
-		// Token: 0x0402B854 RID: 178260
+		// Token: 0x04026B74 RID: 158580
 		[Nullable(new byte[]
 		{
 			0,
@@ -1813,7 +1647,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <11>__InventoryTabOpenNotify;
 
-		// Token: 0x0402B855 RID: 178261
+		// Token: 0x04026B75 RID: 158581
 		[Nullable(new byte[]
 		{
 			0,
@@ -1822,7 +1656,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <12>__InventoryFullNotify;
 
-		// Token: 0x0402B856 RID: 178262
+		// Token: 0x04026B76 RID: 158582
 		[Nullable(new byte[]
 		{
 			0,
@@ -1831,7 +1665,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <13>__InventoryBanItemUseNotify;
 
-		// Token: 0x0402B857 RID: 178263
+		// Token: 0x04026B77 RID: 158583
 		[Nullable(new byte[]
 		{
 			0,
@@ -1839,7 +1673,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Func<EUiViewName, object, bool> <14>__CanOpenView;
 
-		// Token: 0x0402B858 RID: 178264
+		// Token: 0x04026B78 RID: 158584
 		[Nullable(new byte[]
 		{
 			0,
@@ -1848,7 +1682,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <15>__NormalItemResponse;
 
-		// Token: 0x0402B859 RID: 178265
+		// Token: 0x04026B79 RID: 158585
 		[Nullable(new byte[]
 		{
 			0,
@@ -1857,7 +1691,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <16>__ValidTimeItemResponse;
 
-		// Token: 0x0402B85A RID: 178266
+		// Token: 0x04026B7A RID: 158586
 		[Nullable(new byte[]
 		{
 			0,
@@ -1866,7 +1700,7 @@ public class InventoryController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <17>__WeaponItemResponse;
 
-		// Token: 0x0402B85B RID: 178267
+		// Token: 0x04026B7B RID: 158587
 		[Nullable(new byte[]
 		{
 			0,
@@ -1874,77 +1708,5 @@ public class InventoryController : UiControllerBase
 			2
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <18>__PhantomItemResponse;
-
-		// Token: 0x0402B85C RID: 178268
-		[Nullable(0)]
-		public static Func<int, int, bool> <19>__TryUseOrnamentItem;
-
-		// Token: 0x0402B85D RID: 178269
-		[Nullable(0)]
-		public static Func<int, int, bool> <20>__TryUseVisionRefineItem;
-
-		// Token: 0x0402B85E RID: 178270
-		[Nullable(0)]
-		public static Func<int, int, bool> <21>__TryUseVisionRefineSubItem;
-
-		// Token: 0x0402B85F RID: 178271
-		[Nullable(0)]
-		public static Func<int, int, bool> <22>__TryUseUiPlayItem;
-
-		// Token: 0x0402B860 RID: 178272
-		[Nullable(0)]
-		public static Func<int, int, bool> <23>__TryUseBuffItem;
-
-		// Token: 0x0402B861 RID: 178273
-		[Nullable(0)]
-		public static Func<int, int, bool> <24>__TryUsePowerItem;
-
-		// Token: 0x0402B862 RID: 178274
-		[Nullable(0)]
-		public static Func<int, int, bool> <25>__TryUseTotalTopUpRolePickItem;
-
-		// Token: 0x0402B863 RID: 178275
-		[Nullable(0)]
-		public static Func<int, int, bool> <26>__TryUseGiftItem;
-
-		// Token: 0x0402B864 RID: 178276
-		[Nullable(0)]
-		public static Func<int, int, bool> <27>__TryUseResonantChainOptionalItem;
-
-		// Token: 0x0402B865 RID: 178277
-		[Nullable(0)]
-		public static Func<int, int, bool> <28>__TryUseMonthCardItem;
-
-		// Token: 0x0402B866 RID: 178278
-		[Nullable(0)]
-		public static Func<int, int, bool> <29>__TryUseBattlePassItem;
-
-		// Token: 0x0402B867 RID: 178279
-		[Nullable(0)]
-		public static Func<int, int, bool> <30>__TryUseBirthdayItem;
-
-		// Token: 0x0402B868 RID: 178280
-		[Nullable(0)]
-		public static Func<int, int, bool> <31>__TryUseBrochureItem;
-
-		// Token: 0x0402B869 RID: 178281
-		[Nullable(0)]
-		public static Func<int, int, bool> <32>__TryUseBuffEquipItem;
-
-		// Token: 0x0402B86A RID: 178282
-		[Nullable(0)]
-		public static Func<int, int, bool> <33>__TryUsePayShopCouponItem;
-
-		// Token: 0x0402B86B RID: 178283
-		[Nullable(0)]
-		public static Func<int, int, bool> <34>__TryUseStudentCardItem;
-
-		// Token: 0x0402B86C RID: 178284
-		[Nullable(0)]
-		public static Func<int, int, bool> <35>__TryUseParameterItem;
-
-		// Token: 0x0402B86D RID: 178285
-		[Nullable(0)]
-		public static Func<int, int, bool> <36>__TryUseShipTowerItem;
 	}
 }

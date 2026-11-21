@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001110 RID: 4368
+// Token: 0x020005C4 RID: 1476
 [NullableContext(1)]
 [Nullable(0)]
 public class AvignonActivityMainView : UiViewBase
 {
-	// Token: 0x06007239 RID: 29241 RVA: 0x00175AE1 File Offset: 0x00173CE1
+	// Token: 0x060045CF RID: 17871 RVA: 0x0017E49D File Offset: 0x0017C69D
 	public AvignonActivityMainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600723A RID: 29242 RVA: 0x00175AEC File Offset: 0x00173CEC
+	// Token: 0x060045D0 RID: 17872 RVA: 0x0017E4A8 File Offset: 0x0017C6A8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -44,7 +44,7 @@ public class AvignonActivityMainView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600723B RID: 29243 RVA: 0x00175BF8 File Offset: 0x00173DF8
+	// Token: 0x060045D1 RID: 17873 RVA: 0x0017E5B4 File Offset: 0x0017C7B4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		AvignonActivityMainView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -55,13 +55,13 @@ public class AvignonActivityMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600723C RID: 29244 RVA: 0x00175C3B File Offset: 0x00173E3B
+	// Token: 0x060045D2 RID: 17874 RVA: 0x0017E5F7 File Offset: 0x0017C7F7
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600723D RID: 29245 RVA: 0x00175C44 File Offset: 0x00173E44
+	// Token: 0x060045D3 RID: 17875 RVA: 0x0017E600 File Offset: 0x0017C800
 	private void OnQuestBtnClick()
 	{
 		UiManager instance = UiManager.Instance;
@@ -70,29 +70,29 @@ public class AvignonActivityMainView : UiViewBase
 		instance.OpenView(questView, (avignonProtocolData != null) ? avignonProtocolData.GetCurrentLockQuestId() : null, null);
 	}
 
-	// Token: 0x040034E9 RID: 13545
+	// Token: 0x04003582 RID: 13698
 	protected AvignonProtocolData AvignonProtocolData;
 
-	// Token: 0x040034EA RID: 13546
+	// Token: 0x04003583 RID: 13699
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x020076D2 RID: 30418
+	// Token: 0x02006866 RID: 26726
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027358 RID: 160600
+		// Token: 0x040226A1 RID: 140961
 		public const int ItemCaption = 0;
 
-		// Token: 0x04027359 RID: 160601
+		// Token: 0x040226A2 RID: 140962
 		public const int ItemStage1 = 1;
 
-		// Token: 0x0402735A RID: 160602
+		// Token: 0x040226A3 RID: 140963
 		public const int ItemStage2 = 2;
 
-		// Token: 0x0402735B RID: 160603
+		// Token: 0x040226A4 RID: 140964
 		public const int ItemStage3 = 3;
 
-		// Token: 0x0402735C RID: 160604
+		// Token: 0x040226A5 RID: 140965
 		public const int BtnQuest = 4;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200251F RID: 9503
+	// Token: 0x020027C6 RID: 10182
 	public class ITalkBackground
 	{
-		// Token: 0x0600D3F4 RID: 54260 RVA: 0x001F660E File Offset: 0x001F480E
-		[NullableContext(1)]
+		// Token: 0x0600E154 RID: 57684 RVA: 0x0021206E File Offset: 0x0021026E
 		public static ITalkBackground Create(ITalkBackground? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B78 RID: 15224
-		// (get) Token: 0x0600D3F5 RID: 54261 RVA: 0x001F662D File Offset: 0x001F482D
+		// Token: 0x17003E76 RID: 15990
+		// (get) Token: 0x0600E155 RID: 57685 RVA: 0x0021208D File Offset: 0x0021028D
 		public virtual ETalkBackgroundType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007425 RID: 29733
+		// Token: 0x04007A7A RID: 31354
 		private ITalkBackground Instance;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FBB RID: 20411
+	// Token: 0x02005517 RID: 21783
 	public struct IColorChangeStrategyOfRGB : IFlatbufferObject
 	{
-		// Token: 0x170093D4 RID: 37844
-		// (get) Token: 0x060207DB RID: 133083 RVA: 0x0048518F File Offset: 0x0048338F
+		// Token: 0x17009BAC RID: 39852
+		// (get) Token: 0x060226CF RID: 141007 RVA: 0x004BE673 File Offset: 0x004BC873
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060207DC RID: 133084 RVA: 0x0048519C File Offset: 0x0048339C
+		// Token: 0x060226D0 RID: 141008 RVA: 0x004BE680 File Offset: 0x004BC880
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060207DD RID: 133085 RVA: 0x004851A4 File Offset: 0x004833A4
+		// Token: 0x060226D1 RID: 141009 RVA: 0x004BE688 File Offset: 0x004BC888
 		public static IColorChangeStrategyOfRGB GetRootAsIColorChangeStrategyOfRGB(ByteBuffer _bb)
 		{
 			return IColorChangeStrategyOfRGB.GetRootAsIColorChangeStrategyOfRGB(_bb, default(IColorChangeStrategyOfRGB));
 		}
 
-		// Token: 0x060207DE RID: 133086 RVA: 0x004851C0 File Offset: 0x004833C0
+		// Token: 0x060226D2 RID: 141010 RVA: 0x004BE6A4 File Offset: 0x004BC8A4
 		public static IColorChangeStrategyOfRGB GetRootAsIColorChangeStrategyOfRGB(ByteBuffer _bb, IColorChangeStrategyOfRGB obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060207DF RID: 133087 RVA: 0x004851DD File Offset: 0x004833DD
+		// Token: 0x060226D3 RID: 141011 RVA: 0x004BE6C1 File Offset: 0x004BC8C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060207E0 RID: 133088 RVA: 0x004851EC File Offset: 0x004833EC
+		// Token: 0x060226D4 RID: 141012 RVA: 0x004BE6D0 File Offset: 0x004BC8D0
 		public IColorChangeStrategyOfRGB __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170093D5 RID: 37845
-		// (get) Token: 0x060207E1 RID: 133089 RVA: 0x004851FC File Offset: 0x004833FC
+		// Token: 0x17009BAD RID: 39853
+		// (get) Token: 0x060226D5 RID: 141013 RVA: 0x004BE6E0 File Offset: 0x004BC8E0
 		public EColorChangeStrategyOfSplineEffect Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170093D6 RID: 37846
-		// (get) Token: 0x060207E2 RID: 133090 RVA: 0x00485238 File Offset: 0x00483438
+		// Token: 0x17009BAE RID: 39854
+		// (get) Token: 0x060226D6 RID: 141014 RVA: 0x004BE71C File Offset: 0x004BC91C
 		public string BlueState
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060207E3 RID: 133091 RVA: 0x0048526F File Offset: 0x0048346F
+		// Token: 0x060226D7 RID: 141015 RVA: 0x004BE753 File Offset: 0x004BC953
 		public Span<byte> GetBlueStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060207E4 RID: 133092 RVA: 0x0048527E File Offset: 0x0048347E
+		// Token: 0x060226D8 RID: 141016 RVA: 0x004BE762 File Offset: 0x004BC962
 		public byte[] GetBlueStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x170093D7 RID: 37847
-		// (get) Token: 0x060207E5 RID: 133093 RVA: 0x0048528C File Offset: 0x0048348C
+		// Token: 0x17009BAF RID: 39855
+		// (get) Token: 0x060226D9 RID: 141017 RVA: 0x004BE770 File Offset: 0x004BC970
 		public string YellowState
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060207E6 RID: 133094 RVA: 0x004852C3 File Offset: 0x004834C3
+		// Token: 0x060226DA RID: 141018 RVA: 0x004BE7A7 File Offset: 0x004BC9A7
 		public Span<byte> GetYellowStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060207E7 RID: 133095 RVA: 0x004852D2 File Offset: 0x004834D2
+		// Token: 0x060226DB RID: 141019 RVA: 0x004BE7B6 File Offset: 0x004BC9B6
 		public byte[] GetYellowStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x170093D8 RID: 37848
-		// (get) Token: 0x060207E8 RID: 133096 RVA: 0x004852E0 File Offset: 0x004834E0
+		// Token: 0x17009BB0 RID: 39856
+		// (get) Token: 0x060226DC RID: 141020 RVA: 0x004BE7C4 File Offset: 0x004BC9C4
 		public string RedState
 		{
 			get
@@ -131,19 +131,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060207E9 RID: 133097 RVA: 0x00485318 File Offset: 0x00483518
+		// Token: 0x060226DD RID: 141021 RVA: 0x004BE7FC File Offset: 0x004BC9FC
 		public Span<byte> GetRedStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x060207EA RID: 133098 RVA: 0x00485328 File Offset: 0x00483528
+		// Token: 0x060226DE RID: 141022 RVA: 0x004BE80C File Offset: 0x004BCA0C
 		public byte[] GetRedStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x060207EB RID: 133099 RVA: 0x00485337 File Offset: 0x00483537
+		// Token: 0x060226DF RID: 141023 RVA: 0x004BE81B File Offset: 0x004BCA1B
 		public static Offset<IColorChangeStrategyOfRGB> CreateIColorChangeStrategyOfRGB(FlatBufferBuilder builder, EColorChangeStrategyOfSplineEffect Type = EColorChangeStrategyOfSplineEffect.RGB, StringOffset BlueStateOffset = default(StringOffset), StringOffset YellowStateOffset = default(StringOffset), StringOffset RedStateOffset = default(StringOffset))
 		{
 			builder.StartTable(4);
@@ -154,43 +154,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IColorChangeStrategyOfRGB.EndIColorChangeStrategyOfRGB(builder);
 		}
 
-		// Token: 0x060207EC RID: 133100 RVA: 0x00485363 File Offset: 0x00483563
+		// Token: 0x060226E0 RID: 141024 RVA: 0x004BE847 File Offset: 0x004BCA47
 		public static void StartIColorChangeStrategyOfRGB(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060207ED RID: 133101 RVA: 0x0048536C File Offset: 0x0048356C
+		// Token: 0x060226E1 RID: 141025 RVA: 0x004BE850 File Offset: 0x004BCA50
 		public static void AddType(FlatBufferBuilder builder, EColorChangeStrategyOfSplineEffect type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060207EE RID: 133102 RVA: 0x00485377 File Offset: 0x00483577
+		// Token: 0x060226E2 RID: 141026 RVA: 0x004BE85B File Offset: 0x004BCA5B
 		public static void AddBlueState(FlatBufferBuilder builder, StringOffset blueStateOffset)
 		{
 			builder.AddOffset(1, blueStateOffset.Value, 0);
 		}
 
-		// Token: 0x060207EF RID: 133103 RVA: 0x00485387 File Offset: 0x00483587
+		// Token: 0x060226E3 RID: 141027 RVA: 0x004BE86B File Offset: 0x004BCA6B
 		public static void AddYellowState(FlatBufferBuilder builder, StringOffset yellowStateOffset)
 		{
 			builder.AddOffset(2, yellowStateOffset.Value, 0);
 		}
 
-		// Token: 0x060207F0 RID: 133104 RVA: 0x00485397 File Offset: 0x00483597
+		// Token: 0x060226E4 RID: 141028 RVA: 0x004BE87B File Offset: 0x004BCA7B
 		public static void AddRedState(FlatBufferBuilder builder, StringOffset redStateOffset)
 		{
 			builder.AddOffset(3, redStateOffset.Value, 0);
 		}
 
-		// Token: 0x060207F1 RID: 133105 RVA: 0x004853A7 File Offset: 0x004835A7
+		// Token: 0x060226E5 RID: 141029 RVA: 0x004BE88B File Offset: 0x004BCA8B
 		public static Offset<IColorChangeStrategyOfRGB> EndIColorChangeStrategyOfRGB(FlatBufferBuilder builder)
 		{
 			return new Offset<IColorChangeStrategyOfRGB>(builder.EndTable());
 		}
 
-		// Token: 0x060207F2 RID: 133106 RVA: 0x004853B4 File Offset: 0x004835B4
+		// Token: 0x060226E6 RID: 141030 RVA: 0x004BE898 File Offset: 0x004BCA98
 		public IColorChangeStrategyOfRGBT UnPack()
 		{
 			IColorChangeStrategyOfRGBT colorChangeStrategyOfRGBT = new IColorChangeStrategyOfRGBT();
@@ -198,7 +198,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return colorChangeStrategyOfRGBT;
 		}
 
-		// Token: 0x060207F3 RID: 133107 RVA: 0x004853CF File Offset: 0x004835CF
+		// Token: 0x060226E7 RID: 141031 RVA: 0x004BE8B3 File Offset: 0x004BCAB3
 		public void UnPackTo(IColorChangeStrategyOfRGBT _o)
 		{
 			_o.Type = this.Type;
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.RedState = this.RedState;
 		}
 
-		// Token: 0x060207F4 RID: 133108 RVA: 0x00485404 File Offset: 0x00483604
+		// Token: 0x060226E8 RID: 141032 RVA: 0x004BE8E8 File Offset: 0x004BCAE8
 		public static Offset<IColorChangeStrategyOfRGB> Pack(FlatBufferBuilder builder, IColorChangeStrategyOfRGBT _o)
 		{
 			if (_o == null)
@@ -220,7 +220,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IColorChangeStrategyOfRGB.CreateIColorChangeStrategyOfRGB(builder, _o.Type, blueStateOffset, yellowStateOffset, redStateOffset);
 		}
 
-		// Token: 0x0400DE95 RID: 56981
+		// Token: 0x0400EA83 RID: 60035
 		private Table __p;
 	}
 }

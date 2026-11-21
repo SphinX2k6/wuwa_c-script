@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002DD RID: 733
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000324 RID: 804
 	public class IDynamicAttachTarget : IAttachTarget
 	{
-		// Token: 0x06000E01 RID: 3585 RVA: 0x000335DC File Offset: 0x000317DC
+		// Token: 0x06000F31 RID: 3889 RVA: 0x00036510 File Offset: 0x00034710
 		private IDynamicAttachTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000E02 RID: 3586 RVA: 0x00033614 File Offset: 0x00031814
+		// Token: 0x06000F32 RID: 3890 RVA: 0x00036548 File Offset: 0x00034748
 		public static IDynamicAttachTarget Create([Nullable(2)] IDynamicAttachTarget instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000E03 RID: 3587 RVA: 0x00033627 File Offset: 0x00031827
+		// Token: 0x06000F33 RID: 3891 RVA: 0x0003655B File Offset: 0x0003475B
 		public static IDynamicAttachTarget CreateFromSetValue([Nullable(2)] IDynamicAttachTarget_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000E04 RID: 3588 RVA: 0x0003363A File Offset: 0x0003183A
+		// Token: 0x06000F34 RID: 3892 RVA: 0x0003656E File Offset: 0x0003476E
 		public new IDynamicAttachTarget_SetValue ToSetValue()
 		{
 			return new IDynamicAttachTarget_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000412 RID: 1042
-		// (get) Token: 0x06000E05 RID: 3589 RVA: 0x0003364D File Offset: 0x0003184D
-		// (set) Token: 0x06000E06 RID: 3590 RVA: 0x00033678 File Offset: 0x00031878
+		// Token: 0x1700045F RID: 1119
+		// (get) Token: 0x06000F35 RID: 3893 RVA: 0x00036581 File Offset: 0x00034781
+		// (set) Token: 0x06000F36 RID: 3894 RVA: 0x000365AC File Offset: 0x000347AC
 		public override EAttachType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000C7F RID: 3199
+		// Token: 0x04000D69 RID: 3433
 		[Nullable(2)]
 		protected new IDynamicAttachTarget FbInstance;
 
-		// Token: 0x04000C80 RID: 3200
+		// Token: 0x04000D6A RID: 3434
 		[Nullable(2)]
 		protected new IDynamicAttachTarget_SetValue PocoInterface;
 	}

@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 {
-	// Token: 0x02004774 RID: 18292
+	// Token: 0x020036A5 RID: 13989
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PressureTriggerController : GameplayEntityControllerBase
 	{
-		// Token: 0x0602FD2E RID: 195886 RVA: 0x00B14EDC File Offset: 0x00B130DC
+		// Token: 0x060244F8 RID: 148728 RVA: 0x00A44F3C File Offset: 0x00A4313C
 		public PressureTriggerController(WuWaGoGameplayEntityBase entity, WuWaGoGameData gameData, WuWaGoGameModeBase gameMode) : base(entity, gameData, gameMode)
 		{
 		}
 
-		// Token: 0x1700776E RID: 30574
-		// (get) Token: 0x0602FD2F RID: 195887 RVA: 0x00B14EE7 File Offset: 0x00B130E7
+		// Token: 0x17004A2A RID: 18986
+		// (get) Token: 0x060244F9 RID: 148729 RVA: 0x00A44F47 File Offset: 0x00A43147
 		private WuWaGoPressureTriggerEntity PressureTrigger
 		{
 			get
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			}
 		}
 
-		// Token: 0x0602FD30 RID: 195888 RVA: 0x00B14EF4 File Offset: 0x00B130F4
+		// Token: 0x060244FA RID: 148730 RVA: 0x00A44F54 File Offset: 0x00A43154
 		protected override bool OnCreate()
 		{
 			if (!base.OnCreate())
@@ -39,14 +39,14 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return true;
 		}
 
-		// Token: 0x0602FD31 RID: 195889 RVA: 0x00B14F07 File Offset: 0x00B13107
+		// Token: 0x060244FB RID: 148731 RVA: 0x00A44F67 File Offset: 0x00A43167
 		protected override void OnDestroy()
 		{
 			base.OnDestroy();
 			base.UnregisterAttachedGridMoveParticipant();
 		}
 
-		// Token: 0x0602FD32 RID: 195890 RVA: 0x00B14F18 File Offset: 0x00B13118
+		// Token: 0x060244FC RID: 148732 RVA: 0x00A44F78 File Offset: 0x00A43178
 		protected override UniTask OnExecuteAction()
 		{
 			PressureTriggerController.<OnExecuteAction>d__5 <OnExecuteAction>d__;
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <OnExecuteAction>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FD33 RID: 195891 RVA: 0x00B14F5B File Offset: 0x00B1315B
+		// Token: 0x060244FD RID: 148733 RVA: 0x00A44FBB File Offset: 0x00A431BB
 		protected override void OnAfterExecuteAction()
 		{
 			this.ExecuteDirtyChange().Forget();
 		}
 
-		// Token: 0x0602FD34 RID: 195892 RVA: 0x00B14F68 File Offset: 0x00B13168
+		// Token: 0x060244FE RID: 148734 RVA: 0x00A44FC8 File Offset: 0x00A431C8
 		private UniTask ExecuteDirtyChange()
 		{
 			PressureTriggerController.<ExecuteDirtyChange>d__7 <ExecuteDirtyChange>d__;

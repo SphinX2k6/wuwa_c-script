@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200119F RID: 4511
+	// Token: 0x020012D5 RID: 4821
 	public struct WeatherLib : IFlatbufferObject
 	{
-		// Token: 0x17003E40 RID: 15936
-		// (get) Token: 0x0600E8B3 RID: 59571 RVA: 0x00344778 File Offset: 0x00342978
+		// Token: 0x170041A5 RID: 16805
+		// (get) Token: 0x0600F624 RID: 63012 RVA: 0x0036F460 File Offset: 0x0036D660
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8B4 RID: 59572 RVA: 0x00344785 File Offset: 0x00342985
+		// Token: 0x0600F625 RID: 63013 RVA: 0x0036F46D File Offset: 0x0036D66D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E8B5 RID: 59573 RVA: 0x0034478C File Offset: 0x0034298C
+		// Token: 0x0600F626 RID: 63014 RVA: 0x0036F474 File Offset: 0x0036D674
 		public static WeatherLib GetRootAsWeatherLib(ByteBuffer _bb)
 		{
 			return WeatherLib.GetRootAsWeatherLib(_bb, default(WeatherLib));
 		}
 
-		// Token: 0x0600E8B6 RID: 59574 RVA: 0x003447A8 File Offset: 0x003429A8
+		// Token: 0x0600F627 RID: 63015 RVA: 0x0036F490 File Offset: 0x0036D690
 		public static WeatherLib GetRootAsWeatherLib(ByteBuffer _bb, WeatherLib obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E8B7 RID: 59575 RVA: 0x003447C5 File Offset: 0x003429C5
+		// Token: 0x0600F628 RID: 63016 RVA: 0x0036F4AD File Offset: 0x0036D6AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E8B8 RID: 59576 RVA: 0x003447D4 File Offset: 0x003429D4
+		// Token: 0x0600F629 RID: 63017 RVA: 0x0036F4BC File Offset: 0x0036D6BC
 		public WeatherLib __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003E41 RID: 15937
-		// (get) Token: 0x0600E8B9 RID: 59577 RVA: 0x003447E4 File Offset: 0x003429E4
+		// Token: 0x170041A6 RID: 16806
+		// (get) Token: 0x0600F62A RID: 63018 RVA: 0x0036F4CC File Offset: 0x0036D6CC
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8BA RID: 59578 RVA: 0x00344820 File Offset: 0x00342A20
+		// Token: 0x0600F62B RID: 63019 RVA: 0x0036F508 File Offset: 0x0036D708
 		public int PhotoWeather(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003E42 RID: 15938
-		// (get) Token: 0x0600E8BB RID: 59579 RVA: 0x00344860 File Offset: 0x00342A60
+		// Token: 0x170041A7 RID: 16807
+		// (get) Token: 0x0600F62C RID: 63020 RVA: 0x0036F548 File Offset: 0x0036D748
 		public int PhotoWeatherLength
 		{
 			get
@@ -90,37 +90,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8BC RID: 59580 RVA: 0x0034488B File Offset: 0x00342A8B
+		// Token: 0x0600F62D RID: 63021 RVA: 0x0036F573 File Offset: 0x0036D773
 		public Span<int> GetPhotoWeatherBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600E8BD RID: 59581 RVA: 0x0034489A File Offset: 0x00342A9A
+		// Token: 0x0600F62E RID: 63022 RVA: 0x0036F582 File Offset: 0x0036D782
 		public int[] GetPhotoWeatherArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600E8BE RID: 59582 RVA: 0x003448B4 File Offset: 0x00342AB4
+		// Token: 0x0600F62F RID: 63023 RVA: 0x0036F599 File Offset: 0x0036D799
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PhotoWeatherIter()或GetPhotoWeatherBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] PhotoWeather()
+		public int[] PhotoWeather()
 		{
-			WeatherLib weatherLib = this;
-			return weatherLib.GetPhotoWeatherArray() ?? Array.Empty<int>();
+			return this.GetPhotoWeatherArray();
 		}
 
-		// Token: 0x0600E8BF RID: 59583 RVA: 0x003448D8 File Offset: 0x00342AD8
+		// Token: 0x0600F630 RID: 63024 RVA: 0x0036F5A1 File Offset: 0x0036D7A1
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PhotoWeatherIter()
+		public IEnumerable<int> PhotoWeatherIter()
 		{
 			WeatherLib.<PhotoWeatherIter>d__16 <PhotoWeatherIter>d__ = new WeatherLib.<PhotoWeatherIter>d__16(-2);
 			<PhotoWeatherIter>d__.<>3__<>4__this = this;
 			return <PhotoWeatherIter>d__;
 		}
 
-		// Token: 0x040052EA RID: 21226
+		// Token: 0x0400592D RID: 22829
 		private Table __p;
 	}
 }

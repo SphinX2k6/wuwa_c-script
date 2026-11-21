@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E29 RID: 3625
+// Token: 0x020002DE RID: 734
 [NullableContext(1)]
 [Nullable(0)]
 public class XboxRegionInfo
 {
-	// Token: 0x17000644 RID: 1604
-	// (get) Token: 0x06005700 RID: 22272 RVA: 0x000FA291 File Offset: 0x000F8491
-	// (set) Token: 0x06005701 RID: 22273 RVA: 0x000FA299 File Offset: 0x000F8499
+	// Token: 0x17000668 RID: 1640
+	// (get) Token: 0x06002A90 RID: 10896 RVA: 0x00101A79 File Offset: 0x000FFC79
+	// (set) Token: 0x06002A91 RID: 10897 RVA: 0x00101A81 File Offset: 0x000FFC81
 	public int Code { get; set; }
 
-	// Token: 0x17000645 RID: 1605
-	// (get) Token: 0x06005702 RID: 22274 RVA: 0x000FA2A2 File Offset: 0x000F84A2
-	// (set) Token: 0x06005703 RID: 22275 RVA: 0x000FA2AA File Offset: 0x000F84AA
+	// Token: 0x17000669 RID: 1641
+	// (get) Token: 0x06002A92 RID: 10898 RVA: 0x00101A8A File Offset: 0x000FFC8A
+	// (set) Token: 0x06002A93 RID: 10899 RVA: 0x00101A92 File Offset: 0x000FFC92
 	public int SdkLoginCode { get; set; }
 
-	// Token: 0x17000646 RID: 1606
-	// (get) Token: 0x06005704 RID: 22276 RVA: 0x000FA2B3 File Offset: 0x000F84B3
-	// (set) Token: 0x06005705 RID: 22277 RVA: 0x000FA2BB File Offset: 0x000F84BB
+	// Token: 0x1700066A RID: 1642
+	// (get) Token: 0x06002A94 RID: 10900 RVA: 0x00101A9B File Offset: 0x000FFC9B
+	// (set) Token: 0x06002A95 RID: 10901 RVA: 0x00101AA3 File Offset: 0x000FFCA3
 	public string Region { get; set; } = "";
 }

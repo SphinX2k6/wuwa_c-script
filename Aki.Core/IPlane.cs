@@ -6,28 +6,28 @@ using UnrealEngine;
 [NullableContext(1)]
 public interface IPlane : IVector, IVector2D
 {
-	// Token: 0x170000EB RID: 235
-	// (get) Token: 0x0600082D RID: 2093
-	// (set) Token: 0x0600082E RID: 2094
+	// Token: 0x170000FD RID: 253
+	// (get) Token: 0x06000873 RID: 2163
+	// (set) Token: 0x06000874 RID: 2164
 	double W { get; set; }
 
-	// Token: 0x0600082F RID: 2095
+	// Token: 0x06000875 RID: 2165
 	IPlane MultiplyEqual(double inB);
 
-	// Token: 0x06000830 RID: 2096
+	// Token: 0x06000876 RID: 2166
 	IPlane MultiplyEqual(IPlane inB);
 
-	// Token: 0x06000831 RID: 2097
+	// Token: 0x06000877 RID: 2167
 	IPlane MultiplyEqual(Vector inB, Vector outV);
 
-	// Token: 0x06000832 RID: 2098
+	// Token: 0x06000878 RID: 2168
 	Vector Multiply(Vector inB, Vector outV);
 
-	// Token: 0x06000833 RID: 2099
+	// Token: 0x06000879 RID: 2169
 	Vector Multiply(double inB, Vector outV);
 
-	// Token: 0x170000EC RID: 236
-	// (get) Token: 0x06000834 RID: 2100
-	// (set) Token: 0x06000835 RID: 2101
+	// Token: 0x170000FE RID: 254
+	// (get) Token: 0x0600087A RID: 2170
+	// (set) Token: 0x0600087B RID: 2171
 	double[] Tuple { get; set; }
 }

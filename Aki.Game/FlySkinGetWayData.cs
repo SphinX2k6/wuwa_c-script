@@ -1,33 +1,33 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002A4B RID: 10827
+// Token: 0x02001FC6 RID: 8134
 [NullableContext(1)]
 [Nullable(0)]
 public class FlySkinGetWayData : IFlySkinGetWayData
 {
-	// Token: 0x17001DEB RID: 7659
-	// (get) Token: 0x060168E2 RID: 92386 RVA: 0x005B781E File Offset: 0x005B5A1E
-	// (set) Token: 0x060168E3 RID: 92387 RVA: 0x005B7826 File Offset: 0x005B5A26
+	// Token: 0x17001E43 RID: 7747
+	// (get) Token: 0x06014303 RID: 82691 RVA: 0x005E3962 File Offset: 0x005E1B62
+	// (set) Token: 0x06014304 RID: 82692 RVA: 0x005E396A File Offset: 0x005E1B6A
 	public int Id { get; set; }
 
-	// Token: 0x17001DEC RID: 7660
-	// (get) Token: 0x060168E4 RID: 92388 RVA: 0x005B782F File Offset: 0x005B5A2F
-	// (set) Token: 0x060168E5 RID: 92389 RVA: 0x005B7837 File Offset: 0x005B5A37
+	// Token: 0x17001E44 RID: 7748
+	// (get) Token: 0x06014305 RID: 82693 RVA: 0x005E3973 File Offset: 0x005E1B73
+	// (set) Token: 0x06014306 RID: 82694 RVA: 0x005E397B File Offset: 0x005E1B7B
 	public int ConfigId { get; set; }
 
-	// Token: 0x17001DED RID: 7661
-	// (get) Token: 0x060168E6 RID: 92390 RVA: 0x005B7840 File Offset: 0x005B5A40
-	// (set) Token: 0x060168E7 RID: 92391 RVA: 0x005B7848 File Offset: 0x005B5A48
+	// Token: 0x17001E45 RID: 7749
+	// (get) Token: 0x06014307 RID: 82695 RVA: 0x005E3984 File Offset: 0x005E1B84
+	// (set) Token: 0x06014308 RID: 82696 RVA: 0x005E398C File Offset: 0x005E1B8C
 	public EFlySkinGetWayType Type { get; set; }
 
-	// Token: 0x17001DEE RID: 7662
-	// (get) Token: 0x060168E8 RID: 92392 RVA: 0x005B7851 File Offset: 0x005B5A51
-	// (set) Token: 0x060168E9 RID: 92393 RVA: 0x005B7859 File Offset: 0x005B5A59
+	// Token: 0x17001E46 RID: 7750
+	// (get) Token: 0x06014309 RID: 82697 RVA: 0x005E3995 File Offset: 0x005E1B95
+	// (set) Token: 0x0601430A RID: 82698 RVA: 0x005E399D File Offset: 0x005E1B9D
 	public string Text { get; set; }
 
-	// Token: 0x17001DEF RID: 7663
-	// (get) Token: 0x060168EA RID: 92394 RVA: 0x005B7862 File Offset: 0x005B5A62
-	// (set) Token: 0x060168EB RID: 92395 RVA: 0x005B786A File Offset: 0x005B5A6A
+	// Token: 0x17001E47 RID: 7751
+	// (get) Token: 0x0601430B RID: 82699 RVA: 0x005E39A6 File Offset: 0x005E1BA6
+	// (set) Token: 0x0601430C RID: 82700 RVA: 0x005E39AE File Offset: 0x005E1BAE
 	public int SortIndex { get; set; }
 }

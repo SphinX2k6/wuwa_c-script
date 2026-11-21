@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000558 RID: 1368
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005BF RID: 1471
 	public class INpcBumpShow
 	{
-		// Token: 0x06001BFE RID: 7166 RVA: 0x00050744 File Offset: 0x0004E944
+		// Token: 0x06001DFA RID: 7674 RVA: 0x00055500 File Offset: 0x00053700
 		private INpcBumpShow_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001BFF RID: 7167 RVA: 0x0005077C File Offset: 0x0004E97C
+		// Token: 0x06001DFB RID: 7675 RVA: 0x00055538 File Offset: 0x00053738
 		public static INpcBumpShow Create([Nullable(2)] INpcBumpShow instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C00 RID: 7168 RVA: 0x0005078F File Offset: 0x0004E98F
+		// Token: 0x06001DFC RID: 7676 RVA: 0x0005554B File Offset: 0x0005374B
 		public static INpcBumpShow CreateFromSetValue([Nullable(2)] INpcBumpShow_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C01 RID: 7169 RVA: 0x000507A2 File Offset: 0x0004E9A2
+		// Token: 0x06001DFD RID: 7677 RVA: 0x0005555E File Offset: 0x0005375E
 		public INpcBumpShow_SetValue ToSetValue()
 		{
 			return new INpcBumpShow_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700075A RID: 1882
-		// (get) Token: 0x06001C02 RID: 7170 RVA: 0x000507B8 File Offset: 0x0004E9B8
-		// (set) Token: 0x06001C03 RID: 7171 RVA: 0x00050819 File Offset: 0x0004EA19
+		// Token: 0x170007DD RID: 2013
+		// (get) Token: 0x06001DFE RID: 7678 RVA: 0x00055574 File Offset: 0x00053774
+		// (set) Token: 0x06001DFF RID: 7679 RVA: 0x000555D5 File Offset: 0x000537D5
 		[Nullable(2)]
 		public virtual INpcPerformBubble BumpBubble
 		{
@@ -92,18 +90,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400140E RID: 5134
+		// Token: 0x04001578 RID: 5496
 		[Nullable(2)]
 		protected INpcBumpShow FbInstance;
 
-		// Token: 0x0400140F RID: 5135
+		// Token: 0x04001579 RID: 5497
 		[Nullable(2)]
 		protected INpcBumpShow_SetValue PocoInterface;
 
-		// Token: 0x04001410 RID: 5136
+		// Token: 0x0400157A RID: 5498
 		private INpcPerformBubble _BumpBubbleCache;
 
-		// Token: 0x04001411 RID: 5137
+		// Token: 0x0400157B RID: 5499
 		private bool _BumpBubbleInited;
 	}
 }

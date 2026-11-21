@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006AE RID: 1710
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200074F RID: 1871
 	public class ISceneTextGuideUiActionMappingIcon
 	{
-		// Token: 0x060024AA RID: 9386 RVA: 0x00063378 File Offset: 0x00061578
+		// Token: 0x060027C6 RID: 10182 RVA: 0x0006A340 File Offset: 0x00068540
 		private ISceneTextGuideUiActionMappingIcon_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060024AB RID: 9387 RVA: 0x000633B0 File Offset: 0x000615B0
+		// Token: 0x060027C7 RID: 10183 RVA: 0x0006A378 File Offset: 0x00068578
 		public static ISceneTextGuideUiActionMappingIcon Create([Nullable(2)] ISceneTextGuideUiActionMappingIcon instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060024AC RID: 9388 RVA: 0x000633C3 File Offset: 0x000615C3
+		// Token: 0x060027C8 RID: 10184 RVA: 0x0006A38B File Offset: 0x0006858B
 		public static ISceneTextGuideUiActionMappingIcon CreateFromSetValue([Nullable(2)] ISceneTextGuideUiActionMappingIcon_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060024AD RID: 9389 RVA: 0x000633D6 File Offset: 0x000615D6
+		// Token: 0x060027C9 RID: 10185 RVA: 0x0006A39E File Offset: 0x0006859E
 		public ISceneTextGuideUiActionMappingIcon_SetValue ToSetValue()
 		{
 			return new ISceneTextGuideUiActionMappingIcon_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009AF RID: 2479
-		// (get) Token: 0x060024AE RID: 9390 RVA: 0x000633F5 File Offset: 0x000615F5
-		// (set) Token: 0x060024AF RID: 9391 RVA: 0x00063420 File Offset: 0x00061620
+		// Token: 0x17000A6B RID: 2667
+		// (get) Token: 0x060027CA RID: 10186 RVA: 0x0006A3BD File Offset: 0x000685BD
+		// (set) Token: 0x060027CB RID: 10187 RVA: 0x0006A3E8 File Offset: 0x000685E8
 		public virtual int Id
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009B0 RID: 2480
-		// (get) Token: 0x060024B0 RID: 9392 RVA: 0x0006342E File Offset: 0x0006162E
-		// (set) Token: 0x060024B1 RID: 9393 RVA: 0x00063459 File Offset: 0x00061659
+		// Token: 0x17000A6C RID: 2668
+		// (get) Token: 0x060027CC RID: 10188 RVA: 0x0006A3F6 File Offset: 0x000685F6
+		// (set) Token: 0x060027CD RID: 10189 RVA: 0x0006A421 File Offset: 0x00068621
 		public virtual string ActionName
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001927 RID: 6439
+		// Token: 0x04001B24 RID: 6948
 		[Nullable(2)]
 		protected ISceneTextGuideUiActionMappingIcon FbInstance;
 
-		// Token: 0x04001928 RID: 6440
+		// Token: 0x04001B25 RID: 6949
 		[Nullable(2)]
 		protected ISceneTextGuideUiActionMappingIcon_SetValue PocoInterface;
 	}

@@ -2,14 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005CE5 RID: 23781
+	// Token: 0x02006319 RID: 25369
 	public enum ECommonTargetType : byte
 	{
-		// Token: 0x0400F601 RID: 62977
+		// Token: 0x0401034F RID: 66383
 		Player,
-		// Token: 0x0400F602 RID: 62978
+		// Token: 0x04010350 RID: 66384
 		Entity,
-		// Token: 0x0400F603 RID: 62979
+		// Token: 0x04010351 RID: 66385
+		AssistCharacter,
+		// Token: 0x04010352 RID: 66386
 		Position
 	}
 }

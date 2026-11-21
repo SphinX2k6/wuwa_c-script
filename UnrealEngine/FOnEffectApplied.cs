@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200196A RID: 6506
+	// Token: 0x02000434 RID: 1076
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnEffectApplied : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060182FA RID: 99066 RVA: 0x0023A43A File Offset: 0x0023863A
+		// Token: 0x0600689D RID: 26781 RVA: 0x00098922 File Offset: 0x00096B22
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnEffectApplied.StaticFunctionPtr();
 		}
 
-		// Token: 0x060182FB RID: 99067 RVA: 0x0023A446 File Offset: 0x00238646
+		// Token: 0x0600689E RID: 26782 RVA: 0x0009892E File Offset: 0x00096B2E
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnEffectApplied._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnEffectApplied._FunctionPtr;
 		}
 
-		// Token: 0x060182FC RID: 99068 RVA: 0x0023A469 File Offset: 0x00238669
+		// Token: 0x0600689F RID: 26783 RVA: 0x00098951 File Offset: 0x00096B51
 		public FOnEffectApplied()
 		{
 		}
 
-		// Token: 0x060182FD RID: 99069 RVA: 0x0023A471 File Offset: 0x00238671
+		// Token: 0x060068A0 RID: 26784 RVA: 0x00098959 File Offset: 0x00096B59
 		[NullableContext(2)]
 		public FOnEffectApplied(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060182FE RID: 99070 RVA: 0x0023A47B File Offset: 0x0023867B
+		// Token: 0x060068A1 RID: 26785 RVA: 0x00098963 File Offset: 0x00096B63
 		public FOnEffectApplied(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060182FF RID: 99071 RVA: 0x0023A486 File Offset: 0x00238686
+		// Token: 0x060068A2 RID: 26786 RVA: 0x0009896E File Offset: 0x00096B6E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<FActiveGameplayEffectHandle>) ?? ((Action<FActiveGameplayEffectHandle>)Delegate.CreateDelegate(typeof(Action<FActiveGameplayEffectHandle>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018300 RID: 99072 RVA: 0x0023A4B8 File Offset: 0x002386B8
+		// Token: 0x060068A3 RID: 26787 RVA: 0x000989A0 File Offset: 0x00096BA0
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<FActiveGameplayEffectHandle> Callback)
 		{
 			if (FOnEffectApplied.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FOnEffectApplied.RegisterId);
 		}
 
-		// Token: 0x06018301 RID: 99073 RVA: 0x0023A4F2 File Offset: 0x002386F2
+		// Token: 0x060068A4 RID: 26788 RVA: 0x000989DA File Offset: 0x00096BDA
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<FActiveGameplayEffectHandle> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06018302 RID: 99074 RVA: 0x0023A4FC File Offset: 0x002386FC
+		// Token: 0x060068A5 RID: 26789 RVA: 0x000989E4 File Offset: 0x00096BE4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(FActiveGameplayEffectHandle ActiveHandle)
 		{
 			FOnEffectApplied.__FOnEffectApplied_DelegateParams* ptr = stackalloc FOnEffectApplied.__FOnEffectApplied_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnEffectApplied.__FOnEffectApplied_DelegateParams) & -16L;
@@ -90,10 +87,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x06018303 RID: 99075 RVA: 0x0023A554 File Offset: 0x00238754
+		// Token: 0x060068A6 RID: 26790 RVA: 0x00098A3C File Offset: 0x00096C3C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FActiveGameplayEffectHandle> action = target as Action<FActiveGameplayEffectHandle>;
@@ -105,31 +101,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x0400D1B4 RID: 53684
+		// Token: 0x04002C9B RID: 11419
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D1B5 RID: 53685
+		// Token: 0x04002C9C RID: 11420
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGAS.OnEffectApplied__DelegateSignature";
 
-		// Token: 0x0400D1B6 RID: 53686
+		// Token: 0x04002C9D RID: 11421
 		private static int RegisterId;
 
-		// Token: 0x02003056 RID: 12374
+		// Token: 0x02000B50 RID: 2896
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnEffectApplied_DelegateParams
+		private ref struct __FOnEffectApplied_DelegateParams
 		{
-			// Token: 0x04016D1B RID: 93467
+			// Token: 0x04005C63 RID: 23651
 			[FieldOffset(0)]
 			public byte ActiveHandle;
 		}
 
-		// Token: 0x02003057 RID: 12375
+		// Token: 0x02000B51 RID: 2897
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016D1C RID: 93468
+			// Token: 0x04005C64 RID: 23652
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

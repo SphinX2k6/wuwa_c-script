@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068A7 RID: 26791
+	// Token: 0x020057F7 RID: 22519
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AdamFormationRoleSizeItem : UiPanelBase, IDynamicScrollBaseItem<AdamFormationRoleGroupInfo>
 	{
-		// Token: 0x06042DA6 RID: 273830 RVA: 0x010468C4 File Offset: 0x01044AC4
+		// Token: 0x060378FE RID: 227582 RVA: 0x00F87ED4 File Offset: 0x00F860D4
 		public UniTask Init(UUIItem actor)
 		{
 			AdamFormationRoleSizeItem.<Init>d__1 <Init>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042DA7 RID: 273831 RVA: 0x01046910 File Offset: 0x01044B10
+		// Token: 0x060378FF RID: 227583 RVA: 0x00F87F20 File Offset: 0x00F86120
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x06042DA8 RID: 273832 RVA: 0x01046998 File Offset: 0x01044B98
+		// Token: 0x06037900 RID: 227584 RVA: 0x00F87FA8 File Offset: 0x00F861A8
 		public FVector2D GetItemSize(AdamFormationRoleGroupInfo data)
 		{
 			if (this.ItemSizeVector == null)
@@ -57,12 +57,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return this.ItemSizeVector.ToUeVector2D(false);
 		}
 
-		// Token: 0x06042DA9 RID: 273833 RVA: 0x01046A2C File Offset: 0x01044C2C
+		// Token: 0x06037901 RID: 227585 RVA: 0x00F8803C File Offset: 0x00F8623C
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x04022CA2 RID: 142498
+		// Token: 0x0401D4FE RID: 120062
 		[Nullable(2)]
 		private Vector2D ItemSizeVector;
 	}

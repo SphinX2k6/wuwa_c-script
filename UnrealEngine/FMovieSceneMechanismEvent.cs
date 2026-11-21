@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200238B RID: 9099
+	// Token: 0x0200076E RID: 1902
 	[UnrealObjectPath("/Script/MovieSceneTracks.MovieSceneMechanismEvent")]
 	[UnrealStructLayout(40, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 40)]
 	public class FMovieSceneMechanismEvent : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060224B2 RID: 140466 RVA: 0x0032B72A File Offset: 0x0032992A
+		// Token: 0x0600A4D2 RID: 42194 RVA: 0x000F37CA File Offset: 0x000F19CA
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMovieSceneMechanismEvent._ScriptStructPtr != 0) ? FMovieSceneMechanismEvent._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/MovieSceneTracks.MovieSceneMechanismEvent", ref FMovieSceneMechanismEvent._ScriptStructPtr);
 		}
 
-		// Token: 0x1700843B RID: 33851
-		// (get) Token: 0x060224B3 RID: 140467 RVA: 0x0032B74E File Offset: 0x0032994E
-		// (set) Token: 0x060224B4 RID: 140468 RVA: 0x0032B75E File Offset: 0x0032995E
+		// Token: 0x17001E75 RID: 7797
+		// (get) Token: 0x0600A4D3 RID: 42195 RVA: 0x000F37EE File Offset: 0x000F19EE
+		// (set) Token: 0x0600A4D4 RID: 42196 RVA: 0x000F37FE File Offset: 0x000F19FE
 		public unsafe bool bAnimNotifyState
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700843C RID: 33852
-		// (get) Token: 0x060224B5 RID: 140469 RVA: 0x0032B76F File Offset: 0x0032996F
-		// (set) Token: 0x060224B6 RID: 140470 RVA: 0x0032B783 File Offset: 0x00329983
+		// Token: 0x17001E76 RID: 7798
+		// (get) Token: 0x0600A4D5 RID: 42197 RVA: 0x000F380F File Offset: 0x000F1A0F
+		// (set) Token: 0x0600A4D6 RID: 42198 RVA: 0x000F3823 File Offset: 0x000F1A23
 		public unsafe FName EventNotifyType
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700843D RID: 33853
-		// (get) Token: 0x060224B7 RID: 140471 RVA: 0x0032B798 File Offset: 0x00329998
-		// (set) Token: 0x060224B8 RID: 140472 RVA: 0x0032B7AC File Offset: 0x003299AC
+		// Token: 0x17001E77 RID: 7799
+		// (get) Token: 0x0600A4D7 RID: 42199 RVA: 0x000F3838 File Offset: 0x000F1A38
+		// (set) Token: 0x0600A4D8 RID: 42200 RVA: 0x000F384C File Offset: 0x000F1A4C
 		public unsafe FName EventNotifyStateType
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700843E RID: 33854
-		// (get) Token: 0x060224B9 RID: 140473 RVA: 0x0032B7C1 File Offset: 0x003299C1
-		// (set) Token: 0x060224BA RID: 140474 RVA: 0x0032B7D5 File Offset: 0x003299D5
+		// Token: 0x17001E78 RID: 7800
+		// (get) Token: 0x0600A4D9 RID: 42201 RVA: 0x000F3861 File Offset: 0x000F1A61
+		// (set) Token: 0x0600A4DA RID: 42202 RVA: 0x000F3875 File Offset: 0x000F1A75
 		public unsafe FName EventName
 		{
 			get
@@ -76,68 +76,59 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060224BB RID: 140475 RVA: 0x0032B7EA File Offset: 0x003299EA
+		// Token: 0x0600A4DB RID: 42203 RVA: 0x000F388A File Offset: 0x000F1A8A
 		public FMovieSceneMechanismEvent()
 		{
 		}
 
-		// Token: 0x060224BC RID: 140476 RVA: 0x0032B7F2 File Offset: 0x003299F2
-		public FMovieSceneMechanismEvent(bool bAnimNotifyState, FName EventNotifyType, FName EventNotifyStateType, FName EventName)
-		{
-			this.bAnimNotifyState = bAnimNotifyState;
-			this.EventNotifyType = EventNotifyType;
-			this.EventNotifyStateType = EventNotifyStateType;
-			this.EventName = EventName;
-		}
-
-		// Token: 0x060224BD RID: 140477 RVA: 0x0032B817 File Offset: 0x00329A17
+		// Token: 0x0600A4DC RID: 42204 RVA: 0x000F3892 File Offset: 0x000F1A92
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMovieSceneMechanismEvent.StaticStruct();
 		}
 
-		// Token: 0x060224BE RID: 140478 RVA: 0x0032B823 File Offset: 0x00329A23
+		// Token: 0x0600A4DD RID: 42205 RVA: 0x000F389E File Offset: 0x000F1A9E
 		[NullableContext(2)]
 		public FMovieSceneMechanismEvent(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060224BF RID: 140479 RVA: 0x0032B82D File Offset: 0x00329A2D
+		// Token: 0x0600A4DE RID: 42206 RVA: 0x000F38A8 File Offset: 0x000F1AA8
 		public FMovieSceneMechanismEvent(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060224C0 RID: 140480 RVA: 0x0032B838 File Offset: 0x00329A38
+		// Token: 0x0600A4DF RID: 42207 RVA: 0x000F38B3 File Offset: 0x000F1AB3
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMovieSceneMechanismEvent(Pointer, false, true);
 		}
 
-		// Token: 0x060224C1 RID: 140481 RVA: 0x0032B842 File Offset: 0x00329A42
+		// Token: 0x0600A4E0 RID: 42208 RVA: 0x000F38BD File Offset: 0x000F1ABD
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMovieSceneMechanismEvent(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040124EC RID: 74988
+		// Token: 0x0400465A RID: 18010
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/MovieSceneTracks.MovieSceneMechanismEvent";
 
-		// Token: 0x040124ED RID: 74989
+		// Token: 0x0400465B RID: 18011
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040124EE RID: 74990
+		// Token: 0x0400465C RID: 18012
 		internal static int __PropertyOffset_bAnimNotifyState;
 
-		// Token: 0x040124EF RID: 74991
+		// Token: 0x0400465D RID: 18013
 		internal static int __PropertyOffset_EventNotifyType;
 
-		// Token: 0x040124F0 RID: 74992
+		// Token: 0x0400465E RID: 18014
 		internal static int __PropertyOffset_EventNotifyStateType;
 
-		// Token: 0x040124F1 RID: 74993
+		// Token: 0x0400465F RID: 18015
 		internal static int __PropertyOffset_EventName;
 	}
 }

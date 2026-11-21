@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E0B RID: 7691
+	// Token: 0x0200203E RID: 8254
 	public class ISetAnimSequenceBlendAnimType_SetValue
 	{
-		// Token: 0x04006283 RID: 25219
+		// Token: 0x0400685A RID: 26714
 		public EBlendAnimType Type;
 
-		// Token: 0x04006284 RID: 25220
-		[Nullable(1)]
+		// Token: 0x0400685B RID: 26715
 		public string AnimSequence;
 
-		// Token: 0x04006285 RID: 25221
+		// Token: 0x0400685C RID: 26716
 		public float? ProtectTime;
 	}
 }

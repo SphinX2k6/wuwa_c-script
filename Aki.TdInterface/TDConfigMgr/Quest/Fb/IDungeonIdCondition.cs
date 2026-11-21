@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001380 RID: 4992
+	// Token: 0x020014D1 RID: 5329
 	public class IDungeonIdCondition : IDungeonCondition
 	{
-		// Token: 0x06007239 RID: 29241 RVA: 0x00112E76 File Offset: 0x00111076
-		[NullableContext(1)]
+		// Token: 0x060078DF RID: 30943 RVA: 0x001214FA File Offset: 0x0011F6FA
 		public static IDungeonIdCondition Create(IDungeonIdCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700250C RID: 9484
-		// (get) Token: 0x0600723A RID: 29242 RVA: 0x00112E95 File Offset: 0x00111095
+		// Token: 0x170026DF RID: 9951
+		// (get) Token: 0x060078E0 RID: 30944 RVA: 0x00121519 File Offset: 0x0011F719
 		public override EDungeonConditionType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700250D RID: 9485
-		// (get) Token: 0x0600723B RID: 29243 RVA: 0x00112EA2 File Offset: 0x001110A2
+		// Token: 0x170026E0 RID: 9952
+		// (get) Token: 0x060078E1 RID: 30945 RVA: 0x00121526 File Offset: 0x0011F726
 		public override int Count
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700250E RID: 9486
-		// (get) Token: 0x0600723C RID: 29244 RVA: 0x00112EB0 File Offset: 0x001110B0
+		// Token: 0x170026E1 RID: 9953
+		// (get) Token: 0x060078E2 RID: 30946 RVA: 0x00121534 File Offset: 0x0011F734
 		public override bool? IsExitDungeon
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700250F RID: 9487
-		// (get) Token: 0x0600723D RID: 29245 RVA: 0x00112EE6 File Offset: 0x001110E6
+		// Token: 0x170026E2 RID: 9954
+		// (get) Token: 0x060078E3 RID: 30947 RVA: 0x0012156A File Offset: 0x0011F76A
 		public virtual int DungeonId
 		{
 			get
@@ -65,7 +63,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004208 RID: 16904
+		// Token: 0x04004589 RID: 17801
 		private IDungeonIdCondition Instance;
 	}
 }

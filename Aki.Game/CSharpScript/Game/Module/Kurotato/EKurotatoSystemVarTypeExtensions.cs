@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x0200571B RID: 22299
+	// Token: 0x020046F2 RID: 18162
 	public static class EKurotatoSystemVarTypeExtensions
 	{
-		// Token: 0x06038B20 RID: 232224 RVA: 0x00D73508 File Offset: 0x00D71708
+		// Token: 0x0602DA2F RID: 186927 RVA: 0x00CC1AE8 File Offset: 0x00CBFCE8
 		public static string ToEnumString(this EKurotatoSystemVarType value)
 		{
 			string result;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return result;
 		}
 
-		// Token: 0x06038B21 RID: 232225 RVA: 0x00D735D4 File Offset: 0x00D717D4
+		// Token: 0x0602DA30 RID: 186928 RVA: 0x00CC1BB4 File Offset: 0x00CBFDB4
 		public static EKurotatoSystemVarType FromString(string name)
 		{
 			EKurotatoSystemVarType result;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return result;
 		}
 
-		// Token: 0x06038B22 RID: 232226 RVA: 0x00D73600 File Offset: 0x00D71800
+		// Token: 0x0602DA31 RID: 186929 RVA: 0x00CC1BE0 File Offset: 0x00CBFDE0
 		public static bool TryFromString(string name, out EKurotatoSystemVarType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return false;
 		}
 
-		// Token: 0x06038B23 RID: 232227 RVA: 0x00D73820 File Offset: 0x00D71A20
+		// Token: 0x0602DA32 RID: 186930 RVA: 0x00CC1E00 File Offset: 0x00CC0000
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			};
 		}
 
-		// Token: 0x06038B24 RID: 232228 RVA: 0x00D738A9 File Offset: 0x00D71AA9
+		// Token: 0x0602DA33 RID: 186931 RVA: 0x00CC1E89 File Offset: 0x00CC0089
 		public static EKurotatoSystemVarType[] GetValues()
 		{
 			return new EKurotatoSystemVarType[]
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			};
 		}
 
-		// Token: 0x06038B25 RID: 232229 RVA: 0x00D738C0 File Offset: 0x00D71AC0
+		// Token: 0x0602DA34 RID: 186932 RVA: 0x00CC1EA0 File Offset: 0x00CC00A0
 		public static string[] GetNames()
 		{
 			return new string[]

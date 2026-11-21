@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200025A RID: 602
+	// Token: 0x0200029D RID: 669
 	public class IComponentBase_SetValue
 	{
-		// Token: 0x04000AB2 RID: 2738
+		// Token: 0x04000B93 RID: 2963
 		public bool? Disabled;
 
-		// Token: 0x04000AB3 RID: 2739
+		// Token: 0x04000B94 RID: 2964
 		public bool? EdIsLocked;
 	}
 }

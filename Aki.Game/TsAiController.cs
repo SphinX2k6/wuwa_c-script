@@ -19,9 +19,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/Controller/TsAiController.TsAiController_C")]
 public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000264 RID: 612
-	// (get) Token: 0x06000E3A RID: 3642 RVA: 0x000521CA File Offset: 0x000503CA
-	// (set) Token: 0x06000E3B RID: 3643 RVA: 0x000521DE File Offset: 0x000503DE
+	// Token: 0x17000267 RID: 615
+	// (get) Token: 0x06000E40 RID: 3648 RVA: 0x00052D5E File Offset: 0x00050F5E
+	// (set) Token: 0x06000E41 RID: 3649 RVA: 0x00052D72 File Offset: 0x00050F72
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	private unsafe UBehaviorTree BehaviorTree
@@ -38,8 +38,8 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17000265 RID: 613
-	// (get) Token: 0x06000E3C RID: 3644 RVA: 0x000521F3 File Offset: 0x000503F3
+	// Token: 0x17000268 RID: 616
+	// (get) Token: 0x06000E42 RID: 3650 RVA: 0x00052D87 File Offset: 0x00050F87
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UKuroStateMachineGroup StateMachineGroup
@@ -51,7 +51,7 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06000E3D RID: 3645 RVA: 0x00052207 File Offset: 0x00050407
+	// Token: 0x06000E43 RID: 3651 RVA: 0x00052D9B File Offset: 0x00050F9B
 	[NullableContext(2)]
 	public Entity GetEntity()
 	{
@@ -63,14 +63,14 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		return charAiDesignComp.Entity;
 	}
 
-	// Token: 0x06000E3E RID: 3646 RVA: 0x0005221A File Offset: 0x0005041A
+	// Token: 0x06000E44 RID: 3652 RVA: 0x00052DAE File Offset: 0x00050FAE
 	[NullableContext(2)]
 	public CharacterAiComponent GetAiComp()
 	{
 		return this.CharAiDesignComp;
 	}
 
-	// Token: 0x06000E3F RID: 3647 RVA: 0x00052222 File Offset: 0x00050422
+	// Token: 0x06000E45 RID: 3653 RVA: 0x00052DB6 File Offset: 0x00050FB6
 	[NullableContext(2)]
 	public bool SetupBehaviorTree(UBehaviorTree behaviorTree)
 	{
@@ -88,7 +88,7 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		return true;
 	}
 
-	// Token: 0x06000E40 RID: 3648 RVA: 0x00052250 File Offset: 0x00050450
+	// Token: 0x06000E46 RID: 3654 RVA: 0x00052DE4 File Offset: 0x00050FE4
 	[NullableContext(1)]
 	public void InitAiController(CharacterAiComponent aiComp)
 	{
@@ -99,7 +99,7 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.CharStateMachineComp = aiComp.Entity.GetComponent<CharacterStateMachineNewComponent>();
 	}
 
-	// Token: 0x06000E41 RID: 3649 RVA: 0x000522A4 File Offset: 0x000504A4
+	// Token: 0x06000E47 RID: 3655 RVA: 0x00052E38 File Offset: 0x00051038
 	public void DrawDebugLines(float deltaSeconds)
 	{
 		CharacterAiComponent charAiDesignComp = this.CharAiDesignComp;
@@ -136,7 +136,7 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06000E42 RID: 3650 RVA: 0x00052498 File Offset: 0x00050698
+	// Token: 0x06000E48 RID: 3656 RVA: 0x0005302C File Offset: 0x0005122C
 	[NullableContext(1)]
 	protected void DrawPerception(global::Vector myLocation, [Nullable(2)] EntityHandle currentTarget)
 	{
@@ -195,134 +195,113 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		UKismetSystemLibrary.D_DrawDebugSphere(this, tmpVector.ToUeVector(false), value.DisengageBornDistance.Value.Max, 24, new FLinearColor?(TsAiController.maxHateInitAreaColor), 0f, 0f);
 	}
 
-	// Token: 0x06000E43 RID: 3651 RVA: 0x000527F0 File Offset: 0x000509F0
+	// Token: 0x06000E49 RID: 3657 RVA: 0x00053384 File Offset: 0x00051584
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void OnStart()
+	public virtual void OnStart()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnStart"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnStart"), TsAiController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnStart_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06000E44 RID: 3652 RVA: 0x00052860 File Offset: 0x00050A60
+	// Token: 0x06000E4A RID: 3658 RVA: 0x000533DD File Offset: 0x000515DD
 	protected void OnStart_Implementation()
 	{
 	}
 
-	// Token: 0x06000E45 RID: 3653 RVA: 0x00052864 File Offset: 0x00050A64
+	// Token: 0x06000E4B RID: 3659 RVA: 0x000533E0 File Offset: 0x000515E0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void 获取控制权时()
+	public virtual void 获取控制权时()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("获取控制权时"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("获取控制权时"), TsAiController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.获取控制权时_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06000E46 RID: 3654 RVA: 0x000528D4 File Offset: 0x00050AD4
+	// Token: 0x06000E4C RID: 3660 RVA: 0x00053439 File Offset: 0x00051639
 	protected void 获取控制权时_Implementation()
 	{
 	}
 
-	// Token: 0x06000E47 RID: 3655 RVA: 0x000528D8 File Offset: 0x00050AD8
+	// Token: 0x06000E4D RID: 3661 RVA: 0x0005343C File Offset: 0x0005163C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void 状态切换时(ECharacterState oldState, ECharacterState newState, bool isAutonomousProxy)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("状态切换时"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__状态切换时_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("状态切换时"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__状态切换时_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__状态切换时_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->oldState) = (byte)oldState;
-			*(&ptr2->newState) = (byte)newState;
-			ptr2->isAutonomousProxy = isAutonomousProxy;
+			this.状态切换时_Implementation(oldState, newState, isAutonomousProxy);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__状态切换时_FunctionParams* ptr = stackalloc TsAiController.__状态切换时_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__状态切换时_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->oldState) = (byte)oldState;
+		*(&ptr->newState) = (byte)newState;
+		ptr->isAutonomousProxy = isAutonomousProxy;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E48 RID: 3656 RVA: 0x00052960 File Offset: 0x00050B60
+	// Token: 0x06000E4E RID: 3662 RVA: 0x000534DC File Offset: 0x000516DC
 	protected void 状态切换时_Implementation(ECharacterState oldState, ECharacterState newState, bool isAutonomousProxy)
 	{
 	}
 
-	// Token: 0x06000E49 RID: 3657 RVA: 0x00052964 File Offset: 0x00050B64
+	// Token: 0x06000E4F RID: 3663 RVA: 0x000534E0 File Offset: 0x000516E0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void 渲染状态改变时(bool wasRendered)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("渲染状态改变时"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__渲染状态改变时_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("渲染状态改变时"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__渲染状态改变时_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__渲染状态改变时_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->wasRendered = wasRendered;
+			this.渲染状态改变时_Implementation(wasRendered);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__渲染状态改变时_FunctionParams* ptr = stackalloc TsAiController.__渲染状态改变时_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__渲染状态改变时_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->wasRendered = wasRendered;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E4A RID: 3658 RVA: 0x000529DA File Offset: 0x00050BDA
+	// Token: 0x06000E50 RID: 3664 RVA: 0x0005356C File Offset: 0x0005176C
 	protected void 渲染状态改变时_Implementation(bool wasRendered)
 	{
 	}
 
-	// Token: 0x06000E4B RID: 3659 RVA: 0x000529DC File Offset: 0x00050BDC
+	// Token: 0x06000E51 RID: 3665 RVA: 0x00053570 File Offset: 0x00051770
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddComplicatedEventBinder(SAiConditions conditions, UKuroBooleanEventBinder eventBinder)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddComplicatedEventBinder"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AddComplicatedEventBinder_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddComplicatedEventBinder"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AddComplicatedEventBinder_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AddComplicatedEventBinder_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			UnrealReflectionUtils.CopyNativeStruct(SAiConditions.StaticStruct(), &ptr2->conditions, (conditions != null) ? conditions.NativePtr : ((IntPtr)0), 1, false);
-			*(&ptr2->eventBinder) = ((eventBinder != null) ? eventBinder.NativePtr : ((IntPtr)0));
+			this.AddComplicatedEventBinder_Implementation(conditions, eventBinder);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AddComplicatedEventBinder_FunctionParams* ptr = stackalloc TsAiController.__AddComplicatedEventBinder_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AddComplicatedEventBinder_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CopyNativeStruct(SAiConditions.StaticStruct(), &ptr->conditions, (conditions != null) ? conditions.NativePtr : ((IntPtr)0), 1, false);
+		*(&ptr->eventBinder) = ((eventBinder != null) ? eventBinder.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E4C RID: 3660 RVA: 0x00052A80 File Offset: 0x00050C80
+	// Token: 0x06000E52 RID: 3666 RVA: 0x0005362C File Offset: 0x0005182C
 	[NullableContext(1)]
 	protected void AddComplicatedEventBinder_Implementation(SAiConditions conditions, UKuroBooleanEventBinder eventBinder)
 	{
@@ -339,30 +318,27 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.AiController.AiConditionEvents.AddConditionEvent(conditions, eventBinder);
 	}
 
-	// Token: 0x06000E4D RID: 3661 RVA: 0x00052AD0 File Offset: 0x00050CD0
+	// Token: 0x06000E53 RID: 3667 RVA: 0x0005367C File Offset: 0x0005187C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddSceneItemDestroyEventBinder(float distance, UKuroActorEventBinder eventBinder)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddSceneItemDestroyEventBinder"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AddSceneItemDestroyEventBinder_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddSceneItemDestroyEventBinder"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AddSceneItemDestroyEventBinder_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AddSceneItemDestroyEventBinder_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->distance = distance;
-			*(&ptr2->eventBinder) = ((eventBinder != null) ? eventBinder.NativePtr : ((IntPtr)0));
+			this.AddSceneItemDestroyEventBinder_Implementation(distance, eventBinder);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AddSceneItemDestroyEventBinder_FunctionParams* ptr = stackalloc TsAiController.__AddSceneItemDestroyEventBinder_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AddSceneItemDestroyEventBinder_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->distance = distance;
+		*(&ptr->eventBinder) = ((eventBinder != null) ? eventBinder.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E4E RID: 3662 RVA: 0x00052B5C File Offset: 0x00050D5C
+	// Token: 0x06000E54 RID: 3668 RVA: 0x00053720 File Offset: 0x00051920
 	[NullableContext(1)]
 	protected void AddSceneItemDestroyEventBinder_Implementation(float distance, UKuroActorEventBinder eventBinder)
 	{
@@ -379,30 +355,27 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.AiController.AiPerceptionEvents.AddSceneItemDestroyEvent(distance, eventBinder);
 	}
 
-	// Token: 0x06000E4F RID: 3663 RVA: 0x00052BAC File Offset: 0x00050DAC
+	// Token: 0x06000E55 RID: 3669 RVA: 0x00053770 File Offset: 0x00051970
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddLevelVarBoolEventBinder(SAiLevelVar levelVar, UKuroBooleanEventBinder eventBinder)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddLevelVarBoolEventBinder"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AddLevelVarBoolEventBinder_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddLevelVarBoolEventBinder"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AddLevelVarBoolEventBinder_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AddLevelVarBoolEventBinder_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			UnrealReflectionUtils.CopyNativeStruct(SAiLevelVar.StaticStruct(), &ptr2->levelVar, (levelVar != null) ? levelVar.NativePtr : ((IntPtr)0), 1, false);
-			*(&ptr2->eventBinder) = ((eventBinder != null) ? eventBinder.NativePtr : ((IntPtr)0));
+			this.AddLevelVarBoolEventBinder_Implementation(levelVar, eventBinder);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AddLevelVarBoolEventBinder_FunctionParams* ptr = stackalloc TsAiController.__AddLevelVarBoolEventBinder_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AddLevelVarBoolEventBinder_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CopyNativeStruct(SAiLevelVar.StaticStruct(), &ptr->levelVar, (levelVar != null) ? levelVar.NativePtr : ((IntPtr)0), 1, false);
+		*(&ptr->eventBinder) = ((eventBinder != null) ? eventBinder.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E50 RID: 3664 RVA: 0x00052C50 File Offset: 0x00050E50
+	// Token: 0x06000E56 RID: 3670 RVA: 0x0005382C File Offset: 0x00051A2C
 	[NullableContext(1)]
 	protected void AddLevelVarBoolEventBinder_Implementation(SAiLevelVar levelVar, UKuroBooleanEventBinder eventBinder)
 	{
@@ -419,30 +392,27 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.AiController.AiLevelVarEvents.AddLevelVarEvent(levelVar, eventBinder);
 	}
 
-	// Token: 0x06000E51 RID: 3665 RVA: 0x00052CA0 File Offset: 0x00050EA0
+	// Token: 0x06000E57 RID: 3671 RVA: 0x0005387C File Offset: 0x00051A7C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddLevelVarIntEventBinder(SAiLevelVar levelVar, UKuroIntEventBinder eventBinder)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddLevelVarIntEventBinder"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AddLevelVarIntEventBinder_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddLevelVarIntEventBinder"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AddLevelVarIntEventBinder_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AddLevelVarIntEventBinder_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			UnrealReflectionUtils.CopyNativeStruct(SAiLevelVar.StaticStruct(), &ptr2->levelVar, (levelVar != null) ? levelVar.NativePtr : ((IntPtr)0), 1, false);
-			*(&ptr2->eventBinder) = ((eventBinder != null) ? eventBinder.NativePtr : ((IntPtr)0));
+			this.AddLevelVarIntEventBinder_Implementation(levelVar, eventBinder);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AddLevelVarIntEventBinder_FunctionParams* ptr = stackalloc TsAiController.__AddLevelVarIntEventBinder_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AddLevelVarIntEventBinder_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CopyNativeStruct(SAiLevelVar.StaticStruct(), &ptr->levelVar, (levelVar != null) ? levelVar.NativePtr : ((IntPtr)0), 1, false);
+		*(&ptr->eventBinder) = ((eventBinder != null) ? eventBinder.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E52 RID: 3666 RVA: 0x00052D44 File Offset: 0x00050F44
+	// Token: 0x06000E58 RID: 3672 RVA: 0x00053938 File Offset: 0x00051B38
 	[NullableContext(1)]
 	protected void AddLevelVarIntEventBinder_Implementation(SAiLevelVar levelVar, UKuroIntEventBinder eventBinder)
 	{
@@ -459,29 +429,26 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.AiController.AiLevelVarEvents.AddLevelVarEvent(levelVar, eventBinder);
 	}
 
-	// Token: 0x06000E53 RID: 3667 RVA: 0x00052D94 File Offset: 0x00050F94
+	// Token: 0x06000E59 RID: 3673 RVA: 0x00053988 File Offset: 0x00051B88
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddHateEventBinder(UKuroPerceptionEventBinder handler)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddHateEventBinder"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AddHateEventBinder_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddHateEventBinder"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AddHateEventBinder_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AddHateEventBinder_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->handler) = ((handler != null) ? handler.NativePtr : ((IntPtr)0));
+			this.AddHateEventBinder_Implementation(handler);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AddHateEventBinder_FunctionParams* ptr = stackalloc TsAiController.__AddHateEventBinder_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AddHateEventBinder_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->handler) = ((handler != null) ? handler.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E54 RID: 3668 RVA: 0x00052E18 File Offset: 0x00051018
+	// Token: 0x06000E5A RID: 3674 RVA: 0x00053A22 File Offset: 0x00051C22
 	[NullableContext(1)]
 	protected void AddHateEventBinder_Implementation(UKuroPerceptionEventBinder handler)
 	{
@@ -493,29 +460,26 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		aiController.AiPerceptionEvents.AddAiHateEvent(handler);
 	}
 
-	// Token: 0x06000E55 RID: 3669 RVA: 0x00052E30 File Offset: 0x00051030
+	// Token: 0x06000E5B RID: 3675 RVA: 0x00053A3C File Offset: 0x00051C3C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddPerceptionEventBinder(UKuroPerceptionEventBinder handler)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddPerceptionEventBinder"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AddPerceptionEventBinder_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddPerceptionEventBinder"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AddPerceptionEventBinder_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AddPerceptionEventBinder_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->handler) = ((handler != null) ? handler.NativePtr : ((IntPtr)0));
+			this.AddPerceptionEventBinder_Implementation(handler);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AddPerceptionEventBinder_FunctionParams* ptr = stackalloc TsAiController.__AddPerceptionEventBinder_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AddPerceptionEventBinder_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->handler) = ((handler != null) ? handler.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E56 RID: 3670 RVA: 0x00052EB4 File Offset: 0x000510B4
+	// Token: 0x06000E5C RID: 3676 RVA: 0x00053AD6 File Offset: 0x00051CD6
 	[NullableContext(1)]
 	protected void AddPerceptionEventBinder_Implementation(UKuroPerceptionEventBinder handler)
 	{
@@ -527,30 +491,27 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		aiController.AiPerceptionEvents.AddAiPerceptionEvent(handler, false, true, false);
 	}
 
-	// Token: 0x06000E57 RID: 3671 RVA: 0x00052ED0 File Offset: 0x000510D0
+	// Token: 0x06000E5D RID: 3677 RVA: 0x00053AF4 File Offset: 0x00051CF4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetPerceptionEventState(bool includeFriend, bool includeEnemy, bool includeNeutral)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetPerceptionEventState"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__SetPerceptionEventState_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetPerceptionEventState"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__SetPerceptionEventState_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__SetPerceptionEventState_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->includeFriend = includeFriend;
-			ptr2->includeEnemy = includeEnemy;
-			ptr2->includeNeutral = includeNeutral;
+			this.SetPerceptionEventState_Implementation(includeFriend, includeEnemy, includeNeutral);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__SetPerceptionEventState_FunctionParams* ptr = stackalloc TsAiController.__SetPerceptionEventState_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__SetPerceptionEventState_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->includeFriend = includeFriend;
+		ptr->includeEnemy = includeEnemy;
+		ptr->includeNeutral = includeNeutral;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E58 RID: 3672 RVA: 0x00052F54 File Offset: 0x00051154
+	// Token: 0x06000E5E RID: 3678 RVA: 0x00053B90 File Offset: 0x00051D90
 	protected void SetPerceptionEventState_Implementation(bool includeFriend, bool includeEnemy, bool includeNeutral)
 	{
 		AiController aiController = this.AiController;
@@ -561,29 +522,26 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		aiController.AiPerceptionEvents.SetPerceptionEventState(includeFriend, includeEnemy, includeNeutral);
 	}
 
-	// Token: 0x06000E59 RID: 3673 RVA: 0x00052F70 File Offset: 0x00051170
+	// Token: 0x06000E5F RID: 3679 RVA: 0x00053BAC File Offset: 0x00051DAC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddHateOutRangeEventBinder(UKuroPerceptionEventBinder handler)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddHateOutRangeEventBinder"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AddHateOutRangeEventBinder_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddHateOutRangeEventBinder"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AddHateOutRangeEventBinder_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AddHateOutRangeEventBinder_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->handler) = ((handler != null) ? handler.NativePtr : ((IntPtr)0));
+			this.AddHateOutRangeEventBinder_Implementation(handler);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AddHateOutRangeEventBinder_FunctionParams* ptr = stackalloc TsAiController.__AddHateOutRangeEventBinder_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AddHateOutRangeEventBinder_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->handler) = ((handler != null) ? handler.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E5A RID: 3674 RVA: 0x00052FF4 File Offset: 0x000511F4
+	// Token: 0x06000E60 RID: 3680 RVA: 0x00053C46 File Offset: 0x00051E46
 	[NullableContext(1)]
 	protected void AddHateOutRangeEventBinder_Implementation(UKuroPerceptionEventBinder handler)
 	{
@@ -595,29 +553,26 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		aiController.AiPerceptionEvents.AddAiHateOutRangeEvent(handler);
 	}
 
-	// Token: 0x06000E5B RID: 3675 RVA: 0x0005300C File Offset: 0x0005120C
+	// Token: 0x06000E61 RID: 3681 RVA: 0x00053C60 File Offset: 0x00051E60
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void ActivateSkillGroup(int skillGroupIndex, bool activate)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ActivateSkillGroup"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__ActivateSkillGroup_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ActivateSkillGroup"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__ActivateSkillGroup_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__ActivateSkillGroup_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->skillGroupIndex = skillGroupIndex;
-			ptr2->activate = activate;
+			this.ActivateSkillGroup_Implementation(skillGroupIndex, activate);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__ActivateSkillGroup_FunctionParams* ptr = stackalloc TsAiController.__ActivateSkillGroup_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__ActivateSkillGroup_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->skillGroupIndex = skillGroupIndex;
+		ptr->activate = activate;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E5C RID: 3676 RVA: 0x00053089 File Offset: 0x00051289
+	// Token: 0x06000E62 RID: 3682 RVA: 0x00053CF4 File Offset: 0x00051EF4
 	protected void ActivateSkillGroup_Implementation(int skillGroupIndex, bool activate)
 	{
 		AiController aiController = this.AiController;
@@ -627,29 +582,26 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06000E5D RID: 3677 RVA: 0x000530B4 File Offset: 0x000512B4
+	// Token: 0x06000E63 RID: 3683 RVA: 0x00053D1C File Offset: 0x00051F1C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddSkillCd(int skillInfoId, float cdAdd)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddSkillCd"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AddSkillCd_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddSkillCd"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AddSkillCd_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AddSkillCd_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->skillInfoId = skillInfoId;
-			ptr2->cdAdd = cdAdd;
+			this.AddSkillCd_Implementation(skillInfoId, cdAdd);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AddSkillCd_FunctionParams* ptr = stackalloc TsAiController.__AddSkillCd_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AddSkillCd_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->skillInfoId = skillInfoId;
+		ptr->cdAdd = cdAdd;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E5E RID: 3678 RVA: 0x00053131 File Offset: 0x00051331
+	// Token: 0x06000E64 RID: 3684 RVA: 0x00053DB0 File Offset: 0x00051FB0
 	protected void AddSkillCd_Implementation(int skillInfoId, float cdAdd)
 	{
 		AiController aiController = this.AiController;
@@ -659,28 +611,25 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06000E5F RID: 3679 RVA: 0x0005315C File Offset: 0x0005135C
+	// Token: 0x06000E65 RID: 3685 RVA: 0x00053DD8 File Offset: 0x00051FD8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void AicApplyBuff(long buffId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AicApplyBuff"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AicApplyBuff_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AicApplyBuff"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AicApplyBuff_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AicApplyBuff_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->buffId = buffId;
+			this.AicApplyBuff_Implementation(buffId);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AicApplyBuff_FunctionParams* ptr = stackalloc TsAiController.__AicApplyBuff_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AicApplyBuff_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->buffId = buffId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E60 RID: 3680 RVA: 0x000531D4 File Offset: 0x000513D4
+	// Token: 0x06000E66 RID: 3686 RVA: 0x00053E64 File Offset: 0x00052064
 	protected void AicApplyBuff_Implementation(long buffId)
 	{
 		CharacterBuffComponent charBuffComp = this.CharBuffComp;
@@ -694,29 +643,26 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06000E61 RID: 3681 RVA: 0x00053230 File Offset: 0x00051430
+	// Token: 0x06000E67 RID: 3687 RVA: 0x00053EC0 File Offset: 0x000520C0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void AicApplyBuffToTarget(int targetId, long buffId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AicApplyBuffToTarget"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AicApplyBuffToTarget_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AicApplyBuffToTarget"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AicApplyBuffToTarget_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AicApplyBuffToTarget_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->targetId = targetId;
-			ptr2->buffId = buffId;
+			this.AicApplyBuffToTarget_Implementation(targetId, buffId);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AicApplyBuffToTarget_FunctionParams* ptr = stackalloc TsAiController.__AicApplyBuffToTarget_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AicApplyBuffToTarget_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->targetId = targetId;
+		ptr->buffId = buffId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E62 RID: 3682 RVA: 0x000532B0 File Offset: 0x000514B0
+	// Token: 0x06000E68 RID: 3688 RVA: 0x00053F54 File Offset: 0x00052154
 	protected void AicApplyBuffToTarget_Implementation(int targetId, long buffId)
 	{
 		BaseBuffComponent component = EntitySystem.Instance.GetComponent<BaseBuffComponent>(targetId);
@@ -734,28 +680,25 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06000E63 RID: 3683 RVA: 0x00053314 File Offset: 0x00051514
+	// Token: 0x06000E69 RID: 3689 RVA: 0x00053FB8 File Offset: 0x000521B8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void AicRemoveBuff(long buffId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AicRemoveBuff"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AicRemoveBuff_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AicRemoveBuff"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AicRemoveBuff_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AicRemoveBuff_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->buffId = buffId;
+			this.AicRemoveBuff_Implementation(buffId);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AicRemoveBuff_FunctionParams* ptr = stackalloc TsAiController.__AicRemoveBuff_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AicRemoveBuff_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->buffId = buffId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E64 RID: 3684 RVA: 0x0005338C File Offset: 0x0005158C
+	// Token: 0x06000E6A RID: 3690 RVA: 0x00054044 File Offset: 0x00052244
 	protected void AicRemoveBuff_Implementation(long buffId)
 	{
 		CharacterBuffComponent charBuffComp = this.CharBuffComp;
@@ -765,28 +708,25 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06000E65 RID: 3685 RVA: 0x000533DC File Offset: 0x000515DC
+	// Token: 0x06000E6B RID: 3691 RVA: 0x00054094 File Offset: 0x00052294
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void AicAddTag(FGameplayTag tag)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AicAddTag"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AicAddTag_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AicAddTag"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AicAddTag_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AicAddTag_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->tag = tag;
+			this.AicAddTag_Implementation(tag);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AicAddTag_FunctionParams* ptr = stackalloc TsAiController.__AicAddTag_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AicAddTag_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->tag = tag;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E66 RID: 3686 RVA: 0x00053452 File Offset: 0x00051652
+	// Token: 0x06000E6C RID: 3692 RVA: 0x00054120 File Offset: 0x00052320
 	protected void AicAddTag_Implementation(FGameplayTag tag)
 	{
 		BaseTagComponent charTagComp = this.CharTagComp;
@@ -796,28 +736,25 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06000E67 RID: 3687 RVA: 0x00053480 File Offset: 0x00051680
+	// Token: 0x06000E6D RID: 3693 RVA: 0x0005414C File Offset: 0x0005234C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void AicRemoveTag(FGameplayTag tag)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AicRemoveTag"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AicRemoveTag_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AicRemoveTag"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AicRemoveTag_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AicRemoveTag_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->tag = tag;
+			this.AicRemoveTag_Implementation(tag);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AicRemoveTag_FunctionParams* ptr = stackalloc TsAiController.__AicRemoveTag_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AicRemoveTag_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->tag = tag;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E68 RID: 3688 RVA: 0x000534F8 File Offset: 0x000516F8
+	// Token: 0x06000E6E RID: 3694 RVA: 0x000541D8 File Offset: 0x000523D8
 	protected void AicRemoveTag_Implementation(FGameplayTag tag)
 	{
 		BaseTagComponent charTagComp = this.CharTagComp;
@@ -832,29 +769,26 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06000E69 RID: 3689 RVA: 0x00053568 File Offset: 0x00051768
+	// Token: 0x06000E6F RID: 3695 RVA: 0x00054248 File Offset: 0x00052448
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetBattleWanderTime(float min, float max)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetBattleWanderTime"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__SetBattleWanderTime_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetBattleWanderTime"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__SetBattleWanderTime_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__SetBattleWanderTime_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->min = min;
-			ptr2->max = max;
+			this.SetBattleWanderTime_Implementation(min, max);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__SetBattleWanderTime_FunctionParams* ptr = stackalloc TsAiController.__SetBattleWanderTime_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__SetBattleWanderTime_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->min = min;
+		ptr->max = max;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E6A RID: 3690 RVA: 0x000535E8 File Offset: 0x000517E8
+	// Token: 0x06000E70 RID: 3696 RVA: 0x000542DC File Offset: 0x000524DC
 	protected void SetBattleWanderTime_Implementation(float min, float max)
 	{
 		AiWanderInfos aiWanderInfos = this.AiController.AiWanderInfos;
@@ -871,28 +805,25 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.AiController.AiWanderInfos.SetOverrideBattleWanderTime(min, max);
 	}
 
-	// Token: 0x06000E6B RID: 3691 RVA: 0x00053664 File Offset: 0x00051864
+	// Token: 0x06000E71 RID: 3697 RVA: 0x00054358 File Offset: 0x00052558
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetBattleWanderIndex(int index)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetBattleWanderIndex"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__SetBattleWanderIndex_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetBattleWanderIndex"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__SetBattleWanderIndex_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__SetBattleWanderIndex_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->index = index;
+			this.SetBattleWanderIndex_Implementation(index);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__SetBattleWanderIndex_FunctionParams* ptr = stackalloc TsAiController.__SetBattleWanderIndex_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__SetBattleWanderIndex_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->index = index;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E6C RID: 3692 RVA: 0x000536DC File Offset: 0x000518DC
+	// Token: 0x06000E72 RID: 3698 RVA: 0x000543E4 File Offset: 0x000525E4
 	protected unsafe void SetBattleWanderIndex_Implementation(int index)
 	{
 		AiWanderInfos aiWanderInfos = this.AiController.AiWanderInfos;
@@ -921,28 +852,25 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.AiController.AiWanderInfos.CurrentBattleWanderIndex = index;
 	}
 
-	// Token: 0x06000E6D RID: 3693 RVA: 0x000537E8 File Offset: 0x000519E8
+	// Token: 0x06000E73 RID: 3699 RVA: 0x000544F0 File Offset: 0x000526F0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddBattleWanderEndTime(float addTime)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddBattleWanderEndTime"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AddBattleWanderEndTime_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddBattleWanderEndTime"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AddBattleWanderEndTime_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AddBattleWanderEndTime_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->addTime = addTime;
+			this.AddBattleWanderEndTime_Implementation(addTime);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AddBattleWanderEndTime_FunctionParams* ptr = stackalloc TsAiController.__AddBattleWanderEndTime_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AddBattleWanderEndTime_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->addTime = addTime;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E6E RID: 3694 RVA: 0x00053860 File Offset: 0x00051A60
+	// Token: 0x06000E74 RID: 3700 RVA: 0x0005457C File Offset: 0x0005277C
 	protected void AddBattleWanderEndTime_Implementation(float addTime)
 	{
 		AiWanderInfos aiWanderInfos = this.AiController.AiWanderInfos;
@@ -959,7 +887,7 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.AiController.AiWanderInfos.BattleWanderAddTime += addTime;
 	}
 
-	// Token: 0x06000E6F RID: 3695 RVA: 0x000538E4 File Offset: 0x00051AE4
+	// Token: 0x06000E75 RID: 3701 RVA: 0x00054600 File Offset: 0x00052800
 	[NullableContext(1)]
 	private void DrawArrow(global::Vector from, global::Vector to, FLinearColor color)
 	{
@@ -970,29 +898,26 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		UKismetSystemLibrary.D_DrawDebugArrow(this, from.ToUeVector(false), TsAiController.TmpVector.ToUeVector(false), 100f, color, 0f, 3f);
 	}
 
-	// Token: 0x06000E70 RID: 3696 RVA: 0x00053958 File Offset: 0x00051B58
+	// Token: 0x06000E76 RID: 3702 RVA: 0x00054674 File Offset: 0x00052874
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetAiSenseEnable(int index, bool enable)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetAiSenseEnable"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__SetAiSenseEnable_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetAiSenseEnable"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__SetAiSenseEnable_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__SetAiSenseEnable_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->index = index;
-			ptr2->enable = enable;
+			this.SetAiSenseEnable_Implementation(index, enable);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__SetAiSenseEnable_FunctionParams* ptr = stackalloc TsAiController.__SetAiSenseEnable_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__SetAiSenseEnable_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->index = index;
+		ptr->enable = enable;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E71 RID: 3697 RVA: 0x000539D5 File Offset: 0x00051BD5
+	// Token: 0x06000E77 RID: 3703 RVA: 0x00054708 File Offset: 0x00052908
 	protected void SetAiSenseEnable_Implementation(int index, bool enable)
 	{
 		IAiPerception aiPerception = this.AiController.AiPerception;
@@ -1003,29 +928,26 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		aiPerception.SetAiSenseEnable(index, enable);
 	}
 
-	// Token: 0x06000E72 RID: 3698 RVA: 0x000539F0 File Offset: 0x00051BF0
+	// Token: 0x06000E78 RID: 3704 RVA: 0x00054724 File Offset: 0x00052924
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddOrRemoveAiSense(int aiSenseId, bool add)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddOrRemoveAiSense"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AddOrRemoveAiSense_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddOrRemoveAiSense"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AddOrRemoveAiSense_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AddOrRemoveAiSense_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->aiSenseId = aiSenseId;
-			ptr2->add = add;
+			this.AddOrRemoveAiSense_Implementation(aiSenseId, add);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AddOrRemoveAiSense_FunctionParams* ptr = stackalloc TsAiController.__AddOrRemoveAiSense_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AddOrRemoveAiSense_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->aiSenseId = aiSenseId;
+		ptr->add = add;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E73 RID: 3699 RVA: 0x00053A6D File Offset: 0x00051C6D
+	// Token: 0x06000E79 RID: 3705 RVA: 0x000547B8 File Offset: 0x000529B8
 	protected void AddOrRemoveAiSense_Implementation(int aiSenseId, bool add)
 	{
 		IAiPerception aiPerception = this.AiController.AiPerception;
@@ -1036,29 +958,26 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		aiPerception.AddOrRemoveAiSense(aiSenseId, add);
 	}
 
-	// Token: 0x06000E74 RID: 3700 RVA: 0x00053A88 File Offset: 0x00051C88
+	// Token: 0x06000E7A RID: 3706 RVA: 0x000547D4 File Offset: 0x000529D4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void EnableAiSenseByType(int type, bool enable)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("EnableAiSenseByType"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__EnableAiSenseByType_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("EnableAiSenseByType"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__EnableAiSenseByType_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__EnableAiSenseByType_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->type = type;
-			ptr2->enable = enable;
+			this.EnableAiSenseByType_Implementation(type, enable);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__EnableAiSenseByType_FunctionParams* ptr = stackalloc TsAiController.__EnableAiSenseByType_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__EnableAiSenseByType_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->type = type;
+		ptr->enable = enable;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E75 RID: 3701 RVA: 0x00053B05 File Offset: 0x00051D05
+	// Token: 0x06000E7B RID: 3707 RVA: 0x00054868 File Offset: 0x00052A68
 	protected void EnableAiSenseByType_Implementation(int type, bool enable)
 	{
 		IAiPerception aiPerception = this.AiController.AiPerception;
@@ -1069,29 +988,26 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		aiPerception.EnableAiSenseByType(type, enable);
 	}
 
-	// Token: 0x06000E76 RID: 3702 RVA: 0x00053B20 File Offset: 0x00051D20
+	// Token: 0x06000E7C RID: 3708 RVA: 0x00054884 File Offset: 0x00052A84
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetAiHateConfig(string configId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetAiHateConfig"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__SetAiHateConfig_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetAiHateConfig"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__SetAiHateConfig_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__SetAiHateConfig_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->configId), configId);
+			this.SetAiHateConfig_Implementation(configId);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__SetAiHateConfig_FunctionParams* ptr = stackalloc TsAiController.__SetAiHateConfig_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__SetAiHateConfig_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->configId), configId);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E77 RID: 3703 RVA: 0x00053B9C File Offset: 0x00051D9C
+	// Token: 0x06000E7D RID: 3709 RVA: 0x00054918 File Offset: 0x00052B18
 	[NullableContext(1)]
 	protected void SetAiHateConfig_Implementation(string configId)
 	{
@@ -1103,140 +1019,122 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.AiController.AiHateList.AiHate = AiConfig.Instance.LoadAiHateByController(this.AiController, null, null);
 	}
 
-	// Token: 0x06000E78 RID: 3704 RVA: 0x00053C04 File Offset: 0x00051E04
+	// Token: 0x06000E7E RID: 3710 RVA: 0x00054980 File Offset: 0x00052B80
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void ChangeHatred(int entityId, float rate, float abs)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ChangeHatred"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__ChangeHatred_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ChangeHatred"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__ChangeHatred_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__ChangeHatred_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->entityId = entityId;
-			ptr2->rate = rate;
-			ptr2->abs = abs;
+			this.ChangeHatred_Implementation(entityId, rate, abs);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__ChangeHatred_FunctionParams* ptr = stackalloc TsAiController.__ChangeHatred_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__ChangeHatred_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->entityId = entityId;
+		ptr->rate = rate;
+		ptr->abs = abs;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E79 RID: 3705 RVA: 0x00053C88 File Offset: 0x00051E88
+	// Token: 0x06000E7F RID: 3711 RVA: 0x00054A1C File Offset: 0x00052C1C
 	protected void ChangeHatred_Implementation(int entityId, float rate, float abs)
 	{
 		this.AiController.AiHateList.ChangeHatred(entityId, rate, abs);
 	}
 
-	// Token: 0x06000E7A RID: 3706 RVA: 0x00053CA0 File Offset: 0x00051EA0
+	// Token: 0x06000E80 RID: 3712 RVA: 0x00054A34 File Offset: 0x00052C34
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void ClearHatred(int entityId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ClearHatred"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__ClearHatred_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ClearHatred"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__ClearHatred_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__ClearHatred_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->entityId = entityId;
+			this.ClearHatred_Implementation(entityId);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__ClearHatred_FunctionParams* ptr = stackalloc TsAiController.__ClearHatred_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__ClearHatred_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->entityId = entityId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E7B RID: 3707 RVA: 0x00053D16 File Offset: 0x00051F16
+	// Token: 0x06000E81 RID: 3713 RVA: 0x00054AC0 File Offset: 0x00052CC0
 	protected void ClearHatred_Implementation(int entityId)
 	{
 		this.AiController.AiHateList.ClearHatred(entityId);
 	}
 
-	// Token: 0x06000E7C RID: 3708 RVA: 0x00053D2C File Offset: 0x00051F2C
+	// Token: 0x06000E82 RID: 3714 RVA: 0x00054AD4 File Offset: 0x00052CD4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void BindPlayerDamageEvents()
+	public virtual void BindPlayerDamageEvents()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("BindPlayerDamageEvents"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("BindPlayerDamageEvents"), TsAiController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.BindPlayerDamageEvents_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06000E7D RID: 3709 RVA: 0x00053D9C File Offset: 0x00051F9C
+	// Token: 0x06000E83 RID: 3715 RVA: 0x00054B2D File Offset: 0x00052D2D
 	protected void BindPlayerDamageEvents_Implementation()
 	{
 		this.AiController.AiHateList.BindPlayerDamageEvents();
 	}
 
-	// Token: 0x06000E7E RID: 3710 RVA: 0x00053DB0 File Offset: 0x00051FB0
+	// Token: 0x06000E84 RID: 3716 RVA: 0x00054B40 File Offset: 0x00052D40
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddAlertEventBinder(UKuroBooleanEventBinder eventBinder)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddAlertEventBinder"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__AddAlertEventBinder_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddAlertEventBinder"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__AddAlertEventBinder_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__AddAlertEventBinder_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->eventBinder) = ((eventBinder != null) ? eventBinder.NativePtr : ((IntPtr)0));
+			this.AddAlertEventBinder_Implementation(eventBinder);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__AddAlertEventBinder_FunctionParams* ptr = stackalloc TsAiController.__AddAlertEventBinder_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__AddAlertEventBinder_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->eventBinder) = ((eventBinder != null) ? eventBinder.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E7F RID: 3711 RVA: 0x00053E34 File Offset: 0x00052034
+	// Token: 0x06000E85 RID: 3717 RVA: 0x00054BDA File Offset: 0x00052DDA
 	[NullableContext(1)]
 	protected void AddAlertEventBinder_Implementation(UKuroBooleanEventBinder eventBinder)
 	{
 		this.AiController.AiAlert.CallbackEvent = eventBinder;
 	}
 
-	// Token: 0x06000E80 RID: 3712 RVA: 0x00053E48 File Offset: 0x00052048
+	// Token: 0x06000E86 RID: 3718 RVA: 0x00054BF0 File Offset: 0x00052DF0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetAiAlertConfig(string configId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetAiAlertConfig"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__SetAiAlertConfig_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetAiAlertConfig"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__SetAiAlertConfig_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__SetAiAlertConfig_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->configId), configId);
+			this.SetAiAlertConfig_Implementation(configId);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__SetAiAlertConfig_FunctionParams* ptr = stackalloc TsAiController.__SetAiAlertConfig_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__SetAiAlertConfig_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->configId), configId);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E81 RID: 3713 RVA: 0x00053EC4 File Offset: 0x000520C4
+	// Token: 0x06000E87 RID: 3719 RVA: 0x00054C84 File Offset: 0x00052E84
 	[NullableContext(1)]
 	protected void SetAiAlertConfig_Implementation(string configId)
 	{
@@ -1248,30 +1146,27 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.AiController.AiAlert.AiAlertConfig = AiConfig.Instance.LoadAiAlert(this.AiController.AiBase.Value.GetSubBehaviorConfigs("AiAlert"));
 	}
 
-	// Token: 0x06000E82 RID: 3714 RVA: 0x00053F2C File Offset: 0x0005212C
+	// Token: 0x06000E88 RID: 3720 RVA: 0x00054CEC File Offset: 0x00052EEC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetAiEnable(bool enable, string key)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetAiEnable"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__SetAiEnable_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetAiEnable"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__SetAiEnable_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__SetAiEnable_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->enable = enable;
-			FString.CopyFrom((void*)(&ptr2->key), key);
+			this.SetAiEnable_Implementation(enable, key);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__SetAiEnable_FunctionParams* ptr = stackalloc TsAiController.__SetAiEnable_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__SetAiEnable_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->enable = enable;
+		FString.CopyFrom((void*)(&ptr->key), key);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E83 RID: 3715 RVA: 0x00053FB0 File Offset: 0x000521B0
+	// Token: 0x06000E89 RID: 3721 RVA: 0x00054D88 File Offset: 0x00052F88
 	[NullableContext(1)]
 	protected void SetAiEnable_Implementation(bool enable, string key)
 	{
@@ -1284,361 +1179,320 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.CharAiDesignComp.DisableAi(key2);
 	}
 
-	// Token: 0x06000E84 RID: 3716 RVA: 0x00053FE8 File Offset: 0x000521E8
+	// Token: 0x06000E8A RID: 3722 RVA: 0x00054DC0 File Offset: 0x00052FC0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void TestChangeAi(string id)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("TestChangeAi"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__TestChangeAi_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("TestChangeAi"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__TestChangeAi_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__TestChangeAi_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->id), id);
+			this.TestChangeAi_Implementation(id);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__TestChangeAi_FunctionParams* ptr = stackalloc TsAiController.__TestChangeAi_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__TestChangeAi_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->id), id);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E85 RID: 3717 RVA: 0x00054064 File Offset: 0x00052264
+	// Token: 0x06000E8B RID: 3723 RVA: 0x00054E52 File Offset: 0x00053052
 	[NullableContext(1)]
 	protected void TestChangeAi_Implementation(string id)
 	{
 		this.CharAiDesignComp.LoadAiConfigs(int.Parse(id));
 	}
 
-	// Token: 0x06000E86 RID: 3718 RVA: 0x00054078 File Offset: 0x00052278
+	// Token: 0x06000E8C RID: 3724 RVA: 0x00054E68 File Offset: 0x00053068
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void LogReport(int logId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("LogReport"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__LogReport_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("LogReport"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__LogReport_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__LogReport_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->logId = logId;
+			this.LogReport_Implementation(logId);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__LogReport_FunctionParams* ptr = stackalloc TsAiController.__LogReport_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__LogReport_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->logId = logId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E87 RID: 3719 RVA: 0x000540F0 File Offset: 0x000522F0
+	// Token: 0x06000E8D RID: 3725 RVA: 0x00054EF4 File Offset: 0x000530F4
 	protected void LogReport_Implementation(int logId)
 	{
 		Log.Instance.Error(ELogModule.BehaviorTree, ELogAuthor.ZJC, "埋点废弃,请删除相关配置", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06000E88 RID: 3720 RVA: 0x00054118 File Offset: 0x00052318
+	// Token: 0x06000E8E RID: 3726 RVA: 0x00054F1C File Offset: 0x0005311C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool 逻辑主控()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("逻辑主控"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__逻辑主控_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("逻辑主控"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__逻辑主控_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__逻辑主控_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.逻辑主控_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__逻辑主控_FunctionParams* ptr = stackalloc TsAiController.__逻辑主控_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__逻辑主控_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06000E89 RID: 3721 RVA: 0x0005418D File Offset: 0x0005238D
+	// Token: 0x06000E8F RID: 3727 RVA: 0x00054FA6 File Offset: 0x000531A6
 	protected bool 逻辑主控_Implementation()
 	{
 		return this.AiController.CharActorComp.IsAutonomousProxy;
 	}
 
-	// Token: 0x06000E8A RID: 3722 RVA: 0x000541A0 File Offset: 0x000523A0
+	// Token: 0x06000E90 RID: 3728 RVA: 0x00054FB8 File Offset: 0x000531B8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool 移动主控()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("移动主控"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__移动主控_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("移动主控"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__移动主控_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__移动主控_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.移动主控_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__移动主控_FunctionParams* ptr = stackalloc TsAiController.__移动主控_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__移动主控_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06000E8B RID: 3723 RVA: 0x00054215 File Offset: 0x00052415
+	// Token: 0x06000E91 RID: 3729 RVA: 0x00055042 File Offset: 0x00053242
 	protected bool 移动主控_Implementation()
 	{
 		return this.AiController.CharActorComp.IsMoveAutonomousProxy;
 	}
 
-	// Token: 0x06000E8C RID: 3724 RVA: 0x00054228 File Offset: 0x00052428
+	// Token: 0x06000E92 RID: 3730 RVA: 0x00055054 File Offset: 0x00053254
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool 检查状态机状态(ref TArray<string> states)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("检查状态机状态"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__检查状态机状态_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("检查状态机状态"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__检查状态机状态_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__检查状态机状态_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			TArray<string> tarray = states;
-			if (tarray != null)
-			{
-				tarray.CopyTo(&ptr2->states, default(UScriptStructStackOnlyPtr));
-			}
+			return this.检查状态机状态_Implementation(ref states);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		states = new TArray<string>(&ptr2->states, true, true);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
+		TsAiController.__检查状态机状态_FunctionParams* ptr = stackalloc TsAiController.__检查状态机状态_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__检查状态机状态_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		TArray<string> tarray = states;
+		if (tarray != null)
 		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			tarray.CopyTo(&ptr->states, default(UScriptStructStackOnlyPtr));
 		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		states = new TArray<string>(&ptr->states, true, true);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06000E8D RID: 3725 RVA: 0x000542CB File Offset: 0x000524CB
+	// Token: 0x06000E93 RID: 3731 RVA: 0x0005510C File Offset: 0x0005330C
 	[NullableContext(1)]
 	protected bool 检查状态机状态_Implementation(ref TArray<string> states)
 	{
 		return false;
 	}
 
-	// Token: 0x06000E8E RID: 3726 RVA: 0x000542D0 File Offset: 0x000524D0
+	// Token: 0x06000E94 RID: 3732 RVA: 0x00055110 File Offset: 0x00053310
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void 切换状态机状态(ref TArray<string> states)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("切换状态机状态"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__切换状态机状态_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("切换状态机状态"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__切换状态机状态_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__切换状态机状态_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			TArray<string> tarray = states;
-			if (tarray != null)
-			{
-				tarray.CopyTo(&ptr2->states, default(UScriptStructStackOnlyPtr));
-			}
+			this.切换状态机状态_Implementation(ref states);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		states = new TArray<string>(&ptr2->states, true, true);
-		if (num != 0)
+		TsAiController.__切换状态机状态_FunctionParams* ptr = stackalloc TsAiController.__切换状态机状态_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__切换状态机状态_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		TArray<string> tarray = states;
+		if (tarray != null)
 		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			tarray.CopyTo(&ptr->states, default(UScriptStructStackOnlyPtr));
 		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		states = new TArray<string>(&ptr->states, true, true);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E8F RID: 3727 RVA: 0x0005436D File Offset: 0x0005256D
+	// Token: 0x06000E95 RID: 3733 RVA: 0x000551C2 File Offset: 0x000533C2
 	[NullableContext(1)]
 	protected void 切换状态机状态_Implementation(ref TArray<string> states)
 	{
 	}
 
-	// Token: 0x06000E90 RID: 3728 RVA: 0x00054370 File Offset: 0x00052570
+	// Token: 0x06000E96 RID: 3734 RVA: 0x000551C4 File Offset: 0x000533C4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool GetCoolDownDone(int id)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetCoolDownDone"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__GetCoolDownDone_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetCoolDownDone"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__GetCoolDownDone_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__GetCoolDownDone_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->id = id;
+			return this.GetCoolDownDone_Implementation(id);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__GetCoolDownDone_FunctionParams* ptr = stackalloc TsAiController.__GetCoolDownDone_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__GetCoolDownDone_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->id = id;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06000E91 RID: 3729 RVA: 0x000543EC File Offset: 0x000525EC
+	// Token: 0x06000E97 RID: 3735 RVA: 0x00055256 File Offset: 0x00053456
 	protected bool GetCoolDownDone_Implementation(int id)
 	{
 		return this.AiController.GetCoolDownRemainTime(id) == 0.0;
 	}
 
-	// Token: 0x06000E92 RID: 3730 RVA: 0x00054408 File Offset: 0x00052608
+	// Token: 0x06000E98 RID: 3736 RVA: 0x00055270 File Offset: 0x00053470
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual float GetCoolDownRemainTime(int id)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetCoolDownRemainTime"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__GetCoolDownRemainTime_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetCoolDownRemainTime"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__GetCoolDownRemainTime_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__GetCoolDownRemainTime_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->id = id;
+			return this.GetCoolDownRemainTime_Implementation(id);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		float _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__GetCoolDownRemainTime_FunctionParams* ptr = stackalloc TsAiController.__GetCoolDownRemainTime_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__GetCoolDownRemainTime_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->id = id;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		float _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06000E93 RID: 3731 RVA: 0x00054484 File Offset: 0x00052684
+	// Token: 0x06000E99 RID: 3737 RVA: 0x00055302 File Offset: 0x00053502
 	protected float GetCoolDownRemainTime_Implementation(int id)
 	{
 		return (float)this.AiController.GetCoolDownRemainTime(id);
 	}
 
-	// Token: 0x06000E94 RID: 3732 RVA: 0x00054494 File Offset: 0x00052694
+	// Token: 0x06000E9A RID: 3738 RVA: 0x00055314 File Offset: 0x00053514
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetCoolDown(int id, float cd)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetCoolDown"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__SetCoolDown_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetCoolDown"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__SetCoolDown_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__SetCoolDown_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->id = id;
-			ptr2->cd = cd;
+			this.SetCoolDown_Implementation(id, cd);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__SetCoolDown_FunctionParams* ptr = stackalloc TsAiController.__SetCoolDown_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__SetCoolDown_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->id = id;
+		ptr->cd = cd;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E95 RID: 3733 RVA: 0x00054514 File Offset: 0x00052714
+	// Token: 0x06000E9B RID: 3739 RVA: 0x000553A8 File Offset: 0x000535A8
 	protected void SetCoolDown_Implementation(int id, float cd)
 	{
 		double num = GameModeModel.Instance.IsMulti ? Time.Instance.ServerTimeStamp : Time.Instance.WorldTime;
 		this.AiController.SetCoolDownTime(id, num + (double)cd, true, "蓝图");
 	}
 
-	// Token: 0x06000E96 RID: 3734 RVA: 0x0005455C File Offset: 0x0005275C
+	// Token: 0x06000E9C RID: 3740 RVA: 0x000553F0 File Offset: 0x000535F0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void InitCooldownEvent(int id, UKuroBooleanEventBinder eventBinder)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("InitCooldownEvent"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__InitCooldownEvent_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("InitCooldownEvent"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__InitCooldownEvent_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__InitCooldownEvent_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->id = id;
-			*(&ptr2->eventBinder) = ((eventBinder != null) ? eventBinder.NativePtr : ((IntPtr)0));
+			this.InitCooldownEvent_Implementation(id, eventBinder);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__InitCooldownEvent_FunctionParams* ptr = stackalloc TsAiController.__InitCooldownEvent_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__InitCooldownEvent_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->id = id;
+		*(&ptr->eventBinder) = ((eventBinder != null) ? eventBinder.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E97 RID: 3735 RVA: 0x000545E7 File Offset: 0x000527E7
+	// Token: 0x06000E9D RID: 3741 RVA: 0x00055492 File Offset: 0x00053692
 	[NullableContext(1)]
 	protected void InitCooldownEvent_Implementation(int id, UKuroBooleanEventBinder eventBinder)
 	{
 		this.AiController.InitCooldownTimer(id, eventBinder);
 	}
 
-	// Token: 0x06000E98 RID: 3736 RVA: 0x000545F8 File Offset: 0x000527F8
+	// Token: 0x06000E9E RID: 3742 RVA: 0x000554A4 File Offset: 0x000536A4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void StartCooldownTimer(int id, float duration)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("StartCooldownTimer"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__StartCooldownTimer_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("StartCooldownTimer"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__StartCooldownTimer_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__StartCooldownTimer_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->id = id;
-			ptr2->duration = duration;
+			this.StartCooldownTimer_Implementation(id, duration);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__StartCooldownTimer_FunctionParams* ptr = stackalloc TsAiController.__StartCooldownTimer_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__StartCooldownTimer_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->id = id;
+		ptr->duration = duration;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E99 RID: 3737 RVA: 0x00054678 File Offset: 0x00052878
+	// Token: 0x06000E9F RID: 3743 RVA: 0x00055538 File Offset: 0x00053738
 	protected void StartCooldownTimer_Implementation(int id, float duration)
 	{
 		double num = GameModeModel.Instance.IsMulti ? Time.Instance.ServerTimeStamp : Time.Instance.WorldTime;
 		this.AiController.SetCoolDownTime(id, num + (double)duration, true, "蓝图AIC延迟节点");
 	}
 
-	// Token: 0x06000E9A RID: 3738 RVA: 0x000546C0 File Offset: 0x000528C0
+	// Token: 0x06000EA0 RID: 3744 RVA: 0x00055580 File Offset: 0x00053780
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void GetDebugStateMachine(ref TArray<FText> output)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetDebugStateMachine"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__GetDebugStateMachine_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetDebugStateMachine"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__GetDebugStateMachine_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__GetDebugStateMachine_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			TArray<FText> tarray = output;
-			if (tarray != null)
-			{
-				tarray.CopyTo(&ptr2->output, default(UScriptStructStackOnlyPtr));
-			}
+			this.GetDebugStateMachine_Implementation(ref output);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		output = new TArray<FText>(&ptr2->output, true, true);
-		if (num != 0)
+		TsAiController.__GetDebugStateMachine_FunctionParams* ptr = stackalloc TsAiController.__GetDebugStateMachine_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__GetDebugStateMachine_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		TArray<FText> tarray = output;
+		if (tarray != null)
 		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			tarray.CopyTo(&ptr->output, default(UScriptStructStackOnlyPtr));
 		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		output = new TArray<FText>(&ptr->output, true, true);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000E9B RID: 3739 RVA: 0x00054760 File Offset: 0x00052960
+	// Token: 0x06000EA1 RID: 3745 RVA: 0x00055634 File Offset: 0x00053834
 	[NullableContext(1)]
 	protected void GetDebugStateMachine_Implementation(ref TArray<FText> output)
 	{
@@ -1672,30 +1526,26 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06000E9C RID: 3740 RVA: 0x000547D4 File Offset: 0x000529D4
+	// Token: 0x06000EA2 RID: 3746 RVA: 0x000556A8 File Offset: 0x000538A8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual FText GetDebugText()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetDebugText"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAiController.__GetDebugText_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetDebugText"), TsAiController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAiController.__GetDebugText_FunctionParams*)ptr + 15L / (long)sizeof(TsAiController.__GetDebugText_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetDebugText_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		FText result = new FText(&ptr2->__Result, true, true);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAiController.__GetDebugText_FunctionParams* ptr = stackalloc TsAiController.__GetDebugText_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAiController.__GetDebugText_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		FText result = new FText(&ptr->__Result, true, true);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06000E9D RID: 3741 RVA: 0x00054854 File Offset: 0x00052A54
+	// Token: 0x06000EA3 RID: 3747 RVA: 0x0005573C File Offset: 0x0005393C
 	[NullableContext(1)]
 	protected FText GetDebugText_Implementation()
 	{
@@ -1771,27 +1621,21 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06000E9E RID: 3742 RVA: 0x00054AFC File Offset: 0x00052CFC
+	// Token: 0x06000EA4 RID: 3748 RVA: 0x000559E4 File Offset: 0x00053BE4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void ReceiveDestroyed()
+	public override void ReceiveDestroyed()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveDestroyed"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAiController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveDestroyed"), TsAiController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ReceiveDestroyed_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06000E9F RID: 3743 RVA: 0x00054B6C File Offset: 0x00052D6C
+	// Token: 0x06000EA5 RID: 3749 RVA: 0x00055A3D File Offset: 0x00053C3D
 	protected virtual void ReceiveDestroyed_Implementation()
 	{
 		if (!ObjectUtils.IsValid(this))
@@ -1801,7 +1645,7 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.Clear();
 	}
 
-	// Token: 0x06000EA0 RID: 3744 RVA: 0x00054B7D File Offset: 0x00052D7D
+	// Token: 0x06000EA6 RID: 3750 RVA: 0x00055A4E File Offset: 0x00053C4E
 	public void Clear()
 	{
 		this.CharAiDesignComp = null;
@@ -1812,7 +1656,7 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.CharStateMachineComp = null;
 	}
 
-	// Token: 0x06000EA1 RID: 3745 RVA: 0x00054BA9 File Offset: 0x00052DA9
+	// Token: 0x06000EA7 RID: 3751 RVA: 0x00055A7A File Offset: 0x00053C7A
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAiController._ClassPtr == IntPtr.Zero)
@@ -1822,35 +1666,35 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		return TsAiController._ClassPtr;
 	}
 
-	// Token: 0x06000EA2 RID: 3746 RVA: 0x00054BD0 File Offset: 0x00052DD0
+	// Token: 0x06000EA8 RID: 3752 RVA: 0x00055AA0 File Offset: 0x00053CA0
 	public TsAiController() : this(BuiltinUtils.AllocNativeUObject(TsAiController.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000EA3 RID: 3747 RVA: 0x00054BF8 File Offset: 0x00052DF8
+	// Token: 0x06000EA9 RID: 3753 RVA: 0x00055AC8 File Offset: 0x00053CC8
 	[NullableContext(1)]
 	public TsAiController(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAiController.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000EA4 RID: 3748 RVA: 0x00054C2B File Offset: 0x00052E2B
+	// Token: 0x06000EAA RID: 3754 RVA: 0x00055AFB File Offset: 0x00053CFB
 	protected TsAiController(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000EA5 RID: 3749 RVA: 0x00054C34 File Offset: 0x00052E34
+	// Token: 0x06000EAB RID: 3755 RVA: 0x00055B04 File Offset: 0x00053D04
 	protected virtual void __CPPCALL_OnStart_Implementation()
 	{
 		this.OnStart_Implementation();
 	}
 
-	// Token: 0x06000EA6 RID: 3750 RVA: 0x00054C3C File Offset: 0x00052E3C
+	// Token: 0x06000EAC RID: 3756 RVA: 0x00055B0C File Offset: 0x00053D0C
 	protected virtual void __CPPCALL_获取控制权时_Implementation()
 	{
 		this.获取控制权时_Implementation();
 	}
 
-	// Token: 0x06000EA7 RID: 3751 RVA: 0x00054C44 File Offset: 0x00052E44
+	// Token: 0x06000EAD RID: 3757 RVA: 0x00055B14 File Offset: 0x00053D14
 	protected unsafe virtual void __CPPCALL_状态切换时_Implementation(TsAiController.__状态切换时_FunctionParams* __Params)
 	{
 		ECharacterState oldState = (ECharacterState)__Params->oldState;
@@ -1858,13 +1702,13 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.状态切换时_Implementation(oldState, newState, __Params->isAutonomousProxy);
 	}
 
-	// Token: 0x06000EA8 RID: 3752 RVA: 0x00054C6D File Offset: 0x00052E6D
+	// Token: 0x06000EAE RID: 3758 RVA: 0x00055B3D File Offset: 0x00053D3D
 	protected unsafe virtual void __CPPCALL_渲染状态改变时_Implementation(TsAiController.__渲染状态改变时_FunctionParams* __Params)
 	{
 		this.渲染状态改变时_Implementation(__Params->wasRendered);
 	}
 
-	// Token: 0x06000EA9 RID: 3753 RVA: 0x00054C7C File Offset: 0x00052E7C
+	// Token: 0x06000EAF RID: 3759 RVA: 0x00055B4C File Offset: 0x00053D4C
 	protected unsafe virtual void __CPPCALL_AddComplicatedEventBinder_Implementation(TsAiController.__AddComplicatedEventBinder_FunctionParams* __Params)
 	{
 		SAiConditions conditions = new SAiConditions(&__Params->conditions, true, true);
@@ -1872,14 +1716,14 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.AddComplicatedEventBinder_Implementation(conditions, orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x06000EAA RID: 3754 RVA: 0x00054CAC File Offset: 0x00052EAC
+	// Token: 0x06000EB0 RID: 3760 RVA: 0x00055B7C File Offset: 0x00053D7C
 	protected unsafe virtual void __CPPCALL_AddSceneItemDestroyEventBinder_Implementation(TsAiController.__AddSceneItemDestroyEventBinder_FunctionParams* __Params)
 	{
 		UKuroActorEventBinder orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroActorEventBinder>(__Params->eventBinder);
 		this.AddSceneItemDestroyEventBinder_Implementation(__Params->distance, orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x06000EAB RID: 3755 RVA: 0x00054CD4 File Offset: 0x00052ED4
+	// Token: 0x06000EB1 RID: 3761 RVA: 0x00055BA4 File Offset: 0x00053DA4
 	protected unsafe virtual void __CPPCALL_AddLevelVarBoolEventBinder_Implementation(TsAiController.__AddLevelVarBoolEventBinder_FunctionParams* __Params)
 	{
 		SAiLevelVar levelVar = new SAiLevelVar(&__Params->levelVar, true, true);
@@ -1887,7 +1731,7 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.AddLevelVarBoolEventBinder_Implementation(levelVar, orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x06000EAC RID: 3756 RVA: 0x00054D04 File Offset: 0x00052F04
+	// Token: 0x06000EB2 RID: 3762 RVA: 0x00055BD4 File Offset: 0x00053DD4
 	protected unsafe virtual void __CPPCALL_AddLevelVarIntEventBinder_Implementation(TsAiController.__AddLevelVarIntEventBinder_FunctionParams* __Params)
 	{
 		SAiLevelVar levelVar = new SAiLevelVar(&__Params->levelVar, true, true);
@@ -1895,183 +1739,183 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		this.AddLevelVarIntEventBinder_Implementation(levelVar, orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x06000EAD RID: 3757 RVA: 0x00054D34 File Offset: 0x00052F34
+	// Token: 0x06000EB3 RID: 3763 RVA: 0x00055C04 File Offset: 0x00053E04
 	protected unsafe virtual void __CPPCALL_AddHateEventBinder_Implementation(TsAiController.__AddHateEventBinder_FunctionParams* __Params)
 	{
 		UKuroPerceptionEventBinder orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroPerceptionEventBinder>(__Params->handler);
 		this.AddHateEventBinder_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x06000EAE RID: 3758 RVA: 0x00054D54 File Offset: 0x00052F54
+	// Token: 0x06000EB4 RID: 3764 RVA: 0x00055C24 File Offset: 0x00053E24
 	protected unsafe virtual void __CPPCALL_AddPerceptionEventBinder_Implementation(TsAiController.__AddPerceptionEventBinder_FunctionParams* __Params)
 	{
 		UKuroPerceptionEventBinder orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroPerceptionEventBinder>(__Params->handler);
 		this.AddPerceptionEventBinder_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x06000EAF RID: 3759 RVA: 0x00054D74 File Offset: 0x00052F74
+	// Token: 0x06000EB5 RID: 3765 RVA: 0x00055C44 File Offset: 0x00053E44
 	protected unsafe virtual void __CPPCALL_SetPerceptionEventState_Implementation(TsAiController.__SetPerceptionEventState_FunctionParams* __Params)
 	{
 		this.SetPerceptionEventState_Implementation(__Params->includeFriend, __Params->includeEnemy, __Params->includeNeutral);
 	}
 
-	// Token: 0x06000EB0 RID: 3760 RVA: 0x00054D90 File Offset: 0x00052F90
+	// Token: 0x06000EB6 RID: 3766 RVA: 0x00055C60 File Offset: 0x00053E60
 	protected unsafe virtual void __CPPCALL_AddHateOutRangeEventBinder_Implementation(TsAiController.__AddHateOutRangeEventBinder_FunctionParams* __Params)
 	{
 		UKuroPerceptionEventBinder orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroPerceptionEventBinder>(__Params->handler);
 		this.AddHateOutRangeEventBinder_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x06000EB1 RID: 3761 RVA: 0x00054DB0 File Offset: 0x00052FB0
+	// Token: 0x06000EB7 RID: 3767 RVA: 0x00055C80 File Offset: 0x00053E80
 	protected unsafe virtual void __CPPCALL_ActivateSkillGroup_Implementation(TsAiController.__ActivateSkillGroup_FunctionParams* __Params)
 	{
 		this.ActivateSkillGroup_Implementation(__Params->skillGroupIndex, __Params->activate);
 	}
 
-	// Token: 0x06000EB2 RID: 3762 RVA: 0x00054DC4 File Offset: 0x00052FC4
+	// Token: 0x06000EB8 RID: 3768 RVA: 0x00055C94 File Offset: 0x00053E94
 	protected unsafe virtual void __CPPCALL_AddSkillCd_Implementation(TsAiController.__AddSkillCd_FunctionParams* __Params)
 	{
 		this.AddSkillCd_Implementation(__Params->skillInfoId, __Params->cdAdd);
 	}
 
-	// Token: 0x06000EB3 RID: 3763 RVA: 0x00054DD8 File Offset: 0x00052FD8
+	// Token: 0x06000EB9 RID: 3769 RVA: 0x00055CA8 File Offset: 0x00053EA8
 	protected unsafe virtual void __CPPCALL_AicApplyBuff_Implementation(TsAiController.__AicApplyBuff_FunctionParams* __Params)
 	{
 		this.AicApplyBuff_Implementation(__Params->buffId);
 	}
 
-	// Token: 0x06000EB4 RID: 3764 RVA: 0x00054DE6 File Offset: 0x00052FE6
+	// Token: 0x06000EBA RID: 3770 RVA: 0x00055CB6 File Offset: 0x00053EB6
 	protected unsafe virtual void __CPPCALL_AicApplyBuffToTarget_Implementation(TsAiController.__AicApplyBuffToTarget_FunctionParams* __Params)
 	{
 		this.AicApplyBuffToTarget_Implementation(__Params->targetId, __Params->buffId);
 	}
 
-	// Token: 0x06000EB5 RID: 3765 RVA: 0x00054DFA File Offset: 0x00052FFA
+	// Token: 0x06000EBB RID: 3771 RVA: 0x00055CCA File Offset: 0x00053ECA
 	protected unsafe virtual void __CPPCALL_AicRemoveBuff_Implementation(TsAiController.__AicRemoveBuff_FunctionParams* __Params)
 	{
 		this.AicRemoveBuff_Implementation(__Params->buffId);
 	}
 
-	// Token: 0x06000EB6 RID: 3766 RVA: 0x00054E08 File Offset: 0x00053008
+	// Token: 0x06000EBC RID: 3772 RVA: 0x00055CD8 File Offset: 0x00053ED8
 	protected unsafe virtual void __CPPCALL_AicAddTag_Implementation(TsAiController.__AicAddTag_FunctionParams* __Params)
 	{
 		this.AicAddTag_Implementation(__Params->tag);
 	}
 
-	// Token: 0x06000EB7 RID: 3767 RVA: 0x00054E16 File Offset: 0x00053016
+	// Token: 0x06000EBD RID: 3773 RVA: 0x00055CE6 File Offset: 0x00053EE6
 	protected unsafe virtual void __CPPCALL_AicRemoveTag_Implementation(TsAiController.__AicRemoveTag_FunctionParams* __Params)
 	{
 		this.AicRemoveTag_Implementation(__Params->tag);
 	}
 
-	// Token: 0x06000EB8 RID: 3768 RVA: 0x00054E24 File Offset: 0x00053024
+	// Token: 0x06000EBE RID: 3774 RVA: 0x00055CF4 File Offset: 0x00053EF4
 	protected unsafe virtual void __CPPCALL_SetBattleWanderTime_Implementation(TsAiController.__SetBattleWanderTime_FunctionParams* __Params)
 	{
 		this.SetBattleWanderTime_Implementation(__Params->min, __Params->max);
 	}
 
-	// Token: 0x06000EB9 RID: 3769 RVA: 0x00054E38 File Offset: 0x00053038
+	// Token: 0x06000EBF RID: 3775 RVA: 0x00055D08 File Offset: 0x00053F08
 	protected unsafe virtual void __CPPCALL_SetBattleWanderIndex_Implementation(TsAiController.__SetBattleWanderIndex_FunctionParams* __Params)
 	{
 		this.SetBattleWanderIndex_Implementation(__Params->index);
 	}
 
-	// Token: 0x06000EBA RID: 3770 RVA: 0x00054E46 File Offset: 0x00053046
+	// Token: 0x06000EC0 RID: 3776 RVA: 0x00055D16 File Offset: 0x00053F16
 	protected unsafe virtual void __CPPCALL_AddBattleWanderEndTime_Implementation(TsAiController.__AddBattleWanderEndTime_FunctionParams* __Params)
 	{
 		this.AddBattleWanderEndTime_Implementation(__Params->addTime);
 	}
 
-	// Token: 0x06000EBB RID: 3771 RVA: 0x00054E54 File Offset: 0x00053054
+	// Token: 0x06000EC1 RID: 3777 RVA: 0x00055D24 File Offset: 0x00053F24
 	protected unsafe virtual void __CPPCALL_SetAiSenseEnable_Implementation(TsAiController.__SetAiSenseEnable_FunctionParams* __Params)
 	{
 		this.SetAiSenseEnable_Implementation(__Params->index, __Params->enable);
 	}
 
-	// Token: 0x06000EBC RID: 3772 RVA: 0x00054E68 File Offset: 0x00053068
+	// Token: 0x06000EC2 RID: 3778 RVA: 0x00055D38 File Offset: 0x00053F38
 	protected unsafe virtual void __CPPCALL_AddOrRemoveAiSense_Implementation(TsAiController.__AddOrRemoveAiSense_FunctionParams* __Params)
 	{
 		this.AddOrRemoveAiSense_Implementation(__Params->aiSenseId, __Params->add);
 	}
 
-	// Token: 0x06000EBD RID: 3773 RVA: 0x00054E7C File Offset: 0x0005307C
+	// Token: 0x06000EC3 RID: 3779 RVA: 0x00055D4C File Offset: 0x00053F4C
 	protected unsafe virtual void __CPPCALL_EnableAiSenseByType_Implementation(TsAiController.__EnableAiSenseByType_FunctionParams* __Params)
 	{
 		this.EnableAiSenseByType_Implementation(__Params->type, __Params->enable);
 	}
 
-	// Token: 0x06000EBE RID: 3774 RVA: 0x00054E90 File Offset: 0x00053090
+	// Token: 0x06000EC4 RID: 3780 RVA: 0x00055D60 File Offset: 0x00053F60
 	protected unsafe virtual void __CPPCALL_SetAiHateConfig_Implementation(TsAiController.__SetAiHateConfig_FunctionParams* __Params)
 	{
 		string aiHateConfig_Implementation = FString.ToString((void*)(&__Params->configId));
 		this.SetAiHateConfig_Implementation(aiHateConfig_Implementation);
 	}
 
-	// Token: 0x06000EBF RID: 3775 RVA: 0x00054EB1 File Offset: 0x000530B1
+	// Token: 0x06000EC5 RID: 3781 RVA: 0x00055D81 File Offset: 0x00053F81
 	protected unsafe virtual void __CPPCALL_ChangeHatred_Implementation(TsAiController.__ChangeHatred_FunctionParams* __Params)
 	{
 		this.ChangeHatred_Implementation(__Params->entityId, __Params->rate, __Params->abs);
 	}
 
-	// Token: 0x06000EC0 RID: 3776 RVA: 0x00054ECB File Offset: 0x000530CB
+	// Token: 0x06000EC6 RID: 3782 RVA: 0x00055D9B File Offset: 0x00053F9B
 	protected unsafe virtual void __CPPCALL_ClearHatred_Implementation(TsAiController.__ClearHatred_FunctionParams* __Params)
 	{
 		this.ClearHatred_Implementation(__Params->entityId);
 	}
 
-	// Token: 0x06000EC1 RID: 3777 RVA: 0x00054ED9 File Offset: 0x000530D9
+	// Token: 0x06000EC7 RID: 3783 RVA: 0x00055DA9 File Offset: 0x00053FA9
 	protected virtual void __CPPCALL_BindPlayerDamageEvents_Implementation()
 	{
 		this.BindPlayerDamageEvents_Implementation();
 	}
 
-	// Token: 0x06000EC2 RID: 3778 RVA: 0x00054EE4 File Offset: 0x000530E4
+	// Token: 0x06000EC8 RID: 3784 RVA: 0x00055DB4 File Offset: 0x00053FB4
 	protected unsafe virtual void __CPPCALL_AddAlertEventBinder_Implementation(TsAiController.__AddAlertEventBinder_FunctionParams* __Params)
 	{
 		UKuroBooleanEventBinder orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroBooleanEventBinder>(__Params->eventBinder);
 		this.AddAlertEventBinder_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x06000EC3 RID: 3779 RVA: 0x00054F04 File Offset: 0x00053104
+	// Token: 0x06000EC9 RID: 3785 RVA: 0x00055DD4 File Offset: 0x00053FD4
 	protected unsafe virtual void __CPPCALL_SetAiAlertConfig_Implementation(TsAiController.__SetAiAlertConfig_FunctionParams* __Params)
 	{
 		string aiAlertConfig_Implementation = FString.ToString((void*)(&__Params->configId));
 		this.SetAiAlertConfig_Implementation(aiAlertConfig_Implementation);
 	}
 
-	// Token: 0x06000EC4 RID: 3780 RVA: 0x00054F28 File Offset: 0x00053128
+	// Token: 0x06000ECA RID: 3786 RVA: 0x00055DF8 File Offset: 0x00053FF8
 	protected unsafe virtual void __CPPCALL_SetAiEnable_Implementation(TsAiController.__SetAiEnable_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		this.SetAiEnable_Implementation(__Params->enable, key);
 	}
 
-	// Token: 0x06000EC5 RID: 3781 RVA: 0x00054F50 File Offset: 0x00053150
+	// Token: 0x06000ECB RID: 3787 RVA: 0x00055E20 File Offset: 0x00054020
 	protected unsafe virtual void __CPPCALL_TestChangeAi_Implementation(TsAiController.__TestChangeAi_FunctionParams* __Params)
 	{
 		string id = FString.ToString((void*)(&__Params->id));
 		this.TestChangeAi_Implementation(id);
 	}
 
-	// Token: 0x06000EC6 RID: 3782 RVA: 0x00054F71 File Offset: 0x00053171
+	// Token: 0x06000ECC RID: 3788 RVA: 0x00055E41 File Offset: 0x00054041
 	protected unsafe virtual void __CPPCALL_LogReport_Implementation(TsAiController.__LogReport_FunctionParams* __Params)
 	{
 		this.LogReport_Implementation(__Params->logId);
 	}
 
-	// Token: 0x06000EC7 RID: 3783 RVA: 0x00054F7F File Offset: 0x0005317F
+	// Token: 0x06000ECD RID: 3789 RVA: 0x00055E4F File Offset: 0x0005404F
 	protected unsafe virtual void __CPPCALL_逻辑主控_Implementation(TsAiController.__逻辑主控_FunctionParams* __Params)
 	{
 		__Params->__Result = this.逻辑主控_Implementation();
 	}
 
-	// Token: 0x06000EC8 RID: 3784 RVA: 0x00054F8D File Offset: 0x0005318D
+	// Token: 0x06000ECE RID: 3790 RVA: 0x00055E5D File Offset: 0x0005405D
 	protected unsafe virtual void __CPPCALL_移动主控_Implementation(TsAiController.__移动主控_FunctionParams* __Params)
 	{
 		__Params->__Result = this.移动主控_Implementation();
 	}
 
-	// Token: 0x06000EC9 RID: 3785 RVA: 0x00054F9C File Offset: 0x0005319C
+	// Token: 0x06000ECF RID: 3791 RVA: 0x00055E6C File Offset: 0x0005406C
 	protected unsafe virtual void __CPPCALL_检查状态机状态_Implementation(TsAiController.__检查状态机状态_FunctionParams* __Params)
 	{
 		TArray<string> tarray = new TArray<string>(&__Params->states, true, true);
@@ -2082,7 +1926,7 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06000ECA RID: 3786 RVA: 0x00054FE0 File Offset: 0x000531E0
+	// Token: 0x06000ED0 RID: 3792 RVA: 0x00055EB0 File Offset: 0x000540B0
 	protected unsafe virtual void __CPPCALL_切换状态机状态_Implementation(TsAiController.__切换状态机状态_FunctionParams* __Params)
 	{
 		TArray<string> tarray = new TArray<string>(&__Params->states, true, true);
@@ -2093,38 +1937,38 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06000ECB RID: 3787 RVA: 0x0005501D File Offset: 0x0005321D
+	// Token: 0x06000ED1 RID: 3793 RVA: 0x00055EED File Offset: 0x000540ED
 	protected unsafe virtual void __CPPCALL_GetCoolDownDone_Implementation(TsAiController.__GetCoolDownDone_FunctionParams* __Params)
 	{
 		__Params->__Result = this.GetCoolDownDone_Implementation(__Params->id);
 	}
 
-	// Token: 0x06000ECC RID: 3788 RVA: 0x00055031 File Offset: 0x00053231
+	// Token: 0x06000ED2 RID: 3794 RVA: 0x00055F01 File Offset: 0x00054101
 	protected unsafe virtual void __CPPCALL_GetCoolDownRemainTime_Implementation(TsAiController.__GetCoolDownRemainTime_FunctionParams* __Params)
 	{
 		__Params->__Result = this.GetCoolDownRemainTime_Implementation(__Params->id);
 	}
 
-	// Token: 0x06000ECD RID: 3789 RVA: 0x00055045 File Offset: 0x00053245
+	// Token: 0x06000ED3 RID: 3795 RVA: 0x00055F15 File Offset: 0x00054115
 	protected unsafe virtual void __CPPCALL_SetCoolDown_Implementation(TsAiController.__SetCoolDown_FunctionParams* __Params)
 	{
 		this.SetCoolDown_Implementation(__Params->id, __Params->cd);
 	}
 
-	// Token: 0x06000ECE RID: 3790 RVA: 0x0005505C File Offset: 0x0005325C
+	// Token: 0x06000ED4 RID: 3796 RVA: 0x00055F2C File Offset: 0x0005412C
 	protected unsafe virtual void __CPPCALL_InitCooldownEvent_Implementation(TsAiController.__InitCooldownEvent_FunctionParams* __Params)
 	{
 		UKuroBooleanEventBinder orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroBooleanEventBinder>(__Params->eventBinder);
 		this.InitCooldownEvent_Implementation(__Params->id, orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x06000ECF RID: 3791 RVA: 0x00055082 File Offset: 0x00053282
+	// Token: 0x06000ED5 RID: 3797 RVA: 0x00055F52 File Offset: 0x00054152
 	protected unsafe virtual void __CPPCALL_StartCooldownTimer_Implementation(TsAiController.__StartCooldownTimer_FunctionParams* __Params)
 	{
 		this.StartCooldownTimer_Implementation(__Params->id, __Params->duration);
 	}
 
-	// Token: 0x06000ED0 RID: 3792 RVA: 0x00055098 File Offset: 0x00053298
+	// Token: 0x06000ED6 RID: 3798 RVA: 0x00055F68 File Offset: 0x00054168
 	protected unsafe virtual void __CPPCALL_GetDebugStateMachine_Implementation(TsAiController.__GetDebugStateMachine_FunctionParams* __Params)
 	{
 		TArray<FText> tarray = new TArray<FText>(&__Params->output, true, true);
@@ -2135,7 +1979,7 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06000ED1 RID: 3793 RVA: 0x000550D5 File Offset: 0x000532D5
+	// Token: 0x06000ED7 RID: 3799 RVA: 0x00055FA5 File Offset: 0x000541A5
 	protected unsafe virtual void __CPPCALL_GetDebugText_Implementation(TsAiController.__GetDebugText_FunctionParams* __Params)
 	{
 		void* dest = (void*)(&__Params->__Result);
@@ -2143,636 +1987,636 @@ public class TsAiController : AKuroAIController, IUnrealUObject, IUnrealObject
 		FText.NativeCopy(dest, (debugText_Implementation != null) ? debugText_Implementation.NativePtr : null, 1);
 	}
 
-	// Token: 0x06000ED2 RID: 3794 RVA: 0x000550F7 File Offset: 0x000532F7
+	// Token: 0x06000ED8 RID: 3800 RVA: 0x00055FC7 File Offset: 0x000541C7
 	protected virtual void __CPPCALL_ReceiveDestroyed_Implementation()
 	{
 		this.ReceiveDestroyed_Implementation();
 	}
 
-	// Token: 0x04000BA0 RID: 2976
+	// Token: 0x04000BA8 RID: 2984
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector TmpVector = global::Vector.Create();
 
-	// Token: 0x04000BA1 RID: 2977
+	// Token: 0x04000BA9 RID: 2985
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector TmpVector2 = global::Vector.Create();
 
-	// Token: 0x04000BA2 RID: 2978
+	// Token: 0x04000BAA RID: 2986
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector TmpVector3 = global::Vector.Create();
 
-	// Token: 0x04000BA3 RID: 2979
+	// Token: 0x04000BAB RID: 2987
 	[Nullable(2)]
 	private CharacterAiComponent CharAiDesignComp;
 
-	// Token: 0x04000BA4 RID: 2980
+	// Token: 0x04000BAC RID: 2988
 	[Nullable(2)]
 	private BaseTagComponent CharTagComp;
 
-	// Token: 0x04000BA5 RID: 2981
+	// Token: 0x04000BAD RID: 2989
 	[Nullable(2)]
 	private CharacterBuffComponent CharBuffComp;
 
-	// Token: 0x04000BA6 RID: 2982
+	// Token: 0x04000BAE RID: 2990
 	[Nullable(2)]
 	private CharacterStateMachineNewComponent CharStateMachineComp;
 
-	// Token: 0x04000BA7 RID: 2983
+	// Token: 0x04000BAF RID: 2991
 	[Nullable(2)]
 	public AiController AiController;
 
-	// Token: 0x04000BA8 RID: 2984
+	// Token: 0x04000BB0 RID: 2992
 	private const float DRAW_ARROW_SIZE = 100f;
 
-	// Token: 0x04000BA9 RID: 2985
+	// Token: 0x04000BB1 RID: 2993
 	private const float DRAW_LINE_THICKNESS = 3f;
 
-	// Token: 0x04000BAA RID: 2986
+	// Token: 0x04000BB2 RID: 2994
 	private const float ARROW_LENGTH_SUB = 20f;
 
-	// Token: 0x04000BAB RID: 2987
-	private const int DEFAULT_SEGMENTS = 24;
-
-	// Token: 0x04000BAC RID: 2988
-	[StaticVariableRuleIgnore]
-	private static readonly FLinearColor initLocationColor = new FLinearColor(0.5f, 0.5f, 0.5f, 1f);
-
-	// Token: 0x04000BAD RID: 2989
-	[StaticVariableRuleIgnore]
-	private static readonly FLinearColor targetLinkColor = new FLinearColor(1f, 0f, 0f, 1f);
-
-	// Token: 0x04000BAE RID: 2990
-	[StaticVariableRuleIgnore]
-	private static readonly FLinearColor teamMemberLinkColor = new FLinearColor(0f, 1f, 0f, 1f);
-
-	// Token: 0x04000BAF RID: 2991
-	[StaticVariableRuleIgnore]
-	private static readonly FLinearColor allyLinkColor = new FLinearColor(0.6f, 1f, 0.6f, 1f);
-
-	// Token: 0x04000BB0 RID: 2992
-	[StaticVariableRuleIgnore]
-	private static readonly FLinearColor neutralLinkColor = new FLinearColor(1f, 1f, 0f, 1f);
-
-	// Token: 0x04000BB1 RID: 2993
-	[StaticVariableRuleIgnore]
-	private static readonly FLinearColor enemyLinkColor = new FLinearColor(1f, 0f, 1f, 1f);
-
-	// Token: 0x04000BB2 RID: 2994
-	[StaticVariableRuleIgnore]
-	private static readonly FLinearColor areaCenterColor = new FLinearColor(0f, 1f, 1f, 1f);
-
 	// Token: 0x04000BB3 RID: 2995
-	[StaticVariableRuleIgnore]
-	private static readonly FLinearColor minHateAreaColor = new FLinearColor(1f, 0f, 1f, 1f);
+	private const int DEFAULT_SEGMENTS = 24;
 
 	// Token: 0x04000BB4 RID: 2996
 	[StaticVariableRuleIgnore]
-	private static readonly FLinearColor maxHateAreaColor = new FLinearColor(0f, 1f, 1f, 1f);
+	private static readonly FLinearColor initLocationColor = new FLinearColor(0.5f, 0.5f, 0.5f, 1f);
 
 	// Token: 0x04000BB5 RID: 2997
 	[StaticVariableRuleIgnore]
-	private static readonly FLinearColor minHateInitAreaColor = new FLinearColor(1f, 0f, 0f, 1f);
+	private static readonly FLinearColor targetLinkColor = new FLinearColor(1f, 0f, 0f, 1f);
 
 	// Token: 0x04000BB6 RID: 2998
 	[StaticVariableRuleIgnore]
-	private static readonly FLinearColor maxHateInitAreaColor = new FLinearColor(0f, 1f, 0f, 1f);
+	private static readonly FLinearColor teamMemberLinkColor = new FLinearColor(0f, 1f, 0f, 1f);
 
 	// Token: 0x04000BB7 RID: 2999
+	[StaticVariableRuleIgnore]
+	private static readonly FLinearColor allyLinkColor = new FLinearColor(0.6f, 1f, 0.6f, 1f);
+
+	// Token: 0x04000BB8 RID: 3000
+	[StaticVariableRuleIgnore]
+	private static readonly FLinearColor neutralLinkColor = new FLinearColor(1f, 1f, 0f, 1f);
+
+	// Token: 0x04000BB9 RID: 3001
+	[StaticVariableRuleIgnore]
+	private static readonly FLinearColor enemyLinkColor = new FLinearColor(1f, 0f, 1f, 1f);
+
+	// Token: 0x04000BBA RID: 3002
+	[StaticVariableRuleIgnore]
+	private static readonly FLinearColor areaCenterColor = new FLinearColor(0f, 1f, 1f, 1f);
+
+	// Token: 0x04000BBB RID: 3003
+	[StaticVariableRuleIgnore]
+	private static readonly FLinearColor minHateAreaColor = new FLinearColor(1f, 0f, 1f, 1f);
+
+	// Token: 0x04000BBC RID: 3004
+	[StaticVariableRuleIgnore]
+	private static readonly FLinearColor maxHateAreaColor = new FLinearColor(0f, 1f, 1f, 1f);
+
+	// Token: 0x04000BBD RID: 3005
+	[StaticVariableRuleIgnore]
+	private static readonly FLinearColor minHateInitAreaColor = new FLinearColor(1f, 0f, 0f, 1f);
+
+	// Token: 0x04000BBE RID: 3006
+	[StaticVariableRuleIgnore]
+	private static readonly FLinearColor maxHateInitAreaColor = new FLinearColor(0f, 1f, 0f, 1f);
+
+	// Token: 0x04000BBF RID: 3007
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatSetAiHateConfig = Stat.Create("SetAiHateConfig", "", "");
 
-	// Token: 0x04000BB8 RID: 3000
+	// Token: 0x04000BC0 RID: 3008
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/Controller/TsAiController.TsAiController_C";
 
-	// Token: 0x04000BB9 RID: 3001
+	// Token: 0x04000BC1 RID: 3009
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000BBA RID: 3002
+	// Token: 0x04000BC2 RID: 3010
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000BBB RID: 3003
+	// Token: 0x04000BC3 RID: 3011
 	private static int __PropertyOffset_BehaviorTree;
 
-	// Token: 0x04000BBC RID: 3004
+	// Token: 0x04000BC4 RID: 3012
 	private static int __PropertyOffset_StateMachineGroup;
 
-	// Token: 0x0200738E RID: 29582
+	// Token: 0x02006511 RID: 25873
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 3)]
 	protected ref struct __状态切换时_FunctionParams
 	{
-		// Token: 0x04026625 RID: 157221
+		// Token: 0x0402191B RID: 137499
 		[FieldOffset(0)]
 		public byte oldState;
 
-		// Token: 0x04026626 RID: 157222
+		// Token: 0x0402191C RID: 137500
 		[FieldOffset(1)]
 		public byte newState;
 
-		// Token: 0x04026627 RID: 157223
+		// Token: 0x0402191D RID: 137501
 		[FieldOffset(2)]
 		public bool isAutonomousProxy;
 	}
 
-	// Token: 0x0200738F RID: 29583
+	// Token: 0x02006512 RID: 25874
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __渲染状态改变时_FunctionParams
 	{
-		// Token: 0x04026628 RID: 157224
+		// Token: 0x0402191E RID: 137502
 		[FieldOffset(0)]
 		public bool wasRendered;
 	}
 
-	// Token: 0x02007390 RID: 29584
+	// Token: 0x02006513 RID: 25875
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 192)]
 	protected ref struct __AddComplicatedEventBinder_FunctionParams
 	{
-		// Token: 0x04026629 RID: 157225
+		// Token: 0x0402191F RID: 137503
 		[FieldOffset(0)]
 		public byte conditions;
 
-		// Token: 0x0402662A RID: 157226
+		// Token: 0x04021920 RID: 137504
 		[FieldOffset(184)]
 		public IntPtr eventBinder;
 	}
 
-	// Token: 0x02007391 RID: 29585
+	// Token: 0x02006514 RID: 25876
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __AddSceneItemDestroyEventBinder_FunctionParams
 	{
-		// Token: 0x0402662B RID: 157227
+		// Token: 0x04021921 RID: 137505
 		[FieldOffset(0)]
 		public float distance;
 
-		// Token: 0x0402662C RID: 157228
+		// Token: 0x04021922 RID: 137506
 		[FieldOffset(8)]
 		public IntPtr eventBinder;
 	}
 
-	// Token: 0x02007392 RID: 29586
+	// Token: 0x02006515 RID: 25877
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __AddLevelVarBoolEventBinder_FunctionParams
 	{
-		// Token: 0x0402662D RID: 157229
+		// Token: 0x04021923 RID: 137507
 		[FieldOffset(0)]
 		public byte levelVar;
 
-		// Token: 0x0402662E RID: 157230
+		// Token: 0x04021924 RID: 137508
 		[FieldOffset(32)]
 		public IntPtr eventBinder;
 	}
 
-	// Token: 0x02007393 RID: 29587
+	// Token: 0x02006516 RID: 25878
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __AddLevelVarIntEventBinder_FunctionParams
 	{
-		// Token: 0x0402662F RID: 157231
+		// Token: 0x04021925 RID: 137509
 		[FieldOffset(0)]
 		public byte levelVar;
 
-		// Token: 0x04026630 RID: 157232
+		// Token: 0x04021926 RID: 137510
 		[FieldOffset(32)]
 		public IntPtr eventBinder;
 	}
 
-	// Token: 0x02007394 RID: 29588
+	// Token: 0x02006517 RID: 25879
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __AddHateEventBinder_FunctionParams
 	{
-		// Token: 0x04026631 RID: 157233
+		// Token: 0x04021927 RID: 137511
 		[FieldOffset(0)]
 		public IntPtr handler;
 	}
 
-	// Token: 0x02007395 RID: 29589
+	// Token: 0x02006518 RID: 25880
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __AddPerceptionEventBinder_FunctionParams
 	{
-		// Token: 0x04026632 RID: 157234
+		// Token: 0x04021928 RID: 137512
 		[FieldOffset(0)]
 		public IntPtr handler;
 	}
 
-	// Token: 0x02007396 RID: 29590
+	// Token: 0x02006519 RID: 25881
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 3)]
 	protected ref struct __SetPerceptionEventState_FunctionParams
 	{
-		// Token: 0x04026633 RID: 157235
+		// Token: 0x04021929 RID: 137513
 		[FieldOffset(0)]
 		public bool includeFriend;
 
-		// Token: 0x04026634 RID: 157236
+		// Token: 0x0402192A RID: 137514
 		[FieldOffset(1)]
 		public bool includeEnemy;
 
-		// Token: 0x04026635 RID: 157237
+		// Token: 0x0402192B RID: 137515
 		[FieldOffset(2)]
 		public bool includeNeutral;
 	}
 
-	// Token: 0x02007397 RID: 29591
+	// Token: 0x0200651A RID: 25882
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __AddHateOutRangeEventBinder_FunctionParams
 	{
-		// Token: 0x04026636 RID: 157238
+		// Token: 0x0402192C RID: 137516
 		[FieldOffset(0)]
 		public IntPtr handler;
 	}
 
-	// Token: 0x02007398 RID: 29592
+	// Token: 0x0200651B RID: 25883
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __ActivateSkillGroup_FunctionParams
 	{
-		// Token: 0x04026637 RID: 157239
+		// Token: 0x0402192D RID: 137517
 		[FieldOffset(0)]
 		public int skillGroupIndex;
 
-		// Token: 0x04026638 RID: 157240
+		// Token: 0x0402192E RID: 137518
 		[FieldOffset(4)]
 		public bool activate;
 	}
 
-	// Token: 0x02007399 RID: 29593
+	// Token: 0x0200651C RID: 25884
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __AddSkillCd_FunctionParams
 	{
-		// Token: 0x04026639 RID: 157241
+		// Token: 0x0402192F RID: 137519
 		[FieldOffset(0)]
 		public int skillInfoId;
 
-		// Token: 0x0402663A RID: 157242
+		// Token: 0x04021930 RID: 137520
 		[FieldOffset(4)]
 		public float cdAdd;
 	}
 
-	// Token: 0x0200739A RID: 29594
+	// Token: 0x0200651D RID: 25885
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __AicApplyBuff_FunctionParams
 	{
-		// Token: 0x0402663B RID: 157243
+		// Token: 0x04021931 RID: 137521
 		[FieldOffset(0)]
 		public long buffId;
 	}
 
-	// Token: 0x0200739B RID: 29595
+	// Token: 0x0200651E RID: 25886
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __AicApplyBuffToTarget_FunctionParams
 	{
-		// Token: 0x0402663C RID: 157244
+		// Token: 0x04021932 RID: 137522
 		[FieldOffset(0)]
 		public int targetId;
 
-		// Token: 0x0402663D RID: 157245
+		// Token: 0x04021933 RID: 137523
 		[FieldOffset(8)]
 		public long buffId;
 	}
 
-	// Token: 0x0200739C RID: 29596
+	// Token: 0x0200651F RID: 25887
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __AicRemoveBuff_FunctionParams
 	{
-		// Token: 0x0402663E RID: 157246
+		// Token: 0x04021934 RID: 137524
 		[FieldOffset(0)]
 		public long buffId;
 	}
 
-	// Token: 0x0200739D RID: 29597
+	// Token: 0x02006520 RID: 25888
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 12)]
 	protected ref struct __AicAddTag_FunctionParams
 	{
-		// Token: 0x0402663F RID: 157247
+		// Token: 0x04021935 RID: 137525
 		[FieldOffset(0)]
 		public FGameplayTag tag;
 	}
 
-	// Token: 0x0200739E RID: 29598
+	// Token: 0x02006521 RID: 25889
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 12)]
 	protected ref struct __AicRemoveTag_FunctionParams
 	{
-		// Token: 0x04026640 RID: 157248
+		// Token: 0x04021936 RID: 137526
 		[FieldOffset(0)]
 		public FGameplayTag tag;
 	}
 
-	// Token: 0x0200739F RID: 29599
+	// Token: 0x02006522 RID: 25890
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SetBattleWanderTime_FunctionParams
 	{
-		// Token: 0x04026641 RID: 157249
+		// Token: 0x04021937 RID: 137527
 		[FieldOffset(0)]
 		public float min;
 
-		// Token: 0x04026642 RID: 157250
+		// Token: 0x04021938 RID: 137528
 		[FieldOffset(4)]
 		public float max;
 	}
 
-	// Token: 0x020073A0 RID: 29600
+	// Token: 0x02006523 RID: 25891
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __SetBattleWanderIndex_FunctionParams
 	{
-		// Token: 0x04026643 RID: 157251
+		// Token: 0x04021939 RID: 137529
 		[FieldOffset(0)]
 		public int index;
 	}
 
-	// Token: 0x020073A1 RID: 29601
+	// Token: 0x02006524 RID: 25892
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __AddBattleWanderEndTime_FunctionParams
 	{
-		// Token: 0x04026644 RID: 157252
+		// Token: 0x0402193A RID: 137530
 		[FieldOffset(0)]
 		public float addTime;
 	}
 
-	// Token: 0x020073A2 RID: 29602
+	// Token: 0x02006525 RID: 25893
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SetAiSenseEnable_FunctionParams
 	{
-		// Token: 0x04026645 RID: 157253
+		// Token: 0x0402193B RID: 137531
 		[FieldOffset(0)]
 		public int index;
 
-		// Token: 0x04026646 RID: 157254
+		// Token: 0x0402193C RID: 137532
 		[FieldOffset(4)]
 		public bool enable;
 	}
 
-	// Token: 0x020073A3 RID: 29603
+	// Token: 0x02006526 RID: 25894
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __AddOrRemoveAiSense_FunctionParams
 	{
-		// Token: 0x04026647 RID: 157255
+		// Token: 0x0402193D RID: 137533
 		[FieldOffset(0)]
 		public int aiSenseId;
 
-		// Token: 0x04026648 RID: 157256
+		// Token: 0x0402193E RID: 137534
 		[FieldOffset(4)]
 		public bool add;
 	}
 
-	// Token: 0x020073A4 RID: 29604
+	// Token: 0x02006527 RID: 25895
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __EnableAiSenseByType_FunctionParams
 	{
-		// Token: 0x04026649 RID: 157257
+		// Token: 0x0402193F RID: 137535
 		[FieldOffset(0)]
 		public int type;
 
-		// Token: 0x0402664A RID: 157258
+		// Token: 0x04021940 RID: 137536
 		[FieldOffset(4)]
 		public bool enable;
 	}
 
-	// Token: 0x020073A5 RID: 29605
+	// Token: 0x02006528 RID: 25896
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetAiHateConfig_FunctionParams
 	{
-		// Token: 0x0402664B RID: 157259
+		// Token: 0x04021941 RID: 137537
 		[FieldOffset(0)]
 		public FString configId;
 	}
 
-	// Token: 0x020073A6 RID: 29606
+	// Token: 0x02006529 RID: 25897
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 12)]
 	protected ref struct __ChangeHatred_FunctionParams
 	{
-		// Token: 0x0402664C RID: 157260
+		// Token: 0x04021942 RID: 137538
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402664D RID: 157261
+		// Token: 0x04021943 RID: 137539
 		[FieldOffset(4)]
 		public float rate;
 
-		// Token: 0x0402664E RID: 157262
+		// Token: 0x04021944 RID: 137540
 		[FieldOffset(8)]
 		public float abs;
 	}
 
-	// Token: 0x020073A7 RID: 29607
+	// Token: 0x0200652A RID: 25898
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __ClearHatred_FunctionParams
 	{
-		// Token: 0x0402664F RID: 157263
+		// Token: 0x04021945 RID: 137541
 		[FieldOffset(0)]
 		public int entityId;
 	}
 
-	// Token: 0x020073A8 RID: 29608
+	// Token: 0x0200652B RID: 25899
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __AddAlertEventBinder_FunctionParams
 	{
-		// Token: 0x04026650 RID: 157264
+		// Token: 0x04021946 RID: 137542
 		[FieldOffset(0)]
 		public IntPtr eventBinder;
 	}
 
-	// Token: 0x020073A9 RID: 29609
+	// Token: 0x0200652C RID: 25900
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetAiAlertConfig_FunctionParams
 	{
-		// Token: 0x04026651 RID: 157265
+		// Token: 0x04021947 RID: 137543
 		[FieldOffset(0)]
 		public FString configId;
 	}
 
-	// Token: 0x020073AA RID: 29610
+	// Token: 0x0200652D RID: 25901
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __SetAiEnable_FunctionParams
 	{
-		// Token: 0x04026652 RID: 157266
+		// Token: 0x04021948 RID: 137544
 		[FieldOffset(0)]
 		public bool enable;
 
-		// Token: 0x04026653 RID: 157267
+		// Token: 0x04021949 RID: 137545
 		[FieldOffset(8)]
 		public FString key;
 	}
 
-	// Token: 0x020073AB RID: 29611
+	// Token: 0x0200652E RID: 25902
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __TestChangeAi_FunctionParams
 	{
-		// Token: 0x04026654 RID: 157268
+		// Token: 0x0402194A RID: 137546
 		[FieldOffset(0)]
 		public FString id;
 	}
 
-	// Token: 0x020073AC RID: 29612
+	// Token: 0x0200652F RID: 25903
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __LogReport_FunctionParams
 	{
-		// Token: 0x04026655 RID: 157269
+		// Token: 0x0402194B RID: 137547
 		[FieldOffset(0)]
 		public int logId;
 	}
 
-	// Token: 0x020073AD RID: 29613
+	// Token: 0x02006530 RID: 25904
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __逻辑主控_FunctionParams
 	{
-		// Token: 0x04026656 RID: 157270
+		// Token: 0x0402194C RID: 137548
 		[FieldOffset(0)]
 		public bool __Result;
 	}
 
-	// Token: 0x020073AE RID: 29614
+	// Token: 0x02006531 RID: 25905
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __移动主控_FunctionParams
 	{
-		// Token: 0x04026657 RID: 157271
+		// Token: 0x0402194D RID: 137549
 		[FieldOffset(0)]
 		public bool __Result;
 	}
 
-	// Token: 0x020073AF RID: 29615
+	// Token: 0x02006532 RID: 25906
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __检查状态机状态_FunctionParams
 	{
-		// Token: 0x04026658 RID: 157272
+		// Token: 0x0402194E RID: 137550
 		[FieldOffset(0)]
 		public byte states;
 
-		// Token: 0x04026659 RID: 157273
+		// Token: 0x0402194F RID: 137551
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020073B0 RID: 29616
+	// Token: 0x02006533 RID: 25907
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __切换状态机状态_FunctionParams
 	{
-		// Token: 0x0402665A RID: 157274
+		// Token: 0x04021950 RID: 137552
 		[FieldOffset(0)]
 		public byte states;
 	}
 
-	// Token: 0x020073B1 RID: 29617
+	// Token: 0x02006534 RID: 25908
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __GetCoolDownDone_FunctionParams
 	{
-		// Token: 0x0402665B RID: 157275
+		// Token: 0x04021951 RID: 137553
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x0402665C RID: 157276
+		// Token: 0x04021952 RID: 137554
 		[FieldOffset(4)]
 		public bool __Result;
 	}
 
-	// Token: 0x020073B2 RID: 29618
+	// Token: 0x02006535 RID: 25909
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __GetCoolDownRemainTime_FunctionParams
 	{
-		// Token: 0x0402665D RID: 157277
+		// Token: 0x04021953 RID: 137555
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x0402665E RID: 157278
+		// Token: 0x04021954 RID: 137556
 		[FieldOffset(4)]
 		public float __Result;
 	}
 
-	// Token: 0x020073B3 RID: 29619
+	// Token: 0x02006536 RID: 25910
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SetCoolDown_FunctionParams
 	{
-		// Token: 0x0402665F RID: 157279
+		// Token: 0x04021955 RID: 137557
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x04026660 RID: 157280
+		// Token: 0x04021956 RID: 137558
 		[FieldOffset(4)]
 		public float cd;
 	}
 
-	// Token: 0x020073B4 RID: 29620
+	// Token: 0x02006537 RID: 25911
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __InitCooldownEvent_FunctionParams
 	{
-		// Token: 0x04026661 RID: 157281
+		// Token: 0x04021957 RID: 137559
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x04026662 RID: 157282
+		// Token: 0x04021958 RID: 137560
 		[FieldOffset(8)]
 		public IntPtr eventBinder;
 	}
 
-	// Token: 0x020073B5 RID: 29621
+	// Token: 0x02006538 RID: 25912
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __StartCooldownTimer_FunctionParams
 	{
-		// Token: 0x04026663 RID: 157283
+		// Token: 0x04021959 RID: 137561
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x04026664 RID: 157284
+		// Token: 0x0402195A RID: 137562
 		[FieldOffset(4)]
 		public float duration;
 	}
 
-	// Token: 0x020073B6 RID: 29622
+	// Token: 0x02006539 RID: 25913
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetDebugStateMachine_FunctionParams
 	{
-		// Token: 0x04026665 RID: 157285
+		// Token: 0x0402195B RID: 137563
 		[FieldOffset(0)]
 		public byte output;
 	}
 
-	// Token: 0x020073B7 RID: 29623
+	// Token: 0x0200653A RID: 25914
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetDebugText_FunctionParams
 	{
-		// Token: 0x04026666 RID: 157286
+		// Token: 0x0402195C RID: 137564
 		[FieldOffset(0)]
 		public byte __Result;
 	}

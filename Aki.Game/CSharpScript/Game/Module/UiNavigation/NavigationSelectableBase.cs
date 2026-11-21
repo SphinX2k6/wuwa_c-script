@@ -7,127 +7,127 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200491A RID: 18714
+	// Token: 0x02003891 RID: 14481
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class NavigationSelectableBase
 	{
-		// Token: 0x06030E45 RID: 200261 RVA: 0x00B5A5C4 File Offset: 0x00B587C4
+		// Token: 0x06025972 RID: 153970 RVA: 0x00A95434 File Offset: 0x00A93634
 		protected NavigationSelectableBase(ULGUIBehaviour selectable, string type, List<string> paramList)
 		{
 		}
 
-		// Token: 0x06030E46 RID: 200262 RVA: 0x00B5A5FC File Offset: 0x00B587FC
+		// Token: 0x06025973 RID: 153971 RVA: 0x00A9546C File Offset: 0x00A9366C
 		public void Init()
 		{
 			this.OnInit();
 		}
 
-		// Token: 0x06030E47 RID: 200263 RVA: 0x00B5A604 File Offset: 0x00B58804
+		// Token: 0x06025974 RID: 153972 RVA: 0x00A95474 File Offset: 0x00A93674
 		public void Start()
 		{
 			this.OnStart();
 		}
 
-		// Token: 0x06030E48 RID: 200264 RVA: 0x00B5A60C File Offset: 0x00B5880C
+		// Token: 0x06025975 RID: 153973 RVA: 0x00A9547C File Offset: 0x00A9367C
 		public void Clear()
 		{
 			this.OnClear();
 		}
 
-		// Token: 0x06030E49 RID: 200265 RVA: 0x00B5A614 File Offset: 0x00B58814
+		// Token: 0x06025976 RID: 153974 RVA: 0x00A95484 File Offset: 0x00A93684
 		public bool CanFocus()
 		{
 			return this.IsInteractive && this.Selectable != null && this.Selectable.IsValid() && this.Selectable.RootUIComp.Get().IsUIActiveInHierarchy();
 		}
 
-		// Token: 0x06030E4A RID: 200266 RVA: 0x00B5A65A File Offset: 0x00B5885A
+		// Token: 0x06025977 RID: 153975 RVA: 0x00A954CA File Offset: 0x00A936CA
 		public bool CanFocusInScrollOrLayout()
 		{
 			return this.OnCanFocusInScrollOrLayout();
 		}
 
-		// Token: 0x06030E4B RID: 200267 RVA: 0x00B5A664 File Offset: 0x00B58864
+		// Token: 0x06025978 RID: 153976 RVA: 0x00A954D4 File Offset: 0x00A936D4
 		public bool IsActive()
 		{
 			return this.IsInteractive && this.Selectable != null && this.Selectable.IsValid() && this.Selectable.RootUIComp.Get().IsUIActiveInHierarchy();
 		}
 
-		// Token: 0x06030E4C RID: 200268 RVA: 0x00B5A6AA File Offset: 0x00B588AA
+		// Token: 0x06025979 RID: 153977 RVA: 0x00A9551A File Offset: 0x00A9371A
 		public void SetIsInteractive(bool value)
 		{
 			this.IsInteractive = value;
 		}
 
-		// Token: 0x06030E4D RID: 200269 RVA: 0x00B5A6B3 File Offset: 0x00B588B3
+		// Token: 0x0602597A RID: 153978 RVA: 0x00A95523 File Offset: 0x00A93723
 		public ULGUIBehaviour GetSelectable()
 		{
 			return this.Selectable;
 		}
 
-		// Token: 0x06030E4E RID: 200270 RVA: 0x00B5A6BB File Offset: 0x00B588BB
+		// Token: 0x0602597B RID: 153979 RVA: 0x00A9552B File Offset: 0x00A9372B
 		public void SetListener(TsUiNavigationBehaviorListener listener)
 		{
 			this.Listener = listener;
 		}
 
-		// Token: 0x06030E4F RID: 200271 RVA: 0x00B5A6C4 File Offset: 0x00B588C4
+		// Token: 0x0602597C RID: 153980 RVA: 0x00A95534 File Offset: 0x00A93734
 		public void SetPanelHandle(SpecialPanelHandleBase panelHandle)
 		{
 			this.PanelHandle = panelHandle;
 		}
 
-		// Token: 0x06030E50 RID: 200272 RVA: 0x00B5A6CD File Offset: 0x00B588CD
+		// Token: 0x0602597D RID: 153981 RVA: 0x00A9553D File Offset: 0x00A9373D
 		public string GetTipsTextId()
 		{
 			return this.OnGetTipsTextId();
 		}
 
-		// Token: 0x06030E51 RID: 200273 RVA: 0x00B5A6D5 File Offset: 0x00B588D5
+		// Token: 0x0602597E RID: 153982 RVA: 0x00A95545 File Offset: 0x00A93745
 		public bool CheckFindNavigationBefore()
 		{
 			return !UiLayer.Instance.IsInMask() && this.OnCheckFindNavigationBefore();
 		}
 
-		// Token: 0x06030E52 RID: 200274 RVA: 0x00B5A6EB File Offset: 0x00B588EB
+		// Token: 0x0602597F RID: 153983 RVA: 0x00A9555B File Offset: 0x00A9375B
 		public bool CheckFindOpposite()
 		{
 			return this.Listener.IsCanFocus() && this.OnCheckFindOpposite();
 		}
 
-		// Token: 0x06030E53 RID: 200275 RVA: 0x00B5A702 File Offset: 0x00B58902
+		// Token: 0x06025980 RID: 153984 RVA: 0x00A95572 File Offset: 0x00A93772
 		[NullableContext(2)]
 		public bool CheckFindNavigationAfter(TsUiNavigationBehaviorListener findListener)
 		{
 			return this.OnCheckFindNavigationAfter(findListener);
 		}
 
-		// Token: 0x06030E54 RID: 200276 RVA: 0x00B5A70B File Offset: 0x00B5890B
+		// Token: 0x06025981 RID: 153985 RVA: 0x00A9557B File Offset: 0x00A9377B
 		public bool HandlePointerEnter(ULGUIPointerEventData eventData)
 		{
 			return this.IsAllowNavigationByGroup() && this.IsAllowNavigationBySelfParam(eventData) && this.IsAllowCrossNavigationGroup() && this.OnHandlePointerEnter(eventData);
 		}
 
-		// Token: 0x06030E55 RID: 200277 RVA: 0x00B5A733 File Offset: 0x00B58933
+		// Token: 0x06025982 RID: 153986 RVA: 0x00A955A3 File Offset: 0x00A937A3
 		public bool HandlePointerSelect(ULGUIPointerEventData eventData)
 		{
 			return this.IsAllowCrossNavigationGroup() && this.OnHandlePointerSelect(eventData);
 		}
 
-		// Token: 0x06030E56 RID: 200278 RVA: 0x00B5A746 File Offset: 0x00B58946
+		// Token: 0x06025983 RID: 153987 RVA: 0x00A955B6 File Offset: 0x00A937B6
 		public bool IsIgnoreScrollOrLayoutCheckInSwitchGroup()
 		{
 			return this.OnIsIgnoreScrollOrLayoutCheck();
 		}
 
-		// Token: 0x06030E57 RID: 200279 RVA: 0x00B5A74E File Offset: 0x00B5894E
+		// Token: 0x06025984 RID: 153988 RVA: 0x00A955BE File Offset: 0x00A937BE
 		[NullableContext(2)]
 		public UUISelectableComponent FindLoopScrollViewNavigationComponent(FVector direction, UINavigationWrapMode wrapMode)
 		{
 			return this.OnFindLoopScrollViewNavigationComponent(direction, wrapMode);
 		}
 
-		// Token: 0x06030E58 RID: 200280 RVA: 0x00B5A758 File Offset: 0x00B58958
+		// Token: 0x06025985 RID: 153989 RVA: 0x00A955C8 File Offset: 0x00A937C8
 		[NullableContext(2)]
 		public UUISelectableComponent FindMultiTemplateScrollViewNavigationComponent(FVector direction, UINavigationWrapMode wrapMode, UINavigationPriorityMode priorityMode, ELGUINavigationDirection directionType, float navigateTolerance, float navigateToleranceReverse)
 		{
@@ -169,19 +169,19 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return tsUiNavigationBehaviorListener.GetSelectableComponent();
 		}
 
-		// Token: 0x06030E59 RID: 200281 RVA: 0x00B5A83A File Offset: 0x00B58A3A
+		// Token: 0x06025986 RID: 153990 RVA: 0x00A956AA File Offset: 0x00A938AA
 		public void MultiTemplateScrollViewScrollToIndex(int findIndex, bool bScrollToTop)
 		{
 			(this.Listener.ScrollProxy.ScrollView as UUIMultiTemplateScrollViewComponent).TryScrollToGridIndex(findIndex, bScrollToTop);
 		}
 
-		// Token: 0x06030E5A RID: 200282 RVA: 0x00B5A858 File Offset: 0x00B58A58
+		// Token: 0x06025987 RID: 153991 RVA: 0x00A956C8 File Offset: 0x00A938C8
 		public void NotifyFocusListener(bool isSameListener)
 		{
 			this.OnNotifyFocusListener(isSameListener);
 		}
 
-		// Token: 0x06030E5B RID: 200283 RVA: 0x00B5A864 File Offset: 0x00B58A64
+		// Token: 0x06025988 RID: 153992 RVA: 0x00A956D4 File Offset: 0x00A938D4
 		protected bool IsAllowNavigationByGroup()
 		{
 			if (string.IsNullOrEmpty(this.Listener.GroupName))
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return navigationGroup != null && navigationGroup.GroupType == 0;
 		}
 
-		// Token: 0x06030E5C RID: 200284 RVA: 0x00B5A8B4 File Offset: 0x00B58AB4
+		// Token: 0x06025989 RID: 153993 RVA: 0x00A95724 File Offset: 0x00A93924
 		protected virtual string OnGetTipsTextId()
 		{
 			string result;
@@ -203,50 +203,50 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return result;
 		}
 
-		// Token: 0x06030E5D RID: 200285 RVA: 0x00B5A8DD File Offset: 0x00B58ADD
+		// Token: 0x0602598A RID: 153994 RVA: 0x00A9574D File Offset: 0x00A9394D
 		protected virtual bool OnCheckFindNavigationBefore()
 		{
 			return true;
 		}
 
-		// Token: 0x06030E5E RID: 200286 RVA: 0x00B5A8E0 File Offset: 0x00B58AE0
+		// Token: 0x0602598B RID: 153995 RVA: 0x00A95750 File Offset: 0x00A93950
 		protected virtual bool OnCheckFindOpposite()
 		{
 			return true;
 		}
 
-		// Token: 0x06030E5F RID: 200287 RVA: 0x00B5A8E3 File Offset: 0x00B58AE3
+		// Token: 0x0602598C RID: 153996 RVA: 0x00A95753 File Offset: 0x00A93953
 		[NullableContext(2)]
 		protected virtual bool OnCheckFindNavigationAfter(TsUiNavigationBehaviorListener findListener)
 		{
 			return true;
 		}
 
-		// Token: 0x06030E60 RID: 200288 RVA: 0x00B5A8E6 File Offset: 0x00B58AE6
+		// Token: 0x0602598D RID: 153997 RVA: 0x00A95756 File Offset: 0x00A93956
 		protected virtual bool IsAllowNavigationBySelfParam(ULGUIPointerEventData eventData)
 		{
 			return true;
 		}
 
-		// Token: 0x06030E61 RID: 200289 RVA: 0x00B5A8EC File Offset: 0x00B58AEC
+		// Token: 0x0602598E RID: 153998 RVA: 0x00A9575C File Offset: 0x00A9395C
 		protected virtual bool OnCanFocusInScrollOrLayout()
 		{
 			return this.IsInteractive && this.Selectable.RootUIComp.Get().IsUIActiveInHierarchy();
 		}
 
-		// Token: 0x06030E62 RID: 200290 RVA: 0x00B5A920 File Offset: 0x00B58B20
+		// Token: 0x0602598F RID: 153999 RVA: 0x00A95790 File Offset: 0x00A93990
 		protected virtual bool OnHandlePointerEnter(ULGUIPointerEventData eventData)
 		{
 			return true;
 		}
 
-		// Token: 0x06030E63 RID: 200291 RVA: 0x00B5A923 File Offset: 0x00B58B23
+		// Token: 0x06025990 RID: 154000 RVA: 0x00A95793 File Offset: 0x00A93993
 		protected virtual bool OnIsIgnoreScrollOrLayoutCheck()
 		{
 			return false;
 		}
 
-		// Token: 0x06030E64 RID: 200292 RVA: 0x00B5A928 File Offset: 0x00B58B28
+		// Token: 0x06025991 RID: 154001 RVA: 0x00A95798 File Offset: 0x00A93998
 		[NullableContext(2)]
 		protected virtual UUISelectableComponent OnFindLoopScrollViewNavigationComponent(FVector direction, UINavigationWrapMode wrapMode)
 		{
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return uuiselectableComponent;
 		}
 
-		// Token: 0x06030E65 RID: 200293 RVA: 0x00B5A9B0 File Offset: 0x00B58BB0
+		// Token: 0x06025992 RID: 154002 RVA: 0x00A95820 File Offset: 0x00A93A20
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return new ValueTuple<UUISelectableComponent, bool, int>(item, multiTemplateScrollPositiveFind, num);
 		}
 
-		// Token: 0x06030E66 RID: 200294 RVA: 0x00B5AB10 File Offset: 0x00B58D10
+		// Token: 0x06025993 RID: 154003 RVA: 0x00A95980 File Offset: 0x00A93B80
 		private bool IsAllowCrossNavigationGroup()
 		{
 			if (this.Listener.PanelConfig == null)
@@ -347,54 +347,54 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return navigationGroup != null && !(navigationGroup.GroupName != this.Listener.GroupName) && (navigationGroup.AllowNavigationInSelfDynamic || ((this.Listener.ScrollViewActor != null || focusListener.ScrollViewActor != null || this.Listener.LayoutActor != null || focusListener.LayoutActor != null) && this.Listener.ScrollViewActor == focusListener.ScrollViewActor && this.Listener.LayoutActor == focusListener.LayoutActor));
 		}
 
-		// Token: 0x06030E67 RID: 200295 RVA: 0x00B5ABE2 File Offset: 0x00B58DE2
+		// Token: 0x06025994 RID: 154004 RVA: 0x00A95A52 File Offset: 0x00A93C52
 		protected virtual void OnNotifyFocusListener(bool isSameListener)
 		{
 		}
 
-		// Token: 0x06030E68 RID: 200296
+		// Token: 0x06025995 RID: 154005
 		protected abstract bool OnHandlePointerSelect(ULGUIPointerEventData eventData);
 
-		// Token: 0x06030E69 RID: 200297 RVA: 0x00B5ABE4 File Offset: 0x00B58DE4
+		// Token: 0x06025996 RID: 154006 RVA: 0x00A95A54 File Offset: 0x00A93C54
 		protected virtual void OnInit()
 		{
 		}
 
-		// Token: 0x06030E6A RID: 200298 RVA: 0x00B5ABE6 File Offset: 0x00B58DE6
+		// Token: 0x06025997 RID: 154007 RVA: 0x00A95A56 File Offset: 0x00A93C56
 		protected virtual void OnStart()
 		{
 		}
 
-		// Token: 0x06030E6B RID: 200299 RVA: 0x00B5ABE8 File Offset: 0x00B58DE8
+		// Token: 0x06025998 RID: 154008 RVA: 0x00A95A58 File Offset: 0x00A93C58
 		protected virtual void OnClear()
 		{
 		}
 
-		// Token: 0x06030E6C RID: 200300 RVA: 0x00B5ABEA File Offset: 0x00B58DEA
+		// Token: 0x06025999 RID: 154009 RVA: 0x00A95A5A File Offset: 0x00A93C5A
 		public new ENavigationSelectableDefine GetType()
 		{
 			return this.Type;
 		}
 
-		// Token: 0x0401A3D3 RID: 107475
+		// Token: 0x04014C46 RID: 85062
 		protected bool IsInteractive = true;
 
-		// Token: 0x0401A3D4 RID: 107476
+		// Token: 0x04014C47 RID: 85063
 		[Nullable(2)]
 		protected ULGUIBehaviour Selectable = selectable;
 
-		// Token: 0x0401A3D5 RID: 107477
+		// Token: 0x04014C48 RID: 85064
 		[Nullable(2)]
 		protected TsUiNavigationBehaviorListener Listener;
 
-		// Token: 0x0401A3D6 RID: 107478
+		// Token: 0x04014C49 RID: 85065
 		[Nullable(2)]
 		protected SpecialPanelHandleBase PanelHandle;
 
-		// Token: 0x0401A3D7 RID: 107479
+		// Token: 0x04014C4A RID: 85066
 		protected ENavigationSelectableDefine Type = (ENavigationSelectableDefine)Enum.Parse(typeof(ENavigationSelectableDefine), type);
 
-		// Token: 0x0401A3D8 RID: 107480
+		// Token: 0x04014C4B RID: 85067
 		[Nullable(new byte[]
 		{
 			2,

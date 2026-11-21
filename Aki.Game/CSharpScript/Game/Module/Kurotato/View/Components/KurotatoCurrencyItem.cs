@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Components
 {
-	// Token: 0x02005770 RID: 22384
+	// Token: 0x02004747 RID: 18247
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoCurrencyItem : CommonCurrencyItem
 	{
-		// Token: 0x06038DCA RID: 232906 RVA: 0x00D8292C File Offset: 0x00D80B2C
+		// Token: 0x0602DCDA RID: 187610 RVA: 0x00CD1428 File Offset: 0x00CCF628
 		public UniTask Init(UUIItem item, EKurotatoSystemVarType currencyType)
 		{
 			KurotatoCurrencyItem.<Init>d__2 <Init>d__;
@@ -25,26 +25,26 @@ namespace CSharpScript.Game.Module.Kurotato.View.Components
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038DCB RID: 232907 RVA: 0x00D8297F File Offset: 0x00D80B7F
+		// Token: 0x0602DCDB RID: 187611 RVA: 0x00CD147B File Offset: 0x00CCF67B
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(base.GetRootItem());
 			base.OnStart();
 		}
 
-		// Token: 0x06038DCC RID: 232908 RVA: 0x00D82998 File Offset: 0x00D80B98
+		// Token: 0x0602DCDC RID: 187612 RVA: 0x00CD1494 File Offset: 0x00CCF694
 		public override void AddEventListener()
 		{
 			KurotatoModel.Instance.BattleData.BehaviorDelegate.AddTreeVarUpdateDelegate(this.CurrencyType.Value.ToEnumString(), new TTreeVarUpdateDelegate(this.OnSurvivorsCurrencyUpdate));
 		}
 
-		// Token: 0x06038DCD RID: 232909 RVA: 0x00D829CA File Offset: 0x00D80BCA
+		// Token: 0x0602DCDD RID: 187613 RVA: 0x00CD14C6 File Offset: 0x00CCF6C6
 		public override void RemoveEventListener()
 		{
 			KurotatoModel.Instance.BattleData.BehaviorDelegate.RemoveTreeVarUpdateDelegate(this.CurrencyType.Value.ToEnumString(), new TTreeVarUpdateDelegate(this.OnSurvivorsCurrencyUpdate));
 		}
 
-		// Token: 0x06038DCE RID: 232910 RVA: 0x00D829FC File Offset: 0x00D80BFC
+		// Token: 0x0602DCDE RID: 187614 RVA: 0x00CD14F8 File Offset: 0x00CCF6F8
 		public void OnSurvivorsCurrencyUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 		{
 			int num = (int)MathUtils.Instance.LongToNumber(newVarDefine.Int);
@@ -65,10 +65,10 @@ namespace CSharpScript.Game.Module.Kurotato.View.Components
 			}
 		}
 
-		// Token: 0x0401DD2C RID: 122156
+		// Token: 0x040187C2 RID: 100290
 		private EKurotatoSystemVarType? CurrencyType;
 
-		// Token: 0x0401DD2D RID: 122157
+		// Token: 0x040187C3 RID: 100291
 		private LevelSequencePlayer SeqPlayer;
 	}
 }

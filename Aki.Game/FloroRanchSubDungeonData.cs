@@ -1,30 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common;
 
-// Token: 0x02001B00 RID: 6912
+// Token: 0x02000FBF RID: 4031
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchSubDungeonData
 {
-	// Token: 0x0600CD2A RID: 52522 RVA: 0x002ECBD6 File Offset: 0x002EADD6
+	// Token: 0x0600A13B RID: 41275 RVA: 0x002F7CC2 File Offset: 0x002F5EC2
 	public FloroRanchSubDungeonData(FloroRanchSubIns config)
 	{
 		this.Config = config;
 	}
 
-	// Token: 0x0600CD2B RID: 52523 RVA: 0x002ECBEC File Offset: 0x002EADEC
+	// Token: 0x0600A13C RID: 41276 RVA: 0x002F7CD8 File Offset: 0x002F5ED8
 	public void UpdateUnLockState(bool isUnLock)
 	{
 		this.IsUnLockInternal = isUnLock;
 	}
 
-	// Token: 0x170010FE RID: 4350
-	// (get) Token: 0x0600CD2C RID: 52524 RVA: 0x002ECBF5 File Offset: 0x002EADF5
+	// Token: 0x17001123 RID: 4387
+	// (get) Token: 0x0600A13D RID: 41277 RVA: 0x002F7CE1 File Offset: 0x002F5EE1
 	public bool IsUnLock
 	{
 		get
@@ -33,7 +32,7 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x0600CD2D RID: 52525 RVA: 0x002ECBFD File Offset: 0x002EADFD
+	// Token: 0x0600A13E RID: 41278 RVA: 0x002F7CE9 File Offset: 0x002F5EE9
 	public void UpdateHistoryData(FloroRanchSubInsRecord historyData)
 	{
 		this.HasHistoryInternal = true;
@@ -41,9 +40,9 @@ public class FloroRanchSubDungeonData
 		this.MaxCoinInternal = historyData.MaxCoin;
 	}
 
-	// Token: 0x170010FF RID: 4351
-	// (get) Token: 0x0600CD2F RID: 52527 RVA: 0x002ECC27 File Offset: 0x002EAE27
-	// (set) Token: 0x0600CD2E RID: 52526 RVA: 0x002ECC1E File Offset: 0x002EAE1E
+	// Token: 0x17001124 RID: 4388
+	// (get) Token: 0x0600A140 RID: 41280 RVA: 0x002F7D13 File Offset: 0x002F5F13
+	// (set) Token: 0x0600A13F RID: 41279 RVA: 0x002F7D0A File Offset: 0x002F5F0A
 	public bool IsFinished
 	{
 		get
@@ -56,14 +55,14 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x0600CD30 RID: 52528 RVA: 0x002ECC2F File Offset: 0x002EAE2F
+	// Token: 0x0600A141 RID: 41281 RVA: 0x002F7D1B File Offset: 0x002F5F1B
 	public void SetInstanceId(int instanceId)
 	{
 		this.InstanceIdInternal = instanceId;
 	}
 
-	// Token: 0x17001100 RID: 4352
-	// (get) Token: 0x0600CD31 RID: 52529 RVA: 0x002ECC38 File Offset: 0x002EAE38
+	// Token: 0x17001125 RID: 4389
+	// (get) Token: 0x0600A142 RID: 41282 RVA: 0x002F7D24 File Offset: 0x002F5F24
 	public int InstanceId
 	{
 		get
@@ -72,9 +71,9 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x17001101 RID: 4353
-	// (get) Token: 0x0600CD33 RID: 52531 RVA: 0x002ECC49 File Offset: 0x002EAE49
-	// (set) Token: 0x0600CD32 RID: 52530 RVA: 0x002ECC40 File Offset: 0x002EAE40
+	// Token: 0x17001126 RID: 4390
+	// (get) Token: 0x0600A144 RID: 41284 RVA: 0x002F7D35 File Offset: 0x002F5F35
+	// (set) Token: 0x0600A143 RID: 41283 RVA: 0x002F7D2C File Offset: 0x002F5F2C
 	public bool IsInstanceUnlock
 	{
 		get
@@ -87,9 +86,9 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x17001102 RID: 4354
-	// (get) Token: 0x0600CD35 RID: 52533 RVA: 0x002ECC5A File Offset: 0x002EAE5A
-	// (set) Token: 0x0600CD34 RID: 52532 RVA: 0x002ECC51 File Offset: 0x002EAE51
+	// Token: 0x17001127 RID: 4391
+	// (get) Token: 0x0600A146 RID: 41286 RVA: 0x002F7D46 File Offset: 0x002F5F46
+	// (set) Token: 0x0600A145 RID: 41285 RVA: 0x002F7D3D File Offset: 0x002F5F3D
 	public int ConditionId
 	{
 		get
@@ -102,14 +101,14 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x0600CD36 RID: 52534 RVA: 0x002ECC62 File Offset: 0x002EAE62
+	// Token: 0x0600A147 RID: 41287 RVA: 0x002F7D4E File Offset: 0x002F5F4E
 	public int GetMaxStage()
 	{
 		return this.Config.Stage;
 	}
 
-	// Token: 0x17001103 RID: 4355
-	// (get) Token: 0x0600CD37 RID: 52535 RVA: 0x002ECC6F File Offset: 0x002EAE6F
+	// Token: 0x17001128 RID: 4392
+	// (get) Token: 0x0600A148 RID: 41288 RVA: 0x002F7D5B File Offset: 0x002F5F5B
 	public int Difficulty
 	{
 		get
@@ -118,14 +117,14 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x0600CD38 RID: 52536 RVA: 0x002ECC7C File Offset: 0x002EAE7C
+	// Token: 0x0600A149 RID: 41289 RVA: 0x002F7D68 File Offset: 0x002F5F68
 	public int GetStageDay()
 	{
 		return this.Config.StageDays()[0];
 	}
 
-	// Token: 0x17001104 RID: 4356
-	// (get) Token: 0x0600CD39 RID: 52537 RVA: 0x002ECC8B File Offset: 0x002EAE8B
+	// Token: 0x17001129 RID: 4393
+	// (get) Token: 0x0600A14A RID: 41290 RVA: 0x002F7D77 File Offset: 0x002F5F77
 	public int FirstReward
 	{
 		get
@@ -134,8 +133,8 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x17001105 RID: 4357
-	// (get) Token: 0x0600CD3A RID: 52538 RVA: 0x002ECC98 File Offset: 0x002EAE98
+	// Token: 0x1700112A RID: 4394
+	// (get) Token: 0x0600A14B RID: 41291 RVA: 0x002F7D84 File Offset: 0x002F5F84
 	public int AgainReward
 	{
 		get
@@ -149,8 +148,8 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x17001106 RID: 4358
-	// (get) Token: 0x0600CD3B RID: 52539 RVA: 0x002ECCCA File Offset: 0x002EAECA
+	// Token: 0x1700112B RID: 4395
+	// (get) Token: 0x0600A14C RID: 41292 RVA: 0x002F7DB6 File Offset: 0x002F5FB6
 	public int TagId
 	{
 		get
@@ -159,8 +158,8 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x17001107 RID: 4359
-	// (get) Token: 0x0600CD3C RID: 52540 RVA: 0x002ECCD7 File Offset: 0x002EAED7
+	// Token: 0x1700112C RID: 4396
+	// (get) Token: 0x0600A14D RID: 41293 RVA: 0x002F7DC3 File Offset: 0x002F5FC3
 	public int[] RaceList
 	{
 		get
@@ -169,8 +168,8 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x17001108 RID: 4360
-	// (get) Token: 0x0600CD3D RID: 52541 RVA: 0x002ECCE4 File Offset: 0x002EAEE4
+	// Token: 0x1700112D RID: 4397
+	// (get) Token: 0x0600A14E RID: 41294 RVA: 0x002F7DD0 File Offset: 0x002F5FD0
 	public int Id
 	{
 		get
@@ -179,8 +178,8 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x17001109 RID: 4361
-	// (get) Token: 0x0600CD3E RID: 52542 RVA: 0x002ECCF1 File Offset: 0x002EAEF1
+	// Token: 0x1700112E RID: 4398
+	// (get) Token: 0x0600A14F RID: 41295 RVA: 0x002F7DDD File Offset: 0x002F5FDD
 	public bool IsEndlessMode
 	{
 		get
@@ -189,9 +188,9 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x1700110A RID: 4362
-	// (get) Token: 0x0600CD40 RID: 52544 RVA: 0x002ECD07 File Offset: 0x002EAF07
-	// (set) Token: 0x0600CD3F RID: 52543 RVA: 0x002ECCFE File Offset: 0x002EAEFE
+	// Token: 0x1700112F RID: 4399
+	// (get) Token: 0x0600A151 RID: 41297 RVA: 0x002F7DF3 File Offset: 0x002F5FF3
+	// (set) Token: 0x0600A150 RID: 41296 RVA: 0x002F7DEA File Offset: 0x002F5FEA
 	public bool HasRedDot
 	{
 		get
@@ -204,13 +203,13 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x1700110B RID: 4363
-	// (get) Token: 0x0600CD41 RID: 52545 RVA: 0x002ECD24 File Offset: 0x002EAF24
+	// Token: 0x17001130 RID: 4400
+	// (get) Token: 0x0600A152 RID: 41298 RVA: 0x002F7E10 File Offset: 0x002F6010
 	public List<int> SelectedRaceIds
 	{
 		get
 		{
-			List<int> list = this.RaceList.ToList<int>();
+			List<int> list = new List<int>(this.RaceList);
 			Dictionary<int, List<int>> player = LocalStorage.GetPlayer<Dictionary<int, List<int>>>(ELocalStoragePlayerKey.FloroRanchSelectedRaceIds, null);
 			if (player == null)
 			{
@@ -230,8 +229,8 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x1700110C RID: 4364
-	// (get) Token: 0x0600CD42 RID: 52546 RVA: 0x002ECDC4 File Offset: 0x002EAFC4
+	// Token: 0x17001131 RID: 4401
+	// (get) Token: 0x0600A153 RID: 41299 RVA: 0x002F7EB0 File Offset: 0x002F60B0
 	public bool HasHistory
 	{
 		get
@@ -240,8 +239,8 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x1700110D RID: 4365
-	// (get) Token: 0x0600CD43 RID: 52547 RVA: 0x002ECDCC File Offset: 0x002EAFCC
+	// Token: 0x17001132 RID: 4402
+	// (get) Token: 0x0600A154 RID: 41300 RVA: 0x002F7EB8 File Offset: 0x002F60B8
 	public int MaxDays
 	{
 		get
@@ -250,8 +249,8 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x1700110E RID: 4366
-	// (get) Token: 0x0600CD44 RID: 52548 RVA: 0x002ECDD4 File Offset: 0x002EAFD4
+	// Token: 0x17001133 RID: 4403
+	// (get) Token: 0x0600A155 RID: 41301 RVA: 0x002F7EC0 File Offset: 0x002F60C0
 	public long MaxCoin
 	{
 		get
@@ -260,8 +259,8 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x1700110F RID: 4367
-	// (get) Token: 0x0600CD45 RID: 52549 RVA: 0x002ECDDC File Offset: 0x002EAFDC
+	// Token: 0x17001134 RID: 4404
+	// (get) Token: 0x0600A156 RID: 41302 RVA: 0x002F7EC8 File Offset: 0x002F60C8
 	public string[] EnvironmentTextList
 	{
 		get
@@ -270,8 +269,8 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x17001110 RID: 4368
-	// (get) Token: 0x0600CD46 RID: 52550 RVA: 0x002ECDE9 File Offset: 0x002EAFE9
+	// Token: 0x17001135 RID: 4405
+	// (get) Token: 0x0600A157 RID: 41303 RVA: 0x002F7ED5 File Offset: 0x002F60D5
 	public int[] RecommendCardsList
 	{
 		get
@@ -280,8 +279,8 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x17001111 RID: 4369
-	// (get) Token: 0x0600CD47 RID: 52551 RVA: 0x002ECDF6 File Offset: 0x002EAFF6
+	// Token: 0x17001136 RID: 4406
+	// (get) Token: 0x0600A158 RID: 41304 RVA: 0x002F7EE2 File Offset: 0x002F60E2
 	public int[] RecommendToysList
 	{
 		get
@@ -290,33 +289,33 @@ public class FloroRanchSubDungeonData
 		}
 	}
 
-	// Token: 0x04005E1E RID: 24094
+	// Token: 0x04005EED RID: 24301
 	private FloroRanchSubIns Config;
 
-	// Token: 0x04005E1F RID: 24095
+	// Token: 0x04005EEE RID: 24302
 	private bool IsUnLockInternal;
 
-	// Token: 0x04005E20 RID: 24096
+	// Token: 0x04005EEF RID: 24303
 	private bool IsFinishedInternal;
 
-	// Token: 0x04005E21 RID: 24097
+	// Token: 0x04005EF0 RID: 24304
 	private bool IsInstanceUnLockInternal;
 
-	// Token: 0x04005E22 RID: 24098
+	// Token: 0x04005EF1 RID: 24305
 	private int InstanceIdInternal;
 
-	// Token: 0x04005E23 RID: 24099
+	// Token: 0x04005EF2 RID: 24306
 	private int ConditionIdInternal;
 
-	// Token: 0x04005E24 RID: 24100
+	// Token: 0x04005EF3 RID: 24307
 	private bool HasHistoryInternal;
 
-	// Token: 0x04005E25 RID: 24101
+	// Token: 0x04005EF4 RID: 24308
 	private int MaxDaysInternal;
 
-	// Token: 0x04005E26 RID: 24102
+	// Token: 0x04005EF5 RID: 24309
 	private long MaxCoinInternal;
 
-	// Token: 0x04005E27 RID: 24103
+	// Token: 0x04005EF6 RID: 24310
 	private bool HasRedDotInternal = true;
 }

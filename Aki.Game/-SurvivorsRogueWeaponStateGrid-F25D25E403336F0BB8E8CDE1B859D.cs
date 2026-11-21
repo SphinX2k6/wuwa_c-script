@@ -1,36 +1,36 @@
 ﻿using System;
 
-// Token: 0x02002B70 RID: 11120
+// Token: 0x020020EC RID: 8428
 internal enum <SurvivorsRogueWeaponStateGrid>F25D25E403336F0BB8E8CDE1B859DEB2CA6C5831B4B28FE960E9EABADAB704135__EComponents
 {
-	// Token: 0x0400AC48 RID: 44104
+	// Token: 0x0400B04E RID: 45134
 	BtnSelf,
-	// Token: 0x0400AC49 RID: 44105
+	// Token: 0x0400B04F RID: 45135
 	SpriteBg,
-	// Token: 0x0400AC4A RID: 44106
+	// Token: 0x0400B050 RID: 45136
 	TexWeapon,
-	// Token: 0x0400AC4B RID: 44107
+	// Token: 0x0400B051 RID: 45137
 	SpriteUp,
-	// Token: 0x0400AC4C RID: 44108
+	// Token: 0x0400B052 RID: 45138
 	TxtLv,
-	// Token: 0x0400AC4D RID: 44109
+	// Token: 0x0400B053 RID: 45139
 	SpriteQuality,
-	// Token: 0x0400AC4E RID: 44110
+	// Token: 0x0400B054 RID: 45140
 	PanelR1,
-	// Token: 0x0400AC4F RID: 44111
+	// Token: 0x0400B055 RID: 45141
 	PanelL1,
-	// Token: 0x0400AC50 RID: 44112
+	// Token: 0x0400B056 RID: 45142
 	PanelR2,
-	// Token: 0x0400AC51 RID: 44113
+	// Token: 0x0400B057 RID: 45143
 	PanelL2,
-	// Token: 0x0400AC52 RID: 44114
+	// Token: 0x0400B058 RID: 45144
 	PanelR3,
-	// Token: 0x0400AC53 RID: 44115
+	// Token: 0x0400B059 RID: 45145
 	PanelL3,
-	// Token: 0x0400AC54 RID: 44116
+	// Token: 0x0400B05A RID: 45146
 	LockItem,
-	// Token: 0x0400AC55 RID: 44117
+	// Token: 0x0400B05B RID: 45147
 	DisableItem,
-	// Token: 0x0400AC56 RID: 44118
+	// Token: 0x0400B05C RID: 45148
 	TxtBase
 }

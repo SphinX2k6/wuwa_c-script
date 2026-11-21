@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018B7 RID: 6327
+	// Token: 0x02001A42 RID: 6722
 	public class IClientEventUiPlayPiano_SetValue
 	{
-		// Token: 0x04005565 RID: 21861
+		// Token: 0x040059B2 RID: 22962
 		public EClientEventUiType Type;
 
-		// Token: 0x04005566 RID: 21862
-		[Nullable(1)]
+		// Token: 0x040059B3 RID: 22963
 		public IClientEventPianoEvent EventType;
 	}
 }

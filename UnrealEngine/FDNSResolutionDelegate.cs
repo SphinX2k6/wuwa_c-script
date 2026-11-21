@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019EE RID: 6638
+	// Token: 0x02000476 RID: 1142
 	public sealed class FDNSResolutionDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060189E3 RID: 100835 RVA: 0x00244638 File Offset: 0x00242838
+		// Token: 0x06006C6A RID: 27754 RVA: 0x0009DFAE File Offset: 0x0009C1AE
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FDNSResolutionDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x060189E4 RID: 100836 RVA: 0x00244644 File Offset: 0x00242844
+		// Token: 0x06006C6B RID: 27755 RVA: 0x0009DFBA File Offset: 0x0009C1BA
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FDNSResolutionDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FDNSResolutionDelegate._FunctionPtr;
 		}
 
-		// Token: 0x060189E5 RID: 100837 RVA: 0x00244667 File Offset: 0x00242867
+		// Token: 0x06006C6C RID: 27756 RVA: 0x0009DFDD File Offset: 0x0009C1DD
 		public FDNSResolutionDelegate()
 		{
 		}
 
-		// Token: 0x060189E6 RID: 100838 RVA: 0x0024466F File Offset: 0x0024286F
+		// Token: 0x06006C6D RID: 27757 RVA: 0x0009DFE5 File Offset: 0x0009C1E5
 		[NullableContext(2)]
 		public FDNSResolutionDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060189E7 RID: 100839 RVA: 0x00244679 File Offset: 0x00242879
+		// Token: 0x06006C6E RID: 27758 RVA: 0x0009DFEF File Offset: 0x0009C1EF
 		public FDNSResolutionDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060189E8 RID: 100840 RVA: 0x00244684 File Offset: 0x00242884
+		// Token: 0x06006C6F RID: 27759 RVA: 0x0009DFFA File Offset: 0x0009C1FA
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int, TArray<string>>) ?? ((Action<int, TArray<string>>)Delegate.CreateDelegate(typeof(Action<int, TArray<string>>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060189E9 RID: 100841 RVA: 0x002446B6 File Offset: 0x002428B6
+		// Token: 0x06006C70 RID: 27760 RVA: 0x0009E02C File Offset: 0x0009C22C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<int, TArray<string>> Callback)
 		{
 			if (FDNSResolutionDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FDNSResolutionDelegate.RegisterId);
 		}
 
-		// Token: 0x060189EA RID: 100842 RVA: 0x002446F0 File Offset: 0x002428F0
+		// Token: 0x06006C71 RID: 27761 RVA: 0x0009E068 File Offset: 0x0009C268
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int ErrorCode, [Nullable(new byte[]
 		{
 			2,
@@ -85,10 +83,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FDNSResolutionDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060189EB RID: 100843 RVA: 0x00244758 File Offset: 0x00242958
+		// Token: 0x06006C72 RID: 27762 RVA: 0x0009E0D0 File Offset: 0x0009C2D0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, TArray<string>> action = target as Action<int, TArray<string>>;
@@ -100,35 +97,35 @@ namespace UnrealEngine
 			action(((FDNSResolutionDelegate.__FDNSResolutionDelegate_DelegateParams*)__Parameters)->ErrorCode, arg);
 		}
 
-		// Token: 0x0400D4E5 RID: 54501
+		// Token: 0x04002E4E RID: 11854
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D4E6 RID: 54502
+		// Token: 0x04002E4F RID: 11855
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroNetwork.DNSResolutionDelegate__DelegateSignature";
 
-		// Token: 0x0400D4E7 RID: 54503
+		// Token: 0x04002E50 RID: 11856
 		private static int RegisterId;
 
-		// Token: 0x02003099 RID: 12441
+		// Token: 0x02000B7B RID: 2939
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FDNSResolutionDelegate_DelegateParams
+		private ref struct __FDNSResolutionDelegate_DelegateParams
 		{
-			// Token: 0x04016DBE RID: 93630
+			// Token: 0x04005CD2 RID: 23762
 			[FieldOffset(0)]
 			public int ErrorCode;
 
-			// Token: 0x04016DBF RID: 93631
+			// Token: 0x04005CD3 RID: 23763
 			[FieldOffset(8)]
 			public byte IpList;
 		}
 
-		// Token: 0x0200309A RID: 12442
+		// Token: 0x02000B7C RID: 2940
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016DC0 RID: 93632
+			// Token: 0x04005CD4 RID: 23764
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

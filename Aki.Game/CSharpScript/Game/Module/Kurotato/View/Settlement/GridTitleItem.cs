@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 {
-	// Token: 0x02005728 RID: 22312
+	// Token: 0x020046FF RID: 18175
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 	})]
 	internal class GridTitleItem : SyncGridProxyAbstract<GridTitleItemDataInner>
 	{
-		// Token: 0x06038BB8 RID: 232376 RVA: 0x00D772CC File Offset: 0x00D754CC
+		// Token: 0x0602DAC8 RID: 187080 RVA: 0x00CC5978 File Offset: 0x00CC3B78
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038BB9 RID: 232377 RVA: 0x00D77335 File Offset: 0x00D75535
+		// Token: 0x0602DAC9 RID: 187081 RVA: 0x00CC59E1 File Offset: 0x00CC3BE1
 		[NullableContext(1)]
 		public override void Refresh(GridTitleItemDataInner data)
 		{
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			base.GetText(1).SetText(data.Num, true);
 		}
 
-		// Token: 0x0200B8F4 RID: 47348
+		// Token: 0x0200A315 RID: 41749
 		private class ETitleComp
 		{
-			// Token: 0x04037F16 RID: 229142
+			// Token: 0x04032926 RID: 207142
 			public const int TextTitle = 0;
 
-			// Token: 0x04037F17 RID: 229143
+			// Token: 0x04032927 RID: 207143
 			public const int TextNum = 1;
 		}
 	}

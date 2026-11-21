@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200218F RID: 8591
+	// Token: 0x02000719 RID: 1817
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UINiagara")]
 	[UnrealStructLayout(3936, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 3936)]
 	public class UUINiagara : UUIBaseRenderable, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060208F6 RID: 133366 RVA: 0x003035F5 File Offset: 0x003017F5
+		// Token: 0x06009C27 RID: 39975 RVA: 0x000E92FD File Offset: 0x000E74FD
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUINiagara._ClassPtr;
 		}
 
-		// Token: 0x060208F7 RID: 133367 RVA: 0x00303604 File Offset: 0x00301804
+		// Token: 0x06009C28 RID: 39976 RVA: 0x000E930C File Offset: 0x000E750C
 		public UUINiagara() : this(BuiltinUtils.AllocNativeUObject(UUINiagara.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060208F8 RID: 133368 RVA: 0x0030362C File Offset: 0x0030182C
+		// Token: 0x06009C29 RID: 39977 RVA: 0x000E9334 File Offset: 0x000E7534
 		public UUINiagara(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUINiagara.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007F56 RID: 32598
-		// (get) Token: 0x060208F9 RID: 133369 RVA: 0x0030365F File Offset: 0x0030185F
-		// (set) Token: 0x060208FA RID: 133370 RVA: 0x00303673 File Offset: 0x00301873
+		// Token: 0x17001CEA RID: 7402
+		// (get) Token: 0x06009C2A RID: 39978 RVA: 0x000E9367 File Offset: 0x000E7567
+		// (set) Token: 0x06009C2B RID: 39979 RVA: 0x000E937B File Offset: 0x000E757B
 		[Nullable(2)]
 		public unsafe UNiagaraSystem NiagaraSystemReference
 		{
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F57 RID: 32599
-		// (get) Token: 0x060208FB RID: 133371 RVA: 0x00303688 File Offset: 0x00301888
-		// (set) Token: 0x060208FC RID: 133372 RVA: 0x00303698 File Offset: 0x00301898
+		// Token: 0x17001CEB RID: 7403
+		// (get) Token: 0x06009C2C RID: 39980 RVA: 0x000E9390 File Offset: 0x000E7590
+		// (set) Token: 0x06009C2D RID: 39981 RVA: 0x000E93A0 File Offset: 0x000E75A0
 		public unsafe bool IsNiagaraActive
 		{
 			get
@@ -62,9 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F58 RID: 32600
-		// (get) Token: 0x060208FD RID: 133373 RVA: 0x003036A9 File Offset: 0x003018A9
-		// (set) Token: 0x060208FE RID: 133374 RVA: 0x003036B9 File Offset: 0x003018B9
+		// Token: 0x17001CEC RID: 7404
+		// (get) Token: 0x06009C2E RID: 39982 RVA: 0x000E93B1 File Offset: 0x000E75B1
+		// (set) Token: 0x06009C2F RID: 39983 RVA: 0x000E93C1 File Offset: 0x000E75C1
 		public unsafe float StartTime
 		{
 			get
@@ -77,9 +77,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F59 RID: 32601
-		// (get) Token: 0x060208FF RID: 133375 RVA: 0x003036CA File Offset: 0x003018CA
-		// (set) Token: 0x06020900 RID: 133376 RVA: 0x003036DA File Offset: 0x003018DA
+		// Token: 0x17001CED RID: 7405
+		// (get) Token: 0x06009C30 RID: 39984 RVA: 0x000E93D2 File Offset: 0x000E75D2
+		// (set) Token: 0x06009C31 RID: 39985 RVA: 0x000E93E2 File Offset: 0x000E75E2
 		public unsafe float LoopTime
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F5A RID: 32602
-		// (get) Token: 0x06020901 RID: 133377 RVA: 0x003036EB File Offset: 0x003018EB
-		// (set) Token: 0x06020902 RID: 133378 RVA: 0x003036FB File Offset: 0x003018FB
+		// Token: 0x17001CEE RID: 7406
+		// (get) Token: 0x06009C32 RID: 39986 RVA: 0x000E93F3 File Offset: 0x000E75F3
+		// (set) Token: 0x06009C33 RID: 39987 RVA: 0x000E9403 File Offset: 0x000E7603
 		public unsafe float EndTime
 		{
 			get
@@ -107,9 +107,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F5B RID: 32603
-		// (get) Token: 0x06020903 RID: 133379 RVA: 0x0030370C File Offset: 0x0030190C
-		// (set) Token: 0x06020904 RID: 133380 RVA: 0x00303745 File Offset: 0x00301945
+		// Token: 0x17001CEF RID: 7407
+		// (get) Token: 0x06009C34 RID: 39988 RVA: 0x000E9414 File Offset: 0x000E7614
+		// (set) Token: 0x06009C35 RID: 39989 RVA: 0x000E944D File Offset: 0x000E764D
 		public FKuroCurveVector NiagaraLocation
 		{
 			get
@@ -128,9 +128,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F5C RID: 32604
-		// (get) Token: 0x06020905 RID: 133381 RVA: 0x00303768 File Offset: 0x00301968
-		// (set) Token: 0x06020906 RID: 133382 RVA: 0x003037A1 File Offset: 0x003019A1
+		// Token: 0x17001CF0 RID: 7408
+		// (get) Token: 0x06009C36 RID: 39990 RVA: 0x000E9470 File Offset: 0x000E7670
+		// (set) Token: 0x06009C37 RID: 39991 RVA: 0x000E94A9 File Offset: 0x000E76A9
 		public FKuroCurveVector NiagaraRotation
 		{
 			get
@@ -149,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F5D RID: 32605
-		// (get) Token: 0x06020907 RID: 133383 RVA: 0x003037C4 File Offset: 0x003019C4
-		// (set) Token: 0x06020908 RID: 133384 RVA: 0x003037FD File Offset: 0x003019FD
+		// Token: 0x17001CF1 RID: 7409
+		// (get) Token: 0x06009C38 RID: 39992 RVA: 0x000E94CC File Offset: 0x000E76CC
+		// (set) Token: 0x06009C39 RID: 39993 RVA: 0x000E9505 File Offset: 0x000E7705
 		public FKuroCurveVector NiagaraScale
 		{
 			get
@@ -170,9 +170,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F5E RID: 32606
-		// (get) Token: 0x06020909 RID: 133385 RVA: 0x00303820 File Offset: 0x00301A20
-		// (set) Token: 0x0602090A RID: 133386 RVA: 0x00303859 File Offset: 0x00301A59
+		// Token: 0x17001CF2 RID: 7410
+		// (get) Token: 0x06009C3A RID: 39994 RVA: 0x000E9528 File Offset: 0x000E7728
+		// (set) Token: 0x06009C3B RID: 39995 RVA: 0x000E9561 File Offset: 0x000E7761
 		public TMap<string, int> IntParameter
 		{
 			get
@@ -191,9 +191,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F5F RID: 32607
-		// (get) Token: 0x0602090B RID: 133387 RVA: 0x00303868 File Offset: 0x00301A68
-		// (set) Token: 0x0602090C RID: 133388 RVA: 0x003038A1 File Offset: 0x00301AA1
+		// Token: 0x17001CF3 RID: 7411
+		// (get) Token: 0x06009C3C RID: 39996 RVA: 0x000E9570 File Offset: 0x000E7770
+		// (set) Token: 0x06009C3D RID: 39997 RVA: 0x000E95A9 File Offset: 0x000E77A9
 		public TMap<string, FKuroCurveFloat> FloatParameter
 		{
 			get
@@ -212,9 +212,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F60 RID: 32608
-		// (get) Token: 0x0602090D RID: 133389 RVA: 0x003038B0 File Offset: 0x00301AB0
-		// (set) Token: 0x0602090E RID: 133390 RVA: 0x003038E9 File Offset: 0x00301AE9
+		// Token: 0x17001CF4 RID: 7412
+		// (get) Token: 0x06009C3E RID: 39998 RVA: 0x000E95B8 File Offset: 0x000E77B8
+		// (set) Token: 0x06009C3F RID: 39999 RVA: 0x000E95F1 File Offset: 0x000E77F1
 		public TMap<string, FKuroCurveVector> VectorParameter
 		{
 			get
@@ -233,9 +233,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F61 RID: 32609
-		// (get) Token: 0x0602090F RID: 133391 RVA: 0x003038F8 File Offset: 0x00301AF8
-		// (set) Token: 0x06020910 RID: 133392 RVA: 0x00303931 File Offset: 0x00301B31
+		// Token: 0x17001CF5 RID: 7413
+		// (get) Token: 0x06009C40 RID: 40000 RVA: 0x000E9600 File Offset: 0x000E7800
+		// (set) Token: 0x06009C41 RID: 40001 RVA: 0x000E9639 File Offset: 0x000E7839
 		public TMap<string, FKuroCurveLinearColor> ColorParameter
 		{
 			get
@@ -254,9 +254,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F62 RID: 32610
-		// (get) Token: 0x06020911 RID: 133393 RVA: 0x0030393F File Offset: 0x00301B3F
-		// (set) Token: 0x06020912 RID: 133394 RVA: 0x0030394F File Offset: 0x00301B4F
+		// Token: 0x17001CF6 RID: 7414
+		// (get) Token: 0x06009C42 RID: 40002 RVA: 0x000E9647 File Offset: 0x000E7847
+		// (set) Token: 0x06009C43 RID: 40003 RVA: 0x000E9657 File Offset: 0x000E7857
 		public unsafe bool bAdaptPosAndSizeChanged
 		{
 			get
@@ -269,9 +269,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F63 RID: 32611
-		// (get) Token: 0x06020913 RID: 133395 RVA: 0x00303960 File Offset: 0x00301B60
-		// (set) Token: 0x06020914 RID: 133396 RVA: 0x00303970 File Offset: 0x00301B70
+		// Token: 0x17001CF7 RID: 7415
+		// (get) Token: 0x06009C44 RID: 40004 RVA: 0x000E9668 File Offset: 0x000E7868
+		// (set) Token: 0x06009C45 RID: 40005 RVA: 0x000E9678 File Offset: 0x000E7878
 		public unsafe bool bEnableCircleClip
 		{
 			get
@@ -284,30 +284,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F64 RID: 32612
-		// (get) Token: 0x06020915 RID: 133397 RVA: 0x00303984 File Offset: 0x00301B84
-		// (set) Token: 0x06020916 RID: 133398 RVA: 0x003039BD File Offset: 0x00301BBD
-		public FCircleClipParameters CircleClipParameters
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FCircleClipParameters result;
-				if ((result = this._CircleClipParameters) == null)
-				{
-					result = (this._CircleClipParameters = new FCircleClipParameters(base.NativePtr + (IntPtr)UUINiagara.__PropertyOffset_CircleClipParameters, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FCircleClipParameters.StaticStruct(), base.NativePtr + (IntPtr)UUINiagara.__PropertyOffset_CircleClipParameters, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17007F65 RID: 32613
-		// (get) Token: 0x06020917 RID: 133399 RVA: 0x003039DE File Offset: 0x00301BDE
-		// (set) Token: 0x06020918 RID: 133400 RVA: 0x003039F2 File Offset: 0x00301BF2
+		// Token: 0x17001CF8 RID: 7416
+		// (get) Token: 0x06009C46 RID: 40006 RVA: 0x000E9689 File Offset: 0x000E7889
+		// (set) Token: 0x06009C47 RID: 40007 RVA: 0x000E969D File Offset: 0x000E789D
 		[Nullable(2)]
 		public unsafe ULGUINiagaraComponent NiagaraComponent
 		{
@@ -323,9 +302,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F66 RID: 32614
-		// (get) Token: 0x06020919 RID: 133401 RVA: 0x00303A07 File Offset: 0x00301C07
-		// (set) Token: 0x0602091A RID: 133402 RVA: 0x00303A17 File Offset: 0x00301C17
+		// Token: 0x17001CF9 RID: 7417
+		// (get) Token: 0x06009C48 RID: 40008 RVA: 0x000E96B2 File Offset: 0x000E78B2
+		// (set) Token: 0x06009C49 RID: 40009 RVA: 0x000E96C2 File Offset: 0x000E78C2
 		public unsafe bool bResetNiagara
 		{
 			get
@@ -338,9 +317,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F67 RID: 32615
-		// (get) Token: 0x0602091B RID: 133403 RVA: 0x00303A28 File Offset: 0x00301C28
-		// (set) Token: 0x0602091C RID: 133404 RVA: 0x00303A38 File Offset: 0x00301C38
+		// Token: 0x17001CFA RID: 7418
+		// (get) Token: 0x06009C4A RID: 40010 RVA: 0x000E96D3 File Offset: 0x000E78D3
+		// (set) Token: 0x06009C4B RID: 40011 RVA: 0x000E96E3 File Offset: 0x000E78E3
 		public unsafe bool bIgnoreGlobalUINiagaraPause
 		{
 			get
@@ -353,9 +332,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F68 RID: 32616
-		// (get) Token: 0x0602091D RID: 133405 RVA: 0x00303A49 File Offset: 0x00301C49
-		// (set) Token: 0x0602091E RID: 133406 RVA: 0x00303A59 File Offset: 0x00301C59
+		// Token: 0x17001CFB RID: 7419
+		// (get) Token: 0x06009C4C RID: 40012 RVA: 0x000E96F4 File Offset: 0x000E78F4
+		// (set) Token: 0x06009C4D RID: 40013 RVA: 0x000E9704 File Offset: 0x000E7904
 		public unsafe bool bAdvancedInitNiagaraComp
 		{
 			get
@@ -368,9 +347,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F69 RID: 32617
-		// (get) Token: 0x0602091F RID: 133407 RVA: 0x00303A6A File Offset: 0x00301C6A
-		// (set) Token: 0x06020920 RID: 133408 RVA: 0x00303A7E File Offset: 0x00301C7E
+		// Token: 0x17001CFC RID: 7420
+		// (get) Token: 0x06009C4E RID: 40014 RVA: 0x000E9715 File Offset: 0x000E7915
+		// (set) Token: 0x06009C4F RID: 40015 RVA: 0x000E9729 File Offset: 0x000E7929
 		[Nullable(2)]
 		public unsafe UAkAudioEvent StartEvent
 		{
@@ -386,9 +365,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F6A RID: 32618
-		// (get) Token: 0x06020921 RID: 133409 RVA: 0x00303A93 File Offset: 0x00301C93
-		// (set) Token: 0x06020922 RID: 133410 RVA: 0x00303AA3 File Offset: 0x00301CA3
+		// Token: 0x17001CFD RID: 7421
+		// (get) Token: 0x06009C50 RID: 40016 RVA: 0x000E973E File Offset: 0x000E793E
+		// (set) Token: 0x06009C51 RID: 40017 RVA: 0x000E974E File Offset: 0x000E794E
 		public unsafe bool bCanInterupt
 		{
 			get
@@ -401,9 +380,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F6B RID: 32619
-		// (get) Token: 0x06020923 RID: 133411 RVA: 0x00303AB4 File Offset: 0x00301CB4
-		// (set) Token: 0x06020924 RID: 133412 RVA: 0x00303AC4 File Offset: 0x00301CC4
+		// Token: 0x17001CFE RID: 7422
+		// (get) Token: 0x06009C52 RID: 40018 RVA: 0x000E975F File Offset: 0x000E795F
+		// (set) Token: 0x06009C53 RID: 40019 RVA: 0x000E976F File Offset: 0x000E796F
 		public unsafe int FadeOutMs
 		{
 			get
@@ -416,13 +395,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020925 RID: 133413 RVA: 0x00303AD5 File Offset: 0x00301CD5
+		// Token: 0x06009C54 RID: 40020 RVA: 0x000E9780 File Offset: 0x000E7980
 		public void SwitchToStop()
 		{
 			UUINiagara.__SwitchToStop_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020926 RID: 133414 RVA: 0x00303AE4 File Offset: 0x00301CE4
+		// Token: 0x06009C55 RID: 40021 RVA: 0x000E9790 File Offset: 0x000E7990
 		public unsafe void SetNiagaraVarVector(string VarName, FVector Value)
 		{
 			FString fstring = FString.AllocTemp(VarName);
@@ -430,7 +409,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06020927 RID: 133415 RVA: 0x00303B10 File Offset: 0x00301D10
+		// Token: 0x06009C56 RID: 40022 RVA: 0x000E97BC File Offset: 0x000E79BC
 		public unsafe void SetNiagaraVarLinearColor(string VarName, FLinearColor Value)
 		{
 			FString fstring = FString.AllocTemp(VarName);
@@ -438,7 +417,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06020928 RID: 133416 RVA: 0x00303B3C File Offset: 0x00301D3C
+		// Token: 0x06009C57 RID: 40023 RVA: 0x000E97E8 File Offset: 0x000E79E8
 		public unsafe void SetNiagaraVarInt(string VarName, int Value)
 		{
 			FString fstring = FString.AllocTemp(VarName);
@@ -446,7 +425,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06020929 RID: 133417 RVA: 0x00303B68 File Offset: 0x00301D68
+		// Token: 0x06009C58 RID: 40024 RVA: 0x000E9814 File Offset: 0x000E7A14
 		public unsafe void SetNiagaraVarFloat(string VarName, float Value)
 		{
 			FString fstring = FString.AllocTemp(VarName);
@@ -454,20 +433,20 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x0602092A RID: 133418 RVA: 0x00303B93 File Offset: 0x00301D93
+		// Token: 0x06009C59 RID: 40025 RVA: 0x000E983F File Offset: 0x000E7A3F
 		public void SetNiagaraUIActive(bool active, bool bInResetNiagara)
 		{
 			UUINiagara.__SetNiagaraUIActive_Internal(base.NativePtr, active, bInResetNiagara);
 		}
 
-		// Token: 0x0602092B RID: 133419 RVA: 0x00303BA2 File Offset: 0x00301DA2
+		// Token: 0x06009C5A RID: 40026 RVA: 0x000E984E File Offset: 0x000E7A4E
 		[NullableContext(2)]
 		public void SetNiagaraSystem(UNiagaraSystem InSystem)
 		{
 			UUINiagara.__SetNiagaraSystem_Internal(base.NativePtr, (InSystem != null) ? InSystem.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0602092C RID: 133420 RVA: 0x00303BC0 File Offset: 0x00301DC0
+		// Token: 0x06009C5B RID: 40027 RVA: 0x000E986C File Offset: 0x000E7A6C
 		public unsafe void SetNiagaraEmitterVectorParam(string InEmitterName, string InVariableName, FVector4 InVector)
 		{
 			FString fstring = FString.AllocTemp(InEmitterName);
@@ -479,7 +458,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring2, 1);
 		}
 
-		// Token: 0x0602092D RID: 133421 RVA: 0x00303C14 File Offset: 0x00301E14
+		// Token: 0x06009C5C RID: 40028 RVA: 0x000E98C0 File Offset: 0x000E7AC0
 		public unsafe void SetNiagaraEmitterFloatParam(string InEmitterName, string InVariableName, float InValue)
 		{
 			FString fstring = FString.AllocTemp(InEmitterName);
@@ -489,7 +468,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring2, 1);
 		}
 
-		// Token: 0x0602092E RID: 133422 RVA: 0x00303C54 File Offset: 0x00301E54
+		// Token: 0x06009C5D RID: 40029 RVA: 0x000E9900 File Offset: 0x000E7B00
 		public unsafe void SetNiagaraEmitterCustomTexture(string InEmitterName, string InVariableName, [Nullable(2)] UTexture InTexture)
 		{
 			FString fstring = FString.AllocTemp(InEmitterName);
@@ -499,218 +478,197 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring2, 1);
 		}
 
-		// Token: 0x0602092F RID: 133423 RVA: 0x00303CA0 File Offset: 0x00301EA0
-		[NullableContext(2)]
-		public void SetCircleClipParameters(in FCircleClipParameters NewCircleClipParameters)
-		{
-			UUINiagara.__SetCircleClipParameters_Internal(base.NativePtr, (NewCircleClipParameters ?? new FCircleClipParameters()).NativePtr);
-		}
-
-		// Token: 0x06020930 RID: 133424 RVA: 0x00303CBD File Offset: 0x00301EBD
+		// Token: 0x06009C5E RID: 40030 RVA: 0x000E994C File Offset: 0x000E7B4C
 		public void SetCircleClipEnable(bool Enable)
 		{
 			UUINiagara.__SetCircleClipEnable_Internal(base.NativePtr, Enable);
 		}
 
-		// Token: 0x06020931 RID: 133425 RVA: 0x00303CCB File Offset: 0x00301ECB
+		// Token: 0x06009C5F RID: 40031 RVA: 0x000E995A File Offset: 0x000E7B5A
 		public void ResetOverrideParametersAndActivate()
 		{
 			UUINiagara.__ResetOverrideParametersAndActivate_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020932 RID: 133426 RVA: 0x00303CD8 File Offset: 0x00301ED8
+		// Token: 0x06009C60 RID: 40032 RVA: 0x000E9967 File Offset: 0x000E7B67
 		public void ResetOverrideParameters()
 		{
 			UUINiagara.__ResetOverrideParameters_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020933 RID: 133427 RVA: 0x00303CE5 File Offset: 0x00301EE5
+		// Token: 0x06009C61 RID: 40033 RVA: 0x000E9974 File Offset: 0x000E7B74
 		public void ReinitializeSystem()
 		{
 			UUINiagara.__ReinitializeSystem_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020934 RID: 133428 RVA: 0x00303CF2 File Offset: 0x00301EF2
+		// Token: 0x06009C62 RID: 40034 RVA: 0x000E9981 File Offset: 0x000E7B81
 		public bool IsCircleClipEnable()
 		{
 			return UUINiagara.__IsCircleClipEnable_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020935 RID: 133429 RVA: 0x00303CFF File Offset: 0x00301EFF
+		// Token: 0x06009C63 RID: 40035 RVA: 0x000E998E File Offset: 0x000E7B8E
 		[NullableContext(2)]
 		public ULGUINiagaraComponent GetNiagaraComponent()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ULGUINiagaraComponent>(UUINiagara.__GetNiagaraComponent_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06020936 RID: 133430 RVA: 0x00303D11 File Offset: 0x00301F11
+		// Token: 0x06009C64 RID: 40036 RVA: 0x000E99A0 File Offset: 0x000E7BA0
 		public bool GetIsActive()
 		{
 			return UUINiagara.__GetIsActive_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020937 RID: 133431 RVA: 0x00303D1E File Offset: 0x00301F1E
-		public FCircleClipParameters GetCircleClipParameters()
-		{
-			return new FCircleClipParameters(UUINiagara.__GetCircleClipParameters_Internal(base.NativePtr), null);
-		}
-
-		// Token: 0x06020938 RID: 133432 RVA: 0x00303D31 File Offset: 0x00301F31
+		// Token: 0x06009C65 RID: 40037 RVA: 0x000E99AD File Offset: 0x000E7BAD
 		public void DeactivateSystem()
 		{
 			UUINiagara.__DeactivateSystem_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020939 RID: 133433 RVA: 0x00303D3E File Offset: 0x00301F3E
+		// Token: 0x06009C66 RID: 40038 RVA: 0x000E99BA File Offset: 0x000E7BBA
 		public void ActivateSystem(bool Reset)
 		{
 			UUINiagara.__ActivateSystem_Internal(base.NativePtr, Reset);
 		}
 
-		// Token: 0x0602093A RID: 133434
+		// Token: 0x06009C67 RID: 40039
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SwitchToStop_Internal(IntPtr @this);
 
-		// Token: 0x0602093B RID: 133435
+		// Token: 0x06009C68 RID: 40040
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetNiagaraVarVector_Internal(IntPtr @this, in FString VarName, FVector Value);
 
-		// Token: 0x0602093C RID: 133436
+		// Token: 0x06009C69 RID: 40041
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetNiagaraVarLinearColor_Internal(IntPtr @this, in FString VarName, FLinearColor Value);
 
-		// Token: 0x0602093D RID: 133437
+		// Token: 0x06009C6A RID: 40042
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetNiagaraVarInt_Internal(IntPtr @this, in FString VarName, int Value);
 
-		// Token: 0x0602093E RID: 133438
+		// Token: 0x06009C6B RID: 40043
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetNiagaraVarFloat_Internal(IntPtr @this, in FString VarName, float Value);
 
-		// Token: 0x0602093F RID: 133439
+		// Token: 0x06009C6C RID: 40044
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetNiagaraUIActive_Internal(IntPtr @this, bool active, bool bInResetNiagara);
 
-		// Token: 0x06020940 RID: 133440
+		// Token: 0x06009C6D RID: 40045
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetNiagaraSystem_Internal(IntPtr @this, IntPtr InSystem);
 
-		// Token: 0x06020941 RID: 133441
+		// Token: 0x06009C6E RID: 40046
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetNiagaraEmitterVectorParam_Internal(IntPtr @this, in FString InEmitterName, in FString InVariableName, in FVector4 InVector);
 
-		// Token: 0x06020942 RID: 133442
+		// Token: 0x06009C6F RID: 40047
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetNiagaraEmitterFloatParam_Internal(IntPtr @this, in FString InEmitterName, in FString InVariableName, float InValue);
 
-		// Token: 0x06020943 RID: 133443
+		// Token: 0x06009C70 RID: 40048
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetNiagaraEmitterCustomTexture_Internal(IntPtr @this, in FString InEmitterName, in FString InVariableName, IntPtr InTexture);
 
-		// Token: 0x06020944 RID: 133444
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetCircleClipParameters_Internal(IntPtr @this, IntPtr NewCircleClipParameters);
-
-		// Token: 0x06020945 RID: 133445
+		// Token: 0x06009C71 RID: 40049
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCircleClipEnable_Internal(IntPtr @this, bool Enable);
 
-		// Token: 0x06020946 RID: 133446
+		// Token: 0x06009C72 RID: 40050
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResetOverrideParametersAndActivate_Internal(IntPtr @this);
 
-		// Token: 0x06020947 RID: 133447
+		// Token: 0x06009C73 RID: 40051
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResetOverrideParameters_Internal(IntPtr @this);
 
-		// Token: 0x06020948 RID: 133448
+		// Token: 0x06009C74 RID: 40052
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReinitializeSystem_Internal(IntPtr @this);
 
-		// Token: 0x06020949 RID: 133449
+		// Token: 0x06009C75 RID: 40053
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsCircleClipEnable_Internal(IntPtr @this);
 
-		// Token: 0x0602094A RID: 133450
+		// Token: 0x06009C76 RID: 40054
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetNiagaraComponent_Internal(IntPtr @this);
 
-		// Token: 0x0602094B RID: 133451
+		// Token: 0x06009C77 RID: 40055
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetIsActive_Internal(IntPtr @this);
 
-		// Token: 0x0602094C RID: 133452
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetCircleClipParameters_Internal(IntPtr @this);
-
-		// Token: 0x0602094D RID: 133453
+		// Token: 0x06009C78 RID: 40056
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __DeactivateSystem_Internal(IntPtr @this);
 
-		// Token: 0x0602094E RID: 133454
+		// Token: 0x06009C79 RID: 40057
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ActivateSystem_Internal(IntPtr @this, bool Reset);
 
-		// Token: 0x0602094F RID: 133455 RVA: 0x00303D4C File Offset: 0x00301F4C
+		// Token: 0x06009C7A RID: 40058 RVA: 0x000E99C8 File Offset: 0x000E7BC8
 		static UUINiagara()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UINiagara");
 		}
 
-		// Token: 0x06020950 RID: 133456 RVA: 0x00303D5A File Offset: 0x00301F5A
+		// Token: 0x06009C7B RID: 40059 RVA: 0x000E99D6 File Offset: 0x000E7BD6
 		protected UUINiagara(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040116F7 RID: 71415
+		// Token: 0x04004354 RID: 17236
 		public new const string __ObjectPath = "/Script/LGUI.UINiagara";
 
-		// Token: 0x040116F8 RID: 71416
+		// Token: 0x04004355 RID: 17237
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040116F9 RID: 71417
+		// Token: 0x04004356 RID: 17238
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040116FA RID: 71418
+		// Token: 0x04004357 RID: 17239
 		internal static int __PropertyOffset_NiagaraSystemReference;
 
-		// Token: 0x040116FB RID: 71419
+		// Token: 0x04004358 RID: 17240
 		internal static int __PropertyOffset_IsNiagaraActive;
 
-		// Token: 0x040116FC RID: 71420
+		// Token: 0x04004359 RID: 17241
 		internal static int __PropertyOffset_StartTime;
 
-		// Token: 0x040116FD RID: 71421
+		// Token: 0x0400435A RID: 17242
 		internal static int __PropertyOffset_LoopTime;
 
-		// Token: 0x040116FE RID: 71422
+		// Token: 0x0400435B RID: 17243
 		internal static int __PropertyOffset_EndTime;
 
-		// Token: 0x040116FF RID: 71423
+		// Token: 0x0400435C RID: 17244
 		internal static int __PropertyOffset_NiagaraLocation;
 
-		// Token: 0x04011700 RID: 71424
+		// Token: 0x0400435D RID: 17245
 		[Nullable(2)]
 		private FKuroCurveVector _NiagaraLocation;
 
-		// Token: 0x04011701 RID: 71425
+		// Token: 0x0400435E RID: 17246
 		internal static int __PropertyOffset_NiagaraRotation;
 
-		// Token: 0x04011702 RID: 71426
+		// Token: 0x0400435F RID: 17247
 		[Nullable(2)]
 		private FKuroCurveVector _NiagaraRotation;
 
-		// Token: 0x04011703 RID: 71427
+		// Token: 0x04004360 RID: 17248
 		internal static int __PropertyOffset_NiagaraScale;
 
-		// Token: 0x04011704 RID: 71428
+		// Token: 0x04004361 RID: 17249
 		[Nullable(2)]
 		private FKuroCurveVector _NiagaraScale;
 
-		// Token: 0x04011705 RID: 71429
+		// Token: 0x04004362 RID: 17250
 		internal static int __PropertyOffset_IntParameter;
 
-		// Token: 0x04011706 RID: 71430
+		// Token: 0x04004363 RID: 17251
 		[Nullable(new byte[]
 		{
 			2,
@@ -718,10 +676,10 @@ namespace UnrealEngine
 		})]
 		private TMap<string, int> _IntParameter;
 
-		// Token: 0x04011707 RID: 71431
+		// Token: 0x04004364 RID: 17252
 		internal static int __PropertyOffset_FloatParameter;
 
-		// Token: 0x04011708 RID: 71432
+		// Token: 0x04004365 RID: 17253
 		[Nullable(new byte[]
 		{
 			2,
@@ -730,10 +688,10 @@ namespace UnrealEngine
 		})]
 		private TMap<string, FKuroCurveFloat> _FloatParameter;
 
-		// Token: 0x04011709 RID: 71433
+		// Token: 0x04004366 RID: 17254
 		internal static int __PropertyOffset_VectorParameter;
 
-		// Token: 0x0401170A RID: 71434
+		// Token: 0x04004367 RID: 17255
 		[Nullable(new byte[]
 		{
 			2,
@@ -742,10 +700,10 @@ namespace UnrealEngine
 		})]
 		private TMap<string, FKuroCurveVector> _VectorParameter;
 
-		// Token: 0x0401170B RID: 71435
+		// Token: 0x04004368 RID: 17256
 		internal static int __PropertyOffset_ColorParameter;
 
-		// Token: 0x0401170C RID: 71436
+		// Token: 0x04004369 RID: 17257
 		[Nullable(new byte[]
 		{
 			2,
@@ -754,38 +712,31 @@ namespace UnrealEngine
 		})]
 		private TMap<string, FKuroCurveLinearColor> _ColorParameter;
 
-		// Token: 0x0401170D RID: 71437
+		// Token: 0x0400436A RID: 17258
 		internal static int __PropertyOffset_bAdaptPosAndSizeChanged;
 
-		// Token: 0x0401170E RID: 71438
+		// Token: 0x0400436B RID: 17259
 		internal static int __PropertyOffset_bEnableCircleClip;
 
-		// Token: 0x0401170F RID: 71439
-		internal static int __PropertyOffset_CircleClipParameters;
-
-		// Token: 0x04011710 RID: 71440
-		[Nullable(2)]
-		private FCircleClipParameters _CircleClipParameters;
-
-		// Token: 0x04011711 RID: 71441
+		// Token: 0x0400436C RID: 17260
 		internal static int __PropertyOffset_NiagaraComponent;
 
-		// Token: 0x04011712 RID: 71442
+		// Token: 0x0400436D RID: 17261
 		internal static int __PropertyOffset_bResetNiagara;
 
-		// Token: 0x04011713 RID: 71443
+		// Token: 0x0400436E RID: 17262
 		internal static int __PropertyOffset_bIgnoreGlobalUINiagaraPause;
 
-		// Token: 0x04011714 RID: 71444
+		// Token: 0x0400436F RID: 17263
 		internal static int __PropertyOffset_bAdvancedInitNiagaraComp;
 
-		// Token: 0x04011715 RID: 71445
+		// Token: 0x04004370 RID: 17264
 		internal static int __PropertyOffset_StartEvent;
 
-		// Token: 0x04011716 RID: 71446
+		// Token: 0x04004371 RID: 17265
 		internal static int __PropertyOffset_bCanInterupt;
 
-		// Token: 0x04011717 RID: 71447
+		// Token: 0x04004372 RID: 17266
 		internal static int __PropertyOffset_FadeOutMs;
 	}
 }

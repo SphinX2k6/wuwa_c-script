@@ -2,33 +2,33 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020019EF RID: 6639
+// Token: 0x02000EAE RID: 3758
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityGoalData : DailyActivityDefine.IActivityGoalData
 {
-	// Token: 0x1700103D RID: 4157
-	// (get) Token: 0x0600C24F RID: 49743 RVA: 0x002BDBA0 File Offset: 0x002BBDA0
-	// (set) Token: 0x0600C250 RID: 49744 RVA: 0x002BDBA8 File Offset: 0x002BBDA8
+	// Token: 0x17001062 RID: 4194
+	// (get) Token: 0x0600965C RID: 38492 RVA: 0x002C8B78 File Offset: 0x002C6D78
+	// (set) Token: 0x0600965D RID: 38493 RVA: 0x002C8B80 File Offset: 0x002C6D80
 	public int Id { get; set; }
 
-	// Token: 0x1700103E RID: 4158
-	// (get) Token: 0x0600C251 RID: 49745 RVA: 0x002BDBB1 File Offset: 0x002BBDB1
-	// (set) Token: 0x0600C252 RID: 49746 RVA: 0x002BDBB9 File Offset: 0x002BBDB9
+	// Token: 0x17001063 RID: 4195
+	// (get) Token: 0x0600965E RID: 38494 RVA: 0x002C8B89 File Offset: 0x002C6D89
+	// (set) Token: 0x0600965F RID: 38495 RVA: 0x002C8B91 File Offset: 0x002C6D91
 	public int Goal { get; set; }
 
-	// Token: 0x1700103F RID: 4159
-	// (get) Token: 0x0600C253 RID: 49747 RVA: 0x002BDBC2 File Offset: 0x002BBDC2
-	// (set) Token: 0x0600C254 RID: 49748 RVA: 0x002BDBCA File Offset: 0x002BBDCA
+	// Token: 0x17001064 RID: 4196
+	// (get) Token: 0x06009660 RID: 38496 RVA: 0x002C8B9A File Offset: 0x002C6D9A
+	// (set) Token: 0x06009661 RID: 38497 RVA: 0x002C8BA2 File Offset: 0x002C6DA2
 	public List<TItem> Rewards { get; set; } = new List<TItem>();
 
-	// Token: 0x17001040 RID: 4160
-	// (get) Token: 0x0600C255 RID: 49749 RVA: 0x002BDBD3 File Offset: 0x002BBDD3
-	// (set) Token: 0x0600C256 RID: 49750 RVA: 0x002BDBDB File Offset: 0x002BBDDB
+	// Token: 0x17001065 RID: 4197
+	// (get) Token: 0x06009662 RID: 38498 RVA: 0x002C8BAB File Offset: 0x002C6DAB
+	// (set) Token: 0x06009663 RID: 38499 RVA: 0x002C8BB3 File Offset: 0x002C6DB3
 	public bool Achieved { get; set; }
 
-	// Token: 0x17001041 RID: 4161
-	// (get) Token: 0x0600C257 RID: 49751 RVA: 0x002BDBE4 File Offset: 0x002BBDE4
-	// (set) Token: 0x0600C258 RID: 49752 RVA: 0x002BDBEC File Offset: 0x002BBDEC
+	// Token: 0x17001066 RID: 4198
+	// (get) Token: 0x06009664 RID: 38500 RVA: 0x002C8BBC File Offset: 0x002C6DBC
+	// (set) Token: 0x06009665 RID: 38501 RVA: 0x002C8BC4 File Offset: 0x002C6DC4
 	public EDailyActiveState State { get; set; }
 }

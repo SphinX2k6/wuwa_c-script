@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000097 RID: 151
+	// Token: 0x0200007C RID: 124
 	public static class TWeakObjectPtrExtensions
 	{
-		// Token: 0x06001048 RID: 4168 RVA: 0x000187C9 File Offset: 0x000169C9
+		// Token: 0x06000BDB RID: 3035 RVA: 0x000134ED File Offset: 0x000116ED
 		public static UClassStackOnlyPtr GetClass<T>([Nullable(new byte[]
 		{
 			0,

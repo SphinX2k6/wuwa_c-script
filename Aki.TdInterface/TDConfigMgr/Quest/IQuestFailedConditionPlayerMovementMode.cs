@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200107D RID: 4221
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011AB RID: 4523
 	public class IQuestFailedConditionPlayerMovementMode
 	{
-		// Token: 0x06005F1C RID: 24348 RVA: 0x000E66F0 File Offset: 0x000E48F0
+		// Token: 0x06006515 RID: 25877 RVA: 0x000F3810 File Offset: 0x000F1A10
 		private IQuestFailedConditionPlayerMovementMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005F1D RID: 24349 RVA: 0x000E6728 File Offset: 0x000E4928
+		// Token: 0x06006516 RID: 25878 RVA: 0x000F3848 File Offset: 0x000F1A48
 		public static IQuestFailedConditionPlayerMovementMode Create([Nullable(2)] IQuestFailedConditionPlayerMovementMode instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005F1E RID: 24350 RVA: 0x000E673B File Offset: 0x000E493B
+		// Token: 0x06006517 RID: 25879 RVA: 0x000F385B File Offset: 0x000F1A5B
 		public static IQuestFailedConditionPlayerMovementMode CreateFromSetValue([Nullable(2)] IQuestFailedConditionPlayerMovementMode_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005F1F RID: 24351 RVA: 0x000E674E File Offset: 0x000E494E
+		// Token: 0x06006518 RID: 25880 RVA: 0x000F386E File Offset: 0x000F1A6E
 		public IQuestFailedConditionPlayerMovementMode_SetValue ToSetValue()
 		{
 			return new IQuestFailedConditionPlayerMovementMode_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F56 RID: 8022
-		// (get) Token: 0x06005F20 RID: 24352 RVA: 0x000E676D File Offset: 0x000E496D
-		// (set) Token: 0x06005F21 RID: 24353 RVA: 0x000E6798 File Offset: 0x000E4998
+		// Token: 0x17002108 RID: 8456
+		// (get) Token: 0x06006519 RID: 25881 RVA: 0x000F388D File Offset: 0x000F1A8D
+		// (set) Token: 0x0600651A RID: 25882 RVA: 0x000F38B8 File Offset: 0x000F1AB8
 		public virtual EPlayerMovementMode Mode
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F57 RID: 8023
-		// (get) Token: 0x06005F22 RID: 24354 RVA: 0x000E67A6 File Offset: 0x000E49A6
-		// (set) Token: 0x06005F23 RID: 24355 RVA: 0x000E67D1 File Offset: 0x000E49D1
+		// Token: 0x17002109 RID: 8457
+		// (get) Token: 0x0600651B RID: 25883 RVA: 0x000F38C6 File Offset: 0x000F1AC6
+		// (set) Token: 0x0600651C RID: 25884 RVA: 0x000F38F1 File Offset: 0x000F1AF1
 		public virtual ECompare Compare
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003967 RID: 14695
+		// Token: 0x04003CB4 RID: 15540
 		[Nullable(2)]
 		protected IQuestFailedConditionPlayerMovementMode FbInstance;
 
-		// Token: 0x04003968 RID: 14696
+		// Token: 0x04003CB5 RID: 15541
 		[Nullable(2)]
 		protected IQuestFailedConditionPlayerMovementMode_SetValue PocoInterface;
 	}

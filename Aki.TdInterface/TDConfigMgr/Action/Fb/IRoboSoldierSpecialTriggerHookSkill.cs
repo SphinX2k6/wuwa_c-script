@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026FE RID: 9982
+	// Token: 0x020029C4 RID: 10692
 	public class IRoboSoldierSpecialTriggerHookSkill : IExecClientBattleActionType
 	{
-		// Token: 0x0600DED5 RID: 57045 RVA: 0x00210B9C File Offset: 0x0020ED9C
-		[NullableContext(1)]
+		// Token: 0x0600ECBD RID: 60605 RVA: 0x0022D504 File Offset: 0x0022B704
 		public static IRoboSoldierSpecialTriggerHookSkill Create(IRoboSoldierSpecialTriggerHookSkill? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700429B RID: 17051
-		// (get) Token: 0x0600DED6 RID: 57046 RVA: 0x00210BBB File Offset: 0x0020EDBB
+		// Token: 0x170045E3 RID: 17891
+		// (get) Token: 0x0600ECBE RID: 60606 RVA: 0x0022D523 File Offset: 0x0022B723
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700429C RID: 17052
-		// (get) Token: 0x0600DED7 RID: 57047 RVA: 0x00210BC8 File Offset: 0x0020EDC8
+		// Token: 0x170045E4 RID: 17892
+		// (get) Token: 0x0600ECBF RID: 60607 RVA: 0x0022D530 File Offset: 0x0022B730
 		public virtual int HookEntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BAE RID: 31662
+		// Token: 0x04008252 RID: 33362
 		private IRoboSoldierSpecialTriggerHookSkill Instance;
 	}
 }

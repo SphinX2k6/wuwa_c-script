@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E56 RID: 7766
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200208B RID: 8331
 	public class ISheriffStartTrack : ICommonTipType
 	{
-		// Token: 0x0600A62B RID: 42539 RVA: 0x00178178 File Offset: 0x00176378
+		// Token: 0x0600B0E3 RID: 45283 RVA: 0x0018DE78 File Offset: 0x0018C078
 		private ISheriffStartTrack_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A62C RID: 42540 RVA: 0x001781B0 File Offset: 0x001763B0
+		// Token: 0x0600B0E4 RID: 45284 RVA: 0x0018DEB0 File Offset: 0x0018C0B0
 		public static ISheriffStartTrack Create([Nullable(2)] ISheriffStartTrack instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A62D RID: 42541 RVA: 0x001781C3 File Offset: 0x001763C3
+		// Token: 0x0600B0E5 RID: 45285 RVA: 0x0018DEC3 File Offset: 0x0018C0C3
 		public static ISheriffStartTrack CreateFromSetValue([Nullable(2)] ISheriffStartTrack_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A62E RID: 42542 RVA: 0x001781D6 File Offset: 0x001763D6
+		// Token: 0x0600B0E6 RID: 45286 RVA: 0x0018DED6 File Offset: 0x0018C0D6
 		public new ISheriffStartTrack_SetValue ToSetValue()
 		{
 			return new ISheriffStartTrack_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032EB RID: 13035
-		// (get) Token: 0x0600A62F RID: 42543 RVA: 0x001781F5 File Offset: 0x001763F5
-		// (set) Token: 0x0600A630 RID: 42544 RVA: 0x00178220 File Offset: 0x00176420
+		// Token: 0x170035AF RID: 13743
+		// (get) Token: 0x0600B0E7 RID: 45287 RVA: 0x0018DEF5 File Offset: 0x0018C0F5
+		// (set) Token: 0x0600B0E8 RID: 45288 RVA: 0x0018DF20 File Offset: 0x0018C120
 		public override ECommonTipType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032EC RID: 13036
-		// (get) Token: 0x0600A631 RID: 42545 RVA: 0x0017822E File Offset: 0x0017642E
-		// (set) Token: 0x0600A632 RID: 42546 RVA: 0x00178259 File Offset: 0x00176459
+		// Token: 0x170035B0 RID: 13744
+		// (get) Token: 0x0600B0E9 RID: 45289 RVA: 0x0018DF2E File Offset: 0x0018C12E
+		// (set) Token: 0x0600B0EA RID: 45290 RVA: 0x0018DF59 File Offset: 0x0018C159
 		public virtual int AnomalyId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006346 RID: 25414
+		// Token: 0x0400692A RID: 26922
 		[Nullable(2)]
 		protected new ISheriffStartTrack FbInstance;
 
-		// Token: 0x04006347 RID: 25415
+		// Token: 0x0400692B RID: 26923
 		[Nullable(2)]
 		protected new ISheriffStartTrack_SetValue PocoInterface;
 	}

@@ -8,13 +8,13 @@ namespace CSharpScript.Launcher
 	[Nullable(0)]
 	public class MobileResCleanUpFinishStateLog : HotPatchLogData
 	{
-		// Token: 0x06000270 RID: 624 RVA: 0x0000C6BB File Offset: 0x0000A8BB
+		// Token: 0x06000270 RID: 624 RVA: 0x0000C72B File Offset: 0x0000A92B
 		public MobileResCleanUpFinishStateLog(string uniqueId, string traceId, [Nullable(2)] string playerId = null) : base("1714", uniqueId, playerId)
 		{
 			this.s_trace_id = traceId;
 		}
 
-		// Token: 0x04000158 RID: 344
+		// Token: 0x0400015F RID: 351
 		public string s_trace_id = "";
 	}
 }

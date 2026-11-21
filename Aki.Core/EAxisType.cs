@@ -3,12 +3,12 @@
 // Token: 0x020000FA RID: 250
 public enum EAxisType
 {
-	// Token: 0x04000614 RID: 1556
+	// Token: 0x0400061F RID: 1567
 	None,
-	// Token: 0x04000615 RID: 1557
+	// Token: 0x04000620 RID: 1568
 	X,
-	// Token: 0x04000616 RID: 1558
+	// Token: 0x04000621 RID: 1569
 	Y,
-	// Token: 0x04000617 RID: 1559
+	// Token: 0x04000622 RID: 1570
 	Z
 }

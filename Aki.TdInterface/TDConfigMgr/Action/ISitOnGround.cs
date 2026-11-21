@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E75 RID: 7797
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020AA RID: 8362
 	public class ISitOnGround : ILeisureInteractType
 	{
-		// Token: 0x0600A6E2 RID: 42722 RVA: 0x00179830 File Offset: 0x00177A30
+		// Token: 0x0600B19A RID: 45466 RVA: 0x0018F530 File Offset: 0x0018D730
 		private ISitOnGround_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A6E3 RID: 42723 RVA: 0x00179868 File Offset: 0x00177A68
+		// Token: 0x0600B19B RID: 45467 RVA: 0x0018F568 File Offset: 0x0018D768
 		public static ISitOnGround Create([Nullable(2)] ISitOnGround instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A6E4 RID: 42724 RVA: 0x0017987B File Offset: 0x00177A7B
+		// Token: 0x0600B19C RID: 45468 RVA: 0x0018F57B File Offset: 0x0018D77B
 		public static ISitOnGround CreateFromSetValue([Nullable(2)] ISitOnGround_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A6E5 RID: 42725 RVA: 0x0017988E File Offset: 0x00177A8E
+		// Token: 0x0600B19D RID: 45469 RVA: 0x0018F58E File Offset: 0x0018D78E
 		public new ISitOnGround_SetValue ToSetValue()
 		{
 			return new ISitOnGround_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003319 RID: 13081
-		// (get) Token: 0x0600A6E6 RID: 42726 RVA: 0x001798A1 File Offset: 0x00177AA1
-		// (set) Token: 0x0600A6E7 RID: 42727 RVA: 0x001798CC File Offset: 0x00177ACC
+		// Token: 0x170035DD RID: 13789
+		// (get) Token: 0x0600B19E RID: 45470 RVA: 0x0018F5A1 File Offset: 0x0018D7A1
+		// (set) Token: 0x0600B19F RID: 45471 RVA: 0x0018F5CC File Offset: 0x0018D7CC
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063A4 RID: 25508
+		// Token: 0x04006988 RID: 27016
 		[Nullable(2)]
 		protected new ISitOnGround FbInstance;
 
-		// Token: 0x040063A5 RID: 25509
+		// Token: 0x04006989 RID: 27017
 		[Nullable(2)]
 		protected new ISitOnGround_SetValue PocoInterface;
 	}

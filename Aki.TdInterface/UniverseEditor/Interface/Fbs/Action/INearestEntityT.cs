@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B95 RID: 27541
+	// Token: 0x020072DB RID: 29403
 	public class INearestEntityT
 	{
-		// Token: 0x1700CCB4 RID: 52404
-		// (get) Token: 0x060305E9 RID: 198121 RVA: 0x00692043 File Offset: 0x00690243
-		// (set) Token: 0x060305EA RID: 198122 RVA: 0x0069204B File Offset: 0x0069024B
+		// Token: 0x1700D799 RID: 55193
+		// (get) Token: 0x06033441 RID: 209985 RVA: 0x006EA663 File Offset: 0x006E8863
+		// (set) Token: 0x06033442 RID: 209986 RVA: 0x006EA66B File Offset: 0x006E886B
 		public ETeleportType Type { get; set; }
 
-		// Token: 0x1700CCB5 RID: 52405
-		// (get) Token: 0x060305EB RID: 198123 RVA: 0x00692054 File Offset: 0x00690254
-		// (set) Token: 0x060305EC RID: 198124 RVA: 0x0069205C File Offset: 0x0069025C
+		// Token: 0x1700D79A RID: 55194
+		// (get) Token: 0x06033443 RID: 209987 RVA: 0x006EA674 File Offset: 0x006E8874
+		// (set) Token: 0x06033444 RID: 209988 RVA: 0x006EA67C File Offset: 0x006E887C
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x060305ED RID: 198125 RVA: 0x00692065 File Offset: 0x00690265
+		// Token: 0x06033445 RID: 209989 RVA: 0x006EA685 File Offset: 0x006E8885
 		public INearestEntityT()
 		{
 			this.Type = ETeleportType.FixedPos;

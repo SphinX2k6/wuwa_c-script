@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EF9 RID: 28409
+	// Token: 0x02006079 RID: 24697
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,13 +13,13 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 	})]
 	public class DollPlayDescriptionItemTemplateData : MultiTemplateGridDataBase<IDollDescriptionItemData, DollPlayDescriptionItem>
 	{
-		// Token: 0x060452A2 RID: 283298 RVA: 0x0111B458 File Offset: 0x01119658
+		// Token: 0x0603B44B RID: 242763 RVA: 0x010C51E8 File Offset: 0x010C33E8
 		public override int GetTemplateIndex()
 		{
 			return 0;
 		}
 
-		// Token: 0x060452A3 RID: 283299 RVA: 0x0111B45B File Offset: 0x0111965B
+		// Token: 0x0603B44C RID: 242764 RVA: 0x010C51EB File Offset: 0x010C33EB
 		public override DollPlayDescriptionItem CreateProxy()
 		{
 			return new DollPlayDescriptionItem();

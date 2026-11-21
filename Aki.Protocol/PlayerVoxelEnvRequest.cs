@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000DBB RID: 3515
+	// Token: 0x02000DAB RID: 3499
 	[NetMessage(EMessageId.PlayerVoxelEnvRequest)]
 	public sealed class PlayerVoxelEnvRequest : IMessage<PlayerVoxelEnvRequest>, IMessage, IEquatable<PlayerVoxelEnvRequest>, IDeepCloneable<PlayerVoxelEnvRequest>, IBufferMessage
 	{
-		// Token: 0x06012EF9 RID: 77561 RVA: 0x002C3118 File Offset: 0x002C1318
+		// Token: 0x06012DFD RID: 77309 RVA: 0x002C14F4 File Offset: 0x002BF6F4
 		[NullableContext(1)]
 		public static PlayerVoxelEnvRequest Create()
 		{
 			return new PlayerVoxelEnvRequest();
 		}
 
-		// Token: 0x17003EDC RID: 16092
-		// (get) Token: 0x06012EFA RID: 77562 RVA: 0x002C311F File Offset: 0x002C131F
+		// Token: 0x17003EA7 RID: 16039
+		// (get) Token: 0x06012DFE RID: 77310 RVA: 0x002C14FB File Offset: 0x002BF6FB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003EDD RID: 16093
-		// (get) Token: 0x06012EFB RID: 77563 RVA: 0x002C3122 File Offset: 0x002C1322
+		// Token: 0x17003EA8 RID: 16040
+		// (get) Token: 0x06012DFF RID: 77311 RVA: 0x002C14FE File Offset: 0x002BF6FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012EFC RID: 77564 RVA: 0x002C3129 File Offset: 0x002C1329
+		// Token: 0x06012E00 RID: 77312 RVA: 0x002C1505 File Offset: 0x002BF705
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerVoxelEnvRequest()
 		{
 		}
 
-		// Token: 0x06012EFD RID: 77565 RVA: 0x002C3131 File Offset: 0x002C1331
+		// Token: 0x06012E01 RID: 77313 RVA: 0x002C150D File Offset: 0x002BF70D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerVoxelEnvRequest(PlayerVoxelEnvRequest other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06012EFE RID: 77566 RVA: 0x002C3156 File Offset: 0x002C1356
+		// Token: 0x06012E02 RID: 77314 RVA: 0x002C1532 File Offset: 0x002BF732
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerVoxelEnvRequest Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new PlayerVoxelEnvRequest(this);
 		}
 
-		// Token: 0x17003EDE RID: 16094
-		// (get) Token: 0x06012EFF RID: 77567 RVA: 0x002C315E File Offset: 0x002C135E
-		// (set) Token: 0x06012F00 RID: 77568 RVA: 0x002C3166 File Offset: 0x002C1366
+		// Token: 0x17003EA9 RID: 16041
+		// (get) Token: 0x06012E03 RID: 77315 RVA: 0x002C153A File Offset: 0x002BF73A
+		// (set) Token: 0x06012E04 RID: 77316 RVA: 0x002C1542 File Offset: 0x002BF742
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int VoxelEnv
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012F01 RID: 77569 RVA: 0x002C316F File Offset: 0x002C136F
+		// Token: 0x06012E05 RID: 77317 RVA: 0x002C154B File Offset: 0x002BF74B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PlayerVoxelEnvRequest);
 		}
 
-		// Token: 0x06012F02 RID: 77570 RVA: 0x002C317D File Offset: 0x002C137D
+		// Token: 0x06012E06 RID: 77318 RVA: 0x002C1559 File Offset: 0x002BF759
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PlayerVoxelEnvRequest other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.VoxelEnv == other.VoxelEnv && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06012F03 RID: 77571 RVA: 0x002C31AC File Offset: 0x002C13AC
+		// Token: 0x06012E07 RID: 77319 RVA: 0x002C1588 File Offset: 0x002BF788
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012F04 RID: 77572 RVA: 0x002C31EB File Offset: 0x002C13EB
+		// Token: 0x06012E08 RID: 77320 RVA: 0x002C15C7 File Offset: 0x002BF7C7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06012F05 RID: 77573 RVA: 0x002C31F8 File Offset: 0x002C13F8
+		// Token: 0x06012E09 RID: 77321 RVA: 0x002C15D4 File Offset: 0x002BF7D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,14 +132,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06012F06 RID: 77574 RVA: 0x002C3201 File Offset: 0x002C1401
+		// Token: 0x06012E0A RID: 77322 RVA: 0x002C15DD File Offset: 0x002BF7DD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.VoxelEnv != 0)
 			{
-				output.WriteRawTag(104);
+				output.WriteRawTag(80);
 				output.WriteInt32(this.VoxelEnv);
 			}
 			if (this._unknownFields != null)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012F07 RID: 77575 RVA: 0x002C3234 File Offset: 0x002C1434
+		// Token: 0x06012E0B RID: 77323 RVA: 0x002C1610 File Offset: 0x002BF810
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012F08 RID: 77576 RVA: 0x002C3272 File Offset: 0x002C1472
+		// Token: 0x06012E0C RID: 77324 RVA: 0x002C164E File Offset: 0x002BF84E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PlayerVoxelEnvRequest other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06012F09 RID: 77577 RVA: 0x002C32A3 File Offset: 0x002C14A3
+		// Token: 0x06012E0D RID: 77325 RVA: 0x002C167F File Offset: 0x002BF87F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06012F0A RID: 77578 RVA: 0x002C32AC File Offset: 0x002C14AC
+		// Token: 0x06012E0E RID: 77326 RVA: 0x002C1688 File Offset: 0x002BF888
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 104U)
+				if (num != 80U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -212,13 +212,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007525 RID: 29989
+		// Token: 0x0400753D RID: 30013
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007526 RID: 29990
-		public const int VoxelEnvFieldNumber = 13;
+		// Token: 0x0400753E RID: 30014
+		public const int VoxelEnvFieldNumber = 10;
 
-		// Token: 0x04007527 RID: 29991
+		// Token: 0x0400753F RID: 30015
 		private int voxelEnv_;
 	}
 }

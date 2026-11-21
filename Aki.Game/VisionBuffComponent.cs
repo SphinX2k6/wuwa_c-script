@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Component;
 using AkiClient.Game.Aki.Character.Vision;
 
-// Token: 0x02003004 RID: 12292
+// Token: 0x0200255A RID: 9562
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionBuffComponent : CharacterBuffComponent
 {
-	// Token: 0x0601A094 RID: 106644 RVA: 0x006D14AC File Offset: 0x006CF6AC
+	// Token: 0x060179D0 RID: 96720 RVA: 0x006F9640 File Offset: 0x006F7840
 	private bool NeedTransfer()
 	{
 		if (this.NeedNeedTransferFlag != null)
@@ -34,7 +34,7 @@ public class VisionBuffComponent : CharacterBuffComponent
 		return this.NeedNeedTransferFlag.GetValueOrDefault();
 	}
 
-	// Token: 0x0601A095 RID: 106645 RVA: 0x006D1538 File Offset: 0x006CF738
+	// Token: 0x060179D1 RID: 96721 RVA: 0x006F96CC File Offset: 0x006F78CC
 	public unsafe override void AddBuff(long buffId, AddBuffParam buffParams)
 	{
 		if (base.CreatureDataId == buffParams.InstigatorId || !this.NeedTransfer())
@@ -60,7 +60,7 @@ public class VisionBuffComponent : CharacterBuffComponent
 		instance.Error(flag, entity2, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0601A096 RID: 106646 RVA: 0x006D1608 File Offset: 0x006CF808
+	// Token: 0x060179D2 RID: 96722 RVA: 0x006F979C File Offset: 0x006F799C
 	public unsafe override void RemoveBuff(long buffId, int stackCount, string reason, long? preMessageId = null, bool? isServerRequest = null, long? instigatorId = null)
 	{
 		if (this.NeedTransfer())
@@ -87,7 +87,7 @@ public class VisionBuffComponent : CharacterBuffComponent
 		base.RemoveBuff(buffId, stackCount, reason, preMessageId, isServerRequest, instigatorId);
 	}
 
-	// Token: 0x0601A097 RID: 106647 RVA: 0x006D16C8 File Offset: 0x006CF8C8
+	// Token: 0x060179D3 RID: 96723 RVA: 0x006F985C File Offset: 0x006F7A5C
 	[NullableContext(2)]
 	public override BaseBuffComponent GetBuffApplyTarget(long buffId, long instigatorId)
 	{
@@ -105,7 +105,7 @@ public class VisionBuffComponent : CharacterBuffComponent
 		return null;
 	}
 
-	// Token: 0x0601A098 RID: 106648 RVA: 0x006D1720 File Offset: 0x006CF920
+	// Token: 0x060179D4 RID: 96724 RVA: 0x006F98B4 File Offset: 0x006F7AB4
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -113,13 +113,70 @@ public class VisionBuffComponent : CharacterBuffComponent
 			return false;
 		}
 		VisionBuffComponent visionBuffComponent = (VisionBuffComponent)componentTemplate;
-		if (base.CanResetComponentProperty("NeedNeedTransferFlag"))
-		{
-			this.NeedNeedTransferFlag = visionBuffComponent.NeedNeedTransferFlag;
-		}
+		this.NeedNeedTransferFlag = visionBuffComponent.NeedNeedTransferFlag;
 		return true;
 	}
 
-	// Token: 0x0400C51D RID: 50461
+	// Token: 0x17002488 RID: 9352
+	// (get) Token: 0x060179D5 RID: 96725 RVA: 0x006F98E0 File Offset: 0x006F7AE0
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002489 RID: 9353
+	// (get) Token: 0x060179D6 RID: 96726 RVA: 0x006F98E3 File Offset: 0x006F7AE3
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700248A RID: 9354
+	// (get) Token: 0x060179D7 RID: 96727 RVA: 0x006F98E6 File Offset: 0x006F7AE6
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700248B RID: 9355
+	// (get) Token: 0x060179D8 RID: 96728 RVA: 0x006F98E9 File Offset: 0x006F7AE9
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700248C RID: 9356
+	// (get) Token: 0x060179D9 RID: 96729 RVA: 0x006F98EC File Offset: 0x006F7AEC
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700248D RID: 9357
+	// (get) Token: 0x060179DA RID: 96730 RVA: 0x006F98EF File Offset: 0x006F7AEF
+	public override bool NeedChangeTimeDilationInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C8EA RID: 51434
 	private bool? NeedNeedTransferFlag;
 }

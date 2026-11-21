@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200224C RID: 8780
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024B9 RID: 9401
 	public class ToggleTimerPauseState : ActionParams
 	{
-		// Token: 0x0600C0A6 RID: 49318 RVA: 0x001BA6EC File Offset: 0x001B88EC
+		// Token: 0x0600CC6C RID: 52332 RVA: 0x001D1E70 File Offset: 0x001D0070
 		private ToggleTimerPauseState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C0A7 RID: 49319 RVA: 0x001BA724 File Offset: 0x001B8924
+		// Token: 0x0600CC6D RID: 52333 RVA: 0x001D1EA8 File Offset: 0x001D00A8
 		public static ToggleTimerPauseState Create([Nullable(2)] ToggleTimerPauseState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C0A8 RID: 49320 RVA: 0x001BA737 File Offset: 0x001B8937
+		// Token: 0x0600CC6E RID: 52334 RVA: 0x001D1EBB File Offset: 0x001D00BB
 		public static ToggleTimerPauseState CreateFromSetValue([Nullable(2)] ToggleTimerPauseState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C0A9 RID: 49321 RVA: 0x001BA74A File Offset: 0x001B894A
+		// Token: 0x0600CC6F RID: 52335 RVA: 0x001D1ECE File Offset: 0x001D00CE
 		public ToggleTimerPauseState_SetValue ToSetValue()
 		{
 			return new ToggleTimerPauseState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A4C RID: 14924
-		// (get) Token: 0x0600C0AA RID: 49322 RVA: 0x001BA769 File Offset: 0x001B8969
-		// (set) Token: 0x0600C0AB RID: 49323 RVA: 0x001BA794 File Offset: 0x001B8994
+		// Token: 0x17003D43 RID: 15683
+		// (get) Token: 0x0600CC70 RID: 52336 RVA: 0x001D1EED File Offset: 0x001D00ED
+		// (set) Token: 0x0600CC71 RID: 52337 RVA: 0x001D1F18 File Offset: 0x001D0118
 		public virtual ETimerType TimerType
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A4D RID: 14925
-		// (get) Token: 0x0600C0AC RID: 49324 RVA: 0x001BA7A2 File Offset: 0x001B89A2
-		// (set) Token: 0x0600C0AD RID: 49325 RVA: 0x001BA7CD File Offset: 0x001B89CD
+		// Token: 0x17003D44 RID: 15684
+		// (get) Token: 0x0600CC72 RID: 52338 RVA: 0x001D1F26 File Offset: 0x001D0126
+		// (set) Token: 0x0600CC73 RID: 52339 RVA: 0x001D1F51 File Offset: 0x001D0151
 		public virtual bool IsPause
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040072D4 RID: 29396
+		// Token: 0x04007921 RID: 31009
 		[Nullable(2)]
 		protected new ToggleTimerPauseState FbInstance;
 
-		// Token: 0x040072D5 RID: 29397
+		// Token: 0x04007922 RID: 31010
 		[Nullable(2)]
 		protected ToggleTimerPauseState_SetValue PocoInterface;
 	}

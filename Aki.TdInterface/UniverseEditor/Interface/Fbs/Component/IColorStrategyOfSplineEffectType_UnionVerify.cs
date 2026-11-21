@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FC3 RID: 20419
+	// Token: 0x0200551F RID: 21791
 	public static class IColorStrategyOfSplineEffectType_UnionVerify
 	{
-		// Token: 0x0602081C RID: 133148 RVA: 0x00485788 File Offset: 0x00483988
+		// Token: 0x06022710 RID: 141072 RVA: 0x004BEC6C File Offset: 0x004BCE6C
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

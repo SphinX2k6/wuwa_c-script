@@ -1,38 +1,38 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020016B6 RID: 5814
+// Token: 0x02000B6E RID: 2926
 [NullableContext(1)]
 [Nullable(0)]
 public class PeriodicityChallengeTypeData : IPeriodicityChallengeTypeData
 {
-	// Token: 0x17000DE4 RID: 3556
-	// (get) Token: 0x0600A5D0 RID: 42448 RVA: 0x00250F10 File Offset: 0x0024F110
-	// (set) Token: 0x0600A5D1 RID: 42449 RVA: 0x00250F18 File Offset: 0x0024F118
+	// Token: 0x17000E05 RID: 3589
+	// (get) Token: 0x060079B0 RID: 31152 RVA: 0x0025B320 File Offset: 0x00259520
+	// (set) Token: 0x060079B1 RID: 31153 RVA: 0x0025B328 File Offset: 0x00259528
 	public float LeftTime { get; set; }
 
-	// Token: 0x17000DE5 RID: 3557
-	// (get) Token: 0x0600A5D2 RID: 42450 RVA: 0x00250F21 File Offset: 0x0024F121
-	// (set) Token: 0x0600A5D3 RID: 42451 RVA: 0x00250F29 File Offset: 0x0024F129
+	// Token: 0x17000E06 RID: 3590
+	// (get) Token: 0x060079B2 RID: 31154 RVA: 0x0025B331 File Offset: 0x00259531
+	// (set) Token: 0x060079B3 RID: 31155 RVA: 0x0025B339 File Offset: 0x00259539
 	public int CurrentNum { get; set; }
 
-	// Token: 0x17000DE6 RID: 3558
-	// (get) Token: 0x0600A5D4 RID: 42452 RVA: 0x00250F32 File Offset: 0x0024F132
-	// (set) Token: 0x0600A5D5 RID: 42453 RVA: 0x00250F3A File Offset: 0x0024F13A
+	// Token: 0x17000E07 RID: 3591
+	// (get) Token: 0x060079B4 RID: 31156 RVA: 0x0025B342 File Offset: 0x00259542
+	// (set) Token: 0x060079B5 RID: 31157 RVA: 0x0025B34A File Offset: 0x0025954A
 	public int TotalNum { get; set; }
 
-	// Token: 0x17000DE7 RID: 3559
-	// (get) Token: 0x0600A5D6 RID: 42454 RVA: 0x00250F43 File Offset: 0x0024F143
-	// (set) Token: 0x0600A5D7 RID: 42455 RVA: 0x00250F4B File Offset: 0x0024F14B
+	// Token: 0x17000E08 RID: 3592
+	// (get) Token: 0x060079B6 RID: 31158 RVA: 0x0025B353 File Offset: 0x00259553
+	// (set) Token: 0x060079B7 RID: 31159 RVA: 0x0025B35B File Offset: 0x0025955B
 	public bool IsFinish { get; set; }
 
-	// Token: 0x17000DE8 RID: 3560
-	// (get) Token: 0x0600A5D8 RID: 42456 RVA: 0x00250F54 File Offset: 0x0024F154
-	// (set) Token: 0x0600A5D9 RID: 42457 RVA: 0x00250F5C File Offset: 0x0024F15C
+	// Token: 0x17000E09 RID: 3593
+	// (get) Token: 0x060079B8 RID: 31160 RVA: 0x0025B364 File Offset: 0x00259564
+	// (set) Token: 0x060079B9 RID: 31161 RVA: 0x0025B36C File Offset: 0x0025956C
 	public bool RedPoint { get; set; }
 
-	// Token: 0x17000DE9 RID: 3561
-	// (get) Token: 0x0600A5DA RID: 42458 RVA: 0x00250F65 File Offset: 0x0024F165
-	// (set) Token: 0x0600A5DB RID: 42459 RVA: 0x00250F6D File Offset: 0x0024F16D
+	// Token: 0x17000E0A RID: 3594
+	// (get) Token: 0x060079BA RID: 31162 RVA: 0x0025B375 File Offset: 0x00259575
+	// (set) Token: 0x060079BB RID: 31163 RVA: 0x0025B37D File Offset: 0x0025957D
 	public string SubText { get; set; }
 }

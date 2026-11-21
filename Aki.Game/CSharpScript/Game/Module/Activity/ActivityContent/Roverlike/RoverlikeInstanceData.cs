@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -9,13 +8,13 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060DC RID: 24796
+	// Token: 0x0200505A RID: 20570
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeInstanceData
 	{
-		// Token: 0x1700912A RID: 37162
-		// (get) Token: 0x0603EAF8 RID: 256760 RVA: 0x00F23CCB File Offset: 0x00F21ECB
+		// Token: 0x1700648C RID: 25740
+		// (get) Token: 0x060337BC RID: 210876 RVA: 0x00E6AABB File Offset: 0x00E68CBB
 		public int CurLayer
 		{
 			get
@@ -24,8 +23,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x1700912B RID: 37163
-		// (get) Token: 0x0603EAF9 RID: 256761 RVA: 0x00F23CD3 File Offset: 0x00F21ED3
+		// Token: 0x1700648D RID: 25741
+		// (get) Token: 0x060337BD RID: 210877 RVA: 0x00E6AAC3 File Offset: 0x00E68CC3
 		public int MaxLayer
 		{
 			get
@@ -34,8 +33,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x1700912C RID: 37164
-		// (get) Token: 0x0603EAFA RID: 256762 RVA: 0x00F23CDB File Offset: 0x00F21EDB
+		// Token: 0x1700648E RID: 25742
+		// (get) Token: 0x060337BE RID: 210878 RVA: 0x00E6AACB File Offset: 0x00E68CCB
 		public int CurRoomId
 		{
 			get
@@ -44,8 +43,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x1700912D RID: 37165
-		// (get) Token: 0x0603EAFB RID: 256763 RVA: 0x00F23CE3 File Offset: 0x00F21EE3
+		// Token: 0x1700648F RID: 25743
+		// (get) Token: 0x060337BF RID: 210879 RVA: 0x00E6AAD3 File Offset: 0x00E68CD3
 		public int CurRoomTypeId
 		{
 			get
@@ -54,13 +53,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EAFC RID: 256764 RVA: 0x00F23CEB File Offset: 0x00F21EEB
+		// Token: 0x060337C0 RID: 210880 RVA: 0x00E6AADB File Offset: 0x00E68CDB
 		public static RoverlikeInstanceData Create()
 		{
 			return new RoverlikeInstanceData();
 		}
 
-		// Token: 0x0603EAFD RID: 256765 RVA: 0x00F23CF4 File Offset: 0x00F21EF4
+		// Token: 0x060337C1 RID: 210881 RVA: 0x00E6AAE4 File Offset: 0x00E68CE4
 		public void InitFromNotify(RoverRogueInfoNotify notify)
 		{
 			this.Clear();
@@ -100,7 +99,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.InitRoadType(notify.RoverRogueRoadType);
 		}
 
-		// Token: 0x0603EAFE RID: 256766 RVA: 0x00F23EC0 File Offset: 0x00F220C0
+		// Token: 0x060337C2 RID: 210882 RVA: 0x00E6ACB0 File Offset: 0x00E68EB0
 		private void InitRoadType(int roadType)
 		{
 			this.RoadTypeId = roadType;
@@ -117,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EAFF RID: 256767 RVA: 0x00F23F1C File Offset: 0x00F2211C
+		// Token: 0x060337C3 RID: 210883 RVA: 0x00E6AD0C File Offset: 0x00E68F0C
 		public unsafe void UpdateRoomUpdateInfo(RoverRogueRoomInfoNotify notify)
 		{
 			this.CurLayerInternal = notify.CurLayer;
@@ -135,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x0603EB00 RID: 256768 RVA: 0x00F23FFA File Offset: 0x00F221FA
+		// Token: 0x060337C4 RID: 210884 RVA: 0x00E6ADEA File Offset: 0x00E68FEA
 		public void Clear()
 		{
 			this.BlessMap.Clear();
@@ -146,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.StopAudio();
 		}
 
-		// Token: 0x0603EB01 RID: 256769 RVA: 0x00F2403C File Offset: 0x00F2223C
+		// Token: 0x060337C5 RID: 210885 RVA: 0x00E6AE2C File Offset: 0x00E6902C
 		public unsafe void PlayBlessRoleVoice(int roleId)
 		{
 			int? num = this.DrawBlessVoiceId(roleId);
@@ -175,7 +174,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.PlayAudio(voice, null);
 		}
 
-		// Token: 0x0603EB02 RID: 256770 RVA: 0x00F24100 File Offset: 0x00F22300
+		// Token: 0x060337C6 RID: 210886 RVA: 0x00E6AEF0 File Offset: 0x00E690F0
 		private int? DrawBlessVoiceId(int roleId)
 		{
 			List<int> list;
@@ -201,19 +200,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return new int?(value);
 		}
 
-		// Token: 0x0603EB03 RID: 256771 RVA: 0x00F241BE File Offset: 0x00F223BE
+		// Token: 0x060337C7 RID: 210887 RVA: 0x00E6AFAE File Offset: 0x00E691AE
 		public void PlayAudio(string eventPath, [Nullable(2)] Action finishCallback = null)
 		{
 			this.DialogLogic.PlayAudio(eventPath, finishCallback);
 		}
 
-		// Token: 0x0603EB04 RID: 256772 RVA: 0x00F241CD File Offset: 0x00F223CD
+		// Token: 0x060337C8 RID: 210888 RVA: 0x00E6AFBD File Offset: 0x00E691BD
 		public void StopAudio()
 		{
 			this.DialogLogic.Stop();
 		}
 
-		// Token: 0x0603EB05 RID: 256773 RVA: 0x00F241DC File Offset: 0x00F223DC
+		// Token: 0x060337C9 RID: 210889 RVA: 0x00E6AFCC File Offset: 0x00E691CC
 		public void ApplyGainDataUpdate(RoverRogueGainDataUpdateNotify notify)
 		{
 			foreach (int key in notify.RemoveIncIds)
@@ -256,7 +255,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			EventSystem.Instance.Emit(EEventName.RoverlikeGainDataUpdate);
 		}
 
-		// Token: 0x0603EB06 RID: 256774 RVA: 0x00F243C4 File Offset: 0x00F225C4
+		// Token: 0x060337CA RID: 210890 RVA: 0x00E6B1B4 File Offset: 0x00E693B4
 		private void ExtraGainNewTipsCheck(RoverlikeGainEntry newEntry)
 		{
 			if (newEntry.Type == RoverRogueGainDataType.RoverRogueGainBless)
@@ -269,7 +268,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EB07 RID: 256775 RVA: 0x00F2441C File Offset: 0x00F2261C
+		// Token: 0x060337CB RID: 210891 RVA: 0x00E6B20C File Offset: 0x00E6940C
 		private void ExtraGainUpdateTipsCheck([Nullable(2)] RoverlikeGainEntry lastEntry, RoverlikeGainEntry newEntry)
 		{
 			if (lastEntry == null)
@@ -287,7 +286,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EB08 RID: 256776 RVA: 0x00F24477 File Offset: 0x00F22677
+		// Token: 0x060337CC RID: 210892 RVA: 0x00E6B267 File Offset: 0x00E69467
 		private RoverlikeGainEntry CreateGainEntry(RoverRogueGainEntry proto, RoverRogueGainDataType? type)
 		{
 			if (type.GetValueOrDefault() == RoverRogueGainDataType.RoverRogueGainLootItem)
@@ -297,7 +296,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return new RoverlikeGainEntry(proto);
 		}
 
-		// Token: 0x0603EB09 RID: 256777 RVA: 0x00F24490 File Offset: 0x00F22690
+		// Token: 0x060337CD RID: 210893 RVA: 0x00E6B280 File Offset: 0x00E69480
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -322,7 +321,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return null;
 		}
 
-		// Token: 0x0603EB0A RID: 256778 RVA: 0x00F244E8 File Offset: 0x00F226E8
+		// Token: 0x060337CE RID: 210894 RVA: 0x00E6B2D8 File Offset: 0x00E694D8
 		[NullableContext(2)]
 		public RoverlikeGainEntry GetGainByIncId(int incId)
 		{
@@ -373,13 +372,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return null;
 		}
 
-		// Token: 0x0603EB0B RID: 256779 RVA: 0x00F24598 File Offset: 0x00F22798
+		// Token: 0x060337CF RID: 210895 RVA: 0x00E6B388 File Offset: 0x00E69588
 		public List<RoverlikeGainEntry> GetBlessList()
 		{
 			return new List<RoverlikeGainEntry>(this.BlessMap.Values);
 		}
 
-		// Token: 0x0603EB0C RID: 256780 RVA: 0x00F245AC File Offset: 0x00F227AC
+		// Token: 0x060337D0 RID: 210896 RVA: 0x00E6B39C File Offset: 0x00E6959C
 		[NullableContext(2)]
 		public RoverlikeGainEntry GetSameSlotIdBless(int configId)
 		{
@@ -390,18 +389,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 			int slotId = blessConfig.Value.SlotId;
 			RoverlikeActivityController instance = RoverlikeActivityController.Instance;
-			List<int> list;
+			int[] array;
 			if (instance == null)
 			{
-				list = null;
+				array = null;
 			}
 			else
 			{
 				RoverlikeActivityData currentActivityData = instance.GetCurrentActivityData();
 				RoverRogueActivity? roverRogueActivity;
-				list = ((currentActivityData != null) ? ((currentActivityData.GetParamConfig() != null) ? roverRogueActivity.GetValueOrDefault().SlotList().ToList<int>() : null) : null);
+				array = ((currentActivityData != null) ? ((currentActivityData.GetParamConfig() != null) ? roverRogueActivity.GetValueOrDefault().SlotList() : null) : null);
 			}
-			if (!(list ?? new List<int>()).Contains(slotId))
+			int[] array2 = array;
+			if (!((array2 != null) ? new List<int>(array2) : new List<int>()).Contains(slotId))
 			{
 				return null;
 			}
@@ -416,13 +416,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return null;
 		}
 
-		// Token: 0x0603EB0D RID: 256781 RVA: 0x00F246C4 File Offset: 0x00F228C4
+		// Token: 0x060337D1 RID: 210897 RVA: 0x00E6B4B8 File Offset: 0x00E696B8
 		public List<RoverlikeGainEntry> GetRoleEnhanceList()
 		{
 			return new List<RoverlikeGainEntry>(this.RoleEnhanceMap.Values);
 		}
 
-		// Token: 0x0603EB0E RID: 256782 RVA: 0x00F246D8 File Offset: 0x00F228D8
+		// Token: 0x060337D2 RID: 210898 RVA: 0x00E6B4CC File Offset: 0x00E696CC
 		public List<RoverlikeLootGainEntry> GetLootItemList()
 		{
 			List<RoverlikeLootGainEntry> list = new List<RoverlikeLootGainEntry>();
@@ -433,13 +433,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list;
 		}
 
-		// Token: 0x0603EB0F RID: 256783 RVA: 0x00F2473C File Offset: 0x00F2293C
+		// Token: 0x060337D3 RID: 210899 RVA: 0x00E6B530 File Offset: 0x00E69730
 		public List<RoverlikeGainEntry> GetItemList()
 		{
 			return new List<RoverlikeGainEntry>(this.ItemMap.Values);
 		}
 
-		// Token: 0x0603EB10 RID: 256784 RVA: 0x00F24750 File Offset: 0x00F22950
+		// Token: 0x060337D4 RID: 210900 RVA: 0x00E6B544 File Offset: 0x00E69744
 		public int GetGainCountByType(RoverRogueGainDataType type)
 		{
 			Dictionary<int, RoverlikeGainEntry> gainMapByType = this.GetGainMapByType(new RoverRogueGainDataType?(type));
@@ -450,7 +450,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return gainMapByType.Count;
 		}
 
-		// Token: 0x0603EB11 RID: 256785 RVA: 0x00F24778 File Offset: 0x00F22978
+		// Token: 0x060337D5 RID: 210901 RVA: 0x00E6B56C File Offset: 0x00E6976C
 		private static int GetGainQuality(int configId, RoverRogueGainDataType type)
 		{
 			if (type != RoverRogueGainDataType.RoverRogueGainBless)
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EB12 RID: 256786 RVA: 0x00F247DE File Offset: 0x00F229DE
+		// Token: 0x060337D6 RID: 210902 RVA: 0x00E6B5D2 File Offset: 0x00E697D2
 		public static void SortGainEntryList(List<RoverlikeGainEntry> list)
 		{
 			list.Sort(delegate(RoverlikeGainEntry a, RoverlikeGainEntry b)
@@ -496,8 +496,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			});
 		}
 
-		// Token: 0x0603EB13 RID: 256787 RVA: 0x00F24808 File Offset: 0x00F22A08
-		public static List<int> SortGainConfigIds(List<int> ids, RoverRogueGainDataType type)
+		// Token: 0x060337D7 RID: 210903 RVA: 0x00E6B5FC File Offset: 0x00E697FC
+		public static List<int> SortGainConfigIds(IEnumerable<int> ids, RoverRogueGainDataType type)
 		{
 			List<int> list = new List<int>(ids);
 			list.Sort(delegate(int a, int b)
@@ -513,46 +513,46 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list;
 		}
 
-		// Token: 0x04020C51 RID: 134225
+		// Token: 0x0401B57E RID: 111998
 		public int RoadTypeId;
 
-		// Token: 0x04020C52 RID: 134226
+		// Token: 0x0401B57F RID: 111999
 		public List<int> RoadLayerIndexList = new List<int>();
 
-		// Token: 0x04020C53 RID: 134227
+		// Token: 0x0401B580 RID: 112000
 		private int CurLayerInternal;
 
-		// Token: 0x04020C54 RID: 134228
+		// Token: 0x0401B581 RID: 112001
 		private int MaxLayerInternal;
 
-		// Token: 0x04020C55 RID: 134229
+		// Token: 0x0401B582 RID: 112002
 		private int CurRoomIdInternal;
 
-		// Token: 0x04020C56 RID: 134230
+		// Token: 0x0401B583 RID: 112003
 		private int CurRoomTypeIdInternal;
 
-		// Token: 0x04020C57 RID: 134231
+		// Token: 0x0401B584 RID: 112004
 		private readonly Dictionary<int, RoverlikeGainEntry> BlessMap = new Dictionary<int, RoverlikeGainEntry>();
 
-		// Token: 0x04020C58 RID: 134232
+		// Token: 0x0401B585 RID: 112005
 		private readonly Dictionary<int, RoverlikeGainEntry> RoleEnhanceMap = new Dictionary<int, RoverlikeGainEntry>();
 
-		// Token: 0x04020C59 RID: 134233
+		// Token: 0x0401B586 RID: 112006
 		private readonly Dictionary<int, RoverlikeGainEntry> LootItemMap = new Dictionary<int, RoverlikeGainEntry>();
 
-		// Token: 0x04020C5A RID: 134234
+		// Token: 0x0401B587 RID: 112007
 		private readonly Dictionary<int, RoverlikeGainEntry> ItemMap = new Dictionary<int, RoverlikeGainEntry>();
 
-		// Token: 0x04020C5B RID: 134235
+		// Token: 0x0401B588 RID: 112008
 		private readonly Dictionary<int, RoverRogueGainDataType> IncIdToGainTypeMap = new Dictionary<int, RoverRogueGainDataType>();
 
-		// Token: 0x04020C5C RID: 134236
+		// Token: 0x0401B589 RID: 112009
 		public int RoleType;
 
-		// Token: 0x04020C5D RID: 134237
+		// Token: 0x0401B58A RID: 112010
 		private readonly RoverlikeDialogLogic DialogLogic = new RoverlikeDialogLogic();
 
-		// Token: 0x04020C5E RID: 134238
+		// Token: 0x0401B58B RID: 112011
 		private readonly Dictionary<int, List<int>> BlessVoicePool = new Dictionary<int, List<int>>();
 	}
 }

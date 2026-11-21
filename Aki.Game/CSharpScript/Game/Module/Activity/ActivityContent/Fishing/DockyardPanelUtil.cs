@@ -5,12 +5,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065A0 RID: 26016
+	// Token: 0x0200551E RID: 21790
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardPanelUtil
 	{
-		// Token: 0x060413C9 RID: 267209 RVA: 0x00FCEB50 File Offset: 0x00FCCD50
+		// Token: 0x0603608E RID: 221326 RVA: 0x00F15B54 File Offset: 0x00F13D54
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return new ValueTuple<List<List<int>>, FishingItemRotate>(list, currentRotateType + 1);
 		}
 
-		// Token: 0x060413CA RID: 267210 RVA: 0x00FCEBD0 File Offset: 0x00FCCDD0
+		// Token: 0x0603608F RID: 221327 RVA: 0x00F15BD4 File Offset: 0x00F13DD4
 		public static List<List<int>> RotateOriginalPosData(List<List<int>> posData, FishingItemRotate rotate)
 		{
 			int count = posData.Count;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return list;
 		}
 
-		// Token: 0x060413CB RID: 267211 RVA: 0x00FCED33 File Offset: 0x00FCCF33
+		// Token: 0x06036090 RID: 221328 RVA: 0x00F15D37 File Offset: 0x00F13F37
 		public static IPanelPosRange CreateAndDeepCopyItemRangePos(IPanelPosRange targetPos)
 		{
 			PanelPosRange panelPosRange = new PanelPosRange();
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return panelPosRange;
 		}
 
-		// Token: 0x060413CC RID: 267212 RVA: 0x00FCED5D File Offset: 0x00FCCF5D
+		// Token: 0x06036091 RID: 221329 RVA: 0x00F15D61 File Offset: 0x00F13F61
 		public static void DeepCopyItemRangePos(IPanelPosRange original, IPanelPosRange targetPos)
 		{
 			original.RowStartIndex = targetPos.RowStartIndex;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			original.ColEndIndex = targetPos.ColEndIndex;
 		}
 
-		// Token: 0x060413CD RID: 267213 RVA: 0x00FCED90 File Offset: 0x00FCCF90
+		// Token: 0x06036092 RID: 221330 RVA: 0x00F15D94 File Offset: 0x00F13F94
 		public static Vector2D CalculateOriginalPivot(int rowLength, int colLength)
 		{
 			Vector2D vector2D = Vector2D.Create();
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return vector2D;
 		}
 
-		// Token: 0x060413CE RID: 267214 RVA: 0x00FCEE3C File Offset: 0x00FCD03C
+		// Token: 0x06036093 RID: 221331 RVA: 0x00F15E40 File Offset: 0x00F14040
 		public static FishingItemInfo CreateFishingItemInfo(DockyardItemBlockOriginalData data, FishingItemRotate rotate, IPanelPos leftTopPosInPanel)
 		{
 			FishingItemInfo fishingItemInfo = FishingItemInfo.Create();
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return fishingItemInfo;
 		}
 
-		// Token: 0x060413CF RID: 267215 RVA: 0x00FCEEC2 File Offset: 0x00FCD0C2
+		// Token: 0x06036094 RID: 221332 RVA: 0x00F15EC6 File Offset: 0x00F140C6
 		public static string GetTexturePathByCup(int cup)
 		{
 			if (cup == 0)

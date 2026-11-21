@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000416 RID: 1046
+	// Token: 0x0200042C RID: 1068
 	public class ConfigI18nResourcesAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600188D RID: 6285 RVA: 0x000E4A98 File Offset: 0x000E2C98
+		// Token: 0x06001911 RID: 6417 RVA: 0x000EB1EC File Offset: 0x000E93EC
 		static ConfigI18nResourcesAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigI18nResourcesAll.CreateStaticDefaultValue), new Action(ConfigI18nResourcesAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600188E RID: 6286 RVA: 0x000E4AB8 File Offset: 0x000E2CB8
+		// Token: 0x06001912 RID: 6418 RVA: 0x000EB20C File Offset: 0x000E940C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigI18nResourcesAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600188F RID: 6287 RVA: 0x000E4B37 File Offset: 0x000E2D37
+		// Token: 0x06001913 RID: 6419 RVA: 0x000EB28B File Offset: 0x000E948B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigI18nResourcesAll.LogPair = null;
 			ConfigI18nResourcesAll.HandleId = 0;
 		}
 
-		// Token: 0x06001890 RID: 6288 RVA: 0x000E4B45 File Offset: 0x000E2D45
+		// Token: 0x06001914 RID: 6420 RVA: 0x000EB299 File Offset: 0x000E9499
 		public static void Init()
 		{
 			ConfigI18nResourcesAll.HandleId = ConfigCommon.InitDataStatement(ConfigI18nResourcesAll.HandleId, "db_i18nresources.db", "select BinData from `I18nResources`");
 		}
 
-		// Token: 0x06001891 RID: 6289 RVA: 0x000E4B60 File Offset: 0x000E2D60
+		// Token: 0x06001915 RID: 6421 RVA: 0x000EB2B4 File Offset: 0x000E94B4
 		[NullableContext(2)]
 		public static IReadOnlyList<I18nResources> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001C7E RID: 7294
+		// Token: 0x04001D18 RID: 7448
 		private const string DB = "db_i18nresources.db";
 
-		// Token: 0x04001C7F RID: 7295
+		// Token: 0x04001D19 RID: 7449
 		private const string FILE = "i.i18n资源.xlsx";
 
-		// Token: 0x04001C80 RID: 7296
+		// Token: 0x04001D1A RID: 7450
 		private const string TABLE = "I18nResources";
 
-		// Token: 0x04001C81 RID: 7297
+		// Token: 0x04001D1B RID: 7451
 		private const string COMMAND = "select BinData from `I18nResources`";
 
-		// Token: 0x04001C82 RID: 7298
+		// Token: 0x04001D1C RID: 7452
 		private const string KEY_PREFIX = "I18nResourcesAll";
 
-		// Token: 0x04001C83 RID: 7299
+		// Token: 0x04001D1D RID: 7453
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001C84 RID: 7300
+		// Token: 0x04001D1E RID: 7454
 		private static int HandleId;
 	}
 }

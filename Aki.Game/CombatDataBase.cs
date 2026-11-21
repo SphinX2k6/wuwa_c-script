@@ -7,12 +7,12 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.World.Model;
 
-// Token: 0x02002ED7 RID: 11991
+// Token: 0x0200242A RID: 9258
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class CombatDataBase
 {
-	// Token: 0x060199E8 RID: 104936 RVA: 0x006A73D8 File Offset: 0x006A55D8
+	// Token: 0x060172E7 RID: 94951 RVA: 0x006CD57C File Offset: 0x006CB77C
 	public CombatDataBase(int attackerId, int targetId = 0)
 	{
 		this.AttackerId = attackerId;
@@ -26,7 +26,7 @@ public abstract class CombatDataBase
 		});
 	}
 
-	// Token: 0x060199E9 RID: 104937 RVA: 0x006A74C8 File Offset: 0x006A56C8
+	// Token: 0x060172E8 RID: 94952 RVA: 0x006CD66C File Offset: 0x006CB86C
 	public override string ToString()
 	{
 		if (!string.IsNullOrEmpty(this.String))
@@ -37,10 +37,10 @@ public abstract class CombatDataBase
 		return this.String;
 	}
 
-	// Token: 0x060199EA RID: 104938
+	// Token: 0x060172E9 RID: 94953
 	public abstract string ParseToString();
 
-	// Token: 0x060199EB RID: 104939 RVA: 0x006A74F0 File Offset: 0x006A56F0
+	// Token: 0x060172EA RID: 94954 RVA: 0x006CD694 File Offset: 0x006CB894
 	[NullableContext(2)]
 	public static string GetEntityConfigName(int targetId)
 	{
@@ -78,7 +78,7 @@ public abstract class CombatDataBase
 		}
 	}
 
-	// Token: 0x060199EC RID: 104940 RVA: 0x006A75CC File Offset: 0x006A57CC
+	// Token: 0x060172EB RID: 94955 RVA: 0x006CD770 File Offset: 0x006CB970
 	[NullableContext(2)]
 	public static string GetSkillConfigName(int entityId, int skillId)
 	{
@@ -100,7 +100,7 @@ public abstract class CombatDataBase
 		return skillInfo.SkillName.ToString();
 	}
 
-	// Token: 0x060199ED RID: 104941 RVA: 0x006A7618 File Offset: 0x006A5818
+	// Token: 0x060172EC RID: 94956 RVA: 0x006CD7BC File Offset: 0x006CB9BC
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -188,7 +188,7 @@ public abstract class CombatDataBase
 		}
 	}
 
-	// Token: 0x060199EE RID: 104942 RVA: 0x006A7818 File Offset: 0x006A5A18
+	// Token: 0x060172ED RID: 94957 RVA: 0x006CD9BC File Offset: 0x006CBBBC
 	private unsafe static bool SkillContainsDamage(Aki.Config.Skill skill, long damageId)
 	{
 		try
@@ -209,15 +209,15 @@ public abstract class CombatDataBase
 		return false;
 	}
 
-	// Token: 0x0400BFDB RID: 49115
+	// Token: 0x0400C376 RID: 50038
 	protected readonly string DateCreate;
 
-	// Token: 0x0400BFDC RID: 49116
+	// Token: 0x0400C377 RID: 50039
 	protected string String = "";
 
-	// Token: 0x0400BFDD RID: 49117
+	// Token: 0x0400C378 RID: 50040
 	public readonly int AttackerId;
 
-	// Token: 0x0400BFDE RID: 49118
+	// Token: 0x0400C379 RID: 50041
 	public readonly int TargetId;
 }

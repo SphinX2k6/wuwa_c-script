@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E07 RID: 24071
+	// Token: 0x02004DEC RID: 19948
 	public class SpecialEnergyBarWind : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D352 RID: 250706 RVA: 0x00EBE978 File Offset: 0x00EBCB78
+		// Token: 0x060322E1 RID: 205537 RVA: 0x00E0FED8 File Offset: 0x00E0E0D8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D353 RID: 250707 RVA: 0x00EBEA68 File Offset: 0x00EBCC68
+		// Token: 0x060322E2 RID: 205538 RVA: 0x00E0FFC8 File Offset: 0x00E0E1C8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarWind.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D354 RID: 250708 RVA: 0x00EBEAAC File Offset: 0x00EBCCAC
+		// Token: 0x060322E3 RID: 205539 RVA: 0x00E1000C File Offset: 0x00E0E20C
 		protected UniTask InitBarItem()
 		{
 			SpecialEnergyBarWind.<InitBarItem>d__7 <InitBarItem>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D355 RID: 250709 RVA: 0x00EBEAF0 File Offset: 0x00EBCCF0
+		// Token: 0x060322E4 RID: 205540 RVA: 0x00E10050 File Offset: 0x00E0E250
 		protected override void OnStart()
 		{
 			base.InitTweenAnim(4);
@@ -66,39 +66,39 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshCdState(isInCd, true);
 		}
 
-		// Token: 0x0603D356 RID: 250710 RVA: 0x00EBEB3C File Offset: 0x00EBCD3C
+		// Token: 0x060322E5 RID: 205541 RVA: 0x00E1009C File Offset: 0x00E0E29C
 		protected override void AddEvents()
 		{
 			base.AddEvents();
 			base.ListenForTagAddOrRemoveChanged(GameplayTagDefine.EGameplayTagId["角色.R2T1WindNanzhuMd10011.标记用.技能CD中"], new BaseTagComponent.TTagSwitchedCallback(this.OnCdTagChange));
 		}
 
-		// Token: 0x0603D357 RID: 250711 RVA: 0x00EBEB65 File Offset: 0x00EBCD65
+		// Token: 0x060322E6 RID: 205542 RVA: 0x00E100C5 File Offset: 0x00E0E2C5
 		private void OnCdTagChange(int tagId, bool tagExist)
 		{
 			this.RefreshCdState(tagExist, false);
 		}
 
-		// Token: 0x0603D358 RID: 250712 RVA: 0x00EBEB6F File Offset: 0x00EBCD6F
+		// Token: 0x060322E7 RID: 205543 RVA: 0x00E100CF File Offset: 0x00E0E2CF
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D359 RID: 250713 RVA: 0x00EBEB78 File Offset: 0x00EBCD78
+		// Token: 0x060322E8 RID: 205544 RVA: 0x00E100D8 File Offset: 0x00E0E2D8
 		protected override void OnKeyEnableChanged()
 		{
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D35A RID: 250714 RVA: 0x00EBEB84 File Offset: 0x00EBCD84
+		// Token: 0x060322E9 RID: 205545 RVA: 0x00E100E4 File Offset: 0x00E0E2E4
 		private void RefreshBarPercent(bool isStart = false)
 		{
 			bool keyEnable = this.GetKeyEnable();
 			this.RefreshDrawState(keyEnable, isStart);
 		}
 
-		// Token: 0x0603D35B RID: 250715 RVA: 0x00EBEBA0 File Offset: 0x00EBCDA0
+		// Token: 0x060322EA RID: 205546 RVA: 0x00E10100 File Offset: 0x00E0E300
 		private void RefreshDrawState(bool isDrawing, bool isStart = false)
 		{
 			if (this.IsDrawing == isDrawing && !isStart)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D35C RID: 250716 RVA: 0x00EBEC35 File Offset: 0x00EBCE35
+		// Token: 0x060322EB RID: 205547 RVA: 0x00E10195 File Offset: 0x00E0E395
 		private void RefreshCdState(bool isInCd, bool isStart = false)
 		{
 			if (this.IsInCd == isInCd && !isStart)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item.SetUIActive(!isInCd);
 		}
 
-		// Token: 0x0603D35D RID: 250717 RVA: 0x00EBEC60 File Offset: 0x00EBCE60
+		// Token: 0x060322EC RID: 205548 RVA: 0x00E101C0 File Offset: 0x00E0E3C0
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -173,33 +173,33 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barItem.Tick(delta);
 		}
 
-		// Token: 0x0401FE9D RID: 130717
+		// Token: 0x0401A964 RID: 108900
 		private const float EFFECT_BASE_PERCENT = 0.4390244f;
 
-		// Token: 0x0401FE9E RID: 130718
+		// Token: 0x0401A965 RID: 108901
 		[Nullable(2)]
 		private SpecialEnergyBarSlot BarItem;
 
-		// Token: 0x0401FE9F RID: 130719
+		// Token: 0x0401A966 RID: 108902
 		private bool IsDrawing;
 
-		// Token: 0x0401FEA0 RID: 130720
+		// Token: 0x0401A967 RID: 108903
 		private bool IsInCd;
 
-		// Token: 0x0200C169 RID: 49513
+		// Token: 0x0200AB78 RID: 43896
 		private enum EChildType
 		{
-			// Token: 0x0403A6DE RID: 239326
+			// Token: 0x040350D0 RID: 217296
 			SlotBarItem,
-			// Token: 0x0403A6DF RID: 239327
+			// Token: 0x040350D1 RID: 217297
 			StateItem1,
-			// Token: 0x0403A6E0 RID: 239328
+			// Token: 0x040350D2 RID: 217298
 			StateItem2,
-			// Token: 0x0403A6E1 RID: 239329
+			// Token: 0x040350D3 RID: 217299
 			CdNiagaraItem,
-			// Token: 0x0403A6E2 RID: 239330
+			// Token: 0x040350D4 RID: 217300
 			AniIn,
-			// Token: 0x0403A6E3 RID: 239331
+			// Token: 0x040350D5 RID: 217301
 			AniOut
 		}
 	}

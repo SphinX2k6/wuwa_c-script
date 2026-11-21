@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052E5 RID: 21221
+	// Token: 0x02005868 RID: 22632
 	public struct IGameplayDataPersistenceComponent : IFlatbufferObject
 	{
-		// Token: 0x17009BC1 RID: 39873
-		// (get) Token: 0x06022A45 RID: 141893 RVA: 0x004CD3B9 File Offset: 0x004CB5B9
+		// Token: 0x1700A3F2 RID: 41970
+		// (get) Token: 0x06024ADF RID: 150239 RVA: 0x00509EE5 File Offset: 0x005080E5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022A46 RID: 141894 RVA: 0x004CD3C6 File Offset: 0x004CB5C6
+		// Token: 0x06024AE0 RID: 150240 RVA: 0x00509EF2 File Offset: 0x005080F2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022A47 RID: 141895 RVA: 0x004CD3D0 File Offset: 0x004CB5D0
+		// Token: 0x06024AE1 RID: 150241 RVA: 0x00509EFC File Offset: 0x005080FC
 		public static IGameplayDataPersistenceComponent GetRootAsIGameplayDataPersistenceComponent(ByteBuffer _bb)
 		{
 			return IGameplayDataPersistenceComponent.GetRootAsIGameplayDataPersistenceComponent(_bb, default(IGameplayDataPersistenceComponent));
 		}
 
-		// Token: 0x06022A48 RID: 141896 RVA: 0x004CD3EC File Offset: 0x004CB5EC
+		// Token: 0x06024AE2 RID: 150242 RVA: 0x00509F18 File Offset: 0x00508118
 		public static IGameplayDataPersistenceComponent GetRootAsIGameplayDataPersistenceComponent(ByteBuffer _bb, IGameplayDataPersistenceComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022A49 RID: 141897 RVA: 0x004CD409 File Offset: 0x004CB609
+		// Token: 0x06024AE3 RID: 150243 RVA: 0x00509F35 File Offset: 0x00508135
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022A4A RID: 141898 RVA: 0x004CD418 File Offset: 0x004CB618
+		// Token: 0x06024AE4 RID: 150244 RVA: 0x00509F44 File Offset: 0x00508144
 		public IGameplayDataPersistenceComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009BC2 RID: 39874
-		// (get) Token: 0x06022A4B RID: 141899 RVA: 0x004CD428 File Offset: 0x004CB628
+		// Token: 0x1700A3F3 RID: 41971
+		// (get) Token: 0x06024AE5 RID: 150245 RVA: 0x00509F54 File Offset: 0x00508154
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BC3 RID: 39875
-		// (get) Token: 0x06022A4C RID: 141900 RVA: 0x004CD468 File Offset: 0x004CB668
+		// Token: 0x1700A3F4 RID: 41972
+		// (get) Token: 0x06024AE6 RID: 150246 RVA: 0x00509F94 File Offset: 0x00508194
 		public IGameplayDataPersistenceTetrisBoardGame? DataPersistenceGameplay
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BC4 RID: 39876
-		// (get) Token: 0x06022A4D RID: 141901 RVA: 0x004CD4C8 File Offset: 0x004CB6C8
+		// Token: 0x1700A3F5 RID: 41973
+		// (get) Token: 0x06024AE7 RID: 150247 RVA: 0x00509FF4 File Offset: 0x005081F4
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022A4E RID: 141902 RVA: 0x004CD504 File Offset: 0x004CB704
+		// Token: 0x06024AE8 RID: 150248 RVA: 0x0050A030 File Offset: 0x00508230
 		public static Offset<IGameplayDataPersistenceComponent> CreateIGameplayDataPersistenceComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<IGameplayDataPersistenceTetrisBoardGame> DataPersistenceGameplayOffset = default(Offset<IGameplayDataPersistenceTetrisBoardGame>), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGameplayDataPersistenceComponent.EndIGameplayDataPersistenceComponent(builder);
 		}
 
-		// Token: 0x06022A4F RID: 141903 RVA: 0x004CD528 File Offset: 0x004CB728
+		// Token: 0x06024AE9 RID: 150249 RVA: 0x0050A054 File Offset: 0x00508254
 		public static void StartIGameplayDataPersistenceComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06022A50 RID: 141904 RVA: 0x004CD531 File Offset: 0x004CB731
+		// Token: 0x06024AEA RID: 150250 RVA: 0x0050A05D File Offset: 0x0050825D
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06022A51 RID: 141905 RVA: 0x004CD53C File Offset: 0x004CB73C
+		// Token: 0x06024AEB RID: 150251 RVA: 0x0050A068 File Offset: 0x00508268
 		public static void AddDataPersistenceGameplay(FlatBufferBuilder builder, Offset<IGameplayDataPersistenceTetrisBoardGame> dataPersistenceGameplayOffset)
 		{
 			builder.AddOffset(1, dataPersistenceGameplayOffset.Value, 0);
 		}
 
-		// Token: 0x06022A52 RID: 141906 RVA: 0x004CD54C File Offset: 0x004CB74C
+		// Token: 0x06024AEC RID: 150252 RVA: 0x0050A078 File Offset: 0x00508278
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06022A53 RID: 141907 RVA: 0x004CD557 File Offset: 0x004CB757
+		// Token: 0x06024AED RID: 150253 RVA: 0x0050A083 File Offset: 0x00508283
 		public static Offset<IGameplayDataPersistenceComponent> EndIGameplayDataPersistenceComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IGameplayDataPersistenceComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06022A54 RID: 141908 RVA: 0x004CD564 File Offset: 0x004CB764
+		// Token: 0x06024AEE RID: 150254 RVA: 0x0050A090 File Offset: 0x00508290
 		public IGameplayDataPersistenceComponentT UnPack()
 		{
 			IGameplayDataPersistenceComponentT gameplayDataPersistenceComponentT = new IGameplayDataPersistenceComponentT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return gameplayDataPersistenceComponentT;
 		}
 
-		// Token: 0x06022A55 RID: 141909 RVA: 0x004CD580 File Offset: 0x004CB780
+		// Token: 0x06024AEF RID: 150255 RVA: 0x0050A0AC File Offset: 0x005082AC
 		public void UnPackTo(IGameplayDataPersistenceComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06022A56 RID: 141910 RVA: 0x004CD5D4 File Offset: 0x004CB7D4
+		// Token: 0x06024AF0 RID: 150256 RVA: 0x0050A100 File Offset: 0x00508300
 		public static Offset<IGameplayDataPersistenceComponent> Pack(FlatBufferBuilder builder, IGameplayDataPersistenceComponentT _o)
 		{
 			if (_o == null)
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGameplayDataPersistenceComponent.CreateIGameplayDataPersistenceComponent(builder, _o.Disabled, dataPersistenceGameplayOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E483 RID: 58499
+		// Token: 0x0400F0AF RID: 61615
 		private Table __p;
 	}
 }

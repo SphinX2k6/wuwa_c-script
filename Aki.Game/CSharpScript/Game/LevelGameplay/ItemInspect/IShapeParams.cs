@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 {
-	// Token: 0x02006DE2 RID: 28130
+	// Token: 0x02005F61 RID: 24417
 	public interface IShapeParams
 	{
 	}

@@ -8,7 +8,7 @@ using UnrealEngine;
 [Nullable(0)]
 public class AudioPool
 {
-	// Token: 0x060000AA RID: 170 RVA: 0x00006174 File Offset: 0x00004374
+	// Token: 0x060000AC RID: 172 RVA: 0x00005EEC File Offset: 0x000040EC
 	[return: Nullable(2)]
 	public UAkAudioEvent GetAudioPool(string path, bool needLoad = true)
 	{
@@ -41,7 +41,7 @@ public class AudioPool
 		return null;
 	}
 
-	// Token: 0x060000AB RID: 171 RVA: 0x000061F0 File Offset: 0x000043F0
+	// Token: 0x060000AD RID: 173 RVA: 0x00005F68 File Offset: 0x00004168
 	public int? AddCallbackToLoad(string path, Action callback)
 	{
 		AudioPoolItem audioPoolItem = null;
@@ -58,7 +58,7 @@ public class AudioPool
 		return null;
 	}
 
-	// Token: 0x060000AC RID: 172 RVA: 0x0000624C File Offset: 0x0000444C
+	// Token: 0x060000AE RID: 174 RVA: 0x00005FC4 File Offset: 0x000041C4
 	public void LoadAndAddCallback(string path, Action callback, [Nullable(2)] PlayResult playResult)
 	{
 		AudioPoolItem audioPoolItem = null;
@@ -90,7 +90,7 @@ public class AudioPool
 		});
 	}
 
-	// Token: 0x060000AD RID: 173 RVA: 0x000062CC File Offset: 0x000044CC
+	// Token: 0x060000AF RID: 175 RVA: 0x00006044 File Offset: 0x00004244
 	public void DeleteCallback(string path, int callbackId)
 	{
 		AudioPoolItem audioPoolItem = null;
@@ -107,7 +107,7 @@ public class AudioPool
 		instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060000AE RID: 174 RVA: 0x0000631C File Offset: 0x0000451C
+	// Token: 0x060000B0 RID: 176 RVA: 0x00006094 File Offset: 0x00004294
 	public void SetPlayFlag(string path)
 	{
 		AudioPoolItem audioPoolItem = null;
@@ -124,7 +124,7 @@ public class AudioPool
 		instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060000AF RID: 175 RVA: 0x00006374 File Offset: 0x00004574
+	// Token: 0x060000B1 RID: 177 RVA: 0x000060EC File Offset: 0x000042EC
 	public void Tick(float delta)
 	{
 		this.TickTime += delta;
@@ -165,7 +165,7 @@ public class AudioPool
 		}
 	}
 
-	// Token: 0x060000B0 RID: 176 RVA: 0x00006534 File Offset: 0x00004734
+	// Token: 0x060000B2 RID: 178 RVA: 0x000062AC File Offset: 0x000044AC
 	private unsafe void LoadEventAsync(string eventPath, [Nullable(new byte[]
 	{
 		1,
@@ -194,7 +194,7 @@ public class AudioPool
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x060000B1 RID: 177 RVA: 0x00006594 File Offset: 0x00004794
+	// Token: 0x060000B3 RID: 179 RVA: 0x0000630C File Offset: 0x0000450C
 	public void AddExternalSources(string path, UAkExternalMediaAsset asset)
 	{
 		ExternalSourcesPoolItem value = null;
@@ -205,7 +205,7 @@ public class AudioPool
 		}
 	}
 
-	// Token: 0x060000B2 RID: 178 RVA: 0x000065C8 File Offset: 0x000047C8
+	// Token: 0x060000B4 RID: 180 RVA: 0x00006340 File Offset: 0x00004540
 	public void SetExternalSourcesPlayFlag(string path)
 	{
 		ExternalSourcesPoolItem externalSourcesPoolItem = null;
@@ -222,18 +222,18 @@ public class AudioPool
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0400008A RID: 138
+	// Token: 0x0400008B RID: 139
 	private readonly int CheckTime = 10000;
 
-	// Token: 0x0400008B RID: 139
+	// Token: 0x0400008C RID: 140
 	private readonly int CacheTime = 120000;
 
-	// Token: 0x0400008C RID: 140
+	// Token: 0x0400008D RID: 141
 	private readonly Dictionary<string, AudioPoolItem> AudioPoolMap = new Dictionary<string, AudioPoolItem>();
 
-	// Token: 0x0400008D RID: 141
+	// Token: 0x0400008E RID: 142
 	private float TickTime;
 
-	// Token: 0x0400008E RID: 142
+	// Token: 0x0400008F RID: 143
 	private readonly Dictionary<string, ExternalSourcesPoolItem> ExternalSourcesPoolMap = new Dictionary<string, ExternalSourcesPoolItem>();
 }

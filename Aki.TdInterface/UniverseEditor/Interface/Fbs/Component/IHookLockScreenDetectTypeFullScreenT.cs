@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053D5 RID: 21461
+	// Token: 0x0200595B RID: 22875
 	public class IHookLockScreenDetectTypeFullScreenT
 	{
-		// Token: 0x17009DE3 RID: 40419
-		// (get) Token: 0x06023387 RID: 144263 RVA: 0x004E099E File Offset: 0x004DEB9E
-		// (set) Token: 0x06023388 RID: 144264 RVA: 0x004E09A6 File Offset: 0x004DEBA6
+		// Token: 0x1700A61D RID: 42525
+		// (get) Token: 0x0602543F RID: 152639 RVA: 0x0051D9CA File Offset: 0x0051BBCA
+		// (set) Token: 0x06025440 RID: 152640 RVA: 0x0051D9D2 File Offset: 0x0051BBD2
 		public EHookLockScreenDetectType Type { get; set; }
 
-		// Token: 0x06023389 RID: 144265 RVA: 0x004E09AF File Offset: 0x004DEBAF
+		// Token: 0x06025441 RID: 152641 RVA: 0x0051D9DB File Offset: 0x0051BBDB
 		public IHookLockScreenDetectTypeFullScreenT()
 		{
 			this.Type = EHookLockScreenDetectType.CentralEllipse;

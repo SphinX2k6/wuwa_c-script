@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001B85 RID: 7045
+// Token: 0x02001044 RID: 4164
 public class FloroRanchDayProgressItem : UiPanelBase
 {
-	// Token: 0x0600D1C0 RID: 53696 RVA: 0x00301C90 File Offset: 0x002FFE90
+	// Token: 0x0600A5D1 RID: 42449 RVA: 0x0030CD68 File Offset: 0x0030AF68
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -27,20 +27,20 @@ public class FloroRanchDayProgressItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D1C1 RID: 53697 RVA: 0x00301D3B File Offset: 0x002FFF3B
+	// Token: 0x0600A5D2 RID: 42450 RVA: 0x0030CE13 File Offset: 0x0030B013
 	protected override void OnStart()
 	{
 		this.PointLayout = new GenericLayout<PointItem, IProgressItem>(base.GetHorizontalLayout(2), new Func<PointItem>(this.CreatePointItem), base.GetItem(3).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x0600D1C2 RID: 53698 RVA: 0x00301D6E File Offset: 0x002FFF6E
+	// Token: 0x0600A5D3 RID: 42451 RVA: 0x0030CE46 File Offset: 0x0030B046
 	[NullableContext(1)]
 	private PointItem CreatePointItem()
 	{
 		return new PointItem();
 	}
 
-	// Token: 0x0600D1C3 RID: 53699 RVA: 0x00301D78 File Offset: 0x002FFF78
+	// Token: 0x0600A5D4 RID: 42452 RVA: 0x0030CE50 File Offset: 0x0030B050
 	public void RefreshDay(int remindDay, long maxDay)
 	{
 		List<IProgressItem> list = new List<IProgressItem>();
@@ -71,23 +71,23 @@ public class FloroRanchDayProgressItem : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x04006037 RID: 24631
+	// Token: 0x04006106 RID: 24838
 	[Nullable(1)]
 	private GenericLayout<PointItem, IProgressItem> PointLayout;
 
-	// Token: 0x02008108 RID: 33032
+	// Token: 0x02007296 RID: 29334
 	private class EComponentDefine
 	{
-		// Token: 0x0402A1E1 RID: 172513
+		// Token: 0x04025515 RID: 152853
 		public const int DayText = 0;
 
-		// Token: 0x0402A1E2 RID: 172514
+		// Token: 0x04025516 RID: 152854
 		public const int ProgressSprite = 1;
 
-		// Token: 0x0402A1E3 RID: 172515
+		// Token: 0x04025517 RID: 152855
 		public const int PointLayout = 2;
 
-		// Token: 0x0402A1E4 RID: 172516
+		// Token: 0x04025518 RID: 152856
 		public const int PointItem = 3;
 	}
 }

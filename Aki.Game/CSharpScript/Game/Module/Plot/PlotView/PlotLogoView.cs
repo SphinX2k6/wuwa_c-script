@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005054 RID: 20564
+	// Token: 0x02004024 RID: 16420
 	public class PlotLogoView : UiViewBase
 	{
-		// Token: 0x060349EB RID: 215531 RVA: 0x00C6E78C File Offset: 0x00C6C98C
+		// Token: 0x060298DE RID: 170206 RVA: 0x00BBBA2C File Offset: 0x00BB9C2C
 		[NullableContext(1)]
 		public PlotLogoView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060349EC RID: 215532 RVA: 0x00C6E798 File Offset: 0x00C6C998
+		// Token: 0x060298DF RID: 170207 RVA: 0x00BBBA38 File Offset: 0x00BB9C38
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060349ED RID: 215533 RVA: 0x00C6E7E0 File Offset: 0x00C6C9E0
+		// Token: 0x060298E0 RID: 170208 RVA: 0x00BBBA80 File Offset: 0x00BB9C80
 		protected override UniTask OnCreateAsync()
 		{
 			PlotLogoView.<OnCreateAsync>d__4 <OnCreateAsync>d__;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060349EE RID: 215534 RVA: 0x00C6E823 File Offset: 0x00C6CA23
+		// Token: 0x060298E1 RID: 170209 RVA: 0x00BBBAC3 File Offset: 0x00BB9CC3
 		protected override void OnBeforeShow()
 		{
 			if (this.Texture != null)
@@ -55,14 +55,14 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x0401C0B1 RID: 114865
+		// Token: 0x04016ADC RID: 92892
 		[Nullable(2)]
 		private UTexture Texture;
 
-		// Token: 0x0200B1AE RID: 45486
+		// Token: 0x02009BE8 RID: 39912
 		private static class EChildComp
 		{
-			// Token: 0x04035E2E RID: 220718
+			// Token: 0x04030883 RID: 198787
 			public const int Logo = 0;
 		}
 	}

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F8A RID: 28554
+	// Token: 0x02007750 RID: 30544
 	public struct IServerForceEnableLevelPlay : IFlatbufferObject
 	{
-		// Token: 0x1700D417 RID: 54295
-		// (get) Token: 0x06032758 RID: 206680 RVA: 0x006CFAF8 File Offset: 0x006CDCF8
+		// Token: 0x1700DFE6 RID: 57318
+		// (get) Token: 0x060359A8 RID: 219560 RVA: 0x0072F4B0 File Offset: 0x0072D6B0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032759 RID: 206681 RVA: 0x006CFB05 File Offset: 0x006CDD05
+		// Token: 0x060359A9 RID: 219561 RVA: 0x0072F4BD File Offset: 0x0072D6BD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603275A RID: 206682 RVA: 0x006CFB0C File Offset: 0x006CDD0C
+		// Token: 0x060359AA RID: 219562 RVA: 0x0072F4C4 File Offset: 0x0072D6C4
 		public static IServerForceEnableLevelPlay GetRootAsIServerForceEnableLevelPlay(ByteBuffer _bb)
 		{
 			return IServerForceEnableLevelPlay.GetRootAsIServerForceEnableLevelPlay(_bb, default(IServerForceEnableLevelPlay));
 		}
 
-		// Token: 0x0603275B RID: 206683 RVA: 0x006CFB28 File Offset: 0x006CDD28
+		// Token: 0x060359AB RID: 219563 RVA: 0x0072F4E0 File Offset: 0x0072D6E0
 		public static IServerForceEnableLevelPlay GetRootAsIServerForceEnableLevelPlay(ByteBuffer _bb, IServerForceEnableLevelPlay obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603275C RID: 206684 RVA: 0x006CFB45 File Offset: 0x006CDD45
+		// Token: 0x060359AC RID: 219564 RVA: 0x0072F4FD File Offset: 0x0072D6FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603275D RID: 206685 RVA: 0x006CFB54 File Offset: 0x006CDD54
+		// Token: 0x060359AD RID: 219565 RVA: 0x0072F50C File Offset: 0x0072D70C
 		public IServerForceEnableLevelPlay __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0603275E RID: 206686 RVA: 0x006CFB64 File Offset: 0x006CDD64
+		// Token: 0x060359AE RID: 219566 RVA: 0x0072F51C File Offset: 0x0072D71C
 		public IEnableLevelPlayConfig? Configs(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IEnableLevelPlayConfig?(default(IEnableLevelPlayConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700D418 RID: 54296
-		// (get) Token: 0x0603275F RID: 206687 RVA: 0x006CFBC4 File Offset: 0x006CDDC4
+		// Token: 0x1700DFE7 RID: 57319
+		// (get) Token: 0x060359AF RID: 219567 RVA: 0x0072F57C File Offset: 0x0072D77C
 		public int ConfigsLength
 		{
 			get
@@ -74,7 +74,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032760 RID: 206688 RVA: 0x006CFBEF File Offset: 0x006CDDEF
+		// Token: 0x060359B0 RID: 219568 RVA: 0x0072F5A7 File Offset: 0x0072D7A7
 		public static Offset<IServerForceEnableLevelPlay> CreateIServerForceEnableLevelPlay(FlatBufferBuilder builder, VectorOffset ConfigsOffset = default(VectorOffset))
 		{
 			builder.StartTable(1);
@@ -82,19 +82,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IServerForceEnableLevelPlay.EndIServerForceEnableLevelPlay(builder);
 		}
 
-		// Token: 0x06032761 RID: 206689 RVA: 0x006CFC05 File Offset: 0x006CDE05
+		// Token: 0x060359B1 RID: 219569 RVA: 0x0072F5BD File Offset: 0x0072D7BD
 		public static void StartIServerForceEnableLevelPlay(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06032762 RID: 206690 RVA: 0x006CFC0E File Offset: 0x006CDE0E
+		// Token: 0x060359B2 RID: 219570 RVA: 0x0072F5C6 File Offset: 0x0072D7C6
 		public static void AddConfigs(FlatBufferBuilder builder, VectorOffset configsOffset)
 		{
 			builder.AddOffset(0, configsOffset.Value, 0);
 		}
 
-		// Token: 0x06032763 RID: 206691 RVA: 0x006CFC20 File Offset: 0x006CDE20
+		// Token: 0x060359B3 RID: 219571 RVA: 0x0072F5D8 File Offset: 0x0072D7D8
 		public static VectorOffset CreateConfigsVector(FlatBufferBuilder builder, Offset<IEnableLevelPlayConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032764 RID: 206692 RVA: 0x006CFC60 File Offset: 0x006CDE60
+		// Token: 0x060359B4 RID: 219572 RVA: 0x0072F618 File Offset: 0x0072D818
 		public static VectorOffset CreateConfigsVectorBlock(FlatBufferBuilder builder, Offset<IEnableLevelPlayConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032765 RID: 206693 RVA: 0x006CFC7A File Offset: 0x006CDE7A
+		// Token: 0x060359B5 RID: 219573 RVA: 0x0072F632 File Offset: 0x0072D832
 		public static VectorOffset CreateConfigsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IEnableLevelPlayConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -121,7 +121,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032766 RID: 206694 RVA: 0x006CFC98 File Offset: 0x006CDE98
+		// Token: 0x060359B6 RID: 219574 RVA: 0x0072F650 File Offset: 0x0072D850
 		public static VectorOffset CreateConfigsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -129,19 +129,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032767 RID: 206695 RVA: 0x006CFCB1 File Offset: 0x006CDEB1
+		// Token: 0x060359B7 RID: 219575 RVA: 0x0072F669 File Offset: 0x0072D869
 		public static void StartConfigsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06032768 RID: 206696 RVA: 0x006CFCBC File Offset: 0x006CDEBC
+		// Token: 0x060359B8 RID: 219576 RVA: 0x0072F674 File Offset: 0x0072D874
 		public static Offset<IServerForceEnableLevelPlay> EndIServerForceEnableLevelPlay(FlatBufferBuilder builder)
 		{
 			return new Offset<IServerForceEnableLevelPlay>(builder.EndTable());
 		}
 
-		// Token: 0x06032769 RID: 206697 RVA: 0x006CFCCC File Offset: 0x006CDECC
+		// Token: 0x060359B9 RID: 219577 RVA: 0x0072F684 File Offset: 0x0072D884
 		public IServerForceEnableLevelPlayT UnPack()
 		{
 			IServerForceEnableLevelPlayT serverForceEnableLevelPlayT = new IServerForceEnableLevelPlayT();
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return serverForceEnableLevelPlayT;
 		}
 
-		// Token: 0x0603276A RID: 206698 RVA: 0x006CFCE8 File Offset: 0x006CDEE8
+		// Token: 0x060359BA RID: 219578 RVA: 0x0072F6A0 File Offset: 0x0072D8A0
 		public void UnPackTo(IServerForceEnableLevelPlayT _o)
 		{
 			_o.Configs = new List<IEnableLevelPlayConfigT>();
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603276B RID: 206699 RVA: 0x006CFD48 File Offset: 0x006CDF48
+		// Token: 0x060359BB RID: 219579 RVA: 0x0072F700 File Offset: 0x0072D900
 		public static Offset<IServerForceEnableLevelPlay> Pack(FlatBufferBuilder builder, IServerForceEnableLevelPlayT _o)
 		{
 			if (_o == null)
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IServerForceEnableLevelPlay.CreateIServerForceEnableLevelPlay(builder, configsOffset);
 		}
 
-		// Token: 0x04011987 RID: 72071
+		// Token: 0x04012969 RID: 76137
 		private Table __p;
 	}
 }

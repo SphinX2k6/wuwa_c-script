@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FE5 RID: 20453
+	// Token: 0x02005544 RID: 21828
 	public struct IConditionalNpcPerformOnInteract : IFlatbufferObject
 	{
-		// Token: 0x1700942D RID: 37933
-		// (get) Token: 0x06020AED RID: 133869 RVA: 0x0048B5C7 File Offset: 0x004897C7
+		// Token: 0x17009C0E RID: 39950
+		// (get) Token: 0x06022A0D RID: 141837 RVA: 0x004C5017 File Offset: 0x004C3217
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020AEE RID: 133870 RVA: 0x0048B5D4 File Offset: 0x004897D4
+		// Token: 0x06022A0E RID: 141838 RVA: 0x004C5024 File Offset: 0x004C3224
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06020AEF RID: 133871 RVA: 0x0048B5DC File Offset: 0x004897DC
+		// Token: 0x06022A0F RID: 141839 RVA: 0x004C502C File Offset: 0x004C322C
 		public static IConditionalNpcPerformOnInteract GetRootAsIConditionalNpcPerformOnInteract(ByteBuffer _bb)
 		{
 			return IConditionalNpcPerformOnInteract.GetRootAsIConditionalNpcPerformOnInteract(_bb, default(IConditionalNpcPerformOnInteract));
 		}
 
-		// Token: 0x06020AF0 RID: 133872 RVA: 0x0048B5F8 File Offset: 0x004897F8
+		// Token: 0x06022A10 RID: 141840 RVA: 0x004C5048 File Offset: 0x004C3248
 		public static IConditionalNpcPerformOnInteract GetRootAsIConditionalNpcPerformOnInteract(ByteBuffer _bb, IConditionalNpcPerformOnInteract obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020AF1 RID: 133873 RVA: 0x0048B615 File Offset: 0x00489815
+		// Token: 0x06022A11 RID: 141841 RVA: 0x004C5065 File Offset: 0x004C3265
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06020AF2 RID: 133874 RVA: 0x0048B624 File Offset: 0x00489824
+		// Token: 0x06022A12 RID: 141842 RVA: 0x004C5074 File Offset: 0x004C3274
 		public IConditionalNpcPerformOnInteract __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700942E RID: 37934
-		// (get) Token: 0x06020AF3 RID: 133875 RVA: 0x0048B634 File Offset: 0x00489834
+		// Token: 0x17009C0F RID: 39951
+		// (get) Token: 0x06022A13 RID: 141843 RVA: 0x004C5084 File Offset: 0x004C3284
 		public IConditionGroup? Condition
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700942F RID: 37935
-		// (get) Token: 0x06020AF4 RID: 133876 RVA: 0x0048B694 File Offset: 0x00489894
+		// Token: 0x17009C10 RID: 39952
+		// (get) Token: 0x06022A14 RID: 141844 RVA: 0x004C50E4 File Offset: 0x004C32E4
 		public INpcPerformOnInteract? Perform
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020AF5 RID: 133877 RVA: 0x0048B6F1 File Offset: 0x004898F1
+		// Token: 0x06022A15 RID: 141845 RVA: 0x004C5141 File Offset: 0x004C3341
 		public static Offset<IConditionalNpcPerformOnInteract> CreateIConditionalNpcPerformOnInteract(FlatBufferBuilder builder, Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>), Offset<INpcPerformOnInteract> PerformOffset = default(Offset<INpcPerformOnInteract>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IConditionalNpcPerformOnInteract.EndIConditionalNpcPerformOnInteract(builder);
 		}
 
-		// Token: 0x06020AF6 RID: 133878 RVA: 0x0048B70E File Offset: 0x0048990E
+		// Token: 0x06022A16 RID: 141846 RVA: 0x004C515E File Offset: 0x004C335E
 		public static void StartIConditionalNpcPerformOnInteract(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06020AF7 RID: 133879 RVA: 0x0048B717 File Offset: 0x00489917
+		// Token: 0x06022A17 RID: 141847 RVA: 0x004C5167 File Offset: 0x004C3367
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IConditionGroup> conditionOffset)
 		{
 			builder.AddOffset(0, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x06020AF8 RID: 133880 RVA: 0x0048B727 File Offset: 0x00489927
+		// Token: 0x06022A18 RID: 141848 RVA: 0x004C5177 File Offset: 0x004C3377
 		public static void AddPerform(FlatBufferBuilder builder, Offset<INpcPerformOnInteract> performOffset)
 		{
 			builder.AddOffset(1, performOffset.Value, 0);
 		}
 
-		// Token: 0x06020AF9 RID: 133881 RVA: 0x0048B737 File Offset: 0x00489937
+		// Token: 0x06022A19 RID: 141849 RVA: 0x004C5187 File Offset: 0x004C3387
 		public static Offset<IConditionalNpcPerformOnInteract> EndIConditionalNpcPerformOnInteract(FlatBufferBuilder builder)
 		{
 			return new Offset<IConditionalNpcPerformOnInteract>(builder.EndTable());
 		}
 
-		// Token: 0x06020AFA RID: 133882 RVA: 0x0048B744 File Offset: 0x00489944
+		// Token: 0x06022A1A RID: 141850 RVA: 0x004C5194 File Offset: 0x004C3394
 		public IConditionalNpcPerformOnInteractT UnPack()
 		{
 			IConditionalNpcPerformOnInteractT conditionalNpcPerformOnInteractT = new IConditionalNpcPerformOnInteractT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return conditionalNpcPerformOnInteractT;
 		}
 
-		// Token: 0x06020AFB RID: 133883 RVA: 0x0048B760 File Offset: 0x00489960
+		// Token: 0x06022A1B RID: 141851 RVA: 0x004C51B0 File Offset: 0x004C33B0
 		public void UnPackTo(IConditionalNpcPerformOnInteractT _o)
 		{
 			_o.Condition = ((this.Condition != null) ? this.Condition.Value.UnPack() : null);
 			_o.Perform = ((this.Perform != null) ? this.Perform.Value.UnPack() : null);
 		}
 
-		// Token: 0x06020AFC RID: 133884 RVA: 0x0048B7CC File Offset: 0x004899CC
+		// Token: 0x06022A1C RID: 141852 RVA: 0x004C521C File Offset: 0x004C341C
 		public static Offset<IConditionalNpcPerformOnInteract> Pack(FlatBufferBuilder builder, IConditionalNpcPerformOnInteractT _o)
 		{
 			if (_o == null)
@@ -138,7 +138,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IConditionalNpcPerformOnInteract.CreateIConditionalNpcPerformOnInteract(builder, conditionOffset, performOffset);
 		}
 
-		// Token: 0x0400DF9D RID: 57245
+		// Token: 0x0400EB93 RID: 60307
 		private Table __p;
 	}
 }

@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001420 RID: 5152
+// Token: 0x020008D4 RID: 2260
 [NullableContext(2)]
 [Nullable(0)]
 internal class PinballBattleTipsParam : IPinballBattleTipsBaseParam
 {
-	// Token: 0x17000C7D RID: 3197
-	// (get) Token: 0x0600913D RID: 37181 RVA: 0x001F2C68 File Offset: 0x001F0E68
-	// (set) Token: 0x0600913E RID: 37182 RVA: 0x001F2C70 File Offset: 0x001F0E70
+	// Token: 0x17000C9D RID: 3229
+	// (get) Token: 0x060064D2 RID: 25810 RVA: 0x001FB7A4 File Offset: 0x001F99A4
+	// (set) Token: 0x060064D3 RID: 25811 RVA: 0x001FB7AC File Offset: 0x001F99AC
 	public Action CloseCallback { get; set; }
 
-	// Token: 0x17000C7E RID: 3198
-	// (get) Token: 0x0600913F RID: 37183 RVA: 0x001F2C79 File Offset: 0x001F0E79
-	// (set) Token: 0x06009140 RID: 37184 RVA: 0x001F2C81 File Offset: 0x001F0E81
+	// Token: 0x17000C9E RID: 3230
+	// (get) Token: 0x060064D4 RID: 25812 RVA: 0x001FB7B5 File Offset: 0x001F99B5
+	// (set) Token: 0x060064D5 RID: 25813 RVA: 0x001FB7BD File Offset: 0x001F99BD
 	public bool? AddMask { get; set; }
 
-	// Token: 0x17000C7F RID: 3199
-	// (get) Token: 0x06009141 RID: 37185 RVA: 0x001F2C8A File Offset: 0x001F0E8A
-	// (set) Token: 0x06009142 RID: 37186 RVA: 0x001F2C92 File Offset: 0x001F0E92
+	// Token: 0x17000C9F RID: 3231
+	// (get) Token: 0x060064D6 RID: 25814 RVA: 0x001FB7C6 File Offset: 0x001F99C6
+	// (set) Token: 0x060064D7 RID: 25815 RVA: 0x001FB7CE File Offset: 0x001F99CE
 	public int? CloseTime { get; set; }
 
-	// Token: 0x17000C80 RID: 3200
-	// (get) Token: 0x06009143 RID: 37187 RVA: 0x001F2C9B File Offset: 0x001F0E9B
-	// (set) Token: 0x06009144 RID: 37188 RVA: 0x001F2CA3 File Offset: 0x001F0EA3
+	// Token: 0x17000CA0 RID: 3232
+	// (get) Token: 0x060064D8 RID: 25816 RVA: 0x001FB7D7 File Offset: 0x001F99D7
+	// (set) Token: 0x060064D9 RID: 25817 RVA: 0x001FB7DF File Offset: 0x001F99DF
 	public bool? MoveToBehind { get; set; }
 }

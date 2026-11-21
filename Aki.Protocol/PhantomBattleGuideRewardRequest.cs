@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000C90 RID: 3216
+	// Token: 0x02000C80 RID: 3200
 	[NetMessage(EMessageId.PhantomBattleGuideRewardRequest)]
 	public sealed class PhantomBattleGuideRewardRequest : IMessage<PhantomBattleGuideRewardRequest>, IMessage, IEquatable<PhantomBattleGuideRewardRequest>, IDeepCloneable<PhantomBattleGuideRewardRequest>, IBufferMessage
 	{
-		// Token: 0x060116F8 RID: 71416 RVA: 0x0028E392 File Offset: 0x0028C592
+		// Token: 0x060115F8 RID: 71160 RVA: 0x0028C626 File Offset: 0x0028A826
 		[NullableContext(1)]
 		public static PhantomBattleGuideRewardRequest Create()
 		{
 			return new PhantomBattleGuideRewardRequest();
 		}
 
-		// Token: 0x170039C3 RID: 14787
-		// (get) Token: 0x060116F9 RID: 71417 RVA: 0x0028E399 File Offset: 0x0028C599
+		// Token: 0x1700398C RID: 14732
+		// (get) Token: 0x060115F9 RID: 71161 RVA: 0x0028C62D File Offset: 0x0028A82D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170039C4 RID: 14788
-		// (get) Token: 0x060116FA RID: 71418 RVA: 0x0028E39C File Offset: 0x0028C59C
+		// Token: 0x1700398D RID: 14733
+		// (get) Token: 0x060115FA RID: 71162 RVA: 0x0028C630 File Offset: 0x0028A830
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060116FB RID: 71419 RVA: 0x0028E3A3 File Offset: 0x0028C5A3
+		// Token: 0x060115FB RID: 71163 RVA: 0x0028C637 File Offset: 0x0028A837
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleGuideRewardRequest()
 		{
 		}
 
-		// Token: 0x060116FC RID: 71420 RVA: 0x0028E3AB File Offset: 0x0028C5AB
+		// Token: 0x060115FC RID: 71164 RVA: 0x0028C63F File Offset: 0x0028A83F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleGuideRewardRequest(PhantomBattleGuideRewardRequest other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060116FD RID: 71421 RVA: 0x0028E3C4 File Offset: 0x0028C5C4
+		// Token: 0x060115FD RID: 71165 RVA: 0x0028C658 File Offset: 0x0028A858
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleGuideRewardRequest Clone()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			return new PhantomBattleGuideRewardRequest(this);
 		}
 
-		// Token: 0x060116FE RID: 71422 RVA: 0x0028E3CC File Offset: 0x0028C5CC
+		// Token: 0x060115FE RID: 71166 RVA: 0x0028C660 File Offset: 0x0028A860
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PhantomBattleGuideRewardRequest);
 		}
 
-		// Token: 0x060116FF RID: 71423 RVA: 0x0028E3DA File Offset: 0x0028C5DA
+		// Token: 0x060115FF RID: 71167 RVA: 0x0028C66E File Offset: 0x0028A86E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PhantomBattleGuideRewardRequest other)
@@ -81,7 +81,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x06011700 RID: 71424 RVA: 0x0028E3F8 File Offset: 0x0028C5F8
+		// Token: 0x06011600 RID: 71168 RVA: 0x0028C68C File Offset: 0x0028A88C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06011701 RID: 71425 RVA: 0x0028E41E File Offset: 0x0028C61E
+		// Token: 0x06011601 RID: 71169 RVA: 0x0028C6B2 File Offset: 0x0028A8B2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -102,7 +102,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06011702 RID: 71426 RVA: 0x0028E42B File Offset: 0x0028C62B
+		// Token: 0x06011602 RID: 71170 RVA: 0x0028C6BF File Offset: 0x0028A8BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06011703 RID: 71427 RVA: 0x0028E434 File Offset: 0x0028C634
+		// Token: 0x06011603 RID: 71171 RVA: 0x0028C6C8 File Offset: 0x0028A8C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -121,7 +121,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06011704 RID: 71428 RVA: 0x0028E44C File Offset: 0x0028C64C
+		// Token: 0x06011604 RID: 71172 RVA: 0x0028C6E0 File Offset: 0x0028A8E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06011705 RID: 71429 RVA: 0x0028E472 File Offset: 0x0028C672
+		// Token: 0x06011605 RID: 71173 RVA: 0x0028C706 File Offset: 0x0028A906
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PhantomBattleGuideRewardRequest other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06011706 RID: 71430 RVA: 0x0028E48F File Offset: 0x0028C68F
+		// Token: 0x06011606 RID: 71174 RVA: 0x0028C723 File Offset: 0x0028A923
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06011707 RID: 71431 RVA: 0x0028E498 File Offset: 0x0028C698
+		// Token: 0x06011607 RID: 71175 RVA: 0x0028C72C File Offset: 0x0028A92C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -170,7 +170,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006E1C RID: 28188
+		// Token: 0x04006E30 RID: 28208
 		private UnknownFieldSet _unknownFields;
 	}
 }

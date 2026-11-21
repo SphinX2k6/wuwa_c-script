@@ -3,31 +3,31 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Effect
 {
-	// Token: 0x02006DF3 RID: 28147
+	// Token: 0x02005F72 RID: 24434
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ItemInspectEffectDefine
 	{
-		// Token: 0x06044ABA RID: 281274 RVA: 0x010F357B File Offset: 0x010F177B
+		// Token: 0x0603AC1E RID: 240670 RVA: 0x0109D843 File Offset: 0x0109BA43
 		public void Init(Func<ItemInspectEffectBase> effectClass, bool repeatable)
 		{
 			this.EffectClass = effectClass;
 			this.Repeatable = repeatable;
 		}
 
-		// Token: 0x06044ABB RID: 281275 RVA: 0x010F358B File Offset: 0x010F178B
+		// Token: 0x0603AC1F RID: 240671 RVA: 0x0109D853 File Offset: 0x0109BA53
 		public ItemInspectEffectBase GetEffect()
 		{
 			return this.EffectClass();
 		}
 
-		// Token: 0x06044ABC RID: 281276 RVA: 0x010F3598 File Offset: 0x010F1798
+		// Token: 0x0603AC20 RID: 240672 RVA: 0x0109D860 File Offset: 0x0109BA60
 		public bool IsRepeatable()
 		{
 			return this.Repeatable;
 		}
 
-		// Token: 0x04023B9E RID: 146334
+		// Token: 0x0401EE40 RID: 126528
 		[Nullable(new byte[]
 		{
 			2,
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Effect
 		})]
 		private Func<ItemInspectEffectBase> EffectClass;
 
-		// Token: 0x04023B9F RID: 146335
+		// Token: 0x0401EE41 RID: 126529
 		private bool Repeatable;
 	}
 }

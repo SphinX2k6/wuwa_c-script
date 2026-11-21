@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RecallQuest.Views
 {
-	// Token: 0x02004F19 RID: 20249
+	// Token: 0x02003EE2 RID: 16098
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,13 +18,13 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 	})]
 	public class RecallFunctionAttachGrid : AutoAttachItem<List<int>>
 	{
-		// Token: 0x06033EB6 RID: 212662 RVA: 0x00C2B1DA File Offset: 0x00C293DA
+		// Token: 0x06028D21 RID: 167201 RVA: 0x00B7484E File Offset: 0x00B72A4E
 		[NullableContext(2)]
 		public RecallFunctionAttachGrid(AActor uiItem = null) : base(uiItem)
 		{
 		}
 
-		// Token: 0x06033EB7 RID: 212663 RVA: 0x00C2B1E4 File Offset: 0x00C293E4
+		// Token: 0x06028D22 RID: 167202 RVA: 0x00B74858 File Offset: 0x00B72A58
 		protected override void OnRefreshItem(List<int> data)
 		{
 			if (data == null)
@@ -39,23 +39,23 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			this.NeedAnim = false;
 		}
 
-		// Token: 0x06033EB8 RID: 212664 RVA: 0x00C2B220 File Offset: 0x00C29420
+		// Token: 0x06028D23 RID: 167203 RVA: 0x00B74894 File Offset: 0x00B72A94
 		public override void OnSelect()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.FunctionGridSelected, base.GetCurrentShowItemIndex());
 		}
 
-		// Token: 0x06033EB9 RID: 212665 RVA: 0x00C2B238 File Offset: 0x00C29438
+		// Token: 0x06028D24 RID: 167204 RVA: 0x00B748AC File Offset: 0x00B72AAC
 		protected override void OnUnSelect()
 		{
 		}
 
-		// Token: 0x06033EBA RID: 212666 RVA: 0x00C2B23A File Offset: 0x00C2943A
+		// Token: 0x06028D25 RID: 167205 RVA: 0x00B748AE File Offset: 0x00B72AAE
 		protected override void OnMoveItem()
 		{
 		}
 
-		// Token: 0x06033EBB RID: 212667 RVA: 0x00C2B23C File Offset: 0x00C2943C
+		// Token: 0x06028D26 RID: 167206 RVA: 0x00B748B0 File Offset: 0x00B72AB0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -69,32 +69,32 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033EBC RID: 212668 RVA: 0x00C2B2A8 File Offset: 0x00C294A8
+		// Token: 0x06028D27 RID: 167207 RVA: 0x00B7491C File Offset: 0x00B72B1C
 		protected override void OnStart()
 		{
 			this.RecallLayout = new GenericLayout<RecallFunctionItem, int>(base.GetGridLayout(0), () => new RecallFunctionItem(), base.GetItem(1).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x06033EBD RID: 212669 RVA: 0x00C2B2F9 File Offset: 0x00C294F9
+		// Token: 0x06028D28 RID: 167208 RVA: 0x00B7496D File Offset: 0x00B72B6D
 		public void SetNeedAnim(bool value)
 		{
 			this.NeedAnim = value;
 		}
 
-		// Token: 0x0401B974 RID: 113012
+		// Token: 0x04016347 RID: 90951
 		public GenericLayout<RecallFunctionItem, int> RecallLayout;
 
-		// Token: 0x0401B975 RID: 113013
+		// Token: 0x04016348 RID: 90952
 		private bool NeedAnim;
 
-		// Token: 0x0200B05F RID: 45151
+		// Token: 0x02009A8F RID: 39567
 		[NullableContext(0)]
 		private class ECompDefine
 		{
-			// Token: 0x0403586A RID: 219242
+			// Token: 0x04030295 RID: 197269
 			public const int LayoutItem = 0;
 
-			// Token: 0x0403586B RID: 219243
+			// Token: 0x04030296 RID: 197270
 			public const int GridItem = 1;
 		}
 	}

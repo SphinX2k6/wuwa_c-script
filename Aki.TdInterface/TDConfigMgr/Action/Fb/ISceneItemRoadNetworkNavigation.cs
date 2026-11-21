@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AD5 RID: 10965
+	// Token: 0x02002DC9 RID: 11721
 	public class ISceneItemRoadNetworkNavigation : IRoadNetworkNavigationTarget
 	{
-		// Token: 0x0600F07A RID: 61562 RVA: 0x0022EAE9 File Offset: 0x0022CCE9
-		[NullableContext(1)]
+		// Token: 0x0600FF30 RID: 65328 RVA: 0x0024C7F5 File Offset: 0x0024A9F5
 		public static ISceneItemRoadNetworkNavigation Create(ISceneItemRoadNetworkNavigation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C92 RID: 19602
-		// (get) Token: 0x0600F07B RID: 61563 RVA: 0x0022EB08 File Offset: 0x0022CD08
+		// Token: 0x1700504C RID: 20556
+		// (get) Token: 0x0600FF31 RID: 65329 RVA: 0x0024C814 File Offset: 0x0024AA14
 		public override ERoadNetworkNavigationTarget Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C93 RID: 19603
-		// (get) Token: 0x0600F07C RID: 61564 RVA: 0x0022EB15 File Offset: 0x0022CD15
+		// Token: 0x1700504D RID: 20557
+		// (get) Token: 0x0600FF32 RID: 65330 RVA: 0x0024C821 File Offset: 0x0024AA21
 		public virtual int TargetId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008447 RID: 33863
+		// Token: 0x04008B4B RID: 35659
 		private ISceneItemRoadNetworkNavigation Instance;
 	}
 }

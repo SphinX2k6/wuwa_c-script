@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CF4 RID: 3316
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DEC RID: 3564
 	public class ITimeStopTarget
 	{
-		// Token: 0x06004BC4 RID: 19396 RVA: 0x000BD202 File Offset: 0x000BB402
+		// Token: 0x060050D2 RID: 20690 RVA: 0x000C8732 File Offset: 0x000C6932
 		public static ITimeStopTarget Create(ITimeStopTarget? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001799 RID: 6041
-		// (get) Token: 0x06004BC5 RID: 19397 RVA: 0x000BD224 File Offset: 0x000BB424
+		// Token: 0x170018F5 RID: 6389
+		// (get) Token: 0x060050D3 RID: 20691 RVA: 0x000C8754 File Offset: 0x000C6954
 		public virtual List<int> EntityIds
 		{
 			get
@@ -44,8 +42,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700179A RID: 6042
-		// (get) Token: 0x06004BC6 RID: 19398 RVA: 0x000BD288 File Offset: 0x000BB488
+		// Token: 0x170018F6 RID: 6390
+		// (get) Token: 0x060050D4 RID: 20692 RVA: 0x000C87B8 File Offset: 0x000C69B8
 		[Nullable(2)]
 		public virtual IDynamicEntityMatch EntityMatch
 		{
@@ -62,20 +60,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B51 RID: 11089
+		// Token: 0x04002E0B RID: 11787
 		private ITimeStopTarget Instance;
 
-		// Token: 0x04002B52 RID: 11090
+		// Token: 0x04002E0C RID: 11788
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04002B53 RID: 11091
+		// Token: 0x04002E0D RID: 11789
 		private bool _EntityIdsInited;
 
-		// Token: 0x04002B54 RID: 11092
+		// Token: 0x04002E0E RID: 11790
 		[Nullable(2)]
 		private IDynamicEntityMatch _EntityMatchCache;
 
-		// Token: 0x04002B55 RID: 11093
+		// Token: 0x04002E0F RID: 11791
 		private bool _EntityMatchInited;
 	}
 }

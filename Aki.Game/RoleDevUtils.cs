@@ -14,12 +14,12 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Ui;
 using CSharpScript.Module.InstanceDungeon;
 
-// Token: 0x02002811 RID: 10257
+// Token: 0x02001D8C RID: 7564
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleDevUtils
 {
-	// Token: 0x060150F2 RID: 86258 RVA: 0x00554EA3 File Offset: 0x005530A3
+	// Token: 0x06012AF2 RID: 76530 RVA: 0x0057FCA3 File Offset: 0x0057DEA3
 	public static ERoleDevDataType GetRoleDevDataTypeByRoleId(int roleId)
 	{
 		if (RoleModel.Instance.GetRoleDataById(roleId, true) != null)
@@ -33,7 +33,7 @@ public class RoleDevUtils
 		return ERoleDevDataType.NotObtained;
 	}
 
-	// Token: 0x060150F3 RID: 86259 RVA: 0x00554EC0 File Offset: 0x005530C0
+	// Token: 0x06012AF3 RID: 76531 RVA: 0x0057FCC0 File Offset: 0x0057DEC0
 	public static RoleDevCultivateProject? GetCultivateProject(int roleId)
 	{
 		int? cultivateProjectId = RoleDevUtils.GetCultivateProjectId(roleId);
@@ -44,7 +44,7 @@ public class RoleDevUtils
 		return RoleDevConfig.Instance.GetCultivateProjectConfig(cultivateProjectId.Value);
 	}
 
-	// Token: 0x060150F4 RID: 86260 RVA: 0x00554EF8 File Offset: 0x005530F8
+	// Token: 0x06012AF4 RID: 76532 RVA: 0x0057FCF8 File Offset: 0x0057DEF8
 	public static int? GetCultivateProjectId(int roleId)
 	{
 		RoleDevProject? roleDevProjectConfig = RoleDevConfig.Instance.GetRoleDevProjectConfig(roleId);
@@ -57,7 +57,7 @@ public class RoleDevUtils
 		return new int?(array[currentProjectNum]);
 	}
 
-	// Token: 0x060150F5 RID: 86261 RVA: 0x00554F40 File Offset: 0x00553140
+	// Token: 0x06012AF5 RID: 76533 RVA: 0x0057FD40 File Offset: 0x0057DF40
 	public static int[] GetRoleGachaIds(int hotRoleId)
 	{
 		List<int> list = new List<int>();
@@ -85,7 +85,7 @@ public class RoleDevUtils
 		return list.ToArray();
 	}
 
-	// Token: 0x060150F6 RID: 86262 RVA: 0x00554FFC File Offset: 0x005531FC
+	// Token: 0x06012AF6 RID: 76534 RVA: 0x0057FDFC File Offset: 0x0057DFFC
 	public static global::ERoleTypeTag GetRoleProspectType(int roleId)
 	{
 		IRoleDevProsConfig roleDevProsListConfig = RoleDevConfig.Instance.GetRoleDevProsListConfig(roleId);
@@ -100,7 +100,7 @@ public class RoleDevUtils
 		return global::ERoleTypeTag.None;
 	}
 
-	// Token: 0x060150F7 RID: 86263 RVA: 0x00555030 File Offset: 0x00553230
+	// Token: 0x06012AF7 RID: 76535 RVA: 0x0057FE30 File Offset: 0x0057E030
 	public static global::ERoleTypeTag GetRoleRerunType(int roleId)
 	{
 		IRoleDevProsConfig roleDevProsListConfig = RoleDevConfig.Instance.GetRoleDevProsListConfig(roleId);
@@ -115,7 +115,7 @@ public class RoleDevUtils
 		return global::ERoleTypeTag.None;
 	}
 
-	// Token: 0x060150F8 RID: 86264 RVA: 0x00555064 File Offset: 0x00553264
+	// Token: 0x06012AF8 RID: 76536 RVA: 0x0057FE64 File Offset: 0x0057E064
 	public static bool IsHotRole(int roleId)
 	{
 		IReadOnlyList<IRoleDevProsConfig> allRoleDevProsListConfig = RoleDevConfig.Instance.GetAllRoleDevProsListConfig();
@@ -136,7 +136,7 @@ public class RoleDevUtils
 		return false;
 	}
 
-	// Token: 0x060150F9 RID: 86265 RVA: 0x005550C4 File Offset: 0x005532C4
+	// Token: 0x06012AF9 RID: 76537 RVA: 0x0057FEC4 File Offset: 0x0057E0C4
 	public static global::ERoleTypeTag GetRoleTypeTagByRoleId(int roleId)
 	{
 		IEnumerable<IRoleDevProsConfig> allRoleDevProsListConfig = RoleDevConfig.Instance.GetAllRoleDevProsListConfig();
@@ -214,13 +214,13 @@ public class RoleDevUtils
 		}
 	}
 
-	// Token: 0x060150FA RID: 86266 RVA: 0x005551E0 File Offset: 0x005533E0
+	// Token: 0x06012AFA RID: 76538 RVA: 0x0057FFE0 File Offset: 0x0057E1E0
 	public static bool IsGachaValid(int gachaId)
 	{
 		return GachaModel.Instance.CheckGachaValidByGachaId(gachaId);
 	}
 
-	// Token: 0x060150FB RID: 86267 RVA: 0x005551F0 File Offset: 0x005533F0
+	// Token: 0x06012AFB RID: 76539 RVA: 0x0057FFF0 File Offset: 0x0057E1F0
 	public static int GetCurrentProjectNum()
 	{
 		int originWorldLevel = WorldLevelModel.Instance.OriginWorldLevel;
@@ -244,7 +244,7 @@ public class RoleDevUtils
 		return 0;
 	}
 
-	// Token: 0x060150FC RID: 86268 RVA: 0x0055528C File Offset: 0x0055348C
+	// Token: 0x06012AFC RID: 76540 RVA: 0x0058008C File Offset: 0x0057E28C
 	public static List<global::IMaterialGroup> GroupMaterialsByType(List<global::IItemMaterial> totalMaterials)
 	{
 		Dictionary<int, global::IItemMaterial> dictionary = new Dictionary<int, global::IItemMaterial>();
@@ -303,7 +303,7 @@ public class RoleDevUtils
 		return list2;
 	}
 
-	// Token: 0x060150FD RID: 86269 RVA: 0x0055547C File Offset: 0x0055367C
+	// Token: 0x06012AFD RID: 76541 RVA: 0x0058027C File Offset: 0x0057E47C
 	public static int? GetFirstOpenDungeonIdByItemGroupId(int itemGroupId)
 	{
 		if (itemGroupId == 0)
@@ -318,7 +318,7 @@ public class RoleDevUtils
 		return RoleDevUtils.GetFirstOpenDungeonId(itemJumpGroupConfig.Value.JumpGroup());
 	}
 
-	// Token: 0x060150FE RID: 86270 RVA: 0x005554CC File Offset: 0x005536CC
+	// Token: 0x06012AFE RID: 76542 RVA: 0x005802CC File Offset: 0x0057E4CC
 	public static int? GetFirstOpenDungeonId(int[] jumpIdList)
 	{
 		Dictionary<int, SilentAreaDetectionRecord> allDetectSilentAreas = AdventureGuideModel.Instance.GetAllDetectSilentAreas();
@@ -337,7 +337,7 @@ public class RoleDevUtils
 		return null;
 	}
 
-	// Token: 0x060150FF RID: 86271 RVA: 0x00555530 File Offset: 0x00553730
+	// Token: 0x06012AFF RID: 76543 RVA: 0x00580330 File Offset: 0x0057E530
 	public static int? GetFirstUnlockedTeleportId(int[] jumpIdList)
 	{
 		foreach (int num in jumpIdList)
@@ -354,7 +354,7 @@ public class RoleDevUtils
 		return new int?(jumpIdList[jumpIdList.Length - 1]);
 	}
 
-	// Token: 0x06015100 RID: 86272 RVA: 0x0055557C File Offset: 0x0055377C
+	// Token: 0x06012B00 RID: 76544 RVA: 0x0058037C File Offset: 0x0057E57C
 	public static bool CheckAccessPathUnlocked(int accessPathId)
 	{
 		AccessPath? accessPathConfig = SkipInterfaceConfig.Instance.GetAccessPathConfig(accessPathId);
@@ -365,7 +365,7 @@ public class RoleDevUtils
 		return MapModel.Instance.CheckTeleportUnlocked(accessPathId);
 	}
 
-	// Token: 0x06015101 RID: 86273 RVA: 0x005555C8 File Offset: 0x005537C8
+	// Token: 0x06012B01 RID: 76545 RVA: 0x005803C8 File Offset: 0x0057E5C8
 	public static bool CheckDungeonAccessUnlocked(AccessPath config)
 	{
 		int id = int.Parse(config.Val1);
@@ -401,7 +401,7 @@ public class RoleDevUtils
 		return flag && flag2;
 	}
 
-	// Token: 0x06015102 RID: 86274 RVA: 0x005556F4 File Offset: 0x005538F4
+	// Token: 0x06012B02 RID: 76546 RVA: 0x005804F4 File Offset: 0x0057E6F4
 	public static List<global::IRoleDevDetailItemData> BuildDetailItemData(int roleId, List<global::IMaterialGroup> materialGroups, ERoleDevMainPage sourcePageType)
 	{
 		List<global::IRoleDevDetailItemData> list = new List<global::IRoleDevDetailItemData>();
@@ -443,7 +443,7 @@ public class RoleDevUtils
 		return list;
 	}
 
-	// Token: 0x06015103 RID: 86275 RVA: 0x00555894 File Offset: 0x00553A94
+	// Token: 0x06012B03 RID: 76547 RVA: 0x00580694 File Offset: 0x0057E894
 	private static ERoleDevSubPageButton GetButtonTypeByType(ERoleDevMainPage sourcePageType, CSharpScript.Game.Module.RoleDev.EItemMaterialType type)
 	{
 		ERoleDevSubPageButton eroleDevSubPageButton = ERoleDevSubPageButton.None;
@@ -477,7 +477,7 @@ public class RoleDevUtils
 		return eroleDevSubPageButton;
 	}
 
-	// Token: 0x06015104 RID: 86276 RVA: 0x005558F9 File Offset: 0x00553AF9
+	// Token: 0x06012B04 RID: 76548 RVA: 0x005806F9 File Offset: 0x0057E8F9
 	private static List<global::IItemMaterial> SortMaterialsByQuality(List<global::IItemMaterial> materials)
 	{
 		materials.Sort(delegate(global::IItemMaterial a, global::IItemMaterial b)
@@ -491,7 +491,7 @@ public class RoleDevUtils
 		return materials;
 	}
 
-	// Token: 0x06015105 RID: 86277 RVA: 0x00555924 File Offset: 0x00553B24
+	// Token: 0x06012B05 RID: 76549 RVA: 0x00580724 File Offset: 0x0057E924
 	public static bool CheckAllItemsUp(List<global::IRoleDevDetailItemData> detailItems)
 	{
 		if (detailItems == null || detailItems.Count == 0)
@@ -512,7 +512,7 @@ public class RoleDevUtils
 		return true;
 	}
 
-	// Token: 0x06015106 RID: 86278 RVA: 0x005559D8 File Offset: 0x00553BD8
+	// Token: 0x06012B06 RID: 76550 RVA: 0x005807D8 File Offset: 0x0057E9D8
 	public static bool IsProspectTimeValid(int roleId)
 	{
 		RoleDevModel instance = RoleDevModel.Instance;
@@ -531,7 +531,7 @@ public class RoleDevUtils
 		return prospectBeginTime != 0L && prospectEndTime != 0L && serverTime >= (double)prospectBeginTime && (prospectEndTime == 0L || serverTime <= (double)prospectEndTime);
 	}
 
-	// Token: 0x06015107 RID: 86279 RVA: 0x00555A3C File Offset: 0x00553C3C
+	// Token: 0x06012B07 RID: 76551 RVA: 0x0058083C File Offset: 0x0057EA3C
 	public static ERoleDevWeaponTabType GetWeaponDefaultTabType(int roleId, bool isWeaponHighQuality)
 	{
 		if (RoleModel.Instance.GetRoleDataById(roleId, true) == null)
@@ -545,7 +545,7 @@ public class RoleDevUtils
 		return ERoleDevWeaponTabType.WeaponRecommend;
 	}
 
-	// Token: 0x06015108 RID: 86280 RVA: 0x00555A54 File Offset: 0x00553C54
+	// Token: 0x06012B08 RID: 76552 RVA: 0x00580854 File Offset: 0x0057EA54
 	public static List<global::IRoleDevDetailItemData> CreateSkillDetailItemsData(int[] skillNodeIdList, int[] currentLevels, int[] targetLevels, int roleId)
 	{
 		List<global::IItemMaterial> totalMaterials = new List<global::IItemMaterial>();
@@ -554,7 +554,7 @@ public class RoleDevUtils
 		return RoleDevUtils.BuildDetailItemData(roleId, materialGroups, ERoleDevMainPage.Skill);
 	}
 
-	// Token: 0x06015109 RID: 86281 RVA: 0x00555A80 File Offset: 0x00553C80
+	// Token: 0x06012B09 RID: 76553 RVA: 0x00580880 File Offset: 0x0057EA80
 	private static void ProcessUpgradedSkillLevelConsume(int[] skillNodeIdList, int[] currentLevels, int[] targetLevels, List<global::IItemMaterial> totalMaterials)
 	{
 		for (int i = 0; i < skillNodeIdList.Length; i++)
@@ -580,13 +580,13 @@ public class RoleDevUtils
 		}
 	}
 
-	// Token: 0x0601510A RID: 86282 RVA: 0x00555B38 File Offset: 0x00553D38
+	// Token: 0x06012B0A RID: 76554 RVA: 0x00580938 File Offset: 0x0057EB38
 	private static bool ShouldSkipItem(int itemId)
 	{
 		return itemId == 1 || itemId == 2;
 	}
 
-	// Token: 0x0601510B RID: 86283 RVA: 0x00555B44 File Offset: 0x00553D44
+	// Token: 0x06012B0B RID: 76555 RVA: 0x00580944 File Offset: 0x0057EB44
 	private static void AddOrUpdateMaterial(List<global::IItemMaterial> totalMaterials, int itemId, int count)
 	{
 		global::IItemMaterial itemMaterial = null;
@@ -610,13 +610,13 @@ public class RoleDevUtils
 		});
 	}
 
-	// Token: 0x0601510C RID: 86284 RVA: 0x00555BC8 File Offset: 0x00553DC8
+	// Token: 0x06012B0C RID: 76556 RVA: 0x005809C8 File Offset: 0x0057EBC8
 	public static bool GetDefaultSkillPlanByRoleId(int roleId)
 	{
 		return RoleDevUtils.GetRoleTypeTagByRoleId(roleId) == global::ERoleTypeTag.Forecast;
 	}
 
-	// Token: 0x0601510D RID: 86285 RVA: 0x00555BD8 File Offset: 0x00553DD8
+	// Token: 0x06012B0D RID: 76557 RVA: 0x005809D8 File Offset: 0x0057EBD8
 	public static void OpenWeaponReplaceView(int roleId, int weaponIncId)
 	{
 		RoleViewViewModel roleViewViewModel = new RoleViewViewModel(roleId, false, ERoleViewSource.Normal);

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FB6 RID: 20406
+	// Token: 0x02005512 RID: 21778
 	public class ICollectComponentT
 	{
-		// Token: 0x170093CE RID: 37838
-		// (get) Token: 0x060207C1 RID: 133057 RVA: 0x00484EF6 File Offset: 0x004830F6
-		// (set) Token: 0x060207C2 RID: 133058 RVA: 0x00484EFE File Offset: 0x004830FE
+		// Token: 0x17009BA6 RID: 39846
+		// (get) Token: 0x060226B5 RID: 140981 RVA: 0x004BE3DA File Offset: 0x004BC5DA
+		// (set) Token: 0x060226B6 RID: 140982 RVA: 0x004BE3E2 File Offset: 0x004BC5E2
 		public bool Disabled { get; set; }
 
-		// Token: 0x170093CF RID: 37839
-		// (get) Token: 0x060207C3 RID: 133059 RVA: 0x00484F07 File Offset: 0x00483107
-		// (set) Token: 0x060207C4 RID: 133060 RVA: 0x00484F0F File Offset: 0x0048310F
+		// Token: 0x17009BA7 RID: 39847
+		// (get) Token: 0x060226B7 RID: 140983 RVA: 0x004BE3EB File Offset: 0x004BC5EB
+		// (set) Token: 0x060226B8 RID: 140984 RVA: 0x004BE3F3 File Offset: 0x004BC5F3
 		public bool IsDisableOneClickCollection { get; set; }
 
-		// Token: 0x170093D0 RID: 37840
-		// (get) Token: 0x060207C5 RID: 133061 RVA: 0x00484F18 File Offset: 0x00483118
-		// (set) Token: 0x060207C6 RID: 133062 RVA: 0x00484F20 File Offset: 0x00483120
+		// Token: 0x17009BA8 RID: 39848
+		// (get) Token: 0x060226B9 RID: 140985 RVA: 0x004BE3FC File Offset: 0x004BC5FC
+		// (set) Token: 0x060226BA RID: 140986 RVA: 0x004BE404 File Offset: 0x004BC604
 		public byte NullMask { get; set; }
 
-		// Token: 0x060207C7 RID: 133063 RVA: 0x00484F29 File Offset: 0x00483129
+		// Token: 0x060226BB RID: 140987 RVA: 0x004BE40D File Offset: 0x004BC60D
 		public ICollectComponentT()
 		{
 			this.Disabled = false;

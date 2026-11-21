@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020031B6 RID: 12726
+// Token: 0x02002725 RID: 10021
 [NullableContext(2)]
 [Nullable(0)]
 public class WeaponVisibleTagHelper
 {
-	// Token: 0x170025F4 RID: 9716
-	// (get) Token: 0x0601B6F1 RID: 112369 RVA: 0x00780EEC File Offset: 0x0077F0EC
-	// (set) Token: 0x0601B6F2 RID: 112370 RVA: 0x00780EF4 File Offset: 0x0077F0F4
+	// Token: 0x170027F1 RID: 10225
+	// (get) Token: 0x06019224 RID: 102948 RVA: 0x007A926C File Offset: 0x007A746C
+	// (set) Token: 0x06019225 RID: 102949 RVA: 0x007A9274 File Offset: 0x007A7474
 	[Nullable(1)]
 	public int[] Tags { [NullableContext(1)] get; [NullableContext(1)] private set; } = Array.Empty<int>();
 
-	// Token: 0x170025F5 RID: 9717
-	// (get) Token: 0x0601B6F3 RID: 112371 RVA: 0x00780EFD File Offset: 0x0077F0FD
-	// (set) Token: 0x0601B6F4 RID: 112372 RVA: 0x00780F05 File Offset: 0x0077F105
+	// Token: 0x170027F2 RID: 10226
+	// (get) Token: 0x06019226 RID: 102950 RVA: 0x007A927D File Offset: 0x007A747D
+	// (set) Token: 0x06019227 RID: 102951 RVA: 0x007A9285 File Offset: 0x007A7485
 	public BaseTagComponent TagComp { get; private set; }
 
-	// Token: 0x170025F6 RID: 9718
-	// (get) Token: 0x0601B6F5 RID: 112373 RVA: 0x00780F0E File Offset: 0x0077F10E
-	// (set) Token: 0x0601B6F6 RID: 112374 RVA: 0x00780F16 File Offset: 0x0077F116
+	// Token: 0x170027F3 RID: 10227
+	// (get) Token: 0x06019228 RID: 102952 RVA: 0x007A928E File Offset: 0x007A748E
+	// (set) Token: 0x06019229 RID: 102953 RVA: 0x007A9296 File Offset: 0x007A7496
 	public CharacterWeapon Owner { get; private set; }
 
-	// Token: 0x0601B6F7 RID: 112375 RVA: 0x00780F1F File Offset: 0x0077F11F
+	// Token: 0x0601922A RID: 102954 RVA: 0x007A929F File Offset: 0x007A749F
 	public WeaponVisibleTagHelper()
 	{
 		this.CountCallBack = delegate(int tagId, bool tagExist)
@@ -49,7 +49,7 @@ public class WeaponVisibleTagHelper
 		};
 	}
 
-	// Token: 0x0601B6F8 RID: 112376 RVA: 0x00780F50 File Offset: 0x0077F150
+	// Token: 0x0601922B RID: 102955 RVA: 0x007A92D0 File Offset: 0x007A74D0
 	[NullableContext(1)]
 	public void Init(CharacterWeapon owner, BaseTagComponent tagComp, [Nullable(new byte[]
 	{
@@ -94,7 +94,7 @@ public class WeaponVisibleTagHelper
 		}
 	}
 
-	// Token: 0x0601B6F9 RID: 112377 RVA: 0x0078103C File Offset: 0x0077F23C
+	// Token: 0x0601922C RID: 102956 RVA: 0x007A93BC File Offset: 0x007A75BC
 	public void Clear()
 	{
 		this.Owner = null;
@@ -108,18 +108,18 @@ public class WeaponVisibleTagHelper
 		this.Tags = Array.Empty<int>();
 	}
 
-	// Token: 0x0400D700 RID: 55040
+	// Token: 0x0400DB87 RID: 56199
 	private int TagCount;
 
-	// Token: 0x0400D701 RID: 55041
+	// Token: 0x0400DB88 RID: 56200
 	[Nullable(1)]
 	private readonly BaseTagComponent.TTagSwitchedCallback CountCallBack;
 
-	// Token: 0x0400D704 RID: 55044
+	// Token: 0x0400DB8B RID: 56203
 	[Nullable(1)]
 	private readonly List<ITagTask> TagListeners = new List<ITagTask>();
 
-	// Token: 0x0400D705 RID: 55045
+	// Token: 0x0400DB8C RID: 56204
 	[Nullable(new byte[]
 	{
 		2,

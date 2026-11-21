@@ -7,13 +7,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E16 RID: 3606
+	// Token: 0x02000F12 RID: 3858
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IDragActorPlayConfig
 	{
-		// Token: 0x06005194 RID: 20884 RVA: 0x000C931E File Offset: 0x000C751E
-		[NullableContext(1)]
+		// Token: 0x060056BB RID: 22203 RVA: 0x000D4BE6 File Offset: 0x000D2DE6
+		[NullableContext(0)]
 		public static IDragActorPlayConfig Create(IDragActorPlayConfig? instance)
 		{
 			if (instance == null)
@@ -26,12 +26,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B25 RID: 6949
-		// (get) Token: 0x06005195 RID: 20885 RVA: 0x000C933D File Offset: 0x000C753D
-		[Nullable(1)]
+		// Token: 0x17001C92 RID: 7314
+		// (get) Token: 0x060056BC RID: 22204 RVA: 0x000D4C05 File Offset: 0x000D2E05
+		[Nullable(0)]
 		public virtual IActorRef DraggableActor
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._DraggableActorInited)
@@ -44,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B26 RID: 6950
-		// (get) Token: 0x06005196 RID: 20886 RVA: 0x000C9371 File Offset: 0x000C7571
+		// Token: 0x17001C93 RID: 7315
+		// (get) Token: 0x060056BD RID: 22205 RVA: 0x000D4C39 File Offset: 0x000D2E39
 		public virtual string DragAkEvent
 		{
 			get
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B27 RID: 6951
-		// (get) Token: 0x06005197 RID: 20887 RVA: 0x000C9380 File Offset: 0x000C7580
+		// Token: 0x17001C94 RID: 7316
+		// (get) Token: 0x060056BE RID: 22206 RVA: 0x000D4C48 File Offset: 0x000D2E48
 		public virtual int? EffectSplineEntityId
 		{
 			get
@@ -68,8 +68,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B28 RID: 6952
-		// (get) Token: 0x06005198 RID: 20888 RVA: 0x000C93B6 File Offset: 0x000C75B6
+		// Token: 0x17001C95 RID: 7317
+		// (get) Token: 0x060056BF RID: 22207 RVA: 0x000D4C7E File Offset: 0x000D2E7E
 		public virtual int SplineEntityId
 		{
 			get
@@ -78,20 +78,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B29 RID: 6953
-		// (get) Token: 0x06005199 RID: 20889 RVA: 0x000C93C3 File Offset: 0x000C75C3
-		[Nullable(1)]
+		// Token: 0x17001C96 RID: 7318
+		// (get) Token: 0x060056C0 RID: 22208 RVA: 0x000D4C8B File Offset: 0x000D2E8B
+		[Nullable(0)]
 		public virtual string Sequence
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.Sequence;
 			}
 		}
 
-		// Token: 0x17001B2A RID: 6954
-		// (get) Token: 0x0600519A RID: 20890 RVA: 0x000C93D0 File Offset: 0x000C75D0
+		// Token: 0x17001C97 RID: 7319
+		// (get) Token: 0x060056C1 RID: 22209 RVA: 0x000D4C98 File Offset: 0x000D2E98
 		public virtual float MaxPlaySpeed
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B2B RID: 6955
-		// (get) Token: 0x0600519B RID: 20891 RVA: 0x000C93E0 File Offset: 0x000C75E0
+		// Token: 0x17001C98 RID: 7320
+		// (get) Token: 0x060056C2 RID: 22210 RVA: 0x000D4CA8 File Offset: 0x000D2EA8
 		public virtual float? Stiffness
 		{
 			get
@@ -114,8 +114,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B2C RID: 6956
-		// (get) Token: 0x0600519C RID: 20892 RVA: 0x000C9418 File Offset: 0x000C7618
+		// Token: 0x17001C99 RID: 7321
+		// (get) Token: 0x060056C3 RID: 22211 RVA: 0x000D4CE0 File Offset: 0x000D2EE0
 		public virtual float? Damping
 		{
 			get
@@ -128,19 +128,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B2D RID: 6957
-		// (get) Token: 0x0600519D RID: 20893 RVA: 0x000C9450 File Offset: 0x000C7650
+		// Token: 0x17001C9A RID: 7322
+		// (get) Token: 0x060056C4 RID: 22212 RVA: 0x000D4D18 File Offset: 0x000D2F18
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IDragActorPlayKeyPointConfig> KeyPoints
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -163,8 +163,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B2E RID: 6958
-		// (get) Token: 0x0600519E RID: 20894 RVA: 0x000C94CA File Offset: 0x000C76CA
+		// Token: 0x17001C9B RID: 7323
+		// (get) Token: 0x060056C5 RID: 22213 RVA: 0x000D4D92 File Offset: 0x000D2F92
 		public virtual string DraggableActorEffectDa
 		{
 			get
@@ -173,8 +173,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B2F RID: 6959
-		// (get) Token: 0x0600519F RID: 20895 RVA: 0x000C94D8 File Offset: 0x000C76D8
+		// Token: 0x17001C9C RID: 7324
+		// (get) Token: 0x060056C6 RID: 22214 RVA: 0x000D4DA0 File Offset: 0x000D2FA0
 		public virtual bool? IgnoreRotation
 		{
 			get
@@ -187,8 +187,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B30 RID: 6960
-		// (get) Token: 0x060051A0 RID: 20896 RVA: 0x000C950F File Offset: 0x000C770F
+		// Token: 0x17001C9D RID: 7325
+		// (get) Token: 0x060056C7 RID: 22215 RVA: 0x000D4DD7 File Offset: 0x000D2FD7
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -203,8 +203,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B31 RID: 6961
-		// (get) Token: 0x060051A1 RID: 20897 RVA: 0x000C9544 File Offset: 0x000C7744
+		// Token: 0x17001C9E RID: 7326
+		// (get) Token: 0x060056C8 RID: 22216 RVA: 0x000D4E0C File Offset: 0x000D300C
 		public virtual EDragHintType? DragHintType
 		{
 			get
@@ -217,30 +217,30 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F01 RID: 12033
+		// Token: 0x040031C9 RID: 12745
 		private IDragActorPlayConfig Instance;
 
-		// Token: 0x04002F02 RID: 12034
+		// Token: 0x040031CA RID: 12746
 		private IActorRef _DraggableActorCache;
 
-		// Token: 0x04002F03 RID: 12035
+		// Token: 0x040031CB RID: 12747
 		private bool _DraggableActorInited;
 
-		// Token: 0x04002F04 RID: 12036
+		// Token: 0x040031CC RID: 12748
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IDragActorPlayKeyPointConfig> _KeyPointsCache;
 
-		// Token: 0x04002F05 RID: 12037
+		// Token: 0x040031CD RID: 12749
 		private bool _KeyPointsInited;
 
-		// Token: 0x04002F06 RID: 12038
+		// Token: 0x040031CE RID: 12750
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002F07 RID: 12039
+		// Token: 0x040031CF RID: 12751
 		private bool _ConditionInited;
 	}
 }

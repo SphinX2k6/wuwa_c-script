@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000626 RID: 1574
+	// Token: 0x02000612 RID: 1554
 	[NetMessage(EMessageId.FormationAttrNotify)]
 	public sealed class FormationAttrNotify : IMessage<FormationAttrNotify>, IMessage, IEquatable<FormationAttrNotify>, IDeepCloneable<FormationAttrNotify>, IBufferMessage
 	{
-		// Token: 0x0600913A RID: 37178 RVA: 0x0015F912 File Offset: 0x0015DB12
+		// Token: 0x06008FE4 RID: 36836 RVA: 0x0015CEE2 File Offset: 0x0015B0E2
 		[NullableContext(1)]
 		public static FormationAttrNotify Create()
 		{
 			return new FormationAttrNotify();
 		}
 
-		// Token: 0x17001CDF RID: 7391
-		// (get) Token: 0x0600913B RID: 37179 RVA: 0x0015F919 File Offset: 0x0015DB19
+		// Token: 0x17001C95 RID: 7317
+		// (get) Token: 0x06008FE5 RID: 36837 RVA: 0x0015CEE9 File Offset: 0x0015B0E9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001CE0 RID: 7392
-		// (get) Token: 0x0600913C RID: 37180 RVA: 0x0015F91C File Offset: 0x0015DB1C
+		// Token: 0x17001C96 RID: 7318
+		// (get) Token: 0x06008FE6 RID: 36838 RVA: 0x0015CEEC File Offset: 0x0015B0EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600913D RID: 37181 RVA: 0x0015F923 File Offset: 0x0015DB23
+		// Token: 0x06008FE7 RID: 36839 RVA: 0x0015CEF3 File Offset: 0x0015B0F3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FormationAttrNotify()
 		{
 		}
 
-		// Token: 0x0600913E RID: 37182 RVA: 0x0015F936 File Offset: 0x0015DB36
+		// Token: 0x06008FE8 RID: 36840 RVA: 0x0015CF06 File Offset: 0x0015B106
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FormationAttrNotify(FormationAttrNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600913F RID: 37183 RVA: 0x0015F96C File Offset: 0x0015DB6C
+		// Token: 0x06008FE9 RID: 36841 RVA: 0x0015CF3C File Offset: 0x0015B13C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FormationAttrNotify Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new FormationAttrNotify(this);
 		}
 
-		// Token: 0x17001CE1 RID: 7393
-		// (get) Token: 0x06009140 RID: 37184 RVA: 0x0015F974 File Offset: 0x0015DB74
-		// (set) Token: 0x06009141 RID: 37185 RVA: 0x0015F97C File Offset: 0x0015DB7C
+		// Token: 0x17001C97 RID: 7319
+		// (get) Token: 0x06008FEA RID: 36842 RVA: 0x0015CF44 File Offset: 0x0015B144
+		// (set) Token: 0x06008FEB RID: 36843 RVA: 0x0015CF4C File Offset: 0x0015B14C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long CurTime
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001CE2 RID: 7394
-		// (get) Token: 0x06009142 RID: 37186 RVA: 0x0015F985 File Offset: 0x0015DB85
+		// Token: 0x17001C98 RID: 7320
+		// (get) Token: 0x06008FEC RID: 36844 RVA: 0x0015CF55 File Offset: 0x0015B155
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<FormationAttr> FormationAttrs
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009143 RID: 37187 RVA: 0x0015F98D File Offset: 0x0015DB8D
+		// Token: 0x06008FED RID: 36845 RVA: 0x0015CF5D File Offset: 0x0015B15D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FormationAttrNotify);
 		}
 
-		// Token: 0x06009144 RID: 37188 RVA: 0x0015F99C File Offset: 0x0015DB9C
+		// Token: 0x06008FEE RID: 36846 RVA: 0x0015CF6C File Offset: 0x0015B16C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FormationAttrNotify other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.CurTime == other.CurTime && this.formationAttrs_.Equals(other.formationAttrs_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06009145 RID: 37189 RVA: 0x0015F9EC File Offset: 0x0015DBEC
+		// Token: 0x06008FEF RID: 36847 RVA: 0x0015CFBC File Offset: 0x0015B1BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06009146 RID: 37190 RVA: 0x0015FA39 File Offset: 0x0015DC39
+		// Token: 0x06008FF0 RID: 36848 RVA: 0x0015D009 File Offset: 0x0015B209
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06009147 RID: 37191 RVA: 0x0015FA46 File Offset: 0x0015DC46
+		// Token: 0x06008FF1 RID: 36849 RVA: 0x0015D016 File Offset: 0x0015B216
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,14 +147,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06009148 RID: 37192 RVA: 0x0015FA50 File Offset: 0x0015DC50
+		// Token: 0x06008FF2 RID: 36850 RVA: 0x0015D020 File Offset: 0x0015B220
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.CurTime != 0L)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(40);
 				output.WriteInt64(this.CurTime);
 			}
 			this.formationAttrs_.WriteTo(ref output, FormationAttrNotify._repeated_formationAttrs_codec);
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009149 RID: 37193 RVA: 0x0015FAA0 File Offset: 0x0015DCA0
+		// Token: 0x06008FF3 RID: 36851 RVA: 0x0015D070 File Offset: 0x0015B270
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600914A RID: 37194 RVA: 0x0015FAF4 File Offset: 0x0015DCF4
+		// Token: 0x06008FF4 RID: 36852 RVA: 0x0015D0C4 File Offset: 0x0015B2C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FormationAttrNotify other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600914B RID: 37195 RVA: 0x0015FB41 File Offset: 0x0015DD41
+		// Token: 0x06008FF5 RID: 36853 RVA: 0x0015D111 File Offset: 0x0015B311
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600914C RID: 37196 RVA: 0x0015FB4C File Offset: 0x0015DD4C
+		// Token: 0x06008FF6 RID: 36854 RVA: 0x0015D11C File Offset: 0x0015B31C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,9 +219,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 80U)
+				if (num != 40U)
 				{
-					if (num != 114U)
+					if (num != 90U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -237,22 +237,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04004637 RID: 17975
+		// Token: 0x04004630 RID: 17968
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004638 RID: 17976
-		public const int CurTimeFieldNumber = 10;
+		// Token: 0x04004631 RID: 17969
+		public const int CurTimeFieldNumber = 5;
 
-		// Token: 0x04004639 RID: 17977
+		// Token: 0x04004632 RID: 17970
 		private long curTime_;
 
-		// Token: 0x0400463A RID: 17978
-		public const int FormationAttrsFieldNumber = 14;
+		// Token: 0x04004633 RID: 17971
+		public const int FormationAttrsFieldNumber = 11;
 
-		// Token: 0x0400463B RID: 17979
-		private static readonly FieldCodec<FormationAttr> _repeated_formationAttrs_codec = FieldCodec.ForMessage<FormationAttr>(114U, FormationAttr.Parser);
+		// Token: 0x04004634 RID: 17972
+		private static readonly FieldCodec<FormationAttr> _repeated_formationAttrs_codec = FieldCodec.ForMessage<FormationAttr>(90U, FormationAttr.Parser);
 
-		// Token: 0x0400463C RID: 17980
+		// Token: 0x04004635 RID: 17973
 		private readonly RepeatedField<FormationAttr> formationAttrs_ = new RepeatedField<FormationAttr>();
 	}
 }

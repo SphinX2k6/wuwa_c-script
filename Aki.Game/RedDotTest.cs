@@ -1,19 +1,19 @@
 ﻿using System;
 
-// Token: 0x02003408 RID: 13320
+// Token: 0x0200297A RID: 10618
 public class RedDotTest : RedDotBase
 {
-	// Token: 0x0601CD0B RID: 118027 RVA: 0x0080B365 File Offset: 0x00809565
+	// Token: 0x0601AA03 RID: 109059 RVA: 0x00831929 File Offset: 0x0082FB29
 	protected override void AddCheckEvent()
 	{
 	}
 
-	// Token: 0x0601CD0C RID: 118028 RVA: 0x0080B367 File Offset: 0x00809567
+	// Token: 0x0601AA04 RID: 109060 RVA: 0x0083192B File Offset: 0x0082FB2B
 	protected override void RemoveCheckEvent()
 	{
 	}
 
-	// Token: 0x0601CD0D RID: 118029 RVA: 0x0080B369 File Offset: 0x00809569
+	// Token: 0x0601AA05 RID: 109061 RVA: 0x0083192D File Offset: 0x0082FB2D
 	protected override bool OnCheck(int uId = 0)
 	{
 		return true;

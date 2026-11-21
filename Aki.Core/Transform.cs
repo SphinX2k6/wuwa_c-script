@@ -8,14 +8,33 @@ using UnrealEngine.Extension;
 // Token: 0x020000FD RID: 253
 [NullableContext(1)]
 [Nullable(0)]
+[Obsolete("手写数学库已废弃，请改用 UnrealEngine.FTransformDouble")]
 public class Transform : ITransform, IClearable, ILogFormattedPrint
 {
-	// Token: 0x0600089D RID: 2205 RVA: 0x0002DED7 File Offset: 0x0002C0D7
+	// Token: 0x060008E7 RID: 2279 RVA: 0x0002E768 File Offset: 0x0002C968
+	[Obsolete("迁移期隐式转换：请确认不在每帧热点路径上")]
+	public static implicit operator FTransformDouble(Transform v)
+	{
+		if (v != null)
+		{
+			return v.ToUeTransform();
+		}
+		return default(FTransformDouble);
+	}
+
+	// Token: 0x060008E8 RID: 2280 RVA: 0x0002E788 File Offset: 0x0002C988
+	[Obsolete("迁移期隐式转换：请确认不在每帧热点路径上")]
+	public static implicit operator Transform(FTransformDouble v)
+	{
+		return Transform.Create(v);
+	}
+
+	// Token: 0x060008E9 RID: 2281 RVA: 0x0002E795 File Offset: 0x0002C995
 	private Transform()
 	{
 	}
 
-	// Token: 0x0600089E RID: 2206 RVA: 0x0002DEE0 File Offset: 0x0002C0E0
+	// Token: 0x060008EA RID: 2282 RVA: 0x0002E7A0 File Offset: 0x0002C9A0
 	public override string ToString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(33, 3);
@@ -28,13 +47,13 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600089F RID: 2207 RVA: 0x0002DF49 File Offset: 0x0002C149
+	// Token: 0x060008EB RID: 2283 RVA: 0x0002E809 File Offset: 0x0002CA09
 	public string ToFormattedString()
 	{
 		return this.ToString();
 	}
 
-	// Token: 0x060008A0 RID: 2208 RVA: 0x0002DF54 File Offset: 0x0002C154
+	// Token: 0x060008EC RID: 2284 RVA: 0x0002E814 File Offset: 0x0002CA14
 	public void ToFormattedString(UnsafeStringBuilder sb)
 	{
 		UnsafeStringBuilder.AppendInterpolatedStringHandler appendInterpolatedStringHandler = new UnsafeStringBuilder.AppendInterpolatedStringHandler(33, 3, sb);
@@ -47,7 +66,7 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		sb.Append(ref appendInterpolatedStringHandler);
 	}
 
-	// Token: 0x060008A1 RID: 2209 RVA: 0x0002DFC4 File Offset: 0x0002C1C4
+	// Token: 0x060008ED RID: 2285 RVA: 0x0002E884 File Offset: 0x0002CA84
 	public static Transform Create([Nullable(2)] ITransform inT)
 	{
 		Transform transform = new Transform();
@@ -66,7 +85,7 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		return transform;
 	}
 
-	// Token: 0x060008A2 RID: 2210 RVA: 0x0002E070 File Offset: 0x0002C270
+	// Token: 0x060008EE RID: 2286 RVA: 0x0002E930 File Offset: 0x0002CB30
 	public static Transform Create(IQuat inR, IVector inT, IVector inS)
 	{
 		return new Transform
@@ -77,7 +96,7 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		};
 	}
 
-	// Token: 0x060008A3 RID: 2211 RVA: 0x0002E09C File Offset: 0x0002C29C
+	// Token: 0x060008EF RID: 2287 RVA: 0x0002E95C File Offset: 0x0002CB5C
 	public static Transform Create()
 	{
 		return new Transform
@@ -88,7 +107,7 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		};
 	}
 
-	// Token: 0x060008A4 RID: 2212 RVA: 0x0002E110 File Offset: 0x0002C310
+	// Token: 0x060008F0 RID: 2288 RVA: 0x0002E9D0 File Offset: 0x0002CBD0
 	public void FromUeTransform(in FTransform inT)
 	{
 		this.Rotation.FromUeQuat(inT.GetRotation());
@@ -100,7 +119,7 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		scale3D.FromUeVector(fvector);
 	}
 
-	// Token: 0x060008A5 RID: 2213 RVA: 0x0002E158 File Offset: 0x0002C358
+	// Token: 0x060008F1 RID: 2289 RVA: 0x0002EA18 File Offset: 0x0002CC18
 	public void FromUeTransform(in FTransformDouble inT)
 	{
 		this.Rotation.FromUeQuat(inT.GetRotation());
@@ -112,7 +131,7 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		scale3D.FromUeVector(scale3D2);
 	}
 
-	// Token: 0x060008A6 RID: 2214 RVA: 0x0002E1A0 File Offset: 0x0002C3A0
+	// Token: 0x060008F2 RID: 2290 RVA: 0x0002EA60 File Offset: 0x0002CC60
 	public FTransform ToUeTransformOld()
 	{
 		FQuat fquat = this.Rotation.ToUeQuat();
@@ -121,7 +140,7 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		return new FTransform(ref fquat, ref fvector, ref fvector2);
 	}
 
-	// Token: 0x060008A7 RID: 2215 RVA: 0x0002E1DC File Offset: 0x0002C3DC
+	// Token: 0x060008F3 RID: 2291 RVA: 0x0002EA9C File Offset: 0x0002CC9C
 	public FTransformDouble ToUeTransform()
 	{
 		FQuat fquat = this.Rotation.ToUeQuat();
@@ -131,7 +150,7 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		return new FTransformDouble(ref fquat, ref fvectorDouble, ref fvector);
 	}
 
-	// Token: 0x060008A8 RID: 2216 RVA: 0x0002E224 File Offset: 0x0002C424
+	// Token: 0x060008F4 RID: 2292 RVA: 0x0002EAE4 File Offset: 0x0002CCE4
 	public void Set(IVector location, IQuat rotation, IVector scale)
 	{
 		this.Translation.Set(location.X, location.Y, location.Z);
@@ -139,79 +158,79 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		this.Scale3D.Set(scale.X, scale.Y, scale.Z);
 	}
 
-	// Token: 0x060008A9 RID: 2217 RVA: 0x0002E28E File Offset: 0x0002C48E
+	// Token: 0x060008F5 RID: 2293 RVA: 0x0002EB4E File Offset: 0x0002CD4E
 	public void SetLocation(IVector origin)
 	{
 		this.Translation.Set(origin.X, origin.Y, origin.Z);
 	}
 
-	// Token: 0x060008AA RID: 2218 RVA: 0x0002E2AD File Offset: 0x0002C4AD
+	// Token: 0x060008F6 RID: 2294 RVA: 0x0002EB6D File Offset: 0x0002CD6D
 	void ITransform.SetLocation(IVector value)
 	{
 		this.Translation.Set(value.X, value.Y, value.Z);
 	}
 
-	// Token: 0x060008AB RID: 2219 RVA: 0x0002E2CC File Offset: 0x0002C4CC
+	// Token: 0x060008F7 RID: 2295 RVA: 0x0002EB8C File Offset: 0x0002CD8C
 	public Vector GetLocation()
 	{
 		return this.Translation;
 	}
 
-	// Token: 0x060008AC RID: 2220 RVA: 0x0002E2D4 File Offset: 0x0002C4D4
+	// Token: 0x060008F8 RID: 2296 RVA: 0x0002EB94 File Offset: 0x0002CD94
 	IVector ITransform.GetLocation()
 	{
 		return this.Translation;
 	}
 
-	// Token: 0x060008AD RID: 2221 RVA: 0x0002E2DC File Offset: 0x0002C4DC
+	// Token: 0x060008F9 RID: 2297 RVA: 0x0002EB9C File Offset: 0x0002CD9C
 	public void SetRotation(IQuat origin)
 	{
 		this.Rotation.Set(origin.X, origin.Y, origin.Z, origin.W);
 	}
 
-	// Token: 0x060008AE RID: 2222 RVA: 0x0002E301 File Offset: 0x0002C501
+	// Token: 0x060008FA RID: 2298 RVA: 0x0002EBC1 File Offset: 0x0002CDC1
 	void ITransform.SetRotation(IQuat origin)
 	{
 		this.Rotation.Set(origin.X, origin.Y, origin.Z, origin.W);
 	}
 
-	// Token: 0x060008AF RID: 2223 RVA: 0x0002E326 File Offset: 0x0002C526
+	// Token: 0x060008FB RID: 2299 RVA: 0x0002EBE6 File Offset: 0x0002CDE6
 	public Quat GetRotation()
 	{
 		return this.Rotation;
 	}
 
-	// Token: 0x060008B0 RID: 2224 RVA: 0x0002E32E File Offset: 0x0002C52E
+	// Token: 0x060008FC RID: 2300 RVA: 0x0002EBEE File Offset: 0x0002CDEE
 	IQuat ITransform.GetRotation()
 	{
 		return this.Rotation;
 	}
 
-	// Token: 0x060008B1 RID: 2225 RVA: 0x0002E336 File Offset: 0x0002C536
+	// Token: 0x060008FD RID: 2301 RVA: 0x0002EBF6 File Offset: 0x0002CDF6
 	public void SetScale3D(IVector origin)
 	{
 		this.Scale3D.Set(origin.X, origin.Y, origin.Z);
 	}
 
-	// Token: 0x060008B2 RID: 2226 RVA: 0x0002E355 File Offset: 0x0002C555
+	// Token: 0x060008FE RID: 2302 RVA: 0x0002EC15 File Offset: 0x0002CE15
 	void ITransform.SetScale3D(IVector origin)
 	{
 		this.Scale3D.Set(origin.X, origin.Y, origin.Z);
 	}
 
-	// Token: 0x060008B3 RID: 2227 RVA: 0x0002E374 File Offset: 0x0002C574
+	// Token: 0x060008FF RID: 2303 RVA: 0x0002EC34 File Offset: 0x0002CE34
 	public Vector GetScale3D()
 	{
 		return this.Scale3D;
 	}
 
-	// Token: 0x060008B4 RID: 2228 RVA: 0x0002E37C File Offset: 0x0002C57C
+	// Token: 0x06000900 RID: 2304 RVA: 0x0002EC3C File Offset: 0x0002CE3C
 	IVector ITransform.GetScale3D()
 	{
 		return this.Scale3D;
 	}
 
-	// Token: 0x060008B5 RID: 2229 RVA: 0x0002E384 File Offset: 0x0002C584
+	// Token: 0x06000901 RID: 2305 RVA: 0x0002EC44 File Offset: 0x0002CE44
 	public void TransformPosition(Vector v, Vector @out)
 	{
 		this.Scale3D.Multiply(v, @out);
@@ -219,21 +238,21 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		this.Translation.Addition(@out, @out);
 	}
 
-	// Token: 0x060008B6 RID: 2230 RVA: 0x0002E3AF File Offset: 0x0002C5AF
+	// Token: 0x06000902 RID: 2306 RVA: 0x0002EC6F File Offset: 0x0002CE6F
 	public void TransformVector(Vector v, Vector @out)
 	{
 		this.Scale3D.Multiply(v, @out);
 		this.Rotation.RotateVector(@out, @out);
 	}
 
-	// Token: 0x060008B7 RID: 2231 RVA: 0x0002E3CC File Offset: 0x0002C5CC
+	// Token: 0x06000903 RID: 2307 RVA: 0x0002EC8C File Offset: 0x0002CE8C
 	public void TransformPositionNoScale(Vector v, Vector @out)
 	{
 		this.Rotation.RotateVector(v, @out);
 		this.Translation.Addition(@out, @out);
 	}
 
-	// Token: 0x060008B8 RID: 2232 RVA: 0x0002E3E9 File Offset: 0x0002C5E9
+	// Token: 0x06000904 RID: 2308 RVA: 0x0002ECA9 File Offset: 0x0002CEA9
 	public void InverseTransformVector(Vector v, Vector @out)
 	{
 		this.Rotation.Inverse(Transform.TmpQuat);
@@ -242,7 +261,7 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		Transform.TmpVec.Multiply(@out, @out);
 	}
 
-	// Token: 0x060008B9 RID: 2233 RVA: 0x0002E424 File Offset: 0x0002C624
+	// Token: 0x06000905 RID: 2309 RVA: 0x0002ECE4 File Offset: 0x0002CEE4
 	public void InverseTransformPosition(Vector v, Vector @out)
 	{
 		v.Subtraction(this.Translation, @out);
@@ -252,7 +271,7 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		Transform.TmpVec.Multiply(@out, @out);
 	}
 
-	// Token: 0x060008BA RID: 2234 RVA: 0x0002E478 File Offset: 0x0002C678
+	// Token: 0x06000906 RID: 2310 RVA: 0x0002ED38 File Offset: 0x0002CF38
 	public void InverseTransformPositionNoScale(Vector v, Vector @out)
 	{
 		v.Subtraction(this.Translation, @out);
@@ -260,14 +279,14 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		Transform.TmpQuat.RotateVector(@out, @out);
 	}
 
-	// Token: 0x060008BB RID: 2235 RVA: 0x0002E4A4 File Offset: 0x0002C6A4
+	// Token: 0x06000907 RID: 2311 RVA: 0x0002ED64 File Offset: 0x0002CF64
 	public void InverseTransformRotation(Quat q, Quat @out)
 	{
 		this.Rotation.Inverse(@out);
 		@out.Multiply(q, @out);
 	}
 
-	// Token: 0x060008BC RID: 2236 RVA: 0x0002E4BC File Offset: 0x0002C6BC
+	// Token: 0x06000908 RID: 2312 RVA: 0x0002ED7C File Offset: 0x0002CF7C
 	public void TransformRotation(Rotator r, Quat @out)
 	{
 		Quat rotation = this.Rotation;
@@ -275,7 +294,7 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		rotation.Multiply(inQ, @out);
 	}
 
-	// Token: 0x060008BD RID: 2237 RVA: 0x0002E4E0 File Offset: 0x0002C6E0
+	// Token: 0x06000909 RID: 2313 RVA: 0x0002EDA0 File Offset: 0x0002CFA0
 	public void TransformRotation(Rotator r, Rotator @out)
 	{
 		Quat rotation = this.Rotation;
@@ -284,7 +303,7 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		@out.FromUeRotator(Transform.TmpQuat.Rotator(null));
 	}
 
-	// Token: 0x060008BE RID: 2238 RVA: 0x0002E518 File Offset: 0x0002C718
+	// Token: 0x0600090A RID: 2314 RVA: 0x0002EDD8 File Offset: 0x0002CFD8
 	public void ComposeTransforms(Transform target, Transform @out)
 	{
 		this.Translation.Multiply(target.Scale3D, @out.Translation);
@@ -294,7 +313,7 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		target.Rotation.Multiply(this.Rotation, @out.Rotation);
 	}
 
-	// Token: 0x060008BF RID: 2239 RVA: 0x0002E59C File Offset: 0x0002C79C
+	// Token: 0x0600090B RID: 2315 RVA: 0x0002EE5C File Offset: 0x0002D05C
 	public void UnComposeTransform(Transform target, Transform @out)
 	{
 		target.Rotation.Inverse(@out.Rotation);
@@ -305,7 +324,7 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		@out.Translation.DivisionEqual(target.Scale3D);
 	}
 
-	// Token: 0x060008C0 RID: 2240 RVA: 0x0002E62A File Offset: 0x0002C82A
+	// Token: 0x0600090C RID: 2316 RVA: 0x0002EEEA File Offset: 0x0002D0EA
 	public void Reset()
 	{
 		this.Translation.Reset();
@@ -313,29 +332,29 @@ public class Transform : ITransform, IClearable, ILogFormattedPrint
 		this.Rotation.Reset();
 	}
 
-	// Token: 0x060008C1 RID: 2241 RVA: 0x0002E64D File Offset: 0x0002C84D
+	// Token: 0x0600090D RID: 2317 RVA: 0x0002EF0D File Offset: 0x0002D10D
 	public void Clear()
 	{
 		this.Reset();
 	}
 
-	// Token: 0x04000630 RID: 1584
+	// Token: 0x0400063B RID: 1595
 	[Nullable(2)]
 	private Vector Translation;
 
-	// Token: 0x04000631 RID: 1585
+	// Token: 0x0400063C RID: 1596
 	[Nullable(2)]
 	private Quat Rotation;
 
-	// Token: 0x04000632 RID: 1586
+	// Token: 0x0400063D RID: 1597
 	[Nullable(2)]
 	private Vector Scale3D;
 
-	// Token: 0x04000633 RID: 1587
+	// Token: 0x0400063E RID: 1598
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVec = Vector.Create();
 
-	// Token: 0x04000634 RID: 1588
+	// Token: 0x0400063F RID: 1599
 	[StaticVariableRuleIgnore]
 	private static readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 }

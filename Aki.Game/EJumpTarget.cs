@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020027F5 RID: 10229
+// Token: 0x02001D70 RID: 7536
 public enum EJumpTarget
 {
-	// Token: 0x04009DEB RID: 40427
+	// Token: 0x0400A1D4 RID: 41428
 	SkillPage,
-	// Token: 0x04009DEC RID: 40428
+	// Token: 0x0400A1D5 RID: 41429
 	IllustrationPage
 }

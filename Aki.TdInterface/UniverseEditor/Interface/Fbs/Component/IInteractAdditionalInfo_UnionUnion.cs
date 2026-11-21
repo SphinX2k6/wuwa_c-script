@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005435 RID: 21557
+	// Token: 0x020059BB RID: 22971
 	public class IInteractAdditionalInfo_UnionUnion
 	{
-		// Token: 0x17009E87 RID: 40583
-		// (get) Token: 0x06023691 RID: 145041 RVA: 0x004E61CD File Offset: 0x004E43CD
-		// (set) Token: 0x06023692 RID: 145042 RVA: 0x004E61D5 File Offset: 0x004E43D5
+		// Token: 0x1700A6C1 RID: 42689
+		// (get) Token: 0x06025749 RID: 153417 RVA: 0x005231F9 File Offset: 0x005213F9
+		// (set) Token: 0x0602574A RID: 153418 RVA: 0x00523201 File Offset: 0x00521401
 		public IInteractAdditionalInfo_Union Type { get; set; }
 
-		// Token: 0x17009E88 RID: 40584
-		// (get) Token: 0x06023693 RID: 145043 RVA: 0x004E61DE File Offset: 0x004E43DE
-		// (set) Token: 0x06023694 RID: 145044 RVA: 0x004E61E6 File Offset: 0x004E43E6
+		// Token: 0x1700A6C2 RID: 42690
+		// (get) Token: 0x0602574B RID: 153419 RVA: 0x0052320A File Offset: 0x0052140A
+		// (set) Token: 0x0602574C RID: 153420 RVA: 0x00523212 File Offset: 0x00521412
 		public object Value { get; set; }
 
-		// Token: 0x06023695 RID: 145045 RVA: 0x004E61EF File Offset: 0x004E43EF
+		// Token: 0x0602574D RID: 153421 RVA: 0x0052321B File Offset: 0x0052141B
 		public IInteractAdditionalInfo_UnionUnion()
 		{
 			this.Type = IInteractAdditionalInfo_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06023696 RID: 145046 RVA: 0x004E6205 File Offset: 0x004E4405
+		// Token: 0x0602574E RID: 153422 RVA: 0x00523231 File Offset: 0x00521431
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06023697 RID: 145047 RVA: 0x004E6217 File Offset: 0x004E4417
+		// Token: 0x0602574F RID: 153423 RVA: 0x00523243 File Offset: 0x00521443
 		public IInteractAdditionalInfoT AsIInteractAdditionalInfo()
 		{
 			return this.As<IInteractAdditionalInfoT>();
 		}
 
-		// Token: 0x06023698 RID: 145048 RVA: 0x004E621F File Offset: 0x004E441F
+		// Token: 0x06025750 RID: 153424 RVA: 0x0052324B File Offset: 0x0052144B
 		public static IInteractAdditionalInfo_UnionUnion FromIInteractAdditionalInfo(IInteractAdditionalInfoT _iinteractadditionalinfo)
 		{
 			return new IInteractAdditionalInfo_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06023699 RID: 145049 RVA: 0x004E6234 File Offset: 0x004E4434
+		// Token: 0x06025751 RID: 153425 RVA: 0x00523260 File Offset: 0x00521460
 		public IFishingPointAdditionalInfoT AsIFishingPointAdditionalInfo()
 		{
 			return this.As<IFishingPointAdditionalInfoT>();
 		}
 
-		// Token: 0x0602369A RID: 145050 RVA: 0x004E623C File Offset: 0x004E443C
+		// Token: 0x06025752 RID: 153426 RVA: 0x00523268 File Offset: 0x00521468
 		public static IInteractAdditionalInfo_UnionUnion FromIFishingPointAdditionalInfo(IFishingPointAdditionalInfoT _ifishingpointadditionalinfo)
 		{
 			return new IInteractAdditionalInfo_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602369B RID: 145051 RVA: 0x004E6254 File Offset: 0x004E4454
+		// Token: 0x06025753 RID: 153427 RVA: 0x00523280 File Offset: 0x00521480
 		public static int Pack(FlatBufferBuilder builder, IInteractAdditionalInfo_UnionUnion _o)
 		{
 			IInteractAdditionalInfo_Union type = _o.Type;

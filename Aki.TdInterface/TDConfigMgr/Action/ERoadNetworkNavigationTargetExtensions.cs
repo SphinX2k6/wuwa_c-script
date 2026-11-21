@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023F3 RID: 9203
+	// Token: 0x0200268A RID: 9866
 	public static class ERoadNetworkNavigationTargetExtensions
 	{
-		// Token: 0x0600C844 RID: 51268 RVA: 0x001D5048 File Offset: 0x001D3248
+		// Token: 0x0600D4C7 RID: 54471 RVA: 0x001EE7F4 File Offset: 0x001EC9F4
 		public static string ToEnumString(this ERoadNetworkNavigationTarget value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C845 RID: 51269 RVA: 0x001D5070 File Offset: 0x001D3270
+		// Token: 0x0600D4C8 RID: 54472 RVA: 0x001EE81C File Offset: 0x001ECA1C
 		public static ERoadNetworkNavigationTarget FromString(string name)
 		{
 			ERoadNetworkNavigationTarget result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C846 RID: 51270 RVA: 0x001D5099 File Offset: 0x001D3299
+		// Token: 0x0600D4C9 RID: 54473 RVA: 0x001EE845 File Offset: 0x001ECA45
 		public static bool TryFromString(string name, out ERoadNetworkNavigationTarget value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C847 RID: 51271 RVA: 0x001D50BE File Offset: 0x001D32BE
+		// Token: 0x0600D4CA RID: 54474 RVA: 0x001EE86A File Offset: 0x001ECA6A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C848 RID: 51272 RVA: 0x001D50CE File Offset: 0x001D32CE
+		// Token: 0x0600D4CB RID: 54475 RVA: 0x001EE87A File Offset: 0x001ECA7A
 		public static ERoadNetworkNavigationTarget[] GetValues()
 		{
 			return new ERoadNetworkNavigationTarget[1];
 		}
 
-		// Token: 0x0600C849 RID: 51273 RVA: 0x001D50D6 File Offset: 0x001D32D6
+		// Token: 0x0600D4CC RID: 54476 RVA: 0x001EE882 File Offset: 0x001ECA82
 		public static string[] GetNames()
 		{
 			return new string[]

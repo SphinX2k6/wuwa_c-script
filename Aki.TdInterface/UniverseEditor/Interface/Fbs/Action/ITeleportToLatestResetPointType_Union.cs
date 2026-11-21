@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007394 RID: 29588
+	// Token: 0x02007B7B RID: 31611
 	public enum ITeleportToLatestResetPointType_Union : byte
 	{
-		// Token: 0x040121AD RID: 74157
+		// Token: 0x040131C6 RID: 78278
 		NONE,
-		// Token: 0x040121AE RID: 74158
+		// Token: 0x040131C7 RID: 78279
 		ITeleportToLatestResetPointType,
-		// Token: 0x040121AF RID: 74159
+		// Token: 0x040131C8 RID: 78280
 		ITeleportToLatestResetPointDirectly
 	}
 }

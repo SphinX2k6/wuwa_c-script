@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003CE RID: 974
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000425 RID: 1061
 	public class IGameplayDataPersistence
 	{
-		// Token: 0x06001393 RID: 5011 RVA: 0x0003F82C File Offset: 0x0003DA2C
+		// Token: 0x06001521 RID: 5409 RVA: 0x000433AC File Offset: 0x000415AC
 		private IGameplayDataPersistence_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001394 RID: 5012 RVA: 0x0003F864 File Offset: 0x0003DA64
+		// Token: 0x06001522 RID: 5410 RVA: 0x000433E4 File Offset: 0x000415E4
 		public static IGameplayDataPersistence Create([Nullable(2)] IGameplayDataPersistence instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001395 RID: 5013 RVA: 0x0003F877 File Offset: 0x0003DA77
+		// Token: 0x06001523 RID: 5411 RVA: 0x000433F7 File Offset: 0x000415F7
 		public static IGameplayDataPersistence CreateFromSetValue([Nullable(2)] IGameplayDataPersistence_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001396 RID: 5014 RVA: 0x0003F88A File Offset: 0x0003DA8A
+		// Token: 0x06001524 RID: 5412 RVA: 0x0004340A File Offset: 0x0004160A
 		public IGameplayDataPersistence_SetValue ToSetValue()
 		{
 			return new IGameplayDataPersistence_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000572 RID: 1394
-		// (get) Token: 0x06001397 RID: 5015 RVA: 0x0003F89D File Offset: 0x0003DA9D
-		// (set) Token: 0x06001398 RID: 5016 RVA: 0x0003F8C8 File Offset: 0x0003DAC8
+		// Token: 0x170005D6 RID: 1494
+		// (get) Token: 0x06001525 RID: 5413 RVA: 0x0004341D File Offset: 0x0004161D
+		// (set) Token: 0x06001526 RID: 5414 RVA: 0x00043448 File Offset: 0x00041648
 		public virtual EDataPersistenceGameplayType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F97 RID: 3991
+		// Token: 0x040010B0 RID: 4272
 		[Nullable(2)]
 		protected IGameplayDataPersistence FbInstance;
 
-		// Token: 0x04000F98 RID: 3992
+		// Token: 0x040010B1 RID: 4273
 		[Nullable(2)]
 		protected IGameplayDataPersistence_SetValue PocoInterface;
 	}

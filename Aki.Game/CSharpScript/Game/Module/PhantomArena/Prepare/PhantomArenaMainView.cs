@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare
 {
-	// Token: 0x02005144 RID: 20804
+	// Token: 0x02004114 RID: 16660
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,12 +20,12 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 	})]
 	public class PhantomArenaMainView : PhantomArenaRootViewBase<PhantomArenaMainViewModel>
 	{
-		// Token: 0x0603525A RID: 217690 RVA: 0x00C98862 File Offset: 0x00C96A62
+		// Token: 0x0602A156 RID: 172374 RVA: 0x00BE5D62 File Offset: 0x00BE3F62
 		public PhantomArenaMainView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603525B RID: 217691 RVA: 0x00C98878 File Offset: 0x00C96A78
+		// Token: 0x0602A157 RID: 172375 RVA: 0x00BE5D78 File Offset: 0x00BE3F78
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			};
 		}
 
-		// Token: 0x0603525C RID: 217692 RVA: 0x00C9892C File Offset: 0x00C96B2C
+		// Token: 0x0602A158 RID: 172376 RVA: 0x00BE5E2C File Offset: 0x00BE402C
 		protected override void OnRegisterViewData()
 		{
 			IPhantomArenaMainViewOpenParam phantomArenaMainViewOpenParam = this.OpenParam as IPhantomArenaMainViewOpenParam;
@@ -61,34 +61,34 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			this.ViewModel.SetViewHelpBtnActive = new Action<bool>(this.SetViewHelpBtnActive);
 		}
 
-		// Token: 0x0603525D RID: 217693 RVA: 0x00C98A75 File Offset: 0x00C96C75
+		// Token: 0x0602A159 RID: 172377 RVA: 0x00BE5F75 File Offset: 0x00BE4175
 		protected override void OnAddEventListener()
 		{
 			base.OnAddEventListener();
 			EventSystem.Instance.Add(EEventName.GuideFocusNeedUiTabView, new Action<GuideStepInfo, GuideFocusNew>(this.OnGuideFocusNeedUiTabView));
 		}
 
-		// Token: 0x0603525E RID: 217694 RVA: 0x00C98A99 File Offset: 0x00C96C99
+		// Token: 0x0602A15A RID: 172378 RVA: 0x00BE5F99 File Offset: 0x00BE4199
 		protected override void OnRemoveEventListener()
 		{
 			base.OnRemoveEventListener();
 			EventSystem.Instance.Remove(EEventName.GuideFocusNeedUiTabView, new Action<GuideStepInfo, GuideFocusNew>(this.OnGuideFocusNeedUiTabView));
 		}
 
-		// Token: 0x0603525F RID: 217695 RVA: 0x00C98AC0 File Offset: 0x00C96CC0
+		// Token: 0x0602A15B RID: 172379 RVA: 0x00BE5FC0 File Offset: 0x00BE41C0
 		protected override void OnRegisterDefaultChildView()
 		{
 			IPhantomArenaMainViewOpenParam phantomArenaMainViewOpenParam = this.OpenParam as IPhantomArenaMainViewOpenParam;
 			this.DefaultChildViewName = new EPhantomArenaChildViewName?(phantomArenaMainViewOpenParam.OpenView);
 		}
 
-		// Token: 0x06035260 RID: 217696 RVA: 0x00C98AEA File Offset: 0x00C96CEA
+		// Token: 0x0602A15C RID: 172380 RVA: 0x00BE5FEA File Offset: 0x00BE41EA
 		protected override void OnRegisterContentItem()
 		{
 			this.ContentItem = base.GetItem(1);
 		}
 
-		// Token: 0x06035261 RID: 217697 RVA: 0x00C98AFC File Offset: 0x00C96CFC
+		// Token: 0x0602A15D RID: 172381 RVA: 0x00BE5FFC File Offset: 0x00BE41FC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaMainView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035262 RID: 217698 RVA: 0x00C98B3F File Offset: 0x00C96D3F
+		// Token: 0x0602A15E RID: 172382 RVA: 0x00BE603F File Offset: 0x00BE423F
 		private void ChangeRoleTexture(int newTextureCardRoleId, bool bPlayAnim)
 		{
 			if (this.ViewModel.TextureCardRoleId == newTextureCardRoleId)
@@ -110,13 +110,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			this.RefreshRoleTexture(bPlayAnim);
 		}
 
-		// Token: 0x06035263 RID: 217699 RVA: 0x00C98B63 File Offset: 0x00C96D63
+		// Token: 0x0602A15F RID: 172383 RVA: 0x00BE6063 File Offset: 0x00BE4263
 		private void RefreshRoleTextureWithoutAnim()
 		{
 			this.RefreshRoleTexture(false);
 		}
 
-		// Token: 0x06035264 RID: 217700 RVA: 0x00C98B6C File Offset: 0x00C96D6C
+		// Token: 0x0602A160 RID: 172384 RVA: 0x00BE606C File Offset: 0x00BE426C
 		public void ShowRoleTexture(bool bPlayAnim)
 		{
 			if (this.ViewModel.RoleTextureActive)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			}
 		}
 
-		// Token: 0x06035265 RID: 217701 RVA: 0x00C98BE8 File Offset: 0x00C96DE8
+		// Token: 0x0602A161 RID: 172385 RVA: 0x00BE60E8 File Offset: 0x00BE42E8
 		public void PlayRoleTextureChangeAnim()
 		{
 			string sequenceName = "RoleShow";
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			this.SequencePlayer.PlaySequencePurely(sequenceName, false, false, null, null, false);
 		}
 
-		// Token: 0x06035266 RID: 217702 RVA: 0x00C98C30 File Offset: 0x00C96E30
+		// Token: 0x0602A162 RID: 172386 RVA: 0x00BE6130 File Offset: 0x00BE4330
 		public void PlayRoleTextureShowAnim()
 		{
 			string sequenceName = "RoleShow";
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			this.SequencePlayer.PlaySequencePurely(sequenceName, false, false, null, null, false);
 		}
 
-		// Token: 0x06035267 RID: 217703 RVA: 0x00C98C78 File Offset: 0x00C96E78
+		// Token: 0x0602A163 RID: 172387 RVA: 0x00BE6178 File Offset: 0x00BE4378
 		public void HideRoleTexture(bool bPlayAnim)
 		{
 			if (!this.ViewModel.RoleTextureActive)
@@ -185,14 +185,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			}
 		}
 
-		// Token: 0x06035268 RID: 217704 RVA: 0x00C98CDC File Offset: 0x00C96EDC
+		// Token: 0x0602A164 RID: 172388 RVA: 0x00BE61DC File Offset: 0x00BE43DC
 		public void SetRoleTextureUiActive(bool active)
 		{
 			base.GetTexture(2).SetUIActive(active);
 			base.GetItem(6).SetUIActive(active);
 		}
 
-		// Token: 0x06035269 RID: 217705 RVA: 0x00C98CF8 File Offset: 0x00C96EF8
+		// Token: 0x0602A165 RID: 172389 RVA: 0x00BE61F8 File Offset: 0x00BE43F8
 		public void RefreshRoleTexture(bool bPlayAnim)
 		{
 			PhantomArenaMainView.<>c__DisplayClass21_0 CS$<>8__locals1 = new PhantomArenaMainView.<>c__DisplayClass21_0();
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x0603526A RID: 217706 RVA: 0x00C98D3C File Offset: 0x00C96F3C
+		// Token: 0x0602A166 RID: 172390 RVA: 0x00BE623C File Offset: 0x00BE443C
 		public UniTask RefreshRoleTextureAsync()
 		{
 			PhantomArenaMainView.<RefreshRoleTextureAsync>d__22 <RefreshRoleTextureAsync>d__;
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return <RefreshRoleTextureAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603526B RID: 217707 RVA: 0x00C98D80 File Offset: 0x00C96F80
+		// Token: 0x0602A167 RID: 172391 RVA: 0x00BE6280 File Offset: 0x00BE4480
 		private void ChangeToShowRoleSpine(int newTextureCardRoleId)
 		{
 			if (this.CurShowRoleSpine != null)
@@ -236,12 +236,12 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			}
 		}
 
-		// Token: 0x0603526C RID: 217708 RVA: 0x00C98DC9 File Offset: 0x00C96FC9
+		// Token: 0x0602A168 RID: 172392 RVA: 0x00BE62C9 File Offset: 0x00BE44C9
 		private void OnSeqStart(string seqName)
 		{
 		}
 
-		// Token: 0x0603526D RID: 217709 RVA: 0x00C98DCB File Offset: 0x00C96FCB
+		// Token: 0x0602A169 RID: 172393 RVA: 0x00BE62CB File Offset: 0x00BE44CB
 		private void OnSeqEnd(string seqName)
 		{
 			if (seqName == "RoleHide".ToString())
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			}
 		}
 
-		// Token: 0x0603526E RID: 217710 RVA: 0x00C98DE8 File Offset: 0x00C96FE8
+		// Token: 0x0602A16A RID: 172394 RVA: 0x00BE62E8 File Offset: 0x00BE44E8
 		private void OnBackBtnClick()
 		{
 			Action overrideCloseFunc = this.ViewModel.GetOverrideCloseFunc();
@@ -262,26 +262,26 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			base.Back();
 		}
 
-		// Token: 0x0603526F RID: 217711 RVA: 0x00C98E11 File Offset: 0x00C97011
+		// Token: 0x0602A16B RID: 172395 RVA: 0x00BE6311 File Offset: 0x00BE4511
 		[NullableContext(2)]
 		public PhantomArenaMainViewSwitchItem GetSwitchItem()
 		{
 			return this.SwitchItem;
 		}
 
-		// Token: 0x06035270 RID: 217712 RVA: 0x00C98E19 File Offset: 0x00C97019
+		// Token: 0x0602A16C RID: 172396 RVA: 0x00BE6319 File Offset: 0x00BE4519
 		public void SetViewTitle(string title)
 		{
 			this.CaptionItem.SetTitleLocalText(title);
 		}
 
-		// Token: 0x06035271 RID: 217713 RVA: 0x00C98E27 File Offset: 0x00C97027
+		// Token: 0x0602A16D RID: 172397 RVA: 0x00BE6327 File Offset: 0x00BE4527
 		public void SetViewIcon(string icon)
 		{
 			this.CaptionItem.SetTitleIconByResourceId(icon);
 		}
 
-		// Token: 0x06035272 RID: 217714 RVA: 0x00C98E38 File Offset: 0x00C97038
+		// Token: 0x0602A16E RID: 172398 RVA: 0x00BE6338 File Offset: 0x00BE4538
 		public void SetViewHelpId(int helpId)
 		{
 			this.CaptionItem.SetHelpCallBack(delegate
@@ -290,13 +290,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			});
 		}
 
-		// Token: 0x06035273 RID: 217715 RVA: 0x00C98E69 File Offset: 0x00C97069
+		// Token: 0x0602A16F RID: 172399 RVA: 0x00BE6369 File Offset: 0x00BE4569
 		public void SetViewHelpBtnActive(bool bActive)
 		{
 			this.CaptionItem.SetHelpBtnActive(bActive);
 		}
 
-		// Token: 0x06035274 RID: 217716 RVA: 0x00C98E77 File Offset: 0x00C97077
+		// Token: 0x0602A170 RID: 172400 RVA: 0x00BE6377 File Offset: 0x00BE4577
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return switchItem.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x06035275 RID: 217717 RVA: 0x00C98EB0 File Offset: 0x00C970B0
+		// Token: 0x0602A171 RID: 172401 RVA: 0x00BE63B0 File Offset: 0x00BE45B0
 		private void OnGuideFocusNeedUiTabView(GuideStepInfo stepInfo, GuideFocusNew focusConf)
 		{
 			PhantomArenaChildViewBase curChildView = base.GetCurChildView();
@@ -332,47 +332,47 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			stepInfo.ViewData.SetAttachedView(curChildView);
 		}
 
-		// Token: 0x0401C4FA RID: 115962
+		// Token: 0x04016F2F RID: 93999
 		[Nullable(2)]
 		private PhantomArenaMainViewSwitchItem SwitchItem;
 
-		// Token: 0x0401C4FB RID: 115963
+		// Token: 0x04016F30 RID: 94000
 		[Nullable(2)]
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401C4FC RID: 115964
+		// Token: 0x04016F31 RID: 94001
 		protected LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401C4FD RID: 115965
+		// Token: 0x04016F32 RID: 94002
 		protected Dictionary<int, PhantomArenaMainViewRoleSpineItem> RoleSpineMap = new Dictionary<int, PhantomArenaMainViewRoleSpineItem>();
 
-		// Token: 0x0401C4FE RID: 115966
+		// Token: 0x04016F33 RID: 94003
 		[Nullable(2)]
 		protected PhantomArenaMainViewRoleSpineItem CurShowRoleSpine;
 
-		// Token: 0x0200B2A4 RID: 45732
+		// Token: 0x02009CDD RID: 40157
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x040361EC RID: 221676
+			// Token: 0x04030C41 RID: 199745
 			public const int CaptionItem = 0;
 
-			// Token: 0x040361ED RID: 221677
+			// Token: 0x04030C42 RID: 199746
 			public const int ContentItem = 1;
 
-			// Token: 0x040361EE RID: 221678
+			// Token: 0x04030C43 RID: 199747
 			public const int LightTextureA = 2;
 
-			// Token: 0x040361EF RID: 221679
+			// Token: 0x04030C44 RID: 199748
 			public const int SwitchItem = 3;
 
-			// Token: 0x040361F0 RID: 221680
+			// Token: 0x04030C45 RID: 199749
 			public const int FrameItem = 4;
 
-			// Token: 0x040361F1 RID: 221681
+			// Token: 0x04030C46 RID: 199750
 			public const int LightTextureB = 5;
 
-			// Token: 0x040361F2 RID: 221682
+			// Token: 0x04030C47 RID: 199751
 			public const int RoleRootItem = 6;
 		}
 	}

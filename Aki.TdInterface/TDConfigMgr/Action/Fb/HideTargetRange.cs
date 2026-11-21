@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200278D RID: 10125
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A5F RID: 10847
 	public class HideTargetRange : ActionParams
 	{
-		// Token: 0x0600E169 RID: 57705 RVA: 0x00214ED8 File Offset: 0x002130D8
+		// Token: 0x0600EF87 RID: 61319 RVA: 0x00231C6C File Offset: 0x0022FE6C
 		public static HideTargetRange Create(IHideTargetRange? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004411 RID: 17425
-		// (get) Token: 0x0600E16A RID: 57706 RVA: 0x00214EF7 File Offset: 0x002130F7
+		// Token: 0x17004777 RID: 18295
+		// (get) Token: 0x0600EF88 RID: 61320 RVA: 0x00231C8B File Offset: 0x0022FE8B
 		public virtual int RangeEntity
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004412 RID: 17426
-		// (get) Token: 0x0600E16B RID: 57707 RVA: 0x00214F04 File Offset: 0x00213104
+		// Token: 0x17004778 RID: 18296
+		// (get) Token: 0x0600EF89 RID: 61321 RVA: 0x00231C98 File Offset: 0x0022FE98
 		public virtual IHideRangeType HideConfig
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004413 RID: 17427
-		// (get) Token: 0x0600E16C RID: 57708 RVA: 0x00214F34 File Offset: 0x00213134
+		// Token: 0x17004779 RID: 18297
+		// (get) Token: 0x0600EF8A RID: 61322 RVA: 0x00231CC8 File Offset: 0x0022FEC8
 		public virtual bool? IsHideSimpleNpc
 		{
 			get
@@ -62,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004414 RID: 17428
-		// (get) Token: 0x0600E16D RID: 57709 RVA: 0x00214F6C File Offset: 0x0021316C
+		// Token: 0x1700477A RID: 18298
+		// (get) Token: 0x0600EF8B RID: 61323 RVA: 0x00231D00 File Offset: 0x0022FF00
 		public virtual bool? IsHidePasserByNpc
 		{
 			get
@@ -76,13 +73,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CF5 RID: 31989
+		// Token: 0x040083AB RID: 33707
 		private IHideTargetRange Instance;
 
-		// Token: 0x04007CF6 RID: 31990
+		// Token: 0x040083AC RID: 33708
 		private IHideRangeType _HideConfigCache;
 
-		// Token: 0x04007CF7 RID: 31991
+		// Token: 0x040083AD RID: 33709
 		private bool _HideConfigInited;
 	}
 }

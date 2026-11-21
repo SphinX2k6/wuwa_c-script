@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200146B RID: 5227
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015C4 RID: 5572
 	public class ITetrisSingleBlock
 	{
-		// Token: 0x060076F0 RID: 30448 RVA: 0x0011C496 File Offset: 0x0011A696
+		// Token: 0x06007DBE RID: 32190 RVA: 0x0012B0AE File Offset: 0x001292AE
 		public static ITetrisSingleBlock Create(ITetrisSingleBlock? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170027ED RID: 10221
-		// (get) Token: 0x060076F1 RID: 30449 RVA: 0x0011C4B5 File Offset: 0x0011A6B5
+		// Token: 0x170029D8 RID: 10712
+		// (get) Token: 0x06007DBF RID: 32191 RVA: 0x0012B0CD File Offset: 0x001292CD
 		public virtual string StyleName
 		{
 			get
@@ -32,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004521 RID: 17697
+		// Token: 0x040048BC RID: 18620
 		private ITetrisSingleBlock Instance;
 	}
 }

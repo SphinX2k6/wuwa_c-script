@@ -3,33 +3,33 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x0200596A RID: 22890
+	// Token: 0x02004943 RID: 18755
 	[NullableContext(1)]
 	public interface IGiantEcoDisplayConfig
 	{
-		// Token: 0x17008B32 RID: 35634
-		// (get) Token: 0x0603A12D RID: 237869
-		// (set) Token: 0x0603A12E RID: 237870
+		// Token: 0x17005EFF RID: 24319
+		// (get) Token: 0x0602F051 RID: 192593
+		// (set) Token: 0x0602F052 RID: 192594
 		string OutlineColorHex { get; set; }
 
-		// Token: 0x17008B33 RID: 35635
-		// (get) Token: 0x0603A12F RID: 237871
-		// (set) Token: 0x0603A130 RID: 237872
+		// Token: 0x17005F00 RID: 24320
+		// (get) Token: 0x0602F053 RID: 192595
+		// (set) Token: 0x0602F054 RID: 192596
 		string IconSpriteNormal { get; set; }
 
-		// Token: 0x17008B34 RID: 35636
-		// (get) Token: 0x0603A131 RID: 237873
-		// (set) Token: 0x0603A132 RID: 237874
+		// Token: 0x17005F01 RID: 24321
+		// (get) Token: 0x0602F055 RID: 192597
+		// (set) Token: 0x0602F056 RID: 192598
 		string IconSpriteActive { get; set; }
 
-		// Token: 0x17008B35 RID: 35637
-		// (get) Token: 0x0603A133 RID: 237875
-		// (set) Token: 0x0603A134 RID: 237876
+		// Token: 0x17005F02 RID: 24322
+		// (get) Token: 0x0602F057 RID: 192599
+		// (set) Token: 0x0602F058 RID: 192600
 		string MindsetNameKey { get; set; }
 
-		// Token: 0x17008B36 RID: 35638
-		// (get) Token: 0x0603A135 RID: 237877
-		// (set) Token: 0x0603A136 RID: 237878
+		// Token: 0x17005F03 RID: 24323
+		// (get) Token: 0x0602F059 RID: 192601
+		// (set) Token: 0x0602F05A RID: 192602
 		string PortraitTexture { get; set; }
 	}
 }

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DE2 RID: 19938
+	// Token: 0x020052E7 RID: 21223
 	public enum ENpcUiInteractType : byte
 	{
-		// Token: 0x0400DA85 RID: 55941
+		// Token: 0x0400E5DA RID: 58842
 		HandInItem,
-		// Token: 0x0400DA86 RID: 55942
+		// Token: 0x0400E5DB RID: 58843
 		Shop,
-		// Token: 0x0400DA87 RID: 55943
+		// Token: 0x0400E5DC RID: 58844
 		AntiqueShop,
-		// Token: 0x0400DA88 RID: 55944
+		// Token: 0x0400E5DD RID: 58845
 		ChengXiaoShanShop,
-		// Token: 0x0400DA89 RID: 55945
+		// Token: 0x0400E5DE RID: 58846
 		Gramophone,
-		// Token: 0x0400DA8A RID: 55946
+		// Token: 0x0400E5DF RID: 58847
 		SoundBox3,
-		// Token: 0x0400DA8B RID: 55947
+		// Token: 0x0400E5E0 RID: 58848
 		SunSpirit,
-		// Token: 0x0400DA8C RID: 55948
+		// Token: 0x0400E5E1 RID: 58849
 		ShopNew,
-		// Token: 0x0400DA8D RID: 55949
+		// Token: 0x0400E5E2 RID: 58850
 		VillageInfr,
-		// Token: 0x0400DA8E RID: 55950
+		// Token: 0x0400E5E3 RID: 58851
 		SoundBox35,
-		// Token: 0x0400DA8F RID: 55951
+		// Token: 0x0400E5E4 RID: 58852
 		DollGrabDelivery
 	}
 }

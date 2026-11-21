@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D23 RID: 3363
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E1D RID: 3613
 	public class ISceneTextGuideUiContent
 	{
-		// Token: 0x06004CC1 RID: 19649 RVA: 0x000BF0DB File Offset: 0x000BD2DB
+		// Token: 0x060051DD RID: 20957 RVA: 0x000CA81F File Offset: 0x000C8A1F
 		public static ISceneTextGuideUiContent Create(ISceneTextGuideUiContent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001838 RID: 6200
-		// (get) Token: 0x06004CC2 RID: 19650 RVA: 0x000BF0FA File Offset: 0x000BD2FA
+		// Token: 0x1700199E RID: 6558
+		// (get) Token: 0x060051DE RID: 20958 RVA: 0x000CA83E File Offset: 0x000C8A3E
 		public virtual string TidText
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001839 RID: 6201
-		// (get) Token: 0x06004CC3 RID: 19651 RVA: 0x000BF108 File Offset: 0x000BD308
+		// Token: 0x1700199F RID: 6559
+		// (get) Token: 0x060051DF RID: 20959 RVA: 0x000CA84C File Offset: 0x000C8A4C
 		public virtual List<ISceneTextGuideUiActionMappingIcon> ActionMappingIconList
 		{
 			get
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700183A RID: 6202
-		// (get) Token: 0x06004CC4 RID: 19652 RVA: 0x000BF174 File Offset: 0x000BD374
+		// Token: 0x170019A0 RID: 6560
+		// (get) Token: 0x060051E0 RID: 20960 RVA: 0x000CA8B8 File Offset: 0x000C8AB8
 		public virtual List<string> MobileIconList
 		{
 			get
@@ -75,29 +73,31 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700183B RID: 6203
-		// (get) Token: 0x06004CC5 RID: 19653 RVA: 0x000BF1D8 File Offset: 0x000BD3D8
+		// Token: 0x170019A1 RID: 6561
+		// (get) Token: 0x060051E1 RID: 20961 RVA: 0x000CA91C File Offset: 0x000C8B1C
+		[Nullable(2)]
 		public virtual string EdTidText
 		{
+			[NullableContext(2)]
 			get
 			{
 				return null;
 			}
 		}
 
-		// Token: 0x04002BEA RID: 11242
+		// Token: 0x04002EAA RID: 11946
 		private ISceneTextGuideUiContent Instance;
 
-		// Token: 0x04002BEB RID: 11243
+		// Token: 0x04002EAB RID: 11947
 		private List<ISceneTextGuideUiActionMappingIcon> _ActionMappingIconListCache;
 
-		// Token: 0x04002BEC RID: 11244
+		// Token: 0x04002EAC RID: 11948
 		private bool _ActionMappingIconListInited;
 
-		// Token: 0x04002BED RID: 11245
+		// Token: 0x04002EAD RID: 11949
 		private List<string> _MobileIconListCache;
 
-		// Token: 0x04002BEE RID: 11246
+		// Token: 0x04002EAE RID: 11950
 		private bool _MobileIconListInited;
 	}
 }

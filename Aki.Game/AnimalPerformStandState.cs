@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 
-// Token: 0x02002E2B RID: 11819
+// Token: 0x02002387 RID: 9095
 public class AnimalPerformStandState : AnimalPerformStateBase
 {
-	// Token: 0x06018E59 RID: 101977 RVA: 0x0066AF2C File Offset: 0x0066912C
+	// Token: 0x06016726 RID: 91942 RVA: 0x00690E1C File Offset: 0x0068F01C
 	[NullableContext(1)]
 	public AnimalPerformStandState(Entity owner, EAnimalPerformState state, [Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ public class AnimalPerformStandState : AnimalPerformStateBase
 	{
 	}
 
-	// Token: 0x06018E5A RID: 101978 RVA: 0x0066AF37 File Offset: 0x00669137
+	// Token: 0x06016727 RID: 91943 RVA: 0x00690E27 File Offset: 0x0068F027
 	protected override void OnEnter(EAnimalPerformState? lastState)
 	{
 		if (this.EcologicalInterface == null)
@@ -25,7 +25,7 @@ public class AnimalPerformStandState : AnimalPerformStateBase
 		this.EcologicalInterface.NoneStateStart();
 	}
 
-	// Token: 0x06018E5B RID: 101979 RVA: 0x0066AF4D File Offset: 0x0066914D
+	// Token: 0x06016728 RID: 91944 RVA: 0x00690E3D File Offset: 0x0068F03D
 	protected override void OnExit(EAnimalPerformState nextState)
 	{
 		if (this.EcologicalInterface == null)

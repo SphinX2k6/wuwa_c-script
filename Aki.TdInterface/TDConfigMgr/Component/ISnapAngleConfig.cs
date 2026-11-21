@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006E0 RID: 1760
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000781 RID: 1921
 	public class ISnapAngleConfig
 	{
-		// Token: 0x060025EE RID: 9710 RVA: 0x00065EC8 File Offset: 0x000640C8
+		// Token: 0x0600290E RID: 10510 RVA: 0x0006CF38 File Offset: 0x0006B138
 		private ISnapAngleConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060025EF RID: 9711 RVA: 0x00065F00 File Offset: 0x00064100
+		// Token: 0x0600290F RID: 10511 RVA: 0x0006CF70 File Offset: 0x0006B170
 		public static ISnapAngleConfig Create([Nullable(2)] ISnapAngleConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060025F0 RID: 9712 RVA: 0x00065F13 File Offset: 0x00064113
+		// Token: 0x06002910 RID: 10512 RVA: 0x0006CF83 File Offset: 0x0006B183
 		public static ISnapAngleConfig CreateFromSetValue([Nullable(2)] ISnapAngleConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060025F1 RID: 9713 RVA: 0x00065F26 File Offset: 0x00064126
+		// Token: 0x06002911 RID: 10513 RVA: 0x0006CF96 File Offset: 0x0006B196
 		public ISnapAngleConfig_SetValue ToSetValue()
 		{
 			return new ISnapAngleConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A06 RID: 2566
-		// (get) Token: 0x060025F2 RID: 9714 RVA: 0x00065F45 File Offset: 0x00064145
-		// (set) Token: 0x060025F3 RID: 9715 RVA: 0x00065F74 File Offset: 0x00064174
+		// Token: 0x17000AC4 RID: 2756
+		// (get) Token: 0x06002912 RID: 10514 RVA: 0x0006CFB5 File Offset: 0x0006B1B5
+		// (set) Token: 0x06002913 RID: 10515 RVA: 0x0006CFE4 File Offset: 0x0006B1E4
 		public virtual float Angle
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A07 RID: 2567
-		// (get) Token: 0x060025F4 RID: 9716 RVA: 0x00065F82 File Offset: 0x00064182
-		// (set) Token: 0x060025F5 RID: 9717 RVA: 0x00065FB1 File Offset: 0x000641B1
+		// Token: 0x17000AC5 RID: 2757
+		// (get) Token: 0x06002914 RID: 10516 RVA: 0x0006CFF2 File Offset: 0x0006B1F2
+		// (set) Token: 0x06002915 RID: 10517 RVA: 0x0006D021 File Offset: 0x0006B221
 		public virtual float Range
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040019D8 RID: 6616
+		// Token: 0x04001BD7 RID: 7127
 		[Nullable(2)]
 		protected ISnapAngleConfig FbInstance;
 
-		// Token: 0x040019D9 RID: 6617
+		// Token: 0x04001BD8 RID: 7128
 		[Nullable(2)]
 		protected ISnapAngleConfig_SetValue PocoInterface;
 	}

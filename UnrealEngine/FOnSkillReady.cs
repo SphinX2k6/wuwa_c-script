@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E70 RID: 7792
+	// Token: 0x020005A3 RID: 1443
 	public sealed class FOnSkillReady : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601DAD7 RID: 121559 RVA: 0x002BD6DC File Offset: 0x002BB8DC
+		// Token: 0x06008241 RID: 33345 RVA: 0x000C09B8 File Offset: 0x000BEBB8
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnSkillReady.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601DAD8 RID: 121560 RVA: 0x002BD6E8 File Offset: 0x002BB8E8
+		// Token: 0x06008242 RID: 33346 RVA: 0x000C09C4 File Offset: 0x000BEBC4
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (AKSC_Entity_AssistMachine.__OnSkillReady__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return AKSC_Entity_AssistMachine.__OnSkillReady__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601DAD9 RID: 121561 RVA: 0x002BD70B File Offset: 0x002BB90B
+		// Token: 0x06008243 RID: 33347 RVA: 0x000C09E7 File Offset: 0x000BEBE7
 		public FOnSkillReady()
 		{
 		}
 
-		// Token: 0x0601DADA RID: 121562 RVA: 0x002BD713 File Offset: 0x002BB913
+		// Token: 0x06008244 RID: 33348 RVA: 0x000C09EF File Offset: 0x000BEBEF
 		[NullableContext(2)]
 		public FOnSkillReady(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DADB RID: 121563 RVA: 0x002BD71D File Offset: 0x002BB91D
+		// Token: 0x06008245 RID: 33349 RVA: 0x000C09F9 File Offset: 0x000BEBF9
 		public FOnSkillReady(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DADC RID: 121564 RVA: 0x002BD728 File Offset: 0x002BB928
+		// Token: 0x06008246 RID: 33350 RVA: 0x000C0A04 File Offset: 0x000BEC04
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601DADD RID: 121565 RVA: 0x002BD75A File Offset: 0x002BB95A
+		// Token: 0x06008247 RID: 33351 RVA: 0x000C0A36 File Offset: 0x000BEC36
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FOnSkillReady.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnSkillReady.RegisterId);
 		}
 
-		// Token: 0x0601DADE RID: 121566 RVA: 0x002BD794 File Offset: 0x002BB994
+		// Token: 0x06008248 RID: 33352 RVA: 0x000C0A70 File Offset: 0x000BEC70
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x0601DADF RID: 121567 RVA: 0x002BD7A0 File Offset: 0x002BB9A0
+		// Token: 0x06008249 RID: 33353 RVA: 0x000C0A7C File Offset: 0x000BEC7C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,18 +83,18 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x04010130 RID: 65840
+		// Token: 0x040038C5 RID: 14533
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_Entity_AssistMachine:OnSkillReady__DelegateSignature";
 
-		// Token: 0x04010131 RID: 65841
+		// Token: 0x040038C6 RID: 14534
 		private static int RegisterId;
 
-		// Token: 0x020032C7 RID: 12999
+		// Token: 0x02000D26 RID: 3366
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401716D RID: 94573
+			// Token: 0x04005FB9 RID: 24505
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

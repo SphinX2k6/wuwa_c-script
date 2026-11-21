@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuickTimeAction
 {
-	// Token: 0x02004F37 RID: 20279
+	// Token: 0x02003F00 RID: 16128
 	public class EQtaItem
 	{
-		// Token: 0x0401B9FA RID: 113146
+		// Token: 0x040163CF RID: 91087
 		[Nullable(1)]
 		public const string CircularLimitedHoldItem = "UiItem_CircularLimitedLongPress";
 	}

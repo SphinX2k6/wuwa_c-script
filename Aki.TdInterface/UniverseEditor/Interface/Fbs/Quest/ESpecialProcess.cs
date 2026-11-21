@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CD0 RID: 15568
+	// Token: 0x020040E4 RID: 16612
 	public enum ESpecialProcess : byte
 	{
-		// Token: 0x0400B4E8 RID: 46312
+		// Token: 0x0400BE8E RID: 48782
 		LowMemorySceneSwitch
 	}
 }

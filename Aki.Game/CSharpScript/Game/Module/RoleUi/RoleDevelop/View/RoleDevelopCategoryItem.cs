@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D35 RID: 19765
+	// Token: 0x02003CF4 RID: 15604
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,8 +16,8 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 	})]
 	public class RoleDevelopCategoryItem : GridProxyAbstract<RoleDevelopCategoryData>
 	{
-		// Token: 0x17007E47 RID: 32327
-		// (get) Token: 0x0603311E RID: 209182 RVA: 0x00BE6460 File Offset: 0x00BE4660
+		// Token: 0x170051F7 RID: 20983
+		// (get) Token: 0x06027F19 RID: 163609 RVA: 0x00B2C638 File Offset: 0x00B2A838
 		public ERoleDevelopCategoryType CategoryType
 		{
 			get
@@ -26,10 +26,10 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 		}
 
-		// Token: 0x0603311F RID: 209183 RVA: 0x00BE6470 File Offset: 0x00BE4670
+		// Token: 0x06027F1A RID: 163610 RVA: 0x00B2C648 File Offset: 0x00B2A848
 		protected unsafe override void OnRegisterComponent()
 		{
-			int num = 4;
+			int num = 5;
 			List<ValueTuple<int, Type>> list = new List<ValueTuple<int, Type>>(num);
 			CollectionsMarshal.SetCount<ValueTuple<int, Type>>(list, num);
 			Span<ValueTuple<int, Type>> span = CollectionsMarshal.AsSpan<ValueTuple<int, Type>>(list);
@@ -41,6 +41,8 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			*span[num2] = new ValueTuple<int, Type>(2, typeof(UUIItem));
 			num2++;
 			*span[num2] = new ValueTuple<int, Type>(3, typeof(UUIItem));
+			num2++;
+			*span[num2] = new ValueTuple<int, Type>(4, typeof(UUIItem));
 			this.ComponentRegisterInfos = list;
 			num2 = 1;
 			List<ValueTuple<int, Delegate>> list2 = new List<ValueTuple<int, Delegate>>(num2);
@@ -51,73 +53,85 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033120 RID: 209184 RVA: 0x00BE6558 File Offset: 0x00BE4758
+		// Token: 0x06027F1B RID: 163611 RVA: 0x00B2C751 File Offset: 0x00B2A951
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.OnCanExecuteChange));
 		}
 
-		// Token: 0x06033121 RID: 209185 RVA: 0x00BE6577 File Offset: 0x00BE4777
+		// Token: 0x06027F1C RID: 163612 RVA: 0x00B2C770 File Offset: 0x00B2A970
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x06033122 RID: 209186 RVA: 0x00BE6589 File Offset: 0x00BE4789
+		// Token: 0x06027F1D RID: 163613 RVA: 0x00B2C782 File Offset: 0x00B2A982
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x06033123 RID: 209187 RVA: 0x00BE659B File Offset: 0x00BE479B
+		// Token: 0x06027F1E RID: 163614 RVA: 0x00B2C794 File Offset: 0x00B2A994
 		public override void Refresh(RoleDevelopCategoryData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.CategoryName, Array.Empty<object>());
+			this.RefreshHint(ERoleDevelopCategoryHintType.None);
+			if (isSelected)
+			{
+				this.OnSelected(false);
+				return;
+			}
+			this.OnDeselected(false);
 		}
 
-		// Token: 0x06033124 RID: 209188 RVA: 0x00BE65C0 File Offset: 0x00BE47C0
-		public void RefreshHint(bool isShowUpgrade, bool isShowFinish)
+		// Token: 0x06027F1F RID: 163615 RVA: 0x00B2C7D4 File Offset: 0x00B2A9D4
+		public void RefreshHint(ERoleDevelopCategoryHintType hintType)
 		{
-			UUIItem item = base.GetItem(2);
+			UUIItem item = base.GetItem(3);
 			if (item != null)
 			{
-				item.SetUIActive(isShowUpgrade);
+				item.SetUIActive(hintType == ERoleDevelopCategoryHintType.Finish);
 			}
-			UUIItem item2 = base.GetItem(3);
-			if (item2 == null)
+			UUIItem item2 = base.GetItem(2);
+			if (item2 != null)
+			{
+				item2.SetUIActive(hintType == ERoleDevelopCategoryHintType.Upgrade);
+			}
+			UUIItem item3 = base.GetItem(4);
+			if (item3 == null)
 			{
 				return;
 			}
-			item2.SetUIActive(isShowFinish);
+			item3.SetUIActive(hintType == ERoleDevelopCategoryHintType.CanImprove);
 		}
 
-		// Token: 0x06033125 RID: 209189 RVA: 0x00BE65E7 File Offset: 0x00BE47E7
+		// Token: 0x06027F20 RID: 163616 RVA: 0x00B2C822 File Offset: 0x00B2AA22
 		public override object GetKey(RoleDevelopCategoryData data, int gridIndex)
 		{
 			return data.CategoryType;
 		}
 
-		// Token: 0x06033126 RID: 209190 RVA: 0x00BE65F4 File Offset: 0x00BE47F4
+		// Token: 0x06027F21 RID: 163617 RVA: 0x00B2C82F File Offset: 0x00B2AA2F
 		public void SetToggleCallback(Action<RoleDevelopCategoryData> callback)
 		{
 			this.ToggleCallback = callback;
 		}
 
-		// Token: 0x06033127 RID: 209191 RVA: 0x00BE65FD File Offset: 0x00BE47FD
+		// Token: 0x06027F22 RID: 163618 RVA: 0x00B2C838 File Offset: 0x00B2AA38
 		public void SetCanExecuteCallback(Func<RoleDevelopCategoryData, bool> callback)
 		{
 			this.CanExecuteCallback = callback;
 		}
 
-		// Token: 0x06033128 RID: 209192 RVA: 0x00BE6606 File Offset: 0x00BE4806
+		// Token: 0x06027F23 RID: 163619 RVA: 0x00B2C841 File Offset: 0x00B2AA41
 		private bool OnCanExecuteChange()
 		{
 			Func<RoleDevelopCategoryData, bool> canExecuteCallback = this.CanExecuteCallback;
 			return canExecuteCallback == null || canExecuteCallback(this.Data);
 		}
 
-		// Token: 0x06033129 RID: 209193 RVA: 0x00BE661F File Offset: 0x00BE481F
+		// Token: 0x06027F24 RID: 163620 RVA: 0x00B2C85A File Offset: 0x00B2AA5A
 		private void OnClickToggle(EToggleState state)
 		{
 			Action<RoleDevelopCategoryData> toggleCallback = this.ToggleCallback;
@@ -128,10 +142,10 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			toggleCallback(this.Data);
 		}
 
-		// Token: 0x0401B285 RID: 111237
+		// Token: 0x04015C40 RID: 89152
 		private RoleDevelopCategoryData Data;
 
-		// Token: 0x0401B286 RID: 111238
+		// Token: 0x04015C41 RID: 89153
 		[Nullable(new byte[]
 		{
 			2,
@@ -139,7 +153,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 		})]
 		private Action<RoleDevelopCategoryData> ToggleCallback;
 
-		// Token: 0x0401B287 RID: 111239
+		// Token: 0x04015C42 RID: 89154
 		[Nullable(new byte[]
 		{
 			2,
@@ -147,21 +161,20 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 		})]
 		private Func<RoleDevelopCategoryData, bool> CanExecuteCallback;
 
-		// Token: 0x0200AE96 RID: 44694
+		// Token: 0x020098B5 RID: 39093
 		[NullableContext(0)]
-		public static class EComponentType
+		private enum EComponentType
 		{
-			// Token: 0x04035039 RID: 217145
-			public const int Toggle = 0;
-
-			// Token: 0x0403503A RID: 217146
-			public const int NameTxt = 1;
-
-			// Token: 0x0403503B RID: 217147
-			public const int UpItem = 2;
-
-			// Token: 0x0403503C RID: 217148
-			public const int FinishItem = 3;
+			// Token: 0x0402F9E3 RID: 195043
+			Toggle,
+			// Token: 0x0402F9E4 RID: 195044
+			NameTxt,
+			// Token: 0x0402F9E5 RID: 195045
+			UpItem,
+			// Token: 0x0402F9E6 RID: 195046
+			FinishItem,
+			// Token: 0x0402F9E7 RID: 195047
+			ImproveItem
 		}
 	}
 }

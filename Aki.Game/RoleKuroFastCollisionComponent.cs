@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200314C RID: 12620
+// Token: 0x020026B9 RID: 9913
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleKuroFastCollisionComponent : BaseKuroFastCollisionComponent
 {
-	// Token: 0x0601B27D RID: 111229 RVA: 0x007633BC File Offset: 0x007615BC
+	// Token: 0x06018D80 RID: 101760 RVA: 0x0078ADB8 File Offset: 0x00788FB8
 	public bool CanDodge()
 	{
 		return this.HasDodgeTag && !this.HasUltimateDodgeTag;
 	}
 
-	// Token: 0x0601B27E RID: 111230 RVA: 0x007633D1 File Offset: 0x007615D1
+	// Token: 0x06018D81 RID: 101761 RVA: 0x0078ADCD File Offset: 0x00788FCD
 	protected override bool OnStart()
 	{
 		this.TagComp = base.Entity.GetComponent<BaseTagComponent>();
 		return base.OnStart();
 	}
 
-	// Token: 0x0601B27F RID: 111231 RVA: 0x007633EC File Offset: 0x007615EC
+	// Token: 0x06018D82 RID: 101762 RVA: 0x0078ADE8 File Offset: 0x00788FE8
 	protected override void OnStartKuroFastCollision()
 	{
 		if (this.IsListening)
@@ -43,7 +43,7 @@ public class RoleKuroFastCollisionComponent : BaseKuroFastCollisionComponent
 		}
 	}
 
-	// Token: 0x0601B280 RID: 111232 RVA: 0x007634A2 File Offset: 0x007616A2
+	// Token: 0x06018D83 RID: 101763 RVA: 0x0078AE9E File Offset: 0x0078909E
 	protected override void OnStopKuroFastCollision()
 	{
 		if (!this.IsListening)
@@ -54,21 +54,21 @@ public class RoleKuroFastCollisionComponent : BaseKuroFastCollisionComponent
 		this.ClearAllTagCountChangedCallback();
 	}
 
-	// Token: 0x0601B281 RID: 111233 RVA: 0x007634BA File Offset: 0x007616BA
+	// Token: 0x06018D84 RID: 101764 RVA: 0x0078AEB6 File Offset: 0x007890B6
 	private void OnDodgeTagChanged(int tagId, bool tagExist)
 	{
 		this.HasDodgeTag = tagExist;
 		this.UpdateDodgeState();
 	}
 
-	// Token: 0x0601B282 RID: 111234 RVA: 0x007634C9 File Offset: 0x007616C9
+	// Token: 0x06018D85 RID: 101765 RVA: 0x0078AEC5 File Offset: 0x007890C5
 	private void OnUltimateDodgeTagChanged(int tagId, bool tagExist)
 	{
 		this.HasUltimateDodgeTag = tagExist;
 		this.UpdateDodgeState();
 	}
 
-	// Token: 0x0601B283 RID: 111235 RVA: 0x007634D8 File Offset: 0x007616D8
+	// Token: 0x06018D86 RID: 101766 RVA: 0x0078AED4 File Offset: 0x007890D4
 	private void ListenForTagAddOrRemoveChanged(int tagId, BaseTagComponent.TTagSwitchedCallback onTagChange)
 	{
 		if (this.TagComp == null)
@@ -82,7 +82,7 @@ public class RoleKuroFastCollisionComponent : BaseKuroFastCollisionComponent
 		}
 	}
 
-	// Token: 0x0601B284 RID: 111236 RVA: 0x00763514 File Offset: 0x00761714
+	// Token: 0x06018D87 RID: 101767 RVA: 0x0078AF10 File Offset: 0x00789110
 	private void ClearAllTagCountChangedCallback()
 	{
 		foreach (ITagTask tagTask in this.TagTaskList)
@@ -92,7 +92,7 @@ public class RoleKuroFastCollisionComponent : BaseKuroFastCollisionComponent
 		this.TagTaskList.Clear();
 	}
 
-	// Token: 0x0601B285 RID: 111237 RVA: 0x00763570 File Offset: 0x00761770
+	// Token: 0x06018D88 RID: 101768 RVA: 0x0078AF6C File Offset: 0x0078916C
 	private void UpdateDodgeState()
 	{
 		UBulletHitWorldEntityManager bulletHitWorldEntityManager = BulletModel.Instance.GetBulletHitWorldEntityManager();
@@ -103,7 +103,7 @@ public class RoleKuroFastCollisionComponent : BaseKuroFastCollisionComponent
 		bulletHitWorldEntityManager.SetEntityCanDodge(base.Entity.Id, this.CanDodge());
 	}
 
-	// Token: 0x0601B286 RID: 111238 RVA: 0x007635A4 File Offset: 0x007617A4
+	// Token: 0x06018D89 RID: 101769 RVA: 0x0078AFA0 File Offset: 0x007891A0
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -111,49 +111,57 @@ public class RoleKuroFastCollisionComponent : BaseKuroFastCollisionComponent
 			return false;
 		}
 		RoleKuroFastCollisionComponent roleKuroFastCollisionComponent = (RoleKuroFastCollisionComponent)componentTemplate;
-		if (base.CanResetComponentProperty("TagComp"))
+		if (roleKuroFastCollisionComponent.TagComp == null)
 		{
-			if (roleKuroFastCollisionComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("HasDodgeTag"))
-		{
-			this.HasDodgeTag = roleKuroFastCollisionComponent.HasDodgeTag;
-		}
-		if (base.CanResetComponentProperty("HasUltimateDodgeTag"))
-		{
-			this.HasUltimateDodgeTag = roleKuroFastCollisionComponent.HasUltimateDodgeTag;
-		}
-		if (base.CanResetComponentProperty("TagTaskList") && roleKuroFastCollisionComponent.TagTaskList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.TagTaskList), "TagTaskList"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("IsListening"))
+		this.HasDodgeTag = roleKuroFastCollisionComponent.HasDodgeTag;
+		this.HasUltimateDodgeTag = roleKuroFastCollisionComponent.HasUltimateDodgeTag;
+		if (roleKuroFastCollisionComponent.TagTaskList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagTaskList), "TagTaskList"))
 		{
-			this.IsListening = roleKuroFastCollisionComponent.IsListening;
+			return false;
 		}
+		this.IsListening = roleKuroFastCollisionComponent.IsListening;
 		return true;
 	}
 
-	// Token: 0x0400D340 RID: 54080
+	// Token: 0x17002785 RID: 10117
+	// (get) Token: 0x06018D8A RID: 101770 RVA: 0x0078B031 File Offset: 0x00789231
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002786 RID: 10118
+	// (get) Token: 0x06018D8B RID: 101771 RVA: 0x0078B034 File Offset: 0x00789234
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D7A3 RID: 55203
 	[Nullable(2)]
 	protected BaseTagComponent TagComp;
 
-	// Token: 0x0400D341 RID: 54081
+	// Token: 0x0400D7A4 RID: 55204
 	private bool HasDodgeTag;
 
-	// Token: 0x0400D342 RID: 54082
+	// Token: 0x0400D7A5 RID: 55205
 	private bool HasUltimateDodgeTag;
 
-	// Token: 0x0400D343 RID: 54083
+	// Token: 0x0400D7A6 RID: 55206
 	private readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 
-	// Token: 0x0400D344 RID: 54084
+	// Token: 0x0400D7A7 RID: 55207
 	private bool IsListening;
 }

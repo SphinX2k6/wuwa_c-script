@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.TeleControl
 {
-	// Token: 0x02003E95 RID: 16021
+	// Token: 0x0200316C RID: 12652
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/TeleControl/BP_TeleControlConfig.BP_TeleControlConfig_C")]
 	[UnrealStructLayout(792, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 792)]
 	public class BP_TeleControlConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602879B RID: 165787 RVA: 0x009AD579 File Offset: 0x009AB779
+		// Token: 0x0601F2FB RID: 127739 RVA: 0x009282CF File Offset: 0x009264CF
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_TeleControlConfig_C._ClassPtr == IntPtr.Zero)
@@ -24,289 +24,289 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 			return BP_TeleControlConfig_C._ClassPtr;
 		}
 
-		// Token: 0x0602879C RID: 165788 RVA: 0x009AD5A0 File Offset: 0x009AB7A0
+		// Token: 0x0601F2FC RID: 127740 RVA: 0x009282F4 File Offset: 0x009264F4
 		public BP_TeleControlConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_TeleControlConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602879D RID: 165789 RVA: 0x009AD5C8 File Offset: 0x009AB7C8
+		// Token: 0x0601F2FD RID: 127741 RVA: 0x0092831C File Offset: 0x0092651C
 		public BP_TeleControlConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_TeleControlConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005DFE RID: 24062
-		// (get) Token: 0x0602879E RID: 165790 RVA: 0x009AD5FB File Offset: 0x009AB7FB
-		// (set) Token: 0x0602879F RID: 165791 RVA: 0x009AD60B File Offset: 0x009AB80B
+		// Token: 0x170037E8 RID: 14312
+		// (get) Token: 0x0601F2FE RID: 127742 RVA: 0x0092834F File Offset: 0x0092654F
+		// (set) Token: 0x0601F2FF RID: 127743 RVA: 0x0092835F File Offset: 0x0092655F
 		public unsafe float 读条时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_读条时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_读条时间) = value;
 			}
 		}
 
-		// Token: 0x17005DFF RID: 24063
-		// (get) Token: 0x060287A0 RID: 165792 RVA: 0x009AD61C File Offset: 0x009AB81C
-		// (set) Token: 0x060287A1 RID: 165793 RVA: 0x009AD62C File Offset: 0x009AB82C
+		// Token: 0x170037E9 RID: 14313
+		// (get) Token: 0x0601F300 RID: 127744 RVA: 0x00928370 File Offset: 0x00926570
+		// (set) Token: 0x0601F301 RID: 127745 RVA: 0x00928380 File Offset: 0x00926580
 		public unsafe bool 未锁定目标时不可投掷
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_1) != 0;
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_未锁定目标时不可投掷) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_1) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_未锁定目标时不可投掷) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005E00 RID: 24064
-		// (get) Token: 0x060287A2 RID: 165794 RVA: 0x009AD63D File Offset: 0x009AB83D
-		// (set) Token: 0x060287A3 RID: 165795 RVA: 0x009AD64D File Offset: 0x009AB84D
+		// Token: 0x170037EA RID: 14314
+		// (get) Token: 0x0601F302 RID: 127746 RVA: 0x00928391 File Offset: 0x00926591
+		// (set) Token: 0x0601F303 RID: 127747 RVA: 0x009283A1 File Offset: 0x009265A1
 		public unsafe float 摆动频率
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_摆动频率);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_摆动频率) = value;
 			}
 		}
 
-		// Token: 0x17005E01 RID: 24065
-		// (get) Token: 0x060287A4 RID: 165796 RVA: 0x009AD65E File Offset: 0x009AB85E
-		// (set) Token: 0x060287A5 RID: 165797 RVA: 0x009AD66E File Offset: 0x009AB86E
+		// Token: 0x170037EB RID: 14315
+		// (get) Token: 0x0601F304 RID: 127748 RVA: 0x009283B2 File Offset: 0x009265B2
+		// (set) Token: 0x0601F305 RID: 127749 RVA: 0x009283C2 File Offset: 0x009265C2
 		public unsafe float 吸取延迟
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_吸取延迟);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_吸取延迟) = value;
 			}
 		}
 
-		// Token: 0x17005E02 RID: 24066
-		// (get) Token: 0x060287A6 RID: 165798 RVA: 0x009AD67F File Offset: 0x009AB87F
-		// (set) Token: 0x060287A7 RID: 165799 RVA: 0x009AD68F File Offset: 0x009AB88F
+		// Token: 0x170037EC RID: 14316
+		// (get) Token: 0x0601F306 RID: 127750 RVA: 0x009283D3 File Offset: 0x009265D3
+		// (set) Token: 0x0601F307 RID: 127751 RVA: 0x009283E3 File Offset: 0x009265E3
 		public unsafe float 线性阻尼
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_线性阻尼);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_线性阻尼) = value;
 			}
 		}
 
-		// Token: 0x17005E03 RID: 24067
-		// (get) Token: 0x060287A8 RID: 165800 RVA: 0x009AD6A0 File Offset: 0x009AB8A0
-		// (set) Token: 0x060287A9 RID: 165801 RVA: 0x009AD6B0 File Offset: 0x009AB8B0
+		// Token: 0x170037ED RID: 14317
+		// (get) Token: 0x0601F308 RID: 127752 RVA: 0x009283F4 File Offset: 0x009265F4
+		// (set) Token: 0x0601F309 RID: 127753 RVA: 0x00928404 File Offset: 0x00926604
 		public unsafe float 角刚度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_角刚度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_角刚度) = value;
 			}
 		}
 
-		// Token: 0x17005E04 RID: 24068
-		// (get) Token: 0x060287AA RID: 165802 RVA: 0x009AD6C1 File Offset: 0x009AB8C1
-		// (set) Token: 0x060287AB RID: 165803 RVA: 0x009AD6D1 File Offset: 0x009AB8D1
+		// Token: 0x170037EE RID: 14318
+		// (get) Token: 0x0601F30A RID: 127754 RVA: 0x00928415 File Offset: 0x00926615
+		// (set) Token: 0x0601F30B RID: 127755 RVA: 0x00928425 File Offset: 0x00926625
 		public unsafe float 线性刚度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_线性刚度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_线性刚度) = value;
 			}
 		}
 
-		// Token: 0x17005E05 RID: 24069
-		// (get) Token: 0x060287AC RID: 165804 RVA: 0x009AD6E2 File Offset: 0x009AB8E2
-		// (set) Token: 0x060287AD RID: 165805 RVA: 0x009AD6F2 File Offset: 0x009AB8F2
+		// Token: 0x170037EF RID: 14319
+		// (get) Token: 0x0601F30C RID: 127756 RVA: 0x00928436 File Offset: 0x00926636
+		// (set) Token: 0x0601F30D RID: 127757 RVA: 0x00928446 File Offset: 0x00926646
 		public unsafe float 角度阻尼
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_角度阻尼);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_角度阻尼) = value;
 			}
 		}
 
-		// Token: 0x17005E06 RID: 24070
-		// (get) Token: 0x060287AE RID: 165806 RVA: 0x009AD703 File Offset: 0x009AB903
-		// (set) Token: 0x060287AF RID: 165807 RVA: 0x009AD713 File Offset: 0x009AB913
+		// Token: 0x170037F0 RID: 14320
+		// (get) Token: 0x0601F30E RID: 127758 RVA: 0x00928457 File Offset: 0x00926657
+		// (set) Token: 0x0601F30F RID: 127759 RVA: 0x00928467 File Offset: 0x00926667
 		public unsafe float 吸取时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_吸取时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_吸取时间) = value;
 			}
 		}
 
-		// Token: 0x17005E07 RID: 24071
-		// (get) Token: 0x060287B0 RID: 165808 RVA: 0x009AD724 File Offset: 0x009AB924
-		// (set) Token: 0x060287B1 RID: 165809 RVA: 0x009AD734 File Offset: 0x009AB934
+		// Token: 0x170037F1 RID: 14321
+		// (get) Token: 0x0601F310 RID: 127760 RVA: 0x00928478 File Offset: 0x00926678
+		// (set) Token: 0x0601F311 RID: 127761 RVA: 0x00928488 File Offset: 0x00926688
 		public unsafe float 对齐时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_对齐时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_对齐时间) = value;
 			}
 		}
 
-		// Token: 0x17005E08 RID: 24072
-		// (get) Token: 0x060287B2 RID: 165810 RVA: 0x009AD745 File Offset: 0x009AB945
-		// (set) Token: 0x060287B3 RID: 165811 RVA: 0x009AD755 File Offset: 0x009AB955
+		// Token: 0x170037F2 RID: 14322
+		// (get) Token: 0x0601F312 RID: 127762 RVA: 0x00928499 File Offset: 0x00926699
+		// (set) Token: 0x0601F313 RID: 127763 RVA: 0x009284A9 File Offset: 0x009266A9
 		public unsafe float 牵引高度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_牵引高度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_牵引高度) = value;
 			}
 		}
 
-		// Token: 0x17005E09 RID: 24073
-		// (get) Token: 0x060287B4 RID: 165812 RVA: 0x009AD766 File Offset: 0x009AB966
-		// (set) Token: 0x060287B5 RID: 165813 RVA: 0x009AD776 File Offset: 0x009AB976
+		// Token: 0x170037F3 RID: 14323
+		// (get) Token: 0x0601F314 RID: 127764 RVA: 0x009284BA File Offset: 0x009266BA
+		// (set) Token: 0x0601F315 RID: 127765 RVA: 0x009284CA File Offset: 0x009266CA
 		public unsafe float 角速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_角速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_角速度) = value;
 			}
 		}
 
-		// Token: 0x17005E0A RID: 24074
-		// (get) Token: 0x060287B6 RID: 165814 RVA: 0x009AD787 File Offset: 0x009AB987
-		// (set) Token: 0x060287B7 RID: 165815 RVA: 0x009AD797 File Offset: 0x009AB997
+		// Token: 0x170037F4 RID: 14324
+		// (get) Token: 0x0601F316 RID: 127766 RVA: 0x009284DB File Offset: 0x009266DB
+		// (set) Token: 0x0601F317 RID: 127767 RVA: 0x009284EB File Offset: 0x009266EB
 		public unsafe float 摆动范围
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_摆动范围);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_摆动范围) = value;
 			}
 		}
 
-		// Token: 0x17005E0B RID: 24075
-		// (get) Token: 0x060287B8 RID: 165816 RVA: 0x009AD7A8 File Offset: 0x009AB9A8
-		// (set) Token: 0x060287B9 RID: 165817 RVA: 0x009AD7BC File Offset: 0x009AB9BC
+		// Token: 0x170037F5 RID: 14325
+		// (get) Token: 0x0601F318 RID: 127768 RVA: 0x009284FC File Offset: 0x009266FC
+		// (set) Token: 0x0601F319 RID: 127769 RVA: 0x00928510 File Offset: 0x00926710
 		public unsafe FVector 旋转
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_旋转);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_旋转) = value;
 			}
 		}
 
-		// Token: 0x17005E0C RID: 24076
-		// (get) Token: 0x060287BA RID: 165818 RVA: 0x009AD7D1 File Offset: 0x009AB9D1
-		// (set) Token: 0x060287BB RID: 165819 RVA: 0x009AD7E5 File Offset: 0x009AB9E5
+		// Token: 0x170037F6 RID: 14326
+		// (get) Token: 0x0601F31A RID: 127770 RVA: 0x00928525 File Offset: 0x00926725
+		// (set) Token: 0x0601F31B RID: 127771 RVA: 0x00928539 File Offset: 0x00926739
 		public unsafe FVector 一级偏移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_一级偏移);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_一级偏移) = value;
 			}
 		}
 
-		// Token: 0x17005E0D RID: 24077
-		// (get) Token: 0x060287BC RID: 165820 RVA: 0x009AD7FA File Offset: 0x009AB9FA
-		// (set) Token: 0x060287BD RID: 165821 RVA: 0x009AD80E File Offset: 0x009ABA0E
+		// Token: 0x170037F7 RID: 14327
+		// (get) Token: 0x0601F31C RID: 127772 RVA: 0x0092854E File Offset: 0x0092674E
+		// (set) Token: 0x0601F31D RID: 127773 RVA: 0x00928562 File Offset: 0x00926762
 		public unsafe FVector 二级偏移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_二级偏移);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_二级偏移) = value;
 			}
 		}
 
-		// Token: 0x17005E0E RID: 24078
-		// (get) Token: 0x060287BE RID: 165822 RVA: 0x009AD823 File Offset: 0x009ABA23
-		// (set) Token: 0x060287BF RID: 165823 RVA: 0x009AD837 File Offset: 0x009ABA37
+		// Token: 0x170037F8 RID: 14328
+		// (get) Token: 0x0601F31E RID: 127774 RVA: 0x00928577 File Offset: 0x00926777
+		// (set) Token: 0x0601F31F RID: 127775 RVA: 0x0092858B File Offset: 0x0092678B
 		public unsafe FGameplayTag 控物保持镜头
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_控物保持镜头);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_控物保持镜头) = value;
 			}
 		}
 
-		// Token: 0x17005E0F RID: 24079
-		// (get) Token: 0x060287C0 RID: 165824 RVA: 0x009AD84C File Offset: 0x009ABA4C
-		// (set) Token: 0x060287C1 RID: 165825 RVA: 0x009AD860 File Offset: 0x009ABA60
+		// Token: 0x170037F9 RID: 14329
+		// (get) Token: 0x0601F320 RID: 127776 RVA: 0x009285A0 File Offset: 0x009267A0
+		// (set) Token: 0x0601F321 RID: 127777 RVA: 0x009285B4 File Offset: 0x009267B4
 		public unsafe FGameplayTag 读条镜头
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_17);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_读条镜头);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_17) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_读条镜头) = value;
 			}
 		}
 
-		// Token: 0x17005E10 RID: 24080
-		// (get) Token: 0x060287C2 RID: 165826 RVA: 0x009AD875 File Offset: 0x009ABA75
-		// (set) Token: 0x060287C3 RID: 165827 RVA: 0x009AD889 File Offset: 0x009ABA89
+		// Token: 0x170037FA RID: 14330
+		// (get) Token: 0x0601F322 RID: 127778 RVA: 0x009285C9 File Offset: 0x009267C9
+		// (set) Token: 0x0601F323 RID: 127779 RVA: 0x009285DD File Offset: 0x009267DD
 		[Nullable(new byte[]
 		{
 			0,
@@ -321,7 +321,7 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 			})]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_读条震屏);
 			}
 			[param: Nullable(new byte[]
 			{
@@ -330,28 +330,28 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 			})]
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_读条震屏) = value;
 			}
 		}
 
-		// Token: 0x17005E11 RID: 24081
-		// (get) Token: 0x060287C4 RID: 165828 RVA: 0x009AD89E File Offset: 0x009ABA9E
-		// (set) Token: 0x060287C5 RID: 165829 RVA: 0x009AD8AE File Offset: 0x009ABAAE
+		// Token: 0x170037FB RID: 14331
+		// (get) Token: 0x0601F324 RID: 127780 RVA: 0x009285F2 File Offset: 0x009267F2
+		// (set) Token: 0x0601F325 RID: 127781 RVA: 0x00928602 File Offset: 0x00926802
 		public unsafe float 被控制CD
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_19);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_被控制CD);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_19) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_被控制CD) = value;
 			}
 		}
 
-		// Token: 0x17005E12 RID: 24082
-		// (get) Token: 0x060287C6 RID: 165830 RVA: 0x009AD8BF File Offset: 0x009ABABF
-		// (set) Token: 0x060287C7 RID: 165831 RVA: 0x009AD8D3 File Offset: 0x009ABAD3
+		// Token: 0x170037FC RID: 14332
+		// (get) Token: 0x0601F326 RID: 127782 RVA: 0x00928613 File Offset: 0x00926813
+		// (set) Token: 0x0601F327 RID: 127783 RVA: 0x00928627 File Offset: 0x00926827
 		[Nullable(new byte[]
 		{
 			0,
@@ -366,7 +366,7 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 			})]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_20);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_控物保持震屏);
 			}
 			[param: Nullable(new byte[]
 			{
@@ -375,28 +375,28 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 			})]
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_20) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_控物保持震屏) = value;
 			}
 		}
 
-		// Token: 0x17005E13 RID: 24083
-		// (get) Token: 0x060287C8 RID: 165832 RVA: 0x009AD8E8 File Offset: 0x009ABAE8
-		// (set) Token: 0x060287C9 RID: 165833 RVA: 0x009AD8FC File Offset: 0x009ABAFC
+		// Token: 0x170037FD RID: 14333
+		// (get) Token: 0x0601F328 RID: 127784 RVA: 0x0092863C File Offset: 0x0092683C
+		// (set) Token: 0x0601F329 RID: 127785 RVA: 0x00928650 File Offset: 0x00926850
 		public unsafe FGameplayTag 吸取飞行镜头
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_21);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_吸取飞行镜头);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_21) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_吸取飞行镜头) = value;
 			}
 		}
 
-		// Token: 0x17005E14 RID: 24084
-		// (get) Token: 0x060287CA RID: 165834 RVA: 0x009AD911 File Offset: 0x009ABB11
-		// (set) Token: 0x060287CB RID: 165835 RVA: 0x009AD925 File Offset: 0x009ABB25
+		// Token: 0x170037FE RID: 14334
+		// (get) Token: 0x0601F32A RID: 127786 RVA: 0x00928665 File Offset: 0x00926865
+		// (set) Token: 0x0601F32B RID: 127787 RVA: 0x00928679 File Offset: 0x00926879
 		[Nullable(new byte[]
 		{
 			0,
@@ -411,7 +411,7 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 			})]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_22);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_吸取飞行震屏);
 			}
 			[param: Nullable(new byte[]
 			{
@@ -420,58 +420,58 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 			})]
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_22) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_吸取飞行震屏) = value;
 			}
 		}
 
-		// Token: 0x17005E15 RID: 24085
-		// (get) Token: 0x060287CC RID: 165836 RVA: 0x009AD93A File Offset: 0x009ABB3A
-		// (set) Token: 0x060287CD RID: 165837 RVA: 0x009AD94A File Offset: 0x009ABB4A
+		// Token: 0x170037FF RID: 14335
+		// (get) Token: 0x0601F32C RID: 127788 RVA: 0x0092868E File Offset: 0x0092688E
+		// (set) Token: 0x0601F32D RID: 127789 RVA: 0x0092869E File Offset: 0x0092689E
 		public unsafe bool 打开速度Log
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_23) != 0;
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_打开速度Log) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_23) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_打开速度Log) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005E16 RID: 24086
-		// (get) Token: 0x060287CE RID: 165838 RVA: 0x009AD95B File Offset: 0x009ABB5B
-		// (set) Token: 0x060287CF RID: 165839 RVA: 0x009AD96B File Offset: 0x009ABB6B
+		// Token: 0x17003800 RID: 14336
+		// (get) Token: 0x0601F32E RID: 127790 RVA: 0x009286AF File Offset: 0x009268AF
+		// (set) Token: 0x0601F32F RID: 127791 RVA: 0x009286BF File Offset: 0x009268BF
 		public unsafe float 可再被控速度最小值
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_24);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_可再被控速度最小值);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_24) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_可再被控速度最小值) = value;
 			}
 		}
 
-		// Token: 0x17005E17 RID: 24087
-		// (get) Token: 0x060287D0 RID: 165840 RVA: 0x009AD97C File Offset: 0x009ABB7C
-		// (set) Token: 0x060287D1 RID: 165841 RVA: 0x009AD98C File Offset: 0x009ABB8C
+		// Token: 0x17003801 RID: 14337
+		// (get) Token: 0x0601F330 RID: 127792 RVA: 0x009286D0 File Offset: 0x009268D0
+		// (set) Token: 0x0601F331 RID: 127793 RVA: 0x009286E0 File Offset: 0x009268E0
 		public unsafe float 被感知范围
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_25);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_被感知范围);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_25) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_被感知范围) = value;
 			}
 		}
 
-		// Token: 0x17005E18 RID: 24088
-		// (get) Token: 0x060287D2 RID: 165842 RVA: 0x009AD9A0 File Offset: 0x009ABBA0
-		// (set) Token: 0x060287D3 RID: 165843 RVA: 0x009AD9D9 File Offset: 0x009ABBD9
+		// Token: 0x17003802 RID: 14338
+		// (get) Token: 0x0601F332 RID: 127794 RVA: 0x009286F4 File Offset: 0x009268F4
+		// (set) Token: 0x0601F333 RID: 127795 RVA: 0x0092872D File Offset: 0x0092692D
 		public TMap<float, float> 被感知角度权重
 		{
 			get
@@ -480,7 +480,7 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 				TMap<float, float> result;
 				if ((result = this._被感知角度权重) == null)
 				{
-					result = (this._被感知角度权重 = new TMap<float, float>(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_26, this));
+					result = (this._被感知角度权重 = new TMap<float, float>(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_被感知角度权重, this));
 				}
 				return result;
 			}
@@ -490,9 +490,9 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 			}
 		}
 
-		// Token: 0x17005E19 RID: 24089
-		// (get) Token: 0x060287D4 RID: 165844 RVA: 0x009AD9E7 File Offset: 0x009ABBE7
-		// (set) Token: 0x060287D5 RID: 165845 RVA: 0x009AD9FB File Offset: 0x009ABBFB
+		// Token: 0x17003803 RID: 14339
+		// (get) Token: 0x0601F334 RID: 127796 RVA: 0x0092873B File Offset: 0x0092693B
+		// (set) Token: 0x0601F335 RID: 127797 RVA: 0x0092874F File Offset: 0x0092694F
 		[Nullable(new byte[]
 		{
 			0,
@@ -507,7 +507,7 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 			})]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_27);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_投掷震屏);
 			}
 			[param: Nullable(new byte[]
 			{
@@ -516,58 +516,58 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 			})]
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_27) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_投掷震屏) = value;
 			}
 		}
 
-		// Token: 0x17005E1A RID: 24090
-		// (get) Token: 0x060287D6 RID: 165846 RVA: 0x009ADA10 File Offset: 0x009ABC10
-		// (set) Token: 0x060287D7 RID: 165847 RVA: 0x009ADA20 File Offset: 0x009ABC20
+		// Token: 0x17003804 RID: 14340
+		// (get) Token: 0x0601F336 RID: 127798 RVA: 0x00928764 File Offset: 0x00926964
+		// (set) Token: 0x0601F337 RID: 127799 RVA: 0x00928774 File Offset: 0x00926974
 		public unsafe bool 随速度调整朝向
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_28) != 0;
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_随速度调整朝向) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_28) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_随速度调整朝向) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005E1B RID: 24091
-		// (get) Token: 0x060287D8 RID: 165848 RVA: 0x009ADA31 File Offset: 0x009ABC31
-		// (set) Token: 0x060287D9 RID: 165849 RVA: 0x009ADA41 File Offset: 0x009ABC41
+		// Token: 0x17003805 RID: 14341
+		// (get) Token: 0x0601F338 RID: 127800 RVA: 0x00928785 File Offset: 0x00926985
+		// (set) Token: 0x0601F339 RID: 127801 RVA: 0x00928795 File Offset: 0x00926995
 		public unsafe bool 控物保持使用物理
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_29) != 0;
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_控物保持使用物理) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_29) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_控物保持使用物理) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005E1C RID: 24092
-		// (get) Token: 0x060287DA RID: 165850 RVA: 0x009ADA52 File Offset: 0x009ABC52
-		// (set) Token: 0x060287DB RID: 165851 RVA: 0x009ADA62 File Offset: 0x009ABC62
+		// Token: 0x17003806 RID: 14342
+		// (get) Token: 0x0601F33A RID: 127802 RVA: 0x009287A6 File Offset: 0x009269A6
+		// (set) Token: 0x0601F33B RID: 127803 RVA: 0x009287B6 File Offset: 0x009269B6
 		public unsafe float 无锁状态附加仰角
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_30);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_无锁状态附加仰角);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_30) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_无锁状态附加仰角) = value;
 			}
 		}
 
-		// Token: 0x17005E1D RID: 24093
-		// (get) Token: 0x060287DC RID: 165852 RVA: 0x009ADA74 File Offset: 0x009ABC74
-		// (set) Token: 0x060287DD RID: 165853 RVA: 0x009ADAAD File Offset: 0x009ABCAD
+		// Token: 0x17003807 RID: 14343
+		// (get) Token: 0x0601F33C RID: 127804 RVA: 0x009287C8 File Offset: 0x009269C8
+		// (set) Token: 0x0601F33D RID: 127805 RVA: 0x00928801 File Offset: 0x00926A01
 		public TArray<FGameplayTag> 控物保持标签
 		{
 			get
@@ -576,7 +576,7 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 				TArray<FGameplayTag> result;
 				if ((result = this._控物保持标签) == null)
 				{
-					result = (this._控物保持标签 = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_31, this));
+					result = (this._控物保持标签 = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_控物保持标签, this));
 				}
 				return result;
 			}
@@ -586,267 +586,267 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 			}
 		}
 
-		// Token: 0x17005E1E RID: 24094
-		// (get) Token: 0x060287DE RID: 165854 RVA: 0x009ADABB File Offset: 0x009ABCBB
-		// (set) Token: 0x060287DF RID: 165855 RVA: 0x009ADACF File Offset: 0x009ABCCF
+		// Token: 0x17003808 RID: 14344
+		// (get) Token: 0x0601F33E RID: 127806 RVA: 0x0092880F File Offset: 0x00926A0F
+		// (set) Token: 0x0601F33F RID: 127807 RVA: 0x00928823 File Offset: 0x00926A23
 		public unsafe FVector 被感知坐标偏移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_32);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_被感知坐标偏移);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_32) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_被感知坐标偏移) = value;
 			}
 		}
 
-		// Token: 0x17005E1F RID: 24095
-		// (get) Token: 0x060287E0 RID: 165856 RVA: 0x009ADAE4 File Offset: 0x009ABCE4
-		// (set) Token: 0x060287E1 RID: 165857 RVA: 0x009ADAF4 File Offset: 0x009ABCF4
+		// Token: 0x17003809 RID: 14345
+		// (get) Token: 0x0601F340 RID: 127808 RVA: 0x00928838 File Offset: 0x00926A38
+		// (set) Token: 0x0601F341 RID: 127809 RVA: 0x00928848 File Offset: 0x00926A48
 		public unsafe float 物体质量
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_33);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_物体质量);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_33) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_物体质量) = value;
 			}
 		}
 
-		// Token: 0x17005E20 RID: 24096
-		// (get) Token: 0x060287E2 RID: 165858 RVA: 0x009ADB05 File Offset: 0x009ABD05
-		// (set) Token: 0x060287E3 RID: 165859 RVA: 0x009ADB15 File Offset: 0x009ABD15
+		// Token: 0x1700380A RID: 14346
+		// (get) Token: 0x0601F342 RID: 127810 RVA: 0x00928859 File Offset: 0x00926A59
+		// (set) Token: 0x0601F343 RID: 127811 RVA: 0x00928869 File Offset: 0x00926A69
 		public unsafe float 物体线性阻尼
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_34);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_物体线性阻尼);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_34) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_物体线性阻尼) = value;
 			}
 		}
 
-		// Token: 0x17005E21 RID: 24097
-		// (get) Token: 0x060287E4 RID: 165860 RVA: 0x009ADB26 File Offset: 0x009ABD26
-		// (set) Token: 0x060287E5 RID: 165861 RVA: 0x009ADB36 File Offset: 0x009ABD36
+		// Token: 0x1700380B RID: 14347
+		// (get) Token: 0x0601F344 RID: 127812 RVA: 0x0092887A File Offset: 0x00926A7A
+		// (set) Token: 0x0601F345 RID: 127813 RVA: 0x0092888A File Offset: 0x00926A8A
 		public unsafe float 物体角速度阻尼
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_35);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_物体角速度阻尼);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_35) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_物体角速度阻尼) = value;
 			}
 		}
 
-		// Token: 0x17005E22 RID: 24098
-		// (get) Token: 0x060287E6 RID: 165862 RVA: 0x009ADB47 File Offset: 0x009ABD47
-		// (set) Token: 0x060287E7 RID: 165863 RVA: 0x009ADB5B File Offset: 0x009ABD5B
+		// Token: 0x1700380C RID: 14348
+		// (get) Token: 0x0601F346 RID: 127814 RVA: 0x0092889B File Offset: 0x00926A9B
+		// (set) Token: 0x0601F347 RID: 127815 RVA: 0x009288AF File Offset: 0x00926AAF
 		public unsafe string 控物准星资源ID
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_TeleControlConfig_C.__PropertyOffset_36)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_TeleControlConfig_C.__PropertyOffset_控物准星资源ID)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_TeleControlConfig_C.__PropertyOffset_36)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_TeleControlConfig_C.__PropertyOffset_控物准星资源ID)), value);
 			}
 		}
 
-		// Token: 0x17005E23 RID: 24099
-		// (get) Token: 0x060287E8 RID: 165864 RVA: 0x009ADB70 File Offset: 0x009ABD70
-		// (set) Token: 0x060287E9 RID: 165865 RVA: 0x009ADB80 File Offset: 0x009ABD80
+		// Token: 0x1700380D RID: 14349
+		// (get) Token: 0x0601F348 RID: 127816 RVA: 0x009288C4 File Offset: 0x00926AC4
+		// (set) Token: 0x0601F349 RID: 127817 RVA: 0x009288D4 File Offset: 0x00926AD4
 		public unsafe bool 角色是否随相机旋转
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_37) != 0;
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_角色是否随相机旋转) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_37) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_角色是否随相机旋转) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005E24 RID: 24100
-		// (get) Token: 0x060287EA RID: 165866 RVA: 0x009ADB91 File Offset: 0x009ABD91
-		// (set) Token: 0x060287EB RID: 165867 RVA: 0x009ADBA5 File Offset: 0x009ABDA5
+		// Token: 0x1700380E RID: 14350
+		// (get) Token: 0x0601F34A RID: 127818 RVA: 0x009288E5 File Offset: 0x00926AE5
+		// (set) Token: 0x0601F34B RID: 127819 RVA: 0x009288F9 File Offset: 0x00926AF9
 		public unsafe FName 待机状态碰撞预设
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_38);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_待机状态碰撞预设);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_38) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_待机状态碰撞预设) = value;
 			}
 		}
 
-		// Token: 0x17005E25 RID: 24101
-		// (get) Token: 0x060287EC RID: 165868 RVA: 0x009ADBBA File Offset: 0x009ABDBA
-		// (set) Token: 0x060287ED RID: 165869 RVA: 0x009ADBCE File Offset: 0x009ABDCE
+		// Token: 0x1700380F RID: 14351
+		// (get) Token: 0x0601F34C RID: 127820 RVA: 0x0092890E File Offset: 0x00926B0E
+		// (set) Token: 0x0601F34D RID: 127821 RVA: 0x00928922 File Offset: 0x00926B22
 		public unsafe FName 吸取状态碰撞预设
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_39);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_吸取状态碰撞预设);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_39) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_吸取状态碰撞预设) = value;
 			}
 		}
 
-		// Token: 0x17005E26 RID: 24102
-		// (get) Token: 0x060287EE RID: 165870 RVA: 0x009ADBE3 File Offset: 0x009ABDE3
-		// (set) Token: 0x060287EF RID: 165871 RVA: 0x009ADBF7 File Offset: 0x009ABDF7
+		// Token: 0x17003810 RID: 14352
+		// (get) Token: 0x0601F34E RID: 127822 RVA: 0x00928937 File Offset: 0x00926B37
+		// (set) Token: 0x0601F34F RID: 127823 RVA: 0x0092894B File Offset: 0x00926B4B
 		public unsafe FName 保持状态碰撞预设
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_40);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_保持状态碰撞预设);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_40) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_保持状态碰撞预设) = value;
 			}
 		}
 
-		// Token: 0x17005E27 RID: 24103
-		// (get) Token: 0x060287F0 RID: 165872 RVA: 0x009ADC0C File Offset: 0x009ABE0C
-		// (set) Token: 0x060287F1 RID: 165873 RVA: 0x009ADC20 File Offset: 0x009ABE20
+		// Token: 0x17003811 RID: 14353
+		// (get) Token: 0x0601F350 RID: 127824 RVA: 0x00928960 File Offset: 0x00926B60
+		// (set) Token: 0x0601F351 RID: 127825 RVA: 0x00928974 File Offset: 0x00926B74
 		public unsafe FName 投掷状态碰撞预设
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_41);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_投掷状态碰撞预设);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_41) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_投掷状态碰撞预设) = value;
 			}
 		}
 
-		// Token: 0x17005E28 RID: 24104
-		// (get) Token: 0x060287F2 RID: 165874 RVA: 0x009ADC35 File Offset: 0x009ABE35
-		// (set) Token: 0x060287F3 RID: 165875 RVA: 0x009ADC49 File Offset: 0x009ABE49
+		// Token: 0x17003812 RID: 14354
+		// (get) Token: 0x0601F352 RID: 127826 RVA: 0x00928989 File Offset: 0x00926B89
+		// (set) Token: 0x0601F353 RID: 127827 RVA: 0x0092899D File Offset: 0x00926B9D
 		[Nullable(2)]
 		public unsafe UCurveVector 投掷运动轨迹曲线
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveVector>(base.NativePtr / (IntPtr)sizeof(void*) + BP_TeleControlConfig_C.__PropertyOffset_42);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveVector>(base.NativePtr / (IntPtr)sizeof(void*) + BP_TeleControlConfig_C.__PropertyOffset_投掷运动轨迹曲线);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_TeleControlConfig_C.__PropertyOffset_42, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_TeleControlConfig_C.__PropertyOffset_投掷运动轨迹曲线, value);
 			}
 		}
 
-		// Token: 0x17005E29 RID: 24105
-		// (get) Token: 0x060287F4 RID: 165876 RVA: 0x009ADC5E File Offset: 0x009ABE5E
-		// (set) Token: 0x060287F5 RID: 165877 RVA: 0x009ADC6E File Offset: 0x009ABE6E
+		// Token: 0x17003813 RID: 14355
+		// (get) Token: 0x0601F354 RID: 127828 RVA: 0x009289B2 File Offset: 0x00926BB2
+		// (set) Token: 0x0601F355 RID: 127829 RVA: 0x009289C2 File Offset: 0x00926BC2
 		public unsafe bool 抛物瞄准射线Debug
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_43) != 0;
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准射线Debug) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_43) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准射线Debug) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005E2A RID: 24106
-		// (get) Token: 0x060287F6 RID: 165878 RVA: 0x009ADC7F File Offset: 0x009ABE7F
-		// (set) Token: 0x060287F7 RID: 165879 RVA: 0x009ADC8F File Offset: 0x009ABE8F
+		// Token: 0x17003814 RID: 14356
+		// (get) Token: 0x0601F356 RID: 127830 RVA: 0x009289D3 File Offset: 0x00926BD3
+		// (set) Token: 0x0601F357 RID: 127831 RVA: 0x009289E3 File Offset: 0x00926BE3
 		public unsafe bool 抛物瞄准模式开关
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_44) != 0;
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准模式开关) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_44) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准模式开关) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005E2B RID: 24107
-		// (get) Token: 0x060287F8 RID: 165880 RVA: 0x009ADCA0 File Offset: 0x009ABEA0
-		// (set) Token: 0x060287F9 RID: 165881 RVA: 0x009ADCB0 File Offset: 0x009ABEB0
+		// Token: 0x17003815 RID: 14357
+		// (get) Token: 0x0601F358 RID: 127832 RVA: 0x009289F4 File Offset: 0x00926BF4
+		// (set) Token: 0x0601F359 RID: 127833 RVA: 0x00928A04 File Offset: 0x00926C04
 		public unsafe float 抛物瞄准模式仰角
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_45);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准模式仰角);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_45) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准模式仰角) = value;
 			}
 		}
 
-		// Token: 0x17005E2C RID: 24108
-		// (get) Token: 0x060287FA RID: 165882 RVA: 0x009ADCC1 File Offset: 0x009ABEC1
-		// (set) Token: 0x060287FB RID: 165883 RVA: 0x009ADCD1 File Offset: 0x009ABED1
+		// Token: 0x17003816 RID: 14358
+		// (get) Token: 0x0601F35A RID: 127834 RVA: 0x00928A15 File Offset: 0x00926C15
+		// (set) Token: 0x0601F35B RID: 127835 RVA: 0x00928A25 File Offset: 0x00926C25
 		public unsafe float 抛物瞄准模式初速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_46);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准模式初速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_46) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准模式初速度) = value;
 			}
 		}
 
-		// Token: 0x17005E2D RID: 24109
-		// (get) Token: 0x060287FC RID: 165884 RVA: 0x009ADCE2 File Offset: 0x009ABEE2
-		// (set) Token: 0x060287FD RID: 165885 RVA: 0x009ADCF2 File Offset: 0x009ABEF2
+		// Token: 0x17003817 RID: 14359
+		// (get) Token: 0x0601F35C RID: 127836 RVA: 0x00928A36 File Offset: 0x00926C36
+		// (set) Token: 0x0601F35D RID: 127837 RVA: 0x00928A46 File Offset: 0x00926C46
 		public unsafe float 抛物瞄准射线检测半径
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_47);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准射线检测半径);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_47) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准射线检测半径) = value;
 			}
 		}
 
-		// Token: 0x17005E2E RID: 24110
-		// (get) Token: 0x060287FE RID: 165886 RVA: 0x009ADD03 File Offset: 0x009ABF03
-		// (set) Token: 0x060287FF RID: 165887 RVA: 0x009ADD17 File Offset: 0x009ABF17
+		// Token: 0x17003818 RID: 14360
+		// (get) Token: 0x0601F35E RID: 127838 RVA: 0x00928A57 File Offset: 0x00926C57
+		// (set) Token: 0x0601F35F RID: 127839 RVA: 0x00928A6B File Offset: 0x00926C6B
 		public unsafe FGameplayTag 抛物瞄准模式镜头
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_48);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准模式镜头);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_48) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准模式镜头) = value;
 			}
 		}
 
-		// Token: 0x17005E2F RID: 24111
-		// (get) Token: 0x06028800 RID: 165888 RVA: 0x009ADD2C File Offset: 0x009ABF2C
-		// (set) Token: 0x06028801 RID: 165889 RVA: 0x009ADD65 File Offset: 0x009ABF65
+		// Token: 0x17003819 RID: 14361
+		// (get) Token: 0x0601F360 RID: 127840 RVA: 0x00928A80 File Offset: 0x00926C80
+		// (set) Token: 0x0601F361 RID: 127841 RVA: 0x00928AB9 File Offset: 0x00926CB9
 		public FSoftObjectPath 抛物瞄准模式样条特效
 		{
 			get
@@ -855,19 +855,19 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 				FSoftObjectPath result;
 				if ((result = this._抛物瞄准模式样条特效) == null)
 				{
-					result = (this._抛物瞄准模式样条特效 = new FSoftObjectPath(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_49, this));
+					result = (this._抛物瞄准模式样条特效 = new FSoftObjectPath(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准模式样条特效, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FSoftObjectPath.StaticStruct(), base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_49, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FSoftObjectPath.StaticStruct(), base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准模式样条特效, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005E30 RID: 24112
-		// (get) Token: 0x06028802 RID: 165890 RVA: 0x009ADD88 File Offset: 0x009ABF88
-		// (set) Token: 0x06028803 RID: 165891 RVA: 0x009ADDC1 File Offset: 0x009ABFC1
+		// Token: 0x1700381A RID: 14362
+		// (get) Token: 0x0601F362 RID: 127842 RVA: 0x00928ADC File Offset: 0x00926CDC
+		// (set) Token: 0x0601F363 RID: 127843 RVA: 0x00928B15 File Offset: 0x00926D15
 		public FSoftObjectPath 抛物瞄准模式终点特效
 		{
 			get
@@ -876,49 +876,49 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 				FSoftObjectPath result;
 				if ((result = this._抛物瞄准模式终点特效) == null)
 				{
-					result = (this._抛物瞄准模式终点特效 = new FSoftObjectPath(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_50, this));
+					result = (this._抛物瞄准模式终点特效 = new FSoftObjectPath(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准模式终点特效, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FSoftObjectPath.StaticStruct(), base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_50, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FSoftObjectPath.StaticStruct(), base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准模式终点特效, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005E31 RID: 24113
-		// (get) Token: 0x06028804 RID: 165892 RVA: 0x009ADDE2 File Offset: 0x009ABFE2
-		// (set) Token: 0x06028805 RID: 165893 RVA: 0x009ADDF2 File Offset: 0x009ABFF2
+		// Token: 0x1700381B RID: 14363
+		// (get) Token: 0x0601F364 RID: 127844 RVA: 0x00928B36 File Offset: 0x00926D36
+		// (set) Token: 0x0601F365 RID: 127845 RVA: 0x00928B46 File Offset: 0x00926D46
 		public unsafe float 抛物瞄准模式重力加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_51);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准模式重力加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_51) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_抛物瞄准模式重力加速度) = value;
 			}
 		}
 
-		// Token: 0x17005E32 RID: 24114
-		// (get) Token: 0x06028806 RID: 165894 RVA: 0x009ADE03 File Offset: 0x009AC003
-		// (set) Token: 0x06028807 RID: 165895 RVA: 0x009ADE13 File Offset: 0x009AC013
+		// Token: 0x1700381C RID: 14364
+		// (get) Token: 0x0601F366 RID: 127846 RVA: 0x00928B57 File Offset: 0x00926D57
+		// (set) Token: 0x0601F367 RID: 127847 RVA: 0x00928B67 File Offset: 0x00926D67
 		public unsafe float 投掷锁定范围
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_52);
+				return *(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_投掷锁定范围);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_52) = value;
+				*(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_投掷锁定范围) = value;
 			}
 		}
 
-		// Token: 0x17005E33 RID: 24115
-		// (get) Token: 0x06028808 RID: 165896 RVA: 0x009ADE24 File Offset: 0x009AC024
-		// (set) Token: 0x06028809 RID: 165897 RVA: 0x009ADE5D File Offset: 0x009AC05D
+		// Token: 0x1700381D RID: 14365
+		// (get) Token: 0x0601F368 RID: 127848 RVA: 0x00928B78 File Offset: 0x00926D78
+		// (set) Token: 0x0601F369 RID: 127849 RVA: 0x00928BB1 File Offset: 0x00926DB1
 		public FSoftObjectPath 归位消失特效
 		{
 			get
@@ -927,19 +927,19 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 				FSoftObjectPath result;
 				if ((result = this._归位消失特效) == null)
 				{
-					result = (this._归位消失特效 = new FSoftObjectPath(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_53, this));
+					result = (this._归位消失特效 = new FSoftObjectPath(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_归位消失特效, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FSoftObjectPath.StaticStruct(), base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_53, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FSoftObjectPath.StaticStruct(), base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_归位消失特效, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005E34 RID: 24116
-		// (get) Token: 0x0602880A RID: 165898 RVA: 0x009ADE80 File Offset: 0x009AC080
-		// (set) Token: 0x0602880B RID: 165899 RVA: 0x009ADEB9 File Offset: 0x009AC0B9
+		// Token: 0x1700381E RID: 14366
+		// (get) Token: 0x0601F36A RID: 127850 RVA: 0x00928BD4 File Offset: 0x00926DD4
+		// (set) Token: 0x0601F36B RID: 127851 RVA: 0x00928C0D File Offset: 0x00926E0D
 		public TMap<int, float> 投掷状态CueId
 		{
 			get
@@ -948,7 +948,7 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 				TMap<int, float> result;
 				if ((result = this._投掷状态CueId) == null)
 				{
-					result = (this._投掷状态CueId = new TMap<int, float>(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_54, this));
+					result = (this._投掷状态CueId = new TMap<int, float>(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_投掷状态CueId, this));
 				}
 				return result;
 			}
@@ -958,264 +958,264 @@ namespace AkiClient.Game.Aki.Data.TeleControl
 			}
 		}
 
-		// Token: 0x17005E35 RID: 24117
-		// (get) Token: 0x0602880C RID: 165900 RVA: 0x009ADEC7 File Offset: 0x009AC0C7
-		// (set) Token: 0x0602880D RID: 165901 RVA: 0x009ADEDB File Offset: 0x009AC0DB
+		// Token: 0x1700381F RID: 14367
+		// (get) Token: 0x0601F36C RID: 127852 RVA: 0x00928C1B File Offset: 0x00926E1B
+		// (set) Token: 0x0601F36D RID: 127853 RVA: 0x00928C2F File Offset: 0x00926E2F
 		[Nullable(2)]
 		public unsafe UPhysicalMaterial 物体物理材质
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UPhysicalMaterial>(base.NativePtr / (IntPtr)sizeof(void*) + BP_TeleControlConfig_C.__PropertyOffset_55);
+				return BuiltinUtils.ObjectPropertyGetter<UPhysicalMaterial>(base.NativePtr / (IntPtr)sizeof(void*) + BP_TeleControlConfig_C.__PropertyOffset_物体物理材质);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_TeleControlConfig_C.__PropertyOffset_55, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_TeleControlConfig_C.__PropertyOffset_物体物理材质, value);
 			}
 		}
 
-		// Token: 0x17005E36 RID: 24118
-		// (get) Token: 0x0602880E RID: 165902 RVA: 0x009ADEF0 File Offset: 0x009AC0F0
-		// (set) Token: 0x0602880F RID: 165903 RVA: 0x009ADF05 File Offset: 0x009AC105
+		// Token: 0x17003820 RID: 14368
+		// (get) Token: 0x0601F36E RID: 127854 RVA: 0x00928C44 File Offset: 0x00926E44
+		// (set) Token: 0x0601F36F RID: 127855 RVA: 0x00928C59 File Offset: 0x00926E59
 		public TSoftObjectPtr<UKuroForceFeedbackEffect> 吸取飞行手柄震动
 		{
 			get
 			{
-				return new TSoftObjectPtr<UKuroForceFeedbackEffect>(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_56, this);
+				return new TSoftObjectPtr<UKuroForceFeedbackEffect>(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_吸取飞行手柄震动, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_56, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_吸取飞行手柄震动, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005E37 RID: 24119
-		// (get) Token: 0x06028810 RID: 165904 RVA: 0x009ADF2A File Offset: 0x009AC12A
-		// (set) Token: 0x06028811 RID: 165905 RVA: 0x009ADF3F File Offset: 0x009AC13F
+		// Token: 0x17003821 RID: 14369
+		// (get) Token: 0x0601F370 RID: 127856 RVA: 0x00928C7E File Offset: 0x00926E7E
+		// (set) Token: 0x0601F371 RID: 127857 RVA: 0x00928C93 File Offset: 0x00926E93
 		public TSoftObjectPtr<UKuroForceFeedbackEffect> 投掷手柄震动
 		{
 			get
 			{
-				return new TSoftObjectPtr<UKuroForceFeedbackEffect>(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_57, this);
+				return new TSoftObjectPtr<UKuroForceFeedbackEffect>(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_投掷手柄震动, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_57, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_TeleControlConfig_C.__PropertyOffset_投掷手柄震动, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x06028812 RID: 165906 RVA: 0x009ADF64 File Offset: 0x009AC164
+		// Token: 0x0601F372 RID: 127858 RVA: 0x00928CB8 File Offset: 0x00926EB8
 		protected BP_TeleControlConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014A51 RID: 84561
+		// Token: 0x04010AD2 RID: 68306
 		public new const string __ObjectPath = "/Game/Aki/Data/TeleControl/BP_TeleControlConfig.BP_TeleControlConfig_C";
 
-		// Token: 0x04014A52 RID: 84562
+		// Token: 0x04010AD3 RID: 68307
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014A53 RID: 84563
+		// Token: 0x04010AD4 RID: 68308
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04014A54 RID: 84564
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010AD5 RID: 68309
+		internal static int __PropertyOffset_读条时间;
 
-		// Token: 0x04014A55 RID: 84565
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010AD6 RID: 68310
+		internal static int __PropertyOffset_未锁定目标时不可投掷;
 
-		// Token: 0x04014A56 RID: 84566
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010AD7 RID: 68311
+		internal static int __PropertyOffset_摆动频率;
 
-		// Token: 0x04014A57 RID: 84567
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010AD8 RID: 68312
+		internal static int __PropertyOffset_吸取延迟;
 
-		// Token: 0x04014A58 RID: 84568
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010AD9 RID: 68313
+		internal static int __PropertyOffset_线性阻尼;
 
-		// Token: 0x04014A59 RID: 84569
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010ADA RID: 68314
+		internal static int __PropertyOffset_角刚度;
 
-		// Token: 0x04014A5A RID: 84570
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010ADB RID: 68315
+		internal static int __PropertyOffset_线性刚度;
 
-		// Token: 0x04014A5B RID: 84571
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010ADC RID: 68316
+		internal static int __PropertyOffset_角度阻尼;
 
-		// Token: 0x04014A5C RID: 84572
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010ADD RID: 68317
+		internal static int __PropertyOffset_吸取时间;
 
-		// Token: 0x04014A5D RID: 84573
-		internal static int __PropertyOffset_9;
+		// Token: 0x04010ADE RID: 68318
+		internal static int __PropertyOffset_对齐时间;
 
-		// Token: 0x04014A5E RID: 84574
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010ADF RID: 68319
+		internal static int __PropertyOffset_牵引高度;
 
-		// Token: 0x04014A5F RID: 84575
-		internal static int __PropertyOffset_11;
+		// Token: 0x04010AE0 RID: 68320
+		internal static int __PropertyOffset_角速度;
 
-		// Token: 0x04014A60 RID: 84576
-		internal static int __PropertyOffset_12;
+		// Token: 0x04010AE1 RID: 68321
+		internal static int __PropertyOffset_摆动范围;
 
-		// Token: 0x04014A61 RID: 84577
-		internal static int __PropertyOffset_13;
+		// Token: 0x04010AE2 RID: 68322
+		internal static int __PropertyOffset_旋转;
 
-		// Token: 0x04014A62 RID: 84578
-		internal static int __PropertyOffset_14;
+		// Token: 0x04010AE3 RID: 68323
+		internal static int __PropertyOffset_一级偏移;
 
-		// Token: 0x04014A63 RID: 84579
-		internal static int __PropertyOffset_15;
+		// Token: 0x04010AE4 RID: 68324
+		internal static int __PropertyOffset_二级偏移;
 
-		// Token: 0x04014A64 RID: 84580
-		internal static int __PropertyOffset_16;
+		// Token: 0x04010AE5 RID: 68325
+		internal static int __PropertyOffset_控物保持镜头;
 
-		// Token: 0x04014A65 RID: 84581
-		internal static int __PropertyOffset_17;
+		// Token: 0x04010AE6 RID: 68326
+		internal static int __PropertyOffset_读条镜头;
 
-		// Token: 0x04014A66 RID: 84582
-		internal static int __PropertyOffset_18;
+		// Token: 0x04010AE7 RID: 68327
+		internal static int __PropertyOffset_读条震屏;
 
-		// Token: 0x04014A67 RID: 84583
-		internal static int __PropertyOffset_19;
+		// Token: 0x04010AE8 RID: 68328
+		internal static int __PropertyOffset_被控制CD;
 
-		// Token: 0x04014A68 RID: 84584
-		internal static int __PropertyOffset_20;
+		// Token: 0x04010AE9 RID: 68329
+		internal static int __PropertyOffset_控物保持震屏;
 
-		// Token: 0x04014A69 RID: 84585
-		internal static int __PropertyOffset_21;
+		// Token: 0x04010AEA RID: 68330
+		internal static int __PropertyOffset_吸取飞行镜头;
 
-		// Token: 0x04014A6A RID: 84586
-		internal static int __PropertyOffset_22;
+		// Token: 0x04010AEB RID: 68331
+		internal static int __PropertyOffset_吸取飞行震屏;
 
-		// Token: 0x04014A6B RID: 84587
-		internal static int __PropertyOffset_23;
+		// Token: 0x04010AEC RID: 68332
+		internal static int __PropertyOffset_打开速度Log;
 
-		// Token: 0x04014A6C RID: 84588
-		internal static int __PropertyOffset_24;
+		// Token: 0x04010AED RID: 68333
+		internal static int __PropertyOffset_可再被控速度最小值;
 
-		// Token: 0x04014A6D RID: 84589
-		internal static int __PropertyOffset_25;
+		// Token: 0x04010AEE RID: 68334
+		internal static int __PropertyOffset_被感知范围;
 
-		// Token: 0x04014A6E RID: 84590
-		internal static int __PropertyOffset_26;
+		// Token: 0x04010AEF RID: 68335
+		internal static int __PropertyOffset_被感知角度权重;
 
-		// Token: 0x04014A6F RID: 84591
+		// Token: 0x04010AF0 RID: 68336
 		[Nullable(2)]
 		private TMap<float, float> _被感知角度权重;
 
-		// Token: 0x04014A70 RID: 84592
-		internal static int __PropertyOffset_27;
+		// Token: 0x04010AF1 RID: 68337
+		internal static int __PropertyOffset_投掷震屏;
 
-		// Token: 0x04014A71 RID: 84593
-		internal static int __PropertyOffset_28;
+		// Token: 0x04010AF2 RID: 68338
+		internal static int __PropertyOffset_随速度调整朝向;
 
-		// Token: 0x04014A72 RID: 84594
-		internal static int __PropertyOffset_29;
+		// Token: 0x04010AF3 RID: 68339
+		internal static int __PropertyOffset_控物保持使用物理;
 
-		// Token: 0x04014A73 RID: 84595
-		internal static int __PropertyOffset_30;
+		// Token: 0x04010AF4 RID: 68340
+		internal static int __PropertyOffset_无锁状态附加仰角;
 
-		// Token: 0x04014A74 RID: 84596
-		internal static int __PropertyOffset_31;
+		// Token: 0x04010AF5 RID: 68341
+		internal static int __PropertyOffset_控物保持标签;
 
-		// Token: 0x04014A75 RID: 84597
+		// Token: 0x04010AF6 RID: 68342
 		[Nullable(2)]
 		private TArray<FGameplayTag> _控物保持标签;
 
-		// Token: 0x04014A76 RID: 84598
-		internal static int __PropertyOffset_32;
+		// Token: 0x04010AF7 RID: 68343
+		internal static int __PropertyOffset_被感知坐标偏移;
 
-		// Token: 0x04014A77 RID: 84599
-		internal static int __PropertyOffset_33;
+		// Token: 0x04010AF8 RID: 68344
+		internal static int __PropertyOffset_物体质量;
 
-		// Token: 0x04014A78 RID: 84600
-		internal static int __PropertyOffset_34;
+		// Token: 0x04010AF9 RID: 68345
+		internal static int __PropertyOffset_物体线性阻尼;
 
-		// Token: 0x04014A79 RID: 84601
-		internal static int __PropertyOffset_35;
+		// Token: 0x04010AFA RID: 68346
+		internal static int __PropertyOffset_物体角速度阻尼;
 
-		// Token: 0x04014A7A RID: 84602
-		internal static int __PropertyOffset_36;
+		// Token: 0x04010AFB RID: 68347
+		internal static int __PropertyOffset_控物准星资源ID;
 
-		// Token: 0x04014A7B RID: 84603
-		internal static int __PropertyOffset_37;
+		// Token: 0x04010AFC RID: 68348
+		internal static int __PropertyOffset_角色是否随相机旋转;
 
-		// Token: 0x04014A7C RID: 84604
-		internal static int __PropertyOffset_38;
+		// Token: 0x04010AFD RID: 68349
+		internal static int __PropertyOffset_待机状态碰撞预设;
 
-		// Token: 0x04014A7D RID: 84605
-		internal static int __PropertyOffset_39;
+		// Token: 0x04010AFE RID: 68350
+		internal static int __PropertyOffset_吸取状态碰撞预设;
 
-		// Token: 0x04014A7E RID: 84606
-		internal static int __PropertyOffset_40;
+		// Token: 0x04010AFF RID: 68351
+		internal static int __PropertyOffset_保持状态碰撞预设;
 
-		// Token: 0x04014A7F RID: 84607
-		internal static int __PropertyOffset_41;
+		// Token: 0x04010B00 RID: 68352
+		internal static int __PropertyOffset_投掷状态碰撞预设;
 
-		// Token: 0x04014A80 RID: 84608
-		internal static int __PropertyOffset_42;
+		// Token: 0x04010B01 RID: 68353
+		internal static int __PropertyOffset_投掷运动轨迹曲线;
 
-		// Token: 0x04014A81 RID: 84609
-		internal static int __PropertyOffset_43;
+		// Token: 0x04010B02 RID: 68354
+		internal static int __PropertyOffset_抛物瞄准射线Debug;
 
-		// Token: 0x04014A82 RID: 84610
-		internal static int __PropertyOffset_44;
+		// Token: 0x04010B03 RID: 68355
+		internal static int __PropertyOffset_抛物瞄准模式开关;
 
-		// Token: 0x04014A83 RID: 84611
-		internal static int __PropertyOffset_45;
+		// Token: 0x04010B04 RID: 68356
+		internal static int __PropertyOffset_抛物瞄准模式仰角;
 
-		// Token: 0x04014A84 RID: 84612
-		internal static int __PropertyOffset_46;
+		// Token: 0x04010B05 RID: 68357
+		internal static int __PropertyOffset_抛物瞄准模式初速度;
 
-		// Token: 0x04014A85 RID: 84613
-		internal static int __PropertyOffset_47;
+		// Token: 0x04010B06 RID: 68358
+		internal static int __PropertyOffset_抛物瞄准射线检测半径;
 
-		// Token: 0x04014A86 RID: 84614
-		internal static int __PropertyOffset_48;
+		// Token: 0x04010B07 RID: 68359
+		internal static int __PropertyOffset_抛物瞄准模式镜头;
 
-		// Token: 0x04014A87 RID: 84615
-		internal static int __PropertyOffset_49;
+		// Token: 0x04010B08 RID: 68360
+		internal static int __PropertyOffset_抛物瞄准模式样条特效;
 
-		// Token: 0x04014A88 RID: 84616
+		// Token: 0x04010B09 RID: 68361
 		[Nullable(2)]
 		private FSoftObjectPath _抛物瞄准模式样条特效;
 
-		// Token: 0x04014A89 RID: 84617
-		internal static int __PropertyOffset_50;
+		// Token: 0x04010B0A RID: 68362
+		internal static int __PropertyOffset_抛物瞄准模式终点特效;
 
-		// Token: 0x04014A8A RID: 84618
+		// Token: 0x04010B0B RID: 68363
 		[Nullable(2)]
 		private FSoftObjectPath _抛物瞄准模式终点特效;
 
-		// Token: 0x04014A8B RID: 84619
-		internal static int __PropertyOffset_51;
+		// Token: 0x04010B0C RID: 68364
+		internal static int __PropertyOffset_抛物瞄准模式重力加速度;
 
-		// Token: 0x04014A8C RID: 84620
-		internal static int __PropertyOffset_52;
+		// Token: 0x04010B0D RID: 68365
+		internal static int __PropertyOffset_投掷锁定范围;
 
-		// Token: 0x04014A8D RID: 84621
-		internal static int __PropertyOffset_53;
+		// Token: 0x04010B0E RID: 68366
+		internal static int __PropertyOffset_归位消失特效;
 
-		// Token: 0x04014A8E RID: 84622
+		// Token: 0x04010B0F RID: 68367
 		[Nullable(2)]
 		private FSoftObjectPath _归位消失特效;
 
-		// Token: 0x04014A8F RID: 84623
-		internal static int __PropertyOffset_54;
+		// Token: 0x04010B10 RID: 68368
+		internal static int __PropertyOffset_投掷状态CueId;
 
-		// Token: 0x04014A90 RID: 84624
+		// Token: 0x04010B11 RID: 68369
 		[Nullable(2)]
 		private TMap<int, float> _投掷状态CueId;
 
-		// Token: 0x04014A91 RID: 84625
-		internal static int __PropertyOffset_55;
+		// Token: 0x04010B12 RID: 68370
+		internal static int __PropertyOffset_物体物理材质;
 
-		// Token: 0x04014A92 RID: 84626
-		internal static int __PropertyOffset_56;
+		// Token: 0x04010B13 RID: 68371
+		internal static int __PropertyOffset_吸取飞行手柄震动;
 
-		// Token: 0x04014A93 RID: 84627
-		internal static int __PropertyOffset_57;
+		// Token: 0x04010B14 RID: 68372
+		internal static int __PropertyOffset_投掷手柄震动;
 	}
 }

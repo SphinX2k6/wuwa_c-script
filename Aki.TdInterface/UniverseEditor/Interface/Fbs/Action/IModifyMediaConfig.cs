@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AC4 RID: 27332
+	// Token: 0x020071F8 RID: 29176
 	public struct IModifyMediaConfig : IFlatbufferObject
 	{
-		// Token: 0x1700CAC9 RID: 51913
-		// (get) Token: 0x0602FE60 RID: 196192 RVA: 0x00683F48 File Offset: 0x00682148
+		// Token: 0x1700D591 RID: 54673
+		// (get) Token: 0x06032C16 RID: 207894 RVA: 0x006DB1EC File Offset: 0x006D93EC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FE61 RID: 196193 RVA: 0x00683F55 File Offset: 0x00682155
+		// Token: 0x06032C17 RID: 207895 RVA: 0x006DB1F9 File Offset: 0x006D93F9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602FE62 RID: 196194 RVA: 0x00683F5C File Offset: 0x0068215C
+		// Token: 0x06032C18 RID: 207896 RVA: 0x006DB200 File Offset: 0x006D9400
 		public static IModifyMediaConfig GetRootAsIModifyMediaConfig(ByteBuffer _bb)
 		{
 			return IModifyMediaConfig.GetRootAsIModifyMediaConfig(_bb, default(IModifyMediaConfig));
 		}
 
-		// Token: 0x0602FE63 RID: 196195 RVA: 0x00683F78 File Offset: 0x00682178
+		// Token: 0x06032C19 RID: 207897 RVA: 0x006DB21C File Offset: 0x006D941C
 		public static IModifyMediaConfig GetRootAsIModifyMediaConfig(ByteBuffer _bb, IModifyMediaConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602FE64 RID: 196196 RVA: 0x00683F95 File Offset: 0x00682195
+		// Token: 0x06032C1A RID: 207898 RVA: 0x006DB239 File Offset: 0x006D9439
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602FE65 RID: 196197 RVA: 0x00683FA4 File Offset: 0x006821A4
+		// Token: 0x06032C1B RID: 207899 RVA: 0x006DB248 File Offset: 0x006D9448
 		public IModifyMediaConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CACA RID: 51914
-		// (get) Token: 0x0602FE66 RID: 196198 RVA: 0x00683FB4 File Offset: 0x006821B4
+		// Token: 0x1700D592 RID: 54674
+		// (get) Token: 0x06032C1C RID: 207900 RVA: 0x006DB258 File Offset: 0x006D9458
 		public EModifyActorMediaType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FE67 RID: 196199 RVA: 0x00683FF0 File Offset: 0x006821F0
+		// Token: 0x06032C1D RID: 207901 RVA: 0x006DB294 File Offset: 0x006D9494
 		public static Offset<IModifyMediaConfig> CreateIModifyMediaConfig(FlatBufferBuilder builder, EModifyActorMediaType Type = EModifyActorMediaType.ChangeMediaPlayDA)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IModifyMediaConfig.EndIModifyMediaConfig(builder);
 		}
 
-		// Token: 0x0602FE68 RID: 196200 RVA: 0x00684006 File Offset: 0x00682206
+		// Token: 0x06032C1E RID: 207902 RVA: 0x006DB2AA File Offset: 0x006D94AA
 		public static void StartIModifyMediaConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602FE69 RID: 196201 RVA: 0x0068400F File Offset: 0x0068220F
+		// Token: 0x06032C1F RID: 207903 RVA: 0x006DB2B3 File Offset: 0x006D94B3
 		public static void AddType(FlatBufferBuilder builder, EModifyActorMediaType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602FE6A RID: 196202 RVA: 0x0068401A File Offset: 0x0068221A
+		// Token: 0x06032C20 RID: 207904 RVA: 0x006DB2BE File Offset: 0x006D94BE
 		public static Offset<IModifyMediaConfig> EndIModifyMediaConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IModifyMediaConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602FE6B RID: 196203 RVA: 0x00684028 File Offset: 0x00682228
+		// Token: 0x06032C21 RID: 207905 RVA: 0x006DB2CC File Offset: 0x006D94CC
 		public IModifyMediaConfigT UnPack()
 		{
 			IModifyMediaConfigT modifyMediaConfigT = new IModifyMediaConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return modifyMediaConfigT;
 		}
 
-		// Token: 0x0602FE6C RID: 196204 RVA: 0x00684043 File Offset: 0x00682243
+		// Token: 0x06032C22 RID: 207906 RVA: 0x006DB2E7 File Offset: 0x006D94E7
 		public void UnPackTo(IModifyMediaConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602FE6D RID: 196205 RVA: 0x00684054 File Offset: 0x00682254
+		// Token: 0x06032C23 RID: 207907 RVA: 0x006DB2F8 File Offset: 0x006D94F8
 		public static Offset<IModifyMediaConfig> Pack(FlatBufferBuilder builder, IModifyMediaConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IModifyMediaConfig.CreateIModifyMediaConfig(builder, _o.Type);
 		}
 
-		// Token: 0x04011308 RID: 70408
+		// Token: 0x04012217 RID: 74263
 		private Table __p;
 	}
 }

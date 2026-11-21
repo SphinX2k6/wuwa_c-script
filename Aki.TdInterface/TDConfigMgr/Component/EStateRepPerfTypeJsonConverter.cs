@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A21 RID: 2593
+	// Token: 0x02000AE6 RID: 2790
 	public class EStateRepPerfTypeJsonConverter : JsonConverter<EStateRepPerfType>
 	{
-		// Token: 0x06003947 RID: 14663 RVA: 0x00094094 File Offset: 0x00092294
+		// Token: 0x06003D1F RID: 15647 RVA: 0x0009C9C8 File Offset: 0x0009ABC8
 		public override EStateRepPerfType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EStateRepPerfTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003948 RID: 14664 RVA: 0x000940B8 File Offset: 0x000922B8
+		// Token: 0x06003D20 RID: 15648 RVA: 0x0009C9EC File Offset: 0x0009ABEC
 		public override void Write(Utf8JsonWriter writer, EStateRepPerfType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

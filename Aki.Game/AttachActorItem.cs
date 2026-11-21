@@ -2,29 +2,29 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020034F3 RID: 13555
+// Token: 0x02002A67 RID: 10855
 [NullableContext(2)]
 [Nullable(0)]
 public class AttachActorItem
 {
-	// Token: 0x0400E93A RID: 59706
+	// Token: 0x0400EDF1 RID: 60913
 	public int Id;
 
-	// Token: 0x0400E93B RID: 59707
+	// Token: 0x0400EDF2 RID: 60914
 	public int EntityId;
 
-	// Token: 0x0400E93C RID: 59708
+	// Token: 0x0400EDF3 RID: 60915
 	public string Reason;
 
-	// Token: 0x0400E93D RID: 59709
+	// Token: 0x0400EDF4 RID: 60916
 	public AActor Actor;
 
-	// Token: 0x0400E93E RID: 59710
+	// Token: 0x0400EDF5 RID: 60917
 	public string Name;
 
-	// Token: 0x0400E93F RID: 59711
+	// Token: 0x0400EDF6 RID: 60918
 	public string ParentActorName;
 
-	// Token: 0x0400E940 RID: 59712
+	// Token: 0x0400EDF7 RID: 60919
 	public EDetachType? DetachType;
 }

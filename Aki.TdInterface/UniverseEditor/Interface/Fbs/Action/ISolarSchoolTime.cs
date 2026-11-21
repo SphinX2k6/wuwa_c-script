@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007166 RID: 29030
+	// Token: 0x02007932 RID: 31026
 	public struct ISolarSchoolTime : IFlatbufferObject
 	{
-		// Token: 0x1700D7B1 RID: 55217
-		// (get) Token: 0x06033782 RID: 210818 RVA: 0x006EF175 File Offset: 0x006ED375
+		// Token: 0x1700E396 RID: 58262
+		// (get) Token: 0x06036A2C RID: 223788 RVA: 0x0074F981 File Offset: 0x0074DB81
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033783 RID: 210819 RVA: 0x006EF182 File Offset: 0x006ED382
+		// Token: 0x06036A2D RID: 223789 RVA: 0x0074F98E File Offset: 0x0074DB8E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033784 RID: 210820 RVA: 0x006EF18C File Offset: 0x006ED38C
+		// Token: 0x06036A2E RID: 223790 RVA: 0x0074F998 File Offset: 0x0074DB98
 		public static ISolarSchoolTime GetRootAsISolarSchoolTime(ByteBuffer _bb)
 		{
 			return ISolarSchoolTime.GetRootAsISolarSchoolTime(_bb, default(ISolarSchoolTime));
 		}
 
-		// Token: 0x06033785 RID: 210821 RVA: 0x006EF1A8 File Offset: 0x006ED3A8
+		// Token: 0x06036A2F RID: 223791 RVA: 0x0074F9B4 File Offset: 0x0074DBB4
 		public static ISolarSchoolTime GetRootAsISolarSchoolTime(ByteBuffer _bb, ISolarSchoolTime obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033786 RID: 210822 RVA: 0x006EF1C5 File Offset: 0x006ED3C5
+		// Token: 0x06036A30 RID: 223792 RVA: 0x0074F9D1 File Offset: 0x0074DBD1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033787 RID: 210823 RVA: 0x006EF1D4 File Offset: 0x006ED3D4
+		// Token: 0x06036A31 RID: 223793 RVA: 0x0074F9E0 File Offset: 0x0074DBE0
 		public ISolarSchoolTime __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D7B2 RID: 55218
-		// (get) Token: 0x06033788 RID: 210824 RVA: 0x006EF1E4 File Offset: 0x006ED3E4
+		// Token: 0x1700E397 RID: 58263
+		// (get) Token: 0x06036A32 RID: 223794 RVA: 0x0074F9F0 File Offset: 0x0074DBF0
 		public IVisualNovelDate? Date
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D7B3 RID: 55219
-		// (get) Token: 0x06033789 RID: 210825 RVA: 0x006EF244 File Offset: 0x006ED444
+		// Token: 0x1700E398 RID: 58264
+		// (get) Token: 0x06036A33 RID: 223795 RVA: 0x0074FA50 File Offset: 0x0074DC50
 		public int PeriodId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603378A RID: 210826 RVA: 0x006EF280 File Offset: 0x006ED480
+		// Token: 0x06036A34 RID: 223796 RVA: 0x0074FA8C File Offset: 0x0074DC8C
 		public static Offset<ISolarSchoolTime> CreateISolarSchoolTime(FlatBufferBuilder builder, Offset<IVisualNovelDate> DateOffset = default(Offset<IVisualNovelDate>), int PeriodId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISolarSchoolTime.EndISolarSchoolTime(builder);
 		}
 
-		// Token: 0x0603378B RID: 210827 RVA: 0x006EF29D File Offset: 0x006ED49D
+		// Token: 0x06036A35 RID: 223797 RVA: 0x0074FAA9 File Offset: 0x0074DCA9
 		public static void StartISolarSchoolTime(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0603378C RID: 210828 RVA: 0x006EF2A6 File Offset: 0x006ED4A6
+		// Token: 0x06036A36 RID: 223798 RVA: 0x0074FAB2 File Offset: 0x0074DCB2
 		public static void AddDate(FlatBufferBuilder builder, Offset<IVisualNovelDate> dateOffset)
 		{
 			builder.AddOffset(0, dateOffset.Value, 0);
 		}
 
-		// Token: 0x0603378D RID: 210829 RVA: 0x006EF2B6 File Offset: 0x006ED4B6
+		// Token: 0x06036A37 RID: 223799 RVA: 0x0074FAC2 File Offset: 0x0074DCC2
 		public static void AddPeriodId(FlatBufferBuilder builder, int periodId)
 		{
 			builder.AddInt(1, periodId, 0);
 		}
 
-		// Token: 0x0603378E RID: 210830 RVA: 0x006EF2C1 File Offset: 0x006ED4C1
+		// Token: 0x06036A38 RID: 223800 RVA: 0x0074FACD File Offset: 0x0074DCCD
 		public static Offset<ISolarSchoolTime> EndISolarSchoolTime(FlatBufferBuilder builder)
 		{
 			return new Offset<ISolarSchoolTime>(builder.EndTable());
 		}
 
-		// Token: 0x0603378F RID: 210831 RVA: 0x006EF2D0 File Offset: 0x006ED4D0
+		// Token: 0x06036A39 RID: 223801 RVA: 0x0074FADC File Offset: 0x0074DCDC
 		public ISolarSchoolTimeT UnPack()
 		{
 			ISolarSchoolTimeT solarSchoolTimeT = new ISolarSchoolTimeT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return solarSchoolTimeT;
 		}
 
-		// Token: 0x06033790 RID: 210832 RVA: 0x006EF2EC File Offset: 0x006ED4EC
+		// Token: 0x06036A3A RID: 223802 RVA: 0x0074FAF8 File Offset: 0x0074DCF8
 		public void UnPackTo(ISolarSchoolTimeT _o)
 		{
 			_o.Date = ((this.Date != null) ? this.Date.Value.UnPack() : null);
 			_o.PeriodId = this.PeriodId;
 		}
 
-		// Token: 0x06033791 RID: 210833 RVA: 0x006EF334 File Offset: 0x006ED534
+		// Token: 0x06036A3B RID: 223803 RVA: 0x0074FB40 File Offset: 0x0074DD40
 		public static Offset<ISolarSchoolTime> Pack(FlatBufferBuilder builder, ISolarSchoolTimeT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISolarSchoolTime.CreateISolarSchoolTime(builder, dateOffset, _o.PeriodId);
 		}
 
-		// Token: 0x04011C09 RID: 72713
+		// Token: 0x04012BF8 RID: 76792
 		private Table __p;
 	}
 }

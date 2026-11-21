@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E83 RID: 7811
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020B8 RID: 8376
 	public class ISlashTowerPrefabConfig : ICreatePrefabConfig
 	{
-		// Token: 0x0600A722 RID: 42786 RVA: 0x00179E9C File Offset: 0x0017809C
+		// Token: 0x0600B1DA RID: 45530 RVA: 0x0018FB9C File Offset: 0x0018DD9C
 		private ISlashTowerPrefabConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A723 RID: 42787 RVA: 0x00179ED4 File Offset: 0x001780D4
+		// Token: 0x0600B1DB RID: 45531 RVA: 0x0018FBD4 File Offset: 0x0018DDD4
 		public static ISlashTowerPrefabConfig Create([Nullable(2)] ISlashTowerPrefabConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A724 RID: 42788 RVA: 0x00179EE7 File Offset: 0x001780E7
+		// Token: 0x0600B1DC RID: 45532 RVA: 0x0018FBE7 File Offset: 0x0018DDE7
 		public static ISlashTowerPrefabConfig CreateFromSetValue([Nullable(2)] ISlashTowerPrefabConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A725 RID: 42789 RVA: 0x00179EFA File Offset: 0x001780FA
+		// Token: 0x0600B1DD RID: 45533 RVA: 0x0018FBFA File Offset: 0x0018DDFA
 		public new ISlashTowerPrefabConfig_SetValue ToSetValue()
 		{
 			return new ISlashTowerPrefabConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003324 RID: 13092
-		// (get) Token: 0x0600A726 RID: 42790 RVA: 0x00179F19 File Offset: 0x00178119
-		// (set) Token: 0x0600A727 RID: 42791 RVA: 0x00179F44 File Offset: 0x00178144
+		// Token: 0x170035E8 RID: 13800
+		// (get) Token: 0x0600B1DE RID: 45534 RVA: 0x0018FC19 File Offset: 0x0018DE19
+		// (set) Token: 0x0600B1DF RID: 45535 RVA: 0x0018FC44 File Offset: 0x0018DE44
 		public override ECreatePrefabType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003325 RID: 13093
-		// (get) Token: 0x0600A728 RID: 42792 RVA: 0x00179F52 File Offset: 0x00178152
-		// (set) Token: 0x0600A729 RID: 42793 RVA: 0x00179F7D File Offset: 0x0017817D
+		// Token: 0x170035E9 RID: 13801
+		// (get) Token: 0x0600B1E0 RID: 45536 RVA: 0x0018FC52 File Offset: 0x0018DE52
+		// (set) Token: 0x0600B1E1 RID: 45537 RVA: 0x0018FC7D File Offset: 0x0018DE7D
 		public virtual int Index
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063BF RID: 25535
+		// Token: 0x040069A3 RID: 27043
 		[Nullable(2)]
 		protected new ISlashTowerPrefabConfig FbInstance;
 
-		// Token: 0x040063C0 RID: 25536
+		// Token: 0x040069A4 RID: 27044
 		[Nullable(2)]
 		protected new ISlashTowerPrefabConfig_SetValue PocoInterface;
 	}

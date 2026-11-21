@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B15 RID: 19221
+	// Token: 0x02004FFC RID: 20476
 	public class ICheckRogueStateT
 	{
-		// Token: 0x17008B71 RID: 35697
-		// (get) Token: 0x0601E3C0 RID: 123840 RVA: 0x0043D207 File Offset: 0x0043B407
-		// (set) Token: 0x0601E3C1 RID: 123841 RVA: 0x0043D20F File Offset: 0x0043B40F
+		// Token: 0x17009281 RID: 37505
+		// (get) Token: 0x0601FF4B RID: 130891 RVA: 0x0046F9B3 File Offset: 0x0046DBB3
+		// (set) Token: 0x0601FF4C RID: 130892 RVA: 0x0046F9BB File Offset: 0x0046DBBB
 		public ECheckSystemStateType Type { get; set; }
 
-		// Token: 0x17008B72 RID: 35698
-		// (get) Token: 0x0601E3C2 RID: 123842 RVA: 0x0043D218 File Offset: 0x0043B418
-		// (set) Token: 0x0601E3C3 RID: 123843 RVA: 0x0043D220 File Offset: 0x0043B420
+		// Token: 0x17009282 RID: 37506
+		// (get) Token: 0x0601FF4D RID: 130893 RVA: 0x0046F9C4 File Offset: 0x0046DBC4
+		// (set) Token: 0x0601FF4E RID: 130894 RVA: 0x0046F9CC File Offset: 0x0046DBCC
 		public TRogueStateTypeUnion Config { get; set; }
 
-		// Token: 0x0601E3C4 RID: 123844 RVA: 0x0043D229 File Offset: 0x0043B429
+		// Token: 0x0601FF4F RID: 130895 RVA: 0x0046F9D5 File Offset: 0x0046DBD5
 		public ICheckRogueStateT()
 		{
 			this.Type = ECheckSystemStateType.TrackMoonBuilding;

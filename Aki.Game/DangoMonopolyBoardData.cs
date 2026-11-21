@@ -5,12 +5,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.ItemReward;
 
-// Token: 0x02001223 RID: 4643
+// Token: 0x020006D7 RID: 1751
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoMonopolyBoardData
 {
-	// Token: 0x06007D84 RID: 32132 RVA: 0x001A9A88 File Offset: 0x001A7C88
+	// Token: 0x0600511B RID: 20763 RVA: 0x001B2748 File Offset: 0x001B0948
 	public static DangoMonopolyBoardData Create(DangoMonopolyBoard config, int index)
 	{
 		DangoMonopolyBoardData dangoMonopolyBoardData = new DangoMonopolyBoardData(config.BoardId, index);
@@ -18,14 +18,14 @@ public class DangoMonopolyBoardData
 		return dangoMonopolyBoardData;
 	}
 
-	// Token: 0x06007D85 RID: 32133 RVA: 0x001A9AA0 File Offset: 0x001A7CA0
+	// Token: 0x0600511C RID: 20764 RVA: 0x001B2760 File Offset: 0x001B0960
 	private DangoMonopolyBoardData(int id, int index)
 	{
 		this.Id = id;
 		this.Index = index;
 	}
 
-	// Token: 0x06007D86 RID: 32134 RVA: 0x001A9B04 File Offset: 0x001A7D04
+	// Token: 0x0600511D RID: 20765 RVA: 0x001B27C4 File Offset: 0x001B09C4
 	private void Init(DangoMonopolyBoard config)
 	{
 		this.RewardItemId = config.ItemId;
@@ -43,19 +43,19 @@ public class DangoMonopolyBoardData
 		}
 	}
 
-	// Token: 0x06007D87 RID: 32135 RVA: 0x001A9BA2 File Offset: 0x001A7DA2
+	// Token: 0x0600511E RID: 20766 RVA: 0x001B2862 File Offset: 0x001B0A62
 	public void SetActivityData(ActivityDangoMonopolyData data)
 	{
 		this.ActivityData = data;
 	}
 
-	// Token: 0x06007D88 RID: 32136 RVA: 0x001A9BAB File Offset: 0x001A7DAB
+	// Token: 0x0600511F RID: 20767 RVA: 0x001B286B File Offset: 0x001B0A6B
 	public void SetRewarded(bool isRewarded)
 	{
 		this.IsRewarded = isRewarded;
 	}
 
-	// Token: 0x06007D89 RID: 32137 RVA: 0x001A9BB4 File Offset: 0x001A7DB4
+	// Token: 0x06005120 RID: 20768 RVA: 0x001B2874 File Offset: 0x001B0A74
 	public bool IsFinish()
 	{
 		ActivityDangoMonopolyData activityData = this.ActivityData;
@@ -75,7 +75,7 @@ public class DangoMonopolyBoardData
 		return false;
 	}
 
-	// Token: 0x06007D8A RID: 32138 RVA: 0x001A9C1C File Offset: 0x001A7E1C
+	// Token: 0x06005121 RID: 20769 RVA: 0x001B28DC File Offset: 0x001B0ADC
 	public bool IsRunning()
 	{
 		ActivityDangoMonopolyData activityData = this.ActivityData;
@@ -83,7 +83,7 @@ public class DangoMonopolyBoardData
 		return dangoMonopolyBoardData != null && dangoMonopolyBoardData.IsEqualIndex(this.Index);
 	}
 
-	// Token: 0x06007D8B RID: 32139 RVA: 0x001A9C4D File Offset: 0x001A7E4D
+	// Token: 0x06005122 RID: 20770 RVA: 0x001B290D File Offset: 0x001B0B0D
 	[NullableContext(2)]
 	public DangoMonopolyGridData GetCurrentGridData()
 	{
@@ -99,31 +99,31 @@ public class DangoMonopolyBoardData
 		return activityData.RunningGridData;
 	}
 
-	// Token: 0x06007D8C RID: 32140 RVA: 0x001A9C6A File Offset: 0x001A7E6A
+	// Token: 0x06005123 RID: 20771 RVA: 0x001B292A File Offset: 0x001B0B2A
 	public bool IsGreaterIndex(int index)
 	{
 		return this.Index > index;
 	}
 
-	// Token: 0x06007D8D RID: 32141 RVA: 0x001A9C75 File Offset: 0x001A7E75
+	// Token: 0x06005124 RID: 20772 RVA: 0x001B2935 File Offset: 0x001B0B35
 	public bool IsEqualIndex(int index)
 	{
 		return this.Index == index;
 	}
 
-	// Token: 0x06007D8E RID: 32142 RVA: 0x001A9C80 File Offset: 0x001A7E80
+	// Token: 0x06005125 RID: 20773 RVA: 0x001B2940 File Offset: 0x001B0B40
 	public bool IsLessIndex(int index)
 	{
 		return this.Index < index;
 	}
 
-	// Token: 0x06007D8F RID: 32143 RVA: 0x001A9C8B File Offset: 0x001A7E8B
+	// Token: 0x06005126 RID: 20774 RVA: 0x001B294B File Offset: 0x001B0B4B
 	public bool IsCanReceiveReward()
 	{
 		return !this.IsRewarded && this.IsFinish();
 	}
 
-	// Token: 0x06007D90 RID: 32144 RVA: 0x001A9CA4 File Offset: 0x001A7EA4
+	// Token: 0x06005127 RID: 20775 RVA: 0x001B2964 File Offset: 0x001B0B64
 	public List<IDangoMonopolyRoundBuffData> GetDangoBuffShowList()
 	{
 		List<IDangoMonopolyRoundBuffData> list = new List<IDangoMonopolyRoundBuffData>();
@@ -167,7 +167,7 @@ public class DangoMonopolyBoardData
 		return list;
 	}
 
-	// Token: 0x06007D91 RID: 32145 RVA: 0x001A9E44 File Offset: 0x001A8044
+	// Token: 0x06005128 RID: 20776 RVA: 0x001B2B04 File Offset: 0x001B0D04
 	public List<RewardItemData> GetAllGridRewardItemList()
 	{
 		List<IDangoMonopolyItemShowData> list = new List<IDangoMonopolyItemShowData>();
@@ -189,13 +189,13 @@ public class DangoMonopolyBoardData
 		return ((activityData != null) ? activityData.GetItemShowList(list) : null) ?? new List<RewardItemData>();
 	}
 
-	// Token: 0x06007D92 RID: 32146 RVA: 0x001A9EF4 File Offset: 0x001A80F4
+	// Token: 0x06005129 RID: 20777 RVA: 0x001B2BB4 File Offset: 0x001B0DB4
 	public int GetPosition()
 	{
 		return this.Index + 1;
 	}
 
-	// Token: 0x06007D93 RID: 32147 RVA: 0x001A9F00 File Offset: 0x001A8100
+	// Token: 0x0600512A RID: 20778 RVA: 0x001B2BC0 File Offset: 0x001B0DC0
 	public int GetFinishGridNum()
 	{
 		if (this.IsFinish())
@@ -210,7 +210,7 @@ public class DangoMonopolyBoardData
 		return currentGridData.GetPosition();
 	}
 
-	// Token: 0x06007D94 RID: 32148 RVA: 0x001A9F34 File Offset: 0x001A8134
+	// Token: 0x0600512B RID: 20779 RVA: 0x001B2BF4 File Offset: 0x001B0DF4
 	public int InitStartMoveDango(int step)
 	{
 		if (!this.IsRunning())
@@ -248,7 +248,7 @@ public class DangoMonopolyBoardData
 		}
 	}
 
-	// Token: 0x06007D95 RID: 32149 RVA: 0x001A9FFC File Offset: 0x001A81FC
+	// Token: 0x0600512C RID: 20780 RVA: 0x001B2CBC File Offset: 0x001B0EBC
 	public bool MoveDangoOneStep()
 	{
 		if (!this.IsRunning())
@@ -290,7 +290,7 @@ public class DangoMonopolyBoardData
 		return true;
 	}
 
-	// Token: 0x06007D96 RID: 32150 RVA: 0x001AA0A8 File Offset: 0x001A82A8
+	// Token: 0x0600512D RID: 20781 RVA: 0x001B2D68 File Offset: 0x001B0F68
 	public bool IsMoveToTarget()
 	{
 		ActivityDangoMonopolyData activityData = this.ActivityData;
@@ -322,7 +322,7 @@ public class DangoMonopolyBoardData
 		return valueOrDefault == valueOrDefault2;
 	}
 
-	// Token: 0x06007D97 RID: 32151 RVA: 0x001AA12F File Offset: 0x001A832F
+	// Token: 0x0600512E RID: 20782 RVA: 0x001B2DEF File Offset: 0x001B0FEF
 	public int GetEndGridId()
 	{
 		if (this.GridList.Count <= 0)
@@ -332,7 +332,7 @@ public class DangoMonopolyBoardData
 		return this.GridList[this.GridList.Count - 1].Id;
 	}
 
-	// Token: 0x06007D98 RID: 32152 RVA: 0x001AA15E File Offset: 0x001A835E
+	// Token: 0x0600512F RID: 20783 RVA: 0x001B2E1E File Offset: 0x001B101E
 	public int GetStartGridId()
 	{
 		if (this.GridList.Count <= 0)
@@ -342,7 +342,7 @@ public class DangoMonopolyBoardData
 		return this.GridList[0].Id;
 	}
 
-	// Token: 0x06007D99 RID: 32153 RVA: 0x001AA184 File Offset: 0x001A8384
+	// Token: 0x06005130 RID: 20784 RVA: 0x001B2E44 File Offset: 0x001B1044
 	[NullableContext(2)]
 	public DangoMonopolyGridData GetFirstDoubleGrid()
 	{
@@ -356,13 +356,13 @@ public class DangoMonopolyBoardData
 		return null;
 	}
 
-	// Token: 0x06007D9A RID: 32154 RVA: 0x001AA1E0 File Offset: 0x001A83E0
+	// Token: 0x06005131 RID: 20785 RVA: 0x001B2EA0 File Offset: 0x001B10A0
 	public bool IsLock()
 	{
 		return this.GetUnlockRemainTime() > 0.0;
 	}
 
-	// Token: 0x06007D9B RID: 32155 RVA: 0x001AA1F3 File Offset: 0x001A83F3
+	// Token: 0x06005132 RID: 20786 RVA: 0x001B2EB3 File Offset: 0x001B10B3
 	public double GetUnlockRemainTime()
 	{
 		if (this.UnlockTime <= 0L)
@@ -372,31 +372,31 @@ public class DangoMonopolyBoardData
 		return Math.Max(0.0, (double)this.UnlockTime - TimeUtil.Instance.GetServerTime());
 	}
 
-	// Token: 0x06007D9C RID: 32156 RVA: 0x001AA229 File Offset: 0x001A8429
+	// Token: 0x06005133 RID: 20787 RVA: 0x001B2EE9 File Offset: 0x001B10E9
 	public void UpdateUnlockTime(long time)
 	{
 		this.UnlockTime = time;
 	}
 
-	// Token: 0x06007D9D RID: 32157 RVA: 0x001AA232 File Offset: 0x001A8432
+	// Token: 0x06005134 RID: 20788 RVA: 0x001B2EF2 File Offset: 0x001B10F2
 	public void UpdateRollDiceTimes(int num)
 	{
 		this.RecordRollDiceTimes = num;
 	}
 
-	// Token: 0x06007D9E RID: 32158 RVA: 0x001AA23B File Offset: 0x001A843B
+	// Token: 0x06005135 RID: 20789 RVA: 0x001B2EFB File Offset: 0x001B10FB
 	public void AddRollDiceTimes()
 	{
 		this.RecordRollDiceTimes++;
 	}
 
-	// Token: 0x06007D9F RID: 32159 RVA: 0x001AA24B File Offset: 0x001A844B
+	// Token: 0x06005136 RID: 20790 RVA: 0x001B2F0B File Offset: 0x001B110B
 	public void UpdateRecordTriggerBuff(int id, int times)
 	{
 		this.RecordTriggerBuffMap[id] = times;
 	}
 
-	// Token: 0x06007DA0 RID: 32160 RVA: 0x001AA25C File Offset: 0x001A845C
+	// Token: 0x06005137 RID: 20791 RVA: 0x001B2F1C File Offset: 0x001B111C
 	public void AddRecordTriggerBuff(int id)
 	{
 		if (id <= 0)
@@ -411,13 +411,13 @@ public class DangoMonopolyBoardData
 		this.RecordTriggerBuffMap[id] = num + 1;
 	}
 
-	// Token: 0x06007DA1 RID: 32161 RVA: 0x001AA28F File Offset: 0x001A848F
+	// Token: 0x06005138 RID: 20792 RVA: 0x001B2F4F File Offset: 0x001B114F
 	public void ClearRecordTriggerBuff()
 	{
 		this.RecordTriggerBuffMap.Clear();
 	}
 
-	// Token: 0x06007DA2 RID: 32162 RVA: 0x001AA29C File Offset: 0x001A849C
+	// Token: 0x06005139 RID: 20793 RVA: 0x001B2F5C File Offset: 0x001B115C
 	public int GetRecordTriggerBuffTotalTimes()
 	{
 		int num = 0;
@@ -432,19 +432,19 @@ public class DangoMonopolyBoardData
 		return num;
 	}
 
-	// Token: 0x06007DA3 RID: 32163 RVA: 0x001AA314 File Offset: 0x001A8514
+	// Token: 0x0600513A RID: 20794 RVA: 0x001B2FD4 File Offset: 0x001B11D4
 	public void UpdateOwnedBuffIdList(int id)
 	{
 		this.OwnedBuffIdList.Add(id);
 	}
 
-	// Token: 0x06007DA4 RID: 32164 RVA: 0x001AA322 File Offset: 0x001A8522
+	// Token: 0x0600513B RID: 20795 RVA: 0x001B2FE2 File Offset: 0x001B11E2
 	public void ClearOwnedBuffIdList()
 	{
 		this.OwnedBuffIdList.Clear();
 	}
 
-	// Token: 0x06007DA5 RID: 32165 RVA: 0x001AA330 File Offset: 0x001A8530
+	// Token: 0x0600513C RID: 20796 RVA: 0x001B2FF0 File Offset: 0x001B11F0
 	public List<DangoMonopolyGridData> GetGridListDango()
 	{
 		List<DangoMonopolyGridData> list = new List<DangoMonopolyGridData>();
@@ -458,7 +458,7 @@ public class DangoMonopolyBoardData
 		return list;
 	}
 
-	// Token: 0x06007DA6 RID: 32166 RVA: 0x001AA394 File Offset: 0x001A8594
+	// Token: 0x0600513D RID: 20797 RVA: 0x001B3054 File Offset: 0x001B1254
 	public int GetDangoIdByBuffId(int buffId)
 	{
 		foreach (DangoMonopolyGridData dangoMonopolyGridData in this.GetGridListDango())
@@ -483,55 +483,55 @@ public class DangoMonopolyBoardData
 		return num2.GetValueOrDefault();
 	}
 
-	// Token: 0x06007DA7 RID: 32167 RVA: 0x001AA430 File Offset: 0x001A8630
+	// Token: 0x0600513E RID: 20798 RVA: 0x001B30F0 File Offset: 0x001B12F0
 	[Conditional("DEBUG")]
 	public void LogInfo()
 	{
 	}
 
-	// Token: 0x04003918 RID: 14616
+	// Token: 0x040039B0 RID: 14768
 	public int Id;
 
-	// Token: 0x04003919 RID: 14617
+	// Token: 0x040039B1 RID: 14769
 	public int GroupId;
 
-	// Token: 0x0400391A RID: 14618
+	// Token: 0x040039B2 RID: 14770
 	public int Index;
 
-	// Token: 0x0400391B RID: 14619
+	// Token: 0x040039B3 RID: 14771
 	public bool IsRewarded;
 
-	// Token: 0x0400391C RID: 14620
+	// Token: 0x040039B4 RID: 14772
 	public int RewardItemId;
 
-	// Token: 0x0400391D RID: 14621
+	// Token: 0x040039B5 RID: 14773
 	public int RewardItemCount;
 
-	// Token: 0x0400391E RID: 14622
+	// Token: 0x040039B6 RID: 14774
 	public string FinishTitle = "";
 
-	// Token: 0x0400391F RID: 14623
+	// Token: 0x040039B7 RID: 14775
 	public string FinishDesc = "";
 
-	// Token: 0x04003920 RID: 14624
+	// Token: 0x040039B8 RID: 14776
 	public readonly List<DangoMonopolyGridData> GridList = new List<DangoMonopolyGridData>();
 
-	// Token: 0x04003921 RID: 14625
+	// Token: 0x040039B9 RID: 14777
 	public readonly Dictionary<int, DangoMonopolyGridData> GridMap = new Dictionary<int, DangoMonopolyGridData>();
 
-	// Token: 0x04003922 RID: 14626
+	// Token: 0x040039BA RID: 14778
 	[Nullable(2)]
 	public ActivityDangoMonopolyData ActivityData;
 
-	// Token: 0x04003923 RID: 14627
+	// Token: 0x040039BB RID: 14779
 	public long UnlockTime;
 
-	// Token: 0x04003924 RID: 14628
+	// Token: 0x040039BC RID: 14780
 	public int RecordRollDiceTimes;
 
-	// Token: 0x04003925 RID: 14629
+	// Token: 0x040039BD RID: 14781
 	public readonly Dictionary<int, int> RecordTriggerBuffMap = new Dictionary<int, int>();
 
-	// Token: 0x04003926 RID: 14630
+	// Token: 0x040039BE RID: 14782
 	public readonly List<int> OwnedBuffIdList = new List<int>();
 }

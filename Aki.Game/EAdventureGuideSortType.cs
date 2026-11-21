@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02001871 RID: 6257
+// Token: 0x02000D2A RID: 3370
 public enum EAdventureGuideSortType
 {
-	// Token: 0x040052DD RID: 21213
+	// Token: 0x04005388 RID: 21384
 	Danger = 1
 }

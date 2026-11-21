@@ -8,15 +8,15 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059E2 RID: 23010
+	// Token: 0x020049BB RID: 18875
 	public class SlidingBlocksNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A509 RID: 238857 RVA: 0x00DDEC40 File Offset: 0x00DDCE40
+		// Token: 0x0602F430 RID: 193584 RVA: 0x00D2E4AC File Offset: 0x00D2C6AC
 		public SlidingBlocksNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A50A RID: 238858 RVA: 0x00DDEC4C File Offset: 0x00DDCE4C
+		// Token: 0x0602F431 RID: 193585 RVA: 0x00D2E4B8 File Offset: 0x00D2C6B8
 		[NullableContext(1)]
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
@@ -38,33 +38,33 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A50B RID: 238859 RVA: 0x00DDEC89 File Offset: 0x00DDCE89
+		// Token: 0x0602F432 RID: 193586 RVA: 0x00D2E4F5 File Offset: 0x00D2C6F5
 		protected override void OnNodeActive()
 		{
 			base.OnNodeActive();
 			LevelLoadingController.Instance.OpenLoading<ELoadingPerform>(ELoadingReason.SlidingBlocks, ELoadingPerform.CameraFade, null, null, Array.Empty<object>());
 		}
 
-		// Token: 0x0603A50C RID: 238860 RVA: 0x00DDECA5 File Offset: 0x00DDCEA5
+		// Token: 0x0602F433 RID: 193587 RVA: 0x00D2E511 File Offset: 0x00D2C711
 		protected override void OnStart(ENodeStatusUpdateReason reason)
 		{
 			base.OnStart(reason);
 			this.StartGameAsync().Forget();
 		}
 
-		// Token: 0x0603A50D RID: 238861 RVA: 0x00DDECB9 File Offset: 0x00DDCEB9
+		// Token: 0x0602F434 RID: 193588 RVA: 0x00D2E525 File Offset: 0x00D2C725
 		protected override void OnEnd(bool bFinished)
 		{
 			SlidingBlocksController.Instance.OnGameEnd(bFinished);
 		}
 
-		// Token: 0x0603A50E RID: 238862 RVA: 0x00DDECC6 File Offset: 0x00DDCEC6
+		// Token: 0x0602F435 RID: 193589 RVA: 0x00D2E532 File Offset: 0x00D2C732
 		protected override void OnDestroy()
 		{
 			SlidingBlocksController.Instance.DestroyGameplay();
 		}
 
-		// Token: 0x0603A50F RID: 238863 RVA: 0x00DDECD4 File Offset: 0x00DDCED4
+		// Token: 0x0602F436 RID: 193590 RVA: 0x00D2E540 File Offset: 0x00D2C740
 		private UniTask StartGameAsync()
 		{
 			SlidingBlocksNode.<StartGameAsync>d__7 <StartGameAsync>d__;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return <StartGameAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401E674 RID: 124532
+		// Token: 0x04019113 RID: 102675
 		[Nullable(2)]
 		private IFinishTetris Config;
 	}

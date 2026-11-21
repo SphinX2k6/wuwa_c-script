@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027E1 RID: 10209
+	// Token: 0x02002AB4 RID: 10932
 	public class ISoar : ILeisureInteractType
 	{
-		// Token: 0x0600E2E6 RID: 58086 RVA: 0x00217C55 File Offset: 0x00215E55
-		[NullableContext(1)]
+		// Token: 0x0600F10B RID: 61707 RVA: 0x00234AB8 File Offset: 0x00232CB8
 		public static ISoar Create(ISoar? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044E6 RID: 17638
-		// (get) Token: 0x0600E2E7 RID: 58087 RVA: 0x00217C74 File Offset: 0x00215E74
+		// Token: 0x17004851 RID: 18513
+		// (get) Token: 0x0600F10C RID: 61708 RVA: 0x00234AD7 File Offset: 0x00232CD7
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DC3 RID: 32195
+		// Token: 0x04008480 RID: 33920
 		private ISoar Instance;
 	}
 }

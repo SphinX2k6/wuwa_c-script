@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001E17 RID: 7703
+// Token: 0x020012D9 RID: 4825
 public class EPlotNodeItem
 {
-	// Token: 0x04006CAE RID: 27822
+	// Token: 0x04006D8F RID: 28047
 	public const int Toggle = 0;
 
-	// Token: 0x04006CAF RID: 27823
+	// Token: 0x04006D90 RID: 28048
 	public const int TitleText = 1;
 
-	// Token: 0x04006CB0 RID: 27824
+	// Token: 0x04006D91 RID: 28049
 	public const int NewItem = 2;
 }

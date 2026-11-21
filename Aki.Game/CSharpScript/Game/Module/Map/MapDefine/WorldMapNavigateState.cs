@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005572 RID: 21874
+	// Token: 0x02004545 RID: 17733
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapNavigateState : IWorldMapNavigateState
 	{
-		// Token: 0x17008622 RID: 34338
-		// (get) Token: 0x06037C3A RID: 228410 RVA: 0x00D39031 File Offset: 0x00D37231
-		// (set) Token: 0x06037C3B RID: 228411 RVA: 0x00D39039 File Offset: 0x00D37239
+		// Token: 0x170059CB RID: 22987
+		// (get) Token: 0x0602CB14 RID: 183060 RVA: 0x00C86B05 File Offset: 0x00C84D05
+		// (set) Token: 0x0602CB15 RID: 183061 RVA: 0x00C86B0D File Offset: 0x00C84D0D
 		public int StateId { get; set; }
 
-		// Token: 0x17008623 RID: 34339
-		// (get) Token: 0x06037C3C RID: 228412 RVA: 0x00D39042 File Offset: 0x00D37242
-		// (set) Token: 0x06037C3D RID: 228413 RVA: 0x00D3904A File Offset: 0x00D3724A
+		// Token: 0x170059CC RID: 22988
+		// (get) Token: 0x0602CB16 RID: 183062 RVA: 0x00C86B16 File Offset: 0x00C84D16
+		// (set) Token: 0x0602CB17 RID: 183063 RVA: 0x00C86B1E File Offset: 0x00C84D1E
 		public int SortIndex { get; set; }
 
-		// Token: 0x17008624 RID: 34340
-		// (get) Token: 0x06037C3E RID: 228414 RVA: 0x00D39053 File Offset: 0x00D37253
-		// (set) Token: 0x06037C3F RID: 228415 RVA: 0x00D3905B File Offset: 0x00D3725B
+		// Token: 0x170059CD RID: 22989
+		// (get) Token: 0x0602CB18 RID: 183064 RVA: 0x00C86B27 File Offset: 0x00C84D27
+		// (set) Token: 0x0602CB19 RID: 183065 RVA: 0x00C86B2F File Offset: 0x00C84D2F
 		public List<IWorldMapNavigate> AreaNavigateList { get; set; } = new List<IWorldMapNavigate>();
 	}
 }

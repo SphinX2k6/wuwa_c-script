@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014C4 RID: 5316
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200161D RID: 5661
 	public class ChangeActorState : ActionParams
 	{
-		// Token: 0x06007916 RID: 30998 RVA: 0x00122130 File Offset: 0x00120330
+		// Token: 0x06007FE3 RID: 32739 RVA: 0x00130D7C File Offset: 0x0012EF7C
 		private ChangeActorState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007917 RID: 30999 RVA: 0x00122168 File Offset: 0x00120368
+		// Token: 0x06007FE4 RID: 32740 RVA: 0x00130DB4 File Offset: 0x0012EFB4
 		public static ChangeActorState Create([Nullable(2)] ChangeActorState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007918 RID: 31000 RVA: 0x0012217B File Offset: 0x0012037B
+		// Token: 0x06007FE5 RID: 32741 RVA: 0x00130DC7 File Offset: 0x0012EFC7
 		public static ChangeActorState CreateFromSetValue([Nullable(2)] ChangeActorState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007919 RID: 31001 RVA: 0x0012218E File Offset: 0x0012038E
+		// Token: 0x06007FE6 RID: 32742 RVA: 0x00130DDA File Offset: 0x0012EFDA
 		public ChangeActorState_SetValue ToSetValue()
 		{
 			return new ChangeActorState_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700289B RID: 10395
-		// (get) Token: 0x0600791A RID: 31002 RVA: 0x001221A1 File Offset: 0x001203A1
-		// (set) Token: 0x0600791B RID: 31003 RVA: 0x001221CC File Offset: 0x001203CC
+		// Token: 0x17002A85 RID: 10885
+		// (get) Token: 0x06007FE7 RID: 32743 RVA: 0x00130DED File Offset: 0x0012EFED
+		// (set) Token: 0x06007FE8 RID: 32744 RVA: 0x00130E18 File Offset: 0x0012F018
 		public virtual string State
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004652 RID: 18002
+		// Token: 0x040049ED RID: 18925
 		[Nullable(2)]
 		protected new ChangeActorState FbInstance;
 
-		// Token: 0x04004653 RID: 18003
+		// Token: 0x040049EE RID: 18926
 		[Nullable(2)]
 		protected ChangeActorState_SetValue PocoInterface;
 	}

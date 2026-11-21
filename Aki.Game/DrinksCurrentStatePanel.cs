@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F58 RID: 3928
+// Token: 0x0200040D RID: 1037
 [NullableContext(1)]
 [Nullable(0)]
 public class DrinksCurrentStatePanel : UiPanelBase
 {
-	// Token: 0x0600647C RID: 25724 RVA: 0x0013DC90 File Offset: 0x0013BE90
+	// Token: 0x06003814 RID: 14356 RVA: 0x0014652C File Offset: 0x0014472C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class DrinksCurrentStatePanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600647D RID: 25725 RVA: 0x0013DCEC File Offset: 0x0013BEEC
+	// Token: 0x06003815 RID: 14357 RVA: 0x00146588 File Offset: 0x00144788
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DrinksCurrentStatePanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -34,7 +34,7 @@ public class DrinksCurrentStatePanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600647E RID: 25726 RVA: 0x0013DD30 File Offset: 0x0013BF30
+	// Token: 0x06003816 RID: 14358 RVA: 0x001465CC File Offset: 0x001447CC
 	protected override void OnStart()
 	{
 		foreach (DrinksFlavorValueItem drinksFlavorValueItem in this.ItemList)
@@ -46,7 +46,7 @@ public class DrinksCurrentStatePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600647F RID: 25727 RVA: 0x0013DD90 File Offset: 0x0013BF90
+	// Token: 0x06003817 RID: 14359 RVA: 0x0014662C File Offset: 0x0014482C
 	public void RefreshItem(EDrinksFlavorType id, bool isActive, string value, string plus = "", bool needAlpha = false)
 	{
 		List<string> list = new List<string>
@@ -60,7 +60,7 @@ public class DrinksCurrentStatePanel : UiPanelBase
 		this.ItemList[(int)id].RefreshState(isActive, list.ToArray(), needAlpha);
 	}
 
-	// Token: 0x06006480 RID: 25728 RVA: 0x0013DDDC File Offset: 0x0013BFDC
+	// Token: 0x06003818 RID: 14360 RVA: 0x00146678 File Offset: 0x00144878
 	public void UpdateStep()
 	{
 		EDrinksPlayStep curStep = DrinksModel.Instance.GetCurStep();
@@ -95,7 +95,7 @@ public class DrinksCurrentStatePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006481 RID: 25729 RVA: 0x0013DEC8 File Offset: 0x0013C0C8
+	// Token: 0x06003819 RID: 14361 RVA: 0x00146764 File Offset: 0x00144964
 	public void RefreshOnEnterSeq()
 	{
 		int[] currentFlavorValueForce = DrinksModel.Instance.GetCurrentFlavorValueForce();
@@ -105,7 +105,7 @@ public class DrinksCurrentStatePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006482 RID: 25730 RVA: 0x0013DF08 File Offset: 0x0013C108
+	// Token: 0x0600381A RID: 14362 RVA: 0x001467A4 File Offset: 0x001449A4
 	public void OnDrinkSelected(int id)
 	{
 		int[] currentFlavorValue = DrinksModel.Instance.GetCurrentFlavorValue();
@@ -146,7 +146,7 @@ public class DrinksCurrentStatePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006483 RID: 25731 RVA: 0x0013E06C File Offset: 0x0013C26C
+	// Token: 0x0600381B RID: 14363 RVA: 0x00146908 File Offset: 0x00144B08
 	public void OnBatchingSelected(HashSet<int> set)
 	{
 		int[] currentFlavorValue = DrinksModel.Instance.GetCurrentFlavorValue();
@@ -166,32 +166,32 @@ public class DrinksCurrentStatePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x04002D9D RID: 11677
+	// Token: 0x04002E36 RID: 11830
 	protected List<DrinksFlavorValueItem> ItemList = new List<DrinksFlavorValueItem>();
 
-	// Token: 0x04002D9E RID: 11678
+	// Token: 0x04002E37 RID: 11831
 	[Nullable(2)]
 	protected DrinksFlavorValueItem Item0;
 
-	// Token: 0x04002D9F RID: 11679
+	// Token: 0x04002E38 RID: 11832
 	[Nullable(2)]
 	protected DrinksFlavorValueItem Item1;
 
-	// Token: 0x04002DA0 RID: 11680
+	// Token: 0x04002E39 RID: 11833
 	[Nullable(2)]
 	protected DrinksFlavorValueItem Item2;
 
-	// Token: 0x020075A3 RID: 30115
+	// Token: 0x02006737 RID: 26423
 	[NullableContext(0)]
 	private static class EItem
 	{
-		// Token: 0x04026E2C RID: 159276
+		// Token: 0x04022177 RID: 139639
 		public const int Item0 = 0;
 
-		// Token: 0x04026E2D RID: 159277
+		// Token: 0x04022178 RID: 139640
 		public const int Item1 = 1;
 
-		// Token: 0x04026E2E RID: 159278
+		// Token: 0x04022179 RID: 139641
 		public const int Item2 = 2;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008B5 RID: 2229
+	// Token: 0x020008D1 RID: 2257
 	public class ConfigRoleLevelConsumeByConsumeGroupIdAndLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003451 RID: 13393 RVA: 0x00180EA0 File Offset: 0x0017F0A0
+		// Token: 0x060034F9 RID: 13561 RVA: 0x00188188 File Offset: 0x00186388
 		static ConfigRoleLevelConsumeByConsumeGroupIdAndLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleLevelConsumeByConsumeGroupIdAndLevel.CreateStaticDefaultValue), new Action(ConfigRoleLevelConsumeByConsumeGroupIdAndLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003452 RID: 13394 RVA: 0x00180EC0 File Offset: 0x0017F0C0
+		// Token: 0x060034FA RID: 13562 RVA: 0x001881A8 File Offset: 0x001863A8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleLevelConsumeByConsumeGroupIdAndLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003453 RID: 13395 RVA: 0x00180F3F File Offset: 0x0017F13F
+		// Token: 0x060034FB RID: 13563 RVA: 0x00188227 File Offset: 0x00186427
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleLevelConsumeByConsumeGroupIdAndLevel.LogPair = null;
 			ConfigRoleLevelConsumeByConsumeGroupIdAndLevel.HandleId = 0;
 		}
 
-		// Token: 0x06003454 RID: 13396 RVA: 0x00180F4D File Offset: 0x0017F14D
+		// Token: 0x060034FC RID: 13564 RVA: 0x00188235 File Offset: 0x00186435
 		public static void Init()
 		{
 			ConfigRoleLevelConsumeByConsumeGroupIdAndLevel.HandleId = ConfigCommon.InitDataStatement(ConfigRoleLevelConsumeByConsumeGroupIdAndLevel.HandleId, "db_role_level.db", "select BinData from `RoleLevelConsume` where ConsumeGroupId=? AND Level=?");
 		}
 
-		// Token: 0x06003455 RID: 13397 RVA: 0x00180F68 File Offset: 0x0017F168
+		// Token: 0x060034FD RID: 13565 RVA: 0x00188250 File Offset: 0x00186450
 		public static RoleLevelConsume? GetConfig(int p0ConsumeGroupId, int p1Level, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleLevelConsumeByConsumeGroupIdAndLevel.HandleId, ConfigRoleLevelConsumeByConsumeGroupIdAndLevel.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new RoleLevelConsume?(rootAsRoleLevelConsume);
 		}
 
-		// Token: 0x04003CD9 RID: 15577
+		// Token: 0x04003D9D RID: 15773
 		private const string DB = "db_role_level.db";
 
-		// Token: 0x04003CDA RID: 15578
+		// Token: 0x04003D9E RID: 15774
 		private const string FILE = "j.角色升级突破.xlsx";
 
-		// Token: 0x04003CDB RID: 15579
+		// Token: 0x04003D9F RID: 15775
 		private const string TABLE = "RoleLevelConsume";
 
-		// Token: 0x04003CDC RID: 15580
+		// Token: 0x04003DA0 RID: 15776
 		private const string COMMAND = "select BinData from `RoleLevelConsume` where ConsumeGroupId=? AND Level=?";
 
-		// Token: 0x04003CDD RID: 15581
+		// Token: 0x04003DA1 RID: 15777
 		private const string KEY_PREFIX = "RoleLevelConsumeByConsumeGroupIdAndLevel";
 
-		// Token: 0x04003CDE RID: 15582
+		// Token: 0x04003DA2 RID: 15778
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003CDF RID: 15583
+		// Token: 0x04003DA3 RID: 15779
 		private static int HandleId;
 	}
 }

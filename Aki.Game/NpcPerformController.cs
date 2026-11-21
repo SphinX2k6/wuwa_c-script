@@ -6,13 +6,13 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Map.MapDefine;
 using Google.Protobuf;
 
-// Token: 0x020031F1 RID: 12785
+// Token: 0x02002760 RID: 10080
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class NpcPerformController : ControllerBase
 {
-	// Token: 0x0601B956 RID: 112982 RVA: 0x007923F0 File Offset: 0x007905F0
+	// Token: 0x060194DB RID: 103643 RVA: 0x007BAB1C File Offset: 0x007B8D1C
 	protected override bool OnInit()
 	{
 		Net.Instance.Register(ENotifyMessageId.SetNpcPerformStateNotify, new Action<IMessage, Net.CallbackStatus>(this.SetPerformStateNotify));
@@ -22,7 +22,7 @@ public class NpcPerformController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B957 RID: 112983 RVA: 0x00792470 File Offset: 0x00790670
+	// Token: 0x060194DC RID: 103644 RVA: 0x007BAB9C File Offset: 0x007B8D9C
 	protected override bool OnClear()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.SetNpcPerformStateNotify);
@@ -32,7 +32,7 @@ public class NpcPerformController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B958 RID: 112984 RVA: 0x007924D8 File Offset: 0x007906D8
+	// Token: 0x060194DD RID: 103645 RVA: 0x007BAC04 File Offset: 0x007B8E04
 	[NullableContext(2)]
 	protected void SetPerformStateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -55,7 +55,7 @@ public class NpcPerformController : ControllerBase
 		entity.Entity.GetComponent<CommonNpcPerformComponent>().PerformGroupController.SwitchPerformState(setNpcPerformStateNotify.State);
 	}
 
-	// Token: 0x0601B959 RID: 112985 RVA: 0x0079254C File Offset: 0x0079074C
+	// Token: 0x060194DE RID: 103646 RVA: 0x007BAC78 File Offset: 0x007B8E78
 	protected void OnTrackMark(ITrackData data)
 	{
 		TTrackTarget_Int ttrackTarget_Int = data.TrackTarget as TTrackTarget_Int;
@@ -71,7 +71,7 @@ public class NpcPerformController : ControllerBase
 		this.ForceSetNpcDitherVisible(true, value, EForceVisibleReason.TrackMark);
 	}
 
-	// Token: 0x0601B95A RID: 112986 RVA: 0x00792580 File Offset: 0x00790780
+	// Token: 0x060194DF RID: 103647 RVA: 0x007BACAC File Offset: 0x007B8EAC
 	protected void OnUnTrackMark(ITrackData data)
 	{
 		TTrackTarget_Int ttrackTarget_Int = data.TrackTarget as TTrackTarget_Int;
@@ -87,7 +87,7 @@ public class NpcPerformController : ControllerBase
 		this.ForceSetNpcDitherVisible(false, value, EForceVisibleReason.TrackMark);
 	}
 
-	// Token: 0x0601B95B RID: 112987 RVA: 0x007925B4 File Offset: 0x007907B4
+	// Token: 0x060194E0 RID: 103648 RVA: 0x007BACE0 File Offset: 0x007B8EE0
 	public void ForceSetNpcDitherVisible(bool enable, int pbDataId, EForceVisibleReason reason)
 	{
 		if (enable)
@@ -142,7 +142,7 @@ public class NpcPerformController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B95C RID: 112988 RVA: 0x007926A4 File Offset: 0x007908A4
+	// Token: 0x060194E1 RID: 103649 RVA: 0x007BADD0 File Offset: 0x007B8FD0
 	[NullableContext(2)]
 	protected void OnShopBuyNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -150,7 +150,7 @@ public class NpcPerformController : ControllerBase
 		ErrorCodeController.Instance.OpenErrorCodeScrollingTipsView(shopBuyNotify.ErrorCode, Array.Empty<string>());
 	}
 
-	// Token: 0x0601B95D RID: 112989 RVA: 0x007926D0 File Offset: 0x007908D0
+	// Token: 0x060194E2 RID: 103650 RVA: 0x007BADFC File Offset: 0x007B8FFC
 	public void AddNpcLookAtParams(INpcInterestLookAtParamGroup param)
 	{
 		if (this.EntityLookAtCacheForKey.ContainsKey(param.Key))
@@ -177,7 +177,7 @@ public class NpcPerformController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B95E RID: 112990 RVA: 0x007927B4 File Offset: 0x007909B4
+	// Token: 0x060194E3 RID: 103651 RVA: 0x007BAEE0 File Offset: 0x007B90E0
 	public void RemoveNpcLookAtParams(string key)
 	{
 		INpcInterestLookAtParamGroup npcInterestLookAtParamGroup;
@@ -207,8 +207,8 @@ public class NpcPerformController : ControllerBase
 		this.EntityLookAtCacheForKey.Remove(npcInterestLookAtParamGroup.Key);
 	}
 
-	// Token: 0x1700262B RID: 9771
-	// (get) Token: 0x0601B95F RID: 112991 RVA: 0x00792894 File Offset: 0x00790A94
+	// Token: 0x1700286C RID: 10348
+	// (get) Token: 0x060194E4 RID: 103652 RVA: 0x007BAFC0 File Offset: 0x007B91C0
 	public static NpcPerformController Instance
 	{
 		get
@@ -217,7 +217,7 @@ public class NpcPerformController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B960 RID: 112992 RVA: 0x0079289B File Offset: 0x00790A9B
+	// Token: 0x060194E5 RID: 103653 RVA: 0x007BAFC7 File Offset: 0x007B91C7
 	public static NpcPerformController GetOrCreateInstance()
 	{
 		if (NpcPerformController._Instance == null)
@@ -227,7 +227,7 @@ public class NpcPerformController : ControllerBase
 		return NpcPerformController._Instance;
 	}
 
-	// Token: 0x0601B961 RID: 112993 RVA: 0x007928AF File Offset: 0x00790AAF
+	// Token: 0x060194E6 RID: 103654 RVA: 0x007BAFDB File Offset: 0x007B91DB
 	public static bool CreateInstance()
 	{
 		if (NpcPerformController._Instance != null)
@@ -238,33 +238,33 @@ public class NpcPerformController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B962 RID: 112994 RVA: 0x007928C5 File Offset: 0x00790AC5
+	// Token: 0x060194E7 RID: 103655 RVA: 0x007BAFF1 File Offset: 0x007B91F1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601B963 RID: 112995 RVA: 0x007928C7 File Offset: 0x00790AC7
+	// Token: 0x060194E8 RID: 103656 RVA: 0x007BAFF3 File Offset: 0x007B91F3
 	public static void ResetStaticDefaultValue()
 	{
 		NpcPerformController._Instance = null;
 	}
 
-	// Token: 0x0601B964 RID: 112996 RVA: 0x007928CF File Offset: 0x00790ACF
+	// Token: 0x060194E9 RID: 103657 RVA: 0x007BAFFB File Offset: 0x007B91FB
 	static NpcPerformController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(NpcPerformController.CreateStaticDefaultValue), new Action(NpcPerformController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400D8D3 RID: 55507
+	// Token: 0x0400DD71 RID: 56689
 	public Dictionary<int, HashSet<EForceVisibleReason>> ForceNpcDitherVisibleMap = new Dictionary<int, HashSet<EForceVisibleReason>>();
 
-	// Token: 0x0400D8D4 RID: 55508
+	// Token: 0x0400DD72 RID: 56690
 	public Dictionary<int, HashSet<string>> EntityLookAtCacheForId = new Dictionary<int, HashSet<string>>();
 
-	// Token: 0x0400D8D5 RID: 55509
+	// Token: 0x0400DD73 RID: 56691
 	public Dictionary<string, INpcInterestLookAtParamGroup> EntityLookAtCacheForKey = new Dictionary<string, INpcInterestLookAtParamGroup>();
 
-	// Token: 0x0400D8D6 RID: 55510
+	// Token: 0x0400DD74 RID: 56692
 	[Nullable(2)]
 	private static NpcPerformController _Instance;
 }

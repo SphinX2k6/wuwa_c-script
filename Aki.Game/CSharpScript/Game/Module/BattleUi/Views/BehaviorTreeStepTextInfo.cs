@@ -6,12 +6,12 @@ using Aki.TDConfigMgr.Quest;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D76 RID: 23926
+	// Token: 0x02004D58 RID: 19800
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BehaviorTreeStepTextInfo : MissionViewStepTextInfoBase
 	{
-		// Token: 0x0603CBAD RID: 248749 RVA: 0x00E953E4 File Offset: 0x00E935E4
+		// Token: 0x06031B09 RID: 203529 RVA: 0x00DE5C2C File Offset: 0x00DE3E2C
 		public BehaviorTreeStepTextInfo([Nullable(1)] string tidTitle, IQuestScheduleType questScheduleType, IConditionGroup showConditions = null, [Nullable(new byte[]
 		{
 			2,
@@ -24,8 +24,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		{
 		}
 
-		// Token: 0x17008E1E RID: 36382
-		// (get) Token: 0x0603CBAE RID: 248750 RVA: 0x00E9540F File Offset: 0x00E9360F
+		// Token: 0x170061F0 RID: 25072
+		// (get) Token: 0x06031B0A RID: 203530 RVA: 0x00DE5C57 File Offset: 0x00DE3E57
 		public override EMissionItemViewDataSource ShowSource
 		{
 			get
@@ -34,8 +34,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008E1F RID: 36383
-		// (get) Token: 0x0603CBAF RID: 248751 RVA: 0x00E95412 File Offset: 0x00E93612
+		// Token: 0x170061F1 RID: 25073
+		// (get) Token: 0x06031B0B RID: 203531 RVA: 0x00DE5C5A File Offset: 0x00DE3E5A
 		[Nullable(1)]
 		public override string TidTitle
 		{
@@ -50,8 +50,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008E20 RID: 36384
-		// (get) Token: 0x0603CBB0 RID: 248752 RVA: 0x00E95443 File Offset: 0x00E93643
+		// Token: 0x170061F2 RID: 25074
+		// (get) Token: 0x06031B0C RID: 203532 RVA: 0x00DE5C8B File Offset: 0x00DE3E8B
 		public IQuestScheduleType QuestScheduleType
 		{
 			get
@@ -64,19 +64,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FA3B RID: 129595
+		// Token: 0x0401A4F3 RID: 107763
 		public IQuestScheduleType InnerQuestScheduleType = questScheduleType;
 
-		// Token: 0x0401FA3C RID: 129596
+		// Token: 0x0401A4F4 RID: 107764
 		public IProgressBar ProgressBar = progressBar;
 
-		// Token: 0x0401FA3D RID: 129597
+		// Token: 0x0401A4F5 RID: 107765
 		public bool? BlankTitleStillShow = blankTitleStillShow;
 
-		// Token: 0x0401FA3E RID: 129598
+		// Token: 0x0401A4F6 RID: 107766
 		public bool UsePreStateText;
 
-		// Token: 0x0401FA3F RID: 129599
+		// Token: 0x0401A4F7 RID: 107767
 		[Nullable(new byte[]
 		{
 			2,

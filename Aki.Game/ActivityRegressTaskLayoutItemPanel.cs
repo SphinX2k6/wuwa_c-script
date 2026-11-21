@@ -7,14 +7,14 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020014AE RID: 5294
+// Token: 0x02000962 RID: 2402
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRegressTaskLayoutItemPanel : UiPanelBase, IGridProxy<ActivityRegressTaskScoreRewardGridData>
 {
-	// Token: 0x17000D00 RID: 3328
-	// (get) Token: 0x060095EF RID: 38383 RVA: 0x0020550F File Offset: 0x0020370F
-	// (set) Token: 0x060095F0 RID: 38384 RVA: 0x00205517 File Offset: 0x00203717
+	// Token: 0x17000D20 RID: 3360
+	// (get) Token: 0x06006984 RID: 27012 RVA: 0x0020E477 File Offset: 0x0020C677
+	// (set) Token: 0x06006985 RID: 27013 RVA: 0x0020E47F File Offset: 0x0020C67F
 	[Nullable(new byte[]
 	{
 		2,
@@ -36,17 +36,17 @@ public class ActivityRegressTaskLayoutItemPanel : UiPanelBase, IGridProxy<Activi
 		1
 	})] set; }
 
-	// Token: 0x17000D01 RID: 3329
-	// (get) Token: 0x060095F1 RID: 38385 RVA: 0x00205520 File Offset: 0x00203720
-	// (set) Token: 0x060095F2 RID: 38386 RVA: 0x00205528 File Offset: 0x00203728
+	// Token: 0x17000D21 RID: 3361
+	// (get) Token: 0x06006986 RID: 27014 RVA: 0x0020E488 File Offset: 0x0020C688
+	// (set) Token: 0x06006987 RID: 27015 RVA: 0x0020E490 File Offset: 0x0020C690
 	public int GridIndex { get; set; }
 
-	// Token: 0x17000D02 RID: 3330
-	// (get) Token: 0x060095F3 RID: 38387 RVA: 0x00205531 File Offset: 0x00203731
-	// (set) Token: 0x060095F4 RID: 38388 RVA: 0x00205539 File Offset: 0x00203739
+	// Token: 0x17000D22 RID: 3362
+	// (get) Token: 0x06006988 RID: 27016 RVA: 0x0020E499 File Offset: 0x0020C699
+	// (set) Token: 0x06006989 RID: 27017 RVA: 0x0020E4A1 File Offset: 0x0020C6A1
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x060095F5 RID: 38389 RVA: 0x00205544 File Offset: 0x00203744
+	// Token: 0x0600698A RID: 27018 RVA: 0x0020E4AC File Offset: 0x0020C6AC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -68,7 +68,7 @@ public class ActivityRegressTaskLayoutItemPanel : UiPanelBase, IGridProxy<Activi
 		};
 	}
 
-	// Token: 0x060095F6 RID: 38390 RVA: 0x00205660 File Offset: 0x00203860
+	// Token: 0x0600698B RID: 27019 RVA: 0x0020E5C8 File Offset: 0x0020C7C8
 	protected override void OnStart()
 	{
 		this.ItemGridA = new SmallItemGrid();
@@ -81,7 +81,7 @@ public class ActivityRegressTaskLayoutItemPanel : UiPanelBase, IGridProxy<Activi
 		this.ItemGridB.BindOnExtendToggleClicked(new Action<MediumItemGridExtendCallback>(this.OnExtendToggleClickedB));
 	}
 
-	// Token: 0x060095F7 RID: 38391 RVA: 0x00205734 File Offset: 0x00203934
+	// Token: 0x0600698C RID: 27020 RVA: 0x0020E69C File Offset: 0x0020C89C
 	public void Refresh(ActivityRegressTaskScoreRewardGridData data, bool isSelected, int gridIndex)
 	{
 		this.ScoreRewardGridData = data;
@@ -120,29 +120,29 @@ public class ActivityRegressTaskLayoutItemPanel : UiPanelBase, IGridProxy<Activi
 		base.GetItem(8).SetUIActive(rewardState == ERegressRewardState.Claim);
 	}
 
-	// Token: 0x060095F8 RID: 38392 RVA: 0x00205894 File Offset: 0x00203A94
+	// Token: 0x0600698D RID: 27021 RVA: 0x0020E7FC File Offset: 0x0020C9FC
 	public void Clear()
 	{
 		this.ScoreRewardGridData = null;
 	}
 
-	// Token: 0x060095F9 RID: 38393 RVA: 0x0020589D File Offset: 0x00203A9D
+	// Token: 0x0600698E RID: 27022 RVA: 0x0020E805 File Offset: 0x0020CA05
 	public void OnSelected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x060095FA RID: 38394 RVA: 0x0020589F File Offset: 0x00203A9F
+	// Token: 0x0600698F RID: 27023 RVA: 0x0020E807 File Offset: 0x0020CA07
 	public void OnDeselected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x060095FB RID: 38395 RVA: 0x002058A1 File Offset: 0x00203AA1
+	// Token: 0x06006990 RID: 27024 RVA: 0x0020E809 File Offset: 0x0020CA09
 	public object GetKey(ActivityRegressTaskScoreRewardGridData data, int gridIndex)
 	{
 		return this.GridIndex;
 	}
 
-	// Token: 0x060095FC RID: 38396 RVA: 0x002058B0 File Offset: 0x00203AB0
+	// Token: 0x06006991 RID: 27025 RVA: 0x0020E818 File Offset: 0x0020CA18
 	private void OnExtendToggleClickedA(MediumItemGridExtendCallback _)
 	{
 		if (this.ScoreRewardGridData.RewardState == ERegressRewardState.Reached)
@@ -151,10 +151,10 @@ public class ActivityRegressTaskLayoutItemPanel : UiPanelBase, IGridProxy<Activi
 			return;
 		}
 		int id = ActivityRegressModel.Instance.GetRegressScoreRewardInfoList(this.ScoreRewardGridData.Config.Value)[0].ItemInfo.Value.Id;
-		ItemController.Instance.OpenItemTipsByItemId(id, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(id, true, null, false);
 	}
 
-	// Token: 0x060095FD RID: 38397 RVA: 0x0020591C File Offset: 0x00203B1C
+	// Token: 0x06006992 RID: 27026 RVA: 0x0020E888 File Offset: 0x0020CA88
 	private void OnExtendToggleClickedB(MediumItemGridExtendCallback _)
 	{
 		if (this.ScoreRewardGridData.RewardState == ERegressRewardState.Reached)
@@ -163,10 +163,10 @@ public class ActivityRegressTaskLayoutItemPanel : UiPanelBase, IGridProxy<Activi
 			return;
 		}
 		int id = ActivityRegressModel.Instance.GetRegressScoreRewardInfoList(this.ScoreRewardGridData.Config.Value)[1].ItemInfo.Value.Id;
-		ItemController.Instance.OpenItemTipsByItemId(id, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(id, true, null, false);
 	}
 
-	// Token: 0x060095FE RID: 38398 RVA: 0x00205988 File Offset: 0x00203B88
+	// Token: 0x06006993 RID: 27027 RVA: 0x0020E8F5 File Offset: 0x0020CAF5
 	private void OnBtnRewardClick()
 	{
 		if (this.ScoreRewardGridData.RewardState == ERegressRewardState.Reached)
@@ -175,50 +175,50 @@ public class ActivityRegressTaskLayoutItemPanel : UiPanelBase, IGridProxy<Activi
 		}
 	}
 
-	// Token: 0x04004243 RID: 16963
+	// Token: 0x040042DB RID: 17115
 	[Nullable(2)]
 	private ActivityRegressTaskScoreRewardGridData ScoreRewardGridData;
 
-	// Token: 0x04004244 RID: 16964
+	// Token: 0x040042DC RID: 17116
 	[Nullable(2)]
 	private SmallItemGrid ItemGridA;
 
-	// Token: 0x04004245 RID: 16965
+	// Token: 0x040042DD RID: 17117
 	[Nullable(2)]
 	private SmallItemGrid ItemGridB;
 
-	// Token: 0x02007AE4 RID: 31460
+	// Token: 0x02006C68 RID: 27752
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040286CA RID: 165578
+		// Token: 0x040239E4 RID: 145892
 		public const int SprBar = 0;
 
-		// Token: 0x040286CB RID: 165579
+		// Token: 0x040239E5 RID: 145893
 		public const int SprNor = 1;
 
-		// Token: 0x040286CC RID: 165580
+		// Token: 0x040239E6 RID: 145894
 		public const int SprReceived = 2;
 
-		// Token: 0x040286CD RID: 165581
+		// Token: 0x040239E7 RID: 145895
 		public const int TxtNum = 3;
 
-		// Token: 0x040286CE RID: 165582
+		// Token: 0x040239E8 RID: 145896
 		public const int PnlHorItem = 4;
 
-		// Token: 0x040286CF RID: 165583
+		// Token: 0x040239E9 RID: 145897
 		public const int RedDotItem = 5;
 
-		// Token: 0x040286D0 RID: 165584
+		// Token: 0x040239EA RID: 145898
 		public const int ItemBaseB2A = 6;
 
-		// Token: 0x040286D1 RID: 165585
+		// Token: 0x040239EB RID: 145899
 		public const int ItemBaseB2B = 7;
 
-		// Token: 0x040286D2 RID: 165586
+		// Token: 0x040239EC RID: 145900
 		public const int SprDone = 8;
 
-		// Token: 0x040286D3 RID: 165587
+		// Token: 0x040239ED RID: 145901
 		public const int BtnReward = 9;
 	}
 }

@@ -6,124 +6,116 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.Role.Common.Data.Structure
 {
-	// Token: 0x020040B0 RID: 16560
+	// Token: 0x020032A5 RID: 12965
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Character/Role/Common/Data/Structure/SFootprint.SFootprint")]
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 57)]
 	public class SFootprint : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602AC70 RID: 175216 RVA: 0x009EB254 File Offset: 0x009E9454
+		// Token: 0x060209C0 RID: 133568 RVA: 0x0094ADEB File Offset: 0x00948FEB
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SFootprint._ScriptStructPtr != 0) ? SFootprint._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/Role/Common/Data/Structure/SFootprint.SFootprint", ref SFootprint._ScriptStructPtr);
 		}
 
-		// Token: 0x1700697B RID: 27003
-		// (get) Token: 0x0602AC71 RID: 175217 RVA: 0x009EB278 File Offset: 0x009E9478
-		// (set) Token: 0x0602AC72 RID: 175218 RVA: 0x009EB28C File Offset: 0x009E948C
+		// Token: 0x1700400A RID: 16394
+		// (get) Token: 0x060209C1 RID: 133569 RVA: 0x0094AE0F File Offset: 0x0094900F
+		// (set) Token: 0x060209C2 RID: 133570 RVA: 0x0094AE23 File Offset: 0x00949023
 		public unsafe TEnumAsByte<EPhysicalSurface> SurfaceType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFootprint.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SFootprint.__PropertyOffset_SurfaceType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFootprint.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SFootprint.__PropertyOffset_SurfaceType) = value;
 			}
 		}
 
-		// Token: 0x1700697C RID: 27004
-		// (get) Token: 0x0602AC73 RID: 175219 RVA: 0x009EB2A1 File Offset: 0x009E94A1
-		// (set) Token: 0x0602AC74 RID: 175220 RVA: 0x009EB2C0 File Offset: 0x009E94C0
+		// Token: 0x1700400B RID: 16395
+		// (get) Token: 0x060209C3 RID: 133571 RVA: 0x0094AE38 File Offset: 0x00949038
+		// (set) Token: 0x060209C4 RID: 133572 RVA: 0x0094AE57 File Offset: 0x00949057
 		[Nullable(1)]
 		public TSoftObjectPtr<UEffectModelBase> Effect
 		{
 			[NullableContext(1)]
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SFootprint.__PropertyOffset_1, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SFootprint.__PropertyOffset_Effect, base.MemoryOwner ?? this);
 			}
 			[NullableContext(1)]
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SFootprint.__PropertyOffset_1, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SFootprint.__PropertyOffset_Effect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x1700697D RID: 27005
-		// (get) Token: 0x0602AC75 RID: 175221 RVA: 0x009EB2E5 File Offset: 0x009E94E5
-		// (set) Token: 0x0602AC76 RID: 175222 RVA: 0x009EB2F5 File Offset: 0x009E94F5
+		// Token: 0x1700400C RID: 16396
+		// (get) Token: 0x060209C5 RID: 133573 RVA: 0x0094AE7C File Offset: 0x0094907C
+		// (set) Token: 0x060209C6 RID: 133574 RVA: 0x0094AE8C File Offset: 0x0094908C
 		public unsafe bool PriorToGlobal
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFootprint.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)SFootprint.__PropertyOffset_PriorToGlobal) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFootprint.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SFootprint.__PropertyOffset_PriorToGlobal) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602AC77 RID: 175223 RVA: 0x009EB306 File Offset: 0x009E9506
+		// Token: 0x060209C7 RID: 133575 RVA: 0x0094AE9D File Offset: 0x0094909D
 		public SFootprint()
 		{
 		}
 
-		// Token: 0x0602AC78 RID: 175224 RVA: 0x009EB30E File Offset: 0x009E950E
-		public SFootprint(TEnumAsByte<EPhysicalSurface> SurfaceType, [Nullable(1)] TSoftObjectPtr<UEffectModelBase> Effect, bool PriorToGlobal)
-		{
-			this.SurfaceType = SurfaceType;
-			this.Effect = Effect;
-			this.PriorToGlobal = PriorToGlobal;
-		}
-
-		// Token: 0x0602AC79 RID: 175225 RVA: 0x009EB32B File Offset: 0x009E952B
+		// Token: 0x060209C8 RID: 133576 RVA: 0x0094AEA5 File Offset: 0x009490A5
 		protected override IntPtr GetUStructPtr()
 		{
 			return SFootprint.StaticStruct();
 		}
 
-		// Token: 0x0602AC7A RID: 175226 RVA: 0x009EB337 File Offset: 0x009E9537
+		// Token: 0x060209C9 RID: 133577 RVA: 0x0094AEB1 File Offset: 0x009490B1
 		[NullableContext(2)]
 		public SFootprint(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602AC7B RID: 175227 RVA: 0x009EB341 File Offset: 0x009E9541
+		// Token: 0x060209CA RID: 133578 RVA: 0x0094AEBB File Offset: 0x009490BB
 		public SFootprint(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602AC7C RID: 175228 RVA: 0x009EB34C File Offset: 0x009E954C
+		// Token: 0x060209CB RID: 133579 RVA: 0x0094AEC6 File Offset: 0x009490C6
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SFootprint(Pointer, false, true);
 		}
 
-		// Token: 0x0602AC7D RID: 175229 RVA: 0x009EB356 File Offset: 0x009E9556
+		// Token: 0x060209CC RID: 133580 RVA: 0x0094AED0 File Offset: 0x009490D0
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SFootprint(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401624B RID: 90699
+		// Token: 0x04011A08 RID: 72200
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/Role/Common/Data/Structure/SFootprint.SFootprint";
 
-		// Token: 0x0401624C RID: 90700
+		// Token: 0x04011A09 RID: 72201
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401624D RID: 90701
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011A0A RID: 72202
+		internal static int __PropertyOffset_SurfaceType;
 
-		// Token: 0x0401624E RID: 90702
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011A0B RID: 72203
+		internal static int __PropertyOffset_Effect;
 
-		// Token: 0x0401624F RID: 90703
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011A0C RID: 72204
+		internal static int __PropertyOffset_PriorToGlobal;
 	}
 }

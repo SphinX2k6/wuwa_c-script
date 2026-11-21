@@ -9,12 +9,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F83 RID: 3971
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010AD RID: 4269
 	public class IFinishRollBlock : IQuestCondition
 	{
-		// Token: 0x06005858 RID: 22616 RVA: 0x000D79C0 File Offset: 0x000D5BC0
+		// Token: 0x06005E2A RID: 24106 RVA: 0x000E43E8 File Offset: 0x000E25E8
 		private IFinishRollBlock_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -29,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005859 RID: 22617 RVA: 0x000D79F8 File Offset: 0x000D5BF8
+		// Token: 0x06005E2B RID: 24107 RVA: 0x000E4420 File Offset: 0x000E2620
 		public static IFinishRollBlock Create([Nullable(2)] IFinishRollBlock instance)
 		{
 			if (instance == null)
@@ -42,7 +40,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600585A RID: 22618 RVA: 0x000D7A0B File Offset: 0x000D5C0B
+		// Token: 0x06005E2C RID: 24108 RVA: 0x000E4433 File Offset: 0x000E2633
 		public static IFinishRollBlock CreateFromSetValue([Nullable(2)] IFinishRollBlock_SetValue value)
 		{
 			if (value == null)
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600585B RID: 22619 RVA: 0x000D7A20 File Offset: 0x000D5C20
+		// Token: 0x06005E2D RID: 24109 RVA: 0x000E4448 File Offset: 0x000E2648
 		public new IFinishRollBlock_SetValue ToSetValue()
 		{
 			return new IFinishRollBlock_SetValue
@@ -76,9 +74,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D69 RID: 7529
-		// (get) Token: 0x0600585C RID: 22620 RVA: 0x000D7ACE File Offset: 0x000D5CCE
-		// (set) Token: 0x0600585D RID: 22621 RVA: 0x000D7AF9 File Offset: 0x000D5CF9
+		// Token: 0x17001F0E RID: 7950
+		// (get) Token: 0x06005E2E RID: 24110 RVA: 0x000E44F6 File Offset: 0x000E26F6
+		// (set) Token: 0x06005E2F RID: 24111 RVA: 0x000E4521 File Offset: 0x000E2721
 		public override EChildQuest Type
 		{
 			get
@@ -99,9 +97,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D6A RID: 7530
-		// (get) Token: 0x0600585E RID: 22622 RVA: 0x000D7B08 File Offset: 0x000D5D08
-		// (set) Token: 0x0600585F RID: 22623 RVA: 0x000D7B69 File Offset: 0x000D5D69
+		// Token: 0x17001F0F RID: 7951
+		// (get) Token: 0x06005E30 RID: 24112 RVA: 0x000E4530 File Offset: 0x000E2730
+		// (set) Token: 0x06005E31 RID: 24113 RVA: 0x000E4591 File Offset: 0x000E2791
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D6B RID: 7531
-		// (get) Token: 0x06005860 RID: 22624 RVA: 0x000D7B7E File Offset: 0x000D5D7E
-		// (set) Token: 0x06005861 RID: 22625 RVA: 0x000D7BA9 File Offset: 0x000D5DA9
+		// Token: 0x17001F10 RID: 7952
+		// (get) Token: 0x06005E32 RID: 24114 RVA: 0x000E45A6 File Offset: 0x000E27A6
+		// (set) Token: 0x06005E33 RID: 24115 RVA: 0x000E45D1 File Offset: 0x000E27D1
 		public virtual int CenterEntityId
 		{
 			get
@@ -155,9 +153,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D6C RID: 7532
-		// (get) Token: 0x06005862 RID: 22626 RVA: 0x000D7BB8 File Offset: 0x000D5DB8
-		// (set) Token: 0x06005863 RID: 22627 RVA: 0x000D7BF2 File Offset: 0x000D5DF2
+		// Token: 0x17001F11 RID: 7953
+		// (get) Token: 0x06005E34 RID: 24116 RVA: 0x000E45E0 File Offset: 0x000E27E0
+		// (set) Token: 0x06005E35 RID: 24117 RVA: 0x000E461A File Offset: 0x000E281A
 		public virtual int? InteractEntityId
 		{
 			get
@@ -179,9 +177,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D6D RID: 7533
-		// (get) Token: 0x06005864 RID: 22628 RVA: 0x000D7C00 File Offset: 0x000D5E00
-		// (set) Token: 0x06005865 RID: 22629 RVA: 0x000D7C27 File Offset: 0x000D5E27
+		// Token: 0x17001F12 RID: 7954
+		// (get) Token: 0x06005E36 RID: 24118 RVA: 0x000E4628 File Offset: 0x000E2828
+		// (set) Token: 0x06005E37 RID: 24119 RVA: 0x000E464F File Offset: 0x000E284F
 		[Nullable(2)]
 		public virtual List<ERollBlockInteractType> InteractTypes
 		{
@@ -206,20 +204,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D6E RID: 7534
-		// (get) Token: 0x06005866 RID: 22630 RVA: 0x000D7C35 File Offset: 0x000D5E35
-		// (set) Token: 0x06005867 RID: 22631 RVA: 0x000D7C5C File Offset: 0x000D5E5C
+		// Token: 0x17001F13 RID: 7955
+		// (get) Token: 0x06005E38 RID: 24120 RVA: 0x000E465D File Offset: 0x000E285D
+		// (set) Token: 0x06005E39 RID: 24121 RVA: 0x000E4684 File Offset: 0x000E2884
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IRollBlockStartupMethodBase> LaunchMethod
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -237,7 +235,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -245,9 +243,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D6F RID: 7535
-		// (get) Token: 0x06005868 RID: 22632 RVA: 0x000D7C6A File Offset: 0x000D5E6A
-		// (set) Token: 0x06005869 RID: 22633 RVA: 0x000D7C95 File Offset: 0x000D5E95
+		// Token: 0x17001F14 RID: 7956
+		// (get) Token: 0x06005E3A RID: 24122 RVA: 0x000E4692 File Offset: 0x000E2892
+		// (set) Token: 0x06005E3B RID: 24123 RVA: 0x000E46BD File Offset: 0x000E28BD
 		public virtual int RollBlockGroupId
 		{
 			get
@@ -268,9 +266,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D70 RID: 7536
-		// (get) Token: 0x0600586A RID: 22634 RVA: 0x000D7CA3 File Offset: 0x000D5EA3
-		// (set) Token: 0x0600586B RID: 22635 RVA: 0x000D7CCE File Offset: 0x000D5ECE
+		// Token: 0x17001F15 RID: 7957
+		// (get) Token: 0x06005E3C RID: 24124 RVA: 0x000E46CB File Offset: 0x000E28CB
+		// (set) Token: 0x06005E3D RID: 24125 RVA: 0x000E46F6 File Offset: 0x000E28F6
 		public virtual int RollBlockTemplateId
 		{
 			get
@@ -291,9 +289,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D71 RID: 7537
-		// (get) Token: 0x0600586C RID: 22636 RVA: 0x000D7CDC File Offset: 0x000D5EDC
-		// (set) Token: 0x0600586D RID: 22637 RVA: 0x000D7D03 File Offset: 0x000D5F03
+		// Token: 0x17001F16 RID: 7958
+		// (get) Token: 0x06005E3E RID: 24126 RVA: 0x000E4704 File Offset: 0x000E2904
+		// (set) Token: 0x06005E3F RID: 24127 RVA: 0x000E472B File Offset: 0x000E292B
 		public virtual VarRef CurrentDifficultyVarRef
 		{
 			get
@@ -315,9 +313,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D72 RID: 7538
-		// (get) Token: 0x0600586E RID: 22638 RVA: 0x000D7D11 File Offset: 0x000D5F11
-		// (set) Token: 0x0600586F RID: 22639 RVA: 0x000D7D38 File Offset: 0x000D5F38
+		// Token: 0x17001F17 RID: 7959
+		// (get) Token: 0x06005E40 RID: 24128 RVA: 0x000E4739 File Offset: 0x000E2939
+		// (set) Token: 0x06005E41 RID: 24129 RVA: 0x000E4760 File Offset: 0x000E2960
 		public virtual VarRef AllDifficultyCountVarRef
 		{
 			get
@@ -339,20 +337,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D73 RID: 7539
-		// (get) Token: 0x06005870 RID: 22640 RVA: 0x000D7D48 File Offset: 0x000D5F48
-		// (set) Token: 0x06005871 RID: 22641 RVA: 0x000D7DDB File Offset: 0x000D5FDB
+		// Token: 0x17001F18 RID: 7960
+		// (get) Token: 0x06005E42 RID: 24130 RVA: 0x000E4770 File Offset: 0x000E2970
+		// (set) Token: 0x06005E43 RID: 24131 RVA: 0x000E4803 File Offset: 0x000E2A03
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> EnterActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -383,7 +381,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -392,20 +390,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D74 RID: 7540
-		// (get) Token: 0x06005872 RID: 22642 RVA: 0x000D7DF0 File Offset: 0x000D5FF0
-		// (set) Token: 0x06005873 RID: 22643 RVA: 0x000D7E83 File Offset: 0x000D6083
+		// Token: 0x17001F19 RID: 7961
+		// (get) Token: 0x06005E44 RID: 24132 RVA: 0x000E4818 File Offset: 0x000E2A18
+		// (set) Token: 0x06005E45 RID: 24133 RVA: 0x000E48AB File Offset: 0x000E2AAB
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> ExitActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -436,7 +434,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -445,20 +443,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D75 RID: 7541
-		// (get) Token: 0x06005874 RID: 22644 RVA: 0x000D7E98 File Offset: 0x000D6098
-		// (set) Token: 0x06005875 RID: 22645 RVA: 0x000D7F2B File Offset: 0x000D612B
+		// Token: 0x17001F1A RID: 7962
+		// (get) Token: 0x06005E46 RID: 24134 RVA: 0x000E48C0 File Offset: 0x000E2AC0
+		// (set) Token: 0x06005E47 RID: 24135 RVA: 0x000E4953 File Offset: 0x000E2B53
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> CompleteActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -489,7 +487,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -498,51 +496,51 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003560 RID: 13664
+		// Token: 0x04003890 RID: 14480
 		[Nullable(2)]
 		protected new IFinishRollBlock FbInstance;
 
-		// Token: 0x04003561 RID: 13665
+		// Token: 0x04003891 RID: 14481
 		[Nullable(2)]
 		protected new IFinishRollBlock_SetValue PocoInterface;
 
-		// Token: 0x04003562 RID: 13666
+		// Token: 0x04003892 RID: 14482
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003563 RID: 13667
+		// Token: 0x04003893 RID: 14483
 		private bool _PreConditionsInited;
 
-		// Token: 0x04003564 RID: 13668
+		// Token: 0x04003894 RID: 14484
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _EnterActionsCache;
 
-		// Token: 0x04003565 RID: 13669
+		// Token: 0x04003895 RID: 14485
 		private bool _EnterActionsInited;
 
-		// Token: 0x04003566 RID: 13670
+		// Token: 0x04003896 RID: 14486
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ExitActionsCache;
 
-		// Token: 0x04003567 RID: 13671
+		// Token: 0x04003897 RID: 14487
 		private bool _ExitActionsInited;
 
-		// Token: 0x04003568 RID: 13672
+		// Token: 0x04003898 RID: 14488
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _CompleteActionsCache;
 
-		// Token: 0x04003569 RID: 13673
+		// Token: 0x04003899 RID: 14489
 		private bool _CompleteActionsInited;
 	}
 }

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002124 RID: 8484
+// Token: 0x020015FC RID: 5628
 [NullableContext(1)]
 [Nullable(0)]
 public class AutoShowParallelDownloadConfirmBox : PlayerCommonLogData
 {
-	// Token: 0x170014CA RID: 5322
-	// (get) Token: 0x060109A8 RID: 68008 RVA: 0x0040B8F0 File Offset: 0x00409AF0
-	// (set) Token: 0x060109A9 RID: 68009 RVA: 0x0040B8F8 File Offset: 0x00409AF8
+	// Token: 0x170014F8 RID: 5368
+	// (get) Token: 0x0600DE1B RID: 56859 RVA: 0x00418038 File Offset: 0x00416238
+	// (set) Token: 0x0600DE1C RID: 56860 RVA: 0x00418040 File Offset: 0x00416240
 	public override string event_id { get; set; } = "1851";
 }

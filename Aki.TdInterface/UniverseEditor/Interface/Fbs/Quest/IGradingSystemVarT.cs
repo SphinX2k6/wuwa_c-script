@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E82 RID: 16002
+	// Token: 0x020042BD RID: 17085
 	public class IGradingSystemVarT
 	{
-		// Token: 0x17006F01 RID: 28417
-		// (get) Token: 0x060168F0 RID: 92400 RVA: 0x003427F3 File Offset: 0x003409F3
-		// (set) Token: 0x060168F1 RID: 92401 RVA: 0x003427FB File Offset: 0x003409FB
+		// Token: 0x170074E9 RID: 29929
+		// (get) Token: 0x06017F27 RID: 98087 RVA: 0x0036B577 File Offset: 0x00369777
+		// (set) Token: 0x06017F28 RID: 98088 RVA: 0x0036B57F File Offset: 0x0036977F
 		public EGradingSystemVarType VarType { get; set; }
 
-		// Token: 0x17006F02 RID: 28418
-		// (get) Token: 0x060168F2 RID: 92402 RVA: 0x00342804 File Offset: 0x00340A04
-		// (set) Token: 0x060168F3 RID: 92403 RVA: 0x0034280C File Offset: 0x00340A0C
+		// Token: 0x170074EA RID: 29930
+		// (get) Token: 0x06017F29 RID: 98089 RVA: 0x0036B588 File Offset: 0x00369788
+		// (set) Token: 0x06017F2A RID: 98090 RVA: 0x0036B590 File Offset: 0x00369790
 		public TVarRefUnion VarRef { get; set; }
 
-		// Token: 0x060168F4 RID: 92404 RVA: 0x00342815 File Offset: 0x00340A15
+		// Token: 0x06017F2B RID: 98091 RVA: 0x0036B599 File Offset: 0x00369799
 		public IGradingSystemVarT()
 		{
 			this.VarType = EGradingSystemVarType.Score;

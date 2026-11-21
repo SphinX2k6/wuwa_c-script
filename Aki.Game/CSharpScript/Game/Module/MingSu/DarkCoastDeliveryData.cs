@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.MingSu
 {
-	// Token: 0x020053CA RID: 21450
+	// Token: 0x020043AD RID: 17325
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DarkCoastDeliveryData : MingSuInstance
 	{
-		// Token: 0x06036D1D RID: 224541 RVA: 0x00CFBE00 File Offset: 0x00CFA000
+		// Token: 0x0602BC63 RID: 179299 RVA: 0x00C4AEA8 File Offset: 0x00C490A8
 		public DarkCoastDeliveryData(int id) : base(id)
 		{
 			if (this.DragonPoolConfig == null)
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.MingSu
 			}
 		}
 
-		// Token: 0x06036D1E RID: 224542 RVA: 0x00CFBEB8 File Offset: 0x00CFA0B8
+		// Token: 0x0602BC64 RID: 179300 RVA: 0x00C4AF60 File Offset: 0x00C49160
 		public override void SetDragonPoolLevel(int level)
 		{
 			base.SetDragonPoolLevel(level);
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.MingSu
 			}
 		}
 
-		// Token: 0x06036D1F RID: 224543 RVA: 0x00CFBEF4 File Offset: 0x00CFA0F4
+		// Token: 0x0602BC65 RID: 179301 RVA: 0x00C4AF9C File Offset: 0x00C4919C
 		public override void SetLevelGainList(int levelGain)
 		{
 			for (int i = 0; i < this.LevelDataList.Count; i++)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.MingSu
 			}
 		}
 
-		// Token: 0x06036D20 RID: 224544 RVA: 0x00CFBF38 File Offset: 0x00CFA138
+		// Token: 0x0602BC66 RID: 179302 RVA: 0x00C4AFE0 File Offset: 0x00C491E0
 		public void RefreshLevelDataState(int[] defeatGuardIds, int[] receivedGuardList)
 		{
 			for (int i = 0; i < defeatGuardIds.Length; i++)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.MingSu
 			}
 		}
 
-		// Token: 0x06036D21 RID: 224545 RVA: 0x00CFBF8C File Offset: 0x00CFA18C
+		// Token: 0x0602BC67 RID: 179303 RVA: 0x00C4B034 File Offset: 0x00C49234
 		[NullableContext(2)]
 		public DarkCoastDeliveryLevelData GetLevelData(int level)
 		{
@@ -88,19 +88,19 @@ namespace CSharpScript.Game.Module.MingSu
 			return null;
 		}
 
-		// Token: 0x06036D22 RID: 224546 RVA: 0x00CFBFC8 File Offset: 0x00CFA1C8
+		// Token: 0x0602BC68 RID: 179304 RVA: 0x00C4B070 File Offset: 0x00C49270
 		public List<DarkCoastDeliveryLevelData> GetLevelDataList()
 		{
 			return this.LevelDataList;
 		}
 
-		// Token: 0x06036D23 RID: 224547 RVA: 0x00CFBFD0 File Offset: 0x00CFA1D0
+		// Token: 0x0602BC69 RID: 179305 RVA: 0x00C4B078 File Offset: 0x00C49278
 		public string GetCurLevelTexturePath()
 		{
 			return this.GetLevelTexturePath(base.GetDragonPoolLevel());
 		}
 
-		// Token: 0x06036D24 RID: 224548 RVA: 0x00CFBFE0 File Offset: 0x00CFA1E0
+		// Token: 0x0602BC6A RID: 179306 RVA: 0x00C4B088 File Offset: 0x00C49288
 		public string GetLevelTexturePath(int level)
 		{
 			DarkCoastDeliveryLevelData levelData = this.GetLevelData(level);
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.MingSu
 			return ConfigCommonParamById.GetStringConfig("DarkShoreDefaultLevel") ?? "";
 		}
 
-		// Token: 0x06036D25 RID: 224549 RVA: 0x00CFC024 File Offset: 0x00CFA224
+		// Token: 0x0602BC6B RID: 179307 RVA: 0x00C4B0CC File Offset: 0x00C492CC
 		public IActivityRewardViewData GetActivityRewardViewData()
 		{
 			List<IActivityRewardData> activityRewardDataList = this.GetActivityRewardDataList();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.MingSu
 			};
 		}
 
-		// Token: 0x06036D26 RID: 224550 RVA: 0x00CFC068 File Offset: 0x00CFA268
+		// Token: 0x0602BC6C RID: 179308 RVA: 0x00C4B110 File Offset: 0x00C49310
 		private List<IActivityRewardData> GetActivityRewardDataList()
 		{
 			List<IActivityRewardData> list = new List<IActivityRewardData>();
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.MingSu
 			return list;
 		}
 
-		// Token: 0x06036D27 RID: 224551 RVA: 0x00CFC1A4 File Offset: 0x00CFA3A4
+		// Token: 0x0602BC6D RID: 179309 RVA: 0x00C4B24C File Offset: 0x00C4944C
 		public bool GetRewardRedDotState()
 		{
 			for (int i = 0; i < this.LevelDataList.Count; i++)
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.MingSu
 			return false;
 		}
 
-		// Token: 0x0401CF01 RID: 118529
+		// Token: 0x04017999 RID: 96665
 		private readonly List<DarkCoastDeliveryLevelData> LevelDataList = new List<DarkCoastDeliveryLevelData>();
 	}
 }

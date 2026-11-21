@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200020E RID: 526
+	// Token: 0x02000235 RID: 565
 	public class IButterflySpline_SetValue
 	{
-		// Token: 0x0400094F RID: 2383
+		// Token: 0x040009D9 RID: 2521
 		public ESplineType Type;
 
-		// Token: 0x04000950 RID: 2384
-		[Nullable(1)]
+		// Token: 0x040009DA RID: 2522
 		public List<IButterflySplinePoint> Points;
 	}
 }

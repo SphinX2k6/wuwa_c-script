@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DD3 RID: 19923
+	// Token: 0x02003D9C RID: 15772
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,20 +17,20 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class ElementItem : GridProxyAbstract<ElementInfo>
 	{
-		// Token: 0x060336CC RID: 210636 RVA: 0x00C024DB File Offset: 0x00C006DB
+		// Token: 0x06028539 RID: 165177 RVA: 0x00B4BA33 File Offset: 0x00B49C33
 		public override void Refresh(ElementInfo data, bool isSelected, int gridIndex)
 		{
 			this.Update(data);
 		}
 
-		// Token: 0x060336CD RID: 210637 RVA: 0x00C024E4 File Offset: 0x00C006E4
+		// Token: 0x0602853A RID: 165178 RVA: 0x00B4BA3C File Offset: 0x00B49C3C
 		public void Update(ElementInfo elementInfo)
 		{
 			this.ElementInfo = elementInfo;
 			this.RefreshPanel();
 		}
 
-		// Token: 0x060336CE RID: 210638 RVA: 0x00C024F4 File Offset: 0x00C006F4
+		// Token: 0x0602853B RID: 165179 RVA: 0x00B4BA4C File Offset: 0x00B49C4C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060336CF RID: 210639 RVA: 0x00C02560 File Offset: 0x00C00760
+		// Token: 0x0602853C RID: 165180 RVA: 0x00B4BAB8 File Offset: 0x00B49CB8
 		private void RefreshPanel()
 		{
 			if (!string.IsNullOrEmpty(this.ElementInfo.Name))
@@ -79,20 +79,20 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.CommonElementItem.RefreshPanel();
 		}
 
-		// Token: 0x0401B4D2 RID: 111826
+		// Token: 0x04015EA5 RID: 89765
 		private ElementInfo ElementInfo;
 
-		// Token: 0x0401B4D3 RID: 111827
+		// Token: 0x04015EA6 RID: 89766
 		private CommonElementItem CommonElementItem;
 
-		// Token: 0x0200AF4C RID: 44876
+		// Token: 0x02009981 RID: 39297
 		[NullableContext(0)]
 		private class EElementItemCom
 		{
-			// Token: 0x040353A6 RID: 218022
+			// Token: 0x0402FDDB RID: 196059
 			public const int CommonElementItem = 0;
 
-			// Token: 0x040353A7 RID: 218023
+			// Token: 0x0402FDDC RID: 196060
 			public const int CountText = 1;
 		}
 	}

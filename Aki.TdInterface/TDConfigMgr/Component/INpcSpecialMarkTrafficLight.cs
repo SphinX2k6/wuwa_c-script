@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000578 RID: 1400
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005DF RID: 1503
 	public class INpcSpecialMarkTrafficLight : INpcSpecialMarkBase
 	{
-		// Token: 0x06001CAA RID: 7338 RVA: 0x00051B44 File Offset: 0x0004FD44
+		// Token: 0x06001EA6 RID: 7846 RVA: 0x00056900 File Offset: 0x00054B00
 		private INpcSpecialMarkTrafficLight_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001CAB RID: 7339 RVA: 0x00051B7C File Offset: 0x0004FD7C
+		// Token: 0x06001EA7 RID: 7847 RVA: 0x00056938 File Offset: 0x00054B38
 		public static INpcSpecialMarkTrafficLight Create([Nullable(2)] INpcSpecialMarkTrafficLight instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001CAC RID: 7340 RVA: 0x00051B8F File Offset: 0x0004FD8F
+		// Token: 0x06001EA8 RID: 7848 RVA: 0x0005694B File Offset: 0x00054B4B
 		public static INpcSpecialMarkTrafficLight CreateFromSetValue([Nullable(2)] INpcSpecialMarkTrafficLight_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001CAD RID: 7341 RVA: 0x00051BA2 File Offset: 0x0004FDA2
+		// Token: 0x06001EA9 RID: 7849 RVA: 0x0005695E File Offset: 0x00054B5E
 		public new INpcSpecialMarkTrafficLight_SetValue ToSetValue()
 		{
 			return new INpcSpecialMarkTrafficLight_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000780 RID: 1920
-		// (get) Token: 0x06001CAE RID: 7342 RVA: 0x00051BB5 File Offset: 0x0004FDB5
-		// (set) Token: 0x06001CAF RID: 7343 RVA: 0x00051BE0 File Offset: 0x0004FDE0
+		// Token: 0x17000803 RID: 2051
+		// (get) Token: 0x06001EAA RID: 7850 RVA: 0x00056971 File Offset: 0x00054B71
+		// (set) Token: 0x06001EAB RID: 7851 RVA: 0x0005699C File Offset: 0x00054B9C
 		public override ESpecialNpcMarkType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001464 RID: 5220
+		// Token: 0x040015CE RID: 5582
 		[Nullable(2)]
 		protected new INpcSpecialMarkTrafficLight FbInstance;
 
-		// Token: 0x04001465 RID: 5221
+		// Token: 0x040015CF RID: 5583
 		[Nullable(2)]
 		protected new INpcSpecialMarkTrafficLight_SetValue PocoInterface;
 	}

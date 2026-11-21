@@ -14,9 +14,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateDrinksTalk.TsAnimNotifyStateDrinksTalk_C")]
 public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000303 RID: 771
-	// (get) Token: 0x06001251 RID: 4689 RVA: 0x00067D3F File Offset: 0x00065F3F
-	// (set) Token: 0x06001252 RID: 4690 RVA: 0x00067D4F File Offset: 0x00065F4F
+	// Token: 0x17000306 RID: 774
+	// (get) Token: 0x06001257 RID: 4695 RVA: 0x000695AF File Offset: 0x000677AF
+	// (set) Token: 0x06001258 RID: 4696 RVA: 0x000695BF File Offset: 0x000677BF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool bIsTick
 	{
@@ -30,9 +30,9 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000304 RID: 772
-	// (get) Token: 0x06001253 RID: 4691 RVA: 0x00067D60 File Offset: 0x00065F60
-	// (set) Token: 0x06001254 RID: 4692 RVA: 0x00067D70 File Offset: 0x00065F70
+	// Token: 0x17000307 RID: 775
+	// (get) Token: 0x06001259 RID: 4697 RVA: 0x000695D0 File Offset: 0x000677D0
+	// (set) Token: 0x0600125A RID: 4698 RVA: 0x000695E0 File Offset: 0x000677E0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool bUseSocketPosition
 	{
@@ -46,9 +46,9 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000305 RID: 773
-	// (get) Token: 0x06001255 RID: 4693 RVA: 0x00067D81 File Offset: 0x00065F81
-	// (set) Token: 0x06001256 RID: 4694 RVA: 0x00067D91 File Offset: 0x00065F91
+	// Token: 0x17000308 RID: 776
+	// (get) Token: 0x0600125B RID: 4699 RVA: 0x000695F1 File Offset: 0x000677F1
+	// (set) Token: 0x0600125C RID: 4700 RVA: 0x00069601 File Offset: 0x00067801
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float AttachTimeLength
 	{
@@ -62,9 +62,9 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000306 RID: 774
-	// (get) Token: 0x06001257 RID: 4695 RVA: 0x00067DA2 File Offset: 0x00065FA2
-	// (set) Token: 0x06001258 RID: 4696 RVA: 0x00067DB6 File Offset: 0x00065FB6
+	// Token: 0x17000309 RID: 777
+	// (get) Token: 0x0600125D RID: 4701 RVA: 0x00069612 File Offset: 0x00067812
+	// (set) Token: 0x0600125E RID: 4702 RVA: 0x00069626 File Offset: 0x00067826
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName ActorTag
 	{
@@ -78,9 +78,9 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000307 RID: 775
-	// (get) Token: 0x06001259 RID: 4697 RVA: 0x00067DCB File Offset: 0x00065FCB
-	// (set) Token: 0x0600125A RID: 4698 RVA: 0x00067DDF File Offset: 0x00065FDF
+	// Token: 0x1700030A RID: 778
+	// (get) Token: 0x0600125F RID: 4703 RVA: 0x0006963B File Offset: 0x0006783B
+	// (set) Token: 0x06001260 RID: 4704 RVA: 0x0006964F File Offset: 0x0006784F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName AttachSocketName
 	{
@@ -94,9 +94,9 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000308 RID: 776
-	// (get) Token: 0x0600125B RID: 4699 RVA: 0x00067DF4 File Offset: 0x00065FF4
-	// (set) Token: 0x0600125C RID: 4700 RVA: 0x00067E04 File Offset: 0x00066004
+	// Token: 0x1700030B RID: 779
+	// (get) Token: 0x06001261 RID: 4705 RVA: 0x00069664 File Offset: 0x00067864
+	// (set) Token: 0x06001262 RID: 4706 RVA: 0x00069674 File Offset: 0x00067874
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool bIsPlayAnimSeq
 	{
@@ -110,9 +110,9 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000309 RID: 777
-	// (get) Token: 0x0600125D RID: 4701 RVA: 0x00067E15 File Offset: 0x00066015
-	// (set) Token: 0x0600125E RID: 4702 RVA: 0x00067E29 File Offset: 0x00066029
+	// Token: 0x1700030C RID: 780
+	// (get) Token: 0x06001263 RID: 4707 RVA: 0x00069685 File Offset: 0x00067885
+	// (set) Token: 0x06001264 RID: 4708 RVA: 0x00069699 File Offset: 0x00067899
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName BatchSocketName
 	{
@@ -126,9 +126,9 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700030A RID: 778
-	// (get) Token: 0x0600125F RID: 4703 RVA: 0x00067E3E File Offset: 0x0006603E
-	// (set) Token: 0x06001260 RID: 4704 RVA: 0x00067E52 File Offset: 0x00066052
+	// Token: 0x1700030D RID: 781
+	// (get) Token: 0x06001265 RID: 4709 RVA: 0x000696AE File Offset: 0x000678AE
+	// (set) Token: 0x06001266 RID: 4710 RVA: 0x000696C2 File Offset: 0x000678C2
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UAnimSequence AnimSeq
 	{
@@ -142,9 +142,9 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700030B RID: 779
-	// (get) Token: 0x06001261 RID: 4705 RVA: 0x00067E68 File Offset: 0x00066068
-	// (set) Token: 0x06001262 RID: 4706 RVA: 0x00067EA1 File Offset: 0x000660A1
+	// Token: 0x1700030E RID: 782
+	// (get) Token: 0x06001267 RID: 4711 RVA: 0x000696D8 File Offset: 0x000678D8
+	// (set) Token: 0x06001268 RID: 4712 RVA: 0x00069711 File Offset: 0x00067911
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat HighCurve
@@ -167,9 +167,9 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700030C RID: 780
-	// (get) Token: 0x06001263 RID: 4707 RVA: 0x00067EC9 File Offset: 0x000660C9
-	// (set) Token: 0x06001264 RID: 4708 RVA: 0x00067EDD File Offset: 0x000660DD
+	// Token: 0x1700030F RID: 783
+	// (get) Token: 0x06001269 RID: 4713 RVA: 0x00069739 File Offset: 0x00067939
+	// (set) Token: 0x0600126A RID: 4714 RVA: 0x0006974D File Offset: 0x0006794D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UMaterialParameterCollection MPCObject
 	{
@@ -183,9 +183,9 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700030D RID: 781
-	// (get) Token: 0x06001265 RID: 4709 RVA: 0x00067EF2 File Offset: 0x000660F2
-	// (set) Token: 0x06001266 RID: 4710 RVA: 0x00067F02 File Offset: 0x00066102
+	// Token: 0x17000310 RID: 784
+	// (get) Token: 0x0600126B RID: 4715 RVA: 0x00069762 File Offset: 0x00067962
+	// (set) Token: 0x0600126C RID: 4716 RVA: 0x00069772 File Offset: 0x00067972
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsAttach
 	{
@@ -199,9 +199,9 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700030E RID: 782
-	// (get) Token: 0x06001267 RID: 4711 RVA: 0x00067F13 File Offset: 0x00066113
-	// (set) Token: 0x06001268 RID: 4712 RVA: 0x00067F27 File Offset: 0x00066127
+	// Token: 0x17000311 RID: 785
+	// (get) Token: 0x0600126D RID: 4717 RVA: 0x00069783 File Offset: 0x00067983
+	// (set) Token: 0x0600126E RID: 4718 RVA: 0x00069797 File Offset: 0x00067997
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe BP_Prop_GobletLiquid_C CupActor
 	{
@@ -215,32 +215,28 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06001269 RID: 4713 RVA: 0x00067F3C File Offset: 0x0006613C
+	// Token: 0x0600126F RID: 4719 RVA: 0x000697AC File Offset: 0x000679AC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyBegin(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyBegin"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateDrinksTalk) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyBegin"), TsAnimNotifyStateDrinksTalk.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
-			ptr2->TotalDuration = totalDuration;
+			return this.K2_NotifyBegin_Implementation(meshComp, animation, totalDuration);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		ptr->TotalDuration = totalDuration;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0600126A RID: 4714 RVA: 0x00067FE4 File Offset: 0x000661E4
+	// Token: 0x06001270 RID: 4720 RVA: 0x0006986C File Offset: 0x00067A6C
 	protected virtual bool K2_NotifyBegin_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
 		this.IsAttach = false;
@@ -270,32 +266,28 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		return true;
 	}
 
-	// Token: 0x0600126B RID: 4715 RVA: 0x000680F0 File Offset: 0x000662F0
+	// Token: 0x06001271 RID: 4721 RVA: 0x00069978 File Offset: 0x00067B78
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyTick(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float frameDeltaTime)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateDrinksTalk) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyTick"), TsAnimNotifyStateDrinksTalk.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
-			ptr2->FrameDeltaTime = frameDeltaTime;
+			return this.K2_NotifyTick_Implementation(meshComp, animation, frameDeltaTime);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		ptr->FrameDeltaTime = frameDeltaTime;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0600126C RID: 4716 RVA: 0x00068198 File Offset: 0x00066398
+	// Token: 0x06001272 RID: 4722 RVA: 0x00069A38 File Offset: 0x00067C38
 	protected virtual bool K2_NotifyTick_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float frameDeltaTime)
 	{
 		if (this.CupActor == null || !this.CupActor.IsValid())
@@ -313,31 +305,27 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		return true;
 	}
 
-	// Token: 0x0600126D RID: 4717 RVA: 0x00068228 File Offset: 0x00066428
+	// Token: 0x06001273 RID: 4723 RVA: 0x00069AC8 File Offset: 0x00067CC8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyEnd(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyEnd"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateDrinksTalk) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyEnd"), TsAnimNotifyStateDrinksTalk.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_NotifyEnd_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0600126E RID: 4718 RVA: 0x000682C8 File Offset: 0x000664C8
+	// Token: 0x06001274 RID: 4724 RVA: 0x00069B80 File Offset: 0x00067D80
 	protected virtual bool K2_NotifyEnd_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
 		if (this.CupActor == null || !this.CupActor.IsValid())
@@ -376,37 +364,33 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		return true;
 	}
 
-	// Token: 0x0600126F RID: 4719 RVA: 0x0006841C File Offset: 0x0006661C
+	// Token: 0x06001275 RID: 4725 RVA: 0x00069CD4 File Offset: 0x00067ED4
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotifyState.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateDrinksTalk) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyStateDrinksTalk.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotifyState.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotifyState.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotifyState.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotifyState.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotifyState.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001270 RID: 4720 RVA: 0x00068497 File Offset: 0x00066697
+	// Token: 0x06001276 RID: 4726 RVA: 0x00069D64 File Offset: 0x00067F64
 	[NullableContext(1)]
 	protected override string GetNotifyName_Implementation()
 	{
 		return "春节活动饮料对话状态";
 	}
 
-	// Token: 0x06001271 RID: 4721 RVA: 0x0006849E File Offset: 0x0006669E
+	// Token: 0x06001277 RID: 4727 RVA: 0x00069D6B File Offset: 0x00067F6B
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyStateDrinksTalk._ClassPtr == IntPtr.Zero)
@@ -416,23 +400,23 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		return TsAnimNotifyStateDrinksTalk._ClassPtr;
 	}
 
-	// Token: 0x06001272 RID: 4722 RVA: 0x000684C4 File Offset: 0x000666C4
+	// Token: 0x06001278 RID: 4728 RVA: 0x00069D90 File Offset: 0x00067F90
 	public TsAnimNotifyStateDrinksTalk() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateDrinksTalk.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001273 RID: 4723 RVA: 0x000684EC File Offset: 0x000666EC
+	// Token: 0x06001279 RID: 4729 RVA: 0x00069DB8 File Offset: 0x00067FB8
 	[NullableContext(1)]
 	public TsAnimNotifyStateDrinksTalk(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateDrinksTalk.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001274 RID: 4724 RVA: 0x0006851F File Offset: 0x0006671F
+	// Token: 0x0600127A RID: 4730 RVA: 0x00069DEB File Offset: 0x00067FEB
 	protected TsAnimNotifyStateDrinksTalk(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001275 RID: 4725 RVA: 0x00068540 File Offset: 0x00066740
+	// Token: 0x0600127B RID: 4731 RVA: 0x00069E0C File Offset: 0x0006800C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyBegin_Implementation(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* __Params)
 	{
@@ -441,7 +425,7 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		__Params->__Result = this.K2_NotifyBegin_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->TotalDuration);
 	}
 
-	// Token: 0x06001276 RID: 4726 RVA: 0x0006857C File Offset: 0x0006677C
+	// Token: 0x0600127C RID: 4732 RVA: 0x00069E48 File Offset: 0x00068048
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyTick_Implementation(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* __Params)
 	{
@@ -450,7 +434,7 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		__Params->__Result = this.K2_NotifyTick_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->FrameDeltaTime);
 	}
 
-	// Token: 0x06001277 RID: 4727 RVA: 0x000685B8 File Offset: 0x000667B8
+	// Token: 0x0600127D RID: 4733 RVA: 0x00069E84 File Offset: 0x00068084
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
@@ -459,67 +443,67 @@ public class TsAnimNotifyStateDrinksTalk : TsAnimNotifyStateBase, IUnrealUObject
 		__Params->__Result = this.K2_NotifyEnd_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001278 RID: 4728 RVA: 0x000685EB File Offset: 0x000667EB
+	// Token: 0x0600127E RID: 4734 RVA: 0x00069EB7 File Offset: 0x000680B7
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotifyState.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x04000DA9 RID: 3497
+	// Token: 0x04000DB1 RID: 3505
 	[Nullable(1)]
 	protected Vector ActorLocation = Vector.Create();
 
-	// Token: 0x04000DAA RID: 3498
+	// Token: 0x04000DB2 RID: 3506
 	[Nullable(1)]
 	protected Rotator ActorRotation = Rotator.Create();
 
-	// Token: 0x04000DAB RID: 3499
+	// Token: 0x04000DB3 RID: 3507
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateDrinksTalk.TsAnimNotifyStateDrinksTalk_C";
 
-	// Token: 0x04000DAC RID: 3500
+	// Token: 0x04000DB4 RID: 3508
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000DAD RID: 3501
+	// Token: 0x04000DB5 RID: 3509
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000DAE RID: 3502
+	// Token: 0x04000DB6 RID: 3510
 	private static int __PropertyOffset_bIsTick;
 
-	// Token: 0x04000DAF RID: 3503
+	// Token: 0x04000DB7 RID: 3511
 	private static int __PropertyOffset_bUseSocketPosition;
 
-	// Token: 0x04000DB0 RID: 3504
+	// Token: 0x04000DB8 RID: 3512
 	private static int __PropertyOffset_AttachTimeLength;
 
-	// Token: 0x04000DB1 RID: 3505
+	// Token: 0x04000DB9 RID: 3513
 	private static int __PropertyOffset_ActorTag;
 
-	// Token: 0x04000DB2 RID: 3506
+	// Token: 0x04000DBA RID: 3514
 	private static int __PropertyOffset_AttachSocketName;
 
-	// Token: 0x04000DB3 RID: 3507
+	// Token: 0x04000DBB RID: 3515
 	private static int __PropertyOffset_bIsPlayAnimSeq;
 
-	// Token: 0x04000DB4 RID: 3508
+	// Token: 0x04000DBC RID: 3516
 	private static int __PropertyOffset_BatchSocketName;
 
-	// Token: 0x04000DB5 RID: 3509
+	// Token: 0x04000DBD RID: 3517
 	private static int __PropertyOffset_AnimSeq;
 
-	// Token: 0x04000DB6 RID: 3510
+	// Token: 0x04000DBE RID: 3518
 	private static int __PropertyOffset_HighCurve;
 
-	// Token: 0x04000DB7 RID: 3511
+	// Token: 0x04000DBF RID: 3519
 	private FKuroCurveFloat _HighCurve;
 
-	// Token: 0x04000DB8 RID: 3512
+	// Token: 0x04000DC0 RID: 3520
 	private static int __PropertyOffset_MPCObject;
 
-	// Token: 0x04000DB9 RID: 3513
+	// Token: 0x04000DC1 RID: 3521
 	private static int __PropertyOffset_IsAttach;
 
-	// Token: 0x04000DBA RID: 3514
+	// Token: 0x04000DC2 RID: 3522
 	private static int __PropertyOffset_CupActor;
 }

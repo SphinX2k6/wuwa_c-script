@@ -5,12 +5,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060D5 RID: 24789
+	// Token: 0x02005053 RID: 20563
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseRolePanel : SolarSpeedRolePanelBase
 	{
-		// Token: 0x0603EAA1 RID: 256673 RVA: 0x00F22880 File Offset: 0x00F20A80
+		// Token: 0x06033765 RID: 210789 RVA: 0x00E69648 File Offset: 0x00E67848
 		private UniTask InitDescContent()
 		{
 			TowerDefenseRolePanel.<InitDescContent>d__1 <InitDescContent>d__;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return <InitDescContent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EAA2 RID: 256674 RVA: 0x00F228C4 File Offset: 0x00F20AC4
+		// Token: 0x06033766 RID: 210790 RVA: 0x00E6968C File Offset: 0x00E6788C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TowerDefenseRolePanel.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -32,13 +32,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EAA3 RID: 256675 RVA: 0x00F22907 File Offset: 0x00F20B07
+		// Token: 0x06033767 RID: 210791 RVA: 0x00E696CF File Offset: 0x00E678CF
 		protected override void OnRefresh(ISolarSpeedRolePanelData data)
 		{
 			this.DescContent.Refresh((ITowerDefenseRolePanelData)data);
 		}
 
-		// Token: 0x04020C30 RID: 134192
+		// Token: 0x0401B55D RID: 111965
 		private TowerDefenseRoleDescContent DescContent;
 	}
 }

@@ -11,7 +11,7 @@ namespace Aki.Protocol
 	// Token: 0x02000026 RID: 38
 	public sealed class AbyssInstCtx : IMessage<AbyssInstCtx>, IMessage, IEquatable<AbyssInstCtx>, IDeepCloneable<AbyssInstCtx>, IBufferMessage
 	{
-		// Token: 0x0600118E RID: 4494 RVA: 0x00030F6D File Offset: 0x0002F16D
+		// Token: 0x060011B9 RID: 4537 RVA: 0x00031521 File Offset: 0x0002F721
 		[NullableContext(1)]
 		public static AbyssInstCtx Create()
 		{
@@ -19,7 +19,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000097 RID: 151
-		// (get) Token: 0x0600118F RID: 4495 RVA: 0x00030F74 File Offset: 0x0002F174
+		// (get) Token: 0x060011BA RID: 4538 RVA: 0x00031528 File Offset: 0x0002F728
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,7 +31,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000098 RID: 152
-		// (get) Token: 0x06001190 RID: 4496 RVA: 0x00030F77 File Offset: 0x0002F177
+		// (get) Token: 0x060011BB RID: 4539 RVA: 0x0003152B File Offset: 0x0002F72B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001191 RID: 4497 RVA: 0x00030F7E File Offset: 0x0002F17E
+		// Token: 0x060011BC RID: 4540 RVA: 0x00031532 File Offset: 0x0002F732
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssInstCtx()
 		{
 		}
 
-		// Token: 0x06001192 RID: 4498 RVA: 0x00030F91 File Offset: 0x0002F191
+		// Token: 0x060011BD RID: 4541 RVA: 0x00031545 File Offset: 0x0002F745
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssInstCtx(AbyssInstCtx other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06001193 RID: 4499 RVA: 0x00030FBB File Offset: 0x0002F1BB
+		// Token: 0x060011BE RID: 4542 RVA: 0x0003156F File Offset: 0x0002F76F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssInstCtx Clone()
@@ -67,7 +67,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000099 RID: 153
-		// (get) Token: 0x06001194 RID: 4500 RVA: 0x00030FC3 File Offset: 0x0002F1C3
+		// (get) Token: 0x060011BF RID: 4543 RVA: 0x00031577 File Offset: 0x0002F777
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, int> LittleRoleMap
@@ -78,7 +78,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001195 RID: 4501 RVA: 0x00030FCB File Offset: 0x0002F1CB
+		// Token: 0x060011C0 RID: 4544 RVA: 0x0003157F File Offset: 0x0002F77F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -86,7 +86,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AbyssInstCtx);
 		}
 
-		// Token: 0x06001196 RID: 4502 RVA: 0x00030FD9 File Offset: 0x0002F1D9
+		// Token: 0x060011C1 RID: 4545 RVA: 0x0003158D File Offset: 0x0002F78D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AbyssInstCtx other)
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LittleRoleMap.Equals(other.LittleRoleMap) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06001197 RID: 4503 RVA: 0x0003100C File Offset: 0x0002F20C
+		// Token: 0x060011C2 RID: 4546 RVA: 0x000315C0 File Offset: 0x0002F7C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001198 RID: 4504 RVA: 0x00031040 File Offset: 0x0002F240
+		// Token: 0x060011C3 RID: 4547 RVA: 0x000315F4 File Offset: 0x0002F7F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06001199 RID: 4505 RVA: 0x0003104D File Offset: 0x0002F24D
+		// Token: 0x060011C4 RID: 4548 RVA: 0x00031601 File Offset: 0x0002F801
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600119A RID: 4506 RVA: 0x00031056 File Offset: 0x0002F256
+		// Token: 0x060011C5 RID: 4549 RVA: 0x0003160A File Offset: 0x0002F80A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600119B RID: 4507 RVA: 0x00031080 File Offset: 0x0002F280
+		// Token: 0x060011C6 RID: 4550 RVA: 0x00031634 File Offset: 0x0002F834
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600119C RID: 4508 RVA: 0x000310B9 File Offset: 0x0002F2B9
+		// Token: 0x060011C7 RID: 4551 RVA: 0x0003166D File Offset: 0x0002F86D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AbyssInstCtx other)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600119D RID: 4509 RVA: 0x000310E7 File Offset: 0x0002F2E7
+		// Token: 0x060011C8 RID: 4552 RVA: 0x0003169B File Offset: 0x0002F89B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600119E RID: 4510 RVA: 0x000310F0 File Offset: 0x0002F2F0
+		// Token: 0x060011C9 RID: 4553 RVA: 0x000316A4 File Offset: 0x0002F8A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -194,16 +194,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04001F8E RID: 8078
+		// Token: 0x04001FE4 RID: 8164
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04001F8F RID: 8079
+		// Token: 0x04001FE5 RID: 8165
 		public const int LittleRoleMapFieldNumber = 1;
 
-		// Token: 0x04001F90 RID: 8080
+		// Token: 0x04001FE6 RID: 8166
 		private static readonly MapField<int, int>.Codec _map_littleRoleMap_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 10U);
 
-		// Token: 0x04001F91 RID: 8081
+		// Token: 0x04001FE7 RID: 8167
 		private readonly MapField<int, int> littleRoleMap_ = new MapField<int, int>();
 	}
 }

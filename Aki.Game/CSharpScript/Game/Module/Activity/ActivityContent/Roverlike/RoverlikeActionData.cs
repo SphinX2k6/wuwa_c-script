@@ -5,12 +5,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060D8 RID: 24792
+	// Token: 0x02005056 RID: 20566
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeActionData
 	{
-		// Token: 0x0603EAAF RID: 256687 RVA: 0x00F22BD8 File Offset: 0x00F20DD8
+		// Token: 0x06033773 RID: 210803 RVA: 0x00E699A0 File Offset: 0x00E67BA0
 		public unsafe void SetChooseData(RoverRogueChooseData proto)
 		{
 			int bindId = proto.BindId;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			roverlikeChooseData2.SubViewIncId = subViewIncId;
 		}
 
-		// Token: 0x0603EAB0 RID: 256688 RVA: 0x00F22D60 File Offset: 0x00F20F60
+		// Token: 0x06033774 RID: 210804 RVA: 0x00E69B28 File Offset: 0x00E67D28
 		public unsafe void RemoveChooseData(int bindId)
 		{
 			RoverlikeChooseData roverlikeChooseData;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x0603EAB1 RID: 256689 RVA: 0x00F22E4C File Offset: 0x00F2104C
+		// Token: 0x06033775 RID: 210805 RVA: 0x00E69C14 File Offset: 0x00E67E14
 		[NullableContext(2)]
 		public RoverlikeChooseData GetChooseDataByBindId(int bindId)
 		{
@@ -107,13 +107,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return null;
 		}
 
-		// Token: 0x0603EAB2 RID: 256690 RVA: 0x00F22E6C File Offset: 0x00F2106C
+		// Token: 0x06033776 RID: 210806 RVA: 0x00E69C34 File Offset: 0x00E67E34
 		public List<RoverlikeChooseData> GetAllChooseData()
 		{
 			return new List<RoverlikeChooseData>(this.ChooseDataQueue);
 		}
 
-		// Token: 0x0603EAB3 RID: 256691 RVA: 0x00F22E79 File Offset: 0x00F21079
+		// Token: 0x06033777 RID: 210807 RVA: 0x00E69C41 File Offset: 0x00E67E41
 		[NullableContext(2)]
 		public RoverlikeChooseData GetCurrentChooseData()
 		{
@@ -124,14 +124,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return this.ChooseDataQueue[this.ChooseDataQueue.Count - 1];
 		}
 
-		// Token: 0x0603EAB4 RID: 256692 RVA: 0x00F22EA4 File Offset: 0x00F210A4
+		// Token: 0x06033778 RID: 210808 RVA: 0x00E69C6C File Offset: 0x00E67E6C
 		public bool IsCurrentChooseData(int bindId)
 		{
 			RoverlikeChooseData currentChooseData = this.GetCurrentChooseData();
 			return currentChooseData != null && currentChooseData.BindId == bindId;
 		}
 
-		// Token: 0x0603EAB5 RID: 256693 RVA: 0x00F22EC6 File Offset: 0x00F210C6
+		// Token: 0x06033779 RID: 210809 RVA: 0x00E69C8E File Offset: 0x00E67E8E
 		public void Clear()
 		{
 			this.ChooseDataQueue.Clear();
@@ -139,13 +139,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ObtainParamQueue.Clear();
 		}
 
-		// Token: 0x0603EAB6 RID: 256694 RVA: 0x00F22EE9 File Offset: 0x00F210E9
+		// Token: 0x0603377A RID: 210810 RVA: 0x00E69CB1 File Offset: 0x00E67EB1
 		public void PushObtainParam(IRoverlikeGeneralObtainParam param)
 		{
 			this.ObtainParamQueue.Add(param);
 		}
 
-		// Token: 0x0603EAB7 RID: 256695 RVA: 0x00F22EF7 File Offset: 0x00F210F7
+		// Token: 0x0603377B RID: 210811 RVA: 0x00E69CBF File Offset: 0x00E67EBF
 		[NullableContext(2)]
 		public IRoverlikeGeneralObtainParam PopObtainParam()
 		{
@@ -158,19 +158,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return result;
 		}
 
-		// Token: 0x0603EAB8 RID: 256696 RVA: 0x00F22F20 File Offset: 0x00F21120
+		// Token: 0x0603377C RID: 210812 RVA: 0x00E69CE8 File Offset: 0x00E67EE8
 		public bool HasObtainParam()
 		{
 			return this.ObtainParamQueue.Count > 0;
 		}
 
-		// Token: 0x04020C32 RID: 134194
+		// Token: 0x0401B55F RID: 111967
 		private readonly List<RoverlikeChooseData> ChooseDataQueue = new List<RoverlikeChooseData>();
 
-		// Token: 0x04020C33 RID: 134195
+		// Token: 0x0401B560 RID: 111968
 		private readonly Dictionary<int, RoverlikeChooseData> ChooseDataMap = new Dictionary<int, RoverlikeChooseData>();
 
-		// Token: 0x04020C34 RID: 134196
+		// Token: 0x0401B561 RID: 111969
 		private readonly List<IRoverlikeGeneralObtainParam> ObtainParamQueue = new List<IRoverlikeGeneralObtainParam>();
 	}
 }

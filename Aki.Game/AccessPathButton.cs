@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001FC2 RID: 8130
+// Token: 0x02001495 RID: 5269
 public class AccessPathButton : UiPanelBase
 {
-	// Token: 0x0600FE4F RID: 65103 RVA: 0x003DB7EA File Offset: 0x003D99EA
+	// Token: 0x0600D2B7 RID: 53943 RVA: 0x003E7DC6 File Offset: 0x003E5FC6
 	[NullableContext(1)]
 	public AccessPathButton(AActor rootActor, int getWayId)
 	{
@@ -18,7 +18,7 @@ public class AccessPathButton : UiPanelBase
 		base.CreateThenShowByActor(rootActor, null);
 	}
 
-	// Token: 0x0600FE50 RID: 65104 RVA: 0x003DB804 File Offset: 0x003D9A04
+	// Token: 0x0600D2B8 RID: 53944 RVA: 0x003E7DE0 File Offset: 0x003E5FE0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -49,7 +49,7 @@ public class AccessPathButton : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FE51 RID: 65105 RVA: 0x003DB950 File Offset: 0x003D9B50
+	// Token: 0x0600D2B9 RID: 53945 RVA: 0x003E7F2C File Offset: 0x003E612C
 	protected override void OnStart()
 	{
 		AccessPath? accessPathConfig = InventoryConfig.Instance.GetAccessPathConfig(this.GetWayId);
@@ -76,20 +76,20 @@ public class AccessPathButton : UiPanelBase
 		text6.ShowTextNew(description);
 	}
 
-	// Token: 0x0600FE52 RID: 65106 RVA: 0x003DBA06 File Offset: 0x003D9C06
+	// Token: 0x0600D2BA RID: 53946 RVA: 0x003E7FE2 File Offset: 0x003E61E2
 	protected override void OnBeforeDestroy()
 	{
 		this.OnAccessPathButtonClickedCallback = null;
 	}
 
-	// Token: 0x0600FE53 RID: 65107 RVA: 0x003DBA0F File Offset: 0x003D9C0F
+	// Token: 0x0600D2BB RID: 53947 RVA: 0x003E7FEB File Offset: 0x003E61EB
 	[NullableContext(1)]
 	public void BindOnGetWayButtonClickedCallback(Action<int> onAccessPathButtonClickedCallback)
 	{
 		this.OnAccessPathButtonClickedCallback = onAccessPathButtonClickedCallback;
 	}
 
-	// Token: 0x0600FE54 RID: 65108 RVA: 0x003DBA18 File Offset: 0x003D9C18
+	// Token: 0x0600D2BC RID: 53948 RVA: 0x003E7FF4 File Offset: 0x003E61F4
 	private void OnGetWayButtonClicked()
 	{
 		if (this.OnAccessPathButtonClickedCallback != null)
@@ -98,29 +98,29 @@ public class AccessPathButton : UiPanelBase
 		}
 	}
 
-	// Token: 0x040075AC RID: 30124
+	// Token: 0x04007695 RID: 30357
 	[Nullable(2)]
 	private Action<int> OnAccessPathButtonClickedCallback;
 
-	// Token: 0x040075AD RID: 30125
+	// Token: 0x04007696 RID: 30358
 	private readonly int GetWayId;
 
-	// Token: 0x020085D3 RID: 34259
+	// Token: 0x0200775A RID: 30554
 	private enum EChildComponentType
 	{
-		// Token: 0x0402B8ED RID: 178413
+		// Token: 0x04026BFC RID: 158716
 		Text1,
-		// Token: 0x0402B8EE RID: 178414
+		// Token: 0x04026BFD RID: 158717
 		Text2,
-		// Token: 0x0402B8EF RID: 178415
+		// Token: 0x04026BFE RID: 158718
 		Text3,
-		// Token: 0x0402B8F0 RID: 178416
+		// Token: 0x04026BFF RID: 158719
 		Text4,
-		// Token: 0x0402B8F1 RID: 178417
+		// Token: 0x04026C00 RID: 158720
 		Text5,
-		// Token: 0x0402B8F2 RID: 178418
+		// Token: 0x04026C01 RID: 158721
 		Text6,
-		// Token: 0x0402B8F3 RID: 178419
+		// Token: 0x04026C02 RID: 158722
 		Button
 	}
 }

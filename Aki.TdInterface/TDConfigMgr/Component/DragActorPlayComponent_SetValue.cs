@@ -8,25 +8,24 @@ namespace Aki.TDConfigMgr.Component
 	// Token: 0x02000057 RID: 87
 	public class DragActorPlayComponent_SetValue
 	{
-		// Token: 0x040001DF RID: 479
+		// Token: 0x040001E4 RID: 484
 		public bool? Disabled;
 
-		// Token: 0x040001E0 RID: 480
+		// Token: 0x040001E5 RID: 485
 		public bool? EdIsLocked;
 
-		// Token: 0x040001E1 RID: 481
-		[Nullable(1)]
+		// Token: 0x040001E6 RID: 486
 		public List<IDragActorPlayConfig> Configs;
 
-		// Token: 0x040001E2 RID: 482
+		// Token: 0x040001E7 RID: 487
 		[Nullable(2)]
 		public string ExitSendSelfEvent;
 
-		// Token: 0x040001E3 RID: 483
+		// Token: 0x040001E8 RID: 488
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IActorRef> EdSequenceActorRefs;
 	}

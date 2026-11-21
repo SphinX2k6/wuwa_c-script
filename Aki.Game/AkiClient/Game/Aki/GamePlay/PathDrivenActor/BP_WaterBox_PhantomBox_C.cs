@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.GamePlay.PathDrivenActor
 {
-	// Token: 0x02003E5F RID: 15967
+	// Token: 0x0200314F RID: 12623
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/GamePlay/PathDrivenActor/BP_WaterBox_PhantomBox.BP_WaterBox_PhantomBox_C")]
 	[UnrealStructLayout(1616, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1616)]
 	public class BP_WaterBox_PhantomBox_C : AKuroGameBudgetBlueprintActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06028252 RID: 164434 RVA: 0x009A52EF File Offset: 0x009A34EF
+		// Token: 0x0601F0C8 RID: 127176 RVA: 0x0092520B File Offset: 0x0092340B
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_WaterBox_PhantomBox_C._ClassPtr == IntPtr.Zero)
@@ -24,162 +24,162 @@ namespace AkiClient.Game.Aki.GamePlay.PathDrivenActor
 			return BP_WaterBox_PhantomBox_C._ClassPtr;
 		}
 
-		// Token: 0x06028253 RID: 164435 RVA: 0x009A5314 File Offset: 0x009A3514
+		// Token: 0x0601F0C9 RID: 127177 RVA: 0x00925230 File Offset: 0x00923430
 		public BP_WaterBox_PhantomBox_C() : this(BuiltinUtils.AllocNativeUObject(BP_WaterBox_PhantomBox_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06028254 RID: 164436 RVA: 0x009A533C File Offset: 0x009A353C
+		// Token: 0x0601F0CA RID: 127178 RVA: 0x00925258 File Offset: 0x00923458
 		[NullableContext(1)]
 		public BP_WaterBox_PhantomBox_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_WaterBox_PhantomBox_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005BEE RID: 23534
-		// (get) Token: 0x06028255 RID: 164437 RVA: 0x009A536F File Offset: 0x009A356F
-		// (set) Token: 0x06028256 RID: 164438 RVA: 0x009A5383 File Offset: 0x009A3583
+		// Token: 0x1700370B RID: 14091
+		// (get) Token: 0x0601F0CB RID: 127179 RVA: 0x0092528B File Offset: 0x0092348B
+		// (set) Token: 0x0601F0CC RID: 127180 RVA: 0x0092529F File Offset: 0x0092349F
 		public unsafe UKuroFastCollisionShapeComponent KuroFastCollisionShape
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroFastCollisionShapeComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_0);
+				return BuiltinUtils.ObjectPropertyGetter<UKuroFastCollisionShapeComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_KuroFastCollisionShape);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_0, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_KuroFastCollisionShape, value);
 			}
 		}
 
-		// Token: 0x17005BEF RID: 23535
-		// (get) Token: 0x06028257 RID: 164439 RVA: 0x009A5398 File Offset: 0x009A3598
-		// (set) Token: 0x06028258 RID: 164440 RVA: 0x009A53AC File Offset: 0x009A35AC
+		// Token: 0x1700370C RID: 14092
+		// (get) Token: 0x0601F0CD RID: 127181 RVA: 0x009252B4 File Offset: 0x009234B4
+		// (set) Token: 0x0601F0CE RID: 127182 RVA: 0x009252C8 File Offset: 0x009234C8
 		public unsafe UBoxComponent Trigger
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UBoxComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UBoxComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_Trigger);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_Trigger, value);
 			}
 		}
 
-		// Token: 0x17005BF0 RID: 23536
-		// (get) Token: 0x06028259 RID: 164441 RVA: 0x009A53C1 File Offset: 0x009A35C1
-		// (set) Token: 0x0602825A RID: 164442 RVA: 0x009A53D5 File Offset: 0x009A35D5
+		// Token: 0x1700370D RID: 14093
+		// (get) Token: 0x0601F0CF RID: 127183 RVA: 0x009252DD File Offset: 0x009234DD
+		// (set) Token: 0x0601F0D0 RID: 127184 RVA: 0x009252F1 File Offset: 0x009234F1
 		public unsafe UStaticMeshComponent MeshComp
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_MeshComp);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_MeshComp, value);
 			}
 		}
 
-		// Token: 0x17005BF1 RID: 23537
-		// (get) Token: 0x0602825B RID: 164443 RVA: 0x009A53EA File Offset: 0x009A35EA
-		// (set) Token: 0x0602825C RID: 164444 RVA: 0x009A53FE File Offset: 0x009A35FE
+		// Token: 0x1700370E RID: 14094
+		// (get) Token: 0x0601F0D1 RID: 127185 RVA: 0x00925306 File Offset: 0x00923506
+		// (set) Token: 0x0601F0D2 RID: 127186 RVA: 0x0092531A File Offset: 0x0092351A
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WaterBox_PhantomBox_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17005BF2 RID: 23538
-		// (get) Token: 0x0602825D RID: 164445 RVA: 0x009A5413 File Offset: 0x009A3613
-		// (set) Token: 0x0602825E RID: 164446 RVA: 0x009A5428 File Offset: 0x009A3628
+		// Token: 0x1700370F RID: 14095
+		// (get) Token: 0x0601F0D3 RID: 127187 RVA: 0x0092532F File Offset: 0x0092352F
+		// (set) Token: 0x0601F0D4 RID: 127188 RVA: 0x00925344 File Offset: 0x00923544
 		[Nullable(1)]
 		public TSoftObjectPtr<UEffectModelGroup> TrailEffectAsset
 		{
 			[NullableContext(1)]
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_WaterBox_PhantomBox_C.__PropertyOffset_4, this);
+				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_WaterBox_PhantomBox_C.__PropertyOffset_TrailEffectAsset, this);
 			}
 			[NullableContext(1)]
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_WaterBox_PhantomBox_C.__PropertyOffset_4, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_WaterBox_PhantomBox_C.__PropertyOffset_TrailEffectAsset, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005BF3 RID: 23539
-		// (get) Token: 0x0602825F RID: 164447 RVA: 0x009A544D File Offset: 0x009A364D
-		// (set) Token: 0x06028260 RID: 164448 RVA: 0x009A5462 File Offset: 0x009A3662
+		// Token: 0x17003710 RID: 14096
+		// (get) Token: 0x0601F0D5 RID: 127189 RVA: 0x00925369 File Offset: 0x00923569
+		// (set) Token: 0x0601F0D6 RID: 127190 RVA: 0x0092537E File Offset: 0x0092357E
 		[Nullable(1)]
 		public TSoftObjectPtr<ItemMaterialControllerActorData> StagnationMaterialDataAsset
 		{
 			[NullableContext(1)]
 			get
 			{
-				return new TSoftObjectPtr<ItemMaterialControllerActorData>(base.NativePtr + (IntPtr)BP_WaterBox_PhantomBox_C.__PropertyOffset_5, this);
+				return new TSoftObjectPtr<ItemMaterialControllerActorData>(base.NativePtr + (IntPtr)BP_WaterBox_PhantomBox_C.__PropertyOffset_StagnationMaterialDataAsset, this);
 			}
 			[NullableContext(1)]
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_WaterBox_PhantomBox_C.__PropertyOffset_5, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_WaterBox_PhantomBox_C.__PropertyOffset_StagnationMaterialDataAsset, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005BF4 RID: 23540
-		// (get) Token: 0x06028261 RID: 164449 RVA: 0x009A5487 File Offset: 0x009A3687
-		// (set) Token: 0x06028262 RID: 164450 RVA: 0x009A549B File Offset: 0x009A369B
+		// Token: 0x17003711 RID: 14097
+		// (get) Token: 0x0601F0D7 RID: 127191 RVA: 0x009253A3 File Offset: 0x009235A3
+		// (set) Token: 0x0601F0D8 RID: 127192 RVA: 0x009253B7 File Offset: 0x009235B7
 		public unsafe FTransformDouble TrailEffectRelativeTransform
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_WaterBox_PhantomBox_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_WaterBox_PhantomBox_C.__PropertyOffset_TrailEffectRelativeTransform);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_WaterBox_PhantomBox_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_WaterBox_PhantomBox_C.__PropertyOffset_TrailEffectRelativeTransform) = value;
 			}
 		}
 
-		// Token: 0x06028263 RID: 164451 RVA: 0x009A54B0 File Offset: 0x009A36B0
+		// Token: 0x0601F0D9 RID: 127193 RVA: 0x009253CC File Offset: 0x009235CC
 		protected BP_WaterBox_PhantomBox_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040146EC RID: 83692
+		// Token: 0x04010966 RID: 67942
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/GamePlay/PathDrivenActor/BP_WaterBox_PhantomBox.BP_WaterBox_PhantomBox_C";
 
-		// Token: 0x040146ED RID: 83693
+		// Token: 0x04010967 RID: 67943
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040146EE RID: 83694
+		// Token: 0x04010968 RID: 67944
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040146EF RID: 83695
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010969 RID: 67945
+		internal static int __PropertyOffset_KuroFastCollisionShape;
 
-		// Token: 0x040146F0 RID: 83696
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401096A RID: 67946
+		internal static int __PropertyOffset_Trigger;
 
-		// Token: 0x040146F1 RID: 83697
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401096B RID: 67947
+		internal static int __PropertyOffset_MeshComp;
 
-		// Token: 0x040146F2 RID: 83698
-		internal static int __PropertyOffset_3;
+		// Token: 0x0401096C RID: 67948
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x040146F3 RID: 83699
-		internal static int __PropertyOffset_4;
+		// Token: 0x0401096D RID: 67949
+		internal static int __PropertyOffset_TrailEffectAsset;
 
-		// Token: 0x040146F4 RID: 83700
-		internal static int __PropertyOffset_5;
+		// Token: 0x0401096E RID: 67950
+		internal static int __PropertyOffset_StagnationMaterialDataAsset;
 
-		// Token: 0x040146F5 RID: 83701
-		internal static int __PropertyOffset_6;
+		// Token: 0x0401096F RID: 67951
+		internal static int __PropertyOffset_TrailEffectRelativeTransform;
 	}
 }

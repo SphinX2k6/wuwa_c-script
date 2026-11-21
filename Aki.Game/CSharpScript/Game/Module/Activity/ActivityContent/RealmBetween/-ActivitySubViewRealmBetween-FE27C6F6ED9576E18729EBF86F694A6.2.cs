@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x0200626F RID: 25199
+	// Token: 0x020051ED RID: 20973
 	internal enum <ActivitySubViewRealmBetween>FE27C6F6ED9576E18729EBF86F694A605B3B727F99FE54F01CCA2646FCD4631EE__EExpComponents
 	{
-		// Token: 0x04021256 RID: 135766
+		// Token: 0x0401BB85 RID: 113541
 		TxtLevel,
-		// Token: 0x04021257 RID: 135767
+		// Token: 0x0401BB86 RID: 113542
 		ExpRing,
-		// Token: 0x04021258 RID: 135768
+		// Token: 0x0401BB87 RID: 113543
 		ExpProgress,
-		// Token: 0x04021259 RID: 135769
+		// Token: 0x0401BB88 RID: 113544
 		TxtTitle
 	}
 }

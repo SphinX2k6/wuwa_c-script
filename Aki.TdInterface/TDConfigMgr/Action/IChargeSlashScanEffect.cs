@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200188C RID: 6284
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A17 RID: 6679
 	public class IChargeSlashScanEffect : ISpecificScanEffect
 	{
-		// Token: 0x060086F5 RID: 34549 RVA: 0x00140390 File Offset: 0x0013E590
+		// Token: 0x06008E1D RID: 36381 RVA: 0x0014FBC4 File Offset: 0x0014DDC4
 		private IChargeSlashScanEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060086F6 RID: 34550 RVA: 0x001403C8 File Offset: 0x0013E5C8
+		// Token: 0x06008E1E RID: 36382 RVA: 0x0014FBFC File Offset: 0x0014DDFC
 		public static IChargeSlashScanEffect Create([Nullable(2)] IChargeSlashScanEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060086F7 RID: 34551 RVA: 0x001403DB File Offset: 0x0013E5DB
+		// Token: 0x06008E1F RID: 36383 RVA: 0x0014FC0F File Offset: 0x0014DE0F
 		public static IChargeSlashScanEffect CreateFromSetValue([Nullable(2)] IChargeSlashScanEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060086F8 RID: 34552 RVA: 0x001403EE File Offset: 0x0013E5EE
+		// Token: 0x06008E20 RID: 36384 RVA: 0x0014FC22 File Offset: 0x0014DE22
 		public new IChargeSlashScanEffect_SetValue ToSetValue()
 		{
 			return new IChargeSlashScanEffect_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002BFD RID: 11261
-		// (get) Token: 0x060086F9 RID: 34553 RVA: 0x0014040D File Offset: 0x0013E60D
-		// (set) Token: 0x060086FA RID: 34554 RVA: 0x00140438 File Offset: 0x0013E638
+		// Token: 0x17002DF8 RID: 11768
+		// (get) Token: 0x06008E21 RID: 36385 RVA: 0x0014FC41 File Offset: 0x0014DE41
+		// (set) Token: 0x06008E22 RID: 36386 RVA: 0x0014FC6C File Offset: 0x0014DE6C
 		public override ESpecificScanType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BFE RID: 11262
-		// (get) Token: 0x060086FB RID: 34555 RVA: 0x00140446 File Offset: 0x0013E646
-		// (set) Token: 0x060086FC RID: 34556 RVA: 0x00140471 File Offset: 0x0013E671
+		// Token: 0x17002DF9 RID: 11769
+		// (get) Token: 0x06008E23 RID: 36387 RVA: 0x0014FC7A File Offset: 0x0014DE7A
+		// (set) Token: 0x06008E24 RID: 36388 RVA: 0x0014FCA5 File Offset: 0x0014DEA5
 		public virtual int TriggerPosEntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005504 RID: 21764
+		// Token: 0x04005951 RID: 22865
 		[Nullable(2)]
 		protected new IChargeSlashScanEffect FbInstance;
 
-		// Token: 0x04005505 RID: 21765
+		// Token: 0x04005952 RID: 22866
 		[Nullable(2)]
 		protected new IChargeSlashScanEffect_SetValue PocoInterface;
 	}

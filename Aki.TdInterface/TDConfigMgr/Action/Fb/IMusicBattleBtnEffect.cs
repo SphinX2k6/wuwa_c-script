@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AB2 RID: 10930
+	// Token: 0x02002DA6 RID: 11686
 	public class IMusicBattleBtnEffect : ISkillBtnEffectBase
 	{
-		// Token: 0x0600EFEE RID: 61422 RVA: 0x0022DC7C File Offset: 0x0022BE7C
-		[NullableContext(1)]
+		// Token: 0x0600FEA4 RID: 65188 RVA: 0x0024B988 File Offset: 0x00249B88
 		public static IMusicBattleBtnEffect Create(IMusicBattleBtnEffect? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C4C RID: 19532
-		// (get) Token: 0x0600EFEF RID: 61423 RVA: 0x0022DC9B File Offset: 0x0022BE9B
+		// Token: 0x17005006 RID: 20486
+		// (get) Token: 0x0600FEA5 RID: 65189 RVA: 0x0024B9A7 File Offset: 0x00249BA7
 		public override ESkillBtnEffectType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083FE RID: 33790
+		// Token: 0x04008B02 RID: 35586
 		private IMusicBattleBtnEffect Instance;
 	}
 }

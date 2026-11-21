@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A98 RID: 27288
+	// Token: 0x020071BD RID: 29117
 	public class IMechStuntHighSpeedT
 	{
-		// Token: 0x1700CA8E RID: 51854
-		// (get) Token: 0x0602FD26 RID: 195878 RVA: 0x00681ADE File Offset: 0x0067FCDE
-		// (set) Token: 0x0602FD27 RID: 195879 RVA: 0x00681AE6 File Offset: 0x0067FCE6
+		// Token: 0x1700D53E RID: 54590
+		// (get) Token: 0x06032A62 RID: 207458 RVA: 0x006D7D9E File Offset: 0x006D5F9E
+		// (set) Token: 0x06032A63 RID: 207459 RVA: 0x006D7DA6 File Offset: 0x006D5FA6
 		public EMechStuntType Type { get; set; }
 
-		// Token: 0x0602FD28 RID: 195880 RVA: 0x00681AEF File Offset: 0x0067FCEF
+		// Token: 0x06032A64 RID: 207460 RVA: 0x006D7DAF File Offset: 0x006D5FAF
 		public IMechStuntHighSpeedT()
 		{
 			this.Type = EMechStuntType.Dive;

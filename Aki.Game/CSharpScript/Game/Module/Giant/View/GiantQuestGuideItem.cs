@@ -9,14 +9,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Giant.View
 {
-	// Token: 0x0200598C RID: 22924
+	// Token: 0x02004965 RID: 18789
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GiantQuestGuideItem : UiPanelBase, IGridProxy<IGiantQuestGuideData>
 	{
-		// Token: 0x17008B6F RID: 35695
-		// (get) Token: 0x0603A2B3 RID: 238259 RVA: 0x00DD395A File Offset: 0x00DD1B5A
-		// (set) Token: 0x0603A2B4 RID: 238260 RVA: 0x00DD3962 File Offset: 0x00DD1B62
+		// Token: 0x17005F3C RID: 24380
+		// (get) Token: 0x0602F1D9 RID: 192985 RVA: 0x00D22DEA File Offset: 0x00D20FEA
+		// (set) Token: 0x0602F1DA RID: 192986 RVA: 0x00D22DF2 File Offset: 0x00D20FF2
 		[Nullable(new byte[]
 		{
 			2,
@@ -38,17 +38,17 @@ namespace CSharpScript.Game.Module.Giant.View
 			1
 		})] set; }
 
-		// Token: 0x17008B70 RID: 35696
-		// (get) Token: 0x0603A2B5 RID: 238261 RVA: 0x00DD396B File Offset: 0x00DD1B6B
-		// (set) Token: 0x0603A2B6 RID: 238262 RVA: 0x00DD3973 File Offset: 0x00DD1B73
+		// Token: 0x17005F3D RID: 24381
+		// (get) Token: 0x0602F1DB RID: 192987 RVA: 0x00D22DFB File Offset: 0x00D20FFB
+		// (set) Token: 0x0602F1DC RID: 192988 RVA: 0x00D22E03 File Offset: 0x00D21003
 		public int GridIndex { get; set; }
 
-		// Token: 0x17008B71 RID: 35697
-		// (get) Token: 0x0603A2B7 RID: 238263 RVA: 0x00DD397C File Offset: 0x00DD1B7C
-		// (set) Token: 0x0603A2B8 RID: 238264 RVA: 0x00DD3984 File Offset: 0x00DD1B84
+		// Token: 0x17005F3E RID: 24382
+		// (get) Token: 0x0602F1DD RID: 192989 RVA: 0x00D22E0C File Offset: 0x00D2100C
+		// (set) Token: 0x0602F1DE RID: 192990 RVA: 0x00D22E14 File Offset: 0x00D21014
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x0603A2B9 RID: 238265 RVA: 0x00DD3990 File Offset: 0x00DD1B90
+		// Token: 0x0602F1DF RID: 192991 RVA: 0x00D22E20 File Offset: 0x00D21020
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A2BA RID: 238266 RVA: 0x00DD3AFC File Offset: 0x00DD1CFC
+		// Token: 0x0602F1E0 RID: 192992 RVA: 0x00D22F8C File Offset: 0x00D2118C
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			}
 		}
 
-		// Token: 0x0603A2BB RID: 238267 RVA: 0x00DD3BC4 File Offset: 0x00DD1DC4
+		// Token: 0x0602F1E1 RID: 192993 RVA: 0x00D23054 File Offset: 0x00D21254
 		public void Refresh(IGiantQuestGuideData data, bool isSelected, int gridIndex)
 		{
 			this.CurrentData = data;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			this.RefreshState(data);
 		}
 
-		// Token: 0x0603A2BC RID: 238268 RVA: 0x00DD3C44 File Offset: 0x00DD1E44
+		// Token: 0x0602F1E2 RID: 192994 RVA: 0x00D230D4 File Offset: 0x00D212D4
 		private void RefreshIcons(List<IGiantQuestGuideItemInfo> items)
 		{
 			if (this.IconLayout == null)
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			this.IconLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603A2BD RID: 238269 RVA: 0x00DD3CC8 File Offset: 0x00DD1EC8
+		// Token: 0x0602F1E3 RID: 192995 RVA: 0x00D23158 File Offset: 0x00D21358
 		private void RefreshState(IGiantQuestGuideData data)
 		{
 			bool flag = data.State == EGiantQuestGuideState.Locked;
@@ -196,12 +196,12 @@ namespace CSharpScript.Game.Module.Giant.View
 			item2.SetUIActive(data.HasNew);
 		}
 
-		// Token: 0x0603A2BE RID: 238270 RVA: 0x00DD3D99 File Offset: 0x00DD1F99
+		// Token: 0x0602F1E4 RID: 192996 RVA: 0x00D23229 File Offset: 0x00D21429
 		public void Clear()
 		{
 		}
 
-		// Token: 0x0603A2BF RID: 238271 RVA: 0x00DD3D9B File Offset: 0x00DD1F9B
+		// Token: 0x0602F1E5 RID: 192997 RVA: 0x00D2322B File Offset: 0x00D2142B
 		protected override void OnBeforeDestroy()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -212,23 +212,23 @@ namespace CSharpScript.Game.Module.Giant.View
 			extendToggle.OnHover.Remove(new Action(this.OnPointEnter));
 		}
 
-		// Token: 0x0603A2C0 RID: 238272 RVA: 0x00DD3DBF File Offset: 0x00DD1FBF
+		// Token: 0x0602F1E6 RID: 192998 RVA: 0x00D2324F File Offset: 0x00D2144F
 		public void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0603A2C1 RID: 238273 RVA: 0x00DD3DC1 File Offset: 0x00DD1FC1
+		// Token: 0x0602F1E7 RID: 192999 RVA: 0x00D23251 File Offset: 0x00D21451
 		public void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0603A2C2 RID: 238274 RVA: 0x00DD3DC3 File Offset: 0x00DD1FC3
+		// Token: 0x0602F1E8 RID: 193000 RVA: 0x00D23253 File Offset: 0x00D21453
 		public object GetKey(IGiantQuestGuideData data, int gridIndex)
 		{
 			return data.AccessId;
 		}
 
-		// Token: 0x0603A2C3 RID: 238275 RVA: 0x00DD3DD0 File Offset: 0x00DD1FD0
+		// Token: 0x0602F1E9 RID: 193001 RVA: 0x00D23260 File Offset: 0x00D21460
 		private void OnPointEnter()
 		{
 			Action<int> onHoverCallBack = this.OnHoverCallBack;
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			onHoverCallBack(this.GridIndex);
 		}
 
-		// Token: 0x0603A2C4 RID: 238276 RVA: 0x00DD3DE8 File Offset: 0x00DD1FE8
+		// Token: 0x0602F1EA RID: 193002 RVA: 0x00D23278 File Offset: 0x00D21478
 		private void OnClickGoto()
 		{
 			if (this.CurrentData != null)
@@ -248,15 +248,15 @@ namespace CSharpScript.Game.Module.Giant.View
 			}
 		}
 
-		// Token: 0x0401E596 RID: 124310
+		// Token: 0x04019034 RID: 102452
 		[Nullable(2)]
 		private IGiantQuestGuideData CurrentData;
 
-		// Token: 0x0401E597 RID: 124311
+		// Token: 0x04019035 RID: 102453
 		[Nullable(2)]
 		public Action<int> OnHoverCallBack;
 
-		// Token: 0x0401E598 RID: 124312
+		// Token: 0x04019036 RID: 102454
 		[Nullable(new byte[]
 		{
 			2,

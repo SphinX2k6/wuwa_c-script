@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200069D RID: 1693
+	// Token: 0x0200073E RID: 1854
 	public class ISceneItemAiPatrolByGameTime_SetValue
 	{
-		// Token: 0x040018ED RID: 6381
+		// Token: 0x04001AEA RID: 6890
 		public ESceneItemAiPatrolType Type;
 
-		// Token: 0x040018EE RID: 6382
+		// Token: 0x04001AEB RID: 6891
 		public int Spline;
 	}
 }

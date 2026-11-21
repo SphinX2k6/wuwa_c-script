@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A24 RID: 2596
+	// Token: 0x02000AE9 RID: 2793
 	public static class ESunSpiritGearPerformTypeExtensions
 	{
-		// Token: 0x06003953 RID: 14675 RVA: 0x000941E4 File Offset: 0x000923E4
+		// Token: 0x06003D2B RID: 15659 RVA: 0x0009CB18 File Offset: 0x0009AD18
 		public static string ToEnumString(this ESunSpiritGearPerformType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003954 RID: 14676 RVA: 0x0009421C File Offset: 0x0009241C
+		// Token: 0x06003D2C RID: 15660 RVA: 0x0009CB50 File Offset: 0x0009AD50
 		public static ESunSpiritGearPerformType FromString(string name)
 		{
 			ESunSpiritGearPerformType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003955 RID: 14677 RVA: 0x00094245 File Offset: 0x00092445
+		// Token: 0x06003D2D RID: 15661 RVA: 0x0009CB79 File Offset: 0x0009AD79
 		public static bool TryFromString(string name, out ESunSpiritGearPerformType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003956 RID: 14678 RVA: 0x0009427E File Offset: 0x0009247E
+		// Token: 0x06003D2E RID: 15662 RVA: 0x0009CBB2 File Offset: 0x0009ADB2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003957 RID: 14679 RVA: 0x00094296 File Offset: 0x00092496
+		// Token: 0x06003D2F RID: 15663 RVA: 0x0009CBCA File Offset: 0x0009ADCA
 		public static ESunSpiritGearPerformType[] GetValues()
 		{
 			return new ESunSpiritGearPerformType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003958 RID: 14680 RVA: 0x000942A2 File Offset: 0x000924A2
+		// Token: 0x06003D30 RID: 15664 RVA: 0x0009CBD6 File Offset: 0x0009ADD6
 		public static string[] GetNames()
 		{
 			return new string[]

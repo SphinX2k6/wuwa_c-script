@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Input;
 
-// Token: 0x020017C3 RID: 6083
+// Token: 0x02000C7C RID: 3196
 public class ComboTeachingDefine : IStaticVariableResetter
 {
-	// Token: 0x0600B1C1 RID: 45505 RVA: 0x00283301 File Offset: 0x00281501
+	// Token: 0x060085A9 RID: 34217 RVA: 0x0028D8A8 File Offset: 0x0028BAA8
 	static ComboTeachingDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ComboTeachingDefine.CreateStaticDefaultValue), new Action(ComboTeachingDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600B1C2 RID: 45506 RVA: 0x00283320 File Offset: 0x00281520
+	// Token: 0x060085AA RID: 34218 RVA: 0x0028D8C8 File Offset: 0x0028BAC8
 	public static void CreateStaticDefaultValue()
 	{
 		Dictionary<string, List<string>> dictionary = new Dictionary<string, List<string>>();
@@ -83,14 +83,14 @@ public class ComboTeachingDefine : IStaticVariableResetter
 		ComboTeachingDefine.inputActionMap = dictionary2;
 	}
 
-	// Token: 0x0600B1C3 RID: 45507 RVA: 0x0028355F File Offset: 0x0028175F
+	// Token: 0x060085AB RID: 34219 RVA: 0x0028DB07 File Offset: 0x0028BD07
 	public static void ResetStaticDefaultValue()
 	{
 		ComboTeachingDefine.banKeyMap = null;
 		ComboTeachingDefine.inputActionMap = null;
 	}
 
-	// Token: 0x0400508D RID: 20621
+	// Token: 0x04005137 RID: 20791
 	[Nullable(new byte[]
 	{
 		2,
@@ -100,7 +100,7 @@ public class ComboTeachingDefine : IStaticVariableResetter
 	})]
 	public static Dictionary<string, List<string>> banKeyMap;
 
-	// Token: 0x0400508E RID: 20622
+	// Token: 0x04005138 RID: 20792
 	[Nullable(new byte[]
 	{
 		2,

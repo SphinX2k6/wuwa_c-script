@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001429 RID: 5161
+	// Token: 0x02001581 RID: 5505
 	public class IWarningPreformType
 	{
-		// Token: 0x06007569 RID: 30057 RVA: 0x0011878A File Offset: 0x0011698A
-		[NullableContext(1)]
+		// Token: 0x06007C2E RID: 31790 RVA: 0x001271D6 File Offset: 0x001253D6
 		public static IWarningPreformType Create(IWarningPreformType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170026EA RID: 9962
-		// (get) Token: 0x0600756A RID: 30058 RVA: 0x001187A9 File Offset: 0x001169A9
+		// Token: 0x170028CE RID: 10446
+		// (get) Token: 0x06007C2F RID: 31791 RVA: 0x001271F5 File Offset: 0x001253F5
 		public virtual EWarningPreformType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004403 RID: 17411
+		// Token: 0x04004797 RID: 18327
 		private IWarningPreformType Instance;
 	}
 }

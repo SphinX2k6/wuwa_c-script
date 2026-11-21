@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200508B RID: 20619
+	// Token: 0x020055F0 RID: 22000
 	public class IDirectionalFieldT
 	{
-		// Token: 0x170095BC RID: 38332
-		// (get) Token: 0x06021177 RID: 135543 RVA: 0x0049938B File Offset: 0x0049758B
-		// (set) Token: 0x06021178 RID: 135544 RVA: 0x00499393 File Offset: 0x00497593
+		// Token: 0x17009DA9 RID: 40361
+		// (get) Token: 0x060230CB RID: 143563 RVA: 0x004D3317 File Offset: 0x004D1517
+		// (set) Token: 0x060230CC RID: 143564 RVA: 0x004D331F File Offset: 0x004D151F
 		public EConveyorBeltFieldType Type { get; set; }
 
-		// Token: 0x170095BD RID: 38333
-		// (get) Token: 0x06021179 RID: 135545 RVA: 0x0049939C File Offset: 0x0049759C
-		// (set) Token: 0x0602117A RID: 135546 RVA: 0x004993A4 File Offset: 0x004975A4
+		// Token: 0x17009DAA RID: 40362
+		// (get) Token: 0x060230CD RID: 143565 RVA: 0x004D3328 File Offset: 0x004D1528
+		// (set) Token: 0x060230CE RID: 143566 RVA: 0x004D3330 File Offset: 0x004D1530
 		public IVectorInfoT Direction { get; set; }
 
-		// Token: 0x0602117B RID: 135547 RVA: 0x004993AD File Offset: 0x004975AD
+		// Token: 0x060230CF RID: 143567 RVA: 0x004D3339 File Offset: 0x004D1539
 		public IDirectionalFieldT()
 		{
 			this.Type = EConveyorBeltFieldType.DirectionalField;

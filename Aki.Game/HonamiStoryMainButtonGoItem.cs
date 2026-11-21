@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EDA RID: 7898
+// Token: 0x0200139C RID: 5020
 public class HonamiStoryMainButtonGoItem : UiPanelBase
 {
-	// Token: 0x0600F307 RID: 62215 RVA: 0x003A93DC File Offset: 0x003A75DC
+	// Token: 0x0600C726 RID: 50982 RVA: 0x003B4ED8 File Offset: 0x003B30D8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -35,7 +35,7 @@ public class HonamiStoryMainButtonGoItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F308 RID: 62216 RVA: 0x003A94E8 File Offset: 0x003A76E8
+	// Token: 0x0600C727 RID: 50983 RVA: 0x003B4FE4 File Offset: 0x003B31E4
 	public void RefreshButtonState()
 	{
 		bool flag = FunctionModel.Instance.IsOpen(10112);
@@ -51,14 +51,14 @@ public class HonamiStoryMainButtonGoItem : UiPanelBase
 		base.GetItem(2).SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600F309 RID: 62217 RVA: 0x003A9553 File Offset: 0x003A7753
+	// Token: 0x0600C728 RID: 50984 RVA: 0x003B504F File Offset: 0x003B324F
 	[NullableContext(1)]
 	public void SetOnBtnEnterCallback(Action callback)
 	{
 		this.OnBtnEnterCallback = callback;
 	}
 
-	// Token: 0x0600F30A RID: 62218 RVA: 0x003A955C File Offset: 0x003A775C
+	// Token: 0x0600C729 RID: 50985 RVA: 0x003B5058 File Offset: 0x003B3258
 	private void OnBtnEnter()
 	{
 		Action onBtnEnterCallback = this.OnBtnEnterCallback;
@@ -69,7 +69,7 @@ public class HonamiStoryMainButtonGoItem : UiPanelBase
 		onBtnEnterCallback();
 	}
 
-	// Token: 0x04007093 RID: 28819
+	// Token: 0x04007174 RID: 29044
 	[Nullable(2)]
 	private Action OnBtnEnterCallback;
 }

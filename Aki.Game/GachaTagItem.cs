@@ -7,7 +7,7 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001C8A RID: 7306
+// Token: 0x02001149 RID: 4425
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -16,8 +16,8 @@ using UnrealEngine;
 })]
 public class GachaTagItem : GridProxyAbstract<GachaPoolData>
 {
-	// Token: 0x170011EB RID: 4587
-	// (get) Token: 0x0600DC78 RID: 56440 RVA: 0x00336C21 File Offset: 0x00334E21
+	// Token: 0x17001211 RID: 4625
+	// (get) Token: 0x0600B08E RID: 45198 RVA: 0x00342145 File Offset: 0x00340345
 	public int GachaId
 	{
 		get
@@ -26,7 +26,7 @@ public class GachaTagItem : GridProxyAbstract<GachaPoolData>
 		}
 	}
 
-	// Token: 0x0600DC79 RID: 56441 RVA: 0x00336C34 File Offset: 0x00334E34
+	// Token: 0x0600B08F RID: 45199 RVA: 0x00342158 File Offset: 0x00340358
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -57,13 +57,13 @@ public class GachaTagItem : GridProxyAbstract<GachaPoolData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600DC7A RID: 56442 RVA: 0x00336D7F File Offset: 0x00334F7F
+	// Token: 0x0600B090 RID: 45200 RVA: 0x003422A3 File Offset: 0x003404A3
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(3).CanExecuteChange.Bind(() => this.CanExecuteChange == null || this.CanExecuteChange(base.GridIndex));
 	}
 
-	// Token: 0x0600DC7B RID: 56443 RVA: 0x00336D9E File Offset: 0x00334F9E
+	// Token: 0x0600B091 RID: 45201 RVA: 0x003422C2 File Offset: 0x003404C2
 	private void TagToggle(EToggleState toggleState)
 	{
 		Action<int> selectCallback = this.SelectCallback;
@@ -74,7 +74,7 @@ public class GachaTagItem : GridProxyAbstract<GachaPoolData>
 		selectCallback(base.GridIndex);
 	}
 
-	// Token: 0x0600DC7C RID: 56444 RVA: 0x00336DB8 File Offset: 0x00334FB8
+	// Token: 0x0600B092 RID: 45202 RVA: 0x003422DC File Offset: 0x003404DC
 	public void SetSelected(bool selected)
 	{
 		if (selected)
@@ -88,7 +88,7 @@ public class GachaTagItem : GridProxyAbstract<GachaPoolData>
 		base.GetExtendToggle(3).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600DC7D RID: 56445 RVA: 0x00336E08 File Offset: 0x00335008
+	// Token: 0x0600B093 RID: 45203 RVA: 0x0034232C File Offset: 0x0034052C
 	public void RefreshRedDot()
 	{
 		bool flag = GachaModel.Instance.CheckNewGachaPoolById(this.GachaId);
@@ -117,7 +117,7 @@ public class GachaTagItem : GridProxyAbstract<GachaPoolData>
 		item.SetUIActive(flag);
 	}
 
-	// Token: 0x0600DC7E RID: 56446 RVA: 0x00336EC0 File Offset: 0x003350C0
+	// Token: 0x0600B094 RID: 45204 RVA: 0x003423E4 File Offset: 0x003405E4
 	public void InitData()
 	{
 		if (this.Data == null)
@@ -154,7 +154,7 @@ public class GachaTagItem : GridProxyAbstract<GachaPoolData>
 		base.GetItem(4).SetUIActive(false);
 	}
 
-	// Token: 0x0600DC7F RID: 56447 RVA: 0x00337043 File Offset: 0x00335243
+	// Token: 0x0600B095 RID: 45205 RVA: 0x00342567 File Offset: 0x00340767
 	[NullableContext(1)]
 	public override void Refresh(GachaPoolData data, bool isSelected, int gridIndex)
 	{
@@ -169,51 +169,51 @@ public class GachaTagItem : GridProxyAbstract<GachaPoolData>
 		this.OnDeselected(false);
 	}
 
-	// Token: 0x0600DC80 RID: 56448 RVA: 0x0033706A File Offset: 0x0033526A
+	// Token: 0x0600B096 RID: 45206 RVA: 0x0034258E File Offset: 0x0034078E
 	[NullableContext(1)]
 	public override object GetKey(GachaPoolData data, int displayIndex)
 	{
 		return this.GachaId;
 	}
 
-	// Token: 0x0600DC81 RID: 56449 RVA: 0x00337077 File Offset: 0x00335277
+	// Token: 0x0600B097 RID: 45207 RVA: 0x0034259B File Offset: 0x0034079B
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true);
 	}
 
-	// Token: 0x0600DC82 RID: 56450 RVA: 0x00337080 File Offset: 0x00335280
+	// Token: 0x0600B098 RID: 45208 RVA: 0x003425A4 File Offset: 0x003407A4
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false);
 	}
 
-	// Token: 0x0400651F RID: 25887
+	// Token: 0x040065F1 RID: 26097
 	public GachaPoolData Data;
 
-	// Token: 0x04006520 RID: 25888
+	// Token: 0x040065F2 RID: 26098
 	public Action<int> SelectCallback;
 
-	// Token: 0x04006521 RID: 25889
+	// Token: 0x040065F3 RID: 26099
 	public Func<int, bool> CanExecuteChange;
 
-	// Token: 0x02008263 RID: 33379
+	// Token: 0x020073EB RID: 29675
 	[NullableContext(0)]
 	private enum EGachaTagCom
 	{
-		// Token: 0x0402A8AB RID: 174251
+		// Token: 0x04025BCC RID: 154572
 		ContentNotSelectedSprite,
-		// Token: 0x0402A8AC RID: 174252
+		// Token: 0x04025BCD RID: 154573
 		ContentSelectedSprite,
-		// Token: 0x0402A8AD RID: 174253
+		// Token: 0x04025BCE RID: 154574
 		RedDotItem,
-		// Token: 0x0402A8AE RID: 174254
+		// Token: 0x04025BCF RID: 154575
 		TagToggle,
-		// Token: 0x0402A8AF RID: 174255
+		// Token: 0x04025BD0 RID: 154576
 		TipItem,
-		// Token: 0x0402A8B0 RID: 174256
+		// Token: 0x04025BD1 RID: 154577
 		TipBgSprite,
-		// Token: 0x0402A8B1 RID: 174257
+		// Token: 0x04025BD2 RID: 154578
 		TipText
 	}
 }

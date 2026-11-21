@@ -7,36 +7,36 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Qte
 {
-	// Token: 0x02003EDA RID: 16090
+	// Token: 0x0200319F RID: 12703
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Data/Qte/SCommonQte_ContinuousClick.SCommonQte_ContinuousClick")]
 	[UnrealStructLayout(232, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 228)]
 	public class SCommonQte_ContinuousClick : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06028B1B RID: 166683 RVA: 0x009B279C File Offset: 0x009B099C
+		// Token: 0x0601F549 RID: 128329 RVA: 0x0092B7A8 File Offset: 0x009299A8
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SCommonQte_ContinuousClick._ScriptStructPtr != 0) ? SCommonQte_ContinuousClick._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Qte/SCommonQte_ContinuousClick.SCommonQte_ContinuousClick", ref SCommonQte_ContinuousClick._ScriptStructPtr);
 		}
 
-		// Token: 0x17005F23 RID: 24355
-		// (get) Token: 0x06028B1C RID: 166684 RVA: 0x009B27C0 File Offset: 0x009B09C0
-		// (set) Token: 0x06028B1D RID: 166685 RVA: 0x009B27D4 File Offset: 0x009B09D4
+		// Token: 0x170038AF RID: 14511
+		// (get) Token: 0x0601F54A RID: 128330 RVA: 0x0092B7CC File Offset: 0x009299CC
+		// (set) Token: 0x0601F54B RID: 128331 RVA: 0x0092B7E0 File Offset: 0x009299E0
 		public unsafe TEnumAsByte<ECommonQteViewType_SingleButtonContinuousClick> ViewType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_ViewType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_ViewType) = value;
 			}
 		}
 
-		// Token: 0x17005F24 RID: 24356
-		// (get) Token: 0x06028B1E RID: 166686 RVA: 0x009B27EC File Offset: 0x009B09EC
-		// (set) Token: 0x06028B1F RID: 166687 RVA: 0x009B282F File Offset: 0x009B0A2F
+		// Token: 0x170038B0 RID: 14512
+		// (get) Token: 0x0601F54C RID: 128332 RVA: 0x0092B7F8 File Offset: 0x009299F8
+		// (set) Token: 0x0601F54D RID: 128333 RVA: 0x0092B83B File Offset: 0x00929A3B
 		[Nullable(1)]
 		public SCommonQteButton UIConfig
 		{
@@ -47,363 +47,341 @@ namespace AkiClient.Game.Aki.Data.Qte
 				SCommonQteButton result;
 				if ((result = this._UIConfig) == null)
 				{
-					result = (this._UIConfig = new SCommonQteButton(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._UIConfig = new SCommonQteButton(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_UIConfig, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			[NullableContext(1)]
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SCommonQteButton.StaticStruct(), base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_1, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SCommonQteButton.StaticStruct(), base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_UIConfig, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005F25 RID: 24357
-		// (get) Token: 0x06028B20 RID: 166688 RVA: 0x009B2850 File Offset: 0x009B0A50
-		// (set) Token: 0x06028B21 RID: 166689 RVA: 0x009B2864 File Offset: 0x009B0A64
+		// Token: 0x170038B1 RID: 14513
+		// (get) Token: 0x0601F54E RID: 128334 RVA: 0x0092B85C File Offset: 0x00929A5C
+		// (set) Token: 0x0601F54F RID: 128335 RVA: 0x0092B870 File Offset: 0x00929A70
 		public unsafe TEnumAsByte<ECommonQteInteractiveTiming> InteractiveTiming
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_InteractiveTiming);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_InteractiveTiming) = value;
 			}
 		}
 
-		// Token: 0x17005F26 RID: 24358
-		// (get) Token: 0x06028B22 RID: 166690 RVA: 0x009B2879 File Offset: 0x009B0A79
-		// (set) Token: 0x06028B23 RID: 166691 RVA: 0x009B2889 File Offset: 0x009B0A89
+		// Token: 0x170038B2 RID: 14514
+		// (get) Token: 0x0601F550 RID: 128336 RVA: 0x0092B885 File Offset: 0x00929A85
+		// (set) Token: 0x0601F551 RID: 128337 RVA: 0x0092B895 File Offset: 0x00929A95
 		public unsafe bool IsShowBorder
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_3) != 0;
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_IsShowBorder) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_3) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_IsShowBorder) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005F27 RID: 24359
-		// (get) Token: 0x06028B24 RID: 166692 RVA: 0x009B289A File Offset: 0x009B0A9A
-		// (set) Token: 0x06028B25 RID: 166693 RVA: 0x009B28AA File Offset: 0x009B0AAA
+		// Token: 0x170038B3 RID: 14515
+		// (get) Token: 0x0601F552 RID: 128338 RVA: 0x0092B8A6 File Offset: 0x00929AA6
+		// (set) Token: 0x0601F553 RID: 128339 RVA: 0x0092B8B6 File Offset: 0x00929AB6
 		public unsafe bool IsShowTip
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_4) != 0;
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_IsShowTip) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_4) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_IsShowTip) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005F28 RID: 24360
-		// (get) Token: 0x06028B26 RID: 166694 RVA: 0x009B28BB File Offset: 0x009B0ABB
-		// (set) Token: 0x06028B27 RID: 166695 RVA: 0x009B28CF File Offset: 0x009B0ACF
+		// Token: 0x170038B4 RID: 14516
+		// (get) Token: 0x0601F554 RID: 128340 RVA: 0x0092B8C7 File Offset: 0x00929AC7
+		// (set) Token: 0x0601F555 RID: 128341 RVA: 0x0092B8DB File Offset: 0x00929ADB
 		[Nullable(1)]
 		public unsafe string TipTextId
 		{
 			[NullableContext(1)]
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_5)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_TipTextId)));
 			}
 			[NullableContext(1)]
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_5)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_TipTextId)), value);
 			}
 		}
 
-		// Token: 0x17005F29 RID: 24361
-		// (get) Token: 0x06028B28 RID: 166696 RVA: 0x009B28E4 File Offset: 0x009B0AE4
-		// (set) Token: 0x06028B29 RID: 166697 RVA: 0x009B28F4 File Offset: 0x009B0AF4
+		// Token: 0x170038B5 RID: 14517
+		// (get) Token: 0x0601F556 RID: 128342 RVA: 0x0092B8F0 File Offset: 0x00929AF0
+		// (set) Token: 0x0601F557 RID: 128343 RVA: 0x0092B900 File Offset: 0x00929B00
 		public unsafe float InitialEnergyPercent
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_InitialEnergyPercent);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_InitialEnergyPercent) = value;
 			}
 		}
 
-		// Token: 0x17005F2A RID: 24362
-		// (get) Token: 0x06028B2A RID: 166698 RVA: 0x009B2905 File Offset: 0x009B0B05
-		// (set) Token: 0x06028B2B RID: 166699 RVA: 0x009B2915 File Offset: 0x009B0B15
+		// Token: 0x170038B6 RID: 14518
+		// (get) Token: 0x0601F558 RID: 128344 RVA: 0x0092B911 File Offset: 0x00929B11
+		// (set) Token: 0x0601F559 RID: 128345 RVA: 0x0092B921 File Offset: 0x00929B21
 		public unsafe float TargetEnergyPercent
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_TargetEnergyPercent);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_TargetEnergyPercent) = value;
 			}
 		}
 
-		// Token: 0x17005F2B RID: 24363
-		// (get) Token: 0x06028B2C RID: 166700 RVA: 0x009B2926 File Offset: 0x009B0B26
-		// (set) Token: 0x06028B2D RID: 166701 RVA: 0x009B2936 File Offset: 0x009B0B36
+		// Token: 0x170038B7 RID: 14519
+		// (get) Token: 0x0601F55A RID: 128346 RVA: 0x0092B932 File Offset: 0x00929B32
+		// (set) Token: 0x0601F55B RID: 128347 RVA: 0x0092B942 File Offset: 0x00929B42
 		public unsafe float DeltaEnergyPercentPerSecond
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_DeltaEnergyPercentPerSecond);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_DeltaEnergyPercentPerSecond) = value;
 			}
 		}
 
-		// Token: 0x17005F2C RID: 24364
-		// (get) Token: 0x06028B2E RID: 166702 RVA: 0x009B2947 File Offset: 0x009B0B47
-		// (set) Token: 0x06028B2F RID: 166703 RVA: 0x009B2957 File Offset: 0x009B0B57
+		// Token: 0x170038B8 RID: 14520
+		// (get) Token: 0x0601F55C RID: 128348 RVA: 0x0092B953 File Offset: 0x00929B53
+		// (set) Token: 0x0601F55D RID: 128349 RVA: 0x0092B963 File Offset: 0x00929B63
 		public unsafe float DeltaEnergyPercentPerClick
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_DeltaEnergyPercentPerClick);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_DeltaEnergyPercentPerClick) = value;
 			}
 		}
 
-		// Token: 0x17005F2D RID: 24365
-		// (get) Token: 0x06028B30 RID: 166704 RVA: 0x009B2968 File Offset: 0x009B0B68
-		// (set) Token: 0x06028B31 RID: 166705 RVA: 0x009B2978 File Offset: 0x009B0B78
+		// Token: 0x170038B9 RID: 14521
+		// (get) Token: 0x0601F55E RID: 128350 RVA: 0x0092B974 File Offset: 0x00929B74
+		// (set) Token: 0x0601F55F RID: 128351 RVA: 0x0092B984 File Offset: 0x00929B84
 		public unsafe float PerformInterpSpeedForEnergyPercent
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_PerformInterpSpeedForEnergyPercent);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_PerformInterpSpeedForEnergyPercent) = value;
 			}
 		}
 
-		// Token: 0x17005F2E RID: 24366
-		// (get) Token: 0x06028B32 RID: 166706 RVA: 0x009B2989 File Offset: 0x009B0B89
-		// (set) Token: 0x06028B33 RID: 166707 RVA: 0x009B2999 File Offset: 0x009B0B99
+		// Token: 0x170038BA RID: 14522
+		// (get) Token: 0x0601F560 RID: 128352 RVA: 0x0092B995 File Offset: 0x00929B95
+		// (set) Token: 0x0601F561 RID: 128353 RVA: 0x0092B9A5 File Offset: 0x00929BA5
 		public unsafe bool IsAttachToActor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_11) != 0;
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_IsAttachToActor) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_11) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_IsAttachToActor) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005F2F RID: 24367
-		// (get) Token: 0x06028B34 RID: 166708 RVA: 0x009B29AA File Offset: 0x009B0BAA
-		// (set) Token: 0x06028B35 RID: 166709 RVA: 0x009B29BE File Offset: 0x009B0BBE
+		// Token: 0x170038BB RID: 14523
+		// (get) Token: 0x0601F562 RID: 128354 RVA: 0x0092B9B6 File Offset: 0x00929BB6
+		// (set) Token: 0x0601F563 RID: 128355 RVA: 0x0092B9CA File Offset: 0x00929BCA
 		public unsafe SCommonQte_Attach AttachConfig
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_AttachConfig);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_AttachConfig) = value;
 			}
 		}
 
-		// Token: 0x17005F30 RID: 24368
-		// (get) Token: 0x06028B36 RID: 166710 RVA: 0x009B29D3 File Offset: 0x009B0BD3
-		// (set) Token: 0x06028B37 RID: 166711 RVA: 0x009B29E3 File Offset: 0x009B0BE3
+		// Token: 0x170038BC RID: 14524
+		// (get) Token: 0x0601F564 RID: 128356 RVA: 0x0092B9DF File Offset: 0x00929BDF
+		// (set) Token: 0x0601F565 RID: 128357 RVA: 0x0092B9EF File Offset: 0x00929BEF
 		public unsafe bool HideProgressBar
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_13) != 0;
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_HideProgressBar) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_13) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_HideProgressBar) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005F31 RID: 24369
-		// (get) Token: 0x06028B38 RID: 166712 RVA: 0x009B29F4 File Offset: 0x009B0BF4
-		// (set) Token: 0x06028B39 RID: 166713 RVA: 0x009B2A04 File Offset: 0x009B0C04
+		// Token: 0x170038BD RID: 14525
+		// (get) Token: 0x0601F566 RID: 128358 RVA: 0x0092BA00 File Offset: 0x00929C00
+		// (set) Token: 0x0601F567 RID: 128359 RVA: 0x0092BA10 File Offset: 0x00929C10
 		public unsafe bool ProgressOnBegin
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_14) != 0;
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_ProgressOnBegin) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_14) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_ProgressOnBegin) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005F32 RID: 24370
-		// (get) Token: 0x06028B3A RID: 166714 RVA: 0x009B2A15 File Offset: 0x009B0C15
-		// (set) Token: 0x06028B3B RID: 166715 RVA: 0x009B2A25 File Offset: 0x009B0C25
+		// Token: 0x170038BE RID: 14526
+		// (get) Token: 0x0601F568 RID: 128360 RVA: 0x0092BA21 File Offset: 0x00929C21
+		// (set) Token: 0x0601F569 RID: 128361 RVA: 0x0092BA31 File Offset: 0x00929C31
 		public unsafe float MaxComboInterval
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_MaxComboInterval);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_MaxComboInterval) = value;
 			}
 		}
 
-		// Token: 0x17005F33 RID: 24371
-		// (get) Token: 0x06028B3C RID: 166716 RVA: 0x009B2A36 File Offset: 0x009B0C36
-		// (set) Token: 0x06028B3D RID: 166717 RVA: 0x009B2A46 File Offset: 0x009B0C46
+		// Token: 0x170038BF RID: 14527
+		// (get) Token: 0x0601F56A RID: 128362 RVA: 0x0092BA42 File Offset: 0x00929C42
+		// (set) Token: 0x0601F56B RID: 128363 RVA: 0x0092BA52 File Offset: 0x00929C52
 		public unsafe float InterpSpeedForEnergyPercent
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_InterpSpeedForEnergyPercent);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)SCommonQte_ContinuousClick.__PropertyOffset_InterpSpeedForEnergyPercent) = value;
 			}
 		}
 
-		// Token: 0x06028B3E RID: 166718 RVA: 0x009B2A57 File Offset: 0x009B0C57
+		// Token: 0x0601F56C RID: 128364 RVA: 0x0092BA63 File Offset: 0x00929C63
 		public SCommonQte_ContinuousClick()
 		{
 		}
 
-		// Token: 0x06028B3F RID: 166719 RVA: 0x009B2A60 File Offset: 0x009B0C60
-		public SCommonQte_ContinuousClick(TEnumAsByte<ECommonQteViewType_SingleButtonContinuousClick> ViewType, [Nullable(1)] SCommonQteButton UIConfig, TEnumAsByte<ECommonQteInteractiveTiming> InteractiveTiming, bool IsShowBorder, bool IsShowTip, [Nullable(1)] string TipTextId, float InitialEnergyPercent, float TargetEnergyPercent, float DeltaEnergyPercentPerSecond, float DeltaEnergyPercentPerClick, float PerformInterpSpeedForEnergyPercent, bool IsAttachToActor, SCommonQte_Attach AttachConfig, bool HideProgressBar, bool ProgressOnBegin, float MaxComboInterval, float InterpSpeedForEnergyPercent)
-		{
-			this.ViewType = ViewType;
-			this.UIConfig = UIConfig;
-			this.InteractiveTiming = InteractiveTiming;
-			this.IsShowBorder = IsShowBorder;
-			this.IsShowTip = IsShowTip;
-			this.TipTextId = TipTextId;
-			this.InitialEnergyPercent = InitialEnergyPercent;
-			this.TargetEnergyPercent = TargetEnergyPercent;
-			this.DeltaEnergyPercentPerSecond = DeltaEnergyPercentPerSecond;
-			this.DeltaEnergyPercentPerClick = DeltaEnergyPercentPerClick;
-			this.PerformInterpSpeedForEnergyPercent = PerformInterpSpeedForEnergyPercent;
-			this.IsAttachToActor = IsAttachToActor;
-			this.AttachConfig = AttachConfig;
-			this.HideProgressBar = HideProgressBar;
-			this.ProgressOnBegin = ProgressOnBegin;
-			this.MaxComboInterval = MaxComboInterval;
-			this.InterpSpeedForEnergyPercent = InterpSpeedForEnergyPercent;
-		}
-
-		// Token: 0x06028B40 RID: 166720 RVA: 0x009B2AF8 File Offset: 0x009B0CF8
+		// Token: 0x0601F56D RID: 128365 RVA: 0x0092BA6B File Offset: 0x00929C6B
 		protected override IntPtr GetUStructPtr()
 		{
 			return SCommonQte_ContinuousClick.StaticStruct();
 		}
 
-		// Token: 0x06028B41 RID: 166721 RVA: 0x009B2B04 File Offset: 0x009B0D04
+		// Token: 0x0601F56E RID: 128366 RVA: 0x0092BA77 File Offset: 0x00929C77
 		[NullableContext(2)]
 		public SCommonQte_ContinuousClick(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06028B42 RID: 166722 RVA: 0x009B2B0E File Offset: 0x009B0D0E
+		// Token: 0x0601F56F RID: 128367 RVA: 0x0092BA81 File Offset: 0x00929C81
 		public SCommonQte_ContinuousClick(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06028B43 RID: 166723 RVA: 0x009B2B19 File Offset: 0x009B0D19
+		// Token: 0x0601F570 RID: 128368 RVA: 0x0092BA8C File Offset: 0x00929C8C
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SCommonQte_ContinuousClick(Pointer, false, true);
 		}
 
-		// Token: 0x06028B44 RID: 166724 RVA: 0x009B2B23 File Offset: 0x009B0D23
+		// Token: 0x0601F571 RID: 128369 RVA: 0x0092BA96 File Offset: 0x00929C96
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SCommonQte_ContinuousClick(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014CD1 RID: 85201
+		// Token: 0x04010CB8 RID: 68792
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Data/Qte/SCommonQte_ContinuousClick.SCommonQte_ContinuousClick";
 
-		// Token: 0x04014CD2 RID: 85202
+		// Token: 0x04010CB9 RID: 68793
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014CD3 RID: 85203
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010CBA RID: 68794
+		internal static int __PropertyOffset_ViewType;
 
-		// Token: 0x04014CD4 RID: 85204
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010CBB RID: 68795
+		internal static int __PropertyOffset_UIConfig;
 
-		// Token: 0x04014CD5 RID: 85205
+		// Token: 0x04010CBC RID: 68796
 		[Nullable(2)]
 		private SCommonQteButton _UIConfig;
 
-		// Token: 0x04014CD6 RID: 85206
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010CBD RID: 68797
+		internal static int __PropertyOffset_InteractiveTiming;
 
-		// Token: 0x04014CD7 RID: 85207
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010CBE RID: 68798
+		internal static int __PropertyOffset_IsShowBorder;
 
-		// Token: 0x04014CD8 RID: 85208
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010CBF RID: 68799
+		internal static int __PropertyOffset_IsShowTip;
 
-		// Token: 0x04014CD9 RID: 85209
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010CC0 RID: 68800
+		internal static int __PropertyOffset_TipTextId;
 
-		// Token: 0x04014CDA RID: 85210
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010CC1 RID: 68801
+		internal static int __PropertyOffset_InitialEnergyPercent;
 
-		// Token: 0x04014CDB RID: 85211
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010CC2 RID: 68802
+		internal static int __PropertyOffset_TargetEnergyPercent;
 
-		// Token: 0x04014CDC RID: 85212
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010CC3 RID: 68803
+		internal static int __PropertyOffset_DeltaEnergyPercentPerSecond;
 
-		// Token: 0x04014CDD RID: 85213
-		internal static int __PropertyOffset_9;
+		// Token: 0x04010CC4 RID: 68804
+		internal static int __PropertyOffset_DeltaEnergyPercentPerClick;
 
-		// Token: 0x04014CDE RID: 85214
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010CC5 RID: 68805
+		internal static int __PropertyOffset_PerformInterpSpeedForEnergyPercent;
 
-		// Token: 0x04014CDF RID: 85215
-		internal static int __PropertyOffset_11;
+		// Token: 0x04010CC6 RID: 68806
+		internal static int __PropertyOffset_IsAttachToActor;
 
-		// Token: 0x04014CE0 RID: 85216
-		internal static int __PropertyOffset_12;
+		// Token: 0x04010CC7 RID: 68807
+		internal static int __PropertyOffset_AttachConfig;
 
-		// Token: 0x04014CE1 RID: 85217
-		internal static int __PropertyOffset_13;
+		// Token: 0x04010CC8 RID: 68808
+		internal static int __PropertyOffset_HideProgressBar;
 
-		// Token: 0x04014CE2 RID: 85218
-		internal static int __PropertyOffset_14;
+		// Token: 0x04010CC9 RID: 68809
+		internal static int __PropertyOffset_ProgressOnBegin;
 
-		// Token: 0x04014CE3 RID: 85219
-		internal static int __PropertyOffset_15;
+		// Token: 0x04010CCA RID: 68810
+		internal static int __PropertyOffset_MaxComboInterval;
 
-		// Token: 0x04014CE4 RID: 85220
-		internal static int __PropertyOffset_16;
+		// Token: 0x04010CCB RID: 68811
+		internal static int __PropertyOffset_InterpSpeedForEnergyPercent;
 	}
 }

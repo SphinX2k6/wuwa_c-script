@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070B3 RID: 28851
+	// Token: 0x0200787F RID: 30847
 	public class ISetWeatherLockStateT
 	{
-		// Token: 0x1700D653 RID: 54867
-		// (get) Token: 0x06033189 RID: 209289 RVA: 0x006E4219 File Offset: 0x006E2419
-		// (set) Token: 0x0603318A RID: 209290 RVA: 0x006E4221 File Offset: 0x006E2421
+		// Token: 0x1700E236 RID: 57910
+		// (get) Token: 0x0603642B RID: 222251 RVA: 0x00744825 File Offset: 0x00742A25
+		// (set) Token: 0x0603642C RID: 222252 RVA: 0x0074482D File Offset: 0x00742A2D
 		public ELockState LockState { get; set; }
 
-		// Token: 0x1700D654 RID: 54868
-		// (get) Token: 0x0603318B RID: 209291 RVA: 0x006E422A File Offset: 0x006E242A
-		// (set) Token: 0x0603318C RID: 209292 RVA: 0x006E4232 File Offset: 0x006E2432
+		// Token: 0x1700E237 RID: 57911
+		// (get) Token: 0x0603642D RID: 222253 RVA: 0x00744836 File Offset: 0x00742A36
+		// (set) Token: 0x0603642E RID: 222254 RVA: 0x0074483E File Offset: 0x00742A3E
 		public List<int> AreaIds { get; set; }
 
-		// Token: 0x1700D655 RID: 54869
-		// (get) Token: 0x0603318D RID: 209293 RVA: 0x006E423B File Offset: 0x006E243B
-		// (set) Token: 0x0603318E RID: 209294 RVA: 0x006E4243 File Offset: 0x006E2443
+		// Token: 0x1700E238 RID: 57912
+		// (get) Token: 0x0603642F RID: 222255 RVA: 0x00744847 File Offset: 0x00742A47
+		// (set) Token: 0x06036430 RID: 222256 RVA: 0x0074484F File Offset: 0x00742A4F
 		public byte NullMask { get; set; }
 
-		// Token: 0x0603318F RID: 209295 RVA: 0x006E424C File Offset: 0x006E244C
+		// Token: 0x06036431 RID: 222257 RVA: 0x00744858 File Offset: 0x00742A58
 		public ISetWeatherLockStateT()
 		{
 			this.LockState = ELockState.Lock;

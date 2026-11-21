@@ -3,10 +3,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 {
-	// Token: 0x02006553 RID: 25939
+	// Token: 0x020054D1 RID: 21713
 	internal sealed class LinkageRewardActivityTitle : ActivityTitleTypeA
 	{
-		// Token: 0x06040FFF RID: 266239 RVA: 0x00FC05E8 File Offset: 0x00FBE7E8
+		// Token: 0x06035CC4 RID: 220356 RVA: 0x00F075D8 File Offset: 0x00F057D8
 		public void ApplyLinkageSubTitleVisible(bool bVisible)
 		{
 			UUIText text = base.GetText(3);
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			text.SetUIActive(bVisible);
 		}
 
-		// Token: 0x04021E47 RID: 138823
+		// Token: 0x0401C778 RID: 116600
 		private const int SubTitleComponentId = 3;
 	}
 }

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x02002BD3 RID: 11219
+// Token: 0x0200214E RID: 8526
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerFloorInfo
 {
-	// Token: 0x060174D8 RID: 95448 RVA: 0x005EC98C File Offset: 0x005EAB8C
+	// Token: 0x06014F09 RID: 85769 RVA: 0x006194C8 File Offset: 0x006176C8
 	public TowerFloorInfo(int towerId, int star, List<TowerRolePb> formation, List<int> starIndex, bool isQuickPass)
 	{
 		this.TowerId = towerId;
@@ -24,30 +24,30 @@ public class TowerFloorInfo
 		this.Cost = towerInfo.Value.Cost;
 	}
 
-	// Token: 0x0400AE5F RID: 44639
+	// Token: 0x0400B264 RID: 45668
 	public readonly int Difficulties = -1;
 
-	// Token: 0x0400AE60 RID: 44640
+	// Token: 0x0400B265 RID: 45669
 	public readonly int Area = -1;
 
-	// Token: 0x0400AE61 RID: 44641
+	// Token: 0x0400B266 RID: 45670
 	public readonly int FloorNumber = -1;
 
-	// Token: 0x0400AE62 RID: 44642
+	// Token: 0x0400B267 RID: 45671
 	public readonly int Cost = -1;
 
-	// Token: 0x0400AE63 RID: 44643
+	// Token: 0x0400B268 RID: 45672
 	public readonly int TowerId;
 
-	// Token: 0x0400AE64 RID: 44644
+	// Token: 0x0400B269 RID: 45673
 	public int Star;
 
-	// Token: 0x0400AE65 RID: 44645
+	// Token: 0x0400B26A RID: 45674
 	public List<TowerRolePb> Formation;
 
-	// Token: 0x0400AE66 RID: 44646
+	// Token: 0x0400B26B RID: 45675
 	public List<int> StarIndex;
 
-	// Token: 0x0400AE67 RID: 44647
+	// Token: 0x0400B26C RID: 45676
 	public bool IsQuickPass;
 }

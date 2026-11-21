@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019AE RID: 6574
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B37 RID: 6967
 	public class IDisableMapMark : ToggleMapMarkState
 	{
-		// Token: 0x06008CBD RID: 36029 RVA: 0x0014A1B4 File Offset: 0x001483B4
+		// Token: 0x060093ED RID: 37869 RVA: 0x00159B04 File Offset: 0x00157D04
 		private IDisableMapMark_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008CBE RID: 36030 RVA: 0x0014A1EC File Offset: 0x001483EC
+		// Token: 0x060093EE RID: 37870 RVA: 0x00159B3C File Offset: 0x00157D3C
 		public static IDisableMapMark Create([Nullable(2)] IDisableMapMark instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008CBF RID: 36031 RVA: 0x0014A1FF File Offset: 0x001483FF
+		// Token: 0x060093EF RID: 37871 RVA: 0x00159B4F File Offset: 0x00157D4F
 		public static IDisableMapMark CreateFromSetValue([Nullable(2)] IDisableMapMark_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008CC0 RID: 36032 RVA: 0x0014A212 File Offset: 0x00148412
+		// Token: 0x060093F0 RID: 37872 RVA: 0x00159B62 File Offset: 0x00157D62
 		public new IDisableMapMark_SetValue ToSetValue()
 		{
 			return new IDisableMapMark_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D2E RID: 11566
-		// (get) Token: 0x06008CC1 RID: 36033 RVA: 0x0014A231 File Offset: 0x00148431
-		// (set) Token: 0x06008CC2 RID: 36034 RVA: 0x0014A25C File Offset: 0x0014845C
+		// Token: 0x17002F30 RID: 12080
+		// (get) Token: 0x060093F1 RID: 37873 RVA: 0x00159B81 File Offset: 0x00157D81
+		// (set) Token: 0x060093F2 RID: 37874 RVA: 0x00159BAC File Offset: 0x00157DAC
 		public override EMapMarkState Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D2F RID: 11567
-		// (get) Token: 0x06008CC3 RID: 36035 RVA: 0x0014A26A File Offset: 0x0014846A
-		// (set) Token: 0x06008CC4 RID: 36036 RVA: 0x0014A295 File Offset: 0x00148495
+		// Token: 0x17002F31 RID: 12081
+		// (get) Token: 0x060093F3 RID: 37875 RVA: 0x00159BBA File Offset: 0x00157DBA
+		// (set) Token: 0x060093F4 RID: 37876 RVA: 0x00159BE5 File Offset: 0x00157DE5
 		public virtual int MarkId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400578D RID: 22413
+		// Token: 0x04005BDB RID: 23515
 		[Nullable(2)]
 		protected new IDisableMapMark FbInstance;
 
-		// Token: 0x0400578E RID: 22414
+		// Token: 0x04005BDC RID: 23516
 		[Nullable(2)]
 		protected new IDisableMapMark_SetValue PocoInterface;
 	}

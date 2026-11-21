@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F39 RID: 3897
+	// Token: 0x0200101E RID: 4126
 	public struct PinballSpawnConfig : IFlatbufferObject
 	{
-		// Token: 0x170029DE RID: 10718
-		// (get) Token: 0x0600B061 RID: 45153 RVA: 0x002C5032 File Offset: 0x002C3232
+		// Token: 0x17002A44 RID: 10820
+		// (get) Token: 0x0600B682 RID: 46722 RVA: 0x002E198E File Offset: 0x002DFB8E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B062 RID: 45154 RVA: 0x002C503F File Offset: 0x002C323F
+		// Token: 0x0600B683 RID: 46723 RVA: 0x002E199B File Offset: 0x002DFB9B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B063 RID: 45155 RVA: 0x002C5048 File Offset: 0x002C3248
+		// Token: 0x0600B684 RID: 46724 RVA: 0x002E19A4 File Offset: 0x002DFBA4
 		public static PinballSpawnConfig GetRootAsPinballSpawnConfig(ByteBuffer _bb)
 		{
 			return PinballSpawnConfig.GetRootAsPinballSpawnConfig(_bb, default(PinballSpawnConfig));
 		}
 
-		// Token: 0x0600B064 RID: 45156 RVA: 0x002C5064 File Offset: 0x002C3264
+		// Token: 0x0600B685 RID: 46725 RVA: 0x002E19C0 File Offset: 0x002DFBC0
 		public static PinballSpawnConfig GetRootAsPinballSpawnConfig(ByteBuffer _bb, PinballSpawnConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B065 RID: 45157 RVA: 0x002C5081 File Offset: 0x002C3281
+		// Token: 0x0600B686 RID: 46726 RVA: 0x002E19DD File Offset: 0x002DFBDD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B066 RID: 45158 RVA: 0x002C5090 File Offset: 0x002C3290
+		// Token: 0x0600B687 RID: 46727 RVA: 0x002E19EC File Offset: 0x002DFBEC
 		public PinballSpawnConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170029DF RID: 10719
-		// (get) Token: 0x0600B067 RID: 45159 RVA: 0x002C50A0 File Offset: 0x002C32A0
+		// Token: 0x17002A45 RID: 10821
+		// (get) Token: 0x0600B688 RID: 46728 RVA: 0x002E19FC File Offset: 0x002DFBFC
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B068 RID: 45160 RVA: 0x002C50DC File Offset: 0x002C32DC
+		// Token: 0x0600B689 RID: 46729 RVA: 0x002E1A38 File Offset: 0x002DFC38
 		public int MonsterIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170029E0 RID: 10720
-		// (get) Token: 0x0600B069 RID: 45161 RVA: 0x002C511C File Offset: 0x002C331C
+		// Token: 0x17002A46 RID: 10822
+		// (get) Token: 0x0600B68A RID: 46730 RVA: 0x002E1A78 File Offset: 0x002DFC78
 		public int MonsterIdsLength
 		{
 			get
@@ -90,37 +90,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B06A RID: 45162 RVA: 0x002C5147 File Offset: 0x002C3347
+		// Token: 0x0600B68B RID: 46731 RVA: 0x002E1AA3 File Offset: 0x002DFCA3
 		public Span<int> GetMonsterIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600B06B RID: 45163 RVA: 0x002C5156 File Offset: 0x002C3356
+		// Token: 0x0600B68C RID: 46732 RVA: 0x002E1AB2 File Offset: 0x002DFCB2
 		public int[] GetMonsterIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600B06C RID: 45164 RVA: 0x002C5170 File Offset: 0x002C3370
+		// Token: 0x0600B68D RID: 46733 RVA: 0x002E1AC9 File Offset: 0x002DFCC9
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MonsterIdsIter()或GetMonsterIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] MonsterIds()
+		public int[] MonsterIds()
 		{
-			PinballSpawnConfig pinballSpawnConfig = this;
-			return pinballSpawnConfig.GetMonsterIdsArray() ?? Array.Empty<int>();
+			return this.GetMonsterIdsArray();
 		}
 
-		// Token: 0x0600B06D RID: 45165 RVA: 0x002C5194 File Offset: 0x002C3394
+		// Token: 0x0600B68E RID: 46734 RVA: 0x002E1AD1 File Offset: 0x002DFCD1
 		[NullableContext(1)]
-		public readonly IEnumerable<int> MonsterIdsIter()
+		public IEnumerable<int> MonsterIdsIter()
 		{
 			PinballSpawnConfig.<MonsterIdsIter>d__16 <MonsterIdsIter>d__ = new PinballSpawnConfig.<MonsterIdsIter>d__16(-2);
 			<MonsterIdsIter>d__.<>3__<>4__this = this;
 			return <MonsterIdsIter>d__;
 		}
 
-		// Token: 0x04005003 RID: 20483
+		// Token: 0x040055E8 RID: 21992
 		private Table __p;
 	}
 }

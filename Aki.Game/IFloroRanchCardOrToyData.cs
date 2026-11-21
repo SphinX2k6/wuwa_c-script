@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001B0B RID: 6923
+// Token: 0x02000FCA RID: 4042
 [NullableContext(1)]
 public interface IFloroRanchCardOrToyData
 {
-	// Token: 0x17001131 RID: 4401
-	// (get) Token: 0x0600CD85 RID: 52613
+	// Token: 0x17001156 RID: 4438
+	// (get) Token: 0x0600A196 RID: 41366
 	int Id { get; }
 
-	// Token: 0x0600CD86 RID: 52614
+	// Token: 0x0600A197 RID: 41367
 	string GetName();
 
-	// Token: 0x17001132 RID: 4402
-	// (get) Token: 0x0600CD87 RID: 52615
+	// Token: 0x17001157 RID: 4439
+	// (get) Token: 0x0600A198 RID: 41368
 	string Name { get; }
 
-	// Token: 0x17001133 RID: 4403
-	// (get) Token: 0x0600CD88 RID: 52616
+	// Token: 0x17001158 RID: 4440
+	// (get) Token: 0x0600A199 RID: 41369
 	string Desc { get; }
 
-	// Token: 0x0600CD89 RID: 52617
+	// Token: 0x0600A19A RID: 41370
 	int GetRarity();
 
-	// Token: 0x0600CD8A RID: 52618
+	// Token: 0x0600A19B RID: 41371
 	string GetIcon();
 }

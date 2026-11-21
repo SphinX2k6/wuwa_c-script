@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041AC RID: 16812
+	// Token: 0x02004605 RID: 17925
 	public class ITakePhotoPosConditionT
 	{
-		// Token: 0x1700773D RID: 30525
-		// (get) Token: 0x06018C0C RID: 101388 RVA: 0x00390637 File Offset: 0x0038E837
-		// (set) Token: 0x06018C0D RID: 101389 RVA: 0x0039063F File Offset: 0x0038E83F
+		// Token: 0x17007D69 RID: 32105
+		// (get) Token: 0x0601A362 RID: 107362 RVA: 0x003BBA8B File Offset: 0x003B9C8B
+		// (set) Token: 0x0601A363 RID: 107363 RVA: 0x003BBA93 File Offset: 0x003B9C93
 		public int RangeEntity { get; set; }
 
-		// Token: 0x1700773E RID: 30526
-		// (get) Token: 0x06018C0E RID: 101390 RVA: 0x00390648 File Offset: 0x0038E848
-		// (set) Token: 0x06018C0F RID: 101391 RVA: 0x00390650 File Offset: 0x0038E850
+		// Token: 0x17007D6A RID: 32106
+		// (get) Token: 0x0601A364 RID: 107364 RVA: 0x003BBA9C File Offset: 0x003B9C9C
+		// (set) Token: 0x0601A365 RID: 107365 RVA: 0x003BBAA4 File Offset: 0x003B9CA4
 		public string TidDescription { get; set; }
 
-		// Token: 0x06018C10 RID: 101392 RVA: 0x00390659 File Offset: 0x0038E859
+		// Token: 0x0601A366 RID: 107366 RVA: 0x003BBAAD File Offset: 0x003B9CAD
 		public ITakePhotoPosConditionT()
 		{
 			this.RangeEntity = 0;

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D94 RID: 7572
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FA7 RID: 8103
 	public class IRemoveEffectBase
 	{
-		// Token: 0x0600A24D RID: 41549 RVA: 0x00171370 File Offset: 0x0016F570
+		// Token: 0x0600AC45 RID: 44101 RVA: 0x001858DC File Offset: 0x00183ADC
 		private IRemoveEffectBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A24E RID: 41550 RVA: 0x001713A8 File Offset: 0x0016F5A8
+		// Token: 0x0600AC46 RID: 44102 RVA: 0x00185914 File Offset: 0x00183B14
 		public static IRemoveEffectBase Create([Nullable(2)] IRemoveEffectBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A24F RID: 41551 RVA: 0x001713BB File Offset: 0x0016F5BB
+		// Token: 0x0600AC47 RID: 44103 RVA: 0x00185927 File Offset: 0x00183B27
 		public static IRemoveEffectBase CreateFromSetValue([Nullable(2)] IRemoveEffectBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A250 RID: 41552 RVA: 0x001713CE File Offset: 0x0016F5CE
+		// Token: 0x0600AC48 RID: 44104 RVA: 0x0018593A File Offset: 0x00183B3A
 		public IRemoveEffectBase_SetValue ToSetValue()
 		{
 			return new IRemoveEffectBase_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700321F RID: 12831
-		// (get) Token: 0x0600A251 RID: 41553 RVA: 0x001713ED File Offset: 0x0016F5ED
-		// (set) Token: 0x0600A252 RID: 41554 RVA: 0x00171418 File Offset: 0x0016F618
+		// Token: 0x170034B6 RID: 13494
+		// (get) Token: 0x0600AC49 RID: 44105 RVA: 0x00185959 File Offset: 0x00183B59
+		// (set) Token: 0x0600AC4A RID: 44106 RVA: 0x00185984 File Offset: 0x00183B84
 		public virtual EEffectType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003220 RID: 12832
-		// (get) Token: 0x0600A253 RID: 41555 RVA: 0x00171426 File Offset: 0x0016F626
-		// (set) Token: 0x0600A254 RID: 41556 RVA: 0x00171451 File Offset: 0x0016F651
+		// Token: 0x170034B7 RID: 13495
+		// (get) Token: 0x0600AC4B RID: 44107 RVA: 0x00185992 File Offset: 0x00183B92
+		// (set) Token: 0x0600AC4C RID: 44108 RVA: 0x001859BD File Offset: 0x00183BBD
 		public virtual string Path
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006180 RID: 24960
+		// Token: 0x04006701 RID: 26369
 		[Nullable(2)]
 		protected IRemoveEffectBase FbInstance;
 
-		// Token: 0x04006181 RID: 24961
+		// Token: 0x04006702 RID: 26370
 		[Nullable(2)]
 		protected IRemoveEffectBase_SetValue PocoInterface;
 	}

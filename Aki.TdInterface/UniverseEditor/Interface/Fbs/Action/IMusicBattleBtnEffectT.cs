@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B92 RID: 27538
+	// Token: 0x020072D8 RID: 29400
 	public class IMusicBattleBtnEffectT
 	{
-		// Token: 0x1700CCB0 RID: 52400
-		// (get) Token: 0x060305CD RID: 198093 RVA: 0x00691D3A File Offset: 0x0068FF3A
-		// (set) Token: 0x060305CE RID: 198094 RVA: 0x00691D42 File Offset: 0x0068FF42
+		// Token: 0x1700D795 RID: 55189
+		// (get) Token: 0x06033425 RID: 209957 RVA: 0x006EA35A File Offset: 0x006E855A
+		// (set) Token: 0x06033426 RID: 209958 RVA: 0x006EA362 File Offset: 0x006E8562
 		public ESkillBtnEffectType Type { get; set; }
 
-		// Token: 0x060305CF RID: 198095 RVA: 0x00691D4B File Offset: 0x0068FF4B
+		// Token: 0x06033427 RID: 209959 RVA: 0x006EA36B File Offset: 0x006E856B
 		public IMusicBattleBtnEffectT()
 		{
 			this.Type = ESkillBtnEffectType.MusicBattleBtnEffect;

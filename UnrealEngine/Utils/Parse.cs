@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine.Utils
 {
-	// Token: 0x02002AEE RID: 10990
+	// Token: 0x0200089D RID: 2205
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Parse
 	{
-		// Token: 0x0602845E RID: 164958 RVA: 0x003D4648 File Offset: 0x003D2848
+		// Token: 0x0600BE13 RID: 48659 RVA: 0x0012F958 File Offset: 0x0012DB58
 		public static bool Value(string[] splitString, string match, ref byte value)
 		{
 			foreach (string text in splitString)
@@ -22,7 +22,7 @@ namespace UnrealEngine.Utils
 			return false;
 		}
 
-		// Token: 0x0602845F RID: 164959 RVA: 0x003D4690 File Offset: 0x003D2890
+		// Token: 0x0600BE14 RID: 48660 RVA: 0x0012F9A0 File Offset: 0x0012DBA0
 		public static bool Value(string[] splitString, string match, ref float value)
 		{
 			foreach (string text in splitString)
@@ -36,7 +36,7 @@ namespace UnrealEngine.Utils
 			return false;
 		}
 
-		// Token: 0x06028460 RID: 164960 RVA: 0x003D46D8 File Offset: 0x003D28D8
+		// Token: 0x0600BE15 RID: 48661 RVA: 0x0012F9E8 File Offset: 0x0012DBE8
 		public static bool Value(string[] splitString, string match, ref double value)
 		{
 			foreach (string text in splitString)
@@ -50,7 +50,7 @@ namespace UnrealEngine.Utils
 			return false;
 		}
 
-		// Token: 0x06028461 RID: 164961 RVA: 0x003D4720 File Offset: 0x003D2920
+		// Token: 0x0600BE16 RID: 48662 RVA: 0x0012FA30 File Offset: 0x0012DC30
 		public static bool ParseVector(string str, out float x, out float y, out float z)
 		{
 			x = (y = (z = 0f));

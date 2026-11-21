@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EC8 RID: 3784
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FDE RID: 4062
 	public class IAreaNameSystemPrompt : ISystemPromptType
 	{
-		// Token: 0x0600538E RID: 21390 RVA: 0x000CD8C0 File Offset: 0x000CBAC0
+		// Token: 0x0600590A RID: 22794 RVA: 0x000D9A68 File Offset: 0x000D7C68
 		private IAreaNameSystemPrompt_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600538F RID: 21391 RVA: 0x000CD8F8 File Offset: 0x000CBAF8
+		// Token: 0x0600590B RID: 22795 RVA: 0x000D9AA0 File Offset: 0x000D7CA0
 		public static IAreaNameSystemPrompt Create([Nullable(2)] IAreaNameSystemPrompt instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005390 RID: 21392 RVA: 0x000CD90B File Offset: 0x000CBB0B
+		// Token: 0x0600590C RID: 22796 RVA: 0x000D9AB3 File Offset: 0x000D7CB3
 		public static IAreaNameSystemPrompt CreateFromSetValue([Nullable(2)] IAreaNameSystemPrompt_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005391 RID: 21393 RVA: 0x000CD91E File Offset: 0x000CBB1E
+		// Token: 0x0600590D RID: 22797 RVA: 0x000D9AC6 File Offset: 0x000D7CC6
 		public new IAreaNameSystemPrompt_SetValue ToSetValue()
 		{
 			return new IAreaNameSystemPrompt_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C1A RID: 7194
-		// (get) Token: 0x06005392 RID: 21394 RVA: 0x000CD931 File Offset: 0x000CBB31
-		// (set) Token: 0x06005393 RID: 21395 RVA: 0x000CD95C File Offset: 0x000CBB5C
+		// Token: 0x17001DB2 RID: 7602
+		// (get) Token: 0x0600590E RID: 22798 RVA: 0x000D9AD9 File Offset: 0x000D7CD9
+		// (set) Token: 0x0600590F RID: 22799 RVA: 0x000D9B04 File Offset: 0x000D7D04
 		public override ESystemPromptType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400329E RID: 12958
+		// Token: 0x040035AB RID: 13739
 		[Nullable(2)]
 		protected new IAreaNameSystemPrompt FbInstance;
 
-		// Token: 0x0400329F RID: 12959
+		// Token: 0x040035AC RID: 13740
 		[Nullable(2)]
 		protected new IAreaNameSystemPrompt_SetValue PocoInterface;
 	}

@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045E0 RID: 17888
+	// Token: 0x02003509 RID: 13577
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WaterEffectSubConfig
 	{
-		// Token: 0x0602E1FB RID: 188923 RVA: 0x00AA5874 File Offset: 0x00AA3A74
+		// Token: 0x060228EF RID: 141551 RVA: 0x009D1F50 File Offset: 0x009D0150
 		public bool ShouldUseShallowFootSplashes(double depth)
 		{
 			return this.ShallowMoveEffects.Count > 0 && depth < (double)this.ShallowMoveDepthThreshold;
 		}
 
-		// Token: 0x0602E1FC RID: 188924 RVA: 0x00AA5890 File Offset: 0x00AA3A90
+		// Token: 0x060228F0 RID: 141552 RVA: 0x009D1F6C File Offset: 0x009D016C
 		[NullableContext(2)]
 		public WaterEffectItem FindShallowMoveEffect(double depth, double speed)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Render
 			return this.FindMoveEffectInGroups(this.ShallowMoveEffects, depth, speed);
 		}
 
-		// Token: 0x0602E1FD RID: 188925 RVA: 0x00AA58AB File Offset: 0x00AA3AAB
+		// Token: 0x060228F1 RID: 141553 RVA: 0x009D1F87 File Offset: 0x009D0187
 		[NullableContext(2)]
 		public WaterEffectItem FindWadeMoveEffect(double depth, double speed, bool useShallowFootSplashes)
 		{
@@ -39,14 +39,14 @@ namespace CSharpScript.Game.Render
 			return this.FindMoveEffectInGroups(this.MoveEffects, depth, speed);
 		}
 
-		// Token: 0x0602E1FE RID: 188926 RVA: 0x00AA58C0 File Offset: 0x00AA3AC0
+		// Token: 0x060228F2 RID: 141554 RVA: 0x009D1F9C File Offset: 0x009D019C
 		[NullableContext(2)]
 		public WaterEffectItem FindMoveEffect(double depth, double speed)
 		{
 			return this.FindMoveEffectInGroups(this.MoveEffects, depth, speed);
 		}
 
-		// Token: 0x0602E1FF RID: 188927 RVA: 0x00AA58D0 File Offset: 0x00AA3AD0
+		// Token: 0x060228F3 RID: 141555 RVA: 0x009D1FAC File Offset: 0x009D01AC
 		[return: Nullable(2)]
 		private WaterEffectItem FindMoveEffectInGroups(List<WaterEffectGroup> groups, double depth, double speed)
 		{
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Render
 			return groups[num - 1].FindEffectAtSpeed(speed);
 		}
 
-		// Token: 0x0602E200 RID: 188928 RVA: 0x00AA5914 File Offset: 0x00AA3B14
+		// Token: 0x060228F4 RID: 141556 RVA: 0x009D1FF0 File Offset: 0x009D01F0
 		[NullableContext(2)]
 		public WaterEffectItem FindFallEffectAtSpeed(float speed)
 		{
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Render
 			return this.FallEffects[num - 1];
 		}
 
-		// Token: 0x0602E201 RID: 188929 RVA: 0x00AA5960 File Offset: 0x00AA3B60
+		// Token: 0x060228F5 RID: 141557 RVA: 0x009D203C File Offset: 0x009D023C
 		[NullableContext(2)]
 		public WaterEffectItem FindJumpEffectAtSpeed(float speed)
 		{
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Render
 			return this.JumpEffects[num - 1];
 		}
 
-		// Token: 0x0602E202 RID: 188930 RVA: 0x00AA59AC File Offset: 0x00AA3BAC
+		// Token: 0x060228F6 RID: 141558 RVA: 0x009D2088 File Offset: 0x009D0288
 		[NullableContext(2)]
 		public WaterEffectItem FindFlyEffectAtSpeed(float speed)
 		{
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Render
 			return this.FlyEffects[num - 1];
 		}
 
-		// Token: 0x0602E203 RID: 188931 RVA: 0x00AA59F8 File Offset: 0x00AA3BF8
+		// Token: 0x060228F7 RID: 141559 RVA: 0x009D20D4 File Offset: 0x009D02D4
 		public void Init(SWaterEffectSubConfig configData)
 		{
 			this.MoveEffects.Clear();
@@ -160,35 +160,35 @@ namespace CSharpScript.Game.Render
 			this.FlyEffectHeightThreshold = configData.FlyEffectTriggerHeight;
 		}
 
-		// Token: 0x04018BCB RID: 101323
+		// Token: 0x04013209 RID: 78345
 		public List<WaterEffectGroup> MoveEffects = new List<WaterEffectGroup>();
 
-		// Token: 0x04018BCC RID: 101324
+		// Token: 0x0401320A RID: 78346
 		public List<WaterEffectGroup> ShallowMoveEffects = new List<WaterEffectGroup>();
 
-		// Token: 0x04018BCD RID: 101325
+		// Token: 0x0401320B RID: 78347
 		public float ShallowMoveDepthThreshold;
 
-		// Token: 0x04018BCE RID: 101326
+		// Token: 0x0401320C RID: 78348
 		[Nullable(2)]
 		public FGameplayTagContainer ShallowFallbackTag;
 
-		// Token: 0x04018BCF RID: 101327
+		// Token: 0x0401320D RID: 78349
 		public List<WaterEffectItem> FallEffects = new List<WaterEffectItem>();
 
-		// Token: 0x04018BD0 RID: 101328
+		// Token: 0x0401320E RID: 78350
 		public List<WaterEffectItem> JumpEffects = new List<WaterEffectItem>();
 
-		// Token: 0x04018BD1 RID: 101329
+		// Token: 0x0401320F RID: 78351
 		public List<WaterEffectItem> FlyEffects = new List<WaterEffectItem>();
 
-		// Token: 0x04018BD2 RID: 101330
+		// Token: 0x04013210 RID: 78352
 		public float FallJumpDepthThreshold;
 
-		// Token: 0x04018BD3 RID: 101331
+		// Token: 0x04013211 RID: 78353
 		public bool TriggerInGrass;
 
-		// Token: 0x04018BD4 RID: 101332
+		// Token: 0x04013212 RID: 78354
 		public float FlyEffectHeightThreshold;
 	}
 }

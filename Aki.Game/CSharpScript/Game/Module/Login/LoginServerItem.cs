@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056B7 RID: 22199
+	// Token: 0x0200468D RID: 18061
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LoginServerItem : UiPanelBase, IDynamicScrollItem<ILoginServersData>
 	{
-		// Token: 0x0603876A RID: 231274 RVA: 0x00D67C2C File Offset: 0x00D65E2C
+		// Token: 0x0602D667 RID: 185959 RVA: 0x00CB5DF0 File Offset: 0x00CB3FF0
 		public AUIBaseActor GetUsingItem(ILoginServersData data)
 		{
 			return base.GetRootItem().GetOwner() as AUIBaseActor;
 		}
 
-		// Token: 0x0603876B RID: 231275 RVA: 0x00D67C40 File Offset: 0x00D65E40
+		// Token: 0x0602D668 RID: 185960 RVA: 0x00CB5E04 File Offset: 0x00CB4004
 		public UniTask Init(UUIItem actor)
 		{
 			LoginServerItem.<Init>d__3 <Init>d__;
@@ -35,14 +35,14 @@ namespace CSharpScript.Game.Module.Login
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603876C RID: 231276 RVA: 0x00D67C8B File Offset: 0x00D65E8B
+		// Token: 0x0602D669 RID: 185961 RVA: 0x00CB5E4F File Offset: 0x00CB404F
 		public void ClearItem()
 		{
 			EventSystem.Instance.Remove(EEventName.OnSelectServerItem, new Action(this.OnSelectServerItem));
 			base.Destroy(null);
 		}
 
-		// Token: 0x0603876D RID: 231277 RVA: 0x00D67CB0 File Offset: 0x00D65EB0
+		// Token: 0x0602D66A RID: 185962 RVA: 0x00CB5E74 File Offset: 0x00CB4074
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Login
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603876E RID: 231278 RVA: 0x00D67DFB File Offset: 0x00D65FFB
+		// Token: 0x0602D66B RID: 185963 RVA: 0x00CB5FBF File Offset: 0x00CB41BF
 		private void OnExtendToggleComfirmBtn(EToggleState state)
 		{
 			if (this.Data != null)
@@ -83,13 +83,13 @@ namespace CSharpScript.Game.Module.Login
 			}
 		}
 
-		// Token: 0x0603876F RID: 231279 RVA: 0x00D67E22 File Offset: 0x00D66022
+		// Token: 0x0602D66C RID: 185964 RVA: 0x00CB5FE6 File Offset: 0x00CB41E6
 		private void OnSelectServerItem()
 		{
 			this.RefreshToggleState();
 		}
 
-		// Token: 0x06038770 RID: 231280 RVA: 0x00D67E2C File Offset: 0x00D6602C
+		// Token: 0x0602D66D RID: 185965 RVA: 0x00CB5FF0 File Offset: 0x00CB41F0
 		private void RefreshToggleState()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Login
 			}
 		}
 
-		// Token: 0x06038771 RID: 231281 RVA: 0x00D67E68 File Offset: 0x00D66068
+		// Token: 0x0602D66E RID: 185966 RVA: 0x00CB602C File Offset: 0x00CB422C
 		public void Update(ILoginServersData data, int index)
 		{
 			this.Data = data;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Login
 			this.RefreshToggleState();
 		}
 
-		// Token: 0x06038772 RID: 231282 RVA: 0x00D67ED4 File Offset: 0x00D660D4
+		// Token: 0x0602D66F RID: 185967 RVA: 0x00CB6098 File Offset: 0x00CB4298
 		public void UpdatePlayerInfo()
 		{
 			SdkLoginConfig sdkLoginConfig = LoginModel.Instance.GetSdkLoginConfig();
@@ -142,17 +142,17 @@ namespace CSharpScript.Game.Module.Login
 			}
 		}
 
-		// Token: 0x06038773 RID: 231283 RVA: 0x00D67F56 File Offset: 0x00D66156
+		// Token: 0x0602D670 RID: 185968 RVA: 0x00CB611A File Offset: 0x00CB431A
 		protected override void OnBeforeDestroy()
 		{
 			this.Data = null;
 		}
 
-		// Token: 0x0401DA7A RID: 121466
+		// Token: 0x04018505 RID: 99589
 		[Nullable(2)]
 		private ILoginServersData Data;
 
-		// Token: 0x0401DA7B RID: 121467
+		// Token: 0x04018506 RID: 99590
 		private string Region = "";
 	}
 }

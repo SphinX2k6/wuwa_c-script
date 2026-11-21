@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E01 RID: 24065
+	// Token: 0x02004DE6 RID: 19942
 	public class SpecialEnergyBarSuisuiEnhancedStateSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D307 RID: 250631 RVA: 0x00EBD43C File Offset: 0x00EBB63C
+		// Token: 0x06032296 RID: 205462 RVA: 0x00E0E99C File Offset: 0x00E0CB9C
 		protected override void OnStart()
 		{
 			base.OnStart();

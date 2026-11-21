@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001023 RID: 4131
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200114F RID: 4431
 	public class IMowBuffDistribute : IShowUi
 	{
-		// Token: 0x06005C2A RID: 23594 RVA: 0x000DF57C File Offset: 0x000DD77C
+		// Token: 0x0600620C RID: 25100 RVA: 0x000EC274 File Offset: 0x000EA474
 		private IMowBuffDistribute_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005C2B RID: 23595 RVA: 0x000DF5B4 File Offset: 0x000DD7B4
+		// Token: 0x0600620D RID: 25101 RVA: 0x000EC2AC File Offset: 0x000EA4AC
 		public static IMowBuffDistribute Create([Nullable(2)] IMowBuffDistribute instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C2C RID: 23596 RVA: 0x000DF5C7 File Offset: 0x000DD7C7
+		// Token: 0x0600620E RID: 25102 RVA: 0x000EC2BF File Offset: 0x000EA4BF
 		public static IMowBuffDistribute CreateFromSetValue([Nullable(2)] IMowBuffDistribute_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C2D RID: 23597 RVA: 0x000DF5DA File Offset: 0x000DD7DA
+		// Token: 0x0600620F RID: 25103 RVA: 0x000EC2D2 File Offset: 0x000EA4D2
 		public new IMowBuffDistribute_SetValue ToSetValue()
 		{
 			return new IMowBuffDistribute_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E62 RID: 7778
-		// (get) Token: 0x06005C2E RID: 23598 RVA: 0x000DF5F9 File Offset: 0x000DD7F9
-		// (set) Token: 0x06005C2F RID: 23599 RVA: 0x000DF624 File Offset: 0x000DD824
+		// Token: 0x1700200C RID: 8204
+		// (get) Token: 0x06006210 RID: 25104 RVA: 0x000EC2F1 File Offset: 0x000EA4F1
+		// (set) Token: 0x06006211 RID: 25105 RVA: 0x000EC31C File Offset: 0x000EA51C
 		public override EShowUiType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E63 RID: 7779
-		// (get) Token: 0x06005C30 RID: 23600 RVA: 0x000DF632 File Offset: 0x000DD832
-		// (set) Token: 0x06005C31 RID: 23601 RVA: 0x000DF65D File Offset: 0x000DD85D
+		// Token: 0x1700200D RID: 8205
+		// (get) Token: 0x06006212 RID: 25106 RVA: 0x000EC32A File Offset: 0x000EA52A
+		// (set) Token: 0x06006213 RID: 25107 RVA: 0x000EC355 File Offset: 0x000EA555
 		public virtual int BoardId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003775 RID: 14197
+		// Token: 0x04003AB0 RID: 15024
 		[Nullable(2)]
 		protected new IMowBuffDistribute FbInstance;
 
-		// Token: 0x04003776 RID: 14198
+		// Token: 0x04003AB1 RID: 15025
 		[Nullable(2)]
 		protected new IMowBuffDistribute_SetValue PocoInterface;
 	}

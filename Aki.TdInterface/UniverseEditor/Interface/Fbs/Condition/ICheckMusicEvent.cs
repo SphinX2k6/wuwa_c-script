@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004ACC RID: 19148
+	// Token: 0x02004F9E RID: 20382
 	public struct ICheckMusicEvent : IFlatbufferObject
 	{
-		// Token: 0x17008AD3 RID: 35539
-		// (get) Token: 0x0601E110 RID: 123152 RVA: 0x00437DD0 File Offset: 0x00435FD0
+		// Token: 0x170091C5 RID: 37317
+		// (get) Token: 0x0601FC0F RID: 130063 RVA: 0x0046987C File Offset: 0x00467A7C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E111 RID: 123153 RVA: 0x00437DDD File Offset: 0x00435FDD
+		// Token: 0x0601FC10 RID: 130064 RVA: 0x00469889 File Offset: 0x00467A89
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E112 RID: 123154 RVA: 0x00437DE4 File Offset: 0x00435FE4
+		// Token: 0x0601FC11 RID: 130065 RVA: 0x00469890 File Offset: 0x00467A90
 		public static ICheckMusicEvent GetRootAsICheckMusicEvent(ByteBuffer _bb)
 		{
 			return ICheckMusicEvent.GetRootAsICheckMusicEvent(_bb, default(ICheckMusicEvent));
 		}
 
-		// Token: 0x0601E113 RID: 123155 RVA: 0x00437E00 File Offset: 0x00436000
+		// Token: 0x0601FC12 RID: 130066 RVA: 0x004698AC File Offset: 0x00467AAC
 		public static ICheckMusicEvent GetRootAsICheckMusicEvent(ByteBuffer _bb, ICheckMusicEvent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E114 RID: 123156 RVA: 0x00437E1D File Offset: 0x0043601D
+		// Token: 0x0601FC13 RID: 130067 RVA: 0x004698C9 File Offset: 0x00467AC9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E115 RID: 123157 RVA: 0x00437E2C File Offset: 0x0043602C
+		// Token: 0x0601FC14 RID: 130068 RVA: 0x004698D8 File Offset: 0x00467AD8
 		public ICheckMusicEvent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008AD4 RID: 35540
-		// (get) Token: 0x0601E116 RID: 123158 RVA: 0x00437E3C File Offset: 0x0043603C
+		// Token: 0x170091C6 RID: 37318
+		// (get) Token: 0x0601FC15 RID: 130069 RVA: 0x004698E8 File Offset: 0x00467AE8
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008AD5 RID: 35541
-		// (get) Token: 0x0601E117 RID: 123159 RVA: 0x00437E78 File Offset: 0x00436078
+		// Token: 0x170091C7 RID: 37319
+		// (get) Token: 0x0601FC16 RID: 130070 RVA: 0x00469924 File Offset: 0x00467B24
 		public TMusicCondition MusicEventType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E118 RID: 123160 RVA: 0x00437EB4 File Offset: 0x004360B4
+		// Token: 0x0601FC17 RID: 130071 RVA: 0x00469960 File Offset: 0x00467B60
 		public TTable? MusicEvent<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,19 +88,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601E119 RID: 123161 RVA: 0x00437EF8 File Offset: 0x004360F8
+		// Token: 0x0601FC18 RID: 130072 RVA: 0x004699A4 File Offset: 0x00467BA4
 		public ICheckFlForestMusicBeats MusicEventAsICheckFlForestMusicBeats()
 		{
 			return this.MusicEvent<ICheckFlForestMusicBeats>().Value;
 		}
 
-		// Token: 0x0601E11A RID: 123162 RVA: 0x00437F14 File Offset: 0x00436114
+		// Token: 0x0601FC19 RID: 130073 RVA: 0x004699C0 File Offset: 0x00467BC0
 		public ICheckHcMusicBeats MusicEventAsICheckHcMusicBeats()
 		{
 			return this.MusicEvent<ICheckHcMusicBeats>().Value;
 		}
 
-		// Token: 0x0601E11B RID: 123163 RVA: 0x00437F2F File Offset: 0x0043612F
+		// Token: 0x0601FC1A RID: 130074 RVA: 0x004699DB File Offset: 0x00467BDB
 		public static Offset<ICheckMusicEvent> CreateICheckMusicEvent(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, TMusicCondition MusicEvent_type = TMusicCondition.NONE, int MusicEventOffset = 0)
 		{
 			builder.StartTable(3);
@@ -110,37 +110,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckMusicEvent.EndICheckMusicEvent(builder);
 		}
 
-		// Token: 0x0601E11C RID: 123164 RVA: 0x00437F53 File Offset: 0x00436153
+		// Token: 0x0601FC1B RID: 130075 RVA: 0x004699FF File Offset: 0x00467BFF
 		public static void StartICheckMusicEvent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E11D RID: 123165 RVA: 0x00437F5C File Offset: 0x0043615C
+		// Token: 0x0601FC1C RID: 130076 RVA: 0x00469A08 File Offset: 0x00467C08
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E11E RID: 123166 RVA: 0x00437F67 File Offset: 0x00436167
+		// Token: 0x0601FC1D RID: 130077 RVA: 0x00469A13 File Offset: 0x00467C13
 		public static void AddMusicEventType(FlatBufferBuilder builder, TMusicCondition musicEventType)
 		{
 			builder.AddByte(1, (byte)musicEventType, 0);
 		}
 
-		// Token: 0x0601E11F RID: 123167 RVA: 0x00437F72 File Offset: 0x00436172
+		// Token: 0x0601FC1E RID: 130078 RVA: 0x00469A1E File Offset: 0x00467C1E
 		public static void AddMusicEvent(FlatBufferBuilder builder, int musicEventOffset)
 		{
 			builder.AddOffset(2, musicEventOffset, 0);
 		}
 
-		// Token: 0x0601E120 RID: 123168 RVA: 0x00437F7D File Offset: 0x0043617D
+		// Token: 0x0601FC1F RID: 130079 RVA: 0x00469A29 File Offset: 0x00467C29
 		public static Offset<ICheckMusicEvent> EndICheckMusicEvent(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckMusicEvent>(builder.EndTable());
 		}
 
-		// Token: 0x0601E121 RID: 123169 RVA: 0x00437F8C File Offset: 0x0043618C
+		// Token: 0x0601FC20 RID: 130080 RVA: 0x00469A38 File Offset: 0x00467C38
 		public ICheckMusicEventT UnPack()
 		{
 			ICheckMusicEventT checkMusicEventT = new ICheckMusicEventT();
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkMusicEventT;
 		}
 
-		// Token: 0x0601E122 RID: 123170 RVA: 0x00437FA8 File Offset: 0x004361A8
+		// Token: 0x0601FC21 RID: 130081 RVA: 0x00469A54 File Offset: 0x00467C54
 		public void UnPackTo(ICheckMusicEventT _o)
 		{
 			_o.Type = this.Type;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.MusicEvent.Value = ((this.MusicEvent<ICheckHcMusicBeats>() != null) ? this.MusicEvent<ICheckHcMusicBeats>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0601E123 RID: 123171 RVA: 0x00438058 File Offset: 0x00436258
+		// Token: 0x0601FC22 RID: 130082 RVA: 0x00469B04 File Offset: 0x00467D04
 		public static Offset<ICheckMusicEvent> Pack(FlatBufferBuilder builder, ICheckMusicEventT _o)
 		{
 			if (_o == null)
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckMusicEvent.CreateICheckMusicEvent(builder, _o.Type, musicEvent_type, musicEventOffset);
 		}
 
-		// Token: 0x0400D354 RID: 54100
+		// Token: 0x0400DE3C RID: 56892
 		private Table __p;
 	}
 }

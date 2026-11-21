@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x0200539E RID: 21406
+	// Token: 0x02004381 RID: 17281
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleAreaPlotPanel : UiPanelBase
 	{
-		// Token: 0x06036B15 RID: 224021 RVA: 0x00CF1CBC File Offset: 0x00CEFEBC
+		// Token: 0x0602BA5B RID: 178779 RVA: 0x00C40D64 File Offset: 0x00C3EF64
 		public UniTask Init(UUIItem item, MoraleAreaData areaData)
 		{
 			MoraleAreaPlotPanel.<Init>d__5 <Init>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036B16 RID: 224022 RVA: 0x00CF1D10 File Offset: 0x00CEFF10
+		// Token: 0x0602BA5C RID: 178780 RVA: 0x00C40DB8 File Offset: 0x00C3EFB8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>();
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036B17 RID: 224023 RVA: 0x00CF1D5C File Offset: 0x00CEFF5C
+		// Token: 0x0602BA5D RID: 178781 RVA: 0x00C40E04 File Offset: 0x00C3F004
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleAreaPlotPanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036B18 RID: 224024 RVA: 0x00CF1DA0 File Offset: 0x00CEFFA0
+		// Token: 0x0602BA5E RID: 178782 RVA: 0x00C40E48 File Offset: 0x00C3F048
 		private UniTask InitAreaPlotList()
 		{
 			MoraleAreaPlotPanel.<InitAreaPlotList>d__8 <InitAreaPlotList>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <InitAreaPlotList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036B19 RID: 224025 RVA: 0x00CF1DE4 File Offset: 0x00CEFFE4
+		// Token: 0x0602BA5F RID: 178783 RVA: 0x00C40E8C File Offset: 0x00C3F08C
 		private void AddAreaPlotItem(MoraleAreaPlotItem item)
 		{
 			this.PlotList.Add(item);
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036B1A RID: 224026 RVA: 0x00CF1E50 File Offset: 0x00CF0050
+		// Token: 0x0602BA60 RID: 178784 RVA: 0x00C40EF8 File Offset: 0x00C3F0F8
 		public void UpdatePlotState()
 		{
 			foreach (MoraleAreaPlotItem moraleAreaPlotItem in this.PlotList)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036B1B RID: 224027 RVA: 0x00CF1EA0 File Offset: 0x00CF00A0
+		// Token: 0x0602BA61 RID: 178785 RVA: 0x00C40F48 File Offset: 0x00C3F148
 		public void HideAllPlot()
 		{
 			foreach (MoraleAreaPlotItem moraleAreaPlotItem in this.PlotList)
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036B1C RID: 224028 RVA: 0x00CF1EF4 File Offset: 0x00CF00F4
+		// Token: 0x0602BA62 RID: 178786 RVA: 0x00C40F9C File Offset: 0x00C3F19C
 		public void ShowAllPlot()
 		{
 			foreach (MoraleAreaPlotItem moraleAreaPlotItem in this.PlotList)
@@ -103,25 +103,25 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036B1D RID: 224029 RVA: 0x00CF1F48 File Offset: 0x00CF0148
+		// Token: 0x0602BA63 RID: 178787 RVA: 0x00C40FF0 File Offset: 0x00C3F1F0
 		public void UpdateData()
 		{
 			this.UpdatePlotState();
 		}
 
-		// Token: 0x0401CE2F RID: 118319
+		// Token: 0x040178C7 RID: 96455
 		public MoraleAreaData AreaData;
 
-		// Token: 0x0401CE30 RID: 118320
+		// Token: 0x040178C8 RID: 96456
 		public readonly List<MoraleAreaPlotItem> PlotList = new List<MoraleAreaPlotItem>();
 
-		// Token: 0x0401CE31 RID: 118321
+		// Token: 0x040178C9 RID: 96457
 		public readonly Dictionary<int, List<MoraleAreaPlotItem>> FlagToPlotMap = new Dictionary<int, List<MoraleAreaPlotItem>>();
 
-		// Token: 0x0401CE32 RID: 118322
+		// Token: 0x040178CA RID: 96458
 		public readonly Dictionary<int, MoraleAreaPlotItem> PlotMap = new Dictionary<int, MoraleAreaPlotItem>();
 
-		// Token: 0x0401CE33 RID: 118323
+		// Token: 0x040178CB RID: 96459
 		public IReadOnlyList<int> AllPlotIdList;
 	}
 }

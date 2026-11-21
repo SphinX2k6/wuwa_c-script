@@ -7,18 +7,18 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059D8 RID: 23000
+	// Token: 0x020049B1 RID: 18865
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MonsterCreatorBehaviorNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A4C8 RID: 238792 RVA: 0x00DDD13A File Offset: 0x00DDB33A
+		// Token: 0x0602F3F0 RID: 193520 RVA: 0x00D2C95A File Offset: 0x00D2AB5A
 		public MonsterCreatorBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x17008B9F RID: 35743
-		// (get) Token: 0x0603A4C9 RID: 238793 RVA: 0x00DDD14E File Offset: 0x00DDB34E
+		// Token: 0x17005F6C RID: 24428
+		// (get) Token: 0x0602F3F1 RID: 193521 RVA: 0x00D2C96E File Offset: 0x00D2AB6E
 		protected override List<int> CorrelativeEntities
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A4CA RID: 238794 RVA: 0x00DDD158 File Offset: 0x00DDB358
+		// Token: 0x0602F3F2 RID: 193522 RVA: 0x00D2C978 File Offset: 0x00D2AB78
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
 			IChildQuestBtNode childQuestBtNode = nodeConfig as IChildQuestBtNode;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A4CB RID: 238795 RVA: 0x00DDD1E0 File Offset: 0x00DDB3E0
+		// Token: 0x0602F3F3 RID: 193523 RVA: 0x00D2CA00 File Offset: 0x00D2AC00
 		protected override bool OnUpdateProgress(ChildQuestNodeProgress progress)
 		{
 			if (progress.MonsterCreator == null)
@@ -70,50 +70,50 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A4CC RID: 238796 RVA: 0x00DDD284 File Offset: 0x00DDB484
+		// Token: 0x0602F3F4 RID: 193524 RVA: 0x00D2CAA4 File Offset: 0x00D2ACA4
 		public override string GetProgress()
 		{
 			return this.KilledCount.ToString();
 		}
 
-		// Token: 0x0603A4CD RID: 238797 RVA: 0x00DDD291 File Offset: 0x00DDB491
+		// Token: 0x0602F3F5 RID: 193525 RVA: 0x00D2CAB1 File Offset: 0x00D2ACB1
 		public override string GetProgressMax()
 		{
 			return this.TotalCount.ToString();
 		}
 
-		// Token: 0x0603A4CE RID: 238798 RVA: 0x00DDD29E File Offset: 0x00DDB49E
+		// Token: 0x0602F3F6 RID: 193526 RVA: 0x00D2CABE File Offset: 0x00D2ACBE
 		public bool GetShowMonsterMergedHpBar()
 		{
 			return this.ShowMonsterMergedHpBar;
 		}
 
-		// Token: 0x0603A4CF RID: 238799 RVA: 0x00DDD2A6 File Offset: 0x00DDB4A6
+		// Token: 0x0602F3F7 RID: 193527 RVA: 0x00D2CAC6 File Offset: 0x00D2ACC6
 		[NullableContext(2)]
 		public string GetTidMonsterGroupName()
 		{
 			return this.TidMonsterGroupName;
 		}
 
-		// Token: 0x0603A4D0 RID: 238800 RVA: 0x00DDD2AE File Offset: 0x00DDB4AE
+		// Token: 0x0602F3F8 RID: 193528 RVA: 0x00D2CACE File Offset: 0x00D2ACCE
 		public List<int> GetTest()
 		{
 			return this.InnerCorrelativeEntities;
 		}
 
-		// Token: 0x0401E646 RID: 124486
+		// Token: 0x040190E5 RID: 102629
 		private int KilledCount;
 
-		// Token: 0x0401E647 RID: 124487
+		// Token: 0x040190E6 RID: 102630
 		private int TotalCount;
 
-		// Token: 0x0401E648 RID: 124488
+		// Token: 0x040190E7 RID: 102631
 		private readonly List<int> InnerCorrelativeEntities = new List<int>();
 
-		// Token: 0x0401E649 RID: 124489
+		// Token: 0x040190E8 RID: 102632
 		private bool ShowMonsterMergedHpBar;
 
-		// Token: 0x0401E64A RID: 124490
+		// Token: 0x040190E9 RID: 102633
 		[Nullable(2)]
 		private string TidMonsterGroupName;
 	}

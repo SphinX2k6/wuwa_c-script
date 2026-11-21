@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200401F RID: 16415
+	// Token: 0x02004460 RID: 17504
 	public struct IQuestScheduleDistanceValue : IFlatbufferObject
 	{
-		// Token: 0x17007371 RID: 29553
-		// (get) Token: 0x06017B7F RID: 97151 RVA: 0x0036BE46 File Offset: 0x0036A046
+		// Token: 0x17007973 RID: 31091
+		// (get) Token: 0x06019218 RID: 102936 RVA: 0x00395C3A File Offset: 0x00393E3A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017B80 RID: 97152 RVA: 0x0036BE53 File Offset: 0x0036A053
+		// Token: 0x06019219 RID: 102937 RVA: 0x00395C47 File Offset: 0x00393E47
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017B81 RID: 97153 RVA: 0x0036BE5C File Offset: 0x0036A05C
+		// Token: 0x0601921A RID: 102938 RVA: 0x00395C50 File Offset: 0x00393E50
 		public static IQuestScheduleDistanceValue GetRootAsIQuestScheduleDistanceValue(ByteBuffer _bb)
 		{
 			return IQuestScheduleDistanceValue.GetRootAsIQuestScheduleDistanceValue(_bb, default(IQuestScheduleDistanceValue));
 		}
 
-		// Token: 0x06017B82 RID: 97154 RVA: 0x0036BE78 File Offset: 0x0036A078
+		// Token: 0x0601921B RID: 102939 RVA: 0x00395C6C File Offset: 0x00393E6C
 		public static IQuestScheduleDistanceValue GetRootAsIQuestScheduleDistanceValue(ByteBuffer _bb, IQuestScheduleDistanceValue obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017B83 RID: 97155 RVA: 0x0036BE95 File Offset: 0x0036A095
+		// Token: 0x0601921C RID: 102940 RVA: 0x00395C89 File Offset: 0x00393E89
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017B84 RID: 97156 RVA: 0x0036BEA4 File Offset: 0x0036A0A4
+		// Token: 0x0601921D RID: 102941 RVA: 0x00395C98 File Offset: 0x00393E98
 		public IQuestScheduleDistanceValue __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007372 RID: 29554
-		// (get) Token: 0x06017B85 RID: 97157 RVA: 0x0036BEB4 File Offset: 0x0036A0B4
+		// Token: 0x17007974 RID: 31092
+		// (get) Token: 0x0601921E RID: 102942 RVA: 0x00395CA8 File Offset: 0x00393EA8
 		public EQuestScheduleType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007373 RID: 29555
-		// (get) Token: 0x06017B86 RID: 97158 RVA: 0x0036BEF0 File Offset: 0x0036A0F0
+		// Token: 0x17007975 RID: 31093
+		// (get) Token: 0x0601921F RID: 102943 RVA: 0x00395CE4 File Offset: 0x00393EE4
 		public Aki.UniverseEditor.Interface.Fbs.Action.IPosA? Pos
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007374 RID: 29556
-		// (get) Token: 0x06017B87 RID: 97159 RVA: 0x0036BF50 File Offset: 0x0036A150
+		// Token: 0x17007976 RID: 31094
+		// (get) Token: 0x06019220 RID: 102944 RVA: 0x00395D44 File Offset: 0x00393F44
 		public EDistanceMeasureMode DistanceMeasureMode
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017B88 RID: 97160 RVA: 0x0036BF8C File Offset: 0x0036A18C
+		// Token: 0x06019221 RID: 102945 RVA: 0x00395D80 File Offset: 0x00393F80
 		public static Offset<IQuestScheduleDistanceValue> CreateIQuestScheduleDistanceValue(FlatBufferBuilder builder, EQuestScheduleType Type = EQuestScheduleType.None, Offset<Aki.UniverseEditor.Interface.Fbs.Action.IPosA> PosOffset = default(Offset<Aki.UniverseEditor.Interface.Fbs.Action.IPosA>), EDistanceMeasureMode DistanceMeasureMode = EDistanceMeasureMode.Horizontal)
 		{
 			builder.StartTable(3);
@@ -104,37 +104,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestScheduleDistanceValue.EndIQuestScheduleDistanceValue(builder);
 		}
 
-		// Token: 0x06017B89 RID: 97161 RVA: 0x0036BFB0 File Offset: 0x0036A1B0
+		// Token: 0x06019222 RID: 102946 RVA: 0x00395DA4 File Offset: 0x00393FA4
 		public static void StartIQuestScheduleDistanceValue(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06017B8A RID: 97162 RVA: 0x0036BFB9 File Offset: 0x0036A1B9
+		// Token: 0x06019223 RID: 102947 RVA: 0x00395DAD File Offset: 0x00393FAD
 		public static void AddType(FlatBufferBuilder builder, EQuestScheduleType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017B8B RID: 97163 RVA: 0x0036BFC4 File Offset: 0x0036A1C4
+		// Token: 0x06019224 RID: 102948 RVA: 0x00395DB8 File Offset: 0x00393FB8
 		public static void AddPos(FlatBufferBuilder builder, Offset<Aki.UniverseEditor.Interface.Fbs.Action.IPosA> posOffset)
 		{
 			builder.AddOffset(1, posOffset.Value, 0);
 		}
 
-		// Token: 0x06017B8C RID: 97164 RVA: 0x0036BFD4 File Offset: 0x0036A1D4
+		// Token: 0x06019225 RID: 102949 RVA: 0x00395DC8 File Offset: 0x00393FC8
 		public static void AddDistanceMeasureMode(FlatBufferBuilder builder, EDistanceMeasureMode distanceMeasureMode)
 		{
 			builder.AddByte(2, (byte)distanceMeasureMode, 0);
 		}
 
-		// Token: 0x06017B8D RID: 97165 RVA: 0x0036BFDF File Offset: 0x0036A1DF
+		// Token: 0x06019226 RID: 102950 RVA: 0x00395DD3 File Offset: 0x00393FD3
 		public static Offset<IQuestScheduleDistanceValue> EndIQuestScheduleDistanceValue(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuestScheduleDistanceValue>(builder.EndTable());
 		}
 
-		// Token: 0x06017B8E RID: 97166 RVA: 0x0036BFEC File Offset: 0x0036A1EC
+		// Token: 0x06019227 RID: 102951 RVA: 0x00395DE0 File Offset: 0x00393FE0
 		public IQuestScheduleDistanceValueT UnPack()
 		{
 			IQuestScheduleDistanceValueT questScheduleDistanceValueT = new IQuestScheduleDistanceValueT();
@@ -142,7 +142,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return questScheduleDistanceValueT;
 		}
 
-		// Token: 0x06017B8F RID: 97167 RVA: 0x0036C008 File Offset: 0x0036A208
+		// Token: 0x06019228 RID: 102952 RVA: 0x00395DFC File Offset: 0x00393FFC
 		public void UnPackTo(IQuestScheduleDistanceValueT _o)
 		{
 			_o.Type = this.Type;
@@ -150,7 +150,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.DistanceMeasureMode = this.DistanceMeasureMode;
 		}
 
-		// Token: 0x06017B90 RID: 97168 RVA: 0x0036C05C File Offset: 0x0036A25C
+		// Token: 0x06019229 RID: 102953 RVA: 0x00395E50 File Offset: 0x00394050
 		public static Offset<IQuestScheduleDistanceValue> Pack(FlatBufferBuilder builder, IQuestScheduleDistanceValueT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestScheduleDistanceValue.CreateIQuestScheduleDistanceValue(builder, _o.Type, posOffset, _o.DistanceMeasureMode);
 		}
 
-		// Token: 0x0400BB47 RID: 47943
+		// Token: 0x0400C52E RID: 50478
 		private Table __p;
 	}
 }

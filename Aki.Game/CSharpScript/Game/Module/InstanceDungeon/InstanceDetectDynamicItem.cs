@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005862 RID: 22626
+	// Token: 0x0200483A RID: 18490
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InstanceDetectDynamicItem : UiPanelBase, IDynamicScrollBaseItem<InstanceDetectionDynamicData>
 	{
-		// Token: 0x06039860 RID: 235616 RVA: 0x00DA856C File Offset: 0x00DA676C
+		// Token: 0x0602E77D RID: 190333 RVA: 0x00CF7294 File Offset: 0x00CF5494
 		public UniTask Init(UUIItem actor)
 		{
 			InstanceDetectDynamicItem.<Init>d__0 <Init>d__;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039861 RID: 235617 RVA: 0x00DA85B8 File Offset: 0x00DA67B8
+		// Token: 0x0602E77E RID: 190334 RVA: 0x00CF72E0 File Offset: 0x00CF54E0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039862 RID: 235618 RVA: 0x00DA8624 File Offset: 0x00DA6824
+		// Token: 0x0602E77F RID: 190335 RVA: 0x00CF734C File Offset: 0x00CF554C
 		public FVector2D GetItemSize(InstanceDetectionDynamicData data)
 		{
 			if (data.InstanceSeriesTitle != 0)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return new FVector2D(item2.GetWidth(), item2.GetHeight());
 		}
 
-		// Token: 0x06039863 RID: 235619 RVA: 0x00DA866C File Offset: 0x00DA686C
+		// Token: 0x0602E780 RID: 190336 RVA: 0x00CF7394 File Offset: 0x00CF5594
 		public void ClearItem()
 		{
 		}

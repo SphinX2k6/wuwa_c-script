@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A5A RID: 6746
+	// Token: 0x02001BEF RID: 7151
 	public class IFadeBackgroundUiPrefabType_SetValue
 	{
-		// Token: 0x04005930 RID: 22832
+		// Token: 0x04005D95 RID: 23957
 		public EFadeBackgroundUiPrefabType Type;
 	}
 }

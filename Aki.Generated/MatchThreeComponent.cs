@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DFA RID: 3578
+	// Token: 0x02000EDF RID: 3807
 	public struct MatchThreeComponent : IFlatbufferObject
 	{
-		// Token: 0x17001E75 RID: 7797
-		// (get) Token: 0x06009265 RID: 37477 RVA: 0x00281858 File Offset: 0x0027FA58
+		// Token: 0x17001ED9 RID: 7897
+		// (get) Token: 0x06009881 RID: 39041 RVA: 0x0029F854 File Offset: 0x0029DA54
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009266 RID: 37478 RVA: 0x00281865 File Offset: 0x0027FA65
+		// Token: 0x06009882 RID: 39042 RVA: 0x0029F861 File Offset: 0x0029DA61
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009267 RID: 37479 RVA: 0x0028186C File Offset: 0x0027FA6C
+		// Token: 0x06009883 RID: 39043 RVA: 0x0029F868 File Offset: 0x0029DA68
 		public static MatchThreeComponent GetRootAsMatchThreeComponent(ByteBuffer _bb)
 		{
 			return MatchThreeComponent.GetRootAsMatchThreeComponent(_bb, default(MatchThreeComponent));
 		}
 
-		// Token: 0x06009268 RID: 37480 RVA: 0x00281888 File Offset: 0x0027FA88
+		// Token: 0x06009884 RID: 39044 RVA: 0x0029F884 File Offset: 0x0029DA84
 		public static MatchThreeComponent GetRootAsMatchThreeComponent(ByteBuffer _bb, MatchThreeComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009269 RID: 37481 RVA: 0x002818A5 File Offset: 0x0027FAA5
+		// Token: 0x06009885 RID: 39045 RVA: 0x0029F8A1 File Offset: 0x0029DAA1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600926A RID: 37482 RVA: 0x002818B4 File Offset: 0x0027FAB4
+		// Token: 0x06009886 RID: 39046 RVA: 0x0029F8B0 File Offset: 0x0029DAB0
 		public MatchThreeComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001E76 RID: 7798
-		// (get) Token: 0x0600926B RID: 37483 RVA: 0x002818C4 File Offset: 0x0027FAC4
+		// Token: 0x17001EDA RID: 7898
+		// (get) Token: 0x06009887 RID: 39047 RVA: 0x0029F8C0 File Offset: 0x0029DAC0
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001E77 RID: 7799
-		// (get) Token: 0x0600926C RID: 37484 RVA: 0x00281900 File Offset: 0x0027FB00
+		// Token: 0x17001EDB RID: 7899
+		// (get) Token: 0x06009888 RID: 39048 RVA: 0x0029F8FC File Offset: 0x0029DAFC
 		public int Type
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600926D RID: 37485 RVA: 0x0028193C File Offset: 0x0027FB3C
+		// Token: 0x06009889 RID: 39049 RVA: 0x0029F938 File Offset: 0x0029DB38
 		public int Params(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001E78 RID: 7800
-		// (get) Token: 0x0600926E RID: 37486 RVA: 0x0028197C File Offset: 0x0027FB7C
+		// Token: 0x17001EDC RID: 7900
+		// (get) Token: 0x0600988A RID: 39050 RVA: 0x0029F978 File Offset: 0x0029DB78
 		public int ParamsLength
 		{
 			get
@@ -105,37 +105,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600926F RID: 37487 RVA: 0x002819A7 File Offset: 0x0027FBA7
+		// Token: 0x0600988B RID: 39051 RVA: 0x0029F9A3 File Offset: 0x0029DBA3
 		public Span<int> GetParamsBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06009270 RID: 37488 RVA: 0x002819B6 File Offset: 0x0027FBB6
+		// Token: 0x0600988C RID: 39052 RVA: 0x0029F9B2 File Offset: 0x0029DBB2
 		public int[] GetParamsArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06009271 RID: 37489 RVA: 0x002819D0 File Offset: 0x0027FBD0
+		// Token: 0x0600988D RID: 39053 RVA: 0x0029F9C9 File Offset: 0x0029DBC9
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ParamsIter()或GetParamsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Params()
+		public int[] Params()
 		{
-			MatchThreeComponent matchThreeComponent = this;
-			return matchThreeComponent.GetParamsArray() ?? Array.Empty<int>();
+			return this.GetParamsArray();
 		}
 
-		// Token: 0x06009272 RID: 37490 RVA: 0x002819F4 File Offset: 0x0027FBF4
+		// Token: 0x0600988E RID: 39054 RVA: 0x0029F9D1 File Offset: 0x0029DBD1
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ParamsIter()
+		public IEnumerable<int> ParamsIter()
 		{
 			MatchThreeComponent.<ParamsIter>d__18 <ParamsIter>d__ = new MatchThreeComponent.<ParamsIter>d__18(-2);
 			<ParamsIter>d__.<>3__<>4__this = this;
 			return <ParamsIter>d__;
 		}
 
-		// Token: 0x04004E9A RID: 20122
+		// Token: 0x0400547F RID: 21631
 		private Table __p;
 	}
 }

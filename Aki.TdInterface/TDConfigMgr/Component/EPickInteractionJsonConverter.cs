@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009D1 RID: 2513
+	// Token: 0x02000A96 RID: 2710
 	public class EPickInteractionJsonConverter : JsonConverter<EPickInteraction>
 	{
-		// Token: 0x060037DF RID: 14303 RVA: 0x0009115C File Offset: 0x0008F35C
+		// Token: 0x06003BB7 RID: 15287 RVA: 0x00099A1C File Offset: 0x00097C1C
 		public override EPickInteraction Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EPickInteractionExtensions.FromString(@string);
 		}
 
-		// Token: 0x060037E0 RID: 14304 RVA: 0x00091180 File Offset: 0x0008F380
+		// Token: 0x06003BB8 RID: 15288 RVA: 0x00099A40 File Offset: 0x00097C40
 		public override void Write(Utf8JsonWriter writer, EPickInteraction value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

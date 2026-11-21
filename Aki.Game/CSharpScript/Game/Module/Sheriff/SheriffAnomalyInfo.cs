@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,12 +7,12 @@ using CSharpScript.Game.Module.Map;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C32 RID: 19506
+	// Token: 0x02003BE3 RID: 15331
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffAnomalyInfo
 	{
-		// Token: 0x06032781 RID: 206721 RVA: 0x00BC2C38 File Offset: 0x00BC0E38
+		// Token: 0x06027534 RID: 161076 RVA: 0x00B07860 File Offset: 0x00B05A60
 		public void UpdateByProto(SheriffAnomalyInfo proto, int? zoneId = null)
 		{
 			if (zoneId != null)
@@ -24,7 +23,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			this.ClueIds = ((proto.ClueIds != null) ? new List<int>(proto.ClueIds) : this.ClueIds);
 			if (proto.ProgressIds != null)
 			{
-				this.DoProgressIdLogic(proto.ProgressIds.ToList<int>());
+				this.DoProgressIdLogic(proto.ProgressIds);
 			}
 			this.Progress = this.CalAnomalyProgress();
 			this.EndingId = proto.EndingId;
@@ -42,8 +41,8 @@ namespace CSharpScript.Game.Module.Sheriff
 			this.State = this.CalAnomalyState();
 		}
 
-		// Token: 0x06032782 RID: 206722 RVA: 0x00BC2DA0 File Offset: 0x00BC0FA0
-		protected void DoProgressIdLogic(List<int> progressIds)
+		// Token: 0x06027535 RID: 161077 RVA: 0x00B079C4 File Offset: 0x00B05BC4
+		protected void DoProgressIdLogic(IEnumerable<int> progressIds)
 		{
 			this.ProgressIds.Clear();
 			Dictionary<int, ValueTuple<int, int>> dictionary = new Dictionary<int, ValueTuple<int, int>>();
@@ -83,7 +82,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			}
 		}
 
-		// Token: 0x06032783 RID: 206723 RVA: 0x00BC2F28 File Offset: 0x00BC1128
+		// Token: 0x06027536 RID: 161078 RVA: 0x00B07B40 File Offset: 0x00B05D40
 		private int CalAnomalyProgress()
 		{
 			int num = 0;
@@ -98,7 +97,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return num;
 		}
 
-		// Token: 0x06032784 RID: 206724 RVA: 0x00BC2FA4 File Offset: 0x00BC11A4
+		// Token: 0x06027537 RID: 161079 RVA: 0x00B07BBC File Offset: 0x00B05DBC
 		public ESheriffAnomalyState CalAnomalyState()
 		{
 			SheriffAnomaly? anomalyConfigById = SheriffConfig.Instance.GetAnomalyConfigById(this.AnomalyId);
@@ -134,46 +133,46 @@ namespace CSharpScript.Game.Module.Sheriff
 			return ESheriffAnomalyState.Opened;
 		}
 
-		// Token: 0x0401ADD3 RID: 110035
+		// Token: 0x04015730 RID: 87856
 		public int ZoneId;
 
-		// Token: 0x0401ADD4 RID: 110036
+		// Token: 0x04015731 RID: 87857
 		public int AnomalyId;
 
-		// Token: 0x0401ADD5 RID: 110037
+		// Token: 0x04015732 RID: 87858
 		public List<int> ClueIds = new List<int>();
 
-		// Token: 0x0401ADD6 RID: 110038
+		// Token: 0x04015733 RID: 87859
 		public List<int> ProgressIds = new List<int>();
 
-		// Token: 0x0401ADD7 RID: 110039
+		// Token: 0x04015734 RID: 87860
 		public int EndingId;
 
-		// Token: 0x0401ADD8 RID: 110040
+		// Token: 0x04015735 RID: 87861
 		public long EndingTime;
 
-		// Token: 0x0401ADD9 RID: 110041
+		// Token: 0x04015736 RID: 87862
 		public int Progress;
 
-		// Token: 0x0401ADDA RID: 110042
+		// Token: 0x04015737 RID: 87863
 		public ESheriffAnomalyState State;
 
-		// Token: 0x0401ADDB RID: 110043
+		// Token: 0x04015738 RID: 87864
 		public bool IsActivated;
 
-		// Token: 0x0401ADDC RID: 110044
+		// Token: 0x04015739 RID: 87865
 		public int CriminalId;
 
-		// Token: 0x0401ADDD RID: 110045
+		// Token: 0x0401573A RID: 87866
 		public bool IsUnlocked;
 
-		// Token: 0x0401ADDE RID: 110046
+		// Token: 0x0401573B RID: 87867
 		public int MarkId;
 
-		// Token: 0x0401ADDF RID: 110047
+		// Token: 0x0401573C RID: 87868
 		protected bool HasInit;
 
-		// Token: 0x0401ADE0 RID: 110048
+		// Token: 0x0401573D RID: 87869
 		public bool NeedOpenReport;
 	}
 }

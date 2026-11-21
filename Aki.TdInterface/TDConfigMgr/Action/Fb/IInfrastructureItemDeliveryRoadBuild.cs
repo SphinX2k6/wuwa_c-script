@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029A2 RID: 10658
+	// Token: 0x02002C8F RID: 11407
 	public class IInfrastructureItemDeliveryRoadBuild : IInfrastructureItemDeliveryType
 	{
-		// Token: 0x0600EBE2 RID: 60386 RVA: 0x00227A1F File Offset: 0x00225C1F
-		[NullableContext(1)]
+		// Token: 0x0600FA79 RID: 64121 RVA: 0x002453A4 File Offset: 0x002435A4
 		public static IInfrastructureItemDeliveryRoadBuild Create(IInfrastructureItemDeliveryRoadBuild? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A60 RID: 19040
-		// (get) Token: 0x0600EBE3 RID: 60387 RVA: 0x00227A3E File Offset: 0x00225C3E
+		// Token: 0x17004E09 RID: 19977
+		// (get) Token: 0x0600FA7A RID: 64122 RVA: 0x002453C3 File Offset: 0x002435C3
 		public override EInfrastructureItemDeliveryType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A61 RID: 19041
-		// (get) Token: 0x0600EBE4 RID: 60388 RVA: 0x00227A4B File Offset: 0x00225C4B
+		// Token: 0x17004E0A RID: 19978
+		// (get) Token: 0x0600FA7B RID: 64123 RVA: 0x002453D0 File Offset: 0x002435D0
 		public virtual int Id
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081E4 RID: 33252
+		// Token: 0x040088D5 RID: 35029
 		private IInfrastructureItemDeliveryRoadBuild Instance;
 	}
 }

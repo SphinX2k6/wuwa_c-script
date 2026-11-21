@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EEF RID: 28399
+	// Token: 0x0200606F RID: 24687
 	internal class DollGrabMachineHelpInfoCaptionPanel : UiPanelBase
 	{
-		// Token: 0x06045284 RID: 283268 RVA: 0x0111AE8C File Offset: 0x0111908C
+		// Token: 0x0603B42D RID: 242733 RVA: 0x010C4C1C File Offset: 0x010C2E1C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06045285 RID: 283269 RVA: 0x0111AFF8 File Offset: 0x011191F8
+		// Token: 0x0603B42E RID: 242734 RVA: 0x010C4D88 File Offset: 0x010C2F88
 		protected override void OnBeforeCreate()
 		{
 			UUIButtonComponent button = base.GetButton(2);
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			btnHelpInfo.SetUIActive(false);
 		}
 
-		// Token: 0x06045286 RID: 283270 RVA: 0x0111B04A File Offset: 0x0111924A
+		// Token: 0x0603B42F RID: 242735 RVA: 0x010C4DDA File Offset: 0x010C2FDA
 		private void OnBackButtonClick()
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.DollGrabMachineHelpInfoView))
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			}
 		}
 
-		// Token: 0x04024069 RID: 147561
+		// Token: 0x0401F31C RID: 127772
 		[Nullable(2)]
 		private UUIItem BtnHelpInfo;
 	}

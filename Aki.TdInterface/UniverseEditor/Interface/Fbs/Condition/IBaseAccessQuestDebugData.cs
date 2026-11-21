@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004973 RID: 18803
+	// Token: 0x02004E2A RID: 20010
 	public struct IBaseAccessQuestDebugData : IFlatbufferObject
 	{
-		// Token: 0x170087D0 RID: 34768
-		// (get) Token: 0x0601D4EC RID: 120044 RVA: 0x00422427 File Offset: 0x00420627
+		// Token: 0x17008E8B RID: 36491
+		// (get) Token: 0x0601EF11 RID: 126737 RVA: 0x004528DB File Offset: 0x00450ADB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601D4ED RID: 120045 RVA: 0x00422434 File Offset: 0x00420634
+		// Token: 0x0601EF12 RID: 126738 RVA: 0x004528E8 File Offset: 0x00450AE8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D4EE RID: 120046 RVA: 0x0042243C File Offset: 0x0042063C
+		// Token: 0x0601EF13 RID: 126739 RVA: 0x004528F0 File Offset: 0x00450AF0
 		public static IBaseAccessQuestDebugData GetRootAsIBaseAccessQuestDebugData(ByteBuffer _bb)
 		{
 			return IBaseAccessQuestDebugData.GetRootAsIBaseAccessQuestDebugData(_bb, default(IBaseAccessQuestDebugData));
 		}
 
-		// Token: 0x0601D4EF RID: 120047 RVA: 0x00422458 File Offset: 0x00420658
+		// Token: 0x0601EF14 RID: 126740 RVA: 0x0045290C File Offset: 0x00450B0C
 		public static IBaseAccessQuestDebugData GetRootAsIBaseAccessQuestDebugData(ByteBuffer _bb, IBaseAccessQuestDebugData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D4F0 RID: 120048 RVA: 0x00422475 File Offset: 0x00420675
+		// Token: 0x0601EF15 RID: 126741 RVA: 0x00452929 File Offset: 0x00450B29
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D4F1 RID: 120049 RVA: 0x00422484 File Offset: 0x00420684
+		// Token: 0x0601EF16 RID: 126742 RVA: 0x00452938 File Offset: 0x00450B38
 		public IBaseAccessQuestDebugData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170087D1 RID: 34769
-		// (get) Token: 0x0601D4F2 RID: 120050 RVA: 0x00422494 File Offset: 0x00420694
+		// Token: 0x17008E8C RID: 36492
+		// (get) Token: 0x0601EF17 RID: 126743 RVA: 0x00452948 File Offset: 0x00450B48
 		public EConditionLogicType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x170087D2 RID: 34770
-		// (get) Token: 0x0601D4F3 RID: 120051 RVA: 0x004224D0 File Offset: 0x004206D0
+		// Token: 0x17008E8D RID: 36493
+		// (get) Token: 0x0601EF18 RID: 126744 RVA: 0x00452984 File Offset: 0x00450B84
 		public IAccessQuestCondition? BaseAccessQuestConditionGroup
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601D4F4 RID: 120052 RVA: 0x0042252D File Offset: 0x0042072D
+		// Token: 0x0601EF19 RID: 126745 RVA: 0x004529E1 File Offset: 0x00450BE1
 		public static Offset<IBaseAccessQuestDebugData> CreateIBaseAccessQuestDebugData(FlatBufferBuilder builder, EConditionLogicType Type = EConditionLogicType.BaseAccessQuest, Offset<IAccessQuestCondition> BaseAccessQuestConditionGroupOffset = default(Offset<IAccessQuestCondition>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IBaseAccessQuestDebugData.EndIBaseAccessQuestDebugData(builder);
 		}
 
-		// Token: 0x0601D4F5 RID: 120053 RVA: 0x0042254A File Offset: 0x0042074A
+		// Token: 0x0601EF1A RID: 126746 RVA: 0x004529FE File Offset: 0x00450BFE
 		public static void StartIBaseAccessQuestDebugData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601D4F6 RID: 120054 RVA: 0x00422553 File Offset: 0x00420753
+		// Token: 0x0601EF1B RID: 126747 RVA: 0x00452A07 File Offset: 0x00450C07
 		public static void AddType(FlatBufferBuilder builder, EConditionLogicType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601D4F7 RID: 120055 RVA: 0x0042255E File Offset: 0x0042075E
+		// Token: 0x0601EF1C RID: 126748 RVA: 0x00452A12 File Offset: 0x00450C12
 		public static void AddBaseAccessQuestConditionGroup(FlatBufferBuilder builder, Offset<IAccessQuestCondition> baseAccessQuestConditionGroupOffset)
 		{
 			builder.AddOffset(1, baseAccessQuestConditionGroupOffset.Value, 0);
 		}
 
-		// Token: 0x0601D4F8 RID: 120056 RVA: 0x0042256E File Offset: 0x0042076E
+		// Token: 0x0601EF1D RID: 126749 RVA: 0x00452A22 File Offset: 0x00450C22
 		public static Offset<IBaseAccessQuestDebugData> EndIBaseAccessQuestDebugData(FlatBufferBuilder builder)
 		{
 			return new Offset<IBaseAccessQuestDebugData>(builder.EndTable());
 		}
 
-		// Token: 0x0601D4F9 RID: 120057 RVA: 0x0042257C File Offset: 0x0042077C
+		// Token: 0x0601EF1E RID: 126750 RVA: 0x00452A30 File Offset: 0x00450C30
 		public IBaseAccessQuestDebugDataT UnPack()
 		{
 			IBaseAccessQuestDebugDataT baseAccessQuestDebugDataT = new IBaseAccessQuestDebugDataT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return baseAccessQuestDebugDataT;
 		}
 
-		// Token: 0x0601D4FA RID: 120058 RVA: 0x00422598 File Offset: 0x00420798
+		// Token: 0x0601EF1F RID: 126751 RVA: 0x00452A4C File Offset: 0x00450C4C
 		public void UnPackTo(IBaseAccessQuestDebugDataT _o)
 		{
 			_o.Type = this.Type;
 			_o.BaseAccessQuestConditionGroup = ((this.BaseAccessQuestConditionGroup != null) ? this.BaseAccessQuestConditionGroup.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601D4FB RID: 120059 RVA: 0x004225E0 File Offset: 0x004207E0
+		// Token: 0x0601EF20 RID: 126752 RVA: 0x00452A94 File Offset: 0x00450C94
 		public static Offset<IBaseAccessQuestDebugData> Pack(FlatBufferBuilder builder, IBaseAccessQuestDebugDataT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IBaseAccessQuestDebugData.CreateIBaseAccessQuestDebugData(builder, _o.Type, baseAccessQuestConditionGroupOffset);
 		}
 
-		// Token: 0x0400D178 RID: 53624
+		// Token: 0x0400DC40 RID: 56384
 		private Table __p;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FB6 RID: 8118
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021F9 RID: 8697
 	public class ITeleportTransitionWithPlayFlow : ITeleportTransitionType
 	{
-		// Token: 0x0600B28E RID: 45710 RVA: 0x001A013C File Offset: 0x0019E33C
+		// Token: 0x0600BD92 RID: 48530 RVA: 0x001B64EC File Offset: 0x001B46EC
 		private ITeleportTransitionWithPlayFlow_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B28F RID: 45711 RVA: 0x001A0174 File Offset: 0x0019E374
+		// Token: 0x0600BD93 RID: 48531 RVA: 0x001B6524 File Offset: 0x001B4724
 		public static ITeleportTransitionWithPlayFlow Create([Nullable(2)] ITeleportTransitionWithPlayFlow instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B290 RID: 45712 RVA: 0x001A0187 File Offset: 0x0019E387
+		// Token: 0x0600BD94 RID: 48532 RVA: 0x001B6537 File Offset: 0x001B4737
 		public static ITeleportTransitionWithPlayFlow CreateFromSetValue([Nullable(2)] ITeleportTransitionWithPlayFlow_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B291 RID: 45713 RVA: 0x001A019A File Offset: 0x0019E39A
+		// Token: 0x0600BD95 RID: 48533 RVA: 0x001B654A File Offset: 0x001B474A
 		public new ITeleportTransitionWithPlayFlow_SetValue ToSetValue()
 		{
 			return new ITeleportTransitionWithPlayFlow_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700370E RID: 14094
-		// (get) Token: 0x0600B292 RID: 45714 RVA: 0x001A01D1 File Offset: 0x0019E3D1
-		// (set) Token: 0x0600B293 RID: 45715 RVA: 0x001A01FC File Offset: 0x0019E3FC
+		// Token: 0x170039E3 RID: 14819
+		// (get) Token: 0x0600BD96 RID: 48534 RVA: 0x001B6581 File Offset: 0x001B4781
+		// (set) Token: 0x0600BD97 RID: 48535 RVA: 0x001B65AC File Offset: 0x001B47AC
 		public override ETeleportTransitionType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700370F RID: 14095
-		// (get) Token: 0x0600B294 RID: 45716 RVA: 0x001A020C File Offset: 0x0019E40C
-		// (set) Token: 0x0600B295 RID: 45717 RVA: 0x001A026D File Offset: 0x0019E46D
+		// Token: 0x170039E4 RID: 14820
+		// (get) Token: 0x0600BD98 RID: 48536 RVA: 0x001B65BC File Offset: 0x001B47BC
+		// (set) Token: 0x0600BD99 RID: 48537 RVA: 0x001B661D File Offset: 0x001B481D
 		public virtual PlayFlow Flow
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003710 RID: 14096
-		// (get) Token: 0x0600B296 RID: 45718 RVA: 0x001A0284 File Offset: 0x0019E484
-		// (set) Token: 0x0600B297 RID: 45719 RVA: 0x001A02E5 File Offset: 0x0019E4E5
+		// Token: 0x170039E5 RID: 14821
+		// (get) Token: 0x0600BD9A RID: 48538 RVA: 0x001B6634 File Offset: 0x001B4834
+		// (set) Token: 0x0600BD9B RID: 48539 RVA: 0x001B6695 File Offset: 0x001B4895
 		[Nullable(2)]
 		public virtual IFadeBackgroundFadeInEffect FadeInEffect
 		{
@@ -148,9 +146,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003711 RID: 14097
-		// (get) Token: 0x0600B298 RID: 45720 RVA: 0x001A02FC File Offset: 0x0019E4FC
-		// (set) Token: 0x0600B299 RID: 45721 RVA: 0x001A035D File Offset: 0x0019E55D
+		// Token: 0x170039E6 RID: 14822
+		// (get) Token: 0x0600BD9C RID: 48540 RVA: 0x001B66AC File Offset: 0x001B48AC
+		// (set) Token: 0x0600BD9D RID: 48541 RVA: 0x001B670D File Offset: 0x001B490D
 		[Nullable(2)]
 		public virtual IFadeBackgroundFadeOutEffect FadeOutEffect
 		{
@@ -181,30 +179,30 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006BD1 RID: 27601
+		// Token: 0x040071CC RID: 29132
 		[Nullable(2)]
 		protected new ITeleportTransitionWithPlayFlow FbInstance;
 
-		// Token: 0x04006BD2 RID: 27602
+		// Token: 0x040071CD RID: 29133
 		[Nullable(2)]
 		protected new ITeleportTransitionWithPlayFlow_SetValue PocoInterface;
 
-		// Token: 0x04006BD3 RID: 27603
+		// Token: 0x040071CE RID: 29134
 		private PlayFlow _FlowCache;
 
-		// Token: 0x04006BD4 RID: 27604
+		// Token: 0x040071CF RID: 29135
 		private bool _FlowInited;
 
-		// Token: 0x04006BD5 RID: 27605
+		// Token: 0x040071D0 RID: 29136
 		private IFadeBackgroundFadeInEffect _FadeInEffectCache;
 
-		// Token: 0x04006BD6 RID: 27606
+		// Token: 0x040071D1 RID: 29137
 		private bool _FadeInEffectInited;
 
-		// Token: 0x04006BD7 RID: 27607
+		// Token: 0x040071D2 RID: 29138
 		private IFadeBackgroundFadeOutEffect _FadeOutEffectCache;
 
-		// Token: 0x04006BD8 RID: 27608
+		// Token: 0x040071D3 RID: 29139
 		private bool _FadeOutEffectInited;
 	}
 }

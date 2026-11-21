@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000BC0 RID: 3008
+	// Token: 0x0200020A RID: 522
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EWorldPartitionRuntimeCellState")]
 	public enum EWorldPartitionRuntimeCellState : byte
 	{
-		// Token: 0x040052CA RID: 21194
+		// Token: 0x04000D1A RID: 3354
 		Unloaded,
-		// Token: 0x040052CB RID: 21195
+		// Token: 0x04000D1B RID: 3355
 		Loaded,
-		// Token: 0x040052CC RID: 21196
+		// Token: 0x04000D1C RID: 3356
 		Activated,
-		// Token: 0x040052CD RID: 21197
+		// Token: 0x04000D1D RID: 3357
 		EWorldPartitionRuntimeCellState_MAX
 	}
 }

@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000F5A RID: 3930
+// Token: 0x0200040F RID: 1039
 public class DrinksDialogBubble : UiPanelBase
 {
-	// Token: 0x0600648B RID: 25739 RVA: 0x0013E404 File Offset: 0x0013C604
+	// Token: 0x06003823 RID: 14371 RVA: 0x00146CA0 File Offset: 0x00144EA0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class DrinksDialogBubble : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600648C RID: 25740 RVA: 0x0013E460 File Offset: 0x0013C660
+	// Token: 0x06003824 RID: 14372 RVA: 0x00146CFC File Offset: 0x00144EFC
 	protected override void OnStart()
 	{
 		this.LevelSequence = new LevelSequencePlayer(this.RootItem);
@@ -29,7 +29,7 @@ public class DrinksDialogBubble : UiPanelBase
 		base.SetUiActive(false);
 	}
 
-	// Token: 0x0600648D RID: 25741 RVA: 0x0013E4C8 File Offset: 0x0013C6C8
+	// Token: 0x06003825 RID: 14373 RVA: 0x00146D64 File Offset: 0x00144F64
 	[NullableContext(1)]
 	public void ActivateBubble(string configId, bool isLike)
 	{
@@ -86,7 +86,7 @@ public class DrinksDialogBubble : UiPanelBase
 		}, (float)dialog.Value.Delay, null, null, true, 1f);
 	}
 
-	// Token: 0x0600648E RID: 25742 RVA: 0x0013E5E8 File Offset: 0x0013C7E8
+	// Token: 0x06003826 RID: 14374 RVA: 0x00146E84 File Offset: 0x00145084
 	public void DeactivateBubble(bool force = false)
 	{
 		if (this.EventHandle != 0)
@@ -122,7 +122,7 @@ public class DrinksDialogBubble : UiPanelBase
 		base.SetUiActive(false);
 	}
 
-	// Token: 0x0600648F RID: 25743 RVA: 0x0013E6A2 File Offset: 0x0013C8A2
+	// Token: 0x06003827 RID: 14375 RVA: 0x00146F3E File Offset: 0x0014513E
 	[NullableContext(1)]
 	private void OnSequenceStop(string sequenceName)
 	{
@@ -132,27 +132,27 @@ public class DrinksDialogBubble : UiPanelBase
 		}
 	}
 
-	// Token: 0x04002DA3 RID: 11683
+	// Token: 0x04002E3C RID: 11836
 	protected int EventHandle;
 
-	// Token: 0x04002DA4 RID: 11684
+	// Token: 0x04002E3D RID: 11837
 	[Nullable(2)]
 	protected TimerHandle TimerDelay;
 
-	// Token: 0x04002DA5 RID: 11685
+	// Token: 0x04002E3E RID: 11838
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequence;
 
-	// Token: 0x020075A6 RID: 30118
+	// Token: 0x0200673A RID: 26426
 	private static class EItem
 	{
-		// Token: 0x04026E39 RID: 159289
+		// Token: 0x04022184 RID: 139652
 		public const int TexIcon = 0;
 
-		// Token: 0x04026E3A RID: 159290
+		// Token: 0x04022185 RID: 139653
 		public const int Txt = 1;
 
-		// Token: 0x04026E3B RID: 159291
+		// Token: 0x04022186 RID: 139654
 		public const int PanelGood = 2;
 	}
 }

@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Manufacture.Compose;
 
 namespace CSharpScript.Game.RedDot.RedDots.ComposeSystem
 {
-	// Token: 0x020045F9 RID: 17913
+	// Token: 0x02003522 RID: 13602
 	public class RedDotComposeLevel : RedDotBase
 	{
-		// Token: 0x0602E323 RID: 189219 RVA: 0x00AAE4D4 File Offset: 0x00AAC6D4
+		// Token: 0x06022A18 RID: 141848 RVA: 0x009DABC8 File Offset: 0x009D8DC8
 		protected override void AddCheckEvent()
 		{
 			EventSystem.Instance.Add(EEventName.UpdateComposeInfo, new Action(base.EventCheck));
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.RedDot.RedDots.ComposeSystem
 			EventSystem.Instance.Add(EEventName.UpgradeComposeLevel, new Action(base.EventCheck));
 		}
 
-		// Token: 0x0602E324 RID: 189220 RVA: 0x00AAE554 File Offset: 0x00AAC754
+		// Token: 0x06022A19 RID: 141849 RVA: 0x009DAC48 File Offset: 0x009D8E48
 		protected override void RemoveCheckEvent()
 		{
 			EventSystem.Instance.Remove(EEventName.UpdateComposeInfo, new Action(base.EventCheck));
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.RedDot.RedDots.ComposeSystem
 			EventSystem.Instance.Remove(EEventName.UpgradeComposeLevel, new Action(base.EventCheck));
 		}
 
-		// Token: 0x0602E325 RID: 189221 RVA: 0x00AAE5D1 File Offset: 0x00AAC7D1
+		// Token: 0x06022A1A RID: 141850 RVA: 0x009DACC5 File Offset: 0x009D8EC5
 		protected override bool OnCheck(int uId = 0)
 		{
 			return ComposeController.Instance.CheckCanGetComposeLevel();

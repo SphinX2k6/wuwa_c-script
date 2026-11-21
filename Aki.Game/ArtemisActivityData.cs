@@ -4,11 +4,11 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x020010E9 RID: 4329
+// Token: 0x0200059D RID: 1437
 public class ArtemisActivityData : ActivityBaseData
 {
-	// Token: 0x17000987 RID: 2439
-	// (get) Token: 0x060070BB RID: 28859 RVA: 0x0016FEB2 File Offset: 0x0016E0B2
+	// Token: 0x170009A7 RID: 2471
+	// (get) Token: 0x06004451 RID: 17489 RVA: 0x0017886E File Offset: 0x00176A6E
 	public int GetCacheActivityId
 	{
 		get
@@ -17,8 +17,8 @@ public class ArtemisActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000988 RID: 2440
-	// (get) Token: 0x060070BC RID: 28860 RVA: 0x0016FEBA File Offset: 0x0016E0BA
+	// Token: 0x170009A8 RID: 2472
+	// (get) Token: 0x06004452 RID: 17490 RVA: 0x00178876 File Offset: 0x00176A76
 	public int GetUnlockIndex
 	{
 		get
@@ -27,8 +27,8 @@ public class ArtemisActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000989 RID: 2441
-	// (get) Token: 0x060070BD RID: 28861 RVA: 0x0016FEC2 File Offset: 0x0016E0C2
+	// Token: 0x170009A9 RID: 2473
+	// (get) Token: 0x06004453 RID: 17491 RVA: 0x0017887E File Offset: 0x00176A7E
 	public int GetRewardedIndex
 	{
 		get
@@ -37,7 +37,7 @@ public class ArtemisActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060070BE RID: 28862 RVA: 0x0016FECC File Offset: 0x0016E0CC
+	// Token: 0x06004454 RID: 17492 RVA: 0x00178888 File Offset: 0x00176A88
 	[NullableContext(1)]
 	protected override void PhraseEx(ActivityData data)
 	{
@@ -55,25 +55,25 @@ public class ArtemisActivityData : ActivityBaseData
 		this.SetRewardedIndex(artemisActivityInfo.RewardedIndex);
 	}
 
-	// Token: 0x060070BF RID: 28863 RVA: 0x0016FF0C File Offset: 0x0016E10C
+	// Token: 0x06004455 RID: 17493 RVA: 0x001788C8 File Offset: 0x00176AC8
 	public void SetCacheActivityId(int id)
 	{
 		this.CacheActivityId = id;
 	}
 
-	// Token: 0x060070C0 RID: 28864 RVA: 0x0016FF15 File Offset: 0x0016E115
+	// Token: 0x06004456 RID: 17494 RVA: 0x001788D1 File Offset: 0x00176AD1
 	public void SetUnlockIndex(int index)
 	{
 		this.UnlockIndex = index;
 	}
 
-	// Token: 0x060070C1 RID: 28865 RVA: 0x0016FF1E File Offset: 0x0016E11E
+	// Token: 0x06004457 RID: 17495 RVA: 0x001788DA File Offset: 0x00176ADA
 	public void SetRewardedIndex(int index)
 	{
 		this.RewardedIndex = index;
 	}
 
-	// Token: 0x060070C2 RID: 28866 RVA: 0x0016FF28 File Offset: 0x0016E128
+	// Token: 0x06004458 RID: 17496 RVA: 0x001788E4 File Offset: 0x00176AE4
 	public EArtemisState? GetArtemisStatus(int day)
 	{
 		int num = day + 1;
@@ -91,19 +91,19 @@ public class ArtemisActivityData : ActivityBaseData
 		return new EArtemisState?(EArtemisState.Lock);
 	}
 
-	// Token: 0x060070C3 RID: 28867 RVA: 0x0016FF6A File Offset: 0x0016E16A
+	// Token: 0x06004459 RID: 17497 RVA: 0x00178926 File Offset: 0x00176B26
 	public int GetArtemisRewardedIndex()
 	{
 		return Math.Max(this.RewardedIndex - 1, 0);
 	}
 
-	// Token: 0x060070C4 RID: 28868 RVA: 0x0016FF7A File Offset: 0x0016E17A
+	// Token: 0x0600445A RID: 17498 RVA: 0x00178936 File Offset: 0x00176B36
 	public int GetArtemisUnlockIndex()
 	{
 		return Math.Max(this.UnlockIndex - 1, 0);
 	}
 
-	// Token: 0x060070C5 RID: 28869 RVA: 0x0016FF8C File Offset: 0x0016E18C
+	// Token: 0x0600445B RID: 17499 RVA: 0x00178948 File Offset: 0x00176B48
 	public int GetArtemisDefaultOpenIndex()
 	{
 		int num;
@@ -118,19 +118,19 @@ public class ArtemisActivityData : ActivityBaseData
 		return Math.Max(num - 1, 0);
 	}
 
-	// Token: 0x060070C6 RID: 28870 RVA: 0x0016FFC2 File Offset: 0x0016E1C2
+	// Token: 0x0600445C RID: 17500 RVA: 0x0017897E File Offset: 0x00176B7E
 	public bool GetCanReceive()
 	{
 		return this.UnlockIndex > this.RewardedIndex;
 	}
 
-	// Token: 0x060070C7 RID: 28871 RVA: 0x0016FFD2 File Offset: 0x0016E1D2
+	// Token: 0x0600445D RID: 17501 RVA: 0x0017898E File Offset: 0x00176B8E
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.GetCanReceive();
 	}
 
-	// Token: 0x060070C8 RID: 28872 RVA: 0x0016FFDC File Offset: 0x0016E1DC
+	// Token: 0x0600445E RID: 17502 RVA: 0x00178998 File Offset: 0x00176B98
 	protected override bool GetExDataFinishShowState()
 	{
 		if (this.UnlockIndex == this.RewardedIndex)
@@ -141,12 +141,12 @@ public class ArtemisActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x04003448 RID: 13384
+	// Token: 0x040034E1 RID: 13537
 	private int CacheActivityId;
 
-	// Token: 0x04003449 RID: 13385
+	// Token: 0x040034E2 RID: 13538
 	private int UnlockIndex;
 
-	// Token: 0x0400344A RID: 13386
+	// Token: 0x040034E3 RID: 13539
 	private int RewardedIndex;
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B5D RID: 27485
+	// Token: 0x020072A3 RID: 29347
 	public struct IMoveToEntity : IFlatbufferObject
 	{
-		// Token: 0x1700CC31 RID: 52273
-		// (get) Token: 0x060303E5 RID: 197605 RVA: 0x0068E168 File Offset: 0x0068C368
+		// Token: 0x1700D716 RID: 55062
+		// (get) Token: 0x0603323C RID: 209468 RVA: 0x006E6724 File Offset: 0x006E4924
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060303E6 RID: 197606 RVA: 0x0068E175 File Offset: 0x0068C375
+		// Token: 0x0603323D RID: 209469 RVA: 0x006E6731 File Offset: 0x006E4931
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060303E7 RID: 197607 RVA: 0x0068E17C File Offset: 0x0068C37C
+		// Token: 0x0603323E RID: 209470 RVA: 0x006E6738 File Offset: 0x006E4938
 		public static IMoveToEntity GetRootAsIMoveToEntity(ByteBuffer _bb)
 		{
 			return IMoveToEntity.GetRootAsIMoveToEntity(_bb, default(IMoveToEntity));
 		}
 
-		// Token: 0x060303E8 RID: 197608 RVA: 0x0068E198 File Offset: 0x0068C398
+		// Token: 0x0603323F RID: 209471 RVA: 0x006E6754 File Offset: 0x006E4954
 		public static IMoveToEntity GetRootAsIMoveToEntity(ByteBuffer _bb, IMoveToEntity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060303E9 RID: 197609 RVA: 0x0068E1B5 File Offset: 0x0068C3B5
+		// Token: 0x06033240 RID: 209472 RVA: 0x006E6771 File Offset: 0x006E4971
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060303EA RID: 197610 RVA: 0x0068E1C4 File Offset: 0x0068C3C4
+		// Token: 0x06033241 RID: 209473 RVA: 0x006E6780 File Offset: 0x006E4980
 		public IMoveToEntity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CC32 RID: 52274
-		// (get) Token: 0x060303EB RID: 197611 RVA: 0x0068E1D4 File Offset: 0x0068C3D4
+		// Token: 0x1700D717 RID: 55063
+		// (get) Token: 0x06033242 RID: 209474 RVA: 0x006E6790 File Offset: 0x006E4990
 		public EMoveSceneItemType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC33 RID: 52275
-		// (get) Token: 0x060303EC RID: 197612 RVA: 0x0068E210 File Offset: 0x0068C410
+		// Token: 0x1700D718 RID: 55064
+		// (get) Token: 0x06033243 RID: 209475 RVA: 0x006E67CC File Offset: 0x006E49CC
 		public int EntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC34 RID: 52276
-		// (get) Token: 0x060303ED RID: 197613 RVA: 0x0068E24C File Offset: 0x0068C44C
+		// Token: 0x1700D719 RID: 55065
+		// (get) Token: 0x06033244 RID: 209476 RVA: 0x006E6808 File Offset: 0x006E4A08
 		public TMoveToPointType MoveMotionType
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060303EE RID: 197614 RVA: 0x0068E288 File Offset: 0x0068C488
+		// Token: 0x06033245 RID: 209477 RVA: 0x006E6844 File Offset: 0x006E4A44
 		public TTable? MoveMotion<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -103,19 +103,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060303EF RID: 197615 RVA: 0x0068E2D0 File Offset: 0x0068C4D0
+		// Token: 0x06033246 RID: 209478 RVA: 0x006E688C File Offset: 0x006E4A8C
 		public IUniformMotion MoveMotionAsIUniformMotion()
 		{
 			return this.MoveMotion<IUniformMotion>().Value;
 		}
 
-		// Token: 0x060303F0 RID: 197616 RVA: 0x0068E2EC File Offset: 0x0068C4EC
+		// Token: 0x06033247 RID: 209479 RVA: 0x006E68A8 File Offset: 0x006E4AA8
 		public IVariableMotion MoveMotionAsIVariableMotion()
 		{
 			return this.MoveMotion<IVariableMotion>().Value;
 		}
 
-		// Token: 0x060303F1 RID: 197617 RVA: 0x0068E307 File Offset: 0x0068C507
+		// Token: 0x06033248 RID: 209480 RVA: 0x006E68C3 File Offset: 0x006E4AC3
 		public static Offset<IMoveToEntity> CreateIMoveToEntity(FlatBufferBuilder builder, EMoveSceneItemType Type = EMoveSceneItemType.MoveToPoint, int EntityId = 0, TMoveToPointType MoveMotion_type = TMoveToPointType.NONE, int MoveMotionOffset = 0)
 		{
 			builder.StartTable(4);
@@ -126,43 +126,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMoveToEntity.EndIMoveToEntity(builder);
 		}
 
-		// Token: 0x060303F2 RID: 197618 RVA: 0x0068E333 File Offset: 0x0068C533
+		// Token: 0x06033249 RID: 209481 RVA: 0x006E68EF File Offset: 0x006E4AEF
 		public static void StartIMoveToEntity(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060303F3 RID: 197619 RVA: 0x0068E33C File Offset: 0x0068C53C
+		// Token: 0x0603324A RID: 209482 RVA: 0x006E68F8 File Offset: 0x006E4AF8
 		public static void AddType(FlatBufferBuilder builder, EMoveSceneItemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060303F4 RID: 197620 RVA: 0x0068E347 File Offset: 0x0068C547
+		// Token: 0x0603324B RID: 209483 RVA: 0x006E6903 File Offset: 0x006E4B03
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x060303F5 RID: 197621 RVA: 0x0068E352 File Offset: 0x0068C552
+		// Token: 0x0603324C RID: 209484 RVA: 0x006E690E File Offset: 0x006E4B0E
 		public static void AddMoveMotionType(FlatBufferBuilder builder, TMoveToPointType moveMotionType)
 		{
 			builder.AddByte(2, (byte)moveMotionType, 0);
 		}
 
-		// Token: 0x060303F6 RID: 197622 RVA: 0x0068E35D File Offset: 0x0068C55D
+		// Token: 0x0603324D RID: 209485 RVA: 0x006E6919 File Offset: 0x006E4B19
 		public static void AddMoveMotion(FlatBufferBuilder builder, int moveMotionOffset)
 		{
 			builder.AddOffset(3, moveMotionOffset, 0);
 		}
 
-		// Token: 0x060303F7 RID: 197623 RVA: 0x0068E368 File Offset: 0x0068C568
+		// Token: 0x0603324E RID: 209486 RVA: 0x006E6924 File Offset: 0x006E4B24
 		public static Offset<IMoveToEntity> EndIMoveToEntity(FlatBufferBuilder builder)
 		{
 			return new Offset<IMoveToEntity>(builder.EndTable());
 		}
 
-		// Token: 0x060303F8 RID: 197624 RVA: 0x0068E378 File Offset: 0x0068C578
+		// Token: 0x0603324F RID: 209487 RVA: 0x006E6934 File Offset: 0x006E4B34
 		public IMoveToEntityT UnPack()
 		{
 			IMoveToEntityT moveToEntityT = new IMoveToEntityT();
@@ -170,7 +170,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return moveToEntityT;
 		}
 
-		// Token: 0x060303F9 RID: 197625 RVA: 0x0068E394 File Offset: 0x0068C594
+		// Token: 0x06033250 RID: 209488 RVA: 0x006E6950 File Offset: 0x006E4B50
 		public void UnPackTo(IMoveToEntityT _o)
 		{
 			_o.Type = this.Type;
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.MoveMotion.Value = ((this.MoveMotion<IVariableMotion>() != null) ? this.MoveMotion<IVariableMotion>().Value.UnPack() : null);
 		}
 
-		// Token: 0x060303FA RID: 197626 RVA: 0x0068E450 File Offset: 0x0068C650
+		// Token: 0x06033251 RID: 209489 RVA: 0x006E6A0C File Offset: 0x006E4C0C
 		public static Offset<IMoveToEntity> Pack(FlatBufferBuilder builder, IMoveToEntityT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMoveToEntity.CreateIMoveToEntity(builder, _o.Type, _o.EntityId, moveMotion_type, moveMotionOffset);
 		}
 
-		// Token: 0x04011407 RID: 70663
+		// Token: 0x04012330 RID: 74544
 		private Table __p;
 	}
 }

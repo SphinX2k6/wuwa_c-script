@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DB6 RID: 28086
+	// Token: 0x02007531 RID: 30001
 	public struct IProjectionMachine : IFlatbufferObject
 	{
-		// Token: 0x1700D169 RID: 53609
-		// (get) Token: 0x060319B5 RID: 203189 RVA: 0x006B8C16 File Offset: 0x006B6E16
+		// Token: 0x1700DCB1 RID: 56497
+		// (get) Token: 0x060349B1 RID: 215473 RVA: 0x007142FE File Offset: 0x007124FE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060319B6 RID: 203190 RVA: 0x006B8C23 File Offset: 0x006B6E23
+		// Token: 0x060349B2 RID: 215474 RVA: 0x0071430B File Offset: 0x0071250B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060319B7 RID: 203191 RVA: 0x006B8C2C File Offset: 0x006B6E2C
+		// Token: 0x060349B3 RID: 215475 RVA: 0x00714314 File Offset: 0x00712514
 		public static IProjectionMachine GetRootAsIProjectionMachine(ByteBuffer _bb)
 		{
 			return IProjectionMachine.GetRootAsIProjectionMachine(_bb, default(IProjectionMachine));
 		}
 
-		// Token: 0x060319B8 RID: 203192 RVA: 0x006B8C48 File Offset: 0x006B6E48
+		// Token: 0x060349B4 RID: 215476 RVA: 0x00714330 File Offset: 0x00712530
 		public static IProjectionMachine GetRootAsIProjectionMachine(ByteBuffer _bb, IProjectionMachine obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060319B9 RID: 203193 RVA: 0x006B8C65 File Offset: 0x006B6E65
+		// Token: 0x060349B5 RID: 215477 RVA: 0x0071434D File Offset: 0x0071254D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060319BA RID: 203194 RVA: 0x006B8C74 File Offset: 0x006B6E74
+		// Token: 0x060349B6 RID: 215478 RVA: 0x0071435C File Offset: 0x0071255C
 		public IProjectionMachine __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D16A RID: 53610
-		// (get) Token: 0x060319BB RID: 203195 RVA: 0x006B8C84 File Offset: 0x006B6E84
+		// Token: 0x1700DCB2 RID: 56498
+		// (get) Token: 0x060349B7 RID: 215479 RVA: 0x0071436C File Offset: 0x0071256C
 		public ESimpleGameplayType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D16B RID: 53611
-		// (get) Token: 0x060319BC RID: 203196 RVA: 0x006B8CC0 File Offset: 0x006B6EC0
+		// Token: 0x1700DCB3 RID: 56499
+		// (get) Token: 0x060349B8 RID: 215480 RVA: 0x007143A8 File Offset: 0x007125A8
 		public int ItemId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D16C RID: 53612
-		// (get) Token: 0x060319BD RID: 203197 RVA: 0x006B8CFC File Offset: 0x006B6EFC
+		// Token: 0x1700DCB4 RID: 56500
+		// (get) Token: 0x060349B9 RID: 215481 RVA: 0x007143E4 File Offset: 0x007125E4
 		public string PhotoAsset
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060319BE RID: 203198 RVA: 0x006B8D33 File Offset: 0x006B6F33
+		// Token: 0x060349BA RID: 215482 RVA: 0x0071441B File Offset: 0x0071261B
 		public Span<byte> GetPhotoAssetBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060319BF RID: 203199 RVA: 0x006B8D42 File Offset: 0x006B6F42
+		// Token: 0x060349BB RID: 215483 RVA: 0x0071442A File Offset: 0x0071262A
 		public byte[] GetPhotoAssetArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700D16D RID: 53613
-		// (get) Token: 0x060319C0 RID: 203200 RVA: 0x006B8D50 File Offset: 0x006B6F50
+		// Token: 0x1700DCB5 RID: 56501
+		// (get) Token: 0x060349BC RID: 215484 RVA: 0x00714438 File Offset: 0x00712638
 		public bool HideFixedPhoto
 		{
 			get
@@ -115,8 +115,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D16E RID: 53614
-		// (get) Token: 0x060319C1 RID: 203201 RVA: 0x006B8D90 File Offset: 0x006B6F90
+		// Token: 0x1700DCB6 RID: 56502
+		// (get) Token: 0x060349BD RID: 215485 RVA: 0x00714478 File Offset: 0x00712678
 		public IProjectionMachinePhotoFilter? PhotoFilter
 		{
 			get
@@ -130,8 +130,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D16F RID: 53615
-		// (get) Token: 0x060319C2 RID: 203202 RVA: 0x006B8DF0 File Offset: 0x006B6FF0
+		// Token: 0x1700DCB7 RID: 56503
+		// (get) Token: 0x060349BE RID: 215486 RVA: 0x007144D8 File Offset: 0x007126D8
 		public byte NullMask
 		{
 			get
@@ -145,7 +145,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060319C3 RID: 203203 RVA: 0x006B8E2D File Offset: 0x006B702D
+		// Token: 0x060349BF RID: 215487 RVA: 0x00714515 File Offset: 0x00712715
 		public static Offset<IProjectionMachine> CreateIProjectionMachine(FlatBufferBuilder builder, ESimpleGameplayType Type = ESimpleGameplayType.Cipher, int ItemId = 0, StringOffset PhotoAssetOffset = default(StringOffset), bool HideFixedPhoto = false, Offset<IProjectionMachinePhotoFilter> PhotoFilterOffset = default(Offset<IProjectionMachinePhotoFilter>), byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -158,55 +158,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IProjectionMachine.EndIProjectionMachine(builder);
 		}
 
-		// Token: 0x060319C4 RID: 203204 RVA: 0x006B8E69 File Offset: 0x006B7069
+		// Token: 0x060349C0 RID: 215488 RVA: 0x00714551 File Offset: 0x00712751
 		public static void StartIProjectionMachine(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x060319C5 RID: 203205 RVA: 0x006B8E72 File Offset: 0x006B7072
+		// Token: 0x060349C1 RID: 215489 RVA: 0x0071455A File Offset: 0x0071275A
 		public static void AddType(FlatBufferBuilder builder, ESimpleGameplayType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060319C6 RID: 203206 RVA: 0x006B8E7D File Offset: 0x006B707D
+		// Token: 0x060349C2 RID: 215490 RVA: 0x00714565 File Offset: 0x00712765
 		public static void AddItemId(FlatBufferBuilder builder, int itemId)
 		{
 			builder.AddInt(1, itemId, 0);
 		}
 
-		// Token: 0x060319C7 RID: 203207 RVA: 0x006B8E88 File Offset: 0x006B7088
+		// Token: 0x060349C3 RID: 215491 RVA: 0x00714570 File Offset: 0x00712770
 		public static void AddPhotoAsset(FlatBufferBuilder builder, StringOffset photoAssetOffset)
 		{
 			builder.AddOffset(2, photoAssetOffset.Value, 0);
 		}
 
-		// Token: 0x060319C8 RID: 203208 RVA: 0x006B8E98 File Offset: 0x006B7098
+		// Token: 0x060349C4 RID: 215492 RVA: 0x00714580 File Offset: 0x00712780
 		public static void AddHideFixedPhoto(FlatBufferBuilder builder, bool hideFixedPhoto)
 		{
 			builder.AddBool(3, hideFixedPhoto, false);
 		}
 
-		// Token: 0x060319C9 RID: 203209 RVA: 0x006B8EA3 File Offset: 0x006B70A3
+		// Token: 0x060349C5 RID: 215493 RVA: 0x0071458B File Offset: 0x0071278B
 		public static void AddPhotoFilter(FlatBufferBuilder builder, Offset<IProjectionMachinePhotoFilter> photoFilterOffset)
 		{
 			builder.AddOffset(4, photoFilterOffset.Value, 0);
 		}
 
-		// Token: 0x060319CA RID: 203210 RVA: 0x006B8EB3 File Offset: 0x006B70B3
+		// Token: 0x060349C6 RID: 215494 RVA: 0x0071459B File Offset: 0x0071279B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x060319CB RID: 203211 RVA: 0x006B8EBE File Offset: 0x006B70BE
+		// Token: 0x060349C7 RID: 215495 RVA: 0x007145A6 File Offset: 0x007127A6
 		public static Offset<IProjectionMachine> EndIProjectionMachine(FlatBufferBuilder builder)
 		{
 			return new Offset<IProjectionMachine>(builder.EndTable());
 		}
 
-		// Token: 0x060319CC RID: 203212 RVA: 0x006B8ECC File Offset: 0x006B70CC
+		// Token: 0x060349C8 RID: 215496 RVA: 0x007145B4 File Offset: 0x007127B4
 		public IProjectionMachineT UnPack()
 		{
 			IProjectionMachineT projectionMachineT = new IProjectionMachineT();
@@ -214,7 +214,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return projectionMachineT;
 		}
 
-		// Token: 0x060319CD RID: 203213 RVA: 0x006B8EE8 File Offset: 0x006B70E8
+		// Token: 0x060349C9 RID: 215497 RVA: 0x007145D0 File Offset: 0x007127D0
 		public void UnPackTo(IProjectionMachineT _o)
 		{
 			_o.Type = this.Type;
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060319CE RID: 203214 RVA: 0x006B8F60 File Offset: 0x006B7160
+		// Token: 0x060349CA RID: 215498 RVA: 0x00714648 File Offset: 0x00712848
 		public static Offset<IProjectionMachine> Pack(FlatBufferBuilder builder, IProjectionMachineT _o)
 		{
 			if (_o == null)
@@ -237,7 +237,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IProjectionMachine.CreateIProjectionMachine(builder, _o.Type, _o.ItemId, photoAssetOffset, _o.HideFixedPhoto, photoFilterOffset, _o.NullMask);
 		}
 
-		// Token: 0x0401178F RID: 71567
+		// Token: 0x0401270B RID: 75531
 		private Table __p;
 	}
 }

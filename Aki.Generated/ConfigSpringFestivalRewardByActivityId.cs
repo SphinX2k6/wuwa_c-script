@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200097D RID: 2429
+	// Token: 0x02000A52 RID: 2642
 	public class ConfigSpringFestivalRewardByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003902 RID: 14594 RVA: 0x0019BDFC File Offset: 0x00199FFC
+		// Token: 0x06003E00 RID: 15872 RVA: 0x001BB190 File Offset: 0x001B9390
 		static ConfigSpringFestivalRewardByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSpringFestivalRewardByActivityId.CreateStaticDefaultValue), new Action(ConfigSpringFestivalRewardByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003903 RID: 14595 RVA: 0x0019BE1C File Offset: 0x0019A01C
+		// Token: 0x06003E01 RID: 15873 RVA: 0x001BB1B0 File Offset: 0x001B93B0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSpringFestivalRewardByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003904 RID: 14596 RVA: 0x0019BE9B File Offset: 0x0019A09B
+		// Token: 0x06003E02 RID: 15874 RVA: 0x001BB22F File Offset: 0x001B942F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSpringFestivalRewardByActivityId.LogPair = null;
 			ConfigSpringFestivalRewardByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06003905 RID: 14597 RVA: 0x0019BEA9 File Offset: 0x0019A0A9
+		// Token: 0x06003E03 RID: 15875 RVA: 0x001BB23D File Offset: 0x001B943D
 		public static void Init()
 		{
 			ConfigSpringFestivalRewardByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigSpringFestivalRewardByActivityId.HandleId, "db_spring26.db", "select BinData from `SpringFestivalReward` where ActivityId=?");
 		}
 
-		// Token: 0x06003906 RID: 14598 RVA: 0x0019BEC4 File Offset: 0x0019A0C4
+		// Token: 0x06003E04 RID: 15876 RVA: 0x001BB258 File Offset: 0x001B9458
 		[NullableContext(2)]
 		public static IReadOnlyList<SpringFestivalReward> GetConfigList(int p0ActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04004251 RID: 16977
+		// Token: 0x04004824 RID: 18468
 		private const string DB = "db_spring26.db";
 
-		// Token: 0x04004252 RID: 16978
+		// Token: 0x04004825 RID: 18469
 		private const string FILE = "c.3.1春节活动外围.xlsx";
 
-		// Token: 0x04004253 RID: 16979
+		// Token: 0x04004826 RID: 18470
 		private const string TABLE = "SpringFestivalReward";
 
-		// Token: 0x04004254 RID: 16980
+		// Token: 0x04004827 RID: 18471
 		private const string COMMAND = "select BinData from `SpringFestivalReward` where ActivityId=?";
 
-		// Token: 0x04004255 RID: 16981
+		// Token: 0x04004828 RID: 18472
 		private const string KEY_PREFIX = "SpringFestivalRewardByActivityId";
 
-		// Token: 0x04004256 RID: 16982
+		// Token: 0x04004829 RID: 18473
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004257 RID: 16983
+		// Token: 0x0400482A RID: 18474
 		private static int HandleId;
 	}
 }

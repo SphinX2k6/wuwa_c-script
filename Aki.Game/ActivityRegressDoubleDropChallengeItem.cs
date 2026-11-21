@@ -7,20 +7,20 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020014B6 RID: 5302
+// Token: 0x0200096A RID: 2410
 public class ActivityRegressDoubleDropChallengeItem : UiPanelBase
 {
-	// Token: 0x17000D05 RID: 3333
-	// (get) Token: 0x06009636 RID: 38454 RVA: 0x00206CF3 File Offset: 0x00204EF3
+	// Token: 0x17000D25 RID: 3365
+	// (get) Token: 0x060069CB RID: 27083 RVA: 0x0020FC5F File Offset: 0x0020DE5F
 	public EActivityRegressDoubleDropEntryType EntryType { get; }
 
-	// Token: 0x06009637 RID: 38455 RVA: 0x00206CFB File Offset: 0x00204EFB
+	// Token: 0x060069CC RID: 27084 RVA: 0x0020FC67 File Offset: 0x0020DE67
 	public ActivityRegressDoubleDropChallengeItem(EActivityRegressDoubleDropEntryType entryType)
 	{
 		this.EntryType = entryType;
 	}
 
-	// Token: 0x06009638 RID: 38456 RVA: 0x00206D0C File Offset: 0x00204F0C
+	// Token: 0x060069CD RID: 27085 RVA: 0x0020FC78 File Offset: 0x0020DE78
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class ActivityRegressDoubleDropChallengeItem : UiPanelBase
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x06009639 RID: 38457 RVA: 0x00206DE0 File Offset: 0x00204FE0
+	// Token: 0x060069CE RID: 27086 RVA: 0x0020FD4C File Offset: 0x0020DF4C
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -46,21 +46,21 @@ public class ActivityRegressDoubleDropChallengeItem : UiPanelBase
 		this.ConfirmButtonItem.SetFunction(new Action<int>(this.OnConfirmBtnClick));
 	}
 
-	// Token: 0x0600963A RID: 38458 RVA: 0x00206E1E File Offset: 0x0020501E
+	// Token: 0x060069CF RID: 27087 RVA: 0x0020FD8A File Offset: 0x0020DF8A
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
 		this.UpdateVisual();
 	}
 
-	// Token: 0x0600963B RID: 38459 RVA: 0x00206E2C File Offset: 0x0020502C
+	// Token: 0x060069D0 RID: 27088 RVA: 0x0020FD98 File Offset: 0x0020DF98
 	private void UpdateVisual()
 	{
 		this.UpdateUnlockState();
 		this.UpdateRestTimes();
 	}
 
-	// Token: 0x0600963C RID: 38460 RVA: 0x00206E3C File Offset: 0x0020503C
+	// Token: 0x060069D1 RID: 27089 RVA: 0x0020FDA8 File Offset: 0x0020DFA8
 	private void UpdateUnlockState()
 	{
 		RegressDoubleDrop? doubleDropConfig = ActivityRegressConfig.Instance.GetDoubleDropConfig(ActivityRegressModel.Instance.Grade);
@@ -95,7 +95,7 @@ public class ActivityRegressDoubleDropChallengeItem : UiPanelBase
 		base.GetItem(7).SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600963D RID: 38461 RVA: 0x00206F84 File Offset: 0x00205184
+	// Token: 0x060069D2 RID: 27090 RVA: 0x0020FEF0 File Offset: 0x0020E0F0
 	private void UpdateRestTimes()
 	{
 		bool flag = ActivityRegressModel.Instance.ActivityData.IsDoubleDropUnlock(this.EntryType);
@@ -109,7 +109,7 @@ public class ActivityRegressDoubleDropChallengeItem : UiPanelBase
 		}));
 	}
 
-	// Token: 0x0600963E RID: 38462 RVA: 0x00207004 File Offset: 0x00205204
+	// Token: 0x060069D3 RID: 27091 RVA: 0x0020FF70 File Offset: 0x0020E170
 	private void OnConfirmBtnClick(int _)
 	{
 		ERegressGrade grade = ActivityRegressModel.Instance.Grade;
@@ -132,35 +132,35 @@ public class ActivityRegressDoubleDropChallengeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04004256 RID: 16982
+	// Token: 0x040042EE RID: 17134
 	[Nullable(2)]
 	private ButtonItem ConfirmButtonItem;
 
-	// Token: 0x02007AEE RID: 31470
+	// Token: 0x02006C72 RID: 27762
 	private class EActivityRegressDoubleDropChallengeItemComponents
 	{
-		// Token: 0x04028703 RID: 165635
+		// Token: 0x04023A1D RID: 145949
 		public const int TxtName = 0;
 
-		// Token: 0x04028704 RID: 165636
+		// Token: 0x04023A1E RID: 145950
 		public const int TxtTips = 1;
 
-		// Token: 0x04028705 RID: 165637
+		// Token: 0x04023A1F RID: 145951
 		public const int BtnConfirmA = 2;
 
-		// Token: 0x04028706 RID: 165638
+		// Token: 0x04023A20 RID: 145952
 		public const int PnlLock = 3;
 
-		// Token: 0x04028707 RID: 165639
+		// Token: 0x04023A21 RID: 145953
 		public const int TxtLock = 4;
 
-		// Token: 0x04028708 RID: 165640
+		// Token: 0x04023A22 RID: 145954
 		public const int PnlTips = 5;
 
-		// Token: 0x04028709 RID: 165641
+		// Token: 0x04023A23 RID: 145955
 		public const int TxtNum = 6;
 
-		// Token: 0x0402870A RID: 165642
+		// Token: 0x04023A24 RID: 145956
 		public const int IsPreOpenItem = 7;
 	}
 }

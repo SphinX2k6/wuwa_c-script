@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E9F RID: 16031
+	// Token: 0x020042DD RID: 17117
 	public enum IInformationBoardType_Union : byte
 	{
-		// Token: 0x0400B869 RID: 47209
+		// Token: 0x0400C245 RID: 49733
 		NONE,
-		// Token: 0x0400B86A RID: 47210
+		// Token: 0x0400C246 RID: 49734
 		IInformationBoardType,
-		// Token: 0x0400B86B RID: 47211
+		// Token: 0x0400C247 RID: 49735
 		IDangoAbyssInformationBoard
 	}
 }

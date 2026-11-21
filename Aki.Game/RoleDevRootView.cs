@@ -15,17 +15,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002823 RID: 10275
+// Token: 0x02001D9E RID: 7582
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleDevRootView : UiViewBase
 {
-	// Token: 0x06015243 RID: 86595 RVA: 0x00559836 File Offset: 0x00557A36
+	// Token: 0x06012C41 RID: 76865 RVA: 0x0058454A File Offset: 0x0058274A
 	public RoleDevRootView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06015244 RID: 86596 RVA: 0x0055985C File Offset: 0x00557A5C
+	// Token: 0x06012C42 RID: 76866 RVA: 0x00584570 File Offset: 0x00582770
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 23;
@@ -88,7 +88,7 @@ public class RoleDevRootView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06015245 RID: 86597 RVA: 0x00559BC8 File Offset: 0x00557DC8
+	// Token: 0x06012C43 RID: 76867 RVA: 0x005848DC File Offset: 0x00582ADC
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.RoleDevTargetRoleIdChange, new Action(this.OnRoleDevTargetRoleIdChange));
@@ -96,7 +96,7 @@ public class RoleDevRootView : UiViewBase
 		EventSystem.Instance.Add<IReadOnlyList<IProto_NormalItem>>(EEventName.OnAddCommonItemList, new Action<IReadOnlyList<IProto_NormalItem>>(this.OnAddCommonItemList));
 	}
 
-	// Token: 0x06015246 RID: 86598 RVA: 0x00559C2C File Offset: 0x00557E2C
+	// Token: 0x06012C44 RID: 76868 RVA: 0x00584940 File Offset: 0x00582B40
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RoleSystemChangeRole, new Action<int>(this.OnRoleSelect));
@@ -104,7 +104,7 @@ public class RoleDevRootView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnAddCommonItemList, new Action<IReadOnlyList<IProto_NormalItem>>(this.OnAddCommonItemList));
 	}
 
-	// Token: 0x06015247 RID: 86599 RVA: 0x00559C90 File Offset: 0x00557E90
+	// Token: 0x06012C45 RID: 76869 RVA: 0x005849A4 File Offset: 0x00582BA4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleDevRootView.<OnBeforeStartAsync>d__25 <OnBeforeStartAsync>d__;
@@ -115,13 +115,13 @@ public class RoleDevRootView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015248 RID: 86600 RVA: 0x00559CD3 File Offset: 0x00557ED3
+	// Token: 0x06012C46 RID: 76870 RVA: 0x005849E7 File Offset: 0x00582BE7
 	protected override void OnStart()
 	{
 		this.HideRoleUiModel();
 	}
 
-	// Token: 0x06015249 RID: 86601 RVA: 0x00559CDC File Offset: 0x00557EDC
+	// Token: 0x06012C47 RID: 76871 RVA: 0x005849F0 File Offset: 0x00582BF0
 	protected override UniTask OnBeforeShowAsyncImplementImplement()
 	{
 		RoleDevRootView.<OnBeforeShowAsyncImplementImplement>d__27 <OnBeforeShowAsyncImplementImplement>d__;
@@ -132,7 +132,7 @@ public class RoleDevRootView : UiViewBase
 		return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601524A RID: 86602 RVA: 0x00559D20 File Offset: 0x00557F20
+	// Token: 0x06012C48 RID: 76872 RVA: 0x00584A34 File Offset: 0x00582C34
 	private void ShowRoleUiModel()
 	{
 		TsUiSceneRoleActor roleSystemRoleActor = UiSceneManager.Instance.GetRoleSystemRoleActor();
@@ -144,7 +144,7 @@ public class RoleDevRootView : UiViewBase
 		UiModelUtil.Instance.ModelFadeOut(roleSystemRoleActor.Model, new ERoleFadeCurveDefine?(ERoleFadeCurveDefine.TerminalSkinRoleFadeOutCurve), null);
 	}
 
-	// Token: 0x0601524B RID: 86603 RVA: 0x00559D6C File Offset: 0x00557F6C
+	// Token: 0x06012C49 RID: 76873 RVA: 0x00584A80 File Offset: 0x00582C80
 	private void HideRoleUiModel()
 	{
 		TsUiSceneRoleActor roleSystemRoleActor = UiSceneManager.Instance.GetRoleSystemRoleActor();
@@ -156,7 +156,7 @@ public class RoleDevRootView : UiViewBase
 		UiModelUtil.Instance.SetVisible(roleSystemRoleActor.Model, false);
 	}
 
-	// Token: 0x0601524C RID: 86604 RVA: 0x00559DB0 File Offset: 0x00557FB0
+	// Token: 0x06012C4A RID: 76874 RVA: 0x00584AC4 File Offset: 0x00582CC4
 	private UniTask InitializeDevelopTagItem()
 	{
 		RoleDevRootView.<InitializeDevelopTagItem>d__30 <InitializeDevelopTagItem>d__;
@@ -167,7 +167,7 @@ public class RoleDevRootView : UiViewBase
 		return <InitializeDevelopTagItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601524D RID: 86605 RVA: 0x00559DF4 File Offset: 0x00557FF4
+	// Token: 0x06012C4B RID: 76875 RVA: 0x00584B08 File Offset: 0x00582D08
 	private UniTask InitializeElementSuitItem()
 	{
 		RoleDevRootView.<InitializeElementSuitItem>d__31 <InitializeElementSuitItem>d__;
@@ -178,7 +178,7 @@ public class RoleDevRootView : UiViewBase
 		return <InitializeElementSuitItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601524E RID: 86606 RVA: 0x00559E38 File Offset: 0x00558038
+	// Token: 0x06012C4C RID: 76876 RVA: 0x00584B4C File Offset: 0x00582D4C
 	private void OnRoleDevTargetRoleIdChange()
 	{
 		int devTargetRoleId = RoleDevModel.Instance.DevTargetRoleId;
@@ -196,20 +196,20 @@ public class RoleDevRootView : UiViewBase
 		this.ConfigRoleLayout.RefreshWithoutDataSync();
 	}
 
-	// Token: 0x0601524F RID: 86607 RVA: 0x00559EAC File Offset: 0x005580AC
+	// Token: 0x06012C4D RID: 76877 RVA: 0x00584BC0 File Offset: 0x00582DC0
 	protected void OnRoleSelect(int i)
 	{
 		this.RefreshCurrentTabView();
 	}
 
-	// Token: 0x06015250 RID: 86608 RVA: 0x00559EB4 File Offset: 0x005580B4
+	// Token: 0x06012C4E RID: 76878 RVA: 0x00584BC8 File Offset: 0x00582DC8
 	private void OnAddCommonItemList(IReadOnlyList<IProto_NormalItem> _)
 	{
 		this.UpdateTabList();
 		this.RefreshCurrentTabView();
 	}
 
-	// Token: 0x06015251 RID: 86609 RVA: 0x00559EC2 File Offset: 0x005580C2
+	// Token: 0x06012C4F RID: 76879 RVA: 0x00584BD6 File Offset: 0x00582DD6
 	private RoleDevMediumItemGrid OnGridProxyCreate()
 	{
 		RoleDevMediumItemGrid roleDevMediumItemGrid = new RoleDevMediumItemGrid();
@@ -223,7 +223,7 @@ public class RoleDevRootView : UiViewBase
 		return roleDevMediumItemGrid;
 	}
 
-	// Token: 0x06015252 RID: 86610 RVA: 0x00559EF0 File Offset: 0x005580F0
+	// Token: 0x06012C50 RID: 76880 RVA: 0x00584C04 File Offset: 0x00582E04
 	private UniTask InitializeCaption()
 	{
 		RoleDevRootView.<InitializeCaption>d__36 <InitializeCaption>d__;
@@ -234,13 +234,13 @@ public class RoleDevRootView : UiViewBase
 		return <InitializeCaption>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015253 RID: 86611 RVA: 0x00559F33 File Offset: 0x00558133
+	// Token: 0x06012C51 RID: 76881 RVA: 0x00584C47 File Offset: 0x00582E47
 	private void OnBackButtonClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06015254 RID: 86612 RVA: 0x00559F3C File Offset: 0x0055813C
+	// Token: 0x06012C52 RID: 76882 RVA: 0x00584C50 File Offset: 0x00582E50
 	private UniTask InitializeLayouts()
 	{
 		RoleDevRootView.<InitializeLayouts>d__38 <InitializeLayouts>d__;
@@ -251,7 +251,7 @@ public class RoleDevRootView : UiViewBase
 		return <InitializeLayouts>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015255 RID: 86613 RVA: 0x00559F7F File Offset: 0x0055817F
+	// Token: 0x06012C53 RID: 76883 RVA: 0x00584C93 File Offset: 0x00582E93
 	private void OnChangeFetterGroupSuccessCallBack(int roleId, int fetterGroupId)
 	{
 		RoleDevPhantomViewItemDataBase roleDevPhantomViewItemData = this.RoleDevViewModelInstance.RoleDevPhantomViewItemData;
@@ -262,7 +262,7 @@ public class RoleDevRootView : UiViewBase
 		this.RefreshCurrentTabView();
 	}
 
-	// Token: 0x06015256 RID: 86614 RVA: 0x00559FA0 File Offset: 0x005581A0
+	// Token: 0x06012C54 RID: 76884 RVA: 0x00584CB4 File Offset: 0x00582EB4
 	private UniTask InitTabListAsync()
 	{
 		RoleDevRootView.<InitTabListAsync>d__40 <InitTabListAsync>d__;
@@ -273,7 +273,7 @@ public class RoleDevRootView : UiViewBase
 		return <InitTabListAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015257 RID: 86615 RVA: 0x00559FE4 File Offset: 0x005581E4
+	// Token: 0x06012C55 RID: 76885 RVA: 0x00584CF8 File Offset: 0x00582EF8
 	private void UpdateTabList()
 	{
 		RoleDevRoleViewItemDataBase roleDevRoleViewItemData = this.RoleDevViewModelInstance.RoleDevRoleViewItemData;
@@ -307,7 +307,7 @@ public class RoleDevRootView : UiViewBase
 		this.TabItemLayout.RefreshWithoutDataSync();
 	}
 
-	// Token: 0x06015258 RID: 86616 RVA: 0x0055A158 File Offset: 0x00558358
+	// Token: 0x06012C56 RID: 76886 RVA: 0x00584E6C File Offset: 0x0058306C
 	private RoleDevSelectionMediumItemGrid InitNewRoleItem()
 	{
 		RoleDevSelectionMediumItemGrid roleDevSelectionMediumItemGrid = new RoleDevSelectionMediumItemGrid();
@@ -321,13 +321,13 @@ public class RoleDevRootView : UiViewBase
 		return roleDevSelectionMediumItemGrid;
 	}
 
-	// Token: 0x06015259 RID: 86617 RVA: 0x0055A183 File Offset: 0x00558383
+	// Token: 0x06012C57 RID: 76887 RVA: 0x00584E97 File Offset: 0x00583097
 	private void OnPlanChangeCallback(RoleDevSkillViewItemDataBase data)
 	{
 		this.UpdateTabList();
 	}
 
-	// Token: 0x0601525A RID: 86618 RVA: 0x0055A18C File Offset: 0x0055838C
+	// Token: 0x06012C58 RID: 76888 RVA: 0x00584EA0 File Offset: 0x005830A0
 	private void UpdateList(List<RoleDataBase> list, bool isOutSideChange, EFilterSortType operationType)
 	{
 		List<RoleDataBase> list2 = this.SortPinnedRolesToFront(list);
@@ -335,7 +335,7 @@ public class RoleDevRootView : UiViewBase
 		this.RestoreOwnListSelection(list2, isOutSideChange, operationType);
 	}
 
-	// Token: 0x0601525B RID: 86619 RVA: 0x0055A1B8 File Offset: 0x005583B8
+	// Token: 0x06012C59 RID: 76889 RVA: 0x00584ECC File Offset: 0x005830CC
 	private List<RoleDataBase> SortPinnedRolesToFront(List<RoleDataBase> roleList)
 	{
 		int devTargetRoleId = RoleDevModel.Instance.DevTargetRoleId;
@@ -362,7 +362,7 @@ public class RoleDevRootView : UiViewBase
 		return list3;
 	}
 
-	// Token: 0x0601525C RID: 86620 RVA: 0x0055A250 File Offset: 0x00558450
+	// Token: 0x06012C5A RID: 76890 RVA: 0x00584F64 File Offset: 0x00583164
 	private void RestoreOwnListSelection(List<RoleDataBase> roleList, bool isOutSideChange, EFilterSortType operationType)
 	{
 		if (this.FilterSortEntranceRefreshLock)
@@ -378,7 +378,7 @@ public class RoleDevRootView : UiViewBase
 		}, true);
 	}
 
-	// Token: 0x0601525D RID: 86621 RVA: 0x0055A274 File Offset: 0x00558474
+	// Token: 0x06012C5B RID: 76891 RVA: 0x00584F88 File Offset: 0x00583188
 	private global::ERoleDevTabType GetTargetTabType()
 	{
 		if (!RoleModel.Instance.IsRoleOwned(this.CurSelectRoleId))
@@ -396,7 +396,7 @@ public class RoleDevRootView : UiViewBase
 		return global::ERoleDevTabType.Phantom;
 	}
 
-	// Token: 0x0601525E RID: 86622 RVA: 0x0055A2E0 File Offset: 0x005584E0
+	// Token: 0x06012C5C RID: 76892 RVA: 0x00584FF4 File Offset: 0x005831F4
 	private void UpdatePropertyText(int roleId)
 	{
 		UUIText text = base.GetText(9);
@@ -446,19 +446,19 @@ public class RoleDevRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601525F RID: 86623 RVA: 0x0055A424 File Offset: 0x00558624
+	// Token: 0x06012C5D RID: 76893 RVA: 0x00585138 File Offset: 0x00583338
 	private void SelectRoleByRoleDataBase(RoleDataBase roleData)
 	{
 		this.SelectRole(roleData.GetRoleConfig().Id, global::ERoleListType.OwnList);
 	}
 
-	// Token: 0x06015260 RID: 86624 RVA: 0x0055A446 File Offset: 0x00558646
+	// Token: 0x06012C5E RID: 76894 RVA: 0x0058515A File Offset: 0x0058335A
 	private void SelectRoleByDisplayModelData(RoleDisplayModelBase roleData)
 	{
 		this.SelectRole(roleData.Id, global::ERoleListType.NewList);
 	}
 
-	// Token: 0x06015261 RID: 86625 RVA: 0x0055A458 File Offset: 0x00558658
+	// Token: 0x06012C5F RID: 76895 RVA: 0x0058516C File Offset: 0x0058336C
 	private void SelectRole(int roleId, global::ERoleListType listType)
 	{
 		if (listType == global::ERoleListType.OwnList)
@@ -475,7 +475,7 @@ public class RoleDevRootView : UiViewBase
 		this.SelectTabByTabType(this.CurSelectTab);
 	}
 
-	// Token: 0x06015262 RID: 86626 RVA: 0x0055A4F0 File Offset: 0x005586F0
+	// Token: 0x06012C60 RID: 76896 RVA: 0x00585204 File Offset: 0x00583404
 	private void SetDevelopTag(int roleId, global::ERoleListType listType)
 	{
 		if (this.DevelopTagItem == null)
@@ -495,7 +495,7 @@ public class RoleDevRootView : UiViewBase
 		this.DevelopTagItem.SetData(data);
 	}
 
-	// Token: 0x06015263 RID: 86627 RVA: 0x0055A55B File Offset: 0x0055875B
+	// Token: 0x06012C61 RID: 76897 RVA: 0x0058526F File Offset: 0x0058346F
 	private void UpdateRoleViewAfterSelect(int roleId, global::ERoleListType listType)
 	{
 		this.SetRoleData(roleId, listType);
@@ -508,14 +508,14 @@ public class RoleDevRootView : UiViewBase
 		this.RefreshCurrentTabView();
 	}
 
-	// Token: 0x06015264 RID: 86628 RVA: 0x0055A598 File Offset: 0x00558798
+	// Token: 0x06012C62 RID: 76898 RVA: 0x005852AC File Offset: 0x005834AC
 	private void RefreshRoleMarkToggle(int roleId)
 	{
 		this.RefreshRoleMarkToggleActive(roleId);
 		this.RefreshRoleMarkToggleByTempData(null);
 	}
 
-	// Token: 0x06015265 RID: 86629 RVA: 0x0055A5BC File Offset: 0x005587BC
+	// Token: 0x06012C63 RID: 76899 RVA: 0x005852D0 File Offset: 0x005834D0
 	private void RefreshCurrentTabView()
 	{
 		switch (this.CurSelectTab)
@@ -584,14 +584,14 @@ public class RoleDevRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015266 RID: 86630 RVA: 0x0055A66D File Offset: 0x0055886D
+	// Token: 0x06012C64 RID: 76900 RVA: 0x00585381 File Offset: 0x00583581
 	private void SetRoleData(int roleId, global::ERoleListType type)
 	{
 		this.SetCurSelectRoleId(roleId);
 		this.RoleDevViewModelInstance.InitAllDevItemDataByRoleId(roleId);
 	}
 
-	// Token: 0x06015267 RID: 86631 RVA: 0x0055A684 File Offset: 0x00558884
+	// Token: 0x06012C65 RID: 76901 RVA: 0x00585398 File Offset: 0x00583598
 	private void OnRoleItemToggleChanged(EToggleState state, RoleDataBase data)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -613,7 +613,7 @@ public class RoleDevRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015268 RID: 86632 RVA: 0x0055A6F4 File Offset: 0x005588F4
+	// Token: 0x06012C66 RID: 76902 RVA: 0x00585408 File Offset: 0x00583608
 	private void OnNewRoleItemToggleChanged(EToggleState state, RoleDisplayModelBase data)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -635,7 +635,7 @@ public class RoleDevRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015269 RID: 86633 RVA: 0x0055A75C File Offset: 0x0055895C
+	// Token: 0x06012C67 RID: 76903 RVA: 0x00585470 File Offset: 0x00583670
 	private void SelectRoleInLayout(int roleId, global::ERoleListType fromListType)
 	{
 		this.SetCurSelectRoleId(roleId);
@@ -659,21 +659,21 @@ public class RoleDevRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601526A RID: 86634 RVA: 0x0055A7DC File Offset: 0x005589DC
+	// Token: 0x06012C68 RID: 76904 RVA: 0x005854F0 File Offset: 0x005836F0
 	private bool CanExecuteChangeFunctionForOwn(object data, bool isForceSelected, EToggleState state)
 	{
 		int id = (data as RoleDataBase).GetRoleConfig().Id;
 		return state != EToggleState.ETT_Checked || this.CurSelectRoleListType != global::ERoleListType.OwnList || this.CurSelectRoleId != id;
 	}
 
-	// Token: 0x0601526B RID: 86635 RVA: 0x0055A818 File Offset: 0x00558A18
+	// Token: 0x06012C69 RID: 76905 RVA: 0x0058552C File Offset: 0x0058372C
 	private bool CanExecuteChangeFunctionForNew(object data, bool isForceSelected, EToggleState state)
 	{
 		int id = (data as RoleDisplayModelBase).Id;
 		return state != EToggleState.ETT_Checked || this.CurSelectRoleListType != global::ERoleListType.NewList || this.CurSelectRoleId != id;
 	}
 
-	// Token: 0x0601526C RID: 86636 RVA: 0x0055A84C File Offset: 0x00558A4C
+	// Token: 0x06012C6A RID: 76906 RVA: 0x00585560 File Offset: 0x00583760
 	private RoleDevRootTabItem InitTabItem()
 	{
 		RoleDevRootTabItem roleDevRootTabItem = new RoleDevRootTabItem();
@@ -683,20 +683,20 @@ public class RoleDevRootView : UiViewBase
 		return roleDevRootTabItem;
 	}
 
-	// Token: 0x0601526D RID: 86637 RVA: 0x0055A890 File Offset: 0x00558A90
+	// Token: 0x06012C6B RID: 76907 RVA: 0x005855A4 File Offset: 0x005837A4
 	private void OnClickTabItem(int tabType)
 	{
 		this.SelectTabByTabType((global::ERoleDevTabType)tabType);
 		this.PlayTabItemAnimation((global::ERoleDevTabType)tabType);
 	}
 
-	// Token: 0x0601526E RID: 86638 RVA: 0x0055A8A0 File Offset: 0x00558AA0
+	// Token: 0x06012C6C RID: 76908 RVA: 0x005855B4 File Offset: 0x005837B4
 	private bool CanClickTabItem(int tabType, EToggleState toggleState)
 	{
 		return this.CurSelectTabInternal == null || tabType != (int)this.CurSelectTabInternal.Value || toggleState != EToggleState.ETT_Checked;
 	}
 
-	// Token: 0x0601526F RID: 86639 RVA: 0x0055A8C8 File Offset: 0x00558AC8
+	// Token: 0x06012C6D RID: 76909 RVA: 0x005855DC File Offset: 0x005837DC
 	private void SelectTabByTabType(global::ERoleDevTabType tabType)
 	{
 		this.SetCurSelectTab((int)tabType);
@@ -705,7 +705,7 @@ public class RoleDevRootView : UiViewBase
 		RoleDevController.Instance.LogRoleDevPageClick(this.CurSelectRoleId, mainPage);
 	}
 
-	// Token: 0x06015270 RID: 86640 RVA: 0x0055A900 File Offset: 0x00558B00
+	// Token: 0x06012C6E RID: 76910 RVA: 0x00585614 File Offset: 0x00583814
 	private void PlayTabItemAnimation(global::ERoleDevTabType tabType)
 	{
 		switch (tabType)
@@ -727,7 +727,7 @@ public class RoleDevRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015271 RID: 86641 RVA: 0x0055A934 File Offset: 0x00558B34
+	// Token: 0x06012C6F RID: 76911 RVA: 0x00585648 File Offset: 0x00583848
 	private void PlayRoleViewAnimation()
 	{
 		RoleDevRoleViewItem roleViewItem = this.RoleViewItem;
@@ -743,7 +743,7 @@ public class RoleDevRootView : UiViewBase
 		uiViewSequence.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x06015272 RID: 86642 RVA: 0x0055A96C File Offset: 0x00558B6C
+	// Token: 0x06012C70 RID: 76912 RVA: 0x00585680 File Offset: 0x00583880
 	private void PlayWeaponViewAnimation()
 	{
 		RoleDevWeaponViewItem weaponViewItem = this.WeaponViewItem;
@@ -759,7 +759,7 @@ public class RoleDevRootView : UiViewBase
 		uiViewSequence.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x06015273 RID: 86643 RVA: 0x0055A9A4 File Offset: 0x00558BA4
+	// Token: 0x06012C71 RID: 76913 RVA: 0x005856B8 File Offset: 0x005838B8
 	private void PlayPhantomViewAnimation()
 	{
 		RoleDevPhantomViewItem phantomViewItem = this.PhantomViewItem;
@@ -775,7 +775,7 @@ public class RoleDevRootView : UiViewBase
 		uiViewSequence.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x06015274 RID: 86644 RVA: 0x0055A9DC File Offset: 0x00558BDC
+	// Token: 0x06012C72 RID: 76914 RVA: 0x005856F0 File Offset: 0x005838F0
 	private void PlaySkillViewAnimation()
 	{
 		RoleDevSkillViewItem skillViewItem = this.SkillViewItem;
@@ -791,14 +791,14 @@ public class RoleDevRootView : UiViewBase
 		uiViewSequence.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x06015275 RID: 86645 RVA: 0x0055AA12 File Offset: 0x00558C12
+	// Token: 0x06012C73 RID: 76915 RVA: 0x00585726 File Offset: 0x00583926
 	private void RefreshTabPanel(global::ERoleDevTabType index)
 	{
 		this.UpdateTabStates(index);
 		this.RefreshContentByTab();
 	}
 
-	// Token: 0x06015276 RID: 86646 RVA: 0x0055AA21 File Offset: 0x00558C21
+	// Token: 0x06012C74 RID: 76916 RVA: 0x00585735 File Offset: 0x00583935
 	private void UpdateTabStates(global::ERoleDevTabType activeIndex)
 	{
 		GenericLayout<RoleDevRootTabItem, global::IRoleDevRootTabData> tabItemLayout = this.TabItemLayout;
@@ -809,7 +809,7 @@ public class RoleDevRootView : UiViewBase
 		tabItemLayout.SelectGridProxy((int)activeIndex, false);
 	}
 
-	// Token: 0x06015277 RID: 86647 RVA: 0x0055AA38 File Offset: 0x00558C38
+	// Token: 0x06012C75 RID: 76917 RVA: 0x0058574C File Offset: 0x0058394C
 	private void RefreshContentByTab()
 	{
 		bool flag = RoleDevUtils.GetRoleTypeTagByRoleId(this.CurSelectRoleId) == global::ERoleTypeTag.Forecast;
@@ -865,7 +865,7 @@ public class RoleDevRootView : UiViewBase
 		this.RefreshCurrentTabView();
 	}
 
-	// Token: 0x06015278 RID: 86648 RVA: 0x0055AB94 File Offset: 0x00558D94
+	// Token: 0x06012C76 RID: 76918 RVA: 0x005858A8 File Offset: 0x00583AA8
 	private void RefreshRoleName(int roleId)
 	{
 		if (RoleDevUtils.GetRoleTypeTagByRoleId(roleId) == global::ERoleTypeTag.Forecast)
@@ -878,7 +878,7 @@ public class RoleDevRootView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(6), value.Name, Array.Empty<object>());
 	}
 
-	// Token: 0x06015279 RID: 86649 RVA: 0x0055AC00 File Offset: 0x00558E00
+	// Token: 0x06012C77 RID: 76919 RVA: 0x00585914 File Offset: 0x00583B14
 	private void RefreshRoleTexture(int roleId)
 	{
 		UUITexture texture = base.GetTexture(5);
@@ -894,14 +894,14 @@ public class RoleDevRootView : UiViewBase
 		base.SetRoleIconByRoleIdOrSkinId(value.RoleHeadIcon, texture, roleId, new int?(value2), null, null);
 	}
 
-	// Token: 0x0601527A RID: 86650 RVA: 0x0055AC94 File Offset: 0x00558E94
+	// Token: 0x06012C78 RID: 76920 RVA: 0x005859A8 File Offset: 0x00583BA8
 	private void RefreshRoleMarkToggleActive(int roleId)
 	{
 		bool uiactive = RoleModel.Instance.IsRoleOwned(roleId);
 		base.GetExtendToggle(22).RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x0601527B RID: 86651 RVA: 0x0055ACC8 File Offset: 0x00558EC8
+	// Token: 0x06012C79 RID: 76921 RVA: 0x005859DC File Offset: 0x00583BDC
 	private void OnClickToggleRoleMark(EToggleState toggleState)
 	{
 		int curSelectRoleId = this.CurSelectRoleId;
@@ -921,20 +921,20 @@ public class RoleDevRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601527C RID: 86652 RVA: 0x0055AD11 File Offset: 0x00558F11
+	// Token: 0x06012C7A RID: 76922 RVA: 0x00585A25 File Offset: 0x00583C25
 	private void SetTempRoleMarkRoleId(int roleId)
 	{
 		this.TempRoleMarkRoleIdInternal = roleId;
 	}
 
-	// Token: 0x0601527D RID: 86653 RVA: 0x0055AD1C File Offset: 0x00558F1C
+	// Token: 0x06012C7B RID: 76923 RVA: 0x00585A30 File Offset: 0x00583C30
 	private void RefreshRoleMarkToggleByTempData(int? expectedMarkRoleId = null)
 	{
 		int curSelectRoleId = this.CurSelectRoleId;
 		this.SetRoleMarkToggleState(((expectedMarkRoleId ?? this.TempRoleMarkRoleId) == curSelectRoleId) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked);
 	}
 
-	// Token: 0x0601527E RID: 86654 RVA: 0x0055AD5B File Offset: 0x00558F5B
+	// Token: 0x06012C7C RID: 76924 RVA: 0x00585A6F File Offset: 0x00583C6F
 	private void SetRoleMarkToggleState(EToggleState state)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(22);
@@ -945,7 +945,7 @@ public class RoleDevRootView : UiViewBase
 		extendToggle.SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0601527F RID: 86655 RVA: 0x0055AD74 File Offset: 0x00558F74
+	// Token: 0x06012C7D RID: 76925 RVA: 0x00585A88 File Offset: 0x00583C88
 	private void RefreshElementIcon(int roleId)
 	{
 		if (RoleDevUtils.GetRoleTypeTagByRoleId(roleId) != global::ERoleTypeTag.Forecast)
@@ -972,32 +972,32 @@ public class RoleDevRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015280 RID: 86656 RVA: 0x0055ADE0 File Offset: 0x00558FE0
+	// Token: 0x06012C7E RID: 76926 RVA: 0x00585AF4 File Offset: 0x00583CF4
 	public void SetCurSelectRoleId(int roleId)
 	{
 		this.CurSelectRoleIdInternal = roleId;
 	}
 
-	// Token: 0x06015281 RID: 86657 RVA: 0x0055ADE9 File Offset: 0x00558FE9
+	// Token: 0x06012C7F RID: 76927 RVA: 0x00585AFD File Offset: 0x00583CFD
 	public void SetCurSelectTab(int value)
 	{
 		this.CurSelectTabInternal = new global::ERoleDevTabType?((global::ERoleDevTabType)value);
 	}
 
-	// Token: 0x06015282 RID: 86658 RVA: 0x0055ADF7 File Offset: 0x00558FF7
+	// Token: 0x06012C80 RID: 76928 RVA: 0x00585B0B File Offset: 0x00583D0B
 	public void SetCurSelectRoleListType(global::ERoleListType value)
 	{
 		this.CurSelectRoleListTypeInternal = value;
 	}
 
-	// Token: 0x06015283 RID: 86659 RVA: 0x0055AE00 File Offset: 0x00559000
+	// Token: 0x06012C81 RID: 76929 RVA: 0x00585B14 File Offset: 0x00583D14
 	public void SetIsFirstEnter(bool value)
 	{
 		this.IsFirstEnterInternal = value;
 	}
 
-	// Token: 0x17001C05 RID: 7173
-	// (get) Token: 0x06015284 RID: 86660 RVA: 0x0055AE09 File Offset: 0x00559009
+	// Token: 0x17001C5D RID: 7261
+	// (get) Token: 0x06012C82 RID: 76930 RVA: 0x00585B1D File Offset: 0x00583D1D
 	public global::ERoleDevTabType CurSelectTab
 	{
 		get
@@ -1006,8 +1006,8 @@ public class RoleDevRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x17001C06 RID: 7174
-	// (get) Token: 0x06015285 RID: 86661 RVA: 0x0055AE16 File Offset: 0x00559016
+	// Token: 0x17001C5E RID: 7262
+	// (get) Token: 0x06012C83 RID: 76931 RVA: 0x00585B2A File Offset: 0x00583D2A
 	public int CurSelectRoleId
 	{
 		get
@@ -1016,8 +1016,8 @@ public class RoleDevRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x17001C07 RID: 7175
-	// (get) Token: 0x06015286 RID: 86662 RVA: 0x0055AE1E File Offset: 0x0055901E
+	// Token: 0x17001C5F RID: 7263
+	// (get) Token: 0x06012C84 RID: 76932 RVA: 0x00585B32 File Offset: 0x00583D32
 	public global::ERoleListType CurSelectRoleListType
 	{
 		get
@@ -1026,8 +1026,8 @@ public class RoleDevRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x17001C08 RID: 7176
-	// (get) Token: 0x06015287 RID: 86663 RVA: 0x0055AE26 File Offset: 0x00559026
+	// Token: 0x17001C60 RID: 7264
+	// (get) Token: 0x06012C85 RID: 76933 RVA: 0x00585B3A File Offset: 0x00583D3A
 	public bool IsFirstEnter
 	{
 		get
@@ -1036,8 +1036,8 @@ public class RoleDevRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x17001C09 RID: 7177
-	// (get) Token: 0x06015288 RID: 86664 RVA: 0x0055AE2E File Offset: 0x0055902E
+	// Token: 0x17001C61 RID: 7265
+	// (get) Token: 0x06012C86 RID: 76934 RVA: 0x00585B42 File Offset: 0x00583D42
 	public int TempRoleMarkRoleId
 	{
 		get
@@ -1046,7 +1046,7 @@ public class RoleDevRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015289 RID: 86665 RVA: 0x0055AE36 File Offset: 0x00559036
+	// Token: 0x06012C87 RID: 76935 RVA: 0x00585B4A File Offset: 0x00583D4A
 	public void ClearCache()
 	{
 		this.CurSelectRoleIdInternal = 0;
@@ -1054,14 +1054,14 @@ public class RoleDevRootView : UiViewBase
 		this.TempRoleMarkRoleIdInternal = 0;
 	}
 
-	// Token: 0x0601528A RID: 86666 RVA: 0x0055AE52 File Offset: 0x00559052
+	// Token: 0x06012C88 RID: 76936 RVA: 0x00585B66 File Offset: 0x00583D66
 	protected override void OnBeforeDestroy()
 	{
 		this.ShowRoleUiModel();
 		this.ClearCache();
 	}
 
-	// Token: 0x04009E6B RID: 40555
+	// Token: 0x0400A254 RID: 41556
 	[Nullable(new byte[]
 	{
 		2,
@@ -1070,7 +1070,7 @@ public class RoleDevRootView : UiViewBase
 	})]
 	private GenericLayout<RoleDevMediumItemGrid, RoleDataBase> ConfigRoleLayout;
 
-	// Token: 0x04009E6C RID: 40556
+	// Token: 0x0400A255 RID: 41557
 	[Nullable(new byte[]
 	{
 		2,
@@ -1079,7 +1079,7 @@ public class RoleDevRootView : UiViewBase
 	})]
 	private GenericLayout<RoleDevSelectionMediumItemGrid, RoleDisplayModelBase> NewRoleLayout;
 
-	// Token: 0x04009E6D RID: 40557
+	// Token: 0x0400A256 RID: 41558
 	[Nullable(new byte[]
 	{
 		2,
@@ -1088,27 +1088,27 @@ public class RoleDevRootView : UiViewBase
 	})]
 	private GenericLayout<RoleDevRootTabItem, global::IRoleDevRootTabData> TabItemLayout;
 
-	// Token: 0x04009E6E RID: 40558
+	// Token: 0x0400A257 RID: 41559
 	[Nullable(2)]
 	private RoleDevRoleViewItem RoleViewItem;
 
-	// Token: 0x04009E6F RID: 40559
+	// Token: 0x0400A258 RID: 41560
 	[Nullable(2)]
 	private RoleDevWeaponViewItem WeaponViewItem;
 
-	// Token: 0x04009E70 RID: 40560
+	// Token: 0x0400A259 RID: 41561
 	[Nullable(2)]
 	private RoleDevPhantomViewItem PhantomViewItem;
 
-	// Token: 0x04009E71 RID: 40561
+	// Token: 0x0400A25A RID: 41562
 	[Nullable(2)]
 	private RoleDevSkillViewItem SkillViewItem;
 
-	// Token: 0x04009E72 RID: 40562
+	// Token: 0x0400A25B RID: 41563
 	[Nullable(2)]
 	private PopupCaptionItem ItemCaption;
 
-	// Token: 0x04009E73 RID: 40563
+	// Token: 0x0400A25C RID: 41564
 	[Nullable(new byte[]
 	{
 		2,
@@ -1116,7 +1116,7 @@ public class RoleDevRootView : UiViewBase
 	})]
 	private FilterSortEntrance<RoleDataBase> FilterSortEntranceInstance;
 
-	// Token: 0x04009E74 RID: 40564
+	// Token: 0x0400A25D RID: 41565
 	[Nullable(new byte[]
 	{
 		2,
@@ -1124,87 +1124,87 @@ public class RoleDevRootView : UiViewBase
 	})]
 	private List<global::IRoleDevRootTabData> TabDataList;
 
-	// Token: 0x04009E75 RID: 40565
+	// Token: 0x0400A25E RID: 41566
 	private readonly List<RoleDevRootTabItem> TabItems = new List<RoleDevRootTabItem>();
 
-	// Token: 0x04009E76 RID: 40566
+	// Token: 0x0400A25F RID: 41567
 	private readonly RoleDevViewModel RoleDevViewModelInstance = new RoleDevViewModel();
 
-	// Token: 0x04009E77 RID: 40567
+	// Token: 0x0400A260 RID: 41568
 	[Nullable(2)]
 	private RoleDevTagItem DevelopTagItem;
 
-	// Token: 0x04009E78 RID: 40568
+	// Token: 0x0400A261 RID: 41569
 	[Nullable(2)]
 	private CommonElementItem ElementSuitItem;
 
-	// Token: 0x04009E79 RID: 40569
+	// Token: 0x0400A262 RID: 41570
 	private int CurSelectRoleIdInternal;
 
-	// Token: 0x04009E7A RID: 40570
+	// Token: 0x0400A263 RID: 41571
 	private global::ERoleDevTabType? CurSelectTabInternal;
 
-	// Token: 0x04009E7B RID: 40571
+	// Token: 0x0400A264 RID: 41572
 	private global::ERoleListType CurSelectRoleListTypeInternal;
 
-	// Token: 0x04009E7C RID: 40572
+	// Token: 0x0400A265 RID: 41573
 	private bool IsFirstEnterInternal = true;
 
-	// Token: 0x04009E7D RID: 40573
+	// Token: 0x0400A266 RID: 41574
 	private int TempRoleMarkRoleIdInternal;
 
-	// Token: 0x04009E7E RID: 40574
+	// Token: 0x0400A267 RID: 41575
 	private bool FilterSortEntranceRefreshLock;
 
-	// Token: 0x02008E6A RID: 36458
+	// Token: 0x020080B2 RID: 32946
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E312 RID: 189202
+		// Token: 0x04029A0E RID: 170510
 		Caption,
-		// Token: 0x0402E313 RID: 189203
+		// Token: 0x04029A0F RID: 170511
 		GridNewRole,
-		// Token: 0x0402E314 RID: 189204
+		// Token: 0x04029A10 RID: 170512
 		GridOwnRole,
-		// Token: 0x0402E315 RID: 189205
+		// Token: 0x04029A11 RID: 170513
 		RoleItem,
-		// Token: 0x0402E316 RID: 189206
+		// Token: 0x04029A12 RID: 170514
 		FilterSortItem,
-		// Token: 0x0402E317 RID: 189207
+		// Token: 0x04029A13 RID: 170515
 		TextureRole,
-		// Token: 0x0402E318 RID: 189208
+		// Token: 0x04029A14 RID: 170516
 		TxtRoleName,
-		// Token: 0x0402E319 RID: 189209
+		// Token: 0x04029A15 RID: 170517
 		Tag,
-		// Token: 0x0402E31A RID: 189210
+		// Token: 0x04029A16 RID: 170518
 		DevelopTag,
-		// Token: 0x0402E31B RID: 189211
+		// Token: 0x04029A17 RID: 170519
 		TxtProperty,
-		// Token: 0x0402E31C RID: 189212
+		// Token: 0x04029A18 RID: 170520
 		ElementIcon,
-		// Token: 0x0402E31D RID: 189213
+		// Token: 0x04029A19 RID: 170521
 		ToggleLayout,
-		// Token: 0x0402E31E RID: 189214
+		// Token: 0x04029A1A RID: 170522
 		DevelopToggle,
-		// Token: 0x0402E31F RID: 189215
+		// Token: 0x04029A1B RID: 170523
 		SubRoleViewLayout,
-		// Token: 0x0402E320 RID: 189216
+		// Token: 0x04029A1C RID: 170524
 		SubRoleViewScrollView,
-		// Token: 0x0402E321 RID: 189217
+		// Token: 0x04029A1D RID: 170525
 		SubSkillViewLayout,
-		// Token: 0x0402E322 RID: 189218
+		// Token: 0x04029A1E RID: 170526
 		SubSkillViewScrollView,
-		// Token: 0x0402E323 RID: 189219
+		// Token: 0x04029A1F RID: 170527
 		SubWeaponViewLayout,
-		// Token: 0x0402E324 RID: 189220
+		// Token: 0x04029A20 RID: 170528
 		SubWeaponViewScrollView,
-		// Token: 0x0402E325 RID: 189221
+		// Token: 0x04029A21 RID: 170529
 		SubPhantomViewLayout,
-		// Token: 0x0402E326 RID: 189222
+		// Token: 0x04029A22 RID: 170530
 		SubPhantomViewScrollView,
-		// Token: 0x0402E327 RID: 189223
+		// Token: 0x04029A23 RID: 170531
 		EmptyPanel,
-		// Token: 0x0402E328 RID: 189224
+		// Token: 0x04029A24 RID: 170532
 		ToggleRoleMark
 	}
 }

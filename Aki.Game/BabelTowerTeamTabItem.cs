@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001164 RID: 4452
+// Token: 0x02000618 RID: 1560
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class BabelTowerTeamTabItem : GridProxyAbstract<string>
 {
-	// Token: 0x0600758A RID: 30090 RVA: 0x0018477C File Offset: 0x0018297C
+	// Token: 0x06004921 RID: 18721 RVA: 0x0018D2F8 File Offset: 0x0018B4F8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -37,7 +37,7 @@ public class BabelTowerTeamTabItem : GridProxyAbstract<string>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600758B RID: 30091 RVA: 0x00184843 File Offset: 0x00182A43
+	// Token: 0x06004922 RID: 18722 RVA: 0x0018D3BF File Offset: 0x0018B5BF
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(2);
@@ -48,7 +48,7 @@ public class BabelTowerTeamTabItem : GridProxyAbstract<string>
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0600758C RID: 30092 RVA: 0x00184857 File Offset: 0x00182A57
+	// Token: 0x06004923 RID: 18723 RVA: 0x0018D3D3 File Offset: 0x0018B5D3
 	public override void Refresh(string data, bool isSelected, int gridIndex)
 	{
 		UUIText text = base.GetText(1);
@@ -59,13 +59,13 @@ public class BabelTowerTeamTabItem : GridProxyAbstract<string>
 		this.SetSelected(isSelected);
 	}
 
-	// Token: 0x0600758D RID: 30093 RVA: 0x00184873 File Offset: 0x00182A73
+	// Token: 0x06004924 RID: 18724 RVA: 0x0018D3EF File Offset: 0x0018B5EF
 	public void SetToggleClickCallback(Action<EBabelTowerTeamTabType> callback)
 	{
 		this.ToggleClickCallback = callback;
 	}
 
-	// Token: 0x0600758E RID: 30094 RVA: 0x0018487C File Offset: 0x00182A7C
+	// Token: 0x06004925 RID: 18725 RVA: 0x0018D3F8 File Offset: 0x0018B5F8
 	private void OnToggleClick(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -80,7 +80,7 @@ public class BabelTowerTeamTabItem : GridProxyAbstract<string>
 		toggleClickCallback((EBabelTowerTeamTabType)base.GridIndex);
 	}
 
-	// Token: 0x0600758F RID: 30095 RVA: 0x0018489B File Offset: 0x00182A9B
+	// Token: 0x06004926 RID: 18726 RVA: 0x0018D417 File Offset: 0x0018B617
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true);
@@ -95,13 +95,13 @@ public class BabelTowerTeamTabItem : GridProxyAbstract<string>
 		}
 	}
 
-	// Token: 0x06007590 RID: 30096 RVA: 0x001848BD File Offset: 0x00182ABD
+	// Token: 0x06004927 RID: 18727 RVA: 0x0018D439 File Offset: 0x0018B639
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false);
 	}
 
-	// Token: 0x06007591 RID: 30097 RVA: 0x001848C6 File Offset: 0x00182AC6
+	// Token: 0x06004928 RID: 18728 RVA: 0x0018D442 File Offset: 0x0018B642
 	private void SetSelected(bool selected)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -112,21 +112,21 @@ public class BabelTowerTeamTabItem : GridProxyAbstract<string>
 		extendToggle.SetToggleStateForce(selected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x040035F7 RID: 13815
+	// Token: 0x04003690 RID: 13968
 	[Nullable(2)]
 	private Action<EBabelTowerTeamTabType> ToggleClickCallback;
 
-	// Token: 0x02007736 RID: 30518
+	// Token: 0x020068C4 RID: 26820
 	[NullableContext(0)]
 	private class ETabItem
 	{
-		// Token: 0x04027539 RID: 161081
+		// Token: 0x04022877 RID: 141431
 		public const int Toggle = 0;
 
-		// Token: 0x0402753A RID: 161082
+		// Token: 0x04022878 RID: 141432
 		public const int Name = 1;
 
-		// Token: 0x0402753B RID: 161083
+		// Token: 0x04022879 RID: 141433
 		public const int RedDot = 2;
 	}
 }

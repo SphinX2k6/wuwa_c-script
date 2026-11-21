@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E27 RID: 7719
+	// Token: 0x0200205A RID: 8282
 	public class ISetJigsawItemType_SetValue
 	{
-		// Token: 0x040062C3 RID: 25283
+		// Token: 0x0400689A RID: 26778
 		public ESetJigsawItemType Type;
 	}
 }

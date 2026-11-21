@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001246 RID: 4678
+// Token: 0x020006FA RID: 1786
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class DangoMonopolyRoundBuffShowItem : GridProxyAbstract<IDangoMonopolyRoundBuffData>
 {
-	// Token: 0x06007F02 RID: 32514 RVA: 0x001AEB54 File Offset: 0x001ACD54
+	// Token: 0x06005299 RID: 21145 RVA: 0x001B780C File Offset: 0x001B5A0C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class DangoMonopolyRoundBuffShowItem : GridProxyAbstract<IDangoMonopolyRo
 		};
 	}
 
-	// Token: 0x06007F03 RID: 32515 RVA: 0x001AEBC4 File Offset: 0x001ACDC4
+	// Token: 0x0600529A RID: 21146 RVA: 0x001B787C File Offset: 0x001B5A7C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoMonopolyRoundBuffShowItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ public class DangoMonopolyRoundBuffShowItem : GridProxyAbstract<IDangoMonopolyRo
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007F04 RID: 32516 RVA: 0x001AEC08 File Offset: 0x001ACE08
+	// Token: 0x0600529B RID: 21147 RVA: 0x001B78C0 File Offset: 0x001B5AC0
 	public override void Refresh(IDangoMonopolyRoundBuffData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -47,20 +47,20 @@ public class DangoMonopolyRoundBuffShowItem : GridProxyAbstract<IDangoMonopolyRo
 		base.GetText(3).ShowTextNew(this.ItemData.PropertyDesc);
 	}
 
-	// Token: 0x040039D5 RID: 14805
+	// Token: 0x04003A6D RID: 14957
 	private IDangoMonopolyRoundBuffData ItemData;
 
-	// Token: 0x0200785D RID: 30813
+	// Token: 0x020069E8 RID: 27112
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04027A9E RID: 162462
+		// Token: 0x04022DCF RID: 142799
 		ItemSelf,
-		// Token: 0x04027A9F RID: 162463
+		// Token: 0x04022DD0 RID: 142800
 		TextureIcon,
-		// Token: 0x04027AA0 RID: 162464
+		// Token: 0x04022DD1 RID: 142801
 		TxtName,
-		// Token: 0x04027AA1 RID: 162465
+		// Token: 0x04022DD2 RID: 142802
 		TxtDesc
 	}
 }

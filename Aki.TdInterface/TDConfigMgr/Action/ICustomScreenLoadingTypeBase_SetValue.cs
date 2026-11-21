@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001951 RID: 6481
+	// Token: 0x02001ADC RID: 6876
 	public class ICustomScreenLoadingTypeBase_SetValue
 	{
-		// Token: 0x040056B7 RID: 22199
+		// Token: 0x04005B0A RID: 23306
 		public ECustomScreenLoading Type;
 	}
 }

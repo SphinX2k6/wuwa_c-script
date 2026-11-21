@@ -4,10 +4,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050A3 RID: 20643
+	// Token: 0x02004073 RID: 16499
 	public class FlowActionAddPlayBubble : FlowActionBase
 	{
-		// Token: 0x06034E85 RID: 216709 RVA: 0x00C87EC0 File Offset: 0x00C860C0
+		// Token: 0x06029D7E RID: 171390 RVA: 0x00BD5140 File Offset: 0x00BD3340
 		protected override void OnExecute()
 		{
 			AddPlayBubble addPlayBubble = this.ActionInfo.Params as AddPlayBubble;
@@ -24,13 +24,13 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034E86 RID: 216710 RVA: 0x00C87F0C File Offset: 0x00C8610C
+		// Token: 0x06029D7F RID: 171391 RVA: 0x00BD518C File Offset: 0x00BD338C
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();
 		}
 
-		// Token: 0x06034E87 RID: 216711 RVA: 0x00C87F14 File Offset: 0x00C86114
+		// Token: 0x06029D80 RID: 171392 RVA: 0x00BD5194 File Offset: 0x00BD3394
 		[NullableContext(1)]
 		private CharacterDynamicFlowData CreateCharacterFlowData(AddPlayBubble flowData)
 		{

@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014AD RID: 5293
+	// Token: 0x02001606 RID: 5638
 	public class BossPilingEnterNextInst : ActionParams
 	{
-		// Token: 0x0600788A RID: 30858 RVA: 0x00121008 File Offset: 0x0011F208
-		[NullableContext(1)]
+		// Token: 0x06007F57 RID: 32599 RVA: 0x0012FC54 File Offset: 0x0012DE54
 		public static BossPilingEnterNextInst Create([Nullable(2)] BossPilingEnterNextInst instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0400460D RID: 17933
+		// Token: 0x040049A8 RID: 18856
 		[Nullable(2)]
 		protected new BossPilingEnterNextInst FbInstance;
 	}

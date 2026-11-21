@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003AC RID: 940
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003F5 RID: 1013
 	public class IFollowShooterInteractPoint : IExploreSkillInteractType
 	{
-		// Token: 0x060012C1 RID: 4801 RVA: 0x0003D9FC File Offset: 0x0003BBFC
+		// Token: 0x06001407 RID: 5127 RVA: 0x00040D34 File Offset: 0x0003EF34
 		private IFollowShooterInteractPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060012C2 RID: 4802 RVA: 0x0003DA34 File Offset: 0x0003BC34
+		// Token: 0x06001408 RID: 5128 RVA: 0x00040D6C File Offset: 0x0003EF6C
 		public static IFollowShooterInteractPoint Create([Nullable(2)] IFollowShooterInteractPoint instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060012C3 RID: 4803 RVA: 0x0003DA47 File Offset: 0x0003BC47
+		// Token: 0x06001409 RID: 5129 RVA: 0x00040D7F File Offset: 0x0003EF7F
 		public static IFollowShooterInteractPoint CreateFromSetValue([Nullable(2)] IFollowShooterInteractPoint_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060012C4 RID: 4804 RVA: 0x0003DA5A File Offset: 0x0003BC5A
+		// Token: 0x0600140A RID: 5130 RVA: 0x00040D92 File Offset: 0x0003EF92
 		public new IFollowShooterInteractPoint_SetValue ToSetValue()
 		{
 			return new IFollowShooterInteractPoint_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700053C RID: 1340
-		// (get) Token: 0x060012C5 RID: 4805 RVA: 0x0003DA79 File Offset: 0x0003BC79
-		// (set) Token: 0x060012C6 RID: 4806 RVA: 0x0003DAA4 File Offset: 0x0003BCA4
+		// Token: 0x17000591 RID: 1425
+		// (get) Token: 0x0600140B RID: 5131 RVA: 0x00040DB1 File Offset: 0x0003EFB1
+		// (set) Token: 0x0600140C RID: 5132 RVA: 0x00040DDC File Offset: 0x0003EFDC
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700053D RID: 1341
-		// (get) Token: 0x060012C7 RID: 4807 RVA: 0x0003DAB4 File Offset: 0x0003BCB4
-		// (set) Token: 0x060012C8 RID: 4808 RVA: 0x0003DB15 File Offset: 0x0003BD15
+		// Token: 0x17000592 RID: 1426
+		// (get) Token: 0x0600140D RID: 5133 RVA: 0x00040DEC File Offset: 0x0003EFEC
+		// (set) Token: 0x0600140E RID: 5134 RVA: 0x00040E4D File Offset: 0x0003F04D
 		[Nullable(2)]
 		public virtual IThrowFollowShooterInteractConfig ThrowInteractConfig
 		{
@@ -116,18 +114,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F0D RID: 3853
+		// Token: 0x04001005 RID: 4101
 		[Nullable(2)]
 		protected new IFollowShooterInteractPoint FbInstance;
 
-		// Token: 0x04000F0E RID: 3854
+		// Token: 0x04001006 RID: 4102
 		[Nullable(2)]
 		protected new IFollowShooterInteractPoint_SetValue PocoInterface;
 
-		// Token: 0x04000F0F RID: 3855
+		// Token: 0x04001007 RID: 4103
 		private IThrowFollowShooterInteractConfig _ThrowInteractConfigCache;
 
-		// Token: 0x04000F10 RID: 3856
+		// Token: 0x04001008 RID: 4104
 		private bool _ThrowInteractConfigInited;
 	}
 }

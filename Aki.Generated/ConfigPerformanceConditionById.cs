@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200064D RID: 1613
+	// Token: 0x02000665 RID: 1637
 	public class ConfigPerformanceConditionById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060025DE RID: 9694 RVA: 0x0012FBB1 File Offset: 0x0012DDB1
+		// Token: 0x0600266E RID: 9838 RVA: 0x0013662D File Offset: 0x0013482D
 		static ConfigPerformanceConditionById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPerformanceConditionById.CreateStaticDefaultValue), new Action(ConfigPerformanceConditionById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060025DF RID: 9695 RVA: 0x0012FBD0 File Offset: 0x0012DDD0
+		// Token: 0x0600266F RID: 9839 RVA: 0x0013664C File Offset: 0x0013484C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPerformanceConditionById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060025E0 RID: 9696 RVA: 0x0012FC4F File Offset: 0x0012DE4F
+		// Token: 0x06002670 RID: 9840 RVA: 0x001366CB File Offset: 0x001348CB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPerformanceConditionById.LogPair = null;
 			ConfigPerformanceConditionById.HandleId = 0;
 		}
 
-		// Token: 0x060025E1 RID: 9697 RVA: 0x0012FC5D File Offset: 0x0012DE5D
+		// Token: 0x06002671 RID: 9841 RVA: 0x001366D9 File Offset: 0x001348D9
 		public static void Init()
 		{
 			ConfigPerformanceConditionById.HandleId = ConfigCommon.InitDataStatement(ConfigPerformanceConditionById.HandleId, "db_roleidle.db", "select BinData from `PerformanceCondition` where Id=?");
 		}
 
-		// Token: 0x060025E2 RID: 9698 RVA: 0x0012FC78 File Offset: 0x0012DE78
+		// Token: 0x06002672 RID: 9842 RVA: 0x001366F4 File Offset: 0x001348F4
 		public static PerformanceCondition? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPerformanceConditionById.HandleId, ConfigPerformanceConditionById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PerformanceCondition?(rootAsPerformanceCondition);
 		}
 
-		// Token: 0x04002C01 RID: 11265
+		// Token: 0x04002CA9 RID: 11433
 		private const string DB = "db_roleidle.db";
 
-		// Token: 0x04002C02 RID: 11266
+		// Token: 0x04002CAA RID: 11434
 		private const string FILE = "d.待机动作播放条件.xlsx";
 
-		// Token: 0x04002C03 RID: 11267
+		// Token: 0x04002CAB RID: 11435
 		private const string TABLE = "PerformanceCondition";
 
-		// Token: 0x04002C04 RID: 11268
+		// Token: 0x04002CAC RID: 11436
 		private const string COMMAND = "select BinData from `PerformanceCondition` where Id=?";
 
-		// Token: 0x04002C05 RID: 11269
+		// Token: 0x04002CAD RID: 11437
 		private const string KEY_PREFIX = "PerformanceConditionById";
 
-		// Token: 0x04002C06 RID: 11270
+		// Token: 0x04002CAE RID: 11438
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002C07 RID: 11271
+		// Token: 0x04002CAF RID: 11439
 		private static int HandleId;
 	}
 }

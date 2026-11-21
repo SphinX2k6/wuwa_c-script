@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007E7 RID: 2023
+	// Token: 0x02000803 RID: 2051
 	public class ConfigResonantChainById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002F7C RID: 12156 RVA: 0x00165A93 File Offset: 0x00163C93
+		// Token: 0x06003024 RID: 12324 RVA: 0x0016CD7B File Offset: 0x0016AF7B
 		static ConfigResonantChainById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigResonantChainById.CreateStaticDefaultValue), new Action(ConfigResonantChainById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002F7D RID: 12157 RVA: 0x00165AB4 File Offset: 0x00163CB4
+		// Token: 0x06003025 RID: 12325 RVA: 0x0016CD9C File Offset: 0x0016AF9C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigResonantChainById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F7E RID: 12158 RVA: 0x00165B33 File Offset: 0x00163D33
+		// Token: 0x06003026 RID: 12326 RVA: 0x0016CE1B File Offset: 0x0016B01B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigResonantChainById.LogPair = null;
 			ConfigResonantChainById.HandleId = 0;
 		}
 
-		// Token: 0x06002F7F RID: 12159 RVA: 0x00165B41 File Offset: 0x00163D41
+		// Token: 0x06003027 RID: 12327 RVA: 0x0016CE29 File Offset: 0x0016B029
 		public static void Init()
 		{
 			ConfigResonantChainById.HandleId = ConfigCommon.InitDataStatement(ConfigResonantChainById.HandleId, "db_resonate_chain.db", "select BinData from `ResonantChain` where Id=?");
 		}
 
-		// Token: 0x06002F80 RID: 12160 RVA: 0x00165B5C File Offset: 0x00163D5C
+		// Token: 0x06003028 RID: 12328 RVA: 0x0016CE44 File Offset: 0x0016B044
 		public static ResonantChain? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigResonantChainById.HandleId, ConfigResonantChainById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ResonantChain?(rootAsResonantChain);
 		}
 
-		// Token: 0x04003737 RID: 14135
+		// Token: 0x040037FB RID: 14331
 		private const string DB = "db_resonate_chain.db";
 
-		// Token: 0x04003738 RID: 14136
+		// Token: 0x040037FC RID: 14332
 		private const string FILE = "g.共鸣链.xlsx";
 
-		// Token: 0x04003739 RID: 14137
+		// Token: 0x040037FD RID: 14333
 		private const string TABLE = "ResonantChain";
 
-		// Token: 0x0400373A RID: 14138
+		// Token: 0x040037FE RID: 14334
 		private const string COMMAND = "select BinData from `ResonantChain` where Id=?";
 
-		// Token: 0x0400373B RID: 14139
+		// Token: 0x040037FF RID: 14335
 		private const string KEY_PREFIX = "ResonantChainById";
 
-		// Token: 0x0400373C RID: 14140
+		// Token: 0x04003800 RID: 14336
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400373D RID: 14141
+		// Token: 0x04003801 RID: 14337
 		private static int HandleId;
 	}
 }

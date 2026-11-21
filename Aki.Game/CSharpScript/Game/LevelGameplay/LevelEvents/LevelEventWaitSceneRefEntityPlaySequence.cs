@@ -5,17 +5,17 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006BB7 RID: 27575
+	// Token: 0x02005D30 RID: 23856
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventWaitSceneRefEntityPlaySequence : LevelEventBase
 	{
-		// Token: 0x06044337 RID: 279351 RVA: 0x010CFCB9 File Offset: 0x010CDEB9
+		// Token: 0x0603A48F RID: 238735 RVA: 0x01079C0D File Offset: 0x01077E0D
 		public LevelEventWaitSceneRefEntityPlaySequence(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044338 RID: 279352 RVA: 0x010CFCD0 File Offset: 0x010CDED0
+		// Token: 0x0603A490 RID: 238736 RVA: 0x01079C24 File Offset: 0x01077E24
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			WaitUntilLevelSequenceReachMark waitUntilLevelSequenceReachMark = inParams as WaitUntilLevelSequenceReachMark;
@@ -34,13 +34,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044339 RID: 279353 RVA: 0x010CFD4C File Offset: 0x010CDF4C
+		// Token: 0x0603A491 RID: 238737 RVA: 0x01079CA0 File Offset: 0x01077EA0
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			this.EntityReady = true;
 		}
 
-		// Token: 0x0604433A RID: 279354 RVA: 0x010CFD55 File Offset: 0x010CDF55
+		// Token: 0x0603A492 RID: 238738 RVA: 0x01079CA9 File Offset: 0x01077EA9
 		protected override void OnTick(float deltaTime)
 		{
 			if (this.CheckEntityPlaySequenceFinished(this.PbDataId, this.Mark))
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604433B RID: 279355 RVA: 0x010CFD74 File Offset: 0x010CDF74
+		// Token: 0x0603A493 RID: 238739 RVA: 0x01079CC8 File Offset: 0x01077EC8
 		private bool CheckEntityPlaySequenceFinished(int pbDataId, string mark)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(pbDataId);
@@ -81,13 +81,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return component.IsPlayToMarkFinished(mark);
 		}
 
-		// Token: 0x0402397F RID: 145791
+		// Token: 0x0401EC21 RID: 125985
 		private int PbDataId;
 
-		// Token: 0x04023980 RID: 145792
+		// Token: 0x0401EC22 RID: 125986
 		private string Mark = "";
 
-		// Token: 0x04023981 RID: 145793
+		// Token: 0x0401EC23 RID: 125987
 		private bool EntityReady;
 	}
 }

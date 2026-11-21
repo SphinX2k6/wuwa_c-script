@@ -4,45 +4,45 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005743 RID: 22339
+	// Token: 0x02005D4A RID: 23882
 	public class IPilotThrowTargetT
 	{
-		// Token: 0x1700A6AA RID: 42666
-		// (get) Token: 0x060256E5 RID: 153317 RVA: 0x0052A756 File Offset: 0x00528956
-		// (set) Token: 0x060256E6 RID: 153318 RVA: 0x0052A75E File Offset: 0x0052895E
+		// Token: 0x1700AFCE RID: 45006
+		// (get) Token: 0x06027C05 RID: 162821 RVA: 0x005708E2 File Offset: 0x0056EAE2
+		// (set) Token: 0x06027C06 RID: 162822 RVA: 0x005708EA File Offset: 0x0056EAEA
 		public string TidTargetName { get; set; }
 
-		// Token: 0x1700A6AB RID: 42667
-		// (get) Token: 0x060256E7 RID: 153319 RVA: 0x0052A767 File Offset: 0x00528967
-		// (set) Token: 0x060256E8 RID: 153320 RVA: 0x0052A76F File Offset: 0x0052896F
+		// Token: 0x1700AFCF RID: 45007
+		// (get) Token: 0x06027C07 RID: 162823 RVA: 0x005708F3 File Offset: 0x0056EAF3
+		// (set) Token: 0x06027C08 RID: 162824 RVA: 0x005708FB File Offset: 0x0056EAFB
 		public IVectorInfoT Position { get; set; }
 
-		// Token: 0x1700A6AC RID: 42668
-		// (get) Token: 0x060256E9 RID: 153321 RVA: 0x0052A778 File Offset: 0x00528978
-		// (set) Token: 0x060256EA RID: 153322 RVA: 0x0052A780 File Offset: 0x00528980
+		// Token: 0x1700AFD0 RID: 45008
+		// (get) Token: 0x06027C09 RID: 162825 RVA: 0x00570904 File Offset: 0x0056EB04
+		// (set) Token: 0x06027C0A RID: 162826 RVA: 0x0057090C File Offset: 0x0056EB0C
 		public EPilotThrowPointVisualType VisualType { get; set; }
 
-		// Token: 0x1700A6AD RID: 42669
-		// (get) Token: 0x060256EB RID: 153323 RVA: 0x0052A789 File Offset: 0x00528989
-		// (set) Token: 0x060256EC RID: 153324 RVA: 0x0052A791 File Offset: 0x00528991
+		// Token: 0x1700AFD1 RID: 45009
+		// (get) Token: 0x06027C0B RID: 162827 RVA: 0x00570915 File Offset: 0x0056EB15
+		// (set) Token: 0x06027C0C RID: 162828 RVA: 0x0057091D File Offset: 0x0056EB1D
 		public IConditionGroupT Conditions { get; set; }
 
-		// Token: 0x1700A6AE RID: 42670
-		// (get) Token: 0x060256ED RID: 153325 RVA: 0x0052A79A File Offset: 0x0052899A
-		// (set) Token: 0x060256EE RID: 153326 RVA: 0x0052A7A2 File Offset: 0x005289A2
+		// Token: 0x1700AFD2 RID: 45010
+		// (get) Token: 0x06027C0D RID: 162829 RVA: 0x00570926 File Offset: 0x0056EB26
+		// (set) Token: 0x06027C0E RID: 162830 RVA: 0x0057092E File Offset: 0x0056EB2E
 		public bool IsQuest { get; set; }
 
-		// Token: 0x1700A6AF RID: 42671
-		// (get) Token: 0x060256EF RID: 153327 RVA: 0x0052A7AB File Offset: 0x005289AB
-		// (set) Token: 0x060256F0 RID: 153328 RVA: 0x0052A7B3 File Offset: 0x005289B3
+		// Token: 0x1700AFD3 RID: 45011
+		// (get) Token: 0x06027C0F RID: 162831 RVA: 0x00570937 File Offset: 0x0056EB37
+		// (set) Token: 0x06027C10 RID: 162832 RVA: 0x0057093F File Offset: 0x0056EB3F
 		public float UiScale { get; set; }
 
-		// Token: 0x1700A6B0 RID: 42672
-		// (get) Token: 0x060256F1 RID: 153329 RVA: 0x0052A7BC File Offset: 0x005289BC
-		// (set) Token: 0x060256F2 RID: 153330 RVA: 0x0052A7C4 File Offset: 0x005289C4
+		// Token: 0x1700AFD4 RID: 45012
+		// (get) Token: 0x06027C11 RID: 162833 RVA: 0x00570948 File Offset: 0x0056EB48
+		// (set) Token: 0x06027C12 RID: 162834 RVA: 0x00570950 File Offset: 0x0056EB50
 		public byte NullMask { get; set; }
 
-		// Token: 0x060256F3 RID: 153331 RVA: 0x0052A7CD File Offset: 0x005289CD
+		// Token: 0x06027C13 RID: 162835 RVA: 0x00570959 File Offset: 0x0056EB59
 		public IPilotThrowTargetT()
 		{
 			this.TidTargetName = null;

@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020010B1 RID: 4273
+// Token: 0x02000565 RID: 1381
 [NullableContext(1)]
 public interface IActivityFunctionAreaParams
 {
-	// Token: 0x17000951 RID: 2385
-	// (get) Token: 0x06006F36 RID: 28470
-	// (set) Token: 0x06006F37 RID: 28471
+	// Token: 0x17000971 RID: 2417
+	// (get) Token: 0x060042CC RID: 17100
+	// (set) Token: 0x060042CD RID: 17101
 	string UnlockBtnTextId { get; set; }
 
-	// Token: 0x17000952 RID: 2386
-	// (get) Token: 0x06006F38 RID: 28472
-	// (set) Token: 0x06006F39 RID: 28473
+	// Token: 0x17000972 RID: 2418
+	// (get) Token: 0x060042CE RID: 17102
+	// (set) Token: 0x060042CF RID: 17103
 	string[] UnlockBtnTextArgs { get; set; }
 
-	// Token: 0x17000953 RID: 2387
-	// (get) Token: 0x06006F3A RID: 28474
-	// (set) Token: 0x06006F3B RID: 28475
+	// Token: 0x17000973 RID: 2419
+	// (get) Token: 0x060042D0 RID: 17104
+	// (set) Token: 0x060042D1 RID: 17105
 	Action UnlockBtnFunction { get; set; }
 
-	// Token: 0x17000954 RID: 2388
-	// (get) Token: 0x06006F3C RID: 28476
-	// (set) Token: 0x06006F3D RID: 28477
+	// Token: 0x17000974 RID: 2420
+	// (get) Token: 0x060042D2 RID: 17106
+	// (set) Token: 0x060042D3 RID: 17107
 	Func<bool> BeforePreOpenCheck { get; set; }
 }

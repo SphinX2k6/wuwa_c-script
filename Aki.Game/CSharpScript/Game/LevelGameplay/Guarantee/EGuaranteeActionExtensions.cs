@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelGamePlay.Guarantee
 {
-	// Token: 0x02006E0B RID: 28171
+	// Token: 0x02005F8B RID: 24459
 	public static class EGuaranteeActionExtensions
 	{
-		// Token: 0x06044B52 RID: 281426 RVA: 0x010F5428 File Offset: 0x010F3628
+		// Token: 0x0603ACB8 RID: 240824 RVA: 0x0109F7E8 File Offset: 0x0109D9E8
 		public static string ToEnumString(this EGuaranteeAction value)
 		{
 			string result;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			return result;
 		}
 
-		// Token: 0x06044B53 RID: 281427 RVA: 0x010F54D0 File Offset: 0x010F36D0
+		// Token: 0x0603ACB9 RID: 240825 RVA: 0x0109F890 File Offset: 0x0109DA90
 		public static EGuaranteeAction FromString(string name)
 		{
 			EGuaranteeAction result;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			return result;
 		}
 
-		// Token: 0x06044B54 RID: 281428 RVA: 0x010F54FC File Offset: 0x010F36FC
+		// Token: 0x0603ACBA RID: 240826 RVA: 0x0109F8BC File Offset: 0x0109DABC
 		public static bool TryFromString(string name, out EGuaranteeAction value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			return false;
 		}
 
-		// Token: 0x06044B55 RID: 281429 RVA: 0x010F5690 File Offset: 0x010F3890
+		// Token: 0x0603ACBB RID: 240827 RVA: 0x0109FA50 File Offset: 0x0109DC50
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			};
 		}
 
-		// Token: 0x06044B56 RID: 281430 RVA: 0x010F56FE File Offset: 0x010F38FE
+		// Token: 0x0603ACBC RID: 240828 RVA: 0x0109FABE File Offset: 0x0109DCBE
 		public static EGuaranteeAction[] GetValues()
 		{
 			return new EGuaranteeAction[]
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			};
 		}
 
-		// Token: 0x06044B57 RID: 281431 RVA: 0x010F5714 File Offset: 0x010F3914
+		// Token: 0x0603ACBD RID: 240829 RVA: 0x0109FAD4 File Offset: 0x0109DCD4
 		public static string[] GetNames()
 		{
 			return new string[]

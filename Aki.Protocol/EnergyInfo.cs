@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000445 RID: 1093
+	// Token: 0x0200042E RID: 1070
 	public sealed class EnergyInfo : IMessage<EnergyInfo>, IMessage, IEquatable<EnergyInfo>, IDeepCloneable<EnergyInfo>, IBufferMessage
 	{
-		// Token: 0x06006895 RID: 26773 RVA: 0x000FB3D2 File Offset: 0x000F95D2
+		// Token: 0x06006705 RID: 26373 RVA: 0x000F8245 File Offset: 0x000F6445
 		[NullableContext(1)]
 		public static EnergyInfo Create()
 		{
 			return new EnergyInfo();
 		}
 
-		// Token: 0x170013B3 RID: 5043
-		// (get) Token: 0x06006896 RID: 26774 RVA: 0x000FB3D9 File Offset: 0x000F95D9
+		// Token: 0x1700135E RID: 4958
+		// (get) Token: 0x06006706 RID: 26374 RVA: 0x000F824C File Offset: 0x000F644C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<EnergyInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013B4 RID: 5044
-		// (get) Token: 0x06006897 RID: 26775 RVA: 0x000FB3E0 File Offset: 0x000F95E0
+		// Token: 0x1700135F RID: 4959
+		// (get) Token: 0x06006707 RID: 26375 RVA: 0x000F8253 File Offset: 0x000F6453
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013B5 RID: 5045
-		// (get) Token: 0x06006898 RID: 26776 RVA: 0x000FB3E3 File Offset: 0x000F95E3
+		// Token: 0x17001360 RID: 4960
+		// (get) Token: 0x06006708 RID: 26376 RVA: 0x000F8256 File Offset: 0x000F6456
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006899 RID: 26777 RVA: 0x000FB3EA File Offset: 0x000F95EA
+		// Token: 0x06006709 RID: 26377 RVA: 0x000F825D File Offset: 0x000F645D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EnergyInfo()
 		{
 		}
 
-		// Token: 0x0600689A RID: 26778 RVA: 0x000FB3F2 File Offset: 0x000F95F2
+		// Token: 0x0600670A RID: 26378 RVA: 0x000F8265 File Offset: 0x000F6465
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EnergyInfo(EnergyInfo other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600689B RID: 26779 RVA: 0x000FB42F File Offset: 0x000F962F
+		// Token: 0x0600670B RID: 26379 RVA: 0x000F82A2 File Offset: 0x000F64A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EnergyInfo Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new EnergyInfo(this);
 		}
 
-		// Token: 0x170013B6 RID: 5046
-		// (get) Token: 0x0600689C RID: 26780 RVA: 0x000FB437 File Offset: 0x000F9637
-		// (set) Token: 0x0600689D RID: 26781 RVA: 0x000FB43F File Offset: 0x000F963F
+		// Token: 0x17001361 RID: 4961
+		// (get) Token: 0x0600670C RID: 26380 RVA: 0x000F82AA File Offset: 0x000F64AA
+		// (set) Token: 0x0600670D RID: 26381 RVA: 0x000F82B2 File Offset: 0x000F64B2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int EnergyCount
@@ -96,9 +96,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013B7 RID: 5047
-		// (get) Token: 0x0600689E RID: 26782 RVA: 0x000FB448 File Offset: 0x000F9648
-		// (set) Token: 0x0600689F RID: 26783 RVA: 0x000FB450 File Offset: 0x000F9650
+		// Token: 0x17001362 RID: 4962
+		// (get) Token: 0x0600670E RID: 26382 RVA: 0x000F82BB File Offset: 0x000F64BB
+		// (set) Token: 0x0600670F RID: 26383 RVA: 0x000F82C3 File Offset: 0x000F64C3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LastRenewEnergyTime
@@ -113,9 +113,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013B8 RID: 5048
-		// (get) Token: 0x060068A0 RID: 26784 RVA: 0x000FB459 File Offset: 0x000F9659
-		// (set) Token: 0x060068A1 RID: 26785 RVA: 0x000FB461 File Offset: 0x000F9661
+		// Token: 0x17001363 RID: 4963
+		// (get) Token: 0x06006710 RID: 26384 RVA: 0x000F82CC File Offset: 0x000F64CC
+		// (set) Token: 0x06006711 RID: 26385 RVA: 0x000F82D4 File Offset: 0x000F64D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Id
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060068A2 RID: 26786 RVA: 0x000FB46A File Offset: 0x000F966A
+		// Token: 0x06006712 RID: 26386 RVA: 0x000F82DD File Offset: 0x000F64DD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return this.Equals(other as EnergyInfo);
 		}
 
-		// Token: 0x060068A3 RID: 26787 RVA: 0x000FB478 File Offset: 0x000F9678
+		// Token: 0x06006713 RID: 26387 RVA: 0x000F82EC File Offset: 0x000F64EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(EnergyInfo other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.EnergyCount == other.EnergyCount && this.LastRenewEnergyTime == other.LastRenewEnergyTime && this.Id == other.Id && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060068A4 RID: 26788 RVA: 0x000FB4D4 File Offset: 0x000F96D4
+		// Token: 0x06006714 RID: 26388 RVA: 0x000F8348 File Offset: 0x000F6548
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060068A5 RID: 26789 RVA: 0x000FB545 File Offset: 0x000F9745
+		// Token: 0x06006715 RID: 26389 RVA: 0x000F83B9 File Offset: 0x000F65B9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -179,7 +179,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060068A6 RID: 26790 RVA: 0x000FB552 File Offset: 0x000F9752
+		// Token: 0x06006716 RID: 26390 RVA: 0x000F83C6 File Offset: 0x000F65C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -187,7 +187,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060068A7 RID: 26791 RVA: 0x000FB55C File Offset: 0x000F975C
+		// Token: 0x06006717 RID: 26391 RVA: 0x000F83D0 File Offset: 0x000F65D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060068A8 RID: 26792 RVA: 0x000FB5D0 File Offset: 0x000F97D0
+		// Token: 0x06006718 RID: 26392 RVA: 0x000F8444 File Offset: 0x000F6644
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -238,7 +238,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060068A9 RID: 26793 RVA: 0x000FB640 File Offset: 0x000F9840
+		// Token: 0x06006719 RID: 26393 RVA: 0x000F84B4 File Offset: 0x000F66B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(EnergyInfo other)
@@ -262,7 +262,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060068AA RID: 26794 RVA: 0x000FB6A4 File Offset: 0x000F98A4
+		// Token: 0x0600671A RID: 26394 RVA: 0x000F8518 File Offset: 0x000F6718
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -270,7 +270,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060068AB RID: 26795 RVA: 0x000FB6B0 File Offset: 0x000F98B0
+		// Token: 0x0600671B RID: 26395 RVA: 0x000F8524 File Offset: 0x000F6724
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -307,28 +307,28 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040039C0 RID: 14784
+		// Token: 0x040039AD RID: 14765
 		private static readonly MessageParser<EnergyInfo> _parser = new MessageParser<EnergyInfo>(() => new EnergyInfo());
 
-		// Token: 0x040039C1 RID: 14785
+		// Token: 0x040039AE RID: 14766
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040039C2 RID: 14786
+		// Token: 0x040039AF RID: 14767
 		public const int EnergyCountFieldNumber = 1;
 
-		// Token: 0x040039C3 RID: 14787
+		// Token: 0x040039B0 RID: 14768
 		private int energyCount_;
 
-		// Token: 0x040039C4 RID: 14788
+		// Token: 0x040039B1 RID: 14769
 		public const int LastRenewEnergyTimeFieldNumber = 2;
 
-		// Token: 0x040039C5 RID: 14789
+		// Token: 0x040039B2 RID: 14770
 		private int lastRenewEnergyTime_;
 
-		// Token: 0x040039C6 RID: 14790
+		// Token: 0x040039B3 RID: 14771
 		public const int IdFieldNumber = 3;
 
-		// Token: 0x040039C7 RID: 14791
+		// Token: 0x040039B4 RID: 14772
 		private int id_;
 	}
 }

@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002227 RID: 8743
+	// Token: 0x02002492 RID: 9362
 	public class SummonEntity_SetValue
 	{
-		// Token: 0x0400726D RID: 29293
-		[Nullable(1)]
+		// Token: 0x040078B7 RID: 30903
 		public ISummonVehicle SummonEntityConfig;
 	}
 }

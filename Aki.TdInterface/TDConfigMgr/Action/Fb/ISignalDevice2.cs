@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200285D RID: 10333
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B30 RID: 11056
 	public class ISignalDevice2 : IUiGame
 	{
-		// Token: 0x0600E509 RID: 58633 RVA: 0x0021B191 File Offset: 0x00219391
+		// Token: 0x0600F32E RID: 62254 RVA: 0x00237FF5 File Offset: 0x002361F5
 		public static ISignalDevice2 Create(ISignalDevice2? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004611 RID: 17937
-		// (get) Token: 0x0600E50A RID: 58634 RVA: 0x0021B1B0 File Offset: 0x002193B0
+		// Token: 0x1700497C RID: 18812
+		// (get) Token: 0x0600F32F RID: 62255 RVA: 0x00238014 File Offset: 0x00236214
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004612 RID: 17938
-		// (get) Token: 0x0600E50B RID: 58635 RVA: 0x0021B1C0 File Offset: 0x002193C0
+		// Token: 0x1700497D RID: 18813
+		// (get) Token: 0x0600F330 RID: 62256 RVA: 0x00238024 File Offset: 0x00236224
 		public virtual List<IColorPiece> Config
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EB3 RID: 32435
+		// Token: 0x04008570 RID: 34160
 		private ISignalDevice2 Instance;
 
-		// Token: 0x04007EB4 RID: 32436
+		// Token: 0x04008571 RID: 34161
 		private List<IColorPiece> _ConfigCache;
 
-		// Token: 0x04007EB5 RID: 32437
+		// Token: 0x04008572 RID: 34162
 		private bool _ConfigInited;
 	}
 }

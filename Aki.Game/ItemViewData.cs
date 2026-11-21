@@ -4,54 +4,54 @@ using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 using FilterDefine;
 
-// Token: 0x02001FFC RID: 8188
+// Token: 0x020014CF RID: 5327
 [NullableContext(1)]
 [Nullable(0)]
 public class ItemViewData : IPhantomFilterData
 {
-	// Token: 0x060100B3 RID: 65715 RVA: 0x003E9534 File Offset: 0x003E7734
+	// Token: 0x0600D51B RID: 54555 RVA: 0x003F5B2C File Offset: 0x003F3D2C
 	public ItemViewData(InventoryDefine.IItemViewDataInfo itemViewInfo)
 	{
 		this.ItemViewInfo = itemViewInfo;
 	}
 
-	// Token: 0x060100B4 RID: 65716 RVA: 0x003E9543 File Offset: 0x003E7743
+	// Token: 0x0600D51C RID: 54556 RVA: 0x003F5B3B File Offset: 0x003F3D3B
 	public void SetItemViewInfo(InventoryDefine.IItemViewDataInfo itemViewInfo)
 	{
 		this.ItemViewInfo = itemViewInfo;
 	}
 
-	// Token: 0x060100B5 RID: 65717 RVA: 0x003E954C File Offset: 0x003E774C
+	// Token: 0x0600D51D RID: 54557 RVA: 0x003F5B44 File Offset: 0x003F3D44
 	public InventoryDefine.IItemViewDataInfo GetItemViewInfo()
 	{
 		return this.ItemViewInfo;
 	}
 
-	// Token: 0x060100B6 RID: 65718 RVA: 0x003E9554 File Offset: 0x003E7754
+	// Token: 0x0600D51E RID: 54558 RVA: 0x003F5B4C File Offset: 0x003F3D4C
 	private void SetIsNew(bool isNew)
 	{
 		this.ItemViewInfo.IsNewItem = isNew;
 	}
 
-	// Token: 0x060100B7 RID: 65719 RVA: 0x003E9562 File Offset: 0x003E7762
+	// Token: 0x0600D51F RID: 54559 RVA: 0x003F5B5A File Offset: 0x003F3D5A
 	public void SetIsLock(bool bIsLock)
 	{
 		this.ItemViewInfo.IsLock = bIsLock;
 	}
 
-	// Token: 0x060100B8 RID: 65720 RVA: 0x003E9570 File Offset: 0x003E7770
+	// Token: 0x0600D520 RID: 54560 RVA: 0x003F5B68 File Offset: 0x003F3D68
 	public void SetIsDeprecate(bool isDeprecate)
 	{
 		this.ItemViewInfo.IsDeprecate = isDeprecate;
 	}
 
-	// Token: 0x060100B9 RID: 65721 RVA: 0x003E957E File Offset: 0x003E777E
+	// Token: 0x0600D521 RID: 54561 RVA: 0x003F5B76 File Offset: 0x003F3D76
 	public void SetHasRedDot(bool hasRedDot)
 	{
 		this.ItemViewInfo.HasRedDot = hasRedDot;
 	}
 
-	// Token: 0x060100BA RID: 65722 RVA: 0x003E958C File Offset: 0x003E778C
+	// Token: 0x0600D522 RID: 54562 RVA: 0x003F5B84 File Offset: 0x003F3D84
 	public InventoryDefine.ERedDotDisableRule GetRedDotDisableRule()
 	{
 		int configId = this.GetConfigId();
@@ -63,13 +63,13 @@ public class ItemViewData : IPhantomFilterData
 		return itemConfigData.RedDotDisableRule;
 	}
 
-	// Token: 0x060100BB RID: 65723 RVA: 0x003E95B7 File Offset: 0x003E77B7
+	// Token: 0x0600D523 RID: 54563 RVA: 0x003F5BAF File Offset: 0x003F3DAF
 	public int GetConfigId()
 	{
 		return this.ItemViewInfo.ConfigId;
 	}
 
-	// Token: 0x060100BC RID: 65724 RVA: 0x003E95C4 File Offset: 0x003E77C4
+	// Token: 0x0600D524 RID: 54564 RVA: 0x003F5BBC File Offset: 0x003F3DBC
 	public int GetUniqueId()
 	{
 		ItemDataBase itemDataBase = this.GetItemDataBase();
@@ -80,7 +80,7 @@ public class ItemViewData : IPhantomFilterData
 		return itemDataBase.GetUniqueId();
 	}
 
-	// Token: 0x060100BD RID: 65725 RVA: 0x003E95E4 File Offset: 0x003E77E4
+	// Token: 0x0600D525 RID: 54565 RVA: 0x003F5BDC File Offset: 0x003F3DDC
 	public int GetQuality()
 	{
 		ItemDataBase itemDataBase = this.GetItemDataBase();
@@ -91,73 +91,73 @@ public class ItemViewData : IPhantomFilterData
 		return itemDataBase.GetQuality();
 	}
 
-	// Token: 0x060100BE RID: 65726 RVA: 0x003E9603 File Offset: 0x003E7803
+	// Token: 0x0600D526 RID: 54566 RVA: 0x003F5BFB File Offset: 0x003F3DFB
 	public void SetCount(int count)
 	{
 		this.ItemViewInfo.Count = count;
 	}
 
-	// Token: 0x060100BF RID: 65727 RVA: 0x003E9611 File Offset: 0x003E7811
+	// Token: 0x0600D527 RID: 54567 RVA: 0x003F5C09 File Offset: 0x003F3E09
 	public int GetCount()
 	{
 		return this.ItemViewInfo.Count;
 	}
 
-	// Token: 0x060100C0 RID: 65728 RVA: 0x003E961E File Offset: 0x003E781E
+	// Token: 0x0600D528 RID: 54568 RVA: 0x003F5C16 File Offset: 0x003F3E16
 	public void SetStackId(int stackId)
 	{
 		this.ItemViewInfo.StackId = stackId;
 	}
 
-	// Token: 0x060100C1 RID: 65729 RVA: 0x003E962C File Offset: 0x003E782C
+	// Token: 0x0600D529 RID: 54569 RVA: 0x003F5C24 File Offset: 0x003F3E24
 	public int GetStackId()
 	{
 		return this.ItemViewInfo.StackId;
 	}
 
-	// Token: 0x060100C2 RID: 65730 RVA: 0x003E9639 File Offset: 0x003E7839
+	// Token: 0x0600D52A RID: 54570 RVA: 0x003F5C31 File Offset: 0x003F3E31
 	public void SetSelectOn(bool isSelectOn)
 	{
 		this.ItemViewInfo.IsSelectOn = isSelectOn;
 	}
 
-	// Token: 0x060100C3 RID: 65731 RVA: 0x003E9647 File Offset: 0x003E7847
+	// Token: 0x0600D52B RID: 54571 RVA: 0x003F5C3F File Offset: 0x003F3E3F
 	public bool GetSelectOn()
 	{
 		return this.ItemViewInfo.IsSelectOn;
 	}
 
-	// Token: 0x060100C4 RID: 65732 RVA: 0x003E9654 File Offset: 0x003E7854
+	// Token: 0x0600D52C RID: 54572 RVA: 0x003F5C4C File Offset: 0x003F3E4C
 	public void SetSelectNum(int selectNum)
 	{
 		this.ItemViewInfo.SelectOnNum = selectNum;
 	}
 
-	// Token: 0x060100C5 RID: 65733 RVA: 0x003E9662 File Offset: 0x003E7862
+	// Token: 0x0600D52D RID: 54573 RVA: 0x003F5C5A File Offset: 0x003F3E5A
 	public int GetSelectNum()
 	{
 		return this.ItemViewInfo.SelectOnNum;
 	}
 
-	// Token: 0x060100C6 RID: 65734 RVA: 0x003E966F File Offset: 0x003E786F
+	// Token: 0x0600D52E RID: 54574 RVA: 0x003F5C67 File Offset: 0x003F3E67
 	public ItemDataBase GetItemDataBase()
 	{
 		return this.ItemViewInfo.ItemDataBase;
 	}
 
-	// Token: 0x060100C7 RID: 65735 RVA: 0x003E967C File Offset: 0x003E787C
+	// Token: 0x0600D52F RID: 54575 RVA: 0x003F5C74 File Offset: 0x003F3E74
 	public InventoryDefine.EItemDataType GetItemDataType()
 	{
 		return this.ItemViewInfo.ItemDataType;
 	}
 
-	// Token: 0x060100C8 RID: 65736 RVA: 0x003E9689 File Offset: 0x003E7889
+	// Token: 0x0600D530 RID: 54576 RVA: 0x003F5C81 File Offset: 0x003F3E81
 	public int GetSortIndex()
 	{
 		return this.GetItemDataBase().GetSortIndex();
 	}
 
-	// Token: 0x060100C9 RID: 65737 RVA: 0x003E9698 File Offset: 0x003E7898
+	// Token: 0x0600D531 RID: 54577 RVA: 0x003F5C90 File Offset: 0x003F3E90
 	public void RemoveNewItem()
 	{
 		InventoryModel instance = InventoryModel.Instance;
@@ -175,7 +175,7 @@ public class ItemViewData : IPhantomFilterData
 		this.SetIsNew(false);
 	}
 
-	// Token: 0x060100CA RID: 65738 RVA: 0x003E96DC File Offset: 0x003E78DC
+	// Token: 0x0600D532 RID: 54578 RVA: 0x003F5CD4 File Offset: 0x003F3ED4
 	public void RemoveRedDotItem()
 	{
 		InventoryModel instance = InventoryModel.Instance;
@@ -193,31 +193,31 @@ public class ItemViewData : IPhantomFilterData
 		this.SetHasRedDot(false);
 	}
 
-	// Token: 0x060100CB RID: 65739 RVA: 0x003E971F File Offset: 0x003E791F
+	// Token: 0x0600D533 RID: 54579 RVA: 0x003F5D17 File Offset: 0x003F3F17
 	public bool IsBuffItem()
 	{
 		return BuffItemConfig.Instance.IsBuffItem(this.GetConfigId());
 	}
 
-	// Token: 0x060100CC RID: 65740 RVA: 0x003E9731 File Offset: 0x003E7931
+	// Token: 0x0600D534 RID: 54580 RVA: 0x003F5D29 File Offset: 0x003F3F29
 	public bool IsTeamBuffItem()
 	{
 		return BuffItemConfig.Instance.IsTeamBuffItem(this.GetConfigId());
 	}
 
-	// Token: 0x060100CD RID: 65741 RVA: 0x003E9744 File Offset: 0x003E7944
+	// Token: 0x0600D535 RID: 54581 RVA: 0x003F5D3C File Offset: 0x003F3F3C
 	public UiPlayItem GetUiPlayItem()
 	{
 		return ConfigUiPlayItemById.GetConfig(this.GetConfigId(), true).Value;
 	}
 
-	// Token: 0x060100CE RID: 65742 RVA: 0x003E9768 File Offset: 0x003E7968
+	// Token: 0x0600D536 RID: 54582 RVA: 0x003F5D60 File Offset: 0x003F3F60
 	public InventoryDefine.EItemType GetItemType()
 	{
 		return this.GetItemDataBase().GetType().Value;
 	}
 
-	// Token: 0x060100CF RID: 65743 RVA: 0x003E9788 File Offset: 0x003E7988
+	// Token: 0x0600D537 RID: 54583 RVA: 0x003F5D80 File Offset: 0x003F3F80
 	public int GetAttributeLevel()
 	{
 		InventoryDefine.EItemDataType itemDataType = this.GetItemDataType();
@@ -241,13 +241,13 @@ public class ItemViewData : IPhantomFilterData
 		}
 	}
 
-	// Token: 0x060100D0 RID: 65744 RVA: 0x003E97D0 File Offset: 0x003E79D0
+	// Token: 0x0600D538 RID: 54584 RVA: 0x003F5DC8 File Offset: 0x003F3FC8
 	public ItemViewDefine.EItemOperationMode GetItemOperationType()
 	{
 		return this.ItemViewInfo.ItemOperationMode;
 	}
 
-	// Token: 0x060100D1 RID: 65745 RVA: 0x003E97E0 File Offset: 0x003E79E0
+	// Token: 0x0600D539 RID: 54585 RVA: 0x003F5DD8 File Offset: 0x003F3FD8
 	public bool IsItemCanDestroy()
 	{
 		switch (this.GetItemDataType())
@@ -289,7 +289,7 @@ public class ItemViewData : IPhantomFilterData
 		return false;
 	}
 
-	// Token: 0x060100D2 RID: 65746 RVA: 0x003E9920 File Offset: 0x003E7B20
+	// Token: 0x0600D53A RID: 54586 RVA: 0x003F5F18 File Offset: 0x003F4118
 	public bool IsEqual(global::ItemViewData itemViewDataB, bool? needStackEqual = null)
 	{
 		bool flag = this.GetConfigId() == itemViewDataB.GetConfigId();
@@ -302,6 +302,6 @@ public class ItemViewData : IPhantomFilterData
 		return flag && flag2;
 	}
 
-	// Token: 0x040076BC RID: 30396
+	// Token: 0x040077A5 RID: 30629
 	private InventoryDefine.IItemViewDataInfo ItemViewInfo;
 }

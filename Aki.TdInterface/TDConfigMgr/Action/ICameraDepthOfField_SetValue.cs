@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200183D RID: 6205
+	// Token: 0x020019C8 RID: 6600
 	public class ICameraDepthOfField_SetValue
 	{
-		// Token: 0x04005422 RID: 21538
+		// Token: 0x0400586E RID: 22638
 		public float? Fstop;
 
-		// Token: 0x04005423 RID: 21539
+		// Token: 0x0400586F RID: 22639
 		public float? Distance;
 
-		// Token: 0x04005424 RID: 21540
+		// Token: 0x04005870 RID: 22640
 		public float? BlurAmount;
 
-		// Token: 0x04005425 RID: 21541
+		// Token: 0x04005871 RID: 22641
 		public float? BlurRadius;
 	}
 }

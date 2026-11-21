@@ -19,17 +19,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 {
-	// Token: 0x0200524D RID: 21069
+	// Token: 0x0200421D RID: 16925
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleView : UiViewBase
 	{
-		// Token: 0x06035D49 RID: 220489 RVA: 0x00CBC6AF File Offset: 0x00CBA8AF
+		// Token: 0x0602AC44 RID: 175172 RVA: 0x00C09D3F File Offset: 0x00C07F3F
 		public PhantomArenaBattleView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06035D4A RID: 220490 RVA: 0x00CBC6C0 File Offset: 0x00CBA8C0
+		// Token: 0x0602AC45 RID: 175173 RVA: 0x00C09D50 File Offset: 0x00C07F50
 		protected override void OnRegisterComponent()
 		{
 			this.Proxy = new PhantomArenaBattleProxy();
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			};
 		}
 
-		// Token: 0x06035D4B RID: 220491 RVA: 0x00CBCA48 File Offset: 0x00CBAC48
+		// Token: 0x0602AC46 RID: 175174 RVA: 0x00C0A0D8 File Offset: 0x00C082D8
 		private UniTask InitLibrarySprite()
 		{
 			PhantomArenaBattleView.<InitLibrarySprite>d__7 <InitLibrarySprite>d__;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitLibrarySprite>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D4C RID: 220492 RVA: 0x00CBCA8C File Offset: 0x00CBAC8C
+		// Token: 0x0602AC47 RID: 175175 RVA: 0x00C0A11C File Offset: 0x00C0831C
 		private UniTask InitDesktopBg()
 		{
 			PhantomArenaBattleView.<InitDesktopBg>d__8 <InitDesktopBg>d__;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitDesktopBg>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D4D RID: 220493 RVA: 0x00CBCAD0 File Offset: 0x00CBACD0
+		// Token: 0x0602AC48 RID: 175176 RVA: 0x00C0A160 File Offset: 0x00C08360
 		private void InitCaption()
 		{
 			this.Proxy.CaptionItem = new PopupCaptionItem(base.GetItem(15));
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.Proxy.CaptionItem.SetHelpCallBack(new Action(this.Proxy.HelpClick));
 		}
 
-		// Token: 0x06035D4E RID: 220494 RVA: 0x00CBCB38 File Offset: 0x00CBAD38
+		// Token: 0x0602AC49 RID: 175177 RVA: 0x00C0A1C8 File Offset: 0x00C083C8
 		private UniTask InitOwnArea()
 		{
 			PhantomArenaBattleView.<InitOwnArea>d__10 <InitOwnArea>d__;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitOwnArea>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D4F RID: 220495 RVA: 0x00CBCB7C File Offset: 0x00CBAD7C
+		// Token: 0x0602AC4A RID: 175178 RVA: 0x00C0A20C File Offset: 0x00C0840C
 		private UniTask InitOpponentArea()
 		{
 			PhantomArenaBattleView.<InitOpponentArea>d__11 <InitOpponentArea>d__;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitOpponentArea>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D50 RID: 220496 RVA: 0x00CBCBC0 File Offset: 0x00CBADC0
+		// Token: 0x0602AC4B RID: 175179 RVA: 0x00C0A250 File Offset: 0x00C08450
 		private UniTask InitCardLibrary()
 		{
 			PhantomArenaBattleView.<InitCardLibrary>d__12 <InitCardLibrary>d__;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitCardLibrary>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D51 RID: 220497 RVA: 0x00CBCC04 File Offset: 0x00CBAE04
+		// Token: 0x0602AC4C RID: 175180 RVA: 0x00C0A294 File Offset: 0x00C08494
 		private UniTask InitTipsItem()
 		{
 			PhantomArenaBattleView.<InitTipsItem>d__13 <InitTipsItem>d__;
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitTipsItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D52 RID: 220498 RVA: 0x00CBCC48 File Offset: 0x00CBAE48
+		// Token: 0x0602AC4D RID: 175181 RVA: 0x00C0A2D8 File Offset: 0x00C084D8
 		private UniTask InitDetailsTips()
 		{
 			PhantomArenaBattleView.<InitDetailsTips>d__14 <InitDetailsTips>d__;
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitDetailsTips>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D53 RID: 220499 RVA: 0x00CBCC8C File Offset: 0x00CBAE8C
+		// Token: 0x0602AC4E RID: 175182 RVA: 0x00C0A31C File Offset: 0x00C0851C
 		private UniTask InitSkillTips()
 		{
 			PhantomArenaBattleView.<InitSkillTips>d__15 <InitSkillTips>d__;
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitSkillTips>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D54 RID: 220500 RVA: 0x00CBCCD0 File Offset: 0x00CBAED0
+		// Token: 0x0602AC4F RID: 175183 RVA: 0x00C0A360 File Offset: 0x00C08560
 		private UniTask InitDiscardPanel()
 		{
 			PhantomArenaBattleView.<InitDiscardPanel>d__16 <InitDiscardPanel>d__;
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitDiscardPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D55 RID: 220501 RVA: 0x00CBCD14 File Offset: 0x00CBAF14
+		// Token: 0x0602AC50 RID: 175184 RVA: 0x00C0A3A4 File Offset: 0x00C085A4
 		private UniTask InitChooseCardPanel()
 		{
 			PhantomArenaBattleView.<InitChooseCardPanel>d__17 <InitChooseCardPanel>d__;
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitChooseCardPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D56 RID: 220502 RVA: 0x00CBCD58 File Offset: 0x00CBAF58
+		// Token: 0x0602AC51 RID: 175185 RVA: 0x00C0A3E8 File Offset: 0x00C085E8
 		private UniTask InitSkillTriggerMask()
 		{
 			PhantomArenaBattleView.<InitSkillTriggerMask>d__18 <InitSkillTriggerMask>d__;
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitSkillTriggerMask>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D57 RID: 220503 RVA: 0x00CBCD9C File Offset: 0x00CBAF9C
+		// Token: 0x0602AC52 RID: 175186 RVA: 0x00C0A42C File Offset: 0x00C0862C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaBattleView.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D58 RID: 220504 RVA: 0x00CBCDE0 File Offset: 0x00CBAFE0
+		// Token: 0x0602AC53 RID: 175187 RVA: 0x00C0A470 File Offset: 0x00C08670
 		protected override void OnStart()
 		{
 			this.DissolveTween = new LguiFloatTween();
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.Proxy.BanButtonClickModule.RegisterButton(this.Proxy.CaptionItem.GetHelpBtn());
 		}
 
-		// Token: 0x06035D59 RID: 220505 RVA: 0x00CBCE88 File Offset: 0x00CBB088
+		// Token: 0x0602AC54 RID: 175188 RVA: 0x00C0A518 File Offset: 0x00C08718
 		protected override void OnBeforeShow()
 		{
 			if (this.FirstShowDirty)
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.Proxy.Show(false);
 		}
 
-		// Token: 0x06035D5A RID: 220506 RVA: 0x00CBCEA8 File Offset: 0x00CBB0A8
+		// Token: 0x0602AC55 RID: 175189 RVA: 0x00C0A538 File Offset: 0x00C08738
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OwnBattleStatusChange, new Action<IReadOnlyList<PhantomBattleRoleStatus>>(this.Proxy.OnOwnBattleStatusChange));
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			EventSystem.Instance.Add(EEventName.OwnSealRecycleChange, new Action<int>(this.Proxy.OnOwnSealRecycleChange));
 		}
 
-		// Token: 0x06035D5B RID: 220507 RVA: 0x00CBD16C File Offset: 0x00CBB36C
+		// Token: 0x0602AC56 RID: 175190 RVA: 0x00C0A7FC File Offset: 0x00C089FC
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OwnBattleStatusChange, new Action<IReadOnlyList<PhantomBattleRoleStatus>>(this.Proxy.OnOwnBattleStatusChange));
@@ -296,64 +296,64 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			EventSystem.Instance.Remove(EEventName.OwnSealRecycleChange, new Action<int>(this.Proxy.OnOwnSealRecycleChange));
 		}
 
-		// Token: 0x06035D5C RID: 220508 RVA: 0x00CBD42E File Offset: 0x00CBB62E
+		// Token: 0x0602AC57 RID: 175191 RVA: 0x00C0AABE File Offset: 0x00C08CBE
 		protected override void OnBeforeDestroy()
 		{
 			this.Proxy.Destroy();
 			this.DissolveTween.Destroy();
 		}
 
-		// Token: 0x06035D5D RID: 220509 RVA: 0x00CBD446 File Offset: 0x00CBB646
+		// Token: 0x0602AC58 RID: 175192 RVA: 0x00C0AAD6 File Offset: 0x00C08CD6
 		public UUIItem GetDragRootItem()
 		{
 			return base.GetItem(4);
 		}
 
-		// Token: 0x06035D5E RID: 220510 RVA: 0x00CBD44F File Offset: 0x00CBB64F
+		// Token: 0x0602AC59 RID: 175193 RVA: 0x00C0AADF File Offset: 0x00C08CDF
 		public UUIItem GetOwnCardLibraryItem()
 		{
 			return base.GetItem(17);
 		}
 
-		// Token: 0x06035D5F RID: 220511 RVA: 0x00CBD459 File Offset: 0x00CBB659
+		// Token: 0x0602AC5A RID: 175194 RVA: 0x00C0AAE9 File Offset: 0x00C08CE9
 		public UUIItem GetOpponentCardLibraryItem()
 		{
 			return base.GetItem(18);
 		}
 
-		// Token: 0x06035D60 RID: 220512 RVA: 0x00CBD463 File Offset: 0x00CBB663
+		// Token: 0x0602AC5B RID: 175195 RVA: 0x00C0AAF3 File Offset: 0x00C08CF3
 		public UUIItem GetSkillTriggerAttachItem()
 		{
 			return base.GetItem(6);
 		}
 
-		// Token: 0x06035D61 RID: 220513 RVA: 0x00CBD46C File Offset: 0x00CBB66C
+		// Token: 0x0602AC5C RID: 175196 RVA: 0x00C0AAFC File Offset: 0x00C08CFC
 		public void SetCaptionItemActive(bool bActive)
 		{
 			base.GetItem(15).SetUIActive(bActive);
 		}
 
-		// Token: 0x06035D62 RID: 220514 RVA: 0x00CBD47C File Offset: 0x00CBB67C
+		// Token: 0x0602AC5D RID: 175197 RVA: 0x00C0AB0C File Offset: 0x00C08D0C
 		public void SetRoundEffectActive(bool bActive)
 		{
 			base.GetItem(20).SetUIActive(bActive);
 		}
 
-		// Token: 0x06035D63 RID: 220515 RVA: 0x00CBD48C File Offset: 0x00CBB68C
+		// Token: 0x0602AC5E RID: 175198 RVA: 0x00C0AB1C File Offset: 0x00C08D1C
 		public void RefreshOwnCardLibraryNum()
 		{
 			int cardLibraryNum = PhantomArenaBattleModel.Instance.OwnData.CardLibraryNum;
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(12), "PhantomBattle_1022", new <>z__ReadOnlySingleElementList<object>(cardLibraryNum));
 		}
 
-		// Token: 0x06035D64 RID: 220516 RVA: 0x00CBD4CC File Offset: 0x00CBB6CC
+		// Token: 0x0602AC5F RID: 175199 RVA: 0x00C0AB5C File Offset: 0x00C08D5C
 		public void RefreshOpponentCardLibraryNum()
 		{
 			int cardLibraryNum = PhantomArenaBattleModel.Instance.OpponentData.CardLibraryNum;
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(13), "PhantomBattle_1022", new <>z__ReadOnlySingleElementList<object>(cardLibraryNum));
 		}
 
-		// Token: 0x06035D65 RID: 220517 RVA: 0x00CBD50C File Offset: 0x00CBB70C
+		// Token: 0x0602AC60 RID: 175200 RVA: 0x00C0AB9C File Offset: 0x00C08D9C
 		public void SetTimeEndBtnInteractive(bool bInteractive)
 		{
 			UUIButtonComponent button = base.GetButton(7);
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.Proxy.BanButtonClickModule.BanButton(button, "TimeEndBtn.SetTimeEndBtnInteractive");
 		}
 
-		// Token: 0x06035D66 RID: 220518 RVA: 0x00CBD554 File Offset: 0x00CBB754
+		// Token: 0x0602AC61 RID: 175201 RVA: 0x00C0ABE4 File Offset: 0x00C08DE4
 		public void RefreshRoundNum()
 		{
 			int challengeId = PhantomArenaBattleModel.Instance.ChallengeId;
@@ -379,14 +379,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			}));
 		}
 
-		// Token: 0x06035D67 RID: 220519 RVA: 0x00CBD5C0 File Offset: 0x00CBB7C0
+		// Token: 0x0602AC62 RID: 175202 RVA: 0x00C0AC50 File Offset: 0x00C08E50
 		public void RefreshLimitText()
 		{
 			int monsterCardLength = PhantomArenaBattleModel.Instance.OwnData.MonsterCardLength;
 			base.GetText(19).SetText(monsterCardLength.ToString() + "/" + 4.ToString(), true);
 		}
 
-		// Token: 0x06035D68 RID: 220520 RVA: 0x00CBD608 File Offset: 0x00CBB808
+		// Token: 0x0602AC63 RID: 175203 RVA: 0x00C0AC98 File Offset: 0x00C08E98
 		public UniTask PlayShowFieldEffect()
 		{
 			PhantomArenaBattleView.<PlayShowFieldEffect>d__36 <PlayShowFieldEffect>d__;
@@ -397,13 +397,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <PlayShowFieldEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D69 RID: 220521 RVA: 0x00CBD64B File Offset: 0x00CBB84B
+		// Token: 0x0602AC64 RID: 175204 RVA: 0x00C0ACDB File Offset: 0x00C08EDB
 		public void LockNpcField()
 		{
 			this.DissolveTween.PlayTween(0.55f, 0f, 0.5f, null);
 		}
 
-		// Token: 0x06035D6A RID: 220522 RVA: 0x00CBD668 File Offset: 0x00CBB868
+		// Token: 0x0602AC65 RID: 175205 RVA: 0x00C0ACF8 File Offset: 0x00C08EF8
 		public void UnlockNpcField()
 		{
 			this.RefreshNiagaraNpc();
@@ -416,25 +416,25 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.DissolveTween.PlayTween(0f, 0.55f, 0.5f, null);
 		}
 
-		// Token: 0x06035D6B RID: 220523 RVA: 0x00CBD6B5 File Offset: 0x00CBB8B5
+		// Token: 0x0602AC66 RID: 175206 RVA: 0x00C0AD45 File Offset: 0x00C08F45
 		private void SetNiagaraNpcActive(bool value)
 		{
 			base.GetUiNiagara(30).SetUIActive(value);
 		}
 
-		// Token: 0x06035D6C RID: 220524 RVA: 0x00CBD6C5 File Offset: 0x00CBB8C5
+		// Token: 0x0602AC67 RID: 175207 RVA: 0x00C0AD55 File Offset: 0x00C08F55
 		private void SetNiagaraNpcStartActive(bool value)
 		{
 			base.GetUiNiagara(31).SetUIActive(value);
 		}
 
-		// Token: 0x06035D6D RID: 220525 RVA: 0x00CBD6D5 File Offset: 0x00CBB8D5
+		// Token: 0x0602AC68 RID: 175208 RVA: 0x00C0AD65 File Offset: 0x00C08F65
 		private void SetNiagaraPlayerActive(bool value)
 		{
 			base.GetUiNiagara(29).SetUIActive(value);
 		}
 
-		// Token: 0x06035D6E RID: 220526 RVA: 0x00CBD6E8 File Offset: 0x00CBB8E8
+		// Token: 0x0602AC69 RID: 175209 RVA: 0x00C0AD78 File Offset: 0x00C08F78
 		private void RefreshNiagaraNpc()
 		{
 			PhantomArenaFieldData fieldData = PhantomArenaBattleModel.Instance.OpponentData.FieldData;
@@ -457,7 +457,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			}
 		}
 
-		// Token: 0x06035D6F RID: 220527 RVA: 0x00CBD770 File Offset: 0x00CBB970
+		// Token: 0x0602AC6A RID: 175210 RVA: 0x00C0AE00 File Offset: 0x00C09000
 		private UniTask RefreshPlayerTexture()
 		{
 			PhantomArenaBattleView.<RefreshPlayerTexture>d__43 <RefreshPlayerTexture>d__;
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <RefreshPlayerTexture>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D70 RID: 220528 RVA: 0x00CBD7B4 File Offset: 0x00CBB9B4
+		// Token: 0x0602AC6B RID: 175211 RVA: 0x00C0AE44 File Offset: 0x00C09044
 		private UniTask RefreshNiagaraPlayer()
 		{
 			PhantomArenaBattleView.<RefreshNiagaraPlayer>d__44 <RefreshNiagaraPlayer>d__;
@@ -479,7 +479,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <RefreshNiagaraPlayer>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D71 RID: 220529 RVA: 0x00CBD7F8 File Offset: 0x00CBB9F8
+		// Token: 0x0602AC6C RID: 175212 RVA: 0x00C0AE88 File Offset: 0x00C09088
 		protected override UUIItem OnGetBlurRootItem()
 		{
 			if (this.Proxy.IsMainInVisible)
@@ -497,19 +497,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return this.RootItem;
 		}
 
-		// Token: 0x06035D72 RID: 220530 RVA: 0x00CBD85D File Offset: 0x00CBBA5D
+		// Token: 0x0602AC6D RID: 175213 RVA: 0x00C0AEED File Offset: 0x00C090ED
 		private void SetNiagaraNpcDissolve(float value)
 		{
 			base.GetUiNiagara(30).SetNiagaraVarFloat("Dissolve", value);
 		}
 
-		// Token: 0x06035D73 RID: 220531 RVA: 0x00CBD872 File Offset: 0x00CBBA72
+		// Token: 0x0602AC6E RID: 175214 RVA: 0x00C0AF02 File Offset: 0x00C09102
 		private void OnDissolveTweenUpdate(float value)
 		{
 			this.SetNiagaraNpcDissolve(value);
 		}
 
-		// Token: 0x06035D74 RID: 220532 RVA: 0x00CBD87C File Offset: 0x00CBBA7C
+		// Token: 0x0602AC6F RID: 175215 RVA: 0x00C0AF0C File Offset: 0x00C0910C
 		public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 		{
 			if (configParams == null || configParams.Length == 0)
@@ -622,122 +622,122 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			}
 		}
 
-		// Token: 0x0401C89C RID: 116892
+		// Token: 0x040172D1 RID: 94929
 		private PhantomArenaBattleProxy Proxy;
 
-		// Token: 0x0401C89D RID: 116893
+		// Token: 0x040172D2 RID: 94930
 		protected AActor DesktopBg;
 
-		// Token: 0x0401C89E RID: 116894
+		// Token: 0x040172D3 RID: 94931
 		protected bool FirstShowDirty = true;
 
-		// Token: 0x0401C89F RID: 116895
+		// Token: 0x040172D4 RID: 94932
 		protected LguiFloatTween DissolveTween;
 
-		// Token: 0x0200B3EE RID: 46062
+		// Token: 0x02009E26 RID: 40486
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403684D RID: 223309
+			// Token: 0x040312A0 RID: 201376
 			public const int OwnHandItem = 0;
 
-			// Token: 0x0403684E RID: 223310
+			// Token: 0x040312A1 RID: 201377
 			public const int OwnFunctionalItem = 1;
 
-			// Token: 0x0403684F RID: 223311
+			// Token: 0x040312A2 RID: 201378
 			public const int OpponentHandItem = 2;
 
-			// Token: 0x04036850 RID: 223312
+			// Token: 0x040312A3 RID: 201379
 			public const int OpponentFunctionalItem = 3;
 
-			// Token: 0x04036851 RID: 223313
+			// Token: 0x040312A4 RID: 201380
 			public const int DragRootItem = 4;
 
-			// Token: 0x04036852 RID: 223314
+			// Token: 0x040312A5 RID: 201381
 			public const int HideLayoutBtn = 5;
 
-			// Token: 0x04036853 RID: 223315
+			// Token: 0x040312A6 RID: 201382
 			public const int SkillTriggerAttachItem = 6;
 
-			// Token: 0x04036854 RID: 223316
+			// Token: 0x040312A7 RID: 201383
 			public const int TimeEndBtn = 7;
 
-			// Token: 0x04036855 RID: 223317
+			// Token: 0x040312A8 RID: 201384
 			public const int CardLibrary = 8;
 
-			// Token: 0x04036856 RID: 223318
+			// Token: 0x040312A9 RID: 201385
 			public const int AttachItem = 9;
 
-			// Token: 0x04036857 RID: 223319
+			// Token: 0x040312AA RID: 201386
 			public const int OwnRoleItem = 10;
 
-			// Token: 0x04036858 RID: 223320
+			// Token: 0x040312AB RID: 201387
 			public const int OpponentRoleItem = 11;
 
-			// Token: 0x04036859 RID: 223321
+			// Token: 0x040312AC RID: 201388
 			public const int OwnCardLibraryNum = 12;
 
-			// Token: 0x0403685A RID: 223322
+			// Token: 0x040312AD RID: 201389
 			public const int OpponentCardLibraryNum = 13;
 
-			// Token: 0x0403685B RID: 223323
+			// Token: 0x040312AE RID: 201390
 			public const int TipsItem = 14;
 
-			// Token: 0x0403685C RID: 223324
+			// Token: 0x040312AF RID: 201391
 			public const int CaptionItem = 15;
 
-			// Token: 0x0403685D RID: 223325
+			// Token: 0x040312B0 RID: 201392
 			public const int RoundNum = 16;
 
-			// Token: 0x0403685E RID: 223326
+			// Token: 0x040312B1 RID: 201393
 			public const int OwnCardLibraryItem = 17;
 
-			// Token: 0x0403685F RID: 223327
+			// Token: 0x040312B2 RID: 201394
 			public const int OpponentCardLibraryItem = 18;
 
-			// Token: 0x04036860 RID: 223328
+			// Token: 0x040312B3 RID: 201395
 			public const int LimitText = 19;
 
-			// Token: 0x04036861 RID: 223329
+			// Token: 0x040312B4 RID: 201396
 			public const int RoundEffect = 20;
 
-			// Token: 0x04036862 RID: 223330
+			// Token: 0x040312B5 RID: 201397
 			public const int HeadItem = 21;
 
-			// Token: 0x04036863 RID: 223331
+			// Token: 0x040312B6 RID: 201398
 			public const int OwnFiledItem = 22;
 
-			// Token: 0x04036864 RID: 223332
+			// Token: 0x040312B7 RID: 201399
 			public const int OpponentFiledItem = 23;
 
-			// Token: 0x04036865 RID: 223333
+			// Token: 0x040312B8 RID: 201400
 			public const int OpponentLibrarySprite = 24;
 
-			// Token: 0x04036866 RID: 223334
+			// Token: 0x040312B9 RID: 201401
 			public const int OwnLibrarySprite = 25;
 
-			// Token: 0x04036867 RID: 223335
+			// Token: 0x040312BA RID: 201402
 			public const int DesktopBg = 26;
 
-			// Token: 0x04036868 RID: 223336
+			// Token: 0x040312BB RID: 201403
 			public const int FieldBg = 27;
 
-			// Token: 0x04036869 RID: 223337
+			// Token: 0x040312BC RID: 201404
 			public const int FieldAttachItem = 28;
 
-			// Token: 0x0403686A RID: 223338
+			// Token: 0x040312BD RID: 201405
 			public const int NiagaraPlayer = 29;
 
-			// Token: 0x0403686B RID: 223339
+			// Token: 0x040312BE RID: 201406
 			public const int NiagaraNpc = 30;
 
-			// Token: 0x0403686C RID: 223340
+			// Token: 0x040312BF RID: 201407
 			public const int NiagaraNpcStart = 31;
 
-			// Token: 0x0403686D RID: 223341
+			// Token: 0x040312C0 RID: 201408
 			public const int NiagaraPlayerElement = 32;
 
-			// Token: 0x0403686E RID: 223342
+			// Token: 0x040312C1 RID: 201409
 			public const int AttachDetailsTipsItem = 33;
 		}
 	}

@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001018 RID: 4120
+	// Token: 0x02001144 RID: 4420
 	public class IMonsterMergedHpBarSettings_SetValue
 	{
-		// Token: 0x0400375B RID: 14171
+		// Token: 0x04003A96 RID: 14998
 		[Nullable(2)]
 		public List<long> DisplayBuffIds;
 	}

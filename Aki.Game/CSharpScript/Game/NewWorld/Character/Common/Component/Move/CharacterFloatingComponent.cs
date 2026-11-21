@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Character.Input.Enum;
@@ -12,20 +11,20 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070E4 RID: 28900
+	// Token: 0x02006394 RID: 25492
 	[NullableContext(1)]
 	[Nullable(0)]
-	public class CharacterFloatingComponent : EntityComponent, IComponentDependency, IStaticVariableResetter
+	public class CharacterFloatingComponent : EntityComponent, IStaticVariableResetter
 	{
-		// Token: 0x06046877 RID: 288887 RVA: 0x011B966E File Offset: 0x011B786E
+		// Token: 0x0603DC64 RID: 253028 RVA: 0x011E8D42 File Offset: 0x011E6F42
 		static CharacterFloatingComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CharacterFloatingComponent.CreateStaticDefaultValue), new Action(CharacterFloatingComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x17009CB3 RID: 40115
-		// (get) Token: 0x06046878 RID: 288888 RVA: 0x011B96AD File Offset: 0x011B78AD
-		public static Type[] Dependencies
+		// Token: 0x17007530 RID: 30000
+		// (get) Token: 0x0603DC65 RID: 253029 RVA: 0x011E8D81 File Offset: 0x011E6F81
+		public override Type[] Dependencies
 		{
 			get
 			{
@@ -36,8 +35,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CB4 RID: 40116
-		// (get) Token: 0x06046879 RID: 288889 RVA: 0x011B96C2 File Offset: 0x011B78C2
+		// Token: 0x17007531 RID: 30001
+		// (get) Token: 0x0603DC66 RID: 253030 RVA: 0x011E8D96 File Offset: 0x011E6F96
 		public bool IsFloating
 		{
 			get
@@ -46,8 +45,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CB5 RID: 40117
-		// (get) Token: 0x0604687A RID: 288890 RVA: 0x011B96CA File Offset: 0x011B78CA
+		// Token: 0x17007532 RID: 30002
+		// (get) Token: 0x0603DC67 RID: 253031 RVA: 0x011E8D9E File Offset: 0x011E6F9E
 		public bool IsFloatingMove
 		{
 			get
@@ -56,8 +55,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CB6 RID: 40118
-		// (get) Token: 0x0604687B RID: 288891 RVA: 0x011B96DC File Offset: 0x011B78DC
+		// Token: 0x17007533 RID: 30003
+		// (get) Token: 0x0603DC68 RID: 253032 RVA: 0x011E8DB0 File Offset: 0x011E6FB0
 		public Vector FloatingLocalDirection
 		{
 			get
@@ -71,8 +70,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CB7 RID: 40119
-		// (get) Token: 0x0604687C RID: 288892 RVA: 0x011B971F File Offset: 0x011B791F
+		// Token: 0x17007534 RID: 30004
+		// (get) Token: 0x0603DC69 RID: 253033 RVA: 0x011E8DF3 File Offset: 0x011E6FF3
 		public float FloatingMoveMix
 		{
 			get
@@ -81,8 +80,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CB8 RID: 40120
-		// (get) Token: 0x0604687D RID: 288893 RVA: 0x011B9727 File Offset: 0x011B7927
+		// Token: 0x17007535 RID: 30005
+		// (get) Token: 0x0603DC6A RID: 253034 RVA: 0x011E8DFB File Offset: 0x011E6FFB
 		public float FloatingSpeedMix
 		{
 			get
@@ -91,8 +90,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CB9 RID: 40121
-		// (get) Token: 0x0604687E RID: 288894 RVA: 0x011B972F File Offset: 0x011B792F
+		// Token: 0x17007536 RID: 30006
+		// (get) Token: 0x0603DC6B RID: 253035 RVA: 0x011E8E03 File Offset: 0x011E7003
 		public float Speed
 		{
 			get
@@ -101,13 +100,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x0604687F RID: 288895 RVA: 0x011B9737 File Offset: 0x011B7937
+		// Token: 0x0603DC6C RID: 253036 RVA: 0x011E8E0B File Offset: 0x011E700B
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x06046880 RID: 288896 RVA: 0x011B973C File Offset: 0x011B793C
+		// Token: 0x0603DC6D RID: 253037 RVA: 0x011E8E10 File Offset: 0x011E7010
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -134,7 +133,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x06046881 RID: 288897 RVA: 0x011B98E0 File Offset: 0x011B7AE0
+		// Token: 0x0603DC6E RID: 253038 RVA: 0x011E8FB4 File Offset: 0x011E71B4
 		protected override void OnEnable()
 		{
 			bool debug = CharacterFloatingComponent.Debug;
@@ -144,7 +143,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			EventSystem.Instance.AddWithTarget<int, int>(base.Entity, EEventName.OnSkillEnd, new Action<int, int>(this.OnCharSkillEnd));
 		}
 
-		// Token: 0x06046882 RID: 288898 RVA: 0x011B9940 File Offset: 0x011B7B40
+		// Token: 0x0603DC6F RID: 253039 RVA: 0x011E9014 File Offset: 0x011E7214
 		protected override void OnDisable(string reason)
 		{
 			this.ClearCacheInputDirect();
@@ -158,7 +157,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046883 RID: 288899 RVA: 0x011B99D4 File Offset: 0x011B7BD4
+		// Token: 0x0603DC70 RID: 253040 RVA: 0x011E90A8 File Offset: 0x011E72A8
 		protected override bool OnEnd()
 		{
 			CharacterActorComponent actorComp = this.ActorComp;
@@ -191,7 +190,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x06046884 RID: 288900 RVA: 0x011B9AF8 File Offset: 0x011B7CF8
+		// Token: 0x0603DC71 RID: 253041 RVA: 0x011E91CC File Offset: 0x011E73CC
 		public void EnableFloating(string daPath)
 		{
 			if (this.InFloatingState)
@@ -214,7 +213,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.InitConfig(daPath, new Action(this.EnterFloatingInternal));
 		}
 
-		// Token: 0x06046885 RID: 288901 RVA: 0x011B9B78 File Offset: 0x011B7D78
+		// Token: 0x0603DC72 RID: 253042 RVA: 0x011E924C File Offset: 0x011E744C
 		public void DisableFloating()
 		{
 			if (!this.InFloatingState)
@@ -226,21 +225,21 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.LeaveFloatingInternal();
 		}
 
-		// Token: 0x06046886 RID: 288902 RVA: 0x011B9BB7 File Offset: 0x011B7DB7
+		// Token: 0x0603DC73 RID: 253043 RVA: 0x011E928B File Offset: 0x011E748B
 		public void JumpPressInAir()
 		{
 			bool debug = CharacterFloatingComponent.Debug;
 			this.EnterRiseState();
 		}
 
-		// Token: 0x06046887 RID: 288903 RVA: 0x011B9BC5 File Offset: 0x011B7DC5
+		// Token: 0x0603DC74 RID: 253044 RVA: 0x011E9299 File Offset: 0x011E7499
 		public void JumpRelease()
 		{
 			bool debug = CharacterFloatingComponent.Debug;
 			this.EnterFloatingState(false);
 		}
 
-		// Token: 0x06046888 RID: 288904 RVA: 0x011B9BD4 File Offset: 0x011B7DD4
+		// Token: 0x0603DC75 RID: 253045 RVA: 0x011E92A8 File Offset: 0x011E74A8
 		public void CtrlPress()
 		{
 			if (Info.Instance.IsInTouch())
@@ -250,7 +249,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046889 RID: 288905 RVA: 0x011B9BEE File Offset: 0x011B7DEE
+		// Token: 0x0603DC76 RID: 253046 RVA: 0x011E92C2 File Offset: 0x011E74C2
 		public void CtrlRelease()
 		{
 			if (this.FloatingMoveType == EFloatingMovementType.Drop)
@@ -263,7 +262,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.EnterDropState();
 		}
 
-		// Token: 0x0604688A RID: 288906 RVA: 0x011B9C13 File Offset: 0x011B7E13
+		// Token: 0x0603DC77 RID: 253047 RVA: 0x011E92E7 File Offset: 0x011E74E7
 		private void EnterDefaultState()
 		{
 			if (this.FloatingMoveType == EFloatingMovementType.None)
@@ -273,7 +272,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.UpdateState(EFloatingMovementType.None);
 		}
 
-		// Token: 0x0604688B RID: 288907 RVA: 0x011B9C26 File Offset: 0x011B7E26
+		// Token: 0x0603DC78 RID: 253048 RVA: 0x011E92FA File Offset: 0x011E74FA
 		private void EnterRiseState()
 		{
 			this.EnterFloatingInternal();
@@ -289,7 +288,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.EnterFloatingState(false);
 		}
 
-		// Token: 0x0604688C RID: 288908 RVA: 0x011B9C4F File Offset: 0x011B7E4F
+		// Token: 0x0603DC79 RID: 253049 RVA: 0x011E9323 File Offset: 0x011E7523
 		private void EnterFloatingState(bool forceEnter = false)
 		{
 			this.EnterFloatingInternal();
@@ -305,7 +304,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.EnterDropState();
 		}
 
-		// Token: 0x0604688D RID: 288909 RVA: 0x011B9C7A File Offset: 0x011B7E7A
+		// Token: 0x0603DC7A RID: 253050 RVA: 0x011E934E File Offset: 0x011E754E
 		private void EnterDropState()
 		{
 			this.EnterFloatingInternal();
@@ -321,7 +320,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.EnterWalkState();
 		}
 
-		// Token: 0x0604688E RID: 288910 RVA: 0x011B9CA2 File Offset: 0x011B7EA2
+		// Token: 0x0603DC7B RID: 253051 RVA: 0x011E9376 File Offset: 0x011E7576
 		private void EnterWalkState()
 		{
 			if (this.FloatingMoveType == EFloatingMovementType.Walk)
@@ -336,13 +335,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.EnterDropState();
 		}
 
-		// Token: 0x0604688F RID: 288911 RVA: 0x011B9CC4 File Offset: 0x011B7EC4
+		// Token: 0x0603DC7C RID: 253052 RVA: 0x011E9398 File Offset: 0x011E7598
 		private bool UpdateState(EFloatingMovementType state)
 		{
 			return this.StateMachine.Switch(state);
 		}
 
-		// Token: 0x06046890 RID: 288912 RVA: 0x011B9CD4 File Offset: 0x011B7ED4
+		// Token: 0x0603DC7D RID: 253053 RVA: 0x011E93A8 File Offset: 0x011E75A8
 		private void EnterFloatingInternal()
 		{
 			CharacterUnifiedStateComponent stateComp = this.StateComp;
@@ -371,7 +370,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046891 RID: 288913 RVA: 0x011B9D64 File Offset: 0x011B7F64
+		// Token: 0x0603DC7E RID: 253054 RVA: 0x011E9438 File Offset: 0x011E7638
 		private void LeaveFloatingInternal()
 		{
 			bool flag = this.IsOnGround || this.IsNearGround;
@@ -423,13 +422,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046892 RID: 288914 RVA: 0x011B9E56 File Offset: 0x011B8056
+		// Token: 0x0603DC7F RID: 253055 RVA: 0x011E952A File Offset: 0x011E772A
 		private bool QueryInputAction(AkiClient.Game.Aki.Character.Input.Enum.EInputAction inputAction)
 		{
 			return this.InputComp != null && InputController.Instance.IsKeyDown(inputAction);
 		}
 
-		// Token: 0x06046893 RID: 288915 RVA: 0x011B9E72 File Offset: 0x011B8072
+		// Token: 0x0603DC80 RID: 253056 RVA: 0x011E9546 File Offset: 0x011E7746
 		private void OnPositionStateChanged(ECharPositionState oldPositionState, ECharPositionState newPositionState)
 		{
 			if (!this.InFloatingState)
@@ -449,7 +448,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.ClearCacheInputDirect();
 		}
 
-		// Token: 0x06046894 RID: 288916 RVA: 0x011B9EA6 File Offset: 0x011B80A6
+		// Token: 0x0603DC81 RID: 253057 RVA: 0x011E957A File Offset: 0x011E777A
 		private void OnUnifiedMoveStateChanged(ECharMoveState oldMoveState, ECharMoveState newMoveState)
 		{
 			if (!this.InFloatingState)
@@ -464,7 +463,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.EnterDefaultState();
 		}
 
-		// Token: 0x06046895 RID: 288917 RVA: 0x011B9ED4 File Offset: 0x011B80D4
+		// Token: 0x0603DC82 RID: 253058 RVA: 0x011E95A8 File Offset: 0x011E77A8
 		[NullableContext(2)]
 		private void OnStateInherit(Entity other, bool notInheritMoveAndAnim)
 		{
@@ -511,7 +510,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046896 RID: 288918 RVA: 0x011B9F8B File Offset: 0x011B818B
+		// Token: 0x0603DC83 RID: 253059 RVA: 0x011E965F File Offset: 0x011E785F
 		private void OnRoleInheritTransform()
 		{
 			if (!this.InFloatingState)
@@ -522,7 +521,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.CheckGround();
 		}
 
-		// Token: 0x06046897 RID: 288919 RVA: 0x011B9FA3 File Offset: 0x011B81A3
+		// Token: 0x0603DC84 RID: 253060 RVA: 0x011E9677 File Offset: 0x011E7877
 		private void OnBeginSkill(int skillId, bool isAutonomousProxy)
 		{
 			bool debug = CharacterFloatingComponent.Debug;
@@ -530,7 +529,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.ClearCacheInputDirect();
 		}
 
-		// Token: 0x06046898 RID: 288920 RVA: 0x011B9FB7 File Offset: 0x011B81B7
+		// Token: 0x0603DC85 RID: 253061 RVA: 0x011E968B File Offset: 0x011E788B
 		private void OnCharSkillEnd(int entityId, int skillId)
 		{
 			if (this.StateComp.PositionState != ECharPositionState.Floating)
@@ -545,7 +544,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.ClearCacheInputDirect();
 		}
 
-		// Token: 0x06046899 RID: 288921 RVA: 0x011B9FEC File Offset: 0x011B81EC
+		// Token: 0x0603DC86 RID: 253062 RVA: 0x011E96C0 File Offset: 0x011E78C0
 		private void OnBeforeChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 		{
 			if (!this.InFloatingState)
@@ -567,7 +566,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.SpeedInternal = 0f;
 		}
 
-		// Token: 0x0604689A RID: 288922 RVA: 0x011BA060 File Offset: 0x011B8260
+		// Token: 0x0603DC87 RID: 253063 RVA: 0x011E9734 File Offset: 0x011E7934
 		private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 		{
 			if (this.Config == null || !this.InFloatingState)
@@ -597,7 +596,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x0604689B RID: 288923 RVA: 0x011BA110 File Offset: 0x011B8310
+		// Token: 0x0603DC88 RID: 253064 RVA: 0x011E97E4 File Offset: 0x011E79E4
 		protected override void OnTick(float delta)
 		{
 			this.HasFloatingMoveInput = false;
@@ -637,7 +636,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.TriggerFloatingMoveEvent();
 		}
 
-		// Token: 0x0604689C RID: 288924 RVA: 0x011BA25E File Offset: 0x011B845E
+		// Token: 0x0603DC89 RID: 253065 RVA: 0x011E9932 File Offset: 0x011E7B32
 		public void UpdateMove(float deltaSeconds, Vector output)
 		{
 			output.DeepCopy(this.ActorComp.InputDirectProxy);
@@ -645,7 +644,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			output.MultiplyEqual((double)(this.SpeedInternal * deltaSeconds));
 		}
 
-		// Token: 0x0604689D RID: 288925 RVA: 0x011BA290 File Offset: 0x011B8490
+		// Token: 0x0603DC8A RID: 253066 RVA: 0x011E9964 File Offset: 0x011E7B64
 		public void UpdateSpeed(float second)
 		{
 			if (this.ActorComp.InputDirectProxy.IsNearlyZero(0.0001))
@@ -685,7 +684,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.FloatingMoveMixInternal = MathUtils.Instance.Lerp(this.FloatingMoveMix, 0.5f, this.Config.AnimLerpAlpha);
 		}
 
-		// Token: 0x0604689E RID: 288926 RVA: 0x011BA448 File Offset: 0x011B8648
+		// Token: 0x0603DC8B RID: 253067 RVA: 0x011E9B1C File Offset: 0x011E7D1C
 		public void CloseToGround(float deltaSeconds)
 		{
 			if (this.TagComp.HasAnyTag(this.Config.ForbidCloseToGroundTagList))
@@ -706,7 +705,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x0604689F RID: 288927 RVA: 0x011BA540 File Offset: 0x011B8740
+		// Token: 0x0603DC8C RID: 253068 RVA: 0x011E9C14 File Offset: 0x011E7E14
 		public void CheckGround()
 		{
 			float floorDistance = this.GetFloorDistance();
@@ -856,7 +855,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468A0 RID: 288928 RVA: 0x011BA904 File Offset: 0x011B8B04
+		// Token: 0x0603DC8D RID: 253069 RVA: 0x011E9FD8 File Offset: 0x011E81D8
 		public void ReleaseGroundTag()
 		{
 			if (this.IsNearGround)
@@ -900,7 +899,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.HasGroundTag = false;
 		}
 
-		// Token: 0x060468A1 RID: 288929 RVA: 0x011BAA1C File Offset: 0x011B8C1C
+		// Token: 0x0603DC8E RID: 253070 RVA: 0x011EA0F0 File Offset: 0x011E82F0
 		public bool GetTargetDirectionProjection(Vector outVector)
 		{
 			if (CameraModel.Instance.MainModel.HasLockTarget())
@@ -919,7 +918,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return outVector.Normalize(9.99999993922529E-09);
 		}
 
-		// Token: 0x060468A2 RID: 288930 RVA: 0x011BAAC8 File Offset: 0x011B8CC8
+		// Token: 0x0603DC8F RID: 253071 RVA: 0x011EA19C File Offset: 0x011E839C
 		public void RotatorFloatingDirection(float deltaSeconds, Vector cameraDirection)
 		{
 			if (cameraDirection.IsNearlyZero(9.999999747378752E-05))
@@ -950,7 +949,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.ActorComp.SetInputFacing(this.ActorComp.ActorForwardProxy, false);
 		}
 
-		// Token: 0x060468A3 RID: 288931 RVA: 0x011BAC94 File Offset: 0x011B8E94
+		// Token: 0x0603DC90 RID: 253072 RVA: 0x011EA368 File Offset: 0x011E8568
 		public bool DetectFloor()
 		{
 			this.DetectWaterDist();
@@ -969,7 +968,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return (this.CurrentFloor.bWalkableFloor && this.CurrentFloor.FloorDist < 3f) || this.DetectHeightNonFloor();
 		}
 
-		// Token: 0x060468A4 RID: 288932 RVA: 0x011BAD3C File Offset: 0x011B8F3C
+		// Token: 0x0603DC91 RID: 253073 RVA: 0x011EA410 File Offset: 0x011E8610
 		private void DetectWaterDist()
 		{
 			float heightDetect = Math.Max(550f, this.Config.CloseToGroundHeight);
@@ -977,7 +976,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.WaterDist = heightAboveWater;
 		}
 
-		// Token: 0x060468A5 RID: 288933 RVA: 0x011BAD74 File Offset: 0x011B8F74
+		// Token: 0x0603DC92 RID: 253074 RVA: 0x011EA448 File Offset: 0x011E8648
 		private bool DetectHeightNonFloor()
 		{
 			float heightDetect = Math.Max(this.Config.AirCriticalHeight, this.Config.CloseToGroundHeight);
@@ -987,7 +986,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return this.HitFloorNonFloor;
 		}
 
-		// Token: 0x060468A6 RID: 288934 RVA: 0x011BADCB File Offset: 0x011B8FCB
+		// Token: 0x0603DC93 RID: 253075 RVA: 0x011EA49F File Offset: 0x011E869F
 		public float GetFloorDistance()
 		{
 			FFindFloorResult currentFloor = this.CurrentFloor;
@@ -1002,7 +1001,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return this.HitFloorDist;
 		}
 
-		// Token: 0x060468A7 RID: 288935 RVA: 0x011BAE04 File Offset: 0x011B9004
+		// Token: 0x0603DC94 RID: 253076 RVA: 0x011EA4D8 File Offset: 0x011E86D8
 		[NullableContext(2)]
 		public UKuroHitResult DetectCeiling()
 		{
@@ -1027,7 +1026,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return actorTrace.HitResult;
 		}
 
-		// Token: 0x060468A8 RID: 288936 RVA: 0x011BAF4C File Offset: 0x011B914C
+		// Token: 0x0603DC95 RID: 253077 RVA: 0x011EA620 File Offset: 0x011E8820
 		private void RefreshMovementBase()
 		{
 			FFindFloorResult currentFloor = this.CurrentFloor;
@@ -1040,7 +1039,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			UKuroStaticLibrary.SetBaseAndSaveBaseLocation(this.ActorComp.Actor.CharacterMovement, this.CurrentBase);
 		}
 
-		// Token: 0x060468A9 RID: 288937 RVA: 0x011BAFA8 File Offset: 0x011B91A8
+		// Token: 0x0603DC96 RID: 253078 RVA: 0x011EA67C File Offset: 0x011E887C
 		private void RefreshMoveState()
 		{
 			if (!this.MoveComp.CanResponseInput())
@@ -1059,7 +1058,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468AA RID: 288938 RVA: 0x011BAFF6 File Offset: 0x011B91F6
+		// Token: 0x0603DC97 RID: 253079 RVA: 0x011EA6CA File Offset: 0x011E88CA
 		private void TriggerFloatingMoveEvent()
 		{
 			if (this.HadFloatingMoveInput == this.HasFloatingMoveInput)
@@ -1070,7 +1069,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.HadFloatingMoveInput = this.HasFloatingMoveInput;
 		}
 
-		// Token: 0x060468AB RID: 288939 RVA: 0x011BB038 File Offset: 0x011B9238
+		// Token: 0x0603DC98 RID: 253080 RVA: 0x011EA70C File Offset: 0x011E890C
 		public void ExitHitState()
 		{
 			if (this.QueryInputAction(AkiClient.Game.Aki.Character.Input.Enum.EInputAction.跳跃))
@@ -1085,27 +1084,27 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 				this.EnterDropState();
 				return;
 			}
-			if (CharacterFloatingComponent.BeHitMoveStateList.Contains(this.StateComp.MoveState))
+			if (Array.IndexOf<ECharMoveState>(CharacterFloatingComponent.BeHitMoveStateList, this.StateComp.MoveState) >= 0)
 			{
 				bool debug3 = CharacterFloatingComponent.Debug;
 				this.EnterFloatingState(false);
 			}
 		}
 
-		// Token: 0x060468AC RID: 288940 RVA: 0x011BB0A2 File Offset: 0x011B92A2
+		// Token: 0x0603DC99 RID: 253081 RVA: 0x011EA777 File Offset: 0x011E8977
 		public void ExternalEnterFloatingState()
 		{
 			bool debug = CharacterFloatingComponent.Debug;
 			this.EnterFloatingState(true);
 		}
 
-		// Token: 0x060468AD RID: 288941 RVA: 0x011BB0B1 File Offset: 0x011B92B1
+		// Token: 0x0603DC9A RID: 253082 RVA: 0x011EA786 File Offset: 0x011E8986
 		public void ClearCacheInputDirect()
 		{
 			this.TempInputDirection.Reset();
 		}
 
-		// Token: 0x060468AE RID: 288942 RVA: 0x011BB0C0 File Offset: 0x011B92C0
+		// Token: 0x0603DC9B RID: 253083 RVA: 0x011EA794 File Offset: 0x011E8994
 		private void AddFloatingStateListener()
 		{
 			BaseTagComponent tagComp = this.TagComp;
@@ -1130,7 +1129,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}, null) : null);
 		}
 
-		// Token: 0x060468AF RID: 288943 RVA: 0x011BB178 File Offset: 0x011B9378
+		// Token: 0x0603DC9C RID: 253084 RVA: 0x011EA84C File Offset: 0x011E8A4C
 		private void InitConfig(string daPath, Action callback)
 		{
 			if (this.Config == null)
@@ -1145,7 +1144,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			callback();
 		}
 
-		// Token: 0x060468B0 RID: 288944 RVA: 0x011BB1C8 File Offset: 0x011B93C8
+		// Token: 0x0603DC9D RID: 253085 RVA: 0x011EA89C File Offset: 0x011E8A9C
 		private void InitFloatingStateMachine()
 		{
 			this.StateMachine = new StateMachine<CharacterFloatingComponent, EFloatingMovementType>(this, null);
@@ -1157,7 +1156,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.StateMachine.Start(EFloatingMovementType.None);
 		}
 
-		// Token: 0x060468B1 RID: 288945 RVA: 0x011BB230 File Offset: 0x011B9430
+		// Token: 0x0603DC9E RID: 253086 RVA: 0x011EA904 File Offset: 0x011E8B04
 		public string GetStateName(EFloatingMovementType state)
 		{
 			switch (state)
@@ -1177,19 +1176,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468B2 RID: 288946 RVA: 0x011BB27C File Offset: 0x011B947C
+		// Token: 0x0603DC9F RID: 253087 RVA: 0x011EA950 File Offset: 0x011E8B50
 		public static void CreateStaticDefaultValue()
 		{
 			CharacterFloatingComponent.Debug = false;
 		}
 
-		// Token: 0x060468B3 RID: 288947 RVA: 0x011BB284 File Offset: 0x011B9484
+		// Token: 0x0603DCA0 RID: 253088 RVA: 0x011EA958 File Offset: 0x011E8B58
 		public static void ResetStaticDefaultValue()
 		{
 			CharacterFloatingComponent.Debug = false;
 		}
 
-		// Token: 0x060468B4 RID: 288948 RVA: 0x011BB28C File Offset: 0x011B948C
+		// Token: 0x0603DCA1 RID: 253089 RVA: 0x011EA960 File Offset: 0x011E8B60
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -1197,314 +1196,266 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 				return false;
 			}
 			CharacterFloatingComponent characterFloatingComponent = (CharacterFloatingComponent)componentTemplate;
-			if (base.CanResetComponentProperty("InFloatingState"))
+			this.InFloatingState = characterFloatingComponent.InFloatingState;
+			this.InLockTargetState = characterFloatingComponent.InLockTargetState;
+			this.SpeedInternal = characterFloatingComponent.SpeedInternal;
+			this.IsSprintMove = characterFloatingComponent.IsSprintMove;
+			this.FloatingMoveMixInternal = characterFloatingComponent.FloatingMoveMixInternal;
+			this.FloatingMoveType = characterFloatingComponent.FloatingMoveType;
+			this.HadFloatingMoveInput = characterFloatingComponent.HadFloatingMoveInput;
+			this.HasFloatingMoveInput = characterFloatingComponent.HasFloatingMoveInput;
+			this.IsOnWater = characterFloatingComponent.IsOnWater;
+			this.WaterDist = characterFloatingComponent.WaterDist;
+			if (characterFloatingComponent.CurrentFloor == null)
 			{
-				this.InFloatingState = characterFloatingComponent.InFloatingState;
+				this.CurrentFloor = null;
 			}
-			if (base.CanResetComponentProperty("InLockTargetState"))
-			{
-				this.InLockTargetState = characterFloatingComponent.InLockTargetState;
-			}
-			if (base.CanResetComponentProperty("SpeedInternal"))
-			{
-				this.SpeedInternal = characterFloatingComponent.SpeedInternal;
-			}
-			if (base.CanResetComponentProperty("IsSprintMove"))
-			{
-				this.IsSprintMove = characterFloatingComponent.IsSprintMove;
-			}
-			if (base.CanResetComponentProperty("FloatingMoveMixInternal"))
-			{
-				this.FloatingMoveMixInternal = characterFloatingComponent.FloatingMoveMixInternal;
-			}
-			if (base.CanResetComponentProperty("FloatingMoveType"))
-			{
-				this.FloatingMoveType = characterFloatingComponent.FloatingMoveType;
-			}
-			if (base.CanResetComponentProperty("HadFloatingMoveInput"))
-			{
-				this.HadFloatingMoveInput = characterFloatingComponent.HadFloatingMoveInput;
-			}
-			if (base.CanResetComponentProperty("HasFloatingMoveInput"))
-			{
-				this.HasFloatingMoveInput = characterFloatingComponent.HasFloatingMoveInput;
-			}
-			if (base.CanResetComponentProperty("IsOnWater"))
-			{
-				this.IsOnWater = characterFloatingComponent.IsOnWater;
-			}
-			if (base.CanResetComponentProperty("WaterDist"))
-			{
-				this.WaterDist = characterFloatingComponent.WaterDist;
-			}
-			if (base.CanResetComponentProperty("CurrentFloor"))
-			{
-				if (characterFloatingComponent.CurrentFloor == null)
-				{
-					this.CurrentFloor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FFindFloorResult>(this.CurrentFloor), "CurrentFloor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CurrentBase"))
-			{
-				if (characterFloatingComponent.CurrentBase == null)
-				{
-					this.CurrentBase = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UPrimitiveComponent>(this.CurrentBase), "CurrentBase"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("HitFloorNonFloor"))
-			{
-				this.HitFloorNonFloor = characterFloatingComponent.HitFloorNonFloor;
-			}
-			if (base.CanResetComponentProperty("HitFloorDist"))
-			{
-				this.HitFloorDist = characterFloatingComponent.HitFloorDist;
-			}
-			if (base.CanResetComponentProperty("IsNearGround"))
-			{
-				this.IsNearGround = characterFloatingComponent.IsNearGround;
-			}
-			if (base.CanResetComponentProperty("NearGroundDist"))
-			{
-				this.NearGroundDist = characterFloatingComponent.NearGroundDist;
-			}
-			if (base.CanResetComponentProperty("IsOnGround"))
-			{
-				this.IsOnGround = characterFloatingComponent.IsOnGround;
-			}
-			if (base.CanResetComponentProperty("HasGroundTag"))
-			{
-				this.HasGroundTag = characterFloatingComponent.HasGroundTag;
-			}
-			if (base.CanResetComponentProperty("HasAirTag"))
-			{
-				this.HasAirTag = characterFloatingComponent.HasAirTag;
-			}
-			if (base.CanResetComponentProperty("WasNearGround"))
-			{
-				this.WasNearGround = characterFloatingComponent.WasNearGround;
-			}
-			if (base.CanResetComponentProperty("WasNearGroundDist"))
-			{
-				this.WasNearGroundDist = characterFloatingComponent.WasNearGroundDist;
-			}
-			if (base.CanResetComponentProperty("WasOnGround"))
-			{
-				this.WasOnGround = characterFloatingComponent.WasOnGround;
-			}
-			if (base.CanResetComponentProperty("Config"))
-			{
-				if (characterFloatingComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FloatingMovementConfig>(this.Config), "Config"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (characterFloatingComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MoveComp"))
-			{
-				if (characterFloatingComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (characterFloatingComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("AnimComp"))
-			{
-				if (characterFloatingComponent.AnimComp == null)
-				{
-					this.AnimComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("StateComp"))
-			{
-				if (characterFloatingComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TimeScaleComp"))
-			{
-				if (characterFloatingComponent.TimeScaleComp == null)
-				{
-					this.TimeScaleComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterTimeScaleComponent>(this.TimeScaleComp), "TimeScaleComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
-			{
-				if (characterFloatingComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("InputComp"))
-			{
-				if (characterFloatingComponent.InputComp == null)
-				{
-					this.InputComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterInputComponent>(this.InputComp), "InputComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("StateMachine"))
-			{
-				if (characterFloatingComponent.StateMachine == null)
-				{
-					this.StateMachine = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<StateMachine<CharacterFloatingComponent, EFloatingMovementType>>(this.StateMachine), "StateMachine"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ComponentDisableHandle"))
-			{
-				this.ComponentDisableHandle = characterFloatingComponent.ComponentDisableHandle;
-			}
-			if (base.CanResetComponentProperty("MoveDelta") && characterFloatingComponent.MoveDelta != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.MoveDelta), "MoveDelta"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentFloor), "CurrentFloor"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TempVector") && characterFloatingComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector), "TempVector"))
+			if (characterFloatingComponent.CurrentBase == null)
+			{
+				this.CurrentBase = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentBase), "CurrentBase"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TempVector2") && characterFloatingComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector2), "TempVector2"))
+			this.HitFloorNonFloor = characterFloatingComponent.HitFloorNonFloor;
+			this.HitFloorDist = characterFloatingComponent.HitFloorDist;
+			this.IsNearGround = characterFloatingComponent.IsNearGround;
+			this.NearGroundDist = characterFloatingComponent.NearGroundDist;
+			this.IsOnGround = characterFloatingComponent.IsOnGround;
+			this.HasGroundTag = characterFloatingComponent.HasGroundTag;
+			this.HasAirTag = characterFloatingComponent.HasAirTag;
+			this.WasNearGround = characterFloatingComponent.WasNearGround;
+			this.WasNearGroundDist = characterFloatingComponent.WasNearGroundDist;
+			this.WasOnGround = characterFloatingComponent.WasOnGround;
+			if (characterFloatingComponent.Config == null)
+			{
+				this.Config = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TempVector3") && characterFloatingComponent.TempVector3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector3), "TempVector3"))
+			if (characterFloatingComponent.TagComp == null)
+			{
+				this.TagComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TempInputDirection") && characterFloatingComponent.TempInputDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempInputDirection), "TempInputDirection"))
+			if (characterFloatingComponent.MoveComp == null)
+			{
+				this.MoveComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TempRotator") && characterFloatingComponent.TempRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TempRotator), "TempRotator"))
+			if (characterFloatingComponent.ActorComp == null)
+			{
+				this.ActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("FloatingEnableListener"))
+			if (characterFloatingComponent.AnimComp == null)
 			{
-				if (characterFloatingComponent.FloatingEnableListener == null)
-				{
-					this.FloatingEnableListener = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.FloatingEnableListener), "FloatingEnableListener"))
-				{
-					return false;
-				}
+				this.AnimComp = null;
 			}
-			if (base.CanResetComponentProperty("FloatingMoveModeListener"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 			{
-				if (characterFloatingComponent.FloatingMoveModeListener == null)
-				{
-					this.FloatingMoveModeListener = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.FloatingMoveModeListener), "FloatingMoveModeListener"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("FloatingSprintListener"))
+			if (characterFloatingComponent.StateComp == null)
 			{
-				if (characterFloatingComponent.FloatingSprintListener == null)
-				{
-					this.FloatingSprintListener = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.FloatingSprintListener), "FloatingSprintListener"))
-				{
-					return false;
-				}
+				this.StateComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
+			{
+				return false;
+			}
+			if (characterFloatingComponent.TimeScaleComp == null)
+			{
+				this.TimeScaleComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimeScaleComp), "TimeScaleComp"))
+			{
+				return false;
+			}
+			if (characterFloatingComponent.CreatureDataComp == null)
+			{
+				this.CreatureDataComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
+			{
+				return false;
+			}
+			if (characterFloatingComponent.InputComp == null)
+			{
+				this.InputComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputComp), "InputComp"))
+			{
+				return false;
+			}
+			if (characterFloatingComponent.StateMachine == null)
+			{
+				this.StateMachine = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateMachine), "StateMachine"))
+			{
+				return false;
+			}
+			this.ComponentDisableHandle = characterFloatingComponent.ComponentDisableHandle;
+			if (characterFloatingComponent.MoveDelta != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveDelta), "MoveDelta"))
+			{
+				return false;
+			}
+			if (characterFloatingComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
+			{
+				return false;
+			}
+			if (characterFloatingComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector2), "TempVector2"))
+			{
+				return false;
+			}
+			if (characterFloatingComponent.TempVector3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector3), "TempVector3"))
+			{
+				return false;
+			}
+			if (characterFloatingComponent.TempInputDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempInputDirection), "TempInputDirection"))
+			{
+				return false;
+			}
+			if (characterFloatingComponent.TempRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempRotator), "TempRotator"))
+			{
+				return false;
+			}
+			if (characterFloatingComponent.FloatingEnableListener == null)
+			{
+				this.FloatingEnableListener = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FloatingEnableListener), "FloatingEnableListener"))
+			{
+				return false;
+			}
+			if (characterFloatingComponent.FloatingMoveModeListener == null)
+			{
+				this.FloatingMoveModeListener = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FloatingMoveModeListener), "FloatingMoveModeListener"))
+			{
+				return false;
+			}
+			if (characterFloatingComponent.FloatingSprintListener == null)
+			{
+				this.FloatingSprintListener = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FloatingSprintListener), "FloatingSprintListener"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024FC0 RID: 151488
+		// Token: 0x17007537 RID: 30007
+		// (get) Token: 0x0603DCA2 RID: 253090 RVA: 0x011EADD3 File Offset: 0x011E8FD3
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007538 RID: 30008
+		// (get) Token: 0x0603DCA3 RID: 253091 RVA: 0x011EADD6 File Offset: 0x011E8FD6
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007539 RID: 30009
+		// (get) Token: 0x0603DCA4 RID: 253092 RVA: 0x011EADD9 File Offset: 0x011E8FD9
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700753A RID: 30010
+		// (get) Token: 0x0603DCA5 RID: 253093 RVA: 0x011EADDC File Offset: 0x011E8FDC
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700753B RID: 30011
+		// (get) Token: 0x0603DCA6 RID: 253094 RVA: 0x011EADDF File Offset: 0x011E8FDF
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700753C RID: 30012
+		// (get) Token: 0x0603DCA7 RID: 253095 RVA: 0x011EADE2 File Offset: 0x011E8FE2
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020C55 RID: 134229
 		private const string PROFILE_KEY = "Floating";
 
-		// Token: 0x04024FC1 RID: 151489
+		// Token: 0x04020C56 RID: 134230
 		private const int TRACE_ERROR_VALUE = 1;
 
-		// Token: 0x04024FC2 RID: 151490
+		// Token: 0x04020C57 RID: 134231
 		private const int COMPONENT_DISABLE_KEY = -1;
 
-		// Token: 0x04024FC3 RID: 151491
+		// Token: 0x04020C58 RID: 134232
 		private const int FAST_MOVE_MIX = 1;
 
-		// Token: 0x04024FC4 RID: 151492
+		// Token: 0x04020C59 RID: 134233
 		private const float NORMAL_MOVE_MIX = 0.5f;
 
-		// Token: 0x04024FC5 RID: 151493
+		// Token: 0x04020C5A RID: 134234
 		private const int MAX_FLOOR_DIST = 999999999;
 
-		// Token: 0x04024FC6 RID: 151494
+		// Token: 0x04020C5B RID: 134235
 		private const int WATER_TRACE_DEPTH = 550;
 
-		// Token: 0x04024FC7 RID: 151495
+		// Token: 0x04020C5C RID: 134236
 		private const int TRACE_ERROR_THRESHOLD = 3;
 
-		// Token: 0x04024FC8 RID: 151496
+		// Token: 0x04020C5D RID: 134237
 		private const string DEFAULT_DA_PATH = "/Game/Aki/Character/Role/FemaleZ2/AimisiGD/Data/DA_FloatingMovementConfig.DA_FloatingMovementConfig";
 
-		// Token: 0x04024FC9 RID: 151497
+		// Token: 0x04020C5E RID: 134238
 		[StaticVariableRuleIgnore]
 		public static readonly List<int> EmptyArray = new List<int>();
 
-		// Token: 0x04024FCA RID: 151498
+		// Token: 0x04020C5F RID: 134239
 		[StaticVariableRuleIgnore]
 		public static readonly ECharMoveState[] BeHitMoveStateList = new ECharMoveState[]
 		{
@@ -1516,114 +1467,114 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			ECharMoveState.Captured
 		};
 
-		// Token: 0x04024FCB RID: 151499
+		// Token: 0x04020C60 RID: 134240
 		public bool InFloatingState;
 
-		// Token: 0x04024FCC RID: 151500
+		// Token: 0x04020C61 RID: 134241
 		public bool InLockTargetState;
 
-		// Token: 0x04024FCD RID: 151501
+		// Token: 0x04020C62 RID: 134242
 		public float SpeedInternal;
 
-		// Token: 0x04024FCE RID: 151502
+		// Token: 0x04020C63 RID: 134243
 		public bool IsSprintMove;
 
-		// Token: 0x04024FCF RID: 151503
+		// Token: 0x04020C64 RID: 134244
 		public float FloatingMoveMixInternal = 1f;
 
-		// Token: 0x04024FD0 RID: 151504
+		// Token: 0x04020C65 RID: 134245
 		public readonly float FloatingSpeedMixInternal = 1f;
 
-		// Token: 0x04024FD1 RID: 151505
+		// Token: 0x04020C66 RID: 134246
 		public EFloatingMovementType FloatingMoveType;
 
-		// Token: 0x04024FD2 RID: 151506
+		// Token: 0x04020C67 RID: 134247
 		public bool HadFloatingMoveInput;
 
-		// Token: 0x04024FD3 RID: 151507
+		// Token: 0x04020C68 RID: 134248
 		public bool HasFloatingMoveInput;
 
-		// Token: 0x04024FD4 RID: 151508
+		// Token: 0x04020C69 RID: 134249
 		public bool IsOnWater;
 
-		// Token: 0x04024FD5 RID: 151509
+		// Token: 0x04020C6A RID: 134250
 		public float WaterDist;
 
-		// Token: 0x04024FD6 RID: 151510
+		// Token: 0x04020C6B RID: 134251
 		[Nullable(2)]
 		public FFindFloorResult CurrentFloor;
 
-		// Token: 0x04024FD7 RID: 151511
+		// Token: 0x04020C6C RID: 134252
 		[Nullable(2)]
 		public UPrimitiveComponent CurrentBase;
 
-		// Token: 0x04024FD8 RID: 151512
+		// Token: 0x04020C6D RID: 134253
 		public bool HitFloorNonFloor;
 
-		// Token: 0x04024FD9 RID: 151513
+		// Token: 0x04020C6E RID: 134254
 		public float HitFloorDist;
 
-		// Token: 0x04024FDA RID: 151514
+		// Token: 0x04020C6F RID: 134255
 		public bool IsNearGround;
 
-		// Token: 0x04024FDB RID: 151515
+		// Token: 0x04020C70 RID: 134256
 		public float NearGroundDist;
 
-		// Token: 0x04024FDC RID: 151516
+		// Token: 0x04020C71 RID: 134257
 		public bool IsOnGround;
 
-		// Token: 0x04024FDD RID: 151517
+		// Token: 0x04020C72 RID: 134258
 		public bool HasGroundTag;
 
-		// Token: 0x04024FDE RID: 151518
+		// Token: 0x04020C73 RID: 134259
 		public bool HasAirTag;
 
-		// Token: 0x04024FDF RID: 151519
+		// Token: 0x04020C74 RID: 134260
 		public bool WasNearGround;
 
-		// Token: 0x04024FE0 RID: 151520
+		// Token: 0x04020C75 RID: 134261
 		public float WasNearGroundDist;
 
-		// Token: 0x04024FE1 RID: 151521
+		// Token: 0x04020C76 RID: 134262
 		public bool WasOnGround;
 
-		// Token: 0x04024FE2 RID: 151522
+		// Token: 0x04020C77 RID: 134263
 		[Nullable(2)]
 		public FloatingMovementConfig Config;
 
-		// Token: 0x04024FE3 RID: 151523
+		// Token: 0x04020C78 RID: 134264
 		[Nullable(2)]
 		public BaseTagComponent TagComp;
 
-		// Token: 0x04024FE4 RID: 151524
+		// Token: 0x04020C79 RID: 134265
 		[Nullable(2)]
 		public CharacterMoveComponent MoveComp;
 
-		// Token: 0x04024FE5 RID: 151525
+		// Token: 0x04020C7A RID: 134266
 		[Nullable(2)]
 		public CharacterActorComponent ActorComp;
 
-		// Token: 0x04024FE6 RID: 151526
+		// Token: 0x04020C7B RID: 134267
 		[Nullable(2)]
 		public CharacterAnimationComponent AnimComp;
 
-		// Token: 0x04024FE7 RID: 151527
+		// Token: 0x04020C7C RID: 134268
 		[Nullable(2)]
 		public CharacterUnifiedStateComponent StateComp;
 
-		// Token: 0x04024FE8 RID: 151528
+		// Token: 0x04020C7D RID: 134269
 		[Nullable(2)]
 		public CharacterTimeScaleComponent TimeScaleComp;
 
-		// Token: 0x04024FE9 RID: 151529
+		// Token: 0x04020C7E RID: 134270
 		[Nullable(2)]
 		public CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04024FEA RID: 151530
+		// Token: 0x04020C7F RID: 134271
 		[Nullable(2)]
 		public CharacterInputComponent InputComp;
 
-		// Token: 0x04024FEB RID: 151531
+		// Token: 0x04020C80 RID: 134272
 		[Nullable(new byte[]
 		{
 			2,
@@ -1631,39 +1582,39 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 		})]
 		private StateMachine<CharacterFloatingComponent, EFloatingMovementType> StateMachine;
 
-		// Token: 0x04024FEC RID: 151532
+		// Token: 0x04020C81 RID: 134273
 		private int ComponentDisableHandle = -1;
 
-		// Token: 0x04024FED RID: 151533
+		// Token: 0x04020C82 RID: 134274
 		public readonly Vector MoveDelta = Vector.Create();
 
-		// Token: 0x04024FEE RID: 151534
+		// Token: 0x04020C83 RID: 134275
 		public readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x04024FEF RID: 151535
+		// Token: 0x04020C84 RID: 134276
 		public readonly Vector TempVector2 = Vector.Create();
 
-		// Token: 0x04024FF0 RID: 151536
+		// Token: 0x04020C85 RID: 134277
 		public readonly Vector TempVector3 = Vector.Create();
 
-		// Token: 0x04024FF1 RID: 151537
+		// Token: 0x04020C86 RID: 134278
 		public readonly Vector TempInputDirection = Vector.Create();
 
-		// Token: 0x04024FF2 RID: 151538
+		// Token: 0x04020C87 RID: 134279
 		public readonly Rotator TempRotator = Rotator.Create();
 
-		// Token: 0x04024FF3 RID: 151539
+		// Token: 0x04020C88 RID: 134280
 		public static bool Debug;
 
-		// Token: 0x04024FF4 RID: 151540
+		// Token: 0x04020C89 RID: 134281
 		[Nullable(2)]
 		private ITagTask FloatingEnableListener;
 
-		// Token: 0x04024FF5 RID: 151541
+		// Token: 0x04020C8A RID: 134282
 		[Nullable(2)]
 		private ITagTask FloatingMoveModeListener;
 
-		// Token: 0x04024FF6 RID: 151542
+		// Token: 0x04020C8B RID: 134283
 		[Nullable(2)]
 		private ITagTask FloatingSprintListener;
 	}

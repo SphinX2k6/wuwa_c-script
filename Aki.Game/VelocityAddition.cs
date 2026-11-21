@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003034 RID: 12340
+// Token: 0x0200258A RID: 9610
 [NullableContext(2)]
 [Nullable(0)]
 public class VelocityAddition
 {
-	// Token: 0x0601A25B RID: 107099 RVA: 0x006DEA7C File Offset: 0x006DCC7C
+	// Token: 0x06017BB9 RID: 97209 RVA: 0x00706770 File Offset: 0x00704970
 	public float VelocityCurveFunc(float delta)
 	{
 		float currentValue = delta;
@@ -26,7 +26,7 @@ public class VelocityAddition
 		return MathUtils.Instance.Clamp(currentValue, 0f, 1f);
 	}
 
-	// Token: 0x0601A25C RID: 107100 RVA: 0x006DEB28 File Offset: 0x006DCD28
+	// Token: 0x06017BBA RID: 97210 RVA: 0x0070681C File Offset: 0x00704A1C
 	public VelocityAddition(float duration, FVectorDouble velocity, UCurveFloat curveFloat, int movementMode, EVelocityCurveType velocityCurveType, float velocityCurveMin, float velocityCurveMax)
 	{
 		this.ElapsedTime = 0f;
@@ -39,27 +39,27 @@ public class VelocityAddition
 		this.VelocityCurveMax = velocityCurveMax;
 	}
 
-	// Token: 0x0400C696 RID: 50838
+	// Token: 0x0400CA65 RID: 51813
 	public float ElapsedTime;
 
-	// Token: 0x0400C697 RID: 50839
+	// Token: 0x0400CA66 RID: 51814
 	public float Duration;
 
-	// Token: 0x0400C698 RID: 50840
+	// Token: 0x0400CA67 RID: 51815
 	public FVectorDouble? Velocity;
 
-	// Token: 0x0400C699 RID: 50841
+	// Token: 0x0400CA68 RID: 51816
 	public UCurveFloat CurveFloat;
 
-	// Token: 0x0400C69A RID: 50842
+	// Token: 0x0400CA69 RID: 51817
 	public int MovementMode;
 
-	// Token: 0x0400C69B RID: 50843
+	// Token: 0x0400CA6A RID: 51818
 	public EVelocityCurveType VelocityCurveType;
 
-	// Token: 0x0400C69C RID: 50844
+	// Token: 0x0400CA6B RID: 51819
 	public float VelocityCurveMin;
 
-	// Token: 0x0400C69D RID: 50845
+	// Token: 0x0400CA6C RID: 51820
 	public float VelocityCurveMax;
 }

@@ -23,12 +23,12 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Functional
 {
-	// Token: 0x02005A18 RID: 23064
+	// Token: 0x020049F4 RID: 18932
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FunctionController : UiControllerBase
 	{
-		// Token: 0x0603A7C9 RID: 239561 RVA: 0x00DEB230 File Offset: 0x00DE9430
+		// Token: 0x0602F712 RID: 194322 RVA: 0x00D3B7C8 File Offset: 0x00D399C8
 		protected override bool OnInit()
 		{
 			this.OpenFunctionViewMap[EFunctionType.Role] = new Action(this.OpenRoleView);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Functional
 			this.OpenFunctionViewMap[EFunctionType.Tutorial] = new Action(TutorialController.Instance.OpenTutorialView);
 			this.OpenFunctionViewMap[EFunctionType.AdventureGuide] = delegate()
 			{
-				AdventureGuideController.Instance.OpenGuideView(null, null, null);
+				AdventureGuideController.Instance.OpenGuideView(null, null, null, null);
 			};
 			this.OpenFunctionViewMap[EFunctionType.ExploreTool] = new Action(this.OpenExploreSetView);
 			this.OpenFunctionViewMap[EFunctionType.InfluenceReputation] = new Action(this.OpenInfluenceReputation);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Functional
 			return true;
 		}
 
-		// Token: 0x0603A7CA RID: 239562 RVA: 0x00DEB6E4 File Offset: 0x00DE98E4
+		// Token: 0x0602F713 RID: 194323 RVA: 0x00D3BC7C File Offset: 0x00D39E7C
 		protected void InitFunctionOpenViewLimit()
 		{
 			IReadOnlyList<FunctionOpenViewLimit> configList = ConfigFunctionOpenViewLimitAll.GetConfigList(true);
@@ -96,19 +96,19 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A7CB RID: 239563 RVA: 0x00DEB729 File Offset: 0x00DE9929
+		// Token: 0x0602F714 RID: 194324 RVA: 0x00D3BCC1 File Offset: 0x00D39EC1
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseViewFinish));
 		}
 
-		// Token: 0x0603A7CC RID: 239564 RVA: 0x00DEB744 File Offset: 0x00DE9944
+		// Token: 0x0602F715 RID: 194325 RVA: 0x00D3BCDC File Offset: 0x00D39EDC
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseViewFinish));
 		}
 
-		// Token: 0x0603A7CD RID: 239565 RVA: 0x00DEB760 File Offset: 0x00DE9960
+		// Token: 0x0602F716 RID: 194326 RVA: 0x00D3BCF8 File Offset: 0x00D39EF8
 		private void OnInputDistributeTagChanged(string tagName, bool tagExist)
 		{
 			if (tagExist)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A7CE RID: 239566 RVA: 0x00DEB7B0 File Offset: 0x00DE99B0
+		// Token: 0x0602F717 RID: 194327 RVA: 0x00D3BD48 File Offset: 0x00D39F48
 		private void OnCharacterTagChanged(int tagId, bool tagExist)
 		{
 			if (!tagExist)
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A7CF RID: 239567 RVA: 0x00DEB820 File Offset: 0x00DE9A20
+		// Token: 0x0602F718 RID: 194328 RVA: 0x00D3BDB8 File Offset: 0x00D39FB8
 		[NullableContext(0)]
 		public UniTask<bool> TryOpenFunctionOpenView()
 		{
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.Functional
 			return <TryOpenFunctionOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A7D0 RID: 239568 RVA: 0x00DEB864 File Offset: 0x00DE9A64
+		// Token: 0x0602F719 RID: 194329 RVA: 0x00D3BDFC File Offset: 0x00D39FFC
 		[NullableContext(0)]
 		public UniTask<bool> ManualOpenFunctionOpenView([Nullable(1)] params int[] functionIdList)
 		{
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Functional
 			return <ManualOpenFunctionOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A7D1 RID: 239569 RVA: 0x00DEB8B0 File Offset: 0x00DE9AB0
+		// Token: 0x0602F71A RID: 194330 RVA: 0x00D3BE48 File Offset: 0x00D3A048
 		[NullableContext(0)]
 		private UniTask<bool> RequestFunctionShow([Nullable(1)] int[] functionIdList)
 		{
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.Functional
 			return <RequestFunctionShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A7D2 RID: 239570 RVA: 0x00DEB8FC File Offset: 0x00DE9AFC
+		// Token: 0x0602F71B RID: 194331 RVA: 0x00D3BE94 File Offset: 0x00D3A094
 		private bool CheckFunctionOpenViewLimit()
 		{
 			if (!FunctionModel.Instance.IsExistNewOpenFunction())
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.Functional
 			return result;
 		}
 
-		// Token: 0x0603A7D3 RID: 239571 RVA: 0x00DEBAA5 File Offset: 0x00DE9CA5
+		// Token: 0x0602F71C RID: 194332 RVA: 0x00D3C03D File Offset: 0x00D3A23D
 		private bool IsInForceCanOpenView(string viewName)
 		{
 			if (!this.IsInitFunctionOpenViewLimitSet)
@@ -264,13 +264,13 @@ namespace CSharpScript.Game.Module.Functional
 			return this.FunctionOpenViewLimitSet.Contains(viewName);
 		}
 
-		// Token: 0x0603A7D4 RID: 239572 RVA: 0x00DEBAC8 File Offset: 0x00DE9CC8
+		// Token: 0x0602F71D RID: 194333 RVA: 0x00D3C060 File Offset: 0x00D3A260
 		private void OnCloseViewFinish(EUiViewName viewName, int viewId)
 		{
 			this.TryOpenFunctionOpenView();
 		}
 
-		// Token: 0x0603A7D5 RID: 239573 RVA: 0x00DEBAD4 File Offset: 0x00DE9CD4
+		// Token: 0x0602F71E RID: 194334 RVA: 0x00D3C06C File Offset: 0x00D3A26C
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.FuncOpenNotify, delegate(IMessage msg, Net.CallbackStatus status)
@@ -286,68 +286,72 @@ namespace CSharpScript.Game.Module.Functional
 			});
 		}
 
-		// Token: 0x0603A7D6 RID: 239574 RVA: 0x00DEBB2C File Offset: 0x00DE9D2C
+		// Token: 0x0602F71F RID: 194335 RVA: 0x00D3C0C4 File Offset: 0x00D3A2C4
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.FuncOpenNotify);
 			Net.Instance.UnRegister(ENotifyMessageId.FuncOpenUpdateNotify);
 		}
 
-		// Token: 0x0603A7D7 RID: 239575 RVA: 0x00DEBB50 File Offset: 0x00DE9D50
+		// Token: 0x0602F720 RID: 194336 RVA: 0x00D3C0E6 File Offset: 0x00D3A2E6
 		private void OpenRoleView()
 		{
-			RoleController.Instance.OpenRoleMainView(ERoleAgentType.Normal, 0, null, null, null);
+			RoleController.Instance.OpenRoleMainViewByParam(new OpenRoleMainViewData
+			{
+				AgentType = ERoleAgentType.Normal,
+				UseMainViewSort = true
+			});
 		}
 
-		// Token: 0x0603A7D8 RID: 239576 RVA: 0x00DEBB74 File Offset: 0x00DE9D74
+		// Token: 0x0602F721 RID: 194337 RVA: 0x00D3C105 File Offset: 0x00D3A305
 		private void OpenBagView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.InventoryView, null, null);
 		}
 
-		// Token: 0x0603A7D9 RID: 239577 RVA: 0x00DEBB87 File Offset: 0x00DE9D87
+		// Token: 0x0602F722 RID: 194338 RVA: 0x00D3C118 File Offset: 0x00D3A318
 		private void OpenCalabashView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.CalabashRootView, null, null);
 		}
 
-		// Token: 0x0603A7DA RID: 239578 RVA: 0x00DEBB9A File Offset: 0x00DE9D9A
+		// Token: 0x0602F723 RID: 194339 RVA: 0x00D3C12B File Offset: 0x00D3A32B
 		private void OpenQuestView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.QuestView, null, null);
 		}
 
-		// Token: 0x0603A7DB RID: 239579 RVA: 0x00DEBBAD File Offset: 0x00DE9DAD
+		// Token: 0x0602F724 RID: 194340 RVA: 0x00D3C13E File Offset: 0x00D3A33E
 		private void OpenMailView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MailBoxView, null, null);
 		}
 
-		// Token: 0x0603A7DC RID: 239580 RVA: 0x00DEBBC0 File Offset: 0x00DE9DC0
+		// Token: 0x0602F725 RID: 194341 RVA: 0x00D3C151 File Offset: 0x00D3A351
 		private void OpenMenuView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MenuView, null, null);
 		}
 
-		// Token: 0x0603A7DD RID: 239581 RVA: 0x00DEBBD3 File Offset: 0x00DE9DD3
+		// Token: 0x0602F726 RID: 194342 RVA: 0x00D3C164 File Offset: 0x00D3A364
 		private void OpenMapView()
 		{
 			WorldMapController.Instance.OpenView(EOpenMapType.Mouse, false, null, null);
 		}
 
-		// Token: 0x0603A7DE RID: 239582 RVA: 0x00DEBBE3 File Offset: 0x00DE9DE3
+		// Token: 0x0602F727 RID: 194343 RVA: 0x00D3C174 File Offset: 0x00D3A374
 		private void OpenTimeOfDayView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.TimeOfDaySecondView, null, null);
 		}
 
-		// Token: 0x0603A7DF RID: 239583 RVA: 0x00DEBBF6 File Offset: 0x00DE9DF6
+		// Token: 0x0602F728 RID: 194344 RVA: 0x00D3C187 File Offset: 0x00D3A387
 		private void OpenFriendView()
 		{
 			this.TryOpenFriendView();
 		}
 
-		// Token: 0x0603A7E0 RID: 239584 RVA: 0x00DEBC00 File Offset: 0x00DE9E00
+		// Token: 0x0602F729 RID: 194345 RVA: 0x00D3C190 File Offset: 0x00D3A390
 		private UniTask TryOpenFriendView()
 		{
 			FunctionController.<TryOpenFriendView>d__26 <TryOpenFriendView>d__;
@@ -358,7 +362,7 @@ namespace CSharpScript.Game.Module.Functional
 			return <TryOpenFriendView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A7E1 RID: 239585 RVA: 0x00DEBC44 File Offset: 0x00DE9E44
+		// Token: 0x0602F72A RID: 194346 RVA: 0x00D3C1D4 File Offset: 0x00D3A3D4
 		private UniTask OpenThirdPartyMessageBox(ESdkPrivilege privilege)
 		{
 			FunctionController.<OpenThirdPartyMessageBox>d__27 <OpenThirdPartyMessageBox>d__;
@@ -369,67 +373,67 @@ namespace CSharpScript.Game.Module.Functional
 			return <OpenThirdPartyMessageBox>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A7E2 RID: 239586 RVA: 0x00DEBC87 File Offset: 0x00DE9E87
+		// Token: 0x0602F72B RID: 194347 RVA: 0x00D3C217 File Offset: 0x00D3A417
 		private void OpenPayShopView()
 		{
 			PayShopController.Instance.OpenPayShopView(null, null);
 		}
 
-		// Token: 0x0603A7E3 RID: 239587 RVA: 0x00DEBC95 File Offset: 0x00DE9E95
+		// Token: 0x0602F72C RID: 194348 RVA: 0x00D3C225 File Offset: 0x00D3A425
 		private void OpenGachaMainView()
 		{
 			GachaController.Instance.OpenGachaMainView(true);
 		}
 
-		// Token: 0x0603A7E4 RID: 239588 RVA: 0x00DEBCA4 File Offset: 0x00DE9EA4
+		// Token: 0x0602F72D RID: 194349 RVA: 0x00D3C234 File Offset: 0x00D3A434
 		private void OpenExploreSetView()
 		{
 			RouletteController.Instance.OpenAssemblyView(ERouletteType.Explore, null, null, null, false);
 		}
 
-		// Token: 0x0603A7E5 RID: 239589 RVA: 0x00DEBCD9 File Offset: 0x00DE9ED9
+		// Token: 0x0602F72E RID: 194350 RVA: 0x00D3C269 File Offset: 0x00D3A469
 		private void OpenUserFeedback()
 		{
 			KuroSdkController.Instance.OpenFeedback();
 		}
 
-		// Token: 0x0603A7E6 RID: 239590 RVA: 0x00DEBCE5 File Offset: 0x00DE9EE5
+		// Token: 0x0602F72F RID: 194351 RVA: 0x00D3C275 File Offset: 0x00D3A475
 		private void OpenInfluenceReputation()
 		{
 		}
 
-		// Token: 0x0603A7E7 RID: 239591 RVA: 0x00DEBCE7 File Offset: 0x00DE9EE7
+		// Token: 0x0602F730 RID: 194352 RVA: 0x00D3C277 File Offset: 0x00D3A477
 		private void OpenRoleHandBook()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RoleHandBookSelectionView, null, null);
 		}
 
-		// Token: 0x0603A7E8 RID: 239592 RVA: 0x00DEBCFA File Offset: 0x00DE9EFA
+		// Token: 0x0602F731 RID: 194353 RVA: 0x00D3C28A File Offset: 0x00D3A48A
 		private void OpenHandBookSystem()
 		{
 			UiManager.Instance.OpenView(EUiViewName.HandBookEntranceView, null, null);
 		}
 
-		// Token: 0x0603A7E9 RID: 239593 RVA: 0x00DEBD0D File Offset: 0x00DE9F0D
+		// Token: 0x0602F732 RID: 194354 RVA: 0x00D3C29D File Offset: 0x00D3A49D
 		private void OpenPhotograph()
 		{
 			PhotographController.Instance.TryOpenPhotograph(ECameraCaptureType.NormalCamera);
 		}
 
-		// Token: 0x0603A7EA RID: 239594 RVA: 0x00DEBD1B File Offset: 0x00DE9F1B
+		// Token: 0x0602F733 RID: 194355 RVA: 0x00D3C2AB File Offset: 0x00D3A4AB
 		private void OpenActivity()
 		{
 			ActivityController.Instance.OpenActivityById(0, EActivityViewOpenType.Menu, null, null);
 		}
 
-		// Token: 0x0603A7EB RID: 239595 RVA: 0x00DEBD2C File Offset: 0x00DE9F2C
+		// Token: 0x0602F734 RID: 194356 RVA: 0x00D3C2BC File Offset: 0x00D3A4BC
 		private void OpenCustomerService()
 		{
 			LogController.Instance.RequestOutputDebugInfo();
 			KuroSdkController.Instance.OpenCustomerService(EKuroSdkOpenCustomerServerType.Setting);
 		}
 
-		// Token: 0x0603A7EC RID: 239596 RVA: 0x00DEBD43 File Offset: 0x00DE9F43
+		// Token: 0x0602F735 RID: 194357 RVA: 0x00D3C2D3 File Offset: 0x00D3A4D3
 		private void OpenKuroStreet()
 		{
 			if (MailBindModel.Instance.GetIsReward())
@@ -443,33 +447,33 @@ namespace CSharpScript.Game.Module.Functional
 			MailBindController.Instance.RecordMailBindClick();
 		}
 
-		// Token: 0x0603A7ED RID: 239597 RVA: 0x00DEBD7D File Offset: 0x00DE9F7D
+		// Token: 0x0602F736 RID: 194358 RVA: 0x00D3C30D File Offset: 0x00D3A50D
 		private void OpenMailBind()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MailBindView, true, null);
 			MailBindController.Instance.RecordMailBindClick();
 		}
 
-		// Token: 0x0603A7EE RID: 239598 RVA: 0x00DEBD9F File Offset: 0x00DE9F9F
+		// Token: 0x0602F737 RID: 194359 RVA: 0x00D3C32F File Offset: 0x00D3A52F
 		private void OpenGameIntroduction()
 		{
 			ChannelController.Instance.OpenGameIntroduction();
 			KuroSdkModel.Instance.SaveCurrentClickIntroductionVersion();
 		}
 
-		// Token: 0x0603A7EF RID: 239599 RVA: 0x00DEBDB5 File Offset: 0x00DE9FB5
+		// Token: 0x0602F738 RID: 194360 RVA: 0x00D3C345 File Offset: 0x00D3A545
 		private void OpenDirectTrainPro()
 		{
 			ActivityDirectTrainHelper.TryOpenPro(false);
 		}
 
-		// Token: 0x0603A7F0 RID: 239600 RVA: 0x00DEBDBE File Offset: 0x00DE9FBE
+		// Token: 0x0602F739 RID: 194361 RVA: 0x00D3C34E File Offset: 0x00D3A54E
 		private void OpenOnlineGame()
 		{
 			this.TryOpenOnlineGame();
 		}
 
-		// Token: 0x0603A7F1 RID: 239601 RVA: 0x00DEBDC8 File Offset: 0x00DE9FC8
+		// Token: 0x0602F73A RID: 194362 RVA: 0x00D3C358 File Offset: 0x00D3A558
 		private UniTask TryOpenOnlineGame()
 		{
 			FunctionController.<TryOpenOnlineGame>d__43 <TryOpenOnlineGame>d__;
@@ -480,13 +484,13 @@ namespace CSharpScript.Game.Module.Functional
 			return <TryOpenOnlineGame>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A7F2 RID: 239602 RVA: 0x00DEBE0B File Offset: 0x00DEA00B
+		// Token: 0x0602F73B RID: 194363 RVA: 0x00D3C39B File Offset: 0x00D3A59B
 		private void OpenAchievement()
 		{
 			AchievementController.Instance.OpenAchievementMainView();
 		}
 
-		// Token: 0x0603A7F3 RID: 239603 RVA: 0x00DEBE18 File Offset: 0x00DEA018
+		// Token: 0x0602F73C RID: 194364 RVA: 0x00D3C3A8 File Offset: 0x00D3A5A8
 		public void OpenFunctionRelateView(EFunctionType functionType)
 		{
 			if (!FunctionModel.Instance.IsOpen((int)functionType))
@@ -508,31 +512,31 @@ namespace CSharpScript.Game.Module.Functional
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0603A7F4 RID: 239604 RVA: 0x00DEBE8A File Offset: 0x00DEA08A
+		// Token: 0x0602F73D RID: 194365 RVA: 0x00D3C41A File Offset: 0x00D3A61A
 		private void OpenCompose()
 		{
 			UiManager.Instance.OpenView(EUiViewName.ComposeCarryOnView, null, null);
 		}
 
-		// Token: 0x0603A7F5 RID: 239605 RVA: 0x00DEBE9D File Offset: 0x00DEA09D
+		// Token: 0x0602F73E RID: 194366 RVA: 0x00D3C42D File Offset: 0x00D3A62D
 		private void OpenForging()
 		{
 			UiManager.Instance.OpenView(EUiViewName.ForgingRootView, null, null);
 		}
 
-		// Token: 0x0603A7F6 RID: 239606 RVA: 0x00DEBEB0 File Offset: 0x00DEA0B0
+		// Token: 0x0602F73F RID: 194367 RVA: 0x00D3C440 File Offset: 0x00D3A640
 		private void OpenBattlePass()
 		{
 			BattlePassController.Instance.OpenBattlePassView();
 		}
 
-		// Token: 0x0603A7F7 RID: 239607 RVA: 0x00DEBEBC File Offset: 0x00DEA0BC
+		// Token: 0x0602F740 RID: 194368 RVA: 0x00D3C44C File Offset: 0x00D3A64C
 		private void OpenHonamiStoryBackpack()
 		{
 			HonamiStoryController.Instance.OpenHonamiStoryBag().Forget<bool>();
 		}
 
-		// Token: 0x0603A7F8 RID: 239608 RVA: 0x00DEBED0 File Offset: 0x00DEA0D0
+		// Token: 0x0602F741 RID: 194369 RVA: 0x00D3C460 File Offset: 0x00D3A660
 		private void OpenPhoneMsg()
 		{
 			PhoneMsgPanelViewData param = new PhoneMsgPanelViewData
@@ -546,63 +550,63 @@ namespace CSharpScript.Game.Module.Functional
 			UiManager.Instance.OpenView(EUiViewName.PhoneMsgPanelViewBig, param, null);
 		}
 
-		// Token: 0x0603A7F9 RID: 239609 RVA: 0x00DEBF1C File Offset: 0x00DEA11C
+		// Token: 0x0602F742 RID: 194370 RVA: 0x00D3C4AC File Offset: 0x00D3A6AC
 		private void OpenPermanentPhantomArea()
 		{
 			PhantomArenaBattleController.OpenPhantomArenaMapEntrance(null, null);
 		}
 
-		// Token: 0x0603A7FA RID: 239610 RVA: 0x00DEBF40 File Offset: 0x00DEA140
+		// Token: 0x0602F743 RID: 194371 RVA: 0x00D3C4D0 File Offset: 0x00D3A6D0
 		private void OpenInfrastructure()
 		{
 			InfrastructureController.Instance.OpenInfrastructureMainView(null).Forget<int?>();
 		}
 
-		// Token: 0x0603A7FB RID: 239611 RVA: 0x00DEBF52 File Offset: 0x00DEA152
+		// Token: 0x0602F744 RID: 194372 RVA: 0x00D3C4E2 File Offset: 0x00D3A6E2
 		private void OpenVillageInfr()
 		{
 			VillageInfrController.Instance.OpenVillageInfrMainView(null).Forget<int?>();
 		}
 
-		// Token: 0x0603A7FC RID: 239612 RVA: 0x00DEBF64 File Offset: 0x00DEA164
+		// Token: 0x0602F745 RID: 194373 RVA: 0x00D3C4F4 File Offset: 0x00D3A6F4
 		private void OpenMotorcycle()
 		{
 			MotorcycleDevelopController.Instance.OpenRootView().Forget<bool>();
 		}
 
-		// Token: 0x0603A7FD RID: 239613 RVA: 0x00DEBF78 File Offset: 0x00DEA178
+		// Token: 0x0602F746 RID: 194374 RVA: 0x00D3C508 File Offset: 0x00D3A708
 		private void OpenWeatherCentral()
 		{
 			WeatherController.Instance.TryOpenWeatherCentralMainView(null);
 		}
 
-		// Token: 0x0603A7FE RID: 239614 RVA: 0x00DEBF98 File Offset: 0x00DEA198
+		// Token: 0x0602F747 RID: 194375 RVA: 0x00D3C528 File Offset: 0x00D3A728
 		private void OpenSheriffAnomaly()
 		{
 			SheriffController.Instance.OpenSheriffMap(null);
 		}
 
-		// Token: 0x0603A7FF RID: 239615 RVA: 0x00DEBFA5 File Offset: 0x00DEA1A5
+		// Token: 0x0602F748 RID: 194376 RVA: 0x00D3C535 File Offset: 0x00D3A735
 		private void OpenFeedbackReward()
 		{
 			UiManager.Instance.OpenView(EUiViewName.FeedbackRewardMainView, null, null);
 		}
 
-		// Token: 0x0603A800 RID: 239616 RVA: 0x00DEBFB8 File Offset: 0x00DEA1B8
+		// Token: 0x0602F749 RID: 194377 RVA: 0x00D3C548 File Offset: 0x00D3A748
 		private void OpenMoonChasingMain()
 		{
 			MoonChasingMainViewModel data = new MoonChasingMainViewModel();
 			MoonChasingController.Instance.OpenMainView(data).Forget<bool>();
 		}
 
-		// Token: 0x0603A801 RID: 239617 RVA: 0x00DEBFDB File Offset: 0x00DEA1DB
+		// Token: 0x0602F74A RID: 194378 RVA: 0x00D3C56B File Offset: 0x00D3A76B
 		protected override bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x17008BCD RID: 35789
-		// (get) Token: 0x0603A802 RID: 239618 RVA: 0x00DEBFDE File Offset: 0x00DEA1DE
+		// Token: 0x17005F9B RID: 24475
+		// (get) Token: 0x0602F74B RID: 194379 RVA: 0x00D3C56E File Offset: 0x00D3A76E
 		public static FunctionController Instance
 		{
 			get
@@ -611,7 +615,7 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A803 RID: 239619 RVA: 0x00DEBFE5 File Offset: 0x00DEA1E5
+		// Token: 0x0602F74C RID: 194380 RVA: 0x00D3C575 File Offset: 0x00D3A775
 		public static FunctionController GetOrCreateInstance()
 		{
 			if (FunctionController._Instance == null)
@@ -621,7 +625,7 @@ namespace CSharpScript.Game.Module.Functional
 			return FunctionController._Instance;
 		}
 
-		// Token: 0x0603A804 RID: 239620 RVA: 0x00DEBFF9 File Offset: 0x00DEA1F9
+		// Token: 0x0602F74D RID: 194381 RVA: 0x00D3C589 File Offset: 0x00D3A789
 		public static bool CreateInstance()
 		{
 			if (FunctionController._Instance != null)
@@ -632,33 +636,33 @@ namespace CSharpScript.Game.Module.Functional
 			return true;
 		}
 
-		// Token: 0x0603A805 RID: 239621 RVA: 0x00DEC00F File Offset: 0x00DEA20F
+		// Token: 0x0602F74E RID: 194382 RVA: 0x00D3C59F File Offset: 0x00D3A79F
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603A806 RID: 239622 RVA: 0x00DEC011 File Offset: 0x00DEA211
+		// Token: 0x0602F74F RID: 194383 RVA: 0x00D3C5A1 File Offset: 0x00D3A7A1
 		public static void ResetStaticDefaultValue()
 		{
 			FunctionController._Instance = null;
 		}
 
-		// Token: 0x0603A807 RID: 239623 RVA: 0x00DEC019 File Offset: 0x00DEA219
+		// Token: 0x0602F750 RID: 194384 RVA: 0x00D3C5A9 File Offset: 0x00D3A7A9
 		static FunctionController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FunctionController.CreateStaticDefaultValue), new Action(FunctionController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E796 RID: 124822
+		// Token: 0x0401923D RID: 102973
 		private bool IsInitFunctionOpenViewLimitSet;
 
-		// Token: 0x0401E797 RID: 124823
+		// Token: 0x0401923E RID: 102974
 		private readonly Dictionary<EFunctionType, Action> OpenFunctionViewMap = new Dictionary<EFunctionType, Action>();
 
-		// Token: 0x0401E798 RID: 124824
+		// Token: 0x0401923F RID: 102975
 		private readonly HashSet<string> FunctionOpenViewLimitSet = new HashSet<string>();
 
-		// Token: 0x0401E799 RID: 124825
+		// Token: 0x04019240 RID: 102976
 		[Nullable(2)]
 		private static FunctionController _Instance;
 	}

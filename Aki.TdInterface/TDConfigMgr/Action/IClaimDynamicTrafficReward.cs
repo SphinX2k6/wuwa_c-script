@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200189E RID: 6302
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A29 RID: 6697
 	public class IClaimDynamicTrafficReward : IClaimDynamicEntityRewardType
 	{
-		// Token: 0x0600874D RID: 34637 RVA: 0x00140D88 File Offset: 0x0013EF88
+		// Token: 0x06008E75 RID: 36469 RVA: 0x001505BC File Offset: 0x0014E7BC
 		private IClaimDynamicTrafficReward_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600874E RID: 34638 RVA: 0x00140DC0 File Offset: 0x0013EFC0
+		// Token: 0x06008E76 RID: 36470 RVA: 0x001505F4 File Offset: 0x0014E7F4
 		public static IClaimDynamicTrafficReward Create([Nullable(2)] IClaimDynamicTrafficReward instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600874F RID: 34639 RVA: 0x00140DD3 File Offset: 0x0013EFD3
+		// Token: 0x06008E77 RID: 36471 RVA: 0x00150607 File Offset: 0x0014E807
 		public static IClaimDynamicTrafficReward CreateFromSetValue([Nullable(2)] IClaimDynamicTrafficReward_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008750 RID: 34640 RVA: 0x00140DE6 File Offset: 0x0013EFE6
+		// Token: 0x06008E78 RID: 36472 RVA: 0x0015061A File Offset: 0x0014E81A
 		public new IClaimDynamicTrafficReward_SetValue ToSetValue()
 		{
 			return new IClaimDynamicTrafficReward_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C0E RID: 11278
-		// (get) Token: 0x06008751 RID: 34641 RVA: 0x00140DF9 File Offset: 0x0013EFF9
-		// (set) Token: 0x06008752 RID: 34642 RVA: 0x00140E24 File Offset: 0x0013F024
+		// Token: 0x17002E09 RID: 11785
+		// (get) Token: 0x06008E79 RID: 36473 RVA: 0x0015062D File Offset: 0x0014E82D
+		// (set) Token: 0x06008E7A RID: 36474 RVA: 0x00150658 File Offset: 0x0014E858
 		public override EDynamicEntityRewardType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400552F RID: 21807
+		// Token: 0x0400597C RID: 22908
 		[Nullable(2)]
 		protected new IClaimDynamicTrafficReward FbInstance;
 
-		// Token: 0x04005530 RID: 21808
+		// Token: 0x0400597D RID: 22909
 		[Nullable(2)]
 		protected new IClaimDynamicTrafficReward_SetValue PocoInterface;
 	}

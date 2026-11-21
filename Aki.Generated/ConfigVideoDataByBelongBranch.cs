@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A74 RID: 2676
+	// Token: 0x02000B49 RID: 2889
 	public class ConfigVideoDataByBelongBranch : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003ECC RID: 16076 RVA: 0x001BD1CD File Offset: 0x001BB3CD
+		// Token: 0x060043CA RID: 17354 RVA: 0x001DC561 File Offset: 0x001DA761
 		static ConfigVideoDataByBelongBranch()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigVideoDataByBelongBranch.CreateStaticDefaultValue), new Action(ConfigVideoDataByBelongBranch.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003ECD RID: 16077 RVA: 0x001BD1EC File Offset: 0x001BB3EC
+		// Token: 0x060043CB RID: 17355 RVA: 0x001DC580 File Offset: 0x001DA780
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigVideoDataByBelongBranch.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003ECE RID: 16078 RVA: 0x001BD26B File Offset: 0x001BB46B
+		// Token: 0x060043CC RID: 17356 RVA: 0x001DC5FF File Offset: 0x001DA7FF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigVideoDataByBelongBranch.LogPair = null;
 			ConfigVideoDataByBelongBranch.HandleId = 0;
 		}
 
-		// Token: 0x06003ECF RID: 16079 RVA: 0x001BD279 File Offset: 0x001BB479
+		// Token: 0x060043CD RID: 17357 RVA: 0x001DC60D File Offset: 0x001DA80D
 		public static void Init()
 		{
 			ConfigVideoDataByBelongBranch.HandleId = ConfigCommon.InitDataStatement(ConfigVideoDataByBelongBranch.HandleId, "db_cgvedio.db", "select BinData from `VideoData` where BelongBranch=?");
 		}
 
-		// Token: 0x06003ED0 RID: 16080 RVA: 0x001BD294 File Offset: 0x001BB494
+		// Token: 0x060043CE RID: 17358 RVA: 0x001DC628 File Offset: 0x001DA828
 		[NullableContext(2)]
 		public static IReadOnlyList<VideoData> GetConfigList(int p0BelongBranch, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04004912 RID: 18706
+		// Token: 0x04004EE5 RID: 20197
 		private const string DB = "db_cgvedio.db";
 
-		// Token: 0x04004913 RID: 18707
+		// Token: 0x04004EE6 RID: 20198
 		private const string FILE = "g.过场cg.xlsx";
 
-		// Token: 0x04004914 RID: 18708
+		// Token: 0x04004EE7 RID: 20199
 		private const string TABLE = "VideoData";
 
-		// Token: 0x04004915 RID: 18709
+		// Token: 0x04004EE8 RID: 20200
 		private const string COMMAND = "select BinData from `VideoData` where BelongBranch=?";
 
-		// Token: 0x04004916 RID: 18710
+		// Token: 0x04004EE9 RID: 20201
 		private const string KEY_PREFIX = "VideoDataByBelongBranch";
 
-		// Token: 0x04004917 RID: 18711
+		// Token: 0x04004EEA RID: 20202
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004918 RID: 18712
+		// Token: 0x04004EEB RID: 20203
 		private static int HandleId;
 	}
 }

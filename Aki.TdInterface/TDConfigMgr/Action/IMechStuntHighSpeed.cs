@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BD6 RID: 7126
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DBF RID: 7615
 	public class IMechStuntHighSpeed : IMechStuntConfigType
 	{
-		// Token: 0x060098A9 RID: 39081 RVA: 0x0015FC1C File Offset: 0x0015DE1C
+		// Token: 0x0600A1B7 RID: 41399 RVA: 0x001727DC File Offset: 0x001709DC
 		private IMechStuntHighSpeed_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060098AA RID: 39082 RVA: 0x0015FC54 File Offset: 0x0015DE54
+		// Token: 0x0600A1B8 RID: 41400 RVA: 0x00172814 File Offset: 0x00170A14
 		public static IMechStuntHighSpeed Create([Nullable(2)] IMechStuntHighSpeed instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060098AB RID: 39083 RVA: 0x0015FC67 File Offset: 0x0015DE67
+		// Token: 0x0600A1B9 RID: 41401 RVA: 0x00172827 File Offset: 0x00170A27
 		public static IMechStuntHighSpeed CreateFromSetValue([Nullable(2)] IMechStuntHighSpeed_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060098AC RID: 39084 RVA: 0x0015FC7A File Offset: 0x0015DE7A
+		// Token: 0x0600A1BA RID: 41402 RVA: 0x0017283A File Offset: 0x00170A3A
 		public new IMechStuntHighSpeed_SetValue ToSetValue()
 		{
 			return new IMechStuntHighSpeed_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002FEA RID: 12266
-		// (get) Token: 0x060098AD RID: 39085 RVA: 0x0015FC8D File Offset: 0x0015DE8D
-		// (set) Token: 0x060098AE RID: 39086 RVA: 0x0015FCB8 File Offset: 0x0015DEB8
+		// Token: 0x1700324B RID: 12875
+		// (get) Token: 0x0600A1BB RID: 41403 RVA: 0x0017284D File Offset: 0x00170A4D
+		// (set) Token: 0x0600A1BC RID: 41404 RVA: 0x00172878 File Offset: 0x00170A78
 		public override EMechStuntType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D13 RID: 23827
+		// Token: 0x0400622C RID: 25132
 		[Nullable(2)]
 		protected new IMechStuntHighSpeed FbInstance;
 
-		// Token: 0x04005D14 RID: 23828
+		// Token: 0x0400622D RID: 25133
 		[Nullable(2)]
 		protected new IMechStuntHighSpeed_SetValue PocoInterface;
 	}

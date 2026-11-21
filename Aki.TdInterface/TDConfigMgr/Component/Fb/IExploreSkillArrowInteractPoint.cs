@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CBA RID: 3258
+	// Token: 0x02000D9C RID: 3484
 	public class IExploreSkillArrowInteractPoint : IExploreSkillInteractType
 	{
-		// Token: 0x06004A81 RID: 19073 RVA: 0x000BA6DE File Offset: 0x000B88DE
-		[NullableContext(1)]
+		// Token: 0x06004F2F RID: 20271 RVA: 0x000C50EE File Offset: 0x000C32EE
 		public static IExploreSkillArrowInteractPoint Create(IExploreSkillArrowInteractPoint? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016CA RID: 5834
-		// (get) Token: 0x06004A82 RID: 19074 RVA: 0x000BA6FD File Offset: 0x000B88FD
+		// Token: 0x170017F2 RID: 6130
+		// (get) Token: 0x06004F30 RID: 20272 RVA: 0x000C510D File Offset: 0x000C330D
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016CB RID: 5835
-		// (get) Token: 0x06004A83 RID: 19075 RVA: 0x000BA70A File Offset: 0x000B890A
+		// Token: 0x170017F3 RID: 6131
+		// (get) Token: 0x06004F31 RID: 20273 RVA: 0x000C511A File Offset: 0x000C331A
 		public virtual float MinDistance
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016CC RID: 5836
-		// (get) Token: 0x06004A84 RID: 19076 RVA: 0x000BA717 File Offset: 0x000B8917
+		// Token: 0x170017F4 RID: 6132
+		// (get) Token: 0x06004F32 RID: 20274 RVA: 0x000C5127 File Offset: 0x000C3327
 		public virtual float InteractWaitTime
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016CD RID: 5837
-		// (get) Token: 0x06004A85 RID: 19077 RVA: 0x000BA724 File Offset: 0x000B8924
+		// Token: 0x170017F5 RID: 6133
+		// (get) Token: 0x06004F33 RID: 20275 RVA: 0x000C5134 File Offset: 0x000C3334
 		public virtual float ShootWaitTime
 		{
 			get
@@ -61,7 +59,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A85 RID: 10885
+		// Token: 0x04002CFF RID: 11519
 		private IExploreSkillArrowInteractPoint Instance;
 	}
 }

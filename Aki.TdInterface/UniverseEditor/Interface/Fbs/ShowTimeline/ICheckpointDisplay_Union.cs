@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 {
-	// Token: 0x02003B95 RID: 15253
+	// Token: 0x02003F9D RID: 16285
 	public enum ICheckpointDisplay_Union : byte
 	{
-		// Token: 0x0400B0FD RID: 45309
+		// Token: 0x0400BA7A RID: 47738
 		NONE,
-		// Token: 0x0400B0FE RID: 45310
+		// Token: 0x0400BA7B RID: 47739
 		ICheckpointDisplay,
-		// Token: 0x0400B0FF RID: 45311
+		// Token: 0x0400BA7C RID: 47740
 		ICheckpointDisplayRole
 	}
 }

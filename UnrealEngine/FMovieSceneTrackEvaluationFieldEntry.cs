@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002450 RID: 9296
+	// Token: 0x02000794 RID: 1940
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieScene.MovieSceneTrackEvaluationFieldEntry")]
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class FMovieSceneTrackEvaluationFieldEntry : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06022D89 RID: 142729 RVA: 0x003387E4 File Offset: 0x003369E4
+		// Token: 0x0600A789 RID: 42889 RVA: 0x000F745D File Offset: 0x000F565D
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMovieSceneTrackEvaluationFieldEntry._ScriptStructPtr != 0) ? FMovieSceneTrackEvaluationFieldEntry._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/MovieScene.MovieSceneTrackEvaluationFieldEntry", ref FMovieSceneTrackEvaluationFieldEntry._ScriptStructPtr);
 		}
 
-		// Token: 0x170085F9 RID: 34297
-		// (get) Token: 0x06022D8A RID: 142730 RVA: 0x00338808 File Offset: 0x00336A08
-		// (set) Token: 0x06022D8B RID: 142731 RVA: 0x0033881C File Offset: 0x00336A1C
+		// Token: 0x17001F26 RID: 7974
+		// (get) Token: 0x0600A78A RID: 42890 RVA: 0x000F7481 File Offset: 0x000F5681
+		// (set) Token: 0x0600A78B RID: 42891 RVA: 0x000F7495 File Offset: 0x000F5695
 		[Nullable(2)]
 		public unsafe UMovieSceneSection Section
 		{
@@ -37,9 +37,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085FA RID: 34298
-		// (get) Token: 0x06022D8C RID: 142732 RVA: 0x00338834 File Offset: 0x00336A34
-		// (set) Token: 0x06022D8D RID: 142733 RVA: 0x00338877 File Offset: 0x00336A77
+		// Token: 0x17001F27 RID: 7975
+		// (get) Token: 0x0600A78C RID: 42892 RVA: 0x000F74AC File Offset: 0x000F56AC
+		// (set) Token: 0x0600A78D RID: 42893 RVA: 0x000F74EF File Offset: 0x000F56EF
 		public FFrameNumberRange Range
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085FB RID: 34299
-		// (get) Token: 0x06022D8E RID: 142734 RVA: 0x00338898 File Offset: 0x00336A98
-		// (set) Token: 0x06022D8F RID: 142735 RVA: 0x003388DB File Offset: 0x00336ADB
+		// Token: 0x17001F28 RID: 7976
+		// (get) Token: 0x0600A78E RID: 42894 RVA: 0x000F7510 File Offset: 0x000F5710
+		// (set) Token: 0x0600A78F RID: 42895 RVA: 0x000F7553 File Offset: 0x000F5753
 		public FFrameNumber ForcedTime
 		{
 			get
@@ -79,24 +79,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085FC RID: 34300
-		// (get) Token: 0x06022D90 RID: 142736 RVA: 0x003388FC File Offset: 0x00336AFC
-		// (set) Token: 0x06022D91 RID: 142737 RVA: 0x0033890C File Offset: 0x00336B0C
-		public unsafe ESectionEvaluationFlags Flags
-		{
-			get
-			{
-				return (ESectionEvaluationFlags)(*(base.NativePtr + (IntPtr)FMovieSceneTrackEvaluationFieldEntry.__PropertyOffset_Flags));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)FMovieSceneTrackEvaluationFieldEntry.__PropertyOffset_Flags) = (byte)value;
-			}
-		}
-
-		// Token: 0x170085FD RID: 34301
-		// (get) Token: 0x06022D92 RID: 142738 RVA: 0x0033891D File Offset: 0x00336B1D
-		// (set) Token: 0x06022D93 RID: 142739 RVA: 0x0033892D File Offset: 0x00336B2D
+		// Token: 0x17001F29 RID: 7977
+		// (get) Token: 0x0600A790 RID: 42896 RVA: 0x000F7574 File Offset: 0x000F5774
+		// (set) Token: 0x0600A791 RID: 42897 RVA: 0x000F7584 File Offset: 0x000F5784
 		public unsafe short LegacySortOrder
 		{
 			get
@@ -109,77 +94,64 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06022D94 RID: 142740 RVA: 0x0033893E File Offset: 0x00336B3E
+		// Token: 0x0600A792 RID: 42898 RVA: 0x000F7595 File Offset: 0x000F5795
 		public FMovieSceneTrackEvaluationFieldEntry()
 		{
 		}
 
-		// Token: 0x06022D95 RID: 142741 RVA: 0x00338946 File Offset: 0x00336B46
-		public FMovieSceneTrackEvaluationFieldEntry(UMovieSceneSection Section, FFrameNumberRange Range, FFrameNumber ForcedTime, ESectionEvaluationFlags Flags, short LegacySortOrder)
-		{
-			this.Section = Section;
-			this.Range = Range;
-			this.ForcedTime = ForcedTime;
-			this.Flags = Flags;
-			this.LegacySortOrder = LegacySortOrder;
-		}
-
-		// Token: 0x06022D96 RID: 142742 RVA: 0x00338973 File Offset: 0x00336B73
+		// Token: 0x0600A793 RID: 42899 RVA: 0x000F759D File Offset: 0x000F579D
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMovieSceneTrackEvaluationFieldEntry.StaticStruct();
 		}
 
-		// Token: 0x06022D97 RID: 142743 RVA: 0x0033897F File Offset: 0x00336B7F
+		// Token: 0x0600A794 RID: 42900 RVA: 0x000F75A9 File Offset: 0x000F57A9
 		[NullableContext(2)]
 		public FMovieSceneTrackEvaluationFieldEntry(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06022D98 RID: 142744 RVA: 0x00338989 File Offset: 0x00336B89
+		// Token: 0x0600A795 RID: 42901 RVA: 0x000F75B3 File Offset: 0x000F57B3
 		public FMovieSceneTrackEvaluationFieldEntry(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06022D99 RID: 142745 RVA: 0x00338994 File Offset: 0x00336B94
+		// Token: 0x0600A796 RID: 42902 RVA: 0x000F75BE File Offset: 0x000F57BE
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMovieSceneTrackEvaluationFieldEntry(Pointer, false, true);
 		}
 
-		// Token: 0x06022D9A RID: 142746 RVA: 0x0033899E File Offset: 0x00336B9E
+		// Token: 0x0600A797 RID: 42903 RVA: 0x000F75C8 File Offset: 0x000F57C8
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMovieSceneTrackEvaluationFieldEntry(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040129B5 RID: 76213
+		// Token: 0x040047C7 RID: 18375
 		public const string __ObjectPath = "/Script/MovieScene.MovieSceneTrackEvaluationFieldEntry";
 
-		// Token: 0x040129B6 RID: 76214
+		// Token: 0x040047C8 RID: 18376
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040129B7 RID: 76215
+		// Token: 0x040047C9 RID: 18377
 		internal static int __PropertyOffset_Section;
 
-		// Token: 0x040129B8 RID: 76216
+		// Token: 0x040047CA RID: 18378
 		internal static int __PropertyOffset_Range;
 
-		// Token: 0x040129B9 RID: 76217
+		// Token: 0x040047CB RID: 18379
 		[Nullable(2)]
 		private FFrameNumberRange _Range;
 
-		// Token: 0x040129BA RID: 76218
+		// Token: 0x040047CC RID: 18380
 		internal static int __PropertyOffset_ForcedTime;
 
-		// Token: 0x040129BB RID: 76219
+		// Token: 0x040047CD RID: 18381
 		[Nullable(2)]
 		private FFrameNumber _ForcedTime;
 
-		// Token: 0x040129BC RID: 76220
-		internal static int __PropertyOffset_Flags;
-
-		// Token: 0x040129BD RID: 76221
+		// Token: 0x040047CE RID: 18382
 		internal static int __PropertyOffset_LegacySortOrder;
 	}
 }

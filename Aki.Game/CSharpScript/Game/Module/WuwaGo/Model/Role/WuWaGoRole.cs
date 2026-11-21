@@ -9,25 +9,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 {
-	// Token: 0x02004741 RID: 18241
+	// Token: 0x02003672 RID: 13938
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class WuWaGoRole : WuWaGoBaseUnit
 	{
-		// Token: 0x0602FAB7 RID: 195255 RVA: 0x00B0C5F9 File Offset: 0x00B0A7F9
+		// Token: 0x06024281 RID: 148097 RVA: 0x00A3C5C5 File Offset: 0x00A3A7C5
 		protected WuWaGoRole(EWuWaGoRoleType type, Vector coordinate, Rotator rotator) : base(coordinate, rotator)
 		{
 		}
 
-		// Token: 0x0602FAB8 RID: 195256 RVA: 0x00B0C632 File Offset: 0x00B0A832
+		// Token: 0x06024282 RID: 148098 RVA: 0x00A3C5FE File Offset: 0x00A3A7FE
 		[NullableContext(2)]
 		protected override AActor GetActorRaw()
 		{
 			return this.ActorInner;
 		}
 
-		// Token: 0x1700771D RID: 30493
-		// (get) Token: 0x0602FAB9 RID: 195257 RVA: 0x00B0C63A File Offset: 0x00B0A83A
+		// Token: 0x170049D9 RID: 18905
+		// (get) Token: 0x06024283 RID: 148099 RVA: 0x00A3C606 File Offset: 0x00A3A806
 		[Nullable(2)]
 		public USkeletalMeshComponent Mesh
 		{
@@ -43,8 +43,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			}
 		}
 
-		// Token: 0x1700771E RID: 30494
-		// (get) Token: 0x0602FABA RID: 195258 RVA: 0x00B0C64D File Offset: 0x00B0A84D
+		// Token: 0x170049DA RID: 18906
+		// (get) Token: 0x06024284 RID: 148100 RVA: 0x00A3C619 File Offset: 0x00A3A819
 		[Nullable(2)]
 		public UCharacterMovementComponent CharacterMovement
 		{
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			}
 		}
 
-		// Token: 0x0602FABB RID: 195259 RVA: 0x00B0C660 File Offset: 0x00B0A860
+		// Token: 0x06024285 RID: 148101 RVA: 0x00A3C62C File Offset: 0x00A3A82C
 		[NullableContext(2)]
 		public UKuroAnimInstanceChar GetAnimInstance()
 		{
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			return obj as UKuroAnimInstanceChar;
 		}
 
-		// Token: 0x0602FABC RID: 195260 RVA: 0x00B0C685 File Offset: 0x00B0A885
+		// Token: 0x06024286 RID: 148102 RVA: 0x00A3C651 File Offset: 0x00A3A851
 		public void SetAnimRootMotionTranslationScale(float scale)
 		{
 			TsBaseCharacter actorInner = this.ActorInner;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			actorInner.SetAnimRootMotionTranslationScale(scale);
 		}
 
-		// Token: 0x0602FABD RID: 195261 RVA: 0x00B0C698 File Offset: 0x00B0A898
+		// Token: 0x06024287 RID: 148103 RVA: 0x00A3C664 File Offset: 0x00A3A864
 		public float GetCapsuleHalfHeight()
 		{
 			TsBaseCharacter actorInner = this.ActorInner;
@@ -101,14 +101,14 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			return ucapsuleComponent.GetScaledCapsuleHalfHeight();
 		}
 
-		// Token: 0x0602FABE RID: 195262 RVA: 0x00B0C6CF File Offset: 0x00B0A8CF
+		// Token: 0x06024288 RID: 148104 RVA: 0x00A3C69B File Offset: 0x00A3A89B
 		public bool GetActorEnableCollision()
 		{
 			TsBaseCharacter actorInner = this.ActorInner;
 			return actorInner != null && actorInner.GetActorEnableCollision();
 		}
 
-		// Token: 0x0602FABF RID: 195263 RVA: 0x00B0C6E2 File Offset: 0x00B0A8E2
+		// Token: 0x06024289 RID: 148105 RVA: 0x00A3C6AE File Offset: 0x00A3A8AE
 		public void SetActorEnableCollision(bool enable)
 		{
 			TsBaseCharacter actorInner = this.ActorInner;
@@ -119,30 +119,30 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			actorInner.SetActorEnableCollision(enable);
 		}
 
-		// Token: 0x0602FAC0 RID: 195264 RVA: 0x00B0C6F5 File Offset: 0x00B0A8F5
+		// Token: 0x0602428A RID: 148106 RVA: 0x00A3C6C1 File Offset: 0x00A3A8C1
 		public void RegisterAttackHitListener(Action listener)
 		{
 			WuWaGoFactory.RegisterAttackHitListener(this.ActorInner, listener);
 		}
 
-		// Token: 0x0602FAC1 RID: 195265 RVA: 0x00B0C703 File Offset: 0x00B0A903
+		// Token: 0x0602428B RID: 148107 RVA: 0x00A3C6CF File Offset: 0x00A3A8CF
 		public void UnregisterAttackHitListener()
 		{
 			WuWaGoFactory.UnregisterAttackHitListener(this.ActorInner);
 		}
 
-		// Token: 0x1700771F RID: 30495
-		// (get) Token: 0x0602FAC2 RID: 195266 RVA: 0x00B0C710 File Offset: 0x00B0A910
-		// (set) Token: 0x0602FAC3 RID: 195267 RVA: 0x00B0C718 File Offset: 0x00B0A918
+		// Token: 0x170049DB RID: 18907
+		// (get) Token: 0x0602428C RID: 148108 RVA: 0x00A3C6DC File Offset: 0x00A3A8DC
+		// (set) Token: 0x0602428D RID: 148109 RVA: 0x00A3C6E4 File Offset: 0x00A3A8E4
 		public int Hp { get; private set; } = 1;
 
-		// Token: 0x17007720 RID: 30496
-		// (get) Token: 0x0602FAC4 RID: 195268 RVA: 0x00B0C721 File Offset: 0x00B0A921
-		// (set) Token: 0x0602FAC5 RID: 195269 RVA: 0x00B0C729 File Offset: 0x00B0A929
+		// Token: 0x170049DC RID: 18908
+		// (get) Token: 0x0602428E RID: 148110 RVA: 0x00A3C6ED File Offset: 0x00A3A8ED
+		// (set) Token: 0x0602428F RID: 148111 RVA: 0x00A3C6F5 File Offset: 0x00A3A8F5
 		public bool IsClimbing { get; private set; }
 
-		// Token: 0x17007721 RID: 30497
-		// (get) Token: 0x0602FAC6 RID: 195270 RVA: 0x00B0C732 File Offset: 0x00B0A932
+		// Token: 0x170049DD RID: 18909
+		// (get) Token: 0x06024290 RID: 148112 RVA: 0x00A3C6FE File Offset: 0x00A3A8FE
 		public bool IsDead
 		{
 			get
@@ -151,8 +151,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			}
 		}
 
-		// Token: 0x17007722 RID: 30498
-		// (get) Token: 0x0602FAC7 RID: 195271 RVA: 0x00B0C73D File Offset: 0x00B0A93D
+		// Token: 0x170049DE RID: 18910
+		// (get) Token: 0x06024291 RID: 148113 RVA: 0x00A3C709 File Offset: 0x00A3A909
 		public bool IsMonster
 		{
 			get
@@ -161,12 +161,12 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			}
 		}
 
-		// Token: 0x17007723 RID: 30499
-		// (get) Token: 0x0602FAC8 RID: 195272 RVA: 0x00B0C748 File Offset: 0x00B0A948
-		// (set) Token: 0x0602FAC9 RID: 195273 RVA: 0x00B0C750 File Offset: 0x00B0A950
+		// Token: 0x170049DF RID: 18911
+		// (get) Token: 0x06024292 RID: 148114 RVA: 0x00A3C714 File Offset: 0x00A3A914
+		// (set) Token: 0x06024293 RID: 148115 RVA: 0x00A3C71C File Offset: 0x00A3A91C
 		public int StandGridId { get; private set; }
 
-		// Token: 0x0602FACA RID: 195274 RVA: 0x00B0C75C File Offset: 0x00B0A95C
+		// Token: 0x06024294 RID: 148116 RVA: 0x00A3C728 File Offset: 0x00A3A928
 		[NullableContext(0)]
 		public UniTask<bool> Create()
 		{
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			return <Create>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FACB RID: 195275 RVA: 0x00B0C7A0 File Offset: 0x00B0A9A0
+		// Token: 0x06024295 RID: 148117 RVA: 0x00A3C76C File Offset: 0x00A3A96C
 		public void Destroy()
 		{
 			this.ClearMaterialHandles();
@@ -199,13 +199,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			this.Hp = 1;
 		}
 
-		// Token: 0x0602FACC RID: 195276 RVA: 0x00B0C81E File Offset: 0x00B0AA1E
+		// Token: 0x06024296 RID: 148118 RVA: 0x00A3C7EA File Offset: 0x00A3A9EA
 		public void AddMaterialHandle(int handle)
 		{
 			this.MaterialHandlesInner.Add(handle);
 		}
 
-		// Token: 0x0602FACD RID: 195277 RVA: 0x00B0C82C File Offset: 0x00B0AA2C
+		// Token: 0x06024297 RID: 148119 RVA: 0x00A3C7F8 File Offset: 0x00A3A9F8
 		public void ClearMaterialHandles()
 		{
 			if (this.MaterialHandlesInner.Count == 0)
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			this.PetrifyMaterialHandles.Clear();
 		}
 
-		// Token: 0x0602FACE RID: 195278 RVA: 0x00B0C918 File Offset: 0x00B0AB18
+		// Token: 0x06024298 RID: 148120 RVA: 0x00A3C8E4 File Offset: 0x00A3AAE4
 		public UniTask ApplyPetrifyMaterial(BP_WuWaGo_C setting)
 		{
 			WuWaGoRole.<ApplyPetrifyMaterial>d__38 <ApplyPetrifyMaterial>d__;
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			return <ApplyPetrifyMaterial>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FACF RID: 195279 RVA: 0x00B0C964 File Offset: 0x00B0AB64
+		// Token: 0x06024299 RID: 148121 RVA: 0x00A3C930 File Offset: 0x00A3AB30
 		public UniTask PlayPetrifyDissolve()
 		{
 			WuWaGoRole.<PlayPetrifyDissolve>d__39 <PlayPetrifyDissolve>d__;
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			return <PlayPetrifyDissolve>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FAD0 RID: 195280 RVA: 0x00B0C9A8 File Offset: 0x00B0ABA8
+		// Token: 0x0602429A RID: 148122 RVA: 0x00A3C974 File Offset: 0x00A3AB74
 		private static UniTask DelayAsync(float ms)
 		{
 			WuWaGoRole.<DelayAsync>d__40 <DelayAsync>d__;
@@ -267,13 +267,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			return <DelayAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FAD1 RID: 195281 RVA: 0x00B0C9EB File Offset: 0x00B0ABEB
+		// Token: 0x0602429B RID: 148123 RVA: 0x00A3C9B7 File Offset: 0x00A3ABB7
 		public override IRollbackCapture CaptureRollback()
 		{
 			return new RoleRollbackCapture<WuWaGoRole>(this);
 		}
 
-		// Token: 0x0602FAD2 RID: 195282 RVA: 0x00B0C9F4 File Offset: 0x00B0ABF4
+		// Token: 0x0602429C RID: 148124 RVA: 0x00A3C9C0 File Offset: 0x00A3ABC0
 		[NullableContext(2)]
 		public void SetStandGrid(WuWaGoGrid grid, WuWaGoGrid prevGrid = null)
 		{
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			}
 		}
 
-		// Token: 0x0602FAD3 RID: 195283 RVA: 0x00B0CA8C File Offset: 0x00B0AC8C
+		// Token: 0x0602429D RID: 148125 RVA: 0x00A3CA58 File Offset: 0x00A3AC58
 		public void SetHp(int value)
 		{
 			int num = Math.Max(0, value);
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			this.Hp = num;
 		}
 
-		// Token: 0x0602FAD4 RID: 195284 RVA: 0x00B0CAB8 File Offset: 0x00B0ACB8
+		// Token: 0x0602429E RID: 148126 RVA: 0x00A3CA84 File Offset: 0x00A3AC84
 		public void SetIsClimbing(bool value)
 		{
 			if (this.IsClimbing == value)
@@ -322,19 +322,19 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			this.IsClimbing = value;
 		}
 
-		// Token: 0x0602FAD5 RID: 195285 RVA: 0x00B0CAD1 File Offset: 0x00B0ACD1
+		// Token: 0x0602429F RID: 148127 RVA: 0x00A3CA9D File Offset: 0x00A3AC9D
 		public void AddStandGridChangedListener(WuWaGoRoleStandGridChangedListener listener)
 		{
 			this.StandGridChangedListeners.Add(listener);
 		}
 
-		// Token: 0x0602FAD6 RID: 195286 RVA: 0x00B0CAE0 File Offset: 0x00B0ACE0
+		// Token: 0x060242A0 RID: 148128 RVA: 0x00A3CAAC File Offset: 0x00A3ACAC
 		public void RemoveStandGridChangedListener(WuWaGoRoleStandGridChangedListener listener)
 		{
 			this.StandGridChangedListeners.Remove(listener);
 		}
 
-		// Token: 0x0602FAD7 RID: 195287 RVA: 0x00B0CAF0 File Offset: 0x00B0ACF0
+		// Token: 0x060242A1 RID: 148129 RVA: 0x00A3CABC File Offset: 0x00A3ACBC
 		[NullableContext(2)]
 		private void NotifyStandGridChanged(WuWaGoGrid prevGrid, WuWaGoGrid currentGrid)
 		{
@@ -344,20 +344,20 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			}
 		}
 
-		// Token: 0x04019BD6 RID: 105430
+		// Token: 0x04014286 RID: 82566
 		private readonly HashSet<WuWaGoRoleStandGridChangedListener> StandGridChangedListeners = new HashSet<WuWaGoRoleStandGridChangedListener>();
 
-		// Token: 0x04019BD7 RID: 105431
+		// Token: 0x04014287 RID: 82567
 		private readonly List<int> MaterialHandlesInner = new List<int>();
 
-		// Token: 0x04019BD8 RID: 105432
+		// Token: 0x04014288 RID: 82568
 		private readonly Dictionary<int, double> PetrifyMaterialHandles = new Dictionary<int, double>();
 
-		// Token: 0x04019BD9 RID: 105433
+		// Token: 0x04014289 RID: 82569
 		[Nullable(2)]
 		protected TsBaseCharacter ActorInner;
 
-		// Token: 0x04019BDD RID: 105437
+		// Token: 0x0401428D RID: 82573
 		public readonly EWuWaGoRoleType Type = type;
 	}
 }

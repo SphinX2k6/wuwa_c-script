@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x02005169 RID: 20841
+	// Token: 0x02004139 RID: 16697
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 	})]
 	public class PhantomBattleTaskItem : GridProxyAbstract<PhantomArenaTaskData>
 	{
-		// Token: 0x06035485 RID: 218245 RVA: 0x00C9E060 File Offset: 0x00C9C260
+		// Token: 0x0602A381 RID: 172929 RVA: 0x00BEB5AC File Offset: 0x00BE97AC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,25 +38,25 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x06035486 RID: 218246 RVA: 0x00C9E14D File Offset: 0x00C9C34D
+		// Token: 0x0602A382 RID: 172930 RVA: 0x00BEB699 File Offset: 0x00BE9899
 		protected override void OnStart()
 		{
 			this.RewardScrollView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(5), new Func<CommonItemSmallItemGrid>(this.CreatePropItem), null, false, null);
 		}
 
-		// Token: 0x06035487 RID: 218247 RVA: 0x00C9E170 File Offset: 0x00C9C370
+		// Token: 0x0602A383 RID: 172931 RVA: 0x00BEB6BC File Offset: 0x00BE98BC
 		private CommonItemSmallItemGrid CreatePropItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x06035488 RID: 218248 RVA: 0x00C9E177 File Offset: 0x00C9C377
+		// Token: 0x0602A384 RID: 172932 RVA: 0x00BEB6C3 File Offset: 0x00BE98C3
 		private void OnClickGetButton()
 		{
 			PhantomArenaController.Instance.TaskAllRewardRequest(this.Data.TaskConfig.Id);
 		}
 
-		// Token: 0x06035489 RID: 218249 RVA: 0x00C9E193 File Offset: 0x00C9C393
+		// Token: 0x0602A385 RID: 172933 RVA: 0x00BEB6DF File Offset: 0x00BE98DF
 		private void OnClickJumpButton()
 		{
 			if (this.Data == null || this.JumpId == 0)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			SkipTaskManager.RunByConfigId(this.JumpId, null);
 		}
 
-		// Token: 0x0603548A RID: 218250 RVA: 0x00C9E1B4 File Offset: 0x00C9C3B4
+		// Token: 0x0602A386 RID: 172934 RVA: 0x00BEB700 File Offset: 0x00BE9900
 		public override void Refresh(PhantomArenaTaskData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			text2.SetUIActive(status == ActivityTaskState.ActivityTaskRunning);
 		}
 
-		// Token: 0x0401C577 RID: 116087
+		// Token: 0x04016FAC RID: 94124
 		[Nullable(new byte[]
 		{
 			2,
@@ -126,36 +126,36 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-		// Token: 0x0401C578 RID: 116088
+		// Token: 0x04016FAD RID: 94125
 		[Nullable(2)]
 		private PhantomArenaTaskData Data;
 
-		// Token: 0x0401C579 RID: 116089
+		// Token: 0x04016FAE RID: 94126
 		private int JumpId;
 
-		// Token: 0x0200B2CB RID: 45771
+		// Token: 0x02009D05 RID: 40197
 		[NullableContext(0)]
 		private class EItemComponents
 		{
-			// Token: 0x040362BD RID: 221885
+			// Token: 0x04030D14 RID: 199956
 			public const int JumpBtn = 0;
 
-			// Token: 0x040362BE RID: 221886
+			// Token: 0x04030D15 RID: 199957
 			public const int GetBtn = 1;
 
-			// Token: 0x040362BF RID: 221887
+			// Token: 0x04030D16 RID: 199958
 			public const int PanelDone = 2;
 
-			// Token: 0x040362C0 RID: 221888
+			// Token: 0x04030D17 RID: 199959
 			public const int TxtName = 3;
 
-			// Token: 0x040362C1 RID: 221889
+			// Token: 0x04030D18 RID: 199960
 			public const int ProgressText = 4;
 
-			// Token: 0x040362C2 RID: 221890
+			// Token: 0x04030D19 RID: 199961
 			public const int RewardScroll = 5;
 
-			// Token: 0x040362C3 RID: 221891
+			// Token: 0x04030D1A RID: 199962
 			public const int DoingText = 6;
 		}
 	}

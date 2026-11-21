@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061D7 RID: 25047
+	// Token: 0x02005155 RID: 20821
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoadBookSubViewButton : UiPanelBase
 	{
-		// Token: 0x0603F3FD RID: 259069 RVA: 0x00F48836 File Offset: 0x00F46A36
+		// Token: 0x060340BE RID: 213182 RVA: 0x00E8F78E File Offset: 0x00E8D98E
 		public RoadBookSubViewButton(ERoadBookSubType type)
 		{
 			this.Type = type;
 		}
 
-		// Token: 0x0603F3FE RID: 259070 RVA: 0x00F48848 File Offset: 0x00F46A48
+		// Token: 0x060340BF RID: 213183 RVA: 0x00E8F7A0 File Offset: 0x00E8D9A0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,25 +33,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F3FF RID: 259071 RVA: 0x00F488DB File Offset: 0x00F46ADB
+		// Token: 0x060340C0 RID: 213184 RVA: 0x00E8F833 File Offset: 0x00E8DA33
 		public void SetProgressText(string text)
 		{
 			base.GetText(1).SetText(text, true);
 		}
 
-		// Token: 0x0603F400 RID: 259072 RVA: 0x00F488EB File Offset: 0x00F46AEB
+		// Token: 0x060340C1 RID: 213185 RVA: 0x00E8F843 File Offset: 0x00E8DA43
 		public void RefreshRedDot(bool bVisible)
 		{
 			base.GetItem(2).SetUIActive(bVisible);
 		}
 
-		// Token: 0x0603F401 RID: 259073 RVA: 0x00F488FA File Offset: 0x00F46AFA
+		// Token: 0x060340C2 RID: 213186 RVA: 0x00E8F852 File Offset: 0x00E8DA52
 		public void SetFunction(Action<ERoadBookSubType> func)
 		{
 			this.ClickedFunc = func;
 		}
 
-		// Token: 0x0603F402 RID: 259074 RVA: 0x00F48903 File Offset: 0x00F46B03
+		// Token: 0x060340C3 RID: 213187 RVA: 0x00E8F85B File Offset: 0x00E8DA5B
 		private void OnClickedButton()
 		{
 			Action<ERoadBookSubType> clickedFunc = this.ClickedFunc;
@@ -62,11 +62,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			clickedFunc(this.Type);
 		}
 
-		// Token: 0x04020F9A RID: 135066
+		// Token: 0x0401B8C9 RID: 112841
 		[Nullable(2)]
 		private Action<ERoadBookSubType> ClickedFunc;
 
-		// Token: 0x04020F9B RID: 135067
+		// Token: 0x0401B8CA RID: 112842
 		protected ERoadBookSubType Type;
 	}
 }

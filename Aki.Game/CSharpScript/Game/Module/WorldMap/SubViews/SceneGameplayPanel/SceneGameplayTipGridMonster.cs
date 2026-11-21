@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.SceneGameplayPanel
 {
-	// Token: 0x020047F3 RID: 18419
+	// Token: 0x02003724 RID: 14116
 	public class SceneGameplayTipGridMonster : SceneGameplayTipGrid
 	{
-		// Token: 0x060303EC RID: 197612 RVA: 0x00B302F8 File Offset: 0x00B2E4F8
+		// Token: 0x06024BBC RID: 150460 RVA: 0x00A60298 File Offset: 0x00A5E498
 		[NullableContext(1)]
 		protected override void OnRefreshItemGrid(CommonItemSmallItemGrid grid, int itemId, int itemCount, bool showGet = false)
 		{

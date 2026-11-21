@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003AB5 RID: 15029
+	// Token: 0x02003EB7 RID: 16055
 	public class IPosAndRotT
 	{
-		// Token: 0x17006717 RID: 26391
-		// (get) Token: 0x060146E8 RID: 83688 RVA: 0x002FA6EA File Offset: 0x002F88EA
-		// (set) Token: 0x060146E9 RID: 83689 RVA: 0x002FA6F2 File Offset: 0x002F88F2
+		// Token: 0x17006CB2 RID: 27826
+		// (get) Token: 0x06015B92 RID: 88978 RVA: 0x0032097A File Offset: 0x0031EB7A
+		// (set) Token: 0x06015B93 RID: 88979 RVA: 0x00320982 File Offset: 0x0031EB82
 		public float X { get; set; }
 
-		// Token: 0x17006718 RID: 26392
-		// (get) Token: 0x060146EA RID: 83690 RVA: 0x002FA6FB File Offset: 0x002F88FB
-		// (set) Token: 0x060146EB RID: 83691 RVA: 0x002FA703 File Offset: 0x002F8903
+		// Token: 0x17006CB3 RID: 27827
+		// (get) Token: 0x06015B94 RID: 88980 RVA: 0x0032098B File Offset: 0x0031EB8B
+		// (set) Token: 0x06015B95 RID: 88981 RVA: 0x00320993 File Offset: 0x0031EB93
 		public float Y { get; set; }
 
-		// Token: 0x17006719 RID: 26393
-		// (get) Token: 0x060146EC RID: 83692 RVA: 0x002FA70C File Offset: 0x002F890C
-		// (set) Token: 0x060146ED RID: 83693 RVA: 0x002FA714 File Offset: 0x002F8914
+		// Token: 0x17006CB4 RID: 27828
+		// (get) Token: 0x06015B96 RID: 88982 RVA: 0x0032099C File Offset: 0x0031EB9C
+		// (set) Token: 0x06015B97 RID: 88983 RVA: 0x003209A4 File Offset: 0x0031EBA4
 		public float Z { get; set; }
 
-		// Token: 0x1700671A RID: 26394
-		// (get) Token: 0x060146EE RID: 83694 RVA: 0x002FA71D File Offset: 0x002F891D
-		// (set) Token: 0x060146EF RID: 83695 RVA: 0x002FA725 File Offset: 0x002F8925
+		// Token: 0x17006CB5 RID: 27829
+		// (get) Token: 0x06015B98 RID: 88984 RVA: 0x003209AD File Offset: 0x0031EBAD
+		// (set) Token: 0x06015B99 RID: 88985 RVA: 0x003209B5 File Offset: 0x0031EBB5
 		public float A { get; set; }
 
-		// Token: 0x1700671B RID: 26395
-		// (get) Token: 0x060146F0 RID: 83696 RVA: 0x002FA72E File Offset: 0x002F892E
-		// (set) Token: 0x060146F1 RID: 83697 RVA: 0x002FA736 File Offset: 0x002F8936
+		// Token: 0x17006CB6 RID: 27830
+		// (get) Token: 0x06015B9A RID: 88986 RVA: 0x003209BE File Offset: 0x0031EBBE
+		// (set) Token: 0x06015B9B RID: 88987 RVA: 0x003209C6 File Offset: 0x0031EBC6
 		public float Roll { get; set; }
 
-		// Token: 0x1700671C RID: 26396
-		// (get) Token: 0x060146F2 RID: 83698 RVA: 0x002FA73F File Offset: 0x002F893F
-		// (set) Token: 0x060146F3 RID: 83699 RVA: 0x002FA747 File Offset: 0x002F8947
+		// Token: 0x17006CB7 RID: 27831
+		// (get) Token: 0x06015B9C RID: 88988 RVA: 0x003209CF File Offset: 0x0031EBCF
+		// (set) Token: 0x06015B9D RID: 88989 RVA: 0x003209D7 File Offset: 0x0031EBD7
 		public float Pitch { get; set; }
 
-		// Token: 0x1700671D RID: 26397
-		// (get) Token: 0x060146F4 RID: 83700 RVA: 0x002FA750 File Offset: 0x002F8950
-		// (set) Token: 0x060146F5 RID: 83701 RVA: 0x002FA758 File Offset: 0x002F8958
+		// Token: 0x17006CB8 RID: 27832
+		// (get) Token: 0x06015B9E RID: 88990 RVA: 0x003209E0 File Offset: 0x0031EBE0
+		// (set) Token: 0x06015B9F RID: 88991 RVA: 0x003209E8 File Offset: 0x0031EBE8
 		public byte NullMask { get; set; }
 
-		// Token: 0x060146F6 RID: 83702 RVA: 0x002FA764 File Offset: 0x002F8964
+		// Token: 0x06015BA0 RID: 88992 RVA: 0x003209F4 File Offset: 0x0031EBF4
 		public IPosAndRotT()
 		{
 			this.X = 0f;

@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x020043A4 RID: 17316
+	// Token: 0x020033C2 RID: 13250
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/ECameraGravityLerpMode.ECameraGravityLerpMode")]
 	public enum ECameraGravityLerpMode : byte
 	{
-		// Token: 0x04017AD8 RID: 96984
+		// Token: 0x0401264A RID: 75338
 		None,
-		// Token: 0x04017AD9 RID: 96985
+		// Token: 0x0401264B RID: 75339
 		Time,
-		// Token: 0x04017ADA RID: 96986
+		// Token: 0x0401264C RID: 75340
 		AngleVelocity,
-		// Token: 0x04017ADB RID: 96987
+		// Token: 0x0401264D RID: 75341
 		ECameraGravityLerpMode_MAX
 	}
 }

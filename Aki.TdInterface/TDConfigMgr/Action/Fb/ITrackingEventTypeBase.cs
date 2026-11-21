@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AF0 RID: 10992
+	// Token: 0x02002DE4 RID: 11748
 	public class ITrackingEventTypeBase
 	{
-		// Token: 0x0600F0DB RID: 61659 RVA: 0x0022F44C File Offset: 0x0022D64C
-		[NullableContext(1)]
+		// Token: 0x0600FF91 RID: 65425 RVA: 0x0024D158 File Offset: 0x0024B358
 		public static ITrackingEventTypeBase Create(ITrackingEventTypeBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CBD RID: 19645
-		// (get) Token: 0x0600F0DC RID: 61660 RVA: 0x0022F46B File Offset: 0x0022D66B
+		// Token: 0x17005077 RID: 20599
+		// (get) Token: 0x0600FF92 RID: 65426 RVA: 0x0024D177 File Offset: 0x0024B377
 		public virtual ETrackingEventType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008480 RID: 33920
+		// Token: 0x04008B84 RID: 35716
 		private ITrackingEventTypeBase Instance;
 	}
 }

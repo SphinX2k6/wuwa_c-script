@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A37 RID: 2615
+	// Token: 0x02000AFC RID: 2812
 	public class EThrowMotionJsonConverter : JsonConverter<EThrowMotion>
 	{
-		// Token: 0x060039AA RID: 14762 RVA: 0x00094DD8 File Offset: 0x00092FD8
+		// Token: 0x06003D82 RID: 15746 RVA: 0x0009D70C File Offset: 0x0009B90C
 		public override EThrowMotion Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EThrowMotionExtensions.FromString(@string);
 		}
 
-		// Token: 0x060039AB RID: 14763 RVA: 0x00094DFC File Offset: 0x00092FFC
+		// Token: 0x06003D83 RID: 15747 RVA: 0x0009D730 File Offset: 0x0009B930
 		public override void Write(Utf8JsonWriter writer, EThrowMotion value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

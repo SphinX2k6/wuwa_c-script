@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B06 RID: 27398
+	// Token: 0x0200723D RID: 29245
 	public struct IMoraleAreaTip : IFlatbufferObject
 	{
-		// Token: 0x1700CB69 RID: 52073
-		// (get) Token: 0x060300CE RID: 196814 RVA: 0x0068858C File Offset: 0x0068678C
+		// Token: 0x1700D638 RID: 54840
+		// (get) Token: 0x06032EA2 RID: 208546 RVA: 0x006DFC44 File Offset: 0x006DDE44
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060300CF RID: 196815 RVA: 0x00688599 File Offset: 0x00686799
+		// Token: 0x06032EA3 RID: 208547 RVA: 0x006DFC51 File Offset: 0x006DDE51
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060300D0 RID: 196816 RVA: 0x006885A0 File Offset: 0x006867A0
+		// Token: 0x06032EA4 RID: 208548 RVA: 0x006DFC58 File Offset: 0x006DDE58
 		public static IMoraleAreaTip GetRootAsIMoraleAreaTip(ByteBuffer _bb)
 		{
 			return IMoraleAreaTip.GetRootAsIMoraleAreaTip(_bb, default(IMoraleAreaTip));
 		}
 
-		// Token: 0x060300D1 RID: 196817 RVA: 0x006885BC File Offset: 0x006867BC
+		// Token: 0x06032EA5 RID: 208549 RVA: 0x006DFC74 File Offset: 0x006DDE74
 		public static IMoraleAreaTip GetRootAsIMoraleAreaTip(ByteBuffer _bb, IMoraleAreaTip obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060300D2 RID: 196818 RVA: 0x006885D9 File Offset: 0x006867D9
+		// Token: 0x06032EA6 RID: 208550 RVA: 0x006DFC91 File Offset: 0x006DDE91
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060300D3 RID: 196819 RVA: 0x006885E8 File Offset: 0x006867E8
+		// Token: 0x06032EA7 RID: 208551 RVA: 0x006DFCA0 File Offset: 0x006DDEA0
 		public IMoraleAreaTip __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CB6A RID: 52074
-		// (get) Token: 0x060300D4 RID: 196820 RVA: 0x006885F8 File Offset: 0x006867F8
+		// Token: 0x1700D639 RID: 54841
+		// (get) Token: 0x06032EA8 RID: 208552 RVA: 0x006DFCB0 File Offset: 0x006DDEB0
 		public ECommonTipType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB6B RID: 52075
-		// (get) Token: 0x060300D5 RID: 196821 RVA: 0x00688634 File Offset: 0x00686834
+		// Token: 0x1700D63A RID: 54842
+		// (get) Token: 0x06032EA9 RID: 208553 RVA: 0x006DFCEC File Offset: 0x006DDEEC
 		public string TidAreaNameText
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060300D6 RID: 196822 RVA: 0x0068866B File Offset: 0x0068686B
+		// Token: 0x06032EAA RID: 208554 RVA: 0x006DFD23 File Offset: 0x006DDF23
 		public Span<byte> GetTidAreaNameTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060300D7 RID: 196823 RVA: 0x0068867A File Offset: 0x0068687A
+		// Token: 0x06032EAB RID: 208555 RVA: 0x006DFD32 File Offset: 0x006DDF32
 		public byte[] GetTidAreaNameTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700CB6C RID: 52076
-		// (get) Token: 0x060300D8 RID: 196824 RVA: 0x00688688 File Offset: 0x00686888
+		// Token: 0x1700D63B RID: 54843
+		// (get) Token: 0x06032EAC RID: 208556 RVA: 0x006DFD40 File Offset: 0x006DDF40
 		public string TidRecommendText
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060300D9 RID: 196825 RVA: 0x006886BF File Offset: 0x006868BF
+		// Token: 0x06032EAD RID: 208557 RVA: 0x006DFD77 File Offset: 0x006DDF77
 		public Span<byte> GetTidRecommendTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060300DA RID: 196826 RVA: 0x006886CE File Offset: 0x006868CE
+		// Token: 0x06032EAE RID: 208558 RVA: 0x006DFD86 File Offset: 0x006DDF86
 		public byte[] GetTidRecommendTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700CB6D RID: 52077
-		// (get) Token: 0x060300DB RID: 196827 RVA: 0x006886DC File Offset: 0x006868DC
+		// Token: 0x1700D63C RID: 54844
+		// (get) Token: 0x06032EAF RID: 208559 RVA: 0x006DFD94 File Offset: 0x006DDF94
 		public EMoraleAreaType AreaType
 		{
 			get
@@ -131,8 +131,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB6E RID: 52078
-		// (get) Token: 0x060300DC RID: 196828 RVA: 0x0068871C File Offset: 0x0068691C
+		// Token: 0x1700D63D RID: 54845
+		// (get) Token: 0x06032EB0 RID: 208560 RVA: 0x006DFDD4 File Offset: 0x006DDFD4
 		public EMoraleUiType UiType
 		{
 			get
@@ -146,8 +146,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB6F RID: 52079
-		// (get) Token: 0x060300DD RID: 196829 RVA: 0x0068875C File Offset: 0x0068695C
+		// Token: 0x1700D63E RID: 54846
+		// (get) Token: 0x06032EB1 RID: 208561 RVA: 0x006DFE14 File Offset: 0x006DE014
 		public byte NullMask
 		{
 			get
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060300DE RID: 196830 RVA: 0x00688799 File Offset: 0x00686999
+		// Token: 0x06032EB2 RID: 208562 RVA: 0x006DFE51 File Offset: 0x006DE051
 		public static Offset<IMoraleAreaTip> CreateIMoraleAreaTip(FlatBufferBuilder builder, ECommonTipType Type = ECommonTipType.ChallengeCondition, StringOffset TidAreaNameTextOffset = default(StringOffset), StringOffset TidRecommendTextOffset = default(StringOffset), EMoraleAreaType AreaType = EMoraleAreaType.MoraleArea1, EMoraleUiType UiType = EMoraleUiType.MoraleUi24, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -174,55 +174,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMoraleAreaTip.EndIMoraleAreaTip(builder);
 		}
 
-		// Token: 0x060300DF RID: 196831 RVA: 0x006887D5 File Offset: 0x006869D5
+		// Token: 0x06032EB3 RID: 208563 RVA: 0x006DFE8D File Offset: 0x006DE08D
 		public static void StartIMoraleAreaTip(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x060300E0 RID: 196832 RVA: 0x006887DE File Offset: 0x006869DE
+		// Token: 0x06032EB4 RID: 208564 RVA: 0x006DFE96 File Offset: 0x006DE096
 		public static void AddType(FlatBufferBuilder builder, ECommonTipType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060300E1 RID: 196833 RVA: 0x006887E9 File Offset: 0x006869E9
+		// Token: 0x06032EB5 RID: 208565 RVA: 0x006DFEA1 File Offset: 0x006DE0A1
 		public static void AddTidAreaNameText(FlatBufferBuilder builder, StringOffset tidAreaNameTextOffset)
 		{
 			builder.AddOffset(1, tidAreaNameTextOffset.Value, 0);
 		}
 
-		// Token: 0x060300E2 RID: 196834 RVA: 0x006887F9 File Offset: 0x006869F9
+		// Token: 0x06032EB6 RID: 208566 RVA: 0x006DFEB1 File Offset: 0x006DE0B1
 		public static void AddTidRecommendText(FlatBufferBuilder builder, StringOffset tidRecommendTextOffset)
 		{
 			builder.AddOffset(2, tidRecommendTextOffset.Value, 0);
 		}
 
-		// Token: 0x060300E3 RID: 196835 RVA: 0x00688809 File Offset: 0x00686A09
+		// Token: 0x06032EB7 RID: 208567 RVA: 0x006DFEC1 File Offset: 0x006DE0C1
 		public static void AddAreaType(FlatBufferBuilder builder, EMoraleAreaType areaType)
 		{
 			builder.AddByte(3, (byte)areaType, 0);
 		}
 
-		// Token: 0x060300E4 RID: 196836 RVA: 0x00688814 File Offset: 0x00686A14
+		// Token: 0x06032EB8 RID: 208568 RVA: 0x006DFECC File Offset: 0x006DE0CC
 		public static void AddUiType(FlatBufferBuilder builder, EMoraleUiType uiType)
 		{
 			builder.AddByte(4, (byte)uiType, 0);
 		}
 
-		// Token: 0x060300E5 RID: 196837 RVA: 0x0068881F File Offset: 0x00686A1F
+		// Token: 0x06032EB9 RID: 208569 RVA: 0x006DFED7 File Offset: 0x006DE0D7
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x060300E6 RID: 196838 RVA: 0x0068882A File Offset: 0x00686A2A
+		// Token: 0x06032EBA RID: 208570 RVA: 0x006DFEE2 File Offset: 0x006DE0E2
 		public static Offset<IMoraleAreaTip> EndIMoraleAreaTip(FlatBufferBuilder builder)
 		{
 			return new Offset<IMoraleAreaTip>(builder.EndTable());
 		}
 
-		// Token: 0x060300E7 RID: 196839 RVA: 0x00688838 File Offset: 0x00686A38
+		// Token: 0x06032EBB RID: 208571 RVA: 0x006DFEF0 File Offset: 0x006DE0F0
 		public IMoraleAreaTipT UnPack()
 		{
 			IMoraleAreaTipT moraleAreaTipT = new IMoraleAreaTipT();
@@ -230,7 +230,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return moraleAreaTipT;
 		}
 
-		// Token: 0x060300E8 RID: 196840 RVA: 0x00688854 File Offset: 0x00686A54
+		// Token: 0x06032EBC RID: 208572 RVA: 0x006DFF0C File Offset: 0x006DE10C
 		public void UnPackTo(IMoraleAreaTipT _o)
 		{
 			_o.Type = this.Type;
@@ -241,7 +241,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060300E9 RID: 196841 RVA: 0x006888AC File Offset: 0x00686AAC
+		// Token: 0x06032EBD RID: 208573 RVA: 0x006DFF64 File Offset: 0x006DE164
 		public static Offset<IMoraleAreaTip> Pack(FlatBufferBuilder builder, IMoraleAreaTipT _o)
 		{
 			if (_o == null)
@@ -253,7 +253,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMoraleAreaTip.CreateIMoraleAreaTip(builder, _o.Type, tidAreaNameTextOffset, tidRecommendTextOffset, _o.AreaType, _o.UiType, _o.NullMask);
 		}
 
-		// Token: 0x04011377 RID: 70519
+		// Token: 0x0401228A RID: 74378
 		private Table __p;
 	}
 }

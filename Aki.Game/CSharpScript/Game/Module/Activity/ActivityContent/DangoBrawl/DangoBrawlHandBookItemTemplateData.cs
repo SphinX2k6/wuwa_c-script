@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006805 RID: 26629
+	// Token: 0x02005755 RID: 22357
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlHandBookItemTemplateData : IMultiTemplateGridData<DangoBrawlHandBookItemData, DangoBrawlHandBookItem>, IMultiTemplateGridData
 	{
-		// Token: 0x1700972F RID: 38703
-		// (get) Token: 0x060426A3 RID: 272035 RVA: 0x01021063 File Offset: 0x0101F263
-		// (set) Token: 0x060426A4 RID: 272036 RVA: 0x0102106B File Offset: 0x0101F26B
+		// Token: 0x17006A70 RID: 27248
+		// (get) Token: 0x060371F8 RID: 225784 RVA: 0x00F625A7 File Offset: 0x00F607A7
+		// (set) Token: 0x060371F9 RID: 225785 RVA: 0x00F625AF File Offset: 0x00F607AF
 		public DangoBrawlHandBookItemData Data { get; set; }
 
-		// Token: 0x17009730 RID: 38704
-		// (get) Token: 0x060426A5 RID: 272037 RVA: 0x01021074 File Offset: 0x0101F274
+		// Token: 0x17006A71 RID: 27249
+		// (get) Token: 0x060371FA RID: 225786 RVA: 0x00F625B8 File Offset: 0x00F607B8
 		object IMultiTemplateGridData.Data
 		{
 			get
@@ -23,13 +23,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060426A6 RID: 272038 RVA: 0x0102107C File Offset: 0x0101F27C
+		// Token: 0x060371FB RID: 225787 RVA: 0x00F625C0 File Offset: 0x00F607C0
 		public int GetTemplateIndex()
 		{
 			return 1;
 		}
 
-		// Token: 0x060426A7 RID: 272039 RVA: 0x01021080 File Offset: 0x0101F280
+		// Token: 0x060371FC RID: 225788 RVA: 0x00F625C4 File Offset: 0x00F607C4
 		public DangoBrawlHandBookItem CreateProxy()
 		{
 			DangoBrawlHandBookItem proxy = new DangoBrawlHandBookItem();
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return proxy;
 		}
 
-		// Token: 0x060426A8 RID: 272040 RVA: 0x0102110D File Offset: 0x0101F30D
+		// Token: 0x060371FD RID: 225789 RVA: 0x00F62651 File Offset: 0x00F60851
 		ISyncGridProxy IMultiTemplateGridData.CreateProxy()
 		{
 			return this.CreateProxy();
 		}
 
-		// Token: 0x040229DB RID: 141787
+		// Token: 0x0401D238 RID: 119352
 		[Nullable(new byte[]
 		{
 			2,
@@ -75,15 +75,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		public Action<DangoBrawlHandBookItemData, int> OnClickCb;
 
-		// Token: 0x040229DC RID: 141788
+		// Token: 0x0401D239 RID: 119353
 		[Nullable(2)]
 		public Action<int> OnUnlockAnimPlayed;
 
-		// Token: 0x040229DD RID: 141789
+		// Token: 0x0401D23A RID: 119354
 		[Nullable(2)]
 		public Func<int, bool> IsSelected;
 
-		// Token: 0x040229DE RID: 141790
+		// Token: 0x0401D23B RID: 119355
 		private const int ItemTemplateIndex = 1;
 	}
 }

@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001891 RID: 6289
+	// Token: 0x02001A1C RID: 6684
 	public class ICheckFlowLookAt_SetValue
 	{
-		// Token: 0x04005513 RID: 21779
+		// Token: 0x04005960 RID: 22880
 		public EOverrideLookAtType Type;
 
-		// Token: 0x04005514 RID: 21780
-		[Nullable(1)]
+		// Token: 0x04005961 RID: 22881
 		public List<ICheckFlowLookAtConfig> CheckFlowLookAtConfigs;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 {
-	// Token: 0x02005778 RID: 22392
+	// Token: 0x0200474F RID: 18255
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoCardInfoItem : UiPanelBase
 	{
-		// Token: 0x06038E28 RID: 233000 RVA: 0x00D845D4 File Offset: 0x00D827D4
+		// Token: 0x0602DD38 RID: 187704 RVA: 0x00CD31F8 File Offset: 0x00CD13F8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 31;
@@ -100,7 +99,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038E29 RID: 233001 RVA: 0x00D84A74 File Offset: 0x00D82C74
+		// Token: 0x0602DD39 RID: 187705 RVA: 0x00CD3698 File Offset: 0x00CD1898
 		protected override void OnStart()
 		{
 			this.CreateAttrMultiScrollView();
@@ -119,7 +118,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			extendToggle.OnPointExitCallBack.Bind(new Action<EToggleState>(this.OnPreviewHoverExit));
 		}
 
-		// Token: 0x06038E2A RID: 233002 RVA: 0x00D84AD9 File Offset: 0x00D82CD9
+		// Token: 0x0602DD3A RID: 187706 RVA: 0x00CD36FD File Offset: 0x00CD18FD
 		protected override void OnBeforeDestroy()
 		{
 			Action<bool, IReadOnlyList<IKurotatoAttrPreviewDelta>> attrPreviewCb = this.AttrPreviewCb;
@@ -130,7 +129,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			attrPreviewCb(false, new List<IKurotatoAttrPreviewDelta>());
 		}
 
-		// Token: 0x06038E2B RID: 233003 RVA: 0x00D84AF4 File Offset: 0x00D82CF4
+		// Token: 0x0602DD3B RID: 187707 RVA: 0x00CD3718 File Offset: 0x00CD1918
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoCardInfoItem.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -141,7 +140,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038E2C RID: 233004 RVA: 0x00D84B38 File Offset: 0x00D82D38
+		// Token: 0x0602DD3C RID: 187708 RVA: 0x00CD375C File Offset: 0x00CD195C
 		private void RegisterTextPropTermExplanation()
 		{
 			TermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -153,7 +152,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 		}
 
-		// Token: 0x06038E2D RID: 233005 RVA: 0x00D84B74 File Offset: 0x00D82D74
+		// Token: 0x0602DD3D RID: 187709 RVA: 0x00CD3798 File Offset: 0x00CD1998
 		private UniTask CreateBuildTagItem()
 		{
 			KurotatoCardInfoItem.<CreateBuildTagItem>d__16 <CreateBuildTagItem>d__;
@@ -164,20 +163,20 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			return <CreateBuildTagItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038E2E RID: 233006 RVA: 0x00D84BB7 File Offset: 0x00D82DB7
+		// Token: 0x0602DD3E RID: 187710 RVA: 0x00CD37DB File Offset: 0x00CD19DB
 		private void CreateAttrMultiScrollView()
 		{
 			this.AttrMultiScrollView = new MultiTemplateScrollView(base.GetMultiTemplateScrollViewComponent(4));
 		}
 
-		// Token: 0x06038E2F RID: 233007 RVA: 0x00D84BCC File Offset: 0x00D82DCC
+		// Token: 0x0602DD3F RID: 187711 RVA: 0x00CD37F0 File Offset: 0x00CD19F0
 		private void CreateBuildInfoPanel()
 		{
 			this.BuildLeftInfoLayout = new GenericLayout<KurotatoPopupWeaponBuildItem, IKurotatoWeaponBuildInfoPanel>(base.GetVerticalLayout(13), () => new KurotatoPopupWeaponBuildItem(), null, false, true);
 			this.BuildRightInfoLayout = new GenericLayout<KurotatoPopupWeaponBuildItem, IKurotatoWeaponBuildInfoPanel>(base.GetVerticalLayout(14), () => new KurotatoPopupWeaponBuildItem(), null, false, true);
 		}
 
-		// Token: 0x06038E30 RID: 233008 RVA: 0x00D84C43 File Offset: 0x00D82E43
+		// Token: 0x0602DD40 RID: 187712 RVA: 0x00CD3867 File Offset: 0x00CD1A67
 		public void Refresh(IKurotatoCardItemData data)
 		{
 			this.Data = data;
@@ -189,25 +188,25 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			this.RefreshItemInfo();
 		}
 
-		// Token: 0x06038E31 RID: 233009 RVA: 0x00D84C61 File Offset: 0x00D82E61
+		// Token: 0x0602DD41 RID: 187713 RVA: 0x00CD3885 File Offset: 0x00CD1A85
 		public void SetLockToggleCb(Action<int, bool> cb)
 		{
 			this.LockToggleCb = cb;
 		}
 
-		// Token: 0x06038E32 RID: 233010 RVA: 0x00D84C6A File Offset: 0x00D82E6A
+		// Token: 0x0602DD42 RID: 187714 RVA: 0x00CD388E File Offset: 0x00CD1A8E
 		public void SetBuildTagClickCb(Action<EToggleState> cb)
 		{
 			this.BuildTagClickCb = cb;
 		}
 
-		// Token: 0x06038E33 RID: 233011 RVA: 0x00D84C73 File Offset: 0x00D82E73
+		// Token: 0x0602DD43 RID: 187715 RVA: 0x00CD3897 File Offset: 0x00CD1A97
 		public void SetAttrPreviewCb(Action<bool, IReadOnlyList<IKurotatoAttrPreviewDelta>> cb)
 		{
 			this.AttrPreviewCb = cb;
 		}
 
-		// Token: 0x06038E34 RID: 233012 RVA: 0x00D84C7C File Offset: 0x00D82E7C
+		// Token: 0x0602DD44 RID: 187716 RVA: 0x00CD38A0 File Offset: 0x00CD1AA0
 		public void ClearAttrPreviewSelection()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(29);
@@ -218,7 +217,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06038E35 RID: 233013 RVA: 0x00D84C94 File Offset: 0x00D82E94
+		// Token: 0x0602DD45 RID: 187717 RVA: 0x00CD38B8 File Offset: 0x00CD1AB8
 		private void OnTogglePreviewState(EToggleState state)
 		{
 			if (!Info.Instance.IsInTouch())
@@ -247,7 +246,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			}
 		}
 
-		// Token: 0x06038E36 RID: 233014 RVA: 0x00D84CE0 File Offset: 0x00D82EE0
+		// Token: 0x0602DD46 RID: 187718 RVA: 0x00CD3904 File Offset: 0x00CD1B04
 		private void OnPreviewHoverEnter(EToggleState state)
 		{
 			if (Info.Instance.IsInTouch())
@@ -262,7 +261,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			attrPreviewCb(true, this.BuildPreviewDeltas());
 		}
 
-		// Token: 0x06038E37 RID: 233015 RVA: 0x00D84D06 File Offset: 0x00D82F06
+		// Token: 0x0602DD47 RID: 187719 RVA: 0x00CD392A File Offset: 0x00CD1B2A
 		private void OnPreviewHoverExit(EToggleState state)
 		{
 			if (Info.Instance.IsInTouch())
@@ -277,7 +276,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			attrPreviewCb(false, new List<IKurotatoAttrPreviewDelta>());
 		}
 
-		// Token: 0x06038E38 RID: 233016 RVA: 0x00D84D2C File Offset: 0x00D82F2C
+		// Token: 0x0602DD48 RID: 187720 RVA: 0x00CD3950 File Offset: 0x00CD1B50
 		private IReadOnlyList<IKurotatoAttrPreviewDelta> BuildPreviewDeltas()
 		{
 			List<IKurotatoAttrPreviewDelta> list = new List<IKurotatoAttrPreviewDelta>();
@@ -290,7 +289,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			{
 				return list;
 			}
-			foreach (IKurotatoAttrDisplay kurotatoAttrDisplay in KurotatoUtil.GetItemAttrPreviewList(itemConfigByItemId.Value.EffectIter().ToList<int>()))
+			foreach (IKurotatoAttrDisplay kurotatoAttrDisplay in KurotatoUtil.GetItemAttrPreviewList(new List<int>(itemConfigByItemId.Value.EffectIter())))
 			{
 				list.Add(new KurotatoAttrPreviewDelta
 				{
@@ -298,7 +297,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 					ValueStr = kurotatoAttrDisplay.Text
 				});
 			}
-			foreach (ValueTuple<int, int> valueTuple in KurotatoUtil.GetItemAttrLockPreviewList(itemConfigByItemId.Value.EffectIter().ToList<int>()))
+			foreach (ValueTuple<int, int> valueTuple in KurotatoUtil.GetItemAttrLockPreviewList(new List<int>(itemConfigByItemId.Value.EffectIter())))
 			{
 				list.Add(new KurotatoAttrPreviewDelta
 				{
@@ -310,13 +309,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			return list;
 		}
 
-		// Token: 0x06038E39 RID: 233017 RVA: 0x00D84E78 File Offset: 0x00D83078
+		// Token: 0x0602DD49 RID: 187721 RVA: 0x00CD3A9C File Offset: 0x00CD1C9C
 		private void RefreshItemInfo()
 		{
 			KurotatoConfig instance = KurotatoConfig.Instance;
 			KurotatoItem value = instance.GetItemConfigByItemId(this.Data.Id).Value;
-			List<IKurotatoAttrDisplay> itemAttrDisplayList = KurotatoUtil.GetItemAttrDisplayList(value.EffectIter().ToList<int>(), true, true, false);
-			string cardDesc = KurotatoUtil.GetCardDesc(value.Desc, value.DescParamsIter().ToList<string>(), 0, 0, false);
+			List<IKurotatoAttrDisplay> itemAttrDisplayList = KurotatoUtil.GetItemAttrDisplayList(new List<int>(value.EffectIter()), true, true, false);
+			string cardDesc = KurotatoUtil.GetCardDesc(value.Desc, new List<string>(value.DescParamsIter()), 0, 0, false);
 			this.AttrScrollDataList.Clear();
 			foreach (IKurotatoAttrDisplay data in itemAttrDisplayList)
 			{
@@ -348,7 +347,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			}
 			base.GetText(2).ShowTextNew(value.Name);
 			base.GetText(2).SetColor(FColor.FromHex(value2.QualityColor));
-			base.GetText(3).SetText(KurotatoUtil.GetCardDesc(value.Desc, value.DescParamsIter().ToList<string>(), 0, 0, false), true);
+			base.GetText(3).SetText(KurotatoUtil.GetCardDesc(value.Desc, new List<string>(value.DescParamsIter()), 0, 0, false), true);
 			if (flag)
 			{
 				base.GetText(12).ShowTextNew(value.Tag);
@@ -361,7 +360,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			base.GetItem(26).SetUIActive(false);
 		}
 
-		// Token: 0x06038E3A RID: 233018 RVA: 0x00D85188 File Offset: 0x00D83388
+		// Token: 0x0602DD4A RID: 187722 RVA: 0x00CD3DAC File Offset: 0x00CD1FAC
 		public void RefreshHoldNum()
 		{
 			if (this.Data == null || this.Data.CardType == EKurotatoCardType.Weapon)
@@ -383,13 +382,21 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x06038E3B RID: 233019 RVA: 0x00D85250 File Offset: 0x00D83450
+		// Token: 0x0602DD4B RID: 187723 RVA: 0x00CD3E74 File Offset: 0x00CD2074
 		private void RefreshWeaponData()
 		{
 			KurotatoConfig instance = KurotatoConfig.Instance;
 			KurotatoWeapon value = instance.GetWeaponConfigByWeaponId(this.Data.Id).Value;
 			KurotatoWeaponGroup value2 = instance.GetWeaponGroupConfigByWeaponId(this.Data.Id).Value;
-			bool flag = value2.WeaponBuildIdsIter().Any<int>();
+			bool flag = false;
+			using (IEnumerator<int> enumerator = value2.WeaponBuildIdsIter().GetEnumerator())
+			{
+				if (enumerator.MoveNext())
+				{
+					int num = enumerator.Current;
+					flag = true;
+				}
+			}
 			this.BuildTagItem.SetUiActive(flag);
 			base.GetItem(10).SetUIActive(false);
 			base.GetItem(11).SetUIActive(this.Data.HasBuy);
@@ -412,16 +419,16 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			}
 			base.GetText(2).ShowTextNew(value.Name);
 			base.GetText(2).SetColor(FColor.FromHex(value3.QualityColor));
-			base.GetText(3).SetText(KurotatoUtil.GetCardDesc(value.Desc, value.DescParamsIter().ToList<string>(), 0, 0, false), true);
+			base.GetText(3).SetText(KurotatoUtil.GetCardDesc(value.Desc, new List<string>(value.DescParamsIter()), 0, 0, false), true);
 			base.GetItem(6).SetUIActive(this.Data.IsRecommend);
 			base.GetExtendToggle(7).GetRootComponent().SetUIActive(this.Data.ShowLock && !this.Data.HasBuy);
 			base.GetExtendToggle(7).SetToggleState(this.Data.HasLock ? EToggleState.ETT_UnChecked : EToggleState.ETT_Checked, false, false, false);
 			base.GetItem(22).SetUIActive(false);
 			int id = this.Data.Id;
-			List<IKurotatoAttrDisplay> weaponPropertyDisplayList = KurotatoUtil.GetWeaponPropertyDisplayList(value.ShowPropertyIter().ToList<int>(), id, 0);
+			List<IKurotatoAttrDisplay> weaponPropertyDisplayList = KurotatoUtil.GetWeaponPropertyDisplayList(new List<int>(value.ShowPropertyIter()), id, 0);
 			if (!string.IsNullOrEmpty(value.AttackDes))
 			{
-				string cardDesc = KurotatoUtil.GetCardDesc(value.AttackDes, value.AttackDesParamIter().ToList<string>(), id, 0, true);
+				string cardDesc = KurotatoUtil.GetCardDesc(value.AttackDes, new List<string>(value.AttackDesParamIter()), id, 0, true);
 				KurotatoProperty? propertyById = instance.GetPropertyById(7);
 				weaponPropertyDisplayList.Insert(0, new KurotatoAttrDisplay
 				{
@@ -435,7 +442,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			{
 				this.AttrScrollDataList.Add(new WeaponAttrInfoItemData(data));
 			}
-			string cardDesc2 = KurotatoUtil.GetCardDesc(value.Desc, value.DescParamsIter().ToList<string>(), id, 0, false);
+			string cardDesc2 = KurotatoUtil.GetCardDesc(value.Desc, new List<string>(value.DescParamsIter()), id, 0, false);
 			this.AttrScrollDataList.Add(new DesItemData(cardDesc2));
 			MultiTemplateScrollViewRefreshContext context = new MultiTemplateScrollViewRefreshContext(this.AttrScrollDataList);
 			this.AttrMultiScrollView.RefreshByData(context);
@@ -468,13 +475,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			uuiitem3.SetChangeColor(hasBuy2, fcolor);
 		}
 
-		// Token: 0x06038E3C RID: 233020 RVA: 0x00D856DC File Offset: 0x00D838DC
+		// Token: 0x0602DD4C RID: 187724 RVA: 0x00CD4334 File Offset: 0x00CD2534
 		public void SetComposeUpgradeVisible(bool visible)
 		{
 			base.GetSprite(25).SetUIActive(visible);
 		}
 
-		// Token: 0x06038E3D RID: 233021 RVA: 0x00D856EC File Offset: 0x00D838EC
+		// Token: 0x0602DD4D RID: 187725 RVA: 0x00CD4344 File Offset: 0x00CD2544
 		public void RefreshBuildTagLevel()
 		{
 			if (this.Data == null || this.Data.CardType != EKurotatoCardType.Weapon)
@@ -482,7 +489,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 				return;
 			}
 			KurotatoWeaponGroup? weaponGroupConfigByWeaponId = KurotatoConfig.Instance.GetWeaponGroupConfigByWeaponId(this.Data.Id);
-			if (weaponGroupConfigByWeaponId == null || !weaponGroupConfigByWeaponId.Value.WeaponBuildIdsIter().Any<int>())
+			bool flag = false;
+			if (weaponGroupConfigByWeaponId != null)
+			{
+				using (IEnumerator<int> enumerator = weaponGroupConfigByWeaponId.Value.WeaponBuildIdsIter().GetEnumerator())
+				{
+					if (enumerator.MoveNext())
+					{
+						int num = enumerator.Current;
+						flag = true;
+					}
+				}
+			}
+			if (!flag)
 			{
 				return;
 			}
@@ -499,7 +518,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			this.RefreshBuildInfoByCheckedTags();
 		}
 
-		// Token: 0x06038E3E RID: 233022 RVA: 0x00D857C4 File Offset: 0x00D839C4
+		// Token: 0x0602DD4E RID: 187726 RVA: 0x00CD4450 File Offset: 0x00CD2650
 		public void RefreshBuildInfoByCheckedTags()
 		{
 			if (this.Data.CardType != EKurotatoCardType.Weapon)
@@ -530,14 +549,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			this.ShowBuildInfoLeft(list);
 		}
 
-		// Token: 0x06038E3F RID: 233023 RVA: 0x00D8588C File Offset: 0x00D83A8C
+		// Token: 0x0602DD4F RID: 187727 RVA: 0x00CD4518 File Offset: 0x00CD2718
 		public void ClearBuildTagSelection()
 		{
 			this.BuildTagItem.SetChecked(false);
 			this.CloseBuildInfo();
 		}
 
-		// Token: 0x06038E40 RID: 233024 RVA: 0x00D858A0 File Offset: 0x00D83AA0
+		// Token: 0x0602DD50 RID: 187728 RVA: 0x00CD452C File Offset: 0x00CD272C
 		private void OnClickBuildTag(List<IKurotatoWeaponBuildData> dataList, EToggleState state)
 		{
 			this.RefreshBuildInfoByCheckedTags();
@@ -549,7 +568,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			buildTagClickCb(state);
 		}
 
-		// Token: 0x06038E41 RID: 233025 RVA: 0x00D858B9 File Offset: 0x00D83AB9
+		// Token: 0x0602DD51 RID: 187729 RVA: 0x00CD4545 File Offset: 0x00CD2745
 		public void ShowBuildInfoLeft(List<IKurotatoWeaponBuildInfoPanel> data)
 		{
 			this.BuildLeftInfoLayout.SetActive(true);
@@ -557,7 +576,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			this.BuildLeftInfoLayout.RefreshByData(data, null, false);
 		}
 
-		// Token: 0x06038E42 RID: 233026 RVA: 0x00D858E1 File Offset: 0x00D83AE1
+		// Token: 0x0602DD52 RID: 187730 RVA: 0x00CD456D File Offset: 0x00CD276D
 		public void ShowBuildInfoRight(List<IKurotatoWeaponBuildInfoPanel> data)
 		{
 			this.BuildRightInfoLayout.SetActive(true);
@@ -565,14 +584,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			this.BuildRightInfoLayout.RefreshByData(data, null, false);
 		}
 
-		// Token: 0x06038E43 RID: 233027 RVA: 0x00D85909 File Offset: 0x00D83B09
+		// Token: 0x0602DD53 RID: 187731 RVA: 0x00CD4595 File Offset: 0x00CD2795
 		public void CloseBuildInfo()
 		{
 			this.BuildLeftInfoLayout.SetActive(false);
 			this.BuildRightInfoLayout.SetActive(false);
 		}
 
-		// Token: 0x06038E44 RID: 233028 RVA: 0x00D85923 File Offset: 0x00D83B23
+		// Token: 0x0602DD54 RID: 187732 RVA: 0x00CD45AF File Offset: 0x00CD27AF
 		private void OnToggleClickLock(EToggleState state)
 		{
 			Action<int, bool> lockToggleCb = this.LockToggleCb;
@@ -583,7 +602,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			lockToggleCb(this.Data.SelectionId, state == EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x06038E45 RID: 233029 RVA: 0x00D85944 File Offset: 0x00D83B44
+		// Token: 0x0602DD55 RID: 187733 RVA: 0x00CD45D0 File Offset: 0x00CD27D0
 		public bool HasBuildTag()
 		{
 			if (this.Data == null || this.Data.CardType != EKurotatoCardType.Weapon)
@@ -591,10 +610,22 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 				return false;
 			}
 			KurotatoWeaponGroup? weaponGroupConfigByWeaponId = KurotatoConfig.Instance.GetWeaponGroupConfigByWeaponId(this.Data.Id);
-			return weaponGroupConfigByWeaponId != null && weaponGroupConfigByWeaponId.Value.WeaponBuildIdsIter().Any<int>();
+			if (weaponGroupConfigByWeaponId == null)
+			{
+				return false;
+			}
+			using (IEnumerator<int> enumerator = weaponGroupConfigByWeaponId.Value.WeaponBuildIdsIter().GetEnumerator())
+			{
+				if (enumerator.MoveNext())
+				{
+					int num = enumerator.Current;
+					return true;
+				}
+			}
+			return false;
 		}
 
-		// Token: 0x06038E46 RID: 233030 RVA: 0x00D859A0 File Offset: 0x00D83BA0
+		// Token: 0x0602DD56 RID: 187734 RVA: 0x00CD4660 File Offset: 0x00CD2860
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -667,24 +698,24 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			}
 		}
 
-		// Token: 0x0401DD46 RID: 122182
+		// Token: 0x040187DC RID: 100316
 		private const int INFINITE_STACK_COUNT = 999;
 
-		// Token: 0x0401DD47 RID: 122183
+		// Token: 0x040187DD RID: 100317
 		[Nullable(2)]
 		private IKurotatoCardItemData Data;
 
-		// Token: 0x0401DD48 RID: 122184
+		// Token: 0x040187DE RID: 100318
 		[Nullable(2)]
 		private MultiTemplateScrollView AttrMultiScrollView;
 
-		// Token: 0x0401DD49 RID: 122185
+		// Token: 0x040187DF RID: 100319
 		private readonly List<IMultiTemplateGridData> AttrScrollDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x0401DD4A RID: 122186
+		// Token: 0x040187E0 RID: 100320
 		private readonly KurotatoWeaponTagItem BuildTagItem = new KurotatoWeaponTagItem();
 
-		// Token: 0x0401DD4B RID: 122187
+		// Token: 0x040187E1 RID: 100321
 		[Nullable(new byte[]
 		{
 			2,
@@ -693,7 +724,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 		})]
 		private GenericLayout<KurotatoPopupWeaponBuildItem, IKurotatoWeaponBuildInfoPanel> BuildLeftInfoLayout;
 
-		// Token: 0x0401DD4C RID: 122188
+		// Token: 0x040187E2 RID: 100322
 		[Nullable(new byte[]
 		{
 			2,
@@ -702,15 +733,15 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 		})]
 		private GenericLayout<KurotatoPopupWeaponBuildItem, IKurotatoWeaponBuildInfoPanel> BuildRightInfoLayout;
 
-		// Token: 0x0401DD4D RID: 122189
+		// Token: 0x040187E3 RID: 100323
 		[Nullable(2)]
 		private Action<int, bool> LockToggleCb;
 
-		// Token: 0x0401DD4E RID: 122190
+		// Token: 0x040187E4 RID: 100324
 		[Nullable(2)]
 		private Action<EToggleState> BuildTagClickCb;
 
-		// Token: 0x0401DD4F RID: 122191
+		// Token: 0x040187E5 RID: 100325
 		[Nullable(new byte[]
 		{
 			2,
@@ -719,101 +750,101 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 		})]
 		private Action<bool, IReadOnlyList<IKurotatoAttrPreviewDelta>> AttrPreviewCb;
 
-		// Token: 0x0200B992 RID: 47506
+		// Token: 0x0200A3AA RID: 41898
 		[NullableContext(0)]
 		private class EChildComp
 		{
-			// Token: 0x040381BF RID: 229823
+			// Token: 0x04032BB4 RID: 207796
 			public const int TextureQuality = 0;
 
-			// Token: 0x040381C0 RID: 229824
+			// Token: 0x04032BB5 RID: 207797
 			public const int TextureIcon = 1;
 
-			// Token: 0x040381C1 RID: 229825
+			// Token: 0x04032BB6 RID: 207798
 			public const int TextName = 2;
 
-			// Token: 0x040381C2 RID: 229826
+			// Token: 0x04032BB7 RID: 207799
 			public const int TextProp = 3;
 
-			// Token: 0x040381C3 RID: 229827
+			// Token: 0x04032BB8 RID: 207800
 			public const int MultiTemplateScrollViewInfo = 4;
 
-			// Token: 0x040381C4 RID: 229828
+			// Token: 0x04032BB9 RID: 207801
 			public const int PanelItemAttr = 5;
 
-			// Token: 0x040381C5 RID: 229829
+			// Token: 0x04032BBA RID: 207802
 			public const int PanelRecommend = 6;
 
-			// Token: 0x040381C6 RID: 229830
+			// Token: 0x04032BBB RID: 207803
 			public const int ToggleLock = 7;
 
-			// Token: 0x040381C7 RID: 229831
+			// Token: 0x04032BBC RID: 207804
 			public const int PanelTag = 8;
 
-			// Token: 0x040381C8 RID: 229832
+			// Token: 0x04032BBD RID: 207805
 			public const int ToggleTag = 9;
 
-			// Token: 0x040381C9 RID: 229833
+			// Token: 0x04032BBE RID: 207806
 			public const int PanelType = 10;
 
-			// Token: 0x040381CA RID: 229834
+			// Token: 0x04032BBF RID: 207807
 			public const int PanelDone = 11;
 
-			// Token: 0x040381CB RID: 229835
+			// Token: 0x04032BC0 RID: 207808
 			public const int TextType = 12;
 
-			// Token: 0x040381CC RID: 229836
+			// Token: 0x04032BC1 RID: 207809
 			public const int VerticalTipsLeft = 13;
 
-			// Token: 0x040381CD RID: 229837
+			// Token: 0x04032BC2 RID: 207810
 			public const int VerticalTipsRight = 14;
 
-			// Token: 0x040381CE RID: 229838
+			// Token: 0x04032BC3 RID: 207811
 			public const int PanelTipsLeft = 15;
 
-			// Token: 0x040381CF RID: 229839
+			// Token: 0x04032BC4 RID: 207812
 			public const int PanelTipsRight = 16;
 
-			// Token: 0x040381D0 RID: 229840
+			// Token: 0x04032BC5 RID: 207813
 			public const int PanelDes = 17;
 
-			// Token: 0x040381D1 RID: 229841
+			// Token: 0x04032BC6 RID: 207814
 			public const int PanelWeaponAttr = 18;
 
-			// Token: 0x040381D2 RID: 229842
+			// Token: 0x04032BC7 RID: 207815
 			public const int PanelInfoDes = 19;
 
-			// Token: 0x040381D3 RID: 229843
+			// Token: 0x04032BC8 RID: 207816
 			public const int SpriteItemBg = 20;
 
-			// Token: 0x040381D4 RID: 229844
+			// Token: 0x04032BC9 RID: 207817
 			public const int TextLimitNum = 21;
 
-			// Token: 0x040381D5 RID: 229845
+			// Token: 0x04032BCA RID: 207818
 			public const int PanelLimitNum = 22;
 
-			// Token: 0x040381D6 RID: 229846
+			// Token: 0x04032BCB RID: 207819
 			public const int SpriteDone = 23;
 
-			// Token: 0x040381D7 RID: 229847
+			// Token: 0x04032BCC RID: 207820
 			public const int NiagaraFxGlow = 24;
 
-			// Token: 0x040381D8 RID: 229848
+			// Token: 0x04032BCD RID: 207821
 			public const int SpriteUpgrade = 25;
 
-			// Token: 0x040381D9 RID: 229849
+			// Token: 0x04032BCE RID: 207822
 			public const int PanelWeaponTag = 26;
 
-			// Token: 0x040381DA RID: 229850
+			// Token: 0x04032BCF RID: 207823
 			public const int SpriteWeaponTagBg = 27;
 
-			// Token: 0x040381DB RID: 229851
+			// Token: 0x04032BD0 RID: 207824
 			public const int SpriteWeaponTagIcon = 28;
 
-			// Token: 0x040381DC RID: 229852
+			// Token: 0x04032BD1 RID: 207825
 			public const int TogglePreview = 29;
 
-			// Token: 0x040381DD RID: 229853
+			// Token: 0x04032BD2 RID: 207826
 			public const int DescriptionItem = 30;
 		}
 	}

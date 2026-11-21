@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x020047DC RID: 18396
+	// Token: 0x02004C44 RID: 19524
 	public class IEntityTransientDataT
 	{
 	}

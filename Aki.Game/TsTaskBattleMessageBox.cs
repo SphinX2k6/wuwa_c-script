@@ -11,9 +11,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskBattleMessageBox.TsTaskBattleMessageBox_C")]
 public class TsTaskBattleMessageBox : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000112 RID: 274
-	// (get) Token: 0x060006C2 RID: 1730 RVA: 0x00021819 File Offset: 0x0001FA19
-	// (set) Token: 0x060006C3 RID: 1731 RVA: 0x00021829 File Offset: 0x0001FA29
+	// Token: 0x17000114 RID: 276
+	// (get) Token: 0x060006C6 RID: 1734 RVA: 0x000224DD File Offset: 0x000206DD
+	// (set) Token: 0x060006C7 RID: 1735 RVA: 0x000224ED File Offset: 0x000206ED
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int BoardId
 	{
@@ -27,30 +27,27 @@ public class TsTaskBattleMessageBox : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x060006C4 RID: 1732 RVA: 0x0002183C File Offset: 0x0001FA3C
+	// Token: 0x060006C8 RID: 1736 RVA: 0x00022500 File Offset: 0x00020700
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskBattleMessageBox) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskBattleMessageBox.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060006C5 RID: 1733 RVA: 0x000218D8 File Offset: 0x0001FAD8
+	// Token: 0x060006C9 RID: 1737 RVA: 0x000225B0 File Offset: 0x000207B0
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -72,7 +69,7 @@ public class TsTaskBattleMessageBox : TsTaskAbortImmediatelyBase, IUnrealUObject
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x060006C6 RID: 1734 RVA: 0x0002194E File Offset: 0x0001FB4E
+	// Token: 0x060006CA RID: 1738 RVA: 0x00022626 File Offset: 0x00020826
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskBattleMessageBox._ClassPtr == IntPtr.Zero)
@@ -82,23 +79,23 @@ public class TsTaskBattleMessageBox : TsTaskAbortImmediatelyBase, IUnrealUObject
 		return TsTaskBattleMessageBox._ClassPtr;
 	}
 
-	// Token: 0x060006C7 RID: 1735 RVA: 0x00021974 File Offset: 0x0001FB74
+	// Token: 0x060006CB RID: 1739 RVA: 0x0002264C File Offset: 0x0002084C
 	public TsTaskBattleMessageBox() : this(BuiltinUtils.AllocNativeUObject(TsTaskBattleMessageBox.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060006C8 RID: 1736 RVA: 0x0002199C File Offset: 0x0001FB9C
+	// Token: 0x060006CC RID: 1740 RVA: 0x00022674 File Offset: 0x00020874
 	[NullableContext(1)]
 	public TsTaskBattleMessageBox(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskBattleMessageBox.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060006C9 RID: 1737 RVA: 0x000219CF File Offset: 0x0001FBCF
+	// Token: 0x060006CD RID: 1741 RVA: 0x000226A7 File Offset: 0x000208A7
 	protected TsTaskBattleMessageBox(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060006CA RID: 1738 RVA: 0x000219D8 File Offset: 0x0001FBD8
+	// Token: 0x060006CE RID: 1742 RVA: 0x000226B0 File Offset: 0x000208B0
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -106,16 +103,16 @@ public class TsTaskBattleMessageBox : TsTaskAbortImmediatelyBase, IUnrealUObject
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x040004E9 RID: 1257
+	// Token: 0x040004ED RID: 1261
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskBattleMessageBox.TsTaskBattleMessageBox_C";
 
-	// Token: 0x040004EA RID: 1258
+	// Token: 0x040004EE RID: 1262
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040004EB RID: 1259
+	// Token: 0x040004EF RID: 1263
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040004EC RID: 1260
+	// Token: 0x040004F0 RID: 1264
 	private static int __PropertyOffset_BoardId;
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B33 RID: 6963
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CE2 RID: 7394
 	public class IInfrastructureItemDeliveryType
 	{
-		// Token: 0x06009506 RID: 38150 RVA: 0x00158AE8 File Offset: 0x00156CE8
+		// Token: 0x06009CF0 RID: 40176 RVA: 0x001697C4 File Offset: 0x001679C4
 		private IInfrastructureItemDeliveryType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009507 RID: 38151 RVA: 0x00158B20 File Offset: 0x00156D20
+		// Token: 0x06009CF1 RID: 40177 RVA: 0x001697FC File Offset: 0x001679FC
 		public static IInfrastructureItemDeliveryType Create([Nullable(2)] IInfrastructureItemDeliveryType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009508 RID: 38152 RVA: 0x00158B33 File Offset: 0x00156D33
+		// Token: 0x06009CF2 RID: 40178 RVA: 0x0016980F File Offset: 0x00167A0F
 		public static IInfrastructureItemDeliveryType CreateFromSetValue([Nullable(2)] IInfrastructureItemDeliveryType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009509 RID: 38153 RVA: 0x00158B46 File Offset: 0x00156D46
+		// Token: 0x06009CF3 RID: 40179 RVA: 0x00169822 File Offset: 0x00167A22
 		public IInfrastructureItemDeliveryType_SetValue ToSetValue()
 		{
 			return new IInfrastructureItemDeliveryType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F0C RID: 12044
-		// (get) Token: 0x0600950A RID: 38154 RVA: 0x00158B59 File Offset: 0x00156D59
-		// (set) Token: 0x0600950B RID: 38155 RVA: 0x00158B84 File Offset: 0x00156D84
+		// Token: 0x17003132 RID: 12594
+		// (get) Token: 0x06009CF4 RID: 40180 RVA: 0x00169835 File Offset: 0x00167A35
+		// (set) Token: 0x06009CF5 RID: 40181 RVA: 0x00169860 File Offset: 0x00167A60
 		public virtual EInfrastructureItemDeliveryType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B3D RID: 23357
+		// Token: 0x04005FDB RID: 24539
 		[Nullable(2)]
 		protected IInfrastructureItemDeliveryType FbInstance;
 
-		// Token: 0x04005B3E RID: 23358
+		// Token: 0x04005FDC RID: 24540
 		[Nullable(2)]
 		protected IInfrastructureItemDeliveryType_SetValue PocoInterface;
 	}

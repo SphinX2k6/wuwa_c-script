@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200283C RID: 10300
+// Token: 0x02001DB7 RID: 7607
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleDevWeaponViewItem : UiPanelBase
 {
-	// Token: 0x060153E4 RID: 87012 RVA: 0x0055E9B8 File Offset: 0x0055CBB8
+	// Token: 0x06012DE2 RID: 77282 RVA: 0x00589714 File Offset: 0x00587914
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class RoleDevWeaponViewItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060153E5 RID: 87013 RVA: 0x0055E9F4 File Offset: 0x0055CBF4
+	// Token: 0x06012DE3 RID: 77283 RVA: 0x00589750 File Offset: 0x00587950
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleDevWeaponViewItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -33,14 +33,14 @@ public class RoleDevWeaponViewItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060153E6 RID: 87014 RVA: 0x0055EA37 File Offset: 0x0055CC37
+	// Token: 0x06012DE4 RID: 77284 RVA: 0x00589793 File Offset: 0x00587993
 	protected override void OnBeforeCreateImplement()
 	{
 		this.UiViewSequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.UiViewSequence);
 	}
 
-	// Token: 0x060153E7 RID: 87015 RVA: 0x0055EA51 File Offset: 0x0055CC51
+	// Token: 0x06012DE5 RID: 77285 RVA: 0x005897AD File Offset: 0x005879AD
 	[NullableContext(1)]
 	public void RefreshByData(RoleDevWeaponViewItemDataBase data)
 	{
@@ -48,7 +48,7 @@ public class RoleDevWeaponViewItem : UiPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x060153E8 RID: 87016 RVA: 0x0055EA60 File Offset: 0x0055CC60
+	// Token: 0x06012DE6 RID: 77286 RVA: 0x005897BC File Offset: 0x005879BC
 	public void Refresh()
 	{
 		ERoleDevWeaponTabType tabType = this.Data.TabType;
@@ -66,7 +66,7 @@ public class RoleDevWeaponViewItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060153E9 RID: 87017 RVA: 0x0055EADF File Offset: 0x0055CCDF
+	// Token: 0x06012DE7 RID: 77287 RVA: 0x0058983B File Offset: 0x00587A3B
 	public void SetType(ERoleDevWeaponTabType type)
 	{
 		this.Data.TabType = type;
@@ -77,25 +77,25 @@ public class RoleDevWeaponViewItem : UiPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x04009EB7 RID: 40631
+	// Token: 0x0400A2A0 RID: 41632
 	public UiBehaviorLevelSequence UiViewSequence;
 
-	// Token: 0x04009EB8 RID: 40632
+	// Token: 0x0400A2A1 RID: 41633
 	private RoleDevWeaponDevItem WeaponDevItem;
 
-	// Token: 0x04009EB9 RID: 40633
+	// Token: 0x0400A2A2 RID: 41634
 	private RoleDevWeaponRecommendItem WeaponRecommendItem;
 
-	// Token: 0x04009EBA RID: 40634
+	// Token: 0x0400A2A3 RID: 41635
 	private RoleDevWeaponViewItemDataBase Data;
 
-	// Token: 0x02008E81 RID: 36481
+	// Token: 0x020080C7 RID: 32967
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E385 RID: 189317
+		// Token: 0x04029A7F RID: 170623
 		PlanWeaponDevelop,
-		// Token: 0x0402E386 RID: 189318
+		// Token: 0x04029A80 RID: 170624
 		PlanWeaponRecommend
 	}
 }

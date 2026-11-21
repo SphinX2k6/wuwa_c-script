@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EA0 RID: 20128
+	// Token: 0x02003E69 RID: 15977
 	public class RogueBattleShopDetail : UiPanelBase
 	{
-		// Token: 0x06033BA3 RID: 211875 RVA: 0x00C1E190 File Offset: 0x00C1C390
+		// Token: 0x06028A0E RID: 166414 RVA: 0x00B676AC File Offset: 0x00B658AC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033BA4 RID: 211876 RVA: 0x00C1E2D8 File Offset: 0x00C1C4D8
+		// Token: 0x06028A0F RID: 166415 RVA: 0x00B677F4 File Offset: 0x00B659F4
 		[NullableContext(1)]
 		public void Refresh(RogueResGainData data)
 		{
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			horizontalLayout.RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x06033BA5 RID: 211877 RVA: 0x00C1E4D4 File Offset: 0x00C1C6D4
+		// Token: 0x06028A10 RID: 166416 RVA: 0x00B679F0 File Offset: 0x00B65BF0
 		private void OnBtnConfirm()
 		{
 			UUIButtonComponent button = base.GetButton(7);

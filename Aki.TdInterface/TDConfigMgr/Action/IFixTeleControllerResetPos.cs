@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A73 RID: 6771
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C08 RID: 7176
 	public class IFixTeleControllerResetPos : ActionParams
 	{
-		// Token: 0x060090FE RID: 37118 RVA: 0x00151BF8 File Offset: 0x0014FDF8
+		// Token: 0x06009868 RID: 39016 RVA: 0x00161B24 File Offset: 0x0015FD24
 		private IFixTeleControllerResetPos_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060090FF RID: 37119 RVA: 0x00151C30 File Offset: 0x0014FE30
+		// Token: 0x06009869 RID: 39017 RVA: 0x00161B5C File Offset: 0x0015FD5C
 		public static IFixTeleControllerResetPos Create([Nullable(2)] IFixTeleControllerResetPos instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009100 RID: 37120 RVA: 0x00151C43 File Offset: 0x0014FE43
+		// Token: 0x0600986A RID: 39018 RVA: 0x00161B6F File Offset: 0x0015FD6F
 		public static IFixTeleControllerResetPos CreateFromSetValue([Nullable(2)] IFixTeleControllerResetPos_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009101 RID: 37121 RVA: 0x00151C56 File Offset: 0x0014FE56
+		// Token: 0x0600986B RID: 39019 RVA: 0x00161B82 File Offset: 0x0015FD82
 		public IFixTeleControllerResetPos_SetValue ToSetValue()
 		{
 			return new IFixTeleControllerResetPos_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E28 RID: 11816
-		// (get) Token: 0x06009102 RID: 37122 RVA: 0x00151C69 File Offset: 0x0014FE69
-		// (set) Token: 0x06009103 RID: 37123 RVA: 0x00151C94 File Offset: 0x0014FE94
+		// Token: 0x17003035 RID: 12341
+		// (get) Token: 0x0600986C RID: 39020 RVA: 0x00161B95 File Offset: 0x0015FD95
+		// (set) Token: 0x0600986D RID: 39021 RVA: 0x00161BC0 File Offset: 0x0015FDC0
 		public virtual int PositionEntityId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400597B RID: 22907
+		// Token: 0x04005DE0 RID: 24032
 		[Nullable(2)]
 		protected new IFixTeleControllerResetPos FbInstance;
 
-		// Token: 0x0400597C RID: 22908
+		// Token: 0x04005DE1 RID: 24033
 		[Nullable(2)]
 		protected IFixTeleControllerResetPos_SetValue PocoInterface;
 	}

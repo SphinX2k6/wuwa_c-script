@@ -7,60 +7,51 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002C56 RID: 11350
+// Token: 0x020021AF RID: 8623
 [UClass("/Game/Aki/TypeScript/Game/Module/UiComponent/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/UiComponent/TsUiAutoPlayLevelSequenceComponent.TsUiAutoPlayLevelSequenceComponent_C")]
 public class TsUiAutoPlayLevelSequenceComponent : ULGUIBehaviour, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06017AFE RID: 97022 RVA: 0x00605F00 File Offset: 0x00604100
+	// Token: 0x06015374 RID: 86900 RVA: 0x0062B9A0 File Offset: 0x00629BA0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void AwakeBP()
+	public override void AwakeBP()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AwakeBP"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsUiAutoPlayLevelSequenceComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AwakeBP"), TsUiAutoPlayLevelSequenceComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.AwakeBP_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06017AFF RID: 97023 RVA: 0x00605F70 File Offset: 0x00604170
+	// Token: 0x06015375 RID: 86901 RVA: 0x0062B9F9 File Offset: 0x00629BF9
 	protected virtual void AwakeBP_Implementation()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(base.RootUIComp);
 		this.PlayState = new EPlayState?(EPlayState.None);
 	}
 
-	// Token: 0x06017B00 RID: 97024 RVA: 0x00605F94 File Offset: 0x00604194
+	// Token: 0x06015376 RID: 86902 RVA: 0x0062BA20 File Offset: 0x00629C20
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void OnUIActiveInHierarchyBP(bool activeOrInactive)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnUIActiveInHierarchyBP"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		ULGUIBehaviour.__OnUIActiveInHierarchyBP_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsUiAutoPlayLevelSequenceComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnUIActiveInHierarchyBP"), TsUiAutoPlayLevelSequenceComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((ULGUIBehaviour.__OnUIActiveInHierarchyBP_FunctionParams*)ptr + 15L / (long)sizeof(ULGUIBehaviour.__OnUIActiveInHierarchyBP_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->activeOrInactive = activeOrInactive;
+			this.OnUIActiveInHierarchyBP_Implementation(activeOrInactive);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		ULGUIBehaviour.__OnUIActiveInHierarchyBP_FunctionParams* ptr = stackalloc ULGUIBehaviour.__OnUIActiveInHierarchyBP_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(ULGUIBehaviour.__OnUIActiveInHierarchyBP_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->activeOrInactive = activeOrInactive;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06017B01 RID: 97025 RVA: 0x0060600A File Offset: 0x0060420A
+	// Token: 0x06015377 RID: 86903 RVA: 0x0062BAAC File Offset: 0x00629CAC
 	protected virtual void OnUIActiveInHierarchyBP_Implementation(bool activeOrInactive)
 	{
 		this.PlayState = new EPlayState?(activeOrInactive ? EPlayState.Play : EPlayState.Stop);
@@ -70,27 +61,21 @@ public class TsUiAutoPlayLevelSequenceComponent : ULGUIBehaviour, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06017B02 RID: 97026 RVA: 0x00606034 File Offset: 0x00604234
+	// Token: 0x06015378 RID: 86904 RVA: 0x0062BAD4 File Offset: 0x00629CD4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void OnPreDestroyBP()
+	public override void OnPreDestroyBP()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnPreDestroyBP"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsUiAutoPlayLevelSequenceComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnPreDestroyBP"), TsUiAutoPlayLevelSequenceComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnPreDestroyBP_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06017B03 RID: 97027 RVA: 0x006060A4 File Offset: 0x006042A4
+	// Token: 0x06015379 RID: 86905 RVA: 0x0062BB2D File Offset: 0x00629D2D
 	protected virtual void OnPreDestroyBP_Implementation()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -101,34 +86,31 @@ public class TsUiAutoPlayLevelSequenceComponent : ULGUIBehaviour, IUnrealUObject
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x06017B04 RID: 97028 RVA: 0x006060C0 File Offset: 0x006042C0
+	// Token: 0x0601537A RID: 86906 RVA: 0x0062BB48 File Offset: 0x00629D48
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void UpdateBP(float DeltaTime)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("UpdateBP"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		ULGUIBehaviour.__UpdateBP_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsUiAutoPlayLevelSequenceComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("UpdateBP"), TsUiAutoPlayLevelSequenceComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((ULGUIBehaviour.__UpdateBP_FunctionParams*)ptr + 15L / (long)sizeof(ULGUIBehaviour.__UpdateBP_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->DeltaTime = DeltaTime;
+			this.UpdateBP_Implementation(DeltaTime);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		ULGUIBehaviour.__UpdateBP_FunctionParams* ptr = stackalloc ULGUIBehaviour.__UpdateBP_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(ULGUIBehaviour.__UpdateBP_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->DeltaTime = DeltaTime;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06017B05 RID: 97029 RVA: 0x00606136 File Offset: 0x00604336
+	// Token: 0x0601537B RID: 86907 RVA: 0x0062BBD4 File Offset: 0x00629DD4
 	protected virtual void UpdateBP_Implementation(float DeltaTime)
 	{
 		this.TryRefresh();
 	}
 
-	// Token: 0x06017B06 RID: 97030 RVA: 0x00606140 File Offset: 0x00604340
+	// Token: 0x0601537C RID: 86908 RVA: 0x0062BBDC File Offset: 0x00629DDC
 	private void TryRefresh()
 	{
 		EPlayState? playState = this.PlayState;
@@ -150,7 +132,7 @@ public class TsUiAutoPlayLevelSequenceComponent : ULGUIBehaviour, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06017B07 RID: 97031 RVA: 0x006061AC File Offset: 0x006043AC
+	// Token: 0x0601537D RID: 86909 RVA: 0x0062BC48 File Offset: 0x00629E48
 	private void TryPlay()
 	{
 		AUIBaseActor auibaseActor = base.GetOwner() as AUIBaseActor;
@@ -178,7 +160,7 @@ public class TsUiAutoPlayLevelSequenceComponent : ULGUIBehaviour, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06017B08 RID: 97032 RVA: 0x00606268 File Offset: 0x00604468
+	// Token: 0x0601537E RID: 86910 RVA: 0x0062BD0C File Offset: 0x00629F0C
 	private void TryStop()
 	{
 		if (this.AutoPlayList == null)
@@ -197,7 +179,7 @@ public class TsUiAutoPlayLevelSequenceComponent : ULGUIBehaviour, IUnrealUObject
 		this.AutoPlayList = null;
 	}
 
-	// Token: 0x06017B09 RID: 97033 RVA: 0x006062DC File Offset: 0x006044DC
+	// Token: 0x0601537F RID: 86911 RVA: 0x0062BD80 File Offset: 0x00629F80
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsUiAutoPlayLevelSequenceComponent._ClassPtr == IntPtr.Zero)
@@ -207,51 +189,51 @@ public class TsUiAutoPlayLevelSequenceComponent : ULGUIBehaviour, IUnrealUObject
 		return TsUiAutoPlayLevelSequenceComponent._ClassPtr;
 	}
 
-	// Token: 0x06017B0A RID: 97034 RVA: 0x00606300 File Offset: 0x00604500
+	// Token: 0x06015380 RID: 86912 RVA: 0x0062BDA4 File Offset: 0x00629FA4
 	public TsUiAutoPlayLevelSequenceComponent() : this(BuiltinUtils.AllocNativeUObject(TsUiAutoPlayLevelSequenceComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06017B0B RID: 97035 RVA: 0x00606328 File Offset: 0x00604528
+	// Token: 0x06015381 RID: 86913 RVA: 0x0062BDCC File Offset: 0x00629FCC
 	[NullableContext(1)]
 	public TsUiAutoPlayLevelSequenceComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsUiAutoPlayLevelSequenceComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06017B0C RID: 97036 RVA: 0x0060635B File Offset: 0x0060455B
+	// Token: 0x06015382 RID: 86914 RVA: 0x0062BDFF File Offset: 0x00629FFF
 	protected TsUiAutoPlayLevelSequenceComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06017B0D RID: 97037 RVA: 0x00606364 File Offset: 0x00604564
+	// Token: 0x06015383 RID: 86915 RVA: 0x0062BE08 File Offset: 0x0062A008
 	protected virtual void __CPPCALL_AwakeBP_Implementation()
 	{
 		this.AwakeBP_Implementation();
 	}
 
-	// Token: 0x06017B0E RID: 97038 RVA: 0x0060636C File Offset: 0x0060456C
+	// Token: 0x06015384 RID: 86916 RVA: 0x0062BE10 File Offset: 0x0062A010
 	protected unsafe virtual void __CPPCALL_OnUIActiveInHierarchyBP_Implementation(ULGUIBehaviour.__OnUIActiveInHierarchyBP_FunctionParams* __Params)
 	{
 		this.OnUIActiveInHierarchyBP_Implementation(__Params->activeOrInactive);
 	}
 
-	// Token: 0x06017B0F RID: 97039 RVA: 0x0060637A File Offset: 0x0060457A
+	// Token: 0x06015385 RID: 86917 RVA: 0x0062BE1E File Offset: 0x0062A01E
 	protected virtual void __CPPCALL_OnPreDestroyBP_Implementation()
 	{
 		this.OnPreDestroyBP_Implementation();
 	}
 
-	// Token: 0x06017B10 RID: 97040 RVA: 0x00606382 File Offset: 0x00604582
+	// Token: 0x06015386 RID: 86918 RVA: 0x0062BE26 File Offset: 0x0062A026
 	protected unsafe virtual void __CPPCALL_UpdateBP_Implementation(ULGUIBehaviour.__UpdateBP_FunctionParams* __Params)
 	{
 		this.UpdateBP_Implementation(__Params->DeltaTime);
 	}
 
-	// Token: 0x0400B07B RID: 45179
+	// Token: 0x0400B3E9 RID: 46057
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400B07C RID: 45180
+	// Token: 0x0400B3EA RID: 46058
 	[Nullable(new byte[]
 	{
 		2,
@@ -259,16 +241,16 @@ public class TsUiAutoPlayLevelSequenceComponent : ULGUIBehaviour, IUnrealUObject
 	})]
 	private List<string> AutoPlayList;
 
-	// Token: 0x0400B07D RID: 45181
+	// Token: 0x0400B3EB RID: 46059
 	private EPlayState? PlayState;
 
-	// Token: 0x0400B07E RID: 45182
+	// Token: 0x0400B3EC RID: 46060
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/UiComponent/TsUiAutoPlayLevelSequenceComponent.TsUiAutoPlayLevelSequenceComponent_C";
 
-	// Token: 0x0400B07F RID: 45183
+	// Token: 0x0400B3ED RID: 46061
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B080 RID: 45184
+	// Token: 0x0400B3EE RID: 46062
 	private static IntPtr _ClassDefaultObjectPtr;
 }

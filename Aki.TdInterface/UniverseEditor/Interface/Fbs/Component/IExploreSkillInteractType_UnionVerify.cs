@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051F1 RID: 20977
+	// Token: 0x02005759 RID: 22361
 	public static class IExploreSkillInteractType_UnionVerify
 	{
-		// Token: 0x0602211D RID: 139549 RVA: 0x004BA794 File Offset: 0x004B8994
+		// Token: 0x060240B3 RID: 147635 RVA: 0x004F5248 File Offset: 0x004F3448
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -56,6 +56,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				break;
 			case 15:
 				result = IExploreSkillEavesdropVerify.Verify(verifier, tablePos);
+				break;
+			case 16:
+				result = IExploreSkillGraffitiPuzzleVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

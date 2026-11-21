@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045E9 RID: 17897
+	// Token: 0x02003512 RID: 13586
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ItemMaterialSimpleController : ItemMaterialControllerBase
 	{
-		// Token: 0x0602E279 RID: 189049 RVA: 0x00AA9D67 File Offset: 0x00AA7F67
+		// Token: 0x0602296E RID: 141678 RVA: 0x009D64FF File Offset: 0x009D46FF
 		[NullableContext(1)]
 		public ItemMaterialSimpleController(AActor actor)
 		{
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Render
 			});
 		}
 
-		// Token: 0x0602E27A RID: 189050 RVA: 0x00AA9D99 File Offset: 0x00AA7F99
+		// Token: 0x0602296F RID: 141679 RVA: 0x009D6531 File Offset: 0x009D4731
 		public AActor GetActor()
 		{
 			if (!this.Actor.IsValid())
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Render
 			return this.Actor;
 		}
 
-		// Token: 0x0602E27B RID: 189051 RVA: 0x00AA9DB0 File Offset: 0x00AA7FB0
+		// Token: 0x06022970 RID: 141680 RVA: 0x009D6548 File Offset: 0x009D4748
 		[NullableContext(1)]
 		public void ForEachComponent([Nullable(2)] AActor actor, Action<UPrimitiveComponent> exec)
 		{
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E27C RID: 189052 RVA: 0x00AA9E04 File Offset: 0x00AA8004
+		// Token: 0x06022971 RID: 141681 RVA: 0x009D659C File Offset: 0x009D479C
 		public bool CheckMaterial(UPrimitiveComponent component)
 		{
 			if (component == null || !component.IsValid())
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x0602E27D RID: 189053 RVA: 0x00AA9E68 File Offset: 0x00AA8068
+		// Token: 0x06022972 RID: 141682 RVA: 0x009D6600 File Offset: 0x009D4800
 		public void CachedComponentMaterials(UPrimitiveComponent component)
 		{
 			if (component == null || !component.IsValid())
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E27E RID: 189054 RVA: 0x00AA9FE8 File Offset: 0x00AA81E8
+		// Token: 0x06022973 RID: 141683 RVA: 0x009D6780 File Offset: 0x009D4980
 		public void UpdateParameters()
 		{
 			foreach (Tuple<UPrimitiveComponent, List<UMaterialInterface>, List<UMaterialInstanceDynamic>> tuple in this.CachedMaterials)
@@ -171,11 +171,11 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x04018C47 RID: 101447
+		// Token: 0x04013286 RID: 78470
 		[Nullable(1)]
 		protected AActor Actor;
 
-		// Token: 0x04018C48 RID: 101448
+		// Token: 0x04013287 RID: 78471
 		[Nullable(new byte[]
 		{
 			1,
@@ -188,10 +188,10 @@ namespace CSharpScript.Game.Render
 		})]
 		protected List<Tuple<UPrimitiveComponent, List<UMaterialInterface>, List<UMaterialInstanceDynamic>>> CachedMaterials = new List<Tuple<UPrimitiveComponent, List<UMaterialInterface>, List<UMaterialInstanceDynamic>>>();
 
-		// Token: 0x04018C49 RID: 101449
+		// Token: 0x04013288 RID: 78472
 		public Dictionary<FName, float> ScalarParameterValue;
 
-		// Token: 0x04018C4A RID: 101450
+		// Token: 0x04013289 RID: 78473
 		public Dictionary<FName, FLinearColor> VectorParameterValue;
 	}
 }

@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x020058AB RID: 22699
+	// Token: 0x02004883 RID: 18563
 	public class InstanceDungeonSolarSpeedPanelItem : UiPanelBase
 	{
-		// Token: 0x06039BC8 RID: 236488 RVA: 0x00DB8B28 File Offset: 0x00DB6D28
+		// Token: 0x0602EAEB RID: 191211 RVA: 0x00D07A40 File Offset: 0x00D05C40
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039BC9 RID: 236489 RVA: 0x00DB8C10 File Offset: 0x00DB6E10
+		// Token: 0x0602EAEC RID: 191212 RVA: 0x00D07B28 File Offset: 0x00D05D28
 		protected override void OnStart()
 		{
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(1), "BossRushCollectReward", Array.Empty<object>());
@@ -48,20 +48,20 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039BCA RID: 236490 RVA: 0x00DB8C48 File Offset: 0x00DB6E48
+		// Token: 0x0602EAED RID: 191213 RVA: 0x00D07B60 File Offset: 0x00D05D60
 		protected override UniTask OnBeforeStartAsync()
 		{
 			EventSystem.Instance.Add(EEventName.SolarSpeedRewarded, new Action(this.HandleSolarSpeedRewarded));
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x06039BCB RID: 236491 RVA: 0x00DB8C6B File Offset: 0x00DB6E6B
+		// Token: 0x0602EAEE RID: 191214 RVA: 0x00D07B83 File Offset: 0x00D05D83
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.SolarSpeedRewarded, new Action(this.HandleSolarSpeedRewarded));
 		}
 
-		// Token: 0x06039BCC RID: 236492 RVA: 0x00DB8C8C File Offset: 0x00DB6E8C
+		// Token: 0x0602EAEF RID: 191215 RVA: 0x00D07BA4 File Offset: 0x00D05DA4
 		public void RefreshItem()
 		{
 			if (base.InAsyncLoading())
@@ -81,32 +81,32 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}));
 		}
 
-		// Token: 0x06039BCD RID: 236493 RVA: 0x00DB8D09 File Offset: 0x00DB6F09
+		// Token: 0x0602EAF0 RID: 191216 RVA: 0x00D07C21 File Offset: 0x00D05E21
 		private void OnClickBtnScoreReward()
 		{
 			ActivitySolarSpeedController.Instance.HandleOnClickRewardInActivitySubView();
 		}
 
-		// Token: 0x06039BCE RID: 236494 RVA: 0x00DB8D15 File Offset: 0x00DB6F15
+		// Token: 0x0602EAF1 RID: 191217 RVA: 0x00D07C2D File Offset: 0x00D05E2D
 		private void HandleSolarSpeedRewarded()
 		{
 			this.RefreshItem();
 		}
 
-		// Token: 0x0401E278 RID: 123512
+		// Token: 0x04018D15 RID: 101653
 		[Nullable(2)]
 		private IInstanceDungeonSolarSpeedPanelItem ItemDataHandle;
 
-		// Token: 0x0200BB12 RID: 47890
+		// Token: 0x0200A52B RID: 42283
 		private enum EChildType
 		{
-			// Token: 0x04038834 RID: 231476
+			// Token: 0x04033235 RID: 209461
 			BtnScoreReward,
-			// Token: 0x04038835 RID: 231477
+			// Token: 0x04033236 RID: 209462
 			TxtTitle,
-			// Token: 0x04038836 RID: 231478
+			// Token: 0x04033237 RID: 209463
 			ScoreRedDot,
-			// Token: 0x04038837 RID: 231479
+			// Token: 0x04033238 RID: 209464
 			TxtProgress
 		}
 	}

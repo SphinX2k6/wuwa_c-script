@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001A5 RID: 421
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001BC RID: 444
 	public class IActorAttachTarget : IAttachTarget
 	{
-		// Token: 0x0600066E RID: 1646 RVA: 0x00022EF8 File Offset: 0x000210F8
+		// Token: 0x06000684 RID: 1668 RVA: 0x00023B58 File Offset: 0x00021D58
 		private IActorAttachTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600066F RID: 1647 RVA: 0x00022F30 File Offset: 0x00021130
+		// Token: 0x06000685 RID: 1669 RVA: 0x00023B90 File Offset: 0x00021D90
 		public static IActorAttachTarget Create([Nullable(2)] IActorAttachTarget instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000670 RID: 1648 RVA: 0x00022F43 File Offset: 0x00021143
+		// Token: 0x06000686 RID: 1670 RVA: 0x00023BA3 File Offset: 0x00021DA3
 		public static IActorAttachTarget CreateFromSetValue([Nullable(2)] IActorAttachTarget_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000671 RID: 1649 RVA: 0x00022F56 File Offset: 0x00021156
+		// Token: 0x06000687 RID: 1671 RVA: 0x00023BB6 File Offset: 0x00021DB6
 		public new IActorAttachTarget_SetValue ToSetValue()
 		{
 			return new IActorAttachTarget_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700021D RID: 541
-		// (get) Token: 0x06000672 RID: 1650 RVA: 0x00022F75 File Offset: 0x00021175
-		// (set) Token: 0x06000673 RID: 1651 RVA: 0x00022FA0 File Offset: 0x000211A0
+		// Token: 0x17000225 RID: 549
+		// (get) Token: 0x06000688 RID: 1672 RVA: 0x00023BD5 File Offset: 0x00021DD5
+		// (set) Token: 0x06000689 RID: 1673 RVA: 0x00023C00 File Offset: 0x00021E00
 		public override EAttachType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700021E RID: 542
-		// (get) Token: 0x06000674 RID: 1652 RVA: 0x00022FB0 File Offset: 0x000211B0
-		// (set) Token: 0x06000675 RID: 1653 RVA: 0x00023011 File Offset: 0x00021211
+		// Token: 0x17000226 RID: 550
+		// (get) Token: 0x0600068A RID: 1674 RVA: 0x00023C10 File Offset: 0x00021E10
+		// (set) Token: 0x0600068B RID: 1675 RVA: 0x00023C71 File Offset: 0x00021E71
 		public virtual IActorRef ActorRef
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000815 RID: 2069
+		// Token: 0x0400086E RID: 2158
 		[Nullable(2)]
 		protected new IActorAttachTarget FbInstance;
 
-		// Token: 0x04000816 RID: 2070
+		// Token: 0x0400086F RID: 2159
 		[Nullable(2)]
 		protected new IActorAttachTarget_SetValue PocoInterface;
 
-		// Token: 0x04000817 RID: 2071
+		// Token: 0x04000870 RID: 2160
 		private IActorRef _ActorRefCache;
 
-		// Token: 0x04000818 RID: 2072
+		// Token: 0x04000871 RID: 2161
 		private bool _ActorRefInited;
 	}
 }

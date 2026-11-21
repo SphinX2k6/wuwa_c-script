@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A88 RID: 2696
+	// Token: 0x02000B52 RID: 2898
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IPatrol : IComponentBase
 	{
-		// Token: 0x06003E15 RID: 15893 RVA: 0x0009F105 File Offset: 0x0009D305
-		[NullableContext(1)]
+		// Token: 0x0600423E RID: 16958 RVA: 0x000A86BD File Offset: 0x000A68BD
+		[NullableContext(0)]
 		public static IPatrol Create(IPatrol? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000EC2 RID: 3778
-		// (get) Token: 0x06003E16 RID: 15894 RVA: 0x0009F124 File Offset: 0x0009D324
+		// Token: 0x17000F95 RID: 3989
+		// (get) Token: 0x0600423F RID: 16959 RVA: 0x000A86DC File Offset: 0x000A68DC
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EC3 RID: 3779
-		// (get) Token: 0x06003E17 RID: 15895 RVA: 0x0009F15C File Offset: 0x0009D35C
+		// Token: 0x17000F96 RID: 3990
+		// (get) Token: 0x06004240 RID: 16960 RVA: 0x000A8714 File Offset: 0x000A6914
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EC4 RID: 3780
-		// (get) Token: 0x06003E18 RID: 15896 RVA: 0x0009F172 File Offset: 0x0009D372
+		// Token: 0x17000F97 RID: 3991
+		// (get) Token: 0x06004241 RID: 16961 RVA: 0x000A872A File Offset: 0x000A692A
 		public virtual int SplineEntityId
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EC5 RID: 3781
-		// (get) Token: 0x06003E19 RID: 15897 RVA: 0x0009F180 File Offset: 0x0009D380
+		// Token: 0x17000F98 RID: 3992
+		// (get) Token: 0x06004242 RID: 16962 RVA: 0x000A8738 File Offset: 0x000A6938
 		public virtual List<int> SplineEntityIds
 		{
 			get
@@ -83,8 +83,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EC6 RID: 3782
-		// (get) Token: 0x06003E1A RID: 15898 RVA: 0x0009F1F5 File Offset: 0x0009D3F5
+		// Token: 0x17000F99 RID: 3993
+		// (get) Token: 0x06004243 RID: 16963 RVA: 0x000A87AD File Offset: 0x000A69AD
 		public virtual bool IsCircle
 		{
 			get
@@ -93,19 +93,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EC7 RID: 3783
-		// (get) Token: 0x06003E1B RID: 15899 RVA: 0x0009F204 File Offset: 0x0009D404
+		// Token: 0x17000F9A RID: 3994
+		// (get) Token: 0x06004244 RID: 16964 RVA: 0x000A87BC File Offset: 0x000A69BC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IPatrolAction> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -128,24 +128,24 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002297 RID: 8855
+		// Token: 0x040024B3 RID: 9395
 		private IPatrol Instance;
 
-		// Token: 0x04002298 RID: 8856
+		// Token: 0x040024B4 RID: 9396
 		private List<int> _SplineEntityIdsCache;
 
-		// Token: 0x04002299 RID: 8857
+		// Token: 0x040024B5 RID: 9397
 		private bool _SplineEntityIdsInited;
 
-		// Token: 0x0400229A RID: 8858
+		// Token: 0x040024B6 RID: 9398
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IPatrolAction> _ActionsCache;
 
-		// Token: 0x0400229B RID: 8859
+		// Token: 0x040024B7 RID: 9399
 		private bool _ActionsInited;
 	}
 }

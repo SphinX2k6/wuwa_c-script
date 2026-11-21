@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02000FBF RID: 4031
+// Token: 0x02000474 RID: 1140
 public class FurnitureAreaPointItem : GridProxyAbstract<bool>
 {
-	// Token: 0x0600672F RID: 26415 RVA: 0x001466B3 File Offset: 0x001448B3
+	// Token: 0x06003AC7 RID: 15047 RVA: 0x0014EF77 File Offset: 0x0014D177
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -15,19 +15,19 @@ public class FurnitureAreaPointItem : GridProxyAbstract<bool>
 		};
 	}
 
-	// Token: 0x06006730 RID: 26416 RVA: 0x001466D6 File Offset: 0x001448D6
+	// Token: 0x06003AC8 RID: 15048 RVA: 0x0014EF9A File Offset: 0x0014D19A
 	public override void Refresh(bool isSelected, bool isSelected2, int gridIndex)
 	{
 		this.IsSelected = isSelected;
 		this.RefreshItemToggle();
 	}
 
-	// Token: 0x06006731 RID: 26417 RVA: 0x001466E5 File Offset: 0x001448E5
+	// Token: 0x06003AC9 RID: 15049 RVA: 0x0014EFA9 File Offset: 0x0014D1A9
 	public void RefreshItemToggle()
 	{
 		base.GetExtendToggle(0).SetToggleState(this.IsSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04002EC8 RID: 11976
+	// Token: 0x04002F61 RID: 12129
 	private bool IsSelected;
 }

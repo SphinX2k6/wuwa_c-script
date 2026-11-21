@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x02000EF1 RID: 3825
-// (Invoke) Token: 0x06005FF6 RID: 24566
+// Token: 0x020003A6 RID: 934
+// (Invoke) Token: 0x0600338C RID: 13196
 public delegate void TCloudGameOnReceiveDataFunction(string dataJson);

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013FB RID: 5115
+	// Token: 0x02001552 RID: 5458
 	public class IFlipperConditionStepBase
 	{
-		// Token: 0x06007461 RID: 29793 RVA: 0x00116730 File Offset: 0x00114930
-		[NullableContext(1)]
+		// Token: 0x06007B22 RID: 31522 RVA: 0x00125114 File Offset: 0x00123314
 		public static IFlipperConditionStepBase Create(IFlipperConditionStepBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700263E RID: 9790
-		// (get) Token: 0x06007462 RID: 29794 RVA: 0x0011674F File Offset: 0x0011494F
+		// Token: 0x17002820 RID: 10272
+		// (get) Token: 0x06007B23 RID: 31523 RVA: 0x00125133 File Offset: 0x00123333
 		public virtual EFlipperConditionStep Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004359 RID: 17241
+		// Token: 0x040046EA RID: 18154
 		private IFlipperConditionStepBase Instance;
 	}
 }

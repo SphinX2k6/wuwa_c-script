@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 {
-	// Token: 0x02006E5E RID: 28254
+	// Token: 0x02005FDF RID: 24543
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FindSunSpiritShootEffect
 	{
-		// Token: 0x06044DB3 RID: 282035 RVA: 0x010FEAAC File Offset: 0x010FCCAC
+		// Token: 0x0603AF40 RID: 241472 RVA: 0x010A900C File Offset: 0x010A720C
 		public void InitConfig(string lineEffectPath, string endEffectPath)
 		{
 			this.LineEffectPath = lineEffectPath;
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 			this.TempTransform.SetRotation(FindSunSpiritModel.Instance.LevelQuat);
 		}
 
-		// Token: 0x06044DB4 RID: 282036 RVA: 0x010FEAD4 File Offset: 0x010FCCD4
+		// Token: 0x0603AF41 RID: 241473 RVA: 0x010A9034 File Offset: 0x010A7234
 		public void SpawnEffect(Vector targetLocation)
 		{
 			Vector tempVector = this.TempVector;
@@ -46,22 +46,22 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 			instance2.SpawnEffect(world2, ftransformDouble, this.EndEffectPath, "[FindSunSpiritGuideLine.SpawnShootEndEffect]", null, EEffectType.Scene, null, null, null, false, false);
 		}
 
-		// Token: 0x04023D44 RID: 146756
+		// Token: 0x0401EFF9 RID: 126969
 		private const float OFFSET_LENGTH = -150f;
 
-		// Token: 0x04023D45 RID: 146757
+		// Token: 0x0401EFFA RID: 126970
 		private string LineEffectPath = "";
 
-		// Token: 0x04023D46 RID: 146758
+		// Token: 0x0401EFFB RID: 126971
 		private string EndEffectPath = "";
 
-		// Token: 0x04023D47 RID: 146759
+		// Token: 0x0401EFFC RID: 126972
 		private readonly Transform TempTransform = Transform.Create();
 
-		// Token: 0x04023D48 RID: 146760
+		// Token: 0x0401EFFD RID: 126973
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x04023D49 RID: 146761
+		// Token: 0x0401EFFE RID: 126974
 		private readonly Vector TempVector2 = Vector.Create();
 	}
 }

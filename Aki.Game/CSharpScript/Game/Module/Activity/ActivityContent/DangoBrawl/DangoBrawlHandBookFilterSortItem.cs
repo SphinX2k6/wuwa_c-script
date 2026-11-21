@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006801 RID: 26625
+	// Token: 0x02005751 RID: 22353
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlHandBookFilterSortItem : UiPanelBase
 	{
-		// Token: 0x06042686 RID: 272006 RVA: 0x010203CC File Offset: 0x0101E5CC
+		// Token: 0x060371DB RID: 225755 RVA: 0x00F61910 File Offset: 0x00F5FB10
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -36,14 +36,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06042687 RID: 272007 RVA: 0x010204B9 File Offset: 0x0101E6B9
+		// Token: 0x060371DC RID: 225756 RVA: 0x00F619FD File Offset: 0x00F5FBFD
 		protected override void OnStart()
 		{
 			this.SortSelectLayout = new GenericLayout<DangoBrawlHandBookFilterSortSelectItem, int>(base.GetGridLayout(0), new Func<DangoBrawlHandBookFilterSortSelectItem>(this.CreateSelectItem), null, false, true);
 			this.RefreshSortItem();
 		}
 
-		// Token: 0x06042688 RID: 272008 RVA: 0x010204E2 File Offset: 0x0101E6E2
+		// Token: 0x060371DD RID: 225757 RVA: 0x00F61A26 File Offset: 0x00F5FC26
 		public void SetSelectedIds(IReadOnlyList<int> ids)
 		{
 			this.SelectedSortItemList.Clear();
@@ -51,20 +51,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshSortItem();
 		}
 
-		// Token: 0x06042689 RID: 272009 RVA: 0x01020501 File Offset: 0x0101E701
+		// Token: 0x060371DE RID: 225758 RVA: 0x00F61A45 File Offset: 0x00F5FC45
 		public void ResetSelection()
 		{
 			this.SelectedSortItemList.Clear();
 			this.RefreshSortItem();
 		}
 
-		// Token: 0x0604268A RID: 272010 RVA: 0x01020514 File Offset: 0x0101E714
+		// Token: 0x060371DF RID: 225759 RVA: 0x00F61A58 File Offset: 0x00F5FC58
 		public List<int> GetSelectedIds()
 		{
 			return this.SelectedSortItemList;
 		}
 
-		// Token: 0x0604268B RID: 272011 RVA: 0x0102051C File Offset: 0x0101E71C
+		// Token: 0x060371E0 RID: 225760 RVA: 0x00F61A60 File Offset: 0x00F5FC60
 		private DangoBrawlHandBookFilterSortSelectItem CreateSelectItem()
 		{
 			return new DangoBrawlHandBookFilterSortSelectItem
@@ -74,13 +74,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			};
 		}
 
-		// Token: 0x0604268C RID: 272012 RVA: 0x01020547 File Offset: 0x0101E747
+		// Token: 0x060371E1 RID: 225761 RVA: 0x00F61A8B File Offset: 0x00F5FC8B
 		private bool IsSortItemSelected(int itemId)
 		{
 			return this.SelectedSortItemList.Contains(itemId);
 		}
 
-		// Token: 0x0604268D RID: 272013 RVA: 0x01020558 File Offset: 0x0101E758
+		// Token: 0x060371E2 RID: 225762 RVA: 0x00F61A9C File Offset: 0x00F5FC9C
 		private void RefreshSortItem()
 		{
 			IEnumerable<DangoBrawlOccupation> occupationConfigList = DangoBrawlConfig.Instance.GetOccupationConfigList();
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			sortSelectLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0604268E RID: 272014 RVA: 0x010205C8 File Offset: 0x0101E7C8
+		// Token: 0x060371E3 RID: 225763 RVA: 0x00F61B0C File Offset: 0x00F5FD0C
 		private void OnClickSortItem(int itemId)
 		{
 			if (this.SelectedSortItemList.Contains(itemId))
@@ -116,10 +116,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onClickSortList(this.SelectedSortItemList);
 		}
 
-		// Token: 0x040229CA RID: 141770
+		// Token: 0x0401D227 RID: 119335
 		private readonly List<int> SelectedSortItemList = new List<int>();
 
-		// Token: 0x040229CB RID: 141771
+		// Token: 0x0401D228 RID: 119336
 		[Nullable(new byte[]
 		{
 			2,
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		public Action<List<int>> OnClickSortList;
 
-		// Token: 0x040229CC RID: 141772
+		// Token: 0x0401D229 RID: 119337
 		[Nullable(new byte[]
 		{
 			2,
@@ -135,21 +135,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private GenericLayout<DangoBrawlHandBookFilterSortSelectItem, int> SortSelectLayout;
 
-		// Token: 0x0200C972 RID: 51570
+		// Token: 0x0200B33F RID: 45887
 		[NullableContext(0)]
 		private enum EItemComponent
 		{
-			// Token: 0x0403CD47 RID: 249159
+			// Token: 0x04037634 RID: 226868
 			PnlGridBase,
-			// Token: 0x0403CD48 RID: 249160
+			// Token: 0x04037635 RID: 226869
 			TogBrawlSort,
-			// Token: 0x0403CD49 RID: 249161
+			// Token: 0x04037636 RID: 226870
 			TxtTitle,
-			// Token: 0x0403CD4A RID: 249162
+			// Token: 0x04037637 RID: 226871
 			PnlGridBaseSelect,
-			// Token: 0x0403CD4B RID: 249163
+			// Token: 0x04037638 RID: 226872
 			TogBrawlSortAll,
-			// Token: 0x0403CD4C RID: 249164
+			// Token: 0x04037639 RID: 226873
 			TogBrawlSortInv
 		}
 	}

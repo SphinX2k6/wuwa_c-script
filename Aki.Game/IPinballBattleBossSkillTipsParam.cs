@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001CFA RID: 7418
+// Token: 0x020011BC RID: 4540
 [NullableContext(1)]
 public interface IPinballBattleBossSkillTipsParam : IPinballBattleTipsBaseParam
 {
-	// Token: 0x1700120B RID: 4619
-	// (get) Token: 0x0600E0A4 RID: 57508
+	// Token: 0x17001235 RID: 4661
+	// (get) Token: 0x0600B4C1 RID: 46273
 	string TextId { get; }
 }

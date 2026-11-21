@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Module.Item;
 
-// Token: 0x020018E6 RID: 6374
+// Token: 0x02000D9F RID: 3487
 [NullableContext(2)]
 [Nullable(0)]
 [Model(0)]
 public class ItemTipsModel : ModelBase
 {
-	// Token: 0x17000F86 RID: 3974
-	// (get) Token: 0x0600BABB RID: 47803 RVA: 0x002A4CC4 File Offset: 0x002A2EC4
+	// Token: 0x17000FA9 RID: 4009
+	// (get) Token: 0x06008EA4 RID: 36516 RVA: 0x002AF440 File Offset: 0x002AD640
 	public int DebugCacheTipsItemId
 	{
 		get
@@ -19,24 +18,20 @@ public class ItemTipsModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600BABC RID: 47804 RVA: 0x002A4CCC File Offset: 0x002A2ECC
+	// Token: 0x06008EA5 RID: 36517 RVA: 0x002AF448 File Offset: 0x002AD648
 	public void SetCurrentItemTipsData(ItemTipsData itemTipsData)
 	{
 		this.CurrentItemTipsData = itemTipsData;
-		if (!Info.Instance.IsBuildShipping && itemTipsData != null)
-		{
-			this.DebugCacheTipsItemIdInternal = itemTipsData.ConfigId;
-		}
 	}
 
-	// Token: 0x0600BABD RID: 47805 RVA: 0x002A4CF0 File Offset: 0x002A2EF0
+	// Token: 0x06008EA6 RID: 36518 RVA: 0x002AF451 File Offset: 0x002AD651
 	public ItemTipsData GetCurrentItemTipsData()
 	{
 		return this.CurrentItemTipsData;
 	}
 
-	// Token: 0x17000F87 RID: 3975
-	// (get) Token: 0x0600BABE RID: 47806 RVA: 0x002A4CF8 File Offset: 0x002A2EF8
+	// Token: 0x17000FAA RID: 4010
+	// (get) Token: 0x06008EA7 RID: 36519 RVA: 0x002AF459 File Offset: 0x002AD659
 	[Nullable(1)]
 	public static ItemTipsModel Instance
 	{
@@ -47,7 +42,7 @@ public class ItemTipsModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600BABF RID: 47807 RVA: 0x002A4CFF File Offset: 0x002A2EFF
+	// Token: 0x06008EA8 RID: 36520 RVA: 0x002AF460 File Offset: 0x002AD660
 	[NullableContext(1)]
 	public static ItemTipsModel GetOrCreateInstance()
 	{
@@ -58,7 +53,7 @@ public class ItemTipsModel : ModelBase
 		return ItemTipsModel._Instance;
 	}
 
-	// Token: 0x0600BAC0 RID: 47808 RVA: 0x002A4D13 File Offset: 0x002A2F13
+	// Token: 0x06008EA9 RID: 36521 RVA: 0x002AF474 File Offset: 0x002AD674
 	public static bool CreateInstance()
 	{
 		if (ItemTipsModel._Instance != null)
@@ -69,32 +64,32 @@ public class ItemTipsModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600BAC1 RID: 47809 RVA: 0x002A4D29 File Offset: 0x002A2F29
+	// Token: 0x06008EAA RID: 36522 RVA: 0x002AF48A File Offset: 0x002AD68A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600BAC2 RID: 47810 RVA: 0x002A4D2B File Offset: 0x002A2F2B
+	// Token: 0x06008EAB RID: 36523 RVA: 0x002AF48C File Offset: 0x002AD68C
 	public static void ResetStaticDefaultValue()
 	{
 		ItemTipsModel._Instance = null;
 	}
 
-	// Token: 0x0600BAC3 RID: 47811 RVA: 0x002A4D33 File Offset: 0x002A2F33
+	// Token: 0x06008EAC RID: 36524 RVA: 0x002AF494 File Offset: 0x002AD694
 	static ItemTipsModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ItemTipsModel.CreateStaticDefaultValue), new Action(ItemTipsModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040054CE RID: 21710
+	// Token: 0x04005579 RID: 21881
 	private ItemTipsData CurrentItemTipsData;
 
-	// Token: 0x040054CF RID: 21711
+	// Token: 0x0400557A RID: 21882
 	public ItemTipsParam SharpTempOpenParam;
 
-	// Token: 0x040054D0 RID: 21712
+	// Token: 0x0400557B RID: 21883
 	private int DebugCacheTipsItemIdInternal;
 
-	// Token: 0x040054D1 RID: 21713
+	// Token: 0x0400557C RID: 21884
 	private static ItemTipsModel _Instance;
 }

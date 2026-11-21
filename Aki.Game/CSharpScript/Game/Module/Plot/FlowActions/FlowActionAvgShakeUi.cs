@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050A7 RID: 20647
+	// Token: 0x02004077 RID: 16503
 	public class FlowActionAvgShakeUi : FlowActionBase
 	{
-		// Token: 0x06034E94 RID: 216724 RVA: 0x00C881B9 File Offset: 0x00C863B9
+		// Token: 0x06029D8D RID: 171405 RVA: 0x00BD5439 File Offset: 0x00BD3639
 		protected override void OnExecute()
 		{
 		}

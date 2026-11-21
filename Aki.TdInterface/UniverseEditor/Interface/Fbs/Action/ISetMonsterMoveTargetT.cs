@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200701A RID: 28698
+	// Token: 0x020077E3 RID: 30691
 	public class ISetMonsterMoveTargetT
 	{
-		// Token: 0x1700D519 RID: 54553
-		// (get) Token: 0x06032C2D RID: 207917 RVA: 0x006D920D File Offset: 0x006D740D
-		// (set) Token: 0x06032C2E RID: 207918 RVA: 0x006D9215 File Offset: 0x006D7415
+		// Token: 0x1700E0ED RID: 57581
+		// (get) Token: 0x06035E93 RID: 220819 RVA: 0x00738E51 File Offset: 0x00737051
+		// (set) Token: 0x06035E94 RID: 220820 RVA: 0x00738E59 File Offset: 0x00737059
 		public EExecBattleActionType Type { get; set; }
 
-		// Token: 0x1700D51A RID: 54554
-		// (get) Token: 0x06032C2F RID: 207919 RVA: 0x006D921E File Offset: 0x006D741E
-		// (set) Token: 0x06032C30 RID: 207920 RVA: 0x006D9226 File Offset: 0x006D7426
+		// Token: 0x1700E0EE RID: 57582
+		// (get) Token: 0x06035E95 RID: 220821 RVA: 0x00738E62 File Offset: 0x00737062
+		// (set) Token: 0x06035E96 RID: 220822 RVA: 0x00738E6A File Offset: 0x0073706A
 		public int TargetEntityId { get; set; }
 
-		// Token: 0x1700D51B RID: 54555
-		// (get) Token: 0x06032C31 RID: 207921 RVA: 0x006D922F File Offset: 0x006D742F
-		// (set) Token: 0x06032C32 RID: 207922 RVA: 0x006D9237 File Offset: 0x006D7437
+		// Token: 0x1700E0EF RID: 57583
+		// (get) Token: 0x06035E97 RID: 220823 RVA: 0x00738E73 File Offset: 0x00737073
+		// (set) Token: 0x06035E98 RID: 220824 RVA: 0x00738E7B File Offset: 0x0073707B
 		public EMoveEvent MoveEvent { get; set; }
 
-		// Token: 0x1700D51C RID: 54556
-		// (get) Token: 0x06032C33 RID: 207923 RVA: 0x006D9240 File Offset: 0x006D7440
-		// (set) Token: 0x06032C34 RID: 207924 RVA: 0x006D9248 File Offset: 0x006D7448
+		// Token: 0x1700E0F0 RID: 57584
+		// (get) Token: 0x06035E99 RID: 220825 RVA: 0x00738E84 File Offset: 0x00737084
+		// (set) Token: 0x06035E9A RID: 220826 RVA: 0x00738E8C File Offset: 0x0073708C
 		public List<int> MonsterEntityIds { get; set; }
 
-		// Token: 0x1700D51D RID: 54557
-		// (get) Token: 0x06032C35 RID: 207925 RVA: 0x006D9251 File Offset: 0x006D7451
-		// (set) Token: 0x06032C36 RID: 207926 RVA: 0x006D9259 File Offset: 0x006D7459
+		// Token: 0x1700E0F1 RID: 57585
+		// (get) Token: 0x06035E9B RID: 220827 RVA: 0x00738E95 File Offset: 0x00737095
+		// (set) Token: 0x06035E9C RID: 220828 RVA: 0x00738E9D File Offset: 0x0073709D
 		public byte NullMask { get; set; }
 
-		// Token: 0x06032C37 RID: 207927 RVA: 0x006D9262 File Offset: 0x006D7462
+		// Token: 0x06035E9D RID: 220829 RVA: 0x00738EA6 File Offset: 0x007370A6
 		public ISetMonsterMoveTargetT()
 		{
 			this.Type = EExecBattleActionType.SetBattleTags;

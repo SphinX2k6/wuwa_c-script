@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02001208 RID: 4616
+// Token: 0x020006BC RID: 1724
 internal enum <CumulativeShopTaskView>FC1E4A757DB6FB54BC74BD591BB25ECEF8BD38BDBA218907656FF15BA6DE19D51__EChildType
 {
-	// Token: 0x0400389D RID: 14493
+	// Token: 0x04003936 RID: 14646
 	IconSprite,
-	// Token: 0x0400389E RID: 14494
+	// Token: 0x04003937 RID: 14647
 	Toggle,
-	// Token: 0x0400389F RID: 14495
+	// Token: 0x04003938 RID: 14648
 	RedDot,
-	// Token: 0x040038A0 RID: 14496
+	// Token: 0x04003939 RID: 14649
 	IconItem,
-	// Token: 0x040038A1 RID: 14497
+	// Token: 0x0400393A RID: 14650
 	LittleIconItem,
-	// Token: 0x040038A2 RID: 14498
+	// Token: 0x0400393B RID: 14651
 	NameText
 }

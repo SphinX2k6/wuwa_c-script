@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010DE RID: 4318
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200120C RID: 4620
 	public class IRecallConfig
 	{
-		// Token: 0x060061AC RID: 25004 RVA: 0x000EBB2C File Offset: 0x000E9D2C
+		// Token: 0x060067A5 RID: 26533 RVA: 0x000F8C4C File Offset: 0x000F6E4C
 		private IRecallConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060061AD RID: 25005 RVA: 0x000EBB64 File Offset: 0x000E9D64
+		// Token: 0x060067A6 RID: 26534 RVA: 0x000F8C84 File Offset: 0x000F6E84
 		public static IRecallConfig Create([Nullable(2)] IRecallConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060061AE RID: 25006 RVA: 0x000EBB77 File Offset: 0x000E9D77
+		// Token: 0x060067A7 RID: 26535 RVA: 0x000F8C97 File Offset: 0x000F6E97
 		public static IRecallConfig CreateFromSetValue([Nullable(2)] IRecallConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060061AF RID: 25007 RVA: 0x000EBB8A File Offset: 0x000E9D8A
+		// Token: 0x060067A8 RID: 26536 RVA: 0x000F8CAA File Offset: 0x000F6EAA
 		public IRecallConfig_SetValue ToSetValue()
 		{
 			return new IRecallConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700200D RID: 8205
-		// (get) Token: 0x060061B0 RID: 25008 RVA: 0x000EBB9D File Offset: 0x000E9D9D
-		// (set) Token: 0x060061B1 RID: 25009 RVA: 0x000EBBC8 File Offset: 0x000E9DC8
+		// Token: 0x170021BF RID: 8639
+		// (get) Token: 0x060067A9 RID: 26537 RVA: 0x000F8CBD File Offset: 0x000F6EBD
+		// (set) Token: 0x060067AA RID: 26538 RVA: 0x000F8CE8 File Offset: 0x000F6EE8
 		public virtual int RecallId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003AC2 RID: 15042
+		// Token: 0x04003E0F RID: 15887
 		[Nullable(2)]
 		protected IRecallConfig FbInstance;
 
-		// Token: 0x04003AC3 RID: 15043
+		// Token: 0x04003E10 RID: 15888
 		[Nullable(2)]
 		protected IRecallConfig_SetValue PocoInterface;
 	}

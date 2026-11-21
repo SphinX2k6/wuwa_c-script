@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DC4 RID: 24004
+	// Token: 0x02004DA8 RID: 19880
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SkillItemDisappear : UiPanelBase
 	{
-		// Token: 0x0603CFEF RID: 249839 RVA: 0x00EAA580 File Offset: 0x00EA8780
+		// Token: 0x06031F66 RID: 204646 RVA: 0x00DFB45C File Offset: 0x00DF965C
 		[NullableContext(1)]
 		public SkillItemDisappear(UUIItem parentItem, [Nullable(2)] string iconPath = null)
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.CreateByResourceIdAsync("UiItem_FightSkill_WaterBox", parentItem, false).Forget();
 		}
 
-		// Token: 0x0603CFF0 RID: 249840 RVA: 0x00EAA5A4 File Offset: 0x00EA87A4
+		// Token: 0x06031F67 RID: 204647 RVA: 0x00DFB480 File Offset: 0x00DF9680
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CFF1 RID: 249841 RVA: 0x00EAA5EC File Offset: 0x00EA87EC
+		// Token: 0x06031F68 RID: 204648 RVA: 0x00DFB4C8 File Offset: 0x00DF96C8
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CFF2 RID: 249842 RVA: 0x00EAA63C File Offset: 0x00EA883C
+		// Token: 0x06031F69 RID: 204649 RVA: 0x00DFB518 File Offset: 0x00DF9718
 		protected override void OnBeforeDestroy()
 		{
 			if (this.LoadIconHandleId != null)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603CFF3 RID: 249843 RVA: 0x00EAA6B8 File Offset: 0x00EA88B8
+		// Token: 0x06031F6A RID: 204650 RVA: 0x00DFB594 File Offset: 0x00DF9794
 		private void SyncSkillIconFromPath()
 		{
 			if (string.IsNullOrEmpty(this.IconPath))
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CFF4 RID: 249844 RVA: 0x00EAA750 File Offset: 0x00EA8950
+		// Token: 0x06031F6B RID: 204651 RVA: 0x00DFB62C File Offset: 0x00DF982C
 		private void FlushPendingAfterIconLoaded()
 		{
 			if (this.PendingDisappearing != null)
@@ -119,19 +119,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CFF5 RID: 249845 RVA: 0x00EAA789 File Offset: 0x00EA8989
+		// Token: 0x06031F6C RID: 204652 RVA: 0x00DFB665 File Offset: 0x00DF9865
 		public void SetOnDisappearFinishedCallback(Action callback)
 		{
 			this.OnDisappearFinishedCallback = callback;
 		}
 
-		// Token: 0x0603CFF6 RID: 249846 RVA: 0x00EAA792 File Offset: 0x00EA8992
+		// Token: 0x06031F6D RID: 204653 RVA: 0x00DFB66E File Offset: 0x00DF986E
 		public void SetOnDisappearStartCallback(Action callback)
 		{
 			this.OnDisappearStartCallback = callback;
 		}
 
-		// Token: 0x0603CFF7 RID: 249847 RVA: 0x00EAA79B File Offset: 0x00EA899B
+		// Token: 0x06031F6E RID: 204654 RVA: 0x00DFB677 File Offset: 0x00DF9877
 		[NullableContext(1)]
 		private void OnSequenceEnd(string sequenceName)
 		{
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onDisappearFinishedCallback();
 		}
 
-		// Token: 0x0603CFF8 RID: 249848 RVA: 0x00EAA7BB File Offset: 0x00EA89BB
+		// Token: 0x06031F6F RID: 204655 RVA: 0x00DFB697 File Offset: 0x00DF9897
 		public void SetDisappear(bool isDisappearing)
 		{
 			if (!this.IsReady || this.IsIconLoading)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ApplyDisappear(isDisappearing);
 		}
 
-		// Token: 0x0603CFF9 RID: 249849 RVA: 0x00EAA7E4 File Offset: 0x00EA89E4
+		// Token: 0x06031F70 RID: 204656 RVA: 0x00DFB6C0 File Offset: 0x00DF98C0
 		private void ApplyDisappear(bool isDisappearing)
 		{
 			if (!isDisappearing)
@@ -185,39 +185,39 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sequencePlayer2.PlayOrReplaySequenceByName("FadeOut", false, null);
 		}
 
-		// Token: 0x0401FC73 RID: 130163
+		// Token: 0x0401A730 RID: 108336
 		[Nullable(1)]
 		private const string DISAPPEAR_ANIMATION_NAME = "FadeOut";
 
-		// Token: 0x0401FC74 RID: 130164
+		// Token: 0x0401A731 RID: 108337
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0401FC75 RID: 130165
+		// Token: 0x0401A732 RID: 108338
 		private bool IsReady;
 
-		// Token: 0x0401FC76 RID: 130166
+		// Token: 0x0401A733 RID: 108339
 		private bool? PendingDisappearing;
 
-		// Token: 0x0401FC77 RID: 130167
+		// Token: 0x0401A734 RID: 108340
 		private Action OnDisappearFinishedCallback;
 
-		// Token: 0x0401FC78 RID: 130168
+		// Token: 0x0401A735 RID: 108341
 		private Action OnDisappearStartCallback;
 
-		// Token: 0x0401FC79 RID: 130169
+		// Token: 0x0401A736 RID: 108342
 		private readonly string IconPath;
 
-		// Token: 0x0401FC7A RID: 130170
+		// Token: 0x0401A737 RID: 108343
 		private bool IsIconLoading;
 
-		// Token: 0x0401FC7B RID: 130171
+		// Token: 0x0401A738 RID: 108344
 		private int? LoadIconHandleId;
 
-		// Token: 0x0200C0C8 RID: 49352
+		// Token: 0x0200AAD1 RID: 43729
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A2A3 RID: 238243
+			// Token: 0x04034C75 RID: 216181
 			SkillIcon
 		}
 	}

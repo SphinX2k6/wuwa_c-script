@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C2D RID: 23597
+	// Token: 0x02006252 RID: 25170
 	public enum TGroupFinishConfig : byte
 	{
-		// Token: 0x0400F410 RID: 62480
+		// Token: 0x0401013A RID: 65850
 		NONE,
-		// Token: 0x0400F411 RID: 62481
+		// Token: 0x0401013B RID: 65851
 		IGroupFinishDestroy,
-		// Token: 0x0400F412 RID: 62482
+		// Token: 0x0401013C RID: 65852
 		IGroupFinishSilence
 	}
 }

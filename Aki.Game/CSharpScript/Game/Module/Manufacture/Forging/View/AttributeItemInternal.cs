@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Forging.View
 {
-	// Token: 0x0200564D RID: 22093
+	// Token: 0x02004623 RID: 17955
 	public class AttributeItemInternal : AttributeItem
 	{
-		// Token: 0x060382B3 RID: 230067 RVA: 0x00D4E060 File Offset: 0x00D4C260
+		// Token: 0x0602D1B1 RID: 184753 RVA: 0x00C9BDB0 File Offset: 0x00C99FB0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -29,27 +29,27 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060382B4 RID: 230068 RVA: 0x00D4E12C File Offset: 0x00D4C32C
+		// Token: 0x0602D1B2 RID: 184754 RVA: 0x00C9BE7C File Offset: 0x00C9A07C
 		public void SetBgActive()
 		{
 		}
 
-		// Token: 0x0200B800 RID: 47104
+		// Token: 0x0200A22B RID: 41515
 		public class EAttributeItemInternalDefine
 		{
-			// Token: 0x04037AA1 RID: 228001
+			// Token: 0x040324CB RID: 206027
 			public const int Name = 0;
 
-			// Token: 0x04037AA2 RID: 228002
+			// Token: 0x040324CC RID: 206028
 			public const int CurrentValue = 1;
 
-			// Token: 0x04037AA3 RID: 228003
+			// Token: 0x040324CD RID: 206029
 			public const int NextItem = 2;
 
-			// Token: 0x04037AA4 RID: 228004
+			// Token: 0x040324CE RID: 206030
 			public const int NextValue = 3;
 
-			// Token: 0x04037AA5 RID: 228005
+			// Token: 0x040324CF RID: 206031
 			public const int Icon = 4;
 		}
 	}

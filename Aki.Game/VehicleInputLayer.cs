@@ -6,12 +6,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Input;
 using UnrealEngine;
 
-// Token: 0x020030CE RID: 12494
+// Token: 0x02002626 RID: 9766
 [NullableContext(2)]
 [Nullable(0)]
 public class VehicleInputLayer : InputLayer
 {
-	// Token: 0x0601AC09 RID: 109577 RVA: 0x00735B48 File Offset: 0x00733D48
+	// Token: 0x0601861E RID: 99870 RVA: 0x0075B82C File Offset: 0x00759A2C
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	private IVehicleInputInfo ResolveInputInfo(Entity entity)
@@ -53,7 +53,7 @@ public class VehicleInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601AC0A RID: 109578 RVA: 0x00735C18 File Offset: 0x00733E18
+	// Token: 0x0601861F RID: 99871 RVA: 0x0075B8FC File Offset: 0x00759AFC
 	[NullableContext(1)]
 	public unsafe void Init(EntityHandle entityHandle)
 	{
@@ -111,20 +111,20 @@ public class VehicleInputLayer : InputLayer
 		}
 	}
 
-	// Token: 0x0601AC0B RID: 109579 RVA: 0x00735CFF File Offset: 0x00733EFF
+	// Token: 0x06018620 RID: 99872 RVA: 0x0075B9E3 File Offset: 0x00759BE3
 	public override void Clear()
 	{
 		this.BpInputComp = null;
 		this.BpInputCompOrigin = null;
 	}
 
-	// Token: 0x0601AC0C RID: 109580 RVA: 0x00735D0F File Offset: 0x00733F0F
+	// Token: 0x06018621 RID: 99873 RVA: 0x0075B9F3 File Offset: 0x00759BF3
 	public override EInputLayer GetLayerType()
 	{
 		return EInputLayer.Vehicle;
 	}
 
-	// Token: 0x0601AC0D RID: 109581 RVA: 0x00735D14 File Offset: 0x00733F14
+	// Token: 0x06018622 RID: 99874 RVA: 0x0075B9F8 File Offset: 0x00759BF8
 	public override SInputCommand HandlePress(EInputAction action, float time)
 	{
 		if (this.BpInputComp == null)
@@ -165,7 +165,7 @@ public class VehicleInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601AC0E RID: 109582 RVA: 0x00735E34 File Offset: 0x00734034
+	// Token: 0x06018623 RID: 99875 RVA: 0x0075BB18 File Offset: 0x00759D18
 	public override SInputCommand HandleRelease(EInputAction action, float time)
 	{
 		if (this.BpInputComp == null)
@@ -204,7 +204,7 @@ public class VehicleInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601AC0F RID: 109583 RVA: 0x00735F44 File Offset: 0x00734144
+	// Token: 0x06018624 RID: 99876 RVA: 0x0075BC28 File Offset: 0x00759E28
 	public override SInputCommand HandleHold(EInputAction action, float time)
 	{
 		if (this.BpInputComp == null)
@@ -246,145 +246,143 @@ public class VehicleInputLayer : InputLayer
 		}
 	}
 
-	// Token: 0x0601AC10 RID: 109584 RVA: 0x00736060 File Offset: 0x00734260
-	public override void DispatchPressEvent(EInputAction action, float time)
+	// Token: 0x06018625 RID: 99877 RVA: 0x0075BD44 File Offset: 0x00759F44
+	public override bool DispatchPressEvent(EInputAction action, float time)
 	{
 		if (this.BpInputComp == null)
 		{
-			return;
+			return false;
 		}
 		switch (action)
 		{
 		case 1:
 			this.BpInputComp.跳跃按下事件(time);
 			EventSystem.Instance.EmitWithTarget<EInputAction>(this, EEventName.VehicleInputLayerPress, action);
-			return;
+			break;
 		case 2:
 			this.BpInputComp.攀爬按下事件(time);
-			return;
+			break;
 		case 3:
 			this.BpInputComp.走跑切换按下事件(time);
-			return;
+			break;
 		case 4:
 			this.BpInputComp.攻击按下事件(time);
-			return;
+			break;
 		case 5:
 			this.BpInputComp.闪避按下事件(time);
-			return;
+			break;
 		case 6:
 			this.BpInputComp.技能1按下事件(time);
-			return;
+			break;
 		case 7:
 			this.BpInputComp.幻象1按下事件(time);
-			return;
+			break;
 		case 8:
 			this.BpInputComp.大招按下事件(time);
-			return;
+			break;
 		case 9:
 			this.BpInputComp.幻象2按下事件(time);
-			return;
+			break;
 		case 10:
 			this.BpInputComp.切换角色1按下事件(time);
-			return;
+			break;
 		case 11:
 			this.BpInputComp.切换角色2按下事件(time);
-			return;
+			break;
 		case 12:
 			this.BpInputComp.切换角色3按下事件(time);
-			return;
+			break;
 		case 13:
 			this.BpInputComp.锁定目标按下事件(time);
-			return;
+			break;
 		case 14:
 			this.BpInputComp.瞄准按下事件(time);
-			return;
-		default:
-			return;
+			break;
 		}
+		return true;
 	}
 
-	// Token: 0x0601AC11 RID: 109585 RVA: 0x00736188 File Offset: 0x00734388
-	public override void DispatchReleaseEvent(EInputAction action, float time)
+	// Token: 0x06018626 RID: 99878 RVA: 0x0075BE88 File Offset: 0x0075A088
+	public override bool DispatchReleaseEvent(EInputAction action, float time)
 	{
 		if (this.BpInputComp == null)
 		{
-			return;
+			return false;
 		}
 		switch (action)
 		{
 		case 1:
 			this.BpInputComp.跳跃抬起事件(time);
 			EventSystem.Instance.EmitWithTarget<EInputAction>(this, EEventName.VehicleInputLayerRelease, action);
-			return;
+			break;
 		case 2:
 			this.BpInputComp.攀爬抬起事件(time);
-			return;
+			break;
 		case 3:
 			this.BpInputComp.走跑切换抬起事件(time);
-			return;
+			break;
 		case 4:
 			this.BpInputComp.攻击抬起事件(time);
-			return;
+			break;
 		case 5:
 			this.BpInputComp.闪避抬起事件(time);
-			return;
+			break;
 		case 6:
 			this.BpInputComp.技能1抬起事件(time);
-			return;
+			break;
 		case 7:
 			this.BpInputComp.幻象1抬起事件(time);
-			return;
+			break;
 		case 8:
 			this.BpInputComp.大招抬起事件(time);
-			return;
+			break;
 		case 9:
 			this.BpInputComp.幻象2抬起事件(time);
-			return;
+			break;
 		case 10:
 			this.BpInputComp.切换角色1抬起事件(time);
-			return;
+			break;
 		case 11:
 			this.BpInputComp.切换角色2抬起事件(time);
-			return;
+			break;
 		case 12:
 			this.BpInputComp.切换角色3抬起事件(time);
-			return;
+			break;
 		case 13:
 			this.BpInputComp.锁定目标抬起事件(time);
-			return;
+			break;
 		case 14:
 			this.BpInputComp.瞄准抬起事件(time);
-			return;
-		default:
-			return;
+			break;
 		}
+		return true;
 	}
 
-	// Token: 0x0601AC12 RID: 109586 RVA: 0x007362AD File Offset: 0x007344AD
+	// Token: 0x06018627 RID: 99879 RVA: 0x0075BFCC File Offset: 0x0075A1CC
 	public override BP_InputBase_C GetBpInputComp()
 	{
 		return this.BpInputComp;
 	}
 
-	// Token: 0x0601AC13 RID: 109587 RVA: 0x007362B5 File Offset: 0x007344B5
+	// Token: 0x06018628 RID: 99880 RVA: 0x0075BFD4 File Offset: 0x0075A1D4
 	public void SetBpInputComp(BP_InputBase_C bpInputComp)
 	{
 		this.BpInputComp = bpInputComp;
 	}
 
-	// Token: 0x0601AC14 RID: 109588 RVA: 0x007362BE File Offset: 0x007344BE
+	// Token: 0x06018629 RID: 99881 RVA: 0x0075BFDD File Offset: 0x0075A1DD
 	public void ResetBpInputComp()
 	{
 		this.BpInputComp = this.BpInputCompOrigin;
 	}
 
-	// Token: 0x0400CE84 RID: 52868
+	// Token: 0x0400D274 RID: 53876
 	[Nullable(1)]
 	private const string NPC_VEHICLE_INPUT_CLASS_PATH = "/Game/Aki/Character/NPC/BP_InputComponent_NpcVehicle.BP_InputComponent_NpcVehicle_C";
 
-	// Token: 0x0400CE85 RID: 52869
+	// Token: 0x0400D275 RID: 53877
 	private BP_InputBase_C BpInputComp;
 
-	// Token: 0x0400CE86 RID: 52870
+	// Token: 0x0400D276 RID: 53878
 	private BP_InputBase_C BpInputCompOrigin;
 }

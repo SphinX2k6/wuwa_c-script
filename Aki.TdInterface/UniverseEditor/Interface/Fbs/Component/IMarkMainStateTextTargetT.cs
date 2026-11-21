@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200551F RID: 21791
+	// Token: 0x02005AA5 RID: 23205
 	public class IMarkMainStateTextTargetT
 	{
-		// Token: 0x1700A0D9 RID: 41177
-		// (get) Token: 0x06023FDF RID: 147423 RVA: 0x004F9451 File Offset: 0x004F7651
-		// (set) Token: 0x06023FE0 RID: 147424 RVA: 0x004F9459 File Offset: 0x004F7659
+		// Token: 0x1700A913 RID: 43283
+		// (get) Token: 0x06026099 RID: 155801 RVA: 0x00536575 File Offset: 0x00534775
+		// (set) Token: 0x0602609A RID: 155802 RVA: 0x0053657D File Offset: 0x0053477D
 		public string TidTargetName { get; set; }
 
-		// Token: 0x06023FE1 RID: 147425 RVA: 0x004F9462 File Offset: 0x004F7662
+		// Token: 0x0602609B RID: 155803 RVA: 0x00536586 File Offset: 0x00534786
 		public IMarkMainStateTextTargetT()
 		{
 			this.TidTargetName = null;

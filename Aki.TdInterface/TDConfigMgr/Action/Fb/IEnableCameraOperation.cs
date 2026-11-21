@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200294A RID: 10570
+	// Token: 0x02002C2C RID: 11308
 	public class IEnableCameraOperation : ICameraOperationType
 	{
-		// Token: 0x0600EA6F RID: 60015 RVA: 0x00225562 File Offset: 0x00223762
-		[NullableContext(1)]
+		// Token: 0x0600F8DA RID: 63706 RVA: 0x00242B42 File Offset: 0x00240D42
 		public static IEnableCameraOperation Create(IEnableCameraOperation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700499D RID: 18845
-		// (get) Token: 0x0600EA70 RID: 60016 RVA: 0x00225581 File Offset: 0x00223781
+		// Token: 0x17004D30 RID: 19760
+		// (get) Token: 0x0600F8DB RID: 63707 RVA: 0x00242B61 File Offset: 0x00240D61
 		public override ECameraOperationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400813A RID: 33082
+		// Token: 0x04008816 RID: 34838
 		private IEnableCameraOperation Instance;
 	}
 }

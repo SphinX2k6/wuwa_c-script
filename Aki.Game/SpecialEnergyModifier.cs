@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002F55 RID: 12117
+// Token: 0x020024A8 RID: 9384
 [NullableContext(1)]
 [Nullable(0)]
 public class SpecialEnergyModifier : BuffEffect
 {
-	// Token: 0x06019C9D RID: 105629 RVA: 0x006B993B File Offset: 0x006B7B3B
+	// Token: 0x060175A8 RID: 95656 RVA: 0x006DFC57 File Offset: 0x006DDE57
 	public SpecialEnergyModifier(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C9E RID: 105630 RVA: 0x006B994C File Offset: 0x006B7B4C
+	// Token: 0x060175A9 RID: 95657 RVA: 0x006DFC68 File Offset: 0x006DDE68
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -30,17 +30,17 @@ public class SpecialEnergyModifier : BuffEffect
 		this.Percent = AbilityUtils.GetLevelValue<float>(parameters.ExtraEffectGrowParameters1, this.Level, 0f);
 	}
 
-	// Token: 0x06019C9F RID: 105631 RVA: 0x006B99BD File Offset: 0x006B7BBD
+	// Token: 0x060175AA RID: 95658 RVA: 0x006DFCD9 File Offset: 0x006DDED9
 	public override void OnCreated()
 	{
 	}
 
-	// Token: 0x06019CA0 RID: 105632 RVA: 0x006B99BF File Offset: 0x006B7BBF
+	// Token: 0x060175AB RID: 95659 RVA: 0x006DFCDB File Offset: 0x006DDEDB
 	public override void OnRemoved(bool bPremature)
 	{
 	}
 
-	// Token: 0x06019CA1 RID: 105633 RVA: 0x006B99C4 File Offset: 0x006B7BC4
+	// Token: 0x060175AC RID: 95660 RVA: 0x006DFCE0 File Offset: 0x006DDEE0
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
@@ -58,7 +58,7 @@ public class SpecialEnergyModifier : BuffEffect
 		return percent * (float)((buff != null) ? buff.StackCount : 1);
 	}
 
-	// Token: 0x06019CA2 RID: 105634 RVA: 0x006B9A2C File Offset: 0x006B7C2C
+	// Token: 0x060175AD RID: 95661 RVA: 0x006DFD48 File Offset: 0x006DDF48
 	public override string GetDebugEffectString()
 	{
 		if (this.ModifyEnergy != null)
@@ -73,7 +73,7 @@ public class SpecialEnergyModifier : BuffEffect
 		return "";
 	}
 
-	// Token: 0x06019CA3 RID: 105635 RVA: 0x006B9A94 File Offset: 0x006B7C94
+	// Token: 0x060175AE RID: 95662 RVA: 0x006DFDB0 File Offset: 0x006DDFB0
 	public static float ApplyEffects([Nullable(2)] Entity attacker, BaseBuffComponent buffComp, EAttributeType attrId, RequirementPayload requirements)
 	{
 		CharacterBuffComponent characterBuffComponent = (attacker != null) ? attacker.GetComponent<CharacterBuffComponent>() : null;
@@ -117,10 +117,10 @@ public class SpecialEnergyModifier : BuffEffect
 		return num;
 	}
 
-	// Token: 0x0400C26B RID: 49771
+	// Token: 0x0400C60D RID: 50701
 	[Nullable(2)]
 	protected HashSet<int> ModifyEnergy;
 
-	// Token: 0x0400C26C RID: 49772
+	// Token: 0x0400C60E RID: 50702
 	protected float Percent;
 }

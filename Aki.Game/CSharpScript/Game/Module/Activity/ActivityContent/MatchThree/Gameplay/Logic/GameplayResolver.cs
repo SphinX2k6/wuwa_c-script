@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logic
 {
-	// Token: 0x020064F3 RID: 25843
+	// Token: 0x02005471 RID: 21617
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GameplayResolver
 	{
-		// Token: 0x170094EC RID: 38124
-		// (get) Token: 0x06040E01 RID: 265729 RVA: 0x00FB900E File Offset: 0x00FB720E
+		// Token: 0x1700684E RID: 26702
+		// (get) Token: 0x06035AC5 RID: 219845 RVA: 0x00F0003E File Offset: 0x00EFE23E
 		public Board Board { get; }
 
-		// Token: 0x170094ED RID: 38125
-		// (get) Token: 0x06040E02 RID: 265730 RVA: 0x00FB9016 File Offset: 0x00FB7216
+		// Token: 0x1700684F RID: 26703
+		// (get) Token: 0x06035AC6 RID: 219846 RVA: 0x00F00046 File Offset: 0x00EFE246
 		public bool IsAborted
 		{
 			get
@@ -29,8 +29,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x170094EE RID: 38126
-		// (get) Token: 0x06040E03 RID: 265731 RVA: 0x00FB901E File Offset: 0x00FB721E
+		// Token: 0x17006850 RID: 26704
+		// (get) Token: 0x06035AC7 RID: 219847 RVA: 0x00F0004E File Offset: 0x00EFE24E
 		public bool IsDeadlocked
 		{
 			get
@@ -39,8 +39,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x170094EF RID: 38127
-		// (get) Token: 0x06040E04 RID: 265732 RVA: 0x00FB9026 File Offset: 0x00FB7226
+		// Token: 0x17006851 RID: 26705
+		// (get) Token: 0x06035AC8 RID: 219848 RVA: 0x00F00056 File Offset: 0x00EFE256
 		public IReadOnlyList<ValidMove> LastValidMoves
 		{
 			get
@@ -49,8 +49,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x170094F0 RID: 38128
-		// (get) Token: 0x06040E05 RID: 265733 RVA: 0x00FB902E File Offset: 0x00FB722E
+		// Token: 0x17006852 RID: 26706
+		// (get) Token: 0x06035AC9 RID: 219849 RVA: 0x00F0005E File Offset: 0x00EFE25E
 		public int CurrentRound
 		{
 			get
@@ -59,8 +59,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x170094F1 RID: 38129
-		// (get) Token: 0x06040E06 RID: 265734 RVA: 0x00FB9036 File Offset: 0x00FB7236
+		// Token: 0x17006853 RID: 26707
+		// (get) Token: 0x06035ACA RID: 219850 RVA: 0x00F00066 File Offset: 0x00EFE266
 		public IReadOnlyList<LevelMechanic> LevelMechanics
 		{
 			get
@@ -69,8 +69,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x170094F2 RID: 38130
-		// (get) Token: 0x06040E07 RID: 265735 RVA: 0x00FB903E File Offset: 0x00FB723E
+		// Token: 0x17006854 RID: 26708
+		// (get) Token: 0x06035ACB RID: 219851 RVA: 0x00F0006E File Offset: 0x00EFE26E
 		public int CurrentEnergy
 		{
 			get
@@ -79,8 +79,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x170094F3 RID: 38131
-		// (get) Token: 0x06040E08 RID: 265736 RVA: 0x00FB904B File Offset: 0x00FB724B
+		// Token: 0x17006855 RID: 26709
+		// (get) Token: 0x06035ACC RID: 219852 RVA: 0x00F0007B File Offset: 0x00EFE27B
 		public int FullEnergy
 		{
 			get
@@ -89,13 +89,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E09 RID: 265737 RVA: 0x00FB9058 File Offset: 0x00FB7258
+		// Token: 0x06035ACD RID: 219853 RVA: 0x00F00088 File Offset: 0x00EFE288
 		public void CollectSkillPoints(List<SkillPointDisplayData> buffer, int displayEnergy)
 		{
 			this.SkillRunner.CollectDisplays(buffer, displayEnergy);
 		}
 
-		// Token: 0x06040E0A RID: 265738 RVA: 0x00FB9068 File Offset: 0x00FB7268
+		// Token: 0x06035ACE RID: 219854 RVA: 0x00F00098 File Offset: 0x00EFE298
 		public GameplayResolver(Board board, List<ISkill> skills, List<ISolvedSequencesConsumer> consumers, IReadOnlyList<LevelMechanic> mechanics, int exchangeEnergy, [Nullable(2)] int[] fillRuleIds, GameRandom rng, MatchThreeStatsKeeper stats)
 		{
 			this.Board = board;
@@ -113,31 +113,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.Stats = stats;
 		}
 
-		// Token: 0x06040E0B RID: 265739 RVA: 0x00FB915D File Offset: 0x00FB735D
+		// Token: 0x06035ACF RID: 219855 RVA: 0x00F0018D File Offset: 0x00EFE38D
 		public void BindPresenter(IMatchThreePresentation presenter)
 		{
 			this.Player.BindPresenter(presenter);
 		}
 
-		// Token: 0x06040E0C RID: 265740 RVA: 0x00FB916B File Offset: 0x00FB736B
+		// Token: 0x06035AD0 RID: 219856 RVA: 0x00F0019B File Offset: 0x00EFE39B
 		public void MutePresentation(bool muted)
 		{
 			this.Player.Muted = muted;
 		}
 
-		// Token: 0x06040E0D RID: 265741 RVA: 0x00FB9179 File Offset: 0x00FB7379
+		// Token: 0x06035AD1 RID: 219857 RVA: 0x00F001A9 File Offset: 0x00EFE3A9
 		public void RefreshValidMove()
 		{
 			this.Detector.CollectValidMoves(this.Board, this.ValidMoves);
 		}
 
-		// Token: 0x06040E0E RID: 265742 RVA: 0x00FB9192 File Offset: 0x00FB7392
+		// Token: 0x06035AD2 RID: 219858 RVA: 0x00F001C2 File Offset: 0x00EFE3C2
 		public void AbortResolve()
 		{
 			this.Aborted = true;
 		}
 
-		// Token: 0x06040E0F RID: 265743 RVA: 0x00FB919C File Offset: 0x00FB739C
+		// Token: 0x06035AD3 RID: 219859 RVA: 0x00F001CC File Offset: 0x00EFE3CC
 		public void Reset()
 		{
 			this.Aborted = false;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.FillStrategy.Reset();
 		}
 
-		// Token: 0x06040E10 RID: 265744 RVA: 0x00FB91EC File Offset: 0x00FB73EC
+		// Token: 0x06035AD4 RID: 219860 RVA: 0x00F0021C File Offset: 0x00EFE41C
 		[NullableContext(0)]
 		public UniTask<int?> RunExchangeAsync(GridPosition a, GridPosition b)
 		{
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return <RunExchangeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040E11 RID: 265745 RVA: 0x00FB9240 File Offset: 0x00FB7440
+		// Token: 0x06035AD5 RID: 219861 RVA: 0x00F00270 File Offset: 0x00EFE470
 		[NullableContext(2)]
 		public ResolveContext BeginExchange(GridPosition a, GridPosition b)
 		{
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return resolveContext;
 		}
 
-		// Token: 0x06040E12 RID: 265746 RVA: 0x00FB955C File Offset: 0x00FB775C
+		// Token: 0x06035AD6 RID: 219862 RVA: 0x00F0058C File Offset: 0x00EFE78C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.CascadeResolver.ResolveMatchedSwapEffect(ctx.Solved, item, swapEffectPosition, item2, otherPosition, b, a);
 		}
 
-		// Token: 0x06040E13 RID: 265747 RVA: 0x00FB9624 File Offset: 0x00FB7824
+		// Token: 0x06035AD7 RID: 219863 RVA: 0x00F00654 File Offset: 0x00EFE854
 		private void RegisterExchangedLandedPiece(ResolveContext ctx, GridPosition target, Piece piece)
 		{
 			int num = 6;
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			ctx.PendingLandedCols.Add(target.Col);
 		}
 
-		// Token: 0x06040E14 RID: 265748 RVA: 0x00FB966C File Offset: 0x00FB786C
+		// Token: 0x06035AD8 RID: 219864 RVA: 0x00F0069C File Offset: 0x00EFE89C
 		private void ConfigureRecycleTracking(SolvedData solved)
 		{
 			for (int i = 0; i < this.Mechanics.Count; i++)
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E15 RID: 265749 RVA: 0x00FB96D4 File Offset: 0x00FB78D4
+		// Token: 0x06035AD9 RID: 219865 RVA: 0x00F00704 File Offset: 0x00EFE904
 		private static void RewriteCentersToSwap(List<ItemSequence> sequences, GridPosition a, GridPosition b)
 		{
 			int i = 0;
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E16 RID: 265750 RVA: 0x00FB9764 File Offset: 0x00FB7964
+		// Token: 0x06035ADA RID: 219866 RVA: 0x00F00794 File Offset: 0x00EFE994
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -489,7 +489,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return null;
 		}
 
-		// Token: 0x06040E17 RID: 265751 RVA: 0x00FB9B1F File Offset: 0x00FB7D1F
+		// Token: 0x06035ADB RID: 219867 RVA: 0x00F00B4F File Offset: 0x00EFED4F
 		private static void AdvanceOrDrain(ResolveContext ctx, EResolvePhase next)
 		{
 			if (ctx.PendingLandedCols.Count > 0)
@@ -501,7 +501,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			ctx.Phase = next;
 		}
 
-		// Token: 0x06040E18 RID: 265752 RVA: 0x00FB9B48 File Offset: 0x00FB7D48
+		// Token: 0x06035ADC RID: 219868 RVA: 0x00F00B78 File Offset: 0x00EFED78
 		private UniTask DriveAsync(ResolveContext ctx)
 		{
 			GameplayResolver.<DriveAsync>d__55 <DriveAsync>d__;
@@ -513,7 +513,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return <DriveAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040E19 RID: 265753 RVA: 0x00FB9B94 File Offset: 0x00FB7D94
+		// Token: 0x06035ADD RID: 219869 RVA: 0x00F00BC4 File Offset: 0x00EFEDC4
 		private void NotifyConsumers(ResolveContext ctx)
 		{
 			ctx.EliminationSegments++;
@@ -528,76 +528,76 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x04021CFE RID: 138494
+		// Token: 0x0401C62F RID: 116271
 		private readonly SequenceDetector Detector;
 
-		// Token: 0x04021CFF RID: 138495
+		// Token: 0x0401C630 RID: 116272
 		private readonly CascadeResolver CascadeResolver;
 
-		// Token: 0x04021D00 RID: 138496
+		// Token: 0x0401C631 RID: 116273
 		private readonly SkillRunner SkillRunner;
 
-		// Token: 0x04021D01 RID: 138497
+		// Token: 0x0401C632 RID: 116274
 		private readonly Reshuffler Reshuffler;
 
-		// Token: 0x04021D02 RID: 138498
+		// Token: 0x0401C633 RID: 116275
 		private readonly JobsPlayer Player;
 
-		// Token: 0x04021D03 RID: 138499
+		// Token: 0x0401C634 RID: 116276
 		private readonly EnergyPool Energy;
 
-		// Token: 0x04021D04 RID: 138500
+		// Token: 0x0401C635 RID: 116277
 		private readonly BoardFillStrategy FillStrategy;
 
-		// Token: 0x04021D05 RID: 138501
+		// Token: 0x0401C636 RID: 116278
 		private readonly List<ISolvedSequencesConsumer> Consumers;
 
-		// Token: 0x04021D06 RID: 138502
+		// Token: 0x0401C637 RID: 116279
 		private readonly MatchThreeStatsKeeper Stats;
 
-		// Token: 0x04021D07 RID: 138503
+		// Token: 0x0401C638 RID: 116280
 		private readonly IReadOnlyList<LevelMechanic> Mechanics;
 
-		// Token: 0x04021D08 RID: 138504
+		// Token: 0x0401C639 RID: 116281
 		private readonly int ExchangeEnergy;
 
-		// Token: 0x04021D09 RID: 138505
+		// Token: 0x0401C63A RID: 116282
 		private int Round;
 
-		// Token: 0x04021D0A RID: 138506
+		// Token: 0x0401C63B RID: 116283
 		private bool Aborted;
 
-		// Token: 0x04021D0B RID: 138507
+		// Token: 0x0401C63C RID: 116284
 		private bool Deadlocked;
 
-		// Token: 0x04021D0C RID: 138508
+		// Token: 0x0401C63D RID: 116285
 		private readonly List<ValidMove> ValidMoves = new List<ValidMove>();
 
-		// Token: 0x04021D0D RID: 138509
+		// Token: 0x0401C63E RID: 116286
 		[Nullable(2)]
 		public Action<int> OnSegmentPlay;
 
-		// Token: 0x04021D0E RID: 138510
+		// Token: 0x0401C63F RID: 116287
 		[Nullable(2)]
 		public Func<bool> AllGoalsAchieved;
 
-		// Token: 0x04021D0F RID: 138511
+		// Token: 0x0401C640 RID: 116288
 		[Nullable(2)]
 		public Func<int, bool> IsFinalTurn;
 
-		// Token: 0x04021D10 RID: 138512
+		// Token: 0x0401C641 RID: 116289
 		private readonly List<ItemSequence> SwapBuffer = new List<ItemSequence>();
 
-		// Token: 0x04021D11 RID: 138513
+		// Token: 0x0401C642 RID: 116290
 		private readonly HashSet<int> SwapCols = new HashSet<int>();
 
-		// Token: 0x04021D12 RID: 138514
+		// Token: 0x0401C643 RID: 116291
 		private readonly SwapJob SwapJob = new SwapJob();
 
-		// Token: 0x04021D13 RID: 138515
+		// Token: 0x0401C644 RID: 116292
 		private readonly SwapFailJob SwapFailJob = new SwapFailJob();
 
-		// Token: 0x04021D14 RID: 138516
+		// Token: 0x0401C645 RID: 116293
 		private readonly List<IJob> FirstJobs = new List<IJob>();
 	}
 }

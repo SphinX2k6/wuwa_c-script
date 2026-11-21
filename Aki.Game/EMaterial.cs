@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002FAC RID: 12204
+// Token: 0x02002500 RID: 9472
 public enum EMaterial
 {
-	// Token: 0x0400C3B3 RID: 50099
+	// Token: 0x0400C75C RID: 51036
 	Other,
-	// Token: 0x0400C3B4 RID: 50100
+	// Token: 0x0400C75D RID: 51037
 	Data,
-	// Token: 0x0400C3B5 RID: 50101
+	// Token: 0x0400C75E RID: 51038
 	DataGroup
 }

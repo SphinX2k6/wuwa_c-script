@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x0200235B RID: 9051
+// Token: 0x02001840 RID: 6208
 [NullableContext(1)]
 [Nullable(0)]
 public class PayShopRecommendData
 {
-	// Token: 0x060120AE RID: 73902 RVA: 0x0046D2B0 File Offset: 0x0046B4B0
+	// Token: 0x0600F55E RID: 62814 RVA: 0x0047A370 File Offset: 0x00478570
 	public void Phrase(PayShopRecommendConfigInfo info)
 	{
 		this.Id = info.Id;
@@ -20,27 +20,27 @@ public class PayShopRecommendData
 		this.TabImage = info.TabImage;
 	}
 
-	// Token: 0x04008869 RID: 34921
+	// Token: 0x040089AE RID: 35246
 	public int Id;
 
-	// Token: 0x0400886A RID: 34922
+	// Token: 0x040089AF RID: 35247
 	public int RecommendType;
 
-	// Token: 0x0400886B RID: 34923
+	// Token: 0x040089B0 RID: 35248
 	public int RecommendId;
 
-	// Token: 0x0400886C RID: 34924
+	// Token: 0x040089B1 RID: 35249
 	public string TabName = "";
 
-	// Token: 0x0400886D RID: 34925
+	// Token: 0x040089B2 RID: 35250
 	public string PrefabPath = "";
 
-	// Token: 0x0400886E RID: 34926
+	// Token: 0x040089B3 RID: 35251
 	public int Sort;
 
-	// Token: 0x0400886F RID: 34927
+	// Token: 0x040089B4 RID: 35252
 	public bool Show = true;
 
-	// Token: 0x04008870 RID: 34928
+	// Token: 0x040089B5 RID: 35253
 	public string TabImage = "";
 }

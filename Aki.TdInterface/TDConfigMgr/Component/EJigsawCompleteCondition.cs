@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000CB RID: 203
+	// Token: 0x020000D3 RID: 211
 	[EnumExtensions]
 	public enum EJigsawCompleteCondition
 	{
-		// Token: 0x04000474 RID: 1140
+		// Token: 0x04000498 RID: 1176
 		ActivateAllCorrectPiece,
-		// Token: 0x04000475 RID: 1141
+		// Token: 0x04000499 RID: 1177
 		ActivateSpecifiedPiece,
-		// Token: 0x04000476 RID: 1142
+		// Token: 0x0400049A RID: 1178
 		PutInTheSpecifiedPiece,
-		// Token: 0x04000477 RID: 1143
+		// Token: 0x0400049B RID: 1179
 		ActivateRenjuPiece
 	}
 }

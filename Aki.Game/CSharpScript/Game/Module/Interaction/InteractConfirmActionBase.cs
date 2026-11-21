@@ -4,49 +4,49 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x0200584F RID: 22607
+	// Token: 0x02004827 RID: 18471
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class InteractConfirmActionBase
 	{
-		// Token: 0x06039774 RID: 235380 RVA: 0x00DA4550 File Offset: 0x00DA2750
+		// Token: 0x0602E690 RID: 190096 RVA: 0x00CF3210 File Offset: 0x00CF1410
 		public bool Execute(InteractSecondConfirmContext context)
 		{
 			this.Context = context;
 			return this.OnExecute(context);
 		}
 
-		// Token: 0x06039775 RID: 235381 RVA: 0x00DA4560 File Offset: 0x00DA2760
+		// Token: 0x0602E691 RID: 190097 RVA: 0x00CF3220 File Offset: 0x00CF1420
 		public void Cancel()
 		{
 			this.OnCancel();
 			this.Clear();
 		}
 
-		// Token: 0x06039776 RID: 235382 RVA: 0x00DA456E File Offset: 0x00DA276E
+		// Token: 0x0602E692 RID: 190098 RVA: 0x00CF322E File Offset: 0x00CF142E
 		public void Clear()
 		{
 			this.Context = null;
 			this.OnClear();
 		}
 
-		// Token: 0x06039777 RID: 235383 RVA: 0x00DA457D File Offset: 0x00DA277D
+		// Token: 0x0602E693 RID: 190099 RVA: 0x00CF323D File Offset: 0x00CF143D
 		protected virtual bool OnExecute(InteractSecondConfirmContext context)
 		{
 			return true;
 		}
 
-		// Token: 0x06039778 RID: 235384 RVA: 0x00DA4580 File Offset: 0x00DA2780
+		// Token: 0x0602E694 RID: 190100 RVA: 0x00CF3240 File Offset: 0x00CF1440
 		protected virtual void OnCancel()
 		{
 		}
 
-		// Token: 0x06039779 RID: 235385 RVA: 0x00DA4582 File Offset: 0x00DA2782
+		// Token: 0x0602E695 RID: 190101 RVA: 0x00CF3242 File Offset: 0x00CF1442
 		protected virtual void OnClear()
 		{
 		}
 
-		// Token: 0x0603977A RID: 235386 RVA: 0x00DA4584 File Offset: 0x00DA2784
+		// Token: 0x0602E696 RID: 190102 RVA: 0x00CF3244 File Offset: 0x00CF1444
 		protected void ExecuteFinish(bool confirmResult)
 		{
 			if (this.Context == null)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.Clear();
 		}
 
-		// Token: 0x0401E0D9 RID: 123097
+		// Token: 0x04018B76 RID: 101238
 		[Nullable(2)]
 		protected InteractSecondConfirmContext Context;
 	}

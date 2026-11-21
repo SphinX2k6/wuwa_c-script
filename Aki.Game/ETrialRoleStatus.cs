@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020028E6 RID: 10470
+// Token: 0x02001E61 RID: 7777
 public enum ETrialRoleStatus
 {
-	// Token: 0x0400A0CE RID: 41166
+	// Token: 0x0400A4B8 RID: 42168
 	Locked,
-	// Token: 0x0400A0CF RID: 41167
+	// Token: 0x0400A4B9 RID: 42169
 	Unlocked
 }

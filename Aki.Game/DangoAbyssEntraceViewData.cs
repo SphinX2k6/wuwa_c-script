@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02001A33 RID: 6707
+// Token: 0x02000EF2 RID: 3826
 public class DangoAbyssEntraceViewData
 {
-	// Token: 0x04005AEC RID: 23276
+	// Token: 0x04005BBB RID: 23483
 	public int ActivityId;
 }

@@ -13,13 +13,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005327 RID: 21287
+	// Token: 0x020042F7 RID: 17143
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueResMapEntrancePanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x17008325 RID: 33573
-		// (get) Token: 0x060366E2 RID: 222946 RVA: 0x00CE2394 File Offset: 0x00CE0594
+		// Token: 0x170056E5 RID: 22245
+		// (get) Token: 0x0602B5DE RID: 177630 RVA: 0x00C2FD64 File Offset: 0x00C2DF64
 		private InstanceDungeonEntrance? EntranceConfig
 		{
 			get
@@ -33,20 +33,20 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x060366E3 RID: 222947 RVA: 0x00CE23EE File Offset: 0x00CE05EE
+		// Token: 0x0602B5DF RID: 177631 RVA: 0x00C2FDBE File Offset: 0x00C2DFBE
 		public override string GetResourceId()
 		{
 			return "UiView_InstanceEntranceTip_Prefab";
 		}
 
-		// Token: 0x060366E4 RID: 222948 RVA: 0x00CE23F5 File Offset: 0x00CE05F5
+		// Token: 0x0602B5E0 RID: 177632 RVA: 0x00C2FDC5 File Offset: 0x00C2DFC5
 		[NullableContext(2)]
 		public override UUIItem GetGuideFocusUiItem()
 		{
 			return base.GetButton(11).GetOwner().GetComponentByClass(UUIItem.StaticClass()) as UUIItem;
 		}
 
-		// Token: 0x060366E5 RID: 222949 RVA: 0x00CE2418 File Offset: 0x00CE0618
+		// Token: 0x0602B5E1 RID: 177633 RVA: 0x00C2FDE8 File Offset: 0x00C2DFE8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueResMapEntrancePanel.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060366E6 RID: 222950 RVA: 0x00CE245C File Offset: 0x00CE065C
+		// Token: 0x0602B5E2 RID: 177634 RVA: 0x00C2FE2C File Offset: 0x00C2E02C
 		protected override void OnStart()
 		{
 			UUIVerticalLayout verticalLayout = base.GetVerticalLayout(5);
@@ -69,14 +69,14 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			base.OnStart();
 		}
 
-		// Token: 0x060366E7 RID: 222951 RVA: 0x00CE24AD File Offset: 0x00CE06AD
+		// Token: 0x0602B5E3 RID: 177635 RVA: 0x00C2FE7D File Offset: 0x00C2E07D
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
 			base.GetItem(32).SetUIActive(false);
 		}
 
-		// Token: 0x060366E8 RID: 222952 RVA: 0x00CE24C3 File Offset: 0x00CE06C3
+		// Token: 0x0602B5E4 RID: 177636 RVA: 0x00C2FE93 File Offset: 0x00C2E093
 		protected override void OnBeforeDestroy()
 		{
 			this.InstanceCostTipView.ClearChildren();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x060366E9 RID: 222953 RVA: 0x00CE24F0 File Offset: 0x00CE06F0
+		// Token: 0x0602B5E5 RID: 177637 RVA: 0x00C2FEC0 File Offset: 0x00C2E0C0
 		protected ILayoutItem<InstanceDungeonCostTip> OnInstanceRefresh(object data, UUIItem uiItem, int index, int originalItemIndex)
 		{
 			InstanceDungeonCostTip instanceDungeonCostTip = new InstanceDungeonCostTip();
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x060366EA RID: 222954 RVA: 0x00CE2524 File Offset: 0x00CE0724
+		// Token: 0x0602B5E6 RID: 177638 RVA: 0x00C2FEF4 File Offset: 0x00C2E0F4
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x060366EB RID: 222955 RVA: 0x00CE263E File Offset: 0x00CE083E
+		// Token: 0x0602B5E7 RID: 177639 RVA: 0x00C3000E File Offset: 0x00C2E20E
 		protected override void OnCloseWorldMapSecondaryUi()
 		{
 			GenericLayoutAdd<InstanceDungeonCostTip> instanceCostTipView = this.InstanceCostTipView;
@@ -146,14 +146,14 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			instanceCostTipView.ClearChildren();
 		}
 
-		// Token: 0x060366EC RID: 222956 RVA: 0x00CE2650 File Offset: 0x00CE0850
+		// Token: 0x0602B5E8 RID: 177640 RVA: 0x00C30020 File Offset: 0x00C2E220
 		protected string GetRemainTime()
 		{
 			long endTime = MathUtils.Instance.LongToNumber(ActivityPermanentRogueModel.Instance.GetTaskEndTime());
 			return ActivityModel.Instance.GetRemainTimeText(endTime, this.RemainTimeText) ?? "";
 		}
 
-		// Token: 0x060366ED RID: 222957 RVA: 0x00CE268C File Offset: 0x00CE088C
+		// Token: 0x0602B5E9 RID: 177641 RVA: 0x00C3005C File Offset: 0x00C2E25C
 		private void InitView()
 		{
 			InstanceDungeonEntrance? entranceConfig = this.EntranceConfig;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			layoutContext.SetConfirmBtnActive(!flag);
 		}
 
-		// Token: 0x060366EE RID: 222958 RVA: 0x00CE275C File Offset: 0x00CE095C
+		// Token: 0x0602B5EA RID: 177642 RVA: 0x00C3012C File Offset: 0x00C2E32C
 		private void RefreshReward()
 		{
 			List<TItem> previewReward = ActivityPermanentRogueModel.Instance.GetActivityData().GetPreviewReward(null);
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.RewardsView.RebuildRewardsByData(list);
 		}
 
-		// Token: 0x060366EF RID: 222959 RVA: 0x00CE27F4 File Offset: 0x00CE09F4
+		// Token: 0x0602B5EB RID: 177643 RVA: 0x00C301C4 File Offset: 0x00C2E3C4
 		private void UpdateInstanceList()
 		{
 			this.RefreshReward();
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.RefreshShopProgressItem();
 		}
 
-		// Token: 0x060366F0 RID: 222960 RVA: 0x00CE2870 File Offset: 0x00CE0A70
+		// Token: 0x0602B5EC RID: 177644 RVA: 0x00C30240 File Offset: 0x00C2E440
 		private void RefreshTimeItem()
 		{
 			if (ActivityPermanentRogueModel.Instance.GetActivityData() != null)
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x060366F1 RID: 222961 RVA: 0x00CE292C File Offset: 0x00CE0B2C
+		// Token: 0x0602B5ED RID: 177645 RVA: 0x00C302FC File Offset: 0x00C2E4FC
 		private void RefreshInstItem()
 		{
 			if (ActivityPermanentRogueModel.Instance.GetActivityData() != null)
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x060366F2 RID: 222962 RVA: 0x00CE2A14 File Offset: 0x00CE0C14
+		// Token: 0x0602B5EE RID: 177646 RVA: 0x00C303E4 File Offset: 0x00C2E5E4
 		private void RefreshTaskItem()
 		{
 			if (ActivityPermanentRogueModel.Instance.GetActivityData() != null)
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x060366F3 RID: 222963 RVA: 0x00CE2B00 File Offset: 0x00CE0D00
+		// Token: 0x0602B5EF RID: 177647 RVA: 0x00C304D0 File Offset: 0x00C2E6D0
 		private void RefreshShopProgressItem()
 		{
 			if (ActivityPermanentRogueModel.Instance.GetActivityData() != null)
@@ -338,18 +338,18 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x0401CC65 RID: 117861
+		// Token: 0x0401769B RID: 95899
 		[Nullable(2)]
 		protected RewardItemBar RewardsView;
 
-		// Token: 0x0401CC66 RID: 117862
+		// Token: 0x0401769C RID: 95900
 		private int EntranceId;
 
-		// Token: 0x0401CC67 RID: 117863
+		// Token: 0x0401769D RID: 95901
 		[Nullable(2)]
 		private TeleportMarkItem SelectedMarkItem;
 
-		// Token: 0x0401CC68 RID: 117864
+		// Token: 0x0401769E RID: 95902
 		[Nullable(new byte[]
 		{
 			2,
@@ -357,23 +357,23 @@ namespace CSharpScript.Game.Module.PermanentRogue
 		})]
 		private GenericLayoutAdd<InstanceDungeonCostTip> InstanceCostTipView;
 
-		// Token: 0x0401CC69 RID: 117865
+		// Token: 0x0401769F RID: 95903
 		[Nullable(2)]
 		private TimerHandle TimerId;
 
-		// Token: 0x0401CC6A RID: 117866
+		// Token: 0x040176A0 RID: 95904
 		private readonly string RemainTimeText = "{0}";
 
-		// Token: 0x0401CC6B RID: 117867
+		// Token: 0x040176A1 RID: 95905
 		private const string ROGUE_SCORE_KEY = "rougeScore";
 
-		// Token: 0x0401CC6C RID: 117868
+		// Token: 0x040176A2 RID: 95906
 		private const string ROGUE_TASK = "rougeTask";
 
-		// Token: 0x0401CC6D RID: 117869
+		// Token: 0x040176A3 RID: 95907
 		private const string ROGUE_PROGRESS = "rougeProgress";
 
-		// Token: 0x0401CC6E RID: 117870
+		// Token: 0x040176A4 RID: 95908
 		private const string ROGUE_TIME = "rogueTime";
 	}
 }

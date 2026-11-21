@@ -18,13 +18,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook
 {
-	// Token: 0x02005AFB RID: 23291
+	// Token: 0x02004ADC RID: 19164
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CookingIngredientsVerticalView : UiPanelBase
 	{
-		// Token: 0x17008C38 RID: 35896
-		// (get) Token: 0x0603AF46 RID: 241478 RVA: 0x00E0E73B File Offset: 0x00E0C93B
+		// Token: 0x17006012 RID: 24594
+		// (get) Token: 0x0602FEB8 RID: 196280 RVA: 0x00D5F42F File Offset: 0x00D5D62F
 		public int CurrentSetCount
 		{
 			get
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Cook
 			}
 		}
 
-		// Token: 0x0603AF47 RID: 241479 RVA: 0x00E0E744 File Offset: 0x00E0C944
+		// Token: 0x0602FEB9 RID: 196281 RVA: 0x00D5F438 File Offset: 0x00D5D638
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 22;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Cook
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x0603AF48 RID: 241480 RVA: 0x00E0EA60 File Offset: 0x00E0CC60
+		// Token: 0x0602FEBA RID: 196282 RVA: 0x00D5F754 File Offset: 0x00D5D954
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CookingIngredientsVerticalView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Cook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AF49 RID: 241481 RVA: 0x00E0EAA4 File Offset: 0x00E0CCA4
+		// Token: 0x0602FEBB RID: 196283 RVA: 0x00D5F798 File Offset: 0x00D5D998
 		protected override void OnStart()
 		{
 			base.GetItem(18).SetUIActive(false);
@@ -127,11 +127,11 @@ namespace CSharpScript.Game.Module.Cook
 			this.UnlockMaterialComponent.BindOnExtendToggleClicked(delegate(MediumItemGridExtendCallback callbackParameter)
 			{
 				int itemId = (int)callbackParameter.Data;
-				ItemController.Instance.OpenItemTipsByItemId(itemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(itemId, true, null, false);
 			});
 		}
 
-		// Token: 0x0603AF4A RID: 241482 RVA: 0x00E0EC02 File Offset: 0x00E0CE02
+		// Token: 0x0602FEBC RID: 196284 RVA: 0x00D5F8F6 File Offset: 0x00D5DAF6
 		protected override void OnBeforeDestroy()
 		{
 			this.SvInfoView = null;
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Cook
 			this.OnChangeMaterialSelectionDelegate = null;
 		}
 
-		// Token: 0x0603AF4B RID: 241483 RVA: 0x00E0EC1C File Offset: 0x00E0CE1C
+		// Token: 0x0602FEBD RID: 196285 RVA: 0x00D5F910 File Offset: 0x00D5DB10
 		private ManufactureMaterialItem OnMaterialItemCreate()
 		{
 			ManufactureMaterialItem manufactureMaterialItem = new ManufactureMaterialItem();
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Cook
 				ISingleItemInfo singleItemInfo = callbackParameter.Data as ISingleItemInfo;
 				if (singleItemInfo.Proto_IsUnlock)
 				{
-					ItemController.Instance.OpenItemTipsByItemId(singleItemInfo.Proto_ItemId, true, null);
+					ItemController.Instance.OpenItemTipsByItemId(singleItemInfo.Proto_ItemId, true, null, false);
 					return;
 				}
 				ScrollingTipsController.Instance.ShowTipsById("ItemSelectCookUnlockTip", Array.Empty<object>());
@@ -157,13 +157,13 @@ namespace CSharpScript.Game.Module.Cook
 			return manufactureMaterialItem;
 		}
 
-		// Token: 0x0603AF4C RID: 241484 RVA: 0x00E0EC78 File Offset: 0x00E0CE78
+		// Token: 0x0602FEBE RID: 196286 RVA: 0x00D5F96C File Offset: 0x00D5DB6C
 		private void OnClickChangeRole()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.OpenCookRole, this.ItemData.ItemId);
 		}
 
-		// Token: 0x0603AF4D RID: 241485 RVA: 0x00E0EC98 File Offset: 0x00E0CE98
+		// Token: 0x0602FEBF RID: 196287 RVA: 0x00D5F98C File Offset: 0x00D5DB8C
 		private void SetSum(int sum)
 		{
 			this.Count = sum;
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.Cook
 			}
 		}
 
-		// Token: 0x0603AF4E RID: 241486 RVA: 0x00E0ED4C File Offset: 0x00E0CF4C
+		// Token: 0x0602FEC0 RID: 196288 RVA: 0x00D5FA40 File Offset: 0x00D5DC40
 		private bool CheckDataValid(object itemData)
 		{
 			if (itemData == null)
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Cook
 			return true;
 		}
 
-		// Token: 0x0603AF4F RID: 241487 RVA: 0x00E0ED80 File Offset: 0x00E0CF80
+		// Token: 0x0602FEC1 RID: 196289 RVA: 0x00D5FA74 File Offset: 0x00D5DC74
 		private void SetRecommendedRoleTexture(ICookingData itemData)
 		{
 			if (!this.CheckDataValid(itemData))
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.Cook
 			this.ProficiencyViewComponent.SetRoleTexture(currentCookRoleId.Value, itemData.ItemId);
 		}
 
-		// Token: 0x0603AF50 RID: 241488 RVA: 0x00E0EDE8 File Offset: 0x00E0CFE8
+		// Token: 0x0602FEC2 RID: 196290 RVA: 0x00D5FADC File Offset: 0x00D5DCDC
 		private void RefreshMaterialNeedNum()
 		{
 			this.RefreshCost(this.HasCoin, this.SingleNeedCoinCount * this.Count);
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Module.Cook
 			}
 		}
 
-		// Token: 0x0603AF51 RID: 241489 RVA: 0x00E0EE6C File Offset: 0x00E0D06C
+		// Token: 0x0602FEC3 RID: 196291 RVA: 0x00D5FB60 File Offset: 0x00D5DD60
 		private void SetTypeName(string tag, ECookListType cookType)
 		{
 			string textById = TextConfig.Instance.GetTextById(tag);
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.Cook
 			this.ProficiencyViewComponent.SetTypeContent(null);
 		}
 
-		// Token: 0x0603AF52 RID: 241490 RVA: 0x00E0EED8 File Offset: 0x00E0D0D8
+		// Token: 0x0602FEC4 RID: 196292 RVA: 0x00D5FBCC File Offset: 0x00D5DDCC
 		private void RefreshLimitTime(ICookingData itemData)
 		{
 			if (itemData.ExistEndTime <= 0.0)
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.Cook
 			base.GetText(25).SetText(remainTimeDataFormat.CountDownText, true);
 		}
 
-		// Token: 0x0603AF53 RID: 241491 RVA: 0x00E0EF50 File Offset: 0x00E0D150
+		// Token: 0x0602FEC5 RID: 196293 RVA: 0x00D5FC44 File Offset: 0x00D5DE44
 		[NullableContext(2)]
 		private void RefreshLimitCount(ICookingData itemData = null)
 		{
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.Module.Cook
 			}));
 		}
 
-		// Token: 0x0603AF54 RID: 241492 RVA: 0x00E0F008 File Offset: 0x00E0D208
+		// Token: 0x0602FEC6 RID: 196294 RVA: 0x00D5FCFC File Offset: 0x00D5DEFC
 		private void RefreshCost(bool hasCoin, int count)
 		{
 			base.GetText(12).GetParentAsUIItem().SetUIActive(hasCoin);
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Module.Cook
 			}
 		}
 
-		// Token: 0x0603AF55 RID: 241493 RVA: 0x00E0F0C4 File Offset: 0x00E0D2C4
+		// Token: 0x0602FEC7 RID: 196295 RVA: 0x00D5FDB8 File Offset: 0x00D5DFB8
 		public void RefreshProficiency(ICookingData data, int times)
 		{
 			CookFormula cookFormulaById = CookConfig.Instance.GetCookFormulaById(data.ItemId);
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.Module.Cook
 			this.SetRecommendedRoleTexture(data);
 		}
 
-		// Token: 0x0603AF56 RID: 241494 RVA: 0x00E0F110 File Offset: 0x00E0D310
+		// Token: 0x0602FEC8 RID: 196296 RVA: 0x00D5FE04 File Offset: 0x00D5E004
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Module.Cook
 			return new ValueTuple<bool, int, List<ISingleItemInfo>>(item, item2, list2);
 		}
 
-		// Token: 0x0603AF57 RID: 241495 RVA: 0x00E0F194 File Offset: 0x00E0D394
+		// Token: 0x0602FEC9 RID: 196297 RVA: 0x00D5FE88 File Offset: 0x00D5E088
 		public void OnSecondTimerRefresh()
 		{
 			if (this.ItemData == null)
@@ -359,7 +359,7 @@ namespace CSharpScript.Game.Module.Cook
 			}
 		}
 
-		// Token: 0x0603AF58 RID: 241496 RVA: 0x00E0F1C0 File Offset: 0x00E0D3C0
+		// Token: 0x0602FECA RID: 196298 RVA: 0x00D5FEB4 File Offset: 0x00D5E0B4
 		public void RefreshCooking(object itemData)
 		{
 			ICookItemData cookItemData = itemData as ICookItemData;
@@ -417,7 +417,7 @@ namespace CSharpScript.Game.Module.Cook
 			this.UnlockMaterialComponent.Apply<PropMediumItemGrid>(parameters);
 		}
 
-		// Token: 0x0603AF59 RID: 241497 RVA: 0x00E0F3F4 File Offset: 0x00E0D5F4
+		// Token: 0x0602FECB RID: 196299 RVA: 0x00D600E8 File Offset: 0x00D5E2E8
 		public void RefreshMachining(object itemData)
 		{
 			if (itemData == null)
@@ -462,25 +462,25 @@ namespace CSharpScript.Game.Module.Cook
 			base.GetItem(3).SetUIActive(false);
 		}
 
-		// Token: 0x0401EC59 RID: 126041
+		// Token: 0x04019715 RID: 104213
 		[Nullable(2)]
 		private SvInfo SvInfoView;
 
-		// Token: 0x0401EC5A RID: 126042
+		// Token: 0x04019716 RID: 104214
 		[Nullable(2)]
 		public ICookItemData ItemData;
 
-		// Token: 0x0401EC5B RID: 126043
+		// Token: 0x04019717 RID: 104215
 		[Nullable(2)]
 		private NumberSelectComponent NumberSelect;
 
-		// Token: 0x0401EC5C RID: 126044
+		// Token: 0x04019718 RID: 104216
 		private int Count = 1;
 
-		// Token: 0x0401EC5D RID: 126045
+		// Token: 0x04019719 RID: 104217
 		public bool ShowMaterialItemRemoveControl;
 
-		// Token: 0x0401EC5E RID: 126046
+		// Token: 0x0401971A RID: 104218
 		[Nullable(new byte[]
 		{
 			2,
@@ -489,71 +489,71 @@ namespace CSharpScript.Game.Module.Cook
 		})]
 		private GenericScrollViewNew<ManufactureMaterialItem, ISingleItemInfo> MaterialScrollView;
 
-		// Token: 0x0401EC5F RID: 126047
+		// Token: 0x0401971B RID: 104219
 		[Nullable(2)]
 		private CookProficiencyView ProficiencyViewComponent;
 
-		// Token: 0x0401EC60 RID: 126048
+		// Token: 0x0401971C RID: 104220
 		private bool HasCoin;
 
-		// Token: 0x0401EC61 RID: 126049
+		// Token: 0x0401971D RID: 104221
 		private int SingleNeedCoinCount;
 
-		// Token: 0x0401EC62 RID: 126050
+		// Token: 0x0401971E RID: 104222
 		[Nullable(2)]
 		private MediumItemGrid UnlockMaterialComponent;
 
-		// Token: 0x0401EC63 RID: 126051
+		// Token: 0x0401971F RID: 104223
 		[Nullable(2)]
 		public Action OnChangeMaterialSelectionDelegate;
 
-		// Token: 0x0200BD46 RID: 48454
+		// Token: 0x0200A74E RID: 42830
 		[NullableContext(0)]
 		private enum EVerticalGroupComponents
 		{
-			// Token: 0x0403914A RID: 233802
+			// Token: 0x04033B14 RID: 211732
 			SvInfo,
-			// Token: 0x0403914B RID: 233803
+			// Token: 0x04033B15 RID: 211733
 			PnlLimit,
-			// Token: 0x0403914C RID: 233804
+			// Token: 0x04033B16 RID: 211734
 			TxtLimitNum,
-			// Token: 0x0403914D RID: 233805
+			// Token: 0x04033B17 RID: 211735
 			PnlQuota,
-			// Token: 0x0403914E RID: 233806
+			// Token: 0x04033B18 RID: 211736
 			TxtQuotaNum,
-			// Token: 0x0403914F RID: 233807
+			// Token: 0x04033B19 RID: 211737
 			AmountItem = 8,
-			// Token: 0x04039150 RID: 233808
+			// Token: 0x04033B1A RID: 211738
 			PnlCost,
-			// Token: 0x04039151 RID: 233809
+			// Token: 0x04033B1B RID: 211739
 			MakeCount,
-			// Token: 0x04039152 RID: 233810
+			// Token: 0x04033B1C RID: 211740
 			TxtCost,
-			// Token: 0x04039153 RID: 233811
+			// Token: 0x04033B1D RID: 211741
 			TxtPlace,
-			// Token: 0x04039154 RID: 233812
+			// Token: 0x04033B1E RID: 211742
 			ImgCostIcon,
-			// Token: 0x04039155 RID: 233813
+			// Token: 0x04033B1F RID: 211743
 			PnlTitle = 16,
-			// Token: 0x04039156 RID: 233814
+			// Token: 0x04033B20 RID: 211744
 			TxtMaterialBarTitle,
-			// Token: 0x04039157 RID: 233815
+			// Token: 0x04033B21 RID: 211745
 			PnlLeftItem,
-			// Token: 0x04039158 RID: 233816
+			// Token: 0x04033B22 RID: 211746
 			MaterialScrollView,
-			// Token: 0x04039159 RID: 233817
+			// Token: 0x04033B23 RID: 211747
 			PnlCenterItem,
-			// Token: 0x0403915A RID: 233818
+			// Token: 0x04033B24 RID: 211748
 			LockGrid,
-			// Token: 0x0403915B RID: 233819
+			// Token: 0x04033B25 RID: 211749
 			PnlLock,
-			// Token: 0x0403915C RID: 233820
+			// Token: 0x04033B26 RID: 211750
 			TxtLock,
-			// Token: 0x0403915D RID: 233821
+			// Token: 0x04033B27 RID: 211751
 			PnlLimitedTime,
-			// Token: 0x0403915E RID: 233822
+			// Token: 0x04033B28 RID: 211752
 			TxtTime,
-			// Token: 0x0403915F RID: 233823
+			// Token: 0x04033B29 RID: 211753
 			ProficiencyView
 		}
 	}

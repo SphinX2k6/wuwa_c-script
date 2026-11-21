@@ -6,19 +6,19 @@ using CSharpScript.Game.Module.UiNavigation.New.Vision;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048F7 RID: 18679
+	// Token: 0x0200386E RID: 14446
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NavigationRegisterCenter : IStaticVariableResetter
 	{
-		// Token: 0x06030D89 RID: 200073 RVA: 0x00B57C9E File Offset: 0x00B55E9E
+		// Token: 0x060258B6 RID: 153782 RVA: 0x00A92B0E File Offset: 0x00A90D0E
 		static NavigationRegisterCenter()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(NavigationRegisterCenter.CreateStaticDefaultValue), new Action(NavigationRegisterCenter.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x170079BD RID: 31165
-		// (get) Token: 0x06030D8A RID: 200074 RVA: 0x00B57CBD File Offset: 0x00B55EBD
+		// Token: 0x17004D25 RID: 19749
+		// (get) Token: 0x060258B7 RID: 153783 RVA: 0x00A92B2D File Offset: 0x00A90D2D
 		private static Dictionary<ENavigationSelectableDefine, Type> SelectableCtorMap
 		{
 			get
@@ -27,8 +27,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079BE RID: 31166
-		// (get) Token: 0x06030D8B RID: 200075 RVA: 0x00B57CC4 File Offset: 0x00B55EC4
+		// Token: 0x17004D26 RID: 19750
+		// (get) Token: 0x060258B8 RID: 153784 RVA: 0x00A92B34 File Offset: 0x00A90D34
 		private static Dictionary<ESpecialPanelHandleDefine, Type> PanelHandleCtorMap
 		{
 			get
@@ -37,14 +37,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030D8C RID: 200076 RVA: 0x00B57CCB File Offset: 0x00B55ECB
+		// Token: 0x060258B9 RID: 153785 RVA: 0x00A92B3B File Offset: 0x00A90D3B
 		public static void Init()
 		{
 			NavigationRegisterCenter.RegisterNavigationComponent();
 			NavigationRegisterCenter.RegisterNavigationSpecialPanelHandle();
 		}
 
-		// Token: 0x06030D8D RID: 200077 RVA: 0x00B57CD8 File Offset: 0x00B55ED8
+		// Token: 0x060258BA RID: 153786 RVA: 0x00A92B48 File Offset: 0x00A90D48
 		private static void RegisterNavigationComponent()
 		{
 			foreach (KeyValuePair<ENavigationSelectableDefine, Type> keyValuePair in NavigationRegisterCenter.SelectableCtorMap)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030D8E RID: 200078 RVA: 0x00B57D44 File Offset: 0x00B55F44
+		// Token: 0x060258BB RID: 153787 RVA: 0x00A92BB4 File Offset: 0x00A90DB4
 		private static void RegisterNavigationSpecialPanelHandle()
 		{
 			foreach (KeyValuePair<ESpecialPanelHandleDefine, Type> keyValuePair in NavigationRegisterCenter.PanelHandleCtorMap)
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030D8F RID: 200079 RVA: 0x00B57DB0 File Offset: 0x00B55FB0
+		// Token: 0x060258BC RID: 153788 RVA: 0x00A92C20 File Offset: 0x00A90E20
 		public static void CreateStaticDefaultValue()
 		{
 			NavigationRegisterCenter._selectableCtorMap = new Dictionary<ENavigationSelectableDefine, Type>
@@ -305,14 +305,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			};
 		}
 
-		// Token: 0x06030D90 RID: 200080 RVA: 0x00B58200 File Offset: 0x00B56400
+		// Token: 0x060258BD RID: 153789 RVA: 0x00A93070 File Offset: 0x00A91270
 		public static void ResetStaticDefaultValue()
 		{
 			NavigationRegisterCenter._selectableCtorMap = null;
 			NavigationRegisterCenter._panelHandleCtorMap = null;
 		}
 
-		// Token: 0x0401A3AE RID: 107438
+		// Token: 0x04014C21 RID: 85025
 		[Nullable(new byte[]
 		{
 			2,
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 		})]
 		private static Dictionary<ENavigationSelectableDefine, Type> _selectableCtorMap;
 
-		// Token: 0x0401A3AF RID: 107439
+		// Token: 0x04014C22 RID: 85026
 		[Nullable(new byte[]
 		{
 			2,

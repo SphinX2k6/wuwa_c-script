@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D89 RID: 3465
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E85 RID: 3717
 	public class IChangeTemplateInstanceStateConfig
 	{
-		// Token: 0x06004ECE RID: 20174 RVA: 0x000C3671 File Offset: 0x000C1871
+		// Token: 0x060053F3 RID: 21491 RVA: 0x000CEEC1 File Offset: 0x000CD0C1
 		public static IChangeTemplateInstanceStateConfig Create(IChangeTemplateInstanceStateConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001979 RID: 6521
-		// (get) Token: 0x06004ECF RID: 20175 RVA: 0x000C3690 File Offset: 0x000C1890
+		// Token: 0x17001AE4 RID: 6884
+		// (get) Token: 0x060053F4 RID: 21492 RVA: 0x000CEEE0 File Offset: 0x000CD0E0
 		[Nullable(2)]
 		public virtual IConditionGroup Condition
 		{
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700197A RID: 6522
-		// (get) Token: 0x06004ED0 RID: 20176 RVA: 0x000C36C4 File Offset: 0x000C18C4
+		// Token: 0x17001AE5 RID: 6885
+		// (get) Token: 0x060053F5 RID: 21493 RVA: 0x000CEF14 File Offset: 0x000CD114
 		public virtual string State
 		{
 			get
@@ -51,14 +49,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D3E RID: 11582
+		// Token: 0x04003004 RID: 12292
 		private IChangeTemplateInstanceStateConfig Instance;
 
-		// Token: 0x04002D3F RID: 11583
+		// Token: 0x04003005 RID: 12293
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002D40 RID: 11584
+		// Token: 0x04003006 RID: 12294
 		private bool _ConditionInited;
 	}
 }

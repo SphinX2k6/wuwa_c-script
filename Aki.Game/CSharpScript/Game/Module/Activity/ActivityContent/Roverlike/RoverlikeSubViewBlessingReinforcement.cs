@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200610D RID: 24845
+	// Token: 0x0200508B RID: 20619
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeSubViewBlessingReinforcement : RoverlikeActionSubViewBase
 	{
-		// Token: 0x17009176 RID: 37238
-		// (get) Token: 0x0603ECEF RID: 257263 RVA: 0x00F2B200 File Offset: 0x00F29400
+		// Token: 0x170064D8 RID: 25816
+		// (get) Token: 0x060339B1 RID: 211377 RVA: 0x00E72014 File Offset: 0x00E70214
 		public override ERoverActionSubViewType SubViewType
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009177 RID: 37239
-		// (get) Token: 0x0603ECF0 RID: 257264 RVA: 0x00F2B203 File Offset: 0x00F29403
+		// Token: 0x170064D9 RID: 25817
+		// (get) Token: 0x060339B2 RID: 211378 RVA: 0x00E72017 File Offset: 0x00E70217
 		public override string ResourceId
 		{
 			get
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603ECF1 RID: 257265 RVA: 0x00F2B20C File Offset: 0x00F2940C
+		// Token: 0x060339B3 RID: 211379 RVA: 0x00E72020 File Offset: 0x00E70220
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603ECF2 RID: 257266 RVA: 0x00F2B318 File Offset: 0x00F29518
+		// Token: 0x060339B4 RID: 211380 RVA: 0x00E7212C File Offset: 0x00E7032C
 		protected override void OnStart()
 		{
 			this.BlessingCardLayout = new GenericLayout<RoverlikeBlessingCardItem, IRoverlikeBlessingItemData>(base.GetHorizontalLayout(0), new Func<RoverlikeBlessingCardItem>(this.CreateBlessingItem), null, false, true);
@@ -73,25 +73,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			});
 		}
 
-		// Token: 0x0603ECF3 RID: 257267 RVA: 0x00F2B36F File Offset: 0x00F2956F
+		// Token: 0x060339B5 RID: 211381 RVA: 0x00E72183 File Offset: 0x00E70383
 		protected override void OnBeforeDestroy()
 		{
 			this.ChooseData = null;
 		}
 
-		// Token: 0x0603ECF4 RID: 257268 RVA: 0x00F2B378 File Offset: 0x00F29578
+		// Token: 0x060339B6 RID: 211382 RVA: 0x00E7218C File Offset: 0x00E7038C
 		protected override void OnBeforeShow()
 		{
 			EventSystem.Instance.Add<int>(EEventName.OnPlayerCurrencyChange, new Action<int>(this.OnCurrencyChange));
 		}
 
-		// Token: 0x0603ECF5 RID: 257269 RVA: 0x00F2B396 File Offset: 0x00F29596
+		// Token: 0x060339B7 RID: 211383 RVA: 0x00E721AA File Offset: 0x00E703AA
 		protected override void OnBeforeHide()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.OnPlayerCurrencyChange, new Action<int>(this.OnCurrencyChange));
 		}
 
-		// Token: 0x0603ECF6 RID: 257270 RVA: 0x00F2B3B4 File Offset: 0x00F295B4
+		// Token: 0x060339B8 RID: 211384 RVA: 0x00E721C8 File Offset: 0x00E703C8
 		private void OnBtnConfirmClick()
 		{
 			base.TryInteractAction(delegate
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			});
 		}
 
-		// Token: 0x0603ECF7 RID: 257271 RVA: 0x00F2B3C9 File Offset: 0x00F295C9
+		// Token: 0x060339B9 RID: 211385 RVA: 0x00E721DD File Offset: 0x00E703DD
 		private void OnBtnRefreshClick()
 		{
 			base.TryInteractAction(delegate
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			});
 		}
 
-		// Token: 0x0603ECF8 RID: 257272 RVA: 0x00F2B3E0 File Offset: 0x00F295E0
+		// Token: 0x060339BA RID: 211386 RVA: 0x00E721F4 File Offset: 0x00E703F4
 		private void OnBlessingItemSelect(IRoverlikeBlessingItemData data)
 		{
 			if (this.ChooseData == null)
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshBlessingSelection();
 		}
 
-		// Token: 0x0603ECF9 RID: 257273 RVA: 0x00F2B43C File Offset: 0x00F2963C
+		// Token: 0x060339BB RID: 211387 RVA: 0x00E72250 File Offset: 0x00E70450
 		private void OpenBlessingEnhanceConfirmView(RoverlikeGainEntry curBless)
 		{
 			RoverRogueBless? blessConfig = RoverlikeConfig.Instance.GetBlessConfig(curBless.ConfigId);
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			UiManager.Instance.OpenView(EUiViewName.RoverlikeBlessingReplaceView, param, null);
 		}
 
-		// Token: 0x0603ECFA RID: 257274 RVA: 0x00F2B4D5 File Offset: 0x00F296D5
+		// Token: 0x060339BC RID: 211388 RVA: 0x00E722E9 File Offset: 0x00E704E9
 		private RoverlikeBlessingCardItem CreateBlessingItem()
 		{
 			RoverlikeBlessingCardItem roverlikeBlessingCardItem = new RoverlikeBlessingCardItem();
@@ -173,20 +173,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return roverlikeBlessingCardItem;
 		}
 
-		// Token: 0x0603ECFB RID: 257275 RVA: 0x00F2B4EE File Offset: 0x00F296EE
+		// Token: 0x060339BD RID: 211389 RVA: 0x00E72302 File Offset: 0x00E70502
 		private void RefreshBlessingLayout(List<IRoverlikeBlessingItemData> dataList)
 		{
 			this.BlessingCardLayout.RefreshByData(dataList, new Action(this.OnBlessingLayoutRefreshed), true);
 		}
 
-		// Token: 0x0603ECFC RID: 257276 RVA: 0x00F2B509 File Offset: 0x00F29709
+		// Token: 0x060339BE RID: 211390 RVA: 0x00E7231D File Offset: 0x00E7051D
 		private void OnBlessingLayoutRefreshed()
 		{
 			EventSystem.Instance.Emit<string>(EEventName.OnGuideTriggerEvent, "RoverlikeBlessingReinforcement");
 			UiNavigationNewController.Instance.MarkViewHandleRefreshNavigationDirty();
 		}
 
-		// Token: 0x0603ECFD RID: 257277 RVA: 0x00F2B52A File Offset: 0x00F2972A
+		// Token: 0x060339BF RID: 211391 RVA: 0x00E7233E File Offset: 0x00E7053E
 		private void RefreshBlessingSelection()
 		{
 			this.BlessingCardLayout.SelectGridProxy(this.SelectedEntryIndex, false);
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshSlotHighlight();
 		}
 
-		// Token: 0x0603ECFE RID: 257278 RVA: 0x00F2B54C File Offset: 0x00F2974C
+		// Token: 0x060339C0 RID: 211392 RVA: 0x00E72360 File Offset: 0x00E70560
 		private void RefreshSlotHighlight()
 		{
 			RoverlikeActionSubViewManager actionSubViewManager = RoverlikeModel.Instance.ActionSubViewManager;
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			roverlikeBattleTopPanel.ClearHighlight();
 		}
 
-		// Token: 0x0603ECFF RID: 257279 RVA: 0x00F2B5B4 File Offset: 0x00F297B4
+		// Token: 0x060339C1 RID: 211393 RVA: 0x00E723C8 File Offset: 0x00E705C8
 		private void RefreshButton()
 		{
 			base.GetButton(2).SetSelfInteractive(this.SelectedEntryIndex >= 0);
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 		}
 
-		// Token: 0x0603ED00 RID: 257280 RVA: 0x00F2B6A8 File Offset: 0x00F298A8
+		// Token: 0x060339C2 RID: 211394 RVA: 0x00E724BC File Offset: 0x00E706BC
 		private void OnCurrencyChange(int itemId)
 		{
 			int? goldItemId = RoverlikeModel.Instance.GoldItemId;
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshButton();
 		}
 
-		// Token: 0x0603ED01 RID: 257281 RVA: 0x00F2B6DC File Offset: 0x00F298DC
+		// Token: 0x060339C3 RID: 211395 RVA: 0x00E724F0 File Offset: 0x00E706F0
 		public override void OnRefreshSubView()
 		{
 			int bindId = (int)this.OpenParam;
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshSlotHighlight();
 		}
 
-		// Token: 0x04020D00 RID: 134400
+		// Token: 0x0401B62D RID: 112173
 		[Nullable(new byte[]
 		{
 			2,
@@ -297,34 +297,34 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeBlessingCardItem, IRoverlikeBlessingItemData> BlessingCardLayout;
 
-		// Token: 0x04020D01 RID: 134401
+		// Token: 0x0401B62E RID: 112174
 		[Nullable(2)]
 		private RoverlikeChooseData ChooseData;
 
-		// Token: 0x04020D02 RID: 134402
+		// Token: 0x0401B62F RID: 112175
 		[Nullable(2)]
 		private ButtonItem ButtonRefresh;
 
-		// Token: 0x04020D03 RID: 134403
+		// Token: 0x0401B630 RID: 112176
 		private int SelectedEntryIndex = -1;
 
-		// Token: 0x0200C363 RID: 50019
+		// Token: 0x0200AD4B RID: 44363
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403AF74 RID: 241524
+			// Token: 0x040358D9 RID: 219353
 			public const int BlessingLayout = 0;
 
-			// Token: 0x0403AF75 RID: 241525
+			// Token: 0x040358DA RID: 219354
 			public const int ItemBlessing = 1;
 
-			// Token: 0x0403AF76 RID: 241526
+			// Token: 0x040358DB RID: 219355
 			public const int BtnConfirm = 2;
 
-			// Token: 0x0403AF77 RID: 241527
+			// Token: 0x040358DC RID: 219356
 			public const int BtnRefresh = 3;
 
-			// Token: 0x0403AF78 RID: 241528
+			// Token: 0x040358DD RID: 219357
 			public const int TxtRefreshCost = 4;
 		}
 	}

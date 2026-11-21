@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000FE2 RID: 4066
+// Token: 0x02000497 RID: 1175
 [NullableContext(1)]
 [Nullable(0)]
 public class FurniturePresetItem : UiPanelBase
 {
-	// Token: 0x06006866 RID: 26726 RVA: 0x0014B8F4 File Offset: 0x00149AF4
+	// Token: 0x06003BFE RID: 15358 RVA: 0x001541B8 File Offset: 0x001523B8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class FurniturePresetItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006867 RID: 26727 RVA: 0x0014BA24 File Offset: 0x00149C24
+	// Token: 0x06003BFF RID: 15359 RVA: 0x001542E8 File Offset: 0x001524E8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FurniturePresetItem.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ public class FurniturePresetItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006868 RID: 26728 RVA: 0x0014BA68 File Offset: 0x00149C68
+	// Token: 0x06003C00 RID: 15360 RVA: 0x0015432C File Offset: 0x0015252C
 	public void Refresh(FurnitureAreaData areaData)
 	{
 		this.AreaData = areaData;
@@ -100,7 +100,7 @@ public class FurniturePresetItem : UiPanelBase
 		}));
 	}
 
-	// Token: 0x06006869 RID: 26729 RVA: 0x0014BC5C File Offset: 0x00149E5C
+	// Token: 0x06003C01 RID: 15361 RVA: 0x00154520 File Offset: 0x00152720
 	private void UpdateGridItemDataList(FurniturePresetConfig furniturePresetConfig)
 	{
 		this.GridItemDataList.Clear();
@@ -131,7 +131,7 @@ public class FurniturePresetItem : UiPanelBase
 		this.SortGridItemDataList();
 	}
 
-	// Token: 0x0600686A RID: 26730 RVA: 0x0014BD80 File Offset: 0x00149F80
+	// Token: 0x06003C02 RID: 15362 RVA: 0x00154644 File Offset: 0x00152844
 	private void SortGridItemDataList()
 	{
 		this.GridItemDataList.Sort(delegate(IFurniturePresetGridItemData a, IFurniturePresetGridItemData b)
@@ -148,7 +148,7 @@ public class FurniturePresetItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600686B RID: 26731 RVA: 0x0014BDAC File Offset: 0x00149FAC
+	// Token: 0x06003C03 RID: 15363 RVA: 0x00154670 File Offset: 0x00152870
 	private void UpdateCostData()
 	{
 		this.NeedCostCurrency = 0;
@@ -176,7 +176,7 @@ public class FurniturePresetItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600686C RID: 26732 RVA: 0x0014BE94 File Offset: 0x0014A094
+	// Token: 0x06003C04 RID: 15364 RVA: 0x00154758 File Offset: 0x00152958
 	private void OnShopButtonClick()
 	{
 		UiManager.Instance.CloseView(EUiViewName.FurniturePresetView, delegate(bool _)
@@ -185,7 +185,7 @@ public class FurniturePresetItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600686D RID: 26733 RVA: 0x0014BEC4 File Offset: 0x0014A0C4
+	// Token: 0x06003C05 RID: 15365 RVA: 0x00154788 File Offset: 0x00152988
 	private void OnApplyButtonClick(int _)
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.FurniturePresetApplyConfirm);
@@ -194,7 +194,7 @@ public class FurniturePresetItem : UiPanelBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600686E RID: 26734 RVA: 0x0014BF07 File Offset: 0x0014A107
+	// Token: 0x06003C06 RID: 15366 RVA: 0x001547CB File Offset: 0x001529CB
 	private void ApplyInternal()
 	{
 		if (this.AreaData == null)
@@ -209,7 +209,7 @@ public class FurniturePresetItem : UiPanelBase
 		onApplyDelegate(this.AreaData);
 	}
 
-	// Token: 0x0600686F RID: 26735 RVA: 0x0014BF28 File Offset: 0x0014A128
+	// Token: 0x06003C07 RID: 15367 RVA: 0x001547EC File Offset: 0x001529EC
 	private void OnFillAndApplyButtonClick(int _)
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.FurniturePresetFillAndApplyConfirm);
@@ -225,7 +225,7 @@ public class FurniturePresetItem : UiPanelBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06006870 RID: 26736 RVA: 0x0014BF88 File Offset: 0x0014A188
+	// Token: 0x06003C08 RID: 15368 RVA: 0x0015484C File Offset: 0x00152A4C
 	private UniTask FillInternalAsync()
 	{
 		FurniturePresetItem.<FillInternalAsync>d__22 <FillInternalAsync>d__;
@@ -236,7 +236,7 @@ public class FurniturePresetItem : UiPanelBase
 		return <FillInternalAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006871 RID: 26737 RVA: 0x0014BFCC File Offset: 0x0014A1CC
+	// Token: 0x06003C09 RID: 15369 RVA: 0x00154890 File Offset: 0x00152A90
 	private UniTask FillAndApplyInternalAsync()
 	{
 		FurniturePresetItem.<FillAndApplyInternalAsync>d__23 <FillAndApplyInternalAsync>d__;
@@ -247,35 +247,35 @@ public class FurniturePresetItem : UiPanelBase
 		return <FillAndApplyInternalAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006872 RID: 26738 RVA: 0x0014C00F File Offset: 0x0014A20F
+	// Token: 0x06003C0A RID: 15370 RVA: 0x001548D3 File Offset: 0x00152AD3
 	private FurniturePresetGridItem CreatePresetGridItem()
 	{
 		return new FurniturePresetGridItem();
 	}
 
-	// Token: 0x04002FB1 RID: 12209
+	// Token: 0x0400304A RID: 12362
 	[Nullable(2)]
 	private FurnitureAreaData AreaData;
 
-	// Token: 0x04002FB2 RID: 12210
+	// Token: 0x0400304B RID: 12363
 	private int CurrencyId;
 
-	// Token: 0x04002FB3 RID: 12211
+	// Token: 0x0400304C RID: 12364
 	private int NeedCostCurrency;
 
-	// Token: 0x04002FB4 RID: 12212
+	// Token: 0x0400304D RID: 12365
 	private int LockCount;
 
-	// Token: 0x04002FB5 RID: 12213
+	// Token: 0x0400304E RID: 12366
 	private readonly HashSet<int> GoodsSet = new HashSet<int>();
 
-	// Token: 0x04002FB6 RID: 12214
+	// Token: 0x0400304F RID: 12367
 	private bool IsDoingFillAndApply;
 
-	// Token: 0x04002FB7 RID: 12215
+	// Token: 0x04003050 RID: 12368
 	private readonly List<IFurniturePresetGridItemData> GridItemDataList = new List<IFurniturePresetGridItemData>();
 
-	// Token: 0x04002FB8 RID: 12216
+	// Token: 0x04003051 RID: 12369
 	[Nullable(new byte[]
 	{
 		2,
@@ -284,19 +284,19 @@ public class FurniturePresetItem : UiPanelBase
 	})]
 	protected GenericScrollViewNew<FurniturePresetGridItem, IFurniturePresetGridItemData> PresetScrollView;
 
-	// Token: 0x04002FB9 RID: 12217
+	// Token: 0x04003052 RID: 12370
 	[Nullable(2)]
 	private CommonCurrencyItemListComponent CurrencyListComponent;
 
-	// Token: 0x04002FBA RID: 12218
+	// Token: 0x04003053 RID: 12371
 	[Nullable(2)]
 	private ButtonItem ApplyButtonItem;
 
-	// Token: 0x04002FBB RID: 12219
+	// Token: 0x04003054 RID: 12372
 	[Nullable(2)]
 	private ButtonItem FillAndApplyButtonItem;
 
-	// Token: 0x04002FBC RID: 12220
+	// Token: 0x04003055 RID: 12373
 	[Nullable(new byte[]
 	{
 		2,

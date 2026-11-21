@@ -6,16 +6,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020028BA RID: 10426
+// Token: 0x02001E35 RID: 7733
 public class RoleSkillInputView : UiViewBase
 {
-	// Token: 0x06015802 RID: 88066 RVA: 0x0056C391 File Offset: 0x0056A591
+	// Token: 0x06013202 RID: 78338 RVA: 0x005971D9 File Offset: 0x005953D9
 	[NullableContext(1)]
 	public RoleSkillInputView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06015803 RID: 88067 RVA: 0x0056C39A File Offset: 0x0056A59A
+	// Token: 0x06013203 RID: 78339 RVA: 0x005971E2 File Offset: 0x005953E2
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class RoleSkillInputView : UiViewBase
 		};
 	}
 
-	// Token: 0x06015804 RID: 88068 RVA: 0x0056C3D4 File Offset: 0x0056A5D4
+	// Token: 0x06013204 RID: 78340 RVA: 0x0059721C File Offset: 0x0059541C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleSkillInputView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -36,26 +36,26 @@ public class RoleSkillInputView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015805 RID: 88069 RVA: 0x0056C417 File Offset: 0x0056A617
+	// Token: 0x06013205 RID: 78341 RVA: 0x0059725F File Offset: 0x0059545F
 	private void OnBtnCloseClick()
 	{
 		UiManager.Instance.CloseView(EUiViewName.RoleSkillInputView, null);
 	}
 
-	// Token: 0x0400A03D RID: 41021
+	// Token: 0x0400A426 RID: 42022
 	[Nullable(2)]
 	private RoleSkillInputPanel SkillInputPanel;
 
-	// Token: 0x0400A03E RID: 41022
+	// Token: 0x0400A427 RID: 42023
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x02008EBD RID: 36541
+	// Token: 0x02008104 RID: 33028
 	private enum EComponent
 	{
-		// Token: 0x0402E496 RID: 189590
+		// Token: 0x04029B93 RID: 170899
 		CaptionItem,
-		// Token: 0x0402E497 RID: 189591
+		// Token: 0x04029B94 RID: 170900
 		RoleSkillInputPanel
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200178C RID: 6028
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200190D RID: 6413
 	public class IActorLookAtTalkerData : IActorLookAtLockable
 	{
-		// Token: 0x06007F9F RID: 32671 RVA: 0x00130FA0 File Offset: 0x0012F1A0
+		// Token: 0x0600868F RID: 34447 RVA: 0x00140200 File Offset: 0x0013E400
 		private IActorLookAtTalkerData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007FA0 RID: 32672 RVA: 0x00130FD8 File Offset: 0x0012F1D8
+		// Token: 0x06008690 RID: 34448 RVA: 0x00140238 File Offset: 0x0013E438
 		public static IActorLookAtTalkerData Create([Nullable(2)] IActorLookAtTalkerData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007FA1 RID: 32673 RVA: 0x00130FEB File Offset: 0x0012F1EB
+		// Token: 0x06008691 RID: 34449 RVA: 0x0014024B File Offset: 0x0013E44B
 		public static IActorLookAtTalkerData CreateFromSetValue([Nullable(2)] IActorLookAtTalkerData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007FA2 RID: 32674 RVA: 0x00130FFE File Offset: 0x0012F1FE
+		// Token: 0x06008692 RID: 34450 RVA: 0x0014025E File Offset: 0x0013E45E
 		public new IActorLookAtTalkerData_SetValue ToSetValue()
 		{
 			return new IActorLookAtTalkerData_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029D2 RID: 10706
-		// (get) Token: 0x06007FA3 RID: 32675 RVA: 0x0013101D File Offset: 0x0012F21D
-		// (set) Token: 0x06007FA4 RID: 32676 RVA: 0x00131048 File Offset: 0x0012F248
+		// Token: 0x17002BC0 RID: 11200
+		// (get) Token: 0x06008693 RID: 34451 RVA: 0x0014027D File Offset: 0x0013E47D
+		// (set) Token: 0x06008694 RID: 34452 RVA: 0x001402A8 File Offset: 0x0013E4A8
 		public override EActorLookAtMode Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029D3 RID: 10707
-		// (get) Token: 0x06007FA5 RID: 32677 RVA: 0x00131058 File Offset: 0x0012F258
-		// (set) Token: 0x06007FA6 RID: 32678 RVA: 0x00131092 File Offset: 0x0012F292
+		// Token: 0x17002BC1 RID: 11201
+		// (get) Token: 0x06008695 RID: 34453 RVA: 0x001402B8 File Offset: 0x0013E4B8
+		// (set) Token: 0x06008696 RID: 34454 RVA: 0x001402F2 File Offset: 0x0013E4F2
 		public override bool? Lock
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005117 RID: 20759
+		// Token: 0x0400554D RID: 21837
 		[Nullable(2)]
 		protected new IActorLookAtTalkerData FbInstance;
 
-		// Token: 0x04005118 RID: 20760
+		// Token: 0x0400554E RID: 21838
 		[Nullable(2)]
 		protected new IActorLookAtTalkerData_SetValue PocoInterface;
 	}

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013B2 RID: 5042
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001503 RID: 5379
 	public class ITakePhoto2TargetPartCondition
 	{
-		// Token: 0x06007326 RID: 29478 RVA: 0x00114848 File Offset: 0x00112A48
+		// Token: 0x060079CD RID: 31181 RVA: 0x00122F04 File Offset: 0x00121104
 		public static ITakePhoto2TargetPartCondition Create(ITakePhoto2TargetPartCondition? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002595 RID: 9621
-		// (get) Token: 0x06007327 RID: 29479 RVA: 0x00114868 File Offset: 0x00112A68
+		// Token: 0x17002769 RID: 10089
+		// (get) Token: 0x060079CE RID: 31182 RVA: 0x00122F24 File Offset: 0x00121124
 		public virtual List<string> Tags
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004296 RID: 17046
+		// Token: 0x04004617 RID: 17943
 		private ITakePhoto2TargetPartCondition Instance;
 
-		// Token: 0x04004297 RID: 17047
+		// Token: 0x04004618 RID: 17944
 		private List<string> _TagsCache;
 
-		// Token: 0x04004298 RID: 17048
+		// Token: 0x04004619 RID: 17945
 		private bool _TagsInited;
 	}
 }

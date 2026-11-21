@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000518 RID: 1304
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200057F RID: 1407
 	public class IMonsterShowOnDeathEffect : IMonsterShowOnDeathConfig
 	{
-		// Token: 0x06001A6A RID: 6762 RVA: 0x0004CF7C File Offset: 0x0004B17C
+		// Token: 0x06001C66 RID: 7270 RVA: 0x00051D38 File Offset: 0x0004FF38
 		private IMonsterShowOnDeathEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001A6B RID: 6763 RVA: 0x0004CFB4 File Offset: 0x0004B1B4
+		// Token: 0x06001C67 RID: 7271 RVA: 0x00051D70 File Offset: 0x0004FF70
 		public static IMonsterShowOnDeathEffect Create([Nullable(2)] IMonsterShowOnDeathEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A6C RID: 6764 RVA: 0x0004CFC7 File Offset: 0x0004B1C7
+		// Token: 0x06001C68 RID: 7272 RVA: 0x00051D83 File Offset: 0x0004FF83
 		public static IMonsterShowOnDeathEffect CreateFromSetValue([Nullable(2)] IMonsterShowOnDeathEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A6D RID: 6765 RVA: 0x0004CFDA File Offset: 0x0004B1DA
+		// Token: 0x06001C69 RID: 7273 RVA: 0x00051D96 File Offset: 0x0004FF96
 		public new IMonsterShowOnDeathEffect_SetValue ToSetValue()
 		{
 			return new IMonsterShowOnDeathEffect_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006F0 RID: 1776
-		// (get) Token: 0x06001A6E RID: 6766 RVA: 0x0004CFF9 File Offset: 0x0004B1F9
-		// (set) Token: 0x06001A6F RID: 6767 RVA: 0x0004D024 File Offset: 0x0004B224
+		// Token: 0x17000773 RID: 1907
+		// (get) Token: 0x06001C6A RID: 7274 RVA: 0x00051DB5 File Offset: 0x0004FFB5
+		// (set) Token: 0x06001C6B RID: 7275 RVA: 0x00051DE0 File Offset: 0x0004FFE0
 		public override EMonsterShowOnDeathType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006F1 RID: 1777
-		// (get) Token: 0x06001A70 RID: 6768 RVA: 0x0004D032 File Offset: 0x0004B232
-		// (set) Token: 0x06001A71 RID: 6769 RVA: 0x0004D05D File Offset: 0x0004B25D
+		// Token: 0x17000774 RID: 1908
+		// (get) Token: 0x06001C6C RID: 7276 RVA: 0x00051DEE File Offset: 0x0004FFEE
+		// (set) Token: 0x06001C6D RID: 7277 RVA: 0x00051E19 File Offset: 0x00050019
 		public virtual int EffectId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001322 RID: 4898
+		// Token: 0x0400148C RID: 5260
 		[Nullable(2)]
 		protected new IMonsterShowOnDeathEffect FbInstance;
 
-		// Token: 0x04001323 RID: 4899
+		// Token: 0x0400148D RID: 5261
 		[Nullable(2)]
 		protected new IMonsterShowOnDeathEffect_SetValue PocoInterface;
 	}

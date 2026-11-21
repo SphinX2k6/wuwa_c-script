@@ -6,7 +6,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02000F1B RID: 3867
+// Token: 0x020003D0 RID: 976
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class AchievementCategoryItem : GridProxyAbstract<AchievementCategoryData>
 {
-	// Token: 0x060061CF RID: 25039 RVA: 0x00131788 File Offset: 0x0012F988
+	// Token: 0x06003567 RID: 13671 RVA: 0x0013A0AC File Offset: 0x001382AC
 	protected unsafe override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,39 +34,39 @@ public class AchievementCategoryItem : GridProxyAbstract<AchievementCategoryData
 		this.BtnBindInfo = list;
 	}
 
-	// Token: 0x060061D0 RID: 25040 RVA: 0x0013184B File Offset: 0x0012FA4B
+	// Token: 0x06003568 RID: 13672 RVA: 0x0013A16F File Offset: 0x0013836F
 	protected override void OnStart()
 	{
 		this.AddEventListener();
 	}
 
-	// Token: 0x060061D1 RID: 25041 RVA: 0x00131853 File Offset: 0x0012FA53
+	// Token: 0x06003569 RID: 13673 RVA: 0x0013A177 File Offset: 0x00138377
 	protected void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnAchievementDataNotify, new Action(this.OnAchievementDataNotify));
 		EventSystem.Instance.Add<int>(EEventName.OnAchievementGroupDataNotify, new Action<int>(this.OnAchievementGroupDataNotify));
 	}
 
-	// Token: 0x060061D2 RID: 25042 RVA: 0x0013188D File Offset: 0x0012FA8D
+	// Token: 0x0600356A RID: 13674 RVA: 0x0013A1B1 File Offset: 0x001383B1
 	protected void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAchievementDataNotify, new Action(this.OnAchievementDataNotify));
 		EventSystem.Instance.Remove(EEventName.OnAchievementGroupDataNotify, new Action<int>(this.OnAchievementGroupDataNotify));
 	}
 
-	// Token: 0x060061D3 RID: 25043 RVA: 0x001318C7 File Offset: 0x0012FAC7
+	// Token: 0x0600356B RID: 13675 RVA: 0x0013A1EB File Offset: 0x001383EB
 	private void OnAchievementGroupDataNotify(int groupId)
 	{
 		this.RefreshRedPointState();
 	}
 
-	// Token: 0x060061D4 RID: 25044 RVA: 0x001318CF File Offset: 0x0012FACF
+	// Token: 0x0600356C RID: 13676 RVA: 0x0013A1F3 File Offset: 0x001383F3
 	private void OnAchievementDataNotify()
 	{
 		this.RefreshRedPointState();
 	}
 
-	// Token: 0x060061D5 RID: 25045 RVA: 0x001318D8 File Offset: 0x0012FAD8
+	// Token: 0x0600356D RID: 13677 RVA: 0x0013A1FC File Offset: 0x001383FC
 	private void OnClickItem()
 	{
 		AchievementModel.Instance.CurrentSelectCategory = this.CategoryData;
@@ -81,7 +81,7 @@ public class AchievementCategoryItem : GridProxyAbstract<AchievementCategoryData
 		AchievementController.Instance.OpenAchievementDetailView(this.CategoryData.GetId(), null, -1);
 	}
 
-	// Token: 0x060061D6 RID: 25046 RVA: 0x00131978 File Offset: 0x0012FB78
+	// Token: 0x0600356E RID: 13678 RVA: 0x0013A29C File Offset: 0x0013849C
 	[NullableContext(1)]
 	public override void Refresh(AchievementCategoryData data, bool isSelected, int gridIndex)
 	{
@@ -92,25 +92,25 @@ public class AchievementCategoryItem : GridProxyAbstract<AchievementCategoryData
 		this.RefreshProgressText();
 	}
 
-	// Token: 0x060061D7 RID: 25047 RVA: 0x00131999 File Offset: 0x0012FB99
+	// Token: 0x0600356F RID: 13679 RVA: 0x0013A2BD File Offset: 0x001384BD
 	private void RefreshRedPointState()
 	{
 		base.GetItem(4).SetUIActive(AchievementModel.Instance.GetCategoryRedPointState(this.CategoryData.GetId()));
 	}
 
-	// Token: 0x060061D8 RID: 25048 RVA: 0x001319BC File Offset: 0x0012FBBC
+	// Token: 0x06003570 RID: 13680 RVA: 0x0013A2E0 File Offset: 0x001384E0
 	private void RefreshNameText()
 	{
 		base.GetText(2).SetText(this.CategoryData.GetTitle(), true);
 	}
 
-	// Token: 0x060061D9 RID: 25049 RVA: 0x001319D6 File Offset: 0x0012FBD6
+	// Token: 0x06003571 RID: 13681 RVA: 0x0013A2FA File Offset: 0x001384FA
 	private void RefreshProgressText()
 	{
 		base.GetText(3).SetText(this.CategoryData.GetAchievementCategoryProgress(), true);
 	}
 
-	// Token: 0x060061DA RID: 25050 RVA: 0x001319F0 File Offset: 0x0012FBF0
+	// Token: 0x06003572 RID: 13682 RVA: 0x0013A314 File Offset: 0x00138514
 	private void RefreshIcon()
 	{
 		if (!StringUtils.IsEmpty(this.CategoryData.GetTexture()))
@@ -119,28 +119,28 @@ public class AchievementCategoryItem : GridProxyAbstract<AchievementCategoryData
 		}
 	}
 
-	// Token: 0x060061DB RID: 25051 RVA: 0x00131A31 File Offset: 0x0012FC31
+	// Token: 0x06003573 RID: 13683 RVA: 0x0013A355 File Offset: 0x00138555
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEventListener();
 	}
 
-	// Token: 0x04002C76 RID: 11382
+	// Token: 0x04002D0F RID: 11535
 	[Nullable(2)]
 	private AchievementCategoryData CategoryData;
 
-	// Token: 0x02007560 RID: 30048
+	// Token: 0x020066F4 RID: 26356
 	private enum EChildType
 	{
-		// Token: 0x04026CEC RID: 158956
+		// Token: 0x04022037 RID: 139319
 		Button,
-		// Token: 0x04026CED RID: 158957
+		// Token: 0x04022038 RID: 139320
 		Texture,
-		// Token: 0x04026CEE RID: 158958
+		// Token: 0x04022039 RID: 139321
 		NameText,
-		// Token: 0x04026CEF RID: 158959
+		// Token: 0x0402203A RID: 139322
 		ProgressText,
-		// Token: 0x04026CF0 RID: 158960
+		// Token: 0x0402203B RID: 139323
 		RedPoint
 	}
 }

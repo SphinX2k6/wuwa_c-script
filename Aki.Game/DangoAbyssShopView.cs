@@ -2,21 +2,22 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A5C RID: 6748
-public class DangoAbyssShopView : UiViewBase, IUiCameraBehavior
+// Token: 0x02000F1B RID: 3867
+public class DangoAbyssShopView : UiViewBase, IUiViewCameraBehavior
 {
-	// Token: 0x0600C69F RID: 50847 RVA: 0x002D317F File Offset: 0x002D137F
+	// Token: 0x06009AAF RID: 39599 RVA: 0x002DE283 File Offset: 0x002DC483
 	[NullableContext(1)]
 	public DangoAbyssShopView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C6A0 RID: 50848 RVA: 0x002D3188 File Offset: 0x002D1388
+	// Token: 0x06009AB0 RID: 39600 RVA: 0x002DE28C File Offset: 0x002DC48C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,45 +35,45 @@ public class DangoAbyssShopView : UiViewBase, IUiCameraBehavior
 		};
 	}
 
-	// Token: 0x0600C6A1 RID: 50849 RVA: 0x002D3249 File Offset: 0x002D1449
-	public override bool GetLoopAudioEventSwitch()
+	// Token: 0x06009AB1 RID: 39601 RVA: 0x002DE34D File Offset: 0x002DC54D
+	public override bool GetBgmSwitch()
 	{
 		return !DangoAbyssModel.Instance.CheckIfInSmallWorldInstance();
 	}
 
-	// Token: 0x0600C6A2 RID: 50850 RVA: 0x002D3258 File Offset: 0x002D1458
+	// Token: 0x06009AB2 RID: 39602 RVA: 0x002DE35C File Offset: 0x002DC55C
 	private void OnClickBack()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600C6A3 RID: 50851 RVA: 0x002D3261 File Offset: 0x002D1461
+	// Token: 0x06009AB3 RID: 39603 RVA: 0x002DE365 File Offset: 0x002DC565
 	protected override void OnHandleLoadScene()
 	{
 		DangoAbyssController.Instance.InitAbyssDangoObserver(99);
 	}
 
-	// Token: 0x0600C6A4 RID: 50852 RVA: 0x002D326F File Offset: 0x002D146F
+	// Token: 0x06009AB4 RID: 39604 RVA: 0x002DE373 File Offset: 0x002DC573
 	protected override void OnHandleReleaseScene()
 	{
 		DangoAbyssController.Instance.DestroyAbyssDangoObserver(99);
 	}
 
-	// Token: 0x0600C6A5 RID: 50853 RVA: 0x002D327D File Offset: 0x002D147D
+	// Token: 0x06009AB5 RID: 39605 RVA: 0x002DE381 File Offset: 0x002DC581
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.RefreshGoodsList));
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseViewFinish));
 	}
 
-	// Token: 0x0600C6A6 RID: 50854 RVA: 0x002D32B4 File Offset: 0x002D14B4
+	// Token: 0x06009AB6 RID: 39606 RVA: 0x002DE3B8 File Offset: 0x002DC5B8
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.RefreshGoodsList));
 		EventSystem.Instance.Remove<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseViewFinish));
 	}
 
-	// Token: 0x0600C6A7 RID: 50855 RVA: 0x002D32EC File Offset: 0x002D14EC
+	// Token: 0x06009AB7 RID: 39607 RVA: 0x002DE3F0 File Offset: 0x002DC5F0
 	private void OnCloseViewFinish(EUiViewName viewName, int _)
 	{
 		if (viewName == EUiViewName.CommonRewardView)
@@ -86,13 +87,13 @@ public class DangoAbyssShopView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600C6A8 RID: 50856 RVA: 0x002D334C File Offset: 0x002D154C
+	// Token: 0x06009AB8 RID: 39608 RVA: 0x002DE450 File Offset: 0x002DC650
 	private void RefreshGoodsList(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 	{
 		this.ClickCount = 0;
 	}
 
-	// Token: 0x0600C6A9 RID: 50857 RVA: 0x002D3358 File Offset: 0x002D1558
+	// Token: 0x06009AB9 RID: 39609 RVA: 0x002DE45C File Offset: 0x002DC65C
 	private void OnClickDango()
 	{
 		long num = DateTimeOffset.Now.ToUnixTimeMilliseconds();
@@ -123,14 +124,14 @@ public class DangoAbyssShopView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600C6AA RID: 50858 RVA: 0x002D340F File Offset: 0x002D160F
+	// Token: 0x06009ABA RID: 39610 RVA: 0x002DE513 File Offset: 0x002DC713
 	[NullableContext(1)]
 	private void ChangeDangoAni(string path, bool ifLoop)
 	{
 		DangoAbyssController.Instance.RefreshAbyssDangoAnimation(99, path, ifLoop);
 	}
 
-	// Token: 0x0600C6AB RID: 50859 RVA: 0x002D341F File Offset: 0x002D161F
+	// Token: 0x06009ABB RID: 39611 RVA: 0x002DE523 File Offset: 0x002DC723
 	private void CancelTimerHandle()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.CurrentDelayBackHandle))
@@ -140,7 +141,7 @@ public class DangoAbyssShopView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600C6AC RID: 50860 RVA: 0x002D344C File Offset: 0x002D164C
+	// Token: 0x06009ABC RID: 39612 RVA: 0x002DE550 File Offset: 0x002DC750
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoAbyssShopView.<OnBeforeStartAsync>d__23 <OnBeforeStartAsync>d__;
@@ -151,49 +152,48 @@ public class DangoAbyssShopView : UiViewBase, IUiCameraBehavior
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C6AD RID: 50861 RVA: 0x002D348F File Offset: 0x002D168F
-	public void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+	// Token: 0x06009ABD RID: 39613 RVA: 0x002DE593 File Offset: 0x002DC793
+	public void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 	{
-		UiCameraAnimationController.Instance.PushCameraHandle((EUiViewName)"DangoAbyssShop", new int?(base.GetViewId()), true);
+		UiCameraController.Instance.PushCameraHandleByOpenView((EUiViewName)"DangoAbyssShop", viewId, operationType);
 	}
 
-	// Token: 0x0600C6AE RID: 50862 RVA: 0x002D34B1 File Offset: 0x002D16B1
-	[NullableContext(2)]
-	public void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+	// Token: 0x06009ABE RID: 39614 RVA: 0x002DE5AB File Offset: 0x002DC7AB
+	public void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 	{
-		UiCameraAnimationController.Instance.PopCameraHandle((EUiViewName)"DangoAbyssShop", stackTopInfo, closeViewId, popOrDelete);
+		UiCameraController.Instance.PopCameraHandleByCloseView((EUiViewName)"DangoAbyssShop", nextViewName, closeViewId, operationType);
 	}
 
-	// Token: 0x0600C6AF RID: 50863 RVA: 0x002D34CC File Offset: 0x002D16CC
+	// Token: 0x06009ABF RID: 39615 RVA: 0x002DE5C8 File Offset: 0x002DC7C8
 	protected override void OnBeforeShow()
 	{
 		DangoAbyssController.Instance.RefreshAbyssDangoModel(99, 999, "MonsterCase2", null);
-		this.PushCameraHandle((EUiViewName)"DangoAbyssShop", base.GetViewId(), true);
+		this.PushCameraHandleByOpenView((EUiViewName)"DangoAbyssShop", base.GetViewId(), EUiCameraHandleOperationType.Blend);
 		int openShopId = DangoAbyssModel.Instance.GetOpenShopId();
 		this.ActivityShopScrollItem.Refresh(openShopId).Forget();
 	}
 
-	// Token: 0x0600C6B0 RID: 50864 RVA: 0x002D3523 File Offset: 0x002D1723
+	// Token: 0x06009AC0 RID: 39616 RVA: 0x002DE61F File Offset: 0x002DC81F
 	protected override void OnBeforeHide()
 	{
 		this.CancelTimerHandle();
 	}
 
-	// Token: 0x04005B85 RID: 23429
+	// Token: 0x04005C54 RID: 23636
 	[Nullable(1)]
 	private const string DANGOSHOP = "DangoAbyssShop";
 
-	// Token: 0x04005B86 RID: 23430
+	// Token: 0x04005C55 RID: 23637
 	private const int MODELINDEX = 99;
 
-	// Token: 0x04005B87 RID: 23431
+	// Token: 0x04005C56 RID: 23638
 	private const int CHANGECD = 1800;
 
-	// Token: 0x04005B88 RID: 23432
+	// Token: 0x04005C57 RID: 23639
 	[Nullable(2)]
 	private CommonCurrencyItemListComponent CurrencyItemListComponent;
 
-	// Token: 0x04005B89 RID: 23433
+	// Token: 0x04005C58 RID: 23640
 	[Nullable(new byte[]
 	{
 		2,
@@ -201,31 +201,31 @@ public class DangoAbyssShopView : UiViewBase, IUiCameraBehavior
 	})]
 	private ActivityShopScrollItem<ActivityShopGridItem> ActivityShopScrollItem;
 
-	// Token: 0x04005B8A RID: 23434
+	// Token: 0x04005C59 RID: 23641
 	private int ClickCount;
 
-	// Token: 0x04005B8B RID: 23435
+	// Token: 0x04005C5A RID: 23642
 	private bool IfPlayAni;
 
-	// Token: 0x04005B8C RID: 23436
+	// Token: 0x04005C5B RID: 23643
 	private long LastTimeClickTime;
 
-	// Token: 0x04005B8D RID: 23437
+	// Token: 0x04005C5C RID: 23644
 	[Nullable(2)]
 	private TimerHandle CurrentDelayBackHandle;
 
-	// Token: 0x02007FA7 RID: 32679
+	// Token: 0x02007136 RID: 28982
 	private enum EComponent
 	{
-		// Token: 0x04029AE3 RID: 170723
+		// Token: 0x04024E20 RID: 151072
 		BackBtn,
-		// Token: 0x04029AE4 RID: 170724
+		// Token: 0x04024E21 RID: 151073
 		CostLayer,
-		// Token: 0x04029AE5 RID: 170725
+		// Token: 0x04024E22 RID: 151074
 		ItemScroller,
-		// Token: 0x04029AE6 RID: 170726
+		// Token: 0x04024E23 RID: 151075
 		Item,
-		// Token: 0x04029AE7 RID: 170727
+		// Token: 0x04024E24 RID: 151076
 		HalfButton
 	}
 }

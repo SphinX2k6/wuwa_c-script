@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B6C RID: 7020
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D19 RID: 7449
 	public class IKiteHookInteract : ILeisureInteractType
 	{
-		// Token: 0x0600965B RID: 38491 RVA: 0x0015B5F4 File Offset: 0x001597F4
+		// Token: 0x06009E3D RID: 40509 RVA: 0x0016C1A0 File Offset: 0x0016A3A0
 		private IKiteHookInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600965C RID: 38492 RVA: 0x0015B62C File Offset: 0x0015982C
+		// Token: 0x06009E3E RID: 40510 RVA: 0x0016C1D8 File Offset: 0x0016A3D8
 		public static IKiteHookInteract Create([Nullable(2)] IKiteHookInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600965D RID: 38493 RVA: 0x0015B63F File Offset: 0x0015983F
+		// Token: 0x06009E3F RID: 40511 RVA: 0x0016C1EB File Offset: 0x0016A3EB
 		public static IKiteHookInteract CreateFromSetValue([Nullable(2)] IKiteHookInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600965E RID: 38494 RVA: 0x0015B652 File Offset: 0x00159852
+		// Token: 0x06009E40 RID: 40512 RVA: 0x0016C1FE File Offset: 0x0016A3FE
 		public new IKiteHookInteract_SetValue ToSetValue()
 		{
 			return new IKiteHookInteract_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F62 RID: 12130
-		// (get) Token: 0x0600965F RID: 38495 RVA: 0x0015B671 File Offset: 0x00159871
-		// (set) Token: 0x06009660 RID: 38496 RVA: 0x0015B69C File Offset: 0x0015989C
+		// Token: 0x17003187 RID: 12679
+		// (get) Token: 0x06009E41 RID: 40513 RVA: 0x0016C21D File Offset: 0x0016A41D
+		// (set) Token: 0x06009E42 RID: 40514 RVA: 0x0016C248 File Offset: 0x0016A448
 		public override ELeisureInteract Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F63 RID: 12131
-		// (get) Token: 0x06009661 RID: 38497 RVA: 0x0015B6AA File Offset: 0x001598AA
-		// (set) Token: 0x06009662 RID: 38498 RVA: 0x0015B6D5 File Offset: 0x001598D5
+		// Token: 0x17003188 RID: 12680
+		// (get) Token: 0x06009E43 RID: 40515 RVA: 0x0016C256 File Offset: 0x0016A456
+		// (set) Token: 0x06009E44 RID: 40516 RVA: 0x0016C281 File Offset: 0x0016A481
 		public virtual int EntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005BF3 RID: 23539
+		// Token: 0x0400608C RID: 24716
 		[Nullable(2)]
 		protected new IKiteHookInteract FbInstance;
 
-		// Token: 0x04005BF4 RID: 23540
+		// Token: 0x0400608D RID: 24717
 		[Nullable(2)]
 		protected new IKiteHookInteract_SetValue PocoInterface;
 	}

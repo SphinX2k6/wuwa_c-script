@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AD2 RID: 19154
+	// Token: 0x02003A7A RID: 14970
 	public class TrapDefenseTalentLockItem : UiPanelBase
 	{
-		// Token: 0x060319D4 RID: 203220 RVA: 0x00B82224 File Offset: 0x00B80424
+		// Token: 0x06026764 RID: 157540 RVA: 0x00AC61D8 File Offset: 0x00AC43D8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -23,19 +23,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060319D5 RID: 203221 RVA: 0x00B8228D File Offset: 0x00B8048D
+		// Token: 0x06026765 RID: 157541 RVA: 0x00AC6241 File Offset: 0x00AC4441
 		protected override void OnStart()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), ETrapDefenseTextKey.TalentNodeNeedUnlockPre.ToString(), Array.Empty<object>());
 		}
 
-		// Token: 0x0200AC4C RID: 44108
+		// Token: 0x0200966C RID: 38508
 		private class EComponentDefine
 		{
-			// Token: 0x040345B4 RID: 214452
+			// Token: 0x0402EF65 RID: 192357
 			public const int SpriteLock = 0;
 
-			// Token: 0x040345B5 RID: 214453
+			// Token: 0x0402EF66 RID: 192358
 			public const int TextLock = 1;
 		}
 	}

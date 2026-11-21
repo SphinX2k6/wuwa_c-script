@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001091 RID: 4241
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011BF RID: 4543
 	public class IQuestPlayerHitStatisticsType
 	{
-		// Token: 0x06005FA6 RID: 24486 RVA: 0x000E7960 File Offset: 0x000E5B60
+		// Token: 0x0600659F RID: 26015 RVA: 0x000F4A80 File Offset: 0x000F2C80
 		private IQuestPlayerHitStatisticsType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005FA7 RID: 24487 RVA: 0x000E7998 File Offset: 0x000E5B98
+		// Token: 0x060065A0 RID: 26016 RVA: 0x000F4AB8 File Offset: 0x000F2CB8
 		public static IQuestPlayerHitStatisticsType Create([Nullable(2)] IQuestPlayerHitStatisticsType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005FA8 RID: 24488 RVA: 0x000E79AB File Offset: 0x000E5BAB
+		// Token: 0x060065A1 RID: 26017 RVA: 0x000F4ACB File Offset: 0x000F2CCB
 		public static IQuestPlayerHitStatisticsType CreateFromSetValue([Nullable(2)] IQuestPlayerHitStatisticsType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005FA9 RID: 24489 RVA: 0x000E79BE File Offset: 0x000E5BBE
+		// Token: 0x060065A2 RID: 26018 RVA: 0x000F4ADE File Offset: 0x000F2CDE
 		public IQuestPlayerHitStatisticsType_SetValue ToSetValue()
 		{
 			return new IQuestPlayerHitStatisticsType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F7D RID: 8061
-		// (get) Token: 0x06005FAA RID: 24490 RVA: 0x000E79D1 File Offset: 0x000E5BD1
-		// (set) Token: 0x06005FAB RID: 24491 RVA: 0x000E79FC File Offset: 0x000E5BFC
+		// Token: 0x1700212F RID: 8495
+		// (get) Token: 0x060065A3 RID: 26019 RVA: 0x000F4AF1 File Offset: 0x000F2CF1
+		// (set) Token: 0x060065A4 RID: 26020 RVA: 0x000F4B1C File Offset: 0x000F2D1C
 		public virtual EPlayerHitStatisticsType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040039B0 RID: 14768
+		// Token: 0x04003CFD RID: 15613
 		[Nullable(2)]
 		protected IQuestPlayerHitStatisticsType FbInstance;
 
-		// Token: 0x040039B1 RID: 14769
+		// Token: 0x04003CFE RID: 15614
 		[Nullable(2)]
 		protected IQuestPlayerHitStatisticsType_SetValue PocoInterface;
 	}

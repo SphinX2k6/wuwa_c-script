@@ -7,30 +7,30 @@ using CSharpScript.Launcher.Util;
 
 namespace CSharpScript.Launcher.DiffPatch.Data
 {
-	// Token: 0x0200022F RID: 559
+	// Token: 0x02000234 RID: 564
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LanguageVersionInfo : ResVersionInfo
 	{
-		// Token: 0x06000E43 RID: 3651 RVA: 0x0005559A File Offset: 0x0005379A
+		// Token: 0x06000E84 RID: 3716 RVA: 0x000580A2 File Offset: 0x000562A2
 		public LanguageVersionInfo(string packageVersion, string remoteVersion, Dictionary<string, string> remoteManifestHash, string languageCode) : base(packageVersion, remoteVersion, remoteManifestHash)
 		{
 			this.LanguageCode = languageCode;
 		}
 
-		// Token: 0x06000E44 RID: 3652 RVA: 0x000555B8 File Offset: 0x000537B8
+		// Token: 0x06000E85 RID: 3717 RVA: 0x000580C0 File Offset: 0x000562C0
 		public override string GetResType()
 		{
 			return EResType.Lang.ToEnumString() + "_" + this.LanguageCode;
 		}
 
-		// Token: 0x06000E45 RID: 3653 RVA: 0x000555D0 File Offset: 0x000537D0
+		// Token: 0x06000E86 RID: 3718 RVA: 0x000580D8 File Offset: 0x000562D8
 		public override bool IsLangRes()
 		{
 			return true;
 		}
 
-		// Token: 0x06000E46 RID: 3654 RVA: 0x000555D4 File Offset: 0x000537D4
+		// Token: 0x06000E87 RID: 3719 RVA: 0x000580DC File Offset: 0x000562DC
 		public override bool SkipUpdate()
 		{
 			if (Platform.Instance.IsCloudGame())
@@ -45,26 +45,26 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			return text == null || text.Length <= 0;
 		}
 
-		// Token: 0x06000E47 RID: 3655 RVA: 0x00055634 File Offset: 0x00053834
+		// Token: 0x06000E88 RID: 3720 RVA: 0x0005813C File Offset: 0x0005633C
 		public override bool RecordUse(bool bUse)
 		{
 			string value = bUse ? "1" : "";
 			return LauncherStorageLib.Instance.SetDeviceSavedString(this.GetUseLanguageSaveKey(), value);
 		}
 
-		// Token: 0x06000E48 RID: 3656 RVA: 0x00055662 File Offset: 0x00053862
+		// Token: 0x06000E89 RID: 3721 RVA: 0x0005816A File Offset: 0x0005636A
 		protected override bool ClearUseRecord()
 		{
 			return LauncherStorageLib.Instance.DeleteDeviceSavedString(this.GetUseLanguageSaveKey());
 		}
 
-		// Token: 0x06000E49 RID: 3657 RVA: 0x00055674 File Offset: 0x00053874
+		// Token: 0x06000E8A RID: 3722 RVA: 0x0005817C File Offset: 0x0005637C
 		private string GetUseLanguageSaveKey()
 		{
 			return "UseLanguage_" + this.LanguageCode;
 		}
 
-		// Token: 0x040008F6 RID: 2294
+		// Token: 0x04000938 RID: 2360
 		protected readonly string LanguageCode = "";
 	}
 }

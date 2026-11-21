@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A39 RID: 6713
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BCE RID: 7118
 	public class IFaceExpressionMorphConfig : IFaceExpressionConfig
 	{
-		// Token: 0x06008FBA RID: 36794 RVA: 0x0014F6E8 File Offset: 0x0014D8E8
+		// Token: 0x06009724 RID: 38692 RVA: 0x0015F614 File Offset: 0x0015D814
 		private IFaceExpressionMorphConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008FBB RID: 36795 RVA: 0x0014F720 File Offset: 0x0014D920
+		// Token: 0x06009725 RID: 38693 RVA: 0x0015F64C File Offset: 0x0015D84C
 		public static IFaceExpressionMorphConfig Create([Nullable(2)] IFaceExpressionMorphConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008FBC RID: 36796 RVA: 0x0014F733 File Offset: 0x0014D933
+		// Token: 0x06009726 RID: 38694 RVA: 0x0015F65F File Offset: 0x0015D85F
 		public static IFaceExpressionMorphConfig CreateFromSetValue([Nullable(2)] IFaceExpressionMorphConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008FBD RID: 36797 RVA: 0x0014F746 File Offset: 0x0014D946
+		// Token: 0x06009727 RID: 38695 RVA: 0x0015F672 File Offset: 0x0015D872
 		public new IFaceExpressionMorphConfig_SetValue ToSetValue()
 		{
 			return new IFaceExpressionMorphConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DDD RID: 11741
-		// (get) Token: 0x06008FBE RID: 36798 RVA: 0x0014F765 File Offset: 0x0014D965
-		// (set) Token: 0x06008FBF RID: 36799 RVA: 0x0014F790 File Offset: 0x0014D990
+		// Token: 0x17002FEA RID: 12266
+		// (get) Token: 0x06009728 RID: 38696 RVA: 0x0015F691 File Offset: 0x0015D891
+		// (set) Token: 0x06009729 RID: 38697 RVA: 0x0015F6BC File Offset: 0x0015D8BC
 		public override EFaceExpressionConfigType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DDE RID: 11742
-		// (get) Token: 0x06008FC0 RID: 36800 RVA: 0x0014F79E File Offset: 0x0014D99E
-		// (set) Token: 0x06008FC1 RID: 36801 RVA: 0x0014F7C9 File Offset: 0x0014D9C9
+		// Token: 0x17002FEB RID: 12267
+		// (get) Token: 0x0600972A RID: 38698 RVA: 0x0015F6CA File Offset: 0x0015D8CA
+		// (set) Token: 0x0600972B RID: 38699 RVA: 0x0015F6F5 File Offset: 0x0015D8F5
 		public virtual string MorphData
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040058DE RID: 22750
+		// Token: 0x04005D43 RID: 23875
 		[Nullable(2)]
 		protected new IFaceExpressionMorphConfig FbInstance;
 
-		// Token: 0x040058DF RID: 22751
+		// Token: 0x04005D44 RID: 23876
 		[Nullable(2)]
 		protected new IFaceExpressionMorphConfig_SetValue PocoInterface;
 	}

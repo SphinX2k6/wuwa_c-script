@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051AB RID: 20907
+	// Token: 0x02005710 RID: 22288
 	public class IEntityPackageNodeT
 	{
-		// Token: 0x170098C8 RID: 39112
-		// (get) Token: 0x06021D73 RID: 138611 RVA: 0x004B1BE1 File Offset: 0x004AFDE1
-		// (set) Token: 0x06021D74 RID: 138612 RVA: 0x004B1BE9 File Offset: 0x004AFDE9
+		// Token: 0x1700A0B7 RID: 41143
+		// (get) Token: 0x06023CCB RID: 146635 RVA: 0x004EBC49 File Offset: 0x004E9E49
+		// (set) Token: 0x06023CCC RID: 146636 RVA: 0x004EBC51 File Offset: 0x004E9E51
 		public int EntityId { get; set; }
 
-		// Token: 0x170098C9 RID: 39113
-		// (get) Token: 0x06021D75 RID: 138613 RVA: 0x004B1BF2 File Offset: 0x004AFDF2
-		// (set) Token: 0x06021D76 RID: 138614 RVA: 0x004B1BFA File Offset: 0x004AFDFA
+		// Token: 0x1700A0B8 RID: 41144
+		// (get) Token: 0x06023CCD RID: 146637 RVA: 0x004EBC5A File Offset: 0x004E9E5A
+		// (set) Token: 0x06023CCE RID: 146638 RVA: 0x004EBC62 File Offset: 0x004E9E62
 		public List<IEntityPackageNodeT> Children { get; set; }
 
-		// Token: 0x170098CA RID: 39114
-		// (get) Token: 0x06021D77 RID: 138615 RVA: 0x004B1C03 File Offset: 0x004AFE03
-		// (set) Token: 0x06021D78 RID: 138616 RVA: 0x004B1C0B File Offset: 0x004AFE0B
+		// Token: 0x1700A0B9 RID: 41145
+		// (get) Token: 0x06023CCF RID: 146639 RVA: 0x004EBC6B File Offset: 0x004E9E6B
+		// (set) Token: 0x06023CD0 RID: 146640 RVA: 0x004EBC73 File Offset: 0x004E9E73
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021D79 RID: 138617 RVA: 0x004B1C14 File Offset: 0x004AFE14
+		// Token: 0x06023CD1 RID: 146641 RVA: 0x004EBC7C File Offset: 0x004E9E7C
 		public IEntityPackageNodeT()
 		{
 			this.EntityId = 0;

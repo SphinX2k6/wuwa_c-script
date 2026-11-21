@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200274E RID: 10062
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A1A RID: 10778
 	public class ISlashAndTowerTip : ICommonTipType
 	{
-		// Token: 0x0600E031 RID: 57393 RVA: 0x00212CB1 File Offset: 0x00210EB1
+		// Token: 0x0600EE31 RID: 60977 RVA: 0x0022F7E9 File Offset: 0x0022D9E9
 		public static ISlashAndTowerTip Create(ISlashAndTowerTip? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004357 RID: 17239
-		// (get) Token: 0x0600E032 RID: 57394 RVA: 0x00212CD0 File Offset: 0x00210ED0
+		// Token: 0x170046AB RID: 18091
+		// (get) Token: 0x0600EE32 RID: 60978 RVA: 0x0022F808 File Offset: 0x0022DA08
 		public override ECommonTipType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004358 RID: 17240
-		// (get) Token: 0x0600E033 RID: 57395 RVA: 0x00212CDD File Offset: 0x00210EDD
+		// Token: 0x170046AC RID: 18092
+		// (get) Token: 0x0600EE33 RID: 60979 RVA: 0x0022F815 File Offset: 0x0022DA15
 		public virtual string WarningText
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C4C RID: 31820
+		// Token: 0x040082FA RID: 33530
 		private ISlashAndTowerTip Instance;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -9,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024CA RID: 9418
+// Token: 0x020019B1 RID: 6577
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionIdentifyView : UiTabViewBase
 {
-	// Token: 0x06012E97 RID: 77463 RVA: 0x004AD2C8 File Offset: 0x004AB4C8
+	// Token: 0x06010356 RID: 66390 RVA: 0x004BAEC8 File Offset: 0x004B90C8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +32,7 @@ public class VisionIdentifyView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x06012E98 RID: 77464 RVA: 0x004AD3A0 File Offset: 0x004AB5A0
+	// Token: 0x06010357 RID: 66391 RVA: 0x004BAFA0 File Offset: 0x004B91A0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionIdentifyView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -44,7 +43,7 @@ public class VisionIdentifyView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012E99 RID: 77465 RVA: 0x004AD3E4 File Offset: 0x004AB5E4
+	// Token: 0x06010358 RID: 66392 RVA: 0x004BAFE4 File Offset: 0x004B91E4
 	protected override void OnStart()
 	{
 		this.VisionIdentifyCostItem = new VisionIdentifyCostItem(base.GetItem(1));
@@ -53,13 +52,13 @@ public class VisionIdentifyView : UiTabViewBase
 		this.VisionNameText = new VisionNameText(base.GetText(3));
 	}
 
-	// Token: 0x06012E9A RID: 77466 RVA: 0x004AD437 File Offset: 0x004AB637
+	// Token: 0x06010359 RID: 66393 RVA: 0x004BB037 File Offset: 0x004B9237
 	private void OnChangeSelectNumber()
 	{
 		this.RefreshAttributePreview();
 	}
 
-	// Token: 0x06012E9B RID: 77467 RVA: 0x004AD43F File Offset: 0x004AB63F
+	// Token: 0x0601035A RID: 66394 RVA: 0x004BB03F File Offset: 0x004B923F
 	protected override void OnBeforeShow()
 	{
 		this.AddEvent();
@@ -68,7 +67,7 @@ public class VisionIdentifyView : UiTabViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x06012E9C RID: 77468 RVA: 0x004AD470 File Offset: 0x004AB670
+	// Token: 0x0601035B RID: 66395 RVA: 0x004BB070 File Offset: 0x004B9270
 	private void AddEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnVisionIdentify, new Action(this.OnVisionIdentify));
@@ -78,7 +77,7 @@ public class VisionIdentifyView : UiTabViewBase
 		this.EventRegistState = true;
 	}
 
-	// Token: 0x06012E9D RID: 77469 RVA: 0x004AD4F4 File Offset: 0x004AB6F4
+	// Token: 0x0601035C RID: 66396 RVA: 0x004BB0F4 File Offset: 0x004B92F4
 	private void RemoveEvent()
 	{
 		if (this.EventRegistState)
@@ -91,7 +90,7 @@ public class VisionIdentifyView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012E9E RID: 77470 RVA: 0x004AD580 File Offset: 0x004AB780
+	// Token: 0x0601035D RID: 66397 RVA: 0x004BB180 File Offset: 0x004B9380
 	private void RefreshView()
 	{
 		this.RefreshMainAttribute();
@@ -100,7 +99,7 @@ public class VisionIdentifyView : UiTabViewBase
 		this.RefreshToggleState();
 	}
 
-	// Token: 0x06012E9F RID: 77471 RVA: 0x004AD59C File Offset: 0x004AB79C
+	// Token: 0x0601035E RID: 66398 RVA: 0x004BB19C File Offset: 0x004B939C
 	private void RefreshName()
 	{
 		PhantomBattleData phantomItemDataByUniqueId = PhantomBattleController.Instance.GetPhantomItemDataByUniqueId(this.CurrentVisionUniqueId);
@@ -111,13 +110,13 @@ public class VisionIdentifyView : UiTabViewBase
 		this.VisionNameText.Update(phantomItemDataByUniqueId);
 	}
 
-	// Token: 0x06012EA0 RID: 77472 RVA: 0x004AD5CA File Offset: 0x004AB7CA
+	// Token: 0x0601035F RID: 66399 RVA: 0x004BB1CA File Offset: 0x004B93CA
 	private void OnVisionIdentifyDoAnimation(int uniqueId, IReadOnlyList<Aki.Protocol.PhantomPropInfo> data)
 	{
-		this.PlayGridAnimation(uniqueId, data.ToList<Aki.Protocol.PhantomPropInfo>()).Forget();
+		this.PlayGridAnimation(uniqueId, new List<Aki.Protocol.PhantomPropInfo>(data)).Forget();
 	}
 
-	// Token: 0x06012EA1 RID: 77473 RVA: 0x004AD5E0 File Offset: 0x004AB7E0
+	// Token: 0x06010360 RID: 66400 RVA: 0x004BB1E0 File Offset: 0x004B93E0
 	private UniTask PlayGridAnimation(int uniqueId, List<Aki.Protocol.PhantomPropInfo> data)
 	{
 		VisionIdentifyView.<PlayGridAnimation>d__19 <PlayGridAnimation>d__;
@@ -130,7 +129,7 @@ public class VisionIdentifyView : UiTabViewBase
 		return <PlayGridAnimation>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012EA2 RID: 77474 RVA: 0x004AD634 File Offset: 0x004AB834
+	// Token: 0x06010361 RID: 66401 RVA: 0x004BB234 File Offset: 0x004B9434
 	private void OnlyRefreshNewAttribute()
 	{
 		if (this.CurrentNeedAnimationIndex.Count > 0)
@@ -154,13 +153,13 @@ public class VisionIdentifyView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012EA3 RID: 77475 RVA: 0x004AD6CE File Offset: 0x004AB8CE
+	// Token: 0x06010362 RID: 66402 RVA: 0x004BB2CE File Offset: 0x004B94CE
 	private void OnVisionIdentify()
 	{
 		this.CacheCurrentSlotState();
 	}
 
-	// Token: 0x06012EA4 RID: 77476 RVA: 0x004AD6D8 File Offset: 0x004AB8D8
+	// Token: 0x06010363 RID: 66403 RVA: 0x004BB2D8 File Offset: 0x004B94D8
 	private void CacheCurrentSlotState()
 	{
 		this.CurrentNeedAnimationIndex = new List<int>();
@@ -198,7 +197,7 @@ public class VisionIdentifyView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012EA5 RID: 77477 RVA: 0x004AD7F8 File Offset: 0x004AB9F8
+	// Token: 0x06010364 RID: 66404 RVA: 0x004BB3F8 File Offset: 0x004B95F8
 	private void OnItemFuncValueChange(int uniqueId)
 	{
 		if (uniqueId != this.CurrentVisionUniqueId)
@@ -208,13 +207,13 @@ public class VisionIdentifyView : UiTabViewBase
 		this.RefreshToggleState();
 	}
 
-	// Token: 0x06012EA6 RID: 77478 RVA: 0x004AD80A File Offset: 0x004ABA0A
+	// Token: 0x06010365 RID: 66405 RVA: 0x004BB40A File Offset: 0x004B960A
 	private void OnCommonItemCountAnyChange(int i, int i1)
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x06012EA7 RID: 77479 RVA: 0x004AD814 File Offset: 0x004ABA14
+	// Token: 0x06010366 RID: 66406 RVA: 0x004BB414 File Offset: 0x004B9614
 	private void RefreshCostItem()
 	{
 		PhantomBattleData phantomItemDataByUniqueId = PhantomBattleController.Instance.GetPhantomItemDataByUniqueId(this.CurrentVisionUniqueId);
@@ -225,7 +224,7 @@ public class VisionIdentifyView : UiTabViewBase
 		this.VisionIdentifyCostItem.Update(phantomItemDataByUniqueId);
 	}
 
-	// Token: 0x06012EA8 RID: 77480 RVA: 0x004AD844 File Offset: 0x004ABA44
+	// Token: 0x06010367 RID: 66407 RVA: 0x004BB444 File Offset: 0x004B9644
 	private void RefreshMainAttribute()
 	{
 		PhantomBattleData phantomItemDataByUniqueId = PhantomBattleController.Instance.GetPhantomItemDataByUniqueId(this.CurrentVisionUniqueId);
@@ -237,7 +236,7 @@ public class VisionIdentifyView : UiTabViewBase
 		this.VisionMainAttributeComponent.Update(levelUpPreviewData.ToArray());
 	}
 
-	// Token: 0x06012EA9 RID: 77481 RVA: 0x004AD884 File Offset: 0x004ABA84
+	// Token: 0x06010368 RID: 66408 RVA: 0x004BB484 File Offset: 0x004B9684
 	private void RefreshAttributePreview()
 	{
 		PhantomBattleData phantomItemDataByUniqueId = PhantomBattleController.Instance.GetPhantomItemDataByUniqueId(this.CurrentVisionUniqueId);
@@ -260,7 +259,7 @@ public class VisionIdentifyView : UiTabViewBase
 		this.LevelUpIdentifyComponent.SetActive(flag);
 	}
 
-	// Token: 0x06012EAA RID: 77482 RVA: 0x004AD924 File Offset: 0x004ABB24
+	// Token: 0x06010369 RID: 66409 RVA: 0x004BB524 File Offset: 0x004B9724
 	private void RefreshToggleState()
 	{
 		AttributeItemData attributeItemData = InventoryModel.Instance.GetAttributeItemData(this.CurrentVisionUniqueId);
@@ -274,14 +273,14 @@ public class VisionIdentifyView : UiTabViewBase
 		base.GetExtendToggle(5).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x06012EAB RID: 77483 RVA: 0x004AD982 File Offset: 0x004ABB82
+	// Token: 0x0601036A RID: 66410 RVA: 0x004BB582 File Offset: 0x004B9782
 	protected override void OnBeforeHide()
 	{
 		this.RemoveEvent();
 		UiLayer.Instance.SetShowMaskLayer("PhantomLevelUp", false);
 	}
 
-	// Token: 0x06012EAC RID: 77484 RVA: 0x004AD99A File Offset: 0x004ABB9A
+	// Token: 0x0601036B RID: 66411 RVA: 0x004BB59A File Offset: 0x004B979A
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEvent();
@@ -290,7 +289,7 @@ public class VisionIdentifyView : UiTabViewBase
 		this.VisionIdentifyCostItem.Destroy(null);
 	}
 
-	// Token: 0x06012EAD RID: 77485 RVA: 0x004AD9C8 File Offset: 0x004ABBC8
+	// Token: 0x0601036C RID: 66412 RVA: 0x004BB5C8 File Offset: 0x004B97C8
 	protected void OnClickLockToggle(EToggleState toggleState)
 	{
 		AttributeItemData attributeItemData = InventoryModel.Instance.GetAttributeItemData(this.CurrentVisionUniqueId);
@@ -301,7 +300,7 @@ public class VisionIdentifyView : UiTabViewBase
 		InventoryController.Instance.ItemLockRequest(this.CurrentVisionUniqueId, !attributeItemData.GetIsLock());
 	}
 
-	// Token: 0x06012EAE RID: 77486 RVA: 0x004ADA04 File Offset: 0x004ABC04
+	// Token: 0x0601036D RID: 66413 RVA: 0x004BB604 File Offset: 0x004B9804
 	protected void OnClickDeprecateToggle(EToggleState toggleState)
 	{
 		AttributeItemData attributeItemData = InventoryModel.Instance.GetAttributeItemData(this.CurrentVisionUniqueId);
@@ -312,49 +311,49 @@ public class VisionIdentifyView : UiTabViewBase
 		InventoryController.Instance.ItemDeprecateRequest(this.CurrentVisionUniqueId, !attributeItemData.GetIsDeprecated());
 	}
 
-	// Token: 0x04008E89 RID: 36489
+	// Token: 0x04008FD3 RID: 36819
 	[Nullable(2)]
 	private LevelUpIdentifyComponent LevelUpIdentifyComponent;
 
-	// Token: 0x04008E8A RID: 36490
+	// Token: 0x04008FD4 RID: 36820
 	[Nullable(2)]
 	private VisionMainAttributeComponent VisionMainAttributeComponent;
 
-	// Token: 0x04008E8B RID: 36491
+	// Token: 0x04008FD5 RID: 36821
 	private int CurrentVisionUniqueId;
 
-	// Token: 0x04008E8C RID: 36492
+	// Token: 0x04008FD6 RID: 36822
 	[Nullable(2)]
 	private VisionIdentifyCostItem VisionIdentifyCostItem;
 
-	// Token: 0x04008E8D RID: 36493
+	// Token: 0x04008FD7 RID: 36823
 	private bool EventRegistState;
 
-	// Token: 0x04008E8E RID: 36494
+	// Token: 0x04008FD8 RID: 36824
 	[Nullable(2)]
 	private VisionNameText VisionNameText;
 
-	// Token: 0x04008E8F RID: 36495
+	// Token: 0x04008FD9 RID: 36825
 	private readonly Dictionary<int, int> CurrentCacheSubPropSlotData = new Dictionary<int, int>();
 
-	// Token: 0x04008E90 RID: 36496
+	// Token: 0x04008FDA RID: 36826
 	private List<int> CurrentNeedAnimationIndex = new List<int>();
 
-	// Token: 0x02008A50 RID: 35408
+	// Token: 0x02007BD9 RID: 31705
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CE8F RID: 183951
+		// Token: 0x040281AD RID: 164269
 		AttributeItem,
-		// Token: 0x0402CE90 RID: 183952
+		// Token: 0x040281AE RID: 164270
 		CostItem,
-		// Token: 0x0402CE91 RID: 183953
+		// Token: 0x040281AF RID: 164271
 		IdentifyItem,
-		// Token: 0x0402CE92 RID: 183954
+		// Token: 0x040281B0 RID: 164272
 		VisionName,
-		// Token: 0x0402CE93 RID: 183955
+		// Token: 0x040281B1 RID: 164273
 		LockToggle,
-		// Token: 0x0402CE94 RID: 183956
+		// Token: 0x040281B2 RID: 164274
 		DeprecateToggle
 	}
 }

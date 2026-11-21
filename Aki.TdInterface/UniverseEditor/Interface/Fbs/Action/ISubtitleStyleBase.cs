@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007223 RID: 29219
+	// Token: 0x020079F8 RID: 31224
 	public struct ISubtitleStyleBase : IFlatbufferObject
 	{
-		// Token: 0x1700D8E7 RID: 55527
-		// (get) Token: 0x06033D50 RID: 212304 RVA: 0x006F9A21 File Offset: 0x006F7C21
+		// Token: 0x1700E4E0 RID: 58592
+		// (get) Token: 0x06037052 RID: 225362 RVA: 0x0075AD81 File Offset: 0x00758F81
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033D51 RID: 212305 RVA: 0x006F9A2E File Offset: 0x006F7C2E
+		// Token: 0x06037053 RID: 225363 RVA: 0x0075AD8E File Offset: 0x00758F8E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033D52 RID: 212306 RVA: 0x006F9A38 File Offset: 0x006F7C38
+		// Token: 0x06037054 RID: 225364 RVA: 0x0075AD98 File Offset: 0x00758F98
 		public static ISubtitleStyleBase GetRootAsISubtitleStyleBase(ByteBuffer _bb)
 		{
 			return ISubtitleStyleBase.GetRootAsISubtitleStyleBase(_bb, default(ISubtitleStyleBase));
 		}
 
-		// Token: 0x06033D53 RID: 212307 RVA: 0x006F9A54 File Offset: 0x006F7C54
+		// Token: 0x06037055 RID: 225365 RVA: 0x0075ADB4 File Offset: 0x00758FB4
 		public static ISubtitleStyleBase GetRootAsISubtitleStyleBase(ByteBuffer _bb, ISubtitleStyleBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033D54 RID: 212308 RVA: 0x006F9A71 File Offset: 0x006F7C71
+		// Token: 0x06037056 RID: 225366 RVA: 0x0075ADD1 File Offset: 0x00758FD1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033D55 RID: 212309 RVA: 0x006F9A80 File Offset: 0x006F7C80
+		// Token: 0x06037057 RID: 225367 RVA: 0x0075ADE0 File Offset: 0x00758FE0
 		public ISubtitleStyleBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D8E8 RID: 55528
-		// (get) Token: 0x06033D56 RID: 212310 RVA: 0x006F9A90 File Offset: 0x006F7C90
+		// Token: 0x1700E4E1 RID: 58593
+		// (get) Token: 0x06037058 RID: 225368 RVA: 0x0075ADF0 File Offset: 0x00758FF0
 		public ESubtitleStyle Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033D57 RID: 212311 RVA: 0x006F9ACC File Offset: 0x006F7CCC
+		// Token: 0x06037059 RID: 225369 RVA: 0x0075AE2C File Offset: 0x0075902C
 		public static Offset<ISubtitleStyleBase> CreateISubtitleStyleBase(FlatBufferBuilder builder, ESubtitleStyle Type = ESubtitleStyle.LevelA)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISubtitleStyleBase.EndISubtitleStyleBase(builder);
 		}
 
-		// Token: 0x06033D58 RID: 212312 RVA: 0x006F9AE2 File Offset: 0x006F7CE2
+		// Token: 0x0603705A RID: 225370 RVA: 0x0075AE42 File Offset: 0x00759042
 		public static void StartISubtitleStyleBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06033D59 RID: 212313 RVA: 0x006F9AEB File Offset: 0x006F7CEB
+		// Token: 0x0603705B RID: 225371 RVA: 0x0075AE4B File Offset: 0x0075904B
 		public static void AddType(FlatBufferBuilder builder, ESubtitleStyle type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033D5A RID: 212314 RVA: 0x006F9AF6 File Offset: 0x006F7CF6
+		// Token: 0x0603705C RID: 225372 RVA: 0x0075AE56 File Offset: 0x00759056
 		public static Offset<ISubtitleStyleBase> EndISubtitleStyleBase(FlatBufferBuilder builder)
 		{
 			return new Offset<ISubtitleStyleBase>(builder.EndTable());
 		}
 
-		// Token: 0x06033D5B RID: 212315 RVA: 0x006F9B04 File Offset: 0x006F7D04
+		// Token: 0x0603705D RID: 225373 RVA: 0x0075AE64 File Offset: 0x00759064
 		public ISubtitleStyleBaseT UnPack()
 		{
 			ISubtitleStyleBaseT subtitleStyleBaseT = new ISubtitleStyleBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return subtitleStyleBaseT;
 		}
 
-		// Token: 0x06033D5C RID: 212316 RVA: 0x006F9B1F File Offset: 0x006F7D1F
+		// Token: 0x0603705E RID: 225374 RVA: 0x0075AE7F File Offset: 0x0075907F
 		public void UnPackTo(ISubtitleStyleBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06033D5D RID: 212317 RVA: 0x006F9B30 File Offset: 0x006F7D30
+		// Token: 0x0603705F RID: 225375 RVA: 0x0075AE90 File Offset: 0x00759090
 		public static Offset<ISubtitleStyleBase> Pack(FlatBufferBuilder builder, ISubtitleStyleBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISubtitleStyleBase.CreateISubtitleStyleBase(builder, _o.Type);
 		}
 
-		// Token: 0x04011D13 RID: 72979
+		// Token: 0x04012D15 RID: 77077
 		private Table __p;
 	}
 }

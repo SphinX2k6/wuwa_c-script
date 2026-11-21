@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E95 RID: 20117
+	// Token: 0x02003E5E RID: 15966
 	public class RogueBattleSettleDataInfoPanel : UiPanelBase
 	{
-		// Token: 0x06033B8A RID: 211850 RVA: 0x00C1D804 File Offset: 0x00C1BA04
+		// Token: 0x060289F5 RID: 166389 RVA: 0x00B66D20 File Offset: 0x00B64F20
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B8B RID: 211851 RVA: 0x00C1D910 File Offset: 0x00C1BB10
+		// Token: 0x060289F6 RID: 166390 RVA: 0x00B66E2C File Offset: 0x00B6502C
 		protected override void OnBeforeShow()
 		{
 			base.GetText(0).SetText(this.ResultView.Score.ToString(), true);
@@ -88,22 +88,22 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetText(10).SetText(this.ResultView.NewIllustrationCount.ToString(), true);
 		}
 
-		// Token: 0x0401B779 RID: 112505
+		// Token: 0x0401614C RID: 90444
 		private const int BOSS_EVENT_TYPE = 5;
 
-		// Token: 0x0401B77A RID: 112506
+		// Token: 0x0401614D RID: 90445
 		private const int DIFFICULT_EVENT_TYPE = 4;
 
-		// Token: 0x0401B77B RID: 112507
+		// Token: 0x0401614E RID: 90446
 		private const int SIMPLE_EVENT_TYPE = 3;
 
-		// Token: 0x0401B77C RID: 112508
+		// Token: 0x0401614F RID: 90447
 		private const int RANDOM_EVENT_TYPE = 1;
 
-		// Token: 0x0401B77D RID: 112509
+		// Token: 0x04016150 RID: 90448
 		public int IncId;
 
-		// Token: 0x0401B77E RID: 112510
+		// Token: 0x04016151 RID: 90449
 		[Nullable(2)]
 		public InstResultView ResultView;
 	}

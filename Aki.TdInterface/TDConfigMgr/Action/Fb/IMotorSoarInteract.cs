@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002803 RID: 10243
+	// Token: 0x02002AD6 RID: 10966
 	public class IMotorSoarInteract : ILeisureInteractType
 	{
-		// Token: 0x0600E354 RID: 58196 RVA: 0x002183F7 File Offset: 0x002165F7
-		[NullableContext(1)]
+		// Token: 0x0600F179 RID: 61817 RVA: 0x0023525B File Offset: 0x0023345B
 		public static IMotorSoarInteract Create(IMotorSoarInteract? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004510 RID: 17680
-		// (get) Token: 0x0600E355 RID: 58197 RVA: 0x00218416 File Offset: 0x00216616
+		// Token: 0x1700487B RID: 18555
+		// (get) Token: 0x0600F17A RID: 61818 RVA: 0x0023527A File Offset: 0x0023347A
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DE7 RID: 32231
+		// Token: 0x040084A4 RID: 33956
 		private IMotorSoarInteract Instance;
 	}
 }

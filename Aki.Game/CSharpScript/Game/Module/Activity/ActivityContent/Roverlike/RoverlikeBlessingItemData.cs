@@ -2,37 +2,37 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006185 RID: 24965
+	// Token: 0x02005103 RID: 20739
 	public class RoverlikeBlessingItemData : IRoverlikeBlessingItemData
 	{
-		// Token: 0x170091C8 RID: 37320
-		// (get) Token: 0x0603F174 RID: 258420 RVA: 0x00F3F0A9 File Offset: 0x00F3D2A9
-		// (set) Token: 0x0603F175 RID: 258421 RVA: 0x00F3F0B1 File Offset: 0x00F3D2B1
+		// Token: 0x1700652A RID: 25898
+		// (get) Token: 0x06033E34 RID: 212532 RVA: 0x00E85F71 File Offset: 0x00E84171
+		// (set) Token: 0x06033E35 RID: 212533 RVA: 0x00E85F79 File Offset: 0x00E84179
 		public int BlessId { get; set; }
 
-		// Token: 0x170091C9 RID: 37321
-		// (get) Token: 0x0603F176 RID: 258422 RVA: 0x00F3F0BA File Offset: 0x00F3D2BA
-		// (set) Token: 0x0603F177 RID: 258423 RVA: 0x00F3F0C2 File Offset: 0x00F3D2C2
+		// Token: 0x1700652B RID: 25899
+		// (get) Token: 0x06033E36 RID: 212534 RVA: 0x00E85F82 File Offset: 0x00E84182
+		// (set) Token: 0x06033E37 RID: 212535 RVA: 0x00E85F8A File Offset: 0x00E8418A
 		public int? IncId { get; set; }
 
-		// Token: 0x170091CA RID: 37322
-		// (get) Token: 0x0603F178 RID: 258424 RVA: 0x00F3F0CB File Offset: 0x00F3D2CB
-		// (set) Token: 0x0603F179 RID: 258425 RVA: 0x00F3F0D3 File Offset: 0x00F3D2D3
+		// Token: 0x1700652C RID: 25900
+		// (get) Token: 0x06033E38 RID: 212536 RVA: 0x00E85F93 File Offset: 0x00E84193
+		// (set) Token: 0x06033E39 RID: 212537 RVA: 0x00E85F9B File Offset: 0x00E8419B
 		public bool? AllowToggleInteract { get; set; }
 
-		// Token: 0x170091CB RID: 37323
-		// (get) Token: 0x0603F17A RID: 258426 RVA: 0x00F3F0DC File Offset: 0x00F3D2DC
-		// (set) Token: 0x0603F17B RID: 258427 RVA: 0x00F3F0E4 File Offset: 0x00F3D2E4
+		// Token: 0x1700652D RID: 25901
+		// (get) Token: 0x06033E3A RID: 212538 RVA: 0x00E85FA4 File Offset: 0x00E841A4
+		// (set) Token: 0x06033E3B RID: 212539 RVA: 0x00E85FAC File Offset: 0x00E841AC
 		public bool? IsUp { get; set; }
 
-		// Token: 0x170091CC RID: 37324
-		// (get) Token: 0x0603F17C RID: 258428 RVA: 0x00F3F0ED File Offset: 0x00F3D2ED
-		// (set) Token: 0x0603F17D RID: 258429 RVA: 0x00F3F0F5 File Offset: 0x00F3D2F5
+		// Token: 0x1700652E RID: 25902
+		// (get) Token: 0x06033E3C RID: 212540 RVA: 0x00E85FB5 File Offset: 0x00E841B5
+		// (set) Token: 0x06033E3D RID: 212541 RVA: 0x00E85FBD File Offset: 0x00E841BD
 		public bool? CheckSameSlot { get; set; }
 
-		// Token: 0x170091CD RID: 37325
-		// (get) Token: 0x0603F17E RID: 258430 RVA: 0x00F3F0FE File Offset: 0x00F3D2FE
-		// (set) Token: 0x0603F17F RID: 258431 RVA: 0x00F3F106 File Offset: 0x00F3D306
+		// Token: 0x1700652F RID: 25903
+		// (get) Token: 0x06033E3E RID: 212542 RVA: 0x00E85FC6 File Offset: 0x00E841C6
+		// (set) Token: 0x06033E3F RID: 212543 RVA: 0x00E85FCE File Offset: 0x00E841CE
 		public bool? ShowRecommend { get; set; }
 	}
 }

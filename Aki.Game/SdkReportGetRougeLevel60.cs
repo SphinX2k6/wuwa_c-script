@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Launcher.HotPatchKuroSdk;
 
-// Token: 0x02000E3C RID: 3644
+// Token: 0x020002F1 RID: 753
 public class SdkReportGetRougeLevel60 : SdkReportData
 {
-	// Token: 0x060057A6 RID: 22438 RVA: 0x000FC8CE File Offset: 0x000FAACE
+	// Token: 0x06002B36 RID: 11062 RVA: 0x0010414A File Offset: 0x0010234A
 	public SdkReportGetRougeLevel60([Nullable(new byte[]
 	{
 		2,
@@ -16,7 +16,7 @@ public class SdkReportGetRougeLevel60 : SdkReportData
 	{
 	}
 
-	// Token: 0x060057A7 RID: 22439 RVA: 0x000FC8D7 File Offset: 0x000FAAD7
+	// Token: 0x06002B37 RID: 11063 RVA: 0x00104153 File Offset: 0x00102353
 	[NullableContext(1)]
 	public override string GetEventName()
 	{

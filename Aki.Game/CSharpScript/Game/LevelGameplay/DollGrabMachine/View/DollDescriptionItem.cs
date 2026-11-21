@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EF5 RID: 28405
+	// Token: 0x02006075 RID: 24693
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 	})]
 	public class DollDescriptionItem : SyncGridProxyAbstract<IDollDescriptionItemData>
 	{
-		// Token: 0x06045298 RID: 283288 RVA: 0x0111B15C File Offset: 0x0111935C
+		// Token: 0x0603B441 RID: 242753 RVA: 0x010C4EEC File Offset: 0x010C30EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -31,14 +31,14 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06045299 RID: 283289 RVA: 0x0111B1E6 File Offset: 0x011193E6
+		// Token: 0x0603B442 RID: 242754 RVA: 0x010C4F76 File Offset: 0x010C3176
 		protected override void OnStart()
 		{
 			this.DollIconItem = new DollDescriptionIconItemPanel();
 			this.DollIconItem.CreateThenShowByActor(base.GetItem(0).GetOwner(), null);
 		}
 
-		// Token: 0x0604529A RID: 283290 RVA: 0x0111B20C File Offset: 0x0111940C
+		// Token: 0x0603B443 RID: 242755 RVA: 0x010C4F9C File Offset: 0x010C319C
 		public override void Refresh(IDollDescriptionItemData data)
 		{
 			DollDescriptionIconItemPanel dollIconItem = this.DollIconItem;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), data.TextContent, Array.Empty<object>());
 		}
 
-		// Token: 0x04024074 RID: 147572
+		// Token: 0x0401F327 RID: 127783
 		[Nullable(2)]
 		private DollDescriptionIconItemPanel DollIconItem;
 	}

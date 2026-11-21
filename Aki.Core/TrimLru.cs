@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000062 RID: 98
+// Token: 0x02000064 RID: 100
 [NullableContext(1)]
 [Nullable(0)]
 public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 {
-	// Token: 0x060002DC RID: 732 RVA: 0x0000FCD0 File Offset: 0x0000DED0
+	// Token: 0x06000317 RID: 791 RVA: 0x00010AB8 File Offset: 0x0000ECB8
 	public TrimLru(int capacity, bool allowEmpty = false)
 	{
 		this.AllowEmpty = allowEmpty;
@@ -25,9 +25,9 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 		this.DecayRate = 1f - 1f / (float)capacity;
 	}
 
-	// Token: 0x17000067 RID: 103
-	// (get) Token: 0x060002DD RID: 733 RVA: 0x0000FD46 File Offset: 0x0000DF46
-	// (set) Token: 0x060002DE RID: 734 RVA: 0x0000FD4E File Offset: 0x0000DF4E
+	// Token: 0x1700006E RID: 110
+	// (get) Token: 0x06000318 RID: 792 RVA: 0x00010B2E File Offset: 0x0000ED2E
+	// (set) Token: 0x06000319 RID: 793 RVA: 0x00010B36 File Offset: 0x0000ED36
 	public bool Enable
 	{
 		get
@@ -44,8 +44,8 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x17000068 RID: 104
-	// (get) Token: 0x060002DF RID: 735 RVA: 0x0000FD66 File Offset: 0x0000DF66
+	// Token: 0x1700006F RID: 111
+	// (get) Token: 0x0600031A RID: 794 RVA: 0x00010B4E File Offset: 0x0000ED4E
 	public int Size
 	{
 		get
@@ -54,9 +54,9 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x17000069 RID: 105
-	// (get) Token: 0x060002E0 RID: 736 RVA: 0x0000FD6E File Offset: 0x0000DF6E
-	// (set) Token: 0x060002E1 RID: 737 RVA: 0x0000FD78 File Offset: 0x0000DF78
+	// Token: 0x17000070 RID: 112
+	// (get) Token: 0x0600031B RID: 795 RVA: 0x00010B56 File Offset: 0x0000ED56
+	// (set) Token: 0x0600031C RID: 796 RVA: 0x00010B60 File Offset: 0x0000ED60
 	public int Capacity
 	{
 		get
@@ -86,8 +86,8 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x1700006A RID: 106
-	// (get) Token: 0x060002E2 RID: 738 RVA: 0x0000FE0E File Offset: 0x0000E00E
+	// Token: 0x17000071 RID: 113
+	// (get) Token: 0x0600031D RID: 797 RVA: 0x00010BF6 File Offset: 0x0000EDF6
 	public float HitRate
 	{
 		get
@@ -100,8 +100,8 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x1700006B RID: 107
-	// (get) Token: 0x060002E3 RID: 739 RVA: 0x0000FE37 File Offset: 0x0000E037
+	// Token: 0x17000072 RID: 114
+	// (get) Token: 0x0600031E RID: 798 RVA: 0x00010C1F File Offset: 0x0000EE1F
 	public float UsedAvg
 	{
 		get
@@ -114,8 +114,8 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x1700006C RID: 108
-	// (get) Token: 0x060002E4 RID: 740 RVA: 0x0000FE57 File Offset: 0x0000E057
+	// Token: 0x17000073 RID: 115
+	// (get) Token: 0x0600031F RID: 799 RVA: 0x00010C3F File Offset: 0x0000EE3F
 	public float ThresholdUsedRate
 	{
 		get
@@ -128,7 +128,7 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x060002E5 RID: 741 RVA: 0x0000FE78 File Offset: 0x0000E078
+	// Token: 0x06000320 RID: 800 RVA: 0x00010C60 File Offset: 0x0000EE60
 	[return: Nullable(2)]
 	public TV Get(TK key)
 	{
@@ -151,7 +151,7 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 		return trimLruNode.Value;
 	}
 
-	// Token: 0x060002E6 RID: 742 RVA: 0x0000FF30 File Offset: 0x0000E130
+	// Token: 0x06000321 RID: 801 RVA: 0x00010D18 File Offset: 0x0000EF18
 	public bool Put(TK key, TV value, int size = 1)
 	{
 		if (key == null)
@@ -198,7 +198,7 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 		return true;
 	}
 
-	// Token: 0x060002E7 RID: 743 RVA: 0x00010028 File Offset: 0x0000E228
+	// Token: 0x06000322 RID: 802 RVA: 0x00010E10 File Offset: 0x0000F010
 	public void Clear()
 	{
 		while (this.SizeInternal > 0)
@@ -212,7 +212,7 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 		this.MissCount = 0f;
 	}
 
-	// Token: 0x060002E8 RID: 744 RVA: 0x00010078 File Offset: 0x0000E278
+	// Token: 0x06000323 RID: 803 RVA: 0x00010E60 File Offset: 0x0000F060
 	private void AddToFront(TrimLruNode<TK, TV> node)
 	{
 		node.Prev = null;
@@ -234,7 +234,7 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x060002E9 RID: 745 RVA: 0x0001010C File Offset: 0x0000E30C
+	// Token: 0x06000324 RID: 804 RVA: 0x00010EF4 File Offset: 0x0000F0F4
 	private void RemoveNode(TrimLruNode<TK, TV> node)
 	{
 		if (node.Prev != null)
@@ -263,7 +263,7 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x060002EA RID: 746 RVA: 0x000101C8 File Offset: 0x0000E3C8
+	// Token: 0x06000325 RID: 805 RVA: 0x00010FB0 File Offset: 0x0000F1B0
 	private void RemoveTail()
 	{
 		if (this.Tail == null)
@@ -276,22 +276,22 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 		this.Table.Remove(tail.Key);
 	}
 
-	// Token: 0x04000208 RID: 520
+	// Token: 0x0400021E RID: 542
 	private const int USED_THRESHOLD = 3;
 
-	// Token: 0x04000209 RID: 521
+	// Token: 0x0400021F RID: 543
 	private bool EnableInternal = true;
 
-	// Token: 0x0400020A RID: 522
+	// Token: 0x04000220 RID: 544
 	private int CapacityInternal;
 
-	// Token: 0x0400020B RID: 523
+	// Token: 0x04000221 RID: 545
 	private float DecayRate;
 
-	// Token: 0x0400020C RID: 524
+	// Token: 0x04000222 RID: 546
 	private readonly Dictionary<TK, TrimLruNode<TK, TV>> Table = new Dictionary<TK, TrimLruNode<TK, TV>>();
 
-	// Token: 0x0400020D RID: 525
+	// Token: 0x04000223 RID: 547
 	[Nullable(new byte[]
 	{
 		2,
@@ -300,7 +300,7 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 	})]
 	private TrimLruNode<TK, TV> Head;
 
-	// Token: 0x0400020E RID: 526
+	// Token: 0x04000224 RID: 548
 	[Nullable(new byte[]
 	{
 		2,
@@ -309,21 +309,21 @@ public class TrimLru<[Nullable(2)] TK, TV> where TV : class
 	})]
 	private TrimLruNode<TK, TV> Tail;
 
-	// Token: 0x0400020F RID: 527
+	// Token: 0x04000225 RID: 549
 	private int SizeInternal;
 
-	// Token: 0x04000210 RID: 528
+	// Token: 0x04000226 RID: 550
 	private float HitCount;
 
-	// Token: 0x04000211 RID: 529
+	// Token: 0x04000227 RID: 551
 	private float MissCount;
 
-	// Token: 0x04000212 RID: 530
+	// Token: 0x04000228 RID: 552
 	private int UsedCount;
 
-	// Token: 0x04000213 RID: 531
+	// Token: 0x04000229 RID: 553
 	private int ThresholdUsedCount;
 
-	// Token: 0x04000214 RID: 532
+	// Token: 0x0400022A RID: 554
 	private readonly bool AllowEmpty;
 }

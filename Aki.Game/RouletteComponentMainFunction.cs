@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002921 RID: 10529
+// Token: 0x02001E9C RID: 7836
 public class RouletteComponentMainFunction : RouletteComponentMain
 {
-	// Token: 0x06015B9D RID: 88989 RVA: 0x0057AEF4 File Offset: 0x005790F4
+	// Token: 0x060135A1 RID: 79265 RVA: 0x005A5E70 File Offset: 0x005A4070
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -22,7 +22,7 @@ public class RouletteComponentMainFunction : RouletteComponentMain
 		return null;
 	}
 
-	// Token: 0x06015B9E RID: 88990 RVA: 0x0057AF20 File Offset: 0x00579120
+	// Token: 0x060135A2 RID: 79266 RVA: 0x005A5E9C File Offset: 0x005A409C
 	protected override EGridBehavior JudgeGridStateByData(int id, ERouletteGridType gridType)
 	{
 		bool flag = id != 0;
@@ -38,13 +38,13 @@ public class RouletteComponentMainFunction : RouletteComponentMain
 		return EGridBehavior.Normal;
 	}
 
-	// Token: 0x06015B9F RID: 88991 RVA: 0x0057AF50 File Offset: 0x00579150
+	// Token: 0x060135A3 RID: 79267 RVA: 0x005A5ECC File Offset: 0x005A40CC
 	protected override void RefreshRouletteItem()
 	{
 		base.SetTipsActive(true);
 	}
 
-	// Token: 0x06015BA0 RID: 88992 RVA: 0x0057AF5C File Offset: 0x0057915C
+	// Token: 0x060135A4 RID: 79268 RVA: 0x005A5ED8 File Offset: 0x005A40D8
 	[NullableContext(2)]
 	protected override string GetRefreshTips(bool isEmpty)
 	{

@@ -3,15 +3,15 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007398 RID: 29592
+	// Token: 0x02007B7F RID: 31615
 	public class ITeleportToVehicleInfoT
 	{
-		// Token: 0x1700E09C RID: 57500
-		// (get) Token: 0x06035B5D RID: 219997 RVA: 0x0074FCF6 File Offset: 0x0074DEF6
-		// (set) Token: 0x06035B5E RID: 219998 RVA: 0x0074FCFE File Offset: 0x0074DEFE
+		// Token: 0x1700ECAC RID: 60588
+		// (get) Token: 0x06038EF8 RID: 233208 RVA: 0x007B2236 File Offset: 0x007B0436
+		// (set) Token: 0x06038EF9 RID: 233209 RVA: 0x007B223E File Offset: 0x007B043E
 		public EVehicleType Type { get; set; }
 
-		// Token: 0x06035B5F RID: 219999 RVA: 0x0074FD07 File Offset: 0x0074DF07
+		// Token: 0x06038EFA RID: 233210 RVA: 0x007B2247 File Offset: 0x007B0447
 		public ITeleportToVehicleInfoT()
 		{
 			this.Type = EVehicleType.Gongduola;

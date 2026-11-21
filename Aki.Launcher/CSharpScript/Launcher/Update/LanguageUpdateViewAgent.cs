@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.Update
 {
-	// Token: 0x0200008C RID: 140
+	// Token: 0x0200008F RID: 143
 	public class LanguageUpdateViewAgent : IResourceUpdateView
 	{
-		// Token: 0x0600050D RID: 1293 RVA: 0x0002F598 File Offset: 0x0002D798
+		// Token: 0x06000524 RID: 1316 RVA: 0x00030B00 File Offset: 0x0002ED00
 		public UniTask<bool> ShowNotEnoughSpaceConfirmation(long totalSize)
 		{
 			LanguageUpdateViewAgent.<ShowNotEnoughSpaceConfirmation>d__0 <ShowNotEnoughSpaceConfirmation>d__;
@@ -19,7 +19,7 @@ namespace CSharpScript.Launcher.Update
 			return <ShowNotEnoughSpaceConfirmation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600050E RID: 1294 RVA: 0x0002F5D3 File Offset: 0x0002D7D3
+		// Token: 0x06000525 RID: 1317 RVA: 0x00030B3B File Offset: 0x0002ED3B
 		public void UpdatePatchProgress(long receiveSize, long curProgress, long totalProgress, long downloadSpeed)
 		{
 			if (this.Implement != null)
@@ -28,14 +28,14 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x0600050F RID: 1295 RVA: 0x0002F5ED File Offset: 0x0002D7ED
+		// Token: 0x06000526 RID: 1318 RVA: 0x00030B55 File Offset: 0x0002ED55
 		[NullableContext(2)]
 		public void SetImplement(IResourceUpdateView implement)
 		{
 			this.Implement = implement;
 		}
 
-		// Token: 0x040002E8 RID: 744
+		// Token: 0x04000316 RID: 790
 		[Nullable(2)]
 		private IResourceUpdateView Implement;
 	}

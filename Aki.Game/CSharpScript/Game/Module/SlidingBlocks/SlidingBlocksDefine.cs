@@ -4,214 +4,214 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B79 RID: 19321
+	// Token: 0x02003B23 RID: 15139
 	public class SlidingBlocksDefine
 	{
-		// Token: 0x0401AAD6 RID: 109270
+		// Token: 0x0401542A RID: 87082
 		[Nullable(1)]
 		public const string BoxMeshPath = "/Engine/BasicShapes/Cube.Cube";
 
-		// Token: 0x0401AAD7 RID: 109271
+		// Token: 0x0401542B RID: 87083
 		public const int TetrominoFallingSpeed = 1;
 
-		// Token: 0x0200AD73 RID: 44403
+		// Token: 0x02009794 RID: 38804
 		public enum EGameStage
 		{
-			// Token: 0x04034ADF RID: 215775
+			// Token: 0x0402F489 RID: 193673
 			None,
-			// Token: 0x04034AE0 RID: 215776
+			// Token: 0x0402F48A RID: 193674
 			Init,
-			// Token: 0x04034AE1 RID: 215777
+			// Token: 0x0402F48B RID: 193675
 			GameRunning,
-			// Token: 0x04034AE2 RID: 215778
+			// Token: 0x0402F48C RID: 193676
 			WaitSettlement,
-			// Token: 0x04034AE3 RID: 215779
+			// Token: 0x0402F48D RID: 193677
 			Settlement,
-			// Token: 0x04034AE4 RID: 215780
+			// Token: 0x0402F48E RID: 193678
 			WaitDestroy,
-			// Token: 0x04034AE5 RID: 215781
+			// Token: 0x0402F48F RID: 193679
 			GameEnd
 		}
 
-		// Token: 0x0200AD74 RID: 44404
+		// Token: 0x02009795 RID: 38805
 		public enum EGameEndReason
 		{
-			// Token: 0x04034AE7 RID: 215783
+			// Token: 0x0402F491 RID: 193681
 			None,
-			// Token: 0x04034AE8 RID: 215784
+			// Token: 0x0402F492 RID: 193682
 			InitFail,
-			// Token: 0x04034AE9 RID: 215785
+			// Token: 0x0402F493 RID: 193683
 			NormalModeEnd,
-			// Token: 0x04034AEA RID: 215786
+			// Token: 0x0402F494 RID: 193684
 			MainLineModeEnd,
-			// Token: 0x04034AEB RID: 215787
+			// Token: 0x0402F495 RID: 193685
 			SqueezePlayer,
-			// Token: 0x04034AEC RID: 215788
+			// Token: 0x0402F496 RID: 193686
 			MinoOverHeight,
-			// Token: 0x04034AED RID: 215789
+			// Token: 0x0402F497 RID: 193687
 			ClickClose
 		}
 
-		// Token: 0x0200AD75 RID: 44405
+		// Token: 0x02009796 RID: 38806
 		[EnumExtensions]
 		public enum EAddMinoReason
 		{
-			// Token: 0x04034AEF RID: 215791
+			// Token: 0x0402F499 RID: 193689
 			[EnumStringMember("LineClearFall")]
 			LineClearFall,
-			// Token: 0x04034AF0 RID: 215792
+			// Token: 0x0402F49A RID: 193690
 			[EnumStringMember("CreatePresetMino")]
 			CreatePresetMino,
-			// Token: 0x04034AF1 RID: 215793
+			// Token: 0x0402F49B RID: 193691
 			[EnumStringMember("TetrominoLock")]
 			TetrominoLock
 		}
 
-		// Token: 0x0200AD76 RID: 44406
+		// Token: 0x02009797 RID: 38807
 		[EnumExtensions]
 		public enum ERemoveMinoReason
 		{
-			// Token: 0x04034AF3 RID: 215795
+			// Token: 0x0402F49D RID: 193693
 			[EnumStringMember("LineClearFall")]
 			LineClearFall,
-			// Token: 0x04034AF4 RID: 215796
+			// Token: 0x0402F49E RID: 193694
 			[EnumStringMember("LineClear")]
 			LineClear
 		}
 
-		// Token: 0x0200AD77 RID: 44407
+		// Token: 0x02009798 RID: 38808
 		public enum ECheckCanMoveResult
 		{
-			// Token: 0x04034AF6 RID: 215798
+			// Token: 0x0402F4A0 RID: 193696
 			None,
-			// Token: 0x04034AF7 RID: 215799
+			// Token: 0x0402F4A1 RID: 193697
 			BeyondGrid,
-			// Token: 0x04034AF8 RID: 215800
+			// Token: 0x0402F4A2 RID: 193698
 			Occupation
 		}
 
-		// Token: 0x0200AD78 RID: 44408
+		// Token: 0x02009799 RID: 38809
 		[EnumExtensions]
 		public enum ETetrominoType
 		{
-			// Token: 0x04034AFA RID: 215802
+			// Token: 0x0402F4A4 RID: 193700
 			[EnumStringMember("I块")]
 			I块,
-			// Token: 0x04034AFB RID: 215803
+			// Token: 0x0402F4A5 RID: 193701
 			[EnumStringMember("J块")]
 			J块,
-			// Token: 0x04034AFC RID: 215804
+			// Token: 0x0402F4A6 RID: 193702
 			[EnumStringMember("L块")]
 			L块,
-			// Token: 0x04034AFD RID: 215805
+			// Token: 0x0402F4A7 RID: 193703
 			[EnumStringMember("O块")]
 			O块,
-			// Token: 0x04034AFE RID: 215806
+			// Token: 0x0402F4A8 RID: 193704
 			[EnumStringMember("S块")]
 			S块,
-			// Token: 0x04034AFF RID: 215807
+			// Token: 0x0402F4A9 RID: 193705
 			[EnumStringMember("T块")]
 			T块,
-			// Token: 0x04034B00 RID: 215808
+			// Token: 0x0402F4AA RID: 193706
 			[EnumStringMember("Z块")]
 			Z块,
-			// Token: 0x04034B01 RID: 215809
+			// Token: 0x0402F4AB RID: 193707
 			[EnumStringMember("五连I块")]
 			五连I块,
-			// Token: 0x04034B02 RID: 215810
+			// Token: 0x0402F4AC RID: 193708
 			[EnumStringMember("五连T块")]
 			五连T块,
-			// Token: 0x04034B03 RID: 215811
+			// Token: 0x0402F4AD RID: 193709
 			[EnumStringMember("五连U块")]
 			五连U块,
-			// Token: 0x04034B04 RID: 215812
+			// Token: 0x0402F4AE RID: 193710
 			[EnumStringMember("五连V块")]
 			五连V块,
-			// Token: 0x04034B05 RID: 215813
+			// Token: 0x0402F4AF RID: 193711
 			[EnumStringMember("五连W块")]
 			五连W块,
-			// Token: 0x04034B06 RID: 215814
+			// Token: 0x0402F4B0 RID: 193712
 			[EnumStringMember("五连X块")]
 			五连X块,
-			// Token: 0x04034B07 RID: 215815
+			// Token: 0x0402F4B1 RID: 193713
 			[EnumStringMember("五连F块")]
 			五连F块,
-			// Token: 0x04034B08 RID: 215816
+			// Token: 0x0402F4B2 RID: 193714
 			[EnumStringMember("五连F1块")]
 			五连F1块,
-			// Token: 0x04034B09 RID: 215817
+			// Token: 0x0402F4B3 RID: 193715
 			[EnumStringMember("五连S块")]
 			五连S块,
-			// Token: 0x04034B0A RID: 215818
+			// Token: 0x0402F4B4 RID: 193716
 			[EnumStringMember("五连Z块")]
 			五连Z块,
-			// Token: 0x04034B0B RID: 215819
+			// Token: 0x0402F4B5 RID: 193717
 			[EnumStringMember("五连J块")]
 			五连J块,
-			// Token: 0x04034B0C RID: 215820
+			// Token: 0x0402F4B6 RID: 193718
 			[EnumStringMember("五连L块")]
 			五连L块,
-			// Token: 0x04034B0D RID: 215821
+			// Token: 0x0402F4B7 RID: 193719
 			[EnumStringMember("五连Y块")]
 			五连Y块,
-			// Token: 0x04034B0E RID: 215822
+			// Token: 0x0402F4B8 RID: 193720
 			[EnumStringMember("五连Y1块")]
 			五连Y1块,
-			// Token: 0x04034B0F RID: 215823
+			// Token: 0x0402F4B9 RID: 193721
 			[EnumStringMember("五连N块")]
 			五连N块,
-			// Token: 0x04034B10 RID: 215824
+			// Token: 0x0402F4BA RID: 193722
 			[EnumStringMember("五连N1块")]
 			五连N1块,
-			// Token: 0x04034B11 RID: 215825
+			// Token: 0x0402F4BB RID: 193723
 			[EnumStringMember("五连P块")]
 			五连P块,
-			// Token: 0x04034B12 RID: 215826
+			// Token: 0x0402F4BC RID: 193724
 			[EnumStringMember("五连Q块")]
 			五连Q块,
-			// Token: 0x04034B13 RID: 215827
+			// Token: 0x0402F4BD RID: 193725
 			[EnumStringMember("三连I块")]
 			三连I块,
-			// Token: 0x04034B14 RID: 215828
+			// Token: 0x0402F4BE RID: 193726
 			[EnumStringMember("三连V块")]
 			三连V块,
-			// Token: 0x04034B15 RID: 215829
+			// Token: 0x0402F4BF RID: 193727
 			[EnumStringMember("二连方块")]
 			二连方块
 		}
 
-		// Token: 0x0200AD79 RID: 44409
+		// Token: 0x0200979A RID: 38810
 		public enum ETetrominoBorad
 		{
-			// Token: 0x04034B17 RID: 215831
+			// Token: 0x0402F4C1 RID: 193729
 			二乘二 = 2,
-			// Token: 0x04034B18 RID: 215832
+			// Token: 0x0402F4C2 RID: 193730
 			三乘三,
-			// Token: 0x04034B19 RID: 215833
+			// Token: 0x0402F4C3 RID: 193731
 			四乘四,
-			// Token: 0x04034B1A RID: 215834
+			// Token: 0x0402F4C4 RID: 193732
 			五乘五
 		}
 
-		// Token: 0x0200AD7A RID: 44410
+		// Token: 0x0200979B RID: 38811
 		public enum EMinoParent
 		{
-			// Token: 0x04034B1C RID: 215836
+			// Token: 0x0402F4C6 RID: 193734
 			Board,
-			// Token: 0x04034B1D RID: 215837
+			// Token: 0x0402F4C7 RID: 193735
 			Tetromino
 		}
 
-		// Token: 0x0200AD7B RID: 44411
+		// Token: 0x0200979C RID: 38812
 		public enum ETetrominoRotateState
 		{
-			// Token: 0x04034B1F RID: 215839
+			// Token: 0x0402F4C9 RID: 193737
 			角度0,
-			// Token: 0x04034B20 RID: 215840
+			// Token: 0x0402F4CA RID: 193738
 			角度90,
-			// Token: 0x04034B21 RID: 215841
+			// Token: 0x0402F4CB RID: 193739
 			角度180,
-			// Token: 0x04034B22 RID: 215842
+			// Token: 0x0402F4CC RID: 193740
 			角度270
 		}
 	}

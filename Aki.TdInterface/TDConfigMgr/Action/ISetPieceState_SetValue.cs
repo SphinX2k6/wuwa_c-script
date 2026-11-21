@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E3D RID: 7741
+	// Token: 0x02002072 RID: 8306
 	public class ISetPieceState_SetValue
 	{
-		// Token: 0x0400630A RID: 25354
+		// Token: 0x040068EE RID: 26862
 		public ESetJigsawFoundationType Type;
 
-		// Token: 0x0400630B RID: 25355
+		// Token: 0x040068EF RID: 26863
 		public int EntityId;
 
-		// Token: 0x0400630C RID: 25356
-		[Nullable(1)]
+		// Token: 0x040068F0 RID: 26864
 		public List<IJigsawPiece> PieceState;
 	}
 }

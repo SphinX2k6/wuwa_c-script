@@ -3,31 +3,31 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logic
 {
-	// Token: 0x020064FC RID: 25852
+	// Token: 0x0200547A RID: 21626
 	[NullableContext(2)]
 	public interface ISkill
 	{
-		// Token: 0x17009503 RID: 38147
-		// (get) Token: 0x06040E70 RID: 265840
+		// Token: 0x17006865 RID: 26725
+		// (get) Token: 0x06035B34 RID: 219956
 		int Id { get; }
 
-		// Token: 0x17009504 RID: 38148
-		// (get) Token: 0x06040E71 RID: 265841
+		// Token: 0x17006866 RID: 26726
+		// (get) Token: 0x06035B35 RID: 219957
 		int EnergyNode { get; }
 
-		// Token: 0x17009505 RID: 38149
-		// (get) Token: 0x06040E72 RID: 265842
+		// Token: 0x17006867 RID: 26727
+		// (get) Token: 0x06035B36 RID: 219958
 		string Icon { get; }
 
-		// Token: 0x17009506 RID: 38150
-		// (get) Token: 0x06040E73 RID: 265843
+		// Token: 0x17006868 RID: 26728
+		// (get) Token: 0x06035B37 RID: 219959
 		string Name { get; }
 
-		// Token: 0x17009507 RID: 38151
-		// (get) Token: 0x06040E74 RID: 265844
+		// Token: 0x17006869 RID: 26729
+		// (get) Token: 0x06035B38 RID: 219960
 		ESkillCastEffect CastEffect { get; }
 
-		// Token: 0x06040E75 RID: 265845
+		// Token: 0x06035B39 RID: 219961
 		[NullableContext(1)]
 		void Release(ISkillContext ctx);
 	}

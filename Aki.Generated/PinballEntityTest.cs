@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F2C RID: 3884
+	// Token: 0x02001011 RID: 4113
 	public struct PinballEntityTest : IFlatbufferObject
 	{
-		// Token: 0x17002944 RID: 10564
-		// (get) Token: 0x0600AEE0 RID: 44768 RVA: 0x002C18DC File Offset: 0x002BFADC
+		// Token: 0x170029AA RID: 10666
+		// (get) Token: 0x0600B501 RID: 46337 RVA: 0x002DE3A0 File Offset: 0x002DC5A0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AEE1 RID: 44769 RVA: 0x002C18E9 File Offset: 0x002BFAE9
+		// Token: 0x0600B502 RID: 46338 RVA: 0x002DE3AD File Offset: 0x002DC5AD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600AEE2 RID: 44770 RVA: 0x002C18F0 File Offset: 0x002BFAF0
+		// Token: 0x0600B503 RID: 46339 RVA: 0x002DE3B4 File Offset: 0x002DC5B4
 		public static PinballEntityTest GetRootAsPinballEntityTest(ByteBuffer _bb)
 		{
 			return PinballEntityTest.GetRootAsPinballEntityTest(_bb, default(PinballEntityTest));
 		}
 
-		// Token: 0x0600AEE3 RID: 44771 RVA: 0x002C190C File Offset: 0x002BFB0C
+		// Token: 0x0600B504 RID: 46340 RVA: 0x002DE3D0 File Offset: 0x002DC5D0
 		public static PinballEntityTest GetRootAsPinballEntityTest(ByteBuffer _bb, PinballEntityTest obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600AEE4 RID: 44772 RVA: 0x002C1929 File Offset: 0x002BFB29
+		// Token: 0x0600B505 RID: 46341 RVA: 0x002DE3ED File Offset: 0x002DC5ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600AEE5 RID: 44773 RVA: 0x002C1938 File Offset: 0x002BFB38
+		// Token: 0x0600B506 RID: 46342 RVA: 0x002DE3FC File Offset: 0x002DC5FC
 		public PinballEntityTest __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002945 RID: 10565
-		// (get) Token: 0x0600AEE6 RID: 44774 RVA: 0x002C1948 File Offset: 0x002BFB48
+		// Token: 0x170029AB RID: 10667
+		// (get) Token: 0x0600B507 RID: 46343 RVA: 0x002DE40C File Offset: 0x002DC60C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002946 RID: 10566
-		// (get) Token: 0x0600AEE7 RID: 44775 RVA: 0x002C1984 File Offset: 0x002BFB84
+		// Token: 0x170029AC RID: 10668
+		// (get) Token: 0x0600B508 RID: 46344 RVA: 0x002DE448 File Offset: 0x002DC648
 		public int MapId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002947 RID: 10567
-		// (get) Token: 0x0600AEE8 RID: 44776 RVA: 0x002C19C0 File Offset: 0x002BFBC0
+		// Token: 0x170029AD RID: 10669
+		// (get) Token: 0x0600B509 RID: 46345 RVA: 0x002DE484 File Offset: 0x002DC684
 		public int KscEntityId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002948 RID: 10568
-		// (get) Token: 0x0600AEE9 RID: 44777 RVA: 0x002C19FC File Offset: 0x002BFBFC
+		// Token: 0x170029AE RID: 10670
+		// (get) Token: 0x0600B50A RID: 46346 RVA: 0x002DE4C0 File Offset: 0x002DC6C0
 		public Vector? Location
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002949 RID: 10569
-		// (get) Token: 0x0600AEEA RID: 44778 RVA: 0x002C1A5C File Offset: 0x002BFC5C
+		// Token: 0x170029AF RID: 10671
+		// (get) Token: 0x0600B50B RID: 46347 RVA: 0x002DE520 File Offset: 0x002DC720
 		public Vector? Rotation
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004FF5 RID: 20469
+		// Token: 0x040055DA RID: 21978
 		private Table __p;
 	}
 }

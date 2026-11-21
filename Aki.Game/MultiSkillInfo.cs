@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200314A RID: 12618
+// Token: 0x020026B7 RID: 9911
 [NullableContext(2)]
 [Nullable(0)]
 public class MultiSkillInfo
 {
-	// Token: 0x17002594 RID: 9620
-	// (get) Token: 0x0601B26A RID: 111210 RVA: 0x00762C96 File Offset: 0x00760E96
+	// Token: 0x17002783 RID: 10115
+	// (get) Token: 0x06018D6D RID: 101741 RVA: 0x0078A690 File Offset: 0x00788890
 	public double RemainingStartTime
 	{
 		get
@@ -20,8 +20,8 @@ public class MultiSkillInfo
 		}
 	}
 
-	// Token: 0x17002595 RID: 9621
-	// (get) Token: 0x0601B26B RID: 111211 RVA: 0x00762CCF File Offset: 0x00760ECF
+	// Token: 0x17002784 RID: 10116
+	// (get) Token: 0x06018D6E RID: 101742 RVA: 0x0078A6C9 File Offset: 0x007888C9
 	public double RemainingStopTime
 	{
 		get
@@ -34,36 +34,36 @@ public class MultiSkillInfo
 		}
 	}
 
-	// Token: 0x0400D331 RID: 54065
+	// Token: 0x0400D794 RID: 55188
 	public int FirstSkillId;
 
-	// Token: 0x0400D332 RID: 54066
+	// Token: 0x0400D795 RID: 55189
 	public int CurSkillId;
 
-	// Token: 0x0400D333 RID: 54067
+	// Token: 0x0400D796 RID: 55190
 	public int? NextSkillId;
 
-	// Token: 0x0400D334 RID: 54068
+	// Token: 0x0400D797 RID: 55191
 	public float StartTime;
 
-	// Token: 0x0400D335 RID: 54069
+	// Token: 0x0400D798 RID: 55192
 	public double MultiSkillStartStamp;
 
-	// Token: 0x0400D336 RID: 54070
+	// Token: 0x0400D799 RID: 55193
 	public float StopTime;
 
-	// Token: 0x0400D337 RID: 54071
+	// Token: 0x0400D79A RID: 55194
 	public double MultiSkillStopStamp;
 
-	// Token: 0x0400D338 RID: 54072
+	// Token: 0x0400D79B RID: 55195
 	public bool IsReset;
 
-	// Token: 0x0400D339 RID: 54073
+	// Token: 0x0400D79C RID: 55196
 	public bool IsResetOnChangeRole;
 
-	// Token: 0x0400D33A RID: 54074
+	// Token: 0x0400D79D RID: 55197
 	public TimerHandle MultiSkillStartTimer;
 
-	// Token: 0x0400D33B RID: 54075
+	// Token: 0x0400D79E RID: 55198
 	public TimerHandle MultiSkillStopTimer;
 }

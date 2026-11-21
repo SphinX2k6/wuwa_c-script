@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Core.Framework;
@@ -8,13 +7,13 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 {
-	// Token: 0x02006A2E RID: 27182
+	// Token: 0x02005B8B RID: 23435
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class SplineMoveTaskController : ControllerBase
 	{
-		// Token: 0x060439B0 RID: 276912 RVA: 0x0108B290 File Offset: 0x01089490
+		// Token: 0x060399FE RID: 236030 RVA: 0x0102FAC0 File Offset: 0x0102DCC0
 		protected override void OnTick(float delta)
 		{
 			foreach (KeyValuePair<long, List<SplineMoveTaskBase>> keyValuePair in this.EntitySplineMoveTasks)
@@ -26,7 +25,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			}
 		}
 
-		// Token: 0x060439B1 RID: 276913 RVA: 0x0108B320 File Offset: 0x01089520
+		// Token: 0x060399FF RID: 236031 RVA: 0x0102FB50 File Offset: 0x0102DD50
 		protected override bool OnInit()
 		{
 			if (!EventSystem.Instance.Has(EEventName.ClearWorld, new Action(this.OnClearWorld)))
@@ -36,7 +35,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return true;
 		}
 
-		// Token: 0x060439B2 RID: 276914 RVA: 0x0108B35C File Offset: 0x0108955C
+		// Token: 0x06039A00 RID: 236032 RVA: 0x0102FB8C File Offset: 0x0102DD8C
 		protected override bool OnClear()
 		{
 			if (EventSystem.Instance.Has(EEventName.ClearWorld, new Action(this.OnClearWorld)))
@@ -46,7 +45,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return true;
 		}
 
-		// Token: 0x060439B3 RID: 276915 RVA: 0x0108B398 File Offset: 0x01089598
+		// Token: 0x06039A01 RID: 236033 RVA: 0x0102FBC8 File Offset: 0x0102DDC8
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -59,7 +58,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return result;
 		}
 
-		// Token: 0x060439B4 RID: 276916 RVA: 0x0108B3B8 File Offset: 0x010895B8
+		// Token: 0x06039A02 RID: 236034 RVA: 0x0102FBE8 File Offset: 0x0102DDE8
 		[NullableContext(2)]
 		public SplineMoveTaskBase GetEntityCurSplineMoveTask(long entityId)
 		{
@@ -71,7 +70,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return null;
 		}
 
-		// Token: 0x060439B5 RID: 276917 RVA: 0x0108B3EC File Offset: 0x010895EC
+		// Token: 0x06039A03 RID: 236035 RVA: 0x0102FC1C File Offset: 0x0102DE1C
 		public void EndEntityTasks(long entityId)
 		{
 			List<SplineMoveTaskBase> entitySplineMoveTasks = this.GetEntitySplineMoveTasks(entityId);
@@ -79,13 +78,13 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			{
 				return;
 			}
-			foreach (SplineMoveTaskBase splineMoveTaskBase in entitySplineMoveTasks.ToList<SplineMoveTaskBase>())
+			foreach (SplineMoveTaskBase splineMoveTaskBase in new List<SplineMoveTaskBase>(entitySplineMoveTasks))
 			{
 				splineMoveTaskBase.EndTask(false);
 			}
 		}
 
-		// Token: 0x060439B6 RID: 276918 RVA: 0x0108B454 File Offset: 0x01089654
+		// Token: 0x06039A04 RID: 236036 RVA: 0x0102FC84 File Offset: 0x0102DE84
 		public bool RegisterTask(SplineMoveTaskBase task)
 		{
 			if (!task.EntityHandle.Valid)
@@ -122,7 +121,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return true;
 		}
 
-		// Token: 0x060439B7 RID: 276919 RVA: 0x0108B57C File Offset: 0x0108977C
+		// Token: 0x06039A05 RID: 236037 RVA: 0x0102FDAC File Offset: 0x0102DFAC
 		public bool UnregisterTask(SplineMoveTaskBase task)
 		{
 			List<SplineMoveTaskBase> list;
@@ -141,7 +140,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return true;
 		}
 
-		// Token: 0x060439B8 RID: 276920 RVA: 0x0108B608 File Offset: 0x01089808
+		// Token: 0x06039A06 RID: 236038 RVA: 0x0102FE38 File Offset: 0x0102E038
 		protected void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			Log instance = Log.Instance;
@@ -155,13 +154,13 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			{
 				return;
 			}
-			foreach (SplineMoveTaskBase splineMoveTaskBase in entitySplineMoveTasks.ToList<SplineMoveTaskBase>())
+			foreach (SplineMoveTaskBase splineMoveTaskBase in new List<SplineMoveTaskBase>(entitySplineMoveTasks))
 			{
 				splineMoveTaskBase.EndTask(false);
 			}
 		}
 
-		// Token: 0x060439B9 RID: 276921 RVA: 0x0108B6A4 File Offset: 0x010898A4
+		// Token: 0x06039A07 RID: 236039 RVA: 0x0102FED4 File Offset: 0x0102E0D4
 		protected void OnClearWorld()
 		{
 			Log.Instance.Warn(ELogModule.LevelPlay, ELogAuthor.ZYL, "[SplineMoveTaskController]检测到世界清理，结束所有Task", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -180,8 +179,8 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			}
 		}
 
-		// Token: 0x170098E4 RID: 39140
-		// (get) Token: 0x060439BA RID: 276922 RVA: 0x0108B76C File Offset: 0x0108996C
+		// Token: 0x17006DC9 RID: 28105
+		// (get) Token: 0x06039A08 RID: 236040 RVA: 0x0102FF9C File Offset: 0x0102E19C
 		public static SplineMoveTaskController Instance
 		{
 			get
@@ -190,7 +189,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			}
 		}
 
-		// Token: 0x060439BB RID: 276923 RVA: 0x0108B773 File Offset: 0x01089973
+		// Token: 0x06039A09 RID: 236041 RVA: 0x0102FFA3 File Offset: 0x0102E1A3
 		public static SplineMoveTaskController GetOrCreateInstance()
 		{
 			if (SplineMoveTaskController._Instance == null)
@@ -200,7 +199,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return SplineMoveTaskController._Instance;
 		}
 
-		// Token: 0x060439BC RID: 276924 RVA: 0x0108B787 File Offset: 0x01089987
+		// Token: 0x06039A0A RID: 236042 RVA: 0x0102FFB7 File Offset: 0x0102E1B7
 		public static bool CreateInstance()
 		{
 			if (SplineMoveTaskController._Instance != null)
@@ -211,27 +210,27 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return true;
 		}
 
-		// Token: 0x060439BD RID: 276925 RVA: 0x0108B79D File Offset: 0x0108999D
+		// Token: 0x06039A0B RID: 236043 RVA: 0x0102FFCD File Offset: 0x0102E1CD
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060439BE RID: 276926 RVA: 0x0108B79F File Offset: 0x0108999F
+		// Token: 0x06039A0C RID: 236044 RVA: 0x0102FFCF File Offset: 0x0102E1CF
 		public static void ResetStaticDefaultValue()
 		{
 			SplineMoveTaskController._Instance = null;
 		}
 
-		// Token: 0x060439BF RID: 276927 RVA: 0x0108B7A7 File Offset: 0x010899A7
+		// Token: 0x06039A0D RID: 236045 RVA: 0x0102FFD7 File Offset: 0x0102E1D7
 		static SplineMoveTaskController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SplineMoveTaskController.CreateStaticDefaultValue), new Action(SplineMoveTaskController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040234C3 RID: 144579
+		// Token: 0x0401E6B5 RID: 124597
 		private readonly Dictionary<long, List<SplineMoveTaskBase>> EntitySplineMoveTasks = new Dictionary<long, List<SplineMoveTaskBase>>();
 
-		// Token: 0x040234C4 RID: 144580
+		// Token: 0x0401E6B6 RID: 124598
 		[Nullable(2)]
 		private static SplineMoveTaskController _Instance;
 	}

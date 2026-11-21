@@ -5,13 +5,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Container
 {
-	// Token: 0x02005593 RID: 21907
+	// Token: 0x02004569 RID: 17769
 	[NullableContext(1)]
 	[Nullable(0)]
 	[StaticVariableRuleIgnore]
 	public static class MarkSpritePool
 	{
-		// Token: 0x06037D69 RID: 228713 RVA: 0x00D3C210 File Offset: 0x00D3A410
+		// Token: 0x0602CC67 RID: 183399 RVA: 0x00C89F58 File Offset: 0x00C88158
 		[return: Nullable(2)]
 		public static ULGUISpriteData_BaseObject Get(int componentId, string spritePath)
 		{
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Map.Container
 			return null;
 		}
 
-		// Token: 0x06037D6A RID: 228714 RVA: 0x00D3C244 File Offset: 0x00D3A444
+		// Token: 0x0602CC68 RID: 183400 RVA: 0x00C89F8C File Offset: 0x00C8818C
 		public static void Ref(int componentId, string spritePath, ULGUISpriteData_BaseObject sprite)
 		{
 			HashSet<string> hashSet;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Map.Container
 			MarkSpritePool.SpriteHandleCacheMap[spritePath] = markSpritePoolObj;
 		}
 
-		// Token: 0x06037D6B RID: 228715 RVA: 0x00D3C2D0 File Offset: 0x00D3A4D0
+		// Token: 0x0602CC69 RID: 183401 RVA: 0x00C8A018 File Offset: 0x00C88218
 		public static void UnRef(int componentId)
 		{
 			HashSet<string> hashSet;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Map.Container
 			MarkSpritePool.ComponentAndSpriteRefMap.Remove(componentId);
 		}
 
-		// Token: 0x06037D6C RID: 228716 RVA: 0x00D3C37C File Offset: 0x00D3A57C
+		// Token: 0x0602CC6A RID: 183402 RVA: 0x00C8A0C4 File Offset: 0x00C882C4
 		public static void Tick()
 		{
 			MarkSpritePool.ToRemoveElements.Clear();
@@ -106,23 +106,23 @@ namespace CSharpScript.Game.Module.Map.Container
 			}
 		}
 
-		// Token: 0x06037D6D RID: 228717 RVA: 0x00D3C470 File Offset: 0x00D3A670
+		// Token: 0x0602CC6B RID: 183403 RVA: 0x00C8A1B8 File Offset: 0x00C883B8
 		public static void Dispose()
 		{
 			MarkSpritePool.ComponentAndSpriteRefMap.Clear();
 			MarkSpritePool.SpriteHandleCacheMap.Clear();
 		}
 
-		// Token: 0x0401D56B RID: 120171
+		// Token: 0x04017FF6 RID: 98294
 		public const int MAX_SPRITE_HANDLE_CACHE_TIME = 10000;
 
-		// Token: 0x0401D56C RID: 120172
+		// Token: 0x04017FF7 RID: 98295
 		private static readonly Dictionary<int, HashSet<string>> ComponentAndSpriteRefMap = new Dictionary<int, HashSet<string>>();
 
-		// Token: 0x0401D56D RID: 120173
+		// Token: 0x04017FF8 RID: 98296
 		private static readonly Dictionary<string, IMarkSpritePoolObj> SpriteHandleCacheMap = new Dictionary<string, IMarkSpritePoolObj>();
 
-		// Token: 0x0401D56E RID: 120174
+		// Token: 0x04017FF9 RID: 98297
 		private static readonly List<string> ToRemoveElements = new List<string>();
 	}
 }

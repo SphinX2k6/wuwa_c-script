@@ -7,19 +7,19 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C4E RID: 23630
+	// Token: 0x02004C2E RID: 19502
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Model(0)]
 	public class MoraleBattleModel : ModelBase
 	{
-		// Token: 0x0603BB75 RID: 244597 RVA: 0x00E42AB0 File Offset: 0x00E40CB0
+		// Token: 0x06030AC0 RID: 199360 RVA: 0x00D92E7C File Offset: 0x00D9107C
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x0603BB76 RID: 244598 RVA: 0x00E42AB3 File Offset: 0x00E40CB3
+		// Token: 0x06030AC1 RID: 199361 RVA: 0x00D92E7F File Offset: 0x00D9107F
 		protected override bool OnLeaveLevel()
 		{
 			this.ExpConfigListInternal = null;
@@ -30,25 +30,25 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BB77 RID: 244599 RVA: 0x00E42AD9 File Offset: 0x00E40CD9
+		// Token: 0x06030AC2 RID: 199362 RVA: 0x00D92EA5 File Offset: 0x00D910A5
 		public bool IsMoraleActive()
 		{
 			return this.IsMoraleActiveInternal;
 		}
 
-		// Token: 0x0603BB78 RID: 244600 RVA: 0x00E42AE1 File Offset: 0x00E40CE1
+		// Token: 0x06030AC3 RID: 199363 RVA: 0x00D92EAD File Offset: 0x00D910AD
 		public void SetMoraleActive(bool active)
 		{
 			this.IsMoraleActiveInternal = active;
 		}
 
-		// Token: 0x0603BB79 RID: 244601 RVA: 0x00E42AEA File Offset: 0x00E40CEA
+		// Token: 0x06030AC4 RID: 199364 RVA: 0x00D92EB6 File Offset: 0x00D910B6
 		public int GetMoraleLevel()
 		{
 			return this.MoraleLevel;
 		}
 
-		// Token: 0x0603BB7A RID: 244602 RVA: 0x00E42AF4 File Offset: 0x00E40CF4
+		// Token: 0x06030AC5 RID: 199365 RVA: 0x00D92EC0 File Offset: 0x00D910C0
 		public int GetMoraleMaxLevel()
 		{
 			IReadOnlyList<MoraleKeepLevel> expConfigList = this.GetExpConfigList();
@@ -59,37 +59,37 @@ namespace CSharpScript.Game.Module.Battle
 			return 1;
 		}
 
-		// Token: 0x0603BB7B RID: 244603 RVA: 0x00E42B15 File Offset: 0x00E40D15
+		// Token: 0x06030AC6 RID: 199366 RVA: 0x00D92EE1 File Offset: 0x00D910E1
 		public int GetLastMoraleLevel()
 		{
 			return this.LastMoraleLevel;
 		}
 
-		// Token: 0x0603BB7C RID: 244604 RVA: 0x00E42B1D File Offset: 0x00E40D1D
+		// Token: 0x06030AC7 RID: 199367 RVA: 0x00D92EE9 File Offset: 0x00D910E9
 		public int GetMoraleIndomitableLevel()
 		{
 			return this.MoraleIndomitableLevel;
 		}
 
-		// Token: 0x0603BB7D RID: 244605 RVA: 0x00E42B25 File Offset: 0x00E40D25
+		// Token: 0x06030AC8 RID: 199368 RVA: 0x00D92EF1 File Offset: 0x00D910F1
 		public int GetTempMoraleLevel()
 		{
 			return this.TempMoraleLevel;
 		}
 
-		// Token: 0x0603BB7E RID: 244606 RVA: 0x00E42B2D File Offset: 0x00E40D2D
+		// Token: 0x06030AC9 RID: 199369 RVA: 0x00D92EF9 File Offset: 0x00D910F9
 		public int GetTempMoraleExp()
 		{
 			return this.TempMoraleExp;
 		}
 
-		// Token: 0x0603BB7F RID: 244607 RVA: 0x00E42B35 File Offset: 0x00E40D35
+		// Token: 0x06030ACA RID: 199370 RVA: 0x00D92F01 File Offset: 0x00D91101
 		public int GetExpRatio()
 		{
 			return this.ExpRatio;
 		}
 
-		// Token: 0x0603BB80 RID: 244608 RVA: 0x00E42B40 File Offset: 0x00E40D40
+		// Token: 0x06030ACB RID: 199371 RVA: 0x00D92F0C File Offset: 0x00D9110C
 		public int GetTempMoraleMaxLevel()
 		{
 			IReadOnlyList<BattleScoreLevelConf> tempExpConfigList = this.GetTempExpConfigList();
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Battle
 			return Math.Max(1, tempExpConfigList.Count - 100);
 		}
 
-		// Token: 0x0603BB81 RID: 244609 RVA: 0x00E42BCD File Offset: 0x00E40DCD
+		// Token: 0x06030ACC RID: 199372 RVA: 0x00D92F99 File Offset: 0x00D91199
 		public int GetMoraleMaxExp()
 		{
 			if (this.MoraleMaxExp == 0)
@@ -129,13 +129,13 @@ namespace CSharpScript.Game.Module.Battle
 			return this.MoraleMaxExp;
 		}
 
-		// Token: 0x0603BB82 RID: 244610 RVA: 0x00E42BEF File Offset: 0x00E40DEF
+		// Token: 0x06030ACD RID: 199373 RVA: 0x00D92FBB File Offset: 0x00D911BB
 		public void SetIsUnlockTempMoraleMaxLevel(bool isUnlock)
 		{
 			this.IsUnlockTempMoraleMaxLevel = isUnlock;
 		}
 
-		// Token: 0x0603BB83 RID: 244611 RVA: 0x00E42BF8 File Offset: 0x00E40DF8
+		// Token: 0x06030ACE RID: 199374 RVA: 0x00D92FC4 File Offset: 0x00D911C4
 		private IReadOnlyList<MoraleKeepLevel> GetExpConfigList()
 		{
 			if (this.ExpConfigListInternal == null)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Battle
 			return this.ExpConfigListInternal;
 		}
 
-		// Token: 0x0603BB84 RID: 244612 RVA: 0x00E42C24 File Offset: 0x00E40E24
+		// Token: 0x06030ACF RID: 199375 RVA: 0x00D92FF0 File Offset: 0x00D911F0
 		private IReadOnlyList<BattleScoreLevelConf> GetTempExpConfigList()
 		{
 			if (this.TempExpConfigListInternal == null)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Battle
 			return this.TempExpConfigListInternal;
 		}
 
-		// Token: 0x0603BB85 RID: 244613 RVA: 0x00E42CA4 File Offset: 0x00E40EA4
+		// Token: 0x06030AD0 RID: 199376 RVA: 0x00D93070 File Offset: 0x00D91270
 		public int GetLevelExp(int level)
 		{
 			Dictionary<int, int> levelExpCache = this.LevelExpCache;
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Battle
 			return 0;
 		}
 
-		// Token: 0x0603BB86 RID: 244614 RVA: 0x00E42D34 File Offset: 0x00E40F34
+		// Token: 0x06030AD1 RID: 199377 RVA: 0x00D93100 File Offset: 0x00D91300
 		[NullableContext(0)]
 		public ValueTuple<int, int> GetTempLevelExpRange(int level)
 		{
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.Battle
 			return new ValueTuple<int, int>(0, 0);
 		}
 
-		// Token: 0x0603BB87 RID: 244615 RVA: 0x00E42E18 File Offset: 0x00E41018
+		// Token: 0x06030AD2 RID: 199378 RVA: 0x00D931E4 File Offset: 0x00D913E4
 		public int GetMoraleLevelUpExp(int? targetLevel = null)
 		{
 			int num = targetLevel ?? this.MoraleLevel;
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.Battle
 			return Math.Max(0, levelExp2 - levelExp);
 		}
 
-		// Token: 0x0603BB88 RID: 244616 RVA: 0x00E42E6C File Offset: 0x00E4106C
+		// Token: 0x06030AD3 RID: 199379 RVA: 0x00D93238 File Offset: 0x00D91438
 		public int GetMoraleCurrentLevelExp()
 		{
 			if (this.MoraleLevel == 1)
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.Battle
 			return Math.Max(0, this.MoraleExp - levelExp);
 		}
 
-		// Token: 0x0603BB89 RID: 244617 RVA: 0x00E42EC8 File Offset: 0x00E410C8
+		// Token: 0x06030AD4 RID: 199380 RVA: 0x00D93294 File Offset: 0x00D91494
 		public float GetMoraleCurrentExpProgress()
 		{
 			if (this.MoraleLevel == this.GetMoraleMaxLevel())
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.Battle
 			return 0f;
 		}
 
-		// Token: 0x0603BB8A RID: 244618 RVA: 0x00E42F10 File Offset: 0x00E41110
+		// Token: 0x06030AD5 RID: 199381 RVA: 0x00D932DC File Offset: 0x00D914DC
 		public int GetTempMoraleLevelUpExp(int? targetLevel = null)
 		{
 			int level = targetLevel ?? this.TempMoraleLevel;
@@ -276,14 +276,14 @@ namespace CSharpScript.Game.Module.Battle
 			return Math.Max(0, tempLevelExpRange.Item2 - tempLevelExpRange.Item1);
 		}
 
-		// Token: 0x0603BB8B RID: 244619 RVA: 0x00E42F54 File Offset: 0x00E41154
+		// Token: 0x06030AD6 RID: 199382 RVA: 0x00D93320 File Offset: 0x00D91520
 		public int GetTempMoraleLevelExp()
 		{
 			ValueTuple<int, int> tempLevelExpRange = this.GetTempLevelExpRange(this.TempMoraleLevel);
 			return Math.Max(0, this.TempMoraleExp - tempLevelExpRange.Item1);
 		}
 
-		// Token: 0x0603BB8C RID: 244620 RVA: 0x00E42F84 File Offset: 0x00E41184
+		// Token: 0x06030AD7 RID: 199383 RVA: 0x00D93350 File Offset: 0x00D91550
 		public float GetTempMoraleExpProgress()
 		{
 			int tempMoraleLevelExp = this.GetTempMoraleLevelExp();
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.Module.Battle
 			return 0f;
 		}
 
-		// Token: 0x0603BB8D RID: 244621 RVA: 0x00E42FC0 File Offset: 0x00E411C0
+		// Token: 0x06030AD8 RID: 199384 RVA: 0x00D9338C File Offset: 0x00D9158C
 		[NullableContext(1)]
 		public void HandleMoraleInfoNotify(MoraleInfoNotify notify)
 		{
@@ -359,7 +359,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BB8E RID: 244622 RVA: 0x00E43184 File Offset: 0x00E41384
+		// Token: 0x06030AD9 RID: 199385 RVA: 0x00D93550 File Offset: 0x00D91750
 		[NullableContext(1)]
 		private void SetMoraleInfoByNotify(MoraleInfoNotify notify)
 		{
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.TempMoraleExp = notify.TempMoraleExp;
 		}
 
-		// Token: 0x0603BB8F RID: 244623 RVA: 0x00E431D8 File Offset: 0x00E413D8
+		// Token: 0x06030ADA RID: 199386 RVA: 0x00D935A4 File Offset: 0x00D917A4
 		public EMoraleLevelDiffType GetMoraleLevelDiffType(int compareLevel, int? playerLevel = null)
 		{
 			int num = (playerLevel ?? (this.GetMoraleLevel() + this.GetTempMoraleLevel())) - compareLevel;
@@ -401,8 +401,8 @@ namespace CSharpScript.Game.Module.Battle
 			return emoraleLevelDiffType;
 		}
 
-		// Token: 0x17008DBB RID: 36283
-		// (get) Token: 0x0603BB90 RID: 244624 RVA: 0x00E43284 File Offset: 0x00E41484
+		// Token: 0x1700618D RID: 24973
+		// (get) Token: 0x06030ADB RID: 199387 RVA: 0x00D93650 File Offset: 0x00D91850
 		[Nullable(1)]
 		public static MoraleBattleModel Instance
 		{
@@ -413,7 +413,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BB91 RID: 244625 RVA: 0x00E4328B File Offset: 0x00E4148B
+		// Token: 0x06030ADC RID: 199388 RVA: 0x00D93657 File Offset: 0x00D91857
 		[NullableContext(1)]
 		public static MoraleBattleModel GetOrCreateInstance()
 		{
@@ -424,7 +424,7 @@ namespace CSharpScript.Game.Module.Battle
 			return MoraleBattleModel._Instance;
 		}
 
-		// Token: 0x0603BB92 RID: 244626 RVA: 0x00E4329F File Offset: 0x00E4149F
+		// Token: 0x06030ADD RID: 199389 RVA: 0x00D9366B File Offset: 0x00D9186B
 		public static bool CreateInstance()
 		{
 			if (MoraleBattleModel._Instance != null)
@@ -435,66 +435,66 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BB93 RID: 244627 RVA: 0x00E432B5 File Offset: 0x00E414B5
+		// Token: 0x06030ADE RID: 199390 RVA: 0x00D93681 File Offset: 0x00D91881
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603BB94 RID: 244628 RVA: 0x00E432B7 File Offset: 0x00E414B7
+		// Token: 0x06030ADF RID: 199391 RVA: 0x00D93683 File Offset: 0x00D91883
 		public static void ResetStaticDefaultValue()
 		{
 			MoraleBattleModel._Instance = null;
 		}
 
-		// Token: 0x0603BB95 RID: 244629 RVA: 0x00E432BF File Offset: 0x00E414BF
+		// Token: 0x06030AE0 RID: 199392 RVA: 0x00D9368B File Offset: 0x00D9188B
 		static MoraleBattleModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MoraleBattleModel.CreateStaticDefaultValue), new Action(MoraleBattleModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401F16D RID: 127341
+		// Token: 0x04019C1E RID: 105502
 		private const int EXTRA_TEMP_MORALE_MAX_LEVEL_BUFF_ID = 632400018;
 
-		// Token: 0x0401F16E RID: 127342
+		// Token: 0x04019C1F RID: 105503
 		private const int EXTRA_TEMP_MORALE_MAX_LEVEL = 100;
 
-		// Token: 0x0401F16F RID: 127343
+		// Token: 0x04019C20 RID: 105504
 		private int MoraleConfigId;
 
-		// Token: 0x0401F170 RID: 127344
+		// Token: 0x04019C21 RID: 105505
 		private int MoraleExp;
 
-		// Token: 0x0401F171 RID: 127345
+		// Token: 0x04019C22 RID: 105506
 		private int MoraleMaxExp;
 
-		// Token: 0x0401F172 RID: 127346
+		// Token: 0x04019C23 RID: 105507
 		private int MoraleLevel = 1;
 
-		// Token: 0x0401F173 RID: 127347
+		// Token: 0x04019C24 RID: 105508
 		private int TempMoraleLevel;
 
-		// Token: 0x0401F174 RID: 127348
+		// Token: 0x04019C25 RID: 105509
 		private int TempMoraleExp;
 
-		// Token: 0x0401F175 RID: 127349
+		// Token: 0x04019C26 RID: 105510
 		private int MoraleIndomitableLevel = 1;
 
-		// Token: 0x0401F176 RID: 127350
+		// Token: 0x04019C27 RID: 105511
 		private bool IsMoraleActiveInternal;
 
-		// Token: 0x0401F177 RID: 127351
+		// Token: 0x04019C28 RID: 105512
 		private bool IsMoraleInited;
 
-		// Token: 0x0401F178 RID: 127352
+		// Token: 0x04019C29 RID: 105513
 		private IReadOnlyList<MoraleKeepLevel> ExpConfigListInternal;
 
-		// Token: 0x0401F179 RID: 127353
+		// Token: 0x04019C2A RID: 105514
 		private IReadOnlyList<BattleScoreLevelConf> TempExpConfigListInternal;
 
-		// Token: 0x0401F17A RID: 127354
+		// Token: 0x04019C2B RID: 105515
 		private Dictionary<int, int> LevelExpCache;
 
-		// Token: 0x0401F17B RID: 127355
+		// Token: 0x04019C2C RID: 105516
 		[Nullable(new byte[]
 		{
 			2,
@@ -502,19 +502,19 @@ namespace CSharpScript.Game.Module.Battle
 		})]
 		private Dictionary<int, ValueTuple<int, int>> TempLevelExpRangeCache;
 
-		// Token: 0x0401F17C RID: 127356
+		// Token: 0x04019C2D RID: 105517
 		private int ExpRatio;
 
-		// Token: 0x0401F17D RID: 127357
+		// Token: 0x04019C2E RID: 105518
 		private int LastMoraleLevel = 1;
 
-		// Token: 0x0401F17E RID: 127358
+		// Token: 0x04019C2F RID: 105519
 		private bool IsCheckTempMoraleMaxLevelBuff;
 
-		// Token: 0x0401F17F RID: 127359
+		// Token: 0x04019C30 RID: 105520
 		private bool IsUnlockTempMoraleMaxLevel;
 
-		// Token: 0x0401F180 RID: 127360
+		// Token: 0x04019C31 RID: 105521
 		private static MoraleBattleModel _Instance;
 	}
 }

@@ -7,142 +7,142 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Fight.Struct
 {
-	// Token: 0x02003F6A RID: 16234
+	// Token: 0x0200320B RID: 12811
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Fight/Struct/SLockOnFollowShooter.SLockOnFollowShooter")]
 	[UnrealStructLayout(296, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 296)]
 	public class SLockOnFollowShooter : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06029606 RID: 169478 RVA: 0x009C2B8D File Offset: 0x009C0D8D
+		// Token: 0x0601FE8C RID: 130700 RVA: 0x00938C31 File Offset: 0x00936E31
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SLockOnFollowShooter._ScriptStructPtr != 0) ? SLockOnFollowShooter._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Fight/Struct/SLockOnFollowShooter.SLockOnFollowShooter", ref SLockOnFollowShooter._ScriptStructPtr);
 		}
 
-		// Token: 0x170062E1 RID: 25313
-		// (get) Token: 0x06029607 RID: 169479 RVA: 0x009C2BB1 File Offset: 0x009C0DB1
-		// (set) Token: 0x06029608 RID: 169480 RVA: 0x009C2BC1 File Offset: 0x009C0DC1
+		// Token: 0x17003C1D RID: 15389
+		// (get) Token: 0x0601FE8D RID: 130701 RVA: 0x00938C55 File Offset: 0x00936E55
+		// (set) Token: 0x0601FE8E RID: 130702 RVA: 0x00938C65 File Offset: 0x00936E65
 		public unsafe bool Enable
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_0) != 0;
+				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_Enable) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_0) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_Enable) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170062E2 RID: 25314
-		// (get) Token: 0x06029609 RID: 169481 RVA: 0x009C2BD2 File Offset: 0x009C0DD2
-		// (set) Token: 0x0602960A RID: 169482 RVA: 0x009C2BE2 File Offset: 0x009C0DE2
+		// Token: 0x17003C1E RID: 15390
+		// (get) Token: 0x0601FE8F RID: 130703 RVA: 0x00938C76 File Offset: 0x00936E76
+		// (set) Token: 0x0601FE90 RID: 130704 RVA: 0x00938C86 File Offset: 0x00936E86
 		public unsafe float GapTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_GapTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_GapTime) = value;
 			}
 		}
 
-		// Token: 0x170062E3 RID: 25315
-		// (get) Token: 0x0602960B RID: 169483 RVA: 0x009C2BF3 File Offset: 0x009C0DF3
-		// (set) Token: 0x0602960C RID: 169484 RVA: 0x009C2C03 File Offset: 0x009C0E03
+		// Token: 0x17003C1F RID: 15391
+		// (get) Token: 0x0601FE91 RID: 130705 RVA: 0x00938C97 File Offset: 0x00936E97
+		// (set) Token: 0x0601FE92 RID: 130706 RVA: 0x00938CA7 File Offset: 0x00936EA7
 		public unsafe int Distance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_Distance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_Distance) = value;
 			}
 		}
 
-		// Token: 0x170062E4 RID: 25316
-		// (get) Token: 0x0602960D RID: 169485 RVA: 0x009C2C14 File Offset: 0x009C0E14
-		// (set) Token: 0x0602960E RID: 169486 RVA: 0x009C2C24 File Offset: 0x009C0E24
+		// Token: 0x17003C20 RID: 15392
+		// (get) Token: 0x0601FE93 RID: 130707 RVA: 0x00938CB8 File Offset: 0x00936EB8
+		// (set) Token: 0x0601FE94 RID: 130708 RVA: 0x00938CC8 File Offset: 0x00936EC8
 		public unsafe int Radius
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_Radius);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_Radius) = value;
 			}
 		}
 
-		// Token: 0x170062E5 RID: 25317
-		// (get) Token: 0x0602960F RID: 169487 RVA: 0x009C2C35 File Offset: 0x009C0E35
-		// (set) Token: 0x06029610 RID: 169488 RVA: 0x009C2C45 File Offset: 0x009C0E45
+		// Token: 0x17003C21 RID: 15393
+		// (get) Token: 0x0601FE95 RID: 130709 RVA: 0x00938CD9 File Offset: 0x00936ED9
+		// (set) Token: 0x0601FE96 RID: 130710 RVA: 0x00938CE9 File Offset: 0x00936EE9
 		public unsafe float WorldDistanceWeight
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_WorldDistanceWeight);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_WorldDistanceWeight) = value;
 			}
 		}
 
-		// Token: 0x170062E6 RID: 25318
-		// (get) Token: 0x06029611 RID: 169489 RVA: 0x009C2C56 File Offset: 0x009C0E56
-		// (set) Token: 0x06029612 RID: 169490 RVA: 0x009C2C66 File Offset: 0x009C0E66
+		// Token: 0x17003C22 RID: 15394
+		// (get) Token: 0x0601FE97 RID: 130711 RVA: 0x00938CFA File Offset: 0x00936EFA
+		// (set) Token: 0x0601FE98 RID: 130712 RVA: 0x00938D0A File Offset: 0x00936F0A
 		public unsafe float ScreenDistanceWeight
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_ScreenDistanceWeight);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_ScreenDistanceWeight) = value;
 			}
 		}
 
-		// Token: 0x170062E7 RID: 25319
-		// (get) Token: 0x06029613 RID: 169491 RVA: 0x009C2C77 File Offset: 0x009C0E77
-		// (set) Token: 0x06029614 RID: 169492 RVA: 0x009C2C87 File Offset: 0x009C0E87
+		// Token: 0x17003C23 RID: 15395
+		// (get) Token: 0x0601FE99 RID: 130713 RVA: 0x00938D1B File Offset: 0x00936F1B
+		// (set) Token: 0x0601FE9A RID: 130714 RVA: 0x00938D2B File Offset: 0x00936F2B
 		public unsafe float CharacterExtraWeight
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_CharacterExtraWeight);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_CharacterExtraWeight) = value;
 			}
 		}
 
-		// Token: 0x170062E8 RID: 25320
-		// (get) Token: 0x06029615 RID: 169493 RVA: 0x009C2C98 File Offset: 0x009C0E98
-		// (set) Token: 0x06029616 RID: 169494 RVA: 0x009C2CA8 File Offset: 0x009C0EA8
+		// Token: 0x17003C24 RID: 15396
+		// (get) Token: 0x0601FE9B RID: 130715 RVA: 0x00938D3C File Offset: 0x00936F3C
+		// (set) Token: 0x0601FE9C RID: 130716 RVA: 0x00938D4C File Offset: 0x00936F4C
 		public unsafe float SceneItemExtraWeight
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_SceneItemExtraWeight);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_SceneItemExtraWeight) = value;
 			}
 		}
 
-		// Token: 0x170062E9 RID: 25321
-		// (get) Token: 0x06029617 RID: 169495 RVA: 0x009C2CBC File Offset: 0x009C0EBC
-		// (set) Token: 0x06029618 RID: 169496 RVA: 0x009C2CFF File Offset: 0x009C0EFF
+		// Token: 0x17003C25 RID: 15397
+		// (get) Token: 0x0601FE9D RID: 130717 RVA: 0x00938D60 File Offset: 0x00936F60
+		// (set) Token: 0x0601FE9E RID: 130718 RVA: 0x00938DA3 File Offset: 0x00936FA3
 		public TArray<SLockOnFollowShooterAutoAim> ArrayAutoAimConfig
 		{
 			get
@@ -151,7 +151,7 @@ namespace AkiClient.Game.Aki.Data.Fight.Struct
 				TArray<SLockOnFollowShooterAutoAim> result;
 				if ((result = this._ArrayAutoAimConfig) == null)
 				{
-					result = (this._ArrayAutoAimConfig = new TArray<SLockOnFollowShooterAutoAim>(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_8, base.MemoryOwner ?? this));
+					result = (this._ArrayAutoAimConfig = new TArray<SLockOnFollowShooterAutoAim>(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_ArrayAutoAimConfig, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -161,9 +161,9 @@ namespace AkiClient.Game.Aki.Data.Fight.Struct
 			}
 		}
 
-		// Token: 0x170062EA RID: 25322
-		// (get) Token: 0x06029619 RID: 169497 RVA: 0x009C2D10 File Offset: 0x009C0F10
-		// (set) Token: 0x0602961A RID: 169498 RVA: 0x009C2D53 File Offset: 0x009C0F53
+		// Token: 0x17003C26 RID: 15398
+		// (get) Token: 0x0601FE9F RID: 130719 RVA: 0x00938DB4 File Offset: 0x00936FB4
+		// (set) Token: 0x0601FEA0 RID: 130720 RVA: 0x00938DF7 File Offset: 0x00936FF7
 		public FGameplayTagContainer LockOnGameplayTagContainer
 		{
 			get
@@ -172,19 +172,19 @@ namespace AkiClient.Game.Aki.Data.Fight.Struct
 				FGameplayTagContainer result;
 				if ((result = this._LockOnGameplayTagContainer) == null)
 				{
-					result = (this._LockOnGameplayTagContainer = new FGameplayTagContainer(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_9, base.MemoryOwner ?? this));
+					result = (this._LockOnGameplayTagContainer = new FGameplayTagContainer(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_LockOnGameplayTagContainer, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_9, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_LockOnGameplayTagContainer, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x170062EB RID: 25323
-		// (get) Token: 0x0602961B RID: 169499 RVA: 0x009C2D74 File Offset: 0x009C0F74
-		// (set) Token: 0x0602961C RID: 169500 RVA: 0x009C2DB7 File Offset: 0x009C0FB7
+		// Token: 0x17003C27 RID: 15399
+		// (get) Token: 0x0601FEA1 RID: 130721 RVA: 0x00938E18 File Offset: 0x00937018
+		// (set) Token: 0x0601FEA2 RID: 130722 RVA: 0x00938E5B File Offset: 0x0093705B
 		public FGameplayTagContainer AutoDetectEnableTagContainer
 		{
 			get
@@ -193,19 +193,19 @@ namespace AkiClient.Game.Aki.Data.Fight.Struct
 				FGameplayTagContainer result;
 				if ((result = this._AutoDetectEnableTagContainer) == null)
 				{
-					result = (this._AutoDetectEnableTagContainer = new FGameplayTagContainer(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_10, base.MemoryOwner ?? this));
+					result = (this._AutoDetectEnableTagContainer = new FGameplayTagContainer(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_AutoDetectEnableTagContainer, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_10, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_AutoDetectEnableTagContainer, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x170062EC RID: 25324
-		// (get) Token: 0x0602961D RID: 169501 RVA: 0x009C2DD8 File Offset: 0x009C0FD8
-		// (set) Token: 0x0602961E RID: 169502 RVA: 0x009C2E1B File Offset: 0x009C101B
+		// Token: 0x17003C28 RID: 15400
+		// (get) Token: 0x0601FEA3 RID: 130723 RVA: 0x00938E7C File Offset: 0x0093707C
+		// (set) Token: 0x0601FEA4 RID: 130724 RVA: 0x00938EBF File Offset: 0x009370BF
 		public FGameplayTagContainer IgnoreLockOnGameplayTagContainer
 		{
 			get
@@ -214,19 +214,19 @@ namespace AkiClient.Game.Aki.Data.Fight.Struct
 				FGameplayTagContainer result;
 				if ((result = this._IgnoreLockOnGameplayTagContainer) == null)
 				{
-					result = (this._IgnoreLockOnGameplayTagContainer = new FGameplayTagContainer(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_11, base.MemoryOwner ?? this));
+					result = (this._IgnoreLockOnGameplayTagContainer = new FGameplayTagContainer(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_IgnoreLockOnGameplayTagContainer, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_11, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_IgnoreLockOnGameplayTagContainer, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x170062ED RID: 25325
-		// (get) Token: 0x0602961F RID: 169503 RVA: 0x009C2E3C File Offset: 0x009C103C
-		// (set) Token: 0x06029620 RID: 169504 RVA: 0x009C2E7F File Offset: 0x009C107F
+		// Token: 0x17003C29 RID: 15401
+		// (get) Token: 0x0601FEA5 RID: 130725 RVA: 0x00938EE0 File Offset: 0x009370E0
+		// (set) Token: 0x0601FEA6 RID: 130726 RVA: 0x00938F23 File Offset: 0x00937123
 		public FGameplayTagContainer AutoShootGameplayTagContainer
 		{
 			get
@@ -235,64 +235,64 @@ namespace AkiClient.Game.Aki.Data.Fight.Struct
 				FGameplayTagContainer result;
 				if ((result = this._AutoShootGameplayTagContainer) == null)
 				{
-					result = (this._AutoShootGameplayTagContainer = new FGameplayTagContainer(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_12, base.MemoryOwner ?? this));
+					result = (this._AutoShootGameplayTagContainer = new FGameplayTagContainer(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_AutoShootGameplayTagContainer, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_12, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_AutoShootGameplayTagContainer, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x170062EE RID: 25326
-		// (get) Token: 0x06029621 RID: 169505 RVA: 0x009C2EA0 File Offset: 0x009C10A0
-		// (set) Token: 0x06029622 RID: 169506 RVA: 0x009C2EB0 File Offset: 0x009C10B0
+		// Token: 0x17003C2A RID: 15402
+		// (get) Token: 0x0601FEA7 RID: 130727 RVA: 0x00938F44 File Offset: 0x00937144
+		// (set) Token: 0x0601FEA8 RID: 130728 RVA: 0x00938F54 File Offset: 0x00937154
 		public unsafe float CameraForwardDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_CameraForwardDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_CameraForwardDistance) = value;
 			}
 		}
 
-		// Token: 0x170062EF RID: 25327
-		// (get) Token: 0x06029623 RID: 169507 RVA: 0x009C2EC1 File Offset: 0x009C10C1
-		// (set) Token: 0x06029624 RID: 169508 RVA: 0x009C2ED5 File Offset: 0x009C10D5
+		// Token: 0x17003C2B RID: 15403
+		// (get) Token: 0x0601FEA9 RID: 130729 RVA: 0x00938F65 File Offset: 0x00937165
+		// (set) Token: 0x0601FEAA RID: 130730 RVA: 0x00938F79 File Offset: 0x00937179
 		public unsafe string CustomEntityKey
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnFollowShooter.__PropertyOffset_14)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnFollowShooter.__PropertyOffset_CustomEntityKey)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnFollowShooter.__PropertyOffset_14)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnFollowShooter.__PropertyOffset_CustomEntityKey)), value);
 			}
 		}
 
-		// Token: 0x170062F0 RID: 25328
-		// (get) Token: 0x06029625 RID: 169509 RVA: 0x009C2EEA File Offset: 0x009C10EA
-		// (set) Token: 0x06029626 RID: 169510 RVA: 0x009C2EFE File Offset: 0x009C10FE
+		// Token: 0x17003C2C RID: 15404
+		// (get) Token: 0x0601FEAB RID: 130731 RVA: 0x00938F8E File Offset: 0x0093718E
+		// (set) Token: 0x0601FEAC RID: 130732 RVA: 0x00938FA2 File Offset: 0x009371A2
 		public unsafe string CustomBulletTargetKey
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnFollowShooter.__PropertyOffset_15)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnFollowShooter.__PropertyOffset_CustomBulletTargetKey)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnFollowShooter.__PropertyOffset_15)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnFollowShooter.__PropertyOffset_CustomBulletTargetKey)), value);
 			}
 		}
 
-		// Token: 0x170062F1 RID: 25329
-		// (get) Token: 0x06029627 RID: 169511 RVA: 0x009C2F14 File Offset: 0x009C1114
-		// (set) Token: 0x06029628 RID: 169512 RVA: 0x009C2F57 File Offset: 0x009C1157
+		// Token: 0x17003C2D RID: 15405
+		// (get) Token: 0x0601FEAD RID: 130733 RVA: 0x00938FB8 File Offset: 0x009371B8
+		// (set) Token: 0x0601FEAE RID: 130734 RVA: 0x00938FFB File Offset: 0x009371FB
 		public TSet<string> CustomBulletTargetRowNameSet
 		{
 			get
@@ -301,7 +301,7 @@ namespace AkiClient.Game.Aki.Data.Fight.Struct
 				TSet<string> result;
 				if ((result = this._CustomBulletTargetRowNameSet) == null)
 				{
-					result = (this._CustomBulletTargetRowNameSet = new TSet<string>(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_16, base.MemoryOwner ?? this));
+					result = (this._CustomBulletTargetRowNameSet = new TSet<string>(base.NativePtr + (IntPtr)SLockOnFollowShooter.__PropertyOffset_CustomBulletTargetRowNameSet, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -311,96 +311,74 @@ namespace AkiClient.Game.Aki.Data.Fight.Struct
 			}
 		}
 
-		// Token: 0x06029629 RID: 169513 RVA: 0x009C2F65 File Offset: 0x009C1165
+		// Token: 0x0601FEAF RID: 130735 RVA: 0x00939009 File Offset: 0x00937209
 		public SLockOnFollowShooter()
 		{
 		}
 
-		// Token: 0x0602962A RID: 169514 RVA: 0x009C2F70 File Offset: 0x009C1170
-		public SLockOnFollowShooter(bool Enable, float GapTime, int Distance, int Radius, float WorldDistanceWeight, float ScreenDistanceWeight, float CharacterExtraWeight, float SceneItemExtraWeight, TArray<SLockOnFollowShooterAutoAim> ArrayAutoAimConfig, FGameplayTagContainer LockOnGameplayTagContainer, FGameplayTagContainer AutoDetectEnableTagContainer, FGameplayTagContainer IgnoreLockOnGameplayTagContainer, FGameplayTagContainer AutoShootGameplayTagContainer, float CameraForwardDistance, string CustomEntityKey, string CustomBulletTargetKey, TSet<string> CustomBulletTargetRowNameSet)
-		{
-			this.Enable = Enable;
-			this.GapTime = GapTime;
-			this.Distance = Distance;
-			this.Radius = Radius;
-			this.WorldDistanceWeight = WorldDistanceWeight;
-			this.ScreenDistanceWeight = ScreenDistanceWeight;
-			this.CharacterExtraWeight = CharacterExtraWeight;
-			this.SceneItemExtraWeight = SceneItemExtraWeight;
-			this.ArrayAutoAimConfig = ArrayAutoAimConfig;
-			this.LockOnGameplayTagContainer = LockOnGameplayTagContainer;
-			this.AutoDetectEnableTagContainer = AutoDetectEnableTagContainer;
-			this.IgnoreLockOnGameplayTagContainer = IgnoreLockOnGameplayTagContainer;
-			this.AutoShootGameplayTagContainer = AutoShootGameplayTagContainer;
-			this.CameraForwardDistance = CameraForwardDistance;
-			this.CustomEntityKey = CustomEntityKey;
-			this.CustomBulletTargetKey = CustomBulletTargetKey;
-			this.CustomBulletTargetRowNameSet = CustomBulletTargetRowNameSet;
-		}
-
-		// Token: 0x0602962B RID: 169515 RVA: 0x009C3008 File Offset: 0x009C1208
+		// Token: 0x0601FEB0 RID: 130736 RVA: 0x00939011 File Offset: 0x00937211
 		protected override IntPtr GetUStructPtr()
 		{
 			return SLockOnFollowShooter.StaticStruct();
 		}
 
-		// Token: 0x0602962C RID: 169516 RVA: 0x009C3014 File Offset: 0x009C1214
+		// Token: 0x0601FEB1 RID: 130737 RVA: 0x0093901D File Offset: 0x0093721D
 		[NullableContext(2)]
 		public SLockOnFollowShooter(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602962D RID: 169517 RVA: 0x009C301E File Offset: 0x009C121E
+		// Token: 0x0601FEB2 RID: 130738 RVA: 0x00939027 File Offset: 0x00937227
 		public SLockOnFollowShooter(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602962E RID: 169518 RVA: 0x009C3029 File Offset: 0x009C1229
+		// Token: 0x0601FEB3 RID: 130739 RVA: 0x00939032 File Offset: 0x00937232
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SLockOnFollowShooter(Pointer, false, true);
 		}
 
-		// Token: 0x0602962F RID: 169519 RVA: 0x009C3033 File Offset: 0x009C1233
+		// Token: 0x0601FEB4 RID: 130740 RVA: 0x0093903C File Offset: 0x0093723C
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SLockOnFollowShooter(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04015339 RID: 86841
+		// Token: 0x0401122D RID: 70189
 		public const string __ObjectPath = "/Game/Aki/Data/Fight/Struct/SLockOnFollowShooter.SLockOnFollowShooter";
 
-		// Token: 0x0401533A RID: 86842
+		// Token: 0x0401122E RID: 70190
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401533B RID: 86843
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401122F RID: 70191
+		internal static int __PropertyOffset_Enable;
 
-		// Token: 0x0401533C RID: 86844
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011230 RID: 70192
+		internal static int __PropertyOffset_GapTime;
 
-		// Token: 0x0401533D RID: 86845
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011231 RID: 70193
+		internal static int __PropertyOffset_Distance;
 
-		// Token: 0x0401533E RID: 86846
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011232 RID: 70194
+		internal static int __PropertyOffset_Radius;
 
-		// Token: 0x0401533F RID: 86847
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011233 RID: 70195
+		internal static int __PropertyOffset_WorldDistanceWeight;
 
-		// Token: 0x04015340 RID: 86848
-		internal static int __PropertyOffset_5;
+		// Token: 0x04011234 RID: 70196
+		internal static int __PropertyOffset_ScreenDistanceWeight;
 
-		// Token: 0x04015341 RID: 86849
-		internal static int __PropertyOffset_6;
+		// Token: 0x04011235 RID: 70197
+		internal static int __PropertyOffset_CharacterExtraWeight;
 
-		// Token: 0x04015342 RID: 86850
-		internal static int __PropertyOffset_7;
+		// Token: 0x04011236 RID: 70198
+		internal static int __PropertyOffset_SceneItemExtraWeight;
 
-		// Token: 0x04015343 RID: 86851
-		internal static int __PropertyOffset_8;
+		// Token: 0x04011237 RID: 70199
+		internal static int __PropertyOffset_ArrayAutoAimConfig;
 
-		// Token: 0x04015344 RID: 86852
+		// Token: 0x04011238 RID: 70200
 		[Nullable(new byte[]
 		{
 			2,
@@ -408,47 +386,47 @@ namespace AkiClient.Game.Aki.Data.Fight.Struct
 		})]
 		private TArray<SLockOnFollowShooterAutoAim> _ArrayAutoAimConfig;
 
-		// Token: 0x04015345 RID: 86853
-		internal static int __PropertyOffset_9;
+		// Token: 0x04011239 RID: 70201
+		internal static int __PropertyOffset_LockOnGameplayTagContainer;
 
-		// Token: 0x04015346 RID: 86854
+		// Token: 0x0401123A RID: 70202
 		[Nullable(2)]
 		private FGameplayTagContainer _LockOnGameplayTagContainer;
 
-		// Token: 0x04015347 RID: 86855
-		internal static int __PropertyOffset_10;
+		// Token: 0x0401123B RID: 70203
+		internal static int __PropertyOffset_AutoDetectEnableTagContainer;
 
-		// Token: 0x04015348 RID: 86856
+		// Token: 0x0401123C RID: 70204
 		[Nullable(2)]
 		private FGameplayTagContainer _AutoDetectEnableTagContainer;
 
-		// Token: 0x04015349 RID: 86857
-		internal static int __PropertyOffset_11;
+		// Token: 0x0401123D RID: 70205
+		internal static int __PropertyOffset_IgnoreLockOnGameplayTagContainer;
 
-		// Token: 0x0401534A RID: 86858
+		// Token: 0x0401123E RID: 70206
 		[Nullable(2)]
 		private FGameplayTagContainer _IgnoreLockOnGameplayTagContainer;
 
-		// Token: 0x0401534B RID: 86859
-		internal static int __PropertyOffset_12;
+		// Token: 0x0401123F RID: 70207
+		internal static int __PropertyOffset_AutoShootGameplayTagContainer;
 
-		// Token: 0x0401534C RID: 86860
+		// Token: 0x04011240 RID: 70208
 		[Nullable(2)]
 		private FGameplayTagContainer _AutoShootGameplayTagContainer;
 
-		// Token: 0x0401534D RID: 86861
-		internal static int __PropertyOffset_13;
+		// Token: 0x04011241 RID: 70209
+		internal static int __PropertyOffset_CameraForwardDistance;
 
-		// Token: 0x0401534E RID: 86862
-		internal static int __PropertyOffset_14;
+		// Token: 0x04011242 RID: 70210
+		internal static int __PropertyOffset_CustomEntityKey;
 
-		// Token: 0x0401534F RID: 86863
-		internal static int __PropertyOffset_15;
+		// Token: 0x04011243 RID: 70211
+		internal static int __PropertyOffset_CustomBulletTargetKey;
 
-		// Token: 0x04015350 RID: 86864
-		internal static int __PropertyOffset_16;
+		// Token: 0x04011244 RID: 70212
+		internal static int __PropertyOffset_CustomBulletTargetRowNameSet;
 
-		// Token: 0x04015351 RID: 86865
+		// Token: 0x04011245 RID: 70213
 		[Nullable(new byte[]
 		{
 			2,

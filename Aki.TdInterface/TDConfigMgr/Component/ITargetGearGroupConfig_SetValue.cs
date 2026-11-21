@@ -4,29 +4,27 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200074D RID: 1869
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007EE RID: 2030
 	public class ITargetGearGroupConfig_SetValue
 	{
-		// Token: 0x04001B2C RID: 6956
+		// Token: 0x04001D31 RID: 7473
 		public List<int> Entitys;
 
-		// Token: 0x04001B2D RID: 6957
+		// Token: 0x04001D32 RID: 7474
 		public ITargetGearGroupSuccessContdion SuccessCondition;
 
-		// Token: 0x04001B2E RID: 6958
+		// Token: 0x04001D33 RID: 7475
 		public List<ITargetGearGroupFailureCondition> FailureConditions;
 
-		// Token: 0x04001B2F RID: 6959
+		// Token: 0x04001D34 RID: 7476
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ICheckGearHit> CheckGears;
 
-		// Token: 0x04001B30 RID: 6960
+		// Token: 0x04001D35 RID: 7477
 		[Nullable(2)]
 		public IGroupFinishConfig FinishConfig;
 	}

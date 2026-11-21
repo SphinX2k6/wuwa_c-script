@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000330 RID: 816
+	// Token: 0x02000337 RID: 823
 	[NetMessage(EMessageId.DamageExecuteResponse)]
 	public sealed class DamageExecuteResponse : IMessage<DamageExecuteResponse>, IMessage, IEquatable<DamageExecuteResponse>, IDeepCloneable<DamageExecuteResponse>, IBufferMessage
 	{
-		// Token: 0x060051FE RID: 20990 RVA: 0x000C7F6E File Offset: 0x000C616E
+		// Token: 0x060052D7 RID: 21207 RVA: 0x000CA358 File Offset: 0x000C8558
 		[NullableContext(1)]
 		public static DamageExecuteResponse Create()
 		{
 			return new DamageExecuteResponse();
 		}
 
-		// Token: 0x17000ED0 RID: 3792
-		// (get) Token: 0x060051FF RID: 20991 RVA: 0x000C7F75 File Offset: 0x000C6175
+		// Token: 0x17000EFD RID: 3837
+		// (get) Token: 0x060052D8 RID: 21208 RVA: 0x000CA35F File Offset: 0x000C855F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000ED1 RID: 3793
-		// (get) Token: 0x06005200 RID: 20992 RVA: 0x000C7F78 File Offset: 0x000C6178
+		// Token: 0x17000EFE RID: 3838
+		// (get) Token: 0x060052D9 RID: 21209 RVA: 0x000CA362 File Offset: 0x000C8562
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005201 RID: 20993 RVA: 0x000C7F7F File Offset: 0x000C617F
+		// Token: 0x060052DA RID: 21210 RVA: 0x000CA369 File Offset: 0x000C8569
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DamageExecuteResponse()
 		{
 		}
 
-		// Token: 0x06005202 RID: 20994 RVA: 0x000C7F88 File Offset: 0x000C6188
+		// Token: 0x060052DB RID: 21211 RVA: 0x000CA374 File Offset: 0x000C8574
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DamageExecuteResponse(DamageExecuteResponse other) : this()
@@ -69,7 +69,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06005203 RID: 20995 RVA: 0x000C803C File Offset: 0x000C623C
+		// Token: 0x060052DC RID: 21212 RVA: 0x000CA428 File Offset: 0x000C8628
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DamageExecuteResponse Clone()
@@ -77,9 +77,9 @@ namespace Aki.Protocol
 			return new DamageExecuteResponse(this);
 		}
 
-		// Token: 0x17000ED2 RID: 3794
-		// (get) Token: 0x06005204 RID: 20996 RVA: 0x000C8044 File Offset: 0x000C6244
-		// (set) Token: 0x06005205 RID: 20997 RVA: 0x000C804C File Offset: 0x000C624C
+		// Token: 0x17000EFF RID: 3839
+		// (get) Token: 0x060052DD RID: 21213 RVA: 0x000CA430 File Offset: 0x000C8630
+		// (set) Token: 0x060052DE RID: 21214 RVA: 0x000CA438 File Offset: 0x000C8638
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -94,9 +94,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000ED3 RID: 3795
-		// (get) Token: 0x06005206 RID: 20998 RVA: 0x000C8055 File Offset: 0x000C6255
-		// (set) Token: 0x06005207 RID: 20999 RVA: 0x000C805D File Offset: 0x000C625D
+		// Token: 0x17000F00 RID: 3840
+		// (get) Token: 0x060052DF RID: 21215 RVA: 0x000CA441 File Offset: 0x000C8641
+		// (set) Token: 0x060052E0 RID: 21216 RVA: 0x000CA449 File Offset: 0x000C8649
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long AttackerEntityId
@@ -111,9 +111,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000ED4 RID: 3796
-		// (get) Token: 0x06005208 RID: 21000 RVA: 0x000C8066 File Offset: 0x000C6266
-		// (set) Token: 0x06005209 RID: 21001 RVA: 0x000C806E File Offset: 0x000C626E
+		// Token: 0x17000F01 RID: 3841
+		// (get) Token: 0x060052E1 RID: 21217 RVA: 0x000CA452 File Offset: 0x000C8652
+		// (set) Token: 0x060052E2 RID: 21218 RVA: 0x000CA45A File Offset: 0x000C865A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long TargetEntityId
@@ -128,9 +128,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000ED5 RID: 3797
-		// (get) Token: 0x0600520A RID: 21002 RVA: 0x000C8077 File Offset: 0x000C6277
-		// (set) Token: 0x0600520B RID: 21003 RVA: 0x000C807F File Offset: 0x000C627F
+		// Token: 0x17000F02 RID: 3842
+		// (get) Token: 0x060052E3 RID: 21219 RVA: 0x000CA463 File Offset: 0x000C8663
+		// (set) Token: 0x060052E4 RID: 21220 RVA: 0x000CA46B File Offset: 0x000C866B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Damage
@@ -145,9 +145,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000ED6 RID: 3798
-		// (get) Token: 0x0600520C RID: 21004 RVA: 0x000C8088 File Offset: 0x000C6288
-		// (set) Token: 0x0600520D RID: 21005 RVA: 0x000C8090 File Offset: 0x000C6290
+		// Token: 0x17000F03 RID: 3843
+		// (get) Token: 0x060052E5 RID: 21221 RVA: 0x000CA474 File Offset: 0x000C8674
+		// (set) Token: 0x060052E6 RID: 21222 RVA: 0x000CA47C File Offset: 0x000C867C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PartId
@@ -162,9 +162,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000ED7 RID: 3799
-		// (get) Token: 0x0600520E RID: 21006 RVA: 0x000C8099 File Offset: 0x000C6299
-		// (set) Token: 0x0600520F RID: 21007 RVA: 0x000C80A1 File Offset: 0x000C62A1
+		// Token: 0x17000F04 RID: 3844
+		// (get) Token: 0x060052E7 RID: 21223 RVA: 0x000CA485 File Offset: 0x000C8685
+		// (set) Token: 0x060052E8 RID: 21224 RVA: 0x000CA48D File Offset: 0x000C868D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsCrit
@@ -179,9 +179,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000ED8 RID: 3800
-		// (get) Token: 0x06005210 RID: 21008 RVA: 0x000C80AA File Offset: 0x000C62AA
-		// (set) Token: 0x06005211 RID: 21009 RVA: 0x000C80B2 File Offset: 0x000C62B2
+		// Token: 0x17000F05 RID: 3845
+		// (get) Token: 0x060052E9 RID: 21225 RVA: 0x000CA496 File Offset: 0x000C8696
+		// (set) Token: 0x060052EA RID: 21226 RVA: 0x000CA49E File Offset: 0x000C869E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool KilledTarget
@@ -196,9 +196,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000ED9 RID: 3801
-		// (get) Token: 0x06005212 RID: 21010 RVA: 0x000C80BB File Offset: 0x000C62BB
-		// (set) Token: 0x06005213 RID: 21011 RVA: 0x000C80C3 File Offset: 0x000C62C3
+		// Token: 0x17000F06 RID: 3846
+		// (get) Token: 0x060052EB RID: 21227 RVA: 0x000CA4A7 File Offset: 0x000C86A7
+		// (set) Token: 0x060052EC RID: 21228 RVA: 0x000CA4AF File Offset: 0x000C86AF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ShieldCoverDamage
@@ -213,9 +213,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000EDA RID: 3802
-		// (get) Token: 0x06005214 RID: 21012 RVA: 0x000C80CC File Offset: 0x000C62CC
-		// (set) Token: 0x06005215 RID: 21013 RVA: 0x000C80D4 File Offset: 0x000C62D4
+		// Token: 0x17000F07 RID: 3847
+		// (get) Token: 0x060052ED RID: 21229 RVA: 0x000CA4B8 File Offset: 0x000C86B8
+		// (set) Token: 0x060052EE RID: 21230 RVA: 0x000CA4C0 File Offset: 0x000C86C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EDamageImmune ImmuneType
@@ -230,9 +230,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000EDB RID: 3803
-		// (get) Token: 0x06005216 RID: 21014 RVA: 0x000C80DD File Offset: 0x000C62DD
-		// (set) Token: 0x06005217 RID: 21015 RVA: 0x000C80E5 File Offset: 0x000C62E5
+		// Token: 0x17000F08 RID: 3848
+		// (get) Token: 0x060052EF RID: 21231 RVA: 0x000CA4C9 File Offset: 0x000C86C9
+		// (set) Token: 0x060052F0 RID: 21232 RVA: 0x000CA4D1 File Offset: 0x000C86D1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ElementType
@@ -247,9 +247,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000EDC RID: 3804
-		// (get) Token: 0x06005218 RID: 21016 RVA: 0x000C80EE File Offset: 0x000C62EE
-		// (set) Token: 0x06005219 RID: 21017 RVA: 0x000C80F6 File Offset: 0x000C62F6
+		// Token: 0x17000F09 RID: 3849
+		// (get) Token: 0x060052F1 RID: 21233 RVA: 0x000CA4DA File Offset: 0x000C86DA
+		// (set) Token: 0x060052F2 RID: 21234 RVA: 0x000CA4E2 File Offset: 0x000C86E2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ChangeLife
@@ -264,9 +264,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000EDD RID: 3805
-		// (get) Token: 0x0600521A RID: 21018 RVA: 0x000C80FF File Offset: 0x000C62FF
-		// (set) Token: 0x0600521B RID: 21019 RVA: 0x000C8107 File Offset: 0x000C6307
+		// Token: 0x17000F0A RID: 3850
+		// (get) Token: 0x060052F3 RID: 21235 RVA: 0x000CA4EB File Offset: 0x000C86EB
+		// (set) Token: 0x060052F4 RID: 21236 RVA: 0x000CA4F3 File Offset: 0x000C86F3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ChangeWeakness
@@ -281,7 +281,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600521C RID: 21020 RVA: 0x000C8110 File Offset: 0x000C6310
+		// Token: 0x060052F5 RID: 21237 RVA: 0x000CA4FC File Offset: 0x000C86FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -289,7 +289,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DamageExecuteResponse);
 		}
 
-		// Token: 0x0600521D RID: 21021 RVA: 0x000C8120 File Offset: 0x000C6320
+		// Token: 0x060052F6 RID: 21238 RVA: 0x000CA50C File Offset: 0x000C870C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DamageExecuteResponse other)
@@ -297,7 +297,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.AttackerEntityId == other.AttackerEntityId && this.TargetEntityId == other.TargetEntityId && this.Damage == other.Damage && this.PartId == other.PartId && this.IsCrit == other.IsCrit && this.KilledTarget == other.KilledTarget && this.ShieldCoverDamage == other.ShieldCoverDamage && this.ImmuneType == other.ImmuneType && this.ElementType == other.ElementType && this.ChangeLife == other.ChangeLife && this.ChangeWeakness == other.ChangeWeakness && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600521E RID: 21022 RVA: 0x000C820C File Offset: 0x000C640C
+		// Token: 0x060052F7 RID: 21239 RVA: 0x000CA5F8 File Offset: 0x000C87F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -358,7 +358,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600521F RID: 21023 RVA: 0x000C836D File Offset: 0x000C656D
+		// Token: 0x060052F8 RID: 21240 RVA: 0x000CA759 File Offset: 0x000C8959
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -366,7 +366,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06005220 RID: 21024 RVA: 0x000C837A File Offset: 0x000C657A
+		// Token: 0x060052F9 RID: 21241 RVA: 0x000CA766 File Offset: 0x000C8966
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -374,70 +374,70 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06005221 RID: 21025 RVA: 0x000C8384 File Offset: 0x000C6584
+		// Token: 0x060052FA RID: 21242 RVA: 0x000CA770 File Offset: 0x000C8970
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.PartId != 0)
-			{
-				output.WriteRawTag(8);
-				output.WriteInt32(this.PartId);
-			}
-			if (this.TargetEntityId != 0L)
-			{
-				output.WriteRawTag(16);
-				output.WriteInt64(this.TargetEntityId);
-			}
-			if (this.ElementType != 0)
-			{
-				output.WriteRawTag(24);
-				output.WriteInt32(this.ElementType);
-			}
-			if (this.ErrorCode != ErrorCode.Success)
-			{
-				output.WriteRawTag(32);
-				output.WriteEnum((int)this.ErrorCode);
-			}
-			if (this.ImmuneType != EDamageImmune.Default)
-			{
-				output.WriteRawTag(40);
-				output.WriteEnum((int)this.ImmuneType);
-			}
-			if (this.ChangeLife != 0)
-			{
-				output.WriteRawTag(56);
-				output.WriteInt32(this.ChangeLife);
-			}
 			if (this.AttackerEntityId != 0L)
 			{
-				output.WriteRawTag(64);
+				output.WriteRawTag(8);
 				output.WriteInt64(this.AttackerEntityId);
-			}
-			if (this.ChangeWeakness != 0)
-			{
-				output.WriteRawTag(72);
-				output.WriteInt32(this.ChangeWeakness);
-			}
-			if (this.Damage != 0)
-			{
-				output.WriteRawTag(80);
-				output.WriteInt32(this.Damage);
-			}
-			if (this.IsCrit)
-			{
-				output.WriteRawTag(88);
-				output.WriteBool(this.IsCrit);
 			}
 			if (this.KilledTarget)
 			{
-				output.WriteRawTag(104);
+				output.WriteRawTag(16);
 				output.WriteBool(this.KilledTarget);
+			}
+			if (this.IsCrit)
+			{
+				output.WriteRawTag(24);
+				output.WriteBool(this.IsCrit);
+			}
+			if (this.TargetEntityId != 0L)
+			{
+				output.WriteRawTag(32);
+				output.WriteInt64(this.TargetEntityId);
+			}
+			if (this.ErrorCode != ErrorCode.Success)
+			{
+				output.WriteRawTag(40);
+				output.WriteEnum((int)this.ErrorCode);
+			}
+			if (this.ChangeLife != 0)
+			{
+				output.WriteRawTag(48);
+				output.WriteInt32(this.ChangeLife);
+			}
+			if (this.ImmuneType != EDamageImmune.Default)
+			{
+				output.WriteRawTag(56);
+				output.WriteEnum((int)this.ImmuneType);
 			}
 			if (this.ShieldCoverDamage != 0)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(64);
 				output.WriteInt32(this.ShieldCoverDamage);
+			}
+			if (this.Damage != 0)
+			{
+				output.WriteRawTag(72);
+				output.WriteInt32(this.Damage);
+			}
+			if (this.ChangeWeakness != 0)
+			{
+				output.WriteRawTag(96);
+				output.WriteInt32(this.ChangeWeakness);
+			}
+			if (this.PartId != 0)
+			{
+				output.WriteRawTag(104);
+				output.WriteInt32(this.PartId);
+			}
+			if (this.ElementType != 0)
+			{
+				output.WriteRawTag(120);
+				output.WriteInt32(this.ElementType);
 			}
 			if (this._unknownFields != null)
 			{
@@ -445,7 +445,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005222 RID: 21026 RVA: 0x000C84F4 File Offset: 0x000C66F4
+		// Token: 0x060052FB RID: 21243 RVA: 0x000CA8E0 File Offset: 0x000C8AE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -506,7 +506,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005223 RID: 21027 RVA: 0x000C8624 File Offset: 0x000C6824
+		// Token: 0x060052FC RID: 21244 RVA: 0x000CAA10 File Offset: 0x000C8C10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DamageExecuteResponse other)
@@ -566,7 +566,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06005224 RID: 21028 RVA: 0x000C873C File Offset: 0x000C693C
+		// Token: 0x060052FD RID: 21245 RVA: 0x000CAB28 File Offset: 0x000C8D28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -574,7 +574,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06005225 RID: 21029 RVA: 0x000C8748 File Offset: 0x000C6948
+		// Token: 0x060052FE RID: 21246 RVA: 0x000CAB34 File Offset: 0x000C8D34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -586,23 +586,23 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 56U)
+				if (num <= 48U)
 				{
 					if (num <= 24U)
 					{
 						if (num == 8U)
 						{
-							this.PartId = input.ReadInt32();
+							this.AttackerEntityId = input.ReadInt64();
 							continue;
 						}
 						if (num == 16U)
 						{
-							this.TargetEntityId = input.ReadInt64();
+							this.KilledTarget = input.ReadBool();
 							continue;
 						}
 						if (num == 24U)
 						{
-							this.ElementType = input.ReadInt32();
+							this.IsCrit = input.ReadBool();
 							continue;
 						}
 					}
@@ -610,34 +610,34 @@ namespace Aki.Protocol
 					{
 						if (num == 32U)
 						{
-							this.ErrorCode = (ErrorCode)input.ReadEnum();
+							this.TargetEntityId = input.ReadInt64();
 							continue;
 						}
 						if (num == 40U)
 						{
-							this.ImmuneType = (EDamageImmune)input.ReadEnum();
+							this.ErrorCode = (ErrorCode)input.ReadEnum();
 							continue;
 						}
-						if (num == 56U)
+						if (num == 48U)
 						{
 							this.ChangeLife = input.ReadInt32();
 							continue;
 						}
 					}
 				}
-				else if (num <= 80U)
+				else if (num <= 72U)
 				{
+					if (num == 56U)
+					{
+						this.ImmuneType = (EDamageImmune)input.ReadEnum();
+						continue;
+					}
 					if (num == 64U)
 					{
-						this.AttackerEntityId = input.ReadInt64();
+						this.ShieldCoverDamage = input.ReadInt32();
 						continue;
 					}
 					if (num == 72U)
-					{
-						this.ChangeWeakness = input.ReadInt32();
-						continue;
-					}
-					if (num == 80U)
 					{
 						this.Damage = input.ReadInt32();
 						continue;
@@ -645,19 +645,19 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 88U)
+					if (num == 96U)
 					{
-						this.IsCrit = input.ReadBool();
+						this.ChangeWeakness = input.ReadInt32();
 						continue;
 					}
 					if (num == 104U)
 					{
-						this.KilledTarget = input.ReadBool();
+						this.PartId = input.ReadInt32();
 						continue;
 					}
 					if (num == 120U)
 					{
-						this.ShieldCoverDamage = input.ReadInt32();
+						this.ElementType = input.ReadInt32();
 						continue;
 					}
 				}
@@ -665,79 +665,79 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040032FA RID: 13050
+		// Token: 0x04003391 RID: 13201
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040032FB RID: 13051
-		public const int ErrorCodeFieldNumber = 4;
+		// Token: 0x04003392 RID: 13202
+		public const int ErrorCodeFieldNumber = 5;
 
-		// Token: 0x040032FC RID: 13052
+		// Token: 0x04003393 RID: 13203
 		private ErrorCode errorCode_;
 
-		// Token: 0x040032FD RID: 13053
-		public const int AttackerEntityIdFieldNumber = 8;
+		// Token: 0x04003394 RID: 13204
+		public const int AttackerEntityIdFieldNumber = 1;
 
-		// Token: 0x040032FE RID: 13054
+		// Token: 0x04003395 RID: 13205
 		private long attackerEntityId_;
 
-		// Token: 0x040032FF RID: 13055
-		public const int TargetEntityIdFieldNumber = 2;
+		// Token: 0x04003396 RID: 13206
+		public const int TargetEntityIdFieldNumber = 4;
 
-		// Token: 0x04003300 RID: 13056
+		// Token: 0x04003397 RID: 13207
 		private long targetEntityId_;
 
-		// Token: 0x04003301 RID: 13057
-		public const int DamageFieldNumber = 10;
+		// Token: 0x04003398 RID: 13208
+		public const int DamageFieldNumber = 9;
 
-		// Token: 0x04003302 RID: 13058
+		// Token: 0x04003399 RID: 13209
 		private int damage_;
 
-		// Token: 0x04003303 RID: 13059
-		public const int PartIdFieldNumber = 1;
+		// Token: 0x0400339A RID: 13210
+		public const int PartIdFieldNumber = 13;
 
-		// Token: 0x04003304 RID: 13060
+		// Token: 0x0400339B RID: 13211
 		private int partId_;
 
-		// Token: 0x04003305 RID: 13061
-		public const int IsCritFieldNumber = 11;
+		// Token: 0x0400339C RID: 13212
+		public const int IsCritFieldNumber = 3;
 
-		// Token: 0x04003306 RID: 13062
+		// Token: 0x0400339D RID: 13213
 		private bool isCrit_;
 
-		// Token: 0x04003307 RID: 13063
-		public const int KilledTargetFieldNumber = 13;
+		// Token: 0x0400339E RID: 13214
+		public const int KilledTargetFieldNumber = 2;
 
-		// Token: 0x04003308 RID: 13064
+		// Token: 0x0400339F RID: 13215
 		private bool killedTarget_;
 
-		// Token: 0x04003309 RID: 13065
-		public const int ShieldCoverDamageFieldNumber = 15;
+		// Token: 0x040033A0 RID: 13216
+		public const int ShieldCoverDamageFieldNumber = 8;
 
-		// Token: 0x0400330A RID: 13066
+		// Token: 0x040033A1 RID: 13217
 		private int shieldCoverDamage_;
 
-		// Token: 0x0400330B RID: 13067
-		public const int ImmuneTypeFieldNumber = 5;
+		// Token: 0x040033A2 RID: 13218
+		public const int ImmuneTypeFieldNumber = 7;
 
-		// Token: 0x0400330C RID: 13068
+		// Token: 0x040033A3 RID: 13219
 		private EDamageImmune immuneType_;
 
-		// Token: 0x0400330D RID: 13069
-		public const int ElementTypeFieldNumber = 3;
+		// Token: 0x040033A4 RID: 13220
+		public const int ElementTypeFieldNumber = 15;
 
-		// Token: 0x0400330E RID: 13070
+		// Token: 0x040033A5 RID: 13221
 		private int elementType_;
 
-		// Token: 0x0400330F RID: 13071
-		public const int ChangeLifeFieldNumber = 7;
+		// Token: 0x040033A6 RID: 13222
+		public const int ChangeLifeFieldNumber = 6;
 
-		// Token: 0x04003310 RID: 13072
+		// Token: 0x040033A7 RID: 13223
 		private int changeLife_;
 
-		// Token: 0x04003311 RID: 13073
-		public const int ChangeWeaknessFieldNumber = 9;
+		// Token: 0x040033A8 RID: 13224
+		public const int ChangeWeaknessFieldNumber = 12;
 
-		// Token: 0x04003312 RID: 13074
+		// Token: 0x040033A9 RID: 13225
 		private int changeWeakness_;
 	}
 }

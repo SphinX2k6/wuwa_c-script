@@ -8,17 +8,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C38 RID: 7224
+// Token: 0x020010F7 RID: 4343
 [NullableContext(1)]
 [Nullable(0)]
 public class FriendBlackListView : UiViewBase
 {
-	// Token: 0x0600D981 RID: 55681 RVA: 0x003268E5 File Offset: 0x00324AE5
+	// Token: 0x0600AD97 RID: 44439 RVA: 0x00331CE5 File Offset: 0x0032FEE5
 	public FriendBlackListView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600D982 RID: 55682 RVA: 0x003268FC File Offset: 0x00324AFC
+	// Token: 0x0600AD98 RID: 44440 RVA: 0x00331CFC File Offset: 0x0032FEFC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -36,19 +36,19 @@ public class FriendBlackListView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D983 RID: 55683 RVA: 0x003269A7 File Offset: 0x00324BA7
+	// Token: 0x0600AD99 RID: 44441 RVA: 0x00331DA7 File Offset: 0x0032FFA7
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.UpdateBlackListShow, new Action(this.CallBackRefreshBlackListShow));
 	}
 
-	// Token: 0x0600D984 RID: 55684 RVA: 0x003269C5 File Offset: 0x00324BC5
+	// Token: 0x0600AD9A RID: 44442 RVA: 0x00331DC5 File Offset: 0x0032FFC5
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.UpdateBlackListShow, new Action(this.CallBackRefreshBlackListShow));
 	}
 
-	// Token: 0x0600D985 RID: 55685 RVA: 0x003269E3 File Offset: 0x00324BE3
+	// Token: 0x0600AD9B RID: 44443 RVA: 0x00331DE3 File Offset: 0x0032FFE3
 	protected override void OnStart()
 	{
 		this.ShowBlackListCount();
@@ -56,7 +56,7 @@ public class FriendBlackListView : UiViewBase
 		FriendController.Instance.RequestBlackList();
 	}
 
-	// Token: 0x0600D986 RID: 55686 RVA: 0x00326A16 File Offset: 0x00324C16
+	// Token: 0x0600AD9C RID: 44444 RVA: 0x00331E16 File Offset: 0x00330016
 	private FriendItem InitItem()
 	{
 		FriendItem friendItem = new FriendItem(this.ViewInfo.Name, null);
@@ -64,7 +64,7 @@ public class FriendBlackListView : UiViewBase
 		return friendItem;
 	}
 
-	// Token: 0x0600D987 RID: 55687 RVA: 0x00326A30 File Offset: 0x00324C30
+	// Token: 0x0600AD9D RID: 44445 RVA: 0x00331E30 File Offset: 0x00330030
 	private void RefreshShow()
 	{
 		this.BlackList = FriendController.Instance.CreateFriendItemSt(FriendModel.Instance.GetBlackListIds(), EFriendItemOperation.Default);
@@ -72,7 +72,7 @@ public class FriendBlackListView : UiViewBase
 		this.ShowBlackListCount();
 	}
 
-	// Token: 0x0600D988 RID: 55688 RVA: 0x00326A68 File Offset: 0x00324C68
+	// Token: 0x0600AD9E RID: 44446 RVA: 0x00331E68 File Offset: 0x00330068
 	private void ShowBlackListCount()
 	{
 		UUIText text = base.GetText(0);
@@ -86,20 +86,20 @@ public class FriendBlackListView : UiViewBase
 		base.GetItem(3).SetUIActive(this.BlackList.Count <= 0);
 	}
 
-	// Token: 0x0600D989 RID: 55689 RVA: 0x00326ADE File Offset: 0x00324CDE
+	// Token: 0x0600AD9F RID: 44447 RVA: 0x00331EDE File Offset: 0x003300DE
 	private void CallBackRefreshBlackListShow()
 	{
 		this.RefreshShow();
 	}
 
-	// Token: 0x0600D98A RID: 55690 RVA: 0x00326AE6 File Offset: 0x00324CE6
+	// Token: 0x0600ADA0 RID: 44448 RVA: 0x00331EE6 File Offset: 0x003300E6
 	protected override void OnBeforeDestroy()
 	{
 		this.BlackList.Clear();
 		FriendModel.Instance.ResetShowingView();
 	}
 
-	// Token: 0x04006321 RID: 25377
+	// Token: 0x040063F3 RID: 25587
 	[Nullable(new byte[]
 	{
 		2,
@@ -108,23 +108,23 @@ public class FriendBlackListView : UiViewBase
 	})]
 	private GenericScrollViewNew<FriendItem, FriendItemSt> BlackListLayout;
 
-	// Token: 0x04006322 RID: 25378
+	// Token: 0x040063F4 RID: 25588
 	private List<FriendItemSt> BlackList = new List<FriendItemSt>();
 
-	// Token: 0x020081FD RID: 33277
+	// Token: 0x02007386 RID: 29574
 	[NullableContext(0)]
 	private class EFriendBlackListViewComponents
 	{
-		// Token: 0x0402A6AE RID: 173742
+		// Token: 0x040259D5 RID: 154069
 		public const int BlackListVolume = 0;
 
-		// Token: 0x0402A6AF RID: 173743
+		// Token: 0x040259D6 RID: 154070
 		public const int BlackListItemModel = 1;
 
-		// Token: 0x0402A6B0 RID: 173744
+		// Token: 0x040259D7 RID: 154071
 		public const int BlackListScrollView = 2;
 
-		// Token: 0x0402A6B1 RID: 173745
+		// Token: 0x040259D8 RID: 154072
 		public const int BlackListEmptyItem = 3;
 	}
 }

@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Typing;
 
-// Token: 0x02002D95 RID: 11669
+// Token: 0x020022EF RID: 8943
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletActionRunner : IStaticVariableResetter
 {
-	// Token: 0x06018837 RID: 100407 RVA: 0x00641F13 File Offset: 0x00640113
+	// Token: 0x060160DB RID: 90331 RVA: 0x00667CCF File Offset: 0x00665ECF
 	static BulletActionRunner()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BulletActionRunner.CreateStaticDefaultValue), new Action(BulletActionRunner.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700211E RID: 8478
-	// (get) Token: 0x06018838 RID: 100408 RVA: 0x00641F4B File Offset: 0x0064014B
+	// Token: 0x17002179 RID: 8569
+	// (get) Token: 0x060160DC RID: 90332 RVA: 0x00667D07 File Offset: 0x00665F07
 	[Nullable(new byte[]
 	{
 		1,
@@ -34,25 +34,25 @@ public class BulletActionRunner : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018839 RID: 100409 RVA: 0x00641F52 File Offset: 0x00640152
+	// Token: 0x060160DD RID: 90333 RVA: 0x00667D0E File Offset: 0x00665F0E
 	public void Init()
 	{
 		this.ActionCenter.Init();
 	}
 
-	// Token: 0x0601883A RID: 100410 RVA: 0x00641F5F File Offset: 0x0064015F
+	// Token: 0x060160DE RID: 90334 RVA: 0x00667D1B File Offset: 0x00665F1B
 	public void Clear()
 	{
 		this.ActionCenter.Clear();
 	}
 
-	// Token: 0x0601883B RID: 100411 RVA: 0x00641F6C File Offset: 0x0064016C
+	// Token: 0x060160DF RID: 90335 RVA: 0x00667D28 File Offset: 0x00665F28
 	public BulletActionCenter GetActionCenter()
 	{
 		return this.ActionCenter;
 	}
 
-	// Token: 0x0601883C RID: 100412 RVA: 0x00641F74 File Offset: 0x00640174
+	// Token: 0x060160E0 RID: 90336 RVA: 0x00667D30 File Offset: 0x00665F30
 	public void Pause()
 	{
 		if (this.State != EBulletActionRunnerState.Idle)
@@ -63,7 +63,7 @@ public class BulletActionRunner : IStaticVariableResetter
 		this.State = EBulletActionRunnerState.Pause;
 	}
 
-	// Token: 0x0601883D RID: 100413 RVA: 0x00641FAC File Offset: 0x006401AC
+	// Token: 0x060160E1 RID: 90337 RVA: 0x00667D68 File Offset: 0x00665F68
 	public void Resume()
 	{
 		if (this.State != EBulletActionRunnerState.Pause)
@@ -74,7 +74,7 @@ public class BulletActionRunner : IStaticVariableResetter
 		this.State = EBulletActionRunnerState.Idle;
 	}
 
-	// Token: 0x0601883E RID: 100414 RVA: 0x00641FE8 File Offset: 0x006401E8
+	// Token: 0x060160E2 RID: 90338 RVA: 0x00667DA4 File Offset: 0x00665FA4
 	public void Run(float delta = 0f, bool isAfterTick = false)
 	{
 		if (this.State != EBulletActionRunnerState.Idle)
@@ -109,7 +109,7 @@ public class BulletActionRunner : IStaticVariableResetter
 		this.State = EBulletActionRunnerState.Idle;
 	}
 
-	// Token: 0x0601883F RID: 100415 RVA: 0x00642108 File Offset: 0x00640308
+	// Token: 0x060160E3 RID: 90339 RVA: 0x00667EC4 File Offset: 0x006660C4
 	private unsafe void RunCurBulletInfoList(float delta = 0f, bool isAfterTick = false)
 	{
 		double num = 0.0;
@@ -206,7 +206,7 @@ public class BulletActionRunner : IStaticVariableResetter
 		this.CurRunningBulletInfo = null;
 	}
 
-	// Token: 0x06018840 RID: 100416 RVA: 0x0064242C File Offset: 0x0064062C
+	// Token: 0x060160E4 RID: 90340 RVA: 0x006681E8 File Offset: 0x006663E8
 	public void AddAction(BulletInfo bulletInfo, BulletActionInfoBase actionInfo)
 	{
 		switch (this.State)
@@ -236,13 +236,13 @@ public class BulletActionRunner : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018841 RID: 100417 RVA: 0x006424E5 File Offset: 0x006406E5
+	// Token: 0x060160E5 RID: 90341 RVA: 0x006682A1 File Offset: 0x006664A1
 	public bool IsRunning()
 	{
 		return this.State == EBulletActionRunnerState.Running;
 	}
 
-	// Token: 0x06018842 RID: 100418 RVA: 0x006424F0 File Offset: 0x006406F0
+	// Token: 0x060160E6 RID: 90342 RVA: 0x006682AC File Offset: 0x006664AC
 	public static void InitStat()
 	{
 		if (!BulletConstant.Instance.OpenActionStat)
@@ -287,39 +287,39 @@ public class BulletActionRunner : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018843 RID: 100419 RVA: 0x0064260D File Offset: 0x0064080D
+	// Token: 0x060160E7 RID: 90343 RVA: 0x006683C9 File Offset: 0x006665C9
 	public static void CreateStaticDefaultValue()
 	{
 		BulletActionRunner._actionStatList = new List<Stat>();
 	}
 
-	// Token: 0x06018844 RID: 100420 RVA: 0x00642619 File Offset: 0x00640819
+	// Token: 0x060160E8 RID: 90344 RVA: 0x006683D5 File Offset: 0x006665D5
 	public static void ResetStaticDefaultValue()
 	{
 		BulletActionRunner._actionStatList = null;
 	}
 
-	// Token: 0x0400B5D8 RID: 46552
+	// Token: 0x0400B94E RID: 47438
 	[StaticVariableRuleIgnore]
 	private static readonly Stat RunStat = Stat.Create("BulletActionRunner", "", "");
 
-	// Token: 0x0400B5D9 RID: 46553
+	// Token: 0x0400B94F RID: 47439
 	[Nullable(2)]
 	private static List<Stat> _actionStatList;
 
-	// Token: 0x0400B5DA RID: 46554
+	// Token: 0x0400B950 RID: 47440
 	private readonly BulletActionCenter ActionCenter = new BulletActionCenter();
 
-	// Token: 0x0400B5DB RID: 46555
+	// Token: 0x0400B951 RID: 47441
 	private EBulletActionRunnerState State;
 
-	// Token: 0x0400B5DC RID: 46556
+	// Token: 0x0400B952 RID: 47442
 	private List<BulletInfo> BulletInfoList = new List<BulletInfo>();
 
-	// Token: 0x0400B5DD RID: 46557
+	// Token: 0x0400B953 RID: 47443
 	private List<BulletInfo> NextBulletInfoList = new List<BulletInfo>();
 
-	// Token: 0x0400B5DE RID: 46558
+	// Token: 0x0400B954 RID: 47444
 	[Nullable(2)]
 	private BulletInfo CurRunningBulletInfo;
 }

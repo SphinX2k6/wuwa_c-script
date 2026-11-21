@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CB9 RID: 15545
+	// Token: 0x020040CD RID: 16589
 	public enum EQuestOnlineType : byte
 	{
-		// Token: 0x0400B449 RID: 46153
+		// Token: 0x0400BDEB RID: 48619
 		SingleHangUpOnline,
-		// Token: 0x0400B44A RID: 46154
+		// Token: 0x0400BDEC RID: 48620
 		SingleNotHangUpOnline
 	}
 }

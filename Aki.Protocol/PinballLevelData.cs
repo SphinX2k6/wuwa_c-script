@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000D51 RID: 3409
+	// Token: 0x02000D41 RID: 3393
 	public sealed class PinballLevelData : IMessage<PinballLevelData>, IMessage, IEquatable<PinballLevelData>, IDeepCloneable<PinballLevelData>, IBufferMessage
 	{
-		// Token: 0x06012632 RID: 75314 RVA: 0x002AECCE File Offset: 0x002ACECE
+		// Token: 0x06012536 RID: 75062 RVA: 0x002AD0AE File Offset: 0x002AB2AE
 		[NullableContext(1)]
 		public static PinballLevelData Create()
 		{
 			return new PinballLevelData();
 		}
 
-		// Token: 0x17003CED RID: 15597
-		// (get) Token: 0x06012633 RID: 75315 RVA: 0x002AECD5 File Offset: 0x002ACED5
+		// Token: 0x17003CB8 RID: 15544
+		// (get) Token: 0x06012537 RID: 75063 RVA: 0x002AD0B5 File Offset: 0x002AB2B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<PinballLevelData> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CEE RID: 15598
-		// (get) Token: 0x06012634 RID: 75316 RVA: 0x002AECDC File Offset: 0x002ACEDC
+		// Token: 0x17003CB9 RID: 15545
+		// (get) Token: 0x06012538 RID: 75064 RVA: 0x002AD0BC File Offset: 0x002AB2BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CEF RID: 15599
-		// (get) Token: 0x06012635 RID: 75317 RVA: 0x002AECDF File Offset: 0x002ACEDF
+		// Token: 0x17003CBA RID: 15546
+		// (get) Token: 0x06012539 RID: 75065 RVA: 0x002AD0BF File Offset: 0x002AB2BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012636 RID: 75318 RVA: 0x002AECE6 File Offset: 0x002ACEE6
+		// Token: 0x0601253A RID: 75066 RVA: 0x002AD0C6 File Offset: 0x002AB2C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballLevelData()
 		{
 		}
 
-		// Token: 0x06012637 RID: 75319 RVA: 0x002AECF0 File Offset: 0x002ACEF0
+		// Token: 0x0601253B RID: 75067 RVA: 0x002AD0D0 File Offset: 0x002AB2D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballLevelData(PinballLevelData other) : this()
@@ -84,7 +84,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06012638 RID: 75320 RVA: 0x002AED8B File Offset: 0x002ACF8B
+		// Token: 0x0601253C RID: 75068 RVA: 0x002AD16B File Offset: 0x002AB36B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballLevelData Clone()
@@ -92,9 +92,9 @@ namespace Aki.Protocol
 			return new PinballLevelData(this);
 		}
 
-		// Token: 0x17003CF0 RID: 15600
-		// (get) Token: 0x06012639 RID: 75321 RVA: 0x002AED93 File Offset: 0x002ACF93
-		// (set) Token: 0x0601263A RID: 75322 RVA: 0x002AED9B File Offset: 0x002ACF9B
+		// Token: 0x17003CBB RID: 15547
+		// (get) Token: 0x0601253D RID: 75069 RVA: 0x002AD173 File Offset: 0x002AB373
+		// (set) Token: 0x0601253E RID: 75070 RVA: 0x002AD17B File Offset: 0x002AB37B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ConfigId
@@ -109,9 +109,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CF1 RID: 15601
-		// (get) Token: 0x0601263B RID: 75323 RVA: 0x002AEDA4 File Offset: 0x002ACFA4
-		// (set) Token: 0x0601263C RID: 75324 RVA: 0x002AEDBC File Offset: 0x002ACFBC
+		// Token: 0x17003CBC RID: 15548
+		// (get) Token: 0x0601253F RID: 75071 RVA: 0x002AD184 File Offset: 0x002AB384
+		// (set) Token: 0x06012540 RID: 75072 RVA: 0x002AD19C File Offset: 0x002AB39C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NormalLevel NormalLevel
@@ -131,9 +131,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CF2 RID: 15602
-		// (get) Token: 0x0601263D RID: 75325 RVA: 0x002AEDD2 File Offset: 0x002ACFD2
-		// (set) Token: 0x0601263E RID: 75326 RVA: 0x002AEDEA File Offset: 0x002ACFEA
+		// Token: 0x17003CBD RID: 15549
+		// (get) Token: 0x06012541 RID: 75073 RVA: 0x002AD1B2 File Offset: 0x002AB3B2
+		// (set) Token: 0x06012542 RID: 75074 RVA: 0x002AD1CA File Offset: 0x002AB3CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CowLevel CowLevel
@@ -153,9 +153,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CF3 RID: 15603
-		// (get) Token: 0x0601263F RID: 75327 RVA: 0x002AEE00 File Offset: 0x002AD000
-		// (set) Token: 0x06012640 RID: 75328 RVA: 0x002AEE18 File Offset: 0x002AD018
+		// Token: 0x17003CBE RID: 15550
+		// (get) Token: 0x06012543 RID: 75075 RVA: 0x002AD1E0 File Offset: 0x002AB3E0
+		// (set) Token: 0x06012544 RID: 75076 RVA: 0x002AD1F8 File Offset: 0x002AB3F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TowerLevel TowerLevel
@@ -175,9 +175,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CF4 RID: 15604
-		// (get) Token: 0x06012641 RID: 75329 RVA: 0x002AEE2E File Offset: 0x002AD02E
-		// (set) Token: 0x06012642 RID: 75330 RVA: 0x002AEE46 File Offset: 0x002AD046
+		// Token: 0x17003CBF RID: 15551
+		// (get) Token: 0x06012545 RID: 75077 RVA: 0x002AD20E File Offset: 0x002AB40E
+		// (set) Token: 0x06012546 RID: 75078 RVA: 0x002AD226 File Offset: 0x002AB426
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DailyLevel DailyLevel
@@ -197,8 +197,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CF5 RID: 15605
-		// (get) Token: 0x06012643 RID: 75331 RVA: 0x002AEE5C File Offset: 0x002AD05C
+		// Token: 0x17003CC0 RID: 15552
+		// (get) Token: 0x06012547 RID: 75079 RVA: 0x002AD23C File Offset: 0x002AB43C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballLevelData.DataOneofCase DataCase
@@ -209,7 +209,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012644 RID: 75332 RVA: 0x002AEE64 File Offset: 0x002AD064
+		// Token: 0x06012548 RID: 75080 RVA: 0x002AD244 File Offset: 0x002AB444
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearData()
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			this.data_ = null;
 		}
 
-		// Token: 0x06012645 RID: 75333 RVA: 0x002AEE74 File Offset: 0x002AD074
+		// Token: 0x06012549 RID: 75081 RVA: 0x002AD254 File Offset: 0x002AB454
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -226,7 +226,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PinballLevelData);
 		}
 
-		// Token: 0x06012646 RID: 75334 RVA: 0x002AEE84 File Offset: 0x002AD084
+		// Token: 0x0601254A RID: 75082 RVA: 0x002AD264 File Offset: 0x002AB464
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PinballLevelData other)
@@ -234,7 +234,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ConfigId == other.ConfigId && object.Equals(this.NormalLevel, other.NormalLevel) && object.Equals(this.CowLevel, other.CowLevel) && object.Equals(this.TowerLevel, other.TowerLevel) && object.Equals(this.DailyLevel, other.DailyLevel) && this.DataCase == other.DataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06012647 RID: 75335 RVA: 0x002AEF24 File Offset: 0x002AD124
+		// Token: 0x0601254B RID: 75083 RVA: 0x002AD304 File Offset: 0x002AB504
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -268,7 +268,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012648 RID: 75336 RVA: 0x002AEFC8 File Offset: 0x002AD1C8
+		// Token: 0x0601254C RID: 75084 RVA: 0x002AD3A8 File Offset: 0x002AB5A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -276,7 +276,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06012649 RID: 75337 RVA: 0x002AEFD5 File Offset: 0x002AD1D5
+		// Token: 0x0601254D RID: 75085 RVA: 0x002AD3B5 File Offset: 0x002AB5B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -284,7 +284,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601264A RID: 75338 RVA: 0x002AEFE0 File Offset: 0x002AD1E0
+		// Token: 0x0601254E RID: 75086 RVA: 0x002AD3C0 File Offset: 0x002AB5C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -320,7 +320,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601264B RID: 75339 RVA: 0x002AF090 File Offset: 0x002AD290
+		// Token: 0x0601254F RID: 75087 RVA: 0x002AD470 File Offset: 0x002AB670
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -353,7 +353,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601264C RID: 75340 RVA: 0x002AF134 File Offset: 0x002AD334
+		// Token: 0x06012550 RID: 75088 RVA: 0x002AD514 File Offset: 0x002AB714
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PinballLevelData other)
@@ -400,7 +400,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601264D RID: 75341 RVA: 0x002AF22A File Offset: 0x002AD42A
+		// Token: 0x06012551 RID: 75089 RVA: 0x002AD60A File Offset: 0x002AB80A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -408,7 +408,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601264E RID: 75342 RVA: 0x002AF234 File Offset: 0x002AD434
+		// Token: 0x06012552 RID: 75090 RVA: 0x002AD614 File Offset: 0x002AB814
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -479,48 +479,48 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400727E RID: 29310
+		// Token: 0x04007296 RID: 29334
 		private static readonly MessageParser<PinballLevelData> _parser = new MessageParser<PinballLevelData>(() => new PinballLevelData());
 
-		// Token: 0x0400727F RID: 29311
+		// Token: 0x04007297 RID: 29335
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007280 RID: 29312
+		// Token: 0x04007298 RID: 29336
 		public const int ConfigIdFieldNumber = 1;
 
-		// Token: 0x04007281 RID: 29313
+		// Token: 0x04007299 RID: 29337
 		private int configId_;
 
-		// Token: 0x04007282 RID: 29314
+		// Token: 0x0400729A RID: 29338
 		public const int NormalLevelFieldNumber = 2;
 
-		// Token: 0x04007283 RID: 29315
+		// Token: 0x0400729B RID: 29339
 		public const int CowLevelFieldNumber = 3;
 
-		// Token: 0x04007284 RID: 29316
+		// Token: 0x0400729C RID: 29340
 		public const int TowerLevelFieldNumber = 4;
 
-		// Token: 0x04007285 RID: 29317
+		// Token: 0x0400729D RID: 29341
 		public const int DailyLevelFieldNumber = 5;
 
-		// Token: 0x04007286 RID: 29318
+		// Token: 0x0400729E RID: 29342
 		private object data_;
 
-		// Token: 0x04007287 RID: 29319
+		// Token: 0x0400729F RID: 29343
 		private PinballLevelData.DataOneofCase dataCase_;
 
-		// Token: 0x020018D2 RID: 6354
+		// Token: 0x0200194A RID: 6474
 		public enum DataOneofCase
 		{
-			// Token: 0x0400C8DB RID: 51419
+			// Token: 0x0400CE06 RID: 52742
 			None,
-			// Token: 0x0400C8DC RID: 51420
+			// Token: 0x0400CE07 RID: 52743
 			NormalLevel = 2,
-			// Token: 0x0400C8DD RID: 51421
+			// Token: 0x0400CE08 RID: 52744
 			CowLevel,
-			// Token: 0x0400C8DE RID: 51422
+			// Token: 0x0400CE09 RID: 52745
 			TowerLevel,
-			// Token: 0x0400C8DF RID: 51423
+			// Token: 0x0400CE0A RID: 52746
 			DailyLevel
 		}
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023A9 RID: 9129
+	// Token: 0x02002634 RID: 9780
 	public static class EMpcEffectParamTypeExtensions
 	{
-		// Token: 0x0600C6F7 RID: 50935 RVA: 0x001D2254 File Offset: 0x001D0454
+		// Token: 0x0600D344 RID: 54084 RVA: 0x001EB3F4 File Offset: 0x001E95F4
 		public static string ToEnumString(this EMpcEffectParamType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C6F8 RID: 50936 RVA: 0x001D227C File Offset: 0x001D047C
+		// Token: 0x0600D345 RID: 54085 RVA: 0x001EB41C File Offset: 0x001E961C
 		public static EMpcEffectParamType FromString(string name)
 		{
 			EMpcEffectParamType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C6F9 RID: 50937 RVA: 0x001D22A5 File Offset: 0x001D04A5
+		// Token: 0x0600D346 RID: 54086 RVA: 0x001EB445 File Offset: 0x001E9645
 		public static bool TryFromString(string name, out EMpcEffectParamType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C6FA RID: 50938 RVA: 0x001D22CA File Offset: 0x001D04CA
+		// Token: 0x0600D347 RID: 54087 RVA: 0x001EB46A File Offset: 0x001E966A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C6FB RID: 50939 RVA: 0x001D22DA File Offset: 0x001D04DA
+		// Token: 0x0600D348 RID: 54088 RVA: 0x001EB47A File Offset: 0x001E967A
 		public static EMpcEffectParamType[] GetValues()
 		{
 			return new EMpcEffectParamType[1];
 		}
 
-		// Token: 0x0600C6FC RID: 50940 RVA: 0x001D22E2 File Offset: 0x001D04E2
+		// Token: 0x0600D349 RID: 54089 RVA: 0x001EB482 File Offset: 0x001E9682
 		public static string[] GetNames()
 		{
 			return new string[]

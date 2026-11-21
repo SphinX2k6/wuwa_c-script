@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DC8 RID: 24008
+	// Token: 0x02004DAC RID: 19884
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleSpecialEnergyBar
 	{
-		// Token: 0x0603D01B RID: 249883 RVA: 0x00EAAE34 File Offset: 0x00EA9034
+		// Token: 0x06031F92 RID: 204690 RVA: 0x00DFBD10 File Offset: 0x00DF9F10
 		public UniTask InitAsync(UUIItem parentItem, BattleUiRoleData roleData)
 		{
 			RoleSpecialEnergyBar.<InitAsync>d__6 <InitAsync>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D01C RID: 249884 RVA: 0x00EAAE88 File Offset: 0x00EA9088
+		// Token: 0x06031F93 RID: 204691 RVA: 0x00DFBD64 File Offset: 0x00DF9F64
 		public void SetVisible(bool visible)
 		{
 			foreach (SpecialEnergyBarBase specialEnergyBarBase in this.EnergyBarMap.Values)
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D01D RID: 249885 RVA: 0x00EAAEE0 File Offset: 0x00EA90E0
+		// Token: 0x06031F94 RID: 204692 RVA: 0x00DFBDBC File Offset: 0x00DF9FBC
 		public void Destroy()
 		{
 			this.ClearAllTagCountChangedCallback();
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.EnergyBarMap.Clear();
 		}
 
-		// Token: 0x0603D01E RID: 249886 RVA: 0x00EAAF48 File Offset: 0x00EA9148
+		// Token: 0x06031F95 RID: 204693 RVA: 0x00DFBE24 File Offset: 0x00DFA024
 		public void Tick(float delta)
 		{
 			foreach (SpecialEnergyBarBase specialEnergyBarBase in this.EnergyBarMap.Values)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D01F RID: 249887 RVA: 0x00EAAFA0 File Offset: 0x00EA91A0
+		// Token: 0x06031F96 RID: 204694 RVA: 0x00DFBE7C File Offset: 0x00DFA07C
 		[NullableContext(2)]
 		private SpecialEnergyBarInfo GetSpecialEnergyBarConfigByRoleData(BattleUiRoleData roleData)
 		{
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return BattleUiModel.Instance.SpecialEnergyBarData.GetSpecialEnergyBarInfo(specialEnergyBarId);
 		}
 
-		// Token: 0x0603D020 RID: 249888 RVA: 0x00EAB018 File Offset: 0x00EA9218
+		// Token: 0x06031F97 RID: 204695 RVA: 0x00DFBEF4 File Offset: 0x00DFA0F4
 		private UniTask LoadByConfig(UUIItem parentItem, BattleUiRoleData roleData, int tagId, SpecialEnergyBarInfo config)
 		{
 			RoleSpecialEnergyBar.<LoadByConfig>d__11 <LoadByConfig>d__;
@@ -101,13 +101,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadByConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D021 RID: 249889 RVA: 0x00EAB07C File Offset: 0x00EA927C
+		// Token: 0x06031F98 RID: 204696 RVA: 0x00DFBF58 File Offset: 0x00DFA158
 		private void OnTagChange(int tagId, bool tagExists)
 		{
 			this.RefreshVisibleByTag(true);
 		}
 
-		// Token: 0x0603D022 RID: 249890 RVA: 0x00EAB088 File Offset: 0x00EA9288
+		// Token: 0x06031F99 RID: 204697 RVA: 0x00DFBF64 File Offset: 0x00DFA164
 		private void RefreshVisibleByTag(bool isTagChange = false)
 		{
 			if (this.EnergyBarMap.Count > 1)
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			valueOrDefault.SetVisible(true, 1);
 		}
 
-		// Token: 0x0603D023 RID: 249891 RVA: 0x00EAB194 File Offset: 0x00EA9394
+		// Token: 0x06031F9A RID: 204698 RVA: 0x00DFC070 File Offset: 0x00DFA270
 		private void ListenForTagAddOrRemove(int tagId, BaseTagComponent.TTagSwitchedCallback onTagChange)
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D024 RID: 249892 RVA: 0x00EAB1D8 File Offset: 0x00EA93D8
+		// Token: 0x06031F9B RID: 204699 RVA: 0x00DFC0B4 File Offset: 0x00DFA2B4
 		private void ClearAllTagCountChangedCallback()
 		{
 			foreach (ITagTask tagTask in this.TagTaskList)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TagTaskList.Clear();
 		}
 
-		// Token: 0x0401FC87 RID: 130183
+		// Token: 0x0401A744 RID: 108356
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<int, Type> SpecialEnergyBarClassMap = new Dictionary<int, Type>
 		{
@@ -337,10 +337,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			{
 				131100,
 				typeof(SpecialEnergyBarXinYueHu)
+			},
+			{
+				151202,
+				typeof(SpecialEnergyBarLili)
 			}
 		};
 
-		// Token: 0x0401FC88 RID: 130184
+		// Token: 0x0401A745 RID: 108357
 		[StaticVariableRuleIgnore]
 		private static readonly Type[] SpecialEnergyBarClassList = new Type[]
 		{
@@ -359,23 +363,23 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			typeof(SpecialEnergyBarZheZhi)
 		};
 
-		// Token: 0x0401FC89 RID: 130185
+		// Token: 0x0401A746 RID: 108358
 		[Nullable(2)]
 		private BattleUiRoleData RoleData;
 
-		// Token: 0x0401FC8A RID: 130186
+		// Token: 0x0401A747 RID: 108359
 		private readonly Dictionary<int, SpecialEnergyBarBase> EnergyBarMap = new Dictionary<int, SpecialEnergyBarBase>();
 
-		// Token: 0x0401FC8B RID: 130187
+		// Token: 0x0401A748 RID: 108360
 		private readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 
-		// Token: 0x0200C0CE RID: 49358
+		// Token: 0x0200AAD7 RID: 43735
 		[NullableContext(0)]
 		private enum EVisibleReason
 		{
-			// Token: 0x0403A2B9 RID: 238265
+			// Token: 0x04034C8B RID: 216203
 			Role,
-			// Token: 0x0403A2BA RID: 238266
+			// Token: 0x04034C8C RID: 216204
 			Tag
 		}
 	}

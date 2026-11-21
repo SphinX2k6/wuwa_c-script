@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 {
-	// Token: 0x0200609C RID: 24732
+	// Token: 0x0200501A RID: 20506
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Spring25DialogueView : UiViewBase
 	{
-		// Token: 0x0603E846 RID: 256070 RVA: 0x00F1C4FF File Offset: 0x00F1A6FF
+		// Token: 0x0603350A RID: 210186 RVA: 0x00E632C3 File Offset: 0x00E614C3
 		public Spring25DialogueView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603E847 RID: 256071 RVA: 0x00F1C508 File Offset: 0x00F1A708
+		// Token: 0x0603350B RID: 210187 RVA: 0x00E632CC File Offset: 0x00E614CC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E848 RID: 256072 RVA: 0x00F1C5B4 File Offset: 0x00F1A7B4
+		// Token: 0x0603350C RID: 210188 RVA: 0x00E63378 File Offset: 0x00E61578
 		protected override UniTask OnBeforeStartAsync()
 		{
 			Spring25DialogueView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -49,25 +49,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E849 RID: 256073 RVA: 0x00F1C5F7 File Offset: 0x00F1A7F7
+		// Token: 0x0603350D RID: 210189 RVA: 0x00E633BB File Offset: 0x00E615BB
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.HandleOnActivitySequenceEmitEvent));
 		}
 
-		// Token: 0x0603E84A RID: 256074 RVA: 0x00F1C615 File Offset: 0x00F1A815
+		// Token: 0x0603350E RID: 210190 RVA: 0x00E633D9 File Offset: 0x00E615D9
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.HandleOnActivitySequenceEmitEvent));
 		}
 
-		// Token: 0x0603E84B RID: 256075 RVA: 0x00F1C633 File Offset: 0x00F1A833
+		// Token: 0x0603350F RID: 210191 RVA: 0x00E633F7 File Offset: 0x00E615F7
 		private void HandleConfirmClick(int _)
 		{
 			ActivitySpring25Controller.Instance.HandleConfirmClickInDialogueView();
 		}
 
-		// Token: 0x0603E84C RID: 256076 RVA: 0x00F1C640 File Offset: 0x00F1A840
+		// Token: 0x06033510 RID: 210192 RVA: 0x00E63404 File Offset: 0x00E61604
 		private void HandleOnActivitySequenceEmitEvent(string passData)
 		{
 			Spring25DialogueViewData spring25DialogueViewData = this.OpenParam as Spring25DialogueViewData;
@@ -86,29 +86,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x04020B72 RID: 134002
+		// Token: 0x0401B49F RID: 111775
 		private ButtonItem ConfirmItem;
 
-		// Token: 0x04020B73 RID: 134003
+		// Token: 0x0401B4A0 RID: 111776
 		private RoleItem LeftItem;
 
-		// Token: 0x04020B74 RID: 134004
+		// Token: 0x0401B4A1 RID: 111777
 		private RoleItem RightItem;
 
-		// Token: 0x0200C2F1 RID: 49905
+		// Token: 0x0200ACDC RID: 44252
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403ADD2 RID: 241106
+			// Token: 0x0403573A RID: 218938
 			public const int ConfirmItem = 0;
 
-			// Token: 0x0403ADD3 RID: 241107
+			// Token: 0x0403573B RID: 218939
 			public const int RoleLeftItem = 1;
 
-			// Token: 0x0403ADD4 RID: 241108
+			// Token: 0x0403573C RID: 218940
 			public const int RoleRightItem = 2;
 
-			// Token: 0x0403ADD5 RID: 241109
+			// Token: 0x0403573D RID: 218941
 			public const int ButtonMaskItem = 3;
 		}
 	}

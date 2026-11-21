@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200017B RID: 379
+	// Token: 0x0200018D RID: 397
 	public class ConfigCombinationActionById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060008E3 RID: 2275 RVA: 0x0008BAB3 File Offset: 0x00089CB3
+		// Token: 0x0600094F RID: 2383 RVA: 0x000919EB File Offset: 0x0008FBEB
 		static ConfigCombinationActionById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCombinationActionById.CreateStaticDefaultValue), new Action(ConfigCombinationActionById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060008E4 RID: 2276 RVA: 0x0008BAD4 File Offset: 0x00089CD4
+		// Token: 0x06000950 RID: 2384 RVA: 0x00091A0C File Offset: 0x0008FC0C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCombinationActionById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060008E5 RID: 2277 RVA: 0x0008BB53 File Offset: 0x00089D53
+		// Token: 0x06000951 RID: 2385 RVA: 0x00091A8B File Offset: 0x0008FC8B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCombinationActionById.LogPair = null;
 			ConfigCombinationActionById.HandleId = 0;
 		}
 
-		// Token: 0x060008E6 RID: 2278 RVA: 0x0008BB61 File Offset: 0x00089D61
+		// Token: 0x06000952 RID: 2386 RVA: 0x00091A99 File Offset: 0x0008FC99
 		public static void Init()
 		{
 			ConfigCombinationActionById.HandleId = ConfigCommon.InitDataStatement(ConfigCombinationActionById.HandleId, "db_input_settings.db", "select BinData from `CombinationAction` where Id=?");
 		}
 
-		// Token: 0x060008E7 RID: 2279 RVA: 0x0008BB7C File Offset: 0x00089D7C
+		// Token: 0x06000953 RID: 2387 RVA: 0x00091AB4 File Offset: 0x0008FCB4
 		public static CombinationAction? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCombinationActionById.HandleId, ConfigCombinationActionById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CombinationAction?(rootAsCombinationAction);
 		}
 
-		// Token: 0x04000A41 RID: 2625
+		// Token: 0x04000ABF RID: 2751
 		private const string DB = "db_input_settings.db";
 
-		// Token: 0x04000A42 RID: 2626
+		// Token: 0x04000AC0 RID: 2752
 		private const string FILE = "s.输入配置.xlsx";
 
-		// Token: 0x04000A43 RID: 2627
+		// Token: 0x04000AC1 RID: 2753
 		private const string TABLE = "CombinationAction";
 
-		// Token: 0x04000A44 RID: 2628
+		// Token: 0x04000AC2 RID: 2754
 		private const string COMMAND = "select BinData from `CombinationAction` where Id=?";
 
-		// Token: 0x04000A45 RID: 2629
+		// Token: 0x04000AC3 RID: 2755
 		private const string KEY_PREFIX = "CombinationActionById";
 
-		// Token: 0x04000A46 RID: 2630
+		// Token: 0x04000AC4 RID: 2756
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000A47 RID: 2631
+		// Token: 0x04000AC5 RID: 2757
 		private static int HandleId;
 	}
 }

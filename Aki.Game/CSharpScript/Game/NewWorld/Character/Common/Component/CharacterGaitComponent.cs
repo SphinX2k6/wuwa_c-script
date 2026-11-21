@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070C4 RID: 28868
+	// Token: 0x02006328 RID: 25384
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CharacterGaitComponent : EntityComponent
 	{
-		// Token: 0x06046671 RID: 288369 RVA: 0x011A81BC File Offset: 0x011A63BC
+		// Token: 0x0603D755 RID: 251733 RVA: 0x011C7840 File Offset: 0x011C5A40
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return this.ActorComp != null && this.MoveComp != null && this.UnifiedStateComponent != null;
 		}
 
-		// Token: 0x06046672 RID: 288370 RVA: 0x011A8218 File Offset: 0x011A6418
+		// Token: 0x0603D756 RID: 251734 RVA: 0x011C789C File Offset: 0x011C5A9C
 		protected override void OnTick(float delta)
 		{
 			if (!this.ActorComp.IsAutonomousProxy)
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046673 RID: 288371 RVA: 0x011A8260 File Offset: 0x011A6460
+		// Token: 0x0603D757 RID: 251735 RVA: 0x011C78E4 File Offset: 0x011C5AE4
 		protected void UpdateMoveReleasing(ECharPositionState positionState, ECharMoveState moveState)
 		{
 			if (positionState == ECharPositionState.Ground)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046674 RID: 288372 RVA: 0x011A82C8 File Offset: 0x011A64C8
+		// Token: 0x0603D758 RID: 251736 RVA: 0x011C794C File Offset: 0x011C5B4C
 		protected void SetRunStop()
 		{
 			switch (this.UnifiedStateComponent.MoveState)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046675 RID: 288373 RVA: 0x011A8360 File Offset: 0x011A6560
+		// Token: 0x0603D759 RID: 251737 RVA: 0x011C79E4 File Offset: 0x011C5BE4
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -93,52 +93,63 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				return false;
 			}
 			CharacterGaitComponent characterGaitComponent = (CharacterGaitComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (characterGaitComponent.ActorComp == null)
 			{
-				if (characterGaitComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("MoveComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (characterGaitComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("UnifiedStateComponent"))
+			if (characterGaitComponent.MoveComp == null)
 			{
-				if (characterGaitComponent.UnifiedStateComponent == null)
-				{
-					this.UnifiedStateComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedStateComponent), "UnifiedStateComponent"))
-				{
-					return false;
-				}
+				this.MoveComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
+			{
+				return false;
+			}
+			if (characterGaitComponent.UnifiedStateComponent == null)
+			{
+				this.UnifiedStateComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComponent), "UnifiedStateComponent"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024E46 RID: 151110
+		// Token: 0x17007491 RID: 29841
+		// (get) Token: 0x0603D75A RID: 251738 RVA: 0x011C7A85 File Offset: 0x011C5C85
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007492 RID: 29842
+		// (get) Token: 0x0603D75B RID: 251739 RVA: 0x011C7A88 File Offset: 0x011C5C88
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020984 RID: 133508
 		private const int STOP_SPEED = 5;
 
-		// Token: 0x04024E47 RID: 151111
+		// Token: 0x04020985 RID: 133509
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x04024E48 RID: 151112
+		// Token: 0x04020986 RID: 133510
 		private CharacterMoveComponent MoveComp;
 
-		// Token: 0x04024E49 RID: 151113
+		// Token: 0x04020987 RID: 133511
 		private CharacterUnifiedStateComponent UnifiedStateComponent;
 	}
 }

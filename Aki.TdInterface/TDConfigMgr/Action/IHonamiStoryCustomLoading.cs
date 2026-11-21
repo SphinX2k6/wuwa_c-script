@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B15 RID: 6933
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CC4 RID: 7364
 	public class IHonamiStoryCustomLoading : ISpecialCustomLoadingOption
 	{
-		// Token: 0x06009474 RID: 38004 RVA: 0x00157C58 File Offset: 0x00155E58
+		// Token: 0x06009C5E RID: 40030 RVA: 0x00168934 File Offset: 0x00166B34
 		private IHonamiStoryCustomLoading_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009475 RID: 38005 RVA: 0x00157C90 File Offset: 0x00155E90
+		// Token: 0x06009C5F RID: 40031 RVA: 0x0016896C File Offset: 0x00166B6C
 		public static IHonamiStoryCustomLoading Create([Nullable(2)] IHonamiStoryCustomLoading instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009476 RID: 38006 RVA: 0x00157CA3 File Offset: 0x00155EA3
+		// Token: 0x06009C60 RID: 40032 RVA: 0x0016897F File Offset: 0x00166B7F
 		public static IHonamiStoryCustomLoading CreateFromSetValue([Nullable(2)] IHonamiStoryCustomLoading_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009477 RID: 38007 RVA: 0x00157CB6 File Offset: 0x00155EB6
+		// Token: 0x06009C61 RID: 40033 RVA: 0x00168992 File Offset: 0x00166B92
 		public new IHonamiStoryCustomLoading_SetValue ToSetValue()
 		{
 			return new IHonamiStoryCustomLoading_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EF0 RID: 12016
-		// (get) Token: 0x06009478 RID: 38008 RVA: 0x00157CD5 File Offset: 0x00155ED5
-		// (set) Token: 0x06009479 RID: 38009 RVA: 0x00157D00 File Offset: 0x00155F00
+		// Token: 0x17003116 RID: 12566
+		// (get) Token: 0x06009C62 RID: 40034 RVA: 0x001689B1 File Offset: 0x00166BB1
+		// (set) Token: 0x06009C63 RID: 40035 RVA: 0x001689DC File Offset: 0x00166BDC
 		public override ESpecialCustomLoadingType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EF1 RID: 12017
-		// (get) Token: 0x0600947A RID: 38010 RVA: 0x00157D0E File Offset: 0x00155F0E
-		// (set) Token: 0x0600947B RID: 38011 RVA: 0x00157D39 File Offset: 0x00155F39
+		// Token: 0x17003117 RID: 12567
+		// (get) Token: 0x06009C64 RID: 40036 RVA: 0x001689EA File Offset: 0x00166BEA
+		// (set) Token: 0x06009C65 RID: 40037 RVA: 0x00168A15 File Offset: 0x00166C15
 		public virtual int LoadingId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B03 RID: 23299
+		// Token: 0x04005FA1 RID: 24481
 		[Nullable(2)]
 		protected new IHonamiStoryCustomLoading FbInstance;
 
-		// Token: 0x04005B04 RID: 23300
+		// Token: 0x04005FA2 RID: 24482
 		[Nullable(2)]
 		protected new IHonamiStoryCustomLoading_SetValue PocoInterface;
 	}

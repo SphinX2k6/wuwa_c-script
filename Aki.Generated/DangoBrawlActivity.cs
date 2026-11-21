@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BBC RID: 3004
+	// Token: 0x02000C9E RID: 3230
 	public struct DangoBrawlActivity : IFlatbufferObject
 	{
-		// Token: 0x17000A80 RID: 2688
-		// (get) Token: 0x06005C9B RID: 23707 RVA: 0x00206D41 File Offset: 0x00204F41
+		// Token: 0x17000AC6 RID: 2758
+		// (get) Token: 0x06006274 RID: 25204 RVA: 0x00226647 File Offset: 0x00224847
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005C9C RID: 23708 RVA: 0x00206D4E File Offset: 0x00204F4E
+		// Token: 0x06006275 RID: 25205 RVA: 0x00226654 File Offset: 0x00224854
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005C9D RID: 23709 RVA: 0x00206D58 File Offset: 0x00204F58
+		// Token: 0x06006276 RID: 25206 RVA: 0x0022665C File Offset: 0x0022485C
 		public static DangoBrawlActivity GetRootAsDangoBrawlActivity(ByteBuffer _bb)
 		{
 			return DangoBrawlActivity.GetRootAsDangoBrawlActivity(_bb, default(DangoBrawlActivity));
 		}
 
-		// Token: 0x06005C9E RID: 23710 RVA: 0x00206D74 File Offset: 0x00204F74
+		// Token: 0x06006277 RID: 25207 RVA: 0x00226678 File Offset: 0x00224878
 		public static DangoBrawlActivity GetRootAsDangoBrawlActivity(ByteBuffer _bb, DangoBrawlActivity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005C9F RID: 23711 RVA: 0x00206D91 File Offset: 0x00204F91
+		// Token: 0x06006278 RID: 25208 RVA: 0x00226695 File Offset: 0x00224895
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005CA0 RID: 23712 RVA: 0x00206DA0 File Offset: 0x00204FA0
+		// Token: 0x06006279 RID: 25209 RVA: 0x002266A4 File Offset: 0x002248A4
 		public DangoBrawlActivity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000A81 RID: 2689
-		// (get) Token: 0x06005CA1 RID: 23713 RVA: 0x00206DB0 File Offset: 0x00204FB0
+		// Token: 0x17000AC7 RID: 2759
+		// (get) Token: 0x0600627A RID: 25210 RVA: 0x002266B4 File Offset: 0x002248B4
 		public int ActivityId
 		{
 			get
@@ -66,7 +66,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005CA2 RID: 23714 RVA: 0x00206DEC File Offset: 0x00204FEC
+		// Token: 0x0600627B RID: 25211 RVA: 0x002266F0 File Offset: 0x002248F0
 		public int DangoBrawlGridSize(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -77,8 +77,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000A82 RID: 2690
-		// (get) Token: 0x06005CA3 RID: 23715 RVA: 0x00206E2C File Offset: 0x0020502C
+		// Token: 0x17000AC8 RID: 2760
+		// (get) Token: 0x0600627C RID: 25212 RVA: 0x00226730 File Offset: 0x00224930
 		public int DangoBrawlGridSizeLength
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005CA4 RID: 23716 RVA: 0x00206E57 File Offset: 0x00205057
+		// Token: 0x0600627D RID: 25213 RVA: 0x0022675B File Offset: 0x0022495B
 		public Span<int> GetDangoBrawlGridSizeBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x06005CA5 RID: 23717 RVA: 0x00206E66 File Offset: 0x00205066
+		// Token: 0x0600627E RID: 25214 RVA: 0x0022676A File Offset: 0x0022496A
 		public int[] GetDangoBrawlGridSizeArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17000A83 RID: 2691
-		// (get) Token: 0x06005CA6 RID: 23718 RVA: 0x00206E80 File Offset: 0x00205080
+		// Token: 0x17000AC9 RID: 2761
+		// (get) Token: 0x0600627F RID: 25215 RVA: 0x00226784 File Offset: 0x00224984
 		public int DangoBrawlSellDiscount
 		{
 			get
@@ -119,8 +119,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A84 RID: 2692
-		// (get) Token: 0x06005CA7 RID: 23719 RVA: 0x00206EBC File Offset: 0x002050BC
+		// Token: 0x17000ACA RID: 2762
+		// (get) Token: 0x06006280 RID: 25216 RVA: 0x002267C0 File Offset: 0x002249C0
 		public int HasteBpLimit
 		{
 			get
@@ -134,8 +134,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A85 RID: 2693
-		// (get) Token: 0x06005CA8 RID: 23720 RVA: 0x00206EFC File Offset: 0x002050FC
+		// Token: 0x17000ACB RID: 2763
+		// (get) Token: 0x06006281 RID: 25217 RVA: 0x00226800 File Offset: 0x00224A00
 		public int ShopId
 		{
 			get
@@ -149,8 +149,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A86 RID: 2694
-		// (get) Token: 0x06005CA9 RID: 23721 RVA: 0x00206F3C File Offset: 0x0020513C
+		// Token: 0x17000ACC RID: 2764
+		// (get) Token: 0x06006282 RID: 25218 RVA: 0x00226840 File Offset: 0x00224A40
 		public int LimitCoinId
 		{
 			get
@@ -164,8 +164,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A87 RID: 2695
-		// (get) Token: 0x06005CAA RID: 23722 RVA: 0x00206F7C File Offset: 0x0020517C
+		// Token: 0x17000ACD RID: 2765
+		// (get) Token: 0x06006283 RID: 25219 RVA: 0x00226880 File Offset: 0x00224A80
 		public int LimitCoinMax
 		{
 			get
@@ -179,8 +179,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A88 RID: 2696
-		// (get) Token: 0x06005CAB RID: 23723 RVA: 0x00206FBC File Offset: 0x002051BC
+		// Token: 0x17000ACE RID: 2766
+		// (get) Token: 0x06006284 RID: 25220 RVA: 0x002268C0 File Offset: 0x00224AC0
 		public int ScoreItemId
 		{
 			get
@@ -194,8 +194,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A89 RID: 2697
-		// (get) Token: 0x06005CAC RID: 23724 RVA: 0x00206FFC File Offset: 0x002051FC
+		// Token: 0x17000ACF RID: 2767
+		// (get) Token: 0x06006285 RID: 25221 RVA: 0x00226900 File Offset: 0x00224B00
 		public int MinLuckyCoinPer
 		{
 			get
@@ -209,8 +209,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A8A RID: 2698
-		// (get) Token: 0x06005CAD RID: 23725 RVA: 0x0020703C File Offset: 0x0020523C
+		// Token: 0x17000AD0 RID: 2768
+		// (get) Token: 0x06006286 RID: 25222 RVA: 0x00226940 File Offset: 0x00224B40
 		public int MaxLuckyCoinPer
 		{
 			get
@@ -224,8 +224,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A8B RID: 2699
-		// (get) Token: 0x06005CAE RID: 23726 RVA: 0x0020707C File Offset: 0x0020527C
+		// Token: 0x17000AD1 RID: 2769
+		// (get) Token: 0x06006287 RID: 25223 RVA: 0x00226980 File Offset: 0x00224B80
 		public int BenchItemLimit
 		{
 			get
@@ -239,8 +239,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A8C RID: 2700
-		// (get) Token: 0x06005CAF RID: 23727 RVA: 0x002070BC File Offset: 0x002052BC
+		// Token: 0x17000AD2 RID: 2770
+		// (get) Token: 0x06006288 RID: 25224 RVA: 0x002269C0 File Offset: 0x00224BC0
 		public int BuffLimit
 		{
 			get
@@ -254,7 +254,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005CB0 RID: 23728 RVA: 0x002070FC File Offset: 0x002052FC
+		// Token: 0x06006289 RID: 25225 RVA: 0x00226A00 File Offset: 0x00224C00
 		public int DefaultUnlockRoleId(int j)
 		{
 			int num = this.__p.__offset(28);
@@ -265,8 +265,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000A8D RID: 2701
-		// (get) Token: 0x06005CB1 RID: 23729 RVA: 0x0020713C File Offset: 0x0020533C
+		// Token: 0x17000AD3 RID: 2771
+		// (get) Token: 0x0600628A RID: 25226 RVA: 0x00226A40 File Offset: 0x00224C40
 		public int DefaultUnlockRoleIdLength
 		{
 			get
@@ -280,20 +280,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005CB2 RID: 23730 RVA: 0x00207168 File Offset: 0x00205368
+		// Token: 0x0600628B RID: 25227 RVA: 0x00226A6C File Offset: 0x00224C6C
 		public Span<int> GetDefaultUnlockRoleIdBytes()
 		{
 			return this.__p.__vector_as_span<int>(28, 4);
 		}
 
-		// Token: 0x06005CB3 RID: 23731 RVA: 0x00207178 File Offset: 0x00205378
+		// Token: 0x0600628C RID: 25228 RVA: 0x00226A7C File Offset: 0x00224C7C
 		public int[] GetDefaultUnlockRoleIdArray()
 		{
 			return this.__p.__vector_as_array<int>(28) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17000A8E RID: 2702
-		// (get) Token: 0x06005CB4 RID: 23732 RVA: 0x00207190 File Offset: 0x00205390
+		// Token: 0x17000AD4 RID: 2772
+		// (get) Token: 0x0600628D RID: 25229 RVA: 0x00226A94 File Offset: 0x00224C94
 		public int VisionSkinItemId
 		{
 			get
@@ -307,8 +307,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A8F RID: 2703
-		// (get) Token: 0x06005CB5 RID: 23733 RVA: 0x002071D0 File Offset: 0x002053D0
+		// Token: 0x17000AD5 RID: 2773
+		// (get) Token: 0x0600628E RID: 25230 RVA: 0x00226AD4 File Offset: 0x00224CD4
 		public int LimitScoreRewardId
 		{
 			get
@@ -322,8 +322,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A90 RID: 2704
-		// (get) Token: 0x06005CB6 RID: 23734 RVA: 0x00207210 File Offset: 0x00205410
+		// Token: 0x17000AD6 RID: 2774
+		// (get) Token: 0x0600628F RID: 25231 RVA: 0x00226B14 File Offset: 0x00224D14
 		public int RecommendQuestId
 		{
 			get
@@ -337,8 +337,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A91 RID: 2705
-		// (get) Token: 0x06005CB7 RID: 23735 RVA: 0x00207250 File Offset: 0x00205450
+		// Token: 0x17000AD7 RID: 2775
+		// (get) Token: 0x06006290 RID: 25232 RVA: 0x00226B54 File Offset: 0x00224D54
 		public int RecommendQuestNodeId
 		{
 			get
@@ -352,8 +352,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A92 RID: 2706
-		// (get) Token: 0x06005CB8 RID: 23736 RVA: 0x00207290 File Offset: 0x00205490
+		// Token: 0x17000AD8 RID: 2776
+		// (get) Token: 0x06006291 RID: 25233 RVA: 0x00226B94 File Offset: 0x00224D94
 		public int RecommendQuestCondition
 		{
 			get
@@ -367,8 +367,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A93 RID: 2707
-		// (get) Token: 0x06005CB9 RID: 23737 RVA: 0x002072D0 File Offset: 0x002054D0
+		// Token: 0x17000AD9 RID: 2777
+		// (get) Token: 0x06006292 RID: 25234 RVA: 0x00226BD4 File Offset: 0x00224DD4
 		public string RecommendQuestLabel
 		{
 			get
@@ -382,19 +382,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005CBA RID: 23738 RVA: 0x00207308 File Offset: 0x00205508
+		// Token: 0x06006293 RID: 25235 RVA: 0x00226C0C File Offset: 0x00224E0C
 		public Span<byte> GetRecommendQuestLabelBytes()
 		{
 			return this.__p.__vector_as_span<byte>(40, 1);
 		}
 
-		// Token: 0x06005CBB RID: 23739 RVA: 0x00207318 File Offset: 0x00205518
+		// Token: 0x06006294 RID: 25236 RVA: 0x00226C1C File Offset: 0x00224E1C
 		public byte[] GetRecommendQuestLabelArray()
 		{
 			return this.__p.__vector_as_array<byte>(40) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06005CBC RID: 23740 RVA: 0x00207330 File Offset: 0x00205530
+		// Token: 0x06006295 RID: 25237 RVA: 0x00226C34 File Offset: 0x00224E34
 		public int MainRoleList(int j)
 		{
 			int num = this.__p.__offset(42);
@@ -405,8 +405,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000A94 RID: 2708
-		// (get) Token: 0x06005CBD RID: 23741 RVA: 0x00207370 File Offset: 0x00205570
+		// Token: 0x17000ADA RID: 2778
+		// (get) Token: 0x06006296 RID: 25238 RVA: 0x00226C74 File Offset: 0x00224E74
 		public int MainRoleListLength
 		{
 			get
@@ -420,19 +420,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005CBE RID: 23742 RVA: 0x0020739C File Offset: 0x0020559C
+		// Token: 0x06006297 RID: 25239 RVA: 0x00226CA0 File Offset: 0x00224EA0
 		public Span<int> GetMainRoleListBytes()
 		{
 			return this.__p.__vector_as_span<int>(42, 4);
 		}
 
-		// Token: 0x06005CBF RID: 23743 RVA: 0x002073AC File Offset: 0x002055AC
+		// Token: 0x06006298 RID: 25240 RVA: 0x00226CB0 File Offset: 0x00224EB0
 		public int[] GetMainRoleListArray()
 		{
 			return this.__p.__vector_as_array<int>(42) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06005CC0 RID: 23744 RVA: 0x002073C4 File Offset: 0x002055C4
+		// Token: 0x06006299 RID: 25241 RVA: 0x00226CC8 File Offset: 0x00224EC8
 		public DicIntInt? MainRoleSexChange(int j)
 		{
 			int num = this.__p.__offset(44);
@@ -443,8 +443,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000A95 RID: 2709
-		// (get) Token: 0x06005CC1 RID: 23745 RVA: 0x00207428 File Offset: 0x00205628
+		// Token: 0x17000ADB RID: 2779
+		// (get) Token: 0x0600629A RID: 25242 RVA: 0x00226D2C File Offset: 0x00224F2C
 		public int MainRoleSexChangeLength
 		{
 			get
@@ -458,8 +458,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A96 RID: 2710
-		// (get) Token: 0x06005CC2 RID: 23746 RVA: 0x00207454 File Offset: 0x00205654
+		// Token: 0x17000ADC RID: 2780
+		// (get) Token: 0x0600629B RID: 25243 RVA: 0x00226D58 File Offset: 0x00224F58
 		public int DamageTxtNormal
 		{
 			get
@@ -473,8 +473,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A97 RID: 2711
-		// (get) Token: 0x06005CC3 RID: 23747 RVA: 0x00207494 File Offset: 0x00205694
+		// Token: 0x17000ADD RID: 2781
+		// (get) Token: 0x0600629C RID: 25244 RVA: 0x00226D98 File Offset: 0x00224F98
 		public int DamageTxtHeal
 		{
 			get
@@ -488,8 +488,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A98 RID: 2712
-		// (get) Token: 0x06005CC4 RID: 23748 RVA: 0x002074D4 File Offset: 0x002056D4
+		// Token: 0x17000ADE RID: 2782
+		// (get) Token: 0x0600629D RID: 25245 RVA: 0x00226DD8 File Offset: 0x00224FD8
 		public int DamageTxtShield
 		{
 			get
@@ -503,8 +503,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A99 RID: 2713
-		// (get) Token: 0x06005CC5 RID: 23749 RVA: 0x00207514 File Offset: 0x00205714
+		// Token: 0x17000ADF RID: 2783
+		// (get) Token: 0x0600629E RID: 25246 RVA: 0x00226E18 File Offset: 0x00225018
 		public int DamageTxtLifeSteal
 		{
 			get
@@ -518,8 +518,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A9A RID: 2714
-		// (get) Token: 0x06005CC6 RID: 23750 RVA: 0x00207554 File Offset: 0x00205754
+		// Token: 0x17000AE0 RID: 2784
+		// (get) Token: 0x0600629F RID: 25247 RVA: 0x00226E58 File Offset: 0x00225058
 		public int CoinText
 		{
 			get
@@ -533,8 +533,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A9B RID: 2715
-		// (get) Token: 0x06005CC7 RID: 23751 RVA: 0x00207594 File Offset: 0x00205794
+		// Token: 0x17000AE1 RID: 2785
+		// (get) Token: 0x060062A0 RID: 25248 RVA: 0x00226E98 File Offset: 0x00225098
 		public int ShopTipsTalkGapTime
 		{
 			get
@@ -548,8 +548,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A9C RID: 2716
-		// (get) Token: 0x06005CC8 RID: 23752 RVA: 0x002075D4 File Offset: 0x002057D4
+		// Token: 0x17000AE2 RID: 2786
+		// (get) Token: 0x060062A1 RID: 25249 RVA: 0x00226ED8 File Offset: 0x002250D8
 		public int ShopWeaponTalkQuality
 		{
 			get
@@ -563,8 +563,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A9D RID: 2717
-		// (get) Token: 0x06005CC9 RID: 23753 RVA: 0x00207614 File Offset: 0x00205814
+		// Token: 0x17000AE3 RID: 2787
+		// (get) Token: 0x060062A2 RID: 25250 RVA: 0x00226F18 File Offset: 0x00225118
 		public int StartFightDuringTime
 		{
 			get
@@ -578,8 +578,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A9E RID: 2718
-		// (get) Token: 0x06005CCA RID: 23754 RVA: 0x00207654 File Offset: 0x00205854
+		// Token: 0x17000AE4 RID: 2788
+		// (get) Token: 0x060062A3 RID: 25251 RVA: 0x00226F58 File Offset: 0x00225158
 		public int HpChangeColor
 		{
 			get
@@ -593,78 +593,71 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005CCB RID: 23755 RVA: 0x00207694 File Offset: 0x00205894
+		// Token: 0x060062A4 RID: 25252 RVA: 0x00226F95 File Offset: 0x00225195
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DangoBrawlGridSizeIter()或GetDangoBrawlGridSizeBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] DangoBrawlGridSize()
+		public int[] DangoBrawlGridSize()
 		{
-			DangoBrawlActivity dangoBrawlActivity = this;
-			return dangoBrawlActivity.GetDangoBrawlGridSizeArray() ?? Array.Empty<int>();
+			return this.GetDangoBrawlGridSizeArray();
 		}
 
-		// Token: 0x06005CCC RID: 23756 RVA: 0x002076B8 File Offset: 0x002058B8
+		// Token: 0x060062A5 RID: 25253 RVA: 0x00226F9D File Offset: 0x0022519D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> DangoBrawlGridSizeIter()
+		public IEnumerable<int> DangoBrawlGridSizeIter()
 		{
 			DangoBrawlActivity.<DangoBrawlGridSizeIter>d__81 <DangoBrawlGridSizeIter>d__ = new DangoBrawlActivity.<DangoBrawlGridSizeIter>d__81(-2);
 			<DangoBrawlGridSizeIter>d__.<>3__<>4__this = this;
 			return <DangoBrawlGridSizeIter>d__;
 		}
 
-		// Token: 0x06005CCD RID: 23757 RVA: 0x002076D0 File Offset: 0x002058D0
+		// Token: 0x060062A6 RID: 25254 RVA: 0x00226FB2 File Offset: 0x002251B2
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DefaultUnlockRoleIdIter()或GetDefaultUnlockRoleIdBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] DefaultUnlockRoleId()
+		public int[] DefaultUnlockRoleId()
 		{
-			DangoBrawlActivity dangoBrawlActivity = this;
-			return dangoBrawlActivity.GetDefaultUnlockRoleIdArray() ?? Array.Empty<int>();
+			return this.GetDefaultUnlockRoleIdArray();
 		}
 
-		// Token: 0x06005CCE RID: 23758 RVA: 0x002076F4 File Offset: 0x002058F4
+		// Token: 0x060062A7 RID: 25255 RVA: 0x00226FBA File Offset: 0x002251BA
 		[NullableContext(1)]
-		public readonly IEnumerable<int> DefaultUnlockRoleIdIter()
+		public IEnumerable<int> DefaultUnlockRoleIdIter()
 		{
 			DangoBrawlActivity.<DefaultUnlockRoleIdIter>d__83 <DefaultUnlockRoleIdIter>d__ = new DangoBrawlActivity.<DefaultUnlockRoleIdIter>d__83(-2);
 			<DefaultUnlockRoleIdIter>d__.<>3__<>4__this = this;
 			return <DefaultUnlockRoleIdIter>d__;
 		}
 
-		// Token: 0x06005CCF RID: 23759 RVA: 0x0020770C File Offset: 0x0020590C
+		// Token: 0x060062A8 RID: 25256 RVA: 0x00226FCF File Offset: 0x002251CF
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MainRoleListIter()或GetMainRoleListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] MainRoleList()
+		public int[] MainRoleList()
 		{
-			DangoBrawlActivity dangoBrawlActivity = this;
-			return dangoBrawlActivity.GetMainRoleListArray() ?? Array.Empty<int>();
+			return this.GetMainRoleListArray();
 		}
 
-		// Token: 0x06005CD0 RID: 23760 RVA: 0x00207730 File Offset: 0x00205930
+		// Token: 0x060062A9 RID: 25257 RVA: 0x00226FD7 File Offset: 0x002251D7
 		[NullableContext(1)]
-		public readonly IEnumerable<int> MainRoleListIter()
+		public IEnumerable<int> MainRoleListIter()
 		{
 			DangoBrawlActivity.<MainRoleListIter>d__85 <MainRoleListIter>d__ = new DangoBrawlActivity.<MainRoleListIter>d__85(-2);
 			<MainRoleListIter>d__.<>3__<>4__this = this;
 			return <MainRoleListIter>d__;
 		}
 
-		// Token: 0x06005CD1 RID: 23761 RVA: 0x00207748 File Offset: 0x00205948
+		// Token: 0x060062AA RID: 25258 RVA: 0x00226FEC File Offset: 0x002251EC
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用MainRoleSexChangeFrozenDict()缓存字典，遍历请使用MainRoleSexChangeIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> MainRoleSexChange()
+		public Dictionary<int, int> MainRoleSexChange()
 		{
 			return this.MainRoleSexChangeIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06005CD2 RID: 23762 RVA: 0x0020779E File Offset: 0x0020599E
+		// Token: 0x060062AB RID: 25259 RVA: 0x00227042 File Offset: 0x00225242
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> MainRoleSexChangeIter()
+		public IEnumerable<DicIntInt> MainRoleSexChangeIter()
 		{
 			DangoBrawlActivity.<MainRoleSexChangeIter>d__87 <MainRoleSexChangeIter>d__ = new DangoBrawlActivity.<MainRoleSexChangeIter>d__87(-2);
 			<MainRoleSexChangeIter>d__.<>3__<>4__this = this;
 			return <MainRoleSexChangeIter>d__;
 		}
 
-		// Token: 0x06005CD3 RID: 23763 RVA: 0x002077B4 File Offset: 0x002059B4
+		// Token: 0x060062AC RID: 25260 RVA: 0x00227058 File Offset: 0x00225258
 		public int? GetMainRoleSexChange(int key)
 		{
 			this.EnsureMainRoleSexChangeCacheIfNeeded();
@@ -676,7 +669,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06005CD4 RID: 23764 RVA: 0x002077E8 File Offset: 0x002059E8
+		// Token: 0x060062AD RID: 25261 RVA: 0x0022708C File Offset: 0x0022528C
 		private void EnsureMainRoleSexChangeCacheIfNeeded()
 		{
 			if (this.MainRoleSexChangeCache != null)
@@ -686,18 +679,18 @@ namespace Aki.Config
 			this.MainRoleSexChangeCache = this.MainRoleSexChangeIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06005CD5 RID: 23765 RVA: 0x0020784E File Offset: 0x00205A4E
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetMainRoleSexChangeFrozenDict(int key)
+		// Token: 0x060062AE RID: 25262 RVA: 0x002270F2 File Offset: 0x002252F2
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetMainRoleSexChangeFrozenDict()
 		{
 			this.EnsureMainRoleSexChangeCacheIfNeeded();
 			return this.MainRoleSexChangeCache;
 		}
 
-		// Token: 0x04004BE2 RID: 19426
+		// Token: 0x040051C4 RID: 20932
 		private Table __p;
 
-		// Token: 0x04004BE3 RID: 19427
+		// Token: 0x040051C5 RID: 20933
 		[Nullable(2)]
 		private FrozenDictionary<int, int> MainRoleSexChangeCache;
 	}

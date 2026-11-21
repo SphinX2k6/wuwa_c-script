@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001025 RID: 4133
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001151 RID: 4433
 	public class INewHandInItemsBase
 	{
-		// Token: 0x06005C34 RID: 23604 RVA: 0x000DF67C File Offset: 0x000DD87C
+		// Token: 0x06006216 RID: 25110 RVA: 0x000EC374 File Offset: 0x000EA574
 		private INewHandInItemsBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005C35 RID: 23605 RVA: 0x000DF6B4 File Offset: 0x000DD8B4
+		// Token: 0x06006217 RID: 25111 RVA: 0x000EC3AC File Offset: 0x000EA5AC
 		public static INewHandInItemsBase Create([Nullable(2)] INewHandInItemsBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C36 RID: 23606 RVA: 0x000DF6C7 File Offset: 0x000DD8C7
+		// Token: 0x06006218 RID: 25112 RVA: 0x000EC3BF File Offset: 0x000EA5BF
 		public static INewHandInItemsBase CreateFromSetValue([Nullable(2)] INewHandInItemsBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C37 RID: 23607 RVA: 0x000DF6DA File Offset: 0x000DD8DA
+		// Token: 0x06006219 RID: 25113 RVA: 0x000EC3D2 File Offset: 0x000EA5D2
 		public INewHandInItemsBase_SetValue ToSetValue()
 		{
 			return new INewHandInItemsBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E64 RID: 7780
-		// (get) Token: 0x06005C38 RID: 23608 RVA: 0x000DF6ED File Offset: 0x000DD8ED
-		// (set) Token: 0x06005C39 RID: 23609 RVA: 0x000DF718 File Offset: 0x000DD918
+		// Token: 0x1700200E RID: 8206
+		// (get) Token: 0x0600621A RID: 25114 RVA: 0x000EC3E5 File Offset: 0x000EA5E5
+		// (set) Token: 0x0600621B RID: 25115 RVA: 0x000EC410 File Offset: 0x000EA610
 		public virtual ENewHandInItemsType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003779 RID: 14201
+		// Token: 0x04003AB4 RID: 15028
 		[Nullable(2)]
 		protected INewHandInItemsBase FbInstance;
 
-		// Token: 0x0400377A RID: 14202
+		// Token: 0x04003AB5 RID: 15029
 		[Nullable(2)]
 		protected INewHandInItemsBase_SetValue PocoInterface;
 	}

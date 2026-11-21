@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009E0 RID: 2528
+	// Token: 0x02000AA5 RID: 2725
 	public static class EProceduralVisualTypeExtensions
 	{
-		// Token: 0x06003821 RID: 14369 RVA: 0x000918C0 File Offset: 0x0008FAC0
+		// Token: 0x06003BF9 RID: 15353 RVA: 0x0009A180 File Offset: 0x00098380
 		public static string ToEnumString(this EProceduralVisualType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003822 RID: 14370 RVA: 0x000918F8 File Offset: 0x0008FAF8
+		// Token: 0x06003BFA RID: 15354 RVA: 0x0009A1B8 File Offset: 0x000983B8
 		public static EProceduralVisualType FromString(string name)
 		{
 			EProceduralVisualType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003823 RID: 14371 RVA: 0x00091921 File Offset: 0x0008FB21
+		// Token: 0x06003BFB RID: 15355 RVA: 0x0009A1E1 File Offset: 0x000983E1
 		public static bool TryFromString(string name, out EProceduralVisualType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003824 RID: 14372 RVA: 0x0009195A File Offset: 0x0008FB5A
+		// Token: 0x06003BFC RID: 15356 RVA: 0x0009A21A File Offset: 0x0009841A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003825 RID: 14373 RVA: 0x00091972 File Offset: 0x0008FB72
+		// Token: 0x06003BFD RID: 15357 RVA: 0x0009A232 File Offset: 0x00098432
 		public static EProceduralVisualType[] GetValues()
 		{
 			return new EProceduralVisualType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003826 RID: 14374 RVA: 0x0009197E File Offset: 0x0008FB7E
+		// Token: 0x06003BFE RID: 15358 RVA: 0x0009A23E File Offset: 0x0009843E
 		public static string[] GetNames()
 		{
 			return new string[]

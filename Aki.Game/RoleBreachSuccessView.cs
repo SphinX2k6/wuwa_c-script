@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020027A7 RID: 10151
+// Token: 0x02001D22 RID: 7458
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleBreachSuccessView : UiViewBase
 {
-	// Token: 0x06014DAC RID: 85420 RVA: 0x0054ABD7 File Offset: 0x00548DD7
+	// Token: 0x060127A6 RID: 75686 RVA: 0x0057575F File Offset: 0x0057395F
 	public RoleBreachSuccessView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014DAD RID: 85421 RVA: 0x0054ABEC File Offset: 0x00548DEC
+	// Token: 0x060127A7 RID: 75687 RVA: 0x00575774 File Offset: 0x00573974
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -44,7 +44,7 @@ public class RoleBreachSuccessView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014DAE RID: 85422 RVA: 0x0054ACD4 File Offset: 0x00548ED4
+	// Token: 0x060127A8 RID: 75688 RVA: 0x0057585C File Offset: 0x00573A5C
 	protected void OnMaskClickInternal()
 	{
 		Action onMaskClick = this.OnMaskClick;
@@ -55,7 +55,7 @@ public class RoleBreachSuccessView : UiViewBase
 		onMaskClick();
 	}
 
-	// Token: 0x06014DAF RID: 85423 RVA: 0x0054ACE8 File Offset: 0x00548EE8
+	// Token: 0x060127A9 RID: 75689 RVA: 0x00575870 File Offset: 0x00573A70
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleBreachSuccessView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -66,7 +66,7 @@ public class RoleBreachSuccessView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014DB0 RID: 85424 RVA: 0x0054AD2B File Offset: 0x00548F2B
+	// Token: 0x060127AA RID: 75690 RVA: 0x005758B3 File Offset: 0x00573AB3
 	protected override void OnAfterPlayStartSequence()
 	{
 		CSharpScript.Game.Module.RoleUi.StarItem successStarItem = this.SuccessStarItem;
@@ -77,13 +77,13 @@ public class RoleBreachSuccessView : UiViewBase
 		successStarItem.PlayActiveSequence();
 	}
 
-	// Token: 0x06014DB1 RID: 85425 RVA: 0x0054AD3D File Offset: 0x00548F3D
+	// Token: 0x060127AB RID: 75691 RVA: 0x005758C5 File Offset: 0x00573AC5
 	private CSharpScript.Game.Module.RoleUi.StarItem InitStarItem()
 	{
 		return new CSharpScript.Game.Module.RoleUi.StarItem();
 	}
 
-	// Token: 0x06014DB2 RID: 85426 RVA: 0x0054AD44 File Offset: 0x00548F44
+	// Token: 0x060127AC RID: 75692 RVA: 0x005758CC File Offset: 0x00573ACC
 	protected UniTask UpdateStar(int breachLevel, int maxLevel)
 	{
 		RoleBreachSuccessView.<UpdateStar>d__12 <UpdateStar>d__;
@@ -96,18 +96,18 @@ public class RoleBreachSuccessView : UiViewBase
 		return <UpdateStar>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04009CE1 RID: 40161
+	// Token: 0x0400A0C4 RID: 41156
 	private int RoleId;
 
-	// Token: 0x04009CE2 RID: 40162
+	// Token: 0x0400A0C5 RID: 41157
 	[Nullable(2)]
 	private Action OnMaskClick;
 
-	// Token: 0x04009CE3 RID: 40163
+	// Token: 0x0400A0C6 RID: 41158
 	[Nullable(2)]
 	protected CSharpScript.Game.Module.RoleUi.StarItem SuccessStarItem;
 
-	// Token: 0x04009CE4 RID: 40164
+	// Token: 0x0400A0C7 RID: 41159
 	[Nullable(new byte[]
 	{
 		2,
@@ -116,20 +116,20 @@ public class RoleBreachSuccessView : UiViewBase
 	})]
 	protected GenericLayout<CSharpScript.Game.Module.RoleUi.StarItem, IStarItemData> StarLayout;
 
-	// Token: 0x04009CE5 RID: 40165
+	// Token: 0x0400A0C8 RID: 41160
 	protected List<CSharpScript.Game.Module.RoleUi.StarItem> StarList = new List<CSharpScript.Game.Module.RoleUi.StarItem>();
 
-	// Token: 0x02008E21 RID: 36385
+	// Token: 0x0200806A RID: 32874
 	[NullableContext(0)]
 	public enum ERoleBreachSuccessViewDefine
 	{
-		// Token: 0x0402E1E1 RID: 188897
+		// Token: 0x040298DD RID: 170205
 		StarHorizontalLayout,
-		// Token: 0x0402E1E2 RID: 188898
+		// Token: 0x040298DE RID: 170206
 		MaskBtn,
-		// Token: 0x0402E1E3 RID: 188899
+		// Token: 0x040298DF RID: 170207
 		CurLevelText,
-		// Token: 0x0402E1E4 RID: 188900
+		// Token: 0x040298E0 RID: 170208
 		MaxLevelText
 	}
 }

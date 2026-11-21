@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200135A RID: 4954
+	// Token: 0x020014AA RID: 5290
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IUseItemCondition : IQuestCondition
 	{
-		// Token: 0x0600716D RID: 29037 RVA: 0x001115F3 File Offset: 0x0010F7F3
-		[NullableContext(1)]
+		// Token: 0x0600780D RID: 30733 RVA: 0x0011FB5F File Offset: 0x0011DD5F
+		[NullableContext(0)]
 		public static IUseItemCondition Create(IUseItemCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700248C RID: 9356
-		// (get) Token: 0x0600716E RID: 29038 RVA: 0x00111612 File Offset: 0x0010F812
+		// Token: 0x1700265B RID: 9819
+		// (get) Token: 0x0600780E RID: 30734 RVA: 0x0011FB7E File Offset: 0x0011DD7E
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700248D RID: 9357
-		// (get) Token: 0x0600716F RID: 29039 RVA: 0x0011161F File Offset: 0x0010F81F
+		// Token: 0x1700265C RID: 9820
+		// (get) Token: 0x0600780F RID: 30735 RVA: 0x0011FB8B File Offset: 0x0011DD8B
 		public override IConditionGroup PreConditions
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700248E RID: 9358
-		// (get) Token: 0x06007170 RID: 29040 RVA: 0x00111653 File Offset: 0x0010F853
+		// Token: 0x1700265D RID: 9821
+		// (get) Token: 0x06007810 RID: 30736 RVA: 0x0011FBBF File Offset: 0x0011DDBF
 		public virtual int ItemId
 		{
 			get
@@ -60,8 +60,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700248F RID: 9359
-		// (get) Token: 0x06007171 RID: 29041 RVA: 0x00111660 File Offset: 0x0010F860
+		// Token: 0x1700265E RID: 9822
+		// (get) Token: 0x06007811 RID: 30737 RVA: 0x0011FBCC File Offset: 0x0011DDCC
 		public virtual int Count
 		{
 			get
@@ -70,13 +70,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004184 RID: 16772
+		// Token: 0x04004500 RID: 17664
 		private IUseItemCondition Instance;
 
-		// Token: 0x04004185 RID: 16773
+		// Token: 0x04004501 RID: 17665
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004186 RID: 16774
+		// Token: 0x04004502 RID: 17666
 		private bool _PreConditionsInited;
 	}
 }

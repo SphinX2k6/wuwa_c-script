@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -10,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 {
-	// Token: 0x0200723D RID: 29245
+	// Token: 0x020062F2 RID: 25330
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class SceneItemGraphController : ControllerBase
 	{
-		// Token: 0x06047AC7 RID: 293575 RVA: 0x01257FD4 File Offset: 0x012561D4
+		// Token: 0x0603D429 RID: 250921 RVA: 0x011B0C84 File Offset: 0x011AEE84
 		public void Register(int entityId, ISceneItemGraph sceneItemGraph)
 		{
 			if (GraphModel.Instance.SceneItemGraphs != null)
@@ -34,7 +33,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047AC8 RID: 293576 RVA: 0x01258040 File Offset: 0x01256240
+		// Token: 0x0603D42A RID: 250922 RVA: 0x011B0CF0 File Offset: 0x011AEEF0
 		public void Unregister(int entityId)
 		{
 			Dictionary<int, ISceneItemGraph> sceneItemGraphs = GraphModel.Instance.SceneItemGraphs;
@@ -49,7 +48,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.RedrawAll();
 		}
 
-		// Token: 0x06047AC9 RID: 293577 RVA: 0x0125809D File Offset: 0x0125629D
+		// Token: 0x0603D42B RID: 250923 RVA: 0x011B0D4D File Offset: 0x011AEF4D
 		private int GetDebugLevel()
 		{
 			SundryModel instance = SundryModel.Instance;
@@ -60,7 +59,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return instance.GetModuleDebugLevel("SceneItemGraphComponent");
 		}
 
-		// Token: 0x06047ACA RID: 293578 RVA: 0x012580B4 File Offset: 0x012562B4
+		// Token: 0x0603D42C RID: 250924 RVA: 0x011B0D64 File Offset: 0x011AEF64
 		private void OnChangeModuleDebugLevel(string key, int level)
 		{
 			if (key != "SceneItemGraphComponent")
@@ -70,7 +69,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.RedrawAll();
 		}
 
-		// Token: 0x06047ACB RID: 293579 RVA: 0x012580CC File Offset: 0x012562CC
+		// Token: 0x0603D42D RID: 250925 RVA: 0x011B0D7C File Offset: 0x011AEF7C
 		private void RedrawAll()
 		{
 			UWorld world = GlobalData.World;
@@ -87,7 +86,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 			Dictionary<int, ISceneItemGraph> sceneItemGraphs = GraphModel.Instance.SceneItemGraphs;
 			IEnumerable<ISceneItemGraph> enumerable = (sceneItemGraphs != null) ? sceneItemGraphs.Values : null;
-			foreach (ISceneItemGraph sceneItemGraph in (enumerable ?? Enumerable.Empty<ISceneItemGraph>()))
+			foreach (ISceneItemGraph sceneItemGraph in (enumerable ?? Array.Empty<ISceneItemGraph>()))
 			{
 				sceneItemGraph.DebugDraw(debugLevel);
 			}
@@ -95,7 +94,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.DebugDrawActive = (((sceneItemGraphs2 != null) ? sceneItemGraphs2.Count : 0) > 0);
 		}
 
-		// Token: 0x06047ACC RID: 293580 RVA: 0x01258184 File Offset: 0x01256384
+		// Token: 0x0603D42E RID: 250926 RVA: 0x011B0E34 File Offset: 0x011AF034
 		[NullableContext(2)]
 		public ISceneItemGraph GetGraphByEntityId(int entityId)
 		{
@@ -107,7 +106,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return sceneItemGraphs.GetValueOrDefault(entityId);
 		}
 
-		// Token: 0x06047ACD RID: 293581 RVA: 0x0125819C File Offset: 0x0125639C
+		// Token: 0x0603D42F RID: 250927 RVA: 0x011B0E4C File Offset: 0x011AF04C
 		[return: Nullable(2)]
 		public ISceneItemGraph FindNearestGraph(Vector location, float maxDistance = 0f)
 		{
@@ -115,7 +114,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			double num = (maxDistance > 0f) ? ((double)(maxDistance * maxDistance)) : double.MaxValue;
 			Dictionary<int, ISceneItemGraph> sceneItemGraphs = GraphModel.Instance.SceneItemGraphs;
 			IEnumerable<ISceneItemGraph> enumerable = (sceneItemGraphs != null) ? sceneItemGraphs.Values : null;
-			foreach (ISceneItemGraph sceneItemGraph in (enumerable ?? Enumerable.Empty<ISceneItemGraph>()))
+			foreach (ISceneItemGraph sceneItemGraph in (enumerable ?? Array.Empty<ISceneItemGraph>()))
 			{
 				double? nearestNodeDistSquared = sceneItemGraph.GetNearestNodeDistSquared(location);
 				if (nearestNodeDistSquared != null)
@@ -132,7 +131,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return result;
 		}
 
-		// Token: 0x06047ACE RID: 293582 RVA: 0x01258254 File Offset: 0x01256454
+		// Token: 0x0603D430 RID: 250928 RVA: 0x011B0F04 File Offset: 0x011AF104
 		public unsafe List<int> CollectCandidates(ISceneItemGraph graph, Vector selfLocation, float onNodeRadius)
 		{
 			int? nodeIdAtLocation = graph.GetNodeIdAtLocation(selfLocation, (double)onNodeRadius);
@@ -156,8 +155,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return list;
 		}
 
-		// Token: 0x17009E44 RID: 40516
-		// (get) Token: 0x06047ACF RID: 293583 RVA: 0x012582E4 File Offset: 0x012564E4
+		// Token: 0x170073FB RID: 29691
+		// (get) Token: 0x0603D431 RID: 250929 RVA: 0x011B0F94 File Offset: 0x011AF194
 		public static SceneItemGraphController Instance
 		{
 			get
@@ -166,7 +165,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047AD0 RID: 293584 RVA: 0x012582EB File Offset: 0x012564EB
+		// Token: 0x0603D432 RID: 250930 RVA: 0x011B0F9B File Offset: 0x011AF19B
 		public static SceneItemGraphController GetOrCreateInstance()
 		{
 			if (SceneItemGraphController._Instance == null)
@@ -176,7 +175,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return SceneItemGraphController._Instance;
 		}
 
-		// Token: 0x06047AD1 RID: 293585 RVA: 0x012582FF File Offset: 0x012564FF
+		// Token: 0x0603D433 RID: 250931 RVA: 0x011B0FAF File Offset: 0x011AF1AF
 		public static bool CreateInstance()
 		{
 			if (SceneItemGraphController._Instance != null)
@@ -187,27 +186,27 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return true;
 		}
 
-		// Token: 0x06047AD2 RID: 293586 RVA: 0x01258315 File Offset: 0x01256515
+		// Token: 0x0603D434 RID: 250932 RVA: 0x011B0FC5 File Offset: 0x011AF1C5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047AD3 RID: 293587 RVA: 0x01258317 File Offset: 0x01256517
+		// Token: 0x0603D435 RID: 250933 RVA: 0x011B0FC7 File Offset: 0x011AF1C7
 		public static void ResetStaticDefaultValue()
 		{
 			SceneItemGraphController._Instance = null;
 		}
 
-		// Token: 0x06047AD4 RID: 293588 RVA: 0x0125831F File Offset: 0x0125651F
+		// Token: 0x0603D436 RID: 250934 RVA: 0x011B0FCF File Offset: 0x011AF1CF
 		static SceneItemGraphController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneItemGraphController.CreateStaticDefaultValue), new Action(SceneItemGraphController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025B5D RID: 154461
+		// Token: 0x040207CC RID: 133068
 		private bool DebugDrawActive;
 
-		// Token: 0x04025B5E RID: 154462
+		// Token: 0x040207CD RID: 133069
 		[Nullable(2)]
 		private static SceneItemGraphController _Instance;
 	}

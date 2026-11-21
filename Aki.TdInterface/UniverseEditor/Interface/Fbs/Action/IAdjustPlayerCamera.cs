@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006167 RID: 24935
+	// Token: 0x020067CC RID: 26572
 	public struct IAdjustPlayerCamera : IFlatbufferObject
 	{
-		// Token: 0x1700B996 RID: 47510
-		// (get) Token: 0x0602AE47 RID: 175687 RVA: 0x005EAA3C File Offset: 0x005E8C3C
+		// Token: 0x1700C306 RID: 49926
+		// (get) Token: 0x0602D540 RID: 185664 RVA: 0x00634C18 File Offset: 0x00632E18
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602AE48 RID: 175688 RVA: 0x005EAA49 File Offset: 0x005E8C49
+		// Token: 0x0602D541 RID: 185665 RVA: 0x00634C25 File Offset: 0x00632E25
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602AE49 RID: 175689 RVA: 0x005EAA50 File Offset: 0x005E8C50
+		// Token: 0x0602D542 RID: 185666 RVA: 0x00634C2C File Offset: 0x00632E2C
 		public static IAdjustPlayerCamera GetRootAsIAdjustPlayerCamera(ByteBuffer _bb)
 		{
 			return IAdjustPlayerCamera.GetRootAsIAdjustPlayerCamera(_bb, default(IAdjustPlayerCamera));
 		}
 
-		// Token: 0x0602AE4A RID: 175690 RVA: 0x005EAA6C File Offset: 0x005E8C6C
+		// Token: 0x0602D543 RID: 185667 RVA: 0x00634C48 File Offset: 0x00632E48
 		public static IAdjustPlayerCamera GetRootAsIAdjustPlayerCamera(ByteBuffer _bb, IAdjustPlayerCamera obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602AE4B RID: 175691 RVA: 0x005EAA89 File Offset: 0x005E8C89
+		// Token: 0x0602D544 RID: 185668 RVA: 0x00634C65 File Offset: 0x00632E65
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602AE4C RID: 175692 RVA: 0x005EAA98 File Offset: 0x005E8C98
+		// Token: 0x0602D545 RID: 185669 RVA: 0x00634C74 File Offset: 0x00632E74
 		public IAdjustPlayerCamera __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B997 RID: 47511
-		// (get) Token: 0x0602AE4D RID: 175693 RVA: 0x005EAAA8 File Offset: 0x005E8CA8
+		// Token: 0x1700C307 RID: 49927
+		// (get) Token: 0x0602D546 RID: 185670 RVA: 0x00634C84 File Offset: 0x00632E84
 		public TAdjustPlayerCameraOption OptionType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602AE4E RID: 175694 RVA: 0x005EAAE4 File Offset: 0x005E8CE4
+		// Token: 0x0602D547 RID: 185671 RVA: 0x00634CC0 File Offset: 0x00632EC0
 		public TTable? Option<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,61 +73,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602AE4F RID: 175695 RVA: 0x005EAB28 File Offset: 0x005E8D28
+		// Token: 0x0602D548 RID: 185672 RVA: 0x00634D04 File Offset: 0x00632F04
 		public IAdjustAxisLockCamera OptionAsIAdjustAxisLockCamera()
 		{
 			return this.Option<IAdjustAxisLockCamera>().Value;
 		}
 
-		// Token: 0x0602AE50 RID: 175696 RVA: 0x005EAB44 File Offset: 0x005E8D44
+		// Token: 0x0602D549 RID: 185673 RVA: 0x00634D20 File Offset: 0x00632F20
 		public IAdjustBasicCamera OptionAsIAdjustBasicCamera()
 		{
 			return this.Option<IAdjustBasicCamera>().Value;
 		}
 
-		// Token: 0x0602AE51 RID: 175697 RVA: 0x005EAB60 File Offset: 0x005E8D60
+		// Token: 0x0602D54A RID: 185674 RVA: 0x00634D3C File Offset: 0x00632F3C
 		public IAdjustDialogCamera OptionAsIAdjustDialogCamera()
 		{
 			return this.Option<IAdjustDialogCamera>().Value;
 		}
 
-		// Token: 0x0602AE52 RID: 175698 RVA: 0x005EAB7C File Offset: 0x005E8D7C
+		// Token: 0x0602D54B RID: 185675 RVA: 0x00634D58 File Offset: 0x00632F58
 		public IAdjustFirstPersonCamera OptionAsIAdjustFirstPersonCamera()
 		{
 			return this.Option<IAdjustFirstPersonCamera>().Value;
 		}
 
-		// Token: 0x0602AE53 RID: 175699 RVA: 0x005EAB98 File Offset: 0x005E8D98
+		// Token: 0x0602D54C RID: 185676 RVA: 0x00634D74 File Offset: 0x00632F74
 		public IAdjustFixedCamera OptionAsIAdjustFixedCamera()
 		{
 			return this.Option<IAdjustFixedCamera>().Value;
 		}
 
-		// Token: 0x0602AE54 RID: 175700 RVA: 0x005EABB4 File Offset: 0x005E8DB4
+		// Token: 0x0602D54D RID: 185677 RVA: 0x00634D90 File Offset: 0x00632F90
 		public IAdjustFixedLookAtCamera OptionAsIAdjustFixedLookAtCamera()
 		{
 			return this.Option<IAdjustFixedLookAtCamera>().Value;
 		}
 
-		// Token: 0x0602AE55 RID: 175701 RVA: 0x005EABD0 File Offset: 0x005E8DD0
+		// Token: 0x0602D54E RID: 185678 RVA: 0x00634DAC File Offset: 0x00632FAC
 		public IAdjustFixedSurveillanceCamera OptionAsIAdjustFixedSurveillanceCamera()
 		{
 			return this.Option<IAdjustFixedSurveillanceCamera>().Value;
 		}
 
-		// Token: 0x0602AE56 RID: 175702 RVA: 0x005EABEC File Offset: 0x005E8DEC
+		// Token: 0x0602D54F RID: 185679 RVA: 0x00634DC8 File Offset: 0x00632FC8
 		public IAdjustHorizontalCamera OptionAsIAdjustHorizontalCamera()
 		{
 			return this.Option<IAdjustHorizontalCamera>().Value;
 		}
 
-		// Token: 0x0602AE57 RID: 175703 RVA: 0x005EAC08 File Offset: 0x005E8E08
+		// Token: 0x0602D550 RID: 185680 RVA: 0x00634DE4 File Offset: 0x00632FE4
 		public IAdjustZoneFollowCamera OptionAsIAdjustZoneFollowCamera()
 		{
 			return this.Option<IAdjustZoneFollowCamera>().Value;
 		}
 
-		// Token: 0x0602AE58 RID: 175704 RVA: 0x005EAC23 File Offset: 0x005E8E23
+		// Token: 0x0602D551 RID: 185681 RVA: 0x00634DFF File Offset: 0x00632FFF
 		public static Offset<IAdjustPlayerCamera> CreateIAdjustPlayerCamera(FlatBufferBuilder builder, TAdjustPlayerCameraOption Option_type = TAdjustPlayerCameraOption.NONE, int OptionOffset = 0)
 		{
 			builder.StartTable(2);
@@ -136,31 +136,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAdjustPlayerCamera.EndIAdjustPlayerCamera(builder);
 		}
 
-		// Token: 0x0602AE59 RID: 175705 RVA: 0x005EAC40 File Offset: 0x005E8E40
+		// Token: 0x0602D552 RID: 185682 RVA: 0x00634E1C File Offset: 0x0063301C
 		public static void StartIAdjustPlayerCamera(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602AE5A RID: 175706 RVA: 0x005EAC49 File Offset: 0x005E8E49
+		// Token: 0x0602D553 RID: 185683 RVA: 0x00634E25 File Offset: 0x00633025
 		public static void AddOptionType(FlatBufferBuilder builder, TAdjustPlayerCameraOption optionType)
 		{
 			builder.AddByte(0, (byte)optionType, 0);
 		}
 
-		// Token: 0x0602AE5B RID: 175707 RVA: 0x005EAC54 File Offset: 0x005E8E54
+		// Token: 0x0602D554 RID: 185684 RVA: 0x00634E30 File Offset: 0x00633030
 		public static void AddOption(FlatBufferBuilder builder, int optionOffset)
 		{
 			builder.AddOffset(1, optionOffset, 0);
 		}
 
-		// Token: 0x0602AE5C RID: 175708 RVA: 0x005EAC5F File Offset: 0x005E8E5F
+		// Token: 0x0602D555 RID: 185685 RVA: 0x00634E3B File Offset: 0x0063303B
 		public static Offset<IAdjustPlayerCamera> EndIAdjustPlayerCamera(FlatBufferBuilder builder)
 		{
 			return new Offset<IAdjustPlayerCamera>(builder.EndTable());
 		}
 
-		// Token: 0x0602AE5D RID: 175709 RVA: 0x005EAC6C File Offset: 0x005E8E6C
+		// Token: 0x0602D556 RID: 185686 RVA: 0x00634E48 File Offset: 0x00633048
 		public IAdjustPlayerCameraT UnPack()
 		{
 			IAdjustPlayerCameraT adjustPlayerCameraT = new IAdjustPlayerCameraT();
@@ -168,7 +168,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return adjustPlayerCameraT;
 		}
 
-		// Token: 0x0602AE5E RID: 175710 RVA: 0x005EAC88 File Offset: 0x005E8E88
+		// Token: 0x0602D557 RID: 185687 RVA: 0x00634E64 File Offset: 0x00633064
 		public void UnPackTo(IAdjustPlayerCameraT _o)
 		{
 			_o.Option = new TAdjustPlayerCameraOptionUnion();
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602AE5F RID: 175711 RVA: 0x005EAED8 File Offset: 0x005E90D8
+		// Token: 0x0602D558 RID: 185688 RVA: 0x006350B4 File Offset: 0x006332B4
 		public static Offset<IAdjustPlayerCamera> Pack(FlatBufferBuilder builder, IAdjustPlayerCameraT _o)
 		{
 			if (_o == null)
@@ -219,7 +219,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAdjustPlayerCamera.CreateIAdjustPlayerCamera(builder, option_type, optionOffset);
 		}
 
-		// Token: 0x0401062E RID: 67118
+		// Token: 0x04011435 RID: 70709
 		private Table __p;
 	}
 }

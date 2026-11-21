@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Card
 {
-	// Token: 0x020052BF RID: 21183
+	// Token: 0x0200428F RID: 17039
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaCardTweenLogic
 	{
-		// Token: 0x060362F6 RID: 221942 RVA: 0x00CD1C2C File Offset: 0x00CCFE2C
+		// Token: 0x0602B1F1 RID: 176625 RVA: 0x00C1F354 File Offset: 0x00C1D554
 		private void CreateTween()
 		{
 			this.LocationXTween = new LguiFloatTween();
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card
 			});
 		}
 
-		// Token: 0x060362F7 RID: 221943 RVA: 0x00CD1CAB File Offset: 0x00CCFEAB
+		// Token: 0x0602B1F2 RID: 176626 RVA: 0x00C1F3D3 File Offset: 0x00C1D5D3
 		private void HandleCompleteTween()
 		{
 			if (this.LocationXTween.IsFinished && this.LocationYTween.IsFinished)
@@ -60,21 +60,21 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card
 			}
 		}
 
-		// Token: 0x060362F8 RID: 221944 RVA: 0x00CD1CD7 File Offset: 0x00CCFED7
+		// Token: 0x0602B1F3 RID: 176627 RVA: 0x00C1F3FF File Offset: 0x00C1D5FF
 		public void Init(UUIItem cardItem)
 		{
 			this.CardItem = cardItem;
 			this.CreateTween();
 		}
 
-		// Token: 0x060362F9 RID: 221945 RVA: 0x00CD1CE6 File Offset: 0x00CCFEE6
+		// Token: 0x0602B1F4 RID: 176628 RVA: 0x00C1F40E File Offset: 0x00C1D60E
 		public void Destroy()
 		{
 			this.LocationXTween.Destroy();
 			this.LocationYTween.Destroy();
 		}
 
-		// Token: 0x060362FA RID: 221946 RVA: 0x00CD1D00 File Offset: 0x00CCFF00
+		// Token: 0x0602B1F5 RID: 176629 RVA: 0x00C1F428 File Offset: 0x00C1D628
 		public void PlayLocationByItem(UUIItem fromItem, UUIItem toItem, [Nullable(2)] PhantomArenaTweenLogic data = null)
 		{
 			Vector fromPos = this.FromPos;
@@ -94,25 +94,25 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card
 			this.LocationYTween.PlayTween((float)this.FromPos.Z, (float)this.ToPos.Z, valueOrDefault, (data != null) ? data.LocationCurveY : null);
 		}
 
-		// Token: 0x0401CAA3 RID: 117411
+		// Token: 0x040174D8 RID: 95448
 		private UUIItem CardItem;
 
-		// Token: 0x0401CAA4 RID: 117412
+		// Token: 0x040174D9 RID: 95449
 		protected Vector FromPos = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401CAA5 RID: 117413
+		// Token: 0x040174DA RID: 95450
 		protected Vector ToPos = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401CAA6 RID: 117414
+		// Token: 0x040174DB RID: 95451
 		protected Vector CardWorldPos = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401CAA7 RID: 117415
+		// Token: 0x040174DC RID: 95452
 		protected LguiFloatTween LocationXTween;
 
-		// Token: 0x0401CAA8 RID: 117416
+		// Token: 0x040174DD RID: 95453
 		protected LguiFloatTween LocationYTween;
 
-		// Token: 0x0401CAA9 RID: 117417
+		// Token: 0x040174DE RID: 95454
 		private Action CompleteCallback;
 	}
 }

@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x020029A1 RID: 10657
+	// Token: 0x02000863 RID: 2147
 	public sealed class FOnGameWindowCloseButtonClickedDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060276D7 RID: 161495 RVA: 0x003C20FE File Offset: 0x003C02FE
+		// Token: 0x0600BAD6 RID: 47830 RVA: 0x0012B105 File Offset: 0x00129305
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnGameWindowCloseButtonClickedDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x060276D8 RID: 161496 RVA: 0x003C210A File Offset: 0x003C030A
+		// Token: 0x0600BAD7 RID: 47831 RVA: 0x0012B111 File Offset: 0x00129311
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (UWidgetBlueprintLibrary.__OnGameWindowCloseButtonClickedDelegate__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return UWidgetBlueprintLibrary.__OnGameWindowCloseButtonClickedDelegate__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x060276D9 RID: 161497 RVA: 0x003C212D File Offset: 0x003C032D
+		// Token: 0x0600BAD8 RID: 47832 RVA: 0x0012B134 File Offset: 0x00129334
 		public FOnGameWindowCloseButtonClickedDelegate()
 		{
 		}
 
-		// Token: 0x060276DA RID: 161498 RVA: 0x003C2135 File Offset: 0x003C0335
+		// Token: 0x0600BAD9 RID: 47833 RVA: 0x0012B13C File Offset: 0x0012933C
 		[NullableContext(2)]
 		public FOnGameWindowCloseButtonClickedDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060276DB RID: 161499 RVA: 0x003C213F File Offset: 0x003C033F
+		// Token: 0x0600BADA RID: 47834 RVA: 0x0012B146 File Offset: 0x00129346
 		public FOnGameWindowCloseButtonClickedDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060276DC RID: 161500 RVA: 0x003C214A File Offset: 0x003C034A
+		// Token: 0x0600BADB RID: 47835 RVA: 0x0012B151 File Offset: 0x00129351
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060276DD RID: 161501 RVA: 0x003C217C File Offset: 0x003C037C
+		// Token: 0x0600BADC RID: 47836 RVA: 0x0012B183 File Offset: 0x00129383
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FOnGameWindowCloseButtonClickedDelegate.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnGameWindowCloseButtonClickedDelegate.RegisterId);
 		}
 
-		// Token: 0x060276DE RID: 161502 RVA: 0x003C21B6 File Offset: 0x003C03B6
+		// Token: 0x0600BADD RID: 47837 RVA: 0x0012B1BD File Offset: 0x001293BD
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x060276DF RID: 161503 RVA: 0x003C21C4 File Offset: 0x003C03C4
+		// Token: 0x0600BADE RID: 47838 RVA: 0x0012B1C8 File Offset: 0x001293C8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,18 +83,18 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x04015A44 RID: 88644
+		// Token: 0x040054B4 RID: 21684
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/UMG.WidgetBlueprintLibrary:OnGameWindowCloseButtonClickedDelegate__DelegateSignature";
 
-		// Token: 0x04015A45 RID: 88645
+		// Token: 0x040054B5 RID: 21685
 		private static int RegisterId;
 
-		// Token: 0x02003B9B RID: 15259
+		// Token: 0x020013FD RID: 5117
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017D78 RID: 97656
+			// Token: 0x040068A7 RID: 26791
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

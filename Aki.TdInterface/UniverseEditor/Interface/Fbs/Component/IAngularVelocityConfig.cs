@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EA1 RID: 20129
+	// Token: 0x020053CA RID: 21450
 	public struct IAngularVelocityConfig : IFlatbufferObject
 	{
-		// Token: 0x17009059 RID: 36953
-		// (get) Token: 0x0601FAE6 RID: 129766 RVA: 0x004694F0 File Offset: 0x004676F0
+		// Token: 0x170097B8 RID: 38840
+		// (get) Token: 0x060217DB RID: 137179 RVA: 0x0049E754 File Offset: 0x0049C954
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FAE7 RID: 129767 RVA: 0x004694FD File Offset: 0x004676FD
+		// Token: 0x060217DC RID: 137180 RVA: 0x0049E761 File Offset: 0x0049C961
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601FAE8 RID: 129768 RVA: 0x00469504 File Offset: 0x00467704
+		// Token: 0x060217DD RID: 137181 RVA: 0x0049E768 File Offset: 0x0049C968
 		public static IAngularVelocityConfig GetRootAsIAngularVelocityConfig(ByteBuffer _bb)
 		{
 			return IAngularVelocityConfig.GetRootAsIAngularVelocityConfig(_bb, default(IAngularVelocityConfig));
 		}
 
-		// Token: 0x0601FAE9 RID: 129769 RVA: 0x00469520 File Offset: 0x00467720
+		// Token: 0x060217DE RID: 137182 RVA: 0x0049E784 File Offset: 0x0049C984
 		public static IAngularVelocityConfig GetRootAsIAngularVelocityConfig(ByteBuffer _bb, IAngularVelocityConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601FAEA RID: 129770 RVA: 0x0046953D File Offset: 0x0046773D
+		// Token: 0x060217DF RID: 137183 RVA: 0x0049E7A1 File Offset: 0x0049C9A1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601FAEB RID: 129771 RVA: 0x0046954C File Offset: 0x0046774C
+		// Token: 0x060217E0 RID: 137184 RVA: 0x0049E7B0 File Offset: 0x0049C9B0
 		public IAngularVelocityConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700905A RID: 36954
-		// (get) Token: 0x0601FAEC RID: 129772 RVA: 0x0046955C File Offset: 0x0046775C
+		// Token: 0x170097B9 RID: 38841
+		// (get) Token: 0x060217E1 RID: 137185 RVA: 0x0049E7C0 File Offset: 0x0049C9C0
 		public IRangedRandom? X
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700905B RID: 36955
-		// (get) Token: 0x0601FAED RID: 129773 RVA: 0x004695BC File Offset: 0x004677BC
+		// Token: 0x170097BA RID: 38842
+		// (get) Token: 0x060217E2 RID: 137186 RVA: 0x0049E820 File Offset: 0x0049CA20
 		public IRangedRandom? Y
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700905C RID: 36956
-		// (get) Token: 0x0601FAEE RID: 129774 RVA: 0x0046961C File Offset: 0x0046781C
+		// Token: 0x170097BB RID: 38843
+		// (get) Token: 0x060217E3 RID: 137187 RVA: 0x0049E880 File Offset: 0x0049CA80
 		public IRangedRandom? Z
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FAEF RID: 129775 RVA: 0x00469679 File Offset: 0x00467879
+		// Token: 0x060217E4 RID: 137188 RVA: 0x0049E8DD File Offset: 0x0049CADD
 		public static Offset<IAngularVelocityConfig> CreateIAngularVelocityConfig(FlatBufferBuilder builder, Offset<IRangedRandom> XOffset = default(Offset<IRangedRandom>), Offset<IRangedRandom> YOffset = default(Offset<IRangedRandom>), Offset<IRangedRandom> ZOffset = default(Offset<IRangedRandom>))
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAngularVelocityConfig.EndIAngularVelocityConfig(builder);
 		}
 
-		// Token: 0x0601FAF0 RID: 129776 RVA: 0x0046969D File Offset: 0x0046789D
+		// Token: 0x060217E5 RID: 137189 RVA: 0x0049E901 File Offset: 0x0049CB01
 		public static void StartIAngularVelocityConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601FAF1 RID: 129777 RVA: 0x004696A6 File Offset: 0x004678A6
+		// Token: 0x060217E6 RID: 137190 RVA: 0x0049E90A File Offset: 0x0049CB0A
 		public static void AddX(FlatBufferBuilder builder, Offset<IRangedRandom> xOffset)
 		{
 			builder.AddOffset(0, xOffset.Value, 0);
 		}
 
-		// Token: 0x0601FAF2 RID: 129778 RVA: 0x004696B6 File Offset: 0x004678B6
+		// Token: 0x060217E7 RID: 137191 RVA: 0x0049E91A File Offset: 0x0049CB1A
 		public static void AddY(FlatBufferBuilder builder, Offset<IRangedRandom> yOffset)
 		{
 			builder.AddOffset(1, yOffset.Value, 0);
 		}
 
-		// Token: 0x0601FAF3 RID: 129779 RVA: 0x004696C6 File Offset: 0x004678C6
+		// Token: 0x060217E8 RID: 137192 RVA: 0x0049E92A File Offset: 0x0049CB2A
 		public static void AddZ(FlatBufferBuilder builder, Offset<IRangedRandom> zOffset)
 		{
 			builder.AddOffset(2, zOffset.Value, 0);
 		}
 
-		// Token: 0x0601FAF4 RID: 129780 RVA: 0x004696D6 File Offset: 0x004678D6
+		// Token: 0x060217E9 RID: 137193 RVA: 0x0049E93A File Offset: 0x0049CB3A
 		public static Offset<IAngularVelocityConfig> EndIAngularVelocityConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IAngularVelocityConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601FAF5 RID: 129781 RVA: 0x004696E4 File Offset: 0x004678E4
+		// Token: 0x060217EA RID: 137194 RVA: 0x0049E948 File Offset: 0x0049CB48
 		public IAngularVelocityConfigT UnPack()
 		{
 			IAngularVelocityConfigT angularVelocityConfigT = new IAngularVelocityConfigT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return angularVelocityConfigT;
 		}
 
-		// Token: 0x0601FAF6 RID: 129782 RVA: 0x00469700 File Offset: 0x00467900
+		// Token: 0x060217EB RID: 137195 RVA: 0x0049E964 File Offset: 0x0049CB64
 		public void UnPackTo(IAngularVelocityConfigT _o)
 		{
 			_o.X = ((this.X != null) ? this.X.Value.UnPack() : null);
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.Z = ((this.Z != null) ? this.Z.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601FAF7 RID: 129783 RVA: 0x0046979C File Offset: 0x0046799C
+		// Token: 0x060217EC RID: 137196 RVA: 0x0049EA00 File Offset: 0x0049CC00
 		public static Offset<IAngularVelocityConfig> Pack(FlatBufferBuilder builder, IAngularVelocityConfigT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAngularVelocityConfig.CreateIAngularVelocityConfig(builder, xoffset, yoffset, zoffset);
 		}
 
-		// Token: 0x0400DC7B RID: 56443
+		// Token: 0x0400E816 RID: 59414
 		private Table __p;
 	}
 }

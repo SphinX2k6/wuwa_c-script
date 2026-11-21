@@ -6,16 +6,16 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E54 RID: 7764
+// Token: 0x02001316 RID: 4886
 public class HelpView : UiViewBase, IExtraUiPopFrameType
 {
-	// Token: 0x0600EC10 RID: 60432 RVA: 0x003808FF File Offset: 0x0037EAFF
+	// Token: 0x0600C02F RID: 49199 RVA: 0x0038C5AD File Offset: 0x0038A7AD
 	[NullableContext(1)]
 	public HelpView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600EC11 RID: 60433 RVA: 0x00380914 File Offset: 0x0037EB14
+	// Token: 0x0600C030 RID: 49200 RVA: 0x0038C5C4 File Offset: 0x0038A7C4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -31,14 +31,14 @@ public class HelpView : UiViewBase, IExtraUiPopFrameType
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600EC12 RID: 60434 RVA: 0x0038099E File Offset: 0x0037EB9E
+	// Token: 0x0600C031 RID: 49201 RVA: 0x0038C64E File Offset: 0x0038A84E
 	protected override void OnStart()
 	{
 		base.GetItem(2).SetUIActive(false);
 		this.Init();
 	}
 
-	// Token: 0x0600EC13 RID: 60435 RVA: 0x003809B4 File Offset: 0x0037EBB4
+	// Token: 0x0600C032 RID: 49202 RVA: 0x0038C664 File Offset: 0x0038A864
 	[NullableContext(2)]
 	public EUiBehaviourPopType? GetExtraPopFrameType(object param)
 	{
@@ -53,7 +53,7 @@ public class HelpView : UiViewBase, IExtraUiPopFrameType
 		return null;
 	}
 
-	// Token: 0x0600EC14 RID: 60436 RVA: 0x00380A04 File Offset: 0x0037EC04
+	// Token: 0x0600C033 RID: 49203 RVA: 0x0038C6B4 File Offset: 0x0038A8B4
 	private void Init()
 	{
 		int groupId = (int)this.OpenParam;
@@ -88,18 +88,18 @@ public class HelpView : UiViewBase, IExtraUiPopFrameType
 		}
 	}
 
-	// Token: 0x04006D76 RID: 28022
+	// Token: 0x04006E57 RID: 28247
 	[Nullable(1)]
 	private readonly List<Paragraph> Paragraphs = new List<Paragraph>();
 
-	// Token: 0x02008407 RID: 33799
+	// Token: 0x0200758C RID: 30092
 	private enum EHelpViewComponents
 	{
-		// Token: 0x0402AF9A RID: 176026
+		// Token: 0x040262BE RID: 156350
 		Title,
-		// Token: 0x0402AF9B RID: 176027
+		// Token: 0x040262BF RID: 156351
 		Content,
-		// Token: 0x0402AF9C RID: 176028
+		// Token: 0x040262C0 RID: 156352
 		ParagraphItem
 	}
 }

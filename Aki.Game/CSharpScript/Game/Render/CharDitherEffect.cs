@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x0200459F RID: 17823
+	// Token: 0x020034C7 RID: 13511
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharDitherEffect : CharRenderBase
 	{
-		// Token: 0x0602DF49 RID: 188233 RVA: 0x00A91E2C File Offset: 0x00A9002C
+		// Token: 0x06022633 RID: 140851 RVA: 0x009BE04C File Offset: 0x009BC24C
 		public override void Start()
 		{
 			if (this.RenderComponent.UseMaterialContainerV2)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Render
 			base.OnInitSuccess();
 		}
 
-		// Token: 0x0602DF4A RID: 188234 RVA: 0x00A91EFC File Offset: 0x00A900FC
+		// Token: 0x06022634 RID: 140852 RVA: 0x009BE11C File Offset: 0x009BC31C
 		public override void OnResetRenderState()
 		{
 			this.SetDitherRate(1f);
@@ -48,12 +48,12 @@ namespace CSharpScript.Game.Render
 			this.DitherTypeMap.Clear();
 		}
 
-		// Token: 0x0602DF4B RID: 188235 RVA: 0x00A91F22 File Offset: 0x00A90122
+		// Token: 0x06022635 RID: 140853 RVA: 0x009BE142 File Offset: 0x009BC342
 		public void UpdateNpcDitherComponent()
 		{
 		}
 
-		// Token: 0x0602DF4C RID: 188236 RVA: 0x00A91F24 File Offset: 0x00A90124
+		// Token: 0x06022636 RID: 140854 RVA: 0x009BE144 File Offset: 0x009BC344
 		public void SetDitherEffect(float ditherRate, ECharacterDitherType ditherType)
 		{
 			if (ditherRate == this.CachedDitherRate)
@@ -100,8 +100,8 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF4D RID: 188237 RVA: 0x00A9202C File Offset: 0x00A9022C
-		public void SetDitherMask(List<EKuroCharMeshPart> mask, bool onlyDitherInMainPass)
+		// Token: 0x06022637 RID: 140855 RVA: 0x009BE24C File Offset: 0x009BC44C
+		public void SetDitherMask(IEnumerable<EKuroCharMeshPart> mask, bool onlyDitherInMainPass)
 		{
 			this.DitherMask.Clear();
 			this.DitherMask.AddRange(mask);
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF4E RID: 188238 RVA: 0x00A9206C File Offset: 0x00A9026C
+		// Token: 0x06022638 RID: 140856 RVA: 0x009BE28C File Offset: 0x009BC48C
 		public void RemoveDitherEffect()
 		{
 			this.DoRemoveDither();
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Render
 			this.IsDithering = false;
 		}
 
-		// Token: 0x0602DF4F RID: 188239 RVA: 0x00A92086 File Offset: 0x00A90286
+		// Token: 0x06022639 RID: 140857 RVA: 0x009BE2A6 File Offset: 0x009BC4A6
 		public void TempRemoveDither()
 		{
 			if (this.IsDithering)
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF50 RID: 188240 RVA: 0x00A92096 File Offset: 0x00A90296
+		// Token: 0x0602263A RID: 140858 RVA: 0x009BE2B6 File Offset: 0x009BC4B6
 		public void TempRecoverDither()
 		{
 			if (this.IsDithering)
@@ -140,14 +140,14 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF51 RID: 188241 RVA: 0x00A920A6 File Offset: 0x00A902A6
+		// Token: 0x0602263B RID: 140859 RVA: 0x009BE2C6 File Offset: 0x009BC4C6
 		private void EnableDitherEffect()
 		{
 			this.DoEnableDither();
 			this.IsDithering = true;
 		}
 
-		// Token: 0x0602DF52 RID: 188242 RVA: 0x00A920B5 File Offset: 0x00A902B5
+		// Token: 0x0602263C RID: 140860 RVA: 0x009BE2D5 File Offset: 0x009BC4D5
 		public override void PreBodyInfoRuntimeInit(FName bodyName)
 		{
 			if (this.IsDithering)
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF53 RID: 188243 RVA: 0x00A920C5 File Offset: 0x00A902C5
+		// Token: 0x0602263D RID: 140861 RVA: 0x009BE2E5 File Offset: 0x009BC4E5
 		public override void PostBodyInfoRuntimeInit(FName bodyName)
 		{
 			if (this.IsDithering)
@@ -166,24 +166,24 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF54 RID: 188244 RVA: 0x00A920E1 File Offset: 0x00A902E1
+		// Token: 0x0602263E RID: 140862 RVA: 0x009BE301 File Offset: 0x009BC501
 		public override void Update()
 		{
 		}
 
-		// Token: 0x0602DF55 RID: 188245 RVA: 0x00A920E3 File Offset: 0x00A902E3
+		// Token: 0x0602263F RID: 140863 RVA: 0x009BE303 File Offset: 0x009BC503
 		public override int GetComponentId()
 		{
 			return 3;
 		}
 
-		// Token: 0x0602DF56 RID: 188246 RVA: 0x00A920E6 File Offset: 0x00A902E6
+		// Token: 0x06022640 RID: 140864 RVA: 0x009BE306 File Offset: 0x009BC506
 		public float GetDitherRate()
 		{
 			return this.CachedDitherRate;
 		}
 
-		// Token: 0x0602DF57 RID: 188247 RVA: 0x00A920F0 File Offset: 0x00A902F0
+		// Token: 0x06022641 RID: 140865 RVA: 0x009BE310 File Offset: 0x009BC510
 		private void SetDitherRate(float ditherRate)
 		{
 			this.DitheringRate = MathUtils.Instance.RangeClamp(ditherRate, 0f, 1f, this.DitherOutRangeA, this.DitherOutRangeB);
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Render
 			this.CachedDitherRate = ditherRate;
 		}
 
-		// Token: 0x0602DF58 RID: 188248 RVA: 0x00A92154 File Offset: 0x00A90354
+		// Token: 0x06022642 RID: 140866 RVA: 0x009BE374 File Offset: 0x009BC574
 		private unsafe void DoEnableDither()
 		{
 			ECharacterRenderingType? renderType = base.GetRenderingComponent().RenderType;
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF59 RID: 188249 RVA: 0x00A92318 File Offset: 0x00A90518
+		// Token: 0x06022643 RID: 140867 RVA: 0x009BE538 File Offset: 0x009BC738
 		private void DoSetDitherParams(float value)
 		{
 			if (this.MaterialContainerV2 != null)
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF5A RID: 188250 RVA: 0x00A923DC File Offset: 0x00A905DC
+		// Token: 0x06022644 RID: 140868 RVA: 0x009BE5FC File Offset: 0x009BC7FC
 		private unsafe void DoRemoveDither()
 		{
 			Log instance = Log.Instance;
@@ -312,46 +312,46 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF5B RID: 188251 RVA: 0x00A9253B File Offset: 0x00A9073B
+		// Token: 0x06022645 RID: 140869 RVA: 0x009BE75B File Offset: 0x009BC95B
 		public override string GetStatName()
 		{
 			return "CharDitherEffect";
 		}
 
-		// Token: 0x04018891 RID: 100497
+		// Token: 0x04012ECC RID: 77516
 		[Nullable(2)]
 		public CharMaterialContainer MaterialContainer;
 
-		// Token: 0x04018892 RID: 100498
+		// Token: 0x04012ECD RID: 77517
 		[Nullable(2)]
 		public CharMaterialContainerV2 MaterialContainerV2;
 
-		// Token: 0x04018893 RID: 100499
+		// Token: 0x04012ECE RID: 77518
 		private float DitheringRate = --0f;
 
-		// Token: 0x04018894 RID: 100500
+		// Token: 0x04012ECF RID: 77519
 		private float DitherOutRangeA = --0f;
 
-		// Token: 0x04018895 RID: 100501
+		// Token: 0x04012ED0 RID: 77520
 		private float DitherOutRangeB = --0f;
 
-		// Token: 0x04018896 RID: 100502
+		// Token: 0x04012ED1 RID: 77521
 		private ECharacterDitherType DitherType;
 
-		// Token: 0x04018897 RID: 100503
+		// Token: 0x04012ED2 RID: 77522
 		private float CachedDitherRate = --0f;
 
-		// Token: 0x04018898 RID: 100504
+		// Token: 0x04012ED3 RID: 77523
 		private bool IsDithering;
 
-		// Token: 0x04018899 RID: 100505
+		// Token: 0x04012ED4 RID: 77524
 		[Nullable(2)]
 		private Dictionary<ECharacterDitherType, bool> DitherTypeMap;
 
-		// Token: 0x0401889A RID: 100506
+		// Token: 0x04012ED5 RID: 77525
 		private bool OnlyDitherInMainPass;
 
-		// Token: 0x0401889B RID: 100507
+		// Token: 0x04012ED6 RID: 77526
 		private readonly List<EKuroCharMeshPart> DitherMask = new List<EKuroCharMeshPart>();
 	}
 }

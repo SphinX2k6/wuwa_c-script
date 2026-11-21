@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001F52 RID: 8018
+// Token: 0x02001414 RID: 5140
 [NullableContext(2)]
 [Nullable(0)]
 public class RogueScoreMachine
 {
-	// Token: 0x0600F830 RID: 63536 RVA: 0x003C0AFA File Offset: 0x003BECFA
+	// Token: 0x0600CC4F RID: 52303 RVA: 0x003CC5E6 File Offset: 0x003CA7E6
 	[NullableContext(1)]
 	public void SetUpdateCallback(Action<float, BattleScoreLevelConf?> updateScore, Action playUpAnim)
 	{
@@ -15,7 +15,7 @@ public class RogueScoreMachine
 		this.PlayUpAnim = playUpAnim;
 	}
 
-	// Token: 0x0600F831 RID: 63537 RVA: 0x003C0B0C File Offset: 0x003BED0C
+	// Token: 0x0600CC50 RID: 52304 RVA: 0x003CC5F8 File Offset: 0x003CA7F8
 	public void UpdateTargetScore(float score, BattleScoreLevelConf? scoreLevelConfig)
 	{
 		if (scoreLevelConfig != null && score >= (float)scoreLevelConfig.Value.LowerUpperLimits(1))
@@ -95,7 +95,7 @@ public class RogueScoreMachine
 		}
 	}
 
-	// Token: 0x0600F832 RID: 63538 RVA: 0x003C0CEC File Offset: 0x003BEEEC
+	// Token: 0x0600CC51 RID: 52305 RVA: 0x003CC7D8 File Offset: 0x003CA9D8
 	private void JumpToTarget()
 	{
 		this.CurScore = this.TargetScore;
@@ -109,7 +109,7 @@ public class RogueScoreMachine
 		updateScore(this.CurScore, this.CurScoreActionConfig);
 	}
 
-	// Token: 0x0600F833 RID: 63539 RVA: 0x003C0D38 File Offset: 0x003BEF38
+	// Token: 0x0600CC52 RID: 52306 RVA: 0x003CC824 File Offset: 0x003CAA24
 	public void Tick(float delta)
 	{
 		if (this.Speed == 0f || this.UpdateFrame == Time.Instance.Frame)
@@ -156,7 +156,7 @@ public class RogueScoreMachine
 		updateScore(this.CurScore, this.CurScoreActionConfig);
 	}
 
-	// Token: 0x0600F834 RID: 63540 RVA: 0x003C0ED5 File Offset: 0x003BF0D5
+	// Token: 0x0600CC53 RID: 52307 RVA: 0x003CC9C1 File Offset: 0x003CABC1
 	public void ResetScore()
 	{
 		this.CurScore = 0f;
@@ -165,36 +165,36 @@ public class RogueScoreMachine
 		this.TargetScoreActionConfig = null;
 	}
 
-	// Token: 0x04007327 RID: 29479
+	// Token: 0x04007408 RID: 29704
 	private const int SERVER_SCORE_UP_INTERVAL = 300;
 
-	// Token: 0x04007328 RID: 29480
+	// Token: 0x04007409 RID: 29705
 	private const int SERVER_SCORE_DOWN_INTERVAL = 1000;
 
-	// Token: 0x04007329 RID: 29481
+	// Token: 0x0400740A RID: 29706
 	private const int MAX_SCORE_DIFF = 1000;
 
-	// Token: 0x0400732A RID: 29482
+	// Token: 0x0400740B RID: 29707
 	private Action<float, BattleScoreLevelConf?> UpdateScore;
 
-	// Token: 0x0400732B RID: 29483
+	// Token: 0x0400740C RID: 29708
 	private Action PlayUpAnim;
 
-	// Token: 0x0400732C RID: 29484
+	// Token: 0x0400740D RID: 29709
 	private int UpdateFrame;
 
-	// Token: 0x0400732D RID: 29485
+	// Token: 0x0400740E RID: 29710
 	private float CurScore;
 
-	// Token: 0x0400732E RID: 29486
+	// Token: 0x0400740F RID: 29711
 	private float TargetScore;
 
-	// Token: 0x0400732F RID: 29487
+	// Token: 0x04007410 RID: 29712
 	private BattleScoreLevelConf? CurScoreActionConfig;
 
-	// Token: 0x04007330 RID: 29488
+	// Token: 0x04007411 RID: 29713
 	private BattleScoreLevelConf? TargetScoreActionConfig;
 
-	// Token: 0x04007331 RID: 29489
+	// Token: 0x04007412 RID: 29714
 	private float Speed;
 }

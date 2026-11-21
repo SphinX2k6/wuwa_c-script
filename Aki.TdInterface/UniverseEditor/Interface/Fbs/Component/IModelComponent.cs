@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200555A RID: 21850
+	// Token: 0x02005AEC RID: 23276
 	public struct IModelComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A15B RID: 41307
-		// (get) Token: 0x06024205 RID: 147973 RVA: 0x004FD801 File Offset: 0x004FBA01
+		// Token: 0x1700A9CF RID: 43471
+		// (get) Token: 0x060263A0 RID: 156576 RVA: 0x0053CEE9 File Offset: 0x0053B0E9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024206 RID: 147974 RVA: 0x004FD80E File Offset: 0x004FBA0E
+		// Token: 0x060263A1 RID: 156577 RVA: 0x0053CEF6 File Offset: 0x0053B0F6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06024207 RID: 147975 RVA: 0x004FD818 File Offset: 0x004FBA18
+		// Token: 0x060263A2 RID: 156578 RVA: 0x0053CF00 File Offset: 0x0053B100
 		public static IModelComponent GetRootAsIModelComponent(ByteBuffer _bb)
 		{
 			return IModelComponent.GetRootAsIModelComponent(_bb, default(IModelComponent));
 		}
 
-		// Token: 0x06024208 RID: 147976 RVA: 0x004FD834 File Offset: 0x004FBA34
+		// Token: 0x060263A3 RID: 156579 RVA: 0x0053CF1C File Offset: 0x0053B11C
 		public static IModelComponent GetRootAsIModelComponent(ByteBuffer _bb, IModelComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06024209 RID: 147977 RVA: 0x004FD851 File Offset: 0x004FBA51
+		// Token: 0x060263A4 RID: 156580 RVA: 0x0053CF39 File Offset: 0x0053B139
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602420A RID: 147978 RVA: 0x004FD860 File Offset: 0x004FBA60
+		// Token: 0x060263A5 RID: 156581 RVA: 0x0053CF48 File Offset: 0x0053B148
 		public IModelComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A15C RID: 41308
-		// (get) Token: 0x0602420B RID: 147979 RVA: 0x004FD870 File Offset: 0x004FBA70
+		// Token: 0x1700A9D0 RID: 43472
+		// (get) Token: 0x060263A6 RID: 156582 RVA: 0x0053CF58 File Offset: 0x0053B158
 		public bool Disabled
 		{
 			get
@@ -60,8 +60,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A15D RID: 41309
-		// (get) Token: 0x0602420C RID: 147980 RVA: 0x004FD8B0 File Offset: 0x004FBAB0
+		// Token: 0x1700A9D1 RID: 43473
+		// (get) Token: 0x060263A7 RID: 156583 RVA: 0x0053CF98 File Offset: 0x0053B198
 		public TModelType ModelTypeType
 		{
 			get
@@ -75,7 +75,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602420D RID: 147981 RVA: 0x004FD8EC File Offset: 0x004FBAEC
+		// Token: 0x060263A8 RID: 156584 RVA: 0x0053CFD4 File Offset: 0x0053B1D4
 		public TTable? ModelType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -86,32 +86,32 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602420E RID: 147982 RVA: 0x004FD930 File Offset: 0x004FBB30
+		// Token: 0x060263A9 RID: 156585 RVA: 0x0053D018 File Offset: 0x0053B218
 		public IAnimalModel ModelTypeAsIAnimalModel()
 		{
 			return this.ModelType<IAnimalModel>().Value;
 		}
 
-		// Token: 0x0602420F RID: 147983 RVA: 0x004FD94C File Offset: 0x004FBB4C
+		// Token: 0x060263AA RID: 156586 RVA: 0x0053D034 File Offset: 0x0053B234
 		public ILevelPrefab ModelTypeAsILevelPrefab()
 		{
 			return this.ModelType<ILevelPrefab>().Value;
 		}
 
-		// Token: 0x06024210 RID: 147984 RVA: 0x004FD968 File Offset: 0x004FBB68
+		// Token: 0x060263AB RID: 156587 RVA: 0x0053D050 File Offset: 0x0053B250
 		public IModelId ModelTypeAsIModelId()
 		{
 			return this.ModelType<IModelId>().Value;
 		}
 
-		// Token: 0x06024211 RID: 147985 RVA: 0x004FD984 File Offset: 0x004FBB84
+		// Token: 0x060263AC RID: 156588 RVA: 0x0053D06C File Offset: 0x0053B26C
 		public INpcModel ModelTypeAsINpcModel()
 		{
 			return this.ModelType<INpcModel>().Value;
 		}
 
-		// Token: 0x1700A15E RID: 41310
-		// (get) Token: 0x06024212 RID: 147986 RVA: 0x004FD9A0 File Offset: 0x004FBBA0
+		// Token: 0x1700A9D2 RID: 43474
+		// (get) Token: 0x060263AD RID: 156589 RVA: 0x0053D088 File Offset: 0x0053B288
 		public int HalfHeight
 		{
 			get
@@ -125,8 +125,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A15F RID: 41311
-		// (get) Token: 0x06024213 RID: 147987 RVA: 0x004FD9E0 File Offset: 0x004FBBE0
+		// Token: 0x1700A9D3 RID: 43475
+		// (get) Token: 0x060263AE RID: 156590 RVA: 0x0053D0C8 File Offset: 0x0053B2C8
 		public int TrackHeight
 		{
 			get
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024214 RID: 147988 RVA: 0x004FDA20 File Offset: 0x004FBC20
+		// Token: 0x060263AF RID: 156591 RVA: 0x0053D108 File Offset: 0x0053B308
 		public int PerformanceTags(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -151,8 +151,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700A160 RID: 41312
-		// (get) Token: 0x06024215 RID: 147989 RVA: 0x004FDA60 File Offset: 0x004FBC60
+		// Token: 0x1700A9D4 RID: 43476
+		// (get) Token: 0x060263B0 RID: 156592 RVA: 0x0053D148 File Offset: 0x0053B348
 		public int PerformanceTagsLength
 		{
 			get
@@ -166,20 +166,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024216 RID: 147990 RVA: 0x004FDA8C File Offset: 0x004FBC8C
+		// Token: 0x060263B1 RID: 156593 RVA: 0x0053D174 File Offset: 0x0053B374
 		public Span<int> GetPerformanceTagsBytes()
 		{
 			return this.__p.__vector_as_span<int>(14, 4);
 		}
 
-		// Token: 0x06024217 RID: 147991 RVA: 0x004FDA9C File Offset: 0x004FBC9C
+		// Token: 0x060263B2 RID: 156594 RVA: 0x0053D184 File Offset: 0x0053B384
 		public int[] GetPerformanceTagsArray()
 		{
 			return this.__p.__vector_as_array<int>(14);
 		}
 
-		// Token: 0x1700A161 RID: 41313
-		// (get) Token: 0x06024218 RID: 147992 RVA: 0x004FDAAC File Offset: 0x004FBCAC
+		// Token: 0x1700A9D5 RID: 43477
+		// (get) Token: 0x060263B3 RID: 156595 RVA: 0x0053D194 File Offset: 0x0053B394
 		public bool AoiFadeOut
 		{
 			get
@@ -189,8 +189,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A162 RID: 41314
-		// (get) Token: 0x06024219 RID: 147993 RVA: 0x004FDAEC File Offset: 0x004FBCEC
+		// Token: 0x1700A9D6 RID: 43478
+		// (get) Token: 0x060263B4 RID: 156596 RVA: 0x0053D1D4 File Offset: 0x0053B3D4
 		public string PerformanceFaceSkeletalMeshPath
 		{
 			get
@@ -204,20 +204,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602421A RID: 147994 RVA: 0x004FDB24 File Offset: 0x004FBD24
+		// Token: 0x060263B5 RID: 156597 RVA: 0x0053D20C File Offset: 0x0053B40C
 		public Span<byte> GetPerformanceFaceSkeletalMeshPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x0602421B RID: 147995 RVA: 0x004FDB34 File Offset: 0x004FBD34
+		// Token: 0x060263B6 RID: 156598 RVA: 0x0053D21C File Offset: 0x0053B41C
 		public byte[] GetPerformanceFaceSkeletalMeshPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(18);
 		}
 
-		// Token: 0x1700A163 RID: 41315
-		// (get) Token: 0x0602421C RID: 147996 RVA: 0x004FDB44 File Offset: 0x004FBD44
+		// Token: 0x1700A9D7 RID: 43479
+		// (get) Token: 0x060263B7 RID: 156599 RVA: 0x0053D22C File Offset: 0x0053B42C
 		public bool IsUseSeqFace
 		{
 			get
@@ -227,8 +227,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A164 RID: 41316
-		// (get) Token: 0x0602421D RID: 147997 RVA: 0x004FDB84 File Offset: 0x004FBD84
+		// Token: 0x1700A9D8 RID: 43480
+		// (get) Token: 0x060263B8 RID: 156600 RVA: 0x0053D26C File Offset: 0x0053B46C
 		public EAbpAnimScheme AbpAnimScheme
 		{
 			get
@@ -236,14 +236,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				int num = this.__p.__offset(22);
 				if (num == 0)
 				{
-					return EAbpAnimScheme.Scheme1;
+					return EAbpAnimScheme.Default;
 				}
 				return (EAbpAnimScheme)this.__p.bb.Get(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x1700A165 RID: 41317
-		// (get) Token: 0x0602421E RID: 147998 RVA: 0x004FDBC4 File Offset: 0x004FBDC4
+		// Token: 0x1700A9D9 RID: 43481
+		// (get) Token: 0x060263B9 RID: 156601 RVA: 0x0053D2AC File Offset: 0x0053B4AC
 		public ICollisionChannelConfig? CollisionChannelConfig
 		{
 			get
@@ -257,9 +257,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A166 RID: 41318
-		// (get) Token: 0x0602421F RID: 147999 RVA: 0x004FDC24 File Offset: 0x004FBE24
-		public byte NullMask
+		// Token: 0x060263BA RID: 156602 RVA: 0x0053D30C File Offset: 0x0053B50C
+		public string DefaultDecorationIds(int j)
+		{
+			int num = this.__p.__offset(26);
+			if (num == 0)
+			{
+				return null;
+			}
+			return this.__p.__string(this.__p.__vector(num) + j * 4);
+		}
+
+		// Token: 0x1700A9DA RID: 43482
+		// (get) Token: 0x060263BB RID: 156603 RVA: 0x0053D348 File Offset: 0x0053B548
+		public int DefaultDecorationIdsLength
 		{
 			get
 			{
@@ -268,14 +279,30 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				{
 					return 0;
 				}
+				return this.__p.__vector_len(num);
+			}
+		}
+
+		// Token: 0x1700A9DB RID: 43483
+		// (get) Token: 0x060263BC RID: 156604 RVA: 0x0053D374 File Offset: 0x0053B574
+		public byte NullMask
+		{
+			get
+			{
+				int num = this.__p.__offset(28);
+				if (num == 0)
+				{
+					return 0;
+				}
 				return this.__p.bb.Get(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x06024220 RID: 148000 RVA: 0x004FDC64 File Offset: 0x004FBE64
-		public static Offset<IModelComponent> CreateIModelComponent(FlatBufferBuilder builder, bool Disabled = false, TModelType ModelType_type = TModelType.NONE, int ModelTypeOffset = 0, int HalfHeight = 0, int TrackHeight = 0, VectorOffset PerformanceTagsOffset = default(VectorOffset), bool AoiFadeOut = false, StringOffset PerformanceFaceSkeletalMeshPathOffset = default(StringOffset), bool IsUseSeqFace = false, EAbpAnimScheme AbpAnimScheme = EAbpAnimScheme.Scheme1, Offset<ICollisionChannelConfig> CollisionChannelConfigOffset = default(Offset<ICollisionChannelConfig>), byte NullMask = 0)
+		// Token: 0x060263BD RID: 156605 RVA: 0x0053D3B4 File Offset: 0x0053B5B4
+		public static Offset<IModelComponent> CreateIModelComponent(FlatBufferBuilder builder, bool Disabled = false, TModelType ModelType_type = TModelType.NONE, int ModelTypeOffset = 0, int HalfHeight = 0, int TrackHeight = 0, VectorOffset PerformanceTagsOffset = default(VectorOffset), bool AoiFadeOut = false, StringOffset PerformanceFaceSkeletalMeshPathOffset = default(StringOffset), bool IsUseSeqFace = false, EAbpAnimScheme AbpAnimScheme = EAbpAnimScheme.Default, Offset<ICollisionChannelConfig> CollisionChannelConfigOffset = default(Offset<ICollisionChannelConfig>), VectorOffset DefaultDecorationIdsOffset = default(VectorOffset), byte NullMask = 0)
 		{
-			builder.StartTable(12);
+			builder.StartTable(13);
+			IModelComponent.AddDefaultDecorationIds(builder, DefaultDecorationIdsOffset);
 			IModelComponent.AddCollisionChannelConfig(builder, CollisionChannelConfigOffset);
 			IModelComponent.AddPerformanceFaceSkeletalMeshPath(builder, PerformanceFaceSkeletalMeshPathOffset);
 			IModelComponent.AddPerformanceTags(builder, PerformanceTagsOffset);
@@ -291,49 +318,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IModelComponent.EndIModelComponent(builder);
 		}
 
-		// Token: 0x06024221 RID: 148001 RVA: 0x004FDCDC File Offset: 0x004FBEDC
+		// Token: 0x060263BE RID: 156606 RVA: 0x0053D434 File Offset: 0x0053B634
 		public static void StartIModelComponent(FlatBufferBuilder builder)
 		{
-			builder.StartTable(12);
+			builder.StartTable(13);
 		}
 
-		// Token: 0x06024222 RID: 148002 RVA: 0x004FDCE6 File Offset: 0x004FBEE6
+		// Token: 0x060263BF RID: 156607 RVA: 0x0053D43E File Offset: 0x0053B63E
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06024223 RID: 148003 RVA: 0x004FDCF1 File Offset: 0x004FBEF1
+		// Token: 0x060263C0 RID: 156608 RVA: 0x0053D449 File Offset: 0x0053B649
 		public static void AddModelTypeType(FlatBufferBuilder builder, TModelType modelTypeType)
 		{
 			builder.AddByte(1, (byte)modelTypeType, 0);
 		}
 
-		// Token: 0x06024224 RID: 148004 RVA: 0x004FDCFC File Offset: 0x004FBEFC
+		// Token: 0x060263C1 RID: 156609 RVA: 0x0053D454 File Offset: 0x0053B654
 		public static void AddModelType(FlatBufferBuilder builder, int modelTypeOffset)
 		{
 			builder.AddOffset(2, modelTypeOffset, 0);
 		}
 
-		// Token: 0x06024225 RID: 148005 RVA: 0x004FDD07 File Offset: 0x004FBF07
+		// Token: 0x060263C2 RID: 156610 RVA: 0x0053D45F File Offset: 0x0053B65F
 		public static void AddHalfHeight(FlatBufferBuilder builder, int halfHeight)
 		{
 			builder.AddInt(3, halfHeight, 0);
 		}
 
-		// Token: 0x06024226 RID: 148006 RVA: 0x004FDD12 File Offset: 0x004FBF12
+		// Token: 0x060263C3 RID: 156611 RVA: 0x0053D46A File Offset: 0x0053B66A
 		public static void AddTrackHeight(FlatBufferBuilder builder, int trackHeight)
 		{
 			builder.AddInt(4, trackHeight, 0);
 		}
 
-		// Token: 0x06024227 RID: 148007 RVA: 0x004FDD1D File Offset: 0x004FBF1D
+		// Token: 0x060263C4 RID: 156612 RVA: 0x0053D475 File Offset: 0x0053B675
 		public static void AddPerformanceTags(FlatBufferBuilder builder, VectorOffset performanceTagsOffset)
 		{
 			builder.AddOffset(5, performanceTagsOffset.Value, 0);
 		}
 
-		// Token: 0x06024228 RID: 148008 RVA: 0x004FDD30 File Offset: 0x004FBF30
+		// Token: 0x060263C5 RID: 156613 RVA: 0x0053D488 File Offset: 0x0053B688
 		public static VectorOffset CreatePerformanceTagsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -344,7 +371,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024229 RID: 148009 RVA: 0x004FDD67 File Offset: 0x004FBF67
+		// Token: 0x060263C6 RID: 156614 RVA: 0x0053D4BF File Offset: 0x0053B6BF
 		public static VectorOffset CreatePerformanceTagsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -352,7 +379,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602422A RID: 148010 RVA: 0x004FDD81 File Offset: 0x004FBF81
+		// Token: 0x060263C7 RID: 156615 RVA: 0x0053D4D9 File Offset: 0x0053B6D9
 		public static VectorOffset CreatePerformanceTagsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -360,7 +387,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602422B RID: 148011 RVA: 0x004FDD9F File Offset: 0x004FBF9F
+		// Token: 0x060263C8 RID: 156616 RVA: 0x0053D4F7 File Offset: 0x0053B6F7
 		public static VectorOffset CreatePerformanceTagsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -368,55 +395,102 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602422C RID: 148012 RVA: 0x004FDDB8 File Offset: 0x004FBFB8
+		// Token: 0x060263C9 RID: 156617 RVA: 0x0053D510 File Offset: 0x0053B710
 		public static void StartPerformanceTagsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602422D RID: 148013 RVA: 0x004FDDC3 File Offset: 0x004FBFC3
+		// Token: 0x060263CA RID: 156618 RVA: 0x0053D51B File Offset: 0x0053B71B
 		public static void AddAoiFadeOut(FlatBufferBuilder builder, bool aoiFadeOut)
 		{
 			builder.AddBool(6, aoiFadeOut, false);
 		}
 
-		// Token: 0x0602422E RID: 148014 RVA: 0x004FDDCE File Offset: 0x004FBFCE
+		// Token: 0x060263CB RID: 156619 RVA: 0x0053D526 File Offset: 0x0053B726
 		public static void AddPerformanceFaceSkeletalMeshPath(FlatBufferBuilder builder, StringOffset performanceFaceSkeletalMeshPathOffset)
 		{
 			builder.AddOffset(7, performanceFaceSkeletalMeshPathOffset.Value, 0);
 		}
 
-		// Token: 0x0602422F RID: 148015 RVA: 0x004FDDDE File Offset: 0x004FBFDE
+		// Token: 0x060263CC RID: 156620 RVA: 0x0053D536 File Offset: 0x0053B736
 		public static void AddIsUseSeqFace(FlatBufferBuilder builder, bool isUseSeqFace)
 		{
 			builder.AddBool(8, isUseSeqFace, false);
 		}
 
-		// Token: 0x06024230 RID: 148016 RVA: 0x004FDDE9 File Offset: 0x004FBFE9
+		// Token: 0x060263CD RID: 156621 RVA: 0x0053D541 File Offset: 0x0053B741
 		public static void AddAbpAnimScheme(FlatBufferBuilder builder, EAbpAnimScheme abpAnimScheme)
 		{
 			builder.AddByte(9, (byte)abpAnimScheme, 0);
 		}
 
-		// Token: 0x06024231 RID: 148017 RVA: 0x004FDDF5 File Offset: 0x004FBFF5
+		// Token: 0x060263CE RID: 156622 RVA: 0x0053D54D File Offset: 0x0053B74D
 		public static void AddCollisionChannelConfig(FlatBufferBuilder builder, Offset<ICollisionChannelConfig> collisionChannelConfigOffset)
 		{
 			builder.AddOffset(10, collisionChannelConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06024232 RID: 148018 RVA: 0x004FDE06 File Offset: 0x004FC006
-		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
+		// Token: 0x060263CF RID: 156623 RVA: 0x0053D55E File Offset: 0x0053B75E
+		public static void AddDefaultDecorationIds(FlatBufferBuilder builder, VectorOffset defaultDecorationIdsOffset)
 		{
-			builder.AddByte(11, nullMask, 0);
+			builder.AddOffset(11, defaultDecorationIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06024233 RID: 148019 RVA: 0x004FDE12 File Offset: 0x004FC012
+		// Token: 0x060263D0 RID: 156624 RVA: 0x0053D570 File Offset: 0x0053B770
+		public static VectorOffset CreateDefaultDecorationIdsVector(FlatBufferBuilder builder, StringOffset[] data)
+		{
+			builder.StartVector(4, data.Length, 4);
+			for (int i = data.Length - 1; i >= 0; i--)
+			{
+				builder.AddOffset(data[i].Value);
+			}
+			return builder.EndVector();
+		}
+
+		// Token: 0x060263D1 RID: 156625 RVA: 0x0053D5B0 File Offset: 0x0053B7B0
+		public static VectorOffset CreateDefaultDecorationIdsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
+		{
+			builder.StartVector(4, data.Length, 4);
+			builder.Add<StringOffset>(data);
+			return builder.EndVector();
+		}
+
+		// Token: 0x060263D2 RID: 156626 RVA: 0x0053D5CA File Offset: 0x0053B7CA
+		public static VectorOffset CreateDefaultDecorationIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
+		{
+			builder.StartVector(4, data.Count, 4);
+			builder.Add<StringOffset>(data);
+			return builder.EndVector();
+		}
+
+		// Token: 0x060263D3 RID: 156627 RVA: 0x0053D5E8 File Offset: 0x0053B7E8
+		public static VectorOffset CreateDefaultDecorationIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
+		{
+			builder.StartVector(1, sizeInBytes, 1);
+			builder.Add<StringOffset>(dataPtr, sizeInBytes);
+			return builder.EndVector();
+		}
+
+		// Token: 0x060263D4 RID: 156628 RVA: 0x0053D601 File Offset: 0x0053B801
+		public static void StartDefaultDecorationIdsVector(FlatBufferBuilder builder, int numElems)
+		{
+			builder.StartVector(4, numElems, 4);
+		}
+
+		// Token: 0x060263D5 RID: 156629 RVA: 0x0053D60C File Offset: 0x0053B80C
+		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
+		{
+			builder.AddByte(12, nullMask, 0);
+		}
+
+		// Token: 0x060263D6 RID: 156630 RVA: 0x0053D618 File Offset: 0x0053B818
 		public static Offset<IModelComponent> EndIModelComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IModelComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06024234 RID: 148020 RVA: 0x004FDE20 File Offset: 0x004FC020
+		// Token: 0x060263D7 RID: 156631 RVA: 0x0053D628 File Offset: 0x0053B828
 		public IModelComponentT UnPack()
 		{
 			IModelComponentT modelComponentT = new IModelComponentT();
@@ -424,7 +498,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return modelComponentT;
 		}
 
-		// Token: 0x06024235 RID: 148021 RVA: 0x004FDE3C File Offset: 0x004FC03C
+		// Token: 0x060263D8 RID: 156632 RVA: 0x0053D644 File Offset: 0x0053B844
 		public void UnPackTo(IModelComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -457,10 +531,15 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.IsUseSeqFace = this.IsUseSeqFace;
 			_o.AbpAnimScheme = this.AbpAnimScheme;
 			_o.CollisionChannelConfig = ((this.CollisionChannelConfig != null) ? this.CollisionChannelConfig.Value.UnPack() : null);
+			_o.DefaultDecorationIds = new List<string>();
+			for (int j = 0; j < this.DefaultDecorationIdsLength; j++)
+			{
+				_o.DefaultDecorationIds.Add(this.DefaultDecorationIds(j));
+			}
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06024236 RID: 148022 RVA: 0x004FE030 File Offset: 0x004FC230
+		// Token: 0x060263D9 RID: 156633 RVA: 0x0053D86C File Offset: 0x0053BA6C
 		public static Offset<IModelComponent> Pack(FlatBufferBuilder builder, IModelComponentT _o)
 		{
 			if (_o == null)
@@ -477,10 +556,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 			StringOffset performanceFaceSkeletalMeshPathOffset = (_o.PerformanceFaceSkeletalMeshPath == null) ? default(StringOffset) : builder.CreateString(_o.PerformanceFaceSkeletalMeshPath);
 			Offset<ICollisionChannelConfig> collisionChannelConfigOffset = (_o.CollisionChannelConfig == null) ? default(Offset<ICollisionChannelConfig>) : ICollisionChannelConfig.Pack(builder, _o.CollisionChannelConfig);
-			return IModelComponent.CreateIModelComponent(builder, _o.Disabled, modelType_type, modelTypeOffset, _o.HalfHeight, _o.TrackHeight, performanceTagsOffset, _o.AoiFadeOut, performanceFaceSkeletalMeshPathOffset, _o.IsUseSeqFace, _o.AbpAnimScheme, collisionChannelConfigOffset, _o.NullMask);
+			VectorOffset defaultDecorationIdsOffset = default(VectorOffset);
+			if (_o.DefaultDecorationIds != null)
+			{
+				StringOffset[] array = new StringOffset[_o.DefaultDecorationIds.Count];
+				for (int i = 0; i < array.Length; i++)
+				{
+					array[i] = builder.CreateString(_o.DefaultDecorationIds[i]);
+				}
+				defaultDecorationIdsOffset = IModelComponent.CreateDefaultDecorationIdsVector(builder, array);
+			}
+			return IModelComponent.CreateIModelComponent(builder, _o.Disabled, modelType_type, modelTypeOffset, _o.HalfHeight, _o.TrackHeight, performanceTagsOffset, _o.AoiFadeOut, performanceFaceSkeletalMeshPathOffset, _o.IsUseSeqFace, _o.AbpAnimScheme, collisionChannelConfigOffset, defaultDecorationIdsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E868 RID: 59496
+		// Token: 0x0400F4B9 RID: 62649
 		private Table __p;
 	}
 }

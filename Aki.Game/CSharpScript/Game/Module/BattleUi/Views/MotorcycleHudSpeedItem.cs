@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D9D RID: 23965
+	// Token: 0x02004D7F RID: 19839
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MotorcycleHudSpeedItem : UiPanelBase
 	{
-		// Token: 0x0603CD63 RID: 249187 RVA: 0x00E9C694 File Offset: 0x00E9A894
+		// Token: 0x06031CC0 RID: 203968 RVA: 0x00DECF4C File Offset: 0x00DEB14C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(8, typeof(UUITexture)));
 		}
 
-		// Token: 0x0603CD64 RID: 249188 RVA: 0x00E9C7CC File Offset: 0x00E9A9CC
+		// Token: 0x06031CC1 RID: 203969 RVA: 0x00DED084 File Offset: 0x00DEB284
 		protected override void OnStart()
 		{
 			this.BarTexture = base.GetTexture(0);
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnSpeedUpdate(0f);
 		}
 
-		// Token: 0x0603CD65 RID: 249189 RVA: 0x00E9C920 File Offset: 0x00E9AB20
+		// Token: 0x06031CC2 RID: 203970 RVA: 0x00DED1D8 File Offset: 0x00DEB3D8
 		private void LoadResource()
 		{
 			string stringConfig = ConfigCommonParamById.GetStringConfig("MotorHudSoarAngleScaleCurve");
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x0603CD66 RID: 249190 RVA: 0x00E9C957 File Offset: 0x00E9AB57
+		// Token: 0x06031CC3 RID: 203971 RVA: 0x00DED20F File Offset: 0x00DEB40F
 		protected override void OnBeforeShowImplement()
 		{
 			if (!this.IsLeft)
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD67 RID: 249191 RVA: 0x00E9C97D File Offset: 0x00E9AB7D
+		// Token: 0x06031CC4 RID: 203972 RVA: 0x00DED235 File Offset: 0x00DEB435
 		protected override void OnAfterHideImplement()
 		{
 			if (!this.IsLeft)
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD68 RID: 249192 RVA: 0x00E9C9A4 File Offset: 0x00E9ABA4
+		// Token: 0x06031CC5 RID: 203973 RVA: 0x00DED25C File Offset: 0x00DEB45C
 		public void SetSoarMode(bool vehicleSoar)
 		{
 			if (this.IsLeft)
@@ -120,14 +120,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetNodeAlphaState(vehicleSoar ? MotorcycleHudSpeedItem.ENodeAlphaState.Angle : MotorcycleHudSpeedItem.ENodeAlphaState.Speed, false);
 		}
 
-		// Token: 0x0603CD69 RID: 249193 RVA: 0x00E9C9F1 File Offset: 0x00E9ABF1
+		// Token: 0x06031CC6 RID: 203974 RVA: 0x00DED2A9 File Offset: 0x00DEB4A9
 		public void SetSpeed(float speed, float maxSpeed)
 		{
 			this.MaxSpeed = maxSpeed;
 			this.SpeedMachine.SetTargetPercent(speed);
 		}
 
-		// Token: 0x0603CD6A RID: 249194 RVA: 0x00E9CA08 File Offset: 0x00E9AC08
+		// Token: 0x06031CC7 RID: 203975 RVA: 0x00DED2C0 File Offset: 0x00DEB4C0
 		private void OnSpeedUpdate(float speed)
 		{
 			float num = (this.MaxSpeed > 0f) ? Math.Min(1f, speed / this.MaxSpeed) : 0f;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD6B RID: 249195 RVA: 0x00E9CB44 File Offset: 0x00E9AD44
+		// Token: 0x06031CC8 RID: 203976 RVA: 0x00DED3FC File Offset: 0x00DEB5FC
 		public void Tick(float delta)
 		{
 			if (this.SpeedMachine.Update(delta))
@@ -189,13 +189,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD6C RID: 249196 RVA: 0x00E9CBBB File Offset: 0x00E9ADBB
+		// Token: 0x06031CC9 RID: 203977 RVA: 0x00DED473 File Offset: 0x00DEB673
 		private void OnInteractViewVisibleChanged(bool visible)
 		{
 			this.SetRootAlphaState(visible ? MotorcycleHudSpeedItem.EAlphaState.Transparent : MotorcycleHudSpeedItem.EAlphaState.Normal, false);
 		}
 
-		// Token: 0x0603CD6D RID: 249197 RVA: 0x00E9CBCC File Offset: 0x00E9ADCC
+		// Token: 0x06031CCA RID: 203978 RVA: 0x00DED484 File Offset: 0x00DEB684
 		private void SetRootAlphaState(MotorcycleHudSpeedItem.EAlphaState state, bool force = false)
 		{
 			if (state == this.RootAlphaState && !force)
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetRootItem().SetAlpha(num);
 		}
 
-		// Token: 0x0603CD6E RID: 249198 RVA: 0x00E9CC30 File Offset: 0x00E9AE30
+		// Token: 0x06031CCB RID: 203979 RVA: 0x00DED4E8 File Offset: 0x00DEB6E8
 		private void SetNodeAlphaState(MotorcycleHudSpeedItem.ENodeAlphaState state, bool force = false)
 		{
 			if (state == this.NodeAlphaState && !force)
@@ -231,14 +231,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateNodeAlpha((float)num);
 		}
 
-		// Token: 0x0603CD6F RID: 249199 RVA: 0x00E9CC88 File Offset: 0x00E9AE88
+		// Token: 0x06031CCC RID: 203980 RVA: 0x00DED540 File Offset: 0x00DEB740
 		private void UpdateNodeAlpha(float a)
 		{
 			this.SpeedItem.SetAlpha(MathUtils.Instance.Lerp(1f, 0f, a * 2f));
 			this.AngleItem.SetAlpha(MathUtils.Instance.Lerp(0f, 1f, a * 2f - 1f));
 		}
 
-		// Token: 0x0603CD70 RID: 249200 RVA: 0x00E9CCE7 File Offset: 0x00E9AEE7
+		// Token: 0x06031CCD RID: 203981 RVA: 0x00DED59F File Offset: 0x00DEB79F
 		public void SetMainColor(in FLinearColor color)
 		{
 			UUITexture barPointTexture = this.BarPointTexture;
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barPointTexture.SetColor(color.ToFColor(true));
 		}
 
-		// Token: 0x0603CD71 RID: 249201 RVA: 0x00E9CD00 File Offset: 0x00E9AF00
+		// Token: 0x06031CCE RID: 203982 RVA: 0x00DED5B8 File Offset: 0x00DEB7B8
 		public void SetPointerColor(in FLinearColor color)
 		{
 			UUITexture arrowTexture = this.ArrowTexture;
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			arrowTexture.SetColor(color.ToFColor(true));
 		}
 
-		// Token: 0x0603CD72 RID: 249202 RVA: 0x00E9CD19 File Offset: 0x00E9AF19
+		// Token: 0x06031CCF RID: 203983 RVA: 0x00DED5D1 File Offset: 0x00DEB7D1
 		public void SetNumTextColor(in FLinearColor color)
 		{
 			if (this.IsLeft)
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD73 RID: 249203 RVA: 0x00E9CD3A File Offset: 0x00E9AF3A
+		// Token: 0x06031CD0 RID: 203984 RVA: 0x00DED5F2 File Offset: 0x00DEB7F2
 		public void SetNumTextStrokeColor(in FLinearColor color)
 		{
 			if (this.IsLeft)
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD74 RID: 249204 RVA: 0x00E9CD5B File Offset: 0x00E9AF5B
+		// Token: 0x06031CD1 RID: 203985 RVA: 0x00DED613 File Offset: 0x00DEB813
 		public void SetNumTextGlowColor(in FLinearColor color)
 		{
 			if (this.IsLeft)
@@ -302,116 +302,116 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FB01 RID: 129793
+		// Token: 0x0401A5B9 RID: 107961
 		private const float ALPHA_TARGET_VALUE = 0.2f;
 
-		// Token: 0x0401FB02 RID: 129794
+		// Token: 0x0401A5BA RID: 107962
 		private const float ALPHA_CHANGE_DURATION = 300f;
 
-		// Token: 0x0401FB03 RID: 129795
+		// Token: 0x0401A5BB RID: 107963
 		public bool IsLeft;
 
-		// Token: 0x0401FB04 RID: 129796
+		// Token: 0x0401A5BC RID: 107964
 		[Nullable(1)]
 		private readonly MotorcyclePercentMachine SpeedMachine = new MotorcyclePercentMachine();
 
-		// Token: 0x0401FB05 RID: 129797
+		// Token: 0x0401A5BD RID: 107965
 		private UUITexture BarTexture;
 
-		// Token: 0x0401FB06 RID: 129798
+		// Token: 0x0401A5BE RID: 107966
 		private UUITexture ArrowTexture;
 
-		// Token: 0x0401FB07 RID: 129799
+		// Token: 0x0401A5BF RID: 107967
 		private UUITexture BarPointTexture;
 
-		// Token: 0x0401FB08 RID: 129800
+		// Token: 0x0401A5C0 RID: 107968
 		private UUIArtText NumText;
 
-		// Token: 0x0401FB09 RID: 129801
+		// Token: 0x0401A5C1 RID: 107969
 		private UUIArtText NumTextStroke;
 
-		// Token: 0x0401FB0A RID: 129802
+		// Token: 0x0401A5C2 RID: 107970
 		private UUIArtText NumTextGlow;
 
-		// Token: 0x0401FB0B RID: 129803
+		// Token: 0x0401A5C3 RID: 107971
 		private UUITexture AngleTexture;
 
-		// Token: 0x0401FB0C RID: 129804
+		// Token: 0x0401A5C4 RID: 107972
 		private UUIItem SpeedItem;
 
-		// Token: 0x0401FB0D RID: 129805
+		// Token: 0x0401A5C5 RID: 107973
 		private UUIItem AngleItem;
 
-		// Token: 0x0401FB0E RID: 129806
+		// Token: 0x0401A5C6 RID: 107974
 		private float MaxSpeed;
 
-		// Token: 0x0401FB0F RID: 129807
+		// Token: 0x0401A5C7 RID: 107975
 		private float StartYaw = 30f;
 
-		// Token: 0x0401FB10 RID: 129808
+		// Token: 0x0401A5C8 RID: 107976
 		private float EndYaw = 175f;
 
-		// Token: 0x0401FB11 RID: 129809
+		// Token: 0x0401A5C9 RID: 107977
 		[Nullable(1)]
 		private MotorcyclePercentMachine RootAlphaMachine = new MotorcyclePercentMachine();
 
-		// Token: 0x0401FB12 RID: 129810
+		// Token: 0x0401A5CA RID: 107978
 		private MotorcycleHudSpeedItem.EAlphaState RootAlphaState;
 
-		// Token: 0x0401FB13 RID: 129811
+		// Token: 0x0401A5CB RID: 107979
 		[Nullable(1)]
 		private MotorcyclePercentMachine NodeAlphaMachine = new MotorcyclePercentMachine();
 
-		// Token: 0x0401FB14 RID: 129812
+		// Token: 0x0401A5CC RID: 107980
 		private MotorcycleHudSpeedItem.ENodeAlphaState NodeAlphaState;
 
-		// Token: 0x0401FB15 RID: 129813
+		// Token: 0x0401A5CD RID: 107981
 		private UCurveFloat AngleScaleCurve;
 
-		// Token: 0x0401FB16 RID: 129814
+		// Token: 0x0401A5CE RID: 107982
 		private bool IsVehicleSoar;
 
-		// Token: 0x0200C074 RID: 49268
+		// Token: 0x0200AA7A RID: 43642
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A12E RID: 237870
+			// Token: 0x04034AF1 RID: 215793
 			BarTexture,
-			// Token: 0x0403A12F RID: 237871
+			// Token: 0x04034AF2 RID: 215794
 			ArrowTexture,
-			// Token: 0x0403A130 RID: 237872
+			// Token: 0x04034AF3 RID: 215795
 			BarPointTexture,
-			// Token: 0x0403A131 RID: 237873
+			// Token: 0x04034AF4 RID: 215796
 			NumText,
-			// Token: 0x0403A132 RID: 237874
+			// Token: 0x04034AF5 RID: 215797
 			NumTextStroke,
-			// Token: 0x0403A133 RID: 237875
+			// Token: 0x04034AF6 RID: 215798
 			NumTextGlow,
-			// Token: 0x0403A134 RID: 237876
+			// Token: 0x04034AF7 RID: 215799
 			SpeedItem,
-			// Token: 0x0403A135 RID: 237877
+			// Token: 0x04034AF8 RID: 215800
 			AngleItem,
-			// Token: 0x0403A136 RID: 237878
+			// Token: 0x04034AF9 RID: 215801
 			AngleTexture
 		}
 
-		// Token: 0x0200C075 RID: 49269
+		// Token: 0x0200AA7B RID: 43643
 		[NullableContext(0)]
 		private enum EAlphaState
 		{
-			// Token: 0x0403A138 RID: 237880
+			// Token: 0x04034AFB RID: 215803
 			Normal,
-			// Token: 0x0403A139 RID: 237881
+			// Token: 0x04034AFC RID: 215804
 			Transparent
 		}
 
-		// Token: 0x0200C076 RID: 49270
+		// Token: 0x0200AA7C RID: 43644
 		[NullableContext(0)]
 		private enum ENodeAlphaState
 		{
-			// Token: 0x0403A13B RID: 237883
+			// Token: 0x04034AFE RID: 215806
 			Speed,
-			// Token: 0x0403A13C RID: 237884
+			// Token: 0x04034AFF RID: 215807
 			Angle
 		}
 	}

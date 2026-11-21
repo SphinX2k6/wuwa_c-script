@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002325 RID: 8997
+// Token: 0x0200180A RID: 6154
 [NullableContext(1)]
 [Nullable(0)]
 public class BattlePassMainView : UiViewBase
 {
-	// Token: 0x06011CA5 RID: 72869 RVA: 0x00460F75 File Offset: 0x0045F175
+	// Token: 0x0600F155 RID: 61781 RVA: 0x0046E019 File Offset: 0x0046C219
 	public BattlePassMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011CA6 RID: 72870 RVA: 0x00460F8C File Offset: 0x0045F18C
+	// Token: 0x0600F156 RID: 61782 RVA: 0x0046E030 File Offset: 0x0046C230
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -43,7 +43,7 @@ public class BattlePassMainView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06011CA7 RID: 72871 RVA: 0x0046109C File Offset: 0x0045F29C
+	// Token: 0x0600F157 RID: 61783 RVA: 0x0046E140 File Offset: 0x0046C340
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BattlePassMainView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -54,19 +54,19 @@ public class BattlePassMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011CA8 RID: 72872 RVA: 0x004610DF File Offset: 0x0045F2DF
+	// Token: 0x0600F158 RID: 61784 RVA: 0x0046E183 File Offset: 0x0046C383
 	protected override void OnStart()
 	{
 		this.TabComponent.SelectToggleByIndex(0, true);
 	}
 
-	// Token: 0x06011CA9 RID: 72873 RVA: 0x004610EE File Offset: 0x0045F2EE
+	// Token: 0x0600F159 RID: 61785 RVA: 0x0046E192 File Offset: 0x0046C392
 	private CommonTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new CommonTabItem();
 	}
 
-	// Token: 0x06011CAA RID: 72874 RVA: 0x004610F8 File Offset: 0x0045F2F8
+	// Token: 0x0600F15A RID: 61786 RVA: 0x0046E19C File Offset: 0x0046C39C
 	private void ToggleCallBack(int index)
 	{
 		UiDynamicTab data = this.TabDataList[index];
@@ -86,7 +86,7 @@ public class BattlePassMainView : UiViewBase
 		AdventureGuideModel.Instance.CurrentGuideTabName = new EUiTabViewName?(euiTabViewName);
 	}
 
-	// Token: 0x06011CAB RID: 72875 RVA: 0x004611D8 File Offset: 0x0045F3D8
+	// Token: 0x0600F15B RID: 61787 RVA: 0x0046E27C File Offset: 0x0046C47C
 	private void RefreshTabToggleState()
 	{
 		if (this.TabViewComponent.GetCurrentTabViewName(null) != EUiTabViewName.BattlePassWeaponView)
@@ -98,34 +98,34 @@ public class BattlePassMainView : UiViewBase
 		battlePassWeaponView.RefreshToggleState(captionToggleState);
 	}
 
-	// Token: 0x06011CAC RID: 72876 RVA: 0x00461240 File Offset: 0x0045F440
+	// Token: 0x0600F15C RID: 61788 RVA: 0x0046E2E4 File Offset: 0x0046C4E4
 	private CommonTabData GetCommonData(int index)
 	{
 		UiDynamicTab uiDynamicTab = this.TabDataList[index];
 		return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x06011CAD RID: 72877 RVA: 0x00461278 File Offset: 0x0045F478
+	// Token: 0x0600F15D RID: 61789 RVA: 0x0046E31C File Offset: 0x0046C51C
 	private void CloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011CAE RID: 72878 RVA: 0x00461281 File Offset: 0x0045F481
+	// Token: 0x0600F15E RID: 61790 RVA: 0x0046E325 File Offset: 0x0046C525
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnBattlePassLevelUpEvent, new Action(this.OnBattlePassLevelUp));
 		EventSystem.Instance.Add<int>(EEventName.OnBattlePassSkip, new Action<int>(this.HandleOnBattlePassSkip));
 	}
 
-	// Token: 0x06011CAF RID: 72879 RVA: 0x004612BB File Offset: 0x0045F4BB
+	// Token: 0x0600F15F RID: 61791 RVA: 0x0046E35F File Offset: 0x0046C55F
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnBattlePassLevelUpEvent, new Action(this.OnBattlePassLevelUp));
 		EventSystem.Instance.Remove(EEventName.OnBattlePassSkip, new Action<int>(this.HandleOnBattlePassSkip));
 	}
 
-	// Token: 0x06011CB0 RID: 72880 RVA: 0x004612F8 File Offset: 0x0045F4F8
+	// Token: 0x0600F160 RID: 61792 RVA: 0x0046E39C File Offset: 0x0046C59C
 	private void OnBattlePassLevelUp()
 	{
 		UiViewBase topView = UiModel.Instance.GetTopView(ELayerType.Pop);
@@ -139,13 +139,13 @@ public class BattlePassMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011CB1 RID: 72881 RVA: 0x0046134A File Offset: 0x0045F54A
+	// Token: 0x0600F161 RID: 61793 RVA: 0x0046E3EE File Offset: 0x0046C5EE
 	private void HandleOnBattlePassSkip(int skipId)
 	{
 		this.HandleOnBattlePassSkipImpAsync(skipId).Forget();
 	}
 
-	// Token: 0x06011CB2 RID: 72882 RVA: 0x00461358 File Offset: 0x0045F558
+	// Token: 0x0600F162 RID: 61794 RVA: 0x0046E3FC File Offset: 0x0046C5FC
 	private UniTask HandleOnBattlePassSkipImpAsync(int skipId)
 	{
 		BattlePassMainView.<HandleOnBattlePassSkipImpAsync>d__19 <HandleOnBattlePassSkipImpAsync>d__;
@@ -157,7 +157,7 @@ public class BattlePassMainView : UiViewBase
 		return <HandleOnBattlePassSkipImpAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011CB3 RID: 72883 RVA: 0x004613A4 File Offset: 0x0045F5A4
+	// Token: 0x0600F163 RID: 61795 RVA: 0x0046E448 File Offset: 0x0046C648
 	private void OnClickPopupToggle(EToggleState state)
 	{
 		if (this.TabViewComponent.GetCurrentTabViewName(null) != EUiTabViewName.BattlePassWeaponView)
@@ -172,7 +172,7 @@ public class BattlePassMainView : UiViewBase
 		battlePassWeaponView.OnClickFullLevelToggle(state);
 	}
 
-	// Token: 0x06011CB4 RID: 72884 RVA: 0x00461404 File Offset: 0x0045F604
+	// Token: 0x0600F164 RID: 61796 RVA: 0x0046E4A8 File Offset: 0x0046C6A8
 	public void BindTabViewRed(EUiTabViewName tabName, ERedDotName redName)
 	{
 		int num = -1;
@@ -187,7 +187,7 @@ public class BattlePassMainView : UiViewBase
 		this.TabComponent.GetTabItemByIndex(num).BindRedDot(redName, new int?(0));
 	}
 
-	// Token: 0x06011CB5 RID: 72885 RVA: 0x00461484 File Offset: 0x0045F684
+	// Token: 0x0600F165 RID: 61797 RVA: 0x0046E528 File Offset: 0x0046C728
 	private void UnBindTabViewRed(EUiTabViewName tab)
 	{
 		int num = -1;
@@ -202,7 +202,7 @@ public class BattlePassMainView : UiViewBase
 		this.TabComponent.GetTabItemByIndex(num).UnBindRedDot();
 	}
 
-	// Token: 0x06011CB6 RID: 72886 RVA: 0x00461500 File Offset: 0x0045F700
+	// Token: 0x0600F166 RID: 61798 RVA: 0x0046E5A4 File Offset: 0x0046C7A4
 	protected override void OnBeforeShow()
 	{
 		this.TabViewComponent.SetCurrentTabViewState(true);
@@ -210,7 +210,7 @@ public class BattlePassMainView : UiViewBase
 		this.BindTabViewRed(EUiTabViewName.BattlePassTaskView, ERedDotName.BattlePassTask);
 	}
 
-	// Token: 0x06011CB7 RID: 72887 RVA: 0x00461528 File Offset: 0x0045F728
+	// Token: 0x0600F167 RID: 61799 RVA: 0x0046E5CC File Offset: 0x0046C7CC
 	protected override void OnAfterHide()
 	{
 		EventSystem.Instance.Emit(EEventName.BattlePassMainViewHide);
@@ -219,7 +219,7 @@ public class BattlePassMainView : UiViewBase
 		this.UnBindTabViewRed(EUiTabViewName.BattlePassTaskView);
 	}
 
-	// Token: 0x06011CB8 RID: 72888 RVA: 0x0046155C File Offset: 0x0045F75C
+	// Token: 0x0600F168 RID: 61800 RVA: 0x0046E600 File Offset: 0x0046C800
 	public void RefreshLeftTime(float _)
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -236,7 +236,7 @@ public class BattlePassMainView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), "Text_GachaRemainingTime_Text", new <>z__ReadOnlySingleElementList<object>(remainTimeDataFormat.CountDownText));
 	}
 
-	// Token: 0x06011CB9 RID: 72889 RVA: 0x004615CC File Offset: 0x0045F7CC
+	// Token: 0x0600F169 RID: 61801 RVA: 0x0046E670 File Offset: 0x0046C870
 	protected override void OnBeforeDestroy()
 	{
 		TimerHandle timerHandle = this.TimerHandle;
@@ -261,7 +261,7 @@ public class BattlePassMainView : UiViewBase
 		this.WeaponObservers = null;
 	}
 
-	// Token: 0x06011CBA RID: 72890 RVA: 0x00461664 File Offset: 0x0045F864
+	// Token: 0x0600F16A RID: 61802 RVA: 0x0046E708 File Offset: 0x0046C908
 	protected override void OnBeforeCreate()
 	{
 		SkeletalObserverHandle skeletalObserverHandle = UiSceneManager.Instance.InitWeaponObserver(true);
@@ -275,11 +275,11 @@ public class BattlePassMainView : UiViewBase
 		this.WeaponObservers = new WeaponSkeletalObserverHandles(skeletalObserverHandle, weaponScabbardObserver);
 	}
 
-	// Token: 0x040086E3 RID: 34531
+	// Token: 0x04008826 RID: 34854
 	[Nullable(2)]
 	protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-	// Token: 0x040086E4 RID: 34532
+	// Token: 0x04008827 RID: 34855
 	[Nullable(new byte[]
 	{
 		2,
@@ -287,37 +287,37 @@ public class BattlePassMainView : UiViewBase
 	})]
 	protected TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-	// Token: 0x040086E5 RID: 34533
+	// Token: 0x04008828 RID: 34856
 	protected List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-	// Token: 0x040086E6 RID: 34534
+	// Token: 0x04008829 RID: 34857
 	private long PassEndTime;
 
-	// Token: 0x040086E7 RID: 34535
+	// Token: 0x0400882A RID: 34858
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x040086E8 RID: 34536
+	// Token: 0x0400882B RID: 34859
 	[Nullable(2)]
 	private WeaponSkeletalObserverHandles WeaponObservers;
 
-	// Token: 0x020088A0 RID: 34976
+	// Token: 0x02007A29 RID: 31273
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402C679 RID: 181881
+		// Token: 0x0402798D RID: 162189
 		TabComponent,
-		// Token: 0x0402C67A RID: 181882
+		// Token: 0x0402798E RID: 162190
 		TabRootItem,
-		// Token: 0x0402C67B RID: 181883
+		// Token: 0x0402798F RID: 162191
 		Bg,
-		// Token: 0x0402C67C RID: 181884
+		// Token: 0x04027990 RID: 162192
 		TxtCountDown,
-		// Token: 0x0402C67D RID: 181885
+		// Token: 0x04027991 RID: 162193
 		EffectPanel1,
-		// Token: 0x0402C67E RID: 181886
+		// Token: 0x04027992 RID: 162194
 		EffectPanel2,
-		// Token: 0x0402C67F RID: 181887
+		// Token: 0x04027993 RID: 162195
 		EffectPanel3
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009C6 RID: 2502
+	// Token: 0x02000A87 RID: 2695
 	public static class EPathDrivenActorSpawnTypeExtensions
 	{
-		// Token: 0x060037AC RID: 14252 RVA: 0x00090B08 File Offset: 0x0008ED08
+		// Token: 0x06003B72 RID: 15218 RVA: 0x000991D8 File Offset: 0x000973D8
 		public static string ToEnumString(this EPathDrivenActorSpawnType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037AD RID: 14253 RVA: 0x00090B30 File Offset: 0x0008ED30
+		// Token: 0x06003B73 RID: 15219 RVA: 0x00099200 File Offset: 0x00097400
 		public static EPathDrivenActorSpawnType FromString(string name)
 		{
 			EPathDrivenActorSpawnType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037AE RID: 14254 RVA: 0x00090B59 File Offset: 0x0008ED59
+		// Token: 0x06003B74 RID: 15220 RVA: 0x00099229 File Offset: 0x00097429
 		public static bool TryFromString(string name, out EPathDrivenActorSpawnType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060037AF RID: 14255 RVA: 0x00090B7E File Offset: 0x0008ED7E
+		// Token: 0x06003B75 RID: 15221 RVA: 0x0009924E File Offset: 0x0009744E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060037B0 RID: 14256 RVA: 0x00090B8E File Offset: 0x0008ED8E
+		// Token: 0x06003B76 RID: 15222 RVA: 0x0009925E File Offset: 0x0009745E
 		public static EPathDrivenActorSpawnType[] GetValues()
 		{
 			return new EPathDrivenActorSpawnType[1];
 		}
 
-		// Token: 0x060037B1 RID: 14257 RVA: 0x00090B96 File Offset: 0x0008ED96
+		// Token: 0x06003B77 RID: 15223 RVA: 0x00099266 File Offset: 0x00097466
 		public static string[] GetNames()
 		{
 			return new string[]

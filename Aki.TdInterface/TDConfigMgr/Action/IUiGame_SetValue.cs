@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200200F RID: 8207
+	// Token: 0x02002258 RID: 8792
 	public class IUiGame_SetValue
 	{
-		// Token: 0x04006CC5 RID: 27845
+		// Token: 0x040072CC RID: 29388
 		public ESimpleGameplayType Type;
 	}
 }

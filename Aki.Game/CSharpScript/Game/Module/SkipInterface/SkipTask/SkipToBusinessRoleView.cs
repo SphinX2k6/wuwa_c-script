@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BC1 RID: 19393
+	// Token: 0x02003B6B RID: 15211
 	public class SkipToBusinessRoleView : SkipToMoonChasingBase
 	{
-		// Token: 0x06032311 RID: 205585 RVA: 0x00BA9C38 File Offset: 0x00BA7E38
+		// Token: 0x060270A2 RID: 159906 RVA: 0x00AEDEE4 File Offset: 0x00AEC0E4
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

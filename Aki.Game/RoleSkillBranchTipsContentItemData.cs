@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020028A4 RID: 10404
+// Token: 0x02001E1F RID: 7711
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleSkillBranchTipsContentItemData : IRoleSkillBranchTipsContentItemData
 {
-	// Token: 0x17001CD2 RID: 7378
-	// (get) Token: 0x06015789 RID: 87945 RVA: 0x0056A523 File Offset: 0x00568723
-	// (set) Token: 0x0601578A RID: 87946 RVA: 0x0056A52B File Offset: 0x0056872B
+	// Token: 0x17001D2A RID: 7466
+	// (get) Token: 0x06013189 RID: 78217 RVA: 0x0059536B File Offset: 0x0059356B
+	// (set) Token: 0x0601318A RID: 78218 RVA: 0x00595373 File Offset: 0x00593573
 	public string IconPath { get; set; }
 
-	// Token: 0x17001CD3 RID: 7379
-	// (get) Token: 0x0601578B RID: 87947 RVA: 0x0056A534 File Offset: 0x00568734
-	// (set) Token: 0x0601578C RID: 87948 RVA: 0x0056A53C File Offset: 0x0056873C
+	// Token: 0x17001D2B RID: 7467
+	// (get) Token: 0x0601318B RID: 78219 RVA: 0x0059537C File Offset: 0x0059357C
+	// (set) Token: 0x0601318C RID: 78220 RVA: 0x00595384 File Offset: 0x00593584
 	public string TitleKey { get; set; }
 
-	// Token: 0x17001CD4 RID: 7380
-	// (get) Token: 0x0601578D RID: 87949 RVA: 0x0056A545 File Offset: 0x00568745
-	// (set) Token: 0x0601578E RID: 87950 RVA: 0x0056A54D File Offset: 0x0056874D
+	// Token: 0x17001D2C RID: 7468
+	// (get) Token: 0x0601318D RID: 78221 RVA: 0x0059538D File Offset: 0x0059358D
+	// (set) Token: 0x0601318E RID: 78222 RVA: 0x00595395 File Offset: 0x00593595
 	public string DescKey { get; set; }
 
-	// Token: 0x17001CD5 RID: 7381
-	// (get) Token: 0x0601578F RID: 87951 RVA: 0x0056A556 File Offset: 0x00568756
-	// (set) Token: 0x06015790 RID: 87952 RVA: 0x0056A55E File Offset: 0x0056875E
+	// Token: 0x17001D2D RID: 7469
+	// (get) Token: 0x0601318F RID: 78223 RVA: 0x0059539E File Offset: 0x0059359E
+	// (set) Token: 0x06013190 RID: 78224 RVA: 0x005953A6 File Offset: 0x005935A6
 	public bool IsHighlight { get; set; }
 }

@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DEE RID: 3566
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EEA RID: 3818
 	public class FlowerPollutionComponent : IComponentBase
 	{
-		// Token: 0x060050C6 RID: 20678 RVA: 0x000C762D File Offset: 0x000C582D
+		// Token: 0x060055ED RID: 21997 RVA: 0x000D2EF5 File Offset: 0x000D10F5
 		public static FlowerPollutionComponent Create(IFlowerPollutionComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AA7 RID: 6823
-		// (get) Token: 0x060050C7 RID: 20679 RVA: 0x000C764C File Offset: 0x000C584C
+		// Token: 0x17001C14 RID: 7188
+		// (get) Token: 0x060055EE RID: 21998 RVA: 0x000D2F14 File Offset: 0x000D1114
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AA8 RID: 6824
-		// (get) Token: 0x060050C8 RID: 20680 RVA: 0x000C7684 File Offset: 0x000C5884
+		// Token: 0x17001C15 RID: 7189
+		// (get) Token: 0x060055EF RID: 21999 RVA: 0x000D2F4C File Offset: 0x000D114C
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AA9 RID: 6825
-		// (get) Token: 0x060050C9 RID: 20681 RVA: 0x000C769A File Offset: 0x000C589A
+		// Token: 0x17001C16 RID: 7190
+		// (get) Token: 0x060055F0 RID: 22000 RVA: 0x000D2F62 File Offset: 0x000D1162
 		public virtual IFlowerPollutionSplineConfig SplineConfigs
 		{
 			get
@@ -64,8 +62,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AAA RID: 6826
-		// (get) Token: 0x060050CA RID: 20682 RVA: 0x000C76CE File Offset: 0x000C58CE
+		// Token: 0x17001C17 RID: 7191
+		// (get) Token: 0x060055F1 RID: 22001 RVA: 0x000D2F96 File Offset: 0x000D1196
 		public virtual IFlowerPollutionPointLightConfig PointLightConfig
 		{
 			get
@@ -80,8 +78,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AAB RID: 6827
-		// (get) Token: 0x060050CB RID: 20683 RVA: 0x000C7704 File Offset: 0x000C5904
+		// Token: 0x17001C18 RID: 7192
+		// (get) Token: 0x060055F2 RID: 22002 RVA: 0x000D2FCC File Offset: 0x000D11CC
 		public virtual List<int> ObstacleEntityIds
 		{
 			get
@@ -101,8 +99,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AAC RID: 6828
-		// (get) Token: 0x060050CC RID: 20684 RVA: 0x000C7768 File Offset: 0x000C5968
+		// Token: 0x17001C19 RID: 7193
+		// (get) Token: 0x060055F3 RID: 22003 RVA: 0x000D3030 File Offset: 0x000D1230
 		public virtual List<int> PollutionSourceEntityIds
 		{
 			get
@@ -122,19 +120,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AAD RID: 6829
-		// (get) Token: 0x060050CD RID: 20685 RVA: 0x000C77CC File Offset: 0x000C59CC
+		// Token: 0x17001C1A RID: 7194
+		// (get) Token: 0x060055F4 RID: 22004 RVA: 0x000D3094 File Offset: 0x000D1294
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> OnEnterPollutionRangeActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -157,19 +155,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AAE RID: 6830
-		// (get) Token: 0x060050CE RID: 20686 RVA: 0x000C7848 File Offset: 0x000C5A48
+		// Token: 0x17001C1B RID: 7195
+		// (get) Token: 0x060055F5 RID: 22005 RVA: 0x000D3110 File Offset: 0x000D1310
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> OnLeavePollutionRangeActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -192,8 +190,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AAF RID: 6831
-		// (get) Token: 0x060050CF RID: 20687 RVA: 0x000C78C2 File Offset: 0x000C5AC2
+		// Token: 0x17001C1C RID: 7196
+		// (get) Token: 0x060055F6 RID: 22006 RVA: 0x000D318A File Offset: 0x000D138A
 		public virtual string BakeData
 		{
 			get
@@ -202,55 +200,55 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E65 RID: 11877
+		// Token: 0x0400312D RID: 12589
 		private IFlowerPollutionComponent Instance;
 
-		// Token: 0x04002E66 RID: 11878
+		// Token: 0x0400312E RID: 12590
 		[Nullable(2)]
 		private IFlowerPollutionSplineConfig _SplineConfigsCache;
 
-		// Token: 0x04002E67 RID: 11879
+		// Token: 0x0400312F RID: 12591
 		private bool _SplineConfigsInited;
 
-		// Token: 0x04002E68 RID: 11880
+		// Token: 0x04003130 RID: 12592
 		[Nullable(2)]
 		private IFlowerPollutionPointLightConfig _PointLightConfigCache;
 
-		// Token: 0x04002E69 RID: 11881
+		// Token: 0x04003131 RID: 12593
 		private bool _PointLightConfigInited;
 
-		// Token: 0x04002E6A RID: 11882
+		// Token: 0x04003132 RID: 12594
 		private List<int> _ObstacleEntityIdsCache;
 
-		// Token: 0x04002E6B RID: 11883
+		// Token: 0x04003133 RID: 12595
 		private bool _ObstacleEntityIdsInited;
 
-		// Token: 0x04002E6C RID: 11884
+		// Token: 0x04003134 RID: 12596
 		private List<int> _PollutionSourceEntityIdsCache;
 
-		// Token: 0x04002E6D RID: 11885
+		// Token: 0x04003135 RID: 12597
 		private bool _PollutionSourceEntityIdsInited;
 
-		// Token: 0x04002E6E RID: 11886
+		// Token: 0x04003136 RID: 12598
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _OnEnterPollutionRangeActionsCache;
 
-		// Token: 0x04002E6F RID: 11887
+		// Token: 0x04003137 RID: 12599
 		private bool _OnEnterPollutionRangeActionsInited;
 
-		// Token: 0x04002E70 RID: 11888
+		// Token: 0x04003138 RID: 12600
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _OnLeavePollutionRangeActionsCache;
 
-		// Token: 0x04002E71 RID: 11889
+		// Token: 0x04003139 RID: 12601
 		private bool _OnLeavePollutionRangeActionsInited;
 	}
 }

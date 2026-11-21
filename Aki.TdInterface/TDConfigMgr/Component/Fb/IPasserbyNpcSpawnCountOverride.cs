@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CD9 RID: 3289
+	// Token: 0x02000DCF RID: 3535
 	public class IPasserbyNpcSpawnCountOverride
 	{
-		// Token: 0x06004B2C RID: 19244 RVA: 0x000BBE74 File Offset: 0x000BA074
-		[NullableContext(1)]
+		// Token: 0x0600502F RID: 20527 RVA: 0x000C71E0 File Offset: 0x000C53E0
 		public static IPasserbyNpcSpawnCountOverride Create(IPasserbyNpcSpawnCountOverride? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001737 RID: 5943
-		// (get) Token: 0x06004B2D RID: 19245 RVA: 0x000BBE94 File Offset: 0x000BA094
+		// Token: 0x1700188C RID: 6284
+		// (get) Token: 0x06005030 RID: 20528 RVA: 0x000C7200 File Offset: 0x000C5400
 		public virtual int? PcSpawnCount
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001738 RID: 5944
-		// (get) Token: 0x06004B2E RID: 19246 RVA: 0x000BBECC File Offset: 0x000BA0CC
+		// Token: 0x1700188D RID: 6285
+		// (get) Token: 0x06005031 RID: 20529 RVA: 0x000C7238 File Offset: 0x000C5438
 		public virtual int? MobileSpawnCount
 		{
 			get
@@ -49,7 +47,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002AFE RID: 11006
+		// Token: 0x04002DAE RID: 11694
 		private IPasserbyNpcSpawnCountOverride Instance;
 	}
 }

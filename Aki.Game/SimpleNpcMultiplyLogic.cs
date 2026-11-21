@@ -8,18 +8,18 @@ using CSharpScript.Core.Extension;
 using CSharpScript.Game.Module.Plot.Flow;
 using UnrealEngine;
 
-// Token: 0x02003265 RID: 12901
+// Token: 0x020027D4 RID: 10196
 [NullableContext(1)]
 [Nullable(0)]
 public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 {
-	// Token: 0x0601BE14 RID: 114196 RVA: 0x007B625F File Offset: 0x007B445F
+	// Token: 0x060199EB RID: 104939 RVA: 0x007DE3D3 File Offset: 0x007DC5D3
 	static SimpleNpcMultiplyLogic()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SimpleNpcMultiplyLogic.CreateStaticDefaultValue), new Action(SimpleNpcMultiplyLogic.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601BE15 RID: 114197 RVA: 0x007B6280 File Offset: 0x007B4480
+	// Token: 0x060199EC RID: 104940 RVA: 0x007DE3F4 File Offset: 0x007DC5F4
 	public SimpleNpcMultiplyLogic(SimpleNpcFlowComponent_C flowComponent)
 	{
 		this.FlowComponent = flowComponent;
@@ -27,7 +27,7 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		this.FlowConfigListResult = new List<SimpleNpcFlowData>();
 	}
 
-	// Token: 0x0601BE16 RID: 114198 RVA: 0x007B62E7 File Offset: 0x007B44E7
+	// Token: 0x060199ED RID: 104941 RVA: 0x007DE45B File Offset: 0x007DC65B
 	public void StartFlow()
 	{
 		this.IsPause = false;
@@ -35,7 +35,7 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		this.HandlePlayFlow();
 	}
 
-	// Token: 0x0601BE17 RID: 114199 RVA: 0x007B62FC File Offset: 0x007B44FC
+	// Token: 0x060199EE RID: 104942 RVA: 0x007DE470 File Offset: 0x007DC670
 	private void HandlePlayFlow()
 	{
 		this.FlowConfigListResult.Clear();
@@ -77,7 +77,7 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BE18 RID: 114200 RVA: 0x007B63CC File Offset: 0x007B45CC
+	// Token: 0x060199EF RID: 104943 RVA: 0x007DE540 File Offset: 0x007DC740
 	private void InitFlowDisplayState()
 	{
 		if (this.CurrentWorldStateFlow.Count < this.FlowComponent.FlowList.Num())
@@ -86,7 +86,7 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BE19 RID: 114201 RVA: 0x007B63F4 File Offset: 0x007B45F4
+	// Token: 0x060199F0 RID: 104944 RVA: 0x007DE568 File Offset: 0x007DC768
 	public void FilterFlowWorldState()
 	{
 		int num = this.FlowComponent.FlowList.Num();
@@ -166,7 +166,7 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BE1A RID: 114202 RVA: 0x007B66A4 File Offset: 0x007B48A4
+	// Token: 0x060199F1 RID: 104945 RVA: 0x007DE818 File Offset: 0x007DCA18
 	private int CheckFlowWorldState(int index)
 	{
 		SimpleNpcFlowData simpleNpcFlowData = this.FlowComponent.FlowList.Get(index);
@@ -249,7 +249,7 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BE1B RID: 114203 RVA: 0x007B6830 File Offset: 0x007B4A30
+	// Token: 0x060199F2 RID: 104946 RVA: 0x007DE9A8 File Offset: 0x007DCBA8
 	private void ExecuteTargetFlow(SimpleNpcFlowData flowConfig)
 	{
 		this.TempFlowData = flowConfig;
@@ -263,7 +263,7 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		this.HandleFlowEnd();
 	}
 
-	// Token: 0x0601BE1C RID: 114204 RVA: 0x007B6888 File Offset: 0x007B4A88
+	// Token: 0x060199F3 RID: 104947 RVA: 0x007DEA00 File Offset: 0x007DCC00
 	private unsafe void HandleFlowAction(int index)
 	{
 		this.TempFlowIndex = index;
@@ -340,7 +340,7 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BE1D RID: 114205 RVA: 0x007B6A88 File Offset: 0x007B4C88
+	// Token: 0x060199F4 RID: 104948 RVA: 0x007DEC00 File Offset: 0x007DCE00
 	private bool ExecuteNpcFlow(TsSimpleNpc npc, ITalkItem config)
 	{
 		bool result = false;
@@ -358,7 +358,7 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0601BE1E RID: 114206 RVA: 0x007B6AE1 File Offset: 0x007B4CE1
+	// Token: 0x060199F5 RID: 104949 RVA: 0x007DEC59 File Offset: 0x007DCE59
 	[return: Nullable(2)]
 	private string GetFlowText(string textId)
 	{
@@ -369,7 +369,7 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0601BE1F RID: 114207 RVA: 0x007B6AF4 File Offset: 0x007B4CF4
+	// Token: 0x060199F6 RID: 104950 RVA: 0x007DEC6C File Offset: 0x007DCE6C
 	private float GetWaitTime(ITalkItem config, float offset = 0f)
 	{
 		float num = config.WaitTime.GetValueOrDefault();
@@ -380,7 +380,7 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		return num + offset;
 	}
 
-	// Token: 0x0601BE20 RID: 114208 RVA: 0x007B6B24 File Offset: 0x007B4D24
+	// Token: 0x060199F7 RID: 104951 RVA: 0x007DEC9C File Offset: 0x007DCE9C
 	private void HandleFlowEnd()
 	{
 		this.IsExecuteFlowEnd = true;
@@ -392,7 +392,7 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		this.WaitTimeRemain = waitTimeRemain;
 	}
 
-	// Token: 0x0601BE21 RID: 114209 RVA: 0x007B6B60 File Offset: 0x007B4D60
+	// Token: 0x060199F8 RID: 104952 RVA: 0x007DECD8 File Offset: 0x007DCED8
 	public void Tick(float deltaSeconds)
 	{
 		if (this.WaitTimeRemain > 0f)
@@ -416,7 +416,7 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BE22 RID: 114210 RVA: 0x007B6BBC File Offset: 0x007B4DBC
+	// Token: 0x060199F9 RID: 104953 RVA: 0x007DED34 File Offset: 0x007DCF34
 	public void StopFlow()
 	{
 		this.IsExecuteFlowEnd = true;
@@ -444,8 +444,8 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002661 RID: 9825
-	// (get) Token: 0x0601BE23 RID: 114211 RVA: 0x007B6C40 File Offset: 0x007B4E40
+	// Token: 0x170028F4 RID: 10484
+	// (get) Token: 0x060199FA RID: 104954 RVA: 0x007DEDB8 File Offset: 0x007DCFB8
 	public bool IsPlaying
 	{
 		get
@@ -454,7 +454,7 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BE24 RID: 114212 RVA: 0x007B6C4B File Offset: 0x007B4E4B
+	// Token: 0x060199FB RID: 104955 RVA: 0x007DEDC3 File Offset: 0x007DCFC3
 	[NullableContext(2)]
 	public string GetWorldStateEnum(ESimpleNpcWorldState inState)
 	{
@@ -469,56 +469,56 @@ public class SimpleNpcMultiplyLogic : IStaticVariableResetter
 		return "NpcWorldState";
 	}
 
-	// Token: 0x0601BE25 RID: 114213 RVA: 0x007B6C65 File Offset: 0x007B4E65
+	// Token: 0x060199FC RID: 104956 RVA: 0x007DEDDD File Offset: 0x007DCFDD
 	public static void CreateStaticDefaultValue()
 	{
 		SimpleNpcMultiplyLogic.Instance = 0;
 	}
 
-	// Token: 0x0601BE26 RID: 114214 RVA: 0x007B6C6D File Offset: 0x007B4E6D
+	// Token: 0x060199FD RID: 104957 RVA: 0x007DEDE5 File Offset: 0x007DCFE5
 	public static void ResetStaticDefaultValue()
 	{
 		SimpleNpcMultiplyLogic.Instance = 0;
 	}
 
-	// Token: 0x0400DBF5 RID: 56309
+	// Token: 0x0400E094 RID: 57492
 	private const float DEFAULT_WAIT_TIME = 3f;
 
-	// Token: 0x0400DBF6 RID: 56310
+	// Token: 0x0400E095 RID: 57493
 	private const float DEFAULT_LOOP_TIME = 10f;
 
-	// Token: 0x0400DBF7 RID: 56311
+	// Token: 0x0400E096 RID: 57494
 	private static int Instance;
 
-	// Token: 0x0400DBF8 RID: 56312
+	// Token: 0x0400E097 RID: 57495
 	[Nullable(2)]
 	private SimpleNpcFlowComponent_C FlowComponent;
 
-	// Token: 0x0400DBF9 RID: 56313
+	// Token: 0x0400E098 RID: 57496
 	private List<bool> CurrentWorldStateFlow = new List<bool>();
 
-	// Token: 0x0400DBFA RID: 56314
+	// Token: 0x0400E099 RID: 57497
 	private List<SimpleNpcFlowData> FlowConfigListResult = new List<SimpleNpcFlowData>();
 
-	// Token: 0x0400DBFB RID: 56315
+	// Token: 0x0400E09A RID: 57498
 	private readonly int InstanceId;
 
-	// Token: 0x0400DBFC RID: 56316
+	// Token: 0x0400E09B RID: 57499
 	[Nullable(2)]
 	private SimpleNpcFlowData TempFlowData;
 
-	// Token: 0x0400DBFD RID: 56317
+	// Token: 0x0400E09C RID: 57500
 	private List<ITalkItem> TempTalkItems = new List<ITalkItem>();
 
-	// Token: 0x0400DBFE RID: 56318
+	// Token: 0x0400E09D RID: 57501
 	private int TempFlowIndex;
 
-	// Token: 0x0400DBFF RID: 56319
+	// Token: 0x0400E09E RID: 57502
 	private float WaitTimeRemain;
 
-	// Token: 0x0400DC00 RID: 56320
+	// Token: 0x0400E09F RID: 57503
 	private bool IsExecuteFlowEnd = true;
 
-	// Token: 0x0400DC01 RID: 56321
+	// Token: 0x0400E0A0 RID: 57504
 	public bool IsPause = true;
 }

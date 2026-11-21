@@ -8,12 +8,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 {
-	// Token: 0x02003DF9 RID: 15865
+	// Token: 0x0200311B RID: 12571
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Character/Npc/BP_NpcCombinedMesh.BP_NpcCombinedMesh_C")]
 	[UnrealStructLayout(1776, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1769)]
 	public class BP_NpcCombinedMesh_C : AKuroEditorTickActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06027A12 RID: 162322 RVA: 0x009968DC File Offset: 0x00994ADC
+		// Token: 0x0601ECE0 RID: 126176 RVA: 0x0091DBC7 File Offset: 0x0091BDC7
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_NpcCombinedMesh_C._ClassPtr == IntPtr.Zero)
@@ -23,89 +23,89 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			return BP_NpcCombinedMesh_C._ClassPtr;
 		}
 
-		// Token: 0x06027A13 RID: 162323 RVA: 0x00996900 File Offset: 0x00994B00
+		// Token: 0x0601ECE1 RID: 126177 RVA: 0x0091DBEC File Offset: 0x0091BDEC
 		public BP_NpcCombinedMesh_C() : this(BuiltinUtils.AllocNativeUObject(BP_NpcCombinedMesh_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06027A14 RID: 162324 RVA: 0x00996928 File Offset: 0x00994B28
+		// Token: 0x0601ECE2 RID: 126178 RVA: 0x0091DC14 File Offset: 0x0091BE14
 		[NullableContext(1)]
 		public BP_NpcCombinedMesh_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_NpcCombinedMesh_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700591A RID: 22810
-		// (get) Token: 0x06027A15 RID: 162325 RVA: 0x0099695B File Offset: 0x00994B5B
-		// (set) Token: 0x06027A16 RID: 162326 RVA: 0x0099696F File Offset: 0x00994B6F
+		// Token: 0x170035A4 RID: 13732
+		// (get) Token: 0x0601ECE3 RID: 126179 RVA: 0x0091DC47 File Offset: 0x0091BE47
+		// (set) Token: 0x0601ECE4 RID: 126180 RVA: 0x0091DC5B File Offset: 0x0091BE5B
 		[Nullable(2)]
 		public unsafe USkeletalMeshComponent Skel_Main
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_Skel_Main);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_Skel_Main, value);
 			}
 		}
 
-		// Token: 0x1700591B RID: 22811
-		// (get) Token: 0x06027A17 RID: 162327 RVA: 0x00996984 File Offset: 0x00994B84
-		// (set) Token: 0x06027A18 RID: 162328 RVA: 0x00996998 File Offset: 0x00994B98
+		// Token: 0x170035A5 RID: 13733
+		// (get) Token: 0x0601ECE5 RID: 126181 RVA: 0x0091DC70 File Offset: 0x0091BE70
+		// (set) Token: 0x0601ECE6 RID: 126182 RVA: 0x0091DC84 File Offset: 0x0091BE84
 		[Nullable(2)]
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x1700591C RID: 22812
-		// (get) Token: 0x06027A19 RID: 162329 RVA: 0x009969AD File Offset: 0x00994BAD
-		// (set) Token: 0x06027A1A RID: 162330 RVA: 0x009969C1 File Offset: 0x00994BC1
+		// Token: 0x170035A6 RID: 13734
+		// (get) Token: 0x0601ECE7 RID: 126183 RVA: 0x0091DC99 File Offset: 0x0091BE99
+		// (set) Token: 0x0601ECE8 RID: 126184 RVA: 0x0091DCAD File Offset: 0x0091BEAD
 		[Nullable(2)]
 		public unsafe PD_NpcSetupData_C NpcData
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<PD_NpcSetupData_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<PD_NpcSetupData_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_NpcData);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_NpcData, value);
 			}
 		}
 
-		// Token: 0x1700591D RID: 22813
-		// (get) Token: 0x06027A1B RID: 162331 RVA: 0x009969D6 File Offset: 0x00994BD6
-		// (set) Token: 0x06027A1C RID: 162332 RVA: 0x009969E6 File Offset: 0x00994BE6
+		// Token: 0x170035A7 RID: 13735
+		// (get) Token: 0x0601ECE9 RID: 126185 RVA: 0x0091DCC2 File Offset: 0x0091BEC2
+		// (set) Token: 0x0601ECEA RID: 126186 RVA: 0x0091DCD2 File Offset: 0x0091BED2
 		public unsafe bool OriginalSkeletalVisible
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_4) != 0;
+				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_OriginalSkeletalVisible) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_4) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_OriginalSkeletalVisible) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700591E RID: 22814
-		// (get) Token: 0x06027A1D RID: 162333 RVA: 0x009969F8 File Offset: 0x00994BF8
-		// (set) Token: 0x06027A1E RID: 162334 RVA: 0x00996A31 File Offset: 0x00994C31
+		// Token: 0x170035A8 RID: 13736
+		// (get) Token: 0x0601ECEB RID: 126187 RVA: 0x0091DCE4 File Offset: 0x0091BEE4
+		// (set) Token: 0x0601ECEC RID: 126188 RVA: 0x0091DD1D File Offset: 0x0091BF1D
 		[Nullable(1)]
 		public TMap<FName, SNpcSetupPartInfo> AllSubSkeletalComponents
 		{
@@ -116,7 +116,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 				TMap<FName, SNpcSetupPartInfo> result;
 				if ((result = this._AllSubSkeletalComponents) == null)
 				{
-					result = (this._AllSubSkeletalComponents = new TMap<FName, SNpcSetupPartInfo>(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_5, this));
+					result = (this._AllSubSkeletalComponents = new TMap<FName, SNpcSetupPartInfo>(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_AllSubSkeletalComponents, this));
 				}
 				return result;
 			}
@@ -127,27 +127,27 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			}
 		}
 
-		// Token: 0x1700591F RID: 22815
-		// (get) Token: 0x06027A1F RID: 162335 RVA: 0x00996A3F File Offset: 0x00994C3F
-		// (set) Token: 0x06027A20 RID: 162336 RVA: 0x00996A53 File Offset: 0x00994C53
+		// Token: 0x170035A9 RID: 13737
+		// (get) Token: 0x0601ECED RID: 126189 RVA: 0x0091DD2B File Offset: 0x0091BF2B
+		// (set) Token: 0x0601ECEE RID: 126190 RVA: 0x0091DD3F File Offset: 0x0091BF3F
 		[Nullable(2)]
 		public unsafe BP_NpcCombinedMesh_C Target
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<BP_NpcCombinedMesh_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_6);
+				return BuiltinUtils.ObjectPropertyGetter<BP_NpcCombinedMesh_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_Target);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_6, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_NpcCombinedMesh_C.__PropertyOffset_Target, value);
 			}
 		}
 
-		// Token: 0x17005920 RID: 22816
-		// (get) Token: 0x06027A21 RID: 162337 RVA: 0x00996A68 File Offset: 0x00994C68
-		// (set) Token: 0x06027A22 RID: 162338 RVA: 0x00996AA1 File Offset: 0x00994CA1
+		// Token: 0x170035AA RID: 13738
+		// (get) Token: 0x0601ECEF RID: 126191 RVA: 0x0091DD54 File Offset: 0x0091BF54
+		// (set) Token: 0x0601ECF0 RID: 126192 RVA: 0x0091DD8D File Offset: 0x0091BF8D
 		[Nullable(new byte[]
 		{
 			1,
@@ -166,7 +166,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 				TMap<FName, TEnumAsByte<EBodyPartName>> result;
 				if ((result = this._AllBodyPartName) == null)
 				{
-					result = (this._AllBodyPartName = new TMap<FName, TEnumAsByte<EBodyPartName>>(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_7, this));
+					result = (this._AllBodyPartName = new TMap<FName, TEnumAsByte<EBodyPartName>>(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_AllBodyPartName, this));
 				}
 				return result;
 			}
@@ -181,69 +181,69 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			}
 		}
 
-		// Token: 0x17005921 RID: 22817
-		// (get) Token: 0x06027A23 RID: 162339 RVA: 0x00996AAF File Offset: 0x00994CAF
-		// (set) Token: 0x06027A24 RID: 162340 RVA: 0x00996AC3 File Offset: 0x00994CC3
+		// Token: 0x170035AB RID: 13739
+		// (get) Token: 0x0601ECF1 RID: 126193 RVA: 0x0091DD9B File Offset: 0x0091BF9B
+		// (set) Token: 0x0601ECF2 RID: 126194 RVA: 0x0091DDAF File Offset: 0x0091BFAF
 		public unsafe FLinearColor ColorNPC01
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_ColorNPC01);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_ColorNPC01) = value;
 			}
 		}
 
-		// Token: 0x17005922 RID: 22818
-		// (get) Token: 0x06027A25 RID: 162341 RVA: 0x00996AD8 File Offset: 0x00994CD8
-		// (set) Token: 0x06027A26 RID: 162342 RVA: 0x00996AEC File Offset: 0x00994CEC
+		// Token: 0x170035AC RID: 13740
+		// (get) Token: 0x0601ECF3 RID: 126195 RVA: 0x0091DDC4 File Offset: 0x0091BFC4
+		// (set) Token: 0x0601ECF4 RID: 126196 RVA: 0x0091DDD8 File Offset: 0x0091BFD8
 		public unsafe FLinearColor ColorNPC02
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_ColorNPC02);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_ColorNPC02) = value;
 			}
 		}
 
-		// Token: 0x17005923 RID: 22819
-		// (get) Token: 0x06027A27 RID: 162343 RVA: 0x00996B01 File Offset: 0x00994D01
-		// (set) Token: 0x06027A28 RID: 162344 RVA: 0x00996B11 File Offset: 0x00994D11
+		// Token: 0x170035AD RID: 13741
+		// (get) Token: 0x0601ECF5 RID: 126197 RVA: 0x0091DDED File Offset: 0x0091BFED
+		// (set) Token: 0x0601ECF6 RID: 126198 RVA: 0x0091DDFD File Offset: 0x0091BFFD
 		public unsafe int Forced_LOD
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_Forced_LOD);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_Forced_LOD) = value;
 			}
 		}
 
-		// Token: 0x17005924 RID: 22820
-		// (get) Token: 0x06027A29 RID: 162345 RVA: 0x00996B22 File Offset: 0x00994D22
-		// (set) Token: 0x06027A2A RID: 162346 RVA: 0x00996B36 File Offset: 0x00994D36
+		// Token: 0x170035AE RID: 13742
+		// (get) Token: 0x0601ECF7 RID: 126199 RVA: 0x0091DE0E File Offset: 0x0091C00E
+		// (set) Token: 0x0601ECF8 RID: 126200 RVA: 0x0091DE22 File Offset: 0x0091C022
 		public unsafe FLinearColor SkinColor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_SkinColor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_SkinColor) = value;
 			}
 		}
 
-		// Token: 0x17005925 RID: 22821
-		// (get) Token: 0x06027A2B RID: 162347 RVA: 0x00996B4C File Offset: 0x00994D4C
-		// (set) Token: 0x06027A2C RID: 162348 RVA: 0x00996B85 File Offset: 0x00994D85
+		// Token: 0x170035AF RID: 13743
+		// (get) Token: 0x0601ECF9 RID: 126201 RVA: 0x0091DE38 File Offset: 0x0091C038
+		// (set) Token: 0x0601ECFA RID: 126202 RVA: 0x0091DE71 File Offset: 0x0091C071
 		[Nullable(1)]
 		public TArray<USkeletalMeshComponent> SkelMeshArray
 		{
@@ -254,7 +254,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 				TArray<USkeletalMeshComponent> result;
 				if ((result = this._SkelMeshArray) == null)
 				{
-					result = (this._SkelMeshArray = new TArray<USkeletalMeshComponent>(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_12, this));
+					result = (this._SkelMeshArray = new TArray<USkeletalMeshComponent>(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_SkelMeshArray, this));
 				}
 				return result;
 			}
@@ -265,9 +265,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			}
 		}
 
-		// Token: 0x17005926 RID: 22822
-		// (get) Token: 0x06027A2D RID: 162349 RVA: 0x00996B94 File Offset: 0x00994D94
-		// (set) Token: 0x06027A2E RID: 162350 RVA: 0x00996BCD File Offset: 0x00994DCD
+		// Token: 0x170035B0 RID: 13744
+		// (get) Token: 0x0601ECFB RID: 126203 RVA: 0x0091DE80 File Offset: 0x0091C080
+		// (set) Token: 0x0601ECFC RID: 126204 RVA: 0x0091DEB9 File Offset: 0x0091C0B9
 		[Nullable(1)]
 		public TArray<UMaterialInstance> MINPCs
 		{
@@ -278,7 +278,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 				TArray<UMaterialInstance> result;
 				if ((result = this._MINPCs) == null)
 				{
-					result = (this._MINPCs = new TArray<UMaterialInstance>(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_13, this));
+					result = (this._MINPCs = new TArray<UMaterialInstance>(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_MINPCs, this));
 				}
 				return result;
 			}
@@ -289,86 +289,60 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			}
 		}
 
-		// Token: 0x17005927 RID: 22823
-		// (get) Token: 0x06027A2F RID: 162351 RVA: 0x00996BDB File Offset: 0x00994DDB
-		// (set) Token: 0x06027A30 RID: 162352 RVA: 0x00996BEB File Offset: 0x00994DEB
+		// Token: 0x170035B1 RID: 13745
+		// (get) Token: 0x0601ECFD RID: 126205 RVA: 0x0091DEC7 File Offset: 0x0091C0C7
+		// (set) Token: 0x0601ECFE RID: 126206 RVA: 0x0091DED7 File Offset: 0x0091C0D7
 		public unsafe bool AdaptMaterialController
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_14) != 0;
+				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_AdaptMaterialController) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_14) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_AdaptMaterialController) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005928 RID: 22824
-		// (get) Token: 0x06027A31 RID: 162353 RVA: 0x00996BFC File Offset: 0x00994DFC
-		// (set) Token: 0x06027A32 RID: 162354 RVA: 0x00996C0C File Offset: 0x00994E0C
+		// Token: 0x170035B2 RID: 13746
+		// (get) Token: 0x0601ECFF RID: 126207 RVA: 0x0091DEE8 File Offset: 0x0091C0E8
+		// (set) Token: 0x0601ED00 RID: 126208 RVA: 0x0091DEF8 File Offset: 0x0091C0F8
 		public unsafe bool Ticked
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_15) != 0;
+				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_Ticked) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_15) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_Ticked) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005929 RID: 22825
-		// (get) Token: 0x06027A33 RID: 162355 RVA: 0x00996C20 File Offset: 0x00994E20
-		// (set) Token: 0x06027A34 RID: 162356 RVA: 0x00996C59 File Offset: 0x00994E59
-		[Nullable(1)]
-		public TArray<UKuroNpcExtraDecorationConfig> DecorationData
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<UKuroNpcExtraDecorationConfig> result;
-				if ((result = this._DecorationData) == null)
-				{
-					result = (this._DecorationData = new TArray<UKuroNpcExtraDecorationConfig>(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_16, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				this.DecorationData.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x1700592A RID: 22826
-		// (get) Token: 0x06027A35 RID: 162357 RVA: 0x00996C67 File Offset: 0x00994E67
-		// (set) Token: 0x06027A36 RID: 162358 RVA: 0x00996C77 File Offset: 0x00994E77
+		// Token: 0x170035B3 RID: 13747
+		// (get) Token: 0x0601ED01 RID: 126209 RVA: 0x0091DF09 File Offset: 0x0091C109
+		// (set) Token: 0x0601ED02 RID: 126210 RVA: 0x0091DF19 File Offset: 0x0091C119
 		public unsafe bool SkelTickableWhenPaused
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_17) != 0;
+				return *(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_SkelTickableWhenPaused) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_17) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_NpcCombinedMesh_C.__PropertyOffset_SkelTickableWhenPaused) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x06027A37 RID: 162359 RVA: 0x00996C88 File Offset: 0x00994E88
+		// Token: 0x0601ED03 RID: 126211 RVA: 0x0091DF2A File Offset: 0x0091C12A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void ApplySkelTickableWhenPaused()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__ApplySkelTickableWhenPaused_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06027A38 RID: 162360 RVA: 0x00996C9C File Offset: 0x00994E9C
+		// Token: 0x0601ED04 RID: 126212 RVA: 0x0091DF40 File Offset: 0x0091C140
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetSkelTickableWhenPaused(bool bTickableWhenPaused)
 		{
 			BP_NpcCombinedMesh_C.__SetSkelTickableWhenPaused_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__SetSkelTickableWhenPaused_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__SetSkelTickableWhenPaused_FunctionParams) & -16L;
@@ -377,34 +351,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__SetSkelTickableWhenPaused_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06027A39 RID: 162361 RVA: 0x00996CE4 File Offset: 0x00994EE4
+		// Token: 0x0601ED05 RID: 126213 RVA: 0x0091DF88 File Offset: 0x0091C188
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void SetupDecorations([Nullable(new byte[]
-		{
-			2,
-			1
-		})] ref TArray<UKuroNpcExtraDecorationConfig> Decorations)
-		{
-			BP_NpcCombinedMesh_C.__SetupDecorations_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__SetupDecorations_FunctionParams[(UIntPtr)87] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__SetupDecorations_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_NpcCombinedMesh_C.__SetupDecorations_NativeFunctionPtr, (void*)ptr, 1);
-			TArray<UKuroNpcExtraDecorationConfig> tarray = Decorations;
-			if (tarray != null)
-			{
-				tarray.MoveTo(&ptr->Decorations);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__SetupDecorations_NativeFunctionPtr, (void*)ptr);
-			TArray<UKuroNpcExtraDecorationConfig> tarray2 = Decorations;
-			if (tarray2 != null)
-			{
-				tarray2.MoveAssign(&ptr->Decorations);
-			}
-			UnrealReflectionUtils.DestroyStruct(BP_NpcCombinedMesh_C.__SetupDecorations_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x06027A3A RID: 162362 RVA: 0x00996D5C File Offset: 0x00994F5C
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetupCastShadow(bool bIgnoreCastShadow)
 		{
 			BP_NpcCombinedMesh_C.__SetupCastShadow_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__SetupCastShadow_FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__SetupCastShadow_FunctionParams) & -16L;
@@ -413,26 +361,23 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__SetupCastShadow_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06027A3B RID: 162363 RVA: 0x00996DA2 File Offset: 0x00994FA2
+		// Token: 0x0601ED06 RID: 126214 RVA: 0x0091DFCE File Offset: 0x0091C1CE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void SetupHiddenBones()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__SetupHiddenBones_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06027A3C RID: 162364 RVA: 0x00996DB6 File Offset: 0x00994FB6
+		// Token: 0x0601ED07 RID: 126215 RVA: 0x0091DFE2 File Offset: 0x0091C1E2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void SetupChildParts()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__SetupChildParts_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06027A3D RID: 162365 RVA: 0x00996DCC File Offset: 0x00994FCC
+		// Token: 0x0601ED08 RID: 126216 RVA: 0x0091DFF8 File Offset: 0x0091C1F8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void Set_Skeletal_Mesh_Material(UMaterialInterface ReplaceMaterial, USkeletalMeshComponent SkeletalMeshComp, FName ParamName01, FName ParamName02, FName SkinColorName, int NumSlots, int MaterialIndex, EBodyPartName BodyType)
 		{
 			BP_NpcCombinedMesh_C.__Set_Skeletal_Mesh_Material_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__Set_Skeletal_Mesh_Material_FunctionParams[(UIntPtr)823] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__Set_Skeletal_Mesh_Material_FunctionParams) & -16L;
@@ -448,18 +393,16 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__Set_Skeletal_Mesh_Material_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06027A3E RID: 162366 RVA: 0x00996E6E File Offset: 0x0099506E
+		// Token: 0x0601ED09 RID: 126217 RVA: 0x0091E09A File Offset: 0x0091C29A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 预览MorphTarget()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__预览MorphTarget_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06027A3F RID: 162367 RVA: 0x00996E84 File Offset: 0x00995084
+		// Token: 0x0601ED0A RID: 126218 RVA: 0x0091E0B0 File Offset: 0x0091C2B0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void Test(USkeletalMeshComponent SKMesh, UMaterialInstance MI)
 		{
 			BP_NpcCombinedMesh_C.__Test_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__Test_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__Test_FunctionParams) & -16L;
@@ -469,9 +412,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__Test_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06027A40 RID: 162368 RVA: 0x00996EF0 File Offset: 0x009950F0
+		// Token: 0x0601ED0B RID: 126219 RVA: 0x0091E11C File Offset: 0x0091C31C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetHeadTransform(FTransform InTransform, int Index, ref FTransform OutTransform)
 		{
 			BP_NpcCombinedMesh_C.__GetHeadTransform_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__GetHeadTransform_FunctionParams[(UIntPtr)127] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__GetHeadTransform_FunctionParams) & -16L;
@@ -483,10 +425,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			OutTransform = ptr->OutTransform;
 		}
 
-		// Token: 0x06027A41 RID: 162369 RVA: 0x00996F58 File Offset: 0x00995158
+		// Token: 0x0601ED0C RID: 126220 RVA: 0x0091E184 File Offset: 0x0091C384
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void Set_Skeleton_Mesh_DI(USkeletalMeshComponent SKMesh, FName ParamName01, FName ParamName02, EBodyPartName BodyType, FName SkinColorName, [Nullable(new byte[]
 		{
 			2,
@@ -514,10 +455,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			UnrealReflectionUtils.DestroyStruct(BP_NpcCombinedMesh_C.__Set_Skeleton_Mesh_DI_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06027A42 RID: 162370 RVA: 0x00997010 File Offset: 0x00995210
+		// Token: 0x0601ED0D RID: 126221 RVA: 0x0091E23C File Offset: 0x0091C43C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void AddSkeletalComponent(FName Name, USkeletalMeshComponent SkeletalComp)
 		{
 			BP_NpcCombinedMesh_C.__AddSkeletalComponent_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__AddSkeletalComponent_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__AddSkeletalComponent_FunctionParams) & -16L;
@@ -527,10 +467,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__AddSkeletalComponent_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06027A43 RID: 162371 RVA: 0x0099706C File Offset: 0x0099526C
+		// Token: 0x0601ED0E RID: 126222 RVA: 0x0091E298 File Offset: 0x0091C498
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void Setup_Skeletal_Mesh_Component(USkeletalMesh InSkeletalMesh, EBodyPartName BodyType, int Index, ref bool Suc, ref USkeletalMeshComponent SkeletalComp)
 		{
 			BP_NpcCombinedMesh_C.__Setup_Skeletal_Mesh_Component_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__Setup_Skeletal_Mesh_Component_FunctionParams[(UIntPtr)623] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__Setup_Skeletal_Mesh_Component_FunctionParams) & -16L;
@@ -547,9 +486,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			SkeletalComp = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(ptr->SkeletalComp);
 		}
 
-		// Token: 0x06027A44 RID: 162372 RVA: 0x00997110 File Offset: 0x00995310
+		// Token: 0x0601ED0F RID: 126223 RVA: 0x0091E33C File Offset: 0x0091C53C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetWaistTransform(FTransform InTransform, int Index, ref FTransform OutTransform)
 		{
 			BP_NpcCombinedMesh_C.__GetWaistTransform_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__GetWaistTransform_FunctionParams[(UIntPtr)127] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__GetWaistTransform_FunctionParams) & -16L;
@@ -561,9 +499,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			OutTransform = ptr->OutTransform;
 		}
 
-		// Token: 0x06027A45 RID: 162373 RVA: 0x00997178 File Offset: 0x00995378
+		// Token: 0x0601ED10 RID: 126224 RVA: 0x0091E3A4 File Offset: 0x0091C5A4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetBackTransform(FTransform InTransform, int Index, ref FTransform OutTransform)
 		{
 			BP_NpcCombinedMesh_C.__GetBackTransform_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__GetBackTransform_FunctionParams[(UIntPtr)127] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__GetBackTransform_FunctionParams) & -16L;
@@ -575,9 +512,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			OutTransform = ptr->OutTransform;
 		}
 
-		// Token: 0x06027A46 RID: 162374 RVA: 0x009971E0 File Offset: 0x009953E0
+		// Token: 0x0601ED11 RID: 126225 RVA: 0x0091E40C File Offset: 0x0091C60C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetLegTransform(FTransform InTransform, int Index, ref FTransform OutTransform)
 		{
 			BP_NpcCombinedMesh_C.__GetLegTransform_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__GetLegTransform_FunctionParams[(UIntPtr)127] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__GetLegTransform_FunctionParams) & -16L;
@@ -589,9 +525,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			OutTransform = ptr->OutTransform;
 		}
 
-		// Token: 0x06027A47 RID: 162375 RVA: 0x00997248 File Offset: 0x00995448
+		// Token: 0x0601ED12 RID: 126226 RVA: 0x0091E474 File Offset: 0x0091C674
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetWeaponTransform(FTransform InTransform, int Index, ref FTransform OutTransform)
 		{
 			BP_NpcCombinedMesh_C.__GetWeaponTransform_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__GetWeaponTransform_FunctionParams[(UIntPtr)127] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__GetWeaponTransform_FunctionParams) & -16L;
@@ -603,9 +538,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			OutTransform = ptr->OutTransform;
 		}
 
-		// Token: 0x06027A48 RID: 162376 RVA: 0x009972B0 File Offset: 0x009954B0
+		// Token: 0x0601ED13 RID: 126227 RVA: 0x0091E4DC File Offset: 0x0091C6DC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetArmTransform(FTransform InTransform, int Index, ref FTransform OutTransform)
 		{
 			BP_NpcCombinedMesh_C.__GetArmTransform_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__GetArmTransform_FunctionParams[(UIntPtr)127] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__GetArmTransform_FunctionParams) & -16L;
@@ -617,10 +551,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			OutTransform = ptr->OutTransform;
 		}
 
-		// Token: 0x06027A49 RID: 162377 RVA: 0x00997318 File Offset: 0x00995518
+		// Token: 0x0601ED14 RID: 126228 RVA: 0x0091E544 File Offset: 0x0091C744
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void Setup_Socket(FName SocketName, FTransform Transform, USkeletalMesh SkeletalMesh, [Nullable(new byte[]
 		{
 			2,
@@ -667,38 +600,34 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			UnrealReflectionUtils.DestroyStruct(BP_NpcCombinedMesh_C.__Setup_Socket_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06027A4A RID: 162378 RVA: 0x00997424 File Offset: 0x00995624
+		// Token: 0x0601ED15 RID: 126229 RVA: 0x0091E650 File Offset: 0x0091C850
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void SetupSockets()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__SetupSockets_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06027A4B RID: 162379 RVA: 0x00997438 File Offset: 0x00995638
+		// Token: 0x0601ED16 RID: 126230 RVA: 0x0091E664 File Offset: 0x0091C864
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetupSkeletalMeshComponents(ref bool Suc)
 		{
-			BP_NpcCombinedMesh_C.__SetupSkeletalMeshComponents_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__SetupSkeletalMeshComponents_FunctionParams[(UIntPtr)119] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__SetupSkeletalMeshComponents_FunctionParams) & -16L;
+			BP_NpcCombinedMesh_C.__SetupSkeletalMeshComponents_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__SetupSkeletalMeshComponents_FunctionParams[(UIntPtr)127] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__SetupSkeletalMeshComponents_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_NpcCombinedMesh_C.__SetupSkeletalMeshComponents_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Suc = Suc;
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__SetupSkeletalMeshComponents_NativeFunctionPtr, (void*)ptr);
 			Suc = ptr->Suc;
 		}
 
-		// Token: 0x06027A4C RID: 162380 RVA: 0x00997487 File Offset: 0x00995687
+		// Token: 0x0601ED17 RID: 126231 RVA: 0x0091E6B3 File Offset: 0x0091C8B3
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void ResetNpcMesh()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__ResetNpcMesh_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06027A4D RID: 162381 RVA: 0x0099749C File Offset: 0x0099569C
+		// Token: 0x0601ED18 RID: 126232 RVA: 0x0091E6C8 File Offset: 0x0091C8C8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetupNpcMesh(PD_NpcSetupData_C Data, bool bIgnoreSockets, bool bIgnoreCastShadow, ref bool IsSuc, [Nullable(new byte[]
 		{
 			2,
@@ -726,41 +655,36 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			UnrealReflectionUtils.DestroyStruct(BP_NpcCombinedMesh_C.__SetupNpcMesh_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06027A4E RID: 162382 RVA: 0x0099754C File Offset: 0x0099574C
+		// Token: 0x0601ED19 RID: 126233 RVA: 0x0091E778 File Offset: 0x0091C978
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06027A4F RID: 162383 RVA: 0x00997560 File Offset: 0x00995760
+		// Token: 0x0601ED1A RID: 126234 RVA: 0x0091E78C File Offset: 0x0091C98C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06027A50 RID: 162384 RVA: 0x00997575 File Offset: 0x00995775
+		// Token: 0x0601ED1B RID: 126235 RVA: 0x0091E7A0 File Offset: 0x0091C9A0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06027A51 RID: 162385 RVA: 0x00997589 File Offset: 0x00995789
+		// Token: 0x0601ED1C RID: 126236 RVA: 0x0091E7B4 File Offset: 0x0091C9B4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06027A52 RID: 162386 RVA: 0x009975A0 File Offset: 0x009957A0
+		// Token: 0x0601ED1D RID: 126237 RVA: 0x0091E7C8 File Offset: 0x0091C9C8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_NpcCombinedMesh_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__ReceiveTick_FunctionParams) & -16L;
@@ -769,48 +693,47 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06027A53 RID: 162387 RVA: 0x009975E8 File Offset: 0x009957E8
+		// Token: 0x0601ED1E RID: 126238 RVA: 0x0091E810 File Offset: 0x0091CA10
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_NpcCombinedMesh_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_NpcCombinedMesh_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_NpcCombinedMesh_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_NpcCombinedMesh_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_NpcCombinedMesh_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06027A54 RID: 162388 RVA: 0x0099762F File Offset: 0x0099582F
+		// Token: 0x0601ED1F RID: 126239 RVA: 0x0091E856 File Offset: 0x0091CA56
 		protected BP_NpcCombinedMesh_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040140B1 RID: 82097
+		// Token: 0x040105DE RID: 67038
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Character/Npc/BP_NpcCombinedMesh.BP_NpcCombinedMesh_C";
 
-		// Token: 0x040140B2 RID: 82098
+		// Token: 0x040105DF RID: 67039
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040140B3 RID: 82099
+		// Token: 0x040105E0 RID: 67040
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040140B4 RID: 82100
-		internal static int __PropertyOffset_1;
+		// Token: 0x040105E1 RID: 67041
+		internal static int __PropertyOffset_Skel_Main;
 
-		// Token: 0x040140B5 RID: 82101
-		internal static int __PropertyOffset_2;
+		// Token: 0x040105E2 RID: 67042
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x040140B6 RID: 82102
-		internal static int __PropertyOffset_3;
+		// Token: 0x040105E3 RID: 67043
+		internal static int __PropertyOffset_NpcData;
 
-		// Token: 0x040140B7 RID: 82103
-		internal static int __PropertyOffset_4;
+		// Token: 0x040105E4 RID: 67044
+		internal static int __PropertyOffset_OriginalSkeletalVisible;
 
-		// Token: 0x040140B8 RID: 82104
-		internal static int __PropertyOffset_5;
+		// Token: 0x040105E5 RID: 67045
+		internal static int __PropertyOffset_AllSubSkeletalComponents;
 
-		// Token: 0x040140B9 RID: 82105
+		// Token: 0x040105E6 RID: 67046
 		[Nullable(new byte[]
 		{
 			2,
@@ -818,13 +741,13 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 		})]
 		private TMap<FName, SNpcSetupPartInfo> _AllSubSkeletalComponents;
 
-		// Token: 0x040140BA RID: 82106
-		internal static int __PropertyOffset_6;
+		// Token: 0x040105E7 RID: 67047
+		internal static int __PropertyOffset_Target;
 
-		// Token: 0x040140BB RID: 82107
-		internal static int __PropertyOffset_7;
+		// Token: 0x040105E8 RID: 67048
+		internal static int __PropertyOffset_AllBodyPartName;
 
-		// Token: 0x040140BC RID: 82108
+		// Token: 0x040105E9 RID: 67049
 		[Nullable(new byte[]
 		{
 			2,
@@ -832,22 +755,22 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 		})]
 		private TMap<FName, TEnumAsByte<EBodyPartName>> _AllBodyPartName;
 
-		// Token: 0x040140BD RID: 82109
-		internal static int __PropertyOffset_8;
+		// Token: 0x040105EA RID: 67050
+		internal static int __PropertyOffset_ColorNPC01;
 
-		// Token: 0x040140BE RID: 82110
-		internal static int __PropertyOffset_9;
+		// Token: 0x040105EB RID: 67051
+		internal static int __PropertyOffset_ColorNPC02;
 
-		// Token: 0x040140BF RID: 82111
-		internal static int __PropertyOffset_10;
+		// Token: 0x040105EC RID: 67052
+		internal static int __PropertyOffset_Forced_LOD;
 
-		// Token: 0x040140C0 RID: 82112
-		internal static int __PropertyOffset_11;
+		// Token: 0x040105ED RID: 67053
+		internal static int __PropertyOffset_SkinColor;
 
-		// Token: 0x040140C1 RID: 82113
-		internal static int __PropertyOffset_12;
+		// Token: 0x040105EE RID: 67054
+		internal static int __PropertyOffset_SkelMeshArray;
 
-		// Token: 0x040140C2 RID: 82114
+		// Token: 0x040105EF RID: 67055
 		[Nullable(new byte[]
 		{
 			2,
@@ -855,10 +778,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 		})]
 		private TArray<USkeletalMeshComponent> _SkelMeshArray;
 
-		// Token: 0x040140C3 RID: 82115
-		internal static int __PropertyOffset_13;
+		// Token: 0x040105F0 RID: 67056
+		internal static int __PropertyOffset_MINPCs;
 
-		// Token: 0x040140C4 RID: 82116
+		// Token: 0x040105F1 RID: 67057
 		[Nullable(new byte[]
 		{
 			2,
@@ -866,444 +789,420 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 		})]
 		private TArray<UMaterialInstance> _MINPCs;
 
-		// Token: 0x040140C5 RID: 82117
-		internal static int __PropertyOffset_14;
+		// Token: 0x040105F2 RID: 67058
+		internal static int __PropertyOffset_AdaptMaterialController;
 
-		// Token: 0x040140C6 RID: 82118
-		internal static int __PropertyOffset_15;
+		// Token: 0x040105F3 RID: 67059
+		internal static int __PropertyOffset_Ticked;
 
-		// Token: 0x040140C7 RID: 82119
-		internal static int __PropertyOffset_16;
+		// Token: 0x040105F4 RID: 67060
+		internal static int __PropertyOffset_SkelTickableWhenPaused;
 
-		// Token: 0x040140C8 RID: 82120
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<UKuroNpcExtraDecorationConfig> _DecorationData;
-
-		// Token: 0x040140C9 RID: 82121
-		internal static int __PropertyOffset_17;
-
-		// Token: 0x040140CA RID: 82122
+		// Token: 0x040105F5 RID: 67061
 		private static IntPtr __ApplySkelTickableWhenPaused_NativeFunctionPtr;
 
-		// Token: 0x040140CB RID: 82123
+		// Token: 0x040105F6 RID: 67062
 		private static IntPtr __SetSkelTickableWhenPaused_NativeFunctionPtr;
 
-		// Token: 0x040140CC RID: 82124
-		private static IntPtr __SetupDecorations_NativeFunctionPtr;
-
-		// Token: 0x040140CD RID: 82125
+		// Token: 0x040105F7 RID: 67063
 		private static IntPtr __SetupCastShadow_NativeFunctionPtr;
 
-		// Token: 0x040140CE RID: 82126
+		// Token: 0x040105F8 RID: 67064
 		private static IntPtr __SetupHiddenBones_NativeFunctionPtr;
 
-		// Token: 0x040140CF RID: 82127
+		// Token: 0x040105F9 RID: 67065
 		private static IntPtr __SetupChildParts_NativeFunctionPtr;
 
-		// Token: 0x040140D0 RID: 82128
+		// Token: 0x040105FA RID: 67066
 		private static IntPtr __Set_Skeletal_Mesh_Material_NativeFunctionPtr;
 
-		// Token: 0x040140D1 RID: 82129
+		// Token: 0x040105FB RID: 67067
 		private static IntPtr __预览MorphTarget_NativeFunctionPtr;
 
-		// Token: 0x040140D2 RID: 82130
+		// Token: 0x040105FC RID: 67068
 		private static IntPtr __Test_NativeFunctionPtr;
 
-		// Token: 0x040140D3 RID: 82131
+		// Token: 0x040105FD RID: 67069
 		private static IntPtr __GetHeadTransform_NativeFunctionPtr;
 
-		// Token: 0x040140D4 RID: 82132
+		// Token: 0x040105FE RID: 67070
 		private static IntPtr __Set_Skeleton_Mesh_DI_NativeFunctionPtr;
 
-		// Token: 0x040140D5 RID: 82133
+		// Token: 0x040105FF RID: 67071
 		private static IntPtr __AddSkeletalComponent_NativeFunctionPtr;
 
-		// Token: 0x040140D6 RID: 82134
+		// Token: 0x04010600 RID: 67072
 		private static IntPtr __Setup_Skeletal_Mesh_Component_NativeFunctionPtr;
 
-		// Token: 0x040140D7 RID: 82135
+		// Token: 0x04010601 RID: 67073
 		private static IntPtr __GetWaistTransform_NativeFunctionPtr;
 
-		// Token: 0x040140D8 RID: 82136
+		// Token: 0x04010602 RID: 67074
 		private static IntPtr __GetBackTransform_NativeFunctionPtr;
 
-		// Token: 0x040140D9 RID: 82137
+		// Token: 0x04010603 RID: 67075
 		private static IntPtr __GetLegTransform_NativeFunctionPtr;
 
-		// Token: 0x040140DA RID: 82138
+		// Token: 0x04010604 RID: 67076
 		private static IntPtr __GetWeaponTransform_NativeFunctionPtr;
 
-		// Token: 0x040140DB RID: 82139
+		// Token: 0x04010605 RID: 67077
 		private static IntPtr __GetArmTransform_NativeFunctionPtr;
 
-		// Token: 0x040140DC RID: 82140
+		// Token: 0x04010606 RID: 67078
 		private static IntPtr __Setup_Socket_NativeFunctionPtr;
 
-		// Token: 0x040140DD RID: 82141
+		// Token: 0x04010607 RID: 67079
 		private static IntPtr __SetupSockets_NativeFunctionPtr;
 
-		// Token: 0x040140DE RID: 82142
+		// Token: 0x04010608 RID: 67080
 		private static IntPtr __SetupSkeletalMeshComponents_NativeFunctionPtr;
 
-		// Token: 0x040140DF RID: 82143
+		// Token: 0x04010609 RID: 67081
 		private static IntPtr __ResetNpcMesh_NativeFunctionPtr;
 
-		// Token: 0x040140E0 RID: 82144
+		// Token: 0x0401060A RID: 67082
 		private static IntPtr __SetupNpcMesh_NativeFunctionPtr;
 
-		// Token: 0x040140E1 RID: 82145
+		// Token: 0x0401060B RID: 67083
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x040140E2 RID: 82146
+		// Token: 0x0401060C RID: 67084
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x040140E3 RID: 82147
+		// Token: 0x0401060D RID: 67085
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x0200A258 RID: 41560
+		// Token: 0x02008ED9 RID: 36569
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetSkelTickableWhenPaused_FunctionParams
 		{
-			// Token: 0x04031EF6 RID: 204534
+			// Token: 0x0402CB96 RID: 183190
 			[FieldOffset(0)]
 			public bool bTickableWhenPaused;
 		}
 
-		// Token: 0x0200A259 RID: 41561
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 72)]
-		protected ref struct __SetupDecorations_FunctionParams
-		{
-			// Token: 0x04031EF7 RID: 204535
-			[FieldOffset(0)]
-			public byte Decorations;
-		}
-
-		// Token: 0x0200A25A RID: 41562
+		// Token: 0x02008EDA RID: 36570
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __SetupCastShadow_FunctionParams
 		{
-			// Token: 0x04031EF8 RID: 204536
+			// Token: 0x0402CB97 RID: 183191
 			[FieldOffset(0)]
 			public bool bIgnoreCastShadow;
 		}
 
-		// Token: 0x0200A25B RID: 41563
+		// Token: 0x02008EDB RID: 36571
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 808)]
 		protected ref struct __Set_Skeletal_Mesh_Material_FunctionParams
 		{
-			// Token: 0x04031EF9 RID: 204537
+			// Token: 0x0402CB98 RID: 183192
 			[FieldOffset(0)]
 			public IntPtr ReplaceMaterial;
 
-			// Token: 0x04031EFA RID: 204538
+			// Token: 0x0402CB99 RID: 183193
 			[FieldOffset(8)]
 			public IntPtr SkeletalMeshComp;
 
-			// Token: 0x04031EFB RID: 204539
+			// Token: 0x0402CB9A RID: 183194
 			[FieldOffset(16)]
 			public FName ParamName01;
 
-			// Token: 0x04031EFC RID: 204540
+			// Token: 0x0402CB9B RID: 183195
 			[FieldOffset(28)]
 			public FName ParamName02;
 
-			// Token: 0x04031EFD RID: 204541
+			// Token: 0x0402CB9C RID: 183196
 			[FieldOffset(40)]
 			public FName SkinColorName;
 
-			// Token: 0x04031EFE RID: 204542
+			// Token: 0x0402CB9D RID: 183197
 			[FieldOffset(52)]
 			public int NumSlots;
 
-			// Token: 0x04031EFF RID: 204543
+			// Token: 0x0402CB9E RID: 183198
 			[FieldOffset(56)]
 			public int MaterialIndex;
 
-			// Token: 0x04031F00 RID: 204544
+			// Token: 0x0402CB9F RID: 183199
 			[FieldOffset(60)]
 			public TEnumAsByte<EBodyPartName> BodyType;
 		}
 
-		// Token: 0x0200A25C RID: 41564
+		// Token: 0x02008EDC RID: 36572
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __Test_FunctionParams
 		{
-			// Token: 0x04031F01 RID: 204545
+			// Token: 0x0402CBA0 RID: 183200
 			[FieldOffset(0)]
 			public IntPtr SKMesh;
 
-			// Token: 0x04031F02 RID: 204546
+			// Token: 0x0402CBA1 RID: 183201
 			[FieldOffset(8)]
 			public IntPtr MI;
 		}
 
-		// Token: 0x0200A25D RID: 41565
+		// Token: 0x02008EDD RID: 36573
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 112)]
 		protected ref struct __GetHeadTransform_FunctionParams
 		{
-			// Token: 0x04031F03 RID: 204547
+			// Token: 0x0402CBA2 RID: 183202
 			[FieldOffset(0)]
 			public FTransform InTransform;
 
-			// Token: 0x04031F04 RID: 204548
+			// Token: 0x0402CBA3 RID: 183203
 			[FieldOffset(48)]
 			public int Index;
 
-			// Token: 0x04031F05 RID: 204549
+			// Token: 0x0402CBA4 RID: 183204
 			[FieldOffset(64)]
 			public FTransform OutTransform;
 		}
 
-		// Token: 0x0200A25E RID: 41566
+		// Token: 0x02008EDE RID: 36574
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 176)]
 		protected ref struct __Set_Skeleton_Mesh_DI_FunctionParams
 		{
-			// Token: 0x04031F06 RID: 204550
+			// Token: 0x0402CBA5 RID: 183205
 			[FieldOffset(0)]
 			public IntPtr SKMesh;
 
-			// Token: 0x04031F07 RID: 204551
+			// Token: 0x0402CBA6 RID: 183206
 			[FieldOffset(8)]
 			public FName ParamName01;
 
-			// Token: 0x04031F08 RID: 204552
+			// Token: 0x0402CBA7 RID: 183207
 			[FieldOffset(20)]
 			public FName ParamName02;
 
-			// Token: 0x04031F09 RID: 204553
+			// Token: 0x0402CBA8 RID: 183208
 			[FieldOffset(32)]
 			public TEnumAsByte<EBodyPartName> BodyType;
 
-			// Token: 0x04031F0A RID: 204554
+			// Token: 0x0402CBA9 RID: 183209
 			[FieldOffset(36)]
 			public FName SkinColorName;
 
-			// Token: 0x04031F0B RID: 204555
+			// Token: 0x0402CBAA RID: 183210
 			[FieldOffset(48)]
 			public byte Materials;
 		}
 
-		// Token: 0x0200A25F RID: 41567
+		// Token: 0x02008EDF RID: 36575
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 88)]
 		protected ref struct __AddSkeletalComponent_FunctionParams
 		{
-			// Token: 0x04031F0C RID: 204556
+			// Token: 0x0402CBAB RID: 183211
 			[FieldOffset(0)]
 			public FName Name;
 
-			// Token: 0x04031F0D RID: 204557
+			// Token: 0x0402CBAC RID: 183212
 			[FieldOffset(16)]
 			public IntPtr SkeletalComp;
 		}
 
-		// Token: 0x0200A260 RID: 41568
+		// Token: 0x02008EE0 RID: 36576
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 608)]
 		protected ref struct __Setup_Skeletal_Mesh_Component_FunctionParams
 		{
-			// Token: 0x04031F0E RID: 204558
+			// Token: 0x0402CBAD RID: 183213
 			[FieldOffset(0)]
 			public IntPtr InSkeletalMesh;
 
-			// Token: 0x04031F0F RID: 204559
+			// Token: 0x0402CBAE RID: 183214
 			[FieldOffset(8)]
 			public TEnumAsByte<EBodyPartName> BodyType;
 
-			// Token: 0x04031F10 RID: 204560
+			// Token: 0x0402CBAF RID: 183215
 			[FieldOffset(12)]
 			public int Index;
 
-			// Token: 0x04031F11 RID: 204561
+			// Token: 0x0402CBB0 RID: 183216
 			[FieldOffset(16)]
 			public bool Suc;
 
-			// Token: 0x04031F12 RID: 204562
+			// Token: 0x0402CBB1 RID: 183217
 			[FieldOffset(24)]
 			public IntPtr SkeletalComp;
 		}
 
-		// Token: 0x0200A261 RID: 41569
+		// Token: 0x02008EE1 RID: 36577
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 112)]
 		protected ref struct __GetWaistTransform_FunctionParams
 		{
-			// Token: 0x04031F13 RID: 204563
+			// Token: 0x0402CBB2 RID: 183218
 			[FieldOffset(0)]
 			public FTransform InTransform;
 
-			// Token: 0x04031F14 RID: 204564
+			// Token: 0x0402CBB3 RID: 183219
 			[FieldOffset(48)]
 			public int Index;
 
-			// Token: 0x04031F15 RID: 204565
+			// Token: 0x0402CBB4 RID: 183220
 			[FieldOffset(64)]
 			public FTransform OutTransform;
 		}
 
-		// Token: 0x0200A262 RID: 41570
+		// Token: 0x02008EE2 RID: 36578
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 112)]
 		protected ref struct __GetBackTransform_FunctionParams
 		{
-			// Token: 0x04031F16 RID: 204566
+			// Token: 0x0402CBB5 RID: 183221
 			[FieldOffset(0)]
 			public FTransform InTransform;
 
-			// Token: 0x04031F17 RID: 204567
+			// Token: 0x0402CBB6 RID: 183222
 			[FieldOffset(48)]
 			public int Index;
 
-			// Token: 0x04031F18 RID: 204568
+			// Token: 0x0402CBB7 RID: 183223
 			[FieldOffset(64)]
 			public FTransform OutTransform;
 		}
 
-		// Token: 0x0200A263 RID: 41571
+		// Token: 0x02008EE3 RID: 36579
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 112)]
 		protected ref struct __GetLegTransform_FunctionParams
 		{
-			// Token: 0x04031F19 RID: 204569
+			// Token: 0x0402CBB8 RID: 183224
 			[FieldOffset(0)]
 			public FTransform InTransform;
 
-			// Token: 0x04031F1A RID: 204570
+			// Token: 0x0402CBB9 RID: 183225
 			[FieldOffset(48)]
 			public int Index;
 
-			// Token: 0x04031F1B RID: 204571
+			// Token: 0x0402CBBA RID: 183226
 			[FieldOffset(64)]
 			public FTransform OutTransform;
 		}
 
-		// Token: 0x0200A264 RID: 41572
+		// Token: 0x02008EE4 RID: 36580
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 112)]
 		protected ref struct __GetWeaponTransform_FunctionParams
 		{
-			// Token: 0x04031F1C RID: 204572
+			// Token: 0x0402CBBB RID: 183227
 			[FieldOffset(0)]
 			public FTransform InTransform;
 
-			// Token: 0x04031F1D RID: 204573
+			// Token: 0x0402CBBC RID: 183228
 			[FieldOffset(48)]
 			public int Index;
 
-			// Token: 0x04031F1E RID: 204574
+			// Token: 0x0402CBBD RID: 183229
 			[FieldOffset(64)]
 			public FTransform OutTransform;
 		}
 
-		// Token: 0x0200A265 RID: 41573
+		// Token: 0x02008EE5 RID: 36581
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 112)]
 		protected ref struct __GetArmTransform_FunctionParams
 		{
-			// Token: 0x04031F1F RID: 204575
+			// Token: 0x0402CBBE RID: 183230
 			[FieldOffset(0)]
 			public FTransform InTransform;
 
-			// Token: 0x04031F20 RID: 204576
+			// Token: 0x0402CBBF RID: 183231
 			[FieldOffset(48)]
 			public int Index;
 
-			// Token: 0x04031F21 RID: 204577
+			// Token: 0x0402CBC0 RID: 183232
 			[FieldOffset(64)]
 			public FTransform OutTransform;
 		}
 
-		// Token: 0x0200A266 RID: 41574
+		// Token: 0x02008EE6 RID: 36582
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 592)]
 		protected ref struct __Setup_Socket_FunctionParams
 		{
-			// Token: 0x04031F22 RID: 204578
+			// Token: 0x0402CBC1 RID: 183233
 			[FieldOffset(0)]
 			public FName SocketName;
 
-			// Token: 0x04031F23 RID: 204579
+			// Token: 0x0402CBC2 RID: 183234
 			[FieldOffset(16)]
 			public FTransform Transform;
 
-			// Token: 0x04031F24 RID: 204580
+			// Token: 0x0402CBC3 RID: 183235
 			[FieldOffset(64)]
 			public IntPtr SkeletalMesh;
 
-			// Token: 0x04031F25 RID: 204581
+			// Token: 0x0402CBC4 RID: 183236
 			[FieldOffset(72)]
 			public byte MorphTargets;
 
-			// Token: 0x04031F26 RID: 204582
+			// Token: 0x0402CBC5 RID: 183237
 			[FieldOffset(88)]
 			public byte Materials;
 
-			// Token: 0x04031F27 RID: 204583
+			// Token: 0x0402CBC6 RID: 183238
 			[FieldOffset(104)]
 			public int index;
 
-			// Token: 0x04031F28 RID: 204584
+			// Token: 0x0402CBC7 RID: 183239
 			[FieldOffset(108)]
 			public bool Suc;
 
-			// Token: 0x04031F29 RID: 204585
+			// Token: 0x0402CBC8 RID: 183240
 			[FieldOffset(112)]
 			public IntPtr SkeletalComp;
 		}
 
-		// Token: 0x0200A267 RID: 41575
+		// Token: 0x02008EE7 RID: 36583
 		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 104)]
+		[StructLayout(LayoutKind.Explicit, Size = 112)]
 		protected ref struct __SetupSkeletalMeshComponents_FunctionParams
 		{
-			// Token: 0x04031F2A RID: 204586
+			// Token: 0x0402CBC9 RID: 183241
 			[FieldOffset(0)]
 			public bool Suc;
 		}
 
-		// Token: 0x0200A268 RID: 41576
+		// Token: 0x02008EE8 RID: 36584
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __SetupNpcMesh_FunctionParams
 		{
-			// Token: 0x04031F2B RID: 204587
+			// Token: 0x0402CBCA RID: 183242
 			[FieldOffset(0)]
 			public IntPtr Data;
 
-			// Token: 0x04031F2C RID: 204588
+			// Token: 0x0402CBCB RID: 183243
 			[FieldOffset(8)]
 			public bool bIgnoreSockets;
 
-			// Token: 0x04031F2D RID: 204589
+			// Token: 0x0402CBCC RID: 183244
 			[FieldOffset(9)]
 			public bool bIgnoreCastShadow;
 
-			// Token: 0x04031F2E RID: 204590
+			// Token: 0x0402CBCD RID: 183245
 			[FieldOffset(10)]
 			public bool IsSuc;
 
-			// Token: 0x04031F2F RID: 204591
+			// Token: 0x0402CBCE RID: 183246
 			[FieldOffset(16)]
 			public byte SkleMain;
 		}
 
-		// Token: 0x0200A269 RID: 41577
+		// Token: 0x02008EE9 RID: 36585
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x04031F30 RID: 204592
+			// Token: 0x0402CBCF RID: 183247
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

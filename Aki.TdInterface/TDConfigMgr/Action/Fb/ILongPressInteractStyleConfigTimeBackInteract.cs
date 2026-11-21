@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002614 RID: 9748
+	// Token: 0x020028D4 RID: 10452
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ILongPressInteractStyleConfigTimeBackInteract : ILongPressInteractStyleConfig
 	{
-		// Token: 0x0600DAD5 RID: 56021 RVA: 0x002097FD File Offset: 0x002079FD
-		[NullableContext(1)]
+		// Token: 0x0600E8A2 RID: 59554 RVA: 0x00225F51 File Offset: 0x00224151
+		[NullableContext(0)]
 		public static ILongPressInteractStyleConfigTimeBackInteract Create(ILongPressInteractStyleConfigTimeBackInteract? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700406F RID: 16495
-		// (get) Token: 0x0600DAD6 RID: 56022 RVA: 0x0020981C File Offset: 0x00207A1C
+		// Token: 0x170043A8 RID: 17320
+		// (get) Token: 0x0600E8A3 RID: 59555 RVA: 0x00225F70 File Offset: 0x00224170
 		public override ELongPressInteractStyle Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004070 RID: 16496
-		// (get) Token: 0x0600DAD7 RID: 56023 RVA: 0x00209829 File Offset: 0x00207A29
+		// Token: 0x170043A9 RID: 17321
+		// (get) Token: 0x0600E8A4 RID: 59556 RVA: 0x00225F7D File Offset: 0x0022417D
 		public virtual string TidContent
 		{
 			get
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004071 RID: 16497
-		// (get) Token: 0x0600DAD8 RID: 56024 RVA: 0x00209838 File Offset: 0x00207A38
+		// Token: 0x170043AA RID: 17322
+		// (get) Token: 0x0600E8A5 RID: 59557 RVA: 0x00225F8C File Offset: 0x0022418C
 		public virtual float? StartProgress
 		{
 			get
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004072 RID: 16498
-		// (get) Token: 0x0600DAD9 RID: 56025 RVA: 0x0020986E File Offset: 0x00207A6E
+		// Token: 0x170043AB RID: 17323
+		// (get) Token: 0x0600E8A6 RID: 59558 RVA: 0x00225FC2 File Offset: 0x002241C2
 		public virtual string EdTidContent
 		{
 			get
@@ -67,7 +67,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400798A RID: 31114
+		// Token: 0x04008024 RID: 32804
 		private ILongPressInteractStyleConfigTimeBackInteract Instance;
 	}
 }

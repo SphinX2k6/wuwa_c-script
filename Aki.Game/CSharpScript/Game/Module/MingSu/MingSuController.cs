@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,19 +12,19 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.MingSu
 {
-	// Token: 0x020053CD RID: 21453
-	[NullableContext(2)]
+	// Token: 0x020043B0 RID: 17328
+	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class MingSuController : UiControllerBase
 	{
-		// Token: 0x06036D36 RID: 224566 RVA: 0x00CFC350 File Offset: 0x00CFA550
+		// Token: 0x0602BC7C RID: 179324 RVA: 0x00C4B3F8 File Offset: 0x00C495F8
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x06036D37 RID: 224567 RVA: 0x00CFC354 File Offset: 0x00CFA554
+		// Token: 0x0602BC7D RID: 179325 RVA: 0x00C4B3FC File Offset: 0x00C495FC
 		protected override void OnAddEvents()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.MingSu
 			instance2.Add(name2, handle2);
 		}
 
-		// Token: 0x06036D38 RID: 224568 RVA: 0x00CFC3B8 File Offset: 0x00CFA5B8
+		// Token: 0x0602BC7E RID: 179326 RVA: 0x00C4B460 File Offset: 0x00C49660
 		protected override void OnRemoveEvents()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.MingSu
 			instance2.Remove(name2, handle2);
 		}
 
-		// Token: 0x06036D39 RID: 224569 RVA: 0x00CFC41C File Offset: 0x00CFA61C
+		// Token: 0x0602BC7F RID: 179327 RVA: 0x00C4B4C4 File Offset: 0x00C496C4
 		private static void OnAntiqueShopUpgradeSequenceFinished()
 		{
 			Log instance = Log.Instance;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.MingSu
 			}
 		}
 
-		// Token: 0x06036D3A RID: 224570 RVA: 0x00CFC504 File Offset: 0x00CFA704
+		// Token: 0x0602BC80 RID: 179328 RVA: 0x00C4B5AC File Offset: 0x00C497AC
 		private static void OnAntiqueShopLevelMaxSequenceFinished()
 		{
 			Log instance = Log.Instance;
@@ -140,7 +140,8 @@ namespace CSharpScript.Game.Module.MingSu
 			}
 		}
 
-		// Token: 0x06036D3B RID: 224571 RVA: 0x00CFC5EC File Offset: 0x00CFA7EC
+		// Token: 0x0602BC81 RID: 179329 RVA: 0x00C4B694 File Offset: 0x00C49894
+		[NullableContext(2)]
 		public static bool OpenView(int dragonPoolId, TOpenViewCallBack finishCallback = null)
 		{
 			DragonPool? dragonPoolConfigById = CollectItemConfig.Instance.GetDragonPoolConfigById(dragonPoolId);
@@ -195,7 +196,8 @@ namespace CSharpScript.Game.Module.MingSu
 			return true;
 		}
 
-		// Token: 0x06036D3C RID: 224572 RVA: 0x00CFC69C File Offset: 0x00CFA89C
+		// Token: 0x0602BC82 RID: 179330 RVA: 0x00C4B744 File Offset: 0x00C49944
+		[NullableContext(2)]
 		public static void SendOpenDragonPoolRequest(int dragonPoolId, Action onResponse = null)
 		{
 			DragonPoolConfRequest dragonPoolConfRequest = DragonPoolConfRequest.Create();
@@ -209,7 +211,7 @@ namespace CSharpScript.Game.Module.MingSu
 				}
 				if (dragonPoolConfResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(dragonPoolConfResponse.ErrorCode, 24543, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(dragonPoolConfResponse.ErrorCode, 16385, null, true, true);
 					return;
 				}
 				MingSuModel.Instance.RefreshDragonPoolDropItems(dragonPoolConfResponse.DragonPoolConf);
@@ -222,7 +224,8 @@ namespace CSharpScript.Game.Module.MingSu
 			}, 0);
 		}
 
-		// Token: 0x06036D3D RID: 224573 RVA: 0x00CFC6E0 File Offset: 0x00CFA8E0
+		// Token: 0x0602BC83 RID: 179331 RVA: 0x00C4B788 File Offset: 0x00C49988
+		[NullableContext(2)]
 		public static void SendOpenDarkCoastDeliveryRequest(int dragonPoolId, Action onResponse = null)
 		{
 			DarkCoastInfoRequest darkCoastInfoRequest = DarkCoastInfoRequest.Create();
@@ -236,11 +239,11 @@ namespace CSharpScript.Game.Module.MingSu
 				}
 				if (darkCoastInfoResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(darkCoastInfoResponse.ErrorCode, 20782, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(darkCoastInfoResponse.ErrorCode, 20081, null, true, true);
 					return;
 				}
 				MingSuModel.Instance.RefreshDragonPoolDropItems(darkCoastInfoResponse.DragonPoolConf);
-				MingSuModel.Instance.RefreshDarkCoastGuardInfo(dragonPoolId, darkCoastInfoResponse.GuardIds.ToArray<int>(), darkCoastInfoResponse.TreasureBoxDone.ToArray<int>());
+				MingSuModel.Instance.RefreshDarkCoastGuardInfo(dragonPoolId, MingSuController.ToIntArray(darkCoastInfoResponse.GuardIds), MingSuController.ToIntArray(darkCoastInfoResponse.TreasureBoxDone));
 				MingSuModel.Instance.RefreshDragonPoolLevelGains(dragonPoolId, darkCoastInfoResponse.LevelGains);
 				Action onResponse2 = onResponse;
 				if (onResponse2 == null)
@@ -251,7 +254,7 @@ namespace CSharpScript.Game.Module.MingSu
 			}, 0);
 		}
 
-		// Token: 0x06036D3E RID: 224574 RVA: 0x00CFC730 File Offset: 0x00CFA930
+		// Token: 0x0602BC84 RID: 179332 RVA: 0x00C4B7D8 File Offset: 0x00C499D8
 		[NullableContext(0)]
 		public static UniTask<bool> SendDarkCoastDeliveryRequestAsync()
 		{
@@ -262,7 +265,7 @@ namespace CSharpScript.Game.Module.MingSu
 			return <SendDarkCoastDeliveryRequestAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036D3F RID: 224575 RVA: 0x00CFC76C File Offset: 0x00CFA96C
+		// Token: 0x0602BC85 RID: 179333 RVA: 0x00C4B814 File Offset: 0x00C49A14
 		public unsafe static void SendHandInMingSuRequest(int dragonPoolId)
 		{
 			Log instance = Log.Instance;
@@ -328,12 +331,12 @@ namespace CSharpScript.Game.Module.MingSu
 					EventSystem.Instance.Emit(EEventName.UpdateDragonPoolView);
 					return;
 				}
-				ErrorCodeController.Instance.OpenErrorCodeTipView(handInMingSuResponse.ErrorCode, 23593, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(handInMingSuResponse.ErrorCode, 25984, null, true, true);
 				ItemRewardController.Instance.Close(null);
 			}, 0);
 		}
 
-		// Token: 0x06036D40 RID: 224576 RVA: 0x00CFC7FC File Offset: 0x00CFA9FC
+		// Token: 0x0602BC86 RID: 179334 RVA: 0x00C4B8A4 File Offset: 0x00C49AA4
 		public static void SendMingSuHandRewardRequest(int dragonPoolId)
 		{
 			MingSuHandRewardRequest mingSuHandRewardRequest = MingSuHandRewardRequest.Create();
@@ -353,24 +356,29 @@ namespace CSharpScript.Game.Module.MingSu
 					EventSystem.Instance.Emit<IActivityRewardViewData>(EEventName.RefreshCommonActivityRewardPopUpView, activityRewardViewData);
 					return;
 				}
-				ErrorCodeController.Instance.OpenErrorCodeTipView(mingSuHandRewardResponse.ErrorCode, 16113, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(mingSuHandRewardResponse.ErrorCode, 22679, null, true, true);
 			}, 0);
 		}
 
-		// Token: 0x170083C1 RID: 33729
-		// (get) Token: 0x06036D41 RID: 224577 RVA: 0x00CFC85A File Offset: 0x00CFAA5A
-		[Nullable(1)]
+		// Token: 0x0602BC87 RID: 179335 RVA: 0x00C4B904 File Offset: 0x00C49B04
+		private static int[] ToIntArray(ICollection<int> source)
+		{
+			int[] array = new int[source.Count];
+			source.CopyTo(array, 0);
+			return array;
+		}
+
+		// Token: 0x1700578D RID: 22413
+		// (get) Token: 0x0602BC88 RID: 179336 RVA: 0x00C4B926 File Offset: 0x00C49B26
 		public static MingSuController Instance
 		{
-			[NullableContext(1)]
 			get
 			{
 				return MingSuController._Instance;
 			}
 		}
 
-		// Token: 0x06036D42 RID: 224578 RVA: 0x00CFC861 File Offset: 0x00CFAA61
-		[NullableContext(1)]
+		// Token: 0x0602BC89 RID: 179337 RVA: 0x00C4B92D File Offset: 0x00C49B2D
 		public static MingSuController GetOrCreateInstance()
 		{
 			if (MingSuController._Instance == null)
@@ -380,7 +388,7 @@ namespace CSharpScript.Game.Module.MingSu
 			return MingSuController._Instance;
 		}
 
-		// Token: 0x06036D43 RID: 224579 RVA: 0x00CFC875 File Offset: 0x00CFAA75
+		// Token: 0x0602BC8A RID: 179338 RVA: 0x00C4B941 File Offset: 0x00C49B41
 		public static bool CreateInstance()
 		{
 			if (MingSuController._Instance != null)
@@ -391,35 +399,36 @@ namespace CSharpScript.Game.Module.MingSu
 			return true;
 		}
 
-		// Token: 0x06036D44 RID: 224580 RVA: 0x00CFC88B File Offset: 0x00CFAA8B
+		// Token: 0x0602BC8B RID: 179339 RVA: 0x00C4B957 File Offset: 0x00C49B57
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06036D45 RID: 224581 RVA: 0x00CFC88D File Offset: 0x00CFAA8D
+		// Token: 0x0602BC8C RID: 179340 RVA: 0x00C4B959 File Offset: 0x00C49B59
 		public static void ResetStaticDefaultValue()
 		{
 			MingSuController._Instance = null;
 		}
 
-		// Token: 0x06036D46 RID: 224582 RVA: 0x00CFC895 File Offset: 0x00CFAA95
+		// Token: 0x0602BC8D RID: 179341 RVA: 0x00C4B961 File Offset: 0x00C49B61
 		static MingSuController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MingSuController.CreateStaticDefaultValue), new Action(MingSuController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401CF0D RID: 118541
+		// Token: 0x040179A5 RID: 96677
+		[Nullable(2)]
 		private static MingSuController _Instance;
 
-		// Token: 0x0200B670 RID: 46704
+		// Token: 0x0200A0A8 RID: 41128
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04037445 RID: 226373
+			// Token: 0x04031E9A RID: 204442
 			[Nullable(0)]
 			public static Action <0>__OnAntiqueShopUpgradeSequenceFinished;
 
-			// Token: 0x04037446 RID: 226374
+			// Token: 0x04031E9B RID: 204443
 			[Nullable(0)]
 			public static Action <1>__OnAntiqueShopLevelMaxSequenceFinished;
 		}

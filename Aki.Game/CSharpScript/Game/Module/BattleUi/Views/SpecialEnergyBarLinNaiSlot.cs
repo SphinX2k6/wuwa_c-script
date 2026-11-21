@@ -1,32 +1,21 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DEA RID: 24042
+	// Token: 0x02004DCF RID: 19919
 	public class SpecialEnergyBarLinNaiSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D1F0 RID: 250352 RVA: 0x00EB73CC File Offset: 0x00EB55CC
+		// Token: 0x0603217F RID: 205183 RVA: 0x00E08908 File Offset: 0x00E06B08
 		public void SwitchPointColor(bool enhanced)
 		{
-			SpecialEnergyBarInfo config = this.Config;
-			string text;
-			if (config == null)
-			{
-				text = null;
-			}
-			else
-			{
-				string[] pointColorList = config.PointColorList;
-				text = ((pointColorList != null) ? pointColorList.ElementAtOrDefault((enhanced > false) ? 1 : 0) : null);
-			}
-			FColor fcolor = FColor.FromHex(text ?? "ffffff");
+			int num = (enhanced > false) ? 1 : 0;
+			FColor fcolor = FColor.FromHex((this.Config != null && num < this.Config.PointColorList.Length) ? this.Config.PointColorList[num] : "ffffff");
 			this.SlotItemList[0].SetPointColor(fcolor);
 		}
 
-		// Token: 0x0603D1F1 RID: 250353 RVA: 0x00EB7420 File Offset: 0x00EB5620
+		// Token: 0x06032180 RID: 205184 RVA: 0x00E08960 File Offset: 0x00E06B60
 		[NullableContext(2)]
 		public void SwitchKeyItem(SpecialEnergyBarInfo cfg, bool pureHotkey = false)
 		{
@@ -86,14 +75,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D1F2 RID: 250354 RVA: 0x00EB74D9 File Offset: 0x00EB56D9
+		// Token: 0x06032181 RID: 205185 RVA: 0x00E08A19 File Offset: 0x00E06C19
 		protected override bool GetKeyEnable()
 		{
 			SpecialEnergyBarLinNai ownerLogic = this.OwnerLogic;
 			return ownerLogic != null && ownerLogic.Internal_GetKeyEnable();
 		}
 
-		// Token: 0x0603D1F3 RID: 250355 RVA: 0x00EB74EC File Offset: 0x00EB56EC
+		// Token: 0x06032182 RID: 205186 RVA: 0x00E08A2C File Offset: 0x00E06C2C
 		public void RefreshKeyEnable(bool enable, bool bForce)
 		{
 			SpecialEnergyBarKeyItem keyItem = this.KeyItem;
@@ -104,18 +93,18 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(enable, bForce);
 		}
 
-		// Token: 0x0401FDC8 RID: 130504
+		// Token: 0x0401A88F RID: 108687
 		[Nullable(2)]
 		public SpecialEnergyBarLinNai OwnerLogic;
 
-		// Token: 0x0200C11E RID: 49438
+		// Token: 0x0200AB2D RID: 43821
 		private enum EChildType
 		{
-			// Token: 0x0403A51C RID: 238876
+			// Token: 0x04034F0E RID: 216846
 			PnlSlot,
-			// Token: 0x0403A51D RID: 238877
+			// Token: 0x04034F0F RID: 216847
 			PnlHotKey,
-			// Token: 0x0403A51E RID: 238878
+			// Token: 0x04034F10 RID: 216848
 			SprDesc
 		}
 	}

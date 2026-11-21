@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077AB RID: 30635
+	// Token: 0x02007FE3 RID: 32739
 	public class TStopNewMoveWithSplineTypeUnion
 	{
-		// Token: 0x1700E6B5 RID: 59061
-		// (get) Token: 0x0603797E RID: 227710 RVA: 0x007853FC File Offset: 0x007835FC
-		// (set) Token: 0x0603797F RID: 227711 RVA: 0x00785404 File Offset: 0x00783604
+		// Token: 0x1700F30F RID: 62223
+		// (get) Token: 0x0603AEFF RID: 241407 RVA: 0x007EA9CC File Offset: 0x007E8BCC
+		// (set) Token: 0x0603AF00 RID: 241408 RVA: 0x007EA9D4 File Offset: 0x007E8BD4
 		public TStopNewMoveWithSplineType Type { get; set; }
 
-		// Token: 0x1700E6B6 RID: 59062
-		// (get) Token: 0x06037980 RID: 227712 RVA: 0x0078540D File Offset: 0x0078360D
-		// (set) Token: 0x06037981 RID: 227713 RVA: 0x00785415 File Offset: 0x00783615
+		// Token: 0x1700F310 RID: 62224
+		// (get) Token: 0x0603AF01 RID: 241409 RVA: 0x007EA9DD File Offset: 0x007E8BDD
+		// (set) Token: 0x0603AF02 RID: 241410 RVA: 0x007EA9E5 File Offset: 0x007E8BE5
 		public object Value { get; set; }
 
-		// Token: 0x06037982 RID: 227714 RVA: 0x0078541E File Offset: 0x0078361E
+		// Token: 0x0603AF03 RID: 241411 RVA: 0x007EA9EE File Offset: 0x007E8BEE
 		public TStopNewMoveWithSplineTypeUnion()
 		{
 			this.Type = TStopNewMoveWithSplineType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037983 RID: 227715 RVA: 0x00785434 File Offset: 0x00783634
+		// Token: 0x0603AF04 RID: 241412 RVA: 0x007EAA04 File Offset: 0x007E8C04
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037984 RID: 227716 RVA: 0x00785446 File Offset: 0x00783646
+		// Token: 0x0603AF05 RID: 241413 RVA: 0x007EAA16 File Offset: 0x007E8C16
 		public IStopNewMoveWithSplineAtCurrentPosT AsIStopNewMoveWithSplineAtCurrentPos()
 		{
 			return this.As<IStopNewMoveWithSplineAtCurrentPosT>();
 		}
 
-		// Token: 0x06037985 RID: 227717 RVA: 0x0078544E File Offset: 0x0078364E
+		// Token: 0x0603AF06 RID: 241414 RVA: 0x007EAA1E File Offset: 0x007E8C1E
 		public static TStopNewMoveWithSplineTypeUnion FromIStopNewMoveWithSplineAtCurrentPos(IStopNewMoveWithSplineAtCurrentPosT _istopnewmovewithsplineatcurrentpos)
 		{
 			return new TStopNewMoveWithSplineTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037986 RID: 227718 RVA: 0x00785463 File Offset: 0x00783663
+		// Token: 0x0603AF07 RID: 241415 RVA: 0x007EAA33 File Offset: 0x007E8C33
 		public IStopNewMoveWithSplineAtEndPointT AsIStopNewMoveWithSplineAtEndPoint()
 		{
 			return this.As<IStopNewMoveWithSplineAtEndPointT>();
 		}
 
-		// Token: 0x06037987 RID: 227719 RVA: 0x0078546B File Offset: 0x0078366B
+		// Token: 0x0603AF08 RID: 241416 RVA: 0x007EAA3B File Offset: 0x007E8C3B
 		public static TStopNewMoveWithSplineTypeUnion FromIStopNewMoveWithSplineAtEndPoint(IStopNewMoveWithSplineAtEndPointT _istopnewmovewithsplineatendpoint)
 		{
 			return new TStopNewMoveWithSplineTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037988 RID: 227720 RVA: 0x00785480 File Offset: 0x00783680
+		// Token: 0x0603AF09 RID: 241417 RVA: 0x007EAA50 File Offset: 0x007E8C50
 		public IStopNewMoveWithSplineAtStartPointT AsIStopNewMoveWithSplineAtStartPoint()
 		{
 			return this.As<IStopNewMoveWithSplineAtStartPointT>();
 		}
 
-		// Token: 0x06037989 RID: 227721 RVA: 0x00785488 File Offset: 0x00783688
+		// Token: 0x0603AF0A RID: 241418 RVA: 0x007EAA58 File Offset: 0x007E8C58
 		public static TStopNewMoveWithSplineTypeUnion FromIStopNewMoveWithSplineAtStartPoint(IStopNewMoveWithSplineAtStartPointT _istopnewmovewithsplineatstartpoint)
 		{
 			return new TStopNewMoveWithSplineTypeUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603798A RID: 227722 RVA: 0x0078549D File Offset: 0x0078369D
+		// Token: 0x0603AF0B RID: 241419 RVA: 0x007EAA6D File Offset: 0x007E8C6D
 		public IStopNewMoveWithSplineAtTargetPointT AsIStopNewMoveWithSplineAtTargetPoint()
 		{
 			return this.As<IStopNewMoveWithSplineAtTargetPointT>();
 		}
 
-		// Token: 0x0603798B RID: 227723 RVA: 0x007854A5 File Offset: 0x007836A5
+		// Token: 0x0603AF0C RID: 241420 RVA: 0x007EAA75 File Offset: 0x007E8C75
 		public static TStopNewMoveWithSplineTypeUnion FromIStopNewMoveWithSplineAtTargetPoint(IStopNewMoveWithSplineAtTargetPointT _istopnewmovewithsplineattargetpoint)
 		{
 			return new TStopNewMoveWithSplineTypeUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603798C RID: 227724 RVA: 0x007854BC File Offset: 0x007836BC
+		// Token: 0x0603AF0D RID: 241421 RVA: 0x007EAA8C File Offset: 0x007E8C8C
 		public static int Pack(FlatBufferBuilder builder, TStopNewMoveWithSplineTypeUnion _o)
 		{
 			switch (_o.Type)

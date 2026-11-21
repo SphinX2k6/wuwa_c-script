@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002B3 RID: 691
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002FA RID: 762
 	public class IDestroyCfg
 	{
-		// Token: 0x06000CEF RID: 3311 RVA: 0x000310CC File Offset: 0x0002F2CC
+		// Token: 0x06000E1F RID: 3615 RVA: 0x00034000 File Offset: 0x00032200
 		private IDestroyCfg_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000CF0 RID: 3312 RVA: 0x00031104 File Offset: 0x0002F304
+		// Token: 0x06000E20 RID: 3616 RVA: 0x00034038 File Offset: 0x00032238
 		public static IDestroyCfg Create([Nullable(2)] IDestroyCfg instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000CF1 RID: 3313 RVA: 0x00031117 File Offset: 0x0002F317
+		// Token: 0x06000E21 RID: 3617 RVA: 0x0003404B File Offset: 0x0003224B
 		public static IDestroyCfg CreateFromSetValue([Nullable(2)] IDestroyCfg_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000CF2 RID: 3314 RVA: 0x0003112A File Offset: 0x0002F32A
+		// Token: 0x06000E22 RID: 3618 RVA: 0x0003405E File Offset: 0x0003225E
 		public IDestroyCfg_SetValue ToSetValue()
 		{
 			return new IDestroyCfg_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003C8 RID: 968
-		// (get) Token: 0x06000CF3 RID: 3315 RVA: 0x00031149 File Offset: 0x0002F349
-		// (set) Token: 0x06000CF4 RID: 3316 RVA: 0x00031170 File Offset: 0x0002F370
+		// Token: 0x17000415 RID: 1045
+		// (get) Token: 0x06000E23 RID: 3619 RVA: 0x0003407D File Offset: 0x0003227D
+		// (set) Token: 0x06000E24 RID: 3620 RVA: 0x000340A4 File Offset: 0x000322A4
 		public virtual List<ITeleControlDestroyCondition> Conditions
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003C9 RID: 969
-		// (get) Token: 0x06000CF5 RID: 3317 RVA: 0x00031180 File Offset: 0x0002F380
-		// (set) Token: 0x06000CF6 RID: 3318 RVA: 0x000311BA File Offset: 0x0002F3BA
+		// Token: 0x17000416 RID: 1046
+		// (get) Token: 0x06000E25 RID: 3621 RVA: 0x000340B4 File Offset: 0x000322B4
+		// (set) Token: 0x06000E26 RID: 3622 RVA: 0x000340EE File Offset: 0x000322EE
 		public virtual bool? StopPhysicAfterDestroyed
 		{
 			get
@@ -109,11 +107,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BE5 RID: 3045
+		// Token: 0x04000CCF RID: 3279
 		[Nullable(2)]
 		protected IDestroyCfg FbInstance;
 
-		// Token: 0x04000BE6 RID: 3046
+		// Token: 0x04000CD0 RID: 3280
 		[Nullable(2)]
 		protected IDestroyCfg_SetValue PocoInterface;
 	}

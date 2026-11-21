@@ -1,35 +1,35 @@
 ﻿using System;
 
-// Token: 0x0200271A RID: 10010
+// Token: 0x02001C05 RID: 7173
 public interface IRacingBetsMatchTableDangoItemData
 {
-	// Token: 0x17001AE8 RID: 6888
-	// (get) Token: 0x06014836 RID: 84022
-	// (set) Token: 0x06014837 RID: 84023
+	// Token: 0x17001B20 RID: 6944
+	// (get) Token: 0x06011D18 RID: 72984
+	// (set) Token: 0x06011D19 RID: 72985
 	int DangoId { get; set; }
 
-	// Token: 0x17001AE9 RID: 6889
-	// (get) Token: 0x06014838 RID: 84024
-	// (set) Token: 0x06014839 RID: 84025
+	// Token: 0x17001B21 RID: 6945
+	// (get) Token: 0x06011D1A RID: 72986
+	// (set) Token: 0x06011D1B RID: 72987
 	bool IsNeedCheer { get; set; }
 
-	// Token: 0x17001AEA RID: 6890
-	// (get) Token: 0x0601483A RID: 84026
-	// (set) Token: 0x0601483B RID: 84027
+	// Token: 0x17001B22 RID: 6946
+	// (get) Token: 0x06011D1C RID: 72988
+	// (set) Token: 0x06011D1D RID: 72989
 	bool IsMatchFinished { get; set; }
 
-	// Token: 0x17001AEB RID: 6891
-	// (get) Token: 0x0601483C RID: 84028
-	// (set) Token: 0x0601483D RID: 84029
+	// Token: 0x17001B23 RID: 6947
+	// (get) Token: 0x06011D1E RID: 72990
+	// (set) Token: 0x06011D1F RID: 72991
 	bool IsPromote { get; set; }
 
-	// Token: 0x17001AEC RID: 6892
-	// (get) Token: 0x0601483E RID: 84030
-	// (set) Token: 0x0601483F RID: 84031
+	// Token: 0x17001B24 RID: 6948
+	// (get) Token: 0x06011D20 RID: 72992
+	// (set) Token: 0x06011D21 RID: 72993
 	bool IsNeedPlayLevelSequence { get; set; }
 
-	// Token: 0x17001AED RID: 6893
-	// (get) Token: 0x06014840 RID: 84032
-	// (set) Token: 0x06014841 RID: 84033
+	// Token: 0x17001B25 RID: 6949
+	// (get) Token: 0x06011D22 RID: 72994
+	// (set) Token: 0x06011D23 RID: 72995
 	bool IsCurMatch { get; set; }
 }

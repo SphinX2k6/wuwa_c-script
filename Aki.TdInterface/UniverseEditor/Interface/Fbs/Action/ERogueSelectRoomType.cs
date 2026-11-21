@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FEC RID: 24556
+	// Token: 0x02006646 RID: 26182
 	public enum ERogueSelectRoomType : byte
 	{
-		// Token: 0x0400FFA6 RID: 65446
+		// Token: 0x04010D77 RID: 68983
 		Role
 	}
 }

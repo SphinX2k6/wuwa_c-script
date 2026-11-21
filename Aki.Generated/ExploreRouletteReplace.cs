@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C52 RID: 3154
+	// Token: 0x02000D35 RID: 3381
 	public struct ExploreRouletteReplace : IFlatbufferObject
 	{
-		// Token: 0x17000FF6 RID: 4086
-		// (get) Token: 0x06006BB9 RID: 27577 RVA: 0x00228E9D File Offset: 0x0022709D
+		// Token: 0x1700104F RID: 4175
+		// (get) Token: 0x060071BB RID: 29115 RVA: 0x00248149 File Offset: 0x00246349
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006BBA RID: 27578 RVA: 0x00228EAA File Offset: 0x002270AA
+		// Token: 0x060071BC RID: 29116 RVA: 0x00248156 File Offset: 0x00246356
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006BBB RID: 27579 RVA: 0x00228EB4 File Offset: 0x002270B4
+		// Token: 0x060071BD RID: 29117 RVA: 0x00248160 File Offset: 0x00246360
 		public static ExploreRouletteReplace GetRootAsExploreRouletteReplace(ByteBuffer _bb)
 		{
 			return ExploreRouletteReplace.GetRootAsExploreRouletteReplace(_bb, default(ExploreRouletteReplace));
 		}
 
-		// Token: 0x06006BBC RID: 27580 RVA: 0x00228ED0 File Offset: 0x002270D0
+		// Token: 0x060071BE RID: 29118 RVA: 0x0024817C File Offset: 0x0024637C
 		public static ExploreRouletteReplace GetRootAsExploreRouletteReplace(ByteBuffer _bb, ExploreRouletteReplace obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006BBD RID: 27581 RVA: 0x00228EED File Offset: 0x002270ED
+		// Token: 0x060071BF RID: 29119 RVA: 0x00248199 File Offset: 0x00246399
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006BBE RID: 27582 RVA: 0x00228EFC File Offset: 0x002270FC
+		// Token: 0x060071C0 RID: 29120 RVA: 0x002481A8 File Offset: 0x002463A8
 		public ExploreRouletteReplace __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000FF7 RID: 4087
-		// (get) Token: 0x06006BBF RID: 27583 RVA: 0x00228F0C File Offset: 0x0022710C
+		// Token: 0x17001050 RID: 4176
+		// (get) Token: 0x060071C1 RID: 29121 RVA: 0x002481B8 File Offset: 0x002463B8
 		public int Id
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006BC0 RID: 27584 RVA: 0x00228F48 File Offset: 0x00227148
+		// Token: 0x060071C2 RID: 29122 RVA: 0x002481F4 File Offset: 0x002463F4
 		public string TagsInForce(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000FF8 RID: 4088
-		// (get) Token: 0x06006BC1 RID: 27585 RVA: 0x00228F84 File Offset: 0x00227184
+		// Token: 0x17001051 RID: 4177
+		// (get) Token: 0x060071C3 RID: 29123 RVA: 0x00248230 File Offset: 0x00246430
 		public int TagsInForceLength
 		{
 			get
@@ -91,8 +91,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FF9 RID: 4089
-		// (get) Token: 0x06006BC2 RID: 27586 RVA: 0x00228FB0 File Offset: 0x002271B0
+		// Token: 0x17001052 RID: 4178
+		// (get) Token: 0x060071C4 RID: 29124 RVA: 0x0024825C File Offset: 0x0024645C
 		public int Priority
 		{
 			get
@@ -106,7 +106,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006BC3 RID: 27587 RVA: 0x00228FEC File Offset: 0x002271EC
+		// Token: 0x060071C5 RID: 29125 RVA: 0x00248298 File Offset: 0x00246498
 		public int RouletteSkillIdList(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -117,8 +117,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000FFA RID: 4090
-		// (get) Token: 0x06006BC4 RID: 27588 RVA: 0x0022902C File Offset: 0x0022722C
+		// Token: 0x17001053 RID: 4179
+		// (get) Token: 0x060071C6 RID: 29126 RVA: 0x002482D8 File Offset: 0x002464D8
 		public int RouletteSkillIdListLength
 		{
 			get
@@ -132,20 +132,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006BC5 RID: 27589 RVA: 0x00229058 File Offset: 0x00227258
+		// Token: 0x060071C7 RID: 29127 RVA: 0x00248304 File Offset: 0x00246504
 		public Span<int> GetRouletteSkillIdListBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06006BC6 RID: 27590 RVA: 0x00229068 File Offset: 0x00227268
+		// Token: 0x060071C8 RID: 29128 RVA: 0x00248314 File Offset: 0x00246514
 		public int[] GetRouletteSkillIdListArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17000FFB RID: 4091
-		// (get) Token: 0x06006BC7 RID: 27591 RVA: 0x00229080 File Offset: 0x00227280
+		// Token: 0x17001054 RID: 4180
+		// (get) Token: 0x060071C9 RID: 29129 RVA: 0x0024832C File Offset: 0x0024652C
 		public int RouletteItemId
 		{
 			get
@@ -159,8 +159,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FFC RID: 4092
-		// (get) Token: 0x06006BC8 RID: 27592 RVA: 0x002290C0 File Offset: 0x002272C0
+		// Token: 0x17001055 RID: 4181
+		// (get) Token: 0x060071CA RID: 29130 RVA: 0x0024836C File Offset: 0x0024656C
 		public int ReplaceSkillId
 		{
 			get
@@ -174,42 +174,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006BC9 RID: 27593 RVA: 0x00229100 File Offset: 0x00227300
+		// Token: 0x060071CB RID: 29131 RVA: 0x002483A9 File Offset: 0x002465A9
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RouletteSkillIdListIter()或GetRouletteSkillIdListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] RouletteSkillIdList()
+		public int[] RouletteSkillIdList()
 		{
-			ExploreRouletteReplace exploreRouletteReplace = this;
-			return exploreRouletteReplace.GetRouletteSkillIdListArray() ?? Array.Empty<int>();
+			return this.GetRouletteSkillIdListArray();
 		}
 
-		// Token: 0x06006BCA RID: 27594 RVA: 0x00229124 File Offset: 0x00227324
+		// Token: 0x060071CC RID: 29132 RVA: 0x002483B1 File Offset: 0x002465B1
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RouletteSkillIdListIter()
+		public IEnumerable<int> RouletteSkillIdListIter()
 		{
 			ExploreRouletteReplace.<RouletteSkillIdListIter>d__25 <RouletteSkillIdListIter>d__ = new ExploreRouletteReplace.<RouletteSkillIdListIter>d__25(-2);
 			<RouletteSkillIdListIter>d__.<>3__<>4__this = this;
 			return <RouletteSkillIdListIter>d__;
 		}
 
-		// Token: 0x06006BCB RID: 27595 RVA: 0x00229139 File Offset: 0x00227339
+		// Token: 0x060071CD RID: 29133 RVA: 0x002483C6 File Offset: 0x002465C6
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用TagsInForceIter()或GetTagsInForceBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] TagsInForce()
+		public string[] TagsInForce()
 		{
 			return this.TagsInForceIter().ToArray<string>();
 		}
 
-		// Token: 0x06006BCC RID: 27596 RVA: 0x00229146 File Offset: 0x00227346
+		// Token: 0x060071CE RID: 29134 RVA: 0x002483D3 File Offset: 0x002465D3
 		[NullableContext(1)]
-		public readonly IEnumerable<string> TagsInForceIter()
+		public IEnumerable<string> TagsInForceIter()
 		{
 			ExploreRouletteReplace.<TagsInForceIter>d__27 <TagsInForceIter>d__ = new ExploreRouletteReplace.<TagsInForceIter>d__27(-2);
 			<TagsInForceIter>d__.<>3__<>4__this = this;
 			return <TagsInForceIter>d__;
 		}
 
-		// Token: 0x04004C99 RID: 19609
+		// Token: 0x0400527C RID: 21116
 		private Table __p;
 	}
 }

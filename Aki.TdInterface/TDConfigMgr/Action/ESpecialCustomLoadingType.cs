@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016A9 RID: 5801
+	// Token: 0x02001822 RID: 6178
 	[EnumExtensions]
 	public enum ESpecialCustomLoadingType
 	{
-		// Token: 0x04004DDB RID: 19931
+		// Token: 0x040051F5 RID: 20981
 		HonamiStory
 	}
 }

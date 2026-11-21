@@ -11,23 +11,23 @@ using UnrealEngine;
 
 namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 {
-	// Token: 0x020044D5 RID: 17621
+	// Token: 0x02002F62 RID: 12130
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapTravelSubViewTravelTask : UiPanelBase, IMapTravelSubViewInterface
 	{
-		// Token: 0x170073A3 RID: 29603
-		// (get) Token: 0x0602D662 RID: 185954 RVA: 0x00A3EB5B File Offset: 0x00A3CD5B
-		// (set) Token: 0x0602D663 RID: 185955 RVA: 0x00A3EB63 File Offset: 0x00A3CD63
+		// Token: 0x17002D75 RID: 11637
+		// (get) Token: 0x0601CBA0 RID: 117664 RVA: 0x008C47BB File Offset: 0x008C29BB
+		// (set) Token: 0x0601CBA1 RID: 117665 RVA: 0x008C47C3 File Offset: 0x008C29C3
 		public bool NeedDestroySelf { get; set; }
 
-		// Token: 0x0602D664 RID: 185956 RVA: 0x00A3EB6C File Offset: 0x00A3CD6C
+		// Token: 0x0601CBA2 RID: 117666 RVA: 0x008C47CC File Offset: 0x008C29CC
 		public MapTravelSubViewTravelTask(ActivityMapTravelData ActivityBaseData)
 		{
 			this.ActivityBaseData = ActivityBaseData;
 		}
 
-		// Token: 0x0602D665 RID: 185957 RVA: 0x00A3EB90 File Offset: 0x00A3CD90
+		// Token: 0x0601CBA3 RID: 117667 RVA: 0x008C47F0 File Offset: 0x008C29F0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -51,7 +51,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0602D666 RID: 185958 RVA: 0x00A3ECA0 File Offset: 0x00A3CEA0
+		// Token: 0x0601CBA4 RID: 117668 RVA: 0x008C4900 File Offset: 0x008C2B00
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MapTravelSubViewTravelTask.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -62,27 +62,27 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D667 RID: 185959 RVA: 0x00A3ECE3 File Offset: 0x00A3CEE3
+		// Token: 0x0601CBA5 RID: 117669 RVA: 0x008C4943 File Offset: 0x008C2B43
 		protected override void OnBeforeShow()
 		{
 			EventSystem.Instance.Add(EEventName.MapTravelTaskRefresh, new Action(this.RefreshCurrent));
 			EventSystem.Instance.Add(EEventName.MapTravelTaskNavigationNext, new Action(this.OnMapTravelTaskNavigationNext));
 		}
 
-		// Token: 0x0602D668 RID: 185960 RVA: 0x00A3ED1D File Offset: 0x00A3CF1D
+		// Token: 0x0601CBA6 RID: 117670 RVA: 0x008C497D File Offset: 0x008C2B7D
 		protected override void OnBeforeHide()
 		{
 			EventSystem.Instance.Remove(EEventName.MapTravelTaskRefresh, new Action(this.RefreshCurrent));
 			EventSystem.Instance.Remove(EEventName.MapTravelTaskNavigationNext, new Action(this.OnMapTravelTaskNavigationNext));
 		}
 
-		// Token: 0x0602D669 RID: 185961 RVA: 0x00A3ED57 File Offset: 0x00A3CF57
+		// Token: 0x0601CBA7 RID: 117671 RVA: 0x008C49B7 File Offset: 0x008C2BB7
 		private AreaLayout InitItem()
 		{
 			return new AreaLayout(this.ActivityBaseData);
 		}
 
-		// Token: 0x0602D66A RID: 185962 RVA: 0x00A3ED64 File Offset: 0x00A3CF64
+		// Token: 0x0601CBA8 RID: 117672 RVA: 0x008C49C4 File Offset: 0x008C2BC4
 		private MapTravelTabDynamicScrollItem CreateTabItem(MapTravelAreaData data, UUIItem uiItem, int index)
 		{
 			MapTravelTabDynamicScrollItem mapTravelTabDynamicScrollItem = new MapTravelTabDynamicScrollItem(this.ActivityBaseData);
@@ -91,12 +91,12 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			return mapTravelTabDynamicScrollItem;
 		}
 
-		// Token: 0x0602D66B RID: 185963 RVA: 0x00A3ED95 File Offset: 0x00A3CF95
+		// Token: 0x0601CBA9 RID: 117673 RVA: 0x008C49F5 File Offset: 0x008C2BF5
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x0602D66C RID: 185964 RVA: 0x00A3ED98 File Offset: 0x00A3CF98
+		// Token: 0x0601CBAA RID: 117674 RVA: 0x008C49F8 File Offset: 0x008C2BF8
 		protected void OnMapTravelTaskNavigationNext()
 		{
 			UUIItem firstItem = this.AreaLayoutList.GetScrollItemByIndex(this.SelectedTabIndex).GetFirstItem();
@@ -106,7 +106,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			}
 		}
 
-		// Token: 0x0602D66D RID: 185965 RVA: 0x00A3EDD0 File Offset: 0x00A3CFD0
+		// Token: 0x0601CBAB RID: 117675 RVA: 0x008C4A30 File Offset: 0x008C2C30
 		protected void RefreshCurrent()
 		{
 			RewardPanel panelReward = this.PanelReward;
@@ -119,7 +119,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			this.AreaLayoutList.RefreshByDataAsync(list, true);
 		}
 
-		// Token: 0x0602D66E RID: 185966 RVA: 0x00A3EE40 File Offset: 0x00A3D040
+		// Token: 0x0601CBAC RID: 117676 RVA: 0x008C4AA0 File Offset: 0x008C2CA0
 		private UniTask Refresh()
 		{
 			MapTravelSubViewTravelTask.<Refresh>d__24 <Refresh>d__;
@@ -130,7 +130,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			return <Refresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D66F RID: 185967 RVA: 0x00A3EE84 File Offset: 0x00A3D084
+		// Token: 0x0601CBAD RID: 117677 RVA: 0x008C4AE4 File Offset: 0x008C2CE4
 		private void InitViewRelation(List<MapTravelAreaData> areaDataList)
 		{
 			this.TabAnchorOffset.Clear();
@@ -166,7 +166,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			base.GetItem(5).SetHierarchyIndex(areaDataList.Count + 1);
 		}
 
-		// Token: 0x0602D670 RID: 185968 RVA: 0x00A3EFA2 File Offset: 0x00A3D1A2
+		// Token: 0x0601CBAE RID: 117678 RVA: 0x008C4C02 File Offset: 0x008C2E02
 		private void SelectTab(int index, bool bOn, bool bFireEvent)
 		{
 			MapTravelTabDynamicScrollItem scrollItemFromIndex = this.TabLayout.GetScrollItemFromIndex(index);
@@ -177,7 +177,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			scrollItemFromIndex.SetSelected(bOn, bFireEvent);
 		}
 
-		// Token: 0x0602D671 RID: 185969 RVA: 0x00A3EFBC File Offset: 0x00A3D1BC
+		// Token: 0x0601CBAF RID: 117679 RVA: 0x008C4C1C File Offset: 0x008C2E1C
 		private void OnContentUpdate(FVector2D _)
 		{
 			if (this.InitRefresh)
@@ -213,7 +213,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			}
 		}
 
-		// Token: 0x0602D672 RID: 185970 RVA: 0x00A3F09A File Offset: 0x00A3D29A
+		// Token: 0x0601CBB0 RID: 117680 RVA: 0x008C4CFA File Offset: 0x008C2EFA
 		private void TabSelectedCallBack(MapTravelAreaData tabData, int index)
 		{
 			if (index != this.SelectedTabIndex)
@@ -225,20 +225,20 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			this.TabSelected(index);
 		}
 
-		// Token: 0x0602D673 RID: 185971 RVA: 0x00A3F0D0 File Offset: 0x00A3D2D0
+		// Token: 0x0601CBB1 RID: 117681 RVA: 0x008C4D30 File Offset: 0x008C2F30
 		private void TabSelected(int index)
 		{
 			int num = Math.Max(this.TabAnchorOffset[index], 0);
 			base.GetItem(6).SetAnchorOffsetY((float)num);
 		}
 
-		// Token: 0x0602D674 RID: 185972 RVA: 0x00A3F0FE File Offset: 0x00A3D2FE
+		// Token: 0x0601CBB2 RID: 117682 RVA: 0x008C4D5E File Offset: 0x008C2F5E
 		private bool IsSelectedOn(MapTravelAreaData tabData, int index)
 		{
 			return this.SelectedTabIndex == index;
 		}
 
-		// Token: 0x0602D675 RID: 185973 RVA: 0x00A3F10C File Offset: 0x00A3D30C
+		// Token: 0x0601CBB3 RID: 117683 RVA: 0x008C4D6C File Offset: 0x008C2F6C
 		public UniTask PlayStartSequence()
 		{
 			MapTravelSubViewTravelTask.<PlayStartSequence>d__31 <PlayStartSequence>d__;
@@ -249,7 +249,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			return <PlayStartSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D676 RID: 185974 RVA: 0x00A3F150 File Offset: 0x00A3D350
+		// Token: 0x0601CBB4 RID: 117684 RVA: 0x008C4DB0 File Offset: 0x008C2FB0
 		public UniTask PlayCloseSequence()
 		{
 			MapTravelSubViewTravelTask.<PlayCloseSequence>d__32 <PlayCloseSequence>d__;
@@ -260,20 +260,20 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			return <PlayCloseSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D677 RID: 185975 RVA: 0x00A3F193 File Offset: 0x00A3D393
+		// Token: 0x0601CBB5 RID: 117685 RVA: 0x008C4DF3 File Offset: 0x008C2FF3
 		private void SetDefault()
 		{
 			this.SelectTab(this.SelectedTabIndex, false, false);
 			this.SelectedTabIndex = -1;
 		}
 
-		// Token: 0x0401847E RID: 99454
+		// Token: 0x0400F226 RID: 61990
 		private const int LAYOUT_PADDING = 20;
 
-		// Token: 0x0401847F RID: 99455
+		// Token: 0x0400F227 RID: 61991
 		protected ActivityMapTravelData ActivityBaseData;
 
-		// Token: 0x04018481 RID: 99457
+		// Token: 0x0400F229 RID: 61993
 		[Nullable(new byte[]
 		{
 			2,
@@ -282,11 +282,11 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 		})]
 		private GenericScrollViewNew<AreaLayout, MapTravelAreaData> AreaLayoutList;
 
-		// Token: 0x04018482 RID: 99458
+		// Token: 0x0400F22A RID: 61994
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04018483 RID: 99459
+		// Token: 0x0400F22B RID: 61995
 		[Nullable(new byte[]
 		{
 			2,
@@ -296,42 +296,42 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 		})]
 		protected DynamicScrollView<MapTravelTabDynamicScrollItem, MapTravelTabDynamicItem, MapTravelAreaData> TabLayout;
 
-		// Token: 0x04018484 RID: 99460
+		// Token: 0x0400F22C RID: 61996
 		[Nullable(2)]
 		private RewardPanel PanelReward;
 
-		// Token: 0x04018485 RID: 99461
+		// Token: 0x0400F22D RID: 61997
 		private readonly List<int> TabAnchorOffset = new List<int>();
 
-		// Token: 0x04018486 RID: 99462
+		// Token: 0x0400F22E RID: 61998
 		private int SelectedTabIndex = -1;
 
-		// Token: 0x04018487 RID: 99463
+		// Token: 0x0400F22F RID: 61999
 		private bool InitRefresh;
 
-		// Token: 0x0200A71B RID: 42779
+		// Token: 0x02008BF1 RID: 35825
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04032779 RID: 206713
+			// Token: 0x0402C547 RID: 181575
 			public const int PanelTop = 0;
 
-			// Token: 0x0403277A RID: 206714
+			// Token: 0x0402C548 RID: 181576
 			public const int TabLayout = 1;
 
-			// Token: 0x0403277B RID: 206715
+			// Token: 0x0402C549 RID: 181577
 			public const int TabItem = 2;
 
-			// Token: 0x0403277C RID: 206716
+			// Token: 0x0402C54A RID: 181578
 			public const int ContentLayout = 3;
 
-			// Token: 0x0403277D RID: 206717
+			// Token: 0x0402C54B RID: 181579
 			public const int ContentItem = 4;
 
-			// Token: 0x0403277E RID: 206718
+			// Token: 0x0402C54C RID: 181580
 			public const int OccupiedItem = 5;
 
-			// Token: 0x0403277F RID: 206719
+			// Token: 0x0402C54D RID: 181581
 			public const int Content = 6;
 		}
 	}

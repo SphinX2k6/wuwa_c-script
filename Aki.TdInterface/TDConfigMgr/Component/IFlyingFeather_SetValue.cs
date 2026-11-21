@@ -5,41 +5,41 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003A3 RID: 931
+	// Token: 0x020003EC RID: 1004
 	public class IFlyingFeather_SetValue
 	{
-		// Token: 0x04000EED RID: 3821
+		// Token: 0x04000FE5 RID: 4069
 		public EHookInteractType Type;
 
-		// Token: 0x04000EEE RID: 3822
+		// Token: 0x04000FE6 RID: 4070
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> HookActions;
 
-		// Token: 0x04000EEF RID: 3823
+		// Token: 0x04000FE7 RID: 4071
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> ExitHookActions;
 
-		// Token: 0x04000EF0 RID: 3824
+		// Token: 0x04000FE8 RID: 4072
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> FinishActions;
 
-		// Token: 0x04000EF1 RID: 3825
+		// Token: 0x04000FE9 RID: 4073
 		[Nullable(2)]
 		public IClientHookActionConfig ClientHookActionConfig;
 
-		// Token: 0x04000EF2 RID: 3826
+		// Token: 0x04000FEA RID: 4074
 		public int? EntityId;
 	}
 }

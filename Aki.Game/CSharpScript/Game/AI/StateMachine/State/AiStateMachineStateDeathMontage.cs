@@ -6,17 +6,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.State
 {
-	// Token: 0x0200732B RID: 29483
+	// Token: 0x020064AE RID: 25774
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineStateDeathMontage : AiStateMachineState
 	{
-		// Token: 0x060485C6 RID: 296390 RVA: 0x0129D0D1 File Offset: 0x0129B2D1
+		// Token: 0x0603EA13 RID: 256531 RVA: 0x0123FB51 File Offset: 0x0123DD51
 		public AiStateMachineStateDeathMontage(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.State state) : base(stateMachineNode, state)
 		{
 		}
 
-		// Token: 0x060485C7 RID: 296391 RVA: 0x0129D0F0 File Offset: 0x0129B2F0
+		// Token: 0x0603EA14 RID: 256532 RVA: 0x0123FB70 File Offset: 0x0123DD70
 		[NullableContext(2)]
 		public override void OnActivate(AiStateMachineBase lastState = null, long? contextId = null)
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			this.Handle = deathComponent.ReplaceDeathMontage(ECharacterDeathMontageType.Die, this.MontageName);
 		}
 
-		// Token: 0x060485C8 RID: 296392 RVA: 0x0129D163 File Offset: 0x0129B363
+		// Token: 0x0603EA15 RID: 256533 RVA: 0x0123FBE3 File Offset: 0x0123DDE3
 		[NullableContext(2)]
 		public override void OnDeactivate(AiStateMachineBase nextState = null, long? contextId = null)
 		{
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			this.Handle = -1;
 		}
 
-		// Token: 0x060485C9 RID: 296393 RVA: 0x0129D188 File Offset: 0x0129B388
+		// Token: 0x0603EA16 RID: 256534 RVA: 0x0123FC08 File Offset: 0x0123DE08
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.State state)
 		{
 			this.DeathType = (EMonsterDeathType)state.BindDeathMontage.DeathType;
@@ -57,19 +57,19 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			return true;
 		}
 
-		// Token: 0x060485CA RID: 296394 RVA: 0x0129D1AE File Offset: 0x0129B3AE
+		// Token: 0x0603EA17 RID: 256535 RVA: 0x0123FC2E File Offset: 0x0123DE2E
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x0402642E RID: 156718
+		// Token: 0x0402171B RID: 136987
 		public EMonsterDeathType DeathType;
 
-		// Token: 0x0402642F RID: 156719
+		// Token: 0x0402171C RID: 136988
 		public string MontageName = "";
 
-		// Token: 0x04026430 RID: 156720
+		// Token: 0x0402171D RID: 136989
 		public int Handle = -1;
 	}
 }

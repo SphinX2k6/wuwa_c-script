@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003C9C RID: 15516
+	// Token: 0x020040B0 RID: 16560
 	public enum EFastReturnPosType : byte
 	{
-		// Token: 0x0400B3CB RID: 46027
+		// Token: 0x0400BD6D RID: 48493
 		EntityPos,
-		// Token: 0x0400B3CC RID: 46028
+		// Token: 0x0400BD6E RID: 48494
 		GravityEntityPos
 	}
 }

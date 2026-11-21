@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200144D RID: 5197
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015A5 RID: 5541
 	public class IInitConditionActions
 	{
-		// Token: 0x06007628 RID: 30248 RVA: 0x0011A35E File Offset: 0x0011855E
+		// Token: 0x06007CF0 RID: 31984 RVA: 0x00128E32 File Offset: 0x00127032
 		public static IInitConditionActions Create(IInitConditionActions? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002761 RID: 10081
-		// (get) Token: 0x06007629 RID: 30249 RVA: 0x0011A37D File Offset: 0x0011857D
+		// Token: 0x17002948 RID: 10568
+		// (get) Token: 0x06007CF1 RID: 31985 RVA: 0x00128E51 File Offset: 0x00127051
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002762 RID: 10082
-		// (get) Token: 0x0600762A RID: 30250 RVA: 0x0011A3B4 File Offset: 0x001185B4
+		// Token: 0x17002949 RID: 10569
+		// (get) Token: 0x06007CF2 RID: 31986 RVA: 0x00128E88 File Offset: 0x00127088
 		public virtual List<ActionInfo> Action
 		{
 			get
@@ -62,20 +60,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004497 RID: 17559
+		// Token: 0x0400482D RID: 18477
 		private IInitConditionActions Instance;
 
-		// Token: 0x04004498 RID: 17560
+		// Token: 0x0400482E RID: 18478
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04004499 RID: 17561
+		// Token: 0x0400482F RID: 18479
 		private bool _ConditionInited;
 
-		// Token: 0x0400449A RID: 17562
+		// Token: 0x04004830 RID: 18480
 		private List<ActionInfo> _ActionCache;
 
-		// Token: 0x0400449B RID: 17563
+		// Token: 0x04004831 RID: 18481
 		private bool _ActionInited;
 	}
 }

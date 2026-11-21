@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005885 RID: 22661
+	// Token: 0x0200485D RID: 18525
 	public class DropDownItem : DropDownItemBase<TakeWeedsDifficulty>
 	{
-		// Token: 0x06039AC0 RID: 236224 RVA: 0x00DB51B6 File Offset: 0x00DB33B6
+		// Token: 0x0602E9E3 RID: 190947 RVA: 0x00D040CE File Offset: 0x00D022CE
 		[NullableContext(1)]
 		public DropDownItem(UUIItem uiItem) : base(uiItem)
 		{
 		}
 
-		// Token: 0x06039AC1 RID: 236225 RVA: 0x00DB51C0 File Offset: 0x00DB33C0
+		// Token: 0x0602E9E4 RID: 190948 RVA: 0x00D040D8 File Offset: 0x00D022D8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039AC2 RID: 236226 RVA: 0x00DB522C File Offset: 0x00DB342C
+		// Token: 0x0602E9E5 RID: 190949 RVA: 0x00D04144 File Offset: 0x00D02344
 		protected override void OnShowDropDownItemBase(TakeWeedsDifficulty data)
 		{
 			string str = ConfigMultiTextLang.GetLocalTextNew(data.Desc, null) ?? "";
@@ -41,20 +41,20 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			base.GetText(1).SetText(str + "•" + str2, true);
 		}
 
-		// Token: 0x06039AC3 RID: 236227 RVA: 0x00DB529E File Offset: 0x00DB349E
+		// Token: 0x0602E9E6 RID: 190950 RVA: 0x00D041B6 File Offset: 0x00D023B6
 		[NullableContext(2)]
 		protected override UUIExtendToggle GetDropDownToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x0200BAE0 RID: 47840
+		// Token: 0x0200A4F9 RID: 42233
 		private static class EDropDownItemComponents
 		{
-			// Token: 0x04038784 RID: 231300
+			// Token: 0x04033185 RID: 209285
 			public const int TogOption = 0;
 
-			// Token: 0x04038785 RID: 231301
+			// Token: 0x04033186 RID: 209286
 			public const int TxtOption = 1;
 		}
 	}

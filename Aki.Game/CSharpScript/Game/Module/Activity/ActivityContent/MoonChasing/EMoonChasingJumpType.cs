@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 {
-	// Token: 0x02006485 RID: 25733
+	// Token: 0x02005403 RID: 21507
 	public enum EMoonChasingJumpType
 	{
-		// Token: 0x040219C8 RID: 137672
+		// Token: 0x0401C2F9 RID: 115449
 		MainLine = 1,
-		// Token: 0x040219C9 RID: 137673
+		// Token: 0x0401C2FA RID: 115450
 		BranchLine,
-		// Token: 0x040219CA RID: 137674
+		// Token: 0x0401C2FB RID: 115451
 		Building
 	}
 }

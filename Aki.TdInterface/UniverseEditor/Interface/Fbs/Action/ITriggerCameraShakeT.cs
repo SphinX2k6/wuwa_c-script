@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007473 RID: 29811
+	// Token: 0x02007C66 RID: 31846
 	public class ITriggerCameraShakeT
 	{
-		// Token: 0x1700E240 RID: 57920
-		// (get) Token: 0x06036294 RID: 221844 RVA: 0x0075D14F File Offset: 0x0075B34F
-		// (set) Token: 0x06036295 RID: 221845 RVA: 0x0075D157 File Offset: 0x0075B357
+		// Token: 0x1700EE5D RID: 61021
+		// (get) Token: 0x0603967D RID: 235133 RVA: 0x007BFE7B File Offset: 0x007BE07B
+		// (set) Token: 0x0603967E RID: 235134 RVA: 0x007BFE83 File Offset: 0x007BE083
 		public TCameraShakeConfigUnion CameraShakeConfig { get; set; }
 
-		// Token: 0x1700E241 RID: 57921
-		// (get) Token: 0x06036296 RID: 221846 RVA: 0x0075D160 File Offset: 0x0075B360
-		// (set) Token: 0x06036297 RID: 221847 RVA: 0x0075D168 File Offset: 0x0075B368
+		// Token: 0x1700EE5E RID: 61022
+		// (get) Token: 0x0603967F RID: 235135 RVA: 0x007BFE8C File Offset: 0x007BE08C
+		// (set) Token: 0x06039680 RID: 235136 RVA: 0x007BFE94 File Offset: 0x007BE094
 		public string CameraShakeBp { get; set; }
 
-		// Token: 0x06036298 RID: 221848 RVA: 0x0075D171 File Offset: 0x0075B371
+		// Token: 0x06039681 RID: 235137 RVA: 0x007BFE9D File Offset: 0x007BE09D
 		public ITriggerCameraShakeT()
 		{
 			this.CameraShakeConfig = null;

@@ -4,18 +4,18 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049AE RID: 18862
+	// Token: 0x02003928 RID: 14632
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhonePetInteractComponent : HotKeyComponent
 	{
-		// Token: 0x06031189 RID: 201097 RVA: 0x00B646BA File Offset: 0x00B628BA
+		// Token: 0x06025CBF RID: 154815 RVA: 0x00A9F60A File Offset: 0x00A9D80A
 		public PhonePetInteractComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x0603118A RID: 201098 RVA: 0x00B646C4 File Offset: 0x00B628C4
-		public override void SetDataCallback(Func<object> callback)
+		// Token: 0x06025CC0 RID: 154816 RVA: 0x00A9F614 File Offset: 0x00A9D814
+		public void SetDataCallback(Func<object> callback)
 		{
 			this.InteractAction = delegate()
 			{
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			};
 		}
 
-		// Token: 0x0603118B RID: 201099 RVA: 0x00B646F0 File Offset: 0x00B628F0
+		// Token: 0x06025CC1 RID: 154817 RVA: 0x00A9F640 File Offset: 0x00A9D840
 		protected override void OnPress(HotKeyMap config)
 		{
 			Action interactAction = this.InteractAction;
@@ -34,26 +34,26 @@ namespace CSharpScript.Game.Module.UiNavigation
 			interactAction();
 		}
 
-		// Token: 0x0603118C RID: 201100 RVA: 0x00B64702 File Offset: 0x00B62902
+		// Token: 0x06025CC2 RID: 154818 RVA: 0x00A9F652 File Offset: 0x00A9D852
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, this.InteractAction != null, false);
 		}
 
-		// Token: 0x0603118D RID: 201101 RVA: 0x00B64715 File Offset: 0x00B62915
+		// Token: 0x06025CC3 RID: 154819 RVA: 0x00A9F665 File Offset: 0x00A9D865
 		protected override bool OnIsOccupancyFightInput()
 		{
 			return false;
 		}
 
-		// Token: 0x0603118E RID: 201102 RVA: 0x00B64718 File Offset: 0x00B62918
+		// Token: 0x06025CC4 RID: 154820 RVA: 0x00A9F668 File Offset: 0x00A9D868
 		protected override void OnClear()
 		{
 			base.OnClear();
 			this.InteractAction = null;
 		}
 
-		// Token: 0x0401A4B7 RID: 107703
+		// Token: 0x04014D29 RID: 85289
 		[Nullable(2)]
 		private Action InteractAction;
 	}

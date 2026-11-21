@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.Define
 {
-	// Token: 0x02006A42 RID: 27202
+	// Token: 0x02005B9F RID: 23455
 	public enum EGamepadSwitchStep
 	{
-		// Token: 0x0402351A RID: 144666
+		// Token: 0x0401E70C RID: 124684
 		Previous = -1,
-		// Token: 0x0402351B RID: 144667
+		// Token: 0x0401E70D RID: 124685
 		Next = 1
 	}
 }

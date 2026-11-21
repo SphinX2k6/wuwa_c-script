@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelFlow.Condition
 {
-	// Token: 0x02006F77 RID: 28535
+	// Token: 0x020060F8 RID: 24824
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowSphereRangeCondition : LevelFlowConditionBase
 	{
-		// Token: 0x060456A1 RID: 284321 RVA: 0x01134CD8 File Offset: 0x01132ED8
+		// Token: 0x0603B84F RID: 243791 RVA: 0x010DEADC File Offset: 0x010DCCDC
 		public LevelFlowSphereRangeCondition Init(float radius, Vector center)
 		{
 			if (Global.BaseCharacter == null)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.LevelFlow.Condition
 			return this;
 		}
 
-		// Token: 0x060456A2 RID: 284322 RVA: 0x01134D94 File Offset: 0x01132F94
+		// Token: 0x0603B850 RID: 243792 RVA: 0x010DEB98 File Offset: 0x010DCD98
 		protected override void OnTick(float delta)
 		{
 			if (this.TargetActorComponent == null || !this.TargetActorComponent.Valid)
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.LevelFlow.Condition
 			}
 		}
 
-		// Token: 0x0402438F RID: 148367
+		// Token: 0x0401F644 RID: 128580
 		private float RadiusSquared;
 
-		// Token: 0x04024390 RID: 148368
+		// Token: 0x0401F645 RID: 128581
 		private Vector Center = Vector.ZeroVectorProxy;
 
-		// Token: 0x04024391 RID: 148369
+		// Token: 0x0401F646 RID: 128582
 		[Nullable(2)]
 		private BaseActorComponent TargetActorComponent;
 	}

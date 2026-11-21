@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028D1 RID: 10449
+	// Token: 0x02002BA6 RID: 11174
 	public class IEnterOrbitalCameraType
 	{
-		// Token: 0x0600E812 RID: 59410 RVA: 0x002210CA File Offset: 0x0021F2CA
-		[NullableContext(1)]
+		// Token: 0x0600F641 RID: 63041 RVA: 0x0023E04A File Offset: 0x0023C24A
 		public static IEnterOrbitalCameraType Create(IEnterOrbitalCameraType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004832 RID: 18482
-		// (get) Token: 0x0600E813 RID: 59411 RVA: 0x002210E9 File Offset: 0x0021F2E9
+		// Token: 0x17004BA3 RID: 19363
+		// (get) Token: 0x0600F642 RID: 63042 RVA: 0x0023E069 File Offset: 0x0023C269
 		public virtual EEnterOrbitalCameraType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400804B RID: 32843
+		// Token: 0x0400870A RID: 34570
 		private IEnterOrbitalCameraType Instance;
 	}
 }

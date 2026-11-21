@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.SceneGameplayPanel
 {
-	// Token: 0x020047F2 RID: 18418
+	// Token: 0x02003723 RID: 14115
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneGameplayTipGrid : UiPanelBase
 	{
-		// Token: 0x060303E0 RID: 197600 RVA: 0x00B2FFB5 File Offset: 0x00B2E1B5
+		// Token: 0x06024BB0 RID: 150448 RVA: 0x00A5FF53 File Offset: 0x00A5E153
 		public void Initialize(AActor actor)
 		{
 			base.CreateThenShowByActor(actor, null);
 		}
 
-		// Token: 0x060303E1 RID: 197601 RVA: 0x00B2FFC0 File Offset: 0x00B2E1C0
+		// Token: 0x06024BB1 RID: 150449 RVA: 0x00A5FF60 File Offset: 0x00A5E160
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.SceneGameplayPanel
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060303E2 RID: 197602 RVA: 0x00B300C9 File Offset: 0x00B2E2C9
+		// Token: 0x06024BB2 RID: 150450 RVA: 0x00A60069 File Offset: 0x00A5E269
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(2);
@@ -56,14 +56,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.SceneGameplayPanel
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x060303E3 RID: 197603 RVA: 0x00B300DD File Offset: 0x00B2E2DD
+		// Token: 0x06024BB3 RID: 150451 RVA: 0x00A6007D File Offset: 0x00A5E27D
 		protected override void OnBeforeDestroy()
 		{
 			this.ItemGridList.Clear();
 			this.OnClickPreviewCall = null;
 		}
 
-		// Token: 0x060303E4 RID: 197604 RVA: 0x00B300F1 File Offset: 0x00B2E2F1
+		// Token: 0x06024BB4 RID: 150452 RVA: 0x00A60091 File Offset: 0x00A5E291
 		public void Refresh(Dictionary<int, int> reward, string title, bool useNew = false, bool showGet = false, bool showDouble = false)
 		{
 			this.Reward = reward;
@@ -83,13 +83,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.SceneGameplayPanel
 			this.UpdateRewardPreview(showGet);
 		}
 
-		// Token: 0x060303E5 RID: 197605 RVA: 0x00B3012C File Offset: 0x00B2E32C
+		// Token: 0x06024BB5 RID: 150453 RVA: 0x00A600CC File Offset: 0x00A5E2CC
 		public void SetBtnPreviewVisible(bool visible)
 		{
 			base.GetButton(3).RootUIComp.Get().SetUIActive(visible);
 		}
 
-		// Token: 0x060303E6 RID: 197606 RVA: 0x00B30154 File Offset: 0x00B2E354
+		// Token: 0x06024BB6 RID: 150454 RVA: 0x00A600F4 File Offset: 0x00A5E2F4
 		private void UpdateRewardPreview(bool showGet = false)
 		{
 			Dictionary<int, int> reward = this.Reward;
@@ -126,25 +126,25 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.SceneGameplayPanel
 			}
 		}
 
-		// Token: 0x060303E7 RID: 197607 RVA: 0x00B3028C File Offset: 0x00B2E48C
+		// Token: 0x06024BB7 RID: 150455 RVA: 0x00A6022C File Offset: 0x00A5E42C
 		protected virtual void OnRefreshItemGrid(CommonItemSmallItemGrid grid, int itemId, int itemCount, bool showGet = false)
 		{
 			grid.RefreshByConfigId(itemId, new int?(itemCount), null, showGet, false);
 		}
 
-		// Token: 0x060303E8 RID: 197608 RVA: 0x00B3029F File Offset: 0x00B2E49F
+		// Token: 0x06024BB8 RID: 150456 RVA: 0x00A6023F File Offset: 0x00A5E43F
 		private void UpdateTitle(string title)
 		{
 			LguiUtil.Instance.SetLocalText(base.GetText(0), title, Array.Empty<object>());
 		}
 
-		// Token: 0x060303E9 RID: 197609 RVA: 0x00B302B8 File Offset: 0x00B2E4B8
+		// Token: 0x06024BB9 RID: 150457 RVA: 0x00A60258 File Offset: 0x00A5E458
 		private void UpdateTitleNew(string title)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), title, Array.Empty<object>());
 		}
 
-		// Token: 0x060303EA RID: 197610 RVA: 0x00B302D1 File Offset: 0x00B2E4D1
+		// Token: 0x06024BBA RID: 150458 RVA: 0x00A60271 File Offset: 0x00A5E471
 		private void OnClickPreview()
 		{
 			Action onClickPreviewCall = this.OnClickPreviewCall;
@@ -155,37 +155,37 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.SceneGameplayPanel
 			onClickPreviewCall();
 		}
 
-		// Token: 0x04019F85 RID: 106373
+		// Token: 0x04014639 RID: 83513
 		[Nullable(2)]
 		public Action OnClickPreviewCall;
 
-		// Token: 0x04019F86 RID: 106374
+		// Token: 0x0401463A RID: 83514
 		[Nullable(2)]
 		private Dictionary<int, int> Reward;
 
-		// Token: 0x04019F87 RID: 106375
+		// Token: 0x0401463B RID: 83515
 		private bool IsShowReward;
 
-		// Token: 0x04019F88 RID: 106376
+		// Token: 0x0401463C RID: 83516
 		private readonly List<CommonItemSmallItemGrid> ItemGridList = new List<CommonItemSmallItemGrid>();
 
-		// Token: 0x0200AABB RID: 43707
+		// Token: 0x0200946C RID: 37996
 		[NullableContext(0)]
 		public static class EChildCom
 		{
-			// Token: 0x04033EEB RID: 212715
+			// Token: 0x0402E66E RID: 190062
 			public const int RewardTitle = 0;
 
-			// Token: 0x04033EEC RID: 212716
+			// Token: 0x0402E66F RID: 190063
 			public const int UiItemContainer = 1;
 
-			// Token: 0x04033EED RID: 212717
+			// Token: 0x0402E670 RID: 190064
 			public const int UiItemItem = 2;
 
-			// Token: 0x04033EEE RID: 212718
+			// Token: 0x0402E671 RID: 190065
 			public const int BtnPreview = 3;
 
-			// Token: 0x04033EEF RID: 212719
+			// Token: 0x0402E672 RID: 190066
 			public const int DoubleTip = 4;
 		}
 	}

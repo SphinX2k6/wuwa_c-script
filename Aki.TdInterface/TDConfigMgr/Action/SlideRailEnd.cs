@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002210 RID: 8720
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200247B RID: 9339
 	public class SlideRailEnd : ActionParams
 	{
-		// Token: 0x0600BF70 RID: 49008 RVA: 0x001B81E4 File Offset: 0x001B63E4
+		// Token: 0x0600CB2E RID: 52014 RVA: 0x001CF8B0 File Offset: 0x001CDAB0
 		private SlideRailEnd_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BF71 RID: 49009 RVA: 0x001B821C File Offset: 0x001B641C
+		// Token: 0x0600CB2F RID: 52015 RVA: 0x001CF8E8 File Offset: 0x001CDAE8
 		public static SlideRailEnd Create([Nullable(2)] SlideRailEnd instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF72 RID: 49010 RVA: 0x001B822F File Offset: 0x001B642F
+		// Token: 0x0600CB30 RID: 52016 RVA: 0x001CF8FB File Offset: 0x001CDAFB
 		public static SlideRailEnd CreateFromSetValue([Nullable(2)] SlideRailEnd_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF73 RID: 49011 RVA: 0x001B8242 File Offset: 0x001B6442
+		// Token: 0x0600CB31 RID: 52017 RVA: 0x001CF90E File Offset: 0x001CDB0E
 		public SlideRailEnd_SetValue ToSetValue()
 		{
 			return new SlideRailEnd_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A04 RID: 14852
-		// (get) Token: 0x0600BF74 RID: 49012 RVA: 0x001B8255 File Offset: 0x001B6455
-		// (set) Token: 0x0600BF75 RID: 49013 RVA: 0x001B827C File Offset: 0x001B647C
+		// Token: 0x17003CFA RID: 15610
+		// (get) Token: 0x0600CB32 RID: 52018 RVA: 0x001CF921 File Offset: 0x001CDB21
+		// (set) Token: 0x0600CB33 RID: 52019 RVA: 0x001CF948 File Offset: 0x001CDB48
 		public virtual ISlideRailEndType EndTarget
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007224 RID: 29220
+		// Token: 0x0400786E RID: 30830
 		[Nullable(2)]
 		protected new SlideRailEnd FbInstance;
 
-		// Token: 0x04007225 RID: 29221
+		// Token: 0x0400786F RID: 30831
 		[Nullable(2)]
 		protected SlideRailEnd_SetValue PocoInterface;
 	}

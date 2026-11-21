@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.RecallQuest
 {
-	// Token: 0x02004F18 RID: 20248
+	// Token: 0x02003EE1 RID: 16097
 	public class RecallData
 	{
-		// Token: 0x06033EB5 RID: 212661 RVA: 0x00C2B1C4 File Offset: 0x00C293C4
+		// Token: 0x06028D20 RID: 167200 RVA: 0x00B74838 File Offset: 0x00B72A38
 		public RecallData(int recallId, ERecallStatus status)
 		{
 			this.RecallId = recallId;
 			this.Status = status;
 		}
 
-		// Token: 0x0401B972 RID: 113010
+		// Token: 0x04016345 RID: 90949
 		public int RecallId;
 
-		// Token: 0x0401B973 RID: 113011
+		// Token: 0x04016346 RID: 90950
 		public ERecallStatus Status;
 	}
 }

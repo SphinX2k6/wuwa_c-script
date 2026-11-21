@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005046 RID: 20550
+	// Token: 0x02004015 RID: 16405
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FloatingSubtitleSpaceMarkWatcher
 	{
-		// Token: 0x06034982 RID: 215426 RVA: 0x00C6BF78 File Offset: 0x00C6A178
+		// Token: 0x0602985E RID: 170078 RVA: 0x00BB9018 File Offset: 0x00BB7218
 		public void Start(UUIText text)
 		{
 			this.Stop();
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034983 RID: 215427 RVA: 0x00C6C00B File Offset: 0x00C6A20B
+		// Token: 0x0602985F RID: 170079 RVA: 0x00BB90AB File Offset: 0x00BB72AB
 		public void Stop()
 		{
 			if (this.Ticker != null)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.LastSpaceSize = 0;
 		}
 
-		// Token: 0x06034984 RID: 215428 RVA: 0x00C6C04C File Offset: 0x00C6A24C
+		// Token: 0x06029860 RID: 170080 RVA: 0x00BB90EC File Offset: 0x00BB72EC
 		private void OnTick(float delta)
 		{
 			UUIText text = this.Text;
@@ -64,20 +64,20 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			FloatingSubtitleLanguageUtil.Instance.RefreshSpaceMark(text, this.RawText, spaceSize);
 		}
 
-		// Token: 0x0401C073 RID: 114803
+		// Token: 0x04016A96 RID: 92822
 		private const int POLL_INTERVAL_MS = 100;
 
-		// Token: 0x0401C074 RID: 114804
+		// Token: 0x04016A97 RID: 92823
 		private Ticker Ticker;
 
-		// Token: 0x0401C075 RID: 114805
+		// Token: 0x04016A98 RID: 92824
 		private UUIText Text;
 
-		// Token: 0x0401C076 RID: 114806
+		// Token: 0x04016A99 RID: 92825
 		[Nullable(1)]
 		private string RawText = "";
 
-		// Token: 0x0401C077 RID: 114807
+		// Token: 0x04016A9A RID: 92826
 		private int LastSpaceSize;
 	}
 }

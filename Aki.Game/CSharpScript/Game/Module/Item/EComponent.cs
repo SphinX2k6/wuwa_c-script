@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Item
 {
-	// Token: 0x02005822 RID: 22562
+	// Token: 0x020047F9 RID: 18425
 	internal enum EComponent
 	{
-		// Token: 0x0401DFB2 RID: 122802
+		// Token: 0x04018A49 RID: 100937
 		RoleNameText,
-		// Token: 0x0401DFB3 RID: 122803
+		// Token: 0x04018A4A RID: 100938
 		UpItem,
-		// Token: 0x0401DFB4 RID: 122804
+		// Token: 0x04018A4B RID: 100939
 		StarLayout,
-		// Token: 0x0401DFB5 RID: 122805
+		// Token: 0x04018A4C RID: 100940
 		AttrTexture,
-		// Token: 0x0401DFB6 RID: 122806
+		// Token: 0x04018A4D RID: 100941
 		AttrBgSprite,
-		// Token: 0x0401DFB7 RID: 122807
+		// Token: 0x04018A4E RID: 100942
 		AttrSprite
 	}
 }

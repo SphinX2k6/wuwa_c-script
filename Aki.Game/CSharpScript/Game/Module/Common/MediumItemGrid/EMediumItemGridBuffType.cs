@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Common.MediumItemGrid
 {
-	// Token: 0x02005B61 RID: 23393
+	// Token: 0x02004B40 RID: 19264
 	public enum EMediumItemGridBuffType
 	{
-		// Token: 0x0401EE0A RID: 126474
+		// Token: 0x040198B9 RID: 104633
 		None,
-		// Token: 0x0401EE0B RID: 126475
+		// Token: 0x040198BA RID: 104634
 		Attack,
-		// Token: 0x0401EE0C RID: 126476
+		// Token: 0x040198BB RID: 104635
 		Defense,
-		// Token: 0x0401EE0D RID: 126477
+		// Token: 0x040198BC RID: 104636
 		RestoreHealth,
-		// Token: 0x0401EE0E RID: 126478
+		// Token: 0x040198BD RID: 104637
 		Recharge,
-		// Token: 0x0401EE0F RID: 126479
+		// Token: 0x040198BE RID: 104638
 		Resurrection,
-		// Token: 0x0401EE10 RID: 126480
+		// Token: 0x040198BF RID: 104639
 		Explore
 	}
 }

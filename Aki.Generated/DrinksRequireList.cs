@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C07 RID: 3079
+	// Token: 0x02000CE9 RID: 3305
 	public struct DrinksRequireList : IFlatbufferObject
 	{
-		// Token: 0x17000D69 RID: 3433
-		// (get) Token: 0x0600649E RID: 25758 RVA: 0x002191DC File Offset: 0x002173DC
+		// Token: 0x17000DB5 RID: 3509
+		// (get) Token: 0x06006A7D RID: 27261 RVA: 0x002386E4 File Offset: 0x002368E4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600649F RID: 25759 RVA: 0x002191E9 File Offset: 0x002173E9
+		// Token: 0x06006A7E RID: 27262 RVA: 0x002386F1 File Offset: 0x002368F1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060064A0 RID: 25760 RVA: 0x002191F0 File Offset: 0x002173F0
+		// Token: 0x06006A7F RID: 27263 RVA: 0x002386F8 File Offset: 0x002368F8
 		public static DrinksRequireList GetRootAsDrinksRequireList(ByteBuffer _bb)
 		{
 			return DrinksRequireList.GetRootAsDrinksRequireList(_bb, default(DrinksRequireList));
 		}
 
-		// Token: 0x060064A1 RID: 25761 RVA: 0x0021920C File Offset: 0x0021740C
+		// Token: 0x06006A80 RID: 27264 RVA: 0x00238714 File Offset: 0x00236914
 		public static DrinksRequireList GetRootAsDrinksRequireList(ByteBuffer _bb, DrinksRequireList obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060064A2 RID: 25762 RVA: 0x00219229 File Offset: 0x00217429
+		// Token: 0x06006A81 RID: 27265 RVA: 0x00238731 File Offset: 0x00236931
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060064A3 RID: 25763 RVA: 0x00219238 File Offset: 0x00217438
+		// Token: 0x06006A82 RID: 27266 RVA: 0x00238740 File Offset: 0x00236940
 		public DrinksRequireList __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000D6A RID: 3434
-		// (get) Token: 0x060064A4 RID: 25764 RVA: 0x00219248 File Offset: 0x00217448
+		// Token: 0x17000DB6 RID: 3510
+		// (get) Token: 0x06006A83 RID: 27267 RVA: 0x00238750 File Offset: 0x00236950
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D6B RID: 3435
-		// (get) Token: 0x060064A5 RID: 25765 RVA: 0x00219284 File Offset: 0x00217484
+		// Token: 0x17000DB7 RID: 3511
+		// (get) Token: 0x06006A84 RID: 27268 RVA: 0x0023878C File Offset: 0x0023698C
 		public int RoleId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D6C RID: 3436
-		// (get) Token: 0x060064A6 RID: 25766 RVA: 0x002192C0 File Offset: 0x002174C0
+		// Token: 0x17000DB8 RID: 3512
+		// (get) Token: 0x06006A85 RID: 27269 RVA: 0x002387C8 File Offset: 0x002369C8
 		public int ScoreMax
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D6D RID: 3437
-		// (get) Token: 0x060064A7 RID: 25767 RVA: 0x002192FC File Offset: 0x002174FC
+		// Token: 0x17000DB9 RID: 3513
+		// (get) Token: 0x06006A86 RID: 27270 RVA: 0x00238804 File Offset: 0x00236A04
 		public int FlavorRequire
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D6E RID: 3438
-		// (get) Token: 0x060064A8 RID: 25768 RVA: 0x0021933C File Offset: 0x0021753C
+		// Token: 0x17000DBA RID: 3514
+		// (get) Token: 0x06006A87 RID: 27271 RVA: 0x00238844 File Offset: 0x00236A44
 		public int DrinkNeedV2
 		{
 			get
@@ -124,8 +124,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D6F RID: 3439
-		// (get) Token: 0x060064A9 RID: 25769 RVA: 0x0021937C File Offset: 0x0021757C
+		// Token: 0x17000DBB RID: 3515
+		// (get) Token: 0x06006A88 RID: 27272 RVA: 0x00238884 File Offset: 0x00236A84
 		public string DrinkNeedKey
 		{
 			get
@@ -139,20 +139,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060064AA RID: 25770 RVA: 0x002193B4 File Offset: 0x002175B4
+		// Token: 0x06006A89 RID: 27273 RVA: 0x002388BC File Offset: 0x00236ABC
 		public Span<byte> GetDrinkNeedKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x060064AB RID: 25771 RVA: 0x002193C4 File Offset: 0x002175C4
+		// Token: 0x06006A8A RID: 27274 RVA: 0x002388CC File Offset: 0x00236ACC
 		public byte[] GetDrinkNeedKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000D70 RID: 3440
-		// (get) Token: 0x060064AC RID: 25772 RVA: 0x002193DC File Offset: 0x002175DC
+		// Token: 0x17000DBC RID: 3516
+		// (get) Token: 0x06006A8B RID: 27275 RVA: 0x002388E4 File Offset: 0x00236AE4
 		public int DrinkLikePoint
 		{
 			get
@@ -166,8 +166,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D71 RID: 3441
-		// (get) Token: 0x060064AD RID: 25773 RVA: 0x0021941C File Offset: 0x0021761C
+		// Token: 0x17000DBD RID: 3517
+		// (get) Token: 0x06006A8C RID: 27276 RVA: 0x00238924 File Offset: 0x00236B24
 		public int BatchingNeedV2
 		{
 			get
@@ -181,8 +181,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D72 RID: 3442
-		// (get) Token: 0x060064AE RID: 25774 RVA: 0x0021945C File Offset: 0x0021765C
+		// Token: 0x17000DBE RID: 3518
+		// (get) Token: 0x06006A8D RID: 27277 RVA: 0x00238964 File Offset: 0x00236B64
 		public string BatchingNeedKey
 		{
 			get
@@ -196,20 +196,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060064AF RID: 25775 RVA: 0x00219494 File Offset: 0x00217694
+		// Token: 0x06006A8E RID: 27278 RVA: 0x0023899C File Offset: 0x00236B9C
 		public Span<byte> GetBatchingNeedKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(20, 1);
 		}
 
-		// Token: 0x060064B0 RID: 25776 RVA: 0x002194A4 File Offset: 0x002176A4
+		// Token: 0x06006A8F RID: 27279 RVA: 0x002389AC File Offset: 0x00236BAC
 		public byte[] GetBatchingNeedKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(20) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000D73 RID: 3443
-		// (get) Token: 0x060064B1 RID: 25777 RVA: 0x002194BC File Offset: 0x002176BC
+		// Token: 0x17000DBF RID: 3519
+		// (get) Token: 0x06006A90 RID: 27280 RVA: 0x002389C4 File Offset: 0x00236BC4
 		public int BatchingLikePoint
 		{
 			get
@@ -223,8 +223,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D74 RID: 3444
-		// (get) Token: 0x060064B2 RID: 25778 RVA: 0x002194FC File Offset: 0x002176FC
+		// Token: 0x17000DC0 RID: 3520
+		// (get) Token: 0x06006A91 RID: 27281 RVA: 0x00238A04 File Offset: 0x00236C04
 		public int OrnamentNeedV2
 		{
 			get
@@ -238,8 +238,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D75 RID: 3445
-		// (get) Token: 0x060064B3 RID: 25779 RVA: 0x0021953C File Offset: 0x0021773C
+		// Token: 0x17000DC1 RID: 3521
+		// (get) Token: 0x06006A92 RID: 27282 RVA: 0x00238A44 File Offset: 0x00236C44
 		public string OrnamentNeedKey
 		{
 			get
@@ -253,20 +253,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060064B4 RID: 25780 RVA: 0x00219574 File Offset: 0x00217774
+		// Token: 0x06006A93 RID: 27283 RVA: 0x00238A7C File Offset: 0x00236C7C
 		public Span<byte> GetOrnamentNeedKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(26, 1);
 		}
 
-		// Token: 0x060064B5 RID: 25781 RVA: 0x00219584 File Offset: 0x00217784
+		// Token: 0x06006A94 RID: 27284 RVA: 0x00238A8C File Offset: 0x00236C8C
 		public byte[] GetOrnamentNeedKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(26) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000D76 RID: 3446
-		// (get) Token: 0x060064B6 RID: 25782 RVA: 0x0021959C File Offset: 0x0021779C
+		// Token: 0x17000DC2 RID: 3522
+		// (get) Token: 0x06006A95 RID: 27285 RVA: 0x00238AA4 File Offset: 0x00236CA4
 		public int OrnaLike
 		{
 			get
@@ -280,8 +280,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D77 RID: 3447
-		// (get) Token: 0x060064B7 RID: 25783 RVA: 0x002195DC File Offset: 0x002177DC
+		// Token: 0x17000DC3 RID: 3523
+		// (get) Token: 0x06006A96 RID: 27286 RVA: 0x00238AE4 File Offset: 0x00236CE4
 		public int Reward
 		{
 			get
@@ -295,7 +295,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060064B8 RID: 25784 RVA: 0x0021961C File Offset: 0x0021781C
+		// Token: 0x06006A97 RID: 27287 RVA: 0x00238B24 File Offset: 0x00236D24
 		public int RoleLikeSetting(int j)
 		{
 			int num = this.__p.__offset(32);
@@ -306,8 +306,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000D78 RID: 3448
-		// (get) Token: 0x060064B9 RID: 25785 RVA: 0x0021965C File Offset: 0x0021785C
+		// Token: 0x17000DC4 RID: 3524
+		// (get) Token: 0x06006A98 RID: 27288 RVA: 0x00238B64 File Offset: 0x00236D64
 		public int RoleLikeSettingLength
 		{
 			get
@@ -321,20 +321,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060064BA RID: 25786 RVA: 0x00219688 File Offset: 0x00217888
+		// Token: 0x06006A99 RID: 27289 RVA: 0x00238B90 File Offset: 0x00236D90
 		public Span<int> GetRoleLikeSettingBytes()
 		{
 			return this.__p.__vector_as_span<int>(32, 4);
 		}
 
-		// Token: 0x060064BB RID: 25787 RVA: 0x00219698 File Offset: 0x00217898
+		// Token: 0x06006A9A RID: 27290 RVA: 0x00238BA0 File Offset: 0x00236DA0
 		public int[] GetRoleLikeSettingArray()
 		{
 			return this.__p.__vector_as_array<int>(32) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17000D79 RID: 3449
-		// (get) Token: 0x060064BC RID: 25788 RVA: 0x002196B0 File Offset: 0x002178B0
+		// Token: 0x17000DC5 RID: 3525
+		// (get) Token: 0x06006A9B RID: 27291 RVA: 0x00238BB8 File Offset: 0x00236DB8
 		public string ScriptName
 		{
 			get
@@ -348,20 +348,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060064BD RID: 25789 RVA: 0x002196E8 File Offset: 0x002178E8
+		// Token: 0x06006A9C RID: 27292 RVA: 0x00238BF0 File Offset: 0x00236DF0
 		public Span<byte> GetScriptNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(34, 1);
 		}
 
-		// Token: 0x060064BE RID: 25790 RVA: 0x002196F8 File Offset: 0x002178F8
+		// Token: 0x06006A9D RID: 27293 RVA: 0x00238C00 File Offset: 0x00236E00
 		public byte[] GetScriptNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(34) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000D7A RID: 3450
-		// (get) Token: 0x060064BF RID: 25791 RVA: 0x00219710 File Offset: 0x00217910
+		// Token: 0x17000DC6 RID: 3526
+		// (get) Token: 0x06006A9E RID: 27294 RVA: 0x00238C18 File Offset: 0x00236E18
 		public int ScriptId
 		{
 			get
@@ -375,8 +375,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D7B RID: 3451
-		// (get) Token: 0x060064C0 RID: 25792 RVA: 0x00219750 File Offset: 0x00217950
+		// Token: 0x17000DC7 RID: 3527
+		// (get) Token: 0x06006A9F RID: 27295 RVA: 0x00238C58 File Offset: 0x00236E58
 		public int ScriptStateId
 		{
 			get
@@ -390,25 +390,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060064C1 RID: 25793 RVA: 0x00219790 File Offset: 0x00217990
+		// Token: 0x06006AA0 RID: 27296 RVA: 0x00238C95 File Offset: 0x00236E95
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RoleLikeSettingIter()或GetRoleLikeSettingBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] RoleLikeSetting()
+		public int[] RoleLikeSetting()
 		{
-			DrinksRequireList drinksRequireList = this;
-			return drinksRequireList.GetRoleLikeSettingArray() ?? Array.Empty<int>();
+			return this.GetRoleLikeSettingArray();
 		}
 
-		// Token: 0x060064C2 RID: 25794 RVA: 0x002197B4 File Offset: 0x002179B4
+		// Token: 0x06006AA1 RID: 27297 RVA: 0x00238C9D File Offset: 0x00236E9D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RoleLikeSettingIter()
+		public IEnumerable<int> RoleLikeSettingIter()
 		{
 			DrinksRequireList.<RoleLikeSettingIter>d__56 <RoleLikeSettingIter>d__ = new DrinksRequireList.<RoleLikeSettingIter>d__56(-2);
 			<RoleLikeSettingIter>d__.<>3__<>4__this = this;
 			return <RoleLikeSettingIter>d__;
 		}
 
-		// Token: 0x04004C43 RID: 19523
+		// Token: 0x04005225 RID: 21029
 		private Table __p;
 	}
 }

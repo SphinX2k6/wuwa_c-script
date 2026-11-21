@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067BD RID: 26557
+	// Token: 0x02006E3D RID: 28221
 	public class IFireBulletTrackTargetT
 	{
-		// Token: 0x1700C527 RID: 50471
-		// (get) Token: 0x0602E3AF RID: 189359 RVA: 0x006506E3 File Offset: 0x0064E8E3
-		// (set) Token: 0x0602E3B0 RID: 189360 RVA: 0x006506EB File Offset: 0x0064E8EB
+		// Token: 0x1700CEDD RID: 52957
+		// (get) Token: 0x06030BF5 RID: 199669 RVA: 0x0069DE27 File Offset: 0x0069C027
+		// (set) Token: 0x06030BF6 RID: 199670 RVA: 0x0069DE2F File Offset: 0x0069C02F
 		public EFireBulletType Type { get; set; }
 
-		// Token: 0x1700C528 RID: 50472
-		// (get) Token: 0x0602E3B1 RID: 189361 RVA: 0x006506F4 File Offset: 0x0064E8F4
-		// (set) Token: 0x0602E3B2 RID: 189362 RVA: 0x006506FC File Offset: 0x0064E8FC
+		// Token: 0x1700CEDE RID: 52958
+		// (get) Token: 0x06030BF7 RID: 199671 RVA: 0x0069DE38 File Offset: 0x0069C038
+		// (set) Token: 0x06030BF8 RID: 199672 RVA: 0x0069DE40 File Offset: 0x0069C040
 		public long BulletId { get; set; }
 
-		// Token: 0x1700C529 RID: 50473
-		// (get) Token: 0x0602E3B3 RID: 189363 RVA: 0x00650705 File Offset: 0x0064E905
-		// (set) Token: 0x0602E3B4 RID: 189364 RVA: 0x0065070D File Offset: 0x0064E90D
+		// Token: 0x1700CEDF RID: 52959
+		// (get) Token: 0x06030BF9 RID: 199673 RVA: 0x0069DE49 File Offset: 0x0069C049
+		// (set) Token: 0x06030BFA RID: 199674 RVA: 0x0069DE51 File Offset: 0x0069C051
 		public TTargetEntityUnion Launcher { get; set; }
 
-		// Token: 0x1700C52A RID: 50474
-		// (get) Token: 0x0602E3B5 RID: 189365 RVA: 0x00650716 File Offset: 0x0064E916
-		// (set) Token: 0x0602E3B6 RID: 189366 RVA: 0x0065071E File Offset: 0x0064E91E
+		// Token: 0x1700CEE0 RID: 52960
+		// (get) Token: 0x06030BFB RID: 199675 RVA: 0x0069DE5A File Offset: 0x0069C05A
+		// (set) Token: 0x06030BFC RID: 199676 RVA: 0x0069DE62 File Offset: 0x0069C062
 		public TTargetEntityUnion Target { get; set; }
 
-		// Token: 0x1700C52B RID: 50475
-		// (get) Token: 0x0602E3B7 RID: 189367 RVA: 0x00650727 File Offset: 0x0064E927
-		// (set) Token: 0x0602E3B8 RID: 189368 RVA: 0x0065072F File Offset: 0x0064E92F
+		// Token: 0x1700CEE1 RID: 52961
+		// (get) Token: 0x06030BFD RID: 199677 RVA: 0x0069DE6B File Offset: 0x0069C06B
+		// (set) Token: 0x06030BFE RID: 199678 RVA: 0x0069DE73 File Offset: 0x0069C073
 		public bool WaitDestroy { get; set; }
 
-		// Token: 0x1700C52C RID: 50476
-		// (get) Token: 0x0602E3B9 RID: 189369 RVA: 0x00650738 File Offset: 0x0064E938
-		// (set) Token: 0x0602E3BA RID: 189370 RVA: 0x00650740 File Offset: 0x0064E940
+		// Token: 0x1700CEE2 RID: 52962
+		// (get) Token: 0x06030BFF RID: 199679 RVA: 0x0069DE7C File Offset: 0x0069C07C
+		// (set) Token: 0x06030C00 RID: 199680 RVA: 0x0069DE84 File Offset: 0x0069C084
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602E3BB RID: 189371 RVA: 0x00650749 File Offset: 0x0064E949
+		// Token: 0x06030C01 RID: 199681 RVA: 0x0069DE8D File Offset: 0x0069C08D
 		public IFireBulletTrackTargetT()
 		{
 			this.Type = EFireBulletType.TrackTarget;

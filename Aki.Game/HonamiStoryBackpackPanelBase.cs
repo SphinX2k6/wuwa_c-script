@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.HonamiStory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E8E RID: 7822
+// Token: 0x02001350 RID: 4944
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class HonamiStoryBackpackPanelBase : UiPanelBase
 {
-	// Token: 0x0600EF78 RID: 61304 RVA: 0x00394ED6 File Offset: 0x003930D6
+	// Token: 0x0600C397 RID: 50071 RVA: 0x003A0A92 File Offset: 0x0039EC92
 	[NullableContext(2)]
 	protected void OnEnterItem(HonamiStoryItemGridItem item)
 	{
@@ -21,7 +21,7 @@ public abstract class HonamiStoryBackpackPanelBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600EF79 RID: 61305 RVA: 0x00394EF2 File Offset: 0x003930F2
+	// Token: 0x0600C398 RID: 50072 RVA: 0x003A0AAE File Offset: 0x0039ECAE
 	protected void OnExitItem()
 	{
 		Action onExitGridCb = this.OnExitGridCb;
@@ -32,7 +32,7 @@ public abstract class HonamiStoryBackpackPanelBase : UiPanelBase
 		onExitGridCb();
 	}
 
-	// Token: 0x0600EF7A RID: 61306 RVA: 0x00394F04 File Offset: 0x00393104
+	// Token: 0x0600C399 RID: 50073 RVA: 0x003A0AC0 File Offset: 0x0039ECC0
 	protected void OnDownItem()
 	{
 		Action onDownGridCb = this.OnDownGridCb;
@@ -43,7 +43,7 @@ public abstract class HonamiStoryBackpackPanelBase : UiPanelBase
 		onDownGridCb();
 	}
 
-	// Token: 0x0600EF7B RID: 61307 RVA: 0x00394F16 File Offset: 0x00393116
+	// Token: 0x0600C39A RID: 50074 RVA: 0x003A0AD2 File Offset: 0x0039ECD2
 	protected void OnClickItem([Nullable(2)] HonamiStoryItemGridItem item, Vector2D loc, Vector2D size)
 	{
 		if (this.OnClickedGridCb != null)
@@ -52,7 +52,7 @@ public abstract class HonamiStoryBackpackPanelBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600EF7C RID: 61308 RVA: 0x00394F34 File Offset: 0x00393134
+	// Token: 0x0600C39B RID: 50075 RVA: 0x003A0AF0 File Offset: 0x0039ECF0
 	protected void OnCheckAttrItem([Nullable(2)] HonamiStoryEquipGridItem item, HonamiStoryInteractOperateAgent operateAgent)
 	{
 		Action<HonamiStoryEquipGridItem, HonamiStoryInteractOperateAgent> onCheckAttrGridCb = this.OnCheckAttrGridCb;
@@ -63,62 +63,62 @@ public abstract class HonamiStoryBackpackPanelBase : UiPanelBase
 		onCheckAttrGridCb(item, operateAgent);
 	}
 
-	// Token: 0x0600EF7D RID: 61309 RVA: 0x00394F48 File Offset: 0x00393148
+	// Token: 0x0600C39C RID: 50076 RVA: 0x003A0B04 File Offset: 0x0039ED04
 	public void RegisterDragController(HonamiStoryInteractController controller)
 	{
 		this.InteractController = controller;
 	}
 
-	// Token: 0x0600EF7E RID: 61310
+	// Token: 0x0600C39D RID: 50077
 	public abstract int GetBackpackType();
 
-	// Token: 0x0600EF7F RID: 61311 RVA: 0x00394F51 File Offset: 0x00393151
+	// Token: 0x0600C39E RID: 50078 RVA: 0x003A0B0D File Offset: 0x0039ED0D
 	public virtual bool OnDragBegin([Nullable(2)] ULGUIPointerEventData eventData, HonamiStoryGridItemBase item)
 	{
 		this.InteractController.DragBegin(this, item);
 		return true;
 	}
 
-	// Token: 0x0600EF80 RID: 61312 RVA: 0x00394F62 File Offset: 0x00393162
+	// Token: 0x0600C39F RID: 50079 RVA: 0x003A0B1E File Offset: 0x0039ED1E
 	public virtual bool OnDrag([Nullable(2)] ULGUIPointerEventData eventData, HonamiStoryGridItemBase item)
 	{
 		this.InteractController.OnDrag(eventData);
 		return true;
 	}
 
-	// Token: 0x0600EF81 RID: 61313 RVA: 0x00394F71 File Offset: 0x00393171
+	// Token: 0x0600C3A0 RID: 50080 RVA: 0x003A0B2D File Offset: 0x0039ED2D
 	public virtual void OnDragEnd([Nullable(2)] ULGUIPointerEventData eventData, HonamiStoryGridItemBase item)
 	{
 		this.InteractController.DragEnd(eventData, item);
 	}
 
-	// Token: 0x0600EF82 RID: 61314 RVA: 0x00394F80 File Offset: 0x00393180
+	// Token: 0x0600C3A1 RID: 50081 RVA: 0x003A0B3C File Offset: 0x0039ED3C
 	public virtual void RefreshSingleItem(HonamiStoryItemDataBase itemData)
 	{
 	}
 
-	// Token: 0x0600EF83 RID: 61315
+	// Token: 0x0600C3A2 RID: 50082
 	public abstract void OnHover(ULGUIPointerEventData eventData, HonamiStoryInteractOperateAgent operateAgent);
 
-	// Token: 0x0600EF84 RID: 61316
+	// Token: 0x0600C3A3 RID: 50083
 	public abstract void OnHoverEnd();
 
-	// Token: 0x0600EF85 RID: 61317
+	// Token: 0x0600C3A4 RID: 50084
 	public abstract bool CheckDragItemInViewport(ULGUIPointerEventData eventData);
 
-	// Token: 0x0600EF86 RID: 61318
+	// Token: 0x0600C3A5 RID: 50085
 	[return: Nullable(2)]
 	public abstract HonamiStoryBagUpdateContext GetUpdateInfoInSameBackpack(ULGUIPointerEventData eventData, HonamiStoryItemDataBase item);
 
-	// Token: 0x0600EF87 RID: 61319
+	// Token: 0x0600C3A6 RID: 50086
 	[return: Nullable(2)]
 	public abstract HonamiStoryBagUpdateContext GetUpdateInfoInSendBackpack(ULGUIPointerEventData eventData, HonamiStoryItemDataBase operateItem, HashSet<HonamiStoryItemDataBase> exchangeItemSet);
 
-	// Token: 0x0600EF88 RID: 61320
+	// Token: 0x0600C3A7 RID: 50087
 	[return: Nullable(2)]
 	public abstract HonamiStoryBagUpdateContext GetUpdateInfoInReceiveBackpack(ULGUIPointerEventData eventData, HonamiStoryItemDataBase operateItem, HashSet<HonamiStoryItemDataBase> exchangeItemSet);
 
-	// Token: 0x0600EF89 RID: 61321
+	// Token: 0x0600C3A8 RID: 50088
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -126,61 +126,61 @@ public abstract class HonamiStoryBackpackPanelBase : UiPanelBase
 	})]
 	public abstract HashSet<HonamiStoryItemDataBase> GetExchangeItemSet(ULGUIPointerEventData eventData, HonamiStoryItemDataBase operateItem);
 
-	// Token: 0x0600EF8A RID: 61322
+	// Token: 0x0600C3A9 RID: 50089
 	public abstract void OnBackpackLogicStateChange(EHonamiStoryBackpackLogicState state);
 
-	// Token: 0x0600EF8B RID: 61323
+	// Token: 0x0600C3AA RID: 50090
 	public abstract List<HonamiStoryGridItemBase> GetUpdateContextEffectGridItems(HonamiStoryBagUpdateContext updateContext);
 
-	// Token: 0x0600EF8C RID: 61324 RVA: 0x00394F82 File Offset: 0x00393182
+	// Token: 0x0600C3AB RID: 50091 RVA: 0x003A0B3E File Offset: 0x0039ED3E
 	public virtual List<HonamiStoryGridItemBase> GetCurrentGridListGamepad()
 	{
 		return new List<HonamiStoryGridItemBase>();
 	}
 
-	// Token: 0x0600EF8D RID: 61325 RVA: 0x00394F89 File Offset: 0x00393189
+	// Token: 0x0600C3AC RID: 50092 RVA: 0x003A0B45 File Offset: 0x0039ED45
 	public virtual bool CheckPositionValidGamepad(int position)
 	{
 		return false;
 	}
 
-	// Token: 0x0600EF8E RID: 61326 RVA: 0x00394F8C File Offset: 0x0039318C
+	// Token: 0x0600C3AD RID: 50093 RVA: 0x003A0B48 File Offset: 0x0039ED48
 	public virtual void OnScrollValueChangedGamepad(bool isUp)
 	{
 	}
 
-	// Token: 0x0600EF8F RID: 61327 RVA: 0x00394F8E File Offset: 0x0039318E
+	// Token: 0x0600C3AE RID: 50094 RVA: 0x003A0B4A File Offset: 0x0039ED4A
 	public virtual void OnScrollToTopOrBottomGamepad(bool toTop)
 	{
 	}
 
-	// Token: 0x0600EF90 RID: 61328 RVA: 0x00394F90 File Offset: 0x00393190
+	// Token: 0x0600C3AF RID: 50095 RVA: 0x003A0B4C File Offset: 0x0039ED4C
 	public virtual void OnHoverGamepad(HonamiStoryGridItemBase item, int position, HonamiStoryInteractOperateAgent operateAgent)
 	{
 	}
 
-	// Token: 0x0600EF91 RID: 61329 RVA: 0x00394F92 File Offset: 0x00393192
+	// Token: 0x0600C3B0 RID: 50096 RVA: 0x003A0B4E File Offset: 0x0039ED4E
 	[return: Nullable(2)]
 	public virtual HonamiStoryBagUpdateContext GetUpdateInfoInSameBackpackGamepad(HonamiStoryGridItemBase gridItem, HonamiStoryItemDataBase item)
 	{
 		return null;
 	}
 
-	// Token: 0x0600EF92 RID: 61330 RVA: 0x00394F95 File Offset: 0x00393195
+	// Token: 0x0600C3B1 RID: 50097 RVA: 0x003A0B51 File Offset: 0x0039ED51
 	[return: Nullable(2)]
 	public virtual HonamiStoryBagUpdateContext GetUpdateInfoInSendBackpackGamepad(HonamiStoryGridItemBase gridItem, HonamiStoryItemDataBase operateItem, HashSet<HonamiStoryItemDataBase> exchangeItemSet)
 	{
 		return null;
 	}
 
-	// Token: 0x0600EF93 RID: 61331 RVA: 0x00394F98 File Offset: 0x00393198
+	// Token: 0x0600C3B2 RID: 50098 RVA: 0x003A0B54 File Offset: 0x0039ED54
 	[return: Nullable(2)]
 	public virtual HonamiStoryBagUpdateContext GetUpdateInfoInReceiveBackpackGamepad(HonamiStoryGridItemBase gridItem, HonamiStoryItemDataBase operateItem, HashSet<HonamiStoryItemDataBase> exchangeItemSet)
 	{
 		return null;
 	}
 
-	// Token: 0x0600EF94 RID: 61332 RVA: 0x00394F9B File Offset: 0x0039319B
+	// Token: 0x0600C3B3 RID: 50099 RVA: 0x003A0B57 File Offset: 0x0039ED57
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -191,19 +191,19 @@ public abstract class HonamiStoryBackpackPanelBase : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x04006EE6 RID: 28390
+	// Token: 0x04006FC7 RID: 28615
 	[Nullable(2)]
 	public Action<HonamiStoryItemGridItem, EHonamiStoryBackpackType> OnEnterGridCb;
 
-	// Token: 0x04006EE7 RID: 28391
+	// Token: 0x04006FC8 RID: 28616
 	[Nullable(2)]
 	public Action OnExitGridCb;
 
-	// Token: 0x04006EE8 RID: 28392
+	// Token: 0x04006FC9 RID: 28617
 	[Nullable(2)]
 	public Action OnDownGridCb;
 
-	// Token: 0x04006EE9 RID: 28393
+	// Token: 0x04006FCA RID: 28618
 	[Nullable(new byte[]
 	{
 		2,
@@ -212,7 +212,7 @@ public abstract class HonamiStoryBackpackPanelBase : UiPanelBase
 	})]
 	public Action<HonamiStoryEquipGridItem, HonamiStoryInteractOperateAgent> OnCheckAttrGridCb;
 
-	// Token: 0x04006EEA RID: 28394
+	// Token: 0x04006FCB RID: 28619
 	[Nullable(new byte[]
 	{
 		2,
@@ -222,6 +222,6 @@ public abstract class HonamiStoryBackpackPanelBase : UiPanelBase
 	})]
 	public Action<HonamiStoryItemGridItem, Vector2D, Vector2D, EHonamiStoryBackpackType> OnClickedGridCb;
 
-	// Token: 0x04006EEB RID: 28395
+	// Token: 0x04006FCC RID: 28620
 	protected HonamiStoryInteractController InteractController;
 }

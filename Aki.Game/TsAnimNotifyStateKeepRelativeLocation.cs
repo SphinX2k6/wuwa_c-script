@@ -8,36 +8,36 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02000143 RID: 323
+// Token: 0x02000147 RID: 327
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/AnimNotifyState/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateKeepRelativeLocation.TsAnimNotifyStateKeepRelativeLocation_C")]
 public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x060013CB RID: 5067 RVA: 0x0006ED20 File Offset: 0x0006CF20
+	// Token: 0x06001468 RID: 5224 RVA: 0x00073EDC File Offset: 0x000720DC
 	static TsAnimNotifyStateKeepRelativeLocation()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TsAnimNotifyStateKeepRelativeLocation.CreateStaticDefaultValue), new Action(TsAnimNotifyStateKeepRelativeLocation.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060013CC RID: 5068 RVA: 0x0006ED96 File Offset: 0x0006CF96
+	// Token: 0x06001469 RID: 5225 RVA: 0x00073F52 File Offset: 0x00072152
 	public static void CreateStaticDefaultValue()
 	{
 		TsAnimNotifyStateKeepRelativeLocation.IsInit = false;
 		TsAnimNotifyStateKeepRelativeLocation.CacheMap = new Dictionary<AActor, float>();
 	}
 
-	// Token: 0x060013CD RID: 5069 RVA: 0x0006EDA8 File Offset: 0x0006CFA8
+	// Token: 0x0600146A RID: 5226 RVA: 0x00073F64 File Offset: 0x00072164
 	public static void ResetStaticDefaultValue()
 	{
 		TsAnimNotifyStateKeepRelativeLocation.IsInit = false;
 		TsAnimNotifyStateKeepRelativeLocation.CacheMap = null;
 	}
 
-	// Token: 0x17000338 RID: 824
-	// (get) Token: 0x060013CE RID: 5070 RVA: 0x0006EDB6 File Offset: 0x0006CFB6
-	// (set) Token: 0x060013CF RID: 5071 RVA: 0x0006EDC6 File Offset: 0x0006CFC6
+	// Token: 0x1700035A RID: 858
+	// (get) Token: 0x0600146B RID: 5227 RVA: 0x00073F72 File Offset: 0x00072172
+	// (set) Token: 0x0600146C RID: 5228 RVA: 0x00073F82 File Offset: 0x00072182
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool RelativeSocketEnable
 	{
@@ -51,9 +51,9 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		}
 	}
 
-	// Token: 0x17000339 RID: 825
-	// (get) Token: 0x060013D0 RID: 5072 RVA: 0x0006EDD7 File Offset: 0x0006CFD7
-	// (set) Token: 0x060013D1 RID: 5073 RVA: 0x0006EDEB File Offset: 0x0006CFEB
+	// Token: 0x1700035B RID: 859
+	// (get) Token: 0x0600146D RID: 5229 RVA: 0x00073F93 File Offset: 0x00072193
+	// (set) Token: 0x0600146E RID: 5230 RVA: 0x00073FA7 File Offset: 0x000721A7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName RelativeSocketName
 	{
@@ -67,9 +67,9 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		}
 	}
 
-	// Token: 0x1700033A RID: 826
-	// (get) Token: 0x060013D2 RID: 5074 RVA: 0x0006EE00 File Offset: 0x0006D000
-	// (set) Token: 0x060013D3 RID: 5075 RVA: 0x0006EE14 File Offset: 0x0006D014
+	// Token: 0x1700035C RID: 860
+	// (get) Token: 0x0600146F RID: 5231 RVA: 0x00073FBC File Offset: 0x000721BC
+	// (set) Token: 0x06001470 RID: 5232 RVA: 0x00073FD0 File Offset: 0x000721D0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector RelativeOffset
 	{
@@ -83,9 +83,9 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		}
 	}
 
-	// Token: 0x1700033B RID: 827
-	// (get) Token: 0x060013D4 RID: 5076 RVA: 0x0006EE29 File Offset: 0x0006D029
-	// (set) Token: 0x060013D5 RID: 5077 RVA: 0x0006EE39 File Offset: 0x0006D039
+	// Token: 0x1700035D RID: 861
+	// (get) Token: 0x06001471 RID: 5233 RVA: 0x00073FE5 File Offset: 0x000721E5
+	// (set) Token: 0x06001472 RID: 5234 RVA: 0x00073FF5 File Offset: 0x000721F5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float KeepDuration
 	{
@@ -99,9 +99,9 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		}
 	}
 
-	// Token: 0x1700033C RID: 828
-	// (get) Token: 0x060013D6 RID: 5078 RVA: 0x0006EE4A File Offset: 0x0006D04A
-	// (set) Token: 0x060013D7 RID: 5079 RVA: 0x0006EE5A File Offset: 0x0006D05A
+	// Token: 0x1700035E RID: 862
+	// (get) Token: 0x06001473 RID: 5235 RVA: 0x00074006 File Offset: 0x00072206
+	// (set) Token: 0x06001474 RID: 5236 RVA: 0x00074016 File Offset: 0x00072216
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float MaxSpeed
 	{
@@ -115,9 +115,9 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		}
 	}
 
-	// Token: 0x1700033D RID: 829
-	// (get) Token: 0x060013D8 RID: 5080 RVA: 0x0006EE6B File Offset: 0x0006D06B
-	// (set) Token: 0x060013D9 RID: 5081 RVA: 0x0006EE7B File Offset: 0x0006D07B
+	// Token: 0x1700035F RID: 863
+	// (get) Token: 0x06001475 RID: 5237 RVA: 0x00074027 File Offset: 0x00072227
+	// (set) Token: 0x06001476 RID: 5238 RVA: 0x00074037 File Offset: 0x00072237
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float ChaseTimeConstant
 	{
@@ -131,9 +131,9 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		}
 	}
 
-	// Token: 0x1700033E RID: 830
-	// (get) Token: 0x060013DA RID: 5082 RVA: 0x0006EE8C File Offset: 0x0006D08C
-	// (set) Token: 0x060013DB RID: 5083 RVA: 0x0006EE9C File Offset: 0x0006D09C
+	// Token: 0x17000360 RID: 864
+	// (get) Token: 0x06001477 RID: 5239 RVA: 0x00074048 File Offset: 0x00072248
+	// (set) Token: 0x06001478 RID: 5240 RVA: 0x00074058 File Offset: 0x00072258
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DebugDraw
 	{
@@ -147,7 +147,7 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		}
 	}
 
-	// Token: 0x060013DC RID: 5084 RVA: 0x0006EEB0 File Offset: 0x0006D0B0
+	// Token: 0x06001479 RID: 5241 RVA: 0x0007406C File Offset: 0x0007226C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override bool K2_NotifyBegin(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
@@ -180,7 +180,7 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		return true;
 	}
 
-	// Token: 0x060013DD RID: 5085 RVA: 0x0006EF9C File Offset: 0x0006D19C
+	// Token: 0x0600147A RID: 5242 RVA: 0x00074158 File Offset: 0x00072358
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override bool K2_NotifyTick(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float frameDeltaTime)
 	{
@@ -216,7 +216,7 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		return true;
 	}
 
-	// Token: 0x060013DE RID: 5086 RVA: 0x0006F070 File Offset: 0x0006D270
+	// Token: 0x0600147B RID: 5243 RVA: 0x0007422C File Offset: 0x0007242C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override bool K2_NotifyEnd(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -233,14 +233,14 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		return true;
 	}
 
-	// Token: 0x060013DF RID: 5087 RVA: 0x0006F0A1 File Offset: 0x0006D2A1
+	// Token: 0x0600147C RID: 5244 RVA: 0x0007425D File Offset: 0x0007245D
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override string GetNotifyName()
 	{
 		return "保持相对怪物组Attach目标的相对位置";
 	}
 
-	// Token: 0x060013E0 RID: 5088 RVA: 0x0006F0A8 File Offset: 0x0006D2A8
+	// Token: 0x0600147D RID: 5245 RVA: 0x00074264 File Offset: 0x00072464
 	private void KeepRelativeLocation(CharacterActorComponent actorComp, CharacterActorComponent targetActorComp, float totalDuration, float frameDeltaTime)
 	{
 		Vector targetLocation = this.GetTargetLocation(targetActorComp);
@@ -255,7 +255,7 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		}
 	}
 
-	// Token: 0x060013E1 RID: 5089 RVA: 0x0006F148 File Offset: 0x0006D348
+	// Token: 0x0600147E RID: 5246 RVA: 0x00074304 File Offset: 0x00072504
 	private Vector ComputeSmoothLocation(CharacterActorComponent actorComp, Vector targetLocation, float totalDuration, float frameDeltaTime)
 	{
 		Vector tmpVector = TsAnimNotifyStateKeepRelativeLocation.TmpVector3;
@@ -296,7 +296,7 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		return tmpVector;
 	}
 
-	// Token: 0x060013E2 RID: 5090 RVA: 0x0006F23C File Offset: 0x0006D43C
+	// Token: 0x0600147F RID: 5247 RVA: 0x000743F8 File Offset: 0x000725F8
 	private Vector GetTargetLocation(CharacterActorComponent targetActorComp)
 	{
 		Vector tmpVector = TsAnimNotifyStateKeepRelativeLocation.TmpVector1;
@@ -330,13 +330,13 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		return tmpVector;
 	}
 
-	// Token: 0x060013E3 RID: 5091 RVA: 0x0006F312 File Offset: 0x0006D512
+	// Token: 0x06001480 RID: 5248 RVA: 0x000744CE File Offset: 0x000726CE
 	private static void DrawDebugSphere(Vector location, FLinearColor color)
 	{
 		UKismetSystemLibrary.D_DrawDebugSphere(GlobalData.World, location.ToUeVector(false), 30f, 10, new FLinearColor?(color), 0f, 0f);
 	}
 
-	// Token: 0x060013E4 RID: 5092 RVA: 0x0006F33C File Offset: 0x0006D53C
+	// Token: 0x06001481 RID: 5249 RVA: 0x000744F8 File Offset: 0x000726F8
 	private static void Initialize()
 	{
 		if (TsAnimNotifyStateKeepRelativeLocation.IsInit)
@@ -347,7 +347,7 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		TsAnimNotifyStateKeepRelativeLocation.IsInit = true;
 	}
 
-	// Token: 0x060013E5 RID: 5093 RVA: 0x0006F356 File Offset: 0x0006D556
+	// Token: 0x06001482 RID: 5250 RVA: 0x00074512 File Offset: 0x00072712
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyStateKeepRelativeLocation._ClassPtr == IntPtr.Zero)
@@ -357,22 +357,22 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		return TsAnimNotifyStateKeepRelativeLocation._ClassPtr;
 	}
 
-	// Token: 0x060013E6 RID: 5094 RVA: 0x0006F37C File Offset: 0x0006D57C
+	// Token: 0x06001483 RID: 5251 RVA: 0x00074538 File Offset: 0x00072738
 	public TsAnimNotifyStateKeepRelativeLocation() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateKeepRelativeLocation.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060013E7 RID: 5095 RVA: 0x0006F3A4 File Offset: 0x0006D5A4
+	// Token: 0x06001484 RID: 5252 RVA: 0x00074560 File Offset: 0x00072760
 	public TsAnimNotifyStateKeepRelativeLocation(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateKeepRelativeLocation.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060013E8 RID: 5096 RVA: 0x0006F3D7 File Offset: 0x0006D5D7
+	// Token: 0x06001485 RID: 5253 RVA: 0x00074593 File Offset: 0x00072793
 	protected TsAnimNotifyStateKeepRelativeLocation(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060013E9 RID: 5097 RVA: 0x0006F3E0 File Offset: 0x0006D5E0
+	// Token: 0x06001486 RID: 5254 RVA: 0x0007459C File Offset: 0x0007279C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyBegin_Implementation(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* __Params)
 	{
@@ -381,7 +381,7 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		__Params->__Result = this.K2_NotifyBegin(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->TotalDuration);
 	}
 
-	// Token: 0x060013EA RID: 5098 RVA: 0x0006F41C File Offset: 0x0006D61C
+	// Token: 0x06001487 RID: 5255 RVA: 0x000745D8 File Offset: 0x000727D8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyTick_Implementation(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* __Params)
 	{
@@ -390,7 +390,7 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		__Params->__Result = this.K2_NotifyTick(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->FrameDeltaTime);
 	}
 
-	// Token: 0x060013EB RID: 5099 RVA: 0x0006F458 File Offset: 0x0006D658
+	// Token: 0x06001488 RID: 5256 RVA: 0x00074614 File Offset: 0x00072814
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
@@ -399,26 +399,26 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 		__Params->__Result = this.K2_NotifyEnd(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x060013EC RID: 5100 RVA: 0x0006F48B File Offset: 0x0006D68B
+	// Token: 0x06001489 RID: 5257 RVA: 0x00074647 File Offset: 0x00072847
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotifyState.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName());
 	}
 
-	// Token: 0x04000E5C RID: 3676
+	// Token: 0x04000E9F RID: 3743
 	private const int DEBUG_SPHERE_RADIUS = 30;
 
-	// Token: 0x04000E5D RID: 3677
+	// Token: 0x04000EA0 RID: 3744
 	private const int DEBUG_SPHERE_SEGMENTS = 10;
 
-	// Token: 0x04000E5E RID: 3678
+	// Token: 0x04000EA1 RID: 3745
 	private const float MODEL_BUFFER_INTERVAL = 0.1f;
 
-	// Token: 0x04000E5F RID: 3679
+	// Token: 0x04000EA2 RID: 3746
 	private static bool IsInit;
 
-	// Token: 0x04000E60 RID: 3680
+	// Token: 0x04000EA3 RID: 3747
 	[Nullable(new byte[]
 	{
 		2,
@@ -426,49 +426,49 @@ public class TsAnimNotifyStateKeepRelativeLocation : TsAnimNotifyStateBase, ISta
 	})]
 	private static Dictionary<AActor, float> CacheMap;
 
-	// Token: 0x04000E61 RID: 3681
+	// Token: 0x04000EA4 RID: 3748
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector1 = Vector.Create();
 
-	// Token: 0x04000E62 RID: 3682
+	// Token: 0x04000EA5 RID: 3749
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector2 = Vector.Create();
 
-	// Token: 0x04000E63 RID: 3683
+	// Token: 0x04000EA6 RID: 3750
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector3 = Vector.Create();
 
-	// Token: 0x04000E64 RID: 3684
+	// Token: 0x04000EA7 RID: 3751
 	[StaticVariableRuleIgnore]
 	private static readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04000E65 RID: 3685
+	// Token: 0x04000EA8 RID: 3752
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateKeepRelativeLocation.TsAnimNotifyStateKeepRelativeLocation_C";
 
-	// Token: 0x04000E66 RID: 3686
+	// Token: 0x04000EA9 RID: 3753
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000E67 RID: 3687
+	// Token: 0x04000EAA RID: 3754
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000E68 RID: 3688
+	// Token: 0x04000EAB RID: 3755
 	private static int __PropertyOffset_RelativeSocketEnable;
 
-	// Token: 0x04000E69 RID: 3689
+	// Token: 0x04000EAC RID: 3756
 	private static int __PropertyOffset_RelativeSocketName;
 
-	// Token: 0x04000E6A RID: 3690
+	// Token: 0x04000EAD RID: 3757
 	private static int __PropertyOffset_RelativeOffset;
 
-	// Token: 0x04000E6B RID: 3691
+	// Token: 0x04000EAE RID: 3758
 	private static int __PropertyOffset_KeepDuration;
 
-	// Token: 0x04000E6C RID: 3692
+	// Token: 0x04000EAF RID: 3759
 	private static int __PropertyOffset_MaxSpeed;
 
-	// Token: 0x04000E6D RID: 3693
+	// Token: 0x04000EB0 RID: 3760
 	private static int __PropertyOffset_ChaseTimeConstant;
 
-	// Token: 0x04000E6E RID: 3694
+	// Token: 0x04000EB1 RID: 3761
 	private static int __PropertyOffset_DebugDraw;
 }

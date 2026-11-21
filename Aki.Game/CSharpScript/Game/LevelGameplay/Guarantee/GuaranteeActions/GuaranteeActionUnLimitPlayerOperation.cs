@@ -8,10 +8,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.Guarantee.GuaranteeActions
 {
-	// Token: 0x02006E18 RID: 28184
+	// Token: 0x02005F98 RID: 24472
 	public class GuaranteeActionUnLimitPlayerOperation : GuaranteeActionBase
 	{
-		// Token: 0x06044B77 RID: 281463 RVA: 0x010F5E10 File Offset: 0x010F4010
+		// Token: 0x0603ACE0 RID: 240864 RVA: 0x010A034C File Offset: 0x0109E54C
 		[NullableContext(2)]
 		protected override void OnExecute(ActionParams @params)
 		{

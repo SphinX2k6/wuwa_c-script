@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action.Fb;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C99 RID: 3225
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D7B RID: 3451
 	public class IInteractBehaviourActions : ILevelAIBehaviourBase
 	{
-		// Token: 0x060049BD RID: 18877 RVA: 0x000B8D6A File Offset: 0x000B6F6A
+		// Token: 0x06004E6B RID: 20075 RVA: 0x000C377A File Offset: 0x000C197A
 		public static IInteractBehaviourActions Create(IInteractBehaviourActions? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001648 RID: 5704
-		// (get) Token: 0x060049BE RID: 18878 RVA: 0x000B8D89 File Offset: 0x000B6F89
+		// Token: 0x17001770 RID: 6000
+		// (get) Token: 0x06004E6C RID: 20076 RVA: 0x000C3799 File Offset: 0x000C1999
 		public override ELevelAIBehaviourType Type
 		{
 			get
@@ -34,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001649 RID: 5705
-		// (get) Token: 0x060049BF RID: 18879 RVA: 0x000B8D98 File Offset: 0x000B6F98
+		// Token: 0x17001771 RID: 6001
+		// (get) Token: 0x06004E6D RID: 20077 RVA: 0x000C37A8 File Offset: 0x000C19A8
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -55,13 +52,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A1C RID: 10780
+		// Token: 0x04002C96 RID: 11414
 		private IInteractBehaviourActions Instance;
 
-		// Token: 0x04002A1D RID: 10781
+		// Token: 0x04002C97 RID: 11415
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04002A1E RID: 10782
+		// Token: 0x04002C98 RID: 11416
 		private bool _ActionsInited;
 	}
 }

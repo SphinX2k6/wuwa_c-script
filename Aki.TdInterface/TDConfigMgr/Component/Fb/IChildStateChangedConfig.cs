@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D8A RID: 3466
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E86 RID: 3718
 	public class IChildStateChangedConfig
 	{
-		// Token: 0x06004ED2 RID: 20178 RVA: 0x000C36D9 File Offset: 0x000C18D9
+		// Token: 0x060053F7 RID: 21495 RVA: 0x000CEF29 File Offset: 0x000CD129
 		public static IChildStateChangedConfig Create(IChildStateChangedConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700197B RID: 6523
-		// (get) Token: 0x06004ED3 RID: 20179 RVA: 0x000C36F8 File Offset: 0x000C18F8
+		// Token: 0x17001AE6 RID: 6886
+		// (get) Token: 0x060053F8 RID: 21496 RVA: 0x000CEF48 File Offset: 0x000CD148
 		public virtual string State
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700197C RID: 6524
-		// (get) Token: 0x06004ED4 RID: 20180 RVA: 0x000C3705 File Offset: 0x000C1905
+		// Token: 0x17001AE7 RID: 6887
+		// (get) Token: 0x060053F9 RID: 21497 RVA: 0x000CEF55 File Offset: 0x000CD155
 		[Nullable(2)]
 		public virtual IDelayChangeState DelayChangeState
 		{
@@ -50,14 +48,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D41 RID: 11585
+		// Token: 0x04003007 RID: 12295
 		private IChildStateChangedConfig Instance;
 
-		// Token: 0x04002D42 RID: 11586
+		// Token: 0x04003008 RID: 12296
 		[Nullable(2)]
 		private IDelayChangeState _DelayChangeStateCache;
 
-		// Token: 0x04002D43 RID: 11587
+		// Token: 0x04003009 RID: 12297
 		private bool _DelayChangeStateInited;
 	}
 }

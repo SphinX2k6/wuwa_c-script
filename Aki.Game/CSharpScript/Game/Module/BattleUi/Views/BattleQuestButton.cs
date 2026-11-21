@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CDA RID: 23770
+	// Token: 0x02004CBC RID: 19644
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleQuestButton : BattleEntranceButton
 	{
-		// Token: 0x0603C264 RID: 246372 RVA: 0x00E6635F File Offset: 0x00E6455F
+		// Token: 0x060311BA RID: 201146 RVA: 0x00DB6913 File Offset: 0x00DB4B13
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(3, typeof(UUIText)));
 		}
 
-		// Token: 0x0603C265 RID: 246373 RVA: 0x00E663A0 File Offset: 0x00E645A0
+		// Token: 0x060311BB RID: 201147 RVA: 0x00DB6954 File Offset: 0x00DB4B54
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -29,14 +29,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603C266 RID: 246374 RVA: 0x00E663FA File Offset: 0x00E645FA
+		// Token: 0x060311BC RID: 201148 RVA: 0x00DB69AE File Offset: 0x00DB4BAE
 		public override void Reset()
 		{
 			this.RemoveEvents();
 			base.Reset();
 		}
 
-		// Token: 0x0603C267 RID: 246375 RVA: 0x00E66408 File Offset: 0x00E64608
+		// Token: 0x060311BD RID: 201149 RVA: 0x00DB69BC File Offset: 0x00DB4BBC
 		protected override void OnShowBattleChildView()
 		{
 			base.OnShowBattleChildView();
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C268 RID: 246376 RVA: 0x00E66428 File Offset: 0x00E64628
+		// Token: 0x060311BE RID: 201150 RVA: 0x00DB69DC File Offset: 0x00DB4BDC
 		protected override void OnHideBattleChildView()
 		{
 			base.OnHideBattleChildView();
@@ -56,19 +56,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C269 RID: 246377 RVA: 0x00E66448 File Offset: 0x00E64648
+		// Token: 0x060311BF RID: 201151 RVA: 0x00DB69FC File Offset: 0x00DB4BFC
 		protected void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.MissionUpdate, new Action<bool>(this.OnMissionUpdate));
 		}
 
-		// Token: 0x0603C26A RID: 246378 RVA: 0x00E66466 File Offset: 0x00E64666
+		// Token: 0x060311C0 RID: 201152 RVA: 0x00DB6A1A File Offset: 0x00DB4C1A
 		protected void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.MissionUpdate, new Action<bool>(this.OnMissionUpdate));
 		}
 
-		// Token: 0x0603C26B RID: 246379 RVA: 0x00E66484 File Offset: 0x00E64684
+		// Token: 0x060311C1 RID: 201153 RVA: 0x00DB6A38 File Offset: 0x00DB4C38
 		private void OnSequenceStart(string sequenceName)
 		{
 			if (!(sequenceName == "MissionUpgradeIn"))
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item.SetUIActive(BattleUiModel.Instance.IsMissionPanelVisible);
 		}
 
-		// Token: 0x0603C26C RID: 246380 RVA: 0x00E664BC File Offset: 0x00E646BC
+		// Token: 0x060311C2 RID: 201154 RVA: 0x00DB6A70 File Offset: 0x00DB4C70
 		private void OnSequenceClose(string sequenceName)
 		{
 			if (!(sequenceName == "MissionUpgradeIn"))
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C26D RID: 246381 RVA: 0x00E6651C File Offset: 0x00E6471C
+		// Token: 0x060311C3 RID: 201155 RVA: 0x00DB6AD0 File Offset: 0x00DB4CD0
 		private void OnMissionUpdate(bool bNewQuest)
 		{
 			UUIText text = base.GetText(3);
@@ -112,23 +112,23 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F5BD RID: 128445
+		// Token: 0x0401A076 RID: 106614
 		private const string MISSION_UPGRADE_IN = "MissionUpgradeIn";
 
-		// Token: 0x0401F5BE RID: 128446
+		// Token: 0x0401A077 RID: 106615
 		private const string MISSION_UPGRADE_OUT = "MissionUpgradeOut";
 
-		// Token: 0x0401F5BF RID: 128447
+		// Token: 0x0401A078 RID: 106616
 		[Nullable(2)]
 		protected LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0200BF32 RID: 48946
+		// Token: 0x0200A938 RID: 43320
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039AC2 RID: 236226
+			// Token: 0x04034484 RID: 214148
 			AnimNode = 2,
-			// Token: 0x04039AC3 RID: 236227
+			// Token: 0x04034485 RID: 214149
 			QuestUpdateText
 		}
 	}

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B88 RID: 2952
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C56 RID: 3158
 	public class IHitLogicChangeNextAndLockTargetState : IHitLogicType
 	{
-		// Token: 0x060043E6 RID: 17382 RVA: 0x000ACBE2 File Offset: 0x000AADE2
+		// Token: 0x0600483F RID: 18495 RVA: 0x000B6CA6 File Offset: 0x000B4EA6
 		public static IHitLogicChangeNextAndLockTargetState Create(IHitLogicChangeNextAndLockTargetState? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001293 RID: 4755
-		// (get) Token: 0x060043E7 RID: 17383 RVA: 0x000ACC01 File Offset: 0x000AAE01
+		// Token: 0x1700138E RID: 5006
+		// (get) Token: 0x06004840 RID: 18496 RVA: 0x000B6CC5 File Offset: 0x000B4EC5
 		public override EHitLogicType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001294 RID: 4756
-		// (get) Token: 0x060043E8 RID: 17384 RVA: 0x000ACC0E File Offset: 0x000AAE0E
+		// Token: 0x1700138F RID: 5007
+		// (get) Token: 0x06004841 RID: 18497 RVA: 0x000B6CD2 File Offset: 0x000B4ED2
 		public virtual string TargetState
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002647 RID: 9799
+		// Token: 0x0400288F RID: 10383
 		private IHitLogicChangeNextAndLockTargetState Instance;
 	}
 }

@@ -4,38 +4,38 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BossPiling
 {
-	// Token: 0x02005BFD RID: 23549
+	// Token: 0x02004BDD RID: 19421
 	[NullableContext(1)]
 	public interface IBossPilingLevelInfo
 	{
-		// Token: 0x17008D79 RID: 36217
-		// (get) Token: 0x0603B84F RID: 243791
-		// (set) Token: 0x0603B850 RID: 243792
+		// Token: 0x1700614B RID: 24907
+		// (get) Token: 0x0603079A RID: 198554
+		// (set) Token: 0x0603079B RID: 198555
 		int Id { get; set; }
 
-		// Token: 0x17008D7A RID: 36218
-		// (get) Token: 0x0603B851 RID: 243793
-		// (set) Token: 0x0603B852 RID: 243794
+		// Token: 0x1700614C RID: 24908
+		// (get) Token: 0x0603079C RID: 198556
+		// (set) Token: 0x0603079D RID: 198557
 		int UnlockTime { get; set; }
 
-		// Token: 0x17008D7B RID: 36219
-		// (get) Token: 0x0603B853 RID: 243795
-		// (set) Token: 0x0603B854 RID: 243796
+		// Token: 0x1700614D RID: 24909
+		// (get) Token: 0x0603079E RID: 198558
+		// (set) Token: 0x0603079F RID: 198559
 		int BossHp { get; set; }
 
-		// Token: 0x17008D7C RID: 36220
-		// (get) Token: 0x0603B855 RID: 243797
-		// (set) Token: 0x0603B856 RID: 243798
+		// Token: 0x1700614E RID: 24910
+		// (get) Token: 0x060307A0 RID: 198560
+		// (set) Token: 0x060307A1 RID: 198561
 		List<int> SelectedRoleIds { get; set; }
 
-		// Token: 0x17008D7D RID: 36221
-		// (get) Token: 0x0603B857 RID: 243799
-		// (set) Token: 0x0603B858 RID: 243800
+		// Token: 0x1700614F RID: 24911
+		// (get) Token: 0x060307A2 RID: 198562
+		// (set) Token: 0x060307A3 RID: 198563
 		List<int> SelectedTagBranchIds { get; set; }
 
-		// Token: 0x17008D7E RID: 36222
-		// (get) Token: 0x0603B859 RID: 243801
-		// (set) Token: 0x0603B85A RID: 243802
+		// Token: 0x17006150 RID: 24912
+		// (get) Token: 0x060307A4 RID: 198564
+		// (set) Token: 0x060307A5 RID: 198565
 		bool IsUnlock { get; set; }
 	}
 }

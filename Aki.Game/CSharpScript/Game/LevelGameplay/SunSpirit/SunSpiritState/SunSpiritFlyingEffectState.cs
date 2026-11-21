@@ -7,19 +7,19 @@ using CSharpScript.Game.Module.Teleport;
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 {
-	// Token: 0x020069FB RID: 27131
+	// Token: 0x02005B58 RID: 23384
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SunSpiritFlyingEffectState : SunSpiritBaseState
 	{
-		// Token: 0x060437E6 RID: 276454 RVA: 0x01080CF4 File Offset: 0x0107EEF4
+		// Token: 0x0603982F RID: 235567 RVA: 0x01025310 File Offset: 0x01023510
 		protected SunSpiritFlyingEffectState(ESunSpiritStateType stateType, SunSpiritData sunSpiritData, float waitBeforeFlyDuration, float flyingDuration) : base(stateType, sunSpiritData)
 		{
 			this.WaitBeforeFlyDuration = waitBeforeFlyDuration;
 			this.FlyingDuration = flyingDuration;
 		}
 
-		// Token: 0x060437E7 RID: 276455 RVA: 0x01080D54 File Offset: 0x0107EF54
+		// Token: 0x06039830 RID: 235568 RVA: 0x01025370 File Offset: 0x01023570
 		protected override bool OnEnter()
 		{
 			SunSpiritModel instance = SunSpiritModel.Instance;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			return true;
 		}
 
-		// Token: 0x060437E8 RID: 276456 RVA: 0x01080E4C File Offset: 0x0107F04C
+		// Token: 0x06039831 RID: 235569 RVA: 0x01025468 File Offset: 0x01023668
 		protected override void OnExit()
 		{
 			if (EventSystem.Instance.Has(EEventName.TeleportStart, new Action<bool>(this.OnTeleportStart)))
@@ -84,13 +84,13 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			}
 		}
 
-		// Token: 0x060437E9 RID: 276457 RVA: 0x01080F23 File Offset: 0x0107F123
+		// Token: 0x06039832 RID: 235570 RVA: 0x0102553F File Offset: 0x0102373F
 		private void OnTeleportStart(bool loading)
 		{
 			this.OnTeleportOrTransition();
 		}
 
-		// Token: 0x060437EA RID: 276458 RVA: 0x01080F2C File Offset: 0x0107F12C
+		// Token: 0x06039833 RID: 235571 RVA: 0x01025548 File Offset: 0x01023748
 		private unsafe void OnTeleportOrTransition()
 		{
 			Log instance = Log.Instance;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			this.OnSunSpiritFlyToTargetEnd(false, true);
 		}
 
-		// Token: 0x060437EB RID: 276459 RVA: 0x01080FE8 File Offset: 0x0107F1E8
+		// Token: 0x06039834 RID: 235572 RVA: 0x01025604 File Offset: 0x01023804
 		private unsafe void OnFlyingFailing(float deltaSeconds)
 		{
 			this.FlyingFailingTime += deltaSeconds;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			}
 		}
 
-		// Token: 0x060437EC RID: 276460 RVA: 0x010810B8 File Offset: 0x0107F2B8
+		// Token: 0x06039835 RID: 235573 RVA: 0x010256D4 File Offset: 0x010238D4
 		protected unsafe override void OnTick(float deltaSeconds)
 		{
 			TeleportModel instance = TeleportModel.Instance;
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			this.OnTeleportOrTransition();
 		}
 
-		// Token: 0x060437ED RID: 276461 RVA: 0x010813A8 File Offset: 0x0107F5A8
+		// Token: 0x06039836 RID: 235574 RVA: 0x010259C4 File Offset: 0x01023BC4
 		public override bool IsSameState(SunSpiritBaseState otherState)
 		{
 			if (base.IsSameState(otherState))
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			return false;
 		}
 
-		// Token: 0x060437EE RID: 276462 RVA: 0x01081401 File Offset: 0x0107F601
+		// Token: 0x06039837 RID: 235575 RVA: 0x01025A1D File Offset: 0x01023C1D
 		protected virtual void OnSunSpiritFlyToTargetEnd(bool bKeepEffect = false, bool bIsInterrupt = false)
 		{
 			this.KeepEffect = bKeepEffect;
@@ -240,49 +240,59 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			this.IsFinished = true;
 		}
 
-		// Token: 0x040233B3 RID: 144307
+		// Token: 0x17006D6F RID: 28015
+		// (get) Token: 0x06039838 RID: 235576 RVA: 0x01025A34 File Offset: 0x01023C34
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401E5A5 RID: 124325
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x040233B4 RID: 144308
+		// Token: 0x0401E5A6 RID: 124326
 		private readonly Quat TempQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x040233B5 RID: 144309
+		// Token: 0x0401E5A7 RID: 124327
 		private float FlyingFailingTime;
 
-		// Token: 0x040233B6 RID: 144310
+		// Token: 0x0401E5A8 RID: 124328
 		private int FlyingFailingCount;
 
-		// Token: 0x040233B7 RID: 144311
+		// Token: 0x0401E5A9 RID: 124329
 		private int FlyingEffectHandle;
 
-		// Token: 0x040233B8 RID: 144312
+		// Token: 0x0401E5AA RID: 124330
 		private float CurrentWaitingBeforeFlyDuration;
 
-		// Token: 0x040233B9 RID: 144313
+		// Token: 0x0401E5AB RID: 124331
 		private float CurrentFlyingDuration;
 
-		// Token: 0x040233BA RID: 144314
+		// Token: 0x0401E5AC RID: 124332
 		private float MaxFlyDistSquared;
 
-		// Token: 0x040233BB RID: 144315
+		// Token: 0x0401E5AD RID: 124333
 		private float MaxFailingTime;
 
-		// Token: 0x040233BC RID: 144316
+		// Token: 0x0401E5AE RID: 124334
 		private int MaxFailingCount;
 
-		// Token: 0x040233BD RID: 144317
+		// Token: 0x0401E5AF RID: 124335
 		private float MinFlyDistSquared;
 
-		// Token: 0x040233BE RID: 144318
+		// Token: 0x0401E5B0 RID: 124336
 		private float MaxFlyingTime;
 
-		// Token: 0x040233BF RID: 144319
+		// Token: 0x0401E5B1 RID: 124337
 		protected bool IsInterrupt;
 
-		// Token: 0x040233C0 RID: 144320
+		// Token: 0x0401E5B2 RID: 124338
 		protected bool KeepEffect;
 
-		// Token: 0x040233C1 RID: 144321
+		// Token: 0x0401E5B3 RID: 124339
 		[Nullable(new byte[]
 		{
 			2,
@@ -291,18 +301,18 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 		})]
 		public Func<Vector, Quat, bool> FlyingTargetGetter;
 
-		// Token: 0x040233C2 RID: 144322
+		// Token: 0x0401E5B4 RID: 124340
 		[Nullable(2)]
 		public Action FlyingFinishCallback;
 
-		// Token: 0x040233C3 RID: 144323
+		// Token: 0x0401E5B5 RID: 124341
 		[Nullable(2)]
 		public Action FlyingInterruptCallback;
 
-		// Token: 0x040233C4 RID: 144324
+		// Token: 0x0401E5B6 RID: 124342
 		public float WaitBeforeFlyDuration;
 
-		// Token: 0x040233C5 RID: 144325
+		// Token: 0x0401E5B7 RID: 124343
 		public float FlyingDuration;
 	}
 }

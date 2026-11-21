@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001360 RID: 4960
+// Token: 0x02000814 RID: 2068
 [NullableContext(1)]
 [Nullable(0)]
 public class RewardMainView : UiViewBase
 {
-	// Token: 0x06008A2B RID: 35371 RVA: 0x001D8640 File Offset: 0x001D6840
+	// Token: 0x06005DC6 RID: 24006 RVA: 0x001E149C File Offset: 0x001DF69C
 	public RewardMainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06008A2C RID: 35372 RVA: 0x001D8668 File Offset: 0x001D6868
+	// Token: 0x06005DC7 RID: 24007 RVA: 0x001E14C4 File Offset: 0x001DF6C4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class RewardMainView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008A2D RID: 35373 RVA: 0x001D86F0 File Offset: 0x001D68F0
+	// Token: 0x06005DC8 RID: 24008 RVA: 0x001E154C File Offset: 0x001DF74C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RewardMainView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -42,27 +42,27 @@ public class RewardMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A2E RID: 35374 RVA: 0x001D8733 File Offset: 0x001D6933
+	// Token: 0x06005DC9 RID: 24009 RVA: 0x001E158F File Offset: 0x001DF78F
 	protected override void OnBeforeShow()
 	{
 		ActivityMoonChasingController.Instance.CheckIsActivityClose();
 	}
 
-	// Token: 0x06008A2F RID: 35375 RVA: 0x001D873F File Offset: 0x001D693F
+	// Token: 0x06005DCA RID: 24010 RVA: 0x001E159B File Offset: 0x001DF79B
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.TakenRewardTargetData, new Action<int>(this.TakenRewardTargetData));
 		EventSystem.Instance.Add(EEventName.MoonChasingRefreshRewardRedDot, new Action(this.OnMoonChasingRefreshRewardRedDot));
 	}
 
-	// Token: 0x06008A30 RID: 35376 RVA: 0x001D8779 File Offset: 0x001D6979
+	// Token: 0x06005DCB RID: 24011 RVA: 0x001E15D5 File Offset: 0x001DF7D5
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.TakenRewardTargetData, new Action<int>(this.TakenRewardTargetData));
 		EventSystem.Instance.Remove(EEventName.MoonChasingRefreshRewardRedDot, new Action(this.OnMoonChasingRefreshRewardRedDot));
 	}
 
-	// Token: 0x06008A31 RID: 35377 RVA: 0x001D87B4 File Offset: 0x001D69B4
+	// Token: 0x06005DCC RID: 24012 RVA: 0x001E1610 File Offset: 0x001DF810
 	private void TakenRewardTargetData(int id)
 	{
 		TaskData specialTaskData = MoonChasingRewardModel.Instance.GetSpecialTaskData();
@@ -74,25 +74,25 @@ public class RewardMainView : UiViewBase
 		this.RefreshTabItem();
 	}
 
-	// Token: 0x06008A32 RID: 35378 RVA: 0x001D87E2 File Offset: 0x001D69E2
+	// Token: 0x06005DCD RID: 24013 RVA: 0x001E163E File Offset: 0x001DF83E
 	private void OnMoonChasingRefreshRewardRedDot()
 	{
 		this.RefreshTabItem();
 	}
 
-	// Token: 0x06008A33 RID: 35379 RVA: 0x001D87EA File Offset: 0x001D69EA
+	// Token: 0x06005DCE RID: 24014 RVA: 0x001E1646 File Offset: 0x001DF846
 	private void OnClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06008A34 RID: 35380 RVA: 0x001D87F3 File Offset: 0x001D69F3
+	// Token: 0x06005DCF RID: 24015 RVA: 0x001E164F File Offset: 0x001DF84F
 	private void ToggleCallBack(int index)
 	{
 		this.InsControl.TabItemToggleClick(index);
 	}
 
-	// Token: 0x06008A35 RID: 35381 RVA: 0x001D8804 File Offset: 0x001D6A04
+	// Token: 0x06005DD0 RID: 24016 RVA: 0x001E1660 File Offset: 0x001DF860
 	public UniTask InitCaption()
 	{
 		RewardMainView.<InitCaption>d__16 <InitCaption>d__;
@@ -103,7 +103,7 @@ public class RewardMainView : UiViewBase
 		return <InitCaption>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A36 RID: 35382 RVA: 0x001D8848 File Offset: 0x001D6A48
+	// Token: 0x06005DD1 RID: 24017 RVA: 0x001E16A4 File Offset: 0x001DF8A4
 	public UniTask InitGrandItem()
 	{
 		RewardMainView.<InitGrandItem>d__17 <InitGrandItem>d__;
@@ -114,7 +114,7 @@ public class RewardMainView : UiViewBase
 		return <InitGrandItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A37 RID: 35383 RVA: 0x001D888C File Offset: 0x001D6A8C
+	// Token: 0x06005DD2 RID: 24018 RVA: 0x001E16E8 File Offset: 0x001DF8E8
 	private void RefreshGrandItem()
 	{
 		this.GrandItem.SetActive(false);
@@ -123,7 +123,7 @@ public class RewardMainView : UiViewBase
 		this.GrandItem.SetActive(true);
 	}
 
-	// Token: 0x06008A38 RID: 35384 RVA: 0x001D88C8 File Offset: 0x001D6AC8
+	// Token: 0x06005DD3 RID: 24019 RVA: 0x001E1724 File Offset: 0x001DF924
 	private void RefreshTabItem()
 	{
 		bool allTaskDataRedDotState = MoonChasingRewardModel.Instance.GetAllTaskDataRedDotState(false);
@@ -132,7 +132,7 @@ public class RewardMainView : UiViewBase
 		this.TabItemList[1].SetRedDotVisible(shopRedDotState);
 	}
 
-	// Token: 0x06008A39 RID: 35385 RVA: 0x001D8910 File Offset: 0x001D6B10
+	// Token: 0x06005DD4 RID: 24020 RVA: 0x001E176C File Offset: 0x001DF96C
 	public UniTask InitTabComponent()
 	{
 		RewardMainView.<InitTabComponent>d__20 <InitTabComponent>d__;
@@ -143,19 +143,19 @@ public class RewardMainView : UiViewBase
 		return <InitTabComponent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A3A RID: 35386 RVA: 0x001D8953 File Offset: 0x001D6B53
+	// Token: 0x06005DD5 RID: 24021 RVA: 0x001E17AF File Offset: 0x001DF9AF
 	public void InitTabViewComponent()
 	{
 		this.TabViewComponent = new TabViewComponent<UiDynamicTab>(base.GetItem(1), EKeyMode.Default);
 	}
 
-	// Token: 0x06008A3B RID: 35387 RVA: 0x001D8968 File Offset: 0x001D6B68
+	// Token: 0x06005DD6 RID: 24022 RVA: 0x001E17C4 File Offset: 0x001DF9C4
 	public void SetTabState(int index, bool state, bool bFireEvent)
 	{
 		this.TabItemList[index].SetToggleState(state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, bFireEvent);
 	}
 
-	// Token: 0x06008A3C RID: 35388 RVA: 0x001D8984 File Offset: 0x001D6B84
+	// Token: 0x06005DD7 RID: 24023 RVA: 0x001E17E0 File Offset: 0x001DF9E0
 	public void SwitchTabView(UiDynamicTab data, int index)
 	{
 		EUiTabViewName viewName = (EUiTabViewName)data.ChildViewName;
@@ -172,41 +172,41 @@ public class RewardMainView : UiViewBase
 		rootItem2.SetHierarchyIndex(hierarchyIndex);
 	}
 
-	// Token: 0x04003D9C RID: 15772
+	// Token: 0x04003E34 RID: 15924
 	private readonly RewardInstanceController InsControl = new RewardInstanceController();
 
-	// Token: 0x04003D9D RID: 15773
+	// Token: 0x04003E35 RID: 15925
 	protected PopupCaptionItem Caption;
 
-	// Token: 0x04003D9E RID: 15774
+	// Token: 0x04003E36 RID: 15926
 	protected RewardGrandItem GrandItem;
 
-	// Token: 0x04003D9F RID: 15775
+	// Token: 0x04003E37 RID: 15927
 	protected List<RewardMainTabItem> TabItemList = new List<RewardMainTabItem>();
 
-	// Token: 0x04003DA0 RID: 15776
+	// Token: 0x04003E38 RID: 15928
 	protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-	// Token: 0x04003DA1 RID: 15777
+	// Token: 0x04003E39 RID: 15929
 	private bool CanAccomplishTask = true;
 
-	// Token: 0x020079C2 RID: 31170
+	// Token: 0x02006B4C RID: 27468
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x04028158 RID: 164184
+		// Token: 0x04023485 RID: 144517
 		public const int CaptionItem = 0;
 
-		// Token: 0x04028159 RID: 164185
+		// Token: 0x04023486 RID: 144518
 		public const int ContentItem = 1;
 
-		// Token: 0x0402815A RID: 164186
+		// Token: 0x04023487 RID: 144519
 		public const int ShopButtonItem = 2;
 
-		// Token: 0x0402815B RID: 164187
+		// Token: 0x04023488 RID: 144520
 		public const int TargetButtonItem = 3;
 
-		// Token: 0x0402815C RID: 164188
+		// Token: 0x04023489 RID: 144521
 		public const int GrandItem = 4;
 	}
 }

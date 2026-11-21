@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BA4 RID: 7076
+// Token: 0x02001063 RID: 4195
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchTechNodeItem : UiPanelBase
 {
-	// Token: 0x0600D2B4 RID: 53940 RVA: 0x00306D1C File Offset: 0x00304F1C
+	// Token: 0x0600A6C5 RID: 42693 RVA: 0x00311DFC File Offset: 0x0030FFFC
 	public FloroRanchTechNodeItem(UUIItem parent, FloroRanchTechnologyData data, UUIItem gridPanelItem)
 	{
 		this.Data = data2;
@@ -20,7 +20,7 @@ public class FloroRanchTechNodeItem : UiPanelBase
 		this.GridPanelItem = gridPanelItem;
 	}
 
-	// Token: 0x0600D2B5 RID: 53941 RVA: 0x00306D74 File Offset: 0x00304F74
+	// Token: 0x0600A6C6 RID: 42694 RVA: 0x00311E54 File Offset: 0x00310054
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -61,13 +61,13 @@ public class FloroRanchTechNodeItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D2B6 RID: 53942 RVA: 0x00306F69 File Offset: 0x00305169
+	// Token: 0x0600A6C7 RID: 42695 RVA: 0x00312049 File Offset: 0x00310249
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(10).bLockStateOnSelect = true;
 	}
 
-	// Token: 0x0600D2B7 RID: 53943 RVA: 0x00306F7C File Offset: 0x0030517C
+	// Token: 0x0600A6C8 RID: 42696 RVA: 0x0031205C File Offset: 0x0031025C
 	[NullableContext(2)]
 	public void Refresh(FloroRanchTechnologyData data = null)
 	{
@@ -126,7 +126,7 @@ public class FloroRanchTechNodeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600D2B8 RID: 53944 RVA: 0x003071E1 File Offset: 0x003053E1
+	// Token: 0x0600A6C9 RID: 42697 RVA: 0x003122C1 File Offset: 0x003104C1
 	public UUIItem GetPrePosItem(int offset)
 	{
 		if (offset > 0)
@@ -140,7 +140,7 @@ public class FloroRanchTechNodeItem : UiPanelBase
 		return base.GetItem(1);
 	}
 
-	// Token: 0x0600D2B9 RID: 53945 RVA: 0x00307202 File Offset: 0x00305402
+	// Token: 0x0600A6CA RID: 42698 RVA: 0x003122E2 File Offset: 0x003104E2
 	private void OnToggleClick(EToggleState _)
 	{
 		Action<FloroRanchTechNodeItem> onClickCallback = this.OnClickCallback;
@@ -151,70 +151,70 @@ public class FloroRanchTechNodeItem : UiPanelBase
 		onClickCallback(this);
 	}
 
-	// Token: 0x0600D2BA RID: 53946 RVA: 0x00307215 File Offset: 0x00305415
+	// Token: 0x0600A6CB RID: 42699 RVA: 0x003122F5 File Offset: 0x003104F5
 	public void SetToggleState(EToggleState state)
 	{
 		base.GetExtendToggle(10).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x04006095 RID: 24725
+	// Token: 0x04006164 RID: 24932
 	[Nullable(2)]
 	public FloroRanchTechnologyData Data;
 
-	// Token: 0x04006096 RID: 24726
+	// Token: 0x04006165 RID: 24933
 	[Nullable(2)]
 	public UUIItem PreItem;
 
-	// Token: 0x04006097 RID: 24727
+	// Token: 0x04006166 RID: 24934
 	private List<FloroRanchTechLine> LineComponentList = new List<FloroRanchTechLine>();
 
-	// Token: 0x04006098 RID: 24728
+	// Token: 0x04006167 RID: 24935
 	[Nullable(2)]
 	public UUIItem GridPanelItem;
 
-	// Token: 0x04006099 RID: 24729
+	// Token: 0x04006168 RID: 24936
 	public Action<FloroRanchTechNodeItem> OnClickCallback = delegate(FloroRanchTechNodeItem data)
 	{
 	};
 
-	// Token: 0x02008143 RID: 33091
+	// Token: 0x020072D1 RID: 29393
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A30D RID: 172813
+		// Token: 0x04025641 RID: 153153
 		public const int PrePos1 = 0;
 
-		// Token: 0x0402A30E RID: 172814
+		// Token: 0x04025642 RID: 153154
 		public const int PrePos2 = 1;
 
-		// Token: 0x0402A30F RID: 172815
+		// Token: 0x04025643 RID: 153155
 		public const int PrePos3 = 2;
 
-		// Token: 0x0402A310 RID: 172816
+		// Token: 0x04025644 RID: 153156
 		public const int OutPos1 = 3;
 
-		// Token: 0x0402A311 RID: 172817
+		// Token: 0x04025645 RID: 153157
 		public const int OutPos2 = 4;
 
-		// Token: 0x0402A312 RID: 172818
+		// Token: 0x04025646 RID: 153158
 		public const int OutPos3 = 5;
 
-		// Token: 0x0402A313 RID: 172819
+		// Token: 0x04025647 RID: 153159
 		public const int SpriteLock = 6;
 
-		// Token: 0x0402A314 RID: 172820
+		// Token: 0x04025648 RID: 153160
 		public const int SpriteUnlock = 7;
 
-		// Token: 0x0402A315 RID: 172821
+		// Token: 0x04025649 RID: 153161
 		public const int SpriteIcon = 8;
 
-		// Token: 0x0402A316 RID: 172822
+		// Token: 0x0402564A RID: 153162
 		public const int SpriteUp = 9;
 
-		// Token: 0x0402A317 RID: 172823
+		// Token: 0x0402564B RID: 153163
 		public const int Toggle = 10;
 
-		// Token: 0x0402A318 RID: 172824
+		// Token: 0x0402564C RID: 153164
 		public const int SpriteIconLock = 11;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002029 RID: 8233
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002272 RID: 8818
 	public class IUnlockPhotoMemoryCollectSystemItem : IUnlockSystemItemType
 	{
-		// Token: 0x0600B4FC RID: 46332 RVA: 0x001A48C0 File Offset: 0x001A2AC0
+		// Token: 0x0600C022 RID: 49186 RVA: 0x001BB02C File Offset: 0x001B922C
 		private IUnlockPhotoMemoryCollectSystemItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B4FD RID: 46333 RVA: 0x001A48F8 File Offset: 0x001A2AF8
+		// Token: 0x0600C023 RID: 49187 RVA: 0x001BB064 File Offset: 0x001B9264
 		public static IUnlockPhotoMemoryCollectSystemItem Create([Nullable(2)] IUnlockPhotoMemoryCollectSystemItem instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B4FE RID: 46334 RVA: 0x001A490B File Offset: 0x001A2B0B
+		// Token: 0x0600C024 RID: 49188 RVA: 0x001BB077 File Offset: 0x001B9277
 		public static IUnlockPhotoMemoryCollectSystemItem CreateFromSetValue([Nullable(2)] IUnlockPhotoMemoryCollectSystemItem_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B4FF RID: 46335 RVA: 0x001A491E File Offset: 0x001A2B1E
+		// Token: 0x0600C025 RID: 49189 RVA: 0x001BB08A File Offset: 0x001B928A
 		public new IUnlockPhotoMemoryCollectSystemItem_SetValue ToSetValue()
 		{
 			return new IUnlockPhotoMemoryCollectSystemItem_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003799 RID: 14233
-		// (get) Token: 0x0600B500 RID: 46336 RVA: 0x001A493D File Offset: 0x001A2B3D
-		// (set) Token: 0x0600B501 RID: 46337 RVA: 0x001A4968 File Offset: 0x001A2B68
+		// Token: 0x17003A76 RID: 14966
+		// (get) Token: 0x0600C026 RID: 49190 RVA: 0x001BB0A9 File Offset: 0x001B92A9
+		// (set) Token: 0x0600C027 RID: 49191 RVA: 0x001BB0D4 File Offset: 0x001B92D4
 		public override EUnlockSystemItemType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700379A RID: 14234
-		// (get) Token: 0x0600B502 RID: 46338 RVA: 0x001A4976 File Offset: 0x001A2B76
-		// (set) Token: 0x0600B503 RID: 46339 RVA: 0x001A49A1 File Offset: 0x001A2BA1
+		// Token: 0x17003A77 RID: 14967
+		// (get) Token: 0x0600C028 RID: 49192 RVA: 0x001BB0E2 File Offset: 0x001B92E2
+		// (set) Token: 0x0600C029 RID: 49193 RVA: 0x001BB10D File Offset: 0x001B930D
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006CFC RID: 27900
+		// Token: 0x04007305 RID: 29445
 		[Nullable(2)]
 		protected new IUnlockPhotoMemoryCollectSystemItem FbInstance;
 
-		// Token: 0x04006CFD RID: 27901
+		// Token: 0x04007306 RID: 29446
 		[Nullable(2)]
 		protected new IUnlockPhotoMemoryCollectSystemItem_SetValue PocoInterface;
 	}

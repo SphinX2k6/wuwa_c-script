@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200028F RID: 655
+	// Token: 0x02000294 RID: 660
 	public sealed class CiacconaChapterChoicePbData : IMessage<CiacconaChapterChoicePbData>, IMessage, IEquatable<CiacconaChapterChoicePbData>, IDeepCloneable<CiacconaChapterChoicePbData>, IBufferMessage
 	{
-		// Token: 0x06004458 RID: 17496 RVA: 0x000A7B2B File Offset: 0x000A5D2B
+		// Token: 0x060044FF RID: 17663 RVA: 0x000A97F3 File Offset: 0x000A79F3
 		[NullableContext(1)]
 		public static CiacconaChapterChoicePbData Create()
 		{
 			return new CiacconaChapterChoicePbData();
 		}
 
-		// Token: 0x17000BB4 RID: 2996
-		// (get) Token: 0x06004459 RID: 17497 RVA: 0x000A7B32 File Offset: 0x000A5D32
+		// Token: 0x17000BD4 RID: 3028
+		// (get) Token: 0x06004500 RID: 17664 RVA: 0x000A97FA File Offset: 0x000A79FA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<CiacconaChapterChoicePbData> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BB5 RID: 2997
-		// (get) Token: 0x0600445A RID: 17498 RVA: 0x000A7B39 File Offset: 0x000A5D39
+		// Token: 0x17000BD5 RID: 3029
+		// (get) Token: 0x06004501 RID: 17665 RVA: 0x000A9801 File Offset: 0x000A7A01
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BB6 RID: 2998
-		// (get) Token: 0x0600445B RID: 17499 RVA: 0x000A7B3C File Offset: 0x000A5D3C
+		// Token: 0x17000BD6 RID: 3030
+		// (get) Token: 0x06004502 RID: 17666 RVA: 0x000A9804 File Offset: 0x000A7A04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600445C RID: 17500 RVA: 0x000A7B43 File Offset: 0x000A5D43
+		// Token: 0x06004503 RID: 17667 RVA: 0x000A980B File Offset: 0x000A7A0B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CiacconaChapterChoicePbData()
 		{
 		}
 
-		// Token: 0x0600445D RID: 17501 RVA: 0x000A7B4B File Offset: 0x000A5D4B
+		// Token: 0x06004504 RID: 17668 RVA: 0x000A9813 File Offset: 0x000A7A13
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CiacconaChapterChoicePbData(CiacconaChapterChoicePbData other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600445E RID: 17502 RVA: 0x000A7B88 File Offset: 0x000A5D88
+		// Token: 0x06004505 RID: 17669 RVA: 0x000A9850 File Offset: 0x000A7A50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CiacconaChapterChoicePbData Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new CiacconaChapterChoicePbData(this);
 		}
 
-		// Token: 0x17000BB7 RID: 2999
-		// (get) Token: 0x0600445F RID: 17503 RVA: 0x000A7B90 File Offset: 0x000A5D90
-		// (set) Token: 0x06004460 RID: 17504 RVA: 0x000A7B98 File Offset: 0x000A5D98
+		// Token: 0x17000BD7 RID: 3031
+		// (get) Token: 0x06004506 RID: 17670 RVA: 0x000A9858 File Offset: 0x000A7A58
+		// (set) Token: 0x06004507 RID: 17671 RVA: 0x000A9860 File Offset: 0x000A7A60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ChoiceId
@@ -96,9 +96,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BB8 RID: 3000
-		// (get) Token: 0x06004461 RID: 17505 RVA: 0x000A7BA1 File Offset: 0x000A5DA1
-		// (set) Token: 0x06004462 RID: 17506 RVA: 0x000A7BA9 File Offset: 0x000A5DA9
+		// Token: 0x17000BD8 RID: 3032
+		// (get) Token: 0x06004508 RID: 17672 RVA: 0x000A9869 File Offset: 0x000A7A69
+		// (set) Token: 0x06004509 RID: 17673 RVA: 0x000A9871 File Offset: 0x000A7A71
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool InspirationUnlock
@@ -113,9 +113,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BB9 RID: 3001
-		// (get) Token: 0x06004463 RID: 17507 RVA: 0x000A7BB2 File Offset: 0x000A5DB2
-		// (set) Token: 0x06004464 RID: 17508 RVA: 0x000A7BBA File Offset: 0x000A5DBA
+		// Token: 0x17000BD9 RID: 3033
+		// (get) Token: 0x0600450A RID: 17674 RVA: 0x000A987A File Offset: 0x000A7A7A
+		// (set) Token: 0x0600450B RID: 17675 RVA: 0x000A9882 File Offset: 0x000A7A82
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool ConditionUnlock
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004465 RID: 17509 RVA: 0x000A7BC3 File Offset: 0x000A5DC3
+		// Token: 0x0600450C RID: 17676 RVA: 0x000A988B File Offset: 0x000A7A8B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return this.Equals(other as CiacconaChapterChoicePbData);
 		}
 
-		// Token: 0x06004466 RID: 17510 RVA: 0x000A7BD4 File Offset: 0x000A5DD4
+		// Token: 0x0600450D RID: 17677 RVA: 0x000A989C File Offset: 0x000A7A9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CiacconaChapterChoicePbData other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ChoiceId == other.ChoiceId && this.InspirationUnlock == other.InspirationUnlock && this.ConditionUnlock == other.ConditionUnlock && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06004467 RID: 17511 RVA: 0x000A7C30 File Offset: 0x000A5E30
+		// Token: 0x0600450E RID: 17678 RVA: 0x000A98F8 File Offset: 0x000A7AF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004468 RID: 17512 RVA: 0x000A7CA1 File Offset: 0x000A5EA1
+		// Token: 0x0600450F RID: 17679 RVA: 0x000A9969 File Offset: 0x000A7B69
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -179,7 +179,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06004469 RID: 17513 RVA: 0x000A7CAE File Offset: 0x000A5EAE
+		// Token: 0x06004510 RID: 17680 RVA: 0x000A9976 File Offset: 0x000A7B76
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -187,7 +187,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600446A RID: 17514 RVA: 0x000A7CB8 File Offset: 0x000A5EB8
+		// Token: 0x06004511 RID: 17681 RVA: 0x000A9980 File Offset: 0x000A7B80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600446B RID: 17515 RVA: 0x000A7D2C File Offset: 0x000A5F2C
+		// Token: 0x06004512 RID: 17682 RVA: 0x000A99F4 File Offset: 0x000A7BF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -238,7 +238,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600446C RID: 17516 RVA: 0x000A7D84 File Offset: 0x000A5F84
+		// Token: 0x06004513 RID: 17683 RVA: 0x000A9A4C File Offset: 0x000A7C4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CiacconaChapterChoicePbData other)
@@ -262,7 +262,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600446D RID: 17517 RVA: 0x000A7DE8 File Offset: 0x000A5FE8
+		// Token: 0x06004514 RID: 17684 RVA: 0x000A9AB0 File Offset: 0x000A7CB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -270,7 +270,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600446E RID: 17518 RVA: 0x000A7DF4 File Offset: 0x000A5FF4
+		// Token: 0x06004515 RID: 17685 RVA: 0x000A9ABC File Offset: 0x000A7CBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -307,28 +307,28 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002E97 RID: 11927
+		// Token: 0x04002F1B RID: 12059
 		private static readonly MessageParser<CiacconaChapterChoicePbData> _parser = new MessageParser<CiacconaChapterChoicePbData>(() => new CiacconaChapterChoicePbData());
 
-		// Token: 0x04002E98 RID: 11928
+		// Token: 0x04002F1C RID: 12060
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002E99 RID: 11929
+		// Token: 0x04002F1D RID: 12061
 		public const int ChoiceIdFieldNumber = 1;
 
-		// Token: 0x04002E9A RID: 11930
+		// Token: 0x04002F1E RID: 12062
 		private int choiceId_;
 
-		// Token: 0x04002E9B RID: 11931
+		// Token: 0x04002F1F RID: 12063
 		public const int InspirationUnlockFieldNumber = 2;
 
-		// Token: 0x04002E9C RID: 11932
+		// Token: 0x04002F20 RID: 12064
 		private bool inspirationUnlock_;
 
-		// Token: 0x04002E9D RID: 11933
+		// Token: 0x04002F21 RID: 12065
 		public const int ConditionUnlockFieldNumber = 3;
 
-		// Token: 0x04002E9E RID: 11934
+		// Token: 0x04002F22 RID: 12066
 		private bool conditionUnlock_;
 	}
 }

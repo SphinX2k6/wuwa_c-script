@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F7E RID: 24446
+	// Token: 0x020065C4 RID: 26052
 	public enum EGuestUiAnimationType : byte
 	{
-		// Token: 0x0400FDAD RID: 64941
+		// Token: 0x04010B34 RID: 68404
 		GuestCartethyia
 	}
 }

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001D6D RID: 7533
+// Token: 0x0200122F RID: 4655
 public abstract class ControllerWithAssistantBase : ControllerBase
 {
-	// Token: 0x0600E530 RID: 58672 RVA: 0x0035FF4B File Offset: 0x0035E14B
+	// Token: 0x0600B94E RID: 47438 RVA: 0x0036BB9F File Offset: 0x00369D9F
 	public override bool Init()
 	{
 		bool result = base.Init();
@@ -14,7 +14,7 @@ public abstract class ControllerWithAssistantBase : ControllerBase
 		return result;
 	}
 
-	// Token: 0x0600E531 RID: 58673 RVA: 0x0035FF5F File Offset: 0x0035E15F
+	// Token: 0x0600B94F RID: 47439 RVA: 0x0036BBB3 File Offset: 0x00369DB3
 	public override bool Clear()
 	{
 		this.OnUnRegisterNetEvent();
@@ -22,57 +22,57 @@ public abstract class ControllerWithAssistantBase : ControllerBase
 		return base.Clear();
 	}
 
-	// Token: 0x0600E532 RID: 58674 RVA: 0x0035FF73 File Offset: 0x0035E173
+	// Token: 0x0600B950 RID: 47440 RVA: 0x0036BBC7 File Offset: 0x00369DC7
 	protected override bool OnInit()
 	{
 		this.InitAssistants();
 		return true;
 	}
 
-	// Token: 0x0600E533 RID: 58675 RVA: 0x0035FF7C File Offset: 0x0035E17C
+	// Token: 0x0600B951 RID: 47441 RVA: 0x0036BBD0 File Offset: 0x00369DD0
 	protected override bool OnClear()
 	{
 		this.ClearAssistant();
 		return base.OnClear();
 	}
 
-	// Token: 0x0600E534 RID: 58676 RVA: 0x0035FF8A File Offset: 0x0035E18A
+	// Token: 0x0600B952 RID: 47442 RVA: 0x0036BBDE File Offset: 0x00369DDE
 	protected virtual void OnRegisterNetEvent()
 	{
 		this.AssistantRegisterNetEvent();
 	}
 
-	// Token: 0x0600E535 RID: 58677 RVA: 0x0035FF92 File Offset: 0x0035E192
+	// Token: 0x0600B953 RID: 47443 RVA: 0x0036BBE6 File Offset: 0x00369DE6
 	protected virtual void OnUnRegisterNetEvent()
 	{
 		this.AssistantUnRegisterNetEvent();
 	}
 
-	// Token: 0x0600E536 RID: 58678 RVA: 0x0035FF9A File Offset: 0x0035E19A
+	// Token: 0x0600B954 RID: 47444 RVA: 0x0036BBEE File Offset: 0x00369DEE
 	protected virtual void OnAddEvents()
 	{
 		this.AssistantAddEvents();
 	}
 
-	// Token: 0x0600E537 RID: 58679 RVA: 0x0035FFA2 File Offset: 0x0035E1A2
+	// Token: 0x0600B955 RID: 47445 RVA: 0x0036BBF6 File Offset: 0x00369DF6
 	protected virtual void OnRemoveEvents()
 	{
 		this.AssistantRemoveEvents();
 	}
 
-	// Token: 0x0600E538 RID: 58680 RVA: 0x0035FFAA File Offset: 0x0035E1AA
+	// Token: 0x0600B956 RID: 47446 RVA: 0x0036BBFE File Offset: 0x00369DFE
 	private void InitAssistants()
 	{
 		this.Assistants = new Dictionary<int, ControllerAssistantBase>();
 		this.RegisterAssistant();
 	}
 
-	// Token: 0x0600E539 RID: 58681 RVA: 0x0035FFBD File Offset: 0x0035E1BD
+	// Token: 0x0600B957 RID: 47447 RVA: 0x0036BC11 File Offset: 0x00369E11
 	protected virtual void RegisterAssistant()
 	{
 	}
 
-	// Token: 0x0600E53A RID: 58682 RVA: 0x0035FFC0 File Offset: 0x0035E1C0
+	// Token: 0x0600B958 RID: 47448 RVA: 0x0036BC14 File Offset: 0x00369E14
 	private void ClearAssistant()
 	{
 		if (this.Assistants != null)
@@ -86,7 +86,7 @@ public abstract class ControllerWithAssistantBase : ControllerBase
 		}
 	}
 
-	// Token: 0x0600E53B RID: 58683 RVA: 0x00360030 File Offset: 0x0035E230
+	// Token: 0x0600B959 RID: 47449 RVA: 0x0036BC84 File Offset: 0x00369E84
 	private void AssistantRegisterNetEvent()
 	{
 		if (this.Assistants == null)
@@ -99,7 +99,7 @@ public abstract class ControllerWithAssistantBase : ControllerBase
 		}
 	}
 
-	// Token: 0x0600E53C RID: 58684 RVA: 0x00360090 File Offset: 0x0035E290
+	// Token: 0x0600B95A RID: 47450 RVA: 0x0036BCE4 File Offset: 0x00369EE4
 	private void AssistantUnRegisterNetEvent()
 	{
 		if (this.Assistants == null)
@@ -112,7 +112,7 @@ public abstract class ControllerWithAssistantBase : ControllerBase
 		}
 	}
 
-	// Token: 0x0600E53D RID: 58685 RVA: 0x003600F0 File Offset: 0x0035E2F0
+	// Token: 0x0600B95B RID: 47451 RVA: 0x0036BD44 File Offset: 0x00369F44
 	private void AssistantAddEvents()
 	{
 		if (this.Assistants == null)
@@ -125,7 +125,7 @@ public abstract class ControllerWithAssistantBase : ControllerBase
 		}
 	}
 
-	// Token: 0x0600E53E RID: 58686 RVA: 0x00360150 File Offset: 0x0035E350
+	// Token: 0x0600B95C RID: 47452 RVA: 0x0036BDA4 File Offset: 0x00369FA4
 	private void AssistantRemoveEvents()
 	{
 		if (this.Assistants == null)
@@ -138,7 +138,7 @@ public abstract class ControllerWithAssistantBase : ControllerBase
 		}
 	}
 
-	// Token: 0x0600E53F RID: 58687 RVA: 0x003601B0 File Offset: 0x0035E3B0
+	// Token: 0x0600B95D RID: 47453 RVA: 0x0036BE04 File Offset: 0x0036A004
 	[NullableContext(2)]
 	public void AddAssistant(int assistantType, ControllerAssistantBase assistantObj)
 	{
@@ -150,7 +150,7 @@ public abstract class ControllerWithAssistantBase : ControllerBase
 		this.Assistants[assistantType] = assistantObj;
 	}
 
-	// Token: 0x040069A8 RID: 27048
+	// Token: 0x04006A88 RID: 27272
 	[Nullable(new byte[]
 	{
 		2,

@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x0200020A RID: 522
+// Token: 0x0200020E RID: 526
 public class CameraGravityLerpByAngleExecutor : BaseCameraGravityLerpExecutor
 {
-	// Token: 0x06002082 RID: 8322 RVA: 0x000AD894 File Offset: 0x000ABA94
+	// Token: 0x06002130 RID: 8496 RVA: 0x000B4BB4 File Offset: 0x000B2DB4
 	protected unsafe override float UpdateInternal(float deltaTime)
 	{
 		float num = this.LerpConfig.LerpAngleVelocity * deltaTime;

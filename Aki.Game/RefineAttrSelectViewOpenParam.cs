@@ -1,34 +1,34 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200172C RID: 5932
+// Token: 0x02000BE4 RID: 3044
 [NullableContext(2)]
 [Nullable(0)]
 public class RefineAttrSelectViewOpenParam : IRefineAttrSelectViewOpenParam
 {
-	// Token: 0x17000E2F RID: 3631
-	// (get) Token: 0x0600AB67 RID: 43879 RVA: 0x00267CDB File Offset: 0x00265EDB
-	// (set) Token: 0x0600AB68 RID: 43880 RVA: 0x00267CE3 File Offset: 0x00265EE3
+	// Token: 0x17000E50 RID: 3664
+	// (get) Token: 0x06007F49 RID: 32585 RVA: 0x002720B3 File Offset: 0x002702B3
+	// (set) Token: 0x06007F4A RID: 32586 RVA: 0x002720BB File Offset: 0x002702BB
 	public int IncId { get; set; }
 
-	// Token: 0x17000E30 RID: 3632
-	// (get) Token: 0x0600AB69 RID: 43881 RVA: 0x00267CEC File Offset: 0x00265EEC
-	// (set) Token: 0x0600AB6A RID: 43882 RVA: 0x00267CF4 File Offset: 0x00265EF4
+	// Token: 0x17000E51 RID: 3665
+	// (get) Token: 0x06007F4B RID: 32587 RVA: 0x002720C4 File Offset: 0x002702C4
+	// (set) Token: 0x06007F4C RID: 32588 RVA: 0x002720CC File Offset: 0x002702CC
 	public bool DataConfirmed { get; set; }
 
-	// Token: 0x17000E31 RID: 3633
-	// (get) Token: 0x0600AB6B RID: 43883 RVA: 0x00267CFD File Offset: 0x00265EFD
-	// (set) Token: 0x0600AB6C RID: 43884 RVA: 0x00267D05 File Offset: 0x00265F05
+	// Token: 0x17000E52 RID: 3666
+	// (get) Token: 0x06007F4D RID: 32589 RVA: 0x002720D5 File Offset: 0x002702D5
+	// (set) Token: 0x06007F4E RID: 32590 RVA: 0x002720DD File Offset: 0x002702DD
 	public IRefineAttrItemData SelectAttribute { get; set; }
 
-	// Token: 0x17000E32 RID: 3634
-	// (get) Token: 0x0600AB6D RID: 43885 RVA: 0x00267D0E File Offset: 0x00265F0E
-	// (set) Token: 0x0600AB6E RID: 43886 RVA: 0x00267D16 File Offset: 0x00265F16
+	// Token: 0x17000E53 RID: 3667
+	// (get) Token: 0x06007F4F RID: 32591 RVA: 0x002720E6 File Offset: 0x002702E6
+	// (set) Token: 0x06007F50 RID: 32592 RVA: 0x002720EE File Offset: 0x002702EE
 	public Action<IRefineAttrItemData> Callback { get; set; }
 
-	// Token: 0x17000E33 RID: 3635
-	// (get) Token: 0x0600AB6F RID: 43887 RVA: 0x00267D1F File Offset: 0x00265F1F
-	// (set) Token: 0x0600AB70 RID: 43888 RVA: 0x00267D27 File Offset: 0x00265F27
+	// Token: 0x17000E54 RID: 3668
+	// (get) Token: 0x06007F51 RID: 32593 RVA: 0x002720F7 File Offset: 0x002702F7
+	// (set) Token: 0x06007F52 RID: 32594 RVA: 0x002720FF File Offset: 0x002702FF
 	[Nullable(new byte[]
 	{
 		2,

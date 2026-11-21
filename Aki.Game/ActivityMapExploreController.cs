@@ -6,43 +6,43 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x020012C3 RID: 4803
+// Token: 0x02000777 RID: 1911
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityMapExploreController : ActivityControllerBase
 {
-	// Token: 0x060083F2 RID: 33778 RVA: 0x001C18F6 File Offset: 0x001BFAF6
+	// Token: 0x0600578D RID: 22413 RVA: 0x001CA752 File Offset: 0x001C8952
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x060083F3 RID: 33779 RVA: 0x001C18F9 File Offset: 0x001BFAF9
+	// Token: 0x0600578E RID: 22414 RVA: 0x001CA755 File Offset: 0x001C8955
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x060083F4 RID: 33780 RVA: 0x001C18FB File Offset: 0x001BFAFB
+	// Token: 0x0600578F RID: 22415 RVA: 0x001CA757 File Offset: 0x001C8957
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_MapExplorationMain";
 	}
 
-	// Token: 0x060083F5 RID: 33781 RVA: 0x001C1902 File Offset: 0x001BFB02
+	// Token: 0x06005790 RID: 22416 RVA: 0x001CA75E File Offset: 0x001C895E
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewMapExplore();
 	}
 
-	// Token: 0x060083F6 RID: 33782 RVA: 0x001C1909 File Offset: 0x001BFB09
+	// Token: 0x06005791 RID: 22417 RVA: 0x001CA765 File Offset: 0x001C8965
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.Data = new ActivityMapExploreData();
 		return this.Data;
 	}
 
-	// Token: 0x060083F7 RID: 33783 RVA: 0x001C191C File Offset: 0x001BFB1C
+	// Token: 0x06005792 RID: 22418 RVA: 0x001CA778 File Offset: 0x001C8978
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.ExploreActivityTaskInfoNotify, delegate(IMessage msg, Net.CallbackStatus _)
@@ -53,13 +53,13 @@ public class ActivityMapExploreController : ActivityControllerBase
 		});
 	}
 
-	// Token: 0x060083F8 RID: 33784 RVA: 0x001C193A File Offset: 0x001BFB3A
+	// Token: 0x06005793 RID: 22419 RVA: 0x001CA796 File Offset: 0x001C8996
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.ExploreActivityTaskInfoNotify);
 	}
 
-	// Token: 0x060083F9 RID: 33785 RVA: 0x001C194C File Offset: 0x001BFB4C
+	// Token: 0x06005794 RID: 22420 RVA: 0x001CA7A8 File Offset: 0x001C89A8
 	public UniTask RequestGetReward(int taskId)
 	{
 		ActivityMapExploreController.<RequestGetReward>d__9 <RequestGetReward>d__;
@@ -71,7 +71,7 @@ public class ActivityMapExploreController : ActivityControllerBase
 		return <RequestGetReward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060083FA RID: 33786 RVA: 0x001C1997 File Offset: 0x001BFB97
+	// Token: 0x06005795 RID: 22421 RVA: 0x001CA7F3 File Offset: 0x001C89F3
 	private void EmitActivityRedDot()
 	{
 		if (this.Data != null && this.Data.Id != 0)
@@ -80,8 +80,8 @@ public class ActivityMapExploreController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x17000B37 RID: 2871
-	// (get) Token: 0x060083FB RID: 33787 RVA: 0x001C19C9 File Offset: 0x001BFBC9
+	// Token: 0x17000B57 RID: 2903
+	// (get) Token: 0x06005796 RID: 22422 RVA: 0x001CA825 File Offset: 0x001C8A25
 	public static ActivityMapExploreController Instance
 	{
 		get
@@ -90,7 +90,7 @@ public class ActivityMapExploreController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060083FC RID: 33788 RVA: 0x001C19D0 File Offset: 0x001BFBD0
+	// Token: 0x06005797 RID: 22423 RVA: 0x001CA82C File Offset: 0x001C8A2C
 	public static ActivityMapExploreController GetOrCreateInstance()
 	{
 		if (ActivityMapExploreController._Instance == null)
@@ -100,7 +100,7 @@ public class ActivityMapExploreController : ActivityControllerBase
 		return ActivityMapExploreController._Instance;
 	}
 
-	// Token: 0x060083FD RID: 33789 RVA: 0x001C19E4 File Offset: 0x001BFBE4
+	// Token: 0x06005798 RID: 22424 RVA: 0x001CA840 File Offset: 0x001C8A40
 	public static bool CreateInstance()
 	{
 		if (ActivityMapExploreController._Instance != null)
@@ -111,31 +111,31 @@ public class ActivityMapExploreController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x060083FE RID: 33790 RVA: 0x001C19FA File Offset: 0x001BFBFA
+	// Token: 0x06005799 RID: 22425 RVA: 0x001CA856 File Offset: 0x001C8A56
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060083FF RID: 33791 RVA: 0x001C19FC File Offset: 0x001BFBFC
+	// Token: 0x0600579A RID: 22426 RVA: 0x001CA858 File Offset: 0x001C8A58
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityMapExploreController._Instance = null;
 	}
 
-	// Token: 0x06008400 RID: 33792 RVA: 0x001C1A04 File Offset: 0x001BFC04
+	// Token: 0x0600579B RID: 22427 RVA: 0x001CA860 File Offset: 0x001C8A60
 	static ActivityMapExploreController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityMapExploreController.CreateStaticDefaultValue), new Action(ActivityMapExploreController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003B5C RID: 15196
+	// Token: 0x04003BF4 RID: 15348
 	[Nullable(2)]
 	public ActivityMapExploreData Data;
 
-	// Token: 0x04003B5D RID: 15197
+	// Token: 0x04003BF5 RID: 15349
 	private bool IsRequesting;
 
-	// Token: 0x04003B5E RID: 15198
+	// Token: 0x04003BF6 RID: 15350
 	[Nullable(2)]
 	private static ActivityMapExploreController _Instance;
 }

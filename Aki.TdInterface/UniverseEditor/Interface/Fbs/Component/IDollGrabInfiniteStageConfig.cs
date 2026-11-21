@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200509C RID: 20636
+	// Token: 0x02005601 RID: 22017
 	public struct IDollGrabInfiniteStageConfig : IFlatbufferObject
 	{
-		// Token: 0x170095E7 RID: 38375
-		// (get) Token: 0x06021225 RID: 135717 RVA: 0x0049AAA2 File Offset: 0x00498CA2
+		// Token: 0x17009DD4 RID: 40404
+		// (get) Token: 0x06023179 RID: 143737 RVA: 0x004D4A2E File Offset: 0x004D2C2E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021226 RID: 135718 RVA: 0x0049AAAF File Offset: 0x00498CAF
+		// Token: 0x0602317A RID: 143738 RVA: 0x004D4A3B File Offset: 0x004D2C3B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021227 RID: 135719 RVA: 0x0049AAB8 File Offset: 0x00498CB8
+		// Token: 0x0602317B RID: 143739 RVA: 0x004D4A44 File Offset: 0x004D2C44
 		public static IDollGrabInfiniteStageConfig GetRootAsIDollGrabInfiniteStageConfig(ByteBuffer _bb)
 		{
 			return IDollGrabInfiniteStageConfig.GetRootAsIDollGrabInfiniteStageConfig(_bb, default(IDollGrabInfiniteStageConfig));
 		}
 
-		// Token: 0x06021228 RID: 135720 RVA: 0x0049AAD4 File Offset: 0x00498CD4
+		// Token: 0x0602317C RID: 143740 RVA: 0x004D4A60 File Offset: 0x004D2C60
 		public static IDollGrabInfiniteStageConfig GetRootAsIDollGrabInfiniteStageConfig(ByteBuffer _bb, IDollGrabInfiniteStageConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021229 RID: 135721 RVA: 0x0049AAF1 File Offset: 0x00498CF1
+		// Token: 0x0602317D RID: 143741 RVA: 0x004D4A7D File Offset: 0x004D2C7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602122A RID: 135722 RVA: 0x0049AB00 File Offset: 0x00498D00
+		// Token: 0x0602317E RID: 143742 RVA: 0x004D4A8C File Offset: 0x004D2C8C
 		public IDollGrabInfiniteStageConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170095E8 RID: 38376
-		// (get) Token: 0x0602122B RID: 135723 RVA: 0x0049AB10 File Offset: 0x00498D10
+		// Token: 0x17009DD5 RID: 40405
+		// (get) Token: 0x0602317F RID: 143743 RVA: 0x004D4A9C File Offset: 0x004D2C9C
 		public float Duration
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170095E9 RID: 38377
-		// (get) Token: 0x0602122C RID: 135724 RVA: 0x0049AB50 File Offset: 0x00498D50
+		// Token: 0x17009DD6 RID: 40406
+		// (get) Token: 0x06023180 RID: 143744 RVA: 0x004D4ADC File Offset: 0x004D2CDC
 		public IDollGrabStageAudioState? AudioState
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602122D RID: 135725 RVA: 0x0049ABAD File Offset: 0x00498DAD
+		// Token: 0x06023181 RID: 143745 RVA: 0x004D4B39 File Offset: 0x004D2D39
 		public static Offset<IDollGrabInfiniteStageConfig> CreateIDollGrabInfiniteStageConfig(FlatBufferBuilder builder, float Duration = 0f, Offset<IDollGrabStageAudioState> AudioStateOffset = default(Offset<IDollGrabStageAudioState>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDollGrabInfiniteStageConfig.EndIDollGrabInfiniteStageConfig(builder);
 		}
 
-		// Token: 0x0602122E RID: 135726 RVA: 0x0049ABCA File Offset: 0x00498DCA
+		// Token: 0x06023182 RID: 143746 RVA: 0x004D4B56 File Offset: 0x004D2D56
 		public static void StartIDollGrabInfiniteStageConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602122F RID: 135727 RVA: 0x0049ABD3 File Offset: 0x00498DD3
+		// Token: 0x06023183 RID: 143747 RVA: 0x004D4B5F File Offset: 0x004D2D5F
 		public static void AddDuration(FlatBufferBuilder builder, float duration)
 		{
 			builder.AddFloat(0, duration, 0.0);
 		}
 
-		// Token: 0x06021230 RID: 135728 RVA: 0x0049ABE6 File Offset: 0x00498DE6
+		// Token: 0x06023184 RID: 143748 RVA: 0x004D4B72 File Offset: 0x004D2D72
 		public static void AddAudioState(FlatBufferBuilder builder, Offset<IDollGrabStageAudioState> audioStateOffset)
 		{
 			builder.AddOffset(1, audioStateOffset.Value, 0);
 		}
 
-		// Token: 0x06021231 RID: 135729 RVA: 0x0049ABF6 File Offset: 0x00498DF6
+		// Token: 0x06023185 RID: 143749 RVA: 0x004D4B82 File Offset: 0x004D2D82
 		public static Offset<IDollGrabInfiniteStageConfig> EndIDollGrabInfiniteStageConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IDollGrabInfiniteStageConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06021232 RID: 135730 RVA: 0x0049AC04 File Offset: 0x00498E04
+		// Token: 0x06023186 RID: 143750 RVA: 0x004D4B90 File Offset: 0x004D2D90
 		public IDollGrabInfiniteStageConfigT UnPack()
 		{
 			IDollGrabInfiniteStageConfigT dollGrabInfiniteStageConfigT = new IDollGrabInfiniteStageConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return dollGrabInfiniteStageConfigT;
 		}
 
-		// Token: 0x06021233 RID: 135731 RVA: 0x0049AC20 File Offset: 0x00498E20
+		// Token: 0x06023187 RID: 143751 RVA: 0x004D4BAC File Offset: 0x004D2DAC
 		public void UnPackTo(IDollGrabInfiniteStageConfigT _o)
 		{
 			_o.Duration = this.Duration;
 			_o.AudioState = ((this.AudioState != null) ? this.AudioState.Value.UnPack() : null);
 		}
 
-		// Token: 0x06021234 RID: 135732 RVA: 0x0049AC68 File Offset: 0x00498E68
+		// Token: 0x06023188 RID: 143752 RVA: 0x004D4BF4 File Offset: 0x004D2DF4
 		public static Offset<IDollGrabInfiniteStageConfig> Pack(FlatBufferBuilder builder, IDollGrabInfiniteStageConfigT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDollGrabInfiniteStageConfig.CreateIDollGrabInfiniteStageConfig(builder, _o.Duration, audioStateOffset);
 		}
 
-		// Token: 0x0400E0BA RID: 57530
+		// Token: 0x0400ECB7 RID: 60599
 		private Table __p;
 	}
 }

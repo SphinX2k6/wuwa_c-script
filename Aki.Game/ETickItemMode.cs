@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002009 RID: 8201
+// Token: 0x020014DC RID: 5340
 public enum ETickItemMode
 {
-	// Token: 0x040076FA RID: 30458
+	// Token: 0x040077E3 RID: 30691
 	TickAll,
-	// Token: 0x040076FB RID: 30459
+	// Token: 0x040077E4 RID: 30692
 	TickOnlyTop
 }

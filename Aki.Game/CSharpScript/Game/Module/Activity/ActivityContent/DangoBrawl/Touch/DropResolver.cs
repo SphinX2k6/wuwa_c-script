@@ -5,35 +5,35 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 {
-	// Token: 0x0200685B RID: 26715
+	// Token: 0x020057AB RID: 22443
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropResolver
 	{
-		// Token: 0x06042B4B RID: 273227 RVA: 0x010397B1 File Offset: 0x010379B1
+		// Token: 0x060376A0 RID: 226976 RVA: 0x00F7ACFD File Offset: 0x00F78EFD
 		public void RegisterZone(DangoBrawlDropZone zone)
 		{
 			this.DropZones[zone.Kind] = zone;
 		}
 
-		// Token: 0x06042B4C RID: 273228 RVA: 0x010397C5 File Offset: 0x010379C5
+		// Token: 0x060376A1 RID: 226977 RVA: 0x00F7AD11 File Offset: 0x00F78F11
 		public void UnregisterZone(EDragTargetKind kind)
 		{
 			this.DropZones.Remove(kind);
 		}
 
-		// Token: 0x06042B4D RID: 273229 RVA: 0x010397D4 File Offset: 0x010379D4
+		// Token: 0x060376A2 RID: 226978 RVA: 0x00F7AD20 File Offset: 0x00F78F20
 		public void Start()
 		{
 		}
 
-		// Token: 0x06042B4E RID: 273230 RVA: 0x010397D6 File Offset: 0x010379D6
+		// Token: 0x060376A3 RID: 226979 RVA: 0x00F7AD22 File Offset: 0x00F78F22
 		public void Stop()
 		{
 			this.DropZones.Clear();
 		}
 
-		// Token: 0x06042B4F RID: 273231 RVA: 0x010397E4 File Offset: 0x010379E4
+		// Token: 0x060376A4 RID: 226980 RVA: 0x00F7AD30 File Offset: 0x00F78F30
 		[NullableContext(2)]
 		public DangoBrawlDropZone GetZone(EDragTargetKind kind)
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return result;
 		}
 
-		// Token: 0x06042B50 RID: 273232 RVA: 0x01039804 File Offset: 0x01037A04
+		// Token: 0x060376A5 RID: 226981 RVA: 0x00F7AD50 File Offset: 0x00F78F50
 		[NullableContext(2)]
 		public IDangoBrawlBenchDropZoneExtra GetBenchDropZoneExtra()
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return dangoBrawlDropZone.BenchExtra;
 		}
 
-		// Token: 0x06042B51 RID: 273233 RVA: 0x0103982C File Offset: 0x01037A2C
+		// Token: 0x060376A6 RID: 226982 RVA: 0x00F7AD78 File Offset: 0x00F78F78
 		public static bool IsPointInItem(UUIItem item, FVector2D lguiPos)
 		{
 			if (!item.IsValid())
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return lguiPos.X >= uiBounds.Item1 && lguiPos.X <= uiBounds.Item2 && lguiPos.Y >= uiBounds.Item4 && lguiPos.Y <= uiBounds.Item3;
 		}
 
-		// Token: 0x06042B52 RID: 273234 RVA: 0x01039888 File Offset: 0x01037A88
+		// Token: 0x060376A7 RID: 226983 RVA: 0x00F7ADD4 File Offset: 0x00F78FD4
 		[return: Nullable(2)]
 		public DragTarget Resolve(IDragVisual visual, FVector pointerPos)
 		{
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return null;
 		}
 
-		// Token: 0x06042B53 RID: 273235 RVA: 0x01039948 File Offset: 0x01037B48
+		// Token: 0x060376A8 RID: 226984 RVA: 0x00F7AE94 File Offset: 0x00F79094
 		[return: Nullable(2)]
 		private DragTarget MakeBagTarget(DangoBrawlDropZone zone, IDragVisual visual, FVector2D centerLgui)
 		{
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			};
 		}
 
-		// Token: 0x06042B54 RID: 273236 RVA: 0x010399AC File Offset: 0x01037BAC
+		// Token: 0x060376A9 RID: 226985 RVA: 0x00F7AEF8 File Offset: 0x00F790F8
 		private static DragTarget MakeBenchTarget(DangoBrawlDropZone zone, IDragVisual visual, FVector2D centerLgui)
 		{
 			EDangoBrawlRotate benchDisplayRotate = DangoBrawlUtil.GetBenchDisplayRotate(visual.ConfigId, visual.Rotate);
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			};
 		}
 
-		// Token: 0x06042B55 RID: 273237 RVA: 0x01039AB4 File Offset: 0x01037CB4
+		// Token: 0x060376AA RID: 226986 RVA: 0x00F7B000 File Offset: 0x00F79200
 		private static PanelPos? SnapBagLeftTopByPointer([Nullable(2)] IDangoBrawlBagDropZoneExtra sink, IDragVisual visual, FVector2D centerLgui)
 		{
 			if (sink == null)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return new PanelPos?(new PanelPos(DangoBrawlUtil.SnapGridIndex(lguispaceAbsolutePosition.Y - num5, num), colIndex));
 		}
 
-		// Token: 0x06042B56 RID: 273238 RVA: 0x01039B71 File Offset: 0x01037D71
+		// Token: 0x060376AB RID: 226987 RVA: 0x00F7B0BD File Offset: 0x00F792BD
 		private static EDangoBrawlRotate GetVisualRotate(IDragVisual visual)
 		{
 			if (visual.TemplateType != EDangoBrawlTemplateType.Bag && visual.TemplateType != EDangoBrawlTemplateType.Item)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return visual.Rotate;
 		}
 
-		// Token: 0x04022B9F RID: 142239
+		// Token: 0x0401D3FC RID: 119804
 		private readonly Dictionary<EDragTargetKind, DangoBrawlDropZone> DropZones = new Dictionary<EDragTargetKind, DangoBrawlDropZone>();
 	}
 }

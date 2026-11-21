@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057C0 RID: 22464
+	// Token: 0x02004797 RID: 18327
 	public interface ITowerDefenceRewardInfo : IRewardInfo
 	{
-		// Token: 0x17008982 RID: 35202
-		// (get) Token: 0x06039208 RID: 233992
-		// (set) Token: 0x06039209 RID: 233993
+		// Token: 0x17005D4A RID: 23882
+		// (get) Token: 0x0602E118 RID: 188696
+		// (set) Token: 0x0602E119 RID: 188697
 		bool IsSuccess { get; set; }
 
-		// Token: 0x17008983 RID: 35203
-		// (get) Token: 0x0603920A RID: 233994
-		// (set) Token: 0x0603920B RID: 233995
+		// Token: 0x17005D4B RID: 23883
+		// (get) Token: 0x0602E11A RID: 188698
+		// (set) Token: 0x0602E11B RID: 188699
 		int Score { get; set; }
 
-		// Token: 0x17008984 RID: 35204
-		// (get) Token: 0x0603920C RID: 233996
-		// (set) Token: 0x0603920D RID: 233997
+		// Token: 0x17005D4C RID: 23884
+		// (get) Token: 0x0602E11C RID: 188700
+		// (set) Token: 0x0602E11D RID: 188701
 		int RecordScore { get; set; }
 	}
 }

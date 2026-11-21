@@ -18,9 +18,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/LevelAiTask/TsTaskNpcSitOnChairAndLeave.TsTaskNpcSitOnChairAndLeave_C")]
 public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170000C2 RID: 194
-	// (get) Token: 0x060004D6 RID: 1238 RVA: 0x000175A7 File Offset: 0x000157A7
-	// (set) Token: 0x060004D7 RID: 1239 RVA: 0x000175B7 File Offset: 0x000157B7
+	// Token: 0x170000C3 RID: 195
+	// (get) Token: 0x060004D8 RID: 1240 RVA: 0x00017F63 File Offset: 0x00016163
+	// (set) Token: 0x060004D9 RID: 1241 RVA: 0x00017F73 File Offset: 0x00016173
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int ChairEntityId
 	{
@@ -34,9 +34,9 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x170000C3 RID: 195
-	// (get) Token: 0x060004D8 RID: 1240 RVA: 0x000175C8 File Offset: 0x000157C8
-	// (set) Token: 0x060004D9 RID: 1241 RVA: 0x000175DC File Offset: 0x000157DC
+	// Token: 0x170000C4 RID: 196
+	// (get) Token: 0x060004DA RID: 1242 RVA: 0x00017F84 File Offset: 0x00016184
+	// (set) Token: 0x060004DB RID: 1243 RVA: 0x00017F98 File Offset: 0x00016198
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string MontagePath
@@ -53,9 +53,9 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x170000C4 RID: 196
-	// (get) Token: 0x060004DA RID: 1242 RVA: 0x000175F1 File Offset: 0x000157F1
-	// (set) Token: 0x060004DB RID: 1243 RVA: 0x00017601 File Offset: 0x00015801
+	// Token: 0x170000C5 RID: 197
+	// (get) Token: 0x060004DC RID: 1244 RVA: 0x00017FAD File Offset: 0x000161AD
+	// (set) Token: 0x060004DD RID: 1245 RVA: 0x00017FBD File Offset: 0x000161BD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float LoopDuration
 	{
@@ -69,9 +69,9 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x170000C5 RID: 197
-	// (get) Token: 0x060004DC RID: 1244 RVA: 0x00017612 File Offset: 0x00015812
-	// (set) Token: 0x060004DD RID: 1245 RVA: 0x00017622 File Offset: 0x00015822
+	// Token: 0x170000C6 RID: 198
+	// (get) Token: 0x060004DE RID: 1246 RVA: 0x00017FCE File Offset: 0x000161CE
+	// (set) Token: 0x060004DF RID: 1247 RVA: 0x00017FDE File Offset: 0x000161DE
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int RepeatTimes
 	{
@@ -85,9 +85,9 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x170000C6 RID: 198
-	// (get) Token: 0x060004DE RID: 1246 RVA: 0x00017633 File Offset: 0x00015833
-	// (set) Token: 0x060004DF RID: 1247 RVA: 0x00017643 File Offset: 0x00015843
+	// Token: 0x170000C7 RID: 199
+	// (get) Token: 0x060004E0 RID: 1248 RVA: 0x00017FEF File Offset: 0x000161EF
+	// (set) Token: 0x060004E1 RID: 1249 RVA: 0x00017FFF File Offset: 0x000161FF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EndOnBlendOut
 	{
@@ -101,9 +101,9 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x170000C7 RID: 199
-	// (get) Token: 0x060004E0 RID: 1248 RVA: 0x00017654 File Offset: 0x00015854
-	// (set) Token: 0x060004E1 RID: 1249 RVA: 0x00017664 File Offset: 0x00015864
+	// Token: 0x170000C8 RID: 200
+	// (get) Token: 0x060004E2 RID: 1250 RVA: 0x00018010 File Offset: 0x00016210
+	// (set) Token: 0x060004E3 RID: 1251 RVA: 0x00018020 File Offset: 0x00016220
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool SkipLeave
 	{
@@ -117,9 +117,9 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x170000C8 RID: 200
-	// (get) Token: 0x060004E2 RID: 1250 RVA: 0x00017675 File Offset: 0x00015875
-	// (set) Token: 0x060004E3 RID: 1251 RVA: 0x0001767D File Offset: 0x0001587D
+	// Token: 0x170000C9 RID: 201
+	// (get) Token: 0x060004E4 RID: 1252 RVA: 0x00018031 File Offset: 0x00016231
+	// (set) Token: 0x060004E5 RID: 1253 RVA: 0x00018039 File Offset: 0x00016239
 	private TsTaskNpcSitOnChairAndLeave.ETaskPhase Phase
 	{
 		get
@@ -136,7 +136,7 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x060004E4 RID: 1252 RVA: 0x00017690 File Offset: 0x00015890
+	// Token: 0x060004E6 RID: 1254 RVA: 0x0001804C File Offset: 0x0001624C
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -153,7 +153,7 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x060004E5 RID: 1253 RVA: 0x00017714 File Offset: 0x00015914
+	// Token: 0x060004E7 RID: 1255 RVA: 0x000180D0 File Offset: 0x000162D0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
@@ -248,7 +248,7 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		this.Phase = TsTaskNpcSitOnChairAndLeave.ETaskPhase.Execute;
 	}
 
-	// Token: 0x060004E6 RID: 1254 RVA: 0x000179F0 File Offset: 0x00015BF0
+	// Token: 0x060004E8 RID: 1256 RVA: 0x000183AC File Offset: 0x000165AC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -280,7 +280,7 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x060004E7 RID: 1255 RVA: 0x00017A74 File Offset: 0x00015C74
+	// Token: 0x060004E9 RID: 1257 RVA: 0x00018430 File Offset: 0x00016630
 	protected override void OnAbort()
 	{
 		if (this.Phase == TsTaskNpcSitOnChairAndLeave.ETaskPhase.MoveAway)
@@ -307,7 +307,7 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		this.ReleaseChair();
 	}
 
-	// Token: 0x060004E8 RID: 1256 RVA: 0x00017AE1 File Offset: 0x00015CE1
+	// Token: 0x060004EA RID: 1258 RVA: 0x0001849D File Offset: 0x0001669D
 	protected override void OnClear()
 	{
 		this.Character = null;
@@ -315,7 +315,7 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		this.IsExecuteMoveAway = false;
 	}
 
-	// Token: 0x060004E9 RID: 1257 RVA: 0x00017AF8 File Offset: 0x00015CF8
+	// Token: 0x060004EB RID: 1259 RVA: 0x000184B4 File Offset: 0x000166B4
 	private void ReleaseChair()
 	{
 		if (this.IsPossessed && this.ChairController != null)
@@ -326,7 +326,7 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x060004EA RID: 1258 RVA: 0x00017B30 File Offset: 0x00015D30
+	// Token: 0x060004EC RID: 1260 RVA: 0x000184EC File Offset: 0x000166EC
 	private void ExecutePlayMontage()
 	{
 		if (this.IsExecutePlayMontage)
@@ -351,7 +351,7 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		}, new float?(this.TsLoopDuration), new float?((float)this.TsRepeatTimes), new bool?(false), new bool?(false), new bool?(this.TsEndOnBlendOut));
 	}
 
-	// Token: 0x060004EB RID: 1259 RVA: 0x00017BE4 File Offset: 0x00015DE4
+	// Token: 0x060004ED RID: 1261 RVA: 0x000185A0 File Offset: 0x000167A0
 	private void ExecuteMoveAway()
 	{
 		if (this.IsExecuteMoveAway)
@@ -388,7 +388,7 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		this.MoveComp.MoveAlongPath(config, null);
 	}
 
-	// Token: 0x060004EC RID: 1260 RVA: 0x00017CA3 File Offset: 0x00015EA3
+	// Token: 0x060004EE RID: 1262 RVA: 0x0001865F File Offset: 0x0001685F
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskNpcSitOnChairAndLeave._ClassPtr == IntPtr.Zero)
@@ -398,23 +398,23 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		return TsTaskNpcSitOnChairAndLeave._ClassPtr;
 	}
 
-	// Token: 0x060004ED RID: 1261 RVA: 0x00017CC8 File Offset: 0x00015EC8
+	// Token: 0x060004EF RID: 1263 RVA: 0x00018684 File Offset: 0x00016884
 	public TsTaskNpcSitOnChairAndLeave() : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcSitOnChairAndLeave.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060004EE RID: 1262 RVA: 0x00017CF0 File Offset: 0x00015EF0
+	// Token: 0x060004F0 RID: 1264 RVA: 0x000186AC File Offset: 0x000168AC
 	[NullableContext(1)]
 	public TsTaskNpcSitOnChairAndLeave(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcSitOnChairAndLeave.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060004EF RID: 1263 RVA: 0x00017D23 File Offset: 0x00015F23
+	// Token: 0x060004F1 RID: 1265 RVA: 0x000186DF File Offset: 0x000168DF
 	protected TsTaskNpcSitOnChairAndLeave(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060004F0 RID: 1264 RVA: 0x00017D40 File Offset: 0x00015F40
+	// Token: 0x060004F2 RID: 1266 RVA: 0x000186FC File Offset: 0x000168FC
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -423,7 +423,7 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		this.ReceiveExecuteAI(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x060004F1 RID: 1265 RVA: 0x00017D70 File Offset: 0x00015F70
+	// Token: 0x060004F3 RID: 1267 RVA: 0x0001872C File Offset: 0x0001692C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -432,117 +432,117 @@ public class TsTaskNpcSitOnChairAndLeave : TsTaskAbortImmediatelyBase, IUnrealUO
 		this.ReceiveTickAI(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x0400036F RID: 879
+	// Token: 0x04000371 RID: 881
 	private const int NEARBY_CHAIR_OFFSET = 70;
 
-	// Token: 0x04000370 RID: 880
+	// Token: 0x04000372 RID: 882
 	private const int MOVE_TO_CHAIR_SPEED = 70;
 
-	// Token: 0x04000371 RID: 881
+	// Token: 0x04000373 RID: 883
 	private const int MOVE_TO_CHAIR_DISTANCE_TOLERANCE = 5;
 
-	// Token: 0x04000372 RID: 882
+	// Token: 0x04000374 RID: 884
 	private const int MODEL_BUFFER_SMOOTH_TIME = 200;
 
-	// Token: 0x04000373 RID: 883
+	// Token: 0x04000375 RID: 885
 	private int PlayingMontage = -1;
 
-	// Token: 0x04000374 RID: 884
+	// Token: 0x04000376 RID: 886
 	private TsTaskNpcSitOnChairAndLeave.ETaskPhase PhaseInternal;
 
-	// Token: 0x04000375 RID: 885
+	// Token: 0x04000377 RID: 887
 	private bool IsExecutePlayMontage;
 
-	// Token: 0x04000376 RID: 886
+	// Token: 0x04000378 RID: 888
 	private bool IsExecuteMoveAway;
 
-	// Token: 0x04000377 RID: 887
+	// Token: 0x04000379 RID: 889
 	private bool IsPossessed;
 
-	// Token: 0x04000378 RID: 888
+	// Token: 0x0400037A RID: 890
 	private Entity Entity;
 
-	// Token: 0x04000379 RID: 889
+	// Token: 0x0400037B RID: 891
 	private CharacterActorComponent Character;
 
-	// Token: 0x0400037A RID: 890
+	// Token: 0x0400037C RID: 892
 	private BaseMoveComponent MoveComp;
 
-	// Token: 0x0400037B RID: 891
+	// Token: 0x0400037D RID: 893
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400037C RID: 892
+	// Token: 0x0400037E RID: 894
 	private PawnChairController ChairController;
 
-	// Token: 0x0400037D RID: 893
+	// Token: 0x0400037F RID: 895
 	private bool IsInitTsVariables;
 
-	// Token: 0x0400037E RID: 894
+	// Token: 0x04000380 RID: 896
 	private int TsChairEntityId;
 
-	// Token: 0x0400037F RID: 895
+	// Token: 0x04000381 RID: 897
 	[Nullable(1)]
 	private string TsMontagePath = "";
 
-	// Token: 0x04000380 RID: 896
+	// Token: 0x04000382 RID: 898
 	private float TsLoopDuration;
 
-	// Token: 0x04000381 RID: 897
+	// Token: 0x04000383 RID: 899
 	private int TsRepeatTimes;
 
-	// Token: 0x04000382 RID: 898
+	// Token: 0x04000384 RID: 900
 	private bool TsEndOnBlendOut;
 
-	// Token: 0x04000383 RID: 899
+	// Token: 0x04000385 RID: 901
 	private bool TsSkipLeave;
 
-	// Token: 0x04000384 RID: 900
+	// Token: 0x04000386 RID: 902
 	private Vector ChairNearbyPos;
 
-	// Token: 0x04000385 RID: 901
+	// Token: 0x04000387 RID: 903
 	private Vector ChairSitPos;
 
-	// Token: 0x04000386 RID: 902
+	// Token: 0x04000388 RID: 904
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/LevelAiTask/TsTaskNpcSitOnChairAndLeave.TsTaskNpcSitOnChairAndLeave_C";
 
-	// Token: 0x04000387 RID: 903
+	// Token: 0x04000389 RID: 905
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000388 RID: 904
+	// Token: 0x0400038A RID: 906
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000389 RID: 905
+	// Token: 0x0400038B RID: 907
 	private static int __PropertyOffset_ChairEntityId;
 
-	// Token: 0x0400038A RID: 906
+	// Token: 0x0400038C RID: 908
 	private static int __PropertyOffset_MontagePath;
 
-	// Token: 0x0400038B RID: 907
+	// Token: 0x0400038D RID: 909
 	private static int __PropertyOffset_LoopDuration;
 
-	// Token: 0x0400038C RID: 908
+	// Token: 0x0400038E RID: 910
 	private static int __PropertyOffset_RepeatTimes;
 
-	// Token: 0x0400038D RID: 909
+	// Token: 0x0400038F RID: 911
 	private static int __PropertyOffset_EndOnBlendOut;
 
-	// Token: 0x0400038E RID: 910
+	// Token: 0x04000390 RID: 912
 	private static int __PropertyOffset_SkipLeave;
 
-	// Token: 0x02007375 RID: 29557
+	// Token: 0x020064F8 RID: 25848
 	[NullableContext(0)]
 	private enum ETaskPhase
 	{
-		// Token: 0x040265E7 RID: 157159
+		// Token: 0x040218DD RID: 137437
 		None,
-		// Token: 0x040265E8 RID: 157160
+		// Token: 0x040218DE RID: 137438
 		Execute,
-		// Token: 0x040265E9 RID: 157161
+		// Token: 0x040218DF RID: 137439
 		PlayMontage,
-		// Token: 0x040265EA RID: 157162
+		// Token: 0x040218E0 RID: 137440
 		MoveAway,
-		// Token: 0x040265EB RID: 157163
+		// Token: 0x040218E1 RID: 137441
 		Finish
 	}
 }

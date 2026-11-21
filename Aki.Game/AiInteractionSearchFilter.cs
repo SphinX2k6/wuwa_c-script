@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020032A3 RID: 12963
+// Token: 0x02002814 RID: 10260
 public class AiInteractionSearchFilter
 {
-	// Token: 0x0400DDC3 RID: 56771
+	// Token: 0x0400E26A RID: 57962
 	public bool? IsSearchedMarkByAi;
 
-	// Token: 0x0400DDC4 RID: 56772
+	// Token: 0x0400E26B RID: 57963
 	[Nullable(new byte[]
 	{
 		2,
@@ -16,7 +16,7 @@ public class AiInteractionSearchFilter
 	})]
 	public List<string> Tag;
 
-	// Token: 0x0400DDC5 RID: 56773
+	// Token: 0x0400E26C RID: 57964
 	[Nullable(2)]
 	public Entity Entity;
 }

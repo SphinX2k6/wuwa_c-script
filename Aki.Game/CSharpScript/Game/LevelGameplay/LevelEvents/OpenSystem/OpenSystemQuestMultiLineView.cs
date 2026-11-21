@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006C09 RID: 27657
+	// Token: 0x02005D82 RID: 23938
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenSystemQuestMultiLineView : OpenSystemBase
 	{
-		// Token: 0x06044430 RID: 279600 RVA: 0x010D21CB File Offset: 0x010D03CB
+		// Token: 0x0603A588 RID: 238984 RVA: 0x0107C11F File Offset: 0x0107A31F
 		public OpenSystemQuestMultiLineView(LevelEventOpenSystem eventBase) : base(eventBase)
 		{
 		}
 
-		// Token: 0x06044431 RID: 279601 RVA: 0x010D21D4 File Offset: 0x010D03D4
+		// Token: 0x0603A589 RID: 238985 RVA: 0x0107C128 File Offset: 0x0107A328
 		[return: Nullable(0)]
 		public override UniTask<bool> ExecuteOpenView(OpenSystemBoard inParams, GeneralContext context)
 		{
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			return <ExecuteOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044432 RID: 279602 RVA: 0x010D221F File Offset: 0x010D041F
+		// Token: 0x0603A58A RID: 238986 RVA: 0x0107C173 File Offset: 0x0107A373
 		[NullableContext(2)]
 		public override EUiViewName? GetViewName(OpenSystemBoard inParams = null, GeneralContext context = null)
 		{

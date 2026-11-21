@@ -6,47 +6,47 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200076A RID: 1898
+	// Token: 0x02000150 RID: 336
 	[UnrealObjectPath("/Script/CoreUObject.TextProperty")]
 	[UnrealStructLayout(136, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 136)]
 	public class UTextProperty : UProperty, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060063B8 RID: 25528 RVA: 0x0008F2D6 File Offset: 0x0008D4D6
+		// Token: 0x06001310 RID: 4880 RVA: 0x0001E1CA File Offset: 0x0001C3CA
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UTextProperty._ClassPtr;
 		}
 
-		// Token: 0x060063B9 RID: 25529 RVA: 0x0008F2E4 File Offset: 0x0008D4E4
+		// Token: 0x06001311 RID: 4881 RVA: 0x0001E1D8 File Offset: 0x0001C3D8
 		public UTextProperty() : this(BuiltinUtils.AllocNativeUObject(UTextProperty.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060063BA RID: 25530 RVA: 0x0008F30C File Offset: 0x0008D50C
+		// Token: 0x06001312 RID: 4882 RVA: 0x0001E200 File Offset: 0x0001C400
 		[NullableContext(1)]
 		public UTextProperty(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UTextProperty.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x060063BB RID: 25531 RVA: 0x0008F33F File Offset: 0x0008D53F
+		// Token: 0x06001313 RID: 4883 RVA: 0x0001E233 File Offset: 0x0001C433
 		static UTextProperty()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/CoreUObject.TextProperty");
 		}
 
-		// Token: 0x060063BC RID: 25532 RVA: 0x0008F34D File Offset: 0x0008D54D
+		// Token: 0x06001314 RID: 4884 RVA: 0x0001E241 File Offset: 0x0001C441
 		protected UTextProperty(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04002FCE RID: 12238
+		// Token: 0x04000604 RID: 1540
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/CoreUObject.TextProperty";
 
-		// Token: 0x04002FCF RID: 12239
+		// Token: 0x04000605 RID: 1541
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04002FD0 RID: 12240
+		// Token: 0x04000606 RID: 1542
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

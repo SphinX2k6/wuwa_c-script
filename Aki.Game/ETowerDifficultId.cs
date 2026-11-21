@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200152A RID: 5418
+// Token: 0x020009E2 RID: 2530
 public enum ETowerDifficultId
 {
-	// Token: 0x04004405 RID: 17413
+	// Token: 0x040044AB RID: 17579
 	Low = 1,
-	// Token: 0x04004406 RID: 17414
+	// Token: 0x040044AC RID: 17580
 	High
 }

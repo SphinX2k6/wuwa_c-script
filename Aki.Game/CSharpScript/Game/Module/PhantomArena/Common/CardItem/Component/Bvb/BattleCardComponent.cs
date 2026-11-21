@@ -13,7 +13,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 {
-	// Token: 0x020051FA RID: 20986
+	// Token: 0x020041CA RID: 16842
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -22,17 +22,17 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 	})]
 	public class BattleCardComponent : CardComponentBase<PhantomCardData>, IBattleCardComponent
 	{
-		// Token: 0x170081F2 RID: 33266
-		// (get) Token: 0x06035AF2 RID: 219890 RVA: 0x00CB6587 File Offset: 0x00CB4787
-		// (set) Token: 0x06035AF3 RID: 219891 RVA: 0x00CB658F File Offset: 0x00CB478F
+		// Token: 0x170055B2 RID: 21938
+		// (get) Token: 0x0602A9ED RID: 174573 RVA: 0x00C03BC3 File Offset: 0x00C01DC3
+		// (set) Token: 0x0602A9EE RID: 174574 RVA: 0x00C03BCB File Offset: 0x00C01DCB
 		public Action<EToggleState> CardClickCallback { get; set; }
 
-		// Token: 0x170081F3 RID: 33267
-		// (get) Token: 0x06035AF4 RID: 219892 RVA: 0x00CB6598 File Offset: 0x00CB4798
-		// (set) Token: 0x06035AF5 RID: 219893 RVA: 0x00CB65A0 File Offset: 0x00CB47A0
+		// Token: 0x170055B3 RID: 21939
+		// (get) Token: 0x0602A9EF RID: 174575 RVA: 0x00C03BD4 File Offset: 0x00C01DD4
+		// (set) Token: 0x0602A9F0 RID: 174576 RVA: 0x00C03BDC File Offset: 0x00C01DDC
 		public UiSequencePlayer RootUiSequencePlayer { get; set; }
 
-		// Token: 0x06035AF6 RID: 219894 RVA: 0x00CB65AC File Offset: 0x00CB47AC
+		// Token: 0x0602A9F1 RID: 174577 RVA: 0x00C03BE8 File Offset: 0x00C01DE8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			};
 		}
 
-		// Token: 0x06035AF7 RID: 219895 RVA: 0x00CB67C1 File Offset: 0x00CB49C1
+		// Token: 0x0602A9F2 RID: 174578 RVA: 0x00C03DFD File Offset: 0x00C01FFD
 		private void CardClick(EToggleState state)
 		{
 			Action<EToggleState> cardClickCallback = this.CardClickCallback;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			cardClickCallback(state);
 		}
 
-		// Token: 0x06035AF8 RID: 219896 RVA: 0x00CB67D4 File Offset: 0x00CB49D4
+		// Token: 0x0602A9F3 RID: 174579 RVA: 0x00C03E10 File Offset: 0x00C02010
 		protected UniTask InitElement()
 		{
 			BattleCardComponent.<InitElement>d__19 <InitElement>d__;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <InitElement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035AF9 RID: 219897 RVA: 0x00CB6818 File Offset: 0x00CB4A18
+		// Token: 0x0602A9F4 RID: 174580 RVA: 0x00C03E54 File Offset: 0x00C02054
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleCardComponent.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -98,19 +98,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035AFA RID: 219898 RVA: 0x00CB685B File Offset: 0x00CB4A5B
+		// Token: 0x0602A9F5 RID: 174581 RVA: 0x00C03E97 File Offset: 0x00C02097
 		protected override void OnStart()
 		{
 			this.Sequence = new UiSequencePlayer(base.GetItem(2));
 		}
 
-		// Token: 0x06035AFB RID: 219899 RVA: 0x00CB686F File Offset: 0x00CB4A6F
+		// Token: 0x0602A9F6 RID: 174582 RVA: 0x00C03EAB File Offset: 0x00C020AB
 		protected override void OnBeforeDestroy()
 		{
 			this.Sequence.Clear();
 		}
 
-		// Token: 0x06035AFC RID: 219900 RVA: 0x00CB687C File Offset: 0x00CB4A7C
+		// Token: 0x0602A9F7 RID: 174583 RVA: 0x00C03EB8 File Offset: 0x00C020B8
 		private void RefreshCardAttrLogic(PhantomBattleCardAttr type, UUIText text)
 		{
 			int fightValueByAttr = this.Data.GetFightValueByAttr(type);
@@ -128,35 +128,35 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			LguiUtil.Instance.SetLocalTextNew(text, "PhantomBattle_1102", new <>z__ReadOnlySingleElementList<object>(fightValueByAttr));
 		}
 
-		// Token: 0x06035AFD RID: 219901 RVA: 0x00CB68F0 File Offset: 0x00CB4AF0
+		// Token: 0x0602A9F8 RID: 174584 RVA: 0x00C03F2C File Offset: 0x00C0212C
 		private void RefreshAttack()
 		{
 			UUIText text = base.GetText(1);
 			this.RefreshCardAttrLogic(PhantomBattleCardAttr.AttackAbility, text);
 		}
 
-		// Token: 0x06035AFE RID: 219902 RVA: 0x00CB6910 File Offset: 0x00CB4B10
+		// Token: 0x0602A9F9 RID: 174585 RVA: 0x00C03F4C File Offset: 0x00C0214C
 		private void RefreshHealth()
 		{
 			UUIText text = base.GetText(3);
 			this.RefreshCardAttrLogic(PhantomBattleCardAttr.LifeAbility, text);
 		}
 
-		// Token: 0x06035AFF RID: 219903 RVA: 0x00CB6930 File Offset: 0x00CB4B30
+		// Token: 0x0602A9FA RID: 174586 RVA: 0x00C03F6C File Offset: 0x00C0216C
 		private void RefreshCost()
 		{
 			UUIText text = base.GetText(4);
 			this.RefreshCardAttrLogic(PhantomBattleCardAttr.CostAbility, text);
 		}
 
-		// Token: 0x06035B00 RID: 219904 RVA: 0x00CB6950 File Offset: 0x00CB4B50
+		// Token: 0x0602A9FB RID: 174587 RVA: 0x00C03F8C File Offset: 0x00C0218C
 		private void RefreshElement()
 		{
 			int element = PhantomArenaConfig.Instance.GetPhantomBattleCardConfig(this.Data.ConfigId).Element;
 			this.ElementItem.Refresh((ECardElement)element, false, 0);
 		}
 
-		// Token: 0x06035B01 RID: 219905 RVA: 0x00CB6989 File Offset: 0x00CB4B89
+		// Token: 0x0602A9FC RID: 174588 RVA: 0x00C03FC5 File Offset: 0x00C021C5
 		private void RefreshItem()
 		{
 			UUIItem item = base.GetItem(13);
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			item2.SetUIActive(this.Data.IsFourCost);
 		}
 
-		// Token: 0x06035B02 RID: 219906 RVA: 0x00CB69CC File Offset: 0x00CB4BCC
+		// Token: 0x0602A9FD RID: 174589 RVA: 0x00C04008 File Offset: 0x00C02208
 		private void RefreshElementFrame()
 		{
 			PhantomBattleCard phantomBattleCardConfig = PhantomArenaConfig.Instance.GetPhantomBattleCardConfig(this.Data.ConfigId);
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			base.GetItem(17).SetUIActive(phantomBattleCardConfig.Element != 0 && flag);
 		}
 
-		// Token: 0x06035B03 RID: 219907 RVA: 0x00CB6A2C File Offset: 0x00CB4C2C
+		// Token: 0x0602A9FE RID: 174590 RVA: 0x00C04068 File Offset: 0x00C02268
 		private void RefreshCardFrame()
 		{
 			bool flag = this.IsOutlookUnlocked();
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			base.GetItem(16).SetUIActive(flag);
 		}
 
-		// Token: 0x06035B04 RID: 219908 RVA: 0x00CB6A60 File Offset: 0x00CB4C60
+		// Token: 0x0602A9FF RID: 174591 RVA: 0x00C0409C File Offset: 0x00C0229C
 		private UniTask RefreshCardFaceAsync()
 		{
 			BattleCardComponent.<RefreshCardFaceAsync>d__31 <RefreshCardFaceAsync>d__;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <RefreshCardFaceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B05 RID: 219909 RVA: 0x00CB6AA4 File Offset: 0x00CB4CA4
+		// Token: 0x0602AA00 RID: 174592 RVA: 0x00C040E0 File Offset: 0x00C022E0
 		private UniTask RefreshGoldEvolveItem()
 		{
 			BattleCardComponent.<RefreshGoldEvolveItem>d__32 <RefreshGoldEvolveItem>d__;
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <RefreshGoldEvolveItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B06 RID: 219910 RVA: 0x00CB6AE8 File Offset: 0x00CB4CE8
+		// Token: 0x0602AA01 RID: 174593 RVA: 0x00C04124 File Offset: 0x00C02324
 		private UniTask RefreshNormalEvolveItem()
 		{
 			BattleCardComponent.<RefreshNormalEvolveItem>d__33 <RefreshNormalEvolveItem>d__;
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <RefreshNormalEvolveItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B07 RID: 219911 RVA: 0x00CB6B2C File Offset: 0x00CB4D2C
+		// Token: 0x0602AA02 RID: 174594 RVA: 0x00C04168 File Offset: 0x00C02368
 		private void RefreshLightItem()
 		{
 			UUIItem item = base.GetItem(19);
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			item4.SetUIActive(this.Data.UseCost >= 3);
 		}
 
-		// Token: 0x06035B08 RID: 219912 RVA: 0x00CB6BC4 File Offset: 0x00CB4DC4
+		// Token: 0x0602AA03 RID: 174595 RVA: 0x00C04200 File Offset: 0x00C02400
 		private UniTask RefreshEvolveItem()
 		{
 			BattleCardComponent.<RefreshEvolveItem>d__35 <RefreshEvolveItem>d__;
@@ -259,19 +259,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <RefreshEvolveItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B09 RID: 219913 RVA: 0x00CB6C07 File Offset: 0x00CB4E07
+		// Token: 0x0602AA04 RID: 174596 RVA: 0x00C04243 File Offset: 0x00C02443
 		public void SetCardData(PhantomCardData data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x06035B0A RID: 219914 RVA: 0x00CB6C10 File Offset: 0x00CB4E10
+		// Token: 0x0602AA05 RID: 174597 RVA: 0x00C0424C File Offset: 0x00C0244C
 		private bool IsOutlookUnlocked()
 		{
 			return !this.Data.IsNpcCard && PhantomArenaModel.Instance.IsCardOutlookUnlock(this.Data.ConfigId);
 		}
 
-		// Token: 0x06035B0B RID: 219915 RVA: 0x00CB6C38 File Offset: 0x00CB4E38
+		// Token: 0x0602AA06 RID: 174598 RVA: 0x00C04274 File Offset: 0x00C02474
 		private UniTask InitLoopEffect()
 		{
 			BattleCardComponent.<InitLoopEffect>d__38 <InitLoopEffect>d__;
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <InitLoopEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B0C RID: 219916 RVA: 0x00CB6C7C File Offset: 0x00CB4E7C
+		// Token: 0x0602AA07 RID: 174599 RVA: 0x00C042B8 File Offset: 0x00C024B8
 		private UniTask InitStartEffect()
 		{
 			BattleCardComponent.<InitStartEffect>d__39 <InitStartEffect>d__;
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <InitStartEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B0D RID: 219917 RVA: 0x00CB6CC0 File Offset: 0x00CB4EC0
+		// Token: 0x0602AA08 RID: 174600 RVA: 0x00C042FC File Offset: 0x00C024FC
 		public UniTask InitEffect()
 		{
 			BattleCardComponent.<InitEffect>d__40 <InitEffect>d__;
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <InitEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B0E RID: 219918 RVA: 0x00CB6D04 File Offset: 0x00CB4F04
+		// Token: 0x0602AA09 RID: 174601 RVA: 0x00C04340 File Offset: 0x00C02540
 		public UniTask InitSpine()
 		{
 			BattleCardComponent.<InitSpine>d__41 <InitSpine>d__;
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <InitSpine>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B0F RID: 219919 RVA: 0x00CB6D48 File Offset: 0x00CB4F48
+		// Token: 0x0602AA0A RID: 174602 RVA: 0x00C04384 File Offset: 0x00C02584
 		public void SetDebugText()
 		{
 			UUIText text = base.GetText(9);
@@ -358,7 +358,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			}
 		}
 
-		// Token: 0x06035B10 RID: 219920 RVA: 0x00CB6EAC File Offset: 0x00CB50AC
+		// Token: 0x0602AA0B RID: 174603 RVA: 0x00C044E8 File Offset: 0x00C026E8
 		public void PlaySpineAnim(string animName, bool isLoop)
 		{
 			BattleCardSpineItem spineItem = this.SpineItem;
@@ -369,13 +369,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			spineItem.PlaySpineAnim(animName, isLoop);
 		}
 
-		// Token: 0x06035B11 RID: 219921 RVA: 0x00CB6EC0 File Offset: 0x00CB50C0
+		// Token: 0x0602AA0C RID: 174604 RVA: 0x00C044FC File Offset: 0x00C026FC
 		public override void Refresh(PhantomCardData data)
 		{
 			this.RefreshAsync(data).Forget();
 		}
 
-		// Token: 0x06035B12 RID: 219922 RVA: 0x00CB6ED0 File Offset: 0x00CB50D0
+		// Token: 0x0602AA0D RID: 174605 RVA: 0x00C0450C File Offset: 0x00C0270C
 		public UniTask RefreshAsync(PhantomCardData data)
 		{
 			BattleCardComponent.<RefreshAsync>d__45 <RefreshAsync>d__;
@@ -387,19 +387,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B13 RID: 219923 RVA: 0x00CB6F1B File Offset: 0x00CB511B
+		// Token: 0x0602AA0E RID: 174606 RVA: 0x00C04557 File Offset: 0x00C02757
 		public UUIExtendToggle GetCardToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x06035B14 RID: 219924 RVA: 0x00CB6F24 File Offset: 0x00CB5124
+		// Token: 0x0602AA0F RID: 174607 RVA: 0x00C04560 File Offset: 0x00C02760
 		public UUIItem GetTweenItem()
 		{
 			return base.GetItem(12);
 		}
 
-		// Token: 0x06035B15 RID: 219925 RVA: 0x00CB6F2E File Offset: 0x00CB512E
+		// Token: 0x0602AA10 RID: 174608 RVA: 0x00C0456A File Offset: 0x00C0276A
 		public void PlaySequence(string name)
 		{
 			if (this.Sequence.IsSequenceInPlaying(name))
@@ -410,7 +410,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			this.Sequence.PlaySequencePurely(name, false, false);
 		}
 
-		// Token: 0x06035B16 RID: 219926 RVA: 0x00CB6F5A File Offset: 0x00CB515A
+		// Token: 0x0602AA11 RID: 174609 RVA: 0x00C04596 File Offset: 0x00C02796
 		public void PlayEffect()
 		{
 			BattleCardEffectItem effectItem = this.EffectItem;
@@ -421,100 +421,100 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			effectItem.PlayStartEffect();
 		}
 
-		// Token: 0x170081F4 RID: 33268
-		// (get) Token: 0x06035B17 RID: 219927 RVA: 0x00CB6F6C File Offset: 0x00CB516C
-		// (set) Token: 0x06035B18 RID: 219928 RVA: 0x00CB6F74 File Offset: 0x00CB5174
+		// Token: 0x170055B4 RID: 21940
+		// (get) Token: 0x0602AA12 RID: 174610 RVA: 0x00C045A8 File Offset: 0x00C027A8
+		// (set) Token: 0x0602AA13 RID: 174611 RVA: 0x00C045B0 File Offset: 0x00C027B0
 		public Func<UUIItem, UniTask> PlayHitEffect { get; set; }
 
-		// Token: 0x0401C78D RID: 116621
+		// Token: 0x040171C2 RID: 94658
 		private CardElementItem ElementItem;
 
-		// Token: 0x0401C78E RID: 116622
+		// Token: 0x040171C3 RID: 94659
 		protected UiSequencePlayer Sequence;
 
-		// Token: 0x0401C790 RID: 116624
+		// Token: 0x040171C5 RID: 94661
 		protected PhantomCardData Data;
 
-		// Token: 0x0401C791 RID: 116625
+		// Token: 0x040171C6 RID: 94662
 		protected BattleCardLoopEffectItem LoopEffectItem;
 
-		// Token: 0x0401C792 RID: 116626
+		// Token: 0x040171C7 RID: 94663
 		protected BattleCardEffectItem EffectItem;
 
-		// Token: 0x0401C793 RID: 116627
+		// Token: 0x040171C8 RID: 94664
 		protected BattleCardSpineItem SpineItem;
 
-		// Token: 0x0401C794 RID: 116628
+		// Token: 0x040171C9 RID: 94665
 		protected EvolveProxy NormalEvolveItem;
 
-		// Token: 0x0401C795 RID: 116629
+		// Token: 0x040171CA RID: 94666
 		protected EvolveProxy GoldEvolveItem;
 
-		// Token: 0x0200B382 RID: 45954
+		// Token: 0x02009DBA RID: 40378
 		[NullableContext(0)]
 		private static class EComponentDefine
 		{
-			// Token: 0x0403667F RID: 222847
+			// Token: 0x040310D2 RID: 200914
 			public const int Toggle = 0;
 
-			// Token: 0x04036680 RID: 222848
+			// Token: 0x040310D3 RID: 200915
 			public const int AttackText = 1;
 
-			// Token: 0x04036681 RID: 222849
+			// Token: 0x040310D4 RID: 200916
 			public const int ContentItem = 2;
 
-			// Token: 0x04036682 RID: 222850
+			// Token: 0x040310D5 RID: 200917
 			public const int HealthText = 3;
 
-			// Token: 0x04036683 RID: 222851
+			// Token: 0x040310D6 RID: 200918
 			public const int CostText = 4;
 
-			// Token: 0x04036684 RID: 222852
+			// Token: 0x040310D7 RID: 200919
 			public const int MiddleHighLightItem = 5;
 
-			// Token: 0x04036685 RID: 222853
+			// Token: 0x040310D8 RID: 200920
 			public const int LeftHighLightItem = 6;
 
-			// Token: 0x04036686 RID: 222854
+			// Token: 0x040310D9 RID: 200921
 			public const int ElementItem = 7;
 
-			// Token: 0x04036687 RID: 222855
+			// Token: 0x040310DA RID: 200922
 			public const int CardFaceTexture = 8;
 
-			// Token: 0x04036688 RID: 222856
+			// Token: 0x040310DB RID: 200923
 			public const int DebugText = 9;
 
-			// Token: 0x04036689 RID: 222857
+			// Token: 0x040310DC RID: 200924
 			public const int NormalElementFrameItem = 10;
 
-			// Token: 0x0403668A RID: 222858
+			// Token: 0x040310DD RID: 200925
 			public const int AttachItem = 11;
 
-			// Token: 0x0403668B RID: 222859
+			// Token: 0x040310DE RID: 200926
 			public const int TweenItem = 12;
 
-			// Token: 0x0403668C RID: 222860
+			// Token: 0x040310DF RID: 200927
 			public const int GreenItem = 13;
 
-			// Token: 0x0403668D RID: 222861
+			// Token: 0x040310E0 RID: 200928
 			public const int RedItem = 14;
 
-			// Token: 0x0403668E RID: 222862
+			// Token: 0x040310E1 RID: 200929
 			public const int NormalCardFrameItem = 15;
 
-			// Token: 0x0403668F RID: 222863
+			// Token: 0x040310E2 RID: 200930
 			public const int GoldCardFrameItem = 16;
 
-			// Token: 0x04036690 RID: 222864
+			// Token: 0x040310E3 RID: 200931
 			public const int GoldElementFrameItem = 17;
 
-			// Token: 0x04036691 RID: 222865
+			// Token: 0x040310E4 RID: 200932
 			public const int SpineAttachItem = 18;
 
-			// Token: 0x04036692 RID: 222866
+			// Token: 0x040310E5 RID: 200933
 			public const int LightBgItem = 19;
 
-			// Token: 0x04036693 RID: 222867
+			// Token: 0x040310E6 RID: 200934
 			public const int RightHighLightItem = 20;
 		}
 	}

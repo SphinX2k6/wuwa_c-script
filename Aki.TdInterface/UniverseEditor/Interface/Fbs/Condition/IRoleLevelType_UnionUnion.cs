@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CB9 RID: 19641
+	// Token: 0x020051B2 RID: 20914
 	public class IRoleLevelType_UnionUnion
 	{
-		// Token: 0x17008E9A RID: 36506
-		// (get) Token: 0x0601F29D RID: 127645 RVA: 0x0045A1B1 File Offset: 0x004583B1
-		// (set) Token: 0x0601F29E RID: 127646 RVA: 0x0045A1B9 File Offset: 0x004583B9
+		// Token: 0x170095C8 RID: 38344
+		// (get) Token: 0x06020EBF RID: 134847 RVA: 0x0048DD01 File Offset: 0x0048BF01
+		// (set) Token: 0x06020EC0 RID: 134848 RVA: 0x0048DD09 File Offset: 0x0048BF09
 		public IRoleLevelType_Union Type { get; set; }
 
-		// Token: 0x17008E9B RID: 36507
-		// (get) Token: 0x0601F29F RID: 127647 RVA: 0x0045A1C2 File Offset: 0x004583C2
-		// (set) Token: 0x0601F2A0 RID: 127648 RVA: 0x0045A1CA File Offset: 0x004583CA
+		// Token: 0x170095C9 RID: 38345
+		// (get) Token: 0x06020EC1 RID: 134849 RVA: 0x0048DD12 File Offset: 0x0048BF12
+		// (set) Token: 0x06020EC2 RID: 134850 RVA: 0x0048DD1A File Offset: 0x0048BF1A
 		public object Value { get; set; }
 
-		// Token: 0x0601F2A1 RID: 127649 RVA: 0x0045A1D3 File Offset: 0x004583D3
+		// Token: 0x06020EC3 RID: 134851 RVA: 0x0048DD23 File Offset: 0x0048BF23
 		public IRoleLevelType_UnionUnion()
 		{
 			this.Type = IRoleLevelType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F2A2 RID: 127650 RVA: 0x0045A1E9 File Offset: 0x004583E9
+		// Token: 0x06020EC4 RID: 134852 RVA: 0x0048DD39 File Offset: 0x0048BF39
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F2A3 RID: 127651 RVA: 0x0045A1FB File Offset: 0x004583FB
+		// Token: 0x06020EC5 RID: 134853 RVA: 0x0048DD4B File Offset: 0x0048BF4B
 		public IRoleLevelTypeT AsIRoleLevelType()
 		{
 			return this.As<IRoleLevelTypeT>();
 		}
 
-		// Token: 0x0601F2A4 RID: 127652 RVA: 0x0045A203 File Offset: 0x00458403
+		// Token: 0x06020EC6 RID: 134854 RVA: 0x0048DD53 File Offset: 0x0048BF53
 		public static IRoleLevelType_UnionUnion FromIRoleLevelType(IRoleLevelTypeT _iroleleveltype)
 		{
 			return new IRoleLevelType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F2A5 RID: 127653 RVA: 0x0045A218 File Offset: 0x00458418
+		// Token: 0x06020EC7 RID: 134855 RVA: 0x0048DD68 File Offset: 0x0048BF68
 		public ISpecifyRoleLevelT AsISpecifyRoleLevel()
 		{
 			return this.As<ISpecifyRoleLevelT>();
 		}
 
-		// Token: 0x0601F2A6 RID: 127654 RVA: 0x0045A220 File Offset: 0x00458420
+		// Token: 0x06020EC8 RID: 134856 RVA: 0x0048DD70 File Offset: 0x0048BF70
 		public static IRoleLevelType_UnionUnion FromISpecifyRoleLevel(ISpecifyRoleLevelT _ispecifyrolelevel)
 		{
 			return new IRoleLevelType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F2A7 RID: 127655 RVA: 0x0045A238 File Offset: 0x00458438
+		// Token: 0x06020EC9 RID: 134857 RVA: 0x0048DD88 File Offset: 0x0048BF88
 		public static int Pack(FlatBufferBuilder builder, IRoleLevelType_UnionUnion _o)
 		{
 			IRoleLevelType_Union type = _o.Type;

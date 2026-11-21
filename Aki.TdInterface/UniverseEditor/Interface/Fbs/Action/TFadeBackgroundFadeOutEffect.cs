@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076CE RID: 30414
+	// Token: 0x02007EDC RID: 32476
 	public enum TFadeBackgroundFadeOutEffect : byte
 	{
-		// Token: 0x04012742 RID: 75586
+		// Token: 0x04013794 RID: 79764
 		NONE,
-		// Token: 0x04012743 RID: 75587
+		// Token: 0x04013795 RID: 79765
 		IFadeBackgroundFadeOutEffectBlack,
-		// Token: 0x04012744 RID: 75588
+		// Token: 0x04013796 RID: 79766
 		IFadeBackgroundFadeOutEffectScreenEffect
 	}
 }

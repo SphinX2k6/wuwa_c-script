@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DFB RID: 3579
+	// Token: 0x02000EE0 RID: 3808
 	public struct MatchThreeEliminate : IFlatbufferObject
 	{
-		// Token: 0x17001E79 RID: 7801
-		// (get) Token: 0x06009273 RID: 37491 RVA: 0x00281A09 File Offset: 0x0027FC09
+		// Token: 0x17001EDD RID: 7901
+		// (get) Token: 0x0600988F RID: 39055 RVA: 0x0029F9E6 File Offset: 0x0029DBE6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009274 RID: 37492 RVA: 0x00281A16 File Offset: 0x0027FC16
+		// Token: 0x06009890 RID: 39056 RVA: 0x0029F9F3 File Offset: 0x0029DBF3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009275 RID: 37493 RVA: 0x00281A20 File Offset: 0x0027FC20
+		// Token: 0x06009891 RID: 39057 RVA: 0x0029F9FC File Offset: 0x0029DBFC
 		public static MatchThreeEliminate GetRootAsMatchThreeEliminate(ByteBuffer _bb)
 		{
 			return MatchThreeEliminate.GetRootAsMatchThreeEliminate(_bb, default(MatchThreeEliminate));
 		}
 
-		// Token: 0x06009276 RID: 37494 RVA: 0x00281A3C File Offset: 0x0027FC3C
+		// Token: 0x06009892 RID: 39058 RVA: 0x0029FA18 File Offset: 0x0029DC18
 		public static MatchThreeEliminate GetRootAsMatchThreeEliminate(ByteBuffer _bb, MatchThreeEliminate obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009277 RID: 37495 RVA: 0x00281A59 File Offset: 0x0027FC59
+		// Token: 0x06009893 RID: 39059 RVA: 0x0029FA35 File Offset: 0x0029DC35
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009278 RID: 37496 RVA: 0x00281A68 File Offset: 0x0027FC68
+		// Token: 0x06009894 RID: 39060 RVA: 0x0029FA44 File Offset: 0x0029DC44
 		public MatchThreeEliminate __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001E7A RID: 7802
-		// (get) Token: 0x06009279 RID: 37497 RVA: 0x00281A78 File Offset: 0x0027FC78
+		// Token: 0x17001EDE RID: 7902
+		// (get) Token: 0x06009895 RID: 39061 RVA: 0x0029FA54 File Offset: 0x0029DC54
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001E7B RID: 7803
-		// (get) Token: 0x0600927A RID: 37498 RVA: 0x00281AB4 File Offset: 0x0027FCB4
+		// Token: 0x17001EDF RID: 7903
+		// (get) Token: 0x06009896 RID: 39062 RVA: 0x0029FA90 File Offset: 0x0029DC90
 		public int Shape
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001E7C RID: 7804
-		// (get) Token: 0x0600927B RID: 37499 RVA: 0x00281AF0 File Offset: 0x0027FCF0
+		// Token: 0x17001EE0 RID: 7904
+		// (get) Token: 0x06009897 RID: 39063 RVA: 0x0029FACC File Offset: 0x0029DCCC
 		public int MatchDir
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001E7D RID: 7805
-		// (get) Token: 0x0600927C RID: 37500 RVA: 0x00281B2C File Offset: 0x0027FD2C
+		// Token: 0x17001EE1 RID: 7905
+		// (get) Token: 0x06009898 RID: 39064 RVA: 0x0029FB08 File Offset: 0x0029DD08
 		public int SpawnType
 		{
 			get
@@ -109,7 +109,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600927D RID: 37501 RVA: 0x00281B6C File Offset: 0x0027FD6C
+		// Token: 0x06009899 RID: 39065 RVA: 0x0029FB48 File Offset: 0x0029DD48
 		public int SpawnExtraComponents(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -120,8 +120,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001E7E RID: 7806
-		// (get) Token: 0x0600927E RID: 37502 RVA: 0x00281BAC File Offset: 0x0027FDAC
+		// Token: 0x17001EE2 RID: 7906
+		// (get) Token: 0x0600989A RID: 39066 RVA: 0x0029FB88 File Offset: 0x0029DD88
 		public int SpawnExtraComponentsLength
 		{
 			get
@@ -135,20 +135,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600927F RID: 37503 RVA: 0x00281BD8 File Offset: 0x0027FDD8
+		// Token: 0x0600989B RID: 39067 RVA: 0x0029FBB4 File Offset: 0x0029DDB4
 		public Span<int> GetSpawnExtraComponentsBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x06009280 RID: 37504 RVA: 0x00281BE8 File Offset: 0x0027FDE8
+		// Token: 0x0600989C RID: 39068 RVA: 0x0029FBC4 File Offset: 0x0029DDC4
 		public int[] GetSpawnExtraComponentsArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17001E7F RID: 7807
-		// (get) Token: 0x06009281 RID: 37505 RVA: 0x00281C00 File Offset: 0x0027FE00
+		// Token: 0x17001EE3 RID: 7907
+		// (get) Token: 0x0600989D RID: 39069 RVA: 0x0029FBDC File Offset: 0x0029DDDC
 		public int PieceEnergy
 		{
 			get
@@ -162,8 +162,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001E80 RID: 7808
-		// (get) Token: 0x06009282 RID: 37506 RVA: 0x00281C40 File Offset: 0x0027FE40
+		// Token: 0x17001EE4 RID: 7908
+		// (get) Token: 0x0600989E RID: 39070 RVA: 0x0029FC1C File Offset: 0x0029DE1C
 		public int PieceScore
 		{
 			get
@@ -177,25 +177,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009283 RID: 37507 RVA: 0x00281C80 File Offset: 0x0027FE80
+		// Token: 0x0600989F RID: 39071 RVA: 0x0029FC59 File Offset: 0x0029DE59
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SpawnExtraComponentsIter()或GetSpawnExtraComponentsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SpawnExtraComponents()
+		public int[] SpawnExtraComponents()
 		{
-			MatchThreeEliminate matchThreeEliminate = this;
-			return matchThreeEliminate.GetSpawnExtraComponentsArray() ?? Array.Empty<int>();
+			return this.GetSpawnExtraComponentsArray();
 		}
 
-		// Token: 0x06009284 RID: 37508 RVA: 0x00281CA4 File Offset: 0x0027FEA4
+		// Token: 0x060098A0 RID: 39072 RVA: 0x0029FC61 File Offset: 0x0029DE61
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SpawnExtraComponentsIter()
+		public IEnumerable<int> SpawnExtraComponentsIter()
 		{
 			MatchThreeEliminate.<SpawnExtraComponentsIter>d__26 <SpawnExtraComponentsIter>d__ = new MatchThreeEliminate.<SpawnExtraComponentsIter>d__26(-2);
 			<SpawnExtraComponentsIter>d__.<>3__<>4__this = this;
 			return <SpawnExtraComponentsIter>d__;
 		}
 
-		// Token: 0x04004E9B RID: 20123
+		// Token: 0x04005480 RID: 21632
 		private Table __p;
 	}
 }

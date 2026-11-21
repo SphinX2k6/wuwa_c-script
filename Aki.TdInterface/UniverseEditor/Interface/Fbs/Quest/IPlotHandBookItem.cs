@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FA7 RID: 16295
+	// Token: 0x020043E8 RID: 17384
 	public struct IPlotHandBookItem : IFlatbufferObject
 	{
-		// Token: 0x170071C6 RID: 29126
-		// (get) Token: 0x06017490 RID: 95376 RVA: 0x0035B7F6 File Offset: 0x003599F6
+		// Token: 0x170077C4 RID: 30660
+		// (get) Token: 0x06018B1F RID: 101151 RVA: 0x0038540E File Offset: 0x0038360E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017491 RID: 95377 RVA: 0x0035B803 File Offset: 0x00359A03
+		// Token: 0x06018B20 RID: 101152 RVA: 0x0038541B File Offset: 0x0038361B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017492 RID: 95378 RVA: 0x0035B80C File Offset: 0x00359A0C
+		// Token: 0x06018B21 RID: 101153 RVA: 0x00385424 File Offset: 0x00383624
 		public static IPlotHandBookItem GetRootAsIPlotHandBookItem(ByteBuffer _bb)
 		{
 			return IPlotHandBookItem.GetRootAsIPlotHandBookItem(_bb, default(IPlotHandBookItem));
 		}
 
-		// Token: 0x06017493 RID: 95379 RVA: 0x0035B828 File Offset: 0x00359A28
+		// Token: 0x06018B22 RID: 101154 RVA: 0x00385440 File Offset: 0x00383640
 		public static IPlotHandBookItem GetRootAsIPlotHandBookItem(ByteBuffer _bb, IPlotHandBookItem obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017494 RID: 95380 RVA: 0x0035B845 File Offset: 0x00359A45
+		// Token: 0x06018B23 RID: 101155 RVA: 0x0038545D File Offset: 0x0038365D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017495 RID: 95381 RVA: 0x0035B854 File Offset: 0x00359A54
+		// Token: 0x06018B24 RID: 101156 RVA: 0x0038546C File Offset: 0x0038366C
 		public IPlotHandBookItem __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170071C7 RID: 29127
-		// (get) Token: 0x06017496 RID: 95382 RVA: 0x0035B864 File Offset: 0x00359A64
+		// Token: 0x170077C5 RID: 30661
+		// (get) Token: 0x06018B25 RID: 101157 RVA: 0x0038547C File Offset: 0x0038367C
 		public int Id
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017497 RID: 95383 RVA: 0x0035B8A0 File Offset: 0x00359AA0
+		// Token: 0x06018B26 RID: 101158 RVA: 0x003854B8 File Offset: 0x003836B8
 		public IPlotHandBookNode? Nodes(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new IPlotHandBookNode?(default(IPlotHandBookNode).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170071C8 RID: 29128
-		// (get) Token: 0x06017498 RID: 95384 RVA: 0x0035B900 File Offset: 0x00359B00
+		// Token: 0x170077C6 RID: 30662
+		// (get) Token: 0x06018B27 RID: 101159 RVA: 0x00385518 File Offset: 0x00383718
 		public int NodesLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017499 RID: 95385 RVA: 0x0035B92B File Offset: 0x00359B2B
+		// Token: 0x06018B28 RID: 101160 RVA: 0x00385543 File Offset: 0x00383743
 		public static Offset<IPlotHandBookItem> CreateIPlotHandBookItem(FlatBufferBuilder builder, int Id = 0, VectorOffset NodesOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPlotHandBookItem.EndIPlotHandBookItem(builder);
 		}
 
-		// Token: 0x0601749A RID: 95386 RVA: 0x0035B948 File Offset: 0x00359B48
+		// Token: 0x06018B29 RID: 101161 RVA: 0x00385560 File Offset: 0x00383760
 		public static void StartIPlotHandBookItem(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601749B RID: 95387 RVA: 0x0035B951 File Offset: 0x00359B51
+		// Token: 0x06018B2A RID: 101162 RVA: 0x00385569 File Offset: 0x00383769
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0601749C RID: 95388 RVA: 0x0035B95C File Offset: 0x00359B5C
+		// Token: 0x06018B2B RID: 101163 RVA: 0x00385574 File Offset: 0x00383774
 		public static void AddNodes(FlatBufferBuilder builder, VectorOffset nodesOffset)
 		{
 			builder.AddOffset(1, nodesOffset.Value, 0);
 		}
 
-		// Token: 0x0601749D RID: 95389 RVA: 0x0035B96C File Offset: 0x00359B6C
+		// Token: 0x06018B2C RID: 101164 RVA: 0x00385584 File Offset: 0x00383784
 		public static VectorOffset CreateNodesVector(FlatBufferBuilder builder, Offset<IPlotHandBookNode>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601749E RID: 95390 RVA: 0x0035B9AC File Offset: 0x00359BAC
+		// Token: 0x06018B2D RID: 101165 RVA: 0x003855C4 File Offset: 0x003837C4
 		public static VectorOffset CreateNodesVectorBlock(FlatBufferBuilder builder, Offset<IPlotHandBookNode>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601749F RID: 95391 RVA: 0x0035B9C6 File Offset: 0x00359BC6
+		// Token: 0x06018B2E RID: 101166 RVA: 0x003855DE File Offset: 0x003837DE
 		public static VectorOffset CreateNodesVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IPlotHandBookNode>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060174A0 RID: 95392 RVA: 0x0035B9E4 File Offset: 0x00359BE4
+		// Token: 0x06018B2F RID: 101167 RVA: 0x003855FC File Offset: 0x003837FC
 		public static VectorOffset CreateNodesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060174A1 RID: 95393 RVA: 0x0035B9FD File Offset: 0x00359BFD
+		// Token: 0x06018B30 RID: 101168 RVA: 0x00385615 File Offset: 0x00383815
 		public static void StartNodesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060174A2 RID: 95394 RVA: 0x0035BA08 File Offset: 0x00359C08
+		// Token: 0x06018B31 RID: 101169 RVA: 0x00385620 File Offset: 0x00383820
 		public static Offset<IPlotHandBookItem> EndIPlotHandBookItem(FlatBufferBuilder builder)
 		{
 			return new Offset<IPlotHandBookItem>(builder.EndTable());
 		}
 
-		// Token: 0x060174A3 RID: 95395 RVA: 0x0035BA18 File Offset: 0x00359C18
+		// Token: 0x06018B32 RID: 101170 RVA: 0x00385630 File Offset: 0x00383830
 		public IPlotHandBookItemT UnPack()
 		{
 			IPlotHandBookItemT plotHandBookItemT = new IPlotHandBookItemT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return plotHandBookItemT;
 		}
 
-		// Token: 0x060174A4 RID: 95396 RVA: 0x0035BA34 File Offset: 0x00359C34
+		// Token: 0x06018B33 RID: 101171 RVA: 0x0038564C File Offset: 0x0038384C
 		public void UnPackTo(IPlotHandBookItemT _o)
 		{
 			_o.Id = this.Id;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060174A5 RID: 95397 RVA: 0x0035BAA0 File Offset: 0x00359CA0
+		// Token: 0x06018B34 RID: 101172 RVA: 0x003856B8 File Offset: 0x003838B8
 		public static Offset<IPlotHandBookItem> Pack(FlatBufferBuilder builder, IPlotHandBookItemT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPlotHandBookItem.CreateIPlotHandBookItem(builder, _o.Id, nodesOffset);
 		}
 
-		// Token: 0x0400BA0F RID: 47631
+		// Token: 0x0400C3F4 RID: 50164
 		private Table __p;
 	}
 }

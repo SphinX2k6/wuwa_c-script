@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -9,7 +8,6 @@ using System.Text.RegularExpressions;
 using Aki.Config;
 using Aki.Protocol;
 using AkiClient.Game.Aki.Character.BaseCharacter;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.AI.StateMachine;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Battle;
@@ -23,12 +21,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020034AA RID: 13482
+// Token: 0x02002A1E RID: 10782
 [UClass("/Game/Aki/TypeScript/Game/Utils/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Utils/CombatDebugBlueprintFunctionLibrary.CombatDebugBlueprintFunctionLibrary_C")]
 public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601D59E RID: 120222 RVA: 0x0082E814 File Offset: 0x0082CA14
+	// Token: 0x0601B29B RID: 111259 RVA: 0x00855A1C File Offset: 0x00853C1C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void AddPassiveSkillForDebug(int entityId, long passiveSkillId)
 	{
@@ -43,7 +41,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		}
 	}
 
-	// Token: 0x0601D59F RID: 120223 RVA: 0x0082E85C File Offset: 0x0082CA5C
+	// Token: 0x0601B29C RID: 111260 RVA: 0x00855A64 File Offset: 0x00853C64
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void RemovePassiveSkillForDebug(int entityId, long passiveSkillId)
 	{
@@ -54,7 +52,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		}
 	}
 
-	// Token: 0x0601D5A0 RID: 120224 RVA: 0x0082E888 File Offset: 0x0082CA88
+	// Token: 0x0601B29D RID: 111261 RVA: 0x00855A90 File Offset: 0x00853C90
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetDebugMonsterMovePath()
 	{
@@ -62,14 +60,14 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return instance != null && instance.DebugMonsterMovePath;
 	}
 
-	// Token: 0x0601D5A1 RID: 120225 RVA: 0x0082E89A File Offset: 0x0082CA9A
+	// Token: 0x0601B29E RID: 111262 RVA: 0x00855AA2 File Offset: 0x00853CA2
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetDebugMonsterMovePath(bool value)
 	{
 		CombatDebugDrawController.Instance.DebugMonsterMovePath = value;
 	}
 
-	// Token: 0x0601D5A2 RID: 120226 RVA: 0x0082E8A7 File Offset: 0x0082CAA7
+	// Token: 0x0601B29F RID: 111263 RVA: 0x00855AAF File Offset: 0x00853CAF
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetDebugMonsterControl()
 	{
@@ -77,14 +75,14 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return instance != null && instance.DebugMonsterControl;
 	}
 
-	// Token: 0x0601D5A3 RID: 120227 RVA: 0x0082E8B9 File Offset: 0x0082CAB9
+	// Token: 0x0601B2A0 RID: 111264 RVA: 0x00855AC1 File Offset: 0x00853CC1
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetDebugMonsterControl(bool value)
 	{
 		CombatDebugDrawController.Instance.DebugMonsterControl = value;
 	}
 
-	// Token: 0x0601D5A4 RID: 120228 RVA: 0x0082E8C8 File Offset: 0x0082CAC8
+	// Token: 0x0601B2A1 RID: 111265 RVA: 0x00855AD0 File Offset: 0x00853CD0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void OpenMonsterServerLogic(bool value)
 	{
@@ -95,7 +93,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		EventSystem.Instance.Emit<string>(EEventName.RunGm, p);
 	}
 
-	// Token: 0x0601D5A5 RID: 120229 RVA: 0x0082E90F File Offset: 0x0082CB0F
+	// Token: 0x0601B2A2 RID: 111266 RVA: 0x00855B17 File Offset: 0x00853D17
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool IsDrawEntityBoxEnabled()
 	{
@@ -103,14 +101,14 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return instance != null && instance.IsDrawEntityBoxEnabled;
 	}
 
-	// Token: 0x0601D5A6 RID: 120230 RVA: 0x0082E921 File Offset: 0x0082CB21
+	// Token: 0x0601B2A3 RID: 111267 RVA: 0x00855B29 File Offset: 0x00853D29
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void SetDrawEntityBoxEnabled(bool isEnable)
 	{
 		CombatDebugDrawController.Instance.IsDrawEntityBoxEnabled = isEnable;
 	}
 
-	// Token: 0x0601D5A7 RID: 120231 RVA: 0x0082E92E File Offset: 0x0082CB2E
+	// Token: 0x0601B2A4 RID: 111268 RVA: 0x00855B36 File Offset: 0x00853D36
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool IsDrawEntityBoxInfoEnabled()
 	{
@@ -118,14 +116,14 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return instance != null && instance.IsDrawEntityBoxInfoEnabled;
 	}
 
-	// Token: 0x0601D5A8 RID: 120232 RVA: 0x0082E940 File Offset: 0x0082CB40
+	// Token: 0x0601B2A5 RID: 111269 RVA: 0x00855B48 File Offset: 0x00853D48
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void SetDrawEntityBoxInfoEnabled(bool isEnable)
 	{
 		CombatDebugDrawController.Instance.IsDrawEntityBoxInfoEnabled = isEnable;
 	}
 
-	// Token: 0x0601D5A9 RID: 120233 RVA: 0x0082E94D File Offset: 0x0082CB4D
+	// Token: 0x0601B2A6 RID: 111270 RVA: 0x00855B55 File Offset: 0x00853D55
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<string> GetCombatScriptIndexes()
@@ -133,7 +131,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return CombatDebugController.Instance.ScriptHelper.CombatScriptIndexes;
 	}
 
-	// Token: 0x0601D5AA RID: 120234 RVA: 0x0082E95E File Offset: 0x0082CB5E
+	// Token: 0x0601B2A7 RID: 111271 RVA: 0x00855B66 File Offset: 0x00853D66
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string FilterScript(string cmd)
@@ -141,7 +139,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return CombatDebugController.Instance.FilterCmd(cmd);
 	}
 
-	// Token: 0x0601D5AB RID: 120235 RVA: 0x0082E96C File Offset: 0x0082CB6C
+	// Token: 0x0601B2A8 RID: 111272 RVA: 0x00855B74 File Offset: 0x00853D74
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsDebugPrintOpened(string moduleName)
@@ -150,7 +148,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return Enum.TryParse<CombatLog.EDebugModule>(moduleName, out item) && CombatLog.Instance.DebugCombatInfo.Contains(item);
 	}
 
-	// Token: 0x0601D5AC RID: 120236 RVA: 0x0082E998 File Offset: 0x0082CB98
+	// Token: 0x0601B2A9 RID: 111273 RVA: 0x00855BA0 File Offset: 0x00853DA0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetDebugPrintOpened(string moduleName, bool isOpen)
@@ -168,7 +166,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		CombatLog.Instance.DebugCombatInfo.Remove(item);
 	}
 
-	// Token: 0x0601D5AD RID: 120237 RVA: 0x0082E9D6 File Offset: 0x0082CBD6
+	// Token: 0x0601B2AA RID: 111274 RVA: 0x00855BDE File Offset: 0x00853DDE
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void TryRefreshServerDebugInfo()
 	{
@@ -180,7 +178,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		instance.RefreshServerDebugInfo();
 	}
 
-	// Token: 0x0601D5AE RID: 120238 RVA: 0x0082E9E8 File Offset: 0x0082CBE8
+	// Token: 0x0601B2AB RID: 111275 RVA: 0x00855BF0 File Offset: 0x00853DF0
 	[NullableContext(1)]
 	protected static BaseBuffComponent GetBuffComponent(int entityId, int handle)
 	{
@@ -205,7 +203,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return null;
 	}
 
-	// Token: 0x0601D5AF RID: 120239 RVA: 0x0082EA48 File Offset: 0x0082CC48
+	// Token: 0x0601B2AC RID: 111276 RVA: 0x00855C50 File Offset: 0x00853E50
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static float GetServerBuffRemainDuration(int entityId, int handle)
 	{
@@ -218,7 +216,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return characterGasDebugComponent.GetServerBuffRemainDuration(handle);
 	}
 
-	// Token: 0x0601D5B0 RID: 120240 RVA: 0x0082EA72 File Offset: 0x0082CC72
+	// Token: 0x0601B2AD RID: 111277 RVA: 0x00855C7A File Offset: 0x00853E7A
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static float GetServerBuffTotalDuration(int entityId, int handle)
 	{
@@ -231,7 +229,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return characterGasDebugComponent.GetServerBuffTotalDuration(handle);
 	}
 
-	// Token: 0x0601D5B1 RID: 120241 RVA: 0x0082EA9C File Offset: 0x0082CC9C
+	// Token: 0x0601B2AE RID: 111278 RVA: 0x00855CA4 File Offset: 0x00853EA4
 	[NullableContext(1)]
 	private static ActiveBuffInternal GetDebugBuff(int entityId, int handle)
 	{
@@ -253,7 +251,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return null;
 	}
 
-	// Token: 0x0601D5B2 RID: 120242 RVA: 0x0082EAF9 File Offset: 0x0082CCF9
+	// Token: 0x0601B2AF RID: 111279 RVA: 0x00855D01 File Offset: 0x00853F01
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static float GetBuffRemainDuration(int entityId, int handle)
 	{
@@ -265,7 +263,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return debugBuff.GetRemainDuration();
 	}
 
-	// Token: 0x0601D5B3 RID: 120243 RVA: 0x0082EB11 File Offset: 0x0082CD11
+	// Token: 0x0601B2B0 RID: 111280 RVA: 0x00855D19 File Offset: 0x00853F19
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static float GetBuffTotalDuration(int entityId, int handle)
 	{
@@ -277,7 +275,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return debugBuff.Duration;
 	}
 
-	// Token: 0x0601D5B4 RID: 120244 RVA: 0x0082EB2C File Offset: 0x0082CD2C
+	// Token: 0x0601B2B1 RID: 111281 RVA: 0x00855D34 File Offset: 0x00853F34
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool HasServerBuff(int entityId, int handle)
 	{
@@ -303,7 +301,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return characterGasDebugComponent.HasServerBuff(handle) || (characterGasDebugComponent3 != null && characterGasDebugComponent3.HasServerBuff(handle)) || (!characterGasDebugComponent.HasBuffRequest(handle) && (characterGasDebugComponent3 == null || !characterGasDebugComponent3.HasBuffRequest(handle)));
 	}
 
-	// Token: 0x0601D5B5 RID: 120245 RVA: 0x0082EBC0 File Offset: 0x0082CDC0
+	// Token: 0x0601B2B2 RID: 111282 RVA: 0x00855DC8 File Offset: 0x00853FC8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static string GetAttributeDebugString(int entityId, string filterStr = "")
@@ -374,7 +372,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return stringBuilder.ToString().Trim();
 	}
 
-	// Token: 0x0601D5B6 RID: 120246 RVA: 0x0082EEE4 File Offset: 0x0082D0E4
+	// Token: 0x0601B2B3 RID: 111283 RVA: 0x008560EC File Offset: 0x008542EC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static string GetStateAttributeDebugString(int entityId, string filterStr = "")
@@ -477,7 +475,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return stringBuilder.ToString().Trim();
 	}
 
-	// Token: 0x0601D5B7 RID: 120247 RVA: 0x0082F2F0 File Offset: 0x0082D4F0
+	// Token: 0x0601B2B4 RID: 111284 RVA: 0x008564F8 File Offset: 0x008546F8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static string GetFormationAttributeDebugString(int entityId, string filterStr = "")
@@ -549,7 +547,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return stringBuilder.ToString().Trim();
 	}
 
-	// Token: 0x0601D5B8 RID: 120248 RVA: 0x0082F608 File Offset: 0x0082D808
+	// Token: 0x0601B2B5 RID: 111285 RVA: 0x00856810 File Offset: 0x00854A10
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static string GetSquadAttributeDebugString(int entityId, string filterStr = "")
@@ -615,7 +613,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return stringBuilder.ToString().Trim();
 	}
 
-	// Token: 0x0601D5B9 RID: 120249 RVA: 0x0082F854 File Offset: 0x0082DA54
+	// Token: 0x0601B2B6 RID: 111286 RVA: 0x00856A5C File Offset: 0x00854C5C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static string GetStateSquadAttributeDebugString(int entityId, string filterStr = "")
@@ -680,7 +678,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return stringBuilder.ToString().Trim();
 	}
 
-	// Token: 0x0601D5BA RID: 120250 RVA: 0x0082FA64 File Offset: 0x0082DC64
+	// Token: 0x0601B2B7 RID: 111287 RVA: 0x00856C6C File Offset: 0x00854E6C
 	[NullableContext(1)]
 	protected static Dictionary<string, string> ServerSkillMap(string serverPassiveSkillInfo)
 	{
@@ -703,7 +701,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return dictionary;
 	}
 
-	// Token: 0x0601D5BB RID: 120251 RVA: 0x0082FAFC File Offset: 0x0082DCFC
+	// Token: 0x0601B2B8 RID: 111288 RVA: 0x00856D04 File Offset: 0x00854F04
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static TArray<long> ExtractInt64ArrayFromString(string content)
@@ -724,7 +722,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return tarray;
 	}
 
-	// Token: 0x0601D5BC RID: 120252 RVA: 0x0082FB80 File Offset: 0x0082DD80
+	// Token: 0x0601B2B9 RID: 111289 RVA: 0x00856D88 File Offset: 0x00854F88
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static TArray<string> ExtractTagNameArrayFromString(string content)
@@ -751,7 +749,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return tarray;
 	}
 
-	// Token: 0x0601D5BD RID: 120253 RVA: 0x0082FC58 File Offset: 0x0082DE58
+	// Token: 0x0601B2BA RID: 111290 RVA: 0x00856E60 File Offset: 0x00855060
 	[NullableContext(1)]
 	protected static string GetPassiveCdString(PassiveSkillCdInfo cdInfo)
 	{
@@ -772,7 +770,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return stringBuilder.ToString();
 	}
 
-	// Token: 0x0601D5BE RID: 120254 RVA: 0x0082FD10 File Offset: 0x0082DF10
+	// Token: 0x0601B2BB RID: 111291 RVA: 0x00856F18 File Offset: 0x00855118
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static string GetPassiveDebugString(int entityId, string filterStr = "")
@@ -793,25 +791,32 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		{
 			BaseSkillCdComponent component3 = EntitySystem.Instance.GetComponent<BaseSkillCdComponent>(entityId);
 			stringBuilder.AppendLine("----- 客户端被动技能 -----");
-			PassiveSkillData[] allPassiveSkills = component.GetAllPassiveSkills();
-			for (int j = 0; j < allPassiveSkills.Length; j++)
+			foreach (PassiveSkillData passiveSkillData in component.GetAllPassiveSkills())
 			{
-				PassiveSkillData skill = allPassiveSkills[j];
-				if (list.Count <= 0 || list.Any((string key) => skill.SkillId.ToString().StartsWith(key)))
+				bool flag = false;
+				foreach (string value in list)
 				{
-					Trigger trigger = (component2 != null) ? component2.GetTrigger(skill.TriggerHandle) : null;
-					PassiveSkill? config = ConfigPassiveSkillById.GetConfig(skill.SkillId, true);
-					PassiveSkillCdInfo passiveSkillCdInfo = (component3 != null) ? component3.GetPassiveSkillCdInfo(skill.SkillId) : null;
-					string value = (passiveSkillCdInfo != null) ? CombatDebugBlueprintFunctionLibrary.GetPassiveCdString(passiveSkillCdInfo) : "【无CD组件】";
+					if (passiveSkillData.SkillId.ToString().StartsWith(value))
+					{
+						flag = true;
+						break;
+					}
+				}
+				if (list.Count <= 0 || flag)
+				{
+					Trigger trigger = (component2 != null) ? component2.GetTrigger(passiveSkillData.TriggerHandle) : null;
+					PassiveSkill? config = ConfigPassiveSkillById.GetConfig(passiveSkillData.SkillId, true);
+					PassiveSkillCdInfo passiveSkillCdInfo = (component3 != null) ? component3.GetPassiveSkillCdInfo(passiveSkillData.SkillId) : null;
+					string value2 = (passiveSkillCdInfo != null) ? CombatDebugBlueprintFunctionLibrary.GetPassiveCdString(passiveSkillCdInfo) : "【无CD组件】";
 					StringBuilder stringBuilder2 = stringBuilder;
 					StringBuilder stringBuilder3 = stringBuilder2;
 					StringBuilder.AppendInterpolatedStringHandler appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(13, 2, stringBuilder2);
 					appendInterpolatedStringHandler.AppendLiteral("技能: ");
-					appendInterpolatedStringHandler.AppendFormatted<long>(skill.SkillId);
+					appendInterpolatedStringHandler.AppendFormatted<long>(passiveSkillData.SkillId);
 					appendInterpolatedStringHandler.AppendLiteral(" handle: ");
-					appendInterpolatedStringHandler.AppendFormatted<int>(skill.TriggerHandle);
+					appendInterpolatedStringHandler.AppendFormatted<int>(passiveSkillData.TriggerHandle);
 					stringBuilder3.AppendLine(ref appendInterpolatedStringHandler);
-					stringBuilder.Append(value);
+					stringBuilder.Append(value2);
 					stringBuilder2 = stringBuilder;
 					StringBuilder stringBuilder4 = stringBuilder2;
 					appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(4, 1, stringBuilder2);
@@ -844,10 +849,9 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 					appendInterpolatedStringHandler.AppendFormatted(((EExecuteType)((config != null) ? new int?(config.GetValueOrDefault().ExecuteType) : null).Value).ToString());
 					stringBuilder8.AppendLine(ref appendInterpolatedStringHandler);
 					stringBuilder.AppendLine("触发行为:");
-					foreach (SkillActionData act2 in skill.Actions)
+					foreach (SkillActionData skillActionData in passiveSkillData.Actions)
 					{
-						SkillActionData act = act2;
-						switch (act.Action)
+						switch (skillActionData.Action)
 						{
 						case ESkillAction.AddBullet:
 						{
@@ -855,17 +859,24 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 							StringBuilder stringBuilder9 = stringBuilder2;
 							appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(9, 1, stringBuilder2);
 							appendInterpolatedStringHandler.AppendLiteral("    添加子弹 ");
-							appendInterpolatedStringHandler.AppendFormatted(string.Join('、', act.BulletRowNames));
+							appendInterpolatedStringHandler.AppendFormatted(string.Join('、', skillActionData.BulletRowNames));
 							stringBuilder9.AppendLine(ref appendInterpolatedStringHandler);
 							break;
 						}
 						case ESkillAction.RemoveBullet:
 						{
+							List<string> list2 = new List<string>();
+							int num = 0;
+							foreach (string str in skillActionData.BulletRowNames)
+							{
+								list2.Add(str + ((skillActionData.SummonChild != null && skillActionData.SummonChild.Length > num && skillActionData.SummonChild[num]) ? "创建子子弹" : "不创建子子弹"));
+								num++;
+							}
 							stringBuilder2 = stringBuilder;
 							StringBuilder stringBuilder10 = stringBuilder2;
 							appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(9, 1, stringBuilder2);
 							appendInterpolatedStringHandler.AppendLiteral("    移除子弹 ");
-							appendInterpolatedStringHandler.AppendFormatted(string.Join<string>('、', act.BulletRowNames.Select((string v, int index) => v + ((act.SummonChild != null && act.SummonChild.Length > index && act.SummonChild[index]) ? "创建子子弹" : "不创建子子弹"))));
+							appendInterpolatedStringHandler.AppendFormatted(string.Join<string>('、', list2));
 							stringBuilder10.AppendLine(ref appendInterpolatedStringHandler);
 							break;
 						}
@@ -875,36 +886,41 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 							StringBuilder stringBuilder11 = stringBuilder2;
 							appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(11, 1, stringBuilder2);
 							appendInterpolatedStringHandler.AppendLiteral("    添加Buff ");
-							appendInterpolatedStringHandler.AppendFormatted(string.Join<long>('、', act.BuffId));
+							appendInterpolatedStringHandler.AppendFormatted(string.Join<long>('、', skillActionData.BuffId));
 							stringBuilder11.AppendLine(ref appendInterpolatedStringHandler);
 							break;
 						}
 						case ESkillAction.RemoveBuff:
 						{
-							stringBuilder2 = stringBuilder;
-							StringBuilder stringBuilder12 = stringBuilder2;
-							appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(11, 1, stringBuilder2);
-							appendInterpolatedStringHandler.AppendLiteral("    移除Buff ");
-							appendInterpolatedStringHandler.AppendFormatted(string.Join<string>('、', act.BuffId.Select(delegate(long v, int i)
+							List<string> list3 = new List<string>();
+							int num2 = 0;
+							foreach (long value3 in skillActionData.BuffId)
 							{
+								List<string> list4 = list3;
 								DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 2);
-								defaultInterpolatedStringHandler.AppendFormatted<long>(v);
-								string value3;
-								if (act.StackCount == null || act.StackCount.Length <= i || act.StackCount[i] <= 0)
+								defaultInterpolatedStringHandler.AppendFormatted<long>(value3);
+								string value4;
+								if (skillActionData.StackCount == null || skillActionData.StackCount.Length <= num2 || skillActionData.StackCount[num2] <= 0)
 								{
-									value3 = "";
+									value4 = "";
 								}
 								else
 								{
 									DefaultInterpolatedStringHandler defaultInterpolatedStringHandler2 = new DefaultInterpolatedStringHandler(5, 1);
 									defaultInterpolatedStringHandler2.AppendLiteral("(移除");
-									defaultInterpolatedStringHandler2.AppendFormatted<int>(act.StackCount[i]);
+									defaultInterpolatedStringHandler2.AppendFormatted<int>(skillActionData.StackCount[num2]);
 									defaultInterpolatedStringHandler2.AppendLiteral("层)");
-									value3 = defaultInterpolatedStringHandler2.ToStringAndClear();
+									value4 = defaultInterpolatedStringHandler2.ToStringAndClear();
 								}
-								defaultInterpolatedStringHandler.AppendFormatted(value3);
-								return defaultInterpolatedStringHandler.ToStringAndClear();
-							})));
+								defaultInterpolatedStringHandler.AppendFormatted(value4);
+								list4.Add(defaultInterpolatedStringHandler.ToStringAndClear());
+								num2++;
+							}
+							stringBuilder2 = stringBuilder;
+							StringBuilder stringBuilder12 = stringBuilder2;
+							appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(11, 1, stringBuilder2);
+							appendInterpolatedStringHandler.AppendLiteral("    移除Buff ");
+							appendInterpolatedStringHandler.AppendFormatted(string.Join<string>('、', list3));
 							stringBuilder12.AppendLine(ref appendInterpolatedStringHandler);
 							break;
 						}
@@ -914,7 +930,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 							StringBuilder stringBuilder13 = stringBuilder2;
 							appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(11, 1, stringBuilder2);
 							appendInterpolatedStringHandler.AppendLiteral("    触发主动技能 ");
-							appendInterpolatedStringHandler.AppendFormatted<int>(act.SkillId);
+							appendInterpolatedStringHandler.AppendFormatted<int>(skillActionData.SkillId);
 							stringBuilder13.AppendLine(ref appendInterpolatedStringHandler);
 							break;
 						}
@@ -924,15 +940,15 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 							StringBuilder stringBuilder14 = stringBuilder2;
 							appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(13, 5, stringBuilder2);
 							appendInterpolatedStringHandler.AppendLiteral("    锁定目标 ");
-							appendInterpolatedStringHandler.AppendFormatted<bool>(act.IsHardLock);
+							appendInterpolatedStringHandler.AppendFormatted<bool>(skillActionData.IsHardLock);
 							appendInterpolatedStringHandler.AppendLiteral(" ");
-							appendInterpolatedStringHandler.AppendFormatted<int>(act.LockOnConfigId);
+							appendInterpolatedStringHandler.AppendFormatted<int>(skillActionData.LockOnConfigId);
 							appendInterpolatedStringHandler.AppendLiteral(" ");
-							appendInterpolatedStringHandler.AppendFormatted<ESkillTargetPriority>(act.SkillTargetPriority);
+							appendInterpolatedStringHandler.AppendFormatted<ESkillTargetPriority>(skillActionData.SkillTargetPriority);
 							appendInterpolatedStringHandler.AppendLiteral(" ");
-							appendInterpolatedStringHandler.AppendFormatted<bool>(act.ShowTarget);
+							appendInterpolatedStringHandler.AppendFormatted<bool>(skillActionData.ShowTarget);
 							appendInterpolatedStringHandler.AppendLiteral(" ");
-							appendInterpolatedStringHandler.AppendFormatted<bool>(act.GlobalTarget);
+							appendInterpolatedStringHandler.AppendFormatted<bool>(skillActionData.GlobalTarget);
 							stringBuilder14.AppendLine(ref appendInterpolatedStringHandler);
 							break;
 						}
@@ -942,7 +958,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 							StringBuilder stringBuilder15 = stringBuilder2;
 							appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(11, 1, stringBuilder2);
 							appendInterpolatedStringHandler.AppendLiteral("    自定义行为 ");
-							Formula formula = act.Formula;
+							Formula formula = skillActionData.Formula;
 							appendInterpolatedStringHandler.AppendFormatted((formula != null) ? formula.FormulaStr : null);
 							appendInterpolatedStringHandler.AppendLiteral(" ");
 							stringBuilder15.AppendLine(ref appendInterpolatedStringHandler);
@@ -950,45 +966,50 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 						}
 						case ESkillAction.ReduceSkillCd:
 						{
+							List<string> list5 = new List<string>();
+							int num3 = 0;
+							foreach (long value5 in skillActionData.ReduceSkillId)
+							{
+								List<string> list6 = list5;
+								DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 4);
+								defaultInterpolatedStringHandler.AppendFormatted<long>(value5);
+								defaultInterpolatedStringHandler.AppendFormatted((skillActionData.CdResetType != null && skillActionData.CdResetType.Length > num3) ? skillActionData.CdResetType[num3].ToString() : "");
+								string value6;
+								if (skillActionData.DecreaseRatio == null || skillActionData.DecreaseRatio.Length <= num3)
+								{
+									value6 = "";
+								}
+								else
+								{
+									DefaultInterpolatedStringHandler defaultInterpolatedStringHandler2 = new DefaultInterpolatedStringHandler(2, 1);
+									defaultInterpolatedStringHandler2.AppendLiteral("(");
+									defaultInterpolatedStringHandler2.AppendFormatted<float>(skillActionData.DecreaseRatio[num3]);
+									defaultInterpolatedStringHandler2.AppendLiteral(")");
+									value6 = defaultInterpolatedStringHandler2.ToStringAndClear();
+								}
+								defaultInterpolatedStringHandler.AppendFormatted(value6);
+								string value7;
+								if (skillActionData.DecreaseMagnitude == null || skillActionData.DecreaseMagnitude.Length <= num3)
+								{
+									value7 = "";
+								}
+								else
+								{
+									DefaultInterpolatedStringHandler defaultInterpolatedStringHandler2 = new DefaultInterpolatedStringHandler(2, 1);
+									defaultInterpolatedStringHandler2.AppendLiteral("(");
+									defaultInterpolatedStringHandler2.AppendFormatted<float>(skillActionData.DecreaseMagnitude[num3]);
+									defaultInterpolatedStringHandler2.AppendLiteral(")");
+									value7 = defaultInterpolatedStringHandler2.ToStringAndClear();
+								}
+								defaultInterpolatedStringHandler.AppendFormatted(value7);
+								list6.Add(defaultInterpolatedStringHandler.ToStringAndClear());
+								num3++;
+							}
 							stringBuilder2 = stringBuilder;
 							StringBuilder stringBuilder16 = stringBuilder2;
 							appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(11, 1, stringBuilder2);
 							appendInterpolatedStringHandler.AppendLiteral("    减少技能CD ");
-							appendInterpolatedStringHandler.AppendFormatted(string.Join<string>('、', act.ReduceSkillId.Select(delegate(long v, int i)
-							{
-								DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 4);
-								defaultInterpolatedStringHandler.AppendFormatted<long>(v);
-								defaultInterpolatedStringHandler.AppendFormatted((act.CdResetType != null && act.CdResetType.Length > i) ? act.CdResetType[i].ToString() : "");
-								string value3;
-								if (act.DecreaseRatio == null || act.DecreaseRatio.Length <= i)
-								{
-									value3 = "";
-								}
-								else
-								{
-									DefaultInterpolatedStringHandler defaultInterpolatedStringHandler2 = new DefaultInterpolatedStringHandler(2, 1);
-									defaultInterpolatedStringHandler2.AppendLiteral("(");
-									defaultInterpolatedStringHandler2.AppendFormatted<float>(act.DecreaseRatio[i]);
-									defaultInterpolatedStringHandler2.AppendLiteral(")");
-									value3 = defaultInterpolatedStringHandler2.ToStringAndClear();
-								}
-								defaultInterpolatedStringHandler.AppendFormatted(value3);
-								string value4;
-								if (act.DecreaseMagnitude == null || act.DecreaseMagnitude.Length <= i)
-								{
-									value4 = "";
-								}
-								else
-								{
-									DefaultInterpolatedStringHandler defaultInterpolatedStringHandler2 = new DefaultInterpolatedStringHandler(2, 1);
-									defaultInterpolatedStringHandler2.AppendLiteral("(");
-									defaultInterpolatedStringHandler2.AppendFormatted<float>(act.DecreaseMagnitude[i]);
-									defaultInterpolatedStringHandler2.AppendLiteral(")");
-									value4 = defaultInterpolatedStringHandler2.ToStringAndClear();
-								}
-								defaultInterpolatedStringHandler.AppendFormatted(value4);
-								return defaultInterpolatedStringHandler.ToStringAndClear();
-							})));
+							appendInterpolatedStringHandler.AppendFormatted(string.Join<string>('、', list5));
 							stringBuilder16.AppendLine(ref appendInterpolatedStringHandler);
 							break;
 						}
@@ -1001,8 +1022,12 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 					if (!string.IsNullOrEmpty(text))
 					{
 						stringBuilder.AppendLine("最后触发结果:");
-						stringBuilder.AppendLine(string.Join("\n", from s in text.Trim().Split('\n', StringSplitOptions.None)
-						select "    " + s));
+						string[] array2 = text.Trim().Split('\n', StringSplitOptions.None);
+						for (int k = 0; k < array2.Length; k++)
+						{
+							array2[k] = "    " + array2[k];
+						}
+						stringBuilder.AppendLine(string.Join("\n", array2));
 					}
 					stringBuilder.AppendLine();
 					stringBuilder.AppendLine();
@@ -1032,11 +1057,20 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 			{
 				foreach (KeyValuePair<string, string> keyValuePair in CombatDebugBlueprintFunctionLibrary.ServerSkillMap(text3))
 				{
-					string skillId = keyValuePair.Key;
-					string value2 = keyValuePair.Value;
-					if (list.Any((string key) => skillId.StartsWith(key)))
+					string key = keyValuePair.Key;
+					string value8 = keyValuePair.Value;
+					bool flag2 = false;
+					for (int l = 0; l < list.Count; l++)
 					{
-						stringBuilder.Append(value2);
+						if (key.StartsWith(list[l]))
+						{
+							flag2 = true;
+							break;
+						}
+					}
+					if (flag2)
+					{
+						stringBuilder.Append(value8);
 					}
 				}
 			}
@@ -1044,7 +1078,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return stringBuilder.ToString().Trim();
 	}
 
-	// Token: 0x0601D5BF RID: 120255 RVA: 0x00830590 File Offset: 0x0082E790
+	// Token: 0x0601B2BC RID: 111292 RVA: 0x008579C4 File Offset: 0x00855BC4
 	[NullableContext(1)]
 	protected static bool IsRegexFuzzyMatch(string str, string pattern)
 	{
@@ -1052,17 +1086,58 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return Regex.IsMatch(str, pattern2);
 	}
 
-	// Token: 0x0601D5C0 RID: 120256 RVA: 0x008305B8 File Offset: 0x0082E7B8
+	// Token: 0x0601B2BD RID: 111293 RVA: 0x008579EC File Offset: 0x00855BEC
+	[NullableContext(1)]
+	private static bool IsCueFilterMatched(long cueId, List<string> filters)
+	{
+		if (filters.Count == 0)
+		{
+			return true;
+		}
+		string text = cueId.ToString();
+		for (int i = 0; i < filters.Count; i++)
+		{
+			if (text.Contains(filters[i]))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	// Token: 0x0601B2BE RID: 111294 RVA: 0x00857A30 File Offset: 0x00855C30
+	[NullableContext(1)]
+	private static bool IsTagFilterMatched(string tagName, List<string> filters)
+	{
+		if (filters.Count == 0)
+		{
+			return true;
+		}
+		for (int i = 0; i < filters.Count; i++)
+		{
+			if (CombatDebugBlueprintFunctionLibrary.IsRegexFuzzyMatch(tagName, filters[i]))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	// Token: 0x0601B2BF RID: 111295 RVA: 0x00857A6C File Offset: 0x00855C6C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string GetTagsDebugString(int entityId, string filterStr = "")
 	{
-		List<string> list = (from name in filterStr.Split(new char[]
+		string[] array = filterStr.Split(new char[]
 		{
 			',',
 			'，'
-		}, StringSplitOptions.RemoveEmptyEntries)
-		select name.Trim()).ToList<string>();
+		}, StringSplitOptions.RemoveEmptyEntries);
+		List<string> list = new List<string>(array.Length);
+		foreach (string text in array)
+		{
+			list.Add(text.Trim());
+		}
 		BaseTagComponent component = EntitySystem.Instance.GetComponent<BaseTagComponent>(entityId);
 		TagContainer tagContainer = (component != null) ? component.TagContainer : null;
 		CharacterGasDebugComponent component2 = EntitySystem.Instance.GetComponent<CharacterGasDebugComponent>(entityId);
@@ -1112,8 +1187,8 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 				if (dictionary.ContainsKey(entityBattleTagInfo.TagId))
 				{
 					Dictionary<int, int> dictionary4 = dictionary;
-					int tagId = entityBattleTagInfo.TagId;
-					dictionary4[tagId] += entityBattleTagInfo.Count;
+					int i = entityBattleTagInfo.TagId;
+					dictionary4[i] += entityBattleTagInfo.Count;
 				}
 				else
 				{
@@ -1130,8 +1205,8 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 				if (dictionary.ContainsKey(entityBattleTagInfo2.TagId))
 				{
 					Dictionary<int, int> dictionary4 = dictionary;
-					int tagId = entityBattleTagInfo2.TagId;
-					dictionary4[tagId] += entityBattleTagInfo2.Count;
+					int i = entityBattleTagInfo2.TagId;
+					dictionary4[i] += entityBattleTagInfo2.Count;
 				}
 				else
 				{
@@ -1142,21 +1217,21 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		}
 		StringBuilder stringBuilder = new StringBuilder();
 		stringBuilder.AppendLine("【客户端】");
-		foreach (int tagId2 in tagContainer.GetAllExactTags())
+		foreach (int tagId in tagContainer.GetAllExactTags())
 		{
-			string tagName = GameplayTagUtils.GetNameByTagId(tagId2);
-			if (string.IsNullOrEmpty(tagName) || list.Count <= 0 || list.Any((string key) => CombatDebugBlueprintFunctionLibrary.IsRegexFuzzyMatch(tagName, key)))
+			string nameByTagId = GameplayTagUtils.GetNameByTagId(tagId);
+			if (string.IsNullOrEmpty(nameByTagId) || CombatDebugBlueprintFunctionLibrary.IsTagFilterMatched(nameByTagId, list))
 			{
-				int exactTagCount = tagContainer.GetExactTagCount(tagId2);
+				int exactTagCount = tagContainer.GetExactTagCount(tagId);
 				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(4, 2);
-				defaultInterpolatedStringHandler.AppendFormatted(GameplayTagUtils.GetNameByTagId(tagId2));
+				defaultInterpolatedStringHandler.AppendFormatted(GameplayTagUtils.GetNameByTagId(tagId));
 				defaultInterpolatedStringHandler.AppendLiteral(" x ");
 				defaultInterpolatedStringHandler.AppendFormatted<int>(exactTagCount);
 				defaultInterpolatedStringHandler.AppendLiteral("(");
 				StringBuilder stringBuilder2 = new StringBuilder(defaultInterpolatedStringHandler.ToStringAndClear());
 				foreach (ETagChannel etagChannel in tagContainer.GetAllChannels())
 				{
-					int rawTagCount = tagContainer.GetRawTagCount(etagChannel, tagId2);
+					int rawTagCount = tagContainer.GetRawTagCount(etagChannel, tagId);
 					if (rawTagCount > 0)
 					{
 						StringBuilder stringBuilder3 = stringBuilder2;
@@ -1176,13 +1251,13 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		stringBuilder.AppendLine("【服务端】");
 		foreach (KeyValuePair<int, int> keyValuePair in dictionary)
 		{
-			int key3 = keyValuePair.Key;
+			int key = keyValuePair.Key;
 			int value = keyValuePair.Value;
-			string tagName = GameplayTagUtils.GetNameByTagId(key3);
-			if (string.IsNullOrEmpty(tagName) || list.Count <= 0 || list.Any((string key) => CombatDebugBlueprintFunctionLibrary.IsRegexFuzzyMatch(tagName, key)))
+			string nameByTagId2 = GameplayTagUtils.GetNameByTagId(key);
+			if (string.IsNullOrEmpty(nameByTagId2) || CombatDebugBlueprintFunctionLibrary.IsTagFilterMatched(nameByTagId2, list))
 			{
 				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(4, 2);
-				defaultInterpolatedStringHandler.AppendFormatted(GameplayTagUtils.GetNameByTagId(key3));
+				defaultInterpolatedStringHandler.AppendFormatted(GameplayTagUtils.GetNameByTagId(key));
 				defaultInterpolatedStringHandler.AppendLiteral(" x ");
 				defaultInterpolatedStringHandler.AppendFormatted<int>(value);
 				defaultInterpolatedStringHandler.AppendLiteral("(");
@@ -1191,7 +1266,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 				{
 					string key2 = keyValuePair2.Key;
 					int num;
-					if (keyValuePair2.Value.TryGetValue(key3, out num) && num > 0)
+					if (keyValuePair2.Value.TryGetValue(key, out num) && num > 0)
 					{
 						StringBuilder stringBuilder3 = stringBuilder5;
 						StringBuilder stringBuilder6 = stringBuilder3;
@@ -1209,7 +1284,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return stringBuilder.ToString().Trim();
 	}
 
-	// Token: 0x0601D5C1 RID: 120257 RVA: 0x00830BA0 File Offset: 0x0082EDA0
+	// Token: 0x0601B2C0 RID: 111296 RVA: 0x00858010 File Offset: 0x00856210
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string GetCueDebugString(int entityId, string filterStr = "")
@@ -1226,29 +1301,37 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		{
 			list.Add(obj.ToString());
 		}
-		using (IEnumerator<GameplayCueBase> enumerator2 = component.GetAllCurrentCueRef().GetEnumerator())
+		foreach (GameplayCueBase gameplayCueBase in component.GetAllCurrentCueRef())
 		{
-			while (enumerator2.MoveNext())
+			if (CombatDebugBlueprintFunctionLibrary.IsCueFilterMatched(gameplayCueBase.CueConfig.Id, list))
 			{
-				GameplayCueBase cue = enumerator2.Current;
-				if (list.Count <= 0 || list.Any((string key) => cue.CueConfig.Id.ToString().Contains(key)))
+				StringBuilder stringBuilder2 = stringBuilder;
+				StringBuilder stringBuilder3 = stringBuilder2;
+				StringBuilder.AppendInterpolatedStringHandler appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(42, 4, stringBuilder2);
+				appendInterpolatedStringHandler.AppendLiteral("CueId: ");
+				appendInterpolatedStringHandler.AppendFormatted<long>(gameplayCueBase.CueConfig.Id);
+				appendInterpolatedStringHandler.AppendLiteral(" CueHandleId: [");
+				appendInterpolatedStringHandler.AppendFormatted(string.Join<long>(", ", gameplayCueBase.CueHandleIds));
+				appendInterpolatedStringHandler.AppendLiteral("] CueType: ");
+				appendInterpolatedStringHandler.AppendFormatted<int>(gameplayCueBase.CueConfig.CueType);
+				appendInterpolatedStringHandler.AppendLiteral(" BuffId: ");
+				appendInterpolatedStringHandler.AppendFormatted<long?>(gameplayCueBase.BuffId);
+				stringBuilder3.AppendLine(ref appendInterpolatedStringHandler);
+			}
+		}
+		bool flag = false;
+		using (List<EntityHandle>.Enumerator enumerator3 = SceneTeamModel.Instance.GetTeamEntities(false).GetEnumerator())
+		{
+			while (enumerator3.MoveNext())
+			{
+				if (enumerator3.Current.Id == entityId)
 				{
-					StringBuilder stringBuilder2 = stringBuilder;
-					StringBuilder stringBuilder3 = stringBuilder2;
-					StringBuilder.AppendInterpolatedStringHandler appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(42, 4, stringBuilder2);
-					appendInterpolatedStringHandler.AppendLiteral("CueId: ");
-					appendInterpolatedStringHandler.AppendFormatted<long>(cue.CueConfig.Id);
-					appendInterpolatedStringHandler.AppendLiteral(" CueHandleId: [");
-					appendInterpolatedStringHandler.AppendFormatted(string.Join<long>(", ", cue.CueHandleIds));
-					appendInterpolatedStringHandler.AppendLiteral("] CueType: ");
-					appendInterpolatedStringHandler.AppendFormatted<int>(cue.CueConfig.CueType);
-					appendInterpolatedStringHandler.AppendLiteral(" BuffId: ");
-					appendInterpolatedStringHandler.AppendFormatted<long?>(cue.BuffId);
-					stringBuilder3.AppendLine(ref appendInterpolatedStringHandler);
+					flag = true;
+					break;
 				}
 			}
 		}
-		if (!SceneTeamModel.Instance.GetTeamEntities(false).Any((EntityHandle handle) => handle.Id == entityId))
+		if (!flag)
 		{
 			return stringBuilder.ToString();
 		}
@@ -1259,44 +1342,36 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		{
 			return stringBuilder.ToString();
 		}
-		using (IEnumerator<GameplayCueBase> enumerator2 = playerGameplayCueComponent.GetAllCurrentCueRef().GetEnumerator())
+		foreach (GameplayCueBase gameplayCueBase2 in playerGameplayCueComponent.GetAllCurrentCueRef())
 		{
-			while (enumerator2.MoveNext())
+			if (CombatDebugBlueprintFunctionLibrary.IsCueFilterMatched(gameplayCueBase2.CueConfig.Id, list))
 			{
-				GameplayCueBase cue = enumerator2.Current;
-				if (list.Count <= 0 || list.Any((string key) => cue.CueConfig.Id.ToString().Contains(key)))
-				{
-					StringBuilder stringBuilder2 = stringBuilder;
-					StringBuilder stringBuilder4 = stringBuilder2;
-					StringBuilder.AppendInterpolatedStringHandler appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(42, 4, stringBuilder2);
-					appendInterpolatedStringHandler.AppendLiteral("CueId: ");
-					appendInterpolatedStringHandler.AppendFormatted<long>(cue.CueConfig.Id);
-					appendInterpolatedStringHandler.AppendLiteral(" CueHandleId: [");
-					appendInterpolatedStringHandler.AppendFormatted(string.Join<long>(", ", cue.CueHandleIds));
-					appendInterpolatedStringHandler.AppendLiteral("] CueType: ");
-					appendInterpolatedStringHandler.AppendFormatted<int>(cue.CueConfig.CueType);
-					appendInterpolatedStringHandler.AppendLiteral(" BuffId: ");
-					appendInterpolatedStringHandler.AppendFormatted<long?>(cue.BuffId);
-					stringBuilder4.AppendLine(ref appendInterpolatedStringHandler);
-				}
+				StringBuilder stringBuilder2 = stringBuilder;
+				StringBuilder stringBuilder4 = stringBuilder2;
+				StringBuilder.AppendInterpolatedStringHandler appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(42, 4, stringBuilder2);
+				appendInterpolatedStringHandler.AppendLiteral("CueId: ");
+				appendInterpolatedStringHandler.AppendFormatted<long>(gameplayCueBase2.CueConfig.Id);
+				appendInterpolatedStringHandler.AppendLiteral(" CueHandleId: [");
+				appendInterpolatedStringHandler.AppendFormatted(string.Join<long>(", ", gameplayCueBase2.CueHandleIds));
+				appendInterpolatedStringHandler.AppendLiteral("] CueType: ");
+				appendInterpolatedStringHandler.AppendFormatted<int>(gameplayCueBase2.CueConfig.CueType);
+				appendInterpolatedStringHandler.AppendLiteral(" BuffId: ");
+				appendInterpolatedStringHandler.AppendFormatted<long?>(gameplayCueBase2.BuffId);
+				stringBuilder4.AppendLine(ref appendInterpolatedStringHandler);
 			}
 		}
 		return stringBuilder.ToString();
 	}
 
-	// Token: 0x0601D5C2 RID: 120258 RVA: 0x00830EDC File Offset: 0x0082F0DC
+	// Token: 0x0601B2C1 RID: 111297 RVA: 0x00858318 File Offset: 0x00856518
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static UDataTable LoadDataTable(string assetPath)
 	{
-		if (!Info.Instance.IsPlayInEditor)
-		{
-			return null;
-		}
-		return ResourceSystem.Instance.Load<UDataTable>(assetPath, "Debug");
+		return null;
 	}
 
-	// Token: 0x0601D5C3 RID: 120259 RVA: 0x00830EFC File Offset: 0x0082F0FC
+	// Token: 0x0601B2C2 RID: 111298 RVA: 0x0085831C File Offset: 0x0085651C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void GetDebugStateMachine(int entityId, ref TArray<FText> output)
@@ -1320,7 +1395,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		}
 	}
 
-	// Token: 0x0601D5C4 RID: 120260 RVA: 0x00830F7C File Offset: 0x0082F17C
+	// Token: 0x0601B2C3 RID: 111299 RVA: 0x0085839C File Offset: 0x0085659C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string GetSkillDebugString(int entityId)
@@ -1423,7 +1498,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return stringBuilder.ToString();
 	}
 
-	// Token: 0x0601D5C5 RID: 120261 RVA: 0x00831314 File Offset: 0x0082F514
+	// Token: 0x0601B2C4 RID: 111300 RVA: 0x00858734 File Offset: 0x00856934
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string GetSkillLogString(int entityId, string filterStr = "")
@@ -1436,7 +1511,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return component.GetSkillLogString(filterStr);
 	}
 
-	// Token: 0x0601D5C6 RID: 120262 RVA: 0x00831340 File Offset: 0x0082F540
+	// Token: 0x0601B2C5 RID: 111301 RVA: 0x00858760 File Offset: 0x00856960
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ClearSkillLogString(int entityId)
 	{
@@ -1447,7 +1522,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		}
 	}
 
-	// Token: 0x0601D5C7 RID: 120263 RVA: 0x00831364 File Offset: 0x0082F564
+	// Token: 0x0601B2C6 RID: 111302 RVA: 0x00858784 File Offset: 0x00856984
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string GetSkillBehaviorLogString(int entityId, string filterStr = "")
@@ -1460,7 +1535,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return component.GetSkillBehaviorLogString(filterStr);
 	}
 
-	// Token: 0x0601D5C8 RID: 120264 RVA: 0x00831390 File Offset: 0x0082F590
+	// Token: 0x0601B2C7 RID: 111303 RVA: 0x008587B0 File Offset: 0x008569B0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ClearSkillBehaviorLogString(int entityId)
 	{
@@ -1471,7 +1546,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		}
 	}
 
-	// Token: 0x0601D5C9 RID: 120265 RVA: 0x008313B4 File Offset: 0x0082F5B4
+	// Token: 0x0601B2C8 RID: 111304 RVA: 0x008587D4 File Offset: 0x008569D4
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string GetBulletDebugString(int entityId)
@@ -1502,7 +1577,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return stringBuilder.ToString();
 	}
 
-	// Token: 0x0601D5CA RID: 120266 RVA: 0x008314AC File Offset: 0x0082F6AC
+	// Token: 0x0601B2C9 RID: 111305 RVA: 0x008588CC File Offset: 0x00856ACC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string GetBulletLogString(int entityId, string filterStr = "")
@@ -1515,7 +1590,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return component.GetBulletLogString(filterStr);
 	}
 
-	// Token: 0x0601D5CB RID: 120267 RVA: 0x008314E0 File Offset: 0x0082F6E0
+	// Token: 0x0601B2CA RID: 111306 RVA: 0x00858900 File Offset: 0x00856B00
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ClearBulletLogString(int entityId)
 	{
@@ -1526,7 +1601,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		}
 	}
 
-	// Token: 0x0601D5CC RID: 120268 RVA: 0x0083150C File Offset: 0x0082F70C
+	// Token: 0x0601B2CB RID: 111307 RVA: 0x0085892C File Offset: 0x00856B2C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEntityDebugMove(int entityId, bool enable)
 	{
@@ -1537,7 +1612,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		}
 	}
 
-	// Token: 0x0601D5CD RID: 120269 RVA: 0x0083152F File Offset: 0x0082F72F
+	// Token: 0x0601B2CC RID: 111308 RVA: 0x0085894F File Offset: 0x00856B4F
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (CombatDebugBlueprintFunctionLibrary._ClassPtr == IntPtr.Zero)
@@ -1547,89 +1622,89 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		return CombatDebugBlueprintFunctionLibrary._ClassPtr;
 	}
 
-	// Token: 0x0601D5CE RID: 120270 RVA: 0x00831554 File Offset: 0x0082F754
+	// Token: 0x0601B2CD RID: 111309 RVA: 0x00858974 File Offset: 0x00856B74
 	public CombatDebugBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(CombatDebugBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D5CF RID: 120271 RVA: 0x0083157C File Offset: 0x0082F77C
+	// Token: 0x0601B2CE RID: 111310 RVA: 0x0085899C File Offset: 0x00856B9C
 	[NullableContext(1)]
 	public CombatDebugBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(CombatDebugBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D5D0 RID: 120272 RVA: 0x008315AF File Offset: 0x0082F7AF
+	// Token: 0x0601B2CF RID: 111311 RVA: 0x008589CF File Offset: 0x00856BCF
 	protected CombatDebugBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601D5D1 RID: 120273 RVA: 0x008315B8 File Offset: 0x0082F7B8
+	// Token: 0x0601B2D0 RID: 111312 RVA: 0x008589D8 File Offset: 0x00856BD8
 	protected unsafe static void __CPPCALL_AddPassiveSkillForDebug_Implementation(CombatDebugBlueprintFunctionLibrary.__AddPassiveSkillForDebug_FunctionParams* __Params)
 	{
 		CombatDebugBlueprintFunctionLibrary.AddPassiveSkillForDebug(__Params->entityId, __Params->passiveSkillId);
 	}
 
-	// Token: 0x0601D5D2 RID: 120274 RVA: 0x008315CB File Offset: 0x0082F7CB
+	// Token: 0x0601B2D1 RID: 111313 RVA: 0x008589EB File Offset: 0x00856BEB
 	protected unsafe static void __CPPCALL_RemovePassiveSkillForDebug_Implementation(CombatDebugBlueprintFunctionLibrary.__RemovePassiveSkillForDebug_FunctionParams* __Params)
 	{
 		CombatDebugBlueprintFunctionLibrary.RemovePassiveSkillForDebug(__Params->entityId, __Params->passiveSkillId);
 	}
 
-	// Token: 0x0601D5D3 RID: 120275 RVA: 0x008315DE File Offset: 0x0082F7DE
+	// Token: 0x0601B2D2 RID: 111314 RVA: 0x008589FE File Offset: 0x00856BFE
 	protected unsafe static void __CPPCALL_GetDebugMonsterMovePath_Implementation(CombatDebugBlueprintFunctionLibrary.__GetDebugMonsterMovePath_FunctionParams* __Params)
 	{
 		__Params->__Result = CombatDebugBlueprintFunctionLibrary.GetDebugMonsterMovePath();
 	}
 
-	// Token: 0x0601D5D4 RID: 120276 RVA: 0x008315EB File Offset: 0x0082F7EB
+	// Token: 0x0601B2D3 RID: 111315 RVA: 0x00858A0B File Offset: 0x00856C0B
 	protected unsafe static void __CPPCALL_SetDebugMonsterMovePath_Implementation(CombatDebugBlueprintFunctionLibrary.__SetDebugMonsterMovePath_FunctionParams* __Params)
 	{
 		CombatDebugBlueprintFunctionLibrary.SetDebugMonsterMovePath(__Params->value);
 	}
 
-	// Token: 0x0601D5D5 RID: 120277 RVA: 0x008315F8 File Offset: 0x0082F7F8
+	// Token: 0x0601B2D4 RID: 111316 RVA: 0x00858A18 File Offset: 0x00856C18
 	protected unsafe static void __CPPCALL_GetDebugMonsterControl_Implementation(CombatDebugBlueprintFunctionLibrary.__GetDebugMonsterControl_FunctionParams* __Params)
 	{
 		__Params->__Result = CombatDebugBlueprintFunctionLibrary.GetDebugMonsterControl();
 	}
 
-	// Token: 0x0601D5D6 RID: 120278 RVA: 0x00831605 File Offset: 0x0082F805
+	// Token: 0x0601B2D5 RID: 111317 RVA: 0x00858A25 File Offset: 0x00856C25
 	protected unsafe static void __CPPCALL_SetDebugMonsterControl_Implementation(CombatDebugBlueprintFunctionLibrary.__SetDebugMonsterControl_FunctionParams* __Params)
 	{
 		CombatDebugBlueprintFunctionLibrary.SetDebugMonsterControl(__Params->value);
 	}
 
-	// Token: 0x0601D5D7 RID: 120279 RVA: 0x00831612 File Offset: 0x0082F812
+	// Token: 0x0601B2D6 RID: 111318 RVA: 0x00858A32 File Offset: 0x00856C32
 	protected unsafe static void __CPPCALL_OpenMonsterServerLogic_Implementation(CombatDebugBlueprintFunctionLibrary.__OpenMonsterServerLogic_FunctionParams* __Params)
 	{
 		CombatDebugBlueprintFunctionLibrary.OpenMonsterServerLogic(__Params->value);
 	}
 
-	// Token: 0x0601D5D8 RID: 120280 RVA: 0x0083161F File Offset: 0x0082F81F
+	// Token: 0x0601B2D7 RID: 111319 RVA: 0x00858A3F File Offset: 0x00856C3F
 	protected unsafe static void __CPPCALL_IsDrawEntityBoxEnabled_Implementation(CombatDebugBlueprintFunctionLibrary.__IsDrawEntityBoxEnabled_FunctionParams* __Params)
 	{
 		__Params->__Result = CombatDebugBlueprintFunctionLibrary.IsDrawEntityBoxEnabled();
 	}
 
-	// Token: 0x0601D5D9 RID: 120281 RVA: 0x0083162C File Offset: 0x0082F82C
+	// Token: 0x0601B2D8 RID: 111320 RVA: 0x00858A4C File Offset: 0x00856C4C
 	protected unsafe static void __CPPCALL_SetDrawEntityBoxEnabled_Implementation(CombatDebugBlueprintFunctionLibrary.__SetDrawEntityBoxEnabled_FunctionParams* __Params)
 	{
 		CombatDebugBlueprintFunctionLibrary.SetDrawEntityBoxEnabled(__Params->isEnable);
 	}
 
-	// Token: 0x0601D5DA RID: 120282 RVA: 0x00831639 File Offset: 0x0082F839
+	// Token: 0x0601B2D9 RID: 111321 RVA: 0x00858A59 File Offset: 0x00856C59
 	protected unsafe static void __CPPCALL_IsDrawEntityBoxInfoEnabled_Implementation(CombatDebugBlueprintFunctionLibrary.__IsDrawEntityBoxInfoEnabled_FunctionParams* __Params)
 	{
 		__Params->__Result = CombatDebugBlueprintFunctionLibrary.IsDrawEntityBoxInfoEnabled();
 	}
 
-	// Token: 0x0601D5DB RID: 120283 RVA: 0x00831646 File Offset: 0x0082F846
+	// Token: 0x0601B2DA RID: 111322 RVA: 0x00858A66 File Offset: 0x00856C66
 	protected unsafe static void __CPPCALL_SetDrawEntityBoxInfoEnabled_Implementation(CombatDebugBlueprintFunctionLibrary.__SetDrawEntityBoxInfoEnabled_FunctionParams* __Params)
 	{
 		CombatDebugBlueprintFunctionLibrary.SetDrawEntityBoxInfoEnabled(__Params->isEnable);
 	}
 
-	// Token: 0x0601D5DC RID: 120284 RVA: 0x00831654 File Offset: 0x0082F854
+	// Token: 0x0601B2DB RID: 111323 RVA: 0x00858A74 File Offset: 0x00856C74
 	protected unsafe static void __CPPCALL_GetCombatScriptIndexes_Implementation(CombatDebugBlueprintFunctionLibrary.__GetCombatScriptIndexes_FunctionParams* __Params)
 	{
 		TArray<string> combatScriptIndexes = CombatDebugBlueprintFunctionLibrary.GetCombatScriptIndexes();
@@ -1640,98 +1715,98 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		combatScriptIndexes.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D5DD RID: 120285 RVA: 0x00831680 File Offset: 0x0082F880
+	// Token: 0x0601B2DC RID: 111324 RVA: 0x00858AA0 File Offset: 0x00856CA0
 	protected unsafe static void __CPPCALL_FilterScript_Implementation(CombatDebugBlueprintFunctionLibrary.__FilterScript_FunctionParams* __Params)
 	{
 		string cmd = FString.ToString((void*)(&__Params->cmd));
 		FString.CopyFrom((void*)(&__Params->__Result), CombatDebugBlueprintFunctionLibrary.FilterScript(cmd));
 	}
 
-	// Token: 0x0601D5DE RID: 120286 RVA: 0x008316AC File Offset: 0x0082F8AC
+	// Token: 0x0601B2DD RID: 111325 RVA: 0x00858ACC File Offset: 0x00856CCC
 	protected unsafe static void __CPPCALL_IsDebugPrintOpened_Implementation(CombatDebugBlueprintFunctionLibrary.__IsDebugPrintOpened_FunctionParams* __Params)
 	{
 		string moduleName = FString.ToString((void*)(&__Params->moduleName));
 		__Params->__Result = CombatDebugBlueprintFunctionLibrary.IsDebugPrintOpened(moduleName);
 	}
 
-	// Token: 0x0601D5DF RID: 120287 RVA: 0x008316D2 File Offset: 0x0082F8D2
+	// Token: 0x0601B2DE RID: 111326 RVA: 0x00858AF2 File Offset: 0x00856CF2
 	protected unsafe static void __CPPCALL_SetDebugPrintOpened_Implementation(CombatDebugBlueprintFunctionLibrary.__SetDebugPrintOpened_FunctionParams* __Params)
 	{
 		CombatDebugBlueprintFunctionLibrary.SetDebugPrintOpened(FString.ToString((void*)(&__Params->moduleName)), __Params->isOpen);
 	}
 
-	// Token: 0x0601D5E0 RID: 120288 RVA: 0x008316EB File Offset: 0x0082F8EB
+	// Token: 0x0601B2DF RID: 111327 RVA: 0x00858B0B File Offset: 0x00856D0B
 	protected unsafe static void __CPPCALL_TryRefreshServerDebugInfo_Implementation(CombatDebugBlueprintFunctionLibrary.__TryRefreshServerDebugInfo_FunctionParams* __Params)
 	{
 		CombatDebugBlueprintFunctionLibrary.TryRefreshServerDebugInfo();
 	}
 
-	// Token: 0x0601D5E1 RID: 120289 RVA: 0x008316F2 File Offset: 0x0082F8F2
+	// Token: 0x0601B2E0 RID: 111328 RVA: 0x00858B12 File Offset: 0x00856D12
 	protected unsafe static void __CPPCALL_GetServerBuffRemainDuration_Implementation(CombatDebugBlueprintFunctionLibrary.__GetServerBuffRemainDuration_FunctionParams* __Params)
 	{
 		__Params->__Result = CombatDebugBlueprintFunctionLibrary.GetServerBuffRemainDuration(__Params->entityId, __Params->handle);
 	}
 
-	// Token: 0x0601D5E2 RID: 120290 RVA: 0x0083170B File Offset: 0x0082F90B
+	// Token: 0x0601B2E1 RID: 111329 RVA: 0x00858B2B File Offset: 0x00856D2B
 	protected unsafe static void __CPPCALL_GetServerBuffTotalDuration_Implementation(CombatDebugBlueprintFunctionLibrary.__GetServerBuffTotalDuration_FunctionParams* __Params)
 	{
 		__Params->__Result = CombatDebugBlueprintFunctionLibrary.GetServerBuffTotalDuration(__Params->entityId, __Params->handle);
 	}
 
-	// Token: 0x0601D5E3 RID: 120291 RVA: 0x00831724 File Offset: 0x0082F924
+	// Token: 0x0601B2E2 RID: 111330 RVA: 0x00858B44 File Offset: 0x00856D44
 	protected unsafe static void __CPPCALL_GetBuffRemainDuration_Implementation(CombatDebugBlueprintFunctionLibrary.__GetBuffRemainDuration_FunctionParams* __Params)
 	{
 		__Params->__Result = CombatDebugBlueprintFunctionLibrary.GetBuffRemainDuration(__Params->entityId, __Params->handle);
 	}
 
-	// Token: 0x0601D5E4 RID: 120292 RVA: 0x0083173D File Offset: 0x0082F93D
+	// Token: 0x0601B2E3 RID: 111331 RVA: 0x00858B5D File Offset: 0x00856D5D
 	protected unsafe static void __CPPCALL_GetBuffTotalDuration_Implementation(CombatDebugBlueprintFunctionLibrary.__GetBuffTotalDuration_FunctionParams* __Params)
 	{
 		__Params->__Result = CombatDebugBlueprintFunctionLibrary.GetBuffTotalDuration(__Params->entityId, __Params->handle);
 	}
 
-	// Token: 0x0601D5E5 RID: 120293 RVA: 0x00831756 File Offset: 0x0082F956
+	// Token: 0x0601B2E4 RID: 111332 RVA: 0x00858B76 File Offset: 0x00856D76
 	protected unsafe static void __CPPCALL_HasServerBuff_Implementation(CombatDebugBlueprintFunctionLibrary.__HasServerBuff_FunctionParams* __Params)
 	{
 		__Params->__Result = CombatDebugBlueprintFunctionLibrary.HasServerBuff(__Params->entityId, __Params->handle);
 	}
 
-	// Token: 0x0601D5E6 RID: 120294 RVA: 0x00831770 File Offset: 0x0082F970
+	// Token: 0x0601B2E5 RID: 111333 RVA: 0x00858B90 File Offset: 0x00856D90
 	protected unsafe static void __CPPCALL_GetAttributeDebugString_Implementation(CombatDebugBlueprintFunctionLibrary.__GetAttributeDebugString_FunctionParams* __Params)
 	{
 		string filterStr = FString.ToString((void*)(&__Params->filterStr));
 		FString.CopyFrom((void*)(&__Params->__Result), CombatDebugBlueprintFunctionLibrary.GetAttributeDebugString(__Params->entityId, filterStr));
 	}
 
-	// Token: 0x0601D5E7 RID: 120295 RVA: 0x008317A4 File Offset: 0x0082F9A4
+	// Token: 0x0601B2E6 RID: 111334 RVA: 0x00858BC4 File Offset: 0x00856DC4
 	protected unsafe static void __CPPCALL_GetStateAttributeDebugString_Implementation(CombatDebugBlueprintFunctionLibrary.__GetStateAttributeDebugString_FunctionParams* __Params)
 	{
 		string filterStr = FString.ToString((void*)(&__Params->filterStr));
 		FString.CopyFrom((void*)(&__Params->__Result), CombatDebugBlueprintFunctionLibrary.GetStateAttributeDebugString(__Params->entityId, filterStr));
 	}
 
-	// Token: 0x0601D5E8 RID: 120296 RVA: 0x008317D8 File Offset: 0x0082F9D8
+	// Token: 0x0601B2E7 RID: 111335 RVA: 0x00858BF8 File Offset: 0x00856DF8
 	protected unsafe static void __CPPCALL_GetFormationAttributeDebugString_Implementation(CombatDebugBlueprintFunctionLibrary.__GetFormationAttributeDebugString_FunctionParams* __Params)
 	{
 		string filterStr = FString.ToString((void*)(&__Params->filterStr));
 		FString.CopyFrom((void*)(&__Params->__Result), CombatDebugBlueprintFunctionLibrary.GetFormationAttributeDebugString(__Params->entityId, filterStr));
 	}
 
-	// Token: 0x0601D5E9 RID: 120297 RVA: 0x0083180C File Offset: 0x0082FA0C
+	// Token: 0x0601B2E8 RID: 111336 RVA: 0x00858C2C File Offset: 0x00856E2C
 	protected unsafe static void __CPPCALL_GetSquadAttributeDebugString_Implementation(CombatDebugBlueprintFunctionLibrary.__GetSquadAttributeDebugString_FunctionParams* __Params)
 	{
 		string filterStr = FString.ToString((void*)(&__Params->filterStr));
 		FString.CopyFrom((void*)(&__Params->__Result), CombatDebugBlueprintFunctionLibrary.GetSquadAttributeDebugString(__Params->entityId, filterStr));
 	}
 
-	// Token: 0x0601D5EA RID: 120298 RVA: 0x00831840 File Offset: 0x0082FA40
+	// Token: 0x0601B2E9 RID: 111337 RVA: 0x00858C60 File Offset: 0x00856E60
 	protected unsafe static void __CPPCALL_GetStateSquadAttributeDebugString_Implementation(CombatDebugBlueprintFunctionLibrary.__GetStateSquadAttributeDebugString_FunctionParams* __Params)
 	{
 		string filterStr = FString.ToString((void*)(&__Params->filterStr));
 		FString.CopyFrom((void*)(&__Params->__Result), CombatDebugBlueprintFunctionLibrary.GetStateSquadAttributeDebugString(__Params->entityId, filterStr));
 	}
 
-	// Token: 0x0601D5EB RID: 120299 RVA: 0x00831874 File Offset: 0x0082FA74
+	// Token: 0x0601B2EA RID: 111338 RVA: 0x00858C94 File Offset: 0x00856E94
 	protected unsafe static void __CPPCALL_ExtractInt64ArrayFromString_Implementation(CombatDebugBlueprintFunctionLibrary.__ExtractInt64ArrayFromString_FunctionParams* __Params)
 	{
 		TArray<long> tarray = CombatDebugBlueprintFunctionLibrary.ExtractInt64ArrayFromString(FString.ToString((void*)(&__Params->content)));
@@ -1742,7 +1817,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		tarray.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D5EC RID: 120300 RVA: 0x008318AC File Offset: 0x0082FAAC
+	// Token: 0x0601B2EB RID: 111339 RVA: 0x00858CCC File Offset: 0x00856ECC
 	protected unsafe static void __CPPCALL_ExtractTagNameArrayFromString_Implementation(CombatDebugBlueprintFunctionLibrary.__ExtractTagNameArrayFromString_FunctionParams* __Params)
 	{
 		TArray<string> tarray = CombatDebugBlueprintFunctionLibrary.ExtractTagNameArrayFromString(FString.ToString((void*)(&__Params->content)));
@@ -1753,28 +1828,28 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		tarray.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D5ED RID: 120301 RVA: 0x008318E4 File Offset: 0x0082FAE4
+	// Token: 0x0601B2EC RID: 111340 RVA: 0x00858D04 File Offset: 0x00856F04
 	protected unsafe static void __CPPCALL_GetPassiveDebugString_Implementation(CombatDebugBlueprintFunctionLibrary.__GetPassiveDebugString_FunctionParams* __Params)
 	{
 		string filterStr = FString.ToString((void*)(&__Params->filterStr));
 		FString.CopyFrom((void*)(&__Params->__Result), CombatDebugBlueprintFunctionLibrary.GetPassiveDebugString(__Params->entityId, filterStr));
 	}
 
-	// Token: 0x0601D5EE RID: 120302 RVA: 0x00831918 File Offset: 0x0082FB18
+	// Token: 0x0601B2ED RID: 111341 RVA: 0x00858D38 File Offset: 0x00856F38
 	protected unsafe static void __CPPCALL_GetTagsDebugString_Implementation(CombatDebugBlueprintFunctionLibrary.__GetTagsDebugString_FunctionParams* __Params)
 	{
 		string filterStr = FString.ToString((void*)(&__Params->filterStr));
 		FString.CopyFrom((void*)(&__Params->__Result), CombatDebugBlueprintFunctionLibrary.GetTagsDebugString(__Params->entityId, filterStr));
 	}
 
-	// Token: 0x0601D5EF RID: 120303 RVA: 0x0083194C File Offset: 0x0082FB4C
+	// Token: 0x0601B2EE RID: 111342 RVA: 0x00858D6C File Offset: 0x00856F6C
 	protected unsafe static void __CPPCALL_GetCueDebugString_Implementation(CombatDebugBlueprintFunctionLibrary.__GetCueDebugString_FunctionParams* __Params)
 	{
 		string filterStr = FString.ToString((void*)(&__Params->filterStr));
 		FString.CopyFrom((void*)(&__Params->__Result), CombatDebugBlueprintFunctionLibrary.GetCueDebugString(__Params->entityId, filterStr));
 	}
 
-	// Token: 0x0601D5F0 RID: 120304 RVA: 0x00831980 File Offset: 0x0082FB80
+	// Token: 0x0601B2EF RID: 111343 RVA: 0x00858DA0 File Offset: 0x00856FA0
 	protected unsafe static void __CPPCALL_LoadDataTable_Implementation(CombatDebugBlueprintFunctionLibrary.__LoadDataTable_FunctionParams* __Params)
 	{
 		string assetPath = FString.ToString((void*)(&__Params->assetPath));
@@ -1783,7 +1858,7 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		ptr = ((udataTable != null) ? udataTable.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D5F1 RID: 120305 RVA: 0x008319B8 File Offset: 0x0082FBB8
+	// Token: 0x0601B2F0 RID: 111344 RVA: 0x00858DD8 File Offset: 0x00856FD8
 	protected unsafe static void __CPPCALL_GetDebugStateMachine_Implementation(CombatDebugBlueprintFunctionLibrary.__GetDebugStateMachine_FunctionParams* __Params)
 	{
 		TArray<FText> tarray = new TArray<FText>(&__Params->output, true, true);
@@ -1794,829 +1869,829 @@ public class CombatDebugBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IU
 		}
 	}
 
-	// Token: 0x0601D5F2 RID: 120306 RVA: 0x008319FA File Offset: 0x0082FBFA
+	// Token: 0x0601B2F1 RID: 111345 RVA: 0x00858E1A File Offset: 0x0085701A
 	protected unsafe static void __CPPCALL_GetSkillDebugString_Implementation(CombatDebugBlueprintFunctionLibrary.__GetSkillDebugString_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), CombatDebugBlueprintFunctionLibrary.GetSkillDebugString(__Params->entityId));
 	}
 
-	// Token: 0x0601D5F3 RID: 120307 RVA: 0x00831A14 File Offset: 0x0082FC14
+	// Token: 0x0601B2F2 RID: 111346 RVA: 0x00858E34 File Offset: 0x00857034
 	protected unsafe static void __CPPCALL_GetSkillLogString_Implementation(CombatDebugBlueprintFunctionLibrary.__GetSkillLogString_FunctionParams* __Params)
 	{
 		string filterStr = FString.ToString((void*)(&__Params->filterStr));
 		FString.CopyFrom((void*)(&__Params->__Result), CombatDebugBlueprintFunctionLibrary.GetSkillLogString(__Params->entityId, filterStr));
 	}
 
-	// Token: 0x0601D5F4 RID: 120308 RVA: 0x00831A46 File Offset: 0x0082FC46
+	// Token: 0x0601B2F3 RID: 111347 RVA: 0x00858E66 File Offset: 0x00857066
 	protected unsafe static void __CPPCALL_ClearSkillLogString_Implementation(CombatDebugBlueprintFunctionLibrary.__ClearSkillLogString_FunctionParams* __Params)
 	{
 		CombatDebugBlueprintFunctionLibrary.ClearSkillLogString(__Params->entityId);
 	}
 
-	// Token: 0x0601D5F5 RID: 120309 RVA: 0x00831A54 File Offset: 0x0082FC54
+	// Token: 0x0601B2F4 RID: 111348 RVA: 0x00858E74 File Offset: 0x00857074
 	protected unsafe static void __CPPCALL_GetSkillBehaviorLogString_Implementation(CombatDebugBlueprintFunctionLibrary.__GetSkillBehaviorLogString_FunctionParams* __Params)
 	{
 		string filterStr = FString.ToString((void*)(&__Params->filterStr));
 		FString.CopyFrom((void*)(&__Params->__Result), CombatDebugBlueprintFunctionLibrary.GetSkillBehaviorLogString(__Params->entityId, filterStr));
 	}
 
-	// Token: 0x0601D5F6 RID: 120310 RVA: 0x00831A86 File Offset: 0x0082FC86
+	// Token: 0x0601B2F5 RID: 111349 RVA: 0x00858EA6 File Offset: 0x008570A6
 	protected unsafe static void __CPPCALL_ClearSkillBehaviorLogString_Implementation(CombatDebugBlueprintFunctionLibrary.__ClearSkillBehaviorLogString_FunctionParams* __Params)
 	{
 		CombatDebugBlueprintFunctionLibrary.ClearSkillBehaviorLogString(__Params->entityId);
 	}
 
-	// Token: 0x0601D5F7 RID: 120311 RVA: 0x00831A93 File Offset: 0x0082FC93
+	// Token: 0x0601B2F6 RID: 111350 RVA: 0x00858EB3 File Offset: 0x008570B3
 	protected unsafe static void __CPPCALL_GetBulletDebugString_Implementation(CombatDebugBlueprintFunctionLibrary.__GetBulletDebugString_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), CombatDebugBlueprintFunctionLibrary.GetBulletDebugString(__Params->entityId));
 	}
 
-	// Token: 0x0601D5F8 RID: 120312 RVA: 0x00831AAC File Offset: 0x0082FCAC
+	// Token: 0x0601B2F7 RID: 111351 RVA: 0x00858ECC File Offset: 0x008570CC
 	protected unsafe static void __CPPCALL_GetBulletLogString_Implementation(CombatDebugBlueprintFunctionLibrary.__GetBulletLogString_FunctionParams* __Params)
 	{
 		string filterStr = FString.ToString((void*)(&__Params->filterStr));
 		FString.CopyFrom((void*)(&__Params->__Result), CombatDebugBlueprintFunctionLibrary.GetBulletLogString(__Params->entityId, filterStr));
 	}
 
-	// Token: 0x0601D5F9 RID: 120313 RVA: 0x00831ADE File Offset: 0x0082FCDE
+	// Token: 0x0601B2F8 RID: 111352 RVA: 0x00858EFE File Offset: 0x008570FE
 	protected unsafe static void __CPPCALL_ClearBulletLogString_Implementation(CombatDebugBlueprintFunctionLibrary.__ClearBulletLogString_FunctionParams* __Params)
 	{
 		CombatDebugBlueprintFunctionLibrary.ClearBulletLogString(__Params->entityId);
 	}
 
-	// Token: 0x0601D5FA RID: 120314 RVA: 0x00831AEB File Offset: 0x0082FCEB
+	// Token: 0x0601B2F9 RID: 111353 RVA: 0x00858F0B File Offset: 0x0085710B
 	protected unsafe static void __CPPCALL_SetEntityDebugMove_Implementation(CombatDebugBlueprintFunctionLibrary.__SetEntityDebugMove_FunctionParams* __Params)
 	{
 		CombatDebugBlueprintFunctionLibrary.SetEntityDebugMove(__Params->entityId, __Params->enable);
 	}
 
-	// Token: 0x0400E74E RID: 59214
+	// Token: 0x0400EC02 RID: 60418
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Utils/CombatDebugBlueprintFunctionLibrary.CombatDebugBlueprintFunctionLibrary_C";
 
-	// Token: 0x0400E74F RID: 59215
+	// Token: 0x0400EC03 RID: 60419
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E750 RID: 59216
+	// Token: 0x0400EC04 RID: 60420
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x02009833 RID: 38963
+	// Token: 0x02008A57 RID: 35415
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __AddPassiveSkillForDebug_FunctionParams
 	{
-		// Token: 0x04030871 RID: 198769
+		// Token: 0x0402BF01 RID: 179969
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030872 RID: 198770
+		// Token: 0x0402BF02 RID: 179970
 		[FieldOffset(8)]
 		public long passiveSkillId;
 
-		// Token: 0x04030873 RID: 198771
+		// Token: 0x0402BF03 RID: 179971
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009834 RID: 38964
+	// Token: 0x02008A58 RID: 35416
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __RemovePassiveSkillForDebug_FunctionParams
 	{
-		// Token: 0x04030874 RID: 198772
+		// Token: 0x0402BF04 RID: 179972
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030875 RID: 198773
+		// Token: 0x0402BF05 RID: 179973
 		[FieldOffset(8)]
 		public long passiveSkillId;
 
-		// Token: 0x04030876 RID: 198774
+		// Token: 0x0402BF06 RID: 179974
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009835 RID: 38965
+	// Token: 0x02008A59 RID: 35417
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetDebugMonsterMovePath_FunctionParams
 	{
-		// Token: 0x04030877 RID: 198775
+		// Token: 0x0402BF07 RID: 179975
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030878 RID: 198776
+		// Token: 0x0402BF08 RID: 179976
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009836 RID: 38966
+	// Token: 0x02008A5A RID: 35418
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetDebugMonsterMovePath_FunctionParams
 	{
-		// Token: 0x04030879 RID: 198777
+		// Token: 0x0402BF09 RID: 179977
 		[FieldOffset(0)]
 		public bool value;
 
-		// Token: 0x0403087A RID: 198778
+		// Token: 0x0402BF0A RID: 179978
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009837 RID: 38967
+	// Token: 0x02008A5B RID: 35419
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetDebugMonsterControl_FunctionParams
 	{
-		// Token: 0x0403087B RID: 198779
+		// Token: 0x0402BF0B RID: 179979
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0403087C RID: 198780
+		// Token: 0x0402BF0C RID: 179980
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009838 RID: 38968
+	// Token: 0x02008A5C RID: 35420
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetDebugMonsterControl_FunctionParams
 	{
-		// Token: 0x0403087D RID: 198781
+		// Token: 0x0402BF0D RID: 179981
 		[FieldOffset(0)]
 		public bool value;
 
-		// Token: 0x0403087E RID: 198782
+		// Token: 0x0402BF0E RID: 179982
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009839 RID: 38969
+	// Token: 0x02008A5D RID: 35421
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __OpenMonsterServerLogic_FunctionParams
 	{
-		// Token: 0x0403087F RID: 198783
+		// Token: 0x0402BF0F RID: 179983
 		[FieldOffset(0)]
 		public bool value;
 
-		// Token: 0x04030880 RID: 198784
+		// Token: 0x0402BF10 RID: 179984
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200983A RID: 38970
+	// Token: 0x02008A5E RID: 35422
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsDrawEntityBoxEnabled_FunctionParams
 	{
-		// Token: 0x04030881 RID: 198785
+		// Token: 0x0402BF11 RID: 179985
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030882 RID: 198786
+		// Token: 0x0402BF12 RID: 179986
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200983B RID: 38971
+	// Token: 0x02008A5F RID: 35423
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetDrawEntityBoxEnabled_FunctionParams
 	{
-		// Token: 0x04030883 RID: 198787
+		// Token: 0x0402BF13 RID: 179987
 		[FieldOffset(0)]
 		public bool isEnable;
 
-		// Token: 0x04030884 RID: 198788
+		// Token: 0x0402BF14 RID: 179988
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200983C RID: 38972
+	// Token: 0x02008A60 RID: 35424
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsDrawEntityBoxInfoEnabled_FunctionParams
 	{
-		// Token: 0x04030885 RID: 198789
+		// Token: 0x0402BF15 RID: 179989
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030886 RID: 198790
+		// Token: 0x0402BF16 RID: 179990
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200983D RID: 38973
+	// Token: 0x02008A61 RID: 35425
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetDrawEntityBoxInfoEnabled_FunctionParams
 	{
-		// Token: 0x04030887 RID: 198791
+		// Token: 0x0402BF17 RID: 179991
 		[FieldOffset(0)]
 		public bool isEnable;
 
-		// Token: 0x04030888 RID: 198792
+		// Token: 0x0402BF18 RID: 179992
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200983E RID: 38974
+	// Token: 0x02008A62 RID: 35426
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetCombatScriptIndexes_FunctionParams
 	{
-		// Token: 0x04030889 RID: 198793
+		// Token: 0x0402BF19 RID: 179993
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0403088A RID: 198794
+		// Token: 0x0402BF1A RID: 179994
 		[FieldOffset(8)]
 		public byte __Result;
 	}
 
-	// Token: 0x0200983F RID: 38975
+	// Token: 0x02008A63 RID: 35427
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __FilterScript_FunctionParams
 	{
-		// Token: 0x0403088B RID: 198795
+		// Token: 0x0402BF1B RID: 179995
 		[FieldOffset(0)]
 		public FString cmd;
 
-		// Token: 0x0403088C RID: 198796
+		// Token: 0x0402BF1C RID: 179996
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0403088D RID: 198797
+		// Token: 0x0402BF1D RID: 179997
 		[FieldOffset(24)]
 		public FString __Result;
 	}
 
-	// Token: 0x02009840 RID: 38976
+	// Token: 0x02008A64 RID: 35428
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __IsDebugPrintOpened_FunctionParams
 	{
-		// Token: 0x0403088E RID: 198798
+		// Token: 0x0402BF1E RID: 179998
 		[FieldOffset(0)]
 		public FString moduleName;
 
-		// Token: 0x0403088F RID: 198799
+		// Token: 0x0402BF1F RID: 179999
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030890 RID: 198800
+		// Token: 0x0402BF20 RID: 180000
 		[FieldOffset(24)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009841 RID: 38977
+	// Token: 0x02008A65 RID: 35429
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __SetDebugPrintOpened_FunctionParams
 	{
-		// Token: 0x04030891 RID: 198801
+		// Token: 0x0402BF21 RID: 180001
 		[FieldOffset(0)]
 		public FString moduleName;
 
-		// Token: 0x04030892 RID: 198802
+		// Token: 0x0402BF22 RID: 180002
 		[FieldOffset(16)]
 		public bool isOpen;
 
-		// Token: 0x04030893 RID: 198803
+		// Token: 0x0402BF23 RID: 180003
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009842 RID: 38978
+	// Token: 0x02008A66 RID: 35430
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __TryRefreshServerDebugInfo_FunctionParams
 	{
-		// Token: 0x04030894 RID: 198804
+		// Token: 0x0402BF24 RID: 180004
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009843 RID: 38979
+	// Token: 0x02008A67 RID: 35431
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetServerBuffRemainDuration_FunctionParams
 	{
-		// Token: 0x04030895 RID: 198805
+		// Token: 0x0402BF25 RID: 180005
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030896 RID: 198806
+		// Token: 0x0402BF26 RID: 180006
 		[FieldOffset(4)]
 		public int handle;
 
-		// Token: 0x04030897 RID: 198807
+		// Token: 0x0402BF27 RID: 180007
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030898 RID: 198808
+		// Token: 0x0402BF28 RID: 180008
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x02009844 RID: 38980
+	// Token: 0x02008A68 RID: 35432
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetServerBuffTotalDuration_FunctionParams
 	{
-		// Token: 0x04030899 RID: 198809
+		// Token: 0x0402BF29 RID: 180009
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0403089A RID: 198810
+		// Token: 0x0402BF2A RID: 180010
 		[FieldOffset(4)]
 		public int handle;
 
-		// Token: 0x0403089B RID: 198811
+		// Token: 0x0402BF2B RID: 180011
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0403089C RID: 198812
+		// Token: 0x0402BF2C RID: 180012
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x02009845 RID: 38981
+	// Token: 0x02008A69 RID: 35433
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetBuffRemainDuration_FunctionParams
 	{
-		// Token: 0x0403089D RID: 198813
+		// Token: 0x0402BF2D RID: 180013
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0403089E RID: 198814
+		// Token: 0x0402BF2E RID: 180014
 		[FieldOffset(4)]
 		public int handle;
 
-		// Token: 0x0403089F RID: 198815
+		// Token: 0x0402BF2F RID: 180015
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308A0 RID: 198816
+		// Token: 0x0402BF30 RID: 180016
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x02009846 RID: 38982
+	// Token: 0x02008A6A RID: 35434
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetBuffTotalDuration_FunctionParams
 	{
-		// Token: 0x040308A1 RID: 198817
+		// Token: 0x0402BF31 RID: 180017
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308A2 RID: 198818
+		// Token: 0x0402BF32 RID: 180018
 		[FieldOffset(4)]
 		public int handle;
 
-		// Token: 0x040308A3 RID: 198819
+		// Token: 0x0402BF33 RID: 180019
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308A4 RID: 198820
+		// Token: 0x0402BF34 RID: 180020
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x02009847 RID: 38983
+	// Token: 0x02008A6B RID: 35435
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __HasServerBuff_FunctionParams
 	{
-		// Token: 0x040308A5 RID: 198821
+		// Token: 0x0402BF35 RID: 180021
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308A6 RID: 198822
+		// Token: 0x0402BF36 RID: 180022
 		[FieldOffset(4)]
 		public int handle;
 
-		// Token: 0x040308A7 RID: 198823
+		// Token: 0x0402BF37 RID: 180023
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308A8 RID: 198824
+		// Token: 0x0402BF38 RID: 180024
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009848 RID: 38984
+	// Token: 0x02008A6C RID: 35436
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetAttributeDebugString_FunctionParams
 	{
-		// Token: 0x040308A9 RID: 198825
+		// Token: 0x0402BF39 RID: 180025
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308AA RID: 198826
+		// Token: 0x0402BF3A RID: 180026
 		[FieldOffset(8)]
 		public FString filterStr;
 
-		// Token: 0x040308AB RID: 198827
+		// Token: 0x0402BF3B RID: 180027
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308AC RID: 198828
+		// Token: 0x0402BF3C RID: 180028
 		[FieldOffset(32)]
 		public FString __Result;
 	}
 
-	// Token: 0x02009849 RID: 38985
+	// Token: 0x02008A6D RID: 35437
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetStateAttributeDebugString_FunctionParams
 	{
-		// Token: 0x040308AD RID: 198829
+		// Token: 0x0402BF3D RID: 180029
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308AE RID: 198830
+		// Token: 0x0402BF3E RID: 180030
 		[FieldOffset(8)]
 		public FString filterStr;
 
-		// Token: 0x040308AF RID: 198831
+		// Token: 0x0402BF3F RID: 180031
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308B0 RID: 198832
+		// Token: 0x0402BF40 RID: 180032
 		[FieldOffset(32)]
 		public FString __Result;
 	}
 
-	// Token: 0x0200984A RID: 38986
+	// Token: 0x02008A6E RID: 35438
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetFormationAttributeDebugString_FunctionParams
 	{
-		// Token: 0x040308B1 RID: 198833
+		// Token: 0x0402BF41 RID: 180033
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308B2 RID: 198834
+		// Token: 0x0402BF42 RID: 180034
 		[FieldOffset(8)]
 		public FString filterStr;
 
-		// Token: 0x040308B3 RID: 198835
+		// Token: 0x0402BF43 RID: 180035
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308B4 RID: 198836
+		// Token: 0x0402BF44 RID: 180036
 		[FieldOffset(32)]
 		public FString __Result;
 	}
 
-	// Token: 0x0200984B RID: 38987
+	// Token: 0x02008A6F RID: 35439
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetSquadAttributeDebugString_FunctionParams
 	{
-		// Token: 0x040308B5 RID: 198837
+		// Token: 0x0402BF45 RID: 180037
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308B6 RID: 198838
+		// Token: 0x0402BF46 RID: 180038
 		[FieldOffset(8)]
 		public FString filterStr;
 
-		// Token: 0x040308B7 RID: 198839
+		// Token: 0x0402BF47 RID: 180039
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308B8 RID: 198840
+		// Token: 0x0402BF48 RID: 180040
 		[FieldOffset(32)]
 		public FString __Result;
 	}
 
-	// Token: 0x0200984C RID: 38988
+	// Token: 0x02008A70 RID: 35440
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetStateSquadAttributeDebugString_FunctionParams
 	{
-		// Token: 0x040308B9 RID: 198841
+		// Token: 0x0402BF49 RID: 180041
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308BA RID: 198842
+		// Token: 0x0402BF4A RID: 180042
 		[FieldOffset(8)]
 		public FString filterStr;
 
-		// Token: 0x040308BB RID: 198843
+		// Token: 0x0402BF4B RID: 180043
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308BC RID: 198844
+		// Token: 0x0402BF4C RID: 180044
 		[FieldOffset(32)]
 		public FString __Result;
 	}
 
-	// Token: 0x0200984D RID: 38989
+	// Token: 0x02008A71 RID: 35441
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __ExtractInt64ArrayFromString_FunctionParams
 	{
-		// Token: 0x040308BD RID: 198845
+		// Token: 0x0402BF4D RID: 180045
 		[FieldOffset(0)]
 		public FString content;
 
-		// Token: 0x040308BE RID: 198846
+		// Token: 0x0402BF4E RID: 180046
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308BF RID: 198847
+		// Token: 0x0402BF4F RID: 180047
 		[FieldOffset(24)]
 		public byte __Result;
 	}
 
-	// Token: 0x0200984E RID: 38990
+	// Token: 0x02008A72 RID: 35442
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __ExtractTagNameArrayFromString_FunctionParams
 	{
-		// Token: 0x040308C0 RID: 198848
+		// Token: 0x0402BF50 RID: 180048
 		[FieldOffset(0)]
 		public FString content;
 
-		// Token: 0x040308C1 RID: 198849
+		// Token: 0x0402BF51 RID: 180049
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308C2 RID: 198850
+		// Token: 0x0402BF52 RID: 180050
 		[FieldOffset(24)]
 		public byte __Result;
 	}
 
-	// Token: 0x0200984F RID: 38991
+	// Token: 0x02008A73 RID: 35443
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetPassiveDebugString_FunctionParams
 	{
-		// Token: 0x040308C3 RID: 198851
+		// Token: 0x0402BF53 RID: 180051
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308C4 RID: 198852
+		// Token: 0x0402BF54 RID: 180052
 		[FieldOffset(8)]
 		public FString filterStr;
 
-		// Token: 0x040308C5 RID: 198853
+		// Token: 0x0402BF55 RID: 180053
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308C6 RID: 198854
+		// Token: 0x0402BF56 RID: 180054
 		[FieldOffset(32)]
 		public FString __Result;
 	}
 
-	// Token: 0x02009850 RID: 38992
+	// Token: 0x02008A74 RID: 35444
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetTagsDebugString_FunctionParams
 	{
-		// Token: 0x040308C7 RID: 198855
+		// Token: 0x0402BF57 RID: 180055
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308C8 RID: 198856
+		// Token: 0x0402BF58 RID: 180056
 		[FieldOffset(8)]
 		public FString filterStr;
 
-		// Token: 0x040308C9 RID: 198857
+		// Token: 0x0402BF59 RID: 180057
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308CA RID: 198858
+		// Token: 0x0402BF5A RID: 180058
 		[FieldOffset(32)]
 		public FString __Result;
 	}
 
-	// Token: 0x02009851 RID: 38993
+	// Token: 0x02008A75 RID: 35445
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetCueDebugString_FunctionParams
 	{
-		// Token: 0x040308CB RID: 198859
+		// Token: 0x0402BF5B RID: 180059
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308CC RID: 198860
+		// Token: 0x0402BF5C RID: 180060
 		[FieldOffset(8)]
 		public FString filterStr;
 
-		// Token: 0x040308CD RID: 198861
+		// Token: 0x0402BF5D RID: 180061
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308CE RID: 198862
+		// Token: 0x0402BF5E RID: 180062
 		[FieldOffset(32)]
 		public FString __Result;
 	}
 
-	// Token: 0x02009852 RID: 38994
+	// Token: 0x02008A76 RID: 35446
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __LoadDataTable_FunctionParams
 	{
-		// Token: 0x040308CF RID: 198863
+		// Token: 0x0402BF5F RID: 180063
 		[FieldOffset(0)]
 		public FString assetPath;
 
-		// Token: 0x040308D0 RID: 198864
+		// Token: 0x0402BF60 RID: 180064
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308D1 RID: 198865
+		// Token: 0x0402BF61 RID: 180065
 		[FieldOffset(24)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x02009853 RID: 38995
+	// Token: 0x02008A77 RID: 35447
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetDebugStateMachine_FunctionParams
 	{
-		// Token: 0x040308D2 RID: 198866
+		// Token: 0x0402BF62 RID: 180066
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308D3 RID: 198867
+		// Token: 0x0402BF63 RID: 180067
 		[FieldOffset(8)]
 		public byte output;
 
-		// Token: 0x040308D4 RID: 198868
+		// Token: 0x0402BF64 RID: 180068
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009854 RID: 38996
+	// Token: 0x02008A78 RID: 35448
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetSkillDebugString_FunctionParams
 	{
-		// Token: 0x040308D5 RID: 198869
+		// Token: 0x0402BF65 RID: 180069
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308D6 RID: 198870
+		// Token: 0x0402BF66 RID: 180070
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308D7 RID: 198871
+		// Token: 0x0402BF67 RID: 180071
 		[FieldOffset(16)]
 		public FString __Result;
 	}
 
-	// Token: 0x02009855 RID: 38997
+	// Token: 0x02008A79 RID: 35449
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetSkillLogString_FunctionParams
 	{
-		// Token: 0x040308D8 RID: 198872
+		// Token: 0x0402BF68 RID: 180072
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308D9 RID: 198873
+		// Token: 0x0402BF69 RID: 180073
 		[FieldOffset(8)]
 		public FString filterStr;
 
-		// Token: 0x040308DA RID: 198874
+		// Token: 0x0402BF6A RID: 180074
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308DB RID: 198875
+		// Token: 0x0402BF6B RID: 180075
 		[FieldOffset(32)]
 		public FString __Result;
 	}
 
-	// Token: 0x02009856 RID: 38998
+	// Token: 0x02008A7A RID: 35450
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __ClearSkillLogString_FunctionParams
 	{
-		// Token: 0x040308DC RID: 198876
+		// Token: 0x0402BF6C RID: 180076
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308DD RID: 198877
+		// Token: 0x0402BF6D RID: 180077
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009857 RID: 38999
+	// Token: 0x02008A7B RID: 35451
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetSkillBehaviorLogString_FunctionParams
 	{
-		// Token: 0x040308DE RID: 198878
+		// Token: 0x0402BF6E RID: 180078
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308DF RID: 198879
+		// Token: 0x0402BF6F RID: 180079
 		[FieldOffset(8)]
 		public FString filterStr;
 
-		// Token: 0x040308E0 RID: 198880
+		// Token: 0x0402BF70 RID: 180080
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308E1 RID: 198881
+		// Token: 0x0402BF71 RID: 180081
 		[FieldOffset(32)]
 		public FString __Result;
 	}
 
-	// Token: 0x02009858 RID: 39000
+	// Token: 0x02008A7C RID: 35452
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __ClearSkillBehaviorLogString_FunctionParams
 	{
-		// Token: 0x040308E2 RID: 198882
+		// Token: 0x0402BF72 RID: 180082
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308E3 RID: 198883
+		// Token: 0x0402BF73 RID: 180083
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009859 RID: 39001
+	// Token: 0x02008A7D RID: 35453
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetBulletDebugString_FunctionParams
 	{
-		// Token: 0x040308E4 RID: 198884
+		// Token: 0x0402BF74 RID: 180084
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308E5 RID: 198885
+		// Token: 0x0402BF75 RID: 180085
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308E6 RID: 198886
+		// Token: 0x0402BF76 RID: 180086
 		[FieldOffset(16)]
 		public FString __Result;
 	}
 
-	// Token: 0x0200985A RID: 39002
+	// Token: 0x02008A7E RID: 35454
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetBulletLogString_FunctionParams
 	{
-		// Token: 0x040308E7 RID: 198887
+		// Token: 0x0402BF77 RID: 180087
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308E8 RID: 198888
+		// Token: 0x0402BF78 RID: 180088
 		[FieldOffset(8)]
 		public FString filterStr;
 
-		// Token: 0x040308E9 RID: 198889
+		// Token: 0x0402BF79 RID: 180089
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040308EA RID: 198890
+		// Token: 0x0402BF7A RID: 180090
 		[FieldOffset(32)]
 		public FString __Result;
 	}
 
-	// Token: 0x0200985B RID: 39003
+	// Token: 0x02008A7F RID: 35455
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __ClearBulletLogString_FunctionParams
 	{
-		// Token: 0x040308EB RID: 198891
+		// Token: 0x0402BF7B RID: 180091
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308EC RID: 198892
+		// Token: 0x0402BF7C RID: 180092
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200985C RID: 39004
+	// Token: 0x02008A80 RID: 35456
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetEntityDebugMove_FunctionParams
 	{
-		// Token: 0x040308ED RID: 198893
+		// Token: 0x0402BF7D RID: 180093
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040308EE RID: 198894
+		// Token: 0x0402BF7E RID: 180094
 		[FieldOffset(4)]
 		public bool enable;
 
-		// Token: 0x040308EF RID: 198895
+		// Token: 0x0402BF7F RID: 180095
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}

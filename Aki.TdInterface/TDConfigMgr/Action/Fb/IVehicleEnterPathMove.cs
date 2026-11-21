@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029D5 RID: 10709
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CC2 RID: 11458
 	public class IVehicleEnterPathMove : IVehicleControlType
 	{
-		// Token: 0x0600ECA5 RID: 60581 RVA: 0x00228CBA File Offset: 0x00226EBA
+		// Token: 0x0600FB3C RID: 64316 RVA: 0x0024663E File Offset: 0x0024483E
 		public static IVehicleEnterPathMove Create(IVehicleEnterPathMove? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004ABD RID: 19133
-		// (get) Token: 0x0600ECA6 RID: 60582 RVA: 0x00228CD9 File Offset: 0x00226ED9
+		// Token: 0x17004E66 RID: 20070
+		// (get) Token: 0x0600FB3D RID: 64317 RVA: 0x0024665D File Offset: 0x0024485D
 		public override EVehicleControlType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004ABE RID: 19134
-		// (get) Token: 0x0600ECA7 RID: 60583 RVA: 0x00228CE6 File Offset: 0x00226EE6
+		// Token: 0x17004E67 RID: 20071
+		// (get) Token: 0x0600FB3E RID: 64318 RVA: 0x0024666A File Offset: 0x0024486A
 		public virtual IVehicleCruisingParams ControlParams
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004ABF RID: 19135
-		// (get) Token: 0x0600ECA8 RID: 60584 RVA: 0x00228D1A File Offset: 0x00226F1A
+		// Token: 0x17004E68 RID: 20072
+		// (get) Token: 0x0600FB3F RID: 64319 RVA: 0x0024669E File Offset: 0x0024489E
 		public virtual ISplineMovePattern Pattern
 		{
 			get
@@ -64,20 +62,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400824D RID: 33357
+		// Token: 0x0400893E RID: 35134
 		private IVehicleEnterPathMove Instance;
 
-		// Token: 0x0400824E RID: 33358
+		// Token: 0x0400893F RID: 35135
 		[Nullable(2)]
 		private IVehicleCruisingParams _ControlParamsCache;
 
-		// Token: 0x0400824F RID: 33359
+		// Token: 0x04008940 RID: 35136
 		private bool _ControlParamsInited;
 
-		// Token: 0x04008250 RID: 33360
+		// Token: 0x04008941 RID: 35137
 		private ISplineMovePattern _PatternCache;
 
-		// Token: 0x04008251 RID: 33361
+		// Token: 0x04008942 RID: 35138
 		private bool _PatternInited;
 	}
 }

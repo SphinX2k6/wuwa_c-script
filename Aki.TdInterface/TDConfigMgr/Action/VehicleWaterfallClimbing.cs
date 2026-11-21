@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200227B RID: 8827
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024E8 RID: 9448
 	public class VehicleWaterfallClimbing : ActionParams
 	{
-		// Token: 0x0600C1A2 RID: 49570 RVA: 0x001BC3D4 File Offset: 0x001BA5D4
+		// Token: 0x0600CD68 RID: 52584 RVA: 0x001D3B58 File Offset: 0x001D1D58
 		private VehicleWaterfallClimbing_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C1A3 RID: 49571 RVA: 0x001BC40C File Offset: 0x001BA60C
+		// Token: 0x0600CD69 RID: 52585 RVA: 0x001D3B90 File Offset: 0x001D1D90
 		public static VehicleWaterfallClimbing Create([Nullable(2)] VehicleWaterfallClimbing instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C1A4 RID: 49572 RVA: 0x001BC41F File Offset: 0x001BA61F
+		// Token: 0x0600CD6A RID: 52586 RVA: 0x001D3BA3 File Offset: 0x001D1DA3
 		public static VehicleWaterfallClimbing CreateFromSetValue([Nullable(2)] VehicleWaterfallClimbing_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C1A5 RID: 49573 RVA: 0x001BC432 File Offset: 0x001BA632
+		// Token: 0x0600CD6B RID: 52587 RVA: 0x001D3BB6 File Offset: 0x001D1DB6
 		public VehicleWaterfallClimbing_SetValue ToSetValue()
 		{
 			return new VehicleWaterfallClimbing_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A86 RID: 14982
-		// (get) Token: 0x0600C1A6 RID: 49574 RVA: 0x001BC451 File Offset: 0x001BA651
-		// (set) Token: 0x0600C1A7 RID: 49575 RVA: 0x001BC47C File Offset: 0x001BA67C
+		// Token: 0x17003D7D RID: 15741
+		// (get) Token: 0x0600CD6C RID: 52588 RVA: 0x001D3BD5 File Offset: 0x001D1DD5
+		// (set) Token: 0x0600CD6D RID: 52589 RVA: 0x001D3C00 File Offset: 0x001D1E00
 		public virtual int SplineEntityId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A87 RID: 14983
-		// (get) Token: 0x0600C1A8 RID: 49576 RVA: 0x001BC48C File Offset: 0x001BA68C
-		// (set) Token: 0x0600C1A9 RID: 49577 RVA: 0x001BC4ED File Offset: 0x001BA6ED
+		// Token: 0x17003D7E RID: 15742
+		// (get) Token: 0x0600CD6E RID: 52590 RVA: 0x001D3C10 File Offset: 0x001D1E10
+		// (set) Token: 0x0600CD6F RID: 52591 RVA: 0x001D3C71 File Offset: 0x001D1E71
 		[Nullable(2)]
 		public virtual IVehicleWaterfallClimbGravityConfig ChangeGravity
 		{
@@ -116,18 +114,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007355 RID: 29525
+		// Token: 0x040079A2 RID: 31138
 		[Nullable(2)]
 		protected new VehicleWaterfallClimbing FbInstance;
 
-		// Token: 0x04007356 RID: 29526
+		// Token: 0x040079A3 RID: 31139
 		[Nullable(2)]
 		protected VehicleWaterfallClimbing_SetValue PocoInterface;
 
-		// Token: 0x04007357 RID: 29527
+		// Token: 0x040079A4 RID: 31140
 		private IVehicleWaterfallClimbGravityConfig _ChangeGravityCache;
 
-		// Token: 0x04007358 RID: 29528
+		// Token: 0x040079A5 RID: 31141
 		private bool _ChangeGravityInited;
 	}
 }

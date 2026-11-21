@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200297F RID: 10623
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C65 RID: 11365
 	public class IResetTeleControlEntity : IResetEntityConfig
 	{
-		// Token: 0x0600EB59 RID: 60249 RVA: 0x00226D46 File Offset: 0x00224F46
+		// Token: 0x0600F9D4 RID: 63956 RVA: 0x0024449E File Offset: 0x0024269E
 		public static IResetTeleControlEntity Create(IResetTeleControlEntity? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A1D RID: 18973
-		// (get) Token: 0x0600EB5A RID: 60250 RVA: 0x00226D65 File Offset: 0x00224F65
+		// Token: 0x17004DB8 RID: 19896
+		// (get) Token: 0x0600F9D5 RID: 63957 RVA: 0x002444BD File Offset: 0x002426BD
 		public override EResetEntityType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A1E RID: 18974
-		// (get) Token: 0x0600EB5B RID: 60251 RVA: 0x00226D74 File Offset: 0x00224F74
+		// Token: 0x17004DB9 RID: 19897
+		// (get) Token: 0x0600F9D6 RID: 63958 RVA: 0x002444CC File Offset: 0x002426CC
 		public virtual List<int> EntityIds
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400819B RID: 33179
+		// Token: 0x0400887F RID: 34943
 		private IResetTeleControlEntity Instance;
 
-		// Token: 0x0400819C RID: 33180
+		// Token: 0x04008880 RID: 34944
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x0400819D RID: 33181
+		// Token: 0x04008881 RID: 34945
 		private bool _EntityIdsInited;
 	}
 }

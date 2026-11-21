@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006A8 RID: 1704
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000749 RID: 1865
 	public class ISceneItemSeqEventCbType
 	{
-		// Token: 0x06002486 RID: 9350 RVA: 0x00062EF0 File Offset: 0x000610F0
+		// Token: 0x060027A2 RID: 10146 RVA: 0x00069EB8 File Offset: 0x000680B8
 		private ISceneItemSeqEventCbType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002487 RID: 9351 RVA: 0x00062F28 File Offset: 0x00061128
+		// Token: 0x060027A3 RID: 10147 RVA: 0x00069EF0 File Offset: 0x000680F0
 		public static ISceneItemSeqEventCbType Create([Nullable(2)] ISceneItemSeqEventCbType instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002488 RID: 9352 RVA: 0x00062F3B File Offset: 0x0006113B
+		// Token: 0x060027A4 RID: 10148 RVA: 0x00069F03 File Offset: 0x00068103
 		public static ISceneItemSeqEventCbType CreateFromSetValue([Nullable(2)] ISceneItemSeqEventCbType_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002489 RID: 9353 RVA: 0x00062F4E File Offset: 0x0006114E
+		// Token: 0x060027A5 RID: 10149 RVA: 0x00069F16 File Offset: 0x00068116
 		public ISceneItemSeqEventCbType_SetValue ToSetValue()
 		{
 			return new ISceneItemSeqEventCbType_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009A6 RID: 2470
-		// (get) Token: 0x0600248A RID: 9354 RVA: 0x00062F79 File Offset: 0x00061179
-		// (set) Token: 0x0600248B RID: 9355 RVA: 0x00062FA4 File Offset: 0x000611A4
+		// Token: 0x17000A62 RID: 2658
+		// (get) Token: 0x060027A6 RID: 10150 RVA: 0x00069F41 File Offset: 0x00068141
+		// (set) Token: 0x060027A7 RID: 10151 RVA: 0x00069F6C File Offset: 0x0006816C
 		public virtual ESceneItemSeqEventCbType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009A7 RID: 2471
-		// (get) Token: 0x0600248C RID: 9356 RVA: 0x00062FB2 File Offset: 0x000611B2
-		// (set) Token: 0x0600248D RID: 9357 RVA: 0x00062FDD File Offset: 0x000611DD
+		// Token: 0x17000A63 RID: 2659
+		// (get) Token: 0x060027A8 RID: 10152 RVA: 0x00069F7A File Offset: 0x0006817A
+		// (set) Token: 0x060027A9 RID: 10153 RVA: 0x00069FA5 File Offset: 0x000681A5
 		public virtual string EventName
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009A8 RID: 2472
-		// (get) Token: 0x0600248E RID: 9358 RVA: 0x00062FEC File Offset: 0x000611EC
-		// (set) Token: 0x0600248F RID: 9359 RVA: 0x0006304D File Offset: 0x0006124D
+		// Token: 0x17000A64 RID: 2660
+		// (get) Token: 0x060027AA RID: 10154 RVA: 0x00069FB4 File Offset: 0x000681B4
+		// (set) Token: 0x060027AB RID: 10155 RVA: 0x0006A015 File Offset: 0x00068215
 		public virtual ActionInfo Action
 		{
 			get
@@ -138,18 +136,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001912 RID: 6418
+		// Token: 0x04001B0F RID: 6927
 		[Nullable(2)]
 		protected ISceneItemSeqEventCbType FbInstance;
 
-		// Token: 0x04001913 RID: 6419
+		// Token: 0x04001B10 RID: 6928
 		[Nullable(2)]
 		protected ISceneItemSeqEventCbType_SetValue PocoInterface;
 
-		// Token: 0x04001914 RID: 6420
+		// Token: 0x04001B11 RID: 6929
 		private ActionInfo _ActionCache;
 
-		// Token: 0x04001915 RID: 6421
+		// Token: 0x04001B12 RID: 6930
 		private bool _ActionInited;
 	}
 }

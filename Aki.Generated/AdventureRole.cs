@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AD2 RID: 2770
+	// Token: 0x02000BAC RID: 2988
 	public struct AdventureRole : IFlatbufferObject
 	{
-		// Token: 0x1700019B RID: 411
-		// (get) Token: 0x06004448 RID: 17480 RVA: 0x001CE0AD File Offset: 0x001CC2AD
+		// Token: 0x170001B2 RID: 434
+		// (get) Token: 0x0600498F RID: 18831 RVA: 0x001EDBD9 File Offset: 0x001EBDD9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004449 RID: 17481 RVA: 0x001CE0BA File Offset: 0x001CC2BA
+		// Token: 0x06004990 RID: 18832 RVA: 0x001EDBE6 File Offset: 0x001EBDE6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600444A RID: 17482 RVA: 0x001CE0C4 File Offset: 0x001CC2C4
+		// Token: 0x06004991 RID: 18833 RVA: 0x001EDBF0 File Offset: 0x001EBDF0
 		public static AdventureRole GetRootAsAdventureRole(ByteBuffer _bb)
 		{
 			return AdventureRole.GetRootAsAdventureRole(_bb, default(AdventureRole));
 		}
 
-		// Token: 0x0600444B RID: 17483 RVA: 0x001CE0E0 File Offset: 0x001CC2E0
+		// Token: 0x06004992 RID: 18834 RVA: 0x001EDC0C File Offset: 0x001EBE0C
 		public static AdventureRole GetRootAsAdventureRole(ByteBuffer _bb, AdventureRole obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600444C RID: 17484 RVA: 0x001CE0FD File Offset: 0x001CC2FD
+		// Token: 0x06004993 RID: 18835 RVA: 0x001EDC29 File Offset: 0x001EBE29
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600444D RID: 17485 RVA: 0x001CE10C File Offset: 0x001CC30C
+		// Token: 0x06004994 RID: 18836 RVA: 0x001EDC38 File Offset: 0x001EBE38
 		public AdventureRole __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700019C RID: 412
-		// (get) Token: 0x0600444E RID: 17486 RVA: 0x001CE11C File Offset: 0x001CC31C
+		// Token: 0x170001B3 RID: 435
+		// (get) Token: 0x06004995 RID: 18837 RVA: 0x001EDC48 File Offset: 0x001EBE48
 		public int RoleId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700019D RID: 413
-		// (get) Token: 0x0600444F RID: 17487 RVA: 0x001CE158 File Offset: 0x001CC358
+		// Token: 0x170001B4 RID: 436
+		// (get) Token: 0x06004996 RID: 18838 RVA: 0x001EDC84 File Offset: 0x001EBE84
 		public string DesText
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004450 RID: 17488 RVA: 0x001CE18F File Offset: 0x001CC38F
+		// Token: 0x06004997 RID: 18839 RVA: 0x001EDCBB File Offset: 0x001EBEBB
 		public Span<byte> GetDesTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06004451 RID: 17489 RVA: 0x001CE19E File Offset: 0x001CC39E
+		// Token: 0x06004998 RID: 18840 RVA: 0x001EDCCA File Offset: 0x001EBECA
 		public byte[] GetDesTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700019E RID: 414
-		// (get) Token: 0x06004452 RID: 17490 RVA: 0x001CE1B8 File Offset: 0x001CC3B8
+		// Token: 0x170001B5 RID: 437
+		// (get) Token: 0x06004999 RID: 18841 RVA: 0x001EDCE4 File Offset: 0x001EBEE4
 		public string HeadCard
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004453 RID: 17491 RVA: 0x001CE1EF File Offset: 0x001CC3EF
+		// Token: 0x0600499A RID: 18842 RVA: 0x001EDD1B File Offset: 0x001EBF1B
 		public Span<byte> GetHeadCardBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06004454 RID: 17492 RVA: 0x001CE1FE File Offset: 0x001CC3FE
+		// Token: 0x0600499B RID: 18843 RVA: 0x001EDD2A File Offset: 0x001EBF2A
 		public byte[] GetHeadCardArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700019F RID: 415
-		// (get) Token: 0x06004455 RID: 17493 RVA: 0x001CE218 File Offset: 0x001CC418
+		// Token: 0x170001B6 RID: 438
+		// (get) Token: 0x0600499C RID: 18844 RVA: 0x001EDD44 File Offset: 0x001EBF44
 		public int TrialRoleId
 		{
 			get
@@ -131,7 +131,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004AAF RID: 19119
+		// Token: 0x04005089 RID: 20617
 		private Table __p;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007E3 RID: 2019
+	// Token: 0x020007FF RID: 2047
 	public class ConfigResElementLevelGainByTargetType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002F64 RID: 12132 RVA: 0x001650E7 File Offset: 0x001632E7
+		// Token: 0x0600300C RID: 12300 RVA: 0x0016C3CF File Offset: 0x0016A5CF
 		static ConfigResElementLevelGainByTargetType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigResElementLevelGainByTargetType.CreateStaticDefaultValue), new Action(ConfigResElementLevelGainByTargetType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002F65 RID: 12133 RVA: 0x00165108 File Offset: 0x00163308
+		// Token: 0x0600300D RID: 12301 RVA: 0x0016C3F0 File Offset: 0x0016A5F0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigResElementLevelGainByTargetType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F66 RID: 12134 RVA: 0x00165187 File Offset: 0x00163387
+		// Token: 0x0600300E RID: 12302 RVA: 0x0016C46F File Offset: 0x0016A66F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigResElementLevelGainByTargetType.LogPair = null;
 			ConfigResElementLevelGainByTargetType.HandleId = 0;
 		}
 
-		// Token: 0x06002F67 RID: 12135 RVA: 0x00165195 File Offset: 0x00163395
+		// Token: 0x0600300F RID: 12303 RVA: 0x0016C47D File Offset: 0x0016A67D
 		public static void Init()
 		{
 			ConfigResElementLevelGainByTargetType.HandleId = ConfigCommon.InitDataStatement(ConfigResElementLevelGainByTargetType.HandleId, "db_permanentrogue.db", "select BinData from `ResElementLevelGain` where TargetType=?");
 		}
 
-		// Token: 0x06002F68 RID: 12136 RVA: 0x001651B0 File Offset: 0x001633B0
+		// Token: 0x06003010 RID: 12304 RVA: 0x0016C498 File Offset: 0x0016A698
 		public static ResElementLevelGain? GetConfig(int p0TargetType, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigResElementLevelGainByTargetType.HandleId, ConfigResElementLevelGainByTargetType.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ResElementLevelGain?(rootAsResElementLevelGain);
 		}
 
-		// Token: 0x0400371B RID: 14107
+		// Token: 0x040037DF RID: 14303
 		private const string DB = "db_permanentrogue.db";
 
-		// Token: 0x0400371C RID: 14108
+		// Token: 0x040037E0 RID: 14304
 		private const string FILE = "c.常驻肉鸽.xlsx";
 
-		// Token: 0x0400371D RID: 14109
+		// Token: 0x040037E1 RID: 14305
 		private const string TABLE = "ResElementLevelGain";
 
-		// Token: 0x0400371E RID: 14110
+		// Token: 0x040037E2 RID: 14306
 		private const string COMMAND = "select BinData from `ResElementLevelGain` where TargetType=?";
 
-		// Token: 0x0400371F RID: 14111
+		// Token: 0x040037E3 RID: 14307
 		private const string KEY_PREFIX = "ResElementLevelGainByTargetType";
 
-		// Token: 0x04003720 RID: 14112
+		// Token: 0x040037E4 RID: 14308
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003721 RID: 14113
+		// Token: 0x040037E5 RID: 14309
 		private static int HandleId;
 	}
 }

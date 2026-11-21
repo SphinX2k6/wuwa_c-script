@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005267 RID: 21095
+	// Token: 0x020057CF RID: 22479
 	public struct IFixedAngleTurntable : IFlatbufferObject
 	{
-		// Token: 0x17009A7F RID: 39551
-		// (get) Token: 0x0602250F RID: 140559 RVA: 0x004C1D90 File Offset: 0x004BFF90
+		// Token: 0x1700A27B RID: 41595
+		// (get) Token: 0x060244A5 RID: 148645 RVA: 0x004FC854 File Offset: 0x004FAA54
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022510 RID: 140560 RVA: 0x004C1D9D File Offset: 0x004BFF9D
+		// Token: 0x060244A6 RID: 148646 RVA: 0x004FC861 File Offset: 0x004FAA61
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022511 RID: 140561 RVA: 0x004C1DA4 File Offset: 0x004BFFA4
+		// Token: 0x060244A7 RID: 148647 RVA: 0x004FC868 File Offset: 0x004FAA68
 		public static IFixedAngleTurntable GetRootAsIFixedAngleTurntable(ByteBuffer _bb)
 		{
 			return IFixedAngleTurntable.GetRootAsIFixedAngleTurntable(_bb, default(IFixedAngleTurntable));
 		}
 
-		// Token: 0x06022512 RID: 140562 RVA: 0x004C1DC0 File Offset: 0x004BFFC0
+		// Token: 0x060244A8 RID: 148648 RVA: 0x004FC884 File Offset: 0x004FAA84
 		public static IFixedAngleTurntable GetRootAsIFixedAngleTurntable(ByteBuffer _bb, IFixedAngleTurntable obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022513 RID: 140563 RVA: 0x004C1DDD File Offset: 0x004BFFDD
+		// Token: 0x060244A9 RID: 148649 RVA: 0x004FC8A1 File Offset: 0x004FAAA1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022514 RID: 140564 RVA: 0x004C1DEC File Offset: 0x004BFFEC
+		// Token: 0x060244AA RID: 148650 RVA: 0x004FC8B0 File Offset: 0x004FAAB0
 		public IFixedAngleTurntable __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009A80 RID: 39552
-		// (get) Token: 0x06022515 RID: 140565 RVA: 0x004C1DFC File Offset: 0x004BFFFC
+		// Token: 0x1700A27C RID: 41596
+		// (get) Token: 0x060244AB RID: 148651 RVA: 0x004FC8C0 File Offset: 0x004FAAC0
 		public EControllerType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009A81 RID: 39553
-		// (get) Token: 0x06022516 RID: 140566 RVA: 0x004C1E38 File Offset: 0x004C0038
+		// Token: 0x1700A27D RID: 41597
+		// (get) Token: 0x060244AC RID: 148652 RVA: 0x004FC8FC File Offset: 0x004FAAFC
 		public int RotationSpeed
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022517 RID: 140567 RVA: 0x004C1E74 File Offset: 0x004C0074
+		// Token: 0x060244AD RID: 148653 RVA: 0x004FC938 File Offset: 0x004FAB38
 		public IFixedAngleItem? ItemConfig(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IFixedAngleItem?(default(IFixedAngleItem).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009A82 RID: 39554
-		// (get) Token: 0x06022518 RID: 140568 RVA: 0x004C1ED4 File Offset: 0x004C00D4
+		// Token: 0x1700A27E RID: 41598
+		// (get) Token: 0x060244AE RID: 148654 RVA: 0x004FC998 File Offset: 0x004FAB98
 		public int ItemConfigLength
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022519 RID: 140569 RVA: 0x004C1EFF File Offset: 0x004C00FF
+		// Token: 0x060244AF RID: 148655 RVA: 0x004FC9C3 File Offset: 0x004FABC3
 		public static Offset<IFixedAngleTurntable> CreateIFixedAngleTurntable(FlatBufferBuilder builder, EControllerType Type = EControllerType.FreeAngle, int RotationSpeed = 0, VectorOffset ItemConfigOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -114,31 +114,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFixedAngleTurntable.EndIFixedAngleTurntable(builder);
 		}
 
-		// Token: 0x0602251A RID: 140570 RVA: 0x004C1F23 File Offset: 0x004C0123
+		// Token: 0x060244B0 RID: 148656 RVA: 0x004FC9E7 File Offset: 0x004FABE7
 		public static void StartIFixedAngleTurntable(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602251B RID: 140571 RVA: 0x004C1F2C File Offset: 0x004C012C
+		// Token: 0x060244B1 RID: 148657 RVA: 0x004FC9F0 File Offset: 0x004FABF0
 		public static void AddType(FlatBufferBuilder builder, EControllerType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602251C RID: 140572 RVA: 0x004C1F37 File Offset: 0x004C0137
+		// Token: 0x060244B2 RID: 148658 RVA: 0x004FC9FB File Offset: 0x004FABFB
 		public static void AddRotationSpeed(FlatBufferBuilder builder, int rotationSpeed)
 		{
 			builder.AddInt(1, rotationSpeed, 0);
 		}
 
-		// Token: 0x0602251D RID: 140573 RVA: 0x004C1F42 File Offset: 0x004C0142
+		// Token: 0x060244B3 RID: 148659 RVA: 0x004FCA06 File Offset: 0x004FAC06
 		public static void AddItemConfig(FlatBufferBuilder builder, VectorOffset itemConfigOffset)
 		{
 			builder.AddOffset(2, itemConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0602251E RID: 140574 RVA: 0x004C1F54 File Offset: 0x004C0154
+		// Token: 0x060244B4 RID: 148660 RVA: 0x004FCA18 File Offset: 0x004FAC18
 		public static VectorOffset CreateItemConfigVector(FlatBufferBuilder builder, Offset<IFixedAngleItem>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602251F RID: 140575 RVA: 0x004C1F94 File Offset: 0x004C0194
+		// Token: 0x060244B5 RID: 148661 RVA: 0x004FCA58 File Offset: 0x004FAC58
 		public static VectorOffset CreateItemConfigVectorBlock(FlatBufferBuilder builder, Offset<IFixedAngleItem>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022520 RID: 140576 RVA: 0x004C1FAE File Offset: 0x004C01AE
+		// Token: 0x060244B6 RID: 148662 RVA: 0x004FCA72 File Offset: 0x004FAC72
 		public static VectorOffset CreateItemConfigVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IFixedAngleItem>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022521 RID: 140577 RVA: 0x004C1FCC File Offset: 0x004C01CC
+		// Token: 0x060244B7 RID: 148663 RVA: 0x004FCA90 File Offset: 0x004FAC90
 		public static VectorOffset CreateItemConfigVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -173,19 +173,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022522 RID: 140578 RVA: 0x004C1FE5 File Offset: 0x004C01E5
+		// Token: 0x060244B8 RID: 148664 RVA: 0x004FCAA9 File Offset: 0x004FACA9
 		public static void StartItemConfigVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06022523 RID: 140579 RVA: 0x004C1FF0 File Offset: 0x004C01F0
+		// Token: 0x060244B9 RID: 148665 RVA: 0x004FCAB4 File Offset: 0x004FACB4
 		public static Offset<IFixedAngleTurntable> EndIFixedAngleTurntable(FlatBufferBuilder builder)
 		{
 			return new Offset<IFixedAngleTurntable>(builder.EndTable());
 		}
 
-		// Token: 0x06022524 RID: 140580 RVA: 0x004C2000 File Offset: 0x004C0200
+		// Token: 0x060244BA RID: 148666 RVA: 0x004FCAC4 File Offset: 0x004FACC4
 		public IFixedAngleTurntableT UnPack()
 		{
 			IFixedAngleTurntableT fixedAngleTurntableT = new IFixedAngleTurntableT();
@@ -193,7 +193,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return fixedAngleTurntableT;
 		}
 
-		// Token: 0x06022525 RID: 140581 RVA: 0x004C201C File Offset: 0x004C021C
+		// Token: 0x060244BB RID: 148667 RVA: 0x004FCAE0 File Offset: 0x004FACE0
 		public void UnPackTo(IFixedAngleTurntableT _o)
 		{
 			_o.Type = this.Type;
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022526 RID: 140582 RVA: 0x004C2094 File Offset: 0x004C0294
+		// Token: 0x060244BC RID: 148668 RVA: 0x004FCB58 File Offset: 0x004FAD58
 		public static Offset<IFixedAngleTurntable> Pack(FlatBufferBuilder builder, IFixedAngleTurntableT _o)
 		{
 			if (_o == null)
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFixedAngleTurntable.CreateIFixedAngleTurntable(builder, _o.Type, _o.RotationSpeed, itemConfigOffset);
 		}
 
-		// Token: 0x0400E3B8 RID: 58296
+		// Token: 0x0400EFBE RID: 61374
 		private Table __p;
 	}
 }

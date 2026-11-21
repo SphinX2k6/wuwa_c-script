@@ -4,25 +4,25 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x0200518E RID: 20878
+	// Token: 0x0200415E RID: 16734
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TabData
 	{
-		// Token: 0x0401C601 RID: 116225
+		// Token: 0x04017036 RID: 94262
 		public int TabIndex;
 
-		// Token: 0x0401C602 RID: 116226
+		// Token: 0x04017037 RID: 94263
 		[Nullable(1)]
 		public string TabNameTextId = string.Empty;
 
-		// Token: 0x0401C603 RID: 116227
+		// Token: 0x04017038 RID: 94264
 		public UiPanelBase Panel;
 
-		// Token: 0x0401C604 RID: 116228
+		// Token: 0x04017039 RID: 94265
 		public IDeckBuilderCardInfoViewPanelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401C605 RID: 116229
+		// Token: 0x0401703A RID: 94266
 		public Action OnShow;
 	}
 }

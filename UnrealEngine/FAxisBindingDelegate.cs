@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001892 RID: 6290
+	// Token: 0x020003B6 RID: 950
 	public sealed class FAxisBindingDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060172B7 RID: 94903 RVA: 0x0021C7FA File Offset: 0x0021A9FA
+		// Token: 0x06005D62 RID: 23906 RVA: 0x00083C98 File Offset: 0x00081E98
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FAxisBindingDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x060172B8 RID: 94904 RVA: 0x0021C806 File Offset: 0x0021AA06
+		// Token: 0x06005D63 RID: 23907 RVA: 0x00083CA4 File Offset: 0x00081EA4
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FAxisBindingDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FAxisBindingDelegate._FunctionPtr;
 		}
 
-		// Token: 0x060172B9 RID: 94905 RVA: 0x0021C829 File Offset: 0x0021AA29
+		// Token: 0x06005D64 RID: 23908 RVA: 0x00083CC7 File Offset: 0x00081EC7
 		public FAxisBindingDelegate()
 		{
 		}
 
-		// Token: 0x060172BA RID: 94906 RVA: 0x0021C831 File Offset: 0x0021AA31
+		// Token: 0x06005D65 RID: 23909 RVA: 0x00083CCF File Offset: 0x00081ECF
 		[NullableContext(2)]
 		public FAxisBindingDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060172BB RID: 94907 RVA: 0x0021C83B File Offset: 0x0021AA3B
+		// Token: 0x06005D66 RID: 23910 RVA: 0x00083CD9 File Offset: 0x00081ED9
 		public FAxisBindingDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060172BC RID: 94908 RVA: 0x0021C846 File Offset: 0x0021AA46
+		// Token: 0x06005D67 RID: 23911 RVA: 0x00083CE4 File Offset: 0x00081EE4
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<float>) ?? ((Action<float>)Delegate.CreateDelegate(typeof(Action<float>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060172BD RID: 94909 RVA: 0x0021C878 File Offset: 0x0021AA78
+		// Token: 0x06005D68 RID: 23912 RVA: 0x00083D16 File Offset: 0x00081F16
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<float> Callback)
 		{
 			if (FAxisBindingDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FAxisBindingDelegate.RegisterId);
 		}
 
-		// Token: 0x060172BE RID: 94910 RVA: 0x0021C8B4 File Offset: 0x0021AAB4
+		// Token: 0x06005D69 RID: 23913 RVA: 0x00083D50 File Offset: 0x00081F50
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(float Value)
 		{
 			FAxisBindingDelegate.__FAxisBindingDelegate_DelegateParams* ptr = stackalloc FAxisBindingDelegate.__FAxisBindingDelegate_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FAxisBindingDelegate.__FAxisBindingDelegate_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x060172BF RID: 94911 RVA: 0x0021C8F4 File Offset: 0x0021AAF4
+		// Token: 0x06005D6A RID: 23914 RVA: 0x00083D90 File Offset: 0x00081F90
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<float> action = target as Action<float>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FAxisBindingDelegate.__FAxisBindingDelegate_DelegateParams*)__Parameters)->Value);
 		}
 
-		// Token: 0x0400C905 RID: 51461
+		// Token: 0x040026EE RID: 9966
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400C906 RID: 51462
+		// Token: 0x040026EF RID: 9967
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.AxisBindingDelegate__DelegateSignature";
 
-		// Token: 0x0400C907 RID: 51463
+		// Token: 0x040026F0 RID: 9968
 		private static int RegisterId;
 
-		// Token: 0x02002F95 RID: 12181
+		// Token: 0x02000AB8 RID: 2744
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FAxisBindingDelegate_DelegateParams
+		private ref struct __FAxisBindingDelegate_DelegateParams
 		{
-			// Token: 0x04016B62 RID: 93026
+			// Token: 0x04005B1F RID: 23327
 			[FieldOffset(0)]
 			public float Value;
 		}
 
-		// Token: 0x02002F96 RID: 12182
+		// Token: 0x02000AB9 RID: 2745
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B63 RID: 93027
+			// Token: 0x04005B20 RID: 23328
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

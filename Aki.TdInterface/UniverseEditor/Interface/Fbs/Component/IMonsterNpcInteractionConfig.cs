@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005581 RID: 21889
+	// Token: 0x02005B1F RID: 23327
 	public struct IMonsterNpcInteractionConfig : IFlatbufferObject
 	{
-		// Token: 0x1700A1C6 RID: 41414
-		// (get) Token: 0x060243C5 RID: 148421 RVA: 0x00501187 File Offset: 0x004FF387
+		// Token: 0x1700AA4E RID: 43598
+		// (get) Token: 0x060265D2 RID: 157138 RVA: 0x005416FF File Offset: 0x0053F8FF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060243C6 RID: 148422 RVA: 0x00501194 File Offset: 0x004FF394
+		// Token: 0x060265D3 RID: 157139 RVA: 0x0054170C File Offset: 0x0053F90C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060243C7 RID: 148423 RVA: 0x0050119C File Offset: 0x004FF39C
+		// Token: 0x060265D4 RID: 157140 RVA: 0x00541714 File Offset: 0x0053F914
 		public static IMonsterNpcInteractionConfig GetRootAsIMonsterNpcInteractionConfig(ByteBuffer _bb)
 		{
 			return IMonsterNpcInteractionConfig.GetRootAsIMonsterNpcInteractionConfig(_bb, default(IMonsterNpcInteractionConfig));
 		}
 
-		// Token: 0x060243C8 RID: 148424 RVA: 0x005011B8 File Offset: 0x004FF3B8
+		// Token: 0x060265D5 RID: 157141 RVA: 0x00541730 File Offset: 0x0053F930
 		public static IMonsterNpcInteractionConfig GetRootAsIMonsterNpcInteractionConfig(ByteBuffer _bb, IMonsterNpcInteractionConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060243C9 RID: 148425 RVA: 0x005011D5 File Offset: 0x004FF3D5
+		// Token: 0x060265D6 RID: 157142 RVA: 0x0054174D File Offset: 0x0053F94D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060243CA RID: 148426 RVA: 0x005011E4 File Offset: 0x004FF3E4
+		// Token: 0x060265D7 RID: 157143 RVA: 0x0054175C File Offset: 0x0053F95C
 		public IMonsterNpcInteractionConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A1C7 RID: 41415
-		// (get) Token: 0x060243CB RID: 148427 RVA: 0x005011F4 File Offset: 0x004FF3F4
+		// Token: 0x1700AA4F RID: 43599
+		// (get) Token: 0x060265D8 RID: 157144 RVA: 0x0054176C File Offset: 0x0053F96C
 		public EMonsterNpcInteractionType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060243CC RID: 148428 RVA: 0x00501230 File Offset: 0x004FF430
+		// Token: 0x060265D9 RID: 157145 RVA: 0x005417A8 File Offset: 0x0053F9A8
 		public static Offset<IMonsterNpcInteractionConfig> CreateIMonsterNpcInteractionConfig(FlatBufferBuilder builder, EMonsterNpcInteractionType Type = EMonsterNpcInteractionType.WallRun)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMonsterNpcInteractionConfig.EndIMonsterNpcInteractionConfig(builder);
 		}
 
-		// Token: 0x060243CD RID: 148429 RVA: 0x00501246 File Offset: 0x004FF446
+		// Token: 0x060265DA RID: 157146 RVA: 0x005417BE File Offset: 0x0053F9BE
 		public static void StartIMonsterNpcInteractionConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060243CE RID: 148430 RVA: 0x0050124F File Offset: 0x004FF44F
+		// Token: 0x060265DB RID: 157147 RVA: 0x005417C7 File Offset: 0x0053F9C7
 		public static void AddType(FlatBufferBuilder builder, EMonsterNpcInteractionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060243CF RID: 148431 RVA: 0x0050125A File Offset: 0x004FF45A
+		// Token: 0x060265DC RID: 157148 RVA: 0x005417D2 File Offset: 0x0053F9D2
 		public static Offset<IMonsterNpcInteractionConfig> EndIMonsterNpcInteractionConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IMonsterNpcInteractionConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060243D0 RID: 148432 RVA: 0x00501268 File Offset: 0x004FF468
+		// Token: 0x060265DD RID: 157149 RVA: 0x005417E0 File Offset: 0x0053F9E0
 		public IMonsterNpcInteractionConfigT UnPack()
 		{
 			IMonsterNpcInteractionConfigT monsterNpcInteractionConfigT = new IMonsterNpcInteractionConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return monsterNpcInteractionConfigT;
 		}
 
-		// Token: 0x060243D1 RID: 148433 RVA: 0x00501283 File Offset: 0x004FF483
+		// Token: 0x060265DE RID: 157150 RVA: 0x005417FB File Offset: 0x0053F9FB
 		public void UnPackTo(IMonsterNpcInteractionConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060243D2 RID: 148434 RVA: 0x00501294 File Offset: 0x004FF494
+		// Token: 0x060265DF RID: 157151 RVA: 0x0054180C File Offset: 0x0053FA0C
 		public static Offset<IMonsterNpcInteractionConfig> Pack(FlatBufferBuilder builder, IMonsterNpcInteractionConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMonsterNpcInteractionConfig.CreateIMonsterNpcInteractionConfig(builder, _o.Type);
 		}
 
-		// Token: 0x0400E8B0 RID: 59568
+		// Token: 0x0400F512 RID: 62738
 		private Table __p;
 	}
 }

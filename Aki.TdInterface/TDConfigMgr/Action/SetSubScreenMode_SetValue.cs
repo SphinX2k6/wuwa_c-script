@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021DF RID: 8671
+	// Token: 0x0200244A RID: 9290
 	public class SetSubScreenMode_SetValue
 	{
-		// Token: 0x040071B0 RID: 29104
-		[Nullable(1)]
+		// Token: 0x040077F9 RID: 30713
 		public ISubScreenModeConfig Config;
 	}
 }

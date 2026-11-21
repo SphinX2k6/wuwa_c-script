@@ -2,26 +2,26 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 
-// Token: 0x020028F8 RID: 10488
+// Token: 0x02001E73 RID: 7795
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonAttributeData : ScrollViewDataBase
 {
-	// Token: 0x0400A112 RID: 41234
+	// Token: 0x0400A4FD RID: 42237
 	public string AttrIconTexture = "";
 
-	// Token: 0x0400A113 RID: 41235
+	// Token: 0x0400A4FE RID: 42238
 	public string AttrNameText = "";
 
-	// Token: 0x0400A114 RID: 41236
+	// Token: 0x0400A4FF RID: 42239
 	public string AttrBaseValue = "";
 
-	// Token: 0x0400A115 RID: 41237
+	// Token: 0x0400A500 RID: 42240
 	public string AttrAddValue = "";
 
-	// Token: 0x0400A116 RID: 41238
+	// Token: 0x0400A501 RID: 42241
 	public string DetailText = "";
 
-	// Token: 0x0400A117 RID: 41239
+	// Token: 0x0400A502 RID: 42242
 	public bool NeedUpArrow;
 }

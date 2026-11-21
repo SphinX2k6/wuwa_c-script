@@ -7,40 +7,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F85 RID: 8069
-	[NullableContext(1)]
+	// Token: 0x0200063D RID: 1597
+	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Landscape.LandscapeProxy")]
-	[UnrealStructLayout(2560, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2560)]
+	[UnrealStructLayout(2640, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2640)]
 	public abstract class ALandscapeProxy : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601E9A7 RID: 125351 RVA: 0x002D7B1B File Offset: 0x002D5D1B
+		// Token: 0x06008C03 RID: 35843 RVA: 0x000D2A03 File Offset: 0x000D0C03
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ALandscapeProxy._ClassPtr;
 		}
 
-		// Token: 0x170079C1 RID: 31169
-		// (get) Token: 0x0601E9A8 RID: 125352 RVA: 0x002D7B27 File Offset: 0x002D5D27
-		// (set) Token: 0x0601E9A9 RID: 125353 RVA: 0x002D7B3B File Offset: 0x002D5D3B
-		[Nullable(2)]
-		public unsafe ULandscapeSplinesComponent SplineComponent
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<ULandscapeSplinesComponent>(base.NativePtr / (IntPtr)sizeof(void*) + ALandscapeProxy.__PropertyOffset_SplineComponent);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ALandscapeProxy.__PropertyOffset_SplineComponent, value);
-			}
-		}
-
-		// Token: 0x170079C2 RID: 31170
-		// (get) Token: 0x0601E9AA RID: 125354 RVA: 0x002D7B50 File Offset: 0x002D5D50
-		// (set) Token: 0x0601E9AB RID: 125355 RVA: 0x002D7B64 File Offset: 0x002D5D64
+		// Token: 0x17001A65 RID: 6757
+		// (get) Token: 0x06008C04 RID: 35844 RVA: 0x000D2A0F File Offset: 0x000D0C0F
+		// (set) Token: 0x06008C05 RID: 35845 RVA: 0x000D2A23 File Offset: 0x000D0C23
 		public unsafe FGuid LandscapeGuid
 		{
 			get
@@ -53,9 +35,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079C3 RID: 31171
-		// (get) Token: 0x0601E9AC RID: 125356 RVA: 0x002D7B79 File Offset: 0x002D5D79
-		// (set) Token: 0x0601E9AD RID: 125357 RVA: 0x002D7B8D File Offset: 0x002D5D8D
+		// Token: 0x17001A66 RID: 6758
+		// (get) Token: 0x06008C06 RID: 35846 RVA: 0x000D2A38 File Offset: 0x000D0C38
+		// (set) Token: 0x06008C07 RID: 35847 RVA: 0x000D2A4C File Offset: 0x000D0C4C
 		public unsafe FIntPoint LandscapeSectionOffset
 		{
 			get
@@ -68,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079C4 RID: 31172
-		// (get) Token: 0x0601E9AE RID: 125358 RVA: 0x002D7BA2 File Offset: 0x002D5DA2
-		// (set) Token: 0x0601E9AF RID: 125359 RVA: 0x002D7BB2 File Offset: 0x002D5DB2
+		// Token: 0x17001A67 RID: 6759
+		// (get) Token: 0x06008C08 RID: 35848 RVA: 0x000D2A61 File Offset: 0x000D0C61
+		// (set) Token: 0x06008C09 RID: 35849 RVA: 0x000D2A71 File Offset: 0x000D0C71
 		public unsafe int MaxLODLevel
 		{
 			get
@@ -83,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079C5 RID: 31173
-		// (get) Token: 0x0601E9B0 RID: 125360 RVA: 0x002D7BC3 File Offset: 0x002D5DC3
-		// (set) Token: 0x0601E9B1 RID: 125361 RVA: 0x002D7BD3 File Offset: 0x002D5DD3
+		// Token: 0x17001A68 RID: 6760
+		// (get) Token: 0x06008C0A RID: 35850 RVA: 0x000D2A82 File Offset: 0x000D0C82
+		// (set) Token: 0x06008C0B RID: 35851 RVA: 0x000D2A92 File Offset: 0x000D0C92
 		public unsafe float LODDistanceFactor_DEPRECATED
 		{
 			get
@@ -98,27 +80,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079C6 RID: 31174
-		// (get) Token: 0x0601E9B2 RID: 125362 RVA: 0x002D7BE4 File Offset: 0x002D5DE4
-		// (set) Token: 0x0601E9B3 RID: 125363 RVA: 0x002D7BF8 File Offset: 0x002D5DF8
-		[Nullable(0)]
-		public unsafe TEnumAsByte<ELandscapeLODFalloff> LODFalloff_DEPRECATED
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_LODFalloff_DEPRECATED);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_LODFalloff_DEPRECATED) = value;
-			}
-		}
-
-		// Token: 0x170079C7 RID: 31175
-		// (get) Token: 0x0601E9B4 RID: 125364 RVA: 0x002D7C0D File Offset: 0x002D5E0D
-		// (set) Token: 0x0601E9B5 RID: 125365 RVA: 0x002D7C1D File Offset: 0x002D5E1D
+		// Token: 0x17001A69 RID: 6761
+		// (get) Token: 0x06008C0C RID: 35852 RVA: 0x000D2AA3 File Offset: 0x000D0CA3
+		// (set) Token: 0x06008C0D RID: 35853 RVA: 0x000D2AB3 File Offset: 0x000D0CB3
 		public unsafe float ComponentScreenSizeToUseSubSections
 		{
 			get
@@ -131,9 +95,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079C8 RID: 31176
-		// (get) Token: 0x0601E9B6 RID: 125366 RVA: 0x002D7C2E File Offset: 0x002D5E2E
-		// (set) Token: 0x0601E9B7 RID: 125367 RVA: 0x002D7C3E File Offset: 0x002D5E3E
+		// Token: 0x17001A6A RID: 6762
+		// (get) Token: 0x06008C0E RID: 35854 RVA: 0x000D2AC4 File Offset: 0x000D0CC4
+		// (set) Token: 0x06008C0F RID: 35855 RVA: 0x000D2AD4 File Offset: 0x000D0CD4
 		public unsafe float LOD0ScreenSize
 		{
 			get
@@ -146,9 +110,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079C9 RID: 31177
-		// (get) Token: 0x0601E9B8 RID: 125368 RVA: 0x002D7C4F File Offset: 0x002D5E4F
-		// (set) Token: 0x0601E9B9 RID: 125369 RVA: 0x002D7C5F File Offset: 0x002D5E5F
+		// Token: 0x17001A6B RID: 6763
+		// (get) Token: 0x06008C10 RID: 35856 RVA: 0x000D2AE5 File Offset: 0x000D0CE5
+		// (set) Token: 0x06008C11 RID: 35857 RVA: 0x000D2AF5 File Offset: 0x000D0CF5
 		public unsafe float LOD0DistributionSetting
 		{
 			get
@@ -161,9 +125,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079CA RID: 31178
-		// (get) Token: 0x0601E9BA RID: 125370 RVA: 0x002D7C70 File Offset: 0x002D5E70
-		// (set) Token: 0x0601E9BB RID: 125371 RVA: 0x002D7C80 File Offset: 0x002D5E80
+		// Token: 0x17001A6C RID: 6764
+		// (get) Token: 0x06008C12 RID: 35858 RVA: 0x000D2B06 File Offset: 0x000D0D06
+		// (set) Token: 0x06008C13 RID: 35859 RVA: 0x000D2B16 File Offset: 0x000D0D16
 		public unsafe float LODDistributionSetting
 		{
 			get
@@ -176,9 +140,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079CB RID: 31179
-		// (get) Token: 0x0601E9BC RID: 125372 RVA: 0x002D7C91 File Offset: 0x002D5E91
-		// (set) Token: 0x0601E9BD RID: 125373 RVA: 0x002D7CA1 File Offset: 0x002D5EA1
+		// Token: 0x17001A6D RID: 6765
+		// (get) Token: 0x06008C14 RID: 35860 RVA: 0x000D2B27 File Offset: 0x000D0D27
+		// (set) Token: 0x06008C15 RID: 35861 RVA: 0x000D2B37 File Offset: 0x000D0D37
 		public unsafe float TessellationComponentScreenSize
 		{
 			get
@@ -191,9 +155,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079CC RID: 31180
-		// (get) Token: 0x0601E9BE RID: 125374 RVA: 0x002D7CB2 File Offset: 0x002D5EB2
-		// (set) Token: 0x0601E9BF RID: 125375 RVA: 0x002D7CC2 File Offset: 0x002D5EC2
+		// Token: 0x17001A6E RID: 6766
+		// (get) Token: 0x06008C16 RID: 35862 RVA: 0x000D2B48 File Offset: 0x000D0D48
+		// (set) Token: 0x06008C17 RID: 35863 RVA: 0x000D2B58 File Offset: 0x000D0D58
 		public unsafe bool UseTessellationComponentScreenSizeFalloff
 		{
 			get
@@ -206,9 +170,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079CD RID: 31181
-		// (get) Token: 0x0601E9C0 RID: 125376 RVA: 0x002D7CD3 File Offset: 0x002D5ED3
-		// (set) Token: 0x0601E9C1 RID: 125377 RVA: 0x002D7CE3 File Offset: 0x002D5EE3
+		// Token: 0x17001A6F RID: 6767
+		// (get) Token: 0x06008C18 RID: 35864 RVA: 0x000D2B69 File Offset: 0x000D0D69
+		// (set) Token: 0x06008C19 RID: 35865 RVA: 0x000D2B79 File Offset: 0x000D0D79
 		public unsafe float TessellationComponentScreenSizeFalloff
 		{
 			get
@@ -221,9 +185,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079CE RID: 31182
-		// (get) Token: 0x0601E9C2 RID: 125378 RVA: 0x002D7CF4 File Offset: 0x002D5EF4
-		// (set) Token: 0x0601E9C3 RID: 125379 RVA: 0x002D7D04 File Offset: 0x002D5F04
+		// Token: 0x17001A70 RID: 6768
+		// (get) Token: 0x06008C1A RID: 35866 RVA: 0x000D2B8A File Offset: 0x000D0D8A
+		// (set) Token: 0x06008C1B RID: 35867 RVA: 0x000D2B9A File Offset: 0x000D0D9A
 		public unsafe int OccluderGeometryLOD
 		{
 			get
@@ -236,9 +200,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079CF RID: 31183
-		// (get) Token: 0x0601E9C4 RID: 125380 RVA: 0x002D7D15 File Offset: 0x002D5F15
-		// (set) Token: 0x0601E9C5 RID: 125381 RVA: 0x002D7D25 File Offset: 0x002D5F25
+		// Token: 0x17001A71 RID: 6769
+		// (get) Token: 0x06008C1C RID: 35868 RVA: 0x000D2BAB File Offset: 0x000D0DAB
+		// (set) Token: 0x06008C1D RID: 35869 RVA: 0x000D2BBB File Offset: 0x000D0DBB
 		public unsafe int StaticLightingLOD
 		{
 			get
@@ -251,27 +215,24 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079D0 RID: 31184
-		// (get) Token: 0x0601E9C6 RID: 125382 RVA: 0x002D7D36 File Offset: 0x002D5F36
-		// (set) Token: 0x0601E9C7 RID: 125383 RVA: 0x002D7D4A File Offset: 0x002D5F4A
-		[Nullable(2)]
+		// Token: 0x17001A72 RID: 6770
+		// (get) Token: 0x06008C1E RID: 35870 RVA: 0x000D2BCC File Offset: 0x000D0DCC
+		// (set) Token: 0x06008C1F RID: 35871 RVA: 0x000D2BE0 File Offset: 0x000D0DE0
 		public unsafe UPhysicalMaterial DefaultPhysMaterial
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UPhysicalMaterial>(base.NativePtr / (IntPtr)sizeof(void*) + ALandscapeProxy.__PropertyOffset_DefaultPhysMaterial);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ALandscapeProxy.__PropertyOffset_DefaultPhysMaterial, value);
 			}
 		}
 
-		// Token: 0x170079D1 RID: 31185
-		// (get) Token: 0x0601E9C8 RID: 125384 RVA: 0x002D7D5F File Offset: 0x002D5F5F
-		// (set) Token: 0x0601E9C9 RID: 125385 RVA: 0x002D7D6F File Offset: 0x002D5F6F
+		// Token: 0x17001A73 RID: 6771
+		// (get) Token: 0x06008C20 RID: 35872 RVA: 0x000D2BF5 File Offset: 0x000D0DF5
+		// (set) Token: 0x06008C21 RID: 35873 RVA: 0x000D2C05 File Offset: 0x000D0E05
 		public unsafe float StreamingDistanceMultiplier
 		{
 			get
@@ -284,29 +245,28 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079D2 RID: 31186
-		// (get) Token: 0x0601E9CA RID: 125386 RVA: 0x002D7D80 File Offset: 0x002D5F80
-		// (set) Token: 0x0601E9CB RID: 125387 RVA: 0x002D7D94 File Offset: 0x002D5F94
-		[Nullable(2)]
+		// Token: 0x17001A74 RID: 6772
+		// (get) Token: 0x06008C22 RID: 35874 RVA: 0x000D2C16 File Offset: 0x000D0E16
+		// (set) Token: 0x06008C23 RID: 35875 RVA: 0x000D2C2A File Offset: 0x000D0E2A
 		public unsafe UMaterialInterface LandscapeMaterial
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UMaterialInterface>(base.NativePtr / (IntPtr)sizeof(void*) + ALandscapeProxy.__PropertyOffset_LandscapeMaterial);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ALandscapeProxy.__PropertyOffset_LandscapeMaterial, value);
 			}
 		}
 
-		// Token: 0x170079D3 RID: 31187
-		// (get) Token: 0x0601E9CC RID: 125388 RVA: 0x002D7DAC File Offset: 0x002D5FAC
-		// (set) Token: 0x0601E9CD RID: 125389 RVA: 0x002D7DE5 File Offset: 0x002D5FE5
+		// Token: 0x17001A75 RID: 6773
+		// (get) Token: 0x06008C24 RID: 35876 RVA: 0x000D2C40 File Offset: 0x000D0E40
+		// (set) Token: 0x06008C25 RID: 35877 RVA: 0x000D2C79 File Offset: 0x000D0E79
+		[Nullable(1)]
 		public TArray<FVector4> LandscapeLayerParams
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -317,15 +277,16 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				this.LandscapeLayerParams.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x170079D4 RID: 31188
-		// (get) Token: 0x0601E9CE RID: 125390 RVA: 0x002D7DF3 File Offset: 0x002D5FF3
-		// (set) Token: 0x0601E9CF RID: 125391 RVA: 0x002D7E0C File Offset: 0x002D600C
+		// Token: 0x17001A76 RID: 6774
+		// (get) Token: 0x06008C26 RID: 35878 RVA: 0x000D2C87 File Offset: 0x000D0E87
+		// (set) Token: 0x06008C27 RID: 35879 RVA: 0x000D2CA0 File Offset: 0x000D0EA0
 		public unsafe bool UseLandscapeColormap
 		{
 			get
@@ -338,27 +299,24 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079D5 RID: 31189
-		// (get) Token: 0x0601E9D0 RID: 125392 RVA: 0x002D7E3C File Offset: 0x002D603C
-		// (set) Token: 0x0601E9D1 RID: 125393 RVA: 0x002D7E50 File Offset: 0x002D6050
-		[Nullable(2)]
+		// Token: 0x17001A77 RID: 6775
+		// (get) Token: 0x06008C28 RID: 35880 RVA: 0x000D2CD0 File Offset: 0x000D0ED0
+		// (set) Token: 0x06008C29 RID: 35881 RVA: 0x000D2CE4 File Offset: 0x000D0EE4
 		public unsafe UTexture2D KuroColormapTexture
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UTexture2D>(base.NativePtr / (IntPtr)sizeof(void*) + ALandscapeProxy.__PropertyOffset_KuroColormapTexture);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ALandscapeProxy.__PropertyOffset_KuroColormapTexture, value);
 			}
 		}
 
-		// Token: 0x170079D6 RID: 31190
-		// (get) Token: 0x0601E9D2 RID: 125394 RVA: 0x002D7E65 File Offset: 0x002D6065
-		// (set) Token: 0x0601E9D3 RID: 125395 RVA: 0x002D7E79 File Offset: 0x002D6079
+		// Token: 0x17001A78 RID: 6776
+		// (get) Token: 0x06008C2A RID: 35882 RVA: 0x000D2CF9 File Offset: 0x000D0EF9
+		// (set) Token: 0x06008C2B RID: 35883 RVA: 0x000D2D0D File Offset: 0x000D0F0D
 		public unsafe FVector4 SectionBaseMinAndRange
 		{
 			get
@@ -371,69 +329,24 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079D7 RID: 31191
-		// (get) Token: 0x0601E9D4 RID: 125396 RVA: 0x002D7E8E File Offset: 0x002D608E
-		// (set) Token: 0x0601E9D5 RID: 125397 RVA: 0x002D7EA2 File Offset: 0x002D60A2
-		[Nullable(2)]
+		// Token: 0x17001A79 RID: 6777
+		// (get) Token: 0x06008C2C RID: 35884 RVA: 0x000D2D22 File Offset: 0x000D0F22
+		// (set) Token: 0x06008C2D RID: 35885 RVA: 0x000D2D36 File Offset: 0x000D0F36
 		public unsafe UMaterialInterface LandscapeHoleMaterial
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UMaterialInterface>(base.NativePtr / (IntPtr)sizeof(void*) + ALandscapeProxy.__PropertyOffset_LandscapeHoleMaterial);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ALandscapeProxy.__PropertyOffset_LandscapeHoleMaterial, value);
 			}
 		}
 
-		// Token: 0x170079D8 RID: 31192
-		// (get) Token: 0x0601E9D6 RID: 125398 RVA: 0x002D7EB8 File Offset: 0x002D60B8
-		// (set) Token: 0x0601E9D7 RID: 125399 RVA: 0x002D7EF1 File Offset: 0x002D60F1
-		public TArray<FLandscapeProxyMaterialOverride> LandscapeMaterialsOverride
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FLandscapeProxyMaterialOverride> result;
-				if ((result = this._LandscapeMaterialsOverride) == null)
-				{
-					result = (this._LandscapeMaterialsOverride = new TArray<FLandscapeProxyMaterialOverride>(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_LandscapeMaterialsOverride, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.LandscapeMaterialsOverride.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170079D9 RID: 31193
-		// (get) Token: 0x0601E9D8 RID: 125400 RVA: 0x002D7F00 File Offset: 0x002D6100
-		// (set) Token: 0x0601E9D9 RID: 125401 RVA: 0x002D7F39 File Offset: 0x002D6139
-		public TArray<FLandscapeProxyCustomLayerPhysicalMaterial> CustomLayerPhysicalMaterial
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FLandscapeProxyCustomLayerPhysicalMaterial> result;
-				if ((result = this._CustomLayerPhysicalMaterial) == null)
-				{
-					result = (this._CustomLayerPhysicalMaterial = new TArray<FLandscapeProxyCustomLayerPhysicalMaterial>(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_CustomLayerPhysicalMaterial, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.CustomLayerPhysicalMaterial.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170079DA RID: 31194
-		// (get) Token: 0x0601E9DA RID: 125402 RVA: 0x002D7F47 File Offset: 0x002D6147
-		// (set) Token: 0x0601E9DB RID: 125403 RVA: 0x002D7F57 File Offset: 0x002D6157
+		// Token: 0x17001A7A RID: 6778
+		// (get) Token: 0x06008C2E RID: 35886 RVA: 0x000D2D4B File Offset: 0x000D0F4B
+		// (set) Token: 0x06008C2F RID: 35887 RVA: 0x000D2D5B File Offset: 0x000D0F5B
 		public unsafe bool bMeshHoles
 		{
 			get
@@ -446,9 +359,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079DB RID: 31195
-		// (get) Token: 0x0601E9DC RID: 125404 RVA: 0x002D7F68 File Offset: 0x002D6168
-		// (set) Token: 0x0601E9DD RID: 125405 RVA: 0x002D7F78 File Offset: 0x002D6178
+		// Token: 0x17001A7B RID: 6779
+		// (get) Token: 0x06008C30 RID: 35888 RVA: 0x000D2D6C File Offset: 0x000D0F6C
+		// (set) Token: 0x06008C31 RID: 35889 RVA: 0x000D2D7C File Offset: 0x000D0F7C
 		public unsafe byte MeshHolesMaxLod
 		{
 			get
@@ -461,30 +374,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079DC RID: 31196
-		// (get) Token: 0x0601E9DE RID: 125406 RVA: 0x002D7F8C File Offset: 0x002D618C
-		// (set) Token: 0x0601E9DF RID: 125407 RVA: 0x002D7FC5 File Offset: 0x002D61C5
-		public TArray<URuntimeVirtualTexture> RuntimeVirtualTextures
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<URuntimeVirtualTexture> result;
-				if ((result = this._RuntimeVirtualTextures) == null)
-				{
-					result = (this._RuntimeVirtualTextures = new TArray<URuntimeVirtualTexture>(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_RuntimeVirtualTextures, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.RuntimeVirtualTextures.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170079DD RID: 31197
-		// (get) Token: 0x0601E9E0 RID: 125408 RVA: 0x002D7FD3 File Offset: 0x002D61D3
-		// (set) Token: 0x0601E9E1 RID: 125409 RVA: 0x002D7FE3 File Offset: 0x002D61E3
+		// Token: 0x17001A7C RID: 6780
+		// (get) Token: 0x06008C32 RID: 35890 RVA: 0x000D2D8D File Offset: 0x000D0F8D
+		// (set) Token: 0x06008C33 RID: 35891 RVA: 0x000D2D9D File Offset: 0x000D0F9D
 		public unsafe int VirtualTextureNumLods
 		{
 			get
@@ -497,9 +389,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079DE RID: 31198
-		// (get) Token: 0x0601E9E2 RID: 125410 RVA: 0x002D7FF4 File Offset: 0x002D61F4
-		// (set) Token: 0x0601E9E3 RID: 125411 RVA: 0x002D8004 File Offset: 0x002D6204
+		// Token: 0x17001A7D RID: 6781
+		// (get) Token: 0x06008C34 RID: 35892 RVA: 0x000D2DAE File Offset: 0x000D0FAE
+		// (set) Token: 0x06008C35 RID: 35893 RVA: 0x000D2DBE File Offset: 0x000D0FBE
 		public unsafe int VirtualTextureLodBias
 		{
 			get
@@ -512,24 +404,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079DF RID: 31199
-		// (get) Token: 0x0601E9E4 RID: 125412 RVA: 0x002D8015 File Offset: 0x002D6215
-		// (set) Token: 0x0601E9E5 RID: 125413 RVA: 0x002D8025 File Offset: 0x002D6225
-		public unsafe ERuntimeVirtualTextureMainPassType VirtualTextureRenderPassType
-		{
-			get
-			{
-				return (ERuntimeVirtualTextureMainPassType)(*(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_VirtualTextureRenderPassType));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_VirtualTextureRenderPassType) = (byte)value;
-			}
-		}
-
-		// Token: 0x170079E0 RID: 31200
-		// (get) Token: 0x0601E9E6 RID: 125414 RVA: 0x002D8036 File Offset: 0x002D6236
-		// (set) Token: 0x0601E9E7 RID: 125415 RVA: 0x002D8046 File Offset: 0x002D6246
+		// Token: 0x17001A7E RID: 6782
+		// (get) Token: 0x06008C36 RID: 35894 RVA: 0x000D2DCF File Offset: 0x000D0FCF
+		// (set) Token: 0x06008C37 RID: 35895 RVA: 0x000D2DDF File Offset: 0x000D0FDF
 		public unsafe float NegativeZBoundsExtension
 		{
 			get
@@ -542,9 +419,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079E1 RID: 31201
-		// (get) Token: 0x0601E9E8 RID: 125416 RVA: 0x002D8057 File Offset: 0x002D6257
-		// (set) Token: 0x0601E9E9 RID: 125417 RVA: 0x002D8067 File Offset: 0x002D6267
+		// Token: 0x17001A7F RID: 6783
+		// (get) Token: 0x06008C38 RID: 35896 RVA: 0x000D2DF0 File Offset: 0x000D0FF0
+		// (set) Token: 0x06008C39 RID: 35897 RVA: 0x000D2E00 File Offset: 0x000D1000
 		public unsafe float PositiveZBoundsExtension
 		{
 			get
@@ -557,50 +434,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079E2 RID: 31202
-		// (get) Token: 0x0601E9EA RID: 125418 RVA: 0x002D8078 File Offset: 0x002D6278
-		// (set) Token: 0x0601E9EB RID: 125419 RVA: 0x002D80B1 File Offset: 0x002D62B1
-		public TArray<ULandscapeComponent> LandscapeComponents
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<ULandscapeComponent> result;
-				if ((result = this._LandscapeComponents) == null)
-				{
-					result = (this._LandscapeComponents = new TArray<ULandscapeComponent>(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_LandscapeComponents, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.LandscapeComponents.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170079E3 RID: 31203
-		// (get) Token: 0x0601E9EC RID: 125420 RVA: 0x002D80BF File Offset: 0x002D62BF
-		// (set) Token: 0x0601E9ED RID: 125421 RVA: 0x002D80D3 File Offset: 0x002D62D3
-		[Nullable(2)]
-		public unsafe ULandscapeBatchComponent LandscapeBatch
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<ULandscapeBatchComponent>(base.NativePtr / (IntPtr)sizeof(void*) + ALandscapeProxy.__PropertyOffset_LandscapeBatch);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ALandscapeProxy.__PropertyOffset_LandscapeBatch, value);
-			}
-		}
-
-		// Token: 0x170079E4 RID: 31204
-		// (get) Token: 0x0601E9EE RID: 125422 RVA: 0x002D80E8 File Offset: 0x002D62E8
-		// (set) Token: 0x0601E9EF RID: 125423 RVA: 0x002D8121 File Offset: 0x002D6321
+		// Token: 0x17001A80 RID: 6784
+		// (get) Token: 0x06008C3A RID: 35898 RVA: 0x000D2E14 File Offset: 0x000D1014
+		// (set) Token: 0x06008C3B RID: 35899 RVA: 0x000D2E4D File Offset: 0x000D104D
+		[Nullable(1)]
 		public TArray<ULandscapeHeightfieldCollisionComponent> CollisionComponents
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -611,36 +451,16 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				this.CollisionComponents.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x170079E5 RID: 31205
-		// (get) Token: 0x0601E9F0 RID: 125424 RVA: 0x002D8130 File Offset: 0x002D6330
-		// (set) Token: 0x0601E9F1 RID: 125425 RVA: 0x002D8169 File Offset: 0x002D6369
-		public TArray<UHierarchicalInstancedStaticMeshComponent> FoliageComponents
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<UHierarchicalInstancedStaticMeshComponent> result;
-				if ((result = this._FoliageComponents) == null)
-				{
-					result = (this._FoliageComponents = new TArray<UHierarchicalInstancedStaticMeshComponent>(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_FoliageComponents, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.FoliageComponents.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170079E6 RID: 31206
-		// (get) Token: 0x0601E9F2 RID: 125426 RVA: 0x002D8177 File Offset: 0x002D6377
-		// (set) Token: 0x0601E9F3 RID: 125427 RVA: 0x002D8187 File Offset: 0x002D6387
+		// Token: 0x17001A81 RID: 6785
+		// (get) Token: 0x06008C3C RID: 35900 RVA: 0x000D2E5B File Offset: 0x000D105B
+		// (set) Token: 0x06008C3D RID: 35901 RVA: 0x000D2E6B File Offset: 0x000D106B
 		public unsafe bool bHasLandscapeGrass
 		{
 			get
@@ -653,9 +473,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079E7 RID: 31207
-		// (get) Token: 0x0601E9F4 RID: 125428 RVA: 0x002D8198 File Offset: 0x002D6398
-		// (set) Token: 0x0601E9F5 RID: 125429 RVA: 0x002D81A8 File Offset: 0x002D63A8
+		// Token: 0x17001A82 RID: 6786
+		// (get) Token: 0x06008C3E RID: 35902 RVA: 0x000D2E7C File Offset: 0x000D107C
+		// (set) Token: 0x06008C3F RID: 35903 RVA: 0x000D2E8C File Offset: 0x000D108C
 		public unsafe float StaticLightingResolution
 		{
 			get
@@ -668,9 +488,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079E8 RID: 31208
-		// (get) Token: 0x0601E9F6 RID: 125430 RVA: 0x002D81B9 File Offset: 0x002D63B9
-		// (set) Token: 0x0601E9F7 RID: 125431 RVA: 0x002D81D2 File Offset: 0x002D63D2
+		// Token: 0x17001A83 RID: 6787
+		// (get) Token: 0x06008C40 RID: 35904 RVA: 0x000D2E9D File Offset: 0x000D109D
+		// (set) Token: 0x06008C41 RID: 35905 RVA: 0x000D2EB6 File Offset: 0x000D10B6
 		public unsafe bool CastShadow
 		{
 			get
@@ -683,9 +503,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079E9 RID: 31209
-		// (get) Token: 0x0601E9F8 RID: 125432 RVA: 0x002D8202 File Offset: 0x002D6402
-		// (set) Token: 0x0601E9F9 RID: 125433 RVA: 0x002D821B File Offset: 0x002D641B
+		// Token: 0x17001A84 RID: 6788
+		// (get) Token: 0x06008C42 RID: 35906 RVA: 0x000D2EE6 File Offset: 0x000D10E6
+		// (set) Token: 0x06008C43 RID: 35907 RVA: 0x000D2EFF File Offset: 0x000D10FF
 		public unsafe bool MobileCastShadow
 		{
 			get
@@ -698,9 +518,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079EA RID: 31210
-		// (get) Token: 0x0601E9FA RID: 125434 RVA: 0x002D824B File Offset: 0x002D644B
-		// (set) Token: 0x0601E9FB RID: 125435 RVA: 0x002D8264 File Offset: 0x002D6464
+		// Token: 0x17001A85 RID: 6789
+		// (get) Token: 0x06008C44 RID: 35908 RVA: 0x000D2F2F File Offset: 0x000D112F
+		// (set) Token: 0x06008C45 RID: 35909 RVA: 0x000D2F48 File Offset: 0x000D1148
 		public unsafe bool bCastDynamicShadow
 		{
 			get
@@ -713,9 +533,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079EB RID: 31211
-		// (get) Token: 0x0601E9FC RID: 125436 RVA: 0x002D8294 File Offset: 0x002D6494
-		// (set) Token: 0x0601E9FD RID: 125437 RVA: 0x002D82AD File Offset: 0x002D64AD
+		// Token: 0x17001A86 RID: 6790
+		// (get) Token: 0x06008C46 RID: 35910 RVA: 0x000D2F78 File Offset: 0x000D1178
+		// (set) Token: 0x06008C47 RID: 35911 RVA: 0x000D2F91 File Offset: 0x000D1191
 		public unsafe bool bCastStaticShadow
 		{
 			get
@@ -728,9 +548,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079EC RID: 31212
-		// (get) Token: 0x0601E9FE RID: 125438 RVA: 0x002D82DD File Offset: 0x002D64DD
-		// (set) Token: 0x0601E9FF RID: 125439 RVA: 0x002D82F6 File Offset: 0x002D64F6
+		// Token: 0x17001A87 RID: 6791
+		// (get) Token: 0x06008C48 RID: 35912 RVA: 0x000D2FC1 File Offset: 0x000D11C1
+		// (set) Token: 0x06008C49 RID: 35913 RVA: 0x000D2FDA File Offset: 0x000D11DA
 		public unsafe bool bCastFarShadow
 		{
 			get
@@ -743,9 +563,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079ED RID: 31213
-		// (get) Token: 0x0601EA00 RID: 125440 RVA: 0x002D8326 File Offset: 0x002D6526
-		// (set) Token: 0x0601EA01 RID: 125441 RVA: 0x002D833F File Offset: 0x002D653F
+		// Token: 0x17001A88 RID: 6792
+		// (get) Token: 0x06008C4A RID: 35914 RVA: 0x000D300A File Offset: 0x000D120A
+		// (set) Token: 0x06008C4B RID: 35915 RVA: 0x000D3023 File Offset: 0x000D1223
 		public unsafe bool bCastFarShadowOnMobile
 		{
 			get
@@ -758,9 +578,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079EE RID: 31214
-		// (get) Token: 0x0601EA02 RID: 125442 RVA: 0x002D836F File Offset: 0x002D656F
-		// (set) Token: 0x0601EA03 RID: 125443 RVA: 0x002D8388 File Offset: 0x002D6588
+		// Token: 0x17001A89 RID: 6793
+		// (get) Token: 0x06008C4C RID: 35916 RVA: 0x000D3053 File Offset: 0x000D1253
+		// (set) Token: 0x06008C4D RID: 35917 RVA: 0x000D306C File Offset: 0x000D126C
 		public unsafe bool bCastContactShadow
 		{
 			get
@@ -773,9 +593,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079EF RID: 31215
-		// (get) Token: 0x0601EA04 RID: 125444 RVA: 0x002D83B8 File Offset: 0x002D65B8
-		// (set) Token: 0x0601EA05 RID: 125445 RVA: 0x002D83D1 File Offset: 0x002D65D1
+		// Token: 0x17001A8A RID: 6794
+		// (get) Token: 0x06008C4E RID: 35918 RVA: 0x000D309C File Offset: 0x000D129C
+		// (set) Token: 0x06008C4F RID: 35919 RVA: 0x000D30B5 File Offset: 0x000D12B5
 		public unsafe bool bCastHiddenShadow
 		{
 			get
@@ -788,9 +608,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079F0 RID: 31216
-		// (get) Token: 0x0601EA06 RID: 125446 RVA: 0x002D8401 File Offset: 0x002D6601
-		// (set) Token: 0x0601EA07 RID: 125447 RVA: 0x002D841A File Offset: 0x002D661A
+		// Token: 0x17001A8B RID: 6795
+		// (get) Token: 0x06008C50 RID: 35920 RVA: 0x000D30E5 File Offset: 0x000D12E5
+		// (set) Token: 0x06008C51 RID: 35921 RVA: 0x000D30FE File Offset: 0x000D12FE
 		public unsafe bool bCastShadowAsTwoSided
 		{
 			get
@@ -803,9 +623,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079F1 RID: 31217
-		// (get) Token: 0x0601EA08 RID: 125448 RVA: 0x002D844A File Offset: 0x002D664A
-		// (set) Token: 0x0601EA09 RID: 125449 RVA: 0x002D8463 File Offset: 0x002D6663
+		// Token: 0x17001A8C RID: 6796
+		// (get) Token: 0x06008C52 RID: 35922 RVA: 0x000D312E File Offset: 0x000D132E
+		// (set) Token: 0x06008C53 RID: 35923 RVA: 0x000D3147 File Offset: 0x000D1347
 		public unsafe bool bAffectDistanceFieldLighting
 		{
 			get
@@ -818,30 +638,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079F2 RID: 31218
-		// (get) Token: 0x0601EA0A RID: 125450 RVA: 0x002D8494 File Offset: 0x002D6694
-		// (set) Token: 0x0601EA0B RID: 125451 RVA: 0x002D84CD File Offset: 0x002D66CD
-		public FLightingChannels LightingChannels
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FLightingChannels result;
-				if ((result = this._LightingChannels) == null)
-				{
-					result = (this._LightingChannels = new FLightingChannels(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_LightingChannels, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLightingChannels.StaticStruct(), base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_LightingChannels, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170079F3 RID: 31219
-		// (get) Token: 0x0601EA0C RID: 125452 RVA: 0x002D84EE File Offset: 0x002D66EE
-		// (set) Token: 0x0601EA0D RID: 125453 RVA: 0x002D8507 File Offset: 0x002D6707
+		// Token: 0x17001A8D RID: 6797
+		// (get) Token: 0x06008C54 RID: 35924 RVA: 0x000D3177 File Offset: 0x000D1377
+		// (set) Token: 0x06008C55 RID: 35925 RVA: 0x000D3190 File Offset: 0x000D1390
 		public unsafe bool bUseMaterialPositionOffsetInStaticLighting
 		{
 			get
@@ -854,9 +653,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079F4 RID: 31220
-		// (get) Token: 0x0601EA0E RID: 125454 RVA: 0x002D8537 File Offset: 0x002D6737
-		// (set) Token: 0x0601EA0F RID: 125455 RVA: 0x002D8550 File Offset: 0x002D6750
+		// Token: 0x17001A8E RID: 6798
+		// (get) Token: 0x06008C56 RID: 35926 RVA: 0x000D31C0 File Offset: 0x000D13C0
+		// (set) Token: 0x06008C57 RID: 35927 RVA: 0x000D31D9 File Offset: 0x000D13D9
 		public unsafe bool bRenderCustomDepth
 		{
 			get
@@ -869,24 +668,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079F5 RID: 31221
-		// (get) Token: 0x0601EA10 RID: 125456 RVA: 0x002D8580 File Offset: 0x002D6780
-		// (set) Token: 0x0601EA11 RID: 125457 RVA: 0x002D8590 File Offset: 0x002D6790
-		public unsafe ERendererStencilMask CustomDepthStencilWriteMask
-		{
-			get
-			{
-				return (ERendererStencilMask)(*(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_CustomDepthStencilWriteMask));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_CustomDepthStencilWriteMask) = (byte)value;
-			}
-		}
-
-		// Token: 0x170079F6 RID: 31222
-		// (get) Token: 0x0601EA12 RID: 125458 RVA: 0x002D85A1 File Offset: 0x002D67A1
-		// (set) Token: 0x0601EA13 RID: 125459 RVA: 0x002D85B1 File Offset: 0x002D67B1
+		// Token: 0x17001A8F RID: 6799
+		// (get) Token: 0x06008C58 RID: 35928 RVA: 0x000D3209 File Offset: 0x000D1409
+		// (set) Token: 0x06008C59 RID: 35929 RVA: 0x000D3219 File Offset: 0x000D1419
 		public unsafe int CustomDepthStencilValue
 		{
 			get
@@ -899,9 +683,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079F7 RID: 31223
-		// (get) Token: 0x0601EA14 RID: 125460 RVA: 0x002D85C2 File Offset: 0x002D67C2
-		// (set) Token: 0x0601EA15 RID: 125461 RVA: 0x002D85D2 File Offset: 0x002D67D2
+		// Token: 0x17001A90 RID: 6800
+		// (get) Token: 0x06008C5A RID: 35930 RVA: 0x000D322A File Offset: 0x000D142A
+		// (set) Token: 0x06008C5B RID: 35931 RVA: 0x000D323A File Offset: 0x000D143A
 		public unsafe float LDMaxDrawDistance
 		{
 			get
@@ -914,9 +698,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079F8 RID: 31224
-		// (get) Token: 0x0601EA16 RID: 125462 RVA: 0x002D85E3 File Offset: 0x002D67E3
-		// (set) Token: 0x0601EA17 RID: 125463 RVA: 0x002D85F3 File Offset: 0x002D67F3
+		// Token: 0x17001A91 RID: 6801
+		// (get) Token: 0x06008C5C RID: 35932 RVA: 0x000D324B File Offset: 0x000D144B
+		// (set) Token: 0x06008C5D RID: 35933 RVA: 0x000D325B File Offset: 0x000D145B
 		public unsafe int KuroRenderingLODBias
 		{
 			get
@@ -929,9 +713,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079F9 RID: 31225
-		// (get) Token: 0x0601EA18 RID: 125464 RVA: 0x002D8604 File Offset: 0x002D6804
-		// (set) Token: 0x0601EA19 RID: 125465 RVA: 0x002D8614 File Offset: 0x002D6814
+		// Token: 0x17001A92 RID: 6802
+		// (get) Token: 0x06008C5E RID: 35934 RVA: 0x000D326C File Offset: 0x000D146C
+		// (set) Token: 0x06008C5F RID: 35935 RVA: 0x000D327C File Offset: 0x000D147C
 		public unsafe bool bKuroSkipPakLevelCook
 		{
 			get
@@ -944,60 +728,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079FA RID: 31226
-		// (get) Token: 0x0601EA1A RID: 125466 RVA: 0x002D8625 File Offset: 0x002D6825
-		// (set) Token: 0x0601EA1B RID: 125467 RVA: 0x002D8635 File Offset: 0x002D6835
-		public unsafe EKuroForceClassify KuroForceClassifyPC
-		{
-			get
-			{
-				return (EKuroForceClassify)(*(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_KuroForceClassifyPC));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_KuroForceClassifyPC) = (byte)value;
-			}
-		}
-
-		// Token: 0x170079FB RID: 31227
-		// (get) Token: 0x0601EA1C RID: 125468 RVA: 0x002D8646 File Offset: 0x002D6846
-		// (set) Token: 0x0601EA1D RID: 125469 RVA: 0x002D8656 File Offset: 0x002D6856
-		public unsafe EKuroForceClassify KuroForceClassifyMobile
-		{
-			get
-			{
-				return (EKuroForceClassify)(*(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_KuroForceClassifyMobile));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_KuroForceClassifyMobile) = (byte)value;
-			}
-		}
-
-		// Token: 0x170079FC RID: 31228
-		// (get) Token: 0x0601EA1E RID: 125470 RVA: 0x002D8668 File Offset: 0x002D6868
-		// (set) Token: 0x0601EA1F RID: 125471 RVA: 0x002D86A1 File Offset: 0x002D68A1
-		public FLightmassPrimitiveSettings LightmassSettings
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FLightmassPrimitiveSettings result;
-				if ((result = this._LightmassSettings) == null)
-				{
-					result = (this._LightmassSettings = new FLightmassPrimitiveSettings(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_LightmassSettings, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLightmassPrimitiveSettings.StaticStruct(), base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_LightmassSettings, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170079FD RID: 31229
-		// (get) Token: 0x0601EA20 RID: 125472 RVA: 0x002D86C2 File Offset: 0x002D68C2
-		// (set) Token: 0x0601EA21 RID: 125473 RVA: 0x002D86D2 File Offset: 0x002D68D2
+		// Token: 0x17001A93 RID: 6803
+		// (get) Token: 0x06008C60 RID: 35936 RVA: 0x000D328D File Offset: 0x000D148D
+		// (set) Token: 0x06008C61 RID: 35937 RVA: 0x000D329D File Offset: 0x000D149D
 		public unsafe int CollisionMipLevel
 		{
 			get
@@ -1010,9 +743,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079FE RID: 31230
-		// (get) Token: 0x0601EA22 RID: 125474 RVA: 0x002D86E3 File Offset: 0x002D68E3
-		// (set) Token: 0x0601EA23 RID: 125475 RVA: 0x002D86F3 File Offset: 0x002D68F3
+		// Token: 0x17001A94 RID: 6804
+		// (get) Token: 0x06008C62 RID: 35938 RVA: 0x000D32AE File Offset: 0x000D14AE
+		// (set) Token: 0x06008C63 RID: 35939 RVA: 0x000D32BE File Offset: 0x000D14BE
 		public unsafe int SimpleCollisionMipLevel
 		{
 			get
@@ -1025,9 +758,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170079FF RID: 31231
-		// (get) Token: 0x0601EA24 RID: 125476 RVA: 0x002D8704 File Offset: 0x002D6904
-		// (set) Token: 0x0601EA25 RID: 125477 RVA: 0x002D8714 File Offset: 0x002D6914
+		// Token: 0x17001A95 RID: 6805
+		// (get) Token: 0x06008C64 RID: 35940 RVA: 0x000D32CF File Offset: 0x000D14CF
+		// (set) Token: 0x06008C65 RID: 35941 RVA: 0x000D32DF File Offset: 0x000D14DF
 		public unsafe float CollisionThickness
 		{
 			get
@@ -1040,11 +773,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A00 RID: 31232
-		// (get) Token: 0x0601EA26 RID: 125478 RVA: 0x002D8728 File Offset: 0x002D6928
-		// (set) Token: 0x0601EA27 RID: 125479 RVA: 0x002D8761 File Offset: 0x002D6961
+		// Token: 0x17001A96 RID: 6806
+		// (get) Token: 0x06008C66 RID: 35942 RVA: 0x000D32F0 File Offset: 0x000D14F0
+		// (set) Token: 0x06008C67 RID: 35943 RVA: 0x000D3329 File Offset: 0x000D1529
+		[Nullable(1)]
 		public FBodyInstance BodyInstance
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -1055,15 +790,16 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FBodyInstance.StaticStruct(), base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_BodyInstance, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17007A01 RID: 31233
-		// (get) Token: 0x0601EA28 RID: 125480 RVA: 0x002D8782 File Offset: 0x002D6982
-		// (set) Token: 0x0601EA29 RID: 125481 RVA: 0x002D879B File Offset: 0x002D699B
+		// Token: 0x17001A97 RID: 6807
+		// (get) Token: 0x06008C68 RID: 35944 RVA: 0x000D334A File Offset: 0x000D154A
+		// (set) Token: 0x06008C69 RID: 35945 RVA: 0x000D3363 File Offset: 0x000D1563
 		public unsafe bool bGenerateOverlapEvents
 		{
 			get
@@ -1076,9 +812,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A02 RID: 31234
-		// (get) Token: 0x0601EA2A RID: 125482 RVA: 0x002D87CB File Offset: 0x002D69CB
-		// (set) Token: 0x0601EA2B RID: 125483 RVA: 0x002D87E4 File Offset: 0x002D69E4
+		// Token: 0x17001A98 RID: 6808
+		// (get) Token: 0x06008C6A RID: 35946 RVA: 0x000D3393 File Offset: 0x000D1593
+		// (set) Token: 0x06008C6B RID: 35947 RVA: 0x000D33AC File Offset: 0x000D15AC
 		public unsafe bool bBakeMaterialPositionOffsetIntoCollision
 		{
 			get
@@ -1091,9 +827,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A03 RID: 31235
-		// (get) Token: 0x0601EA2C RID: 125484 RVA: 0x002D8814 File Offset: 0x002D6A14
-		// (set) Token: 0x0601EA2D RID: 125485 RVA: 0x002D8824 File Offset: 0x002D6A24
+		// Token: 0x17001A99 RID: 6809
+		// (get) Token: 0x06008C6C RID: 35948 RVA: 0x000D33DC File Offset: 0x000D15DC
+		// (set) Token: 0x06008C6D RID: 35949 RVA: 0x000D33EC File Offset: 0x000D15EC
 		public unsafe int ComponentSizeQuads
 		{
 			get
@@ -1106,9 +842,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A04 RID: 31236
-		// (get) Token: 0x0601EA2E RID: 125486 RVA: 0x002D8835 File Offset: 0x002D6A35
-		// (set) Token: 0x0601EA2F RID: 125487 RVA: 0x002D8845 File Offset: 0x002D6A45
+		// Token: 0x17001A9A RID: 6810
+		// (get) Token: 0x06008C6E RID: 35950 RVA: 0x000D33FD File Offset: 0x000D15FD
+		// (set) Token: 0x06008C6F RID: 35951 RVA: 0x000D340D File Offset: 0x000D160D
 		public unsafe int SubsectionSizeQuads
 		{
 			get
@@ -1121,9 +857,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A05 RID: 31237
-		// (get) Token: 0x0601EA30 RID: 125488 RVA: 0x002D8856 File Offset: 0x002D6A56
-		// (set) Token: 0x0601EA31 RID: 125489 RVA: 0x002D8866 File Offset: 0x002D6A66
+		// Token: 0x17001A9B RID: 6811
+		// (get) Token: 0x06008C70 RID: 35952 RVA: 0x000D341E File Offset: 0x000D161E
+		// (set) Token: 0x06008C71 RID: 35953 RVA: 0x000D342E File Offset: 0x000D162E
 		public unsafe int NumSubsections
 		{
 			get
@@ -1136,9 +872,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A06 RID: 31238
-		// (get) Token: 0x0601EA32 RID: 125490 RVA: 0x002D8877 File Offset: 0x002D6A77
-		// (set) Token: 0x0601EA33 RID: 125491 RVA: 0x002D8890 File Offset: 0x002D6A90
+		// Token: 0x17001A9C RID: 6812
+		// (get) Token: 0x06008C72 RID: 35954 RVA: 0x000D343F File Offset: 0x000D163F
+		// (set) Token: 0x06008C73 RID: 35955 RVA: 0x000D3458 File Offset: 0x000D1658
 		public unsafe bool bUsedForNavigation
 		{
 			get
@@ -1151,9 +887,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A07 RID: 31239
-		// (get) Token: 0x0601EA34 RID: 125492 RVA: 0x002D88C0 File Offset: 0x002D6AC0
-		// (set) Token: 0x0601EA35 RID: 125493 RVA: 0x002D88D9 File Offset: 0x002D6AD9
+		// Token: 0x17001A9D RID: 6813
+		// (get) Token: 0x06008C74 RID: 35956 RVA: 0x000D3488 File Offset: 0x000D1688
+		// (set) Token: 0x06008C75 RID: 35957 RVA: 0x000D34A1 File Offset: 0x000D16A1
 		public unsafe bool bFillCollisionUnderLandscapeForNavmesh
 		{
 			get
@@ -1166,9 +902,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A08 RID: 31240
-		// (get) Token: 0x0601EA36 RID: 125494 RVA: 0x002D8909 File Offset: 0x002D6B09
-		// (set) Token: 0x0601EA37 RID: 125495 RVA: 0x002D8919 File Offset: 0x002D6B19
+		// Token: 0x17001A9E RID: 6814
+		// (get) Token: 0x06008C76 RID: 35958 RVA: 0x000D34D1 File Offset: 0x000D16D1
+		// (set) Token: 0x06008C77 RID: 35959 RVA: 0x000D34E1 File Offset: 0x000D16E1
 		public unsafe bool bUseDynamicMaterialInstance
 		{
 			get
@@ -1181,24 +917,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A09 RID: 31241
-		// (get) Token: 0x0601EA38 RID: 125496 RVA: 0x002D892A File Offset: 0x002D6B2A
-		// (set) Token: 0x0601EA39 RID: 125497 RVA: 0x002D893A File Offset: 0x002D6B3A
-		public unsafe ENavDataGatheringMode NavigationGeometryGatheringMode
-		{
-			get
-			{
-				return (ENavDataGatheringMode)(*(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_NavigationGeometryGatheringMode));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_NavigationGeometryGatheringMode) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007A0A RID: 31242
-		// (get) Token: 0x0601EA3A RID: 125498 RVA: 0x002D894B File Offset: 0x002D6B4B
-		// (set) Token: 0x0601EA3B RID: 125499 RVA: 0x002D895B File Offset: 0x002D6B5B
+		// Token: 0x17001A9F RID: 6815
+		// (get) Token: 0x06008C78 RID: 35960 RVA: 0x000D34F2 File Offset: 0x000D16F2
+		// (set) Token: 0x06008C79 RID: 35961 RVA: 0x000D3502 File Offset: 0x000D1702
 		public unsafe bool bUseLandscapeForCullingInvisibleHLODVertices
 		{
 			get
@@ -1211,9 +932,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A0B RID: 31243
-		// (get) Token: 0x0601EA3C RID: 125500 RVA: 0x002D896C File Offset: 0x002D6B6C
-		// (set) Token: 0x0601EA3D RID: 125501 RVA: 0x002D897C File Offset: 0x002D6B7C
+		// Token: 0x17001AA0 RID: 6816
+		// (get) Token: 0x06008C7A RID: 35962 RVA: 0x000D3513 File Offset: 0x000D1713
+		// (set) Token: 0x06008C7B RID: 35963 RVA: 0x000D3523 File Offset: 0x000D1723
 		public unsafe bool bHasLayersContent
 		{
 			get
@@ -1226,72 +947,46 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A0C RID: 31244
-		// (get) Token: 0x0601EA3E RID: 125502 RVA: 0x002D8990 File Offset: 0x002D6B90
-		// (set) Token: 0x0601EA3F RID: 125503 RVA: 0x002D89C9 File Offset: 0x002D6BC9
-		public TMap<UTexture2D, ULandscapeWeightmapUsage> WeightmapUsageMap
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TMap<UTexture2D, ULandscapeWeightmapUsage> result;
-				if ((result = this._WeightmapUsageMap) == null)
-				{
-					result = (this._WeightmapUsageMap = new TMap<UTexture2D, ULandscapeWeightmapUsage>(base.NativePtr + (IntPtr)ALandscapeProxy.__PropertyOffset_WeightmapUsageMap, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.WeightmapUsageMap.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x0601EA40 RID: 125504 RVA: 0x002D89D7 File Offset: 0x002D6BD7
+		// Token: 0x06008C7C RID: 35964 RVA: 0x000D3534 File Offset: 0x000D1734
 		public void SetLandscapeMaterialVectorParameterValue(FName ParameterName, FLinearColor Value)
 		{
 			ALandscapeProxy.__SetLandscapeMaterialVectorParameterValue_Internal(base.NativePtr, ParameterName, Value);
 		}
 
-		// Token: 0x0601EA41 RID: 125505 RVA: 0x002D89E6 File Offset: 0x002D6BE6
-		[NullableContext(2)]
+		// Token: 0x06008C7D RID: 35965 RVA: 0x000D3543 File Offset: 0x000D1743
 		public void SetLandscapeMaterialTextureParameterValue(FName ParameterName, UTexture Value)
 		{
 			ALandscapeProxy.__SetLandscapeMaterialTextureParameterValue_Internal(base.NativePtr, ParameterName, (Value != null) ? Value.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601EA42 RID: 125506 RVA: 0x002D8A04 File Offset: 0x002D6C04
+		// Token: 0x06008C7E RID: 35966 RVA: 0x000D3561 File Offset: 0x000D1761
 		public void SetLandscapeMaterialScalarParameterValue(FName ParameterName, float Value)
 		{
 			ALandscapeProxy.__SetLandscapeMaterialScalarParameterValue_Internal(base.NativePtr, ParameterName, Value);
 		}
 
-		// Token: 0x0601EA43 RID: 125507 RVA: 0x002D8A14 File Offset: 0x002D6C14
+		// Token: 0x06008C7F RID: 35967 RVA: 0x000D3570 File Offset: 0x000D1770
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void SetKuroLandscapeFOVFactorByCamera(float InFOVFactor)
 		{
 			ALandscapeProxy.__SetKuroLandscapeFOVFactorByCamera_FunctionParams* ptr = stackalloc ALandscapeProxy.__SetKuroLandscapeFOVFactorByCamera_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ALandscapeProxy.__SetKuroLandscapeFOVFactorByCamera_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ALandscapeProxy.__SetKuroLandscapeFOVFactorByCamera_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InFOVFactor = InFOVFactor;
-			UnrealReflectionUtils.CallUFunction(ALandscapeProxy._ClassDefaultObjectPtr, ALandscapeProxy.__SetKuroLandscapeFOVFactorByCamera_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(ALandscapeProxy._ClassDefaultObjectPtr, ALandscapeProxy.__SetKuroLandscapeFOVFactorByCamera_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601EA44 RID: 125508 RVA: 0x002D8A5C File Offset: 0x002D6C5C
+		// Token: 0x06008C80 RID: 35968 RVA: 0x000D35B8 File Offset: 0x000D17B8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void SetKuroLandscapeFOVFactor(float InFOVFactor)
 		{
 			ALandscapeProxy.__SetKuroLandscapeFOVFactor_FunctionParams* ptr = stackalloc ALandscapeProxy.__SetKuroLandscapeFOVFactor_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ALandscapeProxy.__SetKuroLandscapeFOVFactor_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ALandscapeProxy.__SetKuroLandscapeFOVFactor_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InFOVFactor = InFOVFactor;
-			UnrealReflectionUtils.CallUFunction(ALandscapeProxy._ClassDefaultObjectPtr, ALandscapeProxy.__SetKuroLandscapeFOVFactor_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(ALandscapeProxy._ClassDefaultObjectPtr, ALandscapeProxy.__SetKuroLandscapeFOVFactor_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601EA45 RID: 125509 RVA: 0x002D8AA4 File Offset: 0x002D6CA4
-		[NullableContext(2)]
+		// Token: 0x06008C81 RID: 35969 RVA: 0x000D3600 File Offset: 0x000D1800
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool LandscapeExportHeightmapToRenderTarget(UTextureRenderTarget2D InRenderTarget, bool InExportHeightIntoRGChannel = false, bool InExportLandscapeProxies = true)
 		{
 			ALandscapeProxy.__LandscapeExportHeightmapToRenderTarget_FunctionParams* ptr = stackalloc ALandscapeProxy.__LandscapeExportHeightmapToRenderTarget_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(ALandscapeProxy.__LandscapeExportHeightmapToRenderTarget_FunctionParams) & -16L;
@@ -1299,327 +994,236 @@ namespace UnrealEngine
 			ptr->InRenderTarget = ((InRenderTarget != null) ? InRenderTarget.NativePtr : IntPtr.Zero);
 			ptr->InExportHeightIntoRGChannel = InExportHeightIntoRGChannel;
 			ptr->InExportLandscapeProxies = InExportLandscapeProxies;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__LandscapeExportHeightmapToRenderTarget_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__LandscapeExportHeightmapToRenderTarget_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601EA46 RID: 125510 RVA: 0x002D8B10 File Offset: 0x002D6D10
+		// Token: 0x06008C82 RID: 35970 RVA: 0x000D366C File Offset: 0x000D186C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static float GetKuroLandscapeFOVFactorByCamera()
 		{
 			ALandscapeProxy.__GetKuroLandscapeFOVFactorByCamera_FunctionParams* ptr = stackalloc ALandscapeProxy.__GetKuroLandscapeFOVFactorByCamera_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ALandscapeProxy.__GetKuroLandscapeFOVFactorByCamera_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ALandscapeProxy.__GetKuroLandscapeFOVFactorByCamera_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(ALandscapeProxy._ClassDefaultObjectPtr, ALandscapeProxy.__GetKuroLandscapeFOVFactorByCamera_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(ALandscapeProxy._ClassDefaultObjectPtr, ALandscapeProxy.__GetKuroLandscapeFOVFactorByCamera_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601EA47 RID: 125511 RVA: 0x002D8B58 File Offset: 0x002D6D58
+		// Token: 0x06008C83 RID: 35971 RVA: 0x000D36B0 File Offset: 0x000D18B0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static float GetKuroLandscapeFOVFactor()
 		{
 			ALandscapeProxy.__GetKuroLandscapeFOVFactor_FunctionParams* ptr = stackalloc ALandscapeProxy.__GetKuroLandscapeFOVFactor_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ALandscapeProxy.__GetKuroLandscapeFOVFactor_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ALandscapeProxy.__GetKuroLandscapeFOVFactor_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(ALandscapeProxy._ClassDefaultObjectPtr, ALandscapeProxy.__GetKuroLandscapeFOVFactor_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(ALandscapeProxy._ClassDefaultObjectPtr, ALandscapeProxy.__GetKuroLandscapeFOVFactor_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601EA48 RID: 125512 RVA: 0x002D8B9D File Offset: 0x002D6D9D
+		// Token: 0x06008C84 RID: 35972 RVA: 0x000D36F4 File Offset: 0x000D18F4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void GenerateLandscapeLayerParams()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__GenerateLandscapeLayerParams_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__GenerateLandscapeLayerParams_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601EA49 RID: 125513 RVA: 0x002D8BB4 File Offset: 0x002D6DB4
-		[NullableContext(2)]
+		// Token: 0x06008C85 RID: 35973 RVA: 0x000D3708 File Offset: 0x000D1908
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void EditorSetLandscapeMaterial(UMaterialInterface NewLandscapeMaterial)
 		{
 			ALandscapeProxy.__EditorSetLandscapeMaterial_FunctionParams* ptr = stackalloc ALandscapeProxy.__EditorSetLandscapeMaterial_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(ALandscapeProxy.__EditorSetLandscapeMaterial_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ALandscapeProxy.__EditorSetLandscapeMaterial_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->NewLandscapeMaterial = ((NewLandscapeMaterial != null) ? NewLandscapeMaterial.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__EditorSetLandscapeMaterial_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__EditorSetLandscapeMaterial_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601EA4A RID: 125514 RVA: 0x002D8C0C File Offset: 0x002D6E0C
-		[NullableContext(2)]
+		// Token: 0x06008C86 RID: 35974 RVA: 0x000D3760 File Offset: 0x000D1960
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void EditorSetKuroColormapTexture(UTexture2D NewKuroColormapTexture)
 		{
 			ALandscapeProxy.__EditorSetKuroColormapTexture_FunctionParams* ptr = stackalloc ALandscapeProxy.__EditorSetKuroColormapTexture_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(ALandscapeProxy.__EditorSetKuroColormapTexture_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ALandscapeProxy.__EditorSetKuroColormapTexture_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->NewKuroColormapTexture = ((NewKuroColormapTexture != null) ? NewKuroColormapTexture.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__EditorSetKuroColormapTexture_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__EditorSetKuroColormapTexture_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601EA4B RID: 125515 RVA: 0x002D8C64 File Offset: 0x002D6E64
-		[NullableContext(2)]
+		// Token: 0x06008C87 RID: 35975 RVA: 0x000D37B8 File Offset: 0x000D19B8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe void EditorApplySpline(USplineComponent InSplineComponent, float StartWidth = 200f, float EndWidth = 200f, float StartSideFalloff = 200f, float EndSideFalloff = 200f, float StartRoll = 0f, float EndRoll = 0f, int NumSubdivisions = 20, bool bRaiseHeights = true, bool bLowerHeights = true, ULandscapeLayerInfoObject PaintLayer = null, FName? EditLayerName = null)
-		{
-			ALandscapeProxy.__EditorApplySpline_FunctionParams* ptr = stackalloc ALandscapeProxy.__EditorApplySpline_FunctionParams[(UIntPtr)79] + 15L / (long)sizeof(ALandscapeProxy.__EditorApplySpline_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ALandscapeProxy.__EditorApplySpline_NativeFunctionPtr, (void*)ptr, 1);
-			ptr->InSplineComponent = ((InSplineComponent != null) ? InSplineComponent.NativePtr : IntPtr.Zero);
-			ptr->StartWidth = StartWidth;
-			ptr->EndWidth = EndWidth;
-			ptr->StartSideFalloff = StartSideFalloff;
-			ptr->EndSideFalloff = EndSideFalloff;
-			ptr->StartRoll = StartRoll;
-			ptr->EndRoll = EndRoll;
-			ptr->NumSubdivisions = NumSubdivisions;
-			ptr->bRaiseHeights = bRaiseHeights;
-			ptr->bLowerHeights = bLowerHeights;
-			ptr->PaintLayer = ((PaintLayer != null) ? PaintLayer.NativePtr : IntPtr.Zero);
-			ptr->EditLayerName = (EditLayerName ?? new FName("Layer"));
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__EditorApplySpline_NativeFunctionPtr, (void*)ptr, 0);
-		}
-
-		// Token: 0x0601EA4C RID: 125516 RVA: 0x002D8D40 File Offset: 0x002D6F40
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void ChangeUseTessellationComponentScreenSizeFalloff(bool InComponentScreenSizeToUseSubSections)
 		{
 			ALandscapeProxy.__ChangeUseTessellationComponentScreenSizeFalloff_FunctionParams* ptr = stackalloc ALandscapeProxy.__ChangeUseTessellationComponentScreenSizeFalloff_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(ALandscapeProxy.__ChangeUseTessellationComponentScreenSizeFalloff_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ALandscapeProxy.__ChangeUseTessellationComponentScreenSizeFalloff_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InComponentScreenSizeToUseSubSections = InComponentScreenSizeToUseSubSections;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__ChangeUseTessellationComponentScreenSizeFalloff_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__ChangeUseTessellationComponentScreenSizeFalloff_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601EA4D RID: 125517 RVA: 0x002D8D88 File Offset: 0x002D6F88
+		// Token: 0x06008C88 RID: 35976 RVA: 0x000D3800 File Offset: 0x000D1A00
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void ChangeTessellationComponentScreenSizeFalloff(float InUseTessellationComponentScreenSizeFalloff)
 		{
 			ALandscapeProxy.__ChangeTessellationComponentScreenSizeFalloff_FunctionParams* ptr = stackalloc ALandscapeProxy.__ChangeTessellationComponentScreenSizeFalloff_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ALandscapeProxy.__ChangeTessellationComponentScreenSizeFalloff_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ALandscapeProxy.__ChangeTessellationComponentScreenSizeFalloff_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InUseTessellationComponentScreenSizeFalloff = InUseTessellationComponentScreenSizeFalloff;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__ChangeTessellationComponentScreenSizeFalloff_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__ChangeTessellationComponentScreenSizeFalloff_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601EA4E RID: 125518 RVA: 0x002D8DD0 File Offset: 0x002D6FD0
+		// Token: 0x06008C89 RID: 35977 RVA: 0x000D3848 File Offset: 0x000D1A48
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void ChangeTessellationComponentScreenSize(float InTessellationComponentScreenSize)
 		{
 			ALandscapeProxy.__ChangeTessellationComponentScreenSize_FunctionParams* ptr = stackalloc ALandscapeProxy.__ChangeTessellationComponentScreenSize_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ALandscapeProxy.__ChangeTessellationComponentScreenSize_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ALandscapeProxy.__ChangeTessellationComponentScreenSize_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InTessellationComponentScreenSize = InTessellationComponentScreenSize;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__ChangeTessellationComponentScreenSize_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__ChangeTessellationComponentScreenSize_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601EA4F RID: 125519 RVA: 0x002D8E18 File Offset: 0x002D7018
+		// Token: 0x06008C8A RID: 35978 RVA: 0x000D3890 File Offset: 0x000D1A90
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void ChangeLODDistanceFactor(float InLODDistanceFactor)
 		{
 			ALandscapeProxy.__ChangeLODDistanceFactor_FunctionParams* ptr = stackalloc ALandscapeProxy.__ChangeLODDistanceFactor_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ALandscapeProxy.__ChangeLODDistanceFactor_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ALandscapeProxy.__ChangeLODDistanceFactor_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InLODDistanceFactor = InLODDistanceFactor;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__ChangeLODDistanceFactor_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__ChangeLODDistanceFactor_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601EA50 RID: 125520 RVA: 0x002D8E60 File Offset: 0x002D7060
+		// Token: 0x06008C8B RID: 35979 RVA: 0x000D38D8 File Offset: 0x000D1AD8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void ChangeComponentScreenSizeToUseSubSections(float InComponentScreenSizeToUseSubSections)
 		{
 			ALandscapeProxy.__ChangeComponentScreenSizeToUseSubSections_FunctionParams* ptr = stackalloc ALandscapeProxy.__ChangeComponentScreenSizeToUseSubSections_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ALandscapeProxy.__ChangeComponentScreenSizeToUseSubSections_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ALandscapeProxy.__ChangeComponentScreenSizeToUseSubSections_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InComponentScreenSizeToUseSubSections = InComponentScreenSizeToUseSubSections;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__ChangeComponentScreenSizeToUseSubSections_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ALandscapeProxy.__ChangeComponentScreenSizeToUseSubSections_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601EA51 RID: 125521
+		// Token: 0x06008C8C RID: 35980
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLandscapeMaterialVectorParameterValue_Internal(IntPtr @this, FName ParameterName, FLinearColor Value);
 
-		// Token: 0x0601EA52 RID: 125522
+		// Token: 0x06008C8D RID: 35981
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLandscapeMaterialTextureParameterValue_Internal(IntPtr @this, FName ParameterName, IntPtr Value);
 
-		// Token: 0x0601EA53 RID: 125523
+		// Token: 0x06008C8E RID: 35982
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLandscapeMaterialScalarParameterValue_Internal(IntPtr @this, FName ParameterName, float Value);
 
-		// Token: 0x0601EA54 RID: 125524 RVA: 0x002D8EA7 File Offset: 0x002D70A7
+		// Token: 0x06008C8F RID: 35983 RVA: 0x000D391E File Offset: 0x000D1B1E
 		static ALandscapeProxy()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Landscape.LandscapeProxy");
 		}
 
-		// Token: 0x0601EA55 RID: 125525 RVA: 0x002D8EB8 File Offset: 0x002D70B8
+		// Token: 0x06008C90 RID: 35984 RVA: 0x000D392C File Offset: 0x000D1B2C
 		protected ALandscapeProxy() : this(BuiltinUtils.AllocNativeUObject(ALandscapeProxy.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601EA56 RID: 125526 RVA: 0x002D8EE0 File Offset: 0x002D70E0
+		// Token: 0x06008C91 RID: 35985 RVA: 0x000D3954 File Offset: 0x000D1B54
 		protected ALandscapeProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401089C RID: 67740
+		// Token: 0x04003CDC RID: 15580
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Landscape.LandscapeProxy";
 
-		// Token: 0x0401089D RID: 67741
+		// Token: 0x04003CDD RID: 15581
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401089E RID: 67742
+		// Token: 0x04003CDE RID: 15582
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401089F RID: 67743
-		internal static int __PropertyOffset_SplineComponent;
-
-		// Token: 0x040108A0 RID: 67744
+		// Token: 0x04003CDF RID: 15583
 		internal static int __PropertyOffset_LandscapeGuid;
 
-		// Token: 0x040108A1 RID: 67745
+		// Token: 0x04003CE0 RID: 15584
 		internal static int __PropertyOffset_LandscapeSectionOffset;
 
-		// Token: 0x040108A2 RID: 67746
+		// Token: 0x04003CE1 RID: 15585
 		internal static int __PropertyOffset_MaxLODLevel;
 
-		// Token: 0x040108A3 RID: 67747
+		// Token: 0x04003CE2 RID: 15586
 		internal static int __PropertyOffset_LODDistanceFactor_DEPRECATED;
 
-		// Token: 0x040108A4 RID: 67748
-		internal static int __PropertyOffset_LODFalloff_DEPRECATED;
-
-		// Token: 0x040108A5 RID: 67749
+		// Token: 0x04003CE3 RID: 15587
 		internal static int __PropertyOffset_ComponentScreenSizeToUseSubSections;
 
-		// Token: 0x040108A6 RID: 67750
+		// Token: 0x04003CE4 RID: 15588
 		internal static int __PropertyOffset_LOD0ScreenSize;
 
-		// Token: 0x040108A7 RID: 67751
+		// Token: 0x04003CE5 RID: 15589
 		internal static int __PropertyOffset_LOD0DistributionSetting;
 
-		// Token: 0x040108A8 RID: 67752
+		// Token: 0x04003CE6 RID: 15590
 		internal static int __PropertyOffset_LODDistributionSetting;
 
-		// Token: 0x040108A9 RID: 67753
+		// Token: 0x04003CE7 RID: 15591
 		internal static int __PropertyOffset_TessellationComponentScreenSize;
 
-		// Token: 0x040108AA RID: 67754
+		// Token: 0x04003CE8 RID: 15592
 		internal static int __PropertyOffset_UseTessellationComponentScreenSizeFalloff;
 
-		// Token: 0x040108AB RID: 67755
+		// Token: 0x04003CE9 RID: 15593
 		internal static int __PropertyOffset_TessellationComponentScreenSizeFalloff;
 
-		// Token: 0x040108AC RID: 67756
+		// Token: 0x04003CEA RID: 15594
 		internal static int __PropertyOffset_OccluderGeometryLOD;
 
-		// Token: 0x040108AD RID: 67757
+		// Token: 0x04003CEB RID: 15595
 		internal static int __PropertyOffset_StaticLightingLOD;
 
-		// Token: 0x040108AE RID: 67758
+		// Token: 0x04003CEC RID: 15596
 		internal static int __PropertyOffset_DefaultPhysMaterial;
 
-		// Token: 0x040108AF RID: 67759
+		// Token: 0x04003CED RID: 15597
 		internal static int __PropertyOffset_StreamingDistanceMultiplier;
 
-		// Token: 0x040108B0 RID: 67760
+		// Token: 0x04003CEE RID: 15598
 		internal static int __PropertyOffset_LandscapeMaterial;
 
-		// Token: 0x040108B1 RID: 67761
+		// Token: 0x04003CEF RID: 15599
 		internal static int __PropertyOffset_LandscapeLayerParams;
 
-		// Token: 0x040108B2 RID: 67762
-		[Nullable(2)]
+		// Token: 0x04003CF0 RID: 15600
 		private TArray<FVector4> _LandscapeLayerParams;
 
-		// Token: 0x040108B3 RID: 67763
+		// Token: 0x04003CF1 RID: 15601
 		internal static int __PropertyOffset_UseLandscapeColormap;
 
-		// Token: 0x040108B4 RID: 67764
+		// Token: 0x04003CF2 RID: 15602
 		internal static byte __PropertyMask_UseLandscapeColormap;
 
-		// Token: 0x040108B5 RID: 67765
+		// Token: 0x04003CF3 RID: 15603
 		internal static int __PropertyOffset_KuroColormapTexture;
 
-		// Token: 0x040108B6 RID: 67766
+		// Token: 0x04003CF4 RID: 15604
 		internal static int __PropertyOffset_SectionBaseMinAndRange;
 
-		// Token: 0x040108B7 RID: 67767
+		// Token: 0x04003CF5 RID: 15605
 		internal static int __PropertyOffset_LandscapeHoleMaterial;
 
-		// Token: 0x040108B8 RID: 67768
-		internal static int __PropertyOffset_LandscapeMaterialsOverride;
-
-		// Token: 0x040108B9 RID: 67769
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FLandscapeProxyMaterialOverride> _LandscapeMaterialsOverride;
-
-		// Token: 0x040108BA RID: 67770
-		internal static int __PropertyOffset_CustomLayerPhysicalMaterial;
-
-		// Token: 0x040108BB RID: 67771
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FLandscapeProxyCustomLayerPhysicalMaterial> _CustomLayerPhysicalMaterial;
-
-		// Token: 0x040108BC RID: 67772
+		// Token: 0x04003CF6 RID: 15606
 		internal static int __PropertyOffset_bMeshHoles;
 
-		// Token: 0x040108BD RID: 67773
+		// Token: 0x04003CF7 RID: 15607
 		internal static int __PropertyOffset_MeshHolesMaxLod;
 
-		// Token: 0x040108BE RID: 67774
-		internal static int __PropertyOffset_RuntimeVirtualTextures;
-
-		// Token: 0x040108BF RID: 67775
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<URuntimeVirtualTexture> _RuntimeVirtualTextures;
-
-		// Token: 0x040108C0 RID: 67776
+		// Token: 0x04003CF8 RID: 15608
 		internal static int __PropertyOffset_VirtualTextureNumLods;
 
-		// Token: 0x040108C1 RID: 67777
+		// Token: 0x04003CF9 RID: 15609
 		internal static int __PropertyOffset_VirtualTextureLodBias;
 
-		// Token: 0x040108C2 RID: 67778
-		internal static int __PropertyOffset_VirtualTextureRenderPassType;
-
-		// Token: 0x040108C3 RID: 67779
+		// Token: 0x04003CFA RID: 15610
 		internal static int __PropertyOffset_NegativeZBoundsExtension;
 
-		// Token: 0x040108C4 RID: 67780
+		// Token: 0x04003CFB RID: 15611
 		internal static int __PropertyOffset_PositiveZBoundsExtension;
 
-		// Token: 0x040108C5 RID: 67781
-		internal static int __PropertyOffset_LandscapeComponents;
-
-		// Token: 0x040108C6 RID: 67782
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<ULandscapeComponent> _LandscapeComponents;
-
-		// Token: 0x040108C7 RID: 67783
-		internal static int __PropertyOffset_LandscapeBatch;
-
-		// Token: 0x040108C8 RID: 67784
+		// Token: 0x04003CFC RID: 15612
 		internal static int __PropertyOffset_CollisionComponents;
 
-		// Token: 0x040108C9 RID: 67785
+		// Token: 0x04003CFD RID: 15613
 		[Nullable(new byte[]
 		{
 			2,
@@ -1627,440 +1231,332 @@ namespace UnrealEngine
 		})]
 		private TArray<ULandscapeHeightfieldCollisionComponent> _CollisionComponents;
 
-		// Token: 0x040108CA RID: 67786
-		internal static int __PropertyOffset_FoliageComponents;
-
-		// Token: 0x040108CB RID: 67787
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<UHierarchicalInstancedStaticMeshComponent> _FoliageComponents;
-
-		// Token: 0x040108CC RID: 67788
+		// Token: 0x04003CFE RID: 15614
 		internal static int __PropertyOffset_bHasLandscapeGrass;
 
-		// Token: 0x040108CD RID: 67789
+		// Token: 0x04003CFF RID: 15615
 		internal static int __PropertyOffset_StaticLightingResolution;
 
-		// Token: 0x040108CE RID: 67790
+		// Token: 0x04003D00 RID: 15616
 		internal static int __PropertyOffset_CastShadow;
 
-		// Token: 0x040108CF RID: 67791
+		// Token: 0x04003D01 RID: 15617
 		internal static byte __PropertyMask_CastShadow;
 
-		// Token: 0x040108D0 RID: 67792
+		// Token: 0x04003D02 RID: 15618
 		internal static int __PropertyOffset_MobileCastShadow;
 
-		// Token: 0x040108D1 RID: 67793
+		// Token: 0x04003D03 RID: 15619
 		internal static byte __PropertyMask_MobileCastShadow;
 
-		// Token: 0x040108D2 RID: 67794
+		// Token: 0x04003D04 RID: 15620
 		internal static int __PropertyOffset_bCastDynamicShadow;
 
-		// Token: 0x040108D3 RID: 67795
+		// Token: 0x04003D05 RID: 15621
 		internal static byte __PropertyMask_bCastDynamicShadow;
 
-		// Token: 0x040108D4 RID: 67796
+		// Token: 0x04003D06 RID: 15622
 		internal static int __PropertyOffset_bCastStaticShadow;
 
-		// Token: 0x040108D5 RID: 67797
+		// Token: 0x04003D07 RID: 15623
 		internal static byte __PropertyMask_bCastStaticShadow;
 
-		// Token: 0x040108D6 RID: 67798
+		// Token: 0x04003D08 RID: 15624
 		internal static int __PropertyOffset_bCastFarShadow;
 
-		// Token: 0x040108D7 RID: 67799
+		// Token: 0x04003D09 RID: 15625
 		internal static byte __PropertyMask_bCastFarShadow;
 
-		// Token: 0x040108D8 RID: 67800
+		// Token: 0x04003D0A RID: 15626
 		internal static int __PropertyOffset_bCastFarShadowOnMobile;
 
-		// Token: 0x040108D9 RID: 67801
+		// Token: 0x04003D0B RID: 15627
 		internal static byte __PropertyMask_bCastFarShadowOnMobile;
 
-		// Token: 0x040108DA RID: 67802
+		// Token: 0x04003D0C RID: 15628
 		internal static int __PropertyOffset_bCastContactShadow;
 
-		// Token: 0x040108DB RID: 67803
+		// Token: 0x04003D0D RID: 15629
 		internal static byte __PropertyMask_bCastContactShadow;
 
-		// Token: 0x040108DC RID: 67804
+		// Token: 0x04003D0E RID: 15630
 		internal static int __PropertyOffset_bCastHiddenShadow;
 
-		// Token: 0x040108DD RID: 67805
+		// Token: 0x04003D0F RID: 15631
 		internal static byte __PropertyMask_bCastHiddenShadow;
 
-		// Token: 0x040108DE RID: 67806
+		// Token: 0x04003D10 RID: 15632
 		internal static int __PropertyOffset_bCastShadowAsTwoSided;
 
-		// Token: 0x040108DF RID: 67807
+		// Token: 0x04003D11 RID: 15633
 		internal static byte __PropertyMask_bCastShadowAsTwoSided;
 
-		// Token: 0x040108E0 RID: 67808
+		// Token: 0x04003D12 RID: 15634
 		internal static int __PropertyOffset_bAffectDistanceFieldLighting;
 
-		// Token: 0x040108E1 RID: 67809
+		// Token: 0x04003D13 RID: 15635
 		internal static byte __PropertyMask_bAffectDistanceFieldLighting;
 
-		// Token: 0x040108E2 RID: 67810
-		internal static int __PropertyOffset_LightingChannels;
-
-		// Token: 0x040108E3 RID: 67811
-		[Nullable(2)]
-		private FLightingChannels _LightingChannels;
-
-		// Token: 0x040108E4 RID: 67812
+		// Token: 0x04003D14 RID: 15636
 		internal static int __PropertyOffset_bUseMaterialPositionOffsetInStaticLighting;
 
-		// Token: 0x040108E5 RID: 67813
+		// Token: 0x04003D15 RID: 15637
 		internal static byte __PropertyMask_bUseMaterialPositionOffsetInStaticLighting;
 
-		// Token: 0x040108E6 RID: 67814
+		// Token: 0x04003D16 RID: 15638
 		internal static int __PropertyOffset_bRenderCustomDepth;
 
-		// Token: 0x040108E7 RID: 67815
+		// Token: 0x04003D17 RID: 15639
 		internal static byte __PropertyMask_bRenderCustomDepth;
 
-		// Token: 0x040108E8 RID: 67816
-		internal static int __PropertyOffset_CustomDepthStencilWriteMask;
-
-		// Token: 0x040108E9 RID: 67817
+		// Token: 0x04003D18 RID: 15640
 		internal static int __PropertyOffset_CustomDepthStencilValue;
 
-		// Token: 0x040108EA RID: 67818
+		// Token: 0x04003D19 RID: 15641
 		internal static int __PropertyOffset_LDMaxDrawDistance;
 
-		// Token: 0x040108EB RID: 67819
+		// Token: 0x04003D1A RID: 15642
 		internal static int __PropertyOffset_KuroRenderingLODBias;
 
-		// Token: 0x040108EC RID: 67820
+		// Token: 0x04003D1B RID: 15643
 		internal static int __PropertyOffset_bKuroSkipPakLevelCook;
 
-		// Token: 0x040108ED RID: 67821
-		internal static int __PropertyOffset_KuroForceClassifyPC;
-
-		// Token: 0x040108EE RID: 67822
-		internal static int __PropertyOffset_KuroForceClassifyMobile;
-
-		// Token: 0x040108EF RID: 67823
-		internal static int __PropertyOffset_LightmassSettings;
-
-		// Token: 0x040108F0 RID: 67824
-		[Nullable(2)]
-		private FLightmassPrimitiveSettings _LightmassSettings;
-
-		// Token: 0x040108F1 RID: 67825
+		// Token: 0x04003D1C RID: 15644
 		internal static int __PropertyOffset_CollisionMipLevel;
 
-		// Token: 0x040108F2 RID: 67826
+		// Token: 0x04003D1D RID: 15645
 		internal static int __PropertyOffset_SimpleCollisionMipLevel;
 
-		// Token: 0x040108F3 RID: 67827
+		// Token: 0x04003D1E RID: 15646
 		internal static int __PropertyOffset_CollisionThickness;
 
-		// Token: 0x040108F4 RID: 67828
+		// Token: 0x04003D1F RID: 15647
 		internal static int __PropertyOffset_BodyInstance;
 
-		// Token: 0x040108F5 RID: 67829
-		[Nullable(2)]
+		// Token: 0x04003D20 RID: 15648
 		private FBodyInstance _BodyInstance;
 
-		// Token: 0x040108F6 RID: 67830
+		// Token: 0x04003D21 RID: 15649
 		internal static int __PropertyOffset_bGenerateOverlapEvents;
 
-		// Token: 0x040108F7 RID: 67831
+		// Token: 0x04003D22 RID: 15650
 		internal static byte __PropertyMask_bGenerateOverlapEvents;
 
-		// Token: 0x040108F8 RID: 67832
+		// Token: 0x04003D23 RID: 15651
 		internal static int __PropertyOffset_bBakeMaterialPositionOffsetIntoCollision;
 
-		// Token: 0x040108F9 RID: 67833
+		// Token: 0x04003D24 RID: 15652
 		internal static byte __PropertyMask_bBakeMaterialPositionOffsetIntoCollision;
 
-		// Token: 0x040108FA RID: 67834
+		// Token: 0x04003D25 RID: 15653
 		internal static int __PropertyOffset_ComponentSizeQuads;
 
-		// Token: 0x040108FB RID: 67835
+		// Token: 0x04003D26 RID: 15654
 		internal static int __PropertyOffset_SubsectionSizeQuads;
 
-		// Token: 0x040108FC RID: 67836
+		// Token: 0x04003D27 RID: 15655
 		internal static int __PropertyOffset_NumSubsections;
 
-		// Token: 0x040108FD RID: 67837
+		// Token: 0x04003D28 RID: 15656
 		internal static int __PropertyOffset_bUsedForNavigation;
 
-		// Token: 0x040108FE RID: 67838
+		// Token: 0x04003D29 RID: 15657
 		internal static byte __PropertyMask_bUsedForNavigation;
 
-		// Token: 0x040108FF RID: 67839
+		// Token: 0x04003D2A RID: 15658
 		internal static int __PropertyOffset_bFillCollisionUnderLandscapeForNavmesh;
 
-		// Token: 0x04010900 RID: 67840
+		// Token: 0x04003D2B RID: 15659
 		internal static byte __PropertyMask_bFillCollisionUnderLandscapeForNavmesh;
 
-		// Token: 0x04010901 RID: 67841
+		// Token: 0x04003D2C RID: 15660
 		internal static int __PropertyOffset_bUseDynamicMaterialInstance;
 
-		// Token: 0x04010902 RID: 67842
-		internal static int __PropertyOffset_NavigationGeometryGatheringMode;
-
-		// Token: 0x04010903 RID: 67843
+		// Token: 0x04003D2D RID: 15661
 		internal static int __PropertyOffset_bUseLandscapeForCullingInvisibleHLODVertices;
 
-		// Token: 0x04010904 RID: 67844
+		// Token: 0x04003D2E RID: 15662
 		internal static int __PropertyOffset_bHasLayersContent;
 
-		// Token: 0x04010905 RID: 67845
-		internal static int __PropertyOffset_WeightmapUsageMap;
-
-		// Token: 0x04010906 RID: 67846
-		[Nullable(new byte[]
-		{
-			2,
-			1,
-			1
-		})]
-		private TMap<UTexture2D, ULandscapeWeightmapUsage> _WeightmapUsageMap;
-
-		// Token: 0x04010907 RID: 67847
+		// Token: 0x04003D2F RID: 15663
 		private static IntPtr __SetKuroLandscapeFOVFactorByCamera_NativeFunctionPtr;
 
-		// Token: 0x04010908 RID: 67848
+		// Token: 0x04003D30 RID: 15664
 		private static IntPtr __SetKuroLandscapeFOVFactor_NativeFunctionPtr;
 
-		// Token: 0x04010909 RID: 67849
+		// Token: 0x04003D31 RID: 15665
 		private static IntPtr __LandscapeExportHeightmapToRenderTarget_NativeFunctionPtr;
 
-		// Token: 0x0401090A RID: 67850
+		// Token: 0x04003D32 RID: 15666
 		private static IntPtr __GetKuroLandscapeFOVFactorByCamera_NativeFunctionPtr;
 
-		// Token: 0x0401090B RID: 67851
+		// Token: 0x04003D33 RID: 15667
 		private static IntPtr __GetKuroLandscapeFOVFactor_NativeFunctionPtr;
 
-		// Token: 0x0401090C RID: 67852
+		// Token: 0x04003D34 RID: 15668
 		private static IntPtr __GenerateLandscapeLayerParams_NativeFunctionPtr;
 
-		// Token: 0x0401090D RID: 67853
+		// Token: 0x04003D35 RID: 15669
 		private static IntPtr __EditorSetLandscapeMaterial_NativeFunctionPtr;
 
-		// Token: 0x0401090E RID: 67854
+		// Token: 0x04003D36 RID: 15670
 		private static IntPtr __EditorSetKuroColormapTexture_NativeFunctionPtr;
 
-		// Token: 0x0401090F RID: 67855
-		private static IntPtr __EditorApplySpline_NativeFunctionPtr;
-
-		// Token: 0x04010910 RID: 67856
+		// Token: 0x04003D37 RID: 15671
 		private static IntPtr __ChangeUseTessellationComponentScreenSizeFalloff_NativeFunctionPtr;
 
-		// Token: 0x04010911 RID: 67857
+		// Token: 0x04003D38 RID: 15672
 		private static IntPtr __ChangeTessellationComponentScreenSizeFalloff_NativeFunctionPtr;
 
-		// Token: 0x04010912 RID: 67858
+		// Token: 0x04003D39 RID: 15673
 		private static IntPtr __ChangeTessellationComponentScreenSize_NativeFunctionPtr;
 
-		// Token: 0x04010913 RID: 67859
+		// Token: 0x04003D3A RID: 15674
 		private static IntPtr __ChangeLODDistanceFactor_NativeFunctionPtr;
 
-		// Token: 0x04010914 RID: 67860
+		// Token: 0x04003D3B RID: 15675
 		private static IntPtr __ChangeComponentScreenSizeToUseSubSections_NativeFunctionPtr;
 
-		// Token: 0x0200340F RID: 13327
+		// Token: 0x02000E56 RID: 3670
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetKuroLandscapeFOVFactorByCamera_FunctionParams
 		{
-			// Token: 0x040173DA RID: 95194
+			// Token: 0x040061F8 RID: 25080
 			[FieldOffset(0)]
 			public float InFOVFactor;
 		}
 
-		// Token: 0x02003410 RID: 13328
+		// Token: 0x02000E57 RID: 3671
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetKuroLandscapeFOVFactor_FunctionParams
 		{
-			// Token: 0x040173DB RID: 95195
+			// Token: 0x040061F9 RID: 25081
 			[FieldOffset(0)]
 			public float InFOVFactor;
 		}
 
-		// Token: 0x02003411 RID: 13329
+		// Token: 0x02000E58 RID: 3672
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __LandscapeExportHeightmapToRenderTarget_FunctionParams
 		{
-			// Token: 0x040173DC RID: 95196
+			// Token: 0x040061FA RID: 25082
 			[FieldOffset(0)]
 			public IntPtr InRenderTarget;
 
-			// Token: 0x040173DD RID: 95197
+			// Token: 0x040061FB RID: 25083
 			[FieldOffset(8)]
 			public bool InExportHeightIntoRGChannel;
 
-			// Token: 0x040173DE RID: 95198
+			// Token: 0x040061FC RID: 25084
 			[FieldOffset(9)]
 			public bool InExportLandscapeProxies;
 
-			// Token: 0x040173DF RID: 95199
+			// Token: 0x040061FD RID: 25085
 			[FieldOffset(10)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003412 RID: 13330
+		// Token: 0x02000E59 RID: 3673
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetKuroLandscapeFOVFactorByCamera_FunctionParams
 		{
-			// Token: 0x040173E0 RID: 95200
+			// Token: 0x040061FE RID: 25086
 			[FieldOffset(0)]
 			public float __Result;
 		}
 
-		// Token: 0x02003413 RID: 13331
+		// Token: 0x02000E5A RID: 3674
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetKuroLandscapeFOVFactor_FunctionParams
 		{
-			// Token: 0x040173E1 RID: 95201
+			// Token: 0x040061FF RID: 25087
 			[FieldOffset(0)]
 			public float __Result;
 		}
 
-		// Token: 0x02003414 RID: 13332
+		// Token: 0x02000E5B RID: 3675
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __EditorSetLandscapeMaterial_FunctionParams
 		{
-			// Token: 0x040173E2 RID: 95202
+			// Token: 0x04006200 RID: 25088
 			[FieldOffset(0)]
 			public IntPtr NewLandscapeMaterial;
 		}
 
-		// Token: 0x02003415 RID: 13333
+		// Token: 0x02000E5C RID: 3676
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __EditorSetKuroColormapTexture_FunctionParams
 		{
-			// Token: 0x040173E3 RID: 95203
+			// Token: 0x04006201 RID: 25089
 			[FieldOffset(0)]
 			public IntPtr NewKuroColormapTexture;
 		}
 
-		// Token: 0x02003416 RID: 13334
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 64)]
-		protected ref struct __EditorApplySpline_FunctionParams
-		{
-			// Token: 0x040173E4 RID: 95204
-			[FieldOffset(0)]
-			public IntPtr InSplineComponent;
-
-			// Token: 0x040173E5 RID: 95205
-			[FieldOffset(8)]
-			public float StartWidth;
-
-			// Token: 0x040173E6 RID: 95206
-			[FieldOffset(12)]
-			public float EndWidth;
-
-			// Token: 0x040173E7 RID: 95207
-			[FieldOffset(16)]
-			public float StartSideFalloff;
-
-			// Token: 0x040173E8 RID: 95208
-			[FieldOffset(20)]
-			public float EndSideFalloff;
-
-			// Token: 0x040173E9 RID: 95209
-			[FieldOffset(24)]
-			public float StartRoll;
-
-			// Token: 0x040173EA RID: 95210
-			[FieldOffset(28)]
-			public float EndRoll;
-
-			// Token: 0x040173EB RID: 95211
-			[FieldOffset(32)]
-			public int NumSubdivisions;
-
-			// Token: 0x040173EC RID: 95212
-			[FieldOffset(36)]
-			public bool bRaiseHeights;
-
-			// Token: 0x040173ED RID: 95213
-			[FieldOffset(37)]
-			public bool bLowerHeights;
-
-			// Token: 0x040173EE RID: 95214
-			[FieldOffset(40)]
-			public IntPtr PaintLayer;
-
-			// Token: 0x040173EF RID: 95215
-			[FieldOffset(48)]
-			public FName EditLayerName;
-		}
-
-		// Token: 0x02003417 RID: 13335
+		// Token: 0x02000E5D RID: 3677
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __ChangeUseTessellationComponentScreenSizeFalloff_FunctionParams
 		{
-			// Token: 0x040173F0 RID: 95216
+			// Token: 0x04006202 RID: 25090
 			[FieldOffset(0)]
 			public bool InComponentScreenSizeToUseSubSections;
 		}
 
-		// Token: 0x02003418 RID: 13336
+		// Token: 0x02000E5E RID: 3678
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __ChangeTessellationComponentScreenSizeFalloff_FunctionParams
 		{
-			// Token: 0x040173F1 RID: 95217
+			// Token: 0x04006203 RID: 25091
 			[FieldOffset(0)]
 			public float InUseTessellationComponentScreenSizeFalloff;
 		}
 
-		// Token: 0x02003419 RID: 13337
+		// Token: 0x02000E5F RID: 3679
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __ChangeTessellationComponentScreenSize_FunctionParams
 		{
-			// Token: 0x040173F2 RID: 95218
+			// Token: 0x04006204 RID: 25092
 			[FieldOffset(0)]
 			public float InTessellationComponentScreenSize;
 		}
 
-		// Token: 0x0200341A RID: 13338
+		// Token: 0x02000E60 RID: 3680
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __ChangeLODDistanceFactor_FunctionParams
 		{
-			// Token: 0x040173F3 RID: 95219
+			// Token: 0x04006205 RID: 25093
 			[FieldOffset(0)]
 			public float InLODDistanceFactor;
 		}
 
-		// Token: 0x0200341B RID: 13339
+		// Token: 0x02000E61 RID: 3681
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __ChangeComponentScreenSizeToUseSubSections_FunctionParams
 		{
-			// Token: 0x040173F4 RID: 95220
+			// Token: 0x04006206 RID: 25094
 			[FieldOffset(0)]
 			public float InComponentScreenSizeToUseSubSections;
 		}

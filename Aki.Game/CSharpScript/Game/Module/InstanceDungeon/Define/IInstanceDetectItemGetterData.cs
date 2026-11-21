@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058C4 RID: 22724
+	// Token: 0x0200489C RID: 18588
 	[NullableContext(2)]
 	public interface IInstanceDetectItemGetterData
 	{
-		// Token: 0x17008AA6 RID: 35494
-		// (get) Token: 0x06039C40 RID: 236608
-		// (set) Token: 0x06039C41 RID: 236609
+		// Token: 0x17005E72 RID: 24178
+		// (get) Token: 0x0602EB63 RID: 191331
+		// (set) Token: 0x0602EB64 RID: 191332
 		TInstanceSubtitleTextIdGetter SubtitleTextIdGetter { get; set; }
 
-		// Token: 0x17008AA7 RID: 35495
-		// (get) Token: 0x06039C42 RID: 236610
-		// (set) Token: 0x06039C43 RID: 236611
+		// Token: 0x17005E73 RID: 24179
+		// (get) Token: 0x0602EB65 RID: 191333
+		// (set) Token: 0x0602EB66 RID: 191334
 		TInstanceSubtitleArgsGetter SubtitleArgsGetter { get; set; }
 
-		// Token: 0x17008AA8 RID: 35496
-		// (get) Token: 0x06039C44 RID: 236612
-		// (set) Token: 0x06039C45 RID: 236613
+		// Token: 0x17005E74 RID: 24180
+		// (get) Token: 0x0602EB67 RID: 191335
+		// (set) Token: 0x0602EB68 RID: 191336
 		TInstanceCheckFinishedGetter CheckFinishedGetter { get; set; }
 	}
 }

@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000709 RID: 1801
+	// Token: 0x020006F5 RID: 1781
 	public sealed class GpuMonsterEntityPbData : IMessage<GpuMonsterEntityPbData>, IMessage, IEquatable<GpuMonsterEntityPbData>, IDeepCloneable<GpuMonsterEntityPbData>, IBufferMessage
 	{
-		// Token: 0x0600A3F2 RID: 41970 RVA: 0x0018C262 File Offset: 0x0018A462
+		// Token: 0x0600A29C RID: 41628 RVA: 0x0018982E File Offset: 0x00187A2E
 		[NullableContext(1)]
 		public static GpuMonsterEntityPbData Create()
 		{
 			return new GpuMonsterEntityPbData();
 		}
 
-		// Token: 0x170020FB RID: 8443
-		// (get) Token: 0x0600A3F3 RID: 41971 RVA: 0x0018C269 File Offset: 0x0018A469
+		// Token: 0x170020B1 RID: 8369
+		// (get) Token: 0x0600A29D RID: 41629 RVA: 0x00189835 File Offset: 0x00187A35
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170020FC RID: 8444
-		// (get) Token: 0x0600A3F4 RID: 41972 RVA: 0x0018C26C File Offset: 0x0018A46C
+		// Token: 0x170020B2 RID: 8370
+		// (get) Token: 0x0600A29E RID: 41630 RVA: 0x00189838 File Offset: 0x00187A38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A3F5 RID: 41973 RVA: 0x0018C273 File Offset: 0x0018A473
+		// Token: 0x0600A29F RID: 41631 RVA: 0x0018983F File Offset: 0x00187A3F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GpuMonsterEntityPbData()
 		{
 		}
 
-		// Token: 0x0600A3F6 RID: 41974 RVA: 0x0018C27B File Offset: 0x0018A47B
+		// Token: 0x0600A2A0 RID: 41632 RVA: 0x00189847 File Offset: 0x00187A47
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GpuMonsterEntityPbData(GpuMonsterEntityPbData other) : this()
@@ -56,7 +56,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600A3F7 RID: 41975 RVA: 0x0018C294 File Offset: 0x0018A494
+		// Token: 0x0600A2A1 RID: 41633 RVA: 0x00189860 File Offset: 0x00187A60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GpuMonsterEntityPbData Clone()
@@ -64,7 +64,7 @@ namespace Aki.Protocol
 			return new GpuMonsterEntityPbData(this);
 		}
 
-		// Token: 0x0600A3F8 RID: 41976 RVA: 0x0018C29C File Offset: 0x0018A49C
+		// Token: 0x0600A2A2 RID: 41634 RVA: 0x00189868 File Offset: 0x00187A68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			return this.Equals(other as GpuMonsterEntityPbData);
 		}
 
-		// Token: 0x0600A3F9 RID: 41977 RVA: 0x0018C2AA File Offset: 0x0018A4AA
+		// Token: 0x0600A2A3 RID: 41635 RVA: 0x00189876 File Offset: 0x00187A76
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(GpuMonsterEntityPbData other)
@@ -80,7 +80,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x0600A3FA RID: 41978 RVA: 0x0018C2C8 File Offset: 0x0018A4C8
+		// Token: 0x0600A2A4 RID: 41636 RVA: 0x00189894 File Offset: 0x00187A94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -93,7 +93,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600A3FB RID: 41979 RVA: 0x0018C2EE File Offset: 0x0018A4EE
+		// Token: 0x0600A2A5 RID: 41637 RVA: 0x001898BA File Offset: 0x00187ABA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600A3FC RID: 41980 RVA: 0x0018C2FB File Offset: 0x0018A4FB
+		// Token: 0x0600A2A6 RID: 41638 RVA: 0x001898C7 File Offset: 0x00187AC7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600A3FD RID: 41981 RVA: 0x0018C304 File Offset: 0x0018A504
+		// Token: 0x0600A2A7 RID: 41639 RVA: 0x001898D0 File Offset: 0x00187AD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A3FE RID: 41982 RVA: 0x0018C31C File Offset: 0x0018A51C
+		// Token: 0x0600A2A8 RID: 41640 RVA: 0x001898E8 File Offset: 0x00187AE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -133,7 +133,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600A3FF RID: 41983 RVA: 0x0018C342 File Offset: 0x0018A542
+		// Token: 0x0600A2A9 RID: 41641 RVA: 0x0018990E File Offset: 0x00187B0E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(GpuMonsterEntityPbData other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600A400 RID: 41984 RVA: 0x0018C35F File Offset: 0x0018A55F
+		// Token: 0x0600A2AA RID: 41642 RVA: 0x0018992B File Offset: 0x00187B2B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600A401 RID: 41985 RVA: 0x0018C368 File Offset: 0x0018A568
+		// Token: 0x0600A2AB RID: 41643 RVA: 0x00189934 File Offset: 0x00187B34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -169,7 +169,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04004BB7 RID: 19383
+		// Token: 0x04004BB0 RID: 19376
 		private UnknownFieldSet _unknownFields;
 	}
 }

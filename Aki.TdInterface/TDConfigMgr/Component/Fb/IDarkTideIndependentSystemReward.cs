@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AB2 RID: 2738
+	// Token: 0x02000B7C RID: 2940
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IDarkTideIndependentSystemReward : IIndependentSystemRewardType
 	{
-		// Token: 0x06003F20 RID: 16160 RVA: 0x000A1722 File Offset: 0x0009F922
-		[NullableContext(1)]
+		// Token: 0x0600434A RID: 17226 RVA: 0x000AAD16 File Offset: 0x000A8F16
+		[NullableContext(0)]
 		public static IDarkTideIndependentSystemReward Create(IDarkTideIndependentSystemReward? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F79 RID: 3961
-		// (get) Token: 0x06003F21 RID: 16161 RVA: 0x000A1741 File Offset: 0x0009F941
+		// Token: 0x1700104D RID: 4173
+		// (get) Token: 0x0600434B RID: 17227 RVA: 0x000AAD35 File Offset: 0x000A8F35
 		public override EIndependentSystemRewardType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F7A RID: 3962
-		// (get) Token: 0x06003F22 RID: 16162 RVA: 0x000A174E File Offset: 0x0009F94E
+		// Token: 0x1700104E RID: 4174
+		// (get) Token: 0x0600434C RID: 17228 RVA: 0x000AAD42 File Offset: 0x000A8F42
 		public virtual int RewardId
 		{
 			get
@@ -44,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F7B RID: 3963
-		// (get) Token: 0x06003F23 RID: 16163 RVA: 0x000A175C File Offset: 0x0009F95C
+		// Token: 0x1700104F RID: 4175
+		// (get) Token: 0x0600434D RID: 17229 RVA: 0x000AAD50 File Offset: 0x000A8F50
 		public virtual List<int> RewardIdList
 		{
 			get
@@ -69,13 +69,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002311 RID: 8977
+		// Token: 0x0400252D RID: 9517
 		private IDarkTideIndependentSystemReward Instance;
 
-		// Token: 0x04002312 RID: 8978
+		// Token: 0x0400252E RID: 9518
 		private List<int> _RewardIdListCache;
 
-		// Token: 0x04002313 RID: 8979
+		// Token: 0x0400252F RID: 9519
 		private bool _RewardIdListInited;
 	}
 }

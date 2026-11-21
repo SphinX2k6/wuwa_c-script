@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001B69 RID: 7017
+// Token: 0x02001028 RID: 4136
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchDetailData : IFloroRanchDetailData
 {
-	// Token: 0x17001150 RID: 4432
-	// (get) Token: 0x0600D09B RID: 53403 RVA: 0x002FA6A9 File Offset: 0x002F88A9
-	// (set) Token: 0x0600D09C RID: 53404 RVA: 0x002FA6B1 File Offset: 0x002F88B1
+	// Token: 0x17001175 RID: 4469
+	// (get) Token: 0x0600A4AC RID: 42156 RVA: 0x00305781 File Offset: 0x00303981
+	// (set) Token: 0x0600A4AD RID: 42157 RVA: 0x00305789 File Offset: 0x00303989
 	public FloroRanchEntityBase EntityData { get; set; }
 
-	// Token: 0x17001151 RID: 4433
-	// (get) Token: 0x0600D09D RID: 53405 RVA: 0x002FA6BA File Offset: 0x002F88BA
-	// (set) Token: 0x0600D09E RID: 53406 RVA: 0x002FA6C2 File Offset: 0x002F88C2
+	// Token: 0x17001176 RID: 4470
+	// (get) Token: 0x0600A4AE RID: 42158 RVA: 0x00305792 File Offset: 0x00303992
+	// (set) Token: 0x0600A4AF RID: 42159 RVA: 0x0030579A File Offset: 0x0030399A
 	public int Rank { get; set; }
 }

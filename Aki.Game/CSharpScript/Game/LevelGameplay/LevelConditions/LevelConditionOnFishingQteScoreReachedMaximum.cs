@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006D5A RID: 27994
+	// Token: 0x02005ED8 RID: 24280
 	public class LevelConditionOnFishingQteScoreReachedMaximum : LevelConditionBase
 	{
-		// Token: 0x0604475A RID: 280410 RVA: 0x010E26C9 File Offset: 0x010E08C9
+		// Token: 0x0603A8BC RID: 239804 RVA: 0x0108C881 File Offset: 0x0108AA81
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

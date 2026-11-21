@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019E7 RID: 6631
+	// Token: 0x02000474 RID: 1140
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnKuroMovementTrigger : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060189A1 RID: 100769 RVA: 0x00243F91 File Offset: 0x00242191
+		// Token: 0x06006C53 RID: 27731 RVA: 0x0009DD43 File Offset: 0x0009BF43
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnKuroMovementTrigger.StaticFunctionPtr();
 		}
 
-		// Token: 0x060189A2 RID: 100770 RVA: 0x00243F9D File Offset: 0x0024219D
+		// Token: 0x06006C54 RID: 27732 RVA: 0x0009DD4F File Offset: 0x0009BF4F
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnKuroMovementTrigger._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnKuroMovementTrigger._FunctionPtr;
 		}
 
-		// Token: 0x060189A3 RID: 100771 RVA: 0x00243FC0 File Offset: 0x002421C0
+		// Token: 0x06006C55 RID: 27733 RVA: 0x0009DD72 File Offset: 0x0009BF72
 		public FOnKuroMovementTrigger()
 		{
 		}
 
-		// Token: 0x060189A4 RID: 100772 RVA: 0x00243FC8 File Offset: 0x002421C8
+		// Token: 0x06006C56 RID: 27734 RVA: 0x0009DD7A File Offset: 0x0009BF7A
 		[NullableContext(2)]
 		public FOnKuroMovementTrigger(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060189A5 RID: 100773 RVA: 0x00243FD2 File Offset: 0x002421D2
+		// Token: 0x06006C57 RID: 27735 RVA: 0x0009DD84 File Offset: 0x0009BF84
 		public FOnKuroMovementTrigger(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060189A6 RID: 100774 RVA: 0x00243FDD File Offset: 0x002421DD
+		// Token: 0x06006C58 RID: 27736 RVA: 0x0009DD8F File Offset: 0x0009BF8F
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as FOnKuroMovementTrigger.FOnKuroMovementTrigger_ScriptDelegate) ?? ((FOnKuroMovementTrigger.FOnKuroMovementTrigger_ScriptDelegate)Delegate.CreateDelegate(typeof(FOnKuroMovementTrigger.FOnKuroMovementTrigger_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060189A7 RID: 100775 RVA: 0x0024400F File Offset: 0x0024220F
+		// Token: 0x06006C59 RID: 27737 RVA: 0x0009DDC1 File Offset: 0x0009BFC1
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(FOnKuroMovementTrigger.FOnKuroMovementTrigger_ScriptDelegate Callback)
 		{
 			if (FOnKuroMovementTrigger.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FOnKuroMovementTrigger.RegisterId);
 		}
 
-		// Token: 0x060189A8 RID: 100776 RVA: 0x00244049 File Offset: 0x00242249
+		// Token: 0x06006C5A RID: 27738 RVA: 0x0009DDFB File Offset: 0x0009BFFB
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(FOnKuroMovementTrigger.FOnKuroMovementTrigger_ScriptDelegate Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x060189A9 RID: 100777 RVA: 0x00244054 File Offset: 0x00242254
+		// Token: 0x06006C5B RID: 27739 RVA: 0x0009DE04 File Offset: 0x0009C004
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast([Nullable(new byte[]
 		{
 			2,
@@ -100,10 +97,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnKuroMovementTrigger._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060189AA RID: 100778 RVA: 0x002440C4 File Offset: 0x002422C4
+		// Token: 0x06006C5C RID: 27740 RVA: 0x0009DE74 File Offset: 0x0009C074
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			FOnKuroMovementTrigger.FOnKuroMovementTrigger_ScriptDelegate fonKuroMovementTrigger_ScriptDelegate = target as FOnKuroMovementTrigger.FOnKuroMovementTrigger_ScriptDelegate;
@@ -119,39 +115,39 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0400D4C7 RID: 54471
+		// Token: 0x04002E46 RID: 11846
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D4C8 RID: 54472
+		// Token: 0x04002E47 RID: 11847
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroMovement.OnKuroMovementTrigger__DelegateSignature";
 
-		// Token: 0x0400D4C9 RID: 54473
+		// Token: 0x04002E48 RID: 11848
 		private static int RegisterId;
 
-		// Token: 0x02003096 RID: 12438
-		// (Invoke) Token: 0x0602858E RID: 165262
+		// Token: 0x02000B78 RID: 2936
+		// (Invoke) Token: 0x0600BEFF RID: 48895
 		public delegate void FOnKuroMovementTrigger_ScriptDelegate([Nullable(new byte[]
 		{
 			2,
 			1
 		})] in TArray<FOverlapActorRecord> Records);
 
-		// Token: 0x02003097 RID: 12439
+		// Token: 0x02000B79 RID: 2937
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FOnKuroMovementTrigger_DelegateParams
+		private ref struct __FOnKuroMovementTrigger_DelegateParams
 		{
-			// Token: 0x04016DBC RID: 93628
+			// Token: 0x04005CD0 RID: 23760
 			[FieldOffset(0)]
 			public byte Records;
 		}
 
-		// Token: 0x02003098 RID: 12440
+		// Token: 0x02000B7A RID: 2938
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016DBD RID: 93629
+			// Token: 0x04005CD1 RID: 23761
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -12,18 +12,18 @@ using CSharpScript.Game.Effect;
 using CSharpScript.Game.LevelGamePlay.Common;
 using UnrealEngine;
 
-// Token: 0x02002633 RID: 9779
+// Token: 0x02001B1E RID: 6942
 [NullableContext(1)]
 [Nullable(0)]
 public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableResetter
 {
-	// Token: 0x06013FEC RID: 81900 RVA: 0x00507F6C File Offset: 0x0050616C
+	// Token: 0x060114CE RID: 70862 RVA: 0x00516E4C File Offset: 0x0051504C
 	static GuideEffectAssistant()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GuideEffectAssistant.CreateStaticDefaultValue), new Action(GuideEffectAssistant.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06013FED RID: 81901 RVA: 0x00507F8C File Offset: 0x0050618C
+	// Token: 0x060114CF RID: 70863 RVA: 0x00516E6C File Offset: 0x0051506C
 	private int GenerateEffectHandle(string effectPath, AActor effectOwner)
 	{
 		global::Log.Instance.Info(ELogModule.Guide, ELogAuthor.CH, "[GuideEffectAssistant] 生成新的特效", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -34,13 +34,13 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		return instance.SpawnEffect(world, ftransformDouble, effectPath, "[GuideEffectAssistant.GenerateEffectHandle]", new EffectContext(null, effectOwner, false), global::EEffectType.Scene, null, null, null, false, false);
 	}
 
-	// Token: 0x06013FEE RID: 81902 RVA: 0x00507FF4 File Offset: 0x005061F4
+	// Token: 0x060114D0 RID: 70864 RVA: 0x00516ED4 File Offset: 0x005150D4
 	protected override void OnDestroy()
 	{
 		this.GuideEffectMap.Clear();
 	}
 
-	// Token: 0x06013FEF RID: 81903 RVA: 0x00508004 File Offset: 0x00506204
+	// Token: 0x060114D1 RID: 70865 RVA: 0x00516EE4 File Offset: 0x005150E4
 	public override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, int, bool>(EEventName.CharUseSkill, new Action<int, int, bool>(this.OnUseSkill));
@@ -48,7 +48,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		EventSystem.Instance.Add<BtType, long?>(EEventName.OnLogicTreeTrackUpdate, new Action<BtType, long?>(this.OnQuestTrackUpdate));
 	}
 
-	// Token: 0x06013FF0 RID: 81904 RVA: 0x00508064 File Offset: 0x00506264
+	// Token: 0x060114D2 RID: 70866 RVA: 0x00516F44 File Offset: 0x00515144
 	public override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<int, int, bool>(EEventName.CharUseSkill, new Action<int, int, bool>(this.OnUseSkill));
@@ -56,7 +56,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		EventSystem.Instance.Remove<BtType, long?>(EEventName.OnLogicTreeTrackUpdate, new Action<BtType, long?>(this.OnQuestTrackUpdate));
 	}
 
-	// Token: 0x06013FF1 RID: 81905 RVA: 0x005080C4 File Offset: 0x005062C4
+	// Token: 0x060114D3 RID: 70867 RVA: 0x00516FA4 File Offset: 0x005151A4
 	private void OnUseSkill(int charId, int skillId, bool isAutonomousProxy)
 	{
 		if (skillId == 210004)
@@ -158,7 +158,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x06013FF2 RID: 81906 RVA: 0x005083A4 File Offset: 0x005065A4
+	// Token: 0x060114D4 RID: 70868 RVA: 0x00517284 File Offset: 0x00515484
 	private void ClearAllSplineAndEffectHandle()
 	{
 		Dictionary<int, GuideEffectAssistant.EffectData> dictionary;
@@ -175,7 +175,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x06013FF3 RID: 81907 RVA: 0x00508428 File Offset: 0x00506628
+	// Token: 0x060114D5 RID: 70869 RVA: 0x00517308 File Offset: 0x00515508
 	private void ClearSplineAndEffectHandle(GuideEffectAssistant.EffectData data)
 	{
 		AActor curActor2 = data.CurActor;
@@ -207,7 +207,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x06013FF4 RID: 81908 RVA: 0x005084F8 File Offset: 0x005066F8
+	// Token: 0x060114D6 RID: 70870 RVA: 0x005173D8 File Offset: 0x005155D8
 	private void OnQuestStatusChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 	{
 		if (state != QuestState.Finish)
@@ -226,7 +226,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x06013FF5 RID: 81909 RVA: 0x00508554 File Offset: 0x00506754
+	// Token: 0x060114D7 RID: 70871 RVA: 0x00517434 File Offset: 0x00515634
 	private void OnQuestTrackUpdate(BtType contextType, long? _)
 	{
 		if (contextType != BtType.Quest && contextType != BtType.Recall)
@@ -243,7 +243,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		this.TrackQuestId = null;
 	}
 
-	// Token: 0x06013FF6 RID: 81910 RVA: 0x0050859C File Offset: 0x0050679C
+	// Token: 0x060114D8 RID: 70872 RVA: 0x0051747C File Offset: 0x0051567C
 	[NullableContext(2)]
 	private void AfterEffectEnd(AActor actor)
 	{
@@ -254,7 +254,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x06013FF7 RID: 81911 RVA: 0x005085D8 File Offset: 0x005067D8
+	// Token: 0x060114D9 RID: 70873 RVA: 0x005174B8 File Offset: 0x005156B8
 	public void UpdateQuestGuideEffect(float delta)
 	{
 		if (this.TrackQuestId == null)
@@ -280,7 +280,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x06013FF8 RID: 81912 RVA: 0x0050867C File Offset: 0x0050687C
+	// Token: 0x060114DA RID: 70874 RVA: 0x0051755C File Offset: 0x0051575C
 	[return: Nullable(0)]
 	private ValueTuple<bool, int, float> GetNearestPoint(global::Vector characterLocation, GuideEffectAssistant.EffectData data)
 	{
@@ -303,7 +303,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		return new ValueTuple<bool, int, float>(true, num2, num);
 	}
 
-	// Token: 0x06013FF9 RID: 81913 RVA: 0x005086E0 File Offset: 0x005068E0
+	// Token: 0x060114DB RID: 70875 RVA: 0x005175C0 File Offset: 0x005157C0
 	private AActor GenerateGuideEffectSpline(global::Vector location, GuideEffectAssistant.EffectData data, int index, bool isNav)
 	{
 		AActor aactor = ActorSystem.Instance.Get(BP_BasePathLine_C.StaticClass(), MathUtils.Instance.DefaultTransformDouble, null, true);
@@ -332,7 +332,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		return aactor;
 	}
 
-	// Token: 0x06013FFA RID: 81914 RVA: 0x005087E0 File Offset: 0x005069E0
+	// Token: 0x060114DC RID: 70876 RVA: 0x005176C0 File Offset: 0x005158C0
 	private void GetNavPoint(global::Vector sourceLoc, global::Vector targetLoc, TArray<FVectorDouble> points)
 	{
 		UObject world = GlobalData.World;
@@ -350,7 +350,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x06013FFB RID: 81915 RVA: 0x00508894 File Offset: 0x00506A94
+	// Token: 0x060114DD RID: 70877 RVA: 0x00517774 File Offset: 0x00515974
 	private void CreateSplineNew(int splineEntityId, GuideEffectAssistant.EffectData effectData)
 	{
 		IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(splineEntityId), null);
@@ -408,7 +408,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.CreateSplineOnChangeRole));
 	}
 
-	// Token: 0x06013FFC RID: 81916 RVA: 0x00508A74 File Offset: 0x00506C74
+	// Token: 0x060114DE RID: 70878 RVA: 0x00517954 File Offset: 0x00515B54
 	private void CreateSplineInternal(int splineEntityId, global::Vector originalPosition, GuideEffectAssistant.EffectData effectData)
 	{
 		USplineComponent usplineComponent = GameSplineModel.Instance.LoadAndGetSplineComponent(splineEntityId, Global.BaseCharacter.EntityId, EIdType.EntityId);
@@ -442,7 +442,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		effectData.SplineLength = usplineComponent.GetSplineLength();
 	}
 
-	// Token: 0x06013FFD RID: 81917 RVA: 0x00508B98 File Offset: 0x00506D98
+	// Token: 0x060114DF RID: 70879 RVA: 0x00517A78 File Offset: 0x00515C78
 	private void CreateSplineOnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		EventSystem.Instance.Remove<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.CreateSplineOnChangeRole));
@@ -452,13 +452,13 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x06013FFE RID: 81918 RVA: 0x00508BF9 File Offset: 0x00506DF9
+	// Token: 0x060114E0 RID: 70880 RVA: 0x00517AD9 File Offset: 0x00515CD9
 	public void ClearQuestTraceEffect(int questId)
 	{
 		this.GuideEffectMap.Remove(questId);
 	}
 
-	// Token: 0x06013FFF RID: 81919 RVA: 0x00508C08 File Offset: 0x00506E08
+	// Token: 0x060114E1 RID: 70881 RVA: 0x00517AE8 File Offset: 0x00515CE8
 	private void GenerateNavigationPoint(FVectorDouble originPoint, UObject worldContext)
 	{
 		if (GuideEffectAssistant.LineTrace == null)
@@ -488,7 +488,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x06014000 RID: 81920 RVA: 0x00508CFC File Offset: 0x00506EFC
+	// Token: 0x060114E2 RID: 70882 RVA: 0x00517BDC File Offset: 0x00515DDC
 	public void AddQuestTraceEffect(int questId, float duration, int splineEntityId)
 	{
 		GuideEffectAssistant.EffectData effectData = new GuideEffectAssistant.EffectData();
@@ -507,7 +507,7 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		this.CreateSplineNew(splineEntityId, effectData);
 	}
 
-	// Token: 0x06014001 RID: 81921 RVA: 0x00508D58 File Offset: 0x00506F58
+	// Token: 0x060114E3 RID: 70883 RVA: 0x00517C38 File Offset: 0x00515E38
 	public void RemoveQuestTraceEffect(int questId, int splineEntityId)
 	{
 		Dictionary<int, GuideEffectAssistant.EffectData> dictionary;
@@ -525,91 +525,91 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		dictionary.Remove(splineEntityId);
 	}
 
-	// Token: 0x06014002 RID: 81922 RVA: 0x00508D9F File Offset: 0x00506F9F
+	// Token: 0x060114E4 RID: 70884 RVA: 0x00517C7F File Offset: 0x00515E7F
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06014003 RID: 81923 RVA: 0x00508DA1 File Offset: 0x00506FA1
+	// Token: 0x060114E5 RID: 70885 RVA: 0x00517C81 File Offset: 0x00515E81
 	public static void ResetStaticDefaultValue()
 	{
 		GuideEffectAssistant.LineTrace = null;
 	}
 
-	// Token: 0x040096C9 RID: 38601
+	// Token: 0x04009821 RID: 38945
 	private const int SAMPLE_STEP = 200;
 
-	// Token: 0x040096CA RID: 38602
+	// Token: 0x04009822 RID: 38946
 	private const float SHOW_EFFECT_DISTANCE = 50000f;
 
-	// Token: 0x040096CB RID: 38603
+	// Token: 0x04009823 RID: 38947
 	private const float TRACE_DISTANCE = 500f;
 
-	// Token: 0x040096CC RID: 38604
+	// Token: 0x04009824 RID: 38948
 	private const string PROFILE_KEY = "GuideEffectAssistant_GenerateNavigationPoint";
 
-	// Token: 0x040096CD RID: 38605
+	// Token: 0x04009825 RID: 38949
 	private int? TrackQuestId = new int?(0);
 
-	// Token: 0x040096CE RID: 38606
+	// Token: 0x04009826 RID: 38950
 	private int CurSplinePointNum;
 
-	// Token: 0x040096CF RID: 38607
+	// Token: 0x04009827 RID: 38951
 	private EEffectSplineCreateMode SplineCreateMode;
 
-	// Token: 0x040096D0 RID: 38608
+	// Token: 0x04009828 RID: 38952
 	private float SpawnInterval;
 
-	// Token: 0x040096D1 RID: 38609
+	// Token: 0x04009829 RID: 38953
 	private static UTraceLineElement LineTrace;
 
-	// Token: 0x040096D2 RID: 38610
+	// Token: 0x0400982A RID: 38954
 	private readonly Dictionary<int, Dictionary<int, GuideEffectAssistant.EffectData>> GuideEffectMap = new Dictionary<int, Dictionary<int, GuideEffectAssistant.EffectData>>();
 
-	// Token: 0x040096D3 RID: 38611
+	// Token: 0x0400982B RID: 38955
 	private readonly HashSet<AActor> WaitDeleteActorSet = new HashSet<AActor>();
 
-	// Token: 0x040096D4 RID: 38612
+	// Token: 0x0400982C RID: 38956
 	private int TmpSplineEntityId = -1;
 
-	// Token: 0x040096D5 RID: 38613
+	// Token: 0x0400982D RID: 38957
 	[Nullable(2)]
 	private global::Vector TmpOriginalPosition;
 
-	// Token: 0x040096D6 RID: 38614
+	// Token: 0x0400982E RID: 38958
 	[Nullable(2)]
 	private GuideEffectAssistant.EffectData TmpEffectData;
 
-	// Token: 0x02008C84 RID: 35972
+	// Token: 0x02007E0D RID: 32269
 	[NullableContext(0)]
 	public enum EEffectState
 	{
-		// Token: 0x0402D9D6 RID: 186838
+		// Token: 0x04028CED RID: 167149
 		Finish,
-		// Token: 0x0402D9D7 RID: 186839
+		// Token: 0x04028CEE RID: 167150
 		Play,
-		// Token: 0x0402D9D8 RID: 186840
+		// Token: 0x04028CEF RID: 167151
 		Stop
 	}
 
-	// Token: 0x02008C85 RID: 35973
+	// Token: 0x02007E0E RID: 32270
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class EffectData
 	{
-		// Token: 0x0402D9D9 RID: 186841
+		// Token: 0x04028CF0 RID: 167152
 		public float Duration;
 
-		// Token: 0x0402D9DA RID: 186842
+		// Token: 0x04028CF1 RID: 167153
 		public float ShowTime;
 
-		// Token: 0x0402D9DB RID: 186843
+		// Token: 0x04028CF2 RID: 167154
 		public float HideTime;
 
-		// Token: 0x0402D9DC RID: 186844
+		// Token: 0x04028CF3 RID: 167155
 		public int EffectHandle;
 
-		// Token: 0x0402D9DD RID: 186845
+		// Token: 0x04028CF4 RID: 167156
 		[Nullable(new byte[]
 		{
 			2,
@@ -617,19 +617,19 @@ public class GuideEffectAssistant : ControllerAssistantBase, IStaticVariableRese
 		})]
 		public List<global::Vector> SplinePoints;
 
-		// Token: 0x0402D9DE RID: 186846
+		// Token: 0x04028CF5 RID: 167157
 		public AActor CurActor;
 
-		// Token: 0x0402D9DF RID: 186847
+		// Token: 0x04028CF6 RID: 167158
 		public IEffectSpline SplineData;
 
-		// Token: 0x0402D9E0 RID: 186848
+		// Token: 0x04028CF7 RID: 167159
 		public float SplineLength;
 
-		// Token: 0x0402D9E1 RID: 186849
+		// Token: 0x04028CF8 RID: 167160
 		public GuideEffectAssistant.EEffectState State;
 
-		// Token: 0x0402D9E2 RID: 186850
+		// Token: 0x04028CF9 RID: 167161
 		public int BestIndex;
 	}
 }

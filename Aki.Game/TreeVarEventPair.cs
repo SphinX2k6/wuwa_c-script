@@ -10,7 +10,7 @@ using UnrealEngine;
 [Nullable(0)]
 public class TreeVarEventPair : LevelVarEventPair
 {
-	// Token: 0x06000D89 RID: 3465 RVA: 0x0004ACE8 File Offset: 0x00048EE8
+	// Token: 0x06000D8F RID: 3471 RVA: 0x0004B884 File Offset: 0x00049A84
 	public unsafe override bool Init(SAiLevelVar levelVar, UKuroBooleanEventBinder boolEventBinder)
 	{
 		base.Init(levelVar, boolEventBinder);
@@ -42,7 +42,7 @@ public class TreeVarEventPair : LevelVarEventPair
 		return true;
 	}
 
-	// Token: 0x06000D8A RID: 3466 RVA: 0x0004AD90 File Offset: 0x00048F90
+	// Token: 0x06000D90 RID: 3472 RVA: 0x0004B92C File Offset: 0x00049B2C
 	public unsafe override bool Init(SAiLevelVar levelVar, UKuroIntEventBinder intEventBinder)
 	{
 		base.Init(levelVar, intEventBinder);
@@ -74,7 +74,7 @@ public class TreeVarEventPair : LevelVarEventPair
 		return true;
 	}
 
-	// Token: 0x06000D8B RID: 3467 RVA: 0x0004AE38 File Offset: 0x00049038
+	// Token: 0x06000D91 RID: 3473 RVA: 0x0004B9D4 File Offset: 0x00049BD4
 	public unsafe void OnReceiveTreeVar()
 	{
 		if (!this.IsInit)
@@ -102,7 +102,7 @@ public class TreeVarEventPair : LevelVarEventPair
 		instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x06000D8C RID: 3468 RVA: 0x0004AEDC File Offset: 0x000490DC
+	// Token: 0x06000D92 RID: 3474 RVA: 0x0004BA78 File Offset: 0x00049C78
 	private unsafe bool ParseQuestTreeValue(bool isInit = true)
 	{
 		Quest quest = QuestNewModel.Instance.GetQuest(this.LevelVar.Id);
@@ -124,7 +124,7 @@ public class TreeVarEventPair : LevelVarEventPair
 		return base.ParseValue(treeVarByKey, isInit);
 	}
 
-	// Token: 0x06000D8D RID: 3469 RVA: 0x0004AFA8 File Offset: 0x000491A8
+	// Token: 0x06000D93 RID: 3475 RVA: 0x0004BB44 File Offset: 0x00049D44
 	private unsafe bool ParseLevelPlayerValue(bool isInit = true)
 	{
 		int id = this.LevelVar.Id;
@@ -160,6 +160,6 @@ public class TreeVarEventPair : LevelVarEventPair
 		return base.ParseValue(treeVarByKey, isInit);
 	}
 
-	// Token: 0x04000AE8 RID: 2792
+	// Token: 0x04000AF0 RID: 2800
 	public long? TreeIncId;
 }

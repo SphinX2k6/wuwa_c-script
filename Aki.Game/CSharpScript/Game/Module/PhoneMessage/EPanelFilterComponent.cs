@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.PhoneMessage
 {
-	// Token: 0x020050F4 RID: 20724
+	// Token: 0x020040C4 RID: 16580
 	internal enum EPanelFilterComponent
 	{
-		// Token: 0x0401C368 RID: 115560
+		// Token: 0x04016D9B RID: 93595
 		TxtTitle,
-		// Token: 0x0401C369 RID: 115561
+		// Token: 0x04016D9C RID: 93596
 		BigItemGridLayout,
-		// Token: 0x0401C36A RID: 115562
+		// Token: 0x04016D9D RID: 93597
 		BigFilterTogItem
 	}
 }

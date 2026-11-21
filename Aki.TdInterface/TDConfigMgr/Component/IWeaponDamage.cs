@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007DB RID: 2011
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200087E RID: 2174
 	public class IWeaponDamage
 	{
-		// Token: 0x06002BA7 RID: 11175 RVA: 0x00071C58 File Offset: 0x0006FE58
+		// Token: 0x06002ED7 RID: 11991 RVA: 0x00078FBC File Offset: 0x000771BC
 		private IWeaponDamage_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002BA8 RID: 11176 RVA: 0x00071C90 File Offset: 0x0006FE90
+		// Token: 0x06002ED8 RID: 11992 RVA: 0x00078FF4 File Offset: 0x000771F4
 		public static IWeaponDamage Create([Nullable(2)] IWeaponDamage instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002BA9 RID: 11177 RVA: 0x00071CA3 File Offset: 0x0006FEA3
+		// Token: 0x06002ED9 RID: 11993 RVA: 0x00079007 File Offset: 0x00077207
 		public static IWeaponDamage CreateFromSetValue([Nullable(2)] IWeaponDamage_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002BAA RID: 11178 RVA: 0x00071CB8 File Offset: 0x0006FEB8
+		// Token: 0x06002EDA RID: 11994 RVA: 0x0007901C File Offset: 0x0007721C
 		public IWeaponDamage_SetValue ToSetValue()
 		{
 			return new IWeaponDamage_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B6E RID: 2926
-		// (get) Token: 0x06002BAB RID: 11179 RVA: 0x00071D12 File Offset: 0x0006FF12
-		// (set) Token: 0x06002BAC RID: 11180 RVA: 0x00071D3D File Offset: 0x0006FF3D
+		// Token: 0x17000C31 RID: 3121
+		// (get) Token: 0x06002EDB RID: 11995 RVA: 0x00079076 File Offset: 0x00077276
+		// (set) Token: 0x06002EDC RID: 11996 RVA: 0x000790A1 File Offset: 0x000772A1
 		public virtual int DefaultValue
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B6F RID: 2927
-		// (get) Token: 0x06002BAD RID: 11181 RVA: 0x00071D4C File Offset: 0x0006FF4C
-		// (set) Token: 0x06002BAE RID: 11182 RVA: 0x00071D86 File Offset: 0x0006FF86
+		// Token: 0x17000C32 RID: 3122
+		// (get) Token: 0x06002EDD RID: 11997 RVA: 0x000790B0 File Offset: 0x000772B0
+		// (set) Token: 0x06002EDE RID: 11998 RVA: 0x000790EA File Offset: 0x000772EA
 		public virtual int? GreatSword
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B70 RID: 2928
-		// (get) Token: 0x06002BAF RID: 11183 RVA: 0x00071D94 File Offset: 0x0006FF94
-		// (set) Token: 0x06002BB0 RID: 11184 RVA: 0x00071DCE File Offset: 0x0006FFCE
+		// Token: 0x17000C33 RID: 3123
+		// (get) Token: 0x06002EDF RID: 11999 RVA: 0x000790F8 File Offset: 0x000772F8
+		// (set) Token: 0x06002EE0 RID: 12000 RVA: 0x00079132 File Offset: 0x00077332
 		public virtual int? Dagger
 		{
 			get
@@ -135,9 +133,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B71 RID: 2929
-		// (get) Token: 0x06002BB1 RID: 11185 RVA: 0x00071DDC File Offset: 0x0006FFDC
-		// (set) Token: 0x06002BB2 RID: 11186 RVA: 0x00071E16 File Offset: 0x00070016
+		// Token: 0x17000C34 RID: 3124
+		// (get) Token: 0x06002EE1 RID: 12001 RVA: 0x00079140 File Offset: 0x00077340
+		// (set) Token: 0x06002EE2 RID: 12002 RVA: 0x0007917A File Offset: 0x0007737A
 		public virtual int? Pistol
 		{
 			get
@@ -159,9 +157,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B72 RID: 2930
-		// (get) Token: 0x06002BB3 RID: 11187 RVA: 0x00071E24 File Offset: 0x00070024
-		// (set) Token: 0x06002BB4 RID: 11188 RVA: 0x00071E5E File Offset: 0x0007005E
+		// Token: 0x17000C35 RID: 3125
+		// (get) Token: 0x06002EE3 RID: 12003 RVA: 0x00079188 File Offset: 0x00077388
+		// (set) Token: 0x06002EE4 RID: 12004 RVA: 0x000791C2 File Offset: 0x000773C2
 		public virtual int? Pugilism
 		{
 			get
@@ -183,9 +181,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B73 RID: 2931
-		// (get) Token: 0x06002BB5 RID: 11189 RVA: 0x00071E6C File Offset: 0x0007006C
-		// (set) Token: 0x06002BB6 RID: 11190 RVA: 0x00071EA6 File Offset: 0x000700A6
+		// Token: 0x17000C36 RID: 3126
+		// (get) Token: 0x06002EE5 RID: 12005 RVA: 0x000791D0 File Offset: 0x000773D0
+		// (set) Token: 0x06002EE6 RID: 12006 RVA: 0x0007920A File Offset: 0x0007740A
 		public virtual int? Ring
 		{
 			get
@@ -207,11 +205,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001CF8 RID: 7416
+		// Token: 0x04001F04 RID: 7940
 		[Nullable(2)]
 		protected IWeaponDamage FbInstance;
 
-		// Token: 0x04001CF9 RID: 7417
+		// Token: 0x04001F05 RID: 7941
 		[Nullable(2)]
 		protected IWeaponDamage_SetValue PocoInterface;
 	}

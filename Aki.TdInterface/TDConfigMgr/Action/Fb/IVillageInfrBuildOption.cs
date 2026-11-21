@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029A4 RID: 10660
+	// Token: 0x02002C91 RID: 11409
 	public class IVillageInfrBuildOption
 	{
-		// Token: 0x0600EBEB RID: 60395 RVA: 0x00227AF2 File Offset: 0x00225CF2
-		[NullableContext(1)]
+		// Token: 0x0600FA82 RID: 64130 RVA: 0x00245477 File Offset: 0x00243677
 		public static IVillageInfrBuildOption Create(IVillageInfrBuildOption? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A65 RID: 19045
-		// (get) Token: 0x0600EBEC RID: 60396 RVA: 0x00227B11 File Offset: 0x00225D11
+		// Token: 0x17004E0E RID: 19982
+		// (get) Token: 0x0600FA83 RID: 64131 RVA: 0x00245496 File Offset: 0x00243696
 		public virtual EVillageInfrBuildType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081EA RID: 33258
+		// Token: 0x040088DB RID: 35035
 		private IVillageInfrBuildOption Instance;
 	}
 }

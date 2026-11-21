@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F56 RID: 8022
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200218F RID: 8591
 	public class ITalkItemStyle
 	{
-		// Token: 0x0600AEBE RID: 44734 RVA: 0x00193280 File Offset: 0x00191480
+		// Token: 0x0600B990 RID: 47504 RVA: 0x001A9278 File Offset: 0x001A7478
 		private ITalkItemStyle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AEBF RID: 44735 RVA: 0x001932B8 File Offset: 0x001914B8
+		// Token: 0x0600B991 RID: 47505 RVA: 0x001A92B0 File Offset: 0x001A74B0
 		public static ITalkItemStyle Create([Nullable(2)] ITalkItemStyle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AEC0 RID: 44736 RVA: 0x001932CB File Offset: 0x001914CB
+		// Token: 0x0600B992 RID: 47506 RVA: 0x001A92C3 File Offset: 0x001A74C3
 		public static ITalkItemStyle CreateFromSetValue([Nullable(2)] ITalkItemStyle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AEC1 RID: 44737 RVA: 0x001932DE File Offset: 0x001914DE
+		// Token: 0x0600B993 RID: 47507 RVA: 0x001A92D6 File Offset: 0x001A74D6
 		public ITalkItemStyle_SetValue ToSetValue()
 		{
 			return new ITalkItemStyle_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170035B6 RID: 13750
-		// (get) Token: 0x0600AEC2 RID: 44738 RVA: 0x001932F1 File Offset: 0x001914F1
-		// (set) Token: 0x0600AEC3 RID: 44739 RVA: 0x0019331C File Offset: 0x0019151C
+		// Token: 0x17003881 RID: 14465
+		// (get) Token: 0x0600B994 RID: 47508 RVA: 0x001A92E9 File Offset: 0x001A74E9
+		// (set) Token: 0x0600B995 RID: 47509 RVA: 0x001A9314 File Offset: 0x001A7514
 		public virtual ETalkItemStyle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006921 RID: 26913
+		// Token: 0x04006F10 RID: 28432
 		[Nullable(2)]
 		protected ITalkItemStyle FbInstance;
 
-		// Token: 0x04006922 RID: 26914
+		// Token: 0x04006F11 RID: 28433
 		[Nullable(2)]
 		protected ITalkItemStyle_SetValue PocoInterface;
 	}

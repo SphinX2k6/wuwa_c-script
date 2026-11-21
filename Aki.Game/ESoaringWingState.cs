@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002CA5 RID: 11429
+// Token: 0x020021FE RID: 8702
 public enum ESoaringWingState
 {
-	// Token: 0x0400B214 RID: 45588
+	// Token: 0x0400B57F RID: 46463
 	None,
-	// Token: 0x0400B215 RID: 45589
+	// Token: 0x0400B580 RID: 46464
 	Hidden,
-	// Token: 0x0400B216 RID: 45590
+	// Token: 0x0400B581 RID: 46465
 	Showing
 }

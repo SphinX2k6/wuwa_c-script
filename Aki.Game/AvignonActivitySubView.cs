@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200110F RID: 4367
+// Token: 0x020005C3 RID: 1475
 public class AvignonActivitySubView : ActivitySubViewBase
 {
-	// Token: 0x06007232 RID: 29234 RVA: 0x00175957 File Offset: 0x00173B57
+	// Token: 0x060045C8 RID: 17864 RVA: 0x0017E313 File Offset: 0x0017C513
 	protected override void OnSetData()
 	{
 		this.ActivityData = (AvignonProtocolData)this.ActivityBaseData;
 	}
 
-	// Token: 0x06007233 RID: 29235 RVA: 0x0017596C File Offset: 0x00173B6C
+	// Token: 0x060045C9 RID: 17865 RVA: 0x0017E328 File Offset: 0x0017C528
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -33,7 +33,7 @@ public class AvignonActivitySubView : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007234 RID: 29236 RVA: 0x001759F8 File Offset: 0x00173BF8
+	// Token: 0x060045CA RID: 17866 RVA: 0x0017E3B4 File Offset: 0x0017C5B4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		AvignonActivitySubView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ public class AvignonActivitySubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007235 RID: 29237 RVA: 0x00175A3C File Offset: 0x00173C3C
+	// Token: 0x060045CB RID: 17867 RVA: 0x0017E3F8 File Offset: 0x0017C5F8
 	protected override void OnRefreshView()
 	{
 		EventSystem.Instance.Emit<int>(EEventName.RefreshActivityTab, this.ActivityData.Id);
@@ -57,7 +57,7 @@ public class AvignonActivitySubView : ActivitySubViewBase
 		commonInfoPanel.OnRefreshView();
 	}
 
-	// Token: 0x06007236 RID: 29238 RVA: 0x00175A99 File Offset: 0x00173C99
+	// Token: 0x060045CC RID: 17868 RVA: 0x0017E455 File Offset: 0x0017C655
 	[NullableContext(2)]
 	private void OnConfirmBtnClick(ActivityBaseData _)
 	{
@@ -68,24 +68,24 @@ public class AvignonActivitySubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x040034E7 RID: 13543
+	// Token: 0x04003580 RID: 13696
 	[Nullable(2)]
 	protected AvignonProtocolData ActivityData;
 
-	// Token: 0x040034E8 RID: 13544
+	// Token: 0x04003581 RID: 13697
 	[Nullable(1)]
 	protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x020076D0 RID: 30416
+	// Token: 0x02006864 RID: 26724
 	private class EComponents
 	{
-		// Token: 0x04027351 RID: 160593
+		// Token: 0x0402269A RID: 140954
 		public const int CommonActionInfo = 0;
 
-		// Token: 0x04027352 RID: 160594
+		// Token: 0x0402269B RID: 140955
 		public const int ItemFemale = 1;
 
-		// Token: 0x04027353 RID: 160595
+		// Token: 0x0402269C RID: 140956
 		public const int ItemMale = 2;
 	}
 }

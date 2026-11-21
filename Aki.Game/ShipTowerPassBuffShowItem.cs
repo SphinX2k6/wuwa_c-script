@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020029BC RID: 10684
+// Token: 0x02001F37 RID: 7991
 public class ShipTowerPassBuffShowItem : GridProxyAbstract<TItem>
 {
-	// Token: 0x0601626A RID: 90730 RVA: 0x0059A0E4 File Offset: 0x005982E4
+	// Token: 0x06013C70 RID: 81008 RVA: 0x005C5070 File Offset: 0x005C3270
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,13 +19,13 @@ public class ShipTowerPassBuffShowItem : GridProxyAbstract<TItem>
 		};
 	}
 
-	// Token: 0x0601626B RID: 90731 RVA: 0x0059A13E File Offset: 0x0059833E
+	// Token: 0x06013C71 RID: 81009 RVA: 0x005C50CA File Offset: 0x005C32CA
 	public override void Refresh(TItem data, bool isSelected, int gridIndex)
 	{
 		this.Refresh(data);
 	}
 
-	// Token: 0x0601626C RID: 90732 RVA: 0x0059A148 File Offset: 0x00598348
+	// Token: 0x06013C72 RID: 81010 RVA: 0x005C50D4 File Offset: 0x005C32D4
 	public void Refresh(TItem data)
 	{
 		this.ItemData = data;
@@ -55,19 +55,19 @@ public class ShipTowerPassBuffShowItem : GridProxyAbstract<TItem>
 		base.SetTextureByPath(value.Icon ?? "", base.GetTexture(0), null, null);
 	}
 
-	// Token: 0x0400A4FE RID: 42238
+	// Token: 0x0400A8E8 RID: 43240
 	private TItem ItemData;
 
-	// Token: 0x02008FD5 RID: 36821
+	// Token: 0x0200821D RID: 33309
 	private static class EChildType
 	{
-		// Token: 0x0402E94E RID: 190798
+		// Token: 0x0402A04B RID: 172107
 		public const int TextureIcon = 0;
 
-		// Token: 0x0402E94F RID: 190799
+		// Token: 0x0402A04C RID: 172108
 		public const int TxtName = 1;
 
-		// Token: 0x0402E950 RID: 190800
+		// Token: 0x0402A04D RID: 172109
 		public const int TxtDesc = 2;
 	}
 }

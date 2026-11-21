@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FB0 RID: 16304
+	// Token: 0x020043F1 RID: 17393
 	public struct IPosRollbackConfig : IFlatbufferObject
 	{
-		// Token: 0x170071D9 RID: 29145
-		// (get) Token: 0x060174E2 RID: 95458 RVA: 0x0035C28A File Offset: 0x0035A48A
+		// Token: 0x170077D7 RID: 30679
+		// (get) Token: 0x06018B71 RID: 101233 RVA: 0x00385EA2 File Offset: 0x003840A2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060174E3 RID: 95459 RVA: 0x0035C297 File Offset: 0x0035A497
+		// Token: 0x06018B72 RID: 101234 RVA: 0x00385EAF File Offset: 0x003840AF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060174E4 RID: 95460 RVA: 0x0035C2A0 File Offset: 0x0035A4A0
+		// Token: 0x06018B73 RID: 101235 RVA: 0x00385EB8 File Offset: 0x003840B8
 		public static IPosRollbackConfig GetRootAsIPosRollbackConfig(ByteBuffer _bb)
 		{
 			return IPosRollbackConfig.GetRootAsIPosRollbackConfig(_bb, default(IPosRollbackConfig));
 		}
 
-		// Token: 0x060174E5 RID: 95461 RVA: 0x0035C2BC File Offset: 0x0035A4BC
+		// Token: 0x06018B74 RID: 101236 RVA: 0x00385ED4 File Offset: 0x003840D4
 		public static IPosRollbackConfig GetRootAsIPosRollbackConfig(ByteBuffer _bb, IPosRollbackConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060174E6 RID: 95462 RVA: 0x0035C2D9 File Offset: 0x0035A4D9
+		// Token: 0x06018B75 RID: 101237 RVA: 0x00385EF1 File Offset: 0x003840F1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060174E7 RID: 95463 RVA: 0x0035C2E8 File Offset: 0x0035A4E8
+		// Token: 0x06018B76 RID: 101238 RVA: 0x00385F00 File Offset: 0x00384100
 		public IPosRollbackConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170071DA RID: 29146
-		// (get) Token: 0x060174E8 RID: 95464 RVA: 0x0035C2F8 File Offset: 0x0035A4F8
+		// Token: 0x170077D8 RID: 30680
+		// (get) Token: 0x06018B77 RID: 101239 RVA: 0x00385F10 File Offset: 0x00384110
 		public int RangeEntityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170071DB RID: 29147
-		// (get) Token: 0x060174E9 RID: 95465 RVA: 0x0035C334 File Offset: 0x0035A534
+		// Token: 0x170077D9 RID: 30681
+		// (get) Token: 0x06018B78 RID: 101240 RVA: 0x00385F4C File Offset: 0x0038414C
 		public int PositionEntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170071DC RID: 29148
-		// (get) Token: 0x060174EA RID: 95466 RVA: 0x0035C370 File Offset: 0x0035A570
+		// Token: 0x170077DA RID: 30682
+		// (get) Token: 0x06018B79 RID: 101241 RVA: 0x00385F88 File Offset: 0x00384188
 		public bool GravityFlip
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170071DD RID: 29149
-		// (get) Token: 0x060174EB RID: 95467 RVA: 0x0035C3B0 File Offset: 0x0035A5B0
+		// Token: 0x170077DB RID: 30683
+		// (get) Token: 0x06018B7A RID: 101242 RVA: 0x00385FC8 File Offset: 0x003841C8
 		public byte NullMask
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060174EC RID: 95468 RVA: 0x0035C3ED File Offset: 0x0035A5ED
+		// Token: 0x06018B7B RID: 101243 RVA: 0x00386005 File Offset: 0x00384205
 		public static Offset<IPosRollbackConfig> CreateIPosRollbackConfig(FlatBufferBuilder builder, int RangeEntityId = 0, int PositionEntityId = 0, bool GravityFlip = false, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -114,43 +114,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPosRollbackConfig.EndIPosRollbackConfig(builder);
 		}
 
-		// Token: 0x060174ED RID: 95469 RVA: 0x0035C419 File Offset: 0x0035A619
+		// Token: 0x06018B7C RID: 101244 RVA: 0x00386031 File Offset: 0x00384231
 		public static void StartIPosRollbackConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060174EE RID: 95470 RVA: 0x0035C422 File Offset: 0x0035A622
+		// Token: 0x06018B7D RID: 101245 RVA: 0x0038603A File Offset: 0x0038423A
 		public static void AddRangeEntityId(FlatBufferBuilder builder, int rangeEntityId)
 		{
 			builder.AddInt(0, rangeEntityId, 0);
 		}
 
-		// Token: 0x060174EF RID: 95471 RVA: 0x0035C42D File Offset: 0x0035A62D
+		// Token: 0x06018B7E RID: 101246 RVA: 0x00386045 File Offset: 0x00384245
 		public static void AddPositionEntityId(FlatBufferBuilder builder, int positionEntityId)
 		{
 			builder.AddInt(1, positionEntityId, 0);
 		}
 
-		// Token: 0x060174F0 RID: 95472 RVA: 0x0035C438 File Offset: 0x0035A638
+		// Token: 0x06018B7F RID: 101247 RVA: 0x00386050 File Offset: 0x00384250
 		public static void AddGravityFlip(FlatBufferBuilder builder, bool gravityFlip)
 		{
 			builder.AddBool(2, gravityFlip, false);
 		}
 
-		// Token: 0x060174F1 RID: 95473 RVA: 0x0035C443 File Offset: 0x0035A643
+		// Token: 0x06018B80 RID: 101248 RVA: 0x0038605B File Offset: 0x0038425B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x060174F2 RID: 95474 RVA: 0x0035C44E File Offset: 0x0035A64E
+		// Token: 0x06018B81 RID: 101249 RVA: 0x00386066 File Offset: 0x00384266
 		public static Offset<IPosRollbackConfig> EndIPosRollbackConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IPosRollbackConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060174F3 RID: 95475 RVA: 0x0035C45C File Offset: 0x0035A65C
+		// Token: 0x06018B82 RID: 101250 RVA: 0x00386074 File Offset: 0x00384274
 		public IPosRollbackConfigT UnPack()
 		{
 			IPosRollbackConfigT posRollbackConfigT = new IPosRollbackConfigT();
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return posRollbackConfigT;
 		}
 
-		// Token: 0x060174F4 RID: 95476 RVA: 0x0035C477 File Offset: 0x0035A677
+		// Token: 0x06018B83 RID: 101251 RVA: 0x0038608F File Offset: 0x0038428F
 		public void UnPackTo(IPosRollbackConfigT _o)
 		{
 			_o.RangeEntityId = this.RangeEntityId;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060174F5 RID: 95477 RVA: 0x0035C4AC File Offset: 0x0035A6AC
+		// Token: 0x06018B84 RID: 101252 RVA: 0x003860C4 File Offset: 0x003842C4
 		public static Offset<IPosRollbackConfig> Pack(FlatBufferBuilder builder, IPosRollbackConfigT _o)
 		{
 			if (_o == null)
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPosRollbackConfig.CreateIPosRollbackConfig(builder, _o.RangeEntityId, _o.PositionEntityId, _o.GravityFlip, _o.NullMask);
 		}
 
-		// Token: 0x0400BA1A RID: 47642
+		// Token: 0x0400C3FF RID: 50175
 		private Table __p;
 	}
 }

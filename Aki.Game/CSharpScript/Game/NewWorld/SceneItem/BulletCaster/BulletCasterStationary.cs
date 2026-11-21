@@ -8,22 +8,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 {
-	// Token: 0x02007230 RID: 29232
+	// Token: 0x020062E5 RID: 25317
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BulletCasterStationary : BulletCasterCommon
 	{
-		// Token: 0x06047A56 RID: 293462 RVA: 0x0125502F File Offset: 0x0125322F
+		// Token: 0x0603D3B7 RID: 250807 RVA: 0x011ADBC7 File Offset: 0x011ABDC7
 		public BulletCasterStationary(BulletCasterInitParam bulletCasterInitParam) : base(bulletCasterInitParam)
 		{
 		}
 
-		// Token: 0x06047A57 RID: 293463 RVA: 0x01255038 File Offset: 0x01253238
+		// Token: 0x0603D3B8 RID: 250808 RVA: 0x011ADBD0 File Offset: 0x011ABDD0
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06047A58 RID: 293464 RVA: 0x0125503C File Offset: 0x0125323C
+		// Token: 0x0603D3B9 RID: 250809 RVA: 0x011ADBD4 File Offset: 0x011ABDD4
 		protected unsafe override void SetEffectParam(int effectHandleId)
 		{
 			EffectParameterNiagara effectParameterNiagara = new EffectParameterNiagara();
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			EffectSystem.Instance.SetEffectParameterNiagara(effectHandleId, parameter);
 		}
 
-		// Token: 0x06047A59 RID: 293465 RVA: 0x012550AC File Offset: 0x012532AC
+		// Token: 0x0603D3BA RID: 250810 RVA: 0x011ADC44 File Offset: 0x011ABE44
 		protected override void StartImmediately()
 		{
 			int warningEffectHandle = base.PlayWarningEffect();
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			this.SetTimeDilationRespectOwnerEntity();
 		}
 
-		// Token: 0x06047A5A RID: 293466 RVA: 0x01255150 File Offset: 0x01253350
+		// Token: 0x0603D3BB RID: 250811 RVA: 0x011ADCE8 File Offset: 0x011ABEE8
 		private unsafe int FireBullet()
 		{
 			FTransformDouble actorTransform = this.OwnerEntity.GetComponent<BaseActorComponent>().ActorTransform;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			return bulletId;
 		}
 
-		// Token: 0x04025B1F RID: 154399
+		// Token: 0x0402078E RID: 133006
 		private const string WARNING_EFFECT_USER_PARAM_NAME = "radius";
 	}
 }

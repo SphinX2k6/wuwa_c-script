@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200110C RID: 4364
+	// Token: 0x02001146 RID: 4422
 	[NetMessage(EMessageId.RoverRogueLootChangeNotify)]
 	public sealed class RoverRogueLootChangeNotify : IMessage<RoverRogueLootChangeNotify>, IMessage, IEquatable<RoverRogueLootChangeNotify>, IDeepCloneable<RoverRogueLootChangeNotify>, IBufferMessage
 	{
-		// Token: 0x0601746C RID: 95340 RVA: 0x0036140F File Offset: 0x0035F60F
+		// Token: 0x06017A0D RID: 96781 RVA: 0x0037075B File Offset: 0x0036E95B
 		[NullableContext(1)]
 		public static RoverRogueLootChangeNotify Create()
 		{
 			return new RoverRogueLootChangeNotify();
 		}
 
-		// Token: 0x17004E0F RID: 19983
-		// (get) Token: 0x0601746D RID: 95341 RVA: 0x00361416 File Offset: 0x0035F616
+		// Token: 0x17004F7B RID: 20347
+		// (get) Token: 0x06017A0E RID: 96782 RVA: 0x00370762 File Offset: 0x0036E962
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004E10 RID: 19984
-		// (get) Token: 0x0601746E RID: 95342 RVA: 0x00361419 File Offset: 0x0035F619
+		// Token: 0x17004F7C RID: 20348
+		// (get) Token: 0x06017A0F RID: 96783 RVA: 0x00370765 File Offset: 0x0036E965
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601746F RID: 95343 RVA: 0x00361420 File Offset: 0x0035F620
+		// Token: 0x06017A10 RID: 96784 RVA: 0x0037076C File Offset: 0x0036E96C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoverRogueLootChangeNotify()
 		{
 		}
 
-		// Token: 0x06017470 RID: 95344 RVA: 0x00361433 File Offset: 0x0035F633
+		// Token: 0x06017A11 RID: 96785 RVA: 0x0037077F File Offset: 0x0036E97F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoverRogueLootChangeNotify(RoverRogueLootChangeNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06017471 RID: 95345 RVA: 0x00361469 File Offset: 0x0035F669
+		// Token: 0x06017A12 RID: 96786 RVA: 0x003707B5 File Offset: 0x0036E9B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoverRogueLootChangeNotify Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol
 			return new RoverRogueLootChangeNotify(this);
 		}
 
-		// Token: 0x17004E11 RID: 19985
-		// (get) Token: 0x06017472 RID: 95346 RVA: 0x00361471 File Offset: 0x0035F671
+		// Token: 0x17004F7D RID: 20349
+		// (get) Token: 0x06017A13 RID: 96787 RVA: 0x003707BD File Offset: 0x0036E9BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RoverRogueGainEntry> LootData
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004E12 RID: 19986
-		// (get) Token: 0x06017473 RID: 95347 RVA: 0x00361479 File Offset: 0x0035F679
-		// (set) Token: 0x06017474 RID: 95348 RVA: 0x00361481 File Offset: 0x0035F681
+		// Token: 0x17004F7E RID: 20350
+		// (get) Token: 0x06017A14 RID: 96788 RVA: 0x003707C5 File Offset: 0x0036E9C5
+		// (set) Token: 0x06017A15 RID: 96789 RVA: 0x003707CD File Offset: 0x0036E9CD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool EnableUse
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017475 RID: 95349 RVA: 0x0036148A File Offset: 0x0035F68A
+		// Token: 0x06017A16 RID: 96790 RVA: 0x003707D6 File Offset: 0x0036E9D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RoverRogueLootChangeNotify);
 		}
 
-		// Token: 0x06017476 RID: 95350 RVA: 0x00361498 File Offset: 0x0035F698
+		// Token: 0x06017A17 RID: 96791 RVA: 0x003707E4 File Offset: 0x0036E9E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RoverRogueLootChangeNotify other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.lootData_.Equals(other.lootData_) && this.EnableUse == other.EnableUse && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06017477 RID: 95351 RVA: 0x003614E8 File Offset: 0x0035F6E8
+		// Token: 0x06017A18 RID: 96792 RVA: 0x00370834 File Offset: 0x0036EA34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017478 RID: 95352 RVA: 0x00361535 File Offset: 0x0035F735
+		// Token: 0x06017A19 RID: 96793 RVA: 0x00370881 File Offset: 0x0036EA81
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06017479 RID: 95353 RVA: 0x00361542 File Offset: 0x0035F742
+		// Token: 0x06017A1A RID: 96794 RVA: 0x0037088E File Offset: 0x0036EA8E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,14 +147,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601747A RID: 95354 RVA: 0x0036154C File Offset: 0x0035F74C
+		// Token: 0x06017A1B RID: 96795 RVA: 0x00370898 File Offset: 0x0036EA98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.EnableUse)
 			{
-				output.WriteRawTag(24);
+				output.WriteRawTag(16);
 				output.WriteBool(this.EnableUse);
 			}
 			this.lootData_.WriteTo(ref output, RoverRogueLootChangeNotify._repeated_lootData_codec);
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601747B RID: 95355 RVA: 0x0036159C File Offset: 0x0035F79C
+		// Token: 0x06017A1C RID: 96796 RVA: 0x003708E8 File Offset: 0x0036EAE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601747C RID: 95356 RVA: 0x003615E4 File Offset: 0x0035F7E4
+		// Token: 0x06017A1D RID: 96797 RVA: 0x00370930 File Offset: 0x0036EB30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RoverRogueLootChangeNotify other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601747D RID: 95357 RVA: 0x00361631 File Offset: 0x0035F831
+		// Token: 0x06017A1E RID: 96798 RVA: 0x0037097D File Offset: 0x0036EB7D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601747E RID: 95358 RVA: 0x0036163C File Offset: 0x0035F83C
+		// Token: 0x06017A1F RID: 96799 RVA: 0x00370988 File Offset: 0x0036EB88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,9 +219,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 24U)
+				if (num != 16U)
 				{
-					if (num != 58U)
+					if (num != 42U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -237,22 +237,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008A7B RID: 35451
+		// Token: 0x04008D0E RID: 36110
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008A7C RID: 35452
-		public const int LootDataFieldNumber = 7;
+		// Token: 0x04008D0F RID: 36111
+		public const int LootDataFieldNumber = 5;
 
-		// Token: 0x04008A7D RID: 35453
-		private static readonly FieldCodec<RoverRogueGainEntry> _repeated_lootData_codec = FieldCodec.ForMessage<RoverRogueGainEntry>(58U, RoverRogueGainEntry.Parser);
+		// Token: 0x04008D10 RID: 36112
+		private static readonly FieldCodec<RoverRogueGainEntry> _repeated_lootData_codec = FieldCodec.ForMessage<RoverRogueGainEntry>(42U, RoverRogueGainEntry.Parser);
 
-		// Token: 0x04008A7E RID: 35454
+		// Token: 0x04008D11 RID: 36113
 		private readonly RepeatedField<RoverRogueGainEntry> lootData_ = new RepeatedField<RoverRogueGainEntry>();
 
-		// Token: 0x04008A7F RID: 35455
-		public const int EnableUseFieldNumber = 3;
+		// Token: 0x04008D12 RID: 36114
+		public const int EnableUseFieldNumber = 2;
 
-		// Token: 0x04008A80 RID: 35456
+		// Token: 0x04008D13 RID: 36115
 		private bool enableUse_;
 	}
 }

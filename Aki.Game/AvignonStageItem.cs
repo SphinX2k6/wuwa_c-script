@@ -7,10 +7,10 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001113 RID: 4371
+// Token: 0x020005C7 RID: 1479
 public class AvignonStageItem : UiPanelBase
 {
-	// Token: 0x0600724F RID: 29263 RVA: 0x00176244 File Offset: 0x00174444
+	// Token: 0x060045E5 RID: 17893 RVA: 0x0017EC00 File Offset: 0x0017CE00
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -45,7 +45,7 @@ public class AvignonStageItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007250 RID: 29264 RVA: 0x001763D4 File Offset: 0x001745D4
+	// Token: 0x060045E6 RID: 17894 RVA: 0x0017ED90 File Offset: 0x0017CF90
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.RefreshProgressAndRedDot));
@@ -67,13 +67,13 @@ public class AvignonStageItem : UiPanelBase
 		this.RefreshUI();
 	}
 
-	// Token: 0x06007251 RID: 29265 RVA: 0x001764F1 File Offset: 0x001746F1
+	// Token: 0x060045E7 RID: 17895 RVA: 0x0017EEAD File Offset: 0x0017D0AD
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new <>f__AnonymousDelegate2<int>(this.RefreshProgressAndRedDot));
 	}
 
-	// Token: 0x06007252 RID: 29266 RVA: 0x00176510 File Offset: 0x00174710
+	// Token: 0x060045E8 RID: 17896 RVA: 0x0017EECC File Offset: 0x0017D0CC
 	private void RefreshUI()
 	{
 		EStageState stageState = this.AvignonStageInfo.StageState;
@@ -86,7 +86,7 @@ public class AvignonStageItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007253 RID: 29267 RVA: 0x0017657C File Offset: 0x0017477C
+	// Token: 0x060045E9 RID: 17897 RVA: 0x0017EF38 File Offset: 0x0017D138
 	private void RefreshProgressAndRedDot(int i = 0)
 	{
 		this.AvignonStageInfo = AvignonModel.Instance.GetAvignonStageInfo(this.StageId);
@@ -102,7 +102,7 @@ public class AvignonStageItem : UiPanelBase
 		base.GetItem(8).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06007254 RID: 29268 RVA: 0x00176624 File Offset: 0x00174824
+	// Token: 0x060045EA RID: 17898 RVA: 0x0017EFE0 File Offset: 0x0017D1E0
 	private void OnClicked()
 	{
 		if (this.AvignonStageInfo == null)
@@ -117,44 +117,44 @@ public class AvignonStageItem : UiPanelBase
 		ScrollingTipsController.Instance.ShowTipsByTextId(this.AvignonStageInfo.GetLockConditionText(), Array.Empty<object>());
 	}
 
-	// Token: 0x040034F3 RID: 13555
+	// Token: 0x0400358C RID: 13708
 	private int StageId;
 
-	// Token: 0x040034F4 RID: 13556
+	// Token: 0x0400358D RID: 13709
 	private AvignonStage? AvignonStageConf;
 
-	// Token: 0x040034F5 RID: 13557
+	// Token: 0x0400358E RID: 13710
 	[Nullable(2)]
 	private AvignonStageInfo AvignonStageInfo;
 
-	// Token: 0x020076D6 RID: 30422
+	// Token: 0x0200686A RID: 26730
 	private class EComponents
 	{
-		// Token: 0x04027370 RID: 160624
+		// Token: 0x040226B9 RID: 140985
 		public const int BtnRoot = 0;
 
-		// Token: 0x04027371 RID: 160625
+		// Token: 0x040226BA RID: 140986
 		public const int ItemLock = 1;
 
-		// Token: 0x04027372 RID: 160626
+		// Token: 0x040226BB RID: 140987
 		public const int TxtUnlockCondition = 2;
 
-		// Token: 0x04027373 RID: 160627
+		// Token: 0x040226BC RID: 140988
 		public const int TxtStageName = 3;
 
-		// Token: 0x04027374 RID: 160628
+		// Token: 0x040226BD RID: 140989
 		public const int TxtFinishPercent = 4;
 
-		// Token: 0x04027375 RID: 160629
+		// Token: 0x040226BE RID: 140990
 		public const int SpriteFinish = 5;
 
-		// Token: 0x04027376 RID: 160630
+		// Token: 0x040226BF RID: 140991
 		public const int TextureIcon = 6;
 
-		// Token: 0x04027377 RID: 160631
+		// Token: 0x040226C0 RID: 140992
 		public const int SpriteRoma = 7;
 
-		// Token: 0x04027378 RID: 160632
+		// Token: 0x040226C1 RID: 140993
 		public const int ItemRedDot = 8;
 	}
 }

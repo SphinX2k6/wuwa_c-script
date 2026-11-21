@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F61 RID: 3937
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200108B RID: 4235
 	public class IEntityStateCondition
 	{
-		// Token: 0x06005780 RID: 22400 RVA: 0x000D5E98 File Offset: 0x000D4098
+		// Token: 0x06005D54 RID: 23892 RVA: 0x000E2904 File Offset: 0x000E0B04
 		private IEntityStateCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005781 RID: 22401 RVA: 0x000D5ED0 File Offset: 0x000D40D0
+		// Token: 0x06005D55 RID: 23893 RVA: 0x000E293C File Offset: 0x000E0B3C
 		public static IEntityStateCondition Create([Nullable(2)] IEntityStateCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005782 RID: 22402 RVA: 0x000D5EE3 File Offset: 0x000D40E3
+		// Token: 0x06005D56 RID: 23894 RVA: 0x000E294F File Offset: 0x000E0B4F
 		public static IEntityStateCondition CreateFromSetValue([Nullable(2)] IEntityStateCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005783 RID: 22403 RVA: 0x000D5EF6 File Offset: 0x000D40F6
+		// Token: 0x06005D57 RID: 23895 RVA: 0x000E2962 File Offset: 0x000E0B62
 		public IEntityStateCondition_SetValue ToSetValue()
 		{
 			return new IEntityStateCondition_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D30 RID: 7472
-		// (get) Token: 0x06005784 RID: 22404 RVA: 0x000D5F15 File Offset: 0x000D4115
-		// (set) Token: 0x06005785 RID: 22405 RVA: 0x000D5F40 File Offset: 0x000D4140
+		// Token: 0x17001ED6 RID: 7894
+		// (get) Token: 0x06005D58 RID: 23896 RVA: 0x000E2981 File Offset: 0x000E0B81
+		// (set) Token: 0x06005D59 RID: 23897 RVA: 0x000E29AC File Offset: 0x000E0BAC
 		public virtual int EntityId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D31 RID: 7473
-		// (get) Token: 0x06005786 RID: 22406 RVA: 0x000D5F4E File Offset: 0x000D414E
-		// (set) Token: 0x06005787 RID: 22407 RVA: 0x000D5F79 File Offset: 0x000D4179
+		// Token: 0x17001ED7 RID: 7895
+		// (get) Token: 0x06005D5A RID: 23898 RVA: 0x000E29BA File Offset: 0x000E0BBA
+		// (set) Token: 0x06005D5B RID: 23899 RVA: 0x000E29E5 File Offset: 0x000E0BE5
 		public virtual string State
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040034E9 RID: 13545
+		// Token: 0x0400381A RID: 14362
 		[Nullable(2)]
 		protected IEntityStateCondition FbInstance;
 
-		// Token: 0x040034EA RID: 13546
+		// Token: 0x0400381B RID: 14363
 		[Nullable(2)]
 		protected IEntityStateCondition_SetValue PocoInterface;
 	}

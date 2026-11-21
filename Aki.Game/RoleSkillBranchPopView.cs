@@ -12,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020028A2 RID: 10402
+// Token: 0x02001E1D RID: 7709
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleSkillBranchPopView : UiViewBase
 {
-	// Token: 0x06015779 RID: 87929 RVA: 0x0056A12E File Offset: 0x0056832E
+	// Token: 0x06013179 RID: 78201 RVA: 0x00594F76 File Offset: 0x00593176
 	public RoleSkillBranchPopView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601577A RID: 87930 RVA: 0x0056A150 File Offset: 0x00568350
+	// Token: 0x0601317A RID: 78202 RVA: 0x00594F98 File Offset: 0x00593198
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -46,7 +46,7 @@ public class RoleSkillBranchPopView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601577B RID: 87931 RVA: 0x0056A260 File Offset: 0x00568460
+	// Token: 0x0601317B RID: 78203 RVA: 0x005950A8 File Offset: 0x005932A8
 	protected override void OnStart()
 	{
 		this.RoleLayout = new GenericLayout<RoleSkillBranchPopView.RoleSkillBranchPopViewRoleItem, RoleSkillBranchPopView.RoleData>(base.GetHorizontalLayout(1), new Func<RoleSkillBranchPopView.RoleSkillBranchPopViewRoleItem>(this.CreateRoleItem), base.GetItem(2).GetOwner() as AUIBaseActor, false, true);
@@ -96,13 +96,13 @@ public class RoleSkillBranchPopView : UiViewBase
 		base.GetHorizontalLayout(4).RootUIComp.Get().SetUIActive(this.TabIndex.Count > 1);
 	}
 
-	// Token: 0x0601577C RID: 87932 RVA: 0x0056A472 File Offset: 0x00568672
+	// Token: 0x0601317C RID: 78204 RVA: 0x005952BA File Offset: 0x005934BA
 	private RoleSkillBranchPopView.RoleSkillBranchPopViewRoleItem CreateRoleItem()
 	{
 		return new RoleSkillBranchPopView.RoleSkillBranchPopViewRoleItem();
 	}
 
-	// Token: 0x0601577D RID: 87933 RVA: 0x0056A479 File Offset: 0x00568679
+	// Token: 0x0601317D RID: 78205 RVA: 0x005952C1 File Offset: 0x005934C1
 	private RoleSkillBranchPopView.TeamTabItem CreateTeamTabItem()
 	{
 		return new RoleSkillBranchPopView.TeamTabItem
@@ -111,13 +111,13 @@ public class RoleSkillBranchPopView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601577E RID: 87934 RVA: 0x0056A492 File Offset: 0x00568692
+	// Token: 0x0601317E RID: 78206 RVA: 0x005952DA File Offset: 0x005934DA
 	private void ClickTabHandler(int index)
 	{
 		this.SelectTab(index, true);
 	}
 
-	// Token: 0x0601577F RID: 87935 RVA: 0x0056A49C File Offset: 0x0056869C
+	// Token: 0x0601317F RID: 78207 RVA: 0x005952E4 File Offset: 0x005934E4
 	private void SelectTab(int index, bool needRefresh = true)
 	{
 		for (int i = 0; i < this.TabIndex.Count; i++)
@@ -140,14 +140,14 @@ public class RoleSkillBranchPopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400A002 RID: 40962
+	// Token: 0x0400A3EB RID: 41963
 	protected static readonly IReadOnlyList<string> teamTabTextKey = new List<string>
 	{
 		"GhostShipTeamName_Text1",
 		"GhostShipTeamName_Text2"
 	};
 
-	// Token: 0x0400A003 RID: 40963
+	// Token: 0x0400A3EC RID: 41964
 	[Nullable(new byte[]
 	{
 		2,
@@ -156,7 +156,7 @@ public class RoleSkillBranchPopView : UiViewBase
 	})]
 	private GenericLayout<RoleSkillBranchPopView.RoleSkillBranchPopViewRoleItem, RoleSkillBranchPopView.RoleData> RoleLayout;
 
-	// Token: 0x0400A004 RID: 40964
+	// Token: 0x0400A3ED RID: 41965
 	[Nullable(new byte[]
 	{
 		2,
@@ -164,48 +164,48 @@ public class RoleSkillBranchPopView : UiViewBase
 	})]
 	private GenericLayout<RoleSkillBranchPopView.TeamTabItem, int> TabLayout;
 
-	// Token: 0x0400A005 RID: 40965
+	// Token: 0x0400A3EE RID: 41966
 	private List<List<RoleSkillBranchPopView.RoleData>> TabData = new List<List<RoleSkillBranchPopView.RoleData>>();
 
-	// Token: 0x0400A006 RID: 40966
+	// Token: 0x0400A3EF RID: 41967
 	private List<int> TabIndex = new List<int>();
 
-	// Token: 0x02008EA7 RID: 36519
+	// Token: 0x020080EE RID: 33006
 	[NullableContext(0)]
 	public class RoleData
 	{
-		// Token: 0x1700A091 RID: 41105
-		// (get) Token: 0x0604B83F RID: 309311 RVA: 0x013DA353 File Offset: 0x013D8553
-		// (set) Token: 0x0604B840 RID: 309312 RVA: 0x013DA35B File Offset: 0x013D855B
+		// Token: 0x1700782F RID: 30767
+		// (get) Token: 0x06041D40 RID: 269632 RVA: 0x013855C7 File Offset: 0x013837C7
+		// (set) Token: 0x06041D41 RID: 269633 RVA: 0x013855CF File Offset: 0x013837CF
 		public int RoleId { get; set; }
 
-		// Token: 0x1700A092 RID: 41106
-		// (get) Token: 0x0604B841 RID: 309313 RVA: 0x013DA364 File Offset: 0x013D8564
-		// (set) Token: 0x0604B842 RID: 309314 RVA: 0x013DA36C File Offset: 0x013D856C
+		// Token: 0x17007830 RID: 30768
+		// (get) Token: 0x06041D42 RID: 269634 RVA: 0x013855D8 File Offset: 0x013837D8
+		// (set) Token: 0x06041D43 RID: 269635 RVA: 0x013855E0 File Offset: 0x013837E0
 		public int SkillBranchIndex { get; set; } = -1;
 	}
 
-	// Token: 0x02008EA8 RID: 36520
+	// Token: 0x020080EF RID: 33007
 	[NullableContext(0)]
 	private enum EChild
 	{
-		// Token: 0x0402E428 RID: 189480
+		// Token: 0x04029B25 RID: 170789
 		TextTitle,
-		// Token: 0x0402E429 RID: 189481
+		// Token: 0x04029B26 RID: 170790
 		PanelRoleList,
-		// Token: 0x0402E42A RID: 189482
+		// Token: 0x04029B27 RID: 170791
 		ItemRole,
-		// Token: 0x0402E42B RID: 189483
+		// Token: 0x04029B28 RID: 170792
 		ItemTextSingleTeam,
-		// Token: 0x0402E42C RID: 189484
+		// Token: 0x04029B29 RID: 170793
 		PanelTeamTab,
-		// Token: 0x0402E42D RID: 189485
+		// Token: 0x04029B2A RID: 170794
 		ItemTeamTab,
-		// Token: 0x0402E42E RID: 189486
+		// Token: 0x04029B2B RID: 170795
 		ItemTextMultiTeam
 	}
 
-	// Token: 0x02008EA9 RID: 36521
+	// Token: 0x020080F0 RID: 33008
 	[Nullable(new byte[]
 	{
 		0,
@@ -213,7 +213,7 @@ public class RoleSkillBranchPopView : UiViewBase
 	})]
 	public class RoleSkillBranchPopViewRoleItem : GridProxyAbstract<RoleSkillBranchPopView.RoleData>
 	{
-		// Token: 0x0604B844 RID: 309316 RVA: 0x013DA384 File Offset: 0x013D8584
+		// Token: 0x06041D45 RID: 269637 RVA: 0x013855F8 File Offset: 0x013837F8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -239,7 +239,7 @@ public class RoleSkillBranchPopView : UiViewBase
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604B845 RID: 309317 RVA: 0x013DA4B4 File Offset: 0x013D86B4
+		// Token: 0x06041D46 RID: 269638 RVA: 0x01385728 File Offset: 0x01383928
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleSkillBranchPopView.RoleSkillBranchPopViewRoleItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -250,7 +250,7 @@ public class RoleSkillBranchPopView : UiViewBase
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604B846 RID: 309318 RVA: 0x013DA4F8 File Offset: 0x013D86F8
+		// Token: 0x06041D47 RID: 269639 RVA: 0x0138576C File Offset: 0x0138396C
 		public override void Refresh(RoleSkillBranchPopView.RoleData data, bool isSelected, int gridIndex)
 		{
 			this.RoleId = data.RoleId;
@@ -312,7 +312,7 @@ public class RoleSkillBranchPopView : UiViewBase
 			LguiUtil.Instance.SetLocalTextNew(text, skillBranchConfigById.Value.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x0604B847 RID: 309319 RVA: 0x013DA6B4 File Offset: 0x013D88B4
+		// Token: 0x06041D48 RID: 269640 RVA: 0x01385928 File Offset: 0x01383B28
 		private string RefreshSkillBranchIconHandler(int index)
 		{
 			int roleBranchIdByIndex = RoleModel.Instance.GetRoleBranchIdByIndex(this.RoleId, index);
@@ -324,7 +324,7 @@ public class RoleSkillBranchPopView : UiViewBase
 			return skillBranchConfigById.Value.Icon;
 		}
 
-		// Token: 0x0604B848 RID: 309320 RVA: 0x013DA700 File Offset: 0x013D8900
+		// Token: 0x06041D49 RID: 269641 RVA: 0x01385974 File Offset: 0x01383B74
 		private void SwitchSkillBranchHandler(int branchIndex)
 		{
 			int roleBranchIdByIndex = RoleModel.Instance.GetRoleBranchIdByIndex(this.RoleId, branchIndex);
@@ -338,41 +338,41 @@ public class RoleSkillBranchPopView : UiViewBase
 			LguiUtil.Instance.SetLocalTextNew(text, skillBranchConfigById.Value.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x0402E42F RID: 189487
+		// Token: 0x04029B2C RID: 170796
 		private int RoleId;
 
-		// Token: 0x0402E430 RID: 189488
+		// Token: 0x04029B2D RID: 170797
 		[Nullable(2)]
 		private RoleSkillBranchPopView.SkillBranchItem SkillBranchItem;
 
-		// Token: 0x0200D055 RID: 53333
+		// Token: 0x0200BC33 RID: 48179
 		[NullableContext(0)]
 		private enum EChild
 		{
-			// Token: 0x0403E93E RID: 256318
+			// Token: 0x04039D86 RID: 236934
 			ItemBtn,
-			// Token: 0x0403E93F RID: 256319
+			// Token: 0x04039D87 RID: 236935
 			RoleItem,
-			// Token: 0x0403E940 RID: 256320
+			// Token: 0x04039D88 RID: 236936
 			RoleSpine,
-			// Token: 0x0403E941 RID: 256321
+			// Token: 0x04039D89 RID: 236937
 			TextBranchName,
-			// Token: 0x0403E942 RID: 256322
+			// Token: 0x04039D8A RID: 236938
 			PanelSkillBranch,
-			// Token: 0x0403E943 RID: 256323
+			// Token: 0x04039D8B RID: 236939
 			PanelLock,
-			// Token: 0x0403E944 RID: 256324
+			// Token: 0x04039D8C RID: 236940
 			TextLock,
-			// Token: 0x0403E945 RID: 256325
+			// Token: 0x04039D8D RID: 236941
 			PanelSkillBranchItem
 		}
 	}
 
-	// Token: 0x02008EAA RID: 36522
+	// Token: 0x020080F1 RID: 33009
 	[NullableContext(0)]
 	public class TeamTabItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0604B84A RID: 309322 RVA: 0x013DA778 File Offset: 0x013D8978
+		// Token: 0x06041D4B RID: 269643 RVA: 0x013859EC File Offset: 0x01383BEC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -393,7 +393,7 @@ public class RoleSkillBranchPopView : UiViewBase
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604B84B RID: 309323 RVA: 0x013DA81E File Offset: 0x013D8A1E
+		// Token: 0x06041D4C RID: 269644 RVA: 0x01385A92 File Offset: 0x01383C92
 		private void OnToggleStateChange(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -408,13 +408,13 @@ public class RoleSkillBranchPopView : UiViewBase
 			selectHandler(base.GridIndex);
 		}
 
-		// Token: 0x0604B84C RID: 309324 RVA: 0x013DA83D File Offset: 0x013D8A3D
+		// Token: 0x06041D4D RID: 269645 RVA: 0x01385AB1 File Offset: 0x01383CB1
 		public void SetIsSelected(bool isSelected)
 		{
 			base.GetExtendToggle(0).SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0604B84D RID: 309325 RVA: 0x013DA858 File Offset: 0x013D8A58
+		// Token: 0x06041D4E RID: 269646 RVA: 0x01385ACC File Offset: 0x01383CCC
 		public override void Refresh(int index, bool isSelected, int gridIndex)
 		{
 			UUIText text = base.GetText(1);
@@ -426,25 +426,25 @@ public class RoleSkillBranchPopView : UiViewBase
 			LguiUtil.Instance.SetLocalTextNew(text, text2, Array.Empty<object>());
 		}
 
-		// Token: 0x0402E431 RID: 189489
+		// Token: 0x04029B2E RID: 170798
 		[Nullable(2)]
 		public Action<int> SelectHandler;
 
-		// Token: 0x0200D058 RID: 53336
+		// Token: 0x0200BC36 RID: 48182
 		private enum EChild
 		{
-			// Token: 0x0403E94E RID: 256334
+			// Token: 0x04039D96 RID: 236950
 			Toggle,
-			// Token: 0x0403E94F RID: 256335
+			// Token: 0x04039D97 RID: 236951
 			TextName
 		}
 	}
 
-	// Token: 0x02008EAB RID: 36523
+	// Token: 0x020080F2 RID: 33010
 	[NullableContext(0)]
 	public class SkillBranchItem : CommonRoleSkillBranchSwitchItem
 	{
-		// Token: 0x0604B84F RID: 309327 RVA: 0x013DA8B0 File Offset: 0x013D8AB0
+		// Token: 0x06041D50 RID: 269648 RVA: 0x01385B24 File Offset: 0x01383D24
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -473,7 +473,7 @@ public class RoleSkillBranchPopView : UiViewBase
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604B850 RID: 309328 RVA: 0x013DA9DC File Offset: 0x013D8BDC
+		// Token: 0x06041D51 RID: 269649 RVA: 0x01385C50 File Offset: 0x01383E50
 		[NullableContext(1)]
 		protected override SkillBranchSwitchItemGroup[] CollectBranchItems()
 		{
@@ -499,14 +499,14 @@ public class RoleSkillBranchPopView : UiViewBase
 			};
 		}
 
-		// Token: 0x0604B851 RID: 309329 RVA: 0x013DAA3D File Offset: 0x013D8C3D
+		// Token: 0x06041D52 RID: 269650 RVA: 0x01385CB1 File Offset: 0x01383EB1
 		[NullableContext(1)]
 		protected override UUIExtendToggle GetBranchToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x0604B852 RID: 309330 RVA: 0x013DAA48 File Offset: 0x013D8C48
+		// Token: 0x06041D53 RID: 269651 RVA: 0x01385CBC File Offset: 0x01383EBC
 		private void SetMiddleIconToLeft(bool isLeft)
 		{
 			UUIItem item = base.GetItem(1);
@@ -515,20 +515,20 @@ public class RoleSkillBranchPopView : UiViewBase
 			item.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x0200D059 RID: 53337
+		// Token: 0x0200BC37 RID: 48183
 		private enum EChild
 		{
-			// Token: 0x0403E951 RID: 256337
+			// Token: 0x04039D99 RID: 236953
 			Toggle,
-			// Token: 0x0403E952 RID: 256338
+			// Token: 0x04039D9A RID: 236954
 			ItemSpriteMiddle,
-			// Token: 0x0403E953 RID: 256339
+			// Token: 0x04039D9B RID: 236955
 			SpriteTagIconL,
-			// Token: 0x0403E954 RID: 256340
+			// Token: 0x04039D9C RID: 236956
 			ItemTagL,
-			// Token: 0x0403E955 RID: 256341
+			// Token: 0x04039D9D RID: 236957
 			SpriteTagIconR,
-			// Token: 0x0403E956 RID: 256342
+			// Token: 0x04039D9E RID: 236958
 			ItemTagR
 		}
 	}

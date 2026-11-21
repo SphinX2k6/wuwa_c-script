@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200401A RID: 16410
+	// Token: 0x0200445B RID: 17499
 	public class IQuestScheduleChildQuestCompletedCountT
 	{
-		// Token: 0x17007364 RID: 29540
-		// (get) Token: 0x06017B51 RID: 97105 RVA: 0x0036B703 File Offset: 0x00369903
-		// (set) Token: 0x06017B52 RID: 97106 RVA: 0x0036B70B File Offset: 0x0036990B
+		// Token: 0x17007966 RID: 31078
+		// (get) Token: 0x060191EA RID: 102890 RVA: 0x003954F7 File Offset: 0x003936F7
+		// (set) Token: 0x060191EB RID: 102891 RVA: 0x003954FF File Offset: 0x003936FF
 		public EQuestScheduleType Type { get; set; }
 
-		// Token: 0x17007365 RID: 29541
-		// (get) Token: 0x06017B53 RID: 97107 RVA: 0x0036B714 File Offset: 0x00369914
-		// (set) Token: 0x06017B54 RID: 97108 RVA: 0x0036B71C File Offset: 0x0036991C
+		// Token: 0x17007967 RID: 31079
+		// (get) Token: 0x060191EC RID: 102892 RVA: 0x00395508 File Offset: 0x00393708
+		// (set) Token: 0x060191ED RID: 102893 RVA: 0x00395510 File Offset: 0x00393710
 		public List<int> AssociatedChildQuestIds { get; set; }
 
-		// Token: 0x06017B55 RID: 97109 RVA: 0x0036B725 File Offset: 0x00369925
+		// Token: 0x060191EE RID: 102894 RVA: 0x00395519 File Offset: 0x00393719
 		public IQuestScheduleChildQuestCompletedCountT()
 		{
 			this.Type = EQuestScheduleType.None;

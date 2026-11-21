@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 {
-	// Token: 0x020071A9 RID: 29097
+	// Token: 0x0200625E RID: 25182
 	public interface IStepSpringResult
 	{
-		// Token: 0x17009DA7 RID: 40359
-		// (get) Token: 0x0604733F RID: 291647
-		// (set) Token: 0x06047340 RID: 291648
+		// Token: 0x170072F7 RID: 29431
+		// (get) Token: 0x0603CC3A RID: 248890
+		// (set) Token: 0x0603CC3B RID: 248891
 		float NewPosition { get; set; }
 
-		// Token: 0x17009DA8 RID: 40360
-		// (get) Token: 0x06047341 RID: 291649
-		// (set) Token: 0x06047342 RID: 291650
+		// Token: 0x170072F8 RID: 29432
+		// (get) Token: 0x0603CC3C RID: 248892
+		// (set) Token: 0x0603CC3D RID: 248893
 		float NewVelocity { get; set; }
 
-		// Token: 0x17009DA9 RID: 40361
-		// (get) Token: 0x06047343 RID: 291651
-		// (set) Token: 0x06047344 RID: 291652
+		// Token: 0x170072F9 RID: 29433
+		// (get) Token: 0x0603CC3E RID: 248894
+		// (set) Token: 0x0603CC3F RID: 248895
 		bool Converged { get; set; }
 	}
 }

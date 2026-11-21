@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029D2 RID: 10706
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CBF RID: 11455
 	public class TeleportToAndEnterVehicle : ActionParams
 	{
-		// Token: 0x0600EC9A RID: 60570 RVA: 0x00228BB2 File Offset: 0x00226DB2
+		// Token: 0x0600FB31 RID: 64305 RVA: 0x00246536 File Offset: 0x00244736
 		public static TeleportToAndEnterVehicle Create(ITeleportToAndEnterVehicle? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AB8 RID: 19128
-		// (get) Token: 0x0600EC9B RID: 60571 RVA: 0x00228BD1 File Offset: 0x00226DD1
+		// Token: 0x17004E61 RID: 20065
+		// (get) Token: 0x0600FB32 RID: 64306 RVA: 0x00246555 File Offset: 0x00244755
 		public virtual ITeleportToAndEnterFishingBoat ToVehicle
 		{
 			get
@@ -38,14 +36,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008248 RID: 33352
+		// Token: 0x04008939 RID: 35129
 		private ITeleportToAndEnterVehicle Instance;
 
-		// Token: 0x04008249 RID: 33353
+		// Token: 0x0400893A RID: 35130
 		[Nullable(2)]
 		private ITeleportToAndEnterFishingBoat _ToVehicleCache;
 
-		// Token: 0x0400824A RID: 33354
+		// Token: 0x0400893B RID: 35131
 		private bool _ToVehicleInited;
 	}
 }

@@ -11,13 +11,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066C3 RID: 26307
+	// Token: 0x02005613 RID: 22035
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchStartGameView : UiViewBase
 	{
-		// Token: 0x17009644 RID: 38468
-		// (get) Token: 0x06041CB8 RID: 269496 RVA: 0x00FF51B4 File Offset: 0x00FF33B4
+		// Token: 0x17006983 RID: 27011
+		// (get) Token: 0x06036804 RID: 223236 RVA: 0x00F365B8 File Offset: 0x00F347B8
 		public new IDropCatchGameplayStartViewParams OpenParam
 		{
 			get
@@ -26,12 +26,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x06041CB9 RID: 269497 RVA: 0x00FF51C1 File Offset: 0x00FF33C1
+		// Token: 0x06036805 RID: 223237 RVA: 0x00F365C5 File Offset: 0x00F347C5
 		public DropCatchStartGameView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06041CBA RID: 269498 RVA: 0x00FF51CC File Offset: 0x00FF33CC
+		// Token: 0x06036806 RID: 223238 RVA: 0x00F365D0 File Offset: 0x00F347D0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			};
 		}
 
-		// Token: 0x06041CBB RID: 269499 RVA: 0x00FF52A4 File Offset: 0x00FF34A4
+		// Token: 0x06036807 RID: 223239 RVA: 0x00F366A8 File Offset: 0x00F348A8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DropCatchStartGameView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041CBC RID: 269500 RVA: 0x00FF52E8 File Offset: 0x00FF34E8
+		// Token: 0x06036808 RID: 223240 RVA: 0x00F366EC File Offset: 0x00F348EC
 		private UniTask InitCaption()
 		{
 			DropCatchStartGameView.<InitCaption>d__7 <InitCaption>d__;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return <InitCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041CBD RID: 269501 RVA: 0x00FF532C File Offset: 0x00FF352C
+		// Token: 0x06036809 RID: 223241 RVA: 0x00F36730 File Offset: 0x00F34930
 		private UniTask InitRoleView()
 		{
 			DropCatchStartGameView.<InitRoleView>d__8 <InitRoleView>d__;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return <InitRoleView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041CBE RID: 269502 RVA: 0x00FF5370 File Offset: 0x00FF3570
+		// Token: 0x0603680A RID: 223242 RVA: 0x00F36774 File Offset: 0x00F34974
 		protected override void OnStart()
 		{
 			DropCatchGameplay? dropCatchGameplayById = DropCatchConfig.Instance.GetDropCatchGameplayById(this.OpenParam.GameplayId);
@@ -137,18 +137,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			spine.SetAnimation(0, EDropCatchRobotAnimState.HappyLeft.ToEnumString(), true);
 		}
 
-		// Token: 0x06041CBF RID: 269503 RVA: 0x00FF5497 File Offset: 0x00FF3697
+		// Token: 0x0603680B RID: 223243 RVA: 0x00F3689B File Offset: 0x00F34A9B
 		private void OnClickStart()
 		{
 			DropCatchGameplayController.Instance.StartGameplay(this.OpenParam.GameplayId);
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04022470 RID: 140400
+		// Token: 0x0401CCC9 RID: 117961
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022471 RID: 140401
+		// Token: 0x0401CCCA RID: 117962
 		[Nullable(2)]
 		private DropCatchGameplayRoleView RoleView;
 	}

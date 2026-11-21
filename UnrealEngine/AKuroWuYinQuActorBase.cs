@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001BF1 RID: 7153
+	// Token: 0x020004EE RID: 1262
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.KuroWuYinQuActorBase")]
 	[UnrealStructLayout(1056, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1056)]
 	public class AKuroWuYinQuActorBase : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601B8AA RID: 112810 RVA: 0x00288DFC File Offset: 0x00286FFC
+		// Token: 0x06007709 RID: 30473 RVA: 0x000ADE4A File Offset: 0x000AC04A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKuroWuYinQuActorBase._ClassPtr;
 		}
 
-		// Token: 0x0601B8AB RID: 112811 RVA: 0x00288E08 File Offset: 0x00287008
+		// Token: 0x0600770A RID: 30474 RVA: 0x000ADE58 File Offset: 0x000AC058
 		public AKuroWuYinQuActorBase() : this(BuiltinUtils.AllocNativeUObject(AKuroWuYinQuActorBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601B8AC RID: 112812 RVA: 0x00288E30 File Offset: 0x00287030
+		// Token: 0x0600770B RID: 30475 RVA: 0x000ADE80 File Offset: 0x000AC080
 		[NullableContext(1)]
 		public AKuroWuYinQuActorBase(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKuroWuYinQuActorBase.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006EEA RID: 28394
-		// (get) Token: 0x0601B8AD RID: 112813 RVA: 0x00288E63 File Offset: 0x00287063
-		// (set) Token: 0x0601B8AE RID: 112814 RVA: 0x00288E77 File Offset: 0x00287077
+		// Token: 0x170016FA RID: 5882
+		// (get) Token: 0x0600770C RID: 30476 RVA: 0x000ADEB3 File Offset: 0x000AC0B3
+		// (set) Token: 0x0600770D RID: 30477 RVA: 0x000ADEC7 File Offset: 0x000AC0C7
 		public unsafe FName Key
 		{
 			get
@@ -43,28 +43,28 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601B8AF RID: 112815 RVA: 0x00288E8C File Offset: 0x0028708C
+		// Token: 0x0600770E RID: 30478 RVA: 0x000ADEDC File Offset: 0x000AC0DC
 		static AKuroWuYinQuActorBase()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.KuroWuYinQuActorBase");
 		}
 
-		// Token: 0x0601B8B0 RID: 112816 RVA: 0x00288E9A File Offset: 0x0028709A
+		// Token: 0x0600770F RID: 30479 RVA: 0x000ADEEA File Offset: 0x000AC0EA
 		protected AKuroWuYinQuActorBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400ED19 RID: 60697
+		// Token: 0x04003231 RID: 12849
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroWuYinQuActorBase";
 
-		// Token: 0x0400ED1A RID: 60698
+		// Token: 0x04003232 RID: 12850
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400ED1B RID: 60699
+		// Token: 0x04003233 RID: 12851
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400ED1C RID: 60700
+		// Token: 0x04003234 RID: 12852
 		internal static int __PropertyOffset_Key;
 	}
 }

@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FFF RID: 4095
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200112B RID: 4395
 	public class ILogicNodeOccupation
 	{
-		// Token: 0x06005B68 RID: 23400 RVA: 0x000DDE44 File Offset: 0x000DC044
+		// Token: 0x06006148 RID: 24904 RVA: 0x000EAA84 File Offset: 0x000E8C84
 		private ILogicNodeOccupation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005B69 RID: 23401 RVA: 0x000DDE7C File Offset: 0x000DC07C
+		// Token: 0x06006149 RID: 24905 RVA: 0x000EAABC File Offset: 0x000E8CBC
 		public static ILogicNodeOccupation Create([Nullable(2)] ILogicNodeOccupation instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005B6A RID: 23402 RVA: 0x000DDE8F File Offset: 0x000DC08F
+		// Token: 0x0600614A RID: 24906 RVA: 0x000EAACF File Offset: 0x000E8CCF
 		public static ILogicNodeOccupation CreateFromSetValue([Nullable(2)] ILogicNodeOccupation_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005B6B RID: 23403 RVA: 0x000DDEA4 File Offset: 0x000DC0A4
+		// Token: 0x0600614B RID: 24907 RVA: 0x000EAAE4 File Offset: 0x000E8CE4
 		public ILogicNodeOccupation_SetValue ToSetValue()
 		{
 			return new ILogicNodeOccupation_SetValue
@@ -68,9 +66,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E37 RID: 7735
-		// (get) Token: 0x06005B6C RID: 23404 RVA: 0x000DDF0A File Offset: 0x000DC10A
-		// (set) Token: 0x06005B6D RID: 23405 RVA: 0x000DDF31 File Offset: 0x000DC131
+		// Token: 0x17001FE0 RID: 8160
+		// (get) Token: 0x0600614C RID: 24908 RVA: 0x000EAB4A File Offset: 0x000E8D4A
+		// (set) Token: 0x0600614D RID: 24909 RVA: 0x000EAB71 File Offset: 0x000E8D71
 		public virtual List<string> Occupations
 		{
 			get
@@ -92,9 +90,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E38 RID: 7736
-		// (get) Token: 0x06005B6E RID: 23406 RVA: 0x000DDF3F File Offset: 0x000DC13F
-		// (set) Token: 0x06005B6F RID: 23407 RVA: 0x000DDF6A File Offset: 0x000DC16A
+		// Token: 0x17001FE1 RID: 8161
+		// (get) Token: 0x0600614E RID: 24910 RVA: 0x000EAB7F File Offset: 0x000E8D7F
+		// (set) Token: 0x0600614F RID: 24911 RVA: 0x000EABAA File Offset: 0x000E8DAA
 		public virtual string TidDesc
 		{
 			get
@@ -115,20 +113,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E39 RID: 7737
-		// (get) Token: 0x06005B70 RID: 23408 RVA: 0x000DDF78 File Offset: 0x000DC178
-		// (set) Token: 0x06005B71 RID: 23409 RVA: 0x000DE00B File Offset: 0x000DC20B
+		// Token: 0x17001FE2 RID: 8162
+		// (get) Token: 0x06006150 RID: 24912 RVA: 0x000EABB8 File Offset: 0x000E8DB8
+		// (set) Token: 0x06006151 RID: 24913 RVA: 0x000EAC4B File Offset: 0x000E8E4B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> ExitActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -159,7 +157,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -168,20 +166,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E3A RID: 7738
-		// (get) Token: 0x06005B72 RID: 23410 RVA: 0x000DE020 File Offset: 0x000DC220
-		// (set) Token: 0x06005B73 RID: 23411 RVA: 0x000DE0B3 File Offset: 0x000DC2B3
+		// Token: 0x17001FE3 RID: 8163
+		// (get) Token: 0x06006152 RID: 24914 RVA: 0x000EAC60 File Offset: 0x000E8E60
+		// (set) Token: 0x06006153 RID: 24915 RVA: 0x000EACF3 File Offset: 0x000E8EF3
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> ReenterActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -212,7 +210,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -221,9 +219,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E3B RID: 7739
-		// (get) Token: 0x06005B74 RID: 23412 RVA: 0x000DE0C8 File Offset: 0x000DC2C8
-		// (set) Token: 0x06005B75 RID: 23413 RVA: 0x000DE0EF File Offset: 0x000DC2EF
+		// Token: 0x17001FE4 RID: 8164
+		// (get) Token: 0x06006154 RID: 24916 RVA: 0x000EAD08 File Offset: 0x000E8F08
+		// (set) Token: 0x06006155 RID: 24917 RVA: 0x000EAD2F File Offset: 0x000E8F2F
 		[Nullable(2)]
 		public virtual List<int> BanInteractEntities
 		{
@@ -248,9 +246,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E3C RID: 7740
-		// (get) Token: 0x06005B76 RID: 23414 RVA: 0x000DE100 File Offset: 0x000DC300
-		// (set) Token: 0x06005B77 RID: 23415 RVA: 0x000DE13A File Offset: 0x000DC33A
+		// Token: 0x17001FE5 RID: 8165
+		// (get) Token: 0x06006156 RID: 24918 RVA: 0x000EAD40 File Offset: 0x000E8F40
+		// (set) Token: 0x06006157 RID: 24919 RVA: 0x000EAD7A File Offset: 0x000E8F7A
 		public virtual bool? ReclaimOccupationWhenEnter
 		{
 			get
@@ -272,9 +270,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E3D RID: 7741
-		// (get) Token: 0x06005B78 RID: 23416 RVA: 0x000DE148 File Offset: 0x000DC348
-		// (set) Token: 0x06005B79 RID: 23417 RVA: 0x000DE15F File Offset: 0x000DC35F
+		// Token: 0x17001FE6 RID: 8166
+		// (get) Token: 0x06006158 RID: 24920 RVA: 0x000EAD88 File Offset: 0x000E8F88
+		// (set) Token: 0x06006159 RID: 24921 RVA: 0x000EAD9F File Offset: 0x000E8F9F
 		[Nullable(2)]
 		public virtual string EdTidDesc
 		{
@@ -294,34 +292,34 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003714 RID: 14100
+		// Token: 0x04003A4C RID: 14924
 		[Nullable(2)]
 		protected ILogicNodeOccupation FbInstance;
 
-		// Token: 0x04003715 RID: 14101
+		// Token: 0x04003A4D RID: 14925
 		[Nullable(2)]
 		protected ILogicNodeOccupation_SetValue PocoInterface;
 
-		// Token: 0x04003716 RID: 14102
+		// Token: 0x04003A4E RID: 14926
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ExitActionsCache;
 
-		// Token: 0x04003717 RID: 14103
+		// Token: 0x04003A4F RID: 14927
 		private bool _ExitActionsInited;
 
-		// Token: 0x04003718 RID: 14104
+		// Token: 0x04003A50 RID: 14928
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ReenterActionsCache;
 
-		// Token: 0x04003719 RID: 14105
+		// Token: 0x04003A51 RID: 14929
 		private bool _ReenterActionsInited;
 	}
 }

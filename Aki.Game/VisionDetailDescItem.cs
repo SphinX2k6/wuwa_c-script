@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020018F7 RID: 6391
+// Token: 0x02000DB0 RID: 3504
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionDetailDescItem : UiPanelBase
 {
-	// Token: 0x0600BB56 RID: 47958 RVA: 0x002A71F0 File Offset: 0x002A53F0
+	// Token: 0x06008F40 RID: 36672 RVA: 0x002B1950 File Offset: 0x002AFB50
 	public VisionDetailDescItem(UUIItem actor)
 	{
 		this.SourceItem = actor;
 	}
 
-	// Token: 0x0600BB57 RID: 47959 RVA: 0x002A7200 File Offset: 0x002A5400
+	// Token: 0x06008F41 RID: 36673 RVA: 0x002B1960 File Offset: 0x002AFB60
 	public UniTask Init()
 	{
 		global::VisionDetailDescItem.<Init>d__5 <Init>d__;
@@ -31,7 +31,7 @@ public class VisionDetailDescItem : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BB58 RID: 47960 RVA: 0x002A7244 File Offset: 0x002A5444
+	// Token: 0x06008F42 RID: 36674 RVA: 0x002B19A4 File Offset: 0x002AFBA4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -67,7 +67,7 @@ public class VisionDetailDescItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BB59 RID: 47961 RVA: 0x002A7420 File Offset: 0x002A5620
+	// Token: 0x06008F43 RID: 36675 RVA: 0x002B1B80 File Offset: 0x002AFD80
 	protected override UniTask OnBeforeStartAsync()
 	{
 		global::VisionDetailDescItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -78,7 +78,7 @@ public class VisionDetailDescItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BB5A RID: 47962 RVA: 0x002A7463 File Offset: 0x002A5663
+	// Token: 0x06008F44 RID: 36676 RVA: 0x002B1BC3 File Offset: 0x002AFDC3
 	public void Update(VisionDetailDesc data)
 	{
 		this.Data = data;
@@ -91,13 +91,13 @@ public class VisionDetailDescItem : UiPanelBase
 		this.RefreshElement(data);
 	}
 
-	// Token: 0x0600BB5B RID: 47963 RVA: 0x002A749D File Offset: 0x002A569D
+	// Token: 0x06008F45 RID: 36677 RVA: 0x002B1BFD File Offset: 0x002AFDFD
 	private void RefreshTitle(VisionDetailDesc data)
 	{
 		base.GetText(0).SetText(data.Title, true);
 	}
 
-	// Token: 0x0600BB5C RID: 47964 RVA: 0x002A74B4 File Offset: 0x002A56B4
+	// Token: 0x06008F46 RID: 36678 RVA: 0x002B1C14 File Offset: 0x002AFE14
 	private void RefreshContent(VisionDetailDesc data)
 	{
 		bool ifSimpleState = PhantomBattleModel.Instance.GetIfSimpleState(1);
@@ -157,7 +157,7 @@ public class VisionDetailDescItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BB5D RID: 47965 RVA: 0x002A7680 File Offset: 0x002A5880
+	// Token: 0x06008F47 RID: 36679 RVA: 0x002B1DE0 File Offset: 0x002AFFE0
 	private void RefreshElement(VisionDetailDesc data)
 	{
 		if (data.FetterId > 0)
@@ -171,19 +171,19 @@ public class VisionDetailDescItem : UiPanelBase
 		base.GetItem(9).SetUIActive(false);
 	}
 
-	// Token: 0x0600BB5E RID: 47966 RVA: 0x002A76E8 File Offset: 0x002A58E8
+	// Token: 0x06008F48 RID: 36680 RVA: 0x002B1E48 File Offset: 0x002B0048
 	private void RefreshEmpty(VisionDetailDesc data)
 	{
 		base.GetItem(4).SetUIActive(data.EmptyState);
 	}
 
-	// Token: 0x0600BB5F RID: 47967 RVA: 0x002A76FC File Offset: 0x002A58FC
+	// Token: 0x06008F49 RID: 36681 RVA: 0x002B1E5C File Offset: 0x002B005C
 	private void RefreshEmptyText(VisionDetailDesc data)
 	{
 		base.GetText(6).SetText(data.EmptyText, true);
 	}
 
-	// Token: 0x0600BB60 RID: 47968 RVA: 0x002A7714 File Offset: 0x002A5914
+	// Token: 0x06008F4A RID: 36682 RVA: 0x002B1E74 File Offset: 0x002B0074
 	private void RefreshEmptyContentItem(VisionDetailDesc data)
 	{
 		bool uiactive = !StringUtils.IsEmpty(data.EmptyContentText);
@@ -191,65 +191,65 @@ public class VisionDetailDescItem : UiPanelBase
 		base.GetText(8).SetText(data.EmptyContentText, true);
 	}
 
-	// Token: 0x0600BB61 RID: 47969 RVA: 0x002A7750 File Offset: 0x002A5950
+	// Token: 0x06008F4B RID: 36683 RVA: 0x002B1EB0 File Offset: 0x002B00B0
 	private void RefreshTitleItem(VisionDetailDesc data)
 	{
 		base.GetItem(5).SetUIActive(data.TitleItemShowState);
 	}
 
-	// Token: 0x04005509 RID: 21769
+	// Token: 0x040055B4 RID: 21940
 	[Nullable(2)]
 	private readonly UUIItem SourceItem;
 
-	// Token: 0x0400550A RID: 21770
+	// Token: 0x040055B5 RID: 21941
 	[Nullable(2)]
 	protected VisionDetailDesc Data;
 
-	// Token: 0x0400550B RID: 21771
+	// Token: 0x040055B6 RID: 21942
 	[Nullable(2)]
 	private VisionFetterSuitItem VisionFetterSuitItem;
 
-	// Token: 0x02007E70 RID: 32368
+	// Token: 0x02006FF7 RID: 28663
 	[NullableContext(0)]
 	private class EVisionDetailDescItem
 	{
-		// Token: 0x040295F0 RID: 169456
+		// Token: 0x0402491C RID: 149788
 		public const int TitleText = 0;
 
-		// Token: 0x040295F1 RID: 169457
+		// Token: 0x0402491D RID: 149789
 		public const int ContentItem = 1;
 
-		// Token: 0x040295F2 RID: 169458
+		// Token: 0x0402491E RID: 149790
 		public const int ContentTextOne = 2;
 
-		// Token: 0x040295F3 RID: 169459
+		// Token: 0x0402491F RID: 149791
 		public const int ContentTextTwo = 3;
 
-		// Token: 0x040295F4 RID: 169460
+		// Token: 0x04024920 RID: 149792
 		public const int EmptyItem = 4;
 
-		// Token: 0x040295F5 RID: 169461
+		// Token: 0x04024921 RID: 149793
 		public const int TitleParent = 5;
 
-		// Token: 0x040295F6 RID: 169462
+		// Token: 0x04024922 RID: 149794
 		public const int EmptyText = 6;
 
-		// Token: 0x040295F7 RID: 169463
+		// Token: 0x04024923 RID: 149795
 		public const int EmptyContentItem = 7;
 
-		// Token: 0x040295F8 RID: 169464
+		// Token: 0x04024924 RID: 149796
 		public const int EmptyContentText = 8;
 
-		// Token: 0x040295F9 RID: 169465
+		// Token: 0x04024925 RID: 149797
 		public const int ElementItem = 9;
 
-		// Token: 0x040295FA RID: 169466
+		// Token: 0x04024926 RID: 149798
 		public const int SuitElementItem = 10;
 
-		// Token: 0x040295FB RID: 169467
+		// Token: 0x04024927 RID: 149799
 		public const int SuitText = 11;
 
-		// Token: 0x040295FC RID: 169468
+		// Token: 0x04024928 RID: 149800
 		public const int TitleContentParent = 12;
 	}
 }

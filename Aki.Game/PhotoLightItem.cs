@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200256E RID: 9582
+// Token: 0x02001A59 RID: 6745
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoLightItem : GridProxyAbstract<PhotoLight>
 {
-	// Token: 0x0601357D RID: 79229 RVA: 0x004D02F4 File Offset: 0x004CE4F4
+	// Token: 0x06010A5F RID: 68191 RVA: 0x004DEF2C File Offset: 0x004DD12C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,13 +30,13 @@ public class PhotoLightItem : GridProxyAbstract<PhotoLight>
 		};
 	}
 
-	// Token: 0x0601357E RID: 79230 RVA: 0x004D03C9 File Offset: 0x004CE5C9
+	// Token: 0x06010A60 RID: 68192 RVA: 0x004DF001 File Offset: 0x004DD201
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).bLockStateOnSelect = true;
 	}
 
-	// Token: 0x0601357F RID: 79231 RVA: 0x004D03D8 File Offset: 0x004CE5D8
+	// Token: 0x06010A61 RID: 68193 RVA: 0x004DF010 File Offset: 0x004DD210
 	public override void Refresh(PhotoLight data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -71,7 +71,7 @@ public class PhotoLightItem : GridProxyAbstract<PhotoLight>
 		this.UnlockAnimPlayer.TryPlay(this.RootItem, data.RelativeItem);
 	}
 
-	// Token: 0x06013580 RID: 79232 RVA: 0x004D04DA File Offset: 0x004CE6DA
+	// Token: 0x06010A62 RID: 68194 RVA: 0x004DF112 File Offset: 0x004DD312
 	private void SetToggleState(bool isSelect, bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -82,31 +82,31 @@ public class PhotoLightItem : GridProxyAbstract<PhotoLight>
 		extendToggle.SetToggleStateForce(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 	}
 
-	// Token: 0x06013581 RID: 79233 RVA: 0x004D04F7 File Offset: 0x004CE6F7
+	// Token: 0x06010A63 RID: 68195 RVA: 0x004DF12F File Offset: 0x004DD32F
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true, fireEvent);
 	}
 
-	// Token: 0x06013582 RID: 79234 RVA: 0x004D0501 File Offset: 0x004CE701
+	// Token: 0x06010A64 RID: 68196 RVA: 0x004DF139 File Offset: 0x004DD339
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false, fireEvent);
 	}
 
-	// Token: 0x06013583 RID: 79235 RVA: 0x004D050B File Offset: 0x004CE70B
+	// Token: 0x06010A65 RID: 68197 RVA: 0x004DF143 File Offset: 0x004DD343
 	public override object GetKey(PhotoLight data, int displayIndex)
 	{
 		return data.Id;
 	}
 
-	// Token: 0x06013584 RID: 79236 RVA: 0x004D0519 File Offset: 0x004CE719
+	// Token: 0x06010A66 RID: 68198 RVA: 0x004DF151 File Offset: 0x004DD351
 	protected override void OnBeforeDestroy()
 	{
 		this.UnlockAnimPlayer.Clear();
 	}
 
-	// Token: 0x06013585 RID: 79237 RVA: 0x004D0528 File Offset: 0x004CE728
+	// Token: 0x06010A67 RID: 68199 RVA: 0x004DF160 File Offset: 0x004DD360
 	private void OnToggleClick(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -118,44 +118,44 @@ public class PhotoLightItem : GridProxyAbstract<PhotoLight>
 			this.SetToggleState(false, false);
 			if (this.Data.RelativeItem != 0)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(this.Data.RelativeItem, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(this.Data.RelativeItem, true, null, false);
 			}
 			return;
 		}
 		this.OnLightClick(base.GridIndex);
 	}
 
-	// Token: 0x040091CA RID: 37322
+	// Token: 0x04009323 RID: 37667
 	private PhotoLight Data;
 
-	// Token: 0x040091CB RID: 37323
+	// Token: 0x04009324 RID: 37668
 	public Action<int> OnLightClick = delegate(int gridIndex)
 	{
 	};
 
-	// Token: 0x040091CC RID: 37324
+	// Token: 0x04009325 RID: 37669
 	private bool IsUnlock = true;
 
-	// Token: 0x040091CD RID: 37325
+	// Token: 0x04009326 RID: 37670
 	private readonly PhotoUnlockAnimPlayer UnlockAnimPlayer = new PhotoUnlockAnimPlayer();
 
-	// Token: 0x02008B54 RID: 35668
+	// Token: 0x02007CDA RID: 31962
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D3D9 RID: 185305
+		// Token: 0x040286E6 RID: 165606
 		ToggleItem,
-		// Token: 0x0402D3DA RID: 185306
+		// Token: 0x040286E7 RID: 165607
 		ItemNormalState,
-		// Token: 0x0402D3DB RID: 185307
+		// Token: 0x040286E8 RID: 165608
 		ItemContent,
-		// Token: 0x0402D3DC RID: 185308
+		// Token: 0x040286E9 RID: 165609
 		TextureBg,
-		// Token: 0x0402D3DD RID: 185309
+		// Token: 0x040286EA RID: 165610
 		TextTitle,
-		// Token: 0x0402D3DE RID: 185310
+		// Token: 0x040286EB RID: 165611
 		SpriteRedDot,
-		// Token: 0x0402D3DF RID: 185311
+		// Token: 0x040286EC RID: 165612
 		ItemLockPanel
 	}
 }

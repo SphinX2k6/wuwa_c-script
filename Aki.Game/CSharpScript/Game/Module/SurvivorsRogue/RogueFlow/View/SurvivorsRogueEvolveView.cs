@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 {
-	// Token: 0x02004B75 RID: 19317
+	// Token: 0x02003B1F RID: 15135
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SurvivorsRogueEvolveView : UiViewBase, ISurvivorsRogueCommandView
 	{
-		// Token: 0x060320C0 RID: 204992 RVA: 0x00B9EA4F File Offset: 0x00B9CC4F
+		// Token: 0x06026E51 RID: 159313 RVA: 0x00AE2BFF File Offset: 0x00AE0DFF
 		public SurvivorsRogueEvolveView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x17007C29 RID: 31785
-		// (get) Token: 0x060320C1 RID: 204993 RVA: 0x00B9EA6A File Offset: 0x00B9CC6A
+		// Token: 0x17004FD3 RID: 20435
+		// (get) Token: 0x06026E52 RID: 159314 RVA: 0x00AE2C1A File Offset: 0x00AE0E1A
 		int ISurvivorsRogueCommandView.CommandIncId
 		{
 			get
@@ -30,8 +30,8 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			}
 		}
 
-		// Token: 0x17007C2A RID: 31786
-		// (get) Token: 0x060320C2 RID: 204994 RVA: 0x00B9EA72 File Offset: 0x00B9CC72
+		// Token: 0x17004FD4 RID: 20436
+		// (get) Token: 0x06026E53 RID: 159315 RVA: 0x00AE2C22 File Offset: 0x00AE0E22
 		SurvivorsRogueCommandBase ISurvivorsRogueCommandView.Command
 		{
 			get
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			}
 		}
 
-		// Token: 0x060320C3 RID: 204995 RVA: 0x00B9EA7C File Offset: 0x00B9CC7C
+		// Token: 0x06026E54 RID: 159316 RVA: 0x00AE2C2C File Offset: 0x00AE0E2C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -60,13 +60,13 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			};
 		}
 
-		// Token: 0x060320C4 RID: 204996 RVA: 0x00B9EB67 File Offset: 0x00B9CD67
+		// Token: 0x06026E55 RID: 159317 RVA: 0x00AE2D17 File Offset: 0x00AE0F17
 		public void CloseView()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060320C5 RID: 204997 RVA: 0x00B9EB70 File Offset: 0x00B9CD70
+		// Token: 0x06026E56 RID: 159318 RVA: 0x00AE2D20 File Offset: 0x00AE0F20
 		private void OnClickBtnClose()
 		{
 			this.EndEvolveFlow().ContinueWith(delegate()
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			});
 		}
 
-		// Token: 0x060320C6 RID: 204998 RVA: 0x00B9EB8C File Offset: 0x00B9CD8C
+		// Token: 0x06026E57 RID: 159319 RVA: 0x00AE2D3C File Offset: 0x00AE0F3C
 		private UniTask EndEvolveFlow()
 		{
 			SurvivorsRogueEvolveView.<EndEvolveFlow>d__16 <EndEvolveFlow>d__;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			return <EndEvolveFlow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320C7 RID: 204999 RVA: 0x00B9EBD0 File Offset: 0x00B9CDD0
+		// Token: 0x06026E58 RID: 159320 RVA: 0x00AE2D80 File Offset: 0x00AE0F80
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SurvivorsRogueEvolveView.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320C8 RID: 205000 RVA: 0x00B9EC14 File Offset: 0x00B9CE14
+		// Token: 0x06026E59 RID: 159321 RVA: 0x00AE2DC4 File Offset: 0x00AE0FC4
 		private void GetViewInfo()
 		{
 			List<SurvivorsEvolveViewInfo> viewInfoList = this.Command.GetViewInfoList();
@@ -112,17 +112,17 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			this.CurrentViewInfoIndex = 0;
 		}
 
-		// Token: 0x060320C9 RID: 205001 RVA: 0x00B9EC3B File Offset: 0x00B9CE3B
+		// Token: 0x06026E5A RID: 159322 RVA: 0x00AE2DEB File Offset: 0x00AE0FEB
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x060320CA RID: 205002 RVA: 0x00B9EC3D File Offset: 0x00B9CE3D
+		// Token: 0x06026E5B RID: 159323 RVA: 0x00AE2DED File Offset: 0x00AE0FED
 		protected override void OnAfterShow()
 		{
 		}
 
-		// Token: 0x060320CB RID: 205003 RVA: 0x00B9EC3F File Offset: 0x00B9CE3F
+		// Token: 0x06026E5C RID: 159324 RVA: 0x00AE2DEF File Offset: 0x00AE0FEF
 		protected override void OnBeforeDestroy()
 		{
 			this.RootActor.OnSequencePlayEvent.Unbind();
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			command.BindView(null);
 		}
 
-		// Token: 0x060320CC RID: 205004 RVA: 0x00B9EC64 File Offset: 0x00B9CE64
+		// Token: 0x06026E5D RID: 159325 RVA: 0x00AE2E14 File Offset: 0x00AE1014
 		private void OnEventSequence(string sequenceName, string eventName)
 		{
 			if (sequenceName == "LevelUp" && eventName == "LevelUp")
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			}
 		}
 
-		// Token: 0x060320CD RID: 205005 RVA: 0x00B9ECF9 File Offset: 0x00B9CEF9
+		// Token: 0x06026E5E RID: 159326 RVA: 0x00AE2EA9 File Offset: 0x00AE10A9
 		public void Refresh()
 		{
 			this.GetViewInfo();
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			this.RefreshNextView(false, true);
 		}
 
-		// Token: 0x060320CE RID: 205006 RVA: 0x00B9ED10 File Offset: 0x00B9CF10
+		// Token: 0x06026E5F RID: 159327 RVA: 0x00AE2EC0 File Offset: 0x00AE10C0
 		private void RefreshNextView(bool playSwitch, bool refreshContent)
 		{
 			SurvivorsRogueEvolveView.<>c__DisplayClass24_0 CS$<>8__locals1 = new SurvivorsRogueEvolveView.<>c__DisplayClass24_0();
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x060320CF RID: 205007 RVA: 0x00B9ED58 File Offset: 0x00B9CF58
+		// Token: 0x06026E60 RID: 159328 RVA: 0x00AE2F08 File Offset: 0x00AE1108
 		private UniTask RefreshAsync()
 		{
 			SurvivorsRogueEvolveView.<RefreshAsync>d__25 <RefreshAsync>d__;
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320D0 RID: 205008 RVA: 0x00B9ED9C File Offset: 0x00B9CF9C
+		// Token: 0x06026E61 RID: 159329 RVA: 0x00AE2F4C File Offset: 0x00AE114C
 		private void PlayTween(int weaponId)
 		{
 			SurvivorsWeapon? survivorsWeapon = SurvivorsRogueConfig.Instance.GetSurvivorsWeapon(weaponId);
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			}
 		}
 
-		// Token: 0x060320D1 RID: 205009 RVA: 0x00B9EE8C File Offset: 0x00B9D08C
+		// Token: 0x06026E62 RID: 159330 RVA: 0x00AE303C File Offset: 0x00AE123C
 		private void RefreshWeaponQuality()
 		{
 			foreach (SurvivorsEvolveViewInfo survivorsEvolveViewInfo in this.ViewInfoList)
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			}
 		}
 
-		// Token: 0x060320D2 RID: 205010 RVA: 0x00B9EFB4 File Offset: 0x00B9D1B4
+		// Token: 0x06026E63 RID: 159331 RVA: 0x00AE3164 File Offset: 0x00AE1364
 		private int GetEvolveQualityId(int[] evolveIds)
 		{
 			int num = 0;
@@ -268,30 +268,30 @@ namespace CSharpScript.Game.Module.SurvivorsRogue.RogueFlow.View
 			return num;
 		}
 
-		// Token: 0x0401AAB8 RID: 109240
+		// Token: 0x0401540C RID: 87052
 		public int CommandIncId;
 
-		// Token: 0x0401AAB9 RID: 109241
+		// Token: 0x0401540D RID: 87053
 		public SurvivorsRogueCommandEvolve Command;
 
-		// Token: 0x0401AABA RID: 109242
+		// Token: 0x0401540E RID: 87054
 		[Nullable(2)]
 		private SurvivorsRogueCardBase CardItem;
 
-		// Token: 0x0401AABB RID: 109243
+		// Token: 0x0401540F RID: 87055
 		[Nullable(2)]
 		private SurvivorsRogueRoleStatePanel RoleStatePanel;
 
-		// Token: 0x0401AABC RID: 109244
+		// Token: 0x04015410 RID: 87056
 		private List<SurvivorsEvolveViewInfo> ViewInfoList = new List<SurvivorsEvolveViewInfo>();
 
-		// Token: 0x0401AABD RID: 109245
+		// Token: 0x04015411 RID: 87057
 		private int CurrentViewInfoIndex;
 
-		// Token: 0x0401AABE RID: 109246
+		// Token: 0x04015412 RID: 87058
 		private bool IsSpecialEvolve;
 
-		// Token: 0x0401AABF RID: 109247
+		// Token: 0x04015413 RID: 87059
 		private bool ViewAnimVisibleState = true;
 	}
 }

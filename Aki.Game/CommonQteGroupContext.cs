@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Qte;
 
-// Token: 0x02002607 RID: 9735
+// Token: 0x02001AF2 RID: 6898
 [NullableContext(2)]
 [Nullable(0)]
 public class CommonQteGroupContext : CommonQteContextBase
 {
-	// Token: 0x06013D73 RID: 81267 RVA: 0x004FA495 File Offset: 0x004F8695
+	// Token: 0x06011255 RID: 70229 RVA: 0x005092A1 File Offset: 0x005074A1
 	public CommonQteGroupContext()
 	{
 		this.Type = new ECommonQteContextType?(ECommonQteContextType.QteGroup);
 	}
 
-	// Token: 0x06013D74 RID: 81268 RVA: 0x004FA4AC File Offset: 0x004F86AC
+	// Token: 0x06011256 RID: 70230 RVA: 0x005092B8 File Offset: 0x005074B8
 	protected override void OnClear()
 	{
 		if (this.ContextMap != null)
@@ -28,7 +28,7 @@ public class CommonQteGroupContext : CommonQteContextBase
 		this.MainQteContext = null;
 	}
 
-	// Token: 0x06013D75 RID: 81269 RVA: 0x004FA518 File Offset: 0x004F8718
+	// Token: 0x06011257 RID: 70231 RVA: 0x00509324 File Offset: 0x00507524
 	public override SCommonQte GetConfig()
 	{
 		if (this.MainQteContext != null)
@@ -38,7 +38,7 @@ public class CommonQteGroupContext : CommonQteContextBase
 		return this.Config;
 	}
 
-	// Token: 0x06013D76 RID: 81270 RVA: 0x004FA534 File Offset: 0x004F8734
+	// Token: 0x06011258 RID: 70232 RVA: 0x00509340 File Offset: 0x00507540
 	protected override void OnQteSuccess()
 	{
 		if (this.ContextMap != null)
@@ -50,7 +50,7 @@ public class CommonQteGroupContext : CommonQteContextBase
 		}
 	}
 
-	// Token: 0x06013D77 RID: 81271 RVA: 0x004FA594 File Offset: 0x004F8794
+	// Token: 0x06011259 RID: 70233 RVA: 0x005093A0 File Offset: 0x005075A0
 	protected override void OnQteFail()
 	{
 		if (this.ContextMap != null)
@@ -62,7 +62,7 @@ public class CommonQteGroupContext : CommonQteContextBase
 		}
 	}
 
-	// Token: 0x06013D78 RID: 81272 RVA: 0x004FA5F4 File Offset: 0x004F87F4
+	// Token: 0x0601125A RID: 70234 RVA: 0x00509400 File Offset: 0x00507600
 	public override bool CheckQteConditionMatch()
 	{
 		if (this.ContextMap == null)
@@ -83,7 +83,7 @@ public class CommonQteGroupContext : CommonQteContextBase
 		return result;
 	}
 
-	// Token: 0x06013D79 RID: 81273 RVA: 0x004FA68C File Offset: 0x004F888C
+	// Token: 0x0601125B RID: 70235 RVA: 0x00509498 File Offset: 0x00507698
 	public override bool CheckQteConditionAndDoSuccess()
 	{
 		if (this.CheckQteConditionMatch())
@@ -94,7 +94,7 @@ public class CommonQteGroupContext : CommonQteContextBase
 		return false;
 	}
 
-	// Token: 0x06013D7A RID: 81274 RVA: 0x004FA69F File Offset: 0x004F889F
+	// Token: 0x0601125C RID: 70236 RVA: 0x005094AB File Offset: 0x005076AB
 	[NullableContext(1)]
 	public void AddContext(int qteId, CommonQteContextBase context, bool isMainQte)
 	{
@@ -109,7 +109,7 @@ public class CommonQteGroupContext : CommonQteContextBase
 		}
 	}
 
-	// Token: 0x06013D7B RID: 81275 RVA: 0x004FA6CB File Offset: 0x004F88CB
+	// Token: 0x0601125D RID: 70237 RVA: 0x005094D7 File Offset: 0x005076D7
 	public void OnContextFail(CommonQteContextBase context)
 	{
 		if (base.IsPending() && context != null)
@@ -122,7 +122,7 @@ public class CommonQteGroupContext : CommonQteContextBase
 		}
 	}
 
-	// Token: 0x0400957C RID: 38268
+	// Token: 0x040096D3 RID: 38611
 	[Nullable(new byte[]
 	{
 		2,
@@ -130,6 +130,6 @@ public class CommonQteGroupContext : CommonQteContextBase
 	})]
 	public Dictionary<int, CommonQteContextBase> ContextMap;
 
-	// Token: 0x0400957D RID: 38269
+	// Token: 0x040096D4 RID: 38612
 	public CommonQteContextBase MainQteContext;
 }

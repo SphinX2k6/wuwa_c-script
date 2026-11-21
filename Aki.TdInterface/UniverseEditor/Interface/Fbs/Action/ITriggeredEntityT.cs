@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200747C RID: 29820
+	// Token: 0x02007C6F RID: 31855
 	public class ITriggeredEntityT
 	{
-		// Token: 0x1700E266 RID: 57958
-		// (get) Token: 0x06036314 RID: 221972 RVA: 0x0075E3CE File Offset: 0x0075C5CE
-		// (set) Token: 0x06036315 RID: 221973 RVA: 0x0075E3D6 File Offset: 0x0075C5D6
+		// Token: 0x1700EE83 RID: 61059
+		// (get) Token: 0x060396FD RID: 235261 RVA: 0x007C10FA File Offset: 0x007BF2FA
+		// (set) Token: 0x060396FE RID: 235262 RVA: 0x007C1102 File Offset: 0x007BF302
 		public ETargetEntityType Type { get; set; }
 
-		// Token: 0x06036316 RID: 221974 RVA: 0x0075E3DF File Offset: 0x0075C5DF
+		// Token: 0x060396FF RID: 235263 RVA: 0x007C110B File Offset: 0x007BF30B
 		public ITriggeredEntityT()
 		{
 			this.Type = ETargetEntityType.Target;

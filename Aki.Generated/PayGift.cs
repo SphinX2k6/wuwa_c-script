@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000EAE RID: 3758
+	// Token: 0x02000F93 RID: 3987
 	public struct PayGift : IFlatbufferObject
 	{
-		// Token: 0x170024A4 RID: 9380
-		// (get) Token: 0x0600A2E1 RID: 41697 RVA: 0x002A6284 File Offset: 0x002A4484
+		// Token: 0x17002509 RID: 9481
+		// (get) Token: 0x0600A901 RID: 43265 RVA: 0x002C3600 File Offset: 0x002C1800
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A2E2 RID: 41698 RVA: 0x002A6291 File Offset: 0x002A4491
+		// Token: 0x0600A902 RID: 43266 RVA: 0x002C360D File Offset: 0x002C180D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A2E3 RID: 41699 RVA: 0x002A6298 File Offset: 0x002A4498
+		// Token: 0x0600A903 RID: 43267 RVA: 0x002C3614 File Offset: 0x002C1814
 		public static PayGift GetRootAsPayGift(ByteBuffer _bb)
 		{
 			return PayGift.GetRootAsPayGift(_bb, default(PayGift));
 		}
 
-		// Token: 0x0600A2E4 RID: 41700 RVA: 0x002A62B4 File Offset: 0x002A44B4
+		// Token: 0x0600A904 RID: 43268 RVA: 0x002C3630 File Offset: 0x002C1830
 		public static PayGift GetRootAsPayGift(ByteBuffer _bb, PayGift obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A2E5 RID: 41701 RVA: 0x002A62D1 File Offset: 0x002A44D1
+		// Token: 0x0600A905 RID: 43269 RVA: 0x002C364D File Offset: 0x002C184D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A2E6 RID: 41702 RVA: 0x002A62E0 File Offset: 0x002A44E0
+		// Token: 0x0600A906 RID: 43270 RVA: 0x002C365C File Offset: 0x002C185C
 		public PayGift __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170024A5 RID: 9381
-		// (get) Token: 0x0600A2E7 RID: 41703 RVA: 0x002A62F0 File Offset: 0x002A44F0
+		// Token: 0x1700250A RID: 9482
+		// (get) Token: 0x0600A907 RID: 43271 RVA: 0x002C366C File Offset: 0x002C186C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170024A6 RID: 9382
-		// (get) Token: 0x0600A2E8 RID: 41704 RVA: 0x002A632C File Offset: 0x002A452C
+		// Token: 0x1700250B RID: 9483
+		// (get) Token: 0x0600A908 RID: 43272 RVA: 0x002C36A8 File Offset: 0x002C18A8
 		public int ItemId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004F64 RID: 20324
+		// Token: 0x04005549 RID: 21833
 		private Table __p;
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DFF RID: 19967
+	// Token: 0x0200530C RID: 21260
 	public enum ERefreshContent : byte
 	{
-		// Token: 0x0400DAE0 RID: 56032
+		// Token: 0x0400E648 RID: 58952
 		All,
-		// Token: 0x0400DAE1 RID: 56033
+		// Token: 0x0400E649 RID: 58953
 		RandomEntity
 	}
 }

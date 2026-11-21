@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D1E RID: 7454
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F2F RID: 7983
 	public class IPlayScreenEffect : PlayEffect2
 	{
-		// Token: 0x06009FF3 RID: 40947 RVA: 0x0016D274 File Offset: 0x0016B474
+		// Token: 0x0600A9DF RID: 43487 RVA: 0x00181698 File Offset: 0x0017F898
 		private IPlayScreenEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009FF4 RID: 40948 RVA: 0x0016D2AC File Offset: 0x0016B4AC
+		// Token: 0x0600A9E0 RID: 43488 RVA: 0x001816D0 File Offset: 0x0017F8D0
 		public static IPlayScreenEffect Create([Nullable(2)] IPlayScreenEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009FF5 RID: 40949 RVA: 0x0016D2BF File Offset: 0x0016B4BF
+		// Token: 0x0600A9E1 RID: 43489 RVA: 0x001816E3 File Offset: 0x0017F8E3
 		public static IPlayScreenEffect CreateFromSetValue([Nullable(2)] IPlayScreenEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009FF6 RID: 40950 RVA: 0x0016D2D2 File Offset: 0x0016B4D2
+		// Token: 0x0600A9E2 RID: 43490 RVA: 0x001816F6 File Offset: 0x0017F8F6
 		public new IPlayScreenEffect_SetValue ToSetValue()
 		{
 			return new IPlayScreenEffect_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031A3 RID: 12707
-		// (get) Token: 0x06009FF7 RID: 40951 RVA: 0x0016D309 File Offset: 0x0016B509
-		// (set) Token: 0x06009FF8 RID: 40952 RVA: 0x0016D334 File Offset: 0x0016B534
+		// Token: 0x17003437 RID: 13367
+		// (get) Token: 0x0600A9E3 RID: 43491 RVA: 0x0018172D File Offset: 0x0017F92D
+		// (set) Token: 0x0600A9E4 RID: 43492 RVA: 0x00181758 File Offset: 0x0017F958
 		public override EEffectType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031A4 RID: 12708
-		// (get) Token: 0x06009FF9 RID: 40953 RVA: 0x0016D342 File Offset: 0x0016B542
-		// (set) Token: 0x06009FFA RID: 40954 RVA: 0x0016D36D File Offset: 0x0016B56D
+		// Token: 0x17003438 RID: 13368
+		// (get) Token: 0x0600A9E5 RID: 43493 RVA: 0x00181766 File Offset: 0x0017F966
+		// (set) Token: 0x0600A9E6 RID: 43494 RVA: 0x00181791 File Offset: 0x0017F991
 		public override string Path
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031A5 RID: 12709
-		// (get) Token: 0x06009FFB RID: 40955 RVA: 0x0016D37C File Offset: 0x0016B57C
-		// (set) Token: 0x06009FFC RID: 40956 RVA: 0x0016D3B6 File Offset: 0x0016B5B6
+		// Token: 0x17003439 RID: 13369
+		// (get) Token: 0x0600A9E7 RID: 43495 RVA: 0x001817A0 File Offset: 0x0017F9A0
+		// (set) Token: 0x0600A9E8 RID: 43496 RVA: 0x001817DA File Offset: 0x0017F9DA
 		public virtual float? DestroyTime
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031A6 RID: 12710
-		// (get) Token: 0x06009FFD RID: 40957 RVA: 0x0016D3C4 File Offset: 0x0016B5C4
-		// (set) Token: 0x06009FFE RID: 40958 RVA: 0x0016D3EB File Offset: 0x0016B5EB
+		// Token: 0x1700343A RID: 13370
+		// (get) Token: 0x0600A9E9 RID: 43497 RVA: 0x001817E8 File Offset: 0x0017F9E8
+		// (set) Token: 0x0600A9EA RID: 43498 RVA: 0x0018180F File Offset: 0x0017FA0F
 		[Nullable(2)]
 		public virtual string BindSubScreenKey
 		{
@@ -159,11 +157,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006078 RID: 24696
+		// Token: 0x040065F4 RID: 26100
 		[Nullable(2)]
 		protected new IPlayScreenEffect FbInstance;
 
-		// Token: 0x04006079 RID: 24697
+		// Token: 0x040065F5 RID: 26101
 		[Nullable(2)]
 		protected new IPlayScreenEffect_SetValue PocoInterface;
 	}

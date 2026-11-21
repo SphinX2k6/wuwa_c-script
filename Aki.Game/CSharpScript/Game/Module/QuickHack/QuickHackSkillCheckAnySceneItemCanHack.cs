@@ -5,10 +5,10 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F5F RID: 20319
+	// Token: 0x02003F28 RID: 16168
 	public class QuickHackSkillCheckAnySceneItemCanHack : IQuickHackSkillCondition
 	{
-		// Token: 0x06034114 RID: 213268 RVA: 0x00C3630C File Offset: 0x00C3450C
+		// Token: 0x06028F82 RID: 167810 RVA: 0x00B7FAAC File Offset: 0x00B7DCAC
 		[NullableContext(1)]
 		public bool Check(QuickHackSkillInstance skill, EQuickHackTargetType? hackType, [Nullable(new byte[]
 		{

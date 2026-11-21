@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Cysharp.Threading.Tasks;
@@ -8,19 +7,19 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056AC RID: 22188
+	// Token: 0x02004682 RID: 18050
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LoginGateWayBatchDetection
 	{
-		// Token: 0x0603873E RID: 231230 RVA: 0x00D67169 File Offset: 0x00D65369
+		// Token: 0x0602D63B RID: 185915 RVA: 0x00CB5300 File Offset: 0x00CB3500
 		public LoginGateWayBatchDetection(List<LoginGateWayDetection> detections, int timeoutMs)
 		{
 			this.Detections = detections;
 			this.TimeoutMs = timeoutMs;
 		}
 
-		// Token: 0x0603873F RID: 231231 RVA: 0x00D6718C File Offset: 0x00D6538C
+		// Token: 0x0602D63C RID: 185916 RVA: 0x00CB5324 File Offset: 0x00CB3524
 		public UniTask Start()
 		{
 			LoginGateWayBatchDetection.<Start>d__5 <Start>d__;
@@ -31,12 +30,11 @@ namespace CSharpScript.Game.Module.Login
 			return <Start>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038740 RID: 231232 RVA: 0x00D671D0 File Offset: 0x00D653D0
+		// Token: 0x0602D63D RID: 185917 RVA: 0x00CB5368 File Offset: 0x00CB3568
 		private unsafe void PrintResult()
 		{
-			List<LoginGateWayDetection> list = (from x in this.Detections
-			orderby x.AvgLatencyMs
-			select x).ToList<LoginGateWayDetection>();
+			List<LoginGateWayDetection> list = new List<LoginGateWayDetection>(this.Detections);
+			list.Sort((LoginGateWayDetection a, LoginGateWayDetection b) => a.AvgLatencyMs.CompareTo(b.AvgLatencyMs));
 			StringBuilder stringBuilder = new StringBuilder();
 			foreach (LoginGateWayDetection loginGateWayDetection in list)
 			{
@@ -63,7 +61,7 @@ namespace CSharpScript.Game.Module.Login
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06038741 RID: 231233 RVA: 0x00D6732C File Offset: 0x00D6552C
+		// Token: 0x0602D63E RID: 185918 RVA: 0x00CB54C4 File Offset: 0x00CB36C4
 		public void Stop()
 		{
 			foreach (LoginGateWayDetection loginGateWayDetection in this.Detections)
@@ -72,7 +70,7 @@ namespace CSharpScript.Game.Module.Login
 			}
 		}
 
-		// Token: 0x06038742 RID: 231234 RVA: 0x00D6737C File Offset: 0x00D6557C
+		// Token: 0x0602D63F RID: 185919 RVA: 0x00CB5514 File Offset: 0x00CB3714
 		private void CancelTimeoutHandle()
 		{
 			if (this.TimeoutHandle != null)
@@ -82,7 +80,7 @@ namespace CSharpScript.Game.Module.Login
 			}
 		}
 
-		// Token: 0x06038743 RID: 231235 RVA: 0x00D673A0 File Offset: 0x00D655A0
+		// Token: 0x0602D640 RID: 185920 RVA: 0x00CB5538 File Offset: 0x00CB3738
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -98,25 +96,31 @@ namespace CSharpScript.Game.Module.Login
 			{
 				return null;
 			}
-			return (from detection in this.Detections
-			where detection.IsSuccess
-			orderby detection.AvgLatencyMs
-			select detection).ToArray<LoginGateWayDetection>();
+			List<LoginGateWayDetection> list = new List<LoginGateWayDetection>();
+			foreach (LoginGateWayDetection loginGateWayDetection in this.Detections)
+			{
+				if (loginGateWayDetection.IsSuccess)
+				{
+					list.Add(loginGateWayDetection);
+				}
+			}
+			list.Sort((LoginGateWayDetection a, LoginGateWayDetection b) => a.AvgLatencyMs.CompareTo(b.AvgLatencyMs));
+			return list.ToArray();
 		}
 
-		// Token: 0x06038744 RID: 231236 RVA: 0x00D67416 File Offset: 0x00D65616
+		// Token: 0x0602D641 RID: 185921 RVA: 0x00CB55DC File Offset: 0x00CB37DC
 		public ELoginGateWayBatchDetection GetResult()
 		{
 			return this.Result;
 		}
 
-		// Token: 0x06038745 RID: 231237 RVA: 0x00D6741E File Offset: 0x00D6561E
+		// Token: 0x0602D642 RID: 185922 RVA: 0x00CB55E4 File Offset: 0x00CB37E4
 		public bool IsTimeOut()
 		{
 			return this.Result == ELoginGateWayBatchDetection.Timeout;
 		}
 
-		// Token: 0x06038746 RID: 231238 RVA: 0x00D6742C File Offset: 0x00D6562C
+		// Token: 0x0602D643 RID: 185923 RVA: 0x00CB55F0 File Offset: 0x00CB37F0
 		private bool HasSuccessDetection()
 		{
 			using (List<LoginGateWayDetection>.Enumerator enumerator = this.Detections.GetEnumerator())
@@ -132,17 +136,17 @@ namespace CSharpScript.Game.Module.Login
 			return false;
 		}
 
-		// Token: 0x0401DA57 RID: 121431
+		// Token: 0x040184E2 RID: 99554
 		private readonly int TimeoutMs;
 
-		// Token: 0x0401DA58 RID: 121432
+		// Token: 0x040184E3 RID: 99555
 		private readonly List<LoginGateWayDetection> Detections = new List<LoginGateWayDetection>();
 
-		// Token: 0x0401DA59 RID: 121433
+		// Token: 0x040184E4 RID: 99556
 		[Nullable(2)]
 		private TimerHandle TimeoutHandle;
 
-		// Token: 0x0401DA5A RID: 121434
+		// Token: 0x040184E5 RID: 99557
 		private ELoginGateWayBatchDetection Result;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CEF RID: 3311
+	// Token: 0x02000DE7 RID: 3559
 	public class IBeamLayoutConfig
 	{
-		// Token: 0x06004BA0 RID: 19360 RVA: 0x000BCC82 File Offset: 0x000BAE82
-		[NullableContext(1)]
+		// Token: 0x060050AE RID: 20654 RVA: 0x000C81B2 File Offset: 0x000C63B2
 		public static IBeamLayoutConfig Create(IBeamLayoutConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700177F RID: 6015
-		// (get) Token: 0x06004BA1 RID: 19361 RVA: 0x000BCCA1 File Offset: 0x000BAEA1
+		// Token: 0x170018DB RID: 6363
+		// (get) Token: 0x060050AF RID: 20655 RVA: 0x000C81D1 File Offset: 0x000C63D1
 		public virtual EBeamLayoutType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B3A RID: 11066
+		// Token: 0x04002DF4 RID: 11764
 		private IBeamLayoutConfig Instance;
 	}
 }

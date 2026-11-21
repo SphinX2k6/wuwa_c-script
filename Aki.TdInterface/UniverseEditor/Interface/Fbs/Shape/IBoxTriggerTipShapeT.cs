@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003BF9 RID: 15353
+	// Token: 0x02004005 RID: 16389
 	public class IBoxTriggerTipShapeT
 	{
-		// Token: 0x1700696D RID: 26989
-		// (get) Token: 0x06015215 RID: 86549 RVA: 0x0030FC84 File Offset: 0x0030DE84
-		// (set) Token: 0x06015216 RID: 86550 RVA: 0x0030FC8C File Offset: 0x0030DE8C
+		// Token: 0x17006F15 RID: 28437
+		// (get) Token: 0x0601670B RID: 91915 RVA: 0x0033680C File Offset: 0x00334A0C
+		// (set) Token: 0x0601670C RID: 91916 RVA: 0x00336814 File Offset: 0x00334A14
 		public ETriggerTipShape Type { get; set; }
 
-		// Token: 0x1700696E RID: 26990
-		// (get) Token: 0x06015217 RID: 86551 RVA: 0x0030FC95 File Offset: 0x0030DE95
-		// (set) Token: 0x06015218 RID: 86552 RVA: 0x0030FC9D File Offset: 0x0030DE9D
+		// Token: 0x17006F16 RID: 28438
+		// (get) Token: 0x0601670D RID: 91917 RVA: 0x0033681D File Offset: 0x00334A1D
+		// (set) Token: 0x0601670E RID: 91918 RVA: 0x00336825 File Offset: 0x00334A25
 		public IVectorInfoT Center { get; set; }
 
-		// Token: 0x1700696F RID: 26991
-		// (get) Token: 0x06015219 RID: 86553 RVA: 0x0030FCA6 File Offset: 0x0030DEA6
-		// (set) Token: 0x0601521A RID: 86554 RVA: 0x0030FCAE File Offset: 0x0030DEAE
+		// Token: 0x17006F17 RID: 28439
+		// (get) Token: 0x0601670F RID: 91919 RVA: 0x0033682E File Offset: 0x00334A2E
+		// (set) Token: 0x06016710 RID: 91920 RVA: 0x00336836 File Offset: 0x00334A36
 		public IVectorInfoT Size { get; set; }
 
-		// Token: 0x17006970 RID: 26992
-		// (get) Token: 0x0601521B RID: 86555 RVA: 0x0030FCB7 File Offset: 0x0030DEB7
-		// (set) Token: 0x0601521C RID: 86556 RVA: 0x0030FCBF File Offset: 0x0030DEBF
+		// Token: 0x17006F18 RID: 28440
+		// (get) Token: 0x06016711 RID: 91921 RVA: 0x0033683F File Offset: 0x00334A3F
+		// (set) Token: 0x06016712 RID: 91922 RVA: 0x00336847 File Offset: 0x00334A47
 		public IVectorInfoT Rotator { get; set; }
 
-		// Token: 0x0601521D RID: 86557 RVA: 0x0030FCC8 File Offset: 0x0030DEC8
+		// Token: 0x06016713 RID: 91923 RVA: 0x00336850 File Offset: 0x00334A50
 		public IBoxTriggerTipShapeT()
 		{
 			this.Type = ETriggerTipShape.Box;

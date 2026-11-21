@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A85 RID: 2693
+	// Token: 0x02000B5A RID: 2906
 	public class ConfigWeaponPropertyGrowthByCurveIdLevelAndBreachLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003F32 RID: 16178 RVA: 0x001BF870 File Offset: 0x001BDA70
+		// Token: 0x06004430 RID: 17456 RVA: 0x001DEC04 File Offset: 0x001DCE04
 		static ConfigWeaponPropertyGrowthByCurveIdLevelAndBreachLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWeaponPropertyGrowthByCurveIdLevelAndBreachLevel.CreateStaticDefaultValue), new Action(ConfigWeaponPropertyGrowthByCurveIdLevelAndBreachLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003F33 RID: 16179 RVA: 0x001BF890 File Offset: 0x001BDA90
+		// Token: 0x06004431 RID: 17457 RVA: 0x001DEC24 File Offset: 0x001DCE24
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWeaponPropertyGrowthByCurveIdLevelAndBreachLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003F34 RID: 16180 RVA: 0x001BF90F File Offset: 0x001BDB0F
+		// Token: 0x06004432 RID: 17458 RVA: 0x001DECA3 File Offset: 0x001DCEA3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWeaponPropertyGrowthByCurveIdLevelAndBreachLevel.LogPair = null;
 			ConfigWeaponPropertyGrowthByCurveIdLevelAndBreachLevel.HandleId = 0;
 		}
 
-		// Token: 0x06003F35 RID: 16181 RVA: 0x001BF91D File Offset: 0x001BDB1D
+		// Token: 0x06004433 RID: 17459 RVA: 0x001DECB1 File Offset: 0x001DCEB1
 		public static void Init()
 		{
 			ConfigWeaponPropertyGrowthByCurveIdLevelAndBreachLevel.HandleId = ConfigCommon.InitDataStatement(ConfigWeaponPropertyGrowthByCurveIdLevelAndBreachLevel.HandleId, "db_property.db", "select BinData from `WeaponPropertyGrowth` where CurveId = ? AND Level = ? AND BreachLevel = ?");
 		}
 
-		// Token: 0x06003F36 RID: 16182 RVA: 0x001BF938 File Offset: 0x001BDB38
+		// Token: 0x06004434 RID: 17460 RVA: 0x001DECCC File Offset: 0x001DCECC
 		public static WeaponPropertyGrowth? GetConfig(int p0CurveId, int p1Level, int p2BreachLevel, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigWeaponPropertyGrowthByCurveIdLevelAndBreachLevel.HandleId, ConfigWeaponPropertyGrowthByCurveIdLevelAndBreachLevel.LogPair))
@@ -98,22 +98,22 @@ namespace Aki.Config
 			return new WeaponPropertyGrowth?(rootAsWeaponPropertyGrowth);
 		}
 
-		// Token: 0x04004989 RID: 18825
+		// Token: 0x04004F5C RID: 20316
 		private const string DB = "db_property.db";
 
-		// Token: 0x0400498A RID: 18826
+		// Token: 0x04004F5D RID: 20317
 		private const string FILE = "s.属性.xlsx";
 
-		// Token: 0x0400498B RID: 18827
+		// Token: 0x04004F5E RID: 20318
 		private const string TABLE = "WeaponPropertyGrowth";
 
-		// Token: 0x0400498C RID: 18828
+		// Token: 0x04004F5F RID: 20319
 		private const string COMMAND = "select BinData from `WeaponPropertyGrowth` where CurveId = ? AND Level = ? AND BreachLevel = ?";
 
-		// Token: 0x0400498D RID: 18829
+		// Token: 0x04004F60 RID: 20320
 		private const string KEY_PREFIX = "WeaponPropertyGrowthByCurveIdLevelAndBreachLevel";
 
-		// Token: 0x0400498E RID: 18830
+		// Token: 0x04004F61 RID: 20321
 		[Nullable(new byte[]
 		{
 			2,
@@ -123,7 +123,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400498F RID: 18831
+		// Token: 0x04004F62 RID: 20322
 		private static int HandleId;
 	}
 }

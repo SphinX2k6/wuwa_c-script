@@ -4,37 +4,37 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model
 {
-	// Token: 0x0200473A RID: 18234
+	// Token: 0x0200366B RID: 13931
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WuWaGoRollbackPreStates : IStaticVariableResetter
 	{
-		// Token: 0x0602FA86 RID: 195206 RVA: 0x00B0C011 File Offset: 0x00B0A211
+		// Token: 0x06024250 RID: 148048 RVA: 0x00A3BFDD File Offset: 0x00A3A1DD
 		static WuWaGoRollbackPreStates()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WuWaGoRollbackPreStates.CreateStaticDefaultValue), new Action(WuWaGoRollbackPreStates.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602FA87 RID: 195207 RVA: 0x00B0C030 File Offset: 0x00B0A230
+		// Token: 0x06024251 RID: 148049 RVA: 0x00A3BFFC File Offset: 0x00A3A1FC
 		public static void CreateStaticDefaultValue()
 		{
 			WuWaGoRollbackPreStates._activeInstance = null;
 		}
 
-		// Token: 0x0602FA88 RID: 195208 RVA: 0x00B0C038 File Offset: 0x00B0A238
+		// Token: 0x06024252 RID: 148050 RVA: 0x00A3C004 File Offset: 0x00A3A204
 		public static void ResetStaticDefaultValue()
 		{
 			WuWaGoRollbackPreStates._activeInstance = null;
 		}
 
-		// Token: 0x0602FA89 RID: 195209 RVA: 0x00B0C040 File Offset: 0x00B0A240
+		// Token: 0x06024253 RID: 148051 RVA: 0x00A3C00C File Offset: 0x00A3A20C
 		[NullableContext(2)]
 		public static void Activate(WuWaGoRollbackPreStates instance)
 		{
 			WuWaGoRollbackPreStates._activeInstance = instance;
 		}
 
-		// Token: 0x0602FA8A RID: 195210 RVA: 0x00B0C048 File Offset: 0x00B0A248
+		// Token: 0x06024254 RID: 148052 RVA: 0x00A3C014 File Offset: 0x00A3A214
 		public static void MarkDirty(WuWaGoBaseUnit unit)
 		{
 			WuWaGoRollbackPreStates activeInstance = WuWaGoRollbackPreStates._activeInstance;
@@ -45,20 +45,20 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			activeInstance.MarkDirtyInner(unit);
 		}
 
-		// Token: 0x0602FA8B RID: 195211 RVA: 0x00B0C05A File Offset: 0x00B0A25A
+		// Token: 0x06024255 RID: 148053 RVA: 0x00A3C026 File Offset: 0x00A3A226
 		public static bool IsSuppressed()
 		{
 			WuWaGoRollbackPreStates activeInstance = WuWaGoRollbackPreStates._activeInstance;
 			return activeInstance != null && activeInstance.Suppressed;
 		}
 
-		// Token: 0x0602FA8C RID: 195212 RVA: 0x00B0C06C File Offset: 0x00B0A26C
+		// Token: 0x06024256 RID: 148054 RVA: 0x00A3C038 File Offset: 0x00A3A238
 		public void RegisterCommitHandler(Action<Dictionary<int, IRollbackCapture>> handler)
 		{
 			this.CommitHandler = handler;
 		}
 
-		// Token: 0x0602FA8D RID: 195213 RVA: 0x00B0C075 File Offset: 0x00B0A275
+		// Token: 0x06024257 RID: 148055 RVA: 0x00A3C041 File Offset: 0x00A3A241
 		public void Begin()
 		{
 			this.FlushPendingCommit();
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			this.Active = true;
 		}
 
-		// Token: 0x0602FA8E RID: 195214 RVA: 0x00B0C090 File Offset: 0x00B0A290
+		// Token: 0x06024258 RID: 148056 RVA: 0x00A3C05C File Offset: 0x00A3A25C
 		public void FlushPendingCommit()
 		{
 			if (this.Captures.Count == 0)
@@ -83,20 +83,20 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			commitHandler(obj);
 		}
 
-		// Token: 0x0602FA8F RID: 195215 RVA: 0x00B0C0D4 File Offset: 0x00B0A2D4
+		// Token: 0x06024259 RID: 148057 RVA: 0x00A3C0A0 File Offset: 0x00A3A2A0
 		public void ResetCaptures()
 		{
 			this.Captures.Clear();
 		}
 
-		// Token: 0x0602FA90 RID: 195216 RVA: 0x00B0C0E1 File Offset: 0x00B0A2E1
+		// Token: 0x0602425A RID: 148058 RVA: 0x00A3C0AD File Offset: 0x00A3A2AD
 		public void Discard()
 		{
 			this.Active = false;
 			this.Captures.Clear();
 		}
 
-		// Token: 0x0602FA91 RID: 195217 RVA: 0x00B0C0F8 File Offset: 0x00B0A2F8
+		// Token: 0x0602425B RID: 148059 RVA: 0x00A3C0C4 File Offset: 0x00A3A2C4
 		public T WithSuppressed<[Nullable(2)] T>(Func<T> fn)
 		{
 			bool suppressed = this.Suppressed;
@@ -113,13 +113,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			return result;
 		}
 
-		// Token: 0x0602FA92 RID: 195218 RVA: 0x00B0C138 File Offset: 0x00B0A338
+		// Token: 0x0602425C RID: 148060 RVA: 0x00A3C104 File Offset: 0x00A3A304
 		public void SetSuppressed(bool suppressed)
 		{
 			this.Suppressed = suppressed;
 		}
 
-		// Token: 0x0602FA93 RID: 195219 RVA: 0x00B0C144 File Offset: 0x00B0A344
+		// Token: 0x0602425D RID: 148061 RVA: 0x00A3C110 File Offset: 0x00A3A310
 		private void MarkDirtyInner(WuWaGoBaseUnit unit)
 		{
 			if (!this.Active || this.Suppressed)
@@ -138,20 +138,20 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			this.Captures[unit.Id] = rollbackCapture;
 		}
 
-		// Token: 0x04019BC0 RID: 105408
+		// Token: 0x04014270 RID: 82544
 		[Nullable(2)]
 		private static WuWaGoRollbackPreStates _activeInstance;
 
-		// Token: 0x04019BC1 RID: 105409
+		// Token: 0x04014271 RID: 82545
 		private bool Active;
 
-		// Token: 0x04019BC2 RID: 105410
+		// Token: 0x04014272 RID: 82546
 		private bool Suppressed;
 
-		// Token: 0x04019BC3 RID: 105411
+		// Token: 0x04014273 RID: 82547
 		private readonly Dictionary<int, IRollbackCapture> Captures = new Dictionary<int, IRollbackCapture>();
 
-		// Token: 0x04019BC4 RID: 105412
+		// Token: 0x04014274 RID: 82548
 		[Nullable(new byte[]
 		{
 			2,

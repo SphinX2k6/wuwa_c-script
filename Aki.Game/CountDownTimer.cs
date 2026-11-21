@@ -12,10 +12,10 @@ using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D95 RID: 7573
+// Token: 0x02001257 RID: 4695
 public class CountDownTimer : LogicTreeTimerBase
 {
-	// Token: 0x0600E5F2 RID: 58866 RVA: 0x00362BE0 File Offset: 0x00360DE0
+	// Token: 0x0600BA10 RID: 47632 RVA: 0x0036E840 File Offset: 0x0036CA40
 	[NullableContext(1)]
 	public CountDownTimer(long treeIncId, int nodeId, ETimerType timerType, ETimerUiType uiType, string uiTitle, double intervalTime) : base(treeIncId, timerType.ToEnumString(), true, intervalTime)
 	{
@@ -24,7 +24,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		this.UiTitle = uiTitle;
 	}
 
-	// Token: 0x0600E5F3 RID: 58867 RVA: 0x00362C09 File Offset: 0x00360E09
+	// Token: 0x0600BA11 RID: 47633 RVA: 0x0036E869 File Offset: 0x0036CA69
 	public override void Destroy()
 	{
 		this.EndShowTimer();
@@ -32,7 +32,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		base.Destroy();
 	}
 
-	// Token: 0x0600E5F4 RID: 58868 RVA: 0x00362C20 File Offset: 0x00360E20
+	// Token: 0x0600BA12 RID: 47634 RVA: 0x0036E880 File Offset: 0x0036CA80
 	protected void OnAddEvents()
 	{
 		if (this.EventsRegistered)
@@ -45,7 +45,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		this.EventsRegistered = true;
 	}
 
-	// Token: 0x0600E5F5 RID: 58869 RVA: 0x00362C94 File Offset: 0x00360E94
+	// Token: 0x0600BA13 RID: 47635 RVA: 0x0036E8F4 File Offset: 0x0036CAF4
 	protected void OnRemoveEvents()
 	{
 		if (!this.EventsRegistered)
@@ -58,7 +58,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		this.EventsRegistered = false;
 	}
 
-	// Token: 0x0600E5F6 RID: 58870 RVA: 0x00362D08 File Offset: 0x00360F08
+	// Token: 0x0600BA14 RID: 47636 RVA: 0x0036E968 File Offset: 0x0036CB68
 	private void OnTimerInfoChanged(long treeIncId, ETimerType timerType, TimerSetType setType, int seconds)
 	{
 		if (treeIncId == 0L || treeIncId != this.TreeId || this.InnerTimerType != timerType.ToEnumString())
@@ -81,7 +81,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		this.NotifyTimerUiChange(this.GetRemainTime());
 	}
 
-	// Token: 0x0600E5F7 RID: 58871 RVA: 0x00362D94 File Offset: 0x00360F94
+	// Token: 0x0600BA15 RID: 47637 RVA: 0x0036E9F4 File Offset: 0x0036CBF4
 	protected override void OnTick(float delta)
 	{
 		double serverStopTimeStamp = TimeUtil.Instance.GetServerStopTimeStamp();
@@ -100,7 +100,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		}
 	}
 
-	// Token: 0x0600E5F8 RID: 58872 RVA: 0x00362DF4 File Offset: 0x00360FF4
+	// Token: 0x0600BA16 RID: 47638 RVA: 0x0036EA54 File Offset: 0x0036CC54
 	private void RequestTimerEnd()
 	{
 		if (this.RequestedEnd)
@@ -112,7 +112,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		GeneralLogicTreeController.Instance.RequestTimerEnd(this.TreeId, base.TimerType);
 	}
 
-	// Token: 0x0600E5F9 RID: 58873 RVA: 0x00362E24 File Offset: 0x00361024
+	// Token: 0x0600BA17 RID: 47639 RVA: 0x0036EA84 File Offset: 0x0036CC84
 	public override void StartShowTimer(double endTime, double pauseTime)
 	{
 		if (endTime == 0.0)
@@ -132,14 +132,14 @@ public class CountDownTimer : LogicTreeTimerBase
 		this.OnAddEvents();
 	}
 
-	// Token: 0x0600E5FA RID: 58874 RVA: 0x00362E9C File Offset: 0x0036109C
+	// Token: 0x0600BA18 RID: 47640 RVA: 0x0036EAFC File Offset: 0x0036CCFC
 	public override void EndShowTimer()
 	{
 		this.OnRemoveEvents();
 		this.TryCloseCountDownUi();
 	}
 
-	// Token: 0x0600E5FB RID: 58875 RVA: 0x00362EAC File Offset: 0x003610AC
+	// Token: 0x0600BA19 RID: 47641 RVA: 0x0036EB0C File Offset: 0x0036CD0C
 	private void TryOpenCountDownUi()
 	{
 		Dictionary<ETimerUiType, int> countDownTimerViewMap = GeneralLogicTreeModel.Instance.CountDownTimerViewMap;
@@ -166,7 +166,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		}
 	}
 
-	// Token: 0x0600E5FC RID: 58876 RVA: 0x00362F58 File Offset: 0x00361158
+	// Token: 0x0600BA1A RID: 47642 RVA: 0x0036EBB8 File Offset: 0x0036CDB8
 	private void TryCloseCountDownUi()
 	{
 		Dictionary<ETimerUiType, int> countDownTimerViewMap = GeneralLogicTreeModel.Instance.CountDownTimerViewMap;
@@ -204,7 +204,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		}
 	}
 
-	// Token: 0x0600E5FD RID: 58877 RVA: 0x00363034 File Offset: 0x00361234
+	// Token: 0x0600BA1B RID: 47643 RVA: 0x0036EC94 File Offset: 0x0036CE94
 	private void OpenNextCountDownUi()
 	{
 		Dictionary<ETimerUiType, int> countDownTimerViewMap = GeneralLogicTreeModel.Instance.CountDownTimerViewMap;
@@ -234,7 +234,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		}
 	}
 
-	// Token: 0x0600E5FE RID: 58878 RVA: 0x003630C0 File Offset: 0x003612C0
+	// Token: 0x0600BA1C RID: 47644 RVA: 0x0036ED20 File Offset: 0x0036CF20
 	private unsafe void OpenCountDownUi()
 	{
 		double remainTime = this.GetRemainTime();
@@ -292,7 +292,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		}
 	}
 
-	// Token: 0x0600E5FF RID: 58879 RVA: 0x00363274 File Offset: 0x00361474
+	// Token: 0x0600BA1D RID: 47645 RVA: 0x0036EED4 File Offset: 0x0036D0D4
 	private void OpenDefaultPromptCountDown(double remainTime)
 	{
 		GenericPrompt? promptInfo = GenericPromptConfig.Instance.GetPromptInfo(19);
@@ -325,7 +325,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		this.NotifyTimerUiChange(remainTime);
 	}
 
-	// Token: 0x0600E600 RID: 58880 RVA: 0x003633E4 File Offset: 0x003615E4
+	// Token: 0x0600BA1E RID: 47646 RVA: 0x0036F044 File Offset: 0x0036D244
 	private void OpenChallengeCountDown(double remainTime)
 	{
 		if (UiManager.Instance.GetViewByName(EUiViewName.CountDownChallenge) == null || GeneralLogicTreeModel.Instance.CountDownViewClosing)
@@ -336,7 +336,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		this.NotifyTimerUiChange(remainTime);
 	}
 
-	// Token: 0x0600E601 RID: 58881 RVA: 0x00363438 File Offset: 0x00361638
+	// Token: 0x0600BA1F RID: 47647 RVA: 0x0036F098 File Offset: 0x0036D298
 	private void OpenShipTowerCountDown(double remainTime)
 	{
 		if (UiManager.Instance.GetViewByName(EUiViewName.ShipTowerCountDownView) == null || GeneralLogicTreeModel.Instance.CountDownViewClosing)
@@ -349,7 +349,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		this.NotifyTimerUiChange(remainTime);
 	}
 
-	// Token: 0x0600E602 RID: 58882 RVA: 0x0036348C File Offset: 0x0036168C
+	// Token: 0x0600BA20 RID: 47648 RVA: 0x0036F0EC File Offset: 0x0036D2EC
 	private void OpenGreatSwordCountDown(double remainTime)
 	{
 		if (UiManager.Instance.GetViewByName(EUiViewName.GreatSwordCountDownView) == null || GeneralLogicTreeModel.Instance.CountDownViewClosing)
@@ -360,7 +360,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		this.NotifyTimerUiChange(remainTime);
 	}
 
-	// Token: 0x0600E603 RID: 58883 RVA: 0x003634E0 File Offset: 0x003616E0
+	// Token: 0x0600BA21 RID: 47649 RVA: 0x0036F140 File Offset: 0x0036D340
 	private void OpenMotorcycleCountDown(double remainTime)
 	{
 		if (UiManager.Instance.GetViewByName(EUiViewName.MotorcycleCountDownView) == null || GeneralLogicTreeModel.Instance.CountDownViewClosing)
@@ -370,7 +370,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		this.NotifyTimerUiChange(remainTime);
 	}
 
-	// Token: 0x0600E604 RID: 58884 RVA: 0x00363518 File Offset: 0x00361718
+	// Token: 0x0600BA22 RID: 47650 RVA: 0x0036F178 File Offset: 0x0036D378
 	private void OpenCyberpunkCountDown(double remainTime)
 	{
 		if (UiManager.Instance.GetViewByName(EUiViewName.CyberpunkCountDownView) == null || GeneralLogicTreeModel.Instance.CountDownViewClosing)
@@ -384,7 +384,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		this.NotifyTimerUiChange(remainTime);
 	}
 
-	// Token: 0x0600E605 RID: 58885 RVA: 0x0036356C File Offset: 0x0036176C
+	// Token: 0x0600BA23 RID: 47651 RVA: 0x0036F1CC File Offset: 0x0036D3CC
 	public override double GetRemainTime()
 	{
 		double val = (this.TimerEndTime - (this.TimerStartTime + this.TimerRunningDelta)) / 1000.0;
@@ -392,7 +392,7 @@ public class CountDownTimer : LogicTreeTimerBase
 		return Math.Max(Math.Max(val, 0.0), val2);
 	}
 
-	// Token: 0x0600E606 RID: 58886 RVA: 0x003635E0 File Offset: 0x003617E0
+	// Token: 0x0600BA24 RID: 47652 RVA: 0x0036F240 File Offset: 0x0036D440
 	private void NotifyTimerUiChange(double remainTime)
 	{
 		if (!GeneralLogicTreeModel.Instance.IsTimerUiOwner(this.TreeId))
@@ -448,52 +448,52 @@ public class CountDownTimer : LogicTreeTimerBase
 		});
 	}
 
-	// Token: 0x0600E607 RID: 58887 RVA: 0x003636CA File Offset: 0x003618CA
+	// Token: 0x0600BA25 RID: 47653 RVA: 0x0036F32A File Offset: 0x0036D52A
 	private void OnFailRangeTimerStartShow()
 	{
 		this.TryCloseCountDownUi();
 	}
 
-	// Token: 0x0600E608 RID: 58888 RVA: 0x003636D2 File Offset: 0x003618D2
+	// Token: 0x0600BA26 RID: 47654 RVA: 0x0036F332 File Offset: 0x0036D532
 	private void OnFailRangeTimerEndShow()
 	{
 		this.TryOpenCountDownUi();
 	}
 
-	// Token: 0x04006A5E RID: 27230
+	// Token: 0x04006B3F RID: 27455
 	private const int GENERAL_TIP_ID = 19;
 
-	// Token: 0x04006A5F RID: 27231
+	// Token: 0x04006B40 RID: 27456
 	private const int ONE_HUNDRED = 100;
 
-	// Token: 0x04006A60 RID: 27232
+	// Token: 0x04006B41 RID: 27457
 	private double TimerEndTime;
 
-	// Token: 0x04006A61 RID: 27233
+	// Token: 0x04006B42 RID: 27458
 	private double TimerPauseTime;
 
-	// Token: 0x04006A62 RID: 27234
+	// Token: 0x04006B43 RID: 27459
 	private double TimerStartTime;
 
-	// Token: 0x04006A63 RID: 27235
+	// Token: 0x04006B44 RID: 27460
 	private double TimerRunningDelta;
 
-	// Token: 0x04006A64 RID: 27236
+	// Token: 0x04006B45 RID: 27461
 	private bool RequestedEnd;
 
-	// Token: 0x04006A65 RID: 27237
+	// Token: 0x04006B46 RID: 27462
 	private double LastTickTime;
 
-	// Token: 0x04006A66 RID: 27238
+	// Token: 0x04006B47 RID: 27463
 	private readonly ETimerUiType UiType;
 
-	// Token: 0x04006A67 RID: 27239
+	// Token: 0x04006B48 RID: 27464
 	private readonly int NodeId;
 
-	// Token: 0x04006A68 RID: 27240
+	// Token: 0x04006B49 RID: 27465
 	[Nullable(2)]
 	private readonly string UiTitle;
 
-	// Token: 0x04006A69 RID: 27241
+	// Token: 0x04006B4A RID: 27466
 	private bool EventsRegistered;
 }

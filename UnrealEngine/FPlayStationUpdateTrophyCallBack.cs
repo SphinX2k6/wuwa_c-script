@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F04 RID: 7940
+	// Token: 0x02000611 RID: 1553
 	public sealed class FPlayStationUpdateTrophyCallBack : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E238 RID: 123448 RVA: 0x002CCDB2 File Offset: 0x002CAFB2
+		// Token: 0x06008878 RID: 34936 RVA: 0x000CDD3A File Offset: 0x000CBF3A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FPlayStationUpdateTrophyCallBack.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E239 RID: 123449 RVA: 0x002CCDBE File Offset: 0x002CAFBE
+		// Token: 0x06008879 RID: 34937 RVA: 0x000CDD46 File Offset: 0x000CBF46
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FPlayStationUpdateTrophyCallBack._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FPlayStationUpdateTrophyCallBack._FunctionPtr;
 		}
 
-		// Token: 0x0601E23A RID: 123450 RVA: 0x002CCDE1 File Offset: 0x002CAFE1
+		// Token: 0x0600887A RID: 34938 RVA: 0x000CDD69 File Offset: 0x000CBF69
 		public FPlayStationUpdateTrophyCallBack()
 		{
 		}
 
-		// Token: 0x0601E23B RID: 123451 RVA: 0x002CCDE9 File Offset: 0x002CAFE9
+		// Token: 0x0600887B RID: 34939 RVA: 0x000CDD71 File Offset: 0x000CBF71
 		[NullableContext(2)]
 		public FPlayStationUpdateTrophyCallBack(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E23C RID: 123452 RVA: 0x002CCDF3 File Offset: 0x002CAFF3
+		// Token: 0x0600887C RID: 34940 RVA: 0x000CDD7B File Offset: 0x000CBF7B
 		public FPlayStationUpdateTrophyCallBack(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E23D RID: 123453 RVA: 0x002CCDFE File Offset: 0x002CAFFE
+		// Token: 0x0600887D RID: 34941 RVA: 0x000CDD86 File Offset: 0x000CBF86
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int>) ?? ((Action<int>)Delegate.CreateDelegate(typeof(Action<int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E23E RID: 123454 RVA: 0x002CCE30 File Offset: 0x002CB030
+		// Token: 0x0600887E RID: 34942 RVA: 0x000CDDB8 File Offset: 0x000CBFB8
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<int> Callback)
 		{
 			if (FPlayStationUpdateTrophyCallBack.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FPlayStationUpdateTrophyCallBack.RegisterId);
 		}
 
-		// Token: 0x0601E23F RID: 123455 RVA: 0x002CCE6C File Offset: 0x002CB06C
+		// Token: 0x0600887F RID: 34943 RVA: 0x000CDDF4 File Offset: 0x000CBFF4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int ret)
 		{
 			FPlayStationUpdateTrophyCallBack.__FPlayStationUpdateTrophyCallBack_DelegateParams* ptr = stackalloc FPlayStationUpdateTrophyCallBack.__FPlayStationUpdateTrophyCallBack_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FPlayStationUpdateTrophyCallBack.__FPlayStationUpdateTrophyCallBack_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601E240 RID: 123456 RVA: 0x002CCEAC File Offset: 0x002CB0AC
+		// Token: 0x06008880 RID: 34944 RVA: 0x000CDE34 File Offset: 0x000CC034
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int> action = target as Action<int>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FPlayStationUpdateTrophyCallBack.__FPlayStationUpdateTrophyCallBack_DelegateParams*)__Parameters)->ret);
 		}
 
-		// Token: 0x0401046C RID: 66668
+		// Token: 0x04003B3E RID: 15166
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0401046D RID: 66669
+		// Token: 0x04003B3F RID: 15167
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.PlayStationUpdateTrophyCallBack__DelegateSignature";
 
-		// Token: 0x0401046E RID: 66670
+		// Token: 0x04003B40 RID: 15168
 		private static int RegisterId;
 
-		// Token: 0x020033F3 RID: 13299
+		// Token: 0x02000E42 RID: 3650
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FPlayStationUpdateTrophyCallBack_DelegateParams
+		private ref struct __FPlayStationUpdateTrophyCallBack_DelegateParams
 		{
-			// Token: 0x040173AD RID: 95149
+			// Token: 0x040061DC RID: 25052
 			[FieldOffset(0)]
 			public int ret;
 		}
 
-		// Token: 0x020033F4 RID: 13300
+		// Token: 0x02000E43 RID: 3651
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040173AE RID: 95150
+			// Token: 0x040061DD RID: 25053
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -1,94 +1,93 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Area;
 
-// Token: 0x02002467 RID: 9319
+// Token: 0x0200194C RID: 6476
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomInteractEditViewModel
 {
-	// Token: 0x1700186F RID: 6255
-	// (get) Token: 0x06012B34 RID: 76596 RVA: 0x0049D7CE File Offset: 0x0049B9CE
-	// (set) Token: 0x06012B35 RID: 76597 RVA: 0x0049D7D6 File Offset: 0x0049B9D6
+	// Token: 0x170018A9 RID: 6313
+	// (get) Token: 0x0600FFEC RID: 65516 RVA: 0x004AAF3A File Offset: 0x004A913A
+	// (set) Token: 0x0600FFED RID: 65517 RVA: 0x004AAF42 File Offset: 0x004A9142
 	public int SelectedItemIndex { get; set; }
 
-	// Token: 0x17001870 RID: 6256
-	// (get) Token: 0x06012B36 RID: 76598 RVA: 0x0049D7DF File Offset: 0x0049B9DF
-	// (set) Token: 0x06012B37 RID: 76599 RVA: 0x0049D7E7 File Offset: 0x0049B9E7
+	// Token: 0x170018AA RID: 6314
+	// (get) Token: 0x0600FFEE RID: 65518 RVA: 0x004AAF4B File Offset: 0x004A914B
+	// (set) Token: 0x0600FFEF RID: 65519 RVA: 0x004AAF53 File Offset: 0x004A9153
 	public EPhantomInteractEditBtnState BtnState { get; set; } = EPhantomInteractEditBtnState.Equip;
 
-	// Token: 0x17001871 RID: 6257
-	// (get) Token: 0x06012B38 RID: 76600 RVA: 0x0049D7F0 File Offset: 0x0049B9F0
-	// (set) Token: 0x06012B39 RID: 76601 RVA: 0x0049D7F8 File Offset: 0x0049B9F8
+	// Token: 0x170018AB RID: 6315
+	// (get) Token: 0x0600FFF0 RID: 65520 RVA: 0x004AAF5C File Offset: 0x004A915C
+	// (set) Token: 0x0600FFF1 RID: 65521 RVA: 0x004AAF64 File Offset: 0x004A9164
 	public bool BtnAvailable { get; set; } = true;
 
-	// Token: 0x17001872 RID: 6258
-	// (get) Token: 0x06012B3A RID: 76602 RVA: 0x0049D801 File Offset: 0x0049BA01
-	// (set) Token: 0x06012B3B RID: 76603 RVA: 0x0049D809 File Offset: 0x0049BA09
+	// Token: 0x170018AC RID: 6316
+	// (get) Token: 0x0600FFF2 RID: 65522 RVA: 0x004AAF6D File Offset: 0x004A916D
+	// (set) Token: 0x0600FFF3 RID: 65523 RVA: 0x004AAF75 File Offset: 0x004A9175
 	[Nullable(2)]
 	public IPhantomInteractItemData SelectedItemData { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x17001873 RID: 6259
-	// (get) Token: 0x06012B3C RID: 76604 RVA: 0x0049D812 File Offset: 0x0049BA12
-	// (set) Token: 0x06012B3D RID: 76605 RVA: 0x0049D81A File Offset: 0x0049BA1A
+	// Token: 0x170018AD RID: 6317
+	// (get) Token: 0x0600FFF4 RID: 65524 RVA: 0x004AAF7E File Offset: 0x004A917E
+	// (set) Token: 0x0600FFF5 RID: 65525 RVA: 0x004AAF86 File Offset: 0x004A9186
 	public PhantomInteractDetailViewModel DetailViewModel { get; set; } = new PhantomInteractDetailViewModel();
 
-	// Token: 0x17001874 RID: 6260
-	// (get) Token: 0x06012B3E RID: 76606 RVA: 0x0049D823 File Offset: 0x0049BA23
-	// (set) Token: 0x06012B3F RID: 76607 RVA: 0x0049D82B File Offset: 0x0049BA2B
+	// Token: 0x170018AE RID: 6318
+	// (get) Token: 0x0600FFF6 RID: 65526 RVA: 0x004AAF8F File Offset: 0x004A918F
+	// (set) Token: 0x0600FFF7 RID: 65527 RVA: 0x004AAF97 File Offset: 0x004A9197
 	public bool ShowDetail { get; set; }
 
-	// Token: 0x17001875 RID: 6261
-	// (get) Token: 0x06012B40 RID: 76608 RVA: 0x0049D834 File Offset: 0x0049BA34
-	// (set) Token: 0x06012B41 RID: 76609 RVA: 0x0049D83C File Offset: 0x0049BA3C
+	// Token: 0x170018AF RID: 6319
+	// (get) Token: 0x0600FFF8 RID: 65528 RVA: 0x004AAFA0 File Offset: 0x004A91A0
+	// (set) Token: 0x0600FFF9 RID: 65529 RVA: 0x004AAFA8 File Offset: 0x004A91A8
 	public List<IPhantomGridListData> GridsDataList { get; set; } = new List<IPhantomGridListData>();
 
-	// Token: 0x17001876 RID: 6262
-	// (get) Token: 0x06012B42 RID: 76610 RVA: 0x0049D845 File Offset: 0x0049BA45
-	// (set) Token: 0x06012B43 RID: 76611 RVA: 0x0049D84D File Offset: 0x0049BA4D
+	// Token: 0x170018B0 RID: 6320
+	// (get) Token: 0x0600FFFA RID: 65530 RVA: 0x004AAFB1 File Offset: 0x004A91B1
+	// (set) Token: 0x0600FFFB RID: 65531 RVA: 0x004AAFB9 File Offset: 0x004A91B9
 	[Nullable(0)]
 	public ValueTuple<int, int> SelectedGridItemIndex { [NullableContext(0)] get; [NullableContext(0)] set; } = new ValueTuple<int, int>(-1, -1);
 
-	// Token: 0x17001877 RID: 6263
-	// (get) Token: 0x06012B44 RID: 76612 RVA: 0x0049D856 File Offset: 0x0049BA56
-	// (set) Token: 0x06012B45 RID: 76613 RVA: 0x0049D85E File Offset: 0x0049BA5E
+	// Token: 0x170018B1 RID: 6321
+	// (get) Token: 0x0600FFFC RID: 65532 RVA: 0x004AAFC2 File Offset: 0x004A91C2
+	// (set) Token: 0x0600FFFD RID: 65533 RVA: 0x004AAFCA File Offset: 0x004A91CA
 	public Dictionary<int, PhantomInteractEditGridViewModel> GridViewModelMap { get; set; } = new Dictionary<int, PhantomInteractEditGridViewModel>();
 
-	// Token: 0x17001878 RID: 6264
-	// (get) Token: 0x06012B46 RID: 76614 RVA: 0x0049D867 File Offset: 0x0049BA67
-	// (set) Token: 0x06012B47 RID: 76615 RVA: 0x0049D86F File Offset: 0x0049BA6F
+	// Token: 0x170018B2 RID: 6322
+	// (get) Token: 0x0600FFFE RID: 65534 RVA: 0x004AAFD3 File Offset: 0x004A91D3
+	// (set) Token: 0x0600FFFF RID: 65535 RVA: 0x004AAFDB File Offset: 0x004A91DB
 	private List<int> SortGridViewModelIds { get; set; } = new List<int>();
 
-	// Token: 0x17001879 RID: 6265
-	// (get) Token: 0x06012B48 RID: 76616 RVA: 0x0049D878 File Offset: 0x0049BA78
-	// (set) Token: 0x06012B49 RID: 76617 RVA: 0x0049D880 File Offset: 0x0049BA80
+	// Token: 0x170018B3 RID: 6323
+	// (get) Token: 0x06010000 RID: 65536 RVA: 0x004AAFE4 File Offset: 0x004A91E4
+	// (set) Token: 0x06010001 RID: 65537 RVA: 0x004AAFEC File Offset: 0x004A91EC
 	[Nullable(2)]
 	private PhantomInteractEditGridViewModel SelectedGridDataInternal { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x1700187A RID: 6266
-	// (get) Token: 0x06012B4A RID: 76618 RVA: 0x0049D889 File Offset: 0x0049BA89
-	// (set) Token: 0x06012B4B RID: 76619 RVA: 0x0049D891 File Offset: 0x0049BA91
+	// Token: 0x170018B4 RID: 6324
+	// (get) Token: 0x06010002 RID: 65538 RVA: 0x004AAFF5 File Offset: 0x004A91F5
+	// (set) Token: 0x06010003 RID: 65539 RVA: 0x004AAFFD File Offset: 0x004A91FD
 	private PhantomInteractInfoData InfoData { get; set; } = new PhantomInteractInfoData();
 
-	// Token: 0x1700187B RID: 6267
-	// (get) Token: 0x06012B4C RID: 76620 RVA: 0x0049D89A File Offset: 0x0049BA9A
-	// (set) Token: 0x06012B4D RID: 76621 RVA: 0x0049D8A2 File Offset: 0x0049BAA2
+	// Token: 0x170018B5 RID: 6325
+	// (get) Token: 0x06010004 RID: 65540 RVA: 0x004AB006 File Offset: 0x004A9206
+	// (set) Token: 0x06010005 RID: 65541 RVA: 0x004AB00E File Offset: 0x004A920E
 	private int? FilterCost { get; set; }
 
-	// Token: 0x1700187C RID: 6268
-	// (get) Token: 0x06012B4E RID: 76622 RVA: 0x0049D8AB File Offset: 0x0049BAAB
-	// (set) Token: 0x06012B4F RID: 76623 RVA: 0x0049D8B3 File Offset: 0x0049BAB3
+	// Token: 0x170018B6 RID: 6326
+	// (get) Token: 0x06010006 RID: 65542 RVA: 0x004AB017 File Offset: 0x004A9217
+	// (set) Token: 0x06010007 RID: 65543 RVA: 0x004AB01F File Offset: 0x004A921F
 	private bool? FilterIsSpecial { get; set; }
 
-	// Token: 0x1700187D RID: 6269
-	// (get) Token: 0x06012B50 RID: 76624 RVA: 0x0049D8BC File Offset: 0x0049BABC
-	// (set) Token: 0x06012B51 RID: 76625 RVA: 0x0049D8C4 File Offset: 0x0049BAC4
+	// Token: 0x170018B7 RID: 6327
+	// (get) Token: 0x06010008 RID: 65544 RVA: 0x004AB028 File Offset: 0x004A9228
+	// (set) Token: 0x06010009 RID: 65545 RVA: 0x004AB030 File Offset: 0x004A9230
 	private List<int> RecommendedMonsterIds { get; set; } = new List<int>();
 
-	// Token: 0x06012B52 RID: 76626 RVA: 0x0049D8CD File Offset: 0x0049BACD
+	// Token: 0x0601000A RID: 65546 RVA: 0x004AB039 File Offset: 0x004A9239
 	private void LocalLog(string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -99,7 +98,7 @@ public class PhantomInteractEditViewModel
 	{
 	}
 
-	// Token: 0x06012B53 RID: 76627 RVA: 0x0049D8CF File Offset: 0x0049BACF
+	// Token: 0x0601000B RID: 65547 RVA: 0x004AB03B File Offset: 0x004A923B
 	public void ConfirmEquipHandler()
 	{
 		if (this.ConfirmEquipHandlerInternal == null)
@@ -109,7 +108,7 @@ public class PhantomInteractEditViewModel
 		this.ConfirmEquipHandlerInternal(this);
 	}
 
-	// Token: 0x06012B54 RID: 76628 RVA: 0x0049D8E6 File Offset: 0x0049BAE6
+	// Token: 0x0601000C RID: 65548 RVA: 0x004AB052 File Offset: 0x004A9252
 	public void SetConfirmEquipHandler([Nullable(new byte[]
 	{
 		2,
@@ -119,7 +118,7 @@ public class PhantomInteractEditViewModel
 		this.ConfirmEquipHandlerInternal = handler;
 	}
 
-	// Token: 0x06012B55 RID: 76629 RVA: 0x0049D8EF File Offset: 0x0049BAEF
+	// Token: 0x0601000D RID: 65549 RVA: 0x004AB05B File Offset: 0x004A925B
 	public void EquipRecommendHandler()
 	{
 		if (this.EquipRecommendHandlerInternal == null)
@@ -129,7 +128,7 @@ public class PhantomInteractEditViewModel
 		this.EquipRecommendHandlerInternal(this);
 	}
 
-	// Token: 0x06012B56 RID: 76630 RVA: 0x0049D906 File Offset: 0x0049BB06
+	// Token: 0x0601000E RID: 65550 RVA: 0x004AB072 File Offset: 0x004A9272
 	public void SetEquipRecommendHandler([Nullable(new byte[]
 	{
 		2,
@@ -139,7 +138,7 @@ public class PhantomInteractEditViewModel
 		this.EquipRecommendHandlerInternal = handler;
 	}
 
-	// Token: 0x06012B57 RID: 76631 RVA: 0x0049D90F File Offset: 0x0049BB0F
+	// Token: 0x0601000F RID: 65551 RVA: 0x004AB07B File Offset: 0x004A927B
 	public void EquipRecommendCallback()
 	{
 		if (this.EquipRecommendCallbackInternal != null)
@@ -149,14 +148,14 @@ public class PhantomInteractEditViewModel
 		}
 	}
 
-	// Token: 0x06012B58 RID: 76632 RVA: 0x0049D92B File Offset: 0x0049BB2B
+	// Token: 0x06010010 RID: 65552 RVA: 0x004AB097 File Offset: 0x004A9297
 	[NullableContext(2)]
 	public void SetEquipRecommendCallback(Action callback)
 	{
 		this.EquipRecommendCallbackInternal = callback;
 	}
 
-	// Token: 0x06012B59 RID: 76633 RVA: 0x0049D934 File Offset: 0x0049BB34
+	// Token: 0x06010011 RID: 65553 RVA: 0x004AB0A0 File Offset: 0x004A92A0
 	public void MoveNextSkinHandler()
 	{
 		if (this.MoveNextSkinHandlerInternal == null)
@@ -167,7 +166,7 @@ public class PhantomInteractEditViewModel
 		this.RefreshDetail();
 	}
 
-	// Token: 0x06012B5A RID: 76634 RVA: 0x0049D951 File Offset: 0x0049BB51
+	// Token: 0x06010012 RID: 65554 RVA: 0x004AB0BD File Offset: 0x004A92BD
 	public void SetMoveNextSkinHandler([Nullable(new byte[]
 	{
 		2,
@@ -177,8 +176,8 @@ public class PhantomInteractEditViewModel
 		this.MoveNextSkinHandlerInternal = handler;
 	}
 
-	// Token: 0x1700187E RID: 6270
-	// (get) Token: 0x06012B5B RID: 76635 RVA: 0x0049D95A File Offset: 0x0049BB5A
+	// Token: 0x170018B8 RID: 6328
+	// (get) Token: 0x06010013 RID: 65555 RVA: 0x004AB0C6 File Offset: 0x004A92C6
 	[Nullable(2)]
 	public PhantomInteractEditGridViewModel SelectedGridData
 	{
@@ -189,13 +188,13 @@ public class PhantomInteractEditViewModel
 		}
 	}
 
-	// Token: 0x06012B5C RID: 76636 RVA: 0x0049D962 File Offset: 0x0049BB62
+	// Token: 0x06010014 RID: 65556 RVA: 0x004AB0CE File Offset: 0x004A92CE
 	public List<int> GetFilteredRecommendedIdList()
 	{
 		return this.FilteredRecommendedMonsterIds;
 	}
 
-	// Token: 0x06012B5D RID: 76637 RVA: 0x0049D96C File Offset: 0x0049BB6C
+	// Token: 0x06010015 RID: 65557 RVA: 0x004AB0D8 File Offset: 0x004A92D8
 	public void InitData(PhantomInteractInfoData infoData, int selectedItemIndex)
 	{
 		this.InfoData = infoData;
@@ -223,7 +222,7 @@ public class PhantomInteractEditViewModel
 		}
 	}
 
-	// Token: 0x06012B5E RID: 76638 RVA: 0x0049DA18 File Offset: 0x0049BC18
+	// Token: 0x06010016 RID: 65558 RVA: 0x004AB184 File Offset: 0x004A9384
 	public void SelectItem(int index)
 	{
 		this.SelectedItemIndex = index;
@@ -239,7 +238,7 @@ public class PhantomInteractEditViewModel
 		this.RefreshBtnState();
 	}
 
-	// Token: 0x06012B5F RID: 76639 RVA: 0x0049DA70 File Offset: 0x0049BC70
+	// Token: 0x06010017 RID: 65559 RVA: 0x004AB1DC File Offset: 0x004A93DC
 	public void SelectGrid(int monsterId)
 	{
 		this.SelectedGridItemIndex = this.SelectGridViewModel(monsterId);
@@ -256,7 +255,7 @@ public class PhantomInteractEditViewModel
 		this.RefreshBtnState();
 	}
 
-	// Token: 0x06012B60 RID: 76640 RVA: 0x0049DAC0 File Offset: 0x0049BCC0
+	// Token: 0x06010018 RID: 65560 RVA: 0x004AB22C File Offset: 0x004A942C
 	public int FindGridIndexInMultiTemplate(int monsterId)
 	{
 		if (this.FilteredRecommendedMonsterIds.Count <= 0)
@@ -276,7 +275,7 @@ public class PhantomInteractEditViewModel
 		return -1;
 	}
 
-	// Token: 0x06012B61 RID: 76641 RVA: 0x0049DB50 File Offset: 0x0049BD50
+	// Token: 0x06010019 RID: 65561 RVA: 0x004AB2BC File Offset: 0x004A94BC
 	private void RefreshBtnState()
 	{
 		if (this.SelectedGridData == null)
@@ -299,7 +298,7 @@ public class PhantomInteractEditViewModel
 		this.BtnState = ((num.GetValueOrDefault() == num2.GetValueOrDefault() & num != null == (num2 != null)) ? EPhantomInteractEditBtnState.UnEquip : EPhantomInteractEditBtnState.Swap);
 	}
 
-	// Token: 0x06012B62 RID: 76642 RVA: 0x0049DC14 File Offset: 0x0049BE14
+	// Token: 0x0601001A RID: 65562 RVA: 0x004AB380 File Offset: 0x004A9580
 	private void InitGridViewModels(List<IPhantomInteractGridData> gridDataList)
 	{
 		this.GridViewModelMap.Clear();
@@ -320,13 +319,11 @@ public class PhantomInteractEditViewModel
 				this.GridViewModelMap[phantomInteractGridData2.MonsterId] = phantomInteractEditGridViewModel2;
 			}
 		}
-		this.SortGridViewModelIds = (from a in this.GridViewModelMap.Values
-		orderby a.SortId
-		select a into vm
-		select vm.MonsterId).ToList<int>();
+		List<PhantomInteractEditGridViewModel> source = NoLinq.SortToList<PhantomInteractEditGridViewModel>(this.GridViewModelMap.Values, (PhantomInteractEditGridViewModel left, PhantomInteractEditGridViewModel right) => left.SortId.CompareTo(right.SortId));
+		this.SortGridViewModelIds = NoLinq.SelectToList<PhantomInteractEditGridViewModel, int>(source, (PhantomInteractEditGridViewModel model) => model.MonsterId);
 	}
 
-	// Token: 0x06012B63 RID: 76643 RVA: 0x0049DD70 File Offset: 0x0049BF70
+	// Token: 0x0601001B RID: 65563 RVA: 0x004AB4DC File Offset: 0x004A96DC
 	[NullableContext(0)]
 	private ValueTuple<int, int> SelectGridViewModel(int monsterId)
 	{
@@ -361,7 +358,7 @@ public class PhantomInteractEditViewModel
 		return valueTuple2.GetValueOrDefault();
 	}
 
-	// Token: 0x06012B64 RID: 76644 RVA: 0x0049DE44 File Offset: 0x0049C044
+	// Token: 0x0601001C RID: 65564 RVA: 0x004AB5B0 File Offset: 0x004A97B0
 	private void RefreshDetail()
 	{
 		int? num = null;
@@ -387,13 +384,13 @@ public class PhantomInteractEditViewModel
 		this.ShowDetail = false;
 	}
 
-	// Token: 0x06012B65 RID: 76645 RVA: 0x0049DED0 File Offset: 0x0049C0D0
+	// Token: 0x0601001D RID: 65565 RVA: 0x004AB63C File Offset: 0x004A983C
 	public void SetFilterCost(int cost)
 	{
 		this.FilterCost = ((cost > 0) ? new int?(cost) : null);
 	}
 
-	// Token: 0x06012B66 RID: 76646 RVA: 0x0049DEF8 File Offset: 0x0049C0F8
+	// Token: 0x0601001E RID: 65566 RVA: 0x004AB664 File Offset: 0x004A9864
 	public void SetFilterIsSpecial(EFilterIsSpecialOption option)
 	{
 		bool? filterIsSpecial = null;
@@ -408,7 +405,7 @@ public class PhantomInteractEditViewModel
 		this.FilterIsSpecial = filterIsSpecial;
 	}
 
-	// Token: 0x06012B67 RID: 76647 RVA: 0x0049DF30 File Offset: 0x0049C130
+	// Token: 0x0601001F RID: 65567 RVA: 0x004AB69C File Offset: 0x004A989C
 	public void RefreshFilterGridViewData()
 	{
 		this.FilteredGridMonsterIds.Clear();
@@ -480,13 +477,13 @@ public class PhantomInteractEditViewModel
 		}
 	}
 
-	// Token: 0x06012B68 RID: 76648 RVA: 0x0049E0F8 File Offset: 0x0049C2F8
+	// Token: 0x06010020 RID: 65568 RVA: 0x004AB864 File Offset: 0x004A9A64
 	private bool FilterOnItem(IPhantomInteractGridData data)
 	{
 		return (this.FilterCost == null || data.Cost == this.FilterCost.Value) && (this.FilterIsSpecial == null || data.IsSpecial == this.FilterIsSpecial.Value);
 	}
 
-	// Token: 0x06012B69 RID: 76649 RVA: 0x0049E158 File Offset: 0x0049C358
+	// Token: 0x06010021 RID: 65569 RVA: 0x004AB8C4 File Offset: 0x004A9AC4
 	private unsafe List<int> LoadAreaRelativeData(int currentAreaId)
 	{
 		this.AreaSet.Clear();
@@ -515,7 +512,7 @@ public class PhantomInteractEditViewModel
 		return list;
 	}
 
-	// Token: 0x06012B6A RID: 76650 RVA: 0x0049E274 File Offset: 0x0049C474
+	// Token: 0x06010022 RID: 65570 RVA: 0x004AB9E0 File Offset: 0x004A9BE0
 	private bool CheckInteractAreaListInRecommendArea(IReadOnlyList<int> interactAreaIds)
 	{
 		for (int i = 0; i < interactAreaIds.Count; i++)
@@ -528,7 +525,7 @@ public class PhantomInteractEditViewModel
 		return false;
 	}
 
-	// Token: 0x06012B6B RID: 76651 RVA: 0x0049E2AC File Offset: 0x0049C4AC
+	// Token: 0x06010023 RID: 65571 RVA: 0x004ABA18 File Offset: 0x004A9C18
 	private bool CheckInteractAreaListInRecommendArea(CalabashDevelopReward config)
 	{
 		int[] interactAreaListArray = config.GetInteractAreaListArray();
@@ -546,19 +543,19 @@ public class PhantomInteractEditViewModel
 		return false;
 	}
 
-	// Token: 0x04008CE6 RID: 36070
+	// Token: 0x04008E2D RID: 36397
 	private readonly List<int> FilteredGridMonsterIds = new List<int>();
 
-	// Token: 0x04008CE8 RID: 36072
+	// Token: 0x04008E2F RID: 36399
 	private readonly List<int> FilteredRecommendedMonsterIds = new List<int>();
 
-	// Token: 0x04008CE9 RID: 36073
+	// Token: 0x04008E30 RID: 36400
 	private readonly List<int> FilteredElseMonsterIds = new List<int>();
 
-	// Token: 0x04008CEA RID: 36074
+	// Token: 0x04008E31 RID: 36401
 	private readonly HashSet<int> AreaSet = new HashSet<int>();
 
-	// Token: 0x04008CEB RID: 36075
+	// Token: 0x04008E32 RID: 36402
 	[Nullable(new byte[]
 	{
 		2,
@@ -566,7 +563,7 @@ public class PhantomInteractEditViewModel
 	})]
 	private Action<PhantomInteractEditViewModel> ConfirmEquipHandlerInternal;
 
-	// Token: 0x04008CEC RID: 36076
+	// Token: 0x04008E33 RID: 36403
 	[Nullable(new byte[]
 	{
 		2,
@@ -574,7 +571,7 @@ public class PhantomInteractEditViewModel
 	})]
 	private Action<PhantomInteractEditViewModel> EquipRecommendHandlerInternal;
 
-	// Token: 0x04008CED RID: 36077
+	// Token: 0x04008E34 RID: 36404
 	[Nullable(new byte[]
 	{
 		2,
@@ -582,7 +579,7 @@ public class PhantomInteractEditViewModel
 	})]
 	private Action<PhantomInteractEditViewModel> MoveNextSkinHandlerInternal;
 
-	// Token: 0x04008CEE RID: 36078
+	// Token: 0x04008E35 RID: 36405
 	[Nullable(2)]
 	private Action EquipRecommendCallbackInternal;
 }

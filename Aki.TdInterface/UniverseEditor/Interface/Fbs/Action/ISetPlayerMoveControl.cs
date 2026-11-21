@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200704C RID: 28748
+	// Token: 0x02007818 RID: 30744
 	public struct ISetPlayerMoveControl : IFlatbufferObject
 	{
-		// Token: 0x1700D588 RID: 54664
-		// (get) Token: 0x06032DF5 RID: 208373 RVA: 0x006DCAFB File Offset: 0x006DACFB
+		// Token: 0x1700E169 RID: 57705
+		// (get) Token: 0x06036092 RID: 221330 RVA: 0x0073D023 File Offset: 0x0073B223
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032DF6 RID: 208374 RVA: 0x006DCB08 File Offset: 0x006DAD08
+		// Token: 0x06036093 RID: 221331 RVA: 0x0073D030 File Offset: 0x0073B230
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032DF7 RID: 208375 RVA: 0x006DCB10 File Offset: 0x006DAD10
+		// Token: 0x06036094 RID: 221332 RVA: 0x0073D038 File Offset: 0x0073B238
 		public static ISetPlayerMoveControl GetRootAsISetPlayerMoveControl(ByteBuffer _bb)
 		{
 			return ISetPlayerMoveControl.GetRootAsISetPlayerMoveControl(_bb, default(ISetPlayerMoveControl));
 		}
 
-		// Token: 0x06032DF8 RID: 208376 RVA: 0x006DCB2C File Offset: 0x006DAD2C
+		// Token: 0x06036095 RID: 221333 RVA: 0x0073D054 File Offset: 0x0073B254
 		public static ISetPlayerMoveControl GetRootAsISetPlayerMoveControl(ByteBuffer _bb, ISetPlayerMoveControl obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032DF9 RID: 208377 RVA: 0x006DCB49 File Offset: 0x006DAD49
+		// Token: 0x06036096 RID: 221334 RVA: 0x0073D071 File Offset: 0x0073B271
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032DFA RID: 208378 RVA: 0x006DCB58 File Offset: 0x006DAD58
+		// Token: 0x06036097 RID: 221335 RVA: 0x0073D080 File Offset: 0x0073B280
 		public ISetPlayerMoveControl __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D589 RID: 54665
-		// (get) Token: 0x06032DFB RID: 208379 RVA: 0x006DCB68 File Offset: 0x006DAD68
+		// Token: 0x1700E16A RID: 57706
+		// (get) Token: 0x06036098 RID: 221336 RVA: 0x0073D090 File Offset: 0x0073B290
 		public int Left
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D58A RID: 54666
-		// (get) Token: 0x06032DFC RID: 208380 RVA: 0x006DCBA4 File Offset: 0x006DADA4
+		// Token: 0x1700E16B RID: 57707
+		// (get) Token: 0x06036099 RID: 221337 RVA: 0x0073D0CC File Offset: 0x0073B2CC
 		public int Right
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D58B RID: 54667
-		// (get) Token: 0x06032DFD RID: 208381 RVA: 0x006DCBE0 File Offset: 0x006DADE0
+		// Token: 0x1700E16C RID: 57708
+		// (get) Token: 0x0603609A RID: 221338 RVA: 0x0073D108 File Offset: 0x0073B308
 		public int Forward
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D58C RID: 54668
-		// (get) Token: 0x06032DFE RID: 208382 RVA: 0x006DCC1C File Offset: 0x006DAE1C
+		// Token: 0x1700E16D RID: 57709
+		// (get) Token: 0x0603609B RID: 221339 RVA: 0x0073D144 File Offset: 0x0073B344
 		public int Back
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032DFF RID: 208383 RVA: 0x006DCC59 File Offset: 0x006DAE59
+		// Token: 0x0603609C RID: 221340 RVA: 0x0073D181 File Offset: 0x0073B381
 		public static Offset<ISetPlayerMoveControl> CreateISetPlayerMoveControl(FlatBufferBuilder builder, int Left = 0, int Right = 0, int Forward = 0, int Back = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetPlayerMoveControl.EndISetPlayerMoveControl(builder);
 		}
 
-		// Token: 0x06032E00 RID: 208384 RVA: 0x006DCC85 File Offset: 0x006DAE85
+		// Token: 0x0603609D RID: 221341 RVA: 0x0073D1AD File Offset: 0x0073B3AD
 		public static void StartISetPlayerMoveControl(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06032E01 RID: 208385 RVA: 0x006DCC8E File Offset: 0x006DAE8E
+		// Token: 0x0603609E RID: 221342 RVA: 0x0073D1B6 File Offset: 0x0073B3B6
 		public static void AddLeft(FlatBufferBuilder builder, int left)
 		{
 			builder.AddInt(0, left, 0);
 		}
 
-		// Token: 0x06032E02 RID: 208386 RVA: 0x006DCC99 File Offset: 0x006DAE99
+		// Token: 0x0603609F RID: 221343 RVA: 0x0073D1C1 File Offset: 0x0073B3C1
 		public static void AddRight(FlatBufferBuilder builder, int right)
 		{
 			builder.AddInt(1, right, 0);
 		}
 
-		// Token: 0x06032E03 RID: 208387 RVA: 0x006DCCA4 File Offset: 0x006DAEA4
+		// Token: 0x060360A0 RID: 221344 RVA: 0x0073D1CC File Offset: 0x0073B3CC
 		public static void AddForward(FlatBufferBuilder builder, int forward)
 		{
 			builder.AddInt(2, forward, 0);
 		}
 
-		// Token: 0x06032E04 RID: 208388 RVA: 0x006DCCAF File Offset: 0x006DAEAF
+		// Token: 0x060360A1 RID: 221345 RVA: 0x0073D1D7 File Offset: 0x0073B3D7
 		public static void AddBack(FlatBufferBuilder builder, int back)
 		{
 			builder.AddInt(3, back, 0);
 		}
 
-		// Token: 0x06032E05 RID: 208389 RVA: 0x006DCCBA File Offset: 0x006DAEBA
+		// Token: 0x060360A2 RID: 221346 RVA: 0x0073D1E2 File Offset: 0x0073B3E2
 		public static Offset<ISetPlayerMoveControl> EndISetPlayerMoveControl(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetPlayerMoveControl>(builder.EndTable());
 		}
 
-		// Token: 0x06032E06 RID: 208390 RVA: 0x006DCCC8 File Offset: 0x006DAEC8
+		// Token: 0x060360A3 RID: 221347 RVA: 0x0073D1F0 File Offset: 0x0073B3F0
 		public ISetPlayerMoveControlT UnPack()
 		{
 			ISetPlayerMoveControlT setPlayerMoveControlT = new ISetPlayerMoveControlT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setPlayerMoveControlT;
 		}
 
-		// Token: 0x06032E07 RID: 208391 RVA: 0x006DCCE3 File Offset: 0x006DAEE3
+		// Token: 0x060360A4 RID: 221348 RVA: 0x0073D20B File Offset: 0x0073B40B
 		public void UnPackTo(ISetPlayerMoveControlT _o)
 		{
 			_o.Left = this.Left;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.Back = this.Back;
 		}
 
-		// Token: 0x06032E08 RID: 208392 RVA: 0x006DCD18 File Offset: 0x006DAF18
+		// Token: 0x060360A5 RID: 221349 RVA: 0x0073D240 File Offset: 0x0073B440
 		public static Offset<ISetPlayerMoveControl> Pack(FlatBufferBuilder builder, ISetPlayerMoveControlT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetPlayerMoveControl.CreateISetPlayerMoveControl(builder, _o.Left, _o.Right, _o.Forward, _o.Back);
 		}
 
-		// Token: 0x04011A8F RID: 72335
+		// Token: 0x04012A7C RID: 76412
 		private Table __p;
 	}
 }

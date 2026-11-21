@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A55 RID: 23125
+	// Token: 0x02004A31 RID: 18993
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 	})]
 	public class FlagChallengeBuffAddItem : GridProxyAbstract<FlagChallengeBuffAddItemData>
 	{
-		// Token: 0x0603AA09 RID: 240137 RVA: 0x00DF4E94 File Offset: 0x00DF3094
+		// Token: 0x0602F952 RID: 194898 RVA: 0x00D45418 File Offset: 0x00D43618
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603AA0A RID: 240138 RVA: 0x00DF4EF0 File Offset: 0x00DF30F0
+		// Token: 0x0602F953 RID: 194899 RVA: 0x00D45474 File Offset: 0x00D43674
 		public override void Refresh(FlagChallengeBuffAddItemData data, bool isSelected, int gridIndex)
 		{
 			this.ItemData = data;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			base.GetText(2).SetText(data.Value, true);
 		}
 
-		// Token: 0x0401E8F3 RID: 125171
+		// Token: 0x0401939A RID: 103322
 		public FlagChallengeBuffAddItemData ItemData;
 	}
 }

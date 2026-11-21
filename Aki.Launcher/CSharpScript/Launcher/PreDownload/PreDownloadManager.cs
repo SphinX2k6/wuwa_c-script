@@ -14,29 +14,29 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.PreDownload
 {
-	// Token: 0x02000117 RID: 279
+	// Token: 0x0200011B RID: 283
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PreDownloadManager : IPreDownload, IStaticVariableResetter
 	{
-		// Token: 0x060008E8 RID: 2280 RVA: 0x00040A6C File Offset: 0x0003EC6C
+		// Token: 0x0600091C RID: 2332 RVA: 0x00042E34 File Offset: 0x00041034
 		static PreDownloadManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PreDownloadManager.CreateStaticDefaultValue), new Action(PreDownloadManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060008E9 RID: 2281 RVA: 0x00040A8B File Offset: 0x0003EC8B
+		// Token: 0x0600091D RID: 2333 RVA: 0x00042E53 File Offset: 0x00041053
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060008EA RID: 2282 RVA: 0x00040A8D File Offset: 0x0003EC8D
+		// Token: 0x0600091E RID: 2334 RVA: 0x00042E55 File Offset: 0x00041055
 		public static void ResetStaticDefaultValue()
 		{
 			PreDownloadManager.PreDownload = null;
 		}
 
-		// Token: 0x060008EB RID: 2283 RVA: 0x00040A98 File Offset: 0x0003EC98
+		// Token: 0x0600091F RID: 2335 RVA: 0x00042E60 File Offset: 0x00041060
 		public static IPreDownload Get()
 		{
 			if (PreDownloadManager.PreDownload == null)
@@ -54,12 +54,12 @@ namespace CSharpScript.Launcher.PreDownload
 			return PreDownloadManager.PreDownload;
 		}
 
-		// Token: 0x060008EC RID: 2284 RVA: 0x00040B00 File Offset: 0x0003ED00
+		// Token: 0x06000920 RID: 2336 RVA: 0x00042EC8 File Offset: 0x000410C8
 		private PreDownloadManager()
 		{
 		}
 
-		// Token: 0x060008ED RID: 2285 RVA: 0x00040B34 File Offset: 0x0003ED34
+		// Token: 0x06000921 RID: 2337 RVA: 0x00042EFC File Offset: 0x000410FC
 		public static string getLocalText([Nullable(2)] string textTableId, params string[] args)
 		{
 			if (string.IsNullOrEmpty(textTableId))
@@ -81,7 +81,7 @@ namespace CSharpScript.Launcher.PreDownload
 			return text;
 		}
 
-		// Token: 0x060008EE RID: 2286 RVA: 0x00040B9C File Offset: 0x0003ED9C
+		// Token: 0x06000922 RID: 2338 RVA: 0x00042F64 File Offset: 0x00041164
 		protected UniTask Init(string platform)
 		{
 			PreDownloadManager.<Init>d__24 <Init>d__;
@@ -93,7 +93,7 @@ namespace CSharpScript.Launcher.PreDownload
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060008EF RID: 2287 RVA: 0x00040BE8 File Offset: 0x0003EDE8
+		// Token: 0x06000923 RID: 2339 RVA: 0x00042FB0 File Offset: 0x000411B0
 		public void CheckEnabledWithTick()
 		{
 			LauncherLog.Instance.Info("PreDownloadManager add tick to check preDownload config", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -103,13 +103,13 @@ namespace CSharpScript.Launcher.PreDownload
 			}
 		}
 
-		// Token: 0x060008F0 RID: 2288 RVA: 0x00040C1B File Offset: 0x0003EE1B
+		// Token: 0x06000924 RID: 2340 RVA: 0x00042FE3 File Offset: 0x000411E3
 		public void TryRemoveTick()
 		{
 			this.RemoveTick();
 		}
 
-		// Token: 0x060008F1 RID: 2289 RVA: 0x00040C24 File Offset: 0x0003EE24
+		// Token: 0x06000925 RID: 2341 RVA: 0x00042FEC File Offset: 0x000411EC
 		protected void AddTick()
 		{
 			if (this.TickMgr != null && this.TickMgr.IsValid())
@@ -127,7 +127,7 @@ namespace CSharpScript.Launcher.PreDownload
 			this.TickMgr.AddTick(ETickingGroup.TG_PrePhysics, DelegateUtils.ToManualReleaseDelegate<FTickHandler>(this.TickDelegate), 0);
 		}
 
-		// Token: 0x060008F2 RID: 2290 RVA: 0x00040CBC File Offset: 0x0003EEBC
+		// Token: 0x06000926 RID: 2342 RVA: 0x00043084 File Offset: 0x00041284
 		protected void RemoveTick()
 		{
 			if (this.TickDelegate != null)
@@ -143,7 +143,7 @@ namespace CSharpScript.Launcher.PreDownload
 			this.Interval = 0f;
 		}
 
-		// Token: 0x060008F3 RID: 2291 RVA: 0x00040D0C File Offset: 0x0003EF0C
+		// Token: 0x06000927 RID: 2343 RVA: 0x000430D4 File Offset: 0x000412D4
 		protected UniTask Tick(float deltaSeconds)
 		{
 			PreDownloadManager.<Tick>d__29 <Tick>d__;
@@ -155,7 +155,7 @@ namespace CSharpScript.Launcher.PreDownload
 			return <Tick>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060008F4 RID: 2292 RVA: 0x00040D58 File Offset: 0x0003EF58
+		// Token: 0x06000928 RID: 2344 RVA: 0x00043120 File Offset: 0x00041320
 		protected UniTask CheckPreDownloadConfig()
 		{
 			PreDownloadManager.<CheckPreDownloadConfig>d__30 <CheckPreDownloadConfig>d__;
@@ -166,7 +166,7 @@ namespace CSharpScript.Launcher.PreDownload
 			return <CheckPreDownloadConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060008F5 RID: 2293 RVA: 0x00040D9B File Offset: 0x0003EF9B
+		// Token: 0x06000929 RID: 2345 RVA: 0x00043163 File Offset: 0x00041363
 		public void AddEnabledEvent(Action cb)
 		{
 			if (this.HasPreDownloadConfig())
@@ -180,7 +180,7 @@ namespace CSharpScript.Launcher.PreDownload
 			}
 		}
 
-		// Token: 0x060008F6 RID: 2294 RVA: 0x00040DBC File Offset: 0x0003EFBC
+		// Token: 0x0600092A RID: 2346 RVA: 0x00043184 File Offset: 0x00041384
 		public void RemoveEnabledEvent(Action cb)
 		{
 			if (cb != null)
@@ -189,7 +189,7 @@ namespace CSharpScript.Launcher.PreDownload
 			}
 		}
 
-		// Token: 0x060008F7 RID: 2295 RVA: 0x00040DCE File Offset: 0x0003EFCE
+		// Token: 0x0600092B RID: 2347 RVA: 0x00043196 File Offset: 0x00041396
 		public void AddCompleteEvent(Action cb)
 		{
 			if (cb != null)
@@ -198,7 +198,7 @@ namespace CSharpScript.Launcher.PreDownload
 			}
 		}
 
-		// Token: 0x060008F8 RID: 2296 RVA: 0x00040DE0 File Offset: 0x0003EFE0
+		// Token: 0x0600092C RID: 2348 RVA: 0x000431A8 File Offset: 0x000413A8
 		public void RemoveCompleteEvent(Action cb)
 		{
 			if (cb != null)
@@ -207,19 +207,19 @@ namespace CSharpScript.Launcher.PreDownload
 			}
 		}
 
-		// Token: 0x060008F9 RID: 2297 RVA: 0x00040DF2 File Offset: 0x0003EFF2
+		// Token: 0x0600092D RID: 2349 RVA: 0x000431BA File Offset: 0x000413BA
 		private bool HasPreDownloadConfig()
 		{
 			return this.Config != null;
 		}
 
-		// Token: 0x060008FA RID: 2298 RVA: 0x00040DFD File Offset: 0x0003EFFD
+		// Token: 0x0600092E RID: 2350 RVA: 0x000431C5 File Offset: 0x000413C5
 		public bool IsPreDownloadEnabled()
 		{
 			return this.HasPreDownloadConfig() && this.CheckedRes;
 		}
 
-		// Token: 0x060008FB RID: 2299 RVA: 0x00040E0F File Offset: 0x0003F00F
+		// Token: 0x0600092F RID: 2351 RVA: 0x000431D7 File Offset: 0x000413D7
 		public void SetView(IPreDownloadUiEvent ui)
 		{
 			if (this.UiAgent != null)
@@ -228,7 +228,7 @@ namespace CSharpScript.Launcher.PreDownload
 			}
 		}
 
-		// Token: 0x060008FC RID: 2300 RVA: 0x00040E25 File Offset: 0x0003F025
+		// Token: 0x06000930 RID: 2352 RVA: 0x000431ED File Offset: 0x000413ED
 		public void ClearView()
 		{
 			if (this.UiAgent != null)
@@ -237,7 +237,7 @@ namespace CSharpScript.Launcher.PreDownload
 			}
 		}
 
-		// Token: 0x060008FD RID: 2301 RVA: 0x00040E3C File Offset: 0x0003F03C
+		// Token: 0x06000931 RID: 2353 RVA: 0x00043204 File Offset: 0x00041404
 		protected UniTask GetPreDownloadVersionCfg()
 		{
 			PreDownloadManager.<GetPreDownloadVersionCfg>d__39 <GetPreDownloadVersionCfg>d__;
@@ -248,7 +248,7 @@ namespace CSharpScript.Launcher.PreDownload
 			return <GetPreDownloadVersionCfg>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060008FE RID: 2302 RVA: 0x00040E80 File Offset: 0x0003F080
+		// Token: 0x06000932 RID: 2354 RVA: 0x00043248 File Offset: 0x00041448
 		[NullableContext(0)]
 		protected UniTask<bool> GetPreDownloadTierVersionCfg()
 		{
@@ -260,7 +260,7 @@ namespace CSharpScript.Launcher.PreDownload
 			return <GetPreDownloadTierVersionCfg>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060008FF RID: 2303 RVA: 0x00040EC4 File Offset: 0x0003F0C4
+		// Token: 0x06000933 RID: 2355 RVA: 0x0004328C File Offset: 0x0004148C
 		[NullableContext(2)]
 		private string ResolvePreDownloadTierLabel()
 		{
@@ -276,7 +276,7 @@ namespace CSharpScript.Launcher.PreDownload
 			return null;
 		}
 
-		// Token: 0x06000900 RID: 2304 RVA: 0x00040EFC File Offset: 0x0003F0FC
+		// Token: 0x06000934 RID: 2356 RVA: 0x000432C4 File Offset: 0x000414C4
 		protected unsafe void InitPreDownloadVersion()
 		{
 			if (RemoteInfo.Instance.PreVerConfig == null)
@@ -411,7 +411,7 @@ namespace CSharpScript.Launcher.PreDownload
 			this.DiffUpdater.RegisterExtraRequireFiles(item7, item8);
 		}
 
-		// Token: 0x06000901 RID: 2305 RVA: 0x000414D8 File Offset: 0x0003F6D8
+		// Token: 0x06000935 RID: 2357 RVA: 0x000438A0 File Offset: 0x00041AA0
 		protected UniTask CheckResource()
 		{
 			PreDownloadManager.<CheckResource>d__43 <CheckResource>d__;
@@ -422,7 +422,7 @@ namespace CSharpScript.Launcher.PreDownload
 			return <CheckResource>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000902 RID: 2306 RVA: 0x0004151C File Offset: 0x0003F71C
+		// Token: 0x06000936 RID: 2358 RVA: 0x000438E4 File Offset: 0x00041AE4
 		protected UniTask DownloadPreResources()
 		{
 			PreDownloadManager.<DownloadPreResources>d__44 <DownloadPreResources>d__;
@@ -433,19 +433,19 @@ namespace CSharpScript.Launcher.PreDownload
 			return <DownloadPreResources>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000903 RID: 2307 RVA: 0x0004155F File Offset: 0x0003F75F
+		// Token: 0x06000937 RID: 2359 RVA: 0x00043927 File Offset: 0x00041B27
 		public long GetDownloadSize()
 		{
 			return this.TotalDownSize;
 		}
 
-		// Token: 0x06000904 RID: 2308 RVA: 0x00041567 File Offset: 0x0003F767
+		// Token: 0x06000938 RID: 2360 RVA: 0x0004392F File Offset: 0x00041B2F
 		public long GetNeedSpace()
 		{
 			return this.NeedSpace;
 		}
 
-		// Token: 0x06000905 RID: 2309 RVA: 0x00041570 File Offset: 0x0003F770
+		// Token: 0x06000939 RID: 2361 RVA: 0x00043938 File Offset: 0x00041B38
 		public void Start(EPreDownloadMode mode)
 		{
 			LauncherLog instance = LauncherLog.Instance;
@@ -455,7 +455,7 @@ namespace CSharpScript.Launcher.PreDownload
 			this.DownloadPreResources().Forget();
 		}
 
-		// Token: 0x06000906 RID: 2310 RVA: 0x000415B0 File Offset: 0x0003F7B0
+		// Token: 0x0600093A RID: 2362 RVA: 0x00043978 File Offset: 0x00041B78
 		public void Stop()
 		{
 			if (this.PreDownloadState == EPreDownloadState.Patching)
@@ -471,7 +471,7 @@ namespace CSharpScript.Launcher.PreDownload
 			this.PreDownloadState = EPreDownloadState.Stopped;
 		}
 
-		// Token: 0x06000907 RID: 2311 RVA: 0x00041614 File Offset: 0x0003F814
+		// Token: 0x0600093B RID: 2363 RVA: 0x000439DC File Offset: 0x00041BDC
 		public void Resume()
 		{
 			if (this.PreDownloadState == EPreDownloadState.Patching)
@@ -487,91 +487,91 @@ namespace CSharpScript.Launcher.PreDownload
 			this.DownloadPreResources().Forget();
 		}
 
-		// Token: 0x06000908 RID: 2312 RVA: 0x00041679 File Offset: 0x0003F879
+		// Token: 0x0600093C RID: 2364 RVA: 0x00043A41 File Offset: 0x00041C41
 		public bool IsDownloading()
 		{
 			return this.PreDownloadState == EPreDownloadState.Downloading;
 		}
 
-		// Token: 0x06000909 RID: 2313 RVA: 0x00041684 File Offset: 0x0003F884
+		// Token: 0x0600093D RID: 2365 RVA: 0x00043A4C File Offset: 0x00041C4C
 		public bool IsComplete()
 		{
 			return this.PreDownloadState == EPreDownloadState.Finished;
 		}
 
-		// Token: 0x0600090A RID: 2314 RVA: 0x0004168F File Offset: 0x0003F88F
+		// Token: 0x0600093E RID: 2366 RVA: 0x00043A57 File Offset: 0x00041C57
 		public EPreDownloadState GetState()
 		{
 			return this.PreDownloadState;
 		}
 
-		// Token: 0x0600090B RID: 2315 RVA: 0x00041697 File Offset: 0x0003F897
+		// Token: 0x0600093F RID: 2367 RVA: 0x00043A5F File Offset: 0x00041C5F
 		[CompilerGenerated]
 		private void <AddTick>g__TickCallback|27_0(float deltaSeconds)
 		{
 			this.Tick(deltaSeconds).Forget();
 		}
 
-		// Token: 0x04000514 RID: 1300
+		// Token: 0x0400054F RID: 1359
 		private const int TICK_INTERVAL_S = 600;
 
-		// Token: 0x04000515 RID: 1301
+		// Token: 0x04000550 RID: 1360
 		[Nullable(2)]
 		private static IPreDownload PreDownload;
 
-		// Token: 0x04000516 RID: 1302
+		// Token: 0x04000551 RID: 1361
 		private string Platform = "";
 
-		// Token: 0x04000517 RID: 1303
+		// Token: 0x04000552 RID: 1362
 		private EPreDownloadState PreDownloadState;
 
-		// Token: 0x04000518 RID: 1304
+		// Token: 0x04000553 RID: 1363
 		[Nullable(2)]
 		private object PreDownloadRunToken;
 
-		// Token: 0x04000519 RID: 1305
+		// Token: 0x04000554 RID: 1364
 		[Nullable(2)]
 		private PreDownloadConfig Config;
 
-		// Token: 0x0400051A RID: 1306
+		// Token: 0x04000555 RID: 1365
 		private readonly HashSet<Action> EnabledCbSet = new HashSet<Action>();
 
-		// Token: 0x0400051B RID: 1307
+		// Token: 0x04000556 RID: 1366
 		private readonly HashSet<Action> CompleteCbSet = new HashSet<Action>();
 
-		// Token: 0x0400051C RID: 1308
+		// Token: 0x04000557 RID: 1367
 		[Nullable(2)]
 		private UKuroTickManager TickMgr;
 
-		// Token: 0x0400051D RID: 1309
+		// Token: 0x04000558 RID: 1368
 		[Nullable(2)]
 		private Action<float> TickDelegate;
 
-		// Token: 0x0400051E RID: 1310
+		// Token: 0x04000559 RID: 1369
 		private float Interval;
 
-		// Token: 0x0400051F RID: 1311
+		// Token: 0x0400055A RID: 1370
 		[Nullable(2)]
 		private PreDownloadUiEvent UiAgent;
 
-		// Token: 0x04000520 RID: 1312
+		// Token: 0x0400055B RID: 1371
 		private bool CheckedRes;
 
-		// Token: 0x04000521 RID: 1313
+		// Token: 0x0400055C RID: 1372
 		[Nullable(2)]
 		private DiffUpdate DiffUpdater;
 
-		// Token: 0x04000522 RID: 1314
+		// Token: 0x0400055D RID: 1373
 		[Nullable(2)]
 		private RemoteVersionConfig PreTierConfig;
 
-		// Token: 0x04000523 RID: 1315
+		// Token: 0x0400055E RID: 1374
 		private List<RequireFileInfo> RequireFiles = new List<RequireFileInfo>();
 
-		// Token: 0x04000524 RID: 1316
+		// Token: 0x0400055F RID: 1375
 		private long TotalDownSize;
 
-		// Token: 0x04000525 RID: 1317
+		// Token: 0x04000560 RID: 1376
 		private long NeedSpace;
 	}
 }

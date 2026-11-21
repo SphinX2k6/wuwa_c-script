@@ -4,19 +4,19 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi
 {
-	// Token: 0x02006DB9 RID: 28089
+	// Token: 0x02005F38 RID: 24376
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelAiTask : LevelAiStandaloneNode
 	{
-		// Token: 0x06044897 RID: 280727 RVA: 0x010E6E83 File Offset: 0x010E5083
+		// Token: 0x0603A9FB RID: 240123 RVA: 0x010910AB File Offset: 0x0108F2AB
 		public override void Serialize(CharacterPlanComponent ownerComponent, CreatureDataComponent creatureDataComp, string description, [Nullable(2)] ActionParams @params = null)
 		{
 			base.Serialize(ownerComponent, creatureDataComp, description, null);
 			this.Params = @params;
 		}
 
-		// Token: 0x06044898 RID: 280728 RVA: 0x010E6E98 File Offset: 0x010E5098
+		// Token: 0x0603A9FC RID: 240124 RVA: 0x010910C0 File Offset: 0x0108F2C0
 		public unsafe override void MakePlanExpansions(PlanningContext context, LevelAiWorldState worldState)
 		{
 			string reason = "Task Make Plan Expansions";
@@ -27,21 +27,21 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.CreatePlanSteps(context, worldState.MakeCopy());
 		}
 
-		// Token: 0x06044899 RID: 280729 RVA: 0x010E6F14 File Offset: 0x010E5114
+		// Token: 0x0603A9FD RID: 240125 RVA: 0x0109113C File Offset: 0x0108F33C
 		public ELevelAiNodeResult WrappedExecuteTask()
 		{
 			base.PrintDescription("Execute Task", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return this.ExecuteTask();
 		}
 
-		// Token: 0x0604489A RID: 280730 RVA: 0x010E6F3C File Offset: 0x010E513C
+		// Token: 0x0603A9FE RID: 240126 RVA: 0x01091164 File Offset: 0x0108F364
 		public ELevelAiNodeResult WrappedAbortTask()
 		{
 			base.PrintDescription("Abort Task", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return this.AbortTask();
 		}
 
-		// Token: 0x0604489B RID: 280731 RVA: 0x010E6F63 File Offset: 0x010E5163
+		// Token: 0x0603A9FF RID: 240127 RVA: 0x0109118B File Offset: 0x0108F38B
 		public void WrappedTickTask(float deltaTime)
 		{
 			if (this.NotifyTick)
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x0604489C RID: 280732 RVA: 0x010E6F74 File Offset: 0x010E5174
+		// Token: 0x0603AA00 RID: 240128 RVA: 0x0109119C File Offset: 0x0108F39C
 		public void WrappedOnTaskFinished(ELevelAiNodeResult result)
 		{
 			if (this.NotifyTaskFinished)
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x0604489D RID: 280733 RVA: 0x010E6FB4 File Offset: 0x010E51B4
+		// Token: 0x0603AA01 RID: 240129 RVA: 0x010911DC File Offset: 0x0108F3DC
 		protected virtual void CreatePlanSteps(PlanningContext context, LevelAiWorldState worldStateAfterTask)
 		{
 			context.SubmitCandidatePlanStep(this, worldStateAfterTask, 0);
 		}
 
-		// Token: 0x0604489E RID: 280734 RVA: 0x010E6FC0 File Offset: 0x010E51C0
+		// Token: 0x0603AA02 RID: 240130 RVA: 0x010911E8 File Offset: 0x0108F3E8
 		protected void FinishLatentTask(ELevelAiNodeResult taskResult)
 		{
 			ActiveTaskInfo activeTaskInfo = base.CharacterPlanComponent.FindActiveTaskInfo(this);
@@ -79,35 +79,35 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			activeTaskInfo.PlanInstance.OnTaskFinished(this, activeTaskInfo.PlanStepId, taskResult);
 		}
 
-		// Token: 0x0604489F RID: 280735 RVA: 0x010E6FF1 File Offset: 0x010E51F1
+		// Token: 0x0603AA03 RID: 240131 RVA: 0x01091219 File Offset: 0x0108F419
 		protected virtual ELevelAiNodeResult ExecuteTask()
 		{
 			return ELevelAiNodeResult.Succeeded;
 		}
 
-		// Token: 0x060448A0 RID: 280736 RVA: 0x010E6FF4 File Offset: 0x010E51F4
+		// Token: 0x0603AA04 RID: 240132 RVA: 0x0109121C File Offset: 0x0108F41C
 		protected virtual ELevelAiNodeResult AbortTask()
 		{
 			return ELevelAiNodeResult.Aborted;
 		}
 
-		// Token: 0x060448A1 RID: 280737 RVA: 0x010E6FF7 File Offset: 0x010E51F7
+		// Token: 0x0603AA05 RID: 240133 RVA: 0x0109121F File Offset: 0x0108F41F
 		protected virtual void TickTask(float deltaTime)
 		{
 		}
 
-		// Token: 0x060448A2 RID: 280738 RVA: 0x010E6FF9 File Offset: 0x010E51F9
+		// Token: 0x0603AA06 RID: 240134 RVA: 0x01091221 File Offset: 0x0108F421
 		protected virtual void OnTaskFinished(ELevelAiNodeResult result)
 		{
 		}
 
-		// Token: 0x04023A44 RID: 145988
+		// Token: 0x0401ECE6 RID: 126182
 		protected bool NotifyTick;
 
-		// Token: 0x04023A45 RID: 145989
+		// Token: 0x0401ECE7 RID: 126183
 		protected bool NotifyTaskFinished;
 
-		// Token: 0x04023A46 RID: 145990
+		// Token: 0x0401ECE8 RID: 126184
 		[Nullable(2)]
 		protected ActionParams Params;
 	}

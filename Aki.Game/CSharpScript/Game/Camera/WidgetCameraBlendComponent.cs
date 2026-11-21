@@ -5,17 +5,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072E4 RID: 29412
+	// Token: 0x02006467 RID: 25703
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WidgetCameraBlendComponent : EntityComponent
 	{
-		// Token: 0x17009F49 RID: 40777
-		// (get) Token: 0x06048302 RID: 295682 RVA: 0x012897FB File Offset: 0x012879FB
-		// (set) Token: 0x06048303 RID: 295683 RVA: 0x01289803 File Offset: 0x01287A03
+		// Token: 0x170076E0 RID: 30432
+		// (get) Token: 0x0603E746 RID: 255814 RVA: 0x0122C23F File Offset: 0x0122A43F
+		// (set) Token: 0x0603E747 RID: 255815 RVA: 0x0122C247 File Offset: 0x0122A447
 		private WidgetCameraDisplayComponent DisplayComponent { get; set; }
 
-		// Token: 0x06048304 RID: 295684 RVA: 0x0128980C File Offset: 0x01287A0C
+		// Token: 0x0603E748 RID: 255816 RVA: 0x0122C250 File Offset: 0x0122A450
 		public void SetBlendParams(float blendTime, EViewTargetBlendFunction blendFunction, byte blendExp, bool blendLocation, bool isRelativeLocation, bool overrideLocation, FVectorDouble newLocation, bool blendRotation, bool isRelativeRotation, bool overrideRotation, FRotator newRotation)
 		{
 			this.BlendTime = blendTime;
@@ -74,21 +74,21 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048305 RID: 295685 RVA: 0x01289958 File Offset: 0x01287B58
+		// Token: 0x0603E749 RID: 255817 RVA: 0x0122C39C File Offset: 0x0122A59C
 		protected override bool OnStart()
 		{
 			this.DisplayComponent = base.Entity.GetComponent<WidgetCameraDisplayComponent>();
 			return this.DisplayComponent.Valid;
 		}
 
-		// Token: 0x06048306 RID: 295686 RVA: 0x01289976 File Offset: 0x01287B76
+		// Token: 0x0603E74A RID: 255818 RVA: 0x0122C3BA File Offset: 0x0122A5BA
 		protected override bool OnEnd()
 		{
 			this.DisplayComponent = null;
 			return true;
 		}
 
-		// Token: 0x06048307 RID: 295687 RVA: 0x01289980 File Offset: 0x01287B80
+		// Token: 0x0603E74B RID: 255819 RVA: 0x0122C3C4 File Offset: 0x0122A5C4
 		protected override void OnTick(float deltaSeconds)
 		{
 			float val = this.BlendTimeToGo - deltaSeconds;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Camera
 			this.UpdateRotation(blendPercent);
 		}
 
-		// Token: 0x06048308 RID: 295688 RVA: 0x012899C0 File Offset: 0x01287BC0
+		// Token: 0x0603E74C RID: 255820 RVA: 0x0122C404 File Offset: 0x0122A604
 		private void UpdateLocation(float blendPercent)
 		{
 			if (this.BlendLocation)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048309 RID: 295689 RVA: 0x01289A88 File Offset: 0x01287C88
+		// Token: 0x0603E74D RID: 255821 RVA: 0x0122C4CC File Offset: 0x0122A6CC
 		private void UpdateRotation(float blendPercent)
 		{
 			if (this.BlendRotation)
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x0604830A RID: 295690 RVA: 0x01289B44 File Offset: 0x01287D44
+		// Token: 0x0603E74E RID: 255822 RVA: 0x0122C588 File Offset: 0x0122A788
 		private float UpdateBlendPct()
 		{
 			float alpha = (float)MathUtils.Instance.SafeDivide((double)(this.BlendTime - this.BlendTimeToGo), (double)this.BlendTime);
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Camera
 			return result;
 		}
 
-		// Token: 0x0604830B RID: 295691 RVA: 0x01289C14 File Offset: 0x01287E14
+		// Token: 0x0603E74F RID: 255823 RVA: 0x0122C658 File Offset: 0x0122A858
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -197,103 +197,97 @@ namespace CSharpScript.Game.Camera
 				return false;
 			}
 			WidgetCameraBlendComponent widgetCameraBlendComponent = (WidgetCameraBlendComponent)componentTemplate;
-			if (base.CanResetComponentProperty("BlendTimeToGo"))
-			{
-				this.BlendTimeToGo = widgetCameraBlendComponent.BlendTimeToGo;
-			}
-			if (base.CanResetComponentProperty("BlendTime"))
-			{
-				this.BlendTime = widgetCameraBlendComponent.BlendTime;
-			}
-			if (base.CanResetComponentProperty("BlendFunction"))
-			{
-				this.BlendFunction = widgetCameraBlendComponent.BlendFunction;
-			}
-			if (base.CanResetComponentProperty("BlendExp"))
-			{
-				this.BlendExp = widgetCameraBlendComponent.BlendExp;
-			}
-			if (base.CanResetComponentProperty("TargetLocation") && widgetCameraBlendComponent.TargetLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TargetLocation), "TargetLocation"))
+			this.BlendTimeToGo = widgetCameraBlendComponent.BlendTimeToGo;
+			this.BlendTime = widgetCameraBlendComponent.BlendTime;
+			this.BlendFunction = widgetCameraBlendComponent.BlendFunction;
+			this.BlendExp = widgetCameraBlendComponent.BlendExp;
+			if (widgetCameraBlendComponent.TargetLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetLocation), "TargetLocation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TargetRotation"))
+			this.TargetRotation = widgetCameraBlendComponent.TargetRotation;
+			this.BlendLocation = widgetCameraBlendComponent.BlendLocation;
+			this.BlendRotation = widgetCameraBlendComponent.BlendRotation;
+			this.PreBlendRotation = widgetCameraBlendComponent.PreBlendRotation;
+			this.PreBlendLocation = widgetCameraBlendComponent.PreBlendLocation;
+			this.IsRelativeLocation = widgetCameraBlendComponent.IsRelativeLocation;
+			this.IsRelativeRotation = widgetCameraBlendComponent.IsRelativeRotation;
+			if (widgetCameraBlendComponent.DisplayComponent == null)
 			{
-				this.TargetRotation = widgetCameraBlendComponent.TargetRotation;
+				this.DisplayComponent = null;
 			}
-			if (base.CanResetComponentProperty("BlendLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisplayComponent), "DisplayComponent"))
 			{
-				this.BlendLocation = widgetCameraBlendComponent.BlendLocation;
-			}
-			if (base.CanResetComponentProperty("BlendRotation"))
-			{
-				this.BlendRotation = widgetCameraBlendComponent.BlendRotation;
-			}
-			if (base.CanResetComponentProperty("PreBlendRotation"))
-			{
-				this.PreBlendRotation = widgetCameraBlendComponent.PreBlendRotation;
-			}
-			if (base.CanResetComponentProperty("PreBlendLocation"))
-			{
-				this.PreBlendLocation = widgetCameraBlendComponent.PreBlendLocation;
-			}
-			if (base.CanResetComponentProperty("IsRelativeLocation"))
-			{
-				this.IsRelativeLocation = widgetCameraBlendComponent.IsRelativeLocation;
-			}
-			if (base.CanResetComponentProperty("IsRelativeRotation"))
-			{
-				this.IsRelativeRotation = widgetCameraBlendComponent.IsRelativeRotation;
-			}
-			if (base.CanResetComponentProperty("<DisplayComponent>k__BackingField"))
-			{
-				if (widgetCameraBlendComponent.DisplayComponent == null)
-				{
-					this.DisplayComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<WidgetCameraDisplayComponent>(this.DisplayComponent), "<DisplayComponent>k__BackingField"))
-				{
-					return false;
-				}
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040261EA RID: 156138
+		// Token: 0x170076E1 RID: 30433
+		// (get) Token: 0x0603E750 RID: 255824 RVA: 0x0122C749 File Offset: 0x0122A949
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076E2 RID: 30434
+		// (get) Token: 0x0603E751 RID: 255825 RVA: 0x0122C74C File Offset: 0x0122A94C
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076E3 RID: 30435
+		// (get) Token: 0x0603E752 RID: 255826 RVA: 0x0122C74F File Offset: 0x0122A94F
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040214D5 RID: 136405
 		private float BlendTimeToGo;
 
-		// Token: 0x040261EB RID: 156139
+		// Token: 0x040214D6 RID: 136406
 		private float BlendTime;
 
-		// Token: 0x040261EC RID: 156140
+		// Token: 0x040214D7 RID: 136407
 		private EViewTargetBlendFunction BlendFunction;
 
-		// Token: 0x040261ED RID: 156141
+		// Token: 0x040214D8 RID: 136408
 		private EEasingFunc BlendExp;
 
-		// Token: 0x040261EE RID: 156142
+		// Token: 0x040214D9 RID: 136409
 		[Nullable(1)]
 		private readonly Vector TargetLocation = Vector.Create();
 
-		// Token: 0x040261EF RID: 156143
+		// Token: 0x040214DA RID: 136410
 		private FRotator? TargetRotation;
 
-		// Token: 0x040261F0 RID: 156144
+		// Token: 0x040214DB RID: 136411
 		private bool BlendLocation;
 
-		// Token: 0x040261F1 RID: 156145
+		// Token: 0x040214DC RID: 136412
 		private bool BlendRotation;
 
-		// Token: 0x040261F2 RID: 156146
+		// Token: 0x040214DD RID: 136413
 		private FRotator? PreBlendRotation;
 
-		// Token: 0x040261F3 RID: 156147
+		// Token: 0x040214DE RID: 136414
 		private FVectorDouble? PreBlendLocation;
 
-		// Token: 0x040261F4 RID: 156148
+		// Token: 0x040214DF RID: 136415
 		private bool IsRelativeLocation;
 
-		// Token: 0x040261F5 RID: 156149
+		// Token: 0x040214E0 RID: 136416
 		private bool IsRelativeRotation;
 	}
 }

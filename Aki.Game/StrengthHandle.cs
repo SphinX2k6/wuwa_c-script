@@ -6,12 +6,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.BattleUi;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02001F3C RID: 7996
+// Token: 0x020013FE RID: 5118
 [NullableContext(1)]
 [Nullable(0)]
 public class StrengthHandle : HudUnitHandleBase
 {
-	// Token: 0x0600F6EF RID: 63215 RVA: 0x003BAA20 File Offset: 0x003B8C20
+	// Token: 0x0600CB0E RID: 51982 RVA: 0x003C650C File Offset: 0x003C470C
 	protected override void OnInitialize()
 	{
 		base.OnInitialize();
@@ -35,7 +35,7 @@ public class StrengthHandle : HudUnitHandleBase
 		});
 	}
 
-	// Token: 0x0600F6F0 RID: 63216 RVA: 0x003BAA51 File Offset: 0x003B8C51
+	// Token: 0x0600CB0F RID: 51983 RVA: 0x003C653D File Offset: 0x003C473D
 	protected override void OnDestroyed()
 	{
 		this.StrengthUnit = null;
@@ -46,12 +46,12 @@ public class StrengthHandle : HudUnitHandleBase
 		base.OnDestroyed();
 	}
 
-	// Token: 0x0600F6F1 RID: 63217 RVA: 0x003BAA74 File Offset: 0x003B8C74
+	// Token: 0x0600CB10 RID: 51984 RVA: 0x003C6560 File Offset: 0x003C4760
 	public override void OnShowHud()
 	{
 	}
 
-	// Token: 0x0600F6F2 RID: 63218 RVA: 0x003BAA78 File Offset: 0x003B8C78
+	// Token: 0x0600CB11 RID: 51985 RVA: 0x003C6564 File Offset: 0x003C4764
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<bool>(EEventName.BattleUiMotorcycleStateChanged, new Action<bool>(this.OnMotorcycleStateChanged));
@@ -60,7 +60,7 @@ public class StrengthHandle : HudUnitHandleBase
 		EventSystem.Instance.Add<EStrengthItemType>(EEventName.RemoveStrengthItem, new Action<EStrengthItemType>(this.OnRemoveStrengthItem));
 	}
 
-	// Token: 0x0600F6F3 RID: 63219 RVA: 0x003BAAF8 File Offset: 0x003B8CF8
+	// Token: 0x0600CB12 RID: 51986 RVA: 0x003C65E4 File Offset: 0x003C47E4
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<bool>(EEventName.BattleUiMotorcycleStateChanged, new Action<bool>(this.OnMotorcycleStateChanged));
@@ -70,7 +70,7 @@ public class StrengthHandle : HudUnitHandleBase
 		EventSystem.Instance.RemoveAllTargetUseKey(this);
 	}
 
-	// Token: 0x0600F6F4 RID: 63220 RVA: 0x003BAB81 File Offset: 0x003B8D81
+	// Token: 0x0600CB13 RID: 51987 RVA: 0x003C666D File Offset: 0x003C486D
 	private void OnAddStrengthItem(EStrengthItemType strengthItemType)
 	{
 		if (!this.ExtraStrengthItemList.Contains(strengthItemType))
@@ -84,7 +84,7 @@ public class StrengthHandle : HudUnitHandleBase
 		this.StrengthUnit.AddStrengthItem(strengthItemType);
 	}
 
-	// Token: 0x0600F6F5 RID: 63221 RVA: 0x003BABB4 File Offset: 0x003B8DB4
+	// Token: 0x0600CB14 RID: 51988 RVA: 0x003C66A0 File Offset: 0x003C48A0
 	private void OnRemoveStrengthItem(EStrengthItemType strengthItemType)
 	{
 		int num = this.ExtraStrengthItemList.IndexOf(strengthItemType);
@@ -99,7 +99,7 @@ public class StrengthHandle : HudUnitHandleBase
 		this.StrengthUnit.RemoveStrengthItem(strengthItemType);
 	}
 
-	// Token: 0x0600F6F6 RID: 63222 RVA: 0x003BABF4 File Offset: 0x003B8DF4
+	// Token: 0x0600CB15 RID: 51989 RVA: 0x003C66E0 File Offset: 0x003C48E0
 	private void OnChangeRole(int newEntityId, int oldEntityId)
 	{
 		BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -124,7 +124,7 @@ public class StrengthHandle : HudUnitHandleBase
 		this.UpdateStrengthUnitByRole(curRoleData);
 	}
 
-	// Token: 0x0600F6F7 RID: 63223 RVA: 0x003BAC58 File Offset: 0x003B8E58
+	// Token: 0x0600CB16 RID: 51990 RVA: 0x003C6744 File Offset: 0x003C4944
 	private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		if (this.CurrentEntityId != handle.Id)
@@ -134,7 +134,7 @@ public class StrengthHandle : HudUnitHandleBase
 		this.RemoveEntity(handle);
 	}
 
-	// Token: 0x0600F6F8 RID: 63224 RVA: 0x003BAC70 File Offset: 0x003B8E70
+	// Token: 0x0600CB17 RID: 51991 RVA: 0x003C675C File Offset: 0x003C495C
 	private void RemoveEntity(EntityHandle handle)
 	{
 		this.RemoveEntityEvents(handle);
@@ -143,7 +143,7 @@ public class StrengthHandle : HudUnitHandleBase
 		this.TagComponent = null;
 	}
 
-	// Token: 0x0600F6F9 RID: 63225 RVA: 0x003BAC90 File Offset: 0x003B8E90
+	// Token: 0x0600CB18 RID: 51992 RVA: 0x003C677C File Offset: 0x003C497C
 	private void AddEntityEvents(BattleUiRoleData roleData)
 	{
 		int id = roleData.EntityHandle.Id;
@@ -168,7 +168,7 @@ public class StrengthHandle : HudUnitHandleBase
 		this.ListenForTagAddOrRemove(gameplayTagComponent, GameplayTagDefine.EGameplayTagId["功能.功能制作.越肩模式"], new Action<int, bool>(this.OnOverShoulderView), true);
 	}
 
-	// Token: 0x0600F6FA RID: 63226 RVA: 0x003BADB0 File Offset: 0x003B8FB0
+	// Token: 0x0600CB19 RID: 51993 RVA: 0x003C689C File Offset: 0x003C4A9C
 	private void RemoveEntityEvents(EntityHandle handle)
 	{
 		if (!handle.Valid)
@@ -187,7 +187,7 @@ public class StrengthHandle : HudUnitHandleBase
 		this.TagTaskList.Clear();
 	}
 
-	// Token: 0x0600F6FB RID: 63227 RVA: 0x003BAE44 File Offset: 0x003B9044
+	// Token: 0x0600CB1A RID: 51994 RVA: 0x003C6930 File Offset: 0x003C4B30
 	private void ListenForTagAddOrRemove(BaseTagComponent tagComponent, int tagId, Action<int, bool> callback, bool checkExistImmediately = false)
 	{
 		if (checkExistImmediately)
@@ -201,7 +201,7 @@ public class StrengthHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F6FC RID: 63228 RVA: 0x003BAE91 File Offset: 0x003B9091
+	// Token: 0x0600CB1B RID: 51995 RVA: 0x003C697D File Offset: 0x003C4B7D
 	private void OnHideChanged(int tagId, bool tagExists)
 	{
 		StrengthUnit strengthUnit = this.StrengthUnit;
@@ -212,7 +212,7 @@ public class StrengthHandle : HudUnitHandleBase
 		strengthUnit.SetVisible(!tagExists, 1);
 	}
 
-	// Token: 0x0600F6FD RID: 63229 RVA: 0x003BAEA8 File Offset: 0x003B90A8
+	// Token: 0x0600CB1C RID: 51996 RVA: 0x003C6994 File Offset: 0x003C4B94
 	private void OnChangeToFirstPerson(int tagId, bool tagExists)
 	{
 		StrengthUnit strengthUnit = this.StrengthUnit;
@@ -223,7 +223,7 @@ public class StrengthHandle : HudUnitHandleBase
 		strengthUnit.SetFirstPersonState(tagExists);
 	}
 
-	// Token: 0x0600F6FE RID: 63230 RVA: 0x003BAEBB File Offset: 0x003B90BB
+	// Token: 0x0600CB1D RID: 51997 RVA: 0x003C69A7 File Offset: 0x003C4BA7
 	private void OnOverShoulderView(int tagId, bool tagExists)
 	{
 		StrengthUnit strengthUnit = this.StrengthUnit;
@@ -234,7 +234,7 @@ public class StrengthHandle : HudUnitHandleBase
 		strengthUnit.SetOverShoulderState(tagExists);
 	}
 
-	// Token: 0x0600F6FF RID: 63231 RVA: 0x003BAECE File Offset: 0x003B90CE
+	// Token: 0x0600CB1E RID: 51998 RVA: 0x003C69BA File Offset: 0x003C4BBA
 	private void OnFlyTagChanged(int tagId, bool tagExists)
 	{
 		if (this.StrengthUnit == null)
@@ -244,7 +244,7 @@ public class StrengthHandle : HudUnitHandleBase
 		this.RefreshFly();
 	}
 
-	// Token: 0x0600F700 RID: 63232 RVA: 0x003BAEDF File Offset: 0x003B90DF
+	// Token: 0x0600CB1F RID: 51999 RVA: 0x003C69CB File Offset: 0x003C4BCB
 	private void OnFlyStrengthTagChanged(int tagId, bool tagExists)
 	{
 		if (this.StrengthUnit == null)
@@ -254,7 +254,7 @@ public class StrengthHandle : HudUnitHandleBase
 		this.RefreshFly();
 	}
 
-	// Token: 0x0600F701 RID: 63233 RVA: 0x003BAEF0 File Offset: 0x003B90F0
+	// Token: 0x0600CB20 RID: 52000 RVA: 0x003C69DC File Offset: 0x003C4BDC
 	private void OnMotorcycleStateChanged(bool isDriving)
 	{
 		if (this.StrengthUnit == null)
@@ -264,7 +264,7 @@ public class StrengthHandle : HudUnitHandleBase
 		this.RefreshMotorcycle();
 	}
 
-	// Token: 0x0600F702 RID: 63234 RVA: 0x003BAF01 File Offset: 0x003B9101
+	// Token: 0x0600CB21 RID: 52001 RVA: 0x003C69ED File Offset: 0x003C4BED
 	private void OnMotorcycleFlyTagChanged(int tagId, bool tagExists)
 	{
 		if (this.StrengthUnit == null)
@@ -274,7 +274,7 @@ public class StrengthHandle : HudUnitHandleBase
 		this.RefreshMotorcycleFly();
 	}
 
-	// Token: 0x0600F703 RID: 63235 RVA: 0x003BAF14 File Offset: 0x003B9114
+	// Token: 0x0600CB22 RID: 52002 RVA: 0x003C6A00 File Offset: 0x003C4C00
 	private void RefreshFly()
 	{
 		BaseTagComponent tagComponent = this.TagComponent;
@@ -290,7 +290,7 @@ public class StrengthHandle : HudUnitHandleBase
 		this.StrengthUnit.AddStrengthItem(EStrengthItemType.Fly);
 	}
 
-	// Token: 0x0600F704 RID: 63236 RVA: 0x003BAF6C File Offset: 0x003B916C
+	// Token: 0x0600CB23 RID: 52003 RVA: 0x003C6A58 File Offset: 0x003C4C58
 	private void RefreshMotorcycle()
 	{
 		BattleUiMotorcycleData motorcycleData = BattleUiModel.Instance.MotorcycleData;
@@ -302,7 +302,7 @@ public class StrengthHandle : HudUnitHandleBase
 		this.StrengthUnit.RemoveStrengthItem(EStrengthItemType.Motorcycle);
 	}
 
-	// Token: 0x0600F705 RID: 63237 RVA: 0x003BAF9F File Offset: 0x003B919F
+	// Token: 0x0600CB24 RID: 52004 RVA: 0x003C6A8B File Offset: 0x003C4C8B
 	private void RefreshMotorcycleFly()
 	{
 		BaseTagComponent tagComponent = this.TagComponent;
@@ -314,7 +314,7 @@ public class StrengthHandle : HudUnitHandleBase
 		this.StrengthUnit.RemoveStrengthItem(EStrengthItemType.MotorcycleFly);
 	}
 
-	// Token: 0x0600F706 RID: 63238 RVA: 0x003BAFD4 File Offset: 0x003B91D4
+	// Token: 0x0600CB25 RID: 52005 RVA: 0x003C6AC0 File Offset: 0x003C4CC0
 	private void RefreshAfterStrengthUnitCreate()
 	{
 		if (this.TagComponent == null)
@@ -327,7 +327,7 @@ public class StrengthHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F707 RID: 63239 RVA: 0x003BB038 File Offset: 0x003B9238
+	// Token: 0x0600CB26 RID: 52006 RVA: 0x003C6B24 File Offset: 0x003C4D24
 	private void UpdateStrengthUnitByRole(BattleUiRoleData roleData)
 	{
 		if (this.StrengthUnit == null)
@@ -339,39 +339,39 @@ public class StrengthHandle : HudUnitHandleBase
 		this.RefreshMotorcycleFly();
 	}
 
-	// Token: 0x04007255 RID: 29269
+	// Token: 0x04007336 RID: 29494
 	private readonly Stat ChangeRoleStat = Stat.Create("[ChangeRole]StrengthHandle", "", "");
 
-	// Token: 0x04007256 RID: 29270
+	// Token: 0x04007337 RID: 29495
 	private readonly Stat ListenTagStat = Stat.Create("[StrengthHandle]ListenTag", "", "");
 
-	// Token: 0x04007257 RID: 29271
+	// Token: 0x04007338 RID: 29496
 	private static readonly int FlyTag = GameplayTagDefine.EGameplayTagId["行为状态.动作状态.XA"];
 
-	// Token: 0x04007258 RID: 29272
+	// Token: 0x04007339 RID: 29497
 	private static readonly int FlyStrengthTag = GameplayTagDefine.EGameplayTagId["功能.功能制作.翱翔体力显示"];
 
-	// Token: 0x04007259 RID: 29273
+	// Token: 0x0400733A RID: 29498
 	private static readonly int MotorcycleFlyTag = GameplayTagDefine.EGameplayTagId["角色.Common.载具驾驶.摩托.状态.空中状态.翱翔"];
 
-	// Token: 0x0400725A RID: 29274
+	// Token: 0x0400733B RID: 29499
 	[Nullable(2)]
 	private StrengthUnit StrengthUnit;
 
-	// Token: 0x0400725B RID: 29275
+	// Token: 0x0400733C RID: 29500
 	private int CurrentEntityId;
 
-	// Token: 0x0400725C RID: 29276
+	// Token: 0x0400733D RID: 29501
 	[Nullable(2)]
 	private EntityHandle CurrentEntity;
 
-	// Token: 0x0400725D RID: 29277
+	// Token: 0x0400733E RID: 29502
 	[Nullable(2)]
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400725E RID: 29278
+	// Token: 0x0400733F RID: 29503
 	private readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 
-	// Token: 0x0400725F RID: 29279
+	// Token: 0x04007340 RID: 29504
 	private readonly List<EStrengthItemType> ExtraStrengthItemList = new List<EStrengthItemType>();
 }

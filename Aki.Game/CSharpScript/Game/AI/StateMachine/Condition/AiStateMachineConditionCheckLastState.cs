@@ -5,30 +5,30 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Condition
 {
-	// Token: 0x0200733B RID: 29499
+	// Token: 0x020064BE RID: 25790
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineConditionCheckLastState : AiStateMachineCondition
 	{
-		// Token: 0x06048628 RID: 296488 RVA: 0x0129EB03 File Offset: 0x0129CD03
+		// Token: 0x0603EA75 RID: 256629 RVA: 0x0124158B File Offset: 0x0123F78B
 		public AiStateMachineConditionCheckLastState(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index) : base(transition, condition, index)
 		{
 		}
 
-		// Token: 0x06048629 RID: 296489 RVA: 0x0129EB0E File Offset: 0x0129CD0E
+		// Token: 0x0603EA76 RID: 256630 RVA: 0x01241596 File Offset: 0x0123F796
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Condition condition)
 		{
 			this.TargetNodeName = condition.CondCheckLastState.TargetStateName;
 			return true;
 		}
 
-		// Token: 0x0604862A RID: 296490 RVA: 0x0129EB22 File Offset: 0x0129CD22
+		// Token: 0x0603EA77 RID: 256631 RVA: 0x012415AA File Offset: 0x0123F7AA
 		protected override void OnTick()
 		{
 			this.ResultSelf = this.Node.Owner.CheckLastActivatedNode(this.TargetNodeName);
 		}
 
-		// Token: 0x0604862B RID: 296491 RVA: 0x0129EB40 File Offset: 0x0129CD40
+		// Token: 0x0603EA78 RID: 256632 RVA: 0x012415C8 File Offset: 0x0123F7C8
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			base.ToString(outBuilder, depth);
@@ -49,11 +49,11 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			outBuilder.Append(ref appendInterpolatedStringHandler);
 		}
 
-		// Token: 0x0402645F RID: 156767
+		// Token: 0x0402174C RID: 137036
 		[Nullable(2)]
 		private string TargetNodeName;
 
-		// Token: 0x04026460 RID: 156768
+		// Token: 0x0402174D RID: 137037
 		[Nullable(2)]
 		private readonly AiStateMachineBase TargetNode;
 	}

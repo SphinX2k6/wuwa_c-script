@@ -5,18 +5,18 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017AB RID: 6059
+// Token: 0x02000C64 RID: 3172
 [NullableContext(1)]
 [Nullable(0)]
 public class QuickChatText : UiPanelBase
 {
-	// Token: 0x0600B0D3 RID: 45267 RVA: 0x00280876 File Offset: 0x0027EA76
+	// Token: 0x060084BB RID: 33979 RVA: 0x0028AE0E File Offset: 0x0028900E
 	public QuickChatText(AActor rootActor)
 	{
 		base.CreateThenShowByActor(rootActor, null);
 	}
 
-	// Token: 0x0600B0D4 RID: 45268 RVA: 0x00280894 File Offset: 0x0027EA94
+	// Token: 0x060084BC RID: 33980 RVA: 0x0028AE2C File Offset: 0x0028902C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -37,13 +37,13 @@ public class QuickChatText : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B0D5 RID: 45269 RVA: 0x0028093A File Offset: 0x0027EB3A
+	// Token: 0x060084BD RID: 33981 RVA: 0x0028AED2 File Offset: 0x002890D2
 	protected override void OnBeforeDestroy()
 	{
 		this.OnClicked = null;
 	}
 
-	// Token: 0x0600B0D6 RID: 45270 RVA: 0x00280943 File Offset: 0x0027EB43
+	// Token: 0x060084BE RID: 33982 RVA: 0x0028AEDB File Offset: 0x002890DB
 	private void OnClickedQuickChatButton()
 	{
 		Action<string> onClicked = this.OnClicked;
@@ -54,23 +54,23 @@ public class QuickChatText : UiPanelBase
 		onClicked(this.QuickChatString);
 	}
 
-	// Token: 0x0600B0D7 RID: 45271 RVA: 0x0028095B File Offset: 0x0027EB5B
+	// Token: 0x060084BF RID: 33983 RVA: 0x0028AEF3 File Offset: 0x002890F3
 	public void Refresh(string quickChatString)
 	{
 		base.GetText(0).SetText(quickChatString, true);
 		this.QuickChatString = quickChatString;
 	}
 
-	// Token: 0x0600B0D8 RID: 45272 RVA: 0x00280972 File Offset: 0x0027EB72
+	// Token: 0x060084C0 RID: 33984 RVA: 0x0028AF0A File Offset: 0x0028910A
 	public void BindOnClicked(Action<string> onClicked)
 	{
 		this.OnClicked = onClicked;
 	}
 
-	// Token: 0x04005038 RID: 20536
+	// Token: 0x040050E2 RID: 20706
 	private string QuickChatString = "";
 
-	// Token: 0x04005039 RID: 20537
+	// Token: 0x040050E3 RID: 20707
 	[Nullable(new byte[]
 	{
 		2,
@@ -78,14 +78,14 @@ public class QuickChatText : UiPanelBase
 	})]
 	private Action<string> OnClicked;
 
-	// Token: 0x02007DC3 RID: 32195
+	// Token: 0x02006F49 RID: 28489
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x040292C7 RID: 168647
+		// Token: 0x040245F2 RID: 148978
 		public const int QuickChatText = 0;
 
-		// Token: 0x040292C8 RID: 168648
+		// Token: 0x040245F3 RID: 148979
 		public const int QuickChatButton = 1;
 	}
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02003248 RID: 12872
+// Token: 0x020027B7 RID: 10167
 public static class RoleLocationSafetyConstants
 {
 }

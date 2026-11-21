@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem
 {
-	// Token: 0x020051CD RID: 20941
+	// Token: 0x0200419D RID: 16797
 	public static class CardItemDefine
 	{
-		// Token: 0x0401C742 RID: 116546
+		// Token: 0x04017177 RID: 94583
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static Dictionary<ECardItemComponent, CardComponentCreator> cardItemCreatorMap = new Dictionary<ECardItemComponent, CardComponentCreator>

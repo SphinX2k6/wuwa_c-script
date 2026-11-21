@@ -5,18 +5,18 @@ using CSharpScript.Game.Module.WuwaGo.Model.Role;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 {
-	// Token: 0x02004762 RID: 18274
+	// Token: 0x02003693 RID: 13971
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class CapabilityBase
 	{
-		// Token: 0x0602FC59 RID: 195673 RVA: 0x00B111CD File Offset: 0x00B0F3CD
+		// Token: 0x06024423 RID: 148515 RVA: 0x00A4118D File Offset: 0x00A3F38D
 		protected CapabilityBase(WuWaGoRole role)
 		{
 		}
 
-		// Token: 0x17007755 RID: 30549
-		// (get) Token: 0x0602FC5A RID: 195674 RVA: 0x00B111DC File Offset: 0x00B0F3DC
+		// Token: 0x17004A11 RID: 18961
+		// (get) Token: 0x06024424 RID: 148516 RVA: 0x00A4119C File Offset: 0x00A3F39C
 		protected EWuWaGoRoleType RoleType
 		{
 			get
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			}
 		}
 
-		// Token: 0x04019C59 RID: 105561
+		// Token: 0x04014309 RID: 82697
 		protected readonly WuWaGoRole Role = role;
 	}
 }

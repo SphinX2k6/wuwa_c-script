@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02002BD2 RID: 11218
+// Token: 0x0200214D RID: 8525
 public class TowerReward
 {
-	// Token: 0x060174D7 RID: 95447 RVA: 0x005EC963 File Offset: 0x005EAB63
+	// Token: 0x06014F08 RID: 85768 RVA: 0x0061949F File Offset: 0x0061769F
 	public TowerReward(int target, int rewardId, int index)
 	{
 		this.Target = target;
@@ -11,15 +11,15 @@ public class TowerReward
 		this.Index = index;
 	}
 
-	// Token: 0x0400AE5B RID: 44635
+	// Token: 0x0400B260 RID: 45664
 	public bool? IsReceived = new bool?(false);
 
-	// Token: 0x0400AE5C RID: 44636
+	// Token: 0x0400B261 RID: 45665
 	public int Target;
 
-	// Token: 0x0400AE5D RID: 44637
+	// Token: 0x0400B262 RID: 45666
 	public int RewardId;
 
-	// Token: 0x0400AE5E RID: 44638
+	// Token: 0x0400B263 RID: 45667
 	public int Index;
 }

@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F6B RID: 8043
+// Token: 0x0200142D RID: 5165
 [NullableContext(2)]
 [Nullable(0)]
 public class WeeklyRogueUnit : HudUnitBase
 {
-	// Token: 0x0600F97E RID: 63870 RVA: 0x003C74E0 File Offset: 0x003C56E0
+	// Token: 0x0600CD9D RID: 52637 RVA: 0x003D2FCC File Offset: 0x003D11CC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -43,7 +43,7 @@ public class WeeklyRogueUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F97F RID: 63871 RVA: 0x003C75F4 File Offset: 0x003C57F4
+	// Token: 0x0600CD9E RID: 52638 RVA: 0x003D30E0 File Offset: 0x003D12E0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeeklyRogueUnit.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -54,7 +54,7 @@ public class WeeklyRogueUnit : HudUnitBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F980 RID: 63872 RVA: 0x003C7638 File Offset: 0x003C5838
+	// Token: 0x0600CD9F RID: 52639 RVA: 0x003D3124 File Offset: 0x003D1324
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -96,7 +96,7 @@ public class WeeklyRogueUnit : HudUnitBase
 		this.RefreshIcon();
 	}
 
-	// Token: 0x0600F981 RID: 63873 RVA: 0x003C7774 File Offset: 0x003C5974
+	// Token: 0x0600CDA0 RID: 52640 RVA: 0x003D3260 File Offset: 0x003D1460
 	private void RefreshIcon()
 	{
 		UUITexture iconTexture = base.GetTexture(2);
@@ -124,7 +124,7 @@ public class WeeklyRogueUnit : HudUnitBase
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0600F982 RID: 63874 RVA: 0x003C782C File Offset: 0x003C5A2C
+	// Token: 0x0600CDA1 RID: 52641 RVA: 0x003D3318 File Offset: 0x003D1518
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
@@ -186,7 +186,7 @@ public class WeeklyRogueUnit : HudUnitBase
 		});
 	}
 
-	// Token: 0x0600F983 RID: 63875 RVA: 0x003C79F4 File Offset: 0x003C5BF4
+	// Token: 0x0600CDA2 RID: 52642 RVA: 0x003D34E0 File Offset: 0x003D16E0
 	private void RefreshRoleData()
 	{
 		BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -196,19 +196,19 @@ public class WeeklyRogueUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F984 RID: 63876 RVA: 0x003C7A1B File Offset: 0x003C5C1B
+	// Token: 0x0600CDA3 RID: 52643 RVA: 0x003D3507 File Offset: 0x003D1707
 	private void OnBattleUiCurRoleDataChanged(int newEntityId, int oldEntityId)
 	{
 		this.RefreshRoleData();
 	}
 
-	// Token: 0x0600F985 RID: 63877 RVA: 0x003C7A23 File Offset: 0x003C5C23
+	// Token: 0x0600CDA4 RID: 52644 RVA: 0x003D350F File Offset: 0x003D170F
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove<int, int>(EEventName.BattleUiCurRoleDataChanged, new Action<int, int>(this.OnBattleUiCurRoleDataChanged));
 	}
 
-	// Token: 0x0600F986 RID: 63878 RVA: 0x003C7A44 File Offset: 0x003C5C44
+	// Token: 0x0600CDA5 RID: 52645 RVA: 0x003D3530 File Offset: 0x003D1730
 	protected override void OnBeforeDestroy()
 	{
 		base.StopTweenAnim(5);
@@ -228,7 +228,7 @@ public class WeeklyRogueUnit : HudUnitBase
 		this.DestroyTimer();
 	}
 
-	// Token: 0x0600F987 RID: 63879 RVA: 0x003C7AA4 File Offset: 0x003C5CA4
+	// Token: 0x0600CDA6 RID: 52646 RVA: 0x003D3590 File Offset: 0x003D1790
 	protected override UniTask OnBeforeHideAsync()
 	{
 		WeeklyRogueUnit.<OnBeforeHideAsync>d__27 <OnBeforeHideAsync>d__;
@@ -239,7 +239,7 @@ public class WeeklyRogueUnit : HudUnitBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F988 RID: 63880 RVA: 0x003C7AE7 File Offset: 0x003C5CE7
+	// Token: 0x0600CDA7 RID: 52647 RVA: 0x003D35D3 File Offset: 0x003D17D3
 	private void DestroyPromise()
 	{
 		if (this.Promise != null)
@@ -249,7 +249,7 @@ public class WeeklyRogueUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F989 RID: 63881 RVA: 0x003C7B03 File Offset: 0x003C5D03
+	// Token: 0x0600CDA8 RID: 52648 RVA: 0x003D35EF File Offset: 0x003D17EF
 	private void DestroyTimer()
 	{
 		if (this.Timer != null)
@@ -259,7 +259,7 @@ public class WeeklyRogueUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F98A RID: 63882 RVA: 0x003C7B28 File Offset: 0x003C5D28
+	// Token: 0x0600CDA9 RID: 52649 RVA: 0x003D3614 File Offset: 0x003D1814
 	private void RefreshTriggerConfig()
 	{
 		List<int> buffIdListByType = WeeklyRogueModel.Instance.GetBuffIdListByType(EWeeklyRogueBuffType.Modifier);
@@ -271,7 +271,7 @@ public class WeeklyRogueUnit : HudUnitBase
 		this.TriggerConfig = this.ArtifactConfig;
 	}
 
-	// Token: 0x0600F98B RID: 63883 RVA: 0x003C7B70 File Offset: 0x003C5D70
+	// Token: 0x0600CDAA RID: 52650 RVA: 0x003D365C File Offset: 0x003D185C
 	public override void Tick(float delta)
 	{
 		base.Tick(delta);
@@ -302,7 +302,7 @@ public class WeeklyRogueUnit : HudUnitBase
 		this.SetProgress(0f);
 	}
 
-	// Token: 0x0600F98C RID: 63884 RVA: 0x003C7C26 File Offset: 0x003C5E26
+	// Token: 0x0600CDAB RID: 52651 RVA: 0x003D3712 File Offset: 0x003D1912
 	private void SetProgress(float progress)
 	{
 		this.PointRotator.Yaw = progress * -360f;
@@ -319,7 +319,7 @@ public class WeeklyRogueUnit : HudUnitBase
 		barTex.SetFillAmount(progress);
 	}
 
-	// Token: 0x0600F98D RID: 63885 RVA: 0x003C7C62 File Offset: 0x003C5E62
+	// Token: 0x0600CDAC RID: 52652 RVA: 0x003D374E File Offset: 0x003D194E
 	private void PlayWarnAnim(bool bPlay)
 	{
 		if (this.IsPlayWarnAnim == bPlay)
@@ -341,74 +341,74 @@ public class WeeklyRogueUnit : HudUnitBase
 		item.SetAlpha(1f);
 	}
 
-	// Token: 0x04007445 RID: 29765
+	// Token: 0x04007526 RID: 29990
 	private const float CLOSE_ANIM_TIME = 550f;
 
-	// Token: 0x04007446 RID: 29766
+	// Token: 0x04007527 RID: 29991
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04007447 RID: 29767
+	// Token: 0x04007528 RID: 29992
 	private CombineKeyItem KeyItemPc;
 
-	// Token: 0x04007448 RID: 29768
+	// Token: 0x04007529 RID: 29993
 	private UUITexture BarTex;
 
-	// Token: 0x04007449 RID: 29769
+	// Token: 0x0400752A RID: 29994
 	private UUIItem PointItem;
 
-	// Token: 0x0400744A RID: 29770
+	// Token: 0x0400752B RID: 29995
 	private FRotator PointRotator;
 
-	// Token: 0x0400744B RID: 29771
+	// Token: 0x0400752C RID: 29996
 	private CharacterBuffComponent BuffComponent;
 
-	// Token: 0x0400744C RID: 29772
+	// Token: 0x0400752D RID: 29997
 	private long BuffId;
 
-	// Token: 0x0400744D RID: 29773
+	// Token: 0x0400752E RID: 29998
 	private IActiveBuff Buff;
 
-	// Token: 0x0400744E RID: 29774
+	// Token: 0x0400752F RID: 29999
 	private int BuffHandle;
 
-	// Token: 0x0400744F RID: 29775
+	// Token: 0x04007530 RID: 30000
 	private int ArtifactId;
 
-	// Token: 0x04007450 RID: 29776
+	// Token: 0x04007531 RID: 30001
 	private RogueWeeklyBuffPool? ArtifactConfig;
 
-	// Token: 0x04007451 RID: 29777
+	// Token: 0x04007532 RID: 30002
 	private RogueWeeklyBuffPool? TriggerConfig;
 
-	// Token: 0x04007452 RID: 29778
+	// Token: 0x04007533 RID: 30003
 	private int LoadIconId = -1;
 
-	// Token: 0x04007453 RID: 29779
+	// Token: 0x04007534 RID: 30004
 	private CustomPromise Promise;
 
-	// Token: 0x04007454 RID: 29780
+	// Token: 0x04007535 RID: 30005
 	private TimerHandle Timer;
 
-	// Token: 0x04007455 RID: 29781
+	// Token: 0x04007536 RID: 30006
 	private bool IsPlayWarnAnim;
 
-	// Token: 0x02008567 RID: 34151
+	// Token: 0x020076EC RID: 30444
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402B6F7 RID: 177911
+		// Token: 0x04026A1B RID: 158235
 		BarTex,
-		// Token: 0x0402B6F8 RID: 177912
+		// Token: 0x04026A1C RID: 158236
 		PointItem,
-		// Token: 0x0402B6F9 RID: 177913
+		// Token: 0x04026A1D RID: 158237
 		IconTex,
-		// Token: 0x0402B6FA RID: 177914
+		// Token: 0x04026A1E RID: 158238
 		DescText,
-		// Token: 0x0402B6FB RID: 177915
+		// Token: 0x04026A1F RID: 158239
 		ContentItem,
-		// Token: 0x0402B6FC RID: 177916
+		// Token: 0x04026A20 RID: 158240
 		AniWarn,
-		// Token: 0x0402B6FD RID: 177917
+		// Token: 0x04026A21 RID: 158241
 		KeyItem
 	}
 }

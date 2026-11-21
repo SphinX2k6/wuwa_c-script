@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002598 RID: 9624
+// Token: 0x02001A83 RID: 6787
 public enum EPhotoEnvironmentSubTabType
 {
-	// Token: 0x04009314 RID: 37652
+	// Token: 0x0400946C RID: 37996
 	Weather = 1,
-	// Token: 0x04009315 RID: 37653
+	// Token: 0x0400946D RID: 37997
 	Atmosphere
 }

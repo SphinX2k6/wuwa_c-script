@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DB9 RID: 23993
+	// Token: 0x02004D9D RID: 19869
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LinkScoreItem : BaseScoreItem
 	{
-		// Token: 0x0603CF50 RID: 249680 RVA: 0x00EA631C File Offset: 0x00EA451C
+		// Token: 0x06031EC7 RID: 204487 RVA: 0x00DF71F8 File Offset: 0x00DF53F8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CF51 RID: 249681 RVA: 0x00EA6388 File Offset: 0x00EA4588
+		// Token: 0x06031EC8 RID: 204488 RVA: 0x00DF7264 File Offset: 0x00DF5464
 		protected override UniTask OnCreateAsync()
 		{
 			LinkScoreItem.<OnCreateAsync>d__22 <OnCreateAsync>d__;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CF52 RID: 249682 RVA: 0x00EA63CC File Offset: 0x00EA45CC
+		// Token: 0x06031EC9 RID: 204489 RVA: 0x00DF72A8 File Offset: 0x00DF54A8
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShowScore();
 		}
 
-		// Token: 0x0603CF53 RID: 249683 RVA: 0x00EA649C File Offset: 0x00EA469C
+		// Token: 0x06031ECA RID: 204490 RVA: 0x00DF7378 File Offset: 0x00DF5578
 		private void InitScore(int groupId)
 		{
 			this.ScoreInitFlag = true;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF54 RID: 249684 RVA: 0x00EA6524 File Offset: 0x00EA4724
+		// Token: 0x06031ECB RID: 204491 RVA: 0x00DF7400 File Offset: 0x00DF5600
 		private void OnCycleRefresh()
 		{
 			EventSystem.Instance.Remove(EEventName.WeeklyRogueCycleRefresh, new Action(this.OnCycleRefresh));
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShowScore();
 		}
 
-		// Token: 0x0603CF55 RID: 249685 RVA: 0x00EA656C File Offset: 0x00EA476C
+		// Token: 0x06031ECC RID: 204492 RVA: 0x00DF7448 File Offset: 0x00DF5648
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603CF56 RID: 249686 RVA: 0x00EA65D0 File Offset: 0x00EA47D0
+		// Token: 0x06031ECD RID: 204493 RVA: 0x00DF74AC File Offset: 0x00DF56AC
 		[NullableContext(1)]
 		private UniTask LoadNiagara(string path)
 		{
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadNiagara>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CF57 RID: 249687 RVA: 0x00EA661C File Offset: 0x00EA481C
+		// Token: 0x06031ECE RID: 204494 RVA: 0x00DF74F8 File Offset: 0x00DF56F8
 		protected override void OnBattleScoreChanged(int scoreId, int score)
 		{
 			if (!this.ScoreInitFlag)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateScore(score, this.CurScoreLevelConfig);
 		}
 
-		// Token: 0x0603CF58 RID: 249688 RVA: 0x00EA66A4 File Offset: 0x00EA48A4
+		// Token: 0x06031ECF RID: 204495 RVA: 0x00DF7580 File Offset: 0x00DF5780
 		private void UpdateScore(int score, BattleScoreLevelConf? scoreLevelConfig)
 		{
 			this.HasValidConfig = (scoreLevelConfig != null);
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer4.PlaySequencePurely("Full", false, false, null, null, false);
 		}
 
-		// Token: 0x0603CF59 RID: 249689 RVA: 0x00EA677C File Offset: 0x00EA497C
+		// Token: 0x06031ED0 RID: 204496 RVA: 0x00DF7658 File Offset: 0x00DF5858
 		public override void OnTick(float delta)
 		{
 			if (this.HasValidConfig && this.TickScore != this.TickEndScore && base.GetActive())
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF5A RID: 249690 RVA: 0x00EA684C File Offset: 0x00EA4A4C
+		// Token: 0x06031ED1 RID: 204497 RVA: 0x00DF7728 File Offset: 0x00DF5928
 		private void SetTickEndScore(int score)
 		{
 			if (score > 0)
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SmoothTime = 200f;
 		}
 
-		// Token: 0x0603CF5B RID: 249691 RVA: 0x00EA689C File Offset: 0x00EA4A9C
+		// Token: 0x06031ED2 RID: 204498 RVA: 0x00DF7778 File Offset: 0x00DF5978
 		private void UpdateMaxAndMinScore()
 		{
 			this.MinScoreLevelConfig = null;
@@ -277,14 +277,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			int maxScore = this.MaxScore;
 		}
 
-		// Token: 0x0603CF5C RID: 249692 RVA: 0x00EA6960 File Offset: 0x00EA4B60
+		// Token: 0x06031ED3 RID: 204499 RVA: 0x00DF783C File Offset: 0x00DF5A3C
 		public override bool IsValidScore(int scoreId)
 		{
 			BattleScoreConf? scoreConfig = BattleScoreModel.Instance.GetScoreConfig(scoreId, true);
 			return scoreConfig != null && (scoreConfig.Value.Type == 4 || scoreConfig.Value.Type == 7);
 		}
 
-		// Token: 0x0603CF5D RID: 249693 RVA: 0x00EA69AC File Offset: 0x00EA4BAC
+		// Token: 0x06031ED4 RID: 204500 RVA: 0x00DF7888 File Offset: 0x00DF5A88
 		public override void ShowScore()
 		{
 			base.ShowScore();
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer2.PlaySequencePurely("Start", false, false, null, null, false);
 		}
 
-		// Token: 0x0603CF5E RID: 249694 RVA: 0x00EA6A20 File Offset: 0x00EA4C20
+		// Token: 0x06031ED5 RID: 204501 RVA: 0x00DF78FC File Offset: 0x00DF5AFC
 		public override void HideScore()
 		{
 			base.HideScore();
@@ -340,76 +340,76 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}).Forget();
 		}
 
-		// Token: 0x0401FC04 RID: 130052
+		// Token: 0x0401A6C1 RID: 108225
 		private const int LINK_SCORE_GROUP_ID = 2;
 
-		// Token: 0x0401FC05 RID: 130053
+		// Token: 0x0401A6C2 RID: 108226
 		[Nullable(1)]
 		private const string SCORE_NIAGARA_PATH = "/Game/Aki/Effect/UI/Niagaras/RouGe/NS_Fx_LGUI_WhiteCat_Button_Panner.NS_Fx_LGUI_WhiteCat_Button_Panner";
 
-		// Token: 0x0401FC06 RID: 130054
+		// Token: 0x0401A6C3 RID: 108227
 		private const int MAX_SMOOTH_TIME = 200;
 
-		// Token: 0x0401FC07 RID: 130055
+		// Token: 0x0401A6C4 RID: 108228
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat TickStatsObject = Stat.Create("[BattleView]LinkScoreItemTick", "", "");
 
-		// Token: 0x0401FC08 RID: 130056
+		// Token: 0x0401A6C5 RID: 108229
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401FC09 RID: 130057
+		// Token: 0x0401A6C6 RID: 108230
 		private UNiagaraSystem ScoreNiagara;
 
-		// Token: 0x0401FC0A RID: 130058
+		// Token: 0x0401A6C7 RID: 108231
 		private UUINiagara ScoreUiNiagara;
 
-		// Token: 0x0401FC0B RID: 130059
+		// Token: 0x0401A6C8 RID: 108232
 		private UUIItem PointItem;
 
-		// Token: 0x0401FC0C RID: 130060
+		// Token: 0x0401A6C9 RID: 108233
 		private bool HasValidConfig;
 
-		// Token: 0x0401FC0D RID: 130061
+		// Token: 0x0401A6CA RID: 108234
 		private bool IsShowFull;
 
-		// Token: 0x0401FC0E RID: 130062
+		// Token: 0x0401A6CB RID: 108235
 		private int TickStartScore;
 
-		// Token: 0x0401FC0F RID: 130063
+		// Token: 0x0401A6CC RID: 108236
 		private int TickEndScore;
 
-		// Token: 0x0401FC10 RID: 130064
+		// Token: 0x0401A6CD RID: 108237
 		private int TickScore;
 
-		// Token: 0x0401FC11 RID: 130065
+		// Token: 0x0401A6CE RID: 108238
 		private int MaxScore;
 
-		// Token: 0x0401FC12 RID: 130066
+		// Token: 0x0401A6CF RID: 108239
 		private float SmoothTime;
 
-		// Token: 0x0401FC13 RID: 130067
+		// Token: 0x0401A6D0 RID: 108240
 		private IReadOnlyList<BattleScoreLevelConf> CurScoreLevelConfigList;
 
-		// Token: 0x0401FC14 RID: 130068
+		// Token: 0x0401A6D1 RID: 108241
 		private BattleScoreLevelConf? CurScoreLevelConfig;
 
-		// Token: 0x0401FC15 RID: 130069
+		// Token: 0x0401A6D2 RID: 108242
 		private BattleScoreLevelConf? MinScoreLevelConfig;
 
-		// Token: 0x0401FC16 RID: 130070
+		// Token: 0x0401A6D3 RID: 108243
 		private BattleScoreLevelConf? MaxScoreLevelConfig;
 
-		// Token: 0x0401FC17 RID: 130071
+		// Token: 0x0401A6D4 RID: 108244
 		private bool ScoreInitFlag;
 
-		// Token: 0x0200C0A3 RID: 49315
+		// Token: 0x0200AAAC RID: 43692
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A217 RID: 238103
+			// Token: 0x04034BE9 RID: 216041
 			ScoreNiagara,
-			// Token: 0x0403A218 RID: 238104
+			// Token: 0x04034BEA RID: 216042
 			PointItem
 		}
 	}

@@ -10,13 +10,13 @@ using CSharpScript.Game.NewWorld.Common.Component;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007188 RID: 29064
+	// Token: 0x0200623C RID: 25148
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemNearbyTrackingComponent : EntityComponent
 	{
-		// Token: 0x17009D87 RID: 40327
-		// (get) Token: 0x06047123 RID: 291107 RVA: 0x01206208 File Offset: 0x01204408
+		// Token: 0x17007298 RID: 29336
+		// (get) Token: 0x0603C9D3 RID: 248275 RVA: 0x01160318 File Offset: 0x0115E518
 		public int? ShowRange
 		{
 			get
@@ -48,8 +48,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D88 RID: 40328
-		// (get) Token: 0x06047124 RID: 291108 RVA: 0x012062E4 File Offset: 0x012044E4
+		// Token: 0x17007299 RID: 29337
+		// (get) Token: 0x0603C9D4 RID: 248276 RVA: 0x011603F4 File Offset: 0x0115E5F4
 		public int? HideRange
 		{
 			get
@@ -81,8 +81,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D89 RID: 40329
-		// (get) Token: 0x06047125 RID: 291109 RVA: 0x012063BD File Offset: 0x012045BD
+		// Token: 0x1700729A RID: 29338
+		// (get) Token: 0x0603C9D5 RID: 248277 RVA: 0x011604CD File Offset: 0x0115E6CD
 		public global::Vector IconOffset
 		{
 			get
@@ -91,9 +91,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D8A RID: 40330
-		// (get) Token: 0x06047126 RID: 291110 RVA: 0x012063C5 File Offset: 0x012045C5
-		// (set) Token: 0x06047127 RID: 291111 RVA: 0x012063CD File Offset: 0x012045CD
+		// Token: 0x1700729B RID: 29339
+		// (get) Token: 0x0603C9D6 RID: 248278 RVA: 0x011604D5 File Offset: 0x0115E6D5
+		// (set) Token: 0x0603C9D7 RID: 248279 RVA: 0x011604DD File Offset: 0x0115E6DD
 		public bool EnableTracking
 		{
 			get
@@ -111,8 +111,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D8B RID: 40331
-		// (get) Token: 0x06047128 RID: 291112 RVA: 0x01206408 File Offset: 0x01204608
+		// Token: 0x1700729C RID: 29340
+		// (get) Token: 0x0603C9D8 RID: 248280 RVA: 0x01160518 File Offset: 0x0115E718
 		public string IconPath
 		{
 			get
@@ -172,8 +172,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D8C RID: 40332
-		// (get) Token: 0x06047129 RID: 291113 RVA: 0x012064D2 File Offset: 0x012046D2
+		// Token: 0x1700729D RID: 29341
+		// (get) Token: 0x0603C9D9 RID: 248281 RVA: 0x011605E2 File Offset: 0x0115E7E2
 		public ETrackType TrackType
 		{
 			get
@@ -182,8 +182,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D8D RID: 40333
-		// (get) Token: 0x0604712A RID: 291114 RVA: 0x012064DF File Offset: 0x012046DF
+		// Token: 0x1700729E RID: 29342
+		// (get) Token: 0x0603C9DA RID: 248282 RVA: 0x011605EF File Offset: 0x0115E7EF
 		public ENearbyTrackingType TrackConfigType
 		{
 			get
@@ -197,8 +197,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D8E RID: 40334
-		// (get) Token: 0x0604712B RID: 291115 RVA: 0x012064F4 File Offset: 0x012046F4
+		// Token: 0x1700729F RID: 29343
+		// (get) Token: 0x0603C9DB RID: 248283 RVA: 0x01160604 File Offset: 0x0115E804
 		public int? AudioPointNearRadius
 		{
 			get
@@ -217,8 +217,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D8F RID: 40335
-		// (get) Token: 0x0604712C RID: 291116 RVA: 0x01206548 File Offset: 0x01204748
+		// Token: 0x170072A0 RID: 29344
+		// (get) Token: 0x0603C9DC RID: 248284 RVA: 0x01160658 File Offset: 0x0115E858
 		public int? AudioPointMiddleRadius
 		{
 			get
@@ -237,8 +237,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D90 RID: 40336
-		// (get) Token: 0x0604712D RID: 291117 RVA: 0x0120659C File Offset: 0x0120479C
+		// Token: 0x170072A1 RID: 29345
+		// (get) Token: 0x0603C9DD RID: 248285 RVA: 0x011606AC File Offset: 0x0115E8AC
 		public int? AudioPointFarRadius
 		{
 			get
@@ -257,8 +257,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D91 RID: 40337
-		// (get) Token: 0x0604712E RID: 291118 RVA: 0x012065F0 File Offset: 0x012047F0
+		// Token: 0x170072A2 RID: 29346
+		// (get) Token: 0x0603C9DE RID: 248286 RVA: 0x01160700 File Offset: 0x0115E900
 		public int? CompassNearbyShowRange
 		{
 			get
@@ -282,8 +282,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D92 RID: 40338
-		// (get) Token: 0x0604712F RID: 291119 RVA: 0x01206654 File Offset: 0x01204854
+		// Token: 0x170072A3 RID: 29347
+		// (get) Token: 0x0603C9DF RID: 248287 RVA: 0x01160764 File Offset: 0x0115E964
 		public int? CompassNearbyHideRange
 		{
 			get
@@ -307,8 +307,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D93 RID: 40339
-		// (get) Token: 0x06047130 RID: 291120 RVA: 0x012066B8 File Offset: 0x012048B8
+		// Token: 0x170072A4 RID: 29348
+		// (get) Token: 0x0603C9E0 RID: 248288 RVA: 0x011607C8 File Offset: 0x0115E9C8
 		public List<EVehicleType> CompassDetectVehicleTypes
 		{
 			get
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047131 RID: 291121 RVA: 0x012066EC File Offset: 0x012048EC
+		// Token: 0x0603C9E1 RID: 248289 RVA: 0x011607FC File Offset: 0x0115E9FC
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			NearbyTrackingComponent nearbyTrackingComponent = args.GetP1<CreateEntityData>().GetParam<SceneItemNearbyTrackingComponent>() as NearbyTrackingComponent;
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047132 RID: 291122 RVA: 0x01206788 File Offset: 0x01204988
+		// Token: 0x0603C9E2 RID: 248290 RVA: 0x01160898 File Offset: 0x0115EA98
 		protected override bool OnStart()
 		{
 			NearbyTrackingComponent config = this.Config;
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047133 RID: 291123 RVA: 0x0120683C File Offset: 0x01204A3C
+		// Token: 0x0603C9E3 RID: 248291 RVA: 0x0116094C File Offset: 0x0115EB4C
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.Emit<Entity>(EEventName.OnSceneItemNearbyTrackingEnd, base.Entity);
@@ -395,7 +395,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047134 RID: 291124 RVA: 0x01206948 File Offset: 0x01204B48
+		// Token: 0x0603C9E4 RID: 248292 RVA: 0x01160A58 File Offset: 0x0115EC58
 		private ETrackType? HandleTrackType(INearbyTracking inTrackingConfig)
 		{
 			ENearbyTrackingType? enearbyTrackingType = (inTrackingConfig != null) ? new ENearbyTrackingType?(inTrackingConfig.Type) : null;
@@ -440,7 +440,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return null;
 		}
 
-		// Token: 0x06047135 RID: 291125 RVA: 0x01206A68 File Offset: 0x01204C68
+		// Token: 0x0603C9E5 RID: 248293 RVA: 0x01160B78 File Offset: 0x0115ED78
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private string GetGlobalConfigFromCsvText(string name)
@@ -453,7 +453,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return config.GetValueOrDefault().Value;
 		}
 
-		// Token: 0x06047136 RID: 291126 RVA: 0x01206AA1 File Offset: 0x01204CA1
+		// Token: 0x0603C9E6 RID: 248294 RVA: 0x01160BB1 File Offset: 0x0115EDB1
 		private void HandlePropertyUpdate(bool @lock)
 		{
 			if (this.TagComponent == null)
@@ -463,7 +463,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.HandleLock(@lock);
 		}
 
-		// Token: 0x06047137 RID: 291127 RVA: 0x01206AB4 File Offset: 0x01204CB4
+		// Token: 0x0603C9E7 RID: 248295 RVA: 0x01160BC4 File Offset: 0x0115EDC4
 		private void HandlePositionReset()
 		{
 			NearbyTrackingComponent config = this.Config;
@@ -501,13 +501,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, (this.TrackingConfig as IIconNearbyTracking).Duration.Value * 1000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06047138 RID: 291128 RVA: 0x01206BBB File Offset: 0x01204DBB
+		// Token: 0x0603C9E8 RID: 248296 RVA: 0x01160CCB File Offset: 0x0115EECB
 		private void HandleLock(bool @lock)
 		{
 			this.EnableTracking = !@lock;
 		}
 
-		// Token: 0x06047139 RID: 291129 RVA: 0x01206BC8 File Offset: 0x01204DC8
+		// Token: 0x0603C9E9 RID: 248297 RVA: 0x01160CD8 File Offset: 0x0115EED8
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -516,91 +516,90 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemNearbyTrackingComponent sceneItemNearbyTrackingComponent = (SceneItemNearbyTrackingComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemNearbyTrackingComponent.Config == null)
 			{
-				if (sceneItemNearbyTrackingComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<NearbyTrackingComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("IsEnableValue"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				this.IsEnableValue = sceneItemNearbyTrackingComponent.IsEnableValue;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TrackingConfig"))
+			this.IsEnableValue = sceneItemNearbyTrackingComponent.IsEnableValue;
+			if (sceneItemNearbyTrackingComponent.TrackingConfig == null)
 			{
-				if (sceneItemNearbyTrackingComponent.TrackingConfig == null)
-				{
-					this.TrackingConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<INearbyTracking>(this.TrackingConfig), "TrackingConfig"))
-				{
-					return false;
-				}
+				this.TrackingConfig = null;
 			}
-			if (base.CanResetComponentProperty("TagComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TrackingConfig), "TrackingConfig"))
 			{
-				if (sceneItemNearbyTrackingComponent.TagComponent == null)
-				{
-					this.TagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComponent), "TagComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("Type"))
+			if (sceneItemNearbyTrackingComponent.TagComponent == null)
 			{
-				this.Type = sceneItemNearbyTrackingComponent.Type;
+				this.TagComponent = null;
 			}
-			if (base.CanResetComponentProperty("DisableTrackTimerHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 			{
-				if (sceneItemNearbyTrackingComponent.DisableTrackTimerHandle == null)
-				{
-					this.DisableTrackTimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DisableTrackTimerHandle), "DisableTrackTimerHandle"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("MarkOffset"))
+			this.Type = sceneItemNearbyTrackingComponent.Type;
+			if (sceneItemNearbyTrackingComponent.DisableTrackTimerHandle == null)
 			{
-				if (sceneItemNearbyTrackingComponent.MarkOffset == null)
-				{
-					this.MarkOffset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.MarkOffset), "MarkOffset"))
-				{
-					return false;
-				}
+				this.DisableTrackTimerHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisableTrackTimerHandle), "DisableTrackTimerHandle"))
+			{
+				return false;
+			}
+			if (sceneItemNearbyTrackingComponent.MarkOffset == null)
+			{
+				this.MarkOffset = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MarkOffset), "MarkOffset"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040255CD RID: 153037
+		// Token: 0x170072A5 RID: 29349
+		// (get) Token: 0x0603C9EA RID: 248298 RVA: 0x01160DE7 File Offset: 0x0115EFE7
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072A6 RID: 29350
+		// (get) Token: 0x0603C9EB RID: 248299 RVA: 0x01160DEA File Offset: 0x0115EFEA
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020234 RID: 131636
 		private NearbyTrackingComponent Config;
 
-		// Token: 0x040255CE RID: 153038
+		// Token: 0x04020235 RID: 131637
 		private bool IsEnableValue;
 
-		// Token: 0x040255CF RID: 153039
+		// Token: 0x04020236 RID: 131638
 		private INearbyTracking TrackingConfig;
 
-		// Token: 0x040255D0 RID: 153040
+		// Token: 0x04020237 RID: 131639
 		private LevelTagComponent TagComponent;
 
-		// Token: 0x040255D1 RID: 153041
+		// Token: 0x04020238 RID: 131640
 		private ETrackType? Type;
 
-		// Token: 0x040255D2 RID: 153042
+		// Token: 0x04020239 RID: 131641
 		private TimerHandle DisableTrackTimerHandle;
 
-		// Token: 0x040255D3 RID: 153043
+		// Token: 0x0402023A RID: 131642
 		private global::Vector MarkOffset;
 	}
 }

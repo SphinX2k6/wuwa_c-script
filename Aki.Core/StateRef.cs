@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020000D7 RID: 215
+// Token: 0x020000D9 RID: 217
 [NullableContext(1)]
 [Nullable(0)]
 public class StateRef : IClear
 {
-	// Token: 0x060006C3 RID: 1731 RVA: 0x00023FEF File Offset: 0x000221EF
+	// Token: 0x06000704 RID: 1796 RVA: 0x000245C3 File Offset: 0x000227C3
 	public StateRef(string group, string initState)
 	{
 		this.Group = group;
 		this._State = initState;
 	}
 
-	// Token: 0x170000DD RID: 221
-	// (get) Token: 0x060006C4 RID: 1732 RVA: 0x00024005 File Offset: 0x00022205
-	// (set) Token: 0x060006C5 RID: 1733 RVA: 0x0002400D File Offset: 0x0002220D
+	// Token: 0x170000EF RID: 239
+	// (get) Token: 0x06000705 RID: 1797 RVA: 0x000245D9 File Offset: 0x000227D9
+	// (set) Token: 0x06000706 RID: 1798 RVA: 0x000245E1 File Offset: 0x000227E1
 	public string State
 	{
 		get
@@ -32,15 +32,15 @@ public class StateRef : IClear
 		}
 	}
 
-	// Token: 0x060006C6 RID: 1734 RVA: 0x0002403B File Offset: 0x0002223B
+	// Token: 0x06000707 RID: 1799 RVA: 0x0002460F File Offset: 0x0002280F
 	public bool ClearObject()
 	{
 		return true;
 	}
 
-	// Token: 0x0400056C RID: 1388
+	// Token: 0x0400057B RID: 1403
 	private string Group;
 
-	// Token: 0x0400056D RID: 1389
+	// Token: 0x0400057C RID: 1404
 	private string _State;
 }

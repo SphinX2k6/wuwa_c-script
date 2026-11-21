@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025D8 RID: 9688
+	// Token: 0x02002897 RID: 10391
 	public class IMovieBackgroundFadeData
 	{
-		// Token: 0x0600D9CA RID: 55754 RVA: 0x00207AB6 File Offset: 0x00205CB6
-		[NullableContext(1)]
+		// Token: 0x0600E792 RID: 59282 RVA: 0x0022416A File Offset: 0x0022236A
 		public static IMovieBackgroundFadeData Create(IMovieBackgroundFadeData? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FDC RID: 16348
-		// (get) Token: 0x0600D9CB RID: 55755 RVA: 0x00207AD5 File Offset: 0x00205CD5
+		// Token: 0x17004312 RID: 17170
+		// (get) Token: 0x0600E793 RID: 59283 RVA: 0x00224189 File Offset: 0x00222389
 		public virtual EMovieBackgroundType FadeInBackgroundType
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FDD RID: 16349
-		// (get) Token: 0x0600D9CC RID: 55756 RVA: 0x00207AE2 File Offset: 0x00205CE2
+		// Token: 0x17004313 RID: 17171
+		// (get) Token: 0x0600E794 RID: 59284 RVA: 0x00224196 File Offset: 0x00222396
 		public virtual EMovieBackgroundType FadeOutBackgroundType
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078F4 RID: 30964
+		// Token: 0x04007F8B RID: 32651
 		private IMovieBackgroundFadeData Instance;
 	}
 }

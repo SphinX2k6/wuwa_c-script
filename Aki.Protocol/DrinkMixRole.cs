@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000404 RID: 1028
+	// Token: 0x020003ED RID: 1005
 	public sealed class DrinkMixRole : IMessage<DrinkMixRole>, IMessage, IEquatable<DrinkMixRole>, IDeepCloneable<DrinkMixRole>, IBufferMessage
 	{
-		// Token: 0x06006335 RID: 25397 RVA: 0x000EEAD5 File Offset: 0x000ECCD5
+		// Token: 0x060061A5 RID: 24997 RVA: 0x000EB95D File Offset: 0x000E9B5D
 		[NullableContext(1)]
 		public static DrinkMixRole Create()
 		{
 			return new DrinkMixRole();
 		}
 
-		// Token: 0x17001281 RID: 4737
-		// (get) Token: 0x06006336 RID: 25398 RVA: 0x000EEADC File Offset: 0x000ECCDC
+		// Token: 0x1700122C RID: 4652
+		// (get) Token: 0x060061A6 RID: 24998 RVA: 0x000EB964 File Offset: 0x000E9B64
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<DrinkMixRole> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001282 RID: 4738
-		// (get) Token: 0x06006337 RID: 25399 RVA: 0x000EEAE3 File Offset: 0x000ECCE3
+		// Token: 0x1700122D RID: 4653
+		// (get) Token: 0x060061A7 RID: 24999 RVA: 0x000EB96B File Offset: 0x000E9B6B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001283 RID: 4739
-		// (get) Token: 0x06006338 RID: 25400 RVA: 0x000EEAE6 File Offset: 0x000ECCE6
+		// Token: 0x1700122E RID: 4654
+		// (get) Token: 0x060061A8 RID: 25000 RVA: 0x000EB96E File Offset: 0x000E9B6E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006339 RID: 25401 RVA: 0x000EEAED File Offset: 0x000ECCED
+		// Token: 0x060061A9 RID: 25001 RVA: 0x000EB975 File Offset: 0x000E9B75
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DrinkMixRole()
 		{
 		}
 
-		// Token: 0x0600633A RID: 25402 RVA: 0x000EEAF8 File Offset: 0x000ECCF8
+		// Token: 0x060061AA RID: 25002 RVA: 0x000EB980 File Offset: 0x000E9B80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DrinkMixRole(DrinkMixRole other) : this()
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600633B RID: 25403 RVA: 0x000EEB4C File Offset: 0x000ECD4C
+		// Token: 0x060061AB RID: 25003 RVA: 0x000EB9D4 File Offset: 0x000E9BD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DrinkMixRole Clone()
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			return new DrinkMixRole(this);
 		}
 
-		// Token: 0x17001284 RID: 4740
-		// (get) Token: 0x0600633C RID: 25404 RVA: 0x000EEB54 File Offset: 0x000ECD54
-		// (set) Token: 0x0600633D RID: 25405 RVA: 0x000EEB5C File Offset: 0x000ECD5C
+		// Token: 0x1700122F RID: 4655
+		// (get) Token: 0x060061AC RID: 25004 RVA: 0x000EB9DC File Offset: 0x000E9BDC
+		// (set) Token: 0x060061AD RID: 25005 RVA: 0x000EB9E4 File Offset: 0x000E9BE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleId
@@ -97,9 +97,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001285 RID: 4741
-		// (get) Token: 0x0600633E RID: 25406 RVA: 0x000EEB65 File Offset: 0x000ECD65
-		// (set) Token: 0x0600633F RID: 25407 RVA: 0x000EEB6D File Offset: 0x000ECD6D
+		// Token: 0x17001230 RID: 4656
+		// (get) Token: 0x060061AE RID: 25006 RVA: 0x000EB9ED File Offset: 0x000E9BED
+		// (set) Token: 0x060061AF RID: 25007 RVA: 0x000EB9F5 File Offset: 0x000E9BF5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool FirstPass
@@ -114,9 +114,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001286 RID: 4742
-		// (get) Token: 0x06006340 RID: 25408 RVA: 0x000EEB76 File Offset: 0x000ECD76
-		// (set) Token: 0x06006341 RID: 25409 RVA: 0x000EEB7E File Offset: 0x000ECD7E
+		// Token: 0x17001231 RID: 4657
+		// (get) Token: 0x060061B0 RID: 25008 RVA: 0x000EB9FE File Offset: 0x000E9BFE
+		// (set) Token: 0x060061B1 RID: 25009 RVA: 0x000EBA06 File Offset: 0x000E9C06
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool MaxLike
@@ -131,9 +131,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001287 RID: 4743
-		// (get) Token: 0x06006342 RID: 25410 RVA: 0x000EEB87 File Offset: 0x000ECD87
-		// (set) Token: 0x06006343 RID: 25411 RVA: 0x000EEB8F File Offset: 0x000ECD8F
+		// Token: 0x17001232 RID: 4658
+		// (get) Token: 0x060061B2 RID: 25010 RVA: 0x000EBA0F File Offset: 0x000E9C0F
+		// (set) Token: 0x060061B3 RID: 25011 RVA: 0x000EBA17 File Offset: 0x000E9C17
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool RewardGet
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006344 RID: 25412 RVA: 0x000EEB98 File Offset: 0x000ECD98
+		// Token: 0x060061B4 RID: 25012 RVA: 0x000EBA20 File Offset: 0x000E9C20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -156,7 +156,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DrinkMixRole);
 		}
 
-		// Token: 0x06006345 RID: 25413 RVA: 0x000EEBA8 File Offset: 0x000ECDA8
+		// Token: 0x060061B5 RID: 25013 RVA: 0x000EBA30 File Offset: 0x000E9C30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DrinkMixRole other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.RoleId == other.RoleId && this.FirstPass == other.FirstPass && this.MaxLike == other.MaxLike && this.RewardGet == other.RewardGet && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06006346 RID: 25414 RVA: 0x000EEC14 File Offset: 0x000ECE14
+		// Token: 0x060061B6 RID: 25014 RVA: 0x000EBA9C File Offset: 0x000E9C9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06006347 RID: 25415 RVA: 0x000EEC9E File Offset: 0x000ECE9E
+		// Token: 0x060061B7 RID: 25015 RVA: 0x000EBB26 File Offset: 0x000E9D26
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06006348 RID: 25416 RVA: 0x000EECAB File Offset: 0x000ECEAB
+		// Token: 0x060061B8 RID: 25016 RVA: 0x000EBB33 File Offset: 0x000E9D33
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -209,7 +209,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06006349 RID: 25417 RVA: 0x000EECB4 File Offset: 0x000ECEB4
+		// Token: 0x060061B9 RID: 25017 RVA: 0x000EBB3C File Offset: 0x000E9D3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -240,7 +240,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600634A RID: 25418 RVA: 0x000EED44 File Offset: 0x000ECF44
+		// Token: 0x060061BA RID: 25018 RVA: 0x000EBBCC File Offset: 0x000E9DCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -269,7 +269,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600634B RID: 25419 RVA: 0x000EEDA8 File Offset: 0x000ECFA8
+		// Token: 0x060061BB RID: 25019 RVA: 0x000EBC30 File Offset: 0x000E9E30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DrinkMixRole other)
@@ -297,7 +297,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600634C RID: 25420 RVA: 0x000EEE20 File Offset: 0x000ED020
+		// Token: 0x060061BC RID: 25020 RVA: 0x000EBCA8 File Offset: 0x000E9EA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -305,7 +305,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600634D RID: 25421 RVA: 0x000EEE2C File Offset: 0x000ED02C
+		// Token: 0x060061BD RID: 25021 RVA: 0x000EBCB4 File Offset: 0x000E9EB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -347,34 +347,34 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003811 RID: 14353
+		// Token: 0x040037FE RID: 14334
 		private static readonly MessageParser<DrinkMixRole> _parser = new MessageParser<DrinkMixRole>(() => new DrinkMixRole());
 
-		// Token: 0x04003812 RID: 14354
+		// Token: 0x040037FF RID: 14335
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003813 RID: 14355
+		// Token: 0x04003800 RID: 14336
 		public const int RoleIdFieldNumber = 1;
 
-		// Token: 0x04003814 RID: 14356
+		// Token: 0x04003801 RID: 14337
 		private int roleId_;
 
-		// Token: 0x04003815 RID: 14357
+		// Token: 0x04003802 RID: 14338
 		public const int FirstPassFieldNumber = 2;
 
-		// Token: 0x04003816 RID: 14358
+		// Token: 0x04003803 RID: 14339
 		private bool firstPass_;
 
-		// Token: 0x04003817 RID: 14359
+		// Token: 0x04003804 RID: 14340
 		public const int MaxLikeFieldNumber = 3;
 
-		// Token: 0x04003818 RID: 14360
+		// Token: 0x04003805 RID: 14341
 		private bool maxLike_;
 
-		// Token: 0x04003819 RID: 14361
+		// Token: 0x04003806 RID: 14342
 		public const int RewardGetFieldNumber = 4;
 
-		// Token: 0x0400381A RID: 14362
+		// Token: 0x04003807 RID: 14343
 		private bool rewardGet_;
 	}
 }

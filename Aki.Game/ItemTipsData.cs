@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.SkipInterface;
 
-// Token: 0x020018D7 RID: 6359
+// Token: 0x02000D90 RID: 3472
 [NullableContext(1)]
 [Nullable(0)]
 public class ItemTipsData
 {
-	// Token: 0x0600BA98 RID: 47768 RVA: 0x002A3AF8 File Offset: 0x002A1CF8
+	// Token: 0x06008E81 RID: 36481 RVA: 0x002AE250 File Offset: 0x002AC450
 	public ItemTipsData(ItemTipsParam data)
 	{
 		CSharpScript.Game.Module.Inventory.ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(data.ItemId);
@@ -49,7 +49,7 @@ public class ItemTipsData
 		this.GetWayData = list.ToArray();
 	}
 
-	// Token: 0x0600BA99 RID: 47769 RVA: 0x002A3C70 File Offset: 0x002A1E70
+	// Token: 0x06008E82 RID: 36482 RVA: 0x002AE3C8 File Offset: 0x002AC5C8
 	public bool CanDeprecate()
 	{
 		if (this.IncId <= 0)
@@ -60,49 +60,49 @@ public class ItemTipsData
 		return attributeItemData != null && attributeItemData.CanDeprecate();
 	}
 
-	// Token: 0x0600BA9A RID: 47770 RVA: 0x002A3CA4 File Offset: 0x002A1EA4
+	// Token: 0x06008E83 RID: 36483 RVA: 0x002AE3FC File Offset: 0x002AC5FC
 	public bool IsShowIconBig()
 	{
 		return this.OnIsShowIconBig();
 	}
 
-	// Token: 0x0600BA9B RID: 47771 RVA: 0x002A3CAC File Offset: 0x002A1EAC
+	// Token: 0x06008E84 RID: 36484 RVA: 0x002AE404 File Offset: 0x002AC604
 	protected virtual bool OnIsShowIconBig()
 	{
 		return false;
 	}
 
-	// Token: 0x04005491 RID: 21649
+	// Token: 0x0400553C RID: 21820
 	public int IncId;
 
-	// Token: 0x04005492 RID: 21650
+	// Token: 0x0400553D RID: 21821
 	public int ConfigId;
 
-	// Token: 0x04005493 RID: 21651
+	// Token: 0x0400553E RID: 21822
 	public string Title;
 
-	// Token: 0x04005494 RID: 21652
+	// Token: 0x0400553F RID: 21823
 	public int QualityId;
 
-	// Token: 0x04005495 RID: 21653
+	// Token: 0x04005540 RID: 21824
 	public bool CanSkip;
 
-	// Token: 0x04005496 RID: 21654
+	// Token: 0x04005541 RID: 21825
 	public bool IsIconByType;
 
-	// Token: 0x04005497 RID: 21655
+	// Token: 0x04005542 RID: 21826
 	public bool IsQualityByType;
 
-	// Token: 0x04005498 RID: 21656
+	// Token: 0x04005543 RID: 21827
 	public EItemTipsType ItemType;
 
-	// Token: 0x04005499 RID: 21657
+	// Token: 0x04005544 RID: 21828
 	public ESkipName PreviewType = ESkipName.NoSkip;
 
-	// Token: 0x0400549A RID: 21658
+	// Token: 0x04005545 RID: 21829
 	public bool ShowPreview;
 
-	// Token: 0x0400549B RID: 21659
+	// Token: 0x04005546 RID: 21830
 	[Nullable(new byte[]
 	{
 		2,
@@ -110,18 +110,18 @@ public class ItemTipsData
 	})]
 	public IGetWayItemData[] GetWayData;
 
-	// Token: 0x0400549C RID: 21660
+	// Token: 0x04005547 RID: 21831
 	[Nullable(2)]
 	public string LimitTimeTxt;
 
-	// Token: 0x0400549D RID: 21661
+	// Token: 0x04005548 RID: 21832
 	public Func<int, bool> CanClickLockButton = (int uniqueId) => true;
 
-	// Token: 0x0400549E RID: 21662
+	// Token: 0x04005549 RID: 21833
 	[Nullable(2)]
 	public Func<int> UpdateShowNumCallback;
 
-	// Token: 0x0400549F RID: 21663
+	// Token: 0x0400554A RID: 21834
 	[Nullable(2)]
 	public Func<bool> IsShowNumTextCallback;
 }

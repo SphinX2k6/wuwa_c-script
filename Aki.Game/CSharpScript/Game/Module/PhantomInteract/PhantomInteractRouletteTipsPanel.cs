@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomInteract
 {
-	// Token: 0x020050FE RID: 20734
+	// Token: 0x020040CE RID: 16590
 	public class PhantomInteractRouletteTipsPanel : UiPanelBase
 	{
-		// Token: 0x06035002 RID: 217090 RVA: 0x00C8DD68 File Offset: 0x00C8BF68
+		// Token: 0x06029EFB RID: 171771 RVA: 0x00BDB044 File Offset: 0x00BD9244
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.PhantomInteract
 			};
 		}
 
-		// Token: 0x06035003 RID: 217091 RVA: 0x00C8DDC4 File Offset: 0x00C8BFC4
+		// Token: 0x06029EFC RID: 171772 RVA: 0x00BDB0A0 File Offset: 0x00BD92A0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomInteractRouletteTipsPanel.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.PhantomInteract
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035004 RID: 217092 RVA: 0x00C8DE08 File Offset: 0x00C8C008
+		// Token: 0x06029EFD RID: 171773 RVA: 0x00BDB0E4 File Offset: 0x00BD92E4
 		public void Refresh()
 		{
 			PhantomInteractModel instance = PhantomInteractModel.Instance;
@@ -51,21 +51,21 @@ namespace CSharpScript.Game.Module.PhantomInteract
 			}
 		}
 
-		// Token: 0x0401C387 RID: 115591
+		// Token: 0x04016DBA RID: 93626
 		private const int GRID_COUNT = 8;
 
-		// Token: 0x0401C388 RID: 115592
+		// Token: 0x04016DBB RID: 93627
 		[Nullable(1)]
 		private readonly List<PhantomGridItem> GridItems = new List<PhantomGridItem>();
 
-		// Token: 0x0200B258 RID: 45656
+		// Token: 0x02009C91 RID: 40081
 		private enum EComponent
 		{
-			// Token: 0x04036116 RID: 221462
+			// Token: 0x04030B6B RID: 199531
 			ItemContent,
-			// Token: 0x04036117 RID: 221463
+			// Token: 0x04030B6C RID: 199532
 			ItemGrid,
-			// Token: 0x04036118 RID: 221464
+			// Token: 0x04030B6D RID: 199533
 			TxtPath
 		}
 	}

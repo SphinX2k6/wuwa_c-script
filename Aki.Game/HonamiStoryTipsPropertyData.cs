@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001EB3 RID: 7859
+// Token: 0x02001375 RID: 4981
 public class HonamiStoryTipsPropertyData : IHonamiStoryTipsPropertyData
 {
-	// Token: 0x170012DF RID: 4831
-	// (get) Token: 0x0600F1BC RID: 61884 RVA: 0x003A2FFB File Offset: 0x003A11FB
-	// (set) Token: 0x0600F1BD RID: 61885 RVA: 0x003A3003 File Offset: 0x003A1203
+	// Token: 0x17001309 RID: 4873
+	// (get) Token: 0x0600C5DB RID: 50651 RVA: 0x003AEAFB File Offset: 0x003ACCFB
+	// (set) Token: 0x0600C5DC RID: 50652 RVA: 0x003AEB03 File Offset: 0x003ACD03
 	public int PropId { get; set; }
 
-	// Token: 0x170012E0 RID: 4832
-	// (get) Token: 0x0600F1BE RID: 61886 RVA: 0x003A300C File Offset: 0x003A120C
-	// (set) Token: 0x0600F1BF RID: 61887 RVA: 0x003A3014 File Offset: 0x003A1214
+	// Token: 0x1700130A RID: 4874
+	// (get) Token: 0x0600C5DD RID: 50653 RVA: 0x003AEB0C File Offset: 0x003ACD0C
+	// (set) Token: 0x0600C5DE RID: 50654 RVA: 0x003AEB14 File Offset: 0x003ACD14
 	public int? PropertyNumber { get; set; }
 }

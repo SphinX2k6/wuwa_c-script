@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000930 RID: 2352
+	// Token: 0x020001A5 RID: 421
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.ChildActorComponent")]
 	[UnrealStructLayout(640, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 640)]
 	public class UChildActorComponent : USceneComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060084EF RID: 34031 RVA: 0x000BD961 File Offset: 0x000BBB61
+		// Token: 0x06001F6A RID: 8042 RVA: 0x0002D739 File Offset: 0x0002B939
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UChildActorComponent._ClassPtr;
 		}
 
-		// Token: 0x060084F0 RID: 34032 RVA: 0x000BD970 File Offset: 0x000BBB70
+		// Token: 0x06001F6B RID: 8043 RVA: 0x0002D748 File Offset: 0x0002B948
 		public UChildActorComponent() : this(BuiltinUtils.AllocNativeUObject(UChildActorComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060084F1 RID: 34033 RVA: 0x000BD998 File Offset: 0x000BBB98
+		// Token: 0x06001F6C RID: 8044 RVA: 0x0002D770 File Offset: 0x0002B970
 		[NullableContext(1)]
 		public UChildActorComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UChildActorComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17001F5C RID: 8028
-		// (get) Token: 0x060084F2 RID: 34034 RVA: 0x000BD9CB File Offset: 0x000BBBCB
-		// (set) Token: 0x060084F3 RID: 34035 RVA: 0x000BD9DF File Offset: 0x000BBBDF
+		// Token: 0x1700044C RID: 1100
+		// (get) Token: 0x06001F6D RID: 8045 RVA: 0x0002D7A3 File Offset: 0x0002B9A3
+		// (set) Token: 0x06001F6E RID: 8046 RVA: 0x0002D7B7 File Offset: 0x0002B9B7
 		[Nullable(new byte[]
 		{
 			0,
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001F5D RID: 8029
-		// (get) Token: 0x060084F4 RID: 34036 RVA: 0x000BD9F4 File Offset: 0x000BBBF4
-		// (set) Token: 0x060084F5 RID: 34037 RVA: 0x000BDA08 File Offset: 0x000BBC08
+		// Token: 0x1700044D RID: 1101
+		// (get) Token: 0x06001F6F RID: 8047 RVA: 0x0002D7CC File Offset: 0x0002B9CC
+		// (set) Token: 0x06001F70 RID: 8048 RVA: 0x0002D7E0 File Offset: 0x0002B9E0
 		public unsafe AActor ChildActor
 		{
 			get
@@ -75,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001F5E RID: 8030
-		// (get) Token: 0x060084F6 RID: 34038 RVA: 0x000BDA1D File Offset: 0x000BBC1D
-		// (set) Token: 0x060084F7 RID: 34039 RVA: 0x000BDA31 File Offset: 0x000BBC31
+		// Token: 0x1700044E RID: 1102
+		// (get) Token: 0x06001F71 RID: 8049 RVA: 0x0002D7F5 File Offset: 0x0002B9F5
+		// (set) Token: 0x06001F72 RID: 8050 RVA: 0x0002D809 File Offset: 0x0002BA09
 		public unsafe AActor ChildActorTemplate
 		{
 			get
@@ -90,7 +90,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060084F8 RID: 34040 RVA: 0x000BDA46 File Offset: 0x000BBC46
+		// Token: 0x06001F73 RID: 8051 RVA: 0x0002D81E File Offset: 0x0002BA1E
 		public void SetChildActorClass([Nullable(new byte[]
 		{
 			0,
@@ -100,38 +100,38 @@ namespace UnrealEngine
 			UChildActorComponent.__SetChildActorClass_Internal(base.NativePtr, InClass._NativePtr);
 		}
 
-		// Token: 0x060084F9 RID: 34041
+		// Token: 0x06001F74 RID: 8052
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetChildActorClass_Internal(IntPtr @this, IntPtr InClass);
 
-		// Token: 0x060084FA RID: 34042 RVA: 0x000BDA59 File Offset: 0x000BBC59
+		// Token: 0x06001F75 RID: 8053 RVA: 0x0002D831 File Offset: 0x0002BA31
 		static UChildActorComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.ChildActorComponent");
 		}
 
-		// Token: 0x060084FB RID: 34043 RVA: 0x000BDA67 File Offset: 0x000BBC67
+		// Token: 0x06001F76 RID: 8054 RVA: 0x0002D83F File Offset: 0x0002BA3F
 		protected UChildActorComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04003F43 RID: 16195
+		// Token: 0x04000A63 RID: 2659
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.ChildActorComponent";
 
-		// Token: 0x04003F44 RID: 16196
+		// Token: 0x04000A64 RID: 2660
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04003F45 RID: 16197
+		// Token: 0x04000A65 RID: 2661
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04003F46 RID: 16198
+		// Token: 0x04000A66 RID: 2662
 		internal static int __PropertyOffset_ChildActorClass;
 
-		// Token: 0x04003F47 RID: 16199
+		// Token: 0x04000A67 RID: 2663
 		internal static int __PropertyOffset_ChildActor;
 
-		// Token: 0x04003F48 RID: 16200
+		// Token: 0x04000A68 RID: 2664
 		internal static int __PropertyOffset_ChildActorTemplate;
 	}
 }

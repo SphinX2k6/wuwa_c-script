@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005939 RID: 22841
+	// Token: 0x02005F46 RID: 24390
 	public class ISlopeSlidePerformT
 	{
-		// Token: 0x1700AB72 RID: 43890
-		// (get) Token: 0x06026A68 RID: 158312 RVA: 0x00552C32 File Offset: 0x00550E32
-		// (set) Token: 0x06026A69 RID: 158313 RVA: 0x00552C3A File Offset: 0x00550E3A
+		// Token: 0x1700B4A6 RID: 46246
+		// (get) Token: 0x06028FD2 RID: 167890 RVA: 0x0059989E File Offset: 0x00597A9E
+		// (set) Token: 0x06028FD3 RID: 167891 RVA: 0x005998A6 File Offset: 0x00597AA6
 		public ESlidePerformType Type { get; set; }
 
-		// Token: 0x1700AB73 RID: 43891
-		// (get) Token: 0x06026A6A RID: 158314 RVA: 0x00552C43 File Offset: 0x00550E43
-		// (set) Token: 0x06026A6B RID: 158315 RVA: 0x00552C4B File Offset: 0x00550E4B
+		// Token: 0x1700B4A7 RID: 46247
+		// (get) Token: 0x06028FD4 RID: 167892 RVA: 0x005998AF File Offset: 0x00597AAF
+		// (set) Token: 0x06028FD5 RID: 167893 RVA: 0x005998B7 File Offset: 0x00597AB7
 		public int TriggerLandingDistance { get; set; }
 
-		// Token: 0x1700AB74 RID: 43892
-		// (get) Token: 0x06026A6C RID: 158316 RVA: 0x00552C54 File Offset: 0x00550E54
-		// (set) Token: 0x06026A6D RID: 158317 RVA: 0x00552C5C File Offset: 0x00550E5C
+		// Token: 0x1700B4A8 RID: 46248
+		// (get) Token: 0x06028FD6 RID: 167894 RVA: 0x005998C0 File Offset: 0x00597AC0
+		// (set) Token: 0x06028FD7 RID: 167895 RVA: 0x005998C8 File Offset: 0x00597AC8
 		public int FallbackLandingPointId { get; set; }
 
-		// Token: 0x1700AB75 RID: 43893
-		// (get) Token: 0x06026A6E RID: 158318 RVA: 0x00552C65 File Offset: 0x00550E65
-		// (set) Token: 0x06026A6F RID: 158319 RVA: 0x00552C6D File Offset: 0x00550E6D
+		// Token: 0x1700B4A9 RID: 46249
+		// (get) Token: 0x06028FD8 RID: 167896 RVA: 0x005998D1 File Offset: 0x00597AD1
+		// (set) Token: 0x06028FD9 RID: 167897 RVA: 0x005998D9 File Offset: 0x00597AD9
 		public bool IsAllowJump { get; set; }
 
-		// Token: 0x1700AB76 RID: 43894
-		// (get) Token: 0x06026A70 RID: 158320 RVA: 0x00552C76 File Offset: 0x00550E76
-		// (set) Token: 0x06026A71 RID: 158321 RVA: 0x00552C7E File Offset: 0x00550E7E
+		// Token: 0x1700B4AA RID: 46250
+		// (get) Token: 0x06028FDA RID: 167898 RVA: 0x005998E2 File Offset: 0x00597AE2
+		// (set) Token: 0x06028FDB RID: 167899 RVA: 0x005998EA File Offset: 0x00597AEA
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026A72 RID: 158322 RVA: 0x00552C87 File Offset: 0x00550E87
+		// Token: 0x06028FDC RID: 167900 RVA: 0x005998F3 File Offset: 0x00597AF3
 		public ISlopeSlidePerformT()
 		{
 			this.Type = ESlidePerformType.SlopeSlide;

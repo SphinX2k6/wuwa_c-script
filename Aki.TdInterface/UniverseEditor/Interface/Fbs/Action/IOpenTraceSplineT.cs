@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C46 RID: 27718
+	// Token: 0x020073AD RID: 29613
 	public class IOpenTraceSplineT
 	{
-		// Token: 0x1700CE6C RID: 52844
-		// (get) Token: 0x06030D3A RID: 199994 RVA: 0x006A1F22 File Offset: 0x006A0122
-		// (set) Token: 0x06030D3B RID: 199995 RVA: 0x006A1F2A File Offset: 0x006A012A
+		// Token: 0x1700D987 RID: 55687
+		// (get) Token: 0x06033C95 RID: 212117 RVA: 0x006FC422 File Offset: 0x006FA622
+		// (set) Token: 0x06033C96 RID: 212118 RVA: 0x006FC42A File Offset: 0x006FA62A
 		public ETraceSplineOptionType Type { get; set; }
 
-		// Token: 0x1700CE6D RID: 52845
-		// (get) Token: 0x06030D3C RID: 199996 RVA: 0x006A1F33 File Offset: 0x006A0133
-		// (set) Token: 0x06030D3D RID: 199997 RVA: 0x006A1F3B File Offset: 0x006A013B
+		// Token: 0x1700D988 RID: 55688
+		// (get) Token: 0x06033C97 RID: 212119 RVA: 0x006FC433 File Offset: 0x006FA633
+		// (set) Token: 0x06033C98 RID: 212120 RVA: 0x006FC43B File Offset: 0x006FA63B
 		public int SplineEntityId { get; set; }
 
-		// Token: 0x1700CE6E RID: 52846
-		// (get) Token: 0x06030D3E RID: 199998 RVA: 0x006A1F44 File Offset: 0x006A0144
-		// (set) Token: 0x06030D3F RID: 199999 RVA: 0x006A1F4C File Offset: 0x006A014C
+		// Token: 0x1700D989 RID: 55689
+		// (get) Token: 0x06033C99 RID: 212121 RVA: 0x006FC444 File Offset: 0x006FA644
+		// (set) Token: 0x06033C9A RID: 212122 RVA: 0x006FC44C File Offset: 0x006FA64C
 		public float Duration { get; set; }
 
-		// Token: 0x06030D40 RID: 200000 RVA: 0x006A1F55 File Offset: 0x006A0155
+		// Token: 0x06033C9B RID: 212123 RVA: 0x006FC455 File Offset: 0x006FA655
 		public IOpenTraceSplineT()
 		{
 			this.Type = ETraceSplineOptionType.Open;

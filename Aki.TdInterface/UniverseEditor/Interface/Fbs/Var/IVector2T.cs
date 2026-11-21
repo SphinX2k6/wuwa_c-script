@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B27 RID: 15143
+	// Token: 0x02003F29 RID: 16169
 	public class IVector2T
 	{
-		// Token: 0x170067DE RID: 26590
-		// (get) Token: 0x06014AE5 RID: 84709 RVA: 0x00302326 File Offset: 0x00300526
-		// (set) Token: 0x06014AE6 RID: 84710 RVA: 0x0030232E File Offset: 0x0030052E
+		// Token: 0x17006D79 RID: 28025
+		// (get) Token: 0x06015F8F RID: 89999 RVA: 0x003285B6 File Offset: 0x003267B6
+		// (set) Token: 0x06015F90 RID: 90000 RVA: 0x003285BE File Offset: 0x003267BE
 		public float X { get; set; }
 
-		// Token: 0x170067DF RID: 26591
-		// (get) Token: 0x06014AE7 RID: 84711 RVA: 0x00302337 File Offset: 0x00300537
-		// (set) Token: 0x06014AE8 RID: 84712 RVA: 0x0030233F File Offset: 0x0030053F
+		// Token: 0x17006D7A RID: 28026
+		// (get) Token: 0x06015F91 RID: 90001 RVA: 0x003285C7 File Offset: 0x003267C7
+		// (set) Token: 0x06015F92 RID: 90002 RVA: 0x003285CF File Offset: 0x003267CF
 		public float Y { get; set; }
 
-		// Token: 0x170067E0 RID: 26592
-		// (get) Token: 0x06014AE9 RID: 84713 RVA: 0x00302348 File Offset: 0x00300548
-		// (set) Token: 0x06014AEA RID: 84714 RVA: 0x00302350 File Offset: 0x00300550
+		// Token: 0x17006D7B RID: 28027
+		// (get) Token: 0x06015F93 RID: 90003 RVA: 0x003285D8 File Offset: 0x003267D8
+		// (set) Token: 0x06015F94 RID: 90004 RVA: 0x003285E0 File Offset: 0x003267E0
 		public byte NullMask { get; set; }
 
-		// Token: 0x06014AEB RID: 84715 RVA: 0x00302359 File Offset: 0x00300559
+		// Token: 0x06015F95 RID: 90005 RVA: 0x003285E9 File Offset: 0x003267E9
 		public IVector2T()
 		{
 			this.X = 0f;

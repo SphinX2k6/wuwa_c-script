@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CC5 RID: 19653
+	// Token: 0x02003C76 RID: 15478
 	public class PhantomMonsterItemData : IPhantomMonsterItemData
 	{
-		// Token: 0x17007D3E RID: 32062
-		// (get) Token: 0x06032BC4 RID: 207812 RVA: 0x00BD5218 File Offset: 0x00BD3418
-		// (set) Token: 0x06032BC5 RID: 207813 RVA: 0x00BD5220 File Offset: 0x00BD3420
+		// Token: 0x170050E8 RID: 20712
+		// (get) Token: 0x06027978 RID: 162168 RVA: 0x00B19FB0 File Offset: 0x00B181B0
+		// (set) Token: 0x06027979 RID: 162169 RVA: 0x00B19FB8 File Offset: 0x00B181B8
 		public int MonsterId { get; set; }
 
-		// Token: 0x17007D3F RID: 32063
-		// (get) Token: 0x06032BC6 RID: 207814 RVA: 0x00BD5229 File Offset: 0x00BD3429
-		// (set) Token: 0x06032BC7 RID: 207815 RVA: 0x00BD5231 File Offset: 0x00BD3431
+		// Token: 0x170050E9 RID: 20713
+		// (get) Token: 0x0602797A RID: 162170 RVA: 0x00B19FC1 File Offset: 0x00B181C1
+		// (set) Token: 0x0602797B RID: 162171 RVA: 0x00B19FC9 File Offset: 0x00B181C9
 		public int QualityId { get; set; }
 
-		// Token: 0x17007D40 RID: 32064
-		// (get) Token: 0x06032BC8 RID: 207816 RVA: 0x00BD523A File Offset: 0x00BD343A
-		// (set) Token: 0x06032BC9 RID: 207817 RVA: 0x00BD5242 File Offset: 0x00BD3442
+		// Token: 0x170050EA RID: 20714
+		// (get) Token: 0x0602797C RID: 162172 RVA: 0x00B19FD2 File Offset: 0x00B181D2
+		// (set) Token: 0x0602797D RID: 162173 RVA: 0x00B19FDA File Offset: 0x00B181DA
 		public int RoleId { get; set; }
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AB5 RID: 6837
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C54 RID: 7252
 	public class IFollowShooterSkillSkill : IExecClientBattleActionType
 	{
-		// Token: 0x0600929C RID: 37532 RVA: 0x00154BD8 File Offset: 0x00152DD8
+		// Token: 0x06009A34 RID: 39476 RVA: 0x00164FF8 File Offset: 0x001631F8
 		private IFollowShooterSkillSkill_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600929D RID: 37533 RVA: 0x00154C10 File Offset: 0x00152E10
+		// Token: 0x06009A35 RID: 39477 RVA: 0x00165030 File Offset: 0x00163230
 		public static IFollowShooterSkillSkill Create([Nullable(2)] IFollowShooterSkillSkill instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600929E RID: 37534 RVA: 0x00154C23 File Offset: 0x00152E23
+		// Token: 0x06009A36 RID: 39478 RVA: 0x00165043 File Offset: 0x00163243
 		public static IFollowShooterSkillSkill CreateFromSetValue([Nullable(2)] IFollowShooterSkillSkill_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600929F RID: 37535 RVA: 0x00154C36 File Offset: 0x00152E36
+		// Token: 0x06009A37 RID: 39479 RVA: 0x00165056 File Offset: 0x00163256
 		public new IFollowShooterSkillSkill_SetValue ToSetValue()
 		{
 			return new IFollowShooterSkillSkill_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E94 RID: 11924
-		// (get) Token: 0x060092A0 RID: 37536 RVA: 0x00154C55 File Offset: 0x00152E55
-		// (set) Token: 0x060092A1 RID: 37537 RVA: 0x00154C80 File Offset: 0x00152E80
+		// Token: 0x170030A9 RID: 12457
+		// (get) Token: 0x06009A38 RID: 39480 RVA: 0x00165075 File Offset: 0x00163275
+		// (set) Token: 0x06009A39 RID: 39481 RVA: 0x001650A0 File Offset: 0x001632A0
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E95 RID: 11925
-		// (get) Token: 0x060092A2 RID: 37538 RVA: 0x00154C8E File Offset: 0x00152E8E
-		// (set) Token: 0x060092A3 RID: 37539 RVA: 0x00154CB9 File Offset: 0x00152EB9
+		// Token: 0x170030AA RID: 12458
+		// (get) Token: 0x06009A3A RID: 39482 RVA: 0x001650AE File Offset: 0x001632AE
+		// (set) Token: 0x06009A3B RID: 39483 RVA: 0x001650D9 File Offset: 0x001632D9
 		public virtual int SkillId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A3F RID: 23103
+		// Token: 0x04005EB8 RID: 24248
 		[Nullable(2)]
 		protected new IFollowShooterSkillSkill FbInstance;
 
-		// Token: 0x04005A40 RID: 23104
+		// Token: 0x04005EB9 RID: 24249
 		[Nullable(2)]
 		protected new IFollowShooterSkillSkill_SetValue PocoInterface;
 	}

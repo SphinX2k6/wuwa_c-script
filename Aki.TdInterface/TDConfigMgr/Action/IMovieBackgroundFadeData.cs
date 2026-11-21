@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C3E RID: 7230
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E35 RID: 7733
 	public class IMovieBackgroundFadeData
 	{
-		// Token: 0x06009B1D RID: 39709 RVA: 0x00164700 File Offset: 0x00162900
+		// Token: 0x0600A475 RID: 42101 RVA: 0x00177A40 File Offset: 0x00175C40
 		private IMovieBackgroundFadeData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009B1E RID: 39710 RVA: 0x00164738 File Offset: 0x00162938
+		// Token: 0x0600A476 RID: 42102 RVA: 0x00177A78 File Offset: 0x00175C78
 		public static IMovieBackgroundFadeData Create([Nullable(2)] IMovieBackgroundFadeData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009B1F RID: 39711 RVA: 0x0016474B File Offset: 0x0016294B
+		// Token: 0x0600A477 RID: 42103 RVA: 0x00177A8B File Offset: 0x00175C8B
 		public static IMovieBackgroundFadeData CreateFromSetValue([Nullable(2)] IMovieBackgroundFadeData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009B20 RID: 39712 RVA: 0x0016475E File Offset: 0x0016295E
+		// Token: 0x0600A478 RID: 42104 RVA: 0x00177A9E File Offset: 0x00175C9E
 		public IMovieBackgroundFadeData_SetValue ToSetValue()
 		{
 			return new IMovieBackgroundFadeData_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003088 RID: 12424
-		// (get) Token: 0x06009B21 RID: 39713 RVA: 0x0016477D File Offset: 0x0016297D
-		// (set) Token: 0x06009B22 RID: 39714 RVA: 0x001647A8 File Offset: 0x001629A8
+		// Token: 0x170032F9 RID: 13049
+		// (get) Token: 0x0600A479 RID: 42105 RVA: 0x00177ABD File Offset: 0x00175CBD
+		// (set) Token: 0x0600A47A RID: 42106 RVA: 0x00177AE8 File Offset: 0x00175CE8
 		public virtual EMovieBackgroundType FadeInBackgroundType
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003089 RID: 12425
-		// (get) Token: 0x06009B23 RID: 39715 RVA: 0x001647B6 File Offset: 0x001629B6
-		// (set) Token: 0x06009B24 RID: 39716 RVA: 0x001647E1 File Offset: 0x001629E1
+		// Token: 0x170032FA RID: 13050
+		// (get) Token: 0x0600A47B RID: 42107 RVA: 0x00177AF6 File Offset: 0x00175CF6
+		// (set) Token: 0x0600A47C RID: 42108 RVA: 0x00177B21 File Offset: 0x00175D21
 		public virtual EMovieBackgroundType FadeOutBackgroundType
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E43 RID: 24131
+		// Token: 0x0400637A RID: 25466
 		[Nullable(2)]
 		protected IMovieBackgroundFadeData FbInstance;
 
-		// Token: 0x04005E44 RID: 24132
+		// Token: 0x0400637B RID: 25467
 		[Nullable(2)]
 		protected IMovieBackgroundFadeData_SetValue PocoInterface;
 	}

@@ -1,6 +1,6 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02001857 RID: 6231
-// (Invoke) Token: 0x0600B695 RID: 46741
+// Token: 0x02000D10 RID: 3344
+// (Invoke) Token: 0x06008A7E RID: 35454
 public delegate void TFilterItemToggleEvent(EToggleState state, int filterId, string name);

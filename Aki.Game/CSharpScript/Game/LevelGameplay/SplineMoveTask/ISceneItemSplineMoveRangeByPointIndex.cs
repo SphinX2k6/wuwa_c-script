@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 {
-	// Token: 0x02006A20 RID: 27168
+	// Token: 0x02005B7D RID: 23421
 	public interface ISceneItemSplineMoveRangeByPointIndex : ISceneItemSplineMoveRange
 	{
-		// Token: 0x170098B6 RID: 39094
-		// (get) Token: 0x06043933 RID: 276787
-		// (set) Token: 0x06043934 RID: 276788
+		// Token: 0x17006D9B RID: 28059
+		// (get) Token: 0x06039981 RID: 235905
+		// (set) Token: 0x06039982 RID: 235906
 		int StartIndex { get; set; }
 
-		// Token: 0x170098B7 RID: 39095
-		// (get) Token: 0x06043935 RID: 276789
-		// (set) Token: 0x06043936 RID: 276790
+		// Token: 0x17006D9C RID: 28060
+		// (get) Token: 0x06039983 RID: 235907
+		// (set) Token: 0x06039984 RID: 235908
 		int EndIndex { get; set; }
 	}
 }

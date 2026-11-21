@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DDD RID: 15837
+	// Token: 0x02004218 RID: 16920
 	public class IDistributeParamsT
 	{
-		// Token: 0x17006D5E RID: 27998
-		// (get) Token: 0x060161EF RID: 90607 RVA: 0x003326D5 File Offset: 0x003308D5
-		// (set) Token: 0x060161F0 RID: 90608 RVA: 0x003326DD File Offset: 0x003308DD
+		// Token: 0x1700733E RID: 29502
+		// (get) Token: 0x0601780E RID: 96270 RVA: 0x0035B0D9 File Offset: 0x003592D9
+		// (set) Token: 0x0601780F RID: 96271 RVA: 0x0035B0E1 File Offset: 0x003592E1
 		public int InformationViewCheck { get; set; }
 
-		// Token: 0x17006D5F RID: 27999
-		// (get) Token: 0x060161F1 RID: 90609 RVA: 0x003326E6 File Offset: 0x003308E6
-		// (set) Token: 0x060161F2 RID: 90610 RVA: 0x003326EE File Offset: 0x003308EE
+		// Token: 0x1700733F RID: 29503
+		// (get) Token: 0x06017810 RID: 96272 RVA: 0x0035B0EA File Offset: 0x003592EA
+		// (set) Token: 0x06017811 RID: 96273 RVA: 0x0035B0F2 File Offset: 0x003592F2
 		public IItemConfigT UseItem { get; set; }
 
-		// Token: 0x17006D60 RID: 28000
-		// (get) Token: 0x060161F3 RID: 90611 RVA: 0x003326F7 File Offset: 0x003308F7
-		// (set) Token: 0x060161F4 RID: 90612 RVA: 0x003326FF File Offset: 0x003308FF
+		// Token: 0x17007340 RID: 29504
+		// (get) Token: 0x06017812 RID: 96274 RVA: 0x0035B0FB File Offset: 0x003592FB
+		// (set) Token: 0x06017813 RID: 96275 RVA: 0x0035B103 File Offset: 0x00359303
 		public byte NullMask { get; set; }
 
-		// Token: 0x060161F5 RID: 90613 RVA: 0x00332708 File Offset: 0x00330908
+		// Token: 0x06017814 RID: 96276 RVA: 0x0035B10C File Offset: 0x0035930C
 		public IDistributeParamsT()
 		{
 			this.InformationViewCheck = 0;

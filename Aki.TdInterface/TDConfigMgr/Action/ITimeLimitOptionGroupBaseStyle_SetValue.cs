@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FC3 RID: 8131
+	// Token: 0x02002208 RID: 8712
 	public class ITimeLimitOptionGroupBaseStyle_SetValue
 	{
-		// Token: 0x04006BFD RID: 27645
+		// Token: 0x040071FC RID: 29180
 		public ETimeLimitOptionGroupStyle Type;
 	}
 }

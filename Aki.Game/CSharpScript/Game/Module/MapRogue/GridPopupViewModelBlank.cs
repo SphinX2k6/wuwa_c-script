@@ -5,13 +5,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x0200563D RID: 22077
+	// Token: 0x02004613 RID: 17939
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GridPopupViewModelBlank : GridPopupViewModelBase
 	{
-		// Token: 0x17008736 RID: 34614
-		// (get) Token: 0x06038227 RID: 229927 RVA: 0x00D4C006 File Offset: 0x00D4A206
+		// Token: 0x17005AFD RID: 23293
+		// (get) Token: 0x0602D125 RID: 184613 RVA: 0x00C99D4E File Offset: 0x00C97F4E
 		public override bool HasBtnDetail
 		{
 			get
@@ -20,12 +20,12 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038228 RID: 229928 RVA: 0x00D4C009 File Offset: 0x00D4A209
+		// Token: 0x0602D126 RID: 184614 RVA: 0x00C99D51 File Offset: 0x00C97F51
 		public GridPopupViewModelBlank(MapGridData gridData, MapRogueGameInfo gameInfo) : base(gridData, gameInfo)
 		{
 		}
 
-		// Token: 0x06038229 RID: 229929 RVA: 0x00D4C014 File Offset: 0x00D4A214
+		// Token: 0x0602D127 RID: 184615 RVA: 0x00C99D5C File Offset: 0x00C97F5C
 		public override UniTask Init()
 		{
 			GridPopupViewModelBlank.<Init>d__4 <Init>d__;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603822A RID: 229930 RVA: 0x00D4C058 File Offset: 0x00D4A258
+		// Token: 0x0602D128 RID: 184616 RVA: 0x00C99DA0 File Offset: 0x00C97FA0
 		public override void RefreshFunctional()
 		{
 			bool flag = this.GameInfo.MoveState == EMovePathType.CanMove;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.Button.SetButtonFunction(new Action<int>(this.ButtonFunction));
 		}
 
-		// Token: 0x0603822B RID: 229931 RVA: 0x00D4C0B0 File Offset: 0x00D4A2B0
+		// Token: 0x0602D129 RID: 184617 RVA: 0x00C99DF8 File Offset: 0x00C97FF8
 		private void ButtonFunction(int _)
 		{
 			if (this.IsEnd)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.View.CloseMeAsync();
 		}
 
-		// Token: 0x0401D881 RID: 120961
+		// Token: 0x0401830C RID: 99084
 		protected PopupComponentFunctionButton Button;
 	}
 }

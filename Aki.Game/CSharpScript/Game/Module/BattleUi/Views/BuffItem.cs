@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D0F RID: 23823
+	// Token: 0x02004CF1 RID: 19697
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BuffItem : BuffItemBase
 	{
-		// Token: 0x0603C61B RID: 247323 RVA: 0x00E78818 File Offset: 0x00E76A18
+		// Token: 0x06031574 RID: 202100 RVA: 0x00DC8E98 File Offset: 0x00DC7098
 		[NullableContext(1)]
 		public BuffItem(USceneComponent parentItem)
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.CreateThenShowByActor(buffItem, null);
 		}
 
-		// Token: 0x0603C61C RID: 247324 RVA: 0x00E7885C File Offset: 0x00E76A5C
+		// Token: 0x06031575 RID: 202101 RVA: 0x00DC8EDC File Offset: 0x00DC70DC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 15;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C61D RID: 247325 RVA: 0x00E78A7C File Offset: 0x00E76C7C
+		// Token: 0x06031576 RID: 202102 RVA: 0x00DC90FC File Offset: 0x00DC72FC
 		protected override void OnStart()
 		{
 			this.BuffTexture = base.GetTexture(1);
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitTweenAnim(BuffItem.EChildType.AnimAddBuff);
 		}
 
-		// Token: 0x0603C61E RID: 247326 RVA: 0x00E78B14 File Offset: 0x00E76D14
+		// Token: 0x06031577 RID: 202103 RVA: 0x00DC9194 File Offset: 0x00DC7394
 		public override void Activate(GameplayCue buffCueConfig, IActiveBuff buff, bool playAnim = false, int buffNum = 0)
 		{
 			this.Buff = buff;
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rootItem2.SetUIItemScale(global::Vector.OneVector);
 		}
 
-		// Token: 0x0603C61F RID: 247327 RVA: 0x00E78CB8 File Offset: 0x00E76EB8
+		// Token: 0x06031578 RID: 202104 RVA: 0x00DC9338 File Offset: 0x00DC7538
 		public void ActivateExceedTip()
 		{
 			this.BuffTexture.SetUIActive(false);
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			curBarSprite.SetFillAmount(0f);
 		}
 
-		// Token: 0x0603C620 RID: 247328 RVA: 0x00E78D1C File Offset: 0x00E76F1C
+		// Token: 0x06031579 RID: 202105 RVA: 0x00DC939C File Offset: 0x00DC759C
 		[NullableContext(1)]
 		private void SetIcon(string iconPath, int iconType, bool bMergeBuffItem)
 		{
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Percent = -1f;
 		}
 
-		// Token: 0x0603C621 RID: 247329 RVA: 0x00E78E84 File Offset: 0x00E77084
+		// Token: 0x0603157A RID: 202106 RVA: 0x00DC9504 File Offset: 0x00DC7704
 		public override void SetNum(int num)
 		{
 			if (num == this.Num)
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.NumText.SetText((num <= 1) ? string.Empty : num.ToString(), true);
 		}
 
-		// Token: 0x0603C622 RID: 247330 RVA: 0x00E78ED9 File Offset: 0x00E770D9
+		// Token: 0x0603157B RID: 202107 RVA: 0x00DC9559 File Offset: 0x00DC7759
 		private void SetPercent(float percent)
 		{
 			if (percent == this.Percent)
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayFadeAnim(percent <= 0.2f);
 		}
 
-		// Token: 0x0603C623 RID: 247331 RVA: 0x00E78F0F File Offset: 0x00E7710F
+		// Token: 0x0603157C RID: 202108 RVA: 0x00DC958F File Offset: 0x00DC778F
 		private void PlayFadeAnim(bool bPlay)
 		{
 			if (this.IsPlayingFadeAnim != bPlay)
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C624 RID: 247332 RVA: 0x00E78F4C File Offset: 0x00E7714C
+		// Token: 0x0603157D RID: 202109 RVA: 0x00DC95CC File Offset: 0x00DC77CC
 		private void SetBarColor(string colorStr = null)
 		{
 			if (!string.IsNullOrEmpty(colorStr))
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C625 RID: 247333 RVA: 0x00E78FC3 File Offset: 0x00E771C3
+		// Token: 0x0603157E RID: 202110 RVA: 0x00DC9643 File Offset: 0x00DC7843
 		private void SetIconColor(string colorStr = null)
 		{
 			if (colorStr == this.IconColorStr)
@@ -329,7 +329,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffTexture.SetColor((!string.IsNullOrEmpty(colorStr)) ? FColor.FromHex(colorStr) : ColorUtils.ColorWhile);
 		}
 
-		// Token: 0x0603C626 RID: 247334 RVA: 0x00E78FFC File Offset: 0x00E771FC
+		// Token: 0x0603157F RID: 202111 RVA: 0x00DC967C File Offset: 0x00DC787C
 		public override void Tick(float delta)
 		{
 			if (this.Buff == null)
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetNum(this.Buff.StackCount);
 		}
 
-		// Token: 0x0603C627 RID: 247335 RVA: 0x00E7905A File Offset: 0x00E7725A
+		// Token: 0x06031580 RID: 202112 RVA: 0x00DC96DA File Offset: 0x00DC78DA
 		public override bool TickHiding(float delta)
 		{
 			if (this.AnimCloseEndTime > Time.Instance.Now)
@@ -355,7 +355,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603C628 RID: 247336 RVA: 0x00E7907F File Offset: 0x00E7727F
+		// Token: 0x06031581 RID: 202113 RVA: 0x00DC96FF File Offset: 0x00DC78FF
 		public override void Deactivate()
 		{
 			this.StopTweenAnim(BuffItem.EChildType.AnimStart);
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetUiActive(false);
 		}
 
-		// Token: 0x0603C629 RID: 247337 RVA: 0x00E790B4 File Offset: 0x00E772B4
+		// Token: 0x06031582 RID: 202114 RVA: 0x00DC9734 File Offset: 0x00DC7934
 		public override void DeactivateWithCloseAnim()
 		{
 			this.StopTweenAnim(BuffItem.EChildType.AnimStart);
@@ -383,19 +383,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AnimCloseEndTime = Time.Instance.Now + 200.0;
 		}
 
-		// Token: 0x0603C62A RID: 247338 RVA: 0x00E79106 File Offset: 0x00E77306
+		// Token: 0x06031583 RID: 202115 RVA: 0x00DC9786 File Offset: 0x00DC7986
 		public override void PlayAddBuffAnim()
 		{
 			this.PlayTweenAnim(BuffItem.EChildType.AnimAddBuff);
 		}
 
-		// Token: 0x0603C62B RID: 247339 RVA: 0x00E79110 File Offset: 0x00E77310
+		// Token: 0x06031584 RID: 202116 RVA: 0x00DC9790 File Offset: 0x00DC7990
 		protected override void OnBeforeHide()
 		{
 			this.PlayFadeAnim(false);
 		}
 
-		// Token: 0x0603C62C RID: 247340 RVA: 0x00E7911C File Offset: 0x00E7731C
+		// Token: 0x06031585 RID: 202117 RVA: 0x00DC979C File Offset: 0x00DC799C
 		protected override bool DestroyOverride()
 		{
 			if (this.RootActor != null)
@@ -410,7 +410,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603C62D RID: 247341 RVA: 0x00E79174 File Offset: 0x00E77374
+		// Token: 0x06031586 RID: 202118 RVA: 0x00DC97F4 File Offset: 0x00DC79F4
 		private void InitTweenAnim(BuffItem.EChildType componentType)
 		{
 			List<ULGUIPlayTweenComponent> list = new List<ULGUIPlayTweenComponent>();
@@ -423,7 +423,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenAnimMap[(int)componentType] = list;
 		}
 
-		// Token: 0x0603C62E RID: 247342 RVA: 0x00E791D8 File Offset: 0x00E773D8
+		// Token: 0x06031587 RID: 202119 RVA: 0x00DC9858 File Offset: 0x00DC7A58
 		private void PlayTweenAnim(BuffItem.EChildType componentType)
 		{
 			List<ULGUIPlayTweenComponent> list;
@@ -436,7 +436,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C62F RID: 247343 RVA: 0x00E79234 File Offset: 0x00E77434
+		// Token: 0x06031588 RID: 202120 RVA: 0x00DC98B4 File Offset: 0x00DC7AB4
 		private void StopTweenAnim(BuffItem.EChildType componentType)
 		{
 			List<ULGUIPlayTweenComponent> list;
@@ -449,118 +449,118 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F754 RID: 128852
+		// Token: 0x0401A20D RID: 107021
 		private const double CLOSE_ANIM_TIME = 200.0;
 
-		// Token: 0x0401F755 RID: 128853
+		// Token: 0x0401A20E RID: 107022
 		private const float FADE_ANIM_PERCENT = 0.2f;
 
-		// Token: 0x0401F756 RID: 128854
+		// Token: 0x0401A20F RID: 107023
 		[Nullable(1)]
 		private const string BUFF = "1";
 
-		// Token: 0x0401F757 RID: 128855
+		// Token: 0x0401A210 RID: 107024
 		[Nullable(1)]
 		private const string DEBUFF = "2";
 
-		// Token: 0x0401F758 RID: 128856
+		// Token: 0x0401A211 RID: 107025
 		[Nullable(1)]
 		private readonly Dictionary<int, List<ULGUIPlayTweenComponent>> TweenAnimMap = new Dictionary<int, List<ULGUIPlayTweenComponent>>();
 
-		// Token: 0x0401F759 RID: 128857
+		// Token: 0x0401A212 RID: 107026
 		private UUITexture BuffTexture;
 
-		// Token: 0x0401F75A RID: 128858
+		// Token: 0x0401A213 RID: 107027
 		private UUITexture LargeBuffTexture;
 
-		// Token: 0x0401F75B RID: 128859
+		// Token: 0x0401A214 RID: 107028
 		private UUIText NumText;
 
-		// Token: 0x0401F75C RID: 128860
+		// Token: 0x0401A215 RID: 107029
 		private UUISprite BarSprite;
 
-		// Token: 0x0401F75D RID: 128861
+		// Token: 0x0401A216 RID: 107030
 		private UUISprite BgSprite;
 
-		// Token: 0x0401F75E RID: 128862
+		// Token: 0x0401A217 RID: 107031
 		private UUISprite BarRoundSprite;
 
-		// Token: 0x0401F75F RID: 128863
+		// Token: 0x0401A218 RID: 107032
 		private UUISprite BgRoundSprite;
 
-		// Token: 0x0401F760 RID: 128864
+		// Token: 0x0401A219 RID: 107033
 		private UUISprite CurBarSprite;
 
-		// Token: 0x0401F761 RID: 128865
+		// Token: 0x0401A21A RID: 107034
 		private UUIItem ColorfulFrame;
 
-		// Token: 0x0401F762 RID: 128866
+		// Token: 0x0401A21B RID: 107035
 		private bool AlwaysFullPercent;
 
-		// Token: 0x0401F763 RID: 128867
+		// Token: 0x0401A21C RID: 107036
 		[Nullable(1)]
 		private string IconPath = string.Empty;
 
-		// Token: 0x0401F764 RID: 128868
+		// Token: 0x0401A21D RID: 107037
 		private int IconType;
 
-		// Token: 0x0401F765 RID: 128869
+		// Token: 0x0401A21E RID: 107038
 		private bool MergeBuffItem;
 
-		// Token: 0x0401F766 RID: 128870
+		// Token: 0x0401A21F RID: 107039
 		private int Num;
 
-		// Token: 0x0401F767 RID: 128871
+		// Token: 0x0401A220 RID: 107040
 		private float Percent;
 
-		// Token: 0x0401F768 RID: 128872
+		// Token: 0x0401A221 RID: 107041
 		private IActiveBuff Buff;
 
-		// Token: 0x0401F769 RID: 128873
+		// Token: 0x0401A222 RID: 107042
 		private FColor? DefaultBarColor;
 
-		// Token: 0x0401F76A RID: 128874
+		// Token: 0x0401A223 RID: 107043
 		private string IconColorStr;
 
-		// Token: 0x0401F76B RID: 128875
+		// Token: 0x0401A224 RID: 107044
 		private double AnimCloseEndTime;
 
-		// Token: 0x0401F76C RID: 128876
+		// Token: 0x0401A225 RID: 107045
 		private bool IsPlayingFadeAnim;
 
-		// Token: 0x0200BF89 RID: 49033
+		// Token: 0x0200A98F RID: 43407
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039C8B RID: 236683
+			// Token: 0x0403464D RID: 214605
 			BuffCtrlItem,
-			// Token: 0x04039C8C RID: 236684
+			// Token: 0x0403464E RID: 214606
 			BuffTexture,
-			// Token: 0x04039C8D RID: 236685
+			// Token: 0x0403464F RID: 214607
 			BarSprite,
-			// Token: 0x04039C8E RID: 236686
+			// Token: 0x04034650 RID: 214608
 			NumText,
-			// Token: 0x04039C8F RID: 236687
+			// Token: 0x04034651 RID: 214609
 			DownSprite,
-			// Token: 0x04039C90 RID: 236688
+			// Token: 0x04034652 RID: 214610
 			AnimStart,
-			// Token: 0x04039C91 RID: 236689
+			// Token: 0x04034653 RID: 214611
 			AnimClose,
-			// Token: 0x04039C92 RID: 236690
+			// Token: 0x04034654 RID: 214612
 			AnimFade,
-			// Token: 0x04039C93 RID: 236691
+			// Token: 0x04034655 RID: 214613
 			UpSprite,
-			// Token: 0x04039C94 RID: 236692
+			// Token: 0x04034656 RID: 214614
 			BgSprite,
-			// Token: 0x04039C95 RID: 236693
+			// Token: 0x04034657 RID: 214615
 			LargeBuffTexture,
-			// Token: 0x04039C96 RID: 236694
+			// Token: 0x04034658 RID: 214616
 			BgRoundSprite,
-			// Token: 0x04039C97 RID: 236695
+			// Token: 0x04034659 RID: 214617
 			BarRoundSprite,
-			// Token: 0x04039C98 RID: 236696
+			// Token: 0x0403465A RID: 214618
 			AnimAddBuff,
-			// Token: 0x04039C99 RID: 236697
+			// Token: 0x0403465B RID: 214619
 			ColorfulFrame
 		}
 	}

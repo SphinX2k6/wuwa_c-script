@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 {
-	// Token: 0x02005493 RID: 21651
+	// Token: 0x02004476 RID: 17526
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRoadWaysMgr
 	{
-		// Token: 0x0603751B RID: 226587 RVA: 0x00D22118 File Offset: 0x00D20318
+		// Token: 0x0602C471 RID: 181361 RVA: 0x00C71CD4 File Offset: 0x00C6FED4
 		public MapRoadWaysMgr(MapRoadWaysMgrParams param)
 		{
 			this.MapId = param.MapId;
@@ -29,26 +29,26 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			EventSystem.Instance.Add<IReadOnlyDictionary<int, bool>>(EEventName.MapOpenFogFullUpdate, new Action<IReadOnlyDictionary<int, bool>>(this.OnMapOpenFogFullUpdate));
 		}
 
-		// Token: 0x0603751C RID: 226588 RVA: 0x00D221DA File Offset: 0x00D203DA
+		// Token: 0x0602C472 RID: 181362 RVA: 0x00C71D96 File Offset: 0x00C6FF96
 		private void OnMapOpenFogChange(int i)
 		{
 			this.OnMapSetup();
 		}
 
-		// Token: 0x0603751D RID: 226589 RVA: 0x00D221E2 File Offset: 0x00D203E2
+		// Token: 0x0602C473 RID: 181363 RVA: 0x00C71D9E File Offset: 0x00C6FF9E
 		private void OnMapOpenFogFullUpdate(IReadOnlyDictionary<int, bool> readOnlyDictionary)
 		{
 			this.OnMapSetup();
 		}
 
-		// Token: 0x0603751E RID: 226590 RVA: 0x00D221EA File Offset: 0x00D203EA
+		// Token: 0x0602C474 RID: 181364 RVA: 0x00C71DA6 File Offset: 0x00C6FFA6
 		public void OnMapSetup()
 		{
 			this.ClearRoadWays();
 			this.LoadAllMapRoadWays().Forget();
 		}
 
-		// Token: 0x0603751F RID: 226591 RVA: 0x00D22200 File Offset: 0x00D20400
+		// Token: 0x0602C475 RID: 181365 RVA: 0x00C71DBC File Offset: 0x00C6FFBC
 		private void ClearRoadWays()
 		{
 			foreach (MapRoadWayView mapRoadWayView in this.RoadWays)
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.RoadWays.Clear();
 		}
 
-		// Token: 0x06037520 RID: 226592 RVA: 0x00D2226C File Offset: 0x00D2046C
+		// Token: 0x0602C476 RID: 181366 RVA: 0x00C71E28 File Offset: 0x00C70028
 		private UniTask LoadAllMapRoadWays()
 		{
 			MapRoadWaysMgr.<LoadAllMapRoadWays>d__13 <LoadAllMapRoadWays>d__;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return <LoadAllMapRoadWays>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037521 RID: 226593 RVA: 0x00D222B0 File Offset: 0x00D204B0
+		// Token: 0x0602C477 RID: 181367 RVA: 0x00C71E6C File Offset: 0x00C7006C
 		private unsafe bool CheckRoadWayValid(MapRoadWays config)
 		{
 			if (config.RoadBuildId > 0)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return true;
 		}
 
-		// Token: 0x06037522 RID: 226594 RVA: 0x00D223B0 File Offset: 0x00D205B0
+		// Token: 0x0602C478 RID: 181368 RVA: 0x00C71F6C File Offset: 0x00C7016C
 		private UniTask LoadMapRoadWay(int mapId, string roadWayTexPath, float[] anchorOffset, float scale)
 		{
 			MapRoadWaysMgr.<LoadMapRoadWay>d__15 <LoadMapRoadWay>d__;
@@ -116,14 +116,14 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return <LoadMapRoadWay>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037523 RID: 226595 RVA: 0x00D22414 File Offset: 0x00D20614
+		// Token: 0x0602C479 RID: 181369 RVA: 0x00C71FD0 File Offset: 0x00C701D0
 		public void OnChangeWorldMap(int mapId)
 		{
 			this.MapId = mapId;
 			this.OnMapSetup();
 		}
 
-		// Token: 0x06037524 RID: 226596 RVA: 0x00D22424 File Offset: 0x00D20624
+		// Token: 0x0602C47A RID: 181370 RVA: 0x00C71FE0 File Offset: 0x00C701E0
 		public void Dispose()
 		{
 			foreach (MapRoadWayView mapRoadWayView in this.RoadWays)
@@ -141,28 +141,28 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			EventSystem.Instance.Remove(EEventName.MapOpenFogFullUpdate, new Action<IReadOnlyDictionary<int, bool>>(this.OnMapOpenFogFullUpdate));
 		}
 
-		// Token: 0x0401D23E RID: 119358
+		// Token: 0x04017CDA RID: 97498
 		private int MapId;
 
-		// Token: 0x0401D23F RID: 119359
+		// Token: 0x04017CDB RID: 97499
 		private readonly int InstanceDungeonId;
 
-		// Token: 0x0401D240 RID: 119360
+		// Token: 0x04017CDC RID: 97500
 		private readonly UUIItem Container;
 
-		// Token: 0x0401D241 RID: 119361
+		// Token: 0x04017CDD RID: 97501
 		private readonly List<MapRoadWayView> RoadWays = new List<MapRoadWayView>();
 
-		// Token: 0x0401D242 RID: 119362
+		// Token: 0x04017CDE RID: 97502
 		private readonly List<MapRoadWayView> RoadWaysPool = new List<MapRoadWayView>();
 
-		// Token: 0x0401D243 RID: 119363
+		// Token: 0x04017CDF RID: 97503
 		private readonly Vector2D AnchorOffset = Vector2D.Create();
 
-		// Token: 0x0401D244 RID: 119364
+		// Token: 0x04017CE0 RID: 97504
 		private readonly global::Vector Scale = global::Vector.Create();
 
-		// Token: 0x0401D245 RID: 119365
+		// Token: 0x04017CE1 RID: 97505
 		private readonly string RoadWayPrefabPath = "/Game/Aki/UI/UIResources/UiWorldMap/Prefabs/UiItem_MapRoadWay_Prefab.UiItem_MapRoadWay_Prefab";
 	}
 }

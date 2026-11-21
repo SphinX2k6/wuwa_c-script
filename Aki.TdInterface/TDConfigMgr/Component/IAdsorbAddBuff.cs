@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001A9 RID: 425
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001C0 RID: 448
 	public class IAdsorbAddBuff : IAddBuffMode
 	{
-		// Token: 0x06000680 RID: 1664 RVA: 0x000230F4 File Offset: 0x000212F4
+		// Token: 0x06000696 RID: 1686 RVA: 0x00023D54 File Offset: 0x00021F54
 		private IAdsorbAddBuff_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000681 RID: 1665 RVA: 0x0002312C File Offset: 0x0002132C
+		// Token: 0x06000697 RID: 1687 RVA: 0x00023D8C File Offset: 0x00021F8C
 		public static IAdsorbAddBuff Create([Nullable(2)] IAdsorbAddBuff instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000682 RID: 1666 RVA: 0x0002313F File Offset: 0x0002133F
+		// Token: 0x06000698 RID: 1688 RVA: 0x00023D9F File Offset: 0x00021F9F
 		public static IAdsorbAddBuff CreateFromSetValue([Nullable(2)] IAdsorbAddBuff_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000683 RID: 1667 RVA: 0x00023152 File Offset: 0x00021352
+		// Token: 0x06000699 RID: 1689 RVA: 0x00023DB2 File Offset: 0x00021FB2
 		public new IAdsorbAddBuff_SetValue ToSetValue()
 		{
 			return new IAdsorbAddBuff_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000220 RID: 544
-		// (get) Token: 0x06000684 RID: 1668 RVA: 0x00023171 File Offset: 0x00021371
-		// (set) Token: 0x06000685 RID: 1669 RVA: 0x0002319C File Offset: 0x0002139C
+		// Token: 0x17000228 RID: 552
+		// (get) Token: 0x0600069A RID: 1690 RVA: 0x00023DD1 File Offset: 0x00021FD1
+		// (set) Token: 0x0600069B RID: 1691 RVA: 0x00023DFC File Offset: 0x00021FFC
 		public override EBuffProducerMode Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000221 RID: 545
-		// (get) Token: 0x06000686 RID: 1670 RVA: 0x000231AA File Offset: 0x000213AA
-		// (set) Token: 0x06000687 RID: 1671 RVA: 0x000231D5 File Offset: 0x000213D5
+		// Token: 0x17000229 RID: 553
+		// (get) Token: 0x0600069C RID: 1692 RVA: 0x00023E0A File Offset: 0x0002200A
+		// (set) Token: 0x0600069D RID: 1693 RVA: 0x00023E35 File Offset: 0x00022035
 		public virtual int Speed
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400081E RID: 2078
+		// Token: 0x04000877 RID: 2167
 		[Nullable(2)]
 		protected new IAdsorbAddBuff FbInstance;
 
-		// Token: 0x0400081F RID: 2079
+		// Token: 0x04000878 RID: 2168
 		[Nullable(2)]
 		protected new IAdsorbAddBuff_SetValue PocoInterface;
 	}

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DE7 RID: 3559
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EE3 RID: 3811
 	public class ProceduralMaterialComponent : IComponentBase
 	{
-		// Token: 0x060050AA RID: 20650 RVA: 0x000C721E File Offset: 0x000C541E
+		// Token: 0x060055D1 RID: 21969 RVA: 0x000D2AE6 File Offset: 0x000D0CE6
 		public static ProceduralMaterialComponent Create(IProceduralMaterialComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A99 RID: 6809
-		// (get) Token: 0x060050AB RID: 20651 RVA: 0x000C7240 File Offset: 0x000C5440
+		// Token: 0x17001C06 RID: 7174
+		// (get) Token: 0x060055D2 RID: 21970 RVA: 0x000D2B08 File Offset: 0x000D0D08
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A9A RID: 6810
-		// (get) Token: 0x060050AC RID: 20652 RVA: 0x000C7278 File Offset: 0x000C5478
+		// Token: 0x17001C07 RID: 7175
+		// (get) Token: 0x060055D3 RID: 21971 RVA: 0x000D2B40 File Offset: 0x000D0D40
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A9B RID: 6811
-		// (get) Token: 0x060050AD RID: 20653 RVA: 0x000C7290 File Offset: 0x000C5490
+		// Token: 0x17001C08 RID: 7176
+		// (get) Token: 0x060055D4 RID: 21972 RVA: 0x000D2B58 File Offset: 0x000D0D58
 		public virtual List<ICustomPrimitiveDataConfig> ProceduralMaterialConfigs
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E50 RID: 11856
+		// Token: 0x04003118 RID: 12568
 		private IProceduralMaterialComponent Instance;
 
-		// Token: 0x04002E51 RID: 11857
+		// Token: 0x04003119 RID: 12569
 		private List<ICustomPrimitiveDataConfig> _ProceduralMaterialConfigsCache;
 
-		// Token: 0x04002E52 RID: 11858
+		// Token: 0x0400311A RID: 12570
 		private bool _ProceduralMaterialConfigsInited;
 	}
 }

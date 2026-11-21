@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x02000074 RID: 116
+	// Token: 0x02000077 RID: 119
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LauncherStorageLib : Singleton
 	{
-		// Token: 0x06000301 RID: 769 RVA: 0x0000FD40 File Offset: 0x0000DF40
+		// Token: 0x06000311 RID: 785 RVA: 0x00010BC0 File Offset: 0x0000EDC0
 		private static string GetJournalMode(LauncherStorageLib.EJournalMode mode)
 		{
 			switch (mode)
@@ -33,7 +33,7 @@ namespace CSharpScript.Launcher.Util
 			}
 		}
 
-		// Token: 0x06000302 RID: 770 RVA: 0x0000FD8C File Offset: 0x0000DF8C
+		// Token: 0x06000312 RID: 786 RVA: 0x00010C0C File Offset: 0x0000EE0C
 		public unsafe void LockDbPath(bool isLockDbPath, string reason)
 		{
 			LauncherLog instance = LauncherLog.Instance;
@@ -45,7 +45,7 @@ namespace CSharpScript.Launcher.Util
 			this.IsDbPathLocked = isLockDbPath;
 		}
 
-		// Token: 0x06000303 RID: 771 RVA: 0x0000FDF4 File Offset: 0x0000DFF4
+		// Token: 0x06000313 RID: 787 RVA: 0x00010C74 File Offset: 0x0000EE74
 		public void Initialize()
 		{
 			if (this.IsInit)
@@ -57,12 +57,12 @@ namespace CSharpScript.Launcher.Util
 			this.OpenOrCreateDb();
 		}
 
-		// Token: 0x06000304 RID: 772 RVA: 0x0000FE13 File Offset: 0x0000E013
+		// Token: 0x06000314 RID: 788 RVA: 0x00010C93 File Offset: 0x0000EE93
 		public void Destroy()
 		{
 		}
 
-		// Token: 0x06000305 RID: 773 RVA: 0x0000FE18 File Offset: 0x0000E018
+		// Token: 0x06000315 RID: 789 RVA: 0x00010C98 File Offset: 0x0000EE98
 		[NullableContext(2)]
 		public T GetGlobal<T>(ELauncherStorageGlobalKey key, T defaultValue = default(T))
 		{
@@ -85,7 +85,7 @@ namespace CSharpScript.Launcher.Util
 			return LauncherStorageLib.Decode<T>(item2);
 		}
 
-		// Token: 0x06000306 RID: 774 RVA: 0x0000FE58 File Offset: 0x0000E058
+		// Token: 0x06000316 RID: 790 RVA: 0x00010CD8 File Offset: 0x0000EED8
 		public unsafe bool SetGlobal<[Nullable(2)] T>(ELauncherStorageGlobalKey key, T value)
 		{
 			string text = this.CheckAndGetGlobalKeyName(key);
@@ -107,14 +107,14 @@ namespace CSharpScript.Launcher.Util
 			return text2 != null && this.SetValue(text, text2, false);
 		}
 
-		// Token: 0x06000307 RID: 775 RVA: 0x0000FEE8 File Offset: 0x0000E0E8
+		// Token: 0x06000317 RID: 791 RVA: 0x00010D68 File Offset: 0x0000EF68
 		public bool DeleteGlobal(ELauncherStorageGlobalKey key)
 		{
 			string text = this.CheckAndGetGlobalKeyName(key);
 			return text != null && this.DeleteKey(text, false);
 		}
 
-		// Token: 0x06000308 RID: 776 RVA: 0x0000FF0C File Offset: 0x0000E10C
+		// Token: 0x06000318 RID: 792 RVA: 0x00010D8C File Offset: 0x0000EF8C
 		[NullableContext(2)]
 		public T GetDeviceSaved<T>(ELauncherStorageDeviceKey key, T defaultValue = default(T))
 		{
@@ -137,7 +137,7 @@ namespace CSharpScript.Launcher.Util
 			return LauncherStorageLib.Decode<T>(item2);
 		}
 
-		// Token: 0x06000309 RID: 777 RVA: 0x0000FF4C File Offset: 0x0000E14C
+		// Token: 0x06000319 RID: 793 RVA: 0x00010DCC File Offset: 0x0000EFCC
 		public unsafe bool SetDeviceSaved<[Nullable(2)] T>(ELauncherStorageDeviceKey key, T value)
 		{
 			string text = this.CheckAndGetDeviceKeyName(key);
@@ -159,14 +159,14 @@ namespace CSharpScript.Launcher.Util
 			return text2 != null && this.SetValue(text, text2, true);
 		}
 
-		// Token: 0x0600030A RID: 778 RVA: 0x0000FFDC File Offset: 0x0000E1DC
+		// Token: 0x0600031A RID: 794 RVA: 0x00010E5C File Offset: 0x0000F05C
 		public bool DeleteDeviceSaved(ELauncherStorageDeviceKey key)
 		{
 			string text = this.CheckAndGetDeviceKeyName(key);
 			return text != null && this.DeleteKey(text, true);
 		}
 
-		// Token: 0x0600030B RID: 779 RVA: 0x00010000 File Offset: 0x0000E200
+		// Token: 0x0600031B RID: 795 RVA: 0x00010E80 File Offset: 0x0000F080
 		[NullableContext(2)]
 		public string GetDeviceSavedString([Nullable(1)] string key, string defaultValue = null)
 		{
@@ -192,7 +192,7 @@ namespace CSharpScript.Launcher.Util
 			return LauncherStorageLib.Decode<string>(item2);
 		}
 
-		// Token: 0x0600030C RID: 780 RVA: 0x00010060 File Offset: 0x0000E260
+		// Token: 0x0600031C RID: 796 RVA: 0x00010EE0 File Offset: 0x0000F0E0
 		public unsafe bool SetDeviceSavedString(string key, string value)
 		{
 			if (string.IsNullOrEmpty(key))
@@ -217,7 +217,7 @@ namespace CSharpScript.Launcher.Util
 			return text != null && this.SetValue(key, text, true);
 		}
 
-		// Token: 0x0600030D RID: 781 RVA: 0x00010104 File Offset: 0x0000E304
+		// Token: 0x0600031D RID: 797 RVA: 0x00010F84 File Offset: 0x0000F184
 		public bool DeleteDeviceSavedString(string key)
 		{
 			if (string.IsNullOrEmpty(key))
@@ -231,7 +231,7 @@ namespace CSharpScript.Launcher.Util
 			return this.DeleteKey(key, true);
 		}
 
-		// Token: 0x0600030E RID: 782 RVA: 0x00010148 File Offset: 0x0000E348
+		// Token: 0x0600031E RID: 798 RVA: 0x00010FC8 File Offset: 0x0000F1C8
 		private void InitDbPath()
 		{
 			string str = UKuroLauncherLibrary.GameSavedDir();
@@ -245,7 +245,7 @@ namespace CSharpScript.Launcher.Util
 			}
 		}
 
-		// Token: 0x0600030F RID: 783 RVA: 0x00010190 File Offset: 0x0000E390
+		// Token: 0x0600031F RID: 799 RVA: 0x00011010 File Offset: 0x0000F210
 		private bool OpenOrCreateDb()
 		{
 			if (!this.IsDbPathLocked)
@@ -318,7 +318,7 @@ namespace CSharpScript.Launcher.Util
 			return this.CreateTable();
 		}
 
-		// Token: 0x06000310 RID: 784 RVA: 0x00010360 File Offset: 0x0000E560
+		// Token: 0x06000320 RID: 800 RVA: 0x000111E0 File Offset: 0x0000F3E0
 		private bool CreateTable()
 		{
 			string text = "create table if not exists LocalStorage(key text primary key not null , value text not null)";
@@ -340,7 +340,7 @@ namespace CSharpScript.Launcher.Util
 			return flag;
 		}
 
-		// Token: 0x06000311 RID: 785 RVA: 0x000103E0 File Offset: 0x0000E5E0
+		// Token: 0x06000321 RID: 801 RVA: 0x00011260 File Offset: 0x0000F460
 		[return: TupleElementNames(new string[]
 		{
 			"success",
@@ -389,7 +389,7 @@ namespace CSharpScript.Launcher.Util
 			return new ValueTuple<bool, string>(true, item);
 		}
 
-		// Token: 0x06000312 RID: 786 RVA: 0x000104DC File Offset: 0x0000E6DC
+		// Token: 0x06000322 RID: 802 RVA: 0x0001135C File Offset: 0x0000F55C
 		private unsafe bool SetValue(string keyName, string value, bool bIsDeviceDb)
 		{
 			if (!bIsDeviceDb && this.IsDbPathLocked)
@@ -418,7 +418,7 @@ namespace CSharpScript.Launcher.Util
 			return UKuroSqliteLibrary.Execute(dbPath, sql);
 		}
 
-		// Token: 0x06000313 RID: 787 RVA: 0x000105E4 File Offset: 0x0000E7E4
+		// Token: 0x06000323 RID: 803 RVA: 0x00011464 File Offset: 0x0000F664
 		private bool DeleteKey(string key, bool bIsDeviceDb)
 		{
 			if (!bIsDeviceDb && this.IsDbPathLocked)
@@ -440,7 +440,7 @@ namespace CSharpScript.Launcher.Util
 			return UKuroSqliteLibrary.Execute(dbPath, sql);
 		}
 
-		// Token: 0x06000314 RID: 788 RVA: 0x00010684 File Offset: 0x0000E884
+		// Token: 0x06000324 RID: 804 RVA: 0x00011504 File Offset: 0x0000F704
 		[NullableContext(2)]
 		private string CheckAndGetGlobalKeyName(ELauncherStorageGlobalKey key)
 		{
@@ -456,7 +456,7 @@ namespace CSharpScript.Launcher.Util
 			return text;
 		}
 
-		// Token: 0x06000315 RID: 789 RVA: 0x000106D4 File Offset: 0x0000E8D4
+		// Token: 0x06000325 RID: 805 RVA: 0x00011554 File Offset: 0x0000F754
 		[NullableContext(2)]
 		private string CheckAndGetDeviceKeyName(ELauncherStorageDeviceKey key)
 		{
@@ -472,7 +472,7 @@ namespace CSharpScript.Launcher.Util
 			return text;
 		}
 
-		// Token: 0x06000316 RID: 790 RVA: 0x00010724 File Offset: 0x0000E924
+		// Token: 0x06000326 RID: 806 RVA: 0x000115A4 File Offset: 0x0000F7A4
 		[NullableContext(2)]
 		private unsafe static string Encode<T>([Nullable(1)] T value)
 		{
@@ -495,7 +495,7 @@ namespace CSharpScript.Launcher.Util
 			return null;
 		}
 
-		// Token: 0x06000317 RID: 791 RVA: 0x000107DC File Offset: 0x0000E9DC
+		// Token: 0x06000327 RID: 807 RVA: 0x0001165C File Offset: 0x0000F85C
 		[NullableContext(2)]
 		private unsafe static T Decode<T>([Nullable(1)] string text)
 		{
@@ -522,7 +522,7 @@ namespace CSharpScript.Launcher.Util
 			return default(T);
 		}
 
-		// Token: 0x06000318 RID: 792 RVA: 0x000108BC File Offset: 0x0000EABC
+		// Token: 0x06000328 RID: 808 RVA: 0x0001173C File Offset: 0x0000F93C
 		[NullableContext(2)]
 		private static object Replacer(object value)
 		{
@@ -604,7 +604,7 @@ namespace CSharpScript.Launcher.Util
 			}
 		}
 
-		// Token: 0x06000319 RID: 793 RVA: 0x00010B08 File Offset: 0x0000ED08
+		// Token: 0x06000329 RID: 809 RVA: 0x00011988 File Offset: 0x0000FB88
 		[NullableContext(2)]
 		private static object Reviver(object key, object value)
 		{
@@ -693,7 +693,7 @@ namespace CSharpScript.Launcher.Util
 		}
 
 		// Token: 0x17000047 RID: 71
-		// (get) Token: 0x0600031A RID: 794 RVA: 0x00010D78 File Offset: 0x0000EF78
+		// (get) Token: 0x0600032A RID: 810 RVA: 0x00011BF8 File Offset: 0x0000FDF8
 		public static LauncherStorageLib Instance
 		{
 			get
@@ -707,12 +707,12 @@ namespace CSharpScript.Launcher.Util
 			}
 		}
 
-		// Token: 0x0600031B RID: 795 RVA: 0x00010D9B File Offset: 0x0000EF9B
+		// Token: 0x0600032B RID: 811 RVA: 0x00011C1B File Offset: 0x0000FE1B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0600031C RID: 796 RVA: 0x00010D9D File Offset: 0x0000EF9D
+		// Token: 0x0600032C RID: 812 RVA: 0x00011C1D File Offset: 0x0000FE1D
 		public static void ResetStaticDefaultValue()
 		{
 			LauncherStorageLib instance = LauncherStorageLib._instance;
@@ -723,70 +723,70 @@ namespace CSharpScript.Launcher.Util
 			LauncherStorageLib._instance = null;
 		}
 
-		// Token: 0x0600031D RID: 797 RVA: 0x00010DB6 File Offset: 0x0000EFB6
+		// Token: 0x0600032D RID: 813 RVA: 0x00011C36 File Offset: 0x0000FE36
 		static LauncherStorageLib()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LauncherStorageLib.CreateStaticDefaultValue), new Action(LauncherStorageLib.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04000232 RID: 562
+		// Token: 0x0400025E RID: 606
 		private const string DBPATH = "LocalStorage/LocalStorage";
 
-		// Token: 0x04000233 RID: 563
+		// Token: 0x0400025F RID: 607
 		private const string DEVICEDBPATH = "DeviceSaved/DeviceStorage";
 
-		// Token: 0x04000234 RID: 564
+		// Token: 0x04000260 RID: 608
 		private const string DBSUFFIX = ".db";
 
-		// Token: 0x04000235 RID: 565
+		// Token: 0x04000261 RID: 609
 		private const string TABLENAME = "LocalStorage";
 
-		// Token: 0x04000236 RID: 566
+		// Token: 0x04000262 RID: 610
 		private const int DBNUM = 10;
 
-		// Token: 0x04000237 RID: 567
+		// Token: 0x04000263 RID: 611
 		private const bool USE_THREAD = false;
 
-		// Token: 0x04000238 RID: 568
+		// Token: 0x04000264 RID: 612
 		private const int SQLITE_ERR = -1;
 
-		// Token: 0x04000239 RID: 569
+		// Token: 0x04000265 RID: 613
 		private const int SQLITE_NO_DATA = 1;
 
-		// Token: 0x0400023A RID: 570
+		// Token: 0x04000266 RID: 614
 		private const LauncherStorageLib.EJournalMode USE_JOURNAL_MODE = LauncherStorageLib.EJournalMode.Persist;
 
-		// Token: 0x0400023B RID: 571
+		// Token: 0x04000267 RID: 615
 		[Nullable(2)]
 		private string DbPath;
 
-		// Token: 0x0400023C RID: 572
+		// Token: 0x04000268 RID: 616
 		[Nullable(2)]
 		private string DeviceDbPath;
 
-		// Token: 0x0400023D RID: 573
+		// Token: 0x04000269 RID: 617
 		private bool IsInit;
 
-		// Token: 0x0400023E RID: 574
+		// Token: 0x0400026A RID: 618
 		private bool IsDbPathLocked;
 
-		// Token: 0x0400023F RID: 575
+		// Token: 0x0400026B RID: 619
 		[Nullable(2)]
 		private static LauncherStorageLib _instance;
 
-		// Token: 0x020002C6 RID: 710
+		// Token: 0x020002D1 RID: 721
 		[NullableContext(0)]
 		private enum EJournalMode
 		{
-			// Token: 0x04000B04 RID: 2820
+			// Token: 0x04000B58 RID: 2904
 			Delete,
-			// Token: 0x04000B05 RID: 2821
+			// Token: 0x04000B59 RID: 2905
 			Truncate,
-			// Token: 0x04000B06 RID: 2822
+			// Token: 0x04000B5A RID: 2906
 			Persist,
-			// Token: 0x04000B07 RID: 2823
+			// Token: 0x04000B5B RID: 2907
 			Memory,
-			// Token: 0x04000B08 RID: 2824
+			// Token: 0x04000B5C RID: 2908
 			Off
 		}
 	}

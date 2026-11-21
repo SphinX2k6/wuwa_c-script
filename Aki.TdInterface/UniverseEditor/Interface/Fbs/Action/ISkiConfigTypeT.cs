@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007122 RID: 28962
+	// Token: 0x020078EE RID: 30958
 	public class ISkiConfigTypeT
 	{
-		// Token: 0x1700D74D RID: 55117
-		// (get) Token: 0x060335A7 RID: 210343 RVA: 0x006EC1F3 File Offset: 0x006EA3F3
-		// (set) Token: 0x060335A8 RID: 210344 RVA: 0x006EC1FB File Offset: 0x006EA3FB
+		// Token: 0x1700E330 RID: 58160
+		// (get) Token: 0x06036849 RID: 223305 RVA: 0x0074C7FF File Offset: 0x0074A9FF
+		// (set) Token: 0x0603684A RID: 223306 RVA: 0x0074C807 File Offset: 0x0074AA07
 		public ESkiConfig Type { get; set; }
 
-		// Token: 0x1700D74E RID: 55118
-		// (get) Token: 0x060335A9 RID: 210345 RVA: 0x006EC204 File Offset: 0x006EA404
-		// (set) Token: 0x060335AA RID: 210346 RVA: 0x006EC20C File Offset: 0x006EA40C
+		// Token: 0x1700E331 RID: 58161
+		// (get) Token: 0x0603684B RID: 223307 RVA: 0x0074C810 File Offset: 0x0074AA10
+		// (set) Token: 0x0603684C RID: 223308 RVA: 0x0074C818 File Offset: 0x0074AA18
 		public TTargetEntityUnion Target { get; set; }
 
-		// Token: 0x060335AB RID: 210347 RVA: 0x006EC215 File Offset: 0x006EA415
+		// Token: 0x0603684D RID: 223309 RVA: 0x0074C821 File Offset: 0x0074AA21
 		public ISkiConfigTypeT()
 		{
 			this.Type = ESkiConfig.Open;

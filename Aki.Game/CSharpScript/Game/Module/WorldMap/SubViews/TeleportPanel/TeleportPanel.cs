@@ -7,31 +7,31 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.TeleportPanel
 {
-	// Token: 0x020047EC RID: 18412
+	// Token: 0x0200371D RID: 14109
 	public class TeleportPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x06030398 RID: 197528 RVA: 0x00B2D4C9 File Offset: 0x00B2B6C9
+		// Token: 0x06024B68 RID: 150376 RVA: 0x00A5D40D File Offset: 0x00A5B60D
 		[NullableContext(1)]
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x06030399 RID: 197529 RVA: 0x00B2D4D0 File Offset: 0x00B2B6D0
+		// Token: 0x06024B69 RID: 150377 RVA: 0x00A5D414 File Offset: 0x00A5B614
 		protected override void OnBeforeShow()
 		{
 			EventSystem.Instance.Add(EEventName.UnlockTeleport, new Action<int>(this.EventUnlockTeleport));
 			base.OnBeforeShow();
 		}
 
-		// Token: 0x0603039A RID: 197530 RVA: 0x00B2D4F4 File Offset: 0x00B2B6F4
+		// Token: 0x06024B6A RID: 150378 RVA: 0x00A5D438 File Offset: 0x00A5B638
 		protected override void OnBeforeHide()
 		{
 			EventSystem.Instance.Remove(EEventName.UnlockTeleport, new Action<int>(this.EventUnlockTeleport));
 			base.OnBeforeHide();
 		}
 
-		// Token: 0x0603039B RID: 197531 RVA: 0x00B2D518 File Offset: 0x00B2B718
+		// Token: 0x06024B6B RID: 150379 RVA: 0x00A5D45C File Offset: 0x00A5B65C
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TeleportPanel
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x0603039C RID: 197532 RVA: 0x00B2D594 File Offset: 0x00B2B794
+		// Token: 0x06024B6C RID: 150380 RVA: 0x00A5D4D8 File Offset: 0x00A5B6D8
 		[NullableContext(1)]
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TeleportPanel
 			}
 		}
 
-		// Token: 0x0603039D RID: 197533 RVA: 0x00B2D648 File Offset: 0x00B2B848
+		// Token: 0x06024B6D RID: 150381 RVA: 0x00A5D58C File Offset: 0x00A5B78C
 		private void EventUnlockTeleport(int teleportId)
 		{
 			TeleportMarkItem selectedMarkItem = this.SelectedMarkItem;
@@ -104,14 +104,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TeleportPanel
 			base.Close();
 		}
 
-		// Token: 0x04019F69 RID: 106345
+		// Token: 0x0401461D RID: 83485
 		[Nullable(2)]
 		private TeleportMarkItem SelectedMarkItem;
 
-		// Token: 0x0200AAAF RID: 43695
+		// Token: 0x02009461 RID: 37985
 		public static class EComponents
 		{
-			// Token: 0x04033EC2 RID: 212674
+			// Token: 0x0402E648 RID: 190024
 			public const int TeleportPanel = 0;
 		}
 	}

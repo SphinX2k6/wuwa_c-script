@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000572 RID: 1394
+	// Token: 0x02000588 RID: 1416
 	public class ConfigMotionBySkinIdAndType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060020B9 RID: 8377 RVA: 0x00112693 File Offset: 0x00110893
+		// Token: 0x0600213D RID: 8509 RVA: 0x00118DE7 File Offset: 0x00116FE7
 		static ConfigMotionBySkinIdAndType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMotionBySkinIdAndType.CreateStaticDefaultValue), new Action(ConfigMotionBySkinIdAndType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060020BA RID: 8378 RVA: 0x001126B4 File Offset: 0x001108B4
+		// Token: 0x0600213E RID: 8510 RVA: 0x00118E08 File Offset: 0x00117008
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMotionBySkinIdAndType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060020BB RID: 8379 RVA: 0x00112733 File Offset: 0x00110933
+		// Token: 0x0600213F RID: 8511 RVA: 0x00118E87 File Offset: 0x00117087
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMotionBySkinIdAndType.LogPair = null;
 			ConfigMotionBySkinIdAndType.HandleId = 0;
 		}
 
-		// Token: 0x060020BC RID: 8380 RVA: 0x00112741 File Offset: 0x00110941
+		// Token: 0x06002140 RID: 8512 RVA: 0x00118E95 File Offset: 0x00117095
 		public static void Init()
 		{
 			ConfigMotionBySkinIdAndType.HandleId = ConfigCommon.InitDataStatement(ConfigMotionBySkinIdAndType.HandleId, "db_motion.db", "select BinData from `Motion` where SkinId=? And Type=? Order By Sort");
 		}
 
-		// Token: 0x060020BD RID: 8381 RVA: 0x0011275C File Offset: 0x0011095C
+		// Token: 0x06002141 RID: 8513 RVA: 0x00118EB0 File Offset: 0x001170B0
 		[NullableContext(2)]
 		public static IReadOnlyList<Motion> GetConfigList(int p0SkinId, int p1Type, bool useCache = true)
 		{
@@ -99,22 +99,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002602 RID: 9730
+		// Token: 0x0400269C RID: 9884
 		private const string DB = "db_motion.db";
 
-		// Token: 0x04002603 RID: 9731
+		// Token: 0x0400269D RID: 9885
 		private const string FILE = "d.动作.xlsx";
 
-		// Token: 0x04002604 RID: 9732
+		// Token: 0x0400269E RID: 9886
 		private const string TABLE = "Motion";
 
-		// Token: 0x04002605 RID: 9733
+		// Token: 0x0400269F RID: 9887
 		private const string COMMAND = "select BinData from `Motion` where SkinId=? And Type=? Order By Sort";
 
-		// Token: 0x04002606 RID: 9734
+		// Token: 0x040026A0 RID: 9888
 		private const string KEY_PREFIX = "MotionBySkinIdAndType";
 
-		// Token: 0x04002607 RID: 9735
+		// Token: 0x040026A1 RID: 9889
 		[Nullable(new byte[]
 		{
 			2,
@@ -124,7 +124,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002608 RID: 9736
+		// Token: 0x040026A2 RID: 9890
 		private static int HandleId;
 	}
 }

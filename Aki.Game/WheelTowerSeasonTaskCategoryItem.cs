@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001648 RID: 5704
+// Token: 0x02000B00 RID: 2816
 public class WheelTowerSeasonTaskCategoryItem : SyncGridProxyAbstract<ETaskCategory>
 {
-	// Token: 0x0600A031 RID: 41009 RVA: 0x00234280 File Offset: 0x00232480
+	// Token: 0x0600740F RID: 29711 RVA: 0x0023E0BC File Offset: 0x0023C2BC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -22,7 +22,7 @@ public class WheelTowerSeasonTaskCategoryItem : SyncGridProxyAbstract<ETaskCateg
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A032 RID: 41010 RVA: 0x0023430C File Offset: 0x0023250C
+	// Token: 0x06007410 RID: 29712 RVA: 0x0023E148 File Offset: 0x0023C348
 	public override void Refresh(ETaskCategory data)
 	{
 		this.Category = data;
@@ -40,7 +40,7 @@ public class WheelTowerSeasonTaskCategoryItem : SyncGridProxyAbstract<ETaskCateg
 		}
 	}
 
-	// Token: 0x0600A033 RID: 41011 RVA: 0x00234368 File Offset: 0x00232568
+	// Token: 0x06007411 RID: 29713 RVA: 0x0023E1A4 File Offset: 0x0023C3A4
 	public void OnTick()
 	{
 		if (this.Category != ETaskCategory.Cycle)
@@ -50,7 +50,7 @@ public class WheelTowerSeasonTaskCategoryItem : SyncGridProxyAbstract<ETaskCateg
 		this.RefreshCycleTime();
 	}
 
-	// Token: 0x0600A034 RID: 41012 RVA: 0x0023437C File Offset: 0x0023257C
+	// Token: 0x06007412 RID: 29714 RVA: 0x0023E1B8 File Offset: 0x0023C3B8
 	private void RefreshCycleTime()
 	{
 		string cycleEndRemainTime = WheelTowerModel.Instance.GetCycleEndRemainTime();
@@ -62,6 +62,6 @@ public class WheelTowerSeasonTaskCategoryItem : SyncGridProxyAbstract<ETaskCateg
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "WheelTower_SeasonTask_ResetTime", new <>z__ReadOnlySingleElementList<object>(cycleEndRemainTime));
 	}
 
-	// Token: 0x040048FD RID: 18685
+	// Token: 0x040049A3 RID: 18851
 	private ETaskCategory Category;
 }

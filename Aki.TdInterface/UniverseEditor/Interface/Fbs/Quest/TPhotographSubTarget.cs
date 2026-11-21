@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042F0 RID: 17136
+	// Token: 0x0200474F RID: 18255
 	public enum TPhotographSubTarget : byte
 	{
-		// Token: 0x0400C047 RID: 49223
+		// Token: 0x0400CA5F RID: 51807
 		NONE,
-		// Token: 0x0400C048 RID: 49224
+		// Token: 0x0400CA60 RID: 51808
 		IPhotographSubTargetAnyRole,
-		// Token: 0x0400C049 RID: 49225
+		// Token: 0x0400CA61 RID: 51809
 		IPhotographSubTargetSpecificRole
 	}
 }

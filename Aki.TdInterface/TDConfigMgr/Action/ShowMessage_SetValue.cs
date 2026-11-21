@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002205 RID: 8709
+	// Token: 0x02002470 RID: 9328
 	public class ShowMessage_SetValue
 	{
-		// Token: 0x04007200 RID: 29184
-		[Nullable(1)]
+		// Token: 0x04007849 RID: 30793
 		public string Content;
 	}
 }

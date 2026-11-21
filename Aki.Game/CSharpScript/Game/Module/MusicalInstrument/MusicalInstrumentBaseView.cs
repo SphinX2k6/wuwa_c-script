@@ -7,26 +7,26 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.MusicalInstrument
 {
-	// Token: 0x0200536F RID: 21359
+	// Token: 0x02004352 RID: 17234
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class MusicalInstrumentBaseView : UiViewBase
 	{
-		// Token: 0x06036926 RID: 223526 RVA: 0x00CEC623 File Offset: 0x00CEA823
+		// Token: 0x0602B86C RID: 178284 RVA: 0x00C3B4AF File Offset: 0x00C396AF
 		[NullableContext(1)]
 		protected MusicalInstrumentBaseView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036927 RID: 223527
+		// Token: 0x0602B86D RID: 178285
 		protected abstract EInstrumentType GetMusicalInstrumentType();
 
-		// Token: 0x06036928 RID: 223528 RVA: 0x00CEC637 File Offset: 0x00CEA837
+		// Token: 0x0602B86E RID: 178286 RVA: 0x00C3B4C3 File Offset: 0x00C396C3
 		protected virtual void OnQtePerformance(int rowIndex, int columnIndex, bool success)
 		{
 		}
 
-		// Token: 0x06036929 RID: 223529 RVA: 0x00CEC63C File Offset: 0x00CEA83C
+		// Token: 0x0602B86F RID: 178287 RVA: 0x00C3B4C8 File Offset: 0x00C396C8
 		protected MusicalInstrumentKeyItem GetKeyItem(int rowIndex, int columnIndex)
 		{
 			if (rowIndex < 0 || rowIndex >= this.KeyItems.Count)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return list[columnIndex];
 		}
 
-		// Token: 0x0603692A RID: 223530 RVA: 0x00CEC680 File Offset: 0x00CEA880
+		// Token: 0x0602B870 RID: 178288 RVA: 0x00C3B50C File Offset: 0x00C3970C
 		protected void FocusCurrentQte()
 		{
 			MusicalInstrumentSubModel subModel = this.GetSubModel();
@@ -69,19 +69,19 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			keyItem.OnQteFocus(true);
 		}
 
-		// Token: 0x0603692B RID: 223531 RVA: 0x00CEC6F1 File Offset: 0x00CEA8F1
+		// Token: 0x0602B871 RID: 178289 RVA: 0x00C3B57D File Offset: 0x00C3977D
 		protected virtual MusicalInstrumentSubModel GetSubModel()
 		{
 			return MusicalInstrumentModel.Instance.GetSubModel(this.GetMusicalInstrumentType());
 		}
 
-		// Token: 0x0603692C RID: 223532 RVA: 0x00CEC703 File Offset: 0x00CEA903
+		// Token: 0x0602B872 RID: 178290 RVA: 0x00C3B58F File Offset: 0x00C3978F
 		protected MusicalInstrumentSubController GetSubController()
 		{
 			return MusicalInstrumentController.Instance.GetSubController(this.GetMusicalInstrumentType());
 		}
 
-		// Token: 0x0603692D RID: 223533 RVA: 0x00CEC715 File Offset: 0x00CEA915
+		// Token: 0x0602B873 RID: 178291 RVA: 0x00C3B5A1 File Offset: 0x00C397A1
 		protected void OnKeyItemPointerDown(int rowIndex, int columnIndex)
 		{
 			MusicalInstrumentSubModel subModel = this.GetSubModel();
@@ -93,10 +93,10 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			this.PostAudioEventByIndex(rowIndex, columnIndex);
 		}
 
-		// Token: 0x0603692E RID: 223534
+		// Token: 0x0602B874 RID: 178292
 		protected abstract void PostAudioEventByIndex(int rowIndex, int columnIndex);
 
-		// Token: 0x0603692F RID: 223535 RVA: 0x00CEC73C File Offset: 0x00CEA93C
+		// Token: 0x0602B875 RID: 178293 RVA: 0x00C3B5C8 File Offset: 0x00C397C8
 		protected void CheckQteSuccess(int rowIndex, int columnIndex)
 		{
 			MusicalInstrumentSubModel subModel = this.GetSubModel();
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}
 		}
 
-		// Token: 0x06036930 RID: 223536 RVA: 0x00CEC85B File Offset: 0x00CEAA5B
+		// Token: 0x0602B876 RID: 178294 RVA: 0x00C3B6E7 File Offset: 0x00C398E7
 		protected void Exit()
 		{
 			MusicalInstrumentController.Instance.Exit(new MusicalInstrumentExitParam
@@ -168,10 +168,10 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}).Forget<bool>();
 		}
 
-		// Token: 0x0401CD8B RID: 118155
+		// Token: 0x04017821 RID: 96289
 		protected int QteCurrentIndex;
 
-		// Token: 0x0401CD8C RID: 118156
+		// Token: 0x04017822 RID: 96290
 		[Nullable(1)]
 		protected readonly List<List<MusicalInstrumentKeyItem>> KeyItems = new List<List<MusicalInstrumentKeyItem>>();
 	}

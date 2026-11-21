@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012FE RID: 4862
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200144E RID: 5198
 	public class IFastReturnMapPos
 	{
-		// Token: 0x06006F04 RID: 28420 RVA: 0x0010C228 File Offset: 0x0010A428
+		// Token: 0x060075A4 RID: 30116 RVA: 0x0011A794 File Offset: 0x00118994
 		public static IFastReturnMapPos Create(IFastReturnMapPos? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170022DB RID: 8923
-		// (get) Token: 0x06006F05 RID: 28421 RVA: 0x0010C247 File Offset: 0x0010A447
+		// Token: 0x170024AA RID: 9386
+		// (get) Token: 0x060075A5 RID: 30117 RVA: 0x0011A7B3 File Offset: 0x001189B3
 		[Nullable(2)]
 		public virtual string TidTip
 		{
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022DC RID: 8924
-		// (get) Token: 0x06006F06 RID: 28422 RVA: 0x0010C254 File Offset: 0x0010A454
+		// Token: 0x170024AB RID: 9387
+		// (get) Token: 0x060075A6 RID: 30118 RVA: 0x0011A7C0 File Offset: 0x001189C0
 		public virtual List<IConditionGroup> ShowButtonConditionGroup
 		{
 			get
@@ -57,8 +55,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022DD RID: 8925
-		// (get) Token: 0x06006F07 RID: 28423 RVA: 0x0010C2BD File Offset: 0x0010A4BD
+		// Token: 0x170024AC RID: 9388
+		// (get) Token: 0x060075A7 RID: 30119 RVA: 0x0011A829 File Offset: 0x00118A29
 		public virtual IFastReturnPosBase DefaultPos
 		{
 			get
@@ -73,19 +71,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022DE RID: 8926
-		// (get) Token: 0x06006F08 RID: 28424 RVA: 0x0010C2EC File Offset: 0x0010A4EC
+		// Token: 0x170024AD RID: 9389
+		// (get) Token: 0x060075A8 RID: 30120 RVA: 0x0011A858 File Offset: 0x00118A58
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IConditionReturnPos> ConditionPositionGroup
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -108,8 +106,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022DF RID: 8927
-		// (get) Token: 0x06006F09 RID: 28425 RVA: 0x0010C366 File Offset: 0x0010A566
+		// Token: 0x170024AE RID: 9390
+		// (get) Token: 0x060075A9 RID: 30121 RVA: 0x0011A8D2 File Offset: 0x00118AD2
 		[Nullable(2)]
 		public virtual string EdTidTip
 		{
@@ -120,30 +118,30 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003FB2 RID: 16306
+		// Token: 0x0400432E RID: 17198
 		private IFastReturnMapPos Instance;
 
-		// Token: 0x04003FB3 RID: 16307
+		// Token: 0x0400432F RID: 17199
 		private List<IConditionGroup> _ShowButtonConditionGroupCache;
 
-		// Token: 0x04003FB4 RID: 16308
+		// Token: 0x04004330 RID: 17200
 		private bool _ShowButtonConditionGroupInited;
 
-		// Token: 0x04003FB5 RID: 16309
+		// Token: 0x04004331 RID: 17201
 		private IFastReturnPosBase _DefaultPosCache;
 
-		// Token: 0x04003FB6 RID: 16310
+		// Token: 0x04004332 RID: 17202
 		private bool _DefaultPosInited;
 
-		// Token: 0x04003FB7 RID: 16311
+		// Token: 0x04004333 RID: 17203
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IConditionReturnPos> _ConditionPositionGroupCache;
 
-		// Token: 0x04003FB8 RID: 16312
+		// Token: 0x04004334 RID: 17204
 		private bool _ConditionPositionGroupInited;
 	}
 }

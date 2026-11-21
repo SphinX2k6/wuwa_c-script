@@ -5,50 +5,50 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005127 RID: 20775
+	// Token: 0x0200568C RID: 22156
 	public class IElementalBoxFoundationComponentT
 	{
-		// Token: 0x17009764 RID: 38756
-		// (get) Token: 0x060217E7 RID: 137191 RVA: 0x004A67A6 File Offset: 0x004A49A6
-		// (set) Token: 0x060217E8 RID: 137192 RVA: 0x004A67AE File Offset: 0x004A49AE
+		// Token: 0x17009F51 RID: 40785
+		// (get) Token: 0x0602373B RID: 145211 RVA: 0x004E0732 File Offset: 0x004DE932
+		// (set) Token: 0x0602373C RID: 145212 RVA: 0x004E073A File Offset: 0x004DE93A
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009765 RID: 38757
-		// (get) Token: 0x060217E9 RID: 137193 RVA: 0x004A67B7 File Offset: 0x004A49B7
-		// (set) Token: 0x060217EA RID: 137194 RVA: 0x004A67BF File Offset: 0x004A49BF
+		// Token: 0x17009F52 RID: 40786
+		// (get) Token: 0x0602373D RID: 145213 RVA: 0x004E0743 File Offset: 0x004DE943
+		// (set) Token: 0x0602373E RID: 145214 RVA: 0x004E074B File Offset: 0x004DE94B
 		public EElementalType ElementalType { get; set; }
 
-		// Token: 0x17009766 RID: 38758
-		// (get) Token: 0x060217EB RID: 137195 RVA: 0x004A67C8 File Offset: 0x004A49C8
-		// (set) Token: 0x060217EC RID: 137196 RVA: 0x004A67D0 File Offset: 0x004A49D0
+		// Token: 0x17009F53 RID: 40787
+		// (get) Token: 0x0602373F RID: 145215 RVA: 0x004E0754 File Offset: 0x004DE954
+		// (set) Token: 0x06023740 RID: 145216 RVA: 0x004E075C File Offset: 0x004DE95C
 		public int MaxCarryRange { get; set; }
 
-		// Token: 0x17009767 RID: 38759
-		// (get) Token: 0x060217ED RID: 137197 RVA: 0x004A67D9 File Offset: 0x004A49D9
-		// (set) Token: 0x060217EE RID: 137198 RVA: 0x004A67E1 File Offset: 0x004A49E1
+		// Token: 0x17009F54 RID: 40788
+		// (get) Token: 0x06023741 RID: 145217 RVA: 0x004E0765 File Offset: 0x004DE965
+		// (set) Token: 0x06023742 RID: 145218 RVA: 0x004E076D File Offset: 0x004DE96D
 		public int InitialActiveElementalBoxId { get; set; }
 
-		// Token: 0x17009768 RID: 38760
-		// (get) Token: 0x060217EF RID: 137199 RVA: 0x004A67EA File Offset: 0x004A49EA
-		// (set) Token: 0x060217F0 RID: 137200 RVA: 0x004A67F2 File Offset: 0x004A49F2
+		// Token: 0x17009F55 RID: 40789
+		// (get) Token: 0x06023743 RID: 145219 RVA: 0x004E0776 File Offset: 0x004DE976
+		// (set) Token: 0x06023744 RID: 145220 RVA: 0x004E077E File Offset: 0x004DE97E
 		public int LoopTeleportMappingFoundationId { get; set; }
 
-		// Token: 0x17009769 RID: 38761
-		// (get) Token: 0x060217F1 RID: 137201 RVA: 0x004A67FB File Offset: 0x004A49FB
-		// (set) Token: 0x060217F2 RID: 137202 RVA: 0x004A6803 File Offset: 0x004A4A03
+		// Token: 0x17009F56 RID: 40790
+		// (get) Token: 0x06023745 RID: 145221 RVA: 0x004E0787 File Offset: 0x004DE987
+		// (set) Token: 0x06023746 RID: 145222 RVA: 0x004E078F File Offset: 0x004DE98F
 		public List<IActionInfoT> OnObtainNucleusActions { get; set; }
 
-		// Token: 0x1700976A RID: 38762
-		// (get) Token: 0x060217F3 RID: 137203 RVA: 0x004A680C File Offset: 0x004A4A0C
-		// (set) Token: 0x060217F4 RID: 137204 RVA: 0x004A6814 File Offset: 0x004A4A14
+		// Token: 0x17009F57 RID: 40791
+		// (get) Token: 0x06023747 RID: 145223 RVA: 0x004E0798 File Offset: 0x004DE998
+		// (set) Token: 0x06023748 RID: 145224 RVA: 0x004E07A0 File Offset: 0x004DE9A0
 		public List<IActionInfoT> OnReturnNucleusActions { get; set; }
 
-		// Token: 0x1700976B RID: 38763
-		// (get) Token: 0x060217F5 RID: 137205 RVA: 0x004A681D File Offset: 0x004A4A1D
-		// (set) Token: 0x060217F6 RID: 137206 RVA: 0x004A6825 File Offset: 0x004A4A25
+		// Token: 0x17009F58 RID: 40792
+		// (get) Token: 0x06023749 RID: 145225 RVA: 0x004E07A9 File Offset: 0x004DE9A9
+		// (set) Token: 0x0602374A RID: 145226 RVA: 0x004E07B1 File Offset: 0x004DE9B1
 		public byte NullMask { get; set; }
 
-		// Token: 0x060217F7 RID: 137207 RVA: 0x004A682E File Offset: 0x004A4A2E
+		// Token: 0x0602374B RID: 145227 RVA: 0x004E07BA File Offset: 0x004DE9BA
 		public IElementalBoxFoundationComponentT()
 		{
 			this.Disabled = false;

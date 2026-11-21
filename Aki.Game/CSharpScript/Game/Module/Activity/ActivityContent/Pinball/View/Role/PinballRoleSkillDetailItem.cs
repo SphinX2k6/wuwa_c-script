@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x02006317 RID: 25367
+	// Token: 0x02005295 RID: 21141
 	public class PinballRoleSkillDetailItem : GridProxyAbstract<PinballSkillDisplayConfig>
 	{
-		// Token: 0x0603FD1F RID: 261407 RVA: 0x00F708BC File Offset: 0x00F6EABC
+		// Token: 0x060349E0 RID: 215520 RVA: 0x00EB7818 File Offset: 0x00EB5A18
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,19 +24,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FD20 RID: 261408 RVA: 0x00F70925 File Offset: 0x00F6EB25
+		// Token: 0x060349E1 RID: 215521 RVA: 0x00EB7881 File Offset: 0x00EB5A81
 		public override void Refresh(PinballSkillDisplayConfig data, bool isSelected, int gridIndex)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.Name, Array.Empty<object>());
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.Desc, data.ValueList());
 		}
 
-		// Token: 0x0200C511 RID: 50449
+		// Token: 0x0200AEF8 RID: 44792
 		private enum EComponent
 		{
-			// Token: 0x0403B790 RID: 243600
+			// Token: 0x040360F2 RID: 221426
 			NameText,
-			// Token: 0x0403B791 RID: 243601
+			// Token: 0x040360F3 RID: 221427
 			DescriptionText
 		}
 	}

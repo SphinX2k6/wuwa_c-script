@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A41 RID: 10817
+	// Token: 0x02002D2E RID: 11566
 	public class IClientEventPianoEvent
 	{
-		// Token: 0x0600EE2A RID: 60970 RVA: 0x0022AFC9 File Offset: 0x002291C9
-		[NullableContext(1)]
+		// Token: 0x0600FCC2 RID: 64706 RVA: 0x0024897D File Offset: 0x00246B7D
 		public static IClientEventPianoEvent Create(IClientEventPianoEvent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B6A RID: 19306
-		// (get) Token: 0x0600EE2B RID: 60971 RVA: 0x0022AFE8 File Offset: 0x002291E8
+		// Token: 0x17004F14 RID: 20244
+		// (get) Token: 0x0600FCC3 RID: 64707 RVA: 0x0024899C File Offset: 0x00246B9C
 		public virtual EClientEventPianoEventType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400830F RID: 33551
+		// Token: 0x04008A02 RID: 35330
 		private IClientEventPianoEvent Instance;
 	}
 }

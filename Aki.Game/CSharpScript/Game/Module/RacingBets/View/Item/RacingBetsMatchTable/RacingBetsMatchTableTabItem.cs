@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 {
-	// Token: 0x02004F2B RID: 20267
+	// Token: 0x02003EF4 RID: 16116
 	public class RacingBetsMatchTableTabItem : GridProxyAbstract<ERacingBetsMatchTableType>
 	{
-		// Token: 0x06033FBA RID: 212922 RVA: 0x00C2FD00 File Offset: 0x00C2DF00
+		// Token: 0x06028E28 RID: 167464 RVA: 0x00B794A8 File Offset: 0x00B776A8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			};
 		}
 
-		// Token: 0x06033FBB RID: 212923 RVA: 0x00C2FD94 File Offset: 0x00C2DF94
+		// Token: 0x06028E29 RID: 167465 RVA: 0x00B7953C File Offset: 0x00B7773C
 		public override void Refresh(ERacingBetsMatchTableType data, bool isSelected, int gridIndex)
 		{
 			this.MatchTableType = data;
@@ -88,33 +88,33 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			}
 		}
 
-		// Token: 0x06033FBC RID: 212924 RVA: 0x00C2FF5C File Offset: 0x00C2E15C
+		// Token: 0x06028E2A RID: 167466 RVA: 0x00B79704 File Offset: 0x00B77904
 		public void SetToggleState(bool state)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(0).SetToggleState(state2, false, false, false);
 		}
 
-		// Token: 0x06033FBD RID: 212925 RVA: 0x00C2FF82 File Offset: 0x00C2E182
+		// Token: 0x06028E2B RID: 167467 RVA: 0x00B7972A File Offset: 0x00B7792A
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleState(true);
 		}
 
-		// Token: 0x06033FBE RID: 212926 RVA: 0x00C2FF8B File Offset: 0x00C2E18B
+		// Token: 0x06028E2C RID: 167468 RVA: 0x00B79733 File Offset: 0x00B77933
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleState(false);
 		}
 
-		// Token: 0x06033FBF RID: 212927 RVA: 0x00C2FF94 File Offset: 0x00C2E194
+		// Token: 0x06028E2D RID: 167469 RVA: 0x00B7973C File Offset: 0x00B7793C
 		[NullableContext(1)]
 		public override object GetKey(ERacingBetsMatchTableType data, int displayIndex)
 		{
 			return data;
 		}
 
-		// Token: 0x06033FC0 RID: 212928 RVA: 0x00C2FF9C File Offset: 0x00C2E19C
+		// Token: 0x06028E2E RID: 167470 RVA: 0x00B79744 File Offset: 0x00B77944
 		private void OnClickToggle(EToggleState state)
 		{
 			Action<ERacingBetsMatchTableType> onToggleCallBack = this.OnToggleCallBack;
@@ -125,26 +125,26 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			onToggleCallBack(this.MatchTableType);
 		}
 
-		// Token: 0x0401B9C3 RID: 113091
+		// Token: 0x04016398 RID: 91032
 		private ERacingBetsMatchTableType MatchTableType = ERacingBetsMatchTableType.GroupMatch;
 
-		// Token: 0x0401B9C4 RID: 113092
+		// Token: 0x04016399 RID: 91033
 		[Nullable(2)]
 		public Action<ERacingBetsMatchTableType> OnToggleCallBack;
 
-		// Token: 0x0200B082 RID: 45186
+		// Token: 0x02009AB2 RID: 39602
 		private class EComponent
 		{
-			// Token: 0x04035928 RID: 219432
+			// Token: 0x04030353 RID: 197459
 			public const int ToggleRoot = 0;
 
-			// Token: 0x04035929 RID: 219433
+			// Token: 0x04030354 RID: 197460
 			public const int TextName = 1;
 
-			// Token: 0x0403592A RID: 219434
+			// Token: 0x04030355 RID: 197461
 			public const int TextDate = 2;
 
-			// Token: 0x0403592B RID: 219435
+			// Token: 0x04030356 RID: 197462
 			public const int ItemRacing = 3;
 		}
 	}

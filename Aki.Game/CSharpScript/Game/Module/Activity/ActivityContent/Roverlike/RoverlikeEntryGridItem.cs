@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006137 RID: 24887
+	// Token: 0x020050B5 RID: 20661
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeEntryGridItem : MediumItemGrid, ISyncGridProxy<RoverlikeGainEntry>, ISyncGridProxy
 	{
-		// Token: 0x17009195 RID: 37269
-		// (get) Token: 0x0603EEA7 RID: 257703 RVA: 0x00F3265E File Offset: 0x00F3085E
-		// (set) Token: 0x0603EEA8 RID: 257704 RVA: 0x00F32666 File Offset: 0x00F30866
+		// Token: 0x170064F7 RID: 25847
+		// (get) Token: 0x06033B67 RID: 211815 RVA: 0x00E7953E File Offset: 0x00E7773E
+		// (set) Token: 0x06033B68 RID: 211816 RVA: 0x00E79546 File Offset: 0x00E77746
 		public int GridIndex { get; set; }
 
-		// Token: 0x0603EEA9 RID: 257705 RVA: 0x00F3266F File Offset: 0x00F3086F
+		// Token: 0x06033B69 RID: 211817 RVA: 0x00E7954F File Offset: 0x00E7774F
 		protected override void OnStart()
 		{
 			this.GetItemGridExtendToggle().bLockStateOnSelect = true;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.SetUseFixedAsync(true);
 		}
 
-		// Token: 0x0603EEAA RID: 257706 RVA: 0x00F32698 File Offset: 0x00F30898
+		// Token: 0x06033B6A RID: 211818 RVA: 0x00E79578 File Offset: 0x00E77778
 		public void Refresh(RoverlikeGainEntry data)
 		{
 			this.CollectData = data;
@@ -53,44 +53,44 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SetToggleStateInternal(toggleStateInternal);
 		}
 
-		// Token: 0x0603EEAB RID: 257707 RVA: 0x00F3271B File Offset: 0x00F3091B
+		// Token: 0x06033B6B RID: 211819 RVA: 0x00E795FB File Offset: 0x00E777FB
 		void ISyncGridProxy.Refresh(object data)
 		{
 			this.Refresh((RoverlikeGainEntry)data);
 		}
 
-		// Token: 0x0603EEAC RID: 257708 RVA: 0x00F32729 File Offset: 0x00F30929
+		// Token: 0x06033B6C RID: 211820 RVA: 0x00E79609 File Offset: 0x00E77809
 		void ISyncGridProxy.CreateByActor(AActor actor)
 		{
 			base.CreateByActor(actor, null);
 		}
 
-		// Token: 0x0603EEAD RID: 257709 RVA: 0x00F32733 File Offset: 0x00F30933
+		// Token: 0x06033B6D RID: 211821 RVA: 0x00E79613 File Offset: 0x00E77813
 		void ISyncGridProxy.CreateThenShowByActor(AActor actor)
 		{
 			base.CreateThenShowByActor(actor, null);
 		}
 
-		// Token: 0x0603EEAE RID: 257710 RVA: 0x00F3273D File Offset: 0x00F3093D
+		// Token: 0x06033B6E RID: 211822 RVA: 0x00E7961D File Offset: 0x00E7781D
 		public void Clear()
 		{
 			this.CollectData = null;
 		}
 
-		// Token: 0x0603EEAF RID: 257711 RVA: 0x00F32748 File Offset: 0x00F30948
+		// Token: 0x06033B6F RID: 211823 RVA: 0x00E79628 File Offset: 0x00E77828
 		public void SetToggleStateInternal(bool selected)
 		{
 			EToggleState state = selected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			this.GetItemGridExtendToggle().SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x0603EEB0 RID: 257712 RVA: 0x00F3276D File Offset: 0x00F3096D
+		// Token: 0x06033B70 RID: 211824 RVA: 0x00E7964D File Offset: 0x00E7784D
 		private bool IsEmptyEntry(RoverlikeGainEntry data)
 		{
 			return data.ConfigId <= 0;
 		}
 
-		// Token: 0x0603EEB1 RID: 257713 RVA: 0x00F3277C File Offset: 0x00F3097C
+		// Token: 0x06033B71 RID: 211825 RVA: 0x00E7965C File Offset: 0x00E7785C
 		private void FillEmptyGridParams(PropMediumItemGrid params_)
 		{
 			RoverlikeActivityController instance = RoverlikeActivityController.Instance;
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			params_.IconPath = slotEmptyIconPath;
 		}
 
-		// Token: 0x0603EEB2 RID: 257714 RVA: 0x00F32834 File Offset: 0x00F30A34
+		// Token: 0x06033B72 RID: 211826 RVA: 0x00E79714 File Offset: 0x00E77914
 		[NullableContext(2)]
 		private string GetSlotName(RoverRogueActivity activityConfig, int slotId)
 		{
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return null;
 		}
 
-		// Token: 0x0603EEB3 RID: 257715 RVA: 0x00F32890 File Offset: 0x00F30A90
+		// Token: 0x06033B73 RID: 211827 RVA: 0x00E79770 File Offset: 0x00E77970
 		[NullableContext(2)]
 		private string GetSlotEmptyIconPath(RoverRogueActivity activityConfig, int slotId)
 		{
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return null;
 		}
 
-		// Token: 0x0603EEB4 RID: 257716 RVA: 0x00F328EC File Offset: 0x00F30AEC
+		// Token: 0x06033B74 RID: 211828 RVA: 0x00E797CC File Offset: 0x00E779CC
 		private void FillGridParams(PropMediumItemGrid params_, RoverlikeGainEntry data)
 		{
 			switch (data.Type)
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EEB5 RID: 257717 RVA: 0x00F32A9E File Offset: 0x00F30C9E
+		// Token: 0x06033B75 RID: 211829 RVA: 0x00E7997E File Offset: 0x00E77B7E
 		private void OnToggleStateChanged(MediumItemGridExtendCallback parameters)
 		{
 			if (this.CollectData != null)
@@ -235,11 +235,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x04020D87 RID: 134535
+		// Token: 0x0401B6B4 RID: 112308
 		[Nullable(2)]
 		public RoverlikeGainEntry CollectData;
 
-		// Token: 0x04020D88 RID: 134536
+		// Token: 0x0401B6B5 RID: 112309
 		[Nullable(new byte[]
 		{
 			2,
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		public Action<RoverlikeGainEntry, int> OnClickCb;
 
-		// Token: 0x04020D89 RID: 134537
+		// Token: 0x0401B6B6 RID: 112310
 		[Nullable(new byte[]
 		{
 			2,
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		public Func<RoverlikeGainEntry, int, bool> IsGridSelected;
 
-		// Token: 0x04020D8A RID: 134538
+		// Token: 0x0401B6B7 RID: 112311
 		[Nullable(2)]
 		public Func<int, int> GetSlotId;
 	}

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028DF RID: 10463
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BB4 RID: 11188
 	public class IMechaAirPassageMove : ISplineMovePattern
 	{
-		// Token: 0x0600E86B RID: 59499 RVA: 0x00221C7F File Offset: 0x0021FE7F
+		// Token: 0x0600F69A RID: 63130 RVA: 0x0023EBFF File Offset: 0x0023CDFF
 		public static IMechaAirPassageMove Create(IMechaAirPassageMove? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700486F RID: 18543
-		// (get) Token: 0x0600E86C RID: 59500 RVA: 0x00221C9E File Offset: 0x0021FE9E
+		// Token: 0x17004BE0 RID: 19424
+		// (get) Token: 0x0600F69B RID: 63131 RVA: 0x0023EC1E File Offset: 0x0023CE1E
 		public override ESplineMovePattern Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004870 RID: 18544
-		// (get) Token: 0x0600E86D RID: 59501 RVA: 0x00221CAC File Offset: 0x0021FEAC
+		// Token: 0x17004BE1 RID: 19425
+		// (get) Token: 0x0600F69C RID: 63132 RVA: 0x0023EC2C File Offset: 0x0023CE2C
 		public override float? MaxOffsetDistance
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004871 RID: 18545
-		// (get) Token: 0x0600E86E RID: 59502 RVA: 0x00221CE4 File Offset: 0x0021FEE4
+		// Token: 0x17004BE2 RID: 19426
+		// (get) Token: 0x0600F69D RID: 63133 RVA: 0x0023EC64 File Offset: 0x0023CE64
 		public override bool? IsOneWay
 		{
 			get
@@ -60,8 +58,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004872 RID: 18546
-		// (get) Token: 0x0600E86F RID: 59503 RVA: 0x00221D1C File Offset: 0x0021FF1C
+		// Token: 0x17004BE3 RID: 19427
+		// (get) Token: 0x0600F69E RID: 63134 RVA: 0x0023EC9C File Offset: 0x0023CE9C
 		public override float? LayerVerticalLimit
 		{
 			get
@@ -74,8 +72,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004873 RID: 18547
-		// (get) Token: 0x0600E870 RID: 59504 RVA: 0x00221D54 File Offset: 0x0021FF54
+		// Token: 0x17004BE4 RID: 19428
+		// (get) Token: 0x0600F69F RID: 63135 RVA: 0x0023ECD4 File Offset: 0x0023CED4
 		public override bool? DynamicGravity
 		{
 			get
@@ -88,8 +86,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004874 RID: 18548
-		// (get) Token: 0x0600E871 RID: 59505 RVA: 0x00221D8C File Offset: 0x0021FF8C
+		// Token: 0x17004BE5 RID: 19429
+		// (get) Token: 0x0600F6A0 RID: 63136 RVA: 0x0023ED0C File Offset: 0x0023CF0C
 		public override float? GravitySwitchAngularVelocity
 		{
 			get
@@ -102,8 +100,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004875 RID: 18549
-		// (get) Token: 0x0600E872 RID: 59506 RVA: 0x00221DC4 File Offset: 0x0021FFC4
+		// Token: 0x17004BE6 RID: 19430
+		// (get) Token: 0x0600F6A1 RID: 63137 RVA: 0x0023ED44 File Offset: 0x0023CF44
 		public override int? AutoExitDistance
 		{
 			get
@@ -116,8 +114,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004876 RID: 18550
-		// (get) Token: 0x0600E873 RID: 59507 RVA: 0x00221DFB File Offset: 0x0021FFFB
+		// Token: 0x17004BE7 RID: 19431
+		// (get) Token: 0x0600F6A2 RID: 63138 RVA: 0x0023ED7B File Offset: 0x0023CF7B
 		public virtual float ForwardAngleLimit
 		{
 			get
@@ -126,8 +124,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004877 RID: 18551
-		// (get) Token: 0x0600E874 RID: 59508 RVA: 0x00221E08 File Offset: 0x00220008
+		// Token: 0x17004BE8 RID: 19432
+		// (get) Token: 0x0600F6A3 RID: 63139 RVA: 0x0023ED88 File Offset: 0x0023CF88
 		[Nullable(2)]
 		public virtual string ForwardAngleLimitCurve
 		{
@@ -138,8 +136,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004878 RID: 18552
-		// (get) Token: 0x0600E875 RID: 59509 RVA: 0x00221E15 File Offset: 0x00220015
+		// Token: 0x17004BE9 RID: 19433
+		// (get) Token: 0x0600F6A4 RID: 63140 RVA: 0x0023ED95 File Offset: 0x0023CF95
 		public virtual string InputCorrectionCurve
 		{
 			get
@@ -148,8 +146,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004879 RID: 18553
-		// (get) Token: 0x0600E876 RID: 59510 RVA: 0x00221E24 File Offset: 0x00220024
+		// Token: 0x17004BEA RID: 19434
+		// (get) Token: 0x0600F6A5 RID: 63141 RVA: 0x0023EDA4 File Offset: 0x0023CFA4
 		public virtual float? InputCorrectionBaseAngle
 		{
 			get
@@ -162,8 +160,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700487A RID: 18554
-		// (get) Token: 0x0600E877 RID: 59511 RVA: 0x00221E5C File Offset: 0x0022005C
+		// Token: 0x17004BEB RID: 19435
+		// (get) Token: 0x0600F6A6 RID: 63142 RVA: 0x0023EDDC File Offset: 0x0023CFDC
 		public virtual float? CorrectionPredictionDistance
 		{
 			get
@@ -176,7 +174,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008061 RID: 32865
+		// Token: 0x04008720 RID: 34592
 		private IMechaAirPassageMove Instance;
 	}
 }

@@ -1,26 +1,26 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000DFA RID: 3578
+// Token: 0x020002AD RID: 685
 [NullableContext(1)]
 [Nullable(0)]
 public class PayInfoWindowsGlobal : PayInfoWindowsBase
 {
-	// Token: 0x04002750 RID: 10064
+	// Token: 0x040027E1 RID: 10209
 	public string cpOrder = "";
 
-	// Token: 0x04002751 RID: 10065
+	// Token: 0x040027E2 RID: 10210
 	public string goodsId = "";
 
-	// Token: 0x04002752 RID: 10066
+	// Token: 0x040027E3 RID: 10211
 	public string productName = "";
 
-	// Token: 0x04002753 RID: 10067
+	// Token: 0x040027E4 RID: 10212
 	public string currencyType = "";
 
-	// Token: 0x04002754 RID: 10068
+	// Token: 0x040027E5 RID: 10213
 	public string customMsg = "";
 
-	// Token: 0x04002755 RID: 10069
+	// Token: 0x040027E6 RID: 10214
 	public string price = "";
 }

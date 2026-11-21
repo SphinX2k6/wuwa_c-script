@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A16 RID: 2582
+	// Token: 0x02000ADB RID: 2779
 	public static class ESpecialAnimalTypeExtensions
 	{
-		// Token: 0x06003914 RID: 14612 RVA: 0x000936E4 File Offset: 0x000918E4
+		// Token: 0x06003CEC RID: 15596 RVA: 0x0009BFD4 File Offset: 0x0009A1D4
 		public static string ToEnumString(this ESpecialAnimalType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003915 RID: 14613 RVA: 0x0009370C File Offset: 0x0009190C
+		// Token: 0x06003CED RID: 15597 RVA: 0x0009BFFC File Offset: 0x0009A1FC
 		public static ESpecialAnimalType FromString(string name)
 		{
 			ESpecialAnimalType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003916 RID: 14614 RVA: 0x00093735 File Offset: 0x00091935
+		// Token: 0x06003CEE RID: 15598 RVA: 0x0009C025 File Offset: 0x0009A225
 		public static bool TryFromString(string name, out ESpecialAnimalType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003917 RID: 14615 RVA: 0x0009375A File Offset: 0x0009195A
+		// Token: 0x06003CEF RID: 15599 RVA: 0x0009C04A File Offset: 0x0009A24A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003918 RID: 14616 RVA: 0x0009376A File Offset: 0x0009196A
+		// Token: 0x06003CF0 RID: 15600 RVA: 0x0009C05A File Offset: 0x0009A25A
 		public static ESpecialAnimalType[] GetValues()
 		{
 			return new ESpecialAnimalType[1];
 		}
 
-		// Token: 0x06003919 RID: 14617 RVA: 0x00093772 File Offset: 0x00091972
+		// Token: 0x06003CF1 RID: 15601 RVA: 0x0009C062 File Offset: 0x0009A262
 		public static string[] GetNames()
 		{
 			return new string[]

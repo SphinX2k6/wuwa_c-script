@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002DC7 RID: 11719
+// Token: 0x02002321 RID: 8993
 public enum EBulletCollisionSpawnPosition
 {
-	// Token: 0x0400B745 RID: 46917
+	// Token: 0x0400BAC0 RID: 47808
 	MidPoint,
-	// Token: 0x0400B746 RID: 46918
+	// Token: 0x0400BAC1 RID: 47809
 	SelfLocation,
-	// Token: 0x0400B747 RID: 46919
+	// Token: 0x0400BAC2 RID: 47810
 	CollisionPoint
 }

@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.GreatSword
 {
-	// Token: 0x0200481A RID: 18458
+	// Token: 0x0200374B RID: 14155
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GreatSwordMarkPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x06030544 RID: 197956 RVA: 0x00B37A7E File Offset: 0x00B35C7E
+		// Token: 0x06024D14 RID: 150804 RVA: 0x00A67B3E File Offset: 0x00A65D3E
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x06030545 RID: 197957 RVA: 0x00B37A85 File Offset: 0x00B35C85
+		// Token: 0x06024D15 RID: 150805 RVA: 0x00A67B45 File Offset: 0x00A65D45
 		protected override void OnStart()
 		{
 			this.TargetListPanel = new GreatSwordMarkTargetListPanel();
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GreatSword
 			base.OnStart();
 		}
 
-		// Token: 0x06030546 RID: 197958 RVA: 0x00B37AAC File Offset: 0x00B35CAC
+		// Token: 0x06024D16 RID: 150806 RVA: 0x00A67B6C File Offset: 0x00A65D6C
 		protected override UniTask OnBeforeShowWorldMapSecondaryUiAsync(params object[] param)
 		{
 			GreatSwordMarkPanel.<OnBeforeShowWorldMapSecondaryUiAsync>d__5 <OnBeforeShowWorldMapSecondaryUiAsync>d__;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GreatSword
 			return <OnBeforeShowWorldMapSecondaryUiAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030547 RID: 197959 RVA: 0x00B37AF8 File Offset: 0x00B35CF8
+		// Token: 0x06024D17 RID: 150807 RVA: 0x00A67BB8 File Offset: 0x00A65DB8
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GreatSword
 			layoutContext.SetConfirmBtnActive(true);
 		}
 
-		// Token: 0x06030548 RID: 197960 RVA: 0x00B37B84 File Offset: 0x00B35D84
+		// Token: 0x06024D18 RID: 150808 RVA: 0x00A67C44 File Offset: 0x00A65E44
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0 && param[0] is GreatSwordChallengeMarkItem)
@@ -107,13 +107,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GreatSword
 			}
 		}
 
-		// Token: 0x06030549 RID: 197961 RVA: 0x00B37C81 File Offset: 0x00B35E81
+		// Token: 0x06024D19 RID: 150809 RVA: 0x00A67D41 File Offset: 0x00A65F41
 		protected override void OnConfirmBtnClick(int index)
 		{
 			this.HandleTeleport();
 		}
 
-		// Token: 0x0603054A RID: 197962 RVA: 0x00B37C8C File Offset: 0x00B35E8C
+		// Token: 0x06024D1A RID: 150810 RVA: 0x00A67D4C File Offset: 0x00A65F4C
 		private void RefreshLayout()
 		{
 			ITrialChallenge challenge = GreatSwordChallengeModel.Instance.GetChallenge();
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GreatSword
 			}
 		}
 
-		// Token: 0x0603054B RID: 197963 RVA: 0x00B37D26 File Offset: 0x00B35F26
+		// Token: 0x06024D1B RID: 150811 RVA: 0x00A67DE6 File Offset: 0x00A65FE6
 		protected override void OnBeforeDestroy()
 		{
 			GreatSwordMarkTargetListPanel targetListPanel = this.TargetListPanel;
@@ -157,19 +157,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GreatSword
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0401A006 RID: 106502
+		// Token: 0x040146BA RID: 83642
 		[Nullable(2)]
 		private GreatSwordChallengeMarkItem SelectedMarkItem;
 
-		// Token: 0x0401A007 RID: 106503
+		// Token: 0x040146BB RID: 83643
 		[Nullable(2)]
 		private GreatSwordMarkTargetListPanel TargetListPanel;
 
-		// Token: 0x0200AAF1 RID: 43761
+		// Token: 0x020094A0 RID: 38048
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F83 RID: 212867
+			// Token: 0x0402E703 RID: 190211
 			public const int GreatSwordChallengePanel = 0;
 		}
 	}

@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C0B RID: 19467
+	// Token: 0x02003BBC RID: 15292
 	public class SkillButtonTypeFormationData
 	{
-		// Token: 0x06032619 RID: 206361 RVA: 0x00BBA874 File Offset: 0x00BB8A74
+		// Token: 0x060273C9 RID: 160713 RVA: 0x00AFF3F8 File Offset: 0x00AFD5F8
 		public void Clear()
 		{
 			this.SkillIconPath = null;
@@ -19,29 +19,29 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.ExtraEffectDuration = 0f;
 		}
 
-		// Token: 0x0401ACF1 RID: 109809
+		// Token: 0x0401564D RID: 87629
 		[Nullable(2)]
 		public string SkillIconPath;
 
-		// Token: 0x0401ACF2 RID: 109810
+		// Token: 0x0401564E RID: 87630
 		public int EnableSkillId;
 
-		// Token: 0x0401ACF3 RID: 109811
+		// Token: 0x0401564F RID: 87631
 		public bool IsLongPressControlCamera;
 
-		// Token: 0x0401ACF4 RID: 109812
+		// Token: 0x04015650 RID: 87632
 		public int LongPressTime;
 
-		// Token: 0x0401ACF5 RID: 109813
+		// Token: 0x04015651 RID: 87633
 		public bool IgnoreHiddenTag;
 
-		// Token: 0x0401ACF6 RID: 109814
+		// Token: 0x04015652 RID: 87634
 		public bool IgnoreDefaultHidden;
 
-		// Token: 0x0401ACF7 RID: 109815
+		// Token: 0x04015653 RID: 87635
 		public ESkillButtonExtraEffect ExtraEffect;
 
-		// Token: 0x0401ACF8 RID: 109816
+		// Token: 0x04015654 RID: 87636
 		public float ExtraEffectDuration;
 	}
 }

@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006612 RID: 26130
+	// Token: 0x02005590 RID: 21904
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 	})]
 	public class FishingHandBookDesItem : GridProxyAbstract<IFishingHandBookDesData>
 	{
-		// Token: 0x060417BC RID: 268220 RVA: 0x00FDC610 File Offset: 0x00FDA810
+		// Token: 0x06036481 RID: 222337 RVA: 0x00F2369C File Offset: 0x00F2189C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060417BD RID: 268221 RVA: 0x00FDC6BC File Offset: 0x00FDA8BC
+		// Token: 0x06036482 RID: 222338 RVA: 0x00F23748 File Offset: 0x00F21948
 		[NullableContext(1)]
 		public override void Refresh(IFishingHandBookDesData data, bool isSelected, int gridIndex)
 		{
@@ -43,19 +43,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetItem(3).SetUIActive(data.IsSliver.GetValueOrDefault());
 		}
 
-		// Token: 0x0200C821 RID: 51233
+		// Token: 0x0200B204 RID: 45572
 		private class EComponentDefine
 		{
-			// Token: 0x0403C712 RID: 247570
+			// Token: 0x0403705A RID: 225370
 			public const int DesText = 0;
 
-			// Token: 0x0403C713 RID: 247571
+			// Token: 0x0403705B RID: 225371
 			public const int DataText = 1;
 
-			// Token: 0x0403C714 RID: 247572
+			// Token: 0x0403705C RID: 225372
 			public const int GoldenItem = 2;
 
-			// Token: 0x0403C715 RID: 247573
+			// Token: 0x0403705D RID: 225373
 			public const int SilverItem = 3;
 		}
 	}

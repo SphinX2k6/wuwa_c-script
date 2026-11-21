@@ -8,7 +8,7 @@ namespace CSharpScript.Launcher
 	[Nullable(0)]
 	public class InitialResDownloadStateLog : HotPatchLogData
 	{
-		// Token: 0x0600026B RID: 619 RVA: 0x0000C570 File Offset: 0x0000A770
+		// Token: 0x0600026B RID: 619 RVA: 0x0000C5E0 File Offset: 0x0000A7E0
 		public InitialResDownloadStateLog(int downloadType, int downloadTime, int downloadStatus, string uniqueId, string traceId, int chooseByUser, int remainingSpace, int requiredSpace, [Nullable(2)] string playerId = null) : base("1700", uniqueId, playerId)
 		{
 			this.i_download_type = downloadType;
@@ -20,34 +20,34 @@ namespace CSharpScript.Launcher
 			this.i_required_space = requiredSpace;
 		}
 
-		// Token: 0x0400013F RID: 319
+		// Token: 0x04000146 RID: 326
 		public int i_download_type;
 
-		// Token: 0x04000140 RID: 320
+		// Token: 0x04000147 RID: 327
 		public int i_download_time;
 
-		// Token: 0x04000141 RID: 321
+		// Token: 0x04000148 RID: 328
 		public int i_download_status;
 
-		// Token: 0x04000142 RID: 322
+		// Token: 0x04000149 RID: 329
 		public string s_trace_id = "";
 
-		// Token: 0x04000143 RID: 323
+		// Token: 0x0400014A RID: 330
 		public int i_type;
 
-		// Token: 0x04000144 RID: 324
+		// Token: 0x0400014B RID: 331
 		public int i_remaining_space;
 
-		// Token: 0x04000145 RID: 325
+		// Token: 0x0400014C RID: 332
 		public int i_required_space;
 
-		// Token: 0x04000146 RID: 326
+		// Token: 0x0400014D RID: 333
 		public int i_download_pkg;
 
-		// Token: 0x04000147 RID: 327
+		// Token: 0x0400014E RID: 334
 		public int i_recommand_pkg;
 
-		// Token: 0x04000148 RID: 328
+		// Token: 0x0400014F RID: 335
 		public int i_storage_bef;
 	}
 }

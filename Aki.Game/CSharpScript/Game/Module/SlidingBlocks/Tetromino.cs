@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Quest;
 using AkiClient.Game.Aki.Character.BaseCharacter;
@@ -14,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B87 RID: 19335
+	// Token: 0x02003B31 RID: 15153
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Tetromino
 	{
-		// Token: 0x17007C46 RID: 31814
-		// (get) Token: 0x060321B7 RID: 205239 RVA: 0x00BA2EA8 File Offset: 0x00BA10A8
+		// Token: 0x17004FF0 RID: 20464
+		// (get) Token: 0x06026F47 RID: 159559 RVA: 0x00AE700C File Offset: 0x00AE520C
 		public Dictionary<string, Mino> MinoDataMap { get; } = new Dictionary<string, Mino>();
 
-		// Token: 0x17007C47 RID: 31815
-		// (get) Token: 0x060321B8 RID: 205240 RVA: 0x00BA2EB0 File Offset: 0x00BA10B0
+		// Token: 0x17004FF1 RID: 20465
+		// (get) Token: 0x06026F48 RID: 159560 RVA: 0x00AE7014 File Offset: 0x00AE5214
 		public Transform OriginTransform
 		{
 			get
@@ -33,23 +32,23 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x17007C48 RID: 31816
-		// (get) Token: 0x060321B9 RID: 205241 RVA: 0x00BA2EC1 File Offset: 0x00BA10C1
-		// (set) Token: 0x060321BA RID: 205242 RVA: 0x00BA2EC9 File Offset: 0x00BA10C9
+		// Token: 0x17004FF2 RID: 20466
+		// (get) Token: 0x06026F49 RID: 159561 RVA: 0x00AE7025 File Offset: 0x00AE5225
+		// (set) Token: 0x06026F4A RID: 159562 RVA: 0x00AE702D File Offset: 0x00AE522D
 		public float RemainAimTime { get; private set; }
 
-		// Token: 0x17007C49 RID: 31817
-		// (get) Token: 0x060321BB RID: 205243 RVA: 0x00BA2ED2 File Offset: 0x00BA10D2
-		// (set) Token: 0x060321BC RID: 205244 RVA: 0x00BA2EDA File Offset: 0x00BA10DA
+		// Token: 0x17004FF3 RID: 20467
+		// (get) Token: 0x06026F4B RID: 159563 RVA: 0x00AE7036 File Offset: 0x00AE5236
+		// (set) Token: 0x06026F4C RID: 159564 RVA: 0x00AE703E File Offset: 0x00AE523E
 		public SlidingBlocksDefine.ETetrominoRotateState RotateState { get; private set; }
 
-		// Token: 0x17007C4A RID: 31818
-		// (get) Token: 0x060321BD RID: 205245 RVA: 0x00BA2EE3 File Offset: 0x00BA10E3
-		// (set) Token: 0x060321BE RID: 205246 RVA: 0x00BA2EEB File Offset: 0x00BA10EB
+		// Token: 0x17004FF4 RID: 20468
+		// (get) Token: 0x06026F4D RID: 159565 RVA: 0x00AE7047 File Offset: 0x00AE5247
+		// (set) Token: 0x06026F4E RID: 159566 RVA: 0x00AE704F File Offset: 0x00AE524F
 		[Nullable(2)]
 		public Mino GeometricCenterMino { [NullableContext(2)] get; [NullableContext(2)] private set; }
 
-		// Token: 0x060321BF RID: 205247 RVA: 0x00BA2EF4 File Offset: 0x00BA10F4
+		// Token: 0x06026F4F RID: 159567 RVA: 0x00AE7058 File Offset: 0x00AE5258
 		public Tetromino(SlidingBlocksDefine.ETetrominoType tetrominoType, SlidingBlocksDefine.ETetrominoBorad boardType, SlidingBlocksDefine.ETetrominoRotateState initRotateState, float initFallSpeed, float fallAcceleration, ETetrominoState initState, float prepareTime)
 		{
 			this.TetrominoType = tetrominoType;
@@ -62,7 +61,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			this.CurFallSpeed = (double)this.InitFallSpeed;
 		}
 
-		// Token: 0x060321C0 RID: 205248 RVA: 0x00BA2FB0 File Offset: 0x00BA11B0
+		// Token: 0x06026F50 RID: 159568 RVA: 0x00AE7114 File Offset: 0x00AE5314
 		public void Clear()
 		{
 			foreach (Mino mino in this.MinoDataMap.Values)
@@ -73,7 +72,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			this.GeometricCenterMino = null;
 		}
 
-		// Token: 0x060321C1 RID: 205249 RVA: 0x00BA3020 File Offset: 0x00BA1220
+		// Token: 0x06026F51 RID: 159569 RVA: 0x00AE7184 File Offset: 0x00AE5384
 		public void Init(ITetrisBoard boardConfig, double geometricMinoX, double? geometricMinoY = null)
 		{
 			this.InitAnchorLocalCoordinate();
@@ -93,7 +92,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			this.State = this.InitState;
 		}
 
-		// Token: 0x060321C2 RID: 205250 RVA: 0x00BA30FC File Offset: 0x00BA12FC
+		// Token: 0x06026F52 RID: 159570 RVA: 0x00AE7260 File Offset: 0x00AE5460
 		private void InitAnchorLocalCoordinate()
 		{
 			switch (this.BoardType)
@@ -115,7 +114,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x060321C3 RID: 205251 RVA: 0x00BA31A0 File Offset: 0x00BA13A0
+		// Token: 0x06026F53 RID: 159571 RVA: 0x00AE7304 File Offset: 0x00AE5504
 		private void InitGeometricConfigCoord()
 		{
 			switch (this.BoardType)
@@ -141,7 +140,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			this.GeometricConfigCoord.Y = SlidingBlocksUtil.ConvertConfigCoordToSmooth(this.GeometricConfigCoord.Y);
 		}
 
-		// Token: 0x060321C4 RID: 205252 RVA: 0x00BA32A8 File Offset: 0x00BA14A8
+		// Token: 0x06026F54 RID: 159572 RVA: 0x00AE740C File Offset: 0x00AE560C
 		private void InitAnchorCoordinate(double geometricMinoX, double? geometricMinoY = null)
 		{
 			switch (this.BoardType)
@@ -163,7 +162,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x060321C5 RID: 205253 RVA: 0x00BA3374 File Offset: 0x00BA1574
+		// Token: 0x06026F55 RID: 159573 RVA: 0x00AE74D8 File Offset: 0x00AE56D8
 		private UniTask CreateAndPlaySpawnEffect()
 		{
 			Tetromino.<CreateAndPlaySpawnEffect>d__41 <CreateAndPlaySpawnEffect>d__;
@@ -174,7 +173,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <CreateAndPlaySpawnEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060321C6 RID: 205254 RVA: 0x00BA33B8 File Offset: 0x00BA15B8
+		// Token: 0x06026F56 RID: 159574 RVA: 0x00AE751C File Offset: 0x00AE571C
 		private void CreateTrailEffect()
 		{
 			string moveTrailEffectPath = SlidingBlocksGlobal.GetMoveTrailEffectPath(SlidingBlocksModel.Instance.GameData.PlayMode);
@@ -185,7 +184,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			EffectSystem.Instance.RegisterCustomCheckOwnerFunc(this.MoveTrailEffectHandle, (int _) => this.State >= ETetrominoState.PlayLockEffect);
 		}
 
-		// Token: 0x060321C7 RID: 205255 RVA: 0x00BA342C File Offset: 0x00BA162C
+		// Token: 0x06026F57 RID: 159575 RVA: 0x00AE7590 File Offset: 0x00AE5790
 		private unsafe void AddMino(string styleName, double x, double y)
 		{
 			double num = x - this.AnchorLocalCoord.X;
@@ -222,13 +221,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x060321C8 RID: 205256 RVA: 0x00BA35A4 File Offset: 0x00BA17A4
+		// Token: 0x06026F58 RID: 159576 RVA: 0x00AE7708 File Offset: 0x00AE5908
 		public void OnTick(float delta, SlidingBlocksGameData gameData)
 		{
 			this.UpdateByState(delta, gameData);
 		}
 
-		// Token: 0x060321C9 RID: 205257 RVA: 0x00BA35B0 File Offset: 0x00BA17B0
+		// Token: 0x06026F59 RID: 159577 RVA: 0x00AE7714 File Offset: 0x00AE5914
 		private void UpdateByState(float delta, SlidingBlocksGameData gameData)
 		{
 			switch (this.State)
@@ -256,7 +255,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x060321CA RID: 205258 RVA: 0x00BA3657 File Offset: 0x00BA1857
+		// Token: 0x06026F5A RID: 159578 RVA: 0x00AE77BB File Offset: 0x00AE59BB
 		private void UpdateAiming(float delta, SlidingBlocksGameData gameData)
 		{
 			this.UpdateCoordByPlayer(gameData);
@@ -273,7 +272,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			this.SetState(ETetrominoState.InitFallData);
 		}
 
-		// Token: 0x060321CB RID: 205259 RVA: 0x00BA3698 File Offset: 0x00BA1898
+		// Token: 0x06026F5B RID: 159579 RVA: 0x00AE77FC File Offset: 0x00AE59FC
 		private void UpdateCoordByPlayer(SlidingBlocksGameData gameData)
 		{
 			double num = SlidingBlocksUtil.StandardSmoothCoordToCellCenter(gameData.PlayerCoord.X);
@@ -292,13 +291,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x060321CC RID: 205260 RVA: 0x00BA3763 File Offset: 0x00BA1963
+		// Token: 0x06026F5C RID: 159580 RVA: 0x00AE78C7 File Offset: 0x00AE5AC7
 		public void SkipAimingStage()
 		{
 			this.SetState(ETetrominoState.InitFallData);
 		}
 
-		// Token: 0x060321CD RID: 205261 RVA: 0x00BA376C File Offset: 0x00BA196C
+		// Token: 0x06026F5D RID: 159581 RVA: 0x00AE78D0 File Offset: 0x00AE5AD0
 		private bool InitFallData(double nextStep)
 		{
 			if (this.CheckCanMove(this.AnchorCoord.X, nextStep) != SlidingBlocksDefine.ECheckCanMoveResult.None)
@@ -311,7 +310,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return true;
 		}
 
-		// Token: 0x060321CE RID: 205262 RVA: 0x00BA379C File Offset: 0x00BA199C
+		// Token: 0x06026F5E RID: 159582 RVA: 0x00AE7900 File Offset: 0x00AE5B00
 		private void UpdateFalling(float delta, SlidingBlocksGameData gameData)
 		{
 			double num = MathCommon.Clamp(this.UpdateFallSpeed(delta) * (double)delta * TimeUtil.Instance.Millisecond, 0.0, 1.0);
@@ -337,7 +336,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x060321CF RID: 205263 RVA: 0x00BA3878 File Offset: 0x00BA1A78
+		// Token: 0x06026F5F RID: 159583 RVA: 0x00AE79DC File Offset: 0x00AE5BDC
 		private void UpdateTrailEffectPosition()
 		{
 			OneOf<KuroEffectActorHandle, AActor> effectActor = EffectSystem.Instance.GetEffectActor(this.MoveTrailEffectHandle);
@@ -351,7 +350,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			self.D_K2_SetActorLocation(fvectorDouble, false, ref WorldGlobal.SweepHitResult, false);
 		}
 
-		// Token: 0x060321D0 RID: 205264 RVA: 0x00BA38E4 File Offset: 0x00BA1AE4
+		// Token: 0x06026F60 RID: 159584 RVA: 0x00AE7A48 File Offset: 0x00AE5C48
 		private double UpdateFallSpeed(float delta)
 		{
 			if (this.FallAcceleration == 0f)
@@ -362,7 +361,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return this.CurFallSpeed;
 		}
 
-		// Token: 0x060321D1 RID: 205265 RVA: 0x00BA3924 File Offset: 0x00BA1B24
+		// Token: 0x06026F61 RID: 159585 RVA: 0x00AE7A88 File Offset: 0x00AE5C88
 		private UniTask OnFallingFinished(SlidingBlocksGameData gameData)
 		{
 			Tetromino.<OnFallingFinished>d__53 <OnFallingFinished>d__;
@@ -374,7 +373,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <OnFallingFinished>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060321D2 RID: 205266 RVA: 0x00BA3970 File Offset: 0x00BA1B70
+		// Token: 0x06026F62 RID: 159586 RVA: 0x00AE7AD4 File Offset: 0x00AE5CD4
 		private static UniTask CheckAndSpawnLockEffect(SlidingBlocksGameData gameData, double x, double y)
 		{
 			Tetromino.<CheckAndSpawnLockEffect>d__54 <CheckAndSpawnLockEffect>d__;
@@ -387,7 +386,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <CheckAndSpawnLockEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060321D3 RID: 205267 RVA: 0x00BA39C3 File Offset: 0x00BA1BC3
+		// Token: 0x06026F63 RID: 159587 RVA: 0x00AE7B27 File Offset: 0x00AE5D27
 		private bool MoveByStep(double x, double y)
 		{
 			if (!this.CheckCanMoveByMoveStep(x, y))
@@ -400,13 +399,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return true;
 		}
 
-		// Token: 0x060321D4 RID: 205268 RVA: 0x00BA39FE File Offset: 0x00BA1BFE
+		// Token: 0x06026F64 RID: 159588 RVA: 0x00AE7B62 File Offset: 0x00AE5D62
 		private bool CheckCanMoveByMoveStep(double x, double y)
 		{
 			return (x != 0.0 || y != 0.0) && this.CheckCanMove(this.AnchorCoord.X + x, this.AnchorCoord.Y + y) == SlidingBlocksDefine.ECheckCanMoveResult.None;
 		}
 
-		// Token: 0x060321D5 RID: 205269 RVA: 0x00BA3A40 File Offset: 0x00BA1C40
+		// Token: 0x06026F65 RID: 159589 RVA: 0x00AE7BA4 File Offset: 0x00AE5DA4
 		private SlidingBlocksDefine.ECheckCanMoveResult CheckCanMove(double anchorCoordX, double anchorCoordY)
 		{
 			SlidingBlocksModel instance = SlidingBlocksModel.Instance;
@@ -425,7 +424,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return SlidingBlocksDefine.ECheckCanMoveResult.None;
 		}
 
-		// Token: 0x060321D6 RID: 205270 RVA: 0x00BA3B10 File Offset: 0x00BA1D10
+		// Token: 0x06026F66 RID: 159590 RVA: 0x00AE7C74 File Offset: 0x00AE5E74
 		private void UpdateTetrominoWorldLocation()
 		{
 			foreach (Mino mino in this.MinoDataMap.Values)
@@ -435,7 +434,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x060321D7 RID: 205271 RVA: 0x00BA3BB4 File Offset: 0x00BA1DB4
+		// Token: 0x06026F67 RID: 159591 RVA: 0x00AE7D18 File Offset: 0x00AE5F18
 		private bool CheckSqueezePlayer(Vector2D playerCoord, double nextStepAnchorCoordX, double nextStepAnchorCoordY)
 		{
 			Mino nextStepOverlapPlayerMino = this.GetNextStepOverlapPlayerMino(playerCoord, nextStepAnchorCoordX, nextStepAnchorCoordY);
@@ -473,12 +472,11 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return false;
 		}
 
-		// Token: 0x060321D8 RID: 205272 RVA: 0x00BA3C40 File Offset: 0x00BA1E40
+		// Token: 0x06026F68 RID: 159592 RVA: 0x00AE7DA4 File Offset: 0x00AE5FA4
 		[return: Nullable(2)]
 		private Mino GetNextStepOverlapPlayerMino(Vector2D playerCoord, double nextStepAnchorCoordX, double nextStepAnchorCoordY)
 		{
-			foreach (Mino mino in from kv in this.MinoDataMap
-			select kv.Value)
+			foreach (Mino mino in this.MinoDataMap.Values)
 			{
 				this.GetMinoCoordInGrid(mino.Coord.X, mino.Coord.Y, this.TempMinoCoord, new double?(nextStepAnchorCoordX), new double?(nextStepAnchorCoordY));
 				this.TempMinoCoord.Set(this.TempMinoCoord.X, this.TempMinoCoord.Y);
@@ -490,7 +488,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return null;
 		}
 
-		// Token: 0x060321D9 RID: 205273 RVA: 0x00BA3D18 File Offset: 0x00BA1F18
+		// Token: 0x06026F69 RID: 159593 RVA: 0x00AE7E64 File Offset: 0x00AE6064
 		public bool Rotate(bool bKickWall = true)
 		{
 			bool flag = this.CheckCanRotate();
@@ -525,13 +523,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return flag;
 		}
 
-		// Token: 0x060321DA RID: 205274 RVA: 0x00BA3EB0 File Offset: 0x00BA20B0
+		// Token: 0x06026F6A RID: 159594 RVA: 0x00AE7FFC File Offset: 0x00AE61FC
 		private bool CheckCanRotate()
 		{
 			return this.TetrominoType != SlidingBlocksDefine.ETetrominoType.O块;
 		}
 
-		// Token: 0x060321DB RID: 205275 RVA: 0x00BA3EC0 File Offset: 0x00BA20C0
+		// Token: 0x06026F6B RID: 159595 RVA: 0x00AE800C File Offset: 0x00AE620C
 		public void GetMinoAfterRotateOffset(Mino minoData, Vector2D @out)
 		{
 			if (this.TetrominoType == SlidingBlocksDefine.ETetrominoType.I块)
@@ -547,7 +545,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			Tetromino.RotateWithLocalCoord(minoData.Coord.X, minoData.Coord.Y, @out, true);
 		}
 
-		// Token: 0x060321DC RID: 205276 RVA: 0x00BA3F68 File Offset: 0x00BA2168
+		// Token: 0x06026F6C RID: 159596 RVA: 0x00AE80B4 File Offset: 0x00AE62B4
 		private void GetOffsetBeforeRotateForI(Vector2D outVec)
 		{
 			switch (this.RotateState)
@@ -569,7 +567,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x060321DD RID: 205277 RVA: 0x00BA3FF6 File Offset: 0x00BA21F6
+		// Token: 0x06026F6D RID: 159597 RVA: 0x00AE8142 File Offset: 0x00AE6342
 		private static void RotateWithLocalCoord(double localCoordX, double localCoordY, Vector2D outVec, bool bClockwise = true)
 		{
 			if (bClockwise)
@@ -580,7 +578,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			outVec.Set(localCoordY, -localCoordX);
 		}
 
-		// Token: 0x060321DE RID: 205278 RVA: 0x00BA4010 File Offset: 0x00BA2210
+		// Token: 0x06026F6E RID: 159598 RVA: 0x00AE815C File Offset: 0x00AE635C
 		private void CalculateKickWallMoveOffset(Vector2D @out, double? anchorCoordX = null, double? anchorCoordY = null)
 		{
 			Bp_Tetris_C setting = SlidingBlocksGlobal.Setting;
@@ -639,7 +637,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x060321DF RID: 205279 RVA: 0x00BA4208 File Offset: 0x00BA2408
+		// Token: 0x06026F6F RID: 159599 RVA: 0x00AE8354 File Offset: 0x00AE6554
 		private double AttachBottom(double? anchorCoordX, double? anchorCoordY)
 		{
 			Bp_Tetris_C setting = SlidingBlocksGlobal.Setting;
@@ -664,14 +662,14 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return num2 - num;
 		}
 
-		// Token: 0x060321E0 RID: 205280 RVA: 0x00BA42E0 File Offset: 0x00BA24E0
+		// Token: 0x06026F70 RID: 159600 RVA: 0x00AE842C File Offset: 0x00AE662C
 		private bool KickWall(double? anchorCoordX = null, double? anchorCoordY = null)
 		{
 			this.CalculateKickWallMoveOffset(this.CacheVector2D, anchorCoordX, anchorCoordY);
 			return this.MoveByStep(this.CacheVector2D.X, this.CacheVector2D.Y);
 		}
 
-		// Token: 0x060321E1 RID: 205281 RVA: 0x00BA430C File Offset: 0x00BA250C
+		// Token: 0x06026F71 RID: 159601 RVA: 0x00AE8458 File Offset: 0x00AE6658
 		public void GetMinoCoordInGrid(double minoLocalCoordX, double minoLocalCoordY, Vector2D outVec, double? anchorCoordX = null, double? anchorCoordY = null)
 		{
 			double num = anchorCoordX ?? this.AnchorCoord.X;
@@ -679,7 +677,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			outVec.Set(num + minoLocalCoordX, num2 + minoLocalCoordY);
 		}
 
-		// Token: 0x060321E2 RID: 205282 RVA: 0x00BA4367 File Offset: 0x00BA2567
+		// Token: 0x06026F72 RID: 159602 RVA: 0x00AE84B3 File Offset: 0x00AE66B3
 		public void UpdateMinoWorldLocation(Mino minoData, double coordX, double coordY)
 		{
 			SlidingBlocksUtil.GetWorldLocationByCoord(coordX, coordY, this.OriginTransform, this.CacheVector);
@@ -691,70 +689,70 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			cubeActor.D_K2_SetActorLocation(this.CacheVector.ToUeVector(false), true, ref WorldGlobal.SweepHitResult, false);
 		}
 
-		// Token: 0x060321E3 RID: 205283 RVA: 0x00BA43A1 File Offset: 0x00BA25A1
+		// Token: 0x06026F73 RID: 159603 RVA: 0x00AE84ED File Offset: 0x00AE66ED
 		public ETetrominoState GetState()
 		{
 			return this.State;
 		}
 
-		// Token: 0x060321E4 RID: 205284 RVA: 0x00BA43A9 File Offset: 0x00BA25A9
+		// Token: 0x06026F74 RID: 159604 RVA: 0x00AE84F5 File Offset: 0x00AE66F5
 		public void SetState(ETetrominoState value)
 		{
 			this.State = value;
 		}
 
-		// Token: 0x0401AB2D RID: 109357
+		// Token: 0x04015481 RID: 87169
 		private ETetrominoState State;
 
-		// Token: 0x0401AB2E RID: 109358
+		// Token: 0x04015482 RID: 87170
 		private SlidingBlocksDefine.ETetrominoBorad BoardType;
 
-		// Token: 0x0401AB30 RID: 109360
+		// Token: 0x04015484 RID: 87172
 		public readonly Vector2D AnchorCoord = Vector2D.Create();
 
-		// Token: 0x0401AB31 RID: 109361
+		// Token: 0x04015485 RID: 87173
 		public readonly Vector2D AnchorLocalCoord = Vector2D.Create();
 
-		// Token: 0x0401AB32 RID: 109362
+		// Token: 0x04015486 RID: 87174
 		public readonly Vector2D GeometricConfigCoord = Vector2D.Create();
 
-		// Token: 0x0401AB33 RID: 109363
+		// Token: 0x04015487 RID: 87175
 		private double AnchorFallingTargetCoordY;
 
-		// Token: 0x0401AB34 RID: 109364
+		// Token: 0x04015488 RID: 87176
 		private double CurFallSpeed;
 
-		// Token: 0x0401AB35 RID: 109365
+		// Token: 0x04015489 RID: 87177
 		private int MoveTrailEffectHandle;
 
-		// Token: 0x0401AB36 RID: 109366
+		// Token: 0x0401548A RID: 87178
 		private bool ExecutedFallFinished;
 
-		// Token: 0x0401AB37 RID: 109367
+		// Token: 0x0401548B RID: 87179
 		private readonly Vector2D TempMinoCoord = Vector2D.Create();
 
-		// Token: 0x0401AB38 RID: 109368
+		// Token: 0x0401548C RID: 87180
 		private readonly Dictionary<string, Mino> TempMinoDataMap = new Dictionary<string, Mino>();
 
-		// Token: 0x0401AB39 RID: 109369
+		// Token: 0x0401548D RID: 87181
 		private readonly Vector CacheVector = Vector.Create();
 
-		// Token: 0x0401AB3A RID: 109370
+		// Token: 0x0401548E RID: 87182
 		private readonly Vector2D CacheVector2D = Vector2D.Create();
 
-		// Token: 0x0401AB3E RID: 109374
+		// Token: 0x04015492 RID: 87186
 		public readonly SlidingBlocksDefine.ETetrominoType TetrominoType;
 
-		// Token: 0x0401AB3F RID: 109375
+		// Token: 0x04015493 RID: 87187
 		private readonly SlidingBlocksDefine.ETetrominoRotateState InitRotateState;
 
-		// Token: 0x0401AB40 RID: 109376
+		// Token: 0x04015494 RID: 87188
 		private readonly float InitFallSpeed;
 
-		// Token: 0x0401AB41 RID: 109377
+		// Token: 0x04015495 RID: 87189
 		private readonly float FallAcceleration;
 
-		// Token: 0x0401AB42 RID: 109378
+		// Token: 0x04015496 RID: 87190
 		private readonly ETetrominoState InitState;
 	}
 }

@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029FC RID: 10748
+// Token: 0x02001F77 RID: 8055
 [NullableContext(1)]
 [Nullable(0)]
 public class MoonTogetherInviteView : UiViewBase
 {
-	// Token: 0x060164BC RID: 91324 RVA: 0x005A45E2 File Offset: 0x005A27E2
+	// Token: 0x06013EC3 RID: 81603 RVA: 0x005CF5BA File Offset: 0x005CD7BA
 	public MoonTogetherInviteView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060164BD RID: 91325 RVA: 0x005A45EC File Offset: 0x005A27EC
+	// Token: 0x06013EC4 RID: 81604 RVA: 0x005CF5C4 File Offset: 0x005CD7C4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,22 +43,22 @@ public class MoonTogetherInviteView : UiViewBase
 		};
 	}
 
-	// Token: 0x060164BE RID: 91326 RVA: 0x005A4705 File Offset: 0x005A2905
+	// Token: 0x06013EC5 RID: 81605 RVA: 0x005CF6DD File Offset: 0x005CD8DD
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnUiBlendInTimeCameraFinished, new Action<UiCameraHandleData>(this.OnCameraFinish));
 	}
 
-	// Token: 0x060164BF RID: 91327 RVA: 0x005A4723 File Offset: 0x005A2923
+	// Token: 0x06013EC6 RID: 81606 RVA: 0x005CF6FB File Offset: 0x005CD8FB
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnUiBlendInTimeCameraFinished, new Action<UiCameraHandleData>(this.OnCameraFinish));
 	}
 
-	// Token: 0x060164C0 RID: 91328 RVA: 0x005A4741 File Offset: 0x005A2941
+	// Token: 0x06013EC7 RID: 81607 RVA: 0x005CF719 File Offset: 0x005CD919
 	private void OnCameraFinish(UiCameraHandleData handleData)
 	{
-		if (handleData.ViewName == EUiViewName.MoonTogetherInviteView)
+		if (handleData.GetViewName() == EUiViewName.MoonTogetherInviteView)
 		{
 			TimerSystem.Instance.Next(delegate(float _)
 			{
@@ -67,7 +67,7 @@ public class MoonTogetherInviteView : UiViewBase
 		}
 	}
 
-	// Token: 0x060164C1 RID: 91329 RVA: 0x005A4774 File Offset: 0x005A2974
+	// Token: 0x06013EC8 RID: 81608 RVA: 0x005CF74C File Offset: 0x005CD94C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MoonTogetherInviteView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -78,7 +78,7 @@ public class MoonTogetherInviteView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060164C2 RID: 91330 RVA: 0x005A47B8 File Offset: 0x005A29B8
+	// Token: 0x06013EC9 RID: 81609 RVA: 0x005CF790 File Offset: 0x005CD990
 	private void RefreshRoleItemLocation()
 	{
 		int num;
@@ -117,7 +117,7 @@ public class MoonTogetherInviteView : UiViewBase
 		}
 	}
 
-	// Token: 0x060164C3 RID: 91331 RVA: 0x005A4874 File Offset: 0x005A2A74
+	// Token: 0x06013ECA RID: 81610 RVA: 0x005CF84C File Offset: 0x005CDA4C
 	private void InitAreaList()
 	{
 		List<MotorRoleCategory> list = new List<MotorRoleCategory>(MoonTogetherConfig.Instance.GetRoleAreaList() ?? Array.Empty<MotorRoleCategory>());
@@ -154,7 +154,7 @@ public class MoonTogetherInviteView : UiViewBase
 		this.AreaSwitchGroupItem.RefreshAreaList(list2, selectAreaId);
 	}
 
-	// Token: 0x060164C4 RID: 91332 RVA: 0x005A4974 File Offset: 0x005A2B74
+	// Token: 0x06013ECB RID: 81611 RVA: 0x005CF94C File Offset: 0x005CDB4C
 	private MotorcycleTogetherRoleItem CreateLoopItem()
 	{
 		return new MotorcycleTogetherRoleItem
@@ -164,7 +164,7 @@ public class MoonTogetherInviteView : UiViewBase
 		};
 	}
 
-	// Token: 0x060164C5 RID: 91333 RVA: 0x005A49A0 File Offset: 0x005A2BA0
+	// Token: 0x06013ECC RID: 81612 RVA: 0x005CF978 File Offset: 0x005CDB78
 	private void RoleItemToggleCallBack(bool state, int roleId, int index)
 	{
 		this.RoleScrollView.DeselectCurrentGridProxy(false);
@@ -183,19 +183,19 @@ public class MoonTogetherInviteView : UiViewBase
 		this.RefreshViewState();
 	}
 
-	// Token: 0x060164C6 RID: 91334 RVA: 0x005A4A00 File Offset: 0x005A2C00
+	// Token: 0x06013ECD RID: 81613 RVA: 0x005CF9D8 File Offset: 0x005CDBD8
 	private bool IsRoleSelectOn(int roleId)
 	{
 		return this.CurrentSelectRoleId == roleId;
 	}
 
-	// Token: 0x060164C7 RID: 91335 RVA: 0x005A4A0B File Offset: 0x005A2C0B
+	// Token: 0x06013ECE RID: 81614 RVA: 0x005CF9E3 File Offset: 0x005CDBE3
 	private void OnSwitchArea(int areaId)
 	{
 		this.RefreshRoleList(areaId);
 	}
 
-	// Token: 0x060164C8 RID: 91336 RVA: 0x005A4A14 File Offset: 0x005A2C14
+	// Token: 0x06013ECF RID: 81615 RVA: 0x005CF9EC File Offset: 0x005CDBEC
 	private void RefreshRoleList(int areaId)
 	{
 		RoleInstance[] roleList = RoleModel.Instance.GetRoleList();
@@ -268,7 +268,7 @@ public class MoonTogetherInviteView : UiViewBase
 		this.RefreshViewState();
 	}
 
-	// Token: 0x060164C9 RID: 91337 RVA: 0x005A4B40 File Offset: 0x005A2D40
+	// Token: 0x06013ED0 RID: 81616 RVA: 0x005CFB18 File Offset: 0x005CDD18
 	private void RefreshViewState()
 	{
 		bool flag = this.CurrentSelectRoleId != 0;
@@ -281,7 +281,7 @@ public class MoonTogetherInviteView : UiViewBase
 		roleItem.RefreshRoleInfo(this.CurrentSelectRoleId);
 	}
 
-	// Token: 0x060164CA RID: 91338 RVA: 0x005A4B92 File Offset: 0x005A2D92
+	// Token: 0x06013ED1 RID: 81617 RVA: 0x005CFB6A File Offset: 0x005CDD6A
 	private void OnClickExitBtn()
 	{
 		if (MoonTogetherModel.Instance.IsInMoonTogether || MoonTogetherModel.Instance.CurInviteRoleId > 0)
@@ -292,22 +292,22 @@ public class MoonTogetherInviteView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060164CB RID: 91339 RVA: 0x005A4BCC File Offset: 0x005A2DCC
+	// Token: 0x06013ED2 RID: 81618 RVA: 0x005CFBA4 File Offset: 0x005CDDA4
 	private void OnClickInviteBtn()
 	{
 		MoonTogetherModel.Instance.SendAndSave();
 		UiManager.Instance.CloseAndOpenView(EUiViewName.MoonTogetherInviteView, EUiViewName.MoonTogetherMainView, null, null, true);
 	}
 
-	// Token: 0x0400A5DF RID: 42463
+	// Token: 0x0400A9C9 RID: 43465
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400A5E0 RID: 42464
+	// Token: 0x0400A9CA RID: 43466
 	[Nullable(2)]
 	private AreaSwitchGroupItem AreaSwitchGroupItem;
 
-	// Token: 0x0400A5E1 RID: 42465
+	// Token: 0x0400A9CB RID: 43467
 	[Nullable(new byte[]
 	{
 		2,
@@ -316,42 +316,42 @@ public class MoonTogetherInviteView : UiViewBase
 	})]
 	private LoopScrollView<MotorcycleTogetherRoleItem, RoleInstance> RoleScrollView;
 
-	// Token: 0x0400A5E2 RID: 42466
+	// Token: 0x0400A9CC RID: 43468
 	[Nullable(2)]
 	private MoonTogetherRoleItem RoleItem;
 
-	// Token: 0x0400A5E3 RID: 42467
+	// Token: 0x0400A9CD RID: 43469
 	private int CurrentSelectRoleId;
 
-	// Token: 0x02009032 RID: 36914
+	// Token: 0x02008279 RID: 33401
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402EB15 RID: 191253
+		// Token: 0x0402A20D RID: 172557
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402EB16 RID: 191254
+		// Token: 0x0402A20E RID: 172558
 		public const int AreaItem = 1;
 
-		// Token: 0x0402EB17 RID: 191255
+		// Token: 0x0402A20F RID: 172559
 		public const int EmptyItem = 2;
 
-		// Token: 0x0402EB18 RID: 191256
+		// Token: 0x0402A210 RID: 172560
 		public const int RoleLoopScrollView = 3;
 
-		// Token: 0x0402EB19 RID: 191257
+		// Token: 0x0402A211 RID: 172561
 		public const int RoleItem = 4;
 
-		// Token: 0x0402EB1A RID: 191258
+		// Token: 0x0402A212 RID: 172562
 		public const int ExitBtn = 5;
 
-		// Token: 0x0402EB1B RID: 191259
+		// Token: 0x0402A213 RID: 172563
 		public const int InviteBtn = 6;
 
-		// Token: 0x0402EB1C RID: 191260
+		// Token: 0x0402A214 RID: 172564
 		public const int InviteRoleItem = 7;
 
-		// Token: 0x0402EB1D RID: 191261
+		// Token: 0x0402A215 RID: 172565
 		public const int ConfirmText = 8;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002154 RID: 8532
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023B5 RID: 9141
 	public class RemoveTrialCharacter : ActionParams
 	{
-		// Token: 0x0600BBC2 RID: 48066 RVA: 0x001B14F4 File Offset: 0x001AF6F4
+		// Token: 0x0600C750 RID: 51024 RVA: 0x001C86A8 File Offset: 0x001C68A8
 		private RemoveTrialCharacter_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BBC3 RID: 48067 RVA: 0x001B152C File Offset: 0x001AF72C
+		// Token: 0x0600C751 RID: 51025 RVA: 0x001C86E0 File Offset: 0x001C68E0
 		public static RemoveTrialCharacter Create([Nullable(2)] RemoveTrialCharacter instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BBC4 RID: 48068 RVA: 0x001B153F File Offset: 0x001AF73F
+		// Token: 0x0600C752 RID: 51026 RVA: 0x001C86F3 File Offset: 0x001C68F3
 		public static RemoveTrialCharacter CreateFromSetValue([Nullable(2)] RemoveTrialCharacter_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BBC5 RID: 48069 RVA: 0x001B1554 File Offset: 0x001AF754
+		// Token: 0x0600C753 RID: 51027 RVA: 0x001C8708 File Offset: 0x001C6908
 		public RemoveTrialCharacter_SetValue ToSetValue()
 		{
 			return new RemoveTrialCharacter_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003940 RID: 14656
-		// (get) Token: 0x0600BBC6 RID: 48070 RVA: 0x001B15A2 File Offset: 0x001AF7A2
-		// (set) Token: 0x0600BBC7 RID: 48071 RVA: 0x001B15CD File Offset: 0x001AF7CD
+		// Token: 0x17003C2D RID: 15405
+		// (get) Token: 0x0600C754 RID: 51028 RVA: 0x001C8756 File Offset: 0x001C6956
+		// (set) Token: 0x0600C755 RID: 51029 RVA: 0x001C8781 File Offset: 0x001C6981
 		public virtual int CharacterId
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003941 RID: 14657
-		// (get) Token: 0x0600BBC8 RID: 48072 RVA: 0x001B15DB File Offset: 0x001AF7DB
-		// (set) Token: 0x0600BBC9 RID: 48073 RVA: 0x001B1602 File Offset: 0x001AF802
+		// Token: 0x17003C2E RID: 15406
+		// (get) Token: 0x0600C756 RID: 51030 RVA: 0x001C878F File Offset: 0x001C698F
+		// (set) Token: 0x0600C757 RID: 51031 RVA: 0x001C87B6 File Offset: 0x001C69B6
 		public virtual List<int> CharacterGroup
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003942 RID: 14658
-		// (get) Token: 0x0600BBCA RID: 48074 RVA: 0x001B1610 File Offset: 0x001AF810
-		// (set) Token: 0x0600BBCB RID: 48075 RVA: 0x001B164A File Offset: 0x001AF84A
+		// Token: 0x17003C2F RID: 15407
+		// (get) Token: 0x0600C758 RID: 51032 RVA: 0x001C87C4 File Offset: 0x001C69C4
+		// (set) Token: 0x0600C759 RID: 51033 RVA: 0x001C87FE File Offset: 0x001C69FE
 		public virtual bool? IsRemoveTips
 		{
 			get
@@ -135,9 +133,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003943 RID: 14659
-		// (get) Token: 0x0600BBCC RID: 48076 RVA: 0x001B1658 File Offset: 0x001AF858
-		// (set) Token: 0x0600BBCD RID: 48077 RVA: 0x001B1692 File Offset: 0x001AF892
+		// Token: 0x17003C30 RID: 15408
+		// (get) Token: 0x0600C75A RID: 51034 RVA: 0x001C880C File Offset: 0x001C6A0C
+		// (set) Token: 0x0600C75B RID: 51035 RVA: 0x001C8846 File Offset: 0x001C6A46
 		public virtual bool? EnableSeamlessTeamSwitch
 		{
 			get
@@ -159,9 +157,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003944 RID: 14660
-		// (get) Token: 0x0600BBCE RID: 48078 RVA: 0x001B16A0 File Offset: 0x001AF8A0
-		// (set) Token: 0x0600BBCF RID: 48079 RVA: 0x001B16DA File Offset: 0x001AF8DA
+		// Token: 0x17003C31 RID: 15409
+		// (get) Token: 0x0600C75C RID: 51036 RVA: 0x001C8854 File Offset: 0x001C6A54
+		// (set) Token: 0x0600C75D RID: 51037 RVA: 0x001C888E File Offset: 0x001C6A8E
 		public virtual bool? OnlyLowMemoryDeviceExecute
 		{
 			get
@@ -183,11 +181,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400703A RID: 28730
+		// Token: 0x0400766F RID: 30319
 		[Nullable(2)]
 		protected new RemoveTrialCharacter FbInstance;
 
-		// Token: 0x0400703B RID: 28731
+		// Token: 0x04007670 RID: 30320
 		[Nullable(2)]
 		protected RemoveTrialCharacter_SetValue PocoInterface;
 	}

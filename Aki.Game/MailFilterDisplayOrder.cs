@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020021BF RID: 8639
+// Token: 0x020016A3 RID: 5795
 public static class MailFilterDisplayOrder
 {
-	// Token: 0x04007FBA RID: 32698
+	// Token: 0x04008101 RID: 33025
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static readonly EMailFilter[] mailFilterDisplayOrder = new EMailFilter[]

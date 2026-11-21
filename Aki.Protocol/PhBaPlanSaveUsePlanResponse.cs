@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000D1C RID: 3356
+	// Token: 0x02000D0C RID: 3340
 	[NetMessage(EMessageId.PhBaPlanSaveUsePlanResponse)]
 	public sealed class PhBaPlanSaveUsePlanResponse : IMessage<PhBaPlanSaveUsePlanResponse>, IMessage, IEquatable<PhBaPlanSaveUsePlanResponse>, IDeepCloneable<PhBaPlanSaveUsePlanResponse>, IBufferMessage
 	{
-		// Token: 0x06012207 RID: 74247 RVA: 0x002A5ED0 File Offset: 0x002A40D0
+		// Token: 0x0601210B RID: 73995 RVA: 0x002A42AC File Offset: 0x002A24AC
 		[NullableContext(1)]
 		public static PhBaPlanSaveUsePlanResponse Create()
 		{
 			return new PhBaPlanSaveUsePlanResponse();
 		}
 
-		// Token: 0x17003C0F RID: 15375
-		// (get) Token: 0x06012208 RID: 74248 RVA: 0x002A5ED7 File Offset: 0x002A40D7
+		// Token: 0x17003BDA RID: 15322
+		// (get) Token: 0x0601210C RID: 73996 RVA: 0x002A42B3 File Offset: 0x002A24B3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003C10 RID: 15376
-		// (get) Token: 0x06012209 RID: 74249 RVA: 0x002A5EDA File Offset: 0x002A40DA
+		// Token: 0x17003BDB RID: 15323
+		// (get) Token: 0x0601210D RID: 73997 RVA: 0x002A42B6 File Offset: 0x002A24B6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601220A RID: 74250 RVA: 0x002A5EE1 File Offset: 0x002A40E1
+		// Token: 0x0601210E RID: 73998 RVA: 0x002A42BD File Offset: 0x002A24BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhBaPlanSaveUsePlanResponse()
 		{
 		}
 
-		// Token: 0x0601220B RID: 74251 RVA: 0x002A5EF4 File Offset: 0x002A40F4
+		// Token: 0x0601210F RID: 73999 RVA: 0x002A42D0 File Offset: 0x002A24D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhBaPlanSaveUsePlanResponse(PhBaPlanSaveUsePlanResponse other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601220C RID: 74252 RVA: 0x002A5F31 File Offset: 0x002A4131
+		// Token: 0x06012110 RID: 74000 RVA: 0x002A430D File Offset: 0x002A250D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhBaPlanSaveUsePlanResponse Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new PhBaPlanSaveUsePlanResponse(this);
 		}
 
-		// Token: 0x17003C11 RID: 15377
-		// (get) Token: 0x0601220D RID: 74253 RVA: 0x002A5F39 File Offset: 0x002A4139
-		// (set) Token: 0x0601220E RID: 74254 RVA: 0x002A5F41 File Offset: 0x002A4141
+		// Token: 0x17003BDC RID: 15324
+		// (get) Token: 0x06012111 RID: 74001 RVA: 0x002A4315 File Offset: 0x002A2515
+		// (set) Token: 0x06012112 RID: 74002 RVA: 0x002A431D File Offset: 0x002A251D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode Code
@@ -85,9 +85,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003C12 RID: 15378
-		// (get) Token: 0x0601220F RID: 74255 RVA: 0x002A5F4A File Offset: 0x002A414A
-		// (set) Token: 0x06012210 RID: 74256 RVA: 0x002A5F52 File Offset: 0x002A4152
+		// Token: 0x17003BDD RID: 15325
+		// (get) Token: 0x06012113 RID: 74003 RVA: 0x002A4326 File Offset: 0x002A2526
+		// (set) Token: 0x06012114 RID: 74004 RVA: 0x002A432E File Offset: 0x002A252E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string SelfPlanCode
@@ -102,9 +102,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003C13 RID: 15379
-		// (get) Token: 0x06012211 RID: 74257 RVA: 0x002A5F65 File Offset: 0x002A4165
-		// (set) Token: 0x06012212 RID: 74258 RVA: 0x002A5F6D File Offset: 0x002A416D
+		// Token: 0x17003BDE RID: 15326
+		// (get) Token: 0x06012115 RID: 74005 RVA: 0x002A4341 File Offset: 0x002A2541
+		// (set) Token: 0x06012116 RID: 74006 RVA: 0x002A4349 File Offset: 0x002A2549
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool TowPlanSame
@@ -119,7 +119,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012213 RID: 74259 RVA: 0x002A5F76 File Offset: 0x002A4176
+		// Token: 0x06012117 RID: 74007 RVA: 0x002A4352 File Offset: 0x002A2552
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -127,7 +127,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PhBaPlanSaveUsePlanResponse);
 		}
 
-		// Token: 0x06012214 RID: 74260 RVA: 0x002A5F84 File Offset: 0x002A4184
+		// Token: 0x06012118 RID: 74008 RVA: 0x002A4360 File Offset: 0x002A2560
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PhBaPlanSaveUsePlanResponse other)
@@ -135,7 +135,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Code == other.Code && !(this.SelfPlanCode != other.SelfPlanCode) && this.TowPlanSame == other.TowPlanSame && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06012215 RID: 74261 RVA: 0x002A5FE4 File Offset: 0x002A41E4
+		// Token: 0x06012119 RID: 74009 RVA: 0x002A43C0 File Offset: 0x002A25C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -160,7 +160,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012216 RID: 74262 RVA: 0x002A605D File Offset: 0x002A425D
+		// Token: 0x0601211A RID: 74010 RVA: 0x002A4439 File Offset: 0x002A2639
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -168,7 +168,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06012217 RID: 74263 RVA: 0x002A606A File Offset: 0x002A426A
+		// Token: 0x0601211B RID: 74011 RVA: 0x002A4446 File Offset: 0x002A2646
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -176,25 +176,25 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06012218 RID: 74264 RVA: 0x002A6074 File Offset: 0x002A4274
+		// Token: 0x0601211C RID: 74012 RVA: 0x002A4450 File Offset: 0x002A2650
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			if (this.TowPlanSame)
+			{
+				output.WriteRawTag(8);
+				output.WriteBool(this.TowPlanSame);
+			}
 			if (this.Code != ErrorCode.Success)
 			{
-				output.WriteRawTag(64);
+				output.WriteRawTag(40);
 				output.WriteEnum((int)this.Code);
 			}
 			if (this.SelfPlanCode.Length != 0)
 			{
-				output.WriteRawTag(98);
+				output.WriteRawTag(122);
 				output.WriteString(this.SelfPlanCode);
-			}
-			if (this.TowPlanSame)
-			{
-				output.WriteRawTag(104);
-				output.WriteBool(this.TowPlanSame);
 			}
 			if (this._unknownFields != null)
 			{
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012219 RID: 74265 RVA: 0x002A60F0 File Offset: 0x002A42F0
+		// Token: 0x0601211D RID: 74013 RVA: 0x002A44CC File Offset: 0x002A26CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601221A RID: 74266 RVA: 0x002A6158 File Offset: 0x002A4358
+		// Token: 0x0601211E RID: 74014 RVA: 0x002A4534 File Offset: 0x002A2734
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PhBaPlanSaveUsePlanResponse other)
@@ -251,7 +251,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601221B RID: 74267 RVA: 0x002A61C1 File Offset: 0x002A43C1
+		// Token: 0x0601211F RID: 74015 RVA: 0x002A459D File Offset: 0x002A279D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -259,7 +259,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601221C RID: 74268 RVA: 0x002A61CC File Offset: 0x002A43CC
+		// Token: 0x06012120 RID: 74016 RVA: 0x002A45A8 File Offset: 0x002A27A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -271,50 +271,50 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 64U)
+				if (num != 8U)
 				{
-					if (num != 98U)
+					if (num != 40U)
 					{
-						if (num != 104U)
+						if (num != 122U)
 						{
 							this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 						}
 						else
 						{
-							this.TowPlanSame = input.ReadBool();
+							this.SelfPlanCode = input.ReadString();
 						}
 					}
 					else
 					{
-						this.SelfPlanCode = input.ReadString();
+						this.Code = (ErrorCode)input.ReadEnum();
 					}
 				}
 				else
 				{
-					this.Code = (ErrorCode)input.ReadEnum();
+					this.TowPlanSame = input.ReadBool();
 				}
 			}
 		}
 
-		// Token: 0x04007151 RID: 29009
+		// Token: 0x04007169 RID: 29033
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007152 RID: 29010
-		public const int CodeFieldNumber = 8;
+		// Token: 0x0400716A RID: 29034
+		public const int CodeFieldNumber = 5;
 
-		// Token: 0x04007153 RID: 29011
+		// Token: 0x0400716B RID: 29035
 		private ErrorCode code_;
 
-		// Token: 0x04007154 RID: 29012
-		public const int SelfPlanCodeFieldNumber = 12;
+		// Token: 0x0400716C RID: 29036
+		public const int SelfPlanCodeFieldNumber = 15;
 
-		// Token: 0x04007155 RID: 29013
+		// Token: 0x0400716D RID: 29037
 		private string selfPlanCode_ = "";
 
-		// Token: 0x04007156 RID: 29014
-		public const int TowPlanSameFieldNumber = 13;
+		// Token: 0x0400716E RID: 29038
+		public const int TowPlanSameFieldNumber = 1;
 
-		// Token: 0x04007157 RID: 29015
+		// Token: 0x0400716F RID: 29039
 		private bool towPlanSame_;
 	}
 }

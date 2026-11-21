@@ -5,12 +5,12 @@ using Aki.Protocol;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using UnrealEngine;
 
-// Token: 0x020030AF RID: 12463
+// Token: 0x02002606 RID: 9734
 [NullableContext(1)]
 [Nullable(0)]
 public class InputActiveCondition
 {
-	// Token: 0x0601AB49 RID: 109385 RVA: 0x00731600 File Offset: 0x0072F800
+	// Token: 0x06018557 RID: 99671 RVA: 0x00756B00 File Offset: 0x00754D00
 	public InputActiveCondition(BaseTagComponent tagComp, BaseAttributeComponent attributeComp, InputActiveResultCallback callback)
 	{
 		if (tagComp == null || attributeComp == null || callback == null)
@@ -24,7 +24,7 @@ public class InputActiveCondition
 		this.Inited = true;
 	}
 
-	// Token: 0x0601AB4A RID: 109386 RVA: 0x0073168C File Offset: 0x0072F88C
+	// Token: 0x06018558 RID: 99672 RVA: 0x00756B8C File Offset: 0x00754D8C
 	[NullableContext(2)]
 	public void SetActiveCondition(SInputActive activeCondition)
 	{
@@ -119,7 +119,7 @@ public class InputActiveCondition
 		this.Callback(this.CurrentResult);
 	}
 
-	// Token: 0x0601AB4B RID: 109387 RVA: 0x00731968 File Offset: 0x0072FB68
+	// Token: 0x06018559 RID: 99673 RVA: 0x00756E68 File Offset: 0x00755068
 	public void Clear()
 	{
 		foreach (ITagTask tagTask in this.TagTaskList)
@@ -139,7 +139,7 @@ public class InputActiveCondition
 		Array.Clear(this.ConditionResultArray);
 	}
 
-	// Token: 0x0601AB4C RID: 109388 RVA: 0x00731A44 File Offset: 0x0072FC44
+	// Token: 0x0601855A RID: 99674 RVA: 0x00756F44 File Offset: 0x00755144
 	private void ConditionTag(int index, CfgInputActiveCondition condition, IList<int> tagIds)
 	{
 		bool flag = condition.AnyTag ? this.TagComp.HasAnyTag(tagIds) : this.TagComp.HasAllTag(tagIds);
@@ -148,7 +148,7 @@ public class InputActiveCondition
 		this.UpdateResult();
 	}
 
-	// Token: 0x0601AB4D RID: 109389 RVA: 0x00731A94 File Offset: 0x0072FC94
+	// Token: 0x0601855B RID: 99675 RVA: 0x00756F94 File Offset: 0x00755194
 	private void ConditionAttribute(int index, CfgInputActiveCondition condition)
 	{
 		float currentValue = this.AttributeComp.GetCurrentValue(condition.AttributeId1);
@@ -159,7 +159,7 @@ public class InputActiveCondition
 		this.UpdateResult();
 	}
 
-	// Token: 0x0601AB4E RID: 109390 RVA: 0x00731B24 File Offset: 0x0072FD24
+	// Token: 0x0601855C RID: 99676 RVA: 0x00757024 File Offset: 0x00755224
 	private bool CalcResult()
 	{
 		if (string.IsNullOrEmpty(this.ConditionFormula))
@@ -190,7 +190,7 @@ public class InputActiveCondition
 		return this.BooleanListSolver.EvaluateByConditions(this.ConditionResultArray);
 	}
 
-	// Token: 0x0601AB4F RID: 109391 RVA: 0x00731BF4 File Offset: 0x0072FDF4
+	// Token: 0x0601855D RID: 99677 RVA: 0x007570F4 File Offset: 0x007552F4
 	private void UpdateResult()
 	{
 		bool flag = this.CalcResult();
@@ -201,36 +201,36 @@ public class InputActiveCondition
 		}
 	}
 
-	// Token: 0x0400CE16 RID: 52758
+	// Token: 0x0400D1FA RID: 53754
 	private readonly BaseTagComponent TagComp;
 
-	// Token: 0x0400CE17 RID: 52759
+	// Token: 0x0400D1FB RID: 53755
 	private readonly BaseAttributeComponent AttributeComp;
 
-	// Token: 0x0400CE18 RID: 52760
+	// Token: 0x0400D1FC RID: 53756
 	private readonly InputActiveResultCallback Callback;
 
-	// Token: 0x0400CE19 RID: 52761
+	// Token: 0x0400D1FD RID: 53757
 	private readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 
-	// Token: 0x0400CE1A RID: 52762
+	// Token: 0x0400D1FE RID: 53758
 	private readonly List<AttributeListenerHandle> AttributeListenerHandles = new List<AttributeListenerHandle>();
 
-	// Token: 0x0400CE1B RID: 52763
+	// Token: 0x0400D1FF RID: 53759
 	private string ConditionFormula = "";
 
-	// Token: 0x0400CE1C RID: 52764
+	// Token: 0x0400D200 RID: 53760
 	private readonly List<CfgInputActiveCondition> InputActiveConditionList = new List<CfgInputActiveCondition>();
 
-	// Token: 0x0400CE1D RID: 52765
+	// Token: 0x0400D201 RID: 53761
 	private bool[] ConditionResultArray = Array.Empty<bool>();
 
-	// Token: 0x0400CE1E RID: 52766
+	// Token: 0x0400D202 RID: 53762
 	private bool CurrentResult;
 
-	// Token: 0x0400CE1F RID: 52767
+	// Token: 0x0400D203 RID: 53763
 	private bool Inited;
 
-	// Token: 0x0400CE20 RID: 52768
+	// Token: 0x0400D204 RID: 53764
 	private ConditionArray BooleanListSolver;
 }

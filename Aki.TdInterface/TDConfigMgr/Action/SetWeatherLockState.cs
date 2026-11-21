@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021F1 RID: 8689
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200245C RID: 9308
 	public class SetWeatherLockState : ActionParams
 	{
-		// Token: 0x0600BED7 RID: 48855 RVA: 0x001B7198 File Offset: 0x001B5398
-		[NullableContext(1)]
+		// Token: 0x0600CA93 RID: 51859 RVA: 0x001CE824 File Offset: 0x001CCA24
 		private SetWeatherLockState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BED8 RID: 48856 RVA: 0x001B71D0 File Offset: 0x001B53D0
-		[NullableContext(1)]
+		// Token: 0x0600CA94 RID: 51860 RVA: 0x001CE85C File Offset: 0x001CCA5C
 		public static SetWeatherLockState Create([Nullable(2)] SetWeatherLockState instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BED9 RID: 48857 RVA: 0x001B71E3 File Offset: 0x001B53E3
-		[NullableContext(1)]
+		// Token: 0x0600CA95 RID: 51861 RVA: 0x001CE86F File Offset: 0x001CCA6F
 		public static SetWeatherLockState CreateFromSetValue([Nullable(2)] SetWeatherLockState_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BEDA RID: 48858 RVA: 0x001B71F6 File Offset: 0x001B53F6
-		[NullableContext(1)]
+		// Token: 0x0600CA96 RID: 51862 RVA: 0x001CE882 File Offset: 0x001CCA82
 		public SetWeatherLockState_SetValue ToSetValue()
 		{
 			return new SetWeatherLockState_SetValue
@@ -65,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039E4 RID: 14820
-		// (get) Token: 0x0600BEDB RID: 48859 RVA: 0x001B7215 File Offset: 0x001B5415
-		// (set) Token: 0x0600BEDC RID: 48860 RVA: 0x001B7240 File Offset: 0x001B5440
+		// Token: 0x17003CD9 RID: 15577
+		// (get) Token: 0x0600CA97 RID: 51863 RVA: 0x001CE8A1 File Offset: 0x001CCAA1
+		// (set) Token: 0x0600CA98 RID: 51864 RVA: 0x001CE8CC File Offset: 0x001CCACC
 		public virtual ELockState LockState
 		{
 			get
@@ -88,11 +82,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039E5 RID: 14821
-		// (get) Token: 0x0600BEDD RID: 48861 RVA: 0x001B724E File Offset: 0x001B544E
-		// (set) Token: 0x0600BEDE RID: 48862 RVA: 0x001B7275 File Offset: 0x001B5475
+		// Token: 0x17003CDA RID: 15578
+		// (get) Token: 0x0600CA99 RID: 51865 RVA: 0x001CE8DA File Offset: 0x001CCADA
+		// (set) Token: 0x0600CA9A RID: 51866 RVA: 0x001CE901 File Offset: 0x001CCB01
+		[Nullable(2)]
 		public virtual List<int> AreaIds
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -106,16 +102,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.AreaIds;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().AreaIds = value;
 			}
 		}
 
-		// Token: 0x040071D3 RID: 29139
+		// Token: 0x0400781C RID: 30748
+		[Nullable(2)]
 		protected new SetWeatherLockState FbInstance;
 
-		// Token: 0x040071D4 RID: 29140
+		// Token: 0x0400781D RID: 30749
+		[Nullable(2)]
 		protected SetWeatherLockState_SetValue PocoInterface;
 	}
 }

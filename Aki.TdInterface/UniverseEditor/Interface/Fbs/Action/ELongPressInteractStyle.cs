@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F9B RID: 24475
+	// Token: 0x020065EC RID: 26092
 	public enum ELongPressInteractStyle : byte
 	{
-		// Token: 0x0400FE78 RID: 65144
+		// Token: 0x04010C2A RID: 68650
 		Default,
-		// Token: 0x0400FE79 RID: 65145
+		// Token: 0x04010C2B RID: 68651
 		TimeBackInteract,
-		// Token: 0x0400FE7A RID: 65146
+		// Token: 0x04010C2C RID: 68652
 		SwordRiderInteract,
-		// Token: 0x0400FE7B RID: 65147
+		// Token: 0x04010C2D RID: 68653
 		CoreFixInteract
 	}
 }

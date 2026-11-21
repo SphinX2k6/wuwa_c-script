@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059E9 RID: 23017
+	// Token: 0x020049C2 RID: 18882
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WalkingPatternBehaviorNode : TickBehaviorNode
 	{
-		// Token: 0x0603A539 RID: 238905 RVA: 0x00DDF786 File Offset: 0x00DDD986
+		// Token: 0x0602F460 RID: 193632 RVA: 0x00D2EFF2 File Offset: 0x00D2D1F2
 		public WalkingPatternBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A53A RID: 238906 RVA: 0x00DDF7B4 File Offset: 0x00DDD9B4
+		// Token: 0x0602F461 RID: 193633 RVA: 0x00D2F020 File Offset: 0x00D2D220
 		[NullableContext(1)]
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return false;
 		}
 
-		// Token: 0x0603A53B RID: 238907 RVA: 0x00DDF9D0 File Offset: 0x00DDDBD0
+		// Token: 0x0602F462 RID: 193634 RVA: 0x00D2F23C File Offset: 0x00D2D43C
 		protected override void OnStart(ENodeStatusUpdateReason reason)
 		{
 			base.OnStart(reason);
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.CurCheckPointIndex = 0;
 		}
 
-		// Token: 0x0603A53C RID: 238908 RVA: 0x00DDFA4C File Offset: 0x00DDDC4C
+		// Token: 0x0602F463 RID: 193635 RVA: 0x00D2F2B8 File Offset: 0x00D2D4B8
 		protected override void OnTick(float deltaTime)
 		{
 			if (this.Submitting)
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.CheckDistToSpline();
 		}
 
-		// Token: 0x0603A53D RID: 238909 RVA: 0x00DDFA8C File Offset: 0x00DDDC8C
+		// Token: 0x0602F464 RID: 193636 RVA: 0x00D2F2F8 File Offset: 0x00D2D4F8
 		protected override void OnEnd(bool bFinished)
 		{
 			if (this.SplineActor != null)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A53E RID: 238910 RVA: 0x00DDFB0C File Offset: 0x00DDDD0C
+		// Token: 0x0602F465 RID: 193637 RVA: 0x00D2F378 File Offset: 0x00D2D578
 		private void CheckPoint()
 		{
 			if (this.SplineComp == null)
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A53F RID: 238911 RVA: 0x00DDFB80 File Offset: 0x00DDDD80
+		// Token: 0x0602F466 RID: 193638 RVA: 0x00D2F3EC File Offset: 0x00D2D5EC
 		private void CheckDistToSpline()
 		{
 			if (this.SplineComp == null)
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.CheckNum++;
 		}
 
-		// Token: 0x0603A540 RID: 238912 RVA: 0x00DDFBF0 File Offset: 0x00DDDDF0
+		// Token: 0x0602F467 RID: 193639 RVA: 0x00D2F45C File Offset: 0x00D2D65C
 		private void OnMyPlayerInOutRangeLocal(bool isEnter)
 		{
 			if (!isEnter || this.IsFinish)
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A541 RID: 238913 RVA: 0x00DDFCCC File Offset: 0x00DDDECC
+		// Token: 0x0602F468 RID: 193640 RVA: 0x00D2F538 File Offset: 0x00D2D738
 		protected unsafe override void SubmitNode(GeneralLogicTreeNodeExtraInfo parkourInfo = null)
 		{
 			if (this.Blackboard.ContainTag(EBehaviorTreeTag.RollbackWaiting))
@@ -264,52 +264,52 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 				Aki.Protocol.ErrorCode? errorCode = (submitWalkingPatternPointResponse != null) ? new Aki.Protocol.ErrorCode?(submitWalkingPatternPointResponse.ErrorCode) : null;
 				if (errorCode == null || errorCode.GetValueOrDefault() != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(submitWalkingPatternPointResponse.ErrorCode, 24149, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(submitWalkingPatternPointResponse.ErrorCode, 25667, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x0401E68A RID: 124554
+		// Token: 0x04019129 RID: 102697
 		private TsGameSplineActor SplineActor;
 
-		// Token: 0x0401E68B RID: 124555
+		// Token: 0x0401912A RID: 102698
 		private USplineComponent SplineComp;
 
-		// Token: 0x0401E68C RID: 124556
+		// Token: 0x0401912B RID: 102699
 		private Entity EndEntity;
 
-		// Token: 0x0401E68D RID: 124557
+		// Token: 0x0401912C RID: 102700
 		private int CheckNum;
 
-		// Token: 0x0401E68E RID: 124558
+		// Token: 0x0401912D RID: 102701
 		private double TotalDist;
 
-		// Token: 0x0401E68F RID: 124559
+		// Token: 0x0401912E RID: 102702
 		private bool IsFinish;
 
-		// Token: 0x0401E690 RID: 124560
+		// Token: 0x0401912F RID: 102703
 		private double MinDist;
 
-		// Token: 0x0401E691 RID: 124561
+		// Token: 0x04019130 RID: 102704
 		private double MaxDist;
 
-		// Token: 0x0401E692 RID: 124562
+		// Token: 0x04019131 RID: 102705
 		private double CheckDist;
 
-		// Token: 0x0401E693 RID: 124563
+		// Token: 0x04019132 RID: 102706
 		private double FinalScore;
 
-		// Token: 0x0401E694 RID: 124564
+		// Token: 0x04019133 RID: 102707
 		private int TotalPointNum = -1;
 
-		// Token: 0x0401E695 RID: 124565
+		// Token: 0x04019134 RID: 102708
 		private int CurCheckPointIndex = -1;
 
-		// Token: 0x0401E696 RID: 124566
+		// Token: 0x04019135 RID: 102709
 		[Nullable(1)]
 		private readonly global::Vector PlayerLocation = global::Vector.Create();
 
-		// Token: 0x0401E697 RID: 124567
+		// Token: 0x04019136 RID: 102710
 		[Nullable(1)]
 		private readonly global::Vector ClosestPoint = global::Vector.Create();
 	}

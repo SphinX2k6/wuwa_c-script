@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FB2 RID: 28594
+	// Token: 0x0200777B RID: 30587
 	public class ISetAudioEnableT
 	{
-		// Token: 0x1700D455 RID: 54357
-		// (get) Token: 0x0603289F RID: 207007 RVA: 0x006D2037 File Offset: 0x006D0237
-		// (set) Token: 0x060328A0 RID: 207008 RVA: 0x006D203F File Offset: 0x006D023F
+		// Token: 0x1700E029 RID: 57385
+		// (get) Token: 0x06035B05 RID: 219909 RVA: 0x00731C7B File Offset: 0x0072FE7B
+		// (set) Token: 0x06035B06 RID: 219910 RVA: 0x00731C83 File Offset: 0x0072FE83
 		public EAudioEnableType SetAudioEnableType { get; set; }
 
-		// Token: 0x1700D456 RID: 54358
-		// (get) Token: 0x060328A1 RID: 207009 RVA: 0x006D2048 File Offset: 0x006D0248
-		// (set) Token: 0x060328A2 RID: 207010 RVA: 0x006D2050 File Offset: 0x006D0250
+		// Token: 0x1700E02A RID: 57386
+		// (get) Token: 0x06035B07 RID: 219911 RVA: 0x00731C8C File Offset: 0x0072FE8C
+		// (set) Token: 0x06035B08 RID: 219912 RVA: 0x00731C94 File Offset: 0x0072FE94
 		public IRoleSceneVoiceT AudioType { get; set; }
 
-		// Token: 0x060328A3 RID: 207011 RVA: 0x006D2059 File Offset: 0x006D0259
+		// Token: 0x06035B09 RID: 219913 RVA: 0x00731C9D File Offset: 0x0072FE9D
 		public ISetAudioEnableT()
 		{
 			this.SetAudioEnableType = EAudioEnableType.Enable;

@@ -3,65 +3,65 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005684 RID: 22148
+	// Token: 0x02005C25 RID: 23589
 	public class INpcUiInteractOnSoundBox35T
 	{
-		// Token: 0x1700A495 RID: 42133
-		// (get) Token: 0x06024EDB RID: 151259 RVA: 0x00519688 File Offset: 0x00517888
-		// (set) Token: 0x06024EDC RID: 151260 RVA: 0x00519690 File Offset: 0x00517890
+		// Token: 0x1700AD24 RID: 44324
+		// (get) Token: 0x06027114 RID: 160020 RVA: 0x0055A224 File Offset: 0x00558424
+		// (set) Token: 0x06027115 RID: 160021 RVA: 0x0055A22C File Offset: 0x0055842C
 		public ENpcUiInteractType Type { get; set; }
 
-		// Token: 0x1700A496 RID: 42134
-		// (get) Token: 0x06024EDD RID: 151261 RVA: 0x00519699 File Offset: 0x00517899
-		// (set) Token: 0x06024EDE RID: 151262 RVA: 0x005196A1 File Offset: 0x005178A1
+		// Token: 0x1700AD25 RID: 44325
+		// (get) Token: 0x06027116 RID: 160022 RVA: 0x0055A235 File Offset: 0x00558435
+		// (set) Token: 0x06027117 RID: 160023 RVA: 0x0055A23D File Offset: 0x0055843D
 		public string EnterMontage { get; set; }
 
-		// Token: 0x1700A497 RID: 42135
-		// (get) Token: 0x06024EDF RID: 151263 RVA: 0x005196AA File Offset: 0x005178AA
-		// (set) Token: 0x06024EE0 RID: 151264 RVA: 0x005196B2 File Offset: 0x005178B2
+		// Token: 0x1700AD26 RID: 44326
+		// (get) Token: 0x06027118 RID: 160024 RVA: 0x0055A246 File Offset: 0x00558446
+		// (set) Token: 0x06027119 RID: 160025 RVA: 0x0055A24E File Offset: 0x0055844E
 		public string StandByMontage { get; set; }
 
-		// Token: 0x1700A498 RID: 42136
-		// (get) Token: 0x06024EE1 RID: 151265 RVA: 0x005196BB File Offset: 0x005178BB
-		// (set) Token: 0x06024EE2 RID: 151266 RVA: 0x005196C3 File Offset: 0x005178C3
+		// Token: 0x1700AD27 RID: 44327
+		// (get) Token: 0x0602711A RID: 160026 RVA: 0x0055A257 File Offset: 0x00558457
+		// (set) Token: 0x0602711B RID: 160027 RVA: 0x0055A25F File Offset: 0x0055845F
 		public string ShopSuccessMontage { get; set; }
 
-		// Token: 0x1700A499 RID: 42137
-		// (get) Token: 0x06024EE3 RID: 151267 RVA: 0x005196CC File Offset: 0x005178CC
-		// (set) Token: 0x06024EE4 RID: 151268 RVA: 0x005196D4 File Offset: 0x005178D4
+		// Token: 0x1700AD28 RID: 44328
+		// (get) Token: 0x0602711C RID: 160028 RVA: 0x0055A268 File Offset: 0x00558468
+		// (set) Token: 0x0602711D RID: 160029 RVA: 0x0055A270 File Offset: 0x00558470
 		public IPlayFlowT EnterFlow { get; set; }
 
-		// Token: 0x1700A49A RID: 42138
-		// (get) Token: 0x06024EE5 RID: 151269 RVA: 0x005196DD File Offset: 0x005178DD
-		// (set) Token: 0x06024EE6 RID: 151270 RVA: 0x005196E5 File Offset: 0x005178E5
+		// Token: 0x1700AD29 RID: 44329
+		// (get) Token: 0x0602711E RID: 160030 RVA: 0x0055A279 File Offset: 0x00558479
+		// (set) Token: 0x0602711F RID: 160031 RVA: 0x0055A281 File Offset: 0x00558481
 		public IPlayFlowT ShopSuccessFlow { get; set; }
 
-		// Token: 0x1700A49B RID: 42139
-		// (get) Token: 0x06024EE7 RID: 151271 RVA: 0x005196EE File Offset: 0x005178EE
-		// (set) Token: 0x06024EE8 RID: 151272 RVA: 0x005196F6 File Offset: 0x005178F6
+		// Token: 0x1700AD2A RID: 44330
+		// (get) Token: 0x06027120 RID: 160032 RVA: 0x0055A28A File Offset: 0x0055848A
+		// (set) Token: 0x06027121 RID: 160033 RVA: 0x0055A292 File Offset: 0x00558492
 		public IPlayFlowT ShopFailedFlow { get; set; }
 
-		// Token: 0x1700A49C RID: 42140
-		// (get) Token: 0x06024EE9 RID: 151273 RVA: 0x005196FF File Offset: 0x005178FF
-		// (set) Token: 0x06024EEA RID: 151274 RVA: 0x00519707 File Offset: 0x00517907
+		// Token: 0x1700AD2B RID: 44331
+		// (get) Token: 0x06027122 RID: 160034 RVA: 0x0055A29B File Offset: 0x0055849B
+		// (set) Token: 0x06027123 RID: 160035 RVA: 0x0055A2A3 File Offset: 0x005584A3
 		public string UpgradeSequence { get; set; }
 
-		// Token: 0x1700A49D RID: 42141
-		// (get) Token: 0x06024EEB RID: 151275 RVA: 0x00519710 File Offset: 0x00517910
-		// (set) Token: 0x06024EEC RID: 151276 RVA: 0x00519718 File Offset: 0x00517918
+		// Token: 0x1700AD2C RID: 44332
+		// (get) Token: 0x06027124 RID: 160036 RVA: 0x0055A2AC File Offset: 0x005584AC
+		// (set) Token: 0x06027125 RID: 160037 RVA: 0x0055A2B4 File Offset: 0x005584B4
 		public IPlayFlowT UpgradeFlow { get; set; }
 
-		// Token: 0x1700A49E RID: 42142
-		// (get) Token: 0x06024EED RID: 151277 RVA: 0x00519721 File Offset: 0x00517921
-		// (set) Token: 0x06024EEE RID: 151278 RVA: 0x00519729 File Offset: 0x00517929
+		// Token: 0x1700AD2D RID: 44333
+		// (get) Token: 0x06027126 RID: 160038 RVA: 0x0055A2BD File Offset: 0x005584BD
+		// (set) Token: 0x06027127 RID: 160039 RVA: 0x0055A2C5 File Offset: 0x005584C5
 		public TMontageConfigUnion ExitMontage { get; set; }
 
-		// Token: 0x1700A49F RID: 42143
-		// (get) Token: 0x06024EEF RID: 151279 RVA: 0x00519732 File Offset: 0x00517932
-		// (set) Token: 0x06024EF0 RID: 151280 RVA: 0x0051973A File Offset: 0x0051793A
+		// Token: 0x1700AD2E RID: 44334
+		// (get) Token: 0x06027128 RID: 160040 RVA: 0x0055A2CE File Offset: 0x005584CE
+		// (set) Token: 0x06027129 RID: 160041 RVA: 0x0055A2D6 File Offset: 0x005584D6
 		public IPlayFlowT ExitFlow { get; set; }
 
-		// Token: 0x06024EF1 RID: 151281 RVA: 0x00519744 File Offset: 0x00517944
+		// Token: 0x0602712A RID: 160042 RVA: 0x0055A2E0 File Offset: 0x005584E0
 		public INpcUiInteractOnSoundBox35T()
 		{
 			this.Type = ENpcUiInteractType.HandInItem;

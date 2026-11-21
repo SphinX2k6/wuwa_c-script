@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043F8 RID: 17400
+	// Token: 0x0200485D RID: 18525
 	public enum ETreasureChestStatType : byte
 	{
-		// Token: 0x0400C341 RID: 49985
+		// Token: 0x0400CD69 RID: 52585
 		OneTime,
-		// Token: 0x0400C342 RID: 49986
+		// Token: 0x0400CD6A RID: 52586
 		HsinToken
 	}
 }

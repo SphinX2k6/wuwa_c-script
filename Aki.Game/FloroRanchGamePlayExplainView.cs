@@ -6,16 +6,16 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001B63 RID: 7011
+// Token: 0x02001022 RID: 4130
 public class FloroRanchGamePlayExplainView : UiViewBase
 {
-	// Token: 0x0600D015 RID: 53269 RVA: 0x002F72FE File Offset: 0x002F54FE
+	// Token: 0x0600A426 RID: 42022 RVA: 0x003023D6 File Offset: 0x003005D6
 	[NullableContext(1)]
 	public FloroRanchGamePlayExplainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D016 RID: 53270 RVA: 0x002F7308 File Offset: 0x002F5508
+	// Token: 0x0600A427 RID: 42023 RVA: 0x003023E0 File Offset: 0x003005E0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -52,7 +52,7 @@ public class FloroRanchGamePlayExplainView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D017 RID: 53271 RVA: 0x002F74BC File Offset: 0x002F56BC
+	// Token: 0x0600A428 RID: 42024 RVA: 0x00302594 File Offset: 0x00300794
 	protected override void OnBeforeShow()
 	{
 		FloroRanchActivityData currentActivityData = FloroRanchGamePlayModel.Instance.GetCurrentActivityData();
@@ -93,19 +93,19 @@ public class FloroRanchGamePlayExplainView : UiViewBase
 		base.GetItem(8).SetUIActive(currentActivityData.ActivityDataType == EFloroRanchActivityDataType.Normal);
 	}
 
-	// Token: 0x0600D018 RID: 53272 RVA: 0x002F75E4 File Offset: 0x002F57E4
+	// Token: 0x0600A429 RID: 42025 RVA: 0x003026BC File Offset: 0x003008BC
 	protected override void OnStart()
 	{
 		this.RegisterTermExplanation();
 	}
 
-	// Token: 0x0600D019 RID: 53273 RVA: 0x002F75EC File Offset: 0x002F57EC
+	// Token: 0x0600A42A RID: 42026 RVA: 0x003026C4 File Offset: 0x003008C4
 	protected override void OnBeforeDestroy()
 	{
 		this.UnRegisterTermExplanation();
 	}
 
-	// Token: 0x0600D01A RID: 53274 RVA: 0x002F75F4 File Offset: 0x002F57F4
+	// Token: 0x0600A42B RID: 42027 RVA: 0x003026CC File Offset: 0x003008CC
 	private void RegisterTermExplanation()
 	{
 		TermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -118,52 +118,52 @@ public class FloroRanchGamePlayExplainView : UiViewBase
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x0600D01B RID: 53275 RVA: 0x002F763A File Offset: 0x002F583A
+	// Token: 0x0600A42C RID: 42028 RVA: 0x00302712 File Offset: 0x00300912
 	private void UnRegisterTermExplanation()
 	{
 		TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(6));
 	}
 
-	// Token: 0x0600D01C RID: 53276 RVA: 0x002F764D File Offset: 0x002F584D
+	// Token: 0x0600A42D RID: 42029 RVA: 0x00302725 File Offset: 0x00300925
 	private void OnMaskBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600D01D RID: 53277 RVA: 0x002F7656 File Offset: 0x002F5856
+	// Token: 0x0600A42E RID: 42030 RVA: 0x0030272E File Offset: 0x0030092E
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x020080BE RID: 32958
+	// Token: 0x0200724C RID: 29260
 	private class EComponents
 	{
-		// Token: 0x04029FD4 RID: 171988
+		// Token: 0x04025308 RID: 152328
 		public const int BtnMask = 0;
 
-		// Token: 0x04029FD5 RID: 171989
+		// Token: 0x04025309 RID: 152329
 		public const int BtnClose = 1;
 
-		// Token: 0x04029FD6 RID: 171990
+		// Token: 0x0402530A RID: 152330
 		public const int ItemCost = 2;
 
-		// Token: 0x04029FD7 RID: 171991
+		// Token: 0x0402530B RID: 152331
 		public const int TextTarget = 3;
 
-		// Token: 0x04029FD8 RID: 171992
+		// Token: 0x0402530C RID: 152332
 		public const int TextFirstReward = 4;
 
-		// Token: 0x04029FD9 RID: 171993
+		// Token: 0x0402530D RID: 152333
 		public const int TextAgainReward = 5;
 
-		// Token: 0x04029FDA RID: 171994
+		// Token: 0x0402530E RID: 152334
 		public const int TextEnvironment = 6;
 
-		// Token: 0x04029FDB RID: 171995
+		// Token: 0x0402530F RID: 152335
 		public const int ItemAgainRewardPanel = 7;
 
-		// Token: 0x04029FDC RID: 171996
+		// Token: 0x04025310 RID: 152336
 		public const int RewardPanel = 8;
 	}
 }

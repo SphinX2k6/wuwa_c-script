@@ -2,96 +2,96 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E6D RID: 3693
+// Token: 0x02000322 RID: 802
 [NullableContext(2)]
 public interface IFinalBattleCombatInfo
 {
-	// Token: 0x17000660 RID: 1632
-	// (get) Token: 0x060059B1 RID: 22961
-	// (set) Token: 0x060059B2 RID: 22962
+	// Token: 0x17000684 RID: 1668
+	// (get) Token: 0x06002D48 RID: 11592
+	// (set) Token: 0x06002D49 RID: 11593
 	EFinalBattleEntityType EntityType { get; set; }
 
-	// Token: 0x17000661 RID: 1633
-	// (get) Token: 0x060059B3 RID: 22963
-	// (set) Token: 0x060059B4 RID: 22964
+	// Token: 0x17000685 RID: 1669
+	// (get) Token: 0x06002D4A RID: 11594
+	// (set) Token: 0x06002D4B RID: 11595
 	int Uid { get; set; }
 
-	// Token: 0x17000662 RID: 1634
-	// (get) Token: 0x060059B5 RID: 22965
-	// (set) Token: 0x060059B6 RID: 22966
+	// Token: 0x17000686 RID: 1670
+	// (get) Token: 0x06002D4C RID: 11596
+	// (set) Token: 0x06002D4D RID: 11597
 	int OwnerId { get; set; }
 
-	// Token: 0x17000663 RID: 1635
-	// (get) Token: 0x060059B7 RID: 22967
-	// (set) Token: 0x060059B8 RID: 22968
+	// Token: 0x17000687 RID: 1671
+	// (get) Token: 0x06002D4E RID: 11598
+	// (set) Token: 0x06002D4F RID: 11599
 	int TemplateId { get; set; }
 
-	// Token: 0x17000664 RID: 1636
-	// (get) Token: 0x060059B9 RID: 22969
-	// (set) Token: 0x060059BA RID: 22970
+	// Token: 0x17000688 RID: 1672
+	// (get) Token: 0x06002D50 RID: 11600
+	// (set) Token: 0x06002D51 RID: 11601
 	int CombatId { get; set; }
 
-	// Token: 0x17000665 RID: 1637
-	// (get) Token: 0x060059BB RID: 22971
-	// (set) Token: 0x060059BC RID: 22972
+	// Token: 0x17000689 RID: 1673
+	// (get) Token: 0x06002D52 RID: 11602
+	// (set) Token: 0x06002D53 RID: 11603
 	int SubTypeId { get; set; }
 
-	// Token: 0x17000666 RID: 1638
-	// (get) Token: 0x060059BD RID: 22973
-	// (set) Token: 0x060059BE RID: 22974
+	// Token: 0x1700068A RID: 1674
+	// (get) Token: 0x06002D54 RID: 11604
+	// (set) Token: 0x06002D55 RID: 11605
 	string PrefabPath { get; set; }
 
-	// Token: 0x17000667 RID: 1639
-	// (get) Token: 0x060059BF RID: 22975
-	// (set) Token: 0x060059C0 RID: 22976
+	// Token: 0x1700068B RID: 1675
+	// (get) Token: 0x06002D56 RID: 11606
+	// (set) Token: 0x06002D57 RID: 11607
 	string AssetPath { get; set; }
 
-	// Token: 0x17000668 RID: 1640
-	// (get) Token: 0x060059C1 RID: 22977
-	// (set) Token: 0x060059C2 RID: 22978
+	// Token: 0x1700068C RID: 1676
+	// (get) Token: 0x06002D58 RID: 11608
+	// (set) Token: 0x06002D59 RID: 11609
 	int PropertyId { get; set; }
 
-	// Token: 0x17000669 RID: 1641
-	// (get) Token: 0x060059C3 RID: 22979
-	// (set) Token: 0x060059C4 RID: 22980
+	// Token: 0x1700068D RID: 1677
+	// (get) Token: 0x06002D5A RID: 11610
+	// (set) Token: 0x06002D5B RID: 11611
 	int? SplineId { get; set; }
 
-	// Token: 0x1700066A RID: 1642
-	// (get) Token: 0x060059C5 RID: 22981
-	// (set) Token: 0x060059C6 RID: 22982
+	// Token: 0x1700068E RID: 1678
+	// (get) Token: 0x06002D5C RID: 11612
+	// (set) Token: 0x06002D5D RID: 11613
 	Dictionary<int, int> BuffIdLayers { get; set; }
 
-	// Token: 0x1700066B RID: 1643
-	// (get) Token: 0x060059C7 RID: 22983
-	// (set) Token: 0x060059C8 RID: 22984
+	// Token: 0x1700068F RID: 1679
+	// (get) Token: 0x06002D5E RID: 11614
+	// (set) Token: 0x06002D5F RID: 11615
 	Dictionary<int, int> AttributeMap { get; set; }
 
-	// Token: 0x1700066C RID: 1644
-	// (get) Token: 0x060059C9 RID: 22985
-	// (set) Token: 0x060059CA RID: 22986
+	// Token: 0x17000690 RID: 1680
+	// (get) Token: 0x06002D60 RID: 11616
+	// (set) Token: 0x06002D61 RID: 11617
 	[Nullable(1)]
 	Vector Position { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x1700066D RID: 1645
-	// (get) Token: 0x060059CB RID: 22987
-	// (set) Token: 0x060059CC RID: 22988
+	// Token: 0x17000691 RID: 1681
+	// (get) Token: 0x06002D62 RID: 11618
+	// (set) Token: 0x06002D63 RID: 11619
 	[Nullable(1)]
 	Rotator Rotation { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x060059CD RID: 22989
+	// Token: 0x06002D64 RID: 11620
 	[NullableContext(1)]
 	void Update(IFinalBattleCombatInfo other);
 
-	// Token: 0x060059CE RID: 22990
+	// Token: 0x06002D65 RID: 11621
 	bool IsValid();
 
-	// Token: 0x060059CF RID: 22991
+	// Token: 0x06002D66 RID: 11622
 	void Reset();
 
-	// Token: 0x060059D0 RID: 22992
+	// Token: 0x06002D67 RID: 11623
 	void Release();
 
-	// Token: 0x060059D1 RID: 22993
+	// Token: 0x06002D68 RID: 11624
 	[NullableContext(1)]
 	IFinalBattleCombatInfo Clone();
 }

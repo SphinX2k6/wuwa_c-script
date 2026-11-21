@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001948 RID: 6472
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AD3 RID: 6867
 	public class ICustomAlertValueChangeSpeed : IAlertValueSpeedChangeType
 	{
-		// Token: 0x06008AB1 RID: 35505 RVA: 0x0014684C File Offset: 0x00144A4C
+		// Token: 0x060091E5 RID: 37349 RVA: 0x00156248 File Offset: 0x00154448
 		private ICustomAlertValueChangeSpeed_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008AB2 RID: 35506 RVA: 0x00146884 File Offset: 0x00144A84
+		// Token: 0x060091E6 RID: 37350 RVA: 0x00156280 File Offset: 0x00154480
 		public static ICustomAlertValueChangeSpeed Create([Nullable(2)] ICustomAlertValueChangeSpeed instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008AB3 RID: 35507 RVA: 0x00146897 File Offset: 0x00144A97
+		// Token: 0x060091E7 RID: 37351 RVA: 0x00156293 File Offset: 0x00154493
 		public static ICustomAlertValueChangeSpeed CreateFromSetValue([Nullable(2)] ICustomAlertValueChangeSpeed_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008AB4 RID: 35508 RVA: 0x001468AA File Offset: 0x00144AAA
+		// Token: 0x060091E8 RID: 37352 RVA: 0x001562A6 File Offset: 0x001544A6
 		public new ICustomAlertValueChangeSpeed_SetValue ToSetValue()
 		{
 			return new ICustomAlertValueChangeSpeed_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CC1 RID: 11457
-		// (get) Token: 0x06008AB5 RID: 35509 RVA: 0x001468C9 File Offset: 0x00144AC9
-		// (set) Token: 0x06008AB6 RID: 35510 RVA: 0x001468F4 File Offset: 0x00144AF4
+		// Token: 0x17002EC2 RID: 11970
+		// (get) Token: 0x060091E9 RID: 37353 RVA: 0x001562C5 File Offset: 0x001544C5
+		// (set) Token: 0x060091EA RID: 37354 RVA: 0x001562F0 File Offset: 0x001544F0
 		public override EValueChangeType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CC2 RID: 11458
-		// (get) Token: 0x06008AB7 RID: 35511 RVA: 0x00146902 File Offset: 0x00144B02
-		// (set) Token: 0x06008AB8 RID: 35512 RVA: 0x00146931 File Offset: 0x00144B31
+		// Token: 0x17002EC3 RID: 11971
+		// (get) Token: 0x060091EB RID: 37355 RVA: 0x001562FE File Offset: 0x001544FE
+		// (set) Token: 0x060091EC RID: 37356 RVA: 0x0015632D File Offset: 0x0015452D
 		public virtual float CustomValue
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040056A4 RID: 22180
+		// Token: 0x04005AF7 RID: 23287
 		[Nullable(2)]
 		protected new ICustomAlertValueChangeSpeed FbInstance;
 
-		// Token: 0x040056A5 RID: 22181
+		// Token: 0x04005AF8 RID: 23288
 		[Nullable(2)]
 		protected new ICustomAlertValueChangeSpeed_SetValue PocoInterface;
 	}

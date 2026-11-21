@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063D7 RID: 25559
+	// Token: 0x02006A57 RID: 27223
 	public class IClientModifyTargetT
 	{
-		// Token: 0x1700BE67 RID: 48743
-		// (get) Token: 0x0602C363 RID: 181091 RVA: 0x00611ADA File Offset: 0x0060FCDA
-		// (set) Token: 0x0602C364 RID: 181092 RVA: 0x00611AE2 File Offset: 0x0060FCE2
+		// Token: 0x1700C801 RID: 51201
+		// (get) Token: 0x0602EB39 RID: 191289 RVA: 0x0065D966 File Offset: 0x0065BB66
+		// (set) Token: 0x0602EB3A RID: 191290 RVA: 0x0065D96E File Offset: 0x0065BB6E
 		public EClientModifyTargetType Type { get; set; }
 
-		// Token: 0x0602C365 RID: 181093 RVA: 0x00611AEB File Offset: 0x0060FCEB
+		// Token: 0x0602EB3B RID: 191291 RVA: 0x0065D977 File Offset: 0x0065BB77
 		public IClientModifyTargetT()
 		{
 			this.Type = EClientModifyTargetType.Self;

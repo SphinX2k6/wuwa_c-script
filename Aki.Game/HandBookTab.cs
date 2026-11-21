@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001E4D RID: 7757
+// Token: 0x0200130F RID: 4879
 internal class HandBookTab : GridProxyAbstract<int>
 {
-	// Token: 0x0600EBEA RID: 60394 RVA: 0x003801C8 File Offset: 0x0037E3C8
+	// Token: 0x0600C009 RID: 49161 RVA: 0x0038BE60 File Offset: 0x0038A060
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ internal class HandBookTab : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0600EBEB RID: 60395 RVA: 0x00380248 File Offset: 0x0037E448
+	// Token: 0x0600C00A RID: 49162 RVA: 0x0038BEE0 File Offset: 0x0038A0E0
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		if (data == 0)
@@ -44,7 +44,7 @@ internal class HandBookTab : GridProxyAbstract<int>
 		this.CurrentType = data;
 	}
 
-	// Token: 0x0600EBEC RID: 60396 RVA: 0x003802CB File Offset: 0x0037E4CB
+	// Token: 0x0600C00B RID: 49163 RVA: 0x0038BF63 File Offset: 0x0038A163
 	private void OnToggleClick(EToggleState toggleState)
 	{
 		Action<UUIExtendToggle, int> onClickCallBack = this.OnClickCallBack;
@@ -55,16 +55,16 @@ internal class HandBookTab : GridProxyAbstract<int>
 		onClickCallBack(base.GetExtendToggle(1), this.CurrentType);
 	}
 
-	// Token: 0x0600EBED RID: 60397 RVA: 0x003802EA File Offset: 0x0037E4EA
+	// Token: 0x0600C00C RID: 49164 RVA: 0x0038BF82 File Offset: 0x0038A182
 	public void SelectToggle()
 	{
 		base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_Checked, true, false, false);
 	}
 
-	// Token: 0x04006D69 RID: 28009
+	// Token: 0x04006E4A RID: 28234
 	private int CurrentType;
 
-	// Token: 0x04006D6A RID: 28010
+	// Token: 0x04006E4B RID: 28235
 	[Nullable(new byte[]
 	{
 		2,
@@ -72,16 +72,16 @@ internal class HandBookTab : GridProxyAbstract<int>
 	})]
 	public Action<UUIExtendToggle, int> OnClickCallBack;
 
-	// Token: 0x02008402 RID: 33794
+	// Token: 0x02007587 RID: 30087
 	private class EHandBookTabDefine
 	{
-		// Token: 0x0402AF88 RID: 176008
+		// Token: 0x040262AC RID: 156332
 		public const int Sprite = 0;
 
-		// Token: 0x0402AF89 RID: 176009
+		// Token: 0x040262AD RID: 156333
 		public const int Toggle = 1;
 
-		// Token: 0x0402AF8A RID: 176010
+		// Token: 0x040262AE RID: 156334
 		public const int RedDotItem = 2;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E8E RID: 24206
+	// Token: 0x020064D1 RID: 25809
 	public class TGravityDirectionUnion
 	{
-		// Token: 0x1700B4DB RID: 46299
-		// (get) Token: 0x0602973E RID: 169790 RVA: 0x005AE1C6 File Offset: 0x005AC3C6
-		// (set) Token: 0x0602973F RID: 169791 RVA: 0x005AE1CE File Offset: 0x005AC3CE
+		// Token: 0x1700BE46 RID: 48710
+		// (get) Token: 0x0602BDE6 RID: 179686 RVA: 0x005F716A File Offset: 0x005F536A
+		// (set) Token: 0x0602BDE7 RID: 179687 RVA: 0x005F7172 File Offset: 0x005F5372
 		public TGravityDirection Type { get; set; }
 
-		// Token: 0x1700B4DC RID: 46300
-		// (get) Token: 0x06029740 RID: 169792 RVA: 0x005AE1D7 File Offset: 0x005AC3D7
-		// (set) Token: 0x06029741 RID: 169793 RVA: 0x005AE1DF File Offset: 0x005AC3DF
+		// Token: 0x1700BE47 RID: 48711
+		// (get) Token: 0x0602BDE8 RID: 179688 RVA: 0x005F717B File Offset: 0x005F537B
+		// (set) Token: 0x0602BDE9 RID: 179689 RVA: 0x005F7183 File Offset: 0x005F5383
 		public object Value { get; set; }
 
-		// Token: 0x06029742 RID: 169794 RVA: 0x005AE1E8 File Offset: 0x005AC3E8
+		// Token: 0x0602BDEA RID: 179690 RVA: 0x005F718C File Offset: 0x005F538C
 		public TGravityDirectionUnion()
 		{
 			this.Type = TGravityDirection.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06029743 RID: 169795 RVA: 0x005AE1FE File Offset: 0x005AC3FE
+		// Token: 0x0602BDEB RID: 179691 RVA: 0x005F71A2 File Offset: 0x005F53A2
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06029744 RID: 169796 RVA: 0x005AE210 File Offset: 0x005AC410
+		// Token: 0x0602BDEC RID: 179692 RVA: 0x005F71B4 File Offset: 0x005F53B4
 		public IGravityDirectionByEntityGravityT AsIGravityDirectionByEntityGravity()
 		{
 			return this.As<IGravityDirectionByEntityGravityT>();
 		}
 
-		// Token: 0x06029745 RID: 169797 RVA: 0x005AE218 File Offset: 0x005AC418
+		// Token: 0x0602BDED RID: 179693 RVA: 0x005F71BC File Offset: 0x005F53BC
 		public static TGravityDirectionUnion FromIGravityDirectionByEntityGravity(IGravityDirectionByEntityGravityT _igravitydirectionbyentitygravity)
 		{
 			return new TGravityDirectionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029746 RID: 169798 RVA: 0x005AE22D File Offset: 0x005AC42D
+		// Token: 0x0602BDEE RID: 179694 RVA: 0x005F71D1 File Offset: 0x005F53D1
 		public IGravityDirectionSelfRotationT AsIGravityDirectionSelfRotation()
 		{
 			return this.As<IGravityDirectionSelfRotationT>();
 		}
 
-		// Token: 0x06029747 RID: 169799 RVA: 0x005AE235 File Offset: 0x005AC435
+		// Token: 0x0602BDEF RID: 179695 RVA: 0x005F71D9 File Offset: 0x005F53D9
 		public static TGravityDirectionUnion FromIGravityDirectionSelfRotation(IGravityDirectionSelfRotationT _igravitydirectionselfrotation)
 		{
 			return new TGravityDirectionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029748 RID: 169800 RVA: 0x005AE24A File Offset: 0x005AC44A
+		// Token: 0x0602BDF0 RID: 179696 RVA: 0x005F71EE File Offset: 0x005F53EE
 		public IGravityDirectionVectorInfoT AsIGravityDirectionVectorInfo()
 		{
 			return this.As<IGravityDirectionVectorInfoT>();
 		}
 
-		// Token: 0x06029749 RID: 169801 RVA: 0x005AE252 File Offset: 0x005AC452
+		// Token: 0x0602BDF1 RID: 179697 RVA: 0x005F71F6 File Offset: 0x005F53F6
 		public static TGravityDirectionUnion FromIGravityDirectionVectorInfo(IGravityDirectionVectorInfoT _igravitydirectionvectorinfo)
 		{
 			return new TGravityDirectionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x0602974A RID: 169802 RVA: 0x005AE267 File Offset: 0x005AC467
+		// Token: 0x0602BDF2 RID: 179698 RVA: 0x005F720B File Offset: 0x005F540B
 		public IGravityDirectionWorldAxisT AsIGravityDirectionWorldAxis()
 		{
 			return this.As<IGravityDirectionWorldAxisT>();
 		}
 
-		// Token: 0x0602974B RID: 169803 RVA: 0x005AE26F File Offset: 0x005AC46F
+		// Token: 0x0602BDF3 RID: 179699 RVA: 0x005F7213 File Offset: 0x005F5413
 		public static TGravityDirectionUnion FromIGravityDirectionWorldAxis(IGravityDirectionWorldAxisT _igravitydirectionworldaxis)
 		{
 			return new TGravityDirectionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x0602974C RID: 169804 RVA: 0x005AE284 File Offset: 0x005AC484
+		// Token: 0x0602BDF4 RID: 179700 RVA: 0x005F7228 File Offset: 0x005F5428
 		public static int Pack(FlatBufferBuilder builder, TGravityDirectionUnion _o)
 		{
 			switch (_o.Type)

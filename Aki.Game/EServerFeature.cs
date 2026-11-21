@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001825 RID: 6181
+// Token: 0x02000CDE RID: 3294
 public enum EServerFeature
 {
-	// Token: 0x040051F7 RID: 20983
+	// Token: 0x040052A2 RID: 21154
 	None,
-	// Token: 0x040051F8 RID: 20984
+	// Token: 0x040052A3 RID: 21155
 	Other
 }

@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 {
-	// Token: 0x02005685 RID: 22149
+	// Token: 0x0200465B RID: 18011
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,19 +15,19 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 	})]
 	public class ComposeMediumItemGrid : LoopScrollMediumItemGrid<IBaseItemData>
 	{
-		// Token: 0x060385D3 RID: 230867 RVA: 0x00D61A0E File Offset: 0x00D5FC0E
+		// Token: 0x0602D4D0 RID: 185552 RVA: 0x00CAFB5E File Offset: 0x00CADD5E
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
 		}
 
-		// Token: 0x060385D4 RID: 230868 RVA: 0x00D61A18 File Offset: 0x00D5FC18
+		// Token: 0x0602D4D1 RID: 185553 RVA: 0x00CAFB68 File Offset: 0x00CADD68
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x060385D5 RID: 230869 RVA: 0x00D61A24 File Offset: 0x00D5FC24
+		// Token: 0x0602D4D2 RID: 185554 RVA: 0x00CAFB74 File Offset: 0x00CADD74
 		protected override void OnRefresh(IBaseItemData data, bool isSelected, int gridIndex)
 		{
 			int configId = data.ConfigId;

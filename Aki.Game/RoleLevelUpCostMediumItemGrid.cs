@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x02002882 RID: 10370
+// Token: 0x02001DFD RID: 7677
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -12,7 +12,7 @@ using UnrealEngine;
 })]
 public class RoleLevelUpCostMediumItemGrid : LoopScrollMediumItemGrid<ISelectedData>
 {
-	// Token: 0x0601557A RID: 87418 RVA: 0x005632DC File Offset: 0x005614DC
+	// Token: 0x06012F78 RID: 77688 RVA: 0x0058E038 File Offset: 0x0058C238
 	protected override void OnRefresh(ISelectedData data, bool isSelected, int gridIndex)
 	{
 		int selectedCount = data.SelectedCount;
@@ -45,7 +45,7 @@ public class RoleLevelUpCostMediumItemGrid : LoopScrollMediumItemGrid<ISelectedD
 		base.Apply<PropMediumItemGrid>(parameters);
 	}
 
-	// Token: 0x0601557B RID: 87419 RVA: 0x00563385 File Offset: 0x00561585
+	// Token: 0x06012F79 RID: 77689 RVA: 0x0058E0E1 File Offset: 0x0058C2E1
 	public UUIItem GetUiItemForGuide()
 	{
 		UUIExtendToggle itemGridExtendToggle = this.GetItemGridExtendToggle();

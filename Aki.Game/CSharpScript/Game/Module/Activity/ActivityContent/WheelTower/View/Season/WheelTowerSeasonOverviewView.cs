@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Season
 {
-	// Token: 0x02005F6C RID: 24428
+	// Token: 0x02004F53 RID: 20307
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WheelTowerSeasonOverviewView : UiViewBase
 	{
-		// Token: 0x0603E052 RID: 254034 RVA: 0x00EF8F34 File Offset: 0x00EF7134
+		// Token: 0x06032FEC RID: 208876 RVA: 0x00E4AC1C File Offset: 0x00E48E1C
 		public WheelTowerSeasonOverviewView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E053 RID: 254035 RVA: 0x00EF8F40 File Offset: 0x00EF7140
+		// Token: 0x06032FED RID: 208877 RVA: 0x00E4AC28 File Offset: 0x00E48E28
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E054 RID: 254036 RVA: 0x00EF8FCC File Offset: 0x00EF71CC
+		// Token: 0x06032FEE RID: 208878 RVA: 0x00E4ACB4 File Offset: 0x00E48EB4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			WheelTowerSeasonOverviewView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E055 RID: 254037 RVA: 0x00EF9010 File Offset: 0x00EF7210
+		// Token: 0x06032FEF RID: 208879 RVA: 0x00E4ACF8 File Offset: 0x00E48EF8
 		private UniTask RefreshSeasonScrollAsync()
 		{
 			WheelTowerSeasonOverviewView.<RefreshSeasonScrollAsync>d__6 <RefreshSeasonScrollAsync>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			return <RefreshSeasonScrollAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E056 RID: 254038 RVA: 0x00EF9054 File Offset: 0x00EF7254
+		// Token: 0x06032FF0 RID: 208880 RVA: 0x00E4AD3C File Offset: 0x00E48F3C
 		private void SetSelectedSeasonId(int seasonId)
 		{
 			if (this.CurrentSelectedSeasonId != 0 && this.CurrentSelectedSeasonId != seasonId)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			this.CurrentSelectedSeasonId = seasonId;
 		}
 
-		// Token: 0x0603E057 RID: 254039 RVA: 0x00EF90C4 File Offset: 0x00EF72C4
+		// Token: 0x06032FF1 RID: 208881 RVA: 0x00E4ADAC File Offset: 0x00E48FAC
 		private WheelTowerSeasonOverviewItem CreateItem()
 		{
 			WheelTowerSeasonOverviewItem wheelTowerSeasonOverviewItem = new WheelTowerSeasonOverviewItem();
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			return wheelTowerSeasonOverviewItem;
 		}
 
-		// Token: 0x0603E058 RID: 254040 RVA: 0x00EF90E0 File Offset: 0x00EF72E0
+		// Token: 0x06032FF2 RID: 208882 RVA: 0x00E4ADC8 File Offset: 0x00E48FC8
 		private void OnSeasonItemClick(int seasonId)
 		{
 			WheelTowerData activityData = WheelTowerModel.Instance.ActivityData;
@@ -122,13 +122,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			WheelTowerController.Instance.OpenSeasonMedalView(seasonId, false);
 		}
 
-		// Token: 0x0603E059 RID: 254041 RVA: 0x00EF915A File Offset: 0x00EF735A
+		// Token: 0x06032FF3 RID: 208883 RVA: 0x00E4AE42 File Offset: 0x00E49042
 		private void ClickCloseCallback()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0402061F RID: 132639
+		// Token: 0x0401B0F1 RID: 110833
 		[Nullable(new byte[]
 		{
 			2,
@@ -136,11 +136,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 		})]
 		private GenericScrollViewNew<WheelTowerSeasonOverviewItem, int> SeasonScroll;
 
-		// Token: 0x04020620 RID: 132640
+		// Token: 0x0401B0F2 RID: 110834
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04020621 RID: 132641
+		// Token: 0x0401B0F3 RID: 110835
 		private int CurrentSelectedSeasonId;
 	}
 }

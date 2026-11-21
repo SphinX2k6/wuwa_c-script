@@ -17,43 +17,43 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063A4 RID: 25508
+	// Token: 0x02005322 RID: 21282
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ActivityMowingRiskController : ActivityControllerBase
 	{
-		// Token: 0x060402A9 RID: 262825 RVA: 0x00F89775 File Offset: 0x00F87975
+		// Token: 0x06034F6A RID: 216938 RVA: 0x00ED06AD File Offset: 0x00ECE8AD
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x060402AA RID: 262826 RVA: 0x00F89777 File Offset: 0x00F87977
+		// Token: 0x06034F6B RID: 216939 RVA: 0x00ED06AF File Offset: 0x00ECE8AF
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_ActivityMowingRisk";
 		}
 
-		// Token: 0x060402AB RID: 262827 RVA: 0x00F8977E File Offset: 0x00F8797E
+		// Token: 0x06034F6C RID: 216940 RVA: 0x00ED06B6 File Offset: 0x00ECE8B6
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new ActivityMowingRiskSubView();
 		}
 
-		// Token: 0x060402AC RID: 262828 RVA: 0x00F89785 File Offset: 0x00F87985
+		// Token: 0x06034F6D RID: 216941 RVA: 0x00ED06BD File Offset: 0x00ECE8BD
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			MowingRiskModel.Instance.InitContext();
 			return MowingRiskModel.Instance.ActivityData;
 		}
 
-		// Token: 0x060402AD RID: 262829 RVA: 0x00F8979B File Offset: 0x00F8799B
+		// Token: 0x06034F6E RID: 216942 RVA: 0x00ED06D3 File Offset: 0x00ECE8D3
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x060402AE RID: 262830 RVA: 0x00F897A0 File Offset: 0x00F879A0
+		// Token: 0x06034F6F RID: 216943 RVA: 0x00ED06D8 File Offset: 0x00ECE8D8
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.RiskHarvestEndNotify, new Action<IMessage, Net.CallbackStatus>(this.HandleRiskHarvestEndNotify));
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			Net.Instance.Register(ENotifyMessageId.RiskHarvestActivityUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.HandleRiskHarvestActivityUpdateNotify));
 		}
 
-		// Token: 0x060402AF RID: 262831 RVA: 0x00F89858 File Offset: 0x00F87A58
+		// Token: 0x06034F70 RID: 216944 RVA: 0x00ED0790 File Offset: 0x00ECE990
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.RiskHarvestEndNotify);
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			Net.Instance.UnRegister(ENotifyMessageId.RiskHarvestActivityUpdateNotify);
 		}
 
-		// Token: 0x060402B0 RID: 262832 RVA: 0x00F898C8 File Offset: 0x00F87AC8
+		// Token: 0x06034F71 RID: 216945 RVA: 0x00ED0800 File Offset: 0x00ECEA00
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.EnterInstanceDungeon, new Action(this.HandleEnterInstanceDungeon));
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			EventSystem.Instance.Add(EEventName.MowingRiskOnBuffTipsAfterDestroy, new Action(this.HandleMowingRiskOnBuffTipsAfterDestroy));
 		}
 
-		// Token: 0x060402B1 RID: 262833 RVA: 0x00F89964 File Offset: 0x00F87B64
+		// Token: 0x06034F72 RID: 216946 RVA: 0x00ED089C File Offset: 0x00ECEA9C
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.EnterInstanceDungeon, new Action(this.HandleEnterInstanceDungeon));
@@ -95,13 +95,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			EventSystem.Instance.Remove(EEventName.MowingRiskOnBuffTipsAfterDestroy, new Action(this.HandleMowingRiskOnBuffTipsAfterDestroy));
 		}
 
-		// Token: 0x060402B2 RID: 262834 RVA: 0x00F899FD File Offset: 0x00F87BFD
+		// Token: 0x06034F73 RID: 216947 RVA: 0x00ED0935 File Offset: 0x00ECEB35
 		public override bool GetActivityLevelUnlockState(int instanceId)
 		{
 			return MowingRiskModel.Instance.IsInstanceUnlockedByInstanceId(instanceId);
 		}
 
-		// Token: 0x060402B3 RID: 262835 RVA: 0x00F89A0C File Offset: 0x00F87C0C
+		// Token: 0x06034F74 RID: 216948 RVA: 0x00ED0944 File Offset: 0x00ECEB44
 		[NullableContext(2)]
 		private void HandleRiskHarvestEndNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.TryOpenSettleViewAsync(riskHarvestEndNotify).Forget();
 		}
 
-		// Token: 0x060402B4 RID: 262836 RVA: 0x00F89A4C File Offset: 0x00F87C4C
+		// Token: 0x06034F75 RID: 216949 RVA: 0x00ED0984 File Offset: 0x00ECEB84
 		[NullableContext(2)]
 		private void HandleRiskHarvestInstUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			MowingRiskModel.Instance.SyncProtocolRiskHarvestInstUpdateNotify(riskHarvestInstUpdateNotify);
 		}
 
-		// Token: 0x060402B5 RID: 262837 RVA: 0x00F89A74 File Offset: 0x00F87C74
+		// Token: 0x06034F76 RID: 216950 RVA: 0x00ED09AC File Offset: 0x00ECEBAC
 		[NullableContext(2)]
 		private void HandleRiskHarvestArtifactNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			MowingRiskModel.Instance.SyncProtocolRiskHarvestArtifactNotify(riskHarvestArtifactNotify);
 		}
 
-		// Token: 0x060402B6 RID: 262838 RVA: 0x00F89A9C File Offset: 0x00F87C9C
+		// Token: 0x06034F77 RID: 216951 RVA: 0x00ED09D4 File Offset: 0x00ECEBD4
 		[NullableContext(2)]
 		private void HandleRiskHarvestBuffUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			EventSystem.Instance.Emit<IMowingRiskInBattleRootData>(EEventName.MowingRiskInBattleRootUpdate, instance.BuildInBattleRootData());
 		}
 
-		// Token: 0x060402B7 RID: 262839 RVA: 0x00F89AE0 File Offset: 0x00F87CE0
+		// Token: 0x06034F78 RID: 216952 RVA: 0x00ED0A18 File Offset: 0x00ECEC18
 		[NullableContext(2)]
 		private void HandleRiskHarvestBuffUnlockNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			MowingRiskModel.Instance.SyncProtocolRiskHarvestBuffUnlockNotify(riskHarvestBuffUnlockNotify);
 		}
 
-		// Token: 0x060402B8 RID: 262840 RVA: 0x00F89B08 File Offset: 0x00F87D08
+		// Token: 0x06034F79 RID: 216953 RVA: 0x00ED0A40 File Offset: 0x00ECEC40
 		[NullableContext(2)]
 		private void HandleRiskHarvestActivityUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			EventSystem.Instance.Emit(EEventName.MowingRiskOnRefreshRewardRedDot);
 		}
 
-		// Token: 0x060402B9 RID: 262841 RVA: 0x00F89B88 File Offset: 0x00F87D88
+		// Token: 0x06034F7A RID: 216954 RVA: 0x00ED0AC0 File Offset: 0x00ECECC0
 		public UniTask RequestRiskHarvestInstRewardRequest(int id)
 		{
 			ActivityMowingRiskController.<RequestRiskHarvestInstRewardRequest>d__17 <RequestRiskHarvestInstRewardRequest>d__;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <RequestRiskHarvestInstRewardRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060402BA RID: 262842 RVA: 0x00F89BCC File Offset: 0x00F87DCC
+		// Token: 0x06034F7B RID: 216955 RVA: 0x00ED0B04 File Offset: 0x00ECED04
 		public UniTask RequestRiskHarvestScoreRewardRequest(int id)
 		{
 			ActivityMowingRiskController.<RequestRiskHarvestScoreRewardRequest>d__18 <RequestRiskHarvestScoreRewardRequest>d__;
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <RequestRiskHarvestScoreRewardRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060402BB RID: 262843 RVA: 0x00F89C10 File Offset: 0x00F87E10
+		// Token: 0x06034F7C RID: 216956 RVA: 0x00ED0B48 File Offset: 0x00ECED48
 		public UniTask RequestRiskHarvestStarRewardRequest(int id, int index)
 		{
 			ActivityMowingRiskController.<RequestRiskHarvestStarRewardRequest>d__19 <RequestRiskHarvestStarRewardRequest>d__;
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <RequestRiskHarvestStarRewardRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060402BC RID: 262844 RVA: 0x00F89C5C File Offset: 0x00F87E5C
+		// Token: 0x06034F7D RID: 216957 RVA: 0x00ED0B94 File Offset: 0x00ECED94
 		public UniTask RequestRiskHarvestSettleRequest()
 		{
 			ActivityMowingRiskController.<RequestRiskHarvestSettleRequest>d__20 <RequestRiskHarvestSettleRequest>d__;
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <RequestRiskHarvestSettleRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060402BD RID: 262845 RVA: 0x00F89C97 File Offset: 0x00F87E97
+		// Token: 0x06034F7E RID: 216958 RVA: 0x00ED0BCF File Offset: 0x00ECEDCF
 		private void HandleLeaveInstanceDungeonConfirm()
 		{
 			if (!this.CheckInInstanceDungeon())
@@ -222,12 +222,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.RequestRiskHarvestSettleRequest().Forget();
 		}
 
-		// Token: 0x060402BE RID: 262846 RVA: 0x00F89CAD File Offset: 0x00F87EAD
+		// Token: 0x06034F7F RID: 216959 RVA: 0x00ED0BE5 File Offset: 0x00ECEDE5
 		private void HandleEnterInstanceDungeon()
 		{
 		}
 
-		// Token: 0x060402BF RID: 262847 RVA: 0x00F89CAF File Offset: 0x00F87EAF
+		// Token: 0x06034F80 RID: 216960 RVA: 0x00ED0BE7 File Offset: 0x00ECEDE7
 		private void HandleLeaveInstanceDungeon()
 		{
 			if (!this.CheckInInstanceDungeon())
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			MowingRiskModel.Instance.ResetCacheInBattle();
 		}
 
-		// Token: 0x060402C0 RID: 262848 RVA: 0x00F89CDA File Offset: 0x00F87EDA
+		// Token: 0x06034F81 RID: 216961 RVA: 0x00ED0C12 File Offset: 0x00ECEE12
 		private void HandleWorldDoneAndCloseLoading()
 		{
 			if (!this.CheckInInstanceDungeon())
@@ -259,18 +259,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			beInInstancePromise.SetResult();
 		}
 
-		// Token: 0x060402C1 RID: 262849 RVA: 0x00F89D16 File Offset: 0x00F87F16
+		// Token: 0x06034F82 RID: 216962 RVA: 0x00ED0C4E File Offset: 0x00ECEE4E
 		private void HandleMowingRiskOnBuffTipsAfterDestroy()
 		{
 			this.TryOpenNewBuffTips();
 		}
 
-		// Token: 0x060402C2 RID: 262850 RVA: 0x00F89D1E File Offset: 0x00F87F1E
+		// Token: 0x06034F83 RID: 216963 RVA: 0x00ED0C56 File Offset: 0x00ECEE56
 		private void DumpNotifyMessage(object msg)
 		{
 		}
 
-		// Token: 0x060402C3 RID: 262851 RVA: 0x00F89D20 File Offset: 0x00F87F20
+		// Token: 0x06034F84 RID: 216964 RVA: 0x00ED0C58 File Offset: 0x00ECEE58
 		private void TryOpenNewBuffTips()
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.MowingBuffNewBuffTipsView) || !this.CheckInInstanceDungeon())
@@ -296,14 +296,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			}
 		}
 
-		// Token: 0x060402C4 RID: 262852 RVA: 0x00F89DC4 File Offset: 0x00F87FC4
+		// Token: 0x06034F85 RID: 216965 RVA: 0x00ED0CFC File Offset: 0x00ECEEFC
 		private void TryShowBuffBigTip(int buffId)
 		{
 			IMowingRiskInBattleBuffData extraParam = MowingRiskModel.Instance.BuildInBattleBuffDataById(buffId);
 			GenericPromptController.Instance.ShowPromptByItsType<IMowingRiskInBattleBuffData>(EPromptSubViewType.MowingRiskBuff, null, null, null, null, null, null, extraParam, null, false, null);
 		}
 
-		// Token: 0x060402C5 RID: 262853 RVA: 0x00F89E04 File Offset: 0x00F88004
+		// Token: 0x06034F86 RID: 216966 RVA: 0x00ED0D3C File Offset: 0x00ECEF3C
 		private UniTask TryOpenSettleViewAsync(RiskHarvestEndNotify message)
 		{
 			ActivityMowingRiskController.<TryOpenSettleViewAsync>d__29 <TryOpenSettleViewAsync>d__;
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <TryOpenSettleViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060402C6 RID: 262854 RVA: 0x00F89E50 File Offset: 0x00F88050
+		// Token: 0x06034F87 RID: 216967 RVA: 0x00ED0D88 File Offset: 0x00ECEF88
 		private void OpenAccumulatedScoreSettleView(RiskHarvestEndNotify message)
 		{
 			Action<int> onClickedCallback = delegate(int index)
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			};
 			Action<int> onClickedCallback2 = delegate(int _)
 			{
-				InstanceDungeonEntranceController.Instance.RestartInstanceDungeon().Forget<bool>();
+				InstanceDungeonEntranceController.Instance.RestartInstanceDungeon(false).Forget<bool>();
 			};
 			RewardExploreConfirmButtonData item2 = new RewardExploreConfirmButtonData
 			{
@@ -377,7 +377,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			}, null, null, null, null, null, null, null, null, null, accumulatedScoreData, titleTextId);
 		}
 
-		// Token: 0x060402C7 RID: 262855 RVA: 0x00F8A028 File Offset: 0x00F88228
+		// Token: 0x06034F88 RID: 216968 RVA: 0x00ED0F60 File Offset: 0x00ECF160
 		private unsafe void OpenNotAccumulatedScoreSettleView(RiskHarvestEndNotify message)
 		{
 			Action<int> onClickedCallback = delegate(int _)
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			};
 			Action<int> onClickedCallback2 = delegate(int _)
 			{
-				InstanceDungeonEntranceController.Instance.RestartInstanceDungeon().Forget<bool>();
+				InstanceDungeonEntranceController.Instance.RestartInstanceDungeon(false).Forget<bool>();
 			};
 			RewardExploreConfirmButtonData rewardExploreConfirmButtonData = new RewardExploreConfirmButtonData();
 			rewardExploreConfirmButtonData.ButtonTextId = "ConfirmBox_133_ButtonText_1";
@@ -446,7 +446,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			}, null, null, titleTextId);
 		}
 
-		// Token: 0x060402C8 RID: 262856 RVA: 0x00F8A250 File Offset: 0x00F88450
+		// Token: 0x06034F89 RID: 216969 RVA: 0x00ED1188 File Offset: 0x00ECF388
 		private UniTask WaitForBeInInstance()
 		{
 			ActivityMowingRiskController.<WaitForBeInInstance>d__32 <WaitForBeInInstance>d__;
@@ -457,7 +457,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <WaitForBeInInstance>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060402C9 RID: 262857 RVA: 0x00F8A294 File Offset: 0x00F88494
+		// Token: 0x06034F8A RID: 216970 RVA: 0x00ED11CC File Offset: 0x00ECF3CC
 		public bool CheckInInstanceDungeon()
 		{
 			if (GameModeController.Instance.IsInInstance())
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return false;
 		}
 
-		// Token: 0x060402CA RID: 262858 RVA: 0x00F8A2D8 File Offset: 0x00F884D8
+		// Token: 0x06034F8B RID: 216971 RVA: 0x00ED1210 File Offset: 0x00ECF410
 		public bool IsMowingRiskInstanceDungeon(int instanceId)
 		{
 			if (instanceId <= 0)
@@ -479,14 +479,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return config != null && config.GetValueOrDefault().InstSubType == 22;
 		}
 
-		// Token: 0x060402CB RID: 262859 RVA: 0x00F8A315 File Offset: 0x00F88515
+		// Token: 0x06034F8C RID: 216972 RVA: 0x00ED124D File Offset: 0x00ECF44D
 		[NullableContext(2)]
 		public string GetInstanceSubtitleTextIdByInstanceId(int id)
 		{
 			return MowingRiskModel.Instance.BuildInstanceSubtitleTextIdByInstanceId(id);
 		}
 
-		// Token: 0x060402CC RID: 262860 RVA: 0x00F8A322 File Offset: 0x00F88522
+		// Token: 0x06034F8D RID: 216973 RVA: 0x00ED125A File Offset: 0x00ECF45A
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -497,25 +497,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return MowingRiskModel.Instance.BuildInstanceSubtitleTextArgsByInstanceId(id);
 		}
 
-		// Token: 0x060402CD RID: 262861 RVA: 0x00F8A32F File Offset: 0x00F8852F
+		// Token: 0x06034F8E RID: 216974 RVA: 0x00ED1267 File Offset: 0x00ECF467
 		public bool CheckInstanceFinishedByInstanceId(int id)
 		{
 			return MowingRiskModel.Instance.CheckInstanceFinishedByInstanceId(id);
 		}
 
-		// Token: 0x060402CE RID: 262862 RVA: 0x00F8A33C File Offset: 0x00F8853C
+		// Token: 0x06034F8F RID: 216975 RVA: 0x00ED1274 File Offset: 0x00ECF474
 		public bool CheckInstanceUnlockByInstanceId(int id)
 		{
 			return MowingRiskModel.Instance.IsInstanceUnlockedByInstanceId(id);
 		}
 
-		// Token: 0x060402CF RID: 262863 RVA: 0x00F8A349 File Offset: 0x00F88549
+		// Token: 0x06034F90 RID: 216976 RVA: 0x00ED1281 File Offset: 0x00ECF481
 		public string GetInstanceLockTextIdByInstanceId(int id)
 		{
 			return MowingRiskModel.Instance.GetInstanceLockTextIdByInstanceId(id);
 		}
 
-		// Token: 0x060402D0 RID: 262864 RVA: 0x00F8A356 File Offset: 0x00F88556
+		// Token: 0x06034F91 RID: 216977 RVA: 0x00ED128E File Offset: 0x00ECF48E
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -526,7 +526,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return MowingRiskModel.Instance.GetLockTextArgsByInstanceId(id);
 		}
 
-		// Token: 0x060402D1 RID: 262865 RVA: 0x00F8A364 File Offset: 0x00F88564
+		// Token: 0x06034F92 RID: 216978 RVA: 0x00ED129C File Offset: 0x00ECF49C
 		public IInstanceDungeonEntranceViewSelectData GetEntranceViewDefaultSelectData(Dictionary<int, List<int>> instanceByTitleMap)
 		{
 			int seriesId = 0;
@@ -554,8 +554,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			};
 		}
 
-		// Token: 0x1700936D RID: 37741
-		// (get) Token: 0x060402D2 RID: 262866 RVA: 0x00F8A430 File Offset: 0x00F88630
+		// Token: 0x170066CF RID: 26319
+		// (get) Token: 0x06034F93 RID: 216979 RVA: 0x00ED1368 File Offset: 0x00ECF568
 		public static ActivityMowingRiskController Instance
 		{
 			get
@@ -564,7 +564,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			}
 		}
 
-		// Token: 0x060402D3 RID: 262867 RVA: 0x00F8A437 File Offset: 0x00F88637
+		// Token: 0x06034F94 RID: 216980 RVA: 0x00ED136F File Offset: 0x00ECF56F
 		public static ActivityMowingRiskController GetOrCreateInstance()
 		{
 			if (ActivityMowingRiskController._Instance == null)
@@ -574,7 +574,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return ActivityMowingRiskController._Instance;
 		}
 
-		// Token: 0x060402D4 RID: 262868 RVA: 0x00F8A44B File Offset: 0x00F8864B
+		// Token: 0x06034F95 RID: 216981 RVA: 0x00ED1383 File Offset: 0x00ECF583
 		public static bool CreateInstance()
 		{
 			if (ActivityMowingRiskController._Instance != null)
@@ -585,27 +585,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return true;
 		}
 
-		// Token: 0x060402D5 RID: 262869 RVA: 0x00F8A461 File Offset: 0x00F88661
+		// Token: 0x06034F96 RID: 216982 RVA: 0x00ED1399 File Offset: 0x00ECF599
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060402D6 RID: 262870 RVA: 0x00F8A463 File Offset: 0x00F88663
+		// Token: 0x06034F97 RID: 216983 RVA: 0x00ED139B File Offset: 0x00ECF59B
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityMowingRiskController._Instance = null;
 		}
 
-		// Token: 0x060402D7 RID: 262871 RVA: 0x00F8A46B File Offset: 0x00F8866B
+		// Token: 0x06034F98 RID: 216984 RVA: 0x00ED13A3 File Offset: 0x00ECF5A3
 		static ActivityMowingRiskController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityMowingRiskController.CreateStaticDefaultValue), new Action(ActivityMowingRiskController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040216C5 RID: 136901
+		// Token: 0x0401BFF4 RID: 114676
 		private CustomPromise BeInInstancePromise = new CustomPromise();
 
-		// Token: 0x040216C6 RID: 136902
+		// Token: 0x0401BFF5 RID: 114677
 		[Nullable(2)]
 		private static ActivityMowingRiskController _Instance;
 	}

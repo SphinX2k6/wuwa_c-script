@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001149 RID: 4425
+// Token: 0x020005FD RID: 1533
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerTeamTab : IBabelTowerTeamTab
 {
-	// Token: 0x17000A2D RID: 2605
-	// (get) Token: 0x06007439 RID: 29753 RVA: 0x0017BD6B File Offset: 0x00179F6B
-	// (set) Token: 0x0600743A RID: 29754 RVA: 0x0017BD73 File Offset: 0x00179F73
+	// Token: 0x17000A4D RID: 2637
+	// (get) Token: 0x060047D0 RID: 18384 RVA: 0x001848B9 File Offset: 0x00182AB9
+	// (set) Token: 0x060047D1 RID: 18385 RVA: 0x001848C1 File Offset: 0x00182AC1
 	public EBabelTowerTeamTabType TabType { get; set; }
 
-	// Token: 0x17000A2E RID: 2606
-	// (get) Token: 0x0600743B RID: 29755 RVA: 0x0017BD7C File Offset: 0x00179F7C
-	// (set) Token: 0x0600743C RID: 29756 RVA: 0x0017BD84 File Offset: 0x00179F84
+	// Token: 0x17000A4E RID: 2638
+	// (get) Token: 0x060047D2 RID: 18386 RVA: 0x001848CA File Offset: 0x00182ACA
+	// (set) Token: 0x060047D3 RID: 18387 RVA: 0x001848D2 File Offset: 0x00182AD2
 	public string Title { get; set; }
 }

@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070F5 RID: 28917
+	// Token: 0x020078C1 RID: 30913
 	public class IShowTalkCameraMotionTweenT
 	{
-		// Token: 0x1700D6F8 RID: 55032
-		// (get) Token: 0x06033425 RID: 209957 RVA: 0x006E9656 File Offset: 0x006E7856
-		// (set) Token: 0x06033426 RID: 209958 RVA: 0x006E965E File Offset: 0x006E785E
+		// Token: 0x1700E2DB RID: 58075
+		// (get) Token: 0x060366C7 RID: 222919 RVA: 0x00749C62 File Offset: 0x00747E62
+		// (set) Token: 0x060366C8 RID: 222920 RVA: 0x00749C6A File Offset: 0x00747E6A
 		public EShowTalkCameraMotionType Type { get; set; }
 
-		// Token: 0x1700D6F9 RID: 55033
-		// (get) Token: 0x06033427 RID: 209959 RVA: 0x006E9667 File Offset: 0x006E7867
-		// (set) Token: 0x06033428 RID: 209960 RVA: 0x006E966F File Offset: 0x006E786F
+		// Token: 0x1700E2DC RID: 58076
+		// (get) Token: 0x060366C9 RID: 222921 RVA: 0x00749C73 File Offset: 0x00747E73
+		// (set) Token: 0x060366CA RID: 222922 RVA: 0x00749C7B File Offset: 0x00747E7B
 		public ICameraParamsT Start { get; set; }
 
-		// Token: 0x1700D6FA RID: 55034
-		// (get) Token: 0x06033429 RID: 209961 RVA: 0x006E9678 File Offset: 0x006E7878
-		// (set) Token: 0x0603342A RID: 209962 RVA: 0x006E9680 File Offset: 0x006E7880
+		// Token: 0x1700E2DD RID: 58077
+		// (get) Token: 0x060366CB RID: 222923 RVA: 0x00749C84 File Offset: 0x00747E84
+		// (set) Token: 0x060366CC RID: 222924 RVA: 0x00749C8C File Offset: 0x00747E8C
 		public ICameraParamsT End { get; set; }
 
-		// Token: 0x1700D6FB RID: 55035
-		// (get) Token: 0x0603342B RID: 209963 RVA: 0x006E9689 File Offset: 0x006E7889
-		// (set) Token: 0x0603342C RID: 209964 RVA: 0x006E9691 File Offset: 0x006E7891
+		// Token: 0x1700E2DE RID: 58078
+		// (get) Token: 0x060366CD RID: 222925 RVA: 0x00749C95 File Offset: 0x00747E95
+		// (set) Token: 0x060366CE RID: 222926 RVA: 0x00749C9D File Offset: 0x00747E9D
 		public float Duration { get; set; }
 
-		// Token: 0x1700D6FC RID: 55036
-		// (get) Token: 0x0603342D RID: 209965 RVA: 0x006E969A File Offset: 0x006E789A
-		// (set) Token: 0x0603342E RID: 209966 RVA: 0x006E96A2 File Offset: 0x006E78A2
+		// Token: 0x1700E2DF RID: 58079
+		// (get) Token: 0x060366CF RID: 222927 RVA: 0x00749CA6 File Offset: 0x00747EA6
+		// (set) Token: 0x060366D0 RID: 222928 RVA: 0x00749CAE File Offset: 0x00747EAE
 		public EEaseType EaseType { get; set; }
 
-		// Token: 0x1700D6FD RID: 55037
-		// (get) Token: 0x0603342F RID: 209967 RVA: 0x006E96AB File Offset: 0x006E78AB
-		// (set) Token: 0x06033430 RID: 209968 RVA: 0x006E96B3 File Offset: 0x006E78B3
+		// Token: 0x1700E2E0 RID: 58080
+		// (get) Token: 0x060366D1 RID: 222929 RVA: 0x00749CB7 File Offset: 0x00747EB7
+		// (set) Token: 0x060366D2 RID: 222930 RVA: 0x00749CBF File Offset: 0x00747EBF
 		public IFlowCameraShakeT CamShake { get; set; }
 
-		// Token: 0x1700D6FE RID: 55038
-		// (get) Token: 0x06033431 RID: 209969 RVA: 0x006E96BC File Offset: 0x006E78BC
-		// (set) Token: 0x06033432 RID: 209970 RVA: 0x006E96C4 File Offset: 0x006E78C4
+		// Token: 0x1700E2E1 RID: 58081
+		// (get) Token: 0x060366D3 RID: 222931 RVA: 0x00749CC8 File Offset: 0x00747EC8
+		// (set) Token: 0x060366D4 RID: 222932 RVA: 0x00749CD0 File Offset: 0x00747ED0
 		public byte NullMask { get; set; }
 
-		// Token: 0x06033433 RID: 209971 RVA: 0x006E96CD File Offset: 0x006E78CD
+		// Token: 0x060366D5 RID: 222933 RVA: 0x00749CD9 File Offset: 0x00747ED9
 		public IShowTalkCameraMotionTweenT()
 		{
 			this.Type = EShowTalkCameraMotionType.Preset;

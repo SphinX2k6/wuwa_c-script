@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E2E RID: 7726
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002061 RID: 8289
 	public class ISetMotorSpeedType
 	{
-		// Token: 0x0600A547 RID: 42311 RVA: 0x00176784 File Offset: 0x00174984
+		// Token: 0x0600AFEF RID: 45039 RVA: 0x0018C18C File Offset: 0x0018A38C
 		private ISetMotorSpeedType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A548 RID: 42312 RVA: 0x001767BC File Offset: 0x001749BC
+		// Token: 0x0600AFF0 RID: 45040 RVA: 0x0018C1C4 File Offset: 0x0018A3C4
 		public static ISetMotorSpeedType Create([Nullable(2)] ISetMotorSpeedType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A549 RID: 42313 RVA: 0x001767CF File Offset: 0x001749CF
+		// Token: 0x0600AFF1 RID: 45041 RVA: 0x0018C1D7 File Offset: 0x0018A3D7
 		public static ISetMotorSpeedType CreateFromSetValue([Nullable(2)] ISetMotorSpeedType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A54A RID: 42314 RVA: 0x001767E2 File Offset: 0x001749E2
+		// Token: 0x0600AFF2 RID: 45042 RVA: 0x0018C1EA File Offset: 0x0018A3EA
 		public ISetMotorSpeedType_SetValue ToSetValue()
 		{
 			return new ISetMotorSpeedType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032B5 RID: 12981
-		// (get) Token: 0x0600A54B RID: 42315 RVA: 0x001767F5 File Offset: 0x001749F5
-		// (set) Token: 0x0600A54C RID: 42316 RVA: 0x00176820 File Offset: 0x00174A20
+		// Token: 0x17003574 RID: 13684
+		// (get) Token: 0x0600AFF3 RID: 45043 RVA: 0x0018C1FD File Offset: 0x0018A3FD
+		// (set) Token: 0x0600AFF4 RID: 45044 RVA: 0x0018C228 File Offset: 0x0018A428
 		public virtual EMotorSpeedType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040062D8 RID: 25304
+		// Token: 0x040068AF RID: 26799
 		[Nullable(2)]
 		protected ISetMotorSpeedType FbInstance;
 
-		// Token: 0x040062D9 RID: 25305
+		// Token: 0x040068B0 RID: 26800
 		[Nullable(2)]
 		protected ISetMotorSpeedType_SetValue PocoInterface;
 	}

@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048C2 RID: 18626
+	// Token: 0x02003839 RID: 14393
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GenericLayoutAdd<[Nullable(0)] T> where T : UiPanelBase
 	{
-		// Token: 0x06030AEB RID: 199403 RVA: 0x00B4E502 File Offset: 0x00B4C702
+		// Token: 0x06025617 RID: 153111 RVA: 0x00A8930A File Offset: 0x00A8750A
 		public GenericLayoutAdd(UUILayoutBase layout, TLayoutRefresh<T> refreshFunction)
 		{
 			this.ProxyLayout = layout;
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Util
 			this.SaveOriginal();
 		}
 
-		// Token: 0x06030AEC RID: 199404 RVA: 0x00B4E540 File Offset: 0x00B4C740
+		// Token: 0x06025618 RID: 153112 RVA: 0x00A89348 File Offset: 0x00A87548
 		private void SaveOriginal()
 		{
 			if (this.ProxyLayout != null)
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030AED RID: 199405 RVA: 0x00B4E593 File Offset: 0x00B4C793
+		// Token: 0x06025619 RID: 153113 RVA: 0x00A8939B File Offset: 0x00A8759B
 		private UUIItem GetRootUiItem()
 		{
 			return this.ProxyLayout.GetRootComponent();
 		}
 
-		// Token: 0x06030AEE RID: 199406 RVA: 0x00B4E5A0 File Offset: 0x00B4C7A0
+		// Token: 0x0602561A RID: 153114 RVA: 0x00A893A8 File Offset: 0x00A875A8
 		public void AddItemToLayout(object[] dataList, int hierarchyIndex = 0)
 		{
 			UUIItem uuiitem;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Util
 			uuiitem.SetUIActive(false);
 		}
 
-		// Token: 0x06030AEF RID: 199407 RVA: 0x00B4E66C File Offset: 0x00B4C86C
+		// Token: 0x0602561B RID: 153115 RVA: 0x00A89474 File Offset: 0x00A87674
 		[return: Nullable(2)]
 		public UiPanelBase GetLayoutItemByKey(object key, int hierarchyIndex = 0)
 		{
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Util
 			return null;
 		}
 
-		// Token: 0x06030AF0 RID: 199408 RVA: 0x00B4E698 File Offset: 0x00B4C898
+		// Token: 0x0602561C RID: 153116 RVA: 0x00A894A0 File Offset: 0x00A876A0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Util
 			return result;
 		}
 
-		// Token: 0x06030AF1 RID: 199409 RVA: 0x00B4E6B8 File Offset: 0x00B4C8B8
+		// Token: 0x0602561D RID: 153117 RVA: 0x00A894C0 File Offset: 0x00A876C0
 		public void ClearChildren()
 		{
 			foreach (Dictionary<object, UiPanelBase> dictionary in this.ItemMap.Values)
@@ -122,11 +122,11 @@ namespace CSharpScript.Game.Module.Util
 			this.CopyListItem.Clear();
 		}
 
-		// Token: 0x0401A297 RID: 107159
+		// Token: 0x04014B0A RID: 84746
 		[Nullable(2)]
 		private readonly UUILayoutBase ProxyLayout;
 
-		// Token: 0x0401A298 RID: 107160
+		// Token: 0x04014B0B RID: 84747
 		[Nullable(new byte[]
 		{
 			2,
@@ -134,13 +134,13 @@ namespace CSharpScript.Game.Module.Util
 		})]
 		private readonly TLayoutRefresh<T> RefreshFunction;
 
-		// Token: 0x0401A299 RID: 107161
+		// Token: 0x04014B0C RID: 84748
 		private readonly Dictionary<int, UUIItem> OriginalItemMap = new Dictionary<int, UUIItem>();
 
-		// Token: 0x0401A29A RID: 107162
+		// Token: 0x04014B0D RID: 84749
 		private readonly List<UUIItem> CopyListItem = new List<UUIItem>();
 
-		// Token: 0x0401A29B RID: 107163
+		// Token: 0x04014B0E RID: 84750
 		private readonly Dictionary<int, Dictionary<object, UiPanelBase>> ItemMap = new Dictionary<int, Dictionary<object, UiPanelBase>>();
 	}
 }

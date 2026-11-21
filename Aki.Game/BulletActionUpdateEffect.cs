@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Core.Fight;
 using CSharpScript.Game.Effect;
 using UnrealEngine;
 
-// Token: 0x02002D9B RID: 11675
+// Token: 0x020022F5 RID: 8949
 public class BulletActionUpdateEffect : BulletActionBase
 {
-	// Token: 0x06018858 RID: 100440 RVA: 0x00643374 File Offset: 0x00641574
+	// Token: 0x060160FC RID: 90364 RVA: 0x00669137 File Offset: 0x00667337
 	public BulletActionUpdateEffect(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x06018859 RID: 100441 RVA: 0x00643380 File Offset: 0x00641580
+	// Token: 0x060160FD RID: 90365 RVA: 0x00669140 File Offset: 0x00667340
 	protected override void OnExecute()
 	{
 		BulletEffectInfo effectInfo = this.BulletInfo.EffectInfo;
@@ -47,7 +48,7 @@ public class BulletActionUpdateEffect : BulletActionBase
 		}
 	}
 
-	// Token: 0x0601885A RID: 100442 RVA: 0x00643518 File Offset: 0x00641718
+	// Token: 0x060160FE RID: 90366 RVA: 0x006692D8 File Offset: 0x006674D8
 	private void SpawnBulletEffectOnBegin()
 	{
 		BulletActorComponent actorComponent = this.BulletInfo.ActorComponent;
@@ -82,7 +83,7 @@ public class BulletActionUpdateEffect : BulletActionBase
 		FVector fvector = actorScale;
 		FTransformDouble transform = new FTransformDouble(ref frotator, ref fvectorDouble, ref fvector);
 		BulletPool.RecycleRotator(rotator);
-		effectInfo.Effect = BulletStaticFunction.PlayBulletEffect(actorComponent.Owner, effectData.EffectBullet.ToString(), transform, this.BulletInfo, "[BulletActionUpdateEffect.SpawnBulletEffectOnBegin]");
+		effectInfo.Effect = BulletStaticFunction.PlayBulletEffect(actorComponent.Owner, this.GetPlatformEffectPath(), transform, this.BulletInfo, "[BulletActionUpdateEffect.SpawnBulletEffectOnBegin]");
 		if (EffectSystem.Instance.IsValid(effectInfo.Effect))
 		{
 			string s;
@@ -160,7 +161,21 @@ public class BulletActionUpdateEffect : BulletActionBase
 		}
 	}
 
-	// Token: 0x0601885B RID: 100443 RVA: 0x006438F8 File Offset: 0x00641AF8
+	// Token: 0x060160FF RID: 90367 RVA: 0x006696AC File Offset: 0x006678AC
+	[NullableContext(1)]
+	private string GetPlatformEffectPath()
+	{
+		BulletDataRender effectData = this.BulletInfo.EffectInfo.EffectData;
+		AActor owner = this.BulletInfo.ActorComponent.Owner;
+		string text;
+		if (effectData.EffectBulletParams.TryGetValue(6, out text) && !string.IsNullOrWhiteSpace(text) && !string.Equals(text.Trim(), "None", StringComparison.Ordinal) && owner != null && owner.IsValid() && UKuroRenderingRuntimeBPPluginBPLibrary.GetWorldFeatureLevel(owner) == KuroFeatureLevel.ES3_1)
+		{
+			return text.Trim();
+		}
+		return effectData.EffectBullet.ToString();
+	}
+
+	// Token: 0x06016100 RID: 90368 RVA: 0x00669734 File Offset: 0x00667934
 	protected override void OnTick(float delta)
 	{
 		if (this.BulletInfo.NeedDestroy)

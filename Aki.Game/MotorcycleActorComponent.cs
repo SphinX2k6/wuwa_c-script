@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Render;
 using UnrealEngine;
 
-// Token: 0x020032F6 RID: 13046
+// Token: 0x02002868 RID: 10344
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleActorComponent : VehicleActorComponent
 {
-	// Token: 0x17002747 RID: 10055
-	// (get) Token: 0x0601C641 RID: 116289 RVA: 0x007F323D File Offset: 0x007F143D
+	// Token: 0x17002AB8 RID: 10936
+	// (get) Token: 0x0601A306 RID: 107270 RVA: 0x00819769 File Offset: 0x00817969
 	public Vector AirRotateInputProxy
 	{
 		get
@@ -18,13 +18,13 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		}
 	}
 
-	// Token: 0x0601C642 RID: 116290 RVA: 0x007F3245 File Offset: 0x007F1445
+	// Token: 0x0601A307 RID: 107271 RVA: 0x00819771 File Offset: 0x00817971
 	public void SetAirRotateInput(IVector v)
 	{
 		this.AirRotateInputInternal.DeepCopy(v);
 	}
 
-	// Token: 0x0601C643 RID: 116291 RVA: 0x007F3254 File Offset: 0x007F1454
+	// Token: 0x0601A308 RID: 107272 RVA: 0x00819780 File Offset: 0x00817980
 	public unsafe override bool SetActorLocation(FVectorDouble value, string context = "unknown", bool sweep = false)
 	{
 		if (!sweep)
@@ -67,7 +67,7 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		return result;
 	}
 
-	// Token: 0x0601C644 RID: 116292 RVA: 0x007F33B0 File Offset: 0x007F15B0
+	// Token: 0x0601A309 RID: 107273 RVA: 0x008198DC File Offset: 0x00817ADC
 	public unsafe override bool SetActorLocationNoTeleport(FVectorDouble value, string context = "unknown", bool sweep = false)
 	{
 		if (!sweep)
@@ -109,7 +109,7 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		return result;
 	}
 
-	// Token: 0x0601C645 RID: 116293 RVA: 0x007F3504 File Offset: 0x007F1704
+	// Token: 0x0601A30A RID: 107274 RVA: 0x00819A30 File Offset: 0x00817C30
 	public override bool SetActorRotation(FRotator value, string context, bool sweep = false)
 	{
 		if (!sweep)
@@ -135,7 +135,7 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		return result;
 	}
 
-	// Token: 0x0601C646 RID: 116294 RVA: 0x007F35E4 File Offset: 0x007F17E4
+	// Token: 0x0601A30B RID: 107275 RVA: 0x00819B10 File Offset: 0x00817D10
 	public override bool SetActorLocationAndRotation(FVectorDouble location, FRotator rotation, string context, bool sweep = false, ESetRotationPriority? priority = null)
 	{
 		if (!sweep)
@@ -174,7 +174,7 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		return result;
 	}
 
-	// Token: 0x0601C647 RID: 116295 RVA: 0x007F3748 File Offset: 0x007F1948
+	// Token: 0x0601A30C RID: 107276 RVA: 0x00819C74 File Offset: 0x00817E74
 	public override bool SetActorTransform(FTransformDouble value, string context, bool sweep = false, ESetRotationPriority? priority = null)
 	{
 		if (!sweep)
@@ -209,7 +209,7 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		return result;
 	}
 
-	// Token: 0x0601C648 RID: 116296 RVA: 0x007F385C File Offset: 0x007F1A5C
+	// Token: 0x0601A30D RID: 107277 RVA: 0x00819D88 File Offset: 0x00817F88
 	public override bool SetActorLocationAndRotationExceptMesh(FVectorDouble location, FRotator rotation, string context, bool sweep = false, ESetRotationPriority? priority = null)
 	{
 		if (this.SkeletalMesh != null)
@@ -223,7 +223,7 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		return result;
 	}
 
-	// Token: 0x0601C649 RID: 116297 RVA: 0x007F38B0 File Offset: 0x007F1AB0
+	// Token: 0x0601A30E RID: 107278 RVA: 0x00819DDC File Offset: 0x00817FDC
 	public override bool SetActorTransformExceptMesh(FTransformDouble value, string context, bool sweep = false, ESetRotationPriority? priority = null)
 	{
 		if (this.SkeletalMesh != null)
@@ -237,7 +237,7 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		return result;
 	}
 
-	// Token: 0x0601C64A RID: 116298 RVA: 0x007F3900 File Offset: 0x007F1B00
+	// Token: 0x0601A30F RID: 107279 RVA: 0x00819E2C File Offset: 0x0081802C
 	public override void EnterFirstPersonMode()
 	{
 		base.EnterFirstPersonMode();
@@ -253,7 +253,7 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		Log.Instance.Info(ELogModule.Motor, ELogAuthor.LJM, "设置摩托第一人称材质参数", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0601C64B RID: 116299 RVA: 0x007F3964 File Offset: 0x007F1B64
+	// Token: 0x0601A310 RID: 107280 RVA: 0x00819E90 File Offset: 0x00818090
 	public override void ExitFirstPersonMode()
 	{
 		base.ExitFirstPersonMode();
@@ -269,7 +269,7 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		Log.Instance.Info(ELogModule.Motor, ELogAuthor.LJM, "还原摩托第一人称材质参数", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0601C64C RID: 116300 RVA: 0x007F39C8 File Offset: 0x007F1BC8
+	// Token: 0x0601A311 RID: 107281 RVA: 0x00819EF4 File Offset: 0x008180F4
 	public override void AddActorWorldOffset(FVectorDouble offset, string context = "unknown", bool sweep = false)
 	{
 		if (!sweep)
@@ -290,7 +290,7 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		base.ResetLocationCachedTime();
 	}
 
-	// Token: 0x0601C64D RID: 116301 RVA: 0x007F3A48 File Offset: 0x007F1C48
+	// Token: 0x0601A312 RID: 107282 RVA: 0x00819F74 File Offset: 0x00818174
 	public override void AddActorLocalOffset(FVectorDouble offset, string context = "unknown", bool sweep = false)
 	{
 		if (!sweep)
@@ -312,7 +312,7 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		base.ResetLocationCachedTime();
 	}
 
-	// Token: 0x0601C64E RID: 116302 RVA: 0x007F3ADC File Offset: 0x007F1CDC
+	// Token: 0x0601A313 RID: 107283 RVA: 0x0081A008 File Offset: 0x00818208
 	public override void AddActorWorldRotation(FRotator rotation, string context = "unknown", bool sweep = false)
 	{
 		if (!sweep)
@@ -329,7 +329,7 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		base.ResetRotationCachedTime();
 	}
 
-	// Token: 0x0601C64F RID: 116303 RVA: 0x007F3B54 File Offset: 0x007F1D54
+	// Token: 0x0601A314 RID: 107284 RVA: 0x0081A080 File Offset: 0x00818280
 	public override void AddActorLocalRotation(FRotator rotation, string context = "unknown", bool sweep = false)
 	{
 		if (!sweep)
@@ -350,7 +350,7 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		base.ResetRotationCachedTime();
 	}
 
-	// Token: 0x0601C650 RID: 116304 RVA: 0x007F3C10 File Offset: 0x007F1E10
+	// Token: 0x0601A315 RID: 107285 RVA: 0x0081A13C File Offset: 0x0081833C
 	public override void AddActorWorldOffsetAndQuat(FVectorDouble offset, FQuat quatOffset, string context = "unknown", bool sweep = false)
 	{
 		if (!sweep)
@@ -367,35 +367,120 @@ public class MotorcycleActorComponent : VehicleActorComponent
 		base.ResetRotationCachedTime();
 	}
 
-	// Token: 0x0601C651 RID: 116305 RVA: 0x007F3C84 File Offset: 0x007F1E84
+	// Token: 0x0601A316 RID: 107286 RVA: 0x0081A1AE File Offset: 0x008183AE
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
-		if (!base.ClearComponent(componentTemplate))
-		{
-			return false;
-		}
-		MotorcycleActorComponent motorcycleActorComponent = (MotorcycleActorComponent)componentTemplate;
-		return !base.CanResetComponentProperty("AirRotateInputInternal") || motorcycleActorComponent.AirRotateInputInternal == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.AirRotateInputInternal), "AirRotateInputInternal");
+		return base.ClearComponent(componentTemplate) && (((MotorcycleActorComponent)componentTemplate).AirRotateInputInternal == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.AirRotateInputInternal), "AirRotateInputInternal"));
 	}
 
-	// Token: 0x0400E143 RID: 57667
+	// Token: 0x17002AB9 RID: 10937
+	// (get) Token: 0x0601A317 RID: 107287 RVA: 0x0081A1E3 File Offset: 0x008183E3
+	public override bool NeedCreateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002ABA RID: 10938
+	// (get) Token: 0x0601A318 RID: 107288 RVA: 0x0081A1E6 File Offset: 0x008183E6
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002ABB RID: 10939
+	// (get) Token: 0x0601A319 RID: 107289 RVA: 0x0081A1E9 File Offset: 0x008183E9
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002ABC RID: 10940
+	// (get) Token: 0x0601A31A RID: 107290 RVA: 0x0081A1EC File Offset: 0x008183EC
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002ABD RID: 10941
+	// (get) Token: 0x0601A31B RID: 107291 RVA: 0x0081A1EF File Offset: 0x008183EF
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002ABE RID: 10942
+	// (get) Token: 0x0601A31C RID: 107292 RVA: 0x0081A1F2 File Offset: 0x008183F2
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002ABF RID: 10943
+	// (get) Token: 0x0601A31D RID: 107293 RVA: 0x0081A1F5 File Offset: 0x008183F5
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AC0 RID: 10944
+	// (get) Token: 0x0601A31E RID: 107294 RVA: 0x0081A1F8 File Offset: 0x008183F8
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AC1 RID: 10945
+	// (get) Token: 0x0601A31F RID: 107295 RVA: 0x0081A1FB File Offset: 0x008183FB
+	public override bool NeedChangeTimeDilationInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E5EE RID: 58862
 	private const int TEX_MIP_OFFSET = -10;
 
-	// Token: 0x0400E144 RID: 57668
+	// Token: 0x0400E5EF RID: 58863
 	private const int TEX_MIP_OFFSET_DEFAULT = 0;
 
-	// Token: 0x0400E145 RID: 57669
+	// Token: 0x0400E5F0 RID: 58864
 	[StaticVariableRuleIgnore]
 	protected static Rotator TmpRotator = Rotator.Create();
 
-	// Token: 0x0400E146 RID: 57670
+	// Token: 0x0400E5F1 RID: 58865
 	[StaticVariableRuleIgnore]
 	protected static Quat TmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400E147 RID: 57671
+	// Token: 0x0400E5F2 RID: 58866
 	[StaticVariableRuleIgnore]
 	protected static Quat TmpQuat3 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400E148 RID: 57672
+	// Token: 0x0400E5F3 RID: 58867
 	private readonly Vector AirRotateInputInternal = Vector.Create();
 }

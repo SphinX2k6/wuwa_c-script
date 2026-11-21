@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200109E RID: 4254
+	// Token: 0x02001199 RID: 4505
 	public struct SheriffCriminal : IFlatbufferObject
 	{
-		// Token: 0x1700355F RID: 13663
-		// (get) Token: 0x0600D0C6 RID: 53446 RVA: 0x0030C8D4 File Offset: 0x0030AAD4
+		// Token: 0x1700366D RID: 13933
+		// (get) Token: 0x0600D89C RID: 55452 RVA: 0x0032BE74 File Offset: 0x0032A074
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D0C7 RID: 53447 RVA: 0x0030C8E1 File Offset: 0x0030AAE1
+		// Token: 0x0600D89D RID: 55453 RVA: 0x0032BE81 File Offset: 0x0032A081
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D0C8 RID: 53448 RVA: 0x0030C8E8 File Offset: 0x0030AAE8
+		// Token: 0x0600D89E RID: 55454 RVA: 0x0032BE88 File Offset: 0x0032A088
 		public static SheriffCriminal GetRootAsSheriffCriminal(ByteBuffer _bb)
 		{
 			return SheriffCriminal.GetRootAsSheriffCriminal(_bb, default(SheriffCriminal));
 		}
 
-		// Token: 0x0600D0C9 RID: 53449 RVA: 0x0030C904 File Offset: 0x0030AB04
+		// Token: 0x0600D89F RID: 55455 RVA: 0x0032BEA4 File Offset: 0x0032A0A4
 		public static SheriffCriminal GetRootAsSheriffCriminal(ByteBuffer _bb, SheriffCriminal obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D0CA RID: 53450 RVA: 0x0030C921 File Offset: 0x0030AB21
+		// Token: 0x0600D8A0 RID: 55456 RVA: 0x0032BEC1 File Offset: 0x0032A0C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D0CB RID: 53451 RVA: 0x0030C930 File Offset: 0x0030AB30
+		// Token: 0x0600D8A1 RID: 55457 RVA: 0x0032BED0 File Offset: 0x0032A0D0
 		public SheriffCriminal __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003560 RID: 13664
-		// (get) Token: 0x0600D0CC RID: 53452 RVA: 0x0030C940 File Offset: 0x0030AB40
+		// Token: 0x1700366E RID: 13934
+		// (get) Token: 0x0600D8A2 RID: 55458 RVA: 0x0032BEE0 File Offset: 0x0032A0E0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003561 RID: 13665
-		// (get) Token: 0x0600D0CD RID: 53453 RVA: 0x0030C97C File Offset: 0x0030AB7C
+		// Token: 0x1700366F RID: 13935
+		// (get) Token: 0x0600D8A3 RID: 55459 RVA: 0x0032BF1C File Offset: 0x0032A11C
 		public int InitIdentityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003562 RID: 13666
-		// (get) Token: 0x0600D0CE RID: 53454 RVA: 0x0030C9B8 File Offset: 0x0030ABB8
+		// Token: 0x17003670 RID: 13936
+		// (get) Token: 0x0600D8A4 RID: 55460 RVA: 0x0032BF58 File Offset: 0x0032A158
 		public int SheriffAnomalyId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003563 RID: 13667
-		// (get) Token: 0x0600D0CF RID: 53455 RVA: 0x0030C9F4 File Offset: 0x0030ABF4
+		// Token: 0x17003671 RID: 13937
+		// (get) Token: 0x0600D8A5 RID: 55461 RVA: 0x0032BF94 File Offset: 0x0032A194
 		public int DropId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003564 RID: 13668
-		// (get) Token: 0x0600D0D0 RID: 53456 RVA: 0x0030CA34 File Offset: 0x0030AC34
+		// Token: 0x17003672 RID: 13938
+		// (get) Token: 0x0600D8A6 RID: 55462 RVA: 0x0032BFD4 File Offset: 0x0032A1D4
 		public int Priority
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x040051AC RID: 20908
+		// Token: 0x040057AB RID: 22443
 		private Table __p;
 	}
 }

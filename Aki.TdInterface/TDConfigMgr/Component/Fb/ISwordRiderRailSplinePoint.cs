@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C65 RID: 3173
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D3E RID: 3390
 	public class ISwordRiderRailSplinePoint : IBaseSplinePointType
 	{
-		// Token: 0x060048B6 RID: 18614 RVA: 0x000B69B9 File Offset: 0x000B4BB9
+		// Token: 0x06004D3B RID: 19771 RVA: 0x000C0FAD File Offset: 0x000BF1AD
 		public static ISwordRiderRailSplinePoint Create(ISwordRiderRailSplinePoint? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015A9 RID: 5545
-		// (get) Token: 0x060048B7 RID: 18615 RVA: 0x000B69D8 File Offset: 0x000B4BD8
+		// Token: 0x170016BA RID: 5818
+		// (get) Token: 0x06004D3C RID: 19772 RVA: 0x000C0FCC File Offset: 0x000BF1CC
 		public override VectorInfo Position
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015AA RID: 5546
-		// (get) Token: 0x060048B8 RID: 18616 RVA: 0x000B6A0C File Offset: 0x000B4C0C
+		// Token: 0x170016BB RID: 5819
+		// (get) Token: 0x06004D3D RID: 19773 RVA: 0x000C1000 File Offset: 0x000BF200
 		public override VectorInfo ArriveTangent
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015AB RID: 5547
-		// (get) Token: 0x060048B9 RID: 18617 RVA: 0x000B6A40 File Offset: 0x000B4C40
+		// Token: 0x170016BC RID: 5820
+		// (get) Token: 0x06004D3E RID: 19774 RVA: 0x000C1034 File Offset: 0x000BF234
 		public override VectorInfo LeaveTangent
 		{
 			get
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015AC RID: 5548
-		// (get) Token: 0x060048BA RID: 18618 RVA: 0x000B6A74 File Offset: 0x000B4C74
+		// Token: 0x170016BD RID: 5821
+		// (get) Token: 0x06004D3F RID: 19775 RVA: 0x000C1068 File Offset: 0x000BF268
 		public override ESplineLine LineType
 		{
 			get
@@ -81,8 +79,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015AD RID: 5549
-		// (get) Token: 0x060048BB RID: 18619 RVA: 0x000B6A81 File Offset: 0x000B4C81
+		// Token: 0x170016BE RID: 5822
+		// (get) Token: 0x06004D40 RID: 19776 RVA: 0x000C1075 File Offset: 0x000BF275
 		[Nullable(2)]
 		public override VectorInfo Rotation
 		{
@@ -99,8 +97,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015AE RID: 5550
-		// (get) Token: 0x060048BC RID: 18620 RVA: 0x000B6AB8 File Offset: 0x000B4CB8
+		// Token: 0x170016BF RID: 5823
+		// (get) Token: 0x06004D41 RID: 19777 RVA: 0x000C10AC File Offset: 0x000BF2AC
 		public virtual float? Radius
 		{
 			get
@@ -113,8 +111,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015AF RID: 5551
-		// (get) Token: 0x060048BD RID: 18621 RVA: 0x000B6AF0 File Offset: 0x000B4CF0
+		// Token: 0x170016C0 RID: 5824
+		// (get) Token: 0x06004D42 RID: 19778 RVA: 0x000C10E4 File Offset: 0x000BF2E4
 		public virtual int? HalfAvailableAngle
 		{
 			get
@@ -127,35 +125,35 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002974 RID: 10612
+		// Token: 0x04002BD5 RID: 11221
 		private ISwordRiderRailSplinePoint Instance;
 
-		// Token: 0x04002975 RID: 10613
+		// Token: 0x04002BD6 RID: 11222
 		[Nullable(2)]
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04002976 RID: 10614
+		// Token: 0x04002BD7 RID: 11223
 		private bool _PositionInited;
 
-		// Token: 0x04002977 RID: 10615
+		// Token: 0x04002BD8 RID: 11224
 		[Nullable(2)]
 		private VectorInfo _ArriveTangentCache;
 
-		// Token: 0x04002978 RID: 10616
+		// Token: 0x04002BD9 RID: 11225
 		private bool _ArriveTangentInited;
 
-		// Token: 0x04002979 RID: 10617
+		// Token: 0x04002BDA RID: 11226
 		[Nullable(2)]
 		private VectorInfo _LeaveTangentCache;
 
-		// Token: 0x0400297A RID: 10618
+		// Token: 0x04002BDB RID: 11227
 		private bool _LeaveTangentInited;
 
-		// Token: 0x0400297B RID: 10619
+		// Token: 0x04002BDC RID: 11228
 		[Nullable(2)]
 		private VectorInfo _RotationCache;
 
-		// Token: 0x0400297C RID: 10620
+		// Token: 0x04002BDD RID: 11229
 		private bool _RotationInited;
 	}
 }

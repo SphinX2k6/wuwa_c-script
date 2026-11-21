@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200449E RID: 17566
+	// Token: 0x02004906 RID: 18694
 	public class IDoubleScoreZoneT
 	{
-		// Token: 0x17007BF5 RID: 31733
-		// (get) Token: 0x0601A396 RID: 107414 RVA: 0x003BF3CA File Offset: 0x003BD5CA
-		// (set) Token: 0x0601A397 RID: 107415 RVA: 0x003BF3D2 File Offset: 0x003BD5D2
+		// Token: 0x17008234 RID: 33332
+		// (get) Token: 0x0601BB67 RID: 113511 RVA: 0x003EB5D6 File Offset: 0x003E97D6
+		// (set) Token: 0x0601BB68 RID: 113512 RVA: 0x003EB5DE File Offset: 0x003E97DE
 		public EDartboardZoneType Type { get; set; }
 
-		// Token: 0x17007BF6 RID: 31734
-		// (get) Token: 0x0601A398 RID: 107416 RVA: 0x003BF3DB File Offset: 0x003BD5DB
-		// (set) Token: 0x0601A399 RID: 107417 RVA: 0x003BF3E3 File Offset: 0x003BD5E3
+		// Token: 0x17008235 RID: 33333
+		// (get) Token: 0x0601BB69 RID: 113513 RVA: 0x003EB5E7 File Offset: 0x003E97E7
+		// (set) Token: 0x0601BB6A RID: 113514 RVA: 0x003EB5EF File Offset: 0x003E97EF
 		public int Score { get; set; }
 
-		// Token: 0x17007BF7 RID: 31735
-		// (get) Token: 0x0601A39A RID: 107418 RVA: 0x003BF3EC File Offset: 0x003BD5EC
-		// (set) Token: 0x0601A39B RID: 107419 RVA: 0x003BF3F4 File Offset: 0x003BD5F4
+		// Token: 0x17008236 RID: 33334
+		// (get) Token: 0x0601BB6B RID: 113515 RVA: 0x003EB5F8 File Offset: 0x003E97F8
+		// (set) Token: 0x0601BB6C RID: 113516 RVA: 0x003EB600 File Offset: 0x003E9800
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601A39C RID: 107420 RVA: 0x003BF3FD File Offset: 0x003BD5FD
+		// Token: 0x0601BB6D RID: 113517 RVA: 0x003EB609 File Offset: 0x003E9809
 		public IDoubleScoreZoneT()
 		{
 			this.Type = EDartboardZoneType.CenterBull;

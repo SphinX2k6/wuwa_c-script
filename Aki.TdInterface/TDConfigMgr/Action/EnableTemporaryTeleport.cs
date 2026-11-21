@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200164C RID: 5708
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017B9 RID: 6073
 	public class EnableTemporaryTeleport : ActionParams
 	{
-		// Token: 0x06007C97 RID: 31895 RVA: 0x0012B760 File Offset: 0x00129960
+		// Token: 0x06008375 RID: 33653 RVA: 0x0013A80C File Offset: 0x00138A0C
 		private EnableTemporaryTeleport_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007C98 RID: 31896 RVA: 0x0012B798 File Offset: 0x00129998
+		// Token: 0x06008376 RID: 33654 RVA: 0x0013A844 File Offset: 0x00138A44
 		public static EnableTemporaryTeleport Create([Nullable(2)] EnableTemporaryTeleport instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C99 RID: 31897 RVA: 0x0012B7AB File Offset: 0x001299AB
+		// Token: 0x06008377 RID: 33655 RVA: 0x0013A857 File Offset: 0x00138A57
 		public static EnableTemporaryTeleport CreateFromSetValue([Nullable(2)] EnableTemporaryTeleport_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C9A RID: 31898 RVA: 0x0012B7BE File Offset: 0x001299BE
+		// Token: 0x06008378 RID: 33656 RVA: 0x0013A86A File Offset: 0x00138A6A
 		public EnableTemporaryTeleport_SetValue ToSetValue()
 		{
 			return new EnableTemporaryTeleport_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700292C RID: 10540
-		// (get) Token: 0x06007C9B RID: 31899 RVA: 0x0012B7DD File Offset: 0x001299DD
-		// (set) Token: 0x06007C9C RID: 31900 RVA: 0x0012B808 File Offset: 0x00129A08
+		// Token: 0x17002B17 RID: 11031
+		// (get) Token: 0x06008379 RID: 33657 RVA: 0x0013A889 File Offset: 0x00138A89
+		// (set) Token: 0x0600837A RID: 33658 RVA: 0x0013A8B4 File Offset: 0x00138AB4
 		public virtual bool Enable
 		{
 			get
@@ -79,9 +77,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700292D RID: 10541
-		// (get) Token: 0x06007C9D RID: 31901 RVA: 0x0012B816 File Offset: 0x00129A16
-		// (set) Token: 0x06007C9E RID: 31902 RVA: 0x0012B841 File Offset: 0x00129A41
+		// Token: 0x17002B18 RID: 11032
+		// (get) Token: 0x0600837B RID: 33659 RVA: 0x0013A8C2 File Offset: 0x00138AC2
+		// (set) Token: 0x0600837C RID: 33660 RVA: 0x0013A8ED File Offset: 0x00138AED
 		public virtual int RangeEntity
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004C7E RID: 19582
+		// Token: 0x04005072 RID: 20594
 		[Nullable(2)]
 		protected new EnableTemporaryTeleport FbInstance;
 
-		// Token: 0x04004C7F RID: 19583
+		// Token: 0x04005073 RID: 20595
 		[Nullable(2)]
 		protected EnableTemporaryTeleport_SetValue PocoInterface;
 	}

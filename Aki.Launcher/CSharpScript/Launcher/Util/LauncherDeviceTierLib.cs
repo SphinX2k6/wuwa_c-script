@@ -9,28 +9,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x02000069 RID: 105
+	// Token: 0x0200006B RID: 107
 	public class LauncherDeviceTierLib : IStaticVariableResetter
 	{
-		// Token: 0x060002BB RID: 699 RVA: 0x0000E0CB File Offset: 0x0000C2CB
+		// Token: 0x060002BD RID: 701 RVA: 0x0000E477 File Offset: 0x0000C677
 		static LauncherDeviceTierLib()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LauncherDeviceTierLib.CreateStaticDefaultValue), new Action(LauncherDeviceTierLib.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060002BC RID: 700 RVA: 0x0000E0EA File Offset: 0x0000C2EA
+		// Token: 0x060002BE RID: 702 RVA: 0x0000E496 File Offset: 0x0000C696
 		public static void CreateStaticDefaultValue()
 		{
 			LauncherDeviceTierLib.CommandLineTier = null;
 		}
 
-		// Token: 0x060002BD RID: 701 RVA: 0x0000E0F7 File Offset: 0x0000C2F7
+		// Token: 0x060002BF RID: 703 RVA: 0x0000E4A3 File Offset: 0x0000C6A3
 		public static void ResetStaticDefaultValue()
 		{
 			LauncherDeviceTierLib.CommandLineTier = null;
 		}
 
-		// Token: 0x060002BE RID: 702 RVA: 0x0000E104 File Offset: 0x0000C304
+		// Token: 0x060002C0 RID: 704 RVA: 0x0000E4B0 File Offset: 0x0000C6B0
 		[NullableContext(1)]
 		public static string TierToLabel(ETier tier)
 		{
@@ -46,7 +46,7 @@ namespace CSharpScript.Launcher.Util
 			return "";
 		}
 
-		// Token: 0x060002BF RID: 703 RVA: 0x0000E135 File Offset: 0x0000C335
+		// Token: 0x060002C1 RID: 705 RVA: 0x0000E4E1 File Offset: 0x0000C6E1
 		[NullableContext(2)]
 		public static ETier LabelToTier(string label)
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Launcher.Util
 			return ETier.SD;
 		}
 
-		// Token: 0x060002C0 RID: 704 RVA: 0x0000E168 File Offset: 0x0000C368
+		// Token: 0x060002C2 RID: 706 RVA: 0x0000E514 File Offset: 0x0000C714
 		public static ETier GetCommandLineTier()
 		{
 			if (LauncherDeviceTierLib.CommandLineTier != null)
@@ -92,7 +92,7 @@ namespace CSharpScript.Launcher.Util
 			return LauncherDeviceTierLib.CommandLineTier.Value;
 		}
 
-		// Token: 0x060002C1 RID: 705 RVA: 0x0000E21C File Offset: 0x0000C41C
+		// Token: 0x060002C3 RID: 707 RVA: 0x0000E5C8 File Offset: 0x0000C7C8
 		public unsafe static ETier GetActiveTier()
 		{
 			if (Platform.Instance.IsWindowsPlatform())
@@ -140,7 +140,7 @@ namespace CSharpScript.Launcher.Util
 			return value;
 		}
 
-		// Token: 0x060002C2 RID: 706 RVA: 0x0000E390 File Offset: 0x0000C590
+		// Token: 0x060002C4 RID: 708 RVA: 0x0000E73C File Offset: 0x0000C93C
 		public static ETier GetHighestSupportTier()
 		{
 			List<ETier> deviceSupportTiers = LauncherDeviceTierLib.GetDeviceSupportTiers();
@@ -159,7 +159,7 @@ namespace CSharpScript.Launcher.Util
 			return etier;
 		}
 
-		// Token: 0x060002C3 RID: 707 RVA: 0x0000E3FC File Offset: 0x0000C5FC
+		// Token: 0x060002C5 RID: 709 RVA: 0x0000E7A8 File Offset: 0x0000C9A8
 		[NullableContext(1)]
 		public static List<ETier> GetDeviceSupportTiers()
 		{
@@ -178,7 +178,7 @@ namespace CSharpScript.Launcher.Util
 			};
 		}
 
-		// Token: 0x060002C4 RID: 708 RVA: 0x0000E438 File Offset: 0x0000C638
+		// Token: 0x060002C6 RID: 710 RVA: 0x0000E7E4 File Offset: 0x0000C9E4
 		public static ETier GetRecommendedTier()
 		{
 			switch (LauncherDeviceTierLib.ComputeDeviceCategory())
@@ -207,7 +207,7 @@ namespace CSharpScript.Launcher.Util
 			}
 		}
 
-		// Token: 0x060002C5 RID: 709 RVA: 0x0000E49C File Offset: 0x0000C69C
+		// Token: 0x060002C7 RID: 711 RVA: 0x0000E848 File Offset: 0x0000CA48
 		private static LauncherDeviceTierLib.EDeviceCategory ComputeDeviceCategory()
 		{
 			string a = KuroApplication.IniPlatformName();
@@ -226,7 +226,7 @@ namespace CSharpScript.Launcher.Util
 			return LauncherDeviceTierLib.EDeviceCategory.OTHER;
 		}
 
-		// Token: 0x060002C6 RID: 710 RVA: 0x0000E4EC File Offset: 0x0000C6EC
+		// Token: 0x060002C8 RID: 712 RVA: 0x0000E898 File Offset: 0x0000CA98
 		private static LauncherDeviceTierLib.EDeviceCategory ComputeIosCategory()
 		{
 			int deviceProfileDeviceScore = UKuroRenderingRuntimeBPPluginBPLibrary.GetDeviceProfileDeviceScore();
@@ -254,7 +254,7 @@ namespace CSharpScript.Launcher.Util
 			return result;
 		}
 
-		// Token: 0x060002C7 RID: 711 RVA: 0x0000E54C File Offset: 0x0000C74C
+		// Token: 0x060002C9 RID: 713 RVA: 0x0000E8F8 File Offset: 0x0000CAF8
 		private static LauncherDeviceTierLib.EDeviceCategory ComputeAndroidCategory()
 		{
 			string deviceProfileBaseProfileName = UKuroRenderingRuntimeBPPluginBPLibrary.GetDeviceProfileBaseProfileName();
@@ -281,7 +281,7 @@ namespace CSharpScript.Launcher.Util
 			return LauncherDeviceTierLib.EDeviceCategory.ANDROID_VERY_HIGH;
 		}
 
-		// Token: 0x060002C8 RID: 712 RVA: 0x0000E5B0 File Offset: 0x0000C7B0
+		// Token: 0x060002CA RID: 714 RVA: 0x0000E95C File Offset: 0x0000CB5C
 		private static LauncherDeviceTierLib.EDeviceCategory ComputeWindowsCategory()
 		{
 			string deviceProfileBaseProfileName = UKuroRenderingRuntimeBPPluginBPLibrary.GetDeviceProfileBaseProfileName();
@@ -343,60 +343,60 @@ namespace CSharpScript.Launcher.Util
 			return LauncherDeviceTierLib.EDeviceCategory.PC_MIDDLE;
 		}
 
-		// Token: 0x040001BE RID: 446
+		// Token: 0x040001E5 RID: 485
 		private const int IOS_LOWEST_SCORE = 150;
 
-		// Token: 0x040001BF RID: 447
+		// Token: 0x040001E6 RID: 486
 		private const int IOS_MIDDLE_SCORE_MIN = 250;
 
-		// Token: 0x040001C0 RID: 448
+		// Token: 0x040001E7 RID: 487
 		private const int IOS_MIDDLE_SCORE_MAX = 360;
 
-		// Token: 0x040001C1 RID: 449
+		// Token: 0x040001E8 RID: 488
 		private const int IOS_HIGH_SCORE = 360;
 
-		// Token: 0x040001C2 RID: 450
+		// Token: 0x040001E9 RID: 489
 		private const int IOS_VERY_HIGH_SCORE = 650;
 
-		// Token: 0x040001C3 RID: 451
+		// Token: 0x040001EA RID: 490
 		private static ETier? CommandLineTier;
 
-		// Token: 0x020002C3 RID: 707
+		// Token: 0x020002CC RID: 716
 		private enum EDeviceCategory
 		{
-			// Token: 0x04000AED RID: 2797
+			// Token: 0x04000B3D RID: 2877
 			IOS_LOWEST,
-			// Token: 0x04000AEE RID: 2798
+			// Token: 0x04000B3E RID: 2878
 			IOS_LOW,
-			// Token: 0x04000AEF RID: 2799
+			// Token: 0x04000B3F RID: 2879
 			IOS_MIDDLE,
-			// Token: 0x04000AF0 RID: 2800
+			// Token: 0x04000B40 RID: 2880
 			IOS_HIGH,
-			// Token: 0x04000AF1 RID: 2801
+			// Token: 0x04000B41 RID: 2881
 			IOS_VERY_HIGH,
-			// Token: 0x04000AF2 RID: 2802
+			// Token: 0x04000B42 RID: 2882
 			ANDROID_LOWEST,
-			// Token: 0x04000AF3 RID: 2803
+			// Token: 0x04000B43 RID: 2883
 			ANDROID_LOW,
-			// Token: 0x04000AF4 RID: 2804
+			// Token: 0x04000B44 RID: 2884
 			ANDROID_MIDDLE,
-			// Token: 0x04000AF5 RID: 2805
+			// Token: 0x04000B45 RID: 2885
 			ANDROID_HIGH,
-			// Token: 0x04000AF6 RID: 2806
+			// Token: 0x04000B46 RID: 2886
 			ANDROID_VERY_HIGH,
-			// Token: 0x04000AF7 RID: 2807
+			// Token: 0x04000B47 RID: 2887
 			PC_LOWEST,
-			// Token: 0x04000AF8 RID: 2808
+			// Token: 0x04000B48 RID: 2888
 			PC_LOW,
-			// Token: 0x04000AF9 RID: 2809
+			// Token: 0x04000B49 RID: 2889
 			PC_MIDDLE,
-			// Token: 0x04000AFA RID: 2810
+			// Token: 0x04000B4A RID: 2890
 			PC_HIGH,
-			// Token: 0x04000AFB RID: 2811
+			// Token: 0x04000B4B RID: 2891
 			PC_VERY_HIGH,
-			// Token: 0x04000AFC RID: 2812
+			// Token: 0x04000B4C RID: 2892
 			PC_HIGHEST,
-			// Token: 0x04000AFD RID: 2813
+			// Token: 0x04000B4D RID: 2893
 			OTHER
 		}
 	}

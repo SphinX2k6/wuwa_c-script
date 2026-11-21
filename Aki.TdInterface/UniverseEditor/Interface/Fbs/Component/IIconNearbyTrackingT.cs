@@ -3,45 +3,45 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053DE RID: 21470
+	// Token: 0x02005964 RID: 22884
 	public class IIconNearbyTrackingT
 	{
-		// Token: 0x17009E00 RID: 40448
-		// (get) Token: 0x060233F7 RID: 144375 RVA: 0x004E1A45 File Offset: 0x004DFC45
-		// (set) Token: 0x060233F8 RID: 144376 RVA: 0x004E1A4D File Offset: 0x004DFC4D
+		// Token: 0x1700A63A RID: 42554
+		// (get) Token: 0x060254AF RID: 152751 RVA: 0x0051EA71 File Offset: 0x0051CC71
+		// (set) Token: 0x060254B0 RID: 152752 RVA: 0x0051EA79 File Offset: 0x0051CC79
 		public ENearbyTrackingType Type { get; set; }
 
-		// Token: 0x17009E01 RID: 40449
-		// (get) Token: 0x060233F9 RID: 144377 RVA: 0x004E1A56 File Offset: 0x004DFC56
-		// (set) Token: 0x060233FA RID: 144378 RVA: 0x004E1A5E File Offset: 0x004DFC5E
+		// Token: 0x1700A63B RID: 42555
+		// (get) Token: 0x060254B1 RID: 152753 RVA: 0x0051EA82 File Offset: 0x0051CC82
+		// (set) Token: 0x060254B2 RID: 152754 RVA: 0x0051EA8A File Offset: 0x0051CC8A
 		public int ShowRange { get; set; }
 
-		// Token: 0x17009E02 RID: 40450
-		// (get) Token: 0x060233FB RID: 144379 RVA: 0x004E1A67 File Offset: 0x004DFC67
-		// (set) Token: 0x060233FC RID: 144380 RVA: 0x004E1A6F File Offset: 0x004DFC6F
+		// Token: 0x1700A63C RID: 42556
+		// (get) Token: 0x060254B3 RID: 152755 RVA: 0x0051EA93 File Offset: 0x0051CC93
+		// (set) Token: 0x060254B4 RID: 152756 RVA: 0x0051EA9B File Offset: 0x0051CC9B
 		public int HideRange { get; set; }
 
-		// Token: 0x17009E03 RID: 40451
-		// (get) Token: 0x060233FD RID: 144381 RVA: 0x004E1A78 File Offset: 0x004DFC78
-		// (set) Token: 0x060233FE RID: 144382 RVA: 0x004E1A80 File Offset: 0x004DFC80
+		// Token: 0x1700A63D RID: 42557
+		// (get) Token: 0x060254B5 RID: 152757 RVA: 0x0051EAA4 File Offset: 0x0051CCA4
+		// (set) Token: 0x060254B6 RID: 152758 RVA: 0x0051EAAC File Offset: 0x0051CCAC
 		public ENearbyTrackingTexture TexturePath { get; set; }
 
-		// Token: 0x17009E04 RID: 40452
-		// (get) Token: 0x060233FF RID: 144383 RVA: 0x004E1A89 File Offset: 0x004DFC89
-		// (set) Token: 0x06023400 RID: 144384 RVA: 0x004E1A91 File Offset: 0x004DFC91
+		// Token: 0x1700A63E RID: 42558
+		// (get) Token: 0x060254B7 RID: 152759 RVA: 0x0051EAB5 File Offset: 0x0051CCB5
+		// (set) Token: 0x060254B8 RID: 152760 RVA: 0x0051EABD File Offset: 0x0051CCBD
 		public IVectorInfoT UiOffset { get; set; }
 
-		// Token: 0x17009E05 RID: 40453
-		// (get) Token: 0x06023401 RID: 144385 RVA: 0x004E1A9A File Offset: 0x004DFC9A
-		// (set) Token: 0x06023402 RID: 144386 RVA: 0x004E1AA2 File Offset: 0x004DFCA2
+		// Token: 0x1700A63F RID: 42559
+		// (get) Token: 0x060254B9 RID: 152761 RVA: 0x0051EAC6 File Offset: 0x0051CCC6
+		// (set) Token: 0x060254BA RID: 152762 RVA: 0x0051EACE File Offset: 0x0051CCCE
 		public float Duration { get; set; }
 
-		// Token: 0x17009E06 RID: 40454
-		// (get) Token: 0x06023403 RID: 144387 RVA: 0x004E1AAB File Offset: 0x004DFCAB
-		// (set) Token: 0x06023404 RID: 144388 RVA: 0x004E1AB3 File Offset: 0x004DFCB3
+		// Token: 0x1700A640 RID: 42560
+		// (get) Token: 0x060254BB RID: 152763 RVA: 0x0051EAD7 File Offset: 0x0051CCD7
+		// (set) Token: 0x060254BC RID: 152764 RVA: 0x0051EADF File Offset: 0x0051CCDF
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023405 RID: 144389 RVA: 0x004E1ABC File Offset: 0x004DFCBC
+		// Token: 0x060254BD RID: 152765 RVA: 0x0051EAE8 File Offset: 0x0051CCE8
 		public IIconNearbyTrackingT()
 		{
 			this.Type = ENearbyTrackingType.Icon;

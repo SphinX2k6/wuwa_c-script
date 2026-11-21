@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020003E6 RID: 998
+	// Token: 0x020003CF RID: 975
 	public sealed class DollDeliveryInfo : IMessage<DollDeliveryInfo>, IMessage, IEquatable<DollDeliveryInfo>, IDeepCloneable<DollDeliveryInfo>, IBufferMessage
 	{
-		// Token: 0x060060ED RID: 24813 RVA: 0x000EA270 File Offset: 0x000E8470
+		// Token: 0x06005F5D RID: 24413 RVA: 0x000E70F0 File Offset: 0x000E52F0
 		[NullableContext(1)]
 		public static DollDeliveryInfo Create()
 		{
 			return new DollDeliveryInfo();
 		}
 
-		// Token: 0x1700120F RID: 4623
-		// (get) Token: 0x060060EE RID: 24814 RVA: 0x000EA277 File Offset: 0x000E8477
+		// Token: 0x170011BA RID: 4538
+		// (get) Token: 0x06005F5E RID: 24414 RVA: 0x000E70F7 File Offset: 0x000E52F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<DollDeliveryInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001210 RID: 4624
-		// (get) Token: 0x060060EF RID: 24815 RVA: 0x000EA27E File Offset: 0x000E847E
+		// Token: 0x170011BB RID: 4539
+		// (get) Token: 0x06005F5F RID: 24415 RVA: 0x000E70FE File Offset: 0x000E52FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001211 RID: 4625
-		// (get) Token: 0x060060F0 RID: 24816 RVA: 0x000EA281 File Offset: 0x000E8481
+		// Token: 0x170011BC RID: 4540
+		// (get) Token: 0x06005F60 RID: 24416 RVA: 0x000E7101 File Offset: 0x000E5301
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060060F1 RID: 24817 RVA: 0x000EA288 File Offset: 0x000E8488
+		// Token: 0x06005F61 RID: 24417 RVA: 0x000E7108 File Offset: 0x000E5308
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DollDeliveryInfo()
 		{
 		}
 
-		// Token: 0x060060F2 RID: 24818 RVA: 0x000EA29B File Offset: 0x000E849B
+		// Token: 0x06005F62 RID: 24418 RVA: 0x000E711B File Offset: 0x000E531B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DollDeliveryInfo(DollDeliveryInfo other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060060F3 RID: 24819 RVA: 0x000EA2D1 File Offset: 0x000E84D1
+		// Token: 0x06005F63 RID: 24419 RVA: 0x000E7151 File Offset: 0x000E5351
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DollDeliveryInfo Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new DollDeliveryInfo(this);
 		}
 
-		// Token: 0x17001212 RID: 4626
-		// (get) Token: 0x060060F4 RID: 24820 RVA: 0x000EA2D9 File Offset: 0x000E84D9
-		// (set) Token: 0x060060F5 RID: 24821 RVA: 0x000EA2E1 File Offset: 0x000E84E1
+		// Token: 0x170011BD RID: 4541
+		// (get) Token: 0x06005F64 RID: 24420 RVA: 0x000E7159 File Offset: 0x000E5359
+		// (set) Token: 0x06005F65 RID: 24421 RVA: 0x000E7161 File Offset: 0x000E5361
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ShowcaseEntityId
@@ -96,8 +96,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001213 RID: 4627
-		// (get) Token: 0x060060F6 RID: 24822 RVA: 0x000EA2EA File Offset: 0x000E84EA
+		// Token: 0x170011BE RID: 4542
+		// (get) Token: 0x06005F66 RID: 24422 RVA: 0x000E716A File Offset: 0x000E536A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> DeliveredDolls
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060060F7 RID: 24823 RVA: 0x000EA2F2 File Offset: 0x000E84F2
+		// Token: 0x06005F67 RID: 24423 RVA: 0x000E7172 File Offset: 0x000E5372
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DollDeliveryInfo);
 		}
 
-		// Token: 0x060060F8 RID: 24824 RVA: 0x000EA300 File Offset: 0x000E8500
+		// Token: 0x06005F68 RID: 24424 RVA: 0x000E7180 File Offset: 0x000E5380
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DollDeliveryInfo other)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ShowcaseEntityId == other.ShowcaseEntityId && this.deliveredDolls_.Equals(other.deliveredDolls_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060060F9 RID: 24825 RVA: 0x000EA350 File Offset: 0x000E8550
+		// Token: 0x06005F69 RID: 24425 RVA: 0x000E71D0 File Offset: 0x000E53D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060060FA RID: 24826 RVA: 0x000EA39D File Offset: 0x000E859D
+		// Token: 0x06005F6A RID: 24426 RVA: 0x000E721D File Offset: 0x000E541D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060060FB RID: 24827 RVA: 0x000EA3AA File Offset: 0x000E85AA
+		// Token: 0x06005F6B RID: 24427 RVA: 0x000E722A File Offset: 0x000E542A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -158,7 +158,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060060FC RID: 24828 RVA: 0x000EA3B4 File Offset: 0x000E85B4
+		// Token: 0x06005F6C RID: 24428 RVA: 0x000E7234 File Offset: 0x000E5434
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060060FD RID: 24829 RVA: 0x000EA404 File Offset: 0x000E8604
+		// Token: 0x06005F6D RID: 24429 RVA: 0x000E7284 File Offset: 0x000E5484
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060060FE RID: 24830 RVA: 0x000EA458 File Offset: 0x000E8658
+		// Token: 0x06005F6E RID: 24430 RVA: 0x000E72D8 File Offset: 0x000E54D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DollDeliveryInfo other)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060060FF RID: 24831 RVA: 0x000EA4A5 File Offset: 0x000E86A5
+		// Token: 0x06005F6F RID: 24431 RVA: 0x000E7325 File Offset: 0x000E5525
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06006100 RID: 24832 RVA: 0x000EA4B0 File Offset: 0x000E86B0
+		// Token: 0x06005F70 RID: 24432 RVA: 0x000E7330 File Offset: 0x000E5530
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -248,25 +248,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400377D RID: 14205
+		// Token: 0x0400376A RID: 14186
 		private static readonly MessageParser<DollDeliveryInfo> _parser = new MessageParser<DollDeliveryInfo>(() => new DollDeliveryInfo());
 
-		// Token: 0x0400377E RID: 14206
+		// Token: 0x0400376B RID: 14187
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400377F RID: 14207
+		// Token: 0x0400376C RID: 14188
 		public const int ShowcaseEntityIdFieldNumber = 1;
 
-		// Token: 0x04003780 RID: 14208
+		// Token: 0x0400376D RID: 14189
 		private int showcaseEntityId_;
 
-		// Token: 0x04003781 RID: 14209
+		// Token: 0x0400376E RID: 14190
 		public const int DeliveredDollsFieldNumber = 2;
 
-		// Token: 0x04003782 RID: 14210
+		// Token: 0x0400376F RID: 14191
 		private static readonly FieldCodec<int> _repeated_deliveredDolls_codec = FieldCodec.ForInt32(18U);
 
-		// Token: 0x04003783 RID: 14211
+		// Token: 0x04003770 RID: 14192
 		private readonly RepeatedField<int> deliveredDolls_ = new RepeatedField<int>();
 	}
 }

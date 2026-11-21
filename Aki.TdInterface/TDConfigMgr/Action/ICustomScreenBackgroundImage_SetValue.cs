@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200194B RID: 6475
+	// Token: 0x02001AD6 RID: 6870
 	public class ICustomScreenBackgroundImage_SetValue
 	{
-		// Token: 0x040056AA RID: 22186
+		// Token: 0x04005AFD RID: 23293
 		public ECustomScreenType Type;
 
-		// Token: 0x040056AB RID: 22187
-		[Nullable(1)]
+		// Token: 0x04005AFE RID: 23294
 		public string BackgroundImagePath;
 	}
 }

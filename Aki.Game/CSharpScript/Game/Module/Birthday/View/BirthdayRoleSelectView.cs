@@ -12,16 +12,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Birthday.View
 {
-	// Token: 0x02005C2F RID: 23599
+	// Token: 0x02004C0F RID: 19471
 	public class BirthdayRoleSelectView : UiViewBase, IUiViewResource
 	{
-		// Token: 0x0603B9C9 RID: 244169 RVA: 0x00E3928C File Offset: 0x00E3748C
+		// Token: 0x06030914 RID: 198932 RVA: 0x00D895FC File Offset: 0x00D877FC
 		[NullableContext(1)]
 		public BirthdayRoleSelectView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B9CA RID: 244170 RVA: 0x00E39298 File Offset: 0x00E37498
+		// Token: 0x06030915 RID: 198933 RVA: 0x00D89608 File Offset: 0x00D87808
 		[NullableContext(1)]
 		public string GetExtraResourceId([Nullable(2)] object param = null)
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			return BirthdayModel.Instance.GetRoleSelectViewResource(birthdayInfo.Year);
 		}
 
-		// Token: 0x0603B9CB RID: 244171 RVA: 0x00E392C8 File Offset: 0x00E374C8
+		// Token: 0x06030916 RID: 198934 RVA: 0x00D89638 File Offset: 0x00D87838
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B9CC RID: 244172 RVA: 0x00E39438 File Offset: 0x00E37638
+		// Token: 0x06030917 RID: 198935 RVA: 0x00D897A8 File Offset: 0x00D879A8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BirthdayRoleSelectView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B9CD RID: 244173 RVA: 0x00E3947B File Offset: 0x00E3767B
+		// Token: 0x06030918 RID: 198936 RVA: 0x00D897EB File Offset: 0x00D879EB
 		protected override void OnStart()
 		{
 			if (this.TriggerType == BirthdayDefine.ETriggerType.ReSelect)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			}
 		}
 
-		// Token: 0x0603B9CE RID: 244174 RVA: 0x00E39498 File Offset: 0x00E37698
+		// Token: 0x06030919 RID: 198937 RVA: 0x00D89808 File Offset: 0x00D87A08
 		private void SetButtonText()
 		{
 			string item = "";
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), "BirthdaySelected_Invite", new <>z__ReadOnlySingleElementList<object>(item));
 		}
 
-		// Token: 0x0603B9CF RID: 244175 RVA: 0x00E394FC File Offset: 0x00E376FC
+		// Token: 0x0603091A RID: 198938 RVA: 0x00D8986C File Offset: 0x00D87A6C
 		[NullableContext(1)]
 		private BirthdayRoleHeadItem CreateItem()
 		{
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			};
 		}
 
-		// Token: 0x0603B9D0 RID: 244176 RVA: 0x00E39518 File Offset: 0x00E37718
+		// Token: 0x0603091B RID: 198939 RVA: 0x00D89888 File Offset: 0x00D87A88
 		private void OnToggleClickCallBack(int index, int roleId)
 		{
 			int? selectedRoleId = this.SelectedRoleId;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			this.RoleHeadScrollView.SelectGridProxy(index, false);
 		}
 
-		// Token: 0x0603B9D1 RID: 244177 RVA: 0x00E39580 File Offset: 0x00E37780
+		// Token: 0x0603091C RID: 198940 RVA: 0x00D898F0 File Offset: 0x00D87AF0
 		private void OnClickGotoButton()
 		{
 			if (this.SelectedRoleId == null)
@@ -140,13 +140,13 @@ namespace CSharpScript.Game.Module.Birthday.View
 			UiManager.Instance.OpenView(EUiViewName.BirthdaySelectConfirmView, new BirthdayInfo(this.TriggerType, this.Year, new int?(this.SelectedRoleId.Value)), null);
 		}
 
-		// Token: 0x0603B9D2 RID: 244178 RVA: 0x00E3960C File Offset: 0x00E3780C
+		// Token: 0x0603091D RID: 198941 RVA: 0x00D8997C File Offset: 0x00D87B7C
 		private void OnClickCloseButton()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401F08E RID: 127118
+		// Token: 0x04019B3F RID: 105279
 		[Nullable(new byte[]
 		{
 			2,
@@ -154,37 +154,37 @@ namespace CSharpScript.Game.Module.Birthday.View
 		})]
 		private LoopScrollView<BirthdayRoleHeadItem, int> RoleHeadScrollView;
 
-		// Token: 0x0401F08F RID: 127119
+		// Token: 0x04019B40 RID: 105280
 		private int? SelectedRoleId;
 
-		// Token: 0x0401F090 RID: 127120
+		// Token: 0x04019B41 RID: 105281
 		private int Year;
 
-		// Token: 0x0401F091 RID: 127121
+		// Token: 0x04019B42 RID: 105282
 		private BirthdayDefine.ETriggerType TriggerType;
 
-		// Token: 0x0200BE1E RID: 48670
+		// Token: 0x0200A826 RID: 43046
 		private class EComponents
 		{
-			// Token: 0x04039548 RID: 234824
+			// Token: 0x04033F0B RID: 212747
 			public const int TextTip = 0;
 
-			// Token: 0x04039549 RID: 234825
+			// Token: 0x04033F0C RID: 212748
 			public const int LoopScrollViewRoleHead = 1;
 
-			// Token: 0x0403954A RID: 234826
+			// Token: 0x04033F0D RID: 212749
 			public const int ItemRoleHead = 2;
 
-			// Token: 0x0403954B RID: 234827
+			// Token: 0x04033F0E RID: 212750
 			public const int ButtonGoto = 3;
 
-			// Token: 0x0403954C RID: 234828
+			// Token: 0x04033F0F RID: 212751
 			public const int TextInvite = 4;
 
-			// Token: 0x0403954D RID: 234829
+			// Token: 0x04033F10 RID: 212752
 			public const int TxtTitle = 5;
 
-			// Token: 0x0403954E RID: 234830
+			// Token: 0x04033F11 RID: 212753
 			public const int BtnClose = 6;
 		}
 	}

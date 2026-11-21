@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 {
-	// Token: 0x020066D9 RID: 26329
+	// Token: 0x02005629 RID: 22057
 	public class DropCatchDropItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06041D1F RID: 269599 RVA: 0x00FF69E0 File Offset: 0x00FF4BE0
+		// Token: 0x0603686B RID: 223339 RVA: 0x00F37DE4 File Offset: 0x00F35FE4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 			};
 		}
 
-		// Token: 0x06041D20 RID: 269600 RVA: 0x00FF6A68 File Offset: 0x00FF4C68
+		// Token: 0x0603686C RID: 223340 RVA: 0x00F37E6C File Offset: 0x00F3606C
 		public override void Refresh(int cfgId, bool isSelected, int gridIndex)
 		{
 			DropCatchDropItem? dropCatchDropItemById = DropCatchConfig.Instance.GetDropCatchDropItemById(cfgId);

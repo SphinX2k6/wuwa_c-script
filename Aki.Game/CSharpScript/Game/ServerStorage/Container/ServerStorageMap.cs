@@ -5,7 +5,7 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.ServerStorage.Container
 {
-	// Token: 0x02004589 RID: 17801
+	// Token: 0x020034B1 RID: 13489
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,18 +14,18 @@ namespace CSharpScript.Game.ServerStorage.Container
 	})]
 	public class ServerStorageMap : ServerStorageContainerEntry<Dictionary<int, int>>
 	{
-		// Token: 0x0602DEBA RID: 188090 RVA: 0x00A8F00D File Offset: 0x00A8D20D
+		// Token: 0x060225A4 RID: 140708 RVA: 0x009BB22D File Offset: 0x009B942D
 		public ServerStorageMap(EClientStorageSystemIdType key) : base(key)
 		{
 		}
 
-		// Token: 0x0602DEBB RID: 188091 RVA: 0x00A8F016 File Offset: 0x00A8D216
+		// Token: 0x060225A5 RID: 140709 RVA: 0x009BB236 File Offset: 0x009B9436
 		protected override Dictionary<int, int> CreateContainer()
 		{
 			return new Dictionary<int, int>();
 		}
 
-		// Token: 0x0602DEBC RID: 188092 RVA: 0x00A8F020 File Offset: 0x00A8D220
+		// Token: 0x060225A6 RID: 140710 RVA: 0x009BB240 File Offset: 0x009B9440
 		public unsafe override void Serialize(ClientStorageInfo info)
 		{
 			if (info.MapData == null)
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.ServerStorage.Container
 			}
 		}
 
-		// Token: 0x0602DEBD RID: 188093 RVA: 0x00A8F0FC File Offset: 0x00A8D2FC
+		// Token: 0x060225A7 RID: 140711 RVA: 0x009BB31C File Offset: 0x009B951C
 		[NullableContext(2)]
 		public override ClientStorageInfo Deserialize()
 		{
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.ServerStorage.Container
 			return clientStorageInfo;
 		}
 
-		// Token: 0x0602DEBE RID: 188094 RVA: 0x00A8F180 File Offset: 0x00A8D380
+		// Token: 0x060225A8 RID: 140712 RVA: 0x009BB3A0 File Offset: 0x009B95A0
 		public void Set(int key, int value)
 		{
 			Dictionary<int, int> container = base.GetContainer();
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.ServerStorage.Container
 			base.MarkDirty();
 		}
 
-		// Token: 0x0602DEBF RID: 188095 RVA: 0x00A8F1B2 File Offset: 0x00A8D3B2
+		// Token: 0x060225A9 RID: 140713 RVA: 0x009BB3D2 File Offset: 0x009B95D2
 		public void Delete(int key)
 		{
 			if (!base.GetContainer().Remove(key))
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.ServerStorage.Container
 			base.MarkDirty();
 		}
 
-		// Token: 0x0602DEC0 RID: 188096 RVA: 0x00A8F1CC File Offset: 0x00A8D3CC
+		// Token: 0x060225AA RID: 140714 RVA: 0x009BB3EC File Offset: 0x009B95EC
 		public int? Get(int key)
 		{
 			int value;
@@ -97,19 +97,19 @@ namespace CSharpScript.Game.ServerStorage.Container
 			return null;
 		}
 
-		// Token: 0x0602DEC1 RID: 188097 RVA: 0x00A8F1F9 File Offset: 0x00A8D3F9
+		// Token: 0x060225AB RID: 140715 RVA: 0x009BB419 File Offset: 0x009B9619
 		public bool Has(int key)
 		{
 			return base.GetContainer().ContainsKey(key);
 		}
 
-		// Token: 0x0602DEC2 RID: 188098 RVA: 0x00A8F207 File Offset: 0x00A8D407
+		// Token: 0x060225AC RID: 140716 RVA: 0x009BB427 File Offset: 0x009B9627
 		public int Size()
 		{
 			return base.GetContainer().Count;
 		}
 
-		// Token: 0x0602DEC3 RID: 188099 RVA: 0x00A8F214 File Offset: 0x00A8D414
+		// Token: 0x060225AD RID: 140717 RVA: 0x009BB434 File Offset: 0x009B9634
 		public void Overwrite(Dictionary<int, int> values)
 		{
 			Dictionary<int, int> container = base.GetContainer();

@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D50 RID: 11600
+// Token: 0x020022AA RID: 8874
 [NullableContext(1)]
 [Nullable(0)]
 public class WeeklyRoguePhantomRewardView : UiViewBase
 {
-	// Token: 0x060185FF RID: 99839 RVA: 0x00634A3A File Offset: 0x00632C3A
+	// Token: 0x06015EA1 RID: 89761 RVA: 0x0065AA4A File Offset: 0x00658C4A
 	public WeeklyRoguePhantomRewardView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06018600 RID: 99840 RVA: 0x00634A4C File Offset: 0x00632C4C
+	// Token: 0x06015EA2 RID: 89762 RVA: 0x0065AA5C File Offset: 0x00658C5C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,19 +39,19 @@ public class WeeklyRoguePhantomRewardView : UiViewBase
 		};
 	}
 
-	// Token: 0x06018601 RID: 99841 RVA: 0x00634B21 File Offset: 0x00632D21
+	// Token: 0x06015EA3 RID: 89763 RVA: 0x0065AB31 File Offset: 0x00658D31
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnPowerChanged, new Action(this.OnPowerChange));
 	}
 
-	// Token: 0x06018602 RID: 99842 RVA: 0x00634B3F File Offset: 0x00632D3F
+	// Token: 0x06015EA4 RID: 89764 RVA: 0x0065AB4F File Offset: 0x00658D4F
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPowerChanged, new Action(this.OnPowerChange));
 	}
 
-	// Token: 0x06018603 RID: 99843 RVA: 0x00634B60 File Offset: 0x00632D60
+	// Token: 0x06015EA5 RID: 89765 RVA: 0x0065AB70 File Offset: 0x00658D70
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeeklyRoguePhantomRewardView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -62,7 +62,7 @@ public class WeeklyRoguePhantomRewardView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018604 RID: 99844 RVA: 0x00634BA4 File Offset: 0x00632DA4
+	// Token: 0x06015EA6 RID: 89766 RVA: 0x0065ABB4 File Offset: 0x00658DB4
 	protected override void OnStart()
 	{
 		this.PhantomLoopScrollView = new LoopScrollView<WeeklyRoguePhantomRewardItem, WeeklyRoguePhantomRewardInfo>(base.GetLoopScrollViewComponent(1), (AUIBaseActor)base.GetItem(2).GetOwner(), new Func<WeeklyRoguePhantomRewardItem>(this.InitRewardItem), false);
@@ -71,7 +71,7 @@ public class WeeklyRoguePhantomRewardView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "WeeklyRouge_BonusWindow_Title", Array.Empty<object>());
 	}
 
-	// Token: 0x06018605 RID: 99845 RVA: 0x00634C08 File Offset: 0x00632E08
+	// Token: 0x06015EA7 RID: 89767 RVA: 0x0065AC18 File Offset: 0x00658E18
 	protected override void OnBeforeShow()
 	{
 		PowerCurrencyItem overPowerCurrencyItem = this.OverPowerCurrencyItem;
@@ -126,7 +126,7 @@ public class WeeklyRoguePhantomRewardView : UiViewBase
 		this.RefreshState();
 	}
 
-	// Token: 0x06018606 RID: 99846 RVA: 0x00634CCD File Offset: 0x00632ECD
+	// Token: 0x06015EA8 RID: 89768 RVA: 0x0065ACDD File Offset: 0x00658EDD
 	protected override void OnBeforeDestroy()
 	{
 		Action closeCallBack = this.InfoData.CloseCallBack;
@@ -137,7 +137,7 @@ public class WeeklyRoguePhantomRewardView : UiViewBase
 		closeCallBack();
 	}
 
-	// Token: 0x06018607 RID: 99847 RVA: 0x00634CE4 File Offset: 0x00632EE4
+	// Token: 0x06015EA9 RID: 89769 RVA: 0x0065ACF4 File Offset: 0x00658EF4
 	private bool RewardByCount(int count)
 	{
 		if (this.CurSelectedAreaId == -1)
@@ -157,7 +157,7 @@ public class WeeklyRoguePhantomRewardView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x06018608 RID: 99848 RVA: 0x00634D74 File Offset: 0x00632F74
+	// Token: 0x06015EAA RID: 89770 RVA: 0x0065AD84 File Offset: 0x00658F84
 	private UniTask InitCurrency()
 	{
 		WeeklyRoguePhantomRewardView.<InitCurrency>d__18 <InitCurrency>d__;
@@ -168,7 +168,7 @@ public class WeeklyRoguePhantomRewardView : UiViewBase
 		return <InitCurrency>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018609 RID: 99849 RVA: 0x00634DB8 File Offset: 0x00632FB8
+	// Token: 0x06015EAB RID: 89771 RVA: 0x0065ADC8 File Offset: 0x00658FC8
 	protected void RefreshLayout()
 	{
 		List<int> availableSilentArea = this.InfoData.AvailableSilentArea;
@@ -199,7 +199,7 @@ public class WeeklyRoguePhantomRewardView : UiViewBase
 		this.PhantomLoopScrollView.RefreshByData(list, false, null, false);
 	}
 
-	// Token: 0x0601860A RID: 99850 RVA: 0x00634E8C File Offset: 0x0063308C
+	// Token: 0x06015EAC RID: 89772 RVA: 0x0065AE9C File Offset: 0x0065909C
 	protected void RefreshState()
 	{
 		this.RefreshStateTxt();
@@ -217,7 +217,7 @@ public class WeeklyRoguePhantomRewardView : UiViewBase
 		this.PhantomLoopScrollView.RefreshAllGridProxies();
 	}
 
-	// Token: 0x0601860B RID: 99851 RVA: 0x00634EDC File Offset: 0x006330DC
+	// Token: 0x06015EAD RID: 89773 RVA: 0x0065AEEC File Offset: 0x006590EC
 	protected void RefreshStateTxt()
 	{
 		string textStringId = "Text_SelectRewardFromPool_Text";
@@ -230,7 +230,7 @@ public class WeeklyRoguePhantomRewardView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), textStringId, args);
 	}
 
-	// Token: 0x0601860C RID: 99852 RVA: 0x00634F2F File Offset: 0x0063312F
+	// Token: 0x06015EAE RID: 89774 RVA: 0x0065AF3F File Offset: 0x0065913F
 	private WeeklyRoguePhantomRewardItem InitRewardItem()
 	{
 		return new WeeklyRoguePhantomRewardItem
@@ -240,7 +240,7 @@ public class WeeklyRoguePhantomRewardView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601860D RID: 99853 RVA: 0x00634F5A File Offset: 0x0063315A
+	// Token: 0x06015EAF RID: 89775 RVA: 0x0065AF6A File Offset: 0x0065916A
 	private void OnPowerChange()
 	{
 		PowerRewardButtonItem singleButtonItem = this.SingleButtonItem;
@@ -256,70 +256,70 @@ public class WeeklyRoguePhantomRewardView : UiViewBase
 		doubleButtonItem.RefreshPowerState();
 	}
 
-	// Token: 0x0601860E RID: 99854 RVA: 0x00634F7D File Offset: 0x0063317D
+	// Token: 0x06015EB0 RID: 89776 RVA: 0x0065AF8D File Offset: 0x0065918D
 	private void OnHelpButtonClick()
 	{
 		HelpController.Instance.OpenHelpById(463);
 	}
 
-	// Token: 0x0601860F RID: 99855 RVA: 0x00634F8E File Offset: 0x0063318E
+	// Token: 0x06015EB1 RID: 89777 RVA: 0x0065AF9E File Offset: 0x0065919E
 	private bool GetToggleStateSelected(int awardId)
 	{
 		return this.CurSelectedAreaId == awardId;
 	}
 
-	// Token: 0x06018610 RID: 99856 RVA: 0x00634F99 File Offset: 0x00633199
+	// Token: 0x06015EB2 RID: 89778 RVA: 0x0065AFA9 File Offset: 0x006591A9
 	private void OnToggleStateChange(UUIExtendToggle toggle, UUIButtonComponent reduceButton, int id, bool isSelected)
 	{
 		this.CurSelectedAreaId = (isSelected ? id : -1);
 		this.RefreshState();
 	}
 
-	// Token: 0x0400B4DD RID: 46301
+	// Token: 0x0400B852 RID: 47186
 	[Nullable(2)]
 	private PowerCurrencyItem PowerCurrencyItem;
 
-	// Token: 0x0400B4DE RID: 46302
+	// Token: 0x0400B853 RID: 47187
 	[Nullable(2)]
 	private PowerCurrencyItem OverPowerCurrencyItem;
 
-	// Token: 0x0400B4DF RID: 46303
+	// Token: 0x0400B854 RID: 47188
 	protected LoopScrollView<WeeklyRoguePhantomRewardItem, WeeklyRoguePhantomRewardInfo> PhantomLoopScrollView;
 
-	// Token: 0x0400B4E0 RID: 46304
+	// Token: 0x0400B855 RID: 47189
 	protected WeeklyRogueRewardPopViewData InfoData;
 
-	// Token: 0x0400B4E1 RID: 46305
+	// Token: 0x0400B856 RID: 47190
 	[Nullable(2)]
 	private PowerRewardButtonItem SingleButtonItem;
 
-	// Token: 0x0400B4E2 RID: 46306
+	// Token: 0x0400B857 RID: 47191
 	[Nullable(2)]
 	private PowerRewardButtonItem DoubleButtonItem;
 
-	// Token: 0x0400B4E3 RID: 46307
+	// Token: 0x0400B858 RID: 47192
 	private int CurSelectedAreaId = -1;
 
-	// Token: 0x0400B4E4 RID: 46308
+	// Token: 0x0400B859 RID: 47193
 	private const int HELP_ID = 463;
 
-	// Token: 0x020092E3 RID: 37603
+	// Token: 0x0200850A RID: 34058
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x0402F7A4 RID: 194468
+		// Token: 0x0402AE2C RID: 175660
 		TxtTitle,
-		// Token: 0x0402F7A5 RID: 194469
+		// Token: 0x0402AE2D RID: 175661
 		LoopScroll,
-		// Token: 0x0402F7A6 RID: 194470
+		// Token: 0x0402AE2E RID: 175662
 		RewardItem,
-		// Token: 0x0402F7A7 RID: 194471
+		// Token: 0x0402AE2F RID: 175663
 		TxtSelected,
-		// Token: 0x0402F7A8 RID: 194472
+		// Token: 0x0402AE30 RID: 175664
 		BtnLeft,
-		// Token: 0x0402F7A9 RID: 194473
+		// Token: 0x0402AE31 RID: 175665
 		BtnRight,
-		// Token: 0x0402F7AA RID: 194474
+		// Token: 0x0402AE32 RID: 175666
 		BtnHelpInfo
 	}
 }

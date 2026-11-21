@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E33 RID: 20019
+	// Token: 0x02003DFC RID: 15868
 	public enum ETokenTabType
 	{
-		// Token: 0x0401B605 RID: 112133
+		// Token: 0x04015FD8 RID: 90072
 		All,
-		// Token: 0x0401B606 RID: 112134
+		// Token: 0x04015FD9 RID: 90073
 		Common,
-		// Token: 0x0401B607 RID: 112135
+		// Token: 0x04015FDA RID: 90074
 		Role
 	}
 }

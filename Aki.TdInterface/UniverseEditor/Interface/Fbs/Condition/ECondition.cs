@@ -2,296 +2,320 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004933 RID: 18739
+	// Token: 0x02004DE7 RID: 19943
 	public enum ECondition : byte
 	{
-		// Token: 0x0400D006 RID: 53254
+		// Token: 0x0400DAB8 RID: 55992
 		CompareVar,
-		// Token: 0x0400D007 RID: 53255
+		// Token: 0x0400DAB9 RID: 55993
 		CompareQuestState,
-		// Token: 0x0400D008 RID: 53256
+		// Token: 0x0400DABA RID: 55994
 		CompareExploreLevel,
-		// Token: 0x0400D009 RID: 53257
+		// Token: 0x0400DABB RID: 55995
 		CompareCalabashLevel,
-		// Token: 0x0400D00A RID: 53258
+		// Token: 0x0400DABC RID: 55996
 		CompareEntityState,
-		// Token: 0x0400D00B RID: 53259
+		// Token: 0x0400DABD RID: 55997
 		CompareNpcPerformState,
-		// Token: 0x0400D00C RID: 53260
+		// Token: 0x0400DABE RID: 55998
 		CheckTreasureBeenClaimed,
-		// Token: 0x0400D00D RID: 53261
+		// Token: 0x0400DABF RID: 55999
 		CompareEntityGroupState,
-		// Token: 0x0400D00E RID: 53262
+		// Token: 0x0400DAC0 RID: 56000
 		CompareLevelPlayRewardState,
-		// Token: 0x0400D00F RID: 53263
+		// Token: 0x0400DAC1 RID: 56001
 		CompareEntitySelfState,
-		// Token: 0x0400D010 RID: 53264
+		// Token: 0x0400DAC2 RID: 56002
 		HourToHour,
-		// Token: 0x0400D011 RID: 53265
+		// Token: 0x0400DAC3 RID: 56003
 		RangeSphere,
-		// Token: 0x0400D012 RID: 53266
+		// Token: 0x0400DAC4 RID: 56004
 		CheckItems,
-		// Token: 0x0400D013 RID: 53267
+		// Token: 0x0400DAC5 RID: 56005
 		HasBuff,
-		// Token: 0x0400D014 RID: 53268
+		// Token: 0x0400DAC6 RID: 56006
 		CheckEntityHasBuff,
-		// Token: 0x0400D015 RID: 53269
+		// Token: 0x0400DAC7 RID: 56007
 		CheckEntityBuffStack,
-		// Token: 0x0400D016 RID: 53270
+		// Token: 0x0400DAC8 RID: 56008
 		ListenEntitySelfEvent,
-		// Token: 0x0400D017 RID: 53271
+		// Token: 0x0400DAC9 RID: 56009
 		CheckSystemFunction,
-		// Token: 0x0400D018 RID: 53272
+		// Token: 0x0400DACA RID: 56010
 		CompareLift,
-		// Token: 0x0400D019 RID: 53273
+		// Token: 0x0400DACB RID: 56011
 		CompareDungeonId,
-		// Token: 0x0400D01A RID: 53274
+		// Token: 0x0400DACC RID: 56012
 		CheckAiState,
-		// Token: 0x0400D01B RID: 53275
+		// Token: 0x0400DACD RID: 56013
 		CompareTimePeriod,
-		// Token: 0x0400D01C RID: 53276
+		// Token: 0x0400DACE RID: 56014
 		CompareWeather,
-		// Token: 0x0400D01D RID: 53277
+		// Token: 0x0400DACF RID: 56015
 		CheckLevelPlayState,
-		// Token: 0x0400D01E RID: 53278
+		// Token: 0x0400DAD0 RID: 56016
 		CheckLevelPlayCompleteNumber,
-		// Token: 0x0400D01F RID: 53279
+		// Token: 0x0400DAD1 RID: 56017
 		CheckLevelPlayChildQuestFinished,
-		// Token: 0x0400D020 RID: 53280
+		// Token: 0x0400DAD2 RID: 56018
 		CheckCurrentRole,
-		// Token: 0x0400D021 RID: 53281
+		// Token: 0x0400DAD3 RID: 56019
 		CheckPlayerGender,
-		// Token: 0x0400D022 RID: 53282
+		// Token: 0x0400DAD4 RID: 56020
 		CheckInCombat,
-		// Token: 0x0400D023 RID: 53283
+		// Token: 0x0400DAD5 RID: 56021
 		CheckHasFollowShooter,
-		// Token: 0x0400D024 RID: 53284
+		// Token: 0x0400DAD6 RID: 56022
 		CheckFollowShooterActive,
-		// Token: 0x0400D025 RID: 53285
+		// Token: 0x0400DAD7 RID: 56023
 		CheckChildQuestFinished,
-		// Token: 0x0400D026 RID: 53286
+		// Token: 0x0400DAD8 RID: 56024
 		ComparePlayerMotionState,
-		// Token: 0x0400D027 RID: 53287
+		// Token: 0x0400DAD9 RID: 56025
 		ComparePlayerMotionState2,
-		// Token: 0x0400D028 RID: 53288
+		// Token: 0x0400DADA RID: 56026
 		CheckDataLayer,
-		// Token: 0x0400D029 RID: 53289
+		// Token: 0x0400DADB RID: 56027
 		CheckHookLockPoint,
-		// Token: 0x0400D02A RID: 53290
+		// Token: 0x0400DADC RID: 56028
 		CheckPlayerSkillReady,
-		// Token: 0x0400D02B RID: 53291
+		// Token: 0x0400DADD RID: 56029
 		CheckPlayerUseSkill,
-		// Token: 0x0400D02C RID: 53292
+		// Token: 0x0400DADE RID: 56030
 		CheckPlayerStateRestriction,
-		// Token: 0x0400D02D RID: 53293
+		// Token: 0x0400DADF RID: 56031
 		CheckJigsawInfo,
-		// Token: 0x0400D02E RID: 53294
+		// Token: 0x0400DAE0 RID: 56032
 		CheckLordGymFinish,
-		// Token: 0x0400D02F RID: 53295
+		// Token: 0x0400DAE1 RID: 56033
 		CheckCalabashDevelopReward,
-		// Token: 0x0400D030 RID: 53296
+		// Token: 0x0400DAE2 RID: 56034
 		CheckGameplayTag,
-		// Token: 0x0400D031 RID: 53297
+		// Token: 0x0400DAE3 RID: 56035
 		CheckFormationRoleInfo,
-		// Token: 0x0400D032 RID: 53298
+		// Token: 0x0400DAE4 RID: 56036
 		CheckTargetAttribute,
-		// Token: 0x0400D033 RID: 53299
+		// Token: 0x0400DAE5 RID: 56037
 		CheckRogueAbilitySelect,
-		// Token: 0x0400D034 RID: 53300
+		// Token: 0x0400DAE6 RID: 56038
 		CompareTeammateDie,
-		// Token: 0x0400D035 RID: 53301
+		// Token: 0x0400DAE7 RID: 56039
 		CheckNodeStatus,
-		// Token: 0x0400D036 RID: 53302
+		// Token: 0x0400DAE8 RID: 56040
 		CheckChildQuestStatus,
-		// Token: 0x0400D037 RID: 53303
+		// Token: 0x0400DAE9 RID: 56041
 		CheckEntitesExist,
-		// Token: 0x0400D038 RID: 53304
+		// Token: 0x0400DAEA RID: 56042
 		CheckPlayerPosition,
-		// Token: 0x0400D039 RID: 53305
+		// Token: 0x0400DAEB RID: 56043
 		CheckEntityPosition,
-		// Token: 0x0400D03A RID: 53306
+		// Token: 0x0400DAEC RID: 56044
 		CheckDirection,
-		// Token: 0x0400D03B RID: 53307
+		// Token: 0x0400DAED RID: 56045
 		CheckSceneItemDirection,
-		// Token: 0x0400D03C RID: 53308
+		// Token: 0x0400DAEE RID: 56046
 		CheckPlayerFaceTo,
-		// Token: 0x0400D03D RID: 53309
+		// Token: 0x0400DAEF RID: 56047
 		CheckPlayerCanJoinActivity,
-		// Token: 0x0400D03E RID: 53310
+		// Token: 0x0400DAF0 RID: 56048
 		CheckSystemState,
-		// Token: 0x0400D03F RID: 53311
+		// Token: 0x0400DAF1 RID: 56049
 		CheckInRange,
-		// Token: 0x0400D040 RID: 53312
+		// Token: 0x0400DAF2 RID: 56050
 		CheckInRangeProperly,
-		// Token: 0x0400D041 RID: 53313
+		// Token: 0x0400DAF3 RID: 56051
 		CheckEntityLocked,
-		// Token: 0x0400D042 RID: 53314
+		// Token: 0x0400DAF4 RID: 56052
 		CheckEntityDistance,
-		// Token: 0x0400D043 RID: 53315
+		// Token: 0x0400DAF5 RID: 56053
 		CheckDungeonFinish,
-		// Token: 0x0400D044 RID: 53316
+		// Token: 0x0400DAF6 RID: 56054
 		CheckEntityIsVisibility,
-		// Token: 0x0400D045 RID: 53317
+		// Token: 0x0400DAF7 RID: 56055
 		CheckEntityHasSceneItemAttributeTag,
-		// Token: 0x0400D046 RID: 53318
+		// Token: 0x0400DAF8 RID: 56056
 		ListenEntityThroughPortal,
-		// Token: 0x0400D047 RID: 53319
+		// Token: 0x0400DAF9 RID: 56057
 		CheckTeleControlState,
-		// Token: 0x0400D048 RID: 53320
+		// Token: 0x0400DAFA RID: 56058
 		CustomJson,
-		// Token: 0x0400D049 RID: 53321
+		// Token: 0x0400DAFB RID: 56059
 		CheckChessWinner,
-		// Token: 0x0400D04A RID: 53322
+		// Token: 0x0400DAFC RID: 56060
 		CheckVehicleCondition,
-		// Token: 0x0400D04B RID: 53323
+		// Token: 0x0400DAFD RID: 56061
 		CompareAlertValue,
-		// Token: 0x0400D04C RID: 53324
+		// Token: 0x0400DAFE RID: 56062
 		CheckEntityGravityDirection,
-		// Token: 0x0400D04D RID: 53325
+		// Token: 0x0400DAFF RID: 56063
 		CheckCollectAnimalParts,
-		// Token: 0x0400D04E RID: 53326
+		// Token: 0x0400DB00 RID: 56064
 		CompleteCertainFishingEntrust,
-		// Token: 0x0400D04F RID: 53327
+		// Token: 0x0400DB01 RID: 56065
 		CheckCertainFishingItemCount,
-		// Token: 0x0400D050 RID: 53328
+		// Token: 0x0400DB02 RID: 56066
 		CompareFishingPrestigeLevel,
-		// Token: 0x0400D051 RID: 53329
+		// Token: 0x0400DB03 RID: 56067
 		CompareFishingBoatState,
-		// Token: 0x0400D052 RID: 53330
+		// Token: 0x0400DB04 RID: 56068
 		CheckFinishLoading,
-		// Token: 0x0400D053 RID: 53331
+		// Token: 0x0400DB05 RID: 56069
+		CheckPreloadComplete,
+		// Token: 0x0400DB06 RID: 56070
 		CheckFishingPointHasFish,
-		// Token: 0x0400D054 RID: 53332
+		// Token: 0x0400DB07 RID: 56071
 		CheckFishingCageFillingRatio,
-		// Token: 0x0400D055 RID: 53333
+		// Token: 0x0400DB08 RID: 56072
 		CompareFishingTechLevel,
-		// Token: 0x0400D056 RID: 53334
+		// Token: 0x0400DB09 RID: 56073
 		CheckGuestCharacter,
-		// Token: 0x0400D057 RID: 53335
+		// Token: 0x0400DB0A RID: 56074
 		CheckSubLevelState,
-		// Token: 0x0400D058 RID: 53336
+		// Token: 0x0400DB0B RID: 56075
 		ComparePlayerNumInDungeon,
-		// Token: 0x0400D059 RID: 53337
+		// Token: 0x0400DB0C RID: 56076
 		CheckAlertAreaEnabled,
-		// Token: 0x0400D05A RID: 53338
+		// Token: 0x0400DB0D RID: 56077
 		CheckClientEvent,
-		// Token: 0x0400D05B RID: 53339
+		// Token: 0x0400DB0E RID: 56078
 		CheckIsGramophonePlayingMusic,
-		// Token: 0x0400D05C RID: 53340
+		// Token: 0x0400DB0F RID: 56079
 		CheckEntityReward,
-		// Token: 0x0400D05D RID: 53341
+		// Token: 0x0400DB10 RID: 56080
 		CheckDungeonHasSaveConfig,
-		// Token: 0x0400D05E RID: 53342
+		// Token: 0x0400DB11 RID: 56081
 		CheckBVBEvent,
-		// Token: 0x0400D05F RID: 53343
+		// Token: 0x0400DB12 RID: 56082
 		CheckDangoCultivationProgress,
-		// Token: 0x0400D060 RID: 53344
+		// Token: 0x0400DB13 RID: 56083
 		CheckPlayerMoraleLevelRange,
-		// Token: 0x0400D061 RID: 53345
+		// Token: 0x0400DB14 RID: 56084
 		CheckIsGlobalTimeScaleEnabled,
-		// Token: 0x0400D062 RID: 53346
+		// Token: 0x0400DB15 RID: 56085
 		SaveConfigEnterMethod,
-		// Token: 0x0400D063 RID: 53347
+		// Token: 0x0400DB16 RID: 56086
 		CheckIsEntityTimeScaleEnabled,
-		// Token: 0x0400D064 RID: 53348
+		// Token: 0x0400DB17 RID: 56087
 		CheckIsCharacterHoldingHands,
-		// Token: 0x0400D065 RID: 53349
+		// Token: 0x0400DB18 RID: 56088
 		CheckIsTrackingCurrentQuest,
-		// Token: 0x0400D066 RID: 53350
+		// Token: 0x0400DB19 RID: 56089
 		CheckIsTrackingQuest,
-		// Token: 0x0400D067 RID: 53351
+		// Token: 0x0400DB1A RID: 56090
 		CheckMusicBeatsEvent,
-		// Token: 0x0400D068 RID: 53352
+		// Token: 0x0400DB1B RID: 56091
 		CompareGameDifficulty,
-		// Token: 0x0400D069 RID: 53353
+		// Token: 0x0400DB1C RID: 56092
 		CheckPhotographCameraParam,
-		// Token: 0x0400D06A RID: 53354
+		// Token: 0x0400DB1D RID: 56093
 		CheckAvailableSunSpiritCount,
-		// Token: 0x0400D06B RID: 53355
+		// Token: 0x0400DB1E RID: 56094
 		CheckHonamiStoryGetItem,
-		// Token: 0x0400D06C RID: 53356
+		// Token: 0x0400DB1F RID: 56095
 		CheckHonamiStoryEquipItem,
-		// Token: 0x0400D06D RID: 53357
+		// Token: 0x0400DB20 RID: 56096
 		CheckHonamiStoryActivateTalent,
-		// Token: 0x0400D06E RID: 53358
+		// Token: 0x0400DB21 RID: 56097
 		CheckHonamiStoryUnlockSlot,
-		// Token: 0x0400D06F RID: 53359
+		// Token: 0x0400DB22 RID: 56098
 		CheckHonamiStoryLifeSupportLevel,
-		// Token: 0x0400D070 RID: 53360
+		// Token: 0x0400DB23 RID: 56099
 		CheckHonamiStoryTowerComplete,
-		// Token: 0x0400D071 RID: 53361
+		// Token: 0x0400DB24 RID: 56100
 		CheckHonamiStoryPlayerCorruptedLevel,
-		// Token: 0x0400D072 RID: 53362
+		// Token: 0x0400DB25 RID: 56101
 		CheckHonamiStoryUnlockMascot,
-		// Token: 0x0400D073 RID: 53363
+		// Token: 0x0400DB26 RID: 56102
 		CheckHonamiStoryChestOpenTime,
-		// Token: 0x0400D074 RID: 53364
+		// Token: 0x0400DB27 RID: 56103
 		CheckHonamiStorySuccessfulEvacuation,
-		// Token: 0x0400D075 RID: 53365
+		// Token: 0x0400DB28 RID: 56104
 		CheckPlayerEnterClientTriggerDir,
-		// Token: 0x0400D076 RID: 53366
+		// Token: 0x0400DB29 RID: 56105
 		CheckPlayerRelativeAngle,
-		// Token: 0x0400D077 RID: 53367
+		// Token: 0x0400DB2A RID: 56106
 		CheckBvbChallengeState,
-		// Token: 0x0400D078 RID: 53368
+		// Token: 0x0400DB2B RID: 56107
 		CheckBvbActivityRank,
-		// Token: 0x0400D079 RID: 53369
+		// Token: 0x0400DB2C RID: 56108
 		CheckCollectedSunSpiritCount,
-		// Token: 0x0400D07A RID: 53370
+		// Token: 0x0400DB2D RID: 56109
 		CheckTargetSunSpiritCollected,
-		// Token: 0x0400D07B RID: 53371
+		// Token: 0x0400DB2E RID: 56110
 		CheckPlayerIsInDeadEyeProcess,
-		// Token: 0x0400D07C RID: 53372
+		// Token: 0x0400DB2F RID: 56111
 		CheckTrafficBlocked,
-		// Token: 0x0400D07D RID: 53373
+		// Token: 0x0400DB30 RID: 56112
 		CheckPlayerRelativeDistance,
-		// Token: 0x0400D07E RID: 53374
+		// Token: 0x0400DB31 RID: 56113
 		CheckDrinksPreferenceLevel,
-		// Token: 0x0400D07F RID: 53375
+		// Token: 0x0400DB32 RID: 56114
 		CheckPlayerIsInMotorcycleCruise,
-		// Token: 0x0400D080 RID: 53376
+		// Token: 0x0400DB33 RID: 56115
+		CheckPlayerIsControlledByAi,
+		// Token: 0x0400DB34 RID: 56116
 		CheckEntitySelfDirection,
-		// Token: 0x0400D081 RID: 53377
+		// Token: 0x0400DB35 RID: 56117
 		CheckDollGrabItemComboAchievedInOnceDelivery,
-		// Token: 0x0400D082 RID: 53378
+		// Token: 0x0400DB36 RID: 56118
 		CheckDollGrabShowcaseItemComboAchieved,
-		// Token: 0x0400D083 RID: 53379
+		// Token: 0x0400DB37 RID: 56119
 		CheckDollGrabMachineFinished,
-		// Token: 0x0400D084 RID: 53380
+		// Token: 0x0400DB38 RID: 56120
 		CheckTetrisEndlessScore,
-		// Token: 0x0400D085 RID: 53381
+		// Token: 0x0400DB39 RID: 56121
+		CheckDartLevelComplete,
+		// Token: 0x0400DB3A RID: 56122
 		CheckAtlasUnlocked,
-		// Token: 0x0400D086 RID: 53382
+		// Token: 0x0400DB3B RID: 56123
 		CheckSheriffUnlockEnding,
-		// Token: 0x0400D087 RID: 53383
+		// Token: 0x0400DB3C RID: 56124
 		CheckSyncLevelPlayCompleteNumber,
-		// Token: 0x0400D088 RID: 53384
+		// Token: 0x0400DB3D RID: 56125
 		CheckCrossSceneSyncKillMonsterFinished,
-		// Token: 0x0400D089 RID: 53385
+		// Token: 0x0400DB3E RID: 56126
 		CheckIsInDragActorPlay,
-		// Token: 0x0400D08A RID: 53386
+		// Token: 0x0400DB3F RID: 56127
 		CheckIsInDollGrabGamePlay,
-		// Token: 0x0400D08B RID: 53387
+		// Token: 0x0400DB40 RID: 56128
+		CheckIsInDartGameplay,
+		// Token: 0x0400DB41 RID: 56129
+		CheckIsInRideFlyingCarGameplay,
+		// Token: 0x0400DB42 RID: 56130
 		CheckEntityPrefabPerformanceType,
-		// Token: 0x0400D08C RID: 53388
+		// Token: 0x0400DB43 RID: 56131
 		CheckRoverRogueAbilitySelect,
-		// Token: 0x0400D08D RID: 53389
+		// Token: 0x0400DB44 RID: 56132
 		CheckIsSupportedWalking,
-		// Token: 0x0400D08E RID: 53390
+		// Token: 0x0400DB45 RID: 56133
 		CheckIsTargetHoldElementalBox,
-		// Token: 0x0400D08F RID: 53391
+		// Token: 0x0400DB46 RID: 56134
 		CheckElementalBoxState,
-		// Token: 0x0400D090 RID: 53392
+		// Token: 0x0400DB47 RID: 56135
 		CheckElementalEffectActive,
-		// Token: 0x0400D091 RID: 53393
+		// Token: 0x0400DB48 RID: 56136
 		CheckGiantStableValue,
-		// Token: 0x0400D092 RID: 53394
+		// Token: 0x0400DB49 RID: 56137
 		CheckGiantTotalProgressCanActivateNode,
-		// Token: 0x0400D093 RID: 53395
+		// Token: 0x0400DB4A RID: 56138
 		CheckGiantTotalProgressInteractActivatedNode,
-		// Token: 0x0400D094 RID: 53396
+		// Token: 0x0400DB4B RID: 56139
 		CheckGiantRegionCultivationTriggeredUpgradeLevel,
-		// Token: 0x0400D095 RID: 53397
-		CheckElementalWaterBoxStagnationSeq
+		// Token: 0x0400DB4C RID: 56140
+		CheckElementalWaterBoxStagnationSeq,
+		// Token: 0x0400DB4D RID: 56141
+		CheckMechState,
+		// Token: 0x0400DB4E RID: 56142
+		CheckExploreSkillState,
+		// Token: 0x0400DB4F RID: 56143
+		CompareSeasonWeather,
+		// Token: 0x0400DB50 RID: 56144
+		CheckSeasonWeatherSpecialUnlocked,
+		// Token: 0x0400DB51 RID: 56145
+		CheckCollectiblesDetectionAllowed,
+		// Token: 0x0400DB52 RID: 56146
+		CheckDiceGameChallengeState,
+		// Token: 0x0400DB53 RID: 56147
+		CompareDiceGameRankLevel
 	}
 }

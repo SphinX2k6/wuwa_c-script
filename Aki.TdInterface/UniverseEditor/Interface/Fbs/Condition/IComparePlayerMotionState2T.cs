@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BC0 RID: 19392
+	// Token: 0x020050AA RID: 20650
 	public class IComparePlayerMotionState2T
 	{
-		// Token: 0x17008CD3 RID: 36051
-		// (get) Token: 0x0601E992 RID: 125330 RVA: 0x0044783B File Offset: 0x00445A3B
-		// (set) Token: 0x0601E993 RID: 125331 RVA: 0x00447843 File Offset: 0x00445A43
+		// Token: 0x170093EC RID: 37868
+		// (get) Token: 0x0602053E RID: 132414 RVA: 0x0047A39F File Offset: 0x0047859F
+		// (set) Token: 0x0602053F RID: 132415 RVA: 0x0047A3A7 File Offset: 0x004785A7
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008CD4 RID: 36052
-		// (get) Token: 0x0601E994 RID: 125332 RVA: 0x0044784C File Offset: 0x00445A4C
-		// (set) Token: 0x0601E995 RID: 125333 RVA: 0x00447854 File Offset: 0x00445A54
+		// Token: 0x170093ED RID: 37869
+		// (get) Token: 0x06020540 RID: 132416 RVA: 0x0047A3B0 File Offset: 0x004785B0
+		// (set) Token: 0x06020541 RID: 132417 RVA: 0x0047A3B8 File Offset: 0x004785B8
 		public EPlayerMotionState MotionState { get; set; }
 
-		// Token: 0x17008CD5 RID: 36053
-		// (get) Token: 0x0601E996 RID: 125334 RVA: 0x0044785D File Offset: 0x00445A5D
-		// (set) Token: 0x0601E997 RID: 125335 RVA: 0x00447865 File Offset: 0x00445A65
+		// Token: 0x170093EE RID: 37870
+		// (get) Token: 0x06020542 RID: 132418 RVA: 0x0047A3C1 File Offset: 0x004785C1
+		// (set) Token: 0x06020543 RID: 132419 RVA: 0x0047A3C9 File Offset: 0x004785C9
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008CD6 RID: 36054
-		// (get) Token: 0x0601E998 RID: 125336 RVA: 0x0044786E File Offset: 0x00445A6E
-		// (set) Token: 0x0601E999 RID: 125337 RVA: 0x00447876 File Offset: 0x00445A76
+		// Token: 0x170093EF RID: 37871
+		// (get) Token: 0x06020544 RID: 132420 RVA: 0x0047A3D2 File Offset: 0x004785D2
+		// (set) Token: 0x06020545 RID: 132421 RVA: 0x0047A3DA File Offset: 0x004785DA
 		public TOnlinePlayerConditionTargetUnion OnlinePlayerConditionTargetOption { get; set; }
 
-		// Token: 0x0601E99A RID: 125338 RVA: 0x0044787F File Offset: 0x00445A7F
+		// Token: 0x06020546 RID: 132422 RVA: 0x0047A3E3 File Offset: 0x004785E3
 		public IComparePlayerMotionState2T()
 		{
 			this.Type = ECondition.CompareVar;

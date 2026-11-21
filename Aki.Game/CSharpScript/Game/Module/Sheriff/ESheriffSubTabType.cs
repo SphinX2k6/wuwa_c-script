@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C3E RID: 19518
+	// Token: 0x02003BEF RID: 15343
 	public enum ESheriffSubTabType
 	{
-		// Token: 0x0401ADF6 RID: 110070
+		// Token: 0x04015753 RID: 87891
 		Criminal,
-		// Token: 0x0401ADF7 RID: 110071
+		// Token: 0x04015754 RID: 87892
 		POI,
-		// Token: 0x0401ADF8 RID: 110072
+		// Token: 0x04015755 RID: 87893
 		Branch
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045D8 RID: 17880
+	// Token: 0x02004A40 RID: 19008
 	public struct ITripleZoneHitResult : IFlatbufferObject
 	{
-		// Token: 0x17007F1B RID: 32539
-		// (get) Token: 0x0601B0E7 RID: 110823 RVA: 0x003DB0D4 File Offset: 0x003D92D4
+		// Token: 0x1700855C RID: 34140
+		// (get) Token: 0x0601C8BC RID: 116924 RVA: 0x00407370 File Offset: 0x00405570
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B0E8 RID: 110824 RVA: 0x003DB0E1 File Offset: 0x003D92E1
+		// Token: 0x0601C8BD RID: 116925 RVA: 0x0040737D File Offset: 0x0040557D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B0E9 RID: 110825 RVA: 0x003DB0E8 File Offset: 0x003D92E8
+		// Token: 0x0601C8BE RID: 116926 RVA: 0x00407384 File Offset: 0x00405584
 		public static ITripleZoneHitResult GetRootAsITripleZoneHitResult(ByteBuffer _bb)
 		{
 			return ITripleZoneHitResult.GetRootAsITripleZoneHitResult(_bb, default(ITripleZoneHitResult));
 		}
 
-		// Token: 0x0601B0EA RID: 110826 RVA: 0x003DB104 File Offset: 0x003D9304
+		// Token: 0x0601C8BF RID: 116927 RVA: 0x004073A0 File Offset: 0x004055A0
 		public static ITripleZoneHitResult GetRootAsITripleZoneHitResult(ByteBuffer _bb, ITripleZoneHitResult obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B0EB RID: 110827 RVA: 0x003DB121 File Offset: 0x003D9321
+		// Token: 0x0601C8C0 RID: 116928 RVA: 0x004073BD File Offset: 0x004055BD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B0EC RID: 110828 RVA: 0x003DB130 File Offset: 0x003D9330
+		// Token: 0x0601C8C1 RID: 116929 RVA: 0x004073CC File Offset: 0x004055CC
 		public ITripleZoneHitResult __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007F1C RID: 32540
-		// (get) Token: 0x0601B0ED RID: 110829 RVA: 0x003DB140 File Offset: 0x003D9340
+		// Token: 0x1700855D RID: 34141
+		// (get) Token: 0x0601C8C2 RID: 116930 RVA: 0x004073DC File Offset: 0x004055DC
 		public EDartSkillResultType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007F1D RID: 32541
-		// (get) Token: 0x0601B0EE RID: 110830 RVA: 0x003DB17C File Offset: 0x003D937C
+		// Token: 0x1700855E RID: 34142
+		// (get) Token: 0x0601C8C3 RID: 116931 RVA: 0x00407418 File Offset: 0x00405618
 		public int Probability
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B0EF RID: 110831 RVA: 0x003DB1B8 File Offset: 0x003D93B8
+		// Token: 0x0601C8C4 RID: 116932 RVA: 0x00407454 File Offset: 0x00405654
 		public TDartboardZone ZonesType(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return (TDartboardZone)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x17007F1E RID: 32542
-		// (get) Token: 0x0601B0F0 RID: 110832 RVA: 0x003DB1F8 File Offset: 0x003D93F8
+		// Token: 0x1700855F RID: 34143
+		// (get) Token: 0x0601C8C5 RID: 116933 RVA: 0x00407494 File Offset: 0x00405694
 		public int ZonesTypeLength
 		{
 			get
@@ -104,13 +104,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B0F1 RID: 110833 RVA: 0x003DB223 File Offset: 0x003D9423
+		// Token: 0x0601C8C6 RID: 116934 RVA: 0x004074BF File Offset: 0x004056BF
 		public Span<TDartboardZone> GetZonesTypeBytes()
 		{
 			return this.__p.__vector_as_span<TDartboardZone>(8, 1);
 		}
 
-		// Token: 0x0601B0F2 RID: 110834 RVA: 0x003DB234 File Offset: 0x003D9434
+		// Token: 0x0601C8C7 RID: 116935 RVA: 0x004074D0 File Offset: 0x004056D0
 		public TDartboardZone[] GetZonesTypeArray()
 		{
 			int num = this.__p.__offset(8);
@@ -128,7 +128,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return array;
 		}
 
-		// Token: 0x0601B0F3 RID: 110835 RVA: 0x003DB2A0 File Offset: 0x003D94A0
+		// Token: 0x0601C8C8 RID: 116936 RVA: 0x0040753C File Offset: 0x0040573C
 		public TTable? Zones<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -139,8 +139,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x17007F1F RID: 32543
-		// (get) Token: 0x0601B0F4 RID: 110836 RVA: 0x003DB2E8 File Offset: 0x003D94E8
+		// Token: 0x17008560 RID: 34144
+		// (get) Token: 0x0601C8C9 RID: 116937 RVA: 0x00407584 File Offset: 0x00405784
 		public int ZonesLength
 		{
 			get
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B0F5 RID: 110837 RVA: 0x003DB314 File Offset: 0x003D9514
+		// Token: 0x0601C8CA RID: 116938 RVA: 0x004075B0 File Offset: 0x004057B0
 		public static Offset<ITripleZoneHitResult> CreateITripleZoneHitResult(FlatBufferBuilder builder, EDartSkillResultType Type = EDartSkillResultType.NoBust, int Probability = 0, VectorOffset Zones_typeOffset = default(VectorOffset), VectorOffset ZonesOffset = default(VectorOffset))
 		{
 			builder.StartTable(4);
@@ -165,31 +165,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ITripleZoneHitResult.EndITripleZoneHitResult(builder);
 		}
 
-		// Token: 0x0601B0F6 RID: 110838 RVA: 0x003DB340 File Offset: 0x003D9540
+		// Token: 0x0601C8CB RID: 116939 RVA: 0x004075DC File Offset: 0x004057DC
 		public static void StartITripleZoneHitResult(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601B0F7 RID: 110839 RVA: 0x003DB349 File Offset: 0x003D9549
+		// Token: 0x0601C8CC RID: 116940 RVA: 0x004075E5 File Offset: 0x004057E5
 		public static void AddType(FlatBufferBuilder builder, EDartSkillResultType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B0F8 RID: 110840 RVA: 0x003DB354 File Offset: 0x003D9554
+		// Token: 0x0601C8CD RID: 116941 RVA: 0x004075F0 File Offset: 0x004057F0
 		public static void AddProbability(FlatBufferBuilder builder, int probability)
 		{
 			builder.AddInt(1, probability, 0);
 		}
 
-		// Token: 0x0601B0F9 RID: 110841 RVA: 0x003DB35F File Offset: 0x003D955F
+		// Token: 0x0601C8CE RID: 116942 RVA: 0x004075FB File Offset: 0x004057FB
 		public static void AddZonesType(FlatBufferBuilder builder, VectorOffset zonesTypeOffset)
 		{
 			builder.AddOffset(2, zonesTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601B0FA RID: 110842 RVA: 0x003DB370 File Offset: 0x003D9570
+		// Token: 0x0601C8CF RID: 116943 RVA: 0x0040760C File Offset: 0x0040580C
 		public static VectorOffset CreateZonesTypeVector(FlatBufferBuilder builder, TDartboardZone[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -200,7 +200,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B0FB RID: 110843 RVA: 0x003DB3A7 File Offset: 0x003D95A7
+		// Token: 0x0601C8D0 RID: 116944 RVA: 0x00407643 File Offset: 0x00405843
 		public static VectorOffset CreateZonesTypeVectorBlock(FlatBufferBuilder builder, TDartboardZone[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -208,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B0FC RID: 110844 RVA: 0x003DB3C1 File Offset: 0x003D95C1
+		// Token: 0x0601C8D1 RID: 116945 RVA: 0x0040765D File Offset: 0x0040585D
 		public static VectorOffset CreateZonesTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TDartboardZone> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B0FD RID: 110845 RVA: 0x003DB3DF File Offset: 0x003D95DF
+		// Token: 0x0601C8D2 RID: 116946 RVA: 0x0040767B File Offset: 0x0040587B
 		public static VectorOffset CreateZonesTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -224,19 +224,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B0FE RID: 110846 RVA: 0x003DB3F8 File Offset: 0x003D95F8
+		// Token: 0x0601C8D3 RID: 116947 RVA: 0x00407694 File Offset: 0x00405894
 		public static void StartZonesTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601B0FF RID: 110847 RVA: 0x003DB403 File Offset: 0x003D9603
+		// Token: 0x0601C8D4 RID: 116948 RVA: 0x0040769F File Offset: 0x0040589F
 		public static void AddZones(FlatBufferBuilder builder, VectorOffset zonesOffset)
 		{
 			builder.AddOffset(3, zonesOffset.Value, 0);
 		}
 
-		// Token: 0x0601B100 RID: 110848 RVA: 0x003DB414 File Offset: 0x003D9614
+		// Token: 0x0601C8D5 RID: 116949 RVA: 0x004076B0 File Offset: 0x004058B0
 		public static VectorOffset CreateZonesVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -247,7 +247,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B101 RID: 110849 RVA: 0x003DB44B File Offset: 0x003D964B
+		// Token: 0x0601C8D6 RID: 116950 RVA: 0x004076E7 File Offset: 0x004058E7
 		public static VectorOffset CreateZonesVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -255,7 +255,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B102 RID: 110850 RVA: 0x003DB465 File Offset: 0x003D9665
+		// Token: 0x0601C8D7 RID: 116951 RVA: 0x00407701 File Offset: 0x00405901
 		public static VectorOffset CreateZonesVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B103 RID: 110851 RVA: 0x003DB483 File Offset: 0x003D9683
+		// Token: 0x0601C8D8 RID: 116952 RVA: 0x0040771F File Offset: 0x0040591F
 		public static VectorOffset CreateZonesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -271,19 +271,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B104 RID: 110852 RVA: 0x003DB49C File Offset: 0x003D969C
+		// Token: 0x0601C8D9 RID: 116953 RVA: 0x00407738 File Offset: 0x00405938
 		public static void StartZonesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601B105 RID: 110853 RVA: 0x003DB4A7 File Offset: 0x003D96A7
+		// Token: 0x0601C8DA RID: 116954 RVA: 0x00407743 File Offset: 0x00405943
 		public static Offset<ITripleZoneHitResult> EndITripleZoneHitResult(FlatBufferBuilder builder)
 		{
 			return new Offset<ITripleZoneHitResult>(builder.EndTable());
 		}
 
-		// Token: 0x0601B106 RID: 110854 RVA: 0x003DB4B4 File Offset: 0x003D96B4
+		// Token: 0x0601C8DB RID: 116955 RVA: 0x00407750 File Offset: 0x00405950
 		public ITripleZoneHitResultT UnPack()
 		{
 			ITripleZoneHitResultT tripleZoneHitResultT = new ITripleZoneHitResultT();
@@ -291,7 +291,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return tripleZoneHitResultT;
 		}
 
-		// Token: 0x0601B107 RID: 110855 RVA: 0x003DB4D0 File Offset: 0x003D96D0
+		// Token: 0x0601C8DC RID: 116956 RVA: 0x0040776C File Offset: 0x0040596C
 		public void UnPackTo(ITripleZoneHitResultT _o)
 		{
 			_o.Type = this.Type;
@@ -323,7 +323,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B108 RID: 110856 RVA: 0x003DB670 File Offset: 0x003D9870
+		// Token: 0x0601C8DD RID: 116957 RVA: 0x0040790C File Offset: 0x00405B0C
 		public static Offset<ITripleZoneHitResult> Pack(FlatBufferBuilder builder, ITripleZoneHitResultT _o)
 		{
 			if (_o == null)
@@ -353,7 +353,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ITripleZoneHitResult.CreateITripleZoneHitResult(builder, _o.Type, _o.Probability, zones_typeOffset, zonesOffset);
 		}
 
-		// Token: 0x0400C6AD RID: 50861
+		// Token: 0x0400D0DC RID: 53468
 		private Table __p;
 	}
 }

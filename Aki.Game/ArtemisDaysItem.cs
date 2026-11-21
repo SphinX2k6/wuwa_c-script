@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020010F0 RID: 4336
+// Token: 0x020005A4 RID: 1444
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class ArtemisDaysItem : GridProxyAbstract<IArtemisDayItemData>
 {
-	// Token: 0x06007106 RID: 28934 RVA: 0x00171330 File Offset: 0x0016F530
+	// Token: 0x0600449C RID: 17564 RVA: 0x00179CEC File Offset: 0x00177EEC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class ArtemisDaysItem : GridProxyAbstract<IArtemisDayItemData>
 		};
 	}
 
-	// Token: 0x06007107 RID: 28935 RVA: 0x001713F0 File Offset: 0x0016F5F0
+	// Token: 0x0600449D RID: 17565 RVA: 0x00179DAC File Offset: 0x00177FAC
 	public override void Refresh(IArtemisDayItemData data, bool isSelected, int gridIndex)
 	{
 		if (data == null)
@@ -56,13 +56,13 @@ public class ArtemisDaysItem : GridProxyAbstract<IArtemisDayItemData>
 		this.UpdateState(data.State);
 	}
 
-	// Token: 0x06007108 RID: 28936 RVA: 0x0017146B File Offset: 0x0016F66B
+	// Token: 0x0600449E RID: 17566 RVA: 0x00179E27 File Offset: 0x00178027
 	public void SetClickCallback(Action<int> callback)
 	{
 		this.ClickCallback = callback;
 	}
 
-	// Token: 0x06007109 RID: 28937 RVA: 0x00171474 File Offset: 0x0016F674
+	// Token: 0x0600449F RID: 17567 RVA: 0x00179E30 File Offset: 0x00178030
 	public void UpdateState(EArtemisState? state)
 	{
 		EArtemisState? eartemisState = state;
@@ -80,7 +80,7 @@ public class ArtemisDaysItem : GridProxyAbstract<IArtemisDayItemData>
 		this.LoadMaterial(state.GetValueOrDefault() == EArtemisState.Unlock);
 	}
 
-	// Token: 0x0600710A RID: 28938 RVA: 0x00171520 File Offset: 0x0016F720
+	// Token: 0x060044A0 RID: 17568 RVA: 0x00179EDC File Offset: 0x001780DC
 	private void SetDayCountColor(bool isSelected, EArtemisState state)
 	{
 		bool flag = state == EArtemisState.Rewarded;
@@ -117,7 +117,7 @@ public class ArtemisDaysItem : GridProxyAbstract<IArtemisDayItemData>
 		}
 	}
 
-	// Token: 0x0600710B RID: 28939 RVA: 0x001715C6 File Offset: 0x0016F7C6
+	// Token: 0x060044A1 RID: 17569 RVA: 0x00179F82 File Offset: 0x00178182
 	private void OnClicked(EToggleState toggleState)
 	{
 		if (this.LockState)
@@ -131,7 +131,7 @@ public class ArtemisDaysItem : GridProxyAbstract<IArtemisDayItemData>
 		this.ClickCallback(this.Day);
 	}
 
-	// Token: 0x0600710C RID: 28940 RVA: 0x001715F8 File Offset: 0x0016F7F8
+	// Token: 0x060044A2 RID: 17570 RVA: 0x00179FB4 File Offset: 0x001781B4
 	public void LoadMaterial(bool loadMaterial)
 	{
 		if (loadMaterial)
@@ -175,49 +175,49 @@ public class ArtemisDaysItem : GridProxyAbstract<IArtemisDayItemData>
 		}
 	}
 
-	// Token: 0x04003457 RID: 13399
+	// Token: 0x040034F0 RID: 13552
 	private int Day;
 
-	// Token: 0x04003458 RID: 13400
+	// Token: 0x040034F1 RID: 13553
 	private bool LockState;
 
-	// Token: 0x04003459 RID: 13401
+	// Token: 0x040034F2 RID: 13554
 	private Action<int> ClickCallback = delegate(int _)
 	{
 	};
 
-	// Token: 0x0400345A RID: 13402
+	// Token: 0x040034F3 RID: 13555
 	private readonly FColor RewardColor = FColor.FromHex("838383");
 
-	// Token: 0x0400345B RID: 13403
+	// Token: 0x040034F4 RID: 13556
 	private readonly FColor UnlockColor = FColor.FromHex("FFFFFF");
 
-	// Token: 0x0400345C RID: 13404
+	// Token: 0x040034F5 RID: 13557
 	private readonly FColor ChoseColor = FColor.FromHex("212224");
 
-	// Token: 0x0400345D RID: 13405
+	// Token: 0x040034F6 RID: 13558
 	private readonly FColor LockColor = FColor.FromHex("838383");
 
-	// Token: 0x020076B3 RID: 30387
+	// Token: 0x02006847 RID: 26695
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040272CE RID: 160462
+		// Token: 0x04022617 RID: 140823
 		public const int ToggleNode = 0;
 
-		// Token: 0x040272CF RID: 160463
+		// Token: 0x04022618 RID: 140824
 		public const int MainContentNode = 1;
 
-		// Token: 0x040272D0 RID: 160464
+		// Token: 0x04022619 RID: 140825
 		public const int Completion = 2;
 
-		// Token: 0x040272D1 RID: 160465
+		// Token: 0x0402261A RID: 140826
 		public const int DayCountText = 3;
 
-		// Token: 0x040272D2 RID: 160466
+		// Token: 0x0402261B RID: 140827
 		public const int LockedState = 4;
 
-		// Token: 0x040272D3 RID: 160467
+		// Token: 0x0402261C RID: 140828
 		public const int DayCountTextBlack = 5;
 	}
 }

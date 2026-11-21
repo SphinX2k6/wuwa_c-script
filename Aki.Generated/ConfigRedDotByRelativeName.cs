@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007C2 RID: 1986
+	// Token: 0x020007DE RID: 2014
 	public class ConfigRedDotByRelativeName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002E9E RID: 11934 RVA: 0x00160E44 File Offset: 0x0015F044
+		// Token: 0x06002F46 RID: 12102 RVA: 0x0016812C File Offset: 0x0016632C
 		static ConfigRedDotByRelativeName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRedDotByRelativeName.CreateStaticDefaultValue), new Action(ConfigRedDotByRelativeName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002E9F RID: 11935 RVA: 0x00160E64 File Offset: 0x0015F064
+		// Token: 0x06002F47 RID: 12103 RVA: 0x0016814C File Offset: 0x0016634C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRedDotByRelativeName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002EA0 RID: 11936 RVA: 0x00160EE3 File Offset: 0x0015F0E3
+		// Token: 0x06002F48 RID: 12104 RVA: 0x001681CB File Offset: 0x001663CB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRedDotByRelativeName.LogPair = null;
 			ConfigRedDotByRelativeName.HandleId = 0;
 		}
 
-		// Token: 0x06002EA1 RID: 11937 RVA: 0x00160EF1 File Offset: 0x0015F0F1
+		// Token: 0x06002F49 RID: 12105 RVA: 0x001681D9 File Offset: 0x001663D9
 		public static void Init()
 		{
 			ConfigRedDotByRelativeName.HandleId = ConfigCommon.InitDataStatement(ConfigRedDotByRelativeName.HandleId, "db_reddot.db", "select BinData from `RedDot` where RelativeName IS NOT NULL");
 		}
 
-		// Token: 0x06002EA2 RID: 11938 RVA: 0x00160F0C File Offset: 0x0015F10C
+		// Token: 0x06002F4A RID: 12106 RVA: 0x001681F4 File Offset: 0x001663F4
 		[NullableContext(2)]
 		public static IReadOnlyList<RedDot> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003634 RID: 13876
+		// Token: 0x040036F8 RID: 14072
 		private const string DB = "db_reddot.db";
 
-		// Token: 0x04003635 RID: 13877
+		// Token: 0x040036F9 RID: 14073
 		private const string FILE = "h.红点.xlsx";
 
-		// Token: 0x04003636 RID: 13878
+		// Token: 0x040036FA RID: 14074
 		private const string TABLE = "RedDot";
 
-		// Token: 0x04003637 RID: 13879
+		// Token: 0x040036FB RID: 14075
 		private const string COMMAND = "select BinData from `RedDot` where RelativeName IS NOT NULL";
 
-		// Token: 0x04003638 RID: 13880
+		// Token: 0x040036FC RID: 14076
 		private const string KEY_PREFIX = "RedDotByRelativeName";
 
-		// Token: 0x04003639 RID: 13881
+		// Token: 0x040036FD RID: 14077
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400363A RID: 13882
+		// Token: 0x040036FE RID: 14078
 		private static int HandleId;
 	}
 }

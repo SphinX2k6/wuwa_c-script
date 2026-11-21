@@ -1,27 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using Google.Protobuf.Collections;
 
-// Token: 0x02001CA8 RID: 7336
+// Token: 0x02001167 RID: 4455
 [NullableContext(1)]
 [Nullable(0)]
 public class ProtoGachaInfo
 {
-	// Token: 0x0600DD79 RID: 56697 RVA: 0x0033CC80 File Offset: 0x0033AE80
+	// Token: 0x0600B18F RID: 45455 RVA: 0x0034810C File Offset: 0x0034630C
 	public ProtoGachaInfo(GachaInfo gachaInfo)
 	{
 		this.Id = gachaInfo.Id;
 		this.TodayTimes = gachaInfo.TodayTimes;
 		this.TotalTimes = gachaInfo.TotalTimes;
 		this.ItemId = gachaInfo.ItemId;
-		this.GachaConsumes = gachaInfo.GachaConsumes.ToArray<GachaConsume>();
+		GachaConsume[] array = new GachaConsume[gachaInfo.GachaConsumes.Count];
+		gachaInfo.GachaConsumes.CopyTo(array, 0);
+		this.GachaConsumes = array;
 		this.UsePoolId = gachaInfo.UsePoolId;
 		this.GachaAccumulateId = gachaInfo.GachaAccumulateId;
-		this.GachaDiscountInfos = gachaInfo.GachaDiscountInfos.ToArray<GachaDiscountInfo>();
+		GachaDiscountInfo[] array2 = new GachaDiscountInfo[gachaInfo.GachaDiscountInfos.Count];
+		gachaInfo.GachaDiscountInfos.CopyTo(array2, 0);
+		this.GachaDiscountInfos = array2;
 		this.OnlyViewDiscount = gachaInfo.OnlyViewDiscount;
 		this.IsShowProgress = gachaInfo.IsShowProgress;
 		foreach (KeyValuePair<int, string> keyValuePair in gachaInfo.DiscountTagDetails)
@@ -51,7 +54,7 @@ public class ProtoGachaInfo
 		}
 	}
 
-	// Token: 0x0600DD7A RID: 56698 RVA: 0x0033CE90 File Offset: 0x0033B090
+	// Token: 0x0600B190 RID: 45456 RVA: 0x00348348 File Offset: 0x00346548
 	[NullableContext(2)]
 	public ProtoGachaPoolInfo GetFirstValidPool()
 	{
@@ -63,7 +66,7 @@ public class ProtoGachaInfo
 		return null;
 	}
 
-	// Token: 0x0600DD7B RID: 56699 RVA: 0x0033CEB0 File Offset: 0x0033B0B0
+	// Token: 0x0600B191 RID: 45457 RVA: 0x00348368 File Offset: 0x00346568
 	[NullableContext(2)]
 	public ProtoGachaPoolInfo GetPoolInfo(int poolId)
 	{
@@ -78,7 +81,7 @@ public class ProtoGachaInfo
 		return result;
 	}
 
-	// Token: 0x0600DD7C RID: 56700 RVA: 0x0033CEE4 File Offset: 0x0033B0E4
+	// Token: 0x0600B192 RID: 45458 RVA: 0x0034839C File Offset: 0x0034659C
 	[NullableContext(2)]
 	public ProtoGachaPoolInfo GetCurrentPoolInfo()
 	{
@@ -90,14 +93,14 @@ public class ProtoGachaInfo
 		return this.GetPoolInfo(this.UsePoolId);
 	}
 
-	// Token: 0x0600DD7D RID: 56701 RVA: 0x0033CF28 File Offset: 0x0033B128
+	// Token: 0x0600B193 RID: 45459 RVA: 0x003483E0 File Offset: 0x003465E0
 	public double GetPoolEndTimeByPoolId(int poolId)
 	{
 		ProtoGachaPoolInfo poolInfo = this.GetPoolInfo(poolId);
 		return this.GetPoolEndTimeByPoolInfo(poolInfo);
 	}
 
-	// Token: 0x0600DD7E RID: 56702 RVA: 0x0033CF44 File Offset: 0x0033B144
+	// Token: 0x0600B194 RID: 45460 RVA: 0x003483FC File Offset: 0x003465FC
 	[NullableContext(2)]
 	public double GetPoolEndTimeByPoolInfo(ProtoGachaPoolInfo poolInfo)
 	{
@@ -122,7 +125,7 @@ public class ProtoGachaInfo
 		return endTime;
 	}
 
-	// Token: 0x0600DD7F RID: 56703 RVA: 0x0033CF88 File Offset: 0x0033B188
+	// Token: 0x0600B195 RID: 45461 RVA: 0x00348440 File Offset: 0x00346640
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -147,26 +150,26 @@ public class ProtoGachaInfo
 		return list.ToArray();
 	}
 
-	// Token: 0x0600DD80 RID: 56704 RVA: 0x0033CFFC File Offset: 0x0033B1FC
+	// Token: 0x0600B196 RID: 45462 RVA: 0x003484B4 File Offset: 0x003466B4
 	public bool IsPoolValid(ProtoGachaPoolInfo poolInfo)
 	{
 		double poolEndTimeByPoolInfo = this.GetPoolEndTimeByPoolInfo(poolInfo);
 		return poolEndTimeByPoolInfo == 0.0 || poolEndTimeByPoolInfo >= TimeUtil.Instance.GetServerTime();
 	}
 
-	// Token: 0x040065A9 RID: 26025
+	// Token: 0x0400667A RID: 26234
 	public readonly int Id;
 
-	// Token: 0x040065AA RID: 26026
+	// Token: 0x0400667B RID: 26235
 	public int TodayTimes;
 
-	// Token: 0x040065AB RID: 26027
+	// Token: 0x0400667C RID: 26236
 	public int TotalTimes;
 
-	// Token: 0x040065AC RID: 26028
+	// Token: 0x0400667D RID: 26237
 	public readonly int ItemId;
 
-	// Token: 0x040065AD RID: 26029
+	// Token: 0x0400667E RID: 26238
 	[Nullable(new byte[]
 	{
 		2,
@@ -174,45 +177,45 @@ public class ProtoGachaInfo
 	})]
 	public readonly GachaConsume[] GachaConsumes;
 
-	// Token: 0x040065AE RID: 26030
+	// Token: 0x0400667F RID: 26239
 	public int UsePoolId;
 
-	// Token: 0x040065AF RID: 26031
+	// Token: 0x04006680 RID: 26240
 	private readonly ProtoGachaPoolInfo[] Pools = Array.Empty<ProtoGachaPoolInfo>();
 
-	// Token: 0x040065B0 RID: 26032
+	// Token: 0x04006681 RID: 26241
 	public readonly double BeginTime;
 
-	// Token: 0x040065B1 RID: 26033
+	// Token: 0x04006682 RID: 26242
 	public readonly double EndTime;
 
-	// Token: 0x040065B2 RID: 26034
+	// Token: 0x04006683 RID: 26243
 	public readonly int DailyLimitTimes;
 
-	// Token: 0x040065B3 RID: 26035
+	// Token: 0x04006684 RID: 26244
 	public readonly int TotalLimitTimes;
 
-	// Token: 0x040065B4 RID: 26036
+	// Token: 0x04006685 RID: 26245
 	public readonly string ResourcesId = "";
 
-	// Token: 0x040065B5 RID: 26037
+	// Token: 0x04006686 RID: 26246
 	public int GroupId;
 
-	// Token: 0x040065B6 RID: 26038
+	// Token: 0x04006687 RID: 26247
 	public int Sort;
 
-	// Token: 0x040065B7 RID: 26039
+	// Token: 0x04006688 RID: 26248
 	public int GachaAccumulateId;
 
-	// Token: 0x040065B8 RID: 26040
+	// Token: 0x04006689 RID: 26249
 	public GachaDiscountInfo[] GachaDiscountInfos = Array.Empty<GachaDiscountInfo>();
 
-	// Token: 0x040065B9 RID: 26041
+	// Token: 0x0400668A RID: 26250
 	public bool OnlyViewDiscount;
 
-	// Token: 0x040065BA RID: 26042
+	// Token: 0x0400668B RID: 26251
 	public bool IsShowProgress;
 
-	// Token: 0x040065BB RID: 26043
+	// Token: 0x0400668C RID: 26252
 	public Dictionary<int, string> DiscountTagDetails = new Dictionary<int, string>();
 }

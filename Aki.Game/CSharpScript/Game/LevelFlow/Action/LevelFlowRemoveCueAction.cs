@@ -5,12 +5,12 @@ using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F99 RID: 28569
+	// Token: 0x0200611A RID: 24858
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowRemoveCueAction : LevelFlowActionBase
 	{
-		// Token: 0x0604575E RID: 284510 RVA: 0x0113A6E7 File Offset: 0x011388E7
+		// Token: 0x0603B90C RID: 243980 RVA: 0x010E44EB File Offset: 0x010E26EB
 		public LevelFlowRemoveCueAction Init(int entityId, List<long> cueIdList, bool isFloater = false)
 		{
 			this.EntityId = entityId;
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x0604575F RID: 284511 RVA: 0x0113A700 File Offset: 0x01138900
+		// Token: 0x0603B90D RID: 243981 RVA: 0x010E4504 File Offset: 0x010E2704
 		protected override void OnExecute()
 		{
 			EntityHandle entityHandle;
@@ -73,13 +73,13 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x040243E5 RID: 148453
+		// Token: 0x0401F69A RID: 128666
 		public int EntityId;
 
-		// Token: 0x040243E6 RID: 148454
+		// Token: 0x0401F69B RID: 128667
 		public bool IsFloater;
 
-		// Token: 0x040243E7 RID: 148455
+		// Token: 0x0401F69C RID: 128668
 		public List<long> CueIdList = new List<long>();
 	}
 }

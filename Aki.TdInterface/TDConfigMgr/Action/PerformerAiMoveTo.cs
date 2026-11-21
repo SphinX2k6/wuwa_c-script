@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020FB RID: 8443
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200235C RID: 9052
 	public class PerformerAiMoveTo : ActionParams
 	{
-		// Token: 0x0600B9C2 RID: 47554 RVA: 0x001AD780 File Offset: 0x001AB980
+		// Token: 0x0600C54E RID: 50510 RVA: 0x001C48E0 File Offset: 0x001C2AE0
 		private PerformerAiMoveTo_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B9C3 RID: 47555 RVA: 0x001AD7B8 File Offset: 0x001AB9B8
+		// Token: 0x0600C54F RID: 50511 RVA: 0x001C4918 File Offset: 0x001C2B18
 		public static PerformerAiMoveTo Create([Nullable(2)] PerformerAiMoveTo instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9C4 RID: 47556 RVA: 0x001AD7CB File Offset: 0x001AB9CB
+		// Token: 0x0600C550 RID: 50512 RVA: 0x001C492B File Offset: 0x001C2B2B
 		public static PerformerAiMoveTo CreateFromSetValue([Nullable(2)] PerformerAiMoveTo_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9C5 RID: 47557 RVA: 0x001AD7DE File Offset: 0x001AB9DE
+		// Token: 0x0600C551 RID: 50513 RVA: 0x001C493E File Offset: 0x001C2B3E
 		public PerformerAiMoveTo_SetValue ToSetValue()
 		{
 			return new PerformerAiMoveTo_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170038C2 RID: 14530
-		// (get) Token: 0x0600B9C6 RID: 47558 RVA: 0x001AD7FD File Offset: 0x001AB9FD
-		// (set) Token: 0x0600B9C7 RID: 47559 RVA: 0x001AD824 File Offset: 0x001ABA24
+		// Token: 0x17003BAE RID: 15278
+		// (get) Token: 0x0600C552 RID: 50514 RVA: 0x001C495D File Offset: 0x001C2B5D
+		// (set) Token: 0x0600C553 RID: 50515 RVA: 0x001C4984 File Offset: 0x001C2B84
 		public virtual IPerformerAiMoveConfig Config
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038C3 RID: 14531
-		// (get) Token: 0x0600B9C8 RID: 47560 RVA: 0x001AD834 File Offset: 0x001ABA34
-		// (set) Token: 0x0600B9C9 RID: 47561 RVA: 0x001AD86E File Offset: 0x001ABA6E
+		// Token: 0x17003BAF RID: 15279
+		// (get) Token: 0x0600C554 RID: 50516 RVA: 0x001C4994 File Offset: 0x001C2B94
+		// (set) Token: 0x0600C555 RID: 50517 RVA: 0x001C49CE File Offset: 0x001C2BCE
 		public virtual float? StopDistance
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006F41 RID: 28481
+		// Token: 0x04007575 RID: 30069
 		[Nullable(2)]
 		protected new PerformerAiMoveTo FbInstance;
 
-		// Token: 0x04006F42 RID: 28482
+		// Token: 0x04007576 RID: 30070
 		[Nullable(2)]
 		protected PerformerAiMoveTo_SetValue PocoInterface;
 	}

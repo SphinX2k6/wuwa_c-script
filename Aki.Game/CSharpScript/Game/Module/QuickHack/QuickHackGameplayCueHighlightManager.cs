@@ -5,19 +5,19 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F64 RID: 20324
+	// Token: 0x02003F2D RID: 16173
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickHackGameplayCueHighlightManager : QuickHackHighlightManager
 	{
-		// Token: 0x0603411F RID: 213279 RVA: 0x00C367B8 File Offset: 0x00C349B8
+		// Token: 0x06028F8D RID: 167821 RVA: 0x00B7FF58 File Offset: 0x00B7E158
 		public override void Init(QuickHackDevice config)
 		{
 			base.Init(config);
 			this.Config = new QuickHackDevice?(config);
 		}
 
-		// Token: 0x06034120 RID: 213280 RVA: 0x00C367D0 File Offset: 0x00C349D0
+		// Token: 0x06028F8E RID: 167822 RVA: 0x00B7FF70 File Offset: 0x00B7E170
 		public override void RefreshTargetsHighlight(IEnumerable<EntityHandle> lockTargets, IEnumerable<EntityHandle> onScreenTargets)
 		{
 			if (this.Config == null)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034121 RID: 213281 RVA: 0x00C3686C File Offset: 0x00C34A6C
+		// Token: 0x06028F8F RID: 167823 RVA: 0x00B8000C File Offset: 0x00B7E20C
 		private void RefreshTargetsGameplayCue(IEnumerable<long> cueIds, HashSet<EntityHandle> newTargetSet, Dictionary<EntityHandle, List<int>> currentTargetToCueMap)
 		{
 			List<EntityHandle> list = new List<EntityHandle>();
@@ -93,14 +93,14 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034122 RID: 213282 RVA: 0x00C36A8C File Offset: 0x00C34C8C
+		// Token: 0x06028F90 RID: 167824 RVA: 0x00B8022C File Offset: 0x00B7E42C
 		public override void RemoveAllHighlight()
 		{
 			this.ClearTargetsGameplayCue(this.TargetToHighlightCueMap);
 			this.ClearTargetsGameplayCue(this.OnScreenTargetToHighlightCueMap);
 		}
 
-		// Token: 0x06034123 RID: 213283 RVA: 0x00C36AA8 File Offset: 0x00C34CA8
+		// Token: 0x06028F91 RID: 167825 RVA: 0x00B80248 File Offset: 0x00B7E448
 		private void ClearTargetsGameplayCue(Dictionary<EntityHandle, List<int>> targetToCueMap)
 		{
 			foreach (KeyValuePair<EntityHandle, List<int>> keyValuePair in targetToCueMap)
@@ -125,13 +125,13 @@ namespace CSharpScript.Game.Module.QuickHack
 			targetToCueMap.Clear();
 		}
 
-		// Token: 0x0401BA9F RID: 113311
+		// Token: 0x04016474 RID: 91252
 		private QuickHackDevice? Config;
 
-		// Token: 0x0401BAA0 RID: 113312
+		// Token: 0x04016475 RID: 91253
 		private readonly Dictionary<EntityHandle, List<int>> TargetToHighlightCueMap = new Dictionary<EntityHandle, List<int>>();
 
-		// Token: 0x0401BAA1 RID: 113313
+		// Token: 0x04016476 RID: 91254
 		private readonly Dictionary<EntityHandle, List<int>> OnScreenTargetToHighlightCueMap = new Dictionary<EntityHandle, List<int>>();
 	}
 }

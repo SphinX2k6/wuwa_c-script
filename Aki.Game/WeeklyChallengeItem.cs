@@ -12,7 +12,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D29 RID: 11561
+// Token: 0x02002283 RID: 8835
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -21,7 +21,7 @@ using UnrealEngine;
 })]
 public class WeeklyChallengeItem : GridProxyAbstract<WeeklyChallengeTaskData>
 {
-	// Token: 0x060184D5 RID: 99541 RVA: 0x0062FA00 File Offset: 0x0062DC00
+	// Token: 0x06015D77 RID: 89463 RVA: 0x00655A14 File Offset: 0x00653C14
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 16;
@@ -72,7 +72,7 @@ public class WeeklyChallengeItem : GridProxyAbstract<WeeklyChallengeTaskData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060184D6 RID: 99542 RVA: 0x0062FCA0 File Offset: 0x0062DEA0
+	// Token: 0x06015D78 RID: 89464 RVA: 0x00655CB4 File Offset: 0x00653EB4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeeklyChallengeItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -83,19 +83,19 @@ public class WeeklyChallengeItem : GridProxyAbstract<WeeklyChallengeTaskData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060184D7 RID: 99543 RVA: 0x0062FCE3 File Offset: 0x0062DEE3
+	// Token: 0x06015D79 RID: 89465 RVA: 0x00655CF7 File Offset: 0x00653EF7
 	protected override void OnStart()
 	{
 		this.TagItemLayout = new GenericLayout<WeeklyChallengeTagItem, string>(base.GetHorizontalLayout(4), new Func<WeeklyChallengeTagItem>(this.CreateTagItem), null, false, true);
 	}
 
-	// Token: 0x060184D8 RID: 99544 RVA: 0x0062FD06 File Offset: 0x0062DF06
+	// Token: 0x06015D7A RID: 89466 RVA: 0x00655D1A File Offset: 0x00653F1A
 	private WeeklyChallengeTagItem CreateTagItem()
 	{
 		return new WeeklyChallengeTagItem();
 	}
 
-	// Token: 0x060184D9 RID: 99545 RVA: 0x0062FD10 File Offset: 0x0062DF10
+	// Token: 0x06015D7B RID: 89467 RVA: 0x00655D24 File Offset: 0x00653F24
 	public override void Refresh(WeeklyChallengeTaskData data, bool isSelected, int gridIndex)
 	{
 		int configId = data.ConfigId;
@@ -164,7 +164,7 @@ public class WeeklyChallengeItem : GridProxyAbstract<WeeklyChallengeTaskData>
 		base.GetItem(13).SetUIActive(false);
 	}
 
-	// Token: 0x060184DA RID: 99546 RVA: 0x0062FF9C File Offset: 0x0062E19C
+	// Token: 0x06015D7C RID: 89468 RVA: 0x00655FB0 File Offset: 0x006541B0
 	private void OnClickLockButton()
 	{
 		if (this.ConfigData == null)
@@ -197,7 +197,7 @@ public class WeeklyChallengeItem : GridProxyAbstract<WeeklyChallengeTaskData>
 		UiManager.Instance.OpenView(EUiViewName.CommonConditionView, param, null);
 	}
 
-	// Token: 0x060184DB RID: 99547 RVA: 0x006300E4 File Offset: 0x0062E2E4
+	// Token: 0x06015D7D RID: 89469 RVA: 0x006560F8 File Offset: 0x006542F8
 	private void OnClickHelpButton()
 	{
 		if (this.ConfigData == null)
@@ -207,7 +207,7 @@ public class WeeklyChallengeItem : GridProxyAbstract<WeeklyChallengeTaskData>
 		HelpController.Instance.OpenHelpById(this.ConfigData.Value.HelpId);
 	}
 
-	// Token: 0x060184DC RID: 99548 RVA: 0x0063011C File Offset: 0x0062E31C
+	// Token: 0x06015D7E RID: 89470 RVA: 0x00656130 File Offset: 0x00654330
 	private void OnClickGoToButton()
 	{
 		if (this.ConfigData == null)
@@ -229,7 +229,7 @@ public class WeeklyChallengeItem : GridProxyAbstract<WeeklyChallengeTaskData>
 		SkipTaskManager.RunByConfigId(this.ConfigData.Value.AccessPathId, null);
 	}
 
-	// Token: 0x060184DD RID: 99549 RVA: 0x006301D4 File Offset: 0x0062E3D4
+	// Token: 0x06015D7F RID: 89471 RVA: 0x006561E8 File Offset: 0x006543E8
 	private void ReportRedClearEvent()
 	{
 		int valueOrDefault = DailyActivityModel.Instance.GetFirstOpenTabTime(DailyActivityDefine.EDailyActivityMainTab.Weekly).GetValueOrDefault();
@@ -242,10 +242,10 @@ public class WeeklyChallengeItem : GridProxyAbstract<WeeklyChallengeTaskData>
 		}
 	}
 
-	// Token: 0x0400B484 RID: 46212
+	// Token: 0x0400B7F9 RID: 47097
 	private WeeklyFrameHelp? ConfigData;
 
-	// Token: 0x0400B485 RID: 46213
+	// Token: 0x0400B7FA RID: 47098
 	[Nullable(new byte[]
 	{
 		2,
@@ -254,48 +254,48 @@ public class WeeklyChallengeItem : GridProxyAbstract<WeeklyChallengeTaskData>
 	})]
 	private GenericLayout<WeeklyChallengeTagItem, string> TagItemLayout;
 
-	// Token: 0x0400B486 RID: 46214
+	// Token: 0x0400B7FB RID: 47099
 	[Nullable(2)]
 	private FunctionalPanelConditionLock PanelLock;
 
-	// Token: 0x0400B487 RID: 46215
+	// Token: 0x0400B7FC RID: 47100
 	private bool IsUnlocked;
 
-	// Token: 0x020092B9 RID: 37561
+	// Token: 0x020084E0 RID: 34016
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402F6D3 RID: 194259
+		// Token: 0x0402AD5B RID: 175451
 		ClickButton,
-		// Token: 0x0402F6D4 RID: 194260
+		// Token: 0x0402AD5C RID: 175452
 		IconTexture,
-		// Token: 0x0402F6D5 RID: 194261
+		// Token: 0x0402AD5D RID: 175453
 		NameText,
-		// Token: 0x0402F6D6 RID: 194262
+		// Token: 0x0402AD5E RID: 175454
 		HelpButton,
-		// Token: 0x0402F6D7 RID: 194263
+		// Token: 0x0402AD5F RID: 175455
 		TagHorizontalLayout,
-		// Token: 0x0402F6D8 RID: 194264
+		// Token: 0x0402AD60 RID: 175456
 		TagItem,
-		// Token: 0x0402F6D9 RID: 194265
+		// Token: 0x0402AD61 RID: 175457
 		ScoreText,
-		// Token: 0x0402F6DA RID: 194266
+		// Token: 0x0402AD62 RID: 175458
 		TimeText,
-		// Token: 0x0402F6DB RID: 194267
+		// Token: 0x0402AD63 RID: 175459
 		GoToItem,
-		// Token: 0x0402F6DC RID: 194268
+		// Token: 0x0402AD64 RID: 175460
 		GoToText,
-		// Token: 0x0402F6DD RID: 194269
+		// Token: 0x0402AD65 RID: 175461
 		LockPanel,
-		// Token: 0x0402F6DE RID: 194270
+		// Token: 0x0402AD66 RID: 175462
 		LockItem,
-		// Token: 0x0402F6DF RID: 194271
+		// Token: 0x0402AD67 RID: 175463
 		InfoPanel,
-		// Token: 0x0402F6E0 RID: 194272
+		// Token: 0x0402AD68 RID: 175464
 		EmptyPanel,
-		// Token: 0x0402F6E1 RID: 194273
+		// Token: 0x0402AD69 RID: 175465
 		ArchiveItem,
-		// Token: 0x0402F6E2 RID: 194274
+		// Token: 0x0402AD6A RID: 175466
 		ColorSprite
 	}
 }

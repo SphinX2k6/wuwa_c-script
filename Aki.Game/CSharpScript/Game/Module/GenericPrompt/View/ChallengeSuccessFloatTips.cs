@@ -5,16 +5,16 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.GenericPrompt.View
 {
-	// Token: 0x0200599D RID: 22941
+	// Token: 0x02004976 RID: 18806
 	public class ChallengeSuccessFloatTips : GenericPromptFloatTipsBase
 	{
-		// Token: 0x0603A359 RID: 238425 RVA: 0x00DD54E9 File Offset: 0x00DD36E9
+		// Token: 0x0602F27F RID: 193151 RVA: 0x00D24979 File Offset: 0x00D22B79
 		[NullableContext(1)]
 		public ChallengeSuccessFloatTips(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A35A RID: 238426 RVA: 0x00DD54F2 File Offset: 0x00DD36F2
+		// Token: 0x0602F280 RID: 193152 RVA: 0x00D24982 File Offset: 0x00D22B82
 		protected override void SetExtraText([ParamCollection] [Nullable(new byte[]
 		{
 			1,

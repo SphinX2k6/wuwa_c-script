@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 {
-	// Token: 0x02006436 RID: 25654
+	// Token: 0x020053B4 RID: 21428
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorDecalLinkIpViewModel
 	{
-		// Token: 0x06040803 RID: 264195 RVA: 0x00F9C6D0 File Offset: 0x00F9A8D0
+		// Token: 0x060354C4 RID: 218308 RVA: 0x00EE364C File Offset: 0x00EE184C
 		public string GetNameLogoPath()
 		{
 			bool flag = LanguageSystem.Instance.PackageLanguage == "zh-Hans";
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			return this.ChineseNameLogoPath;
 		}
 
-		// Token: 0x06040804 RID: 264196 RVA: 0x00F9C714 File Offset: 0x00F9A914
+		// Token: 0x060354C5 RID: 218309 RVA: 0x00EE3690 File Offset: 0x00EE1890
 		public unsafe void InitFromConfig(MotorDecalIp config, int index)
 		{
 			this.IpId = config.Id;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			MotorDecalLinkUtil.Debug(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x06040805 RID: 264197 RVA: 0x00F9C898 File Offset: 0x00F9AA98
+		// Token: 0x060354C6 RID: 218310 RVA: 0x00EE3814 File Offset: 0x00EE1A14
 		private void RefreshDecalDisplayFromStickerList()
 		{
 			this.DecalTexturePaths.Clear();
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			}
 		}
 
-		// Token: 0x06040806 RID: 264198 RVA: 0x00F9C9C4 File Offset: 0x00F9ABC4
+		// Token: 0x060354C7 RID: 218311 RVA: 0x00EE3940 File Offset: 0x00EE1B40
 		public void RefreshTaskStates(Dictionary<int, ActivityTaskData> activityQuestData)
 		{
 			this.TaskStateMap.Clear();
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			this.RefreshQuestViewModelList();
 		}
 
-		// Token: 0x06040807 RID: 264199 RVA: 0x00F9CA3C File Offset: 0x00F9AC3C
+		// Token: 0x060354C8 RID: 218312 RVA: 0x00EE39B8 File Offset: 0x00EE1BB8
 		public void RefreshQuestViewModelList()
 		{
 			IEnumerable<MotorDecalQuest> taskConfigListByIpId = MotorDecalLinkConfig.Instance.GetTaskConfigListByIpId(this.IpId);
@@ -166,40 +166,40 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			}
 		}
 
-		// Token: 0x0402187A RID: 137338
+		// Token: 0x0401C1A9 RID: 115113
 		public int IpId;
 
-		// Token: 0x0402187B RID: 137339
+		// Token: 0x0401C1AA RID: 115114
 		public int ActivityId;
 
-		// Token: 0x0402187C RID: 137340
+		// Token: 0x0401C1AB RID: 115115
 		public int IpIndex;
 
-		// Token: 0x0402187D RID: 137341
+		// Token: 0x0401C1AC RID: 115116
 		public List<int> StickerList = new List<int>();
 
-		// Token: 0x0402187E RID: 137342
+		// Token: 0x0401C1AD RID: 115117
 		public List<int> TaskIdList = new List<int>();
 
-		// Token: 0x0402187F RID: 137343
+		// Token: 0x0401C1AE RID: 115118
 		private string DefaultNameLogoPath = "";
 
-		// Token: 0x04021880 RID: 137344
+		// Token: 0x0401C1AF RID: 115119
 		private string ChineseNameLogoPath = "";
 
-		// Token: 0x04021881 RID: 137345
+		// Token: 0x0401C1B0 RID: 115120
 		public string MainPicturePath = "";
 
-		// Token: 0x04021882 RID: 137346
+		// Token: 0x0401C1B1 RID: 115121
 		public List<MotorDecalLinkQuestViewModel> QuestViewModelList = new List<MotorDecalLinkQuestViewModel>();
 
-		// Token: 0x04021883 RID: 137347
+		// Token: 0x0401C1B2 RID: 115122
 		public List<string> DecalTexturePaths = new List<string>();
 
-		// Token: 0x04021884 RID: 137348
+		// Token: 0x0401C1B3 RID: 115123
 		public List<string> DecalPreviewPaths = new List<string>();
 
-		// Token: 0x04021885 RID: 137349
+		// Token: 0x0401C1B4 RID: 115124
 		private readonly Dictionary<int, ActivityTaskData> TaskStateMap = new Dictionary<int, ActivityTaskData>();
 	}
 }

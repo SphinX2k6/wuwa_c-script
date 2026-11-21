@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FD9 RID: 24537
+	// Token: 0x02006633 RID: 26163
 	public enum EPlotModeUiStyleType : byte
 	{
-		// Token: 0x0400FF64 RID: 65380
+		// Token: 0x04010D35 RID: 68917
 		LevelD
 	}
 }

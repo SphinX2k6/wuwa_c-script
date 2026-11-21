@@ -3,12 +3,12 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.Guarantee
 {
-	// Token: 0x02006E0A RID: 28170
+	// Token: 0x02005F8A RID: 24458
 	public class GuaranteeFadeInParams : ActionParams, IGuaranteeFadeInParams
 	{
-		// Token: 0x170099F5 RID: 39413
-		// (get) Token: 0x06044B4F RID: 281423 RVA: 0x010F540E File Offset: 0x010F360E
-		// (set) Token: 0x06044B50 RID: 281424 RVA: 0x010F5416 File Offset: 0x010F3616
+		// Token: 0x17006EF8 RID: 28408
+		// (get) Token: 0x0603ACB5 RID: 240821 RVA: 0x0109F7CE File Offset: 0x0109D9CE
+		// (set) Token: 0x0603ACB6 RID: 240822 RVA: 0x0109F7D6 File Offset: 0x0109D9D6
 		public bool? KeepFadeAfterTreeRollBack { get; set; }
 	}
 }

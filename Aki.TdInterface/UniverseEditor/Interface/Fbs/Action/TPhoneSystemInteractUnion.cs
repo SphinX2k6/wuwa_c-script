@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007750 RID: 30544
+	// Token: 0x02007F79 RID: 32633
 	public class TPhoneSystemInteractUnion
 	{
-		// Token: 0x1700E679 RID: 59001
-		// (get) Token: 0x060377CE RID: 227278 RVA: 0x00782C5E File Offset: 0x00780E5E
-		// (set) Token: 0x060377CF RID: 227279 RVA: 0x00782C66 File Offset: 0x00780E66
+		// Token: 0x1700F2C9 RID: 62153
+		// (get) Token: 0x0603AD0B RID: 240907 RVA: 0x007E7C32 File Offset: 0x007E5E32
+		// (set) Token: 0x0603AD0C RID: 240908 RVA: 0x007E7C3A File Offset: 0x007E5E3A
 		public TPhoneSystemInteract Type { get; set; }
 
-		// Token: 0x1700E67A RID: 59002
-		// (get) Token: 0x060377D0 RID: 227280 RVA: 0x00782C6F File Offset: 0x00780E6F
-		// (set) Token: 0x060377D1 RID: 227281 RVA: 0x00782C77 File Offset: 0x00780E77
+		// Token: 0x1700F2CA RID: 62154
+		// (get) Token: 0x0603AD0D RID: 240909 RVA: 0x007E7C43 File Offset: 0x007E5E43
+		// (set) Token: 0x0603AD0E RID: 240910 RVA: 0x007E7C4B File Offset: 0x007E5E4B
 		public object Value { get; set; }
 
-		// Token: 0x060377D2 RID: 227282 RVA: 0x00782C80 File Offset: 0x00780E80
+		// Token: 0x0603AD0F RID: 240911 RVA: 0x007E7C54 File Offset: 0x007E5E54
 		public TPhoneSystemInteractUnion()
 		{
 			this.Type = TPhoneSystemInteract.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060377D3 RID: 227283 RVA: 0x00782C96 File Offset: 0x00780E96
+		// Token: 0x0603AD10 RID: 240912 RVA: 0x007E7C6A File Offset: 0x007E5E6A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060377D4 RID: 227284 RVA: 0x00782CA8 File Offset: 0x00780EA8
+		// Token: 0x0603AD11 RID: 240913 RVA: 0x007E7C7C File Offset: 0x007E5E7C
 		public IDeletePhoneMessageT AsIDeletePhoneMessage()
 		{
 			return this.As<IDeletePhoneMessageT>();
 		}
 
-		// Token: 0x060377D5 RID: 227285 RVA: 0x00782CB0 File Offset: 0x00780EB0
+		// Token: 0x0603AD12 RID: 240914 RVA: 0x007E7C84 File Offset: 0x007E5E84
 		public static TPhoneSystemInteractUnion FromIDeletePhoneMessage(IDeletePhoneMessageT _ideletephonemessage)
 		{
 			return new TPhoneSystemInteractUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060377D6 RID: 227286 RVA: 0x00782CC5 File Offset: 0x00780EC5
+		// Token: 0x0603AD13 RID: 240915 RVA: 0x007E7C99 File Offset: 0x007E5E99
 		public IFlowOpenPhoneMessageT AsIFlowOpenPhoneMessage()
 		{
 			return this.As<IFlowOpenPhoneMessageT>();
 		}
 
-		// Token: 0x060377D7 RID: 227287 RVA: 0x00782CCD File Offset: 0x00780ECD
+		// Token: 0x0603AD14 RID: 240916 RVA: 0x007E7CA1 File Offset: 0x007E5EA1
 		public static TPhoneSystemInteractUnion FromIFlowOpenPhoneMessage(IFlowOpenPhoneMessageT _iflowopenphonemessage)
 		{
 			return new TPhoneSystemInteractUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060377D8 RID: 227288 RVA: 0x00782CE2 File Offset: 0x00780EE2
+		// Token: 0x0603AD15 RID: 240917 RVA: 0x007E7CB6 File Offset: 0x007E5EB6
 		public IOpenPhoneMessageBoardT AsIOpenPhoneMessageBoard()
 		{
 			return this.As<IOpenPhoneMessageBoardT>();
 		}
 
-		// Token: 0x060377D9 RID: 227289 RVA: 0x00782CEA File Offset: 0x00780EEA
+		// Token: 0x0603AD16 RID: 240918 RVA: 0x007E7CBE File Offset: 0x007E5EBE
 		public static TPhoneSystemInteractUnion FromIOpenPhoneMessageBoard(IOpenPhoneMessageBoardT _iopenphonemessageboard)
 		{
 			return new TPhoneSystemInteractUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060377DA RID: 227290 RVA: 0x00782CFF File Offset: 0x00780EFF
+		// Token: 0x0603AD17 RID: 240919 RVA: 0x007E7CD3 File Offset: 0x007E5ED3
 		public ISendPhoneMessageT AsISendPhoneMessage()
 		{
 			return this.As<ISendPhoneMessageT>();
 		}
 
-		// Token: 0x060377DB RID: 227291 RVA: 0x00782D07 File Offset: 0x00780F07
+		// Token: 0x0603AD18 RID: 240920 RVA: 0x007E7CDB File Offset: 0x007E5EDB
 		public static TPhoneSystemInteractUnion FromISendPhoneMessage(ISendPhoneMessageT _isendphonemessage)
 		{
 			return new TPhoneSystemInteractUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060377DC RID: 227292 RVA: 0x00782D1C File Offset: 0x00780F1C
+		// Token: 0x0603AD19 RID: 240921 RVA: 0x007E7CF0 File Offset: 0x007E5EF0
 		public static int Pack(FlatBufferBuilder builder, TPhoneSystemInteractUnion _o)
 		{
 			switch (_o.Type)

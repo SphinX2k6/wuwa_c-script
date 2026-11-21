@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200239F RID: 9119
+// Token: 0x02001884 RID: 6276
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class WeekCardCostGrid : GridProxyAbstract<IWeekCostData>
 {
-	// Token: 0x060123D6 RID: 74710 RVA: 0x0047E3E0 File Offset: 0x0047C5E0
+	// Token: 0x0600F888 RID: 63624 RVA: 0x0048B878 File Offset: 0x00489A78
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -29,7 +29,7 @@ public class WeekCardCostGrid : GridProxyAbstract<IWeekCostData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060123D7 RID: 74711 RVA: 0x0047E46C File Offset: 0x0047C66C
+	// Token: 0x0600F889 RID: 63625 RVA: 0x0048B904 File Offset: 0x00489B04
 	[NullableContext(1)]
 	public void Refresh(IWeekCostData costData)
 	{
@@ -43,7 +43,7 @@ public class WeekCardCostGrid : GridProxyAbstract<IWeekCostData>
 		base.SetItemIcon(base.GetTexture(2), costData.ItemId, null, null);
 	}
 
-	// Token: 0x060123D8 RID: 74712 RVA: 0x0047E4F0 File Offset: 0x0047C6F0
+	// Token: 0x0600F88A RID: 63626 RVA: 0x0048B988 File Offset: 0x00489B88
 	[NullableContext(2)]
 	public override void Refresh(IWeekCostData data, bool isSelected, int gridIndex)
 	{
@@ -53,16 +53,16 @@ public class WeekCardCostGrid : GridProxyAbstract<IWeekCostData>
 		}
 	}
 
-	// Token: 0x02008944 RID: 35140
+	// Token: 0x02007ACE RID: 31438
 	private class EComponent
 	{
-		// Token: 0x0402C9F8 RID: 182776
+		// Token: 0x04027D14 RID: 163092
 		public const int TipsText = 0;
 
-		// Token: 0x0402C9F9 RID: 182777
+		// Token: 0x04027D15 RID: 163093
 		public const int CostText = 1;
 
-		// Token: 0x0402C9FA RID: 182778
+		// Token: 0x04027D16 RID: 163094
 		public const int CostIcon = 2;
 	}
 }

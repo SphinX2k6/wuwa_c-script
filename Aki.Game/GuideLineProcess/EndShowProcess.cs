@@ -2,10 +2,10 @@
 
 namespace GuideLineProcess
 {
-	// Token: 0x020044C9 RID: 17609
+	// Token: 0x02002F56 RID: 12118
 	public class EndShowProcess : PendingProcess
 	{
-		// Token: 0x0602D630 RID: 185904 RVA: 0x00A3DD0A File Offset: 0x00A3BF0A
+		// Token: 0x0601CB6E RID: 117614 RVA: 0x008C396A File Offset: 0x008C1B6A
 		public EndShowProcess() : base(EProcessType.EndShow)
 		{
 		}

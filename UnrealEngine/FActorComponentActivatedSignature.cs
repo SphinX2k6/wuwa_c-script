@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020007B1 RID: 1969
+	// Token: 0x02000165 RID: 357
 	[UnrealStructLayout(1, 1, UnrealReflectionPropertyTypeCode.MulticastSparseDelegate)]
 	public sealed class FActorComponentActivatedSignature : FSparseDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06006973 RID: 26995 RVA: 0x00097505 File Offset: 0x00095705
+		// Token: 0x06001630 RID: 5680 RVA: 0x000220D1 File Offset: 0x000202D1
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FActorComponentActivatedSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x06006974 RID: 26996 RVA: 0x00097511 File Offset: 0x00095711
+		// Token: 0x06001631 RID: 5681 RVA: 0x000220DD File Offset: 0x000202DD
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FActorComponentActivatedSignature._FunctionPtr == IntPtr.Zero)
@@ -27,8 +27,8 @@ namespace UnrealEngine
 			return FActorComponentActivatedSignature._FunctionPtr;
 		}
 
-		// Token: 0x170018F7 RID: 6391
-		// (get) Token: 0x06006975 RID: 26997 RVA: 0x00097534 File Offset: 0x00095734
+		// Token: 0x1700024C RID: 588
+		// (get) Token: 0x06001632 RID: 5682 RVA: 0x00022100 File Offset: 0x00020300
 		public override FName DelegateName
 		{
 			get
@@ -37,21 +37,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06006976 RID: 26998 RVA: 0x0009753B File Offset: 0x0009573B
+		// Token: 0x06001633 RID: 5683 RVA: 0x00022107 File Offset: 0x00020307
 		[NullableContext(2)]
 		public FActorComponentActivatedSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06006977 RID: 26999 RVA: 0x00097545 File Offset: 0x00095745
+		// Token: 0x06001634 RID: 5684 RVA: 0x00022111 File Offset: 0x00020311
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<UActorComponent, bool>) ?? ((Action<UActorComponent, bool>)Delegate.CreateDelegate(typeof(Action<UActorComponent, bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06006978 RID: 27000 RVA: 0x00097578 File Offset: 0x00095778
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06001635 RID: 5685 RVA: 0x00022144 File Offset: 0x00020344
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace UnrealEngine
 			base.Add(delegateName, Callback, FActorComponentActivatedSignature.RegisterId);
 		}
 
-		// Token: 0x06006979 RID: 27001 RVA: 0x000975C8 File Offset: 0x000957C8
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06001636 RID: 5686 RVA: 0x00022194 File Offset: 0x00020394
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -83,10 +81,9 @@ namespace UnrealEngine
 			base.Remove(delegateName, Callback);
 		}
 
-		// Token: 0x0600697A RID: 27002 RVA: 0x000975E8 File Offset: 0x000957E8
+		// Token: 0x06001637 RID: 5687 RVA: 0x000221B4 File Offset: 0x000203B4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(UActorComponent Component, bool bReset)
 		{
 			FActorComponentActivatedSignature.__FActorComponentActivatedSignature_DelegateParams* ptr = stackalloc FActorComponentActivatedSignature.__FActorComponentActivatedSignature_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FActorComponentActivatedSignature.__FActorComponentActivatedSignature_DelegateParams) & -16L;
@@ -96,10 +93,9 @@ namespace UnrealEngine
 			FSparseDelegate.BroadcastInternal(base.GetOwner().NativePtr, this.DelegateName, (void*)ptr);
 		}
 
-		// Token: 0x0600697B RID: 27003 RVA: 0x0009764C File Offset: 0x0009584C
+		// Token: 0x06001638 RID: 5688 RVA: 0x00022218 File Offset: 0x00020418
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UActorComponent, bool> action = target as Action<UActorComponent, bool>;
@@ -111,35 +107,35 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, ((FActorComponentActivatedSignature.__FActorComponentActivatedSignature_DelegateParams*)__Parameters)->bReset);
 		}
 
-		// Token: 0x040032D8 RID: 13016
+		// Token: 0x0400070E RID: 1806
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040032D9 RID: 13017
+		// Token: 0x0400070F RID: 1807
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.ActorComponentActivatedSignature__DelegateSignature";
 
-		// Token: 0x040032DA RID: 13018
+		// Token: 0x04000710 RID: 1808
 		private static int RegisterId;
 
-		// Token: 0x02002C69 RID: 11369
+		// Token: 0x0200094C RID: 2380
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FActorComponentActivatedSignature_DelegateParams
+		private ref struct __FActorComponentActivatedSignature_DelegateParams
 		{
-			// Token: 0x04016597 RID: 91543
+			// Token: 0x0400586D RID: 22637
 			[FieldOffset(0)]
 			public IntPtr Component;
 
-			// Token: 0x04016598 RID: 91544
+			// Token: 0x0400586E RID: 22638
 			[FieldOffset(8)]
 			public bool bReset;
 		}
 
-		// Token: 0x02002C6A RID: 11370
+		// Token: 0x0200094D RID: 2381
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016599 RID: 91545
+			// Token: 0x0400586F RID: 22639
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

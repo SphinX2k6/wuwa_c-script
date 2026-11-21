@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060CD RID: 24781
+	// Token: 0x0200504B RID: 20555
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SolarSpeedRewardView : UiViewBase
 	{
-		// Token: 0x0603EA6F RID: 256623 RVA: 0x00F219F8 File Offset: 0x00F1FBF8
+		// Token: 0x06033733 RID: 210739 RVA: 0x00E687C8 File Offset: 0x00E669C8
 		public SolarSpeedRewardView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603EA70 RID: 256624 RVA: 0x00F21A04 File Offset: 0x00F1FC04
+		// Token: 0x06033734 RID: 210740 RVA: 0x00E687D4 File Offset: 0x00E669D4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EA71 RID: 256625 RVA: 0x00F21A90 File Offset: 0x00F1FC90
+		// Token: 0x06033735 RID: 210741 RVA: 0x00E68860 File Offset: 0x00E66A60
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SolarSpeedRewardView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EA72 RID: 256626 RVA: 0x00F21AD4 File Offset: 0x00F1FCD4
+		// Token: 0x06033736 RID: 210742 RVA: 0x00E688A4 File Offset: 0x00E66AA4
 		protected override void OnStart()
 		{
 			ISolarSpeedRewardViewData solarSpeedRewardViewData = this.OpenParam as ISolarSpeedRewardViewData;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.RewardPlayer.LitePlayAsync("Start", false, false);
 		}
 
-		// Token: 0x0603EA73 RID: 256627 RVA: 0x00F21B6C File Offset: 0x00F1FD6C
+		// Token: 0x06033737 RID: 210743 RVA: 0x00E6893C File Offset: 0x00E66B3C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.SolarSpeedClickRewardTab, new Action<int>(this.HandleSolarSpeedClickRewardTab));
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.HandleOnActivitySequenceEmitEvent));
 		}
 
-		// Token: 0x0603EA74 RID: 256628 RVA: 0x00F21BD0 File Offset: 0x00F1FDD0
+		// Token: 0x06033738 RID: 210744 RVA: 0x00E689A0 File Offset: 0x00E66BA0
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.SolarSpeedClickRewardTab, new Action<int>(this.HandleSolarSpeedClickRewardTab));
@@ -80,14 +80,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.HandleOnActivitySequenceEmitEvent));
 		}
 
-		// Token: 0x0603EA75 RID: 256629 RVA: 0x00F21C31 File Offset: 0x00F1FE31
+		// Token: 0x06033739 RID: 210745 RVA: 0x00E68A01 File Offset: 0x00E66C01
 		protected override void OnBeforeShow()
 		{
 			this.CaptionPlayer.LitePlayAsync("Start", false, false);
 			this.RewardPlayer.LitePlayAsync("Start", false, false);
 		}
 
-		// Token: 0x0603EA76 RID: 256630 RVA: 0x00F21C5C File Offset: 0x00F1FE5C
+		// Token: 0x0603373A RID: 210746 RVA: 0x00E68A2C File Offset: 0x00E66C2C
 		protected override UniTask OnBeforeHideAsync()
 		{
 			SolarSpeedRewardView.<OnBeforeHideAsync>d__11 <OnBeforeHideAsync>d__;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EA77 RID: 256631 RVA: 0x00F21CA0 File Offset: 0x00F1FEA0
+		// Token: 0x0603373B RID: 210747 RVA: 0x00E68A70 File Offset: 0x00E66C70
 		private void RefreshByOpenParam()
 		{
 			ISolarSpeedRewardViewData solarSpeedRewardViewData = this.OpenParam as ISolarSpeedRewardViewData;
@@ -106,13 +106,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.RewardItem.RefreshByOpenParam();
 		}
 
-		// Token: 0x0603EA78 RID: 256632 RVA: 0x00F21CD5 File Offset: 0x00F1FED5
+		// Token: 0x0603373C RID: 210748 RVA: 0x00E68AA5 File Offset: 0x00E66CA5
 		private void HandleOnCloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603EA79 RID: 256633 RVA: 0x00F21CE0 File Offset: 0x00F1FEE0
+		// Token: 0x0603373D RID: 210749 RVA: 0x00E68AB0 File Offset: 0x00E66CB0
 		private void HandleSolarSpeedClickRewardTab(int id)
 		{
 			ISolarSpeedRewardViewData solarSpeedRewardViewData = SolarSpeedModel.Instance.BuildSolarSpeedRewardViewDataById(id);
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.RewardPlayer.LitePlayAsync("Switch", false, false);
 		}
 
-		// Token: 0x0603EA7A RID: 256634 RVA: 0x00F21D3C File Offset: 0x00F1FF3C
+		// Token: 0x0603373E RID: 210750 RVA: 0x00E68B0C File Offset: 0x00E66D0C
 		private void HandleSolarSpeedRewarded()
 		{
 			SolarSpeedModel instance = SolarSpeedModel.Instance;
@@ -135,35 +135,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.RefreshByOpenParam();
 		}
 
-		// Token: 0x0603EA7B RID: 256635 RVA: 0x00F21D80 File Offset: 0x00F1FF80
+		// Token: 0x0603373F RID: 210751 RVA: 0x00E68B50 File Offset: 0x00E66D50
 		private void HandleOnActivitySequenceEmitEvent(string param)
 		{
 			this.RewardItem.PlayStart(param);
 		}
 
-		// Token: 0x04020C12 RID: 134162
+		// Token: 0x0401B53F RID: 111935
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04020C13 RID: 134163
+		// Token: 0x0401B540 RID: 111936
 		private SolarSpeedRewardPanel RewardItem;
 
-		// Token: 0x04020C14 RID: 134164
+		// Token: 0x0401B541 RID: 111937
 		private UiSequencePlayer CaptionPlayer;
 
-		// Token: 0x04020C15 RID: 134165
+		// Token: 0x0401B542 RID: 111938
 		private UiSequencePlayer RewardPlayer;
 
-		// Token: 0x0200C31D RID: 49949
+		// Token: 0x0200AD08 RID: 44296
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403AEA3 RID: 241315
+			// Token: 0x0403580B RID: 219147
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403AEA4 RID: 241316
+			// Token: 0x0403580C RID: 219148
 			public const int RewardItem = 1;
 
-			// Token: 0x0403AEA5 RID: 241317
+			// Token: 0x0403580D RID: 219149
 			public const int PointText = 2;
 		}
 	}

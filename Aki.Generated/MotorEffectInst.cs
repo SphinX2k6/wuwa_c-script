@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E39 RID: 3641
+	// Token: 0x02000F1E RID: 3870
 	public struct MotorEffectInst : IFlatbufferObject
 	{
-		// Token: 0x17002064 RID: 8292
-		// (get) Token: 0x060097A5 RID: 38821 RVA: 0x0028D1BD File Offset: 0x0028B3BD
+		// Token: 0x170020C9 RID: 8393
+		// (get) Token: 0x06009DC5 RID: 40389 RVA: 0x002AAE21 File Offset: 0x002A9021
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060097A6 RID: 38822 RVA: 0x0028D1CA File Offset: 0x0028B3CA
+		// Token: 0x06009DC6 RID: 40390 RVA: 0x002AAE2E File Offset: 0x002A902E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060097A7 RID: 38823 RVA: 0x0028D1D4 File Offset: 0x0028B3D4
+		// Token: 0x06009DC7 RID: 40391 RVA: 0x002AAE38 File Offset: 0x002A9038
 		public static MotorEffectInst GetRootAsMotorEffectInst(ByteBuffer _bb)
 		{
 			return MotorEffectInst.GetRootAsMotorEffectInst(_bb, default(MotorEffectInst));
 		}
 
-		// Token: 0x060097A8 RID: 38824 RVA: 0x0028D1F0 File Offset: 0x0028B3F0
+		// Token: 0x06009DC8 RID: 40392 RVA: 0x002AAE54 File Offset: 0x002A9054
 		public static MotorEffectInst GetRootAsMotorEffectInst(ByteBuffer _bb, MotorEffectInst obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060097A9 RID: 38825 RVA: 0x0028D20D File Offset: 0x0028B40D
+		// Token: 0x06009DC9 RID: 40393 RVA: 0x002AAE71 File Offset: 0x002A9071
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060097AA RID: 38826 RVA: 0x0028D21C File Offset: 0x0028B41C
+		// Token: 0x06009DCA RID: 40394 RVA: 0x002AAE80 File Offset: 0x002A9080
 		public MotorEffectInst __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002065 RID: 8293
-		// (get) Token: 0x060097AB RID: 38827 RVA: 0x0028D22C File Offset: 0x0028B42C
+		// Token: 0x170020CA RID: 8394
+		// (get) Token: 0x06009DCB RID: 40395 RVA: 0x002AAE90 File Offset: 0x002A9090
 		public int Id
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004EE1 RID: 20193
+		// Token: 0x040054C6 RID: 21702
 		private Table __p;
 	}
 }

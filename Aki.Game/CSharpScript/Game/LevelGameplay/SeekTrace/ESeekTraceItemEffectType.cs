@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 {
-	// Token: 0x02006A5A RID: 27226
+	// Token: 0x02005BB7 RID: 23479
 	public enum ESeekTraceItemEffectType
 	{
-		// Token: 0x040235B0 RID: 144816
+		// Token: 0x0401E7A2 RID: 124834
 		Empty,
-		// Token: 0x040235B1 RID: 144817
+		// Token: 0x0401E7A3 RID: 124835
 		Light,
-		// Token: 0x040235B2 RID: 144818
+		// Token: 0x0401E7A4 RID: 124836
 		Dark,
-		// Token: 0x040235B3 RID: 144819
+		// Token: 0x0401E7A5 RID: 124837
 		Wind
 	}
 }

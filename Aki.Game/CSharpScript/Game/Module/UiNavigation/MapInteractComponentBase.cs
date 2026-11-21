@@ -4,15 +4,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004988 RID: 18824
+	// Token: 0x02003902 RID: 14594
 	public class MapInteractComponentBase : HotKeyComponent
 	{
-		// Token: 0x06031104 RID: 200964 RVA: 0x00B632C0 File Offset: 0x00B614C0
+		// Token: 0x06025C3A RID: 154682 RVA: 0x00A9E210 File Offset: 0x00A9C410
 		public MapInteractComponentBase(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031105 RID: 200965 RVA: 0x00B632CC File Offset: 0x00B614CC
+		// Token: 0x06025C3B RID: 154683 RVA: 0x00A9E21C File Offset: 0x00A9C41C
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

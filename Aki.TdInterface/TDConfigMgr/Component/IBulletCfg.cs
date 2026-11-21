@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000205 RID: 517
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200022E RID: 558
 	public class IBulletCfg
 	{
-		// Token: 0x06000890 RID: 2192 RVA: 0x000270EC File Offset: 0x000252EC
+		// Token: 0x06000910 RID: 2320 RVA: 0x00028A40 File Offset: 0x00026C40
 		private IBulletCfg_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000891 RID: 2193 RVA: 0x00027124 File Offset: 0x00025324
+		// Token: 0x06000911 RID: 2321 RVA: 0x00028A78 File Offset: 0x00026C78
 		public static IBulletCfg Create([Nullable(2)] IBulletCfg instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000892 RID: 2194 RVA: 0x00027137 File Offset: 0x00025337
+		// Token: 0x06000912 RID: 2322 RVA: 0x00028A8B File Offset: 0x00026C8B
 		public static IBulletCfg CreateFromSetValue([Nullable(2)] IBulletCfg_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000893 RID: 2195 RVA: 0x0002714A File Offset: 0x0002534A
+		// Token: 0x06000913 RID: 2323 RVA: 0x00028A9E File Offset: 0x00026C9E
 		public IBulletCfg_SetValue ToSetValue()
 		{
 			return new IBulletCfg_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700029E RID: 670
-		// (get) Token: 0x06000894 RID: 2196 RVA: 0x0002715D File Offset: 0x0002535D
-		// (set) Token: 0x06000895 RID: 2197 RVA: 0x00027184 File Offset: 0x00025384
+		// Token: 0x170002C0 RID: 704
+		// (get) Token: 0x06000914 RID: 2324 RVA: 0x00028AB1 File Offset: 0x00026CB1
+		// (set) Token: 0x06000915 RID: 2325 RVA: 0x00028AD8 File Offset: 0x00026CD8
 		public virtual List<IBulletCreateCondition> CreateConditions
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000934 RID: 2356
+		// Token: 0x040009C5 RID: 2501
 		[Nullable(2)]
 		protected IBulletCfg FbInstance;
 
-		// Token: 0x04000935 RID: 2357
+		// Token: 0x040009C6 RID: 2502
 		[Nullable(2)]
 		protected IBulletCfg_SetValue PocoInterface;
 	}

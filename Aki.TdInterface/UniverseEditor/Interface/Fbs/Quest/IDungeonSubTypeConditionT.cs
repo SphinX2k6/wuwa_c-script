@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DEC RID: 15852
+	// Token: 0x02004227 RID: 16935
 	public class IDungeonSubTypeConditionT
 	{
-		// Token: 0x17006D84 RID: 28036
-		// (get) Token: 0x0601627B RID: 90747 RVA: 0x0033371E File Offset: 0x0033191E
-		// (set) Token: 0x0601627C RID: 90748 RVA: 0x00333726 File Offset: 0x00331926
+		// Token: 0x17007364 RID: 29540
+		// (get) Token: 0x0601789A RID: 96410 RVA: 0x0035C122 File Offset: 0x0035A322
+		// (set) Token: 0x0601789B RID: 96411 RVA: 0x0035C12A File Offset: 0x0035A32A
 		public EDungeonConditionType Type { get; set; }
 
-		// Token: 0x17006D85 RID: 28037
-		// (get) Token: 0x0601627D RID: 90749 RVA: 0x0033372F File Offset: 0x0033192F
-		// (set) Token: 0x0601627E RID: 90750 RVA: 0x00333737 File Offset: 0x00331937
+		// Token: 0x17007365 RID: 29541
+		// (get) Token: 0x0601789C RID: 96412 RVA: 0x0035C133 File Offset: 0x0035A333
+		// (set) Token: 0x0601789D RID: 96413 RVA: 0x0035C13B File Offset: 0x0035A33B
 		public int Count { get; set; }
 
-		// Token: 0x17006D86 RID: 28038
-		// (get) Token: 0x0601627F RID: 90751 RVA: 0x00333740 File Offset: 0x00331940
-		// (set) Token: 0x06016280 RID: 90752 RVA: 0x00333748 File Offset: 0x00331948
+		// Token: 0x17007366 RID: 29542
+		// (get) Token: 0x0601789E RID: 96414 RVA: 0x0035C144 File Offset: 0x0035A344
+		// (set) Token: 0x0601789F RID: 96415 RVA: 0x0035C14C File Offset: 0x0035A34C
 		public bool IsExitDungeon { get; set; }
 
-		// Token: 0x17006D87 RID: 28039
-		// (get) Token: 0x06016281 RID: 90753 RVA: 0x00333751 File Offset: 0x00331951
-		// (set) Token: 0x06016282 RID: 90754 RVA: 0x00333759 File Offset: 0x00331959
+		// Token: 0x17007367 RID: 29543
+		// (get) Token: 0x060178A0 RID: 96416 RVA: 0x0035C155 File Offset: 0x0035A355
+		// (set) Token: 0x060178A1 RID: 96417 RVA: 0x0035C15D File Offset: 0x0035A35D
 		public EDungeonSubType DungeonSubType { get; set; }
 
-		// Token: 0x17006D88 RID: 28040
-		// (get) Token: 0x06016283 RID: 90755 RVA: 0x00333762 File Offset: 0x00331962
-		// (set) Token: 0x06016284 RID: 90756 RVA: 0x0033376A File Offset: 0x0033196A
+		// Token: 0x17007368 RID: 29544
+		// (get) Token: 0x060178A2 RID: 96418 RVA: 0x0035C166 File Offset: 0x0035A366
+		// (set) Token: 0x060178A3 RID: 96419 RVA: 0x0035C16E File Offset: 0x0035A36E
 		public byte NullMask { get; set; }
 
-		// Token: 0x06016285 RID: 90757 RVA: 0x00333773 File Offset: 0x00331973
+		// Token: 0x060178A4 RID: 96420 RVA: 0x0035C177 File Offset: 0x0035A377
 		public IDungeonSubTypeConditionT()
 		{
 			this.Type = EDungeonConditionType.DungeonSubType;

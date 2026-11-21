@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02003207 RID: 12807
+// Token: 0x02002776 RID: 10102
 public enum EInterestConditionType
 {
-	// Token: 0x0400D953 RID: 55635
+	// Token: 0x0400DDF2 RID: 56818
 	Angle
 }

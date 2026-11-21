@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200716F RID: 29039
+	// Token: 0x02006223 RID: 25123
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemBuffConsumerComponent : EntityComponent
 	{
-		// Token: 0x06046E5E RID: 290398 RVA: 0x011E5354 File Offset: 0x011E3554
+		// Token: 0x0603C6BC RID: 247484 RVA: 0x01140A2C File Offset: 0x0113EC2C
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			BuffConsumerComponent buffConsumerComponent = args.GetP1<CreateEntityData>().GetParam<SceneItemBuffConsumerComponent>() as BuffConsumerComponent;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E5F RID: 290399 RVA: 0x011E5414 File Offset: 0x011E3614
+		// Token: 0x0603C6BD RID: 247485 RVA: 0x01140AEC File Offset: 0x0113ECEC
 		protected unsafe override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E60 RID: 290400 RVA: 0x011E5743 File Offset: 0x011E3943
+		// Token: 0x0603C6BE RID: 247486 RVA: 0x01140E1B File Offset: 0x0113F01B
 		protected override bool OnEnd()
 		{
 			CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent rangeComp = this.RangeComp;
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E61 RID: 290401 RVA: 0x011E5783 File Offset: 0x011E3983
+		// Token: 0x0603C6BF RID: 247487 RVA: 0x01140E5B File Offset: 0x0113F05B
 		private void OnPlayerInOutRange(bool isEnter)
 		{
 			if (isEnter && this.CheckCanConsume())
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E62 RID: 290402 RVA: 0x011E57BC File Offset: 0x011E39BC
+		// Token: 0x0603C6C0 RID: 247488 RVA: 0x01140E94 File Offset: 0x0113F094
 		private bool CheckCanConsume()
 		{
 			if (GameModeModel.Instance.IsMulti)
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return !this.IsBusyConsuming && this.StateComp.IsInState(SceneItemStateComponent.ESceneItemState.Normal) && !SceneTeamModel.Instance.IsPhantomTeam && this.CheckPlayerHasBuff();
 		}
 
-		// Token: 0x06046E63 RID: 290403 RVA: 0x011E5834 File Offset: 0x011E3A34
+		// Token: 0x0603C6C1 RID: 247489 RVA: 0x01140F0C File Offset: 0x0113F10C
 		private bool CheckPlayerHasBuff()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return flag;
 		}
 
-		// Token: 0x06046E64 RID: 290404 RVA: 0x011E58A6 File Offset: 0x011E3AA6
+		// Token: 0x0603C6C2 RID: 247490 RVA: 0x01140F7E File Offset: 0x0113F17E
 		private void OnBuffOperateCallBack(BuffOperateType type, bool isSuccess)
 		{
 			if (type == BuffOperateType.RemoveBuff && isSuccess)
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.IsBusyConsuming = false;
 		}
 
-		// Token: 0x06046E65 RID: 290405 RVA: 0x011E58BE File Offset: 0x011E3ABE
+		// Token: 0x0603C6C3 RID: 247491 RVA: 0x01140F96 File Offset: 0x0113F196
 		private void PlayPerformance()
 		{
 			if (!string.IsNullOrEmpty(this.BulletId))
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.OnPerformanceComplete();
 		}
 
-		// Token: 0x06046E66 RID: 290406 RVA: 0x011E58DC File Offset: 0x011E3ADC
+		// Token: 0x0603C6C4 RID: 247492 RVA: 0x01140FB4 File Offset: 0x0113F1B4
 		private void CreateBullet()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.BulletTimeOutTimerHandle = TimerSystem.Instance.Delay(new TTimerAction(this.OnBulletTimeOut), 5000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06046E67 RID: 290407 RVA: 0x011E5994 File Offset: 0x011E3B94
+		// Token: 0x0603C6C5 RID: 247493 RVA: 0x0114106C File Offset: 0x0113F26C
 		[NullableContext(1)]
 		private void OnHit(global::HitInformation hitData)
 		{
@@ -246,13 +246,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.OnPerformanceComplete();
 		}
 
-		// Token: 0x06046E68 RID: 290408 RVA: 0x011E5A2B File Offset: 0x011E3C2B
+		// Token: 0x0603C6C6 RID: 247494 RVA: 0x01141103 File Offset: 0x0113F303
 		private void OnBulletTimeOut(float delta)
 		{
 			this.OnBulletTimeOut();
 		}
 
-		// Token: 0x06046E69 RID: 290409 RVA: 0x011E5A34 File Offset: 0x011E3C34
+		// Token: 0x0603C6C7 RID: 247495 RVA: 0x0114110C File Offset: 0x0113F30C
 		private void OnBulletTimeOut()
 		{
 			if (EventSystem.Instance.HasWithTarget<global::HitInformation>(this, EEventName.OnSceneItemHitByHitData, new Action<global::HitInformation>(this.OnHit)))
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.OnPerformanceComplete();
 		}
 
-		// Token: 0x06046E6A RID: 290410 RVA: 0x011E5A89 File Offset: 0x011E3C89
+		// Token: 0x0603C6C8 RID: 247496 RVA: 0x01141161 File Offset: 0x0113F361
 		private void OnPerformanceComplete()
 		{
 			LevelGamePlayController.Instance.EntityBuffProducerRequest(this.CreatureDataId, delegate(EntityBuffProducerResponse response, Net.CallbackStatus _)
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			});
 		}
 
-		// Token: 0x06046E6B RID: 290411 RVA: 0x011E5AA8 File Offset: 0x011E3CA8
+		// Token: 0x0603C6C9 RID: 247497 RVA: 0x01141180 File Offset: 0x0113F380
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -281,137 +281,124 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemBuffConsumerComponent sceneItemBuffConsumerComponent = (SceneItemBuffConsumerComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (sceneItemBuffConsumerComponent.ActorComp == null)
 			{
-				if (sceneItemBuffConsumerComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("CommonTagComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (sceneItemBuffConsumerComponent.CommonTagComp == null)
-				{
-					this.CommonTagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.CommonTagComp), "CommonTagComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("StateComp"))
+			if (sceneItemBuffConsumerComponent.CommonTagComp == null)
 			{
-				if (sceneItemBuffConsumerComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
+				this.CommonTagComp = null;
 			}
-			if (base.CanResetComponentProperty("HitComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CommonTagComp), "CommonTagComp"))
 			{
-				if (sceneItemBuffConsumerComponent.HitComp == null)
-				{
-					this.HitComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemHitComponent>(this.HitComp), "HitComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("RangeComp"))
+			if (sceneItemBuffConsumerComponent.StateComp == null)
 			{
-				if (sceneItemBuffConsumerComponent.RangeComp == null)
-				{
-					this.RangeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>(this.RangeComp), "RangeComp"))
-				{
-					return false;
-				}
+				this.StateComp = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 			{
-				this.CreatureDataId = sceneItemBuffConsumerComponent.CreatureDataId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("BulletId"))
+			if (sceneItemBuffConsumerComponent.HitComp == null)
 			{
-				this.BulletId = sceneItemBuffConsumerComponent.BulletId;
+				this.HitComp = null;
 			}
-			if (base.CanResetComponentProperty("BuffId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitComp), "HitComp"))
 			{
-				this.BuffId = sceneItemBuffConsumerComponent.BuffId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("BulletTimeOutTimerHandle"))
+			if (sceneItemBuffConsumerComponent.RangeComp == null)
 			{
-				if (sceneItemBuffConsumerComponent.BulletTimeOutTimerHandle == null)
-				{
-					this.BulletTimeOutTimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.BulletTimeOutTimerHandle), "BulletTimeOutTimerHandle"))
-				{
-					return false;
-				}
+				this.RangeComp = null;
 			}
-			if (base.CanResetComponentProperty("ContextMessageId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RangeComp), "RangeComp"))
 			{
-				this.ContextMessageId = sceneItemBuffConsumerComponent.ContextMessageId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsBusyConsuming"))
+			this.CreatureDataId = sceneItemBuffConsumerComponent.CreatureDataId;
+			this.BulletId = sceneItemBuffConsumerComponent.BulletId;
+			this.BuffId = sceneItemBuffConsumerComponent.BuffId;
+			if (sceneItemBuffConsumerComponent.BulletTimeOutTimerHandle == null)
 			{
-				this.IsBusyConsuming = sceneItemBuffConsumerComponent.IsBusyConsuming;
+				this.BulletTimeOutTimerHandle = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BulletTimeOutTimerHandle), "BulletTimeOutTimerHandle"))
+			{
+				return false;
+			}
+			this.ContextMessageId = sceneItemBuffConsumerComponent.ContextMessageId;
+			this.IsBusyConsuming = sceneItemBuffConsumerComponent.IsBusyConsuming;
 			return true;
 		}
 
-		// Token: 0x0402537C RID: 152444
+		// Token: 0x1700721D RID: 29213
+		// (get) Token: 0x0603C6CA RID: 247498 RVA: 0x011412DE File Offset: 0x0113F4DE
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700721E RID: 29214
+		// (get) Token: 0x0603C6CB RID: 247499 RVA: 0x011412E1 File Offset: 0x0113F4E1
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FFE3 RID: 131043
 		[Nullable(1)]
 		private const string BLACKBOARD_KEY = "HeiShiSuo";
 
-		// Token: 0x0402537D RID: 152445
+		// Token: 0x0401FFE4 RID: 131044
 		private static readonly int HIT_CONDITION_TAGID = GameplayTagDefine.EGameplayTagId["关卡.黑石锁.功能.命中判定"];
 
-		// Token: 0x0402537E RID: 152446
+		// Token: 0x0401FFE5 RID: 131045
 		private const int MAX_BULLET_HIT_TIME = 5000;
 
-		// Token: 0x0402537F RID: 152447
+		// Token: 0x0401FFE6 RID: 131046
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025380 RID: 152448
+		// Token: 0x0401FFE7 RID: 131047
 		private LevelTagComponent CommonTagComp;
 
-		// Token: 0x04025381 RID: 152449
+		// Token: 0x0401FFE8 RID: 131048
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x04025382 RID: 152450
+		// Token: 0x0401FFE9 RID: 131049
 		private SceneItemHitComponent HitComp;
 
-		// Token: 0x04025383 RID: 152451
+		// Token: 0x0401FFEA RID: 131050
 		private CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent RangeComp;
 
-		// Token: 0x04025384 RID: 152452
+		// Token: 0x0401FFEB RID: 131051
 		private long CreatureDataId;
 
-		// Token: 0x04025385 RID: 152453
+		// Token: 0x0401FFEC RID: 131052
 		[Nullable(1)]
 		private string BulletId = "";
 
-		// Token: 0x04025386 RID: 152454
+		// Token: 0x0401FFED RID: 131053
 		private long BuffId;
 
-		// Token: 0x04025387 RID: 152455
+		// Token: 0x0401FFEE RID: 131054
 		private TimerHandle BulletTimeOutTimerHandle;
 
-		// Token: 0x04025388 RID: 152456
+		// Token: 0x0401FFEF RID: 131055
 		private long? ContextMessageId;
 
-		// Token: 0x04025389 RID: 152457
+		// Token: 0x0401FFF0 RID: 131056
 		private bool IsBusyConsuming;
 	}
 }

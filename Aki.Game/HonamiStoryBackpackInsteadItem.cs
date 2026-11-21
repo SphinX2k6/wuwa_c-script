@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.HonamiStory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E9D RID: 7837
+// Token: 0x0200135F RID: 4959
 public class HonamiStoryBackpackInsteadItem : UiPanelBase
 {
-	// Token: 0x0600F0A2 RID: 61602 RVA: 0x0039C3E8 File Offset: 0x0039A5E8
+	// Token: 0x0600C4C1 RID: 50369 RVA: 0x003A7FA4 File Offset: 0x003A61A4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -33,14 +33,14 @@ public class HonamiStoryBackpackInsteadItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F0A3 RID: 61603 RVA: 0x0039C4D0 File Offset: 0x0039A6D0
+	// Token: 0x0600C4C2 RID: 50370 RVA: 0x003A808C File Offset: 0x003A628C
 	protected override void OnStart()
 	{
 		UUIText text = base.GetText(3);
 		LguiUtil.Instance.SetLocalTextNew(text, "HonamiStory_ChooseSlot", Array.Empty<object>());
 	}
 
-	// Token: 0x0600F0A4 RID: 61604 RVA: 0x0039C4FC File Offset: 0x0039A6FC
+	// Token: 0x0600C4C3 RID: 50371 RVA: 0x003A80B8 File Offset: 0x003A62B8
 	public void SetVisible(bool isVisible)
 	{
 		base.SetUiActive(isVisible);
@@ -52,7 +52,7 @@ public class HonamiStoryBackpackInsteadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F0A5 RID: 61605 RVA: 0x0039C570 File Offset: 0x0039A770
+	// Token: 0x0600C4C4 RID: 50372 RVA: 0x003A812C File Offset: 0x003A632C
 	private void OnClickedCancel()
 	{
 		HonamiStoryBackpackLogicController backpackLogic = HonamiStoryModel.Instance.GetBackpackLogic();
@@ -63,16 +63,16 @@ public class HonamiStoryBackpackInsteadItem : UiPanelBase
 		backpackLogic.SetLogicState(EHonamiStoryBackpackLogicState.Normal, null, null);
 	}
 
-	// Token: 0x02008465 RID: 33893
+	// Token: 0x020075EA RID: 30186
 	private enum EReplace
 	{
-		// Token: 0x0402B185 RID: 176517
+		// Token: 0x040264A9 RID: 156841
 		BtnCancel,
-		// Token: 0x0402B186 RID: 176518
+		// Token: 0x040264AA RID: 156842
 		SpriteBg,
-		// Token: 0x0402B187 RID: 176519
+		// Token: 0x040264AB RID: 156843
 		Icon,
-		// Token: 0x0402B188 RID: 176520
+		// Token: 0x040264AC RID: 156844
 		TxtTips
 	}
 }

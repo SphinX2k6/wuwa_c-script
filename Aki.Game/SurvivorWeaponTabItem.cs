@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002B33 RID: 11059
+// Token: 0x020020AF RID: 8367
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class SurvivorWeaponTabItem : GridProxyAbstract<SurvivorsHandbookWeaponData>
 {
-	// Token: 0x06016F45 RID: 94021 RVA: 0x005D35C0 File Offset: 0x005D17C0
+	// Token: 0x06014976 RID: 84342 RVA: 0x00600130 File Offset: 0x005FE330
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,19 +32,19 @@ public class SurvivorWeaponTabItem : GridProxyAbstract<SurvivorsHandbookWeaponDa
 		};
 	}
 
-	// Token: 0x06016F46 RID: 94022 RVA: 0x005D367F File Offset: 0x005D187F
+	// Token: 0x06014977 RID: 84343 RVA: 0x006001EF File Offset: 0x005FE3EF
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.CanToggleExecuteChange));
 	}
 
-	// Token: 0x06016F47 RID: 94023 RVA: 0x005D369E File Offset: 0x005D189E
+	// Token: 0x06014978 RID: 84344 RVA: 0x0060020E File Offset: 0x005FE40E
 	private bool CanToggleExecuteChange()
 	{
 		return this.OnCanToggleClicked == null || this.OnCanToggleClicked(this.Data, false, base.GetExtendToggle(0).ToggleState);
 	}
 
-	// Token: 0x06016F48 RID: 94024 RVA: 0x005D36C8 File Offset: 0x005D18C8
+	// Token: 0x06014979 RID: 84345 RVA: 0x00600238 File Offset: 0x005FE438
 	public override void OnSelected(bool fireEvent)
 	{
 		if (fireEvent)
@@ -54,13 +54,13 @@ public class SurvivorWeaponTabItem : GridProxyAbstract<SurvivorsHandbookWeaponDa
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06016F49 RID: 94025 RVA: 0x005D36E4 File Offset: 0x005D18E4
+	// Token: 0x0601497A RID: 84346 RVA: 0x00600254 File Offset: 0x005FE454
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06016F4A RID: 94026 RVA: 0x005D36F6 File Offset: 0x005D18F6
+	// Token: 0x0601497B RID: 84347 RVA: 0x00600266 File Offset: 0x005FE466
 	private void OnClickToggle(EToggleState state)
 	{
 		Action<SurvivorsHandbookWeaponData, SurvivorWeaponTabItem> onClickToggleCallBack = this.OnClickToggleCallBack;
@@ -71,7 +71,7 @@ public class SurvivorWeaponTabItem : GridProxyAbstract<SurvivorsHandbookWeaponDa
 		onClickToggleCallBack(this.Data, this);
 	}
 
-	// Token: 0x06016F4B RID: 94027 RVA: 0x005D3710 File Offset: 0x005D1910
+	// Token: 0x0601497C RID: 84348 RVA: 0x00600280 File Offset: 0x005FE480
 	public override void Refresh(SurvivorsHandbookWeaponData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -124,13 +124,13 @@ public class SurvivorWeaponTabItem : GridProxyAbstract<SurvivorsHandbookWeaponDa
 		base.SetTextureByPath(value.Icon, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x06016F4C RID: 94028 RVA: 0x005D3834 File Offset: 0x005D1A34
+	// Token: 0x0601497D RID: 84349 RVA: 0x006003A4 File Offset: 0x005FE5A4
 	public override object GetKey(SurvivorsHandbookWeaponData data, int displayIndex)
 	{
 		return data.Id;
 	}
 
-	// Token: 0x0400AAE9 RID: 43753
+	// Token: 0x0400AEEF RID: 44783
 	[Nullable(new byte[]
 	{
 		2,
@@ -138,7 +138,7 @@ public class SurvivorWeaponTabItem : GridProxyAbstract<SurvivorsHandbookWeaponDa
 	})]
 	public Func<SurvivorsHandbookWeaponData, bool, EToggleState, bool> OnCanToggleClicked;
 
-	// Token: 0x0400AAEA RID: 43754
+	// Token: 0x0400AEF0 RID: 44784
 	[Nullable(new byte[]
 	{
 		2,
@@ -147,7 +147,7 @@ public class SurvivorWeaponTabItem : GridProxyAbstract<SurvivorsHandbookWeaponDa
 	})]
 	public Action<SurvivorsHandbookWeaponData, SurvivorWeaponTabItem> OnClickToggleCallBack;
 
-	// Token: 0x0400AAEB RID: 43755
+	// Token: 0x0400AEF1 RID: 44785
 	[Nullable(2)]
 	private SurvivorsHandbookWeaponData Data;
 }

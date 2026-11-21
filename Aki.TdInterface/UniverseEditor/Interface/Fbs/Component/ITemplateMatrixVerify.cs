@@ -6,10 +6,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A57 RID: 23127
+	// Token: 0x02006064 RID: 24676
 	public static class ITemplateMatrixVerify
 	{
-		// Token: 0x0602758F RID: 161167 RVA: 0x0056A218 File Offset: 0x00568418
+		// Token: 0x06029B07 RID: 170759 RVA: 0x005B1224 File Offset: 0x005AF424
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false))
@@ -82,29 +82,29 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return false;
 		}
 
-		// Token: 0x02007C57 RID: 31831
+		// Token: 0x020084C6 RID: 33990
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401375F RID: 79711
+			// Token: 0x04014803 RID: 83971
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x04013760 RID: 79712
+			// Token: 0x04014804 RID: 83972
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x04013761 RID: 79713
+			// Token: 0x04014805 RID: 83973
 			public static VerifyTableAction <2>__Verify;
 
-			// Token: 0x04013762 RID: 79714
+			// Token: 0x04014806 RID: 83974
 			public static VerifyTableAction <3>__Verify;
 
-			// Token: 0x04013763 RID: 79715
+			// Token: 0x04014807 RID: 83975
 			public static VerifyTableAction <4>__Verify;
 
-			// Token: 0x04013764 RID: 79716
+			// Token: 0x04014808 RID: 83976
 			public static VerifyTableAction <5>__Verify;
 
-			// Token: 0x04013765 RID: 79717
+			// Token: 0x04014809 RID: 83977
 			public static VerifyTableAction <6>__Verify;
 		}
 	}

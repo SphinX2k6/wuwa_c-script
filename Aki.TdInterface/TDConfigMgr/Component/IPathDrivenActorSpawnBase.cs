@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005DC RID: 1500
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200066D RID: 1645
 	public class IPathDrivenActorSpawnBase
 	{
-		// Token: 0x06001FBE RID: 8126 RVA: 0x00058CDC File Offset: 0x00056EDC
+		// Token: 0x0600228A RID: 8842 RVA: 0x0005F368 File Offset: 0x0005D568
 		private IPathDrivenActorSpawnBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001FBF RID: 8127 RVA: 0x00058D14 File Offset: 0x00056F14
+		// Token: 0x0600228B RID: 8843 RVA: 0x0005F3A0 File Offset: 0x0005D5A0
 		public static IPathDrivenActorSpawnBase Create([Nullable(2)] IPathDrivenActorSpawnBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001FC0 RID: 8128 RVA: 0x00058D27 File Offset: 0x00056F27
+		// Token: 0x0600228C RID: 8844 RVA: 0x0005F3B3 File Offset: 0x0005D5B3
 		public static IPathDrivenActorSpawnBase CreateFromSetValue([Nullable(2)] IPathDrivenActorSpawnBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001FC1 RID: 8129 RVA: 0x00058D3A File Offset: 0x00056F3A
+		// Token: 0x0600228D RID: 8845 RVA: 0x0005F3C6 File Offset: 0x0005D5C6
 		public IPathDrivenActorSpawnBase_SetValue ToSetValue()
 		{
 			return new IPathDrivenActorSpawnBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000874 RID: 2164
-		// (get) Token: 0x06001FC2 RID: 8130 RVA: 0x00058D4D File Offset: 0x00056F4D
-		// (set) Token: 0x06001FC3 RID: 8131 RVA: 0x00058D78 File Offset: 0x00056F78
+		// Token: 0x17000920 RID: 2336
+		// (get) Token: 0x0600228E RID: 8846 RVA: 0x0005F3D9 File Offset: 0x0005D5D9
+		// (set) Token: 0x0600228F RID: 8847 RVA: 0x0005F404 File Offset: 0x0005D604
 		public virtual EPathDrivenActorSpawnType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400165E RID: 5726
+		// Token: 0x04001835 RID: 6197
 		[Nullable(2)]
 		protected IPathDrivenActorSpawnBase FbInstance;
 
-		// Token: 0x0400165F RID: 5727
+		// Token: 0x04001836 RID: 6198
 		[Nullable(2)]
 		protected IPathDrivenActorSpawnBase_SetValue PocoInterface;
 	}

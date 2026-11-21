@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001948 RID: 6472
+// Token: 0x02000E05 RID: 3589
 public class MediumItemGridWarningTipsComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BD0E RID: 48398 RVA: 0x002AC728 File Offset: 0x002AA928
+	// Token: 0x06009111 RID: 37137 RVA: 0x002B756C File Offset: 0x002B576C
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_WarningIcon";
 	}
 
-	// Token: 0x0600BD0F RID: 48399 RVA: 0x002AC730 File Offset: 0x002AA930
+	// Token: 0x06009112 RID: 37138 RVA: 0x002B7574 File Offset: 0x002B5774
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{

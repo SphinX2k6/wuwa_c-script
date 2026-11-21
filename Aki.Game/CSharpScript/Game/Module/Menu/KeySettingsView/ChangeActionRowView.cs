@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.KeySettingsView
 {
-	// Token: 0x02005459 RID: 21593
+	// Token: 0x0200443C RID: 17468
 	public class ChangeActionRowView : UiPanelBase
 	{
-		// Token: 0x060371F2 RID: 225778 RVA: 0x00D10D38 File Offset: 0x00D0EF38
+		// Token: 0x0602C13B RID: 180539 RVA: 0x00C60150 File Offset: 0x00C5E350
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,13 +24,13 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			};
 		}
 
-		// Token: 0x060371F3 RID: 225779 RVA: 0x00D10DB5 File Offset: 0x00D0EFB5
+		// Token: 0x0602C13C RID: 180540 RVA: 0x00C601CD File Offset: 0x00C5E3CD
 		protected override void OnBeforeDestroy()
 		{
 			this.KeySettingRowData = null;
 		}
 
-		// Token: 0x060371F4 RID: 225780 RVA: 0x00D10DBE File Offset: 0x00D0EFBE
+		// Token: 0x0602C13D RID: 180541 RVA: 0x00C601D6 File Offset: 0x00C5E3D6
 		private void OnExtendToggleStateChanged(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -46,7 +45,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			onSelectedCallback(this, this.IsRevert);
 		}
 
-		// Token: 0x060371F5 RID: 225781 RVA: 0x00D10DDC File Offset: 0x00D0EFDC
+		// Token: 0x0602C13E RID: 180542 RVA: 0x00C601F4 File Offset: 0x00C5E3F4
 		[NullableContext(1)]
 		public void Refresh(KeySettingRowData keySettingRowData, EInputControllerType inputControllerType, bool bRevert)
 		{
@@ -72,8 +71,8 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 				array2 = array3;
 				array3[1] = text;
 			}
-			string[] source = array2;
-			string keyNameRichTextByKeyNameList = this.KeySettingRowData.GetKeyNameRichTextByKeyNameList(inputControllerType, source.ToList<string>(), "/");
+			string[] collection = array2;
+			string keyNameRichTextByKeyNameList = this.KeySettingRowData.GetKeyNameRichTextByKeyNameList(inputControllerType, new List<string>(collection), "/");
 			UUIText text3 = base.GetText(2);
 			if (text3 == null)
 			{
@@ -82,14 +81,14 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			text3.SetText(keyNameRichTextByKeyNameList, true);
 		}
 
-		// Token: 0x060371F6 RID: 225782 RVA: 0x00D10E8D File Offset: 0x00D0F08D
+		// Token: 0x0602C13F RID: 180543 RVA: 0x00C602A5 File Offset: 0x00C5E4A5
 		[NullableContext(1)]
 		public void BindOnSelected(Action<ChangeActionRowView, bool> onSelected)
 		{
 			this.OnSelectedCallback = onSelected;
 		}
 
-		// Token: 0x060371F7 RID: 225783 RVA: 0x00D10E96 File Offset: 0x00D0F096
+		// Token: 0x0602C140 RID: 180544 RVA: 0x00C602AE File Offset: 0x00C5E4AE
 		public void SetSelected(bool bSelected)
 		{
 			if (bSelected)
@@ -114,14 +113,14 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			}
 		}
 
-		// Token: 0x0401D14D RID: 119117
+		// Token: 0x04017BE6 RID: 97254
 		[Nullable(2)]
 		private KeySettingRowData KeySettingRowData;
 
-		// Token: 0x0401D14E RID: 119118
+		// Token: 0x04017BE7 RID: 97255
 		public bool IsRevert;
 
-		// Token: 0x0401D14F RID: 119119
+		// Token: 0x04017BE8 RID: 97256
 		[Nullable(new byte[]
 		{
 			2,
@@ -129,16 +128,16 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 		})]
 		private Action<ChangeActionRowView, bool> OnSelectedCallback;
 
-		// Token: 0x0200B6D0 RID: 46800
+		// Token: 0x0200A108 RID: 41224
 		public class EChildType
 		{
-			// Token: 0x04037627 RID: 226855
+			// Token: 0x0403207C RID: 204924
 			public const int ExtendToggle = 0;
 
-			// Token: 0x04037628 RID: 226856
+			// Token: 0x0403207D RID: 204925
 			public const int ActionNameText = 1;
 
-			// Token: 0x04037629 RID: 226857
+			// Token: 0x0403207E RID: 204926
 			public const int ActionKeyText = 2;
 		}
 	}

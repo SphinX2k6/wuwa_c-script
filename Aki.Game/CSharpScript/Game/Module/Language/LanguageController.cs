@@ -6,46 +6,46 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Language
 {
-	// Token: 0x020056D1 RID: 22225
+	// Token: 0x020046A8 RID: 18088
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class LanguageController : ControllerBase
 	{
-		// Token: 0x0603888F RID: 231567 RVA: 0x00D6E60B File Offset: 0x00D6C80B
+		// Token: 0x0602D79F RID: 186271 RVA: 0x00CBCBCF File Offset: 0x00CBADCF
 		protected override bool OnInit()
 		{
 			this.OnAddEvents();
 			return true;
 		}
 
-		// Token: 0x06038890 RID: 231568 RVA: 0x00D6E614 File Offset: 0x00D6C814
+		// Token: 0x0602D7A0 RID: 186272 RVA: 0x00CBCBD8 File Offset: 0x00CBADD8
 		protected override bool OnClear()
 		{
 			this.OnRemoveEvents();
 			return true;
 		}
 
-		// Token: 0x06038891 RID: 231569 RVA: 0x00D6E61D File Offset: 0x00D6C81D
+		// Token: 0x0602D7A1 RID: 186273 RVA: 0x00CBCBE1 File Offset: 0x00CBADE1
 		private void OnAddEvents()
 		{
 			EventSystem.Instance.Add<string, string>(EEventName.TextLanguageChange, new Action<string, string>(this.OnLanguageChange));
 		}
 
-		// Token: 0x06038892 RID: 231570 RVA: 0x00D6E63B File Offset: 0x00D6C83B
+		// Token: 0x0602D7A2 RID: 186274 RVA: 0x00CBCBFF File Offset: 0x00CBADFF
 		private void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove<string, string>(EEventName.TextLanguageChange, new Action<string, string>(this.OnLanguageChange));
 		}
 
-		// Token: 0x06038893 RID: 231571 RVA: 0x00D6E65C File Offset: 0x00D6C85C
+		// Token: 0x0602D7A3 RID: 186275 RVA: 0x00CBCC20 File Offset: 0x00CBAE20
 		private void OnLanguageChange(string oldLanguage, string newLanguage)
 		{
 			int languageType = LanguageSystem.Instance.GetLanguageDefineByCode(newLanguage).LanguageType;
 			this.RequestSetLanguage(languageType);
 		}
 
-		// Token: 0x06038894 RID: 231572 RVA: 0x00D6E684 File Offset: 0x00D6C884
+		// Token: 0x0602D7A4 RID: 186276 RVA: 0x00CBCC48 File Offset: 0x00CBAE48
 		public void RequestSetLanguage(int languageCode)
 		{
 			LanguageSettingUpdateRequest languageSettingUpdateRequest = LanguageSettingUpdateRequest.Create();
@@ -55,13 +55,13 @@ namespace CSharpScript.Game.Module.Language
 				LanguageSettingUpdateResponse languageSettingUpdateResponse = (LanguageSettingUpdateResponse)msg;
 				if (languageSettingUpdateResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(languageSettingUpdateResponse.ErrorCode, 27367, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(languageSettingUpdateResponse.ErrorCode, 23816, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x170087AA RID: 34730
-		// (get) Token: 0x06038895 RID: 231573 RVA: 0x00D6E6CE File Offset: 0x00D6C8CE
+		// Token: 0x17005B72 RID: 23410
+		// (get) Token: 0x0602D7A5 RID: 186277 RVA: 0x00CBCC92 File Offset: 0x00CBAE92
 		public static LanguageController Instance
 		{
 			get
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Language
 			}
 		}
 
-		// Token: 0x06038896 RID: 231574 RVA: 0x00D6E6D5 File Offset: 0x00D6C8D5
+		// Token: 0x0602D7A6 RID: 186278 RVA: 0x00CBCC99 File Offset: 0x00CBAE99
 		public static LanguageController GetOrCreateInstance()
 		{
 			if (LanguageController._Instance == null)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Language
 			return LanguageController._Instance;
 		}
 
-		// Token: 0x06038897 RID: 231575 RVA: 0x00D6E6E9 File Offset: 0x00D6C8E9
+		// Token: 0x0602D7A7 RID: 186279 RVA: 0x00CBCCAD File Offset: 0x00CBAEAD
 		public static bool CreateInstance()
 		{
 			if (LanguageController._Instance != null)
@@ -91,24 +91,24 @@ namespace CSharpScript.Game.Module.Language
 			return true;
 		}
 
-		// Token: 0x06038898 RID: 231576 RVA: 0x00D6E6FF File Offset: 0x00D6C8FF
+		// Token: 0x0602D7A8 RID: 186280 RVA: 0x00CBCCC3 File Offset: 0x00CBAEC3
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06038899 RID: 231577 RVA: 0x00D6E701 File Offset: 0x00D6C901
+		// Token: 0x0602D7A9 RID: 186281 RVA: 0x00CBCCC5 File Offset: 0x00CBAEC5
 		public static void ResetStaticDefaultValue()
 		{
 			LanguageController._Instance = null;
 		}
 
-		// Token: 0x0603889A RID: 231578 RVA: 0x00D6E709 File Offset: 0x00D6C909
+		// Token: 0x0602D7AA RID: 186282 RVA: 0x00CBCCCD File Offset: 0x00CBAECD
 		static LanguageController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LanguageController.CreateStaticDefaultValue), new Action(LanguageController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401DB1F RID: 121631
+		// Token: 0x040185B5 RID: 99765
 		[Nullable(2)]
 		private static LanguageController _Instance;
 	}

@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 {
-	// Token: 0x02005029 RID: 20521
+	// Token: 0x02003FF3 RID: 16371
 	public class CancelAssistedWalkSeqRelation : NpcRelation
 	{
-		// Token: 0x17008022 RID: 32802
-		// (get) Token: 0x06034854 RID: 215124 RVA: 0x00C60327 File Offset: 0x00C5E527
+		// Token: 0x170053D7 RID: 21463
+		// (get) Token: 0x060296F7 RID: 169719 RVA: 0x00BAB89F File Offset: 0x00BA9A9F
 		public override ENpcRelationType RelationType
 		{
 			get
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			}
 		}
 
-		// Token: 0x0401BFDB RID: 114651
+		// Token: 0x040169C6 RID: 92614
 		[Nullable(1)]
 		public string Key = "";
 	}

@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D29 RID: 19753
+	// Token: 0x02003CE2 RID: 15586
 	public interface IRoleDevelopWorldDropTipEntry
 	{
-		// Token: 0x17007E3F RID: 32319
-		// (get) Token: 0x06033089 RID: 209033
-		// (set) Token: 0x0603308A RID: 209034
+		// Token: 0x170051EF RID: 20975
+		// (get) Token: 0x06027E74 RID: 163444
+		// (set) Token: 0x06027E75 RID: 163445
 		int ItemId { get; set; }
 
-		// Token: 0x17007E40 RID: 32320
-		// (get) Token: 0x0603308B RID: 209035
-		// (set) Token: 0x0603308C RID: 209036
+		// Token: 0x170051F0 RID: 20976
+		// (get) Token: 0x06027E76 RID: 163446
+		// (set) Token: 0x06027E77 RID: 163447
 		int DisplayItemId { get; set; }
 	}
 }

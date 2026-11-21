@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E01 RID: 19969
+	// Token: 0x02003DCA RID: 15818
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueInfoViewTokenDetail : UiPanelBase
 	{
-		// Token: 0x0603385D RID: 211037 RVA: 0x00C0A214 File Offset: 0x00C08414
+		// Token: 0x060286C8 RID: 165576 RVA: 0x00B53724 File Offset: 0x00B51924
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,14 +33,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603385E RID: 211038 RVA: 0x00C0A29E File Offset: 0x00C0849E
+		// Token: 0x060286C9 RID: 165577 RVA: 0x00B537AE File Offset: 0x00B519AE
 		protected override void OnBeforeCreateImplement()
 		{
 			this.UiViewSequence = new UiBehaviorLevelSequence(this);
 			base.AddUiBehavior(this.UiViewSequence);
 		}
 
-		// Token: 0x0603385F RID: 211039 RVA: 0x00C0A2B8 File Offset: 0x00C084B8
+		// Token: 0x060286CA RID: 165578 RVA: 0x00B537C8 File Offset: 0x00B519C8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueInfoViewTokenDetail.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033860 RID: 211040 RVA: 0x00C0A2FC File Offset: 0x00C084FC
+		// Token: 0x060286CB RID: 165579 RVA: 0x00B5380C File Offset: 0x00B51A0C
 		private int SortBuffEntry(RogueGainEntry a, RogueGainEntry b)
 		{
 			RogueBuffPool? rogueBuffConfig = RoguelikeConfig.Instance.GetRogueBuffConfig(a.ConfigId);
@@ -65,13 +65,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			return num2.Value - num.Value;
 		}
 
-		// Token: 0x06033861 RID: 211041 RVA: 0x00C0A3AE File Offset: 0x00C085AE
+		// Token: 0x060286CC RID: 165580 RVA: 0x00B538BE File Offset: 0x00B51ABE
 		protected override void OnStart()
 		{
 			this.DetailItem.SetActive(false);
 		}
 
-		// Token: 0x06033862 RID: 211042 RVA: 0x00C0A3BC File Offset: 0x00C085BC
+		// Token: 0x060286CD RID: 165581 RVA: 0x00B538CC File Offset: 0x00B51ACC
 		protected override void OnAfterShow()
 		{
 			if (this.Vm != null && this.Vm.IsBuffEntryEmpty())
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.LoopScrollView.SelectGridProxy(0, true);
 		}
 
-		// Token: 0x06033863 RID: 211043 RVA: 0x00C0A3E4 File Offset: 0x00C085E4
+		// Token: 0x060286CE RID: 165582 RVA: 0x00B538F4 File Offset: 0x00B51AF4
 		public void SelectFirstGrid()
 		{
 			RogueInfoViewModel vm = this.Vm;
@@ -108,13 +108,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.OnSelected(rogueGainEntry2, 0);
 		}
 
-		// Token: 0x06033864 RID: 211044 RVA: 0x00C0A433 File Offset: 0x00C08633
+		// Token: 0x060286CF RID: 165583 RVA: 0x00B53943 File Offset: 0x00B51B43
 		private RogueInfoViewTokenDetailGrid OnCreateGrid()
 		{
 			return new RogueInfoViewTokenDetailGrid();
 		}
 
-		// Token: 0x06033865 RID: 211045 RVA: 0x00C0A43A File Offset: 0x00C0863A
+		// Token: 0x060286D0 RID: 165584 RVA: 0x00B5394A File Offset: 0x00B51B4A
 		public void Update(List<RogueGainEntry> dataList)
 		{
 			if (dataList.Count <= 0)
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			loopScrollView.ReloadData(this.GetSortedBuffEntryList(dataList), false);
 		}
 
-		// Token: 0x06033866 RID: 211046 RVA: 0x00C0A470 File Offset: 0x00C08670
+		// Token: 0x060286D1 RID: 165585 RVA: 0x00B53980 File Offset: 0x00B51B80
 		public void OnSelected(RogueGainEntry data, int index)
 		{
 			int selectedGridIndex = this.LoopScrollView.GetSelectedGridIndex();
@@ -143,14 +143,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.DetailItem.Update(data);
 		}
 
-		// Token: 0x06033867 RID: 211047 RVA: 0x00C0A4BA File Offset: 0x00C086BA
+		// Token: 0x060286D2 RID: 165586 RVA: 0x00B539CA File Offset: 0x00B51BCA
 		public void SetViewModel(RogueInfoViewModel vm)
 		{
 			this.Vm = vm;
 			this.Update(vm.BuffEntryList);
 		}
 
-		// Token: 0x06033868 RID: 211048 RVA: 0x00C0A4D0 File Offset: 0x00C086D0
+		// Token: 0x060286D3 RID: 165587 RVA: 0x00B539E0 File Offset: 0x00B51BE0
 		public void RefreshSelectedDetail()
 		{
 			if (this.DetailItem == null || this.Vm == null || !this.DetailItem.GetRootItem().IsUIActiveSelf())
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.DetailItem.Update(rogueGainEntry2);
 		}
 
-		// Token: 0x06033869 RID: 211049 RVA: 0x00C0A590 File Offset: 0x00C08790
+		// Token: 0x060286D4 RID: 165588 RVA: 0x00B53AA0 File Offset: 0x00B51CA0
 		private List<RogueGainEntry> GetSortedBuffEntryList(List<RogueGainEntry> dataList)
 		{
 			List<RogueGainEntry> list = dataList.ToList<RogueGainEntry>();
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x0603386A RID: 211050 RVA: 0x00C0A5AC File Offset: 0x00C087AC
+		// Token: 0x060286D5 RID: 165589 RVA: 0x00B53ABC File Offset: 0x00B51CBC
 		private UniTask RefreshTokenListAsync(List<RogueGainEntry> dataList)
 		{
 			RogueInfoViewTokenDetail.<RefreshTokenListAsync>d__18 <RefreshTokenListAsync>d__;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RefreshTokenListAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401B55D RID: 111965
+		// Token: 0x04015F30 RID: 89904
 		[Nullable(new byte[]
 		{
 			2,
@@ -209,29 +209,29 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		public LoopScrollView<RogueInfoViewTokenDetailGrid, RogueGainEntry> LoopScrollView;
 
-		// Token: 0x0401B55E RID: 111966
+		// Token: 0x04015F31 RID: 89905
 		[Nullable(2)]
 		public CommonSelectItem DetailItem;
 
-		// Token: 0x0401B55F RID: 111967
+		// Token: 0x04015F32 RID: 89906
 		[Nullable(2)]
 		public UiBehaviorLevelSequence UiViewSequence;
 
-		// Token: 0x0401B560 RID: 111968
+		// Token: 0x04015F33 RID: 89907
 		[Nullable(2)]
 		private RogueInfoViewModel Vm;
 
-		// Token: 0x0200AF8D RID: 44941
+		// Token: 0x020099C2 RID: 39362
 		[NullableContext(0)]
 		private class ERogueInfoViewDetailDefine
 		{
-			// Token: 0x040354CB RID: 218315
+			// Token: 0x0402FEFE RID: 196350
 			public const int LoopScrollItem = 0;
 
-			// Token: 0x040354CC RID: 218316
+			// Token: 0x0402FEFF RID: 196351
 			public const int GridItem = 1;
 
-			// Token: 0x040354CD RID: 218317
+			// Token: 0x0402FF00 RID: 196352
 			public const int DetailItem = 2;
 		}
 	}

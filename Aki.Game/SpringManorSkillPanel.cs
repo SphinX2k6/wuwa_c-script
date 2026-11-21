@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D17 RID: 7447
+// Token: 0x020011D9 RID: 4569
 public class SpringManorSkillPanel : BattleChildViewPanel
 {
-	// Token: 0x0600E135 RID: 57653 RVA: 0x0034D7F8 File Offset: 0x0034B9F8
+	// Token: 0x0600B552 RID: 46418 RVA: 0x00359228 File Offset: 0x00357428
 	protected override void OnRegisterComponent()
 	{
 		List<ValueTuple<int, Type>> list = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class SpringManorSkillPanel : BattleChildViewPanel
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E136 RID: 57654 RVA: 0x0034D878 File Offset: 0x0034BA78
+	// Token: 0x0600B553 RID: 46419 RVA: 0x003592A8 File Offset: 0x003574A8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SpringManorSkillPanel.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ public class SpringManorSkillPanel : BattleChildViewPanel
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E137 RID: 57655 RVA: 0x0034D8BC File Offset: 0x0034BABC
+	// Token: 0x0600B554 RID: 46420 RVA: 0x003592EC File Offset: 0x003574EC
 	protected override void OnStart()
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -79,63 +79,63 @@ public class SpringManorSkillPanel : BattleChildViewPanel
 		runKeyItem2.SetUiActive(true);
 	}
 
-	// Token: 0x0600E138 RID: 57656 RVA: 0x0034D9C6 File Offset: 0x0034BBC6
+	// Token: 0x0600B555 RID: 46421 RVA: 0x003593F6 File Offset: 0x003575F6
 	private void OnJumpButtonPressed()
 	{
 		InputController.Instance.InputAction(CSharpScript.Game.Input.EInputAction.跳跃, EInputState.Press);
 	}
 
-	// Token: 0x0600E139 RID: 57657 RVA: 0x0034D9D8 File Offset: 0x0034BBD8
+	// Token: 0x0600B556 RID: 46422 RVA: 0x00359408 File Offset: 0x00357608
 	private void OnJumpButtonCancel()
 	{
 		InputController.Instance.InputAction(CSharpScript.Game.Input.EInputAction.跳跃, EInputState.Release);
 	}
 
-	// Token: 0x0600E13A RID: 57658 RVA: 0x0034D9EA File Offset: 0x0034BBEA
+	// Token: 0x0600B557 RID: 46423 RVA: 0x0035941A File Offset: 0x0035761A
 	private void OnJumpButtonReleased()
 	{
 		InputController.Instance.InputAction(CSharpScript.Game.Input.EInputAction.跳跃, EInputState.Release);
 	}
 
-	// Token: 0x0600E13B RID: 57659 RVA: 0x0034D9FC File Offset: 0x0034BBFC
+	// Token: 0x0600B558 RID: 46424 RVA: 0x0035942C File Offset: 0x0035762C
 	private void OnRunButtonPressed()
 	{
 		InputController.Instance.InputAction(CSharpScript.Game.Input.EInputAction.闪避, EInputState.Press);
 	}
 
-	// Token: 0x0600E13C RID: 57660 RVA: 0x0034DA0E File Offset: 0x0034BC0E
+	// Token: 0x0600B559 RID: 46425 RVA: 0x0035943E File Offset: 0x0035763E
 	private void OnRunButtonCancel()
 	{
 		InputController.Instance.InputAction(CSharpScript.Game.Input.EInputAction.闪避, EInputState.Release);
 	}
 
-	// Token: 0x0600E13D RID: 57661 RVA: 0x0034DA20 File Offset: 0x0034BC20
+	// Token: 0x0600B55A RID: 46426 RVA: 0x00359450 File Offset: 0x00357650
 	private void OnRunButtonReleased()
 	{
 		InputController.Instance.InputAction(CSharpScript.Game.Input.EInputAction.闪避, EInputState.Release);
 	}
 
-	// Token: 0x040067FF RID: 26623
+	// Token: 0x040068DE RID: 26846
 	[Nullable(2)]
 	private InputMultiKeyItem JumpKeyItem;
 
-	// Token: 0x04006800 RID: 26624
+	// Token: 0x040068DF RID: 26847
 	[Nullable(2)]
 	private InputMultiKeyItem RunKeyItem;
 
-	// Token: 0x02008307 RID: 33543
+	// Token: 0x02007490 RID: 29840
 	private static class EComp
 	{
-		// Token: 0x0402ABCD RID: 175053
+		// Token: 0x04025EF5 RID: 155381
 		public const int BtnJump = 0;
 
-		// Token: 0x0402ABCE RID: 175054
+		// Token: 0x04025EF6 RID: 155382
 		public const int BtnRun = 1;
 
-		// Token: 0x0402ABCF RID: 175055
+		// Token: 0x04025EF7 RID: 155383
 		public const int JumpKey = 2;
 
-		// Token: 0x0402ABD0 RID: 175056
+		// Token: 0x04025EF8 RID: 155384
 		public const int RunKey = 3;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DFD RID: 19965
+	// Token: 0x0200530A RID: 21258
 	public enum ERangeConstraint : byte
 	{
-		// Token: 0x0400DADC RID: 56028
+		// Token: 0x0400E644 RID: 58948
 		SearchSpawnMonsterPoint
 	}
 }

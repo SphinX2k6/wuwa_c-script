@@ -24,7 +24,7 @@ namespace CSharpScript.Launcher
 	[Nullable(0)]
 	public class HotPatch : Singleton
 	{
-		// Token: 0x06000252 RID: 594 RVA: 0x0000B8A0 File Offset: 0x00009AA0
+		// Token: 0x06000252 RID: 594 RVA: 0x0000B8D8 File Offset: 0x00009AD8
 		public void Start(UObject worldContext, UGameInstance gameInstance)
 		{
 			UKuroRenderingRuntimeBPPluginBPLibrary.SetSceneRenderingState(worldContext, true);
@@ -52,7 +52,7 @@ namespace CSharpScript.Launcher
 			});
 		}
 
-		// Token: 0x06000253 RID: 595 RVA: 0x0000B9DC File Offset: 0x00009BDC
+		// Token: 0x06000253 RID: 595 RVA: 0x0000BA14 File Offset: 0x00009C14
 		public void StartLogin()
 		{
 			this.GameInstance.MountGamePak();
@@ -73,7 +73,7 @@ namespace CSharpScript.Launcher
 			UCSharpBlueprintFunctionLibrary.CSharpDoMain(this.GameInstance);
 		}
 
-		// Token: 0x06000254 RID: 596 RVA: 0x0000BA88 File Offset: 0x00009C88
+		// Token: 0x06000254 RID: 596 RVA: 0x0000BAC0 File Offset: 0x00009CC0
 		[NullableContext(2)]
 		private void OnHotPatchFinish(bool updated, IDiffPatchProcedure procedure, bool? hasDiskChange = null)
 		{
@@ -93,7 +93,7 @@ namespace CSharpScript.Launcher
 			this.StartLogin();
 		}
 
-		// Token: 0x06000255 RID: 597 RVA: 0x0000BB04 File Offset: 0x00009D04
+		// Token: 0x06000255 RID: 597 RVA: 0x0000BB3C File Offset: 0x00009D3C
 		public UniTask ProcessLineDiff(UObject worldContext)
 		{
 			HotPatch.<ProcessLineDiff>d__10 <ProcessLineDiff>d__;
@@ -105,7 +105,7 @@ namespace CSharpScript.Launcher
 			return <ProcessLineDiff>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000256 RID: 598 RVA: 0x0000BB50 File Offset: 0x00009D50
+		// Token: 0x06000256 RID: 598 RVA: 0x0000BB88 File Offset: 0x00009D88
 		private unsafe int GetGLDriverVersion(int derfaultVersion, bool onlyAdreno)
 		{
 			string rhideviceName = UKuroRenderingRuntimeBPPluginBPLibrary.GetRHIDeviceName();
@@ -138,7 +138,7 @@ namespace CSharpScript.Launcher
 			return num;
 		}
 
-		// Token: 0x06000257 RID: 599 RVA: 0x0000BC28 File Offset: 0x00009E28
+		// Token: 0x06000257 RID: 599 RVA: 0x0000BC60 File Offset: 0x00009E60
 		[return: Nullable(0)]
 		private UniTask<bool> CheckIosDeviceSupport(string platform, HotFixManager view, bool noHotPatchProcedure = false)
 		{
@@ -152,7 +152,7 @@ namespace CSharpScript.Launcher
 			return <CheckIosDeviceSupport>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000258 RID: 600 RVA: 0x0000BC7C File Offset: 0x00009E7C
+		// Token: 0x06000258 RID: 600 RVA: 0x0000BCB4 File Offset: 0x00009EB4
 		private UniTask CheckGLDriver(HotFixManager view)
 		{
 			HotPatch.<CheckGLDriver>d__13 <CheckGLDriver>d__;
@@ -164,7 +164,7 @@ namespace CSharpScript.Launcher
 			return <CheckGLDriver>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000259 RID: 601 RVA: 0x0000BCC8 File Offset: 0x00009EC8
+		// Token: 0x06000259 RID: 601 RVA: 0x0000BD00 File Offset: 0x00009F00
 		private UniTask ShowCompileShadersProgress(HotFixManager view)
 		{
 			HotPatch.<ShowCompileShadersProgress>d__14 <ShowCompileShadersProgress>d__;
@@ -175,7 +175,7 @@ namespace CSharpScript.Launcher
 			return <ShowCompileShadersProgress>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600025A RID: 602 RVA: 0x0000BD0C File Offset: 0x00009F0C
+		// Token: 0x0600025A RID: 602 RVA: 0x0000BD44 File Offset: 0x00009F44
 		public void ClearPatch()
 		{
 			LauncherLog.Instance.Info("开始清理补丁！", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -193,7 +193,7 @@ namespace CSharpScript.Launcher
 				keyValuePair.Value.ClearRecord();
 			}
 			LauncherLog.Instance.Info("清理全量包,精简包选择记录", default(ReadOnlySpan<ValueTuple<string, object>>));
-			LauncherStorageLib.Instance.DeleteDeviceSaved(ELauncherStorageDeviceKey.SelectedMaxOrMinPackType);
+			LauncherPackageStateLib.ClearSavedPackageTypes();
 			foreach (ResPackageInfo resPackageInfo2 in ResPackageInfo.GetAllTierableBaseInfos())
 			{
 				foreach (ResPackageInfo resPackageInfo3 in resPackageInfo2.GetAllTierPackageInfos())
@@ -212,7 +212,7 @@ namespace CSharpScript.Launcher
 			{
 				list.Add(item);
 			}
-			string text = LauncherJson.Stringify<List<string>>(list, null);
+			string text = LauncherJson.Stringify(list, null);
 			hotPatchLog2.s_step_result = text;
 			HotPatchLogReport.Instance.Report(hotPatchLog2);
 			string item2 = null;
@@ -233,7 +233,7 @@ namespace CSharpScript.Launcher
 			this.RestartToBootstrap(true, true);
 		}
 
-		// Token: 0x0600025B RID: 603 RVA: 0x0000BFBC File Offset: 0x0000A1BC
+		// Token: 0x0600025B RID: 603 RVA: 0x0000BFF0 File Offset: 0x0000A1F0
 		private void RestartToBootstrap(bool notifyClearPatch, bool bClearAll = true)
 		{
 			LauncherProcedure.Destroy();
@@ -256,7 +256,7 @@ namespace CSharpScript.Launcher
 			UGameplayStatics.OpenLevel(this.WorldContext, new FName("/Game/Aki/Map/Launch/Bootstrap"), true, "");
 		}
 
-		// Token: 0x0600025C RID: 604 RVA: 0x0000C018 File Offset: 0x0000A218
+		// Token: 0x0600025C RID: 604 RVA: 0x0000C04C File Offset: 0x0000A24C
 		private void ProcessPendingTierClear()
 		{
 			string deviceSavedString = LauncherStorageLib.Instance.GetDeviceSavedString("PendingClearTierDirs", "");
@@ -291,7 +291,7 @@ namespace CSharpScript.Launcher
 						string message2 = "部分旧档位目录未能删除，保留记录待下次重试";
 						ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("count", list2.Count);
 						instance2.Warn(message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
-						LauncherStorageLib.Instance.SetDeviceSavedString("PendingClearTierDirs", LauncherJson.Stringify<List<string>>(list2, null));
+						LauncherStorageLib.Instance.SetDeviceSavedString("PendingClearTierDirs", LauncherJson.Stringify(list2, null));
 						return;
 					}
 				}
@@ -306,7 +306,7 @@ namespace CSharpScript.Launcher
 			LauncherStorageLib.Instance.DeleteDeviceSavedString("PendingClearTierDirs");
 		}
 
-		// Token: 0x0600025D RID: 605 RVA: 0x0000C174 File Offset: 0x0000A374
+		// Token: 0x0600025D RID: 605 RVA: 0x0000C1A8 File Offset: 0x0000A3A8
 		public unsafe void ApplyTierChange(ETier oldTier, ETier newTier)
 		{
 			LauncherLog instance = LauncherLog.Instance;
@@ -345,7 +345,7 @@ namespace CSharpScript.Launcher
 			}
 			if (list.Count > 0)
 			{
-				LauncherStorageLib.Instance.SetDeviceSavedString("PendingClearTierDirs", LauncherJson.Stringify<List<string>>(list, null));
+				LauncherStorageLib.Instance.SetDeviceSavedString("PendingClearTierDirs", LauncherJson.Stringify(list, null));
 			}
 			if (oldTier != newTier)
 			{
@@ -356,7 +356,7 @@ namespace CSharpScript.Launcher
 			this.RestartToBootstrap(false, false);
 		}
 
-		// Token: 0x0600025E RID: 606 RVA: 0x0000C32C File Offset: 0x0000A52C
+		// Token: 0x0600025E RID: 606 RVA: 0x0000C360 File Offset: 0x0000A560
 		private void ResetPreDownloadForTierChange()
 		{
 			if (string.IsNullOrEmpty(LauncherStorageLib.Instance.GetDeviceSaved<string>(ELauncherStorageDeviceKey.PreDownloadRecord, "")))
@@ -369,7 +369,7 @@ namespace CSharpScript.Launcher
 		}
 
 		// Token: 0x1700003A RID: 58
-		// (get) Token: 0x0600025F RID: 607 RVA: 0x0000C38E File Offset: 0x0000A58E
+		// (get) Token: 0x0600025F RID: 607 RVA: 0x0000C3C2 File Offset: 0x0000A5C2
 		public static HotPatch Instance
 		{
 			get
@@ -383,12 +383,12 @@ namespace CSharpScript.Launcher
 			}
 		}
 
-		// Token: 0x06000260 RID: 608 RVA: 0x0000C3B1 File Offset: 0x0000A5B1
+		// Token: 0x06000260 RID: 608 RVA: 0x0000C3E5 File Offset: 0x0000A5E5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000261 RID: 609 RVA: 0x0000C3B3 File Offset: 0x0000A5B3
+		// Token: 0x06000261 RID: 609 RVA: 0x0000C3E7 File Offset: 0x0000A5E7
 		public static void ResetStaticDefaultValue()
 		{
 			HotPatch instance = HotPatch._instance;
@@ -399,41 +399,41 @@ namespace CSharpScript.Launcher
 			HotPatch._instance = null;
 		}
 
-		// Token: 0x06000262 RID: 610 RVA: 0x0000C3CC File Offset: 0x0000A5CC
+		// Token: 0x06000262 RID: 610 RVA: 0x0000C400 File Offset: 0x0000A600
 		static HotPatch()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(HotPatch.CreateStaticDefaultValue), new Action(HotPatch.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04000109 RID: 265
+		// Token: 0x0400010A RID: 266
 		[Nullable(2)]
 		[StaticVariableRuleIgnore]
 		public static Action OnClearPatch;
 
-		// Token: 0x0400010A RID: 266
+		// Token: 0x0400010B RID: 267
 		[Nullable(2)]
 		private UObject WorldContext;
 
-		// Token: 0x0400010B RID: 267
+		// Token: 0x0400010C RID: 268
 		[Nullable(2)]
 		private BP_MainGameInstance_C GameInstance;
 
-		// Token: 0x0400010C RID: 268
+		// Token: 0x0400010D RID: 269
 		protected EHotPatchState State;
 
-		// Token: 0x0400010D RID: 269
+		// Token: 0x0400010E RID: 270
 		private readonly AppPathMisc PathModule = new AppPathMisc();
 
-		// Token: 0x0400010E RID: 270
+		// Token: 0x0400010F RID: 271
 		public readonly HotFixSceneManager HotFixSceneManager = new HotFixSceneManager();
 
-		// Token: 0x0400010F RID: 271
+		// Token: 0x04000110 RID: 272
 		private readonly HotFixGameSettingManager HotFixGameSettingManager = new HotFixGameSettingManager();
 
-		// Token: 0x04000110 RID: 272
+		// Token: 0x04000111 RID: 273
 		private const string PendingClearTierDirsKey = "PendingClearTierDirs";
 
-		// Token: 0x04000111 RID: 273
+		// Token: 0x04000112 RID: 274
 		[Nullable(2)]
 		private static HotPatch _instance;
 	}

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E30 RID: 3632
+	// Token: 0x02000F2C RID: 3884
 	public class IRtSize
 	{
-		// Token: 0x0600521D RID: 21021 RVA: 0x000CA57B File Offset: 0x000C877B
-		[NullableContext(1)]
+		// Token: 0x06005744 RID: 22340 RVA: 0x000D5E43 File Offset: 0x000D4043
 		public static IRtSize Create(IRtSize? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B7A RID: 7034
-		// (get) Token: 0x0600521E RID: 21022 RVA: 0x000CA59A File Offset: 0x000C879A
+		// Token: 0x17001CE7 RID: 7399
+		// (get) Token: 0x06005745 RID: 22341 RVA: 0x000D5E62 File Offset: 0x000D4062
 		public virtual int Length
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B7B RID: 7035
-		// (get) Token: 0x0600521F RID: 21023 RVA: 0x000CA5A7 File Offset: 0x000C87A7
+		// Token: 0x17001CE8 RID: 7400
+		// (get) Token: 0x06005746 RID: 22342 RVA: 0x000D5E6F File Offset: 0x000D406F
 		public virtual int Width
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F4D RID: 12109
+		// Token: 0x04003215 RID: 12821
 		private IRtSize Instance;
 	}
 }

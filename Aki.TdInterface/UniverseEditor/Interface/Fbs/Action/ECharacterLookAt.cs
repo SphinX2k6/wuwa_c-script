@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F35 RID: 24373
+	// Token: 0x02006579 RID: 25977
 	public enum ECharacterLookAt : byte
 	{
-		// Token: 0x0400FC80 RID: 64640
+		// Token: 0x040109F6 RID: 68086
 		Empty,
-		// Token: 0x0400FC81 RID: 64641
+		// Token: 0x040109F7 RID: 68087
 		Entity,
-		// Token: 0x0400FC82 RID: 64642
+		// Token: 0x040109F8 RID: 68088
 		Position,
-		// Token: 0x0400FC83 RID: 64643
+		// Token: 0x040109F9 RID: 68089
 		Player,
-		// Token: 0x0400FC84 RID: 64644
+		// Token: 0x040109FA RID: 68090
 		Unlock
 	}
 }

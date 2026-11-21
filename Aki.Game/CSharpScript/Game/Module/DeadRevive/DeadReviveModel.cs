@@ -9,14 +9,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DeadRevive
 {
-	// Token: 0x02005AC5 RID: 23237
+	// Token: 0x02004AA6 RID: 19110
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class DeadReviveModel : ModelBase
 	{
-		// Token: 0x17008C23 RID: 35875
-		// (get) Token: 0x0603AD94 RID: 241044 RVA: 0x00E06A84 File Offset: 0x00E04C84
+		// Token: 0x17005FFD RID: 24573
+		// (get) Token: 0x0602FD06 RID: 195846 RVA: 0x00D57760 File Offset: 0x00D55960
 		public bool SkipFallInjure
 		{
 			get
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603AD95 RID: 241045 RVA: 0x00E06AE0 File Offset: 0x00E04CE0
+		// Token: 0x0602FD07 RID: 195847 RVA: 0x00D577BC File Offset: 0x00D559BC
 		public unsafe void SetSkipFallInjure(ESkipFallInjureReason reason, bool skip)
 		{
 			this.SkipFallInjureMap[reason] = skip;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x0603AD96 RID: 241046 RVA: 0x00E06B7C File Offset: 0x00E04D7C
+		// Token: 0x0602FD08 RID: 195848 RVA: 0x00D57858 File Offset: 0x00D55A58
 		public void InitReviveConfig(int reviveId)
 		{
 			if (this.ReviveConfig == null || this.ReviveConfig.Value.Id != reviveId)
@@ -59,28 +59,28 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603AD97 RID: 241047 RVA: 0x00E06BB9 File Offset: 0x00E04DB9
+		// Token: 0x0602FD09 RID: 195849 RVA: 0x00D57895 File Offset: 0x00D55A95
 		protected override bool OnClear()
 		{
 			this.ClearAll();
 			return true;
 		}
 
-		// Token: 0x0603AD98 RID: 241048 RVA: 0x00E06BC2 File Offset: 0x00E04DC2
+		// Token: 0x0602FD0A RID: 195850 RVA: 0x00D5789E File Offset: 0x00D55A9E
 		protected override bool OnLeaveLevel()
 		{
 			this.ClearAll();
 			return true;
 		}
 
-		// Token: 0x0603AD99 RID: 241049 RVA: 0x00E06BCB File Offset: 0x00E04DCB
+		// Token: 0x0602FD0B RID: 195851 RVA: 0x00D578A7 File Offset: 0x00D55AA7
 		protected override bool OnChangeMode()
 		{
 			this.ClearAll();
 			return true;
 		}
 
-		// Token: 0x0603AD9A RID: 241050 RVA: 0x00E06BD4 File Offset: 0x00E04DD4
+		// Token: 0x0602FD0C RID: 195852 RVA: 0x00D578B0 File Offset: 0x00D55AB0
 		private void ClearAll()
 		{
 			this.ClearReviveData();
@@ -93,6 +93,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.ReviveGravity = null;
 			this.ReviveFlowIncId = 0L;
 			this.BlockAllInput = false;
+			this.BlockInputInDarkTideDying = false;
 			this.ChangeRoleIdAfterRevive = 0;
 			foreach (KeyValuePair<long, ReviveCooldownData> keyValuePair in this.ReviveCooldownCreatureMap)
 			{
@@ -107,7 +108,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.SkipFallInjureMap.Clear();
 		}
 
-		// Token: 0x0603AD9B RID: 241051 RVA: 0x00E06CA8 File Offset: 0x00E04EA8
+		// Token: 0x0602FD0D RID: 195853 RVA: 0x00D57988 File Offset: 0x00D55B88
 		public void ClearReviveData()
 		{
 			this.ReviveLimitTime = 0f;
@@ -120,13 +121,13 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603AD9C RID: 241052 RVA: 0x00E06CDE File Offset: 0x00E04EDE
+		// Token: 0x0602FD0E RID: 195854 RVA: 0x00D579BE File Offset: 0x00D55BBE
 		public void ClearExternalHandles()
 		{
 			this.HandleOnClickGiveUpExternal = null;
 		}
 
-		// Token: 0x0603AD9D RID: 241053 RVA: 0x00E06CE8 File Offset: 0x00E04EE8
+		// Token: 0x0602FD0F RID: 195855 RVA: 0x00D579C8 File Offset: 0x00D55BC8
 		public void RegisterCooldown(long creatureDataId, long cdMilliseconds)
 		{
 			if (this.ReviveCooldownCreatureMap.ContainsKey(creatureDataId))
@@ -203,7 +204,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603AD9E RID: 241054 RVA: 0x00E06E48 File Offset: 0x00E05048
+		// Token: 0x0602FD10 RID: 195856 RVA: 0x00D57B28 File Offset: 0x00D55D28
 		public void UnRegisterCooldown(long creatureDataId)
 		{
 			ReviveCooldownData data;
@@ -214,7 +215,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603AD9F RID: 241055 RVA: 0x00E06E7C File Offset: 0x00E0507C
+		// Token: 0x0602FD11 RID: 195857 RVA: 0x00D57B5C File Offset: 0x00D55D5C
 		private void EndCooldown(long creatureDataId, ReviveCooldownData data)
 		{
 			TimerHandle timerHandle = data.TimerHandle;
@@ -233,8 +234,8 @@ namespace CSharpScript.Game.Module.DeadRevive
 			EventSystem.Instance.Emit<long, float>(EEventName.OnRoleReviveCooldownChange, creatureDataId, 0f);
 		}
 
-		// Token: 0x17008C24 RID: 35876
-		// (get) Token: 0x0603ADA0 RID: 241056 RVA: 0x00E06EFA File Offset: 0x00E050FA
+		// Token: 0x17005FFE RID: 24574
+		// (get) Token: 0x0602FD12 RID: 195858 RVA: 0x00D57BDA File Offset: 0x00D55DDA
 		public static DeadReviveModel Instance
 		{
 			get
@@ -243,7 +244,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603ADA1 RID: 241057 RVA: 0x00E06F01 File Offset: 0x00E05101
+		// Token: 0x0602FD13 RID: 195859 RVA: 0x00D57BE1 File Offset: 0x00D55DE1
 		public static DeadReviveModel GetOrCreateInstance()
 		{
 			if (DeadReviveModel._Instance == null)
@@ -253,7 +254,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			return DeadReviveModel._Instance;
 		}
 
-		// Token: 0x0603ADA2 RID: 241058 RVA: 0x00E06F15 File Offset: 0x00E05115
+		// Token: 0x0602FD14 RID: 195860 RVA: 0x00D57BF5 File Offset: 0x00D55DF5
 		public static bool CreateInstance()
 		{
 			if (DeadReviveModel._Instance != null)
@@ -264,84 +265,87 @@ namespace CSharpScript.Game.Module.DeadRevive
 			return true;
 		}
 
-		// Token: 0x0603ADA3 RID: 241059 RVA: 0x00E06F2B File Offset: 0x00E0512B
+		// Token: 0x0602FD15 RID: 195861 RVA: 0x00D57C0B File Offset: 0x00D55E0B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603ADA4 RID: 241060 RVA: 0x00E06F2D File Offset: 0x00E0512D
+		// Token: 0x0602FD16 RID: 195862 RVA: 0x00D57C0D File Offset: 0x00D55E0D
 		public static void ResetStaticDefaultValue()
 		{
 			DeadReviveModel._Instance = null;
 		}
 
-		// Token: 0x0603ADA5 RID: 241061 RVA: 0x00E06F35 File Offset: 0x00E05135
+		// Token: 0x0602FD17 RID: 195863 RVA: 0x00D57C15 File Offset: 0x00D55E15
 		static DeadReviveModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DeadReviveModel.CreateStaticDefaultValue), new Action(DeadReviveModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EB56 RID: 125782
+		// Token: 0x04019611 RID: 103953
 		public EReviveMode ReviveMode;
 
-		// Token: 0x0401EB57 RID: 125783
+		// Token: 0x04019612 RID: 103954
 		public bool IsAutoRevive;
 
-		// Token: 0x0401EB58 RID: 125784
+		// Token: 0x04019613 RID: 103955
 		public bool IsShowRevive;
 
-		// Token: 0x0401EB59 RID: 125785
+		// Token: 0x04019614 RID: 103956
 		public float ReviveLimitTime;
 
-		// Token: 0x0401EB5A RID: 125786
+		// Token: 0x04019615 RID: 103957
 		public FVectorDouble? RevivePosition;
 
-		// Token: 0x0401EB5B RID: 125787
+		// Token: 0x04019616 RID: 103958
 		public FRotator? ReviveRotator;
 
-		// Token: 0x0401EB5C RID: 125788
+		// Token: 0x04019617 RID: 103959
 		[Nullable(2)]
 		public global::Vector ReviveGravity;
 
-		// Token: 0x0401EB5D RID: 125789
+		// Token: 0x04019618 RID: 103960
 		public Revive? ReviveConfig;
 
-		// Token: 0x0401EB5E RID: 125790
+		// Token: 0x04019619 RID: 103961
 		[Nullable(2)]
 		public TimerHandle DeadDelayTimer;
 
-		// Token: 0x0401EB5F RID: 125791
+		// Token: 0x0401961A RID: 103962
 		public Dictionary<long, ReviveCooldownData> ReviveCooldownCreatureMap = new Dictionary<long, ReviveCooldownData>();
 
-		// Token: 0x0401EB60 RID: 125792
+		// Token: 0x0401961B RID: 103963
 		public int CurrentShareReviveTimes;
 
-		// Token: 0x0401EB61 RID: 125793
+		// Token: 0x0401961C RID: 103964
 		public int MaxShareReviveTimes;
 
-		// Token: 0x0401EB62 RID: 125794
+		// Token: 0x0401961D RID: 103965
 		public int ChangeRoleIdAfterRevive;
 
-		// Token: 0x0401EB63 RID: 125795
+		// Token: 0x0401961E RID: 103966
 		public EUiViewName? OpenedViewName;
 
-		// Token: 0x0401EB64 RID: 125796
+		// Token: 0x0401961F RID: 103967
 		public bool BlockAllInput;
 
-		// Token: 0x0401EB65 RID: 125797
+		// Token: 0x04019620 RID: 103968
+		public bool BlockInputInDarkTideDying;
+
+		// Token: 0x04019621 RID: 103969
 		private Dictionary<ESkipFallInjureReason, bool> SkipFallInjureMap = new Dictionary<ESkipFallInjureReason, bool>();
 
-		// Token: 0x0401EB66 RID: 125798
+		// Token: 0x04019622 RID: 103970
 		public bool SkipDeathAnim;
 
-		// Token: 0x0401EB67 RID: 125799
+		// Token: 0x04019623 RID: 103971
 		public long ReviveFlowIncId;
 
-		// Token: 0x0401EB68 RID: 125800
+		// Token: 0x04019624 RID: 103972
 		[Nullable(2)]
 		public Action HandleOnClickGiveUpExternal;
 
-		// Token: 0x0401EB69 RID: 125801
+		// Token: 0x04019625 RID: 103973
 		[Nullable(2)]
 		private static DeadReviveModel _Instance;
 	}

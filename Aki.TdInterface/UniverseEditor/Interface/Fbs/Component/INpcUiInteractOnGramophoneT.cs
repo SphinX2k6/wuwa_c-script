@@ -3,50 +3,50 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005675 RID: 22133
+	// Token: 0x02005C16 RID: 23574
 	public class INpcUiInteractOnGramophoneT
 	{
-		// Token: 0x1700A433 RID: 42035
-		// (get) Token: 0x06024DA3 RID: 150947 RVA: 0x00515F63 File Offset: 0x00514163
-		// (set) Token: 0x06024DA4 RID: 150948 RVA: 0x00515F6B File Offset: 0x0051416B
+		// Token: 0x1700ACC2 RID: 44226
+		// (get) Token: 0x06026FDC RID: 159708 RVA: 0x00556AFF File Offset: 0x00554CFF
+		// (set) Token: 0x06026FDD RID: 159709 RVA: 0x00556B07 File Offset: 0x00554D07
 		public ENpcUiInteractType Type { get; set; }
 
-		// Token: 0x1700A434 RID: 42036
-		// (get) Token: 0x06024DA5 RID: 150949 RVA: 0x00515F74 File Offset: 0x00514174
-		// (set) Token: 0x06024DA6 RID: 150950 RVA: 0x00515F7C File Offset: 0x0051417C
+		// Token: 0x1700ACC3 RID: 44227
+		// (get) Token: 0x06026FDE RID: 159710 RVA: 0x00556B10 File Offset: 0x00554D10
+		// (set) Token: 0x06026FDF RID: 159711 RVA: 0x00556B18 File Offset: 0x00554D18
 		public string EnterMontage { get; set; }
 
-		// Token: 0x1700A435 RID: 42037
-		// (get) Token: 0x06024DA7 RID: 150951 RVA: 0x00515F85 File Offset: 0x00514185
-		// (set) Token: 0x06024DA8 RID: 150952 RVA: 0x00515F8D File Offset: 0x0051418D
+		// Token: 0x1700ACC4 RID: 44228
+		// (get) Token: 0x06026FE0 RID: 159712 RVA: 0x00556B21 File Offset: 0x00554D21
+		// (set) Token: 0x06026FE1 RID: 159713 RVA: 0x00556B29 File Offset: 0x00554D29
 		public string StandByMontage { get; set; }
 
-		// Token: 0x1700A436 RID: 42038
-		// (get) Token: 0x06024DA9 RID: 150953 RVA: 0x00515F96 File Offset: 0x00514196
-		// (set) Token: 0x06024DAA RID: 150954 RVA: 0x00515F9E File Offset: 0x0051419E
+		// Token: 0x1700ACC5 RID: 44229
+		// (get) Token: 0x06026FE2 RID: 159714 RVA: 0x00556B32 File Offset: 0x00554D32
+		// (set) Token: 0x06026FE3 RID: 159715 RVA: 0x00556B3A File Offset: 0x00554D3A
 		public string SwitchMusicMontage { get; set; }
 
-		// Token: 0x1700A437 RID: 42039
-		// (get) Token: 0x06024DAB RID: 150955 RVA: 0x00515FA7 File Offset: 0x005141A7
-		// (set) Token: 0x06024DAC RID: 150956 RVA: 0x00515FAF File Offset: 0x005141AF
+		// Token: 0x1700ACC6 RID: 44230
+		// (get) Token: 0x06026FE4 RID: 159716 RVA: 0x00556B43 File Offset: 0x00554D43
+		// (set) Token: 0x06026FE5 RID: 159717 RVA: 0x00556B4B File Offset: 0x00554D4B
 		public string ExitMontage { get; set; }
 
-		// Token: 0x1700A438 RID: 42040
-		// (get) Token: 0x06024DAD RID: 150957 RVA: 0x00515FB8 File Offset: 0x005141B8
-		// (set) Token: 0x06024DAE RID: 150958 RVA: 0x00515FC0 File Offset: 0x005141C0
+		// Token: 0x1700ACC7 RID: 44231
+		// (get) Token: 0x06026FE6 RID: 159718 RVA: 0x00556B54 File Offset: 0x00554D54
+		// (set) Token: 0x06026FE7 RID: 159719 RVA: 0x00556B5C File Offset: 0x00554D5C
 		public IPlayFlowT EnterFlow { get; set; }
 
-		// Token: 0x1700A439 RID: 42041
-		// (get) Token: 0x06024DAF RID: 150959 RVA: 0x00515FC9 File Offset: 0x005141C9
-		// (set) Token: 0x06024DB0 RID: 150960 RVA: 0x00515FD1 File Offset: 0x005141D1
+		// Token: 0x1700ACC8 RID: 44232
+		// (get) Token: 0x06026FE8 RID: 159720 RVA: 0x00556B65 File Offset: 0x00554D65
+		// (set) Token: 0x06026FE9 RID: 159721 RVA: 0x00556B6D File Offset: 0x00554D6D
 		public IPlayFlowT FailedFlow { get; set; }
 
-		// Token: 0x1700A43A RID: 42042
-		// (get) Token: 0x06024DB1 RID: 150961 RVA: 0x00515FDA File Offset: 0x005141DA
-		// (set) Token: 0x06024DB2 RID: 150962 RVA: 0x00515FE2 File Offset: 0x005141E2
+		// Token: 0x1700ACC9 RID: 44233
+		// (get) Token: 0x06026FEA RID: 159722 RVA: 0x00556B76 File Offset: 0x00554D76
+		// (set) Token: 0x06026FEB RID: 159723 RVA: 0x00556B7E File Offset: 0x00554D7E
 		public IPlayFlowT SuccessFlow { get; set; }
 
-		// Token: 0x06024DB3 RID: 150963 RVA: 0x00515FEB File Offset: 0x005141EB
+		// Token: 0x06026FEC RID: 159724 RVA: 0x00556B87 File Offset: 0x00554D87
 		public INpcUiInteractOnGramophoneT()
 		{
 			this.Type = ENpcUiInteractType.HandInItem;

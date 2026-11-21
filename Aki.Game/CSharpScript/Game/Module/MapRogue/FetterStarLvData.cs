@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055DB RID: 21979
+	// Token: 0x020045B1 RID: 17841
 	public class FetterStarLvData : IFetterStarLvData
 	{
-		// Token: 0x1700870A RID: 34570
-		// (get) Token: 0x0603800E RID: 229390 RVA: 0x00D43BC4 File Offset: 0x00D41DC4
-		// (set) Token: 0x0603800F RID: 229391 RVA: 0x00D43BCC File Offset: 0x00D41DCC
+		// Token: 0x17005AD1 RID: 23249
+		// (get) Token: 0x0602CF0C RID: 184076 RVA: 0x00C9190C File Offset: 0x00C8FB0C
+		// (set) Token: 0x0602CF0D RID: 184077 RVA: 0x00C91914 File Offset: 0x00C8FB14
 		public int StageLv { get; set; }
 
-		// Token: 0x1700870B RID: 34571
-		// (get) Token: 0x06038010 RID: 229392 RVA: 0x00D43BD5 File Offset: 0x00D41DD5
-		// (set) Token: 0x06038011 RID: 229393 RVA: 0x00D43BDD File Offset: 0x00D41DDD
+		// Token: 0x17005AD2 RID: 23250
+		// (get) Token: 0x0602CF0E RID: 184078 RVA: 0x00C9191D File Offset: 0x00C8FB1D
+		// (set) Token: 0x0602CF0F RID: 184079 RVA: 0x00C91925 File Offset: 0x00C8FB25
 		public int StageStarLv { get; set; }
 
-		// Token: 0x1700870C RID: 34572
-		// (get) Token: 0x06038012 RID: 229394 RVA: 0x00D43BE6 File Offset: 0x00D41DE6
-		// (set) Token: 0x06038013 RID: 229395 RVA: 0x00D43BEE File Offset: 0x00D41DEE
+		// Token: 0x17005AD3 RID: 23251
+		// (get) Token: 0x0602CF10 RID: 184080 RVA: 0x00C9192E File Offset: 0x00C8FB2E
+		// (set) Token: 0x0602CF11 RID: 184081 RVA: 0x00C91936 File Offset: 0x00C8FB36
 		public int CurrentLv { get; set; }
 
-		// Token: 0x1700870D RID: 34573
-		// (get) Token: 0x06038014 RID: 229396 RVA: 0x00D43BF7 File Offset: 0x00D41DF7
-		// (set) Token: 0x06038015 RID: 229397 RVA: 0x00D43BFF File Offset: 0x00D41DFF
+		// Token: 0x17005AD4 RID: 23252
+		// (get) Token: 0x0602CF12 RID: 184082 RVA: 0x00C9193F File Offset: 0x00C8FB3F
+		// (set) Token: 0x0602CF13 RID: 184083 RVA: 0x00C91947 File Offset: 0x00C8FB47
 		public int MaxLv { get; set; }
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000936 RID: 2358
+	// Token: 0x020009E3 RID: 2531
 	public static class EEntityCategoryExtensions
 	{
-		// Token: 0x06003524 RID: 13604 RVA: 0x0008AB84 File Offset: 0x00088D84
+		// Token: 0x06003890 RID: 14480 RVA: 0x00092704 File Offset: 0x00090904
 		public static string ToEnumString(this EEntityCategory value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003525 RID: 13605 RVA: 0x0008ABD8 File Offset: 0x00088DD8
+		// Token: 0x06003891 RID: 14481 RVA: 0x00092758 File Offset: 0x00090958
 		public static EEntityCategory FromString(string name)
 		{
 			EEntityCategory result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003526 RID: 13606 RVA: 0x0008AC04 File Offset: 0x00088E04
+		// Token: 0x06003892 RID: 14482 RVA: 0x00092784 File Offset: 0x00090984
 		public static bool TryFromString(string name, out EEntityCategory value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003527 RID: 13607 RVA: 0x0008AC6C File Offset: 0x00088E6C
+		// Token: 0x06003893 RID: 14483 RVA: 0x000927EC File Offset: 0x000909EC
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003528 RID: 13608 RVA: 0x0008AC94 File Offset: 0x00088E94
+		// Token: 0x06003894 RID: 14484 RVA: 0x00092814 File Offset: 0x00090A14
 		public static EEntityCategory[] GetValues()
 		{
 			return new EEntityCategory[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003529 RID: 13609 RVA: 0x0008ACA7 File Offset: 0x00088EA7
+		// Token: 0x06003895 RID: 14485 RVA: 0x00092827 File Offset: 0x00090A27
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 {
-	// Token: 0x02004B9C RID: 19356
+	// Token: 0x02003B46 RID: 15174
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ControlItem : UiPanelBase
 	{
-		// Token: 0x0603227A RID: 205434 RVA: 0x00BA7584 File Offset: 0x00BA5784
+		// Token: 0x0602700A RID: 159754 RVA: 0x00AEB6D0 File Offset: 0x00AE98D0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ControlItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603227B RID: 205435 RVA: 0x00BA75C7 File Offset: 0x00BA57C7
+		// Token: 0x0602700B RID: 159755 RVA: 0x00AEB713 File Offset: 0x00AE9913
 		protected override void OnAfterShow()
 		{
 			ControlButton climbBtnItem = this.ClimbBtnItem;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			fallDownBtnItem.Show(null);
 		}
 
-		// Token: 0x0603227C RID: 205436 RVA: 0x00BA7600 File Offset: 0x00BA5800
+		// Token: 0x0602700C RID: 159756 RVA: 0x00AEB74C File Offset: 0x00AE994C
 		public virtual void OnTick(float delta)
 		{
 			Tetromino curTetromino = SlidingBlocksModel.Instance.GameData.CurTetromino;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			}
 		}
 
-		// Token: 0x0603227D RID: 205437 RVA: 0x00BA76B4 File Offset: 0x00BA58B4
+		// Token: 0x0602700D RID: 159757 RVA: 0x00AEB800 File Offset: 0x00AE9A00
 		protected virtual void OnClimbBtnClick()
 		{
 			ControlButton climbBtnItem = this.ClimbBtnItem;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			climbBtnItem2.PlayClickEffect();
 		}
 
-		// Token: 0x0603227E RID: 205438 RVA: 0x00BA7738 File Offset: 0x00BA5938
+		// Token: 0x0602700E RID: 159758 RVA: 0x00AEB884 File Offset: 0x00AE9A84
 		protected virtual void OnRotateBtnClick()
 		{
 			Tetromino curTetromino = SlidingBlocksModel.Instance.GameData.CurTetromino;
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			rotateBtnItem.PlayClickEffect();
 		}
 
-		// Token: 0x0603227F RID: 205439 RVA: 0x00BA7798 File Offset: 0x00BA5998
+		// Token: 0x0602700F RID: 159759 RVA: 0x00AEB8E4 File Offset: 0x00AE9AE4
 		protected virtual void OnFallDownBtnClick()
 		{
 			Tetromino curTetromino = SlidingBlocksModel.Instance.GameData.CurTetromino;
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			fallDownBtnItem.PlayClickEffect();
 		}
 
-		// Token: 0x06032280 RID: 205440 RVA: 0x00BA77D8 File Offset: 0x00BA59D8
+		// Token: 0x06027010 RID: 159760 RVA: 0x00AEB924 File Offset: 0x00AE9B24
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -187,16 +187,16 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			return <NewButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401AB70 RID: 109424
+		// Token: 0x040154C4 RID: 87236
 		protected ControlButton ClimbBtnItem;
 
-		// Token: 0x0401AB71 RID: 109425
+		// Token: 0x040154C5 RID: 87237
 		protected ControlButton RotateBtnItem;
 
-		// Token: 0x0401AB72 RID: 109426
+		// Token: 0x040154C6 RID: 87238
 		protected ControlButton FallDownBtnItem;
 
-		// Token: 0x0401AB73 RID: 109427
+		// Token: 0x040154C7 RID: 87239
 		private CharacterClimbComponent ClimbComp;
 	}
 }

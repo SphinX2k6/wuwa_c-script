@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000179 RID: 377
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200018E RID: 398
 	public class FollowShooterComponent : IComponentBase
 	{
-		// Token: 0x06000510 RID: 1296 RVA: 0x0001FA54 File Offset: 0x0001DC54
+		// Token: 0x06000514 RID: 1300 RVA: 0x000203C8 File Offset: 0x0001E5C8
 		private FollowShooterComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000511 RID: 1297 RVA: 0x0001FA8C File Offset: 0x0001DC8C
+		// Token: 0x06000515 RID: 1301 RVA: 0x00020400 File Offset: 0x0001E600
 		public static FollowShooterComponent Create([Nullable(2)] FollowShooterComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000512 RID: 1298 RVA: 0x0001FA9F File Offset: 0x0001DC9F
+		// Token: 0x06000516 RID: 1302 RVA: 0x00020413 File Offset: 0x0001E613
 		public static FollowShooterComponent CreateFromSetValue([Nullable(2)] FollowShooterComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000513 RID: 1299 RVA: 0x0001FAB4 File Offset: 0x0001DCB4
+		// Token: 0x06000517 RID: 1303 RVA: 0x00020428 File Offset: 0x0001E628
 		public new FollowShooterComponent_SetValue ToSetValue()
 		{
 			return new FollowShooterComponent_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170001B0 RID: 432
-		// (get) Token: 0x06000514 RID: 1300 RVA: 0x0001FB04 File Offset: 0x0001DD04
-		// (set) Token: 0x06000515 RID: 1301 RVA: 0x0001FB3E File Offset: 0x0001DD3E
+		// Token: 0x170001B2 RID: 434
+		// (get) Token: 0x06000518 RID: 1304 RVA: 0x00020478 File Offset: 0x0001E678
+		// (set) Token: 0x06000519 RID: 1305 RVA: 0x000204B2 File Offset: 0x0001E6B2
 		public override bool? Disabled
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001B1 RID: 433
-		// (get) Token: 0x06000516 RID: 1302 RVA: 0x0001FB4C File Offset: 0x0001DD4C
-		// (set) Token: 0x06000517 RID: 1303 RVA: 0x0001FB76 File Offset: 0x0001DD76
+		// Token: 0x170001B3 RID: 435
+		// (get) Token: 0x0600051A RID: 1306 RVA: 0x000204C0 File Offset: 0x0001E6C0
+		// (set) Token: 0x0600051B RID: 1307 RVA: 0x000204EA File Offset: 0x0001E6EA
 		public override bool? EdIsLocked
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001B2 RID: 434
-		// (get) Token: 0x06000518 RID: 1304 RVA: 0x0001FB84 File Offset: 0x0001DD84
-		// (set) Token: 0x06000519 RID: 1305 RVA: 0x0001FBAF File Offset: 0x0001DDAF
+		// Token: 0x170001B4 RID: 436
+		// (get) Token: 0x0600051C RID: 1308 RVA: 0x000204F8 File Offset: 0x0001E6F8
+		// (set) Token: 0x0600051D RID: 1309 RVA: 0x00020523 File Offset: 0x0001E723
 		public virtual string Config
 		{
 			get
@@ -130,9 +128,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001B3 RID: 435
-		// (get) Token: 0x0600051A RID: 1306 RVA: 0x0001FBC0 File Offset: 0x0001DDC0
-		// (set) Token: 0x0600051B RID: 1307 RVA: 0x0001FC21 File Offset: 0x0001DE21
+		// Token: 0x170001B5 RID: 437
+		// (get) Token: 0x0600051E RID: 1310 RVA: 0x00020534 File Offset: 0x0001E734
+		// (set) Token: 0x0600051F RID: 1311 RVA: 0x00020595 File Offset: 0x0001E795
 		[Nullable(2)]
 		public virtual IFollowShooterJellyFishConfig TypeConfig
 		{
@@ -163,20 +161,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001B4 RID: 436
-		// (get) Token: 0x0600051C RID: 1308 RVA: 0x0001FC38 File Offset: 0x0001DE38
-		// (set) Token: 0x0600051D RID: 1309 RVA: 0x0001FCCB File Offset: 0x0001DECB
+		// Token: 0x170001B6 RID: 438
+		// (get) Token: 0x06000520 RID: 1312 RVA: 0x000205AC File Offset: 0x0001E7AC
+		// (set) Token: 0x06000521 RID: 1313 RVA: 0x0002063F File Offset: 0x0001E83F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IEntityCategory> LockableCategories
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -207,7 +205,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -216,29 +214,29 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000734 RID: 1844
+		// Token: 0x04000781 RID: 1921
 		[Nullable(2)]
 		protected new FollowShooterComponent FbInstance;
 
-		// Token: 0x04000735 RID: 1845
+		// Token: 0x04000782 RID: 1922
 		[Nullable(2)]
 		protected new FollowShooterComponent_SetValue PocoInterface;
 
-		// Token: 0x04000736 RID: 1846
+		// Token: 0x04000783 RID: 1923
 		private IFollowShooterJellyFishConfig _TypeConfigCache;
 
-		// Token: 0x04000737 RID: 1847
+		// Token: 0x04000784 RID: 1924
 		private bool _TypeConfigInited;
 
-		// Token: 0x04000738 RID: 1848
+		// Token: 0x04000785 RID: 1925
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IEntityCategory> _LockableCategoriesCache;
 
-		// Token: 0x04000739 RID: 1849
+		// Token: 0x04000786 RID: 1926
 		private bool _LockableCategoriesInited;
 	}
 }

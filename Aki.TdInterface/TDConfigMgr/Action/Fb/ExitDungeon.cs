@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026AA RID: 9898
+	// Token: 0x0200296D RID: 10605
 	public class ExitDungeon : ActionParams
 	{
-		// Token: 0x0600DD83 RID: 56707 RVA: 0x0020E751 File Offset: 0x0020C951
-		[NullableContext(1)]
+		// Token: 0x0600EB5A RID: 60250 RVA: 0x0022AEF1 File Offset: 0x002290F1
 		public static ExitDungeon Create(IExitDungeon? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041F1 RID: 16881
-		// (get) Token: 0x0600DD84 RID: 56708 RVA: 0x0020E770 File Offset: 0x0020C970
+		// Token: 0x1700452E RID: 17710
+		// (get) Token: 0x0600EB5B RID: 60251 RVA: 0x0022AF10 File Offset: 0x00229110
 		public virtual bool? IsNeedSecondaryConfirmation
 		{
 			get
@@ -35,7 +33,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B02 RID: 31490
+		// Token: 0x0400819F RID: 33183
 		private IExitDungeon Instance;
 	}
 }

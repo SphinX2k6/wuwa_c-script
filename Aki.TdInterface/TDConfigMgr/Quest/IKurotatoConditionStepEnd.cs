@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FDD RID: 4061
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001109 RID: 4361
 	public class IKurotatoConditionStepEnd : IKurotatoConditionStepBase
 	{
-		// Token: 0x06005A74 RID: 23156 RVA: 0x000DBCA8 File Offset: 0x000D9EA8
+		// Token: 0x06006054 RID: 24660 RVA: 0x000E88E8 File Offset: 0x000E6AE8
 		private IKurotatoConditionStepEnd_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005A75 RID: 23157 RVA: 0x000DBCE0 File Offset: 0x000D9EE0
+		// Token: 0x06006055 RID: 24661 RVA: 0x000E8920 File Offset: 0x000E6B20
 		public static IKurotatoConditionStepEnd Create([Nullable(2)] IKurotatoConditionStepEnd instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005A76 RID: 23158 RVA: 0x000DBCF3 File Offset: 0x000D9EF3
+		// Token: 0x06006056 RID: 24662 RVA: 0x000E8933 File Offset: 0x000E6B33
 		public static IKurotatoConditionStepEnd CreateFromSetValue([Nullable(2)] IKurotatoConditionStepEnd_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005A77 RID: 23159 RVA: 0x000DBD06 File Offset: 0x000D9F06
+		// Token: 0x06006057 RID: 24663 RVA: 0x000E8946 File Offset: 0x000E6B46
 		public new IKurotatoConditionStepEnd_SetValue ToSetValue()
 		{
 			return new IKurotatoConditionStepEnd_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DF0 RID: 7664
-		// (get) Token: 0x06005A78 RID: 23160 RVA: 0x000DBD19 File Offset: 0x000D9F19
-		// (set) Token: 0x06005A79 RID: 23161 RVA: 0x000DBD44 File Offset: 0x000D9F44
+		// Token: 0x17001F99 RID: 8089
+		// (get) Token: 0x06006058 RID: 24664 RVA: 0x000E8959 File Offset: 0x000E6B59
+		// (set) Token: 0x06006059 RID: 24665 RVA: 0x000E8984 File Offset: 0x000E6B84
 		public override EKurotatoConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400367D RID: 13949
+		// Token: 0x040039B5 RID: 14773
 		[Nullable(2)]
 		protected new IKurotatoConditionStepEnd FbInstance;
 
-		// Token: 0x0400367E RID: 13950
+		// Token: 0x040039B6 RID: 14774
 		[Nullable(2)]
 		protected new IKurotatoConditionStepEnd_SetValue PocoInterface;
 	}

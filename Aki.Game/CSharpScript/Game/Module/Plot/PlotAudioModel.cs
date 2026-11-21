@@ -7,12 +7,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FDA RID: 20442
+	// Token: 0x02003FA4 RID: 16292
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotAudioModel : ModelBase
 	{
-		// Token: 0x060344E3 RID: 214243 RVA: 0x00C48BCC File Offset: 0x00C46DCC
+		// Token: 0x0602936C RID: 168812 RVA: 0x00B92C24 File Offset: 0x00B90E24
 		public string GetExternalSourcesMediaName(PlotAudio config)
 		{
 			StringBuilder stringBuilder = new StringBuilder();
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Plot
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x060344E4 RID: 214244 RVA: 0x00C48CD0 File Offset: 0x00C46ED0
+		// Token: 0x0602936D RID: 168813 RVA: 0x00B92D28 File Offset: 0x00B90F28
 		public string GetAudioMouthAnimName(PlotAudio config)
 		{
 			StringBuilder stringBuilder = new StringBuilder();
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Plot
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x060344E5 RID: 214245 RVA: 0x00C48E18 File Offset: 0x00C47018
+		// Token: 0x0602936E RID: 168814 RVA: 0x00B92E70 File Offset: 0x00B91070
 		public string GetExternalSourcesMediaNameForEditor(PlotAudio config, bool isFemale)
 		{
 			bool flag = false;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Plot
 			return new StringBuilder(LanguageSystem.Instance.PackageAudio).Append("_").Append(value2).Append(value).Append(".wem").ToString();
 		}
 
-		// Token: 0x060344E6 RID: 214246 RVA: 0x00C48EF0 File Offset: 0x00C470F0
+		// Token: 0x0602936F RID: 168815 RVA: 0x00B92F48 File Offset: 0x00B91148
 		private Dictionary<string, string> ParseParamString(string paramString)
 		{
 			string[] array = paramString.Split(' ', StringSplitOptions.None);
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.Plot
 			return dictionary;
 		}
 
-		// Token: 0x060344E7 RID: 214247 RVA: 0x00C48F3C File Offset: 0x00C4713C
+		// Token: 0x06029370 RID: 168816 RVA: 0x00B92F94 File Offset: 0x00B91194
 		private string UpdateVarExtension(string info, string name)
 		{
 			string text = "";
@@ -185,8 +185,8 @@ namespace CSharpScript.Game.Module.Plot
 			return new Regex("\\{VarParams\\}").Replace(name, text);
 		}
 
-		// Token: 0x17007FBC RID: 32700
-		// (get) Token: 0x060344E8 RID: 214248 RVA: 0x00C48FBC File Offset: 0x00C471BC
+		// Token: 0x17005370 RID: 21360
+		// (get) Token: 0x06029371 RID: 168817 RVA: 0x00B93014 File Offset: 0x00B91214
 		public static PlotAudioModel Instance
 		{
 			get
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x060344E9 RID: 214249 RVA: 0x00C48FC3 File Offset: 0x00C471C3
+		// Token: 0x06029372 RID: 168818 RVA: 0x00B9301B File Offset: 0x00B9121B
 		public static PlotAudioModel GetOrCreateInstance()
 		{
 			if (PlotAudioModel._Instance == null)
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.Plot
 			return PlotAudioModel._Instance;
 		}
 
-		// Token: 0x060344EA RID: 214250 RVA: 0x00C48FD7 File Offset: 0x00C471D7
+		// Token: 0x06029373 RID: 168819 RVA: 0x00B9302F File Offset: 0x00B9122F
 		public static bool CreateInstance()
 		{
 			if (PlotAudioModel._Instance != null)
@@ -216,27 +216,27 @@ namespace CSharpScript.Game.Module.Plot
 			return true;
 		}
 
-		// Token: 0x060344EB RID: 214251 RVA: 0x00C48FED File Offset: 0x00C471ED
+		// Token: 0x06029374 RID: 168820 RVA: 0x00B93045 File Offset: 0x00B91245
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060344EC RID: 214252 RVA: 0x00C48FEF File Offset: 0x00C471EF
+		// Token: 0x06029375 RID: 168821 RVA: 0x00B93047 File Offset: 0x00B91247
 		public static void ResetStaticDefaultValue()
 		{
 			PlotAudioModel._Instance = null;
 		}
 
-		// Token: 0x060344ED RID: 214253 RVA: 0x00C48FF7 File Offset: 0x00C471F7
+		// Token: 0x06029376 RID: 168822 RVA: 0x00B9304F File Offset: 0x00B9124F
 		static PlotAudioModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlotAudioModel.CreateStaticDefaultValue), new Action(PlotAudioModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BD1A RID: 113946
+		// Token: 0x040166F5 RID: 91893
 		private const string GLOBAL = "gl";
 
-		// Token: 0x0401BD1B RID: 113947
+		// Token: 0x040166F6 RID: 91894
 		[Nullable(2)]
 		private static PlotAudioModel _Instance;
 	}

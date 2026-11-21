@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007AE RID: 1966
+	// Token: 0x020007C8 RID: 1992
 	public class ConfigRandomPlotById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002E26 RID: 11814 RVA: 0x0015E2BB File Offset: 0x0015C4BB
+		// Token: 0x06002EC2 RID: 11970 RVA: 0x001651C7 File Offset: 0x001633C7
 		static ConfigRandomPlotById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRandomPlotById.CreateStaticDefaultValue), new Action(ConfigRandomPlotById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002E27 RID: 11815 RVA: 0x0015E2DC File Offset: 0x0015C4DC
+		// Token: 0x06002EC3 RID: 11971 RVA: 0x001651E8 File Offset: 0x001633E8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRandomPlotById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002E28 RID: 11816 RVA: 0x0015E35B File Offset: 0x0015C55B
+		// Token: 0x06002EC4 RID: 11972 RVA: 0x00165267 File Offset: 0x00163467
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRandomPlotById.LogPair = null;
 			ConfigRandomPlotById.HandleId = 0;
 		}
 
-		// Token: 0x06002E29 RID: 11817 RVA: 0x0015E369 File Offset: 0x0015C569
+		// Token: 0x06002EC5 RID: 11973 RVA: 0x00165275 File Offset: 0x00163475
 		public static void Init()
 		{
 			ConfigRandomPlotById.HandleId = ConfigCommon.InitDataStatement(ConfigRandomPlotById.HandleId, "db_randomplot.db", "select BinData from `RandomPlot` where Id=?");
 		}
 
-		// Token: 0x06002E2A RID: 11818 RVA: 0x0015E384 File Offset: 0x0015C584
+		// Token: 0x06002EC6 RID: 11974 RVA: 0x00165290 File Offset: 0x00163490
 		public static RandomPlot? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRandomPlotById.HandleId, ConfigRandomPlotById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RandomPlot?(rootAsRandomPlot);
 		}
 
-		// Token: 0x040035A8 RID: 13736
+		// Token: 0x0400365E RID: 13918
 		private const string DB = "db_randomplot.db";
 
-		// Token: 0x040035A9 RID: 13737
+		// Token: 0x0400365F RID: 13919
 		private const string FILE = "x.系统随机剧情.xlsx";
 
-		// Token: 0x040035AA RID: 13738
+		// Token: 0x04003660 RID: 13920
 		private const string TABLE = "RandomPlot";
 
-		// Token: 0x040035AB RID: 13739
+		// Token: 0x04003661 RID: 13921
 		private const string COMMAND = "select BinData from `RandomPlot` where Id=?";
 
-		// Token: 0x040035AC RID: 13740
+		// Token: 0x04003662 RID: 13922
 		private const string KEY_PREFIX = "RandomPlotById";
 
-		// Token: 0x040035AD RID: 13741
+		// Token: 0x04003663 RID: 13923
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040035AE RID: 13742
+		// Token: 0x04003664 RID: 13924
 		private static int HandleId;
 	}
 }

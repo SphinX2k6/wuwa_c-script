@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200627F RID: 25215
+	// Token: 0x020068F0 RID: 26864
 	public class ICameraLockConfigT
 	{
-		// Token: 0x1700BBF7 RID: 48119
-		// (get) Token: 0x0602B87F RID: 178303 RVA: 0x005FE537 File Offset: 0x005FC737
-		// (set) Token: 0x0602B880 RID: 178304 RVA: 0x005FE53F File Offset: 0x005FC73F
+		// Token: 0x1700C57F RID: 50559
+		// (get) Token: 0x0602DFE0 RID: 188384 RVA: 0x0064933F File Offset: 0x0064753F
+		// (set) Token: 0x0602DFE1 RID: 188385 RVA: 0x00649347 File Offset: 0x00647547
 		public ICameraLockTargetPositionT LockTarget { get; set; }
 
-		// Token: 0x1700BBF8 RID: 48120
-		// (get) Token: 0x0602B881 RID: 178305 RVA: 0x005FE548 File Offset: 0x005FC748
-		// (set) Token: 0x0602B882 RID: 178306 RVA: 0x005FE550 File Offset: 0x005FC750
+		// Token: 0x1700C580 RID: 50560
+		// (get) Token: 0x0602DFE2 RID: 188386 RVA: 0x00649350 File Offset: 0x00647550
+		// (set) Token: 0x0602DFE3 RID: 188387 RVA: 0x00649358 File Offset: 0x00647558
 		public ICameraLockParamsT CameraParams { get; set; }
 
-		// Token: 0x0602B883 RID: 178307 RVA: 0x005FE559 File Offset: 0x005FC759
+		// Token: 0x0602DFE4 RID: 188388 RVA: 0x00649361 File Offset: 0x00647561
 		public ICameraLockConfigT()
 		{
 			this.LockTarget = null;

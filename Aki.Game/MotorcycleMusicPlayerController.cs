@@ -14,13 +14,13 @@ using Google.Protobuf;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x020022B4 RID: 8884
+// Token: 0x02001798 RID: 6040
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class MotorcycleMusicPlayerController : ControllerBase
 {
-	// Token: 0x060116BA RID: 71354 RVA: 0x00444354 File Offset: 0x00442554
+	// Token: 0x0600EB52 RID: 60242 RVA: 0x00450F38 File Offset: 0x0044F138
 	public UniTask GetMusicInfoRequest()
 	{
 		MotorcycleMusicPlayerController.<GetMusicInfoRequest>d__8 <GetMusicInfoRequest>d__;
@@ -31,7 +31,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		return <GetMusicInfoRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060116BB RID: 71355 RVA: 0x00444398 File Offset: 0x00442598
+	// Token: 0x0600EB53 RID: 60243 RVA: 0x00450F7C File Offset: 0x0044F17C
 	public static void GetLimitMusicInfoRequest([Nullable(new byte[]
 	{
 		2,
@@ -66,7 +66,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		instance.SetAlbumTimeInfoMaps(dictionary, dictionary2);
 	}
 
-	// Token: 0x060116BC RID: 71356 RVA: 0x004444BC File Offset: 0x004426BC
+	// Token: 0x0600EB54 RID: 60244 RVA: 0x004510A0 File Offset: 0x0044F2A0
 	protected override bool OnInit()
 	{
 		EventSystem.Instance.Add(EEventName.OnGetPlayerBasicInfo, new Action(this.OnGetPlayerBasicInfo));
@@ -78,7 +78,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060116BD RID: 71357 RVA: 0x00444574 File Offset: 0x00442774
+	// Token: 0x0600EB55 RID: 60245 RVA: 0x00451158 File Offset: 0x0044F358
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove(EEventName.OnGetPlayerBasicInfo, new Action(this.OnGetPlayerBasicInfo));
@@ -94,12 +94,12 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060116BE RID: 71358 RVA: 0x00444647 File Offset: 0x00442847
+	// Token: 0x0600EB56 RID: 60246 RVA: 0x0045122B File Offset: 0x0044F42B
 	private void DelayPlayMusic(float delta)
 	{
 		if (MotorcycleMusicPlayerModel.Instance.GetCurPlayMusicId() == -1 || this.CurHandleId == -1)
 		{
-			this.PlayDefaultMusic();
+			this.PlayDefaultMusic(true);
 		}
 		else if (!MotorcycleMusicPlayerModel.Instance.GetIsPause())
 		{
@@ -108,7 +108,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		this.DelayPlayTimer = null;
 	}
 
-	// Token: 0x060116BF RID: 71359 RVA: 0x00444680 File Offset: 0x00442880
+	// Token: 0x0600EB57 RID: 60247 RVA: 0x00451268 File Offset: 0x0044F468
 	private UniTask CheckAndUnlockMusic()
 	{
 		MotorcycleMusicPlayerController.<CheckAndUnlockMusic>d__13 <CheckAndUnlockMusic>d__;
@@ -119,7 +119,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		return <CheckAndUnlockMusic>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060116C0 RID: 71360 RVA: 0x004446C4 File Offset: 0x004428C4
+	// Token: 0x0600EB58 RID: 60248 RVA: 0x004512AC File Offset: 0x0044F4AC
 	private void CheckAndFallbackToDefaultAlbum()
 	{
 		MotorcycleMusicPlayerModel instance = MotorcycleMusicPlayerModel.Instance;
@@ -143,7 +143,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		ScrollingTipsController.Instance.ShowTipsByTextId("MotorMusic_TimeLimited_tips", Array.Empty<object>());
 	}
 
-	// Token: 0x060116C1 RID: 71361 RVA: 0x00444794 File Offset: 0x00442994
+	// Token: 0x0600EB59 RID: 60249 RVA: 0x0045137C File Offset: 0x0044F57C
 	private void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		if (!FunctionModel.Instance.IsOpen(10098))
@@ -170,7 +170,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		this.DelayPlayTimer = TimerSystem.Instance.Delay(new TTimerAction(this.DelayPlayMusic), (float)MotorcycleMusicPlayerConfig.Instance.GetStartDelay(), null, null, true, 1f);
 	}
 
-	// Token: 0x060116C2 RID: 71362 RVA: 0x0044484C File Offset: 0x00442A4C
+	// Token: 0x0600EB5A RID: 60250 RVA: 0x00451434 File Offset: 0x0044F634
 	private void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		FunctionModel instance = FunctionModel.Instance;
@@ -200,20 +200,20 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}, null, null);
 	}
 
-	// Token: 0x060116C3 RID: 71363 RVA: 0x004448B4 File Offset: 0x00442AB4
+	// Token: 0x0600EB5B RID: 60251 RVA: 0x0045149C File Offset: 0x0044F69C
 	private void OnGetPlayerBasicInfo()
 	{
 		this.GetMusicInfoRequest();
 		MotorcycleMusicPlayerModel.Instance.LoadLocalStorageData();
 	}
 
-	// Token: 0x060116C4 RID: 71364 RVA: 0x004448C8 File Offset: 0x00442AC8
+	// Token: 0x0600EB5C RID: 60252 RVA: 0x004514B0 File Offset: 0x0044F6B0
 	private void OnBackLoginView()
 	{
 		this.StopMusic();
 	}
 
-	// Token: 0x060116C5 RID: 71365 RVA: 0x004448D0 File Offset: 0x00442AD0
+	// Token: 0x0600EB5D RID: 60253 RVA: 0x004514B8 File Offset: 0x0044F6B8
 	private void ClearDelayPlayTimer()
 	{
 		if (this.DelayPlayTimer != null)
@@ -223,7 +223,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}
 	}
 
-	// Token: 0x060116C6 RID: 71366 RVA: 0x004448F4 File Offset: 0x00442AF4
+	// Token: 0x0600EB5E RID: 60254 RVA: 0x004514DC File Offset: 0x0044F6DC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -239,7 +239,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		return <UnlockMusicRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060116C7 RID: 71367 RVA: 0x00444937 File Offset: 0x00442B37
+	// Token: 0x0600EB5F RID: 60255 RVA: 0x0045151F File Offset: 0x0044F71F
 	public bool CheckIsEnable(bool showFailTips = false)
 	{
 		if (!MotorcycleMusicPlayerModel.Instance.IsEnable || !this.IsInVehicle)
@@ -253,7 +253,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060116C8 RID: 71368 RVA: 0x00444967 File Offset: 0x00442B67
+	// Token: 0x0600EB60 RID: 60256 RVA: 0x0045154F File Offset: 0x0044F74F
 	public void OpenMusicPlayerView()
 	{
 		if (!this.CheckIsEnable(true))
@@ -263,8 +263,8 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		UiManager.Instance.OpenView(EUiViewName.MotorcycleMusicPlayerView, null, null);
 	}
 
-	// Token: 0x060116C9 RID: 71369 RVA: 0x00444984 File Offset: 0x00442B84
-	public void PlayDefaultMusic()
+	// Token: 0x0600EB61 RID: 60257 RVA: 0x0045156C File Offset: 0x0044F76C
+	public void PlayDefaultMusic(bool keepPauseState = true)
 	{
 		int? num = new int?(LocalStorage.GetPlayer<int>(ELocalStoragePlayerKey.MotorcycleCurPlayAlbumId, 0));
 		int? num2 = new int?(LocalStorage.GetPlayer<int>(ELocalStoragePlayerKey.MotorcycleCurPlayMusicId, 0));
@@ -284,11 +284,11 @@ public class MotorcycleMusicPlayerController : ControllerBase
 			num2 = new int?((list.Count > 0) ? list[0] : -1);
 		}
 		instance.SetPlayList(list);
-		this.PlayAlbumMusic(num.Value, num2.Value);
+		this.PlayAlbumMusic(num.Value, num2.Value, keepPauseState && instance.GetIsPause());
 	}
 
-	// Token: 0x060116CA RID: 71370 RVA: 0x00444A70 File Offset: 0x00442C70
-	public void PlayAlbumMusic(int albumId, int musicId)
+	// Token: 0x0600EB62 RID: 60258 RVA: 0x00451664 File Offset: 0x0044F864
+	public void PlayAlbumMusic(int albumId, int musicId, bool startPaused = false)
 	{
 		if (!this.CheckIsEnable(true))
 		{
@@ -327,6 +327,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		{
 			return;
 		}
+		instance.SetIsPause(startPaused, !startPaused);
 		this.StopMusic();
 		int handleId = -1;
 		handleId = AudioSystem.Instance.PostEvent(phonographMusic2.Value.MusicEvent, Global.CharacterCameraManager, new PostEventArgs?(new PostEventArgs
@@ -340,18 +341,25 @@ public class MotorcycleMusicPlayerController : ControllerBase
 				}
 			}
 		}));
+		if (startPaused)
+		{
+			AudioSystem.Instance.ExecuteAction(handleId, EAudioActionType.Pause, new ExecuteActionArgs?(new ExecuteActionArgs
+			{
+				TransitionDuration = new int?(0)
+			}));
+		}
 		this.GetMusicDurationAsync(musicId);
-		this.IsPlaying = true;
+		this.IsPlaying = !startPaused;
 		EventSystem.Instance.Emit(EEventName.OnMotorSwitchMusic);
 		this.CurHandleId = handleId;
-		AudioSystem.Instance.SetState("system_motor_radio", "playing", true);
+		AudioSystem.Instance.SetState("system_motor_radio", startPaused ? "none" : "playing", true);
 		MotorcycleMusicPlayLogEvent motorcycleMusicPlayLogEvent = new MotorcycleMusicPlayLogEvent();
 		motorcycleMusicPlayLogEvent.i_item_id = musicId;
 		motorcycleMusicPlayLogEvent.i_album_id = albumId;
 		LogReportController.Instance.LogReport(motorcycleMusicPlayLogEvent);
 	}
 
-	// Token: 0x060116CB RID: 71371 RVA: 0x00444C34 File Offset: 0x00442E34
+	// Token: 0x0600EB63 RID: 60259 RVA: 0x00451870 File Offset: 0x0044FA70
 	private UniTask GetMusicDurationAsync(int musicId)
 	{
 		MotorcycleMusicPlayerController.<GetMusicDurationAsync>d__25 <GetMusicDurationAsync>d__;
@@ -362,7 +370,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		return <GetMusicDurationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060116CC RID: 71372 RVA: 0x00444C78 File Offset: 0x00442E78
+	// Token: 0x0600EB64 RID: 60260 RVA: 0x004518B4 File Offset: 0x0044FAB4
 	public void StopMusic()
 	{
 		int curHandleId = this.CurHandleId;
@@ -376,7 +384,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		AudioSystem.Instance.SetState("system_motor_radio", "none", true);
 	}
 
-	// Token: 0x060116CD RID: 71373 RVA: 0x00444CD4 File Offset: 0x00442ED4
+	// Token: 0x0600EB65 RID: 60261 RVA: 0x00451910 File Offset: 0x0044FB10
 	public int GetCurrentPlayTimeFromAudio()
 	{
 		if (this.CurHandleId == -1)
@@ -392,7 +400,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		return (int)Math.Floor((double)(num.Value * 0.001f));
 	}
 
-	// Token: 0x060116CE RID: 71374 RVA: 0x00444D40 File Offset: 0x00442F40
+	// Token: 0x0600EB66 RID: 60262 RVA: 0x0045197C File Offset: 0x0044FB7C
 	private void PauseMusicInner(int fadeOutTime)
 	{
 		if (!this.IsPlaying)
@@ -407,22 +415,22 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		AudioSystem.Instance.SetState("system_motor_radio", "none", true);
 	}
 
-	// Token: 0x060116CF RID: 71375 RVA: 0x00444D9E File Offset: 0x00442F9E
+	// Token: 0x0600EB67 RID: 60263 RVA: 0x004519DA File Offset: 0x0044FBDA
 	public void PauseMusic()
 	{
 		if (!this.CheckIsEnable(true))
 		{
 			return;
 		}
+		MotorcycleMusicPlayerModel.Instance.SetIsPause(true, true);
 		if (this.CurHandleId == -1)
 		{
 			return;
 		}
 		this.PauseMusicInner(MotorcycleMusicPlayerConfig.Instance.GetFadeOutTime());
-		MotorcycleMusicPlayerModel.Instance.SetIsPause(true);
 	}
 
-	// Token: 0x060116D0 RID: 71376 RVA: 0x00444DD0 File Offset: 0x00442FD0
+	// Token: 0x0600EB68 RID: 60264 RVA: 0x00451A0C File Offset: 0x0044FC0C
 	public void ResumeMusic()
 	{
 		if (!this.CheckIsEnable(true))
@@ -437,6 +445,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}
 		if (this.CurHandleId != -1)
 		{
+			instance.SetIsPause(false, true);
 			this.ResumeMusicInner(new int?(MotorcycleMusicPlayerConfig.Instance.GetFadeInTime()));
 			return;
 		}
@@ -445,7 +454,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		int curPlayMusicId = instance2.GetCurPlayMusicId();
 		if (curPlayAlbum == -1 || curPlayMusicId == -1)
 		{
-			this.PlayDefaultMusic();
+			this.PlayDefaultMusic(false);
 			return;
 		}
 		if (instance2.GetCurrentPlayList().Count == 0)
@@ -458,10 +467,10 @@ public class MotorcycleMusicPlayerController : ControllerBase
 			}
 			instance2.SetPlayList(list);
 		}
-		this.PlayAlbumMusic(curPlayAlbum, curPlayMusicId);
+		this.PlayAlbumMusic(curPlayAlbum, curPlayMusicId, false);
 	}
 
-	// Token: 0x060116D1 RID: 71377 RVA: 0x00444EB8 File Offset: 0x004430B8
+	// Token: 0x0600EB69 RID: 60265 RVA: 0x00451B04 File Offset: 0x0044FD04
 	private void ResumeMusicInner(int? fadeInTime = null)
 	{
 		if (this.IsPlaying)
@@ -474,11 +483,11 @@ public class MotorcycleMusicPlayerController : ControllerBase
 			TransitionDuration = new int?(value)
 		}));
 		this.IsPlaying = true;
-		MotorcycleMusicPlayerModel.Instance.SetIsPause(false);
+		MotorcycleMusicPlayerModel.Instance.SetIsPause(false, false);
 		AudioSystem.Instance.SetState("system_motor_radio", "playing", true);
 	}
 
-	// Token: 0x060116D2 RID: 71378 RVA: 0x00444F40 File Offset: 0x00443140
+	// Token: 0x0600EB6A RID: 60266 RVA: 0x00451B90 File Offset: 0x0044FD90
 	public void QuickPlayMusic(bool isNext = true)
 	{
 		if (!this.CheckIsEnable(true))
@@ -489,7 +498,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		int curPlayAlbum = instance.GetCurPlayAlbum();
 		if (instance.GetCurrentPlayList().Count == 0)
 		{
-			this.PlayAlbumMusic(instance.GetCurPlayAlbum(), instance.GetCurPlayMusicId());
+			this.PlayAlbumMusic(instance.GetCurPlayAlbum(), instance.GetCurPlayMusicId(), false);
 			return;
 		}
 		switch (instance.GetPlayMode())
@@ -518,12 +527,12 @@ public class MotorcycleMusicPlayerController : ControllerBase
 				{
 					index = (num - 1 + currentPlayList.Count) % currentPlayList.Count;
 				}
-				this.PlayAlbumMusic(curPlayAlbum, currentPlayList[index]);
+				this.PlayAlbumMusic(curPlayAlbum, currentPlayList[index], false);
 				return;
 			}
 			if (currentPlayList.Count > 0)
 			{
-				this.PlayAlbumMusic(curPlayAlbum, currentPlayList[0]);
+				this.PlayAlbumMusic(curPlayAlbum, currentPlayList[0], false);
 				return;
 			}
 			break;
@@ -542,7 +551,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 			}
 			else
 			{
-				this.PlayAlbumMusic(curPlayAlbum, prevMusicId);
+				this.PlayAlbumMusic(curPlayAlbum, prevMusicId, false);
 			}
 			instance.ClearPrevMusicId();
 			break;
@@ -552,7 +561,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}
 	}
 
-	// Token: 0x060116D3 RID: 71379 RVA: 0x0044505C File Offset: 0x0044325C
+	// Token: 0x0600EB6B RID: 60267 RVA: 0x00451CB0 File Offset: 0x0044FEB0
 	private void PlayRandomMusic(int albumId)
 	{
 		MotorcycleMusicPlayerModel instance = MotorcycleMusicPlayerModel.Instance;
@@ -578,10 +587,10 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		{
 			return;
 		}
-		this.PlayAlbumMusic(albumId, num2.Value);
+		this.PlayAlbumMusic(albumId, num2.Value, false);
 	}
 
-	// Token: 0x060116D4 RID: 71380 RVA: 0x004450E8 File Offset: 0x004432E8
+	// Token: 0x0600EB6C RID: 60268 RVA: 0x00451D3C File Offset: 0x0044FF3C
 	private void OnMusicEnd()
 	{
 		MotorcycleMusicPlayerModel instance = MotorcycleMusicPlayerModel.Instance;
@@ -600,10 +609,10 @@ public class MotorcycleMusicPlayerController : ControllerBase
 			this.QuickPlayMusic(true);
 			return;
 		}
-		this.PlayAlbumMusic(instance.GetCurPlayAlbum(), instance.GetCurPlayMusicId());
+		this.PlayAlbumMusic(instance.GetCurPlayAlbum(), instance.GetCurPlayMusicId(), false);
 	}
 
-	// Token: 0x060116D5 RID: 71381 RVA: 0x00445144 File Offset: 0x00443344
+	// Token: 0x0600EB6D RID: 60269 RVA: 0x00451D98 File Offset: 0x0044FF98
 	private void HandleCurAlbumTimeLimitExpired()
 	{
 		MotorcycleMusicPlayerModel instance = MotorcycleMusicPlayerModel.Instance;
@@ -621,7 +630,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		ScrollingTipsController.Instance.ShowTipsByTextId("MotorMusic_TimeLimited_tips", Array.Empty<object>());
 	}
 
-	// Token: 0x060116D6 RID: 71382 RVA: 0x004451FC File Offset: 0x004433FC
+	// Token: 0x0600EB6E RID: 60270 RVA: 0x00451E50 File Offset: 0x00450050
 	public void SendFavoriteUpdateRequest()
 	{
 		List<int> prevFavoriteList = this.PrevFavoriteList;
@@ -654,12 +663,12 @@ public class MotorcycleMusicPlayerController : ControllerBase
 			}
 			if (phantomMusicCollectUpdateResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomMusicCollectUpdateResponse.ErrorCode, 29261, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomMusicCollectUpdateResponse.ErrorCode, 18049, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x060116D7 RID: 71383 RVA: 0x004452B0 File Offset: 0x004434B0
+	// Token: 0x0600EB6F RID: 60271 RVA: 0x00451F04 File Offset: 0x00450104
 	private void UpdateEnableStateAndRefresh(Action updateFn, [Nullable(2)] Func<bool> preCheckFn = null)
 	{
 		MotorcycleMusicPlayerModel instance = MotorcycleMusicPlayerModel.Instance;
@@ -676,7 +685,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}
 	}
 
-	// Token: 0x060116D8 RID: 71384 RVA: 0x004452ED File Offset: 0x004434ED
+	// Token: 0x0600EB70 RID: 60272 RVA: 0x00451F41 File Offset: 0x00450141
 	public void PushAreaDisableCount()
 	{
 		this.UpdateEnableStateAndRefresh(delegate
@@ -685,7 +694,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}, null);
 	}
 
-	// Token: 0x060116D9 RID: 71385 RVA: 0x00445318 File Offset: 0x00443518
+	// Token: 0x0600EB71 RID: 60273 RVA: 0x00451F6C File Offset: 0x0045016C
 	public void PopAreaDisableCount()
 	{
 		this.UpdateEnableStateAndRefresh(delegate
@@ -694,7 +703,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}, () => !MotorcycleMusicPlayerModel.Instance.IsEnable);
 	}
 
-	// Token: 0x060116DA RID: 71386 RVA: 0x0044536C File Offset: 0x0044356C
+	// Token: 0x0600EB72 RID: 60274 RVA: 0x00451FC0 File Offset: 0x004501C0
 	public void SetFunctionEnable(bool isEnable)
 	{
 		this.UpdateEnableStateAndRefresh(delegate
@@ -703,7 +712,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}, null);
 	}
 
-	// Token: 0x060116DB RID: 71387 RVA: 0x0044539C File Offset: 0x0044359C
+	// Token: 0x0600EB73 RID: 60275 RVA: 0x00451FF0 File Offset: 0x004501F0
 	private void RefreshEnableState()
 	{
 		MotorcycleMusicPlayerModel instance = MotorcycleMusicPlayerModel.Instance;
@@ -732,7 +741,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}
 	}
 
-	// Token: 0x060116DC RID: 71388 RVA: 0x00445421 File Offset: 0x00443621
+	// Token: 0x0600EB74 RID: 60276 RVA: 0x00452075 File Offset: 0x00450275
 	public bool RequestToggleMusicFavorite(int id)
 	{
 		if (MotorcycleMusicPlayerModel.Instance.ToggleMusicFavorite(id))
@@ -743,7 +752,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x060116DD RID: 71389 RVA: 0x0044543C File Offset: 0x0044363C
+	// Token: 0x0600EB75 RID: 60277 RVA: 0x00452090 File Offset: 0x00450290
 	private void DelaySendFavoriteUpdateRequest()
 	{
 		if (this.DelaySendFavoriteUpdateRequestTimer != null)
@@ -758,7 +767,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}, 1000f, null, null, true, 1f);
 	}
 
-	// Token: 0x060116DE RID: 71390 RVA: 0x00445492 File Offset: 0x00443692
+	// Token: 0x0600EB76 RID: 60278 RVA: 0x004520E6 File Offset: 0x004502E6
 	private void ClearDelaySendFavoriteTimer()
 	{
 		if (this.DelaySendFavoriteUpdateRequestTimer != null)
@@ -768,7 +777,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}
 	}
 
-	// Token: 0x060116DF RID: 71391 RVA: 0x004454B4 File Offset: 0x004436B4
+	// Token: 0x0600EB77 RID: 60279 RVA: 0x00452108 File Offset: 0x00450308
 	private void ClearLeaveVehicleTimer()
 	{
 		if (this.LeaveVehicleTimer != null)
@@ -778,7 +787,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}
 	}
 
-	// Token: 0x060116E0 RID: 71392 RVA: 0x004454D8 File Offset: 0x004436D8
+	// Token: 0x0600EB78 RID: 60280 RVA: 0x0045212C File Offset: 0x0045032C
 	private void OnAggroAdd(IReadOnlyList<int> entityIds)
 	{
 		foreach (int num in entityIds)
@@ -806,7 +815,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}, null);
 	}
 
-	// Token: 0x060116E1 RID: 71393 RVA: 0x00445574 File Offset: 0x00443774
+	// Token: 0x0600EB79 RID: 60281 RVA: 0x004521C8 File Offset: 0x004503C8
 	private void OnAggroRemoved(IReadOnlyList<int> entityIds)
 	{
 		foreach (int item in entityIds)
@@ -822,8 +831,8 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}, null);
 	}
 
-	// Token: 0x17001628 RID: 5672
-	// (get) Token: 0x060116E2 RID: 71394 RVA: 0x004455E4 File Offset: 0x004437E4
+	// Token: 0x1700165F RID: 5727
+	// (get) Token: 0x0600EB7A RID: 60282 RVA: 0x00452238 File Offset: 0x00450438
 	public static MotorcycleMusicPlayerController Instance
 	{
 		get
@@ -832,7 +841,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		}
 	}
 
-	// Token: 0x060116E3 RID: 71395 RVA: 0x004455EB File Offset: 0x004437EB
+	// Token: 0x0600EB7B RID: 60283 RVA: 0x0045223F File Offset: 0x0045043F
 	public static MotorcycleMusicPlayerController GetOrCreateInstance()
 	{
 		if (MotorcycleMusicPlayerController._Instance == null)
@@ -842,7 +851,7 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		return MotorcycleMusicPlayerController._Instance;
 	}
 
-	// Token: 0x060116E4 RID: 71396 RVA: 0x004455FF File Offset: 0x004437FF
+	// Token: 0x0600EB7C RID: 60284 RVA: 0x00452253 File Offset: 0x00450453
 	public static bool CreateInstance()
 	{
 		if (MotorcycleMusicPlayerController._Instance != null)
@@ -853,54 +862,54 @@ public class MotorcycleMusicPlayerController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060116E5 RID: 71397 RVA: 0x00445615 File Offset: 0x00443815
+	// Token: 0x0600EB7D RID: 60285 RVA: 0x00452269 File Offset: 0x00450469
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060116E6 RID: 71398 RVA: 0x00445617 File Offset: 0x00443817
+	// Token: 0x0600EB7E RID: 60286 RVA: 0x0045226B File Offset: 0x0045046B
 	public static void ResetStaticDefaultValue()
 	{
 		MotorcycleMusicPlayerController._Instance = null;
 	}
 
-	// Token: 0x060116E7 RID: 71399 RVA: 0x0044561F File Offset: 0x0044381F
+	// Token: 0x0600EB7F RID: 60287 RVA: 0x00452273 File Offset: 0x00450473
 	static MotorcycleMusicPlayerController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MotorcycleMusicPlayerController.CreateStaticDefaultValue), new Action(MotorcycleMusicPlayerController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400844F RID: 33871
+	// Token: 0x0400858D RID: 34189
 	private const int DELAY_SEND_FAVORITE_UPDATE_REQUEST_TIME = 1000;
 
-	// Token: 0x04008450 RID: 33872
+	// Token: 0x0400858E RID: 34190
 	private int CurHandleId = -1;
 
-	// Token: 0x04008451 RID: 33873
+	// Token: 0x0400858F RID: 34191
 	private List<int> PrevFavoriteList = new List<int>();
 
-	// Token: 0x04008452 RID: 33874
+	// Token: 0x04008590 RID: 34192
 	[Nullable(2)]
 	private TimerHandle DelayPlayTimer;
 
-	// Token: 0x04008453 RID: 33875
+	// Token: 0x04008591 RID: 34193
 	private bool IsPlaying;
 
-	// Token: 0x04008454 RID: 33876
+	// Token: 0x04008592 RID: 34194
 	private bool IsInVehicle;
 
-	// Token: 0x04008455 RID: 33877
+	// Token: 0x04008593 RID: 34195
 	[Nullable(2)]
 	private TimerHandle DelaySendFavoriteUpdateRequestTimer;
 
-	// Token: 0x04008456 RID: 33878
+	// Token: 0x04008594 RID: 34196
 	[Nullable(2)]
 	private TimerHandle LeaveVehicleTimer;
 
-	// Token: 0x04008457 RID: 33879
+	// Token: 0x04008595 RID: 34197
 	private HashSet<int> FightMusicBanRadioEntityIdSet = new HashSet<int>();
 
-	// Token: 0x04008458 RID: 33880
+	// Token: 0x04008596 RID: 34198
 	[Nullable(2)]
 	private static MotorcycleMusicPlayerController _Instance;
 }

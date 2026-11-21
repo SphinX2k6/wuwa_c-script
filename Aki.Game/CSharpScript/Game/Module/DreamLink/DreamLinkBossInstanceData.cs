@@ -4,12 +4,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AA1 RID: 23201
+	// Token: 0x02004A7D RID: 19069
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DreamLinkBossInstanceData
 	{
-		// Token: 0x0603AC42 RID: 240706 RVA: 0x00DFF1BA File Offset: 0x00DFD3BA
+		// Token: 0x0602FB8B RID: 195467 RVA: 0x00D4F722 File Offset: 0x00D4D922
 		public DreamLinkBossInstanceData(int typeId, int instId, int conditionGroupId)
 		{
 			this.TypeId = typeId;
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ConditionGroupId = conditionGroupId;
 		}
 
-		// Token: 0x0603AC43 RID: 240707 RVA: 0x00DFF1E4 File Offset: 0x00DFD3E4
+		// Token: 0x0602FB8C RID: 195468 RVA: 0x00D4F74C File Offset: 0x00D4D94C
 		public string GetUnlockText()
 		{
 			string result = "";
@@ -36,52 +36,52 @@ namespace CSharpScript.Game.Module.DreamLink
 			return result;
 		}
 
-		// Token: 0x0603AC44 RID: 240708 RVA: 0x00DFF260 File Offset: 0x00DFD460
+		// Token: 0x0602FB8D RID: 195469 RVA: 0x00D4F7C8 File Offset: 0x00D4D9C8
 		public bool GetTickState()
 		{
 			return !this.IsUnlock && (double)this.UnlockTime > TimeUtil.Instance.GetServerTime();
 		}
 
-		// Token: 0x0603AC45 RID: 240709 RVA: 0x00DFF282 File Offset: 0x00DFD482
+		// Token: 0x0602FB8E RID: 195470 RVA: 0x00D4F7EA File Offset: 0x00D4D9EA
 		public void SetBossRoleIdByIndex(int index, int roleId)
 		{
 			this.EnterBossRoleIdList[index] = roleId;
 		}
 
-		// Token: 0x0603AC46 RID: 240710 RVA: 0x00DFF28D File Offset: 0x00DFD48D
+		// Token: 0x0602FB8F RID: 195471 RVA: 0x00D4F7F5 File Offset: 0x00D4D9F5
 		public int GetBossRoleIdByIndex(int index)
 		{
 			return this.EnterBossRoleIdList[index];
 		}
 
-		// Token: 0x0603AC47 RID: 240711 RVA: 0x00DFF297 File Offset: 0x00DFD497
+		// Token: 0x0602FB90 RID: 195472 RVA: 0x00D4F7FF File Offset: 0x00D4D9FF
 		public int[] GetBossRoleIdList()
 		{
 			return this.EnterBossRoleIdList;
 		}
 
-		// Token: 0x0401EAAC RID: 125612
+		// Token: 0x04019553 RID: 103763
 		public int TypeId;
 
-		// Token: 0x0401EAAD RID: 125613
+		// Token: 0x04019554 RID: 103764
 		public int InstId;
 
-		// Token: 0x0401EAAE RID: 125614
+		// Token: 0x04019555 RID: 103765
 		public int ConditionGroupId;
 
-		// Token: 0x0401EAAF RID: 125615
+		// Token: 0x04019556 RID: 103766
 		public int Score;
 
-		// Token: 0x0401EAB0 RID: 125616
+		// Token: 0x04019557 RID: 103767
 		public bool IsUnlock;
 
-		// Token: 0x0401EAB1 RID: 125617
+		// Token: 0x04019558 RID: 103768
 		public long UnlockTime;
 
-		// Token: 0x0401EAB2 RID: 125618
+		// Token: 0x04019559 RID: 103769
 		public bool IsFinished;
 
-		// Token: 0x0401EAB3 RID: 125619
+		// Token: 0x0401955A RID: 103770
 		private int[] EnterBossRoleIdList = new int[3];
 	}
 }

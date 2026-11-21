@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C1F RID: 15391
+	// Token: 0x0200402B RID: 16427
 	public struct IHollowSphereTipsActor : IFlatbufferObject
 	{
-		// Token: 0x170069EA RID: 27114
-		// (get) Token: 0x060153AF RID: 86959 RVA: 0x00313083 File Offset: 0x00311283
+		// Token: 0x17006F92 RID: 28562
+		// (get) Token: 0x060168A5 RID: 92325 RVA: 0x00339C0B File Offset: 0x00337E0B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x060153B0 RID: 86960 RVA: 0x00313090 File Offset: 0x00311290
+		// Token: 0x060168A6 RID: 92326 RVA: 0x00339C18 File Offset: 0x00337E18
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060153B1 RID: 86961 RVA: 0x00313098 File Offset: 0x00311298
+		// Token: 0x060168A7 RID: 92327 RVA: 0x00339C20 File Offset: 0x00337E20
 		public static IHollowSphereTipsActor GetRootAsIHollowSphereTipsActor(ByteBuffer _bb)
 		{
 			return IHollowSphereTipsActor.GetRootAsIHollowSphereTipsActor(_bb, default(IHollowSphereTipsActor));
 		}
 
-		// Token: 0x060153B2 RID: 86962 RVA: 0x003130B4 File Offset: 0x003112B4
+		// Token: 0x060168A8 RID: 92328 RVA: 0x00339C3C File Offset: 0x00337E3C
 		public static IHollowSphereTipsActor GetRootAsIHollowSphereTipsActor(ByteBuffer _bb, IHollowSphereTipsActor obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060153B3 RID: 86963 RVA: 0x003130D1 File Offset: 0x003112D1
+		// Token: 0x060168A9 RID: 92329 RVA: 0x00339C59 File Offset: 0x00337E59
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060153B4 RID: 86964 RVA: 0x003130E0 File Offset: 0x003112E0
+		// Token: 0x060168AA RID: 92330 RVA: 0x00339C68 File Offset: 0x00337E68
 		public IHollowSphereTipsActor __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170069EB RID: 27115
-		// (get) Token: 0x060153B5 RID: 86965 RVA: 0x003130F0 File Offset: 0x003112F0
+		// Token: 0x17006F93 RID: 28563
+		// (get) Token: 0x060168AB RID: 92331 RVA: 0x00339C78 File Offset: 0x00337E78
 		public ETipsActorType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x170069EC RID: 27116
-		// (get) Token: 0x060153B6 RID: 86966 RVA: 0x0031312C File Offset: 0x0031132C
+		// Token: 0x17006F94 RID: 28564
+		// (get) Token: 0x060168AC RID: 92332 RVA: 0x00339CB4 File Offset: 0x00337EB4
 		public ETipsActorColorType ColorType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x170069ED RID: 27117
-		// (get) Token: 0x060153B7 RID: 86967 RVA: 0x00313168 File Offset: 0x00311368
+		// Token: 0x17006F95 RID: 28565
+		// (get) Token: 0x060168AD RID: 92333 RVA: 0x00339CF0 File Offset: 0x00337EF0
 		public float Radius
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x170069EE RID: 27118
-		// (get) Token: 0x060153B8 RID: 86968 RVA: 0x003131A8 File Offset: 0x003113A8
+		// Token: 0x17006F96 RID: 28566
+		// (get) Token: 0x060168AE RID: 92334 RVA: 0x00339D30 File Offset: 0x00337F30
 		public float InnerRadius
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x170069EF RID: 27119
-		// (get) Token: 0x060153B9 RID: 86969 RVA: 0x003131EC File Offset: 0x003113EC
+		// Token: 0x17006F97 RID: 28567
+		// (get) Token: 0x060168AF RID: 92335 RVA: 0x00339D74 File Offset: 0x00337F74
 		public byte NullMask
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x060153BA RID: 86970 RVA: 0x00313229 File Offset: 0x00311429
+		// Token: 0x060168B0 RID: 92336 RVA: 0x00339DB1 File Offset: 0x00337FB1
 		public static Offset<IHollowSphereTipsActor> CreateIHollowSphereTipsActor(FlatBufferBuilder builder, ETipsActorType Type = ETipsActorType.Sphere, ETipsActorColorType ColorType = ETipsActorColorType.Inner, float Radius = 0f, float InnerRadius = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -134,49 +134,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IHollowSphereTipsActor.EndIHollowSphereTipsActor(builder);
 		}
 
-		// Token: 0x060153BB RID: 86971 RVA: 0x0031325D File Offset: 0x0031145D
+		// Token: 0x060168B1 RID: 92337 RVA: 0x00339DE5 File Offset: 0x00337FE5
 		public static void StartIHollowSphereTipsActor(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x060153BC RID: 86972 RVA: 0x00313266 File Offset: 0x00311466
+		// Token: 0x060168B2 RID: 92338 RVA: 0x00339DEE File Offset: 0x00337FEE
 		public static void AddType(FlatBufferBuilder builder, ETipsActorType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060153BD RID: 86973 RVA: 0x00313271 File Offset: 0x00311471
+		// Token: 0x060168B3 RID: 92339 RVA: 0x00339DF9 File Offset: 0x00337FF9
 		public static void AddColorType(FlatBufferBuilder builder, ETipsActorColorType colorType)
 		{
 			builder.AddByte(1, (byte)colorType, 0);
 		}
 
-		// Token: 0x060153BE RID: 86974 RVA: 0x0031327C File Offset: 0x0031147C
+		// Token: 0x060168B4 RID: 92340 RVA: 0x00339E04 File Offset: 0x00338004
 		public static void AddRadius(FlatBufferBuilder builder, float radius)
 		{
 			builder.AddFloat(2, radius, 0.0);
 		}
 
-		// Token: 0x060153BF RID: 86975 RVA: 0x0031328F File Offset: 0x0031148F
+		// Token: 0x060168B5 RID: 92341 RVA: 0x00339E17 File Offset: 0x00338017
 		public static void AddInnerRadius(FlatBufferBuilder builder, float innerRadius)
 		{
 			builder.AddFloat(3, innerRadius, 0.0);
 		}
 
-		// Token: 0x060153C0 RID: 86976 RVA: 0x003132A2 File Offset: 0x003114A2
+		// Token: 0x060168B6 RID: 92342 RVA: 0x00339E2A File Offset: 0x0033802A
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x060153C1 RID: 86977 RVA: 0x003132AD File Offset: 0x003114AD
+		// Token: 0x060168B7 RID: 92343 RVA: 0x00339E35 File Offset: 0x00338035
 		public static Offset<IHollowSphereTipsActor> EndIHollowSphereTipsActor(FlatBufferBuilder builder)
 		{
 			return new Offset<IHollowSphereTipsActor>(builder.EndTable());
 		}
 
-		// Token: 0x060153C2 RID: 86978 RVA: 0x003132BC File Offset: 0x003114BC
+		// Token: 0x060168B8 RID: 92344 RVA: 0x00339E44 File Offset: 0x00338044
 		public IHollowSphereTipsActorT UnPack()
 		{
 			IHollowSphereTipsActorT hollowSphereTipsActorT = new IHollowSphereTipsActorT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return hollowSphereTipsActorT;
 		}
 
-		// Token: 0x060153C3 RID: 86979 RVA: 0x003132D7 File Offset: 0x003114D7
+		// Token: 0x060168B9 RID: 92345 RVA: 0x00339E5F File Offset: 0x0033805F
 		public void UnPackTo(IHollowSphereTipsActorT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060153C4 RID: 86980 RVA: 0x00313318 File Offset: 0x00311518
+		// Token: 0x060168BA RID: 92346 RVA: 0x00339EA0 File Offset: 0x003380A0
 		public static Offset<IHollowSphereTipsActor> Pack(FlatBufferBuilder builder, IHollowSphereTipsActorT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IHollowSphereTipsActor.CreateIHollowSphereTipsActor(builder, _o.Type, _o.ColorType, _o.Radius, _o.InnerRadius, _o.NullMask);
 		}
 
-		// Token: 0x0400B20E RID: 45582
+		// Token: 0x0400BB99 RID: 48025
 		private Table __p;
 	}
 }

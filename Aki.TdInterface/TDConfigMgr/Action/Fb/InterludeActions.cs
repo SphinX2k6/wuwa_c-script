@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026D1 RID: 9937
+	// Token: 0x02002995 RID: 10645
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InterludeActions : ActionParams
 	{
-		// Token: 0x0600DE23 RID: 56867 RVA: 0x0020F75A File Offset: 0x0020D95A
-		[NullableContext(1)]
+		// Token: 0x0600EBFF RID: 60415 RVA: 0x0022BF9A File Offset: 0x0022A19A
+		[NullableContext(0)]
 		public static InterludeActions Create(IInterludeActions? instance)
 		{
 			if (instance == null)
@@ -24,19 +24,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004243 RID: 16963
-		// (get) Token: 0x0600DE24 RID: 56868 RVA: 0x0020F77C File Offset: 0x0020D97C
+		// Token: 0x17004583 RID: 17795
+		// (get) Token: 0x0600EC00 RID: 60416 RVA: 0x0022BFBC File Offset: 0x0022A1BC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> InterludeActionList
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -59,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004244 RID: 16964
-		// (get) Token: 0x0600DE25 RID: 56869 RVA: 0x0020F7F8 File Offset: 0x0020D9F8
+		// Token: 0x17004584 RID: 17796
+		// (get) Token: 0x0600EC01 RID: 60417 RVA: 0x0022C038 File Offset: 0x0022A238
 		public virtual List<int> DestroyEntityIds
 		{
 			get
@@ -84,8 +84,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004245 RID: 16965
-		// (get) Token: 0x0600DE26 RID: 56870 RVA: 0x0020F86D File Offset: 0x0020DA6D
+		// Token: 0x17004585 RID: 17797
+		// (get) Token: 0x0600EC02 RID: 60418 RVA: 0x0022C0AD File Offset: 0x0022A2AD
 		public virtual bool IsFadeIn
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004246 RID: 16966
-		// (get) Token: 0x0600DE27 RID: 56871 RVA: 0x0020F87A File Offset: 0x0020DA7A
+		// Token: 0x17004586 RID: 17798
+		// (get) Token: 0x0600EC03 RID: 60419 RVA: 0x0022C0BA File Offset: 0x0022A2BA
 		public virtual bool IsFadeOut
 		{
 			get
@@ -104,24 +104,24 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B51 RID: 31569
+		// Token: 0x040081F1 RID: 33265
 		private IInterludeActions Instance;
 
-		// Token: 0x04007B52 RID: 31570
+		// Token: 0x040081F2 RID: 33266
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _InterludeActionListCache;
 
-		// Token: 0x04007B53 RID: 31571
+		// Token: 0x040081F3 RID: 33267
 		private bool _InterludeActionListInited;
 
-		// Token: 0x04007B54 RID: 31572
+		// Token: 0x040081F4 RID: 33268
 		private List<int> _DestroyEntityIdsCache;
 
-		// Token: 0x04007B55 RID: 31573
+		// Token: 0x040081F5 RID: 33269
 		private bool _DestroyEntityIdsInited;
 	}
 }

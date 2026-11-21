@@ -5,18 +5,18 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 {
-	// Token: 0x020066F0 RID: 26352
+	// Token: 0x02005640 RID: 22080
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchGameplayViewModel
 	{
-		// Token: 0x06041DA0 RID: 269728 RVA: 0x00FF8600 File Offset: 0x00FF6800
+		// Token: 0x060368EC RID: 223468 RVA: 0x00F399F4 File Offset: 0x00F37BF4
 		public int GetCurGameplayId()
 		{
 			return this.CurGameplayId;
 		}
 
-		// Token: 0x06041DA1 RID: 269729 RVA: 0x00FF8608 File Offset: 0x00FF6808
+		// Token: 0x060368ED RID: 223469 RVA: 0x00F399FC File Offset: 0x00F37BFC
 		public void SetCurGameplayId(int gameplayId)
 		{
 			this.CurGameplayId = gameplayId;
@@ -33,25 +33,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 			}
 		}
 
-		// Token: 0x06041DA2 RID: 269730 RVA: 0x00FF8696 File Offset: 0x00FF6896
+		// Token: 0x060368EE RID: 223470 RVA: 0x00F39A8A File Offset: 0x00F37C8A
 		public void AddScore(float score)
 		{
 			this.CurScore += score;
 		}
 
-		// Token: 0x06041DA3 RID: 269731 RVA: 0x00FF86A6 File Offset: 0x00FF68A6
+		// Token: 0x060368EF RID: 223471 RVA: 0x00F39A9A File Offset: 0x00F37C9A
 		public float GetCurScore()
 		{
 			return this.CurScore;
 		}
 
-		// Token: 0x06041DA4 RID: 269732 RVA: 0x00FF86AE File Offset: 0x00FF68AE
+		// Token: 0x060368F0 RID: 223472 RVA: 0x00F39AA2 File Offset: 0x00F37CA2
 		public Dictionary<int, int> GetDropItemRecord()
 		{
 			return this.DropItemRecord;
 		}
 
-		// Token: 0x06041DA5 RID: 269733 RVA: 0x00FF86B8 File Offset: 0x00FF68B8
+		// Token: 0x060368F1 RID: 223473 RVA: 0x00F39AAC File Offset: 0x00F37CAC
 		public void AddDropItemRecord(int itemId)
 		{
 			int num;
@@ -65,49 +65,49 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 			this.DropItemRecord.Add(itemId, num);
 		}
 
-		// Token: 0x06041DA6 RID: 269734 RVA: 0x00FF8701 File Offset: 0x00FF6901
+		// Token: 0x060368F2 RID: 223474 RVA: 0x00F39AF5 File Offset: 0x00F37CF5
 		public List<float> GetScoreLevels()
 		{
 			return this.ScoreLevels;
 		}
 
-		// Token: 0x06041DA7 RID: 269735 RVA: 0x00FF8709 File Offset: 0x00FF6909
+		// Token: 0x060368F3 RID: 223475 RVA: 0x00F39AFD File Offset: 0x00F37CFD
 		public string GetGameplayTimeStamp()
 		{
 			return this.GameplayTimeStamp;
 		}
 
-		// Token: 0x06041DA8 RID: 269736 RVA: 0x00FF8711 File Offset: 0x00FF6911
+		// Token: 0x060368F4 RID: 223476 RVA: 0x00F39B05 File Offset: 0x00F37D05
 		public void SetGameplayTimeStamp(string timestamp)
 		{
 			this.GameplayTimeStamp = timestamp;
 		}
 
-		// Token: 0x06041DA9 RID: 269737 RVA: 0x00FF871A File Offset: 0x00FF691A
+		// Token: 0x060368F5 RID: 223477 RVA: 0x00F39B0E File Offset: 0x00F37D0E
 		public void AddSkillTimes()
 		{
 			this.SkillTimes += 1f;
 		}
 
-		// Token: 0x06041DAA RID: 269738 RVA: 0x00FF872E File Offset: 0x00FF692E
+		// Token: 0x060368F6 RID: 223478 RVA: 0x00F39B22 File Offset: 0x00F37D22
 		public float GetSkillTimes()
 		{
 			return this.SkillTimes;
 		}
 
-		// Token: 0x06041DAB RID: 269739 RVA: 0x00FF8736 File Offset: 0x00FF6936
+		// Token: 0x060368F7 RID: 223479 RVA: 0x00F39B2A File Offset: 0x00F37D2A
 		public void AddAddTime(float time)
 		{
 			this.AddTime += time;
 		}
 
-		// Token: 0x06041DAC RID: 269740 RVA: 0x00FF8746 File Offset: 0x00FF6946
+		// Token: 0x060368F8 RID: 223480 RVA: 0x00F39B3A File Offset: 0x00F37D3A
 		public float GetAddTime()
 		{
 			return this.AddTime;
 		}
 
-		// Token: 0x06041DAD RID: 269741 RVA: 0x00FF874E File Offset: 0x00FF694E
+		// Token: 0x060368F9 RID: 223481 RVA: 0x00F39B42 File Offset: 0x00F37D42
 		public void Reset()
 		{
 			this.CurScore = 0f;
@@ -117,25 +117,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 			this.AddTime = 0f;
 		}
 
-		// Token: 0x040224CA RID: 140490
+		// Token: 0x0401CD23 RID: 118051
 		private int CurGameplayId;
 
-		// Token: 0x040224CB RID: 140491
+		// Token: 0x0401CD24 RID: 118052
 		private float CurScore;
 
-		// Token: 0x040224CC RID: 140492
+		// Token: 0x0401CD25 RID: 118053
 		private readonly Dictionary<int, int> DropItemRecord = new Dictionary<int, int>();
 
-		// Token: 0x040224CD RID: 140493
+		// Token: 0x0401CD26 RID: 118054
 		private readonly List<float> ScoreLevels = new List<float>();
 
-		// Token: 0x040224CE RID: 140494
+		// Token: 0x0401CD27 RID: 118055
 		private string GameplayTimeStamp = "";
 
-		// Token: 0x040224CF RID: 140495
+		// Token: 0x0401CD28 RID: 118056
 		private float SkillTimes;
 
-		// Token: 0x040224D0 RID: 140496
+		// Token: 0x0401CD29 RID: 118057
 		private float AddTime;
 	}
 }

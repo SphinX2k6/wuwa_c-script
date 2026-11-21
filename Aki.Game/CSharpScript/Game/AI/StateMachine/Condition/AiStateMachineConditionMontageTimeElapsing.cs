@@ -7,17 +7,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Condition
 {
-	// Token: 0x02007342 RID: 29506
+	// Token: 0x020064C5 RID: 25797
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineConditionMontageTimeElapsing : AiStateMachineCondition
 	{
-		// Token: 0x06048654 RID: 296532 RVA: 0x0129F7D6 File Offset: 0x0129D9D6
+		// Token: 0x0603EAA1 RID: 256673 RVA: 0x0124225E File Offset: 0x0124045E
 		public AiStateMachineConditionMontageTimeElapsing(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index) : base(transition, condition, index)
 		{
 		}
 
-		// Token: 0x06048655 RID: 296533 RVA: 0x0129F7E4 File Offset: 0x0129D9E4
+		// Token: 0x0603EAA2 RID: 256674 RVA: 0x0124226C File Offset: 0x0124046C
 		protected override bool RegisterEvents()
 		{
 			if (base.RegisterEvents() && this.TaskMontage != null && !EventSystem.Instance.HasWithTarget(this.TaskMontage, EEventName.OnMontageRemain, new Action<float>(this.OnMontageRemain)))
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return false;
 		}
 
-		// Token: 0x06048656 RID: 296534 RVA: 0x0129F84C File Offset: 0x0129DA4C
+		// Token: 0x0603EAA3 RID: 256675 RVA: 0x012422D4 File Offset: 0x012404D4
 		protected override bool UnregisterEvents()
 		{
 			if (base.UnregisterEvents() && this.TaskMontage != null && EventSystem.Instance.HasWithTarget(this.TaskMontage, EEventName.OnMontageRemain, new Action<float>(this.OnMontageRemain)))
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return false;
 		}
 
-		// Token: 0x06048657 RID: 296535 RVA: 0x0129F8B4 File Offset: 0x0129DAB4
+		// Token: 0x0603EAA4 RID: 256676 RVA: 0x0124233C File Offset: 0x0124053C
 		private void InitMontageRemain()
 		{
 			if (this.TaskMontage != null)
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x06048658 RID: 296536 RVA: 0x0129F924 File Offset: 0x0129DB24
+		// Token: 0x0603EAA5 RID: 256677 RVA: 0x012423AC File Offset: 0x012405AC
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Condition condition)
 		{
 			this.HasTaskFinishCondition = true;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return true;
 		}
 
-		// Token: 0x06048659 RID: 296537 RVA: 0x0129FA84 File Offset: 0x0129DC84
+		// Token: 0x0603EAA6 RID: 256678 RVA: 0x0124250C File Offset: 0x0124070C
 		protected override void OnEnter()
 		{
 			IAiTaskMontage taskMontage = this.TaskMontage;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x0604865A RID: 296538 RVA: 0x0129FAF8 File Offset: 0x0129DCF8
+		// Token: 0x0603EAA7 RID: 256679 RVA: 0x01242580 File Offset: 0x01240780
 		protected override void OnTick()
 		{
 			IAiTaskMontage taskMontage = this.TaskMontage;
@@ -135,20 +135,20 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x0604865B RID: 296539 RVA: 0x0129FB6A File Offset: 0x0129DD6A
+		// Token: 0x0603EAA8 RID: 256680 RVA: 0x012425F2 File Offset: 0x012407F2
 		protected override void OnExit()
 		{
 			this.ResultSelf = false;
 		}
 
-		// Token: 0x0604865C RID: 296540 RVA: 0x0129FB73 File Offset: 0x0129DD73
+		// Token: 0x0603EAA9 RID: 256681 RVA: 0x012425FB File Offset: 0x012407FB
 		protected override void OnClear()
 		{
 			this.UnregisterEvents();
 			this.TaskMontage = null;
 		}
 
-		// Token: 0x0604865D RID: 296541 RVA: 0x0129FB84 File Offset: 0x0129DD84
+		// Token: 0x0603EAAA RID: 256682 RVA: 0x0124260C File Offset: 0x0124080C
 		private void OnMontageRemain(float remainTime)
 		{
 			this.ResultSelf = true;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x0604865E RID: 296542 RVA: 0x0129FBD4 File Offset: 0x0129DDD4
+		// Token: 0x0603EAAB RID: 256683 RVA: 0x0124265C File Offset: 0x0124085C
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			base.ToString(outBuilder, depth);
@@ -170,10 +170,10 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			outBuilder.Append(ref appendInterpolatedStringHandler);
 		}
 
-		// Token: 0x04026468 RID: 156776
+		// Token: 0x04021755 RID: 137045
 		private float Time;
 
-		// Token: 0x04026469 RID: 156777
+		// Token: 0x04021756 RID: 137046
 		[Nullable(2)]
 		private IAiTaskMontage TaskMontage;
 	}

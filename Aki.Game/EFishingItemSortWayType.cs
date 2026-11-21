@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001885 RID: 6277
+// Token: 0x02000D3E RID: 3390
 public enum EFishingItemSortWayType
 {
-	// Token: 0x04005301 RID: 21249
+	// Token: 0x040053AC RID: 21420
 	GetState = 1,
-	// Token: 0x04005302 RID: 21250
+	// Token: 0x040053AD RID: 21421
 	HandBookId
 }

@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.Hourglass
 {
-	// Token: 0x02006DFE RID: 28158
+	// Token: 0x02005F7D RID: 24445
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QteHourglassView : UiTickViewBase
 	{
-		// Token: 0x06044B04 RID: 281348 RVA: 0x010F3F18 File Offset: 0x010F2118
+		// Token: 0x0603AC68 RID: 240744 RVA: 0x0109E1E0 File Offset: 0x0109C3E0
 		public QteHourglassView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06044B05 RID: 281349 RVA: 0x010F3F90 File Offset: 0x010F2190
+		// Token: 0x0603AC69 RID: 240745 RVA: 0x0109E258 File Offset: 0x0109C458
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			};
 		}
 
-		// Token: 0x06044B06 RID: 281350 RVA: 0x010F3FCC File Offset: 0x010F21CC
+		// Token: 0x0603AC6A RID: 240746 RVA: 0x0109E294 File Offset: 0x0109C494
 		protected override void OnStart()
 		{
 			this.FillItem = base.GetItem(0);
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			uiViewSequence4.AddSequenceFinishEvent("PhaseC", new Action<string>(this.OnPhaseCFinished), false);
 		}
 
-		// Token: 0x06044B07 RID: 281351 RVA: 0x010F40A0 File Offset: 0x010F22A0
+		// Token: 0x0603AC6B RID: 240747 RVA: 0x0109E368 File Offset: 0x0109C568
 		protected override UniTask OnCreateAsync()
 		{
 			QteHourglassView.<OnCreateAsync>d__29 <OnCreateAsync>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044B08 RID: 281352 RVA: 0x010F40E3 File Offset: 0x010F22E3
+		// Token: 0x0603AC6C RID: 240748 RVA: 0x0109E3AB File Offset: 0x0109C5AB
 		protected override void OnBeforeHide()
 		{
 			this.CleanupRuntimeState();
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			}
 		}
 
-		// Token: 0x06044B09 RID: 281353 RVA: 0x010F4104 File Offset: 0x010F2304
+		// Token: 0x0603AC6D RID: 240749 RVA: 0x0109E3CC File Offset: 0x0109C5CC
 		protected override void OnBeforeDestroy()
 		{
 			this.CleanupRuntimeState();
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			this.TrailItem = null;
 		}
 
-		// Token: 0x06044B0A RID: 281354 RVA: 0x010F4194 File Offset: 0x010F2394
+		// Token: 0x0603AC6E RID: 240750 RVA: 0x0109E45C File Offset: 0x0109C65C
 		protected override void OnTick(float delta)
 		{
 			if (!this.IsTrailMoving || this.IsFinishing)
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			}
 		}
 
-		// Token: 0x06044B0B RID: 281355 RVA: 0x010F42CA File Offset: 0x010F24CA
+		// Token: 0x0603AC6F RID: 240751 RVA: 0x0109E592 File Offset: 0x0109C792
 		private void OnStartSequenceFinished(string sequenceName)
 		{
 			if (this.State != QteHourglassView.EHourglassState.WaitStart)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			}
 		}
 
-		// Token: 0x06044B0C RID: 281356 RVA: 0x010F42EA File Offset: 0x010F24EA
+		// Token: 0x0603AC70 RID: 240752 RVA: 0x0109E5B2 File Offset: 0x0109C7B2
 		private void OnPhaseAFinished(string sequenceName)
 		{
 			if (this.State != QteHourglassView.EHourglassState.WaitPhaseA)
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			}
 		}
 
-		// Token: 0x06044B0D RID: 281357 RVA: 0x010F430B File Offset: 0x010F250B
+		// Token: 0x0603AC71 RID: 240753 RVA: 0x0109E5D3 File Offset: 0x0109C7D3
 		private void OnPhaseBFinished(string sequenceName)
 		{
 			if (this.State != QteHourglassView.EHourglassState.WaitPhaseB)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			}
 		}
 
-		// Token: 0x06044B0E RID: 281358 RVA: 0x010F432C File Offset: 0x010F252C
+		// Token: 0x0603AC72 RID: 240754 RVA: 0x0109E5F4 File Offset: 0x0109C7F4
 		private void TryAutoStartCurrentQte()
 		{
 			if (!this.AutoStartQte)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			this.TryStartCurrentQte();
 		}
 
-		// Token: 0x06044B0F RID: 281359 RVA: 0x010F4340 File Offset: 0x010F2540
+		// Token: 0x0603AC73 RID: 240755 RVA: 0x0109E608 File Offset: 0x0109C808
 		private void OnCommonQteEnd(int? handleId)
 		{
 			if (this.AutoStartQte || this.IsFinishing || handleId == null)
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			this.NotifyCommonQteCompleted(this.CreateCompletedQteInfo(commonQteContextBase));
 		}
 
-		// Token: 0x06044B10 RID: 281360 RVA: 0x010F4394 File Offset: 0x010F2594
+		// Token: 0x0603AC74 RID: 240756 RVA: 0x0109E65C File Offset: 0x0109C85C
 		public void NotifyCommonQteCompleted(IQteHourglassCompletedQteInfo completedInfo)
 		{
 			if (this.AutoStartQte || this.IsFinishing || this.CompletedQteHandleIds.Contains(completedInfo.HandleId))
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			this.TryConsumeCompletedCurrentQte();
 		}
 
-		// Token: 0x06044B11 RID: 281361 RVA: 0x010F43F9 File Offset: 0x010F25F9
+		// Token: 0x0603AC75 RID: 240757 RVA: 0x0109E6C1 File Offset: 0x0109C8C1
 		private void OnPhaseCFinished(string sequenceName)
 		{
 			if (this.State != QteHourglassView.EHourglassState.WaitPhaseC || this.IsFinishing)
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06044B12 RID: 281362 RVA: 0x010F442C File Offset: 0x010F262C
+		// Token: 0x0603AC76 RID: 240758 RVA: 0x0109E6F4 File Offset: 0x0109C8F4
 		private void TryStartCurrentQte()
 		{
 			if (this.IsFinishing)
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			this.ActiveQteHandleId = commonQteContextBase.HandleId;
 		}
 
-		// Token: 0x06044B13 RID: 281363 RVA: 0x010F44F4 File Offset: 0x010F26F4
+		// Token: 0x0603AC77 RID: 240759 RVA: 0x0109E7BC File Offset: 0x0109C9BC
 		private int GetCurrentQteIndex()
 		{
 			switch (this.State)
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			return -1;
 		}
 
-		// Token: 0x06044B14 RID: 281364 RVA: 0x010F4530 File Offset: 0x010F2730
+		// Token: 0x0603AC78 RID: 240760 RVA: 0x0109E7F8 File Offset: 0x0109C9F8
 		private int GetEarliestReceivableQteIndex()
 		{
 			switch (this.State)
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			}
 		}
 
-		// Token: 0x06044B15 RID: 281365 RVA: 0x010F456C File Offset: 0x010F276C
+		// Token: 0x0603AC79 RID: 240761 RVA: 0x0109E834 File Offset: 0x0109CA34
 		private int GetReceivableQteIndex(int qteId)
 		{
 			int currentQteIndex = this.GetCurrentQteIndex();
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			return -1;
 		}
 
-		// Token: 0x06044B16 RID: 281366 RVA: 0x010F45F8 File Offset: 0x010F27F8
+		// Token: 0x0603AC7A RID: 240762 RVA: 0x0109E8C0 File Offset: 0x0109CAC0
 		private IQteHourglassCompletedQteInfo CreateCompletedQteInfo(CommonQteContextBase context)
 		{
 			return new QteHourglassCompletedQteInfo
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			};
 		}
 
-		// Token: 0x06044B17 RID: 281367 RVA: 0x010F4648 File Offset: 0x010F2848
+		// Token: 0x0603AC7B RID: 240763 RVA: 0x0109E910 File Offset: 0x0109CB10
 		private bool TryConsumeCompletedCurrentQte()
 		{
 			if (this.IsFinishing)
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			return true;
 		}
 
-		// Token: 0x06044B18 RID: 281368 RVA: 0x010F468C File Offset: 0x010F288C
+		// Token: 0x0603AC7C RID: 240764 RVA: 0x0109E954 File Offset: 0x0109CB54
 		[NullableContext(2)]
 		private void HandleQteSuccess(IQteHourglassCompletedQteInfo completedInfo)
 		{
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			}
 		}
 
-		// Token: 0x06044B19 RID: 281369 RVA: 0x010F4790 File Offset: 0x010F2990
+		// Token: 0x0603AC7D RID: 240765 RVA: 0x0109EA58 File Offset: 0x0109CC58
 		private void CleanupRuntimeState()
 		{
 			this.ResetTrailMove();
@@ -415,7 +415,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			this.CompletedQteHandleIds.Clear();
 		}
 
-		// Token: 0x06044B1A RID: 281370 RVA: 0x010F47EC File Offset: 0x010F29EC
+		// Token: 0x0603AC7E RID: 240766 RVA: 0x0109EAB4 File Offset: 0x0109CCB4
 		private void StartTrailMove([Nullable(2)] Vector startPos, string phaseSequence, IQteHourglassConfig qteConfig)
 		{
 			this.PendingPhaseSequence = phaseSequence;
@@ -439,7 +439,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			this.TrailItem.SetUIActive(true);
 		}
 
-		// Token: 0x06044B1B RID: 281371 RVA: 0x010F48DC File Offset: 0x010F2ADC
+		// Token: 0x0603AC7F RID: 240767 RVA: 0x0109EBA4 File Offset: 0x0109CDA4
 		private void PlayPendingPhaseSequence()
 		{
 			string pendingPhaseSequence = this.PendingPhaseSequence;
@@ -451,7 +451,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			base.PlayOrReplaySequence(pendingPhaseSequence, false, null);
 		}
 
-		// Token: 0x06044B1C RID: 281372 RVA: 0x010F4914 File Offset: 0x010F2B14
+		// Token: 0x0603AC80 RID: 240768 RVA: 0x0109EBDC File Offset: 0x0109CDDC
 		private void ResetTrailMove()
 		{
 			this.IsTrailMoving = false;
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			trailItem.SetUIActive(false);
 		}
 
-		// Token: 0x06044B1D RID: 281373 RVA: 0x010F4964 File Offset: 0x010F2B64
+		// Token: 0x0603AC81 RID: 240769 RVA: 0x0109EC2C File Offset: 0x0109CE2C
 		private UniTask PreloadTrailCurves()
 		{
 			QteHourglassView.<PreloadTrailCurves>d__51 <PreloadTrailCurves>d__;
@@ -479,7 +479,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			return <PreloadTrailCurves>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044B1E RID: 281374 RVA: 0x010F49A7 File Offset: 0x010F2BA7
+		// Token: 0x0603AC82 RID: 240770 RVA: 0x0109EC6F File Offset: 0x0109CE6F
 		private string GetTrailCurvePath([Nullable(2)] string curvePath, string defaultPath)
 		{
 			if (!StringUtils.IsEmpty(curvePath))
@@ -489,7 +489,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			return defaultPath;
 		}
 
-		// Token: 0x06044B1F RID: 281375 RVA: 0x010F49B4 File Offset: 0x010F2BB4
+		// Token: 0x0603AC83 RID: 240771 RVA: 0x0109EC7C File Offset: 0x0109CE7C
 		[return: Nullable(2)]
 		private FloatCurve GetLoadedTrailCurve(string curvePath)
 		{
@@ -501,7 +501,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			return result;
 		}
 
-		// Token: 0x06044B20 RID: 281376 RVA: 0x010F49E0 File Offset: 0x010F2BE0
+		// Token: 0x0603AC84 RID: 240772 RVA: 0x0109ECA8 File Offset: 0x0109CEA8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -518,7 +518,7 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			return <LoadTrailCurve>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044B21 RID: 281377 RVA: 0x010F4A2C File Offset: 0x010F2C2C
+		// Token: 0x0603AC85 RID: 240773 RVA: 0x0109ECF4 File Offset: 0x0109CEF4
 		[return: Nullable(2)]
 		private Vector GetQteStartPos(CommonQteContextBase context)
 		{
@@ -536,28 +536,28 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 			return Vector.Create(uuiitem.GetUIWorldPosition());
 		}
 
-		// Token: 0x04023BB2 RID: 146354
+		// Token: 0x0401EE54 RID: 126548
 		private const float TIME = 1000f;
 
-		// Token: 0x04023BB3 RID: 146355
+		// Token: 0x0401EE55 RID: 126549
 		private const int TOTAL_QTE_COUNT = 3;
 
-		// Token: 0x04023BB4 RID: 146356
+		// Token: 0x0401EE56 RID: 126550
 		private List<IQteHourglassConfig> QteConfigs = new List<IQteHourglassConfig>();
 
-		// Token: 0x04023BB5 RID: 146357
+		// Token: 0x0401EE57 RID: 126551
 		private int ActiveQteHandleId;
 
-		// Token: 0x04023BB6 RID: 146358
+		// Token: 0x0401EE58 RID: 126552
 		private QteHourglassView.EHourglassState State;
 
-		// Token: 0x04023BB7 RID: 146359
+		// Token: 0x0401EE59 RID: 126553
 		private bool IsFinishing;
 
-		// Token: 0x04023BB8 RID: 146360
+		// Token: 0x0401EE5A RID: 126554
 		private bool AutoStartQte;
 
-		// Token: 0x04023BB9 RID: 146361
+		// Token: 0x0401EE5B RID: 126555
 		[Nullable(new byte[]
 		{
 			1,
@@ -565,55 +565,55 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 		})]
 		private readonly IQteHourglassCompletedQteInfo[] CompletedQteInfos = new IQteHourglassCompletedQteInfo[3];
 
-		// Token: 0x04023BBA RID: 146362
+		// Token: 0x0401EE5C RID: 126556
 		private readonly HashSet<int> CompletedQteHandleIds = new HashSet<int>();
 
-		// Token: 0x04023BBB RID: 146363
+		// Token: 0x0401EE5D RID: 126557
 		[Nullable(2)]
 		private UUIItem FillItem;
 
-		// Token: 0x04023BBC RID: 146364
+		// Token: 0x0401EE5E RID: 126558
 		[Nullable(2)]
 		private UUIItem TrailItem;
 
-		// Token: 0x04023BBD RID: 146365
+		// Token: 0x0401EE5F RID: 126559
 		[Nullable(2)]
 		private FloatCurve TrailCurveX;
 
-		// Token: 0x04023BBE RID: 146366
+		// Token: 0x0401EE60 RID: 126560
 		[Nullable(2)]
 		private FloatCurve TrailCurveY;
 
-		// Token: 0x04023BBF RID: 146367
+		// Token: 0x0401EE61 RID: 126561
 		private float TrailDuration = 1000f;
 
-		// Token: 0x04023BC0 RID: 146368
+		// Token: 0x0401EE62 RID: 126562
 		private bool IsTrailMoving;
 
-		// Token: 0x04023BC1 RID: 146369
+		// Token: 0x0401EE63 RID: 126563
 		private float TrailElapsedMs;
 
-		// Token: 0x04023BC2 RID: 146370
+		// Token: 0x0401EE64 RID: 126564
 		[Nullable(2)]
 		private Vector TrailStartPos;
 
-		// Token: 0x04023BC3 RID: 146371
+		// Token: 0x0401EE65 RID: 126565
 		private readonly Vector TrailEndPos = Vector.Create();
 
-		// Token: 0x04023BC4 RID: 146372
+		// Token: 0x0401EE66 RID: 126566
 		private readonly Vector TrailPos = Vector.Create();
 
-		// Token: 0x04023BC5 RID: 146373
+		// Token: 0x0401EE67 RID: 126567
 		[Nullable(2)]
 		private string PendingPhaseSequence;
 
-		// Token: 0x04023BC6 RID: 146374
+		// Token: 0x0401EE68 RID: 126568
 		private string DefaultTrailCurveXPath = "";
 
-		// Token: 0x04023BC7 RID: 146375
+		// Token: 0x0401EE69 RID: 126569
 		private string DefaultTrailCurveYPath = "";
 
-		// Token: 0x04023BC8 RID: 146376
+		// Token: 0x0401EE6A RID: 126570
 		[Nullable(new byte[]
 		{
 			1,
@@ -622,51 +622,51 @@ namespace CSharpScript.Game.LevelGamePlay.Hourglass
 		})]
 		private readonly Dictionary<string, FloatCurve> TrailCurveCache = new Dictionary<string, FloatCurve>();
 
-		// Token: 0x0200CCCD RID: 52429
+		// Token: 0x0200B8BD RID: 47293
 		[NullableContext(0)]
 		private enum EComp
 		{
-			// Token: 0x0403DC40 RID: 252992
+			// Token: 0x04039062 RID: 233570
 			Fill,
-			// Token: 0x0403DC41 RID: 252993
+			// Token: 0x04039063 RID: 233571
 			Trail
 		}
 
-		// Token: 0x0200CCCE RID: 52430
+		// Token: 0x0200B8BE RID: 47294
 		[NullableContext(0)]
 		private enum EHourglassState
 		{
-			// Token: 0x0403DC43 RID: 252995
+			// Token: 0x04039065 RID: 233573
 			WaitStart,
-			// Token: 0x0403DC44 RID: 252996
+			// Token: 0x04039066 RID: 233574
 			WaitQte1,
-			// Token: 0x0403DC45 RID: 252997
+			// Token: 0x04039067 RID: 233575
 			WaitPhaseA,
-			// Token: 0x0403DC46 RID: 252998
+			// Token: 0x04039068 RID: 233576
 			WaitQte2,
-			// Token: 0x0403DC47 RID: 252999
+			// Token: 0x04039069 RID: 233577
 			WaitPhaseB,
-			// Token: 0x0403DC48 RID: 253000
+			// Token: 0x0403906A RID: 233578
 			WaitQte3,
-			// Token: 0x0403DC49 RID: 253001
+			// Token: 0x0403906B RID: 233579
 			WaitPhaseC,
-			// Token: 0x0403DC4A RID: 253002
+			// Token: 0x0403906C RID: 233580
 			WaitClose,
-			// Token: 0x0403DC4B RID: 253003
+			// Token: 0x0403906D RID: 233581
 			Ended
 		}
 
-		// Token: 0x0200CCCF RID: 52431
+		// Token: 0x0200B8BF RID: 47295
 		[Nullable(0)]
 		private class EHourglassSequence
 		{
-			// Token: 0x0403DC4C RID: 253004
+			// Token: 0x0403906E RID: 233582
 			public const string PhaseA = "PhaseA";
 
-			// Token: 0x0403DC4D RID: 253005
+			// Token: 0x0403906F RID: 233583
 			public const string PhaseB = "PhaseB";
 
-			// Token: 0x0403DC4E RID: 253006
+			// Token: 0x04039070 RID: 233584
 			public const string PhaseC = "PhaseC";
 		}
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CF3 RID: 27891
+	// Token: 0x0200746E RID: 29806
 	public struct IPlayerHandInHandInitiator : IFlatbufferObject
 	{
-		// Token: 0x1700CFBB RID: 53179
-		// (get) Token: 0x060312E7 RID: 201447 RVA: 0x006AC2F4 File Offset: 0x006AA4F4
+		// Token: 0x1700DAFF RID: 56063
+		// (get) Token: 0x060342DB RID: 213723 RVA: 0x00707824 File Offset: 0x00705A24
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060312E8 RID: 201448 RVA: 0x006AC301 File Offset: 0x006AA501
+		// Token: 0x060342DC RID: 213724 RVA: 0x00707831 File Offset: 0x00705A31
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060312E9 RID: 201449 RVA: 0x006AC308 File Offset: 0x006AA508
+		// Token: 0x060342DD RID: 213725 RVA: 0x00707838 File Offset: 0x00705A38
 		public static IPlayerHandInHandInitiator GetRootAsIPlayerHandInHandInitiator(ByteBuffer _bb)
 		{
 			return IPlayerHandInHandInitiator.GetRootAsIPlayerHandInHandInitiator(_bb, default(IPlayerHandInHandInitiator));
 		}
 
-		// Token: 0x060312EA RID: 201450 RVA: 0x006AC324 File Offset: 0x006AA524
+		// Token: 0x060342DE RID: 213726 RVA: 0x00707854 File Offset: 0x00705A54
 		public static IPlayerHandInHandInitiator GetRootAsIPlayerHandInHandInitiator(ByteBuffer _bb, IPlayerHandInHandInitiator obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060312EB RID: 201451 RVA: 0x006AC341 File Offset: 0x006AA541
+		// Token: 0x060342DF RID: 213727 RVA: 0x00707871 File Offset: 0x00705A71
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060312EC RID: 201452 RVA: 0x006AC350 File Offset: 0x006AA550
+		// Token: 0x060342E0 RID: 213728 RVA: 0x00707880 File Offset: 0x00705A80
 		public IPlayerHandInHandInitiator __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CFBC RID: 53180
-		// (get) Token: 0x060312ED RID: 201453 RVA: 0x006AC360 File Offset: 0x006AA560
+		// Token: 0x1700DB00 RID: 56064
+		// (get) Token: 0x060342E1 RID: 213729 RVA: 0x00707890 File Offset: 0x00705A90
 		public EHandInHandInitiatorType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060312EE RID: 201454 RVA: 0x006AC39C File Offset: 0x006AA59C
+		// Token: 0x060342E2 RID: 213730 RVA: 0x007078CC File Offset: 0x00705ACC
 		public static Offset<IPlayerHandInHandInitiator> CreateIPlayerHandInHandInitiator(FlatBufferBuilder builder, EHandInHandInitiatorType Type = EHandInHandInitiatorType.Player)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlayerHandInHandInitiator.EndIPlayerHandInHandInitiator(builder);
 		}
 
-		// Token: 0x060312EF RID: 201455 RVA: 0x006AC3B2 File Offset: 0x006AA5B2
+		// Token: 0x060342E3 RID: 213731 RVA: 0x007078E2 File Offset: 0x00705AE2
 		public static void StartIPlayerHandInHandInitiator(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060312F0 RID: 201456 RVA: 0x006AC3BB File Offset: 0x006AA5BB
+		// Token: 0x060342E4 RID: 213732 RVA: 0x007078EB File Offset: 0x00705AEB
 		public static void AddType(FlatBufferBuilder builder, EHandInHandInitiatorType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060312F1 RID: 201457 RVA: 0x006AC3C6 File Offset: 0x006AA5C6
+		// Token: 0x060342E5 RID: 213733 RVA: 0x007078F6 File Offset: 0x00705AF6
 		public static Offset<IPlayerHandInHandInitiator> EndIPlayerHandInHandInitiator(FlatBufferBuilder builder)
 		{
 			return new Offset<IPlayerHandInHandInitiator>(builder.EndTable());
 		}
 
-		// Token: 0x060312F2 RID: 201458 RVA: 0x006AC3D4 File Offset: 0x006AA5D4
+		// Token: 0x060342E6 RID: 213734 RVA: 0x00707904 File Offset: 0x00705B04
 		public IPlayerHandInHandInitiatorT UnPack()
 		{
 			IPlayerHandInHandInitiatorT playerHandInHandInitiatorT = new IPlayerHandInHandInitiatorT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return playerHandInHandInitiatorT;
 		}
 
-		// Token: 0x060312F3 RID: 201459 RVA: 0x006AC3EF File Offset: 0x006AA5EF
+		// Token: 0x060342E7 RID: 213735 RVA: 0x0070791F File Offset: 0x00705B1F
 		public void UnPackTo(IPlayerHandInHandInitiatorT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060312F4 RID: 201460 RVA: 0x006AC400 File Offset: 0x006AA600
+		// Token: 0x060342E8 RID: 213736 RVA: 0x00707930 File Offset: 0x00705B30
 		public static Offset<IPlayerHandInHandInitiator> Pack(FlatBufferBuilder builder, IPlayerHandInHandInitiatorT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlayerHandInHandInitiator.CreateIPlayerHandInHandInitiator(builder, _o.Type);
 		}
 
-		// Token: 0x04011671 RID: 71281
+		// Token: 0x040125EB RID: 75243
 		private Table __p;
 	}
 }

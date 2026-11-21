@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002842 RID: 10306
+// Token: 0x02001DBD RID: 7613
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleFavorPreciousItemClassifyData : RoleFavorClassifyDataBase
 {
-	// Token: 0x0601540D RID: 87053 RVA: 0x0055F0D8 File Offset: 0x0055D2D8
+	// Token: 0x06012E0B RID: 77323 RVA: 0x00589E34 File Offset: 0x00588034
 	public RoleFavorPreciousItemClassifyData(string titleTableId, int roleId) : base(titleTableId, roleId)
 	{
 	}
 
-	// Token: 0x0601540E RID: 87054 RVA: 0x0055F0E2 File Offset: 0x0055D2E2
+	// Token: 0x06012E0C RID: 77324 RVA: 0x00589E3E File Offset: 0x0058803E
 	protected override EFavorTabType GetFavorTabType()
 	{
 		return EFavorTabType.PreciousItem;
 	}
 
-	// Token: 0x0601540F RID: 87055 RVA: 0x0055F0E8 File Offset: 0x0055D2E8
+	// Token: 0x06012E0D RID: 77325 RVA: 0x00589E44 File Offset: 0x00588044
 	protected override void InitContentDataList()
 	{
 		this.ContentDataList.Clear();
@@ -36,7 +36,7 @@ public class RoleFavorPreciousItemClassifyData : RoleFavorClassifyDataBase
 		}
 	}
 
-	// Token: 0x06015410 RID: 87056 RVA: 0x0055F142 File Offset: 0x0055D342
+	// Token: 0x06012E0E RID: 77326 RVA: 0x00589E9E File Offset: 0x0058809E
 	private RoleFavorPreciousItemContentData CreatePreciousItemContentData(FavorGoods config)
 	{
 		return new RoleFavorPreciousItemContentData(this.RoleId, config);

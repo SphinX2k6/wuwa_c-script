@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x0200594B RID: 22859
+	// Token: 0x02004924 RID: 18724
 	public class HonamiStoryTipsBuffInfo : IHonamiStoryTipsBuffInfo
 	{
-		// Token: 0x17008B16 RID: 35606
-		// (get) Token: 0x0603A040 RID: 237632 RVA: 0x00DCA654 File Offset: 0x00DC8854
-		// (set) Token: 0x0603A041 RID: 237633 RVA: 0x00DCA65C File Offset: 0x00DC885C
+		// Token: 0x17005EE2 RID: 24290
+		// (get) Token: 0x0602EF63 RID: 192355 RVA: 0x00D19908 File Offset: 0x00D17B08
+		// (set) Token: 0x0602EF64 RID: 192356 RVA: 0x00D19910 File Offset: 0x00D17B10
 		public int BuffId { get; set; }
 
-		// Token: 0x17008B17 RID: 35607
-		// (get) Token: 0x0603A042 RID: 237634 RVA: 0x00DCA665 File Offset: 0x00DC8865
-		// (set) Token: 0x0603A043 RID: 237635 RVA: 0x00DCA66D File Offset: 0x00DC886D
+		// Token: 0x17005EE3 RID: 24291
+		// (get) Token: 0x0602EF65 RID: 192357 RVA: 0x00D19919 File Offset: 0x00D17B19
+		// (set) Token: 0x0602EF66 RID: 192358 RVA: 0x00D19921 File Offset: 0x00D17B21
 		public int? TagId { get; set; }
 
-		// Token: 0x17008B18 RID: 35608
-		// (get) Token: 0x0603A044 RID: 237636 RVA: 0x00DCA676 File Offset: 0x00DC8876
-		// (set) Token: 0x0603A045 RID: 237637 RVA: 0x00DCA67E File Offset: 0x00DC887E
+		// Token: 0x17005EE4 RID: 24292
+		// (get) Token: 0x0602EF67 RID: 192359 RVA: 0x00D1992A File Offset: 0x00D17B2A
+		// (set) Token: 0x0602EF68 RID: 192360 RVA: 0x00D19932 File Offset: 0x00D17B32
 		public int? RoleId { get; set; }
 
-		// Token: 0x17008B19 RID: 35609
-		// (get) Token: 0x0603A046 RID: 237638 RVA: 0x00DCA687 File Offset: 0x00DC8887
-		// (set) Token: 0x0603A047 RID: 237639 RVA: 0x00DCA68F File Offset: 0x00DC888F
+		// Token: 0x17005EE5 RID: 24293
+		// (get) Token: 0x0602EF69 RID: 192361 RVA: 0x00D1993B File Offset: 0x00D17B3B
+		// (set) Token: 0x0602EF6A RID: 192362 RVA: 0x00D19943 File Offset: 0x00D17B43
 		public bool FromTeamView { get; set; }
 	}
 }

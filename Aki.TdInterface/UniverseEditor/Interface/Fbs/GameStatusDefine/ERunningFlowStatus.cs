@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 {
-	// Token: 0x020046E6 RID: 18150
+	// Token: 0x02004B4E RID: 19278
 	public enum ERunningFlowStatus : byte
 	{
-		// Token: 0x0400C971 RID: 51569
+		// Token: 0x0400D3A0 RID: 54176
 		Inactive,
-		// Token: 0x0400C972 RID: 51570
+		// Token: 0x0400D3A1 RID: 54177
 		Running,
-		// Token: 0x0400C973 RID: 51571
+		// Token: 0x0400D3A2 RID: 54178
 		Completed,
-		// Token: 0x0400C974 RID: 51572
+		// Token: 0x0400D3A3 RID: 54179
 		Error
 	}
 }

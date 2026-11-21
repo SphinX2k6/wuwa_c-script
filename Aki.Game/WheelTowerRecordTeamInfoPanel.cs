@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015A7 RID: 5543
+// Token: 0x02000A5F RID: 2655
 public class WheelTowerRecordTeamInfoPanel : UiPanelBase
 {
-	// Token: 0x06009D9E RID: 40350 RVA: 0x0022390C File Offset: 0x00221B0C
+	// Token: 0x0600717C RID: 29052 RVA: 0x0022D6BC File Offset: 0x0022B8BC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -24,14 +24,14 @@ public class WheelTowerRecordTeamInfoPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D9F RID: 40351 RVA: 0x00223978 File Offset: 0x00221B78
+	// Token: 0x0600717D RID: 29053 RVA: 0x0022D728 File Offset: 0x0022B928
 	protected override void OnStart()
 	{
 		this.RoleLayout = new GenericLayout<WheelTowerRecordRoleGridItem, RoleDataWithBranch>(base.GetHorizontalLayout(0), new Func<WheelTowerRecordRoleGridItem>(this.CreateRoleItem), null, false, true);
 		this.BuffLayout = new GenericLayout<WheelTowerBuffGridItem, int>(base.GetHorizontalLayout(2), () => new WheelTowerBuffGridItem(), null, false, true);
 	}
 
-	// Token: 0x06009DA0 RID: 40352 RVA: 0x002239DC File Offset: 0x00221BDC
+	// Token: 0x0600717E RID: 29054 RVA: 0x0022D78C File Offset: 0x0022B98C
 	public void Refresh()
 	{
 		WheelTowerModel instance = WheelTowerModel.Instance;
@@ -55,14 +55,14 @@ public class WheelTowerRecordTeamInfoPanel : UiPanelBase
 		buffLayout.RefreshByData(instance.GetRoundSelectBuffList(instance.SelectedRound), null, false);
 	}
 
-	// Token: 0x06009DA1 RID: 40353 RVA: 0x00223AA0 File Offset: 0x00221CA0
+	// Token: 0x0600717F RID: 29055 RVA: 0x0022D850 File Offset: 0x0022BA50
 	[NullableContext(1)]
 	private WheelTowerRecordRoleGridItem CreateRoleItem()
 	{
 		return new WheelTowerRecordRoleGridItem();
 	}
 
-	// Token: 0x0400458B RID: 17803
+	// Token: 0x04004631 RID: 17969
 	[Nullable(new byte[]
 	{
 		2,
@@ -71,7 +71,7 @@ public class WheelTowerRecordTeamInfoPanel : UiPanelBase
 	})]
 	private GenericLayout<WheelTowerRecordRoleGridItem, RoleDataWithBranch> RoleLayout;
 
-	// Token: 0x0400458C RID: 17804
+	// Token: 0x04004632 RID: 17970
 	[Nullable(new byte[]
 	{
 		2,

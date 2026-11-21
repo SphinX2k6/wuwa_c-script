@@ -13,18 +13,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006430 RID: 25648
+	// Token: 0x020053AE RID: 21422
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MotorFightTalentTreeView : UiViewBase
 	{
-		// Token: 0x060407CB RID: 264139 RVA: 0x00F9B6A2 File Offset: 0x00F998A2
+		// Token: 0x0603548C RID: 218252 RVA: 0x00EE2642 File Offset: 0x00EE0842
 		[NullableContext(1)]
 		public MotorFightTalentTreeView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060407CC RID: 264140 RVA: 0x00F9B6B8 File Offset: 0x00F998B8
+		// Token: 0x0603548D RID: 218253 RVA: 0x00EE2658 File Offset: 0x00EE0858
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060407CD RID: 264141 RVA: 0x00F9B850 File Offset: 0x00F99A50
+		// Token: 0x0603548E RID: 218254 RVA: 0x00EE27F0 File Offset: 0x00EE09F0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorFightTalentTreeView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060407CE RID: 264142 RVA: 0x00F9B894 File Offset: 0x00F99A94
+		// Token: 0x0603548F RID: 218255 RVA: 0x00EE2834 File Offset: 0x00EE0A34
 		private void RefreshDetailPanel()
 		{
 			this.SetSpriteByPath(this.TalentData.Icon, base.GetSprite(3), false, null, null);
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			lockPanel2.SetTextByTextId(textId, Array.Empty<string>());
 		}
 
-		// Token: 0x060407CF RID: 264143 RVA: 0x00F9BA2C File Offset: 0x00F99C2C
+		// Token: 0x06035490 RID: 218256 RVA: 0x00EE29CC File Offset: 0x00EE0BCC
 		[NullableContext(1)]
 		private void OnSelectTalentNode(MotorFightTalentNodeItem talentNode)
 		{
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			base.PlayOrReplaySequence("Switch", false, null);
 		}
 
-		// Token: 0x060407D0 RID: 264144 RVA: 0x00F9BA9D File Offset: 0x00F99C9D
+		// Token: 0x06035491 RID: 218257 RVA: 0x00EE2A3D File Offset: 0x00EE0C3D
 		[NullableContext(1)]
 		private MotorFightTalentGridPanel CreateTalentGridPanel()
 		{
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			};
 		}
 
-		// Token: 0x060407D1 RID: 264145 RVA: 0x00F9BAB8 File Offset: 0x00F99CB8
+		// Token: 0x06035492 RID: 218258 RVA: 0x00EE2A58 File Offset: 0x00EE0C58
 		private void OnConfirmBtnClick(int _)
 		{
 			if (this.ActivityData.GetTalentCoinNum() < this.CurSelectNode.Data.Cost)
@@ -151,50 +151,52 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 				{
 					scrollView.RefreshByData(this.TalentTreeList, null, false);
 				}
-				LevelUpSuccessEffectData levelUpSuccessEffectData = new LevelUpSuccessEffectData();
-				levelUpSuccessEffectData.Title = "MotorFightGame_TechTreeUnlock_01";
-				List<SingleText> list = new List<SingleText>();
-				SingleText singleText = new SingleText();
-				singleText.TextId = this.TalentData.Desc;
-				singleText.Params = (from x in this.TalentData.DescParams
-				select x.ToString()).ToArray<string>();
-				list.Add(singleText);
-				levelUpSuccessEffectData.TextList = list;
-				LevelUpSuccessEffectData data = levelUpSuccessEffectData;
+				LevelUpSuccessEffectData data = new LevelUpSuccessEffectData
+				{
+					Title = "MotorFightGame_TechTreeUnlock_01",
+					TextList = new List<SingleText>
+					{
+						new SingleText
+						{
+							TextId = this.TalentData.Desc,
+							Params = this.TalentData.DescParams.ToArray<string>()
+						}
+					}
+				};
 				RoleLevelUpSuccessController.Instance.OpenSuccessEffectView(data, null);
 			});
 		}
 
-		// Token: 0x060407D2 RID: 264146 RVA: 0x00F9BB43 File Offset: 0x00F99D43
+		// Token: 0x06035493 RID: 218259 RVA: 0x00EE2AE3 File Offset: 0x00EE0CE3
 		private void OnCloseBtnClick()
 		{
 			this.ActivityData.SelectedTalentNodeId = 0;
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04021861 RID: 137313
+		// Token: 0x0401C190 RID: 115088
 		private MotorFightActivityData ActivityData;
 
-		// Token: 0x04021862 RID: 137314
+		// Token: 0x0401C191 RID: 115089
 		private MotorFightTalentData TalentData;
 
-		// Token: 0x04021863 RID: 137315
+		// Token: 0x0401C192 RID: 115090
 		[Nullable(1)]
 		private List<List<MotorFightTalentData>> TalentTreeList = new List<List<MotorFightTalentData>>();
 
-		// Token: 0x04021864 RID: 137316
+		// Token: 0x0401C193 RID: 115091
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021865 RID: 137317
+		// Token: 0x0401C194 RID: 115092
 		private ButtonItem ConfirmBtn;
 
-		// Token: 0x04021866 RID: 137318
+		// Token: 0x0401C195 RID: 115093
 		private FunctionalPanelConditionLock LockPanel;
 
-		// Token: 0x04021867 RID: 137319
+		// Token: 0x0401C196 RID: 115094
 		public MotorFightTalentNodeItem CurSelectNode;
 
-		// Token: 0x04021868 RID: 137320
+		// Token: 0x0401C197 RID: 115095
 		[Nullable(new byte[]
 		{
 			2,
@@ -204,41 +206,41 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 		})]
 		public GenericScrollViewNew<MotorFightTalentGridPanel, List<MotorFightTalentData>> ScrollView;
 
-		// Token: 0x0200C670 RID: 50800
+		// Token: 0x0200B057 RID: 45143
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BE96 RID: 245398
+			// Token: 0x040367F3 RID: 223219
 			public const int ItemCaption = 0;
 
-			// Token: 0x0403BE97 RID: 245399
+			// Token: 0x040367F4 RID: 223220
 			public const int ScrollViewLayout = 1;
 
-			// Token: 0x0403BE98 RID: 245400
+			// Token: 0x040367F5 RID: 223221
 			public const int ItemTalentNode = 2;
 
-			// Token: 0x0403BE99 RID: 245401
+			// Token: 0x040367F6 RID: 223222
 			public const int SpriteIcon = 3;
 
-			// Token: 0x0403BE9A RID: 245402
+			// Token: 0x040367F7 RID: 223223
 			public const int TextDesc = 4;
 
-			// Token: 0x0403BE9B RID: 245403
+			// Token: 0x040367F8 RID: 223224
 			public const int ItemConfirmBtn = 5;
 
-			// Token: 0x0403BE9C RID: 245404
+			// Token: 0x040367F9 RID: 223225
 			public const int TextCostNum = 6;
 
-			// Token: 0x0403BE9D RID: 245405
+			// Token: 0x040367FA RID: 223226
 			public const int TextureCostIcon = 7;
 
-			// Token: 0x0403BE9E RID: 245406
+			// Token: 0x040367FB RID: 223227
 			public const int ItemLockPanel = 8;
 
-			// Token: 0x0403BE9F RID: 245407
+			// Token: 0x040367FC RID: 223228
 			public const int ItemUnlockPanel = 9;
 
-			// Token: 0x0403BEA0 RID: 245408
+			// Token: 0x040367FD RID: 223229
 			public const int TextTalentName = 10;
 		}
 	}

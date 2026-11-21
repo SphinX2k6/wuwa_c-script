@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200736D RID: 29549
+	// Token: 0x02007B4E RID: 31566
 	public enum ITeammateTeleportConfig_Union : byte
 	{
-		// Token: 0x0401217A RID: 74106
+		// Token: 0x04013189 RID: 78217
 		NONE,
-		// Token: 0x0401217B RID: 74107
+		// Token: 0x0401318A RID: 78218
 		ITeammateTeleportConfig,
-		// Token: 0x0401217C RID: 74108
+		// Token: 0x0401318B RID: 78219
 		ITelePortAfterTimeOut
 	}
 }

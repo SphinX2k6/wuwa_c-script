@@ -13,14 +13,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E89 RID: 28297
+	// Token: 0x0200600A RID: 24586
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlayerElementalCasketComponent : EntityComponent
 	{
-		// Token: 0x17009A52 RID: 39506
-		// (get) Token: 0x06044F44 RID: 282436 RVA: 0x01109CF8 File Offset: 0x01107EF8
-		// (set) Token: 0x06044F45 RID: 282437 RVA: 0x01109D00 File Offset: 0x01107F00
+		// Token: 0x17006F87 RID: 28551
+		// (get) Token: 0x0603B0F4 RID: 241908 RVA: 0x010B4280 File Offset: 0x010B2480
+		// (set) Token: 0x0603B0F5 RID: 241909 RVA: 0x010B4288 File Offset: 0x010B2488
 		public bool FieldOpened
 		{
 			get
@@ -37,9 +37,9 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x17009A53 RID: 39507
-		// (get) Token: 0x06044F46 RID: 282438 RVA: 0x01109D14 File Offset: 0x01107F14
-		// (set) Token: 0x06044F47 RID: 282439 RVA: 0x01109D1C File Offset: 0x01107F1C
+		// Token: 0x17006F88 RID: 28552
+		// (get) Token: 0x0603B0F6 RID: 241910 RVA: 0x010B429C File Offset: 0x010B249C
+		// (set) Token: 0x0603B0F7 RID: 241911 RVA: 0x010B42A4 File Offset: 0x010B24A4
 		public EPlayerElementalCoreState ElementalCoreState
 		{
 			get
@@ -58,8 +58,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x17009A54 RID: 39508
-		// (get) Token: 0x06044F48 RID: 282440 RVA: 0x01109D44 File Offset: 0x01107F44
+		// Token: 0x17006F89 RID: 28553
+		// (get) Token: 0x0603B0F8 RID: 241912 RVA: 0x010B42CC File Offset: 0x010B24CC
 		[Nullable(1)]
 		private LevelEntityAbilityContainer AbilityContainer
 		{
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F49 RID: 282441 RVA: 0x01109D65 File Offset: 0x01107F65
+		// Token: 0x0603B0F9 RID: 241913 RVA: 0x010B42ED File Offset: 0x010B24ED
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			if (base.Entity.GetComponent<CreatureDataComponent>().GetPlayerId() != CreatureModel.Instance.GetPlayerId())
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044F4A RID: 282442 RVA: 0x01109D8C File Offset: 0x01107F8C
+		// Token: 0x0603B0FA RID: 241914 RVA: 0x010B4314 File Offset: 0x010B2514
 		protected override void OnPostActivate()
 		{
 			if (base.Entity.GetComponent<CreatureDataComponent>().GetPlayerId() != CreatureModel.Instance.GetPlayerId())
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			ElementalFieldVolumeController.Instance.RegisterProvider(base.Entity.Id, this.VolumeProvider);
 		}
 
-		// Token: 0x06044F4B RID: 282443 RVA: 0x01109E2A File Offset: 0x0110802A
+		// Token: 0x0603B0FB RID: 241915 RVA: 0x010B43B2 File Offset: 0x010B25B2
 		protected override void OnTick(float deltaMilliseconds)
 		{
 			LevelEntityAbilityContainer internalAbilityContainer = this.InternalAbilityContainer;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			internalAbilityContainer.Tick(deltaMilliseconds);
 		}
 
-		// Token: 0x06044F4C RID: 282444 RVA: 0x01109E3D File Offset: 0x0110803D
+		// Token: 0x0603B0FC RID: 241916 RVA: 0x010B43C5 File Offset: 0x010B25C5
 		protected override void OnAfterTick(float deltaMilliseconds)
 		{
 			LevelEntityAbilityContainer internalAbilityContainer = this.InternalAbilityContainer;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			internalAbilityContainer.AfterTick(deltaMilliseconds);
 		}
 
-		// Token: 0x06044F4D RID: 282445 RVA: 0x01109E50 File Offset: 0x01108050
+		// Token: 0x0603B0FD RID: 241917 RVA: 0x010B43D8 File Offset: 0x010B25D8
 		protected override bool OnEnd()
 		{
 			if (this.VolumeProvider != null)
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044F4E RID: 282446 RVA: 0x01109EB4 File Offset: 0x011080B4
+		// Token: 0x0603B0FE RID: 241918 RVA: 0x010B443C File Offset: 0x010B263C
 		private void DestroyShapes()
 		{
 			UKuroFastCollisionShapeComponent fieldShapeComp = this.FieldShapeComp;
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.HolderActor = null;
 		}
 
-		// Token: 0x06044F4F RID: 282447 RVA: 0x01109F58 File Offset: 0x01108158
+		// Token: 0x0603B0FF RID: 241919 RVA: 0x010B44E0 File Offset: 0x010B26E0
 		public void RefreshPlayerFieldType()
 		{
 			EElementalType? playerFieldElementalType = ElementalCasketModel.Instance.PlayerFieldElementalType;
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.AddFieldAbility(playerFieldElementalType.Value);
 		}
 
-		// Token: 0x06044F50 RID: 282448 RVA: 0x01109F8D File Offset: 0x0110818D
+		// Token: 0x0603B100 RID: 241920 RVA: 0x010B4515 File Offset: 0x010B2715
 		private void AddFieldAbility(EElementalType type)
 		{
 			this.FieldElementType = new EElementalType?(type);
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			});
 		}
 
-		// Token: 0x06044F51 RID: 282449 RVA: 0x01109FB4 File Offset: 0x011081B4
+		// Token: 0x0603B101 RID: 241921 RVA: 0x010B453C File Offset: 0x010B273C
 		private unsafe void RestorePlayerElementalFieldBlock()
 		{
 			ElementalCasketModel instance = ElementalCasketModel.Instance;
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			abilityContainer.AddAbilities(list);
 		}
 
-		// Token: 0x06044F52 RID: 282450 RVA: 0x0110A008 File Offset: 0x01108208
+		// Token: 0x0603B102 RID: 241922 RVA: 0x010B4590 File Offset: 0x010B2790
 		private void RefreshFieldAbility()
 		{
 			if (this.FieldAbilityInited || this.FieldElementType == null || !this.Config.Loaded || !base.Entity.IsInit)
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RefreshBlockElemental();
 		}
 
-		// Token: 0x06044F53 RID: 282451 RVA: 0x0110A07C File Offset: 0x0110827C
+		// Token: 0x0603B103 RID: 241923 RVA: 0x010B4604 File Offset: 0x010B2804
 		private void RemoveFieldAbility()
 		{
 			if (this.FieldElementType != null)
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F54 RID: 282452 RVA: 0x0110A0DC File Offset: 0x011082DC
+		// Token: 0x0603B104 RID: 241924 RVA: 0x010B4664 File Offset: 0x010B2864
 		public UKuroFastCollisionShapeComponent CreateShape()
 		{
 			AActor aactor = this.EnsureHolderActor();
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return aactor.AddComponentByClass(UKuroFastCollisionShapeComponent.StaticClass(), false, MathUtils.Instance.DefaultTransform, false, default(FName)) as UKuroFastCollisionShapeComponent;
 		}
 
-		// Token: 0x06044F55 RID: 282453 RVA: 0x0110A120 File Offset: 0x01108320
+		// Token: 0x0603B105 RID: 241925 RVA: 0x010B46A8 File Offset: 0x010B28A8
 		private AActor EnsureHolderActor()
 		{
 			AActor holderActor = this.HolderActor;
@@ -299,21 +299,21 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return this.HolderActor;
 		}
 
-		// Token: 0x06044F56 RID: 282454 RVA: 0x0110A181 File Offset: 0x01108381
+		// Token: 0x0603B106 RID: 241926 RVA: 0x010B4709 File Offset: 0x010B2909
 		[NullableContext(1)]
 		public void AddAbilities(List<ELevelEntityAbilityType> types)
 		{
 			this.AbilityContainer.AddAbilities(types);
 		}
 
-		// Token: 0x06044F57 RID: 282455 RVA: 0x0110A190 File Offset: 0x01108390
+		// Token: 0x0603B107 RID: 241927 RVA: 0x010B4718 File Offset: 0x010B2918
 		[NullableContext(1)]
 		public void RemoveAbilities(List<ELevelEntityAbilityType> types)
 		{
 			this.AbilityContainer.RemoveAbilities(types);
 		}
 
-		// Token: 0x06044F58 RID: 282456 RVA: 0x0110A1A0 File Offset: 0x011083A0
+		// Token: 0x0603B108 RID: 241928 RVA: 0x010B4728 File Offset: 0x010B2928
 		[NullableContext(1)]
 		public List<EElementalFieldReactionType> GetCurrentFieldReactions()
 		{
@@ -333,25 +333,25 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return PlayerElementalCasketComponent.defaultFieldReactions;
 		}
 
-		// Token: 0x06044F59 RID: 282457 RVA: 0x0110A1E6 File Offset: 0x011083E6
+		// Token: 0x0603B109 RID: 241929 RVA: 0x010B476E File Offset: 0x010B296E
 		public bool IsCoreBusy()
 		{
 			return this.ElementalCoreState == EPlayerElementalCoreState.Drawing || this.ElementalCoreState == EPlayerElementalCoreState.Returning || this.ElementalCoreState == EPlayerElementalCoreState.Matching || this.ElementalCoreState == EPlayerElementalCoreState.Mismatching;
 		}
 
-		// Token: 0x06044F5A RID: 282458 RVA: 0x0110A20E File Offset: 0x0110840E
+		// Token: 0x0603B10A RID: 241930 RVA: 0x010B4796 File Offset: 0x010B2996
 		public bool IsCoreDrawing()
 		{
 			return this.ElementalCoreState == EPlayerElementalCoreState.Drawing;
 		}
 
-		// Token: 0x06044F5B RID: 282459 RVA: 0x0110A219 File Offset: 0x01108419
+		// Token: 0x0603B10B RID: 241931 RVA: 0x010B47A1 File Offset: 0x010B29A1
 		private bool IsCoreMatching()
 		{
 			return this.ElementalCoreStateInner == EPlayerElementalCoreState.Matching || this.ElementalCoreStateInner == EPlayerElementalCoreState.Matched || this.ElementalCoreStateInner == EPlayerElementalCoreState.Mismatching;
 		}
 
-		// Token: 0x06044F5C RID: 282460 RVA: 0x0110A238 File Offset: 0x01108438
+		// Token: 0x0603B10C RID: 241932 RVA: 0x010B47C0 File Offset: 0x010B29C0
 		public void RefreshElementalCore(EPlayerElementalCoreState initState)
 		{
 			ElementalCoreData playerElementalCoreData = ElementalCasketModel.Instance.PlayerElementalCoreData;
@@ -392,7 +392,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			});
 		}
 
-		// Token: 0x06044F5D RID: 282461 RVA: 0x0110A334 File Offset: 0x01108534
+		// Token: 0x0603B10D RID: 241933 RVA: 0x010B48BC File Offset: 0x010B2ABC
 		public void TryRefreshElementalCorePassively()
 		{
 			ElementalCoreData playerElementalCoreData = ElementalCasketModel.Instance.PlayerElementalCoreData;
@@ -423,7 +423,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}, 60000, false, false);
 		}
 
-		// Token: 0x06044F5E RID: 282462 RVA: 0x0110A3C8 File Offset: 0x011085C8
+		// Token: 0x0603B10E RID: 241934 RVA: 0x010B4950 File Offset: 0x010B2B50
 		[NullableContext(1)]
 		private void RefreshElementalCorePassively(EntityHandle foundation, [Nullable(2)] string overridePath)
 		{
@@ -436,7 +436,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RefreshElementalCore(EPlayerElementalCoreState.Holding);
 		}
 
-		// Token: 0x06044F5F RID: 282463 RVA: 0x0110A40E File Offset: 0x0110860E
+		// Token: 0x0603B10F RID: 241935 RVA: 0x010B4996 File Offset: 0x010B2B96
 		private void CancelPassiveHoldWait()
 		{
 			if (this.PassiveHoldWaitTask != null)
@@ -446,7 +446,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F60 RID: 282464 RVA: 0x0110A42C File Offset: 0x0110862C
+		// Token: 0x0603B110 RID: 241936 RVA: 0x010B49B4 File Offset: 0x010B2BB4
 		public void ResetElementalCore()
 		{
 			if (this.ElementalCoreState == EPlayerElementalCoreState.None)
@@ -479,14 +479,14 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.DestroyElementalCore();
 		}
 
-		// Token: 0x06044F61 RID: 282465 RVA: 0x0110A510 File Offset: 0x01108710
+		// Token: 0x0603B111 RID: 241937 RVA: 0x010B4A98 File Offset: 0x010B2C98
 		public void OnDrawAnimationFinished()
 		{
 			this.ClearAnimatingFoundation();
 			this.BackToHolding();
 		}
 
-		// Token: 0x06044F62 RID: 282466 RVA: 0x0110A520 File Offset: 0x01108720
+		// Token: 0x0603B112 RID: 241938 RVA: 0x010B4AA8 File Offset: 0x010B2CA8
 		private void ClearAnimatingFoundation()
 		{
 			if (this.ElementalCoreState != EPlayerElementalCoreState.Drawing)
@@ -511,7 +511,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			foundationComponent2.SetAnimating(false);
 		}
 
-		// Token: 0x06044F63 RID: 282467 RVA: 0x0110A57A File Offset: 0x0110877A
+		// Token: 0x0603B113 RID: 241939 RVA: 0x010B4B02 File Offset: 0x010B2D02
 		[NullableContext(1)]
 		public void ReturnElementalCore(EntityHandle targetFoundation)
 		{
@@ -525,7 +525,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			foundationComponent.SetAnimating(true);
 		}
 
-		// Token: 0x06044F64 RID: 282468 RVA: 0x0110A59C File Offset: 0x0110879C
+		// Token: 0x0603B114 RID: 241940 RVA: 0x010B4B24 File Offset: 0x010B2D24
 		public EntityHandle GetCoreFoundationEntityHandle()
 		{
 			ElementalCoreRequest elementalCoreRequest = this.ElementalCoreRequest;
@@ -536,7 +536,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return elementalCoreRequest.Foundation;
 		}
 
-		// Token: 0x06044F65 RID: 282469 RVA: 0x0110A5B0 File Offset: 0x011087B0
+		// Token: 0x0603B115 RID: 241941 RVA: 0x010B4B38 File Offset: 0x010B2D38
 		public FTransformDouble? GetLandedFoundationCoreTransform()
 		{
 			SceneItemElementalCoreFoundationComponent foundationComponent = this.GetFoundationComponent(this.LandedFoundation);
@@ -547,7 +547,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return foundationComponent.GetCoreTransform();
 		}
 
-		// Token: 0x06044F66 RID: 282470 RVA: 0x0110A5DC File Offset: 0x011087DC
+		// Token: 0x0603B116 RID: 241942 RVA: 0x010B4B64 File Offset: 0x010B2D64
 		public void DestroyElementalCore()
 		{
 			this.CancelPassiveHoldWait();
@@ -567,7 +567,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.ElementalCoreState = EPlayerElementalCoreState.None;
 		}
 
-		// Token: 0x06044F67 RID: 282471 RVA: 0x0110A657 File Offset: 0x01108857
+		// Token: 0x0603B117 RID: 241943 RVA: 0x010B4BDF File Offset: 0x010B2DDF
 		private SceneItemElementalCoreFoundationComponent GetFoundationComponent(EntityHandle handle)
 		{
 			if (handle == null || !handle.IsInit)
@@ -577,13 +577,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return handle.Entity.GetComponent<SceneItemElementalCoreFoundationComponent>();
 		}
 
-		// Token: 0x06044F68 RID: 282472 RVA: 0x0110A671 File Offset: 0x01108871
+		// Token: 0x0603B118 RID: 241944 RVA: 0x010B4BF9 File Offset: 0x010B2DF9
 		public AActor GetElementalCoreActor()
 		{
 			return SceneInteractionManager.Get().GetSceneInteractionMainActor(this.ElementalCoreHandleId);
 		}
 
-		// Token: 0x06044F69 RID: 282473 RVA: 0x0110A684 File Offset: 0x01108884
+		// Token: 0x0603B119 RID: 241945 RVA: 0x010B4C0C File Offset: 0x010B2E0C
 		private void TryCreateElementalCore()
 		{
 			if (this.ElementalCoreState == EPlayerElementalCoreState.None || !base.Entity.IsInit || this.ElementalCoreRequest == null)
@@ -619,7 +619,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.ElementalCoreHandleId = SceneInteractionManager.Get().CreateSceneInteractionLevel(text2, new EKuroSceneInteractionState?(EKuroSceneInteractionState.State1), elementalCoreRequest.Location.ToUeVector(false), elementalCoreRequest.Rotation.ToUeRotator(), new Action(this.OnCoreShow), true, false, 0, 0, null);
 		}
 
-		// Token: 0x06044F6A RID: 282474 RVA: 0x0110A74C File Offset: 0x0110894C
+		// Token: 0x0603B11A RID: 241946 RVA: 0x010B4CD4 File Offset: 0x010B2ED4
 		private void AfterCreateElementalCore()
 		{
 			if (this.ElementalCoreRequest == null)
@@ -642,7 +642,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F6B RID: 282475 RVA: 0x0110A7B4 File Offset: 0x011089B4
+		// Token: 0x0603B11B RID: 241947 RVA: 0x010B4D3C File Offset: 0x010B2F3C
 		private void UpdateCoreVisible(bool visible)
 		{
 			if (this.ElementalCoreHandleId <= 0)
@@ -657,7 +657,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			SceneInteractionManager.Get().ToggleSceneInteractionVisible(this.ElementalCoreHandleId, false, false, new Action(this.OnCoreHide), "");
 		}
 
-		// Token: 0x06044F6C RID: 282476 RVA: 0x0110A815 File Offset: 0x01108A15
+		// Token: 0x0603B11C RID: 241948 RVA: 0x010B4D9D File Offset: 0x010B2F9D
 		private void OnCoreShow()
 		{
 			if (this.ElementalCoreState == EPlayerElementalCoreState.None)
@@ -677,13 +677,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F6D RID: 282477 RVA: 0x0110A851 File Offset: 0x01108A51
+		// Token: 0x0603B11D RID: 241949 RVA: 0x010B4DD9 File Offset: 0x010B2FD9
 		private void OnCoreHide()
 		{
 			this.ElementalCoreVisible = false;
 		}
 
-		// Token: 0x06044F6E RID: 282478 RVA: 0x0110A85A File Offset: 0x01108A5A
+		// Token: 0x0603B11E RID: 241950 RVA: 0x010B4DE2 File Offset: 0x010B2FE2
 		public void OnEnterMatchWell(int wellEntityId)
 		{
 			this.PendingMatchWell = CreatureModel.Instance.GetEntityById(wellEntityId);
@@ -695,7 +695,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.StartMatch(this.PendingMatchWell);
 		}
 
-		// Token: 0x06044F6F RID: 282479 RVA: 0x0110A898 File Offset: 0x01108A98
+		// Token: 0x0603B11F RID: 241951 RVA: 0x010B4E20 File Offset: 0x010B3020
 		public void OnLeaveMatchWell(int wellEntityId)
 		{
 			EntityHandle pendingMatchWell = this.PendingMatchWell;
@@ -719,7 +719,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F70 RID: 282480 RVA: 0x0110A900 File Offset: 0x01108B00
+		// Token: 0x0603B120 RID: 241952 RVA: 0x010B4E88 File Offset: 0x010B3088
 		private void StartMatch(EntityHandle wellHandle)
 		{
 			if (this.IsBlockElemental || !this.ElementalCoreVisible)
@@ -764,7 +764,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F71 RID: 282481 RVA: 0x0110A9A8 File Offset: 0x01108BA8
+		// Token: 0x0603B121 RID: 241953 RVA: 0x010B4F30 File Offset: 0x010B3130
 		public void BackToHolding()
 		{
 			this.ElementalCoreState = EPlayerElementalCoreState.Holding;
@@ -774,7 +774,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F72 RID: 282482 RVA: 0x0110A9C8 File Offset: 0x01108BC8
+		// Token: 0x0603B122 RID: 241954 RVA: 0x010B4F50 File Offset: 0x010B3150
 		private void AddBlockElementalListener()
 		{
 			if (this.BlockElementalListenerAdded)
@@ -790,7 +790,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RefreshCurrentRoleTagsListener();
 		}
 
-		// Token: 0x06044F73 RID: 282483 RVA: 0x0110AA78 File Offset: 0x01108C78
+		// Token: 0x0603B123 RID: 241955 RVA: 0x010B5000 File Offset: 0x010B3200
 		private void RemoveBlockElementalListener()
 		{
 			if (!this.BlockElementalListenerAdded)
@@ -806,7 +806,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RemoveCurrentRoleTagsListener();
 		}
 
-		// Token: 0x06044F74 RID: 282484 RVA: 0x0110AB28 File Offset: 0x01108D28
+		// Token: 0x0603B124 RID: 241956 RVA: 0x010B50B0 File Offset: 0x010B32B0
 		[NullableContext(1)]
 		private void OnPlotNetworkStart(PlotInfo plotInfo)
 		{
@@ -815,7 +815,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RefreshBlockElemental();
 		}
 
-		// Token: 0x06044F75 RID: 282485 RVA: 0x0110AB56 File Offset: 0x01108D56
+		// Token: 0x0603B125 RID: 241957 RVA: 0x010B50DE File Offset: 0x010B32DE
 		[NullableContext(1)]
 		private void OnPlotNetworkEnd(PlotResultInfo plotInfo)
 		{
@@ -823,13 +823,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RefreshBlockElemental();
 		}
 
-		// Token: 0x06044F76 RID: 282486 RVA: 0x0110AB65 File Offset: 0x01108D65
+		// Token: 0x0603B126 RID: 241958 RVA: 0x010B50ED File Offset: 0x010B32ED
 		private void OnBattleStateChanged(bool isInFight)
 		{
 			this.RefreshBlockElemental();
 		}
 
-		// Token: 0x06044F77 RID: 282487 RVA: 0x0110AB6D File Offset: 0x01108D6D
+		// Token: 0x0603B127 RID: 241959 RVA: 0x010B50F5 File Offset: 0x010B32F5
 		private void OnTeamLivingStateChange(bool isMyTeam, ETeamGroupType groupType, ETeamLivingState newState, ETeamLivingState oldState)
 		{
 			if (isMyTeam)
@@ -838,7 +838,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F78 RID: 282488 RVA: 0x0110AB78 File Offset: 0x01108D78
+		// Token: 0x0603B128 RID: 241960 RVA: 0x010B5100 File Offset: 0x010B3300
 		[NullableContext(1)]
 		private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 		{
@@ -846,7 +846,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RefreshBlockElemental();
 		}
 
-		// Token: 0x06044F79 RID: 282489 RVA: 0x0110AB88 File Offset: 0x01108D88
+		// Token: 0x0603B129 RID: 241961 RVA: 0x010B5110 File Offset: 0x010B3310
 		private void RefreshCurrentRoleTagsListener()
 		{
 			this.RemoveCurrentRoleTagsListener();
@@ -888,13 +888,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F7A RID: 282490 RVA: 0x0110ACA4 File Offset: 0x01108EA4
+		// Token: 0x0603B12A RID: 241962 RVA: 0x010B522C File Offset: 0x010B342C
 		private void OnBlockElementalTagChange(int tagId, bool tagExist)
 		{
 			this.RefreshBlockElemental();
 		}
 
-		// Token: 0x06044F7B RID: 282491 RVA: 0x0110ACAC File Offset: 0x01108EAC
+		// Token: 0x0603B12B RID: 241963 RVA: 0x010B5234 File Offset: 0x010B3434
 		private void RemoveCurrentRoleTagsListener()
 		{
 			if (this.CurrentRoleTagListeners == null)
@@ -908,7 +908,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.CurrentRoleTagListeners.Clear();
 		}
 
-		// Token: 0x06044F7C RID: 282492 RVA: 0x0110AD10 File Offset: 0x01108F10
+		// Token: 0x0603B12C RID: 241964 RVA: 0x010B5298 File Offset: 0x010B3498
 		private void RefreshBlockElemental()
 		{
 			bool flag = this.ShouldBlockElemental();
@@ -940,7 +940,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F7D RID: 282493 RVA: 0x0110AD70 File Offset: 0x01108F70
+		// Token: 0x0603B12D RID: 241965 RVA: 0x010B52F8 File Offset: 0x010B34F8
 		private bool ShouldBlockElemental()
 		{
 			if (this.IsBlockInHighLevelPlot)
@@ -982,7 +982,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return result;
 		}
 
-		// Token: 0x06044F7E RID: 282494 RVA: 0x0110AE2C File Offset: 0x0110902C
+		// Token: 0x0603B12E RID: 241966 RVA: 0x010B53B4 File Offset: 0x010B35B4
 		public string GetCoreWhooshAudio()
 		{
 			ElementalCoreRequest elementalCoreRequest = this.ElementalCoreRequest;
@@ -1009,7 +1009,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return valueOrDefault.WhooshEventName;
 		}
 
-		// Token: 0x06044F7F RID: 282495 RVA: 0x0110AE98 File Offset: 0x01109098
+		// Token: 0x0603B12F RID: 241967 RVA: 0x010B5420 File Offset: 0x010B3620
 		public string GetCoreLoopAudio()
 		{
 			ElementalCoreRequest elementalCoreRequest = this.ElementalCoreRequest;
@@ -1036,7 +1036,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return valueOrDefault.LoopEventName;
 		}
 
-		// Token: 0x06044F80 RID: 282496 RVA: 0x0110AF04 File Offset: 0x01109104
+		// Token: 0x0603B130 RID: 241968 RVA: 0x010B548C File Offset: 0x010B368C
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -1045,183 +1045,154 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 				return false;
 			}
 			PlayerElementalCasketComponent playerElementalCasketComponent = (PlayerElementalCasketComponent)componentTemplate;
-			if (base.CanResetComponentProperty("InternalAbilityContainer"))
+			if (playerElementalCasketComponent.InternalAbilityContainer == null)
 			{
-				if (playerElementalCasketComponent.InternalAbilityContainer == null)
-				{
-					this.InternalAbilityContainer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelEntityAbilityContainer>(this.InternalAbilityContainer), "InternalAbilityContainer"))
-				{
-					return false;
-				}
+				this.InternalAbilityContainer = null;
 			}
-			if (base.CanResetComponentProperty("Config") && playerElementalCasketComponent.Config != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<PlayerElementalCasketConfig>(this.Config), "Config"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InternalAbilityContainer), "InternalAbilityContainer"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("FieldAbilityInited"))
+			if (playerElementalCasketComponent.Config != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				this.FieldAbilityInited = playerElementalCasketComponent.FieldAbilityInited;
+				return false;
 			}
-			if (base.CanResetComponentProperty("FieldOpenedInner"))
+			this.FieldAbilityInited = playerElementalCasketComponent.FieldAbilityInited;
+			this.FieldOpenedInner = playerElementalCasketComponent.FieldOpenedInner;
+			this.FieldElementType = playerElementalCasketComponent.FieldElementType;
+			if (playerElementalCasketComponent.HolderActor == null)
 			{
-				this.FieldOpenedInner = playerElementalCasketComponent.FieldOpenedInner;
+				this.HolderActor = null;
 			}
-			if (base.CanResetComponentProperty("FieldElementType"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HolderActor), "HolderActor"))
 			{
-				this.FieldElementType = playerElementalCasketComponent.FieldElementType;
+				return false;
 			}
-			if (base.CanResetComponentProperty("HolderActor"))
+			if (playerElementalCasketComponent.FieldShapeComp == null)
 			{
-				if (playerElementalCasketComponent.HolderActor == null)
-				{
-					this.HolderActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.HolderActor), "HolderActor"))
-				{
-					return false;
-				}
+				this.FieldShapeComp = null;
 			}
-			if (base.CanResetComponentProperty("FieldShapeComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FieldShapeComp), "FieldShapeComp"))
 			{
-				if (playerElementalCasketComponent.FieldShapeComp == null)
-				{
-					this.FieldShapeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroFastCollisionShapeComponent>(this.FieldShapeComp), "FieldShapeComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("DetectableShapeComp"))
+			if (playerElementalCasketComponent.DetectableShapeComp == null)
 			{
-				if (playerElementalCasketComponent.DetectableShapeComp == null)
-				{
-					this.DetectableShapeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroFastCollisionShapeComponent>(this.DetectableShapeComp), "DetectableShapeComp"))
-				{
-					return false;
-				}
+				this.DetectableShapeComp = null;
 			}
-			if (base.CanResetComponentProperty("VolumeProvider"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DetectableShapeComp), "DetectableShapeComp"))
 			{
-				if (playerElementalCasketComponent.VolumeProvider == null)
-				{
-					this.VolumeProvider = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ElementalFieldVolumeProvider>(this.VolumeProvider), "VolumeProvider"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ElementalCoreActorCreated"))
+			if (playerElementalCasketComponent.VolumeProvider == null)
 			{
-				this.ElementalCoreActorCreated = playerElementalCasketComponent.ElementalCoreActorCreated;
+				this.VolumeProvider = null;
 			}
-			if (base.CanResetComponentProperty("LandedFoundation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VolumeProvider), "VolumeProvider"))
 			{
-				if (playerElementalCasketComponent.LandedFoundation == null)
-				{
-					this.LandedFoundation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.LandedFoundation), "LandedFoundation"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PassiveHoldWaitTask"))
+			this.ElementalCoreActorCreated = playerElementalCasketComponent.ElementalCoreActorCreated;
+			if (playerElementalCasketComponent.LandedFoundation == null)
 			{
-				if (playerElementalCasketComponent.PassiveHoldWaitTask == null)
-				{
-					this.PassiveHoldWaitTask = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<WaitEntityTask>(this.PassiveHoldWaitTask), "PassiveHoldWaitTask"))
-				{
-					return false;
-				}
+				this.LandedFoundation = null;
 			}
-			if (base.CanResetComponentProperty("ElementalCoreRequest"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LandedFoundation), "LandedFoundation"))
 			{
-				if (playerElementalCasketComponent.ElementalCoreRequest == null)
-				{
-					this.ElementalCoreRequest = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ElementalCoreRequest>(this.ElementalCoreRequest), "ElementalCoreRequest"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ElementalCoreHandleId"))
+			if (playerElementalCasketComponent.PassiveHoldWaitTask == null)
 			{
-				this.ElementalCoreHandleId = playerElementalCasketComponent.ElementalCoreHandleId;
+				this.PassiveHoldWaitTask = null;
 			}
-			if (base.CanResetComponentProperty("ElementalCoreStateInner"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PassiveHoldWaitTask), "PassiveHoldWaitTask"))
 			{
-				this.ElementalCoreStateInner = playerElementalCasketComponent.ElementalCoreStateInner;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ElementalCoreVisible"))
+			if (playerElementalCasketComponent.ElementalCoreRequest == null)
 			{
-				this.ElementalCoreVisible = playerElementalCasketComponent.ElementalCoreVisible;
+				this.ElementalCoreRequest = null;
 			}
-			if (base.CanResetComponentProperty("PendingMatchWell"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ElementalCoreRequest), "ElementalCoreRequest"))
 			{
-				if (playerElementalCasketComponent.PendingMatchWell == null)
-				{
-					this.PendingMatchWell = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.PendingMatchWell), "PendingMatchWell"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("MatchWell"))
+			this.ElementalCoreHandleId = playerElementalCasketComponent.ElementalCoreHandleId;
+			this.ElementalCoreStateInner = playerElementalCasketComponent.ElementalCoreStateInner;
+			this.ElementalCoreVisible = playerElementalCasketComponent.ElementalCoreVisible;
+			if (playerElementalCasketComponent.PendingMatchWell == null)
 			{
-				if (playerElementalCasketComponent.MatchWell == null)
-				{
-					this.MatchWell = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.MatchWell), "MatchWell"))
-				{
-					return false;
-				}
+				this.PendingMatchWell = null;
 			}
-			if (base.CanResetComponentProperty("PendingMismatch"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PendingMatchWell), "PendingMatchWell"))
 			{
-				this.PendingMismatch = playerElementalCasketComponent.PendingMismatch;
+				return false;
 			}
-			if (base.CanResetComponentProperty("PendingHideCore"))
+			if (playerElementalCasketComponent.MatchWell == null)
 			{
-				this.PendingHideCore = playerElementalCasketComponent.PendingHideCore;
+				this.MatchWell = null;
 			}
-			if (base.CanResetComponentProperty("CurrentRoleTagListeners"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MatchWell), "MatchWell"))
 			{
-				if (playerElementalCasketComponent.CurrentRoleTagListeners == null)
-				{
-					this.CurrentRoleTagListeners = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.CurrentRoleTagListeners), "CurrentRoleTagListeners"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("BlockElementalListenerAdded"))
+			this.PendingMismatch = playerElementalCasketComponent.PendingMismatch;
+			this.PendingHideCore = playerElementalCasketComponent.PendingHideCore;
+			if (playerElementalCasketComponent.CurrentRoleTagListeners == null)
 			{
-				this.BlockElementalListenerAdded = playerElementalCasketComponent.BlockElementalListenerAdded;
+				this.CurrentRoleTagListeners = null;
 			}
-			if (base.CanResetComponentProperty("IsBlockInHighLevelPlot"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentRoleTagListeners), "CurrentRoleTagListeners"))
 			{
-				this.IsBlockInHighLevelPlot = playerElementalCasketComponent.IsBlockInHighLevelPlot;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsBlockElemental"))
-			{
-				this.IsBlockElemental = playerElementalCasketComponent.IsBlockElemental;
-			}
+			this.BlockElementalListenerAdded = playerElementalCasketComponent.BlockElementalListenerAdded;
+			this.IsBlockInHighLevelPlot = playerElementalCasketComponent.IsBlockInHighLevelPlot;
+			this.IsBlockElemental = playerElementalCasketComponent.IsBlockElemental;
 			return true;
 		}
 
-		// Token: 0x04023E70 RID: 147056
+		// Token: 0x17006F8A RID: 28554
+		// (get) Token: 0x0603B131 RID: 241969 RVA: 0x010B5737 File Offset: 0x010B3937
+		public override bool NeedPostActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17006F8B RID: 28555
+		// (get) Token: 0x0603B132 RID: 241970 RVA: 0x010B573A File Offset: 0x010B393A
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17006F8C RID: 28556
+		// (get) Token: 0x0603B133 RID: 241971 RVA: 0x010B573D File Offset: 0x010B393D
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17006F8D RID: 28557
+		// (get) Token: 0x0603B134 RID: 241972 RVA: 0x010B5740 File Offset: 0x010B3940
+		public override bool NeedAfterTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401F128 RID: 127272
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly List<ELevelEntityAbilityType> playerElementalFieldAbilities = new List<ELevelEntityAbilityType>
@@ -1233,7 +1204,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			ELevelEntityAbilityType.PlayerElementalFieldRenderMask
 		};
 
-		// Token: 0x04023E71 RID: 147057
+		// Token: 0x0401F129 RID: 127273
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly List<ELevelEntityAbilityType> playerElementalCoreAbilities = new List<ELevelEntityAbilityType>
@@ -1247,7 +1218,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			ELevelEntityAbilityType.PlayerElementalCoreEffect
 		};
 
-		// Token: 0x04023E72 RID: 147058
+		// Token: 0x0401F12A RID: 127274
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly List<EElementalFieldReactionType> waterFieldReactions = new List<EElementalFieldReactionType>
@@ -1256,7 +1227,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			EElementalFieldReactionType.ElementalTag
 		};
 
-		// Token: 0x04023E73 RID: 147059
+		// Token: 0x0401F12B RID: 127275
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly List<EElementalFieldReactionType> woodFieldReactions = new List<EElementalFieldReactionType>
@@ -1265,7 +1236,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			EElementalFieldReactionType.ElementalTag
 		};
 
-		// Token: 0x04023E74 RID: 147060
+		// Token: 0x0401F12C RID: 127276
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly List<EElementalFieldReactionType> defaultFieldReactions = new List<EElementalFieldReactionType>
@@ -1273,68 +1244,68 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			EElementalFieldReactionType.ElementalTag
 		};
 
-		// Token: 0x04023E75 RID: 147061
+		// Token: 0x0401F12D RID: 127277
 		private LevelEntityAbilityContainer InternalAbilityContainer;
 
-		// Token: 0x04023E76 RID: 147062
+		// Token: 0x0401F12E RID: 127278
 		[Nullable(1)]
 		public readonly PlayerElementalCasketConfig Config = new PlayerElementalCasketConfig();
 
-		// Token: 0x04023E77 RID: 147063
+		// Token: 0x0401F12F RID: 127279
 		private bool FieldAbilityInited;
 
-		// Token: 0x04023E78 RID: 147064
+		// Token: 0x0401F130 RID: 127280
 		private bool FieldOpenedInner;
 
-		// Token: 0x04023E79 RID: 147065
+		// Token: 0x0401F131 RID: 127281
 		public EElementalType? FieldElementType;
 
-		// Token: 0x04023E7A RID: 147066
+		// Token: 0x0401F132 RID: 127282
 		private AActor HolderActor;
 
-		// Token: 0x04023E7B RID: 147067
+		// Token: 0x0401F133 RID: 127283
 		public UKuroFastCollisionShapeComponent FieldShapeComp;
 
-		// Token: 0x04023E7C RID: 147068
+		// Token: 0x0401F134 RID: 127284
 		public UKuroFastCollisionShapeComponent DetectableShapeComp;
 
-		// Token: 0x04023E7D RID: 147069
+		// Token: 0x0401F135 RID: 127285
 		private ElementalFieldVolumeProvider VolumeProvider;
 
-		// Token: 0x04023E7E RID: 147070
+		// Token: 0x0401F136 RID: 127286
 		private bool ElementalCoreActorCreated;
 
-		// Token: 0x04023E7F RID: 147071
+		// Token: 0x0401F137 RID: 127287
 		private EntityHandle LandedFoundation;
 
-		// Token: 0x04023E80 RID: 147072
+		// Token: 0x0401F138 RID: 127288
 		private WaitEntityTask PassiveHoldWaitTask;
 
-		// Token: 0x04023E81 RID: 147073
+		// Token: 0x0401F139 RID: 127289
 		private ElementalCoreRequest ElementalCoreRequest;
 
-		// Token: 0x04023E82 RID: 147074
+		// Token: 0x0401F13A RID: 127290
 		public int ElementalCoreHandleId;
 
-		// Token: 0x04023E83 RID: 147075
+		// Token: 0x0401F13B RID: 127291
 		private EPlayerElementalCoreState ElementalCoreStateInner;
 
-		// Token: 0x04023E84 RID: 147076
+		// Token: 0x0401F13C RID: 127292
 		public bool ElementalCoreVisible;
 
-		// Token: 0x04023E85 RID: 147077
+		// Token: 0x0401F13D RID: 127293
 		private EntityHandle PendingMatchWell;
 
-		// Token: 0x04023E86 RID: 147078
+		// Token: 0x0401F13E RID: 127294
 		public EntityHandle MatchWell;
 
-		// Token: 0x04023E87 RID: 147079
+		// Token: 0x0401F13F RID: 127295
 		public bool PendingMismatch;
 
-		// Token: 0x04023E88 RID: 147080
+		// Token: 0x0401F140 RID: 127296
 		private bool PendingHideCore;
 
-		// Token: 0x04023E89 RID: 147081
+		// Token: 0x0401F141 RID: 127297
 		[Nullable(new byte[]
 		{
 			2,
@@ -1342,13 +1313,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 		})]
 		private List<ITagTask> CurrentRoleTagListeners;
 
-		// Token: 0x04023E8A RID: 147082
+		// Token: 0x0401F142 RID: 127298
 		private bool BlockElementalListenerAdded;
 
-		// Token: 0x04023E8B RID: 147083
+		// Token: 0x0401F143 RID: 127299
 		private bool IsBlockInHighLevelPlot;
 
-		// Token: 0x04023E8C RID: 147084
+		// Token: 0x0401F144 RID: 127300
 		public bool IsBlockElemental;
 	}
 }

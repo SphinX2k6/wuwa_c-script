@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CB3 RID: 7347
+// Token: 0x02001175 RID: 4469
 public class KurotatoWavePointItem : UiPanelBase
 {
-	// Token: 0x0600DE04 RID: 56836 RVA: 0x0033E426 File Offset: 0x0033C626
+	// Token: 0x0600B221 RID: 45601 RVA: 0x00349E62 File Offset: 0x00348062
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -15,16 +15,16 @@ public class KurotatoWavePointItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DE05 RID: 56837 RVA: 0x0033E449 File Offset: 0x0033C649
+	// Token: 0x0600B222 RID: 45602 RVA: 0x00349E85 File Offset: 0x00348085
 	public void SetLightVisible(bool visible)
 	{
 		base.GetSprite(0).SetUIActive(visible);
 	}
 
-	// Token: 0x0200829A RID: 33434
+	// Token: 0x02007424 RID: 29732
 	private static class EComponentDefine
 	{
-		// Token: 0x0402A9B2 RID: 174514
+		// Token: 0x04025CDD RID: 154845
 		public const int SpriteLight = 0;
 	}
 }

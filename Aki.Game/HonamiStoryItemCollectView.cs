@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EBB RID: 7867
+// Token: 0x0200137D RID: 4989
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryItemCollectView : UiViewBase
 {
-	// Token: 0x0600F213 RID: 61971 RVA: 0x003A4794 File Offset: 0x003A2994
+	// Token: 0x0600C632 RID: 50738 RVA: 0x003B0294 File Offset: 0x003AE494
 	public HonamiStoryItemCollectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F214 RID: 61972 RVA: 0x003A47A0 File Offset: 0x003A29A0
+	// Token: 0x0600C633 RID: 50739 RVA: 0x003B02A0 File Offset: 0x003AE4A0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -50,7 +50,7 @@ public class HonamiStoryItemCollectView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F215 RID: 61973 RVA: 0x003A4914 File Offset: 0x003A2B14
+	// Token: 0x0600C634 RID: 50740 RVA: 0x003B0414 File Offset: 0x003AE614
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryItemCollectView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ public class HonamiStoryItemCollectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F216 RID: 61974 RVA: 0x003A4957 File Offset: 0x003A2B57
+	// Token: 0x0600C635 RID: 50741 RVA: 0x003B0457 File Offset: 0x003AE657
 	private HonamiStoryItemCollectItemView InitCollectItem()
 	{
 		return new HonamiStoryItemCollectItemView
@@ -71,19 +71,19 @@ public class HonamiStoryItemCollectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600F217 RID: 61975 RVA: 0x003A4982 File Offset: 0x003A2B82
+	// Token: 0x0600C636 RID: 50742 RVA: 0x003B0482 File Offset: 0x003AE682
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnHonamiStoryItemCollectGetReward, new Action(this.RefreshView));
 	}
 
-	// Token: 0x0600F218 RID: 61976 RVA: 0x003A49A0 File Offset: 0x003A2BA0
+	// Token: 0x0600C637 RID: 50743 RVA: 0x003B04A0 File Offset: 0x003AE6A0
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnHonamiStoryItemCollectGetReward, new Action(this.RefreshView));
 	}
 
-	// Token: 0x0600F219 RID: 61977 RVA: 0x003A49C0 File Offset: 0x003A2BC0
+	// Token: 0x0600C638 RID: 50744 RVA: 0x003B04C0 File Offset: 0x003AE6C0
 	private void RefreshView()
 	{
 		this.RefreshProgressTxt();
@@ -93,7 +93,7 @@ public class HonamiStoryItemCollectView : UiViewBase
 		this.OnClickItem(0, sortDataList[0]);
 	}
 
-	// Token: 0x0600F21A RID: 61978 RVA: 0x003A4A08 File Offset: 0x003A2C08
+	// Token: 0x0600C639 RID: 50745 RVA: 0x003B0508 File Offset: 0x003AE708
 	private void RefreshProgressTxt()
 	{
 		string str = this.GetUnLockItemNum().ToString();
@@ -101,7 +101,7 @@ public class HonamiStoryItemCollectView : UiViewBase
 		base.GetText(7).SetText(str + "/" + str2, true);
 	}
 
-	// Token: 0x0600F21B RID: 61979 RVA: 0x003A4A58 File Offset: 0x003A2C58
+	// Token: 0x0600C63A RID: 50746 RVA: 0x003B0558 File Offset: 0x003AE758
 	private int GetUnLockItemNum()
 	{
 		int num = 0;
@@ -118,7 +118,7 @@ public class HonamiStoryItemCollectView : UiViewBase
 		return num;
 	}
 
-	// Token: 0x0600F21C RID: 61980 RVA: 0x003A4AB8 File Offset: 0x003A2CB8
+	// Token: 0x0600C63B RID: 50747 RVA: 0x003B05B8 File Offset: 0x003AE7B8
 	private List<HonamiStoryItemCollectionData> GetSortDataList()
 	{
 		if (this.ActData == null)
@@ -145,7 +145,7 @@ public class HonamiStoryItemCollectView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x0600F21D RID: 61981 RVA: 0x003A4B20 File Offset: 0x003A2D20
+	// Token: 0x0600C63C RID: 50748 RVA: 0x003B0620 File Offset: 0x003AE820
 	private void OnClickItem(int gridIndex, HonamiStoryItemCollectionData data)
 	{
 		this.CurSelectItemData = data;
@@ -168,66 +168,66 @@ public class HonamiStoryItemCollectView : UiViewBase
 		this.RewardBtn.RefreshView(this.CurSelectItemData);
 	}
 
-	// Token: 0x0600F21E RID: 61982 RVA: 0x003A4C51 File Offset: 0x003A2E51
+	// Token: 0x0600C63D RID: 50749 RVA: 0x003B0751 File Offset: 0x003AE951
 	private bool CanToggleChange(int gridIndex)
 	{
 		return gridIndex != this.PnlCollectItemList.GetSelectedIndex();
 	}
 
-	// Token: 0x0600F21F RID: 61983 RVA: 0x003A4C64 File Offset: 0x003A2E64
+	// Token: 0x0600C63E RID: 50750 RVA: 0x003B0764 File Offset: 0x003AE964
 	private void OnClickHelpBtn()
 	{
 		HelpController.Instance.OpenHelpById(442);
 	}
 
-	// Token: 0x0600F220 RID: 61984 RVA: 0x003A4C75 File Offset: 0x003A2E75
+	// Token: 0x0600C63F RID: 50751 RVA: 0x003B0775 File Offset: 0x003AE975
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04006FDA RID: 28634
+	// Token: 0x040070BB RID: 28859
 	[Nullable(2)]
 	private HonamiStoryActivityData ActData;
 
-	// Token: 0x04006FDB RID: 28635
+	// Token: 0x040070BC RID: 28860
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04006FDC RID: 28636
+	// Token: 0x040070BD RID: 28861
 	private GenericScrollViewNew<HonamiStoryItemCollectItemView, HonamiStoryItemCollectionData> PnlCollectItemList;
 
-	// Token: 0x04006FDD RID: 28637
+	// Token: 0x040070BE RID: 28862
 	[Nullable(2)]
 	private HonamiStoryItemCollectionData CurSelectItemData;
 
-	// Token: 0x04006FDE RID: 28638
+	// Token: 0x040070BF RID: 28863
 	[Nullable(2)]
 	private HonamiStoryItemCollectRewardBtn RewardBtn;
 
-	// Token: 0x020084A4 RID: 33956
+	// Token: 0x02007629 RID: 30249
 	[NullableContext(0)]
 	private enum EHonamiStoryItemCollectComponent
 	{
-		// Token: 0x0402B2CB RID: 176843
+		// Token: 0x040265EF RID: 157167
 		SvItemInfo,
-		// Token: 0x0402B2CC RID: 176844
+		// Token: 0x040265F0 RID: 157168
 		TogItem,
-		// Token: 0x0402B2CD RID: 176845
+		// Token: 0x040265F1 RID: 157169
 		PnlTxtTitle,
-		// Token: 0x0402B2CE RID: 176846
+		// Token: 0x040265F2 RID: 157170
 		TxtInfoTitle,
-		// Token: 0x0402B2CF RID: 176847
+		// Token: 0x040265F3 RID: 157171
 		TxtInfo,
-		// Token: 0x0402B2D0 RID: 176848
+		// Token: 0x040265F4 RID: 157172
 		BtnReward,
-		// Token: 0x0402B2D1 RID: 176849
+		// Token: 0x040265F5 RID: 157173
 		ItemCaption,
-		// Token: 0x0402B2D2 RID: 176850
+		// Token: 0x040265F6 RID: 157174
 		TxtProgress,
-		// Token: 0x0402B2D3 RID: 176851
+		// Token: 0x040265F7 RID: 157175
 		ItemLock,
-		// Token: 0x0402B2D4 RID: 176852
+		// Token: 0x040265F8 RID: 157176
 		TexItem
 	}
 }

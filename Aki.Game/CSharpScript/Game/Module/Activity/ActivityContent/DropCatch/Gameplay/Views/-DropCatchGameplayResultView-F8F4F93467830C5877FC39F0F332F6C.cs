@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x02006702 RID: 26370
+	// Token: 0x02005652 RID: 22098
 	internal enum <DropCatchGameplayResultView>F8F4F93467830C5877FC39F0F332F6C61793B96110253BA183E48E5C08E2B4D71__EComponent
 	{
-		// Token: 0x0402250D RID: 140557
+		// Token: 0x0401CD66 RID: 118118
 		TextGameplayName,
-		// Token: 0x0402250E RID: 140558
+		// Token: 0x0401CD67 RID: 118119
 		StarLayout,
-		// Token: 0x0402250F RID: 140559
+		// Token: 0x0401CD68 RID: 118120
 		StarItem,
-		// Token: 0x04022510 RID: 140560
+		// Token: 0x0401CD69 RID: 118121
 		TextScore,
-		// Token: 0x04022511 RID: 140561
+		// Token: 0x0401CD6A RID: 118122
 		DropItemListLayout,
-		// Token: 0x04022512 RID: 140562
+		// Token: 0x0401CD6B RID: 118123
 		DropItemListItem,
-		// Token: 0x04022513 RID: 140563
+		// Token: 0x0401CD6C RID: 118124
 		ButtonBack,
-		// Token: 0x04022514 RID: 140564
+		// Token: 0x0401CD6D RID: 118125
 		ButtonNext,
-		// Token: 0x04022515 RID: 140565
+		// Token: 0x0401CD6E RID: 118126
 		ButtonRestart,
-		// Token: 0x04022516 RID: 140566
+		// Token: 0x0401CD6F RID: 118127
 		RoleUiParent,
-		// Token: 0x04022517 RID: 140567
+		// Token: 0x0401CD70 RID: 118128
 		Role,
-		// Token: 0x04022518 RID: 140568
+		// Token: 0x0401CD71 RID: 118129
 		RoleTwo
 	}
 }

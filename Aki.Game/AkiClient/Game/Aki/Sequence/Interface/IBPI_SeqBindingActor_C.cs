@@ -8,13 +8,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Sequence.Interface
 {
-	// Token: 0x02003A38 RID: 14904
+	// Token: 0x02003078 RID: 12408
 	[UnrealObjectPath("/Game/Aki/Sequence/Interface/BPI_SeqBindingActor.BPI_SeqBindingActor_C")]
 	public interface IBPI_SeqBindingActor_C : IUnrealBlueprintInterface, IUnrealInterface, IUnrealObject
 	{
-		// Token: 0x0601F63F RID: 128575 RVA: 0x008B71A4 File Offset: 0x008B53A4
+		// Token: 0x0601D95D RID: 121181 RVA: 0x008FC09C File Offset: 0x008FA29C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void GetSeqBindingTag(ref FName Tag)
 		{
 			IBPI_SeqBindingActor_C.__GetSeqBindingTag_FunctionParams* ptr = stackalloc IBPI_SeqBindingActor_C.__GetSeqBindingTag_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(IBPI_SeqBindingActor_C.__GetSeqBindingTag_FunctionParams) & -16L;
@@ -24,16 +23,16 @@ namespace AkiClient.Game.Aki.Sequence.Interface
 			Tag = ptr->Tag;
 		}
 
-		// Token: 0x0400F12D RID: 61741
+		// Token: 0x0400F973 RID: 63859
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Sequence/Interface/BPI_SeqBindingActor.BPI_SeqBindingActor_C";
 
-		// Token: 0x02009AD0 RID: 39632
+		// Token: 0x02008D5F RID: 36191
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __GetSeqBindingTag_FunctionParams
 		{
-			// Token: 0x04031076 RID: 200822
+			// Token: 0x0402C8E9 RID: 182505
 			[FieldOffset(0)]
 			public FName Tag;
 		}

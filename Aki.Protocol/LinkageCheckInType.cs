@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015F2 RID: 5618
+	// Token: 0x02001664 RID: 5732
 	public enum LinkageCheckInType
 	{
-		// Token: 0x0400BE9C RID: 48796
+		// Token: 0x0400C390 RID: 50064
 		[OriginalName("NormalCheckIn")]
 		NormalCheckIn,
-		// Token: 0x0400BE9D RID: 48797
+		// Token: 0x0400C391 RID: 50065
 		[OriginalName("KeepCheckIn")]
 		KeepCheckIn
 	}

@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020006A2 RID: 1698
+	// Token: 0x0200068E RID: 1678
 	[NetMessage(EMessageId.GachaUsePoolRequest)]
 	public sealed class GachaUsePoolRequest : IMessage<GachaUsePoolRequest>, IMessage, IEquatable<GachaUsePoolRequest>, IDeepCloneable<GachaUsePoolRequest>, IBufferMessage
 	{
-		// Token: 0x06009B64 RID: 39780 RVA: 0x00176D5C File Offset: 0x00174F5C
+		// Token: 0x06009A0E RID: 39438 RVA: 0x00174328 File Offset: 0x00172528
 		[NullableContext(1)]
 		public static GachaUsePoolRequest Create()
 		{
 			return new GachaUsePoolRequest();
 		}
 
-		// Token: 0x17001F18 RID: 7960
-		// (get) Token: 0x06009B65 RID: 39781 RVA: 0x00176D63 File Offset: 0x00174F63
+		// Token: 0x17001ECE RID: 7886
+		// (get) Token: 0x06009A0F RID: 39439 RVA: 0x0017432F File Offset: 0x0017252F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F19 RID: 7961
-		// (get) Token: 0x06009B66 RID: 39782 RVA: 0x00176D66 File Offset: 0x00174F66
+		// Token: 0x17001ECF RID: 7887
+		// (get) Token: 0x06009A10 RID: 39440 RVA: 0x00174332 File Offset: 0x00172532
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009B67 RID: 39783 RVA: 0x00176D6D File Offset: 0x00174F6D
+		// Token: 0x06009A11 RID: 39441 RVA: 0x00174339 File Offset: 0x00172539
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GachaUsePoolRequest()
 		{
 		}
 
-		// Token: 0x06009B68 RID: 39784 RVA: 0x00176D75 File Offset: 0x00174F75
+		// Token: 0x06009A12 RID: 39442 RVA: 0x00174341 File Offset: 0x00172541
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GachaUsePoolRequest(GachaUsePoolRequest other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06009B69 RID: 39785 RVA: 0x00176DA6 File Offset: 0x00174FA6
+		// Token: 0x06009A13 RID: 39443 RVA: 0x00174372 File Offset: 0x00172572
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GachaUsePoolRequest Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new GachaUsePoolRequest(this);
 		}
 
-		// Token: 0x17001F1A RID: 7962
-		// (get) Token: 0x06009B6A RID: 39786 RVA: 0x00176DAE File Offset: 0x00174FAE
-		// (set) Token: 0x06009B6B RID: 39787 RVA: 0x00176DB6 File Offset: 0x00174FB6
+		// Token: 0x17001ED0 RID: 7888
+		// (get) Token: 0x06009A14 RID: 39444 RVA: 0x0017437A File Offset: 0x0017257A
+		// (set) Token: 0x06009A15 RID: 39445 RVA: 0x00174382 File Offset: 0x00172582
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int GachaId
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F1B RID: 7963
-		// (get) Token: 0x06009B6C RID: 39788 RVA: 0x00176DBF File Offset: 0x00174FBF
-		// (set) Token: 0x06009B6D RID: 39789 RVA: 0x00176DC7 File Offset: 0x00174FC7
+		// Token: 0x17001ED1 RID: 7889
+		// (get) Token: 0x06009A16 RID: 39446 RVA: 0x0017438B File Offset: 0x0017258B
+		// (set) Token: 0x06009A17 RID: 39447 RVA: 0x00174393 File Offset: 0x00172593
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PoolId
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009B6E RID: 39790 RVA: 0x00176DD0 File Offset: 0x00174FD0
+		// Token: 0x06009A18 RID: 39448 RVA: 0x0017439C File Offset: 0x0017259C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as GachaUsePoolRequest);
 		}
 
-		// Token: 0x06009B6F RID: 39791 RVA: 0x00176DDE File Offset: 0x00174FDE
+		// Token: 0x06009A19 RID: 39449 RVA: 0x001743AA File Offset: 0x001725AA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(GachaUsePoolRequest other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.GachaId == other.GachaId && this.PoolId == other.PoolId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06009B70 RID: 39792 RVA: 0x00176E1C File Offset: 0x0017501C
+		// Token: 0x06009A1A RID: 39450 RVA: 0x001743E8 File Offset: 0x001725E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06009B71 RID: 39793 RVA: 0x00176E74 File Offset: 0x00175074
+		// Token: 0x06009A1B RID: 39451 RVA: 0x00174440 File Offset: 0x00172640
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06009B72 RID: 39794 RVA: 0x00176E81 File Offset: 0x00175081
+		// Token: 0x06009A1C RID: 39452 RVA: 0x0017444D File Offset: 0x0017264D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06009B73 RID: 39795 RVA: 0x00176E8C File Offset: 0x0017508C
+		// Token: 0x06009A1D RID: 39453 RVA: 0x00174458 File Offset: 0x00172658
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.GachaId != 0)
-			{
-				output.WriteRawTag(8);
-				output.WriteInt32(this.GachaId);
-			}
 			if (this.PoolId != 0)
 			{
-				output.WriteRawTag(72);
+				output.WriteRawTag(8);
 				output.WriteInt32(this.PoolId);
+			}
+			if (this.GachaId != 0)
+			{
+				output.WriteRawTag(72);
+				output.WriteInt32(this.GachaId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009B74 RID: 39796 RVA: 0x00176EE4 File Offset: 0x001750E4
+		// Token: 0x06009A1E RID: 39454 RVA: 0x001744B0 File Offset: 0x001726B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06009B75 RID: 39797 RVA: 0x00176F3C File Offset: 0x0017513C
+		// Token: 0x06009A1F RID: 39455 RVA: 0x00174508 File Offset: 0x00172708
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(GachaUsePoolRequest other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06009B76 RID: 39798 RVA: 0x00176F8C File Offset: 0x0017518C
+		// Token: 0x06009A20 RID: 39456 RVA: 0x00174558 File Offset: 0x00172758
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06009B77 RID: 39799 RVA: 0x00176F98 File Offset: 0x00175198
+		// Token: 0x06009A21 RID: 39457 RVA: 0x00174564 File Offset: 0x00172764
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -244,29 +244,29 @@ namespace Aki.Protocol
 					}
 					else
 					{
-						this.PoolId = input.ReadInt32();
+						this.GachaId = input.ReadInt32();
 					}
 				}
 				else
 				{
-					this.GachaId = input.ReadInt32();
+					this.PoolId = input.ReadInt32();
 				}
 			}
 		}
 
-		// Token: 0x04004960 RID: 18784
+		// Token: 0x04004959 RID: 18777
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004961 RID: 18785
-		public const int GachaIdFieldNumber = 1;
+		// Token: 0x0400495A RID: 18778
+		public const int GachaIdFieldNumber = 9;
 
-		// Token: 0x04004962 RID: 18786
+		// Token: 0x0400495B RID: 18779
 		private int gachaId_;
 
-		// Token: 0x04004963 RID: 18787
-		public const int PoolIdFieldNumber = 9;
+		// Token: 0x0400495C RID: 18780
+		public const int PoolIdFieldNumber = 1;
 
-		// Token: 0x04004964 RID: 18788
+		// Token: 0x0400495D RID: 18781
 		private int poolId_;
 	}
 }

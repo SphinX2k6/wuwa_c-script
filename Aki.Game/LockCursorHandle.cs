@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F2E RID: 7982
+// Token: 0x020013F0 RID: 5104
 [NullableContext(2)]
 [Nullable(0)]
 public class LockCursorHandle : HudUnitHandleBase
 {
-	// Token: 0x0600F60F RID: 62991 RVA: 0x003B66F8 File Offset: 0x003B48F8
+	// Token: 0x0600CA2E RID: 51758 RVA: 0x003C21E4 File Offset: 0x003C03E4
 	protected override void OnAddEvents()
 	{
 		InputDistributeController.Instance.BindAction("锁定目标", new TInputHandle<InputDistributeDefine.EActionType>(this.OnLockInput));
@@ -22,7 +22,7 @@ public class LockCursorHandle : HudUnitHandleBase
 		EventSystem.Instance.Add<bool, int>(EEventName.BreakWeaknessPanelLogicVisibleChange, new Action<bool, int>(this.OnBreakWeaknessPanelLogicVisibleChange));
 	}
 
-	// Token: 0x0600F610 RID: 62992 RVA: 0x003B6758 File Offset: 0x003B4958
+	// Token: 0x0600CA2F RID: 51759 RVA: 0x003C2244 File Offset: 0x003C0444
 	protected override void OnRemoveEvents()
 	{
 		InputDistributeController.Instance.UnBindAction("锁定目标", new TInputHandle<InputDistributeDefine.EActionType>(this.OnLockInput));
@@ -30,7 +30,7 @@ public class LockCursorHandle : HudUnitHandleBase
 		EventSystem.Instance.Remove<bool, int>(EEventName.BreakWeaknessPanelLogicVisibleChange, new Action<bool, int>(this.OnBreakWeaknessPanelLogicVisibleChange));
 	}
 
-	// Token: 0x0600F611 RID: 62993 RVA: 0x003B67B8 File Offset: 0x003B49B8
+	// Token: 0x0600CA30 RID: 51760 RVA: 0x003C22A4 File Offset: 0x003C04A4
 	[NullableContext(1)]
 	private void OnLockInput(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification identification)
 	{
@@ -73,7 +73,7 @@ public class LockCursorHandle : HudUnitHandleBase
 		this.DeactivateUnlockTimeDown();
 	}
 
-	// Token: 0x0600F612 RID: 62994 RVA: 0x003B6845 File Offset: 0x003B4A45
+	// Token: 0x0600CA31 RID: 51761 RVA: 0x003C2331 File Offset: 0x003C0531
 	private void OnPressOrReleaseBehaviorButton(bool bPress, EBehaviorType behaviorType)
 	{
 		if (behaviorType != EBehaviorType.LockTarget)
@@ -88,7 +88,7 @@ public class LockCursorHandle : HudUnitHandleBase
 		this.DeactivateUnlockTimeDown();
 	}
 
-	// Token: 0x0600F613 RID: 62995 RVA: 0x003B685D File Offset: 0x003B4A5D
+	// Token: 0x0600CA32 RID: 51762 RVA: 0x003C2349 File Offset: 0x003C0549
 	private void OnBreakWeaknessPanelLogicVisibleChange(bool logicVisible, int monsterEntityId)
 	{
 		if (logicVisible)
@@ -99,14 +99,14 @@ public class LockCursorHandle : HudUnitHandleBase
 		this.LockExecutionEntityId = 0;
 	}
 
-	// Token: 0x0600F614 RID: 62996 RVA: 0x003B6871 File Offset: 0x003B4A71
+	// Token: 0x0600CA33 RID: 51763 RVA: 0x003C235D File Offset: 0x003C055D
 	protected override void OnDestroyed()
 	{
 		this.ClearTargetInfo();
 		this.LockCursorUnit = null;
 	}
 
-	// Token: 0x0600F615 RID: 62997 RVA: 0x003B6880 File Offset: 0x003B4A80
+	// Token: 0x0600CA34 RID: 51764 RVA: 0x003C236C File Offset: 0x003C056C
 	private void ActivateUnlockTimeDown()
 	{
 		LockCursorUnit lockCursorUnit = this.LockCursorUnit;
@@ -118,7 +118,7 @@ public class LockCursorHandle : HudUnitHandleBase
 		this.LockCursorUnit.ActivateUnlockTimeDown(time);
 	}
 
-	// Token: 0x0600F616 RID: 62998 RVA: 0x003B68DC File Offset: 0x003B4ADC
+	// Token: 0x0600CA35 RID: 51765 RVA: 0x003C23C8 File Offset: 0x003C05C8
 	private void DeactivateUnlockTimeDown()
 	{
 		LockCursorUnit lockCursorUnit = this.LockCursorUnit;
@@ -129,7 +129,7 @@ public class LockCursorHandle : HudUnitHandleBase
 		lockCursorUnit.DeactivateUnlockTimeDown();
 	}
 
-	// Token: 0x0600F617 RID: 62999 RVA: 0x003B68F0 File Offset: 0x003B4AF0
+	// Token: 0x0600CA36 RID: 51766 RVA: 0x003C23DC File Offset: 0x003C05DC
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -171,7 +171,7 @@ public class LockCursorHandle : HudUnitHandleBase
 		this.ClearTargetInfo();
 	}
 
-	// Token: 0x0600F618 RID: 63000 RVA: 0x003B69F8 File Offset: 0x003B4BF8
+	// Token: 0x0600CA37 RID: 51767 RVA: 0x003C24E4 File Offset: 0x003C06E4
 	private bool IsAim()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -183,7 +183,7 @@ public class LockCursorHandle : HudUnitHandleBase
 		return ((component != null) ? new ECharDirectionState?(component.DirectionState) : null).GetValueOrDefault() == ECharDirectionState.AimDirection;
 	}
 
-	// Token: 0x0600F619 RID: 63001 RVA: 0x003B6A52 File Offset: 0x003B4C52
+	// Token: 0x0600CA38 RID: 51768 RVA: 0x003C253E File Offset: 0x003C073E
 	public void Activate()
 	{
 		if (this.LockCursorUnit != null)
@@ -199,7 +199,7 @@ public class LockCursorHandle : HudUnitHandleBase
 		this.LoadLockCursorUnit().Forget();
 	}
 
-	// Token: 0x0600F61A RID: 63002 RVA: 0x003B6A84 File Offset: 0x003B4C84
+	// Token: 0x0600CA39 RID: 51769 RVA: 0x003C2570 File Offset: 0x003C0770
 	private UniTask LoadLockCursorUnit()
 	{
 		LockCursorHandle.<LoadLockCursorUnit>d__22 <LoadLockCursorUnit>d__;
@@ -210,7 +210,7 @@ public class LockCursorHandle : HudUnitHandleBase
 		return <LoadLockCursorUnit>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F61B RID: 63003 RVA: 0x003B6AC7 File Offset: 0x003B4CC7
+	// Token: 0x0600CA3A RID: 51770 RVA: 0x003C25B3 File Offset: 0x003C07B3
 	public void Deactivate()
 	{
 		this.ClearTargetInfo();
@@ -221,7 +221,7 @@ public class LockCursorHandle : HudUnitHandleBase
 		this.LockCursorUnit.Deactivate();
 	}
 
-	// Token: 0x0600F61C RID: 63004 RVA: 0x003B6AE4 File Offset: 0x003B4CE4
+	// Token: 0x0600CA3B RID: 51771 RVA: 0x003C25D0 File Offset: 0x003C07D0
 	private void RefreshTargetInfo()
 	{
 		this.ClearTargetInfo();
@@ -285,7 +285,7 @@ public class LockCursorHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F61D RID: 63005 RVA: 0x003B6C51 File Offset: 0x003B4E51
+	// Token: 0x0600CA3C RID: 51772 RVA: 0x003C273D File Offset: 0x003C093D
 	private void ClearTargetInfo()
 	{
 		this.TmpTargetEntity = null;
@@ -294,7 +294,7 @@ public class LockCursorHandle : HudUnitHandleBase
 		this.TmpIsPlayerLock = false;
 	}
 
-	// Token: 0x0600F61E RID: 63006 RVA: 0x003B6C70 File Offset: 0x003B4E70
+	// Token: 0x0600CA3D RID: 51773 RVA: 0x003C275C File Offset: 0x003C095C
 	private FVectorDouble? GetWorldLocation(EntityHandle targetEntity, string targetSocketName)
 	{
 		if (targetEntity == null || !targetEntity.Valid)
@@ -327,37 +327,37 @@ public class LockCursorHandle : HudUnitHandleBase
 		return new FVectorDouble?(mesh.D_GetSocketLocation(inSocketName));
 	}
 
-	// Token: 0x040071E1 RID: 29153
+	// Token: 0x040072C2 RID: 29378
 	private static readonly FName HIT_CASE_SOCKET = new FName("HitCase");
 
-	// Token: 0x040071E2 RID: 29154
+	// Token: 0x040072C3 RID: 29379
 	[Nullable(1)]
 	private readonly Vector2D ScreenPos = new Vector2D();
 
-	// Token: 0x040071E3 RID: 29155
+	// Token: 0x040072C4 RID: 29380
 	private LockCursorUnit LockCursorUnit;
 
-	// Token: 0x040071E4 RID: 29156
+	// Token: 0x040072C5 RID: 29381
 	private bool IsLoading;
 
-	// Token: 0x040071E5 RID: 29157
+	// Token: 0x040072C6 RID: 29382
 	private bool ReleaseGamepadLock;
 
-	// Token: 0x040071E6 RID: 29158
+	// Token: 0x040072C7 RID: 29383
 	private bool HasLockCursorUnitBeforeGamepadLock;
 
-	// Token: 0x040071E7 RID: 29159
+	// Token: 0x040072C8 RID: 29384
 	private int LockExecutionEntityId;
 
-	// Token: 0x040071E8 RID: 29160
+	// Token: 0x040072C9 RID: 29385
 	private EntityHandle TmpTargetEntity;
 
-	// Token: 0x040071E9 RID: 29161
+	// Token: 0x040072CA RID: 29386
 	private string TmpTargetSocketName;
 
-	// Token: 0x040071EA RID: 29162
+	// Token: 0x040072CB RID: 29387
 	private EntityHandle TmpSelfEntity;
 
-	// Token: 0x040071EB RID: 29163
+	// Token: 0x040072CC RID: 29388
 	private bool TmpIsPlayerLock;
 }

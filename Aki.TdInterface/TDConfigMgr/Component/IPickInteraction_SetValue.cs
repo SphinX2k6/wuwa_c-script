@@ -5,25 +5,25 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005FD RID: 1533
+	// Token: 0x0200069A RID: 1690
 	public class IPickInteraction_SetValue
 	{
-		// Token: 0x040016DB RID: 5851
+		// Token: 0x040018CD RID: 6349
 		public EPickInteraction Type;
 
-		// Token: 0x040016DC RID: 5852
+		// Token: 0x040018CE RID: 6350
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> CheckedActions;
 
-		// Token: 0x040016DD RID: 5853
+		// Token: 0x040018CF RID: 6351
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> UncheckedActions;
 	}

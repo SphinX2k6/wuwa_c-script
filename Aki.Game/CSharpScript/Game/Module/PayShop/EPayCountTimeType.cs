@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.PayShop
 {
-	// Token: 0x02005354 RID: 21332
+	// Token: 0x02004337 RID: 17207
 	public enum EPayCountTimeType
 	{
-		// Token: 0x0401CD3C RID: 118076
+		// Token: 0x040177D0 RID: 96208
 		Default,
-		// Token: 0x0401CD3D RID: 118077
+		// Token: 0x040177D1 RID: 96209
 		Discount,
-		// Token: 0x0401CD3E RID: 118078
+		// Token: 0x040177D2 RID: 96210
 		Resell,
-		// Token: 0x0401CD3F RID: 118079
+		// Token: 0x040177D3 RID: 96211
 		NeverResell
 	}
 }

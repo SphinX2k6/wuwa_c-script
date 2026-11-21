@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive.Core;
 using UnrealEngine;
 using UnrealEngine.Interface;
 using UnrealEngine.Service;
@@ -9,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 {
-	// Token: 0x02003D8D RID: 15757
+	// Token: 0x020030FC RID: 12540
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/FluidNinjaLive/NinjaLive.NinjaLive_C")]
 	[UnrealStructLayout(2064, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2064)]
-	public class NinjaLive_C : AUKuroCustomCookActor, IUnrealUObject, IUnrealObject, INinjaLiveInterface_C, IUnrealBlueprintInterface, IUnrealInterface
+	public class NinjaLive_C : AUKuroCustomCookActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06026EA7 RID: 159399 RVA: 0x00981696 File Offset: 0x0097F896
+		// Token: 0x0601E9FC RID: 125436 RVA: 0x009189DC File Offset: 0x00916BDC
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (NinjaLive_C._ClassPtr == IntPtr.Zero)
@@ -26,263 +25,215 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			return NinjaLive_C._ClassPtr;
 		}
 
-		// Token: 0x06026EA8 RID: 159400 RVA: 0x009816BC File Offset: 0x0097F8BC
+		// Token: 0x0601E9FD RID: 125437 RVA: 0x00918A00 File Offset: 0x00916C00
 		public NinjaLive_C() : this(BuiltinUtils.AllocNativeUObject(NinjaLive_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06026EA9 RID: 159401 RVA: 0x009816E4 File Offset: 0x0097F8E4
+		// Token: 0x0601E9FE RID: 125438 RVA: 0x00918A28 File Offset: 0x00916C28
 		[NullableContext(1)]
 		public NinjaLive_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(NinjaLive_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005538 RID: 21816
-		// (get) Token: 0x06026EAA RID: 159402 RVA: 0x00981717 File Offset: 0x0097F917
-		// (set) Token: 0x06026EAB RID: 159403 RVA: 0x0098172B File Offset: 0x0097F92B
-		public unsafe NinjaLiveComponent_C NinjaLiveComponent
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<NinjaLiveComponent_C>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_1);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_1, value);
-			}
-		}
-
-		// Token: 0x17005539 RID: 21817
-		// (get) Token: 0x06026EAC RID: 159404 RVA: 0x00981740 File Offset: 0x0097F940
-		// (set) Token: 0x06026EAD RID: 159405 RVA: 0x00981754 File Offset: 0x0097F954
+		// Token: 0x170034AB RID: 13483
+		// (get) Token: 0x0601E9FF RID: 125439 RVA: 0x00918A5B File Offset: 0x00916C5B
+		// (set) Token: 0x0601EA00 RID: 125440 RVA: 0x00918A6F File Offset: 0x00916C6F
 		public unsafe UBoxComponent InteractionVolume
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UBoxComponent>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UBoxComponent>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_InteractionVolume);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_InteractionVolume, value);
 			}
 		}
 
-		// Token: 0x1700553A RID: 21818
-		// (get) Token: 0x06026EAE RID: 159406 RVA: 0x00981769 File Offset: 0x0097F969
-		// (set) Token: 0x06026EAF RID: 159407 RVA: 0x0098177D File Offset: 0x0097F97D
+		// Token: 0x170034AC RID: 13484
+		// (get) Token: 0x0601EA01 RID: 125441 RVA: 0x00918A84 File Offset: 0x00916C84
+		// (set) Token: 0x0601EA02 RID: 125442 RVA: 0x00918A98 File Offset: 0x00916C98
 		public unsafe UBoxComponent ActivationVolume
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UBoxComponent>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<UBoxComponent>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_ActivationVolume);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_ActivationVolume, value);
 			}
 		}
 
-		// Token: 0x1700553B RID: 21819
-		// (get) Token: 0x06026EB0 RID: 159408 RVA: 0x00981792 File Offset: 0x0097F992
-		// (set) Token: 0x06026EB1 RID: 159409 RVA: 0x009817A6 File Offset: 0x0097F9A6
-		public unsafe UMaterialBillboardComponent EditorIcon
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UMaterialBillboardComponent>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_4);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_4, value);
-			}
-		}
-
-		// Token: 0x1700553C RID: 21820
-		// (get) Token: 0x06026EB2 RID: 159410 RVA: 0x009817BB File Offset: 0x0097F9BB
-		// (set) Token: 0x06026EB3 RID: 159411 RVA: 0x009817CF File Offset: 0x0097F9CF
+		// Token: 0x170034AD RID: 13485
+		// (get) Token: 0x0601EA03 RID: 125443 RVA: 0x00918AAD File Offset: 0x00916CAD
+		// (set) Token: 0x0601EA04 RID: 125444 RVA: 0x00918AC1 File Offset: 0x00916CC1
 		public unsafe UStaticMeshComponent TraceMesh
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_TraceMesh);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_TraceMesh, value);
 			}
 		}
 
-		// Token: 0x1700553D RID: 21821
-		// (get) Token: 0x06026EB4 RID: 159412 RVA: 0x009817E4 File Offset: 0x0097F9E4
-		// (set) Token: 0x06026EB5 RID: 159413 RVA: 0x009817F8 File Offset: 0x0097F9F8
+		// Token: 0x170034AE RID: 13486
+		// (get) Token: 0x0601EA05 RID: 125445 RVA: 0x00918AD6 File Offset: 0x00916CD6
+		// (set) Token: 0x0601EA06 RID: 125446 RVA: 0x00918AEA File Offset: 0x00916CEA
 		public unsafe USceneComponent Root
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_6);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_Root);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_6, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_Root, value);
 			}
 		}
 
-		// Token: 0x1700553E RID: 21822
-		// (get) Token: 0x06026EB6 RID: 159414 RVA: 0x0098180D File Offset: 0x0097FA0D
-		// (set) Token: 0x06026EB7 RID: 159415 RVA: 0x00981821 File Offset: 0x0097FA21
+		// Token: 0x170034AF RID: 13487
+		// (get) Token: 0x0601EA07 RID: 125447 RVA: 0x00918AFF File Offset: 0x00916CFF
+		// (set) Token: 0x0601EA08 RID: 125448 RVA: 0x00918B13 File Offset: 0x00916D13
 		public unsafe UTextureRenderTarget2D RT_DensityPreview
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UTextureRenderTarget2D>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_7);
+				return BuiltinUtils.ObjectPropertyGetter<UTextureRenderTarget2D>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_RT_DensityPreview);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_7, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_RT_DensityPreview, value);
 			}
 		}
 
-		// Token: 0x1700553F RID: 21823
-		// (get) Token: 0x06026EB8 RID: 159416 RVA: 0x00981836 File Offset: 0x0097FA36
-		// (set) Token: 0x06026EB9 RID: 159417 RVA: 0x0098184A File Offset: 0x0097FA4A
+		// Token: 0x170034B0 RID: 13488
+		// (get) Token: 0x0601EA09 RID: 125449 RVA: 0x00918B28 File Offset: 0x00916D28
+		// (set) Token: 0x0601EA0A RID: 125450 RVA: 0x00918B3C File Offset: 0x00916D3C
 		public unsafe UMaterialInstance InactiveGrayMaterial
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UMaterialInstance>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_8);
+				return BuiltinUtils.ObjectPropertyGetter<UMaterialInstance>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_InactiveGrayMaterial);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_8, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_InactiveGrayMaterial, value);
 			}
 		}
 
-		// Token: 0x17005540 RID: 21824
-		// (get) Token: 0x06026EBA RID: 159418 RVA: 0x0098185F File Offset: 0x0097FA5F
-		// (set) Token: 0x06026EBB RID: 159419 RVA: 0x0098186F File Offset: 0x0097FA6F
+		// Token: 0x170034B1 RID: 13489
+		// (get) Token: 0x0601EA0B RID: 125451 RVA: 0x00918B51 File Offset: 0x00916D51
+		// (set) Token: 0x0601EA0C RID: 125452 RVA: 0x00918B61 File Offset: 0x00916D61
 		public unsafe bool DisableBlueprint
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_9) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_DisableBlueprint) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_9) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_DisableBlueprint) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005541 RID: 21825
-		// (get) Token: 0x06026EBC RID: 159420 RVA: 0x00981880 File Offset: 0x0097FA80
-		// (set) Token: 0x06026EBD RID: 159421 RVA: 0x00981890 File Offset: 0x0097FA90
+		// Token: 0x170034B2 RID: 13490
+		// (get) Token: 0x0601EA0D RID: 125453 RVA: 0x00918B72 File Offset: 0x00916D72
+		// (set) Token: 0x0601EA0E RID: 125454 RVA: 0x00918B82 File Offset: 0x00916D82
 		public unsafe float TimeCounterForBrush
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_TimeCounterForBrush);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_TimeCounterForBrush) = value;
 			}
 		}
 
-		// Token: 0x17005542 RID: 21826
-		// (get) Token: 0x06026EBE RID: 159422 RVA: 0x009818A1 File Offset: 0x0097FAA1
-		// (set) Token: 0x06026EBF RID: 159423 RVA: 0x009818B1 File Offset: 0x0097FAB1
+		// Token: 0x170034B3 RID: 13491
+		// (get) Token: 0x0601EA0F RID: 125455 RVA: 0x00918B93 File Offset: 0x00916D93
+		// (set) Token: 0x0601EA10 RID: 125456 RVA: 0x00918BA3 File Offset: 0x00916DA3
 		public unsafe float DeltaSeconds
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_DeltaSeconds);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_DeltaSeconds) = value;
 			}
 		}
 
-		// Token: 0x17005543 RID: 21827
-		// (get) Token: 0x06026EC0 RID: 159424 RVA: 0x009818C2 File Offset: 0x0097FAC2
-		// (set) Token: 0x06026EC1 RID: 159425 RVA: 0x009818D2 File Offset: 0x0097FAD2
+		// Token: 0x170034B4 RID: 13492
+		// (get) Token: 0x0601EA11 RID: 125457 RVA: 0x00918BB4 File Offset: 0x00916DB4
+		// (set) Token: 0x0601EA12 RID: 125458 RVA: 0x00918BC4 File Offset: 0x00916DC4
 		public unsafe bool MousePressed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_12) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_MousePressed) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_12) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_MousePressed) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005544 RID: 21828
-		// (get) Token: 0x06026EC2 RID: 159426 RVA: 0x009818E3 File Offset: 0x0097FAE3
-		// (set) Token: 0x06026EC3 RID: 159427 RVA: 0x009818F3 File Offset: 0x0097FAF3
+		// Token: 0x170034B5 RID: 13493
+		// (get) Token: 0x0601EA13 RID: 125459 RVA: 0x00918BD5 File Offset: 0x00916DD5
+		// (set) Token: 0x0601EA14 RID: 125460 RVA: 0x00918BE5 File Offset: 0x00916DE5
 		public unsafe bool ShowTraceMeshInEditor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_13) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ShowTraceMeshInEditor) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_13) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ShowTraceMeshInEditor) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005545 RID: 21829
-		// (get) Token: 0x06026EC4 RID: 159428 RVA: 0x00981904 File Offset: 0x0097FB04
-		// (set) Token: 0x06026EC5 RID: 159429 RVA: 0x00981918 File Offset: 0x0097FB18
+		// Token: 0x170034B6 RID: 13494
+		// (get) Token: 0x0601EA15 RID: 125461 RVA: 0x00918BF6 File Offset: 0x00916DF6
+		// (set) Token: 0x0601EA16 RID: 125462 RVA: 0x00918C0A File Offset: 0x00916E0A
 		public unsafe FVector TraceMeshSize
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_TraceMeshSize);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_TraceMeshSize) = value;
 			}
 		}
 
-		// Token: 0x17005546 RID: 21830
-		// (get) Token: 0x06026EC6 RID: 159430 RVA: 0x0098192D File Offset: 0x0097FB2D
-		// (set) Token: 0x06026EC7 RID: 159431 RVA: 0x00981941 File Offset: 0x0097FB41
-		[Nullable(0)]
-		public unsafe TEnumAsByte<UserInput_Enum> UserInputBasedInteraction
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_15);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_15) = value;
-			}
-		}
-
-		// Token: 0x17005547 RID: 21831
-		// (get) Token: 0x06026EC8 RID: 159432 RVA: 0x00981956 File Offset: 0x0097FB56
-		// (set) Token: 0x06026EC9 RID: 159433 RVA: 0x00981966 File Offset: 0x0097FB66
+		// Token: 0x170034B7 RID: 13495
+		// (get) Token: 0x0601EA17 RID: 125463 RVA: 0x00918C1F File Offset: 0x00916E1F
+		// (set) Token: 0x0601EA18 RID: 125464 RVA: 0x00918C2F File Offset: 0x00916E2F
 		public unsafe bool OverlapBasedInteraction
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_16) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OverlapBasedInteraction) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_16) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OverlapBasedInteraction) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005548 RID: 21832
-		// (get) Token: 0x06026ECA RID: 159434 RVA: 0x00981978 File Offset: 0x0097FB78
-		// (set) Token: 0x06026ECB RID: 159435 RVA: 0x009819B1 File Offset: 0x0097FBB1
+		// Token: 0x170034B8 RID: 13496
+		// (get) Token: 0x0601EA19 RID: 125465 RVA: 0x00918C40 File Offset: 0x00916E40
+		// (set) Token: 0x0601EA1A RID: 125466 RVA: 0x00918C79 File Offset: 0x00916E79
 		[Nullable(1)]
 		public TArray<NinjaLive_C> NinjaLIVECollisionExclude
 		{
@@ -293,7 +244,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 				TArray<NinjaLive_C> result;
 				if ((result = this._NinjaLIVECollisionExclude) == null)
 				{
-					result = (this._NinjaLIVECollisionExclude = new TArray<NinjaLive_C>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_17, this));
+					result = (this._NinjaLIVECollisionExclude = new TArray<NinjaLive_C>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_NinjaLIVECollisionExclude, this));
 				}
 				return result;
 			}
@@ -304,207 +255,207 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			}
 		}
 
-		// Token: 0x17005549 RID: 21833
-		// (get) Token: 0x06026ECC RID: 159436 RVA: 0x009819BF File Offset: 0x0097FBBF
-		// (set) Token: 0x06026ECD RID: 159437 RVA: 0x009819CF File Offset: 0x0097FBCF
+		// Token: 0x170034B9 RID: 13497
+		// (get) Token: 0x0601EA1B RID: 125467 RVA: 0x00918C87 File Offset: 0x00916E87
+		// (set) Token: 0x0601EA1C RID: 125468 RVA: 0x00918C97 File Offset: 0x00916E97
 		public unsafe float Time
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_Time);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_Time) = value;
 			}
 		}
 
-		// Token: 0x1700554A RID: 21834
-		// (get) Token: 0x06026ECE RID: 159438 RVA: 0x009819E0 File Offset: 0x0097FBE0
-		// (set) Token: 0x06026ECF RID: 159439 RVA: 0x009819F0 File Offset: 0x0097FBF0
+		// Token: 0x170034BA RID: 13498
+		// (get) Token: 0x0601EA1D RID: 125469 RVA: 0x00918CA8 File Offset: 0x00916EA8
+		// (set) Token: 0x0601EA1E RID: 125470 RVA: 0x00918CB8 File Offset: 0x00916EB8
 		public unsafe bool SimActivatedByPawnProximity
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_19) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_SimActivatedByPawnProximity) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_19) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_SimActivatedByPawnProximity) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700554B RID: 21835
-		// (get) Token: 0x06026ED0 RID: 159440 RVA: 0x00981A01 File Offset: 0x0097FC01
-		// (set) Token: 0x06026ED1 RID: 159441 RVA: 0x00981A11 File Offset: 0x0097FC11
+		// Token: 0x170034BB RID: 13499
+		// (get) Token: 0x0601EA1F RID: 125471 RVA: 0x00918CC9 File Offset: 0x00916EC9
+		// (set) Token: 0x0601EA20 RID: 125472 RVA: 0x00918CD9 File Offset: 0x00916ED9
 		public unsafe bool ShowActivationVolumeInEditor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_20) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ShowActivationVolumeInEditor) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_20) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ShowActivationVolumeInEditor) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700554C RID: 21836
-		// (get) Token: 0x06026ED2 RID: 159442 RVA: 0x00981A22 File Offset: 0x0097FC22
-		// (set) Token: 0x06026ED3 RID: 159443 RVA: 0x00981A36 File Offset: 0x0097FC36
+		// Token: 0x170034BC RID: 13500
+		// (get) Token: 0x0601EA21 RID: 125473 RVA: 0x00918CEA File Offset: 0x00916EEA
+		// (set) Token: 0x0601EA22 RID: 125474 RVA: 0x00918CFE File Offset: 0x00916EFE
 		public unsafe FVector ActivationVolumeSize
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_21);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ActivationVolumeSize);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_21) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ActivationVolumeSize) = value;
 			}
 		}
 
-		// Token: 0x1700554D RID: 21837
-		// (get) Token: 0x06026ED4 RID: 159444 RVA: 0x00981A4B File Offset: 0x0097FC4B
-		// (set) Token: 0x06026ED5 RID: 159445 RVA: 0x00981A5B File Offset: 0x0097FC5B
+		// Token: 0x170034BD RID: 13501
+		// (get) Token: 0x0601EA23 RID: 125475 RVA: 0x00918D13 File Offset: 0x00916F13
+		// (set) Token: 0x0601EA24 RID: 125476 RVA: 0x00918D23 File Offset: 0x00916F23
 		public unsafe float ActivatorProximityCheckFrequency
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_22);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ActivatorProximityCheckFrequency);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_22) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ActivatorProximityCheckFrequency) = value;
 			}
 		}
 
-		// Token: 0x1700554E RID: 21838
-		// (get) Token: 0x06026ED6 RID: 159446 RVA: 0x00981A6C File Offset: 0x0097FC6C
-		// (set) Token: 0x06026ED7 RID: 159447 RVA: 0x00981A80 File Offset: 0x0097FC80
+		// Token: 0x170034BE RID: 13502
+		// (get) Token: 0x0601EA25 RID: 125477 RVA: 0x00918D34 File Offset: 0x00916F34
+		// (set) Token: 0x0601EA26 RID: 125478 RVA: 0x00918D48 File Offset: 0x00916F48
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECollisionChannel> ActivatorType
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_23);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ActivatorType);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_23) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ActivatorType) = value;
 			}
 		}
 
-		// Token: 0x1700554F RID: 21839
-		// (get) Token: 0x06026ED8 RID: 159448 RVA: 0x00981A95 File Offset: 0x0097FC95
-		// (set) Token: 0x06026ED9 RID: 159449 RVA: 0x00981AA9 File Offset: 0x0097FCA9
+		// Token: 0x170034BF RID: 13503
+		// (get) Token: 0x0601EA27 RID: 125479 RVA: 0x00918D5D File Offset: 0x00916F5D
+		// (set) Token: 0x0601EA28 RID: 125480 RVA: 0x00918D71 File Offset: 0x00916F71
 		public unsafe AActor Activator
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_24);
+				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_Activator);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_24, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_Activator, value);
 			}
 		}
 
-		// Token: 0x17005550 RID: 21840
-		// (get) Token: 0x06026EDA RID: 159450 RVA: 0x00981ABE File Offset: 0x0097FCBE
-		// (set) Token: 0x06026EDB RID: 159451 RVA: 0x00981ACE File Offset: 0x0097FCCE
+		// Token: 0x170034C0 RID: 13504
+		// (get) Token: 0x0601EA29 RID: 125481 RVA: 0x00918D86 File Offset: 0x00916F86
+		// (set) Token: 0x0601EA2A RID: 125482 RVA: 0x00918D96 File Offset: 0x00916F96
 		public unsafe bool PawnInsideActivationBounds
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_25) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_PawnInsideActivationBounds) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_25) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_PawnInsideActivationBounds) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005551 RID: 21841
-		// (get) Token: 0x06026EDC RID: 159452 RVA: 0x00981ADF File Offset: 0x0097FCDF
-		// (set) Token: 0x06026EDD RID: 159453 RVA: 0x00981AEF File Offset: 0x0097FCEF
+		// Token: 0x170034C1 RID: 13505
+		// (get) Token: 0x0601EA2B RID: 125483 RVA: 0x00918DA7 File Offset: 0x00916FA7
+		// (set) Token: 0x0601EA2C RID: 125484 RVA: 0x00918DB7 File Offset: 0x00916FB7
 		public unsafe bool InitDone
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_26) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_InitDone) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_26) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_InitDone) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005552 RID: 21842
-		// (get) Token: 0x06026EDE RID: 159454 RVA: 0x00981B00 File Offset: 0x0097FD00
-		// (set) Token: 0x06026EDF RID: 159455 RVA: 0x00981B10 File Offset: 0x0097FD10
+		// Token: 0x170034C2 RID: 13506
+		// (get) Token: 0x0601EA2D RID: 125485 RVA: 0x00918DC8 File Offset: 0x00916FC8
+		// (set) Token: 0x0601EA2E RID: 125486 RVA: 0x00918DD8 File Offset: 0x00916FD8
 		public unsafe bool BeginPlaySupressed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_27) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_BeginPlaySupressed) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_27) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_BeginPlaySupressed) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005553 RID: 21843
-		// (get) Token: 0x06026EE0 RID: 159456 RVA: 0x00981B21 File Offset: 0x0097FD21
-		// (set) Token: 0x06026EE1 RID: 159457 RVA: 0x00981B31 File Offset: 0x0097FD31
+		// Token: 0x170034C3 RID: 13507
+		// (get) Token: 0x0601EA2F RID: 125487 RVA: 0x00918DE9 File Offset: 0x00916FE9
+		// (set) Token: 0x0601EA30 RID: 125488 RVA: 0x00918DF9 File Offset: 0x00916FF9
 		public unsafe bool UseTraceMeshAsInteractionVolume
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_28) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_UseTraceMeshAsInteractionVolume) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_28) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_UseTraceMeshAsInteractionVolume) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005554 RID: 21844
-		// (get) Token: 0x06026EE2 RID: 159458 RVA: 0x00981B42 File Offset: 0x0097FD42
-		// (set) Token: 0x06026EE3 RID: 159459 RVA: 0x00981B52 File Offset: 0x0097FD52
+		// Token: 0x170034C4 RID: 13508
+		// (get) Token: 0x0601EA31 RID: 125489 RVA: 0x00918E0A File Offset: 0x0091700A
+		// (set) Token: 0x0601EA32 RID: 125490 RVA: 0x00918E1A File Offset: 0x0091701A
 		public unsafe bool ShowInteractionVolumeInEditor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_29) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ShowInteractionVolumeInEditor) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_29) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ShowInteractionVolumeInEditor) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005555 RID: 21845
-		// (get) Token: 0x06026EE4 RID: 159460 RVA: 0x00981B63 File Offset: 0x0097FD63
-		// (set) Token: 0x06026EE5 RID: 159461 RVA: 0x00981B77 File Offset: 0x0097FD77
+		// Token: 0x170034C5 RID: 13509
+		// (get) Token: 0x0601EA33 RID: 125491 RVA: 0x00918E2B File Offset: 0x0091702B
+		// (set) Token: 0x0601EA34 RID: 125492 RVA: 0x00918E3F File Offset: 0x0091703F
 		public unsafe FVector InteractionVolumeSize
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_30);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_InteractionVolumeSize);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_30) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_InteractionVolumeSize) = value;
 			}
 		}
 
-		// Token: 0x17005556 RID: 21846
-		// (get) Token: 0x06026EE6 RID: 159462 RVA: 0x00981B8C File Offset: 0x0097FD8C
-		// (set) Token: 0x06026EE7 RID: 159463 RVA: 0x00981BC5 File Offset: 0x0097FDC5
+		// Token: 0x170034C6 RID: 13510
+		// (get) Token: 0x0601EA35 RID: 125493 RVA: 0x00918E54 File Offset: 0x00917054
+		// (set) Token: 0x0601EA36 RID: 125494 RVA: 0x00918E8D File Offset: 0x0091708D
 		[Nullable(1)]
 		public TArray<bool> MultipleTouchLookup
 		{
@@ -515,7 +466,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 				TArray<bool> result;
 				if ((result = this._MultipleTouchLookup) == null)
 				{
-					result = (this._MultipleTouchLookup = new TArray<bool>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_31, this));
+					result = (this._MultipleTouchLookup = new TArray<bool>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_MultipleTouchLookup, this));
 				}
 				return result;
 			}
@@ -526,69 +477,69 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			}
 		}
 
-		// Token: 0x17005557 RID: 21847
-		// (get) Token: 0x06026EE8 RID: 159464 RVA: 0x00981BD3 File Offset: 0x0097FDD3
-		// (set) Token: 0x06026EE9 RID: 159465 RVA: 0x00981BE3 File Offset: 0x0097FDE3
+		// Token: 0x170034C7 RID: 13511
+		// (get) Token: 0x0601EA37 RID: 125495 RVA: 0x00918E9B File Offset: 0x0091709B
+		// (set) Token: 0x0601EA38 RID: 125496 RVA: 0x00918EAB File Offset: 0x009170AB
 		public unsafe float TickRateCustom
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_32);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_TickRateCustom);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_32) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_TickRateCustom) = value;
 			}
 		}
 
-		// Token: 0x17005558 RID: 21848
-		// (get) Token: 0x06026EEA RID: 159466 RVA: 0x00981BF4 File Offset: 0x0097FDF4
-		// (set) Token: 0x06026EEB RID: 159467 RVA: 0x00981C08 File Offset: 0x0097FE08
+		// Token: 0x170034C8 RID: 13512
+		// (get) Token: 0x0601EA39 RID: 125497 RVA: 0x00918EBC File Offset: 0x009170BC
+		// (set) Token: 0x0601EA3A RID: 125498 RVA: 0x00918ED0 File Offset: 0x009170D0
 		public unsafe UPrimitiveComponent InteractionVolumeTemplate
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UPrimitiveComponent>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_33);
+				return BuiltinUtils.ObjectPropertyGetter<UPrimitiveComponent>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_InteractionVolumeTemplate);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_33, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_InteractionVolumeTemplate, value);
 			}
 		}
 
-		// Token: 0x17005559 RID: 21849
-		// (get) Token: 0x06026EEC RID: 159468 RVA: 0x00981C1D File Offset: 0x0097FE1D
-		// (set) Token: 0x06026EED RID: 159469 RVA: 0x00981C31 File Offset: 0x0097FE31
+		// Token: 0x170034C9 RID: 13513
+		// (get) Token: 0x0601EA3B RID: 125499 RVA: 0x00918EE5 File Offset: 0x009170E5
+		// (set) Token: 0x0601EA3C RID: 125500 RVA: 0x00918EF9 File Offset: 0x009170F9
 		public unsafe FName TrackActorPrimitiveComponentsWithTag
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_34);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_TrackActorPrimitiveComponentsWithTag);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_34) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_TrackActorPrimitiveComponentsWithTag) = value;
 			}
 		}
 
-		// Token: 0x1700555A RID: 21850
-		// (get) Token: 0x06026EEE RID: 159470 RVA: 0x00981C46 File Offset: 0x0097FE46
-		// (set) Token: 0x06026EEF RID: 159471 RVA: 0x00981C5A File Offset: 0x0097FE5A
+		// Token: 0x170034CA RID: 13514
+		// (get) Token: 0x0601EA3D RID: 125501 RVA: 0x00918F0E File Offset: 0x0091710E
+		// (set) Token: 0x0601EA3E RID: 125502 RVA: 0x00918F22 File Offset: 0x00917122
 		public unsafe FName TrackActorSkeletalMeshComponentsWithTag
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_35);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_TrackActorSkeletalMeshComponentsWithTag);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_35) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_TrackActorSkeletalMeshComponentsWithTag) = value;
 			}
 		}
 
-		// Token: 0x1700555B RID: 21851
-		// (get) Token: 0x06026EF0 RID: 159472 RVA: 0x00981C70 File Offset: 0x0097FE70
-		// (set) Token: 0x06026EF1 RID: 159473 RVA: 0x00981CA9 File Offset: 0x0097FEA9
+		// Token: 0x170034CB RID: 13515
+		// (get) Token: 0x0601EA3F RID: 125503 RVA: 0x00918F38 File Offset: 0x00917138
+		// (set) Token: 0x0601EA40 RID: 125504 RVA: 0x00918F71 File Offset: 0x00917171
 		[Nullable(new byte[]
 		{
 			1,
@@ -607,7 +558,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 				TArray<TEnumAsByte<EObjectTypeQuery>> result;
 				if ((result = this._OverlapFilterInclusiveObjType) == null)
 				{
-					result = (this._OverlapFilterInclusiveObjType = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_36, this));
+					result = (this._OverlapFilterInclusiveObjType = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OverlapFilterInclusiveObjType, this));
 				}
 				return result;
 			}
@@ -622,9 +573,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			}
 		}
 
-		// Token: 0x1700555C RID: 21852
-		// (get) Token: 0x06026EF2 RID: 159474 RVA: 0x00981CB8 File Offset: 0x0097FEB8
-		// (set) Token: 0x06026EF3 RID: 159475 RVA: 0x00981CF1 File Offset: 0x0097FEF1
+		// Token: 0x170034CC RID: 13516
+		// (get) Token: 0x0601EA41 RID: 125505 RVA: 0x00918F80 File Offset: 0x00917180
+		// (set) Token: 0x0601EA42 RID: 125506 RVA: 0x00918FB9 File Offset: 0x009171B9
 		[Nullable(1)]
 		public TArray<FName> OverlapFilterInclusiveBoneNameExact
 		{
@@ -635,7 +586,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 				TArray<FName> result;
 				if ((result = this._OverlapFilterInclusiveBoneNameExact) == null)
 				{
-					result = (this._OverlapFilterInclusiveBoneNameExact = new TArray<FName>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_37, this));
+					result = (this._OverlapFilterInclusiveBoneNameExact = new TArray<FName>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OverlapFilterInclusiveBoneNameExact, this));
 				}
 				return result;
 			}
@@ -646,9 +597,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			}
 		}
 
-		// Token: 0x1700555D RID: 21853
-		// (get) Token: 0x06026EF4 RID: 159476 RVA: 0x00981D00 File Offset: 0x0097FF00
-		// (set) Token: 0x06026EF5 RID: 159477 RVA: 0x00981D39 File Offset: 0x0097FF39
+		// Token: 0x170034CD RID: 13517
+		// (get) Token: 0x0601EA43 RID: 125507 RVA: 0x00918FC8 File Offset: 0x009171C8
+		// (set) Token: 0x0601EA44 RID: 125508 RVA: 0x00919001 File Offset: 0x00917201
 		[Nullable(1)]
 		public TArray<string> OverlapFilterInclusiveBoneNamePartial
 		{
@@ -659,7 +610,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 				TArray<string> result;
 				if ((result = this._OverlapFilterInclusiveBoneNamePartial) == null)
 				{
-					result = (this._OverlapFilterInclusiveBoneNamePartial = new TArray<string>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_38, this));
+					result = (this._OverlapFilterInclusiveBoneNamePartial = new TArray<string>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OverlapFilterInclusiveBoneNamePartial, this));
 				}
 				return result;
 			}
@@ -670,9 +621,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			}
 		}
 
-		// Token: 0x1700555E RID: 21854
-		// (get) Token: 0x06026EF6 RID: 159478 RVA: 0x00981D48 File Offset: 0x0097FF48
-		// (set) Token: 0x06026EF7 RID: 159479 RVA: 0x00981D81 File Offset: 0x0097FF81
+		// Token: 0x170034CE RID: 13518
+		// (get) Token: 0x0601EA45 RID: 125509 RVA: 0x00919010 File Offset: 0x00917210
+		// (set) Token: 0x0601EA46 RID: 125510 RVA: 0x00919049 File Offset: 0x00917249
 		[Nullable(1)]
 		public TArray<AActor> ExcludeSpecificActorsFromOverlap
 		{
@@ -683,7 +634,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 				TArray<AActor> result;
 				if ((result = this._ExcludeSpecificActorsFromOverlap) == null)
 				{
-					result = (this._ExcludeSpecificActorsFromOverlap = new TArray<AActor>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_39, this));
+					result = (this._ExcludeSpecificActorsFromOverlap = new TArray<AActor>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ExcludeSpecificActorsFromOverlap, this));
 				}
 				return result;
 			}
@@ -694,24 +645,24 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			}
 		}
 
-		// Token: 0x1700555F RID: 21855
-		// (get) Token: 0x06026EF8 RID: 159480 RVA: 0x00981D8F File Offset: 0x0097FF8F
-		// (set) Token: 0x06026EF9 RID: 159481 RVA: 0x00981D9F File Offset: 0x0097FF9F
+		// Token: 0x170034CF RID: 13519
+		// (get) Token: 0x0601EA47 RID: 125511 RVA: 0x00919057 File Offset: 0x00917257
+		// (set) Token: 0x0601EA48 RID: 125512 RVA: 0x00919067 File Offset: 0x00917267
 		public unsafe bool AutoExcludeLargeOverlappingObjects
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_40) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_AutoExcludeLargeOverlappingObjects) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_40) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_AutoExcludeLargeOverlappingObjects) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005560 RID: 21856
-		// (get) Token: 0x06026EFA RID: 159482 RVA: 0x00981DB0 File Offset: 0x0097FFB0
-		// (set) Token: 0x06026EFB RID: 159483 RVA: 0x00981DE9 File Offset: 0x0097FFE9
+		// Token: 0x170034D0 RID: 13520
+		// (get) Token: 0x0601EA49 RID: 125513 RVA: 0x00919078 File Offset: 0x00917278
+		// (set) Token: 0x0601EA4A RID: 125514 RVA: 0x009190B1 File Offset: 0x009172B1
 		[Nullable(new byte[]
 		{
 			1,
@@ -732,7 +683,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 				TMap<TEnumAsByte<ECollisionChannel>, TEnumAsByte<EObjectTypeQuery>> result;
 				if ((result = this._OverlapFilterInclusiveCollisionType) == null)
 				{
-					result = (this._OverlapFilterInclusiveCollisionType = new TMap<TEnumAsByte<ECollisionChannel>, TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_41, this));
+					result = (this._OverlapFilterInclusiveCollisionType = new TMap<TEnumAsByte<ECollisionChannel>, TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OverlapFilterInclusiveCollisionType, this));
 				}
 				return result;
 			}
@@ -748,147 +699,129 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			}
 		}
 
-		// Token: 0x17005561 RID: 21857
-		// (get) Token: 0x06026EFC RID: 159484 RVA: 0x00981DF7 File Offset: 0x0097FFF7
-		// (set) Token: 0x06026EFD RID: 159485 RVA: 0x00981E0B File Offset: 0x0098000B
-		[Nullable(0)]
-		public unsafe TEnumAsByte<InactiveBehaviour_Enum> TraceMeshInactiveBehaviour
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_42);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_42) = value;
-			}
-		}
-
-		// Token: 0x17005562 RID: 21858
-		// (get) Token: 0x06026EFE RID: 159486 RVA: 0x00981E20 File Offset: 0x00980020
-		// (set) Token: 0x06026EFF RID: 159487 RVA: 0x00981E30 File Offset: 0x00980030
+		// Token: 0x170034D1 RID: 13521
+		// (get) Token: 0x0601EA4B RID: 125515 RVA: 0x009190BF File Offset: 0x009172BF
+		// (set) Token: 0x0601EA4C RID: 125516 RVA: 0x009190CF File Offset: 0x009172CF
 		public unsafe bool ActivationEventsDebugPrint
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_43) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ActivationEventsDebugPrint) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_43) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ActivationEventsDebugPrint) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005563 RID: 21859
-		// (get) Token: 0x06026F00 RID: 159488 RVA: 0x00981E41 File Offset: 0x00980041
-		// (set) Token: 0x06026F01 RID: 159489 RVA: 0x00981E51 File Offset: 0x00980051
+		// Token: 0x170034D2 RID: 13522
+		// (get) Token: 0x0601EA4D RID: 125517 RVA: 0x009190E0 File Offset: 0x009172E0
+		// (set) Token: 0x0601EA4E RID: 125518 RVA: 0x009190F0 File Offset: 0x009172F0
 		public unsafe bool SimContainerCapacityWarning
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_44) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_SimContainerCapacityWarning) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_44) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_SimContainerCapacityWarning) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005564 RID: 21860
-		// (get) Token: 0x06026F02 RID: 159490 RVA: 0x00981E62 File Offset: 0x00980062
-		// (set) Token: 0x06026F03 RID: 159491 RVA: 0x00981E72 File Offset: 0x00980072
+		// Token: 0x170034D3 RID: 13523
+		// (get) Token: 0x0601EA4F RID: 125519 RVA: 0x00919101 File Offset: 0x00917301
+		// (set) Token: 0x0601EA50 RID: 125520 RVA: 0x00919111 File Offset: 0x00917311
 		public unsafe bool SaveDebugTextToLog
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_45) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_SaveDebugTextToLog) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_45) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_SaveDebugTextToLog) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005565 RID: 21861
-		// (get) Token: 0x06026F04 RID: 159492 RVA: 0x00981E83 File Offset: 0x00980083
-		// (set) Token: 0x06026F05 RID: 159493 RVA: 0x00981E93 File Offset: 0x00980093
+		// Token: 0x170034D4 RID: 13524
+		// (get) Token: 0x0601EA51 RID: 125521 RVA: 0x00919122 File Offset: 0x00917322
+		// (set) Token: 0x0601EA52 RID: 125522 RVA: 0x00919132 File Offset: 0x00917332
 		public unsafe float DebugTextLifeTimeLength
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_46);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_DebugTextLifeTimeLength);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_46) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_DebugTextLifeTimeLength) = value;
 			}
 		}
 
-		// Token: 0x17005566 RID: 21862
-		// (get) Token: 0x06026F06 RID: 159494 RVA: 0x00981EA4 File Offset: 0x009800A4
-		// (set) Token: 0x06026F07 RID: 159495 RVA: 0x00981EB8 File Offset: 0x009800B8
+		// Token: 0x170034D5 RID: 13525
+		// (get) Token: 0x0601EA53 RID: 125523 RVA: 0x00919143 File Offset: 0x00917343
+		// (set) Token: 0x0601EA54 RID: 125524 RVA: 0x00919157 File Offset: 0x00917357
 		public unsafe UPrimitiveComponent OverlappingSkeletalMesh
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UPrimitiveComponent>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_47);
+				return BuiltinUtils.ObjectPropertyGetter<UPrimitiveComponent>(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_OverlappingSkeletalMesh);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_47, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + NinjaLive_C.__PropertyOffset_OverlappingSkeletalMesh, value);
 			}
 		}
 
-		// Token: 0x17005567 RID: 21863
-		// (get) Token: 0x06026F08 RID: 159496 RVA: 0x00981ECD File Offset: 0x009800CD
-		// (set) Token: 0x06026F09 RID: 159497 RVA: 0x00981EDD File Offset: 0x009800DD
+		// Token: 0x170034D6 RID: 13526
+		// (get) Token: 0x0601EA55 RID: 125525 RVA: 0x0091916C File Offset: 0x0091736C
+		// (set) Token: 0x0601EA56 RID: 125526 RVA: 0x0091917C File Offset: 0x0091737C
 		public unsafe float BrushStrengthTemp2
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_48);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_BrushStrengthTemp2);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_48) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_BrushStrengthTemp2) = value;
 			}
 		}
 
-		// Token: 0x17005568 RID: 21864
-		// (get) Token: 0x06026F0A RID: 159498 RVA: 0x00981EEE File Offset: 0x009800EE
-		// (set) Token: 0x06026F0B RID: 159499 RVA: 0x00981EFE File Offset: 0x009800FE
+		// Token: 0x170034D7 RID: 13527
+		// (get) Token: 0x0601EA57 RID: 125527 RVA: 0x0091918D File Offset: 0x0091738D
+		// (set) Token: 0x0601EA58 RID: 125528 RVA: 0x0091919D File Offset: 0x0091739D
 		public unsafe float InputFeedbackTemp1
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_49);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_InputFeedbackTemp1);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_49) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_InputFeedbackTemp1) = value;
 			}
 		}
 
-		// Token: 0x17005569 RID: 21865
-		// (get) Token: 0x06026F0C RID: 159500 RVA: 0x00981F0F File Offset: 0x0098010F
-		// (set) Token: 0x06026F0D RID: 159501 RVA: 0x00981F1F File Offset: 0x0098011F
+		// Token: 0x170034D8 RID: 13528
+		// (get) Token: 0x0601EA59 RID: 125529 RVA: 0x009191AE File Offset: 0x009173AE
+		// (set) Token: 0x0601EA5A RID: 125530 RVA: 0x009191BE File Offset: 0x009173BE
 		public unsafe bool DisableAndNotTickBlock
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_50) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_DisableAndNotTickBlock) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_50) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_DisableAndNotTickBlock) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700556A RID: 21866
-		// (get) Token: 0x06026F0E RID: 159502 RVA: 0x00981F30 File Offset: 0x00980130
-		// (set) Token: 0x06026F0F RID: 159503 RVA: 0x00981F69 File Offset: 0x00980169
+		// Token: 0x170034D9 RID: 13529
+		// (get) Token: 0x0601EA5B RID: 125531 RVA: 0x009191D0 File Offset: 0x009173D0
+		// (set) Token: 0x0601EA5C RID: 125532 RVA: 0x00919209 File Offset: 0x00917409
 		[Nullable(1)]
 		public TArray<UPrimitiveComponent> OverlappingComponents
 		{
@@ -899,7 +832,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 				TArray<UPrimitiveComponent> result;
 				if ((result = this._OverlappingComponents) == null)
 				{
-					result = (this._OverlappingComponents = new TArray<UPrimitiveComponent>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_51, this));
+					result = (this._OverlappingComponents = new TArray<UPrimitiveComponent>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OverlappingComponents, this));
 				}
 				return result;
 			}
@@ -910,9 +843,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			}
 		}
 
-		// Token: 0x1700556B RID: 21867
-		// (get) Token: 0x06026F10 RID: 159504 RVA: 0x00981F78 File Offset: 0x00980178
-		// (set) Token: 0x06026F11 RID: 159505 RVA: 0x00981FB1 File Offset: 0x009801B1
+		// Token: 0x170034DA RID: 13530
+		// (get) Token: 0x0601EA5D RID: 125533 RVA: 0x00919218 File Offset: 0x00917418
+		// (set) Token: 0x0601EA5E RID: 125534 RVA: 0x00919251 File Offset: 0x00917451
 		[Nullable(1)]
 		public TArray<AActor> OverlappingActors
 		{
@@ -923,7 +856,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 				TArray<AActor> result;
 				if ((result = this._OverlappingActors) == null)
 				{
-					result = (this._OverlappingActors = new TArray<AActor>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_52, this));
+					result = (this._OverlappingActors = new TArray<AActor>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OverlappingActors, this));
 				}
 				return result;
 			}
@@ -934,9 +867,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			}
 		}
 
-		// Token: 0x1700556C RID: 21868
-		// (get) Token: 0x06026F12 RID: 159506 RVA: 0x00981FC0 File Offset: 0x009801C0
-		// (set) Token: 0x06026F13 RID: 159507 RVA: 0x00981FF9 File Offset: 0x009801F9
+		// Token: 0x170034DB RID: 13531
+		// (get) Token: 0x0601EA5F RID: 125535 RVA: 0x00919260 File Offset: 0x00917460
+		// (set) Token: 0x0601EA60 RID: 125536 RVA: 0x00919299 File Offset: 0x00917499
 		[Nullable(1)]
 		public TMap<int, UPrimitiveComponent> SkeletalMesh_TempArray_Pairs
 		{
@@ -947,7 +880,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 				TMap<int, UPrimitiveComponent> result;
 				if ((result = this._SkeletalMesh_TempArray_Pairs) == null)
 				{
-					result = (this._SkeletalMesh_TempArray_Pairs = new TMap<int, UPrimitiveComponent>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_53, this));
+					result = (this._SkeletalMesh_TempArray_Pairs = new TMap<int, UPrimitiveComponent>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_SkeletalMesh_TempArray_Pairs, this));
 				}
 				return result;
 			}
@@ -958,9 +891,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			}
 		}
 
-		// Token: 0x1700556D RID: 21869
-		// (get) Token: 0x06026F14 RID: 159508 RVA: 0x00982008 File Offset: 0x00980208
-		// (set) Token: 0x06026F15 RID: 159509 RVA: 0x00982041 File Offset: 0x00980241
+		// Token: 0x170034DC RID: 13532
+		// (get) Token: 0x0601EA61 RID: 125537 RVA: 0x009192A8 File Offset: 0x009174A8
+		// (set) Token: 0x0601EA62 RID: 125538 RVA: 0x009192E1 File Offset: 0x009174E1
 		[Nullable(1)]
 		public TArray<AActor> OverlappingActorsInitial
 		{
@@ -971,7 +904,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 				TArray<AActor> result;
 				if ((result = this._OverlappingActorsInitial) == null)
 				{
-					result = (this._OverlappingActorsInitial = new TArray<AActor>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_54, this));
+					result = (this._OverlappingActorsInitial = new TArray<AActor>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OverlappingActorsInitial, this));
 				}
 				return result;
 			}
@@ -982,9 +915,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			}
 		}
 
-		// Token: 0x1700556E RID: 21870
-		// (get) Token: 0x06026F16 RID: 159510 RVA: 0x00982050 File Offset: 0x00980250
-		// (set) Token: 0x06026F17 RID: 159511 RVA: 0x00982089 File Offset: 0x00980289
+		// Token: 0x170034DD RID: 13533
+		// (get) Token: 0x0601EA63 RID: 125539 RVA: 0x009192F0 File Offset: 0x009174F0
+		// (set) Token: 0x0601EA64 RID: 125540 RVA: 0x00919329 File Offset: 0x00917529
 		[Nullable(1)]
 		public OwnerRePlayEvent OwnerRePlayEvent
 		{
@@ -995,290 +928,290 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 				OwnerRePlayEvent result;
 				if ((result = this._OwnerRePlayEvent) == null)
 				{
-					result = (this._OwnerRePlayEvent = new OwnerRePlayEvent(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_55, this));
+					result = (this._OwnerRePlayEvent = new OwnerRePlayEvent(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OwnerRePlayEvent, this));
 				}
 				return result;
 			}
 			[NullableContext(1)]
 			set
 			{
-				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_55, (value != null) ? value.NativePtr : ((IntPtr)0));
+				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OwnerRePlayEvent, (value != null) ? value.NativePtr : ((IntPtr)0));
 			}
 		}
 
-		// Token: 0x1700556F RID: 21871
-		// (get) Token: 0x06026F18 RID: 159512 RVA: 0x009820AA File Offset: 0x009802AA
-		// (set) Token: 0x06026F19 RID: 159513 RVA: 0x009820BA File Offset: 0x009802BA
+		// Token: 0x170034DE RID: 13534
+		// (get) Token: 0x0601EA65 RID: 125541 RVA: 0x0091934A File Offset: 0x0091754A
+		// (set) Token: 0x0601EA66 RID: 125542 RVA: 0x0091935A File Offset: 0x0091755A
 		public unsafe bool OverrideComponentVariables
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_56) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OverrideComponentVariables) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_56) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OverrideComponentVariables) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005570 RID: 21872
-		// (get) Token: 0x06026F1A RID: 159514 RVA: 0x009820CB File Offset: 0x009802CB
-		// (set) Token: 0x06026F1B RID: 159515 RVA: 0x009820DB File Offset: 0x009802DB
+		// Token: 0x170034DF RID: 13535
+		// (get) Token: 0x0601EA67 RID: 125543 RVA: 0x0091936B File Offset: 0x0091756B
+		// (set) Token: 0x0601EA68 RID: 125544 RVA: 0x0091937B File Offset: 0x0091757B
 		public unsafe bool AutoConnectToMemoryPool_IF_Found
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_57) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_AutoConnectToMemoryPool_IF_Found) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_57) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_AutoConnectToMemoryPool_IF_Found) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005571 RID: 21873
-		// (get) Token: 0x06026F1C RID: 159516 RVA: 0x009820EC File Offset: 0x009802EC
-		// (set) Token: 0x06026F1D RID: 159517 RVA: 0x009820FC File Offset: 0x009802FC
+		// Token: 0x170034E0 RID: 13536
+		// (get) Token: 0x0601EA69 RID: 125545 RVA: 0x0091938C File Offset: 0x0091758C
+		// (set) Token: 0x0601EA6A RID: 125546 RVA: 0x0091939C File Offset: 0x0091759C
 		public unsafe int OutputFilterMaterialIndex
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_58);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OutputFilterMaterialIndex);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_58) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_OutputFilterMaterialIndex) = value;
 			}
 		}
 
-		// Token: 0x17005572 RID: 21874
-		// (get) Token: 0x06026F1E RID: 159518 RVA: 0x0098210D File Offset: 0x0098030D
-		// (set) Token: 0x06026F1F RID: 159519 RVA: 0x0098211D File Offset: 0x0098031D
+		// Token: 0x170034E1 RID: 13537
+		// (get) Token: 0x0601EA6B RID: 125547 RVA: 0x009193AD File Offset: 0x009175AD
+		// (set) Token: 0x0601EA6C RID: 125548 RVA: 0x009193BD File Offset: 0x009175BD
 		public unsafe bool ShowLODdebugMessagesOnScreen
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_59) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ShowLODdebugMessagesOnScreen) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_59) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_ShowLODdebugMessagesOnScreen) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005573 RID: 21875
-		// (get) Token: 0x06026F20 RID: 159520 RVA: 0x0098212E File Offset: 0x0098032E
-		// (set) Token: 0x06026F21 RID: 159521 RVA: 0x0098213E File Offset: 0x0098033E
+		// Token: 0x170034E2 RID: 13538
+		// (get) Token: 0x0601EA6D RID: 125549 RVA: 0x009193CE File Offset: 0x009175CE
+		// (set) Token: 0x0601EA6E RID: 125550 RVA: 0x009193DE File Offset: 0x009175DE
 		public unsafe float GlobalBrushScale
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_60);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_GlobalBrushScale);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_60) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_GlobalBrushScale) = value;
 			}
 		}
 
-		// Token: 0x17005574 RID: 21876
-		// (get) Token: 0x06026F22 RID: 159522 RVA: 0x0098214F File Offset: 0x0098034F
-		// (set) Token: 0x06026F23 RID: 159523 RVA: 0x0098215F File Offset: 0x0098035F
+		// Token: 0x170034E3 RID: 13539
+		// (get) Token: 0x0601EA6F RID: 125551 RVA: 0x009193EF File Offset: 0x009175EF
+		// (set) Token: 0x0601EA70 RID: 125552 RVA: 0x009193FF File Offset: 0x009175FF
 		public unsafe bool LOD1_ReduceIterations
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_61) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_LOD1_ReduceIterations) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_61) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_LOD1_ReduceIterations) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005575 RID: 21877
-		// (get) Token: 0x06026F24 RID: 159524 RVA: 0x00982170 File Offset: 0x00980370
-		// (set) Token: 0x06026F25 RID: 159525 RVA: 0x00982180 File Offset: 0x00980380
+		// Token: 0x170034E4 RID: 13540
+		// (get) Token: 0x0601EA71 RID: 125553 RVA: 0x00919410 File Offset: 0x00917610
+		// (set) Token: 0x0601EA72 RID: 125554 RVA: 0x00919420 File Offset: 0x00917620
 		public unsafe bool LOD2_ReduceSamplingFPS
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_62) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_LOD2_ReduceSamplingFPS) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_62) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_LOD2_ReduceSamplingFPS) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005576 RID: 21878
-		// (get) Token: 0x06026F26 RID: 159526 RVA: 0x00982191 File Offset: 0x00980391
-		// (set) Token: 0x06026F27 RID: 159527 RVA: 0x009821A1 File Offset: 0x009803A1
+		// Token: 0x170034E5 RID: 13541
+		// (get) Token: 0x0601EA73 RID: 125555 RVA: 0x00919431 File Offset: 0x00917631
+		// (set) Token: 0x0601EA74 RID: 125556 RVA: 0x00919441 File Offset: 0x00917641
 		public unsafe bool LOD3_ReduceCollisionAmount
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_63) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_LOD3_ReduceCollisionAmount) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_63) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_LOD3_ReduceCollisionAmount) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005577 RID: 21879
-		// (get) Token: 0x06026F28 RID: 159528 RVA: 0x009821B2 File Offset: 0x009803B2
-		// (set) Token: 0x06026F29 RID: 159529 RVA: 0x009821C2 File Offset: 0x009803C2
+		// Token: 0x170034E6 RID: 13542
+		// (get) Token: 0x0601EA75 RID: 125557 RVA: 0x00919452 File Offset: 0x00917652
+		// (set) Token: 0x0601EA76 RID: 125558 RVA: 0x00919462 File Offset: 0x00917662
 		public unsafe int MinSamplingFPS
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_64);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_MinSamplingFPS);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_64) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_MinSamplingFPS) = value;
 			}
 		}
 
-		// Token: 0x17005578 RID: 21880
-		// (get) Token: 0x06026F2A RID: 159530 RVA: 0x009821D3 File Offset: 0x009803D3
-		// (set) Token: 0x06026F2B RID: 159531 RVA: 0x009821E3 File Offset: 0x009803E3
+		// Token: 0x170034E7 RID: 13543
+		// (get) Token: 0x0601EA77 RID: 125559 RVA: 0x00919473 File Offset: 0x00917673
+		// (set) Token: 0x0601EA78 RID: 125560 RVA: 0x00919483 File Offset: 0x00917683
 		public unsafe float LOD_FarBound
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_65);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_LOD_FarBound);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_65) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_LOD_FarBound) = value;
 			}
 		}
 
-		// Token: 0x17005579 RID: 21881
-		// (get) Token: 0x06026F2C RID: 159532 RVA: 0x009821F4 File Offset: 0x009803F4
-		// (set) Token: 0x06026F2D RID: 159533 RVA: 0x00982204 File Offset: 0x00980404
+		// Token: 0x170034E8 RID: 13544
+		// (get) Token: 0x0601EA79 RID: 125561 RVA: 0x00919494 File Offset: 0x00917694
+		// (set) Token: 0x0601EA7A RID: 125562 RVA: 0x009194A4 File Offset: 0x009176A4
 		public unsafe float LOD_NearBound
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_66);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_LOD_NearBound);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_66) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_LOD_NearBound) = value;
 			}
 		}
 
-		// Token: 0x1700557A RID: 21882
-		// (get) Token: 0x06026F2E RID: 159534 RVA: 0x00982215 File Offset: 0x00980415
-		// (set) Token: 0x06026F2F RID: 159535 RVA: 0x00982225 File Offset: 0x00980425
+		// Token: 0x170034E9 RID: 13545
+		// (get) Token: 0x0601EA7B RID: 125563 RVA: 0x009194B5 File Offset: 0x009176B5
+		// (set) Token: 0x0601EA7C RID: 125564 RVA: 0x009194C5 File Offset: 0x009176C5
 		public unsafe int DownscaleCollisionPainterResolution
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_67);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_DownscaleCollisionPainterResolution);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_67) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_DownscaleCollisionPainterResolution) = value;
 			}
 		}
 
-		// Token: 0x1700557B RID: 21883
-		// (get) Token: 0x06026F30 RID: 159536 RVA: 0x00982236 File Offset: 0x00980436
-		// (set) Token: 0x06026F31 RID: 159537 RVA: 0x00982246 File Offset: 0x00980446
+		// Token: 0x170034EA RID: 13546
+		// (get) Token: 0x0601EA7D RID: 125565 RVA: 0x009194D6 File Offset: 0x009176D6
+		// (set) Token: 0x0601EA7E RID: 125566 RVA: 0x009194E6 File Offset: 0x009176E6
 		public unsafe int DownscalePressureResolution
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_68);
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_DownscalePressureResolution);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_68) = value;
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_DownscalePressureResolution) = value;
 			}
 		}
 
-		// Token: 0x1700557C RID: 21884
-		// (get) Token: 0x06026F32 RID: 159538 RVA: 0x00982257 File Offset: 0x00980457
-		// (set) Token: 0x06026F33 RID: 159539 RVA: 0x00982267 File Offset: 0x00980467
+		// Token: 0x170034EB RID: 13547
+		// (get) Token: 0x0601EA7F RID: 125567 RVA: 0x009194F7 File Offset: 0x009176F7
+		// (set) Token: 0x0601EA80 RID: 125568 RVA: 0x00919507 File Offset: 0x00917707
 		public unsafe bool SingleTargetMode
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_69) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_SingleTargetMode) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_69) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_SingleTargetMode) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700557D RID: 21885
-		// (get) Token: 0x06026F34 RID: 159540 RVA: 0x00982278 File Offset: 0x00980478
-		// (set) Token: 0x06026F35 RID: 159541 RVA: 0x00982288 File Offset: 0x00980488
+		// Token: 0x170034EC RID: 13548
+		// (get) Token: 0x0601EA81 RID: 125569 RVA: 0x00919518 File Offset: 0x00917718
+		// (set) Token: 0x0601EA82 RID: 125570 RVA: 0x00919528 File Offset: 0x00917728
 		public unsafe bool InitialActorsProcessed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_70) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_InitialActorsProcessed) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_70) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_InitialActorsProcessed) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700557E RID: 21886
-		// (get) Token: 0x06026F36 RID: 159542 RVA: 0x00982299 File Offset: 0x00980499
-		// (set) Token: 0x06026F37 RID: 159543 RVA: 0x009822A9 File Offset: 0x009804A9
+		// Token: 0x170034ED RID: 13549
+		// (get) Token: 0x0601EA83 RID: 125571 RVA: 0x00919539 File Offset: 0x00917739
+		// (set) Token: 0x0601EA84 RID: 125572 RVA: 0x00919549 File Offset: 0x00917749
 		public unsafe bool SKMeshTagged
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_71) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_SKMeshTagged) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_71) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_SKMeshTagged) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700557F RID: 21887
-		// (get) Token: 0x06026F38 RID: 159544 RVA: 0x009822BA File Offset: 0x009804BA
-		// (set) Token: 0x06026F39 RID: 159545 RVA: 0x009822CA File Offset: 0x009804CA
+		// Token: 0x170034EE RID: 13550
+		// (get) Token: 0x0601EA85 RID: 125573 RVA: 0x0091955A File Offset: 0x0091775A
+		// (set) Token: 0x0601EA86 RID: 125574 RVA: 0x0091956A File Offset: 0x0091776A
 		public unsafe bool bOnlySelfTraceMesh
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_72) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_bOnlySelfTraceMesh) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_72) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_bOnlySelfTraceMesh) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005580 RID: 21888
-		// (get) Token: 0x06026F3A RID: 159546 RVA: 0x009822DB File Offset: 0x009804DB
-		// (set) Token: 0x06026F3B RID: 159547 RVA: 0x009822EB File Offset: 0x009804EB
+		// Token: 0x170034EF RID: 13551
+		// (get) Token: 0x0601EA87 RID: 125575 RVA: 0x0091957B File Offset: 0x0091777B
+		// (set) Token: 0x0601EA88 RID: 125576 RVA: 0x0091958B File Offset: 0x0091778B
 		public unsafe bool bOnlyFirstSkeletal
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_73) != 0;
+				return *(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_bOnlyFirstSkeletal) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_73) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_bOnlyFirstSkeletal) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005581 RID: 21889
-		// (get) Token: 0x06026F3C RID: 159548 RVA: 0x009822FC File Offset: 0x009804FC
-		// (set) Token: 0x06026F3D RID: 159549 RVA: 0x00982335 File Offset: 0x00980535
+		// Token: 0x170034F0 RID: 13552
+		// (get) Token: 0x0601EA89 RID: 125577 RVA: 0x0091959C File Offset: 0x0091779C
+		// (set) Token: 0x0601EA8A RID: 125578 RVA: 0x009195D5 File Offset: 0x009177D5
 		[Nullable(1)]
 		public TArray<USkeletalMeshComponent> tempArray
 		{
@@ -1289,7 +1222,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 				TArray<USkeletalMeshComponent> result;
 				if ((result = this._tempArray) == null)
 				{
-					result = (this._tempArray = new TArray<USkeletalMeshComponent>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_74, this));
+					result = (this._tempArray = new TArray<USkeletalMeshComponent>(base.NativePtr + (IntPtr)NinjaLive_C.__PropertyOffset_tempArray, this));
 				}
 				return result;
 			}
@@ -1300,33 +1233,29 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			}
 		}
 
-		// Token: 0x06026F3E RID: 159550 RVA: 0x00982343 File Offset: 0x00980543
+		// Token: 0x0601EA8B RID: 125579 RVA: 0x009195E3 File Offset: 0x009177E3
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void ResetTempArrays()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__ResetTempArrays_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026F3F RID: 159551 RVA: 0x00982357 File Offset: 0x00980557
+		// Token: 0x0601EA8C RID: 125580 RVA: 0x009195F7 File Offset: 0x009177F7
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026F40 RID: 159552 RVA: 0x0098236B File Offset: 0x0098056B
+		// Token: 0x0601EA8D RID: 125581 RVA: 0x0091960B File Offset: 0x0091780B
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, NinjaLive_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, NinjaLive_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026F41 RID: 159553 RVA: 0x00982380 File Offset: 0x00980580
+		// Token: 0x0601EA8E RID: 125582 RVA: 0x00919620 File Offset: 0x00917820
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void InpTchEvt_Released(ETouchIndex FingerIndex, FVector Location)
 		{
 			NinjaLive_C.__InpTchEvt_Released_FunctionParams* ptr = stackalloc NinjaLive_C.__InpTchEvt_Released_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(NinjaLive_C.__InpTchEvt_Released_FunctionParams) & -16L;
@@ -1336,9 +1265,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__InpTchEvt_Released_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06026F42 RID: 159554 RVA: 0x009823D4 File Offset: 0x009805D4
+		// Token: 0x0601EA8F RID: 125583 RVA: 0x00919674 File Offset: 0x00917874
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void InpTchEvt_Pressed(ETouchIndex FingerIndex, FVector Location)
 		{
 			NinjaLive_C.__InpTchEvt_Pressed_FunctionParams* ptr = stackalloc NinjaLive_C.__InpTchEvt_Pressed_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(NinjaLive_C.__InpTchEvt_Pressed_FunctionParams) & -16L;
@@ -1348,9 +1276,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__InpTchEvt_Pressed_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06026F43 RID: 159555 RVA: 0x00982428 File Offset: 0x00980628
+		// Token: 0x0601EA90 RID: 125584 RVA: 0x009196C8 File Offset: 0x009178C8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_1(FKey Key)
 		{
 			NinjaLive_C.__InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_1_FunctionParams* ptr = stackalloc NinjaLive_C.__InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_1_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(NinjaLive_C.__InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_1_FunctionParams) & -16L;
@@ -1363,9 +1290,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			UnrealReflectionUtils.DestroyStruct(NinjaLive_C.__InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_1_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06026F44 RID: 159556 RVA: 0x0098249C File Offset: 0x0098069C
+		// Token: 0x0601EA91 RID: 125585 RVA: 0x0091973C File Offset: 0x0091793C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_0(FKey Key)
 		{
 			NinjaLive_C.__InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_0_FunctionParams* ptr = stackalloc NinjaLive_C.__InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_0_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(NinjaLive_C.__InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_0_FunctionParams) & -16L;
@@ -1378,9 +1304,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			UnrealReflectionUtils.DestroyStruct(NinjaLive_C.__InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_0_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06026F45 RID: 159557 RVA: 0x00982510 File Offset: 0x00980710
+		// Token: 0x0601EA92 RID: 125586 RVA: 0x009197B0 File Offset: 0x009179B0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void LiveActivation(FName ParamName, float FadeTimeOfBrush, float FadeTimeOfCanvas)
 		{
 			NinjaLive_C.__LiveActivation_FunctionParams* ptr = stackalloc NinjaLive_C.__LiveActivation_FunctionParams[(UIntPtr)35] + 15L / (long)sizeof(NinjaLive_C.__LiveActivation_FunctionParams) & -16L;
@@ -1391,9 +1316,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__LiveActivation_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06026F46 RID: 159558 RVA: 0x00982564 File Offset: 0x00980764
+		// Token: 0x0601EA93 RID: 125587 RVA: 0x00919804 File Offset: 0x00917A04
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void LiveFluidParams(float BrushSize)
 		{
 			NinjaLive_C.__LiveFluidParams_FunctionParams* ptr = stackalloc NinjaLive_C.__LiveFluidParams_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(NinjaLive_C.__LiveFluidParams_FunctionParams) & -16L;
@@ -1402,9 +1326,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__LiveFluidParams_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06026F47 RID: 159559 RVA: 0x009825AC File Offset: 0x009807AC
+		// Token: 0x0601EA94 RID: 125588 RVA: 0x0091984C File Offset: 0x00917A4C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			NinjaLive_C.__ReceiveTick_FunctionParams* ptr = stackalloc NinjaLive_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(NinjaLive_C.__ReceiveTick_FunctionParams) & -16L;
@@ -1413,76 +1336,67 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06026F48 RID: 159560 RVA: 0x009825F4 File Offset: 0x009807F4
+		// Token: 0x0601EA95 RID: 125589 RVA: 0x00919894 File Offset: 0x00917A94
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			NinjaLive_C.__ReceiveTick_FunctionParams* ptr = stackalloc NinjaLive_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(NinjaLive_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(NinjaLive_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, NinjaLive_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, NinjaLive_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06026F49 RID: 159561 RVA: 0x0098263B File Offset: 0x0098083B
+		// Token: 0x0601EA96 RID: 125590 RVA: 0x009198DA File Offset: 0x00917ADA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026F4A RID: 159562 RVA: 0x0098264F File Offset: 0x0098084F
+		// Token: 0x0601EA97 RID: 125591 RVA: 0x009198EE File Offset: 0x00917AEE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, NinjaLive_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, NinjaLive_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026F4B RID: 159563 RVA: 0x00982664 File Offset: 0x00980864
+		// Token: 0x0601EA98 RID: 125592 RVA: 0x00919902 File Offset: 0x00917B02
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void RePlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__RePlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026F4C RID: 159564 RVA: 0x00982678 File Offset: 0x00980878
+		// Token: 0x0601EA99 RID: 125593 RVA: 0x00919916 File Offset: 0x00917B16
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void BeforeCookForPC()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__BeforeCookForPC_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026F4D RID: 159565 RVA: 0x0098268C File Offset: 0x0098088C
+		// Token: 0x0601EA9A RID: 125594 RVA: 0x0091992A File Offset: 0x00917B2A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected override void BeforeCookForPC_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, NinjaLive_C.__BeforeCookForPC_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, NinjaLive_C.__BeforeCookForPC_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026F4E RID: 159566 RVA: 0x009826A1 File Offset: 0x009808A1
+		// Token: 0x0601EA9B RID: 125595 RVA: 0x0091993E File Offset: 0x00917B3E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void BeforeCookForMobile()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__BeforeCookForMobile_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026F4F RID: 159567 RVA: 0x009826B5 File Offset: 0x009808B5
+		// Token: 0x0601EA9C RID: 125596 RVA: 0x00919952 File Offset: 0x00917B52
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected override void BeforeCookForMobile_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, NinjaLive_C.__BeforeCookForMobile_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, NinjaLive_C.__BeforeCookForMobile_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026F50 RID: 159568 RVA: 0x009826CC File Offset: 0x009808CC
+		// Token: 0x0601EA9D RID: 125597 RVA: 0x00919968 File Offset: 0x00917B68
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void BeginOverlapComponent(UPrimitiveComponent OverlappedComponent, AActor OtherActor, UPrimitiveComponent OtherComp, int OtherBodyIndex, bool bFromSweep, in FHitResult SweepResult)
 		{
 			NinjaLive_C.__BeginOverlapComponent_FunctionParams* ptr = stackalloc NinjaLive_C.__BeginOverlapComponent_FunctionParams[(UIntPtr)199] + 15L / (long)sizeof(NinjaLive_C.__BeginOverlapComponent_FunctionParams) & -16L;
@@ -1499,9 +1413,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__BeginOverlapComponent_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06026F51 RID: 159569 RVA: 0x00982788 File Offset: 0x00980988
+		// Token: 0x0601EA9E RID: 125598 RVA: 0x00919A24 File Offset: 0x00917C24
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void EndOverlapComponent(UPrimitiveComponent OverlappedComponent, AActor OtherActor, UPrimitiveComponent OtherComp, int OtherBodyIndex)
 		{
 			NinjaLive_C.__EndOverlapComponent_FunctionParams* ptr = stackalloc NinjaLive_C.__EndOverlapComponent_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(NinjaLive_C.__EndOverlapComponent_FunctionParams) & -16L;
@@ -1513,9 +1426,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__EndOverlapComponent_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06026F52 RID: 159570 RVA: 0x00982814 File Offset: 0x00980A14
+		// Token: 0x0601EA9F RID: 125599 RVA: 0x00919AB0 File Offset: 0x00917CB0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveActorEndOverlap(AActor OtherActor)
 		{
 			NinjaLive_C.__ReceiveActorEndOverlap_FunctionParams* ptr = stackalloc NinjaLive_C.__ReceiveActorEndOverlap_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(NinjaLive_C.__ReceiveActorEndOverlap_FunctionParams) & -16L;
@@ -1524,20 +1436,18 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__ReceiveActorEndOverlap_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06026F53 RID: 159571 RVA: 0x0098286C File Offset: 0x00980A6C
+		// Token: 0x0601EAA0 RID: 125600 RVA: 0x00919B08 File Offset: 0x00917D08
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveActorEndOverlap_Implementation(AActor OtherActor)
 		{
 			NinjaLive_C.__ReceiveActorEndOverlap_FunctionParams* ptr = stackalloc NinjaLive_C.__ReceiveActorEndOverlap_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(NinjaLive_C.__ReceiveActorEndOverlap_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(NinjaLive_C.__ReceiveActorEndOverlap_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->OtherActor = ((OtherActor != null) ? OtherActor.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, NinjaLive_C.__ReceiveActorEndOverlap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, NinjaLive_C.__ReceiveActorEndOverlap_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06026F54 RID: 159572 RVA: 0x009828C4 File Offset: 0x00980AC4
+		// Token: 0x0601EAA1 RID: 125601 RVA: 0x00919B60 File Offset: 0x00917D60
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveActorBeginOverlap(AActor OtherActor)
 		{
 			NinjaLive_C.__ReceiveActorBeginOverlap_FunctionParams* ptr = stackalloc NinjaLive_C.__ReceiveActorBeginOverlap_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(NinjaLive_C.__ReceiveActorBeginOverlap_FunctionParams) & -16L;
@@ -1546,87 +1456,77 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, NinjaLive_C.__ReceiveActorBeginOverlap_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06026F55 RID: 159573 RVA: 0x0098291C File Offset: 0x00980B1C
+		// Token: 0x0601EAA2 RID: 125602 RVA: 0x00919BB8 File Offset: 0x00917DB8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveActorBeginOverlap_Implementation(AActor OtherActor)
 		{
 			NinjaLive_C.__ReceiveActorBeginOverlap_FunctionParams* ptr = stackalloc NinjaLive_C.__ReceiveActorBeginOverlap_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(NinjaLive_C.__ReceiveActorBeginOverlap_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(NinjaLive_C.__ReceiveActorBeginOverlap_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->OtherActor = ((OtherActor != null) ? OtherActor.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, NinjaLive_C.__ReceiveActorBeginOverlap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, NinjaLive_C.__ReceiveActorBeginOverlap_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06026F56 RID: 159574 RVA: 0x00982972 File Offset: 0x00980B72
+		// Token: 0x0601EAA3 RID: 125603 RVA: 0x00919C0D File Offset: 0x00917E0D
 		protected NinjaLive_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401396C RID: 80236
+		// Token: 0x040103F3 RID: 66547
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/FluidNinjaLive/NinjaLive.NinjaLive_C";
 
-		// Token: 0x0401396D RID: 80237
+		// Token: 0x040103F4 RID: 66548
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401396E RID: 80238
+		// Token: 0x040103F5 RID: 66549
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401396F RID: 80239
+		// Token: 0x040103F6 RID: 66550
 		public static IntPtr __OwnerRePlayEvent__DelegateSignature_NativeFunctionPtr;
 
-		// Token: 0x04013970 RID: 80240
-		internal static int __PropertyOffset_1;
+		// Token: 0x040103F7 RID: 66551
+		internal static int __PropertyOffset_InteractionVolume;
 
-		// Token: 0x04013971 RID: 80241
-		internal static int __PropertyOffset_2;
+		// Token: 0x040103F8 RID: 66552
+		internal static int __PropertyOffset_ActivationVolume;
 
-		// Token: 0x04013972 RID: 80242
-		internal static int __PropertyOffset_3;
+		// Token: 0x040103F9 RID: 66553
+		internal static int __PropertyOffset_TraceMesh;
 
-		// Token: 0x04013973 RID: 80243
-		internal static int __PropertyOffset_4;
+		// Token: 0x040103FA RID: 66554
+		internal static int __PropertyOffset_Root;
 
-		// Token: 0x04013974 RID: 80244
-		internal static int __PropertyOffset_5;
+		// Token: 0x040103FB RID: 66555
+		internal static int __PropertyOffset_RT_DensityPreview;
 
-		// Token: 0x04013975 RID: 80245
-		internal static int __PropertyOffset_6;
+		// Token: 0x040103FC RID: 66556
+		internal static int __PropertyOffset_InactiveGrayMaterial;
 
-		// Token: 0x04013976 RID: 80246
-		internal static int __PropertyOffset_7;
+		// Token: 0x040103FD RID: 66557
+		internal static int __PropertyOffset_DisableBlueprint;
 
-		// Token: 0x04013977 RID: 80247
-		internal static int __PropertyOffset_8;
+		// Token: 0x040103FE RID: 66558
+		internal static int __PropertyOffset_TimeCounterForBrush;
 
-		// Token: 0x04013978 RID: 80248
-		internal static int __PropertyOffset_9;
+		// Token: 0x040103FF RID: 66559
+		internal static int __PropertyOffset_DeltaSeconds;
 
-		// Token: 0x04013979 RID: 80249
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010400 RID: 66560
+		internal static int __PropertyOffset_MousePressed;
 
-		// Token: 0x0401397A RID: 80250
-		internal static int __PropertyOffset_11;
+		// Token: 0x04010401 RID: 66561
+		internal static int __PropertyOffset_ShowTraceMeshInEditor;
 
-		// Token: 0x0401397B RID: 80251
-		internal static int __PropertyOffset_12;
+		// Token: 0x04010402 RID: 66562
+		internal static int __PropertyOffset_TraceMeshSize;
 
-		// Token: 0x0401397C RID: 80252
-		internal static int __PropertyOffset_13;
+		// Token: 0x04010403 RID: 66563
+		internal static int __PropertyOffset_OverlapBasedInteraction;
 
-		// Token: 0x0401397D RID: 80253
-		internal static int __PropertyOffset_14;
+		// Token: 0x04010404 RID: 66564
+		internal static int __PropertyOffset_NinjaLIVECollisionExclude;
 
-		// Token: 0x0401397E RID: 80254
-		internal static int __PropertyOffset_15;
-
-		// Token: 0x0401397F RID: 80255
-		internal static int __PropertyOffset_16;
-
-		// Token: 0x04013980 RID: 80256
-		internal static int __PropertyOffset_17;
-
-		// Token: 0x04013981 RID: 80257
+		// Token: 0x04010405 RID: 66565
 		[Nullable(new byte[]
 		{
 			2,
@@ -1634,67 +1534,67 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 		})]
 		private TArray<NinjaLive_C> _NinjaLIVECollisionExclude;
 
-		// Token: 0x04013982 RID: 80258
-		internal static int __PropertyOffset_18;
+		// Token: 0x04010406 RID: 66566
+		internal static int __PropertyOffset_Time;
 
-		// Token: 0x04013983 RID: 80259
-		internal static int __PropertyOffset_19;
+		// Token: 0x04010407 RID: 66567
+		internal static int __PropertyOffset_SimActivatedByPawnProximity;
 
-		// Token: 0x04013984 RID: 80260
-		internal static int __PropertyOffset_20;
+		// Token: 0x04010408 RID: 66568
+		internal static int __PropertyOffset_ShowActivationVolumeInEditor;
 
-		// Token: 0x04013985 RID: 80261
-		internal static int __PropertyOffset_21;
+		// Token: 0x04010409 RID: 66569
+		internal static int __PropertyOffset_ActivationVolumeSize;
 
-		// Token: 0x04013986 RID: 80262
-		internal static int __PropertyOffset_22;
+		// Token: 0x0401040A RID: 66570
+		internal static int __PropertyOffset_ActivatorProximityCheckFrequency;
 
-		// Token: 0x04013987 RID: 80263
-		internal static int __PropertyOffset_23;
+		// Token: 0x0401040B RID: 66571
+		internal static int __PropertyOffset_ActivatorType;
 
-		// Token: 0x04013988 RID: 80264
-		internal static int __PropertyOffset_24;
+		// Token: 0x0401040C RID: 66572
+		internal static int __PropertyOffset_Activator;
 
-		// Token: 0x04013989 RID: 80265
-		internal static int __PropertyOffset_25;
+		// Token: 0x0401040D RID: 66573
+		internal static int __PropertyOffset_PawnInsideActivationBounds;
 
-		// Token: 0x0401398A RID: 80266
-		internal static int __PropertyOffset_26;
+		// Token: 0x0401040E RID: 66574
+		internal static int __PropertyOffset_InitDone;
 
-		// Token: 0x0401398B RID: 80267
-		internal static int __PropertyOffset_27;
+		// Token: 0x0401040F RID: 66575
+		internal static int __PropertyOffset_BeginPlaySupressed;
 
-		// Token: 0x0401398C RID: 80268
-		internal static int __PropertyOffset_28;
+		// Token: 0x04010410 RID: 66576
+		internal static int __PropertyOffset_UseTraceMeshAsInteractionVolume;
 
-		// Token: 0x0401398D RID: 80269
-		internal static int __PropertyOffset_29;
+		// Token: 0x04010411 RID: 66577
+		internal static int __PropertyOffset_ShowInteractionVolumeInEditor;
 
-		// Token: 0x0401398E RID: 80270
-		internal static int __PropertyOffset_30;
+		// Token: 0x04010412 RID: 66578
+		internal static int __PropertyOffset_InteractionVolumeSize;
 
-		// Token: 0x0401398F RID: 80271
-		internal static int __PropertyOffset_31;
+		// Token: 0x04010413 RID: 66579
+		internal static int __PropertyOffset_MultipleTouchLookup;
 
-		// Token: 0x04013990 RID: 80272
+		// Token: 0x04010414 RID: 66580
 		private TArray<bool> _MultipleTouchLookup;
 
-		// Token: 0x04013991 RID: 80273
-		internal static int __PropertyOffset_32;
+		// Token: 0x04010415 RID: 66581
+		internal static int __PropertyOffset_TickRateCustom;
 
-		// Token: 0x04013992 RID: 80274
-		internal static int __PropertyOffset_33;
+		// Token: 0x04010416 RID: 66582
+		internal static int __PropertyOffset_InteractionVolumeTemplate;
 
-		// Token: 0x04013993 RID: 80275
-		internal static int __PropertyOffset_34;
+		// Token: 0x04010417 RID: 66583
+		internal static int __PropertyOffset_TrackActorPrimitiveComponentsWithTag;
 
-		// Token: 0x04013994 RID: 80276
-		internal static int __PropertyOffset_35;
+		// Token: 0x04010418 RID: 66584
+		internal static int __PropertyOffset_TrackActorSkeletalMeshComponentsWithTag;
 
-		// Token: 0x04013995 RID: 80277
-		internal static int __PropertyOffset_36;
+		// Token: 0x04010419 RID: 66585
+		internal static int __PropertyOffset_OverlapFilterInclusiveObjType;
 
-		// Token: 0x04013996 RID: 80278
+		// Token: 0x0401041A RID: 66586
 		[Nullable(new byte[]
 		{
 			2,
@@ -1702,16 +1602,16 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 		})]
 		private TArray<TEnumAsByte<EObjectTypeQuery>> _OverlapFilterInclusiveObjType;
 
-		// Token: 0x04013997 RID: 80279
-		internal static int __PropertyOffset_37;
+		// Token: 0x0401041B RID: 66587
+		internal static int __PropertyOffset_OverlapFilterInclusiveBoneNameExact;
 
-		// Token: 0x04013998 RID: 80280
+		// Token: 0x0401041C RID: 66588
 		private TArray<FName> _OverlapFilterInclusiveBoneNameExact;
 
-		// Token: 0x04013999 RID: 80281
-		internal static int __PropertyOffset_38;
+		// Token: 0x0401041D RID: 66589
+		internal static int __PropertyOffset_OverlapFilterInclusiveBoneNamePartial;
 
-		// Token: 0x0401399A RID: 80282
+		// Token: 0x0401041E RID: 66590
 		[Nullable(new byte[]
 		{
 			2,
@@ -1719,10 +1619,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 		})]
 		private TArray<string> _OverlapFilterInclusiveBoneNamePartial;
 
-		// Token: 0x0401399B RID: 80283
-		internal static int __PropertyOffset_39;
+		// Token: 0x0401041F RID: 66591
+		internal static int __PropertyOffset_ExcludeSpecificActorsFromOverlap;
 
-		// Token: 0x0401399C RID: 80284
+		// Token: 0x04010420 RID: 66592
 		[Nullable(new byte[]
 		{
 			2,
@@ -1730,13 +1630,13 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 		})]
 		private TArray<AActor> _ExcludeSpecificActorsFromOverlap;
 
-		// Token: 0x0401399D RID: 80285
-		internal static int __PropertyOffset_40;
+		// Token: 0x04010421 RID: 66593
+		internal static int __PropertyOffset_AutoExcludeLargeOverlappingObjects;
 
-		// Token: 0x0401399E RID: 80286
-		internal static int __PropertyOffset_41;
+		// Token: 0x04010422 RID: 66594
+		internal static int __PropertyOffset_OverlapFilterInclusiveCollisionType;
 
-		// Token: 0x0401399F RID: 80287
+		// Token: 0x04010423 RID: 66595
 		[Nullable(new byte[]
 		{
 			2,
@@ -1745,37 +1645,34 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 		})]
 		private TMap<TEnumAsByte<ECollisionChannel>, TEnumAsByte<EObjectTypeQuery>> _OverlapFilterInclusiveCollisionType;
 
-		// Token: 0x040139A0 RID: 80288
-		internal static int __PropertyOffset_42;
+		// Token: 0x04010424 RID: 66596
+		internal static int __PropertyOffset_ActivationEventsDebugPrint;
 
-		// Token: 0x040139A1 RID: 80289
-		internal static int __PropertyOffset_43;
+		// Token: 0x04010425 RID: 66597
+		internal static int __PropertyOffset_SimContainerCapacityWarning;
 
-		// Token: 0x040139A2 RID: 80290
-		internal static int __PropertyOffset_44;
+		// Token: 0x04010426 RID: 66598
+		internal static int __PropertyOffset_SaveDebugTextToLog;
 
-		// Token: 0x040139A3 RID: 80291
-		internal static int __PropertyOffset_45;
+		// Token: 0x04010427 RID: 66599
+		internal static int __PropertyOffset_DebugTextLifeTimeLength;
 
-		// Token: 0x040139A4 RID: 80292
-		internal static int __PropertyOffset_46;
+		// Token: 0x04010428 RID: 66600
+		internal static int __PropertyOffset_OverlappingSkeletalMesh;
 
-		// Token: 0x040139A5 RID: 80293
-		internal static int __PropertyOffset_47;
+		// Token: 0x04010429 RID: 66601
+		internal static int __PropertyOffset_BrushStrengthTemp2;
 
-		// Token: 0x040139A6 RID: 80294
-		internal static int __PropertyOffset_48;
+		// Token: 0x0401042A RID: 66602
+		internal static int __PropertyOffset_InputFeedbackTemp1;
 
-		// Token: 0x040139A7 RID: 80295
-		internal static int __PropertyOffset_49;
+		// Token: 0x0401042B RID: 66603
+		internal static int __PropertyOffset_DisableAndNotTickBlock;
 
-		// Token: 0x040139A8 RID: 80296
-		internal static int __PropertyOffset_50;
+		// Token: 0x0401042C RID: 66604
+		internal static int __PropertyOffset_OverlappingComponents;
 
-		// Token: 0x040139A9 RID: 80297
-		internal static int __PropertyOffset_51;
-
-		// Token: 0x040139AA RID: 80298
+		// Token: 0x0401042D RID: 66605
 		[Nullable(new byte[]
 		{
 			2,
@@ -1783,10 +1680,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 		})]
 		private TArray<UPrimitiveComponent> _OverlappingComponents;
 
-		// Token: 0x040139AB RID: 80299
-		internal static int __PropertyOffset_52;
+		// Token: 0x0401042E RID: 66606
+		internal static int __PropertyOffset_OverlappingActors;
 
-		// Token: 0x040139AC RID: 80300
+		// Token: 0x0401042F RID: 66607
 		[Nullable(new byte[]
 		{
 			2,
@@ -1794,10 +1691,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 		})]
 		private TArray<AActor> _OverlappingActors;
 
-		// Token: 0x040139AD RID: 80301
-		internal static int __PropertyOffset_53;
+		// Token: 0x04010430 RID: 66608
+		internal static int __PropertyOffset_SkeletalMesh_TempArray_Pairs;
 
-		// Token: 0x040139AE RID: 80302
+		// Token: 0x04010431 RID: 66609
 		[Nullable(new byte[]
 		{
 			2,
@@ -1805,10 +1702,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 		})]
 		private TMap<int, UPrimitiveComponent> _SkeletalMesh_TempArray_Pairs;
 
-		// Token: 0x040139AF RID: 80303
-		internal static int __PropertyOffset_54;
+		// Token: 0x04010432 RID: 66610
+		internal static int __PropertyOffset_OverlappingActorsInitial;
 
-		// Token: 0x040139B0 RID: 80304
+		// Token: 0x04010433 RID: 66611
 		[Nullable(new byte[]
 		{
 			2,
@@ -1816,70 +1713,70 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 		})]
 		private TArray<AActor> _OverlappingActorsInitial;
 
-		// Token: 0x040139B1 RID: 80305
-		internal static int __PropertyOffset_55;
+		// Token: 0x04010434 RID: 66612
+		internal static int __PropertyOffset_OwnerRePlayEvent;
 
-		// Token: 0x040139B2 RID: 80306
+		// Token: 0x04010435 RID: 66613
 		private OwnerRePlayEvent _OwnerRePlayEvent;
 
-		// Token: 0x040139B3 RID: 80307
-		internal static int __PropertyOffset_56;
+		// Token: 0x04010436 RID: 66614
+		internal static int __PropertyOffset_OverrideComponentVariables;
 
-		// Token: 0x040139B4 RID: 80308
-		internal static int __PropertyOffset_57;
+		// Token: 0x04010437 RID: 66615
+		internal static int __PropertyOffset_AutoConnectToMemoryPool_IF_Found;
 
-		// Token: 0x040139B5 RID: 80309
-		internal static int __PropertyOffset_58;
+		// Token: 0x04010438 RID: 66616
+		internal static int __PropertyOffset_OutputFilterMaterialIndex;
 
-		// Token: 0x040139B6 RID: 80310
-		internal static int __PropertyOffset_59;
+		// Token: 0x04010439 RID: 66617
+		internal static int __PropertyOffset_ShowLODdebugMessagesOnScreen;
 
-		// Token: 0x040139B7 RID: 80311
-		internal static int __PropertyOffset_60;
+		// Token: 0x0401043A RID: 66618
+		internal static int __PropertyOffset_GlobalBrushScale;
 
-		// Token: 0x040139B8 RID: 80312
-		internal static int __PropertyOffset_61;
+		// Token: 0x0401043B RID: 66619
+		internal static int __PropertyOffset_LOD1_ReduceIterations;
 
-		// Token: 0x040139B9 RID: 80313
-		internal static int __PropertyOffset_62;
+		// Token: 0x0401043C RID: 66620
+		internal static int __PropertyOffset_LOD2_ReduceSamplingFPS;
 
-		// Token: 0x040139BA RID: 80314
-		internal static int __PropertyOffset_63;
+		// Token: 0x0401043D RID: 66621
+		internal static int __PropertyOffset_LOD3_ReduceCollisionAmount;
 
-		// Token: 0x040139BB RID: 80315
-		internal static int __PropertyOffset_64;
+		// Token: 0x0401043E RID: 66622
+		internal static int __PropertyOffset_MinSamplingFPS;
 
-		// Token: 0x040139BC RID: 80316
-		internal static int __PropertyOffset_65;
+		// Token: 0x0401043F RID: 66623
+		internal static int __PropertyOffset_LOD_FarBound;
 
-		// Token: 0x040139BD RID: 80317
-		internal static int __PropertyOffset_66;
+		// Token: 0x04010440 RID: 66624
+		internal static int __PropertyOffset_LOD_NearBound;
 
-		// Token: 0x040139BE RID: 80318
-		internal static int __PropertyOffset_67;
+		// Token: 0x04010441 RID: 66625
+		internal static int __PropertyOffset_DownscaleCollisionPainterResolution;
 
-		// Token: 0x040139BF RID: 80319
-		internal static int __PropertyOffset_68;
+		// Token: 0x04010442 RID: 66626
+		internal static int __PropertyOffset_DownscalePressureResolution;
 
-		// Token: 0x040139C0 RID: 80320
-		internal static int __PropertyOffset_69;
+		// Token: 0x04010443 RID: 66627
+		internal static int __PropertyOffset_SingleTargetMode;
 
-		// Token: 0x040139C1 RID: 80321
-		internal static int __PropertyOffset_70;
+		// Token: 0x04010444 RID: 66628
+		internal static int __PropertyOffset_InitialActorsProcessed;
 
-		// Token: 0x040139C2 RID: 80322
-		internal static int __PropertyOffset_71;
+		// Token: 0x04010445 RID: 66629
+		internal static int __PropertyOffset_SKMeshTagged;
 
-		// Token: 0x040139C3 RID: 80323
-		internal static int __PropertyOffset_72;
+		// Token: 0x04010446 RID: 66630
+		internal static int __PropertyOffset_bOnlySelfTraceMesh;
 
-		// Token: 0x040139C4 RID: 80324
-		internal static int __PropertyOffset_73;
+		// Token: 0x04010447 RID: 66631
+		internal static int __PropertyOffset_bOnlyFirstSkeletal;
 
-		// Token: 0x040139C5 RID: 80325
-		internal static int __PropertyOffset_74;
+		// Token: 0x04010448 RID: 66632
+		internal static int __PropertyOffset_tempArray;
 
-		// Token: 0x040139C6 RID: 80326
+		// Token: 0x04010449 RID: 66633
 		[Nullable(new byte[]
 		{
 			2,
@@ -1887,222 +1784,222 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.FluidNinjaLive
 		})]
 		private TArray<USkeletalMeshComponent> _tempArray;
 
-		// Token: 0x040139C7 RID: 80327
+		// Token: 0x0401044A RID: 66634
 		private static IntPtr __ResetTempArrays_NativeFunctionPtr;
 
-		// Token: 0x040139C8 RID: 80328
+		// Token: 0x0401044B RID: 66635
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x040139C9 RID: 80329
+		// Token: 0x0401044C RID: 66636
 		private static IntPtr __InpTchEvt_Released_NativeFunctionPtr;
 
-		// Token: 0x040139CA RID: 80330
+		// Token: 0x0401044D RID: 66637
 		private static IntPtr __InpTchEvt_Pressed_NativeFunctionPtr;
 
-		// Token: 0x040139CB RID: 80331
+		// Token: 0x0401044E RID: 66638
 		private static IntPtr __InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_1_NativeFunctionPtr;
 
-		// Token: 0x040139CC RID: 80332
+		// Token: 0x0401044F RID: 66639
 		private static IntPtr __InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_0_NativeFunctionPtr;
 
-		// Token: 0x040139CD RID: 80333
+		// Token: 0x04010450 RID: 66640
 		private static IntPtr __LiveActivation_NativeFunctionPtr;
 
-		// Token: 0x040139CE RID: 80334
+		// Token: 0x04010451 RID: 66641
 		private static IntPtr __LiveFluidParams_NativeFunctionPtr;
 
-		// Token: 0x040139CF RID: 80335
+		// Token: 0x04010452 RID: 66642
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x040139D0 RID: 80336
+		// Token: 0x04010453 RID: 66643
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x040139D1 RID: 80337
+		// Token: 0x04010454 RID: 66644
 		private static IntPtr __RePlay_NativeFunctionPtr;
 
-		// Token: 0x040139D2 RID: 80338
+		// Token: 0x04010455 RID: 66645
 		private static IntPtr __BeforeCookForPC_NativeFunctionPtr;
 
-		// Token: 0x040139D3 RID: 80339
+		// Token: 0x04010456 RID: 66646
 		private static IntPtr __BeforeCookForMobile_NativeFunctionPtr;
 
-		// Token: 0x040139D4 RID: 80340
+		// Token: 0x04010457 RID: 66647
 		private static IntPtr __BeginOverlapComponent_NativeFunctionPtr;
 
-		// Token: 0x040139D5 RID: 80341
+		// Token: 0x04010458 RID: 66648
 		private static IntPtr __EndOverlapComponent_NativeFunctionPtr;
 
-		// Token: 0x040139D6 RID: 80342
+		// Token: 0x04010459 RID: 66649
 		private static IntPtr __ReceiveActorEndOverlap_NativeFunctionPtr;
 
-		// Token: 0x040139D7 RID: 80343
+		// Token: 0x0401045A RID: 66650
 		private static IntPtr __ReceiveActorBeginOverlap_NativeFunctionPtr;
 
-		// Token: 0x0200A15C RID: 41308
+		// Token: 0x02008EA5 RID: 36517
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InpTchEvt_Released_FunctionParams
 		{
-			// Token: 0x04031D0C RID: 204044
+			// Token: 0x0402CB35 RID: 183093
 			[FieldOffset(0)]
 			public TEnumAsByte<ETouchIndex> FingerIndex;
 
-			// Token: 0x04031D0D RID: 204045
+			// Token: 0x0402CB36 RID: 183094
 			[FieldOffset(4)]
 			public FVector Location;
 		}
 
-		// Token: 0x0200A15D RID: 41309
+		// Token: 0x02008EA6 RID: 36518
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InpTchEvt_Pressed_FunctionParams
 		{
-			// Token: 0x04031D0E RID: 204046
+			// Token: 0x0402CB37 RID: 183095
 			[FieldOffset(0)]
 			public TEnumAsByte<ETouchIndex> FingerIndex;
 
-			// Token: 0x04031D0F RID: 204047
+			// Token: 0x0402CB38 RID: 183096
 			[FieldOffset(4)]
 			public FVector Location;
 		}
 
-		// Token: 0x0200A15E RID: 41310
+		// Token: 0x02008EA7 RID: 36519
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_1_FunctionParams
 		{
-			// Token: 0x04031D10 RID: 204048
+			// Token: 0x0402CB39 RID: 183097
 			[FieldOffset(0)]
 			public byte Key;
 		}
 
-		// Token: 0x0200A15F RID: 41311
+		// Token: 0x02008EA8 RID: 36520
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_0_FunctionParams
 		{
-			// Token: 0x04031D11 RID: 204049
+			// Token: 0x0402CB3A RID: 183098
 			[FieldOffset(0)]
 			public byte Key;
 		}
 
-		// Token: 0x0200A160 RID: 41312
+		// Token: 0x02008EA9 RID: 36521
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 20)]
 		protected ref struct __LiveActivation_FunctionParams
 		{
-			// Token: 0x04031D12 RID: 204050
+			// Token: 0x0402CB3B RID: 183099
 			[FieldOffset(0)]
 			public FName ParamName;
 
-			// Token: 0x04031D13 RID: 204051
+			// Token: 0x0402CB3C RID: 183100
 			[FieldOffset(12)]
 			public float FadeTimeOfBrush;
 
-			// Token: 0x04031D14 RID: 204052
+			// Token: 0x0402CB3D RID: 183101
 			[FieldOffset(16)]
 			public float FadeTimeOfCanvas;
 		}
 
-		// Token: 0x0200A161 RID: 41313
+		// Token: 0x02008EAA RID: 36522
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __LiveFluidParams_FunctionParams
 		{
-			// Token: 0x04031D15 RID: 204053
+			// Token: 0x0402CB3E RID: 183102
 			[FieldOffset(0)]
 			public float BrushSize;
 		}
 
-		// Token: 0x0200A162 RID: 41314
+		// Token: 0x02008EAB RID: 36523
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x04031D16 RID: 204054
+			// Token: 0x0402CB3F RID: 183103
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x0200A163 RID: 41315
+		// Token: 0x02008EAC RID: 36524
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 184)]
 		protected ref struct __BeginOverlapComponent_FunctionParams
 		{
-			// Token: 0x04031D17 RID: 204055
+			// Token: 0x0402CB40 RID: 183104
 			[FieldOffset(0)]
 			public IntPtr OverlappedComponent;
 
-			// Token: 0x04031D18 RID: 204056
+			// Token: 0x0402CB41 RID: 183105
 			[FieldOffset(8)]
 			public IntPtr OtherActor;
 
-			// Token: 0x04031D19 RID: 204057
+			// Token: 0x0402CB42 RID: 183106
 			[FieldOffset(16)]
 			public IntPtr OtherComp;
 
-			// Token: 0x04031D1A RID: 204058
+			// Token: 0x0402CB43 RID: 183107
 			[FieldOffset(24)]
 			public int OtherBodyIndex;
 
-			// Token: 0x04031D1B RID: 204059
+			// Token: 0x0402CB44 RID: 183108
 			[FieldOffset(28)]
 			public bool bFromSweep;
 
-			// Token: 0x04031D1C RID: 204060
+			// Token: 0x0402CB45 RID: 183109
 			[FieldOffset(32)]
 			public byte SweepResult;
 		}
 
-		// Token: 0x0200A164 RID: 41316
+		// Token: 0x02008EAD RID: 36525
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __EndOverlapComponent_FunctionParams
 		{
-			// Token: 0x04031D1D RID: 204061
+			// Token: 0x0402CB46 RID: 183110
 			[FieldOffset(0)]
 			public IntPtr OverlappedComponent;
 
-			// Token: 0x04031D1E RID: 204062
+			// Token: 0x0402CB47 RID: 183111
 			[FieldOffset(8)]
 			public IntPtr OtherActor;
 
-			// Token: 0x04031D1F RID: 204063
+			// Token: 0x0402CB48 RID: 183112
 			[FieldOffset(16)]
 			public IntPtr OtherComp;
 
-			// Token: 0x04031D20 RID: 204064
+			// Token: 0x0402CB49 RID: 183113
 			[FieldOffset(24)]
 			public int OtherBodyIndex;
 		}
 
-		// Token: 0x0200A165 RID: 41317
+		// Token: 0x02008EAE RID: 36526
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected new ref struct __ReceiveActorEndOverlap_FunctionParams
 		{
-			// Token: 0x04031D21 RID: 204065
+			// Token: 0x0402CB4A RID: 183114
 			[FieldOffset(0)]
 			public IntPtr OtherActor;
 		}
 
-		// Token: 0x0200A166 RID: 41318
+		// Token: 0x02008EAF RID: 36527
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected new ref struct __ReceiveActorBeginOverlap_FunctionParams
 		{
-			// Token: 0x04031D22 RID: 204066
+			// Token: 0x0402CB4B RID: 183115
 			[FieldOffset(0)]
 			public IntPtr OtherActor;
 		}

@@ -10,12 +10,12 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 {
-	// Token: 0x020047AF RID: 18351
+	// Token: 0x020036E0 RID: 14048
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WorldMapInteractComponent : MapComponent
 	{
-		// Token: 0x060300A8 RID: 196776 RVA: 0x00B21D85 File Offset: 0x00B1FF85
+		// Token: 0x06024877 RID: 149623 RVA: 0x00A51CD1 File Offset: 0x00A4FED1
 		public WorldMapInteractComponent([Nullable(new byte[]
 		{
 			0,
@@ -26,8 +26,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 		{
 		}
 
-		// Token: 0x17007842 RID: 30786
-		// (get) Token: 0x060300A9 RID: 196777 RVA: 0x00B21DA4 File Offset: 0x00B1FFA4
+		// Token: 0x17004AFE RID: 19198
+		// (get) Token: 0x06024878 RID: 149624 RVA: 0x00A51CF0 File Offset: 0x00A4FEF0
 		public override EMapComponent ComponentType
 		{
 			get
@@ -36,8 +36,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007843 RID: 30787
-		// (get) Token: 0x060300AA RID: 196778 RVA: 0x00B21DA7 File Offset: 0x00B1FFA7
+		// Token: 0x17004AFF RID: 19199
+		// (get) Token: 0x06024879 RID: 149625 RVA: 0x00A51CF3 File Offset: 0x00A4FEF3
 		public bool IsJoystickMoving
 		{
 			get
@@ -46,8 +46,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007844 RID: 30788
-		// (get) Token: 0x060300AB RID: 196779 RVA: 0x00B21DB9 File Offset: 0x00B1FFB9
+		// Token: 0x17004B00 RID: 19200
+		// (get) Token: 0x0602487A RID: 149626 RVA: 0x00A51D05 File Offset: 0x00A4FF05
 		public bool IsJoystickFocus
 		{
 			get
@@ -56,8 +56,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007845 RID: 30789
-		// (get) Token: 0x060300AC RID: 196780 RVA: 0x00B21DC1 File Offset: 0x00B1FFC1
+		// Token: 0x17004B01 RID: 19201
+		// (get) Token: 0x0602487B RID: 149627 RVA: 0x00A51D0D File Offset: 0x00A4FF0D
 		[Nullable(1)]
 		public Vector2D MultiTouchOriginCenter
 		{
@@ -68,8 +68,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007846 RID: 30790
-		// (get) Token: 0x060300AD RID: 196781 RVA: 0x00B21DC9 File Offset: 0x00B1FFC9
+		// Token: 0x17004B02 RID: 19202
+		// (get) Token: 0x0602487C RID: 149628 RVA: 0x00A51D15 File Offset: 0x00A4FF15
 		public bool IsDragging
 		{
 			get
@@ -78,9 +78,9 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007847 RID: 30791
-		// (get) Token: 0x060300AE RID: 196782 RVA: 0x00B21DD1 File Offset: 0x00B1FFD1
-		// (set) Token: 0x060300AF RID: 196783 RVA: 0x00B21DDC File Offset: 0x00B1FFDC
+		// Token: 0x17004B03 RID: 19203
+		// (get) Token: 0x0602487D RID: 149629 RVA: 0x00A51D1D File Offset: 0x00A4FF1D
+		// (set) Token: 0x0602487E RID: 149630 RVA: 0x00A51D28 File Offset: 0x00A4FF28
 		public bool IsMultiFingerControl
 		{
 			get
@@ -108,8 +108,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007848 RID: 30792
-		// (get) Token: 0x060300B0 RID: 196784 RVA: 0x00B21E2C File Offset: 0x00B2002C
+		// Token: 0x17004B04 RID: 19204
+		// (get) Token: 0x0602487F RID: 149631 RVA: 0x00A51D78 File Offset: 0x00A4FF78
 		public bool IsJoystickZoom
 		{
 			get
@@ -118,8 +118,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007849 RID: 30793
-		// (get) Token: 0x060300B1 RID: 196785 RVA: 0x00B21E3C File Offset: 0x00B2003C
+		// Token: 0x17004B05 RID: 19205
+		// (get) Token: 0x06024880 RID: 149632 RVA: 0x00A51D88 File Offset: 0x00A4FF88
 		private WorldMapUiEntity WorldMapUiComponent
 		{
 			get
@@ -134,8 +134,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x1700784A RID: 30794
-		// (get) Token: 0x060300B2 RID: 196786 RVA: 0x00B21E79 File Offset: 0x00B20079
+		// Token: 0x17004B06 RID: 19206
+		// (get) Token: 0x06024881 RID: 149633 RVA: 0x00A51DC5 File Offset: 0x00A4FFC5
 		private UKuroWorldMapUIParams UiParams
 		{
 			get
@@ -149,8 +149,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x1700784B RID: 30795
-		// (get) Token: 0x060300B3 RID: 196787 RVA: 0x00B21E8C File Offset: 0x00B2008C
+		// Token: 0x17004B07 RID: 19207
+		// (get) Token: 0x06024882 RID: 149634 RVA: 0x00A51DD8 File Offset: 0x00A4FFD8
 		private FVector2D ViewportSize
 		{
 			get
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x060300B4 RID: 196788 RVA: 0x00B21E9C File Offset: 0x00B2009C
+		// Token: 0x06024883 RID: 149635 RVA: 0x00A51DE8 File Offset: 0x00A4FFE8
 		protected override void OnAdd()
 		{
 			WorldMapUiEntity worldMapUiComponent = this.WorldMapUiComponent;
@@ -189,32 +189,32 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			uuidraggableComponent.OnPointerScrollCallBack.Bind(new Action<ULGUIPointerEventData>(this.OnWheelAxisInput));
 		}
 
-		// Token: 0x060300B5 RID: 196789 RVA: 0x00B21F7B File Offset: 0x00B2017B
+		// Token: 0x06024884 RID: 149636 RVA: 0x00A51EC7 File Offset: 0x00A500C7
 		protected override void OnEnable()
 		{
 			this.AddEventListener();
 		}
 
-		// Token: 0x060300B6 RID: 196790 RVA: 0x00B21F83 File Offset: 0x00B20183
+		// Token: 0x06024885 RID: 149637 RVA: 0x00A51ECF File Offset: 0x00A500CF
 		protected override void OnDisable()
 		{
 			this.RemoveEventListener();
 		}
 
-		// Token: 0x060300B7 RID: 196791 RVA: 0x00B21F8B File Offset: 0x00B2018B
+		// Token: 0x06024886 RID: 149638 RVA: 0x00A51ED7 File Offset: 0x00A500D7
 		protected override void OnRemove()
 		{
 			this.PrevPointerDownPosition = null;
 			this.PointerDeltaPosition = null;
 		}
 
-		// Token: 0x060300B8 RID: 196792 RVA: 0x00B21F9B File Offset: 0x00B2019B
+		// Token: 0x06024887 RID: 149639 RVA: 0x00A51EE7 File Offset: 0x00A500E7
 		public void SetJoystickFocus(bool value)
 		{
 			this.JoystickFocus = value;
 		}
 
-		// Token: 0x060300B9 RID: 196793 RVA: 0x00B21FA4 File Offset: 0x00B201A4
+		// Token: 0x06024888 RID: 149640 RVA: 0x00A51EF0 File Offset: 0x00A500F0
 		private void AddEventListener()
 		{
 			InputDistributeController.Instance.BindTouches(new int[]
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			EventSystem.Instance.Add(EEventName.NavigationTriggerMapZoom, new Action<string, float>(this.OnHandleTriggerInput));
 		}
 
-		// Token: 0x060300BA RID: 196794 RVA: 0x00B22028 File Offset: 0x00B20228
+		// Token: 0x06024889 RID: 149641 RVA: 0x00A51F74 File Offset: 0x00A50174
 		private void RemoveEventListener()
 		{
 			InputDistributeController.Instance.UnBindTouches(new <>z__ReadOnlyArray<int>(new int[]
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			EventSystem.Instance.Remove(EEventName.NavigationTriggerMapZoom, new Action<string, float>(this.OnHandleTriggerInput));
 		}
 
-		// Token: 0x060300BB RID: 196795 RVA: 0x00B220B0 File Offset: 0x00B202B0
+		// Token: 0x0602488A RID: 149642 RVA: 0x00A51FFC File Offset: 0x00A501FC
 		public void CheckTouch()
 		{
 			if (this.TouchMap == null)
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x060300BC RID: 196796 RVA: 0x00B22130 File Offset: 0x00B20330
+		// Token: 0x0602488B RID: 149643 RVA: 0x00A5207C File Offset: 0x00A5027C
 		private void OnPointerDown(ULGUIPointerEventData eventData)
 		{
 			this.Dragging = false;
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			EventSystem.Instance.Emit(EEventName.WorldMapPointerDown);
 		}
 
-		// Token: 0x060300BD RID: 196797 RVA: 0x00B221C0 File Offset: 0x00B203C0
+		// Token: 0x0602488C RID: 149644 RVA: 0x00A5210C File Offset: 0x00A5030C
 		private void OnPointerDrag(ULGUIPointerEventData eventData)
 		{
 			if (eventData != null && !this.IsMultiFingerControl)
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			pointerDeltaPosition.Reset();
 		}
 
-		// Token: 0x060300BE RID: 196798 RVA: 0x00B2229C File Offset: 0x00B2049C
+		// Token: 0x0602488D RID: 149645 RVA: 0x00A521E8 File Offset: 0x00A503E8
 		private void OnPointerUp(ULGUIPointerEventData eventData)
 		{
 			double nowSeconds = Time.Instance.NowSeconds;
@@ -339,7 +339,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			EventSystem.Instance.Emit<ULGUIPointerEventData>(EEventName.WorldMapPointerUp, eventData);
 		}
 
-		// Token: 0x060300BF RID: 196799 RVA: 0x00B22320 File Offset: 0x00B20520
+		// Token: 0x0602488E RID: 149646 RVA: 0x00A5226C File Offset: 0x00A5046C
 		private void EndDrag(ULGUIPointerEventData eventData)
 		{
 			if (!this.Dragging)
@@ -360,7 +360,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			pointerDeltaPosition.Reset();
 		}
 
-		// Token: 0x060300C0 RID: 196800 RVA: 0x00B22378 File Offset: 0x00B20578
+		// Token: 0x0602488F RID: 149647 RVA: 0x00A522C4 File Offset: 0x00A504C4
 		private void DragInertia()
 		{
 			if (this.PointerDeltaPosition == null || (this.PointerDeltaPosition.X == 0.0 && this.PointerDeltaPosition.Y == 0.0))
@@ -386,7 +386,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.PointerDeltaPosition.Reset();
 		}
 
-		// Token: 0x060300C1 RID: 196801 RVA: 0x00B2246C File Offset: 0x00B2066C
+		// Token: 0x06024890 RID: 149648 RVA: 0x00A523B8 File Offset: 0x00A505B8
 		[NullableContext(1)]
 		private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification identification)
 		{
@@ -404,7 +404,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.TouchTrigger(false, touchId, null);
 		}
 
-		// Token: 0x060300C2 RID: 196802 RVA: 0x00B224A4 File Offset: 0x00B206A4
+		// Token: 0x06024891 RID: 149649 RVA: 0x00A523F0 File Offset: 0x00A505F0
 		private void TouchTrigger(bool bTouchPress, int touchId, InputDistributeDefine.ITouchData touchData = null)
 		{
 			if (bTouchPress)
@@ -433,13 +433,13 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x060300C3 RID: 196803 RVA: 0x00B2258C File Offset: 0x00B2078C
+		// Token: 0x06024892 RID: 149650 RVA: 0x00A524D8 File Offset: 0x00A506D8
 		private void OnWheelAxisInput(ULGUIPointerEventData eventData)
 		{
 			EventSystem.Instance.Emit<float, EMapScaleSetType>(EEventName.WorldMapWheelAxisInput, eventData.scrollAxisValue * 0.05f, EMapScaleSetType.WheelInput);
 		}
 
-		// Token: 0x060300C4 RID: 196804 RVA: 0x00B225AC File Offset: 0x00B207AC
+		// Token: 0x06024893 RID: 149651 RVA: 0x00A524F8 File Offset: 0x00A506F8
 		private void OnUiForwardInput(float value)
 		{
 			if (value == 0f)
@@ -455,7 +455,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			instance.Emit<float>(name, (uiParams != null) ? (-uiParams.GamePadMoveSpeed * value) : 0f);
 		}
 
-		// Token: 0x060300C5 RID: 196805 RVA: 0x00B22600 File Offset: 0x00B20800
+		// Token: 0x06024894 RID: 149652 RVA: 0x00A5254C File Offset: 0x00A5074C
 		private void OnUiRightInput(float value)
 		{
 			if (value == 0f)
@@ -471,7 +471,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			instance.Emit<float>(name, (uiParams != null) ? (-uiParams.GamePadMoveSpeed * value) : 0f);
 		}
 
-		// Token: 0x060300C6 RID: 196806 RVA: 0x00B22654 File Offset: 0x00B20854
+		// Token: 0x06024895 RID: 149653 RVA: 0x00A525A0 File Offset: 0x00A507A0
 		[NullableContext(1)]
 		private void OnHandleTriggerInput(string axisName, float value)
 		{
@@ -487,14 +487,14 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			EventSystem.Instance.Emit<float, EMapScaleSetType>(EEventName.WorldMapHandleTriggerAxisInput, 0.05f * value, EMapScaleSetType.Gamepad);
 		}
 
-		// Token: 0x060300C7 RID: 196807 RVA: 0x00B226A4 File Offset: 0x00B208A4
+		// Token: 0x06024896 RID: 149654 RVA: 0x00A525F0 File Offset: 0x00A507F0
 		private bool CheckPointInScope(FVector mousePos)
 		{
 			Vector2D vector2D = this.MousePositionConverToLgui(mousePos.X, mousePos.Y);
 			return vector2D.X >= 0.0 && vector2D.X <= (double)this.ViewportSize.X && vector2D.Y >= 0.0 && vector2D.Y <= (double)this.ViewportSize.Y;
 		}
 
-		// Token: 0x060300C8 RID: 196808 RVA: 0x00B22714 File Offset: 0x00B20914
+		// Token: 0x06024897 RID: 149655 RVA: 0x00A52660 File Offset: 0x00A50860
 		[NullableContext(1)]
 		private Vector2D MousePositionConverToLgui(float x, float y)
 		{
@@ -511,48 +511,48 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			return vector2D;
 		}
 
-		// Token: 0x04019E88 RID: 106120
+		// Token: 0x04014538 RID: 83256
 		private const float MULTI_TOUCH_DELAY_TIME = 0.5f;
 
-		// Token: 0x04019E89 RID: 106121
+		// Token: 0x04014539 RID: 83257
 		private const float SCALE_STEP = 0.05f;
 
-		// Token: 0x04019E8A RID: 106122
+		// Token: 0x0401453A RID: 83258
 		private bool Dragging;
 
-		// Token: 0x04019E8B RID: 106123
+		// Token: 0x0401453B RID: 83259
 		private bool MultiFingerControl;
 
-		// Token: 0x04019E8C RID: 106124
+		// Token: 0x0401453C RID: 83260
 		private double LastMultiTouchEndTime;
 
-		// Token: 0x04019E8D RID: 106125
+		// Token: 0x0401453D RID: 83261
 		private bool JoystickMovingRight;
 
-		// Token: 0x04019E8E RID: 106126
+		// Token: 0x0401453E RID: 83262
 		private bool JoystickMovingForward;
 
-		// Token: 0x04019E8F RID: 106127
+		// Token: 0x0401453F RID: 83263
 		private bool JoystickFocus;
 
-		// Token: 0x04019E90 RID: 106128
+		// Token: 0x04014540 RID: 83264
 		[Nullable(1)]
 		private string ZoomAxis = string.Empty;
 
-		// Token: 0x04019E91 RID: 106129
+		// Token: 0x04014541 RID: 83265
 		[Nullable(1)]
 		private readonly Vector2D InternalMultiTouchOriginCenter = Vector2D.Create();
 
-		// Token: 0x04019E92 RID: 106130
+		// Token: 0x04014542 RID: 83266
 		private Vector2D PrevPointerDownPosition;
 
-		// Token: 0x04019E93 RID: 106131
+		// Token: 0x04014543 RID: 83267
 		private Vector2D PointerDeltaPosition;
 
-		// Token: 0x04019E94 RID: 106132
+		// Token: 0x04014544 RID: 83268
 		private double PointerDownTime;
 
-		// Token: 0x04019E95 RID: 106133
+		// Token: 0x04014545 RID: 83269
 		[Nullable(new byte[]
 		{
 			2,

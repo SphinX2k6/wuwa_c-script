@@ -2,36 +2,36 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064AE RID: 25774
+	// Token: 0x0200542C RID: 21548
 	public enum EPieceComponentType
 	{
-		// Token: 0x04021B09 RID: 137993
+		// Token: 0x0401C43A RID: 115770
 		Fallable = 1,
-		// Token: 0x04021B0A RID: 137994
+		// Token: 0x0401C43B RID: 115771
 		Swappable,
-		// Token: 0x04021B0B RID: 137995
+		// Token: 0x0401C43C RID: 115772
 		Bomb,
-		// Token: 0x04021B0C RID: 137996
+		// Token: 0x0401C43D RID: 115773
 		Ultimate,
-		// Token: 0x04021B0D RID: 137997
+		// Token: 0x0401C43E RID: 115774
 		AdjacentBreak,
-		// Token: 0x04021B0E RID: 137998
+		// Token: 0x0401C43F RID: 115775
 		LandRemove,
-		// Token: 0x04021B0F RID: 137999
+		// Token: 0x0401C440 RID: 115776
 		TurnGain,
-		// Token: 0x04021B10 RID: 138000
+		// Token: 0x0401C441 RID: 115777
 		ChargeGain,
-		// Token: 0x04021B11 RID: 138001
+		// Token: 0x0401C442 RID: 115778
 		CrossClear,
-		// Token: 0x04021B12 RID: 138002
+		// Token: 0x0401C443 RID: 115779
 		Matchable,
-		// Token: 0x04021B13 RID: 138003
+		// Token: 0x0401C444 RID: 115780
 		Block = 12,
-		// Token: 0x04021B14 RID: 138004
+		// Token: 0x0401C445 RID: 115781
 		Chain,
-		// Token: 0x04021B15 RID: 138005
+		// Token: 0x0401C446 RID: 115782
 		Clearable,
-		// Token: 0x04021B16 RID: 138006
+		// Token: 0x0401C447 RID: 115783
 		Health
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000171 RID: 369
+	// Token: 0x02000181 RID: 385
 	public class ConfigCircumFluenceTaskByTaskType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060008A7 RID: 2215 RVA: 0x0008A61C File Offset: 0x0008881C
+		// Token: 0x06000907 RID: 2311 RVA: 0x00090178 File Offset: 0x0008E378
 		static ConfigCircumFluenceTaskByTaskType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCircumFluenceTaskByTaskType.CreateStaticDefaultValue), new Action(ConfigCircumFluenceTaskByTaskType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060008A8 RID: 2216 RVA: 0x0008A63C File Offset: 0x0008883C
+		// Token: 0x06000908 RID: 2312 RVA: 0x00090198 File Offset: 0x0008E398
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCircumFluenceTaskByTaskType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060008A9 RID: 2217 RVA: 0x0008A6BB File Offset: 0x000888BB
+		// Token: 0x06000909 RID: 2313 RVA: 0x00090217 File Offset: 0x0008E417
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCircumFluenceTaskByTaskType.LogPair = null;
 			ConfigCircumFluenceTaskByTaskType.HandleId = 0;
 		}
 
-		// Token: 0x060008AA RID: 2218 RVA: 0x0008A6C9 File Offset: 0x000888C9
+		// Token: 0x0600090A RID: 2314 RVA: 0x00090225 File Offset: 0x0008E425
 		public static void Init()
 		{
 			ConfigCircumFluenceTaskByTaskType.HandleId = ConfigCommon.InitDataStatement(ConfigCircumFluenceTaskByTaskType.HandleId, "db_circumfluence.db", "select BinData from `CircumFluenceTask` where TaskType=?");
 		}
 
-		// Token: 0x060008AB RID: 2219 RVA: 0x0008A6E4 File Offset: 0x000888E4
+		// Token: 0x0600090B RID: 2315 RVA: 0x00090240 File Offset: 0x0008E440
 		[NullableContext(2)]
 		public static IReadOnlyList<CircumFluenceTask> GetConfigList(int p0TaskType, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040009FB RID: 2555
+		// Token: 0x04000A6B RID: 2667
 		private const string DB = "db_circumfluence.db";
 
-		// Token: 0x040009FC RID: 2556
+		// Token: 0x04000A6C RID: 2668
 		private const string FILE = "h.回流活动.xlsx";
 
-		// Token: 0x040009FD RID: 2557
+		// Token: 0x04000A6D RID: 2669
 		private const string TABLE = "CircumFluenceTask";
 
-		// Token: 0x040009FE RID: 2558
+		// Token: 0x04000A6E RID: 2670
 		private const string COMMAND = "select BinData from `CircumFluenceTask` where TaskType=?";
 
-		// Token: 0x040009FF RID: 2559
+		// Token: 0x04000A6F RID: 2671
 		private const string KEY_PREFIX = "CircumFluenceTaskByTaskType";
 
-		// Token: 0x04000A00 RID: 2560
+		// Token: 0x04000A70 RID: 2672
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000A01 RID: 2561
+		// Token: 0x04000A71 RID: 2673
 		private static int HandleId;
 	}
 }

@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020027D0 RID: 10192
+// Token: 0x02001D4B RID: 7499
 public class RoleDataWithBranch
 {
-	// Token: 0x06014F1C RID: 85788 RVA: 0x00550C50 File Offset: 0x0054EE50
+	// Token: 0x0601291C RID: 76060 RVA: 0x0057B9C0 File Offset: 0x00579BC0
 	public RoleDataWithBranch(int roleId, int skillBranchId)
 	{
 		this.RoleId = roleId;
@@ -16,12 +16,12 @@ public class RoleDataWithBranch
 		this.SkillBranchIndex = RoleModel.Instance.GetRoleBranchIndexById(this.RoleId, this.SkillBranchId);
 	}
 
-	// Token: 0x04009D86 RID: 40326
+	// Token: 0x0400A16F RID: 41327
 	public int RoleId;
 
-	// Token: 0x04009D87 RID: 40327
+	// Token: 0x0400A170 RID: 41328
 	public int SkillBranchId;
 
-	// Token: 0x04009D88 RID: 40328
+	// Token: 0x0400A171 RID: 41329
 	public int SkillBranchIndex;
 }

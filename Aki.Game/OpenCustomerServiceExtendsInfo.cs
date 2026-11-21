@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000DED RID: 3565
+// Token: 0x0200029F RID: 671
 public class OpenCustomerServiceExtendsInfo
 {
-	// Token: 0x0400270B RID: 9995
+	// Token: 0x04002793 RID: 10131
 	[Nullable(new byte[]
 	{
 		2,

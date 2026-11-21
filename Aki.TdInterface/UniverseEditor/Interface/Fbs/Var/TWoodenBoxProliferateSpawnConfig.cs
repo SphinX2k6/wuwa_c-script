@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B68 RID: 15208
+	// Token: 0x02003F70 RID: 16240
 	public enum TWoodenBoxProliferateSpawnConfig : byte
 	{
-		// Token: 0x0400B09A RID: 45210
+		// Token: 0x0400BA17 RID: 47639
 		NONE,
-		// Token: 0x0400B09B RID: 45211
+		// Token: 0x0400BA18 RID: 47640
 		IWoodenBoxProliferatePositionList,
-		// Token: 0x0400B09C RID: 45212
+		// Token: 0x0400BA19 RID: 47641
 		IWoodenBoxProliferateRandomInRange
 	}
 }

@@ -6,14 +6,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x020051AA RID: 20906
+	// Token: 0x0200417A RID: 16762
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaDeckOverviewTabView : PhantomArenaChildViewBase
 	{
-		// Token: 0x170081A6 RID: 33190
-		// (get) Token: 0x06035834 RID: 219188 RVA: 0x00CAC1A9 File Offset: 0x00CAA3A9
-		// (set) Token: 0x06035835 RID: 219189 RVA: 0x00CAC1B6 File Offset: 0x00CAA3B6
+		// Token: 0x17005566 RID: 21862
+		// (get) Token: 0x0602A72F RID: 173871 RVA: 0x00BF97F9 File Offset: 0x00BF79F9
+		// (set) Token: 0x0602A730 RID: 173872 RVA: 0x00BF9806 File Offset: 0x00BF7A06
 		public new IPhantomArenaDeckOverviewTabViewModel ViewModel
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x06035836 RID: 219190 RVA: 0x00CAC1C0 File Offset: 0x00CAA3C0
+		// Token: 0x0602A731 RID: 173873 RVA: 0x00BF9810 File Offset: 0x00BF7A10
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -48,14 +48,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x06035837 RID: 219191 RVA: 0x00CAC2DB File Offset: 0x00CAA4DB
+		// Token: 0x0602A732 RID: 173874 RVA: 0x00BF992B File Offset: 0x00BF7B2B
 		protected override void OnStart()
 		{
 			base.OnStart();
 			this.DeckLoopScroll = new LoopScrollView<PhantomArenaDeckOverviewItem, DeckInfo>(base.GetLoopScrollViewComponent(0), base.GetItem(1).GetOwner() as AUIBaseActor, new Func<PhantomArenaDeckOverviewItem>(this.CreateDeckItem), true);
 		}
 
-		// Token: 0x06035838 RID: 219192 RVA: 0x00CAC314 File Offset: 0x00CAA514
+		// Token: 0x0602A733 RID: 173875 RVA: 0x00BF9964 File Offset: 0x00BF7B64
 		protected override void OnBeforeShow()
 		{
 			this.ViewModel.SetViewTitle("PhantomArenaDeckOverviewTabView_Name");
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x06035839 RID: 219193 RVA: 0x00CAC3CE File Offset: 0x00CAA5CE
+		// Token: 0x0602A734 RID: 173876 RVA: 0x00BF9A1E File Offset: 0x00BF7C1E
 		protected void RefreshDeckInfoLayout()
 		{
 			this.DeckLoopScroll.RefreshByData(this.ViewModel.EditableDeckList, false, delegate
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}, false);
 		}
 
-		// Token: 0x0603583A RID: 219194 RVA: 0x00CAC3F4 File Offset: 0x00CAA5F4
+		// Token: 0x0602A735 RID: 173877 RVA: 0x00BF9A44 File Offset: 0x00BF7C44
 		protected void RefreshButtonAndTip()
 		{
 			IPhantomArenaDeckOverviewTabViewModel viewModel = this.ViewModel;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			item2.SetUIActive(flag);
 		}
 
-		// Token: 0x0603583B RID: 219195 RVA: 0x00CAC49A File Offset: 0x00CAA69A
+		// Token: 0x0602A736 RID: 173878 RVA: 0x00BF9AEA File Offset: 0x00BF7CEA
 		protected void SelectDeckByIndex(int index)
 		{
 			if (index < 0 || index >= this.ViewModel.EditableDeckList.Count)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.DeckLoopScroll.SelectGridProxy(index, false);
 		}
 
-		// Token: 0x0603583C RID: 219196 RVA: 0x00CAC4CD File Offset: 0x00CAA6CD
+		// Token: 0x0602A737 RID: 173879 RVA: 0x00BF9B1D File Offset: 0x00BF7D1D
 		private PhantomArenaDeckOverviewItem CreateDeckItem()
 		{
 			return new PhantomArenaDeckOverviewItem
@@ -130,13 +130,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x0603583D RID: 219197 RVA: 0x00CAC4F2 File Offset: 0x00CAA6F2
+		// Token: 0x0602A738 RID: 173880 RVA: 0x00BF9B42 File Offset: 0x00BF7D42
 		private void OnItemToggleSelect(int gridIndex)
 		{
 			this.SelectDeckByIndex(gridIndex);
 		}
 
-		// Token: 0x0603583E RID: 219198 RVA: 0x00CAC4FC File Offset: 0x00CAA6FC
+		// Token: 0x0602A739 RID: 173881 RVA: 0x00BF9B4C File Offset: 0x00BF7D4C
 		private void OnDeleteBtnClick()
 		{
 			DeckInfo selectedDeck = this.ViewModel.EditableDeckList[this.ViewModel.SelectedDeckIndex];
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			PhantomArenaController.Instance.OpenPhantomArenaConfirmBoxView(confirmBoxDataNew, isNew);
 		}
 
-		// Token: 0x0603583F RID: 219199 RVA: 0x00CAC5A4 File Offset: 0x00CAA7A4
+		// Token: 0x0602A73A RID: 173882 RVA: 0x00BF9BF4 File Offset: 0x00BF7DF4
 		private void OnEditDeckBtnClick()
 		{
 			IPhantomArenaDeckOverviewTabViewModel viewModel = this.ViewModel;
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x06035840 RID: 219200 RVA: 0x00CAC670 File Offset: 0x00CAA870
+		// Token: 0x0602A73B RID: 173883 RVA: 0x00BF9CC0 File Offset: 0x00BF7EC0
 		private void SaveRecommendDeck(DeckInfo deckInfo)
 		{
 			DeckInfo deckInfo2 = this.ViewModel.EditableDeckList[this.ViewModel.SelectedDeckIndex];
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.SaveDeckInternal(deckInfo, deckServerId);
 		}
 
-		// Token: 0x06035841 RID: 219201 RVA: 0x00CAC718 File Offset: 0x00CAA918
+		// Token: 0x0602A73C RID: 173884 RVA: 0x00BF9D68 File Offset: 0x00BF7F68
 		private void SaveDeckInternal(DeckInfo deckInfo, int deckServerId)
 		{
 			Action callback = delegate()
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			});
 		}
 
-		// Token: 0x06035842 RID: 219202 RVA: 0x00CAC7B8 File Offset: 0x00CAA9B8
+		// Token: 0x0602A73D RID: 173885 RVA: 0x00BF9E08 File Offset: 0x00BF8008
 		private void OnConfirmBtnClick()
 		{
 			DeckInfo deckInfo = this.ViewModel.EditableDeckList[this.ViewModel.SelectedDeckIndex];
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			base.CloseMe();
 		}
 
-		// Token: 0x06035843 RID: 219203 RVA: 0x00CAC830 File Offset: 0x00CAAA30
+		// Token: 0x0602A73E RID: 173886 RVA: 0x00BF9E80 File Offset: 0x00BF8080
 		private void OnCloseBtnClick()
 		{
 			this.ViewModel.RecommendDeck = null;
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.ViewModel.ResetOverrideCloseFunc();
 		}
 
-		// Token: 0x06035844 RID: 219204 RVA: 0x00CAC850 File Offset: 0x00CAAA50
+		// Token: 0x0602A73F RID: 173887 RVA: 0x00BF9EA0 File Offset: 0x00BF80A0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x0401C6AF RID: 116399
+		// Token: 0x040170E4 RID: 94436
 		[Nullable(new byte[]
 		{
 			2,
@@ -346,32 +346,32 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 		})]
 		private LoopScrollView<PhantomArenaDeckOverviewItem, DeckInfo> DeckLoopScroll;
 
-		// Token: 0x0200B324 RID: 45860
+		// Token: 0x02009D5C RID: 40284
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x040364B6 RID: 222390
+			// Token: 0x04030F09 RID: 200457
 			public const int DeckLoopScrollView = 0;
 
-			// Token: 0x040364B7 RID: 222391
+			// Token: 0x04030F0A RID: 200458
 			public const int DeckItem = 1;
 
-			// Token: 0x040364B8 RID: 222392
+			// Token: 0x04030F0B RID: 200459
 			public const int DeleteBtn = 2;
 
-			// Token: 0x040364B9 RID: 222393
+			// Token: 0x04030F0C RID: 200460
 			public const int EditDeckBtn = 3;
 
-			// Token: 0x040364BA RID: 222394
+			// Token: 0x04030F0D RID: 200461
 			public const int ConfirmBtn = 4;
 
-			// Token: 0x040364BB RID: 222395
+			// Token: 0x04030F0E RID: 200462
 			public const int ItemDeletePanel = 5;
 
-			// Token: 0x040364BC RID: 222396
+			// Token: 0x04030F0F RID: 200463
 			public const int ItemSaveTip = 6;
 
-			// Token: 0x040364BD RID: 222397
+			// Token: 0x04030F10 RID: 200464
 			public const int TextButton = 7;
 		}
 	}

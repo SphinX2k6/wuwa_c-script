@@ -6,24 +6,24 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028E4 RID: 10468
+// Token: 0x02001E5F RID: 7775
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleVisionAttribute : UiPanelBase
 {
-	// Token: 0x060159CF RID: 88527 RVA: 0x005746AA File Offset: 0x005728AA
+	// Token: 0x060133D3 RID: 78803 RVA: 0x0059F572 File Offset: 0x0059D772
 	public RoleVisionAttribute(UUIItem uiItem)
 	{
 		this.SourceItem = uiItem;
 	}
 
-	// Token: 0x060159D0 RID: 88528 RVA: 0x005746DE File Offset: 0x005728DE
+	// Token: 0x060133D4 RID: 78804 RVA: 0x0059F5A6 File Offset: 0x0059D7A6
 	public void Init()
 	{
 		base.CreateThenShowByActor(this.SourceItem.GetOwner(), null);
 	}
 
-	// Token: 0x060159D1 RID: 88529 RVA: 0x005746F4 File Offset: 0x005728F4
+	// Token: 0x060133D5 RID: 78805 RVA: 0x0059F5BC File Offset: 0x0059D7BC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -37,13 +37,13 @@ public class RoleVisionAttribute : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060159D2 RID: 88530 RVA: 0x0057475D File Offset: 0x0057295D
+	// Token: 0x060133D6 RID: 78806 RVA: 0x0059F625 File Offset: 0x0059D825
 	protected override void OnStart()
 	{
 		this.AttributeScroller = new GenericLayout<RoleAttributeItem, RoleAttributeSt>(base.GetVerticalLayout(0), this.CreateSwitchItem, base.GetItem(1).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x060159D3 RID: 88531 RVA: 0x0057478C File Offset: 0x0057298C
+	// Token: 0x060133D7 RID: 78807 RVA: 0x0059F654 File Offset: 0x0059D854
 	public void Refresh(List<AttrListScrollData> data, bool needCheckBg = false)
 	{
 		List<RoleAttributeSt> list = new List<RoleAttributeSt>();
@@ -61,7 +61,7 @@ public class RoleVisionAttribute : UiPanelBase
 		this.AttributeScroller.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0400A0C9 RID: 41161
+	// Token: 0x0400A4B3 RID: 42163
 	[Nullable(new byte[]
 	{
 		2,
@@ -70,20 +70,20 @@ public class RoleVisionAttribute : UiPanelBase
 	})]
 	public GenericLayout<RoleAttributeItem, RoleAttributeSt> AttributeScroller;
 
-	// Token: 0x0400A0CA RID: 41162
+	// Token: 0x0400A4B4 RID: 42164
 	[Nullable(2)]
 	private readonly UUIItem SourceItem;
 
-	// Token: 0x0400A0CB RID: 41163
+	// Token: 0x0400A4B5 RID: 42165
 	private readonly Func<RoleAttributeItem> CreateSwitchItem = () => new RoleAttributeItem();
 
-	// Token: 0x02008EF7 RID: 36599
+	// Token: 0x0200813F RID: 33087
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E5B9 RID: 189881
+		// Token: 0x04029CB4 RID: 171188
 		VerticalLayout,
-		// Token: 0x0402E5BA RID: 189882
+		// Token: 0x04029CB5 RID: 171189
 		LayoutItem
 	}
 }

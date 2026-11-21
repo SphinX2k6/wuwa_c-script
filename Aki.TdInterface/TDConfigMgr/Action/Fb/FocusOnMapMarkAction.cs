@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002966 RID: 10598
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C4B RID: 11339
 	public class FocusOnMapMarkAction : ActionParams
 	{
-		// Token: 0x0600EAEB RID: 60139 RVA: 0x0022630A File Offset: 0x0022450A
+		// Token: 0x0600F961 RID: 63841 RVA: 0x002439C2 File Offset: 0x00241BC2
 		public static FocusOnMapMarkAction Create(IFocusOnMapMarkAction? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049E1 RID: 18913
-		// (get) Token: 0x0600EAEC RID: 60140 RVA: 0x00226329 File Offset: 0x00224529
+		// Token: 0x17004D79 RID: 19833
+		// (get) Token: 0x0600F962 RID: 63842 RVA: 0x002439E1 File Offset: 0x00241BE1
 		public virtual IFocusOnMapMark MapMarkType
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400816E RID: 33134
+		// Token: 0x0400884F RID: 34895
 		private IFocusOnMapMarkAction Instance;
 
-		// Token: 0x0400816F RID: 33135
+		// Token: 0x04008850 RID: 34896
 		private IFocusOnMapMark _MapMarkTypeCache;
 
-		// Token: 0x04008170 RID: 33136
+		// Token: 0x04008851 RID: 34897
 		private bool _MapMarkTypeInited;
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E5D RID: 7773
+	// Token: 0x02002092 RID: 8338
 	public class IShowMapMark_SetValue
 	{
-		// Token: 0x0400635D RID: 25437
+		// Token: 0x04006941 RID: 26945
 		public EMapMarkState Type;
 
-		// Token: 0x0400635E RID: 25438
+		// Token: 0x04006942 RID: 26946
 		public int MarkId;
 
-		// Token: 0x0400635F RID: 25439
+		// Token: 0x04006943 RID: 26947
 		public bool? IsFocusOnFirstShow;
 	}
 }

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02003131 RID: 12593
+// Token: 0x0200268D RID: 9869
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseKuroFastCollisionComponent : EntityComponent
 {
-	// Token: 0x0601B107 RID: 110855 RVA: 0x0075A948 File Offset: 0x00758B48
+	// Token: 0x06018B6F RID: 101231 RVA: 0x00780CF0 File Offset: 0x0077EEF0
 	protected override bool OnStart()
 	{
 		EventSystem.Instance.Add(EEventName.BulletPatternEnvironmentChanged, new Action<bool>(this.OnEnvironmentChanged));
@@ -20,7 +20,7 @@ public class BaseKuroFastCollisionComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B108 RID: 110856 RVA: 0x0075A974 File Offset: 0x00758B74
+	// Token: 0x06018B70 RID: 101232 RVA: 0x00780D1C File Offset: 0x0077EF1C
 	protected override bool OnEnd()
 	{
 		this.StopKuroFastCollision();
@@ -28,31 +28,31 @@ public class BaseKuroFastCollisionComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B109 RID: 110857 RVA: 0x0075A999 File Offset: 0x00758B99
+	// Token: 0x06018B71 RID: 101233 RVA: 0x00780D41 File Offset: 0x0077EF41
 	protected virtual void OnStartKuroFastCollision()
 	{
 	}
 
-	// Token: 0x0601B10A RID: 110858 RVA: 0x0075A99B File Offset: 0x00758B9B
+	// Token: 0x06018B72 RID: 101234 RVA: 0x00780D43 File Offset: 0x0077EF43
 	protected virtual void OnStopKuroFastCollision()
 	{
 	}
 
-	// Token: 0x0601B10B RID: 110859 RVA: 0x0075A99D File Offset: 0x00758B9D
+	// Token: 0x06018B73 RID: 101235 RVA: 0x00780D45 File Offset: 0x0077EF45
 	private void StartKuroFastCollision()
 	{
 		this.RegisterAllShapes();
 		this.OnStartKuroFastCollision();
 	}
 
-	// Token: 0x0601B10C RID: 110860 RVA: 0x0075A9AB File Offset: 0x00758BAB
+	// Token: 0x06018B74 RID: 101236 RVA: 0x00780D53 File Offset: 0x0077EF53
 	private void StopKuroFastCollision()
 	{
 		this.UnregisterAllShapes();
 		this.OnStopKuroFastCollision();
 	}
 
-	// Token: 0x0601B10D RID: 110861 RVA: 0x0075A9BC File Offset: 0x00758BBC
+	// Token: 0x06018B75 RID: 101237 RVA: 0x00780D64 File Offset: 0x0077EF64
 	private void RegisterAllShapes()
 	{
 		this.UnregisterAllShapes();
@@ -76,7 +76,7 @@ public class BaseKuroFastCollisionComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B10E RID: 110862 RVA: 0x0075AA48 File Offset: 0x00758C48
+	// Token: 0x06018B76 RID: 101238 RVA: 0x00780DF0 File Offset: 0x0077EFF0
 	private void UnregisterAllShapes()
 	{
 		UKuroFastCollisionAlgorithm kuroFastCollisionAlgorithm = BulletPatternComponent.GetKuroFastCollisionAlgorithm();
@@ -92,7 +92,7 @@ public class BaseKuroFastCollisionComponent : EntityComponent
 		this.RegisteredShapes.Clear();
 	}
 
-	// Token: 0x0601B10F RID: 110863 RVA: 0x0075AABC File Offset: 0x00758CBC
+	// Token: 0x06018B77 RID: 101239 RVA: 0x00780E64 File Offset: 0x0077F064
 	private void OnEnvironmentChanged(bool isStart)
 	{
 		if (isStart)
@@ -103,17 +103,32 @@ public class BaseKuroFastCollisionComponent : EntityComponent
 		this.StopKuroFastCollision();
 	}
 
-	// Token: 0x0601B110 RID: 110864 RVA: 0x0075AAD0 File Offset: 0x00758CD0
+	// Token: 0x06018B78 RID: 101240 RVA: 0x00780E76 File Offset: 0x0077F076
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
-		if (!base.ClearComponent(componentTemplate))
-		{
-			return false;
-		}
-		BaseKuroFastCollisionComponent baseKuroFastCollisionComponent = (BaseKuroFastCollisionComponent)componentTemplate;
-		return !base.CanResetComponentProperty("RegisteredShapes") || baseKuroFastCollisionComponent.RegisteredShapes == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<UShapeComponent>>(this.RegisteredShapes), "RegisteredShapes");
+		return base.ClearComponent(componentTemplate) && (((BaseKuroFastCollisionComponent)componentTemplate).RegisteredShapes == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.RegisteredShapes), "RegisteredShapes"));
 	}
 
-	// Token: 0x0400D289 RID: 53897
+	// Token: 0x17002721 RID: 10017
+	// (get) Token: 0x06018B79 RID: 101241 RVA: 0x00780EAB File Offset: 0x0077F0AB
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002722 RID: 10018
+	// (get) Token: 0x06018B7A RID: 101242 RVA: 0x00780EAE File Offset: 0x0077F0AE
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D6B3 RID: 54963
 	private readonly List<UShapeComponent> RegisteredShapes = new List<UShapeComponent>();
 }

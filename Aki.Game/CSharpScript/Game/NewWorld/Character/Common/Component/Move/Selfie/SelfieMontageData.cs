@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.Selfie
 {
-	// Token: 0x02007100 RID: 28928
+	// Token: 0x020063B0 RID: 25520
 	public class SelfieMontageData
 	{
-		// Token: 0x06046A02 RID: 289282 RVA: 0x011C6019 File Offset: 0x011C4219
+		// Token: 0x0603DE01 RID: 253441 RVA: 0x011F5039 File Offset: 0x011F3239
 		[NullableContext(1)]
 		public SelfieMontageData(SSelfieMontage row)
 		{
@@ -18,13 +18,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.Selfie
 			this.MontageRef = row.MontageRef;
 		}
 
-		// Token: 0x0402510A RID: 151818
+		// Token: 0x04020D9F RID: 134559
 		public int ConfigId;
 
-		// Token: 0x0402510B RID: 151819
+		// Token: 0x04020DA0 RID: 134560
 		public ESelfieMontageType MontageType;
 
-		// Token: 0x0402510C RID: 151820
+		// Token: 0x04020DA1 RID: 134561
 		[Nullable(new byte[]
 		{
 			2,

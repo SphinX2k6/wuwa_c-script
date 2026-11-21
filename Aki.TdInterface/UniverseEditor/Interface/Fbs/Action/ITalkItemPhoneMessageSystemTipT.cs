@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020072F6 RID: 29430
+	// Token: 0x02007ACB RID: 31435
 	public class ITalkItemPhoneMessageSystemTipT
 	{
-		// Token: 0x1700DD6C RID: 56684
-		// (get) Token: 0x06034EB9 RID: 216761 RVA: 0x0072AD46 File Offset: 0x00728F46
-		// (set) Token: 0x06034EBA RID: 216762 RVA: 0x0072AD4E File Offset: 0x00728F4E
+		// Token: 0x1700E965 RID: 59749
+		// (get) Token: 0x060381BF RID: 229823 RVA: 0x0078C1AA File Offset: 0x0078A3AA
+		// (set) Token: 0x060381C0 RID: 229824 RVA: 0x0078C1B2 File Offset: 0x0078A3B2
 		public EPhoneMessageType Type { get; set; }
 
-		// Token: 0x06034EBB RID: 216763 RVA: 0x0072AD57 File Offset: 0x00728F57
+		// Token: 0x060381C1 RID: 229825 RVA: 0x0078C1BB File Offset: 0x0078A3BB
 		public ITalkItemPhoneMessageSystemTipT()
 		{
 			this.Type = EPhoneMessageType.Voice;

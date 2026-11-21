@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200005A RID: 90
+	// Token: 0x02000062 RID: 98
 	public class ConfigAdventureRoleById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600021C RID: 540 RVA: 0x00065A67 File Offset: 0x00063C67
+		// Token: 0x0600024C RID: 588 RVA: 0x0006A31B File Offset: 0x0006851B
 		static ConfigAdventureRoleById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAdventureRoleById.CreateStaticDefaultValue), new Action(ConfigAdventureRoleById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600021D RID: 541 RVA: 0x00065A88 File Offset: 0x00063C88
+		// Token: 0x0600024D RID: 589 RVA: 0x0006A33C File Offset: 0x0006853C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAdventureRoleById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600021E RID: 542 RVA: 0x00065B07 File Offset: 0x00063D07
+		// Token: 0x0600024E RID: 590 RVA: 0x0006A3BB File Offset: 0x000685BB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAdventureRoleById.LogPair = null;
 			ConfigAdventureRoleById.HandleId = 0;
 		}
 
-		// Token: 0x0600021F RID: 543 RVA: 0x00065B15 File Offset: 0x00063D15
+		// Token: 0x0600024F RID: 591 RVA: 0x0006A3C9 File Offset: 0x000685C9
 		public static void Init()
 		{
 			ConfigAdventureRoleById.HandleId = ConfigCommon.InitDataStatement(ConfigAdventureRoleById.HandleId, "db_newplayersupportactivityv2.db", "select BinData from `AdventureRole` where RoleId=?");
 		}
 
-		// Token: 0x06000220 RID: 544 RVA: 0x00065B30 File Offset: 0x00063D30
+		// Token: 0x06000250 RID: 592 RVA: 0x0006A3E4 File Offset: 0x000685E4
 		public static AdventureRole? GetConfig(int p0RoleId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAdventureRoleById.HandleId, ConfigAdventureRoleById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AdventureRole?(rootAsAdventureRole);
 		}
 
-		// Token: 0x0400025A RID: 602
+		// Token: 0x04000292 RID: 658
 		private const string DB = "db_newplayersupportactivityv2.db";
 
-		// Token: 0x0400025B RID: 603
+		// Token: 0x04000293 RID: 659
 		private const string FILE = "x.新手开拓任务活动.xlsx";
 
-		// Token: 0x0400025C RID: 604
+		// Token: 0x04000294 RID: 660
 		private const string TABLE = "AdventureRole";
 
-		// Token: 0x0400025D RID: 605
+		// Token: 0x04000295 RID: 661
 		private const string COMMAND = "select BinData from `AdventureRole` where RoleId=?";
 
-		// Token: 0x0400025E RID: 606
+		// Token: 0x04000296 RID: 662
 		private const string KEY_PREFIX = "AdventureRoleById";
 
-		// Token: 0x0400025F RID: 607
+		// Token: 0x04000297 RID: 663
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000260 RID: 608
+		// Token: 0x04000298 RID: 664
 		private static int HandleId;
 	}
 }

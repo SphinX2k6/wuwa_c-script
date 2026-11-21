@@ -2,30 +2,30 @@
 using Aki.Config;
 using CSharpScript.Game.Module.PhoneMessage;
 
-// Token: 0x02002514 RID: 9492
+// Token: 0x020019FB RID: 6651
 public class PhoneMsgCharmItemData
 {
-	// Token: 0x0601314E RID: 78158 RVA: 0x004BAC84 File Offset: 0x004B8E84
+	// Token: 0x0601060D RID: 67085 RVA: 0x004C89E8 File Offset: 0x004C6BE8
 	public ChatCharm GetConfig()
 	{
 		return PhoneMsgConfig.Instance.GetChatCharmConfig(this.CharmId).Value;
 	}
 
-	// Token: 0x0601314F RID: 78159 RVA: 0x004BACA9 File Offset: 0x004B8EA9
+	// Token: 0x0601060E RID: 67086 RVA: 0x004C8A0D File Offset: 0x004C6C0D
 	public bool IsHasRedDot()
 	{
 		return PhoneMsgModel.Instance.IsChatShowHasRedDotById(this.CharmId);
 	}
 
-	// Token: 0x04008FEF RID: 36847
+	// Token: 0x04009143 RID: 37187
 	public int CharmId;
 
-	// Token: 0x04008FF0 RID: 36848
+	// Token: 0x04009144 RID: 37188
 	public bool IsSelected;
 
-	// Token: 0x04008FF1 RID: 36849
+	// Token: 0x04009145 RID: 37189
 	public bool IsUsing;
 
-	// Token: 0x04008FF2 RID: 36850
+	// Token: 0x04009146 RID: 37190
 	public bool IsUnlocked;
 }

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FEE RID: 20462
+	// Token: 0x0200554D RID: 21837
 	public struct IConditionBubbleData : IFlatbufferObject
 	{
-		// Token: 0x1700943C RID: 37948
-		// (get) Token: 0x06020B35 RID: 133941 RVA: 0x0048BF8B File Offset: 0x0048A18B
+		// Token: 0x17009C1D RID: 39965
+		// (get) Token: 0x06022A55 RID: 141909 RVA: 0x004C59DB File Offset: 0x004C3BDB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020B36 RID: 133942 RVA: 0x0048BF98 File Offset: 0x0048A198
+		// Token: 0x06022A56 RID: 141910 RVA: 0x004C59E8 File Offset: 0x004C3BE8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06020B37 RID: 133943 RVA: 0x0048BFA0 File Offset: 0x0048A1A0
+		// Token: 0x06022A57 RID: 141911 RVA: 0x004C59F0 File Offset: 0x004C3BF0
 		public static IConditionBubbleData GetRootAsIConditionBubbleData(ByteBuffer _bb)
 		{
 			return IConditionBubbleData.GetRootAsIConditionBubbleData(_bb, default(IConditionBubbleData));
 		}
 
-		// Token: 0x06020B38 RID: 133944 RVA: 0x0048BFBC File Offset: 0x0048A1BC
+		// Token: 0x06022A58 RID: 141912 RVA: 0x004C5A0C File Offset: 0x004C3C0C
 		public static IConditionBubbleData GetRootAsIConditionBubbleData(ByteBuffer _bb, IConditionBubbleData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020B39 RID: 133945 RVA: 0x0048BFD9 File Offset: 0x0048A1D9
+		// Token: 0x06022A59 RID: 141913 RVA: 0x004C5A29 File Offset: 0x004C3C29
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06020B3A RID: 133946 RVA: 0x0048BFE8 File Offset: 0x0048A1E8
+		// Token: 0x06022A5A RID: 141914 RVA: 0x004C5A38 File Offset: 0x004C3C38
 		public IConditionBubbleData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700943D RID: 37949
-		// (get) Token: 0x06020B3B RID: 133947 RVA: 0x0048BFF8 File Offset: 0x0048A1F8
+		// Token: 0x17009C1E RID: 39966
+		// (get) Token: 0x06022A5B RID: 141915 RVA: 0x004C5A48 File Offset: 0x004C3C48
 		public IConditionGroup? Condition
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700943E RID: 37950
-		// (get) Token: 0x06020B3C RID: 133948 RVA: 0x0048C058 File Offset: 0x0048A258
+		// Token: 0x17009C1F RID: 39967
+		// (get) Token: 0x06022A5C RID: 141916 RVA: 0x004C5AA8 File Offset: 0x004C3CA8
 		public IBubbleData? Flow
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020B3D RID: 133949 RVA: 0x0048C0B5 File Offset: 0x0048A2B5
+		// Token: 0x06022A5D RID: 141917 RVA: 0x004C5B05 File Offset: 0x004C3D05
 		public static Offset<IConditionBubbleData> CreateIConditionBubbleData(FlatBufferBuilder builder, Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>), Offset<IBubbleData> FlowOffset = default(Offset<IBubbleData>))
 		{
 			builder.StartTable(2);
@@ -88,31 +88,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IConditionBubbleData.EndIConditionBubbleData(builder);
 		}
 
-		// Token: 0x06020B3E RID: 133950 RVA: 0x0048C0D2 File Offset: 0x0048A2D2
+		// Token: 0x06022A5E RID: 141918 RVA: 0x004C5B22 File Offset: 0x004C3D22
 		public static void StartIConditionBubbleData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06020B3F RID: 133951 RVA: 0x0048C0DB File Offset: 0x0048A2DB
+		// Token: 0x06022A5F RID: 141919 RVA: 0x004C5B2B File Offset: 0x004C3D2B
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IConditionGroup> conditionOffset)
 		{
 			builder.AddOffset(0, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x06020B40 RID: 133952 RVA: 0x0048C0EB File Offset: 0x0048A2EB
+		// Token: 0x06022A60 RID: 141920 RVA: 0x004C5B3B File Offset: 0x004C3D3B
 		public static void AddFlow(FlatBufferBuilder builder, Offset<IBubbleData> flowOffset)
 		{
 			builder.AddOffset(1, flowOffset.Value, 0);
 		}
 
-		// Token: 0x06020B41 RID: 133953 RVA: 0x0048C0FB File Offset: 0x0048A2FB
+		// Token: 0x06022A61 RID: 141921 RVA: 0x004C5B4B File Offset: 0x004C3D4B
 		public static Offset<IConditionBubbleData> EndIConditionBubbleData(FlatBufferBuilder builder)
 		{
 			return new Offset<IConditionBubbleData>(builder.EndTable());
 		}
 
-		// Token: 0x06020B42 RID: 133954 RVA: 0x0048C108 File Offset: 0x0048A308
+		// Token: 0x06022A62 RID: 141922 RVA: 0x004C5B58 File Offset: 0x004C3D58
 		public IConditionBubbleDataT UnPack()
 		{
 			IConditionBubbleDataT conditionBubbleDataT = new IConditionBubbleDataT();
@@ -120,14 +120,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return conditionBubbleDataT;
 		}
 
-		// Token: 0x06020B43 RID: 133955 RVA: 0x0048C124 File Offset: 0x0048A324
+		// Token: 0x06022A63 RID: 141923 RVA: 0x004C5B74 File Offset: 0x004C3D74
 		public void UnPackTo(IConditionBubbleDataT _o)
 		{
 			_o.Condition = ((this.Condition != null) ? this.Condition.Value.UnPack() : null);
 			_o.Flow = ((this.Flow != null) ? this.Flow.Value.UnPack() : null);
 		}
 
-		// Token: 0x06020B44 RID: 133956 RVA: 0x0048C190 File Offset: 0x0048A390
+		// Token: 0x06022A64 RID: 141924 RVA: 0x004C5BE0 File Offset: 0x004C3DE0
 		public static Offset<IConditionBubbleData> Pack(FlatBufferBuilder builder, IConditionBubbleDataT _o)
 		{
 			if (_o == null)
@@ -139,7 +139,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IConditionBubbleData.CreateIConditionBubbleData(builder, conditionOffset, flowOffset);
 		}
 
-		// Token: 0x0400DFA6 RID: 57254
+		// Token: 0x0400EB9C RID: 60316
 		private Table __p;
 	}
 }

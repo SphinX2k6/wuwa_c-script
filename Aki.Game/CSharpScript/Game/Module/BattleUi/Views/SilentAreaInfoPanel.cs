@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DC1 RID: 24001
+	// Token: 0x02004DA5 RID: 19877
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SilentAreaInfoPanel : BattleChildView
 	{
-		// Token: 0x0603CFCF RID: 249807 RVA: 0x00EA9CA4 File Offset: 0x00EA7EA4
+		// Token: 0x06031F46 RID: 204614 RVA: 0x00DFAB80 File Offset: 0x00DF8D80
 		protected override UniTask InitializeAsync(object param = null)
 		{
 			SilentAreaInfoPanel.<InitializeAsync>d__6 <InitializeAsync>d__;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CFD0 RID: 249808 RVA: 0x00EA9CE8 File Offset: 0x00EA7EE8
+		// Token: 0x06031F47 RID: 204615 RVA: 0x00DFABC4 File Offset: 0x00DF8DC4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CFD1 RID: 249809 RVA: 0x00EA9D54 File Offset: 0x00EA7F54
+		// Token: 0x06031F48 RID: 204616 RVA: 0x00DFAC30 File Offset: 0x00DF8E30
 		protected override void OnStart()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, false);
 		}
 
-		// Token: 0x0603CFD2 RID: 249810 RVA: 0x00EA9DB8 File Offset: 0x00EA7FB8
+		// Token: 0x06031F49 RID: 204617 RVA: 0x00DFAC94 File Offset: 0x00DF8E94
 		[NullableContext(1)]
 		public void CreateAndShow(string resourceId, UUIItem parent, [Nullable(2)] SilentAreaShowInfo silentAreaInfo)
 		{
@@ -84,14 +84,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}).Forget();
 		}
 
-		// Token: 0x0603CFD3 RID: 249811 RVA: 0x00EA9E1C File Offset: 0x00EA801C
+		// Token: 0x06031F4A RID: 204618 RVA: 0x00DFACF8 File Offset: 0x00DF8EF8
 		protected override void OnShowBattleChildView()
 		{
 			this.LevelSequencePlayer.StopCurrentSequence(false, false);
 			this.LevelSequencePlayer.PlaySequencePurely("Start", false, false, null, null, false);
 		}
 
-		// Token: 0x0603CFD4 RID: 249812 RVA: 0x00EA9E53 File Offset: 0x00EA8053
+		// Token: 0x06031F4B RID: 204619 RVA: 0x00DFAD2F File Offset: 0x00DF8F2F
 		public void UpdateInfo(SilentAreaShowInfo silentAreaInfo)
 		{
 			this.SilentAreaInfo = silentAreaInfo;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateItems();
 		}
 
-		// Token: 0x0603CFD5 RID: 249813 RVA: 0x00EA9E6C File Offset: 0x00EA806C
+		// Token: 0x06031F4C RID: 204620 RVA: 0x00DFAD48 File Offset: 0x00DF8F48
 		[NullableContext(1)]
 		private unsafe List<ILevelPlayInformation> GetInfoInformationConfig()
 		{
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return list2;
 		}
 
-		// Token: 0x0603CFD6 RID: 249814 RVA: 0x00EA9F9C File Offset: 0x00EA819C
+		// Token: 0x06031F4D RID: 204621 RVA: 0x00DFAE78 File Offset: 0x00DF9078
 		private void UpdateItems()
 		{
 			if (this.SilentAreaInfo == null)
@@ -181,13 +181,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CFD7 RID: 249815 RVA: 0x00EAA098 File Offset: 0x00EA8298
+		// Token: 0x06031F4E RID: 204622 RVA: 0x00DFAF74 File Offset: 0x00DF9174
 		private void StartCountdown()
 		{
 			this.TimerHandle = TimerSystem.Instance.Delay(new TTimerAction(this.OnTimerEnd), 8000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603CFD8 RID: 249816 RVA: 0x00EAA0C4 File Offset: 0x00EA82C4
+		// Token: 0x06031F4F RID: 204623 RVA: 0x00DFAFA0 File Offset: 0x00DF91A0
 		public void EndShow()
 		{
 			if (this.TimerHandle != null)
@@ -207,36 +207,36 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer2.PlayLevelSequenceByName("Close", false, null, false);
 		}
 
-		// Token: 0x0603CFD9 RID: 249817 RVA: 0x00EAA11D File Offset: 0x00EA831D
+		// Token: 0x06031F50 RID: 204624 RVA: 0x00DFAFF9 File Offset: 0x00DF91F9
 		private void OnTimerEnd(float _)
 		{
 			this.EndShow();
 			EventSystem.Instance.Emit(EEventName.BattleUiToggleSilentAreaInfoView);
 		}
 
-		// Token: 0x0401FC6A RID: 130154
+		// Token: 0x0401A727 RID: 108327
 		private bool Created;
 
-		// Token: 0x0401FC6B RID: 130155
+		// Token: 0x0401A728 RID: 108328
 		private SilentAreaShowInfo SilentAreaInfo;
 
-		// Token: 0x0401FC6C RID: 130156
+		// Token: 0x0401A729 RID: 108329
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0401FC6D RID: 130157
+		// Token: 0x0401A72A RID: 108330
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401FC6E RID: 130158
+		// Token: 0x0401A72B RID: 108331
 		[Nullable(1)]
 		private readonly List<SilentAreaInfoItem> Items = new List<SilentAreaInfoItem>();
 
-		// Token: 0x0200C0C1 RID: 49345
+		// Token: 0x0200AACA RID: 43722
 		[NullableContext(0)]
 		private enum EChildComponent
 		{
-			// Token: 0x0403A28F RID: 238223
+			// Token: 0x04034C61 RID: 216161
 			ItemsRoot,
-			// Token: 0x0403A290 RID: 238224
+			// Token: 0x04034C62 RID: 216162
 			InfoItem
 		}
 	}

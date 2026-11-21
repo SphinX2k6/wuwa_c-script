@@ -3,26 +3,26 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Common.MediumItemGrid
 {
-	// Token: 0x02005B62 RID: 23394
+	// Token: 0x02004B41 RID: 19265
 	[RequiredMember]
 	public class MediumItemGridComposeTag
 	{
-		// Token: 0x0603B38A RID: 242570 RVA: 0x00E1ED2F File Offset: 0x00E1CF2F
+		// Token: 0x060302D6 RID: 197334 RVA: 0x00D6F29B File Offset: 0x00D6D49B
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public MediumItemGridComposeTag()
 		{
 		}
 
-		// Token: 0x0401EE11 RID: 126481
+		// Token: 0x040198C0 RID: 104640
 		[RequiredMember]
 		public bool IsRefreshItem;
 
-		// Token: 0x0401EE12 RID: 126482
+		// Token: 0x040198C1 RID: 104641
 		[RequiredMember]
 		public bool IsLimitTimeItem;
 
-		// Token: 0x0401EE13 RID: 126483
+		// Token: 0x040198C2 RID: 104642
 		[RequiredMember]
 		public EMediumItemGridBuffType BuffItem;
 	}

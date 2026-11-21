@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017C0 RID: 6080
+	// Token: 0x02001943 RID: 6467
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IAdjustFixedLookAtTargetRangeEntity : IAdjustFixedLookAtTargetBase
 	{
-		// Token: 0x060081CD RID: 33229 RVA: 0x001361EC File Offset: 0x001343EC
-		[NullableContext(1)]
+		// Token: 0x060088C7 RID: 35015 RVA: 0x0014554C File Offset: 0x0014374C
+		[NullableContext(0)]
 		private IAdjustFixedLookAtTargetRangeEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060081CE RID: 33230 RVA: 0x00136224 File Offset: 0x00134424
-		[NullableContext(1)]
+		// Token: 0x060088C8 RID: 35016 RVA: 0x00145584 File Offset: 0x00143784
+		[NullableContext(0)]
 		public static IAdjustFixedLookAtTargetRangeEntity Create([Nullable(2)] IAdjustFixedLookAtTargetRangeEntity instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060081CF RID: 33231 RVA: 0x00136237 File Offset: 0x00134437
-		[NullableContext(1)]
+		// Token: 0x060088C9 RID: 35017 RVA: 0x00145597 File Offset: 0x00143797
+		[NullableContext(0)]
 		public static IAdjustFixedLookAtTargetRangeEntity CreateFromSetValue([Nullable(2)] IAdjustFixedLookAtTargetRangeEntity_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060081D0 RID: 33232 RVA: 0x0013624C File Offset: 0x0013444C
-		[NullableContext(1)]
+		// Token: 0x060088CA RID: 35018 RVA: 0x001455AC File Offset: 0x001437AC
+		[NullableContext(0)]
 		public new IAdjustFixedLookAtTargetRangeEntity_SetValue ToSetValue()
 		{
 			return new IAdjustFixedLookAtTargetRangeEntity_SetValue
@@ -67,9 +67,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002A9B RID: 10907
-		// (get) Token: 0x060081D1 RID: 33233 RVA: 0x0013629A File Offset: 0x0013449A
-		// (set) Token: 0x060081D2 RID: 33234 RVA: 0x001362C5 File Offset: 0x001344C5
+		// Token: 0x17002C8B RID: 11403
+		// (get) Token: 0x060088CB RID: 35019 RVA: 0x001455FA File Offset: 0x001437FA
+		// (set) Token: 0x060088CC RID: 35020 RVA: 0x00145625 File Offset: 0x00143825
 		public override EFixedLookAtTargetType Type
 		{
 			get
@@ -90,9 +90,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002A9C RID: 10908
-		// (get) Token: 0x060081D3 RID: 33235 RVA: 0x001362D3 File Offset: 0x001344D3
-		// (set) Token: 0x060081D4 RID: 33236 RVA: 0x001362FE File Offset: 0x001344FE
+		// Token: 0x17002C8C RID: 11404
+		// (get) Token: 0x060088CD RID: 35021 RVA: 0x00145633 File Offset: 0x00143833
+		// (set) Token: 0x060088CE RID: 35022 RVA: 0x0014565E File Offset: 0x0014385E
 		public virtual int EntityId
 		{
 			get
@@ -113,9 +113,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002A9D RID: 10909
-		// (get) Token: 0x060081D5 RID: 33237 RVA: 0x0013630C File Offset: 0x0013450C
-		// (set) Token: 0x060081D6 RID: 33238 RVA: 0x0013636D File Offset: 0x0013456D
+		// Token: 0x17002C8D RID: 11405
+		// (get) Token: 0x060088CF RID: 35023 RVA: 0x0014566C File Offset: 0x0014386C
+		// (set) Token: 0x060088D0 RID: 35024 RVA: 0x001456CD File Offset: 0x001438CD
 		public virtual IMovingCameraTimeParams MovingTimeParams
 		{
 			get
@@ -143,9 +143,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002A9E RID: 10910
-		// (get) Token: 0x060081D7 RID: 33239 RVA: 0x00136384 File Offset: 0x00134584
-		// (set) Token: 0x060081D8 RID: 33240 RVA: 0x001363E5 File Offset: 0x001345E5
+		// Token: 0x17002C8E RID: 11406
+		// (get) Token: 0x060088D1 RID: 35025 RVA: 0x001456E4 File Offset: 0x001438E4
+		// (set) Token: 0x060088D2 RID: 35026 RVA: 0x00145745 File Offset: 0x00143945
 		public virtual PlayFlow MovingFlow
 		{
 			get
@@ -173,9 +173,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002A9F RID: 10911
-		// (get) Token: 0x060081D9 RID: 33241 RVA: 0x001363FC File Offset: 0x001345FC
-		// (set) Token: 0x060081DA RID: 33242 RVA: 0x0013645D File Offset: 0x0013465D
+		// Token: 0x17002C8F RID: 11407
+		// (get) Token: 0x060088D3 RID: 35027 RVA: 0x0014575C File Offset: 0x0014395C
+		// (set) Token: 0x060088D4 RID: 35028 RVA: 0x001457BD File Offset: 0x001439BD
 		public virtual ICutCameraConfig CutCameraConfig
 		{
 			get
@@ -203,31 +203,31 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005270 RID: 21104
+		// Token: 0x040056AA RID: 22186
 		protected new IAdjustFixedLookAtTargetRangeEntity FbInstance;
 
-		// Token: 0x04005271 RID: 21105
+		// Token: 0x040056AB RID: 22187
 		protected new IAdjustFixedLookAtTargetRangeEntity_SetValue PocoInterface;
 
-		// Token: 0x04005272 RID: 21106
-		[Nullable(1)]
+		// Token: 0x040056AC RID: 22188
+		[Nullable(0)]
 		private IMovingCameraTimeParams _MovingTimeParamsCache;
 
-		// Token: 0x04005273 RID: 21107
+		// Token: 0x040056AD RID: 22189
 		private bool _MovingTimeParamsInited;
 
-		// Token: 0x04005274 RID: 21108
-		[Nullable(1)]
+		// Token: 0x040056AE RID: 22190
+		[Nullable(0)]
 		private PlayFlow _MovingFlowCache;
 
-		// Token: 0x04005275 RID: 21109
+		// Token: 0x040056AF RID: 22191
 		private bool _MovingFlowInited;
 
-		// Token: 0x04005276 RID: 21110
-		[Nullable(1)]
+		// Token: 0x040056B0 RID: 22192
+		[Nullable(0)]
 		private ICutCameraConfig _CutCameraConfigCache;
 
-		// Token: 0x04005277 RID: 21111
+		// Token: 0x040056B1 RID: 22193
 		private bool _CutCameraConfigInited;
 	}
 }

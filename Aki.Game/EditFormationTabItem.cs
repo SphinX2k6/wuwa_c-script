@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x020019BB RID: 6587
+// Token: 0x02000E79 RID: 3705
 [NullableContext(1)]
 [Nullable(0)]
 public class EditFormationTabItem : CommonTabItemBase
 {
-	// Token: 0x0600C073 RID: 49267 RVA: 0x002B5E9B File Offset: 0x002B409B
+	// Token: 0x0600947D RID: 38013 RVA: 0x002C0E2B File Offset: 0x002BF02B
 	public EditFormationTabItem(bool hasRedDot = true)
 	{
 		this.HasRedDot = hasRedDot;
 	}
 
-	// Token: 0x0600C074 RID: 49268 RVA: 0x002B5EAC File Offset: 0x002B40AC
+	// Token: 0x0600947E RID: 38014 RVA: 0x002C0E3C File Offset: 0x002BF03C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -42,7 +42,7 @@ public class EditFormationTabItem : CommonTabItemBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C075 RID: 49269 RVA: 0x002B5FB7 File Offset: 0x002B41B7
+	// Token: 0x0600947F RID: 38015 RVA: 0x002C0F47 File Offset: 0x002BF147
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -53,13 +53,13 @@ public class EditFormationTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0600C076 RID: 49270 RVA: 0x002B5FE5 File Offset: 0x002B41E5
+	// Token: 0x06009480 RID: 38016 RVA: 0x002C0F75 File Offset: 0x002BF175
 	protected override void OnBeforeDestroy()
 	{
 		this.UnBindRedDot();
 	}
 
-	// Token: 0x0600C077 RID: 49271 RVA: 0x002B5FED File Offset: 0x002B41ED
+	// Token: 0x06009481 RID: 38017 RVA: 0x002C0F7D File Offset: 0x002BF17D
 	private void ToggleClick(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -68,26 +68,26 @@ public class EditFormationTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0600C078 RID: 49272 RVA: 0x002B6006 File Offset: 0x002B4206
+	// Token: 0x06009482 RID: 38018 RVA: 0x002C0F96 File Offset: 0x002BF196
 	public void ShowTeamBattleTips(bool isShow = true)
 	{
 		base.GetItem(this.GetComponentIndex(4)).SetUIActive(isShow);
 	}
 
-	// Token: 0x0600C079 RID: 49273 RVA: 0x002B601B File Offset: 0x002B421B
+	// Token: 0x06009483 RID: 38019 RVA: 0x002C0FAB File Offset: 0x002BF1AB
 	protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 		CommonTabData data2 = data.Data;
 		base.UpdateTabIcon(((data2 != null) ? data2.GetIcon() : null) ?? "");
 	}
 
-	// Token: 0x0600C07A RID: 49274 RVA: 0x002B6040 File Offset: 0x002B4240
+	// Token: 0x06009484 RID: 38020 RVA: 0x002C0FD0 File Offset: 0x002BF1D0
 	protected override void OnUpdateTabIcon(string iconPath)
 	{
 		this.SetSpriteByPath(iconPath, base.GetSprite(0), false, null, new Action<bool>(this.RefreshTransition));
 	}
 
-	// Token: 0x0600C07B RID: 49275 RVA: 0x002B6074 File Offset: 0x002B4274
+	// Token: 0x06009485 RID: 38021 RVA: 0x002C1004 File Offset: 0x002BF204
 	protected void RefreshTransition(bool result)
 	{
 		UUIExtendToggleSpriteTransition uiExtendToggleSpriteTransition = base.GetUiExtendToggleSpriteTransition(this.GetComponentIndex(3));
@@ -97,19 +97,19 @@ public class EditFormationTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0600C07C RID: 49276 RVA: 0x002B60A4 File Offset: 0x002B42A4
+	// Token: 0x06009486 RID: 38022 RVA: 0x002C1034 File Offset: 0x002BF234
 	protected override void OnSetToggleState(EToggleState state, bool bFire)
 	{
 		base.GetExtendToggle(1).SetToggleState(state, bFire, false, false);
 	}
 
-	// Token: 0x0600C07D RID: 49277 RVA: 0x002B60B7 File Offset: 0x002B42B7
+	// Token: 0x06009487 RID: 38023 RVA: 0x002C1047 File Offset: 0x002BF247
 	protected override UUIExtendToggle GetTabToggle()
 	{
 		return base.GetExtendToggle(1);
 	}
 
-	// Token: 0x0600C07E RID: 49278 RVA: 0x002B60C0 File Offset: 0x002B42C0
+	// Token: 0x06009488 RID: 38024 RVA: 0x002C1050 File Offset: 0x002BF250
 	public void BindRedDot(ERedDotName redDotName, int uId = 0)
 	{
 		if (!this.HasRedDot)
@@ -123,7 +123,7 @@ public class EditFormationTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0600C07F RID: 49279 RVA: 0x002B60F8 File Offset: 0x002B42F8
+	// Token: 0x06009489 RID: 38025 RVA: 0x002C1088 File Offset: 0x002BF288
 	private int GetComponentIndex(int index)
 	{
 		if (this.HasRedDot || index <= 2)
@@ -133,7 +133,7 @@ public class EditFormationTabItem : CommonTabItemBase
 		return index - 1;
 	}
 
-	// Token: 0x0600C080 RID: 49280 RVA: 0x002B610B File Offset: 0x002B430B
+	// Token: 0x0600948A RID: 38026 RVA: 0x002C109B File Offset: 0x002BF29B
 	public void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -143,29 +143,29 @@ public class EditFormationTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0400566F RID: 22127
+	// Token: 0x04005721 RID: 22305
 	private ERedDotName? RedDotName;
 
-	// Token: 0x04005670 RID: 22128
+	// Token: 0x04005722 RID: 22306
 	private readonly bool HasRedDot;
 
-	// Token: 0x02007EE8 RID: 32488
+	// Token: 0x02007077 RID: 28791
 	[NullableContext(0)]
 	private class EEditFormationTabItem
 	{
-		// Token: 0x04029770 RID: 169840
+		// Token: 0x04024AAD RID: 150189
 		public const int Icon = 0;
 
-		// Token: 0x04029771 RID: 169841
+		// Token: 0x04024AAE RID: 150190
 		public const int Toggle = 1;
 
-		// Token: 0x04029772 RID: 169842
+		// Token: 0x04024AAF RID: 150191
 		public const int RedDot = 2;
 
-		// Token: 0x04029773 RID: 169843
+		// Token: 0x04024AB0 RID: 150192
 		public const int Transition = 3;
 
-		// Token: 0x04029774 RID: 169844
+		// Token: 0x04024AB1 RID: 150193
 		public const int ItemTip = 4;
 	}
 }

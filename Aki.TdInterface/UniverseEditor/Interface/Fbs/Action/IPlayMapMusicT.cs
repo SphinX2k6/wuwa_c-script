@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D27 RID: 27943
+	// Token: 0x020074A2 RID: 29858
 	public class IPlayMapMusicT
 	{
-		// Token: 0x1700D01F RID: 53279
-		// (get) Token: 0x06031498 RID: 201880 RVA: 0x006AF42A File Offset: 0x006AD62A
-		// (set) Token: 0x06031499 RID: 201881 RVA: 0x006AF432 File Offset: 0x006AD632
+		// Token: 0x1700DB65 RID: 56165
+		// (get) Token: 0x06034490 RID: 214160 RVA: 0x0070AA6E File Offset: 0x00708C6E
+		// (set) Token: 0x06034491 RID: 214161 RVA: 0x0070AA76 File Offset: 0x00708C76
 		public EAkEventMap Type { get; set; }
 
-		// Token: 0x0603149A RID: 201882 RVA: 0x006AF43B File Offset: 0x006AD63B
+		// Token: 0x06034492 RID: 214162 RVA: 0x0070AA7F File Offset: 0x00708C7F
 		public IPlayMapMusicT()
 		{
 			this.Type = EAkEventMap.PlayMapMusic;

@@ -6,12 +6,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020018B3 RID: 6323
+// Token: 0x02000D6C RID: 3436
 [NullableContext(1)]
 [Nullable(0)]
 public class ItemGridBase : UiPanelBase
 {
-	// Token: 0x0600B91B RID: 47387 RVA: 0x002A0044 File Offset: 0x0029E244
+	// Token: 0x06008D04 RID: 36100 RVA: 0x002AA79A File Offset: 0x002A899A
 	[NullableContext(2)]
 	public void Initialize(AActor rootActor = null)
 	{
@@ -21,7 +21,7 @@ public class ItemGridBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B91C RID: 47388 RVA: 0x002A0054 File Offset: 0x0029E254
+	// Token: 0x06008D05 RID: 36101 RVA: 0x002AA7A8 File Offset: 0x002A89A8
 	protected override void OnStartImplement()
 	{
 		this.TopAdditionItem = this.OnSetTopAdditionItem();
@@ -32,7 +32,7 @@ public class ItemGridBase : UiPanelBase
 		this.AddEvents();
 	}
 
-	// Token: 0x0600B91D RID: 47389 RVA: 0x002A00E0 File Offset: 0x0029E2E0
+	// Token: 0x06008D06 RID: 36102 RVA: 0x002AA834 File Offset: 0x002A8A34
 	protected override void OnBeforeDestroyImplement()
 	{
 		this.TopAdditionItem = null;
@@ -60,7 +60,7 @@ public class ItemGridBase : UiPanelBase
 		this.RemoveEvents();
 	}
 
-	// Token: 0x0600B91E RID: 47390 RVA: 0x002A0180 File Offset: 0x0029E380
+	// Token: 0x06008D07 RID: 36103 RVA: 0x002AA8D4 File Offset: 0x002A8AD4
 	[NullableContext(2)]
 	protected virtual UUIItem OnSetUnderTextAdditionItem()
 	{
@@ -68,7 +68,7 @@ public class ItemGridBase : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x0600B91F RID: 47391 RVA: 0x002A01AC File Offset: 0x0029E3AC
+	// Token: 0x06008D08 RID: 36104 RVA: 0x002AA900 File Offset: 0x002A8B00
 	[NullableContext(2)]
 	protected virtual UUIItem OnSetBottomAdditionItem()
 	{
@@ -76,7 +76,7 @@ public class ItemGridBase : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x0600B920 RID: 47392 RVA: 0x002A01D8 File Offset: 0x0029E3D8
+	// Token: 0x06008D09 RID: 36105 RVA: 0x002AA92C File Offset: 0x002A8B2C
 	[NullableContext(2)]
 	protected virtual UUIItem OnSetTopAdditionItem()
 	{
@@ -84,7 +84,7 @@ public class ItemGridBase : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x0600B921 RID: 47393 RVA: 0x002A0204 File Offset: 0x0029E404
+	// Token: 0x06008D0A RID: 36106 RVA: 0x002AA958 File Offset: 0x002A8B58
 	[NullableContext(2)]
 	public virtual UUIExtendToggle GetItemGridExtendToggle()
 	{
@@ -92,7 +92,7 @@ public class ItemGridBase : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x0600B922 RID: 47394 RVA: 0x002A0230 File Offset: 0x0029E430
+	// Token: 0x06008D0B RID: 36107 RVA: 0x002AA984 File Offset: 0x002A8B84
 	protected void AddEvents()
 	{
 		UUIExtendToggle itemGridExtendToggle = this.GetItemGridExtendToggle();
@@ -108,7 +108,7 @@ public class ItemGridBase : UiPanelBase
 		this.OnAddEvents();
 	}
 
-	// Token: 0x0600B923 RID: 47395 RVA: 0x002A02D8 File Offset: 0x0029E4D8
+	// Token: 0x06008D0C RID: 36108 RVA: 0x002AAA2C File Offset: 0x002A8C2C
 	protected void RemoveEvents()
 	{
 		UUIExtendToggle itemGridExtendToggle = this.GetItemGridExtendToggle();
@@ -124,22 +124,22 @@ public class ItemGridBase : UiPanelBase
 		this.OnRemoveEvents();
 	}
 
-	// Token: 0x0600B924 RID: 47396 RVA: 0x002A0372 File Offset: 0x0029E572
+	// Token: 0x06008D0D RID: 36109 RVA: 0x002AAAC6 File Offset: 0x002A8CC6
 	protected virtual void UnBindComponentEvents()
 	{
 	}
 
-	// Token: 0x0600B925 RID: 47397 RVA: 0x002A0374 File Offset: 0x0029E574
+	// Token: 0x06008D0E RID: 36110 RVA: 0x002AAAC8 File Offset: 0x002A8CC8
 	protected virtual void OnAddEvents()
 	{
 	}
 
-	// Token: 0x0600B926 RID: 47398 RVA: 0x002A0376 File Offset: 0x0029E576
+	// Token: 0x06008D0F RID: 36111 RVA: 0x002AAACA File Offset: 0x002A8CCA
 	protected virtual void OnRemoveEvents()
 	{
 	}
 
-	// Token: 0x0600B927 RID: 47399 RVA: 0x002A0378 File Offset: 0x0029E578
+	// Token: 0x06008D10 RID: 36112 RVA: 0x002AAACC File Offset: 0x002A8CCC
 	private void ExtendTogglePress()
 	{
 		this.OnExtendTogglePress();
@@ -155,12 +155,12 @@ public class ItemGridBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B928 RID: 47400 RVA: 0x002A03C9 File Offset: 0x0029E5C9
+	// Token: 0x06008D11 RID: 36113 RVA: 0x002AAB1D File Offset: 0x002A8D1D
 	protected virtual void OnExtendTogglePress()
 	{
 	}
 
-	// Token: 0x0600B929 RID: 47401 RVA: 0x002A03CC File Offset: 0x0029E5CC
+	// Token: 0x06008D12 RID: 36114 RVA: 0x002AAB20 File Offset: 0x002A8D20
 	private void ExtendToggleRelease()
 	{
 		this.OnExtendToggleRelease();
@@ -187,17 +187,17 @@ public class ItemGridBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B92A RID: 47402 RVA: 0x002A0461 File Offset: 0x0029E661
+	// Token: 0x06008D13 RID: 36115 RVA: 0x002AABB5 File Offset: 0x002A8DB5
 	protected virtual void OnExtendToggleRelease()
 	{
 	}
 
-	// Token: 0x0600B92B RID: 47403 RVA: 0x002A0463 File Offset: 0x0029E663
+	// Token: 0x06008D14 RID: 36116 RVA: 0x002AABB7 File Offset: 0x002A8DB7
 	protected virtual void OnExtendToggleClicked()
 	{
 	}
 
-	// Token: 0x0600B92C RID: 47404 RVA: 0x002A0468 File Offset: 0x0029E668
+	// Token: 0x06008D15 RID: 36117 RVA: 0x002AABBC File Offset: 0x002A8DBC
 	private void ExtendToggleStateChanged(EToggleState state)
 	{
 		this.OnExtendToggleStateChanged(state);
@@ -213,12 +213,12 @@ public class ItemGridBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B92D RID: 47405 RVA: 0x002A04B0 File Offset: 0x0029E6B0
+	// Token: 0x06008D16 RID: 36118 RVA: 0x002AAC04 File Offset: 0x002A8E04
 	protected virtual void OnExtendToggleStateChanged(EToggleState state)
 	{
 	}
 
-	// Token: 0x0600B92E RID: 47406 RVA: 0x002A04B2 File Offset: 0x0029E6B2
+	// Token: 0x06008D17 RID: 36119 RVA: 0x002AAC06 File Offset: 0x002A8E06
 	private bool CanExecuteChange()
 	{
 		if (this.OnCanExecuteChangeCallback != null)
@@ -228,25 +228,25 @@ public class ItemGridBase : UiPanelBase
 		return this.OnCanExecuteChange();
 	}
 
-	// Token: 0x0600B92F RID: 47407 RVA: 0x002A04E5 File Offset: 0x0029E6E5
+	// Token: 0x06008D18 RID: 36120 RVA: 0x002AAC39 File Offset: 0x002A8E39
 	protected virtual bool OnCanExecuteChange()
 	{
 		return true;
 	}
 
-	// Token: 0x0600B930 RID: 47408 RVA: 0x002A04E8 File Offset: 0x0029E6E8
+	// Token: 0x06008D19 RID: 36121 RVA: 0x002AAC3C File Offset: 0x002A8E3C
 	private void ExtendToggleHover()
 	{
 		this.IsHover = true;
 	}
 
-	// Token: 0x0600B931 RID: 47409 RVA: 0x002A04F1 File Offset: 0x0029E6F1
+	// Token: 0x06008D1A RID: 36122 RVA: 0x002AAC45 File Offset: 0x002A8E45
 	private void ExtendToggleUnHover()
 	{
 		this.IsHover = false;
 	}
 
-	// Token: 0x0600B932 RID: 47410 RVA: 0x002A04FC File Offset: 0x0029E6FC
+	// Token: 0x06008D1B RID: 36123 RVA: 0x002AAC50 File Offset: 0x002A8E50
 	public virtual void SetSelected(bool bSelected, bool bForce = false)
 	{
 		UUIExtendToggle itemGridExtendToggle = this.GetItemGridExtendToggle();
@@ -273,7 +273,7 @@ public class ItemGridBase : UiPanelBase
 		this.IsForceSelected = bForce;
 	}
 
-	// Token: 0x0600B933 RID: 47411 RVA: 0x002A0558 File Offset: 0x0029E758
+	// Token: 0x06008D1C RID: 36124 RVA: 0x002AACAC File Offset: 0x002A8EAC
 	public void SetExtendToggleEnable(bool bEnable, bool bForce = false)
 	{
 		if (this.IsExtendToggleEnable == bEnable && !bForce)
@@ -290,55 +290,55 @@ public class ItemGridBase : UiPanelBase
 		itemGridExtendToggle.SetToggleState(EToggleState.ETT_UnDetermined, false, false, false);
 	}
 
-	// Token: 0x0600B934 RID: 47412 RVA: 0x002A059C File Offset: 0x0029E79C
+	// Token: 0x06008D1D RID: 36125 RVA: 0x002AACF0 File Offset: 0x002A8EF0
 	public void BindOnExtendTogglePress(Action<MediumItemGridExtendCallback> onItemButtonPress)
 	{
 		this.OnExtendTogglePressCallback = onItemButtonPress;
 	}
 
-	// Token: 0x0600B935 RID: 47413 RVA: 0x002A05A5 File Offset: 0x0029E7A5
+	// Token: 0x06008D1E RID: 36126 RVA: 0x002AACF9 File Offset: 0x002A8EF9
 	public void UnBindOnExtendTogglePress()
 	{
 		this.OnExtendTogglePressCallback = null;
 	}
 
-	// Token: 0x0600B936 RID: 47414 RVA: 0x002A05AE File Offset: 0x0029E7AE
+	// Token: 0x06008D1F RID: 36127 RVA: 0x002AAD02 File Offset: 0x002A8F02
 	public void BindOnExtendToggleRelease(Action<MediumItemGridExtendCallback> onItemButtonRelease)
 	{
 		this.OnExtendToggleReleaseCallback = onItemButtonRelease;
 	}
 
-	// Token: 0x0600B937 RID: 47415 RVA: 0x002A05B7 File Offset: 0x0029E7B7
+	// Token: 0x06008D20 RID: 36128 RVA: 0x002AAD0B File Offset: 0x002A8F0B
 	public void UnBindOnExtendToggleRelease()
 	{
 		this.OnExtendToggleReleaseCallback = null;
 	}
 
-	// Token: 0x0600B938 RID: 47416 RVA: 0x002A05C0 File Offset: 0x0029E7C0
+	// Token: 0x06008D21 RID: 36129 RVA: 0x002AAD14 File Offset: 0x002A8F14
 	public void BindOnExtendToggleStateChanged(Action<MediumItemGridExtendCallback> onItemButtonClicked)
 	{
 		this.OnExtendToggleStateChangedCallback = onItemButtonClicked;
 	}
 
-	// Token: 0x0600B939 RID: 47417 RVA: 0x002A05C9 File Offset: 0x0029E7C9
+	// Token: 0x06008D22 RID: 36130 RVA: 0x002AAD1D File Offset: 0x002A8F1D
 	public void UnBindOnExtendToggleStateChanged()
 	{
 		this.OnExtendToggleStateChangedCallback = null;
 	}
 
-	// Token: 0x0600B93A RID: 47418 RVA: 0x002A05D2 File Offset: 0x0029E7D2
+	// Token: 0x06008D23 RID: 36131 RVA: 0x002AAD26 File Offset: 0x002A8F26
 	public void BindOnExtendToggleClicked(Action<MediumItemGridExtendCallback> onExtendToggleClickedCallback)
 	{
 		this.OnExtendToggleClickedCallback = onExtendToggleClickedCallback;
 	}
 
-	// Token: 0x0600B93B RID: 47419 RVA: 0x002A05DB File Offset: 0x0029E7DB
+	// Token: 0x06008D24 RID: 36132 RVA: 0x002AAD2F File Offset: 0x002A8F2F
 	public void UnBindOnExtendToggleClicked()
 	{
 		this.OnExtendToggleClickedCallback = null;
 	}
 
-	// Token: 0x0600B93C RID: 47420 RVA: 0x002A05E4 File Offset: 0x0029E7E4
+	// Token: 0x06008D25 RID: 36133 RVA: 0x002AAD38 File Offset: 0x002A8F38
 	public void BindOnCanExecuteChange([Nullable(new byte[]
 	{
 		1,
@@ -348,13 +348,13 @@ public class ItemGridBase : UiPanelBase
 		this.OnCanExecuteChangeCallback = onCanExecuteChange;
 	}
 
-	// Token: 0x0600B93D RID: 47421 RVA: 0x002A05ED File Offset: 0x0029E7ED
+	// Token: 0x06008D26 RID: 36134 RVA: 0x002AAD41 File Offset: 0x002A8F41
 	public void UnBindOnCanExecuteChange()
 	{
 		this.OnCanExecuteChangeCallback = null;
 	}
 
-	// Token: 0x0600B93E RID: 47422 RVA: 0x002A05F6 File Offset: 0x0029E7F6
+	// Token: 0x06008D27 RID: 36135 RVA: 0x002AAD4A File Offset: 0x002A8F4A
 	public void BindLongPress(LongPressButtonItem.ELongPressConfigId longPressConfigId, [Nullable(new byte[]
 	{
 		1,
@@ -373,14 +373,14 @@ public class ItemGridBase : UiPanelBase
 		this.CanItemLongPressCallback = canLongPressCallBack;
 	}
 
-	// Token: 0x0600B93F RID: 47423 RVA: 0x002A061D File Offset: 0x0029E81D
+	// Token: 0x06008D28 RID: 36136 RVA: 0x002AAD71 File Offset: 0x002A8F71
 	public void UnBindLongPress()
 	{
 		this.OnLongPressActiveCallback = null;
 		this.CanItemLongPressCallback = null;
 	}
 
-	// Token: 0x0600B940 RID: 47424 RVA: 0x002A062D File Offset: 0x0029E82D
+	// Token: 0x06008D29 RID: 36137 RVA: 0x002AAD81 File Offset: 0x002A8F81
 	protected void OnLongPressActivate(bool isShortPress)
 	{
 		if (this.OnLongPressActiveCallback != null)
@@ -389,13 +389,13 @@ public class ItemGridBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B941 RID: 47425 RVA: 0x002A064A File Offset: 0x0029E84A
+	// Token: 0x06008D2A RID: 36138 RVA: 0x002AAD9E File Offset: 0x002A8F9E
 	protected bool CanItemLongPressClick()
 	{
 		return this.CanItemLongPressCallback == null || this.CanItemLongPressCallback(this, this.Data);
 	}
 
-	// Token: 0x0600B942 RID: 47426 RVA: 0x002A0668 File Offset: 0x0029E868
+	// Token: 0x06008D2B RID: 36139 RVA: 0x002AADBC File Offset: 0x002A8FBC
 	[NullableContext(2)]
 	protected ItemGridComponent RefreshComponent([Nullable(1)] Type gridClass, bool? bNewIfNull, object @params = null)
 	{
@@ -428,7 +428,7 @@ public class ItemGridBase : UiPanelBase
 		return itemGridComponent;
 	}
 
-	// Token: 0x0600B943 RID: 47427 RVA: 0x002A06D9 File Offset: 0x0029E8D9
+	// Token: 0x06008D2C RID: 36140 RVA: 0x002AAE2D File Offset: 0x002A902D
 	private void HandleVisibleComponents(ItemGridComponent component)
 	{
 		if (component.IsShowOrShowing)
@@ -439,7 +439,7 @@ public class ItemGridBase : UiPanelBase
 		this.VisibleComponents.Remove(component);
 	}
 
-	// Token: 0x0600B944 RID: 47428 RVA: 0x002A06FE File Offset: 0x0029E8FE
+	// Token: 0x06008D2D RID: 36141 RVA: 0x002AAE52 File Offset: 0x002A9052
 	protected void SetComponentVisible(ItemGridComponent component, bool bVisible)
 	{
 		if (component == null)
@@ -457,7 +457,7 @@ public class ItemGridBase : UiPanelBase
 		component.SetActive(bVisible);
 	}
 
-	// Token: 0x0600B945 RID: 47429 RVA: 0x002A072C File Offset: 0x0029E92C
+	// Token: 0x06008D2E RID: 36142 RVA: 0x002AAE80 File Offset: 0x002A9080
 	private ItemGridComponent AddItemGridComponent(Type gridClass)
 	{
 		ItemGridComponent itemGridComponent;
@@ -489,7 +489,7 @@ public class ItemGridBase : UiPanelBase
 		return itemGridComponent;
 	}
 
-	// Token: 0x0600B946 RID: 47430 RVA: 0x002A0804 File Offset: 0x0029EA04
+	// Token: 0x06008D2F RID: 36143 RVA: 0x002AAF58 File Offset: 0x002A9158
 	private void OnComponentVisibleChanged(ItemGridComponent component, bool bVisible)
 	{
 		if (bVisible)
@@ -500,7 +500,7 @@ public class ItemGridBase : UiPanelBase
 		this.VisibleComponents.Remove(component);
 	}
 
-	// Token: 0x0600B947 RID: 47431 RVA: 0x002A0824 File Offset: 0x0029EA24
+	// Token: 0x06008D30 RID: 36144 RVA: 0x002AAF78 File Offset: 0x002A9178
 	[NullableContext(2)]
 	private void OnLoadComponentCompleted(ItemGridComponent component)
 	{
@@ -524,7 +524,7 @@ public class ItemGridBase : UiPanelBase
 		allComponentLoadedCallback();
 	}
 
-	// Token: 0x0600B948 RID: 47432 RVA: 0x002A0880 File Offset: 0x0029EA80
+	// Token: 0x06008D31 RID: 36145 RVA: 0x002AAFD4 File Offset: 0x002A91D4
 	protected void RefreshComponentVisible()
 	{
 		if (this.UseFixedAsync && this.IsAnyComponentLoading)
@@ -540,7 +540,7 @@ public class ItemGridBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B949 RID: 47433 RVA: 0x002A08F8 File Offset: 0x0029EAF8
+	// Token: 0x06008D32 RID: 36146 RVA: 0x002AB04C File Offset: 0x002A924C
 	protected void ClearVisibleComponent()
 	{
 		if (this.UseFixedAsync && this.IsAnyComponentLoading)
@@ -556,7 +556,7 @@ public class ItemGridBase : UiPanelBase
 		this.VisibleComponents.Clear();
 	}
 
-	// Token: 0x0600B94A RID: 47434 RVA: 0x002A0974 File Offset: 0x0029EB74
+	// Token: 0x06008D33 RID: 36147 RVA: 0x002AB0C8 File Offset: 0x002A92C8
 	private void AddToComponentList(ItemGridComponent component)
 	{
 		switch (component.GetLayoutLevel())
@@ -575,7 +575,7 @@ public class ItemGridBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B94B RID: 47435 RVA: 0x002A09C1 File Offset: 0x0029EBC1
+	// Token: 0x06008D34 RID: 36148 RVA: 0x002AB115 File Offset: 0x002A9315
 	protected void ClearComponentList()
 	{
 		this.UnderTextComponentList.Clear();
@@ -583,7 +583,7 @@ public class ItemGridBase : UiPanelBase
 		this.TopComponentList.Clear();
 	}
 
-	// Token: 0x0600B94C RID: 47436 RVA: 0x002A09E4 File Offset: 0x0029EBE4
+	// Token: 0x06008D35 RID: 36149 RVA: 0x002AB138 File Offset: 0x002A9338
 	protected void RefreshComponentHierarchyIndex()
 	{
 		if (this.IsAnyComponentLoading)
@@ -604,7 +604,7 @@ public class ItemGridBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B94D RID: 47437 RVA: 0x002A0A74 File Offset: 0x0029EC74
+	// Token: 0x06008D36 RID: 36150 RVA: 0x002AB1C8 File Offset: 0x002A93C8
 	[return: Nullable(2)]
 	protected T GetItemGridComponent<[Nullable(0)] T>(Type ctor) where T : ItemGridComponent
 	{
@@ -616,7 +616,7 @@ public class ItemGridBase : UiPanelBase
 		return default(T);
 	}
 
-	// Token: 0x0600B94E RID: 47438 RVA: 0x002A0AA8 File Offset: 0x0029ECA8
+	// Token: 0x06008D37 RID: 36151 RVA: 0x002AB1FC File Offset: 0x002A93FC
 	[return: Nullable(2)]
 	protected ItemGridComponent GetItemGridComponent(Type ctor)
 	{
@@ -625,7 +625,7 @@ public class ItemGridBase : UiPanelBase
 		return result;
 	}
 
-	// Token: 0x0600B94F RID: 47439 RVA: 0x002A0AC8 File Offset: 0x0029ECC8
+	// Token: 0x06008D38 RID: 36152 RVA: 0x002AB21C File Offset: 0x002A941C
 	protected void HiddenAllItemGridComponents()
 	{
 		foreach (ItemGridComponent itemGridComponent in this.ComponentMap.Values)
@@ -634,7 +634,7 @@ public class ItemGridBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B950 RID: 47440 RVA: 0x002A0B20 File Offset: 0x0029ED20
+	// Token: 0x06008D39 RID: 36153 RVA: 0x002AB274 File Offset: 0x002A9474
 	protected void SetItemGridComponentVisible(Type ctor, bool bVisible)
 	{
 		ItemGridComponent itemGridComponent;
@@ -644,7 +644,7 @@ public class ItemGridBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B951 RID: 47441 RVA: 0x002A0B44 File Offset: 0x0029ED44
+	// Token: 0x06008D3A RID: 36154 RVA: 0x002AB298 File Offset: 0x002A9498
 	protected void ClearItemGridComponents()
 	{
 		this.ComponentMap.Clear();
@@ -652,78 +652,78 @@ public class ItemGridBase : UiPanelBase
 		this.ClearComponentList();
 	}
 
-	// Token: 0x0600B952 RID: 47442 RVA: 0x002A0B62 File Offset: 0x0029ED62
+	// Token: 0x06008D3B RID: 36155 RVA: 0x002AB2B6 File Offset: 0x002A94B6
 	public void SetToggleInteractive(bool state)
 	{
 		this.GetItemGridExtendToggle().SetSelfInteractive(state);
 	}
 
-	// Token: 0x0600B953 RID: 47443 RVA: 0x002A0B70 File Offset: 0x0029ED70
+	// Token: 0x06008D3C RID: 36156 RVA: 0x002AB2C4 File Offset: 0x002A94C4
 	public void SetUseFixedAsync(bool bUseFixedAsync)
 	{
 		this.UseFixedAsync = bUseFixedAsync;
 	}
 
-	// Token: 0x040053FD RID: 21501
+	// Token: 0x040054A8 RID: 21672
 	[Nullable(2)]
 	protected object Data;
 
-	// Token: 0x040053FE RID: 21502
+	// Token: 0x040054A9 RID: 21673
 	private readonly Dictionary<Type, ItemGridComponent> ComponentMap = new Dictionary<Type, ItemGridComponent>();
 
-	// Token: 0x040053FF RID: 21503
+	// Token: 0x040054AA RID: 21674
 	private readonly HashSet<ItemGridComponent> LoadingComponentSet = new HashSet<ItemGridComponent>();
 
-	// Token: 0x04005400 RID: 21504
+	// Token: 0x040054AB RID: 21675
 	private readonly HashSet<ItemGridComponent> VisibleComponents = new HashSet<ItemGridComponent>();
 
-	// Token: 0x04005401 RID: 21505
+	// Token: 0x040054AC RID: 21676
 	private readonly List<ItemGridComponent> UnderTextComponentList = new List<ItemGridComponent>();
 
-	// Token: 0x04005402 RID: 21506
+	// Token: 0x040054AD RID: 21677
 	private readonly List<ItemGridComponent> BottomComponentList = new List<ItemGridComponent>();
 
-	// Token: 0x04005403 RID: 21507
+	// Token: 0x040054AE RID: 21678
 	private readonly List<ItemGridComponent> TopComponentList = new List<ItemGridComponent>();
 
-	// Token: 0x04005404 RID: 21508
+	// Token: 0x040054AF RID: 21679
 	[Nullable(2)]
 	private UUIItem TopAdditionItem;
 
-	// Token: 0x04005405 RID: 21509
+	// Token: 0x040054B0 RID: 21680
 	[Nullable(2)]
 	private UUIItem BottomAdditionItem;
 
-	// Token: 0x04005406 RID: 21510
+	// Token: 0x040054B1 RID: 21681
 	[Nullable(2)]
 	private UUIItem UnderTextAdditionItem;
 
-	// Token: 0x04005407 RID: 21511
+	// Token: 0x040054B2 RID: 21682
 	protected LongPressButtonItem LongPressButton = new LongPressButtonItem(null, null, null);
 
-	// Token: 0x04005408 RID: 21512
+	// Token: 0x040054B3 RID: 21683
 	public bool IsHover;
 
-	// Token: 0x04005409 RID: 21513
+	// Token: 0x040054B4 RID: 21684
 	protected bool IsSelected;
 
-	// Token: 0x0400540A RID: 21514
+	// Token: 0x040054B5 RID: 21685
 	protected bool IsForceSelected;
 
-	// Token: 0x0400540B RID: 21515
+	// Token: 0x040054B6 RID: 21686
 	private bool IsExtendToggleEnable = true;
 
-	// Token: 0x0400540C RID: 21516
+	// Token: 0x040054B7 RID: 21687
 	protected bool IsAnyComponentLoading;
 
-	// Token: 0x0400540D RID: 21517
+	// Token: 0x040054B8 RID: 21688
 	protected bool UseFixedAsync;
 
-	// Token: 0x0400540E RID: 21518
+	// Token: 0x040054B9 RID: 21689
 	[Nullable(2)]
 	public Action AllComponentLoadedCallback;
 
-	// Token: 0x0400540F RID: 21519
+	// Token: 0x040054BA RID: 21690
 	[Nullable(new byte[]
 	{
 		2,
@@ -731,7 +731,7 @@ public class ItemGridBase : UiPanelBase
 	})]
 	private Action<MediumItemGridExtendCallback> OnExtendToggleStateChangedCallback;
 
-	// Token: 0x04005410 RID: 21520
+	// Token: 0x040054BB RID: 21691
 	[Nullable(new byte[]
 	{
 		2,
@@ -739,7 +739,7 @@ public class ItemGridBase : UiPanelBase
 	})]
 	private Action<MediumItemGridExtendCallback> OnExtendTogglePressCallback;
 
-	// Token: 0x04005411 RID: 21521
+	// Token: 0x040054BC RID: 21692
 	[Nullable(new byte[]
 	{
 		2,
@@ -747,7 +747,7 @@ public class ItemGridBase : UiPanelBase
 	})]
 	private Action<MediumItemGridExtendCallback> OnExtendToggleReleaseCallback;
 
-	// Token: 0x04005412 RID: 21522
+	// Token: 0x040054BD RID: 21693
 	[Nullable(new byte[]
 	{
 		2,
@@ -755,11 +755,11 @@ public class ItemGridBase : UiPanelBase
 	})]
 	private Action<MediumItemGridExtendCallback> OnExtendToggleClickedCallback;
 
-	// Token: 0x04005413 RID: 21523
+	// Token: 0x040054BE RID: 21694
 	[Nullable(2)]
 	private Func<object, bool, EToggleState, bool> OnCanExecuteChangeCallback;
 
-	// Token: 0x04005414 RID: 21524
+	// Token: 0x040054BF RID: 21695
 	[Nullable(new byte[]
 	{
 		2,
@@ -768,7 +768,7 @@ public class ItemGridBase : UiPanelBase
 	})]
 	private Action<bool, ItemGridBase, object> OnLongPressActiveCallback;
 
-	// Token: 0x04005415 RID: 21525
+	// Token: 0x040054C0 RID: 21696
 	[Nullable(new byte[]
 	{
 		2,

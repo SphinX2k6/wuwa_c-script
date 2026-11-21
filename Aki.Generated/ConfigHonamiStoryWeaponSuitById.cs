@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200040E RID: 1038
+	// Token: 0x02000424 RID: 1060
 	public class ConfigHonamiStoryWeaponSuitById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600185B RID: 6235 RVA: 0x000E385C File Offset: 0x000E1A5C
+		// Token: 0x060018DF RID: 6367 RVA: 0x000E9FB0 File Offset: 0x000E81B0
 		static ConfigHonamiStoryWeaponSuitById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHonamiStoryWeaponSuitById.CreateStaticDefaultValue), new Action(ConfigHonamiStoryWeaponSuitById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600185C RID: 6236 RVA: 0x000E387C File Offset: 0x000E1A7C
+		// Token: 0x060018E0 RID: 6368 RVA: 0x000E9FD0 File Offset: 0x000E81D0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHonamiStoryWeaponSuitById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600185D RID: 6237 RVA: 0x000E38FB File Offset: 0x000E1AFB
+		// Token: 0x060018E1 RID: 6369 RVA: 0x000EA04F File Offset: 0x000E824F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHonamiStoryWeaponSuitById.LogPair = null;
 			ConfigHonamiStoryWeaponSuitById.HandleId = 0;
 		}
 
-		// Token: 0x0600185E RID: 6238 RVA: 0x000E3909 File Offset: 0x000E1B09
+		// Token: 0x060018E2 RID: 6370 RVA: 0x000EA05D File Offset: 0x000E825D
 		public static void Init()
 		{
 			ConfigHonamiStoryWeaponSuitById.HandleId = ConfigCommon.InitDataStatement(ConfigHonamiStoryWeaponSuitById.HandleId, "db_honamistory.db", "select BinData from `HonamiStoryWeaponSuit` where Id=?");
 		}
 
-		// Token: 0x0600185F RID: 6239 RVA: 0x000E3924 File Offset: 0x000E1B24
+		// Token: 0x060018E3 RID: 6371 RVA: 0x000EA078 File Offset: 0x000E8278
 		public static HonamiStoryWeaponSuit? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigHonamiStoryWeaponSuitById.HandleId, ConfigHonamiStoryWeaponSuitById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new HonamiStoryWeaponSuit?(rootAsHonamiStoryWeaponSuit);
 		}
 
-		// Token: 0x04001C46 RID: 7238
+		// Token: 0x04001CE0 RID: 7392
 		private const string DB = "db_honamistory.db";
 
-		// Token: 0x04001C47 RID: 7239
+		// Token: 0x04001CE1 RID: 7393
 		private const string FILE = "s.穗波奇妙物语装备栏.xlsx";
 
-		// Token: 0x04001C48 RID: 7240
+		// Token: 0x04001CE2 RID: 7394
 		private const string TABLE = "HonamiStoryWeaponSuit";
 
-		// Token: 0x04001C49 RID: 7241
+		// Token: 0x04001CE3 RID: 7395
 		private const string COMMAND = "select BinData from `HonamiStoryWeaponSuit` where Id=?";
 
-		// Token: 0x04001C4A RID: 7242
+		// Token: 0x04001CE4 RID: 7396
 		private const string KEY_PREFIX = "HonamiStoryWeaponSuitById";
 
-		// Token: 0x04001C4B RID: 7243
+		// Token: 0x04001CE5 RID: 7397
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001C4C RID: 7244
+		// Token: 0x04001CE6 RID: 7398
 		private static int HandleId;
 	}
 }

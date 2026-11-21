@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A89 RID: 6793
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C1E RID: 7198
 	public class IFlowDefineNpcHandInHandPerform : IFlowDefineNpcGroupPerformType
 	{
-		// Token: 0x0600917A RID: 37242 RVA: 0x00152998 File Offset: 0x00150B98
+		// Token: 0x060098E4 RID: 39140 RVA: 0x001628C4 File Offset: 0x00160AC4
 		private IFlowDefineNpcHandInHandPerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600917B RID: 37243 RVA: 0x001529D0 File Offset: 0x00150BD0
+		// Token: 0x060098E5 RID: 39141 RVA: 0x001628FC File Offset: 0x00160AFC
 		public static IFlowDefineNpcHandInHandPerform Create([Nullable(2)] IFlowDefineNpcHandInHandPerform instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600917C RID: 37244 RVA: 0x001529E3 File Offset: 0x00150BE3
+		// Token: 0x060098E6 RID: 39142 RVA: 0x0016290F File Offset: 0x00160B0F
 		public static IFlowDefineNpcHandInHandPerform CreateFromSetValue([Nullable(2)] IFlowDefineNpcHandInHandPerform_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600917D RID: 37245 RVA: 0x001529F6 File Offset: 0x00150BF6
+		// Token: 0x060098E7 RID: 39143 RVA: 0x00162922 File Offset: 0x00160B22
 		public new IFlowDefineNpcHandInHandPerform_SetValue ToSetValue()
 		{
 			return new IFlowDefineNpcHandInHandPerform_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E45 RID: 11845
-		// (get) Token: 0x0600917E RID: 37246 RVA: 0x00152A15 File Offset: 0x00150C15
-		// (set) Token: 0x0600917F RID: 37247 RVA: 0x00152A40 File Offset: 0x00150C40
+		// Token: 0x17003052 RID: 12370
+		// (get) Token: 0x060098E8 RID: 39144 RVA: 0x00162941 File Offset: 0x00160B41
+		// (set) Token: 0x060098E9 RID: 39145 RVA: 0x0016296C File Offset: 0x00160B6C
 		public override ENpcGroupPerformType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E46 RID: 11846
-		// (get) Token: 0x06009180 RID: 37248 RVA: 0x00152A4E File Offset: 0x00150C4E
-		// (set) Token: 0x06009181 RID: 37249 RVA: 0x00152A79 File Offset: 0x00150C79
+		// Token: 0x17003053 RID: 12371
+		// (get) Token: 0x060098EA RID: 39146 RVA: 0x0016297A File Offset: 0x00160B7A
+		// (set) Token: 0x060098EB RID: 39147 RVA: 0x001629A5 File Offset: 0x00160BA5
 		public virtual string Key
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040059B4 RID: 22964
+		// Token: 0x04005E19 RID: 24089
 		[Nullable(2)]
 		protected new IFlowDefineNpcHandInHandPerform FbInstance;
 
-		// Token: 0x040059B5 RID: 22965
+		// Token: 0x04005E1A RID: 24090
 		[Nullable(2)]
 		protected new IFlowDefineNpcHandInHandPerform_SetValue PocoInterface;
 	}

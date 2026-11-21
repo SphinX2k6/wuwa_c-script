@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B1A RID: 2842
+	// Token: 0x02000BFA RID: 3066
 	public struct BabelTalent : IFlatbufferObject
 	{
-		// Token: 0x170003DA RID: 986
-		// (get) Token: 0x06004A6C RID: 19052 RVA: 0x001DC20C File Offset: 0x001DA40C
+		// Token: 0x1700041A RID: 1050
+		// (get) Token: 0x0600502E RID: 20526 RVA: 0x001FC78C File Offset: 0x001FA98C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004A6D RID: 19053 RVA: 0x001DC219 File Offset: 0x001DA419
+		// Token: 0x0600502F RID: 20527 RVA: 0x001FC799 File Offset: 0x001FA999
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004A6E RID: 19054 RVA: 0x001DC220 File Offset: 0x001DA420
+		// Token: 0x06005030 RID: 20528 RVA: 0x001FC7A0 File Offset: 0x001FA9A0
 		public static BabelTalent GetRootAsBabelTalent(ByteBuffer _bb)
 		{
 			return BabelTalent.GetRootAsBabelTalent(_bb, default(BabelTalent));
 		}
 
-		// Token: 0x06004A6F RID: 19055 RVA: 0x001DC23C File Offset: 0x001DA43C
+		// Token: 0x06005031 RID: 20529 RVA: 0x001FC7BC File Offset: 0x001FA9BC
 		public static BabelTalent GetRootAsBabelTalent(ByteBuffer _bb, BabelTalent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004A70 RID: 19056 RVA: 0x001DC259 File Offset: 0x001DA459
+		// Token: 0x06005032 RID: 20530 RVA: 0x001FC7D9 File Offset: 0x001FA9D9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004A71 RID: 19057 RVA: 0x001DC268 File Offset: 0x001DA468
+		// Token: 0x06005033 RID: 20531 RVA: 0x001FC7E8 File Offset: 0x001FA9E8
 		public BabelTalent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170003DB RID: 987
-		// (get) Token: 0x06004A72 RID: 19058 RVA: 0x001DC278 File Offset: 0x001DA478
+		// Token: 0x1700041B RID: 1051
+		// (get) Token: 0x06005034 RID: 20532 RVA: 0x001FC7F8 File Offset: 0x001FA9F8
 		public int Id
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004B09 RID: 19209
+		// Token: 0x040050E9 RID: 20713
 		private Table __p;
 	}
 }

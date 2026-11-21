@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BF4 RID: 23540
+	// Token: 0x02006213 RID: 25107
 	public struct TComponentData : IFlatbufferObject
 	{
-		// Token: 0x1700B1CD RID: 45517
-		// (get) Token: 0x0602855B RID: 165211 RVA: 0x0058A81C File Offset: 0x00588A1C
+		// Token: 0x1700BB1B RID: 47899
+		// (get) Token: 0x0602AB49 RID: 174921 RVA: 0x005D2682 File Offset: 0x005D0882
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602855C RID: 165212 RVA: 0x0058A829 File Offset: 0x00588A29
+		// Token: 0x0602AB4A RID: 174922 RVA: 0x005D268F File Offset: 0x005D088F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602855D RID: 165213 RVA: 0x0058A830 File Offset: 0x00588A30
+		// Token: 0x0602AB4B RID: 174923 RVA: 0x005D2698 File Offset: 0x005D0898
 		public static TComponentData GetRootAsTComponentData(ByteBuffer _bb)
 		{
 			return TComponentData.GetRootAsTComponentData(_bb, default(TComponentData));
 		}
 
-		// Token: 0x0602855E RID: 165214 RVA: 0x0058A84C File Offset: 0x00588A4C
+		// Token: 0x0602AB4C RID: 174924 RVA: 0x005D26B4 File Offset: 0x005D08B4
 		public static TComponentData GetRootAsTComponentData(ByteBuffer _bb, TComponentData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602855F RID: 165215 RVA: 0x0058A869 File Offset: 0x00588A69
+		// Token: 0x0602AB4D RID: 174925 RVA: 0x005D26D1 File Offset: 0x005D08D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028560 RID: 165216 RVA: 0x0058A878 File Offset: 0x00588A78
+		// Token: 0x0602AB4E RID: 174926 RVA: 0x005D26E0 File Offset: 0x005D08E0
 		public TComponentData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B1CE RID: 45518
-		// (get) Token: 0x06028561 RID: 165217 RVA: 0x0058A888 File Offset: 0x00588A88
+		// Token: 0x1700BB1C RID: 47900
+		// (get) Token: 0x0602AB4F RID: 174927 RVA: 0x005D26F0 File Offset: 0x005D08F0
 		public string Key
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028562 RID: 165218 RVA: 0x0058A8BF File Offset: 0x00588ABF
+		// Token: 0x0602AB50 RID: 174928 RVA: 0x005D2727 File Offset: 0x005D0927
 		public Span<byte> GetKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06028563 RID: 165219 RVA: 0x0058A8CE File Offset: 0x00588ACE
+		// Token: 0x0602AB51 RID: 174929 RVA: 0x005D2736 File Offset: 0x005D0936
 		public byte[] GetKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700B1CF RID: 45519
-		// (get) Token: 0x06028564 RID: 165220 RVA: 0x0058A8DC File Offset: 0x00588ADC
+		// Token: 0x1700BB1D RID: 47901
+		// (get) Token: 0x0602AB52 RID: 174930 RVA: 0x005D2744 File Offset: 0x005D0944
 		public IComponentBase_Union ValueType
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028565 RID: 165221 RVA: 0x0058A918 File Offset: 0x00588B18
+		// Token: 0x0602AB53 RID: 174931 RVA: 0x005D2780 File Offset: 0x005D0980
 		public TTable? Value<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -100,1207 +100,1219 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06028566 RID: 165222 RVA: 0x0058A95C File Offset: 0x00588B5C
+		// Token: 0x0602AB54 RID: 174932 RVA: 0x005D27C4 File Offset: 0x005D09C4
 		public IComponentBase ValueAsIComponentBase()
 		{
 			return this.Value<IComponentBase>().Value;
 		}
 
-		// Token: 0x06028567 RID: 165223 RVA: 0x0058A978 File Offset: 0x00588B78
+		// Token: 0x0602AB55 RID: 174933 RVA: 0x005D27E0 File Offset: 0x005D09E0
 		public IUnUseComponent ValueAsIUnUseComponent()
 		{
 			return this.Value<IUnUseComponent>().Value;
 		}
 
-		// Token: 0x06028568 RID: 165224 RVA: 0x0058A994 File Offset: 0x00588B94
+		// Token: 0x0602AB56 RID: 174934 RVA: 0x005D27FC File Offset: 0x005D09FC
 		public IInteractiveComponent ValueAsIInteractiveComponent()
 		{
 			return this.Value<IInteractiveComponent>().Value;
 		}
 
-		// Token: 0x06028569 RID: 165225 RVA: 0x0058A9B0 File Offset: 0x00588BB0
+		// Token: 0x0602AB57 RID: 174935 RVA: 0x005D2818 File Offset: 0x005D0A18
 		public ISwitcherComponent ValueAsISwitcherComponent()
 		{
 			return this.Value<ISwitcherComponent>().Value;
 		}
 
-		// Token: 0x0602856A RID: 165226 RVA: 0x0058A9CC File Offset: 0x00588BCC
+		// Token: 0x0602AB58 RID: 174936 RVA: 0x005D2834 File Offset: 0x005D0A34
 		public IRotatorComponent ValueAsIRotatorComponent()
 		{
 			return this.Value<IRotatorComponent>().Value;
 		}
 
-		// Token: 0x0602856B RID: 165227 RVA: 0x0058A9E8 File Offset: 0x00588BE8
+		// Token: 0x0602AB59 RID: 174937 RVA: 0x005D2850 File Offset: 0x005D0A50
 		public IBehaviorFlowComponent ValueAsIBehaviorFlowComponent()
 		{
 			return this.Value<IBehaviorFlowComponent>().Value;
 		}
 
-		// Token: 0x0602856C RID: 165228 RVA: 0x0058AA04 File Offset: 0x00588C04
+		// Token: 0x0602AB5A RID: 174938 RVA: 0x005D286C File Offset: 0x005D0A6C
 		public IFlowComponent ValueAsIFlowComponent()
 		{
 			return this.Value<IFlowComponent>().Value;
 		}
 
-		// Token: 0x0602856D RID: 165229 RVA: 0x0058AA20 File Offset: 0x00588C20
+		// Token: 0x0602AB5B RID: 174939 RVA: 0x005D2888 File Offset: 0x005D0A88
 		public ITriggerUe5Component ValueAsITriggerUe5Component()
 		{
 			return this.Value<ITriggerUe5Component>().Value;
 		}
 
-		// Token: 0x0602856E RID: 165230 RVA: 0x0058AA3C File Offset: 0x00588C3C
+		// Token: 0x0602AB5C RID: 174940 RVA: 0x005D28A4 File Offset: 0x005D0AA4
 		public IMoveComponent ValueAsIMoveComponent()
 		{
 			return this.Value<IMoveComponent>().Value;
 		}
 
-		// Token: 0x0602856F RID: 165231 RVA: 0x0058AA58 File Offset: 0x00588C58
+		// Token: 0x0602AB5D RID: 174941 RVA: 0x005D28C0 File Offset: 0x005D0AC0
 		public IActorStateComponent ValueAsIActorStateComponent()
 		{
 			return this.Value<IActorStateComponent>().Value;
 		}
 
-		// Token: 0x06028570 RID: 165232 RVA: 0x0058AA74 File Offset: 0x00588C74
+		// Token: 0x0602AB5E RID: 174942 RVA: 0x005D28DC File Offset: 0x005D0ADC
 		public ICalculateComponent ValueAsICalculateComponent()
 		{
 			return this.Value<ICalculateComponent>().Value;
 		}
 
-		// Token: 0x06028571 RID: 165233 RVA: 0x0058AA90 File Offset: 0x00588C90
+		// Token: 0x0602AB5F RID: 174943 RVA: 0x005D28F8 File Offset: 0x005D0AF8
 		public IRefreshGroup ValueAsIRefreshGroup()
 		{
 			return this.Value<IRefreshGroup>().Value;
 		}
 
-		// Token: 0x06028572 RID: 165234 RVA: 0x0058AAAC File Offset: 0x00588CAC
+		// Token: 0x0602AB60 RID: 174944 RVA: 0x005D2914 File Offset: 0x005D0B14
 		public IRefreshSingleComponent ValueAsIRefreshSingleComponent()
 		{
 			return this.Value<IRefreshSingleComponent>().Value;
 		}
 
-		// Token: 0x06028573 RID: 165235 RVA: 0x0058AAC8 File Offset: 0x00588CC8
+		// Token: 0x0602AB61 RID: 174945 RVA: 0x005D2930 File Offset: 0x005D0B30
 		public IRotatorComponent2 ValueAsIRotatorComponent2()
 		{
 			return this.Value<IRotatorComponent2>().Value;
 		}
 
-		// Token: 0x06028574 RID: 165236 RVA: 0x0058AAE4 File Offset: 0x00588CE4
+		// Token: 0x0602AB62 RID: 174946 RVA: 0x005D294C File Offset: 0x005D0B4C
 		public ISphereFactoryComponent ValueAsISphereFactoryComponent()
 		{
 			return this.Value<ISphereFactoryComponent>().Value;
 		}
 
-		// Token: 0x06028575 RID: 165237 RVA: 0x0058AB00 File Offset: 0x00588D00
+		// Token: 0x0602AB63 RID: 174947 RVA: 0x005D2968 File Offset: 0x005D0B68
 		public ISpringComponent ValueAsISpringComponent()
 		{
 			return this.Value<ISpringComponent>().Value;
 		}
 
-		// Token: 0x06028576 RID: 165238 RVA: 0x0058AB1C File Offset: 0x00588D1C
+		// Token: 0x0602AB64 RID: 174948 RVA: 0x005D2984 File Offset: 0x005D0B84
 		public ITrampleUe5Component ValueAsITrampleUe5Component()
 		{
 			return this.Value<ITrampleUe5Component>().Value;
 		}
 
-		// Token: 0x06028577 RID: 165239 RVA: 0x0058AB38 File Offset: 0x00588D38
+		// Token: 0x0602AB65 RID: 174949 RVA: 0x005D29A0 File Offset: 0x005D0BA0
 		public IUndergroundComponent ValueAsIUndergroundComponent()
 		{
 			return this.Value<IUndergroundComponent>().Value;
 		}
 
-		// Token: 0x06028578 RID: 165240 RVA: 0x0058AB54 File Offset: 0x00588D54
+		// Token: 0x0602AB66 RID: 174950 RVA: 0x005D29BC File Offset: 0x005D0BBC
 		public IGrabComponent ValueAsIGrabComponent()
 		{
 			return this.Value<IGrabComponent>().Value;
 		}
 
-		// Token: 0x06028579 RID: 165241 RVA: 0x0058AB70 File Offset: 0x00588D70
+		// Token: 0x0602AB67 RID: 174951 RVA: 0x005D29D8 File Offset: 0x005D0BD8
 		public IInteractComponent ValueAsIInteractComponent()
 		{
 			return this.Value<IInteractComponent>().Value;
 		}
 
-		// Token: 0x0602857A RID: 165242 RVA: 0x0058AB8C File Offset: 0x00588D8C
+		// Token: 0x0602AB68 RID: 174952 RVA: 0x005D29F4 File Offset: 0x005D0BF4
 		public IVarComponent ValueAsIVarComponent()
 		{
 			return this.Value<IVarComponent>().Value;
 		}
 
-		// Token: 0x0602857B RID: 165243 RVA: 0x0058ABA8 File Offset: 0x00588DA8
+		// Token: 0x0602AB69 RID: 174953 RVA: 0x005D2A10 File Offset: 0x005D0C10
 		public IPatrol ValueAsIPatrol()
 		{
 			return this.Value<IPatrol>().Value;
 		}
 
-		// Token: 0x0602857C RID: 165244 RVA: 0x0058ABC4 File Offset: 0x00588DC4
+		// Token: 0x0602AB6A RID: 174954 RVA: 0x005D2A2C File Offset: 0x005D0C2C
 		public IAiComponent ValueAsIAiComponent()
 		{
 			return this.Value<IAiComponent>().Value;
 		}
 
-		// Token: 0x0602857D RID: 165245 RVA: 0x0058ABE0 File Offset: 0x00588DE0
+		// Token: 0x0602AB6B RID: 174955 RVA: 0x005D2A48 File Offset: 0x005D0C48
 		public IAttributeComponent ValueAsIAttributeComponent()
 		{
 			return this.Value<IAttributeComponent>().Value;
 		}
 
-		// Token: 0x0602857E RID: 165246 RVA: 0x0058ABFC File Offset: 0x00588DFC
+		// Token: 0x0602AB6C RID: 174956 RVA: 0x005D2A64 File Offset: 0x005D0C64
 		public IEditCustomAoiComponent ValueAsIEditCustomAoiComponent()
 		{
 			return this.Value<IEditCustomAoiComponent>().Value;
 		}
 
-		// Token: 0x0602857F RID: 165247 RVA: 0x0058AC18 File Offset: 0x00588E18
+		// Token: 0x0602AB6D RID: 174957 RVA: 0x005D2A80 File Offset: 0x005D0C80
 		public IBaseInfoComponent ValueAsIBaseInfoComponent()
 		{
 			return this.Value<IBaseInfoComponent>().Value;
 		}
 
-		// Token: 0x06028580 RID: 165248 RVA: 0x0058AC34 File Offset: 0x00588E34
+		// Token: 0x0602AB6E RID: 174958 RVA: 0x005D2A9C File Offset: 0x005D0C9C
 		public IRewardComponent ValueAsIRewardComponent()
 		{
 			return this.Value<IRewardComponent>().Value;
 		}
 
-		// Token: 0x06028581 RID: 165249 RVA: 0x0058AC50 File Offset: 0x00588E50
+		// Token: 0x0602AB6F RID: 174959 RVA: 0x005D2AB8 File Offset: 0x005D0CB8
 		public IDynamicEntityRewardComponent ValueAsIDynamicEntityRewardComponent()
 		{
 			return this.Value<IDynamicEntityRewardComponent>().Value;
 		}
 
-		// Token: 0x06028582 RID: 165250 RVA: 0x0058AC6C File Offset: 0x00588E6C
+		// Token: 0x0602AB70 RID: 174960 RVA: 0x005D2AD4 File Offset: 0x005D0CD4
 		public IIndependentSystemRewardComponent ValueAsIIndependentSystemRewardComponent()
 		{
 			return this.Value<IIndependentSystemRewardComponent>().Value;
 		}
 
-		// Token: 0x06028583 RID: 165251 RVA: 0x0058AC88 File Offset: 0x00588E88
+		// Token: 0x0602AB71 RID: 174961 RVA: 0x005D2AF0 File Offset: 0x005D0CF0
 		public IRefreshComponent ValueAsIRefreshComponent()
 		{
 			return this.Value<IRefreshComponent>().Value;
 		}
 
-		// Token: 0x06028584 RID: 165252 RVA: 0x0058ACA4 File Offset: 0x00588EA4
+		// Token: 0x0602AB72 RID: 174962 RVA: 0x005D2B0C File Offset: 0x005D0D0C
 		public IRefreshGroupComponent ValueAsIRefreshGroupComponent()
 		{
 			return this.Value<IRefreshGroupComponent>().Value;
 		}
 
-		// Token: 0x06028585 RID: 165253 RVA: 0x0058ACC0 File Offset: 0x00588EC0
+		// Token: 0x0602AB73 RID: 174963 RVA: 0x005D2B28 File Offset: 0x005D0D28
 		public IEntityBatchRefreshComponent ValueAsIEntityBatchRefreshComponent()
 		{
 			return this.Value<IEntityBatchRefreshComponent>().Value;
 		}
 
-		// Token: 0x06028586 RID: 165254 RVA: 0x0058ACDC File Offset: 0x00588EDC
+		// Token: 0x0602AB74 RID: 174964 RVA: 0x005D2B44 File Offset: 0x005D0D44
 		public ITreasureBoxComponent ValueAsITreasureBoxComponent()
 		{
 			return this.Value<ITreasureBoxComponent>().Value;
 		}
 
-		// Token: 0x06028587 RID: 165255 RVA: 0x0058ACF8 File Offset: 0x00588EF8
+		// Token: 0x0602AB75 RID: 174965 RVA: 0x005D2B60 File Offset: 0x005D0D60
 		public ITriggerComponent ValueAsITriggerComponent()
 		{
 			return this.Value<ITriggerComponent>().Value;
 		}
 
-		// Token: 0x06028588 RID: 165256 RVA: 0x0058AD14 File Offset: 0x00588F14
+		// Token: 0x0602AB76 RID: 174966 RVA: 0x005D2B7C File Offset: 0x005D0D7C
 		public IEntityStateComponent ValueAsIEntityStateComponent()
 		{
 			return this.Value<IEntityStateComponent>().Value;
 		}
 
-		// Token: 0x06028589 RID: 165257 RVA: 0x0058AD30 File Offset: 0x00588F30
+		// Token: 0x0602AB77 RID: 174967 RVA: 0x005D2B98 File Offset: 0x005D0D98
 		public ISceneItemAttributeComponent ValueAsISceneItemAttributeComponent()
 		{
 			return this.Value<ISceneItemAttributeComponent>().Value;
 		}
 
-		// Token: 0x0602858A RID: 165258 RVA: 0x0058AD4C File Offset: 0x00588F4C
+		// Token: 0x0602AB78 RID: 174968 RVA: 0x005D2BB4 File Offset: 0x005D0DB4
 		public IEntityAudioComponent ValueAsIEntityAudioComponent()
 		{
 			return this.Value<IEntityAudioComponent>().Value;
 		}
 
-		// Token: 0x0602858B RID: 165259 RVA: 0x0058AD68 File Offset: 0x00588F68
+		// Token: 0x0602AB79 RID: 174969 RVA: 0x005D2BD0 File Offset: 0x005D0DD0
 		public IEntityStateAudioComponent ValueAsIEntityStateAudioComponent()
 		{
 			return this.Value<IEntityStateAudioComponent>().Value;
 		}
 
-		// Token: 0x0602858C RID: 165260 RVA: 0x0058AD84 File Offset: 0x00588F84
+		// Token: 0x0602AB7A RID: 174970 RVA: 0x005D2BEC File Offset: 0x005D0DEC
 		public IEntityCustomAudioComponent ValueAsIEntityCustomAudioComponent()
 		{
 			return this.Value<IEntityCustomAudioComponent>().Value;
 		}
 
-		// Token: 0x0602858D RID: 165261 RVA: 0x0058ADA0 File Offset: 0x00588FA0
+		// Token: 0x0602AB7B RID: 174971 RVA: 0x005D2C08 File Offset: 0x005D0E08
 		public ITrampleComponent ValueAsITrampleComponent()
 		{
 			return this.Value<ITrampleComponent>().Value;
 		}
 
-		// Token: 0x0602858E RID: 165262 RVA: 0x0058ADBC File Offset: 0x00588FBC
+		// Token: 0x0602AB7C RID: 174972 RVA: 0x005D2C24 File Offset: 0x005D0E24
 		public IEntityGroupComponent ValueAsIEntityGroupComponent()
 		{
 			return this.Value<IEntityGroupComponent>().Value;
 		}
 
-		// Token: 0x0602858F RID: 165263 RVA: 0x0058ADD8 File Offset: 0x00588FD8
+		// Token: 0x0602AB7D RID: 174973 RVA: 0x005D2C40 File Offset: 0x005D0E40
 		public IHookLockPoint ValueAsIHookLockPoint()
 		{
 			return this.Value<IHookLockPoint>().Value;
 		}
 
-		// Token: 0x06028590 RID: 165264 RVA: 0x0058ADF4 File Offset: 0x00588FF4
+		// Token: 0x0602AB7E RID: 174974 RVA: 0x005D2C5C File Offset: 0x005D0E5C
 		public IRoleMotionInteractComponent ValueAsIRoleMotionInteractComponent()
 		{
 			return this.Value<IRoleMotionInteractComponent>().Value;
 		}
 
-		// Token: 0x06028591 RID: 165265 RVA: 0x0058AE10 File Offset: 0x00589010
+		// Token: 0x0602AB7F RID: 174975 RVA: 0x005D2C78 File Offset: 0x005D0E78
 		public IHookFetchComponent ValueAsIHookFetchComponent()
 		{
 			return this.Value<IHookFetchComponent>().Value;
 		}
 
-		// Token: 0x06028592 RID: 165266 RVA: 0x0058AE2C File Offset: 0x0058902C
+		// Token: 0x0602AB80 RID: 174976 RVA: 0x005D2C94 File Offset: 0x005D0E94
 		public IItemFoundation ValueAsIItemFoundation()
 		{
 			return this.Value<IItemFoundation>().Value;
 		}
 
-		// Token: 0x06028593 RID: 165267 RVA: 0x0058AE48 File Offset: 0x00589048
+		// Token: 0x0602AB81 RID: 174977 RVA: 0x005D2CB0 File Offset: 0x005D0EB0
 		public IResetEntitiesPosComponent ValueAsIResetEntitiesPosComponent()
 		{
 			return this.Value<IResetEntitiesPosComponent>().Value;
 		}
 
-		// Token: 0x06028594 RID: 165268 RVA: 0x0058AE64 File Offset: 0x00589064
+		// Token: 0x0602AB82 RID: 174978 RVA: 0x005D2CCC File Offset: 0x005D0ECC
 		public IResetSelfPosComponent ValueAsIResetSelfPosComponent()
 		{
 			return this.Value<IResetSelfPosComponent>().Value;
 		}
 
-		// Token: 0x06028595 RID: 165269 RVA: 0x0058AE80 File Offset: 0x00589080
+		// Token: 0x0602AB83 RID: 174979 RVA: 0x005D2CE8 File Offset: 0x005D0EE8
 		public ICollectComponent ValueAsICollectComponent()
 		{
 			return this.Value<ICollectComponent>().Value;
 		}
 
-		// Token: 0x06028596 RID: 165270 RVA: 0x0058AE9C File Offset: 0x0058909C
+		// Token: 0x0602AB84 RID: 174980 RVA: 0x005D2D04 File Offset: 0x005D0F04
 		public ITeleControl2 ValueAsITeleControl2()
 		{
 			return this.Value<ITeleControl2>().Value;
 		}
 
-		// Token: 0x06028597 RID: 165271 RVA: 0x0058AEB8 File Offset: 0x005890B8
+		// Token: 0x0602AB85 RID: 174981 RVA: 0x005D2D20 File Offset: 0x005D0F20
 		public IItemFoundation2 ValueAsIItemFoundation2()
 		{
 			return this.Value<IItemFoundation2>().Value;
 		}
 
-		// Token: 0x06028598 RID: 165272 RVA: 0x0058AED4 File Offset: 0x005890D4
+		// Token: 0x0602AB86 RID: 174982 RVA: 0x005D2D3C File Offset: 0x005D0F3C
 		public IPullingFoundation ValueAsIPullingFoundation()
 		{
 			return this.Value<IPullingFoundation>().Value;
 		}
 
-		// Token: 0x06028599 RID: 165273 RVA: 0x0058AEF0 File Offset: 0x005890F0
+		// Token: 0x0602AB87 RID: 174983 RVA: 0x005D2D58 File Offset: 0x005D0F58
 		public ILevelPlayComponent ValueAsILevelPlayComponent()
 		{
 			return this.Value<ILevelPlayComponent>().Value;
 		}
 
-		// Token: 0x0602859A RID: 165274 RVA: 0x0058AF0C File Offset: 0x0058910C
+		// Token: 0x0602AB88 RID: 174984 RVA: 0x005D2D74 File Offset: 0x005D0F74
 		public IDynamicLevelPlayComponent ValueAsIDynamicLevelPlayComponent()
 		{
 			return this.Value<IDynamicLevelPlayComponent>().Value;
 		}
 
-		// Token: 0x0602859B RID: 165275 RVA: 0x0058AF28 File Offset: 0x00589128
+		// Token: 0x0602AB89 RID: 174985 RVA: 0x005D2D90 File Offset: 0x005D0F90
 		public IVisionComponent ValueAsIVisionComponent()
 		{
 			return this.Value<IVisionComponent>().Value;
 		}
 
-		// Token: 0x0602859C RID: 165276 RVA: 0x0058AF44 File Offset: 0x00589144
+		// Token: 0x0602AB8A RID: 174986 RVA: 0x005D2DAC File Offset: 0x005D0FAC
 		public IVisionCaptureComponent ValueAsIVisionCaptureComponent()
 		{
 			return this.Value<IVisionCaptureComponent>().Value;
 		}
 
-		// Token: 0x0602859D RID: 165277 RVA: 0x0058AF60 File Offset: 0x00589160
+		// Token: 0x0602AB8B RID: 174987 RVA: 0x005D2DC8 File Offset: 0x005D0FC8
 		public IAdsorbComponent ValueAsIAdsorbComponent()
 		{
 			return this.Value<IAdsorbComponent>().Value;
 		}
 
-		// Token: 0x0602859E RID: 165278 RVA: 0x0058AF7C File Offset: 0x0058917C
+		// Token: 0x0602AB8C RID: 174988 RVA: 0x005D2DE4 File Offset: 0x005D0FE4
 		public ITeleportComponent ValueAsITeleportComponent()
 		{
 			return this.Value<ITeleportComponent>().Value;
 		}
 
-		// Token: 0x0602859F RID: 165279 RVA: 0x0058AF98 File Offset: 0x00589198
+		// Token: 0x0602AB8D RID: 174989 RVA: 0x005D2E00 File Offset: 0x005D1000
 		public ISpawnMonsterComponent ValueAsISpawnMonsterComponent()
 		{
 			return this.Value<ISpawnMonsterComponent>().Value;
 		}
 
-		// Token: 0x060285A0 RID: 165280 RVA: 0x0058AFB4 File Offset: 0x005891B4
+		// Token: 0x0602AB8E RID: 174990 RVA: 0x005D2E1C File Offset: 0x005D101C
 		public IHitComponentBase ValueAsIHitComponentBase()
 		{
 			return this.Value<IHitComponentBase>().Value;
 		}
 
-		// Token: 0x060285A1 RID: 165281 RVA: 0x0058AFD0 File Offset: 0x005891D0
+		// Token: 0x0602AB8F RID: 174991 RVA: 0x005D2E38 File Offset: 0x005D1038
 		public IDestructibleItem ValueAsIDestructibleItem()
 		{
 			return this.Value<IDestructibleItem>().Value;
 		}
 
-		// Token: 0x060285A2 RID: 165282 RVA: 0x0058AFEC File Offset: 0x005891EC
+		// Token: 0x0602AB90 RID: 174992 RVA: 0x005D2E54 File Offset: 0x005D1054
 		public ITargetGearComponent ValueAsITargetGearComponent()
 		{
 			return this.Value<ITargetGearComponent>().Value;
 		}
 
-		// Token: 0x060285A3 RID: 165283 RVA: 0x0058B008 File Offset: 0x00589208
+		// Token: 0x0602AB91 RID: 174993 RVA: 0x005D2E70 File Offset: 0x005D1070
 		public IProgressBarControlComponent ValueAsIProgressBarControlComponent()
 		{
 			return this.Value<IProgressBarControlComponent>().Value;
 		}
 
-		// Token: 0x060285A4 RID: 165284 RVA: 0x0058B024 File Offset: 0x00589224
+		// Token: 0x0602AB92 RID: 174994 RVA: 0x005D2E8C File Offset: 0x005D108C
 		public IHitComponent ValueAsIHitComponent()
 		{
 			return this.Value<IHitComponent>().Value;
 		}
 
-		// Token: 0x060285A5 RID: 165285 RVA: 0x0058B040 File Offset: 0x00589240
+		// Token: 0x0602AB93 RID: 174995 RVA: 0x005D2EA8 File Offset: 0x005D10A8
 		public ITargetGearGroupComponent ValueAsITargetGearGroupComponent()
 		{
 			return this.Value<ITargetGearGroupComponent>().Value;
 		}
 
-		// Token: 0x060285A6 RID: 165286 RVA: 0x0058B05C File Offset: 0x0058925C
+		// Token: 0x0602AB94 RID: 174996 RVA: 0x005D2EC4 File Offset: 0x005D10C4
 		public INpcPerformComponent ValueAsINpcPerformComponent()
 		{
 			return this.Value<INpcPerformComponent>().Value;
 		}
 
-		// Token: 0x060285A7 RID: 165287 RVA: 0x0058B078 File Offset: 0x00589278
+		// Token: 0x0602AB95 RID: 174997 RVA: 0x005D2EE0 File Offset: 0x005D10E0
 		public IInteractGearComponent ValueAsIInteractGearComponent()
 		{
 			return this.Value<IInteractGearComponent>().Value;
 		}
 
-		// Token: 0x060285A8 RID: 165288 RVA: 0x0058B094 File Offset: 0x00589294
+		// Token: 0x0602AB96 RID: 174998 RVA: 0x005D2EFC File Offset: 0x005D10FC
 		public ILiftComponent ValueAsILiftComponent()
 		{
 			return this.Value<ILiftComponent>().Value;
 		}
 
-		// Token: 0x060285A9 RID: 165289 RVA: 0x0058B0B0 File Offset: 0x005892B0
+		// Token: 0x0602AB97 RID: 174999 RVA: 0x005D2F18 File Offset: 0x005D1118
 		public IConveyorBeltComponent ValueAsIConveyorBeltComponent()
 		{
 			return this.Value<IConveyorBeltComponent>().Value;
 		}
 
-		// Token: 0x060285AA RID: 165290 RVA: 0x0058B0CC File Offset: 0x005892CC
+		// Token: 0x0602AB98 RID: 175000 RVA: 0x005D2F34 File Offset: 0x005D1134
 		public IFollowTrackComponent ValueAsIFollowTrackComponent()
 		{
 			return this.Value<IFollowTrackComponent>().Value;
 		}
 
-		// Token: 0x060285AB RID: 165291 RVA: 0x0058B0E8 File Offset: 0x005892E8
+		// Token: 0x0602AB99 RID: 175001 RVA: 0x005D2F50 File Offset: 0x005D1150
 		public ISceneItemLifeCycleComponent ValueAsISceneItemLifeCycleComponent()
 		{
 			return this.Value<ISceneItemLifeCycleComponent>().Value;
 		}
 
-		// Token: 0x060285AC RID: 165292 RVA: 0x0058B104 File Offset: 0x00589304
+		// Token: 0x0602AB9A RID: 175002 RVA: 0x005D2F6C File Offset: 0x005D116C
 		public IFightInteractComponent ValueAsIFightInteractComponent()
 		{
 			return this.Value<IFightInteractComponent>().Value;
 		}
 
-		// Token: 0x060285AD RID: 165293 RVA: 0x0058B120 File Offset: 0x00589320
+		// Token: 0x0602AB9B RID: 175003 RVA: 0x005D2F88 File Offset: 0x005D1188
 		public IBubbleComponent ValueAsIBubbleComponent()
 		{
 			return this.Value<IBubbleComponent>().Value;
 		}
 
-		// Token: 0x060285AE RID: 165294 RVA: 0x0058B13C File Offset: 0x0058933C
+		// Token: 0x0602AB9C RID: 175004 RVA: 0x005D2FA4 File Offset: 0x005D11A4
 		public INearbyTrackingComponent ValueAsINearbyTrackingComponent()
 		{
 			return this.Value<INearbyTrackingComponent>().Value;
 		}
 
-		// Token: 0x060285AF RID: 165295 RVA: 0x0058B158 File Offset: 0x00589358
+		// Token: 0x0602AB9D RID: 175005 RVA: 0x005D2FC0 File Offset: 0x005D11C0
 		public IEntityPackageComponent ValueAsIEntityPackageComponent()
 		{
 			return this.Value<IEntityPackageComponent>().Value;
 		}
 
-		// Token: 0x060285B0 RID: 165296 RVA: 0x0058B174 File Offset: 0x00589374
+		// Token: 0x0602AB9E RID: 175006 RVA: 0x005D2FDC File Offset: 0x005D11DC
 		public ISkyboxComponent ValueAsISkyboxComponent()
 		{
 			return this.Value<ISkyboxComponent>().Value;
 		}
 
-		// Token: 0x060285B1 RID: 165297 RVA: 0x0058B190 File Offset: 0x00589390
+		// Token: 0x0602AB9F RID: 175007 RVA: 0x005D2FF8 File Offset: 0x005D11F8
 		public IStateHintComponent ValueAsIStateHintComponent()
 		{
 			return this.Value<IStateHintComponent>().Value;
 		}
 
-		// Token: 0x060285B2 RID: 165298 RVA: 0x0058B1AC File Offset: 0x005893AC
+		// Token: 0x0602ABA0 RID: 175008 RVA: 0x005D3014 File Offset: 0x005D1214
 		public IEntityVisibleComponent ValueAsIEntityVisibleComponent()
 		{
 			return this.Value<IEntityVisibleComponent>().Value;
 		}
 
-		// Token: 0x060285B3 RID: 165299 RVA: 0x0058B1C8 File Offset: 0x005893C8
+		// Token: 0x0602ABA1 RID: 175009 RVA: 0x005D3030 File Offset: 0x005D1230
 		public ICombinedVisibleGroupComponent ValueAsICombinedVisibleGroupComponent()
 		{
 			return this.Value<ICombinedVisibleGroupComponent>().Value;
 		}
 
-		// Token: 0x060285B4 RID: 165300 RVA: 0x0058B1E4 File Offset: 0x005893E4
+		// Token: 0x0602ABA2 RID: 175010 RVA: 0x005D304C File Offset: 0x005D124C
 		public IWeaponComponent ValueAsIWeaponComponent()
 		{
 			return this.Value<IWeaponComponent>().Value;
 		}
 
-		// Token: 0x060285B5 RID: 165301 RVA: 0x0058B200 File Offset: 0x00589400
+		// Token: 0x0602ABA3 RID: 175011 RVA: 0x005D3068 File Offset: 0x005D1268
 		public IDungeonEntryComponent ValueAsIDungeonEntryComponent()
 		{
 			return this.Value<IDungeonEntryComponent>().Value;
 		}
 
-		// Token: 0x060285B6 RID: 165302 RVA: 0x0058B21C File Offset: 0x0058941C
+		// Token: 0x0602ABA4 RID: 175012 RVA: 0x005D3084 File Offset: 0x005D1284
 		public IResurrectionComponent ValueAsIResurrectionComponent()
 		{
 			return this.Value<IResurrectionComponent>().Value;
 		}
 
-		// Token: 0x060285B7 RID: 165303 RVA: 0x0058B238 File Offset: 0x00589438
+		// Token: 0x0602ABA5 RID: 175013 RVA: 0x005D30A0 File Offset: 0x005D12A0
 		public IBuffProducerComponent ValueAsIBuffProducerComponent()
 		{
 			return this.Value<IBuffProducerComponent>().Value;
 		}
 
-		// Token: 0x060285B8 RID: 165304 RVA: 0x0058B254 File Offset: 0x00589454
+		// Token: 0x0602ABA6 RID: 175014 RVA: 0x005D30BC File Offset: 0x005D12BC
 		public IBuffConsumerComponent ValueAsIBuffConsumerComponent()
 		{
 			return this.Value<IBuffConsumerComponent>().Value;
 		}
 
-		// Token: 0x060285B9 RID: 165305 RVA: 0x0058B270 File Offset: 0x00589470
+		// Token: 0x0602ABA7 RID: 175015 RVA: 0x005D30D8 File Offset: 0x005D12D8
 		public IGuideLineCreatorComponent ValueAsIGuideLineCreatorComponent()
 		{
 			return this.Value<IGuideLineCreatorComponent>().Value;
 		}
 
-		// Token: 0x060285BA RID: 165306 RVA: 0x0058B28C File Offset: 0x0058948C
+		// Token: 0x0602ABA8 RID: 175016 RVA: 0x005D30F4 File Offset: 0x005D12F4
 		public IInteractAudioComponent ValueAsIInteractAudioComponent()
 		{
 			return this.Value<IInteractAudioComponent>().Value;
 		}
 
-		// Token: 0x060285BB RID: 165307 RVA: 0x0058B2A8 File Offset: 0x005894A8
+		// Token: 0x0602ABA9 RID: 175017 RVA: 0x005D3110 File Offset: 0x005D1310
 		public IDropComponent ValueAsIDropComponent()
 		{
 			return this.Value<IDropComponent>().Value;
 		}
 
-		// Token: 0x060285BC RID: 165308 RVA: 0x0058B2C4 File Offset: 0x005894C4
+		// Token: 0x0602ABAA RID: 175018 RVA: 0x005D312C File Offset: 0x005D132C
 		public IVisionItemComponent ValueAsIVisionItemComponent()
 		{
 			return this.Value<IVisionItemComponent>().Value;
 		}
 
-		// Token: 0x060285BD RID: 165309 RVA: 0x0058B2E0 File Offset: 0x005894E0
+		// Token: 0x0602ABAB RID: 175019 RVA: 0x005D3148 File Offset: 0x005D1348
 		public IAdviseItemComponent ValueAsIAdviseItemComponent()
 		{
 			return this.Value<IAdviseItemComponent>().Value;
 		}
 
-		// Token: 0x060285BE RID: 165310 RVA: 0x0058B2FC File Offset: 0x005894FC
+		// Token: 0x0602ABAC RID: 175020 RVA: 0x005D3164 File Offset: 0x005D1364
 		public IMonsterComponent ValueAsIMonsterComponent()
 		{
 			return this.Value<IMonsterComponent>().Value;
 		}
 
-		// Token: 0x060285BF RID: 165311 RVA: 0x0058B318 File Offset: 0x00589518
+		// Token: 0x0602ABAD RID: 175021 RVA: 0x005D3180 File Offset: 0x005D1380
 		public ICombatComponent ValueAsICombatComponent()
 		{
 			return this.Value<ICombatComponent>().Value;
 		}
 
-		// Token: 0x060285C0 RID: 165312 RVA: 0x0058B334 File Offset: 0x00589534
+		// Token: 0x0602ABAE RID: 175022 RVA: 0x005D319C File Offset: 0x005D139C
 		public IEntityListComponent ValueAsIEntityListComponent()
 		{
 			return this.Value<IEntityListComponent>().Value;
 		}
 
-		// Token: 0x060285C1 RID: 165313 RVA: 0x0058B350 File Offset: 0x00589550
+		// Token: 0x0602ABAF RID: 175023 RVA: 0x005D31B8 File Offset: 0x005D13B8
 		public IAnimalComponent ValueAsIAnimalComponent()
 		{
 			return this.Value<IAnimalComponent>().Value;
 		}
 
-		// Token: 0x060285C2 RID: 165314 RVA: 0x0058B36C File Offset: 0x0058956C
+		// Token: 0x0602ABB0 RID: 175024 RVA: 0x005D31D4 File Offset: 0x005D13D4
 		public ISceneItemMovementComponent ValueAsISceneItemMovementComponent()
 		{
 			return this.Value<ISceneItemMovementComponent>().Value;
 		}
 
-		// Token: 0x060285C3 RID: 165315 RVA: 0x0058B388 File Offset: 0x00589588
+		// Token: 0x0602ABB1 RID: 175025 RVA: 0x005D31F0 File Offset: 0x005D13F0
 		public IRangeComponent ValueAsIRangeComponent()
 		{
 			return this.Value<IRangeComponent>().Value;
 		}
 
-		// Token: 0x060285C4 RID: 165316 RVA: 0x0058B3A4 File Offset: 0x005895A4
+		// Token: 0x0602ABB2 RID: 175026 RVA: 0x005D320C File Offset: 0x005D140C
 		public IExtraRangeComponent ValueAsIExtraRangeComponent()
 		{
 			return this.Value<IExtraRangeComponent>().Value;
 		}
 
-		// Token: 0x060285C5 RID: 165317 RVA: 0x0058B3C0 File Offset: 0x005895C0
+		// Token: 0x0602ABB3 RID: 175027 RVA: 0x005D3228 File Offset: 0x005D1428
 		public ITimelineTrackControlComponent ValueAsITimelineTrackControlComponent()
 		{
 			return this.Value<ITimelineTrackControlComponent>().Value;
 		}
 
-		// Token: 0x060285C6 RID: 165318 RVA: 0x0058B3DC File Offset: 0x005895DC
+		// Token: 0x0602ABB4 RID: 175028 RVA: 0x005D3244 File Offset: 0x005D1444
 		public ISplineComponent ValueAsISplineComponent()
 		{
 			return this.Value<ISplineComponent>().Value;
 		}
 
-		// Token: 0x060285C7 RID: 165319 RVA: 0x0058B3F8 File Offset: 0x005895F8
+		// Token: 0x0602ABB5 RID: 175029 RVA: 0x005D3260 File Offset: 0x005D1460
 		public IAirWallSpawnerComponent ValueAsIAirWallSpawnerComponent()
 		{
 			return this.Value<IAirWallSpawnerComponent>().Value;
 		}
 
-		// Token: 0x060285C8 RID: 165320 RVA: 0x0058B414 File Offset: 0x00589614
+		// Token: 0x0602ABB6 RID: 175030 RVA: 0x005D327C File Offset: 0x005D147C
 		public ISceneActorRefComponent ValueAsISceneActorRefComponent()
 		{
 			return this.Value<ISceneActorRefComponent>().Value;
 		}
 
-		// Token: 0x060285C9 RID: 165321 RVA: 0x0058B430 File Offset: 0x00589630
+		// Token: 0x0602ABB7 RID: 175031 RVA: 0x005D3298 File Offset: 0x005D1498
 		public ISceneBulletComponent ValueAsISceneBulletComponent()
 		{
 			return this.Value<ISceneBulletComponent>().Value;
 		}
 
-		// Token: 0x060285CA RID: 165322 RVA: 0x0058B44C File Offset: 0x0058964C
+		// Token: 0x0602ABB8 RID: 175032 RVA: 0x005D32B4 File Offset: 0x005D14B4
 		public ITurntableControlComponent ValueAsITurntableControlComponent()
 		{
 			return this.Value<ITurntableControlComponent>().Value;
 		}
 
-		// Token: 0x060285CB RID: 165323 RVA: 0x0058B468 File Offset: 0x00589668
+		// Token: 0x0602ABB9 RID: 175033 RVA: 0x005D32D0 File Offset: 0x005D14D0
 		public IConditionListenerComponent ValueAsIConditionListenerComponent()
 		{
 			return this.Value<IConditionListenerComponent>().Value;
 		}
 
-		// Token: 0x060285CC RID: 165324 RVA: 0x0058B484 File Offset: 0x00589684
+		// Token: 0x0602ABBA RID: 175034 RVA: 0x005D32EC File Offset: 0x005D14EC
 		public IAttachTargetComponent ValueAsIAttachTargetComponent()
 		{
 			return this.Value<IAttachTargetComponent>().Value;
 		}
 
-		// Token: 0x060285CD RID: 165325 RVA: 0x0058B4A0 File Offset: 0x005896A0
+		// Token: 0x0602ABBB RID: 175035 RVA: 0x005D3308 File Offset: 0x005D1508
 		public IReboundComponent ValueAsIReboundComponent()
 		{
 			return this.Value<IReboundComponent>().Value;
 		}
 
-		// Token: 0x060285CE RID: 165326 RVA: 0x0058B4BC File Offset: 0x005896BC
+		// Token: 0x0602ABBC RID: 175036 RVA: 0x005D3324 File Offset: 0x005D1524
 		public IJigsawItem ValueAsIJigsawItem()
 		{
 			return this.Value<IJigsawItem>().Value;
 		}
 
-		// Token: 0x060285CF RID: 165327 RVA: 0x0058B4D8 File Offset: 0x005896D8
+		// Token: 0x0602ABBD RID: 175037 RVA: 0x005D3340 File Offset: 0x005D1540
 		public IJigsawFoundation ValueAsIJigsawFoundation()
 		{
 			return this.Value<IJigsawFoundation>().Value;
 		}
 
-		// Token: 0x060285D0 RID: 165328 RVA: 0x0058B4F4 File Offset: 0x005896F4
+		// Token: 0x0602ABBE RID: 175038 RVA: 0x005D335C File Offset: 0x005D155C
 		public ILevelAIComponent ValueAsILevelAIComponent()
 		{
 			return this.Value<ILevelAIComponent>().Value;
 		}
 
-		// Token: 0x060285D1 RID: 165329 RVA: 0x0058B510 File Offset: 0x00589710
+		// Token: 0x0602ABBF RID: 175039 RVA: 0x005D3378 File Offset: 0x005D1578
 		public ILevitateMagnetComponent ValueAsILevitateMagnetComponent()
 		{
 			return this.Value<ILevitateMagnetComponent>().Value;
 		}
 
-		// Token: 0x060285D2 RID: 165330 RVA: 0x0058B52C File Offset: 0x0058972C
+		// Token: 0x0602ABC0 RID: 175040 RVA: 0x005D3394 File Offset: 0x005D1594
 		public IPhotoTargetComponent ValueAsIPhotoTargetComponent()
 		{
 			return this.Value<IPhotoTargetComponent>().Value;
 		}
 
-		// Token: 0x060285D3 RID: 165331 RVA: 0x0058B548 File Offset: 0x00589748
+		// Token: 0x0602ABC1 RID: 175041 RVA: 0x005D33B0 File Offset: 0x005D15B0
 		public IAiAlertNotifyComponent ValueAsIAiAlertNotifyComponent()
 		{
 			return this.Value<IAiAlertNotifyComponent>().Value;
 		}
 
-		// Token: 0x060285D4 RID: 165332 RVA: 0x0058B564 File Offset: 0x00589764
+		// Token: 0x0602ABC2 RID: 175042 RVA: 0x005D33CC File Offset: 0x005D15CC
 		public IMonsterGachaItemComponent ValueAsIMonsterGachaItemComponent()
 		{
 			return this.Value<IMonsterGachaItemComponent>().Value;
 		}
 
-		// Token: 0x060285D5 RID: 165333 RVA: 0x0058B580 File Offset: 0x00589780
+		// Token: 0x0602ABC3 RID: 175043 RVA: 0x005D33E8 File Offset: 0x005D15E8
 		public IMonsterGachaBaseComponent ValueAsIMonsterGachaBaseComponent()
 		{
 			return this.Value<IMonsterGachaBaseComponent>().Value;
 		}
 
-		// Token: 0x060285D6 RID: 165334 RVA: 0x0058B59C File Offset: 0x0058979C
+		// Token: 0x0602ABC4 RID: 175044 RVA: 0x005D3404 File Offset: 0x005D1604
 		public IDynamicTeleportComponent ValueAsIDynamicTeleportComponent()
 		{
 			return this.Value<IDynamicTeleportComponent>().Value;
 		}
 
-		// Token: 0x060285D7 RID: 165335 RVA: 0x0058B5B8 File Offset: 0x005897B8
+		// Token: 0x0602ABC5 RID: 175045 RVA: 0x005D3420 File Offset: 0x005D1620
 		public IExploreSkillInteractComponent ValueAsIExploreSkillInteractComponent()
 		{
 			return this.Value<IExploreSkillInteractComponent>().Value;
 		}
 
-		// Token: 0x060285D8 RID: 165336 RVA: 0x0058B5D4 File Offset: 0x005897D4
+		// Token: 0x0602ABC6 RID: 175046 RVA: 0x005D343C File Offset: 0x005D163C
 		public IExploreSkillInteractGroupComponent ValueAsIExploreSkillInteractGroupComponent()
 		{
 			return this.Value<IExploreSkillInteractGroupComponent>().Value;
 		}
 
-		// Token: 0x060285D9 RID: 165337 RVA: 0x0058B5F0 File Offset: 0x005897F0
+		// Token: 0x0602ABC7 RID: 175047 RVA: 0x005D3458 File Offset: 0x005D1658
 		public IFanComponent ValueAsIFanComponent()
 		{
 			return this.Value<IFanComponent>().Value;
 		}
 
-		// Token: 0x060285DA RID: 165338 RVA: 0x0058B60C File Offset: 0x0058980C
+		// Token: 0x0602ABC8 RID: 175048 RVA: 0x005D3474 File Offset: 0x005D1674
 		public IPasserbyNpcSpawnComponent ValueAsIPasserbyNpcSpawnComponent()
 		{
 			return this.Value<IPasserbyNpcSpawnComponent>().Value;
 		}
 
-		// Token: 0x060285DB RID: 165339 RVA: 0x0058B628 File Offset: 0x00589828
+		// Token: 0x0602ABC9 RID: 175049 RVA: 0x005D3490 File Offset: 0x005D1690
 		public IModelComponent ValueAsIModelComponent()
 		{
 			return this.Value<IModelComponent>().Value;
 		}
 
-		// Token: 0x060285DC RID: 165340 RVA: 0x0058B644 File Offset: 0x00589844
+		// Token: 0x0602ABCA RID: 175050 RVA: 0x005D34AC File Offset: 0x005D16AC
 		public IEntityBundleComponent ValueAsIEntityBundleComponent()
 		{
 			return this.Value<IEntityBundleComponent>().Value;
 		}
 
-		// Token: 0x060285DD RID: 165341 RVA: 0x0058B660 File Offset: 0x00589860
+		// Token: 0x0602ABCB RID: 175051 RVA: 0x005D34C8 File Offset: 0x005D16C8
 		public IBeamCastComponent ValueAsIBeamCastComponent()
 		{
 			return this.Value<IBeamCastComponent>().Value;
 		}
 
-		// Token: 0x060285DE RID: 165342 RVA: 0x0058B67C File Offset: 0x0058987C
+		// Token: 0x0602ABCC RID: 175052 RVA: 0x005D34E4 File Offset: 0x005D16E4
 		public IBeamReceiveComponent ValueAsIBeamReceiveComponent()
 		{
 			return this.Value<IBeamReceiveComponent>().Value;
 		}
 
-		// Token: 0x060285DF RID: 165343 RVA: 0x0058B698 File Offset: 0x00589898
+		// Token: 0x0602ABCD RID: 175053 RVA: 0x005D3500 File Offset: 0x005D1700
 		public ITimeStopComponent ValueAsITimeStopComponent()
 		{
 			return this.Value<ITimeStopComponent>().Value;
 		}
 
-		// Token: 0x060285E0 RID: 165344 RVA: 0x0058B6B4 File Offset: 0x005898B4
+		// Token: 0x0602ABCE RID: 175054 RVA: 0x005D351C File Offset: 0x005D171C
 		public IPortalComponent ValueAsIPortalComponent()
 		{
 			return this.Value<IPortalComponent>().Value;
 		}
 
-		// Token: 0x060285E1 RID: 165345 RVA: 0x0058B6D0 File Offset: 0x005898D0
+		// Token: 0x0602ABCF RID: 175055 RVA: 0x005D3538 File Offset: 0x005D1738
 		public IDynamicPortalCreatorComponent ValueAsIDynamicPortalCreatorComponent()
 		{
 			return this.Value<IDynamicPortalCreatorComponent>().Value;
 		}
 
-		// Token: 0x060285E2 RID: 165346 RVA: 0x0058B6EC File Offset: 0x005898EC
+		// Token: 0x0602ABD0 RID: 175056 RVA: 0x005D3554 File Offset: 0x005D1754
 		public INoRenderPortalComponent ValueAsINoRenderPortalComponent()
 		{
 			return this.Value<INoRenderPortalComponent>().Value;
 		}
 
-		// Token: 0x060285E3 RID: 165347 RVA: 0x0058B708 File Offset: 0x00589908
+		// Token: 0x0602ABD1 RID: 175057 RVA: 0x005D3570 File Offset: 0x005D1770
 		public IEffectAreaComponent ValueAsIEffectAreaComponent()
 		{
 			return this.Value<IEffectAreaComponent>().Value;
 		}
 
-		// Token: 0x060285E4 RID: 165348 RVA: 0x0058B724 File Offset: 0x00589924
+		// Token: 0x0602ABD2 RID: 175058 RVA: 0x005D358C File Offset: 0x005D178C
 		public IPhysicsConstraintComponent ValueAsIPhysicsConstraintComponent()
 		{
 			return this.Value<IPhysicsConstraintComponent>().Value;
 		}
 
-		// Token: 0x060285E5 RID: 165349 RVA: 0x0058B740 File Offset: 0x00589940
+		// Token: 0x0602ABD3 RID: 175059 RVA: 0x005D35A8 File Offset: 0x005D17A8
 		public IFollowDecorationComponent ValueAsIFollowDecorationComponent()
 		{
 			return this.Value<IFollowDecorationComponent>().Value;
 		}
 
-		// Token: 0x060285E6 RID: 165350 RVA: 0x0058B75C File Offset: 0x0058995C
+		// Token: 0x0602ABD4 RID: 175060 RVA: 0x005D35C4 File Offset: 0x005D17C4
 		public IFollowShooterComponent ValueAsIFollowShooterComponent()
 		{
 			return this.Value<IFollowShooterComponent>().Value;
 		}
 
-		// Token: 0x060285E7 RID: 165351 RVA: 0x0058B778 File Offset: 0x00589978
+		// Token: 0x0602ABD5 RID: 175061 RVA: 0x005D35E0 File Offset: 0x005D17E0
 		public IConnectorComponent ValueAsIConnectorComponent()
 		{
 			return this.Value<IConnectorComponent>().Value;
 		}
 
-		// Token: 0x060285E8 RID: 165352 RVA: 0x0058B794 File Offset: 0x00589994
+		// Token: 0x0602ABD6 RID: 175062 RVA: 0x005D35FC File Offset: 0x005D17FC
 		public ISceneTextComponent ValueAsISceneTextComponent()
 		{
 			return this.Value<ISceneTextComponent>().Value;
 		}
 
-		// Token: 0x060285E9 RID: 165353 RVA: 0x0058B7B0 File Offset: 0x005899B0
+		// Token: 0x0602ABD7 RID: 175063 RVA: 0x005D3618 File Offset: 0x005D1818
 		public INavMeshComponent ValueAsINavMeshComponent()
 		{
 			return this.Value<INavMeshComponent>().Value;
 		}
 
-		// Token: 0x060285EA RID: 165354 RVA: 0x0058B7CC File Offset: 0x005899CC
+		// Token: 0x0602ABD8 RID: 175064 RVA: 0x005D3634 File Offset: 0x005D1834
 		public ICharacterConnectorComponent ValueAsICharacterConnectorComponent()
 		{
 			return this.Value<ICharacterConnectorComponent>().Value;
 		}
 
-		// Token: 0x060285EB RID: 165355 RVA: 0x0058B7E8 File Offset: 0x005899E8
+		// Token: 0x0602ABD9 RID: 175065 RVA: 0x005D3650 File Offset: 0x005D1850
 		public IAiGearStrategyComponent ValueAsIAiGearStrategyComponent()
 		{
 			return this.Value<IAiGearStrategyComponent>().Value;
 		}
 
-		// Token: 0x060285EC RID: 165356 RVA: 0x0058B804 File Offset: 0x00589A04
+		// Token: 0x0602ABDA RID: 175066 RVA: 0x005D366C File Offset: 0x005D186C
 		public IPickInteractComponent ValueAsIPickInteractComponent()
 		{
 			return this.Value<IPickInteractComponent>().Value;
 		}
 
-		// Token: 0x060285ED RID: 165357 RVA: 0x0058B820 File Offset: 0x00589A20
+		// Token: 0x0602ABDB RID: 175067 RVA: 0x005D3688 File Offset: 0x005D1888
 		public IChessmanComponent ValueAsIChessmanComponent()
 		{
 			return this.Value<IChessmanComponent>().Value;
 		}
 
-		// Token: 0x060285EE RID: 165358 RVA: 0x0058B83C File Offset: 0x00589A3C
+		// Token: 0x0602ABDC RID: 175068 RVA: 0x005D36A4 File Offset: 0x005D18A4
 		public IClientTriggerComponent ValueAsIClientTriggerComponent()
 		{
 			return this.Value<IClientTriggerComponent>().Value;
 		}
 
-		// Token: 0x060285EF RID: 165359 RVA: 0x0058B858 File Offset: 0x00589A58
+		// Token: 0x0602ABDD RID: 175069 RVA: 0x005D36C0 File Offset: 0x005D18C0
 		public ILocationSafetyComponent ValueAsILocationSafetyComponent()
 		{
 			return this.Value<ILocationSafetyComponent>().Value;
 		}
 
-		// Token: 0x060285F0 RID: 165360 RVA: 0x0058B874 File Offset: 0x00589A74
+		// Token: 0x0602ABDE RID: 175070 RVA: 0x005D36DC File Offset: 0x005D18DC
 		public IBatchBulletCasterComponent ValueAsIBatchBulletCasterComponent()
 		{
 			return this.Value<IBatchBulletCasterComponent>().Value;
 		}
 
-		// Token: 0x060285F1 RID: 165361 RVA: 0x0058B890 File Offset: 0x00589A90
+		// Token: 0x0602ABDF RID: 175071 RVA: 0x005D36F8 File Offset: 0x005D18F8
 		public IVehicleComponent ValueAsIVehicleComponent()
 		{
 			return this.Value<IVehicleComponent>().Value;
 		}
 
-		// Token: 0x060285F2 RID: 165362 RVA: 0x0058B8AC File Offset: 0x00589AAC
+		// Token: 0x0602ABE0 RID: 175072 RVA: 0x005D3714 File Offset: 0x005D1914
 		public IEnrichmentAreaComponent ValueAsIEnrichmentAreaComponent()
 		{
 			return this.Value<IEnrichmentAreaComponent>().Value;
 		}
 
-		// Token: 0x060285F3 RID: 165363 RVA: 0x0058B8C8 File Offset: 0x00589AC8
+		// Token: 0x0602ABE1 RID: 175073 RVA: 0x005D3730 File Offset: 0x005D1930
 		public IMonitorComponent ValueAsIMonitorComponent()
 		{
 			return this.Value<IMonitorComponent>().Value;
 		}
 
-		// Token: 0x060285F4 RID: 165364 RVA: 0x0058B8E4 File Offset: 0x00589AE4
+		// Token: 0x0602ABE2 RID: 175074 RVA: 0x005D374C File Offset: 0x005D194C
 		public IGroupAiComponent ValueAsIGroupAiComponent()
 		{
 			return this.Value<IGroupAiComponent>().Value;
 		}
 
-		// Token: 0x060285F5 RID: 165365 RVA: 0x0058B900 File Offset: 0x00589B00
+		// Token: 0x0602ABE3 RID: 175075 RVA: 0x005D3768 File Offset: 0x005D1968
 		public IInhalationAbilityComponent ValueAsIInhalationAbilityComponent()
 		{
 			return this.Value<IInhalationAbilityComponent>().Value;
 		}
 
-		// Token: 0x060285F6 RID: 165366 RVA: 0x0058B91C File Offset: 0x00589B1C
+		// Token: 0x0602ABE4 RID: 175076 RVA: 0x005D3784 File Offset: 0x005D1984
 		public IInhaledItemComponent ValueAsIInhaledItemComponent()
 		{
 			return this.Value<IInhaledItemComponent>().Value;
 		}
 
-		// Token: 0x060285F7 RID: 165367 RVA: 0x0058B938 File Offset: 0x00589B38
+		// Token: 0x0602ABE5 RID: 175077 RVA: 0x005D37A0 File Offset: 0x005D19A0
 		public IAirPassageComponent ValueAsIAirPassageComponent()
 		{
 			return this.Value<IAirPassageComponent>().Value;
 		}
 
-		// Token: 0x060285F8 RID: 165368 RVA: 0x0058B954 File Offset: 0x00589B54
+		// Token: 0x0602ABE6 RID: 175078 RVA: 0x005D37BC File Offset: 0x005D19BC
 		public IRenderSpecifiedRangeComponent ValueAsIRenderSpecifiedRangeComponent()
 		{
 			return this.Value<IRenderSpecifiedRangeComponent>().Value;
 		}
 
-		// Token: 0x060285F9 RID: 165369 RVA: 0x0058B970 File Offset: 0x00589B70
+		// Token: 0x0602ABE7 RID: 175079 RVA: 0x005D37D8 File Offset: 0x005D19D8
 		public ILevelPrefabPerformComponent ValueAsILevelPrefabPerformComponent()
 		{
 			return this.Value<ILevelPrefabPerformComponent>().Value;
 		}
 
-		// Token: 0x060285FA RID: 165370 RVA: 0x0058B98C File Offset: 0x00589B8C
+		// Token: 0x0602ABE8 RID: 175080 RVA: 0x005D37F4 File Offset: 0x005D19F4
 		public ISceneItemAiComponent ValueAsISceneItemAiComponent()
 		{
 			return this.Value<ISceneItemAiComponent>().Value;
 		}
 
-		// Token: 0x060285FB RID: 165371 RVA: 0x0058B9A8 File Offset: 0x00589BA8
+		// Token: 0x0602ABE9 RID: 175081 RVA: 0x005D3810 File Offset: 0x005D1A10
 		public IGravityFlipComponent ValueAsIGravityFlipComponent()
 		{
 			return this.Value<IGravityFlipComponent>().Value;
 		}
 
-		// Token: 0x060285FC RID: 165372 RVA: 0x0058B9C4 File Offset: 0x00589BC4
+		// Token: 0x0602ABEA RID: 175082 RVA: 0x005D382C File Offset: 0x005D1A2C
 		public ILevelSequenceFrameEventComponent ValueAsILevelSequenceFrameEventComponent()
 		{
 			return this.Value<ILevelSequenceFrameEventComponent>().Value;
 		}
 
-		// Token: 0x060285FD RID: 165373 RVA: 0x0058B9E0 File Offset: 0x00589BE0
+		// Token: 0x0602ABEB RID: 175083 RVA: 0x005D3848 File Offset: 0x005D1A48
 		public ILevelQteComponent ValueAsILevelQteComponent()
 		{
 			return this.Value<ILevelQteComponent>().Value;
 		}
 
-		// Token: 0x060285FE RID: 165374 RVA: 0x0058B9FC File Offset: 0x00589BFC
+		// Token: 0x0602ABEC RID: 175084 RVA: 0x005D3864 File Offset: 0x005D1A64
 		public IWalkingPatternComponent ValueAsIWalkingPatternComponent()
 		{
 			return this.Value<IWalkingPatternComponent>().Value;
 		}
 
-		// Token: 0x060285FF RID: 165375 RVA: 0x0058BA18 File Offset: 0x00589C18
+		// Token: 0x0602ABED RID: 175085 RVA: 0x005D3880 File Offset: 0x005D1A80
 		public ILifePointCenterComponent ValueAsILifePointCenterComponent()
 		{
 			return this.Value<ILifePointCenterComponent>().Value;
 		}
 
-		// Token: 0x06028600 RID: 165376 RVA: 0x0058BA34 File Offset: 0x00589C34
+		// Token: 0x0602ABEE RID: 175086 RVA: 0x005D389C File Offset: 0x005D1A9C
 		public IHackManagementComponent ValueAsIHackManagementComponent()
 		{
 			return this.Value<IHackManagementComponent>().Value;
 		}
 
-		// Token: 0x06028601 RID: 165377 RVA: 0x0058BA50 File Offset: 0x00589C50
+		// Token: 0x0602ABEF RID: 175087 RVA: 0x005D38B8 File Offset: 0x005D1AB8
 		public IClientConditionListenerComponent ValueAsIClientConditionListenerComponent()
 		{
 			return this.Value<IClientConditionListenerComponent>().Value;
 		}
 
-		// Token: 0x06028602 RID: 165378 RVA: 0x0058BA6C File Offset: 0x00589C6C
+		// Token: 0x0602ABF0 RID: 175088 RVA: 0x005D38D4 File Offset: 0x005D1AD4
 		public ITemplateEntitySpawnerComponent ValueAsITemplateEntitySpawnerComponent()
 		{
 			return this.Value<ITemplateEntitySpawnerComponent>().Value;
 		}
 
-		// Token: 0x06028603 RID: 165379 RVA: 0x0058BA88 File Offset: 0x00589C88
+		// Token: 0x0602ABF1 RID: 175089 RVA: 0x005D38F0 File Offset: 0x005D1AF0
 		public IWindSourceComponent ValueAsIWindSourceComponent()
 		{
 			return this.Value<IWindSourceComponent>().Value;
 		}
 
-		// Token: 0x06028604 RID: 165380 RVA: 0x0058BAA4 File Offset: 0x00589CA4
+		// Token: 0x0602ABF2 RID: 175090 RVA: 0x005D390C File Offset: 0x005D1B0C
 		public ISlideRailComponent ValueAsISlideRailComponent()
 		{
 			return this.Value<ISlideRailComponent>().Value;
 		}
 
-		// Token: 0x06028605 RID: 165381 RVA: 0x0058BAC0 File Offset: 0x00589CC0
+		// Token: 0x0602ABF3 RID: 175091 RVA: 0x005D3928 File Offset: 0x005D1B28
 		public ISlidePerformComponent ValueAsISlidePerformComponent()
 		{
 			return this.Value<ISlidePerformComponent>().Value;
 		}
 
-		// Token: 0x06028606 RID: 165382 RVA: 0x0058BADC File Offset: 0x00589CDC
+		// Token: 0x0602ABF4 RID: 175092 RVA: 0x005D3944 File Offset: 0x005D1B44
 		public IRollBlockComponent ValueAsIRollBlockComponent()
 		{
 			return this.Value<IRollBlockComponent>().Value;
 		}
 
-		// Token: 0x06028607 RID: 165383 RVA: 0x0058BAF8 File Offset: 0x00589CF8
+		// Token: 0x0602ABF5 RID: 175093 RVA: 0x005D3960 File Offset: 0x005D1B60
 		public IRollBlockFloorComponent ValueAsIRollBlockFloorComponent()
 		{
 			return this.Value<IRollBlockFloorComponent>().Value;
 		}
 
-		// Token: 0x06028608 RID: 165384 RVA: 0x0058BB14 File Offset: 0x00589D14
+		// Token: 0x0602ABF6 RID: 175094 RVA: 0x005D397C File Offset: 0x005D1B7C
 		public IRollBlockItemComponent ValueAsIRollBlockItemComponent()
 		{
 			return this.Value<IRollBlockItemComponent>().Value;
 		}
 
-		// Token: 0x06028609 RID: 165385 RVA: 0x0058BB30 File Offset: 0x00589D30
+		// Token: 0x0602ABF7 RID: 175095 RVA: 0x005D3998 File Offset: 0x005D1B98
 		public ICurveControlComponent ValueAsICurveControlComponent()
 		{
 			return this.Value<ICurveControlComponent>().Value;
 		}
 
-		// Token: 0x0602860A RID: 165386 RVA: 0x0058BB4C File Offset: 0x00589D4C
+		// Token: 0x0602ABF8 RID: 175096 RVA: 0x005D39B4 File Offset: 0x005D1BB4
 		public ISimpleCombatComponent ValueAsISimpleCombatComponent()
 		{
 			return this.Value<ISimpleCombatComponent>().Value;
 		}
 
-		// Token: 0x0602860B RID: 165387 RVA: 0x0058BB68 File Offset: 0x00589D68
+		// Token: 0x0602ABF9 RID: 175097 RVA: 0x005D39D0 File Offset: 0x005D1BD0
 		public IGridObjectComponent ValueAsIGridObjectComponent()
 		{
 			return this.Value<IGridObjectComponent>().Value;
 		}
 
-		// Token: 0x0602860C RID: 165388 RVA: 0x0058BB84 File Offset: 0x00589D84
+		// Token: 0x0602ABFA RID: 175098 RVA: 0x005D39EC File Offset: 0x005D1BEC
 		public IGodKingFrequencyControllerComponent ValueAsIGodKingFrequencyControllerComponent()
 		{
 			return this.Value<IGodKingFrequencyControllerComponent>().Value;
 		}
 
-		// Token: 0x0602860D RID: 165389 RVA: 0x0058BBA0 File Offset: 0x00589DA0
+		// Token: 0x0602ABFB RID: 175099 RVA: 0x005D3A08 File Offset: 0x005D1C08
 		public IPerformanceOptimizationComponent ValueAsIPerformanceOptimizationComponent()
 		{
 			return this.Value<IPerformanceOptimizationComponent>().Value;
 		}
 
-		// Token: 0x0602860E RID: 165390 RVA: 0x0058BBBC File Offset: 0x00589DBC
+		// Token: 0x0602ABFC RID: 175100 RVA: 0x005D3A24 File Offset: 0x005D1C24
 		public ISceneItemEventListenerComponent ValueAsISceneItemEventListenerComponent()
 		{
 			return this.Value<ISceneItemEventListenerComponent>().Value;
 		}
 
-		// Token: 0x0602860F RID: 165391 RVA: 0x0058BBD8 File Offset: 0x00589DD8
+		// Token: 0x0602ABFD RID: 175101 RVA: 0x005D3A40 File Offset: 0x005D1C40
 		public IDynamicSpawnMonsterPointComponent ValueAsIDynamicSpawnMonsterPointComponent()
 		{
 			return this.Value<IDynamicSpawnMonsterPointComponent>().Value;
 		}
 
-		// Token: 0x06028610 RID: 165392 RVA: 0x0058BBF4 File Offset: 0x00589DF4
+		// Token: 0x0602ABFE RID: 175102 RVA: 0x005D3A5C File Offset: 0x005D1C5C
 		public IDynamicSpawnMonsterComponent ValueAsIDynamicSpawnMonsterComponent()
 		{
 			return this.Value<IDynamicSpawnMonsterComponent>().Value;
 		}
 
-		// Token: 0x06028611 RID: 165393 RVA: 0x0058BC10 File Offset: 0x00589E10
+		// Token: 0x0602ABFF RID: 175103 RVA: 0x005D3A78 File Offset: 0x005D1C78
 		public ISunSpiritCollectComponent ValueAsISunSpiritCollectComponent()
 		{
 			return this.Value<ISunSpiritCollectComponent>().Value;
 		}
 
-		// Token: 0x06028612 RID: 165394 RVA: 0x0058BC2C File Offset: 0x00589E2C
+		// Token: 0x0602AC00 RID: 175104 RVA: 0x005D3A94 File Offset: 0x005D1C94
 		public ISunSpiritLauncherComponent ValueAsISunSpiritLauncherComponent()
 		{
 			return this.Value<ISunSpiritLauncherComponent>().Value;
 		}
 
-		// Token: 0x06028613 RID: 165395 RVA: 0x0058BC48 File Offset: 0x00589E48
+		// Token: 0x0602AC01 RID: 175105 RVA: 0x005D3AB0 File Offset: 0x005D1CB0
 		public ISunSpiritGearComponent ValueAsISunSpiritGearComponent()
 		{
 			return this.Value<ISunSpiritGearComponent>().Value;
 		}
 
-		// Token: 0x06028614 RID: 165396 RVA: 0x0058BC64 File Offset: 0x00589E64
+		// Token: 0x0602AC02 RID: 175106 RVA: 0x005D3ACC File Offset: 0x005D1CCC
 		public IMotorSlideComponent ValueAsIMotorSlideComponent()
 		{
 			return this.Value<IMotorSlideComponent>().Value;
 		}
 
-		// Token: 0x06028615 RID: 165397 RVA: 0x0058BC80 File Offset: 0x00589E80
+		// Token: 0x0602AC03 RID: 175107 RVA: 0x005D3AE8 File Offset: 0x005D1CE8
 		public IProceduralVisualComponent ValueAsIProceduralVisualComponent()
 		{
 			return this.Value<IProceduralVisualComponent>().Value;
 		}
 
-		// Token: 0x06028616 RID: 165398 RVA: 0x0058BC9C File Offset: 0x00589E9C
+		// Token: 0x0602AC04 RID: 175108 RVA: 0x005D3B04 File Offset: 0x005D1D04
 		public IRoadNetworkNavigationComponent ValueAsIRoadNetworkNavigationComponent()
 		{
 			return this.Value<IRoadNetworkNavigationComponent>().Value;
 		}
 
-		// Token: 0x06028617 RID: 165399 RVA: 0x0058BCB8 File Offset: 0x00589EB8
+		// Token: 0x0602AC05 RID: 175109 RVA: 0x005D3B20 File Offset: 0x005D1D20
 		public IFurnitureSlotComponent ValueAsIFurnitureSlotComponent()
 		{
 			return this.Value<IFurnitureSlotComponent>().Value;
 		}
 
-		// Token: 0x06028618 RID: 165400 RVA: 0x0058BCD4 File Offset: 0x00589ED4
+		// Token: 0x0602AC06 RID: 175110 RVA: 0x005D3B3C File Offset: 0x005D1D3C
 		public IVisionDisplayComponent ValueAsIVisionDisplayComponent()
 		{
 			return this.Value<IVisionDisplayComponent>().Value;
 		}
 
-		// Token: 0x06028619 RID: 165401 RVA: 0x0058BCF0 File Offset: 0x00589EF0
+		// Token: 0x0602AC07 RID: 175111 RVA: 0x005D3B58 File Offset: 0x005D1D58
 		public ISystemModuleDataSyncComponent ValueAsISystemModuleDataSyncComponent()
 		{
 			return this.Value<ISystemModuleDataSyncComponent>().Value;
 		}
 
-		// Token: 0x0602861A RID: 165402 RVA: 0x0058BD0C File Offset: 0x00589F0C
+		// Token: 0x0602AC08 RID: 175112 RVA: 0x005D3B74 File Offset: 0x005D1D74
 		public IExhibitComponent ValueAsIExhibitComponent()
 		{
 			return this.Value<IExhibitComponent>().Value;
 		}
 
-		// Token: 0x0602861B RID: 165403 RVA: 0x0058BD28 File Offset: 0x00589F28
+		// Token: 0x0602AC09 RID: 175113 RVA: 0x005D3B90 File Offset: 0x005D1D90
 		public ITimeScheduleComponent ValueAsITimeScheduleComponent()
 		{
 			return this.Value<ITimeScheduleComponent>().Value;
 		}
 
-		// Token: 0x0602861C RID: 165404 RVA: 0x0058BD44 File Offset: 0x00589F44
+		// Token: 0x0602AC0A RID: 175114 RVA: 0x005D3BAC File Offset: 0x005D1DAC
 		public IProjectorComponent ValueAsIProjectorComponent()
 		{
 			return this.Value<IProjectorComponent>().Value;
 		}
 
-		// Token: 0x0602861D RID: 165405 RVA: 0x0058BD60 File Offset: 0x00589F60
+		// Token: 0x0602AC0B RID: 175115 RVA: 0x005D3BC8 File Offset: 0x005D1DC8
 		public IProceduralMaterialComponent ValueAsIProceduralMaterialComponent()
 		{
 			return this.Value<IProceduralMaterialComponent>().Value;
 		}
 
-		// Token: 0x0602861E RID: 165406 RVA: 0x0058BD7C File Offset: 0x00589F7C
+		// Token: 0x0602AC0C RID: 175116 RVA: 0x005D3BE4 File Offset: 0x005D1DE4
 		public IGameplayDataPersistenceComponent ValueAsIGameplayDataPersistenceComponent()
 		{
 			return this.Value<IGameplayDataPersistenceComponent>().Value;
 		}
 
-		// Token: 0x0602861F RID: 165407 RVA: 0x0058BD98 File Offset: 0x00589F98
+		// Token: 0x0602AC0D RID: 175117 RVA: 0x005D3C00 File Offset: 0x005D1E00
 		public IFlowerPollutionComponent ValueAsIFlowerPollutionComponent()
 		{
 			return this.Value<IFlowerPollutionComponent>().Value;
 		}
 
-		// Token: 0x06028620 RID: 165408 RVA: 0x0058BDB4 File Offset: 0x00589FB4
+		// Token: 0x0602AC0E RID: 175118 RVA: 0x005D3C1C File Offset: 0x005D1E1C
 		public IQuickHackComponent ValueAsIQuickHackComponent()
 		{
 			return this.Value<IQuickHackComponent>().Value;
 		}
 
-		// Token: 0x06028621 RID: 165409 RVA: 0x0058BDD0 File Offset: 0x00589FD0
+		// Token: 0x0602AC0F RID: 175119 RVA: 0x005D3C38 File Offset: 0x005D1E38
 		public IDollGrabMachineComponent ValueAsIDollGrabMachineComponent()
 		{
 			return this.Value<IDollGrabMachineComponent>().Value;
 		}
 
-		// Token: 0x06028622 RID: 165410 RVA: 0x0058BDEC File Offset: 0x00589FEC
+		// Token: 0x0602AC10 RID: 175120 RVA: 0x005D3C54 File Offset: 0x005D1E54
 		public IDollGrabShowcaseComponent ValueAsIDollGrabShowcaseComponent()
 		{
 			return this.Value<IDollGrabShowcaseComponent>().Value;
 		}
 
-		// Token: 0x06028623 RID: 165411 RVA: 0x0058BE08 File Offset: 0x0058A008
+		// Token: 0x0602AC11 RID: 175121 RVA: 0x005D3C70 File Offset: 0x005D1E70
 		public IWuWaGoComponent ValueAsIWuWaGoComponent()
 		{
 			return this.Value<IWuWaGoComponent>().Value;
 		}
 
-		// Token: 0x06028624 RID: 165412 RVA: 0x0058BE24 File Offset: 0x0058A024
+		// Token: 0x0602AC12 RID: 175122 RVA: 0x005D3C8C File Offset: 0x005D1E8C
 		public IDragActorPlayComponent ValueAsIDragActorPlayComponent()
 		{
 			return this.Value<IDragActorPlayComponent>().Value;
 		}
 
-		// Token: 0x06028625 RID: 165413 RVA: 0x0058BE40 File Offset: 0x0058A040
+		// Token: 0x0602AC13 RID: 175123 RVA: 0x005D3CA8 File Offset: 0x005D1EA8
 		public IPathDrivenActorSpawnerComponent ValueAsIPathDrivenActorSpawnerComponent()
 		{
 			return this.Value<IPathDrivenActorSpawnerComponent>().Value;
 		}
 
-		// Token: 0x06028626 RID: 165414 RVA: 0x0058BE5C File Offset: 0x0058A05C
+		// Token: 0x0602AC14 RID: 175124 RVA: 0x005D3CC4 File Offset: 0x005D1EC4
 		public IElementalHolderComponent ValueAsIElementalHolderComponent()
 		{
 			return this.Value<IElementalHolderComponent>().Value;
 		}
 
-		// Token: 0x06028627 RID: 165415 RVA: 0x0058BE78 File Offset: 0x0058A078
+		// Token: 0x0602AC15 RID: 175125 RVA: 0x005D3CE0 File Offset: 0x005D1EE0
 		public IElementalEffectComponent ValueAsIElementalEffectComponent()
 		{
 			return this.Value<IElementalEffectComponent>().Value;
 		}
 
-		// Token: 0x06028628 RID: 165416 RVA: 0x0058BE94 File Offset: 0x0058A094
+		// Token: 0x0602AC16 RID: 175126 RVA: 0x005D3CFC File Offset: 0x005D1EFC
 		public IElementalBoxFoundationComponent ValueAsIElementalBoxFoundationComponent()
 		{
 			return this.Value<IElementalBoxFoundationComponent>().Value;
 		}
 
-		// Token: 0x06028629 RID: 165417 RVA: 0x0058BEB0 File Offset: 0x0058A0B0
+		// Token: 0x0602AC17 RID: 175127 RVA: 0x005D3D18 File Offset: 0x005D1F18
 		public IElementalWellComponent ValueAsIElementalWellComponent()
 		{
 			return this.Value<IElementalWellComponent>().Value;
 		}
 
-		// Token: 0x0602862A RID: 165418 RVA: 0x0058BECC File Offset: 0x0058A0CC
+		// Token: 0x0602AC18 RID: 175128 RVA: 0x005D3D34 File Offset: 0x005D1F34
 		public IStreamingSourceTriggerPointComponent ValueAsIStreamingSourceTriggerPointComponent()
 		{
 			return this.Value<IStreamingSourceTriggerPointComponent>().Value;
 		}
 
-		// Token: 0x0602862B RID: 165419 RVA: 0x0058BEE8 File Offset: 0x0058A0E8
+		// Token: 0x0602AC19 RID: 175129 RVA: 0x005D3D50 File Offset: 0x005D1F50
 		public IGraph3dComponent ValueAsIGraph3dComponent()
 		{
 			return this.Value<IGraph3dComponent>().Value;
 		}
 
-		// Token: 0x0602862C RID: 165420 RVA: 0x0058BF04 File Offset: 0x0058A104
+		// Token: 0x0602AC1A RID: 175130 RVA: 0x005D3D6C File Offset: 0x005D1F6C
 		public IGraph3dEffectComponent ValueAsIGraph3dEffectComponent()
 		{
 			return this.Value<IGraph3dEffectComponent>().Value;
 		}
 
-		// Token: 0x0602862D RID: 165421 RVA: 0x0058BF20 File Offset: 0x0058A120
+		// Token: 0x0602AC1B RID: 175131 RVA: 0x005D3D88 File Offset: 0x005D1F88
 		public INoiseRemovalComponent ValueAsINoiseRemovalComponent()
 		{
 			return this.Value<INoiseRemovalComponent>().Value;
 		}
 
-		// Token: 0x0602862E RID: 165422 RVA: 0x0058BF3B File Offset: 0x0058A13B
+		// Token: 0x0602AC1C RID: 175132 RVA: 0x005D3DA4 File Offset: 0x005D1FA4
+		public IFrequencyPaintComponent ValueAsIFrequencyPaintComponent()
+		{
+			return this.Value<IFrequencyPaintComponent>().Value;
+		}
+
+		// Token: 0x0602AC1D RID: 175133 RVA: 0x005D3DC0 File Offset: 0x005D1FC0
+		public ITurntableConnectorComponent ValueAsITurntableConnectorComponent()
+		{
+			return this.Value<ITurntableConnectorComponent>().Value;
+		}
+
+		// Token: 0x0602AC1E RID: 175134 RVA: 0x005D3DDB File Offset: 0x005D1FDB
 		public static Offset<TComponentData> CreateTComponentData(FlatBufferBuilder builder, StringOffset keyOffset = default(StringOffset), IComponentBase_Union value_type = IComponentBase_Union.NONE, int valueOffset = 0)
 		{
 			builder.StartTable(3);
@@ -1310,37 +1322,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return TComponentData.EndTComponentData(builder);
 		}
 
-		// Token: 0x0602862F RID: 165423 RVA: 0x0058BF5F File Offset: 0x0058A15F
+		// Token: 0x0602AC1F RID: 175135 RVA: 0x005D3DFF File Offset: 0x005D1FFF
 		public static void StartTComponentData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06028630 RID: 165424 RVA: 0x0058BF68 File Offset: 0x0058A168
+		// Token: 0x0602AC20 RID: 175136 RVA: 0x005D3E08 File Offset: 0x005D2008
 		public static void AddKey(FlatBufferBuilder builder, StringOffset keyOffset)
 		{
 			builder.AddOffset(0, keyOffset.Value, 0);
 		}
 
-		// Token: 0x06028631 RID: 165425 RVA: 0x0058BF78 File Offset: 0x0058A178
+		// Token: 0x0602AC21 RID: 175137 RVA: 0x005D3E18 File Offset: 0x005D2018
 		public static void AddValueType(FlatBufferBuilder builder, IComponentBase_Union valueType)
 		{
 			builder.AddByte(1, (byte)valueType, 0);
 		}
 
-		// Token: 0x06028632 RID: 165426 RVA: 0x0058BF83 File Offset: 0x0058A183
+		// Token: 0x0602AC22 RID: 175138 RVA: 0x005D3E23 File Offset: 0x005D2023
 		public static void AddValue(FlatBufferBuilder builder, int valueOffset)
 		{
 			builder.AddOffset(2, valueOffset, 0);
 		}
 
-		// Token: 0x06028633 RID: 165427 RVA: 0x0058BF8E File Offset: 0x0058A18E
+		// Token: 0x0602AC23 RID: 175139 RVA: 0x005D3E2E File Offset: 0x005D202E
 		public static Offset<TComponentData> EndTComponentData(FlatBufferBuilder builder)
 		{
 			return new Offset<TComponentData>(builder.EndTable());
 		}
 
-		// Token: 0x06028634 RID: 165428 RVA: 0x0058BF9C File Offset: 0x0058A19C
+		// Token: 0x0602AC24 RID: 175140 RVA: 0x005D3E3C File Offset: 0x005D203C
 		public TComponentDataT UnPack()
 		{
 			TComponentDataT tcomponentDataT = new TComponentDataT();
@@ -1348,7 +1360,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return tcomponentDataT;
 		}
 
-		// Token: 0x06028635 RID: 165429 RVA: 0x0058BFB8 File Offset: 0x0058A1B8
+		// Token: 0x0602AC25 RID: 175141 RVA: 0x005D3E58 File Offset: 0x005D2058
 		public void UnPackTo(TComponentDataT _o)
 		{
 			_o.Key = this.Key;
@@ -1956,12 +1968,18 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			case IComponentBase_Union.INoiseRemovalComponent:
 				_o.Value.Value = ((this.Value<INoiseRemovalComponent>() != null) ? this.Value<INoiseRemovalComponent>().Value.UnPack() : null);
 				return;
+			case IComponentBase_Union.IFrequencyPaintComponent:
+				_o.Value.Value = ((this.Value<IFrequencyPaintComponent>() != null) ? this.Value<IFrequencyPaintComponent>().Value.UnPack() : null);
+				return;
+			case IComponentBase_Union.ITurntableConnectorComponent:
+				_o.Value.Value = ((this.Value<ITurntableConnectorComponent>() != null) ? this.Value<ITurntableConnectorComponent>().Value.UnPack() : null);
+				return;
 			default:
 				return;
 			}
 		}
 
-		// Token: 0x06028636 RID: 165430 RVA: 0x0058F5B0 File Offset: 0x0058D7B0
+		// Token: 0x0602AC26 RID: 175142 RVA: 0x005D74F8 File Offset: 0x005D56F8
 		public static Offset<TComponentData> Pack(FlatBufferBuilder builder, TComponentDataT _o)
 		{
 			if (_o == null)
@@ -1974,7 +1992,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return TComponentData.CreateTComponentData(builder, keyOffset, value_type, valueOffset);
 		}
 
-		// Token: 0x0400F394 RID: 62356
+		// Token: 0x040100AF RID: 65711
 		private Table __p;
 	}
 }

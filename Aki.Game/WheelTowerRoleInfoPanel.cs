@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020015EB RID: 5611
+// Token: 0x02000AA3 RID: 2723
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerRoleInfoPanel : UiPanelBase
 {
-	// Token: 0x06009E6A RID: 40554 RVA: 0x00228F38 File Offset: 0x00227138
+	// Token: 0x06007248 RID: 29256 RVA: 0x00232CEC File Offset: 0x00230EEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 22;
@@ -87,7 +86,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009E6B RID: 40555 RVA: 0x002292A8 File Offset: 0x002274A8
+	// Token: 0x06007249 RID: 29257 RVA: 0x0023305C File Offset: 0x0023125C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerRoleInfoPanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -98,7 +97,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009E6C RID: 40556 RVA: 0x002292EB File Offset: 0x002274EB
+	// Token: 0x0600724A RID: 29258 RVA: 0x0023309F File Offset: 0x0023129F
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(16);
@@ -109,7 +108,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x06009E6D RID: 40557 RVA: 0x00229300 File Offset: 0x00227500
+	// Token: 0x0600724B RID: 29259 RVA: 0x002330B4 File Offset: 0x002312B4
 	public void Refresh(int roleId)
 	{
 		if (roleId == 0)
@@ -137,7 +136,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		this.RefreshSkillBranch();
 	}
 
-	// Token: 0x06009E6E RID: 40558 RVA: 0x0022939C File Offset: 0x0022759C
+	// Token: 0x0600724C RID: 29260 RVA: 0x00233150 File Offset: 0x00231350
 	public void RefreshLeftBtn()
 	{
 		UUIButtonComponent button = base.GetButton(18);
@@ -153,7 +152,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		uuiitem.SetUIActive(WheelTowerModel.Instance.TmpSelectedRoleMap.Count != 0);
 	}
 
-	// Token: 0x06009E6F RID: 40559 RVA: 0x002293DF File Offset: 0x002275DF
+	// Token: 0x0600724D RID: 29261 RVA: 0x00233193 File Offset: 0x00231393
 	[NullableContext(1)]
 	private RoleSkillItem CreateRoleSkillItem()
 	{
@@ -162,7 +161,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		return roleSkillItem;
 	}
 
-	// Token: 0x06009E70 RID: 40560 RVA: 0x002293F8 File Offset: 0x002275F8
+	// Token: 0x0600724E RID: 29262 RVA: 0x002331AC File Offset: 0x002313AC
 	private void OnSkillItemClick(int skillId)
 	{
 		GenericLayout<RoleSkillItem, int> skillLayout = this.SkillLayout;
@@ -217,7 +216,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(10), skillConfigById.Value.SkillDescribe, skillConfigById.Value.SkillDetailNum());
 	}
 
-	// Token: 0x06009E71 RID: 40561 RVA: 0x002295E4 File Offset: 0x002277E4
+	// Token: 0x0600724F RID: 29263 RVA: 0x00233398 File Offset: 0x00231598
 	private void RefreshTemplate(int roleId)
 	{
 		bool flag = WheelTowerModel.Instance.IsTemplateRole(roleId);
@@ -237,7 +236,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009E72 RID: 40562 RVA: 0x00229634 File Offset: 0x00227834
+	// Token: 0x06007250 RID: 29264 RVA: 0x002333E8 File Offset: 0x002315E8
 	private void RefreshConflict(int roleId)
 	{
 		if (WheelTowerModel.Instance.IsTemplateRole(roleId) || WheelTowerModel.Instance.SelectedEnergyInfo.GetRoleEnergy(roleId) <= 0)
@@ -298,14 +297,14 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009E73 RID: 40563 RVA: 0x002296FC File Offset: 0x002278FC
+	// Token: 0x06007251 RID: 29265 RVA: 0x002334B0 File Offset: 0x002316B0
 	private void RefreshTag(RoleInfo roleInfo)
 	{
 		int[] roleTagByRoleInfo = RoleModel.Instance.GetRoleTagByRoleInfo(roleInfo);
 		GenericLayout<RoleTagMediumIconItem, int> tagLayout = this.TagLayout;
 		if (tagLayout != null)
 		{
-			tagLayout.RefreshByData(((roleTagByRoleInfo != null) ? roleTagByRoleInfo.ToList<int>() : null) ?? new List<int>(), null, false);
+			tagLayout.RefreshByData((roleTagByRoleInfo == null) ? new List<int>() : new List<int>(roleTagByRoleInfo), null, false);
 		}
 		GenericLayout<RoleTagMediumIconItem, int> tagLayout2 = this.TagLayout;
 		if (tagLayout2 == null)
@@ -320,7 +319,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		rootUiItem.SetUIActive(roleTagByRoleInfo != null && roleTagByRoleInfo.Length != 0);
 	}
 
-	// Token: 0x06009E74 RID: 40564 RVA: 0x00229764 File Offset: 0x00227964
+	// Token: 0x06007252 RID: 29266 RVA: 0x00233514 File Offset: 0x00231714
 	private void RefreshSkill(RoleInfo roleInfo)
 	{
 		IReadOnlyList<Aki.Config.Skill> skillList2 = RoleSkillConfig.Instance.GetSkillList(roleInfo.SkillId);
@@ -328,7 +327,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		{
 			return;
 		}
-		List<Aki.Config.Skill> list = skillList2.ToList<Aki.Config.Skill>();
+		List<Aki.Config.Skill> list = new List<Aki.Config.Skill>(skillList2);
 		RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleInfo.Id, true);
 		RoleSkillData roleSkillData = (roleDataById != null) ? roleDataById.GetSkillData() : null;
 		if (roleSkillData != null && roleSkillData.HasAnySkillUpgrade())
@@ -386,7 +385,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x06009E75 RID: 40565 RVA: 0x00229934 File Offset: 0x00227B34
+	// Token: 0x06007253 RID: 29267 RVA: 0x002336E4 File Offset: 0x002318E4
 	private void OnDetailClick()
 	{
 		Dictionary<int, int>.ValueCollection values = WheelTowerModel.Instance.TmpSelectedRoleMap.Values;
@@ -394,7 +393,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		{
 			return;
 		}
-		List<int> list = values.ToList<int>();
+		List<int> list = new List<int>(values);
 		RoleController instance = RoleController.Instance;
 		OpenRoleMainViewData openRoleMainViewData = new OpenRoleMainViewData();
 		openRoleMainViewData.AgentType = ERoleAgentType.Normal;
@@ -405,7 +404,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		instance.OpenRoleMainViewByParam(openRoleMainViewData);
 	}
 
-	// Token: 0x06009E76 RID: 40566 RVA: 0x002299A4 File Offset: 0x00227BA4
+	// Token: 0x06007254 RID: 29268 RVA: 0x00233754 File Offset: 0x00231954
 	private void RefreshSkillBranch()
 	{
 		bool flag = RoleModel.Instance.IsRoleHasBranch(this.RoleId);
@@ -441,7 +440,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		});
 	}
 
-	// Token: 0x06009E77 RID: 40567 RVA: 0x00229A2C File Offset: 0x00227C2C
+	// Token: 0x06007255 RID: 29269 RVA: 0x002337DC File Offset: 0x002319DC
 	private void SwitchSkillBranchHandler(int skillBranch)
 	{
 		int roleBranchIdByIndex = RoleModel.Instance.GetRoleBranchIdByIndex(this.RoleId, skillBranch);
@@ -453,10 +452,10 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 		RoleController.Instance.RequestRoleSkillBranchModify(this.RoleId, roleBranchIdByIndex);
 	}
 
-	// Token: 0x040046C8 RID: 18120
+	// Token: 0x0400476E RID: 18286
 	public Action OnClickConfirm;
 
-	// Token: 0x040046C9 RID: 18121
+	// Token: 0x0400476F RID: 18287
 	[Nullable(new byte[]
 	{
 		2,
@@ -464,7 +463,7 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 	})]
 	private GenericLayout<RoleTagMediumIconItem, int> TagLayout;
 
-	// Token: 0x040046CA RID: 18122
+	// Token: 0x04004770 RID: 18288
 	[Nullable(new byte[]
 	{
 		2,
@@ -472,12 +471,12 @@ public class WheelTowerRoleInfoPanel : UiPanelBase
 	})]
 	private GenericLayout<RoleSkillItem, int> SkillLayout;
 
-	// Token: 0x040046CB RID: 18123
+	// Token: 0x04004771 RID: 18289
 	private WarningTips WarningTipsPanel;
 
-	// Token: 0x040046CC RID: 18124
+	// Token: 0x04004772 RID: 18290
 	private TeamRoleSelectSkillBranchItem SkillBranchSwitchItem;
 
-	// Token: 0x040046CD RID: 18125
+	// Token: 0x04004773 RID: 18291
 	private int RoleId;
 }

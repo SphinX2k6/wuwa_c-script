@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002289 RID: 8841
+// Token: 0x0200176D RID: 5997
 public class MotorDiyItemGroupConfigInfo : IMotorDiyItemGroupConfigInfo
 {
-	// Token: 0x170015F9 RID: 5625
-	// (get) Token: 0x06011429 RID: 70697 RVA: 0x00436CE1 File Offset: 0x00434EE1
-	// (set) Token: 0x0601142A RID: 70698 RVA: 0x00436CE9 File Offset: 0x00434EE9
+	// Token: 0x17001630 RID: 5680
+	// (get) Token: 0x0600E8BF RID: 59583 RVA: 0x004438ED File Offset: 0x00441AED
+	// (set) Token: 0x0600E8C0 RID: 59584 RVA: 0x004438F5 File Offset: 0x00441AF5
 	public int? GroupId { get; set; }
 
-	// Token: 0x170015FA RID: 5626
-	// (get) Token: 0x0601142B RID: 70699 RVA: 0x00436CF2 File Offset: 0x00434EF2
-	// (set) Token: 0x0601142C RID: 70700 RVA: 0x00436CFA File Offset: 0x00434EFA
+	// Token: 0x17001631 RID: 5681
+	// (get) Token: 0x0600E8C1 RID: 59585 RVA: 0x004438FE File Offset: 0x00441AFE
+	// (set) Token: 0x0600E8C2 RID: 59586 RVA: 0x00443906 File Offset: 0x00441B06
 	public int? PartId { get; set; }
 }

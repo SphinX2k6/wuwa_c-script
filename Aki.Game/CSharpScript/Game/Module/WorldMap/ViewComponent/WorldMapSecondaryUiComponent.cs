@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 {
-	// Token: 0x020047B8 RID: 18360
+	// Token: 0x020036E9 RID: 14057
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapSecondaryUiComponent : MapComponent
 	{
-		// Token: 0x0603015E RID: 196958 RVA: 0x00B2501A File Offset: 0x00B2321A
+		// Token: 0x0602492D RID: 149805 RVA: 0x00A54F9E File Offset: 0x00A5319E
 		public WorldMapSecondaryUiComponent([Nullable(new byte[]
 		{
 			0,
@@ -28,8 +28,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 		{
 		}
 
-		// Token: 0x17007874 RID: 30836
-		// (get) Token: 0x0603015F RID: 196959 RVA: 0x00B2502E File Offset: 0x00B2322E
+		// Token: 0x17004B30 RID: 19248
+		// (get) Token: 0x0602492E RID: 149806 RVA: 0x00A54FB2 File Offset: 0x00A531B2
 		public override EMapComponent ComponentType
 		{
 			get
@@ -38,9 +38,9 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007875 RID: 30837
-		// (get) Token: 0x06030160 RID: 196960 RVA: 0x00B25034 File Offset: 0x00B23234
-		// (set) Token: 0x06030161 RID: 196961 RVA: 0x00B25061 File Offset: 0x00B23261
+		// Token: 0x17004B31 RID: 19249
+		// (get) Token: 0x0602492F RID: 149807 RVA: 0x00A54FB8 File Offset: 0x00A531B8
+		// (set) Token: 0x06024930 RID: 149808 RVA: 0x00A54FE5 File Offset: 0x00A531E5
 		public bool ExtraSecondaryUiOpen
 		{
 			get
@@ -53,8 +53,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007876 RID: 30838
-		// (get) Token: 0x06030162 RID: 196962 RVA: 0x00B2507B File Offset: 0x00B2327B
+		// Token: 0x17004B32 RID: 19250
+		// (get) Token: 0x06024931 RID: 149809 RVA: 0x00A54FFF File Offset: 0x00A531FF
 		public bool IsSecondaryUiOpening
 		{
 			get
@@ -63,8 +63,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007877 RID: 30839
-		// (get) Token: 0x06030163 RID: 196963 RVA: 0x00B25090 File Offset: 0x00B23290
+		// Token: 0x17004B33 RID: 19251
+		// (get) Token: 0x06024932 RID: 149810 RVA: 0x00A55014 File Offset: 0x00A53214
 		[Nullable(2)]
 		private WorldMapUiEntity WorldMapUiComponent
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x06030164 RID: 196964 RVA: 0x00B250D0 File Offset: 0x00B232D0
+		// Token: 0x06024933 RID: 149811 RVA: 0x00A55054 File Offset: 0x00A53254
 		public bool IsInternalSecondaryUiOpen()
 		{
 			using (OrderedDictionary<ESecondaryPanel, WorldMapSecondaryUi>.ValueCollection.Enumerator enumerator = this.SecondaryPanels.Values.GetEnumerator())
@@ -97,13 +97,13 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			return false;
 		}
 
-		// Token: 0x06030165 RID: 196965 RVA: 0x00B25130 File Offset: 0x00B23330
+		// Token: 0x06024934 RID: 149812 RVA: 0x00A550B4 File Offset: 0x00A532B4
 		protected override void OnRemove()
 		{
 			this.SecondaryPanels.Clear();
 		}
 
-		// Token: 0x06030166 RID: 196966 RVA: 0x00B25140 File Offset: 0x00B23340
+		// Token: 0x06024935 RID: 149813 RVA: 0x00A550C4 File Offset: 0x00A532C4
 		public void ShowPanel(MarkItem clickedItem, UUIItem parent, int customPanelMode = 1)
 		{
 			ESecondaryPanel secondaryUiType = clickedItem.GetSecondaryUiType();
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			});
 		}
 
-		// Token: 0x06030167 RID: 196967 RVA: 0x00B25170 File Offset: 0x00B23370
+		// Token: 0x06024936 RID: 149814 RVA: 0x00A550F4 File Offset: 0x00A532F4
 		public void ShowMarkMenu(UUIItem parent, List<MarkItem> markItems)
 		{
 			this.OpenUi(ESecondaryPanel.MarkMenuPanel, parent, new object[]
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			});
 		}
 
-		// Token: 0x06030168 RID: 196968 RVA: 0x00B25185 File Offset: 0x00B23385
+		// Token: 0x06024937 RID: 149815 RVA: 0x00A55109 File Offset: 0x00A53309
 		public void ShowTrackMenu(UUIItem parent, List<ITrackMenuItemData> markItems)
 		{
 			this.OpenUi(ESecondaryPanel.TrackMenuPanel, parent, new object[]
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			});
 		}
 
-		// Token: 0x06030169 RID: 196969 RVA: 0x00B2519B File Offset: 0x00B2339B
+		// Token: 0x06024938 RID: 149816 RVA: 0x00A5511F File Offset: 0x00A5331F
 		public void ShowWorldMapNotePanel(UUIItem parent, List<IMapNoteParams> mapNoteParamList)
 		{
 			this.OpenUi(ESecondaryPanel.WorldMapNotePanel, parent, new object[]
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			});
 		}
 
-		// Token: 0x0603016A RID: 196970 RVA: 0x00B251B1 File Offset: 0x00B233B1
+		// Token: 0x06024939 RID: 149817 RVA: 0x00A55135 File Offset: 0x00A53335
 		public void ShowMapMarkTogglePanel(UUIItem parent, [Nullable(new byte[]
 		{
 			2,
@@ -159,13 +159,13 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			});
 		}
 
-		// Token: 0x0603016B RID: 196971 RVA: 0x00B251CB File Offset: 0x00B233CB
+		// Token: 0x0602493A RID: 149818 RVA: 0x00A5514F File Offset: 0x00A5334F
 		public void ShowMapPeriodicActivityPanel(UUIItem parent)
 		{
 			this.OpenUi(ESecondaryPanel.ActivityListPanel, parent, Array.Empty<object>());
 		}
 
-		// Token: 0x0603016C RID: 196972 RVA: 0x00B251DC File Offset: 0x00B233DC
+		// Token: 0x0602493B RID: 149819 RVA: 0x00A55160 File Offset: 0x00A53360
 		public void ShowQuickNavigate(UUIItem parent, List<MarkItem> navigateMarkItems)
 		{
 			this.OpenUi(ESecondaryPanel.QuickNavigatePanel, parent, new object[]
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}).Forget();
 		}
 
-		// Token: 0x0603016D RID: 196973 RVA: 0x00B251F8 File Offset: 0x00B233F8
+		// Token: 0x0602493C RID: 149820 RVA: 0x00A5517C File Offset: 0x00A5337C
 		public UniTask OpenUi(ESecondaryPanel type, UUIItem parent, params object[] parameters)
 		{
 			WorldMapSecondaryUiComponent.<OpenUi>d__21 <OpenUi>d__;
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			return <OpenUi>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603016E RID: 196974 RVA: 0x00B25254 File Offset: 0x00B23454
+		// Token: 0x0602493D RID: 149821 RVA: 0x00A551D8 File Offset: 0x00A533D8
 		public void CloseUi(Action callback, bool playSequence = true)
 		{
 			foreach (WorldMapSecondaryUi worldMapSecondaryUi in this.SecondaryPanels.Values)
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x0603016F RID: 196975 RVA: 0x00B252C4 File Offset: 0x00B234C4
+		// Token: 0x0602493E RID: 149822 RVA: 0x00A55248 File Offset: 0x00A53448
 		[NullableContext(2)]
 		public UUIItem GetSecondaryPanelGuideFocusUiItem(ESecondaryPanel panelIndex)
 		{
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			return null;
 		}
 
-		// Token: 0x06030170 RID: 196976 RVA: 0x00B252EC File Offset: 0x00B234EC
+		// Token: 0x0602493F RID: 149823 RVA: 0x00A55270 File Offset: 0x00A53470
 		public void AllSecondaryPanelsUpdateMap()
 		{
 			BaseMap map = this.WorldMapUiComponent.Map;
@@ -224,21 +224,21 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x06030171 RID: 196977 RVA: 0x00B25350 File Offset: 0x00B23550
+		// Token: 0x06024940 RID: 149824 RVA: 0x00A552D4 File Offset: 0x00A534D4
 		public bool CheckSecondaryUiIsOpen(ESecondaryPanel type)
 		{
 			WorldMapSecondaryUi worldMapSecondaryUi;
 			return this.SecondaryPanels.TryGetValue(type, out worldMapSecondaryUi) && worldMapSecondaryUi.IsUiOpen;
 		}
 
-		// Token: 0x04019EC1 RID: 106177
+		// Token: 0x04014571 RID: 83313
 		private readonly OrderedDictionary<ESecondaryPanel, WorldMapSecondaryUi> SecondaryPanels = new OrderedDictionary<ESecondaryPanel, WorldMapSecondaryUi>();
 
-		// Token: 0x0200AA71 RID: 43633
+		// Token: 0x02009425 RID: 37925
 		[NullableContext(0)]
 		public static class EPropertyType
 		{
-			// Token: 0x04033DC2 RID: 212418
+			// Token: 0x0402E54E RID: 189774
 			public const int ExtraSecondaryUiOpen = 0;
 		}
 	}

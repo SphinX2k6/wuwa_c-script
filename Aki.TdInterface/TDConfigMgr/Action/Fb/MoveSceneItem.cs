@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200282C RID: 10284
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002AFF RID: 11007
 	public class MoveSceneItem : ActionParams
 	{
-		// Token: 0x0600E411 RID: 58385 RVA: 0x002195C9 File Offset: 0x002177C9
+		// Token: 0x0600F236 RID: 62006 RVA: 0x0023642D File Offset: 0x0023462D
 		public static MoveSceneItem Create(IMoveSceneItem? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700457B RID: 17787
-		// (get) Token: 0x0600E412 RID: 58386 RVA: 0x002195E8 File Offset: 0x002177E8
+		// Token: 0x170048E6 RID: 18662
+		// (get) Token: 0x0600F237 RID: 62007 RVA: 0x0023644C File Offset: 0x0023464C
 		public virtual int EntityId
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700457C RID: 17788
-		// (get) Token: 0x0600E413 RID: 58387 RVA: 0x002195F8 File Offset: 0x002177F8
+		// Token: 0x170048E7 RID: 18663
+		// (get) Token: 0x0600F238 RID: 62008 RVA: 0x0023645C File Offset: 0x0023465C
 		public virtual bool? StopBeforeMove
 		{
 			get
@@ -46,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700457D RID: 17789
-		// (get) Token: 0x0600E414 RID: 58388 RVA: 0x0021962E File Offset: 0x0021782E
+		// Token: 0x170048E8 RID: 18664
+		// (get) Token: 0x0600F239 RID: 62009 RVA: 0x00236492 File Offset: 0x00234692
 		public virtual IMoveSceneItemType MoveConfig
 		{
 			get
@@ -62,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700457E RID: 17790
-		// (get) Token: 0x0600E415 RID: 58389 RVA: 0x00219660 File Offset: 0x00217860
+		// Token: 0x170048E9 RID: 18665
+		// (get) Token: 0x0600F23A RID: 62010 RVA: 0x002364C4 File Offset: 0x002346C4
 		public virtual bool? BypassClientResponse
 		{
 			get
@@ -76,13 +73,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E36 RID: 32310
+		// Token: 0x040084F3 RID: 34035
 		private IMoveSceneItem Instance;
 
-		// Token: 0x04007E37 RID: 32311
+		// Token: 0x040084F4 RID: 34036
 		private IMoveSceneItemType _MoveConfigCache;
 
-		// Token: 0x04007E38 RID: 32312
+		// Token: 0x040084F5 RID: 34037
 		private bool _MoveConfigInited;
 	}
 }

@@ -5,39 +5,39 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C36 RID: 19510
+	// Token: 0x02003BE7 RID: 15335
 	[NullableContext(1)]
 	[JsonConverter(typeof(SheriffQuestionResultJsonConfigConverter))]
 	public interface ISheriffQuestionResultJsonConfig
 	{
-		// Token: 0x17007C94 RID: 31892
-		// (get) Token: 0x06032792 RID: 206738
-		// (set) Token: 0x06032793 RID: 206739
+		// Token: 0x1700503E RID: 20542
+		// (get) Token: 0x06027545 RID: 161093
+		// (set) Token: 0x06027546 RID: 161094
 		List<int> ClueCombination { get; set; }
 
-		// Token: 0x17007C95 RID: 31893
-		// (get) Token: 0x06032794 RID: 206740
-		// (set) Token: 0x06032795 RID: 206741
+		// Token: 0x1700503F RID: 20543
+		// (get) Token: 0x06027547 RID: 161095
+		// (set) Token: 0x06027548 RID: 161096
 		List<string> ReasoningStateId { get; set; }
 
-		// Token: 0x17007C96 RID: 31894
-		// (get) Token: 0x06032796 RID: 206742
-		// (set) Token: 0x06032797 RID: 206743
+		// Token: 0x17005040 RID: 20544
+		// (get) Token: 0x06027549 RID: 161097
+		// (set) Token: 0x0602754A RID: 161098
 		List<string> ResultDesc { get; set; }
 
-		// Token: 0x17007C97 RID: 31895
-		// (get) Token: 0x06032798 RID: 206744
-		// (set) Token: 0x06032799 RID: 206745
+		// Token: 0x17005041 RID: 20545
+		// (get) Token: 0x0602754B RID: 161099
+		// (set) Token: 0x0602754C RID: 161100
 		int? NextQuestionId { get; set; }
 
-		// Token: 0x17007C98 RID: 31896
-		// (get) Token: 0x0603279A RID: 206746
-		// (set) Token: 0x0603279B RID: 206747
+		// Token: 0x17005042 RID: 20546
+		// (get) Token: 0x0602754D RID: 161101
+		// (set) Token: 0x0602754E RID: 161102
 		int? CaseProgressId { get; set; }
 
-		// Token: 0x17007C99 RID: 31897
-		// (get) Token: 0x0603279C RID: 206748
-		// (set) Token: 0x0603279D RID: 206749
+		// Token: 0x17005043 RID: 20547
+		// (get) Token: 0x0602754F RID: 161103
+		// (set) Token: 0x06027550 RID: 161104
 		int? EndingId { get; set; }
 	}
 }

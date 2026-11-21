@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004D8 RID: 1240
+	// Token: 0x02000531 RID: 1329
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IMarkMainStateTextTarget
 	{
-		// Token: 0x06001926 RID: 6438 RVA: 0x0004A900 File Offset: 0x00048B00
-		[NullableContext(1)]
+		// Token: 0x06001AC0 RID: 6848 RVA: 0x0004E648 File Offset: 0x0004C848
+		[NullableContext(0)]
 		private IMarkMainStateTextTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001927 RID: 6439 RVA: 0x0004A938 File Offset: 0x00048B38
-		[NullableContext(1)]
+		// Token: 0x06001AC1 RID: 6849 RVA: 0x0004E680 File Offset: 0x0004C880
+		[NullableContext(0)]
 		public static IMarkMainStateTextTarget Create([Nullable(2)] IMarkMainStateTextTarget instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001928 RID: 6440 RVA: 0x0004A94B File Offset: 0x00048B4B
-		[NullableContext(1)]
+		// Token: 0x06001AC2 RID: 6850 RVA: 0x0004E693 File Offset: 0x0004C893
+		[NullableContext(0)]
 		public static IMarkMainStateTextTarget CreateFromSetValue([Nullable(2)] IMarkMainStateTextTarget_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001929 RID: 6441 RVA: 0x0004A95E File Offset: 0x00048B5E
-		[NullableContext(1)]
+		// Token: 0x06001AC3 RID: 6851 RVA: 0x0004E6A6 File Offset: 0x0004C8A6
+		[NullableContext(0)]
 		public IMarkMainStateTextTarget_SetValue ToSetValue()
 		{
 			return new IMarkMainStateTextTarget_SetValue
@@ -64,9 +64,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006AE RID: 1710
-		// (get) Token: 0x0600192A RID: 6442 RVA: 0x0004A97D File Offset: 0x00048B7D
-		// (set) Token: 0x0600192B RID: 6443 RVA: 0x0004A9A4 File Offset: 0x00048BA4
+		// Token: 0x17000715 RID: 1813
+		// (get) Token: 0x06001AC4 RID: 6852 RVA: 0x0004E6C5 File Offset: 0x0004C8C5
+		// (set) Token: 0x06001AC5 RID: 6853 RVA: 0x0004E6EC File Offset: 0x0004C8EC
 		public virtual string TidTargetName
 		{
 			get
@@ -88,9 +88,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006AF RID: 1711
-		// (get) Token: 0x0600192C RID: 6444 RVA: 0x0004A9B2 File Offset: 0x00048BB2
-		// (set) Token: 0x0600192D RID: 6445 RVA: 0x0004A9C9 File Offset: 0x00048BC9
+		// Token: 0x17000716 RID: 1814
+		// (get) Token: 0x06001AC6 RID: 6854 RVA: 0x0004E6FA File Offset: 0x0004C8FA
+		// (set) Token: 0x06001AC7 RID: 6855 RVA: 0x0004E711 File Offset: 0x0004C911
 		public virtual string EdTidTargetName
 		{
 			get
@@ -107,10 +107,10 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001280 RID: 4736
+		// Token: 0x040013A2 RID: 5026
 		protected IMarkMainStateTextTarget FbInstance;
 
-		// Token: 0x04001281 RID: 4737
+		// Token: 0x040013A3 RID: 5027
 		protected IMarkMainStateTextTarget_SetValue PocoInterface;
 	}
 }

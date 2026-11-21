@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006308 RID: 25352
+	// Token: 0x02006979 RID: 27001
 	public struct IChangeMediaPlayDa : IFlatbufferObject
 	{
-		// Token: 0x1700BD41 RID: 48449
-		// (get) Token: 0x0602BD73 RID: 179571 RVA: 0x0060781C File Offset: 0x00605A1C
+		// Token: 0x1700C6CB RID: 50891
+		// (get) Token: 0x0602E4DC RID: 189660 RVA: 0x00652828 File Offset: 0x00650A28
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BD74 RID: 179572 RVA: 0x00607829 File Offset: 0x00605A29
+		// Token: 0x0602E4DD RID: 189661 RVA: 0x00652835 File Offset: 0x00650A35
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BD75 RID: 179573 RVA: 0x00607830 File Offset: 0x00605A30
+		// Token: 0x0602E4DE RID: 189662 RVA: 0x0065283C File Offset: 0x00650A3C
 		public static IChangeMediaPlayDa GetRootAsIChangeMediaPlayDa(ByteBuffer _bb)
 		{
 			return IChangeMediaPlayDa.GetRootAsIChangeMediaPlayDa(_bb, default(IChangeMediaPlayDa));
 		}
 
-		// Token: 0x0602BD76 RID: 179574 RVA: 0x0060784C File Offset: 0x00605A4C
+		// Token: 0x0602E4DF RID: 189663 RVA: 0x00652858 File Offset: 0x00650A58
 		public static IChangeMediaPlayDa GetRootAsIChangeMediaPlayDa(ByteBuffer _bb, IChangeMediaPlayDa obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BD77 RID: 179575 RVA: 0x00607869 File Offset: 0x00605A69
+		// Token: 0x0602E4E0 RID: 189664 RVA: 0x00652875 File Offset: 0x00650A75
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BD78 RID: 179576 RVA: 0x00607878 File Offset: 0x00605A78
+		// Token: 0x0602E4E1 RID: 189665 RVA: 0x00652884 File Offset: 0x00650A84
 		public IChangeMediaPlayDa __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BD42 RID: 48450
-		// (get) Token: 0x0602BD79 RID: 179577 RVA: 0x00607888 File Offset: 0x00605A88
+		// Token: 0x1700C6CC RID: 50892
+		// (get) Token: 0x0602E4E2 RID: 189666 RVA: 0x00652894 File Offset: 0x00650A94
 		public EModifyActorMediaType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BD43 RID: 48451
-		// (get) Token: 0x0602BD7A RID: 179578 RVA: 0x006078C4 File Offset: 0x00605AC4
+		// Token: 0x1700C6CD RID: 50893
+		// (get) Token: 0x0602E4E3 RID: 189667 RVA: 0x006528D0 File Offset: 0x00650AD0
 		public string MediaPlayDa
 		{
 			get
@@ -79,19 +79,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BD7B RID: 179579 RVA: 0x006078FB File Offset: 0x00605AFB
+		// Token: 0x0602E4E4 RID: 189668 RVA: 0x00652907 File Offset: 0x00650B07
 		public Span<byte> GetMediaPlayDaBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602BD7C RID: 179580 RVA: 0x0060790A File Offset: 0x00605B0A
+		// Token: 0x0602E4E5 RID: 189669 RVA: 0x00652916 File Offset: 0x00650B16
 		public byte[] GetMediaPlayDaArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0602BD7D RID: 179581 RVA: 0x00607918 File Offset: 0x00605B18
+		// Token: 0x0602E4E6 RID: 189670 RVA: 0x00652924 File Offset: 0x00650B24
 		public IActorRef? ActorRefs(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -102,8 +102,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IActorRef?(default(IActorRef).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700BD44 RID: 48452
-		// (get) Token: 0x0602BD7E RID: 179582 RVA: 0x00607978 File Offset: 0x00605B78
+		// Token: 0x1700C6CE RID: 50894
+		// (get) Token: 0x0602E4E7 RID: 189671 RVA: 0x00652984 File Offset: 0x00650B84
 		public int ActorRefsLength
 		{
 			get
@@ -117,7 +117,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BD7F RID: 179583 RVA: 0x006079A3 File Offset: 0x00605BA3
+		// Token: 0x0602E4E8 RID: 189672 RVA: 0x006529AF File Offset: 0x00650BAF
 		public static Offset<IChangeMediaPlayDa> CreateIChangeMediaPlayDa(FlatBufferBuilder builder, EModifyActorMediaType Type = EModifyActorMediaType.ChangeMediaPlayDA, StringOffset MediaPlayDaOffset = default(StringOffset), VectorOffset ActorRefsOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -127,31 +127,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeMediaPlayDa.EndIChangeMediaPlayDa(builder);
 		}
 
-		// Token: 0x0602BD80 RID: 179584 RVA: 0x006079C7 File Offset: 0x00605BC7
+		// Token: 0x0602E4E9 RID: 189673 RVA: 0x006529D3 File Offset: 0x00650BD3
 		public static void StartIChangeMediaPlayDa(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602BD81 RID: 179585 RVA: 0x006079D0 File Offset: 0x00605BD0
+		// Token: 0x0602E4EA RID: 189674 RVA: 0x006529DC File Offset: 0x00650BDC
 		public static void AddType(FlatBufferBuilder builder, EModifyActorMediaType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602BD82 RID: 179586 RVA: 0x006079DB File Offset: 0x00605BDB
+		// Token: 0x0602E4EB RID: 189675 RVA: 0x006529E7 File Offset: 0x00650BE7
 		public static void AddMediaPlayDa(FlatBufferBuilder builder, StringOffset mediaPlayDaOffset)
 		{
 			builder.AddOffset(1, mediaPlayDaOffset.Value, 0);
 		}
 
-		// Token: 0x0602BD83 RID: 179587 RVA: 0x006079EB File Offset: 0x00605BEB
+		// Token: 0x0602E4EC RID: 189676 RVA: 0x006529F7 File Offset: 0x00650BF7
 		public static void AddActorRefs(FlatBufferBuilder builder, VectorOffset actorRefsOffset)
 		{
 			builder.AddOffset(2, actorRefsOffset.Value, 0);
 		}
 
-		// Token: 0x0602BD84 RID: 179588 RVA: 0x006079FC File Offset: 0x00605BFC
+		// Token: 0x0602E4ED RID: 189677 RVA: 0x00652A08 File Offset: 0x00650C08
 		public static VectorOffset CreateActorRefsVector(FlatBufferBuilder builder, Offset<IActorRef>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BD85 RID: 179589 RVA: 0x00607A3C File Offset: 0x00605C3C
+		// Token: 0x0602E4EE RID: 189678 RVA: 0x00652A48 File Offset: 0x00650C48
 		public static VectorOffset CreateActorRefsVectorBlock(FlatBufferBuilder builder, Offset<IActorRef>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -170,7 +170,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BD86 RID: 179590 RVA: 0x00607A56 File Offset: 0x00605C56
+		// Token: 0x0602E4EF RID: 189679 RVA: 0x00652A62 File Offset: 0x00650C62
 		public static VectorOffset CreateActorRefsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActorRef>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -178,7 +178,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BD87 RID: 179591 RVA: 0x00607A74 File Offset: 0x00605C74
+		// Token: 0x0602E4F0 RID: 189680 RVA: 0x00652A80 File Offset: 0x00650C80
 		public static VectorOffset CreateActorRefsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -186,19 +186,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BD88 RID: 179592 RVA: 0x00607A8D File Offset: 0x00605C8D
+		// Token: 0x0602E4F1 RID: 189681 RVA: 0x00652A99 File Offset: 0x00650C99
 		public static void StartActorRefsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602BD89 RID: 179593 RVA: 0x00607A98 File Offset: 0x00605C98
+		// Token: 0x0602E4F2 RID: 189682 RVA: 0x00652AA4 File Offset: 0x00650CA4
 		public static Offset<IChangeMediaPlayDa> EndIChangeMediaPlayDa(FlatBufferBuilder builder)
 		{
 			return new Offset<IChangeMediaPlayDa>(builder.EndTable());
 		}
 
-		// Token: 0x0602BD8A RID: 179594 RVA: 0x00607AA8 File Offset: 0x00605CA8
+		// Token: 0x0602E4F3 RID: 189683 RVA: 0x00652AB4 File Offset: 0x00650CB4
 		public IChangeMediaPlayDaT UnPack()
 		{
 			IChangeMediaPlayDaT changeMediaPlayDaT = new IChangeMediaPlayDaT();
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return changeMediaPlayDaT;
 		}
 
-		// Token: 0x0602BD8B RID: 179595 RVA: 0x00607AC4 File Offset: 0x00605CC4
+		// Token: 0x0602E4F4 RID: 189684 RVA: 0x00652AD0 File Offset: 0x00650CD0
 		public void UnPackTo(IChangeMediaPlayDaT _o)
 		{
 			_o.Type = this.Type;
@@ -218,7 +218,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BD8C RID: 179596 RVA: 0x00607B3C File Offset: 0x00605D3C
+		// Token: 0x0602E4F5 RID: 189685 RVA: 0x00652B48 File Offset: 0x00650D48
 		public static Offset<IChangeMediaPlayDa> Pack(FlatBufferBuilder builder, IChangeMediaPlayDaT _o)
 		{
 			if (_o == null)
@@ -239,7 +239,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeMediaPlayDa.CreateIChangeMediaPlayDa(builder, _o.Type, mediaPlayDaOffset, actorRefsOffset);
 		}
 
-		// Token: 0x040108C9 RID: 67785
+		// Token: 0x040116DF RID: 71391
 		private Table __p;
 	}
 }

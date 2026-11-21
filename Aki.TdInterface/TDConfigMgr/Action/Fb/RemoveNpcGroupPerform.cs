@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A63 RID: 10851
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D57 RID: 11607
 	public class RemoveNpcGroupPerform : ActionParams
 	{
-		// Token: 0x0600EEAE RID: 61102 RVA: 0x0022BA96 File Offset: 0x00229C96
+		// Token: 0x0600FD64 RID: 64868 RVA: 0x002497A2 File Offset: 0x002479A2
 		public static RemoveNpcGroupPerform Create(IRemoveNpcGroupPerform? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BAA RID: 19370
-		// (get) Token: 0x0600EEAF RID: 61103 RVA: 0x0022BAB5 File Offset: 0x00229CB5
+		// Token: 0x17004F64 RID: 20324
+		// (get) Token: 0x0600FD65 RID: 64869 RVA: 0x002497C1 File Offset: 0x002479C1
 		public virtual string Key
 		{
 			get
@@ -32,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400834D RID: 33613
+		// Token: 0x04008A51 RID: 35409
 		private IRemoveNpcGroupPerform Instance;
 	}
 }

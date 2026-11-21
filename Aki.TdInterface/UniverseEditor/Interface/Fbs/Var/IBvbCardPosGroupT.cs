@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A46 RID: 14918
+	// Token: 0x02003E21 RID: 15905
 	public class IBvbCardPosGroupT
 	{
-		// Token: 0x17006641 RID: 26177
-		// (get) Token: 0x0601433A RID: 82746 RVA: 0x002F3FF2 File Offset: 0x002F21F2
-		// (set) Token: 0x0601433B RID: 82747 RVA: 0x002F3FFA File Offset: 0x002F21FA
+		// Token: 0x17006B71 RID: 27505
+		// (get) Token: 0x06015656 RID: 87638 RVA: 0x003171DE File Offset: 0x003153DE
+		// (set) Token: 0x06015657 RID: 87639 RVA: 0x003171E6 File Offset: 0x003153E6
 		public bool Pos0 { get; set; }
 
-		// Token: 0x17006642 RID: 26178
-		// (get) Token: 0x0601433C RID: 82748 RVA: 0x002F4003 File Offset: 0x002F2203
-		// (set) Token: 0x0601433D RID: 82749 RVA: 0x002F400B File Offset: 0x002F220B
+		// Token: 0x17006B72 RID: 27506
+		// (get) Token: 0x06015658 RID: 87640 RVA: 0x003171EF File Offset: 0x003153EF
+		// (set) Token: 0x06015659 RID: 87641 RVA: 0x003171F7 File Offset: 0x003153F7
 		public bool Pos1 { get; set; }
 
-		// Token: 0x17006643 RID: 26179
-		// (get) Token: 0x0601433E RID: 82750 RVA: 0x002F4014 File Offset: 0x002F2214
-		// (set) Token: 0x0601433F RID: 82751 RVA: 0x002F401C File Offset: 0x002F221C
+		// Token: 0x17006B73 RID: 27507
+		// (get) Token: 0x0601565A RID: 87642 RVA: 0x00317200 File Offset: 0x00315400
+		// (set) Token: 0x0601565B RID: 87643 RVA: 0x00317208 File Offset: 0x00315408
 		public bool Pos2 { get; set; }
 
-		// Token: 0x17006644 RID: 26180
-		// (get) Token: 0x06014340 RID: 82752 RVA: 0x002F4025 File Offset: 0x002F2225
-		// (set) Token: 0x06014341 RID: 82753 RVA: 0x002F402D File Offset: 0x002F222D
+		// Token: 0x17006B74 RID: 27508
+		// (get) Token: 0x0601565C RID: 87644 RVA: 0x00317211 File Offset: 0x00315411
+		// (set) Token: 0x0601565D RID: 87645 RVA: 0x00317219 File Offset: 0x00315419
 		public bool Pos3 { get; set; }
 
-		// Token: 0x17006645 RID: 26181
-		// (get) Token: 0x06014342 RID: 82754 RVA: 0x002F4036 File Offset: 0x002F2236
-		// (set) Token: 0x06014343 RID: 82755 RVA: 0x002F403E File Offset: 0x002F223E
+		// Token: 0x17006B75 RID: 27509
+		// (get) Token: 0x0601565E RID: 87646 RVA: 0x00317222 File Offset: 0x00315422
+		// (set) Token: 0x0601565F RID: 87647 RVA: 0x0031722A File Offset: 0x0031542A
 		public bool Pos4 { get; set; }
 
-		// Token: 0x17006646 RID: 26182
-		// (get) Token: 0x06014344 RID: 82756 RVA: 0x002F4047 File Offset: 0x002F2247
-		// (set) Token: 0x06014345 RID: 82757 RVA: 0x002F404F File Offset: 0x002F224F
+		// Token: 0x17006B76 RID: 27510
+		// (get) Token: 0x06015660 RID: 87648 RVA: 0x00317233 File Offset: 0x00315433
+		// (set) Token: 0x06015661 RID: 87649 RVA: 0x0031723B File Offset: 0x0031543B
 		public bool Pos5 { get; set; }
 
-		// Token: 0x17006647 RID: 26183
-		// (get) Token: 0x06014346 RID: 82758 RVA: 0x002F4058 File Offset: 0x002F2258
-		// (set) Token: 0x06014347 RID: 82759 RVA: 0x002F4060 File Offset: 0x002F2260
+		// Token: 0x17006B77 RID: 27511
+		// (get) Token: 0x06015662 RID: 87650 RVA: 0x00317244 File Offset: 0x00315444
+		// (set) Token: 0x06015663 RID: 87651 RVA: 0x0031724C File Offset: 0x0031544C
 		public byte NullMask { get; set; }
 
-		// Token: 0x06014348 RID: 82760 RVA: 0x002F4069 File Offset: 0x002F2269
+		// Token: 0x06015664 RID: 87652 RVA: 0x00317255 File Offset: 0x00315455
 		public IBvbCardPosGroupT()
 		{
 			this.Pos0 = false;

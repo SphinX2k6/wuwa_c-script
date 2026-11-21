@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B7C RID: 2940
+	// Token: 0x02000C4A RID: 3146
 	public class IDurationCondition : ISpawnMonsterCompleteCondition
 	{
-		// Token: 0x060043B1 RID: 17329 RVA: 0x000AC628 File Offset: 0x000AA828
-		[NullableContext(1)]
+		// Token: 0x0600480A RID: 18442 RVA: 0x000B66EC File Offset: 0x000B48EC
 		public static IDurationCondition Create(IDurationCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001276 RID: 4726
-		// (get) Token: 0x060043B2 RID: 17330 RVA: 0x000AC647 File Offset: 0x000AA847
+		// Token: 0x17001371 RID: 4977
+		// (get) Token: 0x0600480B RID: 18443 RVA: 0x000B670B File Offset: 0x000B490B
 		public override ESpawnMonsterCompleteCondition Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001277 RID: 4727
-		// (get) Token: 0x060043B3 RID: 17331 RVA: 0x000AC654 File Offset: 0x000AA854
+		// Token: 0x17001372 RID: 4978
+		// (get) Token: 0x0600480C RID: 18444 RVA: 0x000B6718 File Offset: 0x000B4918
 		public virtual float Duration
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001278 RID: 4728
-		// (get) Token: 0x060043B4 RID: 17332 RVA: 0x000AC664 File Offset: 0x000AA864
+		// Token: 0x17001373 RID: 4979
+		// (get) Token: 0x0600480D RID: 18445 RVA: 0x000B6728 File Offset: 0x000B4928
 		public virtual bool? Refill
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400262D RID: 9773
+		// Token: 0x04002875 RID: 10357
 		private IDurationCondition Instance;
 	}
 }

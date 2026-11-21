@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200753E RID: 30014
+	// Token: 0x02007D34 RID: 32052
 	public struct IVillageInfrBuildOption : IFlatbufferObject
 	{
-		// Token: 0x1700E3BF RID: 58303
-		// (get) Token: 0x060369BE RID: 223678 RVA: 0x0076B500 File Offset: 0x00769700
+		// Token: 0x1700EFE9 RID: 61417
+		// (get) Token: 0x06039DD4 RID: 237012 RVA: 0x007CE7A8 File Offset: 0x007CC9A8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060369BF RID: 223679 RVA: 0x0076B50D File Offset: 0x0076970D
+		// Token: 0x06039DD5 RID: 237013 RVA: 0x007CE7B5 File Offset: 0x007CC9B5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060369C0 RID: 223680 RVA: 0x0076B514 File Offset: 0x00769714
+		// Token: 0x06039DD6 RID: 237014 RVA: 0x007CE7BC File Offset: 0x007CC9BC
 		public static IVillageInfrBuildOption GetRootAsIVillageInfrBuildOption(ByteBuffer _bb)
 		{
 			return IVillageInfrBuildOption.GetRootAsIVillageInfrBuildOption(_bb, default(IVillageInfrBuildOption));
 		}
 
-		// Token: 0x060369C1 RID: 223681 RVA: 0x0076B530 File Offset: 0x00769730
+		// Token: 0x06039DD7 RID: 237015 RVA: 0x007CE7D8 File Offset: 0x007CC9D8
 		public static IVillageInfrBuildOption GetRootAsIVillageInfrBuildOption(ByteBuffer _bb, IVillageInfrBuildOption obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060369C2 RID: 223682 RVA: 0x0076B54D File Offset: 0x0076974D
+		// Token: 0x06039DD8 RID: 237016 RVA: 0x007CE7F5 File Offset: 0x007CC9F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060369C3 RID: 223683 RVA: 0x0076B55C File Offset: 0x0076975C
+		// Token: 0x06039DD9 RID: 237017 RVA: 0x007CE804 File Offset: 0x007CCA04
 		public IVillageInfrBuildOption __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E3C0 RID: 58304
-		// (get) Token: 0x060369C4 RID: 223684 RVA: 0x0076B56C File Offset: 0x0076976C
+		// Token: 0x1700EFEA RID: 61418
+		// (get) Token: 0x06039DDA RID: 237018 RVA: 0x007CE814 File Offset: 0x007CCA14
 		public EVillageInfrBuildType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060369C5 RID: 223685 RVA: 0x0076B5A8 File Offset: 0x007697A8
+		// Token: 0x06039DDB RID: 237019 RVA: 0x007CE850 File Offset: 0x007CCA50
 		public static Offset<IVillageInfrBuildOption> CreateIVillageInfrBuildOption(FlatBufferBuilder builder, EVillageInfrBuildType Type = EVillageInfrBuildType.Village)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVillageInfrBuildOption.EndIVillageInfrBuildOption(builder);
 		}
 
-		// Token: 0x060369C6 RID: 223686 RVA: 0x0076B5BE File Offset: 0x007697BE
+		// Token: 0x06039DDC RID: 237020 RVA: 0x007CE866 File Offset: 0x007CCA66
 		public static void StartIVillageInfrBuildOption(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060369C7 RID: 223687 RVA: 0x0076B5C7 File Offset: 0x007697C7
+		// Token: 0x06039DDD RID: 237021 RVA: 0x007CE86F File Offset: 0x007CCA6F
 		public static void AddType(FlatBufferBuilder builder, EVillageInfrBuildType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060369C8 RID: 223688 RVA: 0x0076B5D2 File Offset: 0x007697D2
+		// Token: 0x06039DDE RID: 237022 RVA: 0x007CE87A File Offset: 0x007CCA7A
 		public static Offset<IVillageInfrBuildOption> EndIVillageInfrBuildOption(FlatBufferBuilder builder)
 		{
 			return new Offset<IVillageInfrBuildOption>(builder.EndTable());
 		}
 
-		// Token: 0x060369C9 RID: 223689 RVA: 0x0076B5E0 File Offset: 0x007697E0
+		// Token: 0x06039DDF RID: 237023 RVA: 0x007CE888 File Offset: 0x007CCA88
 		public IVillageInfrBuildOptionT UnPack()
 		{
 			IVillageInfrBuildOptionT villageInfrBuildOptionT = new IVillageInfrBuildOptionT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return villageInfrBuildOptionT;
 		}
 
-		// Token: 0x060369CA RID: 223690 RVA: 0x0076B5FB File Offset: 0x007697FB
+		// Token: 0x06039DE0 RID: 237024 RVA: 0x007CE8A3 File Offset: 0x007CCAA3
 		public void UnPackTo(IVillageInfrBuildOptionT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060369CB RID: 223691 RVA: 0x0076B60C File Offset: 0x0076980C
+		// Token: 0x06039DE1 RID: 237025 RVA: 0x007CE8B4 File Offset: 0x007CCAB4
 		public static Offset<IVillageInfrBuildOption> Pack(FlatBufferBuilder builder, IVillageInfrBuildOptionT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVillageInfrBuildOption.CreateIVillageInfrBuildOption(builder, _o.Type);
 		}
 
-		// Token: 0x04012431 RID: 74801
+		// Token: 0x04013462 RID: 78946
 		private Table __p;
 	}
 }

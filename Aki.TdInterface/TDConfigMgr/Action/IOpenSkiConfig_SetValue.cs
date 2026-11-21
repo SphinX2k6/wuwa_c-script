@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CAD RID: 7341
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EB4 RID: 7860
 	public class IOpenSkiConfig_SetValue
 	{
-		// Token: 0x04005F60 RID: 24416
+		// Token: 0x040064BC RID: 25788
 		public ESkiConfig Type;
 
-		// Token: 0x04005F61 RID: 24417
+		// Token: 0x040064BD RID: 25789
 		public ITargetEntityType Target;
 
-		// Token: 0x04005F62 RID: 24418
+		// Token: 0x040064BE RID: 25790
 		public string SkiConfig;
 	}
 }

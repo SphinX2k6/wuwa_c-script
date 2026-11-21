@@ -5,17 +5,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070BA RID: 28858
+	// Token: 0x0200631E RID: 25374
 	public class GameplayCueMotorcycleAssemble : GameplayCueBase
 	{
-		// Token: 0x060465E0 RID: 288224 RVA: 0x011A2E83 File Offset: 0x011A1083
+		// Token: 0x0603D6B9 RID: 251577 RVA: 0x011C2B68 File Offset: 0x011C0D68
 		protected override void OnInit()
 		{
 			base.OnInit();
 			this.Resource = null;
 		}
 
-		// Token: 0x060465E1 RID: 288225 RVA: 0x011A2E92 File Offset: 0x011A1092
+		// Token: 0x0603D6BA RID: 251578 RVA: 0x011C2B77 File Offset: 0x011C0D77
 		protected override void OnCreate()
 		{
 			base.OnCreate();
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x060465E2 RID: 288226 RVA: 0x011A2EBE File Offset: 0x011A10BE
+		// Token: 0x0603D6BB RID: 251579 RVA: 0x011C2BA3 File Offset: 0x011C0DA3
 		protected override void OnDestroy()
 		{
 			base.OnDestroy();
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.RemoveMotorcycleAssemble();
 		}
 
-		// Token: 0x060465E3 RID: 288227 RVA: 0x011A2ED4 File Offset: 0x011A10D4
+		// Token: 0x0603D6BC RID: 251580 RVA: 0x011C2BB8 File Offset: 0x011C0DB8
 		private unsafe void AddMotorcycleAssemble()
 		{
 			if (this.ActorInternal == null || !this.ActorInternal.IsValid() || this.Resource == null)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			charRenderingComponent.AddMotorExtraComp(pd_MotorExtraComponentData_C);
 		}
 
-		// Token: 0x060465E4 RID: 288228 RVA: 0x011A2F8C File Offset: 0x011A118C
+		// Token: 0x0603D6BD RID: 251581 RVA: 0x011C2C70 File Offset: 0x011C0E70
 		private void RemoveMotorcycleAssemble()
 		{
 			CharRenderingComponent charRenderingComponent = base.GetCharRenderingComponent();
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			charRenderingComponent.RemoveMotorExtraComp();
 		}
 
-		// Token: 0x04024DE1 RID: 151009
+		// Token: 0x0402091F RID: 133407
 		[Nullable(2)]
 		private UObject Resource;
 	}

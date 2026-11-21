@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029ED RID: 10733
+	// Token: 0x02002CDA RID: 11482
 	public class IAlertSystemOption
 	{
-		// Token: 0x0600ECFE RID: 60670 RVA: 0x00229554 File Offset: 0x00227754
-		[NullableContext(1)]
+		// Token: 0x0600FB95 RID: 64405 RVA: 0x00246ED8 File Offset: 0x002450D8
 		public static IAlertSystemOption Create(IAlertSystemOption? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AE6 RID: 19174
-		// (get) Token: 0x0600ECFF RID: 60671 RVA: 0x00229573 File Offset: 0x00227773
+		// Token: 0x17004E8F RID: 20111
+		// (get) Token: 0x0600FB96 RID: 64406 RVA: 0x00246EF7 File Offset: 0x002450F7
 		public virtual EAlertSystemOption Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AE7 RID: 19175
-		// (get) Token: 0x0600ED00 RID: 60672 RVA: 0x00229580 File Offset: 0x00227780
+		// Token: 0x17004E90 RID: 20112
+		// (get) Token: 0x0600FB97 RID: 64407 RVA: 0x00246F04 File Offset: 0x00245104
 		public virtual int AreaId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008285 RID: 33413
+		// Token: 0x04008976 RID: 35190
 		private IAlertSystemOption Instance;
 	}
 }

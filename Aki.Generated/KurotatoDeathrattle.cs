@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D99 RID: 3481
+	// Token: 0x02000E7E RID: 3710
 	public struct KurotatoDeathrattle : IFlatbufferObject
 	{
-		// Token: 0x17001B3F RID: 6975
-		// (get) Token: 0x06008918 RID: 35096 RVA: 0x0026CDA5 File Offset: 0x0026AFA5
+		// Token: 0x17001BA3 RID: 7075
+		// (get) Token: 0x06008F34 RID: 36660 RVA: 0x0028B99B File Offset: 0x00289B9B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008919 RID: 35097 RVA: 0x0026CDB2 File Offset: 0x0026AFB2
+		// Token: 0x06008F35 RID: 36661 RVA: 0x0028B9A8 File Offset: 0x00289BA8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600891A RID: 35098 RVA: 0x0026CDBC File Offset: 0x0026AFBC
+		// Token: 0x06008F36 RID: 36662 RVA: 0x0028B9B0 File Offset: 0x00289BB0
 		public static KurotatoDeathrattle GetRootAsKurotatoDeathrattle(ByteBuffer _bb)
 		{
 			return KurotatoDeathrattle.GetRootAsKurotatoDeathrattle(_bb, default(KurotatoDeathrattle));
 		}
 
-		// Token: 0x0600891B RID: 35099 RVA: 0x0026CDD8 File Offset: 0x0026AFD8
+		// Token: 0x06008F37 RID: 36663 RVA: 0x0028B9CC File Offset: 0x00289BCC
 		public static KurotatoDeathrattle GetRootAsKurotatoDeathrattle(ByteBuffer _bb, KurotatoDeathrattle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600891C RID: 35100 RVA: 0x0026CDF5 File Offset: 0x0026AFF5
+		// Token: 0x06008F38 RID: 36664 RVA: 0x0028B9E9 File Offset: 0x00289BE9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600891D RID: 35101 RVA: 0x0026CE04 File Offset: 0x0026B004
+		// Token: 0x06008F39 RID: 36665 RVA: 0x0028B9F8 File Offset: 0x00289BF8
 		public KurotatoDeathrattle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001B40 RID: 6976
-		// (get) Token: 0x0600891E RID: 35102 RVA: 0x0026CE14 File Offset: 0x0026B014
+		// Token: 0x17001BA4 RID: 7076
+		// (get) Token: 0x06008F3A RID: 36666 RVA: 0x0028BA08 File Offset: 0x00289C08
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001B41 RID: 6977
-		// (get) Token: 0x0600891F RID: 35103 RVA: 0x0026CE50 File Offset: 0x0026B050
+		// Token: 0x17001BA5 RID: 7077
+		// (get) Token: 0x06008F3B RID: 36667 RVA: 0x0028BA44 File Offset: 0x00289C44
 		public int Type
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008920 RID: 35104 RVA: 0x0026CE8C File Offset: 0x0026B08C
+		// Token: 0x06008F3C RID: 36668 RVA: 0x0028BA80 File Offset: 0x00289C80
 		public int SpawnDrops(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001B42 RID: 6978
-		// (get) Token: 0x06008921 RID: 35105 RVA: 0x0026CECC File Offset: 0x0026B0CC
+		// Token: 0x17001BA6 RID: 7078
+		// (get) Token: 0x06008F3D RID: 36669 RVA: 0x0028BAC0 File Offset: 0x00289CC0
 		public int SpawnDropsLength
 		{
 			get
@@ -105,20 +105,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008922 RID: 35106 RVA: 0x0026CEF7 File Offset: 0x0026B0F7
+		// Token: 0x06008F3E RID: 36670 RVA: 0x0028BAEB File Offset: 0x00289CEB
 		public Span<int> GetSpawnDropsBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06008923 RID: 35107 RVA: 0x0026CF06 File Offset: 0x0026B106
+		// Token: 0x06008F3F RID: 36671 RVA: 0x0028BAFA File Offset: 0x00289CFA
 		public int[] GetSpawnDropsArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17001B43 RID: 6979
-		// (get) Token: 0x06008924 RID: 35108 RVA: 0x0026CF20 File Offset: 0x0026B120
+		// Token: 0x17001BA7 RID: 7079
+		// (get) Token: 0x06008F40 RID: 36672 RVA: 0x0028BB14 File Offset: 0x00289D14
 		public int SpawnDropProbability
 		{
 			get
@@ -132,7 +132,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008925 RID: 35109 RVA: 0x0026CF60 File Offset: 0x0026B160
+		// Token: 0x06008F41 RID: 36673 RVA: 0x0028BB54 File Offset: 0x00289D54
 		public int SpawnMonsters(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -143,8 +143,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001B44 RID: 6980
-		// (get) Token: 0x06008926 RID: 35110 RVA: 0x0026CFA0 File Offset: 0x0026B1A0
+		// Token: 0x17001BA8 RID: 7080
+		// (get) Token: 0x06008F42 RID: 36674 RVA: 0x0028BB94 File Offset: 0x00289D94
 		public int SpawnMonstersLength
 		{
 			get
@@ -158,20 +158,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008927 RID: 35111 RVA: 0x0026CFCC File Offset: 0x0026B1CC
+		// Token: 0x06008F43 RID: 36675 RVA: 0x0028BBC0 File Offset: 0x00289DC0
 		public Span<int> GetSpawnMonstersBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x06008928 RID: 35112 RVA: 0x0026CFDC File Offset: 0x0026B1DC
+		// Token: 0x06008F44 RID: 36676 RVA: 0x0028BBD0 File Offset: 0x00289DD0
 		public int[] GetSpawnMonstersArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17001B45 RID: 6981
-		// (get) Token: 0x06008929 RID: 35113 RVA: 0x0026CFF4 File Offset: 0x0026B1F4
+		// Token: 0x17001BA9 RID: 7081
+		// (get) Token: 0x06008F45 RID: 36677 RVA: 0x0028BBE8 File Offset: 0x00289DE8
 		public int SpawnEntityRadius
 		{
 			get
@@ -185,8 +185,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001B46 RID: 6982
-		// (get) Token: 0x0600892A RID: 35114 RVA: 0x0026D034 File Offset: 0x0026B234
+		// Token: 0x17001BAA RID: 7082
+		// (get) Token: 0x06008F46 RID: 36678 RVA: 0x0028BC28 File Offset: 0x00289E28
 		public float SpawnEntityDelay
 		{
 			get
@@ -200,43 +200,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600892B RID: 35115 RVA: 0x0026D078 File Offset: 0x0026B278
+		// Token: 0x06008F47 RID: 36679 RVA: 0x0028BC69 File Offset: 0x00289E69
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SpawnDropsIter()或GetSpawnDropsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SpawnDrops()
+		public int[] SpawnDrops()
 		{
-			KurotatoDeathrattle kurotatoDeathrattle = this;
-			return kurotatoDeathrattle.GetSpawnDropsArray() ?? Array.Empty<int>();
+			return this.GetSpawnDropsArray();
 		}
 
-		// Token: 0x0600892C RID: 35116 RVA: 0x0026D09C File Offset: 0x0026B29C
+		// Token: 0x06008F48 RID: 36680 RVA: 0x0028BC71 File Offset: 0x00289E71
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SpawnDropsIter()
+		public IEnumerable<int> SpawnDropsIter()
 		{
 			KurotatoDeathrattle.<SpawnDropsIter>d__29 <SpawnDropsIter>d__ = new KurotatoDeathrattle.<SpawnDropsIter>d__29(-2);
 			<SpawnDropsIter>d__.<>3__<>4__this = this;
 			return <SpawnDropsIter>d__;
 		}
 
-		// Token: 0x0600892D RID: 35117 RVA: 0x0026D0B4 File Offset: 0x0026B2B4
+		// Token: 0x06008F49 RID: 36681 RVA: 0x0028BC86 File Offset: 0x00289E86
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SpawnMonstersIter()或GetSpawnMonstersBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SpawnMonsters()
+		public int[] SpawnMonsters()
 		{
-			KurotatoDeathrattle kurotatoDeathrattle = this;
-			return kurotatoDeathrattle.GetSpawnMonstersArray() ?? Array.Empty<int>();
+			return this.GetSpawnMonstersArray();
 		}
 
-		// Token: 0x0600892E RID: 35118 RVA: 0x0026D0D8 File Offset: 0x0026B2D8
+		// Token: 0x06008F4A RID: 36682 RVA: 0x0028BC8E File Offset: 0x00289E8E
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SpawnMonstersIter()
+		public IEnumerable<int> SpawnMonstersIter()
 		{
 			KurotatoDeathrattle.<SpawnMonstersIter>d__31 <SpawnMonstersIter>d__ = new KurotatoDeathrattle.<SpawnMonstersIter>d__31(-2);
 			<SpawnMonstersIter>d__.<>3__<>4__this = this;
 			return <SpawnMonstersIter>d__;
 		}
 
-		// Token: 0x04004E29 RID: 20009
+		// Token: 0x0400540E RID: 21518
 		private Table __p;
 	}
 }

@@ -6,18 +6,18 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000F28 RID: 3880
+// Token: 0x020003DD RID: 989
 [NullableContext(1)]
 [Nullable(0)]
 public class AchievementGroupTitleItem : UiPanelBase
 {
-	// Token: 0x06006248 RID: 25160 RVA: 0x00133507 File Offset: 0x00131707
+	// Token: 0x060035E0 RID: 13792 RVA: 0x0013BE2F File Offset: 0x0013A02F
 	public void Initialize(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x06006249 RID: 25161 RVA: 0x00133518 File Offset: 0x00131718
+	// Token: 0x060035E1 RID: 13793 RVA: 0x0013BE40 File Offset: 0x0013A040
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -43,7 +43,7 @@ public class AchievementGroupTitleItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600624A RID: 25162 RVA: 0x00133648 File Offset: 0x00131848
+	// Token: 0x060035E2 RID: 13794 RVA: 0x0013BF70 File Offset: 0x0013A170
 	protected override void OnStart()
 	{
 		this.AchievementGridItem = new AchievementGridItem();
@@ -54,20 +54,20 @@ public class AchievementGroupTitleItem : UiPanelBase
 		this.AddEventListener();
 	}
 
-	// Token: 0x0600624B RID: 25163 RVA: 0x001336B2 File Offset: 0x001318B2
+	// Token: 0x060035E3 RID: 13795 RVA: 0x0013BFDA File Offset: 0x0013A1DA
 	protected void AddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnAchievementGroupDataNotify, new Action<int>(this.OnAchievementGroupDataNotify));
 	}
 
-	// Token: 0x0600624C RID: 25164 RVA: 0x001336D0 File Offset: 0x001318D0
+	// Token: 0x060035E4 RID: 13796 RVA: 0x0013BFF8 File Offset: 0x0013A1F8
 	public void Update(AchievementGroupData groupData)
 	{
 		this.GroupData = groupData;
 		this.RefreshUi(groupData);
 	}
 
-	// Token: 0x0600624D RID: 25165 RVA: 0x001336E0 File Offset: 0x001318E0
+	// Token: 0x060035E5 RID: 13797 RVA: 0x0013C008 File Offset: 0x0013A208
 	private void RefreshUi(AchievementGroupData groupData)
 	{
 		if (groupData == null)
@@ -138,7 +138,7 @@ public class AchievementGroupTitleItem : UiPanelBase
 		this.RefreshReward(groupData);
 	}
 
-	// Token: 0x0600624E RID: 25166 RVA: 0x00133830 File Offset: 0x00131A30
+	// Token: 0x060035E6 RID: 13798 RVA: 0x0013C158 File Offset: 0x0013A358
 	private void RefreshReward(AchievementGroupData groupData)
 	{
 		List<TItem> list = (groupData != null) ? groupData.GetRewards() : null;
@@ -154,61 +154,61 @@ public class AchievementGroupTitleItem : UiPanelBase
 		this.AchievementGridItem.SetActive(false);
 	}
 
-	// Token: 0x0600624F RID: 25167 RVA: 0x001338A1 File Offset: 0x00131AA1
+	// Token: 0x060035E7 RID: 13799 RVA: 0x0013C1C9 File Offset: 0x0013A3C9
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEventListener();
 	}
 
-	// Token: 0x06006250 RID: 25168 RVA: 0x001338A9 File Offset: 0x00131AA9
+	// Token: 0x060035E8 RID: 13800 RVA: 0x0013C1D1 File Offset: 0x0013A3D1
 	protected void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAchievementGroupDataNotify, new Action<int>(this.OnAchievementGroupDataNotify));
 	}
 
-	// Token: 0x06006251 RID: 25169 RVA: 0x001338C7 File Offset: 0x00131AC7
+	// Token: 0x060035E9 RID: 13801 RVA: 0x0013C1EF File Offset: 0x0013A3EF
 	private void OnAchievementGroupDataNotify(int groupId)
 	{
 		this.RefreshUi(this.GroupData);
 	}
 
-	// Token: 0x06006252 RID: 25170 RVA: 0x001338D5 File Offset: 0x00131AD5
+	// Token: 0x060035EA RID: 13802 RVA: 0x0013C1FD File Offset: 0x0013A3FD
 	private void OnClickButton()
 	{
 		AchievementController.Instance.RequestGetAchievementReward(true, this.GroupData.GetId());
 	}
 
-	// Token: 0x04002C9F RID: 11423
+	// Token: 0x04002D38 RID: 11576
 	[Nullable(2)]
 	private AchievementGroupData GroupData;
 
-	// Token: 0x04002CA0 RID: 11424
+	// Token: 0x04002D39 RID: 11577
 	[Nullable(2)]
 	private AchievementGridItem AchievementGridItem;
 
-	// Token: 0x04002CA1 RID: 11425
+	// Token: 0x04002D3A RID: 11578
 	[Nullable(2)]
 	private AchievementProgressConfirmItem ProgressConfirmItem;
 
-	// Token: 0x0200756F RID: 30063
+	// Token: 0x02006703 RID: 26371
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04026D37 RID: 159031
+		// Token: 0x04022082 RID: 139394
 		Confirm,
-		// Token: 0x04026D38 RID: 159032
+		// Token: 0x04022083 RID: 139395
 		CommonGridItem,
-		// Token: 0x04026D39 RID: 159033
+		// Token: 0x04022084 RID: 139396
 		Title,
-		// Token: 0x04026D3A RID: 159034
+		// Token: 0x04022085 RID: 139397
 		Progress,
-		// Token: 0x04026D3B RID: 159035
+		// Token: 0x04022086 RID: 139398
 		IconTexture,
-		// Token: 0x04026D3C RID: 159036
+		// Token: 0x04022087 RID: 139399
 		ProgressingText,
-		// Token: 0x04026D3D RID: 159037
+		// Token: 0x04022088 RID: 139400
 		ProgressPreText,
-		// Token: 0x04026D3E RID: 159038
+		// Token: 0x04022089 RID: 139401
 		BackgroundTexture
 	}
 }

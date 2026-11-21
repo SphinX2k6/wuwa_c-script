@@ -4,12 +4,12 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001086 RID: 4230
+// Token: 0x0200053A RID: 1338
 [NullableContext(2)]
 [Nullable(0)]
 public class RhythmGameHitResultPanel : UiPanelBase
 {
-	// Token: 0x06006DFF RID: 28159 RVA: 0x00165B84 File Offset: 0x00163D84
+	// Token: 0x06004194 RID: 16788 RVA: 0x0016E4B8 File Offset: 0x0016C6B8
 	protected override void OnBeforeCreate()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -32,7 +32,7 @@ public class RhythmGameHitResultPanel : UiPanelBase
 		this.IconHitResult = (obj as UUITexture);
 	}
 
-	// Token: 0x06006E00 RID: 28160 RVA: 0x00165BE8 File Offset: 0x00163DE8
+	// Token: 0x06004195 RID: 16789 RVA: 0x0016E51C File Offset: 0x0016C71C
 	public void SetHitResult(EKuroRhythmGameRating result)
 	{
 		UUIItem rootItem = this.RootItem;
@@ -55,9 +55,9 @@ public class RhythmGameHitResultPanel : UiPanelBase
 		sequencePlayer2.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x040032CE RID: 13006
+	// Token: 0x04003367 RID: 13159
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x040032CF RID: 13007
+	// Token: 0x04003368 RID: 13160
 	private UUITexture IconHitResult;
 }

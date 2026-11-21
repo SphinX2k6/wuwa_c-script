@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.Define
 {
-	// Token: 0x020059C1 RID: 22977
+	// Token: 0x0200499A RID: 18842
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class NodeTypeDefine
 	{
-		// Token: 0x0603A3E5 RID: 238565 RVA: 0x00DD79F0 File Offset: 0x00DD5BF0
+		// Token: 0x0602F30C RID: 193292 RVA: 0x00D26EC8 File Offset: 0x00D250C8
 		private static ChildQuestNodeBase CreateChildQuestBtNode(int nodeId, EChildQuest type)
 		{
 			ChildQuestNodeBase result;
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.Define
 			return result;
 		}
 
-		// Token: 0x0603A3E6 RID: 238566 RVA: 0x00DD7DF4 File Offset: 0x00DD5FF4
+		// Token: 0x0602F30D RID: 193293 RVA: 0x00D272CC File Offset: 0x00D254CC
 		public static BehaviorNodeBase NewNodeObj(IBtNode nodeConfig)
 		{
 			if (nodeConfig == null)

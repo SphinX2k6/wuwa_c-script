@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012F2 RID: 4850
+	// Token: 0x02001442 RID: 5186
 	public class IWaveConfig
 	{
-		// Token: 0x06006EAE RID: 28334 RVA: 0x0010B599 File Offset: 0x00109799
-		[NullableContext(1)]
+		// Token: 0x0600754E RID: 30030 RVA: 0x00119B04 File Offset: 0x00117D04
 		public static IWaveConfig Create(IWaveConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700229D RID: 8861
-		// (get) Token: 0x06006EAF RID: 28335 RVA: 0x0010B5B8 File Offset: 0x001097B8
+		// Token: 0x1700246C RID: 9324
+		// (get) Token: 0x0600754F RID: 30031 RVA: 0x00119B23 File Offset: 0x00117D23
 		public virtual int Id
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F70 RID: 16240
+		// Token: 0x040042EC RID: 17132
 		private IWaveConfig Instance;
 	}
 }

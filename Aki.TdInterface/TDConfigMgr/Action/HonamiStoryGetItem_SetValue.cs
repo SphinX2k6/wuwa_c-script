@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200174A RID: 5962
+	// Token: 0x020018CB RID: 6347
 	public class HonamiStoryGetItem_SetValue
 	{
-		// Token: 0x04005064 RID: 20580
+		// Token: 0x0400549A RID: 21658
 		public int ActivityId;
 
-		// Token: 0x04005065 RID: 20581
-		[Nullable(1)]
+		// Token: 0x0400549B RID: 21659
 		public List<int> ItemId;
 	}
 }

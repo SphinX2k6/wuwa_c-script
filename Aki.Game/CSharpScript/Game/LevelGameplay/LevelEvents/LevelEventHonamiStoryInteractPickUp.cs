@@ -5,15 +5,15 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B38 RID: 27448
+	// Token: 0x02005CB0 RID: 23728
 	public class LevelEventHonamiStoryInteractPickUp : LevelEventBase
 	{
-		// Token: 0x06044140 RID: 278848 RVA: 0x010BD299 File Offset: 0x010BB499
+		// Token: 0x0603A292 RID: 238226 RVA: 0x01066B25 File Offset: 0x01064D25
 		public LevelEventHonamiStoryInteractPickUp(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044141 RID: 278849 RVA: 0x010BD2A4 File Offset: 0x010BB4A4
+		// Token: 0x0603A293 RID: 238227 RVA: 0x01066B30 File Offset: 0x01064D30
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

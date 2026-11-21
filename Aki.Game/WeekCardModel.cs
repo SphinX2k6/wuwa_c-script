@@ -5,13 +5,13 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020023AB RID: 9131
+// Token: 0x02001890 RID: 6288
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class WeekCardModel : ModelBase
 {
-	// Token: 0x06012416 RID: 74774 RVA: 0x0047ED08 File Offset: 0x0047CF08
+	// Token: 0x0600F8C8 RID: 63688 RVA: 0x0048C1DC File Offset: 0x0048A3DC
 	public void SetWeekCardInfos(IEnumerable<WeekCardInfo> infos)
 	{
 		foreach (WeekCardInfo weekCardInfo in infos)
@@ -21,20 +21,20 @@ public class WeekCardModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.ReceiveWeekCardDataEvent);
 	}
 
-	// Token: 0x06012417 RID: 74775 RVA: 0x0047ED70 File Offset: 0x0047CF70
+	// Token: 0x0600F8C9 RID: 63689 RVA: 0x0048C244 File Offset: 0x0048A444
 	[NullableContext(2)]
 	public WeekCardData GetById(int weekCardId)
 	{
 		return this.Cards.GetValueOrDefault(weekCardId);
 	}
 
-	// Token: 0x06012418 RID: 74776 RVA: 0x0047ED7E File Offset: 0x0047CF7E
+	// Token: 0x0600F8CA RID: 63690 RVA: 0x0048C252 File Offset: 0x0048A452
 	public IReadOnlyDictionary<int, WeekCardData> GetAll()
 	{
 		return this.Cards;
 	}
 
-	// Token: 0x06012419 RID: 74777 RVA: 0x0047ED88 File Offset: 0x0047CF88
+	// Token: 0x0600F8CB RID: 63691 RVA: 0x0048C25C File Offset: 0x0048A45C
 	public bool AnyOpen()
 	{
 		using (Dictionary<int, WeekCardData>.ValueCollection.Enumerator enumerator = this.Cards.Values.GetEnumerator())
@@ -50,7 +50,7 @@ public class WeekCardModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0601241A RID: 74778 RVA: 0x0047EDE8 File Offset: 0x0047CFE8
+	// Token: 0x0600F8CC RID: 63692 RVA: 0x0048C2BC File Offset: 0x0048A4BC
 	public EWeekCardKind Classify(int weekCardId)
 	{
 		WeekCard? weekCard;
@@ -61,7 +61,7 @@ public class WeekCardModel : ModelBase
 		return EWeekCardKind.NewPlayer;
 	}
 
-	// Token: 0x0601241B RID: 74779 RVA: 0x0047EE38 File Offset: 0x0047D038
+	// Token: 0x0600F8CD RID: 63693 RVA: 0x0048C30C File Offset: 0x0048A50C
 	[NullableContext(2)]
 	public WeekCardData GetDefaultByKind(EWeekCardKind kind)
 	{
@@ -75,7 +75,7 @@ public class WeekCardModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0601241C RID: 74780 RVA: 0x0047EEA0 File Offset: 0x0047D0A0
+	// Token: 0x0600F8CE RID: 63694 RVA: 0x0048C374 File Offset: 0x0048A574
 	public WeekCardViewModel GetViewModel(EWeekCardKind kind)
 	{
 		WeekCardViewModel weekCardViewModel;
@@ -87,8 +87,8 @@ public class WeekCardModel : ModelBase
 		return weekCardViewModel;
 	}
 
-	// Token: 0x170017B9 RID: 6073
-	// (get) Token: 0x0601241D RID: 74781 RVA: 0x0047EED2 File Offset: 0x0047D0D2
+	// Token: 0x170017F3 RID: 6131
+	// (get) Token: 0x0600F8CF RID: 63695 RVA: 0x0048C3A6 File Offset: 0x0048A5A6
 	public static WeekCardModel Instance
 	{
 		get
@@ -97,7 +97,7 @@ public class WeekCardModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601241E RID: 74782 RVA: 0x0047EED9 File Offset: 0x0047D0D9
+	// Token: 0x0600F8D0 RID: 63696 RVA: 0x0048C3AD File Offset: 0x0048A5AD
 	public static WeekCardModel GetOrCreateInstance()
 	{
 		if (WeekCardModel._Instance == null)
@@ -107,7 +107,7 @@ public class WeekCardModel : ModelBase
 		return WeekCardModel._Instance;
 	}
 
-	// Token: 0x0601241F RID: 74783 RVA: 0x0047EEED File Offset: 0x0047D0ED
+	// Token: 0x0600F8D1 RID: 63697 RVA: 0x0048C3C1 File Offset: 0x0048A5C1
 	public static bool CreateInstance()
 	{
 		if (WeekCardModel._Instance != null)
@@ -118,30 +118,30 @@ public class WeekCardModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06012420 RID: 74784 RVA: 0x0047EF03 File Offset: 0x0047D103
+	// Token: 0x0600F8D2 RID: 63698 RVA: 0x0048C3D7 File Offset: 0x0048A5D7
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06012421 RID: 74785 RVA: 0x0047EF05 File Offset: 0x0047D105
+	// Token: 0x0600F8D3 RID: 63699 RVA: 0x0048C3D9 File Offset: 0x0048A5D9
 	public static void ResetStaticDefaultValue()
 	{
 		WeekCardModel._Instance = null;
 	}
 
-	// Token: 0x06012422 RID: 74786 RVA: 0x0047EF0D File Offset: 0x0047D10D
+	// Token: 0x0600F8D4 RID: 63700 RVA: 0x0048C3E1 File Offset: 0x0048A5E1
 	static WeekCardModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WeekCardModel.CreateStaticDefaultValue), new Action(WeekCardModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040089E4 RID: 35300
+	// Token: 0x04008B2B RID: 35627
 	private readonly Dictionary<int, WeekCardData> Cards = new Dictionary<int, WeekCardData>();
 
-	// Token: 0x040089E5 RID: 35301
+	// Token: 0x04008B2C RID: 35628
 	private readonly Dictionary<EWeekCardKind, WeekCardViewModel> ViewModels = new Dictionary<EWeekCardKind, WeekCardViewModel>();
 
-	// Token: 0x040089E6 RID: 35302
+	// Token: 0x04008B2D RID: 35629
 	[Nullable(2)]
 	private static WeekCardModel _Instance;
 }

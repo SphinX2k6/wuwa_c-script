@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DB0 RID: 23984
+	// Token: 0x02004D94 RID: 19860
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoleStateView : BattleVisibleChildView
 	{
-		// Token: 0x0603CE9D RID: 249501 RVA: 0x00EA1EF4 File Offset: 0x00EA00F4
+		// Token: 0x06031E14 RID: 204308 RVA: 0x00DF2DC8 File Offset: 0x00DF0FC8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CE9E RID: 249502 RVA: 0x00EA2068 File Offset: 0x00EA0268
+		// Token: 0x06031E15 RID: 204309 RVA: 0x00DF2F3C File Offset: 0x00DF113C
 		public override void Initialize(object param = null)
 		{
 			base.Initialize(param);
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603CE9F RID: 249503 RVA: 0x00EA20EC File Offset: 0x00EA02EC
+		// Token: 0x06031E16 RID: 204310 RVA: 0x00DF2FC0 File Offset: 0x00DF11C0
 		protected override void OnBeforeDestroy()
 		{
 			this.Refresh(null);
@@ -68,14 +68,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEA0 RID: 249504 RVA: 0x00EA211C File Offset: 0x00EA031C
+		// Token: 0x06031E17 RID: 204311 RVA: 0x00DF2FF0 File Offset: 0x00DF11F0
 		public override void Reset()
 		{
 			this.RemoveEvents();
 			base.Reset();
 		}
 
-		// Token: 0x0603CEA1 RID: 249505 RVA: 0x00EA212C File Offset: 0x00EA032C
+		// Token: 0x06031E18 RID: 204312 RVA: 0x00DF3000 File Offset: 0x00DF1200
 		public void Refresh(BattleUiRoleData roleData)
 		{
 			if (roleData == null)
@@ -106,20 +106,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshRoleState();
 		}
 
-		// Token: 0x0603CEA2 RID: 249506 RVA: 0x00EA21C6 File Offset: 0x00EA03C6
+		// Token: 0x06031E19 RID: 204313 RVA: 0x00DF309A File Offset: 0x00DF129A
 		public bool IsValid()
 		{
 			BattleUiRoleData roleData = this.RoleData;
 			return ((roleData != null) ? roleData.EntityHandle : null) != null;
 		}
 
-		// Token: 0x0603CEA3 RID: 249507 RVA: 0x00EA21DD File Offset: 0x00EA03DD
+		// Token: 0x06031E1A RID: 204314 RVA: 0x00DF30B1 File Offset: 0x00DF12B1
 		public int? GetEntityId()
 		{
 			return this.EntityId;
 		}
 
-		// Token: 0x0603CEA4 RID: 249508 RVA: 0x00EA21E8 File Offset: 0x00EA03E8
+		// Token: 0x06031E1B RID: 204315 RVA: 0x00DF30BC File Offset: 0x00DF12BC
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add<int>(EEventName.BattleUiHealthChanged, new Action<int>(this.OnHealthChanged));
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add<bool>(EEventName.BattleUiMotorcycleStateChanged, new Action<bool>(this.OnMotorcycleStateChanged));
 		}
 
-		// Token: 0x0603CEA5 RID: 249509 RVA: 0x00EA2284 File Offset: 0x00EA0484
+		// Token: 0x06031E1C RID: 204316 RVA: 0x00DF3158 File Offset: 0x00DF1358
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiHealthChanged, new Action<int>(this.OnHealthChanged));
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.BattleUiMotorcycleStateChanged, new Action<bool>(this.OnMotorcycleStateChanged));
 		}
 
-		// Token: 0x0603CEA6 RID: 249510 RVA: 0x00EA231D File Offset: 0x00EA051D
+		// Token: 0x06031E1D RID: 204317 RVA: 0x00DF31F1 File Offset: 0x00DF13F1
 		public void Tick(float delta)
 		{
 			this.LerpBarPercent(delta);
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			motorcycleShieldItem.Tick(delta);
 		}
 
-		// Token: 0x0603CEA7 RID: 249511 RVA: 0x00EA2337 File Offset: 0x00EA0537
+		// Token: 0x06031E1E RID: 204318 RVA: 0x00DF320B File Offset: 0x00DF140B
 		private void DeactivateRoleState()
 		{
 			if (TimerSystem.Instance.Has(this.DelayTimerId))
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetVisible(1, false);
 		}
 
-		// Token: 0x0603CEA8 RID: 249512 RVA: 0x00EA2374 File Offset: 0x00EA0574
+		// Token: 0x06031E1F RID: 204319 RVA: 0x00DF3248 File Offset: 0x00DF1448
 		private void LerpBarPercent(float delta)
 		{
 			if (this.AnimTime == -1f)
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AnimTime += delta;
 		}
 
-		// Token: 0x0603CEA9 RID: 249513 RVA: 0x00EA23F0 File Offset: 0x00EA05F0
+		// Token: 0x06031E20 RID: 204320 RVA: 0x00DF32C4 File Offset: 0x00DF14C4
 		public void SetNiagaraActive(bool bActive)
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(6);
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			uiNiagara.DeactivateSystem();
 		}
 
-		// Token: 0x0603CEAA RID: 249514 RVA: 0x00EA242E File Offset: 0x00EA062E
+		// Token: 0x06031E21 RID: 204321 RVA: 0x00DF3302 File Offset: 0x00DF1502
 		public void RefreshRoleState()
 		{
 			if (!this.IsValid())
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetVisible(1, true);
 		}
 
-		// Token: 0x0603CEAB RID: 249515 RVA: 0x00EA245C File Offset: 0x00EA065C
+		// Token: 0x06031E22 RID: 204322 RVA: 0x00DF3330 File Offset: 0x00DF1530
 		private void OnShieldChanged(int entityId)
 		{
 			int? entityId2 = this.EntityId;
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshHpAndShield(true);
 		}
 
-		// Token: 0x0603CEAC RID: 249516 RVA: 0x00EA248C File Offset: 0x00EA068C
+		// Token: 0x06031E23 RID: 204323 RVA: 0x00DF3360 File Offset: 0x00DF1560
 		private void OnHealthChanged(int entityId)
 		{
 			int? entityId2 = this.EntityId;
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetNiagaraActive(true);
 		}
 
-		// Token: 0x0603CEAD RID: 249517 RVA: 0x00EA24C4 File Offset: 0x00EA06C4
+		// Token: 0x06031E24 RID: 204324 RVA: 0x00DF3398 File Offset: 0x00DF1598
 		private void OnLevelChanged(int entityId)
 		{
 			int? entityId2 = this.EntityId;
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshLevel();
 		}
 
-		// Token: 0x0603CEAE RID: 249518 RVA: 0x00EA24F3 File Offset: 0x00EA06F3
+		// Token: 0x06031E25 RID: 204325 RVA: 0x00DF33C7 File Offset: 0x00DF15C7
 		[NullableContext(1)]
 		private void OnRefreshText(string s, string s1)
 		{
@@ -254,13 +254,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshHpAndShield(false);
 		}
 
-		// Token: 0x0603CEAF RID: 249519 RVA: 0x00EA2502 File Offset: 0x00EA0702
+		// Token: 0x06031E26 RID: 204326 RVA: 0x00DF33D6 File Offset: 0x00DF15D6
 		private void OnMotorcycleStateChanged(bool b)
 		{
 			this.RefreshMotorcycleShield();
 		}
 
-		// Token: 0x0603CEB0 RID: 249520 RVA: 0x00EA250C File Offset: 0x00EA070C
+		// Token: 0x06031E27 RID: 204327 RVA: 0x00DF33E0 File Offset: 0x00DF15E0
 		public void RefreshHpAndShield(bool bPlayBarAnimation = false)
 		{
 			if (!this.IsValid())
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurrentBarPercent = num;
 		}
 
-		// Token: 0x0603CEB1 RID: 249521 RVA: 0x00EA2604 File Offset: 0x00EA0804
+		// Token: 0x06031E28 RID: 204328 RVA: 0x00DF34D8 File Offset: 0x00DF16D8
 		private void PlayBarAnimation()
 		{
 			BaseAttributeComponent attributeComponent = this.AttributeComponent;
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AnimTime = 0f;
 		}
 
-		// Token: 0x0603CEB2 RID: 249522 RVA: 0x00EA2658 File Offset: 0x00EA0858
+		// Token: 0x06031E29 RID: 204329 RVA: 0x00DF352C File Offset: 0x00DF172C
 		private void SetBarBufferPercent(float percent)
 		{
 			UUISprite sprite = base.GetSprite(4);
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sprite.SetUIActive(true);
 		}
 
-		// Token: 0x0603CEB3 RID: 249523 RVA: 0x00EA266E File Offset: 0x00EA086E
+		// Token: 0x06031E2A RID: 204330 RVA: 0x00DF3542 File Offset: 0x00DF1742
 		private void StopBarLerpAnimation()
 		{
 			base.GetSprite(4).SetUIActive(false);
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AnimTime = -1f;
 		}
 
-		// Token: 0x0603CEB4 RID: 249524 RVA: 0x00EA26A0 File Offset: 0x00EA08A0
+		// Token: 0x06031E2B RID: 204331 RVA: 0x00DF3574 File Offset: 0x00DF1774
 		private void SetHpBarPercent(float percent)
 		{
 			this.RefreshHpSpriteVisible(percent);
@@ -353,7 +353,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEB5 RID: 249525 RVA: 0x00EA26E4 File Offset: 0x00EA08E4
+		// Token: 0x06031E2C RID: 204332 RVA: 0x00DF35B8 File Offset: 0x00DF17B8
 		private void RefreshHpSpriteVisible(float percent)
 		{
 			UUISprite sprite = base.GetSprite(3);
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sprite2.SetUIActive(true);
 		}
 
-		// Token: 0x0603CEB6 RID: 249526 RVA: 0x00EA2728 File Offset: 0x00EA0928
+		// Token: 0x06031E2D RID: 204333 RVA: 0x00DF35FC File Offset: 0x00DF17FC
 		private void SetShieldBarPercent(float percent)
 		{
 			this.ShieldPercent = percent;
@@ -390,7 +390,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEB7 RID: 249527 RVA: 0x00EA27A4 File Offset: 0x00EA09A4
+		// Token: 0x06031E2E RID: 204334 RVA: 0x00DF3678 File Offset: 0x00DF1878
 		private void RefreshLevel()
 		{
 			if (!this.IsValid())
@@ -414,7 +414,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			LguiUtil.Instance.SetLocalTextNew(text, "LevelShowNew", new <>z__ReadOnlySingleElementList<object>(num));
 		}
 
-		// Token: 0x0603CEB8 RID: 249528 RVA: 0x00EA284C File Offset: 0x00EA0A4C
+		// Token: 0x06031E2F RID: 204335 RVA: 0x00DF3720 File Offset: 0x00DF1920
 		private void RefreshMotorcycleShield()
 		{
 			if (BattleUiModel.Instance.MotorcycleData.IsDriving)
@@ -436,93 +436,93 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEB9 RID: 249529 RVA: 0x00EA28DA File Offset: 0x00EA0ADA
+		// Token: 0x06031E30 RID: 204336 RVA: 0x00DF37AE File Offset: 0x00DF19AE
 		private void ExistShieldChanged()
 		{
 			this.SetShieldBarPercent(this.ShieldPercent);
 		}
 
-		// Token: 0x0401FB8B RID: 129931
+		// Token: 0x0401A648 RID: 108104
 		private const float LOW_HP_PERCENT = 0.2f;
 
-		// Token: 0x0401FB8C RID: 129932
+		// Token: 0x0401A649 RID: 108105
 		private BattleUiRoleData RoleData;
 
-		// Token: 0x0401FB8D RID: 129933
+		// Token: 0x0401A64A RID: 108106
 		private int? EntityId;
 
-		// Token: 0x0401FB8E RID: 129934
+		// Token: 0x0401A64B RID: 108107
 		private BaseAttributeComponent AttributeComponent;
 
-		// Token: 0x0401FB8F RID: 129935
+		// Token: 0x0401A64C RID: 108108
 		private CharacterShieldComponent ShieldComponent;
 
-		// Token: 0x0401FB90 RID: 129936
+		// Token: 0x0401A64D RID: 108109
 		private TimerHandle DelayTimerId;
 
-		// Token: 0x0401FB91 RID: 129937
+		// Token: 0x0401A64E RID: 108110
 		private float CurrentBarPercent = -1f;
 
-		// Token: 0x0401FB92 RID: 129938
+		// Token: 0x0401A64F RID: 108111
 		private float TargetBarPercent;
 
-		// Token: 0x0401FB93 RID: 129939
+		// Token: 0x0401A650 RID: 108112
 		private float SourceBarPercent;
 
-		// Token: 0x0401FB94 RID: 129940
+		// Token: 0x0401A651 RID: 108113
 		private float AnimTime = -1f;
 
-		// Token: 0x0401FB95 RID: 129941
+		// Token: 0x0401A652 RID: 108114
 		private int BufferAnimLengthInternal;
 
-		// Token: 0x0401FB96 RID: 129942
+		// Token: 0x0401A653 RID: 108115
 		private ULGUICanvas HpMask;
 
-		// Token: 0x0401FB97 RID: 129943
+		// Token: 0x0401A654 RID: 108116
 		private FMargin UeMargin;
 
-		// Token: 0x0401FB98 RID: 129944
+		// Token: 0x0401A655 RID: 108117
 		private float HpTextWidth;
 
-		// Token: 0x0401FB99 RID: 129945
+		// Token: 0x0401A656 RID: 108118
 		private LevelSequencePlayer ShieldSequence;
 
-		// Token: 0x0401FB9A RID: 129946
+		// Token: 0x0401A657 RID: 108119
 		private bool ShieldLastState;
 
-		// Token: 0x0401FB9B RID: 129947
+		// Token: 0x0401A658 RID: 108120
 		private float ShieldPercent;
 
-		// Token: 0x0401FB9C RID: 129948
+		// Token: 0x0401A659 RID: 108121
 		private MotorcycleShieldItem MotorcycleShieldItem;
 
-		// Token: 0x0200C090 RID: 49296
+		// Token: 0x0200AA99 RID: 43673
 		[NullableContext(0)]
 		private enum EChildComponentType
 		{
-			// Token: 0x0403A1B9 RID: 238009
+			// Token: 0x04034B8B RID: 215947
 			RoleHpBar,
-			// Token: 0x0403A1BA RID: 238010
+			// Token: 0x04034B8C RID: 215948
 			RoleHpNumber,
-			// Token: 0x0403A1BB RID: 238011
+			// Token: 0x04034B8D RID: 215949
 			RoleLvNumber,
-			// Token: 0x0403A1BC RID: 238012
+			// Token: 0x04034B8E RID: 215950
 			HpLowBarSprite,
-			// Token: 0x0403A1BD RID: 238013
+			// Token: 0x04034B8F RID: 215951
 			HpBufferSprite,
-			// Token: 0x0403A1BE RID: 238014
+			// Token: 0x04034B90 RID: 215952
 			ShieldFrameSprite,
-			// Token: 0x0403A1BF RID: 238015
+			// Token: 0x04034B91 RID: 215953
 			Niagara,
-			// Token: 0x0403A1C0 RID: 238016
+			// Token: 0x04034B92 RID: 215954
 			RoleHpNumber2,
-			// Token: 0x0403A1C1 RID: 238017
+			// Token: 0x04034B93 RID: 215955
 			RoleHpMask,
-			// Token: 0x0403A1C2 RID: 238018
+			// Token: 0x04034B94 RID: 215956
 			HpAdjustNode,
-			// Token: 0x0403A1C3 RID: 238019
+			// Token: 0x04034B95 RID: 215957
 			HpLockSprite,
-			// Token: 0x0403A1C4 RID: 238020
+			// Token: 0x04034B96 RID: 215958
 			HpAdditionNode
 		}
 	}

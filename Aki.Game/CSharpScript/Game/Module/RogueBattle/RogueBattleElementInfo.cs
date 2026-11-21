@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EC0 RID: 20160
+	// Token: 0x02003E89 RID: 16009
 	public class RogueBattleElementInfo : IRogueBattleElementInfo
 	{
-		// Token: 0x17007EE4 RID: 32484
-		// (get) Token: 0x06033C56 RID: 212054 RVA: 0x00C20E38 File Offset: 0x00C1F038
-		// (set) Token: 0x06033C57 RID: 212055 RVA: 0x00C20E40 File Offset: 0x00C1F040
+		// Token: 0x17005294 RID: 21140
+		// (get) Token: 0x06028AC1 RID: 166593 RVA: 0x00B6A350 File Offset: 0x00B68550
+		// (set) Token: 0x06028AC2 RID: 166594 RVA: 0x00B6A358 File Offset: 0x00B68558
 		public int ElementId { get; set; }
 
-		// Token: 0x17007EE5 RID: 32485
-		// (get) Token: 0x06033C58 RID: 212056 RVA: 0x00C20E49 File Offset: 0x00C1F049
-		// (set) Token: 0x06033C59 RID: 212057 RVA: 0x00C20E51 File Offset: 0x00C1F051
+		// Token: 0x17005295 RID: 21141
+		// (get) Token: 0x06028AC3 RID: 166595 RVA: 0x00B6A361 File Offset: 0x00B68561
+		// (set) Token: 0x06028AC4 RID: 166596 RVA: 0x00B6A369 File Offset: 0x00B68569
 		public int Count { get; set; }
 
-		// Token: 0x17007EE6 RID: 32486
-		// (get) Token: 0x06033C5A RID: 212058 RVA: 0x00C20E5A File Offset: 0x00C1F05A
-		// (set) Token: 0x06033C5B RID: 212059 RVA: 0x00C20E62 File Offset: 0x00C1F062
+		// Token: 0x17005296 RID: 21142
+		// (get) Token: 0x06028AC5 RID: 166597 RVA: 0x00B6A372 File Offset: 0x00B68572
+		// (set) Token: 0x06028AC6 RID: 166598 RVA: 0x00B6A37A File Offset: 0x00B6857A
 		public bool IsPreview { get; set; }
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060F2 RID: 24818
+	// Token: 0x02006754 RID: 26452
 	public struct IActorRefWithActionContext : IFlatbufferObject
 	{
-		// Token: 0x1700B6EC RID: 46828
-		// (get) Token: 0x0602A65C RID: 173660 RVA: 0x005D7755 File Offset: 0x005D5955
+		// Token: 0x1700C057 RID: 49239
+		// (get) Token: 0x0602CD3D RID: 183613 RVA: 0x006216FD File Offset: 0x0061F8FD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A65D RID: 173661 RVA: 0x005D7762 File Offset: 0x005D5962
+		// Token: 0x0602CD3E RID: 183614 RVA: 0x0062170A File Offset: 0x0061F90A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602A65E RID: 173662 RVA: 0x005D776C File Offset: 0x005D596C
+		// Token: 0x0602CD3F RID: 183615 RVA: 0x00621714 File Offset: 0x0061F914
 		public static IActorRefWithActionContext GetRootAsIActorRefWithActionContext(ByteBuffer _bb)
 		{
 			return IActorRefWithActionContext.GetRootAsIActorRefWithActionContext(_bb, default(IActorRefWithActionContext));
 		}
 
-		// Token: 0x0602A65F RID: 173663 RVA: 0x005D7788 File Offset: 0x005D5988
+		// Token: 0x0602CD40 RID: 183616 RVA: 0x00621730 File Offset: 0x0061F930
 		public static IActorRefWithActionContext GetRootAsIActorRefWithActionContext(ByteBuffer _bb, IActorRefWithActionContext obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602A660 RID: 173664 RVA: 0x005D77A5 File Offset: 0x005D59A5
+		// Token: 0x0602CD41 RID: 183617 RVA: 0x0062174D File Offset: 0x0061F94D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602A661 RID: 173665 RVA: 0x005D77B4 File Offset: 0x005D59B4
+		// Token: 0x0602CD42 RID: 183618 RVA: 0x0062175C File Offset: 0x0061F95C
 		public IActorRefWithActionContext __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B6ED RID: 46829
-		// (get) Token: 0x0602A662 RID: 173666 RVA: 0x005D77C4 File Offset: 0x005D59C4
+		// Token: 0x1700C058 RID: 49240
+		// (get) Token: 0x0602CD43 RID: 183619 RVA: 0x0062176C File Offset: 0x0061F96C
 		public IActionInfo? ContextAction
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B6EE RID: 46830
-		// (get) Token: 0x0602A663 RID: 173667 RVA: 0x005D7824 File Offset: 0x005D5A24
+		// Token: 0x1700C059 RID: 49241
+		// (get) Token: 0x0602CD44 RID: 183620 RVA: 0x006217CC File Offset: 0x0061F9CC
 		public IActorRef? ActorRef
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A664 RID: 173668 RVA: 0x005D7881 File Offset: 0x005D5A81
+		// Token: 0x0602CD45 RID: 183621 RVA: 0x00621829 File Offset: 0x0061FA29
 		public static Offset<IActorRefWithActionContext> CreateIActorRefWithActionContext(FlatBufferBuilder builder, Offset<IActionInfo> ContextActionOffset = default(Offset<IActionInfo>), Offset<IActorRef> ActorRefOffset = default(Offset<IActorRef>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActorRefWithActionContext.EndIActorRefWithActionContext(builder);
 		}
 
-		// Token: 0x0602A665 RID: 173669 RVA: 0x005D789E File Offset: 0x005D5A9E
+		// Token: 0x0602CD46 RID: 183622 RVA: 0x00621846 File Offset: 0x0061FA46
 		public static void StartIActorRefWithActionContext(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602A666 RID: 173670 RVA: 0x005D78A7 File Offset: 0x005D5AA7
+		// Token: 0x0602CD47 RID: 183623 RVA: 0x0062184F File Offset: 0x0061FA4F
 		public static void AddContextAction(FlatBufferBuilder builder, Offset<IActionInfo> contextActionOffset)
 		{
 			builder.AddOffset(0, contextActionOffset.Value, 0);
 		}
 
-		// Token: 0x0602A667 RID: 173671 RVA: 0x005D78B7 File Offset: 0x005D5AB7
+		// Token: 0x0602CD48 RID: 183624 RVA: 0x0062185F File Offset: 0x0061FA5F
 		public static void AddActorRef(FlatBufferBuilder builder, Offset<IActorRef> actorRefOffset)
 		{
 			builder.AddOffset(1, actorRefOffset.Value, 0);
 		}
 
-		// Token: 0x0602A668 RID: 173672 RVA: 0x005D78C7 File Offset: 0x005D5AC7
+		// Token: 0x0602CD49 RID: 183625 RVA: 0x0062186F File Offset: 0x0061FA6F
 		public static Offset<IActorRefWithActionContext> EndIActorRefWithActionContext(FlatBufferBuilder builder)
 		{
 			return new Offset<IActorRefWithActionContext>(builder.EndTable());
 		}
 
-		// Token: 0x0602A669 RID: 173673 RVA: 0x005D78D4 File Offset: 0x005D5AD4
+		// Token: 0x0602CD4A RID: 183626 RVA: 0x0062187C File Offset: 0x0061FA7C
 		public IActorRefWithActionContextT UnPack()
 		{
 			IActorRefWithActionContextT actorRefWithActionContextT = new IActorRefWithActionContextT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return actorRefWithActionContextT;
 		}
 
-		// Token: 0x0602A66A RID: 173674 RVA: 0x005D78F0 File Offset: 0x005D5AF0
+		// Token: 0x0602CD4B RID: 183627 RVA: 0x00621898 File Offset: 0x0061FA98
 		public void UnPackTo(IActorRefWithActionContextT _o)
 		{
 			_o.ContextAction = ((this.ContextAction != null) ? this.ContextAction.Value.UnPack() : null);
 			_o.ActorRef = ((this.ActorRef != null) ? this.ActorRef.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602A66B RID: 173675 RVA: 0x005D795C File Offset: 0x005D5B5C
+		// Token: 0x0602CD4C RID: 183628 RVA: 0x00621904 File Offset: 0x0061FB04
 		public static Offset<IActorRefWithActionContext> Pack(FlatBufferBuilder builder, IActorRefWithActionContextT _o)
 		{
 			if (_o == null)
@@ -138,7 +138,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActorRefWithActionContext.CreateIActorRefWithActionContext(builder, contextActionOffset, actorRefOffset);
 		}
 
-		// Token: 0x040104B4 RID: 66740
+		// Token: 0x040112B8 RID: 70328
 		private Table __p;
 	}
 }

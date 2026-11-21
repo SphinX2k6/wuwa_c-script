@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020024BD RID: 9405
+	// Token: 0x02002762 RID: 10082
 	public static class EWaitInteractNpcMontageWaitTypeExtensions
 	{
-		// Token: 0x0600CBD1 RID: 52177 RVA: 0x001E0280 File Offset: 0x001DE480
+		// Token: 0x0600D893 RID: 55443 RVA: 0x001FA514 File Offset: 0x001F8714
 		public static string ToEnumString(this EWaitInteractNpcMontageWaitType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CBD2 RID: 52178 RVA: 0x001E02B8 File Offset: 0x001DE4B8
+		// Token: 0x0600D894 RID: 55444 RVA: 0x001FA54C File Offset: 0x001F874C
 		public static EWaitInteractNpcMontageWaitType FromString(string name)
 		{
 			EWaitInteractNpcMontageWaitType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CBD3 RID: 52179 RVA: 0x001E02E1 File Offset: 0x001DE4E1
+		// Token: 0x0600D895 RID: 55445 RVA: 0x001FA575 File Offset: 0x001F8775
 		public static bool TryFromString(string name, out EWaitInteractNpcMontageWaitType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CBD4 RID: 52180 RVA: 0x001E031A File Offset: 0x001DE51A
+		// Token: 0x0600D896 RID: 55446 RVA: 0x001FA5AE File Offset: 0x001F87AE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CBD5 RID: 52181 RVA: 0x001E0332 File Offset: 0x001DE532
+		// Token: 0x0600D897 RID: 55447 RVA: 0x001FA5C6 File Offset: 0x001F87C6
 		public static EWaitInteractNpcMontageWaitType[] GetValues()
 		{
 			return new EWaitInteractNpcMontageWaitType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CBD6 RID: 52182 RVA: 0x001E033E File Offset: 0x001DE53E
+		// Token: 0x0600D898 RID: 55448 RVA: 0x001FA5D2 File Offset: 0x001F87D2
 		public static string[] GetNames()
 		{
 			return new string[]

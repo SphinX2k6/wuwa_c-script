@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001188 RID: 4488
+	// Token: 0x020011C2 RID: 4546
 	public sealed class SceneStepConditionProgress : IMessage<SceneStepConditionProgress>, IMessage, IEquatable<SceneStepConditionProgress>, IDeepCloneable<SceneStepConditionProgress>, IBufferMessage
 	{
-		// Token: 0x06017EC2 RID: 97986 RVA: 0x003797D2 File Offset: 0x003779D2
+		// Token: 0x06018463 RID: 99427 RVA: 0x00388B16 File Offset: 0x00386D16
 		[NullableContext(1)]
 		public static SceneStepConditionProgress Create()
 		{
 			return new SceneStepConditionProgress();
 		}
 
-		// Token: 0x17005060 RID: 20576
-		// (get) Token: 0x06017EC3 RID: 97987 RVA: 0x003797D9 File Offset: 0x003779D9
+		// Token: 0x170051CC RID: 20940
+		// (get) Token: 0x06018464 RID: 99428 RVA: 0x00388B1D File Offset: 0x00386D1D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<SceneStepConditionProgress> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005061 RID: 20577
-		// (get) Token: 0x06017EC4 RID: 97988 RVA: 0x003797E0 File Offset: 0x003779E0
+		// Token: 0x170051CD RID: 20941
+		// (get) Token: 0x06018465 RID: 99429 RVA: 0x00388B24 File Offset: 0x00386D24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005062 RID: 20578
-		// (get) Token: 0x06017EC5 RID: 97989 RVA: 0x003797E3 File Offset: 0x003779E3
+		// Token: 0x170051CE RID: 20942
+		// (get) Token: 0x06018466 RID: 99430 RVA: 0x00388B27 File Offset: 0x00386D27
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017EC6 RID: 97990 RVA: 0x003797EA File Offset: 0x003779EA
+		// Token: 0x06018467 RID: 99431 RVA: 0x00388B2E File Offset: 0x00386D2E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneStepConditionProgress()
 		{
 		}
 
-		// Token: 0x06017EC7 RID: 97991 RVA: 0x003797F2 File Offset: 0x003779F2
+		// Token: 0x06018468 RID: 99432 RVA: 0x00388B36 File Offset: 0x00386D36
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneStepConditionProgress(SceneStepConditionProgress other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06017EC8 RID: 97992 RVA: 0x00379823 File Offset: 0x00377A23
+		// Token: 0x06018469 RID: 99433 RVA: 0x00388B67 File Offset: 0x00386D67
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneStepConditionProgress Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new SceneStepConditionProgress(this);
 		}
 
-		// Token: 0x17005063 RID: 20579
-		// (get) Token: 0x06017EC9 RID: 97993 RVA: 0x0037982B File Offset: 0x00377A2B
-		// (set) Token: 0x06017ECA RID: 97994 RVA: 0x00379833 File Offset: 0x00377A33
+		// Token: 0x170051CF RID: 20943
+		// (get) Token: 0x0601846A RID: 99434 RVA: 0x00388B6F File Offset: 0x00386D6F
+		// (set) Token: 0x0601846B RID: 99435 RVA: 0x00388B77 File Offset: 0x00386D77
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ConditionId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005064 RID: 20580
-		// (get) Token: 0x06017ECB RID: 97995 RVA: 0x0037983C File Offset: 0x00377A3C
-		// (set) Token: 0x06017ECC RID: 97996 RVA: 0x00379844 File Offset: 0x00377A44
+		// Token: 0x170051D0 RID: 20944
+		// (get) Token: 0x0601846C RID: 99436 RVA: 0x00388B80 File Offset: 0x00386D80
+		// (set) Token: 0x0601846D RID: 99437 RVA: 0x00388B88 File Offset: 0x00386D88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ProgressNum
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017ECD RID: 97997 RVA: 0x0037984D File Offset: 0x00377A4D
+		// Token: 0x0601846E RID: 99438 RVA: 0x00388B91 File Offset: 0x00386D91
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SceneStepConditionProgress);
 		}
 
-		// Token: 0x06017ECE RID: 97998 RVA: 0x0037985B File Offset: 0x00377A5B
+		// Token: 0x0601846F RID: 99439 RVA: 0x00388B9F File Offset: 0x00386D9F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SceneStepConditionProgress other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ConditionId == other.ConditionId && this.ProgressNum == other.ProgressNum && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06017ECF RID: 97999 RVA: 0x0037989C File Offset: 0x00377A9C
+		// Token: 0x06018470 RID: 99440 RVA: 0x00388BE0 File Offset: 0x00386DE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017ED0 RID: 98000 RVA: 0x003798F4 File Offset: 0x00377AF4
+		// Token: 0x06018471 RID: 99441 RVA: 0x00388C38 File Offset: 0x00386E38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06017ED1 RID: 98001 RVA: 0x00379901 File Offset: 0x00377B01
+		// Token: 0x06018472 RID: 99442 RVA: 0x00388C45 File Offset: 0x00386E45
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06017ED2 RID: 98002 RVA: 0x0037990C File Offset: 0x00377B0C
+		// Token: 0x06018473 RID: 99443 RVA: 0x00388C50 File Offset: 0x00386E50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017ED3 RID: 98003 RVA: 0x00379964 File Offset: 0x00377B64
+		// Token: 0x06018474 RID: 99444 RVA: 0x00388CA8 File Offset: 0x00386EA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017ED4 RID: 98004 RVA: 0x003799BC File Offset: 0x00377BBC
+		// Token: 0x06018475 RID: 99445 RVA: 0x00388D00 File Offset: 0x00386F00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SceneStepConditionProgress other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06017ED5 RID: 98005 RVA: 0x00379A0C File Offset: 0x00377C0C
+		// Token: 0x06018476 RID: 99446 RVA: 0x00388D50 File Offset: 0x00386F50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06017ED6 RID: 98006 RVA: 0x00379A18 File Offset: 0x00377C18
+		// Token: 0x06018477 RID: 99447 RVA: 0x00388D5C File Offset: 0x00386F5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -265,22 +265,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008DBC RID: 36284
+		// Token: 0x0400904F RID: 36943
 		private static readonly MessageParser<SceneStepConditionProgress> _parser = new MessageParser<SceneStepConditionProgress>(() => new SceneStepConditionProgress());
 
-		// Token: 0x04008DBD RID: 36285
+		// Token: 0x04009050 RID: 36944
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008DBE RID: 36286
+		// Token: 0x04009051 RID: 36945
 		public const int ConditionIdFieldNumber = 1;
 
-		// Token: 0x04008DBF RID: 36287
+		// Token: 0x04009052 RID: 36946
 		private int conditionId_;
 
-		// Token: 0x04008DC0 RID: 36288
+		// Token: 0x04009053 RID: 36947
 		public const int ProgressNumFieldNumber = 2;
 
-		// Token: 0x04008DC1 RID: 36289
+		// Token: 0x04009054 RID: 36948
 		private int progressNum_;
 	}
 }

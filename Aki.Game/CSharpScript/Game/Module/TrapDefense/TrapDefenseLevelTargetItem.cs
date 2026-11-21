@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AB4 RID: 19124
+	// Token: 0x02003A5C RID: 14940
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseLevelTargetItem : GridProxyAbstract<ITrapDefenseLevelTargetItemData>
 	{
-		// Token: 0x060318D3 RID: 202963 RVA: 0x00B7D8D8 File Offset: 0x00B7BAD8
+		// Token: 0x06026663 RID: 157283 RVA: 0x00AC188C File Offset: 0x00ABFA8C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060318D4 RID: 202964 RVA: 0x00B7D984 File Offset: 0x00B7BB84
+		// Token: 0x06026664 RID: 157284 RVA: 0x00AC1938 File Offset: 0x00ABFB38
 		public override void Refresh(ITrapDefenseLevelTargetItemData data, bool isSelected, int gridIndex)
 		{
 			this.ItemData = data;
@@ -56,10 +56,10 @@ namespace CSharpScript.Game.Module.TrapDefense
 			item.SetUIActive(data.IsFinish);
 		}
 
-		// Token: 0x0401A7AB RID: 108459
+		// Token: 0x040150FD RID: 86269
 		public ITrapDefenseLevelTargetItemData ItemData;
 
-		// Token: 0x0401A7AC RID: 108460
+		// Token: 0x040150FE RID: 86270
 		[Nullable(new byte[]
 		{
 			2,
@@ -67,20 +67,20 @@ namespace CSharpScript.Game.Module.TrapDefense
 		})]
 		public Action<ITrapDefenseLevelTargetItemData> ClickCallBack;
 
-		// Token: 0x0200AC18 RID: 44056
+		// Token: 0x02009638 RID: 38456
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040344AF RID: 214191
+			// Token: 0x0402EE60 RID: 192096
 			public const int TextStarNum = 0;
 
-			// Token: 0x040344B0 RID: 214192
+			// Token: 0x0402EE61 RID: 192097
 			public const int TextureIcon = 1;
 
-			// Token: 0x040344B1 RID: 214193
+			// Token: 0x0402EE62 RID: 192098
 			public const int TextTargetDesc = 2;
 
-			// Token: 0x040344B2 RID: 214194
+			// Token: 0x0402EE63 RID: 192099
 			public const int ItemFinish = 3;
 		}
 	}

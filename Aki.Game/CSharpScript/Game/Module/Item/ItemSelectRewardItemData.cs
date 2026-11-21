@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Item
 {
-	// Token: 0x0200581F RID: 22559
+	// Token: 0x020047F6 RID: 18422
 	internal class ItemSelectRewardItemData
 	{
-		// Token: 0x0401DFA5 RID: 122789
+		// Token: 0x04018A3C RID: 100924
 		public int Index;
 
-		// Token: 0x0401DFA6 RID: 122790
+		// Token: 0x04018A3D RID: 100925
 		public int ItemId;
 
-		// Token: 0x0401DFA7 RID: 122791
+		// Token: 0x04018A3E RID: 100926
 		public bool SelectState;
 
-		// Token: 0x0401DFA8 RID: 122792
+		// Token: 0x04018A3F RID: 100927
 		[Nullable(2)]
 		public ResonantChainOptionLimitInfo LimitInfo;
 
-		// Token: 0x0401DFA9 RID: 122793
+		// Token: 0x04018A40 RID: 100928
 		[Nullable(1)]
 		public Action<int> OnClickToggleCallBack = delegate(int _)
 		{

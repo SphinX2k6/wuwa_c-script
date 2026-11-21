@@ -6,80 +6,80 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042F2 RID: 17138
+	// Token: 0x0200333A RID: 13114
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/SBornTransform.SBornTransform")]
 	[UnrealStructLayout(40, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 40)]
 	public class SBornTransform : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C42A RID: 181290 RVA: 0x00A1B9C4 File Offset: 0x00A19BC4
+		// Token: 0x0602123E RID: 135742 RVA: 0x0095A207 File Offset: 0x00958407
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SBornTransform._ScriptStructPtr != 0) ? SBornTransform._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SBornTransform.SBornTransform", ref SBornTransform._ScriptStructPtr);
 		}
 
-		// Token: 0x17006E65 RID: 28261
-		// (get) Token: 0x0602C42B RID: 181291 RVA: 0x00A1B9E8 File Offset: 0x00A19BE8
-		// (set) Token: 0x0602C42C RID: 181292 RVA: 0x00A1B9FC File Offset: 0x00A19BFC
+		// Token: 0x170042CC RID: 17100
+		// (get) Token: 0x0602123F RID: 135743 RVA: 0x0095A22B File Offset: 0x0095842B
+		// (set) Token: 0x06021240 RID: 135744 RVA: 0x0095A23F File Offset: 0x0095843F
 		public unsafe FVector Offset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_Offset);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_Offset) = value;
 			}
 		}
 
-		// Token: 0x17006E66 RID: 28262
-		// (get) Token: 0x0602C42D RID: 181293 RVA: 0x00A1BA11 File Offset: 0x00A19C11
-		// (set) Token: 0x0602C42E RID: 181294 RVA: 0x00A1BA25 File Offset: 0x00A19C25
+		// Token: 0x170042CD RID: 17101
+		// (get) Token: 0x06021241 RID: 135745 RVA: 0x0095A254 File Offset: 0x00958454
+		// (set) Token: 0x06021242 RID: 135746 RVA: 0x0095A268 File Offset: 0x00958468
 		public unsafe TEnumAsByte<EOffsetTargetType> OffsetTargetType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_OffsetTargetType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_OffsetTargetType) = value;
 			}
 		}
 
-		// Token: 0x17006E67 RID: 28263
-		// (get) Token: 0x0602C42F RID: 181295 RVA: 0x00A1BA3A File Offset: 0x00A19C3A
-		// (set) Token: 0x0602C430 RID: 181296 RVA: 0x00A1BA4E File Offset: 0x00A19C4E
+		// Token: 0x170042CE RID: 17102
+		// (get) Token: 0x06021243 RID: 135747 RVA: 0x0095A27D File Offset: 0x0095847D
+		// (set) Token: 0x06021244 RID: 135748 RVA: 0x0095A291 File Offset: 0x00958491
 		public unsafe TEnumAsByte<EBornRotateType> RotateType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_RotateType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_RotateType) = value;
 			}
 		}
 
-		// Token: 0x17006E68 RID: 28264
-		// (get) Token: 0x0602C431 RID: 181297 RVA: 0x00A1BA63 File Offset: 0x00A19C63
-		// (set) Token: 0x0602C432 RID: 181298 RVA: 0x00A1BA73 File Offset: 0x00A19C73
+		// Token: 0x170042CF RID: 17103
+		// (get) Token: 0x06021245 RID: 135749 RVA: 0x0095A2A6 File Offset: 0x009584A6
+		// (set) Token: 0x06021246 RID: 135750 RVA: 0x0095A2B6 File Offset: 0x009584B6
 		public unsafe int RotateCameraDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_RotateCameraDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_RotateCameraDistance) = value;
 			}
 		}
 
-		// Token: 0x17006E69 RID: 28265
-		// (get) Token: 0x0602C433 RID: 181299 RVA: 0x00A1BA84 File Offset: 0x00A19C84
-		// (set) Token: 0x0602C434 RID: 181300 RVA: 0x00A1BAC7 File Offset: 0x00A19CC7
+		// Token: 0x170042D0 RID: 17104
+		// (get) Token: 0x06021247 RID: 135751 RVA: 0x0095A2C8 File Offset: 0x009584C8
+		// (set) Token: 0x06021248 RID: 135752 RVA: 0x0095A30B File Offset: 0x0095850B
 		[Nullable(new byte[]
 		{
 			1,
@@ -98,7 +98,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<TEnumAsByte<ECommonAxis>> result;
 				if ((result = this._RotateInvalidAxis) == null)
 				{
-					result = (this._RotateInvalidAxis = new TArray<TEnumAsByte<ECommonAxis>>(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_4, base.MemoryOwner ?? this));
+					result = (this._RotateInvalidAxis = new TArray<TEnumAsByte<ECommonAxis>>(base.NativePtr + (IntPtr)SBornTransform.__PropertyOffset_RotateInvalidAxis, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -113,79 +113,65 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x0602C435 RID: 181301 RVA: 0x00A1BAD5 File Offset: 0x00A19CD5
+		// Token: 0x06021249 RID: 135753 RVA: 0x0095A319 File Offset: 0x00958519
 		public SBornTransform()
 		{
 		}
 
-		// Token: 0x0602C436 RID: 181302 RVA: 0x00A1BADD File Offset: 0x00A19CDD
-		public SBornTransform(FVector Offset, TEnumAsByte<EOffsetTargetType> OffsetTargetType, TEnumAsByte<EBornRotateType> RotateType, int RotateCameraDistance, [Nullable(new byte[]
-		{
-			1,
-			0
-		})] TArray<TEnumAsByte<ECommonAxis>> RotateInvalidAxis)
-		{
-			this.Offset = Offset;
-			this.OffsetTargetType = OffsetTargetType;
-			this.RotateType = RotateType;
-			this.RotateCameraDistance = RotateCameraDistance;
-			this.RotateInvalidAxis = RotateInvalidAxis;
-		}
-
-		// Token: 0x0602C437 RID: 181303 RVA: 0x00A1BB0A File Offset: 0x00A19D0A
+		// Token: 0x0602124A RID: 135754 RVA: 0x0095A321 File Offset: 0x00958521
 		protected override IntPtr GetUStructPtr()
 		{
 			return SBornTransform.StaticStruct();
 		}
 
-		// Token: 0x0602C438 RID: 181304 RVA: 0x00A1BB16 File Offset: 0x00A19D16
+		// Token: 0x0602124B RID: 135755 RVA: 0x0095A32D File Offset: 0x0095852D
 		[NullableContext(2)]
 		public SBornTransform(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C439 RID: 181305 RVA: 0x00A1BB20 File Offset: 0x00A19D20
+		// Token: 0x0602124C RID: 135756 RVA: 0x0095A337 File Offset: 0x00958537
 		public SBornTransform(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C43A RID: 181306 RVA: 0x00A1BB2B File Offset: 0x00A19D2B
+		// Token: 0x0602124D RID: 135757 RVA: 0x0095A342 File Offset: 0x00958542
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SBornTransform(Pointer, false, true);
 		}
 
-		// Token: 0x0602C43B RID: 181307 RVA: 0x00A1BB35 File Offset: 0x00A19D35
+		// Token: 0x0602124E RID: 135758 RVA: 0x0095A34C File Offset: 0x0095854C
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SBornTransform(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017575 RID: 95605
+		// Token: 0x040121E9 RID: 74217
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SBornTransform.SBornTransform";
 
-		// Token: 0x04017576 RID: 95606
+		// Token: 0x040121EA RID: 74218
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017577 RID: 95607
-		internal static int __PropertyOffset_0;
+		// Token: 0x040121EB RID: 74219
+		internal static int __PropertyOffset_Offset;
 
-		// Token: 0x04017578 RID: 95608
-		internal static int __PropertyOffset_1;
+		// Token: 0x040121EC RID: 74220
+		internal static int __PropertyOffset_OffsetTargetType;
 
-		// Token: 0x04017579 RID: 95609
-		internal static int __PropertyOffset_2;
+		// Token: 0x040121ED RID: 74221
+		internal static int __PropertyOffset_RotateType;
 
-		// Token: 0x0401757A RID: 95610
-		internal static int __PropertyOffset_3;
+		// Token: 0x040121EE RID: 74222
+		internal static int __PropertyOffset_RotateCameraDistance;
 
-		// Token: 0x0401757B RID: 95611
-		internal static int __PropertyOffset_4;
+		// Token: 0x040121EF RID: 74223
+		internal static int __PropertyOffset_RotateInvalidAxis;
 
-		// Token: 0x0401757C RID: 95612
+		// Token: 0x040121F0 RID: 74224
 		[Nullable(new byte[]
 		{
 			2,

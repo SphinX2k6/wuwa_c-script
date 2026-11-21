@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006225 RID: 25125
+	// Token: 0x020051A3 RID: 20899
 	public class SongLevelDetailPanel : UiPanelBase
 	{
-		// Token: 0x0603F5DE RID: 259550 RVA: 0x00F517A8 File Offset: 0x00F4F9A8
+		// Token: 0x0603429F RID: 213663 RVA: 0x00E98700 File Offset: 0x00E96900
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F5DF RID: 259551 RVA: 0x00F51830 File Offset: 0x00F4FA30
+		// Token: 0x060342A0 RID: 213664 RVA: 0x00E98788 File Offset: 0x00E96988
 		public void RefreshPanelByLevelId(int levelId)
 		{
 			RhythmShipLevel? rhythmShipLevelById = RhythmShipConfig.Instance.GetRhythmShipLevelById(levelId);

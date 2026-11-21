@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FD4 RID: 24532
+	// Token: 0x0200662C RID: 26156
 	public enum EPlayerOperationType : byte
 	{
-		// Token: 0x0400FF52 RID: 65362
+		// Token: 0x04010D1B RID: 68891
 		EnableAll,
-		// Token: 0x0400FF53 RID: 65363
+		// Token: 0x04010D1C RID: 68892
 		DisableAll,
-		// Token: 0x0400FF54 RID: 65364
+		// Token: 0x04010D1D RID: 68893
 		DisableModule
 	}
 }

@@ -10,13 +10,13 @@ using CSharpScript.Game.Utils;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x020030EA RID: 12522
+// Token: 0x02002642 RID: 9794
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseMoveCharacter
 {
-	// Token: 0x170024EF RID: 9455
-	// (get) Token: 0x0601AD5D RID: 109917 RVA: 0x0073ED6F File Offset: 0x0073CF6F
+	// Token: 0x1700267B RID: 9851
+	// (get) Token: 0x0601877B RID: 100219 RVA: 0x0076468F File Offset: 0x0076288F
 	public global::Vector CurrentToLocation
 	{
 		get
@@ -25,7 +25,7 @@ public class BaseMoveCharacter
 		}
 	}
 
-	// Token: 0x0601AD5E RID: 109918 RVA: 0x0073ED84 File Offset: 0x0073CF84
+	// Token: 0x0601877C RID: 100220 RVA: 0x007646A4 File Offset: 0x007628A4
 	public void Init(Entity entity)
 	{
 		this.Entity = entity;
@@ -43,7 +43,7 @@ public class BaseMoveCharacter
 		}
 	}
 
-	// Token: 0x0601AD5F RID: 109919 RVA: 0x0073EE5C File Offset: 0x0073D05C
+	// Token: 0x0601877D RID: 100221 RVA: 0x0076477C File Offset: 0x0076297C
 	public void UpdateMove(float deltaSeconds)
 	{
 		if (!this.IsRunning)
@@ -76,9 +76,13 @@ public class BaseMoveCharacter
 		}
 	}
 
-	// Token: 0x0601AD60 RID: 109920 RVA: 0x0073EF58 File Offset: 0x0073D158
+	// Token: 0x0601877E RID: 100222 RVA: 0x00764878 File Offset: 0x00762A78
 	private unsafe void UpdateMoveInternal(float deltaSeconds)
 	{
+		if (this.CheckEndDistanceAllPoints())
+		{
+			return;
+		}
 		bool flag = false;
 		bool flag2 = false;
 		bool flag3;
@@ -138,7 +142,36 @@ public class BaseMoveCharacter
 		}
 	}
 
-	// Token: 0x0601AD61 RID: 109921 RVA: 0x0073F0CC File Offset: 0x0073D2CC
+	// Token: 0x0601877F RID: 100223 RVA: 0x007649F8 File Offset: 0x00762BF8
+	private bool CheckEndDistanceAllPoints()
+	{
+		MoveCharacterConfig moveConfig = this.MoveConfig;
+		if (moveConfig == null || !moveConfig.EndDistanceAllPoints.GetValueOrDefault())
+		{
+			return false;
+		}
+		IList<MoveCharacterPoint> movePoint = this.PointsLogic.MovePoint;
+		if (movePoint == null || movePoint.Count == 0)
+		{
+			return false;
+		}
+		MoveCharacterPoint moveCharacterPoint = movePoint[movePoint.Count - 1];
+		if (moveCharacterPoint == null)
+		{
+			return false;
+		}
+		CharacterActorComponent actorComp = this.ActorComp;
+		if (((!this.IsFly) ? GravityUtils.Instance.GetDistSquared2dForActor(actorComp, actorComp.ActorLocationProxy, moveCharacterPoint.Position) : global::Vector.DistSquared(actorComp.ActorLocationProxy, moveCharacterPoint.Position)) <= (double)(this.Distance * this.Distance))
+		{
+			this.PointsLogic.OnArriveMovePoint(moveCharacterPoint);
+			this.SyncToController();
+			this.MoveEnd(ELevelEventState.Success);
+			return true;
+		}
+		return false;
+	}
+
+	// Token: 0x06018780 RID: 100224 RVA: 0x00764AB8 File Offset: 0x00762CB8
 	private bool HandleArriveLastPoint(bool climbOrFly, float deltaSeconds)
 	{
 		if (!this.PointsLogic.CheckMoveLastPoint())
@@ -173,7 +206,7 @@ public class BaseMoveCharacter
 		return true;
 	}
 
-	// Token: 0x0601AD62 RID: 109922 RVA: 0x0073F1A4 File Offset: 0x0073D3A4
+	// Token: 0x06018781 RID: 100225 RVA: 0x00764B90 File Offset: 0x00762D90
 	private void ResetLastPatrolPoint(float deltaSeconds)
 	{
 		this.MoveLogic.ResetLastPatrolPoint(deltaSeconds);
@@ -192,7 +225,7 @@ public class BaseMoveCharacter
 		CharacterActorComponent actorComp2 = this.ActorComp;
 		if (actorComp2 != null)
 		{
-			actorComp2.SetInputDirect(this.CacheVector, false);
+			actorComp2.SetInputDirect(this.CacheVector, false, EInputDirectSpace.World);
 		}
 		double inB = this.ActorComp.ActorVelocityProxy.Size();
 		this.CacheVector.MultiplyEqual(inB);
@@ -210,7 +243,7 @@ public class BaseMoveCharacter
 		onResetLocationCallback();
 	}
 
-	// Token: 0x0601AD63 RID: 109923 RVA: 0x0073F2B0 File Offset: 0x0073D4B0
+	// Token: 0x06018782 RID: 100226 RVA: 0x00764C9C File Offset: 0x00762E9C
 	private unsafe void CheckTimeout(float deltaSeconds, bool changePoint)
 	{
 		double num = global::Vector.Dist(this.ActorComp.ActorLocationProxy, this.CurrentToLocation);
@@ -239,7 +272,7 @@ public class BaseMoveCharacter
 		this.LastFrameDistance = num;
 	}
 
-	// Token: 0x0601AD64 RID: 109924 RVA: 0x0073F3D8 File Offset: 0x0073D5D8
+	// Token: 0x06018783 RID: 100227 RVA: 0x00764DC4 File Offset: 0x00762FC4
 	private bool ChangeNextPoint()
 	{
 		if (this.UsePreLocation)
@@ -249,7 +282,7 @@ public class BaseMoveCharacter
 		return this.PointsLogic.ChangeToNextPoint() && this.GenerateMovePoint(this.PointsLogic.GetPreviousLocation(), this.PointsLogic.TargetPoint.Position, this.Navigation, false);
 	}
 
-	// Token: 0x0601AD65 RID: 109925 RVA: 0x0073F42C File Offset: 0x0073D62C
+	// Token: 0x06018784 RID: 100228 RVA: 0x00764E18 File Offset: 0x00763018
 	private bool CheckResetCondition()
 	{
 		MoveCharacterConfig moveConfig = this.MoveConfig;
@@ -287,7 +320,7 @@ public class BaseMoveCharacter
 		return num3 <= 0.0 || num3 >= 20.0 || num4 >= 50.0;
 	}
 
-	// Token: 0x0601AD66 RID: 109926 RVA: 0x0073F588 File Offset: 0x0073D788
+	// Token: 0x06018785 RID: 100229 RVA: 0x00764F74 File Offset: 0x00763174
 	public void StopMove()
 	{
 		if (!this.IsRunning)
@@ -299,13 +332,13 @@ public class BaseMoveCharacter
 		this.StopMoveInternal();
 	}
 
-	// Token: 0x0601AD67 RID: 109927 RVA: 0x0073F5B2 File Offset: 0x0073D7B2
+	// Token: 0x06018786 RID: 100230 RVA: 0x00764F9E File Offset: 0x0076319E
 	public void Dispose()
 	{
 		this.StopMoveInternal();
 	}
 
-	// Token: 0x0601AD68 RID: 109928 RVA: 0x0073F5BC File Offset: 0x0073D7BC
+	// Token: 0x06018787 RID: 100231 RVA: 0x00764FA8 File Offset: 0x007631A8
 	private void StopMoveInternal()
 	{
 		this.MoveLogic.StopMove();
@@ -319,7 +352,7 @@ public class BaseMoveCharacter
 		}
 	}
 
-	// Token: 0x0601AD69 RID: 109929 RVA: 0x0073F650 File Offset: 0x0073D850
+	// Token: 0x06018788 RID: 100232 RVA: 0x0076503C File Offset: 0x0076323C
 	public unsafe void MoveAlongPath(MoveCharacterConfig config)
 	{
 		if (this.ActorComp == null)
@@ -401,7 +434,7 @@ public class BaseMoveCharacter
 		}
 	}
 
-	// Token: 0x0601AD6A RID: 109930 RVA: 0x0073F9A8 File Offset: 0x0073DBA8
+	// Token: 0x06018789 RID: 100233 RVA: 0x00765394 File Offset: 0x00763594
 	public void MoveEnd(ELevelEventState endState)
 	{
 		this.UsePreLocation = false;
@@ -415,7 +448,7 @@ public class BaseMoveCharacter
 		}
 	}
 
-	// Token: 0x0601AD6B RID: 109931 RVA: 0x0073F9EC File Offset: 0x0073DBEC
+	// Token: 0x0601878A RID: 100234 RVA: 0x007653D8 File Offset: 0x007635D8
 	private bool GenerateMovePoint([Nullable(2)] global::Vector start, global::Vector end, bool navigation, bool selfPos)
 	{
 		this.MovePath = new List<global::Vector>();
@@ -468,7 +501,7 @@ public class BaseMoveCharacter
 		return true;
 	}
 
-	// Token: 0x0601AD6C RID: 109932 RVA: 0x0073FBD8 File Offset: 0x0073DDD8
+	// Token: 0x0601878B RID: 100235 RVA: 0x007655C4 File Offset: 0x007637C4
 	private bool AddNavigationPath(global::Vector start, global::Vector end, List<global::Vector> outPath)
 	{
 		UObject world = this.ActorComp.Owner.GetWorld();
@@ -479,7 +512,7 @@ public class BaseMoveCharacter
 		return AiControllerLibrary.NavigationFindPath(world, from, to, outPath, ignoreZ, (moveConfig != null) ? moveConfig.StrictNavigation : null) && outPath.Count > 0;
 	}
 
-	// Token: 0x0601AD6D RID: 109933 RVA: 0x0073FC36 File Offset: 0x0073DE36
+	// Token: 0x0601878C RID: 100236 RVA: 0x00765622 File Offset: 0x00763822
 	private void OnMoveActionEnd(ELevelEventState result)
 	{
 		if (this.OnMoveEndCallback != null)
@@ -488,7 +521,7 @@ public class BaseMoveCharacter
 		}
 	}
 
-	// Token: 0x0601AD6E RID: 109934 RVA: 0x0073FC4C File Offset: 0x0073DE4C
+	// Token: 0x0601878D RID: 100237 RVA: 0x00765638 File Offset: 0x00763838
 	public void PushMoveInfo()
 	{
 		EntitySimplyMoveInfoPackagePush entitySimplyMoveInfoPackagePush = EntitySimplyMoveInfoPackagePush.Create();
@@ -503,11 +536,11 @@ public class BaseMoveCharacter
 		Net.Instance.Send(EPushMessageId.EntitySimplyMoveInfoPackagePush, entitySimplyMoveInfoPackagePush);
 	}
 
-	// Token: 0x0601AD6F RID: 109935 RVA: 0x0073FD08 File Offset: 0x0073DF08
+	// Token: 0x0601878E RID: 100238 RVA: 0x007656F4 File Offset: 0x007638F4
 	private void OnArriveMovePoint()
 	{
 		this.UpdateMoveStateAndSpeed();
-		this.PointsLogic.OnArriveMovePoint();
+		this.PointsLogic.OnArriveMovePoint(null);
 		MoveCharacterPoint targetPoint = this.PointsLogic.TargetPoint;
 		if (targetPoint != null && targetPoint.PosState != null)
 		{
@@ -516,7 +549,7 @@ public class BaseMoveCharacter
 		}
 	}
 
-	// Token: 0x0601AD70 RID: 109936 RVA: 0x0073FD69 File Offset: 0x0073DF69
+	// Token: 0x0601878F RID: 100239 RVA: 0x00765756 File Offset: 0x00763956
 	private void SyncToController()
 	{
 		MoveCharacterConfig moveConfig = this.MoveConfig;
@@ -532,7 +565,7 @@ public class BaseMoveCharacter
 		component.MoveController.PushMoveInfo();
 	}
 
-	// Token: 0x0601AD71 RID: 109937 RVA: 0x0073FDA0 File Offset: 0x0073DFA0
+	// Token: 0x06018790 RID: 100240 RVA: 0x0076578C File Offset: 0x0076398C
 	private void OnPositionStateChange(global::ECharPositionState oldPositionState, global::ECharPositionState newPositionState)
 	{
 		if (this.PointsLogic.TargetPoint == null)
@@ -546,7 +579,7 @@ public class BaseMoveCharacter
 		}
 	}
 
-	// Token: 0x0601AD72 RID: 109938 RVA: 0x0073FE08 File Offset: 0x0073E008
+	// Token: 0x06018791 RID: 100241 RVA: 0x007657F4 File Offset: 0x007639F4
 	private void UpdateMoveStateAndSpeed()
 	{
 		if (this.PointsLogic.TargetPoint == null)
@@ -591,7 +624,7 @@ public class BaseMoveCharacter
 		}
 	}
 
-	// Token: 0x0601AD73 RID: 109939 RVA: 0x0073FF38 File Offset: 0x0073E138
+	// Token: 0x06018792 RID: 100242 RVA: 0x00765924 File Offset: 0x00763B24
 	private void SetPlayerWalkOrRun(global::ECharMoveState state)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -606,7 +639,7 @@ public class BaseMoveCharacter
 		}
 	}
 
-	// Token: 0x0601AD74 RID: 109940 RVA: 0x0073FF94 File Offset: 0x0073E194
+	// Token: 0x06018793 RID: 100243 RVA: 0x00765980 File Offset: 0x00763B80
 	private global::ECharMoveState? GetMoveState(EPatrolMoveState? state)
 	{
 		if (state != null)
@@ -652,7 +685,7 @@ public class BaseMoveCharacter
 		return null;
 	}
 
-	// Token: 0x0601AD75 RID: 109941 RVA: 0x00740088 File Offset: 0x0073E288
+	// Token: 0x06018794 RID: 100244 RVA: 0x00765A74 File Offset: 0x00763C74
 	private void DrawDebug()
 	{
 		if (this.PointsLogic.MovePoint.Count == 0 || !GlobalData.IsPlayInEditor)
@@ -668,8 +701,8 @@ public class BaseMoveCharacter
 		}
 	}
 
-	// Token: 0x170024F0 RID: 9456
-	// (get) Token: 0x0601AD76 RID: 109942 RVA: 0x00740126 File Offset: 0x0073E326
+	// Token: 0x1700267C RID: 9852
+	// (get) Token: 0x06018795 RID: 100245 RVA: 0x00765B12 File Offset: 0x00763D12
 	public bool IsRunning
 	{
 		get
@@ -678,93 +711,93 @@ public class BaseMoveCharacter
 		}
 	}
 
-	// Token: 0x0400CF54 RID: 53076
+	// Token: 0x0400D344 RID: 54084
 	private const int DEFAULT_TURN_SPEED = 360;
 
-	// Token: 0x0400CF55 RID: 53077
+	// Token: 0x0400D345 RID: 54085
 	private const int END_DISTANCE = 30;
 
-	// Token: 0x0400CF56 RID: 53078
+	// Token: 0x0400D346 RID: 54086
 	private const int NAV_DISTANCE = 200;
 
-	// Token: 0x0400CF57 RID: 53079
+	// Token: 0x0400D347 RID: 54087
 	private const int NO_RESET_ANGLE = 20;
 
-	// Token: 0x0400CF58 RID: 53080
+	// Token: 0x0400D348 RID: 54088
 	private const int NO_RESET_DISTANCE = 50;
 
-	// Token: 0x0400CF59 RID: 53081
+	// Token: 0x0400D349 RID: 54089
 	private const int PER_TICK_MIN_MOVE_SPEED = 30;
 
-	// Token: 0x0400CF5A RID: 53082
+	// Token: 0x0400D34A RID: 54090
 	private const int WHILE_UPDATE_MOVE_POINT_COUNT = 2;
 
-	// Token: 0x0400CF5B RID: 53083
+	// Token: 0x0400D34B RID: 54091
 	private int PbDataId;
 
-	// Token: 0x0400CF5C RID: 53084
+	// Token: 0x0400D34C RID: 54092
 	[Nullable(2)]
 	private Entity Entity;
 
-	// Token: 0x0400CF5D RID: 53085
+	// Token: 0x0400D34D RID: 54093
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CF5E RID: 53086
+	// Token: 0x0400D34E RID: 54094
 	[Nullable(2)]
 	private BaseUnifiedStateComponent UnifiedComp;
 
-	// Token: 0x0400CF5F RID: 53087
+	// Token: 0x0400D34F RID: 54095
 	[Nullable(2)]
 	private CharacterAiComponent AiComp;
 
-	// Token: 0x0400CF60 RID: 53088
+	// Token: 0x0400D350 RID: 54096
 	private List<CharacterAiComponent> FollowerAiComps = new List<CharacterAiComponent>();
 
-	// Token: 0x0400CF61 RID: 53089
+	// Token: 0x0400D351 RID: 54097
 	[Nullable(2)]
 	private MoveCharacterConfig MoveConfig;
 
-	// Token: 0x0400CF62 RID: 53090
+	// Token: 0x0400D352 RID: 54098
 	private float Distance;
 
-	// Token: 0x0400CF63 RID: 53091
+	// Token: 0x0400D353 RID: 54099
 	private bool IsFly;
 
-	// Token: 0x0400CF64 RID: 53092
+	// Token: 0x0400D354 RID: 54100
 	private bool Navigation;
 
-	// Token: 0x0400CF65 RID: 53093
+	// Token: 0x0400D355 RID: 54101
 	private float TurnSpeed;
 
-	// Token: 0x0400CF66 RID: 53094
+	// Token: 0x0400D356 RID: 54102
 	private bool UsePreLocation;
 
-	// Token: 0x0400CF67 RID: 53095
+	// Token: 0x0400D357 RID: 54103
 	private readonly global::Vector PreLocation = global::Vector.Create();
 
-	// Token: 0x0400CF68 RID: 53096
+	// Token: 0x0400D358 RID: 54104
 	private bool ReturnTimeoutFailed;
 
-	// Token: 0x0400CF69 RID: 53097
+	// Token: 0x0400D359 RID: 54105
 	private double TimeoutTime;
 
-	// Token: 0x0400CF6A RID: 53098
+	// Token: 0x0400D35A RID: 54106
 	private double CurTimeoutTime;
 
-	// Token: 0x0400CF6B RID: 53099
+	// Token: 0x0400D35B RID: 54107
 	private double LastFrameDistance;
 
-	// Token: 0x0400CF6C RID: 53100
+	// Token: 0x0400D35C RID: 54108
 	private readonly global::Vector CacheVector = global::Vector.Create();
 
-	// Token: 0x0400CF6D RID: 53101
+	// Token: 0x0400D35D RID: 54109
 	private readonly global::Vector CacheVector2 = global::Vector.Create();
 
-	// Token: 0x0400CF6E RID: 53102
+	// Token: 0x0400D35E RID: 54110
 	private readonly global::Vector CacheMovePoint = global::Vector.Create();
 
-	// Token: 0x0400CF6F RID: 53103
+	// Token: 0x0400D35F RID: 54111
 	[Nullable(new byte[]
 	{
 		2,
@@ -772,7 +805,7 @@ public class BaseMoveCharacter
 	})]
 	private List<global::Vector> CachePath;
 
-	// Token: 0x0400CF70 RID: 53104
+	// Token: 0x0400D360 RID: 54112
 	[Nullable(new byte[]
 	{
 		2,
@@ -780,7 +813,7 @@ public class BaseMoveCharacter
 	})]
 	private List<global::Vector> MovePath;
 
-	// Token: 0x0400CF71 RID: 53105
+	// Token: 0x0400D361 RID: 54113
 	[Nullable(new byte[]
 	{
 		2,
@@ -788,22 +821,22 @@ public class BaseMoveCharacter
 	})]
 	private List<global::Vector> NavigationPath;
 
-	// Token: 0x0400CF72 RID: 53106
+	// Token: 0x0400D362 RID: 54114
 	private double DeltaTime;
 
-	// Token: 0x0400CF73 RID: 53107
+	// Token: 0x0400D363 RID: 54115
 	private bool Moving;
 
-	// Token: 0x0400CF74 RID: 53108
+	// Token: 0x0400D364 RID: 54116
 	[Nullable(2)]
 	private Action<ELevelEventState> OnMoveEndCallback;
 
-	// Token: 0x0400CF75 RID: 53109
+	// Token: 0x0400D365 RID: 54117
 	private readonly PatrolMovePointsLogic PointsLogic = new PatrolMovePointsLogic();
 
-	// Token: 0x0400CF76 RID: 53110
+	// Token: 0x0400D366 RID: 54118
 	private readonly PatrolMoveLogic MoveLogic = new PatrolMoveLogic();
 
-	// Token: 0x0400CF77 RID: 53111
+	// Token: 0x0400D367 RID: 54119
 	private bool PlayerWalkState;
 }

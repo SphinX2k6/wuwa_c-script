@@ -1,11 +1,11 @@
 ﻿using System;
 using Aki.Protocol;
 
-// Token: 0x02002997 RID: 10647
+// Token: 0x02001F12 RID: 7954
 public class TErrorCode
 {
-	// Token: 0x17001D92 RID: 7570
-	// (get) Token: 0x0601604A RID: 90186 RVA: 0x0058F25A File Offset: 0x0058D45A
-	// (set) Token: 0x0601604B RID: 90187 RVA: 0x0058F262 File Offset: 0x0058D462
+	// Token: 0x17001DEB RID: 7659
+	// (get) Token: 0x06013A50 RID: 80464 RVA: 0x005BA21E File Offset: 0x005B841E
+	// (set) Token: 0x06013A51 RID: 80465 RVA: 0x005BA226 File Offset: 0x005B8426
 	public ErrorCode ErrorCode { get; set; }
 }

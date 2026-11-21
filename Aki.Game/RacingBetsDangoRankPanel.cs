@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002713 RID: 10003
+// Token: 0x02001BFE RID: 7166
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsDangoRankPanel : UiPanelBase
 {
-	// Token: 0x06014812 RID: 83986 RVA: 0x0052DA59 File Offset: 0x0052BC59
+	// Token: 0x06011CF4 RID: 72948 RVA: 0x0053C775 File Offset: 0x0053A975
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ public class RacingBetsDangoRankPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06014813 RID: 83987 RVA: 0x0052DA94 File Offset: 0x0052BC94
+	// Token: 0x06011CF5 RID: 72949 RVA: 0x0053C7B0 File Offset: 0x0053A9B0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RacingBetsDangoRankPanel.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -32,7 +32,7 @@ public class RacingBetsDangoRankPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014814 RID: 83988 RVA: 0x0052DAD8 File Offset: 0x0052BCD8
+	// Token: 0x06011CF6 RID: 72950 RVA: 0x0053C7F4 File Offset: 0x0053A9F4
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(0);
@@ -61,7 +61,7 @@ public class RacingBetsDangoRankPanel : UiPanelBase
 		uiitem2.SetUIActive(false);
 	}
 
-	// Token: 0x06014815 RID: 83989 RVA: 0x0052DB50 File Offset: 0x0052BD50
+	// Token: 0x06011CF7 RID: 72951 RVA: 0x0053C86C File Offset: 0x0053AA6C
 	public UniTask InitAsync(List<RacingBetsDungeonDangoInfo> rankingList, bool needRank = true, bool layoutByListOrder = false)
 	{
 		RacingBetsDangoRankPanel.<InitAsync>d__12 <InitAsync>d__;
@@ -75,7 +75,7 @@ public class RacingBetsDangoRankPanel : UiPanelBase
 		return <InitAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014816 RID: 83990 RVA: 0x0052DBAC File Offset: 0x0052BDAC
+	// Token: 0x06011CF8 RID: 72952 RVA: 0x0053C8C8 File Offset: 0x0053AAC8
 	private UniTask CreateRacingBetsDangoRankItemAsync(int index, RacingBetsDungeonDangoInfo rankInfo)
 	{
 		RacingBetsDangoRankPanel.<CreateRacingBetsDangoRankItemAsync>d__13 <CreateRacingBetsDangoRankItemAsync>d__;
@@ -87,7 +87,7 @@ public class RacingBetsDangoRankPanel : UiPanelBase
 		return <CreateRacingBetsDangoRankItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014817 RID: 83991 RVA: 0x0052DBF7 File Offset: 0x0052BDF7
+	// Token: 0x06011CF9 RID: 72953 RVA: 0x0053C913 File Offset: 0x0053AB13
 	[NullableContext(2)]
 	private UUIItem CreateItemActor()
 	{
@@ -98,7 +98,7 @@ public class RacingBetsDangoRankPanel : UiPanelBase
 		return LguiUtil.Instance.CopyItem(this.TemplateGridActor.GetUIItem(), base.GetRootItem());
 	}
 
-	// Token: 0x06014818 RID: 83992 RVA: 0x0052DC20 File Offset: 0x0052BE20
+	// Token: 0x06011CFA RID: 72954 RVA: 0x0053C93C File Offset: 0x0053AB3C
 	public UniTask RefreshRankItemAsync()
 	{
 		RacingBetsDangoRankPanel.<RefreshRankItemAsync>d__15 <RefreshRankItemAsync>d__;
@@ -109,39 +109,39 @@ public class RacingBetsDangoRankPanel : UiPanelBase
 		return <RefreshRankItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04009A43 RID: 39491
+	// Token: 0x04009B9B RID: 39835
 	[Nullable(2)]
 	private AUIBaseActor TemplateGridActor;
 
-	// Token: 0x04009A44 RID: 39492
+	// Token: 0x04009B9C RID: 39836
 	private readonly Dictionary<RacingBetsDungeonDangoInfo, RacingBetsDangoRankItem> RankItemMap = new Dictionary<RacingBetsDungeonDangoInfo, RacingBetsDangoRankItem>();
 
-	// Token: 0x04009A45 RID: 39493
+	// Token: 0x04009B9D RID: 39837
 	public float DangoRankItemHeight;
 
-	// Token: 0x04009A46 RID: 39494
+	// Token: 0x04009B9E RID: 39838
 	public int DangoRankInterval = 20;
 
-	// Token: 0x04009A47 RID: 39495
+	// Token: 0x04009B9F RID: 39839
 	private List<RacingBetsDangoRankItem> RankItemList = new List<RacingBetsDangoRankItem>();
 
-	// Token: 0x04009A48 RID: 39496
+	// Token: 0x04009BA0 RID: 39840
 	[Nullable(2)]
 	private UCurveFloat LerpCurve;
 
-	// Token: 0x04009A49 RID: 39497
+	// Token: 0x04009BA1 RID: 39841
 	private bool NeedRank = true;
 
-	// Token: 0x04009A4A RID: 39498
+	// Token: 0x04009BA2 RID: 39842
 	private bool LayoutByListOrder;
 
-	// Token: 0x02008D63 RID: 36195
+	// Token: 0x02007EEC RID: 32492
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402DE11 RID: 187921
+		// Token: 0x04029128 RID: 168232
 		Content,
-		// Token: 0x0402DE12 RID: 187922
+		// Token: 0x04029129 RID: 168233
 		Item
 	}
 }

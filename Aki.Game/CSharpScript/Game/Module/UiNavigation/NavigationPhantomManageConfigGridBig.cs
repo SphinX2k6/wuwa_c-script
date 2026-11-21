@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004926 RID: 18726
+	// Token: 0x0200389D RID: 14493
 	public class NavigationPhantomManageConfigGridBig : NavigationButton
 	{
-		// Token: 0x06030EB1 RID: 200369 RVA: 0x00B5B6DC File Offset: 0x00B598DC
+		// Token: 0x060259DE RID: 154078 RVA: 0x00A9654C File Offset: 0x00A9474C
 		[NullableContext(1)]
 		public NavigationPhantomManageConfigGridBig(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030EB2 RID: 200370 RVA: 0x00B5B6E8 File Offset: 0x00B598E8
+		// Token: 0x060259DF RID: 154079 RVA: 0x00A96558 File Offset: 0x00A94758
 		protected override void OnStart()
 		{
 			SpecialPanelHandleBase panelHandle = this.PanelHandle;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030EB3 RID: 200371 RVA: 0x00B5B788 File Offset: 0x00B59988
+		// Token: 0x060259E0 RID: 154080 RVA: 0x00A965F8 File Offset: 0x00A947F8
 		protected override void OnButtonClick()
 		{
 			PhantomManageConfigPanelHandle phantomManageConfigPanelHandle = this.PanelHandle as PhantomManageConfigPanelHandle;

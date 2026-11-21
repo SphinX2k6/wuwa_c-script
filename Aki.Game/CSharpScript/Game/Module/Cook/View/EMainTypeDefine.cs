@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B23 RID: 23331
+	// Token: 0x02004B04 RID: 19204
 	public enum EMainTypeDefine
 	{
-		// Token: 0x0401ECDD RID: 126173
+		// Token: 0x04019799 RID: 104345
 		IconSprite,
-		// Token: 0x0401ECDE RID: 126174
+		// Token: 0x0401979A RID: 104346
 		MainTypeExtendToggle
 	}
 }

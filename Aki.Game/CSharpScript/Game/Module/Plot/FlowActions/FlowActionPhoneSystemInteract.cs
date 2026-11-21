@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Plot.Sequence;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050C7 RID: 20679
+	// Token: 0x02004097 RID: 16535
 	public class FlowActionPhoneSystemInteract : FlowActionLevelAsyncAction
 	{
-		// Token: 0x06034F04 RID: 216836 RVA: 0x00C89F84 File Offset: 0x00C88184
+		// Token: 0x06029DFD RID: 171517 RVA: 0x00BD726C File Offset: 0x00BD546C
 		protected override void OnExecute()
 		{
 			EPlotLevel? plotLevel = PlotModel.Instance.PlotConfig.PlotLevel;
@@ -31,13 +31,13 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.OnExecute();
 		}
 
-		// Token: 0x06034F05 RID: 216837 RVA: 0x00C8A01F File Offset: 0x00C8821F
+		// Token: 0x06029DFE RID: 171518 RVA: 0x00BD7307 File Offset: 0x00BD5507
 		protected override void OnBackgroundExecute()
 		{
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034F06 RID: 216838 RVA: 0x00C8A029 File Offset: 0x00C88229
+		// Token: 0x06029DFF RID: 171519 RVA: 0x00BD7311 File Offset: 0x00BD5511
 		protected override void OnActionFinish(bool result)
 		{
 			if (SequenceModel.Instance.IsPlaying)

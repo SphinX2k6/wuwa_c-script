@@ -4,29 +4,29 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.Input.Blueprints;
 using UnrealEngine;
 
-// Token: 0x020030E8 RID: 12520
+// Token: 0x02002640 RID: 9792
 [NullableContext(2)]
 [Nullable(0)]
 public class MorphData : IMorphData
 {
-	// Token: 0x170024E2 RID: 9442
-	// (get) Token: 0x0601AD08 RID: 109832 RVA: 0x0073BC74 File Offset: 0x00739E74
-	// (set) Token: 0x0601AD09 RID: 109833 RVA: 0x0073BC7C File Offset: 0x00739E7C
+	// Token: 0x1700266C RID: 9836
+	// (get) Token: 0x06018724 RID: 100132 RVA: 0x007616B0 File Offset: 0x0075F8B0
+	// (set) Token: 0x06018725 RID: 100133 RVA: 0x007616B8 File Offset: 0x0075F8B8
 	public int ModelId { get; set; }
 
-	// Token: 0x170024E3 RID: 9443
-	// (get) Token: 0x0601AD0A RID: 109834 RVA: 0x0073BC85 File Offset: 0x00739E85
-	// (set) Token: 0x0601AD0B RID: 109835 RVA: 0x0073BC8D File Offset: 0x00739E8D
+	// Token: 0x1700266D RID: 9837
+	// (get) Token: 0x06018726 RID: 100134 RVA: 0x007616C1 File Offset: 0x0075F8C1
+	// (set) Token: 0x06018727 RID: 100135 RVA: 0x007616C9 File Offset: 0x0075F8C9
 	public USkeletalMesh SkeletalMesh { get; set; }
 
-	// Token: 0x170024E4 RID: 9444
-	// (get) Token: 0x0601AD0C RID: 109836 RVA: 0x0073BC96 File Offset: 0x00739E96
-	// (set) Token: 0x0601AD0D RID: 109837 RVA: 0x0073BC9E File Offset: 0x00739E9E
+	// Token: 0x1700266E RID: 9838
+	// (get) Token: 0x06018728 RID: 100136 RVA: 0x007616D2 File Offset: 0x0075F8D2
+	// (set) Token: 0x06018729 RID: 100137 RVA: 0x007616DA File Offset: 0x0075F8DA
 	public UClass AnimClass { get; set; }
 
-	// Token: 0x170024E5 RID: 9445
-	// (get) Token: 0x0601AD0E RID: 109838 RVA: 0x0073BCA7 File Offset: 0x00739EA7
-	// (set) Token: 0x0601AD0F RID: 109839 RVA: 0x0073BCAF File Offset: 0x00739EAF
+	// Token: 0x1700266F RID: 9839
+	// (get) Token: 0x0601872A RID: 100138 RVA: 0x007616E3 File Offset: 0x0075F8E3
+	// (set) Token: 0x0601872B RID: 100139 RVA: 0x007616EB File Offset: 0x0075F8EB
 	[Nullable(new byte[]
 	{
 		2,
@@ -42,9 +42,9 @@ public class MorphData : IMorphData
 		1
 	})] set; }
 
-	// Token: 0x170024E6 RID: 9446
-	// (get) Token: 0x0601AD10 RID: 109840 RVA: 0x0073BCB8 File Offset: 0x00739EB8
-	// (set) Token: 0x0601AD11 RID: 109841 RVA: 0x0073BCC0 File Offset: 0x00739EC0
+	// Token: 0x17002670 RID: 9840
+	// (get) Token: 0x0601872C RID: 100140 RVA: 0x007616F4 File Offset: 0x0075F8F4
+	// (set) Token: 0x0601872D RID: 100141 RVA: 0x007616FC File Offset: 0x0075F8FC
 	[Nullable(new byte[]
 	{
 		2,
@@ -60,29 +60,29 @@ public class MorphData : IMorphData
 		1
 	})] set; }
 
-	// Token: 0x170024E7 RID: 9447
-	// (get) Token: 0x0601AD12 RID: 109842 RVA: 0x0073BCC9 File Offset: 0x00739EC9
-	// (set) Token: 0x0601AD13 RID: 109843 RVA: 0x0073BCD1 File Offset: 0x00739ED1
+	// Token: 0x17002671 RID: 9841
+	// (get) Token: 0x0601872E RID: 100142 RVA: 0x00761705 File Offset: 0x0075F905
+	// (set) Token: 0x0601872F RID: 100143 RVA: 0x0076170D File Offset: 0x0075F90D
 	public FSoftClassPath InputComponentClass { get; set; }
 
-	// Token: 0x170024E8 RID: 9448
-	// (get) Token: 0x0601AD14 RID: 109844 RVA: 0x0073BCDA File Offset: 0x00739EDA
-	// (set) Token: 0x0601AD15 RID: 109845 RVA: 0x0073BCE2 File Offset: 0x00739EE2
+	// Token: 0x17002672 RID: 9842
+	// (get) Token: 0x06018730 RID: 100144 RVA: 0x00761716 File Offset: 0x0075F916
+	// (set) Token: 0x06018731 RID: 100145 RVA: 0x0076171E File Offset: 0x0075F91E
 	public UDataTable BaseMovementSetting { get; set; }
 
-	// Token: 0x170024E9 RID: 9449
-	// (get) Token: 0x0601AD16 RID: 109846 RVA: 0x0073BCEB File Offset: 0x00739EEB
-	// (set) Token: 0x0601AD17 RID: 109847 RVA: 0x0073BCF3 File Offset: 0x00739EF3
+	// Token: 0x17002673 RID: 9843
+	// (get) Token: 0x06018732 RID: 100146 RVA: 0x00761727 File Offset: 0x0075F927
+	// (set) Token: 0x06018733 RID: 100147 RVA: 0x0076172F File Offset: 0x0075F92F
 	public UDataTable CameraConfig { get; set; }
 
-	// Token: 0x170024EA RID: 9450
-	// (get) Token: 0x0601AD18 RID: 109848 RVA: 0x0073BCFC File Offset: 0x00739EFC
-	// (set) Token: 0x0601AD19 RID: 109849 RVA: 0x0073BD04 File Offset: 0x00739F04
+	// Token: 0x17002674 RID: 9844
+	// (get) Token: 0x06018734 RID: 100148 RVA: 0x00761738 File Offset: 0x0075F938
+	// (set) Token: 0x06018735 RID: 100149 RVA: 0x00761740 File Offset: 0x0075F940
 	public BP_InputBase_C InputComponent { get; set; }
 
-	// Token: 0x170024EB RID: 9451
-	// (get) Token: 0x0601AD1A RID: 109850 RVA: 0x0073BD0D File Offset: 0x00739F0D
-	// (set) Token: 0x0601AD1B RID: 109851 RVA: 0x0073BD15 File Offset: 0x00739F15
+	// Token: 0x17002675 RID: 9845
+	// (get) Token: 0x06018736 RID: 100150 RVA: 0x00761749 File Offset: 0x0075F949
+	// (set) Token: 0x06018737 RID: 100151 RVA: 0x00761751 File Offset: 0x0075F951
 	[Nullable(new byte[]
 	{
 		2,
@@ -104,9 +104,9 @@ public class MorphData : IMorphData
 		1
 	})] set; }
 
-	// Token: 0x170024EC RID: 9452
-	// (get) Token: 0x0601AD1C RID: 109852 RVA: 0x0073BD1E File Offset: 0x00739F1E
-	// (set) Token: 0x0601AD1D RID: 109853 RVA: 0x0073BD26 File Offset: 0x00739F26
+	// Token: 0x17002676 RID: 9846
+	// (get) Token: 0x06018738 RID: 100152 RVA: 0x0076175A File Offset: 0x0075F95A
+	// (set) Token: 0x06018739 RID: 100153 RVA: 0x00761762 File Offset: 0x0075F962
 	[Nullable(new byte[]
 	{
 		2,
@@ -131,9 +131,9 @@ public class MorphData : IMorphData
 		1
 	})] set; }
 
-	// Token: 0x170024ED RID: 9453
-	// (get) Token: 0x0601AD1E RID: 109854 RVA: 0x0073BD2F File Offset: 0x00739F2F
-	// (set) Token: 0x0601AD1F RID: 109855 RVA: 0x0073BD37 File Offset: 0x00739F37
+	// Token: 0x17002677 RID: 9847
+	// (get) Token: 0x0601873A RID: 100154 RVA: 0x0076176B File Offset: 0x0075F96B
+	// (set) Token: 0x0601873B RID: 100155 RVA: 0x00761773 File Offset: 0x0075F973
 	[Nullable(new byte[]
 	{
 		2,
@@ -158,8 +158,8 @@ public class MorphData : IMorphData
 		1
 	})] set; }
 
-	// Token: 0x170024EE RID: 9454
-	// (get) Token: 0x0601AD20 RID: 109856 RVA: 0x0073BD40 File Offset: 0x00739F40
-	// (set) Token: 0x0601AD21 RID: 109857 RVA: 0x0073BD48 File Offset: 0x00739F48
+	// Token: 0x17002678 RID: 9848
+	// (get) Token: 0x0601873C RID: 100156 RVA: 0x0076177C File Offset: 0x0075F97C
+	// (set) Token: 0x0601873D RID: 100157 RVA: 0x00761784 File Offset: 0x0075F984
 	public Vector CenterActorLocationOffset { get; set; }
 }

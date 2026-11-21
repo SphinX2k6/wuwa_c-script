@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006982 RID: 27010
+	// Token: 0x02005ADE RID: 23262
 	public enum ESoundQuizComponents
 	{
-		// Token: 0x0402304A RID: 143434
+		// Token: 0x0401E234 RID: 123444
 		Button,
-		// Token: 0x0402304B RID: 143435
+		// Token: 0x0401E235 RID: 123445
 		Texture
 	}
 }

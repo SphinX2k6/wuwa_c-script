@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017E5 RID: 6117
+// Token: 0x02000C9E RID: 3230
 public class BigElementItem : UiPanelBase
 {
-	// Token: 0x0600B2E5 RID: 45797 RVA: 0x0028713B File Offset: 0x0028533B
+	// Token: 0x060086CF RID: 34511 RVA: 0x0029180F File Offset: 0x0028FA0F
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,12 +17,12 @@ public class BigElementItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600B2E6 RID: 45798 RVA: 0x00287174 File Offset: 0x00285374
+	// Token: 0x060086D0 RID: 34512 RVA: 0x00291848 File Offset: 0x0028FA48
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x0600B2E7 RID: 45799 RVA: 0x00287178 File Offset: 0x00285378
+	// Token: 0x060086D1 RID: 34513 RVA: 0x0029184C File Offset: 0x0028FA4C
 	public void Refresh(int elementId)
 	{
 		if (this.ElementId == elementId)
@@ -50,17 +50,17 @@ public class BigElementItem : UiPanelBase
 		base.SetTextureByPath(icon4Pure, texture, null, null);
 	}
 
-	// Token: 0x04005111 RID: 20753
+	// Token: 0x040051BC RID: 20924
 	private int ElementId;
 
-	// Token: 0x02007DD1 RID: 32209
+	// Token: 0x02006F57 RID: 28503
 	private enum EChildComponentType
 	{
-		// Token: 0x040292FE RID: 168702
+		// Token: 0x04024629 RID: 149033
 		ElementBg,
-		// Token: 0x040292FF RID: 168703
+		// Token: 0x0402462A RID: 149034
 		ElementTexture,
-		// Token: 0x04029300 RID: 168704
+		// Token: 0x0402462B RID: 149035
 		Panel
 	}
 }

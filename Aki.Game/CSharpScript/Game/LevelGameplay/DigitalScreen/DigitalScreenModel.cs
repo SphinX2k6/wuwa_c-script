@@ -4,13 +4,13 @@ using Aki.Config;
 
 namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 {
-	// Token: 0x02006F14 RID: 28436
+	// Token: 0x02006095 RID: 24725
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class DigitalScreenModel : ModelBase
 	{
-		// Token: 0x0604535B RID: 283483 RVA: 0x0111FB64 File Offset: 0x0111DD64
+		// Token: 0x0603B509 RID: 242953 RVA: 0x010C9B04 File Offset: 0x010C7D04
 		public unsafe bool InitDigitalScreen(int index)
 		{
 			this.StartTimes = Array.Empty<float>();
@@ -117,14 +117,14 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			return true;
 		}
 
-		// Token: 0x0604535C RID: 283484 RVA: 0x0112007C File Offset: 0x0111E27C
+		// Token: 0x0603B50A RID: 242954 RVA: 0x010CA01C File Offset: 0x010C821C
 		public DigitalScreen? GetDataConfig(int index)
 		{
 			return ConfigDigitalScreenById.GetConfig(index, true);
 		}
 
-		// Token: 0x17009B00 RID: 39680
-		// (get) Token: 0x0604535D RID: 283485 RVA: 0x01120085 File Offset: 0x0111E285
+		// Token: 0x1700703F RID: 28735
+		// (get) Token: 0x0603B50B RID: 242955 RVA: 0x010CA025 File Offset: 0x010C8225
 		public static DigitalScreenModel Instance
 		{
 			get
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			}
 		}
 
-		// Token: 0x0604535E RID: 283486 RVA: 0x0112008C File Offset: 0x0111E28C
+		// Token: 0x0603B50C RID: 242956 RVA: 0x010CA02C File Offset: 0x010C822C
 		public static DigitalScreenModel GetOrCreateInstance()
 		{
 			if (DigitalScreenModel._Instance == null)
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			return DigitalScreenModel._Instance;
 		}
 
-		// Token: 0x0604535F RID: 283487 RVA: 0x011200A0 File Offset: 0x0111E2A0
+		// Token: 0x0603B50D RID: 242957 RVA: 0x010CA040 File Offset: 0x010C8240
 		public static bool CreateInstance()
 		{
 			if (DigitalScreenModel._Instance != null)
@@ -154,70 +154,70 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			return true;
 		}
 
-		// Token: 0x06045360 RID: 283488 RVA: 0x011200B6 File Offset: 0x0111E2B6
+		// Token: 0x0603B50E RID: 242958 RVA: 0x010CA056 File Offset: 0x010C8256
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06045361 RID: 283489 RVA: 0x011200B8 File Offset: 0x0111E2B8
+		// Token: 0x0603B50F RID: 242959 RVA: 0x010CA058 File Offset: 0x010C8258
 		public static void ResetStaticDefaultValue()
 		{
 			DigitalScreenModel._Instance = null;
 		}
 
-		// Token: 0x06045362 RID: 283490 RVA: 0x011200C0 File Offset: 0x0111E2C0
+		// Token: 0x0603B510 RID: 242960 RVA: 0x010CA060 File Offset: 0x010C8260
 		static DigitalScreenModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DigitalScreenModel.CreateStaticDefaultValue), new Action(DigitalScreenModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402413D RID: 147773
+		// Token: 0x0401F3F2 RID: 127986
 		public int ExistTime;
 
-		// Token: 0x0402413E RID: 147774
+		// Token: 0x0401F3F3 RID: 127987
 		public string BackgroundPicture = "";
 
-		// Token: 0x0402413F RID: 147775
+		// Token: 0x0401F3F4 RID: 127988
 		public string LogoIcon = "";
 
-		// Token: 0x04024140 RID: 147776
+		// Token: 0x0401F3F5 RID: 127989
 		public float TextFactor;
 
-		// Token: 0x04024141 RID: 147777
+		// Token: 0x0401F3F6 RID: 127990
 		public float[] StartTimes = Array.Empty<float>();
 
-		// Token: 0x04024142 RID: 147778
+		// Token: 0x0401F3F7 RID: 127991
 		private float[] EndTimes = Array.Empty<float>();
 
-		// Token: 0x04024143 RID: 147779
+		// Token: 0x0401F3F8 RID: 127992
 		public float[] DelayTimes = Array.Empty<float>();
 
-		// Token: 0x04024144 RID: 147780
+		// Token: 0x0401F3F9 RID: 127993
 		public float[] DuringTimes = Array.Empty<float>();
 
-		// Token: 0x04024145 RID: 147781
+		// Token: 0x0401F3FA RID: 127994
 		public int[] TextLength = Array.Empty<int>();
 
-		// Token: 0x04024146 RID: 147782
+		// Token: 0x0401F3FB RID: 127995
 		public int[] Font = Array.Empty<int>();
 
-		// Token: 0x04024147 RID: 147783
+		// Token: 0x0401F3FC RID: 127996
 		public int[] ContentPos = Array.Empty<int>();
 
-		// Token: 0x04024148 RID: 147784
+		// Token: 0x0401F3FD RID: 127997
 		public float During;
 
-		// Token: 0x04024149 RID: 147785
+		// Token: 0x0401F3FE RID: 127998
 		[Nullable(2)]
 		public string Text = "";
 
-		// Token: 0x0402414A RID: 147786
+		// Token: 0x0401F3FF RID: 127999
 		public int ViewType;
 
-		// Token: 0x0402414B RID: 147787
+		// Token: 0x0401F400 RID: 128000
 		public int Size;
 
-		// Token: 0x0402414C RID: 147788
+		// Token: 0x0401F401 RID: 128001
 		[Nullable(2)]
 		private static DigitalScreenModel _Instance;
 	}

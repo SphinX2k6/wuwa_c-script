@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B3B RID: 2875
+	// Token: 0x02000C1B RID: 3099
 	public struct BlackSwordUIAsset : IFlatbufferObject
 	{
-		// Token: 0x1700055E RID: 1374
-		// (get) Token: 0x06004DD7 RID: 19927 RVA: 0x001E4D94 File Offset: 0x001E2F94
+		// Token: 0x1700059E RID: 1438
+		// (get) Token: 0x06005399 RID: 21401 RVA: 0x002050BC File Offset: 0x002032BC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004DD8 RID: 19928 RVA: 0x001E4DA1 File Offset: 0x001E2FA1
+		// Token: 0x0600539A RID: 21402 RVA: 0x002050C9 File Offset: 0x002032C9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004DD9 RID: 19929 RVA: 0x001E4DA8 File Offset: 0x001E2FA8
+		// Token: 0x0600539B RID: 21403 RVA: 0x002050D0 File Offset: 0x002032D0
 		public static BlackSwordUIAsset GetRootAsBlackSwordUIAsset(ByteBuffer _bb)
 		{
 			return BlackSwordUIAsset.GetRootAsBlackSwordUIAsset(_bb, default(BlackSwordUIAsset));
 		}
 
-		// Token: 0x06004DDA RID: 19930 RVA: 0x001E4DC4 File Offset: 0x001E2FC4
+		// Token: 0x0600539C RID: 21404 RVA: 0x002050EC File Offset: 0x002032EC
 		public static BlackSwordUIAsset GetRootAsBlackSwordUIAsset(ByteBuffer _bb, BlackSwordUIAsset obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004DDB RID: 19931 RVA: 0x001E4DE1 File Offset: 0x001E2FE1
+		// Token: 0x0600539D RID: 21405 RVA: 0x00205109 File Offset: 0x00203309
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004DDC RID: 19932 RVA: 0x001E4DF0 File Offset: 0x001E2FF0
+		// Token: 0x0600539E RID: 21406 RVA: 0x00205118 File Offset: 0x00203318
 		public BlackSwordUIAsset __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700055F RID: 1375
-		// (get) Token: 0x06004DDD RID: 19933 RVA: 0x001E4E00 File Offset: 0x001E3000
+		// Token: 0x1700059F RID: 1439
+		// (get) Token: 0x0600539F RID: 21407 RVA: 0x00205128 File Offset: 0x00203328
 		public int Id
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004DDE RID: 19934 RVA: 0x001E4E3C File Offset: 0x001E303C
+		// Token: 0x060053A0 RID: 21408 RVA: 0x00205164 File Offset: 0x00203364
 		public string LevelColors(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000560 RID: 1376
-		// (get) Token: 0x06004DDF RID: 19935 RVA: 0x001E4E78 File Offset: 0x001E3078
+		// Token: 0x170005A0 RID: 1440
+		// (get) Token: 0x060053A1 RID: 21409 RVA: 0x002051A0 File Offset: 0x002033A0
 		public int LevelColorsLength
 		{
 			get
@@ -91,7 +91,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004DE0 RID: 19936 RVA: 0x001E4EA4 File Offset: 0x001E30A4
+		// Token: 0x060053A2 RID: 21410 RVA: 0x002051CC File Offset: 0x002033CC
 		public string PatternPaths(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -102,8 +102,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000561 RID: 1377
-		// (get) Token: 0x06004DE1 RID: 19937 RVA: 0x001E4EE0 File Offset: 0x001E30E0
+		// Token: 0x170005A1 RID: 1441
+		// (get) Token: 0x060053A3 RID: 21411 RVA: 0x00205208 File Offset: 0x00203408
 		public int PatternPathsLength
 		{
 			get
@@ -117,7 +117,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004DE2 RID: 19938 RVA: 0x001E4F0C File Offset: 0x001E310C
+		// Token: 0x060053A4 RID: 21412 RVA: 0x00205234 File Offset: 0x00203434
 		public string StarPaths(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -128,8 +128,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000562 RID: 1378
-		// (get) Token: 0x06004DE3 RID: 19939 RVA: 0x001E4F48 File Offset: 0x001E3148
+		// Token: 0x170005A2 RID: 1442
+		// (get) Token: 0x060053A5 RID: 21413 RVA: 0x00205270 File Offset: 0x00203470
 		public int StarPathsLength
 		{
 			get
@@ -143,7 +143,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004DE4 RID: 19940 RVA: 0x001E4F74 File Offset: 0x001E3174
+		// Token: 0x060053A6 RID: 21414 RVA: 0x0020529C File Offset: 0x0020349C
 		public string CountDownTextAsset(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -154,8 +154,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000563 RID: 1379
-		// (get) Token: 0x06004DE5 RID: 19941 RVA: 0x001E4FB0 File Offset: 0x001E31B0
+		// Token: 0x170005A3 RID: 1443
+		// (get) Token: 0x060053A7 RID: 21415 RVA: 0x002052D8 File Offset: 0x002034D8
 		public int CountDownTextAssetLength
 		{
 			get
@@ -169,75 +169,71 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004DE6 RID: 19942 RVA: 0x001E4FDC File Offset: 0x001E31DC
+		// Token: 0x060053A8 RID: 21416 RVA: 0x00205304 File Offset: 0x00203504
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用CountDownTextAssetIter()或GetCountDownTextAssetBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] CountDownTextAsset()
+		public string[] CountDownTextAsset()
 		{
 			return this.CountDownTextAssetIter().ToArray<string>();
 		}
 
-		// Token: 0x06004DE7 RID: 19943 RVA: 0x001E4FE9 File Offset: 0x001E31E9
+		// Token: 0x060053A9 RID: 21417 RVA: 0x00205311 File Offset: 0x00203511
 		[NullableContext(1)]
-		public readonly IEnumerable<string> CountDownTextAssetIter()
+		public IEnumerable<string> CountDownTextAssetIter()
 		{
 			BlackSwordUIAsset.<CountDownTextAssetIter>d__23 <CountDownTextAssetIter>d__ = new BlackSwordUIAsset.<CountDownTextAssetIter>d__23(-2);
 			<CountDownTextAssetIter>d__.<>3__<>4__this = this;
 			return <CountDownTextAssetIter>d__;
 		}
 
-		// Token: 0x06004DE8 RID: 19944 RVA: 0x001E4FFE File Offset: 0x001E31FE
+		// Token: 0x060053AA RID: 21418 RVA: 0x00205326 File Offset: 0x00203526
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用LevelColorsIter()或GetLevelColorsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] LevelColors()
+		public string[] LevelColors()
 		{
 			return this.LevelColorsIter().ToArray<string>();
 		}
 
-		// Token: 0x06004DE9 RID: 19945 RVA: 0x001E500B File Offset: 0x001E320B
+		// Token: 0x060053AB RID: 21419 RVA: 0x00205333 File Offset: 0x00203533
 		[NullableContext(1)]
-		public readonly IEnumerable<string> LevelColorsIter()
+		public IEnumerable<string> LevelColorsIter()
 		{
 			BlackSwordUIAsset.<LevelColorsIter>d__25 <LevelColorsIter>d__ = new BlackSwordUIAsset.<LevelColorsIter>d__25(-2);
 			<LevelColorsIter>d__.<>3__<>4__this = this;
 			return <LevelColorsIter>d__;
 		}
 
-		// Token: 0x06004DEA RID: 19946 RVA: 0x001E5020 File Offset: 0x001E3220
+		// Token: 0x060053AC RID: 21420 RVA: 0x00205348 File Offset: 0x00203548
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PatternPathsIter()或GetPatternPathsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] PatternPaths()
+		public string[] PatternPaths()
 		{
 			return this.PatternPathsIter().ToArray<string>();
 		}
 
-		// Token: 0x06004DEB RID: 19947 RVA: 0x001E502D File Offset: 0x001E322D
+		// Token: 0x060053AD RID: 21421 RVA: 0x00205355 File Offset: 0x00203555
 		[NullableContext(1)]
-		public readonly IEnumerable<string> PatternPathsIter()
+		public IEnumerable<string> PatternPathsIter()
 		{
 			BlackSwordUIAsset.<PatternPathsIter>d__27 <PatternPathsIter>d__ = new BlackSwordUIAsset.<PatternPathsIter>d__27(-2);
 			<PatternPathsIter>d__.<>3__<>4__this = this;
 			return <PatternPathsIter>d__;
 		}
 
-		// Token: 0x06004DEC RID: 19948 RVA: 0x001E5042 File Offset: 0x001E3242
+		// Token: 0x060053AE RID: 21422 RVA: 0x0020536A File Offset: 0x0020356A
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用StarPathsIter()或GetStarPathsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] StarPaths()
+		public string[] StarPaths()
 		{
 			return this.StarPathsIter().ToArray<string>();
 		}
 
-		// Token: 0x06004DED RID: 19949 RVA: 0x001E504F File Offset: 0x001E324F
+		// Token: 0x060053AF RID: 21423 RVA: 0x00205377 File Offset: 0x00203577
 		[NullableContext(1)]
-		public readonly IEnumerable<string> StarPathsIter()
+		public IEnumerable<string> StarPathsIter()
 		{
 			BlackSwordUIAsset.<StarPathsIter>d__29 <StarPathsIter>d__ = new BlackSwordUIAsset.<StarPathsIter>d__29(-2);
 			<StarPathsIter>d__.<>3__<>4__this = this;
 			return <StarPathsIter>d__;
 		}
 
-		// Token: 0x04004B36 RID: 19254
+		// Token: 0x04005116 RID: 20758
 		private Table __p;
 	}
 }

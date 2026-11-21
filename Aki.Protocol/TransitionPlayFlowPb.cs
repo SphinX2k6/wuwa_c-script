@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020013FD RID: 5117
+	// Token: 0x02001470 RID: 5232
 	public sealed class TransitionPlayFlowPb : IMessage<TransitionPlayFlowPb>, IMessage, IEquatable<TransitionPlayFlowPb>, IDeepCloneable<TransitionPlayFlowPb>, IBufferMessage
 	{
-		// Token: 0x0601B201 RID: 111105 RVA: 0x003EE3F9 File Offset: 0x003EC5F9
+		// Token: 0x0601BC8C RID: 113804 RVA: 0x004096CD File Offset: 0x004078CD
 		[NullableContext(1)]
 		public static TransitionPlayFlowPb Create()
 		{
 			return new TransitionPlayFlowPb();
 		}
 
-		// Token: 0x17005B77 RID: 23415
-		// (get) Token: 0x0601B202 RID: 111106 RVA: 0x003EE400 File Offset: 0x003EC600
+		// Token: 0x17005E0C RID: 24076
+		// (get) Token: 0x0601BC8D RID: 113805 RVA: 0x004096D4 File Offset: 0x004078D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B78 RID: 23416
-		// (get) Token: 0x0601B203 RID: 111107 RVA: 0x003EE403 File Offset: 0x003EC603
+		// Token: 0x17005E0D RID: 24077
+		// (get) Token: 0x0601BC8E RID: 113806 RVA: 0x004096D7 File Offset: 0x004078D7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B204 RID: 111108 RVA: 0x003EE40A File Offset: 0x003EC60A
+		// Token: 0x0601BC8F RID: 113807 RVA: 0x004096DE File Offset: 0x004078DE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionPlayFlowPb()
 		{
 		}
 
-		// Token: 0x0601B205 RID: 111109 RVA: 0x003EE414 File Offset: 0x003EC614
+		// Token: 0x0601BC90 RID: 113808 RVA: 0x004096E8 File Offset: 0x004078E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionPlayFlowPb(TransitionPlayFlowPb other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601B206 RID: 111110 RVA: 0x003EE48C File Offset: 0x003EC68C
+		// Token: 0x0601BC91 RID: 113809 RVA: 0x00409760 File Offset: 0x00407960
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionPlayFlowPb Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new TransitionPlayFlowPb(this);
 		}
 
-		// Token: 0x17005B79 RID: 23417
-		// (get) Token: 0x0601B207 RID: 111111 RVA: 0x003EE494 File Offset: 0x003EC694
-		// (set) Token: 0x0601B208 RID: 111112 RVA: 0x003EE49C File Offset: 0x003EC69C
+		// Token: 0x17005E0E RID: 24078
+		// (get) Token: 0x0601BC92 RID: 113810 RVA: 0x00409768 File Offset: 0x00407968
+		// (set) Token: 0x0601BC93 RID: 113811 RVA: 0x00409770 File Offset: 0x00407970
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionPlayFlowActionParamPb ActionParamPb
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B7A RID: 23418
-		// (get) Token: 0x0601B209 RID: 111113 RVA: 0x003EE4A5 File Offset: 0x003EC6A5
-		// (set) Token: 0x0601B20A RID: 111114 RVA: 0x003EE4AD File Offset: 0x003EC6AD
+		// Token: 0x17005E0F RID: 24079
+		// (get) Token: 0x0601BC94 RID: 113812 RVA: 0x00409779 File Offset: 0x00407979
+		// (set) Token: 0x0601BC95 RID: 113813 RVA: 0x00409781 File Offset: 0x00407981
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FadeBackgroundFadeInEffectPb FadeBackgroundFadeInEffectPb
@@ -101,9 +101,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B7B RID: 23419
-		// (get) Token: 0x0601B20B RID: 111115 RVA: 0x003EE4B6 File Offset: 0x003EC6B6
-		// (set) Token: 0x0601B20C RID: 111116 RVA: 0x003EE4BE File Offset: 0x003EC6BE
+		// Token: 0x17005E10 RID: 24080
+		// (get) Token: 0x0601BC96 RID: 113814 RVA: 0x0040978A File Offset: 0x0040798A
+		// (set) Token: 0x0601BC97 RID: 113815 RVA: 0x00409792 File Offset: 0x00407992
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FadeBackgroundFadeOutEffectPb FadeBackgroundFadeOutEffectPb
@@ -118,7 +118,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B20D RID: 111117 RVA: 0x003EE4C7 File Offset: 0x003EC6C7
+		// Token: 0x0601BC98 RID: 113816 RVA: 0x0040979B File Offset: 0x0040799B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TransitionPlayFlowPb);
 		}
 
-		// Token: 0x0601B20E RID: 111118 RVA: 0x003EE4D8 File Offset: 0x003EC6D8
+		// Token: 0x0601BC99 RID: 113817 RVA: 0x004097AC File Offset: 0x004079AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TransitionPlayFlowPb other)
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.ActionParamPb, other.ActionParamPb) && object.Equals(this.FadeBackgroundFadeInEffectPb, other.FadeBackgroundFadeInEffectPb) && object.Equals(this.FadeBackgroundFadeOutEffectPb, other.FadeBackgroundFadeOutEffectPb) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601B20F RID: 111119 RVA: 0x003EE540 File Offset: 0x003EC740
+		// Token: 0x0601BC9A RID: 113818 RVA: 0x00409814 File Offset: 0x00407A14
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -159,7 +159,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B210 RID: 111120 RVA: 0x003EE5A8 File Offset: 0x003EC7A8
+		// Token: 0x0601BC9B RID: 113819 RVA: 0x0040987C File Offset: 0x00407A7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601B211 RID: 111121 RVA: 0x003EE5B5 File Offset: 0x003EC7B5
+		// Token: 0x0601BC9C RID: 113820 RVA: 0x00409889 File Offset: 0x00407A89
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601B212 RID: 111122 RVA: 0x003EE5C0 File Offset: 0x003EC7C0
+		// Token: 0x0601BC9D RID: 113821 RVA: 0x00409894 File Offset: 0x00407A94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B213 RID: 111123 RVA: 0x003EE638 File Offset: 0x003EC838
+		// Token: 0x0601BC9E RID: 113822 RVA: 0x0040990C File Offset: 0x00407B0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -226,7 +226,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B214 RID: 111124 RVA: 0x003EE6A8 File Offset: 0x003EC8A8
+		// Token: 0x0601BC9F RID: 113823 RVA: 0x0040997C File Offset: 0x00407B7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TransitionPlayFlowPb other)
@@ -262,7 +262,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601B215 RID: 111125 RVA: 0x003EE754 File Offset: 0x003EC954
+		// Token: 0x0601BCA0 RID: 113824 RVA: 0x00409A28 File Offset: 0x00407C28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -270,7 +270,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601B216 RID: 111126 RVA: 0x003EE760 File Offset: 0x003EC960
+		// Token: 0x0601BCA1 RID: 113825 RVA: 0x00409A34 File Offset: 0x00407C34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -319,25 +319,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009CF4 RID: 40180
+		// Token: 0x0400A13B RID: 41275
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009CF5 RID: 40181
+		// Token: 0x0400A13C RID: 41276
 		public const int ActionParamPbFieldNumber = 1;
 
-		// Token: 0x04009CF6 RID: 40182
+		// Token: 0x0400A13D RID: 41277
 		private TransitionPlayFlowActionParamPb actionParamPb_;
 
-		// Token: 0x04009CF7 RID: 40183
+		// Token: 0x0400A13E RID: 41278
 		public const int FadeBackgroundFadeInEffectPbFieldNumber = 2;
 
-		// Token: 0x04009CF8 RID: 40184
+		// Token: 0x0400A13F RID: 41279
 		private FadeBackgroundFadeInEffectPb fadeBackgroundFadeInEffectPb_;
 
-		// Token: 0x04009CF9 RID: 40185
+		// Token: 0x0400A140 RID: 41280
 		public const int FadeBackgroundFadeOutEffectPbFieldNumber = 3;
 
-		// Token: 0x04009CFA RID: 40186
+		// Token: 0x0400A141 RID: 41281
 		private FadeBackgroundFadeOutEffectPb fadeBackgroundFadeOutEffectPb_;
 	}
 }

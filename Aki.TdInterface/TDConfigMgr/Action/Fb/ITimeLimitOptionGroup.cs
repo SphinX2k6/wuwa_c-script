@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200252B RID: 9515
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020027D2 RID: 10194
 	public class ITimeLimitOptionGroup
 	{
-		// Token: 0x0600D424 RID: 54308 RVA: 0x001F69BB File Offset: 0x001F4BBB
+		// Token: 0x0600E184 RID: 57732 RVA: 0x0021241B File Offset: 0x0021061B
 		public static ITimeLimitOptionGroup Create(ITimeLimitOptionGroup? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B90 RID: 15248
-		// (get) Token: 0x0600D425 RID: 54309 RVA: 0x001F69DA File Offset: 0x001F4BDA
+		// Token: 0x17003E8E RID: 16014
+		// (get) Token: 0x0600E185 RID: 57733 RVA: 0x0021243A File Offset: 0x0021063A
 		public virtual ITimeLimitOptionGroupDefault Style
 		{
 			get
@@ -38,14 +36,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007433 RID: 29747
+		// Token: 0x04007A88 RID: 31368
 		private ITimeLimitOptionGroup Instance;
 
-		// Token: 0x04007434 RID: 29748
+		// Token: 0x04007A89 RID: 31369
 		[Nullable(2)]
 		private ITimeLimitOptionGroupDefault _StyleCache;
 
-		// Token: 0x04007435 RID: 29749
+		// Token: 0x04007A8A RID: 31370
 		private bool _StyleInited;
 	}
 }

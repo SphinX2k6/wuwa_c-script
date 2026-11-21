@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200622F RID: 25135
+	// Token: 0x020051AD RID: 20909
 	public class SongDetailPanel : UiPanelBase
 	{
-		// Token: 0x0603F601 RID: 259585 RVA: 0x00F52114 File Offset: 0x00F50314
+		// Token: 0x060342C2 RID: 213698 RVA: 0x00E99070 File Offset: 0x00E97270
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,13 +27,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F602 RID: 259586 RVA: 0x00F521DC File Offset: 0x00F503DC
+		// Token: 0x060342C3 RID: 213699 RVA: 0x00E99138 File Offset: 0x00E97338
 		protected override void OnStart()
 		{
 			this.StarLayout = new GenericLayout<RhythmShipPauseStarItem, bool>(base.GetHorizontalLayout(6), () => new RhythmShipPauseStarItem(), null, false, true);
 		}
 
-		// Token: 0x0603F603 RID: 259587 RVA: 0x00F52214 File Offset: 0x00F50414
+		// Token: 0x060342C4 RID: 213700 RVA: 0x00E99170 File Offset: 0x00E97370
 		public void RefreshPanel()
 		{
 			RhythmShipLevel? rhythmShipLevelById = RhythmShipConfig.Instance.GetRhythmShipLevelById(RhythmShipModel.Instance.RhythmShipLevelId);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			starLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0402116D RID: 135533
+		// Token: 0x0401BA9C RID: 113308
 		[Nullable(new byte[]
 		{
 			2,

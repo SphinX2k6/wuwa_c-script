@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200237B RID: 9083
+	// Token: 0x02002604 RID: 9732
 	public static class EMainCharacterSkinExtensions
 	{
-		// Token: 0x0600C628 RID: 50728 RVA: 0x001D0770 File Offset: 0x001CE970
+		// Token: 0x0600D26C RID: 53868 RVA: 0x001E9744 File Offset: 0x001E7944
 		public static string ToEnumString(this EMainCharacterSkin value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C629 RID: 50729 RVA: 0x001D0798 File Offset: 0x001CE998
+		// Token: 0x0600D26D RID: 53869 RVA: 0x001E976C File Offset: 0x001E796C
 		public static EMainCharacterSkin FromString(string name)
 		{
 			EMainCharacterSkin result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C62A RID: 50730 RVA: 0x001D07C1 File Offset: 0x001CE9C1
+		// Token: 0x0600D26E RID: 53870 RVA: 0x001E9795 File Offset: 0x001E7995
 		public static bool TryFromString(string name, out EMainCharacterSkin value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C62B RID: 50731 RVA: 0x001D07E6 File Offset: 0x001CE9E6
+		// Token: 0x0600D26F RID: 53871 RVA: 0x001E97BA File Offset: 0x001E79BA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C62C RID: 50732 RVA: 0x001D07F6 File Offset: 0x001CE9F6
+		// Token: 0x0600D270 RID: 53872 RVA: 0x001E97CA File Offset: 0x001E79CA
 		public static EMainCharacterSkin[] GetValues()
 		{
 			return new EMainCharacterSkin[1];
 		}
 
-		// Token: 0x0600C62D RID: 50733 RVA: 0x001D07FE File Offset: 0x001CE9FE
+		// Token: 0x0600D271 RID: 53873 RVA: 0x001E97D2 File Offset: 0x001E79D2
 		public static string[] GetNames()
 		{
 			return new string[]

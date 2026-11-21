@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B1E RID: 2846
+	// Token: 0x02000BFE RID: 3070
 	public struct BabelTowerDeEffect : IFlatbufferObject
 	{
-		// Token: 0x170003F3 RID: 1011
-		// (get) Token: 0x06004AB6 RID: 19126 RVA: 0x001DCC69 File Offset: 0x001DAE69
+		// Token: 0x17000433 RID: 1075
+		// (get) Token: 0x06005078 RID: 20600 RVA: 0x001FD18F File Offset: 0x001FB38F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004AB7 RID: 19127 RVA: 0x001DCC76 File Offset: 0x001DAE76
+		// Token: 0x06005079 RID: 20601 RVA: 0x001FD19C File Offset: 0x001FB39C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004AB8 RID: 19128 RVA: 0x001DCC80 File Offset: 0x001DAE80
+		// Token: 0x0600507A RID: 20602 RVA: 0x001FD1A4 File Offset: 0x001FB3A4
 		public static BabelTowerDeEffect GetRootAsBabelTowerDeEffect(ByteBuffer _bb)
 		{
 			return BabelTowerDeEffect.GetRootAsBabelTowerDeEffect(_bb, default(BabelTowerDeEffect));
 		}
 
-		// Token: 0x06004AB9 RID: 19129 RVA: 0x001DCC9C File Offset: 0x001DAE9C
+		// Token: 0x0600507B RID: 20603 RVA: 0x001FD1C0 File Offset: 0x001FB3C0
 		public static BabelTowerDeEffect GetRootAsBabelTowerDeEffect(ByteBuffer _bb, BabelTowerDeEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004ABA RID: 19130 RVA: 0x001DCCB9 File Offset: 0x001DAEB9
+		// Token: 0x0600507C RID: 20604 RVA: 0x001FD1DD File Offset: 0x001FB3DD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004ABB RID: 19131 RVA: 0x001DCCC8 File Offset: 0x001DAEC8
+		// Token: 0x0600507D RID: 20605 RVA: 0x001FD1EC File Offset: 0x001FB3EC
 		public BabelTowerDeEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170003F4 RID: 1012
-		// (get) Token: 0x06004ABC RID: 19132 RVA: 0x001DCCD8 File Offset: 0x001DAED8
+		// Token: 0x17000434 RID: 1076
+		// (get) Token: 0x0600507E RID: 20606 RVA: 0x001FD1FC File Offset: 0x001FB3FC
 		public int Id
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004B0E RID: 19214
+		// Token: 0x040050EE RID: 20718
 		private Table __p;
 	}
 }

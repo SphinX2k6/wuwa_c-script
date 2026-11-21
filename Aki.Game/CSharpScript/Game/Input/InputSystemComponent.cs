@@ -6,16 +6,16 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Input
 {
-	// Token: 0x02006FD1 RID: 28625
+	// Token: 0x02006152 RID: 24914
 	public class InputSystemComponent : IInputHandler
 	{
-		// Token: 0x060459F8 RID: 285176 RVA: 0x0114A6E0 File Offset: 0x011488E0
+		// Token: 0x0603BBA9 RID: 244649 RVA: 0x010F44D4 File Offset: 0x010F26D4
 		public InputSystemComponent()
 		{
 			this.SetNormalAction();
 		}
 
-		// Token: 0x060459F9 RID: 285177 RVA: 0x0114A6FC File Offset: 0x011488FC
+		// Token: 0x0603BBAA RID: 244650 RVA: 0x010F44F0 File Offset: 0x010F26F0
 		public void ReceiveBeginPlay()
 		{
 			EventSystem.Instance.Add(EEventName.UnBlockCharacterAction, new Action(this.UnBlockCharacterEvent));
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Input
 			EventSystem.Instance.Add(EEventName.ResetNormalAction, new Action(this.ResetNormalActionEvent));
 		}
 
-		// Token: 0x060459FA RID: 285178 RVA: 0x0114A754 File Offset: 0x01148954
+		// Token: 0x0603BBAB RID: 244651 RVA: 0x010F4548 File Offset: 0x010F2748
 		public void ReceiveEndPlay()
 		{
 			EventSystem.Instance.Remove(EEventName.UnBlockCharacterAction, new Action(this.UnBlockCharacterEvent));
@@ -31,19 +31,19 @@ namespace CSharpScript.Game.Input
 			EventSystem.Instance.Remove(EEventName.ResetNormalAction, new Action(this.ResetNormalActionEvent));
 		}
 
-		// Token: 0x060459FB RID: 285179 RVA: 0x0114A7AC File Offset: 0x011489AC
+		// Token: 0x0603BBAC RID: 244652 RVA: 0x010F45A0 File Offset: 0x010F27A0
 		private void UnBlockCharacterEvent()
 		{
 			this.InputGroup = new InputFilter(null, null, null, null);
 		}
 
-		// Token: 0x060459FC RID: 285180 RVA: 0x0114A7BD File Offset: 0x011489BD
+		// Token: 0x0603BBAD RID: 244653 RVA: 0x010F45B1 File Offset: 0x010F27B1
 		private void ResetSystemActionEvent()
 		{
 			this.SetCurrentSystemAction();
 		}
 
-		// Token: 0x060459FD RID: 285181 RVA: 0x0114A7C8 File Offset: 0x011489C8
+		// Token: 0x0603BBAE RID: 244654 RVA: 0x010F45BC File Offset: 0x010F27BC
 		protected void SetInputActionList(EInputAction action, EUiViewName uiViewName)
 		{
 			HashSet<EInputAction> hashSet = new HashSet<EInputAction>();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Input
 			this.InputActionViewsMap[uiViewName] = hashSet;
 		}
 
-		// Token: 0x060459FE RID: 285182 RVA: 0x0114A850 File Offset: 0x01148A50
+		// Token: 0x0603BBAF RID: 244655 RVA: 0x010F4644 File Offset: 0x010F2844
 		protected void SetCurrentSystemAction()
 		{
 			HashSet<EInputAction> hashSet = new HashSet<EInputAction>();
@@ -76,13 +76,13 @@ namespace CSharpScript.Game.Input
 			this.InputGroup = new InputFilter(hashSet, InputFilterManager.CharacterActions, null, InputFilterManager.CharacterAxes);
 		}
 
-		// Token: 0x060459FF RID: 285183 RVA: 0x0114A8FC File Offset: 0x01148AFC
+		// Token: 0x0603BBB0 RID: 244656 RVA: 0x010F46F0 File Offset: 0x010F28F0
 		private void ResetNormalActionEvent()
 		{
 			this.SetNormalAction();
 		}
 
-		// Token: 0x06045A00 RID: 285184 RVA: 0x0114A904 File Offset: 0x01148B04
+		// Token: 0x0603BBB1 RID: 244657 RVA: 0x010F46F8 File Offset: 0x010F28F8
 		protected void SetNormalAction()
 		{
 			HashSet<EInputAction> hashSet = new HashSet<EInputAction>();
@@ -93,20 +93,20 @@ namespace CSharpScript.Game.Input
 			this.InputGroup = new InputFilter(hashSet, null, null, null);
 		}
 
-		// Token: 0x06045A01 RID: 285185 RVA: 0x0114A974 File Offset: 0x01148B74
+		// Token: 0x0603BBB2 RID: 244658 RVA: 0x010F4768 File Offset: 0x010F2968
 		public int GetPriority()
 		{
 			return 1;
 		}
 
-		// Token: 0x06045A02 RID: 285186 RVA: 0x0114A977 File Offset: 0x01148B77
+		// Token: 0x0603BBB3 RID: 244659 RVA: 0x010F476B File Offset: 0x010F296B
 		[NullableContext(1)]
 		public InputFilter GetInputFilter()
 		{
 			return this.InputGroup;
 		}
 
-		// Token: 0x06045A03 RID: 285187 RVA: 0x0114A980 File Offset: 0x01148B80
+		// Token: 0x0603BBB4 RID: 244660 RVA: 0x010F4774 File Offset: 0x010F2974
 		public void HandlePressEvent(EInputAction action, float time)
 		{
 			EUiViewName p;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Input
 			EventSystem.Instance.Emit<EInputAction>(EEventName.ViewHotKeyInputPress, action);
 		}
 
-		// Token: 0x06045A04 RID: 285188 RVA: 0x0114A9BC File Offset: 0x01148BBC
+		// Token: 0x0603BBB5 RID: 244661 RVA: 0x010F47B0 File Offset: 0x010F29B0
 		public void HandleReleaseEvent(EInputAction action, float time)
 		{
 			EUiViewName euiViewName;
@@ -129,41 +129,41 @@ namespace CSharpScript.Game.Input
 			EventSystem.Instance.Emit<EInputAction>(EEventName.ViewHotKeyInputRelease, action);
 		}
 
-		// Token: 0x06045A05 RID: 285189 RVA: 0x0114A9E7 File Offset: 0x01148BE7
+		// Token: 0x0603BBB6 RID: 244662 RVA: 0x010F47DB File Offset: 0x010F29DB
 		public void HandleHoldEvent(EInputAction action, float time)
 		{
 		}
 
-		// Token: 0x06045A06 RID: 285190 RVA: 0x0114A9E9 File Offset: 0x01148BE9
+		// Token: 0x0603BBB7 RID: 244663 RVA: 0x010F47DD File Offset: 0x010F29DD
 		public void HandleInputAxis(EInputAxis axis, float value)
 		{
 		}
 
-		// Token: 0x06045A07 RID: 285191 RVA: 0x0114A9EB File Offset: 0x01148BEB
+		// Token: 0x0603BBB8 RID: 244664 RVA: 0x010F47DF File Offset: 0x010F29DF
 		public void ClearInputAxis(bool nextFrame)
 		{
 		}
 
-		// Token: 0x06045A08 RID: 285192 RVA: 0x0114A9ED File Offset: 0x01148BED
+		// Token: 0x0603BBB9 RID: 244665 RVA: 0x010F47E1 File Offset: 0x010F29E1
 		public void ClearSingleAxisInput(EInputAxis axis, bool nextFrame)
 		{
 		}
 
-		// Token: 0x06045A09 RID: 285193 RVA: 0x0114A9EF File Offset: 0x01148BEF
+		// Token: 0x0603BBBA RID: 244666 RVA: 0x010F47E3 File Offset: 0x010F29E3
 		public void PreProcessInput(float deltaTime, bool gamePaused)
 		{
 		}
 
-		// Token: 0x06045A0A RID: 285194 RVA: 0x0114A9F1 File Offset: 0x01148BF1
+		// Token: 0x0603BBBB RID: 244667 RVA: 0x010F47E5 File Offset: 0x010F29E5
 		public void PostProcessInput(float deltaTime, bool gamePaused)
 		{
 		}
 
-		// Token: 0x0402457A RID: 148858
+		// Token: 0x0401F82F RID: 129071
 		[Nullable(2)]
 		private InputFilter InputGroup;
 
-		// Token: 0x0402457B RID: 148859
+		// Token: 0x0401F830 RID: 129072
 		[Nullable(1)]
 		private readonly Dictionary<EUiViewName, HashSet<EInputAction>> InputActionViewsMap = new Dictionary<EUiViewName, HashSet<EInputAction>>();
 	}

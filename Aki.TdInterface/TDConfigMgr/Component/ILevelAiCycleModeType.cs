@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004B6 RID: 1206
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200050F RID: 1295
 	public class ILevelAiCycleModeType
 	{
-		// Token: 0x06001858 RID: 6232 RVA: 0x00048DF4 File Offset: 0x00046FF4
+		// Token: 0x060019F2 RID: 6642 RVA: 0x0004CB3C File Offset: 0x0004AD3C
 		private ILevelAiCycleModeType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001859 RID: 6233 RVA: 0x00048E2C File Offset: 0x0004702C
+		// Token: 0x060019F3 RID: 6643 RVA: 0x0004CB74 File Offset: 0x0004AD74
 		public static ILevelAiCycleModeType Create([Nullable(2)] ILevelAiCycleModeType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600185A RID: 6234 RVA: 0x00048E3F File Offset: 0x0004703F
+		// Token: 0x060019F4 RID: 6644 RVA: 0x0004CB87 File Offset: 0x0004AD87
 		public static ILevelAiCycleModeType CreateFromSetValue([Nullable(2)] ILevelAiCycleModeType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600185B RID: 6235 RVA: 0x00048E52 File Offset: 0x00047052
+		// Token: 0x060019F5 RID: 6645 RVA: 0x0004CB9A File Offset: 0x0004AD9A
 		public ILevelAiCycleModeType_SetValue ToSetValue()
 		{
 			return new ILevelAiCycleModeType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700067A RID: 1658
-		// (get) Token: 0x0600185C RID: 6236 RVA: 0x00048E65 File Offset: 0x00047065
-		// (set) Token: 0x0600185D RID: 6237 RVA: 0x00048E90 File Offset: 0x00047090
+		// Token: 0x170006E1 RID: 1761
+		// (get) Token: 0x060019F6 RID: 6646 RVA: 0x0004CBAD File Offset: 0x0004ADAD
+		// (set) Token: 0x060019F7 RID: 6647 RVA: 0x0004CBD8 File Offset: 0x0004ADD8
 		public virtual ELevelAiCycleMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400120E RID: 4622
+		// Token: 0x04001330 RID: 4912
 		[Nullable(2)]
 		protected ILevelAiCycleModeType FbInstance;
 
-		// Token: 0x0400120F RID: 4623
+		// Token: 0x04001331 RID: 4913
 		[Nullable(2)]
 		protected ILevelAiCycleModeType_SetValue PocoInterface;
 	}

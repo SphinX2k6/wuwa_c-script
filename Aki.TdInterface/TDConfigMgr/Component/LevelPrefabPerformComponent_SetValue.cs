@@ -4,32 +4,32 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000826 RID: 2086
+	// Token: 0x020008C9 RID: 2249
 	public class LevelPrefabPerformComponent_SetValue
 	{
-		// Token: 0x04001E0C RID: 7692
+		// Token: 0x04002018 RID: 8216
 		public bool? Disabled;
 
-		// Token: 0x04001E0D RID: 7693
+		// Token: 0x04002019 RID: 8217
 		public bool? EdIsLocked;
 
-		// Token: 0x04001E0E RID: 7694
+		// Token: 0x0400201A RID: 8218
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ITowardEntityConfig> TowardEntity;
 
-		// Token: 0x04001E0F RID: 7695
+		// Token: 0x0400201B RID: 8219
 		[Nullable(2)]
 		public ILevelPrefabParamsConfig PrefabParams;
 
-		// Token: 0x04001E10 RID: 7696
+		// Token: 0x0400201C RID: 8220
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IPrefabCompTransform> CompTransform;
 	}

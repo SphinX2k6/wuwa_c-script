@@ -3,39 +3,39 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 {
-	// Token: 0x02005219 RID: 21017
+	// Token: 0x020041E9 RID: 16873
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CardDetailConditionOutData : ICardDetailConditionOutData
 	{
-		// Token: 0x17008217 RID: 33303
-		// (get) Token: 0x06035BEA RID: 220138 RVA: 0x00CB90DE File Offset: 0x00CB72DE
-		// (set) Token: 0x06035BEB RID: 220139 RVA: 0x00CB90E6 File Offset: 0x00CB72E6
+		// Token: 0x170055D7 RID: 21975
+		// (get) Token: 0x0602AAE5 RID: 174821 RVA: 0x00C06722 File Offset: 0x00C04922
+		// (set) Token: 0x0602AAE6 RID: 174822 RVA: 0x00C0672A File Offset: 0x00C0492A
 		public int CurrentProgress { get; set; }
 
-		// Token: 0x17008218 RID: 33304
-		// (get) Token: 0x06035BEC RID: 220140 RVA: 0x00CB90EF File Offset: 0x00CB72EF
-		// (set) Token: 0x06035BED RID: 220141 RVA: 0x00CB90F7 File Offset: 0x00CB72F7
+		// Token: 0x170055D8 RID: 21976
+		// (get) Token: 0x0602AAE7 RID: 174823 RVA: 0x00C06733 File Offset: 0x00C04933
+		// (set) Token: 0x0602AAE8 RID: 174824 RVA: 0x00C0673B File Offset: 0x00C0493B
 		public int MaxProgress { get; set; }
 
-		// Token: 0x17008219 RID: 33305
-		// (get) Token: 0x06035BEE RID: 220142 RVA: 0x00CB9100 File Offset: 0x00CB7300
-		// (set) Token: 0x06035BEF RID: 220143 RVA: 0x00CB9108 File Offset: 0x00CB7308
+		// Token: 0x170055D9 RID: 21977
+		// (get) Token: 0x0602AAE9 RID: 174825 RVA: 0x00C06744 File Offset: 0x00C04944
+		// (set) Token: 0x0602AAEA RID: 174826 RVA: 0x00C0674C File Offset: 0x00C0494C
 		public string Icon { get; set; }
 
-		// Token: 0x1700821A RID: 33306
-		// (get) Token: 0x06035BF0 RID: 220144 RVA: 0x00CB9111 File Offset: 0x00CB7311
-		// (set) Token: 0x06035BF1 RID: 220145 RVA: 0x00CB9119 File Offset: 0x00CB7319
+		// Token: 0x170055DA RID: 21978
+		// (get) Token: 0x0602AAEB RID: 174827 RVA: 0x00C06755 File Offset: 0x00C04955
+		// (set) Token: 0x0602AAEC RID: 174828 RVA: 0x00C0675D File Offset: 0x00C0495D
 		public string ConditionDesc { get; set; }
 
-		// Token: 0x1700821B RID: 33307
-		// (get) Token: 0x06035BF2 RID: 220146 RVA: 0x00CB9122 File Offset: 0x00CB7322
-		// (set) Token: 0x06035BF3 RID: 220147 RVA: 0x00CB912A File Offset: 0x00CB732A
+		// Token: 0x170055DB RID: 21979
+		// (get) Token: 0x0602AAED RID: 174829 RVA: 0x00C06766 File Offset: 0x00C04966
+		// (set) Token: 0x0602AAEE RID: 174830 RVA: 0x00C0676E File Offset: 0x00C0496E
 		public string Title { get; set; }
 
-		// Token: 0x1700821C RID: 33308
-		// (get) Token: 0x06035BF4 RID: 220148 RVA: 0x00CB9133 File Offset: 0x00CB7333
-		// (set) Token: 0x06035BF5 RID: 220149 RVA: 0x00CB913B File Offset: 0x00CB733B
+		// Token: 0x170055DC RID: 21980
+		// (get) Token: 0x0602AAEF RID: 174831 RVA: 0x00C06777 File Offset: 0x00C04977
+		// (set) Token: 0x0602AAF0 RID: 174832 RVA: 0x00C0677F File Offset: 0x00C0497F
 		public bool? TitleChangeColor { get; set; }
 	}
 }

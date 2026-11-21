@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058DE RID: 22750
+	// Token: 0x020048B6 RID: 18614
 	public class InstanceDungeonEntranceFlowNormal : InstanceDungeonEntranceFlowBase
 	{
-		// Token: 0x06039CC8 RID: 236744 RVA: 0x00DBB028 File Offset: 0x00DB9228
+		// Token: 0x0602EBEB RID: 191467 RVA: 0x00D09F80 File Offset: 0x00D08180
 		protected override void OnCreate()
 		{
 			base.AddStep(delegate

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026E5 RID: 9957
+	// Token: 0x020029A9 RID: 10665
 	public class ISetBattleTagConfig
 	{
-		// Token: 0x0600DE6D RID: 56941 RVA: 0x0020FFEC File Offset: 0x0020E1EC
-		[NullableContext(1)]
+		// Token: 0x0600EC49 RID: 60489 RVA: 0x0022C82C File Offset: 0x0022AA2C
 		public static ISetBattleTagConfig Create(ISetBattleTagConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004265 RID: 16997
-		// (get) Token: 0x0600DE6E RID: 56942 RVA: 0x0021000B File Offset: 0x0020E20B
+		// Token: 0x170045A5 RID: 17829
+		// (get) Token: 0x0600EC4A RID: 60490 RVA: 0x0022C84B File Offset: 0x0022AA4B
 		public virtual int EntityId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004266 RID: 16998
-		// (get) Token: 0x0600DE6F RID: 56943 RVA: 0x00210018 File Offset: 0x0020E218
+		// Token: 0x170045A6 RID: 17830
+		// (get) Token: 0x0600EC4B RID: 60491 RVA: 0x0022C858 File Offset: 0x0022AA58
 		public virtual int TagConfigId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004267 RID: 16999
-		// (get) Token: 0x0600DE70 RID: 56944 RVA: 0x00210028 File Offset: 0x0020E228
+		// Token: 0x170045A7 RID: 17831
+		// (get) Token: 0x0600EC4C RID: 60492 RVA: 0x0022C868 File Offset: 0x0022AA68
 		public virtual int? DelayTime
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B77 RID: 31607
+		// Token: 0x04008217 RID: 33303
 		private ISetBattleTagConfig Instance;
 	}
 }

@@ -4,18 +4,18 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001AEB RID: 6891
+// Token: 0x02000FAA RID: 4010
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchToyLevelUpActionData : FloroRanchActionDataBase
 {
-	// Token: 0x0600CC30 RID: 52272 RVA: 0x002E9857 File Offset: 0x002E7A57
+	// Token: 0x0600A041 RID: 41025 RVA: 0x002F49EB File Offset: 0x002F2BEB
 	public FloroRanchToyLevelUpActionData(FloroRanchUnitActionMsg actionData) : base(actionData)
 	{
 		this.ActionData = actionData.ToyLvUp;
 	}
 
-	// Token: 0x0600CC31 RID: 52273 RVA: 0x002E986C File Offset: 0x002E7A6C
+	// Token: 0x0600A042 RID: 41026 RVA: 0x002F4A00 File Offset: 0x002F2C00
 	public override UniTask OnExecute()
 	{
 		FloroRanchToyLevelUpActionData.<OnExecute>d__2 <OnExecute>d__;
@@ -26,6 +26,6 @@ public class FloroRanchToyLevelUpActionData : FloroRanchActionDataBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005DDC RID: 24028
+	// Token: 0x04005EAB RID: 24235
 	private readonly FRActionToyLvUp ActionData;
 }

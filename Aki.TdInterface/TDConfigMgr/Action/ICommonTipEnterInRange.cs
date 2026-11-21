@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001916 RID: 6422
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A9F RID: 6815
 	public class ICommonTipEnterInRange : ICommonTipType
 	{
-		// Token: 0x060089A7 RID: 35239 RVA: 0x00144CE4 File Offset: 0x00142EE4
+		// Token: 0x060090D3 RID: 37075 RVA: 0x00154624 File Offset: 0x00152824
 		private ICommonTipEnterInRange_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060089A8 RID: 35240 RVA: 0x00144D1C File Offset: 0x00142F1C
+		// Token: 0x060090D4 RID: 37076 RVA: 0x0015465C File Offset: 0x0015285C
 		public static ICommonTipEnterInRange Create([Nullable(2)] ICommonTipEnterInRange instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060089A9 RID: 35241 RVA: 0x00144D2F File Offset: 0x00142F2F
+		// Token: 0x060090D5 RID: 37077 RVA: 0x0015466F File Offset: 0x0015286F
 		public static ICommonTipEnterInRange CreateFromSetValue([Nullable(2)] ICommonTipEnterInRange_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060089AA RID: 35242 RVA: 0x00144D42 File Offset: 0x00142F42
+		// Token: 0x060090D6 RID: 37078 RVA: 0x00154682 File Offset: 0x00152882
 		public new ICommonTipEnterInRange_SetValue ToSetValue()
 		{
 			return new ICommonTipEnterInRange_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C87 RID: 11399
-		// (get) Token: 0x060089AB RID: 35243 RVA: 0x00144D6D File Offset: 0x00142F6D
-		// (set) Token: 0x060089AC RID: 35244 RVA: 0x00144D98 File Offset: 0x00142F98
+		// Token: 0x17002E87 RID: 11911
+		// (get) Token: 0x060090D7 RID: 37079 RVA: 0x001546AD File Offset: 0x001528AD
+		// (set) Token: 0x060090D8 RID: 37080 RVA: 0x001546D8 File Offset: 0x001528D8
 		public override ECommonTipType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C88 RID: 11400
-		// (get) Token: 0x060089AD RID: 35245 RVA: 0x00144DA6 File Offset: 0x00142FA6
-		// (set) Token: 0x060089AE RID: 35246 RVA: 0x00144DD1 File Offset: 0x00142FD1
+		// Token: 0x17002E88 RID: 11912
+		// (get) Token: 0x060090D9 RID: 37081 RVA: 0x001546E6 File Offset: 0x001528E6
+		// (set) Token: 0x060090DA RID: 37082 RVA: 0x00154711 File Offset: 0x00152911
 		public virtual string TidText
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C89 RID: 11401
-		// (get) Token: 0x060089AF RID: 35247 RVA: 0x00144DDF File Offset: 0x00142FDF
-		// (set) Token: 0x060089B0 RID: 35248 RVA: 0x00144DF6 File Offset: 0x00142FF6
+		// Token: 0x17002E89 RID: 11913
+		// (get) Token: 0x060090DB RID: 37083 RVA: 0x0015471F File Offset: 0x0015291F
+		// (set) Token: 0x060090DC RID: 37084 RVA: 0x00154736 File Offset: 0x00152936
 		[Nullable(2)]
 		public virtual string EdTidText
 		{
@@ -129,11 +127,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005634 RID: 22068
+		// Token: 0x04005A84 RID: 23172
 		[Nullable(2)]
 		protected new ICommonTipEnterInRange FbInstance;
 
-		// Token: 0x04005635 RID: 22069
+		// Token: 0x04005A85 RID: 23173
 		[Nullable(2)]
 		protected new ICommonTipEnterInRange_SetValue PocoInterface;
 	}

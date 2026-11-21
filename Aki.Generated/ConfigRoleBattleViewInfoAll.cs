@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000886 RID: 2182
+	// Token: 0x020008A2 RID: 2210
 	public class ConfigRoleBattleViewInfoAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003336 RID: 13110 RVA: 0x0017AF24 File Offset: 0x00179124
+		// Token: 0x060033DE RID: 13278 RVA: 0x0018220C File Offset: 0x0018040C
 		static ConfigRoleBattleViewInfoAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleBattleViewInfoAll.CreateStaticDefaultValue), new Action(ConfigRoleBattleViewInfoAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003337 RID: 13111 RVA: 0x0017AF44 File Offset: 0x00179144
+		// Token: 0x060033DF RID: 13279 RVA: 0x0018222C File Offset: 0x0018042C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleBattleViewInfoAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003338 RID: 13112 RVA: 0x0017AFC3 File Offset: 0x001791C3
+		// Token: 0x060033E0 RID: 13280 RVA: 0x001822AB File Offset: 0x001804AB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleBattleViewInfoAll.LogPair = null;
 			ConfigRoleBattleViewInfoAll.HandleId = 0;
 		}
 
-		// Token: 0x06003339 RID: 13113 RVA: 0x0017AFD1 File Offset: 0x001791D1
+		// Token: 0x060033E1 RID: 13281 RVA: 0x001822B9 File Offset: 0x001804B9
 		public static void Init()
 		{
 			ConfigRoleBattleViewInfoAll.HandleId = ConfigCommon.InitDataStatement(ConfigRoleBattleViewInfoAll.HandleId, "db_role_battle_view.db", "select BinData from `RoleBattleViewInfo`");
 		}
 
-		// Token: 0x0600333A RID: 13114 RVA: 0x0017AFEC File Offset: 0x001791EC
+		// Token: 0x060033E2 RID: 13282 RVA: 0x001822D4 File Offset: 0x001804D4
 		[NullableContext(2)]
 		public static IReadOnlyList<RoleBattleViewInfo> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003B90 RID: 15248
+		// Token: 0x04003C54 RID: 15444
 		private const string DB = "db_role_battle_view.db";
 
-		// Token: 0x04003B91 RID: 15249
+		// Token: 0x04003C55 RID: 15445
 		private const string FILE = "j.角色战斗界面布局.xlsx";
 
-		// Token: 0x04003B92 RID: 15250
+		// Token: 0x04003C56 RID: 15446
 		private const string TABLE = "RoleBattleViewInfo";
 
-		// Token: 0x04003B93 RID: 15251
+		// Token: 0x04003C57 RID: 15447
 		private const string COMMAND = "select BinData from `RoleBattleViewInfo`";
 
-		// Token: 0x04003B94 RID: 15252
+		// Token: 0x04003C58 RID: 15448
 		private const string KEY_PREFIX = "RoleBattleViewInfoAll";
 
-		// Token: 0x04003B95 RID: 15253
+		// Token: 0x04003C59 RID: 15449
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003B96 RID: 15254
+		// Token: 0x04003C5A RID: 15450
 		private static int HandleId;
 	}
 }

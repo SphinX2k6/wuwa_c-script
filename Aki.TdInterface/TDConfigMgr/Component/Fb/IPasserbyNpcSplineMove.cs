@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CD4 RID: 3284
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DB8 RID: 3512
 	public class IPasserbyNpcSplineMove : IPasserbyNpcMoveBase
 	{
-		// Token: 0x06004B16 RID: 19222 RVA: 0x000BBC0A File Offset: 0x000B9E0A
+		// Token: 0x06004FD1 RID: 20433 RVA: 0x000C6842 File Offset: 0x000C4A42
 		public static IPasserbyNpcSplineMove Create(IPasserbyNpcSplineMove? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700172B RID: 5931
-		// (get) Token: 0x06004B17 RID: 19223 RVA: 0x000BBC29 File Offset: 0x000B9E29
+		// Token: 0x1700185C RID: 6236
+		// (get) Token: 0x06004FD2 RID: 20434 RVA: 0x000C6861 File Offset: 0x000C4A61
 		public override EPasserbyNpcMoveType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700172C RID: 5932
-		// (get) Token: 0x06004B18 RID: 19224 RVA: 0x000BBC38 File Offset: 0x000B9E38
+		// Token: 0x1700185D RID: 6237
+		// (get) Token: 0x06004FD3 RID: 20435 RVA: 0x000C6870 File Offset: 0x000C4A70
 		public virtual List<IPasserbyNpcSpline> Routes
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002AF5 RID: 10997
+		// Token: 0x04002D7B RID: 11643
 		private IPasserbyNpcSplineMove Instance;
 
-		// Token: 0x04002AF6 RID: 10998
+		// Token: 0x04002D7C RID: 11644
 		private List<IPasserbyNpcSpline> _RoutesCache;
 
-		// Token: 0x04002AF7 RID: 10999
+		// Token: 0x04002D7D RID: 11645
 		private bool _RoutesInited;
 	}
 }

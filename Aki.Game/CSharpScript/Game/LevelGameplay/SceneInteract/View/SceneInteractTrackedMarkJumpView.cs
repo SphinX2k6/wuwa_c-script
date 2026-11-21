@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract.View
 {
-	// Token: 0x02006A83 RID: 27267
+	// Token: 0x02005BE0 RID: 23520
 	public class SceneInteractTrackedMarkJumpView : SceneInteractPointViewBase
 	{
-		// Token: 0x06043C41 RID: 277569 RVA: 0x010961C4 File Offset: 0x010943C4
+		// Token: 0x06039C8F RID: 236687 RVA: 0x0103AA04 File Offset: 0x01038C04
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.View
 			this.ComponentRegisterInfos = list2;
 		}
 
-		// Token: 0x06043C42 RID: 277570 RVA: 0x010962B8 File Offset: 0x010944B8
+		// Token: 0x06039C90 RID: 236688 RVA: 0x0103AAF8 File Offset: 0x01038CF8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SceneInteractTrackedMarkJumpView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -56,38 +56,38 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043C43 RID: 277571 RVA: 0x010962FB File Offset: 0x010944FB
+		// Token: 0x06039C91 RID: 236689 RVA: 0x0103AB3B File Offset: 0x01038D3B
 		protected override void OnStart()
 		{
 			this.AddEvents();
 		}
 
-		// Token: 0x06043C44 RID: 277572 RVA: 0x01096303 File Offset: 0x01094503
+		// Token: 0x06039C92 RID: 236690 RVA: 0x0103AB43 File Offset: 0x01038D43
 		protected void AddEvents()
 		{
 			EventSystem.Instance.Add<bool>(EEventName.BattleUiMotorcycleStateChanged, new Action<bool>(this.OnMotorcycleStateChanged));
 		}
 
-		// Token: 0x06043C45 RID: 277573 RVA: 0x01096321 File Offset: 0x01094521
+		// Token: 0x06039C93 RID: 236691 RVA: 0x0103AB61 File Offset: 0x01038D61
 		protected void RemoveEvents()
 		{
 			EventSystem.Instance.Remove<bool>(EEventName.BattleUiMotorcycleStateChanged, new Action<bool>(this.OnMotorcycleStateChanged));
 		}
 
-		// Token: 0x06043C46 RID: 277574 RVA: 0x0109633F File Offset: 0x0109453F
+		// Token: 0x06039C94 RID: 236692 RVA: 0x0103AB7F File Offset: 0x01038D7F
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEvents();
 			this.KeyItem = null;
 		}
 
-		// Token: 0x06043C47 RID: 277575 RVA: 0x0109634E File Offset: 0x0109454E
+		// Token: 0x06039C95 RID: 236693 RVA: 0x0103AB8E File Offset: 0x01038D8E
 		private void OnMotorcycleStateChanged(bool bDriving)
 		{
 			this.RefreshKeyAction();
 		}
 
-		// Token: 0x06043C48 RID: 277576 RVA: 0x01096356 File Offset: 0x01094556
+		// Token: 0x06039C96 RID: 236694 RVA: 0x0103AB96 File Offset: 0x01038D96
 		private void RefreshKeyAction()
 		{
 			InputMultiKeyItem keyItem = this.KeyItem;
@@ -101,27 +101,27 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.View
 			}, false);
 		}
 
-		// Token: 0x04023677 RID: 145015
+		// Token: 0x0401E869 RID: 125033
 		[Nullable(2)]
 		private InputMultiKeyItem KeyItem;
 
-		// Token: 0x0200CB8B RID: 52107
+		// Token: 0x0200B76A RID: 46954
 		private enum EChildType
 		{
-			// Token: 0x0403D72E RID: 251694
+			// Token: 0x04038B10 RID: 232208
 			PnlPoint,
-			// Token: 0x0403D72F RID: 251695
+			// Token: 0x04038B11 RID: 232209
 			SprArrow
 		}
 
-		// Token: 0x0200CB8C RID: 52108
+		// Token: 0x0200B76B RID: 46955
 		private enum EChildTypePc
 		{
-			// Token: 0x0403D731 RID: 251697
+			// Token: 0x04038B13 RID: 232211
 			PnlPoint,
-			// Token: 0x0403D732 RID: 251698
+			// Token: 0x04038B14 RID: 232212
 			SprArrow,
-			// Token: 0x0403D733 RID: 251699
+			// Token: 0x04038B15 RID: 232213
 			HotKeyCombine
 		}
 	}

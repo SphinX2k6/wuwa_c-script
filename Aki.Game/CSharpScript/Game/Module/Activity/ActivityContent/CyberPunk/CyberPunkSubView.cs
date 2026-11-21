@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068BB RID: 26811
+	// Token: 0x0200580B RID: 22539
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CyberPunkSubView : ActivitySubViewBase
 	{
-		// Token: 0x06042E58 RID: 274008 RVA: 0x01049310 File Offset: 0x01047510
+		// Token: 0x060379B0 RID: 227760 RVA: 0x00F8A938 File Offset: 0x00F88B38
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042E59 RID: 274009 RVA: 0x010494A0 File Offset: 0x010476A0
+		// Token: 0x060379B1 RID: 227761 RVA: 0x00F8AAC8 File Offset: 0x00F88CC8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CyberPunkSubView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042E5A RID: 274010 RVA: 0x010494E4 File Offset: 0x010476E4
+		// Token: 0x060379B2 RID: 227762 RVA: 0x00F8AB0C File Offset: 0x00F88D0C
 		protected override void OnRefreshView()
 		{
 			this.RefreshTitle();
@@ -82,14 +82,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			levelSequencePlayer.PlayOrReplaySequenceByName("Start", false, null);
 		}
 
-		// Token: 0x06042E5B RID: 274011 RVA: 0x0104952C File Offset: 0x0104772C
+		// Token: 0x060379B3 RID: 227763 RVA: 0x00F8AB54 File Offset: 0x00F88D54
 		protected override void OnStart()
 		{
 			this.RefreshDesc();
 			this.PlaySpineIdle();
 		}
 
-		// Token: 0x06042E5C RID: 274012 RVA: 0x0104953C File Offset: 0x0104773C
+		// Token: 0x060379B4 RID: 227764 RVA: 0x00F8AB64 File Offset: 0x00F88D64
 		private void PlaySpineIdle()
 		{
 			USpineSkeletonAnimationComponent spine = base.GetSpine(8);
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E5D RID: 274013 RVA: 0x0104956C File Offset: 0x0104776C
+		// Token: 0x060379B5 RID: 227765 RVA: 0x00F8AB94 File Offset: 0x00F88D94
 		private void RefreshDesc()
 		{
 			Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E5E RID: 274014 RVA: 0x010495CC File Offset: 0x010477CC
+		// Token: 0x060379B6 RID: 227766 RVA: 0x00F8ABF4 File Offset: 0x00F88DF4
 		private void RefreshTitle()
 		{
 			if (this.TitleComponent == null)
@@ -135,21 +135,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E5F RID: 274015 RVA: 0x01049637 File Offset: 0x01047837
+		// Token: 0x060379B7 RID: 227767 RVA: 0x00F8AC5F File Offset: 0x00F88E5F
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRedDot));
 			EventSystem.Instance.Add(EEventName.OnCyberPunkItemUnLock, new Action(this.OnItemUnLock));
 		}
 
-		// Token: 0x06042E60 RID: 274016 RVA: 0x01049671 File Offset: 0x01047871
+		// Token: 0x060379B8 RID: 227768 RVA: 0x00F8AC99 File Offset: 0x00F88E99
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRedDot));
 			EventSystem.Instance.Remove(EEventName.OnCyberPunkItemUnLock, new Action(this.OnItemUnLock));
 		}
 
-		// Token: 0x06042E61 RID: 274017 RVA: 0x010496AB File Offset: 0x010478AB
+		// Token: 0x060379B9 RID: 227769 RVA: 0x00F8ACD3 File Offset: 0x00F88ED3
 		private void OnRefreshRedDot(int activityId)
 		{
 			if (this.ActivityBaseData != null && this.ActivityBaseData.Id == activityId)
@@ -158,13 +158,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E62 RID: 274018 RVA: 0x010496C9 File Offset: 0x010478C9
+		// Token: 0x060379BA RID: 227770 RVA: 0x00F8ACF1 File Offset: 0x00F88EF1
 		private void OnItemUnLock()
 		{
 			this.RefreshItems();
 		}
 
-		// Token: 0x06042E63 RID: 274019 RVA: 0x010496D4 File Offset: 0x010478D4
+		// Token: 0x060379BB RID: 227771 RVA: 0x00F8ACFC File Offset: 0x00F88EFC
 		[NullableContext(1)]
 		private UniTask CreateEntranceItems(IReadOnlyList<EdgeRunnerUnlock> allConfigList)
 		{
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <CreateEntranceItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042E64 RID: 274020 RVA: 0x01049718 File Offset: 0x01047918
+		// Token: 0x060379BC RID: 227772 RVA: 0x00F8AD40 File Offset: 0x00F88F40
 		private UniTask CreateStoryEntranceItem()
 		{
 			CyberPunkSubView.<CreateStoryEntranceItem>d__20 <CreateStoryEntranceItem>d__;
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <CreateStoryEntranceItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042E65 RID: 274021 RVA: 0x0104975C File Offset: 0x0104795C
+		// Token: 0x060379BD RID: 227773 RVA: 0x00F8AD84 File Offset: 0x00F88F84
 		private UniTask CreateCharacterTrialEntranceItem()
 		{
 			CyberPunkSubView.<CreateCharacterTrialEntranceItem>d__21 <CreateCharacterTrialEntranceItem>d__;
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <CreateCharacterTrialEntranceItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042E66 RID: 274022 RVA: 0x010497A0 File Offset: 0x010479A0
+		// Token: 0x060379BE RID: 227774 RVA: 0x00F8ADC8 File Offset: 0x00F88FC8
 		private UniTask CreateBossEntranceItem()
 		{
 			CyberPunkSubView.<CreateBossEntranceItem>d__22 <CreateBossEntranceItem>d__;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <CreateBossEntranceItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042E67 RID: 274023 RVA: 0x010497E4 File Offset: 0x010479E4
+		// Token: 0x060379BF RID: 227775 RVA: 0x00F8AE0C File Offset: 0x00F8900C
 		private UniTask CreateTaskEntranceItem()
 		{
 			CyberPunkSubView.<CreateTaskEntranceItem>d__23 <CreateTaskEntranceItem>d__;
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <CreateTaskEntranceItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042E68 RID: 274024 RVA: 0x01049827 File Offset: 0x01047A27
+		// Token: 0x060379C0 RID: 227776 RVA: 0x00F8AE4F File Offset: 0x00F8904F
 		private void RefreshItems()
 		{
 			this.RefreshStoryLockItem();
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshEntranceItem(this.TaskEntranceItem, 4);
 		}
 
-		// Token: 0x06042E69 RID: 274025 RVA: 0x01049864 File Offset: 0x01047A64
+		// Token: 0x060379C1 RID: 227777 RVA: 0x00F8AE8C File Offset: 0x00F8908C
 		private void RefreshStoryLockItem()
 		{
 			CyberPunkData currentActivityData = CyberPunkController.Instance.GetCurrentActivityData();
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E6A RID: 274026 RVA: 0x01049994 File Offset: 0x01047B94
+		// Token: 0x060379C2 RID: 227778 RVA: 0x00F8AFBC File Offset: 0x00F891BC
 		private void RefreshEntranceItem(CyberPunkEntranceItem item, int conditionGroup)
 		{
 			if (item == null)
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			item.Refresh(locked, entranceProgress);
 		}
 
-		// Token: 0x06042E6B RID: 274027 RVA: 0x010499D8 File Offset: 0x01047BD8
+		// Token: 0x060379C3 RID: 227779 RVA: 0x00F8B000 File Offset: 0x00F89200
 		private bool CheckEntranceLocked(EdgeRunnerUnlock? config, int conditionGroup)
 		{
 			if (conditionGroup == 4)
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return !currentActivityData.IsEntranceUnlockedByProtocol(conditionGroup, id) || ((conditionGroup == 1 || conditionGroup == 3) && !currentActivityData.IsRecommendTaskAccepted());
 		}
 
-		// Token: 0x06042E6C RID: 274028 RVA: 0x01049A44 File Offset: 0x01047C44
+		// Token: 0x060379C4 RID: 227780 RVA: 0x00F8B06C File Offset: 0x00F8926C
 		[NullableContext(1)]
 		private string GetEntranceProgress(int conditionGroup)
 		{
@@ -414,7 +414,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E6D RID: 274029 RVA: 0x01049CB8 File Offset: 0x01047EB8
+		// Token: 0x060379C5 RID: 227781 RVA: 0x00F8B2E0 File Offset: 0x00F894E0
 		private void ShowConditionDetail(int conditionGroup)
 		{
 			if (conditionGroup <= 0)
@@ -453,7 +453,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			UiManager.Instance.OpenView(EUiViewName.CommonConditionView, param, null);
 		}
 
-		// Token: 0x06042E6E RID: 274030 RVA: 0x01049DF8 File Offset: 0x01047FF8
+		// Token: 0x060379C6 RID: 227782 RVA: 0x00F8B420 File Offset: 0x00F89620
 		private void OnClickStoryItem()
 		{
 			CyberPunkData currentActivityData = CyberPunkController.Instance.GetCurrentActivityData();
@@ -496,7 +496,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.ShowDirectTrainGuideConfirmBox();
 		}
 
-		// Token: 0x06042E6F RID: 274031 RVA: 0x01049F2C File Offset: 0x0104812C
+		// Token: 0x060379C7 RID: 227783 RVA: 0x00F8B554 File Offset: 0x00F89754
 		private void ShowStoryPreOpenConfirmBox(EdgeRunnerUnlock functionConfig)
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.CyberpunkConfirm);
@@ -525,7 +525,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06042E70 RID: 274032 RVA: 0x01049FF0 File Offset: 0x010481F0
+		// Token: 0x060379C8 RID: 227784 RVA: 0x00F8B618 File Offset: 0x00F89818
 		private void ShowDirectTrainGuideConfirmBox()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.CyberPunkDirectionConfirm);
@@ -536,7 +536,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06042E71 RID: 274033 RVA: 0x0104A040 File Offset: 0x01048240
+		// Token: 0x060379C9 RID: 227785 RVA: 0x00F8B668 File Offset: 0x00F89868
 		private void OnClickBossItem()
 		{
 			CyberPunkData currentActivityData = CyberPunkController.Instance.GetCurrentActivityData();
@@ -569,88 +569,88 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.ShowDirectTrainGuideConfirmBox();
 		}
 
-		// Token: 0x06042E72 RID: 274034 RVA: 0x0104A108 File Offset: 0x01048308
+		// Token: 0x060379CA RID: 227786 RVA: 0x00F8B730 File Offset: 0x00F89930
 		private void OnClickCharacterTrialItem()
 		{
 			UiManager.Instance.OpenView(EUiViewName.CyberPunkTrialRoleView, null, null);
 		}
 
-		// Token: 0x06042E73 RID: 274035 RVA: 0x0104A11B File Offset: 0x0104831B
+		// Token: 0x060379CB RID: 227787 RVA: 0x00F8B743 File Offset: 0x00F89943
 		private void OnClickTaskItem()
 		{
 			UiManager.Instance.OpenView(EUiViewName.CyberPunkTaskView, null, null);
 		}
 
-		// Token: 0x06042E74 RID: 274036 RVA: 0x0104A12E File Offset: 0x0104832E
+		// Token: 0x060379CC RID: 227788 RVA: 0x00F8B756 File Offset: 0x00F89956
 		private void OnClickedCharacterBtn()
 		{
 			GachaController.Instance.OpenGachaView(100068);
 		}
 
-		// Token: 0x04022CF0 RID: 142576
+		// Token: 0x0401D54C RID: 120140
 		private ActivityTitleTypeA TitleComponent;
 
-		// Token: 0x04022CF1 RID: 142577
+		// Token: 0x0401D54D RID: 120141
 		private CyberPunkEntranceItem StoryEntranceItem;
 
-		// Token: 0x04022CF2 RID: 142578
+		// Token: 0x0401D54E RID: 120142
 		private CyberPunkEntranceItem CharacterTrialEntranceItem;
 
-		// Token: 0x04022CF3 RID: 142579
+		// Token: 0x0401D54F RID: 120143
 		private CyberPunkEntranceItem BossEntranceItem;
 
-		// Token: 0x04022CF4 RID: 142580
+		// Token: 0x0401D550 RID: 120144
 		private CyberPunkEntranceItem TaskEntranceItem;
 
-		// Token: 0x04022CF5 RID: 142581
+		// Token: 0x0401D551 RID: 120145
 		private bool IsFirstRefresh = true;
 
-		// Token: 0x0200CA83 RID: 51843
+		// Token: 0x0200B44B RID: 46155
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x0403D36A RID: 250730
+			// Token: 0x04037C44 RID: 228420
 			public const int TitleInfo = 0;
 
-			// Token: 0x0403D36B RID: 250731
+			// Token: 0x04037C45 RID: 228421
 			public const int StoryLockItem = 1;
 
-			// Token: 0x0403D36C RID: 250732
+			// Token: 0x04037C46 RID: 228422
 			public const int StoryItem = 2;
 
-			// Token: 0x0403D36D RID: 250733
+			// Token: 0x04037C47 RID: 228423
 			public const int CharacterTrialItem = 3;
 
-			// Token: 0x0403D36E RID: 250734
+			// Token: 0x04037C48 RID: 228424
 			public const int BossItem = 4;
 
-			// Token: 0x0403D36F RID: 250735
+			// Token: 0x04037C49 RID: 228425
 			public const int TaskItem = 5;
 
-			// Token: 0x0403D370 RID: 250736
+			// Token: 0x04037C4A RID: 228426
 			public const int CharacterBtn = 6;
 
-			// Token: 0x0403D371 RID: 250737
+			// Token: 0x04037C4B RID: 228427
 			public const int StoryLockText = 7;
 
-			// Token: 0x0403D372 RID: 250738
+			// Token: 0x04037C4C RID: 228428
 			public const int Spine = 8;
 		}
 
-		// Token: 0x0200CA84 RID: 51844
+		// Token: 0x0200B44C RID: 46156
 		[NullableContext(0)]
 		private static class EEntranceId
 		{
-			// Token: 0x0403D373 RID: 250739
+			// Token: 0x04037C4D RID: 228429
 			public const int StoryEntrance = 1;
 
-			// Token: 0x0403D374 RID: 250740
+			// Token: 0x04037C4E RID: 228430
 			public const int TaskEntrance = 2;
 
-			// Token: 0x0403D375 RID: 250741
+			// Token: 0x04037C4F RID: 228431
 			public const int CharacterTrialEntrance = 3;
 
-			// Token: 0x0403D376 RID: 250742
+			// Token: 0x04037C50 RID: 228432
 			public const int BossEntrance = 5;
 		}
 	}

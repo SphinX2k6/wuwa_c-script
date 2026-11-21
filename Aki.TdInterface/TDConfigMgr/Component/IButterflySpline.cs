@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200020D RID: 525
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000234 RID: 564
 	public class IButterflySpline : ISplineType
 	{
-		// Token: 0x060008BA RID: 2234 RVA: 0x000275F8 File Offset: 0x000257F8
+		// Token: 0x0600092E RID: 2350 RVA: 0x00028DB8 File Offset: 0x00026FB8
 		private IButterflySpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060008BB RID: 2235 RVA: 0x00027630 File Offset: 0x00025830
+		// Token: 0x0600092F RID: 2351 RVA: 0x00028DF0 File Offset: 0x00026FF0
 		public static IButterflySpline Create([Nullable(2)] IButterflySpline instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060008BC RID: 2236 RVA: 0x00027643 File Offset: 0x00025843
+		// Token: 0x06000930 RID: 2352 RVA: 0x00028E03 File Offset: 0x00027003
 		public static IButterflySpline CreateFromSetValue([Nullable(2)] IButterflySpline_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060008BD RID: 2237 RVA: 0x00027656 File Offset: 0x00025856
+		// Token: 0x06000931 RID: 2353 RVA: 0x00028E16 File Offset: 0x00027016
 		public new IButterflySpline_SetValue ToSetValue()
 		{
 			return new IButterflySpline_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170002A7 RID: 679
-		// (get) Token: 0x060008BE RID: 2238 RVA: 0x00027675 File Offset: 0x00025875
-		// (set) Token: 0x060008BF RID: 2239 RVA: 0x000276A0 File Offset: 0x000258A0
+		// Token: 0x170002C6 RID: 710
+		// (get) Token: 0x06000932 RID: 2354 RVA: 0x00028E35 File Offset: 0x00027035
+		// (set) Token: 0x06000933 RID: 2355 RVA: 0x00028E60 File Offset: 0x00027060
 		public override ESplineType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002A8 RID: 680
-		// (get) Token: 0x060008C0 RID: 2240 RVA: 0x000276B0 File Offset: 0x000258B0
-		// (set) Token: 0x060008C1 RID: 2241 RVA: 0x00027743 File Offset: 0x00025943
+		// Token: 0x170002C7 RID: 711
+		// (get) Token: 0x06000934 RID: 2356 RVA: 0x00028E70 File Offset: 0x00027070
+		// (set) Token: 0x06000935 RID: 2357 RVA: 0x00028F03 File Offset: 0x00027103
 		public virtual List<IButterflySplinePoint> Points
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400094B RID: 2379
+		// Token: 0x040009D5 RID: 2517
 		[Nullable(2)]
 		protected new IButterflySpline FbInstance;
 
-		// Token: 0x0400094C RID: 2380
+		// Token: 0x040009D6 RID: 2518
 		[Nullable(2)]
 		protected new IButterflySpline_SetValue PocoInterface;
 
-		// Token: 0x0400094D RID: 2381
+		// Token: 0x040009D7 RID: 2519
 		private List<IButterflySplinePoint> _PointsCache;
 
-		// Token: 0x0400094E RID: 2382
+		// Token: 0x040009D8 RID: 2520
 		private bool _PointsInited;
 	}
 }

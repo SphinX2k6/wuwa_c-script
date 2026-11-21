@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BD3 RID: 3027
+	// Token: 0x02000CB5 RID: 3253
 	public struct DangoBrawlShopRefresh : IFlatbufferObject
 	{
-		// Token: 0x17000BC7 RID: 3015
-		// (get) Token: 0x0600600F RID: 24591 RVA: 0x0020EC2C File Offset: 0x0020CE2C
+		// Token: 0x17000C0D RID: 3085
+		// (get) Token: 0x060065E8 RID: 26088 RVA: 0x0022E2B0 File Offset: 0x0022C4B0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006010 RID: 24592 RVA: 0x0020EC39 File Offset: 0x0020CE39
+		// Token: 0x060065E9 RID: 26089 RVA: 0x0022E2BD File Offset: 0x0022C4BD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006011 RID: 24593 RVA: 0x0020EC40 File Offset: 0x0020CE40
+		// Token: 0x060065EA RID: 26090 RVA: 0x0022E2C4 File Offset: 0x0022C4C4
 		public static DangoBrawlShopRefresh GetRootAsDangoBrawlShopRefresh(ByteBuffer _bb)
 		{
 			return DangoBrawlShopRefresh.GetRootAsDangoBrawlShopRefresh(_bb, default(DangoBrawlShopRefresh));
 		}
 
-		// Token: 0x06006012 RID: 24594 RVA: 0x0020EC5C File Offset: 0x0020CE5C
+		// Token: 0x060065EB RID: 26091 RVA: 0x0022E2E0 File Offset: 0x0022C4E0
 		public static DangoBrawlShopRefresh GetRootAsDangoBrawlShopRefresh(ByteBuffer _bb, DangoBrawlShopRefresh obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006013 RID: 24595 RVA: 0x0020EC79 File Offset: 0x0020CE79
+		// Token: 0x060065EC RID: 26092 RVA: 0x0022E2FD File Offset: 0x0022C4FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006014 RID: 24596 RVA: 0x0020EC88 File Offset: 0x0020CE88
+		// Token: 0x060065ED RID: 26093 RVA: 0x0022E30C File Offset: 0x0022C50C
 		public DangoBrawlShopRefresh __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000BC8 RID: 3016
-		// (get) Token: 0x06006015 RID: 24597 RVA: 0x0020EC98 File Offset: 0x0020CE98
+		// Token: 0x17000C0E RID: 3086
+		// (get) Token: 0x060065EE RID: 26094 RVA: 0x0022E31C File Offset: 0x0022C51C
 		public int Id
 		{
 			get
@@ -66,7 +66,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006016 RID: 24598 RVA: 0x0020ECD4 File Offset: 0x0020CED4
+		// Token: 0x060065EF RID: 26095 RVA: 0x0022E358 File Offset: 0x0022C558
 		public DicIntInt? RefreshCostMap(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -77,8 +77,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000BC9 RID: 3017
-		// (get) Token: 0x06006017 RID: 24599 RVA: 0x0020ED34 File Offset: 0x0020CF34
+		// Token: 0x17000C0F RID: 3087
+		// (get) Token: 0x060065F0 RID: 26096 RVA: 0x0022E3B8 File Offset: 0x0022C5B8
 		public int RefreshCostMapLength
 		{
 			get
@@ -92,24 +92,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006018 RID: 24600 RVA: 0x0020ED60 File Offset: 0x0020CF60
+		// Token: 0x060065F1 RID: 26097 RVA: 0x0022E3E4 File Offset: 0x0022C5E4
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用RefreshCostMapFrozenDict()缓存字典，遍历请使用RefreshCostMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> RefreshCostMap()
+		public Dictionary<int, int> RefreshCostMap()
 		{
 			return this.RefreshCostMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06006019 RID: 24601 RVA: 0x0020EDB6 File Offset: 0x0020CFB6
+		// Token: 0x060065F2 RID: 26098 RVA: 0x0022E43A File Offset: 0x0022C63A
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> RefreshCostMapIter()
+		public IEnumerable<DicIntInt> RefreshCostMapIter()
 		{
 			DangoBrawlShopRefresh.<RefreshCostMapIter>d__14 <RefreshCostMapIter>d__ = new DangoBrawlShopRefresh.<RefreshCostMapIter>d__14(-2);
 			<RefreshCostMapIter>d__.<>3__<>4__this = this;
 			return <RefreshCostMapIter>d__;
 		}
 
-		// Token: 0x0600601A RID: 24602 RVA: 0x0020EDCC File Offset: 0x0020CFCC
+		// Token: 0x060065F3 RID: 26099 RVA: 0x0022E450 File Offset: 0x0022C650
 		public int? GetRefreshCostMap(int key)
 		{
 			this.EnsureRefreshCostMapCacheIfNeeded();
@@ -121,7 +120,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600601B RID: 24603 RVA: 0x0020EE00 File Offset: 0x0020D000
+		// Token: 0x060065F4 RID: 26100 RVA: 0x0022E484 File Offset: 0x0022C684
 		private void EnsureRefreshCostMapCacheIfNeeded()
 		{
 			if (this.RefreshCostMapCache != null)
@@ -131,18 +130,18 @@ namespace Aki.Config
 			this.RefreshCostMapCache = this.RefreshCostMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600601C RID: 24604 RVA: 0x0020EE66 File Offset: 0x0020D066
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetRefreshCostMapFrozenDict(int key)
+		// Token: 0x060065F5 RID: 26101 RVA: 0x0022E4EA File Offset: 0x0022C6EA
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetRefreshCostMapFrozenDict()
 		{
 			this.EnsureRefreshCostMapCacheIfNeeded();
 			return this.RefreshCostMapCache;
 		}
 
-		// Token: 0x04004BFF RID: 19455
+		// Token: 0x040051E1 RID: 20961
 		private Table __p;
 
-		// Token: 0x04004C00 RID: 19456
+		// Token: 0x040051E2 RID: 20962
 		[Nullable(2)]
 		private FrozenDictionary<int, int> RefreshCostMapCache;
 	}

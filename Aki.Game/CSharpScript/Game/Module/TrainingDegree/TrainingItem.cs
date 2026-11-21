@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrainingDegree
 {
-	// Token: 0x02004AF9 RID: 19193
+	// Token: 0x02003AA1 RID: 15009
 	public class TrainingItem : UiPanelBase
 	{
-		// Token: 0x06031B59 RID: 203609 RVA: 0x00B8B3A5 File Offset: 0x00B895A5
+		// Token: 0x060268E9 RID: 157929 RVA: 0x00ACF401 File Offset: 0x00ACD601
 		[NullableContext(1)]
 		public TrainingItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x06031B5A RID: 203610 RVA: 0x00B8B3BC File Offset: 0x00B895BC
+		// Token: 0x060268EA RID: 157930 RVA: 0x00ACF418 File Offset: 0x00ACD618
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.TrainingDegree
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031B5B RID: 203611 RVA: 0x00B8B488 File Offset: 0x00B89688
+		// Token: 0x060268EB RID: 157931 RVA: 0x00ACF4E4 File Offset: 0x00ACD6E4
 		[NullableContext(1)]
 		public void SetData(TrainingData data)
 		{
@@ -59,22 +59,22 @@ namespace CSharpScript.Game.Module.TrainingDegree
 			}
 		}
 
-		// Token: 0x0200AC88 RID: 44168
+		// Token: 0x020096A8 RID: 38568
 		private class EReviveTrainingItemDefine
 		{
-			// Token: 0x040346EE RID: 214766
+			// Token: 0x0402F09F RID: 192671
 			public const int NameText = 0;
 
-			// Token: 0x040346EF RID: 214767
+			// Token: 0x0402F0A0 RID: 192672
 			public const int ProcessSprite = 1;
 
-			// Token: 0x040346F0 RID: 214768
+			// Token: 0x0402F0A1 RID: 192673
 			public const int TipText = 2;
 
-			// Token: 0x040346F1 RID: 214769
+			// Token: 0x0402F0A2 RID: 192674
 			public const int IconSprite = 3;
 
-			// Token: 0x040346F2 RID: 214770
+			// Token: 0x0402F0A3 RID: 192675
 			public const int BgSprite = 4;
 		}
 	}

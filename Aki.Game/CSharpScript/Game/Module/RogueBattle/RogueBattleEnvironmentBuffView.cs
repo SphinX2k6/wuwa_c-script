@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EE4 RID: 20196
+	// Token: 0x02003EAD RID: 16045
 	public class RogueBattleEnvironmentBuffView : UiViewBase
 	{
-		// Token: 0x06033D59 RID: 212313 RVA: 0x00C23E33 File Offset: 0x00C22033
+		// Token: 0x06028BC4 RID: 166852 RVA: 0x00B6D3DB File Offset: 0x00B6B5DB
 		[NullableContext(1)]
 		public RogueBattleEnvironmentBuffView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06033D5A RID: 212314 RVA: 0x00C23E3C File Offset: 0x00C2203C
+		// Token: 0x06028BC5 RID: 166853 RVA: 0x00B6D3E4 File Offset: 0x00B6B5E4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033D5B RID: 212315 RVA: 0x00C23E78 File Offset: 0x00C22078
+		// Token: 0x06028BC6 RID: 166854 RVA: 0x00B6D420 File Offset: 0x00B6B620
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleEnvironmentBuffView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033D5C RID: 212316 RVA: 0x00C23EBC File Offset: 0x00C220BC
+		// Token: 0x06028BC7 RID: 166855 RVA: 0x00B6D464 File Offset: 0x00B6B664
 		protected UniTask RefreshView()
 		{
 			RogueBattleEnvironmentBuffView.<RefreshView>d__5 <RefreshView>d__;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <RefreshView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401B882 RID: 112770
+		// Token: 0x04016255 RID: 90709
 		[Nullable(new byte[]
 		{
 			2,
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		private GenericLayout<RogueBattleEnvironmentBuffItemWithTexture, IRogueBattleEnvironmentInfo> EnvironmentBuffLayout;
 
-		// Token: 0x0401B883 RID: 112771
+		// Token: 0x04016256 RID: 90710
 		[Nullable(new byte[]
 		{
 			2,

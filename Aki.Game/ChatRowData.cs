@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001799 RID: 6041
+// Token: 0x02000C52 RID: 3154
 [NullableContext(1)]
 [Nullable(0)]
 public class ChatRowData
 {
-	// Token: 0x0600B01B RID: 45083 RVA: 0x0027C038 File Offset: 0x0027A238
+	// Token: 0x06008403 RID: 33795 RVA: 0x00286554 File Offset: 0x00284754
 	public ChatRowData(int uniqueId, int senderPlayerId, string content, ChatContentType contentType, bool isOfflineMassage, EChatRoomType contentChatRoomType, double timeStamp, int? targetPlayerId = null, [Nullable(2)] string senderPlayerName = null, int? senderPlayerIcon = null, int? senderPlayerNumber = null)
 	{
 		this.UniqueId = uniqueId;
@@ -23,40 +23,40 @@ public class ChatRowData
 		this.SenderPlayerNumber = senderPlayerNumber;
 	}
 
-	// Token: 0x04004FF8 RID: 20472
+	// Token: 0x040050A2 RID: 20642
 	public readonly int UniqueId;
 
-	// Token: 0x04004FF9 RID: 20473
+	// Token: 0x040050A3 RID: 20643
 	public readonly int SenderPlayerId;
 
-	// Token: 0x04004FFA RID: 20474
+	// Token: 0x040050A4 RID: 20644
 	public int? SenderPlayerIcon;
 
-	// Token: 0x04004FFB RID: 20475
+	// Token: 0x040050A5 RID: 20645
 	[Nullable(2)]
 	public string SenderPlayerName;
 
-	// Token: 0x04004FFC RID: 20476
+	// Token: 0x040050A6 RID: 20646
 	public readonly int? SenderPlayerNumber;
 
-	// Token: 0x04004FFD RID: 20477
+	// Token: 0x040050A7 RID: 20647
 	public readonly int? TargetPlayerId;
 
-	// Token: 0x04004FFE RID: 20478
+	// Token: 0x040050A8 RID: 20648
 	public readonly string Content = "";
 
-	// Token: 0x04004FFF RID: 20479
+	// Token: 0x040050A9 RID: 20649
 	public readonly ChatContentType ContentType;
 
-	// Token: 0x04005000 RID: 20480
+	// Token: 0x040050AA RID: 20650
 	public readonly EChatRoomType ContentChatRoomType;
 
-	// Token: 0x04005001 RID: 20481
+	// Token: 0x040050AB RID: 20651
 	public readonly bool IsOfflineMassage;
 
-	// Token: 0x04005002 RID: 20482
+	// Token: 0x040050AC RID: 20652
 	public readonly double TimeStamp;
 
-	// Token: 0x04005003 RID: 20483
+	// Token: 0x040050AD RID: 20653
 	public bool IsVisible = true;
 }

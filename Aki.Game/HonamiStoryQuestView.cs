@@ -12,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EE7 RID: 7911
+// Token: 0x020013A9 RID: 5033
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryQuestView : UiViewBase
 {
-	// Token: 0x0600F38E RID: 62350 RVA: 0x003AB642 File Offset: 0x003A9842
+	// Token: 0x0600C7AD RID: 51117 RVA: 0x003B713E File Offset: 0x003B533E
 	public HonamiStoryQuestView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F38F RID: 62351 RVA: 0x003AB658 File Offset: 0x003A9858
+	// Token: 0x0600C7AE RID: 51118 RVA: 0x003B7154 File Offset: 0x003B5354
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 15;
@@ -62,7 +62,7 @@ public class HonamiStoryQuestView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F390 RID: 62352 RVA: 0x003AB878 File Offset: 0x003A9A78
+	// Token: 0x0600C7AF RID: 51119 RVA: 0x003B7374 File Offset: 0x003B5574
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryQuestView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -73,7 +73,7 @@ public class HonamiStoryQuestView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F391 RID: 62353 RVA: 0x003AB8BB File Offset: 0x003A9ABB
+	// Token: 0x0600C7B0 RID: 51120 RVA: 0x003B73B7 File Offset: 0x003B55B7
 	protected override void OnBeforeShow()
 	{
 		base.GetItem(11).SetUIActive(false);
@@ -82,7 +82,7 @@ public class HonamiStoryQuestView : UiViewBase
 		this.RefreshDetail();
 	}
 
-	// Token: 0x0600F392 RID: 62354 RVA: 0x003AB8EC File Offset: 0x003A9AEC
+	// Token: 0x0600C7B1 RID: 51121 RVA: 0x003B73E8 File Offset: 0x003B55E8
 	private UniTask InitTaskScrollViewAsync()
 	{
 		HonamiStoryQuestView.<InitTaskScrollViewAsync>d__13 <InitTaskScrollViewAsync>d__;
@@ -93,7 +93,7 @@ public class HonamiStoryQuestView : UiViewBase
 		return <InitTaskScrollViewAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F393 RID: 62355 RVA: 0x003AB930 File Offset: 0x003A9B30
+	// Token: 0x0600C7B2 RID: 51122 RVA: 0x003B742C File Offset: 0x003B562C
 	private void InitTaskChildItemList()
 	{
 		if (this.CurSelectChildItem != null)
@@ -122,7 +122,7 @@ public class HonamiStoryQuestView : UiViewBase
 		this.CurSelectChildItem.OnSelected();
 	}
 
-	// Token: 0x0600F394 RID: 62356 RVA: 0x003ABA38 File Offset: 0x003A9C38
+	// Token: 0x0600C7B3 RID: 51123 RVA: 0x003B7534 File Offset: 0x003B5734
 	private void RefreshDetail()
 	{
 		if (this.CurSelectChildItem == null)
@@ -174,7 +174,7 @@ public class HonamiStoryQuestView : UiViewBase
 		this.RefreshQuestSteps(data);
 	}
 
-	// Token: 0x0600F395 RID: 62357 RVA: 0x003ABBB4 File Offset: 0x003A9DB4
+	// Token: 0x0600C7B4 RID: 51124 RVA: 0x003B76B0 File Offset: 0x003B58B0
 	private void RefreshDetailTitle(HonamiStoryQuestDataBase taskData)
 	{
 		string localTextNew = ConfigMultiTextLang.GetLocalTextNew(taskData.GetNameKey(), null);
@@ -216,7 +216,7 @@ public class HonamiStoryQuestView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F396 RID: 62358 RVA: 0x003ABC58 File Offset: 0x003A9E58
+	// Token: 0x0600C7B5 RID: 51125 RVA: 0x003B7754 File Offset: 0x003B5954
 	private void RefreshConfirmButtonText(HonamiStoryQuestDataBase taskData)
 	{
 		int id = taskData.Id;
@@ -230,7 +230,7 @@ public class HonamiStoryQuestView : UiViewBase
 		this.ConfirmButtonItem.SetLocalTextNew("HonamiStory_Track", Array.Empty<object>());
 	}
 
-	// Token: 0x0600F397 RID: 62359 RVA: 0x003ABCD0 File Offset: 0x003A9ED0
+	// Token: 0x0600C7B6 RID: 51126 RVA: 0x003B77CC File Offset: 0x003B59CC
 	private UniTask RefreshQuestSteps(HonamiStoryQuestDataBase taskData)
 	{
 		HonamiStoryQuestView.<RefreshQuestSteps>d__18 <RefreshQuestSteps>d__;
@@ -242,7 +242,7 @@ public class HonamiStoryQuestView : UiViewBase
 		return <RefreshQuestSteps>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F398 RID: 62360 RVA: 0x003ABD1C File Offset: 0x003A9F1C
+	// Token: 0x0600C7B7 RID: 51127 RVA: 0x003B7818 File Offset: 0x003B5A18
 	private void OnClickTaskToggle(HonamiStoryQuestItemChildItem taskItem)
 	{
 		if (this.CurSelectChildItem == taskItem)
@@ -280,7 +280,7 @@ public class HonamiStoryQuestView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F399 RID: 62361 RVA: 0x003ABDB0 File Offset: 0x003A9FB0
+	// Token: 0x0600C7B8 RID: 51128 RVA: 0x003B78AC File Offset: 0x003B5AAC
 	private HonamiStoryQuestItem InitTaskItem()
 	{
 		HonamiStoryQuestItem honamiStoryQuestItem = new HonamiStoryQuestItem();
@@ -288,13 +288,13 @@ public class HonamiStoryQuestView : UiViewBase
 		return honamiStoryQuestItem;
 	}
 
-	// Token: 0x0600F39A RID: 62362 RVA: 0x003ABDC9 File Offset: 0x003A9FC9
+	// Token: 0x0600C7B9 RID: 51129 RVA: 0x003B78C5 File Offset: 0x003B5AC5
 	private CommonItemSmallItemGrid InitRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0600F39B RID: 62363 RVA: 0x003ABDD0 File Offset: 0x003A9FD0
+	// Token: 0x0600C7BA RID: 51130 RVA: 0x003B78CC File Offset: 0x003B5ACC
 	private List<TItem> GetRewardItems(int dropId)
 	{
 		List<TItem> list = new List<TItem>();
@@ -321,7 +321,7 @@ public class HonamiStoryQuestView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x0600F39C RID: 62364 RVA: 0x003ABE94 File Offset: 0x003AA094
+	// Token: 0x0600C7BB RID: 51131 RVA: 0x003B7990 File Offset: 0x003B5B90
 	private void OnClickConfirm(int _)
 	{
 		HonamiStoryQuestItemChildItem curSelectChildItem = this.CurSelectChildItem;
@@ -334,11 +334,11 @@ public class HonamiStoryQuestView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x040070C7 RID: 28871
+	// Token: 0x040071A8 RID: 29096
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x040070C8 RID: 28872
+	// Token: 0x040071A9 RID: 29097
 	[Nullable(new byte[]
 	{
 		2,
@@ -346,7 +346,7 @@ public class HonamiStoryQuestView : UiViewBase
 	})]
 	private GenericLayout<HonamiStoryQuestItem, EHonamiStoryQuestType> TaskScrollVieW;
 
-	// Token: 0x040070C9 RID: 28873
+	// Token: 0x040071AA RID: 29098
 	[Nullable(new byte[]
 	{
 		2,
@@ -354,57 +354,57 @@ public class HonamiStoryQuestView : UiViewBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x040070CA RID: 28874
+	// Token: 0x040071AB RID: 29099
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040070CB RID: 28875
+	// Token: 0x040071AC RID: 29100
 	private ButtonItem ConfirmButtonItem;
 
-	// Token: 0x040070CC RID: 28876
+	// Token: 0x040071AD RID: 29101
 	[Nullable(2)]
 	private QuestViewStep QuestViewStep;
 
-	// Token: 0x040070CD RID: 28877
+	// Token: 0x040071AE RID: 29102
 	[Nullable(2)]
 	private HonamiStoryQuestItemChildItem CurSelectChildItem;
 
-	// Token: 0x040070CE RID: 28878
+	// Token: 0x040071AF RID: 29103
 	private readonly List<HonamiStoryQuestItemChildItem> TaskChildItemList = new List<HonamiStoryQuestItemChildItem>();
 
-	// Token: 0x020084DE RID: 34014
+	// Token: 0x02007663 RID: 30307
 	[NullableContext(0)]
 	private enum EHonamiStoryQuestComponents
 	{
-		// Token: 0x0402B3CE RID: 177102
+		// Token: 0x040266F2 RID: 157426
 		CaptionItem,
-		// Token: 0x0402B3CF RID: 177103
+		// Token: 0x040266F3 RID: 157427
 		TaskScrollView,
-		// Token: 0x0402B3D0 RID: 177104
+		// Token: 0x040266F4 RID: 157428
 		TaskItem,
-		// Token: 0x0402B3D1 RID: 177105
+		// Token: 0x040266F5 RID: 157429
 		TaskNameText,
-		// Token: 0x0402B3D2 RID: 177106
+		// Token: 0x040266F6 RID: 157430
 		DetailsStepsRoot,
-		// Token: 0x0402B3D3 RID: 177107
+		// Token: 0x040266F7 RID: 157431
 		ParentStep,
-		// Token: 0x0402B3D4 RID: 177108
+		// Token: 0x040266F8 RID: 157432
 		TimeNode,
-		// Token: 0x0402B3D5 RID: 177109
+		// Token: 0x040266F9 RID: 157433
 		TimeText,
-		// Token: 0x0402B3D6 RID: 177110
+		// Token: 0x040266FA RID: 157434
 		TaskDescriptionText,
-		// Token: 0x0402B3D7 RID: 177111
+		// Token: 0x040266FB RID: 157435
 		RewardScrollView,
-		// Token: 0x0402B3D8 RID: 177112
+		// Token: 0x040266FC RID: 157436
 		RewardItem,
-		// Token: 0x0402B3D9 RID: 177113
+		// Token: 0x040266FD RID: 157437
 		PanelDetailTipsNode,
-		// Token: 0x0402B3DA RID: 177114
+		// Token: 0x040266FE RID: 157438
 		BtnLeft,
-		// Token: 0x0402B3DB RID: 177115
+		// Token: 0x040266FF RID: 157439
 		BtnRight,
-		// Token: 0x0402B3DC RID: 177116
+		// Token: 0x04026700 RID: 157440
 		RewardTitleText
 	}
 }

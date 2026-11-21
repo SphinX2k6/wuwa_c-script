@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001449 RID: 5193
+	// Token: 0x020014BC RID: 5308
 	public sealed class TrapDefenseShopProductPbInfo : IMessage<TrapDefenseShopProductPbInfo>, IMessage, IEquatable<TrapDefenseShopProductPbInfo>, IDeepCloneable<TrapDefenseShopProductPbInfo>, IBufferMessage
 	{
-		// Token: 0x0601B80C RID: 112652 RVA: 0x003FB4B0 File Offset: 0x003F96B0
+		// Token: 0x0601C297 RID: 115351 RVA: 0x00416784 File Offset: 0x00414984
 		[NullableContext(1)]
 		public static TrapDefenseShopProductPbInfo Create()
 		{
 			return new TrapDefenseShopProductPbInfo();
 		}
 
-		// Token: 0x17005CBC RID: 23740
-		// (get) Token: 0x0601B80D RID: 112653 RVA: 0x003FB4B7 File Offset: 0x003F96B7
+		// Token: 0x17005F51 RID: 24401
+		// (get) Token: 0x0601C298 RID: 115352 RVA: 0x0041678B File Offset: 0x0041498B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<TrapDefenseShopProductPbInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CBD RID: 23741
-		// (get) Token: 0x0601B80E RID: 112654 RVA: 0x003FB4BE File Offset: 0x003F96BE
+		// Token: 0x17005F52 RID: 24402
+		// (get) Token: 0x0601C299 RID: 115353 RVA: 0x00416792 File Offset: 0x00414992
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CBE RID: 23742
-		// (get) Token: 0x0601B80F RID: 112655 RVA: 0x003FB4C1 File Offset: 0x003F96C1
+		// Token: 0x17005F53 RID: 24403
+		// (get) Token: 0x0601C29A RID: 115354 RVA: 0x00416795 File Offset: 0x00414995
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B810 RID: 112656 RVA: 0x003FB4C8 File Offset: 0x003F96C8
+		// Token: 0x0601C29B RID: 115355 RVA: 0x0041679C File Offset: 0x0041499C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseShopProductPbInfo()
 		{
 		}
 
-		// Token: 0x0601B811 RID: 112657 RVA: 0x003FB4D0 File Offset: 0x003F96D0
+		// Token: 0x0601C29C RID: 115356 RVA: 0x004167A4 File Offset: 0x004149A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseShopProductPbInfo(TrapDefenseShopProductPbInfo other) : this()
@@ -82,7 +82,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601B812 RID: 112658 RVA: 0x003FB541 File Offset: 0x003F9741
+		// Token: 0x0601C29D RID: 115357 RVA: 0x00416815 File Offset: 0x00414A15
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseShopProductPbInfo Clone()
@@ -90,9 +90,9 @@ namespace Aki.Protocol
 			return new TrapDefenseShopProductPbInfo(this);
 		}
 
-		// Token: 0x17005CBF RID: 23743
-		// (get) Token: 0x0601B813 RID: 112659 RVA: 0x003FB549 File Offset: 0x003F9749
-		// (set) Token: 0x0601B814 RID: 112660 RVA: 0x003FB551 File Offset: 0x003F9751
+		// Token: 0x17005F54 RID: 24404
+		// (get) Token: 0x0601C29E RID: 115358 RVA: 0x0041681D File Offset: 0x00414A1D
+		// (set) Token: 0x0601C29F RID: 115359 RVA: 0x00416825 File Offset: 0x00414A25
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int OriginalPrice
@@ -107,9 +107,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CC0 RID: 23744
-		// (get) Token: 0x0601B815 RID: 112661 RVA: 0x003FB55A File Offset: 0x003F975A
-		// (set) Token: 0x0601B816 RID: 112662 RVA: 0x003FB562 File Offset: 0x003F9762
+		// Token: 0x17005F55 RID: 24405
+		// (get) Token: 0x0601C2A0 RID: 115360 RVA: 0x0041682E File Offset: 0x00414A2E
+		// (set) Token: 0x0601C2A1 RID: 115361 RVA: 0x00416836 File Offset: 0x00414A36
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int DiscountPrice
@@ -124,9 +124,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CC1 RID: 23745
-		// (get) Token: 0x0601B817 RID: 112663 RVA: 0x003FB56B File Offset: 0x003F976B
-		// (set) Token: 0x0601B818 RID: 112664 RVA: 0x003FB583 File Offset: 0x003F9783
+		// Token: 0x17005F56 RID: 24406
+		// (get) Token: 0x0601C2A2 RID: 115362 RVA: 0x0041683F File Offset: 0x00414A3F
+		// (set) Token: 0x0601C2A3 RID: 115363 RVA: 0x00416857 File Offset: 0x00414A57
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseShopItemPbInfo ItemPbInfo
@@ -146,9 +146,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CC2 RID: 23746
-		// (get) Token: 0x0601B819 RID: 112665 RVA: 0x003FB599 File Offset: 0x003F9799
-		// (set) Token: 0x0601B81A RID: 112666 RVA: 0x003FB5B1 File Offset: 0x003F97B1
+		// Token: 0x17005F57 RID: 24407
+		// (get) Token: 0x0601C2A4 RID: 115364 RVA: 0x0041686D File Offset: 0x00414A6D
+		// (set) Token: 0x0601C2A5 RID: 115365 RVA: 0x00416885 File Offset: 0x00414A85
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseShopBdGroupPbInfo BdGroupPbInfo
@@ -168,8 +168,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CC3 RID: 23747
-		// (get) Token: 0x0601B81B RID: 112667 RVA: 0x003FB5C7 File Offset: 0x003F97C7
+		// Token: 0x17005F58 RID: 24408
+		// (get) Token: 0x0601C2A6 RID: 115366 RVA: 0x0041689B File Offset: 0x00414A9B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseShopProductPbInfo.ProductInfoOneofCase ProductInfoCase
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B81C RID: 112668 RVA: 0x003FB5CF File Offset: 0x003F97CF
+		// Token: 0x0601C2A7 RID: 115367 RVA: 0x004168A3 File Offset: 0x00414AA3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearProductInfo()
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			this.productInfo_ = null;
 		}
 
-		// Token: 0x0601B81D RID: 112669 RVA: 0x003FB5DF File Offset: 0x003F97DF
+		// Token: 0x0601C2A8 RID: 115368 RVA: 0x004168B3 File Offset: 0x00414AB3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TrapDefenseShopProductPbInfo);
 		}
 
-		// Token: 0x0601B81E RID: 112670 RVA: 0x003FB5F0 File Offset: 0x003F97F0
+		// Token: 0x0601C2A9 RID: 115369 RVA: 0x004168C4 File Offset: 0x00414AC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TrapDefenseShopProductPbInfo other)
@@ -205,7 +205,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.OriginalPrice == other.OriginalPrice && this.DiscountPrice == other.DiscountPrice && object.Equals(this.ItemPbInfo, other.ItemPbInfo) && object.Equals(this.BdGroupPbInfo, other.BdGroupPbInfo) && this.ProductInfoCase == other.ProductInfoCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601B81F RID: 112671 RVA: 0x003FB674 File Offset: 0x003F9874
+		// Token: 0x0601C2AA RID: 115370 RVA: 0x00416948 File Offset: 0x00414B48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B820 RID: 112672 RVA: 0x003FB703 File Offset: 0x003F9903
+		// Token: 0x0601C2AB RID: 115371 RVA: 0x004169D7 File Offset: 0x00414BD7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -243,7 +243,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601B821 RID: 112673 RVA: 0x003FB710 File Offset: 0x003F9910
+		// Token: 0x0601C2AC RID: 115372 RVA: 0x004169E4 File Offset: 0x00414BE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -251,7 +251,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601B822 RID: 112674 RVA: 0x003FB71C File Offset: 0x003F991C
+		// Token: 0x0601C2AD RID: 115373 RVA: 0x004169F0 File Offset: 0x00414BF0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -282,7 +282,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B823 RID: 112675 RVA: 0x003FB7B0 File Offset: 0x003F99B0
+		// Token: 0x0601C2AE RID: 115374 RVA: 0x00416A84 File Offset: 0x00414C84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -311,7 +311,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B824 RID: 112676 RVA: 0x003FB838 File Offset: 0x003F9A38
+		// Token: 0x0601C2AF RID: 115375 RVA: 0x00416B0C File Offset: 0x00414D0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TrapDefenseShopProductPbInfo other)
@@ -351,7 +351,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601B825 RID: 112677 RVA: 0x003FB8E3 File Offset: 0x003F9AE3
+		// Token: 0x0601C2B0 RID: 115376 RVA: 0x00416BB7 File Offset: 0x00414DB7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -359,7 +359,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601B826 RID: 112678 RVA: 0x003FB8EC File Offset: 0x003F9AEC
+		// Token: 0x0601C2B1 RID: 115377 RVA: 0x00416BC0 File Offset: 0x00414DC0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -413,44 +413,44 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009EA4 RID: 40612
+		// Token: 0x0400A2EB RID: 41707
 		private static readonly MessageParser<TrapDefenseShopProductPbInfo> _parser = new MessageParser<TrapDefenseShopProductPbInfo>(() => new TrapDefenseShopProductPbInfo());
 
-		// Token: 0x04009EA5 RID: 40613
+		// Token: 0x0400A2EC RID: 41708
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009EA6 RID: 40614
+		// Token: 0x0400A2ED RID: 41709
 		public const int OriginalPriceFieldNumber = 1;
 
-		// Token: 0x04009EA7 RID: 40615
+		// Token: 0x0400A2EE RID: 41710
 		private int originalPrice_;
 
-		// Token: 0x04009EA8 RID: 40616
+		// Token: 0x0400A2EF RID: 41711
 		public const int DiscountPriceFieldNumber = 2;
 
-		// Token: 0x04009EA9 RID: 40617
+		// Token: 0x0400A2F0 RID: 41712
 		private int discountPrice_;
 
-		// Token: 0x04009EAA RID: 40618
+		// Token: 0x0400A2F1 RID: 41713
 		public const int ItemPbInfoFieldNumber = 3;
 
-		// Token: 0x04009EAB RID: 40619
+		// Token: 0x0400A2F2 RID: 41714
 		public const int BdGroupPbInfoFieldNumber = 4;
 
-		// Token: 0x04009EAC RID: 40620
+		// Token: 0x0400A2F3 RID: 41715
 		private object productInfo_;
 
-		// Token: 0x04009EAD RID: 40621
+		// Token: 0x0400A2F4 RID: 41716
 		private TrapDefenseShopProductPbInfo.ProductInfoOneofCase productInfoCase_;
 
-		// Token: 0x020019DD RID: 6621
+		// Token: 0x02001A7F RID: 6783
 		public enum ProductInfoOneofCase
 		{
-			// Token: 0x0400CAAD RID: 51885
+			// Token: 0x0400D018 RID: 53272
 			None,
-			// Token: 0x0400CAAE RID: 51886
+			// Token: 0x0400D019 RID: 53273
 			ItemPbInfo = 3,
-			// Token: 0x0400CAAF RID: 51887
+			// Token: 0x0400D01A RID: 53274
 			BdGroupPbInfo
 		}
 	}

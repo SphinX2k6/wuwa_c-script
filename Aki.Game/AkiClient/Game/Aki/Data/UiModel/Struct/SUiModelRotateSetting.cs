@@ -6,7 +6,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.UiModel.Struct
 {
-	// Token: 0x02003E8D RID: 16013
+	// Token: 0x02003164 RID: 12644
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -14,283 +14,266 @@ namespace AkiClient.Game.Aki.Data.UiModel.Struct
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 60)]
 	public class SUiModelRotateSetting : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060286F3 RID: 165619 RVA: 0x009AC750 File Offset: 0x009AA950
+		// Token: 0x0601F257 RID: 127575 RVA: 0x009276F0 File Offset: 0x009258F0
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SUiModelRotateSetting._ScriptStructPtr != 0) ? SUiModelRotateSetting._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/UiModel/Struct/SUiModelRotateSetting.SUiModelRotateSetting", ref SUiModelRotateSetting._ScriptStructPtr);
 		}
 
-		// Token: 0x17005DBA RID: 23994
-		// (get) Token: 0x060286F4 RID: 165620 RVA: 0x009AC774 File Offset: 0x009AA974
-		// (set) Token: 0x060286F5 RID: 165621 RVA: 0x009AC788 File Offset: 0x009AA988
+		// Token: 0x170037A4 RID: 14244
+		// (get) Token: 0x0601F258 RID: 127576 RVA: 0x00927714 File Offset: 0x00925914
+		// (set) Token: 0x0601F259 RID: 127577 RVA: 0x00927728 File Offset: 0x00925928
 		public unsafe string 旋转中轴
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SUiModelRotateSetting.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SUiModelRotateSetting.__PropertyOffset_旋转中轴)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SUiModelRotateSetting.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SUiModelRotateSetting.__PropertyOffset_旋转中轴)), value);
 			}
 		}
 
-		// Token: 0x17005DBB RID: 23995
-		// (get) Token: 0x060286F6 RID: 165622 RVA: 0x009AC79D File Offset: 0x009AA99D
-		// (set) Token: 0x060286F7 RID: 165623 RVA: 0x009AC7AD File Offset: 0x009AA9AD
+		// Token: 0x170037A5 RID: 14245
+		// (get) Token: 0x0601F25A RID: 127578 RVA: 0x0092773D File Offset: 0x0092593D
+		// (set) Token: 0x0601F25B RID: 127579 RVA: 0x0092774D File Offset: 0x0092594D
 		public unsafe float 旋转偏移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_旋转偏移);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_旋转偏移) = value;
 			}
 		}
 
-		// Token: 0x17005DBC RID: 23996
-		// (get) Token: 0x060286F8 RID: 165624 RVA: 0x009AC7BE File Offset: 0x009AA9BE
-		// (set) Token: 0x060286F9 RID: 165625 RVA: 0x009AC7CE File Offset: 0x009AA9CE
+		// Token: 0x170037A6 RID: 14246
+		// (get) Token: 0x0601F25C RID: 127580 RVA: 0x0092775E File Offset: 0x0092595E
+		// (set) Token: 0x0601F25D RID: 127581 RVA: 0x0092776E File Offset: 0x0092596E
 		public unsafe float 模型Yaw灵敏度系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_模型Yaw灵敏度系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_模型Yaw灵敏度系数) = value;
 			}
 		}
 
-		// Token: 0x17005DBD RID: 23997
-		// (get) Token: 0x060286FA RID: 165626 RVA: 0x009AC7DF File Offset: 0x009AA9DF
-		// (set) Token: 0x060286FB RID: 165627 RVA: 0x009AC7EF File Offset: 0x009AA9EF
+		// Token: 0x170037A7 RID: 14247
+		// (get) Token: 0x0601F25E RID: 127582 RVA: 0x0092777F File Offset: 0x0092597F
+		// (set) Token: 0x0601F25F RID: 127583 RVA: 0x0092778F File Offset: 0x0092598F
 		public unsafe float 模型Pitch灵敏度系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_模型Pitch灵敏度系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_模型Pitch灵敏度系数) = value;
 			}
 		}
 
-		// Token: 0x17005DBE RID: 23998
-		// (get) Token: 0x060286FC RID: 165628 RVA: 0x009AC800 File Offset: 0x009AAA00
-		// (set) Token: 0x060286FD RID: 165629 RVA: 0x009AC810 File Offset: 0x009AAA10
+		// Token: 0x170037A8 RID: 14248
+		// (get) Token: 0x0601F260 RID: 127584 RVA: 0x009277A0 File Offset: 0x009259A0
+		// (set) Token: 0x0601F261 RID: 127585 RVA: 0x009277B0 File Offset: 0x009259B0
 		public unsafe float Yaw限制Min
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_Yaw限制Min);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_Yaw限制Min) = value;
 			}
 		}
 
-		// Token: 0x17005DBF RID: 23999
-		// (get) Token: 0x060286FE RID: 165630 RVA: 0x009AC821 File Offset: 0x009AAA21
-		// (set) Token: 0x060286FF RID: 165631 RVA: 0x009AC831 File Offset: 0x009AAA31
+		// Token: 0x170037A9 RID: 14249
+		// (get) Token: 0x0601F262 RID: 127586 RVA: 0x009277C1 File Offset: 0x009259C1
+		// (set) Token: 0x0601F263 RID: 127587 RVA: 0x009277D1 File Offset: 0x009259D1
 		public unsafe float Yaw限制Max
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_Yaw限制Max);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_Yaw限制Max) = value;
 			}
 		}
 
-		// Token: 0x17005DC0 RID: 24000
-		// (get) Token: 0x06028700 RID: 165632 RVA: 0x009AC842 File Offset: 0x009AAA42
-		// (set) Token: 0x06028701 RID: 165633 RVA: 0x009AC852 File Offset: 0x009AAA52
+		// Token: 0x170037AA RID: 14250
+		// (get) Token: 0x0601F264 RID: 127588 RVA: 0x009277E2 File Offset: 0x009259E2
+		// (set) Token: 0x0601F265 RID: 127589 RVA: 0x009277F2 File Offset: 0x009259F2
 		public unsafe float Pitch限制Min
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_Pitch限制Min);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_Pitch限制Min) = value;
 			}
 		}
 
-		// Token: 0x17005DC1 RID: 24001
-		// (get) Token: 0x06028702 RID: 165634 RVA: 0x009AC863 File Offset: 0x009AAA63
-		// (set) Token: 0x06028703 RID: 165635 RVA: 0x009AC873 File Offset: 0x009AAA73
+		// Token: 0x170037AB RID: 14251
+		// (get) Token: 0x0601F266 RID: 127590 RVA: 0x00927803 File Offset: 0x00925A03
+		// (set) Token: 0x0601F267 RID: 127591 RVA: 0x00927813 File Offset: 0x00925A13
 		public unsafe float Pitch限制Max
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_Pitch限制Max);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_Pitch限制Max) = value;
 			}
 		}
 
-		// Token: 0x17005DC2 RID: 24002
-		// (get) Token: 0x06028704 RID: 165636 RVA: 0x009AC884 File Offset: 0x009AAA84
-		// (set) Token: 0x06028705 RID: 165637 RVA: 0x009AC894 File Offset: 0x009AAA94
+		// Token: 0x170037AC RID: 14252
+		// (get) Token: 0x0601F268 RID: 127592 RVA: 0x00927824 File Offset: 0x00925A24
+		// (set) Token: 0x0601F269 RID: 127593 RVA: 0x00927834 File Offset: 0x00925A34
 		public unsafe float 最小臂长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_最小臂长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_最小臂长) = value;
 			}
 		}
 
-		// Token: 0x17005DC3 RID: 24003
-		// (get) Token: 0x06028706 RID: 165638 RVA: 0x009AC8A5 File Offset: 0x009AAAA5
-		// (set) Token: 0x06028707 RID: 165639 RVA: 0x009AC8B5 File Offset: 0x009AAAB5
+		// Token: 0x170037AD RID: 14253
+		// (get) Token: 0x0601F26A RID: 127594 RVA: 0x00927845 File Offset: 0x00925A45
+		// (set) Token: 0x0601F26B RID: 127595 RVA: 0x00927855 File Offset: 0x00925A55
 		public unsafe float 最大臂长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_最大臂长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_最大臂长) = value;
 			}
 		}
 
-		// Token: 0x17005DC4 RID: 24004
-		// (get) Token: 0x06028708 RID: 165640 RVA: 0x009AC8C6 File Offset: 0x009AAAC6
-		// (set) Token: 0x06028709 RID: 165641 RVA: 0x009AC8D6 File Offset: 0x009AAAD6
+		// Token: 0x170037AE RID: 14254
+		// (get) Token: 0x0601F26C RID: 127596 RVA: 0x00927866 File Offset: 0x00925A66
+		// (set) Token: 0x0601F26D RID: 127597 RVA: 0x00927876 File Offset: 0x00925A76
 		public unsafe float 倍化手柄输入倍率
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_倍化手柄输入倍率);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_倍化手柄输入倍率) = value;
 			}
 		}
 
-		// Token: 0x17005DC5 RID: 24005
-		// (get) Token: 0x0602870A RID: 165642 RVA: 0x009AC8E7 File Offset: 0x009AAAE7
-		// (set) Token: 0x0602870B RID: 165643 RVA: 0x009AC8F7 File Offset: 0x009AAAF7
+		// Token: 0x170037AF RID: 14255
+		// (get) Token: 0x0601F26E RID: 127598 RVA: 0x00927887 File Offset: 0x00925A87
+		// (set) Token: 0x0601F26F RID: 127599 RVA: 0x00927897 File Offset: 0x00925A97
 		public unsafe float 移动端旋转输入倍率
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_移动端旋转输入倍率);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)SUiModelRotateSetting.__PropertyOffset_移动端旋转输入倍率) = value;
 			}
 		}
 
-		// Token: 0x0602870C RID: 165644 RVA: 0x009AC908 File Offset: 0x009AAB08
+		// Token: 0x0601F270 RID: 127600 RVA: 0x009278A8 File Offset: 0x00925AA8
 		public SUiModelRotateSetting()
 		{
 		}
 
-		// Token: 0x0602870D RID: 165645 RVA: 0x009AC910 File Offset: 0x009AAB10
-		public SUiModelRotateSetting(string 旋转中轴, float 旋转偏移, float 模型Yaw灵敏度系数, float 模型Pitch灵敏度系数, float Yaw限制Min, float Yaw限制Max, float Pitch限制Min, float Pitch限制Max, float 最小臂长, float 最大臂长, float 倍化手柄输入倍率, float 移动端旋转输入倍率)
-		{
-			this.旋转中轴 = 旋转中轴;
-			this.旋转偏移 = 旋转偏移;
-			this.模型Yaw灵敏度系数 = 模型Yaw灵敏度系数;
-			this.模型Pitch灵敏度系数 = 模型Pitch灵敏度系数;
-			this.Yaw限制Min = Yaw限制Min;
-			this.Yaw限制Max = Yaw限制Max;
-			this.Pitch限制Min = Pitch限制Min;
-			this.Pitch限制Max = Pitch限制Max;
-			this.最小臂长 = 最小臂长;
-			this.最大臂长 = 最大臂长;
-			this.倍化手柄输入倍率 = 倍化手柄输入倍率;
-			this.移动端旋转输入倍率 = 移动端旋转输入倍率;
-		}
-
-		// Token: 0x0602870E RID: 165646 RVA: 0x009AC980 File Offset: 0x009AAB80
+		// Token: 0x0601F271 RID: 127601 RVA: 0x009278B0 File Offset: 0x00925AB0
 		protected override IntPtr GetUStructPtr()
 		{
 			return SUiModelRotateSetting.StaticStruct();
 		}
 
-		// Token: 0x0602870F RID: 165647 RVA: 0x009AC98C File Offset: 0x009AAB8C
+		// Token: 0x0601F272 RID: 127602 RVA: 0x009278BC File Offset: 0x00925ABC
 		[NullableContext(2)]
 		public SUiModelRotateSetting(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06028710 RID: 165648 RVA: 0x009AC996 File Offset: 0x009AAB96
+		// Token: 0x0601F273 RID: 127603 RVA: 0x009278C6 File Offset: 0x00925AC6
 		public SUiModelRotateSetting(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06028711 RID: 165649 RVA: 0x009AC9A1 File Offset: 0x009AABA1
+		// Token: 0x0601F274 RID: 127604 RVA: 0x009278D1 File Offset: 0x00925AD1
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SUiModelRotateSetting(Pointer, false, true);
 		}
 
-		// Token: 0x06028712 RID: 165650 RVA: 0x009AC9AB File Offset: 0x009AABAB
+		// Token: 0x0601F275 RID: 127605 RVA: 0x009278DB File Offset: 0x00925ADB
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SUiModelRotateSetting(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040149DF RID: 84447
+		// Token: 0x04010A60 RID: 68192
 		public const string __ObjectPath = "/Game/Aki/Data/UiModel/Struct/SUiModelRotateSetting.SUiModelRotateSetting";
 
-		// Token: 0x040149E0 RID: 84448
+		// Token: 0x04010A61 RID: 68193
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040149E1 RID: 84449
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010A62 RID: 68194
+		internal static int __PropertyOffset_旋转中轴;
 
-		// Token: 0x040149E2 RID: 84450
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010A63 RID: 68195
+		internal static int __PropertyOffset_旋转偏移;
 
-		// Token: 0x040149E3 RID: 84451
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010A64 RID: 68196
+		internal static int __PropertyOffset_模型Yaw灵敏度系数;
 
-		// Token: 0x040149E4 RID: 84452
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010A65 RID: 68197
+		internal static int __PropertyOffset_模型Pitch灵敏度系数;
 
-		// Token: 0x040149E5 RID: 84453
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010A66 RID: 68198
+		internal static int __PropertyOffset_Yaw限制Min;
 
-		// Token: 0x040149E6 RID: 84454
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010A67 RID: 68199
+		internal static int __PropertyOffset_Yaw限制Max;
 
-		// Token: 0x040149E7 RID: 84455
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010A68 RID: 68200
+		internal static int __PropertyOffset_Pitch限制Min;
 
-		// Token: 0x040149E8 RID: 84456
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010A69 RID: 68201
+		internal static int __PropertyOffset_Pitch限制Max;
 
-		// Token: 0x040149E9 RID: 84457
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010A6A RID: 68202
+		internal static int __PropertyOffset_最小臂长;
 
-		// Token: 0x040149EA RID: 84458
-		internal static int __PropertyOffset_9;
+		// Token: 0x04010A6B RID: 68203
+		internal static int __PropertyOffset_最大臂长;
 
-		// Token: 0x040149EB RID: 84459
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010A6C RID: 68204
+		internal static int __PropertyOffset_倍化手柄输入倍率;
 
-		// Token: 0x040149EC RID: 84460
-		internal static int __PropertyOffset_11;
+		// Token: 0x04010A6D RID: 68205
+		internal static int __PropertyOffset_移动端旋转输入倍率;
 	}
 }

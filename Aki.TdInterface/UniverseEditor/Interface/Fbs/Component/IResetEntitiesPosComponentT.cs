@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Shape;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200585F RID: 22623
+	// Token: 0x02005E6C RID: 24172
 	public class IResetEntitiesPosComponentT
 	{
-		// Token: 0x1700A91D RID: 43293
-		// (get) Token: 0x0602618A RID: 156042 RVA: 0x00540AA0 File Offset: 0x0053ECA0
-		// (set) Token: 0x0602618B RID: 156043 RVA: 0x00540AA8 File Offset: 0x0053ECA8
+		// Token: 0x1700B24D RID: 45645
+		// (get) Token: 0x060286EC RID: 165612 RVA: 0x005875EC File Offset: 0x005857EC
+		// (set) Token: 0x060286ED RID: 165613 RVA: 0x005875F4 File Offset: 0x005857F4
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A91E RID: 43294
-		// (get) Token: 0x0602618C RID: 156044 RVA: 0x00540AB1 File Offset: 0x0053ECB1
-		// (set) Token: 0x0602618D RID: 156045 RVA: 0x00540AB9 File Offset: 0x0053ECB9
+		// Token: 0x1700B24E RID: 45646
+		// (get) Token: 0x060286EE RID: 165614 RVA: 0x005875FD File Offset: 0x005857FD
+		// (set) Token: 0x060286EF RID: 165615 RVA: 0x00587605 File Offset: 0x00585805
 		public TTriggerShapeUnion Range { get; set; }
 
-		// Token: 0x1700A91F RID: 43295
-		// (get) Token: 0x0602618E RID: 156046 RVA: 0x00540AC2 File Offset: 0x0053ECC2
-		// (set) Token: 0x0602618F RID: 156047 RVA: 0x00540ACA File Offset: 0x0053ECCA
+		// Token: 0x1700B24F RID: 45647
+		// (get) Token: 0x060286F0 RID: 165616 RVA: 0x0058760E File Offset: 0x0058580E
+		// (set) Token: 0x060286F1 RID: 165617 RVA: 0x00587616 File Offset: 0x00585816
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x1700A920 RID: 43296
-		// (get) Token: 0x06026190 RID: 156048 RVA: 0x00540AD3 File Offset: 0x0053ECD3
-		// (set) Token: 0x06026191 RID: 156049 RVA: 0x00540ADB File Offset: 0x0053ECDB
+		// Token: 0x1700B250 RID: 45648
+		// (get) Token: 0x060286F2 RID: 165618 RVA: 0x0058761F File Offset: 0x0058581F
+		// (set) Token: 0x060286F3 RID: 165619 RVA: 0x00587627 File Offset: 0x00585827
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026192 RID: 156050 RVA: 0x00540AE4 File Offset: 0x0053ECE4
+		// Token: 0x060286F4 RID: 165620 RVA: 0x00587630 File Offset: 0x00585830
 		public IResetEntitiesPosComponentT()
 		{
 			this.Disabled = false;

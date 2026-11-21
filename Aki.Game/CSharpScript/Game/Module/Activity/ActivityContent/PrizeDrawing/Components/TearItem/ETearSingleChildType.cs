@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Components.TearItem
 {
-	// Token: 0x020062AF RID: 25263
+	// Token: 0x0200522D RID: 21037
 	internal enum ETearSingleChildType
 	{
-		// Token: 0x040213B6 RID: 136118
+		// Token: 0x0401BCE5 RID: 113893
 		Icon,
-		// Token: 0x040213B7 RID: 136119
+		// Token: 0x0401BCE6 RID: 113894
 		TxtRare,
-		// Token: 0x040213B8 RID: 136120
+		// Token: 0x0401BCE7 RID: 113895
 		Times,
-		// Token: 0x040213B9 RID: 136121
+		// Token: 0x0401BCE8 RID: 113896
 		TearRoot,
-		// Token: 0x040213BA RID: 136122
+		// Token: 0x0401BCE9 RID: 113897
 		Count,
-		// Token: 0x040213BB RID: 136123
+		// Token: 0x0401BCEA RID: 113898
 		Rare
 	}
 }

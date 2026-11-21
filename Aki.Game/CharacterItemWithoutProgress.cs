@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001307 RID: 4871
+// Token: 0x020007BB RID: 1979
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class CharacterItemWithoutProgress : GridProxyAbstract<CharacterData>
 {
-	// Token: 0x06008701 RID: 34561 RVA: 0x001CD154 File Offset: 0x001CB354
+	// Token: 0x06005A9C RID: 23196 RVA: 0x001D5FC0 File Offset: 0x001D41C0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class CharacterItemWithoutProgress : GridProxyAbstract<CharacterData>
 		};
 	}
 
-	// Token: 0x06008702 RID: 34562 RVA: 0x001CD190 File Offset: 0x001CB390
+	// Token: 0x06005A9D RID: 23197 RVA: 0x001D5FFC File Offset: 0x001D41FC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CharacterItemWithoutProgress.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -35,7 +35,7 @@ public class CharacterItemWithoutProgress : GridProxyAbstract<CharacterData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008703 RID: 34563 RVA: 0x001CD1D4 File Offset: 0x001CB3D4
+	// Token: 0x06005A9E RID: 23198 RVA: 0x001D6040 File Offset: 0x001D4240
 	[NullableContext(1)]
 	public override void Refresh(CharacterData data, bool isSelected, int gridIndex)
 	{
@@ -43,17 +43,17 @@ public class CharacterItemWithoutProgress : GridProxyAbstract<CharacterData>
 		base.GetText(1).SetText(data.CurrentValue.ToString(), true);
 	}
 
-	// Token: 0x04003C53 RID: 15443
+	// Token: 0x04003CEB RID: 15595
 	[Nullable(2)]
 	protected CharacterNameItem NameItem;
 
-	// Token: 0x02007944 RID: 31044
+	// Token: 0x02006ACE RID: 27342
 	private static class EComponentDefine
 	{
-		// Token: 0x04027F18 RID: 163608
+		// Token: 0x04023245 RID: 143941
 		public const int NameItem = 0;
 
-		// Token: 0x04027F19 RID: 163609
+		// Token: 0x04023246 RID: 143942
 		public const int Value = 1;
 	}
 }

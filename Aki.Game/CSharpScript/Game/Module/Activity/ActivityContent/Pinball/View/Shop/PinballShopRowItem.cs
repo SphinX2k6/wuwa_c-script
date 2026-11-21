@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 {
-	// Token: 0x020062EC RID: 25324
+	// Token: 0x0200526A RID: 21098
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 	})]
 	public class PinballShopRowItem : GridProxyAbstract<List<PinballShopItemProxy>>
 	{
-		// Token: 0x0603FBA1 RID: 261025 RVA: 0x00F6B510 File Offset: 0x00F69710
+		// Token: 0x06034862 RID: 215138 RVA: 0x00EB246C File Offset: 0x00EB066C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x0603FBA2 RID: 261026 RVA: 0x00F6B584 File Offset: 0x00F69784
+		// Token: 0x06034863 RID: 215139 RVA: 0x00EB24E0 File Offset: 0x00EB06E0
 		protected override void OnStart()
 		{
 			this.PanelItem = base.GetItem(0);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FBA3 RID: 261027 RVA: 0x00F6B5F4 File Offset: 0x00F697F4
+		// Token: 0x06034864 RID: 215140 RVA: 0x00EB2550 File Offset: 0x00EB0750
 		public override void Refresh(List<PinballShopItemProxy> data, bool isSelected, int gridIndex)
 		{
 			base.GridIndex = gridIndex;
@@ -77,28 +77,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FBA4 RID: 261028 RVA: 0x00F6B6A0 File Offset: 0x00F698A0
+		// Token: 0x06034865 RID: 215141 RVA: 0x00EB25FC File Offset: 0x00EB07FC
 		public override void Clear()
 		{
 		}
 
-		// Token: 0x0603FBA5 RID: 261029 RVA: 0x00F6B6A2 File Offset: 0x00F698A2
+		// Token: 0x06034866 RID: 215142 RVA: 0x00EB25FE File Offset: 0x00EB07FE
 		public override void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0603FBA6 RID: 261030 RVA: 0x00F6B6A4 File Offset: 0x00F698A4
+		// Token: 0x06034867 RID: 215143 RVA: 0x00EB2600 File Offset: 0x00EB0800
 		public override void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0603FBA7 RID: 261031 RVA: 0x00F6B6A6 File Offset: 0x00F698A6
+		// Token: 0x06034868 RID: 215144 RVA: 0x00EB2602 File Offset: 0x00EB0802
 		public override object GetKey(List<PinballShopItemProxy> data, int gridIndex)
 		{
 			return gridIndex;
 		}
 
-		// Token: 0x0603FBA8 RID: 261032 RVA: 0x00F6B6B0 File Offset: 0x00F698B0
+		// Token: 0x06034869 RID: 215145 RVA: 0x00EB260C File Offset: 0x00EB080C
 		private void EnsureSlots(int needCount)
 		{
 			int num = Math.Min(needCount, 5);
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FBA9 RID: 261033 RVA: 0x00F6B794 File Offset: 0x00F69994
+		// Token: 0x0603486A RID: 215146 RVA: 0x00EB26F0 File Offset: 0x00EB08F0
 		private void EnsureSlotProxiesCreated(int needCount)
 		{
 			for (int i = 0; i < needCount; i++)
@@ -153,21 +153,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0402147F RID: 136319
+		// Token: 0x0401BDAE RID: 114094
 		private const int MAX_ITEMS_PER_ROW = 5;
 
-		// Token: 0x04021480 RID: 136320
+		// Token: 0x0401BDAF RID: 114095
 		[Nullable(2)]
 		private UUIItem PanelItem;
 
-		// Token: 0x04021481 RID: 136321
+		// Token: 0x0401BDB0 RID: 114096
 		[Nullable(2)]
 		private UUIItem TemplateItem;
 
-		// Token: 0x04021482 RID: 136322
+		// Token: 0x0401BDB1 RID: 114097
 		private readonly List<UUIItem> ItemSlots = new List<UUIItem>();
 
-		// Token: 0x04021483 RID: 136323
+		// Token: 0x0401BDB2 RID: 114098
 		[Nullable(new byte[]
 		{
 			1,
@@ -175,13 +175,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 		})]
 		private readonly List<PinballShopGridItem> SlotProxies = new List<PinballShopGridItem>();
 
-		// Token: 0x0200C4DE RID: 50398
+		// Token: 0x0200AEC5 RID: 44741
 		[NullableContext(0)]
 		private enum ERowComponent
 		{
-			// Token: 0x0403B696 RID: 243350
+			// Token: 0x04035FF8 RID: 221176
 			ItemPanel,
-			// Token: 0x0403B697 RID: 243351
+			// Token: 0x04035FF9 RID: 221177
 			ShopItem
 		}
 	}

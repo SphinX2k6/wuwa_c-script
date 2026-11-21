@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200412B RID: 16683
+	// Token: 0x0200456C RID: 17772
 	public class IShowUiForgingT
 	{
-		// Token: 0x1700762F RID: 30255
-		// (get) Token: 0x0601874E RID: 100174 RVA: 0x00386E48 File Offset: 0x00385048
-		// (set) Token: 0x0601874F RID: 100175 RVA: 0x00386E50 File Offset: 0x00385050
+		// Token: 0x17007C35 RID: 31797
+		// (get) Token: 0x06019DF1 RID: 105969 RVA: 0x003B0E50 File Offset: 0x003AF050
+		// (set) Token: 0x06019DF2 RID: 105970 RVA: 0x003B0E58 File Offset: 0x003AF058
 		public EShowUiType Type { get; set; }
 
-		// Token: 0x17007630 RID: 30256
-		// (get) Token: 0x06018750 RID: 100176 RVA: 0x00386E59 File Offset: 0x00385059
-		// (set) Token: 0x06018751 RID: 100177 RVA: 0x00386E61 File Offset: 0x00385061
+		// Token: 0x17007C36 RID: 31798
+		// (get) Token: 0x06019DF3 RID: 105971 RVA: 0x003B0E61 File Offset: 0x003AF061
+		// (set) Token: 0x06019DF4 RID: 105972 RVA: 0x003B0E69 File Offset: 0x003AF069
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x17007631 RID: 30257
-		// (get) Token: 0x06018752 RID: 100178 RVA: 0x00386E6A File Offset: 0x0038506A
-		// (set) Token: 0x06018753 RID: 100179 RVA: 0x00386E72 File Offset: 0x00385072
+		// Token: 0x17007C37 RID: 31799
+		// (get) Token: 0x06019DF5 RID: 105973 RVA: 0x003B0E72 File Offset: 0x003AF072
+		// (set) Token: 0x06019DF6 RID: 105974 RVA: 0x003B0E7A File Offset: 0x003AF07A
 		public List<int> ProductIds { get; set; }
 
-		// Token: 0x17007632 RID: 30258
-		// (get) Token: 0x06018754 RID: 100180 RVA: 0x00386E7B File Offset: 0x0038507B
-		// (set) Token: 0x06018755 RID: 100181 RVA: 0x00386E83 File Offset: 0x00385083
+		// Token: 0x17007C38 RID: 31800
+		// (get) Token: 0x06019DF7 RID: 105975 RVA: 0x003B0E83 File Offset: 0x003AF083
+		// (set) Token: 0x06019DF8 RID: 105976 RVA: 0x003B0E8B File Offset: 0x003AF08B
 		public byte NullMask { get; set; }
 
-		// Token: 0x06018756 RID: 100182 RVA: 0x00386E8C File Offset: 0x0038508C
+		// Token: 0x06019DF9 RID: 105977 RVA: 0x003B0E94 File Offset: 0x003AF094
 		public IShowUiForgingT()
 		{
 			this.Type = EShowUiType.All;

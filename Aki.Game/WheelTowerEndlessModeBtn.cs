@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001600 RID: 5632
+// Token: 0x02000AB8 RID: 2744
 public class WheelTowerEndlessModeBtn : UiPanelBase
 {
-	// Token: 0x06009ED2 RID: 40658 RVA: 0x0022B45C File Offset: 0x0022965C
+	// Token: 0x060072B0 RID: 29360 RVA: 0x0023525C File Offset: 0x0023345C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -41,7 +41,7 @@ public class WheelTowerEndlessModeBtn : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009ED3 RID: 40659 RVA: 0x0022B5A8 File Offset: 0x002297A8
+	// Token: 0x060072B1 RID: 29361 RVA: 0x002353A8 File Offset: 0x002335A8
 	public void Refresh()
 	{
 		WheelTowerModel instance = WheelTowerModel.Instance;
@@ -97,7 +97,7 @@ public class WheelTowerEndlessModeBtn : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009ED4 RID: 40660 RVA: 0x0022B761 File Offset: 0x00229961
+	// Token: 0x060072B2 RID: 29362 RVA: 0x00235561 File Offset: 0x00233761
 	private void OnButtonClick()
 	{
 		WheelTowerModel.Instance.SetEndlessMode(true);

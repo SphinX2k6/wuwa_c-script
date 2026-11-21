@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EE9 RID: 7913
+	// Token: 0x020005F6 RID: 1526
 	public sealed class FOnPostSended : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E13A RID: 123194 RVA: 0x002CA7AF File Offset: 0x002C89AF
+		// Token: 0x06008785 RID: 34693 RVA: 0x000CB7B3 File Offset: 0x000C99B3
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnPostSended.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E13B RID: 123195 RVA: 0x002CA7BB File Offset: 0x002C89BB
+		// Token: 0x06008786 RID: 34694 RVA: 0x000CB7BF File Offset: 0x000C99BF
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnPostSended._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnPostSended._FunctionPtr;
 		}
 
-		// Token: 0x0601E13C RID: 123196 RVA: 0x002CA7DE File Offset: 0x002C89DE
+		// Token: 0x06008787 RID: 34695 RVA: 0x000CB7E2 File Offset: 0x000C99E2
 		public FOnPostSended()
 		{
 		}
 
-		// Token: 0x0601E13D RID: 123197 RVA: 0x002CA7E6 File Offset: 0x002C89E6
+		// Token: 0x06008788 RID: 34696 RVA: 0x000CB7EA File Offset: 0x000C99EA
 		[NullableContext(2)]
 		public FOnPostSended(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E13E RID: 123198 RVA: 0x002CA7F0 File Offset: 0x002C89F0
+		// Token: 0x06008789 RID: 34697 RVA: 0x000CB7F4 File Offset: 0x000C99F4
 		public FOnPostSended(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E13F RID: 123199 RVA: 0x002CA7FB File Offset: 0x002C89FB
+		// Token: 0x0600878A RID: 34698 RVA: 0x000CB7FF File Offset: 0x000C99FF
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as FOnPostSended.FOnPostSended_ScriptDelegate) ?? ((FOnPostSended.FOnPostSended_ScriptDelegate)Delegate.CreateDelegate(typeof(FOnPostSended.FOnPostSended_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E140 RID: 123200 RVA: 0x002CA82D File Offset: 0x002C8A2D
+		// Token: 0x0600878B RID: 34699 RVA: 0x000CB831 File Offset: 0x000C9A31
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(FOnPostSended.FOnPostSended_ScriptDelegate Callback)
 		{
 			if (FOnPostSended.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnPostSended.RegisterId);
 		}
 
-		// Token: 0x0601E141 RID: 123201 RVA: 0x002CA868 File Offset: 0x002C8A68
+		// Token: 0x0600878C RID: 34700 RVA: 0x000CB86C File Offset: 0x000C9A6C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute([Nullable(new byte[]
 		{
 			2,
@@ -90,10 +88,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnPostSended._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601E142 RID: 123202 RVA: 0x002CA8D8 File Offset: 0x002C8AD8
+		// Token: 0x0600878D RID: 34701 RVA: 0x000CB8DC File Offset: 0x000C9ADC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			FOnPostSended.FOnPostSended_ScriptDelegate fonPostSended_ScriptDelegate = target as FOnPostSended.FOnPostSended_ScriptDelegate;
@@ -109,39 +106,39 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x04010415 RID: 66581
+		// Token: 0x04003AED RID: 15085
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010416 RID: 66582
+		// Token: 0x04003AEE RID: 15086
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.OnPostSended__DelegateSignature";
 
-		// Token: 0x04010417 RID: 66583
+		// Token: 0x04003AEF RID: 15087
 		private static int RegisterId;
 
-		// Token: 0x020033BB RID: 13243
-		// (Invoke) Token: 0x060285AE RID: 165294
+		// Token: 0x02000E08 RID: 3592
+		// (Invoke) Token: 0x0600BF17 RID: 48919
 		public delegate void FOnPostSended_ScriptDelegate([Nullable(new byte[]
 		{
 			2,
 			1
 		})] in TArray<string> SendedFiles);
 
-		// Token: 0x020033BC RID: 13244
+		// Token: 0x02000E09 RID: 3593
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FOnPostSended_DelegateParams
+		private ref struct __FOnPostSended_DelegateParams
 		{
-			// Token: 0x04017371 RID: 95089
+			// Token: 0x0400619E RID: 24990
 			[FieldOffset(0)]
 			public byte SendedFiles;
 		}
 
-		// Token: 0x020033BD RID: 13245
+		// Token: 0x02000E0A RID: 3594
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017372 RID: 95090
+			// Token: 0x0400619F RID: 24991
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

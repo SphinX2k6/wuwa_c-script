@@ -7,33 +7,33 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012D8 RID: 4824
+// Token: 0x0200078C RID: 1932
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewMapTravel : ActivitySubViewBase
 {
-	// Token: 0x17000B72 RID: 2930
-	// (get) Token: 0x06008503 RID: 34051 RVA: 0x001C48C5 File Offset: 0x001C2AC5
-	// (set) Token: 0x06008504 RID: 34052 RVA: 0x001C48CD File Offset: 0x001C2ACD
+	// Token: 0x17000B92 RID: 2962
+	// (get) Token: 0x0600589E RID: 22686 RVA: 0x001CD721 File Offset: 0x001CB921
+	// (set) Token: 0x0600589F RID: 22687 RVA: 0x001CD729 File Offset: 0x001CB929
 	protected ActivityMapTravelData ActivityData { get; set; }
 
-	// Token: 0x17000B73 RID: 2931
-	// (get) Token: 0x06008505 RID: 34053 RVA: 0x001C48D6 File Offset: 0x001C2AD6
-	// (set) Token: 0x06008506 RID: 34054 RVA: 0x001C48DE File Offset: 0x001C2ADE
+	// Token: 0x17000B93 RID: 2963
+	// (get) Token: 0x060058A0 RID: 22688 RVA: 0x001CD732 File Offset: 0x001CB932
+	// (set) Token: 0x060058A1 RID: 22689 RVA: 0x001CD73A File Offset: 0x001CB93A
 	protected ActivitySubViewGeneralInfo GeneralActivityInfo { get; set; }
 
-	// Token: 0x17000B74 RID: 2932
-	// (get) Token: 0x06008507 RID: 34055 RVA: 0x001C48E7 File Offset: 0x001C2AE7
-	// (set) Token: 0x06008508 RID: 34056 RVA: 0x001C48EF File Offset: 0x001C2AEF
+	// Token: 0x17000B94 RID: 2964
+	// (get) Token: 0x060058A2 RID: 22690 RVA: 0x001CD743 File Offset: 0x001CB943
+	// (set) Token: 0x060058A3 RID: 22691 RVA: 0x001CD74B File Offset: 0x001CB94B
 	private MapTravelExpComponent ExpComponent { get; set; }
 
-	// Token: 0x06008509 RID: 34057 RVA: 0x001C48F8 File Offset: 0x001C2AF8
+	// Token: 0x060058A4 RID: 22692 RVA: 0x001CD754 File Offset: 0x001CB954
 	protected override void OnSetData()
 	{
 		this.ActivityData = (ActivityMapTravelData)this.ActivityBaseData;
 	}
 
-	// Token: 0x0600850A RID: 34058 RVA: 0x001C490C File Offset: 0x001C2B0C
+	// Token: 0x060058A5 RID: 22693 RVA: 0x001CD768 File Offset: 0x001CB968
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -51,7 +51,7 @@ public class ActivitySubViewMapTravel : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600850B RID: 34059 RVA: 0x001C49B8 File Offset: 0x001C2BB8
+	// Token: 0x060058A6 RID: 22694 RVA: 0x001CD814 File Offset: 0x001CBA14
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewMapTravel.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -62,14 +62,14 @@ public class ActivitySubViewMapTravel : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600850C RID: 34060 RVA: 0x001C49FB File Offset: 0x001C2BFB
+	// Token: 0x060058A7 RID: 22695 RVA: 0x001CD857 File Offset: 0x001CBA57
 	protected override void OnRefreshView()
 	{
 		this.RefreshExpComponent();
 		this.RefreshButton();
 	}
 
-	// Token: 0x0600850D RID: 34061 RVA: 0x001C4A09 File Offset: 0x001C2C09
+	// Token: 0x060058A8 RID: 22696 RVA: 0x001CD865 File Offset: 0x001CBA65
 	private void OnBtnClick(ActivityBaseData _)
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -78,33 +78,33 @@ public class ActivitySubViewMapTravel : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x0600850E RID: 34062 RVA: 0x001C4A28 File Offset: 0x001C2C28
+	// Token: 0x060058A9 RID: 22697 RVA: 0x001CD884 File Offset: 0x001CBA84
 	private void RefreshExpComponent()
 	{
 		this.ExpComponent.SetProgress(this.ActivityData.GetCurrentExp(), this.ActivityData.GetCurrentTargetExp(), this.ActivityData.TravelLevel == this.ActivityData.MaxTravelLevel);
 		this.ExpComponent.SetLevel(this.ActivityData.TravelLevel);
 	}
 
-	// Token: 0x0600850F RID: 34063 RVA: 0x001C4A84 File Offset: 0x001C2C84
+	// Token: 0x060058AA RID: 22698 RVA: 0x001CD8E0 File Offset: 0x001CBAE0
 	private void RefreshButton()
 	{
 		this.GeneralActivityInfo.SetFunctionRedDotVisible(this.ActivityData.RedPointShowState);
 	}
 
-	// Token: 0x020078E9 RID: 30953
+	// Token: 0x02006A73 RID: 27251
 	[NullableContext(0)]
 	private class EViewDefine
 	{
-		// Token: 0x04027D4D RID: 163149
+		// Token: 0x0402307B RID: 143483
 		public const int CommonActivityInfo = 0;
 
-		// Token: 0x04027D4E RID: 163150
+		// Token: 0x0402307C RID: 143484
 		public const int ProgressItem = 1;
 
-		// Token: 0x04027D4F RID: 163151
+		// Token: 0x0402307D RID: 143485
 		public const int PanelMale = 2;
 
-		// Token: 0x04027D50 RID: 163152
+		// Token: 0x0402307E RID: 143486
 		public const int PanelFemale = 3;
 	}
 }

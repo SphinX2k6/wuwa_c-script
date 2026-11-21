@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002699 RID: 9881
+	// Token: 0x0200295C RID: 10588
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ICustomScreenTextSetting
 	{
-		// Token: 0x0600DD2E RID: 56622 RVA: 0x0020DE45 File Offset: 0x0020C045
-		[NullableContext(1)]
+		// Token: 0x0600EB05 RID: 60165 RVA: 0x0022A5E5 File Offset: 0x002287E5
+		[NullableContext(0)]
 		public static ICustomScreenTextSetting Create(ICustomScreenTextSetting? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041BE RID: 16830
-		// (get) Token: 0x0600DD2F RID: 56623 RVA: 0x0020DE64 File Offset: 0x0020C064
+		// Token: 0x170044FB RID: 17659
+		// (get) Token: 0x0600EB06 RID: 60166 RVA: 0x0022A604 File Offset: 0x00228804
 		public virtual bool? IsShowTextInfo
 		{
 			get
@@ -37,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041BF RID: 16831
-		// (get) Token: 0x0600DD30 RID: 56624 RVA: 0x0020DE9A File Offset: 0x0020C09A
+		// Token: 0x170044FC RID: 17660
+		// (get) Token: 0x0600EB07 RID: 60167 RVA: 0x0022A63A File Offset: 0x0022883A
 		public virtual string TidTextContent
 		{
 			get
@@ -47,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041C0 RID: 16832
-		// (get) Token: 0x0600DD31 RID: 56625 RVA: 0x0020DEA7 File Offset: 0x0020C0A7
+		// Token: 0x170044FD RID: 17661
+		// (get) Token: 0x0600EB08 RID: 60168 RVA: 0x0022A647 File Offset: 0x00228847
 		public virtual string EdTidTextContent
 		{
 			get
@@ -57,7 +57,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ADB RID: 31451
+		// Token: 0x04008178 RID: 33144
 		private ICustomScreenTextSetting Instance;
 	}
 }

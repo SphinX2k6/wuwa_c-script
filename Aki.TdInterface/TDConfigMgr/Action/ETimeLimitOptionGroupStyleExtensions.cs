@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200246F RID: 9327
+	// Token: 0x02002710 RID: 10000
 	public static class ETimeLimitOptionGroupStyleExtensions
 	{
-		// Token: 0x0600CA72 RID: 51826 RVA: 0x001DCCA8 File Offset: 0x001DAEA8
+		// Token: 0x0600D722 RID: 55074 RVA: 0x001F6D5C File Offset: 0x001F4F5C
 		public static string ToEnumString(this ETimeLimitOptionGroupStyle value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA73 RID: 51827 RVA: 0x001DCCD0 File Offset: 0x001DAED0
+		// Token: 0x0600D723 RID: 55075 RVA: 0x001F6D84 File Offset: 0x001F4F84
 		public static ETimeLimitOptionGroupStyle FromString(string name)
 		{
 			ETimeLimitOptionGroupStyle result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA74 RID: 51828 RVA: 0x001DCCF9 File Offset: 0x001DAEF9
+		// Token: 0x0600D724 RID: 55076 RVA: 0x001F6DAD File Offset: 0x001F4FAD
 		public static bool TryFromString(string name, out ETimeLimitOptionGroupStyle value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600CA75 RID: 51829 RVA: 0x001DCD1E File Offset: 0x001DAF1E
+		// Token: 0x0600D725 RID: 55077 RVA: 0x001F6DD2 File Offset: 0x001F4FD2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA76 RID: 51830 RVA: 0x001DCD2E File Offset: 0x001DAF2E
+		// Token: 0x0600D726 RID: 55078 RVA: 0x001F6DE2 File Offset: 0x001F4FE2
 		public static ETimeLimitOptionGroupStyle[] GetValues()
 		{
 			return new ETimeLimitOptionGroupStyle[1];
 		}
 
-		// Token: 0x0600CA77 RID: 51831 RVA: 0x001DCD36 File Offset: 0x001DAF36
+		// Token: 0x0600D727 RID: 55079 RVA: 0x001F6DEA File Offset: 0x001F4FEA
 		public static string[] GetNames()
 		{
 			return new string[]

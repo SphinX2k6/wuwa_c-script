@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010A8 RID: 4264
+	// Token: 0x020011A3 RID: 4515
 	public struct ShippingHiddenMultiText : IFlatbufferObject
 	{
-		// Token: 0x170035B5 RID: 13749
-		// (get) Token: 0x0600D1A4 RID: 53668 RVA: 0x0030E819 File Offset: 0x0030CA19
+		// Token: 0x170036C3 RID: 14019
+		// (get) Token: 0x0600D97A RID: 55674 RVA: 0x0032DCEE File Offset: 0x0032BEEE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D1A5 RID: 53669 RVA: 0x0030E826 File Offset: 0x0030CA26
+		// Token: 0x0600D97B RID: 55675 RVA: 0x0032DCFB File Offset: 0x0032BEFB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D1A6 RID: 53670 RVA: 0x0030E830 File Offset: 0x0030CA30
+		// Token: 0x0600D97C RID: 55676 RVA: 0x0032DD04 File Offset: 0x0032BF04
 		public static ShippingHiddenMultiText GetRootAsShippingHiddenMultiText(ByteBuffer _bb)
 		{
 			return ShippingHiddenMultiText.GetRootAsShippingHiddenMultiText(_bb, default(ShippingHiddenMultiText));
 		}
 
-		// Token: 0x0600D1A7 RID: 53671 RVA: 0x0030E84C File Offset: 0x0030CA4C
+		// Token: 0x0600D97D RID: 55677 RVA: 0x0032DD20 File Offset: 0x0032BF20
 		public static ShippingHiddenMultiText GetRootAsShippingHiddenMultiText(ByteBuffer _bb, ShippingHiddenMultiText obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D1A8 RID: 53672 RVA: 0x0030E869 File Offset: 0x0030CA69
+		// Token: 0x0600D97E RID: 55678 RVA: 0x0032DD3D File Offset: 0x0032BF3D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D1A9 RID: 53673 RVA: 0x0030E878 File Offset: 0x0030CA78
+		// Token: 0x0600D97F RID: 55679 RVA: 0x0032DD4C File Offset: 0x0032BF4C
 		public ShippingHiddenMultiText __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170035B6 RID: 13750
-		// (get) Token: 0x0600D1AA RID: 53674 RVA: 0x0030E888 File Offset: 0x0030CA88
+		// Token: 0x170036C4 RID: 14020
+		// (get) Token: 0x0600D980 RID: 55680 RVA: 0x0032DD5C File Offset: 0x0032BF5C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170035B7 RID: 13751
-		// (get) Token: 0x0600D1AB RID: 53675 RVA: 0x0030E8C4 File Offset: 0x0030CAC4
+		// Token: 0x170036C5 RID: 14021
+		// (get) Token: 0x0600D981 RID: 55681 RVA: 0x0032DD98 File Offset: 0x0032BF98
 		public string Key
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D1AC RID: 53676 RVA: 0x0030E8FB File Offset: 0x0030CAFB
+		// Token: 0x0600D982 RID: 55682 RVA: 0x0032DDCF File Offset: 0x0032BFCF
 		public Span<byte> GetKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600D1AD RID: 53677 RVA: 0x0030E90A File Offset: 0x0030CB0A
+		// Token: 0x0600D983 RID: 55683 RVA: 0x0032DDDE File Offset: 0x0032BFDE
 		public byte[] GetKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170035B8 RID: 13752
-		// (get) Token: 0x0600D1AE RID: 53678 RVA: 0x0030E924 File Offset: 0x0030CB24
+		// Token: 0x170036C6 RID: 14022
+		// (get) Token: 0x0600D984 RID: 55684 RVA: 0x0032DDF8 File Offset: 0x0032BFF8
 		public string HiddenState
 		{
 			get
@@ -104,19 +104,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D1AF RID: 53679 RVA: 0x0030E95B File Offset: 0x0030CB5B
+		// Token: 0x0600D985 RID: 55685 RVA: 0x0032DE2F File Offset: 0x0032C02F
 		public Span<byte> GetHiddenStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600D1B0 RID: 53680 RVA: 0x0030E96A File Offset: 0x0030CB6A
+		// Token: 0x0600D986 RID: 55686 RVA: 0x0032DE3E File Offset: 0x0032C03E
 		public byte[] GetHiddenStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x040051B7 RID: 20919
+		// Token: 0x040057B6 RID: 22454
 		private Table __p;
 	}
 }

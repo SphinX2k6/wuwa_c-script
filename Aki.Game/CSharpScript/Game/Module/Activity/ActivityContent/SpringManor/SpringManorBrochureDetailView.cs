@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006085 RID: 24709
+	// Token: 0x02005003 RID: 20483
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpringManorBrochureDetailView : UiViewBase
 	{
-		// Token: 0x0603E788 RID: 255880 RVA: 0x00F18EEA File Offset: 0x00F170EA
+		// Token: 0x0603344C RID: 209996 RVA: 0x00E5FCAE File Offset: 0x00E5DEAE
 		public SpringManorBrochureDetailView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E789 RID: 255881 RVA: 0x00F18F00 File Offset: 0x00F17100
+		// Token: 0x0603344D RID: 209997 RVA: 0x00E5FCC4 File Offset: 0x00E5DEC4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E78A RID: 255882 RVA: 0x00F190F0 File Offset: 0x00F172F0
+		// Token: 0x0603344E RID: 209998 RVA: 0x00E5FEB4 File Offset: 0x00E5E0B4
 		protected override void OnStart()
 		{
 			AUIBaseActor rootActor = this.RootActor;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.BottomPointLayout = new GenericLayout<SpringManorBrochureDetailPointItem, int>(horizontalLayout, new Func<SpringManorBrochureDetailPointItem>(this.InitPointItem), null, false, true);
 		}
 
-		// Token: 0x0603E78B RID: 255883 RVA: 0x00F191A0 File Offset: 0x00F173A0
+		// Token: 0x0603344F RID: 209999 RVA: 0x00E5FF64 File Offset: 0x00E5E164
 		protected override void OnBeforeShow()
 		{
 			SpringManorBrochureDetailViewOpenParam springManorBrochureDetailViewOpenParam = this.OpenParam as SpringManorBrochureDetailViewOpenParam;
@@ -95,19 +95,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.UpdateArrowBtnVisible();
 		}
 
-		// Token: 0x0603E78C RID: 255884 RVA: 0x00F1924C File Offset: 0x00F1744C
+		// Token: 0x06033450 RID: 210000 RVA: 0x00E60010 File Offset: 0x00E5E210
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnBrochureBookItemStateUpdate, new Action(this.OnBrochureBookItemStateUpdate));
 		}
 
-		// Token: 0x0603E78D RID: 255885 RVA: 0x00F1926A File Offset: 0x00F1746A
+		// Token: 0x06033451 RID: 210001 RVA: 0x00E6002E File Offset: 0x00E5E22E
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnBrochureBookItemStateUpdate, new Action(this.OnBrochureBookItemStateUpdate));
 		}
 
-		// Token: 0x0603E78E RID: 255886 RVA: 0x00F19288 File Offset: 0x00F17488
+		// Token: 0x06033452 RID: 210002 RVA: 0x00E6004C File Offset: 0x00E5E24C
 		private void OnPlaySequenceEvent(string sequenceName, string eventName)
 		{
 			if (eventName == "Sequence_Switch_Left" || eventName == "Sequence_Switch_Right")
@@ -121,13 +121,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E78F RID: 255887 RVA: 0x00F192C2 File Offset: 0x00F174C2
+		// Token: 0x06033453 RID: 210003 RVA: 0x00E60086 File Offset: 0x00E5E286
 		private void OnBrochureBookItemStateUpdate()
 		{
 			this.RefreshPage();
 		}
 
-		// Token: 0x0603E790 RID: 255888 RVA: 0x00F192CA File Offset: 0x00F174CA
+		// Token: 0x06033454 RID: 210004 RVA: 0x00E6008E File Offset: 0x00E5E28E
 		private CommonItemSmallItemGrid InitGridItem()
 		{
 			return new CommonItemSmallItemGrid
@@ -136,20 +136,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E791 RID: 255889 RVA: 0x00F192E3 File Offset: 0x00F174E3
+		// Token: 0x06033455 RID: 210005 RVA: 0x00E600A7 File Offset: 0x00E5E2A7
 		private SpringManorBrochureDetailPointItem InitPointItem()
 		{
 			return new SpringManorBrochureDetailPointItem();
 		}
 
-		// Token: 0x0603E792 RID: 255890 RVA: 0x00F192EC File Offset: 0x00F174EC
+		// Token: 0x06033456 RID: 210006 RVA: 0x00E600B0 File Offset: 0x00E5E2B0
 		private void OnClickMoreButton()
 		{
 			int helpId = ActivityModel.Instance.GetActivityById(this.ActivityId).GetHelpId();
 			HelpController.Instance.OpenHelpById(helpId);
 		}
 
-		// Token: 0x0603E793 RID: 255891 RVA: 0x00F1931C File Offset: 0x00F1751C
+		// Token: 0x06033457 RID: 210007 RVA: 0x00E600E0 File Offset: 0x00E5E2E0
 		private void OnClickRewardBtn()
 		{
 			int getCurDetailConfigId = this.GetCurDetailConfigId;
@@ -161,8 +161,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x17009076 RID: 36982
-		// (get) Token: 0x0603E794 RID: 255892 RVA: 0x00F19368 File Offset: 0x00F17568
+		// Token: 0x170063D8 RID: 25560
+		// (get) Token: 0x06033458 RID: 210008 RVA: 0x00E6012C File Offset: 0x00E5E32C
 		private int GetCurDetailConfigId
 		{
 			get
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E795 RID: 255893 RVA: 0x00F1939C File Offset: 0x00F1759C
+		// Token: 0x06033459 RID: 210009 RVA: 0x00E60160 File Offset: 0x00E5E360
 		private void InitDetailData()
 		{
 			this.DetailIds.Clear();
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, false);
 		}
 
-		// Token: 0x0603E796 RID: 255894 RVA: 0x00F19470 File Offset: 0x00F17670
+		// Token: 0x0603345A RID: 210010 RVA: 0x00E60234 File Offset: 0x00E5E434
 		private void RefreshPage()
 		{
 			int getCurDetailConfigId = this.GetCurDetailConfigId;
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, false);
 		}
 
-		// Token: 0x0603E797 RID: 255895 RVA: 0x00F19514 File Offset: 0x00F17714
+		// Token: 0x0603345B RID: 210011 RVA: 0x00E602D8 File Offset: 0x00E5E4D8
 		private void SetDetailInfo(int configId)
 		{
 			SpringManorConfig instance = SpringManorConfig.Instance;
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			item2.SetUIActive(flag2);
 		}
 
-		// Token: 0x0603E798 RID: 255896 RVA: 0x00F1972C File Offset: 0x00F1792C
+		// Token: 0x0603345C RID: 210012 RVA: 0x00E604F0 File Offset: 0x00E5E6F0
 		[NullableContext(2)]
 		public void SetRewardItems(List<TItem> rewardItems, bool isRewarded)
 		{
@@ -351,7 +351,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			item.SetUIActive(flag);
 		}
 
-		// Token: 0x0603E799 RID: 255897 RVA: 0x00F19794 File Offset: 0x00F17994
+		// Token: 0x0603345D RID: 210013 RVA: 0x00E60558 File Offset: 0x00E5E758
 		private void OnClickBtnBrochurePre()
 		{
 			if (this.CurrentDetailPointIndex <= 0)
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.UpdateArrowBtnVisible();
 		}
 
-		// Token: 0x0603E79A RID: 255898 RVA: 0x00F197DC File Offset: 0x00F179DC
+		// Token: 0x0603345E RID: 210014 RVA: 0x00E605A0 File Offset: 0x00E5E7A0
 		private void OnClickBtnBrochureNext()
 		{
 			if (this.CurrentDetailPointIndex >= this.DetailIds.Count - 1)
@@ -375,7 +375,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.UpdateArrowBtnVisible();
 		}
 
-		// Token: 0x0603E79B RID: 255899 RVA: 0x00F19830 File Offset: 0x00F17A30
+		// Token: 0x0603345F RID: 210015 RVA: 0x00E605F4 File Offset: 0x00E5E7F4
 		private void UpdateArrowBtnVisible()
 		{
 			int currentDetailPointIndex = this.CurrentDetailPointIndex;
@@ -402,7 +402,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E79C RID: 255900 RVA: 0x00F198E4 File Offset: 0x00F17AE4
+		// Token: 0x06033460 RID: 210016 RVA: 0x00E606A8 File Offset: 0x00E5E8A8
 		private void OnClickBtnTracking()
 		{
 			SpringManorConfig instance = SpringManorConfig.Instance;
@@ -417,7 +417,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E79D RID: 255901 RVA: 0x00F19940 File Offset: 0x00F17B40
+		// Token: 0x06033461 RID: 210017 RVA: 0x00E60704 File Offset: 0x00E5E904
 		private UniTask TeleportPlayerToEntity(int configId)
 		{
 			SpringManorBrochureDetailView.<TeleportPlayerToEntity>d__31 <TeleportPlayerToEntity>d__;
@@ -428,11 +428,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <TeleportPlayerToEntity>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04020AF3 RID: 133875
+		// Token: 0x0401B420 RID: 111648
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04020AF4 RID: 133876
+		// Token: 0x0401B421 RID: 111649
 		[Nullable(new byte[]
 		{
 			2,
@@ -440,7 +440,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> RewardItemLayout;
 
-		// Token: 0x04020AF5 RID: 133877
+		// Token: 0x0401B422 RID: 111650
 		[Nullable(new byte[]
 		{
 			2,
@@ -448,22 +448,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private GenericLayout<SpringManorBrochureDetailPointItem, int> BottomPointLayout;
 
-		// Token: 0x04020AF6 RID: 133878
+		// Token: 0x0401B423 RID: 111651
 		private bool IsRewarded;
 
-		// Token: 0x04020AF7 RID: 133879
+		// Token: 0x0401B424 RID: 111652
 		private int CurrentDetailPointIndex;
 
-		// Token: 0x04020AF8 RID: 133880
+		// Token: 0x0401B425 RID: 111653
 		private readonly List<int> DetailIds = new List<int>();
 
-		// Token: 0x04020AF9 RID: 133881
+		// Token: 0x0401B426 RID: 111654
 		private int ActivityId;
 
-		// Token: 0x04020AFA RID: 133882
+		// Token: 0x0401B427 RID: 111655
 		private bool IsHideReward;
 
-		// Token: 0x04020AFB RID: 133883
+		// Token: 0x0401B428 RID: 111656
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 	}

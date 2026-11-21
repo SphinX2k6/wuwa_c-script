@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001CE3 RID: 7395
+// Token: 0x020011A5 RID: 4517
 [NullableContext(1)]
 [Nullable(0)]
 public static class MotorcycleUtil
 {
-	// Token: 0x0600E011 RID: 57361 RVA: 0x00347C54 File Offset: 0x00345E54
+	// Token: 0x0600B42E RID: 46126 RVA: 0x0035367C File Offset: 0x0035187C
 	public static string CompactNumberFormat(float num)
 	{
 		num = (float)Math.Floor((double)num);
@@ -29,7 +29,7 @@ public static class MotorcycleUtil
 		return num.ToString();
 	}
 
-	// Token: 0x0600E012 RID: 57362 RVA: 0x00347CEC File Offset: 0x00345EEC
+	// Token: 0x0600B42F RID: 46127 RVA: 0x00353714 File Offset: 0x00351914
 	public static string TimeFormat(float milliseconds)
 	{
 		float num = milliseconds * 0.001f;
@@ -45,15 +45,15 @@ public static class MotorcycleUtil
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x04006729 RID: 26409
+	// Token: 0x04006808 RID: 26632
 	private const int HP_LEVEL1 = 100000;
 
-	// Token: 0x0400672A RID: 26410
+	// Token: 0x04006809 RID: 26633
 	private const int HP_LEVEL2 = 100000000;
 
-	// Token: 0x0400672B RID: 26411
+	// Token: 0x0400680A RID: 26634
 	private const int SECOND_PER_MINUTE = 60;
 
-	// Token: 0x0400672C RID: 26412
+	// Token: 0x0400680B RID: 26635
 	private const int SECOND_PER_HOUR = 3600;
 }

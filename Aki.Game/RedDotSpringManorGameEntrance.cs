@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02003435 RID: 13365
+// Token: 0x020029A9 RID: 10665
 public class RedDotSpringManorGameEntrance : RedDotBase
 {
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C4E RID: 27726
+	// Token: 0x020073B5 RID: 29621
 	public struct IOverrideAbpAnimScheme : IFlatbufferObject
 	{
-		// Token: 0x1700CE81 RID: 52865
-		// (get) Token: 0x06030D8D RID: 200077 RVA: 0x006A2A68 File Offset: 0x006A0C68
+		// Token: 0x1700D99C RID: 55708
+		// (get) Token: 0x06033CE8 RID: 212200 RVA: 0x006FCF68 File Offset: 0x006FB168
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030D8E RID: 200078 RVA: 0x006A2A75 File Offset: 0x006A0C75
+		// Token: 0x06033CE9 RID: 212201 RVA: 0x006FCF75 File Offset: 0x006FB175
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030D8F RID: 200079 RVA: 0x006A2A7C File Offset: 0x006A0C7C
+		// Token: 0x06033CEA RID: 212202 RVA: 0x006FCF7C File Offset: 0x006FB17C
 		public static IOverrideAbpAnimScheme GetRootAsIOverrideAbpAnimScheme(ByteBuffer _bb)
 		{
 			return IOverrideAbpAnimScheme.GetRootAsIOverrideAbpAnimScheme(_bb, default(IOverrideAbpAnimScheme));
 		}
 
-		// Token: 0x06030D90 RID: 200080 RVA: 0x006A2A98 File Offset: 0x006A0C98
+		// Token: 0x06033CEB RID: 212203 RVA: 0x006FCF98 File Offset: 0x006FB198
 		public static IOverrideAbpAnimScheme GetRootAsIOverrideAbpAnimScheme(ByteBuffer _bb, IOverrideAbpAnimScheme obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030D91 RID: 200081 RVA: 0x006A2AB5 File Offset: 0x006A0CB5
+		// Token: 0x06033CEC RID: 212204 RVA: 0x006FCFB5 File Offset: 0x006FB1B5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030D92 RID: 200082 RVA: 0x006A2AC4 File Offset: 0x006A0CC4
+		// Token: 0x06033CED RID: 212205 RVA: 0x006FCFC4 File Offset: 0x006FB1C4
 		public IOverrideAbpAnimScheme __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x06030D93 RID: 200083 RVA: 0x006A2AD4 File Offset: 0x006A0CD4
+		// Token: 0x06033CEE RID: 212206 RVA: 0x006FCFD4 File Offset: 0x006FB1D4
 		public IOverrideAbpAnimSchemeConfig? OverrideConfigs(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IOverrideAbpAnimSchemeConfig?(default(IOverrideAbpAnimSchemeConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700CE82 RID: 52866
-		// (get) Token: 0x06030D94 RID: 200084 RVA: 0x006A2B34 File Offset: 0x006A0D34
+		// Token: 0x1700D99D RID: 55709
+		// (get) Token: 0x06033CEF RID: 212207 RVA: 0x006FD034 File Offset: 0x006FB234
 		public int OverrideConfigsLength
 		{
 			get
@@ -74,7 +74,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030D95 RID: 200085 RVA: 0x006A2B5F File Offset: 0x006A0D5F
+		// Token: 0x06033CF0 RID: 212208 RVA: 0x006FD05F File Offset: 0x006FB25F
 		public static Offset<IOverrideAbpAnimScheme> CreateIOverrideAbpAnimScheme(FlatBufferBuilder builder, VectorOffset OverrideConfigsOffset = default(VectorOffset))
 		{
 			builder.StartTable(1);
@@ -82,19 +82,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOverrideAbpAnimScheme.EndIOverrideAbpAnimScheme(builder);
 		}
 
-		// Token: 0x06030D96 RID: 200086 RVA: 0x006A2B75 File Offset: 0x006A0D75
+		// Token: 0x06033CF1 RID: 212209 RVA: 0x006FD075 File Offset: 0x006FB275
 		public static void StartIOverrideAbpAnimScheme(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06030D97 RID: 200087 RVA: 0x006A2B7E File Offset: 0x006A0D7E
+		// Token: 0x06033CF2 RID: 212210 RVA: 0x006FD07E File Offset: 0x006FB27E
 		public static void AddOverrideConfigs(FlatBufferBuilder builder, VectorOffset overrideConfigsOffset)
 		{
 			builder.AddOffset(0, overrideConfigsOffset.Value, 0);
 		}
 
-		// Token: 0x06030D98 RID: 200088 RVA: 0x006A2B90 File Offset: 0x006A0D90
+		// Token: 0x06033CF3 RID: 212211 RVA: 0x006FD090 File Offset: 0x006FB290
 		public static VectorOffset CreateOverrideConfigsVector(FlatBufferBuilder builder, Offset<IOverrideAbpAnimSchemeConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06030D99 RID: 200089 RVA: 0x006A2BD0 File Offset: 0x006A0DD0
+		// Token: 0x06033CF4 RID: 212212 RVA: 0x006FD0D0 File Offset: 0x006FB2D0
 		public static VectorOffset CreateOverrideConfigsVectorBlock(FlatBufferBuilder builder, Offset<IOverrideAbpAnimSchemeConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06030D9A RID: 200090 RVA: 0x006A2BEA File Offset: 0x006A0DEA
+		// Token: 0x06033CF5 RID: 212213 RVA: 0x006FD0EA File Offset: 0x006FB2EA
 		public static VectorOffset CreateOverrideConfigsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IOverrideAbpAnimSchemeConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -121,7 +121,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06030D9B RID: 200091 RVA: 0x006A2C08 File Offset: 0x006A0E08
+		// Token: 0x06033CF6 RID: 212214 RVA: 0x006FD108 File Offset: 0x006FB308
 		public static VectorOffset CreateOverrideConfigsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -129,19 +129,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06030D9C RID: 200092 RVA: 0x006A2C21 File Offset: 0x006A0E21
+		// Token: 0x06033CF7 RID: 212215 RVA: 0x006FD121 File Offset: 0x006FB321
 		public static void StartOverrideConfigsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06030D9D RID: 200093 RVA: 0x006A2C2C File Offset: 0x006A0E2C
+		// Token: 0x06033CF8 RID: 212216 RVA: 0x006FD12C File Offset: 0x006FB32C
 		public static Offset<IOverrideAbpAnimScheme> EndIOverrideAbpAnimScheme(FlatBufferBuilder builder)
 		{
 			return new Offset<IOverrideAbpAnimScheme>(builder.EndTable());
 		}
 
-		// Token: 0x06030D9E RID: 200094 RVA: 0x006A2C3C File Offset: 0x006A0E3C
+		// Token: 0x06033CF9 RID: 212217 RVA: 0x006FD13C File Offset: 0x006FB33C
 		public IOverrideAbpAnimSchemeT UnPack()
 		{
 			IOverrideAbpAnimSchemeT overrideAbpAnimSchemeT = new IOverrideAbpAnimSchemeT();
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return overrideAbpAnimSchemeT;
 		}
 
-		// Token: 0x06030D9F RID: 200095 RVA: 0x006A2C58 File Offset: 0x006A0E58
+		// Token: 0x06033CFA RID: 212218 RVA: 0x006FD158 File Offset: 0x006FB358
 		public void UnPackTo(IOverrideAbpAnimSchemeT _o)
 		{
 			_o.OverrideConfigs = new List<IOverrideAbpAnimSchemeConfigT>();
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030DA0 RID: 200096 RVA: 0x006A2CB8 File Offset: 0x006A0EB8
+		// Token: 0x06033CFB RID: 212219 RVA: 0x006FD1B8 File Offset: 0x006FB3B8
 		public static Offset<IOverrideAbpAnimScheme> Pack(FlatBufferBuilder builder, IOverrideAbpAnimSchemeT _o)
 		{
 			if (_o == null)
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOverrideAbpAnimScheme.CreateIOverrideAbpAnimScheme(builder, overrideConfigsOffset);
 		}
 
-		// Token: 0x0401158F RID: 71055
+		// Token: 0x040124E7 RID: 74983
 		private Table __p;
 	}
 }

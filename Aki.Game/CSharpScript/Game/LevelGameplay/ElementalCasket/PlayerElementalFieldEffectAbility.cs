@@ -6,35 +6,35 @@ using CSharpScript.Game.LevelEntityAbility;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E75 RID: 28277
+	// Token: 0x02005FF6 RID: 24566
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerElementalFieldEffectAbility : LevelEntityAbilityBase
 	{
-		// Token: 0x06044EA2 RID: 282274 RVA: 0x01105890 File Offset: 0x01103A90
+		// Token: 0x0603B041 RID: 241729 RVA: 0x010AFEAF File Offset: 0x010AE0AF
 		public PlayerElementalFieldEffectAbility(ELevelEntityAbilityType Type, EAbilityTickPhase TickPhase, int TickOrder, bool NeedTickActivate) : base(Type, TickPhase, TickOrder, NeedTickActivate)
 		{
 		}
 
-		// Token: 0x06044EA3 RID: 282275 RVA: 0x0110589D File Offset: 0x01103A9D
+		// Token: 0x0603B042 RID: 241730 RVA: 0x010AFEBC File Offset: 0x010AE0BC
 		public override bool OnAddAbility(Entity entity)
 		{
 			return entity.GetComponent<PlayerElementalCasketComponent>() != null && entity.GetComponent<BaseGameplayCueComponent>() != null;
 		}
 
-		// Token: 0x06044EA4 RID: 282276 RVA: 0x011058B2 File Offset: 0x01103AB2
+		// Token: 0x0603B043 RID: 241731 RVA: 0x010AFED1 File Offset: 0x010AE0D1
 		public override bool ShouldActivate(Entity entity)
 		{
 			return !entity.GetComponent<PlayerElementalCasketComponent>().IsBlockElemental;
 		}
 
-		// Token: 0x06044EA5 RID: 282277 RVA: 0x011058C2 File Offset: 0x01103AC2
+		// Token: 0x0603B044 RID: 241732 RVA: 0x010AFEE1 File Offset: 0x010AE0E1
 		public override bool ShouldDeactivate(Entity entity)
 		{
 			return entity.GetComponent<PlayerElementalCasketComponent>().IsBlockElemental;
 		}
 
-		// Token: 0x06044EA6 RID: 282278 RVA: 0x011058D0 File Offset: 0x01103AD0
+		// Token: 0x0603B045 RID: 241733 RVA: 0x010AFEF0 File Offset: 0x010AE0F0
 		public override void OnActivated(Entity entity)
 		{
 			PlayerElementalCasketComponent component = entity.GetComponent<PlayerElementalCasketComponent>();
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044EA7 RID: 282279 RVA: 0x01105918 File Offset: 0x01103B18
+		// Token: 0x0603B046 RID: 241734 RVA: 0x010AFF38 File Offset: 0x010AE138
 		public override void OnTick(Entity entity, float deltaMilliseconds)
 		{
 			PlayerElementalCasketComponent component = entity.GetComponent<PlayerElementalCasketComponent>();
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044EA8 RID: 282280 RVA: 0x0110599C File Offset: 0x01103B9C
+		// Token: 0x0603B047 RID: 241735 RVA: 0x010AFFBC File Offset: 0x010AE1BC
 		public override void OnDeactivated(Entity entity)
 		{
 			EElementalType? currentElementType = this.CurrentElementType;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044EA9 RID: 282281 RVA: 0x011059D4 File Offset: 0x01103BD4
+		// Token: 0x0603B048 RID: 241736 RVA: 0x010AFFF4 File Offset: 0x010AE1F4
 		private void AddEffect(Entity entity, EElementalType type, bool isOpened)
 		{
 			PlayerFieldConfig valueOrDefault = entity.GetComponent<PlayerElementalCasketComponent>().Config.FieldConfigMap.GetValueOrDefault(type);
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044EAA RID: 282282 RVA: 0x01105A90 File Offset: 0x01103C90
+		// Token: 0x0603B049 RID: 241737 RVA: 0x010B00B0 File Offset: 0x010AE2B0
 		private void RemoveEffect(Entity entity)
 		{
 			if (this.CueHandleList != null)
@@ -119,13 +119,23 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x04023E1F RID: 146975
+		// Token: 0x17006F75 RID: 28533
+		// (get) Token: 0x0603B04A RID: 241738 RVA: 0x010B0120 File Offset: 0x010AE320
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401F0D7 RID: 127191
 		private bool CurrentIsOpened;
 
-		// Token: 0x04023E20 RID: 146976
+		// Token: 0x0401F0D8 RID: 127192
 		private EElementalType? CurrentElementType;
 
-		// Token: 0x04023E21 RID: 146977
+		// Token: 0x0401F0D9 RID: 127193
 		[Nullable(2)]
 		private List<long> CueHandleList;
 	}

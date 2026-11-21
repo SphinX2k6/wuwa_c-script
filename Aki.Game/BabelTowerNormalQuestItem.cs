@@ -8,10 +8,10 @@ using CSharpScript.Game.Module.Reward;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200117B RID: 4475
+// Token: 0x0200062F RID: 1583
 public class BabelTowerNormalQuestItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600764C RID: 30284 RVA: 0x00189040 File Offset: 0x00187240
+	// Token: 0x060049E3 RID: 18915 RVA: 0x00191BF0 File Offset: 0x0018FDF0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -42,13 +42,13 @@ public class BabelTowerNormalQuestItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600764D RID: 30285 RVA: 0x0018918B File Offset: 0x0018738B
+	// Token: 0x060049E4 RID: 18916 RVA: 0x00191D3B File Offset: 0x0018FF3B
 	protected override void OnStart()
 	{
 		this.RewardScrollerView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(1), new Func<CommonItemSmallItemGrid>(this.InitRewardItem), null, false, null);
 	}
 
-	// Token: 0x0600764E RID: 30286 RVA: 0x001891B0 File Offset: 0x001873B0
+	// Token: 0x060049E5 RID: 18917 RVA: 0x00191D60 File Offset: 0x0018FF60
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		BabelTowerTask babelTowerNormalQuest = BabelTowerConfig.Instance.GetBabelTowerNormalQuest(data);
@@ -90,7 +90,7 @@ public class BabelTowerNormalQuestItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600764F RID: 30287 RVA: 0x00189354 File Offset: 0x00187554
+	// Token: 0x060049E6 RID: 18918 RVA: 0x00191F04 File Offset: 0x00190104
 	private void OnClickGetRewardBtn()
 	{
 		List<int> finishedTaskIds = BabelTowerController.Instance.GetBabelTowerData().GetFinishedTaskIds();
@@ -100,14 +100,14 @@ public class BabelTowerNormalQuestItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06007650 RID: 30288 RVA: 0x00189385 File Offset: 0x00187585
+	// Token: 0x060049E7 RID: 18919 RVA: 0x00191F35 File Offset: 0x00190135
 	[NullableContext(1)]
 	private CommonItemSmallItemGrid InitRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0400363E RID: 13886
+	// Token: 0x040036D7 RID: 14039
 	[Nullable(new byte[]
 	{
 		2,
@@ -115,28 +115,28 @@ public class BabelTowerNormalQuestItem : GridProxyAbstract<int>
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollerView;
 
-	// Token: 0x0200774E RID: 30542
+	// Token: 0x020068DB RID: 26843
 	private class EComponentDefine
 	{
-		// Token: 0x040275BB RID: 161211
+		// Token: 0x040228F4 RID: 141556
 		public const int TitleText = 0;
 
-		// Token: 0x040275BC RID: 161212
+		// Token: 0x040228F5 RID: 141557
 		public const int RewardScrollerView = 1;
 
-		// Token: 0x040275BD RID: 161213
+		// Token: 0x040228F6 RID: 141558
 		public const int RewardItem = 2;
 
-		// Token: 0x040275BE RID: 161214
+		// Token: 0x040228F7 RID: 141559
 		public const int GetRewardBtn = 3;
 
-		// Token: 0x040275BF RID: 161215
+		// Token: 0x040228F8 RID: 141560
 		public const int MaskItem = 4;
 
-		// Token: 0x040275C0 RID: 161216
+		// Token: 0x040228F9 RID: 141561
 		public const int DoingText = 5;
 
-		// Token: 0x040275C1 RID: 161217
+		// Token: 0x040228FA RID: 141562
 		public const int FishingItem = 6;
 	}
 }

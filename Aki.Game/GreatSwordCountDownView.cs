@@ -5,18 +5,18 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001DAD RID: 7597
+// Token: 0x0200126F RID: 4719
 [NullableContext(2)]
 [Nullable(0)]
 public class GreatSwordCountDownView : UiViewBase
 {
-	// Token: 0x0600E697 RID: 59031 RVA: 0x00365295 File Offset: 0x00363495
+	// Token: 0x0600BAB5 RID: 47797 RVA: 0x00370EF5 File Offset: 0x0036F0F5
 	[NullableContext(1)]
 	public GreatSwordCountDownView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E698 RID: 59032 RVA: 0x003652A8 File Offset: 0x003634A8
+	// Token: 0x0600BAB6 RID: 47798 RVA: 0x00370F08 File Offset: 0x0036F108
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,21 +28,21 @@ public class GreatSwordCountDownView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600E699 RID: 59033 RVA: 0x00365318 File Offset: 0x00363518
+	// Token: 0x0600BAB7 RID: 47799 RVA: 0x00370F78 File Offset: 0x0036F178
 	protected override void OnAddEventListener()
 	{
 		base.OnAddEventListener();
 		EventSystem.Instance.Add(EEventName.OnGamePlayCdChanged, new Action<double, double>(this.OnCountDownChanged));
 	}
 
-	// Token: 0x0600E69A RID: 59034 RVA: 0x0036533C File Offset: 0x0036353C
+	// Token: 0x0600BAB8 RID: 47800 RVA: 0x00370F9C File Offset: 0x0036F19C
 	protected override void OnRemoveEventListener()
 	{
 		base.OnRemoveEventListener();
 		EventSystem.Instance.Remove(EEventName.OnGamePlayCdChanged, new Action<double, double>(this.OnCountDownChanged));
 	}
 
-	// Token: 0x0600E69B RID: 59035 RVA: 0x00365360 File Offset: 0x00363560
+	// Token: 0x0600BAB9 RID: 47801 RVA: 0x00370FC0 File Offset: 0x0036F1C0
 	protected override void OnStart()
 	{
 		this.CountDownText = base.GetArtText(0);
@@ -59,7 +59,7 @@ public class GreatSwordCountDownView : UiViewBase
 		this.TexTimeBg = base.GetTexture(2);
 	}
 
-	// Token: 0x0600E69C RID: 59036 RVA: 0x003653D5 File Offset: 0x003635D5
+	// Token: 0x0600BABA RID: 47802 RVA: 0x00371035 File Offset: 0x0036F235
 	private void OnCountDownChanged(double remainTime, double timerEndTime)
 	{
 		this.LastRemainTime = this.RemainTime;
@@ -74,7 +74,7 @@ public class GreatSwordCountDownView : UiViewBase
 		this.HandleTimerEndTime(timerEndTime);
 	}
 
-	// Token: 0x0600E69D RID: 59037 RVA: 0x00365415 File Offset: 0x00363615
+	// Token: 0x0600BABB RID: 47803 RVA: 0x00371075 File Offset: 0x0036F275
 	private void HandleCountDownEnd()
 	{
 		GeneralLogicTreeModel.Instance.CountDownViewClosing = true;
@@ -87,7 +87,7 @@ public class GreatSwordCountDownView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600E69E RID: 59038 RVA: 0x00365448 File Offset: 0x00363648
+	// Token: 0x0600BABC RID: 47804 RVA: 0x003710A8 File Offset: 0x0036F2A8
 	private void TryPlayColorChangeSequence()
 	{
 		bool flag = this.RemainTime >= (double)this.ColorChangeTime;
@@ -123,7 +123,7 @@ public class GreatSwordCountDownView : UiViewBase
 		countDownText2.SetArtTextData(this.RedArtTextData);
 	}
 
-	// Token: 0x0600E69F RID: 59039 RVA: 0x003654F8 File Offset: 0x003636F8
+	// Token: 0x0600BABD RID: 47805 RVA: 0x00371158 File Offset: 0x0036F358
 	private void HandleTimerEndTime(double timerEndTime)
 	{
 		if (this.TimerEndTime == 0.0)
@@ -139,7 +139,7 @@ public class GreatSwordCountDownView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E6A0 RID: 59040 RVA: 0x0036554C File Offset: 0x0036374C
+	// Token: 0x0600BABE RID: 47806 RVA: 0x003711AC File Offset: 0x0036F3AC
 	private void ShowAdditionTime(int diff)
 	{
 		string value = (diff > 0) ? "+" : "-";
@@ -176,7 +176,7 @@ public class GreatSwordCountDownView : UiViewBase
 		uiViewSequence3.PlaySequence("TimeIn", false, null);
 	}
 
-	// Token: 0x0600E6A1 RID: 59041 RVA: 0x0036562C File Offset: 0x0036382C
+	// Token: 0x0600BABF RID: 47807 RVA: 0x0037128C File Offset: 0x0036F48C
 	private void UpdateTimeDisplay()
 	{
 		string remainTimeDataFormat = TimeUtil.Instance.GetRemainTimeDataFormat5(this.RemainTime);
@@ -188,7 +188,7 @@ public class GreatSwordCountDownView : UiViewBase
 		countDownText.SetText(remainTimeDataFormat);
 	}
 
-	// Token: 0x0600E6A2 RID: 59042 RVA: 0x0036565C File Offset: 0x0036385C
+	// Token: 0x0600BAC0 RID: 47808 RVA: 0x003712BC File Offset: 0x0036F4BC
 	private void SetBgTextureByTimeChange(bool isReduce)
 	{
 		if (this.TexTimeBg == null)
@@ -209,30 +209,30 @@ public class GreatSwordCountDownView : UiViewBase
 		});
 	}
 
-	// Token: 0x04006AA6 RID: 27302
+	// Token: 0x04006B87 RID: 27527
 	private double RemainTime;
 
-	// Token: 0x04006AA7 RID: 27303
+	// Token: 0x04006B88 RID: 27528
 	private double TimerEndTime;
 
-	// Token: 0x04006AA8 RID: 27304
+	// Token: 0x04006B89 RID: 27529
 	private double LastRemainTime;
 
-	// Token: 0x04006AA9 RID: 27305
+	// Token: 0x04006B8A RID: 27530
 	private readonly int ColorChangeTime = 10;
 
-	// Token: 0x04006AAA RID: 27306
+	// Token: 0x04006B8B RID: 27531
 	private UUIArtText CountDownText;
 
-	// Token: 0x04006AAB RID: 27307
+	// Token: 0x04006B8C RID: 27532
 	private UUIArtText AdditionText;
 
-	// Token: 0x04006AAC RID: 27308
+	// Token: 0x04006B8D RID: 27533
 	private ULGUIArtTextData YellowArtTextData;
 
-	// Token: 0x04006AAD RID: 27309
+	// Token: 0x04006B8E RID: 27534
 	private ULGUIArtTextData RedArtTextData;
 
-	// Token: 0x04006AAE RID: 27310
+	// Token: 0x04006B8F RID: 27535
 	private UUITexture TexTimeBg;
 }

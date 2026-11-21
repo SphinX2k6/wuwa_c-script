@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D2B RID: 23851
+	// Token: 0x02004D0D RID: 19725
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BattleWeeklyRogueButton : FormationExtraButton
 	{
-		// Token: 0x0603C7BA RID: 247738 RVA: 0x00E823A4 File Offset: 0x00E805A4
+		// Token: 0x06031713 RID: 202515 RVA: 0x00DD2B44 File Offset: 0x00DD0D44
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603C7BB RID: 247739 RVA: 0x00E82554 File Offset: 0x00E80754
+		// Token: 0x06031714 RID: 202516 RVA: 0x00DD2CF4 File Offset: 0x00DD0EF4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleWeeklyRogueButton.<OnBeforeStartAsync>d__27 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C7BC RID: 247740 RVA: 0x00E82598 File Offset: 0x00E80798
+		// Token: 0x06031715 RID: 202517 RVA: 0x00DD2D38 File Offset: 0x00DD0F38
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			InputDistributeController.Instance.BindAction("Link大招", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 		}
 
-		// Token: 0x0603C7BD RID: 247741 RVA: 0x00E826D0 File Offset: 0x00E808D0
+		// Token: 0x06031716 RID: 202518 RVA: 0x00DD2E70 File Offset: 0x00DD1070
 		protected override void OnBeforeDestroy()
 		{
 			if (EventSystem.Instance.Has(EEventName.WeeklyRogueCycleRefresh, new Action(this.OnCycleRefresh)))
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603C7BE RID: 247742 RVA: 0x00E827AB File Offset: 0x00E809AB
+		// Token: 0x06031717 RID: 202519 RVA: 0x00DD2F4B File Offset: 0x00DD114B
 		private void OnCycleRefresh()
 		{
 			EventSystem.Instance.Remove(EEventName.WeeklyRogueCycleRefresh, new Action(this.OnCycleRefresh));
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetVisible(true);
 		}
 
-		// Token: 0x0603C7BF RID: 247743 RVA: 0x00E827D8 File Offset: 0x00E809D8
+		// Token: 0x06031718 RID: 202520 RVA: 0x00DD2F78 File Offset: 0x00DD1178
 		private unsafe void InitScoreWhenEnable()
 		{
 			this.IsScoreEnable = true;
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshIcon();
 		}
 
-		// Token: 0x0603C7C0 RID: 247744 RVA: 0x00E82A94 File Offset: 0x00E80C94
+		// Token: 0x06031719 RID: 202521 RVA: 0x00DD3234 File Offset: 0x00DD1434
 		private void RefreshIcon()
 		{
 			UUITexture iconTexture = base.GetTexture(6);
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0603C7C1 RID: 247745 RVA: 0x00E82B48 File Offset: 0x00E80D48
+		// Token: 0x0603171A RID: 202522 RVA: 0x00DD32E8 File Offset: 0x00DD14E8
 		private void UpdateMaxAndMinScore()
 		{
 			this.MinScoreLevelConfig = null;
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			float maxScore = this.MaxScore;
 		}
 
-		// Token: 0x0603C7C2 RID: 247746 RVA: 0x00E82C14 File Offset: 0x00E80E14
+		// Token: 0x0603171B RID: 202523 RVA: 0x00DD33B4 File Offset: 0x00DD15B4
 		private void BattleScoreChanged(int scoreId, int score)
 		{
 			if (!this.IsScoreEnable || this.MinScoreLevelConfig == null || !this.IsValidScore(scoreId))
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnBattleScoreChanged((float)score);
 		}
 
-		// Token: 0x0603C7C3 RID: 247747 RVA: 0x00E82C40 File Offset: 0x00E80E40
+		// Token: 0x0603171C RID: 202524 RVA: 0x00DD33E0 File Offset: 0x00DD15E0
 		private bool IsValidScore(int scoreId)
 		{
 			if (this.ScoreId == scoreId)
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return scoreConfig != null && scoreConfig.Value.Type == 7;
 		}
 
-		// Token: 0x0603C7C4 RID: 247748 RVA: 0x00E82C84 File Offset: 0x00E80E84
+		// Token: 0x0603171D RID: 202525 RVA: 0x00DD3424 File Offset: 0x00DD1624
 		private void OnBattleScoreChanged(float score)
 		{
 			if (score < (float)this.MinScoreLevelConfig.Value.LowerUpperLimits(0))
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetTickEndScore(score);
 		}
 
-		// Token: 0x0603C7C5 RID: 247749 RVA: 0x00E82D04 File Offset: 0x00E80F04
+		// Token: 0x0603171E RID: 202526 RVA: 0x00DD34A4 File Offset: 0x00DD16A4
 		public override void Tick(float delta)
 		{
 			if (this.HasValidConfig && this.TickScore != this.TickEndScore && base.GetActive())
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C7C6 RID: 247750 RVA: 0x00E82D74 File Offset: 0x00E80F74
+		// Token: 0x0603171F RID: 202527 RVA: 0x00DD3514 File Offset: 0x00DD1714
 		private void SetCurScore(float score)
 		{
 			this.TickScore = score;
@@ -333,7 +333,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetIsFull(this.TickScore >= this.MaxScore);
 		}
 
-		// Token: 0x0603C7C7 RID: 247751 RVA: 0x00E82DF4 File Offset: 0x00E80FF4
+		// Token: 0x06031720 RID: 202528 RVA: 0x00DD3594 File Offset: 0x00DD1794
 		private void SetTickEndScore(float score)
 		{
 			if (score > 0f)
@@ -348,19 +348,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SmoothTime = 200f;
 		}
 
-		// Token: 0x0603C7C8 RID: 247752 RVA: 0x00E82E4A File Offset: 0x00E8104A
+		// Token: 0x06031721 RID: 202529 RVA: 0x00DD35EA File Offset: 0x00DD17EA
 		private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			this.RefreshKeyItemVisible();
 		}
 
-		// Token: 0x0603C7C9 RID: 247753 RVA: 0x00E82E52 File Offset: 0x00E81052
+		// Token: 0x06031722 RID: 202530 RVA: 0x00DD35F2 File Offset: 0x00DD17F2
 		private void OnWeeklyRogueLinkStageChange(ENewLinkStatus stage)
 		{
 			this.SetIsBursting(stage == ENewLinkStatus.Burst);
 		}
 
-		// Token: 0x0603C7CA RID: 247754 RVA: 0x00E82E5E File Offset: 0x00E8105E
+		// Token: 0x06031723 RID: 202531 RVA: 0x00DD35FE File Offset: 0x00DD17FE
 		private void RefreshKeyItemVisible()
 		{
 			CombineKeyItem keyItemPc = this.KeyItemPc;
@@ -376,7 +376,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItemGp.SetUiActive(Info.Instance.IsInGamepad());
 		}
 
-		// Token: 0x0603C7CB RID: 247755 RVA: 0x00E82E95 File Offset: 0x00E81095
+		// Token: 0x06031724 RID: 202532 RVA: 0x00DD3635 File Offset: 0x00DD1835
 		[NullableContext(1)]
 		private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
@@ -390,13 +390,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C7CC RID: 247756 RVA: 0x00E82EA9 File Offset: 0x00E810A9
+		// Token: 0x06031725 RID: 202533 RVA: 0x00DD3649 File Offset: 0x00DD1849
 		private void OnClicked()
 		{
 			this.LinkAction();
 		}
 
-		// Token: 0x0603C7CD RID: 247757 RVA: 0x00E82EB4 File Offset: 0x00E810B4
+		// Token: 0x06031726 RID: 202534 RVA: 0x00DD3654 File Offset: 0x00DD1854
 		private void LinkAction()
 		{
 			if (!this.IsFull || this.IsBursting)
@@ -413,7 +413,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C7CE RID: 247758 RVA: 0x00E82F0B File Offset: 0x00E8110B
+		// Token: 0x06031727 RID: 202535 RVA: 0x00DD36AB File Offset: 0x00DD18AB
 		private void SetIsFull(bool value)
 		{
 			if (this.IsFull == value)
@@ -425,7 +425,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshNodeVisibleByState();
 		}
 
-		// Token: 0x0603C7CF RID: 247759 RVA: 0x00E82F2C File Offset: 0x00E8112C
+		// Token: 0x06031728 RID: 202536 RVA: 0x00DD36CC File Offset: 0x00DD18CC
 		private void SetIsBursting(bool value)
 		{
 			if (this.IsBursting == value)
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Emit<bool>(EEventName.WeeklyRogueBurstEnableChange, this.IsBursting);
 		}
 
-		// Token: 0x0603C7D0 RID: 247760 RVA: 0x00E82F7C File Offset: 0x00E8117C
+		// Token: 0x06031729 RID: 202537 RVA: 0x00DD371C File Offset: 0x00DD191C
 		private void UpdateEnableClickState()
 		{
 			if (Info.Instance.IsInTouch())
@@ -454,7 +454,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.KeyItemGp.SetGray(!flag);
 		}
 
-		// Token: 0x0603C7D1 RID: 247761 RVA: 0x00E82FCC File Offset: 0x00E811CC
+		// Token: 0x0603172A RID: 202538 RVA: 0x00DD376C File Offset: 0x00DD196C
 		private void RefreshNodeVisibleByState()
 		{
 			if (this.IsBursting)
@@ -564,7 +564,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C7D2 RID: 247762 RVA: 0x00E83140 File Offset: 0x00E81340
+		// Token: 0x0603172B RID: 202539 RVA: 0x00DD38E0 File Offset: 0x00DD1AE0
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -586,107 +586,107 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			};
 		}
 
-		// Token: 0x0401F83C RID: 129084
+		// Token: 0x0401A2F5 RID: 107253
 		private const float MAX_SMOOTH_TIME = 200f;
 
-		// Token: 0x0401F83D RID: 129085
+		// Token: 0x0401A2F6 RID: 107254
 		private const float CLICK_CD = 500f;
 
-		// Token: 0x0401F83E RID: 129086
+		// Token: 0x0401A2F7 RID: 107255
 		private CombineKeyItem KeyItemPc;
 
-		// Token: 0x0401F83F RID: 129087
+		// Token: 0x0401A2F8 RID: 107256
 		private CombineKeyItem KeyItemGp;
 
-		// Token: 0x0401F840 RID: 129088
+		// Token: 0x0401A2F9 RID: 107257
 		public bool IsScoreEnable;
 
-		// Token: 0x0401F841 RID: 129089
+		// Token: 0x0401A2FA RID: 107258
 		private int ScoreId;
 
-		// Token: 0x0401F842 RID: 129090
+		// Token: 0x0401A2FB RID: 107259
 		private UUITexture BarTex;
 
-		// Token: 0x0401F843 RID: 129091
+		// Token: 0x0401A2FC RID: 107260
 		private UUIItem PointItem;
 
-		// Token: 0x0401F844 RID: 129092
+		// Token: 0x0401A2FD RID: 107261
 		private bool HasValidConfig;
 
-		// Token: 0x0401F845 RID: 129093
+		// Token: 0x0401A2FE RID: 107262
 		private float TickStartScore;
 
-		// Token: 0x0401F846 RID: 129094
+		// Token: 0x0401A2FF RID: 107263
 		private float TickEndScore;
 
-		// Token: 0x0401F847 RID: 129095
+		// Token: 0x0401A300 RID: 107264
 		private float TickScore;
 
-		// Token: 0x0401F848 RID: 129096
+		// Token: 0x0401A301 RID: 107265
 		private float MaxScore;
 
-		// Token: 0x0401F849 RID: 129097
+		// Token: 0x0401A302 RID: 107266
 		private float SmoothTime;
 
-		// Token: 0x0401F84A RID: 129098
+		// Token: 0x0401A303 RID: 107267
 		private IReadOnlyList<BattleScoreLevelConf> CurScoreLevelConfigList;
 
-		// Token: 0x0401F84B RID: 129099
+		// Token: 0x0401A304 RID: 107268
 		private BattleScoreLevelConf? CurScoreLevelConfig;
 
-		// Token: 0x0401F84C RID: 129100
+		// Token: 0x0401A305 RID: 107269
 		private BattleScoreLevelConf? MinScoreLevelConfig;
 
-		// Token: 0x0401F84D RID: 129101
+		// Token: 0x0401A306 RID: 107270
 		private BattleScoreLevelConf? MaxScoreLevelConfig;
 
-		// Token: 0x0401F84E RID: 129102
+		// Token: 0x0401A307 RID: 107271
 		private bool IsBursting;
 
-		// Token: 0x0401F84F RID: 129103
+		// Token: 0x0401A308 RID: 107272
 		private bool IsFull;
 
-		// Token: 0x0401F850 RID: 129104
+		// Token: 0x0401A309 RID: 107273
 		private int ArtifactId;
 
-		// Token: 0x0401F851 RID: 129105
+		// Token: 0x0401A30A RID: 107274
 		private RogueWeeklyBuffPool? ArtifactConfig;
 
-		// Token: 0x0401F852 RID: 129106
+		// Token: 0x0401A30B RID: 107275
 		private int LoadIconId = -1;
 
-		// Token: 0x0401F853 RID: 129107
+		// Token: 0x0401A30C RID: 107276
 		private double NextClickTime;
 
-		// Token: 0x0200BFBA RID: 49082
+		// Token: 0x0200A9C0 RID: 43456
 		[NullableContext(0)]
 		private enum EDesktopChildType
 		{
-			// Token: 0x04039D7B RID: 236923
+			// Token: 0x0403473D RID: 214845
 			KeyItemPc = 8,
-			// Token: 0x04039D7C RID: 236924
+			// Token: 0x0403473E RID: 214846
 			KeyItemGp
 		}
 
-		// Token: 0x0200BFBB RID: 49083
+		// Token: 0x0200A9C1 RID: 43457
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039D7E RID: 236926
+			// Token: 0x04034740 RID: 214848
 			BtnClick,
-			// Token: 0x04039D7F RID: 236927
+			// Token: 0x04034741 RID: 214849
 			BarTex,
-			// Token: 0x04039D80 RID: 236928
+			// Token: 0x04034742 RID: 214850
 			EmptyBgTex,
-			// Token: 0x04039D81 RID: 236929
+			// Token: 0x04034743 RID: 214851
 			FullBgTex,
-			// Token: 0x04039D82 RID: 236930
+			// Token: 0x04034744 RID: 214852
 			FullItem,
-			// Token: 0x04039D83 RID: 236931
+			// Token: 0x04034745 RID: 214853
 			PointItem,
-			// Token: 0x04039D84 RID: 236932
+			// Token: 0x04034746 RID: 214854
 			IconTex,
-			// Token: 0x04039D85 RID: 236933
+			// Token: 0x04034747 RID: 214855
 			GlowEffect
 		}
 	}

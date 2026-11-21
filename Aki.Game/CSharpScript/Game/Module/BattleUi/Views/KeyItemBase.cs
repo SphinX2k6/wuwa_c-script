@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D62 RID: 23906
+	// Token: 0x02004D44 RID: 19780
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class KeyItemBase : UiPanelBase
 	{
-		// Token: 0x0603CB11 RID: 248593 RVA: 0x00E92AA6 File Offset: 0x00E90CA6
+		// Token: 0x06031A6C RID: 203372 RVA: 0x00DE3292 File Offset: 0x00DE1492
 		protected override void OnStartImplement()
 		{
 			this.AddEvents();
 		}
 
-		// Token: 0x0603CB12 RID: 248594 RVA: 0x00E92AAE File Offset: 0x00E90CAE
+		// Token: 0x06031A6D RID: 203373 RVA: 0x00DE329A File Offset: 0x00DE149A
 		protected override void OnBeforeDestroyImplement()
 		{
 			this.UnBindAction();
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Reset();
 		}
 
-		// Token: 0x0603CB13 RID: 248595 RVA: 0x00E92AC2 File Offset: 0x00E90CC2
+		// Token: 0x06031A6E RID: 203374 RVA: 0x00DE32AE File Offset: 0x00DE14AE
 		public virtual void Reset()
 		{
 			this.CustomKeyName = null;
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.KeyTexturePath = null;
 		}
 
-		// Token: 0x0603CB14 RID: 248596 RVA: 0x00E92AE7 File Offset: 0x00E90CE7
+		// Token: 0x06031A6F RID: 203375 RVA: 0x00DE32D3 File Offset: 0x00DE14D3
 		public void SetCustomKeyName(string keyName)
 		{
 			this.CustomKeyName = keyName;
 		}
 
-		// Token: 0x0603CB15 RID: 248597 RVA: 0x00E92AF0 File Offset: 0x00E90CF0
+		// Token: 0x06031A70 RID: 203376 RVA: 0x00DE32DC File Offset: 0x00DE14DC
 		public virtual void RefreshAction(string actionName)
 		{
 			this.UnBindAction();
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BindAction();
 		}
 
-		// Token: 0x0603CB16 RID: 248598 RVA: 0x00E92BBC File Offset: 0x00E90DBC
+		// Token: 0x06031A71 RID: 203377 RVA: 0x00DE33A8 File Offset: 0x00DE15A8
 		public virtual void RefreshAxis(string axisName)
 		{
 			this.UnBindAction();
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshKey(currentPlatformKey.GetKey());
 		}
 
-		// Token: 0x0603CB17 RID: 248599 RVA: 0x00E92C28 File Offset: 0x00E90E28
+		// Token: 0x06031A72 RID: 203378 RVA: 0x00DE3414 File Offset: 0x00DE1614
 		protected void BindAction()
 		{
 			if (!StringUtils.IsEmpty(this.ActionName))
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB18 RID: 248600 RVA: 0x00E92C53 File Offset: 0x00E90E53
+		// Token: 0x06031A73 RID: 203379 RVA: 0x00DE343F File Offset: 0x00DE163F
 		protected void UnBindAction()
 		{
 			if (!StringUtils.IsEmpty(this.ActionName))
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB19 RID: 248601 RVA: 0x00E92C80 File Offset: 0x00E90E80
+		// Token: 0x06031A74 RID: 203380 RVA: 0x00DE346C File Offset: 0x00DE166C
 		protected virtual void AddEvents()
 		{
 			EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.OnAxisKeyChanged, new Action<string>(this.OnAxisKeyChanged));
 		}
 
-		// Token: 0x0603CB1A RID: 248602 RVA: 0x00E92CE4 File Offset: 0x00E90EE4
+		// Token: 0x06031A75 RID: 203381 RVA: 0x00DE34D0 File Offset: 0x00DE16D0
 		protected virtual void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
@@ -139,9 +139,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.OnAxisKeyChanged, new Action<string>(this.OnAxisKeyChanged));
 		}
 
-		// Token: 0x0603CB1B RID: 248603 RVA: 0x00E92D45 File Offset: 0x00E90F45
+		// Token: 0x06031A76 RID: 203382 RVA: 0x00DE3534 File Offset: 0x00DE1734
 		private void InputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
+			if (this.RootItem == null || !this.RootItem.IsValid())
+			{
+				return;
+			}
 			if (!StringUtils.IsEmpty(this.ActionName))
 			{
 				this.RefreshAction(this.ActionName);
@@ -153,36 +157,44 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB1C RID: 248604 RVA: 0x00E92D7A File Offset: 0x00E90F7A
+		// Token: 0x06031A77 RID: 203383 RVA: 0x00DE358A File Offset: 0x00DE178A
 		private void OnActionKeyChanged(string actionName)
 		{
+			if (this.RootItem == null || !this.RootItem.IsValid())
+			{
+				return;
+			}
 			if (!StringUtils.IsEmpty(this.ActionName) && this.ActionName == actionName)
 			{
 				this.RefreshAction(this.ActionName);
 			}
 		}
 
-		// Token: 0x0603CB1D RID: 248605 RVA: 0x00E92DA3 File Offset: 0x00E90FA3
+		// Token: 0x06031A78 RID: 203384 RVA: 0x00DE35C9 File Offset: 0x00DE17C9
 		private void OnAxisKeyChanged(string axisName)
 		{
+			if (this.RootItem == null || !this.RootItem.IsValid())
+			{
+				return;
+			}
 			if (!StringUtils.IsEmpty(this.AxisName) && this.AxisName == axisName)
 			{
 				this.RefreshAxis(this.AxisName);
 			}
 		}
 
-		// Token: 0x0603CB1E RID: 248606 RVA: 0x00E92DCC File Offset: 0x00E90FCC
+		// Token: 0x06031A79 RID: 203385 RVA: 0x00DE3608 File Offset: 0x00DE1808
 		private void OnInputActionInternal(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			this.OnInputAction(actionName, actionType);
 		}
 
-		// Token: 0x0603CB1F RID: 248607 RVA: 0x00E92DD6 File Offset: 0x00E90FD6
+		// Token: 0x06031A7A RID: 203386 RVA: 0x00DE3612 File Offset: 0x00DE1812
 		protected virtual void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType)
 		{
 		}
 
-		// Token: 0x0603CB20 RID: 248608 RVA: 0x00E92DD8 File Offset: 0x00E90FD8
+		// Token: 0x06031A7B RID: 203387 RVA: 0x00DE3614 File Offset: 0x00DE1814
 		public void RefreshKey(InputKey key)
 		{
 			string keyName = key.GetKeyName();
@@ -202,7 +214,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.KeyName = keyName;
 		}
 
-		// Token: 0x0603CB21 RID: 248609 RVA: 0x00E92E30 File Offset: 0x00E91030
+		// Token: 0x06031A7C RID: 203388 RVA: 0x00DE366C File Offset: 0x00DE186C
 		public void RefreshKeyByName(string keyName)
 		{
 			InputKey key = InputSettings.Instance.GetKey(keyName);
@@ -213,7 +225,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshKey(key);
 		}
 
-		// Token: 0x0603CB22 RID: 248610 RVA: 0x00E92E54 File Offset: 0x00E91054
+		// Token: 0x06031A7D RID: 203389 RVA: 0x00DE3690 File Offset: 0x00DE1890
 		public void SetKeyText(string keyName)
 		{
 			UUIText keyText = this.GetKeyText();
@@ -234,7 +246,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB23 RID: 248611 RVA: 0x00E92E9C File Offset: 0x00E9109C
+		// Token: 0x06031A7E RID: 203390 RVA: 0x00DE36D8 File Offset: 0x00DE18D8
 		public void SetLocalText(string textTableId, params object[] args)
 		{
 			UUIText keyText = this.GetKeyText();
@@ -255,7 +267,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB24 RID: 248612 RVA: 0x00E92EEC File Offset: 0x00E910EC
+		// Token: 0x06031A7F RID: 203391 RVA: 0x00DE3728 File Offset: 0x00DE1928
 		private void SetKeyTexture(string keyTexturePath)
 		{
 			UUIText keyText = this.GetKeyText();
@@ -285,7 +297,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			});
 		}
 
-		// Token: 0x0603CB25 RID: 248613 RVA: 0x00E92F81 File Offset: 0x00E91181
+		// Token: 0x06031A80 RID: 203392 RVA: 0x00DE37BD File Offset: 0x00DE19BD
 		public void SetEnable(bool bEnable, bool bForce = false)
 		{
 			if (this.IsEnable == bEnable && !bForce)
@@ -303,7 +315,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsEnable = bEnable;
 		}
 
-		// Token: 0x0603CB26 RID: 248614 RVA: 0x00E92FBC File Offset: 0x00E911BC
+		// Token: 0x06031A81 RID: 203393 RVA: 0x00DE37F8 File Offset: 0x00DE19F8
 		public void SetGray(bool bIsGray)
 		{
 			if (this.IsGray == bIsGray)
@@ -314,46 +326,46 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnSetGray();
 		}
 
-		// Token: 0x0603CB27 RID: 248615 RVA: 0x00E92FD5 File Offset: 0x00E911D5
+		// Token: 0x06031A82 RID: 203394 RVA: 0x00DE3811 File Offset: 0x00DE1A11
 		protected virtual void OnSetGray()
 		{
 		}
 
-		// Token: 0x0603CB28 RID: 248616
+		// Token: 0x06031A83 RID: 203395
 		[NullableContext(2)]
 		protected abstract UUIText GetKeyText();
 
-		// Token: 0x0603CB29 RID: 248617
+		// Token: 0x06031A84 RID: 203396
 		[NullableContext(2)]
 		protected abstract UUITexture GetKeyTexture();
 
-		// Token: 0x0401F9E0 RID: 129504
+		// Token: 0x0401A498 RID: 107672
 		[Nullable(2)]
 		protected string ActionName;
 
-		// Token: 0x0401F9E1 RID: 129505
+		// Token: 0x0401A499 RID: 107673
 		[Nullable(2)]
 		protected string AxisName;
 
-		// Token: 0x0401F9E2 RID: 129506
+		// Token: 0x0401A49A RID: 107674
 		[Nullable(2)]
 		private string CustomKeyName;
 
-		// Token: 0x0401F9E3 RID: 129507
+		// Token: 0x0401A49B RID: 107675
 		[Nullable(2)]
 		protected string KeyName;
 
-		// Token: 0x0401F9E4 RID: 129508
+		// Token: 0x0401A49C RID: 107676
 		[Nullable(2)]
 		protected string KeyTexturePath;
 
-		// Token: 0x0401F9E5 RID: 129509
+		// Token: 0x0401A49D RID: 107677
 		protected bool IsEnable;
 
-		// Token: 0x0401F9E6 RID: 129510
+		// Token: 0x0401A49E RID: 107678
 		protected bool IsGray;
 
-		// Token: 0x0401F9E7 RID: 129511
+		// Token: 0x0401A49F RID: 107679
 		private const float DISABLE_ALPHA = 0.2f;
 	}
 }

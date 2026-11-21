@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D4F RID: 7503
+// Token: 0x02001211 RID: 4625
 [NullableContext(1)]
 [Nullable(0)]
 public class GamepadPsFeedbackData
 {
-	// Token: 0x0600E38F RID: 58255 RVA: 0x00357268 File Offset: 0x00355468
+	// Token: 0x0600B7AC RID: 47020 RVA: 0x00362C98 File Offset: 0x00360E98
 	public unsafe void AddFeedbackReason(EGamepadPsFeedbackReason reason, ETriggerEffectSide mode, string path)
 	{
 		GamepadPsFeedbackData.FeedbackInfo feedbackInfo;
@@ -43,7 +42,7 @@ public class GamepadPsFeedbackData
 		this.FeedbackReasonSet[reason] = feedbackInfo;
 	}
 
-	// Token: 0x0600E390 RID: 58256 RVA: 0x003573C0 File Offset: 0x003555C0
+	// Token: 0x0600B7AD RID: 47021 RVA: 0x00362DF0 File Offset: 0x00360FF0
 	public bool RemoveFeedbackReason(EGamepadPsFeedbackReason reason)
 	{
 		bool flag = this.FeedbackReasonSet.Remove(reason);
@@ -59,47 +58,55 @@ public class GamepadPsFeedbackData
 		return flag;
 	}
 
-	// Token: 0x0600E391 RID: 58257 RVA: 0x00357414 File Offset: 0x00355614
+	// Token: 0x0600B7AE RID: 47022 RVA: 0x00362E44 File Offset: 0x00361044
 	public void ClearFeedbackReason()
 	{
 		Log.Instance.Info(ELogModule.PsGamepadFeedback, ELogAuthor.XXJ, "清除Ps5手柄高级震动", default(ReadOnlySpan<ValueTuple<string, object>>));
 		this.FeedbackReasonSet.Clear();
 	}
 
-	// Token: 0x0600E392 RID: 58258 RVA: 0x0035744B File Offset: 0x0035564B
+	// Token: 0x0600B7AF RID: 47023 RVA: 0x00362E7C File Offset: 0x0036107C
 	[NullableContext(2)]
 	public GamepadPsFeedbackData.FeedbackInfo GetLastFeedbackInfo()
 	{
-		if (this.FeedbackReasonSet.Count > 0)
+		if (this.FeedbackReasonSet.Count <= 0)
 		{
-			return this.FeedbackReasonSet.Values.LastOrDefault<GamepadPsFeedbackData.FeedbackInfo>();
+			return null;
 		}
-		return null;
+		GamepadPsFeedbackData.FeedbackInfo result = null;
+		using (SortedDictionary<EGamepadPsFeedbackReason, GamepadPsFeedbackData.FeedbackInfo>.ValueCollection.Enumerator enumerator = this.FeedbackReasonSet.Values.GetEnumerator())
+		{
+			while (enumerator.MoveNext())
+			{
+				result = enumerator.Current;
+			}
+		}
+		return result;
 	}
 
-	// Token: 0x0400690C RID: 26892
+	// Token: 0x040069EB RID: 27115
 	private readonly SortedDictionary<EGamepadPsFeedbackReason, GamepadPsFeedbackData.FeedbackInfo> FeedbackReasonSet = new SortedDictionary<EGamepadPsFeedbackReason, GamepadPsFeedbackData.FeedbackInfo>();
 
-	// Token: 0x02008365 RID: 33637
+	// Token: 0x020074EE RID: 29934
 	[Nullable(0)]
 	public class FeedbackInfo
 	{
-		// Token: 0x1700A068 RID: 41064
-		// (get) Token: 0x0604A456 RID: 304214 RVA: 0x013550F6 File Offset: 0x013532F6
-		// (set) Token: 0x0604A457 RID: 304215 RVA: 0x013550FE File Offset: 0x013532FE
+		// Token: 0x17007806 RID: 30726
+		// (get) Token: 0x0604085B RID: 264283 RVA: 0x012F8572 File Offset: 0x012F6772
+		// (set) Token: 0x0604085C RID: 264284 RVA: 0x012F857A File Offset: 0x012F677A
 		public EGamepadPsFeedbackReason Reason { get; set; }
 
-		// Token: 0x1700A069 RID: 41065
-		// (get) Token: 0x0604A458 RID: 304216 RVA: 0x01355107 File Offset: 0x01353307
-		// (set) Token: 0x0604A459 RID: 304217 RVA: 0x0135510F File Offset: 0x0135330F
+		// Token: 0x17007807 RID: 30727
+		// (get) Token: 0x0604085D RID: 264285 RVA: 0x012F8583 File Offset: 0x012F6783
+		// (set) Token: 0x0604085E RID: 264286 RVA: 0x012F858B File Offset: 0x012F678B
 		public ETriggerEffectSide Mode { get; set; }
 
-		// Token: 0x1700A06A RID: 41066
-		// (get) Token: 0x0604A45A RID: 304218 RVA: 0x01355118 File Offset: 0x01353318
-		// (set) Token: 0x0604A45B RID: 304219 RVA: 0x01355120 File Offset: 0x01353320
+		// Token: 0x17007808 RID: 30728
+		// (get) Token: 0x0604085F RID: 264287 RVA: 0x012F8594 File Offset: 0x012F6794
+		// (set) Token: 0x06040860 RID: 264288 RVA: 0x012F859C File Offset: 0x012F679C
 		public string Path { get; set; }
 
-		// Token: 0x0604A45C RID: 304220 RVA: 0x01355129 File Offset: 0x01353329
+		// Token: 0x06040861 RID: 264289 RVA: 0x012F85A5 File Offset: 0x012F67A5
 		public FeedbackInfo(EGamepadPsFeedbackReason reason, ETriggerEffectSide mode, string path)
 		{
 			this.Reason = reason;

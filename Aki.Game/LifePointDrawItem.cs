@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200129A RID: 4762
+// Token: 0x0200074E RID: 1870
 public class LifePointDrawItem : UiPanelBase
 {
-	// Token: 0x06008255 RID: 33365 RVA: 0x001BA414 File Offset: 0x001B8614
+	// Token: 0x060055EC RID: 21996 RVA: 0x001C30E4 File Offset: 0x001C12E4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 23;
@@ -73,13 +73,13 @@ public class LifePointDrawItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008256 RID: 33366 RVA: 0x001BA77E File Offset: 0x001B897E
+	// Token: 0x060055ED RID: 21997 RVA: 0x001C344E File Offset: 0x001C164E
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new UiSequencePlayer(base.GetButton(0).RootUIComp);
 	}
 
-	// Token: 0x06008257 RID: 33367 RVA: 0x001BA79C File Offset: 0x001B899C
+	// Token: 0x060055EE RID: 21998 RVA: 0x001C346C File Offset: 0x001C166C
 	[NullableContext(1)]
 	public void PlaySequence(string sequenceType)
 	{
@@ -89,7 +89,7 @@ public class LifePointDrawItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008258 RID: 33368 RVA: 0x001BA7C8 File Offset: 0x001B89C8
+	// Token: 0x060055EF RID: 21999 RVA: 0x001C3498 File Offset: 0x001C1698
 	private void OnClickBtn()
 	{
 		int id = this.LifePointDrawActivityData.Id;
@@ -105,7 +105,7 @@ public class LifePointDrawItem : UiPanelBase
 		UiManager.Instance.OpenView(EUiViewName.LifePointDrawDetailView, lifePointDrawViewModel, null);
 	}
 
-	// Token: 0x06008259 RID: 33369 RVA: 0x001BA83A File Offset: 0x001B8A3A
+	// Token: 0x060055F0 RID: 22000 RVA: 0x001C350A File Offset: 0x001C170A
 	public void SetIndex(int index)
 	{
 		if (index % 2 == 0)
@@ -116,7 +116,7 @@ public class LifePointDrawItem : UiPanelBase
 		this.IfUpItem = false;
 	}
 
-	// Token: 0x0600825A RID: 33370 RVA: 0x001BA850 File Offset: 0x001B8A50
+	// Token: 0x060055F1 RID: 22001 RVA: 0x001C3520 File Offset: 0x001C1720
 	[NullableContext(1)]
 	public void RefreshView(int groupId, LifePointDrawActivityData data)
 	{
@@ -136,14 +136,14 @@ public class LifePointDrawItem : UiPanelBase
 		this.RefreshRedDot(groupId);
 	}
 
-	// Token: 0x0600825B RID: 33371 RVA: 0x001BA8FC File Offset: 0x001B8AFC
+	// Token: 0x060055F2 RID: 22002 RVA: 0x001C35CC File Offset: 0x001C17CC
 	private void RefreshRedDot(int groupId)
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.LifePointDrawGroupRedDot, base.GetItem(17), groupId);
 		RedDotController.Instance.BindRedDot(ERedDotName.LifePointDrawGroupRedDot, base.GetItem(17), null, groupId);
 	}
 
-	// Token: 0x0600825C RID: 33372 RVA: 0x001BA930 File Offset: 0x001B8B30
+	// Token: 0x060055F3 RID: 22003 RVA: 0x001C3600 File Offset: 0x001C1800
 	private void RefreshLine(int activityId, int groupId)
 	{
 		bool groupUnlockState = LifePointDrawModel.Instance.GetGroupUnlockState(activityId, groupId);
@@ -154,7 +154,7 @@ public class LifePointDrawItem : UiPanelBase
 		base.GetItem(7).SetUIActive(!groupUnlockState && !ifUpItem);
 	}
 
-	// Token: 0x0600825D RID: 33373 RVA: 0x001BA9A0 File Offset: 0x001B8BA0
+	// Token: 0x060055F4 RID: 22004 RVA: 0x001C3670 File Offset: 0x001C1870
 	private UniTask RefreshLevelNumSpriteTransition(int activityId, int groupId)
 	{
 		LifePointDrawItem.<RefreshLevelNumSpriteTransition>d__12 <RefreshLevelNumSpriteTransition>d__;
@@ -167,7 +167,7 @@ public class LifePointDrawItem : UiPanelBase
 		return <RefreshLevelNumSpriteTransition>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600825E RID: 33374 RVA: 0x001BA9F4 File Offset: 0x001B8BF4
+	// Token: 0x060055F5 RID: 22005 RVA: 0x001C36C4 File Offset: 0x001C18C4
 	private void RefreshColorTexture(int activityId, int groupId)
 	{
 		string resourceId = LifePointDrawModel.Instance.GetGroupUnlockState(activityId, groupId) ? "T_ColorBoardUnLock" : "T_ColorBoardLock";
@@ -175,7 +175,7 @@ public class LifePointDrawItem : UiPanelBase
 		base.SetTextureByPath(resourcePath, base.GetTexture(3), null, null);
 	}
 
-	// Token: 0x0600825F RID: 33375 RVA: 0x001BAA40 File Offset: 0x001B8C40
+	// Token: 0x060055F6 RID: 22006 RVA: 0x001C3710 File Offset: 0x001C1910
 	private void RefreshRoundItem(int activityId, int groupId)
 	{
 		bool groupUnlockState = LifePointDrawModel.Instance.GetGroupUnlockState(activityId, groupId);
@@ -192,7 +192,7 @@ public class LifePointDrawItem : UiPanelBase
 		item2.SetUIActive(!groupUnlockState);
 	}
 
-	// Token: 0x06008260 RID: 33376 RVA: 0x001BAA84 File Offset: 0x001B8C84
+	// Token: 0x060055F7 RID: 22007 RVA: 0x001C3754 File Offset: 0x001C1954
 	private void RefreshSpriteColor(int activityId, int groupId)
 	{
 		bool groupUnlockState = LifePointDrawModel.Instance.GetGroupUnlockState(activityId, groupId);
@@ -221,7 +221,7 @@ public class LifePointDrawItem : UiPanelBase
 		texture2.SetChangeColor(bUseChangeColor3, fcolor);
 	}
 
-	// Token: 0x06008261 RID: 33377 RVA: 0x001BAB18 File Offset: 0x001B8D18
+	// Token: 0x060055F8 RID: 22008 RVA: 0x001C37E8 File Offset: 0x001C19E8
 	private void RefreshTitleBgSprite(int activityId, int groupId)
 	{
 		bool groupUnlockState = LifePointDrawModel.Instance.GetGroupUnlockState(activityId, groupId);
@@ -229,21 +229,21 @@ public class LifePointDrawItem : UiPanelBase
 		base.GetItem(22).SetUIActive(!groupUnlockState);
 	}
 
-	// Token: 0x06008262 RID: 33378 RVA: 0x001BAB54 File Offset: 0x001B8D54
+	// Token: 0x060055F9 RID: 22009 RVA: 0x001C3824 File Offset: 0x001C1A24
 	private void RefreshNameTextColor(int activityId, int groupId)
 	{
 		string hexStr = LifePointDrawModel.Instance.GetGroupUnlockState(activityId, groupId) ? "654A17" : "354061";
 		base.GetText(13).outlineColor = FColor.FromHex(hexStr);
 	}
 
-	// Token: 0x06008263 RID: 33379 RVA: 0x001BAB90 File Offset: 0x001B8D90
+	// Token: 0x060055FA RID: 22010 RVA: 0x001C3860 File Offset: 0x001C1A60
 	private void RefreshName(int groupId)
 	{
 		string name = LifePointDrawConfig.Instance.GetLifePointGroupByGroupId(groupId).Value.Name;
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(13), name, Array.Empty<object>());
 	}
 
-	// Token: 0x06008264 RID: 33380 RVA: 0x001BABD4 File Offset: 0x001B8DD4
+	// Token: 0x060055FB RID: 22011 RVA: 0x001C38A4 File Offset: 0x001C1AA4
 	private void RefreshHintItem(int activityId, int groupId)
 	{
 		bool groupUnlockState = LifePointDrawModel.Instance.GetGroupUnlockState(activityId, groupId);
@@ -256,7 +256,7 @@ public class LifePointDrawItem : UiPanelBase
 		base.GetItem(16).SetUIActive(uiactive3);
 	}
 
-	// Token: 0x06008265 RID: 33381 RVA: 0x001BAC38 File Offset: 0x001B8E38
+	// Token: 0x060055FC RID: 22012 RVA: 0x001C3908 File Offset: 0x001C1B08
 	private void RefreshProgressDesc(int activityId, int groupId)
 	{
 		bool groupUnlockState = LifePointDrawModel.Instance.GetGroupUnlockState(activityId, groupId);
@@ -270,7 +270,7 @@ public class LifePointDrawItem : UiPanelBase
 		base.GetText(18).SetText(groupRewardProgress, true);
 	}
 
-	// Token: 0x06008266 RID: 33382 RVA: 0x001BAC9C File Offset: 0x001B8E9C
+	// Token: 0x060055FD RID: 22013 RVA: 0x001C396C File Offset: 0x001C1B6C
 	private void RefreshUnlockDesc(int activityId, int groupId)
 	{
 		if (LifePointDrawModel.Instance.GetGroupUnlockState(activityId, groupId))
@@ -283,96 +283,96 @@ public class LifePointDrawItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(19), "LifePointUnlockText", new <>z__ReadOnlySingleElementList<object>(remainTimeDataFormat.CountDownText));
 	}
 
-	// Token: 0x06008267 RID: 33383 RVA: 0x001BAD12 File Offset: 0x001B8F12
+	// Token: 0x060055FE RID: 22014 RVA: 0x001C39E2 File Offset: 0x001C1BE2
 	protected override void OnBeforeDestroy()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.LifePointDrawGroupRedDot, base.GetItem(17), this.GroupId);
 	}
 
-	// Token: 0x04003AE3 RID: 15075
+	// Token: 0x04003B7B RID: 15227
 	[Nullable(2)]
 	private UiSequencePlayer SequencePlayer;
 
-	// Token: 0x04003AE4 RID: 15076
+	// Token: 0x04003B7C RID: 15228
 	private bool IfUpItem;
 
-	// Token: 0x04003AE5 RID: 15077
+	// Token: 0x04003B7D RID: 15229
 	private int GroupId;
 
-	// Token: 0x04003AE6 RID: 15078
+	// Token: 0x04003B7E RID: 15230
 	[Nullable(2)]
 	private LifePointDrawActivityData LifePointDrawActivityData;
 
-	// Token: 0x020078B1 RID: 30897
+	// Token: 0x02006A3C RID: 27196
 	private class ELifePointDrawItemComponent
 	{
-		// Token: 0x04027C2E RID: 162862
+		// Token: 0x04022F5F RID: 143199
 		public const int Button = 0;
 
-		// Token: 0x04027C2F RID: 162863
+		// Token: 0x04022F60 RID: 143200
 		public const int RoundUnlockItem = 1;
 
-		// Token: 0x04027C30 RID: 162864
+		// Token: 0x04022F61 RID: 143201
 		public const int RoundLockItem = 2;
 
-		// Token: 0x04027C31 RID: 162865
+		// Token: 0x04022F62 RID: 143202
 		public const int ColorTexture = 3;
 
-		// Token: 0x04027C32 RID: 162866
+		// Token: 0x04022F63 RID: 143203
 		public const int LineUpActiveItem = 4;
 
-		// Token: 0x04027C33 RID: 162867
+		// Token: 0x04022F64 RID: 143204
 		public const int LineDownActiveItem = 5;
 
-		// Token: 0x04027C34 RID: 162868
+		// Token: 0x04022F65 RID: 143205
 		public const int LineUpInActiveItem = 6;
 
-		// Token: 0x04027C35 RID: 162869
+		// Token: 0x04022F66 RID: 143206
 		public const int LineDownInActiveItem = 7;
 
-		// Token: 0x04027C36 RID: 162870
+		// Token: 0x04022F67 RID: 143207
 		public const int LevelNumSprite = 8;
 
-		// Token: 0x04027C37 RID: 162871
+		// Token: 0x04022F68 RID: 143208
 		public const int LevelNumBg = 9;
 
-		// Token: 0x04027C38 RID: 162872
+		// Token: 0x04022F69 RID: 143209
 		public const int ArrowItem1 = 10;
 
-		// Token: 0x04027C39 RID: 162873
+		// Token: 0x04022F6A RID: 143210
 		public const int ArrowItem2 = 11;
 
-		// Token: 0x04027C3A RID: 162874
+		// Token: 0x04022F6B RID: 143211
 		public const int TitleBgSprite = 12;
 
-		// Token: 0x04027C3B RID: 162875
+		// Token: 0x04022F6C RID: 143212
 		public const int TitleName = 13;
 
-		// Token: 0x04027C3C RID: 162876
+		// Token: 0x04022F6D RID: 143213
 		public const int PassItem = 14;
 
-		// Token: 0x04027C3D RID: 162877
+		// Token: 0x04022F6E RID: 143214
 		public const int ProgressItem = 15;
 
-		// Token: 0x04027C3E RID: 162878
+		// Token: 0x04022F6F RID: 143215
 		public const int LockItem = 16;
 
-		// Token: 0x04027C3F RID: 162879
+		// Token: 0x04022F70 RID: 143216
 		public const int TitleRedDot = 17;
 
-		// Token: 0x04027C40 RID: 162880
+		// Token: 0x04022F71 RID: 143217
 		public const int ProgressDesc = 18;
 
-		// Token: 0x04027C41 RID: 162881
+		// Token: 0x04022F72 RID: 143218
 		public const int UnlockDesc = 19;
 
-		// Token: 0x04027C42 RID: 162882
+		// Token: 0x04022F73 RID: 143219
 		public const int LevelNumSpriteTransition = 20;
 
-		// Token: 0x04027C43 RID: 162883
+		// Token: 0x04022F74 RID: 143220
 		public const int TitleBgSpriteTransition = 21;
 
-		// Token: 0x04027C44 RID: 162884
+		// Token: 0x04022F75 RID: 143221
 		public const int LockBgItem = 22;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000ECE RID: 3790
+	// Token: 0x02000FB3 RID: 4019
 	public struct PhantomBattleDialog : IFlatbufferObject
 	{
-		// Token: 0x1700262B RID: 9771
-		// (get) Token: 0x0600A6E9 RID: 42729 RVA: 0x002AF880 File Offset: 0x002ADA80
+		// Token: 0x17002691 RID: 9873
+		// (get) Token: 0x0600AD0A RID: 44298 RVA: 0x002CC9A0 File Offset: 0x002CABA0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A6EA RID: 42730 RVA: 0x002AF88D File Offset: 0x002ADA8D
+		// Token: 0x0600AD0B RID: 44299 RVA: 0x002CC9AD File Offset: 0x002CABAD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A6EB RID: 42731 RVA: 0x002AF894 File Offset: 0x002ADA94
+		// Token: 0x0600AD0C RID: 44300 RVA: 0x002CC9B4 File Offset: 0x002CABB4
 		public static PhantomBattleDialog GetRootAsPhantomBattleDialog(ByteBuffer _bb)
 		{
 			return PhantomBattleDialog.GetRootAsPhantomBattleDialog(_bb, default(PhantomBattleDialog));
 		}
 
-		// Token: 0x0600A6EC RID: 42732 RVA: 0x002AF8B0 File Offset: 0x002ADAB0
+		// Token: 0x0600AD0D RID: 44301 RVA: 0x002CC9D0 File Offset: 0x002CABD0
 		public static PhantomBattleDialog GetRootAsPhantomBattleDialog(ByteBuffer _bb, PhantomBattleDialog obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A6ED RID: 42733 RVA: 0x002AF8CD File Offset: 0x002ADACD
+		// Token: 0x0600AD0E RID: 44302 RVA: 0x002CC9ED File Offset: 0x002CABED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A6EE RID: 42734 RVA: 0x002AF8DC File Offset: 0x002ADADC
+		// Token: 0x0600AD0F RID: 44303 RVA: 0x002CC9FC File Offset: 0x002CABFC
 		public PhantomBattleDialog __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700262C RID: 9772
-		// (get) Token: 0x0600A6EF RID: 42735 RVA: 0x002AF8EC File Offset: 0x002ADAEC
+		// Token: 0x17002692 RID: 9874
+		// (get) Token: 0x0600AD10 RID: 44304 RVA: 0x002CCA0C File Offset: 0x002CAC0C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700262D RID: 9773
-		// (get) Token: 0x0600A6F0 RID: 42736 RVA: 0x002AF928 File Offset: 0x002ADB28
+		// Token: 0x17002693 RID: 9875
+		// (get) Token: 0x0600AD11 RID: 44305 RVA: 0x002CCA48 File Offset: 0x002CAC48
 		public string PlotName
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A6F1 RID: 42737 RVA: 0x002AF95F File Offset: 0x002ADB5F
+		// Token: 0x0600AD12 RID: 44306 RVA: 0x002CCA7F File Offset: 0x002CAC7F
 		public Span<byte> GetPlotNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600A6F2 RID: 42738 RVA: 0x002AF96E File Offset: 0x002ADB6E
+		// Token: 0x0600AD13 RID: 44307 RVA: 0x002CCA8E File Offset: 0x002CAC8E
 		public byte[] GetPlotNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700262E RID: 9774
-		// (get) Token: 0x0600A6F3 RID: 42739 RVA: 0x002AF988 File Offset: 0x002ADB88
+		// Token: 0x17002694 RID: 9876
+		// (get) Token: 0x0600AD14 RID: 44308 RVA: 0x002CCAA8 File Offset: 0x002CACA8
 		public int FlowId
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700262F RID: 9775
-		// (get) Token: 0x0600A6F4 RID: 42740 RVA: 0x002AF9C4 File Offset: 0x002ADBC4
+		// Token: 0x17002695 RID: 9877
+		// (get) Token: 0x0600AD15 RID: 44309 RVA: 0x002CCAE4 File Offset: 0x002CACE4
 		public int StateId
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004F8C RID: 20364
+		// Token: 0x04005571 RID: 21873
 		private Table __p;
 	}
 }

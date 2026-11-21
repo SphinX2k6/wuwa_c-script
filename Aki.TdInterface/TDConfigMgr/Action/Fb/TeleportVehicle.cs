@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029CA RID: 10698
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CB7 RID: 11447
 	public class TeleportVehicle : ActionParams
 	{
-		// Token: 0x0600EC76 RID: 60534 RVA: 0x002286E6 File Offset: 0x002268E6
+		// Token: 0x0600FB0D RID: 64269 RVA: 0x0024606A File Offset: 0x0024426A
 		public static TeleportVehicle Create(ITeleportVehicle? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AA4 RID: 19108
-		// (get) Token: 0x0600EC77 RID: 60535 RVA: 0x00228705 File Offset: 0x00226905
+		// Token: 0x17004E4D RID: 20045
+		// (get) Token: 0x0600FB0E RID: 64270 RVA: 0x00246089 File Offset: 0x00244289
 		public virtual ITargetVehicle TargetVehicle
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AA5 RID: 19109
-		// (get) Token: 0x0600EC78 RID: 60536 RVA: 0x00228734 File Offset: 0x00226934
+		// Token: 0x17004E4E RID: 20046
+		// (get) Token: 0x0600FB0F RID: 64271 RVA: 0x002460B8 File Offset: 0x002442B8
 		public virtual VectorInfo Pos
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AA6 RID: 19110
-		// (get) Token: 0x0600EC79 RID: 60537 RVA: 0x00228768 File Offset: 0x00226968
+		// Token: 0x17004E4F RID: 20047
+		// (get) Token: 0x0600FB10 RID: 64272 RVA: 0x002460EC File Offset: 0x002442EC
 		[Nullable(2)]
 		public virtual VectorInfo Rot
 		{
@@ -73,8 +71,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AA7 RID: 19111
-		// (get) Token: 0x0600EC7A RID: 60538 RVA: 0x0022879C File Offset: 0x0022699C
+		// Token: 0x17004E50 RID: 20048
+		// (get) Token: 0x0600FB11 RID: 64273 RVA: 0x00246120 File Offset: 0x00244320
 		public virtual int? AppointedDock
 		{
 			get
@@ -87,8 +85,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AA8 RID: 19112
-		// (get) Token: 0x0600EC7B RID: 60539 RVA: 0x002287D4 File Offset: 0x002269D4
+		// Token: 0x17004E51 RID: 20049
+		// (get) Token: 0x0600FB12 RID: 64274 RVA: 0x00246158 File Offset: 0x00244358
 		public virtual bool? IsTeleportNoLoading
 		{
 			get
@@ -101,8 +99,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AA9 RID: 19113
-		// (get) Token: 0x0600EC7C RID: 60540 RVA: 0x0022880A File Offset: 0x00226A0A
+		// Token: 0x17004E52 RID: 20050
+		// (get) Token: 0x0600FB13 RID: 64275 RVA: 0x0024618E File Offset: 0x0024438E
 		public virtual ITeleportTransitionType TransitionOption
 		{
 			get
@@ -117,33 +115,33 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400822A RID: 33322
+		// Token: 0x0400891B RID: 35099
 		private ITeleportVehicle Instance;
 
-		// Token: 0x0400822B RID: 33323
+		// Token: 0x0400891C RID: 35100
 		private ITargetVehicle _TargetVehicleCache;
 
-		// Token: 0x0400822C RID: 33324
+		// Token: 0x0400891D RID: 35101
 		private bool _TargetVehicleInited;
 
-		// Token: 0x0400822D RID: 33325
+		// Token: 0x0400891E RID: 35102
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x0400822E RID: 33326
+		// Token: 0x0400891F RID: 35103
 		private bool _PosInited;
 
-		// Token: 0x0400822F RID: 33327
+		// Token: 0x04008920 RID: 35104
 		[Nullable(2)]
 		private VectorInfo _RotCache;
 
-		// Token: 0x04008230 RID: 33328
+		// Token: 0x04008921 RID: 35105
 		private bool _RotInited;
 
-		// Token: 0x04008231 RID: 33329
+		// Token: 0x04008922 RID: 35106
 		private ITeleportTransitionType _TransitionOptionCache;
 
-		// Token: 0x04008232 RID: 33330
+		// Token: 0x04008923 RID: 35107
 		private bool _TransitionOptionInited;
 	}
 }

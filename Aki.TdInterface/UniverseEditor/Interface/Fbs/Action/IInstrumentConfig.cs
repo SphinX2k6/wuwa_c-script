@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006969 RID: 26985
+	// Token: 0x0200701C RID: 28700
 	public struct IInstrumentConfig : IFlatbufferObject
 	{
-		// Token: 0x1700C81D RID: 51229
-		// (get) Token: 0x0602F1CA RID: 192970 RVA: 0x0066B3D6 File Offset: 0x006695D6
+		// Token: 0x1700D220 RID: 53792
+		// (get) Token: 0x06031B9A RID: 203674 RVA: 0x006BB8BE File Offset: 0x006B9ABE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F1CB RID: 192971 RVA: 0x0066B3E3 File Offset: 0x006695E3
+		// Token: 0x06031B9B RID: 203675 RVA: 0x006BB8CB File Offset: 0x006B9ACB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F1CC RID: 192972 RVA: 0x0066B3EC File Offset: 0x006695EC
+		// Token: 0x06031B9C RID: 203676 RVA: 0x006BB8D4 File Offset: 0x006B9AD4
 		public static IInstrumentConfig GetRootAsIInstrumentConfig(ByteBuffer _bb)
 		{
 			return IInstrumentConfig.GetRootAsIInstrumentConfig(_bb, default(IInstrumentConfig));
 		}
 
-		// Token: 0x0602F1CD RID: 192973 RVA: 0x0066B408 File Offset: 0x00669608
+		// Token: 0x06031B9D RID: 203677 RVA: 0x006BB8F0 File Offset: 0x006B9AF0
 		public static IInstrumentConfig GetRootAsIInstrumentConfig(ByteBuffer _bb, IInstrumentConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F1CE RID: 192974 RVA: 0x0066B425 File Offset: 0x00669625
+		// Token: 0x06031B9E RID: 203678 RVA: 0x006BB90D File Offset: 0x006B9B0D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F1CF RID: 192975 RVA: 0x0066B434 File Offset: 0x00669634
+		// Token: 0x06031B9F RID: 203679 RVA: 0x006BB91C File Offset: 0x006B9B1C
 		public IInstrumentConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C81E RID: 51230
-		// (get) Token: 0x0602F1D0 RID: 192976 RVA: 0x0066B444 File Offset: 0x00669644
+		// Token: 0x1700D221 RID: 53793
+		// (get) Token: 0x06031BA0 RID: 203680 RVA: 0x006BB92C File Offset: 0x006B9B2C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C81F RID: 51231
-		// (get) Token: 0x0602F1D1 RID: 192977 RVA: 0x0066B480 File Offset: 0x00669680
+		// Token: 0x1700D222 RID: 53794
+		// (get) Token: 0x06031BA1 RID: 203681 RVA: 0x006BB968 File Offset: 0x006B9B68
 		public EInstrumentType InstrumentType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C820 RID: 51232
-		// (get) Token: 0x0602F1D2 RID: 192978 RVA: 0x0066B4BC File Offset: 0x006696BC
+		// Token: 0x1700D223 RID: 53795
+		// (get) Token: 0x06031BA2 RID: 203682 RVA: 0x006BB9A4 File Offset: 0x006B9BA4
 		public IInstrumentKeyConfigs? KeyConfigs
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F1D3 RID: 192979 RVA: 0x0066B519 File Offset: 0x00669719
+		// Token: 0x06031BA3 RID: 203683 RVA: 0x006BBA01 File Offset: 0x006B9C01
 		public static Offset<IInstrumentConfig> CreateIInstrumentConfig(FlatBufferBuilder builder, int Id = 0, EInstrumentType InstrumentType = EInstrumentType.ChineseZither, Offset<IInstrumentKeyConfigs> KeyConfigsOffset = default(Offset<IInstrumentKeyConfigs>))
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInstrumentConfig.EndIInstrumentConfig(builder);
 		}
 
-		// Token: 0x0602F1D4 RID: 192980 RVA: 0x0066B53D File Offset: 0x0066973D
+		// Token: 0x06031BA4 RID: 203684 RVA: 0x006BBA25 File Offset: 0x006B9C25
 		public static void StartIInstrumentConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602F1D5 RID: 192981 RVA: 0x0066B546 File Offset: 0x00669746
+		// Token: 0x06031BA5 RID: 203685 RVA: 0x006BBA2E File Offset: 0x006B9C2E
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0602F1D6 RID: 192982 RVA: 0x0066B551 File Offset: 0x00669751
+		// Token: 0x06031BA6 RID: 203686 RVA: 0x006BBA39 File Offset: 0x006B9C39
 		public static void AddInstrumentType(FlatBufferBuilder builder, EInstrumentType instrumentType)
 		{
 			builder.AddByte(1, (byte)instrumentType, 0);
 		}
 
-		// Token: 0x0602F1D7 RID: 192983 RVA: 0x0066B55C File Offset: 0x0066975C
+		// Token: 0x06031BA7 RID: 203687 RVA: 0x006BBA44 File Offset: 0x006B9C44
 		public static void AddKeyConfigs(FlatBufferBuilder builder, Offset<IInstrumentKeyConfigs> keyConfigsOffset)
 		{
 			builder.AddOffset(2, keyConfigsOffset.Value, 0);
 		}
 
-		// Token: 0x0602F1D8 RID: 192984 RVA: 0x0066B56C File Offset: 0x0066976C
+		// Token: 0x06031BA8 RID: 203688 RVA: 0x006BBA54 File Offset: 0x006B9C54
 		public static Offset<IInstrumentConfig> EndIInstrumentConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IInstrumentConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602F1D9 RID: 192985 RVA: 0x0066B57C File Offset: 0x0066977C
+		// Token: 0x06031BA9 RID: 203689 RVA: 0x006BBA64 File Offset: 0x006B9C64
 		public IInstrumentConfigT UnPack()
 		{
 			IInstrumentConfigT instrumentConfigT = new IInstrumentConfigT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return instrumentConfigT;
 		}
 
-		// Token: 0x0602F1DA RID: 192986 RVA: 0x0066B598 File Offset: 0x00669798
+		// Token: 0x06031BAA RID: 203690 RVA: 0x006BBA80 File Offset: 0x006B9C80
 		public void UnPackTo(IInstrumentConfigT _o)
 		{
 			_o.Id = this.Id;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.KeyConfigs = ((this.KeyConfigs != null) ? this.KeyConfigs.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602F1DB RID: 192987 RVA: 0x0066B5EC File Offset: 0x006697EC
+		// Token: 0x06031BAB RID: 203691 RVA: 0x006BBAD4 File Offset: 0x006B9CD4
 		public static Offset<IInstrumentConfig> Pack(FlatBufferBuilder builder, IInstrumentConfigT _o)
 		{
 			if (_o == null)
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInstrumentConfig.CreateIInstrumentConfig(builder, _o.Id, _o.InstrumentType, keyConfigsOffset);
 		}
 
-		// Token: 0x040110EB RID: 69867
+		// Token: 0x04011F57 RID: 73559
 		private Table __p;
 	}
 }

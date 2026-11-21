@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 {
-	// Token: 0x0200702F RID: 28719
+	// Token: 0x020061B0 RID: 25008
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MotorcycleConfigComponent : EntityComponent
 	{
-		// Token: 0x17009BD6 RID: 39894
-		// (get) Token: 0x06045EA5 RID: 286373 RVA: 0x01166610 File Offset: 0x01164810
+		// Token: 0x17007141 RID: 28993
+		// (get) Token: 0x0603C085 RID: 245893 RVA: 0x01110488 File Offset: 0x0110E688
 		private bool HasConfigData
 		{
 			get
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045EA6 RID: 286374 RVA: 0x01166644 File Offset: 0x01164844
+		// Token: 0x0603C086 RID: 245894 RVA: 0x011104BC File Offset: 0x0110E6BC
 		private void GetConfigDataByKeyName(FName name, ref SMotorConfigs config)
 		{
 			TsBaseVehicle motorActor = this.MotorActor;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			bp_Motor_BaseVehicle_Photo_C.GetConfigDataByKeyName(name, ref config);
 		}
 
-		// Token: 0x06045EA7 RID: 286375 RVA: 0x01166694 File Offset: 0x01164894
+		// Token: 0x0603C087 RID: 245895 RVA: 0x0111050C File Offset: 0x0110E70C
 		protected unsafe override bool OnStart()
 		{
 			this.TagComp = base.Entity.GetComponent<VehicleTagComponent>();
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045EA8 RID: 286376 RVA: 0x0116694C File Offset: 0x01164B4C
+		// Token: 0x0603C088 RID: 245896 RVA: 0x011107C4 File Offset: 0x0110E9C4
 		protected override bool OnEnd()
 		{
 			foreach (KeyValuePair<int, List<MotorcycleConfigComponent.MotorConfigParams>> keyValuePair in this.TagIdToConfigParams)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045EA9 RID: 286377 RVA: 0x011669C0 File Offset: 0x01164BC0
+		// Token: 0x0603C089 RID: 245897 RVA: 0x01110838 File Offset: 0x0110EA38
 		private void OnTagChanged(int tagId, bool tagExist)
 		{
 			if (this.MotorActor == null)
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045EAA RID: 286378 RVA: 0x01166A64 File Offset: 0x01164C64
+		// Token: 0x0603C08A RID: 245898 RVA: 0x011108DC File Offset: 0x0110EADC
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -200,65 +200,76 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				return false;
 			}
 			MotorcycleConfigComponent motorcycleConfigComponent = (MotorcycleConfigComponent)componentTemplate;
-			if (base.CanResetComponentProperty("TagComp"))
+			if (motorcycleConfigComponent.TagComp == null)
 			{
-				if (motorcycleConfigComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("MotorActor"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				if (motorcycleConfigComponent.MotorActor == null)
-				{
-					this.MotorActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsBaseVehicle>(this.MotorActor), "MotorActor"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ConfigHelper"))
+			if (motorcycleConfigComponent.MotorActor == null)
 			{
-				if (motorcycleConfigComponent.ConfigHelper == null)
-				{
-					this.ConfigHelper = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroConfigHelper>(this.ConfigHelper), "ConfigHelper"))
-				{
-					return false;
-				}
+				this.MotorActor = null;
 			}
-			return !base.CanResetComponentProperty("TagIdToConfigParams") || motorcycleConfigComponent.TagIdToConfigParams == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, List<MotorcycleConfigComponent.MotorConfigParams>>>(this.TagIdToConfigParams), "TagIdToConfigParams");
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MotorActor), "MotorActor"))
+			{
+				return false;
+			}
+			if (motorcycleConfigComponent.ConfigHelper == null)
+			{
+				this.ConfigHelper = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConfigHelper), "ConfigHelper"))
+			{
+				return false;
+			}
+			return motorcycleConfigComponent.TagIdToConfigParams == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagIdToConfigParams), "TagIdToConfigParams");
 		}
 
-		// Token: 0x040248F2 RID: 149746
+		// Token: 0x17007142 RID: 28994
+		// (get) Token: 0x0603C08B RID: 245899 RVA: 0x0111099F File Offset: 0x0110EB9F
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007143 RID: 28995
+		// (get) Token: 0x0603C08C RID: 245900 RVA: 0x011109A2 File Offset: 0x0110EBA2
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FBA8 RID: 129960
 		[StaticVariableRuleIgnore]
 		private static readonly FName baseName = new FName("Base");
 
-		// Token: 0x040248F3 RID: 149747
+		// Token: 0x0401FBA9 RID: 129961
 		private VehicleTagComponent TagComp;
 
-		// Token: 0x040248F4 RID: 149748
+		// Token: 0x0401FBAA RID: 129962
 		private TsBaseVehicle MotorActor;
 
-		// Token: 0x040248F5 RID: 149749
+		// Token: 0x0401FBAB RID: 129963
 		private UKuroConfigHelper ConfigHelper;
 
-		// Token: 0x040248F6 RID: 149750
+		// Token: 0x0401FBAC RID: 129964
 		[Nullable(1)]
 		private readonly Dictionary<int, List<MotorcycleConfigComponent.MotorConfigParams>> TagIdToConfigParams = new Dictionary<int, List<MotorcycleConfigComponent.MotorConfigParams>>();
 
-		// Token: 0x0200CE20 RID: 52768
+		// Token: 0x0200BA11 RID: 47633
 		[NullableContext(1)]
 		[Nullable(0)]
 		public class MotorConfigParams
 		{
-			// Token: 0x06051DDC RID: 335324 RVA: 0x0163F1B4 File Offset: 0x0163D3B4
+			// Token: 0x06048645 RID: 296517 RVA: 0x016144D4 File Offset: 0x016126D4
 			public static void ConvertVarNames([Nullable(new byte[]
 			{
 				1,
@@ -273,7 +284,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				}
 			}
 
-			// Token: 0x06051DDD RID: 335325 RVA: 0x0163F1F0 File Offset: 0x0163D3F0
+			// Token: 0x06048646 RID: 296518 RVA: 0x01614510 File Offset: 0x01612710
 			public MotorConfigParams(FName name, SMotorConfigs config, VehicleTagComponent tagComp, UKuroConfigHelper motorConfigHelper)
 			{
 				this.Name = name;
@@ -288,7 +299,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				MotorcycleConfigComponent.MotorConfigParams.ConvertVarNames(config.VarNames, this.VarInt);
 			}
 
-			// Token: 0x06051DDE RID: 335326 RVA: 0x0163F280 File Offset: 0x0163D480
+			// Token: 0x06048647 RID: 296519 RVA: 0x016145A0 File Offset: 0x016127A0
 			public void TryActivate()
 			{
 				if (this.Activated)
@@ -312,7 +323,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			}
 
-			// Token: 0x06051DDF RID: 335327 RVA: 0x0163F34C File Offset: 0x0163D54C
+			// Token: 0x06048648 RID: 296520 RVA: 0x0161466C File Offset: 0x0161286C
 			public void Inactivate()
 			{
 				if (!this.Activated)
@@ -329,25 +340,25 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			}
 
-			// Token: 0x0403E15A RID: 254298
+			// Token: 0x04039585 RID: 234885
 			private bool Activated;
 
-			// Token: 0x0403E15B RID: 254299
+			// Token: 0x04039586 RID: 234886
 			private readonly List<int> Tags = new List<int>();
 
-			// Token: 0x0403E15C RID: 254300
+			// Token: 0x04039587 RID: 234887
 			private readonly TArray<int> VarInt = new TArray<int>();
 
-			// Token: 0x0403E15D RID: 254301
+			// Token: 0x04039588 RID: 234888
 			public FName Name;
 
-			// Token: 0x0403E15E RID: 254302
+			// Token: 0x04039589 RID: 234889
 			private readonly SMotorConfigs Config;
 
-			// Token: 0x0403E15F RID: 254303
+			// Token: 0x0403958A RID: 234890
 			private readonly VehicleTagComponent TagComp;
 
-			// Token: 0x0403E160 RID: 254304
+			// Token: 0x0403958B RID: 234891
 			private readonly UKuroConfigHelper MotorConfigHelper;
 		}
 	}

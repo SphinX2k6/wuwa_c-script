@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C0C RID: 3084
+	// Token: 0x02000CEE RID: 3310
 	public struct DropCatchDropPool : IFlatbufferObject
 	{
-		// Token: 0x17000DB0 RID: 3504
-		// (get) Token: 0x06006550 RID: 25936 RVA: 0x0021AB75 File Offset: 0x00218D75
+		// Token: 0x17000DFC RID: 3580
+		// (get) Token: 0x06006B2F RID: 27439 RVA: 0x00239F82 File Offset: 0x00238182
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006551 RID: 25937 RVA: 0x0021AB82 File Offset: 0x00218D82
+		// Token: 0x06006B30 RID: 27440 RVA: 0x00239F8F File Offset: 0x0023818F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006552 RID: 25938 RVA: 0x0021AB8C File Offset: 0x00218D8C
+		// Token: 0x06006B31 RID: 27441 RVA: 0x00239F98 File Offset: 0x00238198
 		public static DropCatchDropPool GetRootAsDropCatchDropPool(ByteBuffer _bb)
 		{
 			return DropCatchDropPool.GetRootAsDropCatchDropPool(_bb, default(DropCatchDropPool));
 		}
 
-		// Token: 0x06006553 RID: 25939 RVA: 0x0021ABA8 File Offset: 0x00218DA8
+		// Token: 0x06006B32 RID: 27442 RVA: 0x00239FB4 File Offset: 0x002381B4
 		public static DropCatchDropPool GetRootAsDropCatchDropPool(ByteBuffer _bb, DropCatchDropPool obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006554 RID: 25940 RVA: 0x0021ABC5 File Offset: 0x00218DC5
+		// Token: 0x06006B33 RID: 27443 RVA: 0x00239FD1 File Offset: 0x002381D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006555 RID: 25941 RVA: 0x0021ABD4 File Offset: 0x00218DD4
+		// Token: 0x06006B34 RID: 27444 RVA: 0x00239FE0 File Offset: 0x002381E0
 		public DropCatchDropPool __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000DB1 RID: 3505
-		// (get) Token: 0x06006556 RID: 25942 RVA: 0x0021ABE4 File Offset: 0x00218DE4
+		// Token: 0x17000DFD RID: 3581
+		// (get) Token: 0x06006B35 RID: 27445 RVA: 0x00239FF0 File Offset: 0x002381F0
 		public int Id
 		{
 			get
@@ -66,7 +66,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006557 RID: 25943 RVA: 0x0021AC20 File Offset: 0x00218E20
+		// Token: 0x06006B36 RID: 27446 RVA: 0x0023A02C File Offset: 0x0023822C
 		public DicIntInt? DropItemList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -77,8 +77,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000DB2 RID: 3506
-		// (get) Token: 0x06006558 RID: 25944 RVA: 0x0021AC80 File Offset: 0x00218E80
+		// Token: 0x17000DFE RID: 3582
+		// (get) Token: 0x06006B37 RID: 27447 RVA: 0x0023A08C File Offset: 0x0023828C
 		public int DropItemListLength
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DB3 RID: 3507
-		// (get) Token: 0x06006559 RID: 25945 RVA: 0x0021ACAC File Offset: 0x00218EAC
+		// Token: 0x17000DFF RID: 3583
+		// (get) Token: 0x06006B38 RID: 27448 RVA: 0x0023A0B8 File Offset: 0x002382B8
 		public float DropInitPosX
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DB4 RID: 3508
-		// (get) Token: 0x0600655A RID: 25946 RVA: 0x0021ACEC File Offset: 0x00218EEC
+		// Token: 0x17000E00 RID: 3584
+		// (get) Token: 0x06006B39 RID: 27449 RVA: 0x0023A0F8 File Offset: 0x002382F8
 		public float DropTimeInterval
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DB5 RID: 3509
-		// (get) Token: 0x0600655B RID: 25947 RVA: 0x0021AD30 File Offset: 0x00218F30
+		// Token: 0x17000E01 RID: 3585
+		// (get) Token: 0x06006B3A RID: 27450 RVA: 0x0023A13C File Offset: 0x0023833C
 		public float DropPosInterval
 		{
 			get
@@ -137,7 +137,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600655C RID: 25948 RVA: 0x0021AD74 File Offset: 0x00218F74
+		// Token: 0x06006B3B RID: 27451 RVA: 0x0023A180 File Offset: 0x00238380
 		public float TimeRange(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -148,8 +148,8 @@ namespace Aki.Config
 			return this.__p.bb.GetFloat(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000DB6 RID: 3510
-		// (get) Token: 0x0600655D RID: 25949 RVA: 0x0021ADB8 File Offset: 0x00218FB8
+		// Token: 0x17000E02 RID: 3586
+		// (get) Token: 0x06006B3C RID: 27452 RVA: 0x0023A1C4 File Offset: 0x002383C4
 		public int TimeRangeLength
 		{
 			get
@@ -163,54 +163,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600655E RID: 25950 RVA: 0x0021ADE4 File Offset: 0x00218FE4
+		// Token: 0x06006B3D RID: 27453 RVA: 0x0023A1F0 File Offset: 0x002383F0
 		public Span<float> GetTimeRangeBytes()
 		{
 			return this.__p.__vector_as_span<float>(14, 4);
 		}
 
-		// Token: 0x0600655F RID: 25951 RVA: 0x0021ADF4 File Offset: 0x00218FF4
+		// Token: 0x06006B3E RID: 27454 RVA: 0x0023A200 File Offset: 0x00238400
 		public float[] GetTimeRangeArray()
 		{
 			return this.__p.__vector_as_array<float>(14) ?? Array.Empty<float>();
 		}
 
-		// Token: 0x06006560 RID: 25952 RVA: 0x0021AE0C File Offset: 0x0021900C
+		// Token: 0x06006B3F RID: 27455 RVA: 0x0023A218 File Offset: 0x00238418
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用DropItemListFrozenDict()缓存字典，遍历请使用DropItemListIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> DropItemList()
+		public Dictionary<int, int> DropItemList()
 		{
 			return this.DropItemListIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06006561 RID: 25953 RVA: 0x0021AE62 File Offset: 0x00219062
+		// Token: 0x06006B40 RID: 27456 RVA: 0x0023A26E File Offset: 0x0023846E
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> DropItemListIter()
+		public IEnumerable<DicIntInt> DropItemListIter()
 		{
 			DropCatchDropPool.<DropItemListIter>d__25 <DropItemListIter>d__ = new DropCatchDropPool.<DropItemListIter>d__25(-2);
 			<DropItemListIter>d__.<>3__<>4__this = this;
 			return <DropItemListIter>d__;
 		}
 
-		// Token: 0x06006562 RID: 25954 RVA: 0x0021AE78 File Offset: 0x00219078
+		// Token: 0x06006B41 RID: 27457 RVA: 0x0023A283 File Offset: 0x00238483
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用TimeRangeIter()或GetTimeRangeBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly float[] TimeRange()
+		public float[] TimeRange()
 		{
-			DropCatchDropPool dropCatchDropPool = this;
-			return dropCatchDropPool.GetTimeRangeArray() ?? Array.Empty<float>();
+			return this.GetTimeRangeArray();
 		}
 
-		// Token: 0x06006563 RID: 25955 RVA: 0x0021AE9C File Offset: 0x0021909C
+		// Token: 0x06006B42 RID: 27458 RVA: 0x0023A28B File Offset: 0x0023848B
 		[NullableContext(1)]
-		public readonly IEnumerable<float> TimeRangeIter()
+		public IEnumerable<float> TimeRangeIter()
 		{
 			DropCatchDropPool.<TimeRangeIter>d__27 <TimeRangeIter>d__ = new DropCatchDropPool.<TimeRangeIter>d__27(-2);
 			<TimeRangeIter>d__.<>3__<>4__this = this;
 			return <TimeRangeIter>d__;
 		}
 
-		// Token: 0x06006564 RID: 25956 RVA: 0x0021AEB4 File Offset: 0x002190B4
+		// Token: 0x06006B43 RID: 27459 RVA: 0x0023A2A0 File Offset: 0x002384A0
 		public int? GetDropItemList(int key)
 		{
 			this.EnsureDropItemListCacheIfNeeded();
@@ -222,7 +219,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06006565 RID: 25957 RVA: 0x0021AEE8 File Offset: 0x002190E8
+		// Token: 0x06006B44 RID: 27460 RVA: 0x0023A2D4 File Offset: 0x002384D4
 		private void EnsureDropItemListCacheIfNeeded()
 		{
 			if (this.DropItemListCache != null)
@@ -232,18 +229,18 @@ namespace Aki.Config
 			this.DropItemListCache = this.DropItemListIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06006566 RID: 25958 RVA: 0x0021AF4E File Offset: 0x0021914E
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetDropItemListFrozenDict(int key)
+		// Token: 0x06006B45 RID: 27461 RVA: 0x0023A33A File Offset: 0x0023853A
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetDropItemListFrozenDict()
 		{
 			this.EnsureDropItemListCacheIfNeeded();
 			return this.DropItemListCache;
 		}
 
-		// Token: 0x04004C48 RID: 19528
+		// Token: 0x0400522A RID: 21034
 		private Table __p;
 
-		// Token: 0x04004C49 RID: 19529
+		// Token: 0x0400522B RID: 21035
 		[Nullable(2)]
 		private FrozenDictionary<int, int> DropItemListCache;
 	}

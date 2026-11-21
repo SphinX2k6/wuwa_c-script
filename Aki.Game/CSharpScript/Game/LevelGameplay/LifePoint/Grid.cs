@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LifePoint
 {
-	// Token: 0x02006AD0 RID: 27344
+	// Token: 0x02005C48 RID: 23624
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Grid : UiPanelBase
 	{
-		// Token: 0x06043EF3 RID: 278259 RVA: 0x010A81DE File Offset: 0x010A63DE
+		// Token: 0x0603A03C RID: 237628 RVA: 0x0105188E File Offset: 0x0104FA8E
 		public Grid(int x, int y, EPieceColorType color, Action<int, int> callback)
 		{
 			this.X = x;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			this.ColorExpressed = color;
 		}
 
-		// Token: 0x06043EF4 RID: 278260 RVA: 0x010A8218 File Offset: 0x010A6418
+		// Token: 0x0603A03D RID: 237629 RVA: 0x010518C8 File Offset: 0x0104FAC8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -45,14 +45,14 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06043EF5 RID: 278261 RVA: 0x010A8305 File Offset: 0x010A6505
+		// Token: 0x0603A03E RID: 237630 RVA: 0x010519B5 File Offset: 0x0104FBB5
 		protected override void OnBeforeCreate()
 		{
 			this.UiViewSequence = new UiBehaviorLevelSequence(this);
 			base.AddUiBehavior(this.UiViewSequence);
 		}
 
-		// Token: 0x06043EF6 RID: 278262 RVA: 0x010A8320 File Offset: 0x010A6520
+		// Token: 0x0603A03F RID: 237631 RVA: 0x010519D0 File Offset: 0x0104FBD0
 		protected override void OnStart()
 		{
 			this.IsBlock = (this.ColorExpressed == EPieceColorType.Gray);
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			}
 		}
 
-		// Token: 0x06043EF7 RID: 278263 RVA: 0x010A8438 File Offset: 0x010A6638
+		// Token: 0x0603A040 RID: 237632 RVA: 0x01051AE8 File Offset: 0x0104FCE8
 		protected override void OnBeforeDestroy()
 		{
 			(base.GetRootActor().GetComponentByClass(UUIButtonComponent.StaticClass()) as UUIButtonComponent).OnClickCallBack.Unbind();
@@ -82,13 +82,13 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			this.UiViewSequence = null;
 		}
 
-		// Token: 0x06043EF8 RID: 278264 RVA: 0x010A8477 File Offset: 0x010A6677
+		// Token: 0x0603A041 RID: 237633 RVA: 0x01051B27 File Offset: 0x0104FD27
 		private void OnClick()
 		{
 			this.Callback(this.X, this.Y);
 		}
 
-		// Token: 0x06043EF9 RID: 278265 RVA: 0x010A8490 File Offset: 0x010A6690
+		// Token: 0x0603A042 RID: 237634 RVA: 0x01051B40 File Offset: 0x0104FD40
 		public void Paint(EPieceColorType color, int order, EDirection direction)
 		{
 			this.Color = color;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			this.AnimTask_.AddRear(animTask);
 		}
 
-		// Token: 0x06043EFA RID: 278266 RVA: 0x010A8520 File Offset: 0x010A6720
+		// Token: 0x0603A043 RID: 237635 RVA: 0x01051BD0 File Offset: 0x0104FDD0
 		public void TryBlendAnim(EPieceColorType color, int order, EDirection direction)
 		{
 			double a = Time.Instance.Now + (double)LifePointModel.Instance.CalcCountDownTime(order);
@@ -116,13 +116,13 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			}
 		}
 
-		// Token: 0x06043EFB RID: 278267 RVA: 0x010A85A7 File Offset: 0x010A67A7
+		// Token: 0x0603A044 RID: 237636 RVA: 0x01051C57 File Offset: 0x0104FE57
 		public void BeforeReset()
 		{
 			this.AnimTask_.Clear();
 		}
 
-		// Token: 0x06043EFC RID: 278268 RVA: 0x010A85B4 File Offset: 0x010A67B4
+		// Token: 0x0603A045 RID: 237637 RVA: 0x01051C64 File Offset: 0x0104FE64
 		public void Reset(EPieceColorType color)
 		{
 			if (this.IsBlock)
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			this.ColorExpressed = this.Color;
 		}
 
-		// Token: 0x06043EFD RID: 278269 RVA: 0x010A86D8 File Offset: 0x010A68D8
+		// Token: 0x0603A046 RID: 237638 RVA: 0x01051D88 File Offset: 0x0104FF88
 		public void AfterReset()
 		{
 			base.GetTexture(1).GetParentAsUIItem().SetUIActive(false);
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			base.GetTexture(3).SetColor(LifePointModel.Instance.InitColor);
 		}
 
-		// Token: 0x06043EFE RID: 278270 RVA: 0x010A8738 File Offset: 0x010A6938
+		// Token: 0x0603A047 RID: 237639 RVA: 0x01051DE8 File Offset: 0x0104FFE8
 		public bool CheckAnim()
 		{
 			if (this.AnimTask_.Size == 0)
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			return true;
 		}
 
-		// Token: 0x06043EFF RID: 278271 RVA: 0x010A8798 File Offset: 0x010A6998
+		// Token: 0x0603A048 RID: 237640 RVA: 0x01051E48 File Offset: 0x01050048
 		private void PlayAnim(AnimTask animTask)
 		{
 			bool isHit = animTask.Color == LifePointModel.Instance.Config.ColorBoard.TargetColor;
@@ -230,29 +230,29 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			LifePointModel.Instance.AudioMap[animTask.Order] = array;
 		}
 
-		// Token: 0x0402382A RID: 145450
+		// Token: 0x0401EACA RID: 125642
 		public Deque<AnimTask> AnimTask_ = new Deque<AnimTask>(4);
 
-		// Token: 0x0402382B RID: 145451
+		// Token: 0x0401EACB RID: 125643
 		public EPieceColorType ColorExpressed;
 
-		// Token: 0x0402382C RID: 145452
+		// Token: 0x0401EACC RID: 125644
 		public bool IsBlock;
 
-		// Token: 0x0402382D RID: 145453
+		// Token: 0x0401EACD RID: 125645
 		[Nullable(2)]
 		private UiBehaviorLevelSequence UiViewSequence;
 
-		// Token: 0x0402382E RID: 145454
+		// Token: 0x0401EACE RID: 125646
 		public int X;
 
-		// Token: 0x0402382F RID: 145455
+		// Token: 0x0401EACF RID: 125647
 		public int Y;
 
-		// Token: 0x04023830 RID: 145456
+		// Token: 0x0401EAD0 RID: 125648
 		public EPieceColorType Color;
 
-		// Token: 0x04023831 RID: 145457
+		// Token: 0x0401EAD1 RID: 125649
 		public Action<int, int> Callback;
 	}
 }

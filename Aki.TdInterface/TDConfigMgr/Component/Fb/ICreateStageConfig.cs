@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BE7 RID: 3047
+	// Token: 0x02000CB6 RID: 3254
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ICreateStageConfig : ILifeStageConfig
 	{
-		// Token: 0x060045F7 RID: 17911 RVA: 0x000B0D9F File Offset: 0x000AEF9F
-		[NullableContext(1)]
+		// Token: 0x06004A55 RID: 19029 RVA: 0x000BAF1B File Offset: 0x000B911B
+		[NullableContext(0)]
 		public static ICreateStageConfig Create(ICreateStageConfig? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013E6 RID: 5094
-		// (get) Token: 0x060045F8 RID: 17912 RVA: 0x000B0DC0 File Offset: 0x000AEFC0
+		// Token: 0x170014E4 RID: 5348
+		// (get) Token: 0x06004A56 RID: 19030 RVA: 0x000BAF3C File Offset: 0x000B913C
 		public override float? PerformDuration
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013E7 RID: 5095
-		// (get) Token: 0x060045F9 RID: 17913 RVA: 0x000B0DF6 File Offset: 0x000AEFF6
+		// Token: 0x170014E5 RID: 5349
+		// (get) Token: 0x06004A57 RID: 19031 RVA: 0x000BAF72 File Offset: 0x000B9172
 		public virtual ICreateBulletConfig BulletConfig
 		{
 			get
@@ -55,19 +55,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013E8 RID: 5096
-		// (get) Token: 0x060045FA RID: 17914 RVA: 0x000B0E2C File Offset: 0x000AF02C
+		// Token: 0x170014E6 RID: 5350
+		// (get) Token: 0x06004A58 RID: 19032 RVA: 0x000BAFA8 File Offset: 0x000B91A8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -90,24 +90,24 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027D2 RID: 10194
+		// Token: 0x04002A1D RID: 10781
 		private ICreateStageConfig Instance;
 
-		// Token: 0x040027D3 RID: 10195
+		// Token: 0x04002A1E RID: 10782
 		private ICreateBulletConfig _BulletConfigCache;
 
-		// Token: 0x040027D4 RID: 10196
+		// Token: 0x04002A1F RID: 10783
 		private bool _BulletConfigInited;
 
-		// Token: 0x040027D5 RID: 10197
+		// Token: 0x04002A20 RID: 10784
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x040027D6 RID: 10198
+		// Token: 0x04002A21 RID: 10785
 		private bool _ActionsInited;
 	}
 }

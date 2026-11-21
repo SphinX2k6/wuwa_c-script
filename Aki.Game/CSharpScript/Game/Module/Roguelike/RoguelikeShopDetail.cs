@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E29 RID: 20009
+	// Token: 0x02003DF2 RID: 15858
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeShopDetail : UiPanelBase
 	{
-		// Token: 0x06033994 RID: 211348 RVA: 0x00C1248C File Offset: 0x00C1068C
+		// Token: 0x060287FF RID: 165887 RVA: 0x00B5B9C0 File Offset: 0x00B59BC0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -56,13 +56,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033995 RID: 211349 RVA: 0x00C1267A File Offset: 0x00C1087A
+		// Token: 0x06028800 RID: 165888 RVA: 0x00B5BBAE File Offset: 0x00B59DAE
 		protected override void OnStart()
 		{
 			this.GenericLayout = new GenericLayout<CommonElementItem, int>(base.GetHorizontalLayout(11), this.CreateElement, null, false, true);
 		}
 
-		// Token: 0x06033996 RID: 211350 RVA: 0x00C12698 File Offset: 0x00C10898
+		// Token: 0x06028801 RID: 165889 RVA: 0x00B5BBCC File Offset: 0x00B59DCC
 		public void Refresh(RogueGainEntry data)
 		{
 			RoguelikeShopDetail.<>c__DisplayClass7_0 CS$<>8__locals1 = new RoguelikeShopDetail.<>c__DisplayClass7_0();
@@ -81,10 +81,10 @@ namespace CSharpScript.Game.Module.Roguelike
 			TaskSystem.Instance.Run().Forget<bool>();
 		}
 
-		// Token: 0x0401B5E8 RID: 112104
+		// Token: 0x04015FBB RID: 90043
 		private readonly List<RoguelikeShopAttrItem> AttrItemList = new List<RoguelikeShopAttrItem>();
 
-		// Token: 0x0401B5E9 RID: 112105
+		// Token: 0x04015FBC RID: 90044
 		[Nullable(new byte[]
 		{
 			2,
@@ -92,53 +92,53 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<CommonElementItem, int> GenericLayout;
 
-		// Token: 0x0401B5EA RID: 112106
+		// Token: 0x04015FBD RID: 90045
 		private readonly Func<CommonElementItem> CreateElement = () => new CommonElementItem();
 
-		// Token: 0x0401B5EB RID: 112107
+		// Token: 0x04015FBE RID: 90046
 		private readonly Action OnBtnConfirm = delegate()
 		{
 			RoguelikeController.Instance.RogueChooseDataResultRequest(EPerkType.Shop);
 		};
 
-		// Token: 0x0200AFD4 RID: 45012
+		// Token: 0x02009A06 RID: 39430
 		[NullableContext(0)]
 		private static class ERoguelikeShopDefine
 		{
-			// Token: 0x0403560D RID: 218637
+			// Token: 0x0403003D RID: 196669
 			public const int TxtName = 0;
 
-			// Token: 0x0403560E RID: 218638
+			// Token: 0x0403003E RID: 196670
 			public const int TxtHave = 1;
 
-			// Token: 0x0403560F RID: 218639
+			// Token: 0x0403003F RID: 196671
 			public const int TxtType = 2;
 
-			// Token: 0x04035610 RID: 218640
+			// Token: 0x04030040 RID: 196672
 			public const int TxtDesc = 3;
 
-			// Token: 0x04035611 RID: 218641
+			// Token: 0x04030041 RID: 196673
 			public const int PanelAttr = 4;
 
-			// Token: 0x04035612 RID: 218642
+			// Token: 0x04030042 RID: 196674
 			public const int AttrItem = 5;
 
-			// Token: 0x04035613 RID: 218643
+			// Token: 0x04030043 RID: 196675
 			public const int PanelCost = 6;
 
-			// Token: 0x04035614 RID: 218644
+			// Token: 0x04030044 RID: 196676
 			public const int BtnConfirm = 7;
 
-			// Token: 0x04035615 RID: 218645
+			// Token: 0x04030045 RID: 196677
 			public const int TextureCurrencyIcon = 8;
 
-			// Token: 0x04035616 RID: 218646
+			// Token: 0x04030046 RID: 196678
 			public const int TxtCurrencyCurPrice = 9;
 
-			// Token: 0x04035617 RID: 218647
+			// Token: 0x04030047 RID: 196679
 			public const int TxtCurrencyOriginPrice = 10;
 
-			// Token: 0x04035618 RID: 218648
+			// Token: 0x04030048 RID: 196680
 			public const int ElementLayout = 11;
 		}
 	}

@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002496 RID: 9366
+// Token: 0x0200197D RID: 6525
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionAssembleTopItem : UiPanelBase
 {
-	// Token: 0x06012CE1 RID: 77025 RVA: 0x004A4428 File Offset: 0x004A2628
+	// Token: 0x060101A2 RID: 65954 RVA: 0x004B1F18 File Offset: 0x004B0118
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,14 +28,14 @@ public class VisionAssembleTopItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012CE2 RID: 77026 RVA: 0x004A44E7 File Offset: 0x004A26E7
+	// Token: 0x060101A3 RID: 65955 RVA: 0x004B1FD7 File Offset: 0x004B01D7
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<VisionAssembleSuitItem, VisionAssembleSuitItemData>(base.GetHorizontalLayout(3), new Func<VisionAssembleSuitItem>(this.InitItem), null, false, true);
 		VisionEquipGroupModel.Instance.SaveVisionGroupFirstOpenState(false);
 	}
 
-	// Token: 0x06012CE3 RID: 77027 RVA: 0x004A4515 File Offset: 0x004A2715
+	// Token: 0x060101A4 RID: 65956 RVA: 0x004B2005 File Offset: 0x004B0205
 	private void OnClickReNameBtn()
 	{
 		Action clickReNameCallBack = this.ClickReNameCallBack;
@@ -46,25 +46,25 @@ public class VisionAssembleTopItem : UiPanelBase
 		clickReNameCallBack();
 	}
 
-	// Token: 0x06012CE4 RID: 77028 RVA: 0x004A4527 File Offset: 0x004A2727
+	// Token: 0x060101A5 RID: 65957 RVA: 0x004B2017 File Offset: 0x004B0217
 	private VisionAssembleSuitItem InitItem()
 	{
 		return new VisionAssembleSuitItem();
 	}
 
-	// Token: 0x06012CE5 RID: 77029 RVA: 0x004A452E File Offset: 0x004A272E
+	// Token: 0x060101A6 RID: 65958 RVA: 0x004B201E File Offset: 0x004B021E
 	public void SetReBtnActive(bool state)
 	{
 		this.ShowReNameBtn = state;
 	}
 
-	// Token: 0x06012CE6 RID: 77030 RVA: 0x004A4537 File Offset: 0x004A2737
+	// Token: 0x060101A7 RID: 65959 RVA: 0x004B2027 File Offset: 0x004B0227
 	public void BindClickReNameCallBack(Action callBack)
 	{
 		this.ClickReNameCallBack = callBack;
 	}
 
-	// Token: 0x06012CE7 RID: 77031 RVA: 0x004A4540 File Offset: 0x004A2740
+	// Token: 0x060101A8 RID: 65960 RVA: 0x004B2030 File Offset: 0x004B0230
 	[NullableContext(2)]
 	public void Refresh(VisionAssembleTopData data)
 	{
@@ -101,7 +101,7 @@ public class VisionAssembleTopItem : UiPanelBase
 		layout.RefreshByData(data.SuitList, null, false);
 	}
 
-	// Token: 0x04008D9D RID: 36253
+	// Token: 0x04008EE6 RID: 36582
 	[Nullable(new byte[]
 	{
 		2,
@@ -110,10 +110,10 @@ public class VisionAssembleTopItem : UiPanelBase
 	})]
 	private GenericLayout<VisionAssembleSuitItem, VisionAssembleSuitItemData> Layout;
 
-	// Token: 0x04008D9E RID: 36254
+	// Token: 0x04008EE7 RID: 36583
 	[Nullable(2)]
 	private Action ClickReNameCallBack;
 
-	// Token: 0x04008D9F RID: 36255
+	// Token: 0x04008EE8 RID: 36584
 	private bool ShowReNameBtn = true;
 }

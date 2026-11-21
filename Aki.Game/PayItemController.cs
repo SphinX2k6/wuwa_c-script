@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Core.Common;
@@ -11,13 +10,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02002319 RID: 8985
+// Token: 0x020017FE RID: 6142
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PayItemController : UiControllerBase
 {
-	// Token: 0x06011C0B RID: 72715 RVA: 0x0045E98E File Offset: 0x0045CB8E
+	// Token: 0x0600F0BB RID: 61627 RVA: 0x0046B9FA File Offset: 0x00469BFA
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.PayItemSuccessNotify, delegate(IMessage msg, Net.CallbackStatus _)
@@ -40,14 +39,14 @@ public class PayItemController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.ResetSpecialBonusNotify, new Action<IMessage, Net.CallbackStatus>(this.ResetSpecialBonusNotify));
 	}
 
-	// Token: 0x06011C0C RID: 72716 RVA: 0x0045E9C8 File Offset: 0x0045CBC8
+	// Token: 0x0600F0BC RID: 61628 RVA: 0x0046BA34 File Offset: 0x00469C34
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.ResetSpecialBonusNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.PayItemSuccessNotify);
 	}
 
-	// Token: 0x06011C0D RID: 72717 RVA: 0x0045E9EC File Offset: 0x0045CBEC
+	// Token: 0x0600F0BD RID: 61629 RVA: 0x0046BA58 File Offset: 0x00469C58
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnGetPlayerBasicInfo, new Action(this.OnLoginSuccess));
@@ -55,7 +54,7 @@ public class PayItemController : UiControllerBase
 		EventSystem.Instance.Add<EFunctionType, bool>(EEventName.OnFunctionOpenUpdate, new Action<EFunctionType, bool>(this.OnFunctionOpenUpdate));
 	}
 
-	// Token: 0x06011C0E RID: 72718 RVA: 0x0045EA50 File Offset: 0x0045CC50
+	// Token: 0x0600F0BE RID: 61630 RVA: 0x0046BABC File Offset: 0x00469CBC
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnGetPlayerBasicInfo, new Action(this.OnLoginSuccess));
@@ -63,28 +62,28 @@ public class PayItemController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.OnFunctionOpenUpdate, new Action<EFunctionType, bool>(this.OnFunctionOpenUpdate));
 	}
 
-	// Token: 0x06011C0F RID: 72719 RVA: 0x0045EAB1 File Offset: 0x0045CCB1
+	// Token: 0x0600F0BF RID: 61631 RVA: 0x0046BB1D File Offset: 0x00469D1D
 	private void OnLoginSuccess()
 	{
 		this.RequestSdkCheckout(ECheckoutReason.Login);
 	}
 
-	// Token: 0x06011C10 RID: 72720 RVA: 0x0045EABA File Offset: 0x0045CCBA
+	// Token: 0x0600F0C0 RID: 61632 RVA: 0x0046BB26 File Offset: 0x00469D26
 	protected override bool OnClear()
 	{
 		this.CutWaitPayResponseTimer();
 		return true;
 	}
 
-	// Token: 0x06011C11 RID: 72721 RVA: 0x0045EAC4 File Offset: 0x0045CCC4
+	// Token: 0x0600F0C1 RID: 61633 RVA: 0x0046BB30 File Offset: 0x00469D30
 	[NullableContext(2)]
 	private void ResetSpecialBonusNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ResetSpecialBonusNotify resetSpecialBonusNotify = (ResetSpecialBonusNotify)msg;
-		PayItemModel.Instance.ResetSpecialBonus(resetSpecialBonusNotify.Ids.ToArray<int>());
+		PayItemModel.Instance.ResetSpecialBonus(resetSpecialBonusNotify.Ids);
 	}
 
-	// Token: 0x06011C12 RID: 72722 RVA: 0x0045EAF0 File Offset: 0x0045CCF0
+	// Token: 0x0600F0C2 RID: 61634 RVA: 0x0046BB54 File Offset: 0x00469D54
 	private void SendBuyPayItemRequest(int payItemId)
 	{
 		PayItemRequest payItemRequest = PayItemRequest.Create();
@@ -96,7 +95,7 @@ public class PayItemController : UiControllerBase
 			PayItemResponse payItemResponse = (PayItemResponse)msg;
 			if (payItemResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(payItemResponse.ErrorCode, 16661, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(payItemResponse.ErrorCode, 22536, null, true, true);
 				return;
 			}
 			Log instance = Log.Instance;
@@ -113,13 +112,13 @@ public class PayItemController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06011C13 RID: 72723 RVA: 0x0045EB59 File Offset: 0x0045CD59
+	// Token: 0x0600F0C3 RID: 61635 RVA: 0x0046BBBD File Offset: 0x00469DBD
 	private void CutWaitPayResponseTimer()
 	{
 		KuroSdkController.Instance.CancelCurrentWaitPayItemTimer(true);
 	}
 
-	// Token: 0x06011C14 RID: 72724 RVA: 0x0045EB68 File Offset: 0x0045CD68
+	// Token: 0x0600F0C4 RID: 61636 RVA: 0x0046BBCC File Offset: 0x00469DCC
 	[NullableContext(0)]
 	public UniTask<bool> QueryPayItemInfoAsync()
 	{
@@ -131,7 +130,7 @@ public class PayItemController : UiControllerBase
 		return <QueryPayItemInfoAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011C15 RID: 72725 RVA: 0x0045EBAC File Offset: 0x0045CDAC
+	// Token: 0x0600F0C5 RID: 61637 RVA: 0x0046BC10 File Offset: 0x00469E10
 	[NullableContext(0)]
 	public UniTask<bool> SendPayItemInfoRequestAsync()
 	{
@@ -142,7 +141,7 @@ public class PayItemController : UiControllerBase
 		return <SendPayItemInfoRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011C16 RID: 72726 RVA: 0x0045EBE8 File Offset: 0x0045CDE8
+	// Token: 0x0600F0C6 RID: 61638 RVA: 0x0046BC4C File Offset: 0x00469E4C
 	[NullableContext(0)]
 	public UniTask<bool> QueryProductInfoAsync([Nullable(1)] List<string> productIds)
 	{
@@ -154,7 +153,7 @@ public class PayItemController : UiControllerBase
 		return <QueryProductInfoAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011C17 RID: 72727 RVA: 0x0045EC2C File Offset: 0x0045CE2C
+	// Token: 0x0600F0C7 RID: 61639 RVA: 0x0046BC90 File Offset: 0x00469E90
 	public unsafe void SdkPayNew(string productId)
 	{
 		if (this.CheckoutDialogTimerHandle != null)
@@ -208,7 +207,7 @@ public class PayItemController : UiControllerBase
 		}, 500f, 1f, null, null, true);
 	}
 
-	// Token: 0x06011C18 RID: 72728 RVA: 0x0045ED44 File Offset: 0x0045CF44
+	// Token: 0x0600F0C8 RID: 61640 RVA: 0x0046BDA8 File Offset: 0x00469FA8
 	public void SdkPay(int payItemId)
 	{
 		if (this.CurrentBlockBetaState && FeatureRestrictionTemplate.TemplateForPioneerClient.Check())
@@ -249,7 +248,7 @@ public class PayItemController : UiControllerBase
 		this.SdkPayNew(productIdByPayItemId);
 	}
 
-	// Token: 0x06011C19 RID: 72729 RVA: 0x0045EE8C File Offset: 0x0045D08C
+	// Token: 0x0600F0C9 RID: 61641 RVA: 0x0046BEF0 File Offset: 0x0046A0F0
 	private string GetRoleId()
 	{
 		if (PlayerInfoModel.Instance.GetId() != null)
@@ -268,7 +267,7 @@ public class PayItemController : UiControllerBase
 		return "";
 	}
 
-	// Token: 0x06011C1A RID: 72730 RVA: 0x0045EF0C File Offset: 0x0045D10C
+	// Token: 0x0600F0CA RID: 61642 RVA: 0x0046BF70 File Offset: 0x0046A170
 	public void RequestSdkCheckout(ECheckoutReason reason)
 	{
 		if (!PlatformSdkManagerNew.Instance.IsSdkOn)
@@ -326,7 +325,7 @@ public class PayItemController : UiControllerBase
 		}, reason);
 	}
 
-	// Token: 0x06011C1B RID: 72731 RVA: 0x0045EFF9 File Offset: 0x0045D1F9
+	// Token: 0x0600F0CB RID: 61643 RVA: 0x0046C05D File Offset: 0x0046A25D
 	private void OnWorldDone()
 	{
 		if (FunctionModel.Instance.IsOpen(10010))
@@ -335,7 +334,7 @@ public class PayItemController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011C1C RID: 72732 RVA: 0x0045F013 File Offset: 0x0045D213
+	// Token: 0x0600F0CC RID: 61644 RVA: 0x0046C077 File Offset: 0x0046A277
 	private void OnFunctionOpenUpdate(EFunctionType functionType, bool isOpen)
 	{
 		if (functionType != EFunctionType.Shop)
@@ -349,8 +348,8 @@ public class PayItemController : UiControllerBase
 		this.SendPayItemInfoRequestAsync();
 	}
 
-	// Token: 0x170016B2 RID: 5810
-	// (get) Token: 0x06011C1D RID: 72733 RVA: 0x0045F029 File Offset: 0x0045D229
+	// Token: 0x170016EC RID: 5868
+	// (get) Token: 0x0600F0CD RID: 61645 RVA: 0x0046C08D File Offset: 0x0046A28D
 	public static PayItemController Instance
 	{
 		get
@@ -359,7 +358,7 @@ public class PayItemController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011C1E RID: 72734 RVA: 0x0045F030 File Offset: 0x0045D230
+	// Token: 0x0600F0CE RID: 61646 RVA: 0x0046C094 File Offset: 0x0046A294
 	public static PayItemController GetOrCreateInstance()
 	{
 		if (PayItemController._Instance == null)
@@ -369,7 +368,7 @@ public class PayItemController : UiControllerBase
 		return PayItemController._Instance;
 	}
 
-	// Token: 0x06011C1F RID: 72735 RVA: 0x0045F044 File Offset: 0x0045D244
+	// Token: 0x0600F0CF RID: 61647 RVA: 0x0046C0A8 File Offset: 0x0046A2A8
 	public static bool CreateInstance()
 	{
 		if (PayItemController._Instance != null)
@@ -380,34 +379,34 @@ public class PayItemController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06011C20 RID: 72736 RVA: 0x0045F05A File Offset: 0x0045D25A
+	// Token: 0x0600F0D0 RID: 61648 RVA: 0x0046C0BE File Offset: 0x0046A2BE
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011C21 RID: 72737 RVA: 0x0045F05C File Offset: 0x0045D25C
+	// Token: 0x0600F0D1 RID: 61649 RVA: 0x0046C0C0 File Offset: 0x0046A2C0
 	public static void ResetStaticDefaultValue()
 	{
 		PayItemController._Instance = null;
 	}
 
-	// Token: 0x06011C22 RID: 72738 RVA: 0x0045F064 File Offset: 0x0045D264
+	// Token: 0x0600F0D2 RID: 61650 RVA: 0x0046C0C8 File Offset: 0x0046A2C8
 	static PayItemController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PayItemController.CreateStaticDefaultValue), new Action(PayItemController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040086B5 RID: 34485
+	// Token: 0x040087F8 RID: 34808
 	public bool CurrentBlockIosPayState;
 
-	// Token: 0x040086B6 RID: 34486
+	// Token: 0x040087F9 RID: 34809
 	public bool CurrentBlockBetaState = true;
 
-	// Token: 0x040086B7 RID: 34487
+	// Token: 0x040087FA RID: 34810
 	[Nullable(2)]
 	private TimerHandle CheckoutDialogTimerHandle;
 
-	// Token: 0x040086B8 RID: 34488
+	// Token: 0x040087FB RID: 34811
 	[Nullable(2)]
 	private static PayItemController _Instance;
 }

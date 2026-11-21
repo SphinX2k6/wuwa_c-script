@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B69 RID: 23401
+	// Token: 0x0200617F RID: 24959
 	public class IWeaponComponentT
 	{
-		// Token: 0x1700B0CB RID: 45259
-		// (get) Token: 0x060280B5 RID: 164021 RVA: 0x00581622 File Offset: 0x0057F822
-		// (set) Token: 0x060280B6 RID: 164022 RVA: 0x0058162A File Offset: 0x0057F82A
+		// Token: 0x1700BA13 RID: 47635
+		// (get) Token: 0x0602A679 RID: 173689 RVA: 0x005C90B2 File Offset: 0x005C72B2
+		// (set) Token: 0x0602A67A RID: 173690 RVA: 0x005C90BA File Offset: 0x005C72BA
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700B0CC RID: 45260
-		// (get) Token: 0x060280B7 RID: 164023 RVA: 0x00581633 File Offset: 0x0057F833
-		// (set) Token: 0x060280B8 RID: 164024 RVA: 0x0058163B File Offset: 0x0057F83B
+		// Token: 0x1700BA14 RID: 47636
+		// (get) Token: 0x0602A67B RID: 173691 RVA: 0x005C90C3 File Offset: 0x005C72C3
+		// (set) Token: 0x0602A67C RID: 173692 RVA: 0x005C90CB File Offset: 0x005C72CB
 		public int WeaponId { get; set; }
 
-		// Token: 0x1700B0CD RID: 45261
-		// (get) Token: 0x060280B9 RID: 164025 RVA: 0x00581644 File Offset: 0x0057F844
-		// (set) Token: 0x060280BA RID: 164026 RVA: 0x0058164C File Offset: 0x0057F84C
+		// Token: 0x1700BA15 RID: 47637
+		// (get) Token: 0x0602A67D RID: 173693 RVA: 0x005C90D4 File Offset: 0x005C72D4
+		// (set) Token: 0x0602A67E RID: 173694 RVA: 0x005C90DC File Offset: 0x005C72DC
 		public byte NullMask { get; set; }
 
-		// Token: 0x060280BB RID: 164027 RVA: 0x00581655 File Offset: 0x0057F855
+		// Token: 0x0602A67F RID: 173695 RVA: 0x005C90E5 File Offset: 0x005C72E5
 		public IWeaponComponentT()
 		{
 			this.Disabled = false;

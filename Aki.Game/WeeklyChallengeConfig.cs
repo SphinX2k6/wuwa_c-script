@@ -3,46 +3,46 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002D2B RID: 11563
+// Token: 0x02002285 RID: 8837
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class WeeklyChallengeConfig : ConfigBase
 {
-	// Token: 0x060184E2 RID: 99554 RVA: 0x006302A7 File Offset: 0x0062E4A7
+	// Token: 0x06015D84 RID: 89476 RVA: 0x006562BB File Offset: 0x006544BB
 	public WeeklyFrameHelp? GetPlayConfigById(int playId)
 	{
 		return ConfigWeeklyFrameHelpById.GetConfig(playId, true);
 	}
 
-	// Token: 0x060184E3 RID: 99555 RVA: 0x006302B0 File Offset: 0x0062E4B0
+	// Token: 0x06015D85 RID: 89477 RVA: 0x006562C4 File Offset: 0x006544C4
 	[NullableContext(2)]
 	public IReadOnlyList<WeeklyFrameAward> GetAllScoreRewardTasks()
 	{
 		return ConfigWeeklyFrameAwardAll.GetConfigList(true);
 	}
 
-	// Token: 0x060184E4 RID: 99556 RVA: 0x006302B8 File Offset: 0x0062E4B8
+	// Token: 0x06015D86 RID: 89478 RVA: 0x006562CC File Offset: 0x006544CC
 	public WeeklyFrameAward? GetScoreRewardTaskById(int taskId)
 	{
 		return ConfigWeeklyFrameAwardById.GetConfig(taskId, true);
 	}
 
-	// Token: 0x060184E5 RID: 99557 RVA: 0x006302C1 File Offset: 0x0062E4C1
+	// Token: 0x06015D87 RID: 89479 RVA: 0x006562D5 File Offset: 0x006544D5
 	[NullableContext(2)]
 	public IReadOnlyList<ActivityTab> GetAllActivityTabConfigs()
 	{
 		return ConfigActivityTabAll.GetConfigList(true);
 	}
 
-	// Token: 0x060184E6 RID: 99558 RVA: 0x006302C9 File Offset: 0x0062E4C9
+	// Token: 0x06015D88 RID: 89480 RVA: 0x006562DD File Offset: 0x006544DD
 	public ActivityTab? GetActivityTabByType(int type)
 	{
 		return ConfigActivityTabByType.GetConfig(type, true);
 	}
 
-	// Token: 0x170020C4 RID: 8388
-	// (get) Token: 0x060184E7 RID: 99559 RVA: 0x006302D2 File Offset: 0x0062E4D2
+	// Token: 0x1700211F RID: 8479
+	// (get) Token: 0x06015D89 RID: 89481 RVA: 0x006562E6 File Offset: 0x006544E6
 	public static WeeklyChallengeConfig Instance
 	{
 		get
@@ -51,7 +51,7 @@ public class WeeklyChallengeConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060184E8 RID: 99560 RVA: 0x006302D9 File Offset: 0x0062E4D9
+	// Token: 0x06015D8A RID: 89482 RVA: 0x006562ED File Offset: 0x006544ED
 	public static WeeklyChallengeConfig GetOrCreateInstance()
 	{
 		if (WeeklyChallengeConfig._Instance == null)
@@ -61,7 +61,7 @@ public class WeeklyChallengeConfig : ConfigBase
 		return WeeklyChallengeConfig._Instance;
 	}
 
-	// Token: 0x060184E9 RID: 99561 RVA: 0x006302ED File Offset: 0x0062E4ED
+	// Token: 0x06015D8B RID: 89483 RVA: 0x00656301 File Offset: 0x00654501
 	public static bool CreateInstance()
 	{
 		if (WeeklyChallengeConfig._Instance != null)
@@ -72,24 +72,24 @@ public class WeeklyChallengeConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060184EA RID: 99562 RVA: 0x00630303 File Offset: 0x0062E503
+	// Token: 0x06015D8C RID: 89484 RVA: 0x00656317 File Offset: 0x00654517
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060184EB RID: 99563 RVA: 0x00630305 File Offset: 0x0062E505
+	// Token: 0x06015D8D RID: 89485 RVA: 0x00656319 File Offset: 0x00654519
 	public static void ResetStaticDefaultValue()
 	{
 		WeeklyChallengeConfig._Instance = null;
 	}
 
-	// Token: 0x060184EC RID: 99564 RVA: 0x0063030D File Offset: 0x0062E50D
+	// Token: 0x06015D8E RID: 89486 RVA: 0x00656321 File Offset: 0x00654521
 	static WeeklyChallengeConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WeeklyChallengeConfig.CreateStaticDefaultValue), new Action(WeeklyChallengeConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B488 RID: 46216
+	// Token: 0x0400B7FD RID: 47101
 	[Nullable(2)]
 	private static WeeklyChallengeConfig _Instance;
 }

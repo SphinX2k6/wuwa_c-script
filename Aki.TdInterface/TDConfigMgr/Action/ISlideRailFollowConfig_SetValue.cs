@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E8A RID: 7818
+	// Token: 0x020020BF RID: 8383
 	public class ISlideRailFollowConfig_SetValue
 	{
-		// Token: 0x040063CC RID: 25548
+		// Token: 0x040069B0 RID: 27056
 		public int EntityId;
 
-		// Token: 0x040063CD RID: 25549
+		// Token: 0x040069B1 RID: 27057
 		[Nullable(2)]
 		public string FollowDaPath;
 	}

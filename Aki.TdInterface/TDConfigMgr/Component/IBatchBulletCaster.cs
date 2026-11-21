@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001EB RID: 491
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000214 RID: 532
 	public class IBatchBulletCaster
 	{
-		// Token: 0x060007F8 RID: 2040 RVA: 0x00025EDC File Offset: 0x000240DC
+		// Token: 0x06000878 RID: 2168 RVA: 0x00027830 File Offset: 0x00025A30
 		private IBatchBulletCaster_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060007F9 RID: 2041 RVA: 0x00025F14 File Offset: 0x00024114
+		// Token: 0x06000879 RID: 2169 RVA: 0x00027868 File Offset: 0x00025A68
 		public static IBatchBulletCaster Create([Nullable(2)] IBatchBulletCaster instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007FA RID: 2042 RVA: 0x00025F27 File Offset: 0x00024127
+		// Token: 0x0600087A RID: 2170 RVA: 0x0002787B File Offset: 0x00025A7B
 		public static IBatchBulletCaster CreateFromSetValue([Nullable(2)] IBatchBulletCaster_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007FB RID: 2043 RVA: 0x00025F3C File Offset: 0x0002413C
+		// Token: 0x0600087B RID: 2171 RVA: 0x00027890 File Offset: 0x00025A90
 		public IBatchBulletCaster_SetValue ToSetValue()
 		{
 			return new IBatchBulletCaster_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000279 RID: 633
-		// (get) Token: 0x060007FC RID: 2044 RVA: 0x00025FA2 File Offset: 0x000241A2
-		// (set) Token: 0x060007FD RID: 2045 RVA: 0x00025FCD File Offset: 0x000241CD
+		// Token: 0x1700029B RID: 667
+		// (get) Token: 0x0600087C RID: 2172 RVA: 0x000278F6 File Offset: 0x00025AF6
+		// (set) Token: 0x0600087D RID: 2173 RVA: 0x00027921 File Offset: 0x00025B21
 		public virtual int BulletIndex
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700027A RID: 634
-		// (get) Token: 0x060007FE RID: 2046 RVA: 0x00025FDB File Offset: 0x000241DB
-		// (set) Token: 0x060007FF RID: 2047 RVA: 0x00026007 File Offset: 0x00024207
+		// Token: 0x1700029C RID: 668
+		// (get) Token: 0x0600087E RID: 2174 RVA: 0x0002792F File Offset: 0x00025B2F
+		// (set) Token: 0x0600087F RID: 2175 RVA: 0x0002795B File Offset: 0x00025B5B
 		public virtual long BulletType
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700027B RID: 635
-		// (get) Token: 0x06000800 RID: 2048 RVA: 0x00026018 File Offset: 0x00024218
-		// (set) Token: 0x06000801 RID: 2049 RVA: 0x00026052 File Offset: 0x00024252
+		// Token: 0x1700029D RID: 669
+		// (get) Token: 0x06000880 RID: 2176 RVA: 0x0002796C File Offset: 0x00025B6C
+		// (set) Token: 0x06000881 RID: 2177 RVA: 0x000279A6 File Offset: 0x00025BA6
 		public virtual int? DelayTime
 		{
 			get
@@ -135,9 +133,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700027C RID: 636
-		// (get) Token: 0x06000802 RID: 2050 RVA: 0x00026060 File Offset: 0x00024260
-		// (set) Token: 0x06000803 RID: 2051 RVA: 0x0002608B File Offset: 0x0002428B
+		// Token: 0x1700029E RID: 670
+		// (get) Token: 0x06000882 RID: 2178 RVA: 0x000279B4 File Offset: 0x00025BB4
+		// (set) Token: 0x06000883 RID: 2179 RVA: 0x000279DF File Offset: 0x00025BDF
 		public virtual int FlyTime
 		{
 			get
@@ -158,9 +156,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700027D RID: 637
-		// (get) Token: 0x06000804 RID: 2052 RVA: 0x00026099 File Offset: 0x00024299
-		// (set) Token: 0x06000805 RID: 2053 RVA: 0x000260C4 File Offset: 0x000242C4
+		// Token: 0x1700029F RID: 671
+		// (get) Token: 0x06000884 RID: 2180 RVA: 0x000279ED File Offset: 0x00025BED
+		// (set) Token: 0x06000885 RID: 2181 RVA: 0x00027A18 File Offset: 0x00025C18
 		public virtual int FlyDistance
 		{
 			get
@@ -181,9 +179,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700027E RID: 638
-		// (get) Token: 0x06000806 RID: 2054 RVA: 0x000260D2 File Offset: 0x000242D2
-		// (set) Token: 0x06000807 RID: 2055 RVA: 0x000260FD File Offset: 0x000242FD
+		// Token: 0x170002A0 RID: 672
+		// (get) Token: 0x06000886 RID: 2182 RVA: 0x00027A26 File Offset: 0x00025C26
+		// (set) Token: 0x06000887 RID: 2183 RVA: 0x00027A51 File Offset: 0x00025C51
 		public virtual int WarningTime
 		{
 			get
@@ -204,9 +202,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700027F RID: 639
-		// (get) Token: 0x06000808 RID: 2056 RVA: 0x0002610B File Offset: 0x0002430B
-		// (set) Token: 0x06000809 RID: 2057 RVA: 0x00026136 File Offset: 0x00024336
+		// Token: 0x170002A1 RID: 673
+		// (get) Token: 0x06000888 RID: 2184 RVA: 0x00027A5F File Offset: 0x00025C5F
+		// (set) Token: 0x06000889 RID: 2185 RVA: 0x00027A8A File Offset: 0x00025C8A
 		public virtual int WarningWidth
 		{
 			get
@@ -227,11 +225,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008E9 RID: 2281
+		// Token: 0x0400097A RID: 2426
 		[Nullable(2)]
 		protected IBatchBulletCaster FbInstance;
 
-		// Token: 0x040008EA RID: 2282
+		// Token: 0x0400097B RID: 2427
 		[Nullable(2)]
 		protected IBatchBulletCaster_SetValue PocoInterface;
 	}

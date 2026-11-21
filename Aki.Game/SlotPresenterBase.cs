@@ -5,18 +5,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C12 RID: 7186
+// Token: 0x020010D1 RID: 4305
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class SlotPresenterBase<[Nullable(0)] T> : ISlotPresenter where T : FormationSlotBase
 {
-	// Token: 0x0600D775 RID: 55157
+	// Token: 0x0600AB89 RID: 43913
 	protected abstract T CreateSlotView(int position, IFormationProvider provider);
 
-	// Token: 0x0600D776 RID: 55158
+	// Token: 0x0600AB8A RID: 43914
 	protected abstract FormationRoleDragItem CreateDragRoleItem();
 
-	// Token: 0x0600D777 RID: 55159 RVA: 0x0031E548 File Offset: 0x0031C748
+	// Token: 0x0600AB8B RID: 43915 RVA: 0x00329898 File Offset: 0x00327A98
 	protected virtual UniTask InitializeDragRoleItemAsync(ISlotPresenterCreateConfig config, FormationDragData dragData)
 	{
 		SlotPresenterBase<T>.<InitializeDragRoleItemAsync>d__4 <InitializeDragRoleItemAsync>d__;
@@ -29,16 +29,16 @@ public abstract class SlotPresenterBase<[Nullable(0)] T> : ISlotPresenter where 
 		return <InitializeDragRoleItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D778 RID: 55160
+	// Token: 0x0600AB8C RID: 43916
 	protected abstract void DestroyItem(T item);
 
-	// Token: 0x0600D779 RID: 55161 RVA: 0x0031E59B File Offset: 0x0031C79B
+	// Token: 0x0600AB8D RID: 43917 RVA: 0x003298EB File Offset: 0x00327AEB
 	public void Add(T item)
 	{
 		this.Items.Add(item);
 	}
 
-	// Token: 0x0600D77A RID: 55162 RVA: 0x0031E5AC File Offset: 0x0031C7AC
+	// Token: 0x0600AB8E RID: 43918 RVA: 0x003298FC File Offset: 0x00327AFC
 	[NullableContext(2)]
 	public T GetByPosition(int position)
 	{
@@ -49,7 +49,7 @@ public abstract class SlotPresenterBase<[Nullable(0)] T> : ISlotPresenter where 
 		return this.Items[position - 1];
 	}
 
-	// Token: 0x0600D77B RID: 55163 RVA: 0x0031E5E3 File Offset: 0x0031C7E3
+	// Token: 0x0600AB8F RID: 43919 RVA: 0x00329933 File Offset: 0x00327B33
 	public void Refresh(int position, IRoleSlotDisplayData data)
 	{
 		T t = this.GetByPosition(position);
@@ -60,7 +60,7 @@ public abstract class SlotPresenterBase<[Nullable(0)] T> : ISlotPresenter where 
 		t.Refresh(data);
 	}
 
-	// Token: 0x0600D77C RID: 55164 RVA: 0x0031E5FC File Offset: 0x0031C7FC
+	// Token: 0x0600AB90 RID: 43920 RVA: 0x0032994C File Offset: 0x00327B4C
 	public void Reset(int position)
 	{
 		T t = this.GetByPosition(position);
@@ -71,7 +71,7 @@ public abstract class SlotPresenterBase<[Nullable(0)] T> : ISlotPresenter where 
 		t.ResetRole();
 	}
 
-	// Token: 0x0600D77D RID: 55165 RVA: 0x0031E614 File Offset: 0x0031C814
+	// Token: 0x0600AB91 RID: 43921 RVA: 0x00329964 File Offset: 0x00327B64
 	public void ResetAll()
 	{
 		foreach (T t in this.Items)
@@ -80,7 +80,7 @@ public abstract class SlotPresenterBase<[Nullable(0)] T> : ISlotPresenter where 
 		}
 	}
 
-	// Token: 0x0600D77E RID: 55166 RVA: 0x0031E66C File Offset: 0x0031C86C
+	// Token: 0x0600AB92 RID: 43922 RVA: 0x003299BC File Offset: 0x00327BBC
 	public UniTask CreateAllAsync(ISlotPresenterCreateConfig config)
 	{
 		SlotPresenterBase<T>.<CreateAllAsync>d__11 <CreateAllAsync>d__;
@@ -92,7 +92,7 @@ public abstract class SlotPresenterBase<[Nullable(0)] T> : ISlotPresenter where 
 		return <CreateAllAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D77F RID: 55167 RVA: 0x0031E6B7 File Offset: 0x0031C8B7
+	// Token: 0x0600AB93 RID: 43923 RVA: 0x00329A07 File Offset: 0x00327C07
 	public void ActivateDragData()
 	{
 		if (this.DragData != null)
@@ -101,7 +101,7 @@ public abstract class SlotPresenterBase<[Nullable(0)] T> : ISlotPresenter where 
 		}
 	}
 
-	// Token: 0x0600D780 RID: 55168 RVA: 0x0031E6CC File Offset: 0x0031C8CC
+	// Token: 0x0600AB94 RID: 43924 RVA: 0x00329A1C File Offset: 0x00327C1C
 	public void BindDragHandlers(T slot)
 	{
 		FormationSlotBase formationSlotBase = slot;
@@ -148,7 +148,7 @@ public abstract class SlotPresenterBase<[Nullable(0)] T> : ISlotPresenter where 
 		formationSlotBase6.OnDragEnd = onDragEnd;
 	}
 
-	// Token: 0x0600D781 RID: 55169 RVA: 0x0031E7C0 File Offset: 0x0031C9C0
+	// Token: 0x0600AB95 RID: 43925 RVA: 0x00329B10 File Offset: 0x00327D10
 	public virtual void DestroyAll()
 	{
 		foreach (T item in this.Items)
@@ -163,7 +163,7 @@ public abstract class SlotPresenterBase<[Nullable(0)] T> : ISlotPresenter where 
 		}
 	}
 
-	// Token: 0x0600D782 RID: 55170 RVA: 0x0031E838 File Offset: 0x0031CA38
+	// Token: 0x0600AB96 RID: 43926 RVA: 0x00329B88 File Offset: 0x00327D88
 	public void OnTick(float delta)
 	{
 		foreach (T t in this.Items)
@@ -172,28 +172,28 @@ public abstract class SlotPresenterBase<[Nullable(0)] T> : ISlotPresenter where 
 		}
 	}
 
-	// Token: 0x0600D783 RID: 55171 RVA: 0x0031E890 File Offset: 0x0031CA90
+	// Token: 0x0600AB97 RID: 43927 RVA: 0x00329BE0 File Offset: 0x00327DE0
 	public virtual void OnHandleLoadScene()
 	{
 	}
 
-	// Token: 0x0600D784 RID: 55172 RVA: 0x0031E892 File Offset: 0x0031CA92
+	// Token: 0x0600AB98 RID: 43928 RVA: 0x00329BE2 File Offset: 0x00327DE2
 	public virtual void OnHandleReleaseScene()
 	{
 	}
 
-	// Token: 0x04006276 RID: 25206
+	// Token: 0x04006348 RID: 25416
 	protected readonly List<T> Items = new List<T>();
 
-	// Token: 0x04006277 RID: 25207
+	// Token: 0x04006349 RID: 25417
 	[Nullable(2)]
 	protected FormationDragData DragData;
 
-	// Token: 0x020081CB RID: 33227
+	// Token: 0x02007354 RID: 29524
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402A5D0 RID: 173520
+		// Token: 0x040258F7 RID: 153847
 		[Nullable(new byte[]
 		{
 			0,
@@ -201,7 +201,7 @@ public abstract class SlotPresenterBase<[Nullable(0)] T> : ISlotPresenter where 
 		})]
 		public static Action<ULGUIPointerEventData, int, int, int> <0>__OnFormationRoleViewPointDown;
 
-		// Token: 0x0402A5D1 RID: 173521
+		// Token: 0x040258F8 RID: 153848
 		[Nullable(new byte[]
 		{
 			0,
@@ -209,15 +209,15 @@ public abstract class SlotPresenterBase<[Nullable(0)] T> : ISlotPresenter where 
 		})]
 		public static Action<UUIItem, int, int, int> <1>__OnFormationRoleViewGamePadDown;
 
-		// Token: 0x0402A5D2 RID: 173522
+		// Token: 0x040258F9 RID: 153849
 		[Nullable(0)]
 		public static Func<bool> <2>__CanFormationRoleViewStartDrag;
 
-		// Token: 0x0402A5D3 RID: 173523
+		// Token: 0x040258FA RID: 153850
 		[Nullable(0)]
 		public static Action <3>__OnFormationRoleViewStartDrag;
 
-		// Token: 0x0402A5D4 RID: 173524
+		// Token: 0x040258FB RID: 153851
 		[Nullable(new byte[]
 		{
 			0,
@@ -225,7 +225,7 @@ public abstract class SlotPresenterBase<[Nullable(0)] T> : ISlotPresenter where 
 		})]
 		public static Action<ULGUIPointerEventData> <4>__OnFormationRoleViewMoveDrag;
 
-		// Token: 0x0402A5D5 RID: 173525
+		// Token: 0x040258FC RID: 153852
 		[Nullable(0)]
 		public static Action<bool> <5>__OnFormationRoleViewEndDrag;
 	}

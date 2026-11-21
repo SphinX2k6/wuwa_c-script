@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200142B RID: 5163
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001583 RID: 5507
 	public class IWarningPreformActivateStateRecordEntity : IWarningPreformType
 	{
-		// Token: 0x0600756F RID: 30063 RVA: 0x001187F2 File Offset: 0x001169F2
+		// Token: 0x06007C34 RID: 31796 RVA: 0x0012723E File Offset: 0x0012543E
 		public static IWarningPreformActivateStateRecordEntity Create(IWarningPreformActivateStateRecordEntity? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170026EC RID: 9964
-		// (get) Token: 0x06007570 RID: 30064 RVA: 0x00118811 File Offset: 0x00116A11
+		// Token: 0x170028D0 RID: 10448
+		// (get) Token: 0x06007C35 RID: 31797 RVA: 0x0012725D File Offset: 0x0012545D
 		public override EWarningPreformType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170026ED RID: 9965
-		// (get) Token: 0x06007571 RID: 30065 RVA: 0x00118820 File Offset: 0x00116A20
+		// Token: 0x170028D1 RID: 10449
+		// (get) Token: 0x06007C36 RID: 31798 RVA: 0x0012726C File Offset: 0x0012546C
 		public virtual List<int> TargetEntityIds
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004405 RID: 17413
+		// Token: 0x04004799 RID: 18329
 		private IWarningPreformActivateStateRecordEntity Instance;
 
-		// Token: 0x04004406 RID: 17414
+		// Token: 0x0400479A RID: 18330
 		private List<int> _TargetEntityIdsCache;
 
-		// Token: 0x04004407 RID: 17415
+		// Token: 0x0400479B RID: 18331
 		private bool _TargetEntityIdsInited;
 	}
 }

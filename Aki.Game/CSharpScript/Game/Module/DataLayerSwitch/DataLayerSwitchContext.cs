@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.DataLayerSwitch
 {
-	// Token: 0x02005AD1 RID: 23249
+	// Token: 0x02004AB2 RID: 19122
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DataLayerSwitchContext
 	{
-		// Token: 0x17008C27 RID: 35879
-		// (get) Token: 0x0603AE0C RID: 241164 RVA: 0x00E09985 File Offset: 0x00E07B85
+		// Token: 0x17006001 RID: 24577
+		// (get) Token: 0x0602FD7E RID: 195966 RVA: 0x00D5A665 File Offset: 0x00D58865
 		public bool DataLayerSwitching
 		{
 			get
@@ -18,8 +18,8 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x17008C28 RID: 35880
-		// (get) Token: 0x0603AE0D RID: 241165 RVA: 0x00E0998D File Offset: 0x00E07B8D
+		// Token: 0x17006002 RID: 24578
+		// (get) Token: 0x0602FD7F RID: 195967 RVA: 0x00D5A66D File Offset: 0x00D5886D
 		public bool DataLayerStreaming
 		{
 			get
@@ -28,8 +28,8 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x17008C29 RID: 35881
-		// (get) Token: 0x0603AE0E RID: 241166 RVA: 0x00E09995 File Offset: 0x00E07B95
+		// Token: 0x17006003 RID: 24579
+		// (get) Token: 0x0602FD80 RID: 195968 RVA: 0x00D5A675 File Offset: 0x00D58875
 		public int CurrentSwitchInstId
 		{
 			get
@@ -38,8 +38,8 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x17008C2A RID: 35882
-		// (get) Token: 0x0603AE0F RID: 241167 RVA: 0x00E0999D File Offset: 0x00E07B9D
+		// Token: 0x17006004 RID: 24580
+		// (get) Token: 0x0602FD81 RID: 195969 RVA: 0x00D5A67D File Offset: 0x00D5887D
 		public bool DataLayerSwitchAborted
 		{
 			get
@@ -48,8 +48,8 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x17008C2B RID: 35883
-		// (get) Token: 0x0603AE10 RID: 241168 RVA: 0x00E099A5 File Offset: 0x00E07BA5
+		// Token: 0x17006005 RID: 24581
+		// (get) Token: 0x0602FD82 RID: 195970 RVA: 0x00D5A685 File Offset: 0x00D58885
 		public CustomPromise<bool> DataLayerSwitchAbortPromise
 		{
 			get
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x0603AE11 RID: 241169 RVA: 0x00E099B0 File Offset: 0x00E07BB0
+		// Token: 0x0602FD83 RID: 195971 RVA: 0x00D5A690 File Offset: 0x00D58890
 		public void ResetDataLayerSwitchAbort()
 		{
 			Log.Instance.Info(ELogModule.World, ELogAuthor.ZYL, "DataLayerSwitchContext:重置打断标志并新建打断信号", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			this.DataLayerSwitchAbortPromiseInternal = new CustomPromise<bool>();
 		}
 
-		// Token: 0x0603AE12 RID: 241170 RVA: 0x00E099EC File Offset: 0x00E07BEC
+		// Token: 0x0602FD84 RID: 195972 RVA: 0x00D5A6CC File Offset: 0x00D588CC
 		public unsafe void AbortDataLayerSwitch()
 		{
 			Log instance = Log.Instance;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			dataLayerSwitchAbortPromiseInternal.SetResult(true);
 		}
 
-		// Token: 0x0603AE13 RID: 241171 RVA: 0x00E09A78 File Offset: 0x00E07C78
+		// Token: 0x0602FD85 RID: 195973 RVA: 0x00D5A758 File Offset: 0x00D58958
 		public void InitDataLayerStreamingData()
 		{
 			Log instance = Log.Instance;
@@ -100,8 +100,8 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			this.DataLayerChangeStreamingPromiseInternal = new CustomPromise<bool>();
 		}
 
-		// Token: 0x17008C2C RID: 35884
-		// (get) Token: 0x0603AE14 RID: 241172 RVA: 0x00E09AD3 File Offset: 0x00E07CD3
+		// Token: 0x17006006 RID: 24582
+		// (get) Token: 0x0602FD86 RID: 195974 RVA: 0x00D5A7B3 File Offset: 0x00D589B3
 		public CustomPromise<bool> DataLayerChangeVoxelPromise
 		{
 			get
@@ -110,8 +110,8 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x17008C2D RID: 35885
-		// (get) Token: 0x0603AE15 RID: 241173 RVA: 0x00E09ADB File Offset: 0x00E07CDB
+		// Token: 0x17006007 RID: 24583
+		// (get) Token: 0x0602FD87 RID: 195975 RVA: 0x00D5A7BB File Offset: 0x00D589BB
 		public CustomPromise<bool> DataLayerChangeStreamingPromise
 		{
 			get
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x0603AE16 RID: 241174 RVA: 0x00E09AE4 File Offset: 0x00E07CE4
+		// Token: 0x0602FD88 RID: 195976 RVA: 0x00D5A7C4 File Offset: 0x00D589C4
 		public void ClearDataLayerStreamingData()
 		{
 			Log instance = Log.Instance;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			dataLayerChangeStreamingPromiseInternal.SetResult(true);
 		}
 
-		// Token: 0x0603AE17 RID: 241175 RVA: 0x00E09B4C File Offset: 0x00E07D4C
+		// Token: 0x0602FD89 RID: 195977 RVA: 0x00D5A82C File Offset: 0x00D58A2C
 		public void BeginDataLayerSwitch(int currentSwitchInstId)
 		{
 			Log instance = Log.Instance;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			this.CurrentSwitchInstIdInternal = currentSwitchInstId;
 		}
 
-		// Token: 0x0603AE18 RID: 241176 RVA: 0x00E09B94 File Offset: 0x00E07D94
+		// Token: 0x0602FD8A RID: 195978 RVA: 0x00D5A874 File Offset: 0x00D58A74
 		public void FinishDataLayerSwitch()
 		{
 			Log instance = Log.Instance;
@@ -169,25 +169,25 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			this.CurrentSwitchInstIdInternal = 0;
 		}
 
-		// Token: 0x0401EB9C RID: 125852
+		// Token: 0x04019658 RID: 104024
 		private bool DataLayerSwitchingInternal;
 
-		// Token: 0x0401EB9D RID: 125853
+		// Token: 0x04019659 RID: 104025
 		private bool DataLayerStreamingInternal;
 
-		// Token: 0x0401EB9E RID: 125854
+		// Token: 0x0401965A RID: 104026
 		private int CurrentSwitchInstIdInternal;
 
-		// Token: 0x0401EB9F RID: 125855
+		// Token: 0x0401965B RID: 104027
 		private bool DataLayerSwitchAbortedInternal;
 
-		// Token: 0x0401EBA0 RID: 125856
+		// Token: 0x0401965C RID: 104028
 		private CustomPromise<bool> DataLayerSwitchAbortPromiseInternal;
 
-		// Token: 0x0401EBA1 RID: 125857
+		// Token: 0x0401965D RID: 104029
 		private CustomPromise<bool> DataLayerChangeVoxelPromiseInternal;
 
-		// Token: 0x0401EBA2 RID: 125858
+		// Token: 0x0401965E RID: 104030
 		private CustomPromise<bool> DataLayerChangeStreamingPromiseInternal;
 	}
 }

@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AE5 RID: 19173
+	// Token: 0x02003A8D RID: 14989
 	public class TrapDefenseBuildingMachineInfoView : UiViewBase
 	{
-		// Token: 0x06031ABB RID: 203451 RVA: 0x00B87D10 File Offset: 0x00B85F10
+		// Token: 0x0602684B RID: 157771 RVA: 0x00ACBCC4 File Offset: 0x00AC9EC4
 		[NullableContext(1)]
 		public TrapDefenseBuildingMachineInfoView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06031ABC RID: 203452 RVA: 0x00B87D1C File Offset: 0x00B85F1C
+		// Token: 0x0602684C RID: 157772 RVA: 0x00ACBCD0 File Offset: 0x00AC9ED0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031ABD RID: 203453 RVA: 0x00B87DC4 File Offset: 0x00B85FC4
+		// Token: 0x0602684D RID: 157773 RVA: 0x00ACBD78 File Offset: 0x00AC9F78
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseBuildingMachineInfoView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -50,29 +50,29 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031ABE RID: 203454 RVA: 0x00B87E07 File Offset: 0x00B86007
+		// Token: 0x0602684E RID: 157774 RVA: 0x00ACBDBB File Offset: 0x00AC9FBB
 		protected override void OnBeforeDestroy()
 		{
 			this.InfoItem = null;
 		}
 
-		// Token: 0x06031ABF RID: 203455 RVA: 0x00B87E10 File Offset: 0x00B86010
+		// Token: 0x0602684F RID: 157775 RVA: 0x00ACBDC4 File Offset: 0x00AC9FC4
 		private void OnClickedMask()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401A86B RID: 108651
+		// Token: 0x040151BD RID: 86461
 		[Nullable(2)]
 		protected TrapDefenseBuildingDevelopDetailInfoItem InfoItem;
 
-		// Token: 0x0200AC77 RID: 44151
+		// Token: 0x02009697 RID: 38551
 		internal class EMainDefine
 		{
-			// Token: 0x0403469D RID: 214685
+			// Token: 0x0402F04E RID: 192590
 			public const int BtnMask = 0;
 
-			// Token: 0x0403469E RID: 214686
+			// Token: 0x0402F04F RID: 192591
 			public const int BuildingItem = 1;
 		}
 	}

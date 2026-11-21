@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000811 RID: 2065
+	// Token: 0x0200082D RID: 2093
 	public class ConfigRoadBookAreaById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003078 RID: 12408 RVA: 0x0016B37B File Offset: 0x0016957B
+		// Token: 0x06003120 RID: 12576 RVA: 0x00172663 File Offset: 0x00170863
 		static ConfigRoadBookAreaById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoadBookAreaById.CreateStaticDefaultValue), new Action(ConfigRoadBookAreaById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003079 RID: 12409 RVA: 0x0016B39C File Offset: 0x0016959C
+		// Token: 0x06003121 RID: 12577 RVA: 0x00172684 File Offset: 0x00170884
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoadBookAreaById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600307A RID: 12410 RVA: 0x0016B41B File Offset: 0x0016961B
+		// Token: 0x06003122 RID: 12578 RVA: 0x00172703 File Offset: 0x00170903
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoadBookAreaById.LogPair = null;
 			ConfigRoadBookAreaById.HandleId = 0;
 		}
 
-		// Token: 0x0600307B RID: 12411 RVA: 0x0016B429 File Offset: 0x00169629
+		// Token: 0x06003123 RID: 12579 RVA: 0x00172711 File Offset: 0x00170911
 		public static void Init()
 		{
 			ConfigRoadBookAreaById.HandleId = ConfigCommon.InitDataStatement(ConfigRoadBookAreaById.HandleId, "db_roadbook.db", "select BinData from `RoadBookArea` where Id=?");
 		}
 
-		// Token: 0x0600307C RID: 12412 RVA: 0x0016B444 File Offset: 0x00169644
+		// Token: 0x06003124 RID: 12580 RVA: 0x0017272C File Offset: 0x0017092C
 		public static RoadBookArea? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoadBookAreaById.HandleId, ConfigRoadBookAreaById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoadBookArea?(rootAsRoadBookArea);
 		}
 
-		// Token: 0x0400385D RID: 14429
+		// Token: 0x04003921 RID: 14625
 		private const string DB = "db_roadbook.db";
 
-		// Token: 0x0400385E RID: 14430
+		// Token: 0x04003922 RID: 14626
 		private const string FILE = "q.千岛路书3.0.xlsx";
 
-		// Token: 0x0400385F RID: 14431
+		// Token: 0x04003923 RID: 14627
 		private const string TABLE = "RoadBookArea";
 
-		// Token: 0x04003860 RID: 14432
+		// Token: 0x04003924 RID: 14628
 		private const string COMMAND = "select BinData from `RoadBookArea` where Id=?";
 
-		// Token: 0x04003861 RID: 14433
+		// Token: 0x04003925 RID: 14629
 		private const string KEY_PREFIX = "RoadBookAreaById";
 
-		// Token: 0x04003862 RID: 14434
+		// Token: 0x04003926 RID: 14630
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003863 RID: 14435
+		// Token: 0x04003927 RID: 14631
 		private static int HandleId;
 	}
 }

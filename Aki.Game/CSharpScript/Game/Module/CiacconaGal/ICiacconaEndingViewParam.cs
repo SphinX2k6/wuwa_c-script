@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BF0 RID: 23536
+	// Token: 0x02004BD0 RID: 19408
 	[NullableContext(1)]
 	public interface ICiacconaEndingViewParam
 	{
-		// Token: 0x17008D6A RID: 36202
-		// (get) Token: 0x0603B7C0 RID: 243648
-		// (set) Token: 0x0603B7C1 RID: 243649
+		// Token: 0x1700613C RID: 24892
+		// (get) Token: 0x0603070B RID: 198411
+		// (set) Token: 0x0603070C RID: 198412
 		CiacconaGalEndingData EndingData { get; set; }
 
-		// Token: 0x17008D6B RID: 36203
-		// (get) Token: 0x0603B7C2 RID: 243650
-		// (set) Token: 0x0603B7C3 RID: 243651
+		// Token: 0x1700613D RID: 24893
+		// (get) Token: 0x0603070D RID: 198413
+		// (set) Token: 0x0603070E RID: 198414
 		[Nullable(2)]
 		string LabelTextId { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

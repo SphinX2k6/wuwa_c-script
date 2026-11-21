@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028F0 RID: 10480
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BC8 RID: 11208
 	public class ICloseSkiConfig : ISkiConfigType
 	{
-		// Token: 0x0600E8CE RID: 59598 RVA: 0x0022289C File Offset: 0x00220A9C
+		// Token: 0x0600F70F RID: 63247 RVA: 0x0023FA54 File Offset: 0x0023DC54
 		public static ICloseSkiConfig Create(ICloseSkiConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048B0 RID: 18608
-		// (get) Token: 0x0600E8CF RID: 59599 RVA: 0x002228BB File Offset: 0x00220ABB
+		// Token: 0x17004C2D RID: 19501
+		// (get) Token: 0x0600F710 RID: 63248 RVA: 0x0023FA73 File Offset: 0x0023DC73
 		public override ESkiConfig Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048B1 RID: 18609
-		// (get) Token: 0x0600E8D0 RID: 59600 RVA: 0x002228C8 File Offset: 0x00220AC8
+		// Token: 0x17004C2E RID: 19502
+		// (get) Token: 0x0600F711 RID: 63249 RVA: 0x0023FA80 File Offset: 0x0023DC80
 		public override ITargetEntityType Target
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008086 RID: 32902
+		// Token: 0x0400874A RID: 34634
 		private ICloseSkiConfig Instance;
 
-		// Token: 0x04008087 RID: 32903
+		// Token: 0x0400874B RID: 34635
 		private ITargetEntityType _TargetCache;
 
-		// Token: 0x04008088 RID: 32904
+		// Token: 0x0400874C RID: 34636
 		private bool _TargetInited;
 	}
 }

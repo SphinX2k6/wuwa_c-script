@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.LogUpload
 {
-	// Token: 0x020001BC RID: 444
+	// Token: 0x020001C0 RID: 448
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LauncherLogUpload : Singleton
 	{
-		// Token: 0x06000BED RID: 3053 RVA: 0x0004A7D0 File Offset: 0x000489D0
+		// Token: 0x06000C24 RID: 3108 RVA: 0x0004CFC0 File Offset: 0x0004B1C0
 		public void Init()
 		{
 			if (AppUtil.IsPioneerApp())
@@ -57,13 +57,13 @@ namespace CSharpScript.Launcher.LogUpload
 			}
 		}
 
-		// Token: 0x06000BEE RID: 3054 RVA: 0x0004A8CC File Offset: 0x00048ACC
+		// Token: 0x06000C25 RID: 3109 RVA: 0x0004D0BC File Offset: 0x0004B2BC
 		public void SetParams(ILogUploadParams params_)
 		{
 			this.LogUploadParams = params_;
 		}
 
-		// Token: 0x06000BEF RID: 3055 RVA: 0x0004A8D5 File Offset: 0x00048AD5
+		// Token: 0x06000C26 RID: 3110 RVA: 0x0004D0C5 File Offset: 0x0004B2C5
 		private string LauncherLogUploadReasonToString(ELauncherLogUploadReason reason)
 		{
 			switch (reason)
@@ -81,7 +81,7 @@ namespace CSharpScript.Launcher.LogUpload
 			}
 		}
 
-		// Token: 0x06000BF0 RID: 3056 RVA: 0x0004A90C File Offset: 0x00048B0C
+		// Token: 0x06000C27 RID: 3111 RVA: 0x0004D0FC File Offset: 0x0004B2FC
 		private void SetRuleSuffix(ISendLogReason reason)
 		{
 			if (reason.Reason != ELauncherLogUploadReason.ErrorPopupWithCode)
@@ -104,7 +104,7 @@ namespace CSharpScript.Launcher.LogUpload
 			LauncherLog.Instance.Warn("[LauncherLogUpload] 以错误码弹窗模式上报，但是错误码格式错误（非纯数字）！默认回退成旧版本，不含规则码后缀！", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06000BF1 RID: 3057 RVA: 0x0004A9BC File Offset: 0x00048BBC
+		// Token: 0x06000C28 RID: 3112 RVA: 0x0004D1AC File Offset: 0x0004B3AC
 		private void OnAutoSendProgres(ESendState State, float Rate)
 		{
 			if (State == ESendState.ESS_Done || State == ESendState.ESS_Fail)
@@ -113,7 +113,7 @@ namespace CSharpScript.Launcher.LogUpload
 			}
 		}
 
-		// Token: 0x06000BF2 RID: 3058 RVA: 0x0004A9CC File Offset: 0x00048BCC
+		// Token: 0x06000C29 RID: 3113 RVA: 0x0004D1BC File Offset: 0x0004B3BC
 		public void PostSended(in TArray<string> SendedFiles)
 		{
 			if (this.SendedLogs == null)
@@ -133,10 +133,10 @@ namespace CSharpScript.Launcher.LogUpload
 					this.SendedLogs.Paths.Add(text);
 				}
 			}
-			UKuroStaticLibrary.SaveStringToFile(LauncherJson.Stringify<ILocalSendedSave>(this.SendedLogs, null), UKuroLauncherLibrary.GameSavedDir() + "Logs/Sendedlogs.json", false);
+			UKuroStaticLibrary.SaveStringToFile(LauncherJson.Stringify(this.SendedLogs, null), UKuroLauncherLibrary.GameSavedDir() + "Logs/Sendedlogs.json", false);
 		}
 
-		// Token: 0x06000BF3 RID: 3059 RVA: 0x0004AA6C File Offset: 0x00048C6C
+		// Token: 0x06000C2A RID: 3114 RVA: 0x0004D25C File Offset: 0x0004B45C
 		public void PreSendFiles(in TArray<string> FileNames)
 		{
 			TArray<string> tarray = new TArray<string>();
@@ -218,6 +218,11 @@ namespace CSharpScript.Launcher.LogUpload
 			{
 				tarray.Add(value);
 			}
+			string engineIniPath = UKuroTencentCOSLibrary.GetEngineIniPath();
+			if (!string.IsNullOrEmpty(engineIniPath) && UKuroStaticLibrary.FileExists(engineIniPath))
+			{
+				tarray.Add(engineIniPath);
+			}
 			bool flag = UKuroTencentCOSLibrary.IsAutoSendWhenExitRunning();
 			string suffix = this.LauncherLogUploadReasonToString(ELauncherLogUploadReason.Manual);
 			string text5 = flag ? this.GetSendZipName(suffix) : this.GetSendZipName(this.RuleSuffix);
@@ -231,13 +236,13 @@ namespace CSharpScript.Launcher.LogUpload
 			UKuroTencentCOSLibrary.SetCloudPath(this.GetFullPath(text5));
 		}
 
-		// Token: 0x06000BF4 RID: 3060 RVA: 0x0004AD68 File Offset: 0x00048F68
+		// Token: 0x06000C2B RID: 3115 RVA: 0x0004D57C File Offset: 0x0004B77C
 		private bool IsDir(string path)
 		{
 			return UKuroStaticLibrary.DirectoryExists(path);
 		}
 
-		// Token: 0x06000BF5 RID: 3061 RVA: 0x0004AD70 File Offset: 0x00048F70
+		// Token: 0x06000C2C RID: 3116 RVA: 0x0004D584 File Offset: 0x0004B784
 		private string GetSendZipPlatformName()
 		{
 			string text = KuroApplication.IniPlatformName();
@@ -363,7 +368,7 @@ namespace CSharpScript.Launcher.LogUpload
 			return "Default";
 		}
 
-		// Token: 0x06000BF6 RID: 3062 RVA: 0x0004AEE0 File Offset: 0x000490E0
+		// Token: 0x06000C2D RID: 3117 RVA: 0x0004D6F4 File Offset: 0x0004B8F4
 		private string GetSendZipName(string suffix)
 		{
 			this.UpdateUserId();
@@ -404,7 +409,7 @@ namespace CSharpScript.Launcher.LogUpload
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06000BF7 RID: 3063 RVA: 0x0004B060 File Offset: 0x00049260
+		// Token: 0x06000C2E RID: 3118 RVA: 0x0004D874 File Offset: 0x0004BA74
 		private string GetFullPath(string zipName)
 		{
 			DateTime now = DateTime.Now;
@@ -426,7 +431,7 @@ namespace CSharpScript.Launcher.LogUpload
 			});
 		}
 
-		// Token: 0x06000BF8 RID: 3064 RVA: 0x0004B0F4 File Offset: 0x000492F4
+		// Token: 0x06000C2F RID: 3119 RVA: 0x0004D908 File Offset: 0x0004BB08
 		public void SendLog(FOnProgress OnProgress, [Nullable(2)] ISendLogReason reason = null)
 		{
 			this.RuleSuffix = "";
@@ -437,7 +442,7 @@ namespace CSharpScript.Launcher.LogUpload
 			UKuroTencentCOSLibrary.SendLogToTencentCOS(OnProgress);
 		}
 
-		// Token: 0x06000BF9 RID: 3065 RVA: 0x0004B114 File Offset: 0x00049314
+		// Token: 0x06000C30 RID: 3120 RVA: 0x0004D928 File Offset: 0x0004BB28
 		private void UpdateUserId()
 		{
 			string str = "";
@@ -467,8 +472,8 @@ namespace CSharpScript.Launcher.LogUpload
 			instance.Info(message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x17000123 RID: 291
-		// (get) Token: 0x06000BFA RID: 3066 RVA: 0x0004B227 File Offset: 0x00049427
+		// Token: 0x17000129 RID: 297
+		// (get) Token: 0x06000C31 RID: 3121 RVA: 0x0004DA3B File Offset: 0x0004BC3B
 		public static LauncherLogUpload Instance
 		{
 			get
@@ -482,12 +487,12 @@ namespace CSharpScript.Launcher.LogUpload
 			}
 		}
 
-		// Token: 0x06000BFB RID: 3067 RVA: 0x0004B24A File Offset: 0x0004944A
+		// Token: 0x06000C32 RID: 3122 RVA: 0x0004DA5E File Offset: 0x0004BC5E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000BFC RID: 3068 RVA: 0x0004B24C File Offset: 0x0004944C
+		// Token: 0x06000C33 RID: 3123 RVA: 0x0004DA60 File Offset: 0x0004BC60
 		public static void ResetStaticDefaultValue()
 		{
 			LauncherLogUpload instance = LauncherLogUpload._instance;
@@ -498,42 +503,42 @@ namespace CSharpScript.Launcher.LogUpload
 			LauncherLogUpload._instance = null;
 		}
 
-		// Token: 0x06000BFD RID: 3069 RVA: 0x0004B265 File Offset: 0x00049465
+		// Token: 0x06000C34 RID: 3124 RVA: 0x0004DA79 File Offset: 0x0004BC79
 		static LauncherLogUpload()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LauncherLogUpload.CreateStaticDefaultValue), new Action(LauncherLogUpload.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04000791 RID: 1937
+		// Token: 0x040007CE RID: 1998
 		private bool EnableAutoSend;
 
-		// Token: 0x04000792 RID: 1938
+		// Token: 0x040007CF RID: 1999
 		private const int AdmissibleSize = 5;
 
-		// Token: 0x04000793 RID: 1939
+		// Token: 0x040007D0 RID: 2000
 		[Nullable(2)]
 		private ILogUploadParams LogUploadParams;
 
-		// Token: 0x04000794 RID: 1940
+		// Token: 0x040007D1 RID: 2001
 		private string StartTime = "";
 
-		// Token: 0x04000795 RID: 1941
+		// Token: 0x040007D2 RID: 2002
 		private const int MaxUploadBackUpLogNum = 20;
 
-		// Token: 0x04000796 RID: 1942
+		// Token: 0x040007D3 RID: 2003
 		private string UserId = "";
 
-		// Token: 0x04000797 RID: 1943
+		// Token: 0x040007D4 RID: 2004
 		private const string SendedLogPath = "Logs/Sendedlogs.json";
 
-		// Token: 0x04000798 RID: 1944
+		// Token: 0x040007D5 RID: 2005
 		[Nullable(2)]
 		private ILocalSendedSave SendedLogs;
 
-		// Token: 0x04000799 RID: 1945
+		// Token: 0x040007D6 RID: 2006
 		private string RuleSuffix = "";
 
-		// Token: 0x0400079A RID: 1946
+		// Token: 0x040007D7 RID: 2007
 		[Nullable(2)]
 		private static LauncherLogUpload _instance;
 	}

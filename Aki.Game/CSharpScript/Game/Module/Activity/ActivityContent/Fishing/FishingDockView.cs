@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200660C RID: 26124
+	// Token: 0x0200558A RID: 21898
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FishingDockView : UiViewBase
 	{
-		// Token: 0x06041779 RID: 268153 RVA: 0x00FDAB55 File Offset: 0x00FD8D55
+		// Token: 0x0603643E RID: 222270 RVA: 0x00F21BD5 File Offset: 0x00F1FDD5
 		[NullableContext(1)]
 		public FishingDockView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0604177A RID: 268154 RVA: 0x00FDAB60 File Offset: 0x00FD8D60
+		// Token: 0x0603643F RID: 222271 RVA: 0x00F21BE0 File Offset: 0x00F1FDE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 19;
@@ -85,19 +85,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604177B RID: 268155 RVA: 0x00FDAED2 File Offset: 0x00FD90D2
+		// Token: 0x06036440 RID: 222272 RVA: 0x00F21F52 File Offset: 0x00F20152
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.FishingRefreshBackpackData, new Action(this.FishingRefreshBackpackData));
 		}
 
-		// Token: 0x0604177C RID: 268156 RVA: 0x00FDAEF0 File Offset: 0x00FD90F0
+		// Token: 0x06036441 RID: 222273 RVA: 0x00F21F70 File Offset: 0x00F20170
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.FishingRefreshBackpackData, new Action(this.FishingRefreshBackpackData));
 		}
 
-		// Token: 0x0604177D RID: 268157 RVA: 0x00FDAF10 File Offset: 0x00FD9110
+		// Token: 0x06036442 RID: 222274 RVA: 0x00F21F90 File Offset: 0x00F20190
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FishingDockView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604177E RID: 268158 RVA: 0x00FDAF54 File Offset: 0x00FD9154
+		// Token: 0x06036443 RID: 222275 RVA: 0x00F21FD4 File Offset: 0x00F201D4
 		protected override void OnStart()
 		{
 			FishingRewardLimitTimeButton limitTimeRewardItem = this.LimitTimeRewardItem;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			RedDotController.Instance.BindRedDot(ERedDotName.FishingTech, base.GetItem(17), null, 0);
 		}
 
-		// Token: 0x0604177F RID: 268159 RVA: 0x00FDAFAC File Offset: 0x00FD91AC
+		// Token: 0x06036444 RID: 222276 RVA: 0x00F2202C File Offset: 0x00F2022C
 		protected override void OnBeforeShow()
 		{
 			this.RefreshView();
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			fishingCurrencyItem.RefreshItem();
 		}
 
-		// Token: 0x06041780 RID: 268160 RVA: 0x00FDAFE1 File Offset: 0x00FD91E1
+		// Token: 0x06036445 RID: 222277 RVA: 0x00F22061 File Offset: 0x00F20261
 		protected override void OnBeforeDestroy()
 		{
 			FishingModel.Instance.DockId = 0;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			FishingController.Instance.ShowEffectInWorld();
 		}
 
-		// Token: 0x06041781 RID: 268161 RVA: 0x00FDB010 File Offset: 0x00FD9210
+		// Token: 0x06036446 RID: 222278 RVA: 0x00F22090 File Offset: 0x00F20290
 		private void RefreshShopRedDot()
 		{
 			int shopId = DockyardModel.Instance.ShopId;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetItem(18).SetUIActive(uiactive);
 		}
 
-		// Token: 0x06041782 RID: 268162 RVA: 0x00FDB044 File Offset: 0x00FD9244
+		// Token: 0x06036447 RID: 222279 RVA: 0x00F220C4 File Offset: 0x00F202C4
 		private void RefreshView()
 		{
 			FishingDockQuestItem fishingDockQuestItem = this.FishingDockQuestItem;
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(16), fishingNotice.AlertTip, Array.Empty<object>());
 		}
 
-		// Token: 0x06041783 RID: 268163 RVA: 0x00FDB230 File Offset: 0x00FD9430
+		// Token: 0x06036448 RID: 222280 RVA: 0x00F222B0 File Offset: 0x00F204B0
 		private void OnClickBackBtn()
 		{
 			if (FishingController.Instance.IsInFishingShip())
@@ -238,49 +238,49 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			});
 		}
 
-		// Token: 0x06041784 RID: 268164 RVA: 0x00FDB281 File Offset: 0x00FD9481
+		// Token: 0x06036449 RID: 222281 RVA: 0x00F22301 File Offset: 0x00F20501
 		private void OnClickSailingBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.SailingView, null, null);
 		}
 
-		// Token: 0x06041785 RID: 268165 RVA: 0x00FDB294 File Offset: 0x00FD9494
+		// Token: 0x0603644A RID: 222282 RVA: 0x00F22314 File Offset: 0x00F20514
 		private void OnClickIllustratedBtn()
 		{
 			FishingController.Instance.OpenFishingHandBookView();
 		}
 
-		// Token: 0x06041786 RID: 268166 RVA: 0x00FDB2A0 File Offset: 0x00FD94A0
+		// Token: 0x0603644B RID: 222283 RVA: 0x00F22320 File Offset: 0x00F20520
 		private void OnClickCabinBtn()
 		{
 			FishingController.Instance.OpenDockyardView();
 		}
 
-		// Token: 0x06041787 RID: 268167 RVA: 0x00FDB2AC File Offset: 0x00FD94AC
+		// Token: 0x0603644C RID: 222284 RVA: 0x00F2232C File Offset: 0x00F2052C
 		private void OnClickTechnologyBtn()
 		{
 			FishingController.Instance.OpenFishingTechRootView();
 		}
 
-		// Token: 0x06041788 RID: 268168 RVA: 0x00FDB2B8 File Offset: 0x00FD94B8
+		// Token: 0x0603644D RID: 222285 RVA: 0x00F22338 File Offset: 0x00F20538
 		private void OnClickTransactionBtn()
 		{
 			FishingController.Instance.OpenDockyardShopView(null);
 		}
 
-		// Token: 0x06041789 RID: 268169 RVA: 0x00FDB2D8 File Offset: 0x00FD94D8
+		// Token: 0x0603644E RID: 222286 RVA: 0x00F22358 File Offset: 0x00F20558
 		private void RefreshTechRedDot()
 		{
 			FishingModel.Instance.RefreshTechCanLevelUp();
 		}
 
-		// Token: 0x0604178A RID: 268170 RVA: 0x00FDB2E4 File Offset: 0x00FD94E4
+		// Token: 0x0603644F RID: 222287 RVA: 0x00F22364 File Offset: 0x00F20564
 		private void FishingRefreshBackpackData()
 		{
 			this.RefreshCabinText();
 		}
 
-		// Token: 0x0604178B RID: 268171 RVA: 0x00FDB2EC File Offset: 0x00FD94EC
+		// Token: 0x06036450 RID: 222288 RVA: 0x00F2236C File Offset: 0x00F2056C
 		private void RefreshCabinText()
 		{
 			int backpackSize = DockyardModel.Instance.BackpackSize;
@@ -303,86 +303,86 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetText(11).SetText(str + "/" + backpackSize.ToString(), true);
 		}
 
-		// Token: 0x04022130 RID: 139568
+		// Token: 0x0401CA61 RID: 117345
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022131 RID: 139569
+		// Token: 0x0401CA62 RID: 117346
 		private FishingDockQuestItem FishingDockQuestItem;
 
-		// Token: 0x04022132 RID: 139570
+		// Token: 0x0401CA63 RID: 117347
 		private FishingDockReputationItem FishingDockReputationItem;
 
-		// Token: 0x04022133 RID: 139571
+		// Token: 0x0401CA64 RID: 117348
 		private FishingRewardLimitTimeButton LimitTimeRewardItem;
 
-		// Token: 0x04022134 RID: 139572
+		// Token: 0x0401CA65 RID: 117349
 		private FishingPermanentRewardButton PermanentRewardItem;
 
-		// Token: 0x04022135 RID: 139573
+		// Token: 0x0401CA66 RID: 117350
 		private LevelSequencePlayer RoleTalkLevelSequencePlayer;
 
-		// Token: 0x04022136 RID: 139574
+		// Token: 0x0401CA67 RID: 117351
 		private FishingCurrencyItem FishingCurrencyItem;
 
-		// Token: 0x0200C817 RID: 51223
+		// Token: 0x0200B1FA RID: 45562
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C6C9 RID: 247497
+			// Token: 0x04037011 RID: 225297
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403C6CA RID: 247498
+			// Token: 0x04037012 RID: 225298
 			public const int ExpItem = 1;
 
-			// Token: 0x0403C6CB RID: 247499
+			// Token: 0x04037013 RID: 225299
 			public const int QuestItem = 2;
 
-			// Token: 0x0403C6CC RID: 247500
+			// Token: 0x04037014 RID: 225300
 			public const int RoleTalkItem = 3;
 
-			// Token: 0x0403C6CD RID: 247501
+			// Token: 0x04037015 RID: 225301
 			public const int IllustratedRewardBtn = 4;
 
-			// Token: 0x0403C6CE RID: 247502
+			// Token: 0x04037016 RID: 225302
 			public const int IllustratedRewardText = 5;
 
-			// Token: 0x0403C6CF RID: 247503
+			// Token: 0x04037017 RID: 225303
 			public const int TimeLimitRewardBtn = 6;
 
-			// Token: 0x0403C6D0 RID: 247504
+			// Token: 0x04037018 RID: 225304
 			public const int TimeLimitRewardText = 7;
 
-			// Token: 0x0403C6D1 RID: 247505
+			// Token: 0x04037019 RID: 225305
 			public const int IllustratedBtn = 8;
 
-			// Token: 0x0403C6D2 RID: 247506
+			// Token: 0x0403701A RID: 225306
 			public const int IllustratedText = 9;
 
-			// Token: 0x0403C6D3 RID: 247507
+			// Token: 0x0403701B RID: 225307
 			public const int CabinBtn = 10;
 
-			// Token: 0x0403C6D4 RID: 247508
+			// Token: 0x0403701C RID: 225308
 			public const int CabinText = 11;
 
-			// Token: 0x0403C6D5 RID: 247509
+			// Token: 0x0403701D RID: 225309
 			public const int TechnologyBtn = 12;
 
-			// Token: 0x0403C6D6 RID: 247510
+			// Token: 0x0403701E RID: 225310
 			public const int TechnologyText = 13;
 
-			// Token: 0x0403C6D7 RID: 247511
+			// Token: 0x0403701F RID: 225311
 			public const int TransactionBtn = 14;
 
-			// Token: 0x0403C6D8 RID: 247512
+			// Token: 0x04037020 RID: 225312
 			public const int SailingBtn = 15;
 
-			// Token: 0x0403C6D9 RID: 247513
+			// Token: 0x04037021 RID: 225313
 			public const int RoleTalkText = 16;
 
-			// Token: 0x0403C6DA RID: 247514
+			// Token: 0x04037022 RID: 225314
 			public const int TechRedDotItem = 17;
 
-			// Token: 0x0403C6DB RID: 247515
+			// Token: 0x04037023 RID: 225315
 			public const int ShopRedDotItem = 18;
 		}
 	}

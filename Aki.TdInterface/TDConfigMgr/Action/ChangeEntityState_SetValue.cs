@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014D1 RID: 5329
+	// Token: 0x0200162A RID: 5674
 	public class ChangeEntityState_SetValue
 	{
-		// Token: 0x0400466A RID: 18026
+		// Token: 0x04004A05 RID: 18949
 		public EChangeEntityState Type;
 
-		// Token: 0x0400466B RID: 18027
+		// Token: 0x04004A06 RID: 18950
 		public int EntityId;
 	}
 }

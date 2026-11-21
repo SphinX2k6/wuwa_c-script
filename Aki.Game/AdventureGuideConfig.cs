@@ -5,19 +5,19 @@ using Aki.Config;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Module.AdventureGuide;
 
-// Token: 0x0200168A RID: 5770
+// Token: 0x02000B42 RID: 2882
 [NullableContext(1)]
 [Nullable(0)]
 public class AdventureGuideConfig : ConfigBase
 {
-	// Token: 0x0600A3A3 RID: 41891 RVA: 0x0024344B File Offset: 0x0024164B
+	// Token: 0x06007781 RID: 30593 RVA: 0x0024D4B3 File Offset: 0x0024B6B3
 	public AdventureGuideConfig()
 	{
 		this.PreOpenDetectionMap = new Dictionary<int, List<PreOpenDetection>>();
 		this.LevelPlayNightMareConfigMapping = new Dictionary<int, ILevelPlayNightMareConfigData>();
 	}
 
-	// Token: 0x0600A3A4 RID: 41892 RVA: 0x0024346C File Offset: 0x0024166C
+	// Token: 0x06007782 RID: 30594 RVA: 0x0024D4D4 File Offset: 0x0024B6D4
 	protected override bool OnInit()
 	{
 		IReadOnlyList<PreOpenDetection> preOpenDetectionConfAll = this.GetPreOpenDetectionConfAll();
@@ -52,7 +52,7 @@ public class AdventureGuideConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600A3A5 RID: 41893 RVA: 0x00243570 File Offset: 0x00241770
+	// Token: 0x06007783 RID: 30595 RVA: 0x0024D5D8 File Offset: 0x0024B7D8
 	public List<PreOpenDetection> GetPreOpenDetectionConfListByDetectionId(int detectionId, ESoundAreaDataType soundAreaDataType)
 	{
 		List<PreOpenDetection> list = new List<PreOpenDetection>();
@@ -70,7 +70,7 @@ public class AdventureGuideConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x0600A3A6 RID: 41894 RVA: 0x002435E0 File Offset: 0x002417E0
+	// Token: 0x06007784 RID: 30596 RVA: 0x0024D648 File Offset: 0x0024B848
 	public List<PreOpenDetection> GetPreOpenDetectionConfList(int detectionId, ESoundAreaDataType soundAreaDataType, int preOpenDetectionId)
 	{
 		List<PreOpenDetection> preOpenDetectionConfListByDetectionId = this.GetPreOpenDetectionConfListByDetectionId(detectionId, soundAreaDataType);
@@ -85,7 +85,7 @@ public class AdventureGuideConfig : ConfigBase
 		return preOpenDetectionConfListByDetectionId;
 	}
 
-	// Token: 0x0600A3A7 RID: 41895 RVA: 0x00243620 File Offset: 0x00241820
+	// Token: 0x06007785 RID: 30597 RVA: 0x0024D688 File Offset: 0x0024B888
 	public AdventureTask? GetAdventureTaskConfig(int taskId)
 	{
 		AdventureTask? config = ConfigAdventureTaskById.GetConfig(taskId, true);
@@ -96,7 +96,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3A8 RID: 41896 RVA: 0x00243654 File Offset: 0x00241854
+	// Token: 0x06007786 RID: 30598 RVA: 0x0024D6BC File Offset: 0x0024B8BC
 	[NullableContext(2)]
 	public IReadOnlyList<AdventureTask> GetAllAdventureTaskConfig()
 	{
@@ -108,7 +108,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3A9 RID: 41897 RVA: 0x00243670 File Offset: 0x00241870
+	// Token: 0x06007787 RID: 30599 RVA: 0x0024D6D8 File Offset: 0x0024B8D8
 	public Dictionary<int, int> GetDropShowInfo(int id)
 	{
 		DropPackage? config = ConfigDropPackageById.GetConfig(id, true);
@@ -119,7 +119,7 @@ public class AdventureGuideConfig : ConfigBase
 		return new Dictionary<int, int>();
 	}
 
-	// Token: 0x0600A3AA RID: 41898 RVA: 0x002436A4 File Offset: 0x002418A4
+	// Token: 0x06007788 RID: 30600 RVA: 0x0024D70C File Offset: 0x0024B90C
 	public Dictionary<int, int> GetShowReward(Dictionary<int, int> showRewardMap, int? level = null)
 	{
 		int curWorldLevel = WorldLevelModel.Instance.CurWorldLevel;
@@ -165,7 +165,7 @@ public class AdventureGuideConfig : ConfigBase
 		return new Dictionary<int, int>();
 	}
 
-	// Token: 0x0600A3AB RID: 41899 RVA: 0x0024377C File Offset: 0x0024197C
+	// Token: 0x06007789 RID: 30601 RVA: 0x0024D7E4 File Offset: 0x0024B9E4
 	[NullableContext(2)]
 	public Dictionary<int, int> GetNightMareShowReward(Dictionary<int, int> showRewardMap)
 	{
@@ -203,7 +203,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3AC RID: 41900 RVA: 0x00243820 File Offset: 0x00241A20
+	// Token: 0x0600778A RID: 30602 RVA: 0x0024D888 File Offset: 0x0024BA88
 	public AdventureTaskChapter? GetChapterAdventureConfig(int chapter)
 	{
 		AdventureTaskChapter? config = ConfigAdventureTaskChapterById.GetConfig(chapter, true);
@@ -214,7 +214,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3AD RID: 41901 RVA: 0x00243854 File Offset: 0x00241A54
+	// Token: 0x0600778B RID: 30603 RVA: 0x0024D8BC File Offset: 0x0024BABC
 	[NullableContext(2)]
 	public IReadOnlyList<MonsterDetection> GetAllMonsterDetection()
 	{
@@ -226,7 +226,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3AE RID: 41902 RVA: 0x00243870 File Offset: 0x00241A70
+	// Token: 0x0600778C RID: 30604 RVA: 0x0024D8D8 File Offset: 0x0024BAD8
 	[NullableContext(2)]
 	public IReadOnlyList<DungeonDetection> GetAllDungeonDetection()
 	{
@@ -238,7 +238,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3AF RID: 41903 RVA: 0x0024388C File Offset: 0x00241A8C
+	// Token: 0x0600778D RID: 30605 RVA: 0x0024D8F4 File Offset: 0x0024BAF4
 	[NullableContext(2)]
 	public IReadOnlyList<SilentAreaDetection> GetAllSilentAreaDetection()
 	{
@@ -250,7 +250,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3B0 RID: 41904 RVA: 0x002438A8 File Offset: 0x00241AA8
+	// Token: 0x0600778E RID: 30606 RVA: 0x0024D910 File Offset: 0x0024BB10
 	public MonsterDetection? GetMonsterDetectionConfById(int id)
 	{
 		MonsterDetection? config = ConfigMonsterDetectionById.GetConfig(id, true);
@@ -261,7 +261,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3B1 RID: 41905 RVA: 0x002438DC File Offset: 0x00241ADC
+	// Token: 0x0600778F RID: 30607 RVA: 0x0024D944 File Offset: 0x0024BB44
 	public DungeonDetection? GetDungeonDetectionConfById(int id)
 	{
 		DungeonDetection? config = ConfigDungeonDetectionById.GetConfig(id, true);
@@ -272,7 +272,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3B2 RID: 41906 RVA: 0x00243910 File Offset: 0x00241B10
+	// Token: 0x06007790 RID: 30608 RVA: 0x0024D978 File Offset: 0x0024BB78
 	public SilentAreaDetection? GetSilentAreaDetectionConfById(int id)
 	{
 		SilentAreaDetection? config = ConfigSilentAreaDetectionById.GetConfig(id, true);
@@ -283,7 +283,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3B3 RID: 41907 RVA: 0x00243944 File Offset: 0x00241B44
+	// Token: 0x06007791 RID: 30609 RVA: 0x0024D9AC File Offset: 0x0024BBAC
 	public int GetMaxChapter()
 	{
 		IReadOnlyList<AdventureTaskChapter> configList = ConfigAdventureTaskChapterAll.GetConfigList(true);
@@ -296,7 +296,7 @@ public class AdventureGuideConfig : ConfigBase
 		return list[0].Id;
 	}
 
-	// Token: 0x0600A3B4 RID: 41908 RVA: 0x00243998 File Offset: 0x00241B98
+	// Token: 0x06007792 RID: 30610 RVA: 0x0024DA00 File Offset: 0x0024BC00
 	public int GetMaxDungeonLevel(int enterId)
 	{
 		InstanceDungeonEntrance? config = ConfigInstanceDungeonEntranceById.GetConfig(enterId, true);
@@ -321,7 +321,7 @@ public class AdventureGuideConfig : ConfigBase
 		return num;
 	}
 
-	// Token: 0x0600A3B5 RID: 41909 RVA: 0x00243A20 File Offset: 0x00241C20
+	// Token: 0x06007793 RID: 30611 RVA: 0x0024DA88 File Offset: 0x0024BC88
 	public string GetSecondaryGuideDataTextById(int id)
 	{
 		SecondaryGuideData? config = ConfigSecondaryGuideDataById.GetConfig(id, true);
@@ -332,7 +332,7 @@ public class AdventureGuideConfig : ConfigBase
 		return "";
 	}
 
-	// Token: 0x0600A3B6 RID: 41910 RVA: 0x00243A54 File Offset: 0x00241C54
+	// Token: 0x06007794 RID: 30612 RVA: 0x0024DABC File Offset: 0x0024BCBC
 	public SecondaryGuideData? GetSecondaryGuideDataConf(int id)
 	{
 		SecondaryGuideData? config = ConfigSecondaryGuideDataById.GetConfig(id, true);
@@ -343,7 +343,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3B7 RID: 41911 RVA: 0x00243A88 File Offset: 0x00241C88
+	// Token: 0x06007795 RID: 30613 RVA: 0x0024DAF0 File Offset: 0x0024BCF0
 	public string GetLocalFilterTextById(int id)
 	{
 		SecondaryGuideData? config = ConfigSecondaryGuideDataById.GetConfig(id, true);
@@ -354,7 +354,7 @@ public class AdventureGuideConfig : ConfigBase
 		return "";
 	}
 
-	// Token: 0x0600A3B8 RID: 41912 RVA: 0x00243ACC File Offset: 0x00241CCC
+	// Token: 0x06007796 RID: 30614 RVA: 0x0024DB34 File Offset: 0x0024BD34
 	public PreOpenDetection? GetPreOpenDetectionConfById(int detectionId)
 	{
 		PreOpenDetection? config = ConfigPreOpenDetectionById.GetConfig(detectionId, true);
@@ -365,7 +365,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3B9 RID: 41913 RVA: 0x00243B00 File Offset: 0x00241D00
+	// Token: 0x06007797 RID: 30615 RVA: 0x0024DB68 File Offset: 0x0024BD68
 	[NullableContext(2)]
 	public IReadOnlyList<PreOpenDetection> GetPreOpenDetectionConfAll()
 	{
@@ -377,7 +377,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3BA RID: 41914 RVA: 0x00243B1C File Offset: 0x00241D1C
+	// Token: 0x06007798 RID: 30616 RVA: 0x0024DB84 File Offset: 0x0024BD84
 	public DetectionDropDownType? GetDropDownConfig(int type)
 	{
 		DetectionDropDownType? config = ConfigDetectionDropDownTypeById.GetConfig(type, true);
@@ -388,7 +388,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3BB RID: 41915 RVA: 0x00243B50 File Offset: 0x00241D50
+	// Token: 0x06007799 RID: 30617 RVA: 0x0024DBB8 File Offset: 0x0024BDB8
 	[NullableContext(2)]
 	public ILevelPlayNightMareConfigData GetLevelPlayNightMareConfig(int levelPlayNightMareId)
 	{
@@ -400,7 +400,7 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600A3BC RID: 41916 RVA: 0x00243B70 File Offset: 0x00241D70
+	// Token: 0x0600779A RID: 30618 RVA: 0x0024DBD8 File Offset: 0x0024BDD8
 	public DetectionTitlePanel? GetDetectionTitlePanelConfig(int detectionTitlePanelId)
 	{
 		DetectionTitlePanel? config = ConfigDetectionTitlePanelById.GetConfig(detectionTitlePanelId, true);
@@ -411,8 +411,8 @@ public class AdventureGuideConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x17000DCB RID: 3531
-	// (get) Token: 0x0600A3BD RID: 41917 RVA: 0x00243BA4 File Offset: 0x00241DA4
+	// Token: 0x17000DEC RID: 3564
+	// (get) Token: 0x0600779B RID: 30619 RVA: 0x0024DC0C File Offset: 0x0024BE0C
 	public static AdventureGuideConfig Instance
 	{
 		get
@@ -421,7 +421,7 @@ public class AdventureGuideConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600A3BE RID: 41918 RVA: 0x00243BAB File Offset: 0x00241DAB
+	// Token: 0x0600779C RID: 30620 RVA: 0x0024DC13 File Offset: 0x0024BE13
 	public static AdventureGuideConfig GetOrCreateInstance()
 	{
 		if (AdventureGuideConfig._Instance == null)
@@ -431,7 +431,7 @@ public class AdventureGuideConfig : ConfigBase
 		return AdventureGuideConfig._Instance;
 	}
 
-	// Token: 0x0600A3BF RID: 41919 RVA: 0x00243BBF File Offset: 0x00241DBF
+	// Token: 0x0600779D RID: 30621 RVA: 0x0024DC27 File Offset: 0x0024BE27
 	public static bool CreateInstance()
 	{
 		if (AdventureGuideConfig._Instance != null)
@@ -442,30 +442,30 @@ public class AdventureGuideConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600A3C0 RID: 41920 RVA: 0x00243BD5 File Offset: 0x00241DD5
+	// Token: 0x0600779E RID: 30622 RVA: 0x0024DC3D File Offset: 0x0024BE3D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A3C1 RID: 41921 RVA: 0x00243BD7 File Offset: 0x00241DD7
+	// Token: 0x0600779F RID: 30623 RVA: 0x0024DC3F File Offset: 0x0024BE3F
 	public static void ResetStaticDefaultValue()
 	{
 		AdventureGuideConfig._Instance = null;
 	}
 
-	// Token: 0x0600A3C2 RID: 41922 RVA: 0x00243BDF File Offset: 0x00241DDF
+	// Token: 0x060077A0 RID: 30624 RVA: 0x0024DC47 File Offset: 0x0024BE47
 	static AdventureGuideConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AdventureGuideConfig.CreateStaticDefaultValue), new Action(AdventureGuideConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004A4D RID: 19021
+	// Token: 0x04004AF4 RID: 19188
 	private readonly Dictionary<int, List<PreOpenDetection>> PreOpenDetectionMap;
 
-	// Token: 0x04004A4E RID: 19022
+	// Token: 0x04004AF5 RID: 19189
 	private readonly Dictionary<int, ILevelPlayNightMareConfigData> LevelPlayNightMareConfigMapping;
 
-	// Token: 0x04004A4F RID: 19023
+	// Token: 0x04004AF6 RID: 19190
 	[Nullable(2)]
 	private static AdventureGuideConfig _Instance;
 }

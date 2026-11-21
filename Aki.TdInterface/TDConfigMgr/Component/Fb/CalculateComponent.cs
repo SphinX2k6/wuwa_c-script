@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action.Fb;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A5B RID: 2651
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B24 RID: 2852
 	public class CalculateComponent : IComponentBase
 	{
-		// Token: 0x06003D0D RID: 15629 RVA: 0x0009CF8B File Offset: 0x0009B18B
+		// Token: 0x0600412D RID: 16685 RVA: 0x000A6403 File Offset: 0x000A4603
 		public static CalculateComponent Create(ICalculateComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E14 RID: 3604
-		// (get) Token: 0x06003D0E RID: 15630 RVA: 0x0009CFAC File Offset: 0x0009B1AC
+		// Token: 0x17000EE0 RID: 3808
+		// (get) Token: 0x0600412E RID: 16686 RVA: 0x000A6424 File Offset: 0x000A4624
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E15 RID: 3605
-		// (get) Token: 0x06003D0F RID: 15631 RVA: 0x0009CFE4 File Offset: 0x0009B1E4
+		// Token: 0x17000EE1 RID: 3809
+		// (get) Token: 0x0600412F RID: 16687 RVA: 0x000A645C File Offset: 0x000A465C
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E16 RID: 3606
-		// (get) Token: 0x06003D10 RID: 15632 RVA: 0x0009CFFC File Offset: 0x0009B1FC
+		// Token: 0x17000EE2 RID: 3810
+		// (get) Token: 0x06004130 RID: 16688 RVA: 0x000A6474 File Offset: 0x000A4674
 		public virtual List<INumberVar> Vars
 		{
 			get
@@ -69,8 +66,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E17 RID: 3607
-		// (get) Token: 0x06003D11 RID: 15633 RVA: 0x0009D068 File Offset: 0x0009B268
+		// Token: 0x17000EE3 RID: 3811
+		// (get) Token: 0x06004131 RID: 16689 RVA: 0x000A64E0 File Offset: 0x000A46E0
 		public virtual List<IFunction> Functions
 		{
 			get
@@ -90,19 +87,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002202 RID: 8706
+		// Token: 0x04002419 RID: 9241
 		private ICalculateComponent Instance;
 
-		// Token: 0x04002203 RID: 8707
+		// Token: 0x0400241A RID: 9242
 		private List<INumberVar> _VarsCache;
 
-		// Token: 0x04002204 RID: 8708
+		// Token: 0x0400241B RID: 9243
 		private bool _VarsInited;
 
-		// Token: 0x04002205 RID: 8709
+		// Token: 0x0400241C RID: 9244
 		private List<IFunction> _FunctionsCache;
 
-		// Token: 0x04002206 RID: 8710
+		// Token: 0x0400241D RID: 9245
 		private bool _FunctionsInited;
 	}
 }

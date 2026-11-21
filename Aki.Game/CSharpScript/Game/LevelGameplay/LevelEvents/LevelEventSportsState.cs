@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
+using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B96 RID: 27542
+	// Token: 0x02005D0E RID: 23822
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventSportsState : LevelEventBase
 	{
-		// Token: 0x060442CB RID: 279243 RVA: 0x010CC8B1 File Offset: 0x010CAAB1
+		// Token: 0x0603A41E RID: 238622 RVA: 0x01076639 File Offset: 0x01074839
 		public LevelEventSportsState(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060442CC RID: 279244 RVA: 0x010CC8BC File Offset: 0x010CAABC
+		// Token: 0x0603A41F RID: 238623 RVA: 0x01076644 File Offset: 0x01074844
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			if (inParams == null)
@@ -23,34 +24,41 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 				return;
 			}
 			ISportConfig config = (inParams as SetSportsState).Config;
-			ESportStateType type = config.Type;
-			if (type == ESportStateType.Slide)
+			switch (config.Type)
 			{
+			case ESportStateType.Slide:
 				CharacterSlideComponent.SetSlideConfig((config as ISlideConfig).SlideId);
 				return;
-			}
-			if (type != ESportStateType.Ski)
+			case ESportStateType.Ski:
 			{
-				return;
+				ISkiConfig skiConfig = config as ISkiConfig;
+				switch (skiConfig.Config.Type)
+				{
+				case ESkiConfig.Open:
+					this.EnterSkiMode(skiConfig.Config as IOpenSkiConfig, context);
+					return;
+				case ESkiConfig.Close:
+					this.ExitSkiMode(skiConfig.Config as ICloseSkiConfig, context);
+					return;
+				case ESkiConfig.Accelerate:
+					this.SetSkiAccel(skiConfig.Config as IAccelerateSkiConfig, context);
+					break;
+				default:
+					return;
+				}
+				break;
 			}
-			ISkiConfig skiConfig = config as ISkiConfig;
-			switch (skiConfig.Config.Type)
-			{
-			case ESkiConfig.Open:
-				this.EnterSkiMode(skiConfig.Config as IOpenSkiConfig, context);
-				return;
-			case ESkiConfig.Close:
-				this.ExitSkiMode(skiConfig.Config as ICloseSkiConfig, context);
-				return;
-			case ESkiConfig.Accelerate:
-				this.SetSkiAccel(skiConfig.Config as IAccelerateSkiConfig, context);
+			case ESportStateType.PetalGrab:
+				break;
+			case ESportStateType.PetalFly:
+				this.SetMovementState(config.Type);
 				return;
 			default:
 				return;
 			}
 		}
 
-		// Token: 0x060442CD RID: 279245 RVA: 0x010CC960 File Offset: 0x010CAB60
+		// Token: 0x0603A420 RID: 238624 RVA: 0x01076704 File Offset: 0x01074904
 		private unsafe void EnterSkiMode(IOpenSkiConfig config, GeneralContext context)
 		{
 			EGeneralContextType? type = context.Type;
@@ -105,7 +113,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			instance3.Error(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x060442CE RID: 279246 RVA: 0x010CCAE8 File Offset: 0x010CACE8
+		// Token: 0x0603A421 RID: 238625 RVA: 0x0107688C File Offset: 0x01074A8C
 		private unsafe void ExitSkiMode(ICloseSkiConfig config, GeneralContext context)
 		{
 			EGeneralContextType? type = context.Type;
@@ -163,7 +171,34 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			instance3.Error(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x060442CF RID: 279247 RVA: 0x010CCC5C File Offset: 0x010CAE5C
+		// Token: 0x0603A422 RID: 238626 RVA: 0x01076A00 File Offset: 0x01074C00
+		private void SetMovementState(ESportStateType type)
+		{
+			TsBaseCharacter baseCharacter = Global.BaseCharacter;
+			Entity entity = (baseCharacter != null) ? baseCharacter.GetEntityNoBlueprint() : null;
+			if (entity == null)
+			{
+				global::Log.Instance.Error(ELogModule.LevelEvent, ELogAuthor.LJM, "[LevelEventSportsState][SetMovementState] 目前仅支持主角触发", default(ReadOnlySpan<ValueTuple<string, object>>));
+				return;
+			}
+			CharacterActorComponent component = entity.GetComponent<CharacterActorComponent>();
+			if (component == null)
+			{
+				global::Log.Instance.Error(ELogModule.LevelEvent, ELogAuthor.LJM, "[LevelEventSportsState][SetMovementState] 角色运动组件不可用", default(ReadOnlySpan<ValueTuple<string, object>>));
+				return;
+			}
+			if (type == ESportStateType.PetalFly)
+			{
+				component.Actor.KuroSetMovementMode(new SetMovementModeInfo
+				{
+					Mode = EMovementMode.MOVE_Custom,
+					CustomMode = 19,
+					Context = "[CharacterFlowerFlyingComponent.LevelEventSportsState]"
+				});
+			}
+		}
+
+		// Token: 0x0603A423 RID: 238627 RVA: 0x01076A94 File Offset: 0x01074C94
 		private void SetSkiAccel(IAccelerateSkiConfig config, GeneralContext context)
 		{
 			if (!(context is TriggerContext))
@@ -185,7 +220,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			component.SetSkiAccel(config);
 		}
 
-		// Token: 0x060442D0 RID: 279248 RVA: 0x010CCCCC File Offset: 0x010CAECC
+		// Token: 0x0603A424 RID: 238628 RVA: 0x01076B04 File Offset: 0x01074D04
 		private string ParseSource(GeneralContext inContext)
 		{
 			string result = "";

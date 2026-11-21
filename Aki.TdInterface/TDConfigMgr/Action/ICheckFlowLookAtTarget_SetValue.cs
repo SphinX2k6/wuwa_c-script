@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001899 RID: 6297
+	// Token: 0x02001A24 RID: 6692
 	public class ICheckFlowLookAtTarget_SetValue
 	{
-		// Token: 0x04005527 RID: 21799
+		// Token: 0x04005974 RID: 22900
 		public ECheckFlowLookAtTargetType Type;
 	}
 }

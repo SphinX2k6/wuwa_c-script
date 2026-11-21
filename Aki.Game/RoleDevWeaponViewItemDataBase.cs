@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleDev;
 
-// Token: 0x02002837 RID: 10295
+// Token: 0x02001DB2 RID: 7602
 [NullableContext(2)]
 [Nullable(0)]
 public abstract class RoleDevWeaponViewItemDataBase
 {
-	// Token: 0x06015397 RID: 86935 RVA: 0x0055D14C File Offset: 0x0055B34C
+	// Token: 0x06012D95 RID: 77205 RVA: 0x00587EA8 File Offset: 0x005860A8
 	[NullableContext(1)]
 	public void InitByRoleId(int roleId, ERoleDevDataType roleType, RoleDevViewModel roleDevViewModel)
 	{
@@ -17,17 +17,17 @@ public abstract class RoleDevWeaponViewItemDataBase
 		this.InitByRoleType(roleId, roleDevViewModel);
 	}
 
-	// Token: 0x06015398 RID: 86936
+	// Token: 0x06012D96 RID: 77206
 	[NullableContext(1)]
 	protected abstract void InitByRoleType(int roleId, RoleDevViewModel roleDevViewModel);
 
-	// Token: 0x06015399 RID: 86937 RVA: 0x0055D16B File Offset: 0x0055B36B
+	// Token: 0x06012D97 RID: 77207 RVA: 0x00587EC7 File Offset: 0x005860C7
 	protected virtual void CheckTabType()
 	{
 	}
 
-	// Token: 0x17001C3F RID: 7231
-	// (get) Token: 0x0601539A RID: 86938 RVA: 0x0055D16D File Offset: 0x0055B36D
+	// Token: 0x17001C97 RID: 7319
+	// (get) Token: 0x06012D98 RID: 77208 RVA: 0x00587EC9 File Offset: 0x005860C9
 	public int RoleId
 	{
 		get
@@ -36,8 +36,8 @@ public abstract class RoleDevWeaponViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001C40 RID: 7232
-	// (get) Token: 0x0601539B RID: 86939 RVA: 0x0055D175 File Offset: 0x0055B375
+	// Token: 0x17001C98 RID: 7320
+	// (get) Token: 0x06012D99 RID: 77209 RVA: 0x00587ED1 File Offset: 0x005860D1
 	public ERoleDevDataType RoleType
 	{
 		get
@@ -46,20 +46,20 @@ public abstract class RoleDevWeaponViewItemDataBase
 		}
 	}
 
-	// Token: 0x0601539C RID: 86940
+	// Token: 0x06012D9A RID: 77210
 	protected abstract bool GetIsRoleObtained();
 
-	// Token: 0x0601539D RID: 86941
+	// Token: 0x06012D9B RID: 77211
 	protected abstract RoleDevWeaponDevItemDataBase GetDevItemData();
 
-	// Token: 0x0601539E RID: 86942
+	// Token: 0x06012D9C RID: 77212
 	protected abstract RoleDevWeaponRecommendItemDataBase GetRecommendItemData();
 
-	// Token: 0x0601539F RID: 86943
+	// Token: 0x06012D9D RID: 77213
 	protected abstract bool GetIsWeaponHighQuality();
 
-	// Token: 0x17001C41 RID: 7233
-	// (get) Token: 0x060153A0 RID: 86944 RVA: 0x0055D17D File Offset: 0x0055B37D
+	// Token: 0x17001C99 RID: 7321
+	// (get) Token: 0x06012D9E RID: 77214 RVA: 0x00587ED9 File Offset: 0x005860D9
 	public bool IsRoleObtained
 	{
 		get
@@ -68,8 +68,8 @@ public abstract class RoleDevWeaponViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001C42 RID: 7234
-	// (get) Token: 0x060153A1 RID: 86945 RVA: 0x0055D185 File Offset: 0x0055B385
+	// Token: 0x17001C9A RID: 7322
+	// (get) Token: 0x06012D9F RID: 77215 RVA: 0x00587EE1 File Offset: 0x005860E1
 	public RoleDevWeaponDevItemDataBase DevItemData
 	{
 		get
@@ -78,8 +78,8 @@ public abstract class RoleDevWeaponViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001C43 RID: 7235
-	// (get) Token: 0x060153A2 RID: 86946 RVA: 0x0055D18D File Offset: 0x0055B38D
+	// Token: 0x17001C9B RID: 7323
+	// (get) Token: 0x06012DA0 RID: 77216 RVA: 0x00587EE9 File Offset: 0x005860E9
 	public RoleDevWeaponRecommendItemDataBase RecommendItemData
 	{
 		get
@@ -88,8 +88,8 @@ public abstract class RoleDevWeaponViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001C44 RID: 7236
-	// (get) Token: 0x060153A3 RID: 86947 RVA: 0x0055D195 File Offset: 0x0055B395
+	// Token: 0x17001C9C RID: 7324
+	// (get) Token: 0x06012DA1 RID: 77217 RVA: 0x00587EF1 File Offset: 0x005860F1
 	public bool IsWeaponHighQuality
 	{
 		get
@@ -98,8 +98,8 @@ public abstract class RoleDevWeaponViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001C45 RID: 7237
-	// (get) Token: 0x060153A4 RID: 86948 RVA: 0x0055D19D File Offset: 0x0055B39D
+	// Token: 0x17001C9D RID: 7325
+	// (get) Token: 0x06012DA2 RID: 77218 RVA: 0x00587EF9 File Offset: 0x005860F9
 	public bool IsRoleObtainedType
 	{
 		get
@@ -108,9 +108,9 @@ public abstract class RoleDevWeaponViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001C46 RID: 7238
-	// (get) Token: 0x060153A5 RID: 86949 RVA: 0x0055D1A8 File Offset: 0x0055B3A8
-	// (set) Token: 0x060153A6 RID: 86950 RVA: 0x0055D1C5 File Offset: 0x0055B3C5
+	// Token: 0x17001C9E RID: 7326
+	// (get) Token: 0x06012DA3 RID: 77219 RVA: 0x00587F04 File Offset: 0x00586104
+	// (set) Token: 0x06012DA4 RID: 77220 RVA: 0x00587F21 File Offset: 0x00586121
 	public ERoleDevWeaponTabType TabType
 	{
 		get
@@ -130,12 +130,12 @@ public abstract class RoleDevWeaponViewItemDataBase
 		}
 	}
 
-	// Token: 0x04009EA2 RID: 40610
+	// Token: 0x0400A28B RID: 41611
 	protected int RoleIdInternal;
 
-	// Token: 0x04009EA3 RID: 40611
+	// Token: 0x0400A28C RID: 41612
 	protected ERoleDevDataType RoleTypeInternal;
 
-	// Token: 0x04009EA4 RID: 40612
+	// Token: 0x0400A28D RID: 41613
 	protected RoleDevViewModel RoleDevViewModelInternal;
 }

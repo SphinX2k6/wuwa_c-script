@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -15,7 +14,7 @@ using CSharpScript.Game.Module.WorldMap;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001691 RID: 5777
+// Token: 0x02000B49 RID: 2889
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -24,7 +23,7 @@ using UnrealEngine;
 })]
 public class AdventureTargetItem : GridProxyAbstract<AdventureTaskRecord>
 {
-	// Token: 0x0600A4C3 RID: 42179 RVA: 0x0024B07C File Offset: 0x0024927C
+	// Token: 0x060078A3 RID: 30883 RVA: 0x002553E0 File Offset: 0x002535E0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -69,7 +68,7 @@ public class AdventureTargetItem : GridProxyAbstract<AdventureTaskRecord>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600A4C4 RID: 42180 RVA: 0x0024B2B8 File Offset: 0x002494B8
+	// Token: 0x060078A4 RID: 30884 RVA: 0x0025561C File Offset: 0x0025381C
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(3), new Func<CommonItemSmallItemGrid>(this.OnRewardLayoutUpdater), null, false, true);
@@ -90,7 +89,7 @@ public class AdventureTargetItem : GridProxyAbstract<AdventureTaskRecord>
 		});
 	}
 
-	// Token: 0x0600A4C5 RID: 42181 RVA: 0x0024B344 File Offset: 0x00249544
+	// Token: 0x060078A5 RID: 30885 RVA: 0x002556A8 File Offset: 0x002538A8
 	private CommonItemSmallItemGrid OnRewardLayoutUpdater()
 	{
 		CommonItemSmallItemGrid commonItemSmallItemGrid = new CommonItemSmallItemGrid();
@@ -103,14 +102,14 @@ public class AdventureTargetItem : GridProxyAbstract<AdventureTaskRecord>
 		return commonItemSmallItemGrid;
 	}
 
-	// Token: 0x0600A4C6 RID: 42182 RVA: 0x0024B364 File Offset: 0x00249564
+	// Token: 0x060078A6 RID: 30886 RVA: 0x002556C8 File Offset: 0x002538C8
 	protected override void OnBeforeDestroy()
 	{
 		this.ExtendToggle.OnPostAudioEvent.Unbind();
 		this.ExtendToggle.OnPostAudioStateEvent.Unbind();
 	}
 
-	// Token: 0x0600A4C7 RID: 42183 RVA: 0x0024B388 File Offset: 0x00249588
+	// Token: 0x060078A7 RID: 30887 RVA: 0x002556EC File Offset: 0x002538EC
 	public override void Refresh(AdventureTaskRecord data, bool isSelected, int gridIndex)
 	{
 		this.Clicking = false;
@@ -120,7 +119,7 @@ public class AdventureTargetItem : GridProxyAbstract<AdventureTaskRecord>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), adventureTaskBase.TaskText, Array.Empty<object>());
 		base.GetItem(1).SetUIActive(false);
 		int totalNum = data.GetTotalNum();
-		int num = AdventureGuideModel.Instance.GetRewardChaptersList().Contains(data.AdventureTaskBase.ChapterId) ? totalNum : data.Progress;
+		int num = (Array.IndexOf<int>(AdventureGuideModel.Instance.GetRewardChaptersList(), data.AdventureTaskBase.ChapterId) >= 0) ? totalNum : data.Progress;
 		UUIText text = base.GetText(5);
 		if (totalNum != 0)
 		{
@@ -156,13 +155,13 @@ public class AdventureTargetItem : GridProxyAbstract<AdventureTaskRecord>
 		base.GetItem(12).SetAlpha(flag ? 0.5f : 1f);
 	}
 
-	// Token: 0x0600A4C8 RID: 42184 RVA: 0x0024B570 File Offset: 0x00249770
+	// Token: 0x060078A8 RID: 30888 RVA: 0x002558D4 File Offset: 0x00253AD4
 	public void SetClickGetButtonCb(Action<int> cb)
 	{
 		this.ClickGetButtonCb = cb;
 	}
 
-	// Token: 0x0600A4C9 RID: 42185 RVA: 0x0024B579 File Offset: 0x00249779
+	// Token: 0x060078A9 RID: 30889 RVA: 0x002558DD File Offset: 0x00253ADD
 	private void SetBtnStatusByTargetState(AdventreTaskSate status, bool showRedirect)
 	{
 		this.RefreshFinishItem(status);
@@ -172,37 +171,37 @@ public class AdventureTargetItem : GridProxyAbstract<AdventureTaskRecord>
 		this.RefreshDoingText(status, showRedirect);
 	}
 
-	// Token: 0x0600A4CA RID: 42186 RVA: 0x0024B5A0 File Offset: 0x002497A0
+	// Token: 0x060078AA RID: 30890 RVA: 0x00255904 File Offset: 0x00253B04
 	private void RefreshDoingText(AdventreTaskSate state, bool showRedirect)
 	{
 		base.GetItem(7).SetUIActive(state == AdventreTaskSate.UnFinish && !showRedirect);
 	}
 
-	// Token: 0x0600A4CB RID: 42187 RVA: 0x0024B5B8 File Offset: 0x002497B8
+	// Token: 0x060078AB RID: 30891 RVA: 0x0025591C File Offset: 0x00253B1C
 	private void RefreshFinishItem(AdventreTaskSate state)
 	{
 		base.GetItem(8).SetUIActive(state == AdventreTaskSate.Received);
 	}
 
-	// Token: 0x0600A4CC RID: 42188 RVA: 0x0024B5CC File Offset: 0x002497CC
+	// Token: 0x060078AC RID: 30892 RVA: 0x00255930 File Offset: 0x00253B30
 	private void RefreshGetButton(AdventreTaskSate state)
 	{
 		base.GetButton(9).RootUIComp.Get().SetUIActive(state == AdventreTaskSate.Finish);
 	}
 
-	// Token: 0x0600A4CD RID: 42189 RVA: 0x0024B5F8 File Offset: 0x002497F8
+	// Token: 0x060078AD RID: 30893 RVA: 0x0025595C File Offset: 0x00253B5C
 	private void RefreshRedirectButton(AdventreTaskSate state, bool showRedirect)
 	{
 		base.GetButton(2).RootUIComp.Get().SetUIActive(state == AdventreTaskSate.UnFinish && showRedirect);
 	}
 
-	// Token: 0x0600A4CE RID: 42190 RVA: 0x0024B624 File Offset: 0x00249824
+	// Token: 0x060078AE RID: 30894 RVA: 0x00255988 File Offset: 0x00253B88
 	private void RefreshRedItem(AdventreTaskSate state)
 	{
 		base.GetItem(4).SetUIActive(state == AdventreTaskSate.Finish);
 	}
 
-	// Token: 0x0600A4CF RID: 42191 RVA: 0x0024B636 File Offset: 0x00249836
+	// Token: 0x060078AF RID: 30895 RVA: 0x0025599A File Offset: 0x00253B9A
 	private void OnClickGetButton()
 	{
 		if (this.Data.Status == AdventreTaskSate.Finish)
@@ -216,7 +215,7 @@ public class AdventureTargetItem : GridProxyAbstract<AdventureTaskRecord>
 		}
 	}
 
-	// Token: 0x0600A4D0 RID: 42192 RVA: 0x0024B65C File Offset: 0x0024985C
+	// Token: 0x060078B0 RID: 30896 RVA: 0x002559C0 File Offset: 0x00253BC0
 	private void OnRedirectBtnClick()
 	{
 		if (!this.Clicking)
@@ -230,7 +229,7 @@ public class AdventureTargetItem : GridProxyAbstract<AdventureTaskRecord>
 		}
 	}
 
-	// Token: 0x0600A4D1 RID: 42193 RVA: 0x0024B688 File Offset: 0x00249888
+	// Token: 0x060078B1 RID: 30897 RVA: 0x002559EC File Offset: 0x00253BEC
 	private unsafe void HandleJump()
 	{
 		AdventureTaskRecord data = this.Data;
@@ -317,12 +316,12 @@ public class AdventureTargetItem : GridProxyAbstract<AdventureTaskRecord>
 		instance3.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
 	}
 
-	// Token: 0x0600A4D2 RID: 42194 RVA: 0x0024B97C File Offset: 0x00249B7C
+	// Token: 0x060078B2 RID: 30898 RVA: 0x00255CE0 File Offset: 0x00253EE0
 	private void ProcessDisposableChallengeTabOpen(int jumpParma)
 	{
 		if (AdventureGuideModel.Instance.CheckTargetDungeonTypeCanShow((EDungeonType)jumpParma))
 		{
-			AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?(EUiTabViewName.DisposableChallengeView), new int?(jumpParma), null);
+			AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?(EUiTabViewName.DisposableChallengeView), new int?(jumpParma), null, null);
 			return;
 		}
 		AdventureGuideConfig instance = AdventureGuideConfig.Instance;
@@ -347,7 +346,7 @@ public class AdventureTargetItem : GridProxyAbstract<AdventureTaskRecord>
 		GenericPromptController.Instance.ShowPromptByCode("NotOpen", Array.Empty<object>());
 	}
 
-	// Token: 0x04004A8D RID: 19085
+	// Token: 0x04004B34 RID: 19252
 	[Nullable(new byte[]
 	{
 		2,
@@ -355,53 +354,53 @@ public class AdventureTargetItem : GridProxyAbstract<AdventureTaskRecord>
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> Layout;
 
-	// Token: 0x04004A8E RID: 19086
+	// Token: 0x04004B35 RID: 19253
 	public int AdventureId;
 
-	// Token: 0x04004A8F RID: 19087
+	// Token: 0x04004B36 RID: 19254
 	[Nullable(2)]
 	private AdventureTaskRecord Data;
 
-	// Token: 0x04004A90 RID: 19088
+	// Token: 0x04004B37 RID: 19255
 	[Nullable(2)]
 	private UUIExtendToggle ExtendToggle;
 
-	// Token: 0x04004A91 RID: 19089
+	// Token: 0x04004B38 RID: 19256
 	[Nullable(2)]
 	private Action<int> ClickGetButtonCb;
 
-	// Token: 0x04004A92 RID: 19090
+	// Token: 0x04004B39 RID: 19257
 	private bool Clicking;
 
-	// Token: 0x02007C6C RID: 31852
+	// Token: 0x02006DF1 RID: 28145
 	[NullableContext(0)]
 	private enum EAdventureItemNode
 	{
-		// Token: 0x04028D0D RID: 167181
+		// Token: 0x04024036 RID: 147510
 		ItemText,
-		// Token: 0x04028D0E RID: 167182
+		// Token: 0x04024037 RID: 147511
 		RewardItem,
-		// Token: 0x04028D0F RID: 167183
+		// Token: 0x04024038 RID: 147512
 		RedirectBtn,
-		// Token: 0x04028D10 RID: 167184
+		// Token: 0x04024039 RID: 147513
 		RewardLayout,
-		// Token: 0x04028D11 RID: 167185
+		// Token: 0x0402403A RID: 147514
 		RedPointItem,
-		// Token: 0x04028D12 RID: 167186
+		// Token: 0x0402403B RID: 147515
 		ProgressText,
-		// Token: 0x04028D13 RID: 167187
+		// Token: 0x0402403C RID: 147516
 		RewardScroll,
-		// Token: 0x04028D14 RID: 167188
+		// Token: 0x0402403D RID: 147517
 		DoingText,
-		// Token: 0x04028D15 RID: 167189
+		// Token: 0x0402403E RID: 147518
 		FinishItem,
-		// Token: 0x04028D16 RID: 167190
+		// Token: 0x0402403F RID: 147519
 		GetButton,
-		// Token: 0x04028D17 RID: 167191
+		// Token: 0x04024040 RID: 147520
 		TextureActiveBg,
-		// Token: 0x04028D18 RID: 167192
+		// Token: 0x04024041 RID: 147521
 		TextureDoneBg,
-		// Token: 0x04028D19 RID: 167193
+		// Token: 0x04024042 RID: 147522
 		ContentItem
 	}
 }

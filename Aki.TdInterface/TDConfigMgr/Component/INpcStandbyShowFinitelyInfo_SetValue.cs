@@ -4,24 +4,24 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200057D RID: 1405
+	// Token: 0x020005E6 RID: 1510
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class INpcStandbyShowFinitelyInfo_SetValue
 	{
-		// Token: 0x04001477 RID: 5239
+		// Token: 0x040015E5 RID: 5605
 		public string Montage;
 
-		// Token: 0x04001478 RID: 5240
+		// Token: 0x040015E6 RID: 5606
 		public IMontageId RegisteredMontageId;
 
-		// Token: 0x04001479 RID: 5241
+		// Token: 0x040015E7 RID: 5607
 		public int? FaceExpressionId;
 
-		// Token: 0x0400147A RID: 5242
+		// Token: 0x040015E8 RID: 5608
 		public int Time;
 
-		// Token: 0x0400147B RID: 5243
+		// Token: 0x040015E9 RID: 5609
 		public IIgnoreEntityIdsCollision IgnoreEntityCollision;
 	}
 }

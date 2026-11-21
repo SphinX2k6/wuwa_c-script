@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000327 RID: 807
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200036E RID: 878
 	public class IEntityMatchConfig
 	{
-		// Token: 0x06000FE0 RID: 4064 RVA: 0x00037AB0 File Offset: 0x00035CB0
+		// Token: 0x06001112 RID: 4370 RVA: 0x0003AA7C File Offset: 0x00038C7C
 		private IEntityMatchConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000FE1 RID: 4065 RVA: 0x00037AE8 File Offset: 0x00035CE8
+		// Token: 0x06001113 RID: 4371 RVA: 0x0003AAB4 File Offset: 0x00038CB4
 		public static IEntityMatchConfig Create([Nullable(2)] IEntityMatchConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000FE2 RID: 4066 RVA: 0x00037AFB File Offset: 0x00035CFB
+		// Token: 0x06001114 RID: 4372 RVA: 0x0003AAC7 File Offset: 0x00038CC7
 		public static IEntityMatchConfig CreateFromSetValue([Nullable(2)] IEntityMatchConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000FE3 RID: 4067 RVA: 0x00037B0E File Offset: 0x00035D0E
+		// Token: 0x06001115 RID: 4373 RVA: 0x0003AADA File Offset: 0x00038CDA
 		public IEntityMatchConfig_SetValue ToSetValue()
 		{
 			return new IEntityMatchConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000492 RID: 1170
-		// (get) Token: 0x06000FE4 RID: 4068 RVA: 0x00037B21 File Offset: 0x00035D21
-		// (set) Token: 0x06000FE5 RID: 4069 RVA: 0x00037B4C File Offset: 0x00035D4C
+		// Token: 0x170004E0 RID: 1248
+		// (get) Token: 0x06001116 RID: 4374 RVA: 0x0003AAED File Offset: 0x00038CED
+		// (set) Token: 0x06001117 RID: 4375 RVA: 0x0003AB18 File Offset: 0x00038D18
 		public virtual EEntityMatchType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D7B RID: 3451
+		// Token: 0x04000E66 RID: 3686
 		[Nullable(2)]
 		protected IEntityMatchConfig FbInstance;
 
-		// Token: 0x04000D7C RID: 3452
+		// Token: 0x04000E67 RID: 3687
 		[Nullable(2)]
 		protected IEntityMatchConfig_SetValue PocoInterface;
 	}

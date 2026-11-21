@@ -3,16 +3,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x0200459B RID: 17819
+	// Token: 0x020034C3 RID: 13507
 	public class WuYinQuBattleNameDefines
 	{
-		// Token: 0x04018872 RID: 100466
+		// Token: 0x04012EAD RID: 77485
 		public static readonly FName GlobalBlackStoneErosion = new FName("GlobalBlackStoneErosion");
 
-		// Token: 0x04018873 RID: 100467
+		// Token: 0x04012EAE RID: 77486
 		public static readonly FName GlobalLandscapeCenterAndIntensity = new FName("GlobalLandscapeCenterAndIntensity");
 
-		// Token: 0x04018874 RID: 100468
+		// Token: 0x04012EAF RID: 77487
 		public static readonly FName GlobalLandscapeRadiusAndHardness = new FName("GlobalLandscapeRadiusAndHardness");
 	}
 }

@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020008F8 RID: 2296
+	// Token: 0x020008E7 RID: 2279
 	[NetMessage(EMessageId.LevelPlayFastReturnPosRequest)]
 	public sealed class LevelPlayFastReturnPosRequest : IMessage<LevelPlayFastReturnPosRequest>, IMessage, IEquatable<LevelPlayFastReturnPosRequest>, IDeepCloneable<LevelPlayFastReturnPosRequest>, IBufferMessage
 	{
-		// Token: 0x0600CAE6 RID: 51942 RVA: 0x001DF074 File Offset: 0x001DD274
+		// Token: 0x0600C9CA RID: 51658 RVA: 0x001DCD98 File Offset: 0x001DAF98
 		[NullableContext(1)]
 		public static LevelPlayFastReturnPosRequest Create()
 		{
 			return new LevelPlayFastReturnPosRequest();
 		}
 
-		// Token: 0x170028F7 RID: 10487
-		// (get) Token: 0x0600CAE7 RID: 51943 RVA: 0x001DF07B File Offset: 0x001DD27B
+		// Token: 0x170028B8 RID: 10424
+		// (get) Token: 0x0600C9CB RID: 51659 RVA: 0x001DCD9F File Offset: 0x001DAF9F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170028F8 RID: 10488
-		// (get) Token: 0x0600CAE8 RID: 51944 RVA: 0x001DF07E File Offset: 0x001DD27E
+		// Token: 0x170028B9 RID: 10425
+		// (get) Token: 0x0600C9CC RID: 51660 RVA: 0x001DCDA2 File Offset: 0x001DAFA2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600CAE9 RID: 51945 RVA: 0x001DF085 File Offset: 0x001DD285
+		// Token: 0x0600C9CD RID: 51661 RVA: 0x001DCDA9 File Offset: 0x001DAFA9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LevelPlayFastReturnPosRequest()
 		{
 		}
 
-		// Token: 0x0600CAEA RID: 51946 RVA: 0x001DF090 File Offset: 0x001DD290
+		// Token: 0x0600C9CE RID: 51662 RVA: 0x001DCDB4 File Offset: 0x001DAFB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LevelPlayFastReturnPosRequest(LevelPlayFastReturnPosRequest other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600CAEB RID: 51947 RVA: 0x001DF0E4 File Offset: 0x001DD2E4
+		// Token: 0x0600C9CF RID: 51663 RVA: 0x001DCE08 File Offset: 0x001DB008
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LevelPlayFastReturnPosRequest Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new LevelPlayFastReturnPosRequest(this);
 		}
 
-		// Token: 0x170028F9 RID: 10489
-		// (get) Token: 0x0600CAEC RID: 51948 RVA: 0x001DF0EC File Offset: 0x001DD2EC
-		// (set) Token: 0x0600CAED RID: 51949 RVA: 0x001DF0F4 File Offset: 0x001DD2F4
+		// Token: 0x170028BA RID: 10426
+		// (get) Token: 0x0600C9D0 RID: 51664 RVA: 0x001DCE10 File Offset: 0x001DB010
+		// (set) Token: 0x0600C9D1 RID: 51665 RVA: 0x001DCE18 File Offset: 0x001DB018
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LevelPlayId
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170028FA RID: 10490
-		// (get) Token: 0x0600CAEE RID: 51950 RVA: 0x001DF0FD File Offset: 0x001DD2FD
-		// (set) Token: 0x0600CAEF RID: 51951 RVA: 0x001DF105 File Offset: 0x001DD305
+		// Token: 0x170028BB RID: 10427
+		// (get) Token: 0x0600C9D2 RID: 51666 RVA: 0x001DCE21 File Offset: 0x001DB021
+		// (set) Token: 0x0600C9D3 RID: 51667 RVA: 0x001DCE29 File Offset: 0x001DB029
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TreeOwnerId
@@ -103,9 +103,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170028FB RID: 10491
-		// (get) Token: 0x0600CAF0 RID: 51952 RVA: 0x001DF10E File Offset: 0x001DD30E
-		// (set) Token: 0x0600CAF1 RID: 51953 RVA: 0x001DF116 File Offset: 0x001DD316
+		// Token: 0x170028BC RID: 10428
+		// (get) Token: 0x0600C9D4 RID: 51668 RVA: 0x001DCE32 File Offset: 0x001DB032
+		// (set) Token: 0x0600C9D5 RID: 51669 RVA: 0x001DCE3A File Offset: 0x001DB03A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long TreeIncId
@@ -120,9 +120,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170028FC RID: 10492
-		// (get) Token: 0x0600CAF2 RID: 51954 RVA: 0x001DF11F File Offset: 0x001DD31F
-		// (set) Token: 0x0600CAF3 RID: 51955 RVA: 0x001DF127 File Offset: 0x001DD327
+		// Token: 0x170028BD RID: 10429
+		// (get) Token: 0x0600C9D6 RID: 51670 RVA: 0x001DCE43 File Offset: 0x001DB043
+		// (set) Token: 0x0600C9D7 RID: 51671 RVA: 0x001DCE4B File Offset: 0x001DB04B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int NodeId
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600CAF4 RID: 51956 RVA: 0x001DF130 File Offset: 0x001DD330
+		// Token: 0x0600C9D8 RID: 51672 RVA: 0x001DCE54 File Offset: 0x001DB054
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return this.Equals(other as LevelPlayFastReturnPosRequest);
 		}
 
-		// Token: 0x0600CAF5 RID: 51957 RVA: 0x001DF140 File Offset: 0x001DD340
+		// Token: 0x0600C9D9 RID: 51673 RVA: 0x001DCE64 File Offset: 0x001DB064
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(LevelPlayFastReturnPosRequest other)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LevelPlayId == other.LevelPlayId && this.TreeOwnerId == other.TreeOwnerId && this.TreeIncId == other.TreeIncId && this.NodeId == other.NodeId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600CAF6 RID: 51958 RVA: 0x001DF1AC File Offset: 0x001DD3AC
+		// Token: 0x0600C9DA RID: 51674 RVA: 0x001DCED0 File Offset: 0x001DB0D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600CAF7 RID: 51959 RVA: 0x001DF236 File Offset: 0x001DD436
+		// Token: 0x0600C9DB RID: 51675 RVA: 0x001DCF5A File Offset: 0x001DB15A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600CAF8 RID: 51960 RVA: 0x001DF243 File Offset: 0x001DD443
+		// Token: 0x0600C9DC RID: 51676 RVA: 0x001DCF67 File Offset: 0x001DB167
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -198,30 +198,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600CAF9 RID: 51961 RVA: 0x001DF24C File Offset: 0x001DD44C
+		// Token: 0x0600C9DD RID: 51677 RVA: 0x001DCF70 File Offset: 0x001DB170
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.TreeIncId != 0L)
-			{
-				output.WriteRawTag(40);
-				output.WriteInt64(this.TreeIncId);
-			}
-			if (this.LevelPlayId != 0)
-			{
-				output.WriteRawTag(96);
-				output.WriteInt32(this.LevelPlayId);
-			}
 			if (this.TreeOwnerId != 0)
 			{
-				output.WriteRawTag(104);
+				output.WriteRawTag(24);
 				output.WriteInt32(this.TreeOwnerId);
 			}
 			if (this.NodeId != 0)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(32);
 				output.WriteInt32(this.NodeId);
+			}
+			if (this.LevelPlayId != 0)
+			{
+				output.WriteRawTag(56);
+				output.WriteInt32(this.LevelPlayId);
+			}
+			if (this.TreeIncId != 0L)
+			{
+				output.WriteRawTag(64);
+				output.WriteInt64(this.TreeIncId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600CAFA RID: 51962 RVA: 0x001DF2E0 File Offset: 0x001DD4E0
+		// Token: 0x0600C9DE RID: 51678 RVA: 0x001DD004 File Offset: 0x001DB204
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600CAFB RID: 51963 RVA: 0x001DF368 File Offset: 0x001DD568
+		// Token: 0x0600C9DF RID: 51679 RVA: 0x001DD08C File Offset: 0x001DB28C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(LevelPlayFastReturnPosRequest other)
@@ -286,7 +286,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600CAFC RID: 51964 RVA: 0x001DF3E0 File Offset: 0x001DD5E0
+		// Token: 0x0600C9E0 RID: 51680 RVA: 0x001DD104 File Offset: 0x001DB304
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600CAFD RID: 51965 RVA: 0x001DF3EC File Offset: 0x001DD5EC
+		// Token: 0x0600C9E1 RID: 51681 RVA: 0x001DD110 File Offset: 0x001DB310
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -306,29 +306,29 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 96U)
+				if (num <= 32U)
 				{
-					if (num == 40U)
+					if (num == 24U)
 					{
-						this.TreeIncId = input.ReadInt64();
+						this.TreeOwnerId = input.ReadInt32();
 						continue;
 					}
-					if (num == 96U)
+					if (num == 32U)
 					{
-						this.LevelPlayId = input.ReadInt32();
+						this.NodeId = input.ReadInt32();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 104U)
+					if (num == 56U)
 					{
-						this.TreeOwnerId = input.ReadInt32();
+						this.LevelPlayId = input.ReadInt32();
 						continue;
 					}
-					if (num == 120U)
+					if (num == 64U)
 					{
-						this.NodeId = input.ReadInt32();
+						this.TreeIncId = input.ReadInt64();
 						continue;
 					}
 				}
@@ -336,31 +336,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005642 RID: 22082
+		// Token: 0x04005649 RID: 22089
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005643 RID: 22083
-		public const int LevelPlayIdFieldNumber = 12;
+		// Token: 0x0400564A RID: 22090
+		public const int LevelPlayIdFieldNumber = 7;
 
-		// Token: 0x04005644 RID: 22084
+		// Token: 0x0400564B RID: 22091
 		private int levelPlayId_;
 
-		// Token: 0x04005645 RID: 22085
-		public const int TreeOwnerIdFieldNumber = 13;
+		// Token: 0x0400564C RID: 22092
+		public const int TreeOwnerIdFieldNumber = 3;
 
-		// Token: 0x04005646 RID: 22086
+		// Token: 0x0400564D RID: 22093
 		private int treeOwnerId_;
 
-		// Token: 0x04005647 RID: 22087
-		public const int TreeIncIdFieldNumber = 5;
+		// Token: 0x0400564E RID: 22094
+		public const int TreeIncIdFieldNumber = 8;
 
-		// Token: 0x04005648 RID: 22088
+		// Token: 0x0400564F RID: 22095
 		private long treeIncId_;
 
-		// Token: 0x04005649 RID: 22089
-		public const int NodeIdFieldNumber = 15;
+		// Token: 0x04005650 RID: 22096
+		public const int NodeIdFieldNumber = 4;
 
-		// Token: 0x0400564A RID: 22090
+		// Token: 0x04005651 RID: 22097
 		private int nodeId_;
 	}
 }

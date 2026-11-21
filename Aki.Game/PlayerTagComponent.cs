@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003294 RID: 12948
+// Token: 0x02002805 RID: 10245
 [NullableContext(2)]
 [Nullable(0)]
 public class PlayerTagComponent : BaseTagComponent
 {
-	// Token: 0x0601C092 RID: 114834 RVA: 0x007CB729 File Offset: 0x007C9929
+	// Token: 0x06019CBB RID: 105659 RVA: 0x007F29E5 File Offset: 0x007F0BE5
 	protected override bool OnCreate(IEntityArgs args = null)
 	{
 		this.TagContainer.AddAnyExactTagListener(new TAnyTagChangeCallback(this.OnAnyExactTagChanged));
 		return true;
 	}
 
-	// Token: 0x0601C093 RID: 114835 RVA: 0x007CB744 File Offset: 0x007C9944
+	// Token: 0x06019CBC RID: 105660 RVA: 0x007F2A00 File Offset: 0x007F0C00
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
 		CreatureDataComponent creatureDataComponent = base.Entity.CheckGetComponent<CreatureDataComponent>();
@@ -21,7 +21,7 @@ public class PlayerTagComponent : BaseTagComponent
 		return true;
 	}
 
-	// Token: 0x0601C094 RID: 114836 RVA: 0x007CB770 File Offset: 0x007C9970
+	// Token: 0x06019CBD RID: 105661 RVA: 0x007F2A2C File Offset: 0x007F0C2C
 	protected override bool OnClear()
 	{
 		Log instance = Log.Instance;
@@ -52,7 +52,7 @@ public class PlayerTagComponent : BaseTagComponent
 		return true;
 	}
 
-	// Token: 0x0601C095 RID: 114837 RVA: 0x007CB860 File Offset: 0x007C9A60
+	// Token: 0x06019CBE RID: 105662 RVA: 0x007F2B1C File Offset: 0x007F0D1C
 	public Entity GetEntity()
 	{
 		SceneTeamItem teamItem = SceneTeamModel.Instance.GetTeamItem((long)this.PlayerId, new GetTeamItemOptions
@@ -72,7 +72,7 @@ public class PlayerTagComponent : BaseTagComponent
 		return entityHandle.Entity;
 	}
 
-	// Token: 0x0601C096 RID: 114838 RVA: 0x007CB8AC File Offset: 0x007C9AAC
+	// Token: 0x06019CBF RID: 105663 RVA: 0x007F2B68 File Offset: 0x007F0D68
 	public BaseTagComponent GetCurrentTagComponent()
 	{
 		Entity entity = this.GetEntity();
@@ -83,20 +83,20 @@ public class PlayerTagComponent : BaseTagComponent
 		return entity.GetComponent<BaseTagComponent>();
 	}
 
-	// Token: 0x0601C097 RID: 114839 RVA: 0x007CB8BF File Offset: 0x007C9ABF
+	// Token: 0x06019CC0 RID: 105664 RVA: 0x007F2B7B File Offset: 0x007F0D7B
 	public bool TagContainerHasTag(int tagId)
 	{
 		return base.HasTag(tagId);
 	}
 
-	// Token: 0x0601C098 RID: 114840 RVA: 0x007CB8C8 File Offset: 0x007C9AC8
+	// Token: 0x06019CC1 RID: 105665 RVA: 0x007F2B84 File Offset: 0x007F0D84
 	public override bool HasTag(int tagId)
 	{
 		BaseTagComponent currentTagComponent = this.GetCurrentTagComponent();
 		return currentTagComponent != null && currentTagComponent.HasTag(tagId);
 	}
 
-	// Token: 0x0601C099 RID: 114841 RVA: 0x007CB8DC File Offset: 0x007C9ADC
+	// Token: 0x06019CC2 RID: 105666 RVA: 0x007F2B98 File Offset: 0x007F0D98
 	protected void OnAnyExactTagChanged(int tagId, int newCount, int oldCount, int exactTagId)
 	{
 		if (tagId == 0 || oldCount == newCount)
@@ -121,7 +121,7 @@ public class PlayerTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x0601C09A RID: 114842 RVA: 0x007CB96C File Offset: 0x007C9B6C
+	// Token: 0x06019CC3 RID: 105667 RVA: 0x007F2C28 File Offset: 0x007F0E28
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -130,17 +130,64 @@ public class PlayerTagComponent : BaseTagComponent
 			return false;
 		}
 		PlayerTagComponent playerTagComponent = (PlayerTagComponent)componentTemplate;
-		if (base.CanResetComponentProperty("PlayerId"))
-		{
-			this.PlayerId = playerTagComponent.PlayerId;
-		}
+		this.PlayerId = playerTagComponent.PlayerId;
 		return true;
 	}
 
-	// Token: 0x0400DD95 RID: 56725
+	// Token: 0x17002991 RID: 10641
+	// (get) Token: 0x06019CC4 RID: 105668 RVA: 0x007F2C54 File Offset: 0x007F0E54
+	public override bool NeedCreateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002992 RID: 10642
+	// (get) Token: 0x06019CC5 RID: 105669 RVA: 0x007F2C57 File Offset: 0x007F0E57
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002993 RID: 10643
+	// (get) Token: 0x06019CC6 RID: 105670 RVA: 0x007F2C5A File Offset: 0x007F0E5A
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002994 RID: 10644
+	// (get) Token: 0x06019CC7 RID: 105671 RVA: 0x007F2C5D File Offset: 0x007F0E5D
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002995 RID: 10645
+	// (get) Token: 0x06019CC8 RID: 105672 RVA: 0x007F2C60 File Offset: 0x007F0E60
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E23C RID: 57916
 	public int PlayerId;
 
-	// Token: 0x0400DD96 RID: 56726
+	// Token: 0x0400E23D RID: 57917
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnAnyExactTagChangedStat = Stat.Create("PlayerTagComponent.OnAnyExactTagChanged", "", "");

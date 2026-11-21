@@ -5,60 +5,60 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000523 RID: 1315
+	// Token: 0x0200058A RID: 1418
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IMotorEjectHook_SetValue
 	{
-		// Token: 0x04001342 RID: 4930
+		// Token: 0x040014AC RID: 5292
 		public EHookInteractType Type;
 
-		// Token: 0x04001343 RID: 4931
+		// Token: 0x040014AD RID: 5293
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> HookActions;
 
-		// Token: 0x04001344 RID: 4932
+		// Token: 0x040014AE RID: 5294
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> ExitHookActions;
 
-		// Token: 0x04001345 RID: 4933
+		// Token: 0x040014AF RID: 5295
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> FinishActions;
 
-		// Token: 0x04001346 RID: 4934
+		// Token: 0x040014B0 RID: 5296
 		public IClientHookActionConfig ClientHookActionConfig;
 
-		// Token: 0x04001347 RID: 4935
+		// Token: 0x040014B1 RID: 5297
 		public float MinPitchAngle;
 
-		// Token: 0x04001348 RID: 4936
+		// Token: 0x040014B2 RID: 5298
 		public float DefaultPitchAngle;
 
-		// Token: 0x04001349 RID: 4937
+		// Token: 0x040014B3 RID: 5299
 		public float MaxPitchAngle;
 
-		// Token: 0x0400134A RID: 4938
+		// Token: 0x040014B4 RID: 5300
 		public float MaxYawAngleDelta;
 
-		// Token: 0x0400134B RID: 4939
+		// Token: 0x040014B5 RID: 5301
 		public float MaxEjectDistance;
 
-		// Token: 0x0400134C RID: 4940
+		// Token: 0x040014B6 RID: 5302
 		public float InterpSpeed;
 
-		// Token: 0x0400134D RID: 4941
+		// Token: 0x040014B7 RID: 5303
 		public IMotorAutoEjectConfigBase AutoEjectConfig;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028F6 RID: 10486
+	// Token: 0x02002BCF RID: 11215
 	public class IExploreConfig
 	{
-		// Token: 0x0600E8E9 RID: 59625 RVA: 0x00222AFD File Offset: 0x00220CFD
-		[NullableContext(1)]
+		// Token: 0x0600F72D RID: 63277 RVA: 0x0023FCE9 File Offset: 0x0023DEE9
 		public static IExploreConfig Create(IExploreConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048BF RID: 18623
-		// (get) Token: 0x0600E8EA RID: 59626 RVA: 0x00222B1C File Offset: 0x00220D1C
+		// Token: 0x17004C3D RID: 19517
+		// (get) Token: 0x0600F72E RID: 63278 RVA: 0x0023FD08 File Offset: 0x0023DF08
 		public virtual EExploreStateType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008094 RID: 32916
+		// Token: 0x04008759 RID: 34649
 		private IExploreConfig Instance;
 	}
 }

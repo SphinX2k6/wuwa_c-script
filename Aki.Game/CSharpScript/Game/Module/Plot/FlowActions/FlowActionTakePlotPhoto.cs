@@ -4,10 +4,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050DC RID: 20700
+	// Token: 0x020040AC RID: 16556
 	public class FlowActionTakePlotPhoto : FlowActionBase
 	{
-		// Token: 0x06034F68 RID: 216936 RVA: 0x00C8BDC8 File Offset: 0x00C89FC8
+		// Token: 0x06029E61 RID: 171617 RVA: 0x00BD90B0 File Offset: 0x00BD72B0
 		protected override void OnExecute()
 		{
 			if (!(this.ActionInfo.Params is TakePlotPhoto))
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}
 		}
 
-		// Token: 0x06034F69 RID: 216937 RVA: 0x00C8BE1D File Offset: 0x00C8A01D
+		// Token: 0x06029E62 RID: 171618 RVA: 0x00BD9105 File Offset: 0x00BD7305
 		private void OnViewClose()
 		{
 			base.FinishExecute(true, true);

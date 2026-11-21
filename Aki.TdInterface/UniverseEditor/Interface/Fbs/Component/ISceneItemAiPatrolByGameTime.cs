@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058AC RID: 22700
+	// Token: 0x02005EB9 RID: 24249
 	public struct ISceneItemAiPatrolByGameTime : IFlatbufferObject
 	{
-		// Token: 0x1700A9FA RID: 43514
-		// (get) Token: 0x060264C8 RID: 156872 RVA: 0x005478BF File Offset: 0x00545ABF
+		// Token: 0x1700B32A RID: 45866
+		// (get) Token: 0x06028A2A RID: 166442 RVA: 0x0058E40B File Offset: 0x0058C60B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060264C9 RID: 156873 RVA: 0x005478CC File Offset: 0x00545ACC
+		// Token: 0x06028A2B RID: 166443 RVA: 0x0058E418 File Offset: 0x0058C618
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060264CA RID: 156874 RVA: 0x005478D4 File Offset: 0x00545AD4
+		// Token: 0x06028A2C RID: 166444 RVA: 0x0058E420 File Offset: 0x0058C620
 		public static ISceneItemAiPatrolByGameTime GetRootAsISceneItemAiPatrolByGameTime(ByteBuffer _bb)
 		{
 			return ISceneItemAiPatrolByGameTime.GetRootAsISceneItemAiPatrolByGameTime(_bb, default(ISceneItemAiPatrolByGameTime));
 		}
 
-		// Token: 0x060264CB RID: 156875 RVA: 0x005478F0 File Offset: 0x00545AF0
+		// Token: 0x06028A2D RID: 166445 RVA: 0x0058E43C File Offset: 0x0058C63C
 		public static ISceneItemAiPatrolByGameTime GetRootAsISceneItemAiPatrolByGameTime(ByteBuffer _bb, ISceneItemAiPatrolByGameTime obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060264CC RID: 156876 RVA: 0x0054790D File Offset: 0x00545B0D
+		// Token: 0x06028A2E RID: 166446 RVA: 0x0058E459 File Offset: 0x0058C659
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060264CD RID: 156877 RVA: 0x0054791C File Offset: 0x00545B1C
+		// Token: 0x06028A2F RID: 166447 RVA: 0x0058E468 File Offset: 0x0058C668
 		public ISceneItemAiPatrolByGameTime __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A9FB RID: 43515
-		// (get) Token: 0x060264CE RID: 156878 RVA: 0x0054792C File Offset: 0x00545B2C
+		// Token: 0x1700B32B RID: 45867
+		// (get) Token: 0x06028A30 RID: 166448 RVA: 0x0058E478 File Offset: 0x0058C678
 		public ESceneItemAiPatrolType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A9FC RID: 43516
-		// (get) Token: 0x060264CF RID: 156879 RVA: 0x00547968 File Offset: 0x00545B68
+		// Token: 0x1700B32C RID: 45868
+		// (get) Token: 0x06028A31 RID: 166449 RVA: 0x0058E4B4 File Offset: 0x0058C6B4
 		public int Spline
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060264D0 RID: 156880 RVA: 0x005479A4 File Offset: 0x00545BA4
+		// Token: 0x06028A32 RID: 166450 RVA: 0x0058E4F0 File Offset: 0x0058C6F0
 		public static Offset<ISceneItemAiPatrolByGameTime> CreateISceneItemAiPatrolByGameTime(FlatBufferBuilder builder, ESceneItemAiPatrolType Type = ESceneItemAiPatrolType.ByGameTime, int Spline = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISceneItemAiPatrolByGameTime.EndISceneItemAiPatrolByGameTime(builder);
 		}
 
-		// Token: 0x060264D1 RID: 156881 RVA: 0x005479C1 File Offset: 0x00545BC1
+		// Token: 0x06028A33 RID: 166451 RVA: 0x0058E50D File Offset: 0x0058C70D
 		public static void StartISceneItemAiPatrolByGameTime(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060264D2 RID: 156882 RVA: 0x005479CA File Offset: 0x00545BCA
+		// Token: 0x06028A34 RID: 166452 RVA: 0x0058E516 File Offset: 0x0058C716
 		public static void AddType(FlatBufferBuilder builder, ESceneItemAiPatrolType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060264D3 RID: 156883 RVA: 0x005479D5 File Offset: 0x00545BD5
+		// Token: 0x06028A35 RID: 166453 RVA: 0x0058E521 File Offset: 0x0058C721
 		public static void AddSpline(FlatBufferBuilder builder, int spline)
 		{
 			builder.AddInt(1, spline, 0);
 		}
 
-		// Token: 0x060264D4 RID: 156884 RVA: 0x005479E0 File Offset: 0x00545BE0
+		// Token: 0x06028A36 RID: 166454 RVA: 0x0058E52C File Offset: 0x0058C72C
 		public static Offset<ISceneItemAiPatrolByGameTime> EndISceneItemAiPatrolByGameTime(FlatBufferBuilder builder)
 		{
 			return new Offset<ISceneItemAiPatrolByGameTime>(builder.EndTable());
 		}
 
-		// Token: 0x060264D5 RID: 156885 RVA: 0x005479F0 File Offset: 0x00545BF0
+		// Token: 0x06028A37 RID: 166455 RVA: 0x0058E53C File Offset: 0x0058C73C
 		public ISceneItemAiPatrolByGameTimeT UnPack()
 		{
 			ISceneItemAiPatrolByGameTimeT sceneItemAiPatrolByGameTimeT = new ISceneItemAiPatrolByGameTimeT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return sceneItemAiPatrolByGameTimeT;
 		}
 
-		// Token: 0x060264D6 RID: 156886 RVA: 0x00547A0B File Offset: 0x00545C0B
+		// Token: 0x06028A38 RID: 166456 RVA: 0x0058E557 File Offset: 0x0058C757
 		public void UnPackTo(ISceneItemAiPatrolByGameTimeT _o)
 		{
 			_o.Type = this.Type;
 			_o.Spline = this.Spline;
 		}
 
-		// Token: 0x060264D7 RID: 156887 RVA: 0x00547A28 File Offset: 0x00545C28
+		// Token: 0x06028A39 RID: 166457 RVA: 0x0058E574 File Offset: 0x0058C774
 		public static Offset<ISceneItemAiPatrolByGameTime> Pack(FlatBufferBuilder builder, ISceneItemAiPatrolByGameTimeT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISceneItemAiPatrolByGameTime.CreateISceneItemAiPatrolByGameTime(builder, _o.Type, _o.Spline);
 		}
 
-		// Token: 0x0400EE18 RID: 60952
+		// Token: 0x0400FB0B RID: 64267
 		private Table __p;
 	}
 }

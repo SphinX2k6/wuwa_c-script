@@ -5,31 +5,31 @@ using AkiClient.Game.Aki.Character.NPC.Tuanzi;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002C9E RID: 11422
+// Token: 0x020021F7 RID: 8695
 [NullableContext(2)]
 [Nullable(0)]
 public class UiDangoStateMachineComponent : UiModelComponentBase
 {
-	// Token: 0x06017DEF RID: 97775 RVA: 0x00611B97 File Offset: 0x0060FD97
+	// Token: 0x06015663 RID: 87651 RVA: 0x0063771B File Offset: 0x0063591B
 	protected override void OnInit()
 	{
 		this.ModelDataComponent = base.Owner.CheckGetComponent<UiModelDataComponent>();
 		this.ActorComponent = base.Owner.CheckGetComponent<UiModelActorComponent>();
 	}
 
-	// Token: 0x06017DF0 RID: 97776 RVA: 0x00611BBB File Offset: 0x0060FDBB
+	// Token: 0x06015664 RID: 87652 RVA: 0x0063773F File Offset: 0x0063593F
 	protected override void OnStart()
 	{
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnDangoMeshLoadComplete));
 	}
 
-	// Token: 0x06017DF1 RID: 97777 RVA: 0x00611BDF File Offset: 0x0060FDDF
+	// Token: 0x06015665 RID: 87653 RVA: 0x00637763 File Offset: 0x00635963
 	protected override void OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnDangoMeshLoadComplete));
 	}
 
-	// Token: 0x06017DF2 RID: 97778 RVA: 0x00611C03 File Offset: 0x0060FE03
+	// Token: 0x06015666 RID: 87654 RVA: 0x00637787 File Offset: 0x00635987
 	public void SetState(EDangoState dangoState, float stateParam = 0f, float stateParam2 = 0f)
 	{
 		this.DangoState = dangoState;
@@ -38,7 +38,7 @@ public class UiDangoStateMachineComponent : UiModelComponentBase
 		this.Execute();
 	}
 
-	// Token: 0x06017DF3 RID: 97779 RVA: 0x00611C20 File Offset: 0x0060FE20
+	// Token: 0x06015667 RID: 87655 RVA: 0x006377A4 File Offset: 0x006359A4
 	private void Execute()
 	{
 		if (this.ModelDataComponent.GetModelLoadState() != EUiModelLoadState.LoadComplete)
@@ -65,7 +65,7 @@ public class UiDangoStateMachineComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017DF4 RID: 97780 RVA: 0x00611C7C File Offset: 0x0060FE7C
+	// Token: 0x06015668 RID: 87656 RVA: 0x00637800 File Offset: 0x00635A00
 	public ABP_TuanziNPC_C GetDangoBp()
 	{
 		UiModelActorComponent actorComponent = this.ActorComponent;
@@ -82,24 +82,24 @@ public class UiDangoStateMachineComponent : UiModelComponentBase
 		return actorComponent2.GetDangoAnimInstanceFromSkeletalMesh(uskeletalMeshComponent);
 	}
 
-	// Token: 0x06017DF5 RID: 97781 RVA: 0x00611CB3 File Offset: 0x0060FEB3
+	// Token: 0x06015669 RID: 87657 RVA: 0x00637837 File Offset: 0x00635A37
 	public void OnDangoMeshLoadComplete()
 	{
 		this.Execute();
 	}
 
-	// Token: 0x0400B1F6 RID: 45558
+	// Token: 0x0400B561 RID: 46433
 	private EDangoState DangoState;
 
-	// Token: 0x0400B1F7 RID: 45559
+	// Token: 0x0400B562 RID: 46434
 	private float DangoStateParam;
 
-	// Token: 0x0400B1F8 RID: 45560
+	// Token: 0x0400B563 RID: 46435
 	private float DangoStateParam2;
 
-	// Token: 0x0400B1F9 RID: 45561
+	// Token: 0x0400B564 RID: 46436
 	private UiModelDataComponent ModelDataComponent;
 
-	// Token: 0x0400B1FA RID: 45562
+	// Token: 0x0400B565 RID: 46437
 	private UiModelActorComponent ActorComponent;
 }

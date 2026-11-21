@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005F4 RID: 1524
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000691 RID: 1681
 	public class IPetalGrabEvent
 	{
-		// Token: 0x0600205E RID: 8286 RVA: 0x0005A268 File Offset: 0x00058468
+		// Token: 0x06002360 RID: 9056 RVA: 0x00060EE4 File Offset: 0x0005F0E4
 		private IPetalGrabEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600205F RID: 8287 RVA: 0x0005A2A0 File Offset: 0x000584A0
+		// Token: 0x06002361 RID: 9057 RVA: 0x00060F1C File Offset: 0x0005F11C
 		public static IPetalGrabEvent Create([Nullable(2)] IPetalGrabEvent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002060 RID: 8288 RVA: 0x0005A2B3 File Offset: 0x000584B3
+		// Token: 0x06002362 RID: 9058 RVA: 0x00060F2F File Offset: 0x0005F12F
 		public static IPetalGrabEvent CreateFromSetValue([Nullable(2)] IPetalGrabEvent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002061 RID: 8289 RVA: 0x0005A2C6 File Offset: 0x000584C6
+		// Token: 0x06002363 RID: 9059 RVA: 0x00060F42 File Offset: 0x0005F142
 		public IPetalGrabEvent_SetValue ToSetValue()
 		{
 			return new IPetalGrabEvent_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008A0 RID: 2208
-		// (get) Token: 0x06002062 RID: 8290 RVA: 0x0005A2E5 File Offset: 0x000584E5
-		// (set) Token: 0x06002063 RID: 8291 RVA: 0x0005A310 File Offset: 0x00058510
+		// Token: 0x17000955 RID: 2389
+		// (get) Token: 0x06002364 RID: 9060 RVA: 0x00060F61 File Offset: 0x0005F161
+		// (set) Token: 0x06002365 RID: 9061 RVA: 0x00060F8C File Offset: 0x0005F18C
 		public virtual EPetalGrabEventType EventType
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008A1 RID: 2209
-		// (get) Token: 0x06002064 RID: 8292 RVA: 0x0005A31E File Offset: 0x0005851E
-		// (set) Token: 0x06002065 RID: 8293 RVA: 0x0005A349 File Offset: 0x00058549
+		// Token: 0x17000956 RID: 2390
+		// (get) Token: 0x06002366 RID: 9062 RVA: 0x00060F9A File Offset: 0x0005F19A
+		// (set) Token: 0x06002367 RID: 9063 RVA: 0x00060FC5 File Offset: 0x0005F1C5
 		public virtual string State
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040016B6 RID: 5814
+		// Token: 0x040018A6 RID: 6310
 		[Nullable(2)]
 		protected IPetalGrabEvent FbInstance;
 
-		// Token: 0x040016B7 RID: 5815
+		// Token: 0x040018A7 RID: 6311
 		[Nullable(2)]
 		protected IPetalGrabEvent_SetValue PocoInterface;
 	}

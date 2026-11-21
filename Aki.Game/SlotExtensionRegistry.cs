@@ -5,12 +5,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BD0 RID: 7120
+// Token: 0x0200108F RID: 4239
 [NullableContext(1)]
 [Nullable(0)]
 public class SlotExtensionRegistry
 {
-	// Token: 0x0600D454 RID: 54356 RVA: 0x0030DCA0 File Offset: 0x0030BEA0
+	// Token: 0x0600A866 RID: 43110 RVA: 0x00318E14 File Offset: 0x00317014
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -28,7 +28,7 @@ public class SlotExtensionRegistry
 		return <AttachAll>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D455 RID: 54357 RVA: 0x0030DCEC File Offset: 0x0030BEEC
+	// Token: 0x0600A867 RID: 43111 RVA: 0x00318E60 File Offset: 0x00317060
 	private static UniTask SafeAttach(ISlotExtension ext, ISlotMountPoint mount, int position)
 	{
 		SlotExtensionRegistry.<SafeAttach>d__1 <SafeAttach>d__;
@@ -41,7 +41,7 @@ public class SlotExtensionRegistry
 		return <SafeAttach>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D456 RID: 54358 RVA: 0x0030DD40 File Offset: 0x0030BF40
+	// Token: 0x0600A868 RID: 43112 RVA: 0x00318EB4 File Offset: 0x003170B4
 	public static void DetachAll(List<ISlotExtension> extensions)
 	{
 		foreach (ISlotExtension slotExtension in extensions)
@@ -62,7 +62,7 @@ public class SlotExtensionRegistry
 		}
 	}
 
-	// Token: 0x0600D457 RID: 54359 RVA: 0x0030DDC4 File Offset: 0x0030BFC4
+	// Token: 0x0600A869 RID: 43113 RVA: 0x00318F38 File Offset: 0x00317138
 	public static void InvokeRefresh(List<ISlotExtension> extensions, IRoleSlotDisplayData data)
 	{
 		foreach (ISlotExtension slotExtension in extensions)
@@ -83,7 +83,7 @@ public class SlotExtensionRegistry
 		}
 	}
 
-	// Token: 0x0600D458 RID: 54360 RVA: 0x0030DE4C File Offset: 0x0030C04C
+	// Token: 0x0600A86A RID: 43114 RVA: 0x00318FC0 File Offset: 0x003171C0
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -102,7 +102,7 @@ public class SlotExtensionRegistry
 		return null;
 	}
 
-	// Token: 0x0600D459 RID: 54361 RVA: 0x0030DEA4 File Offset: 0x0030C0A4
+	// Token: 0x0600A86B RID: 43115 RVA: 0x00319018 File Offset: 0x00317218
 	public static void InvokeStartMove(List<ISlotExtension> extensions)
 	{
 		foreach (ISlotExtension slotExtension in extensions)
@@ -123,7 +123,7 @@ public class SlotExtensionRegistry
 		}
 	}
 
-	// Token: 0x0600D45A RID: 54362 RVA: 0x0030DF28 File Offset: 0x0030C128
+	// Token: 0x0600A86C RID: 43116 RVA: 0x0031909C File Offset: 0x0031729C
 	public static void InvokeStopMove(List<ISlotExtension> extensions)
 	{
 		foreach (ISlotExtension slotExtension in extensions)

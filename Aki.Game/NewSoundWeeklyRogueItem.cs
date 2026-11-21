@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.AdventureGuide.Views;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016B1 RID: 5809
+// Token: 0x02000B69 RID: 2921
 public class NewSoundWeeklyRogueItem : UiPanelBase, INewSoundItem
 {
-	// Token: 0x0600A5B1 RID: 42417 RVA: 0x00250D08 File Offset: 0x0024EF08
+	// Token: 0x06007991 RID: 31121 RVA: 0x0025B118 File Offset: 0x00259318
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -28,7 +28,7 @@ public class NewSoundWeeklyRogueItem : UiPanelBase, INewSoundItem
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A5B2 RID: 42418 RVA: 0x00250DB4 File Offset: 0x0024EFB4
+	// Token: 0x06007992 RID: 31122 RVA: 0x0025B1C4 File Offset: 0x002593C4
 	[NullableContext(1)]
 	public void Update(NewSoundDetectItemData data)
 	{
@@ -41,16 +41,16 @@ public class NewSoundWeeklyRogueItem : UiPanelBase, INewSoundItem
 		}));
 	}
 
-	// Token: 0x02007C87 RID: 31879
+	// Token: 0x02006E0C RID: 28172
 	private enum EComponentsDefine
 	{
-		// Token: 0x04028DB3 RID: 167347
+		// Token: 0x040240DC RID: 147676
 		TxtName,
-		// Token: 0x04028DB4 RID: 167348
+		// Token: 0x040240DD RID: 147677
 		TextureIcon,
-		// Token: 0x04028DB5 RID: 167349
+		// Token: 0x040240DE RID: 147678
 		TxtTips,
-		// Token: 0x04028DB6 RID: 167350
+		// Token: 0x040240DF RID: 147679
 		SpriteIcon
 	}
 }

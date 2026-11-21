@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002120 RID: 8480
+// Token: 0x020015F8 RID: 5624
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorSummonGetOnLogEvent : PlayerCommonLogData
 {
-	// Token: 0x170014C6 RID: 5318
-	// (get) Token: 0x0601099C RID: 67996 RVA: 0x0040B860 File Offset: 0x00409A60
-	// (set) Token: 0x0601099D RID: 67997 RVA: 0x0040B868 File Offset: 0x00409A68
+	// Token: 0x170014F4 RID: 5364
+	// (get) Token: 0x0600DE0F RID: 56847 RVA: 0x00417FA8 File Offset: 0x004161A8
+	// (set) Token: 0x0600DE10 RID: 56848 RVA: 0x00417FB0 File Offset: 0x004161B0
 	public override string event_id { get; set; } = "2003";
 
-	// Token: 0x04007CFD RID: 31997
+	// Token: 0x04007E0B RID: 32267
 	public float pos_x;
 
-	// Token: 0x04007CFE RID: 31998
+	// Token: 0x04007E0C RID: 32268
 	public float pos_y;
 
-	// Token: 0x04007CFF RID: 31999
+	// Token: 0x04007E0D RID: 32269
 	public float pos_z;
 
-	// Token: 0x04007D00 RID: 32000
+	// Token: 0x04007E0E RID: 32270
 	public int operation_type;
 }

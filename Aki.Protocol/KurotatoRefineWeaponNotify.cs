@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020008AF RID: 2223
+	// Token: 0x0200089E RID: 2206
 	[NetMessage(EMessageId.KurotatoRefineWeaponNotify)]
 	public sealed class KurotatoRefineWeaponNotify : IMessage<KurotatoRefineWeaponNotify>, IMessage, IEquatable<KurotatoRefineWeaponNotify>, IDeepCloneable<KurotatoRefineWeaponNotify>, IBufferMessage
 	{
-		// Token: 0x0600C555 RID: 50517 RVA: 0x001D379D File Offset: 0x001D199D
+		// Token: 0x0600C439 RID: 50233 RVA: 0x001D14B8 File Offset: 0x001CF6B8
 		[NullableContext(1)]
 		public static KurotatoRefineWeaponNotify Create()
 		{
 			return new KurotatoRefineWeaponNotify();
 		}
 
-		// Token: 0x170027E2 RID: 10210
-		// (get) Token: 0x0600C556 RID: 50518 RVA: 0x001D37A4 File Offset: 0x001D19A4
+		// Token: 0x170027A3 RID: 10147
+		// (get) Token: 0x0600C43A RID: 50234 RVA: 0x001D14BF File Offset: 0x001CF6BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170027E3 RID: 10211
-		// (get) Token: 0x0600C557 RID: 50519 RVA: 0x001D37A7 File Offset: 0x001D19A7
+		// Token: 0x170027A4 RID: 10148
+		// (get) Token: 0x0600C43B RID: 50235 RVA: 0x001D14C2 File Offset: 0x001CF6C2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C558 RID: 50520 RVA: 0x001D37AE File Offset: 0x001D19AE
+		// Token: 0x0600C43C RID: 50236 RVA: 0x001D14C9 File Offset: 0x001CF6C9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoRefineWeaponNotify()
 		{
 		}
 
-		// Token: 0x0600C559 RID: 50521 RVA: 0x001D37C1 File Offset: 0x001D19C1
+		// Token: 0x0600C43D RID: 50237 RVA: 0x001D14DC File Offset: 0x001CF6DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoRefineWeaponNotify(KurotatoRefineWeaponNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600C55A RID: 50522 RVA: 0x001D37F7 File Offset: 0x001D19F7
+		// Token: 0x0600C43E RID: 50238 RVA: 0x001D1512 File Offset: 0x001CF712
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoRefineWeaponNotify Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol
 			return new KurotatoRefineWeaponNotify(this);
 		}
 
-		// Token: 0x170027E4 RID: 10212
-		// (get) Token: 0x0600C55B RID: 50523 RVA: 0x001D37FF File Offset: 0x001D19FF
+		// Token: 0x170027A5 RID: 10149
+		// (get) Token: 0x0600C43F RID: 50239 RVA: 0x001D151A File Offset: 0x001CF71A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> RefinedWeaponIncIds
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170027E5 RID: 10213
-		// (get) Token: 0x0600C55C RID: 50524 RVA: 0x001D3807 File Offset: 0x001D1A07
-		// (set) Token: 0x0600C55D RID: 50525 RVA: 0x001D380F File Offset: 0x001D1A0F
+		// Token: 0x170027A6 RID: 10150
+		// (get) Token: 0x0600C440 RID: 50240 RVA: 0x001D1522 File Offset: 0x001CF722
+		// (set) Token: 0x0600C441 RID: 50241 RVA: 0x001D152A File Offset: 0x001CF72A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int NewWeaponIncId
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C55E RID: 50526 RVA: 0x001D3818 File Offset: 0x001D1A18
+		// Token: 0x0600C442 RID: 50242 RVA: 0x001D1533 File Offset: 0x001CF733
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as KurotatoRefineWeaponNotify);
 		}
 
-		// Token: 0x0600C55F RID: 50527 RVA: 0x001D3828 File Offset: 0x001D1A28
+		// Token: 0x0600C443 RID: 50243 RVA: 0x001D1544 File Offset: 0x001CF744
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(KurotatoRefineWeaponNotify other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.refinedWeaponIncIds_.Equals(other.refinedWeaponIncIds_) && this.NewWeaponIncId == other.NewWeaponIncId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600C560 RID: 50528 RVA: 0x001D3878 File Offset: 0x001D1A78
+		// Token: 0x0600C444 RID: 50244 RVA: 0x001D1594 File Offset: 0x001CF794
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C561 RID: 50529 RVA: 0x001D38C5 File Offset: 0x001D1AC5
+		// Token: 0x0600C445 RID: 50245 RVA: 0x001D15E1 File Offset: 0x001CF7E1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600C562 RID: 50530 RVA: 0x001D38D2 File Offset: 0x001D1AD2
+		// Token: 0x0600C446 RID: 50246 RVA: 0x001D15EE File Offset: 0x001CF7EE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,24 +147,24 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600C563 RID: 50531 RVA: 0x001D38DC File Offset: 0x001D1ADC
+		// Token: 0x0600C447 RID: 50247 RVA: 0x001D15F8 File Offset: 0x001CF7F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.refinedWeaponIncIds_.WriteTo(ref output, KurotatoRefineWeaponNotify._repeated_refinedWeaponIncIds_codec);
 			if (this.NewWeaponIncId != 0)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(24);
 				output.WriteInt32(this.NewWeaponIncId);
 			}
+			this.refinedWeaponIncIds_.WriteTo(ref output, KurotatoRefineWeaponNotify._repeated_refinedWeaponIncIds_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0600C564 RID: 50532 RVA: 0x001D392C File Offset: 0x001D1B2C
+		// Token: 0x0600C448 RID: 50248 RVA: 0x001D1648 File Offset: 0x001CF848
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C565 RID: 50533 RVA: 0x001D3980 File Offset: 0x001D1B80
+		// Token: 0x0600C449 RID: 50249 RVA: 0x001D169C File Offset: 0x001CF89C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(KurotatoRefineWeaponNotify other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600C566 RID: 50534 RVA: 0x001D39CD File Offset: 0x001D1BCD
+		// Token: 0x0600C44A RID: 50250 RVA: 0x001D16E9 File Offset: 0x001CF8E9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600C567 RID: 50535 RVA: 0x001D39D8 File Offset: 0x001D1BD8
+		// Token: 0x0600C44B RID: 50251 RVA: 0x001D16F4 File Offset: 0x001CF8F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,40 +219,40 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 32U && num != 34U)
+				if (num != 24U)
 				{
-					if (num != 120U)
+					if (num != 32U && num != 34U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.NewWeaponIncId = input.ReadInt32();
+						this.refinedWeaponIncIds_.AddEntriesFrom(ref input, KurotatoRefineWeaponNotify._repeated_refinedWeaponIncIds_codec);
 					}
 				}
 				else
 				{
-					this.refinedWeaponIncIds_.AddEntriesFrom(ref input, KurotatoRefineWeaponNotify._repeated_refinedWeaponIncIds_codec);
+					this.NewWeaponIncId = input.ReadInt32();
 				}
 			}
 		}
 
-		// Token: 0x040054EF RID: 21743
+		// Token: 0x040054F6 RID: 21750
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040054F0 RID: 21744
+		// Token: 0x040054F7 RID: 21751
 		public const int RefinedWeaponIncIdsFieldNumber = 4;
 
-		// Token: 0x040054F1 RID: 21745
+		// Token: 0x040054F8 RID: 21752
 		private static readonly FieldCodec<int> _repeated_refinedWeaponIncIds_codec = FieldCodec.ForInt32(34U);
 
-		// Token: 0x040054F2 RID: 21746
+		// Token: 0x040054F9 RID: 21753
 		private readonly RepeatedField<int> refinedWeaponIncIds_ = new RepeatedField<int>();
 
-		// Token: 0x040054F3 RID: 21747
-		public const int NewWeaponIncIdFieldNumber = 15;
+		// Token: 0x040054FA RID: 21754
+		public const int NewWeaponIncIdFieldNumber = 3;
 
-		// Token: 0x040054F4 RID: 21748
+		// Token: 0x040054FB RID: 21755
 		private int newWeaponIncId_;
 	}
 }

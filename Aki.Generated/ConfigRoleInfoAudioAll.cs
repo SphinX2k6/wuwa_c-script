@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008AF RID: 2223
+	// Token: 0x020008CB RID: 2251
 	public class ConfigRoleInfoAudioAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600342D RID: 13357 RVA: 0x00180267 File Offset: 0x0017E467
+		// Token: 0x060034D5 RID: 13525 RVA: 0x0018754F File Offset: 0x0018574F
 		static ConfigRoleInfoAudioAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleInfoAudioAll.CreateStaticDefaultValue), new Action(ConfigRoleInfoAudioAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600342E RID: 13358 RVA: 0x00180288 File Offset: 0x0017E488
+		// Token: 0x060034D6 RID: 13526 RVA: 0x00187570 File Offset: 0x00185770
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleInfoAudioAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600342F RID: 13359 RVA: 0x00180307 File Offset: 0x0017E507
+		// Token: 0x060034D7 RID: 13527 RVA: 0x001875EF File Offset: 0x001857EF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleInfoAudioAll.LogPair = null;
 			ConfigRoleInfoAudioAll.HandleId = 0;
 		}
 
-		// Token: 0x06003430 RID: 13360 RVA: 0x00180315 File Offset: 0x0017E515
+		// Token: 0x060034D8 RID: 13528 RVA: 0x001875FD File Offset: 0x001857FD
 		public static void Init()
 		{
 			ConfigRoleInfoAudioAll.HandleId = ConfigCommon.InitDataStatement(ConfigRoleInfoAudioAll.HandleId, "db_audio.db", "select BinData from `RoleInfoAudio`");
 		}
 
-		// Token: 0x06003431 RID: 13361 RVA: 0x00180330 File Offset: 0x0017E530
+		// Token: 0x060034D9 RID: 13529 RVA: 0x00187618 File Offset: 0x00185818
 		[NullableContext(2)]
 		public static IReadOnlyList<RoleInfoAudio> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003CAF RID: 15535
+		// Token: 0x04003D73 RID: 15731
 		private const string DB = "db_audio.db";
 
-		// Token: 0x04003CB0 RID: 15536
+		// Token: 0x04003D74 RID: 15732
 		private const string FILE = "y.音频_角色音频.xlsx";
 
-		// Token: 0x04003CB1 RID: 15537
+		// Token: 0x04003D75 RID: 15733
 		private const string TABLE = "RoleInfoAudio";
 
-		// Token: 0x04003CB2 RID: 15538
+		// Token: 0x04003D76 RID: 15734
 		private const string COMMAND = "select BinData from `RoleInfoAudio`";
 
-		// Token: 0x04003CB3 RID: 15539
+		// Token: 0x04003D77 RID: 15735
 		private const string KEY_PREFIX = "RoleInfoAudioAll";
 
-		// Token: 0x04003CB4 RID: 15540
+		// Token: 0x04003D78 RID: 15736
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003CB5 RID: 15541
+		// Token: 0x04003D79 RID: 15737
 		private static int HandleId;
 	}
 }

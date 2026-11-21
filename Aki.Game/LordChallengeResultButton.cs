@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002197 RID: 8599
+// Token: 0x0200167B RID: 5755
 [NullableContext(1)]
 [Nullable(0)]
 public class LordChallengeResultButton : UiPanelBase
 {
-	// Token: 0x06010B78 RID: 68472 RVA: 0x0040FACC File Offset: 0x0040DCCC
+	// Token: 0x0600E009 RID: 57353 RVA: 0x0041C3B4 File Offset: 0x0041A5B4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,14 +27,14 @@ public class LordChallengeResultButton : UiPanelBase
 		};
 	}
 
-	// Token: 0x06010B79 RID: 68473 RVA: 0x0040FB5F File Offset: 0x0040DD5F
+	// Token: 0x0600E00A RID: 57354 RVA: 0x0041C447 File Offset: 0x0041A647
 	protected override void OnBeforeShow()
 	{
 		base.GetText(0).SetText("", true);
 		base.GetText(2).SetText("", true);
 	}
 
-	// Token: 0x06010B7A RID: 68474 RVA: 0x0040FB88 File Offset: 0x0040DD88
+	// Token: 0x0600E00B RID: 57355 RVA: 0x0041C470 File Offset: 0x0041A670
 	public UniTask InitializeAsync(AActor rootActor, Action onClickCall)
 	{
 		LordChallengeResultButton.<InitializeAsync>d__4 <InitializeAsync>d__;
@@ -47,7 +47,7 @@ public class LordChallengeResultButton : UiPanelBase
 		return <InitializeAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010B7B RID: 68475 RVA: 0x0040FBDB File Offset: 0x0040DDDB
+	// Token: 0x0600E00C RID: 57356 RVA: 0x0041C4C3 File Offset: 0x0041A6C3
 	private void OnClickedButton()
 	{
 		Action onClickEvent = this.OnClickEvent;
@@ -58,44 +58,44 @@ public class LordChallengeResultButton : UiPanelBase
 		onClickEvent();
 	}
 
-	// Token: 0x06010B7C RID: 68476 RVA: 0x0040FBED File Offset: 0x0040DDED
+	// Token: 0x0600E00D RID: 57357 RVA: 0x0041C4D5 File Offset: 0x0041A6D5
 	public void SetFloatText(string text)
 	{
 		base.GetText(2).SetUIActive(true);
 		base.GetText(2).SetText(text, true);
 	}
 
-	// Token: 0x06010B7D RID: 68477 RVA: 0x0040FC0A File Offset: 0x0040DE0A
+	// Token: 0x0600E00E RID: 57358 RVA: 0x0041C4F2 File Offset: 0x0041A6F2
 	public void SetFloatText(string textId, params string[] args)
 	{
 		base.GetText(2).SetUIActive(true);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), textId, args);
 	}
 
-	// Token: 0x06010B7E RID: 68478 RVA: 0x0040FC2C File Offset: 0x0040DE2C
+	// Token: 0x0600E00F RID: 57359 RVA: 0x0041C514 File Offset: 0x0041A714
 	public void SetBtnText(string text)
 	{
 		base.GetText(0).SetText(text, true);
 	}
 
-	// Token: 0x04007F52 RID: 32594
+	// Token: 0x04008099 RID: 32921
 	[Nullable(2)]
 	private Action OnClickEvent;
 
-	// Token: 0x020086C2 RID: 34498
+	// Token: 0x0200784D RID: 30797
 	[NullableContext(0)]
 	private class EButtonChildType
 	{
-		// Token: 0x0402BD82 RID: 179586
+		// Token: 0x040270A3 RID: 159907
 		public const int ButtonText = 0;
 
-		// Token: 0x0402BD83 RID: 179587
+		// Token: 0x040270A4 RID: 159908
 		public const int DescriptionItem = 1;
 
-		// Token: 0x0402BD84 RID: 179588
+		// Token: 0x040270A5 RID: 159909
 		public const int DescriptionText = 2;
 
-		// Token: 0x0402BD85 RID: 179589
+		// Token: 0x040270A6 RID: 159910
 		public const int Button = 3;
 	}
 }

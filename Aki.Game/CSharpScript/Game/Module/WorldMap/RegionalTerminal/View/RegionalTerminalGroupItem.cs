@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 {
-	// Token: 0x02004858 RID: 18520
+	// Token: 0x02003789 RID: 14217
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 	})]
 	public class RegionalTerminalGroupItem : GridProxyAbstract<RegionalTerminalGroupData>
 	{
-		// Token: 0x06030772 RID: 198514 RVA: 0x00B40D0C File Offset: 0x00B3EF0C
+		// Token: 0x06024F41 RID: 151361 RVA: 0x00A70F50 File Offset: 0x00A6F150
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06030773 RID: 198515 RVA: 0x00B40E1C File Offset: 0x00B3F01C
+		// Token: 0x06024F42 RID: 151362 RVA: 0x00A71060 File Offset: 0x00A6F260
 		protected override void OnStart()
 		{
 			this.LayoutGameplay = new GenericLayout<RegionalTerminalGameplayItem, RegionalTerminalGameplayData>(base.GetGridLayout(4), new Func<RegionalTerminalGameplayItem>(this.CreateGameplayItem), null, true, true);
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 			base.GetItem(6).SetUIActive(false);
 		}
 
-		// Token: 0x06030774 RID: 198516 RVA: 0x00B40E95 File Offset: 0x00B3F095
+		// Token: 0x06024F43 RID: 151363 RVA: 0x00A710D9 File Offset: 0x00A6F2D9
 		private void OnEventSequence(string sequenceName, string eventName)
 		{
 			if (sequenceName == "Start" && eventName == "Start")
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 			}
 		}
 
-		// Token: 0x06030775 RID: 198517 RVA: 0x00B40EC4 File Offset: 0x00B3F0C4
+		// Token: 0x06024F44 RID: 151364 RVA: 0x00A71108 File Offset: 0x00A6F308
 		public override UniTask RefreshAsync(RegionalTerminalGroupData data, bool isSelected, int gridIndex)
 		{
 			RegionalTerminalGroupItem.<RefreshAsync>d__10 <RefreshAsync>d__;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030776 RID: 198518 RVA: 0x00B40F0F File Offset: 0x00B3F10F
+		// Token: 0x06024F45 RID: 151365 RVA: 0x00A71153 File Offset: 0x00A6F353
 		private RegionalTerminalGameplayItem CreateGameplayItem()
 		{
 			return new RegionalTerminalGameplayItem
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 			};
 		}
 
-		// Token: 0x06030777 RID: 198519 RVA: 0x00B40F3C File Offset: 0x00B3F13C
+		// Token: 0x06024F46 RID: 151366 RVA: 0x00A71180 File Offset: 0x00A6F380
 		public void RefreshFunctional()
 		{
 			foreach (RegionalTerminalGameplayItem regionalTerminalGameplayItem in this.LayoutGameplay.GetLayoutItemList())
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 			}
 		}
 
-		// Token: 0x06030778 RID: 198520 RVA: 0x00B40F94 File Offset: 0x00B3F194
+		// Token: 0x06024F47 RID: 151367 RVA: 0x00A711D8 File Offset: 0x00A6F3D8
 		public void SetSelectOn(bool state)
 		{
 			if (this.IsSelectOn == state)
@@ -121,14 +121,14 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 			}
 		}
 
-		// Token: 0x06030779 RID: 198521 RVA: 0x00B40FE1 File Offset: 0x00B3F1E1
+		// Token: 0x06024F48 RID: 151368 RVA: 0x00A71225 File Offset: 0x00A6F425
 		[NullableContext(2)]
 		public RegionalTerminalGameplayItem GetGameplayItem(int gameplayId)
 		{
 			return this.LayoutGameplay.GetLayoutItemByKey(gameplayId);
 		}
 
-		// Token: 0x0603077A RID: 198522 RVA: 0x00B40FF4 File Offset: 0x00B3F1F4
+		// Token: 0x06024F49 RID: 151369 RVA: 0x00A71238 File Offset: 0x00A6F438
 		private void OnClickToggle(bool state, RegionalTerminalGameplayData data)
 		{
 			Action<bool, RegionalTerminalGameplayData, int> onClickToggleCallBack = this.OnClickToggleCallBack;
@@ -139,28 +139,28 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 			onClickToggleCallBack(state, data, this.Data.GroupId);
 		}
 
-		// Token: 0x0603077B RID: 198523 RVA: 0x00B41013 File Offset: 0x00B3F213
+		// Token: 0x06024F4A RID: 151370 RVA: 0x00A71257 File Offset: 0x00A6F457
 		private bool IsToggleSelectOn(RegionalTerminalGameplayData data)
 		{
 			Func<RegionalTerminalGameplayData, bool> isToggleSelectOnCallBack = this.IsToggleSelectOnCallBack;
 			return isToggleSelectOnCallBack != null && isToggleSelectOnCallBack(data);
 		}
 
-		// Token: 0x0603077C RID: 198524 RVA: 0x00B41027 File Offset: 0x00B3F227
+		// Token: 0x06024F4B RID: 151371 RVA: 0x00A7126B File Offset: 0x00A6F46B
 		public override object GetKey(RegionalTerminalGroupData data, int displayIndex)
 		{
 			return data.GroupId;
 		}
 
-		// Token: 0x0401A0A3 RID: 106659
+		// Token: 0x04014757 RID: 83799
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401A0A4 RID: 106660
+		// Token: 0x04014758 RID: 83800
 		[Nullable(2)]
 		private RegionalTerminalGroupData Data;
 
-		// Token: 0x0401A0A5 RID: 106661
+		// Token: 0x04014759 RID: 83801
 		[Nullable(new byte[]
 		{
 			2,
@@ -169,10 +169,10 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 		})]
 		private GenericLayout<RegionalTerminalGameplayItem, RegionalTerminalGameplayData> LayoutGameplay;
 
-		// Token: 0x0401A0A6 RID: 106662
+		// Token: 0x0401475A RID: 83802
 		private bool IsSelectOn;
 
-		// Token: 0x0401A0A7 RID: 106663
+		// Token: 0x0401475B RID: 83803
 		[Nullable(new byte[]
 		{
 			2,
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 		})]
 		public Action<bool, RegionalTerminalGameplayData, int> OnClickToggleCallBack;
 
-		// Token: 0x0401A0A8 RID: 106664
+		// Token: 0x0401475C RID: 83804
 		[Nullable(new byte[]
 		{
 			2,
@@ -188,29 +188,29 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 		})]
 		public Func<RegionalTerminalGameplayData, bool> IsToggleSelectOnCallBack;
 
-		// Token: 0x0200AB3E RID: 43838
+		// Token: 0x020094EC RID: 38124
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x0403409F RID: 213151
+			// Token: 0x0402E817 RID: 190487
 			public const int TexLogo = 0;
 
-			// Token: 0x040340A0 RID: 213152
+			// Token: 0x0402E818 RID: 190488
 			public const int TexLogo2 = 1;
 
-			// Token: 0x040340A1 RID: 213153
+			// Token: 0x0402E819 RID: 190489
 			public const int TxtName = 2;
 
-			// Token: 0x040340A2 RID: 213154
+			// Token: 0x0402E81A RID: 190490
 			public const int SpriteName = 3;
 
-			// Token: 0x040340A3 RID: 213155
+			// Token: 0x0402E81B RID: 190491
 			public const int LayoutGameplay = 4;
 
-			// Token: 0x040340A4 RID: 213156
+			// Token: 0x0402E81C RID: 190492
 			public const int ItemGameplay = 5;
 
-			// Token: 0x040340A5 RID: 213157
+			// Token: 0x0402E81D RID: 190493
 			public const int ItemSelectOn = 6;
 		}
 	}

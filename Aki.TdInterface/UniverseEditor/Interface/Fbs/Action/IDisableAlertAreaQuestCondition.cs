@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020065CD RID: 26061
+	// Token: 0x02006C35 RID: 27701
 	public struct IDisableAlertAreaQuestCondition : IFlatbufferObject
 	{
-		// Token: 0x1700C167 RID: 49511
-		// (get) Token: 0x0602D322 RID: 185122 RVA: 0x0063213E File Offset: 0x0063033E
+		// Token: 0x1700CAF6 RID: 51958
+		// (get) Token: 0x0602FAA6 RID: 195238 RVA: 0x0067E302 File Offset: 0x0067C502
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D323 RID: 185123 RVA: 0x0063214B File Offset: 0x0063034B
+		// Token: 0x0602FAA7 RID: 195239 RVA: 0x0067E30F File Offset: 0x0067C50F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D324 RID: 185124 RVA: 0x00632154 File Offset: 0x00630354
+		// Token: 0x0602FAA8 RID: 195240 RVA: 0x0067E318 File Offset: 0x0067C518
 		public static IDisableAlertAreaQuestCondition GetRootAsIDisableAlertAreaQuestCondition(ByteBuffer _bb)
 		{
 			return IDisableAlertAreaQuestCondition.GetRootAsIDisableAlertAreaQuestCondition(_bb, default(IDisableAlertAreaQuestCondition));
 		}
 
-		// Token: 0x0602D325 RID: 185125 RVA: 0x00632170 File Offset: 0x00630370
+		// Token: 0x0602FAA9 RID: 195241 RVA: 0x0067E334 File Offset: 0x0067C534
 		public static IDisableAlertAreaQuestCondition GetRootAsIDisableAlertAreaQuestCondition(ByteBuffer _bb, IDisableAlertAreaQuestCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D326 RID: 185126 RVA: 0x0063218D File Offset: 0x0063038D
+		// Token: 0x0602FAAA RID: 195242 RVA: 0x0067E351 File Offset: 0x0067C551
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D327 RID: 185127 RVA: 0x0063219C File Offset: 0x0063039C
+		// Token: 0x0602FAAB RID: 195243 RVA: 0x0067E360 File Offset: 0x0067C560
 		public IDisableAlertAreaQuestCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C168 RID: 49512
-		// (get) Token: 0x0602D328 RID: 185128 RVA: 0x006321AC File Offset: 0x006303AC
+		// Token: 0x1700CAF7 RID: 51959
+		// (get) Token: 0x0602FAAC RID: 195244 RVA: 0x0067E370 File Offset: 0x0067C570
 		public EDisableAlertAreaCondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C169 RID: 49513
-		// (get) Token: 0x0602D329 RID: 185129 RVA: 0x006321E8 File Offset: 0x006303E8
+		// Token: 0x1700CAF8 RID: 51960
+		// (get) Token: 0x0602FAAD RID: 195245 RVA: 0x0067E3AC File Offset: 0x0067C5AC
 		public int RelatedQuestId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D32A RID: 185130 RVA: 0x00632224 File Offset: 0x00630424
+		// Token: 0x0602FAAE RID: 195246 RVA: 0x0067E3E8 File Offset: 0x0067C5E8
 		public static Offset<IDisableAlertAreaQuestCondition> CreateIDisableAlertAreaQuestCondition(FlatBufferBuilder builder, EDisableAlertAreaCondition Type = EDisableAlertAreaCondition.DungeonCondition, int RelatedQuestId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDisableAlertAreaQuestCondition.EndIDisableAlertAreaQuestCondition(builder);
 		}
 
-		// Token: 0x0602D32B RID: 185131 RVA: 0x00632241 File Offset: 0x00630441
+		// Token: 0x0602FAAF RID: 195247 RVA: 0x0067E405 File Offset: 0x0067C605
 		public static void StartIDisableAlertAreaQuestCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602D32C RID: 185132 RVA: 0x0063224A File Offset: 0x0063044A
+		// Token: 0x0602FAB0 RID: 195248 RVA: 0x0067E40E File Offset: 0x0067C60E
 		public static void AddType(FlatBufferBuilder builder, EDisableAlertAreaCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D32D RID: 185133 RVA: 0x00632255 File Offset: 0x00630455
+		// Token: 0x0602FAB1 RID: 195249 RVA: 0x0067E419 File Offset: 0x0067C619
 		public static void AddRelatedQuestId(FlatBufferBuilder builder, int relatedQuestId)
 		{
 			builder.AddInt(1, relatedQuestId, 0);
 		}
 
-		// Token: 0x0602D32E RID: 185134 RVA: 0x00632260 File Offset: 0x00630460
+		// Token: 0x0602FAB2 RID: 195250 RVA: 0x0067E424 File Offset: 0x0067C624
 		public static Offset<IDisableAlertAreaQuestCondition> EndIDisableAlertAreaQuestCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IDisableAlertAreaQuestCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0602D32F RID: 185135 RVA: 0x00632270 File Offset: 0x00630470
+		// Token: 0x0602FAB3 RID: 195251 RVA: 0x0067E434 File Offset: 0x0067C634
 		public IDisableAlertAreaQuestConditionT UnPack()
 		{
 			IDisableAlertAreaQuestConditionT disableAlertAreaQuestConditionT = new IDisableAlertAreaQuestConditionT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return disableAlertAreaQuestConditionT;
 		}
 
-		// Token: 0x0602D330 RID: 185136 RVA: 0x0063228B File Offset: 0x0063048B
+		// Token: 0x0602FAB4 RID: 195252 RVA: 0x0067E44F File Offset: 0x0067C64F
 		public void UnPackTo(IDisableAlertAreaQuestConditionT _o)
 		{
 			_o.Type = this.Type;
 			_o.RelatedQuestId = this.RelatedQuestId;
 		}
 
-		// Token: 0x0602D331 RID: 185137 RVA: 0x006322A8 File Offset: 0x006304A8
+		// Token: 0x0602FAB5 RID: 195253 RVA: 0x0067E46C File Offset: 0x0067C66C
 		public static Offset<IDisableAlertAreaQuestCondition> Pack(FlatBufferBuilder builder, IDisableAlertAreaQuestConditionT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDisableAlertAreaQuestCondition.CreateIDisableAlertAreaQuestCondition(builder, _o.Type, _o.RelatedQuestId);
 		}
 
-		// Token: 0x04010C2E RID: 68654
+		// Token: 0x04011A40 RID: 72256
 		private Table __p;
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200601A RID: 24602
+	// Token: 0x02006679 RID: 26233
 	public enum ESwitchEffectStateEffectType : byte
 	{
-		// Token: 0x04010066 RID: 65638
+		// Token: 0x04010E4B RID: 69195
 		ScreenEffect,
-		// Token: 0x04010067 RID: 65639
+		// Token: 0x04010E4C RID: 69196
 		TrailChain
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E93 RID: 7827
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020C8 RID: 8392
 	public class ISoar2 : ILeisureInteractType
 	{
-		// Token: 0x0600A77A RID: 42874 RVA: 0x0017A820 File Offset: 0x00178A20
+		// Token: 0x0600B232 RID: 45618 RVA: 0x00190520 File Offset: 0x0018E720
 		private ISoar2_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A77B RID: 42875 RVA: 0x0017A858 File Offset: 0x00178A58
+		// Token: 0x0600B233 RID: 45619 RVA: 0x00190558 File Offset: 0x0018E758
 		public static ISoar2 Create([Nullable(2)] ISoar2 instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A77C RID: 42876 RVA: 0x0017A86B File Offset: 0x00178A6B
+		// Token: 0x0600B234 RID: 45620 RVA: 0x0019056B File Offset: 0x0018E76B
 		public static ISoar2 CreateFromSetValue([Nullable(2)] ISoar2_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A77D RID: 42877 RVA: 0x0017A87E File Offset: 0x00178A7E
+		// Token: 0x0600B235 RID: 45621 RVA: 0x0019057E File Offset: 0x0018E77E
 		public new ISoar2_SetValue ToSetValue()
 		{
 			return new ISoar2_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003338 RID: 13112
-		// (get) Token: 0x0600A77E RID: 42878 RVA: 0x0017A891 File Offset: 0x00178A91
-		// (set) Token: 0x0600A77F RID: 42879 RVA: 0x0017A8BC File Offset: 0x00178ABC
+		// Token: 0x170035FC RID: 13820
+		// (get) Token: 0x0600B236 RID: 45622 RVA: 0x00190591 File Offset: 0x0018E791
+		// (set) Token: 0x0600B237 RID: 45623 RVA: 0x001905BC File Offset: 0x0018E7BC
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063E3 RID: 25571
+		// Token: 0x040069C7 RID: 27079
 		[Nullable(2)]
 		protected new ISoar2 FbInstance;
 
-		// Token: 0x040063E4 RID: 25572
+		// Token: 0x040069C8 RID: 27080
 		[Nullable(2)]
 		protected new ISoar2_SetValue PocoInterface;
 	}

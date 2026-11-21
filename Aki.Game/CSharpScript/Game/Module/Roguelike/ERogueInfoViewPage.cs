@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004D9E RID: 19870
+	// Token: 0x02003D67 RID: 15719
 	public enum ERogueInfoViewPage
 	{
-		// Token: 0x0401B40C RID: 111628
+		// Token: 0x04015DDF RID: 89567
 		Overview,
-		// Token: 0x0401B40D RID: 111629
+		// Token: 0x04015DE0 RID: 89568
 		Token,
-		// Token: 0x0401B40E RID: 111630
+		// Token: 0x04015DE1 RID: 89569
 		Special
 	}
 }

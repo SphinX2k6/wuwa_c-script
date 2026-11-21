@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 {
-	// Token: 0x02006478 RID: 25720
+	// Token: 0x020053F6 RID: 21494
 	[NullableContext(1)]
 	[Nullable(0)]
 	public readonly struct ESpineAnimation : IEquatable<ESpineAnimation>
 	{
-		// Token: 0x06040A15 RID: 264725 RVA: 0x00FA5630 File Offset: 0x00FA3830
+		// Token: 0x060356D9 RID: 218841 RVA: 0x00EEC678 File Offset: 0x00EEA878
 		private ESpineAnimation(string value)
 		{
 			this._Value = value;
 		}
 
-		// Token: 0x06040A16 RID: 264726 RVA: 0x00FA5639 File Offset: 0x00FA3839
+		// Token: 0x060356DA RID: 218842 RVA: 0x00EEC681 File Offset: 0x00EEA881
 		public override string ToString()
 		{
 			return this._Value;
 		}
 
-		// Token: 0x06040A17 RID: 264727 RVA: 0x00FA5641 File Offset: 0x00FA3841
+		// Token: 0x060356DB RID: 218843 RVA: 0x00EEC689 File Offset: 0x00EEA889
 		public bool Equals(ESpineAnimation other)
 		{
 			return this._Value == other._Value;
 		}
 
-		// Token: 0x06040A18 RID: 264728 RVA: 0x00FA5654 File Offset: 0x00FA3854
+		// Token: 0x060356DC RID: 218844 RVA: 0x00EEC69C File Offset: 0x00EEA89C
 		public override bool Equals(object obj)
 		{
 			if (obj is ESpineAnimation)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			return false;
 		}
 
-		// Token: 0x06040A19 RID: 264729 RVA: 0x00FA5679 File Offset: 0x00FA3879
+		// Token: 0x060356DD RID: 218845 RVA: 0x00EEC6C1 File Offset: 0x00EEA8C1
 		public override int GetHashCode()
 		{
 			string value = this._Value;
@@ -48,31 +48,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			return value.GetHashCode();
 		}
 
-		// Token: 0x06040A1A RID: 264730 RVA: 0x00FA568C File Offset: 0x00FA388C
+		// Token: 0x060356DE RID: 218846 RVA: 0x00EEC6D4 File Offset: 0x00EEA8D4
 		public static bool operator ==(ESpineAnimation left, ESpineAnimation right)
 		{
 			return left.Equals(right);
 		}
 
-		// Token: 0x06040A1B RID: 264731 RVA: 0x00FA5696 File Offset: 0x00FA3896
+		// Token: 0x060356DF RID: 218847 RVA: 0x00EEC6DE File Offset: 0x00EEA8DE
 		public static bool operator !=(ESpineAnimation left, ESpineAnimation right)
 		{
 			return !left.Equals(right);
 		}
 
-		// Token: 0x040219A1 RID: 137633
+		// Token: 0x0401C2D2 RID: 115410
 		private readonly string _Value;
 
-		// Token: 0x040219A2 RID: 137634
+		// Token: 0x0401C2D3 RID: 115411
 		public static readonly ESpineAnimation Idle = new ESpineAnimation("idle");
 
-		// Token: 0x040219A3 RID: 137635
+		// Token: 0x0401C2D4 RID: 115412
 		public static readonly ESpineAnimation Success = new ESpineAnimation("happy");
 
-		// Token: 0x040219A4 RID: 137636
+		// Token: 0x0401C2D5 RID: 115413
 		public static readonly ESpineAnimation Fail = new ESpineAnimation("fail");
 
-		// Token: 0x040219A5 RID: 137637
+		// Token: 0x0401C2D6 RID: 115414
 		public static readonly ESpineAnimation Working = new ESpineAnimation("working");
 	}
 }

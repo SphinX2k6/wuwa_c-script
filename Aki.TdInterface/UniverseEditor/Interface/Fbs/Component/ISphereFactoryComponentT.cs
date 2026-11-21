@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200597E RID: 22910
+	// Token: 0x02005F8B RID: 24459
 	public class ISphereFactoryComponentT
 	{
-		// Token: 0x1700ABE8 RID: 44008
-		// (get) Token: 0x06026C8B RID: 158859 RVA: 0x00556AB3 File Offset: 0x00554CB3
-		// (set) Token: 0x06026C8C RID: 158860 RVA: 0x00556ABB File Offset: 0x00554CBB
+		// Token: 0x1700B51C RID: 46364
+		// (get) Token: 0x060291F5 RID: 168437 RVA: 0x0059D71F File Offset: 0x0059B91F
+		// (set) Token: 0x060291F6 RID: 168438 RVA: 0x0059D727 File Offset: 0x0059B927
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700ABE9 RID: 44009
-		// (get) Token: 0x06026C8D RID: 158861 RVA: 0x00556AC4 File Offset: 0x00554CC4
-		// (set) Token: 0x06026C8E RID: 158862 RVA: 0x00556ACC File Offset: 0x00554CCC
+		// Token: 0x1700B51D RID: 46365
+		// (get) Token: 0x060291F7 RID: 168439 RVA: 0x0059D730 File Offset: 0x0059B930
+		// (set) Token: 0x060291F8 RID: 168440 RVA: 0x0059D738 File Offset: 0x0059B938
 		public IVectorInfoT SphereLocation { get; set; }
 
-		// Token: 0x1700ABEA RID: 44010
-		// (get) Token: 0x06026C8F RID: 158863 RVA: 0x00556AD5 File Offset: 0x00554CD5
-		// (set) Token: 0x06026C90 RID: 158864 RVA: 0x00556ADD File Offset: 0x00554CDD
+		// Token: 0x1700B51E RID: 46366
+		// (get) Token: 0x060291F9 RID: 168441 RVA: 0x0059D741 File Offset: 0x0059B941
+		// (set) Token: 0x060291FA RID: 168442 RVA: 0x0059D749 File Offset: 0x0059B949
 		public string SphereGuid { get; set; }
 
-		// Token: 0x1700ABEB RID: 44011
-		// (get) Token: 0x06026C91 RID: 158865 RVA: 0x00556AE6 File Offset: 0x00554CE6
-		// (set) Token: 0x06026C92 RID: 158866 RVA: 0x00556AEE File Offset: 0x00554CEE
+		// Token: 0x1700B51F RID: 46367
+		// (get) Token: 0x060291FB RID: 168443 RVA: 0x0059D752 File Offset: 0x0059B952
+		// (set) Token: 0x060291FC RID: 168444 RVA: 0x0059D75A File Offset: 0x0059B95A
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026C93 RID: 158867 RVA: 0x00556AF7 File Offset: 0x00554CF7
+		// Token: 0x060291FD RID: 168445 RVA: 0x0059D763 File Offset: 0x0059B963
 		public ISphereFactoryComponentT()
 		{
 			this.Disabled = false;

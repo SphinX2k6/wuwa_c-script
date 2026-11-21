@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005271 RID: 21105
+	// Token: 0x020057D9 RID: 22489
 	public class IFixedFillT
 	{
-		// Token: 0x17009AA2 RID: 39586
-		// (get) Token: 0x06022589 RID: 140681 RVA: 0x004C2D3D File Offset: 0x004C0F3D
-		// (set) Token: 0x0602258A RID: 140682 RVA: 0x004C2D45 File Offset: 0x004C0F45
+		// Token: 0x1700A29E RID: 41630
+		// (get) Token: 0x0602451F RID: 148767 RVA: 0x004FD801 File Offset: 0x004FBA01
+		// (set) Token: 0x06024520 RID: 148768 RVA: 0x004FD809 File Offset: 0x004FBA09
 		public EFillType Type { get; set; }
 
-		// Token: 0x17009AA3 RID: 39587
-		// (get) Token: 0x0602258B RID: 140683 RVA: 0x004C2D4E File Offset: 0x004C0F4E
-		// (set) Token: 0x0602258C RID: 140684 RVA: 0x004C2D56 File Offset: 0x004C0F56
+		// Token: 0x1700A29F RID: 41631
+		// (get) Token: 0x06024521 RID: 148769 RVA: 0x004FD812 File Offset: 0x004FBA12
+		// (set) Token: 0x06024522 RID: 148770 RVA: 0x004FD81A File Offset: 0x004FBA1A
 		public int ModelId { get; set; }
 
-		// Token: 0x17009AA4 RID: 39588
-		// (get) Token: 0x0602258D RID: 140685 RVA: 0x004C2D5F File Offset: 0x004C0F5F
-		// (set) Token: 0x0602258E RID: 140686 RVA: 0x004C2D67 File Offset: 0x004C0F67
+		// Token: 0x1700A2A0 RID: 41632
+		// (get) Token: 0x06024523 RID: 148771 RVA: 0x004FD823 File Offset: 0x004FBA23
+		// (set) Token: 0x06024524 RID: 148772 RVA: 0x004FD82B File Offset: 0x004FBA2B
 		public IPieceIndexT Centre { get; set; }
 
-		// Token: 0x17009AA5 RID: 39589
-		// (get) Token: 0x0602258F RID: 140687 RVA: 0x004C2D70 File Offset: 0x004C0F70
-		// (set) Token: 0x06022590 RID: 140688 RVA: 0x004C2D78 File Offset: 0x004C0F78
+		// Token: 0x1700A2A1 RID: 41633
+		// (get) Token: 0x06024525 RID: 148773 RVA: 0x004FD834 File Offset: 0x004FBA34
+		// (set) Token: 0x06024526 RID: 148774 RVA: 0x004FD83C File Offset: 0x004FBA3C
 		public IJigsawConfigT Config { get; set; }
 
-		// Token: 0x17009AA6 RID: 39590
-		// (get) Token: 0x06022591 RID: 140689 RVA: 0x004C2D81 File Offset: 0x004C0F81
-		// (set) Token: 0x06022592 RID: 140690 RVA: 0x004C2D89 File Offset: 0x004C0F89
+		// Token: 0x1700A2A2 RID: 41634
+		// (get) Token: 0x06024527 RID: 148775 RVA: 0x004FD845 File Offset: 0x004FBA45
+		// (set) Token: 0x06024528 RID: 148776 RVA: 0x004FD84D File Offset: 0x004FBA4D
 		public byte NullMask { get; set; }
 
-		// Token: 0x06022593 RID: 140691 RVA: 0x004C2D92 File Offset: 0x004C0F92
+		// Token: 0x06024529 RID: 148777 RVA: 0x004FD856 File Offset: 0x004FBA56
 		public IFixedFillT()
 		{
 			this.Type = EFillType.Fixed;

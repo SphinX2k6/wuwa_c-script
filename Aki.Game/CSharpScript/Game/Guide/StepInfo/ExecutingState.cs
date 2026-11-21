@@ -5,7 +5,7 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Guide.StepInfo
 {
-	// Token: 0x02004607 RID: 17927
+	// Token: 0x02003530 RID: 13616
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 	})]
 	internal class ExecutingState : StateBase<GuideStepInfo, EGuideStepState>
 	{
-		// Token: 0x0602E382 RID: 189314 RVA: 0x00AAFAEE File Offset: 0x00AADCEE
+		// Token: 0x06022A77 RID: 141943 RVA: 0x009DC1E2 File Offset: 0x009DA3E2
 		public ExecutingState(GuideStepInfo owner, EGuideStepState state, [Nullable(new byte[]
 		{
 			2,
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 		{
 		}
 
-		// Token: 0x0602E383 RID: 189315 RVA: 0x00AAFB00 File Offset: 0x00AADD00
+		// Token: 0x06022A78 RID: 141944 RVA: 0x009DC1F4 File Offset: 0x009DA3F4
 		private void OpenGuideView()
 		{
 			GuideStepInfo stepInfo = this.Owner;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			}
 		}
 
-		// Token: 0x0602E384 RID: 189316 RVA: 0x00AAFC18 File Offset: 0x00AADE18
+		// Token: 0x06022A79 RID: 141945 RVA: 0x009DC30C File Offset: 0x009DA50C
 		private void OpenTutorialGuide(GuideStepInfo stepInfo)
 		{
 			TutorialListInfo tutorialListInfo = new TutorialListInfo(stepInfo);
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			GuideModel.Instance.AddTutorialInfo(tutorialListInfo);
 		}
 
-		// Token: 0x0602E385 RID: 189317 RVA: 0x00AAFC3D File Offset: 0x00AADE3D
+		// Token: 0x06022A7A RID: 141946 RVA: 0x009DC331 File Offset: 0x009DA531
 		private void ClearShowDelayTimer()
 		{
 			if (this.ShowDelayTimer != null)
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			}
 		}
 
-		// Token: 0x0602E386 RID: 189318 RVA: 0x00AAFC5F File Offset: 0x00AADE5F
+		// Token: 0x06022A7B RID: 141947 RVA: 0x009DC353 File Offset: 0x009DA553
 		private void ClearTimeDilationCheckTimer()
 		{
 			if (this.TimeDilationCheckTimer != null)
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			}
 		}
 
-		// Token: 0x0602E387 RID: 189319 RVA: 0x00AAFC84 File Offset: 0x00AADE84
+		// Token: 0x06022A7C RID: 141948 RVA: 0x009DC378 File Offset: 0x009DA578
 		private unsafe void StartTimeDilationCheckTimer()
 		{
 			int duration = this.Owner.Config.Duration;
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			}
 		}
 
-		// Token: 0x0602E388 RID: 189320 RVA: 0x00AAFDA4 File Offset: 0x00AADFA4
+		// Token: 0x06022A7D RID: 141949 RVA: 0x009DC498 File Offset: 0x009DA698
 		protected override void OnEnter(EGuideStepState? lastState)
 		{
 			this.IsValid = true;
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			this.OnOpenGuideView();
 		}
 
-		// Token: 0x0602E389 RID: 189321 RVA: 0x00AAFE74 File Offset: 0x00AAE074
+		// Token: 0x06022A7E RID: 141950 RVA: 0x009DC568 File Offset: 0x009DA768
 		private void OnOpenGuideView()
 		{
 			this.OpenGuideView();
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			this.IsLimitDistribute = this.Owner.SetLimitInputDistribute();
 		}
 
-		// Token: 0x0602E38A RID: 189322 RVA: 0x00AAFEAC File Offset: 0x00AAE0AC
+		// Token: 0x06022A7F RID: 141951 RVA: 0x009DC5A0 File Offset: 0x009DA7A0
 		protected override void OnExit(EGuideStepState nextState)
 		{
 			this.IsValid = false;
@@ -250,17 +250,17 @@ namespace CSharpScript.Game.Guide.StepInfo
 			owner.IsExitingFromExecuting = false;
 		}
 
-		// Token: 0x04018D01 RID: 101633
+		// Token: 0x04013340 RID: 78656
 		private bool IsValid = true;
 
-		// Token: 0x04018D02 RID: 101634
+		// Token: 0x04013341 RID: 78657
 		private bool IsLimitDistribute;
 
-		// Token: 0x04018D03 RID: 101635
+		// Token: 0x04013342 RID: 78658
 		[Nullable(2)]
 		private TimerHandle TimeDilationCheckTimer;
 
-		// Token: 0x04018D04 RID: 101636
+		// Token: 0x04013343 RID: 78659
 		[Nullable(2)]
 		private TimerHandle ShowDelayTimer;
 	}

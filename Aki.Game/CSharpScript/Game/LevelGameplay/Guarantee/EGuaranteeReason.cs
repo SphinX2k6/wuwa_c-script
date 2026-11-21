@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.LevelGamePlay.Guarantee
 {
-	// Token: 0x02006E02 RID: 28162
+	// Token: 0x02005F81 RID: 24449
 	public enum EGuaranteeReason
 	{
-		// Token: 0x04023BDA RID: 146394
+		// Token: 0x0401EE7D RID: 126589
 		Unknown,
-		// Token: 0x04023BDB RID: 146395
+		// Token: 0x0401EE7E RID: 126590
 		TreeRollback,
-		// Token: 0x04023BDC RID: 146396
+		// Token: 0x0401EE7F RID: 126591
 		TreeDestroy,
-		// Token: 0x04023BDD RID: 146397
+		// Token: 0x0401EE80 RID: 126592
 		TreeSuspend
 	}
 }

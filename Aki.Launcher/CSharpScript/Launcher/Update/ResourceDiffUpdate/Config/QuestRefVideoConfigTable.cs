@@ -5,7 +5,7 @@ using Google.FlatBuffers;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 {
-	// Token: 0x020000B8 RID: 184
+	// Token: 0x020000BB RID: 187
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,25 +14,25 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 	})]
 	public class QuestRefVideoConfigTable : TableReader<QuestRefVideoConfigRow>
 	{
-		// Token: 0x0600062D RID: 1581 RVA: 0x00036D6D File Offset: 0x00034F6D
+		// Token: 0x06000648 RID: 1608 RVA: 0x0003886D File Offset: 0x00036A6D
 		protected override string GetTableName()
 		{
 			return "QuestRefVideoConfig";
 		}
 
-		// Token: 0x0600062E RID: 1582 RVA: 0x00036D74 File Offset: 0x00034F74
+		// Token: 0x06000649 RID: 1609 RVA: 0x00038874 File Offset: 0x00036A74
 		protected override string GetDbFile()
 		{
 			return "db_questrefvideo.db";
 		}
 
-		// Token: 0x0600062F RID: 1583 RVA: 0x00036D7B File Offset: 0x00034F7B
+		// Token: 0x0600064A RID: 1610 RVA: 0x0003887B File Offset: 0x00036A7B
 		protected override string GetIdString()
 		{
 			return "Id";
 		}
 
-		// Token: 0x06000630 RID: 1584 RVA: 0x00036D84 File Offset: 0x00034F84
+		// Token: 0x0600064B RID: 1611 RVA: 0x00038884 File Offset: 0x00036A84
 		public override QuestRefVideoConfigRow Parse(ByteBuffer byteBuffer)
 		{
 			QuestRefVideoConfigRow questRefVideoConfigRow = new QuestRefVideoConfigRow();

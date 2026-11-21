@@ -5,41 +5,41 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000447 RID: 1095
+	// Token: 0x020004A0 RID: 1184
 	public class IHookSpaceStationEnergyCore_SetValue
 	{
-		// Token: 0x040010F3 RID: 4339
+		// Token: 0x04001215 RID: 4629
 		public EHookInteractType Type;
 
-		// Token: 0x040010F4 RID: 4340
+		// Token: 0x04001216 RID: 4630
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> HookActions;
 
-		// Token: 0x040010F5 RID: 4341
+		// Token: 0x04001217 RID: 4631
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> ExitHookActions;
 
-		// Token: 0x040010F6 RID: 4342
+		// Token: 0x04001218 RID: 4632
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> FinishActions;
 
-		// Token: 0x040010F7 RID: 4343
+		// Token: 0x04001219 RID: 4633
 		[Nullable(2)]
 		public IClientHookActionConfig ClientHookActionConfig;
 
-		// Token: 0x040010F8 RID: 4344
+		// Token: 0x0400121A RID: 4634
 		public int? HookSpeed;
 	}
 }

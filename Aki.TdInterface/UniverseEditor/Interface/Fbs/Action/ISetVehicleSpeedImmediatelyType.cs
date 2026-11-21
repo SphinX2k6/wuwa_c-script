@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070A6 RID: 28838
+	// Token: 0x02007872 RID: 30834
 	public struct ISetVehicleSpeedImmediatelyType : IFlatbufferObject
 	{
-		// Token: 0x1700D63E RID: 54846
-		// (get) Token: 0x0603310F RID: 209167 RVA: 0x006E3558 File Offset: 0x006E1758
+		// Token: 0x1700E221 RID: 57889
+		// (get) Token: 0x060363B1 RID: 222129 RVA: 0x00743B64 File Offset: 0x00741D64
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033110 RID: 209168 RVA: 0x006E3565 File Offset: 0x006E1765
+		// Token: 0x060363B2 RID: 222130 RVA: 0x00743B71 File Offset: 0x00741D71
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033111 RID: 209169 RVA: 0x006E356C File Offset: 0x006E176C
+		// Token: 0x060363B3 RID: 222131 RVA: 0x00743B78 File Offset: 0x00741D78
 		public static ISetVehicleSpeedImmediatelyType GetRootAsISetVehicleSpeedImmediatelyType(ByteBuffer _bb)
 		{
 			return ISetVehicleSpeedImmediatelyType.GetRootAsISetVehicleSpeedImmediatelyType(_bb, default(ISetVehicleSpeedImmediatelyType));
 		}
 
-		// Token: 0x06033112 RID: 209170 RVA: 0x006E3588 File Offset: 0x006E1788
+		// Token: 0x060363B4 RID: 222132 RVA: 0x00743B94 File Offset: 0x00741D94
 		public static ISetVehicleSpeedImmediatelyType GetRootAsISetVehicleSpeedImmediatelyType(ByteBuffer _bb, ISetVehicleSpeedImmediatelyType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033113 RID: 209171 RVA: 0x006E35A5 File Offset: 0x006E17A5
+		// Token: 0x060363B5 RID: 222133 RVA: 0x00743BB1 File Offset: 0x00741DB1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033114 RID: 209172 RVA: 0x006E35B4 File Offset: 0x006E17B4
+		// Token: 0x060363B6 RID: 222134 RVA: 0x00743BC0 File Offset: 0x00741DC0
 		public ISetVehicleSpeedImmediatelyType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D63F RID: 54847
-		// (get) Token: 0x06033115 RID: 209173 RVA: 0x006E35C4 File Offset: 0x006E17C4
+		// Token: 0x1700E222 RID: 57890
+		// (get) Token: 0x060363B7 RID: 222135 RVA: 0x00743BD0 File Offset: 0x00741DD0
 		public ESetVehicleSpeedImmediatelyType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033116 RID: 209174 RVA: 0x006E3600 File Offset: 0x006E1800
+		// Token: 0x060363B8 RID: 222136 RVA: 0x00743C0C File Offset: 0x00741E0C
 		public static Offset<ISetVehicleSpeedImmediatelyType> CreateISetVehicleSpeedImmediatelyType(FlatBufferBuilder builder, ESetVehicleSpeedImmediatelyType Type = ESetVehicleSpeedImmediatelyType.TotalSpeed)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetVehicleSpeedImmediatelyType.EndISetVehicleSpeedImmediatelyType(builder);
 		}
 
-		// Token: 0x06033117 RID: 209175 RVA: 0x006E3616 File Offset: 0x006E1816
+		// Token: 0x060363B9 RID: 222137 RVA: 0x00743C22 File Offset: 0x00741E22
 		public static void StartISetVehicleSpeedImmediatelyType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06033118 RID: 209176 RVA: 0x006E361F File Offset: 0x006E181F
+		// Token: 0x060363BA RID: 222138 RVA: 0x00743C2B File Offset: 0x00741E2B
 		public static void AddType(FlatBufferBuilder builder, ESetVehicleSpeedImmediatelyType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033119 RID: 209177 RVA: 0x006E362A File Offset: 0x006E182A
+		// Token: 0x060363BB RID: 222139 RVA: 0x00743C36 File Offset: 0x00741E36
 		public static Offset<ISetVehicleSpeedImmediatelyType> EndISetVehicleSpeedImmediatelyType(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetVehicleSpeedImmediatelyType>(builder.EndTable());
 		}
 
-		// Token: 0x0603311A RID: 209178 RVA: 0x006E3638 File Offset: 0x006E1838
+		// Token: 0x060363BC RID: 222140 RVA: 0x00743C44 File Offset: 0x00741E44
 		public ISetVehicleSpeedImmediatelyTypeT UnPack()
 		{
 			ISetVehicleSpeedImmediatelyTypeT setVehicleSpeedImmediatelyTypeT = new ISetVehicleSpeedImmediatelyTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setVehicleSpeedImmediatelyTypeT;
 		}
 
-		// Token: 0x0603311B RID: 209179 RVA: 0x006E3653 File Offset: 0x006E1853
+		// Token: 0x060363BD RID: 222141 RVA: 0x00743C5F File Offset: 0x00741E5F
 		public void UnPackTo(ISetVehicleSpeedImmediatelyTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0603311C RID: 209180 RVA: 0x006E3664 File Offset: 0x006E1864
+		// Token: 0x060363BE RID: 222142 RVA: 0x00743C70 File Offset: 0x00741E70
 		public static Offset<ISetVehicleSpeedImmediatelyType> Pack(FlatBufferBuilder builder, ISetVehicleSpeedImmediatelyTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetVehicleSpeedImmediatelyType.CreateISetVehicleSpeedImmediatelyType(builder, _o.Type);
 		}
 
-		// Token: 0x04011B0E RID: 72462
+		// Token: 0x04012AFC RID: 76540
 		private Table __p;
 	}
 }

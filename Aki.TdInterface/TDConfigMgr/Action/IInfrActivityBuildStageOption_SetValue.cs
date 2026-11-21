@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B2A RID: 6954
+	// Token: 0x02001CD9 RID: 7385
 	public class IInfrActivityBuildStageOption_SetValue
 	{
-		// Token: 0x04005B2C RID: 23340
+		// Token: 0x04005FCA RID: 24522
 		public EInfrActivityBuildStageType Type;
 	}
 }

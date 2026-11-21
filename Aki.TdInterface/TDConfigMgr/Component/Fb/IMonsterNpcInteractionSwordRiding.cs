@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C1C RID: 3100
+	// Token: 0x02000CEC RID: 3308
 	public class IMonsterNpcInteractionSwordRiding : IMonsterNpcInteractionConfig
 	{
-		// Token: 0x06004710 RID: 18192 RVA: 0x000B3070 File Offset: 0x000B1270
-		[NullableContext(1)]
+		// Token: 0x06004B73 RID: 19315 RVA: 0x000BD23C File Offset: 0x000BB43C
 		public static IMonsterNpcInteractionSwordRiding Create(IMonsterNpcInteractionSwordRiding? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001495 RID: 5269
-		// (get) Token: 0x06004711 RID: 18193 RVA: 0x000B308F File Offset: 0x000B128F
+		// Token: 0x17001596 RID: 5526
+		// (get) Token: 0x06004B74 RID: 19316 RVA: 0x000BD25B File Offset: 0x000BB45B
 		public override EMonsterNpcInteractionType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002857 RID: 10327
+		// Token: 0x04002AA3 RID: 10915
 		private IMonsterNpcInteractionSwordRiding Instance;
 	}
 }

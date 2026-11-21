@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D32 RID: 7474
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F43 RID: 8003
 	public class IPositionDrivenMoveDriveMode : ISplineMoveDriveMode
 	{
-		// Token: 0x0600A05F RID: 41055 RVA: 0x0016DE24 File Offset: 0x0016C024
+		// Token: 0x0600AA4B RID: 43595 RVA: 0x00182248 File Offset: 0x00180448
 		private IPositionDrivenMoveDriveMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A060 RID: 41056 RVA: 0x0016DE5C File Offset: 0x0016C05C
+		// Token: 0x0600AA4C RID: 43596 RVA: 0x00182280 File Offset: 0x00180480
 		public static IPositionDrivenMoveDriveMode Create([Nullable(2)] IPositionDrivenMoveDriveMode instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A061 RID: 41057 RVA: 0x0016DE6F File Offset: 0x0016C06F
+		// Token: 0x0600AA4D RID: 43597 RVA: 0x00182293 File Offset: 0x00180493
 		public static IPositionDrivenMoveDriveMode CreateFromSetValue([Nullable(2)] IPositionDrivenMoveDriveMode_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A062 RID: 41058 RVA: 0x0016DE82 File Offset: 0x0016C082
+		// Token: 0x0600AA4E RID: 43598 RVA: 0x001822A6 File Offset: 0x001804A6
 		public new IPositionDrivenMoveDriveMode_SetValue ToSetValue()
 		{
 			return new IPositionDrivenMoveDriveMode_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031BB RID: 12731
-		// (get) Token: 0x0600A063 RID: 41059 RVA: 0x0016DEA1 File Offset: 0x0016C0A1
-		// (set) Token: 0x0600A064 RID: 41060 RVA: 0x0016DECC File Offset: 0x0016C0CC
+		// Token: 0x1700344F RID: 13391
+		// (get) Token: 0x0600AA4F RID: 43599 RVA: 0x001822C5 File Offset: 0x001804C5
+		// (set) Token: 0x0600AA50 RID: 43600 RVA: 0x001822F0 File Offset: 0x001804F0
 		public override ESplineMoveDriveMode Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031BC RID: 12732
-		// (get) Token: 0x0600A065 RID: 41061 RVA: 0x0016DEDC File Offset: 0x0016C0DC
-		// (set) Token: 0x0600A066 RID: 41062 RVA: 0x0016DF16 File Offset: 0x0016C116
+		// Token: 0x17003450 RID: 13392
+		// (get) Token: 0x0600AA51 RID: 43601 RVA: 0x00182300 File Offset: 0x00180500
+		// (set) Token: 0x0600AA52 RID: 43602 RVA: 0x0018233A File Offset: 0x0018053A
 		public virtual bool? IsFixedPitch
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040060A8 RID: 24744
+		// Token: 0x04006624 RID: 26148
 		[Nullable(2)]
 		protected new IPositionDrivenMoveDriveMode FbInstance;
 
-		// Token: 0x040060A9 RID: 24745
+		// Token: 0x04006625 RID: 26149
 		[Nullable(2)]
 		protected new IPositionDrivenMoveDriveMode_SetValue PocoInterface;
 	}

@@ -8,41 +8,40 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x02005509 RID: 21769
+	// Token: 0x020044DC RID: 17628
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EnrichmentAreaItemView : ServerMarkItemView
 	{
-		// Token: 0x060379A8 RID: 227752 RVA: 0x00D336F6 File Offset: 0x00D318F6
+		// Token: 0x0602C876 RID: 182390 RVA: 0x00C815E2 File Offset: 0x00C7F7E2
 		public EnrichmentAreaItemView(EnrichmentAreaItem holder) : base(holder)
 		{
 		}
 
-		// Token: 0x060379A9 RID: 227753 RVA: 0x00D33700 File Offset: 0x00D31900
+		// Token: 0x0602C877 RID: 182391 RVA: 0x00C815EC File Offset: 0x00C7F7EC
 		protected override void OnViewRefresh()
 		{
-			this.Holder.MarkItemEntity.ViewLifeCircle.EnableVerticalPointer = false;
 			bool visible = this.Holder.CheckCanShowView();
 			base.MarkItemRangeHandle.SetVisible(visible);
 			this.UpdateMultiMapFloorSelectedState();
 			this.OnIconPathChanged(this.Holder.IconPath);
 		}
 
-		// Token: 0x060379AA RID: 227754 RVA: 0x00D33752 File Offset: 0x00D31952
+		// Token: 0x0602C878 RID: 182392 RVA: 0x00C81628 File Offset: 0x00C7F828
 		public override void RegisterEvents()
 		{
 			EventSystem.Instance.Add<int>(EEventName.WorldMapSelectMultiMap, new Action<int>(this.OnSubMapChanged));
 			EventSystem.Instance.Add<EMarkType, int, bool>(EEventName.TrackMapMark, new Action<EMarkType, int, bool>(this.OnTrackMapMark));
 		}
 
-		// Token: 0x060379AB RID: 227755 RVA: 0x00D3378C File Offset: 0x00D3198C
+		// Token: 0x0602C879 RID: 182393 RVA: 0x00C81662 File Offset: 0x00C7F862
 		public override void UnRegisterEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldMapSelectMultiMap, new Action<int>(this.OnSubMapChanged));
 			EventSystem.Instance.Remove(EEventName.TrackMapMark, new Action<EMarkType, int, bool>(this.OnTrackMapMark));
 		}
 
-		// Token: 0x060379AC RID: 227756 RVA: 0x00D337C8 File Offset: 0x00D319C8
+		// Token: 0x0602C87A RID: 182394 RVA: 0x00C8169C File Offset: 0x00C7F89C
 		private void OnSubMapChanged(int subMapId)
 		{
 			EnrichmentAreaItem enrichmentAreaItem = (EnrichmentAreaItem)this.Holder;
@@ -50,14 +49,14 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			this.OnIconPathChanged(enrichmentAreaItem.IconPath);
 		}
 
-		// Token: 0x060379AD RID: 227757 RVA: 0x00D337FC File Offset: 0x00D319FC
+		// Token: 0x0602C87B RID: 182395 RVA: 0x00C816D0 File Offset: 0x00C7F8D0
 		private void OnTrackMapMark(EMarkType eMarkType, int i, bool arg3)
 		{
 			EnrichmentAreaItem enrichmentAreaItem = (EnrichmentAreaItem)this.Holder;
 			this.OnIconPathChanged(enrichmentAreaItem.IconPath);
 		}
 
-		// Token: 0x060379AE RID: 227758 RVA: 0x00D33824 File Offset: 0x00D31A24
+		// Token: 0x0602C87C RID: 182396 RVA: 0x00C816F8 File Offset: 0x00C7F8F8
 		public override void OnIconPathChanged(string iconPath)
 		{
 			bool flag = ((EnrichmentAreaItem)this.Holder).CheckCanShowIcon();
@@ -73,7 +72,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			base.MarkItemChildIconHandle.Update();
 		}
 
-		// Token: 0x060379AF RID: 227759 RVA: 0x00D3386C File Offset: 0x00D31A6C
+		// Token: 0x0602C87D RID: 182397 RVA: 0x00C81740 File Offset: 0x00C7F940
 		public void UpdateMultiMapFloorSelectedState()
 		{
 			EnrichmentAreaItem enrichmentAreaItem = (EnrichmentAreaItem)this.Holder;
@@ -85,7 +84,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x060379B0 RID: 227760 RVA: 0x00D338BA File Offset: 0x00D31ABA
+		// Token: 0x0602C87E RID: 182398 RVA: 0x00C8178E File Offset: 0x00C7F98E
 		protected override IMarkItemHandle CreateRangeHandle<[Nullable(0)] T>(IMarkItemComponentContext markComponentContext)
 		{
 			return new EnrichmentAreaItemRangeHandle(markComponentContext);

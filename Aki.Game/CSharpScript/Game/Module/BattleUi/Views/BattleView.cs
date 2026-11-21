@@ -17,12 +17,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CF8 RID: 23800
+	// Token: 0x02004CDA RID: 19674
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleView : UiTickViewBase
 	{
-		// Token: 0x0603C44D RID: 246861 RVA: 0x00E6DAE0 File Offset: 0x00E6BCE0
+		// Token: 0x060313A3 RID: 201635 RVA: 0x00DBE094 File Offset: 0x00DBC294
 		public BattleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 			this.GuideUiItemBuilders.Add("Execution", new TGuideItemBuilder(this.BuilderForExecution));
@@ -39,6 +39,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.GuideUiItemBuilders.Add("ScorePanel", new TGuideItemBuilder(this.BuilderForScorePanel));
 			this.GuideUiItemBuilders.Add("WeeklyRogueBtn", new TGuideItemBuilder(this.BuilderForWeeklyRogueBtn));
 			this.GuideUiItemBuilders.Add("TimeDilationBtn", new TGuideItemBuilder(this.BuilderForTimeDilationBtn));
+			this.GuideUiItemBuilders.Add("RoleTowerTokenBtn", new TGuideItemBuilder(this.BuilderForRoleTowerTokenBtn));
 			this.GuideUiItemBuilders.Add("HonamiStoryPlayerLevel", new TGuideItemBuilder(this.BuilderForHonamiStoryPlayerLevel));
 			this.GuideUiItemBuilders.Add("HonamiStoryMapLevel", new TGuideItemBuilder(this.BuilderForHonamiStoryMapLevel));
 			this.GuideUiItemBuilders.Add("HonamiStoryLeaveBtn", new TGuideItemBuilder(this.BuilderForHonamiStoryLeaveBtn));
@@ -51,7 +52,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.GuideUiItemBuilders.Add("ResDownLoadBtn", new TGuideItemBuilder(this.BuilderForTopPanel));
 		}
 
-		// Token: 0x0603C44E RID: 246862 RVA: 0x00E6DDCC File Offset: 0x00E6BFCC
+		// Token: 0x060313A4 RID: 201636 RVA: 0x00DBE39C File Offset: 0x00DBC59C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 15;
@@ -103,7 +104,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603C44F RID: 246863 RVA: 0x00E6E06C File Offset: 0x00E6C26C
+		// Token: 0x060313A5 RID: 201637 RVA: 0x00DBE63C File Offset: 0x00DBC83C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleView.<OnBeforeStartAsync>d__25 <OnBeforeStartAsync>d__;
@@ -114,7 +115,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C450 RID: 246864 RVA: 0x00E6E0B0 File Offset: 0x00E6C2B0
+		// Token: 0x060313A6 RID: 201638 RVA: 0x00DBE680 File Offset: 0x00DBC880
 		private UniTask NewDangoAbyssInfo()
 		{
 			BattleView.<NewDangoAbyssInfo>d__26 <NewDangoAbyssInfo>d__;
@@ -125,7 +126,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewDangoAbyssInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C451 RID: 246865 RVA: 0x00E6E0F4 File Offset: 0x00E6C2F4
+		// Token: 0x060313A7 RID: 201639 RVA: 0x00DBE6C4 File Offset: 0x00DBC8C4
 		private void RefreshSpecialViewElement()
 		{
 			int instanceId = CreatureModel.Instance.GetInstanceId();
@@ -157,7 +158,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			childViewData3.SetChildVisible(EBattleUiVisibleReason.UiControl, EBattleUiChild.GamepadFormation, false, true, 0);
 		}
 
-		// Token: 0x0603C452 RID: 246866 RVA: 0x00E6E1B4 File Offset: 0x00E6C3B4
+		// Token: 0x060313A8 RID: 201640 RVA: 0x00DBE784 File Offset: 0x00DBC984
 		private UniTask CreateKeyBoardPanel()
 		{
 			BattleView.<CreateKeyBoardPanel>d__28 <CreateKeyBoardPanel>d__;
@@ -168,7 +169,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <CreateKeyBoardPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C453 RID: 246867 RVA: 0x00E6E1F8 File Offset: 0x00E6C3F8
+		// Token: 0x060313A9 RID: 201641 RVA: 0x00DBE7C8 File Offset: 0x00DBC9C8
 		private UniTask CreateKeyBoardPanelInner()
 		{
 			BattleView.<CreateKeyBoardPanelInner>d__29 <CreateKeyBoardPanelInner>d__;
@@ -179,7 +180,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <CreateKeyBoardPanelInner>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C454 RID: 246868 RVA: 0x00E6E23C File Offset: 0x00E6C43C
+		// Token: 0x060313AA RID: 201642 RVA: 0x00DBE80C File Offset: 0x00DBCA0C
 		private UniTask CreateGamepadPanel()
 		{
 			BattleView.<CreateGamepadPanel>d__30 <CreateGamepadPanel>d__;
@@ -190,7 +191,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <CreateGamepadPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C455 RID: 246869 RVA: 0x00E6E280 File Offset: 0x00E6C480
+		// Token: 0x060313AB RID: 201643 RVA: 0x00DBE850 File Offset: 0x00DBCA50
 		private UniTask CreateGamepadPanelInner()
 		{
 			BattleView.<CreateGamepadPanelInner>d__31 <CreateGamepadPanelInner>d__;
@@ -201,7 +202,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <CreateGamepadPanelInner>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C456 RID: 246870 RVA: 0x00E6E2C4 File Offset: 0x00E6C4C4
+		// Token: 0x060313AC RID: 201644 RVA: 0x00DBE894 File Offset: 0x00DBCA94
 		protected override void OnTick(float delta)
 		{
 			foreach (BattleChildViewPanel battleChildViewPanel in this.TickPanelList)
@@ -221,7 +222,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			formationUnitNodeHandle.Tick(delta);
 		}
 
-		// Token: 0x0603C457 RID: 246871 RVA: 0x00E6E350 File Offset: 0x00E6C550
+		// Token: 0x060313AD RID: 201645 RVA: 0x00DBE920 File Offset: 0x00DBCB20
 		protected override void OnAfterTick(float delta)
 		{
 			foreach (BattleChildViewPanel battleChildViewPanel in this.TickPanelList)
@@ -233,7 +234,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C458 RID: 246872 RVA: 0x00E6E3AC File Offset: 0x00E6C5AC
+		// Token: 0x060313AE RID: 201646 RVA: 0x00DBE97C File Offset: 0x00DBCB7C
 		protected override void OnBeforeShow()
 		{
 			if (base.IsDestroyOrDestroying)
@@ -256,7 +257,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshSpecialViewElement();
 		}
 
-		// Token: 0x0603C459 RID: 246873 RVA: 0x00E6E430 File Offset: 0x00E6C630
+		// Token: 0x060313AF RID: 201647 RVA: 0x00DBEA00 File Offset: 0x00DBCC00
 		protected override void OnAfterShow()
 		{
 			if (base.IsDestroyOrDestroying)
@@ -273,7 +274,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Emit(EEventName.RedDotStart);
 		}
 
-		// Token: 0x0603C45A RID: 246874 RVA: 0x00E6E49C File Offset: 0x00E6C69C
+		// Token: 0x060313B0 RID: 201648 RVA: 0x00DBEA6C File Offset: 0x00DBCC6C
 		protected override void OnBeforeHide()
 		{
 			this.RefreshPureModeBeforeHide();
@@ -281,7 +282,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Emit(EEventName.DisActiveBattleView);
 		}
 
-		// Token: 0x0603C45B RID: 246875 RVA: 0x00E6E4C4 File Offset: 0x00E6C6C4
+		// Token: 0x060313B1 RID: 201649 RVA: 0x00DBEA94 File Offset: 0x00DBCC94
 		protected override void OnAfterHide()
 		{
 			foreach (BattleChildViewPanel battleChildViewPanel in this.PanelMap.Values)
@@ -290,7 +291,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C45C RID: 246876 RVA: 0x00E6E51C File Offset: 0x00E6C71C
+		// Token: 0x060313B2 RID: 201650 RVA: 0x00DBEAEC File Offset: 0x00DBCCEC
 		[NullableContext(2)]
 		public UUIItem GetDynamicUIRootItem(EBattleViewChildType childType)
 		{
@@ -302,7 +303,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return base.GetItem((int)name);
 		}
 
-		// Token: 0x0603C45D RID: 246877 RVA: 0x00E6E544 File Offset: 0x00E6C744
+		// Token: 0x060313B3 RID: 201651 RVA: 0x00DBEB14 File Offset: 0x00DBCD14
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEvents();
@@ -318,21 +319,9 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 			this.FormationUnitNodeHandle = null;
 			BattleViewDynamicUIController.Instance.UnregisterBattleView(this);
-			if (Info.Instance.IsBuildDevelopmentOrDebug)
-			{
-				this.CheckDestroyTimer = TimerSystem.Instance.Forever(delegate(float _)
-				{
-					if (GameModeModel.Instance.WorldDone)
-					{
-						TimerSystem.Instance.Remove(this.CheckDestroyTimer);
-						this.CheckDestroyTimer = null;
-						Log.Instance.Error(ELogModule.Battle, ELogAuthor.CFT, "[battleView]主界面销毁超时，请将本次日志提交给测试", default(ReadOnlySpan<ValueTuple<string, object>>));
-					}
-				}, 5000f, 1f, null, null, true);
-			}
 		}
 
-		// Token: 0x0603C45E RID: 246878 RVA: 0x00E6E5CD File Offset: 0x00E6C7CD
+		// Token: 0x060313B4 RID: 201652 RVA: 0x00DBEB68 File Offset: 0x00DBCD68
 		protected override void OnAfterDestroy()
 		{
 			if (this.CheckDestroyTimer != null)
@@ -342,7 +331,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C45F RID: 246879 RVA: 0x00E6E5F0 File Offset: 0x00E6C7F0
+		// Token: 0x060313B5 RID: 201653 RVA: 0x00DBEB8C File Offset: 0x00DBCD8C
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRoleCompleted));
@@ -368,7 +357,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C460 RID: 246880 RVA: 0x00E6E800 File Offset: 0x00E6CA00
+		// Token: 0x060313B6 RID: 201654 RVA: 0x00DBED9C File Offset: 0x00DBCF9C
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRoleCompleted));
@@ -394,13 +383,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C461 RID: 246881 RVA: 0x00E6EA20 File Offset: 0x00E6CC20
+		// Token: 0x060313B7 RID: 201655 RVA: 0x00DBEFBC File Offset: 0x00DBD1BC
 		private void OnRefreshFormationCallback()
 		{
 			this.Proxy.HeadStatePanel.RefreshCurrentRole();
 		}
 
-		// Token: 0x0603C462 RID: 246882 RVA: 0x00E6EA34 File Offset: 0x00E6CC34
+		// Token: 0x060313B8 RID: 201656 RVA: 0x00DBEFD0 File Offset: 0x00DBD1D0
 		private void OnAllRoleDataChanged()
 		{
 			BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -410,7 +399,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C463 RID: 246883 RVA: 0x00E6EA78 File Offset: 0x00E6CC78
+		// Token: 0x060313B9 RID: 201657 RVA: 0x00DBF014 File Offset: 0x00DBD214
 		private void PlayFormationSwitchAnim(bool isPhantom)
 		{
 			if (this.IsPhantom == isPhantom)
@@ -429,19 +418,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C464 RID: 246884 RVA: 0x00E6EAB2 File Offset: 0x00E6CCB2
+		// Token: 0x060313BA RID: 201658 RVA: 0x00DBF04E File Offset: 0x00DBD24E
 		private void OnPureModeClicked()
 		{
 			BattleUiControl.Instance.TryClosePureMode();
 		}
 
-		// Token: 0x0603C465 RID: 246885 RVA: 0x00E6EABF File Offset: 0x00E6CCBF
+		// Token: 0x060313BB RID: 201659 RVA: 0x00DBF05B File Offset: 0x00DBD25B
 		private void OnChangeRoleCompleted(EntityHandle newHandle, [Nullable(2)] EntityHandle oldHandle)
 		{
 			this.Proxy.HeadStatePanel.RefreshCurrentRole();
 		}
 
-		// Token: 0x0603C466 RID: 246886 RVA: 0x00E6EAD1 File Offset: 0x00E6CCD1
+		// Token: 0x060313BC RID: 201660 RVA: 0x00DBF06D File Offset: 0x00DBD26D
 		[NullableContext(2)]
 		private void OnStartSequenceStart(string _ = null)
 		{
@@ -451,7 +440,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C467 RID: 246887 RVA: 0x00E6EAE4 File Offset: 0x00E6CCE4
+		// Token: 0x060313BD RID: 201661 RVA: 0x00DBF080 File Offset: 0x00DBD280
 		private void OnCreateEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
 			if (!handle.Valid)
@@ -468,7 +457,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			bossStatePanel.OnCreateEntity(handle);
 		}
 
-		// Token: 0x0603C468 RID: 246888 RVA: 0x00E6EB32 File Offset: 0x00E6CD32
+		// Token: 0x060313BE RID: 201662 RVA: 0x00DBF0CE File Offset: 0x00DBD2CE
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (!handle.Valid)
@@ -479,7 +468,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PartStatePanel.DestroyPartStateFromRole(handle.Entity);
 		}
 
-		// Token: 0x0603C469 RID: 246889 RVA: 0x00E6EB64 File Offset: 0x00E6CD64
+		// Token: 0x060313BF RID: 201663 RVA: 0x00DBF100 File Offset: 0x00DBD300
 		private UniTask PreloadBattleHeadStatePanel()
 		{
 			BattleView.<PreloadBattleHeadStatePanel>d__52 <PreloadBattleHeadStatePanel>d__;
@@ -490,7 +479,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <PreloadBattleHeadStatePanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C46A RID: 246890 RVA: 0x00E6EBA7 File Offset: 0x00E6CDA7
+		// Token: 0x060313C0 RID: 201664 RVA: 0x00DBF143 File Offset: 0x00DBD343
 		private void InitializeBattleHeadStatePanel()
 		{
 			BattleHeadStatePanel headStatePanel = this.Proxy.HeadStatePanel;
@@ -501,7 +490,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			headStatePanel.Init();
 		}
 
-		// Token: 0x0603C46B RID: 246891 RVA: 0x00E6EBBE File Offset: 0x00E6CDBE
+		// Token: 0x060313C1 RID: 201665 RVA: 0x00DBF15A File Offset: 0x00DBD35A
 		private void ResetBattleHeadStatePanel()
 		{
 			if (this.Proxy.HeadStatePanel == null)
@@ -512,14 +501,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Proxy.HeadStatePanel = null;
 		}
 
-		// Token: 0x0603C46C RID: 246892 RVA: 0x00E6EBEA File Offset: 0x00E6CDEA
+		// Token: 0x060313C2 RID: 201666 RVA: 0x00DBF186 File Offset: 0x00DBD386
 		private void InitializePartStatePanel()
 		{
 			this.PartStatePanel = new PartStatePanel();
 			this.PartStatePanel.InitializePartStatePanel();
 		}
 
-		// Token: 0x0603C46D RID: 246893 RVA: 0x00E6EC02 File Offset: 0x00E6CE02
+		// Token: 0x060313C3 RID: 201667 RVA: 0x00DBF19E File Offset: 0x00DBD39E
 		private void ResetPartStatePanel()
 		{
 			if (this.PartStatePanel == null)
@@ -530,7 +519,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PartStatePanel = null;
 		}
 
-		// Token: 0x0603C46E RID: 246894 RVA: 0x00E6EC1F File Offset: 0x00E6CE1F
+		// Token: 0x060313C4 RID: 201668 RVA: 0x00DBF1BB File Offset: 0x00DBD3BB
 		private void ResetSceneItemDurabilityPanel()
 		{
 			if (this.SceneItemDurabilityPanel == null)
@@ -541,7 +530,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SceneItemDurabilityPanel = null;
 		}
 
-		// Token: 0x0603C46F RID: 246895 RVA: 0x00E6EC3C File Offset: 0x00E6CE3C
+		// Token: 0x060313C5 RID: 201669 RVA: 0x00DBF1D8 File Offset: 0x00DBD3D8
 		public void ShowLinkButton(bool isShow)
 		{
 			FormationUnitNodeHandle formationUnitNodeHandle = this.FormationUnitNodeHandle;
@@ -552,7 +541,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			formationUnitNodeHandle.ShowLinkButton(isShow);
 		}
 
-		// Token: 0x0603C470 RID: 246896 RVA: 0x00E6EC4F File Offset: 0x00E6CE4F
+		// Token: 0x060313C6 RID: 201670 RVA: 0x00DBF1EB File Offset: 0x00DBD3EB
 		public void UpdateTimeDilationButton()
 		{
 			FormationUnitNodeHandle formationUnitNodeHandle = this.FormationUnitNodeHandle;
@@ -563,7 +552,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			formationUnitNodeHandle.UpdateTimeDilationButton();
 		}
 
-		// Token: 0x0603C471 RID: 246897 RVA: 0x00E6EC64 File Offset: 0x00E6CE64
+		// Token: 0x060313C7 RID: 201671 RVA: 0x00DBF200 File Offset: 0x00DBD400
 		public void OffsetMissionAnchor(float y)
 		{
 			UUIItem item = base.GetItem(1);
@@ -574,7 +563,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item.SetAnchorOffsetY((y == -1f) ? this.MissionOriginalY : (this.MissionOriginalY + y));
 		}
 
-		// Token: 0x0603C472 RID: 246898 RVA: 0x00E6ECB0 File Offset: 0x00E6CEB0
+		// Token: 0x060313C8 RID: 201672 RVA: 0x00DBF24C File Offset: 0x00DBD44C
 		[NullableContext(0)]
 		[return: Nullable(new byte[]
 		{
@@ -594,14 +583,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewBattleChildViewPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C473 RID: 246899 RVA: 0x00E6ED0B File Offset: 0x00E6CF0B
+		// Token: 0x060313C9 RID: 201673 RVA: 0x00DBF2A7 File Offset: 0x00DBD4A7
 		[NullableContext(2)]
 		private BattleChildViewPanel GetPanel(int index)
 		{
 			return this.PanelMap.GetValueOrDefault(index);
 		}
 
-		// Token: 0x0603C474 RID: 246900 RVA: 0x00E6ED1C File Offset: 0x00E6CF1C
+		// Token: 0x060313CA RID: 201674 RVA: 0x00DBF2B8 File Offset: 0x00DBD4B8
 		private void OnRouletteViewVisibleChanged(bool bVisible)
 		{
 			UUIItem rootItem = this.GetPanel(6).GetRootItem();
@@ -626,7 +615,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0603C475 RID: 246901 RVA: 0x00E6EDDC File Offset: 0x00E6CFDC
+		// Token: 0x060313CB RID: 201675 RVA: 0x00DBF378 File Offset: 0x00DBD578
 		private void OnSeamlessTravelFinish()
 		{
 			foreach (BattleChildViewPanel battleChildViewPanel in this.PanelMap.Values)
@@ -635,13 +624,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C476 RID: 246902 RVA: 0x00E6EE34 File Offset: 0x00E6D034
+		// Token: 0x060313CC RID: 201676 RVA: 0x00DBF3D0 File Offset: 0x00DBD5D0
 		private void OnBattleUiPlayAudio(string audioId)
 		{
 			AudioSystem.Instance.PostEvent(audioId);
 		}
 
-		// Token: 0x0603C477 RID: 246903 RVA: 0x00E6EE42 File Offset: 0x00E6D042
+		// Token: 0x060313CD RID: 201677 RVA: 0x00DBF3DE File Offset: 0x00DBD5DE
 		private void OnBattleUiAlphaChanged(float alpha)
 		{
 			UUIItem rootItem = this.RootItem;
@@ -652,13 +641,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rootItem.SetAlpha(alpha);
 		}
 
-		// Token: 0x0603C478 RID: 246904 RVA: 0x00E6EE55 File Offset: 0x00E6D055
+		// Token: 0x060313CE RID: 201678 RVA: 0x00DBF3F1 File Offset: 0x00DBD5F1
 		private void OnBattleUiPureModeChanged(bool _)
 		{
 			this.RefreshPureMode();
 		}
 
-		// Token: 0x0603C479 RID: 246905 RVA: 0x00E6EE60 File Offset: 0x00E6D060
+		// Token: 0x060313CF RID: 201679 RVA: 0x00DBF3FC File Offset: 0x00DBD5FC
 		[NullableContext(2)]
 		private void OnEnableSceneItemDurabilityUI(int entityId, bool enable, int? durability, int? maxDurability, string tidName)
 		{
@@ -687,7 +676,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			});
 		}
 
-		// Token: 0x0603C47A RID: 246906 RVA: 0x00E6EF32 File Offset: 0x00E6D132
+		// Token: 0x060313D0 RID: 201680 RVA: 0x00DBF4CE File Offset: 0x00DBD6CE
 		private void OnInputClosePureModeAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (actionType != InputDistributeDefine.EActionType.Press)
@@ -702,7 +691,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			BattleUiControl.Instance.TryOpenPureMode();
 		}
 
-		// Token: 0x0603C47B RID: 246907 RVA: 0x00E6EF58 File Offset: 0x00E6D158
+		// Token: 0x060313D1 RID: 201681 RVA: 0x00DBF4F4 File Offset: 0x00DBD6F4
 		private void RefreshPureMode()
 		{
 			BattleUiPureModeData pureModeData = BattleUiModel.Instance.PureModeData;
@@ -727,7 +716,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C47C RID: 246908 RVA: 0x00E6F004 File Offset: 0x00E6D204
+		// Token: 0x060313D2 RID: 201682 RVA: 0x00DBF5A0 File Offset: 0x00DBD7A0
 		private void RefreshPureModeBeforeShow()
 		{
 			if (!this.IsPureModeOpen)
@@ -742,7 +731,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0603C47D RID: 246909 RVA: 0x00E6F024 File Offset: 0x00E6D224
+		// Token: 0x060313D3 RID: 201683 RVA: 0x00DBF5C0 File Offset: 0x00DBD7C0
 		private void RefreshPureModeAfterShow()
 		{
 			if (!this.IsPureModeOpen)
@@ -760,7 +749,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C47E RID: 246910 RVA: 0x00E6F09C File Offset: 0x00E6D29C
+		// Token: 0x060313D4 RID: 201684 RVA: 0x00DBF638 File Offset: 0x00DBD838
 		private void RefreshPureModeBeforeHide()
 		{
 			if (!this.IsPureModeOpen)
@@ -775,7 +764,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0603C47F RID: 246911 RVA: 0x00E6F0BC File Offset: 0x00E6D2BC
+		// Token: 0x060313D5 RID: 201685 RVA: 0x00DBF658 File Offset: 0x00DBD858
 		private void ResetAllChildViewPanels()
 		{
 			foreach (BattleChildViewPanel battleChildViewPanel in this.PanelMap.Values)
@@ -786,7 +775,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TickPanelList.Clear();
 		}
 
-		// Token: 0x0603C480 RID: 246912 RVA: 0x00E6F128 File Offset: 0x00E6D328
+		// Token: 0x060313D6 RID: 201686 RVA: 0x00DBF6C4 File Offset: 0x00DBD8C4
 		private unsafe void RefreshMobileUiSet()
 		{
 			if (!Info.Instance.IsInTouch())
@@ -846,7 +835,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C481 RID: 246913 RVA: 0x00E6F300 File Offset: 0x00E6D500
+		// Token: 0x060313D7 RID: 201687 RVA: 0x00DBF89C File Offset: 0x00DBDA9C
 		private void InputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -880,7 +869,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			formationUnitNodeHandle2.OnInputControllerChange(this.FormationPanel, this.GamepadFormationPanel);
 		}
 
-		// Token: 0x0603C482 RID: 246914 RVA: 0x00E6F388 File Offset: 0x00E6D588
+		// Token: 0x060313D8 RID: 201688 RVA: 0x00DBF924 File Offset: 0x00DBDB24
 		private void OnGmOnlyShowMiniMap(bool bVisible)
 		{
 			foreach (KeyValuePair<int, BattleChildViewPanel> keyValuePair in this.PanelMap)
@@ -907,7 +896,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C483 RID: 246915 RVA: 0x00E6F40C File Offset: 0x00E6D60C
+		// Token: 0x060313D9 RID: 201689 RVA: 0x00DBF9A8 File Offset: 0x00DBDBA8
 		private void OnGmOnlyShowJoyStick(bool bVisible)
 		{
 			foreach (KeyValuePair<int, BattleChildViewPanel> keyValuePair in this.PanelMap)
@@ -934,7 +923,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C484 RID: 246916 RVA: 0x00E6F490 File Offset: 0x00E6D690
+		// Token: 0x060313DA RID: 201690 RVA: 0x00DBFA2C File Offset: 0x00DBDC2C
 		private void OnGmHideMission(bool bVisible)
 		{
 			UUIItem item = base.GetItem(1);
@@ -945,13 +934,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			BattleUiModel.Instance.IsMissionPanelVisible = bVisible;
 		}
 
-		// Token: 0x0603C485 RID: 246917 RVA: 0x00E6F4B0 File Offset: 0x00E6D6B0
+		// Token: 0x060313DB RID: 201691 RVA: 0x00DBFA4C File Offset: 0x00DBDC4C
 		private bool GetChildPanelOverrideSwitch(BattleChildViewPanel panel)
 		{
 			return !panel.IsChildType(EBattleUiChild.Mission) || BattleUiModel.Instance.IsMissionPanelVisible;
 		}
 
-		// Token: 0x0603C486 RID: 246918 RVA: 0x00E6F4CC File Offset: 0x00E6D6CC
+		// Token: 0x060313DC RID: 201692 RVA: 0x00DBFA68 File Offset: 0x00DBDC68
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -976,7 +965,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			};
 		}
 
-		// Token: 0x0603C487 RID: 246919 RVA: 0x00E6F50A File Offset: 0x00E6D70A
+		// Token: 0x060313DD RID: 201693 RVA: 0x00DBFAA6 File Offset: 0x00DBDCA6
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -992,7 +981,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return activeSkillItemForGuide.GetGuideItem();
 		}
 
-		// Token: 0x0603C488 RID: 246920 RVA: 0x00E6F520 File Offset: 0x00E6D720
+		// Token: 0x060313DE RID: 201694 RVA: 0x00DBFABC File Offset: 0x00DBDCBC
 		[return: Nullable(2)]
 		private BattleSkillItem GetActiveSkillItemForGuide(string[] configParams)
 		{
@@ -1017,7 +1006,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C489 RID: 246921 RVA: 0x00E6F57E File Offset: 0x00E6D77E
+		// Token: 0x060313DF RID: 201695 RVA: 0x00DBFB1A File Offset: 0x00DBDD1A
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1033,7 +1022,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return activeSkillItemForGuide.GetSpriteGuideItem();
 		}
 
-		// Token: 0x0603C48A RID: 246922 RVA: 0x00E6F592 File Offset: 0x00E6D792
+		// Token: 0x060313E0 RID: 201696 RVA: 0x00DBFB2E File Offset: 0x00DBDD2E
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1049,7 +1038,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return activeSkillItemForGuide.GetTextureGuideItem();
 		}
 
-		// Token: 0x0603C48B RID: 246923 RVA: 0x00E6F5A8 File Offset: 0x00E6D7A8
+		// Token: 0x060313E1 RID: 201697 RVA: 0x00DBFB44 File Offset: 0x00DBDD44
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1114,7 +1103,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return null;
 		}
 
-		// Token: 0x0603C48C RID: 246924 RVA: 0x00E6F6D4 File Offset: 0x00E6D8D4
+		// Token: 0x060313E2 RID: 201698 RVA: 0x00DBFC70 File Offset: 0x00DBDE70
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1146,7 +1135,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return null;
 		}
 
-		// Token: 0x0603C48D RID: 246925 RVA: 0x00E6F760 File Offset: 0x00E6D960
+		// Token: 0x060313E3 RID: 201699 RVA: 0x00DBFCFC File Offset: 0x00DBDEFC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1200,7 +1189,38 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			};
 		}
 
-		// Token: 0x0603C48E RID: 246926 RVA: 0x00E6F884 File Offset: 0x00E6DA84
+		// Token: 0x060313E4 RID: 201700 RVA: 0x00DBFE20 File Offset: 0x00DBE020
+		[NullableContext(2)]
+		public UUIItem GetFormationExtraContainer(int prefabIndex)
+		{
+			FormationPanel formationPanel = Info.Instance.IsInGamepad() ? this.GamepadFormationPanel : (this.GetPanel(2) as FormationPanel);
+			if (formationPanel == null)
+			{
+				return null;
+			}
+			foreach (FormationItem formationItem in formationPanel.GetFormationItemList())
+			{
+				if (formationItem.PrefabIndex == prefabIndex)
+				{
+					return formationItem.GetExtraContainer();
+				}
+			}
+			return null;
+		}
+
+		// Token: 0x060313E5 RID: 201701 RVA: 0x00DBFEA8 File Offset: 0x00DBE0A8
+		[NullableContext(2)]
+		public UUIItem GetFormationPanelRoot()
+		{
+			FormationPanel formationPanel = Info.Instance.IsInGamepad() ? this.GamepadFormationPanel : (this.GetPanel(2) as FormationPanel);
+			if (formationPanel == null)
+			{
+				return null;
+			}
+			return formationPanel.GetFormationItemContainer();
+		}
+
+		// Token: 0x060313E6 RID: 201702 RVA: 0x00DBFED5 File Offset: 0x00DBE0D5
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1216,7 +1236,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return panel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0603C48F RID: 246927 RVA: 0x00E6F899 File Offset: 0x00E6DA99
+		// Token: 0x060313E7 RID: 201703 RVA: 0x00DBFEEA File Offset: 0x00DBE0EA
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1232,7 +1252,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return dangoWorldMainPanel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0603C490 RID: 246928 RVA: 0x00E6F8B0 File Offset: 0x00E6DAB0
+		// Token: 0x060313E8 RID: 201704 RVA: 0x00DBFF00 File Offset: 0x00DBE100
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1263,7 +1283,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			};
 		}
 
-		// Token: 0x0603C491 RID: 246929 RVA: 0x00E6F8EF File Offset: 0x00E6DAEF
+		// Token: 0x060313E9 RID: 201705 RVA: 0x00DBFF3F File Offset: 0x00DBE13F
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1279,7 +1299,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return panel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0603C492 RID: 246930 RVA: 0x00E6F904 File Offset: 0x00E6DB04
+		// Token: 0x060313EA RID: 201706 RVA: 0x00DBFF54 File Offset: 0x00DBE154
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1295,7 +1315,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return panel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0603C493 RID: 246931 RVA: 0x00E6F919 File Offset: 0x00E6DB19
+		// Token: 0x060313EB RID: 201707 RVA: 0x00DBFF69 File Offset: 0x00DBE169
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1311,7 +1331,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return panel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0603C494 RID: 246932 RVA: 0x00E6F92E File Offset: 0x00E6DB2E
+		// Token: 0x060313EC RID: 201708 RVA: 0x00DBFF7E File Offset: 0x00DBE17E
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1327,7 +1347,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return panel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0603C495 RID: 246933 RVA: 0x00E6F944 File Offset: 0x00E6DB44
+		// Token: 0x060313ED RID: 201709 RVA: 0x00DBFF94 File Offset: 0x00DBE194
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1348,7 +1368,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return weeklyRogueButton.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0603C496 RID: 246934 RVA: 0x00E6F964 File Offset: 0x00E6DB64
+		// Token: 0x060313EE RID: 201710 RVA: 0x00DBFFB4 File Offset: 0x00DBE1B4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1379,7 +1399,23 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			};
 		}
 
-		// Token: 0x0603C497 RID: 246935 RVA: 0x00E6F9A3 File Offset: 0x00E6DBA3
+		// Token: 0x060313EF RID: 201711 RVA: 0x00DBFFF3 File Offset: 0x00DBE1F3
+		[return: Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private UUIItem[] BuilderForRoleTowerTokenBtn(string[] configParams)
+		{
+			RoleTowerTokenButtonItem tokenButtonItem = RoleTowerModel.Instance.GetTokenButtonItem();
+			if (tokenButtonItem == null)
+			{
+				return null;
+			}
+			return tokenButtonItem.GetGuideUiItemAndUiItemForShowEx(configParams);
+		}
+
+		// Token: 0x060313F0 RID: 201712 RVA: 0x00DC000B File Offset: 0x00DBE20B
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1395,7 +1431,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return panel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0603C498 RID: 246936 RVA: 0x00E6F9B8 File Offset: 0x00E6DBB8
+		// Token: 0x060313F1 RID: 201713 RVA: 0x00DC0020 File Offset: 0x00DBE220
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1411,7 +1447,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return panel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0603C499 RID: 246937 RVA: 0x00E6F9CD File Offset: 0x00E6DBCD
+		// Token: 0x060313F2 RID: 201714 RVA: 0x00DC0035 File Offset: 0x00DBE235
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1427,7 +1463,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return panel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0603C49A RID: 246938 RVA: 0x00E6F9E2 File Offset: 0x00E6DBE2
+		// Token: 0x060313F3 RID: 201715 RVA: 0x00DC004A File Offset: 0x00DBE24A
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1443,7 +1479,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return panel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0603C49B RID: 246939 RVA: 0x00E6F9F7 File Offset: 0x00E6DBF7
+		// Token: 0x060313F4 RID: 201716 RVA: 0x00DC005F File Offset: 0x00DBE25F
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1459,7 +1495,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return panel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0603C49C RID: 246940 RVA: 0x00E6FA0C File Offset: 0x00E6DC0C
+		// Token: 0x060313F5 RID: 201717 RVA: 0x00DC0074 File Offset: 0x00DBE274
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1480,7 +1516,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.GuideUiItemBuilders["Default"](configParams);
 		}
 
-		// Token: 0x0603C49D RID: 246941 RVA: 0x00E6FA6B File Offset: 0x00E6DC6B
+		// Token: 0x060313F6 RID: 201718 RVA: 0x00DC00D3 File Offset: 0x00DBE2D3
 		private void OnRefreshFormationCooldownExternal(int playerId, int roleId, float? remainCd = null, float? totalCd = null)
 		{
 			FormationPanel gamepadFormationPanel = this.GamepadFormationPanel;
@@ -1496,7 +1532,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			formationPanel.RefreshFormationCooldownExternal(playerId, roleId, remainCd, totalCd);
 		}
 
-		// Token: 0x0603C49E RID: 246942 RVA: 0x00E6FA98 File Offset: 0x00E6DC98
+		// Token: 0x060313F7 RID: 201719 RVA: 0x00DC0100 File Offset: 0x00DBE300
 		public void ResetFormationCooldownExternal()
 		{
 			FormationPanel gamepadFormationPanel = this.GamepadFormationPanel;
@@ -1512,18 +1548,18 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			formationPanel.ResetFormationCooldownExternal();
 		}
 
-		// Token: 0x0603C49F RID: 246943 RVA: 0x00E6FABC File Offset: 0x00E6DCBC
+		// Token: 0x060313F8 RID: 201720 RVA: 0x00DC0124 File Offset: 0x00DBE324
 		private UniTask NewFormationUnitNode()
 		{
-			BattleView.<NewFormationUnitNode>d__108 <NewFormationUnitNode>d__;
+			BattleView.<NewFormationUnitNode>d__111 <NewFormationUnitNode>d__;
 			<NewFormationUnitNode>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<NewFormationUnitNode>d__.<>4__this = this;
 			<NewFormationUnitNode>d__.<>1__state = -1;
-			<NewFormationUnitNode>d__.<>t__builder.Start<BattleView.<NewFormationUnitNode>d__108>(ref <NewFormationUnitNode>d__);
+			<NewFormationUnitNode>d__.<>t__builder.Start<BattleView.<NewFormationUnitNode>d__111>(ref <NewFormationUnitNode>d__);
 			return <NewFormationUnitNode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C4A0 RID: 246944 RVA: 0x00E6FAFF File Offset: 0x00E6DCFF
+		// Token: 0x060313F9 RID: 201721 RVA: 0x00DC0167 File Offset: 0x00DBE367
 		[NullableContext(2)]
 		public UUIItem GetTopPanelPhoneMsgButtonItem()
 		{
@@ -1535,7 +1571,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return topPanel.GetPanelItem("PhoneMsgButton");
 		}
 
-		// Token: 0x0603C4A1 RID: 246945 RVA: 0x00E6FB1D File Offset: 0x00E6DD1D
+		// Token: 0x060313FA RID: 201722 RVA: 0x00DC0185 File Offset: 0x00DBE385
 		[NullableContext(2)]
 		public IPhoneMessageButtonImplement GetTopPanelPhoneMsgButton()
 		{
@@ -1547,7 +1583,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return topPanel.GetPhoneMsgButton();
 		}
 
-		// Token: 0x0603C4A2 RID: 246946 RVA: 0x00E6FB38 File Offset: 0x00E6DD38
+		// Token: 0x060313FB RID: 201723 RVA: 0x00DC01A0 File Offset: 0x00DBE3A0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -1555,22 +1591,22 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		public UniTask<UUIItem> GetTopPanelEntitySequenceButtonRootAsync()
 		{
-			BattleView.<GetTopPanelEntitySequenceButtonRootAsync>d__111 <GetTopPanelEntitySequenceButtonRootAsync>d__;
+			BattleView.<GetTopPanelEntitySequenceButtonRootAsync>d__114 <GetTopPanelEntitySequenceButtonRootAsync>d__;
 			<GetTopPanelEntitySequenceButtonRootAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<UUIItem>.Create();
 			<GetTopPanelEntitySequenceButtonRootAsync>d__.<>4__this = this;
 			<GetTopPanelEntitySequenceButtonRootAsync>d__.<>1__state = -1;
-			<GetTopPanelEntitySequenceButtonRootAsync>d__.<>t__builder.Start<BattleView.<GetTopPanelEntitySequenceButtonRootAsync>d__111>(ref <GetTopPanelEntitySequenceButtonRootAsync>d__);
+			<GetTopPanelEntitySequenceButtonRootAsync>d__.<>t__builder.Start<BattleView.<GetTopPanelEntitySequenceButtonRootAsync>d__114>(ref <GetTopPanelEntitySequenceButtonRootAsync>d__);
 			return <GetTopPanelEntitySequenceButtonRootAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C4A3 RID: 246947 RVA: 0x00E6FB7B File Offset: 0x00E6DD7B
+		// Token: 0x060313FC RID: 201724 RVA: 0x00DC01E3 File Offset: 0x00DBE3E3
 		[NullableContext(2)]
 		public PositionPanel GetPositionPanel()
 		{
 			return this.GetPanel(9) as PositionPanel;
 		}
 
-		// Token: 0x0603C4A6 RID: 246950 RVA: 0x00E6FC74 File Offset: 0x00E6DE74
+		// Token: 0x060313FF RID: 201727 RVA: 0x00DC02DC File Offset: 0x00DBE4DC
 		[CompilerGenerated]
 		private UniTask <InputControllerChange>g__Invoke|77_0()
 		{
@@ -1582,7 +1618,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <<InputControllerChange>g__Invoke|77_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C4A7 RID: 246951 RVA: 0x00E6FCB8 File Offset: 0x00E6DEB8
+		// Token: 0x06031400 RID: 201728 RVA: 0x00DC0320 File Offset: 0x00DBE520
 		[CompilerGenerated]
 		private UniTask <InputControllerChange>g__Invoke|77_1()
 		{
@@ -1594,10 +1630,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <<InputControllerChange>g__Invoke|77_1>d.<>t__builder.Task;
 		}
 
-		// Token: 0x0401F67C RID: 128636
+		// Token: 0x0401A135 RID: 106805
 		private const int CHECK_DESTROY_TIME = 5000;
 
-		// Token: 0x0401F67D RID: 128637
+		// Token: 0x0401A136 RID: 106806
 		private static readonly IReadOnlyDictionary<EBattleViewChildType, BattleView.EChildType> BattleViewChildMap = new Dictionary<EBattleViewChildType, BattleView.EChildType>
 		{
 			{
@@ -1650,126 +1686,126 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		};
 
-		// Token: 0x0401F67E RID: 128638
+		// Token: 0x0401A137 RID: 106807
 		[Nullable(2)]
 		private PartStatePanel PartStatePanel;
 
-		// Token: 0x0401F67F RID: 128639
+		// Token: 0x0401A138 RID: 106808
 		[Nullable(2)]
 		private BossStatePanel BossStatePanel;
 
-		// Token: 0x0401F680 RID: 128640
+		// Token: 0x0401A139 RID: 106809
 		[Nullable(2)]
 		private FormationPanel FormationPanel;
 
-		// Token: 0x0401F681 RID: 128641
+		// Token: 0x0401A13A RID: 106810
 		[Nullable(2)]
 		private SkillButtonPanel SkillButtonPanel;
 
-		// Token: 0x0401F682 RID: 128642
+		// Token: 0x0401A13B RID: 106811
 		[Nullable(2)]
 		private FormationPanel GamepadFormationPanel;
 
-		// Token: 0x0401F683 RID: 128643
+		// Token: 0x0401A13C RID: 106812
 		[Nullable(2)]
 		private GamepadSkillButtonPanel GamepadSkillButtonPanel;
 
-		// Token: 0x0401F684 RID: 128644
+		// Token: 0x0401A13D RID: 106813
 		[Nullable(2)]
 		private DangoWorldMainPanel DangoWorldMainPanel;
 
-		// Token: 0x0401F685 RID: 128645
+		// Token: 0x0401A13E RID: 106814
 		[Nullable(2)]
 		private SceneItemDurabilityStatePanel SceneItemDurabilityPanel;
 
-		// Token: 0x0401F686 RID: 128646
+		// Token: 0x0401A13F RID: 106815
 		private bool IsLoadingDurabilityPanel;
 
-		// Token: 0x0401F687 RID: 128647
+		// Token: 0x0401A140 RID: 106816
 		private bool IsKeyboardPanelCreated;
 
-		// Token: 0x0401F688 RID: 128648
+		// Token: 0x0401A141 RID: 106817
 		private bool IsGamepadPanelCreated;
 
-		// Token: 0x0401F689 RID: 128649
+		// Token: 0x0401A142 RID: 106818
 		private readonly Dictionary<int, BattleChildViewPanel> PanelMap = new Dictionary<int, BattleChildViewPanel>();
 
-		// Token: 0x0401F68A RID: 128650
+		// Token: 0x0401A143 RID: 106819
 		private readonly List<BattleChildViewPanel> TickPanelList = new List<BattleChildViewPanel>();
 
-		// Token: 0x0401F68B RID: 128651
+		// Token: 0x0401A144 RID: 106820
 		[StaticVariableRuleIgnore]
 		private static readonly Stat BattleViewTickStatsObject = Stat.Create("[BattleView]BattleViewTick", "", "");
 
-		// Token: 0x0401F68C RID: 128652
+		// Token: 0x0401A145 RID: 106821
 		private int? CenterPanelUiIndex;
 
-		// Token: 0x0401F68D RID: 128653
+		// Token: 0x0401A146 RID: 106822
 		private bool IsPhantom;
 
-		// Token: 0x0401F68E RID: 128654
+		// Token: 0x0401A147 RID: 106823
 		private bool IsPureModeOpen;
 
-		// Token: 0x0401F68F RID: 128655
+		// Token: 0x0401A148 RID: 106824
 		[Nullable(2)]
 		private FormationUnitNodeHandle FormationUnitNodeHandle;
 
-		// Token: 0x0401F690 RID: 128656
+		// Token: 0x0401A149 RID: 106825
 		public BattleViewProxy Proxy = new BattleViewProxy();
 
-		// Token: 0x0401F691 RID: 128657
+		// Token: 0x0401A14A RID: 106826
 		[Nullable(2)]
 		private TimerHandle CheckDestroyTimer;
 
-		// Token: 0x0401F692 RID: 128658
+		// Token: 0x0401A14B RID: 106827
 		private float MissionOriginalY = -1f;
 
-		// Token: 0x0401F693 RID: 128659
+		// Token: 0x0401A14C RID: 106828
 		private readonly Dictionary<string, TGuideItemBuilder> GuideUiItemBuilders = new Dictionary<string, TGuideItemBuilder>();
 
-		// Token: 0x0200BF63 RID: 48995
+		// Token: 0x0200A969 RID: 43369
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039B6A RID: 236394
+			// Token: 0x0403452C RID: 214316
 			BossStatePanel,
-			// Token: 0x04039B6B RID: 236395
+			// Token: 0x0403452D RID: 214317
 			MissionPanel,
-			// Token: 0x04039B6C RID: 236396
+			// Token: 0x0403452E RID: 214318
 			FormationPanel,
-			// Token: 0x04039B6D RID: 236397
+			// Token: 0x0403452F RID: 214319
 			SkillButtonPanel,
-			// Token: 0x04039B6E RID: 236398
+			// Token: 0x04034530 RID: 214320
 			BottomPanel,
-			// Token: 0x04039B6F RID: 236399
+			// Token: 0x04034531 RID: 214321
 			TopPanel,
-			// Token: 0x04039B70 RID: 236400
+			// Token: 0x04034532 RID: 214322
 			CenterPanel,
-			// Token: 0x04039B71 RID: 236401
+			// Token: 0x04034533 RID: 214323
 			ChatPanel,
-			// Token: 0x04039B72 RID: 236402
+			// Token: 0x04034534 RID: 214324
 			FullScreenPanel,
-			// Token: 0x04039B73 RID: 236403
+			// Token: 0x04034535 RID: 214325
 			PositionPanel,
-			// Token: 0x04039B74 RID: 236404
+			// Token: 0x04034536 RID: 214326
 			OnlineInstanceDungeonDeathPanel,
-			// Token: 0x04039B75 RID: 236405
+			// Token: 0x04034537 RID: 214327
 			ScorePanel,
-			// Token: 0x04039B76 RID: 236406
+			// Token: 0x04034538 RID: 214328
 			PureModeRootItem = 14,
-			// Token: 0x04039B77 RID: 236407
+			// Token: 0x04034539 RID: 214329
 			PureModeItem,
-			// Token: 0x04039B78 RID: 236408
+			// Token: 0x0403453A RID: 214330
 			PureModeButton
 		}
 
-		// Token: 0x0200BF64 RID: 48996
+		// Token: 0x0200A96A RID: 43370
 		[NullableContext(0)]
 		private enum EDesktopChildType
 		{
-			// Token: 0x04039B7A RID: 236410
+			// Token: 0x0403453C RID: 214332
 			GamepadFormationPanel = 12,
-			// Token: 0x04039B7B RID: 236411
+			// Token: 0x0403453D RID: 214333
 			GamepadSkillButtonPanel
 		}
 	}

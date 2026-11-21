@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006EC RID: 1772
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200078D RID: 1933
 	public class ISpawnMonsterPreConditonType
 	{
-		// Token: 0x06002630 RID: 9776 RVA: 0x00066638 File Offset: 0x00064838
+		// Token: 0x06002950 RID: 10576 RVA: 0x0006D6A8 File Offset: 0x0006B8A8
 		private ISpawnMonsterPreConditonType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002631 RID: 9777 RVA: 0x00066670 File Offset: 0x00064870
+		// Token: 0x06002951 RID: 10577 RVA: 0x0006D6E0 File Offset: 0x0006B8E0
 		public static ISpawnMonsterPreConditonType Create([Nullable(2)] ISpawnMonsterPreConditonType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002632 RID: 9778 RVA: 0x00066683 File Offset: 0x00064883
+		// Token: 0x06002952 RID: 10578 RVA: 0x0006D6F3 File Offset: 0x0006B8F3
 		public static ISpawnMonsterPreConditonType CreateFromSetValue([Nullable(2)] ISpawnMonsterPreConditonType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002633 RID: 9779 RVA: 0x00066696 File Offset: 0x00064896
+		// Token: 0x06002953 RID: 10579 RVA: 0x0006D706 File Offset: 0x0006B906
 		public ISpawnMonsterPreConditonType_SetValue ToSetValue()
 		{
 			return new ISpawnMonsterPreConditonType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A15 RID: 2581
-		// (get) Token: 0x06002634 RID: 9780 RVA: 0x000666A9 File Offset: 0x000648A9
-		// (set) Token: 0x06002635 RID: 9781 RVA: 0x000666D4 File Offset: 0x000648D4
+		// Token: 0x17000AD3 RID: 2771
+		// (get) Token: 0x06002954 RID: 10580 RVA: 0x0006D719 File Offset: 0x0006B919
+		// (set) Token: 0x06002955 RID: 10581 RVA: 0x0006D744 File Offset: 0x0006B944
 		public virtual ESpawnMonsterPreCondition Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040019F7 RID: 6647
+		// Token: 0x04001BF6 RID: 7158
 		[Nullable(2)]
 		protected ISpawnMonsterPreConditonType FbInstance;
 
-		// Token: 0x040019F8 RID: 6648
+		// Token: 0x04001BF7 RID: 7159
 		[Nullable(2)]
 		protected ISpawnMonsterPreConditonType_SetValue PocoInterface;
 	}

@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001666 RID: 5734
+	// Token: 0x020017D6 RID: 6102
 	[EnumExtensions]
 	public enum EOpenQteType
 	{
-		// Token: 0x04004CCD RID: 19661
+		// Token: 0x040050C8 RID: 20680
 		PanelQte,
-		// Token: 0x04004CCE RID: 19662
+		// Token: 0x040050C9 RID: 20681
 		LevelQte
 	}
 }

@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B4E RID: 23374
+	// Token: 0x02006164 RID: 24932
 	public class IWaterBoxBigWeaponHookT
 	{
-		// Token: 0x1700B082 RID: 45186
-		// (get) Token: 0x06027F9D RID: 163741 RVA: 0x0057F2B0 File Offset: 0x0057D4B0
-		// (set) Token: 0x06027F9E RID: 163742 RVA: 0x0057F2B8 File Offset: 0x0057D4B8
+		// Token: 0x1700B9CA RID: 47562
+		// (get) Token: 0x0602A561 RID: 173409 RVA: 0x005C6D40 File Offset: 0x005C4F40
+		// (set) Token: 0x0602A562 RID: 173410 RVA: 0x005C6D48 File Offset: 0x005C4F48
 		public EHookInteractType Type { get; set; }
 
-		// Token: 0x1700B083 RID: 45187
-		// (get) Token: 0x06027F9F RID: 163743 RVA: 0x0057F2C1 File Offset: 0x0057D4C1
-		// (set) Token: 0x06027FA0 RID: 163744 RVA: 0x0057F2C9 File Offset: 0x0057D4C9
+		// Token: 0x1700B9CB RID: 47563
+		// (get) Token: 0x0602A563 RID: 173411 RVA: 0x005C6D51 File Offset: 0x005C4F51
+		// (set) Token: 0x0602A564 RID: 173412 RVA: 0x005C6D59 File Offset: 0x005C4F59
 		public List<IActionInfoT> HookActions { get; set; }
 
-		// Token: 0x1700B084 RID: 45188
-		// (get) Token: 0x06027FA1 RID: 163745 RVA: 0x0057F2D2 File Offset: 0x0057D4D2
-		// (set) Token: 0x06027FA2 RID: 163746 RVA: 0x0057F2DA File Offset: 0x0057D4DA
+		// Token: 0x1700B9CC RID: 47564
+		// (get) Token: 0x0602A565 RID: 173413 RVA: 0x005C6D62 File Offset: 0x005C4F62
+		// (set) Token: 0x0602A566 RID: 173414 RVA: 0x005C6D6A File Offset: 0x005C4F6A
 		public List<IActionInfoT> ExitHookActions { get; set; }
 
-		// Token: 0x1700B085 RID: 45189
-		// (get) Token: 0x06027FA3 RID: 163747 RVA: 0x0057F2E3 File Offset: 0x0057D4E3
-		// (set) Token: 0x06027FA4 RID: 163748 RVA: 0x0057F2EB File Offset: 0x0057D4EB
+		// Token: 0x1700B9CD RID: 47565
+		// (get) Token: 0x0602A567 RID: 173415 RVA: 0x005C6D73 File Offset: 0x005C4F73
+		// (set) Token: 0x0602A568 RID: 173416 RVA: 0x005C6D7B File Offset: 0x005C4F7B
 		public List<IActionInfoT> FinishActions { get; set; }
 
-		// Token: 0x1700B086 RID: 45190
-		// (get) Token: 0x06027FA5 RID: 163749 RVA: 0x0057F2F4 File Offset: 0x0057D4F4
-		// (set) Token: 0x06027FA6 RID: 163750 RVA: 0x0057F2FC File Offset: 0x0057D4FC
+		// Token: 0x1700B9CE RID: 47566
+		// (get) Token: 0x0602A569 RID: 173417 RVA: 0x005C6D84 File Offset: 0x005C4F84
+		// (set) Token: 0x0602A56A RID: 173418 RVA: 0x005C6D8C File Offset: 0x005C4F8C
 		public IClientHookActionConfigT ClientHookActionConfig { get; set; }
 
-		// Token: 0x1700B087 RID: 45191
-		// (get) Token: 0x06027FA7 RID: 163751 RVA: 0x0057F305 File Offset: 0x0057D505
-		// (set) Token: 0x06027FA8 RID: 163752 RVA: 0x0057F30D File Offset: 0x0057D50D
+		// Token: 0x1700B9CF RID: 47567
+		// (get) Token: 0x0602A56B RID: 173419 RVA: 0x005C6D95 File Offset: 0x005C4F95
+		// (set) Token: 0x0602A56C RID: 173420 RVA: 0x005C6D9D File Offset: 0x005C4F9D
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027FA9 RID: 163753 RVA: 0x0057F316 File Offset: 0x0057D516
+		// Token: 0x0602A56D RID: 173421 RVA: 0x005C6DA6 File Offset: 0x005C4FA6
 		public IWaterBoxBigWeaponHookT()
 		{
 			this.Type = EHookInteractType.FixedPointHook;

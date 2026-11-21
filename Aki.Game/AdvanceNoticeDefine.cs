@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020010CA RID: 4298
+// Token: 0x0200057E RID: 1406
 [NullableContext(1)]
 [Nullable(0)]
 [StaticVariableRuleIgnore]
 public class AdvanceNoticeDefine
 {
-	// Token: 0x04003403 RID: 13315
+	// Token: 0x0400349C RID: 13468
 	public static Dictionary<int, string> advanceNoticeGridToPrefab = new Dictionary<int, string>
 	{
 		{
@@ -38,7 +38,7 @@ public class AdvanceNoticeDefine
 		}
 	};
 
-	// Token: 0x04003404 RID: 13316
+	// Token: 0x0400349D RID: 13469
 	public static Dictionary<EAdvanceNoticeTabType, EUiTabViewName> advanceNoticeTabTypeToTabViewName = new Dictionary<EAdvanceNoticeTabType, EUiTabViewName>
 	{
 		{
@@ -71,7 +71,7 @@ public class AdvanceNoticeDefine
 		}
 	};
 
-	// Token: 0x04003405 RID: 13317
+	// Token: 0x0400349E RID: 13470
 	public static Dictionary<int, string> starToWeaponGachaBgResourceId = new Dictionary<int, string>
 	{
 		{
@@ -84,7 +84,7 @@ public class AdvanceNoticeDefine
 		}
 	};
 
-	// Token: 0x04003406 RID: 13318
+	// Token: 0x0400349F RID: 13471
 	public static string[] advanceNoticeDateTextList = new string[]
 	{
 		"Advertising_OpenTimeText_1",

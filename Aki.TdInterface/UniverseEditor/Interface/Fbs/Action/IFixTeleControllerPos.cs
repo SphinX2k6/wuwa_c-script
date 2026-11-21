@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067DD RID: 26589
+	// Token: 0x02006E5D RID: 28253
 	public struct IFixTeleControllerPos : IFlatbufferObject
 	{
-		// Token: 0x1700C55C RID: 50524
-		// (get) Token: 0x0602E4A0 RID: 189600 RVA: 0x006520AF File Offset: 0x006502AF
+		// Token: 0x1700CF12 RID: 53010
+		// (get) Token: 0x06030CE6 RID: 199910 RVA: 0x0069F7F3 File Offset: 0x0069D9F3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,50 +16,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E4A1 RID: 189601 RVA: 0x006520BC File Offset: 0x006502BC
+		// Token: 0x06030CE7 RID: 199911 RVA: 0x0069F800 File Offset: 0x0069DA00
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E4A2 RID: 189602 RVA: 0x006520C4 File Offset: 0x006502C4
+		// Token: 0x06030CE8 RID: 199912 RVA: 0x0069F808 File Offset: 0x0069DA08
 		public static IFixTeleControllerPos GetRootAsIFixTeleControllerPos(ByteBuffer _bb)
 		{
 			return IFixTeleControllerPos.GetRootAsIFixTeleControllerPos(_bb, default(IFixTeleControllerPos));
 		}
 
-		// Token: 0x0602E4A3 RID: 189603 RVA: 0x006520E0 File Offset: 0x006502E0
+		// Token: 0x06030CE9 RID: 199913 RVA: 0x0069F824 File Offset: 0x0069DA24
 		public static IFixTeleControllerPos GetRootAsIFixTeleControllerPos(ByteBuffer _bb, IFixTeleControllerPos obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E4A4 RID: 189604 RVA: 0x006520FD File Offset: 0x006502FD
+		// Token: 0x06030CEA RID: 199914 RVA: 0x0069F841 File Offset: 0x0069DA41
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E4A5 RID: 189605 RVA: 0x0065210C File Offset: 0x0065030C
+		// Token: 0x06030CEB RID: 199915 RVA: 0x0069F850 File Offset: 0x0069DA50
 		public IFixTeleControllerPos __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0602E4A6 RID: 189606 RVA: 0x0065211C File Offset: 0x0065031C
+		// Token: 0x06030CEC RID: 199916 RVA: 0x0069F860 File Offset: 0x0069DA60
 		public static void StartIFixTeleControllerPos(FlatBufferBuilder builder)
 		{
 			builder.StartTable(0);
 		}
 
-		// Token: 0x0602E4A7 RID: 189607 RVA: 0x00652125 File Offset: 0x00650325
+		// Token: 0x06030CED RID: 199917 RVA: 0x0069F869 File Offset: 0x0069DA69
 		public static Offset<IFixTeleControllerPos> EndIFixTeleControllerPos(FlatBufferBuilder builder)
 		{
 			return new Offset<IFixTeleControllerPos>(builder.EndTable());
 		}
 
-		// Token: 0x0602E4A8 RID: 189608 RVA: 0x00652134 File Offset: 0x00650334
+		// Token: 0x06030CEE RID: 199918 RVA: 0x0069F878 File Offset: 0x0069DA78
 		public IFixTeleControllerPosT UnPack()
 		{
 			IFixTeleControllerPosT fixTeleControllerPosT = new IFixTeleControllerPosT();
@@ -67,12 +67,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return fixTeleControllerPosT;
 		}
 
-		// Token: 0x0602E4A9 RID: 189609 RVA: 0x0065214F File Offset: 0x0065034F
+		// Token: 0x06030CEF RID: 199919 RVA: 0x0069F893 File Offset: 0x0069DA93
 		public void UnPackTo(IFixTeleControllerPosT _o)
 		{
 		}
 
-		// Token: 0x0602E4AA RID: 189610 RVA: 0x00652154 File Offset: 0x00650354
+		// Token: 0x06030CF0 RID: 199920 RVA: 0x0069F898 File Offset: 0x0069DA98
 		public static Offset<IFixTeleControllerPos> Pack(FlatBufferBuilder builder, IFixTeleControllerPosT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFixTeleControllerPos.EndIFixTeleControllerPos(builder);
 		}
 
-		// Token: 0x04010EF8 RID: 69368
+		// Token: 0x04011D2A RID: 73002
 		private Table __p;
 	}
 }

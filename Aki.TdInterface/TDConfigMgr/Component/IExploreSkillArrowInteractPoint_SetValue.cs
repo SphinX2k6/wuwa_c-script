@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000348 RID: 840
+	// Token: 0x0200038F RID: 911
 	public class IExploreSkillArrowInteractPoint_SetValue
 	{
-		// Token: 0x04000DE8 RID: 3560
+		// Token: 0x04000ED3 RID: 3795
 		public EExploreSkillInteractType Type;
 
-		// Token: 0x04000DE9 RID: 3561
+		// Token: 0x04000ED4 RID: 3796
 		public float MinDistance;
 
-		// Token: 0x04000DEA RID: 3562
+		// Token: 0x04000ED5 RID: 3797
 		public float InteractWaitTime;
 
-		// Token: 0x04000DEB RID: 3563
+		// Token: 0x04000ED6 RID: 3798
 		public float ShootWaitTime;
 	}
 }

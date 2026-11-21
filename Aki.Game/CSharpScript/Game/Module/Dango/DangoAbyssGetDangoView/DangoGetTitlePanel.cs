@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 {
-	// Token: 0x02005AEA RID: 23274
+	// Token: 0x02004ACB RID: 19147
 	internal class DangoGetTitlePanel : UiPanelBase
 	{
-		// Token: 0x0603AEC4 RID: 241348 RVA: 0x00E0C458 File Offset: 0x00E0A658
+		// Token: 0x0602FE36 RID: 196150 RVA: 0x00D5D130 File Offset: 0x00D5B330
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 			};
 		}
 
-		// Token: 0x0603AEC5 RID: 241349 RVA: 0x00E0C4B4 File Offset: 0x00E0A6B4
+		// Token: 0x0602FE37 RID: 196151 RVA: 0x00D5D18C File Offset: 0x00D5B38C
 		[NullableContext(1)]
 		public void RefreshView(DangoAbyssDefine.IDangoUnlockData data)
 		{

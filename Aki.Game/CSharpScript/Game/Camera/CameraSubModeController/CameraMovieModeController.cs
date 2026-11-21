@@ -10,25 +10,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera.CameraSubModeController
 {
-	// Token: 0x0200730E RID: 29454
+	// Token: 0x02006491 RID: 25745
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CameraMovieModeController : CameraSubModeController, IStaticVariableResetter
 	{
-		// Token: 0x0604847F RID: 296063 RVA: 0x012938E8 File Offset: 0x01291AE8
+		// Token: 0x0603E8CC RID: 256204 RVA: 0x01236368 File Offset: 0x01234568
 		static CameraMovieModeController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CameraMovieModeController.CreateStaticDefaultValue), new Action(CameraMovieModeController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06048480 RID: 296064 RVA: 0x0129393E File Offset: 0x01291B3E
+		// Token: 0x0603E8CD RID: 256205 RVA: 0x012363BE File Offset: 0x012345BE
 		protected override void OnStart(CameraModelInstance cameraModelInstance)
 		{
 			this.CameraModelInstance = cameraModelInstance;
 			this.Inited = true;
 		}
 
-		// Token: 0x06048481 RID: 296065 RVA: 0x01293950 File Offset: 0x01291B50
+		// Token: 0x0603E8CE RID: 256206 RVA: 0x012363D0 File Offset: 0x012345D0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			return <InitConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06048482 RID: 296066 RVA: 0x0129399C File Offset: 0x01291B9C
+		// Token: 0x0603E8CF RID: 256207 RVA: 0x0123641C File Offset: 0x0123461C
 		public UniTask PlaySpecialMovieCamera(string movieCameraConfigRowName, [Nullable(2)] Action<bool> callback = null)
 		{
 			CameraMovieModeController.<PlaySpecialMovieCamera>d__43 <PlaySpecialMovieCamera>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			return <PlaySpecialMovieCamera>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06048483 RID: 296067 RVA: 0x012939EF File Offset: 0x01291BEF
+		// Token: 0x0603E8D0 RID: 256208 RVA: 0x0123646F File Offset: 0x0123466F
 		private void LoadSpecialMovieCameraConfig()
 		{
 			if (this.SpecialMovieCameraConfigDataTable != null || this.SpecialMovieCameraConfigLoading)
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06048484 RID: 296068 RVA: 0x01293A2C File Offset: 0x01291C2C
+		// Token: 0x0603E8D1 RID: 256209 RVA: 0x012364AC File Offset: 0x012346AC
 		public UniTask PlayMovieCamera(string movieCameraConfigRowName, int initialPlayCameraIndex = -1, [Nullable(2)] Action<bool> callback = null)
 		{
 			CameraMovieModeController.<PlayMovieCamera>d__45 <PlayMovieCamera>d__;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			return <PlayMovieCamera>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06048485 RID: 296069 RVA: 0x01293A87 File Offset: 0x01291C87
+		// Token: 0x0603E8D2 RID: 256210 RVA: 0x01236507 File Offset: 0x01234707
 		private void LoadMovieCameraConfig()
 		{
 			if (this.MovieCameraConfigDataTable != null || this.MovieCameraConfigLoading)
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06048486 RID: 296070 RVA: 0x01293AC4 File Offset: 0x01291CC4
+		// Token: 0x0603E8D3 RID: 256211 RVA: 0x01236544 File Offset: 0x01234744
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			return <LoadLevelSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06048487 RID: 296071 RVA: 0x01293B08 File Offset: 0x01291D08
+		// Token: 0x0603E8D4 RID: 256212 RVA: 0x01236588 File Offset: 0x01234788
 		private void PlaySequenceCamera(SMovieCameraConfigItem_SequenceSetting sequenceSetting)
 		{
 			this.StopMovieCameraInternal();
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			this.SimpleLevelSequenceActor.AddOnStopCallback(new Action<bool>(this.OnSequenceCameraStopped));
 		}
 
-		// Token: 0x06048488 RID: 296072 RVA: 0x01293D50 File Offset: 0x01291F50
+		// Token: 0x0603E8D5 RID: 256213 RVA: 0x012367D0 File Offset: 0x012349D0
 		private unsafe void PlayFightCamera(SMovieCameraConfigItem_FightSubCameraSetting fightSetting)
 		{
 			this.StopMovieCameraInternal();
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			this.FightCameraTimerHandle = TimerSystem.FlowTimeInstance.Delay(new TTimerAction(this.OnFightCameraFinished), fightSetting.TimeLength * 1000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06048489 RID: 296073 RVA: 0x01293E60 File Offset: 0x01292060
+		// Token: 0x0603E8D6 RID: 256214 RVA: 0x012368E0 File Offset: 0x01234AE0
 		public void PauseMovieCamera()
 		{
 			TimerHandle fightCameraTimerHandle = this.FightCameraTimerHandle;
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			}
 		}
 
-		// Token: 0x0604848A RID: 296074 RVA: 0x01293E9B File Offset: 0x0129209B
+		// Token: 0x0603E8D7 RID: 256215 RVA: 0x0123691B File Offset: 0x01234B1B
 		public void ResumeMovieCamera()
 		{
 			TimerHandle fightCameraTimerHandle = this.FightCameraTimerHandle;
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			}
 		}
 
-		// Token: 0x0604848B RID: 296075 RVA: 0x01293ED8 File Offset: 0x012920D8
+		// Token: 0x0603E8D8 RID: 256216 RVA: 0x01236958 File Offset: 0x01234B58
 		private bool PlayNextMovieCamera()
 		{
 			if (this.MovieCameraConfig == null)
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			return this.SequencePlayMovieCamera();
 		}
 
-		// Token: 0x0604848C RID: 296076 RVA: 0x01293F78 File Offset: 0x01292178
+		// Token: 0x0603E8D9 RID: 256217 RVA: 0x012369F8 File Offset: 0x01234BF8
 		private bool RandomPlayMovieCamera()
 		{
 			if (this.MovieCameraCacheList.Count <= 0)
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			return true;
 		}
 
-		// Token: 0x0604848D RID: 296077 RVA: 0x01293FF8 File Offset: 0x012921F8
+		// Token: 0x0603E8DA RID: 256218 RVA: 0x01236A78 File Offset: 0x01234C78
 		private bool SequencePlayMovieCamera()
 		{
 			if (this.MovieCameraCacheList.Count <= 0)
@@ -321,7 +321,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			return true;
 		}
 
-		// Token: 0x0604848E RID: 296078 RVA: 0x01294074 File Offset: 0x01292274
+		// Token: 0x0603E8DB RID: 256219 RVA: 0x01236AF4 File Offset: 0x01234CF4
 		private bool PlayMovieCameraByConfigIndex(int index)
 		{
 			int cacheIndex;
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			return this.PlayMovieCameraByCacheIndex(index, cacheIndex);
 		}
 
-		// Token: 0x0604848F RID: 296079 RVA: 0x012940C8 File Offset: 0x012922C8
+		// Token: 0x0603E8DC RID: 256220 RVA: 0x01236B48 File Offset: 0x01234D48
 		private unsafe bool PlayMovieCameraByCacheIndex(int index, int cacheIndex)
 		{
 			this.StopMovieCameraInternal();
@@ -373,7 +373,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			return true;
 		}
 
-		// Token: 0x06048490 RID: 296080 RVA: 0x012941E0 File Offset: 0x012923E0
+		// Token: 0x0603E8DD RID: 256221 RVA: 0x01236C60 File Offset: 0x01234E60
 		private bool PlayMovieCameraByConfigItem(SMovieCameraConfigItem movieCameraConfigItem)
 		{
 			this.StopMovieCameraInternal();
@@ -393,7 +393,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			return true;
 		}
 
-		// Token: 0x06048491 RID: 296081 RVA: 0x01294238 File Offset: 0x01292438
+		// Token: 0x0603E8DE RID: 256222 RVA: 0x01236CB8 File Offset: 0x01234EB8
 		public void StopMovieCamera([Nullable(2)] Action<bool> callback = null, string reason = "")
 		{
 			this.RemoveMovieCameraTag();
@@ -429,14 +429,14 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			}
 		}
 
-		// Token: 0x06048492 RID: 296082 RVA: 0x01294326 File Offset: 0x01292526
+		// Token: 0x0603E8DF RID: 256223 RVA: 0x01236DA6 File Offset: 0x01234FA6
 		private void StopMovieCameraInternal()
 		{
 			this.StopSequenceCameraInternal();
 			this.StopFightCameraInternal();
 		}
 
-		// Token: 0x06048493 RID: 296083 RVA: 0x01294334 File Offset: 0x01292534
+		// Token: 0x0603E8E0 RID: 256224 RVA: 0x01236DB4 File Offset: 0x01234FB4
 		private void StopSequenceCameraInternal()
 		{
 			if (!this.CheckValid())
@@ -451,7 +451,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			this.SimpleLevelSequenceActor = null;
 		}
 
-		// Token: 0x06048494 RID: 296084 RVA: 0x0129435C File Offset: 0x0129255C
+		// Token: 0x0603E8E1 RID: 256225 RVA: 0x01236DDC File Offset: 0x01234FDC
 		private void StopFightCameraInternal()
 		{
 			if (!this.CheckValid())
@@ -478,25 +478,25 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			this.FightCameraTagId = -1;
 		}
 
-		// Token: 0x06048495 RID: 296085 RVA: 0x012943F3 File Offset: 0x012925F3
+		// Token: 0x0603E8E2 RID: 256226 RVA: 0x01236E73 File Offset: 0x01235073
 		public int GetCurrentPlayState()
 		{
 			return (int)this.CurrentPlayState;
 		}
 
-		// Token: 0x06048496 RID: 296086 RVA: 0x012943FB File Offset: 0x012925FB
+		// Token: 0x0603E8E3 RID: 256227 RVA: 0x01236E7B File Offset: 0x0123507B
 		public int GetCurrentPlayCameraIndex()
 		{
 			return this.CurrentPlayCameraIndex;
 		}
 
-		// Token: 0x06048497 RID: 296087 RVA: 0x01294403 File Offset: 0x01292603
+		// Token: 0x0603E8E4 RID: 256228 RVA: 0x01236E83 File Offset: 0x01235083
 		public int GetCurrentPlayCameraCacheIndex()
 		{
 			return this.CurrentPlayCameraCacheIndex;
 		}
 
-		// Token: 0x06048498 RID: 296088 RVA: 0x0129440B File Offset: 0x0129260B
+		// Token: 0x0603E8E5 RID: 256229 RVA: 0x01236E8B File Offset: 0x0123508B
 		[NullableContext(2)]
 		public SMovieCameraConfigItem GetCurrentPlayCameraConfigItem()
 		{
@@ -507,19 +507,19 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			return this.CurrentPlayCameraConfigItem;
 		}
 
-		// Token: 0x06048499 RID: 296089 RVA: 0x01294423 File Offset: 0x01292623
+		// Token: 0x0603E8E6 RID: 256230 RVA: 0x01236EA3 File Offset: 0x012350A3
 		public bool IsPlayingSpecialMovieCamera(string specialMovieCameraConfigKey)
 		{
 			return this.CurrentPlayState == EMovieCameraPlayState.PlaySpecial && this.SpecialMovieCameraConfigKey == specialMovieCameraConfigKey;
 		}
 
-		// Token: 0x0604849A RID: 296090 RVA: 0x0129443C File Offset: 0x0129263C
+		// Token: 0x0603E8E7 RID: 256231 RVA: 0x01236EBC File Offset: 0x012350BC
 		private bool CheckValid()
 		{
 			return this.Inited;
 		}
 
-		// Token: 0x0604849B RID: 296091 RVA: 0x01294444 File Offset: 0x01292644
+		// Token: 0x0603E8E8 RID: 256232 RVA: 0x01236EC4 File Offset: 0x012350C4
 		private void AddMovieCameraTag()
 		{
 			int playerId = CreatureModel.Instance.GetPlayerId();
@@ -536,7 +536,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			}
 		}
 
-		// Token: 0x0604849C RID: 296092 RVA: 0x012944A4 File Offset: 0x012926A4
+		// Token: 0x0603E8E9 RID: 256233 RVA: 0x01236F24 File Offset: 0x01235124
 		private void RemoveMovieCameraTag()
 		{
 			int playerId = CreatureModel.Instance.GetPlayerId();
@@ -553,7 +553,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			}
 		}
 
-		// Token: 0x0604849D RID: 296093 RVA: 0x01294502 File Offset: 0x01292702
+		// Token: 0x0603E8EA RID: 256234 RVA: 0x01236F82 File Offset: 0x01235182
 		private void OnSequenceCameraStopped(bool isSequenceStopWithFinish)
 		{
 			if (!isSequenceStopWithFinish)
@@ -568,7 +568,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			this.PlayNextMovieCamera();
 		}
 
-		// Token: 0x0604849E RID: 296094 RVA: 0x0129451F File Offset: 0x0129271F
+		// Token: 0x0603E8EB RID: 256235 RVA: 0x01236F9F File Offset: 0x0123519F
 		private void OnSequenceCameraFinished()
 		{
 			this.StopSequenceCameraInternal();
@@ -579,7 +579,7 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			this.PlayNextMovieCamera();
 		}
 
-		// Token: 0x0604849F RID: 296095 RVA: 0x01294538 File Offset: 0x01292738
+		// Token: 0x0603E8EC RID: 256236 RVA: 0x01236FB8 File Offset: 0x012351B8
 		private void OnFightCameraFinished(float delta)
 		{
 			this.StopFightCameraInternal();
@@ -590,157 +590,157 @@ namespace CSharpScript.Game.Camera.CameraSubModeController
 			this.PlayNextMovieCamera();
 		}
 
-		// Token: 0x060484A0 RID: 296096 RVA: 0x01294551 File Offset: 0x01292751
+		// Token: 0x0603E8ED RID: 256237 RVA: 0x01236FD1 File Offset: 0x012351D1
 		protected override void OnEnd()
 		{
 			this.StopMovieCamera(null, "系统销毁,停止电影镜头");
 			this.Inited = false;
 		}
 
-		// Token: 0x060484A1 RID: 296097 RVA: 0x01294566 File Offset: 0x01292766
+		// Token: 0x0603E8EE RID: 256238 RVA: 0x01236FE6 File Offset: 0x012351E6
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060484A2 RID: 296098 RVA: 0x01294568 File Offset: 0x01292768
+		// Token: 0x0603E8EF RID: 256239 RVA: 0x01236FE8 File Offset: 0x012351E8
 		public static void ResetStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x04026336 RID: 156470
+		// Token: 0x04021623 RID: 136739
 		private const string MOVIE_CAMERA_CONFIG_PATH = "/Game/Aki/Data/Camera/DT_MovieCameraConfigList.DT_MovieCameraConfigList";
 
-		// Token: 0x04026337 RID: 156471
+		// Token: 0x04021624 RID: 136740
 		private const string SPECIAL_MOVIE_CAMERA_CONFIG_PATH = "/Game/Aki/Data/Camera/DT_SpecialMovieCameraConfigList.DT_SpecialMovieCameraConfigList";
 
-		// Token: 0x04026338 RID: 156472
+		// Token: 0x04021625 RID: 136741
 		private const string MOVIE_CONFIG_DA_PATH = "/Game/Aki/Data/Camera/DA_MovieCameraConfig.DA_MovieCameraConfig";
 
-		// Token: 0x04026339 RID: 156473
+		// Token: 0x04021626 RID: 136742
 		private const int INVALID_GAMEPLAY_TAG_ID = -1;
 
-		// Token: 0x0402633A RID: 156474
+		// Token: 0x04021627 RID: 136743
 		private static readonly FName CameraTag = new FName("SequenceCamera");
 
-		// Token: 0x0402633B RID: 156475
+		// Token: 0x04021628 RID: 136744
 		[StaticVariableRuleIgnore]
 		private static readonly int[] MovieModeTagList = new int[]
 		{
 			GameplayTagDefine.EGameplayTagId["角色.Common.载具驾驶.摩托.开启电影模式"]
 		};
 
-		// Token: 0x0402633C RID: 156476
+		// Token: 0x04021629 RID: 136745
 		private bool Inited;
 
-		// Token: 0x0402633D RID: 156477
+		// Token: 0x0402162A RID: 136746
 		[Nullable(2)]
 		private CameraModelInstance CameraModelInstance;
 
-		// Token: 0x0402633E RID: 156478
+		// Token: 0x0402162B RID: 136747
 		[Nullable(2)]
 		private MovieCameraConfig Config;
 
-		// Token: 0x0402633F RID: 156479
+		// Token: 0x0402162C RID: 136748
 		private bool SpecialMovieCameraConfigLoading;
 
-		// Token: 0x04026340 RID: 156480
+		// Token: 0x0402162D RID: 136749
 		[Nullable(2)]
 		private UDataTable SpecialMovieCameraConfigDataTable;
 
-		// Token: 0x04026341 RID: 156481
+		// Token: 0x0402162E RID: 136750
 		private string SpecialMovieCameraConfigKey = "";
 
-		// Token: 0x04026342 RID: 156482
+		// Token: 0x0402162F RID: 136751
 		[Nullable(2)]
 		private SMovieCameraConfigItem SpecialCameraConfigItem;
 
-		// Token: 0x04026343 RID: 156483
+		// Token: 0x04021630 RID: 136752
 		[Nullable(2)]
 		private Action<bool> SpecialPlayCallback;
 
-		// Token: 0x04026344 RID: 156484
+		// Token: 0x04021631 RID: 136753
 		[Nullable(2)]
 		private SMovieCameraConfigItem CurrentPlaySpecialCameraConfigItem;
 
-		// Token: 0x04026345 RID: 156485
+		// Token: 0x04021632 RID: 136754
 		private bool MovieCameraConfigLoading;
 
-		// Token: 0x04026346 RID: 156486
+		// Token: 0x04021633 RID: 136755
 		[Nullable(2)]
 		private UDataTable MovieCameraConfigDataTable;
 
-		// Token: 0x04026347 RID: 156487
+		// Token: 0x04021634 RID: 136756
 		private string MovieCameraConfigKey = "";
 
-		// Token: 0x04026348 RID: 156488
+		// Token: 0x04021635 RID: 136757
 		private int InitialPlayCameraIndex = -1;
 
-		// Token: 0x04026349 RID: 156489
+		// Token: 0x04021636 RID: 136758
 		[Nullable(2)]
 		private Action<bool> PlayCallback;
 
-		// Token: 0x0402634A RID: 156490
+		// Token: 0x04021637 RID: 136759
 		[Nullable(2)]
 		private SMovieCameraConfig MovieCameraConfig;
 
-		// Token: 0x0402634B RID: 156491
+		// Token: 0x04021638 RID: 136760
 		private readonly List<SMovieCameraConfigItem> MovieCameraConfigItemList = new List<SMovieCameraConfigItem>();
 
-		// Token: 0x0402634C RID: 156492
+		// Token: 0x04021639 RID: 136761
 		private readonly List<int> MovieCameraCacheList = new List<int>();
 
-		// Token: 0x0402634D RID: 156493
+		// Token: 0x0402163A RID: 136762
 		private readonly Dictionary<int, int> MovieCameraIndexCacheMap = new Dictionary<int, int>();
 
-		// Token: 0x0402634E RID: 156494
+		// Token: 0x0402163B RID: 136763
 		private readonly Dictionary<int, int> MovieCameraCacheIndexMap = new Dictionary<int, int>();
 
-		// Token: 0x0402634F RID: 156495
+		// Token: 0x0402163C RID: 136764
 		private int CurrentPlayCameraIndex = -1;
 
-		// Token: 0x04026350 RID: 156496
+		// Token: 0x0402163D RID: 136765
 		private int CurrentPlayCameraCacheIndex = -1;
 
-		// Token: 0x04026351 RID: 156497
+		// Token: 0x0402163E RID: 136766
 		[Nullable(2)]
 		private SMovieCameraConfigItem CurrentPlayCameraConfigItem;
 
-		// Token: 0x04026352 RID: 156498
+		// Token: 0x0402163F RID: 136767
 		private EMovieCameraPlayState CurrentPlayState;
 
-		// Token: 0x04026353 RID: 156499
+		// Token: 0x04021640 RID: 136768
 		private readonly Dictionary<SMovieCameraConfigItem, ULevelSequence> CacheLevelSequenceMap = new Dictionary<SMovieCameraConfigItem, ULevelSequence>();
 
-		// Token: 0x04026354 RID: 156500
+		// Token: 0x04021641 RID: 136769
 		private int FightCameraTagId = -1;
 
-		// Token: 0x04026355 RID: 156501
+		// Token: 0x04021642 RID: 136770
 		[Nullable(2)]
 		private TimerHandle FightCameraTimerHandle;
 
-		// Token: 0x04026356 RID: 156502
+		// Token: 0x04021643 RID: 136771
 		[Nullable(2)]
 		private SimpleLevelSequenceActor SimpleLevelSequenceActor;
 
-		// Token: 0x04026357 RID: 156503
+		// Token: 0x04021644 RID: 136772
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x04026358 RID: 156504
+		// Token: 0x04021645 RID: 136773
 		private readonly Vector TempVector1 = Vector.Create();
 
-		// Token: 0x04026359 RID: 156505
+		// Token: 0x04021646 RID: 136774
 		private readonly Vector TempVector2 = Vector.Create();
 
-		// Token: 0x0402635A RID: 156506
+		// Token: 0x04021647 RID: 136775
 		private readonly Rotator TempRotator = Rotator.Create();
 
-		// Token: 0x0402635B RID: 156507
+		// Token: 0x04021648 RID: 136776
 		private readonly Rotator TempRotator1 = Rotator.Create();
 
-		// Token: 0x0402635C RID: 156508
+		// Token: 0x04021649 RID: 136777
 		private readonly Rotator TempRotator2 = Rotator.Create();
 
-		// Token: 0x0402635D RID: 156509
+		// Token: 0x0402164A RID: 136778
 		private readonly int DebugPlayIndex = -1;
 	}
 }

@@ -11,15 +11,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070DB RID: 28891
+	// Token: 0x0200638B RID: 25483
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharacterClimbComponent : EntityComponent
 	{
-		// Token: 0x17009CB1 RID: 40113
-		// (get) Token: 0x060467E3 RID: 288739 RVA: 0x011B4073 File Offset: 0x011B2273
-		[StaticVariableRuleIgnore]
-		public new static Type[] Dependencies
+		// Token: 0x17007529 RID: 29993
+		// (get) Token: 0x0603DBCB RID: 252875 RVA: 0x011E3A4F File Offset: 0x011E1C4F
+		public override Type[] Dependencies
 		{
 			get
 			{
@@ -31,13 +30,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060467E4 RID: 288740 RVA: 0x011B4095 File Offset: 0x011B2295
+		// Token: 0x0603DBCC RID: 252876 RVA: 0x011E3A71 File Offset: 0x011E1C71
 		private void ReceiveClimbEvent(float deltaTime)
 		{
 			this.ClimbEvent(deltaTime);
 		}
 
-		// Token: 0x060467E5 RID: 288741 RVA: 0x011B40A0 File Offset: 0x011B22A0
+		// Token: 0x0603DBCD RID: 252877 RVA: 0x011E3A7C File Offset: 0x011E1C7C
 		[NullableContext(2)]
 		private void OnStateInherit(Entity other, bool notInheritMoveAndAnim)
 		{
@@ -92,7 +91,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060467E6 RID: 288742 RVA: 0x011B41F0 File Offset: 0x011B23F0
+		// Token: 0x0603DBCE RID: 252878 RVA: 0x011E3BCC File Offset: 0x011E1DCC
 		private void OnUseSkill(int entityId, int skillId, bool IsAutonomousProxy)
 		{
 			CharacterMoveComponent moveComp = this.MoveComp;
@@ -124,9 +123,9 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CB2 RID: 40114
-		// (get) Token: 0x060467E7 RID: 288743 RVA: 0x011B42A3 File Offset: 0x011B24A3
-		// (set) Token: 0x060467E8 RID: 288744 RVA: 0x011B42AC File Offset: 0x011B24AC
+		// Token: 0x1700752A RID: 29994
+		// (get) Token: 0x0603DBCF RID: 252879 RVA: 0x011E3C7F File Offset: 0x011E1E7F
+		// (set) Token: 0x0603DBD0 RID: 252880 RVA: 0x011E3C88 File Offset: 0x011E1E88
 		protected bool ClimbBlocking
 		{
 			get
@@ -149,13 +148,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060467E9 RID: 288745 RVA: 0x011B4312 File Offset: 0x011B2512
+		// Token: 0x0603DBD1 RID: 252881 RVA: 0x011E3CEE File Offset: 0x011E1EEE
 		public void SetIsAllowEarlyExitClimb(bool adaptive)
 		{
 			this.IsAllowEarlyExitClimb = adaptive;
 		}
 
-		// Token: 0x060467EA RID: 288746 RVA: 0x011B431C File Offset: 0x011B251C
+		// Token: 0x0603DBD2 RID: 252882 RVA: 0x011E3CF8 File Offset: 0x011E1EF8
 		private unsafe void OnPositionStateChanged(global::ECharPositionState oldPositionState, global::ECharPositionState newPositionState)
 		{
 			if (oldPositionState == newPositionState)
@@ -247,7 +246,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060467EB RID: 288747 RVA: 0x011B46A8 File Offset: 0x011B28A8
+		// Token: 0x0603DBD3 RID: 252883 RVA: 0x011E4084 File Offset: 0x011E2284
 		private void OnForbiddenClimbChanged(int count, int tagId, int exactTagId, int oldCount)
 		{
 			if (count > 0)
@@ -269,7 +268,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060467EC RID: 288748 RVA: 0x011B4726 File Offset: 0x011B2926
+		// Token: 0x0603DBD4 RID: 252884 RVA: 0x011E4102 File Offset: 0x011E2302
 		private void OnForbiddenClimbOnWall(int count, int tagId, int exactTagId, int oldCount)
 		{
 			if (count > 0 && this.UnifiedStateComponent.PositionState == global::ECharPositionState.Climb)
@@ -278,13 +277,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060467ED RID: 288749 RVA: 0x011B4740 File Offset: 0x011B2940
+		// Token: 0x0603DBD5 RID: 252885 RVA: 0x011E411C File Offset: 0x011E231C
 		private void OnForceFastClimb(int tagId, bool bTagExists)
 		{
 			this.ForceFastClimb = bTagExists;
 		}
 
-		// Token: 0x060467EE RID: 288750 RVA: 0x011B474C File Offset: 0x011B294C
+		// Token: 0x0603DBD6 RID: 252886 RVA: 0x011E4128 File Offset: 0x011E2328
 		public void UpdateClimbDebug()
 		{
 			if (GlobalData.IsPlayInEditor)
@@ -298,7 +297,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060467EF RID: 288751 RVA: 0x011B47C1 File Offset: 0x011B29C1
+		// Token: 0x0603DBD7 RID: 252887 RVA: 0x011E419D File Offset: 0x011E239D
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -309,14 +308,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x060467F0 RID: 288752 RVA: 0x011B47FA File Offset: 0x011B29FA
+		// Token: 0x0603DBD8 RID: 252888 RVA: 0x011E41D6 File Offset: 0x011E23D6
 		protected override bool OnInit()
 		{
 			this.TagComponent = base.Entity.GetComponent<BaseTagComponent>();
 			return true;
 		}
 
-		// Token: 0x060467F1 RID: 288753 RVA: 0x011B4810 File Offset: 0x011B2A10
+		// Token: 0x0603DBD9 RID: 252889 RVA: 0x011E41EC File Offset: 0x011E23EC
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.CheckGetComponent<CharacterActorComponent>();
@@ -350,7 +349,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x060467F2 RID: 288754 RVA: 0x011B4A20 File Offset: 0x011B2C20
+		// Token: 0x0603DBDA RID: 252890 RVA: 0x011E43FC File Offset: 0x011E25FC
 		private void InitTraceElement()
 		{
 			this.TraceElement = new UTraceSphereElement();
@@ -364,14 +363,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			TraceElementCommon.Instance.SetTraceHitColor(this.TraceElement, CharacterClimbComponent.TraceSuccessColor);
 		}
 
-		// Token: 0x060467F3 RID: 288755 RVA: 0x011B4AD9 File Offset: 0x011B2CD9
+		// Token: 0x0603DBDB RID: 252891 RVA: 0x011E44B5 File Offset: 0x011E26B5
 		protected override void OnActivate()
 		{
 			this.CapsuleHalfHeight = this.ActorComp.ScaledHalfHeight;
 			this.UpdateClimbDebug();
 		}
 
-		// Token: 0x060467F4 RID: 288756 RVA: 0x011B4AF4 File Offset: 0x011B2CF4
+		// Token: 0x0603DBDC RID: 252892 RVA: 0x011E44D0 File Offset: 0x011E26D0
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.CharOnPositionStateChanged, new Action<global::ECharPositionState, global::ECharPositionState>(this.OnPositionStateChanged));
@@ -387,13 +386,24 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x060467F5 RID: 288757 RVA: 0x011B4BCC File Offset: 0x011B2DCC
+		// Token: 0x0603DBDD RID: 252893 RVA: 0x011E45A8 File Offset: 0x011E27A8
 		protected unsafe override void OnTick(float delta)
 		{
 			CharacterUnifiedStateComponent unifiedStateComponent = this.UnifiedStateComponent;
 			if (unifiedStateComponent != null && unifiedStateComponent.PositionState == global::ECharPositionState.Ride)
 			{
 				return;
+			}
+			if (this.PendingExitFacing)
+			{
+				this.PendingExitFacing = false;
+				if (this.UnifiedStateComponent.PositionState != global::ECharPositionState.Climb)
+				{
+					FTransformDouble actorTransform = this.ActorComp.ActorTransform;
+					FQuat fquat = this.PendingExitFacingQuat.ToUeQuat();
+					actorTransform.SetRotation(fquat);
+					this.SetCharacterTransformAndBuffer(actorTransform, 300f, null, true);
+				}
 			}
 			if (SundryModel.Instance.SceneCheckOn)
 			{
@@ -518,7 +528,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 					CharacterUnifiedStateComponent unifiedStateComponent2 = this.UnifiedStateComponent;
 					if (unifiedStateComponent2 == null || unifiedStateComponent2.MoveState != global::ECharMoveState.Soar)
 					{
-						goto IL_509;
+						goto IL_558;
 					}
 				}
 				if (this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.方向状态.面朝方向"]) || MathUtils.Instance.DotProduct(inputDirectProxy, this.ActorComp.ActorForwardProxy) > 0.7070000171661377)
@@ -527,7 +537,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 					this.DetectClimb(delta);
 				}
 			}
-			IL_509:
+			IL_558:
 			if (flag && FormationAttributeController.Instance.GetValue(EFormationAttributeId.Strength) <= 0f && this.ClimbState != EClimbState.退出攀爬 && !this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["角色.Common.BUFFID.体力消耗.攀爬跳跃"]))
 			{
 				this.NormalExitClimb();
@@ -552,13 +562,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060467F6 RID: 288758 RVA: 0x011B516D File Offset: 0x011B336D
+		// Token: 0x0603DBDE RID: 252894 RVA: 0x011E4B98 File Offset: 0x011E2D98
 		public EExitClimb GetExitClimbType()
 		{
 			return this.ExitClimbType;
 		}
 
-		// Token: 0x060467F7 RID: 288759 RVA: 0x011B5178 File Offset: 0x011B3378
+		// Token: 0x0603DBDF RID: 252895 RVA: 0x011E4BA0 File Offset: 0x011E2DA0
 		private void DetectClimb(float deltaTime)
 		{
 			if (this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.技能中"]) && !this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.动作状态.冲刺"]))
@@ -601,7 +611,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060467F8 RID: 288760 RVA: 0x011B5258 File Offset: 0x011B3458
+		// Token: 0x0603DBE0 RID: 252896 RVA: 0x011E4C80 File Offset: 0x011E2E80
 		private void DetectClimbByMovementMode(bool bSprintEnter)
 		{
 			switch (this.UnifiedStateComponent.PositionState)
@@ -653,7 +663,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060467F9 RID: 288761 RVA: 0x011B5370 File Offset: 0x011B3570
+		// Token: 0x0603DBE1 RID: 252897 RVA: 0x011E4D98 File Offset: 0x011E2F98
 		private void DetectUpArriveBothVaultAndOnTop()
 		{
 			EClimbingArriveType eclimbingArriveType = this.KuroClimbObject.D_TryUpArrives(this.ActorComp.ActorForward, this.GetTimeFromTraceType(this.DebugVaultClimbTrace), ref this.RefTransform);
@@ -669,7 +679,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.UpArrive(EExitClimb.地面登上, this.RefTransform, true);
 		}
 
-		// Token: 0x060467FA RID: 288762 RVA: 0x011B53D4 File Offset: 0x011B35D4
+		// Token: 0x0603DBE2 RID: 252898 RVA: 0x011E4DFC File Offset: 0x011E2FFC
 		private void DetectClimbWalking(bool bSprintEnter)
 		{
 			if (this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.动作状态.行走"]))
@@ -692,7 +702,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.DetectEnterClimb(bSprintEnter ? EEnterClimb.技能进入 : EEnterClimb.地面上爬进入);
 		}
 
-		// Token: 0x060467FB RID: 288763 RVA: 0x011B5434 File Offset: 0x011B3634
+		// Token: 0x0603DBE3 RID: 252899 RVA: 0x011E4E5C File Offset: 0x011E305C
 		private void CleanClimbState()
 		{
 			this.KuroClimbObject.ExitClimb();
@@ -703,13 +713,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.ClimbBlocking = false;
 		}
 
-		// Token: 0x060467FC RID: 288764 RVA: 0x011B54A3 File Offset: 0x011B36A3
+		// Token: 0x0603DBE4 RID: 252900 RVA: 0x011E4ECB File Offset: 0x011E30CB
 		public bool CanClimbPress()
 		{
 			return true;
 		}
 
-		// Token: 0x060467FD RID: 288765 RVA: 0x011B54A8 File Offset: 0x011B36A8
+		// Token: 0x0603DBE5 RID: 252901 RVA: 0x011E4ED0 File Offset: 0x011E30D0
 		private void NormalExitClimb()
 		{
 			if (GravityUtils.Instance.GetZnInGravityForActor(this.ActorComp, this.ActorComp.ActorVelocityProxy) > 0.0)
@@ -733,10 +743,18 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 					actorRightProxy.Multiply(this.TmpVector.Y, this.TmpVector3);
 					this.TmpVector2.AdditionEqual(this.TmpVector3);
 					MathUtils.Instance.LookRotationUpFirst(this.TmpVector2, this.MoveComp.GravityUp, this.TmpQuat);
-					FTransformDouble actorTransform = this.ActorComp.ActorTransform;
-					FQuat fquat = this.TmpQuat.ToUeQuat();
-					actorTransform.SetRotation(fquat);
-					this.SetCharacterTransformAndBuffer(actorTransform, 300f, null, true);
+					if (UeTickManageDefine.MovementPredictMode)
+					{
+						this.PendingExitFacingQuat.DeepCopy(this.TmpQuat);
+						this.PendingExitFacing = true;
+					}
+					else
+					{
+						FTransformDouble actorTransform = this.ActorComp.ActorTransform;
+						FQuat fquat = this.TmpQuat.ToUeQuat();
+						actorTransform.SetRotation(fquat);
+						this.SetCharacterTransformAndBuffer(actorTransform, 300f, null, true);
+					}
 				}
 			}
 			this.ActorComp.Actor.KuroSetMovementMode(new SetMovementModeInfo
@@ -746,7 +764,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			});
 		}
 
-		// Token: 0x060467FE RID: 288766 RVA: 0x011B565C File Offset: 0x011B385C
+		// Token: 0x0603DBE6 RID: 252902 RVA: 0x011E50A4 File Offset: 0x011E32A4
 		public void ClimbPress(bool pressed)
 		{
 			CharacterUnifiedStateComponent unifiedStateComponent = this.UnifiedStateComponent;
@@ -757,7 +775,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060467FF RID: 288767 RVA: 0x011B56B8 File Offset: 0x011B38B8
+		// Token: 0x0603DBE7 RID: 252903 RVA: 0x011E5100 File Offset: 0x011E3300
 		private float CalculateClimbAngle(global::Vector inputDirect, global::Vector wallNormal)
 		{
 			this.TmpVector.DeepCopy(wallNormal);
@@ -766,13 +784,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return GravityUtils.Instance.GetAngleOffsetInGravityForActor(this.ActorComp, wallNormal, inputDirect);
 		}
 
-		// Token: 0x06046800 RID: 288768 RVA: 0x011B570F File Offset: 0x011B390F
+		// Token: 0x0603DBE8 RID: 252904 RVA: 0x011E5157 File Offset: 0x011E3357
 		protected bool NeedProcessTransform()
 		{
 			return (this.ClimbState != EClimbState.进入攀爬 || this.ClimbDownCompleted) && (this.ClimbState == EClimbState.攀爬中 || this.ClimbState == EClimbState.进入攀爬);
 		}
 
-		// Token: 0x06046801 RID: 288769 RVA: 0x011B573C File Offset: 0x011B393C
+		// Token: 0x0603DBE9 RID: 252905 RVA: 0x011E5184 File Offset: 0x011E3384
 		private void ConfirmMove(FTransformDouble newTransform, float CachedTime = 200f)
 		{
 			global::Vector tmpVector = this.TmpVector;
@@ -789,7 +807,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.KuroClimbObject.ConfirmMove();
 		}
 
-		// Token: 0x06046802 RID: 288770 RVA: 0x011B57F0 File Offset: 0x011B39F0
+		// Token: 0x0603DBEA RID: 252906 RVA: 0x011E5238 File Offset: 0x011E3438
 		private bool IsForwardBlock()
 		{
 			global::Vector tmpVector = this.TmpVector;
@@ -799,7 +817,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return this.TmpVector.Normalize(9.99999993922529E-09) && this.ActorComp.InputDirectProxy.DotProduct(this.TmpVector) <= -0.7070000171661377;
 		}
 
-		// Token: 0x06046803 RID: 288771 RVA: 0x011B5870 File Offset: 0x011B3A70
+		// Token: 0x0603DBEB RID: 252907 RVA: 0x011E52B8 File Offset: 0x011E34B8
 		private unsafe void UpArrive(EExitClimb exitType, FTransformDouble transform, bool changeMovementMode = true)
 		{
 			if (this.UnifiedStateComponent.PositionState == global::ECharPositionState.Ground)
@@ -900,7 +918,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046804 RID: 288772 RVA: 0x011B5C7F File Offset: 0x011B3E7F
+		// Token: 0x0603DBEC RID: 252908 RVA: 0x011E56C7 File Offset: 0x011E38C7
 		private float GetTimeFromTraceType(EDrawDebugTrace TraceType)
 		{
 			if (TraceType == EDrawDebugTrace.ForOneFrame)
@@ -914,12 +932,12 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return 5f;
 		}
 
-		// Token: 0x06046805 RID: 288773 RVA: 0x011B5C9C File Offset: 0x011B3E9C
+		// Token: 0x0603DBED RID: 252909 RVA: 0x011E56E4 File Offset: 0x011E38E4
 		private void DetectClimbFromTop()
 		{
 		}
 
-		// Token: 0x06046806 RID: 288774 RVA: 0x011B5CAC File Offset: 0x011B3EAC
+		// Token: 0x0603DBEE RID: 252910 RVA: 0x011E56F4 File Offset: 0x011E38F4
 		private void DetectEnterClimb(EEnterClimb enterType)
 		{
 			if ((double)this.NextCanEnterClimbTime > Time.Instance.Now || FormationAttributeController.Instance.GetValue(EFormationAttributeId.Strength) <= 10f)
@@ -947,7 +965,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.DetectEnterClimbWithDirectInternal(enterType, this.SpeedDirect, false);
 		}
 
-		// Token: 0x06046807 RID: 288775 RVA: 0x011B5DA4 File Offset: 0x011B3FA4
+		// Token: 0x0603DBEF RID: 252911 RVA: 0x011E57EC File Offset: 0x011E39EC
 		private unsafe void DetectEnterClimbWithDirectInternal(EEnterClimb enterType, global::Vector speedDirect, bool log = false)
 		{
 			if (!speedDirect.Normalize(9.99999993922529E-09))
@@ -1023,13 +1041,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			});
 		}
 
-		// Token: 0x06046808 RID: 288776 RVA: 0x011B5F74 File Offset: 0x011B4174
+		// Token: 0x0603DBF0 RID: 252912 RVA: 0x011E59BC File Offset: 0x011E3BBC
 		private void DownArrive()
 		{
 			this.NormalExitClimb();
 		}
 
-		// Token: 0x06046809 RID: 288777 RVA: 0x011B5F7C File Offset: 0x011B417C
+		// Token: 0x0603DBF1 RID: 252913 RVA: 0x011E59C4 File Offset: 0x011E3BC4
 		private void DetectSprintVault()
 		{
 			ESprintVaultType esprintVaultType = this.KuroClimbObject.D_TrySprintVault(this.GetTimeFromTraceType(this.DebugVaultClimbTrace), ref this.RefTransform, ref this.RefFloat);
@@ -1053,12 +1071,12 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			RoleAudioController.Instance.PlayRoleAudio(base.Entity, ERoleAudioType.ClimbLeap, null);
 		}
 
-		// Token: 0x0604680A RID: 288778 RVA: 0x011B606C File Offset: 0x011B426C
+		// Token: 0x0603DBF2 RID: 252914 RVA: 0x011E5AB4 File Offset: 0x011E3CB4
 		public void DealClimbUpStart()
 		{
 		}
 
-		// Token: 0x0604680B RID: 288779 RVA: 0x011B6070 File Offset: 0x011B4270
+		// Token: 0x0603DBF3 RID: 252915 RVA: 0x011E5AB8 File Offset: 0x011E3CB8
 		public unsafe void DealClimbUpFinish()
 		{
 			EResultForExitClimb eresultForExitClimb = LocomotionUtils.FindSpaceForExitClimb(this.ActorComp, this.ActorComp.DefaultHalfHeight, this.ActorComp.DefaultRadius, 5f, this.TmpVector);
@@ -1086,7 +1104,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.ActorComp.ResetCapsuleRadiusAndHeight(false);
 		}
 
-		// Token: 0x0604680C RID: 288780 RVA: 0x011B61AC File Offset: 0x011B43AC
+		// Token: 0x0603DBF4 RID: 252916 RVA: 0x011E5BF4 File Offset: 0x011E3DF4
 		private unsafe void ClimbEvent(float deltaTime)
 		{
 			bool flag = this.NeedProcessTransform();
@@ -1180,7 +1198,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x0604680D RID: 288781 RVA: 0x011B6510 File Offset: 0x011B4710
+		// Token: 0x0603DBF5 RID: 252917 RVA: 0x011E5F58 File Offset: 0x011E4158
 		public SClimbInfo GetClimbInfo()
 		{
 			if (this.ClimbInputDirect.ContainsNaN())
@@ -1198,7 +1216,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return this.ClimbInfo;
 		}
 
-		// Token: 0x0604680E RID: 288782 RVA: 0x011B6594 File Offset: 0x011B4794
+		// Token: 0x0603DBF6 RID: 252918 RVA: 0x011E5FDC File Offset: 0x011E41DC
 		public FClimbInfoStruct GetClimbInfoNew()
 		{
 			if (this.ClimbInputDirect.ContainsNaN())
@@ -1217,7 +1235,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return this.ClimbInfoNew;
 		}
 
-		// Token: 0x0604680F RID: 288783 RVA: 0x011B6628 File Offset: 0x011B4828
+		// Token: 0x0603DBF7 RID: 252919 RVA: 0x011E6070 File Offset: 0x011E4270
 		public SClimbInfo GetTsClimbInfo()
 		{
 			if (this.ClimbInputDirect.ContainsNaN())
@@ -1236,7 +1254,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return this.TsClimbInfo;
 		}
 
-		// Token: 0x06046810 RID: 288784 RVA: 0x011B66BC File Offset: 0x011B48BC
+		// Token: 0x0603DBF8 RID: 252920 RVA: 0x011E6104 File Offset: 0x011E4304
 		public void FinishClimbDown()
 		{
 			this.ClimbDownCompleted = true;
@@ -1258,7 +1276,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			});
 		}
 
-		// Token: 0x06046811 RID: 288785 RVA: 0x011B674C File Offset: 0x011B494C
+		// Token: 0x0603DBF9 RID: 252921 RVA: 0x011E6194 File Offset: 0x011E4394
 		[NullableContext(2)]
 		public void SetCharacterTransformAndBuffer(FTransformDouble newTransform, float smoothTime, global::Vector newLocation = null, bool sweep = true)
 		{
@@ -1289,14 +1307,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.ActorComp.SetActorTransform(newTransform, "攀爬.SetCharacterTransformAndBuffer", sweep, null);
 		}
 
-		// Token: 0x06046812 RID: 288786 RVA: 0x011B6832 File Offset: 0x011B4A32
+		// Token: 0x0603DBFA RID: 252922 RVA: 0x011E627A File Offset: 0x011E447A
 		public void KickWallExit()
 		{
 			this.SetExitClimbType(EExitClimb.蹬墙退出);
 			this.SetClimbState(EClimbState.退出攀爬);
 		}
 
-		// Token: 0x06046813 RID: 288787 RVA: 0x011B6844 File Offset: 0x011B4A44
+		// Token: 0x0603DBFB RID: 252923 RVA: 0x011E628C File Offset: 0x011E448C
 		public unsafe void SetClimbState(EClimbState climbState)
 		{
 			if (this.ClimbState == climbState)
@@ -1339,14 +1357,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046814 RID: 288788 RVA: 0x011B697F File Offset: 0x011B4B7F
+		// Token: 0x0603DBFC RID: 252924 RVA: 0x011E63C7 File Offset: 0x011E45C7
 		public void SetEnterClimbType(EEnterClimb enterType)
 		{
 			this.EnterClimbType = enterType;
 			this.TsOutputClimbState.进入攀爬类型 = enterType;
 		}
 
-		// Token: 0x06046815 RID: 288789 RVA: 0x011B6994 File Offset: 0x011B4B94
+		// Token: 0x0603DBFD RID: 252925 RVA: 0x011E63DC File Offset: 0x011E45DC
 		public void SetExitClimbType(EExitClimb exitClimbType)
 		{
 			bool flag = this.NotConsumeStrengthExitClimbTypes.Contains(this.ExitClimbType);
@@ -1371,7 +1389,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046816 RID: 288790 RVA: 0x011B6A38 File Offset: 0x011B4C38
+		// Token: 0x0603DBFE RID: 252926 RVA: 0x011E6480 File Offset: 0x011E4680
 		public SClimbState GetClimbState()
 		{
 			this.OutputClimbState.攀爬状态 = this.ClimbState;
@@ -1380,7 +1398,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return this.OutputClimbState;
 		}
 
-		// Token: 0x06046817 RID: 288791 RVA: 0x011B6A8D File Offset: 0x011B4C8D
+		// Token: 0x0603DBFF RID: 252927 RVA: 0x011E64D5 File Offset: 0x011E46D5
 		public FClimbStateStruct GetClimbStateNew()
 		{
 			this.OutputClimbStateNew.ClimbState = (EClimbStateType)this.ClimbState;
@@ -1389,19 +1407,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return this.OutputClimbStateNew;
 		}
 
-		// Token: 0x06046818 RID: 288792 RVA: 0x011B6AC8 File Offset: 0x011B4CC8
+		// Token: 0x0603DC00 RID: 252928 RVA: 0x011E6510 File Offset: 0x011E4710
 		public SClimbState GetTsClimbState()
 		{
 			return this.TsOutputClimbState;
 		}
 
-		// Token: 0x06046819 RID: 288793 RVA: 0x011B6AD0 File Offset: 0x011B4CD0
+		// Token: 0x0603DC01 RID: 252929 RVA: 0x011E6518 File Offset: 0x011E4718
 		public float GetOnWallAngle()
 		{
 			return this.OnWallAngle;
 		}
 
-		// Token: 0x0604681A RID: 288794 RVA: 0x011B6AD8 File Offset: 0x011B4CD8
+		// Token: 0x0603DC02 RID: 252930 RVA: 0x011E6520 File Offset: 0x011E4720
 		public void OnEnterClimb()
 		{
 			if (this.ClimbState != EClimbState.进入攀爬)
@@ -1412,7 +1430,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.SetExitClimbType(EExitClimb.未知方式);
 		}
 
-		// Token: 0x0604681B RID: 288795 RVA: 0x011B6AF4 File Offset: 0x011B4CF4
+		// Token: 0x0603DC03 RID: 252931 RVA: 0x011E653C File Offset: 0x011E473C
 		public unsafe void OnExitClimb()
 		{
 			Log instance = Log.Instance;
@@ -1472,19 +1490,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x0604681C RID: 288796 RVA: 0x011B6C61 File Offset: 0x011B4E61
+		// Token: 0x0603DC04 RID: 252932 RVA: 0x011E66A9 File Offset: 0x011E48A9
 		public void ClimbKeyPressed(bool pressed)
 		{
 			this.ClimbPress(pressed);
 		}
 
-		// Token: 0x0604681D RID: 288797 RVA: 0x011B6C6A File Offset: 0x011B4E6A
+		// Token: 0x0603DC05 RID: 252933 RVA: 0x011E66B2 File Offset: 0x011E48B2
 		public void AwakeClimbInput(bool awake)
 		{
 			this.AwakeInput = awake;
 		}
 
-		// Token: 0x0604681E RID: 288798 RVA: 0x011B6C74 File Offset: 0x011B4E74
+		// Token: 0x0603DC06 RID: 252934 RVA: 0x011E66BC File Offset: 0x011E48BC
 		public void KickExitCheck()
 		{
 			if (this.UnifiedStateComponent.PositionState == global::ECharPositionState.Climb)
@@ -1502,7 +1520,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x0604681F RID: 288799 RVA: 0x011B6CC8 File Offset: 0x011B4EC8
+		// Token: 0x0603DC07 RID: 252935 RVA: 0x011E6710 File Offset: 0x011E4910
 		public float GetClimbRadius()
 		{
 			if (this.ClimbConfig == null)
@@ -1512,7 +1530,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return this.ClimbConfig.Value.ClimbRadius;
 		}
 
-		// Token: 0x06046820 RID: 288800 RVA: 0x011B6CFC File Offset: 0x011B4EFC
+		// Token: 0x0603DC08 RID: 252936 RVA: 0x011E6744 File Offset: 0x011E4944
 		public bool DetectClimbWithDirect(bool bSprintEnter, FVectorDouble direct, bool log = false)
 		{
 			if (!base.Active || this.UnifiedStateComponent.PositionState == global::ECharPositionState.Climb)
@@ -1548,13 +1566,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x06046821 RID: 288801 RVA: 0x011B6E0D File Offset: 0x011B500D
+		// Token: 0x0603DC09 RID: 252937 RVA: 0x011E6855 File Offset: 0x011E4A55
 		public void ResetClimbObjectConfig(string key)
 		{
 			this.InitClimbConfig(key);
 		}
 
-		// Token: 0x06046822 RID: 288802 RVA: 0x011B6E18 File Offset: 0x011B5018
+		// Token: 0x0603DC0A RID: 252938 RVA: 0x011E6860 File Offset: 0x011E4A60
 		private bool InitClimbConfig(string key)
 		{
 			this.ClimbConfig = ConfigClimbById.GetConfig(key, true);
@@ -1604,7 +1622,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x06046823 RID: 288803 RVA: 0x011B73B0 File Offset: 0x011B55B0
+		// Token: 0x0603DC0B RID: 252939 RVA: 0x011E6DF8 File Offset: 0x011E4FF8
 		private void ClimbingExitPositionFix()
 		{
 			global::Vector tmpVector = this.TmpVector2;
@@ -1645,19 +1663,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.ActorComp.ResetCapsuleRadiusAndHeight(false);
 		}
 
-		// Token: 0x06046824 RID: 288804 RVA: 0x011B7544 File Offset: 0x011B5744
+		// Token: 0x0603DC0C RID: 252940 RVA: 0x011E6F8C File Offset: 0x011E518C
 		private bool IsSprintClimb()
 		{
 			return (this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.冲刺保持"]) && !this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["战斗状态.行为限制.快速攀爬禁止"])) || this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["战斗状态.行为限制.强制快速攀爬"]);
 		}
 
-		// Token: 0x06046825 RID: 288805 RVA: 0x011B75A5 File Offset: 0x011B57A5
+		// Token: 0x0603DC0D RID: 252941 RVA: 0x011E6FED File Offset: 0x011E51ED
 		public void SetLastSafeLocation(global::Vector location)
 		{
 			this.LastSafeLocation.DeepCopy(location);
 		}
 
-		// Token: 0x06046826 RID: 288806 RVA: 0x011B75B3 File Offset: 0x011B57B3
+		// Token: 0x0603DC0E RID: 252942 RVA: 0x011E6FFB File Offset: 0x011E51FB
 		private void OnTeleportStart(bool loading)
 		{
 			CharacterUnifiedStateComponent unifiedStateComponent = this.UnifiedStateComponent;
@@ -1667,7 +1685,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046827 RID: 288807 RVA: 0x011B75D4 File Offset: 0x011B57D4
+		// Token: 0x0603DC0F RID: 252943 RVA: 0x011E701C File Offset: 0x011E521C
 		private void PrintClimbDebugLog()
 		{
 			UAnimInstance mainAnimInstance = base.Entity.GetComponent<CharacterAnimationComponent>().MainAnimInstance;
@@ -1702,7 +1720,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046828 RID: 288808 RVA: 0x011B76C0 File Offset: 0x011B58C0
+		// Token: 0x0603DC10 RID: 252944 RVA: 0x011E7108 File Offset: 0x011E5308
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -1710,545 +1728,441 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 				return false;
 			}
 			CharacterClimbComponent characterClimbComponent = (CharacterClimbComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (characterClimbComponent.ActorComp == null)
 			{
-				if (characterClimbComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("MoveComp"))
-			{
-				if (characterClimbComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("AnimComp"))
-			{
-				if (characterClimbComponent.AnimComp == null)
-				{
-					this.AnimComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ClimbConfig"))
-			{
-				this.ClimbConfig = characterClimbComponent.ClimbConfig;
-			}
-			if (base.CanResetComponentProperty("ClimbVault"))
-			{
-				this.ClimbVault = characterClimbComponent.ClimbVault;
-			}
-			if (base.CanResetComponentProperty("ClimbOnTop"))
-			{
-				this.ClimbOnTop = characterClimbComponent.ClimbOnTop;
-			}
-			if (base.CanResetComponentProperty("ClimbFromTop"))
-			{
-				this.ClimbFromTop = characterClimbComponent.ClimbFromTop;
-			}
-			if (base.CanResetComponentProperty("ClimbInfo"))
-			{
-				this.ClimbInfo = characterClimbComponent.ClimbInfo;
-			}
-			if (base.CanResetComponentProperty("ClimbInfoNew"))
-			{
-				if (characterClimbComponent.ClimbInfoNew == null)
-				{
-					this.ClimbInfoNew = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FClimbInfoStruct>(this.ClimbInfoNew), "ClimbInfoNew"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TsClimbInfo"))
-			{
-				if (characterClimbComponent.TsClimbInfo == null)
-				{
-					this.TsClimbInfo = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SClimbInfo>(this.TsClimbInfo), "TsClimbInfo"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("OutputClimbState"))
-			{
-				this.OutputClimbState = characterClimbComponent.OutputClimbState;
-			}
-			if (base.CanResetComponentProperty("OutputClimbStateNew"))
-			{
-				if (characterClimbComponent.OutputClimbStateNew == null)
-				{
-					this.OutputClimbStateNew = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FClimbStateStruct>(this.OutputClimbStateNew), "OutputClimbStateNew"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TsOutputClimbState"))
-			{
-				if (characterClimbComponent.TsOutputClimbState == null)
-				{
-					this.TsOutputClimbState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SClimbState>(this.TsOutputClimbState), "TsOutputClimbState"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ClimbUpNewTransform"))
-			{
-				this.ClimbUpNewTransform = characterClimbComponent.ClimbUpNewTransform;
-			}
-			if (base.CanResetComponentProperty("ClimbUpNewLocation"))
-			{
-				if (characterClimbComponent.ClimbUpNewLocation == null)
-				{
-					this.ClimbUpNewLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.ClimbUpNewLocation), "ClimbUpNewLocation"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ClimbSprintVault"))
-			{
-				this.ClimbSprintVault = characterClimbComponent.ClimbSprintVault;
-			}
-			if (base.CanResetComponentProperty("CacheTransformBeforeMove"))
-			{
-				this.CacheTransformBeforeMove = characterClimbComponent.CacheTransformBeforeMove;
-			}
-			if (base.CanResetComponentProperty("CacheLastMoveDirect") && characterClimbComponent.CacheLastMoveDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheLastMoveDirect), "CacheLastMoveDirect"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ClimbInputDirect") && characterClimbComponent.ClimbInputDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector2D>(this.ClimbInputDirect), "ClimbInputDirect"))
+			if (characterClimbComponent.MoveComp == null)
+			{
+				this.MoveComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("PrevClimbInputDirect") && characterClimbComponent.PrevClimbInputDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector2D>(this.PrevClimbInputDirect), "PrevClimbInputDirect"))
+			if (characterClimbComponent.AnimComp == null)
+			{
+				this.AnimComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CapsuleHalfHeight"))
+			this.ClimbConfig = characterClimbComponent.ClimbConfig;
+			this.ClimbVault = characterClimbComponent.ClimbVault;
+			this.ClimbOnTop = characterClimbComponent.ClimbOnTop;
+			this.ClimbFromTop = characterClimbComponent.ClimbFromTop;
+			this.ClimbInfo = characterClimbComponent.ClimbInfo;
+			if (characterClimbComponent.ClimbInfoNew == null)
 			{
-				this.CapsuleHalfHeight = characterClimbComponent.CapsuleHalfHeight;
+				this.ClimbInfoNew = null;
 			}
-			if (base.CanResetComponentProperty("AwakeInput"))
-			{
-				this.AwakeInput = characterClimbComponent.AwakeInput;
-			}
-			if (base.CanResetComponentProperty("ClimbDownCompleted"))
-			{
-				this.ClimbDownCompleted = characterClimbComponent.ClimbDownCompleted;
-			}
-			if (base.CanResetComponentProperty("PreCharacterStateInClimb"))
-			{
-				this.PreCharacterStateInClimb = characterClimbComponent.PreCharacterStateInClimb;
-			}
-			if (base.CanResetComponentProperty("ClimbState"))
-			{
-				this.ClimbState = characterClimbComponent.ClimbState;
-			}
-			if (base.CanResetComponentProperty("ExitClimbType"))
-			{
-				this.ExitClimbType = characterClimbComponent.ExitClimbType;
-			}
-			if (base.CanResetComponentProperty("EnterClimbType"))
-			{
-				this.EnterClimbType = characterClimbComponent.EnterClimbType;
-			}
-			if (base.CanResetComponentProperty("ExitClimbCountDown"))
-			{
-				this.ExitClimbCountDown = characterClimbComponent.ExitClimbCountDown;
-			}
-			if (base.CanResetComponentProperty("LastExitClimbTime"))
-			{
-				this.LastExitClimbTime = characterClimbComponent.LastExitClimbTime;
-			}
-			if (base.CanResetComponentProperty("LastExitClimbType"))
-			{
-				this.LastExitClimbType = characterClimbComponent.LastExitClimbType;
-			}
-			if (base.CanResetComponentProperty("ClimbBlockingInternal"))
-			{
-				this.ClimbBlockingInternal = characterClimbComponent.ClimbBlockingInternal;
-			}
-			if (base.CanResetComponentProperty("OnWallAngle"))
-			{
-				this.OnWallAngle = characterClimbComponent.OnWallAngle;
-			}
-			if (base.CanResetComponentProperty("IsAllowEarlyExitClimb"))
-			{
-				this.IsAllowEarlyExitClimb = characterClimbComponent.IsAllowEarlyExitClimb;
-			}
-			if (base.CanResetComponentProperty("RefTransform"))
-			{
-				this.RefTransform = characterClimbComponent.RefTransform;
-			}
-			if (base.CanResetComponentProperty("RefFloat"))
-			{
-				this.RefFloat = characterClimbComponent.RefFloat;
-			}
-			if (base.CanResetComponentProperty("LastSafeLocation") && characterClimbComponent.LastSafeLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastSafeLocation), "LastSafeLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClimbInfoNew), "ClimbInfoNew"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TagComponent"))
+			if (characterClimbComponent.TsClimbInfo == null)
 			{
-				if (characterClimbComponent.TagComponent == null)
-				{
-					this.TagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-				{
-					return false;
-				}
+				this.TsClimbInfo = null;
 			}
-			if (base.CanResetComponentProperty("UnifiedStateComponent"))
-			{
-				if (characterClimbComponent.UnifiedStateComponent == null)
-				{
-					this.UnifiedStateComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedStateComponent), "UnifiedStateComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("BufferOffsetSpeed") && characterClimbComponent.BufferOffsetSpeed != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.BufferOffsetSpeed), "BufferOffsetSpeed"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TsClimbInfo), "TsClimbInfo"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("BufferTimeLength"))
+			this.OutputClimbState = characterClimbComponent.OutputClimbState;
+			if (characterClimbComponent.OutputClimbStateNew == null)
 			{
-				this.BufferTimeLength = characterClimbComponent.BufferTimeLength;
+				this.OutputClimbStateNew = null;
 			}
-			if (base.CanResetComponentProperty("BufferNowTime"))
-			{
-				this.BufferNowTime = characterClimbComponent.BufferNowTime;
-			}
-			if (base.CanResetComponentProperty("SpeedDirect") && characterClimbComponent.SpeedDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SpeedDirect), "SpeedDirect"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OutputClimbStateNew), "OutputClimbStateNew"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpVector") && characterClimbComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector), "TmpVector"))
+			if (characterClimbComponent.TsOutputClimbState == null)
+			{
+				this.TsOutputClimbState = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TsOutputClimbState), "TsOutputClimbState"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpVector2") && characterClimbComponent.TmpVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector2), "TmpVector2"))
+			this.ClimbUpNewTransform = characterClimbComponent.ClimbUpNewTransform;
+			if (characterClimbComponent.ClimbUpNewLocation == null)
+			{
+				this.ClimbUpNewLocation = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClimbUpNewLocation), "ClimbUpNewLocation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpVector3") && characterClimbComponent.TmpVector3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector3), "TmpVector3"))
+			this.ClimbSprintVault = characterClimbComponent.ClimbSprintVault;
+			this.CacheTransformBeforeMove = characterClimbComponent.CacheTransformBeforeMove;
+			if (characterClimbComponent.CacheLastMoveDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheLastMoveDirect), "CacheLastMoveDirect"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpQuat") && characterClimbComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat), "TmpQuat"))
+			if (characterClimbComponent.ClimbInputDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClimbInputDirect), "ClimbInputDirect"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpRotator") && characterClimbComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.TmpRotator), "TmpRotator"))
+			if (characterClimbComponent.PrevClimbInputDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PrevClimbInputDirect), "PrevClimbInputDirect"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpTransform") && characterClimbComponent.TmpTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.TmpTransform), "TmpTransform"))
+			this.CapsuleHalfHeight = characterClimbComponent.CapsuleHalfHeight;
+			this.AwakeInput = characterClimbComponent.AwakeInput;
+			this.ClimbDownCompleted = characterClimbComponent.ClimbDownCompleted;
+			this.PreCharacterStateInClimb = characterClimbComponent.PreCharacterStateInClimb;
+			this.ClimbState = characterClimbComponent.ClimbState;
+			this.ExitClimbType = characterClimbComponent.ExitClimbType;
+			this.EnterClimbType = characterClimbComponent.EnterClimbType;
+			this.ExitClimbCountDown = characterClimbComponent.ExitClimbCountDown;
+			this.LastExitClimbTime = characterClimbComponent.LastExitClimbTime;
+			this.LastExitClimbType = characterClimbComponent.LastExitClimbType;
+			this.ClimbBlockingInternal = characterClimbComponent.ClimbBlockingInternal;
+			this.OnWallAngle = characterClimbComponent.OnWallAngle;
+			this.IsAllowEarlyExitClimb = characterClimbComponent.IsAllowEarlyExitClimb;
+			this.RefTransform = characterClimbComponent.RefTransform;
+			this.RefFloat = characterClimbComponent.RefFloat;
+			if (characterClimbComponent.LastSafeLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastSafeLocation), "LastSafeLocation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("KuroClimbObject"))
+			if (characterClimbComponent.TagComponent == null)
 			{
-				if (characterClimbComponent.KuroClimbObject == null)
-				{
-					this.KuroClimbObject = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroClimbObject>(this.KuroClimbObject), "KuroClimbObject"))
-				{
-					return false;
-				}
+				this.TagComponent = null;
 			}
-			if (base.CanResetComponentProperty("DebugNoTop"))
-			{
-				this.DebugNoTop = characterClimbComponent.DebugNoTop;
-			}
-			if (base.CanResetComponentProperty("DebugEnterClimbTrace"))
-			{
-				this.DebugEnterClimbTrace = characterClimbComponent.DebugEnterClimbTrace;
-			}
-			if (base.CanResetComponentProperty("DebugVaultClimbTrace"))
-			{
-				this.DebugVaultClimbTrace = characterClimbComponent.DebugVaultClimbTrace;
-			}
-			if (base.CanResetComponentProperty("DebugUpArriveClimbTrace"))
-			{
-				this.DebugUpArriveClimbTrace = characterClimbComponent.DebugUpArriveClimbTrace;
-			}
-			if (base.CanResetComponentProperty("DebugClimbingTrace"))
-			{
-				this.DebugClimbingTrace = characterClimbComponent.DebugClimbingTrace;
-			}
-			if (base.CanResetComponentProperty("TraceElement"))
-			{
-				if (characterClimbComponent.TraceElement == null)
-				{
-					this.TraceElement = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.TraceElement), "TraceElement"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("NextCanEnterClimbTime"))
-			{
-				this.NextCanEnterClimbTime = characterClimbComponent.NextCanEnterClimbTime;
-			}
-			if (base.CanResetComponentProperty("ForbiddenClimbKey"))
-			{
-				this.ForbiddenClimbKey = characterClimbComponent.ForbiddenClimbKey;
-			}
-			if (base.CanResetComponentProperty("ForceFastClimb"))
-			{
-				this.ForceFastClimb = characterClimbComponent.ForceFastClimb;
-			}
-			if (base.CanResetComponentProperty("CachedActorLocation") && characterClimbComponent.CachedActorLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CachedActorLocation), "CachedActorLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("OnTickStat1") && characterClimbComponent.OnTickStat1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.OnTickStat1), "OnTickStat1"))
+			if (characterClimbComponent.UnifiedStateComponent == null)
+			{
+				this.UnifiedStateComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComponent), "UnifiedStateComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("OnTickStat2") && characterClimbComponent.OnTickStat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.OnTickStat2), "OnTickStat2"))
+			if (characterClimbComponent.BufferOffsetSpeed != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BufferOffsetSpeed), "BufferOffsetSpeed"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("OnTickStat3") && characterClimbComponent.OnTickStat3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.OnTickStat3), "OnTickStat3"))
+			this.BufferTimeLength = characterClimbComponent.BufferTimeLength;
+			this.BufferNowTime = characterClimbComponent.BufferNowTime;
+			if (characterClimbComponent.SpeedDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SpeedDirect), "SpeedDirect"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("DetectClimbStat1") && characterClimbComponent.DetectClimbStat1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.DetectClimbStat1), "DetectClimbStat1"))
+			if (characterClimbComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector), "TmpVector"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("DetectClimbStat2") && characterClimbComponent.DetectClimbStat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.DetectClimbStat2), "DetectClimbStat2"))
+			if (characterClimbComponent.TmpVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector2), "TmpVector2"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("DetectClimbStat3") && characterClimbComponent.DetectClimbStat3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.DetectClimbStat3), "DetectClimbStat3"))
+			if (characterClimbComponent.TmpVector3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector3), "TmpVector3"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("DetectUpArriveBothVaultAndOnTopStat1") && characterClimbComponent.DetectUpArriveBothVaultAndOnTopStat1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.DetectUpArriveBothVaultAndOnTopStat1), "DetectUpArriveBothVaultAndOnTopStat1"))
+			if (characterClimbComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat), "TmpQuat"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("DetectUpArriveBothVaultAndOnTopStat2") && characterClimbComponent.DetectUpArriveBothVaultAndOnTopStat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.DetectUpArriveBothVaultAndOnTopStat2), "DetectUpArriveBothVaultAndOnTopStat2"))
+			if (characterClimbComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator), "TmpRotator"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("DetectClimbWalkingStat1") && characterClimbComponent.DetectClimbWalkingStat1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.DetectClimbWalkingStat1), "DetectClimbWalkingStat1"))
+			if (characterClimbComponent.TmpTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTransform), "TmpTransform"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("Rotator180"))
-			{
-				if (characterClimbComponent.Rotator180 == null)
-				{
-					this.Rotator180 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.Rotator180), "Rotator180"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DetectEnterClimbStat1"))
-			{
-				if (characterClimbComponent.DetectEnterClimbStat1 == null)
-				{
-					this.DetectEnterClimbStat1 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.DetectEnterClimbStat1), "DetectEnterClimbStat1"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DetectEnterClimbStat2"))
-			{
-				if (characterClimbComponent.DetectEnterClimbStat2 == null)
-				{
-					this.DetectEnterClimbStat2 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.DetectEnterClimbStat2), "DetectEnterClimbStat2"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ClimbTrans"))
-			{
-				if (characterClimbComponent.ClimbTrans == null)
-				{
-					this.ClimbTrans = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.ClimbTrans), "ClimbTrans"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("NotConsumeStrengthExitClimbTypes") && characterClimbComponent.NotConsumeStrengthExitClimbTypes != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EExitClimb>(this.NotConsumeStrengthExitClimbTypes), "NotConsumeStrengthExitClimbTypes"))
+			this.PendingExitFacing = characterClimbComponent.PendingExitFacing;
+			if (characterClimbComponent.PendingExitFacingQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PendingExitFacingQuat), "PendingExitFacingQuat"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ClimbingExitPositionFixStat1"))
+			if (characterClimbComponent.KuroClimbObject == null)
 			{
-				if (characterClimbComponent.ClimbingExitPositionFixStat1 == null)
-				{
-					this.ClimbingExitPositionFixStat1 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.ClimbingExitPositionFixStat1), "ClimbingExitPositionFixStat1"))
-				{
-					return false;
-				}
+				this.KuroClimbObject = null;
 			}
-			if (base.CanResetComponentProperty("ClimbingExitPositionFixStat2"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.KuroClimbObject), "KuroClimbObject"))
 			{
-				if (characterClimbComponent.ClimbingExitPositionFixStat2 == null)
-				{
-					this.ClimbingExitPositionFixStat2 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.ClimbingExitPositionFixStat2), "ClimbingExitPositionFixStat2"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ClimbingExitPositionFixStat3"))
+			this.DebugNoTop = characterClimbComponent.DebugNoTop;
+			this.DebugEnterClimbTrace = characterClimbComponent.DebugEnterClimbTrace;
+			this.DebugVaultClimbTrace = characterClimbComponent.DebugVaultClimbTrace;
+			this.DebugUpArriveClimbTrace = characterClimbComponent.DebugUpArriveClimbTrace;
+			this.DebugClimbingTrace = characterClimbComponent.DebugClimbingTrace;
+			if (characterClimbComponent.TraceElement == null)
 			{
-				if (characterClimbComponent.ClimbingExitPositionFixStat3 == null)
-				{
-					this.ClimbingExitPositionFixStat3 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.ClimbingExitPositionFixStat3), "ClimbingExitPositionFixStat3"))
-				{
-					return false;
-				}
+				this.TraceElement = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceElement), "TraceElement"))
+			{
+				return false;
+			}
+			this.NextCanEnterClimbTime = characterClimbComponent.NextCanEnterClimbTime;
+			this.ForbiddenClimbKey = characterClimbComponent.ForbiddenClimbKey;
+			this.ForceFastClimb = characterClimbComponent.ForceFastClimb;
+			if (characterClimbComponent.CachedActorLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedActorLocation), "CachedActorLocation"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.OnTickStat1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnTickStat1), "OnTickStat1"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.OnTickStat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnTickStat2), "OnTickStat2"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.OnTickStat3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnTickStat3), "OnTickStat3"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.DetectClimbStat1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DetectClimbStat1), "DetectClimbStat1"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.DetectClimbStat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DetectClimbStat2), "DetectClimbStat2"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.DetectClimbStat3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DetectClimbStat3), "DetectClimbStat3"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.DetectUpArriveBothVaultAndOnTopStat1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DetectUpArriveBothVaultAndOnTopStat1), "DetectUpArriveBothVaultAndOnTopStat1"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.DetectUpArriveBothVaultAndOnTopStat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DetectUpArriveBothVaultAndOnTopStat2), "DetectUpArriveBothVaultAndOnTopStat2"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.DetectClimbWalkingStat1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DetectClimbWalkingStat1), "DetectClimbWalkingStat1"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.Rotator180 == null)
+			{
+				this.Rotator180 = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Rotator180), "Rotator180"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.DetectEnterClimbStat1 == null)
+			{
+				this.DetectEnterClimbStat1 = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DetectEnterClimbStat1), "DetectEnterClimbStat1"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.DetectEnterClimbStat2 == null)
+			{
+				this.DetectEnterClimbStat2 = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DetectEnterClimbStat2), "DetectEnterClimbStat2"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.ClimbTrans == null)
+			{
+				this.ClimbTrans = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClimbTrans), "ClimbTrans"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.NotConsumeStrengthExitClimbTypes != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EExitClimb>(this.NotConsumeStrengthExitClimbTypes), "NotConsumeStrengthExitClimbTypes"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.ClimbingExitPositionFixStat1 == null)
+			{
+				this.ClimbingExitPositionFixStat1 = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClimbingExitPositionFixStat1), "ClimbingExitPositionFixStat1"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.ClimbingExitPositionFixStat2 == null)
+			{
+				this.ClimbingExitPositionFixStat2 = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClimbingExitPositionFixStat2), "ClimbingExitPositionFixStat2"))
+			{
+				return false;
+			}
+			if (characterClimbComponent.ClimbingExitPositionFixStat3 == null)
+			{
+				this.ClimbingExitPositionFixStat3 = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClimbingExitPositionFixStat3), "ClimbingExitPositionFixStat3"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024F2F RID: 151343
+		// Token: 0x1700752B RID: 29995
+		// (get) Token: 0x0603DC11 RID: 252945 RVA: 0x011E7939 File Offset: 0x011E5B39
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700752C RID: 29996
+		// (get) Token: 0x0603DC12 RID: 252946 RVA: 0x011E793C File Offset: 0x011E5B3C
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700752D RID: 29997
+		// (get) Token: 0x0603DC13 RID: 252947 RVA: 0x011E793F File Offset: 0x011E5B3F
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700752E RID: 29998
+		// (get) Token: 0x0603DC14 RID: 252948 RVA: 0x011E7942 File Offset: 0x011E5B42
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700752F RID: 29999
+		// (get) Token: 0x0603DC15 RID: 252949 RVA: 0x011E7945 File Offset: 0x011E5B45
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020BC2 RID: 134082
 		private const string PROFILE_KEY = "CharacterClimbComponent_DetectClimbFromTop";
 
-		// Token: 0x04024F30 RID: 151344
+		// Token: 0x04020BC3 RID: 134083
 		private const float THREAHOLD_JUMP_LEAVE = -0.707f;
 
-		// Token: 0x04024F31 RID: 151345
+		// Token: 0x04020BC4 RID: 134084
 		private const float THREADHOLD_ENTER_CLIMB_FORWARD_NEED = 0.707f;
 
-		// Token: 0x04024F32 RID: 151346
+		// Token: 0x04020BC5 RID: 134085
 		private const float THREAHOLD_ENTER_CLIMB_MIN_Z_SPEED = -500f;
 
-		// Token: 0x04024F33 RID: 151347
+		// Token: 0x04020BC6 RID: 134086
 		private const float FIVE_SECONDS = 5f;
 
-		// Token: 0x04024F34 RID: 151348
+		// Token: 0x04020BC7 RID: 134087
 		private const float NORMAL_CACHE_TIME = 200f;
 
-		// Token: 0x04024F35 RID: 151349
+		// Token: 0x04020BC8 RID: 134088
 		private const float FAST_CACHE_TIME = 100f;
 
-		// Token: 0x04024F36 RID: 151350
+		// Token: 0x04020BC9 RID: 134089
 		private const float CACHE_TIME_FROM_TOP = 400f;
 
-		// Token: 0x04024F37 RID: 151351
+		// Token: 0x04020BCA RID: 134090
 		private const float CACHE_TIME_UP_ARRIVE = 300f;
 
-		// Token: 0x04024F38 RID: 151352
+		// Token: 0x04020BCB RID: 134091
 		private const float EXIT_CLIMB_CACHE_TIME = 300f;
 
-		// Token: 0x04024F39 RID: 151353
+		// Token: 0x04020BCC RID: 134092
 		private const float INPUT_ADD_LENGTH = 500f;
 
-		// Token: 0x04024F3A RID: 151354
+		// Token: 0x04020BCD RID: 134093
 		private const float DOUBLE_HALFHEIGHT = 2f;
 
-		// Token: 0x04024F3B RID: 151355
+		// Token: 0x04020BCE RID: 134094
 		private const float ONE_POINT_FIVE_HALFHRIGHT = 1.5f;
 
-		// Token: 0x04024F3C RID: 151356
+		// Token: 0x04020BCF RID: 134095
 		private const float KINDA_LESS_THAN_ONE = 0.85f;
 
-		// Token: 0x04024F3D RID: 151357
+		// Token: 0x04020BD0 RID: 134096
 		private const float STRENGTH_THREADHOLD = 10f;
 
-		// Token: 0x04024F3E RID: 151358
+		// Token: 0x04020BD1 RID: 134097
 		private const float THREADHOLD_FORWARD_BLOCK = -0.707f;
 
-		// Token: 0x04024F3F RID: 151359
+		// Token: 0x04020BD2 RID: 134098
 		private const float THREADHOLD_MODEL_BUFFER = 0.9f;
 
-		// Token: 0x04024F40 RID: 151360
+		// Token: 0x04020BD3 RID: 134099
 		private const int NORMAL_GROUP_ID = 1;
 
-		// Token: 0x04024F41 RID: 151361
+		// Token: 0x04020BD4 RID: 134100
 		private const float SHORT_DRAW_TIME = 0.1f;
 
-		// Token: 0x04024F42 RID: 151362
+		// Token: 0x04020BD5 RID: 134101
 		private const float LONG_DRAW_TIME = 5f;
 
-		// Token: 0x04024F43 RID: 151363
+		// Token: 0x04020BD6 RID: 134102
 		private const float CAN_ENTER_CLIMB_CD = 500f;
 
-		// Token: 0x04024F44 RID: 151364
+		// Token: 0x04020BD7 RID: 134103
 		private const float CLIMBING_CAPSULE_SIZE = 5f;
 
-		// Token: 0x04024F45 RID: 151365
+		// Token: 0x04020BD8 RID: 134104
 		private const float MAX_ROLE_HALF_HEIGHT = 85f;
 
-		// Token: 0x04024F46 RID: 151366
+		// Token: 0x04020BD9 RID: 134105
 		private const float MAX_ROLE_RADIUS = 25f;
 
-		// Token: 0x04024F47 RID: 151367
+		// Token: 0x04020BDA RID: 134106
 		private const float MAX_ROLE_CYLINDER_HALF_HEIGHT = 60f;
 
-		// Token: 0x04024F48 RID: 151368
+		// Token: 0x04020BDB RID: 134107
 		private const float MAX_SAFETY_DIST = 100f;
 
-		// Token: 0x04024F49 RID: 151369
+		// Token: 0x04020BDC RID: 134108
 		private const float ENTER_CLIMB_ANGLE = 35f;
 
-		// Token: 0x04024F4A RID: 151370
+		// Token: 0x04020BDD RID: 134109
 		private const float ENTER_SPINT_VAULT_ANGLE = 45f;
 
-		// Token: 0x04024F4B RID: 151371
+		// Token: 0x04020BDE RID: 134110
 		private const float DEFAULT_DETECT_LENGTH = 150f;
 
-		// Token: 0x04024F4C RID: 151372
+		// Token: 0x04020BDF RID: 134111
 		private const float EXIT_CLIMB_TIME = 800f;
 
-		// Token: 0x04024F4D RID: 151373
+		// Token: 0x04020BE0 RID: 134112
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor TraceColor = new FLinearColor(1f, 0f, 0f, 1f);
 
-		// Token: 0x04024F4E RID: 151374
+		// Token: 0x04020BE1 RID: 134113
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor TraceSuccessColor = new FLinearColor(0f, 1f, 0f, 1f);
 
-		// Token: 0x04024F4F RID: 151375
+		// Token: 0x04020BE2 RID: 134114
 		[StaticVariableRuleIgnore]
 		private static readonly HashSet<global::ECharMoveState> CanEnterClimbAirStates = new HashSet<global::ECharMoveState>
 		{
@@ -2258,247 +2172,253 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			global::ECharMoveState.Slide
 		};
 
-		// Token: 0x04024F50 RID: 151376
+		// Token: 0x04020BE3 RID: 134115
 		[Nullable(2)]
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x04024F51 RID: 151377
+		// Token: 0x04020BE4 RID: 134116
 		[Nullable(2)]
 		private CharacterMoveComponent MoveComp;
 
-		// Token: 0x04024F52 RID: 151378
+		// Token: 0x04020BE5 RID: 134117
 		[Nullable(2)]
 		private CharacterAnimationComponent AnimComp;
 
-		// Token: 0x04024F53 RID: 151379
+		// Token: 0x04020BE6 RID: 134118
 		private Climb? ClimbConfig;
 
-		// Token: 0x04024F54 RID: 151380
+		// Token: 0x04020BE7 RID: 134119
 		private FVector? ClimbVault;
 
-		// Token: 0x04024F55 RID: 151381
+		// Token: 0x04020BE8 RID: 134120
 		private FVector? ClimbOnTop;
 
-		// Token: 0x04024F56 RID: 151382
+		// Token: 0x04020BE9 RID: 134121
 		private FVector? ClimbFromTop;
 
-		// Token: 0x04024F57 RID: 151383
+		// Token: 0x04020BEA RID: 134122
 		private SClimbInfo ClimbInfo;
 
-		// Token: 0x04024F58 RID: 151384
+		// Token: 0x04020BEB RID: 134123
 		[Nullable(2)]
 		private FClimbInfoStruct ClimbInfoNew;
 
-		// Token: 0x04024F59 RID: 151385
+		// Token: 0x04020BEC RID: 134124
 		[Nullable(2)]
 		private SClimbInfo TsClimbInfo;
 
-		// Token: 0x04024F5A RID: 151386
+		// Token: 0x04020BED RID: 134125
 		private SClimbState OutputClimbState;
 
-		// Token: 0x04024F5B RID: 151387
+		// Token: 0x04020BEE RID: 134126
 		[Nullable(2)]
 		private FClimbStateStruct OutputClimbStateNew;
 
-		// Token: 0x04024F5C RID: 151388
+		// Token: 0x04020BEF RID: 134127
 		[Nullable(2)]
 		private SClimbState TsOutputClimbState;
 
-		// Token: 0x04024F5D RID: 151389
+		// Token: 0x04020BF0 RID: 134128
 		private FTransform? ClimbUpNewTransform;
 
-		// Token: 0x04024F5E RID: 151390
+		// Token: 0x04020BF1 RID: 134129
 		private global::Vector ClimbUpNewLocation = global::Vector.Create();
 
-		// Token: 0x04024F5F RID: 151391
+		// Token: 0x04020BF2 RID: 134130
 		private FVector? ClimbSprintVault;
 
-		// Token: 0x04024F60 RID: 151392
+		// Token: 0x04020BF3 RID: 134131
 		private FTransform? CacheTransformBeforeMove;
 
-		// Token: 0x04024F61 RID: 151393
+		// Token: 0x04020BF4 RID: 134132
 		private readonly global::Vector CacheLastMoveDirect = global::Vector.Create();
 
-		// Token: 0x04024F62 RID: 151394
+		// Token: 0x04020BF5 RID: 134133
 		private readonly Vector2D ClimbInputDirect = Vector2D.Create();
 
-		// Token: 0x04024F63 RID: 151395
+		// Token: 0x04020BF6 RID: 134134
 		private readonly Vector2D PrevClimbInputDirect = Vector2D.Create();
 
-		// Token: 0x04024F64 RID: 151396
+		// Token: 0x04020BF7 RID: 134135
 		private float CapsuleHalfHeight;
 
-		// Token: 0x04024F65 RID: 151397
+		// Token: 0x04020BF8 RID: 134136
 		private bool AwakeInput;
 
-		// Token: 0x04024F66 RID: 151398
+		// Token: 0x04020BF9 RID: 134137
 		private bool ClimbDownCompleted;
 
-		// Token: 0x04024F67 RID: 151399
+		// Token: 0x04020BFA RID: 134138
 		private bool PreCharacterStateInClimb;
 
-		// Token: 0x04024F68 RID: 151400
+		// Token: 0x04020BFB RID: 134139
 		private EClimbState ClimbState;
 
-		// Token: 0x04024F69 RID: 151401
+		// Token: 0x04020BFC RID: 134140
 		private EExitClimb ExitClimbType = EExitClimb.未知方式;
 
-		// Token: 0x04024F6A RID: 151402
+		// Token: 0x04020BFD RID: 134141
 		private EEnterClimb EnterClimbType;
 
-		// Token: 0x04024F6B RID: 151403
+		// Token: 0x04020BFE RID: 134142
 		private float ExitClimbCountDown;
 
-		// Token: 0x04024F6C RID: 151404
+		// Token: 0x04020BFF RID: 134143
 		public float LastExitClimbTime;
 
-		// Token: 0x04024F6D RID: 151405
+		// Token: 0x04020C00 RID: 134144
 		public EExitClimb LastExitClimbType = EExitClimb.未知方式;
 
-		// Token: 0x04024F6E RID: 151406
+		// Token: 0x04020C01 RID: 134145
 		private bool ClimbBlockingInternal;
 
-		// Token: 0x04024F6F RID: 151407
+		// Token: 0x04020C02 RID: 134146
 		private float OnWallAngle;
 
-		// Token: 0x04024F70 RID: 151408
+		// Token: 0x04020C03 RID: 134147
 		private bool IsAllowEarlyExitClimb;
 
-		// Token: 0x04024F71 RID: 151409
+		// Token: 0x04020C04 RID: 134148
 		private FTransformDouble RefTransform;
 
-		// Token: 0x04024F72 RID: 151410
+		// Token: 0x04020C05 RID: 134149
 		private float RefFloat;
 
-		// Token: 0x04024F73 RID: 151411
+		// Token: 0x04020C06 RID: 134150
 		private readonly global::Vector LastSafeLocation = global::Vector.Create();
 
-		// Token: 0x04024F74 RID: 151412
+		// Token: 0x04020C07 RID: 134151
 		[Nullable(2)]
 		private BaseTagComponent TagComponent;
 
-		// Token: 0x04024F75 RID: 151413
+		// Token: 0x04020C08 RID: 134152
 		[Nullable(2)]
 		private CharacterUnifiedStateComponent UnifiedStateComponent;
 
-		// Token: 0x04024F76 RID: 151414
+		// Token: 0x04020C09 RID: 134153
 		private readonly global::Vector BufferOffsetSpeed = global::Vector.Create();
 
-		// Token: 0x04024F77 RID: 151415
+		// Token: 0x04020C0A RID: 134154
 		private float? BufferTimeLength;
 
-		// Token: 0x04024F78 RID: 151416
+		// Token: 0x04020C0B RID: 134155
 		private float BufferNowTime;
 
-		// Token: 0x04024F79 RID: 151417
+		// Token: 0x04020C0C RID: 134156
 		private readonly global::Vector SpeedDirect = global::Vector.Create();
 
-		// Token: 0x04024F7A RID: 151418
+		// Token: 0x04020C0D RID: 134157
 		private readonly global::Vector TmpVector = global::Vector.Create();
 
-		// Token: 0x04024F7B RID: 151419
+		// Token: 0x04020C0E RID: 134158
 		private readonly global::Vector TmpVector2 = global::Vector.Create();
 
-		// Token: 0x04024F7C RID: 151420
+		// Token: 0x04020C0F RID: 134159
 		private readonly global::Vector TmpVector3 = global::Vector.Create();
 
-		// Token: 0x04024F7D RID: 151421
+		// Token: 0x04020C10 RID: 134160
 		private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04024F7E RID: 151422
+		// Token: 0x04020C11 RID: 134161
 		private readonly global::Rotator TmpRotator = global::Rotator.Create();
 
-		// Token: 0x04024F7F RID: 151423
+		// Token: 0x04020C12 RID: 134162
 		private readonly global::Transform TmpTransform = global::Transform.Create();
 
-		// Token: 0x04024F80 RID: 151424
+		// Token: 0x04020C13 RID: 134163
+		private bool PendingExitFacing;
+
+		// Token: 0x04020C14 RID: 134164
+		private readonly Quat PendingExitFacingQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
+
+		// Token: 0x04020C15 RID: 134165
 		[Nullable(2)]
 		private UKuroClimbObject KuroClimbObject;
 
-		// Token: 0x04024F81 RID: 151425
+		// Token: 0x04020C16 RID: 134166
 		protected bool DebugNoTop;
 
-		// Token: 0x04024F82 RID: 151426
+		// Token: 0x04020C17 RID: 134167
 		private EDrawDebugTrace DebugEnterClimbTrace;
 
-		// Token: 0x04024F83 RID: 151427
+		// Token: 0x04020C18 RID: 134168
 		private EDrawDebugTrace DebugVaultClimbTrace;
 
-		// Token: 0x04024F84 RID: 151428
+		// Token: 0x04020C19 RID: 134169
 		private EDrawDebugTrace DebugUpArriveClimbTrace;
 
-		// Token: 0x04024F85 RID: 151429
+		// Token: 0x04020C1A RID: 134170
 		private EDrawDebugTrace DebugClimbingTrace;
 
-		// Token: 0x04024F86 RID: 151430
+		// Token: 0x04020C1B RID: 134171
 		[Nullable(2)]
 		private UTraceSphereElement TraceElement;
 
-		// Token: 0x04024F87 RID: 151431
+		// Token: 0x04020C1C RID: 134172
 		private float NextCanEnterClimbTime;
 
-		// Token: 0x04024F88 RID: 151432
+		// Token: 0x04020C1D RID: 134173
 		private int? ForbiddenClimbKey;
 
-		// Token: 0x04024F89 RID: 151433
+		// Token: 0x04020C1E RID: 134174
 		private bool ForceFastClimb;
 
-		// Token: 0x04024F8A RID: 151434
+		// Token: 0x04020C1F RID: 134175
 		private readonly global::Vector CachedActorLocation = global::Vector.Create();
 
-		// Token: 0x04024F8B RID: 151435
+		// Token: 0x04020C20 RID: 134176
 		private readonly Stat OnTickStat1 = Stat.Create("OnTick1", "", "");
 
-		// Token: 0x04024F8C RID: 151436
+		// Token: 0x04020C21 RID: 134177
 		private readonly Stat OnTickStat2 = Stat.Create("OnTick2", "", "");
 
-		// Token: 0x04024F8D RID: 151437
+		// Token: 0x04020C22 RID: 134178
 		private readonly Stat OnTickStat3 = Stat.Create("OnTick3", "", "");
 
-		// Token: 0x04024F8E RID: 151438
+		// Token: 0x04020C23 RID: 134179
 		private readonly Stat DetectClimbStat1 = Stat.Create("DetectClimb1", "", "");
 
-		// Token: 0x04024F8F RID: 151439
+		// Token: 0x04020C24 RID: 134180
 		private readonly Stat DetectClimbStat2 = Stat.Create("DetectClimb2", "", "");
 
-		// Token: 0x04024F90 RID: 151440
+		// Token: 0x04020C25 RID: 134181
 		private readonly Stat DetectClimbStat3 = Stat.Create("DetectClimb3", "", "");
 
-		// Token: 0x04024F91 RID: 151441
+		// Token: 0x04020C26 RID: 134182
 		private readonly Stat DetectUpArriveBothVaultAndOnTopStat1 = Stat.Create("DetectUpArriveBothVaultAndOnTop1", "", "");
 
-		// Token: 0x04024F92 RID: 151442
+		// Token: 0x04020C27 RID: 134183
 		private readonly Stat DetectUpArriveBothVaultAndOnTopStat2 = Stat.Create("DetectUpArriveBothVaultAndOnTop2", "", "");
 
-		// Token: 0x04024F93 RID: 151443
+		// Token: 0x04020C28 RID: 134184
 		private readonly Stat DetectClimbWalkingStat1 = Stat.Create("DetectClimbWalking1", "", "");
 
-		// Token: 0x04024F94 RID: 151444
+		// Token: 0x04020C29 RID: 134185
 		private global::Rotator Rotator180 = global::Rotator.Create(0f, 180f, 0f);
 
-		// Token: 0x04024F95 RID: 151445
+		// Token: 0x04020C2A RID: 134186
 		private Stat DetectEnterClimbStat1 = Stat.Create("DetectEnterClimb1", "", "");
 
-		// Token: 0x04024F96 RID: 151446
+		// Token: 0x04020C2B RID: 134187
 		private Stat DetectEnterClimbStat2 = Stat.Create("DetectEnterClimb2", "", "");
 
-		// Token: 0x04024F97 RID: 151447
+		// Token: 0x04020C2C RID: 134188
 		[Nullable(2)]
 		private global::Transform ClimbTrans;
 
-		// Token: 0x04024F98 RID: 151448
+		// Token: 0x04020C2D RID: 134189
 		[StaticVariableRuleIgnore]
 		private static Stat Stat1 = Stat.Create("ClimbStat1", "", "");
 
-		// Token: 0x04024F99 RID: 151449
+		// Token: 0x04020C2E RID: 134190
 		[StaticVariableRuleIgnore]
 		private static Stat Stat2 = Stat.Create("ClimbStat2", "", "");
 
-		// Token: 0x04024F9A RID: 151450
+		// Token: 0x04020C2F RID: 134191
 		[StaticVariableRuleIgnore]
 		private static Stat Stat3 = Stat.Create("ClimbStat3", "", "");
 
-		// Token: 0x04024F9B RID: 151451
+		// Token: 0x04020C30 RID: 134192
 		private readonly HashSet<EExitClimb> NotConsumeStrengthExitClimbTypes = new HashSet<EExitClimb>
 		{
 			EExitClimb.到顶退出,
@@ -2507,16 +2427,16 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			EExitClimb.冲刺跨越远
 		};
 
-		// Token: 0x04024F9C RID: 151452
+		// Token: 0x04020C31 RID: 134193
 		private Stat ClimbingExitPositionFixStat1 = Stat.Create("ClimbingExitPositionFix1", "", "");
 
-		// Token: 0x04024F9D RID: 151453
+		// Token: 0x04020C32 RID: 134194
 		private Stat ClimbingExitPositionFixStat2 = Stat.Create("ClimbingExitPositionFix2", "", "");
 
-		// Token: 0x04024F9E RID: 151454
+		// Token: 0x04020C33 RID: 134195
 		private Stat ClimbingExitPositionFixStat3 = Stat.Create("ClimbingExitPositionFix3", "", "");
 
-		// Token: 0x04024F9F RID: 151455
+		// Token: 0x04020C34 RID: 134196
 		[StaticVariableRuleIgnore]
 		public static bool DebugLogController = false;
 	}

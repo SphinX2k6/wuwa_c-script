@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065DE RID: 26078
+	// Token: 0x0200555C RID: 21852
 	public enum ESailTime
 	{
-		// Token: 0x0402205E RID: 139358
+		// Token: 0x0401C98F RID: 117135
 		Now,
-		// Token: 0x0402205F RID: 139359
+		// Token: 0x0401C990 RID: 117136
 		Day,
-		// Token: 0x04022060 RID: 139360
+		// Token: 0x0401C991 RID: 117137
 		Night
 	}
 }

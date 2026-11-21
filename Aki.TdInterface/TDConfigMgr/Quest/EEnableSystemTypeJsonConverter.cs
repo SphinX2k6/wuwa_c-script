@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200123D RID: 4669
+	// Token: 0x0200137D RID: 4989
 	public class EEnableSystemTypeJsonConverter : JsonConverter<EEnableSystemType>
 	{
-		// Token: 0x060069BB RID: 27067 RVA: 0x000FD620 File Offset: 0x000FB820
+		// Token: 0x0600700E RID: 28686 RVA: 0x0010B24C File Offset: 0x0010944C
 		public override EEnableSystemType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return EEnableSystemTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060069BC RID: 27068 RVA: 0x000FD644 File Offset: 0x000FB844
+		// Token: 0x0600700F RID: 28687 RVA: 0x0010B270 File Offset: 0x00109470
 		public override void Write(Utf8JsonWriter writer, EEnableSystemType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

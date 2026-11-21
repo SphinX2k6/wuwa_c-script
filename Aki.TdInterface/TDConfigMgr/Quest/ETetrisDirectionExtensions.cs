@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012A0 RID: 4768
+	// Token: 0x020013E6 RID: 5094
 	public static class ETetrisDirectionExtensions
 	{
-		// Token: 0x06006B77 RID: 27511 RVA: 0x0010230C File Offset: 0x0010050C
+		// Token: 0x060071E5 RID: 29157 RVA: 0x001102D4 File Offset: 0x0010E4D4
 		public static string ToEnumString(this ETetrisDirection value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B78 RID: 27512 RVA: 0x00102344 File Offset: 0x00100544
+		// Token: 0x060071E6 RID: 29158 RVA: 0x0011030C File Offset: 0x0010E50C
 		public static ETetrisDirection FromString(string name)
 		{
 			ETetrisDirection result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B79 RID: 27513 RVA: 0x0010236D File Offset: 0x0010056D
+		// Token: 0x060071E7 RID: 29159 RVA: 0x00110335 File Offset: 0x0010E535
 		public static bool TryFromString(string name, out ETetrisDirection value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006B7A RID: 27514 RVA: 0x001023A6 File Offset: 0x001005A6
+		// Token: 0x060071E8 RID: 29160 RVA: 0x0011036E File Offset: 0x0010E56E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B7B RID: 27515 RVA: 0x001023BE File Offset: 0x001005BE
+		// Token: 0x060071E9 RID: 29161 RVA: 0x00110386 File Offset: 0x0010E586
 		public static ETetrisDirection[] GetValues()
 		{
 			return new ETetrisDirection[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B7C RID: 27516 RVA: 0x001023CA File Offset: 0x001005CA
+		// Token: 0x060071EA RID: 29162 RVA: 0x00110392 File Offset: 0x0010E592
 		public static string[] GetNames()
 		{
 			return new string[]

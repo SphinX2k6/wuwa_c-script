@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007350 RID: 29520
+	// Token: 0x02007B28 RID: 31528
 	public class ITalkOptionRogueRandomEventT
 	{
-		// Token: 0x1700E024 RID: 57380
-		// (get) Token: 0x0603591E RID: 219422 RVA: 0x0074BA86 File Offset: 0x00749C86
-		// (set) Token: 0x0603591F RID: 219423 RVA: 0x0074BA8E File Offset: 0x00749C8E
+		// Token: 0x1700EC20 RID: 60448
+		// (get) Token: 0x06038C51 RID: 232529 RVA: 0x007AD60E File Offset: 0x007AB80E
+		// (set) Token: 0x06038C52 RID: 232530 RVA: 0x007AD616 File Offset: 0x007AB816
 		public ETalkOptionParamType Type { get; set; }
 
-		// Token: 0x1700E025 RID: 57381
-		// (get) Token: 0x06035920 RID: 219424 RVA: 0x0074BA97 File Offset: 0x00749C97
-		// (set) Token: 0x06035921 RID: 219425 RVA: 0x0074BA9F File Offset: 0x00749C9F
+		// Token: 0x1700EC21 RID: 60449
+		// (get) Token: 0x06038C53 RID: 232531 RVA: 0x007AD61F File Offset: 0x007AB81F
+		// (set) Token: 0x06038C54 RID: 232532 RVA: 0x007AD627 File Offset: 0x007AB827
 		public int OptionId { get; set; }
 
-		// Token: 0x1700E026 RID: 57382
-		// (get) Token: 0x06035922 RID: 219426 RVA: 0x0074BAA8 File Offset: 0x00749CA8
-		// (set) Token: 0x06035923 RID: 219427 RVA: 0x0074BAB0 File Offset: 0x00749CB0
+		// Token: 0x1700EC22 RID: 60450
+		// (get) Token: 0x06038C55 RID: 232533 RVA: 0x007AD630 File Offset: 0x007AB830
+		// (set) Token: 0x06038C56 RID: 232534 RVA: 0x007AD638 File Offset: 0x007AB838
 		public byte NullMask { get; set; }
 
-		// Token: 0x06035924 RID: 219428 RVA: 0x0074BAB9 File Offset: 0x00749CB9
+		// Token: 0x06038C57 RID: 232535 RVA: 0x007AD641 File Offset: 0x007AB841
 		public ITalkOptionRogueRandomEventT()
 		{
 			this.Type = ETalkOptionParamType.QteSucceed;

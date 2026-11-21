@@ -3,40 +3,40 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 {
-	// Token: 0x020046FB RID: 18171
+	// Token: 0x02004B63 RID: 19299
 	public class IHideRangeSourceT
 	{
-		// Token: 0x170081F1 RID: 33265
-		// (get) Token: 0x0601BD47 RID: 113991 RVA: 0x003F1BF0 File Offset: 0x003EFDF0
-		// (set) Token: 0x0601BD48 RID: 113992 RVA: 0x003F1BF8 File Offset: 0x003EFDF8
+		// Token: 0x17008832 RID: 34866
+		// (get) Token: 0x0601D51C RID: 120092 RVA: 0x0041DE8C File Offset: 0x0041C08C
+		// (set) Token: 0x0601D51D RID: 120093 RVA: 0x0041DE94 File Offset: 0x0041C094
 		public TBehaviorTreeType TreeType { get; set; }
 
-		// Token: 0x170081F2 RID: 33266
-		// (get) Token: 0x0601BD49 RID: 113993 RVA: 0x003F1C01 File Offset: 0x003EFE01
-		// (set) Token: 0x0601BD4A RID: 113994 RVA: 0x003F1C09 File Offset: 0x003EFE09
+		// Token: 0x17008833 RID: 34867
+		// (get) Token: 0x0601D51E RID: 120094 RVA: 0x0041DE9D File Offset: 0x0041C09D
+		// (set) Token: 0x0601D51F RID: 120095 RVA: 0x0041DEA5 File Offset: 0x0041C0A5
 		public int TreeId { get; set; }
 
-		// Token: 0x170081F3 RID: 33267
-		// (get) Token: 0x0601BD4B RID: 113995 RVA: 0x003F1C12 File Offset: 0x003EFE12
-		// (set) Token: 0x0601BD4C RID: 113996 RVA: 0x003F1C1A File Offset: 0x003EFE1A
+		// Token: 0x17008834 RID: 34868
+		// (get) Token: 0x0601D520 RID: 120096 RVA: 0x0041DEAE File Offset: 0x0041C0AE
+		// (set) Token: 0x0601D521 RID: 120097 RVA: 0x0041DEB6 File Offset: 0x0041C0B6
 		public int LevelId { get; set; }
 
-		// Token: 0x170081F4 RID: 33268
-		// (get) Token: 0x0601BD4D RID: 113997 RVA: 0x003F1C23 File Offset: 0x003EFE23
-		// (set) Token: 0x0601BD4E RID: 113998 RVA: 0x003F1C2B File Offset: 0x003EFE2B
+		// Token: 0x17008835 RID: 34869
+		// (get) Token: 0x0601D522 RID: 120098 RVA: 0x0041DEBF File Offset: 0x0041C0BF
+		// (set) Token: 0x0601D523 RID: 120099 RVA: 0x0041DEC7 File Offset: 0x0041C0C7
 		public int NodeId { get; set; }
 
-		// Token: 0x170081F5 RID: 33269
-		// (get) Token: 0x0601BD4F RID: 113999 RVA: 0x003F1C34 File Offset: 0x003EFE34
-		// (set) Token: 0x0601BD50 RID: 114000 RVA: 0x003F1C3C File Offset: 0x003EFE3C
+		// Token: 0x17008836 RID: 34870
+		// (get) Token: 0x0601D524 RID: 120100 RVA: 0x0041DED0 File Offset: 0x0041C0D0
+		// (set) Token: 0x0601D525 RID: 120101 RVA: 0x0041DED8 File Offset: 0x0041C0D8
 		public int ActionId { get; set; }
 
-		// Token: 0x170081F6 RID: 33270
-		// (get) Token: 0x0601BD51 RID: 114001 RVA: 0x003F1C45 File Offset: 0x003EFE45
-		// (set) Token: 0x0601BD52 RID: 114002 RVA: 0x003F1C4D File Offset: 0x003EFE4D
+		// Token: 0x17008837 RID: 34871
+		// (get) Token: 0x0601D526 RID: 120102 RVA: 0x0041DEE1 File Offset: 0x0041C0E1
+		// (set) Token: 0x0601D527 RID: 120103 RVA: 0x0041DEE9 File Offset: 0x0041C0E9
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601BD53 RID: 114003 RVA: 0x003F1C56 File Offset: 0x003EFE56
+		// Token: 0x0601D528 RID: 120104 RVA: 0x0041DEF2 File Offset: 0x0041C0F2
 		public IHideRangeSourceT()
 		{
 			this.TreeType = TBehaviorTreeType.BehaviorTreeFragment;

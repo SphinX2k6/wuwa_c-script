@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DF0 RID: 3568
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EEC RID: 3820
 	public class IQuickHackSkill
 	{
-		// Token: 0x060050D5 RID: 20693 RVA: 0x000C7975 File Offset: 0x000C5B75
+		// Token: 0x060055FC RID: 22012 RVA: 0x000D323D File Offset: 0x000D143D
 		public static IQuickHackSkill Create(IQuickHackSkill? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AB2 RID: 6834
-		// (get) Token: 0x060050D6 RID: 20694 RVA: 0x000C7994 File Offset: 0x000C5B94
+		// Token: 0x17001C1F RID: 7199
+		// (get) Token: 0x060055FD RID: 22013 RVA: 0x000D325C File Offset: 0x000D145C
 		public virtual int Id
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AB3 RID: 6835
-		// (get) Token: 0x060050D7 RID: 20695 RVA: 0x000C79A4 File Offset: 0x000C5BA4
+		// Token: 0x17001C20 RID: 7200
+		// (get) Token: 0x060055FE RID: 22014 RVA: 0x000D326C File Offset: 0x000D146C
 		public virtual List<IQuickHackSkillContent> Content
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E75 RID: 11893
+		// Token: 0x0400313D RID: 12605
 		private IQuickHackSkill Instance;
 
-		// Token: 0x04002E76 RID: 11894
+		// Token: 0x0400313E RID: 12606
 		private List<IQuickHackSkillContent> _ContentCache;
 
-		// Token: 0x04002E77 RID: 11895
+		// Token: 0x0400313F RID: 12607
 		private bool _ContentInited;
 	}
 }

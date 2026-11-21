@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013FA RID: 5114
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001551 RID: 5457
 	public class IFinishRhythmSpaceshipCondition : IQuestCondition
 	{
-		// Token: 0x0600745C RID: 29788 RVA: 0x00116694 File Offset: 0x00114894
-		[NullableContext(1)]
+		// Token: 0x06007B1D RID: 31517 RVA: 0x00125078 File Offset: 0x00123278
 		public static IFinishRhythmSpaceshipCondition Create(IFinishRhythmSpaceshipCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700263B RID: 9787
-		// (get) Token: 0x0600745D RID: 29789 RVA: 0x001166B3 File Offset: 0x001148B3
+		// Token: 0x1700281D RID: 10269
+		// (get) Token: 0x06007B1E RID: 31518 RVA: 0x00125097 File Offset: 0x00123297
 		public override EChildQuest Type
 		{
 			get
@@ -34,10 +31,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700263C RID: 9788
-		// (get) Token: 0x0600745E RID: 29790 RVA: 0x001166C0 File Offset: 0x001148C0
+		// Token: 0x1700281E RID: 10270
+		// (get) Token: 0x06007B1F RID: 31519 RVA: 0x001250A4 File Offset: 0x001232A4
+		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._PreConditionsInited)
@@ -50,12 +49,10 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700263D RID: 9789
-		// (get) Token: 0x0600745F RID: 29791 RVA: 0x001166F4 File Offset: 0x001148F4
-		[Nullable(1)]
+		// Token: 0x1700281F RID: 10271
+		// (get) Token: 0x06007B20 RID: 31520 RVA: 0x001250D8 File Offset: 0x001232D8
 		public virtual IRhythmSpaceshipConditionStepInteract Step
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._StepInited)
@@ -68,19 +65,21 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004354 RID: 17236
+		// Token: 0x040046E5 RID: 18149
 		private IFinishRhythmSpaceshipCondition Instance;
 
-		// Token: 0x04004355 RID: 17237
+		// Token: 0x040046E6 RID: 18150
+		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004356 RID: 17238
+		// Token: 0x040046E7 RID: 18151
 		private bool _PreConditionsInited;
 
-		// Token: 0x04004357 RID: 17239
+		// Token: 0x040046E8 RID: 18152
+		[Nullable(2)]
 		private IRhythmSpaceshipConditionStepInteract _StepCache;
 
-		// Token: 0x04004358 RID: 17240
+		// Token: 0x040046E9 RID: 18153
 		private bool _StepInited;
 	}
 }

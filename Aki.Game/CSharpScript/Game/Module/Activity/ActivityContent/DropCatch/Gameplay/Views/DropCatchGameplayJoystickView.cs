@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x020066FA RID: 26362
+	// Token: 0x0200564A RID: 22090
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchGameplayJoystickView : UiPanelBase
 	{
-		// Token: 0x06041DD0 RID: 269776 RVA: 0x00FF8F96 File Offset: 0x00FF7196
+		// Token: 0x0603691C RID: 223516 RVA: 0x00F3A38A File Offset: 0x00F3858A
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			};
 		}
 
-		// Token: 0x06041DD1 RID: 269777 RVA: 0x00FF8FB9 File Offset: 0x00FF71B9
+		// Token: 0x0603691D RID: 223517 RVA: 0x00F3A3AD File Offset: 0x00F385AD
 		protected override void OnStart()
 		{
 			this.Proxy = (this.OpenParam as DropCatchGameplayProxy);
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.AddEvents();
 		}
 
-		// Token: 0x06041DD2 RID: 269778 RVA: 0x00FF8FE0 File Offset: 0x00FF71E0
+		// Token: 0x0603691E RID: 223518 RVA: 0x00F3A3D4 File Offset: 0x00F385D4
 		private void AddEvents()
 		{
 			UUIDraggableComponent draggableComponent = this.DraggableComponent;
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			});
 		}
 
-		// Token: 0x06041DD3 RID: 269779 RVA: 0x00FF9096 File Offset: 0x00FF7296
+		// Token: 0x0603691F RID: 223519 RVA: 0x00F3A48A File Offset: 0x00F3868A
 		private void OnBgPointerDragCallBack(ULGUIPointerEventData eventData)
 		{
 			this.UpdatePointerPosition(eventData);
 		}
 
-		// Token: 0x06041DD4 RID: 269780 RVA: 0x00FF90A0 File Offset: 0x00FF72A0
+		// Token: 0x06036920 RID: 223520 RVA: 0x00F3A494 File Offset: 0x00F38694
 		private void UpdatePointerPosition(ULGUIPointerEventData eventData)
 		{
 			FVector localPointInPlane = eventData.GetLocalPointInPlane();
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.MoveJoysticksHandle(this.PointerPosition);
 		}
 
-		// Token: 0x06041DD5 RID: 269781 RVA: 0x00FF90E4 File Offset: 0x00FF72E4
+		// Token: 0x06036921 RID: 223521 RVA: 0x00F3A4D8 File Offset: 0x00F386D8
 		private void OnJoystickButtonPressed(ULGUIPointerEventData eventData)
 		{
 			this.EventDataList.Add(eventData);
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.MoveJoysticksHandle(this.PointerPosition);
 		}
 
-		// Token: 0x06041DD6 RID: 269782 RVA: 0x00FF9144 File Offset: 0x00FF7344
+		// Token: 0x06036922 RID: 223522 RVA: 0x00F3A538 File Offset: 0x00F38738
 		private void OnJoystickButtonReleased(ULGUIPointerEventData eventData)
 		{
 			int num = this.EventDataList.IndexOf(eventData);
@@ -124,13 +124,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.EndDragJoystick();
 		}
 
-		// Token: 0x06041DD7 RID: 269783 RVA: 0x00FF91D2 File Offset: 0x00FF73D2
+		// Token: 0x06036923 RID: 223523 RVA: 0x00F3A5C6 File Offset: 0x00F387C6
 		private void EndDragJoystick()
 		{
 			this.MoveJoysticksHandle(this.CenterPosition);
 		}
 
-		// Token: 0x06041DD8 RID: 269784 RVA: 0x00FF91E0 File Offset: 0x00FF73E0
+		// Token: 0x06036924 RID: 223524 RVA: 0x00F3A5D4 File Offset: 0x00F387D4
 		private void MoveJoysticksHandle(Vector touchPosition)
 		{
 			double num = touchPosition.X - this.CenterPosition.X;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.SetInputAxis((float)num);
 		}
 
-		// Token: 0x06041DD9 RID: 269785 RVA: 0x00FF9210 File Offset: 0x00FF7410
+		// Token: 0x06036925 RID: 223525 RVA: 0x00F3A604 File Offset: 0x00F38804
 		protected void SetHandleOffset(float targetX)
 		{
 			UUIDraggableComponent draggableComponent = this.DraggableComponent;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			draggableComponent.RootUIComp.Get().SetAnchorOffsetX(MathUtils.Instance.Clamp(targetX, (float)(-(float)DropCatchGameplayJoystickView.MAX_OFFSET_X), (float)DropCatchGameplayJoystickView.MAX_OFFSET_X));
 		}
 
-		// Token: 0x06041DDA RID: 269786 RVA: 0x00FF9254 File Offset: 0x00FF7454
+		// Token: 0x06036926 RID: 223526 RVA: 0x00F3A648 File Offset: 0x00F38848
 		public void SetHandleByDirection(EDropCatchRoleDirection direction)
 		{
 			UUIDraggableComponent draggableComponent = this.DraggableComponent;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			draggableComponent.RootUIComp.Get().SetAnchorOffsetX((float)((direction == EDropCatchRoleDirection.None) ? 0 : ((direction == EDropCatchRoleDirection.Right) ? DropCatchGameplayJoystickView.MAX_OFFSET_X : (-(float)DropCatchGameplayJoystickView.MAX_OFFSET_X))));
 		}
 
-		// Token: 0x06041DDB RID: 269787 RVA: 0x00FF9298 File Offset: 0x00FF7498
+		// Token: 0x06036927 RID: 223527 RVA: 0x00F3A68C File Offset: 0x00F3888C
 		protected void SetInputAxis(float targetX)
 		{
 			if (MathUtils.Instance.IsNearlyZero((double)targetX, null) || (targetX < (float)(DropCatchGameplayJoystickView.MAX_OFFSET_X / 2) && targetX > (float)(-(float)DropCatchGameplayJoystickView.MAX_OFFSET_X / 2)))
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			}
 		}
 
-		// Token: 0x06041DDC RID: 269788 RVA: 0x00FF932C File Offset: 0x00FF752C
+		// Token: 0x06036928 RID: 223528 RVA: 0x00F3A720 File Offset: 0x00F38920
 		private void RemoveEvents()
 		{
 			UUIDraggableComponent draggableComponent = this.DraggableComponent;
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			draggableComponent5.OnPointerCancelCallBack.Unbind();
 		}
 
-		// Token: 0x06041DDD RID: 269789 RVA: 0x00FF93A8 File Offset: 0x00FF75A8
+		// Token: 0x06036929 RID: 223529 RVA: 0x00F3A79C File Offset: 0x00F3899C
 		public void SetInputEnabled(bool enabled)
 		{
 			UUIDraggableComponent draggableComponent = this.DraggableComponent;
@@ -247,35 +247,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			draggableComponent.RootUIComp.Get().SetRaycastTarget(enabled);
 		}
 
-		// Token: 0x06041DDE RID: 269790 RVA: 0x00FF93D3 File Offset: 0x00FF75D3
+		// Token: 0x0603692A RID: 223530 RVA: 0x00F3A7C7 File Offset: 0x00F389C7
 		public void Reset()
 		{
 			this.SetInputEnabled(true);
 		}
 
-		// Token: 0x06041DDF RID: 269791 RVA: 0x00FF93DC File Offset: 0x00FF75DC
+		// Token: 0x0603692B RID: 223531 RVA: 0x00F3A7D0 File Offset: 0x00F389D0
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEvents();
 		}
 
-		// Token: 0x040224EF RID: 140527
+		// Token: 0x0401CD48 RID: 118088
 		private static readonly int MAX_OFFSET_X = 40;
 
-		// Token: 0x040224F0 RID: 140528
+		// Token: 0x0401CD49 RID: 118089
 		private DropCatchGameplayProxy Proxy;
 
-		// Token: 0x040224F1 RID: 140529
+		// Token: 0x0401CD4A RID: 118090
 		private readonly Vector PointerPosition = Vector.Create();
 
-		// Token: 0x040224F2 RID: 140530
+		// Token: 0x0401CD4B RID: 118091
 		private readonly Vector CenterPosition = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x040224F3 RID: 140531
+		// Token: 0x0401CD4C RID: 118092
 		[Nullable(2)]
 		private UUIDraggableComponent DraggableComponent;
 
-		// Token: 0x040224F4 RID: 140532
+		// Token: 0x0401CD4D RID: 118093
 		protected List<ULGUIPointerEventData> EventDataList = new List<ULGUIPointerEventData>();
 	}
 }

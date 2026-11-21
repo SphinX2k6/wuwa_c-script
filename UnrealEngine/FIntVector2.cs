@@ -6,34 +6,34 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200002C RID: 44
+	// Token: 0x02000011 RID: 17
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(8, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 8)]
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 8)]
 	public struct FIntVector2 : IEquatable<FIntVector2>, IEqualityOperators<FIntVector2, FIntVector2, bool>
 	{
-		// Token: 0x06000215 RID: 533 RVA: 0x00007EA8 File Offset: 0x000060A8
+		// Token: 0x0600019A RID: 410 RVA: 0x00004714 File Offset: 0x00002914
 		public FIntVector2()
 		{
 			this.X = 0;
 			this.Y = 0;
 		}
 
-		// Token: 0x06000216 RID: 534 RVA: 0x00007EB8 File Offset: 0x000060B8
+		// Token: 0x0600019B RID: 411 RVA: 0x00004724 File Offset: 0x00002924
 		public FIntVector2(int x, int y)
 		{
 			this.X = x;
 			this.Y = y;
 		}
 
-		// Token: 0x06000217 RID: 535 RVA: 0x00007EC8 File Offset: 0x000060C8
+		// Token: 0x0600019C RID: 412 RVA: 0x00004734 File Offset: 0x00002934
 		public FIntVector2(int value)
 		{
 			this.X = value;
 			this.Y = value;
 		}
 
-		// Token: 0x17000006 RID: 6
+		// Token: 0x17000005 RID: 5
 		public int this[int index]
 		{
 			readonly get
@@ -68,25 +68,25 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600021A RID: 538 RVA: 0x00007F27 File Offset: 0x00006127
+		// Token: 0x0600019F RID: 415 RVA: 0x00004793 File Offset: 0x00002993
 		public static bool operator ==(FIntVector2 a, FIntVector2 b)
 		{
 			return a.X == b.X && a.Y == b.Y;
 		}
 
-		// Token: 0x0600021B RID: 539 RVA: 0x00007F47 File Offset: 0x00006147
+		// Token: 0x060001A0 RID: 416 RVA: 0x000047B3 File Offset: 0x000029B3
 		public static bool operator !=(FIntVector2 a, FIntVector2 b)
 		{
 			return a.X != b.X || a.Y != b.Y;
 		}
 
-		// Token: 0x0600021C RID: 540 RVA: 0x00007F6A File Offset: 0x0000616A
+		// Token: 0x060001A1 RID: 417 RVA: 0x000047D6 File Offset: 0x000029D6
 		public readonly bool Equals(FIntVector2 other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x0600021D RID: 541 RVA: 0x00007F78 File Offset: 0x00006178
+		// Token: 0x060001A2 RID: 418 RVA: 0x000047E4 File Offset: 0x000029E4
 		[NullableContext(2)]
 		public override readonly bool Equals(object obj)
 		{
@@ -98,17 +98,17 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x0600021E RID: 542 RVA: 0x00007FA2 File Offset: 0x000061A2
+		// Token: 0x060001A3 RID: 419 RVA: 0x0000480E File Offset: 0x00002A0E
 		public override readonly int GetHashCode()
 		{
 			return HashCode.Combine<int, int>(this.X, this.Y);
 		}
 
-		// Token: 0x040000A9 RID: 169
+		// Token: 0x04000062 RID: 98
 		[FieldOffset(0)]
 		public int X;
 
-		// Token: 0x040000AA RID: 170
+		// Token: 0x04000063 RID: 99
 		[FieldOffset(4)]
 		public int Y;
 	}

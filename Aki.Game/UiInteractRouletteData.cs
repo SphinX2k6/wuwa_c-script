@@ -3,11 +3,11 @@ using Aki.Protocol;
 using Aki.TDConfigMgr.Quest;
 using CSharpScript.Game.Module.InstanceDungeon;
 
-// Token: 0x020034A6 RID: 13478
+// Token: 0x02002A1A RID: 10778
 public class UiInteractRouletteData
 {
-	// Token: 0x170028B8 RID: 10424
-	// (get) Token: 0x0601D57F RID: 120191 RVA: 0x0082DD79 File Offset: 0x0082BF79
+	// Token: 0x17002C50 RID: 11344
+	// (get) Token: 0x0601B27C RID: 111228 RVA: 0x00854F25 File Offset: 0x00853125
 	public double DurationTime
 	{
 		get
@@ -16,7 +16,7 @@ public class UiInteractRouletteData
 		}
 	}
 
-	// Token: 0x0601D580 RID: 120192 RVA: 0x0082DD88 File Offset: 0x0082BF88
+	// Token: 0x0601B27D RID: 111229 RVA: 0x00854F34 File Offset: 0x00853134
 	public void TriggerOpen()
 	{
 		this.Reset();
@@ -26,7 +26,7 @@ public class UiInteractRouletteData
 		this.UseSkillId = this.GetUseSkillId();
 	}
 
-	// Token: 0x0601D581 RID: 120193 RVA: 0x0082DDBF File Offset: 0x0082BFBF
+	// Token: 0x0601B27E RID: 111230 RVA: 0x00854F6B File Offset: 0x0085316B
 	public void TriggerClose()
 	{
 		this.CloseTime = Time.Instance.ServerTimeStamp;
@@ -34,7 +34,7 @@ public class UiInteractRouletteData
 		this.IsStart = false;
 	}
 
-	// Token: 0x0601D582 RID: 120194 RVA: 0x0082DDE4 File Offset: 0x0082BFE4
+	// Token: 0x0601B27F RID: 111231 RVA: 0x00854F90 File Offset: 0x00853190
 	public void Reset()
 	{
 		this.OpenTime = 0.0;
@@ -45,7 +45,7 @@ public class UiInteractRouletteData
 		this.IsStart = false;
 	}
 
-	// Token: 0x0601D583 RID: 120195 RVA: 0x0082DE24 File Offset: 0x0082C024
+	// Token: 0x0601B280 RID: 111232 RVA: 0x00854FD0 File Offset: 0x008531D0
 	private int GetWaveCount()
 	{
 		InstanceDungeonInfo instanceDungeonInfo = InstanceDungeonModel.Instance.GetInstanceDungeonInfo();
@@ -61,7 +61,7 @@ public class UiInteractRouletteData
 		return (int)MathUtils.Instance.LongToNumber(treeVarByKey.Int);
 	}
 
-	// Token: 0x0601D584 RID: 120196 RVA: 0x0082DE74 File Offset: 0x0082C074
+	// Token: 0x0601B281 RID: 111233 RVA: 0x00855020 File Offset: 0x00853220
 	private long GetUseSkillId()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -83,21 +83,21 @@ public class UiInteractRouletteData
 		return (long)baseSkillComponent2.CurrentSkill.SkillId;
 	}
 
-	// Token: 0x0400E732 RID: 59186
+	// Token: 0x0400EBE6 RID: 60390
 	private double OpenTime;
 
-	// Token: 0x0400E733 RID: 59187
+	// Token: 0x0400EBE7 RID: 60391
 	private double CloseTime;
 
-	// Token: 0x0400E734 RID: 59188
+	// Token: 0x0400EBE8 RID: 60392
 	public int OldRound;
 
-	// Token: 0x0400E735 RID: 59189
+	// Token: 0x0400EBE9 RID: 60393
 	public int NewRound;
 
-	// Token: 0x0400E736 RID: 59190
+	// Token: 0x0400EBEA RID: 60394
 	public bool IsStart;
 
-	// Token: 0x0400E737 RID: 59191
+	// Token: 0x0400EBEB RID: 60395
 	public long UseSkillId;
 }

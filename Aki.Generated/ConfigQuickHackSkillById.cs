@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000798 RID: 1944
+	// Token: 0x020007B2 RID: 1970
 	public class ConfigQuickHackSkillById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002DA2 RID: 11682 RVA: 0x0015B11C File Offset: 0x0015931C
+		// Token: 0x06002E3E RID: 11838 RVA: 0x00162028 File Offset: 0x00160228
 		static ConfigQuickHackSkillById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuickHackSkillById.CreateStaticDefaultValue), new Action(ConfigQuickHackSkillById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002DA3 RID: 11683 RVA: 0x0015B13C File Offset: 0x0015933C
+		// Token: 0x06002E3F RID: 11839 RVA: 0x00162048 File Offset: 0x00160248
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuickHackSkillById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002DA4 RID: 11684 RVA: 0x0015B1BB File Offset: 0x001593BB
+		// Token: 0x06002E40 RID: 11840 RVA: 0x001620C7 File Offset: 0x001602C7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuickHackSkillById.LogPair = null;
 			ConfigQuickHackSkillById.HandleId = 0;
 		}
 
-		// Token: 0x06002DA5 RID: 11685 RVA: 0x0015B1C9 File Offset: 0x001593C9
+		// Token: 0x06002E41 RID: 11841 RVA: 0x001620D5 File Offset: 0x001602D5
 		public static void Init()
 		{
 			ConfigQuickHackSkillById.HandleId = ConfigCommon.InitDataStatement(ConfigQuickHackSkillById.HandleId, "db_quickhack.db", "select BinData from `QuickHackSkill` where Id = ?");
 		}
 
-		// Token: 0x06002DA6 RID: 11686 RVA: 0x0015B1E4 File Offset: 0x001593E4
+		// Token: 0x06002E42 RID: 11842 RVA: 0x001620F0 File Offset: 0x001602F0
 		public static QuickHackSkill? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigQuickHackSkillById.HandleId, ConfigQuickHackSkillById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new QuickHackSkill?(rootAsQuickHackSkill);
 		}
 
-		// Token: 0x0400350E RID: 13582
+		// Token: 0x040035C4 RID: 13764
 		private const string DB = "db_quickhack.db";
 
-		// Token: 0x0400350F RID: 13583
+		// Token: 0x040035C5 RID: 13765
 		private const string FILE = "k.快速破解.xlsx";
 
-		// Token: 0x04003510 RID: 13584
+		// Token: 0x040035C6 RID: 13766
 		private const string TABLE = "QuickHackSkill";
 
-		// Token: 0x04003511 RID: 13585
+		// Token: 0x040035C7 RID: 13767
 		private const string COMMAND = "select BinData from `QuickHackSkill` where Id = ?";
 
-		// Token: 0x04003512 RID: 13586
+		// Token: 0x040035C8 RID: 13768
 		private const string KEY_PREFIX = "QuickHackSkillById";
 
-		// Token: 0x04003513 RID: 13587
+		// Token: 0x040035C9 RID: 13769
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003514 RID: 13588
+		// Token: 0x040035CA RID: 13770
 		private static int HandleId;
 	}
 }

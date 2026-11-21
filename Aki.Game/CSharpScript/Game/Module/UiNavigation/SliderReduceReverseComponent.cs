@@ -4,21 +4,21 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049D8 RID: 18904
+	// Token: 0x02003952 RID: 14674
 	public class SliderReduceReverseComponent : SliderComponent
 	{
-		// Token: 0x06031213 RID: 201235 RVA: 0x00B65527 File Offset: 0x00B63727
+		// Token: 0x06025D49 RID: 154953 RVA: 0x00AA0477 File Offset: 0x00A9E677
 		public SliderReduceReverseComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031214 RID: 201236 RVA: 0x00B65530 File Offset: 0x00B63730
+		// Token: 0x06025D4A RID: 154954 RVA: 0x00AA0480 File Offset: 0x00A9E680
 		protected override void OnRelease(HotKeyMap config)
 		{
 			this.SetValue(-0.05f);
 		}
 
-		// Token: 0x06031215 RID: 201237 RVA: 0x00B6553D File Offset: 0x00B6373D
+		// Token: 0x06025D4B RID: 154955 RVA: 0x00AA048D File Offset: 0x00A9E68D
 		[NullableContext(1)]
 		protected override void OnInputAxis(string axisName, float value)
 		{

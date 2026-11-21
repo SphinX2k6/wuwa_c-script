@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000538 RID: 1336
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200059F RID: 1439
 	public class IMovementPlatformConfig
 	{
-		// Token: 0x06001B4C RID: 6988 RVA: 0x0004F09C File Offset: 0x0004D29C
-		[NullableContext(1)]
+		// Token: 0x06001D48 RID: 7496 RVA: 0x00053E58 File Offset: 0x00052058
 		private IMovementPlatformConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001B4D RID: 6989 RVA: 0x0004F0D4 File Offset: 0x0004D2D4
-		[NullableContext(1)]
+		// Token: 0x06001D49 RID: 7497 RVA: 0x00053E90 File Offset: 0x00052090
 		public static IMovementPlatformConfig Create([Nullable(2)] IMovementPlatformConfig instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001B4E RID: 6990 RVA: 0x0004F0E7 File Offset: 0x0004D2E7
-		[NullableContext(1)]
+		// Token: 0x06001D4A RID: 7498 RVA: 0x00053EA3 File Offset: 0x000520A3
 		public static IMovementPlatformConfig CreateFromSetValue([Nullable(2)] IMovementPlatformConfig_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001B4F RID: 6991 RVA: 0x0004F0FA File Offset: 0x0004D2FA
-		[NullableContext(1)]
+		// Token: 0x06001D4B RID: 7499 RVA: 0x00053EB6 File Offset: 0x000520B6
 		public IMovementPlatformConfig_SetValue ToSetValue()
 		{
 			return new IMovementPlatformConfig_SetValue
@@ -65,11 +59,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000731 RID: 1841
-		// (get) Token: 0x06001B50 RID: 6992 RVA: 0x0004F119 File Offset: 0x0004D319
-		// (set) Token: 0x06001B51 RID: 6993 RVA: 0x0004F140 File Offset: 0x0004D340
+		// Token: 0x170007B4 RID: 1972
+		// (get) Token: 0x06001D4C RID: 7500 RVA: 0x00053ED5 File Offset: 0x000520D5
+		// (set) Token: 0x06001D4D RID: 7501 RVA: 0x00053EFC File Offset: 0x000520FC
+		[Nullable(2)]
 		public virtual List<int> PlayerAttachTags
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -83,15 +79,16 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.PlayerAttachTags;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().PlayerAttachTags = value;
 			}
 		}
 
-		// Token: 0x17000732 RID: 1842
-		// (get) Token: 0x06001B52 RID: 6994 RVA: 0x0004F150 File Offset: 0x0004D350
-		// (set) Token: 0x06001B53 RID: 6995 RVA: 0x0004F18A File Offset: 0x0004D38A
+		// Token: 0x170007B5 RID: 1973
+		// (get) Token: 0x06001D4E RID: 7502 RVA: 0x00053F0C File Offset: 0x0005210C
+		// (set) Token: 0x06001D4F RID: 7503 RVA: 0x00053F46 File Offset: 0x00052146
 		public virtual int? SafePointId
 		{
 			get
@@ -113,10 +110,12 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040013AD RID: 5037
+		// Token: 0x04001517 RID: 5399
+		[Nullable(2)]
 		protected IMovementPlatformConfig FbInstance;
 
-		// Token: 0x040013AE RID: 5038
+		// Token: 0x04001518 RID: 5400
+		[Nullable(2)]
 		protected IMovementPlatformConfig_SetValue PocoInterface;
 	}
 }

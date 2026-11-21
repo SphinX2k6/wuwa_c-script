@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C4C RID: 19532
+	// Token: 0x02003BFD RID: 15357
 	public static class SheriffPopupDefine
 	{
-		// Token: 0x06032802 RID: 206850 RVA: 0x00BC3410 File Offset: 0x00BC1610
+		// Token: 0x060275B5 RID: 161205 RVA: 0x00B08028 File Offset: 0x00B06228
 		// Note: this type is marked as 'beforefieldinit'.
 		static SheriffPopupDefine()
 		{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			SheriffPopupDefine.SheriffCriminalIdentityTxt = dictionary;
 		}
 
-		// Token: 0x0401AE2D RID: 110125
+		// Token: 0x0401578A RID: 87946
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly IReadOnlyDictionary<int, string> SheriffCriminalIdentityTxt;

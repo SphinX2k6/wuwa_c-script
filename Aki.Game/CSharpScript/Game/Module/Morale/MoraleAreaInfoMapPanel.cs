@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x0200539A RID: 21402
+	// Token: 0x0200437D RID: 17277
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleAreaInfoMapPanel : UiPanelBase
 	{
-		// Token: 0x06036AD5 RID: 223957 RVA: 0x00CF0BD4 File Offset: 0x00CEEDD4
+		// Token: 0x0602BA1B RID: 178715 RVA: 0x00C3FC7C File Offset: 0x00C3DE7C
 		public UniTask Init(MoraleAreaData areaData, UUIItem parentItem)
 		{
 			MoraleAreaInfoMapPanel.<Init>d__6 <Init>d__;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036AD6 RID: 223958 RVA: 0x00CF0C28 File Offset: 0x00CEEE28
+		// Token: 0x0602BA1C RID: 178716 RVA: 0x00C3FCD0 File Offset: 0x00C3DED0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06036AD7 RID: 223959 RVA: 0x00CF0CB4 File Offset: 0x00CEEEB4
+		// Token: 0x0602BA1D RID: 178717 RVA: 0x00C3FD5C File Offset: 0x00C3DF5C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleAreaInfoMapPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -55,14 +55,14 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036AD8 RID: 223960 RVA: 0x00CF0CF7 File Offset: 0x00CEEEF7
+		// Token: 0x0602BA1E RID: 178718 RVA: 0x00C3FD9F File Offset: 0x00C3DF9F
 		public void UpdateData()
 		{
 			this.PlotPanel.UpdateData();
 			this.UpdateFlagData();
 		}
 
-		// Token: 0x06036AD9 RID: 223961 RVA: 0x00CF0D0C File Offset: 0x00CEEF0C
+		// Token: 0x0602BA1F RID: 178719 RVA: 0x00C3FDB4 File Offset: 0x00C3DFB4
 		public void UpdateFlagState()
 		{
 			foreach (MoraleAreaInfoFlagItem moraleAreaInfoFlagItem in this.FlagItemList)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036ADA RID: 223962 RVA: 0x00CF0D5C File Offset: 0x00CEEF5C
+		// Token: 0x0602BA20 RID: 178720 RVA: 0x00C3FE04 File Offset: 0x00C3E004
 		private void UpdateFlagData()
 		{
 			foreach (MoraleAreaInfoFlagItem moraleAreaInfoFlagItem in this.FlagItemList)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036ADB RID: 223963 RVA: 0x00CF0DE0 File Offset: 0x00CEEFE0
+		// Token: 0x0602BA21 RID: 178721 RVA: 0x00C3FE88 File Offset: 0x00C3E088
 		private void OnClickFlagItem(MoraleAreaFlagData flagData)
 		{
 			Action<MoraleAreaFlagData> clickCallback = this.ClickCallback;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Morale
 			clickCallback(flagData);
 		}
 
-		// Token: 0x06036ADC RID: 223964 RVA: 0x00CF0DF4 File Offset: 0x00CEEFF4
+		// Token: 0x0602BA22 RID: 178722 RVA: 0x00C3FE9C File Offset: 0x00C3E09C
 		public void PlayStartSequence()
 		{
 			foreach (MoraleAreaInfoFlagItem moraleAreaInfoFlagItem in this.FlagItemList)
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036ADD RID: 223965 RVA: 0x00CF0E44 File Offset: 0x00CEF044
+		// Token: 0x0602BA23 RID: 178723 RVA: 0x00C3FEEC File Offset: 0x00C3E0EC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -147,19 +147,19 @@ namespace CSharpScript.Game.Module.Morale
 			return null;
 		}
 
-		// Token: 0x0401CE19 RID: 118297
+		// Token: 0x040178B1 RID: 96433
 		public MoraleAreaPlotPanel PlotPanel;
 
-		// Token: 0x0401CE1A RID: 118298
+		// Token: 0x040178B2 RID: 96434
 		public List<MoraleAreaInfoFlagItem> FlagItemList = new List<MoraleAreaInfoFlagItem>();
 
-		// Token: 0x0401CE1B RID: 118299
+		// Token: 0x040178B3 RID: 96435
 		public Dictionary<int, MoraleAreaInfoFlagItem> FlagItemMap = new Dictionary<int, MoraleAreaInfoFlagItem>();
 
-		// Token: 0x0401CE1C RID: 118300
+		// Token: 0x040178B4 RID: 96436
 		public MoraleAreaData AreaData;
 
-		// Token: 0x0401CE1D RID: 118301
+		// Token: 0x040178B5 RID: 96437
 		[Nullable(new byte[]
 		{
 			2,
@@ -167,15 +167,15 @@ namespace CSharpScript.Game.Module.Morale
 		})]
 		public Action<MoraleAreaFlagData> ClickCallback;
 
-		// Token: 0x0200B606 RID: 46598
+		// Token: 0x0200A03E RID: 41022
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04037230 RID: 225840
+			// Token: 0x04031C85 RID: 203909
 			ItemBg,
-			// Token: 0x04037231 RID: 225841
+			// Token: 0x04031C86 RID: 203910
 			ItemAreaPlotPanel,
-			// Token: 0x04037232 RID: 225842
+			// Token: 0x04031C87 RID: 203911
 			ItemFlagRoot
 		}
 	}

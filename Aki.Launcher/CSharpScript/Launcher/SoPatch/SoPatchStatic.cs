@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.SoPatch
 {
-	// Token: 0x02000109 RID: 265
+	// Token: 0x0200010D RID: 269
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SoPatchStatic : Singleton, ITickable
 	{
-		// Token: 0x06000889 RID: 2185 RVA: 0x0003F4DC File Offset: 0x0003D6DC
+		// Token: 0x060008BD RID: 2237 RVA: 0x0004187C File Offset: 0x0003FA7C
 		private UniTask RequestConfig(string appParallel, List<string> prefixList, string mixRoute, string platform)
 		{
 			SoPatchStatic.<RequestConfig>d__9 <RequestConfig>d__;
@@ -29,7 +29,7 @@ namespace CSharpScript.Launcher.SoPatch
 			return <RequestConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600088A RID: 2186 RVA: 0x0003F540 File Offset: 0x0003D740
+		// Token: 0x060008BE RID: 2238 RVA: 0x000418E0 File Offset: 0x0003FAE0
 		private unsafe void GetDeviceAndAppInfo()
 		{
 			if (this.OsVersion != null && this.OsVersion.Length > 0)
@@ -59,7 +59,7 @@ namespace CSharpScript.Launcher.SoPatch
 			this.OsVersion = UKuroAndroidModelTools.GetAndroidVersion();
 		}
 
-		// Token: 0x0600088B RID: 2187 RVA: 0x0003F654 File Offset: 0x0003D854
+		// Token: 0x060008BF RID: 2239 RVA: 0x000419F4 File Offset: 0x0003FBF4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -78,7 +78,7 @@ namespace CSharpScript.Launcher.SoPatch
 			return <DownloadPatch>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600088C RID: 2188 RVA: 0x0003F6B0 File Offset: 0x0003D8B0
+		// Token: 0x060008C0 RID: 2240 RVA: 0x00041A50 File Offset: 0x0003FC50
 		[NullableContext(0)]
 		private UniTask<int> CheckSoHash([Nullable(1)] string soHash)
 		{
@@ -91,7 +91,7 @@ namespace CSharpScript.Launcher.SoPatch
 			return <CheckSoHash>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600088D RID: 2189 RVA: 0x0003F6FC File Offset: 0x0003D8FC
+		// Token: 0x060008C1 RID: 2241 RVA: 0x00041A9C File Offset: 0x0003FC9C
 		private UniTask FixInternal()
 		{
 			SoPatchStatic.<FixInternal>d__13 <FixInternal>d__;
@@ -102,7 +102,7 @@ namespace CSharpScript.Launcher.SoPatch
 			return <FixInternal>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600088E RID: 2190 RVA: 0x0003F740 File Offset: 0x0003D940
+		// Token: 0x060008C2 RID: 2242 RVA: 0x00041AE0 File Offset: 0x0003FCE0
 		public UniTask Fix()
 		{
 			SoPatchStatic.<Fix>d__14 <Fix>d__;
@@ -113,7 +113,7 @@ namespace CSharpScript.Launcher.SoPatch
 			return <Fix>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600088F RID: 2191 RVA: 0x0003F783 File Offset: 0x0003D983
+		// Token: 0x060008C3 RID: 2243 RVA: 0x00041B23 File Offset: 0x0003FD23
 		public void Tick(float delta)
 		{
 			this.Current += (int)delta;
@@ -124,8 +124,8 @@ namespace CSharpScript.Launcher.SoPatch
 			}
 		}
 
-		// Token: 0x170000EB RID: 235
-		// (get) Token: 0x06000890 RID: 2192 RVA: 0x0003F7BE File Offset: 0x0003D9BE
+		// Token: 0x170000F1 RID: 241
+		// (get) Token: 0x060008C4 RID: 2244 RVA: 0x00041B5E File Offset: 0x0003FD5E
 		public static SoPatchStatic Instance
 		{
 			get
@@ -139,12 +139,12 @@ namespace CSharpScript.Launcher.SoPatch
 			}
 		}
 
-		// Token: 0x06000891 RID: 2193 RVA: 0x0003F7E1 File Offset: 0x0003D9E1
+		// Token: 0x060008C5 RID: 2245 RVA: 0x00041B81 File Offset: 0x0003FD81
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000892 RID: 2194 RVA: 0x0003F7E3 File Offset: 0x0003D9E3
+		// Token: 0x060008C6 RID: 2246 RVA: 0x00041B83 File Offset: 0x0003FD83
 		public static void ResetStaticDefaultValue()
 		{
 			SoPatchStatic instance = SoPatchStatic._instance;
@@ -155,42 +155,42 @@ namespace CSharpScript.Launcher.SoPatch
 			SoPatchStatic._instance = null;
 		}
 
-		// Token: 0x06000893 RID: 2195 RVA: 0x0003F7FC File Offset: 0x0003D9FC
+		// Token: 0x060008C7 RID: 2247 RVA: 0x00041B9C File Offset: 0x0003FD9C
 		static SoPatchStatic()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SoPatchStatic.CreateStaticDefaultValue), new Action(SoPatchStatic.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040004DC RID: 1244
+		// Token: 0x04000517 RID: 1303
 		[Nullable(2)]
 		private UKuroVerify Verify;
 
-		// Token: 0x040004DD RID: 1245
+		// Token: 0x04000518 RID: 1304
 		[Nullable(2)]
 		private SoPathConfig Config;
 
-		// Token: 0x040004DE RID: 1246
+		// Token: 0x04000519 RID: 1305
 		private string OsVersion = "";
 
-		// Token: 0x040004DF RID: 1247
+		// Token: 0x0400051A RID: 1306
 		private string Manufacturer = "";
 
-		// Token: 0x040004E0 RID: 1248
+		// Token: 0x0400051B RID: 1307
 		private string Model = "";
 
-		// Token: 0x040004E1 RID: 1249
+		// Token: 0x0400051C RID: 1308
 		private long DeviceValue;
 
-		// Token: 0x040004E2 RID: 1250
+		// Token: 0x0400051D RID: 1309
 		private static readonly int Interval = 300000;
 
-		// Token: 0x040004E3 RID: 1251
+		// Token: 0x0400051E RID: 1310
 		private int Current = 300000;
 
-		// Token: 0x040004E4 RID: 1252
+		// Token: 0x0400051F RID: 1311
 		private bool IsProcessing;
 
-		// Token: 0x040004E5 RID: 1253
+		// Token: 0x04000520 RID: 1312
 		[Nullable(2)]
 		private static SoPatchStatic _instance;
 	}

@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Component
 {
-	// Token: 0x0200693E RID: 26942
+	// Token: 0x0200588F RID: 22671
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivityGameplayComponentBase<TParam> : ActivityGameplayComponentBase
 	{
-		// Token: 0x06043268 RID: 275048 RVA: 0x0105E384 File Offset: 0x0105C584
+		// Token: 0x06037DC5 RID: 228805 RVA: 0x00F9F9F4 File Offset: 0x00F9DBF4
 		[NullableContext(1)]
 		public override void Create(ActivityGameplayEntity ownerEntity, [Nullable(2)] object args = null)
 		{
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Compo
 			this.OnCreate(args2);
 		}
 
-		// Token: 0x06043269 RID: 275049 RVA: 0x0105E3BC File Offset: 0x0105C5BC
+		// Token: 0x06037DC6 RID: 228806 RVA: 0x00F9FA2C File Offset: 0x00F9DC2C
 		protected virtual void OnCreate(TParam args = default(TParam))
 		{
 		}

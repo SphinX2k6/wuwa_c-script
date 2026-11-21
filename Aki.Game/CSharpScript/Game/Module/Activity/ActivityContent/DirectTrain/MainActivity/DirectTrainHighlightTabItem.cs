@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActivity
 {
-	// Token: 0x0200674D RID: 26445
+	// Token: 0x0200569D RID: 22173
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 	})]
 	public class DirectTrainHighlightTabItem : GridProxyAbstract<IHighlightTabData>
 	{
-		// Token: 0x06042003 RID: 270339 RVA: 0x010029E4 File Offset: 0x01000BE4
+		// Token: 0x06036B55 RID: 224085 RVA: 0x00F43E24 File Offset: 0x00F42024
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042004 RID: 270340 RVA: 0x01002A8A File Offset: 0x01000C8A
+		// Token: 0x06036B56 RID: 224086 RVA: 0x00F43ECA File Offset: 0x00F420CA
 		public void SetOnSelectCallback(Action<IHighlightTabData> callback)
 		{
 			this.OnSelectCallback = callback;
 		}
 
-		// Token: 0x06042005 RID: 270341 RVA: 0x01002A93 File Offset: 0x01000C93
+		// Token: 0x06036B57 RID: 224087 RVA: 0x00F43ED3 File Offset: 0x00F420D3
 		public override void Refresh(IHighlightTabData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -51,13 +51,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			this.RefreshToggleState(isSelected);
 		}
 
-		// Token: 0x06042006 RID: 270342 RVA: 0x01002ABF File Offset: 0x01000CBF
+		// Token: 0x06036B58 RID: 224088 RVA: 0x00F43EFF File Offset: 0x00F420FF
 		public override object GetKey(IHighlightTabData data, int displayIndex)
 		{
 			return data.Id;
 		}
 
-		// Token: 0x06042007 RID: 270343 RVA: 0x01002ACC File Offset: 0x01000CCC
+		// Token: 0x06036B59 RID: 224089 RVA: 0x00F43F0C File Offset: 0x00F4210C
 		public override void OnSelected(bool fireEvent)
 		{
 			this.RefreshToggleState(true);
@@ -72,13 +72,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			}
 		}
 
-		// Token: 0x06042008 RID: 270344 RVA: 0x01002AF6 File Offset: 0x01000CF6
+		// Token: 0x06036B5A RID: 224090 RVA: 0x00F43F36 File Offset: 0x00F42136
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.RefreshToggleState(false);
 		}
 
-		// Token: 0x06042009 RID: 270345 RVA: 0x01002B00 File Offset: 0x01000D00
+		// Token: 0x06036B5B RID: 224091 RVA: 0x00F43F40 File Offset: 0x00F42140
 		public void RefreshToggleState(bool isSelected)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			}
 		}
 
-		// Token: 0x0604200A RID: 270346 RVA: 0x01002B29 File Offset: 0x01000D29
+		// Token: 0x06036B5C RID: 224092 RVA: 0x00F43F69 File Offset: 0x00F42169
 		private void OnToggleClick(EToggleState _)
 		{
 			if (this.Data != null)
@@ -102,11 +102,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			}
 		}
 
-		// Token: 0x0402260E RID: 140814
+		// Token: 0x0401CE67 RID: 118375
 		[Nullable(2)]
 		private IHighlightTabData Data;
 
-		// Token: 0x0402260F RID: 140815
+		// Token: 0x0401CE68 RID: 118376
 		[Nullable(new byte[]
 		{
 			2,
@@ -114,13 +114,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 		})]
 		private Action<IHighlightTabData> OnSelectCallback;
 
-		// Token: 0x0200C8C6 RID: 51398
+		// Token: 0x0200B295 RID: 45717
 		[NullableContext(0)]
 		private enum EHighlightTabComponents
 		{
-			// Token: 0x0403C9E1 RID: 248289
+			// Token: 0x040372DB RID: 226011
 			Toggle,
-			// Token: 0x0403C9E2 RID: 248290
+			// Token: 0x040372DC RID: 226012
 			Text
 		}
 	}

@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029EA RID: 10730
+	// Token: 0x02002CD7 RID: 11479
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IRemovePreloadResourcePhantomCharacter : IRemovePreloadResourceCharacterType
 	{
-		// Token: 0x0600ECF2 RID: 60658 RVA: 0x00229448 File Offset: 0x00227648
-		[NullableContext(1)]
+		// Token: 0x0600FB89 RID: 64393 RVA: 0x00246DCC File Offset: 0x00244FCC
+		[NullableContext(0)]
 		public static IRemovePreloadResourcePhantomCharacter Create(IRemovePreloadResourcePhantomCharacter? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AE0 RID: 19168
-		// (get) Token: 0x0600ECF3 RID: 60659 RVA: 0x00229467 File Offset: 0x00227667
+		// Token: 0x17004E89 RID: 20105
+		// (get) Token: 0x0600FB8A RID: 64394 RVA: 0x00246DEB File Offset: 0x00244FEB
 		public override ERemovePreloadResourceObjectType Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AE1 RID: 19169
-		// (get) Token: 0x0600ECF4 RID: 60660 RVA: 0x00229474 File Offset: 0x00227674
+		// Token: 0x17004E8A RID: 20106
+		// (get) Token: 0x0600FB8B RID: 64395 RVA: 0x00246DF8 File Offset: 0x00244FF8
 		public virtual int Id
 		{
 			get
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AE2 RID: 19170
-		// (get) Token: 0x0600ECF5 RID: 60661 RVA: 0x00229481 File Offset: 0x00227681
+		// Token: 0x17004E8B RID: 20107
+		// (get) Token: 0x0600FB8C RID: 64396 RVA: 0x00246E05 File Offset: 0x00245005
 		public virtual IDelayRemoveAfterSkillFinish DelayReMove
 		{
 			get
@@ -59,13 +59,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400827E RID: 33406
+		// Token: 0x0400896F RID: 35183
 		private IRemovePreloadResourcePhantomCharacter Instance;
 
-		// Token: 0x0400827F RID: 33407
+		// Token: 0x04008970 RID: 35184
 		private IDelayRemoveAfterSkillFinish _DelayReMoveCache;
 
-		// Token: 0x04008280 RID: 33408
+		// Token: 0x04008971 RID: 35185
 		private bool _DelayReMoveInited;
 	}
 }

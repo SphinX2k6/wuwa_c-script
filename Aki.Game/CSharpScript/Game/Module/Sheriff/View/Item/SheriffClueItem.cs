@@ -9,19 +9,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Item
 {
-	// Token: 0x02004C72 RID: 19570
+	// Token: 0x02003C23 RID: 15395
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SheriffClueItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603294A RID: 207178 RVA: 0x00BCA387 File Offset: 0x00BC8587
+		// Token: 0x060276FD RID: 161533 RVA: 0x00B0EFEB File Offset: 0x00B0D1EB
 		[NullableContext(1)]
 		public SheriffClueItem(SheriffMainProxy proxy)
 		{
 			this.Proxy = proxy;
 		}
 
-		// Token: 0x0603294B RID: 207179 RVA: 0x00BCA398 File Offset: 0x00BC8598
+		// Token: 0x060276FE RID: 161534 RVA: 0x00B0EFFC File Offset: 0x00B0D1FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603294C RID: 207180 RVA: 0x00BCA4C4 File Offset: 0x00BC86C4
+		// Token: 0x060276FF RID: 161535 RVA: 0x00B0F128 File Offset: 0x00B0D328
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChanged));
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			base.GetExtendToggle(0).OnHover.Add(new Action(this.OnHoverItem));
 		}
 
-		// Token: 0x0603294D RID: 207181 RVA: 0x00BCA528 File Offset: 0x00BC8728
+		// Token: 0x06027700 RID: 161536 RVA: 0x00B0F18C File Offset: 0x00B0D38C
 		protected override void OnBeforeDestroy()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			}
 		}
 
-		// Token: 0x0603294E RID: 207182 RVA: 0x00BCA57C File Offset: 0x00BC877C
+		// Token: 0x06027701 RID: 161537 RVA: 0x00B0F1E0 File Offset: 0x00B0D3E0
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.CurId = data;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			base.GetItem(5).SetUIActive(flag && this.Proxy.CheckIsHinting(this.CurId));
 		}
 
-		// Token: 0x0603294F RID: 207183 RVA: 0x00BCA698 File Offset: 0x00BC8898
+		// Token: 0x06027702 RID: 161538 RVA: 0x00B0F2FC File Offset: 0x00B0D4FC
 		public void RefreshSelected()
 		{
 			if (this.CheckSelectCallback != null)
@@ -118,14 +118,14 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			}
 		}
 
-		// Token: 0x06032950 RID: 207184 RVA: 0x00BCA6BA File Offset: 0x00BC88BA
+		// Token: 0x06027703 RID: 161539 RVA: 0x00B0F31E File Offset: 0x00B0D51E
 		protected void SetSelected(EToggleState state, bool jumpToLastFrame = true)
 		{
 			base.GetExtendToggle(0).SetActive(state != EToggleState.ETT_UnDetermined, false);
 			base.GetExtendToggle(0).SetToggleState(state, false, false, jumpToLastFrame);
 		}
 
-		// Token: 0x06032951 RID: 207185 RVA: 0x00BCA6E1 File Offset: 0x00BC88E1
+		// Token: 0x06027704 RID: 161540 RVA: 0x00B0F345 File Offset: 0x00B0D545
 		private void OnToggleStateChanged(EToggleState state)
 		{
 			Action<int, bool> onToggleStateChangedCallback = this.OnToggleStateChangedCallback;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			onToggleStateChangedCallback(this.CurId, state == EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x06032952 RID: 207186 RVA: 0x00BCA700 File Offset: 0x00BC8900
+		// Token: 0x06027705 RID: 161541 RVA: 0x00B0F364 File Offset: 0x00B0D564
 		private bool OnCanExecuteChange()
 		{
 			EToggleState toggleState = base.GetExtendToggle(0).GetToggleState();
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			return checkCanChangeCallback == null || checkCanChangeCallback(this.CurId, toggleState);
 		}
 
-		// Token: 0x06032953 RID: 207187 RVA: 0x00BCA732 File Offset: 0x00BC8932
+		// Token: 0x06027706 RID: 161542 RVA: 0x00B0F396 File Offset: 0x00B0D596
 		private void OnHoverItem()
 		{
 			if (Info.Instance.IsInGamepad())
@@ -153,13 +153,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			}
 		}
 
-		// Token: 0x06032954 RID: 207188 RVA: 0x00BCA751 File Offset: 0x00BC8951
+		// Token: 0x06027707 RID: 161543 RVA: 0x00B0F3B5 File Offset: 0x00B0D5B5
 		private void OnClickBtnCommon()
 		{
 			this.Proxy.ClickClueDetail(base.GridIndex);
 		}
 
-		// Token: 0x06032955 RID: 207189 RVA: 0x00BCA764 File Offset: 0x00BC8964
+		// Token: 0x06027708 RID: 161544 RVA: 0x00B0F3C8 File Offset: 0x00B0D5C8
 		public UUIItem GetGuideMagnifierItem()
 		{
 			UUIButtonComponent button = base.GetButton(4);
@@ -171,45 +171,45 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			return tweakObjectPtr.GetValueOrDefault();
 		}
 
-		// Token: 0x0401AEA3 RID: 110243
+		// Token: 0x04015800 RID: 88064
 		protected int CurId;
 
-		// Token: 0x0401AEA4 RID: 110244
+		// Token: 0x04015801 RID: 88065
 		[Nullable(1)]
 		protected SheriffMainProxy Proxy;
 
-		// Token: 0x0401AEA5 RID: 110245
+		// Token: 0x04015802 RID: 88066
 		public Action<int, bool> OnToggleStateChangedCallback;
 
-		// Token: 0x0401AEA6 RID: 110246
+		// Token: 0x04015803 RID: 88067
 		public Func<int, EToggleState, bool> CheckCanChangeCallback;
 
-		// Token: 0x0401AEA7 RID: 110247
+		// Token: 0x04015804 RID: 88068
 		public Func<int, EToggleState> CheckSelectCallback;
 
-		// Token: 0x0401AEA8 RID: 110248
+		// Token: 0x04015805 RID: 88069
 		public Func<bool> CheckToggleEnable;
 
-		// Token: 0x0200AE25 RID: 44581
+		// Token: 0x02009843 RID: 38979
 		[NullableContext(0)]
 		private static class EClueItem
 		{
-			// Token: 0x04034E35 RID: 216629
+			// Token: 0x0402F7DA RID: 194522
 			public const int Tog = 0;
 
-			// Token: 0x04034E36 RID: 216630
+			// Token: 0x0402F7DB RID: 194523
 			public const int TxtName = 1;
 
-			// Token: 0x04034E37 RID: 216631
+			// Token: 0x0402F7DC RID: 194524
 			public const int TxtIcon = 2;
 
-			// Token: 0x04034E38 RID: 216632
+			// Token: 0x0402F7DD RID: 194525
 			public const int PanelLock = 3;
 
-			// Token: 0x04034E39 RID: 216633
+			// Token: 0x0402F7DE RID: 194526
 			public const int BtnCommon = 4;
 
-			// Token: 0x04034E3A RID: 216634
+			// Token: 0x0402F7DF RID: 194527
 			public const int PanelHint = 5;
 		}
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003AD RID: 941
+	// Token: 0x020003C3 RID: 963
 	public class ConfigGPUMonsterById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001615 RID: 5653 RVA: 0x000D66A7 File Offset: 0x000D48A7
+		// Token: 0x06001699 RID: 5785 RVA: 0x000DCDFB File Offset: 0x000DAFFB
 		static ConfigGPUMonsterById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGPUMonsterById.CreateStaticDefaultValue), new Action(ConfigGPUMonsterById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001616 RID: 5654 RVA: 0x000D66C8 File Offset: 0x000D48C8
+		// Token: 0x0600169A RID: 5786 RVA: 0x000DCE1C File Offset: 0x000DB01C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGPUMonsterById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001617 RID: 5655 RVA: 0x000D6747 File Offset: 0x000D4947
+		// Token: 0x0600169B RID: 5787 RVA: 0x000DCE9B File Offset: 0x000DB09B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGPUMonsterById.LogPair = null;
 			ConfigGPUMonsterById.HandleId = 0;
 		}
 
-		// Token: 0x06001618 RID: 5656 RVA: 0x000D6755 File Offset: 0x000D4955
+		// Token: 0x0600169C RID: 5788 RVA: 0x000DCEA9 File Offset: 0x000DB0A9
 		public static void Init()
 		{
 			ConfigGPUMonsterById.HandleId = ConfigCommon.InitDataStatement(ConfigGPUMonsterById.HandleId, "db_gpuentity.db", "select BinData from `GPUMonster` where Id=?");
 		}
 
-		// Token: 0x06001619 RID: 5657 RVA: 0x000D6770 File Offset: 0x000D4970
+		// Token: 0x0600169D RID: 5789 RVA: 0x000DCEC4 File Offset: 0x000DB0C4
 		public static GPUMonster? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGPUMonsterById.HandleId, ConfigGPUMonsterById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GPUMonster?(rootAsGPUMonster);
 		}
 
-		// Token: 0x0400199F RID: 6559
+		// Token: 0x04001A39 RID: 6713
 		private const string DB = "db_gpuentity.db";
 
-		// Token: 0x040019A0 RID: 6560
+		// Token: 0x04001A3A RID: 6714
 		private const string FILE = "g.GPU怪物_刷怪器.xlsx";
 
-		// Token: 0x040019A1 RID: 6561
+		// Token: 0x04001A3B RID: 6715
 		private const string TABLE = "GPUMonster";
 
-		// Token: 0x040019A2 RID: 6562
+		// Token: 0x04001A3C RID: 6716
 		private const string COMMAND = "select BinData from `GPUMonster` where Id=?";
 
-		// Token: 0x040019A3 RID: 6563
+		// Token: 0x04001A3D RID: 6717
 		private const string KEY_PREFIX = "GPUMonsterById";
 
-		// Token: 0x040019A4 RID: 6564
+		// Token: 0x04001A3E RID: 6718
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040019A5 RID: 6565
+		// Token: 0x04001A3F RID: 6719
 		private static int HandleId;
 	}
 }

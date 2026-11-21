@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001116 RID: 4374
+// Token: 0x020005CA RID: 1482
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class BabelTowerBuffSelectItem : GridProxyAbstract<IBabelTowerBuffInfo>
 {
-	// Token: 0x0600726B RID: 29291 RVA: 0x00176C70 File Offset: 0x00174E70
+	// Token: 0x06004601 RID: 17921 RVA: 0x0017F62C File Offset: 0x0017D82C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -43,14 +43,14 @@ public class BabelTowerBuffSelectItem : GridProxyAbstract<IBabelTowerBuffInfo>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600726C RID: 29292 RVA: 0x00176D79 File Offset: 0x00174F79
+	// Token: 0x06004602 RID: 17922 RVA: 0x0017F735 File Offset: 0x0017D935
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).CanExecuteChange.Bind(() => base.GetExtendToggle(0).GetToggleState() == EToggleState.ETT_Checked || this.CanClickCallBack == null || this.CanClickCallBack(this.BuffId));
 		base.GetExtendToggle(0).OnUndeterminedClicked.Add(new Action(this.OnUndeterminedClicked));
 	}
 
-	// Token: 0x0600726D RID: 29293 RVA: 0x00176DB8 File Offset: 0x00174FB8
+	// Token: 0x06004603 RID: 17923 RVA: 0x0017F774 File Offset: 0x0017D974
 	[NullableContext(1)]
 	public override void Refresh(IBabelTowerBuffInfo data, bool isSelected, int gridIndex)
 	{
@@ -69,7 +69,7 @@ public class BabelTowerBuffSelectItem : GridProxyAbstract<IBabelTowerBuffInfo>
 		this.RefreshState(data.State);
 	}
 
-	// Token: 0x0600726E RID: 29294 RVA: 0x00176E60 File Offset: 0x00175060
+	// Token: 0x06004604 RID: 17924 RVA: 0x0017F81C File Offset: 0x0017DA1C
 	public void RefreshState(EBabelTowerBuffState state)
 	{
 		UUIText text = base.GetText(1);
@@ -94,7 +94,7 @@ public class BabelTowerBuffSelectItem : GridProxyAbstract<IBabelTowerBuffInfo>
 		}
 	}
 
-	// Token: 0x0600726F RID: 29295 RVA: 0x00176EEA File Offset: 0x001750EA
+	// Token: 0x06004605 RID: 17925 RVA: 0x0017F8A6 File Offset: 0x0017DAA6
 	private void OnClickToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -119,13 +119,13 @@ public class BabelTowerBuffSelectItem : GridProxyAbstract<IBabelTowerBuffInfo>
 		}
 	}
 
-	// Token: 0x06007270 RID: 29296 RVA: 0x00176F1D File Offset: 0x0017511D
+	// Token: 0x06004606 RID: 17926 RVA: 0x0017F8D9 File Offset: 0x0017DAD9
 	public void SetToggleState(EToggleState state)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(state, false, false, false);
 	}
 
-	// Token: 0x06007271 RID: 29297 RVA: 0x00176F30 File Offset: 0x00175130
+	// Token: 0x06004607 RID: 17927 RVA: 0x0017F8EC File Offset: 0x0017DAEC
 	private void OnUndeterminedClicked()
 	{
 		BabelTowerItemInfoViewInfo param = new BabelTowerItemInfoViewInfo
@@ -137,38 +137,38 @@ public class BabelTowerBuffSelectItem : GridProxyAbstract<IBabelTowerBuffInfo>
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerItemInfoView, param, null);
 	}
 
-	// Token: 0x040034FA RID: 13562
+	// Token: 0x04003593 RID: 13715
 	public int BuffId;
 
-	// Token: 0x040034FB RID: 13563
+	// Token: 0x04003594 RID: 13716
 	public int LevelId;
 
-	// Token: 0x040034FC RID: 13564
+	// Token: 0x04003595 RID: 13717
 	public Action<int> OnClickToggleCallBack;
 
-	// Token: 0x040034FD RID: 13565
+	// Token: 0x04003596 RID: 13718
 	public Action<int> OnCancelClickToggleCallBack;
 
-	// Token: 0x040034FE RID: 13566
+	// Token: 0x04003597 RID: 13719
 	public Func<int, bool> CanClickCallBack;
 
-	// Token: 0x020076DA RID: 30426
+	// Token: 0x0200686E RID: 26734
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x04027384 RID: 160644
+		// Token: 0x040226CD RID: 141005
 		public const int Toggle = 0;
 
-		// Token: 0x04027385 RID: 160645
+		// Token: 0x040226CE RID: 141006
 		public const int NameText = 1;
 
-		// Token: 0x04027386 RID: 160646
+		// Token: 0x040226CF RID: 141007
 		public const int DesText = 2;
 
-		// Token: 0x04027387 RID: 160647
+		// Token: 0x040226D0 RID: 141008
 		public const int IconTexture = 3;
 
-		// Token: 0x04027388 RID: 160648
+		// Token: 0x040226D1 RID: 141009
 		public const int RecommendItem = 4;
 	}
 }

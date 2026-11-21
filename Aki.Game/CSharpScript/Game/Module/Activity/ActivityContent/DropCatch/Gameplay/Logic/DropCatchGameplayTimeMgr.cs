@@ -7,16 +7,16 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x0200673A RID: 26426
+	// Token: 0x0200568A RID: 22154
 	public class DropCatchGameplayTimeMgr : DropCatchGameplayBaseMgr
 	{
-		// Token: 0x06041F5B RID: 270171 RVA: 0x010003BE File Offset: 0x00FFE5BE
+		// Token: 0x06036AA7 RID: 223911 RVA: 0x00F4176E File Offset: 0x00F3F96E
 		[NullableContext(1)]
 		public DropCatchGameplayTimeMgr(IGameplayLogicContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06041F5C RID: 270172 RVA: 0x010003C8 File Offset: 0x00FFE5C8
+		// Token: 0x06036AA8 RID: 223912 RVA: 0x00F41778 File Offset: 0x00F3F978
 		public override void Init()
 		{
 			DropCatchGameplay? gameplayConfig = this.Context.GetProxy().GetGameplayConfig();
@@ -25,14 +25,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.UpdateTime(0f);
 		}
 
-		// Token: 0x06041F5D RID: 270173 RVA: 0x01000429 File Offset: 0x00FFE629
+		// Token: 0x06036AA9 RID: 223913 RVA: 0x00F417D9 File Offset: 0x00F3F9D9
 		public override void OnTick(float deltaTime)
 		{
 			this.UpdateTime(deltaTime);
 			this.CheckGameOver();
 		}
 
-		// Token: 0x06041F5E RID: 270174 RVA: 0x01000438 File Offset: 0x00FFE638
+		// Token: 0x06036AAA RID: 223914 RVA: 0x00F417E8 File Offset: 0x00F3F9E8
 		private void CheckGameOver()
 		{
 			if (this.RemainingTime <= 0f)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041F5F RID: 270175 RVA: 0x01000484 File Offset: 0x00FFE684
+		// Token: 0x06036AAB RID: 223915 RVA: 0x00F41834 File Offset: 0x00F3FA34
 		public void UpdateTime(float deltaTime)
 		{
 			this.GameplayTime += deltaTime;
@@ -55,19 +55,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			gameplayView.UpdateRemainTime();
 		}
 
-		// Token: 0x06041F60 RID: 270176 RVA: 0x010004D6 File Offset: 0x00FFE6D6
+		// Token: 0x06036AAC RID: 223916 RVA: 0x00F41886 File Offset: 0x00F3FA86
 		public float GetTime()
 		{
 			return this.GameplayTime;
 		}
 
-		// Token: 0x06041F61 RID: 270177 RVA: 0x010004DE File Offset: 0x00FFE6DE
+		// Token: 0x06036AAD RID: 223917 RVA: 0x00F4188E File Offset: 0x00F3FA8E
 		public float GetRemainingTime()
 		{
 			return this.RemainingTime;
 		}
 
-		// Token: 0x06041F62 RID: 270178 RVA: 0x010004E6 File Offset: 0x00FFE6E6
+		// Token: 0x06036AAE RID: 223918 RVA: 0x00F41896 File Offset: 0x00F3FA96
 		public void AddTime(float time)
 		{
 			this.TotalTime += time * (float)TimeUtil.Instance.InverseMillisecond;
@@ -79,13 +79,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			gameplayViewModel.AddAddTime(time);
 		}
 
-		// Token: 0x040225DE RID: 140766
+		// Token: 0x0401CE37 RID: 118327
 		private float GameplayTime;
 
-		// Token: 0x040225DF RID: 140767
+		// Token: 0x0401CE38 RID: 118328
 		private float TotalTime;
 
-		// Token: 0x040225E0 RID: 140768
+		// Token: 0x0401CE39 RID: 118329
 		private float RemainingTime;
 	}
 }

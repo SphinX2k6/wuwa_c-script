@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025E4 RID: 9700
+// Token: 0x02001ACF RID: 6863
 [NullableContext(1)]
 [Nullable(0)]
 public class PilotThrowView : UiTickViewBase, IUiProhibitRefreshData
 {
-	// Token: 0x06013B87 RID: 80775 RVA: 0x004F2138 File Offset: 0x004F0338
+	// Token: 0x06011069 RID: 69737 RVA: 0x00500E68 File Offset: 0x004FF068
 	public PilotThrowView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06013B88 RID: 80776 RVA: 0x004F214C File Offset: 0x004F034C
+	// Token: 0x0601106A RID: 69738 RVA: 0x00500E7C File Offset: 0x004FF07C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class PilotThrowView : UiTickViewBase, IUiProhibitRefreshData
 		};
 	}
 
-	// Token: 0x06013B89 RID: 80777 RVA: 0x004F2210 File Offset: 0x004F0410
+	// Token: 0x0601106B RID: 69739 RVA: 0x00500F40 File Offset: 0x004FF140
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PilotThrowView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ public class PilotThrowView : UiTickViewBase, IUiProhibitRefreshData
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B8A RID: 80778 RVA: 0x004F2254 File Offset: 0x004F0454
+	// Token: 0x0601106C RID: 69740 RVA: 0x00500F84 File Offset: 0x004FF184
 	protected override void OnStart()
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -59,7 +59,7 @@ public class PilotThrowView : UiTickViewBase, IUiProhibitRefreshData
 		this.RegisterExtraUiProhibitRefresh();
 	}
 
-	// Token: 0x06013B8B RID: 80779 RVA: 0x004F2288 File Offset: 0x004F0488
+	// Token: 0x0601106D RID: 69741 RVA: 0x00500FB8 File Offset: 0x004FF1B8
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
@@ -67,7 +67,7 @@ public class PilotThrowView : UiTickViewBase, IUiProhibitRefreshData
 		EventSystem.Instance.Add<bool>(EEventName.TeleportStart, new Action<bool>(this.OnTeleportStart));
 	}
 
-	// Token: 0x06013B8C RID: 80780 RVA: 0x004F22B8 File Offset: 0x004F04B8
+	// Token: 0x0601106E RID: 69742 RVA: 0x00500FE8 File Offset: 0x004FF1E8
 	protected override void OnBeforeHide()
 	{
 		base.OnBeforeHide();
@@ -76,19 +76,19 @@ public class PilotThrowView : UiTickViewBase, IUiProhibitRefreshData
 		EventSystem.Instance.Remove<bool>(EEventName.TeleportStart, new Action<bool>(this.OnTeleportStart));
 	}
 
-	// Token: 0x06013B8D RID: 80781 RVA: 0x004F230A File Offset: 0x004F050A
+	// Token: 0x0601106F RID: 69743 RVA: 0x0050103A File Offset: 0x004FF23A
 	protected override void OnBeforeDestroy()
 	{
 		this.UnRegisterExtraUiProhibitRefresh();
 	}
 
-	// Token: 0x06013B8E RID: 80782 RVA: 0x004F2312 File Offset: 0x004F0512
+	// Token: 0x06011070 RID: 69744 RVA: 0x00501042 File Offset: 0x004FF242
 	private void InitSequencePlayer()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x06013B8F RID: 80783 RVA: 0x004F2328 File Offset: 0x004F0528
+	// Token: 0x06011071 RID: 69745 RVA: 0x00501058 File Offset: 0x004FF258
 	private UniTask InitTargetItems(IReadOnlyList<IPilotThrowTarget> targetConfigs)
 	{
 		PilotThrowView.<InitTargetItems>d__10 <InitTargetItems>d__;
@@ -100,7 +100,7 @@ public class PilotThrowView : UiTickViewBase, IUiProhibitRefreshData
 		return <InitTargetItems>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B90 RID: 80784 RVA: 0x004F2374 File Offset: 0x004F0574
+	// Token: 0x06011072 RID: 69746 RVA: 0x005010A4 File Offset: 0x004FF2A4
 	protected override void OnTick(float delta)
 	{
 		foreach (PilotThrowTargetItem pilotThrowTargetItem in this.TargetItem)
@@ -109,7 +109,7 @@ public class PilotThrowView : UiTickViewBase, IUiProhibitRefreshData
 		}
 	}
 
-	// Token: 0x06013B91 RID: 80785 RVA: 0x004F23C8 File Offset: 0x004F05C8
+	// Token: 0x06011073 RID: 69747 RVA: 0x005010F8 File Offset: 0x004FF2F8
 	private void OnBackBtnClick()
 	{
 		PilotThrowController.Instance.RequestChangePilotState(false);
@@ -131,7 +131,7 @@ public class PilotThrowView : UiTickViewBase, IUiProhibitRefreshData
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06013B92 RID: 80786 RVA: 0x004F2488 File Offset: 0x004F0688
+	// Token: 0x06011074 RID: 69748 RVA: 0x005011B8 File Offset: 0x004FF3B8
 	private void OnLaunchBtnClick()
 	{
 		PilotThrowController.Instance.RequestChangePilotState(true);
@@ -144,7 +144,7 @@ public class PilotThrowView : UiTickViewBase, IUiProhibitRefreshData
 		this.CloseMeAsync().Forget<bool>();
 	}
 
-	// Token: 0x06013B93 RID: 80787 RVA: 0x004F251C File Offset: 0x004F071C
+	// Token: 0x06011075 RID: 69749 RVA: 0x0050124C File Offset: 0x004FF44C
 	private void OnTeleportStart(bool loading)
 	{
 		foreach (PilotThrowTargetItem pilotThrowTargetItem in this.TargetItem)
@@ -155,13 +155,13 @@ public class PilotThrowView : UiTickViewBase, IUiProhibitRefreshData
 		this.CloseMeAsync().Forget<bool>();
 	}
 
-	// Token: 0x06013B94 RID: 80788 RVA: 0x004F2584 File Offset: 0x004F0784
+	// Token: 0x06011076 RID: 69750 RVA: 0x005012B4 File Offset: 0x004FF4B4
 	public bool CheckCondition()
 	{
 		return true;
 	}
 
-	// Token: 0x06013B95 RID: 80789 RVA: 0x004F2587 File Offset: 0x004F0787
+	// Token: 0x06011077 RID: 69751 RVA: 0x005012B7 File Offset: 0x004FF4B7
 	public string[] GetDistributeTags()
 	{
 		return new string[]
@@ -171,19 +171,19 @@ public class PilotThrowView : UiTickViewBase, IUiProhibitRefreshData
 		};
 	}
 
-	// Token: 0x06013B96 RID: 80790 RVA: 0x004F259F File Offset: 0x004F079F
+	// Token: 0x06011078 RID: 69752 RVA: 0x005012CF File Offset: 0x004FF4CF
 	private void RegisterExtraUiProhibitRefresh()
 	{
 		UiProhibitFightInputCenter.Instance.RegisterExtraRefreshData(this.ViewInfo.Name, this);
 	}
 
-	// Token: 0x06013B97 RID: 80791 RVA: 0x004F25BC File Offset: 0x004F07BC
+	// Token: 0x06011079 RID: 69753 RVA: 0x005012EC File Offset: 0x004FF4EC
 	private void UnRegisterExtraUiProhibitRefresh()
 	{
 		UiProhibitFightInputCenter.Instance.UnRegisterExtraRefreshData(this.ViewInfo.Name);
 	}
 
-	// Token: 0x06013B98 RID: 80792 RVA: 0x004F25D8 File Offset: 0x004F07D8
+	// Token: 0x0601107A RID: 69754 RVA: 0x00501308 File Offset: 0x004FF508
 	private void OnTargetInOutRange(bool inRange)
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -204,33 +204,33 @@ public class PilotThrowView : UiTickViewBase, IUiProhibitRefreshData
 		sequencePlayer3.PlayLevelSequenceByName(inRange ? "Ready_In" : "Ready_Out", false, null, false);
 	}
 
-	// Token: 0x0400949B RID: 38043
+	// Token: 0x040095F2 RID: 38386
 	private readonly List<PilotThrowTargetItem> TargetItem = new List<PilotThrowTargetItem>();
 
-	// Token: 0x0400949C RID: 38044
+	// Token: 0x040095F3 RID: 38387
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x0400949D RID: 38045
+	// Token: 0x040095F4 RID: 38388
 	private const string NUMBERIN_ANIM = "Number_In";
 
-	// Token: 0x02008C1C RID: 35868
+	// Token: 0x02007DA5 RID: 32165
 	[NullableContext(0)]
 	private class EViewComponent
 	{
-		// Token: 0x0402D7C9 RID: 186313
+		// Token: 0x04028AE1 RID: 166625
 		public const int BackBtn = 0;
 
-		// Token: 0x0402D7CA RID: 186314
+		// Token: 0x04028AE2 RID: 166626
 		public const int FallPointCountText = 1;
 
-		// Token: 0x0402D7CB RID: 186315
+		// Token: 0x04028AE3 RID: 166627
 		public const int BtnLaunch = 2;
 
-		// Token: 0x0402D7CC RID: 186316
+		// Token: 0x04028AE4 RID: 166628
 		public const int MarkRoot = 3;
 
-		// Token: 0x0402D7CD RID: 186317
+		// Token: 0x04028AE5 RID: 166629
 		public const int AimItem = 4;
 	}
 }

@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02000F76 RID: 3958
+// Token: 0x0200042B RID: 1067
 public class FurnitureShopItemProxy : CommonGameplayShopItemProxy
 {
-	// Token: 0x06006553 RID: 25939 RVA: 0x001427A0 File Offset: 0x001409A0
+	// Token: 0x060038EB RID: 14571 RVA: 0x0014B03C File Offset: 0x0014923C
 	public override void UpdateLeftTime()
 	{
 		base.LeftTimeItemVisible = false;
 	}
 
-	// Token: 0x06006554 RID: 25940 RVA: 0x001427A9 File Offset: 0x001409A9
+	// Token: 0x060038EC RID: 14572 RVA: 0x0014B045 File Offset: 0x00149245
 	public override void UpdateBuyLimitCountText()
 	{
 		base.BuyLimitCountTextVisible = false;
 	}
 
-	// Token: 0x06006555 RID: 25941 RVA: 0x001427B2 File Offset: 0x001409B2
+	// Token: 0x060038ED RID: 14573 RVA: 0x0014B04E File Offset: 0x0014924E
 	public override void UpdateRedDot()
 	{
 		if (this.GoodsData == null)
@@ -26,7 +26,7 @@ public class FurnitureShopItemProxy : CommonGameplayShopItemProxy
 		base.RedDotVisible = FurnitureModel.Instance.CheckFurnitureShopItemRedDotByData(this.GoodsData);
 	}
 
-	// Token: 0x06006556 RID: 25942 RVA: 0x001427D4 File Offset: 0x001409D4
+	// Token: 0x060038EE RID: 14574 RVA: 0x0014B070 File Offset: 0x00149270
 	public override void OnBuyButtonClick()
 	{
 		if (this.GoodsData == null)

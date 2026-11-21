@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 {
-	// Token: 0x020047B0 RID: 18352
+	// Token: 0x020036E1 RID: 14049
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapMoveComponent : MapComponent
 	{
-		// Token: 0x060300C9 RID: 196809 RVA: 0x00B227B3 File Offset: 0x00B209B3
+		// Token: 0x06024898 RID: 149656 RVA: 0x00A526FF File Offset: 0x00A508FF
 		public WorldMapMoveComponent([Nullable(new byte[]
 		{
 			0,
@@ -27,8 +27,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 		{
 		}
 
-		// Token: 0x1700784C RID: 30796
-		// (get) Token: 0x060300CA RID: 196810 RVA: 0x00B227D2 File Offset: 0x00B209D2
+		// Token: 0x17004B08 RID: 19208
+		// (get) Token: 0x06024899 RID: 149657 RVA: 0x00A5271E File Offset: 0x00A5091E
 		public override EMapComponent ComponentType
 		{
 			get
@@ -37,8 +37,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x1700784D RID: 30797
-		// (get) Token: 0x060300CB RID: 196811 RVA: 0x00B227D5 File Offset: 0x00B209D5
+		// Token: 0x17004B09 RID: 19209
+		// (get) Token: 0x0602489A RID: 149658 RVA: 0x00A52721 File Offset: 0x00A50921
 		public bool IsTweeningMove
 		{
 			get
@@ -47,8 +47,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x1700784E RID: 30798
-		// (get) Token: 0x060300CC RID: 196812 RVA: 0x00B227DD File Offset: 0x00B209DD
+		// Token: 0x17004B0A RID: 19210
+		// (get) Token: 0x0602489B RID: 149659 RVA: 0x00A52729 File Offset: 0x00A50929
 		[Nullable(2)]
 		public Vector2D TweenTarget
 		{
@@ -59,8 +59,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x1700784F RID: 30799
-		// (get) Token: 0x060300CD RID: 196813 RVA: 0x00B227E5 File Offset: 0x00B209E5
+		// Token: 0x17004B0B RID: 19211
+		// (get) Token: 0x0602489C RID: 149660 RVA: 0x00A52731 File Offset: 0x00A50931
 		public bool IsDragMoveDisabled
 		{
 			get
@@ -69,8 +69,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007850 RID: 30800
-		// (get) Token: 0x060300CE RID: 196814 RVA: 0x00B227ED File Offset: 0x00B209ED
+		// Token: 0x17004B0C RID: 19212
+		// (get) Token: 0x0602489D RID: 149661 RVA: 0x00A52739 File Offset: 0x00A50939
 		public float MapScale
 		{
 			get
@@ -79,8 +79,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007851 RID: 30801
-		// (get) Token: 0x060300CF RID: 196815 RVA: 0x00B227FC File Offset: 0x00B209FC
+		// Token: 0x17004B0D RID: 19213
+		// (get) Token: 0x0602489E RID: 149662 RVA: 0x00A52748 File Offset: 0x00A50948
 		[Nullable(2)]
 		private WorldMapUiEntity WorldMapUiComponent
 		{
@@ -97,8 +97,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007852 RID: 30802
-		// (get) Token: 0x060300D0 RID: 196816 RVA: 0x00B22839 File Offset: 0x00B20A39
+		// Token: 0x17004B0E RID: 19214
+		// (get) Token: 0x0602489F RID: 149663 RVA: 0x00A52785 File Offset: 0x00A50985
 		[Nullable(2)]
 		private UKuroWorldMapUIParams UiParams
 		{
@@ -114,8 +114,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007853 RID: 30803
-		// (get) Token: 0x060300D1 RID: 196817 RVA: 0x00B2284C File Offset: 0x00B20A4C
+		// Token: 0x17004B0F RID: 19215
+		// (get) Token: 0x060248A0 RID: 149664 RVA: 0x00A52798 File Offset: 0x00A50998
 		private FVector2D ViewportSize
 		{
 			get
@@ -124,8 +124,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007854 RID: 30804
-		// (get) Token: 0x060300D2 RID: 196818 RVA: 0x00B22859 File Offset: 0x00B20A59
+		// Token: 0x17004B10 RID: 19216
+		// (get) Token: 0x060248A1 RID: 149665 RVA: 0x00A527A5 File Offset: 0x00A509A5
 		private Vector2D MapSize
 		{
 			get
@@ -135,8 +135,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007855 RID: 30805
-		// (get) Token: 0x060300D3 RID: 196819 RVA: 0x00B22878 File Offset: 0x00B20A78
+		// Token: 0x17004B11 RID: 19217
+		// (get) Token: 0x060248A2 RID: 149666 RVA: 0x00A527C4 File Offset: 0x00A509C4
 		public Vector2D MapUiPosition
 		{
 			get
@@ -150,8 +150,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007856 RID: 30806
-		// (get) Token: 0x060300D4 RID: 196820 RVA: 0x00B228C4 File Offset: 0x00B20AC4
+		// Token: 0x17004B12 RID: 19218
+		// (get) Token: 0x060248A3 RID: 149667 RVA: 0x00A52810 File Offset: 0x00A50A10
 		public IArea SafeAreaSize
 		{
 			get
@@ -172,8 +172,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007857 RID: 30807
-		// (get) Token: 0x060300D5 RID: 196821 RVA: 0x00B22AB4 File Offset: 0x00B20CB4
+		// Token: 0x17004B13 RID: 19219
+		// (get) Token: 0x060248A4 RID: 149668 RVA: 0x00A52A00 File Offset: 0x00A50C00
 		public IArea DangerousAreaSize
 		{
 			get
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x060300D6 RID: 196822 RVA: 0x00B22CC4 File Offset: 0x00B20EC4
+		// Token: 0x060248A5 RID: 149669 RVA: 0x00A52C10 File Offset: 0x00A50E10
 		protected override void OnAdd()
 		{
 			this.SafeArea = new Area
@@ -214,19 +214,19 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.TweenerDelegate = DelegateUtils.ToManualReleaseDelegate<FLTweenVector2SetterDynamic>(new Action<FVector2D>(this.OnTweenUpdate));
 		}
 
-		// Token: 0x060300D7 RID: 196823 RVA: 0x00B22D76 File Offset: 0x00B20F76
+		// Token: 0x060248A6 RID: 149670 RVA: 0x00A52CC2 File Offset: 0x00A50EC2
 		protected override void OnEnable()
 		{
 			this.AddEventListener();
 		}
 
-		// Token: 0x060300D8 RID: 196824 RVA: 0x00B22D7E File Offset: 0x00B20F7E
+		// Token: 0x060248A7 RID: 149671 RVA: 0x00A52CCA File Offset: 0x00A50ECA
 		protected override void OnDisable()
 		{
 			this.RemoveEventListener();
 		}
 
-		// Token: 0x060300D9 RID: 196825 RVA: 0x00B22D88 File Offset: 0x00B20F88
+		// Token: 0x060248A8 RID: 149672 RVA: 0x00A52CD4 File Offset: 0x00A50ED4
 		protected override void OnRemove()
 		{
 			this.KillPositionTweener(false);
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.DangerousArea = null;
 		}
 
-		// Token: 0x060300DA RID: 196826 RVA: 0x00B22DD6 File Offset: 0x00B20FD6
+		// Token: 0x060248A9 RID: 149673 RVA: 0x00A52D22 File Offset: 0x00A50F22
 		public void KillTweening()
 		{
 			if (this.IsTweening)
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.IsTweening = false;
 		}
 
-		// Token: 0x060300DB RID: 196827 RVA: 0x00B22DF0 File Offset: 0x00B20FF0
+		// Token: 0x060248AA RID: 149674 RVA: 0x00A52D3C File Offset: 0x00A50F3C
 		private void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.WorldMapDragInertia, new Action<Vector2D>(this.WorldMapDragInertia));
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			EventSystem.Instance.Add(EEventName.MoveWorldMapToPosition, new Action<global::Vector>(this.MoveToPosition));
 		}
 
-		// Token: 0x060300DC RID: 196828 RVA: 0x00B22EC4 File Offset: 0x00B210C4
+		// Token: 0x060248AB RID: 149675 RVA: 0x00A52E10 File Offset: 0x00A51010
 		private void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldMapDragInertia, new Action<Vector2D>(this.WorldMapDragInertia));
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			EventSystem.Instance.Remove(EEventName.MoveWorldMapToPosition, new Action<global::Vector>(this.MoveToPosition));
 		}
 
-		// Token: 0x060300DD RID: 196829 RVA: 0x00B22F98 File Offset: 0x00B21198
+		// Token: 0x060248AC RID: 149676 RVA: 0x00A52EE4 File Offset: 0x00A510E4
 		public void PushMap(MarkItem markItem, bool bUseTween = true, EClampType clampType = EClampType.ClampToDangerousArea)
 		{
 			if (this.UiParams == null)
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.PushMapByUiPosition(markItem.UiPosition, bUseTween, clampType);
 		}
 
-		// Token: 0x060300DE RID: 196830 RVA: 0x00B22FD8 File Offset: 0x00B211D8
+		// Token: 0x060248AD RID: 149677 RVA: 0x00A52F24 File Offset: 0x00A51124
 		public void PushMapByUiPosition(global::Vector uiPosition, bool bUseTween = true, EClampType clampType = EClampType.ClampToDangerousArea)
 		{
 			if (this.UiParams == null)
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.SetMapPosition(inTarget, bUseTween, clampType, new LTweenEase?(this.UiParams.TweenTypeEase), new float?(this.UiParams.TweenTime), true, true);
 		}
 
-		// Token: 0x060300DF RID: 196831 RVA: 0x00B23110 File Offset: 0x00B21310
+		// Token: 0x060248AE RID: 149678 RVA: 0x00A5305C File Offset: 0x00A5125C
 		[NullableContext(2)]
 		public void SetMapPosition(object inTarget, bool bUseTween, EClampType clampType = EClampType.NotClamp, LTweenEase? tweenEase = null, float? tweenTime = null, bool sendEvent = true, bool disableDrag = false)
 		{
@@ -372,7 +372,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			});
 		}
 
-		// Token: 0x060300E0 RID: 196832 RVA: 0x00B23278 File Offset: 0x00B21478
+		// Token: 0x060248AF RID: 149679 RVA: 0x00A531C4 File Offset: 0x00A513C4
 		public void SetMapPositionCauseByScaling(Vector2D focusPosition, [Nullable(2)] Vector2D targetPosition, EClampType clampType = EClampType.NotClamp)
 		{
 			bool isTweeningMove = this.IsTweeningMove;
@@ -384,7 +384,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x060300E1 RID: 196833 RVA: 0x00B232D0 File Offset: 0x00B214D0
+		// Token: 0x060248B0 RID: 149680 RVA: 0x00A5321C File Offset: 0x00A5141C
 		public void FocusPlayer(Vector2D playerPosition, bool bUseTween = false, EClampType clampType = EClampType.NotClamp)
 		{
 			Vector2D vector2D = Vector2D.Create();
@@ -392,7 +392,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.SetMapPosition(vector2D, bUseTween, clampType, new LTweenEase?(this.UiParams.TweenTypeEase), new float?(this.UiParams.TweenTime), true, true);
 		}
 
-		// Token: 0x060300E2 RID: 196834 RVA: 0x00B23324 File Offset: 0x00B21524
+		// Token: 0x060248B1 RID: 149681 RVA: 0x00A53270 File Offset: 0x00A51470
 		public void TickMoveDirty()
 		{
 			if (!this.IsMoveForwardDirty && !this.IsMoveRightDirty)
@@ -414,7 +414,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.SetMapPosition(vector2D, false, EClampType.ClampToDangerousArea, null, null, true, false);
 		}
 
-		// Token: 0x060300E3 RID: 196835 RVA: 0x00B233B8 File Offset: 0x00B215B8
+		// Token: 0x060248B2 RID: 149682 RVA: 0x00A53304 File Offset: 0x00A51504
 		private void SetMapAnchorOffset(Vector2D targetPosition)
 		{
 			this.WorldMapUiComponent.Map.GetRootItem().SetAnchorOffset(targetPosition.ToUeVector2D(false));
@@ -422,7 +422,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.SyncUnlockFogAnchorItemPosition(targetPosition);
 		}
 
-		// Token: 0x060300E4 RID: 196836 RVA: 0x00B233E4 File Offset: 0x00B215E4
+		// Token: 0x060248B3 RID: 149683 RVA: 0x00A53330 File Offset: 0x00A51530
 		private void SyncUnlockFogAnchorItemPosition(Vector2D mapPosition)
 		{
 			Vector2D vector2D = Vector2D.Create(mapPosition.X, mapPosition.Y);
@@ -433,13 +433,13 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			map.FogUnlockAnchorItem.SetAnchorOffset(vector2D.ToUeVector2D(false));
 		}
 
-		// Token: 0x060300E5 RID: 196837 RVA: 0x00B2343C File Offset: 0x00B2163C
+		// Token: 0x060248B4 RID: 149684 RVA: 0x00A53388 File Offset: 0x00A51588
 		private bool NearlyPosition(FVector2D srcPosition, FVector2D dstPosition)
 		{
 			return MathUtils.Instance.IsNearlyEqual((double)srcPosition.X, (double)dstPosition.X, null) && MathUtils.Instance.IsNearlyEqual((double)srcPosition.Y, (double)dstPosition.Y, null);
 		}
 
-		// Token: 0x060300E6 RID: 196838 RVA: 0x00B2348F File Offset: 0x00B2168F
+		// Token: 0x060248B5 RID: 149685 RVA: 0x00A533DB File Offset: 0x00A515DB
 		private static double ClampOrCenter(double value, double min, double max)
 		{
 			if (min <= max)
@@ -449,7 +449,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			return (min + max) / 2.0;
 		}
 
-		// Token: 0x060300E7 RID: 196839 RVA: 0x00B234AC File Offset: 0x00B216AC
+		// Token: 0x060248B6 RID: 149686 RVA: 0x00A533F8 File Offset: 0x00A515F8
 		private Vector2D ClampPosition(Vector2D position, EClampType type, bool dontNew = false)
 		{
 			double x = position.X;
@@ -484,7 +484,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			return vector2D;
 		}
 
-		// Token: 0x060300E8 RID: 196840 RVA: 0x00B23571 File Offset: 0x00B21771
+		// Token: 0x060248B7 RID: 149687 RVA: 0x00A534BD File Offset: 0x00A516BD
 		private void KillPositionTweener(bool callComplete = false)
 		{
 			ULTweener positionTweener = this.PositionTweener;
@@ -498,14 +498,14 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.IsDragDisabled = false;
 		}
 
-		// Token: 0x060300E9 RID: 196841 RVA: 0x00B235B0 File Offset: 0x00B217B0
+		// Token: 0x060248B8 RID: 149688 RVA: 0x00A534FC File Offset: 0x00A516FC
 		private void OnTweenUpdate(FVector2D value)
 		{
 			Vector2D inTarget = Vector2D.Create(value);
 			this.SetMapPosition(inTarget, false, EClampType.ClampToDangerousArea, null, null, true, false);
 		}
 
-		// Token: 0x060300EA RID: 196842 RVA: 0x00B235E8 File Offset: 0x00B217E8
+		// Token: 0x060248B9 RID: 149689 RVA: 0x00A53534 File Offset: 0x00A51734
 		private void WorldMapDragInertia(Vector2D speed)
 		{
 			Vector2D vector2D = Vector2D.Create();
@@ -514,7 +514,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.SetMapPosition(inTarget, true, EClampType.ClampToSafeArea, new LTweenEase?(LTweenEase.OutQuad), new float?(ConfigCommonParamById.GetFloatConfig("MapDragInertiaTime").GetValueOrDefault()), true, false);
 		}
 
-		// Token: 0x060300EB RID: 196843 RVA: 0x00B23649 File Offset: 0x00B21849
+		// Token: 0x060248BA RID: 149690 RVA: 0x00A53595 File Offset: 0x00A51795
 		private void OnPointerDown()
 		{
 			if (this.IsDragDisabled)
@@ -524,12 +524,12 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.KillPositionTweener(true);
 		}
 
-		// Token: 0x060300EC RID: 196844 RVA: 0x00B2365B File Offset: 0x00B2185B
+		// Token: 0x060248BB RID: 149691 RVA: 0x00A535A7 File Offset: 0x00A517A7
 		private void OnWheelInput(float f, EMapScaleSetType eMapScaleSetType)
 		{
 		}
 
-		// Token: 0x060300ED RID: 196845 RVA: 0x00B2365D File Offset: 0x00B2185D
+		// Token: 0x060248BC RID: 149692 RVA: 0x00A535A9 File Offset: 0x00A517A9
 		private void OnPointerDrag(Vector2D delta)
 		{
 			if (this.IsDragDisabled)
@@ -539,21 +539,21 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.MoveByDelta(delta);
 		}
 
-		// Token: 0x060300EE RID: 196846 RVA: 0x00B2366F File Offset: 0x00B2186F
+		// Token: 0x060248BD RID: 149693 RVA: 0x00A535BB File Offset: 0x00A517BB
 		private void OnMoveForward(float delta)
 		{
 			this.ForwardVector.Y = (double)delta;
 			this.IsMoveForwardDirty = true;
 		}
 
-		// Token: 0x060300EF RID: 196847 RVA: 0x00B23685 File Offset: 0x00B21885
+		// Token: 0x060248BE RID: 149694 RVA: 0x00A535D1 File Offset: 0x00A517D1
 		private void OnMoveRight(float delta)
 		{
 			this.RightVector.X = (double)delta;
 			this.IsMoveRightDirty = true;
 		}
 
-		// Token: 0x060300F0 RID: 196848 RVA: 0x00B2369C File Offset: 0x00B2189C
+		// Token: 0x060248BF RID: 149695 RVA: 0x00A535E8 File Offset: 0x00A517E8
 		private void MoveToPosition(global::Vector worldPosition)
 		{
 			Vector2D vector2D = MapUtil.WorldPosition2UiPosition2D(Vector2D.Create(worldPosition.X, worldPosition.Y), null);
@@ -563,14 +563,14 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.SetMapPosition(vector2D, false, EClampType.ClampToDangerousArea, null, null, true, false);
 		}
 
-		// Token: 0x060300F1 RID: 196849 RVA: 0x00B236FC File Offset: 0x00B218FC
+		// Token: 0x060248C0 RID: 149696 RVA: 0x00A53648 File Offset: 0x00A51848
 		private void MoveByDelta(Vector2D delta)
 		{
 			Vector2D vector2D = Vector2D.Create(this.MapUiPosition);
 			this.SetMapPosition(vector2D.AdditionEqual(delta), false, EClampType.ClampToDangerousArea, null, null, true, false);
 		}
 
-		// Token: 0x060300F2 RID: 196850 RVA: 0x00B23738 File Offset: 0x00B21938
+		// Token: 0x060248C1 RID: 149697 RVA: 0x00A53684 File Offset: 0x00A51884
 		private float GetMoveSpeedMultiplier()
 		{
 			WorldMapModel instance = WorldMapModel.Instance;
@@ -583,7 +583,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			return 1f;
 		}
 
-		// Token: 0x060300F3 RID: 196851 RVA: 0x00B23798 File Offset: 0x00B21998
+		// Token: 0x060248C2 RID: 149698 RVA: 0x00A536E4 File Offset: 0x00A518E4
 		[CompilerGenerated]
 		private void <SetMapPosition>g__SendEventAction|46_0()
 		{
@@ -594,46 +594,46 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x04019E96 RID: 106134
+		// Token: 0x04014546 RID: 83270
 		private bool IsTweening;
 
-		// Token: 0x04019E97 RID: 106135
+		// Token: 0x04014547 RID: 83271
 		private bool IsDragDisabled;
 
-		// Token: 0x04019E98 RID: 106136
+		// Token: 0x04014548 RID: 83272
 		[Nullable(2)]
 		private Vector2D TweenTargetInner;
 
-		// Token: 0x04019E99 RID: 106137
+		// Token: 0x04014549 RID: 83273
 		[Nullable(2)]
 		private ULTweener PositionTweener;
 
-		// Token: 0x04019E9A RID: 106138
+		// Token: 0x0401454A RID: 83274
 		[Nullable(2)]
 		private FLTweenVector2SetterDynamic TweenerDelegate;
 
-		// Token: 0x04019E9B RID: 106139
+		// Token: 0x0401454B RID: 83275
 		[Nullable(2)]
 		private IArea SafeArea;
 
-		// Token: 0x04019E9C RID: 106140
+		// Token: 0x0401454C RID: 83276
 		[Nullable(2)]
 		private IArea DangerousArea;
 
-		// Token: 0x04019E9D RID: 106141
+		// Token: 0x0401454D RID: 83277
 		private readonly Vector2D ForwardVector = Vector2D.Create();
 
-		// Token: 0x04019E9E RID: 106142
+		// Token: 0x0401454E RID: 83278
 		private readonly Vector2D RightVector = Vector2D.Create();
 
-		// Token: 0x04019E9F RID: 106143
+		// Token: 0x0401454F RID: 83279
 		[Nullable(2)]
 		private Vector2D MapUiPositionInner;
 
-		// Token: 0x04019EA0 RID: 106144
+		// Token: 0x04014550 RID: 83280
 		private bool IsMoveForwardDirty;
 
-		// Token: 0x04019EA1 RID: 106145
+		// Token: 0x04014551 RID: 83281
 		private bool IsMoveRightDirty;
 	}
 }

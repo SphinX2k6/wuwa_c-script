@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000E33 RID: 3635
+	// Token: 0x02000E23 RID: 3619
 	[NetMessage(EMessageId.QuestTreeInfoNotify)]
 	public sealed class QuestTreeInfoNotify : IMessage<QuestTreeInfoNotify>, IMessage, IEquatable<QuestTreeInfoNotify>, IDeepCloneable<QuestTreeInfoNotify>, IBufferMessage
 	{
-		// Token: 0x0601383E RID: 79934 RVA: 0x002D5EBF File Offset: 0x002D40BF
+		// Token: 0x06013759 RID: 79705 RVA: 0x002D47F7 File Offset: 0x002D29F7
 		[NullableContext(1)]
 		public static QuestTreeInfoNotify Create()
 		{
 			return new QuestTreeInfoNotify();
 		}
 
-		// Token: 0x170040B3 RID: 16563
-		// (get) Token: 0x0601383F RID: 79935 RVA: 0x002D5EC6 File Offset: 0x002D40C6
+		// Token: 0x17004089 RID: 16521
+		// (get) Token: 0x0601375A RID: 79706 RVA: 0x002D47FE File Offset: 0x002D29FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170040B4 RID: 16564
-		// (get) Token: 0x06013840 RID: 79936 RVA: 0x002D5EC9 File Offset: 0x002D40C9
+		// Token: 0x1700408A RID: 16522
+		// (get) Token: 0x0601375B RID: 79707 RVA: 0x002D4801 File Offset: 0x002D2A01
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013841 RID: 79937 RVA: 0x002D5ED0 File Offset: 0x002D40D0
+		// Token: 0x0601375C RID: 79708 RVA: 0x002D4808 File Offset: 0x002D2A08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestTreeInfoNotify()
 		{
 		}
 
-		// Token: 0x06013842 RID: 79938 RVA: 0x002D5EEE File Offset: 0x002D40EE
+		// Token: 0x0601375D RID: 79709 RVA: 0x002D4826 File Offset: 0x002D2A26
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestTreeInfoNotify(QuestTreeInfoNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06013843 RID: 79939 RVA: 0x002D5F29 File Offset: 0x002D4129
+		// Token: 0x0601375E RID: 79710 RVA: 0x002D4861 File Offset: 0x002D2A61
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestTreeInfoNotify Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol
 			return new QuestTreeInfoNotify(this);
 		}
 
-		// Token: 0x170040B5 RID: 16565
-		// (get) Token: 0x06013844 RID: 79940 RVA: 0x002D5F31 File Offset: 0x002D4131
+		// Token: 0x1700408B RID: 16523
+		// (get) Token: 0x0601375F RID: 79711 RVA: 0x002D4869 File Offset: 0x002D2A69
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockChapterIds
@@ -80,8 +80,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170040B6 RID: 16566
-		// (get) Token: 0x06013845 RID: 79941 RVA: 0x002D5F39 File Offset: 0x002D4139
+		// Token: 0x1700408C RID: 16524
+		// (get) Token: 0x06013760 RID: 79712 RVA: 0x002D4871 File Offset: 0x002D2A71
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockChapterNodeIds
@@ -92,7 +92,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013846 RID: 79942 RVA: 0x002D5F41 File Offset: 0x002D4141
+		// Token: 0x06013761 RID: 79713 RVA: 0x002D4879 File Offset: 0x002D2A79
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -100,7 +100,7 @@ namespace Aki.Protocol
 			return this.Equals(other as QuestTreeInfoNotify);
 		}
 
-		// Token: 0x06013847 RID: 79943 RVA: 0x002D5F50 File Offset: 0x002D4150
+		// Token: 0x06013762 RID: 79714 RVA: 0x002D4888 File Offset: 0x002D2A88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(QuestTreeInfoNotify other)
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.unlockChapterIds_.Equals(other.unlockChapterIds_) && this.unlockChapterNodeIds_.Equals(other.unlockChapterNodeIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06013848 RID: 79944 RVA: 0x002D5FA4 File Offset: 0x002D41A4
+		// Token: 0x06013763 RID: 79715 RVA: 0x002D48DC File Offset: 0x002D2ADC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013849 RID: 79945 RVA: 0x002D5FE6 File Offset: 0x002D41E6
+		// Token: 0x06013764 RID: 79716 RVA: 0x002D491E File Offset: 0x002D2B1E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601384A RID: 79946 RVA: 0x002D5FF3 File Offset: 0x002D41F3
+		// Token: 0x06013765 RID: 79717 RVA: 0x002D492B File Offset: 0x002D2B2B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -139,20 +139,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601384B RID: 79947 RVA: 0x002D5FFC File Offset: 0x002D41FC
+		// Token: 0x06013766 RID: 79718 RVA: 0x002D4934 File Offset: 0x002D2B34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.unlockChapterIds_.WriteTo(ref output, QuestTreeInfoNotify._repeated_unlockChapterIds_codec);
 			this.unlockChapterNodeIds_.WriteTo(ref output, QuestTreeInfoNotify._repeated_unlockChapterNodeIds_codec);
+			this.unlockChapterIds_.WriteTo(ref output, QuestTreeInfoNotify._repeated_unlockChapterIds_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0601384C RID: 79948 RVA: 0x002D6034 File Offset: 0x002D4234
+		// Token: 0x06013767 RID: 79719 RVA: 0x002D496C File Offset: 0x002D2B6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601384D RID: 79949 RVA: 0x002D6080 File Offset: 0x002D4280
+		// Token: 0x06013768 RID: 79720 RVA: 0x002D49B8 File Offset: 0x002D2BB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(QuestTreeInfoNotify other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601384E RID: 79950 RVA: 0x002D60BF File Offset: 0x002D42BF
+		// Token: 0x06013769 RID: 79721 RVA: 0x002D49F7 File Offset: 0x002D2BF7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601384F RID: 79951 RVA: 0x002D60C8 File Offset: 0x002D42C8
+		// Token: 0x0601376A RID: 79722 RVA: 0x002D4A00 File Offset: 0x002D2C00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,42 +201,42 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 10U)
+				if (num <= 82U)
 				{
-					if (num == 8U || num == 10U)
+					if (num == 80U || num == 82U)
 					{
-						this.unlockChapterIds_.AddEntriesFrom(ref input, QuestTreeInfoNotify._repeated_unlockChapterIds_codec);
+						this.unlockChapterNodeIds_.AddEntriesFrom(ref input, QuestTreeInfoNotify._repeated_unlockChapterNodeIds_codec);
 						continue;
 					}
 				}
-				else if (num == 48U || num == 50U)
+				else if (num == 96U || num == 98U)
 				{
-					this.unlockChapterNodeIds_.AddEntriesFrom(ref input, QuestTreeInfoNotify._repeated_unlockChapterNodeIds_codec);
+					this.unlockChapterIds_.AddEntriesFrom(ref input, QuestTreeInfoNotify._repeated_unlockChapterIds_codec);
 					continue;
 				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x0400777D RID: 30589
+		// Token: 0x040077A7 RID: 30631
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400777E RID: 30590
-		public const int UnlockChapterIdsFieldNumber = 1;
+		// Token: 0x040077A8 RID: 30632
+		public const int UnlockChapterIdsFieldNumber = 12;
 
-		// Token: 0x0400777F RID: 30591
-		private static readonly FieldCodec<int> _repeated_unlockChapterIds_codec = FieldCodec.ForInt32(10U);
+		// Token: 0x040077A9 RID: 30633
+		private static readonly FieldCodec<int> _repeated_unlockChapterIds_codec = FieldCodec.ForInt32(98U);
 
-		// Token: 0x04007780 RID: 30592
+		// Token: 0x040077AA RID: 30634
 		private readonly RepeatedField<int> unlockChapterIds_ = new RepeatedField<int>();
 
-		// Token: 0x04007781 RID: 30593
-		public const int UnlockChapterNodeIdsFieldNumber = 6;
+		// Token: 0x040077AB RID: 30635
+		public const int UnlockChapterNodeIdsFieldNumber = 10;
 
-		// Token: 0x04007782 RID: 30594
-		private static readonly FieldCodec<int> _repeated_unlockChapterNodeIds_codec = FieldCodec.ForInt32(50U);
+		// Token: 0x040077AC RID: 30636
+		private static readonly FieldCodec<int> _repeated_unlockChapterNodeIds_codec = FieldCodec.ForInt32(82U);
 
-		// Token: 0x04007783 RID: 30595
+		// Token: 0x040077AD RID: 30637
 		private readonly RepeatedField<int> unlockChapterNodeIds_ = new RepeatedField<int>();
 	}
 }

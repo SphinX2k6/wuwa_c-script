@@ -9,14 +9,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.Spindrift
 {
-	// Token: 0x02003BED RID: 15341
+	// Token: 0x020030DA RID: 12506
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/PCG/Spindrift/BP_FX_Sprindrift_2.BP_FX_Sprindrift_2_C")]
 	[UnrealStructLayout(1584, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1584)]
 	public class BP_FX_Sprindrift_2_C : AKuroEditorTickActor, IUnrealUObject, IUnrealObject, IBPI_EffectInterface_C, IUnrealBlueprintInterface, IUnrealInterface
 	{
-		// Token: 0x06022D59 RID: 142681 RVA: 0x0091382B File Offset: 0x00911A2B
+		// Token: 0x0601E2D5 RID: 123605 RVA: 0x0090D0C3 File Offset: 0x0090B2C3
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_FX_Sprindrift_2_C._ClassPtr == IntPtr.Zero)
@@ -26,275 +26,274 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.Spindrift
 			return BP_FX_Sprindrift_2_C._ClassPtr;
 		}
 
-		// Token: 0x06022D5A RID: 142682 RVA: 0x00913850 File Offset: 0x00911A50
+		// Token: 0x0601E2D6 RID: 123606 RVA: 0x0090D0E8 File Offset: 0x0090B2E8
 		public BP_FX_Sprindrift_2_C() : this(BuiltinUtils.AllocNativeUObject(BP_FX_Sprindrift_2_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06022D5B RID: 142683 RVA: 0x00913878 File Offset: 0x00911A78
+		// Token: 0x0601E2D7 RID: 123607 RVA: 0x0090D110 File Offset: 0x0090B310
 		[NullableContext(1)]
 		public BP_FX_Sprindrift_2_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_FX_Sprindrift_2_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17003E0E RID: 15886
-		// (get) Token: 0x06022D5C RID: 142684 RVA: 0x009138AB File Offset: 0x00911AAB
-		// (set) Token: 0x06022D5D RID: 142685 RVA: 0x009138BF File Offset: 0x00911ABF
+		// Token: 0x17003256 RID: 12886
+		// (get) Token: 0x0601E2D8 RID: 123608 RVA: 0x0090D143 File Offset: 0x0090B343
+		// (set) Token: 0x0601E2D9 RID: 123609 RVA: 0x0090D157 File Offset: 0x0090B357
 		public unsafe UArrowComponent Arrow
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UArrowComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UArrowComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_Arrow);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_Arrow, value);
 			}
 		}
 
-		// Token: 0x17003E0F RID: 15887
-		// (get) Token: 0x06022D5E RID: 142686 RVA: 0x009138D4 File Offset: 0x00911AD4
-		// (set) Token: 0x06022D5F RID: 142687 RVA: 0x009138E8 File Offset: 0x00911AE8
+		// Token: 0x17003257 RID: 12887
+		// (get) Token: 0x0601E2DA RID: 123610 RVA: 0x0090D16C File Offset: 0x0090B36C
+		// (set) Token: 0x0601E2DB RID: 123611 RVA: 0x0090D180 File Offset: 0x0090B380
 		public unsafe UNiagaraComponent Niagara
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_Niagara);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_Niagara, value);
 			}
 		}
 
-		// Token: 0x17003E10 RID: 15888
-		// (get) Token: 0x06022D60 RID: 142688 RVA: 0x009138FD File Offset: 0x00911AFD
-		// (set) Token: 0x06022D61 RID: 142689 RVA: 0x00913911 File Offset: 0x00911B11
+		// Token: 0x17003258 RID: 12888
+		// (get) Token: 0x0601E2DC RID: 123612 RVA: 0x0090D195 File Offset: 0x0090B395
+		// (set) Token: 0x0601E2DD RID: 123613 RVA: 0x0090D1A9 File Offset: 0x0090B3A9
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17003E11 RID: 15889
-		// (get) Token: 0x06022D62 RID: 142690 RVA: 0x00913926 File Offset: 0x00911B26
-		// (set) Token: 0x06022D63 RID: 142691 RVA: 0x0091393A File Offset: 0x00911B3A
+		// Token: 0x17003259 RID: 12889
+		// (get) Token: 0x0601E2DE RID: 123614 RVA: 0x0090D1BE File Offset: 0x0090B3BE
+		// (set) Token: 0x0601E2DF RID: 123615 RVA: 0x0090D1D2 File Offset: 0x0090B3D2
 		public unsafe UNiagaraSystem 粒子特效
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraSystem>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_4);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraSystem>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_粒子特效);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_4, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_粒子特效, value);
 			}
 		}
 
-		// Token: 0x17003E12 RID: 15890
-		// (get) Token: 0x06022D64 RID: 142692 RVA: 0x0091394F File Offset: 0x00911B4F
-		// (set) Token: 0x06022D65 RID: 142693 RVA: 0x0091395F File Offset: 0x00911B5F
+		// Token: 0x1700325A RID: 12890
+		// (get) Token: 0x0601E2E0 RID: 123616 RVA: 0x0090D1E7 File Offset: 0x0090B3E7
+		// (set) Token: 0x0601E2E1 RID: 123617 RVA: 0x0090D1F7 File Offset: 0x0090B3F7
 		public unsafe int 全局时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_全局时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_全局时间) = value;
 			}
 		}
 
-		// Token: 0x17003E13 RID: 15891
-		// (get) Token: 0x06022D66 RID: 142694 RVA: 0x00913970 File Offset: 0x00911B70
-		// (set) Token: 0x06022D67 RID: 142695 RVA: 0x00913980 File Offset: 0x00911B80
+		// Token: 0x1700325B RID: 12891
+		// (get) Token: 0x0601E2E2 RID: 123618 RVA: 0x0090D208 File Offset: 0x0090B408
+		// (set) Token: 0x0601E2E3 RID: 123619 RVA: 0x0090D218 File Offset: 0x0090B418
 		public unsafe int 浪花数量
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_浪花数量);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_浪花数量) = value;
 			}
 		}
 
-		// Token: 0x17003E14 RID: 15892
-		// (get) Token: 0x06022D68 RID: 142696 RVA: 0x00913991 File Offset: 0x00911B91
-		// (set) Token: 0x06022D69 RID: 142697 RVA: 0x009139A1 File Offset: 0x00911BA1
+		// Token: 0x1700325C RID: 12892
+		// (get) Token: 0x0601E2E4 RID: 123620 RVA: 0x0090D229 File Offset: 0x0090B429
+		// (set) Token: 0x0601E2E5 RID: 123621 RVA: 0x0090D239 File Offset: 0x0090B439
 		public unsafe float 浪花范围
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_浪花范围);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_浪花范围) = value;
 			}
 		}
 
-		// Token: 0x17003E15 RID: 15893
-		// (get) Token: 0x06022D6A RID: 142698 RVA: 0x009139B2 File Offset: 0x00911BB2
-		// (set) Token: 0x06022D6B RID: 142699 RVA: 0x009139C6 File Offset: 0x00911BC6
+		// Token: 0x1700325D RID: 12893
+		// (get) Token: 0x0601E2E6 RID: 123622 RVA: 0x0090D24A File Offset: 0x0090B44A
+		// (set) Token: 0x0601E2E7 RID: 123623 RVA: 0x0090D25E File Offset: 0x0090B45E
 		public unsafe FLinearColor 浪花颜色_白天_
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_浪花颜色_白天_);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_浪花颜色_白天_) = value;
 			}
 		}
 
-		// Token: 0x17003E16 RID: 15894
-		// (get) Token: 0x06022D6C RID: 142700 RVA: 0x009139DB File Offset: 0x00911BDB
-		// (set) Token: 0x06022D6D RID: 142701 RVA: 0x009139EF File Offset: 0x00911BEF
+		// Token: 0x1700325E RID: 12894
+		// (get) Token: 0x0601E2E8 RID: 123624 RVA: 0x0090D273 File Offset: 0x0090B473
+		// (set) Token: 0x0601E2E9 RID: 123625 RVA: 0x0090D287 File Offset: 0x0090B487
 		public unsafe FLinearColor 浪花颜色_夜晚_
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_浪花颜色_夜晚_);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_浪花颜色_夜晚_) = value;
 			}
 		}
 
-		// Token: 0x17003E17 RID: 15895
-		// (get) Token: 0x06022D6E RID: 142702 RVA: 0x00913A04 File Offset: 0x00911C04
-		// (set) Token: 0x06022D6F RID: 142703 RVA: 0x00913A14 File Offset: 0x00911C14
+		// Token: 0x1700325F RID: 12895
+		// (get) Token: 0x0601E2EA RID: 123626 RVA: 0x0090D29C File Offset: 0x0090B49C
+		// (set) Token: 0x0601E2EB RID: 123627 RVA: 0x0090D2AC File Offset: 0x0090B4AC
 		public unsafe float 浪花周期
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_浪花周期);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_浪花周期) = value;
 			}
 		}
 
-		// Token: 0x17003E18 RID: 15896
-		// (get) Token: 0x06022D70 RID: 142704 RVA: 0x00913A25 File Offset: 0x00911C25
-		// (set) Token: 0x06022D71 RID: 142705 RVA: 0x00913A39 File Offset: 0x00911C39
+		// Token: 0x17003260 RID: 12896
+		// (get) Token: 0x0601E2EC RID: 123628 RVA: 0x0090D2BD File Offset: 0x0090B4BD
+		// (set) Token: 0x0601E2ED RID: 123629 RVA: 0x0090D2D1 File Offset: 0x0090B4D1
 		public unsafe FVector2D 周期偏移_白天_夜晚_
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_周期偏移_白天_夜晚_);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_周期偏移_白天_夜晚_) = value;
 			}
 		}
 
-		// Token: 0x17003E19 RID: 15897
-		// (get) Token: 0x06022D72 RID: 142706 RVA: 0x00913A4E File Offset: 0x00911C4E
-		// (set) Token: 0x06022D73 RID: 142707 RVA: 0x00913A5E File Offset: 0x00911C5E
+		// Token: 0x17003261 RID: 12897
+		// (get) Token: 0x0601E2EE RID: 123630 RVA: 0x0090D2E6 File Offset: 0x0090B4E6
+		// (set) Token: 0x0601E2EF RID: 123631 RVA: 0x0090D2F6 File Offset: 0x0090B4F6
 		public unsafe bool Activate
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_12) != 0;
+				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_Activate) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_12) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_Activate) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17003E1A RID: 15898
-		// (get) Token: 0x06022D74 RID: 142708 RVA: 0x00913A6F File Offset: 0x00911C6F
-		// (set) Token: 0x06022D75 RID: 142709 RVA: 0x00913A7F File Offset: 0x00911C7F
+		// Token: 0x17003262 RID: 12898
+		// (get) Token: 0x0601E2F0 RID: 123632 RVA: 0x0090D307 File Offset: 0x0090B507
+		// (set) Token: 0x0601E2F1 RID: 123633 RVA: 0x0090D317 File Offset: 0x0090B517
 		public unsafe bool IsDayTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_13) != 0;
+				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_IsDayTime) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_13) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_IsDayTime) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17003E1B RID: 15899
-		// (get) Token: 0x06022D76 RID: 142710 RVA: 0x00913A90 File Offset: 0x00911C90
-		// (set) Token: 0x06022D77 RID: 142711 RVA: 0x00913AA4 File Offset: 0x00911CA4
+		// Token: 0x17003263 RID: 12899
+		// (get) Token: 0x0601E2F2 RID: 123634 RVA: 0x0090D328 File Offset: 0x0090B528
+		// (set) Token: 0x0601E2F3 RID: 123635 RVA: 0x0090D33C File Offset: 0x0090B53C
 		public unsafe UStaticMeshComponent CaptureMeshComponent
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_14);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_CaptureMeshComponent);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_14, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_CaptureMeshComponent, value);
 			}
 		}
 
-		// Token: 0x17003E1C RID: 15900
-		// (get) Token: 0x06022D78 RID: 142712 RVA: 0x00913AB9 File Offset: 0x00911CB9
-		// (set) Token: 0x06022D79 RID: 142713 RVA: 0x00913ACD File Offset: 0x00911CCD
+		// Token: 0x17003264 RID: 12900
+		// (get) Token: 0x0601E2F4 RID: 123636 RVA: 0x0090D351 File Offset: 0x0090B551
+		// (set) Token: 0x0601E2F5 RID: 123637 RVA: 0x0090D365 File Offset: 0x0090B565
 		public unsafe UTextureRenderTarget2D RTCaptureWaveLine
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UTextureRenderTarget2D>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_15);
+				return BuiltinUtils.ObjectPropertyGetter<UTextureRenderTarget2D>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_RTCaptureWaveLine);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_15, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_RTCaptureWaveLine, value);
 			}
 		}
 
-		// Token: 0x17003E1D RID: 15901
-		// (get) Token: 0x06022D7A RID: 142714 RVA: 0x00913AE2 File Offset: 0x00911CE2
-		// (set) Token: 0x06022D7B RID: 142715 RVA: 0x00913AF2 File Offset: 0x00911CF2
+		// Token: 0x17003265 RID: 12901
+		// (get) Token: 0x0601E2F6 RID: 123638 RVA: 0x0090D37A File Offset: 0x0090B57A
+		// (set) Token: 0x0601E2F7 RID: 123639 RVA: 0x0090D38A File Offset: 0x0090B58A
 		public unsafe float ActivateTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_ActivateTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)BP_FX_Sprindrift_2_C.__PropertyOffset_ActivateTime) = value;
 			}
 		}
 
-		// Token: 0x17003E1E RID: 15902
-		// (get) Token: 0x06022D7C RID: 142716 RVA: 0x00913B03 File Offset: 0x00911D03
-		// (set) Token: 0x06022D7D RID: 142717 RVA: 0x00913B17 File Offset: 0x00911D17
+		// Token: 0x17003266 RID: 12902
+		// (get) Token: 0x0601E2F8 RID: 123640 RVA: 0x0090D39B File Offset: 0x0090B59B
+		// (set) Token: 0x0601E2F9 RID: 123641 RVA: 0x0090D3AF File Offset: 0x0090B5AF
 		public unsafe USceneCaptureComponent2D SceneCaptureComponent
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneCaptureComponent2D>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_17);
+				return BuiltinUtils.ObjectPropertyGetter<USceneCaptureComponent2D>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_SceneCaptureComponent);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_17, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FX_Sprindrift_2_C.__PropertyOffset_SceneCaptureComponent, value);
 			}
 		}
 
-		// Token: 0x06022D7E RID: 142718 RVA: 0x00913B2C File Offset: 0x00911D2C
+		// Token: 0x0601E2FA RID: 123642 RVA: 0x0090D3C4 File Offset: 0x0090B5C4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetHandle(ref int Handle)
 		{
 			BP_FX_Sprindrift_2_C.__GetHandle_FunctionParams* ptr = stackalloc BP_FX_Sprindrift_2_C.__GetHandle_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_FX_Sprindrift_2_C.__GetHandle_FunctionParams) & -16L;
@@ -304,17 +303,15 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.Spindrift
 			Handle = ptr->Handle;
 		}
 
-		// Token: 0x06022D7F RID: 142719 RVA: 0x00913B7B File Offset: 0x00911D7B
+		// Token: 0x0601E2FB RID: 123643 RVA: 0x0090D413 File Offset: 0x0090B613
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void CaptureWaveLine()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__CaptureWaveLine_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06022D80 RID: 142720 RVA: 0x00913B90 File Offset: 0x00911D90
+		// Token: 0x0601E2FC RID: 123644 RVA: 0x0090D428 File Offset: 0x0090B628
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void DayAndNight(bool IsDayTime)
 		{
 			BP_FX_Sprindrift_2_C.__DayAndNight_FunctionParams* ptr = stackalloc BP_FX_Sprindrift_2_C.__DayAndNight_FunctionParams[(UIntPtr)247] + 15L / (long)sizeof(BP_FX_Sprindrift_2_C.__DayAndNight_FunctionParams) & -16L;
@@ -323,25 +320,22 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.Spindrift
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__DayAndNight_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06022D81 RID: 142721 RVA: 0x00913BD9 File Offset: 0x00911DD9
+		// Token: 0x0601E2FD RID: 123645 RVA: 0x0090D471 File Offset: 0x0090B671
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06022D82 RID: 142722 RVA: 0x00913BED File Offset: 0x00911DED
+		// Token: 0x0601E2FE RID: 123646 RVA: 0x0090D485 File Offset: 0x0090B685
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06022D83 RID: 142723 RVA: 0x00913C04 File Offset: 0x00911E04
+		// Token: 0x0601E2FF RID: 123647 RVA: 0x0090D49C File Offset: 0x0090B69C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetHandle(int Handle)
 		{
 			BP_FX_Sprindrift_2_C.__SetHandle_FunctionParams* ptr = stackalloc BP_FX_Sprindrift_2_C.__SetHandle_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_FX_Sprindrift_2_C.__SetHandle_FunctionParams) & -16L;
@@ -350,33 +344,29 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.Spindrift
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__SetHandle_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06022D84 RID: 142724 RVA: 0x00913C4A File Offset: 0x00911E4A
+		// Token: 0x0601E300 RID: 123648 RVA: 0x0090D4E2 File Offset: 0x0090B6E2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void RemoveHandle()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__RemoveHandle_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06022D85 RID: 142725 RVA: 0x00913C5E File Offset: 0x00911E5E
+		// Token: 0x0601E301 RID: 123649 RVA: 0x0090D4F6 File Offset: 0x0090B6F6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06022D86 RID: 142726 RVA: 0x00913C72 File Offset: 0x00911E72
+		// Token: 0x0601E302 RID: 123650 RVA: 0x0090D50A File Offset: 0x0090B70A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06022D87 RID: 142727 RVA: 0x00913C88 File Offset: 0x00911E88
+		// Token: 0x0601E303 RID: 123651 RVA: 0x0090D520 File Offset: 0x0090B720
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_FX_Sprindrift_2_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_FX_Sprindrift_2_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_FX_Sprindrift_2_C.__ReceiveTick_FunctionParams) & -16L;
@@ -385,20 +375,18 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.Spindrift
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06022D88 RID: 142728 RVA: 0x00913CD0 File Offset: 0x00911ED0
+		// Token: 0x0601E304 RID: 123652 RVA: 0x0090D568 File Offset: 0x0090B768
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_FX_Sprindrift_2_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_FX_Sprindrift_2_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_FX_Sprindrift_2_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_FX_Sprindrift_2_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06022D89 RID: 142729 RVA: 0x00913D18 File Offset: 0x00911F18
+		// Token: 0x0601E305 RID: 123653 RVA: 0x0090D5B0 File Offset: 0x0090B7B0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void EditorTick(float DeltaSeconds)
 		{
 			BP_FX_Sprindrift_2_C.__EditorTick_FunctionParams* ptr = stackalloc BP_FX_Sprindrift_2_C.__EditorTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_FX_Sprindrift_2_C.__EditorTick_FunctionParams) & -16L;
@@ -407,161 +395,160 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.Spindrift
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__EditorTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06022D8A RID: 142730 RVA: 0x00913D60 File Offset: 0x00911F60
+		// Token: 0x0601E306 RID: 123654 RVA: 0x0090D5F8 File Offset: 0x0090B7F8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void EditorTick_Implementation(float DeltaSeconds)
 		{
 			BP_FX_Sprindrift_2_C.__EditorTick_FunctionParams* ptr = stackalloc BP_FX_Sprindrift_2_C.__EditorTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_FX_Sprindrift_2_C.__EditorTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_FX_Sprindrift_2_C.__EditorTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__EditorTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_FX_Sprindrift_2_C.__EditorTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06022D8B RID: 142731 RVA: 0x00913DA7 File Offset: 0x00911FA7
+		// Token: 0x0601E307 RID: 123655 RVA: 0x0090D63E File Offset: 0x0090B83E
 		protected BP_FX_Sprindrift_2_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011236 RID: 70198
+		// Token: 0x0400FF6E RID: 65390
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/PCG/Spindrift/BP_FX_Sprindrift_2.BP_FX_Sprindrift_2_C";
 
-		// Token: 0x04011237 RID: 70199
+		// Token: 0x0400FF6F RID: 65391
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011238 RID: 70200
+		// Token: 0x0400FF70 RID: 65392
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04011239 RID: 70201
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FF71 RID: 65393
+		internal static int __PropertyOffset_Arrow;
 
-		// Token: 0x0401123A RID: 70202
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400FF72 RID: 65394
+		internal static int __PropertyOffset_Niagara;
 
-		// Token: 0x0401123B RID: 70203
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400FF73 RID: 65395
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x0401123C RID: 70204
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400FF74 RID: 65396
+		internal static int __PropertyOffset_粒子特效;
 
-		// Token: 0x0401123D RID: 70205
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400FF75 RID: 65397
+		internal static int __PropertyOffset_全局时间;
 
-		// Token: 0x0401123E RID: 70206
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400FF76 RID: 65398
+		internal static int __PropertyOffset_浪花数量;
 
-		// Token: 0x0401123F RID: 70207
-		internal static int __PropertyOffset_7;
+		// Token: 0x0400FF77 RID: 65399
+		internal static int __PropertyOffset_浪花范围;
 
-		// Token: 0x04011240 RID: 70208
-		internal static int __PropertyOffset_8;
+		// Token: 0x0400FF78 RID: 65400
+		internal static int __PropertyOffset_浪花颜色_白天_;
 
-		// Token: 0x04011241 RID: 70209
-		internal static int __PropertyOffset_9;
+		// Token: 0x0400FF79 RID: 65401
+		internal static int __PropertyOffset_浪花颜色_夜晚_;
 
-		// Token: 0x04011242 RID: 70210
-		internal static int __PropertyOffset_10;
+		// Token: 0x0400FF7A RID: 65402
+		internal static int __PropertyOffset_浪花周期;
 
-		// Token: 0x04011243 RID: 70211
-		internal static int __PropertyOffset_11;
+		// Token: 0x0400FF7B RID: 65403
+		internal static int __PropertyOffset_周期偏移_白天_夜晚_;
 
-		// Token: 0x04011244 RID: 70212
-		internal static int __PropertyOffset_12;
+		// Token: 0x0400FF7C RID: 65404
+		internal static int __PropertyOffset_Activate;
 
-		// Token: 0x04011245 RID: 70213
-		internal static int __PropertyOffset_13;
+		// Token: 0x0400FF7D RID: 65405
+		internal static int __PropertyOffset_IsDayTime;
 
-		// Token: 0x04011246 RID: 70214
-		internal static int __PropertyOffset_14;
+		// Token: 0x0400FF7E RID: 65406
+		internal static int __PropertyOffset_CaptureMeshComponent;
 
-		// Token: 0x04011247 RID: 70215
-		internal static int __PropertyOffset_15;
+		// Token: 0x0400FF7F RID: 65407
+		internal static int __PropertyOffset_RTCaptureWaveLine;
 
-		// Token: 0x04011248 RID: 70216
-		internal static int __PropertyOffset_16;
+		// Token: 0x0400FF80 RID: 65408
+		internal static int __PropertyOffset_ActivateTime;
 
-		// Token: 0x04011249 RID: 70217
-		internal static int __PropertyOffset_17;
+		// Token: 0x0400FF81 RID: 65409
+		internal static int __PropertyOffset_SceneCaptureComponent;
 
-		// Token: 0x0401124A RID: 70218
+		// Token: 0x0400FF82 RID: 65410
 		private static IntPtr __GetHandle_NativeFunctionPtr;
 
-		// Token: 0x0401124B RID: 70219
+		// Token: 0x0400FF83 RID: 65411
 		private static IntPtr __CaptureWaveLine_NativeFunctionPtr;
 
-		// Token: 0x0401124C RID: 70220
+		// Token: 0x0400FF84 RID: 65412
 		private static IntPtr __DayAndNight_NativeFunctionPtr;
 
-		// Token: 0x0401124D RID: 70221
+		// Token: 0x0400FF85 RID: 65413
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x0401124E RID: 70222
+		// Token: 0x0400FF86 RID: 65414
 		private static IntPtr __SetHandle_NativeFunctionPtr;
 
-		// Token: 0x0401124F RID: 70223
+		// Token: 0x0400FF87 RID: 65415
 		private static IntPtr __RemoveHandle_NativeFunctionPtr;
 
-		// Token: 0x04011250 RID: 70224
+		// Token: 0x0400FF88 RID: 65416
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x04011251 RID: 70225
+		// Token: 0x0400FF89 RID: 65417
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x04011252 RID: 70226
+		// Token: 0x0400FF8A RID: 65418
 		private static IntPtr __EditorTick_NativeFunctionPtr;
 
-		// Token: 0x02009DDB RID: 40411
+		// Token: 0x02008E32 RID: 36402
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetHandle_FunctionParams
 		{
-			// Token: 0x040315DE RID: 202206
+			// Token: 0x0402CA73 RID: 182899
 			[FieldOffset(0)]
 			public int Handle;
 		}
 
-		// Token: 0x02009DDC RID: 40412
+		// Token: 0x02008E33 RID: 36403
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 232)]
 		protected ref struct __DayAndNight_FunctionParams
 		{
-			// Token: 0x040315DF RID: 202207
+			// Token: 0x0402CA74 RID: 182900
 			[FieldOffset(0)]
 			public bool IsDayTime;
 		}
 
-		// Token: 0x02009DDD RID: 40413
+		// Token: 0x02008E34 RID: 36404
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetHandle_FunctionParams
 		{
-			// Token: 0x040315E0 RID: 202208
+			// Token: 0x0402CA75 RID: 182901
 			[FieldOffset(0)]
 			public int Handle;
 		}
 
-		// Token: 0x02009DDE RID: 40414
+		// Token: 0x02008E35 RID: 36405
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x040315E1 RID: 202209
+			// Token: 0x0402CA76 RID: 182902
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x02009DDF RID: 40415
+		// Token: 0x02008E36 RID: 36406
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __EditorTick_FunctionParams
 		{
-			// Token: 0x040315E2 RID: 202210
+			// Token: 0x0402CA77 RID: 182903
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F84 RID: 28548
+	// Token: 0x0200774A RID: 30538
 	public struct ISequenceInteractStage : IFlatbufferObject
 	{
-		// Token: 0x1700D406 RID: 54278
-		// (get) Token: 0x06032702 RID: 206594 RVA: 0x006CED74 File Offset: 0x006CCF74
+		// Token: 0x1700DFD5 RID: 57301
+		// (get) Token: 0x06035952 RID: 219474 RVA: 0x0072E72C File Offset: 0x0072C92C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032703 RID: 206595 RVA: 0x006CED81 File Offset: 0x006CCF81
+		// Token: 0x06035953 RID: 219475 RVA: 0x0072E739 File Offset: 0x0072C939
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032704 RID: 206596 RVA: 0x006CED88 File Offset: 0x006CCF88
+		// Token: 0x06035954 RID: 219476 RVA: 0x0072E740 File Offset: 0x0072C940
 		public static ISequenceInteractStage GetRootAsISequenceInteractStage(ByteBuffer _bb)
 		{
 			return ISequenceInteractStage.GetRootAsISequenceInteractStage(_bb, default(ISequenceInteractStage));
 		}
 
-		// Token: 0x06032705 RID: 206597 RVA: 0x006CEDA4 File Offset: 0x006CCFA4
+		// Token: 0x06035955 RID: 219477 RVA: 0x0072E75C File Offset: 0x0072C95C
 		public static ISequenceInteractStage GetRootAsISequenceInteractStage(ByteBuffer _bb, ISequenceInteractStage obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032706 RID: 206598 RVA: 0x006CEDC1 File Offset: 0x006CCFC1
+		// Token: 0x06035956 RID: 219478 RVA: 0x0072E779 File Offset: 0x0072C979
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032707 RID: 206599 RVA: 0x006CEDD0 File Offset: 0x006CCFD0
+		// Token: 0x06035957 RID: 219479 RVA: 0x0072E788 File Offset: 0x0072C988
 		public ISequenceInteractStage __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x06032708 RID: 206600 RVA: 0x006CEDE0 File Offset: 0x006CCFE0
+		// Token: 0x06035958 RID: 219480 RVA: 0x0072E798 File Offset: 0x0072C998
 		public TInteractEffect EnterStageEffectsType(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return (TInteractEffect)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x1700D407 RID: 54279
-		// (get) Token: 0x06032709 RID: 206601 RVA: 0x006CEE20 File Offset: 0x006CD020
+		// Token: 0x1700DFD6 RID: 57302
+		// (get) Token: 0x06035959 RID: 219481 RVA: 0x0072E7D8 File Offset: 0x0072C9D8
 		public int EnterStageEffectsTypeLength
 		{
 			get
@@ -74,13 +74,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603270A RID: 206602 RVA: 0x006CEE4B File Offset: 0x006CD04B
+		// Token: 0x0603595A RID: 219482 RVA: 0x0072E803 File Offset: 0x0072CA03
 		public Span<TInteractEffect> GetEnterStageEffectsTypeBytes()
 		{
 			return this.__p.__vector_as_span<TInteractEffect>(4, 1);
 		}
 
-		// Token: 0x0603270B RID: 206603 RVA: 0x006CEE5C File Offset: 0x006CD05C
+		// Token: 0x0603595B RID: 219483 RVA: 0x0072E814 File Offset: 0x0072CA14
 		public TInteractEffect[] GetEnterStageEffectsTypeArray()
 		{
 			int num = this.__p.__offset(4);
@@ -98,7 +98,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return array;
 		}
 
-		// Token: 0x0603270C RID: 206604 RVA: 0x006CEEC8 File Offset: 0x006CD0C8
+		// Token: 0x0603595C RID: 219484 RVA: 0x0072E880 File Offset: 0x0072CA80
 		public TTable? EnterStageEffects<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -109,8 +109,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x1700D408 RID: 54280
-		// (get) Token: 0x0603270D RID: 206605 RVA: 0x006CEF10 File Offset: 0x006CD110
+		// Token: 0x1700DFD7 RID: 57303
+		// (get) Token: 0x0603595D RID: 219485 RVA: 0x0072E8C8 File Offset: 0x0072CAC8
 		public int EnterStageEffectsLength
 		{
 			get
@@ -124,7 +124,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603270E RID: 206606 RVA: 0x006CEF3C File Offset: 0x006CD13C
+		// Token: 0x0603595E RID: 219486 RVA: 0x0072E8F4 File Offset: 0x0072CAF4
 		public IInteractPoint? InteractPoints(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -135,8 +135,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IInteractPoint?(default(IInteractPoint).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700D409 RID: 54281
-		// (get) Token: 0x0603270F RID: 206607 RVA: 0x006CEF9C File Offset: 0x006CD19C
+		// Token: 0x1700DFD8 RID: 57304
+		// (get) Token: 0x0603595F RID: 219487 RVA: 0x0072E954 File Offset: 0x0072CB54
 		public int InteractPointsLength
 		{
 			get
@@ -150,8 +150,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D40A RID: 54282
-		// (get) Token: 0x06032710 RID: 206608 RVA: 0x006CEFC8 File Offset: 0x006CD1C8
+		// Token: 0x1700DFD9 RID: 57305
+		// (get) Token: 0x06035960 RID: 219488 RVA: 0x0072E980 File Offset: 0x0072CB80
 		public string UiTipText
 		{
 			get
@@ -165,20 +165,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032711 RID: 206609 RVA: 0x006CF000 File Offset: 0x006CD200
+		// Token: 0x06035961 RID: 219489 RVA: 0x0072E9B8 File Offset: 0x0072CBB8
 		public Span<byte> GetUiTipTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06032712 RID: 206610 RVA: 0x006CF010 File Offset: 0x006CD210
+		// Token: 0x06035962 RID: 219490 RVA: 0x0072E9C8 File Offset: 0x0072CBC8
 		public byte[] GetUiTipTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x1700D40B RID: 54283
-		// (get) Token: 0x06032713 RID: 206611 RVA: 0x006CF020 File Offset: 0x006CD220
+		// Token: 0x1700DFDA RID: 57306
+		// (get) Token: 0x06035963 RID: 219491 RVA: 0x0072E9D8 File Offset: 0x0072CBD8
 		public bool IsResetAfterStageEnd
 		{
 			get
@@ -188,8 +188,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D40C RID: 54284
-		// (get) Token: 0x06032714 RID: 206612 RVA: 0x006CF060 File Offset: 0x006CD260
+		// Token: 0x1700DFDB RID: 57307
+		// (get) Token: 0x06035964 RID: 219492 RVA: 0x0072EA18 File Offset: 0x0072CC18
 		public byte NullMask
 		{
 			get
@@ -203,7 +203,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032715 RID: 206613 RVA: 0x006CF09D File Offset: 0x006CD29D
+		// Token: 0x06035965 RID: 219493 RVA: 0x0072EA55 File Offset: 0x0072CC55
 		public static Offset<ISequenceInteractStage> CreateISequenceInteractStage(FlatBufferBuilder builder, VectorOffset EnterStageEffects_typeOffset = default(VectorOffset), VectorOffset EnterStageEffectsOffset = default(VectorOffset), VectorOffset InteractPointsOffset = default(VectorOffset), StringOffset UiTipTextOffset = default(StringOffset), bool IsResetAfterStageEnd = false, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -216,19 +216,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISequenceInteractStage.EndISequenceInteractStage(builder);
 		}
 
-		// Token: 0x06032716 RID: 206614 RVA: 0x006CF0D9 File Offset: 0x006CD2D9
+		// Token: 0x06035966 RID: 219494 RVA: 0x0072EA91 File Offset: 0x0072CC91
 		public static void StartISequenceInteractStage(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06032717 RID: 206615 RVA: 0x006CF0E2 File Offset: 0x006CD2E2
+		// Token: 0x06035967 RID: 219495 RVA: 0x0072EA9A File Offset: 0x0072CC9A
 		public static void AddEnterStageEffectsType(FlatBufferBuilder builder, VectorOffset enterStageEffectsTypeOffset)
 		{
 			builder.AddOffset(0, enterStageEffectsTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06032718 RID: 206616 RVA: 0x006CF0F4 File Offset: 0x006CD2F4
+		// Token: 0x06035968 RID: 219496 RVA: 0x0072EAAC File Offset: 0x0072CCAC
 		public static VectorOffset CreateEnterStageEffectsTypeVector(FlatBufferBuilder builder, TInteractEffect[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -239,7 +239,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032719 RID: 206617 RVA: 0x006CF12B File Offset: 0x006CD32B
+		// Token: 0x06035969 RID: 219497 RVA: 0x0072EAE3 File Offset: 0x0072CCE3
 		public static VectorOffset CreateEnterStageEffectsTypeVectorBlock(FlatBufferBuilder builder, TInteractEffect[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -247,7 +247,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603271A RID: 206618 RVA: 0x006CF145 File Offset: 0x006CD345
+		// Token: 0x0603596A RID: 219498 RVA: 0x0072EAFD File Offset: 0x0072CCFD
 		public static VectorOffset CreateEnterStageEffectsTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TInteractEffect> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -255,7 +255,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603271B RID: 206619 RVA: 0x006CF163 File Offset: 0x006CD363
+		// Token: 0x0603596B RID: 219499 RVA: 0x0072EB1B File Offset: 0x0072CD1B
 		public static VectorOffset CreateEnterStageEffectsTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -263,19 +263,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603271C RID: 206620 RVA: 0x006CF17C File Offset: 0x006CD37C
+		// Token: 0x0603596C RID: 219500 RVA: 0x0072EB34 File Offset: 0x0072CD34
 		public static void StartEnterStageEffectsTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0603271D RID: 206621 RVA: 0x006CF187 File Offset: 0x006CD387
+		// Token: 0x0603596D RID: 219501 RVA: 0x0072EB3F File Offset: 0x0072CD3F
 		public static void AddEnterStageEffects(FlatBufferBuilder builder, VectorOffset enterStageEffectsOffset)
 		{
 			builder.AddOffset(1, enterStageEffectsOffset.Value, 0);
 		}
 
-		// Token: 0x0603271E RID: 206622 RVA: 0x006CF198 File Offset: 0x006CD398
+		// Token: 0x0603596E RID: 219502 RVA: 0x0072EB50 File Offset: 0x0072CD50
 		public static VectorOffset CreateEnterStageEffectsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -286,7 +286,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603271F RID: 206623 RVA: 0x006CF1CF File Offset: 0x006CD3CF
+		// Token: 0x0603596F RID: 219503 RVA: 0x0072EB87 File Offset: 0x0072CD87
 		public static VectorOffset CreateEnterStageEffectsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -294,7 +294,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032720 RID: 206624 RVA: 0x006CF1E9 File Offset: 0x006CD3E9
+		// Token: 0x06035970 RID: 219504 RVA: 0x0072EBA1 File Offset: 0x0072CDA1
 		public static VectorOffset CreateEnterStageEffectsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -302,7 +302,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032721 RID: 206625 RVA: 0x006CF207 File Offset: 0x006CD407
+		// Token: 0x06035971 RID: 219505 RVA: 0x0072EBBF File Offset: 0x0072CDBF
 		public static VectorOffset CreateEnterStageEffectsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -310,19 +310,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032722 RID: 206626 RVA: 0x006CF220 File Offset: 0x006CD420
+		// Token: 0x06035972 RID: 219506 RVA: 0x0072EBD8 File Offset: 0x0072CDD8
 		public static void StartEnterStageEffectsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06032723 RID: 206627 RVA: 0x006CF22B File Offset: 0x006CD42B
+		// Token: 0x06035973 RID: 219507 RVA: 0x0072EBE3 File Offset: 0x0072CDE3
 		public static void AddInteractPoints(FlatBufferBuilder builder, VectorOffset interactPointsOffset)
 		{
 			builder.AddOffset(2, interactPointsOffset.Value, 0);
 		}
 
-		// Token: 0x06032724 RID: 206628 RVA: 0x006CF23C File Offset: 0x006CD43C
+		// Token: 0x06035974 RID: 219508 RVA: 0x0072EBF4 File Offset: 0x0072CDF4
 		public static VectorOffset CreateInteractPointsVector(FlatBufferBuilder builder, Offset<IInteractPoint>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -333,7 +333,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032725 RID: 206629 RVA: 0x006CF27C File Offset: 0x006CD47C
+		// Token: 0x06035975 RID: 219509 RVA: 0x0072EC34 File Offset: 0x0072CE34
 		public static VectorOffset CreateInteractPointsVectorBlock(FlatBufferBuilder builder, Offset<IInteractPoint>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -341,7 +341,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032726 RID: 206630 RVA: 0x006CF296 File Offset: 0x006CD496
+		// Token: 0x06035976 RID: 219510 RVA: 0x0072EC4E File Offset: 0x0072CE4E
 		public static VectorOffset CreateInteractPointsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IInteractPoint>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -349,7 +349,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032727 RID: 206631 RVA: 0x006CF2B4 File Offset: 0x006CD4B4
+		// Token: 0x06035977 RID: 219511 RVA: 0x0072EC6C File Offset: 0x0072CE6C
 		public static VectorOffset CreateInteractPointsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -357,37 +357,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032728 RID: 206632 RVA: 0x006CF2CD File Offset: 0x006CD4CD
+		// Token: 0x06035978 RID: 219512 RVA: 0x0072EC85 File Offset: 0x0072CE85
 		public static void StartInteractPointsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06032729 RID: 206633 RVA: 0x006CF2D8 File Offset: 0x006CD4D8
+		// Token: 0x06035979 RID: 219513 RVA: 0x0072EC90 File Offset: 0x0072CE90
 		public static void AddUiTipText(FlatBufferBuilder builder, StringOffset uiTipTextOffset)
 		{
 			builder.AddOffset(3, uiTipTextOffset.Value, 0);
 		}
 
-		// Token: 0x0603272A RID: 206634 RVA: 0x006CF2E8 File Offset: 0x006CD4E8
+		// Token: 0x0603597A RID: 219514 RVA: 0x0072ECA0 File Offset: 0x0072CEA0
 		public static void AddIsResetAfterStageEnd(FlatBufferBuilder builder, bool isResetAfterStageEnd)
 		{
 			builder.AddBool(4, isResetAfterStageEnd, false);
 		}
 
-		// Token: 0x0603272B RID: 206635 RVA: 0x006CF2F3 File Offset: 0x006CD4F3
+		// Token: 0x0603597B RID: 219515 RVA: 0x0072ECAB File Offset: 0x0072CEAB
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x0603272C RID: 206636 RVA: 0x006CF2FE File Offset: 0x006CD4FE
+		// Token: 0x0603597C RID: 219516 RVA: 0x0072ECB6 File Offset: 0x0072CEB6
 		public static Offset<ISequenceInteractStage> EndISequenceInteractStage(FlatBufferBuilder builder)
 		{
 			return new Offset<ISequenceInteractStage>(builder.EndTable());
 		}
 
-		// Token: 0x0603272D RID: 206637 RVA: 0x006CF30C File Offset: 0x006CD50C
+		// Token: 0x0603597D RID: 219517 RVA: 0x0072ECC4 File Offset: 0x0072CEC4
 		public ISequenceInteractStageT UnPack()
 		{
 			ISequenceInteractStageT sequenceInteractStageT = new ISequenceInteractStageT();
@@ -395,7 +395,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return sequenceInteractStageT;
 		}
 
-		// Token: 0x0603272E RID: 206638 RVA: 0x006CF328 File Offset: 0x006CD528
+		// Token: 0x0603597E RID: 219518 RVA: 0x0072ECE0 File Offset: 0x0072CEE0
 		public void UnPackTo(ISequenceInteractStageT _o)
 		{
 			_o.EnterStageEffects = new List<TInteractEffectUnion>();
@@ -430,7 +430,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0603272F RID: 206639 RVA: 0x006CF4F4 File Offset: 0x006CD6F4
+		// Token: 0x0603597F RID: 219519 RVA: 0x0072EEAC File Offset: 0x0072D0AC
 		public static Offset<ISequenceInteractStage> Pack(FlatBufferBuilder builder, ISequenceInteractStageT _o)
 		{
 			if (_o == null)
@@ -471,7 +471,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISequenceInteractStage.CreateISequenceInteractStage(builder, enterStageEffects_typeOffset, enterStageEffectsOffset, interactPointsOffset, uiTipTextOffset, _o.IsResetAfterStageEnd, _o.NullMask);
 		}
 
-		// Token: 0x0401197E RID: 72062
+		// Token: 0x04012960 RID: 76128
 		private Table __p;
 	}
 }

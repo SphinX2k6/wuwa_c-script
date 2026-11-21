@@ -8,25 +8,25 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02001A91 RID: 6801
+// Token: 0x02000F50 RID: 3920
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ExploreLevelController : UiControllerBase
 {
-	// Token: 0x0600C8BF RID: 51391 RVA: 0x002DC8A4 File Offset: 0x002DAAA4
+	// Token: 0x06009CD0 RID: 40144 RVA: 0x002E79D8 File Offset: 0x002E5BD8
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.ExploreLevelNotify, new Action<IMessage, Net.CallbackStatus>(this.ExploreLevelNotify));
 	}
 
-	// Token: 0x0600C8C0 RID: 51392 RVA: 0x002DC8C2 File Offset: 0x002DAAC2
+	// Token: 0x06009CD1 RID: 40145 RVA: 0x002E79F6 File Offset: 0x002E5BF6
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.ExploreLevelNotify);
 	}
 
-	// Token: 0x0600C8C1 RID: 51393 RVA: 0x002DC8D4 File Offset: 0x002DAAD4
+	// Token: 0x06009CD2 RID: 40146 RVA: 0x002E7A08 File Offset: 0x002E5C08
 	[NullableContext(2)]
 	private void ExploreLevelNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -45,7 +45,7 @@ public class ExploreLevelController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnExploreLevelNotify);
 	}
 
-	// Token: 0x0600C8C2 RID: 51394 RVA: 0x002DC978 File Offset: 0x002DAB78
+	// Token: 0x06009CD3 RID: 40147 RVA: 0x002E7AAC File Offset: 0x002E5CAC
 	public void MultiExploreScoreRewardRequest(Dictionary<int, int> areaIdToProgress)
 	{
 		MulExploreScoreRewardRequest mulExploreScoreRewardRequest = MulExploreScoreRewardRequest.Create();
@@ -62,7 +62,7 @@ public class ExploreLevelController : UiControllerBase
 		Net.Instance.Call(ERequestMessageId.MulExploreScoreRewardRequest, mulExploreScoreRewardRequest, new Action<IMessage, Net.CallbackStatus>(this.MultiExploreScoreRewardResponse), 0);
 	}
 
-	// Token: 0x0600C8C3 RID: 51395 RVA: 0x002DCA28 File Offset: 0x002DAC28
+	// Token: 0x06009CD4 RID: 40148 RVA: 0x002E7B5C File Offset: 0x002E5D5C
 	[NullableContext(2)]
 	private void MultiExploreScoreRewardResponse(IMessage msg, Net.CallbackStatus _)
 	{
@@ -80,7 +80,7 @@ public class ExploreLevelController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnExploreScoreRewardResponse);
 	}
 
-	// Token: 0x0600C8C4 RID: 51396 RVA: 0x002DCA80 File Offset: 0x002DAC80
+	// Token: 0x06009CD5 RID: 40149 RVA: 0x002E7BB4 File Offset: 0x002E5DB4
 	[NullableContext(2)]
 	public void CountryExploreScoreInfoRequest(int countryId, Action onResponse = null)
 	{
@@ -98,7 +98,7 @@ public class ExploreLevelController : UiControllerBase
 		Net.Instance.Call(ERequestMessageId.CountryExploreScoreInfoRequest, countryExploreScoreInfoRequest, new Action<IMessage, Net.CallbackStatus>(CS$<>8__locals1.<CountryExploreScoreInfoRequest>g__CountryExploreScoreInfoResponse|0), 0);
 	}
 
-	// Token: 0x0600C8C5 RID: 51397 RVA: 0x002DCAFC File Offset: 0x002DACFC
+	// Token: 0x06009CD6 RID: 40150 RVA: 0x002E7C30 File Offset: 0x002E5E30
 	public UniTask CountryExploreScoreInfoAsyncRequest(int countryId)
 	{
 		ExploreLevelController.<CountryExploreScoreInfoAsyncRequest>d__6 <CountryExploreScoreInfoAsyncRequest>d__;
@@ -109,8 +109,8 @@ public class ExploreLevelController : UiControllerBase
 		return <CountryExploreScoreInfoAsyncRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x17001075 RID: 4213
-	// (get) Token: 0x0600C8C6 RID: 51398 RVA: 0x002DCB3F File Offset: 0x002DAD3F
+	// Token: 0x1700109A RID: 4250
+	// (get) Token: 0x06009CD7 RID: 40151 RVA: 0x002E7C73 File Offset: 0x002E5E73
 	public static ExploreLevelController Instance
 	{
 		get
@@ -119,7 +119,7 @@ public class ExploreLevelController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C8C7 RID: 51399 RVA: 0x002DCB46 File Offset: 0x002DAD46
+	// Token: 0x06009CD8 RID: 40152 RVA: 0x002E7C7A File Offset: 0x002E5E7A
 	public static ExploreLevelController GetOrCreateInstance()
 	{
 		if (ExploreLevelController._Instance == null)
@@ -129,7 +129,7 @@ public class ExploreLevelController : UiControllerBase
 		return ExploreLevelController._Instance;
 	}
 
-	// Token: 0x0600C8C8 RID: 51400 RVA: 0x002DCB5A File Offset: 0x002DAD5A
+	// Token: 0x06009CD9 RID: 40153 RVA: 0x002E7C8E File Offset: 0x002E5E8E
 	public static bool CreateInstance()
 	{
 		if (ExploreLevelController._Instance != null)
@@ -140,24 +140,24 @@ public class ExploreLevelController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C8C9 RID: 51401 RVA: 0x002DCB70 File Offset: 0x002DAD70
+	// Token: 0x06009CDA RID: 40154 RVA: 0x002E7CA4 File Offset: 0x002E5EA4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C8CA RID: 51402 RVA: 0x002DCB72 File Offset: 0x002DAD72
+	// Token: 0x06009CDB RID: 40155 RVA: 0x002E7CA6 File Offset: 0x002E5EA6
 	public static void ResetStaticDefaultValue()
 	{
 		ExploreLevelController._Instance = null;
 	}
 
-	// Token: 0x0600C8CB RID: 51403 RVA: 0x002DCB7A File Offset: 0x002DAD7A
+	// Token: 0x06009CDC RID: 40156 RVA: 0x002E7CAE File Offset: 0x002E5EAE
 	static ExploreLevelController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ExploreLevelController.CreateStaticDefaultValue), new Action(ExploreLevelController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005C7F RID: 23679
+	// Token: 0x04005D4E RID: 23886
 	[Nullable(2)]
 	private static ExploreLevelController _Instance;
 }

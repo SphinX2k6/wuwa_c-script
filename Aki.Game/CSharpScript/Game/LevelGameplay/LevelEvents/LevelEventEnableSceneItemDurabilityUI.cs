@@ -6,15 +6,15 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B18 RID: 27416
+	// Token: 0x02005C90 RID: 23696
 	public class LevelEventEnableSceneItemDurabilityUI : LevelEventBase
 	{
-		// Token: 0x060440A8 RID: 278696 RVA: 0x010B97D3 File Offset: 0x010B79D3
+		// Token: 0x0603A1FA RID: 238074 RVA: 0x0106305F File Offset: 0x0106125F
 		public LevelEventEnableSceneItemDurabilityUI(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060440A9 RID: 278697 RVA: 0x010B97DC File Offset: 0x010B79DC
+		// Token: 0x0603A1FB RID: 238075 RVA: 0x01063068 File Offset: 0x01061268
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060440AA RID: 278698 RVA: 0x010B98A0 File Offset: 0x010B7AA0
+		// Token: 0x0603A1FC RID: 238076 RVA: 0x0106312C File Offset: 0x0106132C
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(this.PbDataId);
@@ -71,17 +71,17 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060440AB RID: 278699 RVA: 0x010B99A5 File Offset: 0x010B7BA5
+		// Token: 0x0603A1FD RID: 238077 RVA: 0x01063231 File Offset: 0x01061431
 		protected override void OnReset()
 		{
 			this.PbDataId = 0;
 			this.IsVisible = false;
 		}
 
-		// Token: 0x040238E4 RID: 145636
+		// Token: 0x0401EB86 RID: 125830
 		private int PbDataId;
 
-		// Token: 0x040238E5 RID: 145637
+		// Token: 0x0401EB87 RID: 125831
 		private bool IsVisible;
 	}
 }

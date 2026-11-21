@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B51 RID: 19281
+	// Token: 0x02005038 RID: 20536
 	public class ICheckTargetSunSpiritCollectedT
 	{
-		// Token: 0x17008BE2 RID: 35810
-		// (get) Token: 0x0601E5DD RID: 124381 RVA: 0x00441375 File Offset: 0x0043F575
-		// (set) Token: 0x0601E5DE RID: 124382 RVA: 0x0044137D File Offset: 0x0043F57D
+		// Token: 0x170092F2 RID: 37618
+		// (get) Token: 0x0602016B RID: 131435 RVA: 0x00473BC1 File Offset: 0x00471DC1
+		// (set) Token: 0x0602016C RID: 131436 RVA: 0x00473BC9 File Offset: 0x00471DC9
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008BE3 RID: 35811
-		// (get) Token: 0x0601E5DF RID: 124383 RVA: 0x00441386 File Offset: 0x0043F586
-		// (set) Token: 0x0601E5E0 RID: 124384 RVA: 0x0044138E File Offset: 0x0043F58E
+		// Token: 0x170092F3 RID: 37619
+		// (get) Token: 0x0602016D RID: 131437 RVA: 0x00473BD2 File Offset: 0x00471DD2
+		// (set) Token: 0x0602016E RID: 131438 RVA: 0x00473BDA File Offset: 0x00471DDA
 		public int DungeonId { get; set; }
 
-		// Token: 0x17008BE4 RID: 35812
-		// (get) Token: 0x0601E5E1 RID: 124385 RVA: 0x00441397 File Offset: 0x0043F597
-		// (set) Token: 0x0601E5E2 RID: 124386 RVA: 0x0044139F File Offset: 0x0043F59F
+		// Token: 0x170092F4 RID: 37620
+		// (get) Token: 0x0602016F RID: 131439 RVA: 0x00473BE3 File Offset: 0x00471DE3
+		// (set) Token: 0x06020170 RID: 131440 RVA: 0x00473BEB File Offset: 0x00471DEB
 		public int SunSpiritEntityId { get; set; }
 
-		// Token: 0x17008BE5 RID: 35813
-		// (get) Token: 0x0601E5E3 RID: 124387 RVA: 0x004413A8 File Offset: 0x0043F5A8
-		// (set) Token: 0x0601E5E4 RID: 124388 RVA: 0x004413B0 File Offset: 0x0043F5B0
+		// Token: 0x170092F5 RID: 37621
+		// (get) Token: 0x06020171 RID: 131441 RVA: 0x00473BF4 File Offset: 0x00471DF4
+		// (set) Token: 0x06020172 RID: 131442 RVA: 0x00473BFC File Offset: 0x00471DFC
 		public bool IsCollected { get; set; }
 
-		// Token: 0x17008BE6 RID: 35814
-		// (get) Token: 0x0601E5E5 RID: 124389 RVA: 0x004413B9 File Offset: 0x0043F5B9
-		// (set) Token: 0x0601E5E6 RID: 124390 RVA: 0x004413C1 File Offset: 0x0043F5C1
+		// Token: 0x170092F6 RID: 37622
+		// (get) Token: 0x06020173 RID: 131443 RVA: 0x00473C05 File Offset: 0x00471E05
+		// (set) Token: 0x06020174 RID: 131444 RVA: 0x00473C0D File Offset: 0x00471E0D
 		public TOnlinePlayerConditionTargetUnion OnlinePlayerConditionTargetOption { get; set; }
 
-		// Token: 0x0601E5E7 RID: 124391 RVA: 0x004413CA File Offset: 0x0043F5CA
+		// Token: 0x06020175 RID: 131445 RVA: 0x00473C16 File Offset: 0x00471E16
 		public ICheckTargetSunSpiritCollectedT()
 		{
 			this.Type = ECondition.CompareVar;

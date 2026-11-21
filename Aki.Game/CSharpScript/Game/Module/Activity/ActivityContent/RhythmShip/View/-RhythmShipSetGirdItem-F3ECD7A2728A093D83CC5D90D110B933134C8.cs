@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006242 RID: 25154
+	// Token: 0x020051C0 RID: 20928
 	internal enum <RhythmShipSetGirdItem>F3ECD7A2728A093D83CC5D90D110B933134C8DFA0DEF4CCB791135AAFEFD25659__ERhythmShipSetTitle
 	{
-		// Token: 0x040211A8 RID: 135592
+		// Token: 0x0401BAD7 RID: 113367
 		Icon,
-		// Token: 0x040211A9 RID: 135593
+		// Token: 0x0401BAD8 RID: 113368
 		TitleText,
-		// Token: 0x040211AA RID: 135594
+		// Token: 0x0401BAD9 RID: 113369
 		Btn
 	}
 }

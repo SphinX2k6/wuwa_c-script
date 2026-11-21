@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.RoleUi;
 using UnrealEngine;
 
-// Token: 0x0200193D RID: 6461
+// Token: 0x02000DF9 RID: 3577
 public class MediumItemGridTrialRoleRightBottomTag : MediumItemGridComponent
 {
-	// Token: 0x0600BCE4 RID: 48356 RVA: 0x002ABCA4 File Offset: 0x002A9EA4
+	// Token: 0x060090DF RID: 37087 RVA: 0x002B6770 File Offset: 0x002B4970
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -21,14 +21,14 @@ public class MediumItemGridTrialRoleRightBottomTag : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BCE5 RID: 48357 RVA: 0x002ABCEC File Offset: 0x002A9EEC
+	// Token: 0x060090E0 RID: 37088 RVA: 0x002B67B8 File Offset: 0x002B49B8
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_TagRoleTrial";
 	}
 
-	// Token: 0x0600BCE6 RID: 48358 RVA: 0x002ABCF4 File Offset: 0x002A9EF4
+	// Token: 0x060090E1 RID: 37089 RVA: 0x002B67C0 File Offset: 0x002B49C0
 	[NullableContext(2)]
 	protected override void OnRefresh(object obj)
 	{
@@ -54,10 +54,10 @@ public class MediumItemGridTrialRoleRightBottomTag : MediumItemGridComponent
 		this.SetActive(false);
 	}
 
-	// Token: 0x02007EA0 RID: 32416
+	// Token: 0x0200702D RID: 28717
 	private class EChildType
 	{
-		// Token: 0x04029680 RID: 169600
+		// Token: 0x040249B8 RID: 149944
 		public const int IconImg = 0;
 	}
 }

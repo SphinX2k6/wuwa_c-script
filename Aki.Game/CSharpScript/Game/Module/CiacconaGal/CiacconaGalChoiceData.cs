@@ -1,24 +1,23 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BCF RID: 23503
+	// Token: 0x02004BAF RID: 19375
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CiacconaGalChoiceData
 	{
-		// Token: 0x0603B6A4 RID: 243364 RVA: 0x00E2B5DB File Offset: 0x00E297DB
+		// Token: 0x060305F0 RID: 198128 RVA: 0x00D7B8CF File Offset: 0x00D79ACF
 		public CiacconaGalChoiceData(CiacconaGalChoice config)
 		{
 			this.Config = config;
 		}
 
-		// Token: 0x17008D25 RID: 36133
-		// (get) Token: 0x0603B6A5 RID: 243365 RVA: 0x00E2B5F8 File Offset: 0x00E297F8
+		// Token: 0x170060F7 RID: 24823
+		// (get) Token: 0x060305F1 RID: 198129 RVA: 0x00D7B8EC File Offset: 0x00D79AEC
 		public int Id
 		{
 			get
@@ -27,8 +26,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D26 RID: 36134
-		// (get) Token: 0x0603B6A6 RID: 243366 RVA: 0x00E2B614 File Offset: 0x00E29814
+		// Token: 0x170060F8 RID: 24824
+		// (get) Token: 0x060305F2 RID: 198130 RVA: 0x00D7B908 File Offset: 0x00D79B08
 		public string Content
 		{
 			get
@@ -37,8 +36,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D27 RID: 36135
-		// (get) Token: 0x0603B6A7 RID: 243367 RVA: 0x00E2B630 File Offset: 0x00E29830
+		// Token: 0x170060F9 RID: 24825
+		// (get) Token: 0x060305F3 RID: 198131 RVA: 0x00D7B924 File Offset: 0x00D79B24
 		public int RequiredInspiration
 		{
 			get
@@ -47,8 +46,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D28 RID: 36136
-		// (get) Token: 0x0603B6A8 RID: 243368 RVA: 0x00E2B64C File Offset: 0x00E2984C
+		// Token: 0x170060FA RID: 24826
+		// (get) Token: 0x060305F4 RID: 198132 RVA: 0x00D7B940 File Offset: 0x00D79B40
 		public bool NeedInspiration
 		{
 			get
@@ -57,8 +56,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D29 RID: 36137
-		// (get) Token: 0x0603B6A9 RID: 243369 RVA: 0x00E2B66A File Offset: 0x00E2986A
+		// Token: 0x170060FB RID: 24827
+		// (get) Token: 0x060305F5 RID: 198133 RVA: 0x00D7B95E File Offset: 0x00D79B5E
 		public bool IsAvailable
 		{
 			get
@@ -67,8 +66,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D2A RID: 36138
-		// (get) Token: 0x0603B6AA RID: 243370 RVA: 0x00E2B675 File Offset: 0x00E29875
+		// Token: 0x170060FC RID: 24828
+		// (get) Token: 0x060305F6 RID: 198134 RVA: 0x00D7B969 File Offset: 0x00D79B69
 		public ECiacconaGalStepState State
 		{
 			get
@@ -89,8 +88,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D2B RID: 36139
-		// (get) Token: 0x0603B6AB RID: 243371 RVA: 0x00E2B698 File Offset: 0x00E29898
+		// Token: 0x170060FD RID: 24829
+		// (get) Token: 0x060305F7 RID: 198135 RVA: 0x00D7B98C File Offset: 0x00D79B8C
 		public int ToStepId
 		{
 			get
@@ -99,8 +98,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D2C RID: 36140
-		// (get) Token: 0x0603B6AC RID: 243372 RVA: 0x00E2B6B4 File Offset: 0x00E298B4
+		// Token: 0x170060FE RID: 24830
+		// (get) Token: 0x060305F8 RID: 198136 RVA: 0x00D7B9A8 File Offset: 0x00D79BA8
 		public int CorrSubEndingId
 		{
 			get
@@ -109,8 +108,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D2D RID: 36141
-		// (get) Token: 0x0603B6AD RID: 243373 RVA: 0x00E2B6CF File Offset: 0x00E298CF
+		// Token: 0x170060FF RID: 24831
+		// (get) Token: 0x060305F9 RID: 198137 RVA: 0x00D7B9C3 File Offset: 0x00D79BC3
 		private bool HasChosen
 		{
 			get
@@ -119,8 +118,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D2E RID: 36142
-		// (get) Token: 0x0603B6AE RID: 243374 RVA: 0x00E2B6D7 File Offset: 0x00E298D7
+		// Token: 0x17006100 RID: 24832
+		// (get) Token: 0x060305FA RID: 198138 RVA: 0x00D7B9CB File Offset: 0x00D79BCB
 		private bool HasInspired
 		{
 			get
@@ -129,8 +128,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D2F RID: 36143
-		// (get) Token: 0x0603B6AF RID: 243375 RVA: 0x00E2B6E9 File Offset: 0x00E298E9
+		// Token: 0x17006101 RID: 24833
+		// (get) Token: 0x060305FB RID: 198139 RVA: 0x00D7B9DD File Offset: 0x00D79BDD
 		private bool IsUnlocked
 		{
 			get
@@ -139,7 +138,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B6B0 RID: 243376 RVA: 0x00E2B6F4 File Offset: 0x00E298F4
+		// Token: 0x060305FC RID: 198140 RVA: 0x00D7B9E8 File Offset: 0x00D79BE8
 		public void UpdateByServerData(CiacconaChapterPbData chapterData)
 		{
 			foreach (CiacconaChapterChoicePbData ciacconaChapterChoicePbData in chapterData.ChoiceDatas)
@@ -151,19 +150,29 @@ namespace CSharpScript.Game.Module.CiacconaGal
 					break;
 				}
 			}
-			this.HasChosenInternal = chapterData.ResultDatas.Any((CiacconaChapterResultPbData resultData) => resultData.ResultId == this.CorrSubEndingId && resultData.Finish);
+			bool hasChosenInternal = false;
+			for (int i = 0; i < chapterData.ResultDatas.Count; i++)
+			{
+				CiacconaChapterResultPbData ciacconaChapterResultPbData = chapterData.ResultDatas[i];
+				if (ciacconaChapterResultPbData.ResultId == this.CorrSubEndingId && ciacconaChapterResultPbData.Finish)
+				{
+					hasChosenInternal = true;
+					break;
+				}
+			}
+			this.HasChosenInternal = hasChosenInternal;
 		}
 
-		// Token: 0x0401EF6D RID: 126829
+		// Token: 0x04019A1E RID: 104990
 		private bool HasInspiredInternal = true;
 
-		// Token: 0x0401EF6E RID: 126830
+		// Token: 0x04019A1F RID: 104991
 		private bool HasChosenInternal;
 
-		// Token: 0x0401EF6F RID: 126831
+		// Token: 0x04019A20 RID: 104992
 		private bool IsUnlockedInternal = true;
 
-		// Token: 0x0401EF70 RID: 126832
+		// Token: 0x04019A21 RID: 104993
 		private readonly CiacconaGalChoice Config;
 	}
 }

@@ -6,13 +6,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001222 RID: 4642
+// Token: 0x020006D6 RID: 1750
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivitySubViewDangoMonopoly : ActivitySubViewBase
 {
-	// Token: 0x17000A96 RID: 2710
-	// (get) Token: 0x06007D73 RID: 32115 RVA: 0x001A96F7 File Offset: 0x001A78F7
+	// Token: 0x17000AB6 RID: 2742
+	// (get) Token: 0x0600510A RID: 20746 RVA: 0x001B23B7 File Offset: 0x001B05B7
 	protected new ActivityDangoMonopolyData ActivityBaseData
 	{
 		get
@@ -21,7 +21,7 @@ public class ActivitySubViewDangoMonopoly : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007D74 RID: 32116 RVA: 0x001A9704 File Offset: 0x001A7904
+	// Token: 0x0600510B RID: 20747 RVA: 0x001B23C4 File Offset: 0x001B05C4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,13 +41,13 @@ public class ActivitySubViewDangoMonopoly : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06007D75 RID: 32117 RVA: 0x001A97EF File Offset: 0x001A79EF
+	// Token: 0x0600510C RID: 20748 RVA: 0x001B24AF File Offset: 0x001B06AF
 	private void OnBtnDice()
 	{
 		this.ActivityBaseData.OpenViewDiceTask();
 	}
 
-	// Token: 0x06007D76 RID: 32118 RVA: 0x001A97FC File Offset: 0x001A79FC
+	// Token: 0x0600510D RID: 20749 RVA: 0x001B24BC File Offset: 0x001B06BC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewDangoMonopoly.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -58,24 +58,24 @@ public class ActivitySubViewDangoMonopoly : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007D77 RID: 32119 RVA: 0x001A983F File Offset: 0x001A7A3F
+	// Token: 0x0600510E RID: 20750 RVA: 0x001B24FF File Offset: 0x001B06FF
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06007D78 RID: 32120 RVA: 0x001A9841 File Offset: 0x001A7A41
+	// Token: 0x0600510F RID: 20751 RVA: 0x001B2501 File Offset: 0x001B0701
 	protected override void OnAddEventListener()
 	{
 		RedDotController.Instance.BindRedDot(ERedDotName.DangoMonopolyTask, base.GetItem(2), new Action<bool, int>(this.UpdateRedDotActivity), 0);
 	}
 
-	// Token: 0x06007D79 RID: 32121 RVA: 0x001A9866 File Offset: 0x001A7A66
+	// Token: 0x06005110 RID: 20752 RVA: 0x001B2526 File Offset: 0x001B0726
 	protected override void OnRemoveEventListener()
 	{
 		RedDotController.Instance.UnBindRedDot(ERedDotName.DangoMonopolyTask);
 	}
 
-	// Token: 0x06007D7A RID: 32122 RVA: 0x001A9878 File Offset: 0x001A7A78
+	// Token: 0x06005111 RID: 20753 RVA: 0x001B2538 File Offset: 0x001B0738
 	protected override void OnRefreshView()
 	{
 		bool flag = this.ActivityBaseData.IsUnLock();
@@ -109,7 +109,7 @@ public class ActivitySubViewDangoMonopoly : ActivitySubViewBase
 		this.UpdateBoardLockRemainTime();
 	}
 
-	// Token: 0x06007D7B RID: 32123 RVA: 0x001A9959 File Offset: 0x001A7B59
+	// Token: 0x06005112 RID: 20754 RVA: 0x001B2619 File Offset: 0x001B0819
 	private void ClickCommonInfo(ActivityBaseData _)
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -118,7 +118,7 @@ public class ActivitySubViewDangoMonopoly : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06007D7C RID: 32124 RVA: 0x001A9978 File Offset: 0x001A7B78
+	// Token: 0x06005113 RID: 20755 RVA: 0x001B2638 File Offset: 0x001B0838
 	private void UpdateRedDotActivity(bool _1, int _2)
 	{
 		bool exDataRedPointShowState = this.ActivityBaseData.GetExDataRedPointShowState();
@@ -130,13 +130,13 @@ public class ActivitySubViewDangoMonopoly : ActivitySubViewBase
 		commonInfoPanel.SetFunctionRedDotVisible(exDataRedPointShowState);
 	}
 
-	// Token: 0x06007D7D RID: 32125 RVA: 0x001A99A2 File Offset: 0x001A7BA2
+	// Token: 0x06005114 RID: 20756 RVA: 0x001B2662 File Offset: 0x001B0862
 	public bool GetDiceShowState()
 	{
 		return this.ActivityBaseData.IsUnLock() && !this.ActivityBaseData.IsFinishAllRound();
 	}
 
-	// Token: 0x06007D7E RID: 32126 RVA: 0x001A99C4 File Offset: 0x001A7BC4
+	// Token: 0x06005115 RID: 20757 RVA: 0x001B2684 File Offset: 0x001B0884
 	public void UpdateRoundRewardInfo()
 	{
 		if (!this.ActivityBaseData.IsAllGetRoundReward())
@@ -156,7 +156,7 @@ public class ActivitySubViewDangoMonopoly : ActivitySubViewBase
 		activityFunctionalTypeA.SetActivateTextByTextId("DangoMonopoly_title_21", Array.Empty<string>());
 	}
 
-	// Token: 0x06007D7F RID: 32127 RVA: 0x001A9A14 File Offset: 0x001A7C14
+	// Token: 0x06005116 RID: 20758 RVA: 0x001B26D4 File Offset: 0x001B08D4
 	public void UpdateBoardLockRemainTime()
 	{
 		if (!this.ActivityBaseData.IsRunningBoardLock())
@@ -176,35 +176,35 @@ public class ActivitySubViewDangoMonopoly : ActivitySubViewBase
 		activityFunctionalTypeA.SetLockTextByText(this.ActivityBaseData.GetBoardRemainTimeStr());
 	}
 
-	// Token: 0x06007D80 RID: 32128 RVA: 0x001A9A63 File Offset: 0x001A7C63
+	// Token: 0x06005117 RID: 20759 RVA: 0x001B2723 File Offset: 0x001B0923
 	protected override void OnTimer(float _)
 	{
 		this.UpdateBoardLockRemainTime();
 	}
 
-	// Token: 0x04003917 RID: 14615
+	// Token: 0x040039AF RID: 14767
 	[Nullable(2)]
 	protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x02007813 RID: 30739
+	// Token: 0x0200699E RID: 27038
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402792A RID: 162090
+		// Token: 0x04022C5B RID: 142427
 		ItemCommonPanel,
-		// Token: 0x0402792B RID: 162091
+		// Token: 0x04022C5C RID: 142428
 		BtnDice,
-		// Token: 0x0402792C RID: 162092
+		// Token: 0x04022C5D RID: 142429
 		ItemDiceRedDot,
-		// Token: 0x0402792D RID: 162093
+		// Token: 0x04022C5E RID: 142430
 		TxtCurrentRound,
-		// Token: 0x0402792E RID: 162094
+		// Token: 0x04022C5F RID: 142431
 		TxtTotalRound,
-		// Token: 0x0402792F RID: 162095
+		// Token: 0x04022C60 RID: 142432
 		ItemRoundRoot,
-		// Token: 0x04027930 RID: 162096
+		// Token: 0x04022C61 RID: 142433
 		ItemDiceRoot,
-		// Token: 0x04027931 RID: 162097
+		// Token: 0x04022C62 RID: 142434
 		TxtDiceBtnTitle
 	}
 }

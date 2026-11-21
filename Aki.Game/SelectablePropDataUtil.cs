@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x0200195A RID: 6490
+// Token: 0x02000E17 RID: 3607
 [NullableContext(1)]
 [Nullable(0)]
 public class SelectablePropDataUtil : IStaticVariableResetter
 {
-	// Token: 0x0600BDBD RID: 48573 RVA: 0x002AE9EE File Offset: 0x002ACBEE
+	// Token: 0x060091C0 RID: 37312 RVA: 0x002B9832 File Offset: 0x002B7A32
 	static SelectablePropDataUtil()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SelectablePropDataUtil.CreateStaticDefaultValue), new Action(SelectablePropDataUtil.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600BDBE RID: 48574 RVA: 0x002AEA0D File Offset: 0x002ACC0D
+	// Token: 0x060091C1 RID: 37313 RVA: 0x002B9851 File Offset: 0x002B7A51
 	public static void CreateStaticDefaultValue()
 	{
 		SelectablePropDataUtil.TickIntervalTimeInternal = null;
@@ -21,7 +21,7 @@ public class SelectablePropDataUtil : IStaticVariableResetter
 		SelectablePropDataUtil.TickMinTimeInternal = null;
 	}
 
-	// Token: 0x0600BDBF RID: 48575 RVA: 0x002AEA30 File Offset: 0x002ACC30
+	// Token: 0x060091C2 RID: 37314 RVA: 0x002B9874 File Offset: 0x002B7A74
 	public static void ResetStaticDefaultValue()
 	{
 		SelectablePropDataUtil.TickIntervalTimeInternal = null;
@@ -29,8 +29,8 @@ public class SelectablePropDataUtil : IStaticVariableResetter
 		SelectablePropDataUtil.TickMinTimeInternal = null;
 	}
 
-	// Token: 0x17000FD6 RID: 4054
-	// (get) Token: 0x0600BDC0 RID: 48576 RVA: 0x002AEA53 File Offset: 0x002ACC53
+	// Token: 0x17000FFA RID: 4090
+	// (get) Token: 0x060091C3 RID: 37315 RVA: 0x002B9897 File Offset: 0x002B7A97
 	public static int TickMaxTime
 	{
 		get
@@ -43,8 +43,8 @@ public class SelectablePropDataUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17000FD7 RID: 4055
-	// (get) Token: 0x0600BDC1 RID: 48577 RVA: 0x002AEA7A File Offset: 0x002ACC7A
+	// Token: 0x17000FFB RID: 4091
+	// (get) Token: 0x060091C4 RID: 37316 RVA: 0x002B98BE File Offset: 0x002B7ABE
 	public static int TickMinTime
 	{
 		get
@@ -57,8 +57,8 @@ public class SelectablePropDataUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17000FD8 RID: 4056
-	// (get) Token: 0x0600BDC2 RID: 48578 RVA: 0x002AEAA1 File Offset: 0x002ACCA1
+	// Token: 0x17000FFC RID: 4092
+	// (get) Token: 0x060091C5 RID: 37317 RVA: 0x002B98E5 File Offset: 0x002B7AE5
 	public static int TickInternalTime
 	{
 		get
@@ -71,7 +71,7 @@ public class SelectablePropDataUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600BDC3 RID: 48579 RVA: 0x002AEAC8 File Offset: 0x002ACCC8
+	// Token: 0x060091C6 RID: 37318 RVA: 0x002B990C File Offset: 0x002B7B0C
 	[return: Nullable(2)]
 	public static SelectablePropData GetSelectablePropData(ItemDataBase itemData)
 	{
@@ -91,7 +91,7 @@ public class SelectablePropDataUtil : IStaticVariableResetter
 		return SelectablePropDataUtil.MaterialPropData(itemData.GetConfigId(), itemData.GetCount());
 	}
 
-	// Token: 0x0600BDC4 RID: 48580 RVA: 0x002AEB20 File Offset: 0x002ACD20
+	// Token: 0x060091C7 RID: 37319 RVA: 0x002B9964 File Offset: 0x002B7B64
 	protected static SelectablePropData WeaponPropData(int incId)
 	{
 		SelectablePropData selectablePropData = new SelectablePropData();
@@ -109,7 +109,7 @@ public class SelectablePropDataUtil : IStaticVariableResetter
 		return selectablePropData;
 	}
 
-	// Token: 0x0600BDC5 RID: 48581 RVA: 0x002AEBA4 File Offset: 0x002ACDA4
+	// Token: 0x060091C8 RID: 37320 RVA: 0x002B99E8 File Offset: 0x002B7BE8
 	[NullableContext(2)]
 	protected static SelectablePropData PhantomPropData(int incId, int count)
 	{
@@ -128,7 +128,7 @@ public class SelectablePropDataUtil : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0600BDC6 RID: 48582 RVA: 0x002AEC18 File Offset: 0x002ACE18
+	// Token: 0x060091C9 RID: 37321 RVA: 0x002B9A5C File Offset: 0x002B7C5C
 	[return: Nullable(2)]
 	protected static SelectablePropData DangoAbyssItemPropData(ItemDataBase itemData)
 	{
@@ -146,7 +146,7 @@ public class SelectablePropDataUtil : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0600BDC7 RID: 48583 RVA: 0x002AEC70 File Offset: 0x002ACE70
+	// Token: 0x060091CA RID: 37322 RVA: 0x002B9AB4 File Offset: 0x002B7CB4
 	protected static SelectablePropData MaterialPropData(int configId, int count)
 	{
 		return new SelectablePropData
@@ -159,12 +159,12 @@ public class SelectablePropDataUtil : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x04005598 RID: 21912
+	// Token: 0x04005645 RID: 22085
 	private static int? TickMaxTimeInternal;
 
-	// Token: 0x04005599 RID: 21913
+	// Token: 0x04005646 RID: 22086
 	private static int? TickMinTimeInternal;
 
-	// Token: 0x0400559A RID: 21914
+	// Token: 0x04005647 RID: 22087
 	private static int? TickIntervalTimeInternal;
 }

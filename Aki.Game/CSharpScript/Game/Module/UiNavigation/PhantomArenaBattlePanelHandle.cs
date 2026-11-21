@@ -7,18 +7,18 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048FF RID: 18687
+	// Token: 0x02003876 RID: 14454
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattlePanelHandle : SpecialPanelHandleBase
 	{
-		// Token: 0x06030DB4 RID: 200116 RVA: 0x00B58920 File Offset: 0x00B56B20
+		// Token: 0x060258E1 RID: 153825 RVA: 0x00A93790 File Offset: 0x00A91990
 		public PhantomArenaBattlePanelHandle(string type) : base(type)
 		{
 		}
 
-		// Token: 0x170079C1 RID: 31169
-		// (get) Token: 0x06030DB5 RID: 200117 RVA: 0x00B5892C File Offset: 0x00B56B2C
+		// Token: 0x17004D29 RID: 19753
+		// (get) Token: 0x060258E2 RID: 153826 RVA: 0x00A9379C File Offset: 0x00A9199C
 		private PhantomArenaBattleProxy Proxy
 		{
 			get
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030DB6 RID: 200118 RVA: 0x00B58970 File Offset: 0x00B56B70
+		// Token: 0x060258E3 RID: 153827 RVA: 0x00A937E0 File Offset: 0x00A919E0
 		protected override List<TsUiNavigationBehaviorListener> OnGetSuitableNavigationListenerList(bool isDefault)
 		{
 			if (this.Proxy == null)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return this.GetListenerListByHand();
 		}
 
-		// Token: 0x06030DB7 RID: 200119 RVA: 0x00B589DC File Offset: 0x00B56BDC
+		// Token: 0x060258E4 RID: 153828 RVA: 0x00A9384C File Offset: 0x00A91A4C
 		private List<TsUiNavigationBehaviorListener> GetListenerListBySkillInteract()
 		{
 			List<TsUiNavigationBehaviorListener> navigationListenerListByTypeList = this.GetNavigationListenerListByTypeList(new ENavigationSelectableDefine[]
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return list;
 		}
 
-		// Token: 0x06030DB8 RID: 200120 RVA: 0x00B58AA8 File Offset: 0x00B56CA8
+		// Token: 0x060258E5 RID: 153829 RVA: 0x00A93918 File Offset: 0x00A91B18
 		private List<TsUiNavigationBehaviorListener> GetListenerListByPanelInteract()
 		{
 			if (this.Proxy == null)
@@ -105,19 +105,19 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return this.GetNavigationListenerListByType(ENavigationSelectableDefine.PhantomArenaOwnBattleToggle, "GroupNor");
 		}
 
-		// Token: 0x06030DB9 RID: 200121 RVA: 0x00B58AD8 File Offset: 0x00B56CD8
+		// Token: 0x060258E6 RID: 153830 RVA: 0x00A93948 File Offset: 0x00A91B48
 		private List<TsUiNavigationBehaviorListener> GetListenerListByBattle()
 		{
 			return this.GetNavigationListenerListByType(ENavigationSelectableDefine.PhantomArenaOwnBattleToggle, "GroupNor");
 		}
 
-		// Token: 0x06030DBA RID: 200122 RVA: 0x00B58AE7 File Offset: 0x00B56CE7
+		// Token: 0x060258E7 RID: 153831 RVA: 0x00A93957 File Offset: 0x00A91B57
 		private List<TsUiNavigationBehaviorListener> GetListenerListByHand()
 		{
 			return this.GetNavigationListenerListByType(ENavigationSelectableDefine.PhantomArenaOwnHandToggle, "GroupNor");
 		}
 
-		// Token: 0x06030DBB RID: 200123 RVA: 0x00B58AF8 File Offset: 0x00B56CF8
+		// Token: 0x060258E8 RID: 153832 RVA: 0x00A93968 File Offset: 0x00A91B68
 		public List<TsUiNavigationBehaviorListener> GetNavigationListenerListByType(ENavigationSelectableDefine type, string groupName = "GroupNor")
 		{
 			NavigationGroup navigationGroup = base.GetNavigationGroup(groupName);
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return list;
 		}
 
-		// Token: 0x06030DBC RID: 200124 RVA: 0x00B58B74 File Offset: 0x00B56D74
+		// Token: 0x060258E9 RID: 153833 RVA: 0x00A939E4 File Offset: 0x00A91BE4
 		public List<TsUiNavigationBehaviorListener> GetNavigationListenerListByTypeList(ENavigationSelectableDefine[] typeList, string groupName)
 		{
 			NavigationGroup navigationGroup = base.GetNavigationGroup(groupName);
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return list;
 		}
 
-		// Token: 0x0401A3BA RID: 107450
+		// Token: 0x04014C2D RID: 85037
 		private PhantomArenaBattleProxy ProxyInternal;
 	}
 }

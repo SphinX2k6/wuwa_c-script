@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x0200489B RID: 18587
+	// Token: 0x02003812 RID: 14354
 	[NullableContext(2)]
 	public interface IVillageInfrMainParam
 	{
-		// Token: 0x1700794C RID: 31052
-		// (get) Token: 0x060309AE RID: 199086
-		// (set) Token: 0x060309AF RID: 199087
+		// Token: 0x17004CB4 RID: 19636
+		// (get) Token: 0x060254DA RID: 152794
+		// (set) Token: 0x060254DB RID: 152795
 		IVillageInfrBuildFinishTipParam BuildFinishParam { get; set; }
 	}
 }

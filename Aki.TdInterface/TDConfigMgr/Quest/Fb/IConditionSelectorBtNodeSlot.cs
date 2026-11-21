@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001307 RID: 4871
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001457 RID: 5207
 	public class IConditionSelectorBtNodeSlot
 	{
-		// Token: 0x06006FB9 RID: 28601 RVA: 0x0010DF4E File Offset: 0x0010C14E
+		// Token: 0x06007659 RID: 30297 RVA: 0x0011C4BA File Offset: 0x0011A6BA
 		public static IConditionSelectorBtNodeSlot Create(IConditionSelectorBtNodeSlot? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700237E RID: 9086
-		// (get) Token: 0x06006FBA RID: 28602 RVA: 0x0010DF6D File Offset: 0x0010C16D
+		// Token: 0x1700254D RID: 9549
+		// (get) Token: 0x0600765A RID: 30298 RVA: 0x0011C4D9 File Offset: 0x0011A6D9
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -40,8 +38,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700237F RID: 9087
-		// (get) Token: 0x06006FBB RID: 28603 RVA: 0x0010DFA1 File Offset: 0x0010C1A1
+		// Token: 0x1700254E RID: 9550
+		// (get) Token: 0x0600765B RID: 30299 RVA: 0x0011C50D File Offset: 0x0011A70D
 		public virtual IBtNode Node
 		{
 			get
@@ -56,8 +54,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002380 RID: 9088
-		// (get) Token: 0x06006FBC RID: 28604 RVA: 0x0010DFD0 File Offset: 0x0010C1D0
+		// Token: 0x1700254F RID: 9551
+		// (get) Token: 0x0600765C RID: 30300 RVA: 0x0011C53C File Offset: 0x0011A73C
 		[Nullable(2)]
 		public virtual IPerformanceSetting PerformanceSetting
 		{
@@ -74,27 +72,27 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004051 RID: 16465
+		// Token: 0x040043CD RID: 17357
 		private IConditionSelectorBtNodeSlot Instance;
 
-		// Token: 0x04004052 RID: 16466
+		// Token: 0x040043CE RID: 17358
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04004053 RID: 16467
+		// Token: 0x040043CF RID: 17359
 		private bool _ConditionInited;
 
-		// Token: 0x04004054 RID: 16468
+		// Token: 0x040043D0 RID: 17360
 		private IBtNode _NodeCache;
 
-		// Token: 0x04004055 RID: 16469
+		// Token: 0x040043D1 RID: 17361
 		private bool _NodeInited;
 
-		// Token: 0x04004056 RID: 16470
+		// Token: 0x040043D2 RID: 17362
 		[Nullable(2)]
 		private IPerformanceSetting _PerformanceSettingCache;
 
-		// Token: 0x04004057 RID: 16471
+		// Token: 0x040043D3 RID: 17363
 		private bool _PerformanceSettingInited;
 	}
 }

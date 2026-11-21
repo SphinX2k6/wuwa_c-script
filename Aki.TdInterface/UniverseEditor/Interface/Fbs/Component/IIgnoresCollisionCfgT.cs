@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Actor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053E7 RID: 21479
+	// Token: 0x0200596D RID: 22893
 	public class IIgnoresCollisionCfgT
 	{
-		// Token: 0x17009E1A RID: 40474
-		// (get) Token: 0x06023465 RID: 144485 RVA: 0x004E2764 File Offset: 0x004E0964
-		// (set) Token: 0x06023466 RID: 144486 RVA: 0x004E276C File Offset: 0x004E096C
+		// Token: 0x1700A654 RID: 42580
+		// (get) Token: 0x0602551D RID: 152861 RVA: 0x0051F790 File Offset: 0x0051D990
+		// (set) Token: 0x0602551E RID: 152862 RVA: 0x0051F798 File Offset: 0x0051D998
 		public List<int> IgnoreEntitys { get; set; }
 
-		// Token: 0x17009E1B RID: 40475
-		// (get) Token: 0x06023467 RID: 144487 RVA: 0x004E2775 File Offset: 0x004E0975
-		// (set) Token: 0x06023468 RID: 144488 RVA: 0x004E277D File Offset: 0x004E097D
+		// Token: 0x1700A655 RID: 42581
+		// (get) Token: 0x0602551F RID: 152863 RVA: 0x0051F7A1 File Offset: 0x0051D9A1
+		// (set) Token: 0x06025520 RID: 152864 RVA: 0x0051F7A9 File Offset: 0x0051D9A9
 		public List<IActorRefT> IgnoreActors { get; set; }
 
-		// Token: 0x06023469 RID: 144489 RVA: 0x004E2786 File Offset: 0x004E0986
+		// Token: 0x06025521 RID: 152865 RVA: 0x0051F7B2 File Offset: 0x0051D9B2
 		public IIgnoresCollisionCfgT()
 		{
 			this.IgnoreEntitys = null;

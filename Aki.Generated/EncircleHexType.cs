@@ -2,22 +2,22 @@
 
 namespace Aki.Config
 {
-	// Token: 0x020011C4 RID: 4548
+	// Token: 0x020012FA RID: 4858
 	public enum EncircleHexType : sbyte
 	{
-		// Token: 0x0400531E RID: 21278
+		// Token: 0x04005961 RID: 22881
 		Plain,
-		// Token: 0x0400531F RID: 21279
+		// Token: 0x04005962 RID: 22882
 		Wall,
-		// Token: 0x04005320 RID: 21280
+		// Token: 0x04005963 RID: 22883
 		Monster,
-		// Token: 0x04005321 RID: 21281
+		// Token: 0x04005964 RID: 22884
 		Trap,
-		// Token: 0x04005322 RID: 21282
+		// Token: 0x04005965 RID: 22885
 		LimitWall,
-		// Token: 0x04005323 RID: 21283
+		// Token: 0x04005966 RID: 22886
 		InitialWall,
-		// Token: 0x04005324 RID: 21284
+		// Token: 0x04005967 RID: 22887
 		DifficultyWall
 	}
 }

@@ -6,46 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002187 RID: 8583
+	// Token: 0x02000713 RID: 1811
 	[UnrealObjectPath("/Script/LGUI.UIMultiTemplateLayout")]
 	[UnrealStructLayout(480, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 480)]
 	public class UUIMultiTemplateLayout : UUILayoutWithAnimation, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020837 RID: 133175 RVA: 0x00302A1B File Offset: 0x00300C1B
+		// Token: 0x06009BA5 RID: 39845 RVA: 0x000E8B33 File Offset: 0x000E6D33
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIMultiTemplateLayout._ClassPtr;
 		}
 
-		// Token: 0x06020838 RID: 133176 RVA: 0x00302A28 File Offset: 0x00300C28
+		// Token: 0x06009BA6 RID: 39846 RVA: 0x000E8B40 File Offset: 0x000E6D40
 		public UUIMultiTemplateLayout() : this(BuiltinUtils.AllocNativeUObject(UUIMultiTemplateLayout.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06020839 RID: 133177 RVA: 0x00302A50 File Offset: 0x00300C50
+		// Token: 0x06009BA7 RID: 39847 RVA: 0x000E8B68 File Offset: 0x000E6D68
 		[NullableContext(1)]
 		public UUIMultiTemplateLayout(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIMultiTemplateLayout.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007F35 RID: 32565
-		// (get) Token: 0x0602083A RID: 133178 RVA: 0x00302A83 File Offset: 0x00300C83
-		// (set) Token: 0x0602083B RID: 133179 RVA: 0x00302A93 File Offset: 0x00300C93
-		public unsafe ELGUILayoutDirectionType DirectionType
-		{
-			get
-			{
-				return (ELGUILayoutDirectionType)(*(base.NativePtr + (IntPtr)UUIMultiTemplateLayout.__PropertyOffset_DirectionType));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUIMultiTemplateLayout.__PropertyOffset_DirectionType) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007F36 RID: 32566
-		// (get) Token: 0x0602083C RID: 133180 RVA: 0x00302AA4 File Offset: 0x00300CA4
-		// (set) Token: 0x0602083D RID: 133181 RVA: 0x00302AB8 File Offset: 0x00300CB8
+		// Token: 0x17001CDD RID: 7389
+		// (get) Token: 0x06009BA8 RID: 39848 RVA: 0x000E8B9B File Offset: 0x000E6D9B
+		// (set) Token: 0x06009BA9 RID: 39849 RVA: 0x000E8BAF File Offset: 0x000E6DAF
 		public unsafe FMargin Padding
 		{
 			get
@@ -58,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F37 RID: 32567
-		// (get) Token: 0x0602083E RID: 133182 RVA: 0x00302ACD File Offset: 0x00300CCD
-		// (set) Token: 0x0602083F RID: 133183 RVA: 0x00302AE1 File Offset: 0x00300CE1
+		// Token: 0x17001CDE RID: 7390
+		// (get) Token: 0x06009BAA RID: 39850 RVA: 0x000E8BC4 File Offset: 0x000E6DC4
+		// (set) Token: 0x06009BAB RID: 39851 RVA: 0x000E8BD8 File Offset: 0x000E6DD8
 		public unsafe FVector2D Spacing
 		{
 			get
@@ -73,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F38 RID: 32568
-		// (get) Token: 0x06020840 RID: 133184 RVA: 0x00302AF6 File Offset: 0x00300CF6
-		// (set) Token: 0x06020841 RID: 133185 RVA: 0x00302B06 File Offset: 0x00300D06
+		// Token: 0x17001CDF RID: 7391
+		// (get) Token: 0x06009BAC RID: 39852 RVA: 0x000E8BED File Offset: 0x000E6DED
+		// (set) Token: 0x06009BAD RID: 39853 RVA: 0x000E8BFD File Offset: 0x000E6DFD
 		public unsafe bool SizeFitToChildren
 		{
 			get
@@ -88,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F39 RID: 32569
-		// (get) Token: 0x06020842 RID: 133186 RVA: 0x00302B17 File Offset: 0x00300D17
-		// (set) Token: 0x06020843 RID: 133187 RVA: 0x00302B27 File Offset: 0x00300D27
+		// Token: 0x17001CE0 RID: 7392
+		// (get) Token: 0x06009BAE RID: 39854 RVA: 0x000E8C0E File Offset: 0x000E6E0E
+		// (set) Token: 0x06009BAF RID: 39855 RVA: 0x000E8C1E File Offset: 0x000E6E1E
 		public unsafe bool bAutoAdjustScale
 		{
 			get
@@ -103,140 +88,117 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020844 RID: 133188 RVA: 0x00302B38 File Offset: 0x00300D38
+		// Token: 0x06009BB0 RID: 39856 RVA: 0x000E8C2F File Offset: 0x000E6E2F
 		public void SetSpacing(FVector2D value)
 		{
 			UUIMultiTemplateLayout.__SetSpacing_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020845 RID: 133189 RVA: 0x00302B46 File Offset: 0x00300D46
+		// Token: 0x06009BB1 RID: 39857 RVA: 0x000E8C3D File Offset: 0x000E6E3D
 		public void SetSizeFitToChildren(bool Value)
 		{
 			UUIMultiTemplateLayout.__SetSizeFitToChildren_Internal(base.NativePtr, Value);
 		}
 
-		// Token: 0x06020846 RID: 133190 RVA: 0x00302B54 File Offset: 0x00300D54
+		// Token: 0x06009BB2 RID: 39858 RVA: 0x000E8C4B File Offset: 0x000E6E4B
 		public void SetPadding(FMargin value)
 		{
 			UUIMultiTemplateLayout.__SetPadding_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020847 RID: 133191 RVA: 0x00302B62 File Offset: 0x00300D62
-		public void SetDirectionType(ELGUILayoutDirectionType NewDirectionType)
-		{
-			UUIMultiTemplateLayout.__SetDirectionType_Internal(base.NativePtr, NewDirectionType);
-		}
-
-		// Token: 0x06020848 RID: 133192 RVA: 0x00302B70 File Offset: 0x00300D70
+		// Token: 0x06009BB3 RID: 39859 RVA: 0x000E8C59 File Offset: 0x000E6E59
 		public void SetAutoAdjustScale(bool Value)
 		{
 			UUIMultiTemplateLayout.__SetAutoAdjustScale_Internal(base.NativePtr, Value);
 		}
 
-		// Token: 0x06020849 RID: 133193 RVA: 0x00302B7E File Offset: 0x00300D7E
+		// Token: 0x06009BB4 RID: 39860 RVA: 0x000E8C67 File Offset: 0x000E6E67
 		public FVector2D GetSpacing()
 		{
 			return UUIMultiTemplateLayout.__GetSpacing_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0602084A RID: 133194 RVA: 0x00302B8B File Offset: 0x00300D8B
+		// Token: 0x06009BB5 RID: 39861 RVA: 0x000E8C74 File Offset: 0x000E6E74
 		public bool GetSizeFitToChildren()
 		{
 			return UUIMultiTemplateLayout.__GetSizeFitToChildren_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0602084B RID: 133195 RVA: 0x00302B98 File Offset: 0x00300D98
+		// Token: 0x06009BB6 RID: 39862 RVA: 0x000E8C81 File Offset: 0x000E6E81
 		public FMargin GetPadding()
 		{
 			return UUIMultiTemplateLayout.__GetPadding_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0602084C RID: 133196 RVA: 0x00302BA5 File Offset: 0x00300DA5
-		public ELGUILayoutDirectionType GetDirectionType()
-		{
-			return UUIMultiTemplateLayout.__GetDirectionType_Internal(base.NativePtr);
-		}
-
-		// Token: 0x0602084D RID: 133197 RVA: 0x00302BB2 File Offset: 0x00300DB2
+		// Token: 0x06009BB7 RID: 39863 RVA: 0x000E8C8E File Offset: 0x000E6E8E
 		public bool GetAutoAdjustScale()
 		{
 			return UUIMultiTemplateLayout.__GetAutoAdjustScale_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0602084E RID: 133198
+		// Token: 0x06009BB8 RID: 39864
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSpacing_Internal(IntPtr @this, FVector2D value);
 
-		// Token: 0x0602084F RID: 133199
+		// Token: 0x06009BB9 RID: 39865
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSizeFitToChildren_Internal(IntPtr @this, bool Value);
 
-		// Token: 0x06020850 RID: 133200
+		// Token: 0x06009BBA RID: 39866
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPadding_Internal(IntPtr @this, FMargin value);
 
-		// Token: 0x06020851 RID: 133201
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetDirectionType_Internal(IntPtr @this, ELGUILayoutDirectionType NewDirectionType);
-
-		// Token: 0x06020852 RID: 133202
+		// Token: 0x06009BBB RID: 39867
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAutoAdjustScale_Internal(IntPtr @this, bool Value);
 
-		// Token: 0x06020853 RID: 133203
+		// Token: 0x06009BBC RID: 39868
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D __GetSpacing_Internal(IntPtr @this);
 
-		// Token: 0x06020854 RID: 133204
+		// Token: 0x06009BBD RID: 39869
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetSizeFitToChildren_Internal(IntPtr @this);
 
-		// Token: 0x06020855 RID: 133205
+		// Token: 0x06009BBE RID: 39870
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMargin __GetPadding_Internal(IntPtr @this);
 
-		// Token: 0x06020856 RID: 133206
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern ELGUILayoutDirectionType __GetDirectionType_Internal(IntPtr @this);
-
-		// Token: 0x06020857 RID: 133207
+		// Token: 0x06009BBF RID: 39871
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetAutoAdjustScale_Internal(IntPtr @this);
 
-		// Token: 0x06020858 RID: 133208 RVA: 0x00302BBF File Offset: 0x00300DBF
+		// Token: 0x06009BC0 RID: 39872 RVA: 0x000E8C9B File Offset: 0x000E6E9B
 		static UUIMultiTemplateLayout()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIMultiTemplateLayout");
 		}
 
-		// Token: 0x06020859 RID: 133209 RVA: 0x00302BCD File Offset: 0x00300DCD
+		// Token: 0x06009BC1 RID: 39873 RVA: 0x000E8CA9 File Offset: 0x000E6EA9
 		protected UUIMultiTemplateLayout(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040116AE RID: 71342
+		// Token: 0x0400432B RID: 17195
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UIMultiTemplateLayout";
 
-		// Token: 0x040116AF RID: 71343
+		// Token: 0x0400432C RID: 17196
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040116B0 RID: 71344
+		// Token: 0x0400432D RID: 17197
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040116B1 RID: 71345
-		internal static int __PropertyOffset_DirectionType;
-
-		// Token: 0x040116B2 RID: 71346
+		// Token: 0x0400432E RID: 17198
 		internal static int __PropertyOffset_Padding;
 
-		// Token: 0x040116B3 RID: 71347
+		// Token: 0x0400432F RID: 17199
 		internal static int __PropertyOffset_Spacing;
 
-		// Token: 0x040116B4 RID: 71348
+		// Token: 0x04004330 RID: 17200
 		internal static int __PropertyOffset_SizeFitToChildren;
 
-		// Token: 0x040116B5 RID: 71349
+		// Token: 0x04004331 RID: 17201
 		internal static int __PropertyOffset_bAutoAdjustScale;
 	}
 }

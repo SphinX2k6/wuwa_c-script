@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002943 RID: 10563
+	// Token: 0x02002C25 RID: 11301
 	public class IEnableSkillOperation : ISkillOperationType
 	{
-		// Token: 0x0600EA43 RID: 59971 RVA: 0x00224E23 File Offset: 0x00223023
-		[NullableContext(1)]
+		// Token: 0x0600F8AE RID: 63662 RVA: 0x00242403 File Offset: 0x00240603
 		public static IEnableSkillOperation Create(IEnableSkillOperation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700497F RID: 18815
-		// (get) Token: 0x0600EA44 RID: 59972 RVA: 0x00224E42 File Offset: 0x00223042
+		// Token: 0x17004D12 RID: 19730
+		// (get) Token: 0x0600F8AF RID: 63663 RVA: 0x00242422 File Offset: 0x00240622
 		public override ESkillOperationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400812B RID: 33067
+		// Token: 0x04008807 RID: 34823
 		private IEnableSkillOperation Instance;
 	}
 }

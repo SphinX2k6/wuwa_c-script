@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002D62 RID: 11618
+// Token: 0x020022BC RID: 8892
 [NullableContext(1)]
 [Nullable(0)]
 public class WeeklyRogueRoleGroupTitleInfo : IWeeklyRogueRoleGroupTitleInfo
 {
-	// Token: 0x170020F2 RID: 8434
-	// (get) Token: 0x060186E0 RID: 100064 RVA: 0x006387F3 File Offset: 0x006369F3
-	// (set) Token: 0x060186E1 RID: 100065 RVA: 0x006387FB File Offset: 0x006369FB
+	// Token: 0x1700214D RID: 8525
+	// (get) Token: 0x06015F82 RID: 89986 RVA: 0x0065E803 File Offset: 0x0065CA03
+	// (set) Token: 0x06015F83 RID: 89987 RVA: 0x0065E80B File Offset: 0x0065CA0B
 	public string TitleId { get; set; }
 
-	// Token: 0x170020F3 RID: 8435
-	// (get) Token: 0x060186E2 RID: 100066 RVA: 0x00638804 File Offset: 0x00636A04
-	// (set) Token: 0x060186E3 RID: 100067 RVA: 0x0063880C File Offset: 0x00636A0C
+	// Token: 0x1700214E RID: 8526
+	// (get) Token: 0x06015F84 RID: 89988 RVA: 0x0065E814 File Offset: 0x0065CA14
+	// (set) Token: 0x06015F85 RID: 89989 RVA: 0x0065E81C File Offset: 0x0065CA1C
 	public bool IsUp { get; set; }
 
-	// Token: 0x170020F4 RID: 8436
-	// (get) Token: 0x060186E4 RID: 100068 RVA: 0x00638815 File Offset: 0x00636A15
-	// (set) Token: 0x060186E5 RID: 100069 RVA: 0x0063881D File Offset: 0x00636A1D
+	// Token: 0x1700214F RID: 8527
+	// (get) Token: 0x06015F86 RID: 89990 RVA: 0x0065E825 File Offset: 0x0065CA25
+	// (set) Token: 0x06015F87 RID: 89991 RVA: 0x0065E82D File Offset: 0x0065CA2D
 	public int? ScoreRate { get; set; }
 
-	// Token: 0x170020F5 RID: 8437
-	// (get) Token: 0x060186E6 RID: 100070 RVA: 0x00638826 File Offset: 0x00636A26
-	// (set) Token: 0x060186E7 RID: 100071 RVA: 0x0063882E File Offset: 0x00636A2E
+	// Token: 0x17002150 RID: 8528
+	// (get) Token: 0x06015F88 RID: 89992 RVA: 0x0065E836 File Offset: 0x0065CA36
+	// (set) Token: 0x06015F89 RID: 89993 RVA: 0x0065E83E File Offset: 0x0065CA3E
 	public bool IsEmpty { get; set; }
 }

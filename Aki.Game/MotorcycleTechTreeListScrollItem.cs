@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002242 RID: 8770
+// Token: 0x02001726 RID: 5926
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class MotorcycleTechTreeListScrollItem : GridProxyAbstract<IMotorTechOverviewData>
 {
-	// Token: 0x060111BE RID: 70078 RVA: 0x0042C9F0 File Offset: 0x0042ABF0
+	// Token: 0x0600E654 RID: 58964 RVA: 0x00439594 File Offset: 0x00437794
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class MotorcycleTechTreeListScrollItem : GridProxyAbstract<IMotorTechOver
 		};
 	}
 
-	// Token: 0x060111BF RID: 70079 RVA: 0x0042CA60 File Offset: 0x0042AC60
+	// Token: 0x0600E655 RID: 58965 RVA: 0x00439604 File Offset: 0x00437804
 	[NullableContext(1)]
 	public override void Refresh(IMotorTechOverviewData data, bool isSelected, int gridIndex)
 	{
@@ -48,19 +48,19 @@ public class MotorcycleTechTreeListScrollItem : GridProxyAbstract<IMotorTechOver
 		uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x0200877E RID: 34686
+	// Token: 0x02007907 RID: 30983
 	private class EMotorTreeOverviewItemComponent
 	{
-		// Token: 0x0402C0A3 RID: 180387
+		// Token: 0x040273BB RID: 160699
 		public const int BgItem = 0;
 
-		// Token: 0x0402C0A4 RID: 180388
+		// Token: 0x040273BC RID: 160700
 		public const int TexIcon = 1;
 
-		// Token: 0x0402C0A5 RID: 180389
+		// Token: 0x040273BD RID: 160701
 		public const int TxtAttr = 2;
 
-		// Token: 0x0402C0A6 RID: 180390
+		// Token: 0x040273BE RID: 160702
 		public const int TxtDesc = 3;
 	}
 }

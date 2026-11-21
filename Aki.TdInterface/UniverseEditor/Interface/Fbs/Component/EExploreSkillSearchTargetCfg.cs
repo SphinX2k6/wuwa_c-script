@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D9E RID: 19870
+	// Token: 0x0200529F RID: 21151
 	public enum EExploreSkillSearchTargetCfg : byte
 	{
-		// Token: 0x0400D986 RID: 55686
+		// Token: 0x0400E4CB RID: 58571
 		AngleWeight,
-		// Token: 0x0400D987 RID: 55687
+		// Token: 0x0400E4CC RID: 58572
 		EnterScreenWeight
 	}
 }

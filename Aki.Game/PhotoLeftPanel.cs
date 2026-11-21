@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002579 RID: 9593
+// Token: 0x02001A64 RID: 6756
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoLeftPanel : UiPanelBase
 {
-	// Token: 0x060135FF RID: 79359 RVA: 0x004D2414 File Offset: 0x004D0614
+	// Token: 0x06010AE2 RID: 68322 RVA: 0x004E107C File Offset: 0x004DF27C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class PhotoLeftPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06013600 RID: 79360 RVA: 0x004D24D4 File Offset: 0x004D06D4
+	// Token: 0x06010AE3 RID: 68323 RVA: 0x004E113C File Offset: 0x004DF33C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhotoLeftPanel.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ public class PhotoLeftPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013601 RID: 79361 RVA: 0x004D2518 File Offset: 0x004D0718
+	// Token: 0x06010AE4 RID: 68324 RVA: 0x004E1180 File Offset: 0x004DF380
 	protected override void OnStart()
 	{
 		PhotoMainViewModel viewModel = this.ViewModel;
@@ -59,7 +59,7 @@ public class PhotoLeftPanel : UiPanelBase
 		this.SetMoveCtrlActive(true);
 	}
 
-	// Token: 0x06013602 RID: 79362 RVA: 0x004D2596 File Offset: 0x004D0796
+	// Token: 0x06010AE5 RID: 68325 RVA: 0x004E11FE File Offset: 0x004DF3FE
 	public void TickCurrentDetail(float delta)
 	{
 		PhotoDetailPanelBase currentDetailPanel = this.CurrentDetailPanel;
@@ -70,7 +70,7 @@ public class PhotoLeftPanel : UiPanelBase
 		this.TickPendingJump();
 	}
 
-	// Token: 0x06013603 RID: 79363 RVA: 0x004D25B0 File Offset: 0x004D07B0
+	// Token: 0x06010AE6 RID: 68326 RVA: 0x004E1218 File Offset: 0x004DF418
 	private void TickPendingJump()
 	{
 		if (this.PendingJumpRetryFrame <= 0)
@@ -84,7 +84,7 @@ public class PhotoLeftPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013604 RID: 79364 RVA: 0x004D25E2 File Offset: 0x004D07E2
+	// Token: 0x06010AE7 RID: 68327 RVA: 0x004E124A File Offset: 0x004DF44A
 	public void TickMoveCtrl(float delta)
 	{
 		PhotoMoveCtrlPanel moveCtrlPanel = this.MoveCtrlPanel;
@@ -95,7 +95,7 @@ public class PhotoLeftPanel : UiPanelBase
 		moveCtrlPanel.TickJoystick(delta);
 	}
 
-	// Token: 0x06013605 RID: 79365 RVA: 0x004D25F5 File Offset: 0x004D07F5
+	// Token: 0x06010AE8 RID: 68328 RVA: 0x004E125D File Offset: 0x004DF45D
 	public void SetStickerEditing(bool editing)
 	{
 		this.SetMoveCtrlActive(!editing);
@@ -110,7 +110,7 @@ public class PhotoLeftPanel : UiPanelBase
 		}, null, null);
 	}
 
-	// Token: 0x06013606 RID: 79366 RVA: 0x004D2625 File Offset: 0x004D0825
+	// Token: 0x06010AE9 RID: 68329 RVA: 0x004E128D File Offset: 0x004DF48D
 	private void SetMoveCtrlActive(bool active)
 	{
 		UUIItem item = base.GetItem(5);
@@ -118,10 +118,10 @@ public class PhotoLeftPanel : UiPanelBase
 		{
 			return;
 		}
-		item.SetUIActive(active && Info.Instance.IsMobilePlatform());
+		item.SetUIActive(active && Info.Instance.IsInTouch());
 	}
 
-	// Token: 0x06013607 RID: 79367 RVA: 0x004D2648 File Offset: 0x004D0848
+	// Token: 0x06010AEA RID: 68330 RVA: 0x004E12B0 File Offset: 0x004DF4B0
 	private UniTask RefreshTabScroll()
 	{
 		PhotoLeftPanel.<RefreshTabScroll>d__18 <RefreshTabScroll>d__;
@@ -132,7 +132,7 @@ public class PhotoLeftPanel : UiPanelBase
 		return <RefreshTabScroll>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013608 RID: 79368 RVA: 0x004D268C File Offset: 0x004D088C
+	// Token: 0x06010AEB RID: 68331 RVA: 0x004E12F4 File Offset: 0x004DF4F4
 	private UniTask LoadTabContentAsync(PhotoTab tabConfig)
 	{
 		PhotoLeftPanel.<LoadTabContentAsync>d__19 <LoadTabContentAsync>d__;
@@ -144,7 +144,7 @@ public class PhotoLeftPanel : UiPanelBase
 		return <LoadTabContentAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013609 RID: 79369 RVA: 0x004D26D7 File Offset: 0x004D08D7
+	// Token: 0x06010AEC RID: 68332 RVA: 0x004E133F File Offset: 0x004DF53F
 	private void ShowDetailPanel(PhotoDetailPanelBase panel)
 	{
 		if (this.CurrentDetailPanel != null && this.CurrentDetailPanel != panel)
@@ -156,7 +156,7 @@ public class PhotoLeftPanel : UiPanelBase
 		this.JumpNavigationOnDetailPanelShown();
 	}
 
-	// Token: 0x0601360A RID: 79370 RVA: 0x004D2708 File Offset: 0x004D0908
+	// Token: 0x06010AED RID: 68333 RVA: 0x004E1370 File Offset: 0x004DF570
 	private void JumpNavigationOnDetailPanelShown()
 	{
 		if (!this.HasPendingJump)
@@ -171,7 +171,7 @@ public class PhotoLeftPanel : UiPanelBase
 		this.PendingJumpRetryFrame = 30;
 	}
 
-	// Token: 0x0601360B RID: 79371 RVA: 0x004D2734 File Offset: 0x004D0934
+	// Token: 0x06010AEE RID: 68334 RVA: 0x004E139C File Offset: 0x004DF59C
 	protected override void OnBeforeDestroy()
 	{
 		PhotoMainViewModel viewModel = this.ViewModel;
@@ -180,7 +180,7 @@ public class PhotoLeftPanel : UiPanelBase
 		viewModel2.OnFilterDetailModeChanged = (Action<bool>)Delegate.Remove(viewModel2.OnFilterDetailModeChanged, new Action<bool>(this.OnFilterDetailModeChanged));
 	}
 
-	// Token: 0x0601360C RID: 79372 RVA: 0x004D278F File Offset: 0x004D098F
+	// Token: 0x06010AEF RID: 68335 RVA: 0x004E13F7 File Offset: 0x004DF5F7
 	private void ClearTabContent()
 	{
 		this.HasPendingJump = false;
@@ -193,7 +193,7 @@ public class PhotoLeftPanel : UiPanelBase
 		this.CurrentDetailPanel = null;
 	}
 
-	// Token: 0x0601360D RID: 79373 RVA: 0x004D27B8 File Offset: 0x004D09B8
+	// Token: 0x06010AF0 RID: 68336 RVA: 0x004E1420 File Offset: 0x004DF620
 	private void OnTabClick(PhotoTab data)
 	{
 		if (this.CurrentDetailPanel == null)
@@ -217,7 +217,7 @@ public class PhotoLeftPanel : UiPanelBase
 		this.LoadTabContentAsync(data).Forget();
 	}
 
-	// Token: 0x0601360E RID: 79374 RVA: 0x004D282A File Offset: 0x004D0A2A
+	// Token: 0x06010AF1 RID: 68337 RVA: 0x004E1492 File Offset: 0x004DF692
 	private PhotoTabItem CreatePhotoTabItem()
 	{
 		return new PhotoTabItem
@@ -226,7 +226,7 @@ public class PhotoLeftPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601360F RID: 79375 RVA: 0x004D2843 File Offset: 0x004D0A43
+	// Token: 0x06010AF2 RID: 68338 RVA: 0x004E14AB File Offset: 0x004DF6AB
 	private void OnModeChanged(PhotoCameraType mode)
 	{
 		PhotoMoveCtrlPanel moveCtrlPanel = this.MoveCtrlPanel;
@@ -242,7 +242,7 @@ public class PhotoLeftPanel : UiPanelBase
 		currentDetailPanel.RefreshLockState();
 	}
 
-	// Token: 0x06013610 RID: 79376 RVA: 0x004D2867 File Offset: 0x004D0A67
+	// Token: 0x06010AF3 RID: 68339 RVA: 0x004E14CF File Offset: 0x004DF6CF
 	private void OnFilterDetailModeChanged(bool isDetail)
 	{
 		UUIItem item = base.GetItem(0);
@@ -253,7 +253,7 @@ public class PhotoLeftPanel : UiPanelBase
 		item.SetUIActive(!isDetail);
 	}
 
-	// Token: 0x06013611 RID: 79377 RVA: 0x004D2880 File Offset: 0x004D0A80
+	// Token: 0x06010AF4 RID: 68340 RVA: 0x004E14E8 File Offset: 0x004DF6E8
 	public void OpenLastDetailPanel()
 	{
 		if (this.CurrentDetailPanel != null)
@@ -271,7 +271,7 @@ public class PhotoLeftPanel : UiPanelBase
 		this.OnTabClick(photoTab.Value);
 	}
 
-	// Token: 0x06013612 RID: 79378 RVA: 0x004D28F0 File Offset: 0x004D0AF0
+	// Token: 0x06010AF5 RID: 68341 RVA: 0x004E1558 File Offset: 0x004DF758
 	private PhotoTab? GetFirstTabConfig()
 	{
 		IReadOnlyList<PhotoTab> allPhotoTabConfig = PhotographConfig.Instance.GetAllPhotoTabConfig();
@@ -284,7 +284,7 @@ public class PhotoLeftPanel : UiPanelBase
 		return new PhotoTab?(list[0]);
 	}
 
-	// Token: 0x06013613 RID: 79379 RVA: 0x004D2954 File Offset: 0x004D0B54
+	// Token: 0x06010AF6 RID: 68342 RVA: 0x004E15BC File Offset: 0x004DF7BC
 	private void OnBackClick()
 	{
 		if (this.CurrentDetailPanel == null || (this.IsStickerEditing && Info.Instance.IsInGamepad()))
@@ -311,16 +311,16 @@ public class PhotoLeftPanel : UiPanelBase
 		onDetailPanelClosed();
 	}
 
-	// Token: 0x06013614 RID: 79380 RVA: 0x004D29D7 File Offset: 0x004D0BD7
+	// Token: 0x06010AF7 RID: 68343 RVA: 0x004E163F File Offset: 0x004DF83F
 	public void SetViewModel(PhotoMainViewModel viewModel)
 	{
 		this.ViewModel = viewModel;
 	}
 
-	// Token: 0x040091E5 RID: 37349
+	// Token: 0x0400933E RID: 37694
 	private PhotoMainViewModel ViewModel;
 
-	// Token: 0x040091E6 RID: 37350
+	// Token: 0x0400933F RID: 37695
 	[Nullable(new byte[]
 	{
 		2,
@@ -328,44 +328,44 @@ public class PhotoLeftPanel : UiPanelBase
 	})]
 	private GenericScrollViewNew<PhotoTabItem, PhotoTab> TabScroll;
 
-	// Token: 0x040091E7 RID: 37351
+	// Token: 0x04009340 RID: 37696
 	[Nullable(2)]
 	private PhotoMoveCtrlPanel MoveCtrlPanel;
 
-	// Token: 0x040091E8 RID: 37352
+	// Token: 0x04009341 RID: 37697
 	private readonly Dictionary<EPhotoTabType, PhotoDetailPanelBase> DetailPanelCache = new Dictionary<EPhotoTabType, PhotoDetailPanelBase>();
 
-	// Token: 0x040091E9 RID: 37353
+	// Token: 0x04009342 RID: 37698
 	private readonly HashSet<EPhotoTabType> LoadingTabSet = new HashSet<EPhotoTabType>();
 
-	// Token: 0x040091EA RID: 37354
+	// Token: 0x04009343 RID: 37699
 	[Nullable(2)]
 	private PhotoDetailPanelBase CurrentDetailPanel;
 
-	// Token: 0x040091EB RID: 37355
+	// Token: 0x04009344 RID: 37700
 	private bool IsStickerEditing;
 
-	// Token: 0x040091EC RID: 37356
+	// Token: 0x04009345 RID: 37701
 	private bool HasPendingJump;
 
-	// Token: 0x040091ED RID: 37357
+	// Token: 0x04009346 RID: 37702
 	private int PendingJumpRetryFrame;
 
-	// Token: 0x02008B6C RID: 35692
+	// Token: 0x02007CF2 RID: 31986
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D459 RID: 185433
+		// Token: 0x04028766 RID: 165734
 		ItemMenu,
-		// Token: 0x0402D45A RID: 185434
+		// Token: 0x04028767 RID: 165735
 		BtnBack,
-		// Token: 0x0402D45B RID: 185435
+		// Token: 0x04028768 RID: 165736
 		ScrollMenu,
-		// Token: 0x0402D45C RID: 185436
+		// Token: 0x04028769 RID: 165737
 		ItemTypeTemplate,
-		// Token: 0x0402D45D RID: 185437
+		// Token: 0x0402876A RID: 165738
 		ItemTempContent,
-		// Token: 0x0402D45E RID: 185438
+		// Token: 0x0402876B RID: 165739
 		ItemMoveCtrl
 	}
 }

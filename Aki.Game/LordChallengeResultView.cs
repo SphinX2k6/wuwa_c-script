@@ -6,17 +6,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002196 RID: 8598
+// Token: 0x0200167A RID: 5754
 [NullableContext(1)]
 [Nullable(0)]
 public class LordChallengeResultView : UiViewBase
 {
-	// Token: 0x06010B6A RID: 68458 RVA: 0x0040F645 File Offset: 0x0040D845
+	// Token: 0x0600DFFB RID: 57339 RVA: 0x0041BF2D File Offset: 0x0041A12D
 	public LordChallengeResultView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010B6B RID: 68459 RVA: 0x0040F650 File Offset: 0x0040D850
+	// Token: 0x0600DFFC RID: 57340 RVA: 0x0041BF38 File Offset: 0x0041A138
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class LordChallengeResultView : UiViewBase
 		};
 	}
 
-	// Token: 0x06010B6C RID: 68460 RVA: 0x0040F760 File Offset: 0x0040D960
+	// Token: 0x0600DFFD RID: 57341 RVA: 0x0041C048 File Offset: 0x0041A248
 	protected override UniTask OnBeforeStartAsync()
 	{
 		LordChallengeResultView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ public class LordChallengeResultView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010B6D RID: 68461 RVA: 0x0040F7A4 File Offset: 0x0040D9A4
+	// Token: 0x0600DFFE RID: 57342 RVA: 0x0041C08C File Offset: 0x0041A28C
 	private UniTask InitButtonAsync()
 	{
 		LordChallengeResultView.<InitButtonAsync>d__12 <InitButtonAsync>d__;
@@ -57,7 +57,7 @@ public class LordChallengeResultView : UiViewBase
 		return <InitButtonAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010B6E RID: 68462 RVA: 0x0040F7E8 File Offset: 0x0040D9E8
+	// Token: 0x0600DFFF RID: 57343 RVA: 0x0041C0D0 File Offset: 0x0041A2D0
 	private UniTask CreateButton(UUIItem uiItem, int buttonIndex, string title, Action clickFunction)
 	{
 		LordChallengeResultView.<CreateButton>d__13 <CreateButton>d__;
@@ -71,13 +71,13 @@ public class LordChallengeResultView : UiViewBase
 		return <CreateButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010B6F RID: 68463 RVA: 0x0040F844 File Offset: 0x0040DA44
+	// Token: 0x0600E000 RID: 57344 RVA: 0x0041C12C File Offset: 0x0041A32C
 	protected override void OnStart()
 	{
 		this.CurrentShowData = (this.OpenParam as IResultData);
 	}
 
-	// Token: 0x06010B70 RID: 68464 RVA: 0x0040F857 File Offset: 0x0040DA57
+	// Token: 0x0600E001 RID: 57345 RVA: 0x0041C13F File Offset: 0x0041A33F
 	protected override void OnBeforeShow()
 	{
 		this.RefreshHead();
@@ -86,7 +86,7 @@ public class LordChallengeResultView : UiViewBase
 		this.InitAutoLeaveTimer();
 	}
 
-	// Token: 0x06010B71 RID: 68465 RVA: 0x0040F871 File Offset: 0x0040DA71
+	// Token: 0x0600E002 RID: 57346 RVA: 0x0041C159 File Offset: 0x0041A359
 	private void ClearAutoLeaveTimer()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.AutoLeaveTimerId))
@@ -96,7 +96,7 @@ public class LordChallengeResultView : UiViewBase
 		this.AutoLeaveTimerId = null;
 	}
 
-	// Token: 0x06010B72 RID: 68466 RVA: 0x0040F8A0 File Offset: 0x0040DAA0
+	// Token: 0x0600E003 RID: 57347 RVA: 0x0041C188 File Offset: 0x0041A388
 	private void InitAutoLeaveTimer()
 	{
 		int leftSecondToAutoLeave = this.CurrentShowData.AutoCloseTime + 1;
@@ -120,7 +120,7 @@ public class LordChallengeResultView : UiViewBase
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x06010B73 RID: 68467 RVA: 0x0040F8F8 File Offset: 0x0040DAF8
+	// Token: 0x0600E004 RID: 57348 RVA: 0x0041C1E0 File Offset: 0x0041A3E0
 	private void RefreshTime()
 	{
 		bool flag = this.CurrentShowData.PassTime != null;
@@ -136,7 +136,7 @@ public class LordChallengeResultView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010B74 RID: 68468 RVA: 0x0040F960 File Offset: 0x0040DB60
+	// Token: 0x0600E005 RID: 57349 RVA: 0x0041C248 File Offset: 0x0041A448
 	private void RefreshScore()
 	{
 		IResultData currentShowData = this.CurrentShowData;
@@ -155,13 +155,13 @@ public class LordChallengeResultView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010B75 RID: 68469 RVA: 0x0040F9E6 File Offset: 0x0040DBE6
+	// Token: 0x0600E006 RID: 57350 RVA: 0x0041C2CE File Offset: 0x0041A4CE
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearAutoLeaveTimer();
 	}
 
-	// Token: 0x06010B76 RID: 68470 RVA: 0x0040F9F0 File Offset: 0x0040DBF0
+	// Token: 0x0600E007 RID: 57351 RVA: 0x0041C2D8 File Offset: 0x0041A4D8
 	private void RefreshHead()
 	{
 		IResultData currentShowData = this.CurrentShowData;
@@ -180,36 +180,36 @@ public class LordChallengeResultView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(text, textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x06010B77 RID: 68471 RVA: 0x0040FAC1 File Offset: 0x0040DCC1
+	// Token: 0x0600E008 RID: 57352 RVA: 0x0041C3A9 File Offset: 0x0041A5A9
 	private void OnClickBtnLeave()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04007F4A RID: 32586
+	// Token: 0x04008091 RID: 32913
 	private const string SUCCESS_OUTLINE_COLOR = "C48B29FF";
 
-	// Token: 0x04007F4B RID: 32587
+	// Token: 0x04008092 RID: 32914
 	private const string SUCCESS_TEX = "/Game/Aki/UI/UIResources/Common/Image/IconForceLogo/T_Logo_10_UI.T_Logo_10_UI";
 
-	// Token: 0x04007F4C RID: 32588
+	// Token: 0x04008093 RID: 32915
 	private const string FAIL_OUTLINE_COLOR = "B33100FF";
 
-	// Token: 0x04007F4D RID: 32589
+	// Token: 0x04008094 RID: 32916
 	private const string FAIL_TEX = "/Game/Aki/UI/UIResources/Common/Image/IconForceLogo/T_Logo_10_UI.T_Logo_10_UI";
 
-	// Token: 0x04007F4E RID: 32590
+	// Token: 0x04008095 RID: 32917
 	private const int CLOSE_BUTTON_KEY = -1;
 
-	// Token: 0x04007F4F RID: 32591
+	// Token: 0x04008096 RID: 32918
 	[Nullable(2)]
 	private TimerHandle AutoLeaveTimerId;
 
-	// Token: 0x04007F50 RID: 32592
+	// Token: 0x04008097 RID: 32919
 	[Nullable(2)]
 	private IResultData CurrentShowData;
 
-	// Token: 0x04007F51 RID: 32593
+	// Token: 0x04008098 RID: 32920
 	[Nullable(new byte[]
 	{
 		2,
@@ -217,41 +217,41 @@ public class LordChallengeResultView : UiViewBase
 	})]
 	protected Dictionary<int, LordChallengeResultButton> ButtonMap;
 
-	// Token: 0x020086BD RID: 34493
+	// Token: 0x02007848 RID: 30792
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402BD64 RID: 179556
+		// Token: 0x04027085 RID: 159877
 		public const int TxtTitle = 1;
 
-		// Token: 0x0402BD65 RID: 179557
+		// Token: 0x04027086 RID: 159878
 		public const int TexIcon = 2;
 
-		// Token: 0x0402BD66 RID: 179558
+		// Token: 0x04027087 RID: 159879
 		public const int ButtonHorizontalItem = 4;
 
-		// Token: 0x0402BD67 RID: 179559
+		// Token: 0x04027088 RID: 159880
 		public const int ButtonItem = 5;
 
-		// Token: 0x0402BD68 RID: 179560
+		// Token: 0x04027089 RID: 159881
 		public const int ScoreText = 8;
 
-		// Token: 0x0402BD69 RID: 179561
+		// Token: 0x0402708A RID: 159882
 		public const int NewRecordItem = 9;
 
-		// Token: 0x0402BD6A RID: 179562
+		// Token: 0x0402708B RID: 159883
 		public const int PassTimeText = 10;
 
-		// Token: 0x0402BD6B RID: 179563
+		// Token: 0x0402708C RID: 159884
 		public const int PassTimeDescText = 11;
 
-		// Token: 0x0402BD6C RID: 179564
+		// Token: 0x0402708D RID: 159885
 		public const int PnlRecord = 12;
 
-		// Token: 0x0402BD6D RID: 179565
+		// Token: 0x0402708E RID: 159886
 		public const int PnlPassTime = 13;
 
-		// Token: 0x0402BD6E RID: 179566
+		// Token: 0x0402708F RID: 159887
 		public const int TxtFailTip = 14;
 	}
 }

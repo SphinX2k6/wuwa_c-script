@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020010DF RID: 4319
+// Token: 0x02000593 RID: 1427
 public abstract class AdvanceNoticeTabViewBase : UiTabViewBase
 {
-	// Token: 0x0600707D RID: 28797 RVA: 0x0016F2F2 File Offset: 0x0016D4F2
+	// Token: 0x06004413 RID: 17427 RVA: 0x00177CAE File Offset: 0x00175EAE
 	protected override void OnBeforeCreate()
 	{
 		this.ViewModel = (this.Params as AdvanceNoticeViewModel);
 	}
 
-	// Token: 0x0600707E RID: 28798 RVA: 0x0016F308 File Offset: 0x0016D508
+	// Token: 0x06004414 RID: 17428 RVA: 0x00177CC4 File Offset: 0x00175EC4
 	protected override void OnBeforeShow()
 	{
 		UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -23,7 +23,7 @@ public abstract class AdvanceNoticeTabViewBase : UiTabViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600707F RID: 28799 RVA: 0x0016F33C File Offset: 0x0016D53C
+	// Token: 0x06004415 RID: 17429 RVA: 0x00177CF8 File Offset: 0x00175EF8
 	[NullableContext(1)]
 	protected void SetTextureWithPath(UUITexture texture, string path)
 	{
@@ -35,7 +35,7 @@ public abstract class AdvanceNoticeTabViewBase : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06007080 RID: 28800 RVA: 0x0016F370 File Offset: 0x0016D570
+	// Token: 0x06004416 RID: 17430 RVA: 0x00177D2C File Offset: 0x00175F2C
 	public void OnSwitchSubTab(int index)
 	{
 		UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -46,10 +46,10 @@ public abstract class AdvanceNoticeTabViewBase : UiTabViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x06007081 RID: 28801
+	// Token: 0x06004417 RID: 17431
 	protected abstract void RefreshView();
 
-	// Token: 0x04003428 RID: 13352
+	// Token: 0x040034C1 RID: 13505
 	[Nullable(2)]
 	protected AdvanceNoticeViewModel ViewModel;
 }

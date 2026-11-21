@@ -2,47 +2,47 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056EF RID: 22255
+	// Token: 0x020046C6 RID: 18118
 	public interface IKurotatoShopSelectCardData
 	{
-		// Token: 0x170087E2 RID: 34786
-		// (get) Token: 0x060389A6 RID: 231846
-		// (set) Token: 0x060389A7 RID: 231847
+		// Token: 0x17005BAA RID: 23466
+		// (get) Token: 0x0602D8B6 RID: 186550
+		// (set) Token: 0x0602D8B7 RID: 186551
 		int Id { get; set; }
 
-		// Token: 0x170087E3 RID: 34787
-		// (get) Token: 0x060389A8 RID: 231848
-		// (set) Token: 0x060389A9 RID: 231849
+		// Token: 0x17005BAB RID: 23467
+		// (get) Token: 0x0602D8B8 RID: 186552
+		// (set) Token: 0x0602D8B9 RID: 186553
 		int SelectionId { get; set; }
 
-		// Token: 0x170087E4 RID: 34788
-		// (get) Token: 0x060389AA RID: 231850
-		// (set) Token: 0x060389AB RID: 231851
+		// Token: 0x17005BAC RID: 23468
+		// (get) Token: 0x0602D8BA RID: 186554
+		// (set) Token: 0x0602D8BB RID: 186555
 		EKurotatoCardType CardType { get; set; }
 
-		// Token: 0x170087E5 RID: 34789
-		// (get) Token: 0x060389AC RID: 231852
-		// (set) Token: 0x060389AD RID: 231853
+		// Token: 0x17005BAD RID: 23469
+		// (get) Token: 0x0602D8BC RID: 186556
+		// (set) Token: 0x0602D8BD RID: 186557
 		int OriginalCost { get; set; }
 
-		// Token: 0x170087E6 RID: 34790
-		// (get) Token: 0x060389AE RID: 231854
-		// (set) Token: 0x060389AF RID: 231855
+		// Token: 0x17005BAE RID: 23470
+		// (get) Token: 0x0602D8BE RID: 186558
+		// (set) Token: 0x0602D8BF RID: 186559
 		int Cost { get; set; }
 
-		// Token: 0x170087E7 RID: 34791
-		// (get) Token: 0x060389B0 RID: 231856
-		// (set) Token: 0x060389B1 RID: 231857
+		// Token: 0x17005BAF RID: 23471
+		// (get) Token: 0x0602D8C0 RID: 186560
+		// (set) Token: 0x0602D8C1 RID: 186561
 		bool IsLock { get; set; }
 
-		// Token: 0x170087E8 RID: 34792
-		// (get) Token: 0x060389B2 RID: 231858
-		// (set) Token: 0x060389B3 RID: 231859
+		// Token: 0x17005BB0 RID: 23472
+		// (get) Token: 0x0602D8C2 RID: 186562
+		// (set) Token: 0x0602D8C3 RID: 186563
 		bool HasBuy { get; set; }
 
-		// Token: 0x170087E9 RID: 34793
-		// (get) Token: 0x060389B4 RID: 231860
-		// (set) Token: 0x060389B5 RID: 231861
+		// Token: 0x17005BB1 RID: 23473
+		// (get) Token: 0x0602D8C4 RID: 186564
+		// (set) Token: 0x0602D8C5 RID: 186565
 		bool IsRecommend { get; set; }
 	}
 }

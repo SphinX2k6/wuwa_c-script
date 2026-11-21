@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B5F RID: 2911
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C2D RID: 3117
 	public class ICategoryMatchingFoundation : IItemFoundationType
 	{
-		// Token: 0x0600430D RID: 17165 RVA: 0x000AB041 File Offset: 0x000A9241
+		// Token: 0x06004766 RID: 18278 RVA: 0x000B5105 File Offset: 0x000B3305
 		public static ICategoryMatchingFoundation Create(ICategoryMatchingFoundation? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700120C RID: 4620
-		// (get) Token: 0x0600430E RID: 17166 RVA: 0x000AB060 File Offset: 0x000A9260
+		// Token: 0x17001307 RID: 4871
+		// (get) Token: 0x06004767 RID: 18279 RVA: 0x000B5124 File Offset: 0x000B3324
 		public override EItemFoundation Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700120D RID: 4621
-		// (get) Token: 0x0600430F RID: 17167 RVA: 0x000AB070 File Offset: 0x000A9270
+		// Token: 0x17001308 RID: 4872
+		// (get) Token: 0x06004768 RID: 18280 RVA: 0x000B5134 File Offset: 0x000B3334
 		public virtual int? InitMatchEntity
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700120E RID: 4622
-		// (get) Token: 0x06004310 RID: 17168 RVA: 0x000AB0A8 File Offset: 0x000A92A8
+		// Token: 0x17001309 RID: 4873
+		// (get) Token: 0x06004769 RID: 18281 RVA: 0x000B516C File Offset: 0x000B336C
 		public virtual List<ICategoryMatchingConfig> MatchingConfigs
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040025D8 RID: 9688
+		// Token: 0x04002820 RID: 10272
 		private ICategoryMatchingFoundation Instance;
 
-		// Token: 0x040025D9 RID: 9689
+		// Token: 0x04002821 RID: 10273
 		private List<ICategoryMatchingConfig> _MatchingConfigsCache;
 
-		// Token: 0x040025DA RID: 9690
+		// Token: 0x04002822 RID: 10274
 		private bool _MatchingConfigsInited;
 	}
 }

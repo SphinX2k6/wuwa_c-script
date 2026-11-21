@@ -7,56 +7,56 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 {
-	// Token: 0x02005200 RID: 20992
+	// Token: 0x020041D0 RID: 16848
 	[NullableContext(1)]
 	public interface IBattleCardComponent
 	{
-		// Token: 0x170081F5 RID: 33269
-		// (get) Token: 0x06035B39 RID: 219961
-		// (set) Token: 0x06035B3A RID: 219962
+		// Token: 0x170055B5 RID: 21941
+		// (get) Token: 0x0602AA34 RID: 174644
+		// (set) Token: 0x0602AA35 RID: 174645
 		Action<EToggleState> CardClickCallback { get; set; }
 
-		// Token: 0x06035B3B RID: 219963
+		// Token: 0x0602AA36 RID: 174646
 		void SetCardData(PhantomCardData data);
 
-		// Token: 0x06035B3C RID: 219964
+		// Token: 0x0602AA37 RID: 174647
 		UniTask InitEffect();
 
-		// Token: 0x06035B3D RID: 219965
+		// Token: 0x0602AA38 RID: 174648
 		UniTask InitSpine();
 
-		// Token: 0x06035B3E RID: 219966
+		// Token: 0x0602AA39 RID: 174649
 		void Refresh(PhantomCardData data);
 
-		// Token: 0x06035B3F RID: 219967
+		// Token: 0x0602AA3A RID: 174650
 		UniTask RefreshAsync(PhantomCardData data);
 
-		// Token: 0x06035B40 RID: 219968
+		// Token: 0x0602AA3B RID: 174651
 		UUIExtendToggle GetCardToggle();
 
-		// Token: 0x06035B41 RID: 219969
+		// Token: 0x0602AA3C RID: 174652
 		void SetDebugText();
 
-		// Token: 0x06035B42 RID: 219970
+		// Token: 0x0602AA3D RID: 174653
 		void PlaySequence(string name);
 
-		// Token: 0x06035B43 RID: 219971
+		// Token: 0x0602AA3E RID: 174654
 		void PlaySpineAnim(string animName, bool isLoop);
 
-		// Token: 0x06035B44 RID: 219972
+		// Token: 0x0602AA3F RID: 174655
 		void PlayEffect();
 
-		// Token: 0x170081F6 RID: 33270
-		// (get) Token: 0x06035B45 RID: 219973
-		// (set) Token: 0x06035B46 RID: 219974
+		// Token: 0x170055B6 RID: 21942
+		// (get) Token: 0x0602AA40 RID: 174656
+		// (set) Token: 0x0602AA41 RID: 174657
 		Func<UUIItem, UniTask> PlayHitEffect { get; set; }
 
-		// Token: 0x06035B47 RID: 219975
+		// Token: 0x0602AA42 RID: 174658
 		UUIItem GetRootItem();
 
-		// Token: 0x170081F7 RID: 33271
-		// (get) Token: 0x06035B48 RID: 219976
-		// (set) Token: 0x06035B49 RID: 219977
+		// Token: 0x170055B7 RID: 21943
+		// (get) Token: 0x0602AA43 RID: 174659
+		// (set) Token: 0x0602AA44 RID: 174660
 		UiSequencePlayer RootUiSequencePlayer { get; set; }
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001113 RID: 4371
+	// Token: 0x02001249 RID: 4681
 	public struct SynthesisSkill : IFlatbufferObject
 	{
-		// Token: 0x170039A1 RID: 14753
-		// (get) Token: 0x0600DCB2 RID: 56498 RVA: 0x00329205 File Offset: 0x00327405
+		// Token: 0x17003CF7 RID: 15607
+		// (get) Token: 0x0600E9FD RID: 59901 RVA: 0x00354375 File Offset: 0x00352575
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DCB3 RID: 56499 RVA: 0x00329212 File Offset: 0x00327412
+		// Token: 0x0600E9FE RID: 59902 RVA: 0x00354382 File Offset: 0x00352582
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DCB4 RID: 56500 RVA: 0x0032921C File Offset: 0x0032741C
+		// Token: 0x0600E9FF RID: 59903 RVA: 0x0035438C File Offset: 0x0035258C
 		public static SynthesisSkill GetRootAsSynthesisSkill(ByteBuffer _bb)
 		{
 			return SynthesisSkill.GetRootAsSynthesisSkill(_bb, default(SynthesisSkill));
 		}
 
-		// Token: 0x0600DCB5 RID: 56501 RVA: 0x00329238 File Offset: 0x00327438
+		// Token: 0x0600EA00 RID: 59904 RVA: 0x003543A8 File Offset: 0x003525A8
 		public static SynthesisSkill GetRootAsSynthesisSkill(ByteBuffer _bb, SynthesisSkill obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DCB6 RID: 56502 RVA: 0x00329255 File Offset: 0x00327455
+		// Token: 0x0600EA01 RID: 59905 RVA: 0x003543C5 File Offset: 0x003525C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DCB7 RID: 56503 RVA: 0x00329264 File Offset: 0x00327464
+		// Token: 0x0600EA02 RID: 59906 RVA: 0x003543D4 File Offset: 0x003525D4
 		public SynthesisSkill __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170039A2 RID: 14754
-		// (get) Token: 0x0600DCB8 RID: 56504 RVA: 0x00329274 File Offset: 0x00327474
+		// Token: 0x17003CF8 RID: 15608
+		// (get) Token: 0x0600EA03 RID: 59907 RVA: 0x003543E4 File Offset: 0x003525E4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039A3 RID: 14755
-		// (get) Token: 0x0600DCB9 RID: 56505 RVA: 0x003292B0 File Offset: 0x003274B0
+		// Token: 0x17003CF9 RID: 15609
+		// (get) Token: 0x0600EA04 RID: 59908 RVA: 0x00354420 File Offset: 0x00352620
 		public int ExtraItemId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039A4 RID: 14756
-		// (get) Token: 0x0600DCBA RID: 56506 RVA: 0x003292EC File Offset: 0x003274EC
+		// Token: 0x17003CFA RID: 15610
+		// (get) Token: 0x0600EA05 RID: 59909 RVA: 0x0035445C File Offset: 0x0035265C
 		public int EffectiveProbability
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039A5 RID: 14757
-		// (get) Token: 0x0600DCBB RID: 56507 RVA: 0x00329328 File Offset: 0x00327528
+		// Token: 0x17003CFB RID: 15611
+		// (get) Token: 0x0600EA06 RID: 59910 RVA: 0x00354498 File Offset: 0x00352698
 		public int Typeld
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039A6 RID: 14758
-		// (get) Token: 0x0600DCBC RID: 56508 RVA: 0x00329368 File Offset: 0x00327568
+		// Token: 0x17003CFC RID: 15612
+		// (get) Token: 0x0600EA07 RID: 59911 RVA: 0x003544D8 File Offset: 0x003526D8
 		public int SkillDescription
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005250 RID: 21072
+		// Token: 0x04005893 RID: 22675
 		private Table __p;
 	}
 }

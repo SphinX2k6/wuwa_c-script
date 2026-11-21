@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001743 RID: 5955
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018C4 RID: 6340
 	public class HideGroup_SetValue
 	{
-		// Token: 0x04005055 RID: 20565
+		// Token: 0x0400548B RID: 21643
 		public string GroupKey;
 
-		// Token: 0x04005056 RID: 20566
+		// Token: 0x0400548C RID: 21644
 		public IHideGroupType HideConfig;
 
-		// Token: 0x04005057 RID: 20567
+		// Token: 0x0400548D RID: 21645
 		public bool? IsHidePasserByNpc;
 	}
 }

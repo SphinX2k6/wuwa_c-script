@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200615F RID: 24927
+	// Token: 0x020050DD RID: 20701
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeLevelInfoItem : GridProxyAbstract<RoverlikeLevelInfoItemData>
 	{
-		// Token: 0x0603F009 RID: 258057 RVA: 0x00F38760 File Offset: 0x00F36960
+		// Token: 0x06033CC9 RID: 212169 RVA: 0x00E7F634 File Offset: 0x00E7D834
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F00A RID: 258058 RVA: 0x00F387A8 File Offset: 0x00F369A8
+		// Token: 0x06033CCA RID: 212170 RVA: 0x00E7F67C File Offset: 0x00E7D87C
 		public override void Refresh(RoverlikeLevelInfoItemData data, bool isSelected, int gridIndex)
 		{
 			UUIText text = base.GetText(0);
@@ -39,22 +39,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			LguiUtil.Instance.SetLocalTextNew(text, data.TextId, data.Params);
 		}
 
-		// Token: 0x0603F00B RID: 258059 RVA: 0x00F387D8 File Offset: 0x00F369D8
+		// Token: 0x06033CCB RID: 212171 RVA: 0x00E7F6AC File Offset: 0x00E7D8AC
 		public void PlayRefreshAnim()
 		{
 		}
 
-		// Token: 0x0603F00C RID: 258060 RVA: 0x00F387DA File Offset: 0x00F369DA
+		// Token: 0x06033CCC RID: 212172 RVA: 0x00E7F6AE File Offset: 0x00E7D8AE
 		public override object GetKey(RoverlikeLevelInfoItemData data, int gridIndex)
 		{
 			return gridIndex;
 		}
 
-		// Token: 0x0200C3BE RID: 50110
+		// Token: 0x0200ADA5 RID: 44453
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B10B RID: 241931
+			// Token: 0x04035A6C RID: 219756
 			public const int TxtInfo = 0;
 		}
 	}

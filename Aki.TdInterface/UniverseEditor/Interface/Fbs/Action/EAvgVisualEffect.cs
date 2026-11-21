@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F1F RID: 24351
+	// Token: 0x02006563 RID: 25955
 	public enum EAvgVisualEffect : byte
 	{
-		// Token: 0x0400FC28 RID: 64552
+		// Token: 0x0401099E RID: 67998
 		Default,
-		// Token: 0x0400FC29 RID: 64553
+		// Token: 0x0401099F RID: 67999
 		Highlight,
-		// Token: 0x0400FC2A RID: 64554
+		// Token: 0x040109A0 RID: 68000
 		Darken
 	}
 }

@@ -5,18 +5,18 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017E7 RID: 6119
+// Token: 0x02000CA0 RID: 3232
 [NullableContext(1)]
 [Nullable(0)]
 public class ButtonAndSpriteItem : UiPanelBase
 {
-	// Token: 0x0600B2FE RID: 45822 RVA: 0x00287579 File Offset: 0x00285779
+	// Token: 0x060086E8 RID: 34536 RVA: 0x00291C4D File Offset: 0x0028FE4D
 	public ButtonAndSpriteItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600B2FF RID: 45823 RVA: 0x00287590 File Offset: 0x00285790
+	// Token: 0x060086E9 RID: 34537 RVA: 0x00291C64 File Offset: 0x0028FE64
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -39,14 +39,14 @@ public class ButtonAndSpriteItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B300 RID: 45824 RVA: 0x00287658 File Offset: 0x00285858
+	// Token: 0x060086EA RID: 34538 RVA: 0x00291D2C File Offset: 0x0028FF2C
 	public void RefreshSprite(string spritePath)
 	{
 		string resourcePath = UiResourceConfig.Instance.GetResourcePath(spritePath);
 		this.SetSpriteByPath(resourcePath, base.GetSprite(1), false, null, new Action<bool>(this.RefreshAllTransitionSprite));
 	}
 
-	// Token: 0x0600B301 RID: 45825 RVA: 0x00287698 File Offset: 0x00285898
+	// Token: 0x060086EB RID: 34539 RVA: 0x00291D6C File Offset: 0x0028FF6C
 	public void RefreshAllTransitionSprite(bool arg)
 	{
 		UUISpriteTransition uiSpriteTransition = base.GetUiSpriteTransition(2);
@@ -60,7 +60,7 @@ public class ButtonAndSpriteItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B302 RID: 45826 RVA: 0x002876C7 File Offset: 0x002858C7
+	// Token: 0x060086EC RID: 34540 RVA: 0x00291D9B File Offset: 0x0028FF9B
 	public void RefreshEnable(bool isEnable)
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -71,13 +71,13 @@ public class ButtonAndSpriteItem : UiPanelBase
 		button.SetSelfInteractive(isEnable);
 	}
 
-	// Token: 0x0600B303 RID: 45827 RVA: 0x002876DB File Offset: 0x002858DB
+	// Token: 0x060086ED RID: 34541 RVA: 0x00291DAF File Offset: 0x0028FFAF
 	public void BindCallback(Action onCallback)
 	{
 		this.OnCallback = onCallback;
 	}
 
-	// Token: 0x0600B304 RID: 45828 RVA: 0x002876E4 File Offset: 0x002858E4
+	// Token: 0x060086EE RID: 34542 RVA: 0x00291DB8 File Offset: 0x0028FFB8
 	private void OnClick()
 	{
 		if (this.OnCallback != null)
@@ -86,21 +86,21 @@ public class ButtonAndSpriteItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04005115 RID: 20757
+	// Token: 0x040051C0 RID: 20928
 	[Nullable(2)]
 	private Action OnCallback;
 
-	// Token: 0x02007DD4 RID: 32212
+	// Token: 0x02006F5A RID: 28506
 	[NullableContext(0)]
 	private class EButtonItemDefine
 	{
-		// Token: 0x0402930B RID: 168715
+		// Token: 0x04024636 RID: 149046
 		public const int Button = 0;
 
-		// Token: 0x0402930C RID: 168716
+		// Token: 0x04024637 RID: 149047
 		public const int Sprite = 1;
 
-		// Token: 0x0402930D RID: 168717
+		// Token: 0x04024638 RID: 149048
 		public const int SpriteTransition = 2;
 	}
 }

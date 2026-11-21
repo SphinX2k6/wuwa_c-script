@@ -6,14 +6,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001D1 RID: 465
+// Token: 0x020001D5 RID: 469
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyRoleHoldingHands.TsAnimNotifyRoleHoldingHands_C")]
 public class TsAnimNotifyRoleHoldingHands : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170004AB RID: 1195
-	// (get) Token: 0x06001D0D RID: 7437 RVA: 0x00093277 File Offset: 0x00091477
-	// (set) Token: 0x06001D0E RID: 7438 RVA: 0x00093287 File Offset: 0x00091487
+	// Token: 0x170004CD RID: 1229
+	// (get) Token: 0x06001DAA RID: 7594 RVA: 0x0009A00B File Offset: 0x0009820B
+	// (set) Token: 0x06001DAB RID: 7595 RVA: 0x0009A01B File Offset: 0x0009821B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool InvitationAccept
 	{
@@ -27,9 +27,9 @@ public class TsAnimNotifyRoleHoldingHands : TsAnimNotifyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x170004AC RID: 1196
-	// (get) Token: 0x06001D0F RID: 7439 RVA: 0x00093298 File Offset: 0x00091498
-	// (set) Token: 0x06001D10 RID: 7440 RVA: 0x000932A8 File Offset: 0x000914A8
+	// Token: 0x170004CE RID: 1230
+	// (get) Token: 0x06001DAC RID: 7596 RVA: 0x0009A02C File Offset: 0x0009822C
+	// (set) Token: 0x06001DAD RID: 7597 RVA: 0x0009A03C File Offset: 0x0009823C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool StartBinding
 	{
@@ -43,32 +43,28 @@ public class TsAnimNotifyRoleHoldingHands : TsAnimNotifyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06001D11 RID: 7441 RVA: 0x000932BC File Offset: 0x000914BC
+	// Token: 0x06001DAE RID: 7598 RVA: 0x0009A050 File Offset: 0x00098250
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyRoleHoldingHands) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), TsAnimNotifyRoleHoldingHands.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001D12 RID: 7442 RVA: 0x0009335C File Offset: 0x0009155C
+	// Token: 0x06001DAF RID: 7599 RVA: 0x0009A108 File Offset: 0x00098308
 	[NullableContext(2)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -103,37 +99,33 @@ public class TsAnimNotifyRoleHoldingHands : TsAnimNotifyBase, IUnrealUObject, IU
 		return true;
 	}
 
-	// Token: 0x06001D13 RID: 7443 RVA: 0x000933D0 File Offset: 0x000915D0
+	// Token: 0x06001DB0 RID: 7600 RVA: 0x0009A17C File Offset: 0x0009837C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyRoleHoldingHands) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyRoleHoldingHands.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001D14 RID: 7444 RVA: 0x0009344B File Offset: 0x0009164B
+	// Token: 0x06001DB1 RID: 7601 RVA: 0x0009A20C File Offset: 0x0009840C
 	[NullableContext(1)]
 	protected override string GetNotifyName_Implementation()
 	{
 		return "牵手";
 	}
 
-	// Token: 0x06001D15 RID: 7445 RVA: 0x00093452 File Offset: 0x00091652
+	// Token: 0x06001DB2 RID: 7602 RVA: 0x0009A213 File Offset: 0x00098413
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyRoleHoldingHands._ClassPtr == IntPtr.Zero)
@@ -143,23 +135,23 @@ public class TsAnimNotifyRoleHoldingHands : TsAnimNotifyBase, IUnrealUObject, IU
 		return TsAnimNotifyRoleHoldingHands._ClassPtr;
 	}
 
-	// Token: 0x06001D16 RID: 7446 RVA: 0x00093478 File Offset: 0x00091678
+	// Token: 0x06001DB3 RID: 7603 RVA: 0x0009A238 File Offset: 0x00098438
 	public TsAnimNotifyRoleHoldingHands() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyRoleHoldingHands.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001D17 RID: 7447 RVA: 0x000934A0 File Offset: 0x000916A0
+	// Token: 0x06001DB4 RID: 7604 RVA: 0x0009A260 File Offset: 0x00098460
 	[NullableContext(1)]
 	public TsAnimNotifyRoleHoldingHands(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyRoleHoldingHands.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001D18 RID: 7448 RVA: 0x000934D3 File Offset: 0x000916D3
+	// Token: 0x06001DB5 RID: 7605 RVA: 0x0009A293 File Offset: 0x00098493
 	protected TsAnimNotifyRoleHoldingHands(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001D19 RID: 7449 RVA: 0x000934DC File Offset: 0x000916DC
+	// Token: 0x06001DB6 RID: 7606 RVA: 0x0009A29C File Offset: 0x0009849C
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -167,25 +159,25 @@ public class TsAnimNotifyRoleHoldingHands : TsAnimNotifyBase, IUnrealUObject, IU
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001D1A RID: 7450 RVA: 0x0009350F File Offset: 0x0009170F
+	// Token: 0x06001DB7 RID: 7607 RVA: 0x0009A2CF File Offset: 0x000984CF
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x0400122A RID: 4650
+	// Token: 0x0400126D RID: 4717
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyRoleHoldingHands.TsAnimNotifyRoleHoldingHands_C";
 
-	// Token: 0x0400122B RID: 4651
+	// Token: 0x0400126E RID: 4718
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400122C RID: 4652
+	// Token: 0x0400126F RID: 4719
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400122D RID: 4653
+	// Token: 0x04001270 RID: 4720
 	private static int __PropertyOffset_InvitationAccept;
 
-	// Token: 0x0400122E RID: 4654
+	// Token: 0x04001271 RID: 4721
 	private static int __PropertyOffset_StartBinding;
 }

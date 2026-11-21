@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001924 RID: 6436
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AAD RID: 6829
 	public class ICommonTipReachChallenge : ICommonTipType
 	{
-		// Token: 0x060089F9 RID: 35321 RVA: 0x00145528 File Offset: 0x00143728
+		// Token: 0x06009125 RID: 37157 RVA: 0x00154E68 File Offset: 0x00153068
 		private ICommonTipReachChallenge_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060089FA RID: 35322 RVA: 0x00145560 File Offset: 0x00143760
+		// Token: 0x06009126 RID: 37158 RVA: 0x00154EA0 File Offset: 0x001530A0
 		public static ICommonTipReachChallenge Create([Nullable(2)] ICommonTipReachChallenge instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060089FB RID: 35323 RVA: 0x00145573 File Offset: 0x00143773
+		// Token: 0x06009127 RID: 37159 RVA: 0x00154EB3 File Offset: 0x001530B3
 		public static ICommonTipReachChallenge CreateFromSetValue([Nullable(2)] ICommonTipReachChallenge_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060089FC RID: 35324 RVA: 0x00145586 File Offset: 0x00143786
+		// Token: 0x06009128 RID: 37160 RVA: 0x00154EC6 File Offset: 0x001530C6
 		public new ICommonTipReachChallenge_SetValue ToSetValue()
 		{
 			return new ICommonTipReachChallenge_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C9B RID: 11419
-		// (get) Token: 0x060089FD RID: 35325 RVA: 0x001455B1 File Offset: 0x001437B1
-		// (set) Token: 0x060089FE RID: 35326 RVA: 0x001455DC File Offset: 0x001437DC
+		// Token: 0x17002E9B RID: 11931
+		// (get) Token: 0x06009129 RID: 37161 RVA: 0x00154EF1 File Offset: 0x001530F1
+		// (set) Token: 0x0600912A RID: 37162 RVA: 0x00154F1C File Offset: 0x0015311C
 		public override ECommonTipType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C9C RID: 11420
-		// (get) Token: 0x060089FF RID: 35327 RVA: 0x001455EA File Offset: 0x001437EA
-		// (set) Token: 0x06008A00 RID: 35328 RVA: 0x00145615 File Offset: 0x00143815
+		// Token: 0x17002E9C RID: 11932
+		// (get) Token: 0x0600912B RID: 37163 RVA: 0x00154F2A File Offset: 0x0015312A
+		// (set) Token: 0x0600912C RID: 37164 RVA: 0x00154F55 File Offset: 0x00153155
 		public virtual string TidMainText
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C9D RID: 11421
-		// (get) Token: 0x06008A01 RID: 35329 RVA: 0x00145623 File Offset: 0x00143823
-		// (set) Token: 0x06008A02 RID: 35330 RVA: 0x0014563A File Offset: 0x0014383A
+		// Token: 0x17002E9D RID: 11933
+		// (get) Token: 0x0600912D RID: 37165 RVA: 0x00154F63 File Offset: 0x00153163
+		// (set) Token: 0x0600912E RID: 37166 RVA: 0x00154F7A File Offset: 0x0015317A
 		[Nullable(2)]
 		public virtual string EdTidMainText
 		{
@@ -129,11 +127,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005656 RID: 22102
+		// Token: 0x04005AA6 RID: 23206
 		[Nullable(2)]
 		protected new ICommonTipReachChallenge FbInstance;
 
-		// Token: 0x04005657 RID: 22103
+		// Token: 0x04005AA7 RID: 23207
 		[Nullable(2)]
 		protected new ICommonTipReachChallenge_SetValue PocoInterface;
 	}

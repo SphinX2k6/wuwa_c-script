@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
 
-// Token: 0x020034B3 RID: 13491
+// Token: 0x02002A27 RID: 10791
 [NullableContext(1)]
 [Nullable(0)]
 public class CurveUtils
 {
-	// Token: 0x0601D628 RID: 120360 RVA: 0x0083257C File Offset: 0x0083077C
+	// Token: 0x0601B327 RID: 111399 RVA: 0x0085999C File Offset: 0x00857B9C
 	public static T CreateCurve<[Nullable(0)] T>(ECurveType curveType, params float[] @params) where T : CurveBase
 	{
 		return CurveUtils.CreateCurve(curveType, @params) as T;
 	}
 
-	// Token: 0x0601D629 RID: 120361 RVA: 0x00832590 File Offset: 0x00830790
+	// Token: 0x0601B328 RID: 111400 RVA: 0x008599B0 File Offset: 0x00857BB0
 	public static CurveBase CreateCurve(ECurveType curveType, params float[] @params)
 	{
 		if (curveType == ECurveType.Linear)
@@ -37,7 +37,7 @@ public class CurveUtils
 		}
 	}
 
-	// Token: 0x0601D62A RID: 120362 RVA: 0x008325EC File Offset: 0x008307EC
+	// Token: 0x0601B329 RID: 111401 RVA: 0x00859A0C File Offset: 0x00857C0C
 	public static CurveBase CreateCurveByStruct([Nullable(2)] SBaseCurve curveStruct)
 	{
 		if (curveStruct == null)
@@ -47,7 +47,7 @@ public class CurveUtils
 		return CurveUtils.CreateCurveByStructInternal(curveStruct);
 	}
 
-	// Token: 0x0601D62B RID: 120363 RVA: 0x00832608 File Offset: 0x00830808
+	// Token: 0x0601B32A RID: 111402 RVA: 0x00859A28 File Offset: 0x00857C28
 	public static CurveBase CreateCurveByStruct([Nullable(2)] SFloatCurve curveStruct)
 	{
 		if (curveStruct == null)
@@ -57,7 +57,7 @@ public class CurveUtils
 		return CurveUtils.CreateCurveByStructInternal(curveStruct);
 	}
 
-	// Token: 0x0601D62C RID: 120364 RVA: 0x00832624 File Offset: 0x00830824
+	// Token: 0x0601B32B RID: 111403 RVA: 0x00859A44 File Offset: 0x00857C44
 	private static CurveBase CreateCurveByStructInternal([Nullable(new byte[]
 	{
 		0,
@@ -219,18 +219,18 @@ public class CurveUtils
 		}
 	}
 
-	// Token: 0x0400E777 RID: 59255
+	// Token: 0x0400EC2B RID: 60459
 	[StaticVariableRuleIgnore]
 	public static readonly LinearCurve DefaultLinear = new LinearCurve();
 
-	// Token: 0x0400E778 RID: 59256
+	// Token: 0x0400EC2C RID: 60460
 	[StaticVariableRuleIgnore]
 	public static readonly SquaredCurve DefaultPara = new SquaredCurve(new float[]
 	{
 		2f
 	});
 
-	// Token: 0x0400E779 RID: 59257
+	// Token: 0x0400EC2D RID: 60461
 	[StaticVariableRuleIgnore]
 	public static readonly CubicCurve DefaultCubic = new CubicCurve(new float[1]);
 }

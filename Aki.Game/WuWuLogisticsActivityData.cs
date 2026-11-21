@@ -7,12 +7,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.ServerStorage;
 using CSharpScript.Game.ServerStorage.Container;
 
-// Token: 0x0200165C RID: 5724
+// Token: 0x02000B14 RID: 2836
 [NullableContext(1)]
 [Nullable(0)]
 public class WuWuLogisticsActivityData : ActivityBaseData
 {
-	// Token: 0x0600A15B RID: 41307 RVA: 0x0023984C File Offset: 0x00237A4C
+	// Token: 0x06007539 RID: 30009 RVA: 0x002436E8 File Offset: 0x002418E8
 	protected override void PhraseEx(ActivityData data)
 	{
 		if (data == null)
@@ -40,7 +40,7 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600A15C RID: 41308 RVA: 0x002398F8 File Offset: 0x00237AF8
+	// Token: 0x0600753A RID: 30010 RVA: 0x00243794 File Offset: 0x00241994
 	public void UpdateTaskData(ConditionTask taskInfo, int taskPackId = 0)
 	{
 		if (taskInfo == null)
@@ -61,7 +61,7 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		wuWuTaskData.State = this.ConvertTaskState(taskInfo.Status);
 	}
 
-	// Token: 0x0600A15D RID: 41309 RVA: 0x0023996C File Offset: 0x00237B6C
+	// Token: 0x0600753B RID: 30011 RVA: 0x00243808 File Offset: 0x00241A08
 	private void UpdateTaskPackData(WuWuTaskPack packInfo)
 	{
 		if (packInfo == null)
@@ -94,7 +94,7 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		wuWuTaskPackData.HadReward = packInfo.HadReward;
 	}
 
-	// Token: 0x0600A15E RID: 41310 RVA: 0x00239A2C File Offset: 0x00237C2C
+	// Token: 0x0600753C RID: 30012 RVA: 0x002438C8 File Offset: 0x00241AC8
 	private EWuWuTaskState ConvertTaskState(ConditionTaskState protoState)
 	{
 		if (protoState == ConditionTaskState.ConditionTaskFinish)
@@ -108,7 +108,7 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		return EWuWuTaskState.Taken;
 	}
 
-	// Token: 0x0600A15F RID: 41311 RVA: 0x00239A40 File Offset: 0x00237C40
+	// Token: 0x0600753D RID: 30013 RVA: 0x002438DC File Offset: 0x00241ADC
 	[NullableContext(2)]
 	public WuWuTaskData GetTaskById(int taskId)
 	{
@@ -120,7 +120,7 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x0600A160 RID: 41312 RVA: 0x00239A60 File Offset: 0x00237C60
+	// Token: 0x0600753E RID: 30014 RVA: 0x002438FC File Offset: 0x00241AFC
 	[NullableContext(2)]
 	public WuWuTaskPackData GetTaskPackById(int taskPackId)
 	{
@@ -132,7 +132,7 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x0600A161 RID: 41313 RVA: 0x00239A80 File Offset: 0x00237C80
+	// Token: 0x0600753F RID: 30015 RVA: 0x0024391C File Offset: 0x00241B1C
 	public bool HasRewardToClaim()
 	{
 		foreach (WuWuTaskData wuWuTaskData in this.TaskMap.Values)
@@ -145,7 +145,7 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600A162 RID: 41314 RVA: 0x00239AF0 File Offset: 0x00237CF0
+	// Token: 0x06007540 RID: 30016 RVA: 0x0024398C File Offset: 0x00241B8C
 	public int GetCompletedPackCount()
 	{
 		int num = 0;
@@ -159,19 +159,19 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x0600A163 RID: 41315 RVA: 0x00239B58 File Offset: 0x00237D58
+	// Token: 0x06007541 RID: 30017 RVA: 0x002439F4 File Offset: 0x00241BF4
 	public int GetTotalTaskCount()
 	{
 		return this.TaskMap.Count;
 	}
 
-	// Token: 0x0600A164 RID: 41316 RVA: 0x00239B65 File Offset: 0x00237D65
+	// Token: 0x06007542 RID: 30018 RVA: 0x00243A01 File Offset: 0x00241C01
 	public int GetTotalTaskPackCount()
 	{
 		return this.TaskPackMap.Count;
 	}
 
-	// Token: 0x0600A165 RID: 41317 RVA: 0x00239B74 File Offset: 0x00237D74
+	// Token: 0x06007543 RID: 30019 RVA: 0x00243A10 File Offset: 0x00241C10
 	public bool TargetPackIsAllCompleted(int packId)
 	{
 		IReadOnlyList<WuWuWeekTask> weekTaskByWrapId = WuWuLogisticsConfig.Instance.GetWeekTaskByWrapId(packId);
@@ -194,7 +194,7 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x0600A166 RID: 41318 RVA: 0x00239BF0 File Offset: 0x00237DF0
+	// Token: 0x06007544 RID: 30020 RVA: 0x00243A8C File Offset: 0x00241C8C
 	public bool TargetPackIsAllRewarded(int packId)
 	{
 		IReadOnlyList<WuWuWeekTask> weekTaskByWrapId = WuWuLogisticsConfig.Instance.GetWeekTaskByWrapId(packId);
@@ -217,14 +217,14 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x0600A167 RID: 41319 RVA: 0x00239C6C File Offset: 0x00237E6C
+	// Token: 0x06007545 RID: 30021 RVA: 0x00243B08 File Offset: 0x00241D08
 	public bool TargetPackIsFullyRewarded(int packId)
 	{
 		WuWuTaskPackData taskPackById = this.GetTaskPackById(packId);
 		return taskPackById != null && this.TargetPackIsAllRewarded(packId) && taskPackById.HadReward;
 	}
 
-	// Token: 0x0600A168 RID: 41320 RVA: 0x00239C98 File Offset: 0x00237E98
+	// Token: 0x06007546 RID: 30022 RVA: 0x00243B34 File Offset: 0x00241D34
 	public bool TargetPackChildTaskHasReceiveReward(int packId)
 	{
 		IReadOnlyList<WuWuWeekTask> weekTaskByWrapId = WuWuLogisticsConfig.Instance.GetWeekTaskByWrapId(packId);
@@ -247,21 +247,21 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600A169 RID: 41321 RVA: 0x00239D14 File Offset: 0x00237F14
+	// Token: 0x06007547 RID: 30023 RVA: 0x00243BB0 File Offset: 0x00241DB0
 	public bool TargetPackHasReceiveReward(int packId)
 	{
 		WuWuTaskPackData taskPackById = this.GetTaskPackById(packId);
 		return taskPackById != null && !taskPackById.HadReward && this.TargetPackIsAllCompleted(packId);
 	}
 
-	// Token: 0x0600A16A RID: 41322 RVA: 0x00239D40 File Offset: 0x00237F40
+	// Token: 0x06007548 RID: 30024 RVA: 0x00243BDC File Offset: 0x00241DDC
 	public bool IsPackUnlocked(int packId)
 	{
 		WuWuTaskPackData taskPackById = this.GetTaskPackById(packId);
 		return taskPackById != null && taskPackById.IsUnlock && (taskPackById.PrePackCfgId == 0 || (taskPackById.PrePackCfgId > 0 && this.TargetPackIsAllCompleted(taskPackById.PrePackCfgId)));
 	}
 
-	// Token: 0x0600A16B RID: 41323 RVA: 0x00239D84 File Offset: 0x00237F84
+	// Token: 0x06007549 RID: 30025 RVA: 0x00243C20 File Offset: 0x00241E20
 	public int GetDefaultOpenPackCfgId()
 	{
 		IReadOnlyList<WuWuTaskPackage> allTaskPackage = WuWuLogisticsConfig.Instance.GetAllTaskPackage();
@@ -322,7 +322,7 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		return num2;
 	}
 
-	// Token: 0x0600A16C RID: 41324 RVA: 0x00239F18 File Offset: 0x00238118
+	// Token: 0x0600754A RID: 30026 RVA: 0x00243DB4 File Offset: 0x00241FB4
 	public override bool GetExDataRedPointShowState()
 	{
 		IReadOnlyList<WuWuTaskPackage> allTaskPackage = WuWuLogisticsConfig.Instance.GetAllTaskPackage();
@@ -354,7 +354,7 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600A16D RID: 41325 RVA: 0x00239FEC File Offset: 0x002381EC
+	// Token: 0x0600754B RID: 30027 RVA: 0x00243E88 File Offset: 0x00242088
 	public bool HasFirstUnlockPack()
 	{
 		IReadOnlyList<WuWuTaskPackage> allTaskPackage = WuWuLogisticsConfig.Instance.GetAllTaskPackage();
@@ -373,7 +373,7 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600A16E RID: 41326 RVA: 0x0023A084 File Offset: 0x00238284
+	// Token: 0x0600754C RID: 30028 RVA: 0x00243F20 File Offset: 0x00242120
 	public void SetFirstUnlockPack()
 	{
 		IReadOnlyList<WuWuTaskPackage> allTaskPackage = WuWuLogisticsConfig.Instance.GetAllTaskPackage();
@@ -392,7 +392,7 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x0600A16F RID: 41327 RVA: 0x0023A144 File Offset: 0x00238344
+	// Token: 0x0600754D RID: 30029 RVA: 0x00243FE0 File Offset: 0x002421E0
 	[NullableContext(2)]
 	public List<int> GetTargetPackCanReceiveTaskIds(int packId)
 	{
@@ -413,7 +413,7 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x0600A170 RID: 41328 RVA: 0x0023A1C8 File Offset: 0x002383C8
+	// Token: 0x0600754E RID: 30030 RVA: 0x00244064 File Offset: 0x00242264
 	protected override bool GetExDataFinishShowState()
 	{
 		if (this.TaskMap.Count == 0)
@@ -435,9 +435,9 @@ public class WuWuLogisticsActivityData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x0400495F RID: 18783
+	// Token: 0x04004A05 RID: 18949
 	private readonly Dictionary<int, WuWuTaskData> TaskMap = new Dictionary<int, WuWuTaskData>();
 
-	// Token: 0x04004960 RID: 18784
+	// Token: 0x04004A06 RID: 18950
 	private readonly Dictionary<int, WuWuTaskPackData> TaskPackMap = new Dictionary<int, WuWuTaskPackData>();
 }

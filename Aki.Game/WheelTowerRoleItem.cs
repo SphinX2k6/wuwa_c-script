@@ -8,7 +8,7 @@ using CSharpScript.Game.Module.Skin;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020015CE RID: 5582
+// Token: 0x02000A86 RID: 2694
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,17 +17,17 @@ using UnrealEngine;
 })]
 public class WheelTowerRoleItem : GridProxyAbstract<RoleDataWithBranch>
 {
-	// Token: 0x17000D81 RID: 3457
-	// (get) Token: 0x06009E19 RID: 40473 RVA: 0x00226866 File Offset: 0x00224A66
-	// (set) Token: 0x06009E1A RID: 40474 RVA: 0x0022686E File Offset: 0x00224A6E
+	// Token: 0x17000DA2 RID: 3490
+	// (get) Token: 0x060071F7 RID: 29175 RVA: 0x00230616 File Offset: 0x0022E816
+	// (set) Token: 0x060071F8 RID: 29176 RVA: 0x0023061E File Offset: 0x0022E81E
 	public bool IsOnlyShowIcon { get; set; }
 
-	// Token: 0x17000D82 RID: 3458
-	// (get) Token: 0x06009E1B RID: 40475 RVA: 0x00226877 File Offset: 0x00224A77
-	// (set) Token: 0x06009E1C RID: 40476 RVA: 0x0022687F File Offset: 0x00224A7F
+	// Token: 0x17000DA3 RID: 3491
+	// (get) Token: 0x060071F9 RID: 29177 RVA: 0x00230627 File Offset: 0x0022E827
+	// (set) Token: 0x060071FA RID: 29178 RVA: 0x0023062F File Offset: 0x0022E82F
 	public bool CanClick { get; set; } = true;
 
-	// Token: 0x06009E1D RID: 40477 RVA: 0x00226888 File Offset: 0x00224A88
+	// Token: 0x060071FB RID: 29179 RVA: 0x00230638 File Offset: 0x0022E838
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -57,7 +57,7 @@ public class WheelTowerRoleItem : GridProxyAbstract<RoleDataWithBranch>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009E1E RID: 40478 RVA: 0x002269FC File Offset: 0x00224BFC
+	// Token: 0x060071FC RID: 29180 RVA: 0x002307AC File Offset: 0x0022E9AC
 	public override void Refresh(RoleDataWithBranch data, bool isSelected, int gridIndex)
 	{
 		int roleId = data.RoleId;
@@ -166,7 +166,7 @@ public class WheelTowerRoleItem : GridProxyAbstract<RoleDataWithBranch>
 		}
 	}
 
-	// Token: 0x06009E1F RID: 40479 RVA: 0x00226C48 File Offset: 0x00224E48
+	// Token: 0x060071FD RID: 29181 RVA: 0x002309F8 File Offset: 0x0022EBF8
 	private void SetSkillBranchIconToLeft(bool isLeft)
 	{
 		UUIItem item = base.GetItem(9);

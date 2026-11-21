@@ -11,22 +11,22 @@ using UnrealEngine;
 [Nullable(0)]
 public class AiAlertClass
 {
-	// Token: 0x06000CDB RID: 3291 RVA: 0x0004421B File Offset: 0x0004241B
+	// Token: 0x06000CE1 RID: 3297 RVA: 0x00044DAF File Offset: 0x00042FAF
 	public AiAlertClass(AiController aiController)
 	{
 		this.AiController = aiController;
 	}
 
-	// Token: 0x06000CDC RID: 3292 RVA: 0x0004423C File Offset: 0x0004243C
+	// Token: 0x06000CE2 RID: 3298 RVA: 0x00044DD0 File Offset: 0x00042FD0
 	public void Init(CharacterActorComponent actorComp)
 	{
 		this.ActorComp = actorComp;
 		EventSystem.Instance.AddWithTarget<float>(this.ActorComp.Entity, EEventName.SmartObjectAiAlterNotify, new Action<float>(this.ExtraModifyAlterValue));
 	}
 
-	// Token: 0x17000256 RID: 598
-	// (get) Token: 0x06000CDD RID: 3293 RVA: 0x0004426C File Offset: 0x0004246C
-	// (set) Token: 0x06000CDE RID: 3294 RVA: 0x00044274 File Offset: 0x00042474
+	// Token: 0x17000259 RID: 601
+	// (get) Token: 0x06000CE3 RID: 3299 RVA: 0x00044E00 File Offset: 0x00043000
+	// (set) Token: 0x06000CE4 RID: 3300 RVA: 0x00044E08 File Offset: 0x00043008
 	public AiAlert? AiAlertConfig
 	{
 		get
@@ -80,8 +80,8 @@ public class AiAlertClass
 		}
 	}
 
-	// Token: 0x17000257 RID: 599
-	// (get) Token: 0x06000CDF RID: 3295 RVA: 0x00044477 File Offset: 0x00042677
+	// Token: 0x1700025A RID: 602
+	// (get) Token: 0x06000CE5 RID: 3301 RVA: 0x0004500B File Offset: 0x0004320B
 	public float AlertValue
 	{
 		get
@@ -90,7 +90,7 @@ public class AiAlertClass
 		}
 	}
 
-	// Token: 0x06000CE0 RID: 3296 RVA: 0x00044480 File Offset: 0x00042680
+	// Token: 0x06000CE6 RID: 3302 RVA: 0x00045014 File Offset: 0x00043214
 	public void Clear()
 	{
 		this.CurrentValue = 0f;
@@ -103,7 +103,7 @@ public class AiAlertClass
 		EventSystem.Instance.RemoveWithTarget<float>(this.ActorComp.Entity, EEventName.SmartObjectAiAlterNotify, new Action<float>(this.ExtraModifyAlterValue));
 	}
 
-	// Token: 0x06000CE1 RID: 3297 RVA: 0x0004452C File Offset: 0x0004272C
+	// Token: 0x06000CE7 RID: 3303 RVA: 0x000450C0 File Offset: 0x000432C0
 	public void Tick(float delta)
 	{
 		GameModeModel instance = GameModeModel.Instance;
@@ -203,7 +203,7 @@ public class AiAlertClass
 		this.ProcessAlertness();
 	}
 
-	// Token: 0x06000CE2 RID: 3298 RVA: 0x00044938 File Offset: 0x00042B38
+	// Token: 0x06000CE8 RID: 3304 RVA: 0x000454CC File Offset: 0x000436CC
 	private void ProcessAlertness()
 	{
 		switch (this.AiAlertConfig.Value.AlertnessType)
@@ -222,7 +222,7 @@ public class AiAlertClass
 		}
 	}
 
-	// Token: 0x06000CE3 RID: 3299 RVA: 0x00044988 File Offset: 0x00042B88
+	// Token: 0x06000CE9 RID: 3305 RVA: 0x0004551C File Offset: 0x0004371C
 	private void JudgeAlertState()
 	{
 		if (this.CurrentValue <= 1f || this.IsAlertState)
@@ -249,7 +249,7 @@ public class AiAlertClass
 		EventSystem.Instance.Emit<int, global::Vector, AActor>(EEventName.AddAlterMark, this.AiController.CharActorComp.Entity.Id, global::Vector.Create(), this.AiController.CharActorComp.Owner);
 	}
 
-	// Token: 0x06000CE4 RID: 3300 RVA: 0x00044A50 File Offset: 0x00042C50
+	// Token: 0x06000CEA RID: 3306 RVA: 0x000455E4 File Offset: 0x000437E4
 	private void JudgeTrackingAlertness()
 	{
 		Entity entity = this.ActorComp.Entity;
@@ -276,7 +276,7 @@ public class AiAlertClass
 		}
 	}
 
-	// Token: 0x06000CE5 RID: 3301 RVA: 0x00044AF6 File Offset: 0x00042CF6
+	// Token: 0x06000CEB RID: 3307 RVA: 0x0004568A File Offset: 0x0004388A
 	private void JudgeEavesdropAlertness()
 	{
 		if (this.CurrentValue >= 100f)
@@ -285,7 +285,7 @@ public class AiAlertClass
 		}
 	}
 
-	// Token: 0x06000CE6 RID: 3302 RVA: 0x00044B25 File Offset: 0x00042D25
+	// Token: 0x06000CEC RID: 3308 RVA: 0x000456B9 File Offset: 0x000438B9
 	public void ExtraModifyAlterValue(float value)
 	{
 		this.CurrentValue += value;
@@ -293,56 +293,56 @@ public class AiAlertClass
 		this.ProcessAlertness();
 	}
 
-	// Token: 0x06000CE7 RID: 3303 RVA: 0x00044B5B File Offset: 0x00042D5B
+	// Token: 0x06000CED RID: 3309 RVA: 0x000456EF File Offset: 0x000438EF
 	public bool CheckInAlertRange()
 	{
 		return this.InAlertRange;
 	}
 
-	// Token: 0x04000A31 RID: 2609
+	// Token: 0x04000A39 RID: 2617
 	public const float MAX_ALERT = 100f;
 
-	// Token: 0x04000A32 RID: 2610
+	// Token: 0x04000A3A RID: 2618
 	private const float ALERT_THRESHOLD = 1f;
 
-	// Token: 0x04000A33 RID: 2611
+	// Token: 0x04000A3B RID: 2619
 	private const int SHOW_UI_FRAMES = 5;
 
-	// Token: 0x04000A34 RID: 2612
+	// Token: 0x04000A3C RID: 2620
 	private AiAlert? AiAlertInternal;
 
-	// Token: 0x04000A35 RID: 2613
+	// Token: 0x04000A3D RID: 2621
 	private float CurrentValue;
 
-	// Token: 0x04000A36 RID: 2614
+	// Token: 0x04000A3E RID: 2622
 	private float CosLimit;
 
-	// Token: 0x04000A37 RID: 2615
+	// Token: 0x04000A3F RID: 2623
 	private float SquaredDistLimit;
 
-	// Token: 0x04000A38 RID: 2616
+	// Token: 0x04000A40 RID: 2624
 	[Nullable(2)]
 	public UKuroBooleanEventBinder CallbackEvent;
 
-	// Token: 0x04000A39 RID: 2617
+	// Token: 0x04000A41 RID: 2625
 	private readonly global::Vector TmpVector = global::Vector.Create();
 
-	// Token: 0x04000A3A RID: 2618
+	// Token: 0x04000A42 RID: 2626
 	private int ShowUiFrameCount = 5;
 
-	// Token: 0x04000A3B RID: 2619
+	// Token: 0x04000A43 RID: 2627
 	private bool IsAlertState;
 
-	// Token: 0x04000A3C RID: 2620
+	// Token: 0x04000A44 RID: 2628
 	private bool IsFullAlert;
 
-	// Token: 0x04000A3D RID: 2621
+	// Token: 0x04000A45 RID: 2629
 	private bool InAlertRange;
 
-	// Token: 0x04000A3E RID: 2622
+	// Token: 0x04000A46 RID: 2630
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x04000A3F RID: 2623
+	// Token: 0x04000A47 RID: 2631
 	private readonly AiController AiController;
 }

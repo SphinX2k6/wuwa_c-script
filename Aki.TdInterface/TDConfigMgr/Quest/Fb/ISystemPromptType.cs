@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012FB RID: 4859
+	// Token: 0x0200144B RID: 5195
 	public class ISystemPromptType
 	{
-		// Token: 0x06006ED1 RID: 28369 RVA: 0x0010B9F6 File Offset: 0x00109BF6
-		[NullableContext(1)]
+		// Token: 0x06007571 RID: 30065 RVA: 0x00119F62 File Offset: 0x00118162
 		public static ISystemPromptType Create(ISystemPromptType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170022AE RID: 8878
-		// (get) Token: 0x06006ED2 RID: 28370 RVA: 0x0010BA15 File Offset: 0x00109C15
+		// Token: 0x1700247D RID: 9341
+		// (get) Token: 0x06007572 RID: 30066 RVA: 0x00119F81 File Offset: 0x00118181
 		public virtual ESystemPromptType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F87 RID: 16263
+		// Token: 0x04004303 RID: 17155
 		private ISystemPromptType Instance;
 	}
 }

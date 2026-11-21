@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009D4 RID: 2516
+	// Token: 0x02000A99 RID: 2713
 	public static class EPilotThrowPointVisualTypeExtensions
 	{
-		// Token: 0x060037EB RID: 14315 RVA: 0x000912AC File Offset: 0x0008F4AC
+		// Token: 0x06003BC3 RID: 15299 RVA: 0x00099B6C File Offset: 0x00097D6C
 		public static string ToEnumString(this EPilotThrowPointVisualType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037EC RID: 14316 RVA: 0x000912F4 File Offset: 0x0008F4F4
+		// Token: 0x06003BC4 RID: 15300 RVA: 0x00099BB4 File Offset: 0x00097DB4
 		public static EPilotThrowPointVisualType FromString(string name)
 		{
 			EPilotThrowPointVisualType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037ED RID: 14317 RVA: 0x00091320 File Offset: 0x0008F520
+		// Token: 0x06003BC5 RID: 15301 RVA: 0x00099BE0 File Offset: 0x00097DE0
 		public static bool TryFromString(string name, out EPilotThrowPointVisualType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060037EE RID: 14318 RVA: 0x00091376 File Offset: 0x0008F576
+		// Token: 0x06003BC6 RID: 15302 RVA: 0x00099C36 File Offset: 0x00097E36
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060037EF RID: 14319 RVA: 0x00091396 File Offset: 0x0008F596
+		// Token: 0x06003BC7 RID: 15303 RVA: 0x00099C56 File Offset: 0x00097E56
 		public static EPilotThrowPointVisualType[] GetValues()
 		{
 			return new EPilotThrowPointVisualType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060037F0 RID: 14320 RVA: 0x000913A6 File Offset: 0x0008F5A6
+		// Token: 0x06003BC8 RID: 15304 RVA: 0x00099C66 File Offset: 0x00097E66
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023B4 RID: 9140
+	// Token: 0x02002645 RID: 9797
 	public class EOccupationActionTypeJsonConverter : JsonConverter<EOccupationActionType>
 	{
-		// Token: 0x0600C72A RID: 50986 RVA: 0x001D294C File Offset: 0x001D0B4C
+		// Token: 0x0600D392 RID: 54162 RVA: 0x001EBD80 File Offset: 0x001E9F80
 		public override EOccupationActionType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EOccupationActionTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C72B RID: 50987 RVA: 0x001D2970 File Offset: 0x001D0B70
+		// Token: 0x0600D393 RID: 54163 RVA: 0x001EBDA4 File Offset: 0x001E9FA4
 		public override void Write(Utf8JsonWriter writer, EOccupationActionType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

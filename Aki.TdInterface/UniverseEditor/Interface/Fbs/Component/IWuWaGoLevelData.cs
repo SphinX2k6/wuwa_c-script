@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BC4 RID: 23492
+	// Token: 0x020061DA RID: 25050
 	public struct IWuWaGoLevelData : IFlatbufferObject
 	{
-		// Token: 0x1700B17C RID: 45436
-		// (get) Token: 0x060283C1 RID: 164801 RVA: 0x0058722D File Offset: 0x0058542D
+		// Token: 0x1700BAC4 RID: 47812
+		// (get) Token: 0x0602A985 RID: 174469 RVA: 0x005CECBD File Offset: 0x005CCEBD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060283C2 RID: 164802 RVA: 0x0058723A File Offset: 0x0058543A
+		// Token: 0x0602A986 RID: 174470 RVA: 0x005CECCA File Offset: 0x005CCECA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060283C3 RID: 164803 RVA: 0x00587244 File Offset: 0x00585444
+		// Token: 0x0602A987 RID: 174471 RVA: 0x005CECD4 File Offset: 0x005CCED4
 		public static IWuWaGoLevelData GetRootAsIWuWaGoLevelData(ByteBuffer _bb)
 		{
 			return IWuWaGoLevelData.GetRootAsIWuWaGoLevelData(_bb, default(IWuWaGoLevelData));
 		}
 
-		// Token: 0x060283C4 RID: 164804 RVA: 0x00587260 File Offset: 0x00585460
+		// Token: 0x0602A988 RID: 174472 RVA: 0x005CECF0 File Offset: 0x005CCEF0
 		public static IWuWaGoLevelData GetRootAsIWuWaGoLevelData(ByteBuffer _bb, IWuWaGoLevelData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060283C5 RID: 164805 RVA: 0x0058727D File Offset: 0x0058547D
+		// Token: 0x0602A989 RID: 174473 RVA: 0x005CED0D File Offset: 0x005CCF0D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060283C6 RID: 164806 RVA: 0x0058728C File Offset: 0x0058548C
+		// Token: 0x0602A98A RID: 174474 RVA: 0x005CED1C File Offset: 0x005CCF1C
 		public IWuWaGoLevelData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B17D RID: 45437
-		// (get) Token: 0x060283C7 RID: 164807 RVA: 0x0058729C File Offset: 0x0058549C
+		// Token: 0x1700BAC5 RID: 47813
+		// (get) Token: 0x0602A98B RID: 174475 RVA: 0x005CED2C File Offset: 0x005CCF2C
 		public string Key
 		{
 			get
@@ -63,19 +63,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060283C8 RID: 164808 RVA: 0x005872D3 File Offset: 0x005854D3
+		// Token: 0x0602A98C RID: 174476 RVA: 0x005CED63 File Offset: 0x005CCF63
 		public Span<byte> GetKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x060283C9 RID: 164809 RVA: 0x005872E2 File Offset: 0x005854E2
+		// Token: 0x0602A98D RID: 174477 RVA: 0x005CED72 File Offset: 0x005CCF72
 		public byte[] GetKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x060283CA RID: 164810 RVA: 0x005872F0 File Offset: 0x005854F0
+		// Token: 0x0602A98E RID: 174478 RVA: 0x005CED80 File Offset: 0x005CCF80
 		public IWuWaGoGridData? GridDatas(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -86,8 +86,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IWuWaGoGridData?(default(IWuWaGoGridData).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700B17E RID: 45438
-		// (get) Token: 0x060283CB RID: 164811 RVA: 0x00587350 File Offset: 0x00585550
+		// Token: 0x1700BAC6 RID: 47814
+		// (get) Token: 0x0602A98F RID: 174479 RVA: 0x005CEDE0 File Offset: 0x005CCFE0
 		public int GridDatasLength
 		{
 			get
@@ -101,7 +101,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060283CC RID: 164812 RVA: 0x0058737C File Offset: 0x0058557C
+		// Token: 0x0602A990 RID: 174480 RVA: 0x005CEE0C File Offset: 0x005CD00C
 		public IWuWaGoRoleInfo? RoleInfos(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -112,8 +112,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IWuWaGoRoleInfo?(default(IWuWaGoRoleInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700B17F RID: 45439
-		// (get) Token: 0x060283CD RID: 164813 RVA: 0x005873DC File Offset: 0x005855DC
+		// Token: 0x1700BAC7 RID: 47815
+		// (get) Token: 0x0602A991 RID: 174481 RVA: 0x005CEE6C File Offset: 0x005CD06C
 		public int RoleInfosLength
 		{
 			get
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060283CE RID: 164814 RVA: 0x00587407 File Offset: 0x00585607
+		// Token: 0x0602A992 RID: 174482 RVA: 0x005CEE97 File Offset: 0x005CD097
 		public static Offset<IWuWaGoLevelData> CreateIWuWaGoLevelData(FlatBufferBuilder builder, StringOffset KeyOffset = default(StringOffset), VectorOffset GridDatasOffset = default(VectorOffset), VectorOffset RoleInfosOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -137,25 +137,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWuWaGoLevelData.EndIWuWaGoLevelData(builder);
 		}
 
-		// Token: 0x060283CF RID: 164815 RVA: 0x0058742B File Offset: 0x0058562B
+		// Token: 0x0602A993 RID: 174483 RVA: 0x005CEEBB File Offset: 0x005CD0BB
 		public static void StartIWuWaGoLevelData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060283D0 RID: 164816 RVA: 0x00587434 File Offset: 0x00585634
+		// Token: 0x0602A994 RID: 174484 RVA: 0x005CEEC4 File Offset: 0x005CD0C4
 		public static void AddKey(FlatBufferBuilder builder, StringOffset keyOffset)
 		{
 			builder.AddOffset(0, keyOffset.Value, 0);
 		}
 
-		// Token: 0x060283D1 RID: 164817 RVA: 0x00587444 File Offset: 0x00585644
+		// Token: 0x0602A995 RID: 174485 RVA: 0x005CEED4 File Offset: 0x005CD0D4
 		public static void AddGridDatas(FlatBufferBuilder builder, VectorOffset gridDatasOffset)
 		{
 			builder.AddOffset(1, gridDatasOffset.Value, 0);
 		}
 
-		// Token: 0x060283D2 RID: 164818 RVA: 0x00587454 File Offset: 0x00585654
+		// Token: 0x0602A996 RID: 174486 RVA: 0x005CEEE4 File Offset: 0x005CD0E4
 		public static VectorOffset CreateGridDatasVector(FlatBufferBuilder builder, Offset<IWuWaGoGridData>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -166,7 +166,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060283D3 RID: 164819 RVA: 0x00587494 File Offset: 0x00585694
+		// Token: 0x0602A997 RID: 174487 RVA: 0x005CEF24 File Offset: 0x005CD124
 		public static VectorOffset CreateGridDatasVectorBlock(FlatBufferBuilder builder, Offset<IWuWaGoGridData>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060283D4 RID: 164820 RVA: 0x005874AE File Offset: 0x005856AE
+		// Token: 0x0602A998 RID: 174488 RVA: 0x005CEF3E File Offset: 0x005CD13E
 		public static VectorOffset CreateGridDatasVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IWuWaGoGridData>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060283D5 RID: 164821 RVA: 0x005874CC File Offset: 0x005856CC
+		// Token: 0x0602A999 RID: 174489 RVA: 0x005CEF5C File Offset: 0x005CD15C
 		public static VectorOffset CreateGridDatasVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -190,19 +190,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060283D6 RID: 164822 RVA: 0x005874E5 File Offset: 0x005856E5
+		// Token: 0x0602A99A RID: 174490 RVA: 0x005CEF75 File Offset: 0x005CD175
 		public static void StartGridDatasVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060283D7 RID: 164823 RVA: 0x005874F0 File Offset: 0x005856F0
+		// Token: 0x0602A99B RID: 174491 RVA: 0x005CEF80 File Offset: 0x005CD180
 		public static void AddRoleInfos(FlatBufferBuilder builder, VectorOffset roleInfosOffset)
 		{
 			builder.AddOffset(2, roleInfosOffset.Value, 0);
 		}
 
-		// Token: 0x060283D8 RID: 164824 RVA: 0x00587500 File Offset: 0x00585700
+		// Token: 0x0602A99C RID: 174492 RVA: 0x005CEF90 File Offset: 0x005CD190
 		public static VectorOffset CreateRoleInfosVector(FlatBufferBuilder builder, Offset<IWuWaGoRoleInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -213,7 +213,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060283D9 RID: 164825 RVA: 0x00587540 File Offset: 0x00585740
+		// Token: 0x0602A99D RID: 174493 RVA: 0x005CEFD0 File Offset: 0x005CD1D0
 		public static VectorOffset CreateRoleInfosVectorBlock(FlatBufferBuilder builder, Offset<IWuWaGoRoleInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -221,7 +221,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060283DA RID: 164826 RVA: 0x0058755A File Offset: 0x0058575A
+		// Token: 0x0602A99E RID: 174494 RVA: 0x005CEFEA File Offset: 0x005CD1EA
 		public static VectorOffset CreateRoleInfosVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IWuWaGoRoleInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -229,7 +229,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060283DB RID: 164827 RVA: 0x00587578 File Offset: 0x00585778
+		// Token: 0x0602A99F RID: 174495 RVA: 0x005CF008 File Offset: 0x005CD208
 		public static VectorOffset CreateRoleInfosVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -237,19 +237,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060283DC RID: 164828 RVA: 0x00587591 File Offset: 0x00585791
+		// Token: 0x0602A9A0 RID: 174496 RVA: 0x005CF021 File Offset: 0x005CD221
 		public static void StartRoleInfosVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060283DD RID: 164829 RVA: 0x0058759C File Offset: 0x0058579C
+		// Token: 0x0602A9A1 RID: 174497 RVA: 0x005CF02C File Offset: 0x005CD22C
 		public static Offset<IWuWaGoLevelData> EndIWuWaGoLevelData(FlatBufferBuilder builder)
 		{
 			return new Offset<IWuWaGoLevelData>(builder.EndTable());
 		}
 
-		// Token: 0x060283DE RID: 164830 RVA: 0x005875AC File Offset: 0x005857AC
+		// Token: 0x0602A9A2 RID: 174498 RVA: 0x005CF03C File Offset: 0x005CD23C
 		public IWuWaGoLevelDataT UnPack()
 		{
 			IWuWaGoLevelDataT wuWaGoLevelDataT = new IWuWaGoLevelDataT();
@@ -257,7 +257,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return wuWaGoLevelDataT;
 		}
 
-		// Token: 0x060283DF RID: 164831 RVA: 0x005875C8 File Offset: 0x005857C8
+		// Token: 0x0602A9A3 RID: 174499 RVA: 0x005CF058 File Offset: 0x005CD258
 		public void UnPackTo(IWuWaGoLevelDataT _o)
 		{
 			_o.Key = this.Key;
@@ -273,7 +273,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060283E0 RID: 164832 RVA: 0x00587688 File Offset: 0x00585888
+		// Token: 0x0602A9A4 RID: 174500 RVA: 0x005CF118 File Offset: 0x005CD318
 		public static Offset<IWuWaGoLevelData> Pack(FlatBufferBuilder builder, IWuWaGoLevelDataT _o)
 		{
 			if (_o == null)
@@ -304,7 +304,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWuWaGoLevelData.CreateIWuWaGoLevelData(builder, keyOffset, gridDatasOffset, roleInfosOffset);
 		}
 
-		// Token: 0x0400F33D RID: 62269
+		// Token: 0x04010043 RID: 65603
 		private Table __p;
 	}
 }

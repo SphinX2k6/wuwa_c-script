@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 {
-	// Token: 0x02006A8D RID: 27277
+	// Token: 0x02005BEA RID: 23530
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LocationBinding
 	{
-		// Token: 0x06043C77 RID: 277623 RVA: 0x010970E4 File Offset: 0x010952E4
+		// Token: 0x06039CC5 RID: 236741 RVA: 0x0103B938 File Offset: 0x01039B38
 		public LocationBinding(Vector Location)
 		{
 			this.Location = Location;
 		}
 
-		// Token: 0x0402369B RID: 145051
+		// Token: 0x0401E88D RID: 125069
 		public readonly Vector Location;
 	}
 }

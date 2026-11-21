@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000273 RID: 627
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002B6 RID: 694
 	public class IConnectorLogicType
 	{
-		// Token: 0x06000B73 RID: 2931 RVA: 0x0002DEF4 File Offset: 0x0002C0F4
+		// Token: 0x06000C8D RID: 3213 RVA: 0x00030BE4 File Offset: 0x0002EDE4
 		private IConnectorLogicType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000B74 RID: 2932 RVA: 0x0002DF2C File Offset: 0x0002C12C
+		// Token: 0x06000C8E RID: 3214 RVA: 0x00030C1C File Offset: 0x0002EE1C
 		public static IConnectorLogicType Create([Nullable(2)] IConnectorLogicType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B75 RID: 2933 RVA: 0x0002DF3F File Offset: 0x0002C13F
+		// Token: 0x06000C8F RID: 3215 RVA: 0x00030C2F File Offset: 0x0002EE2F
 		public static IConnectorLogicType CreateFromSetValue([Nullable(2)] IConnectorLogicType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B76 RID: 2934 RVA: 0x0002DF52 File Offset: 0x0002C152
+		// Token: 0x06000C90 RID: 3216 RVA: 0x00030C42 File Offset: 0x0002EE42
 		public IConnectorLogicType_SetValue ToSetValue()
 		{
 			return new IConnectorLogicType_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700036A RID: 874
-		// (get) Token: 0x06000B77 RID: 2935 RVA: 0x0002DF71 File Offset: 0x0002C171
-		// (set) Token: 0x06000B78 RID: 2936 RVA: 0x0002DF9C File Offset: 0x0002C19C
+		// Token: 0x170003B2 RID: 946
+		// (get) Token: 0x06000C91 RID: 3217 RVA: 0x00030C61 File Offset: 0x0002EE61
+		// (set) Token: 0x06000C92 RID: 3218 RVA: 0x00030C8C File Offset: 0x0002EE8C
 		public virtual EConnectorLogicType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700036B RID: 875
-		// (get) Token: 0x06000B79 RID: 2937 RVA: 0x0002DFAC File Offset: 0x0002C1AC
-		// (set) Token: 0x06000B7A RID: 2938 RVA: 0x0002E00D File Offset: 0x0002C20D
+		// Token: 0x170003B3 RID: 947
+		// (get) Token: 0x06000C93 RID: 3219 RVA: 0x00030C9C File Offset: 0x0002EE9C
+		// (set) Token: 0x06000C94 RID: 3220 RVA: 0x00030CFD File Offset: 0x0002EEFD
 		public virtual IConnectorEffectConfig EffectConfig
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000B11 RID: 2833
+		// Token: 0x04000BF2 RID: 3058
 		[Nullable(2)]
 		protected IConnectorLogicType FbInstance;
 
-		// Token: 0x04000B12 RID: 2834
+		// Token: 0x04000BF3 RID: 3059
 		[Nullable(2)]
 		protected IConnectorLogicType_SetValue PocoInterface;
 
-		// Token: 0x04000B13 RID: 2835
+		// Token: 0x04000BF4 RID: 3060
 		private IConnectorEffectConfig _EffectConfigCache;
 
-		// Token: 0x04000B14 RID: 2836
+		// Token: 0x04000BF5 RID: 3061
 		private bool _EffectConfigInited;
 	}
 }

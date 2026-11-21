@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071D9 RID: 29145
+	// Token: 0x020079AE RID: 31150
 	public class IStopMotorCruiseT
 	{
 	}

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DC3 RID: 3523
+	// Token: 0x02000EBF RID: 3775
 	public class ILookAtTargetPlayer : ILookAtTargetBase
 	{
-		// Token: 0x06004FEF RID: 20463 RVA: 0x000C5AB4 File Offset: 0x000C3CB4
-		[NullableContext(1)]
+		// Token: 0x06005514 RID: 21780 RVA: 0x000D1304 File Offset: 0x000CF504
 		public static ILookAtTargetPlayer Create(ILookAtTargetPlayer? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A26 RID: 6694
-		// (get) Token: 0x06004FF0 RID: 20464 RVA: 0x000C5AD3 File Offset: 0x000C3CD3
+		// Token: 0x17001B91 RID: 7057
+		// (get) Token: 0x06005515 RID: 21781 RVA: 0x000D1323 File Offset: 0x000CF523
 		public override ELookAtTargetType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DD6 RID: 11734
+		// Token: 0x0400309C RID: 12444
 		private ILookAtTargetPlayer Instance;
 	}
 }

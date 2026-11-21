@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using UnrealEngine;
 
-// Token: 0x02002D33 RID: 11571
+// Token: 0x0200228D RID: 8845
 public class WeeklyRougeShopDiscountTag : MediumItemGridComponent
 {
-	// Token: 0x06018547 RID: 99655 RVA: 0x00631473 File Offset: 0x0062F673
+	// Token: 0x06015DE9 RID: 89577 RVA: 0x00657487 File Offset: 0x00655687
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemDiscountTag";
 	}
 
-	// Token: 0x06018548 RID: 99656 RVA: 0x0063147A File Offset: 0x0062F67A
+	// Token: 0x06015DEA RID: 89578 RVA: 0x0065748E File Offset: 0x0065568E
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class WeeklyRougeShopDiscountTag : MediumItemGridComponent
 		};
 	}
 
-	// Token: 0x06018549 RID: 99657 RVA: 0x006314A0 File Offset: 0x0062F6A0
+	// Token: 0x06015DEB RID: 89579 RVA: 0x006574B4 File Offset: 0x006556B4
 	[NullableContext(1)]
 	protected override void OnRefresh(object data)
 	{
@@ -32,10 +32,10 @@ public class WeeklyRougeShopDiscountTag : MediumItemGridComponent
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "RogueInfoViewShopDiscount", new <>z__ReadOnlySingleElementList<object>(num));
 	}
 
-	// Token: 0x020092C3 RID: 37571
+	// Token: 0x020084EA RID: 34026
 	private enum EWeeklyRogueShopDiscountTagDefine
 	{
-		// Token: 0x0402F706 RID: 194310
+		// Token: 0x0402AD8E RID: 175502
 		TxtDiscount
 	}
 }

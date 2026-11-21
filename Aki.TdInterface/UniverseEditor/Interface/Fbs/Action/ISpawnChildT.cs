@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200716D RID: 29037
+	// Token: 0x02007939 RID: 31033
 	public class ISpawnChildT
 	{
-		// Token: 0x1700D7BE RID: 55230
-		// (get) Token: 0x060337C0 RID: 210880 RVA: 0x006EF8CB File Offset: 0x006EDACB
-		// (set) Token: 0x060337C1 RID: 210881 RVA: 0x006EF8D3 File Offset: 0x006EDAD3
+		// Token: 0x1700E3A3 RID: 58275
+		// (get) Token: 0x06036A6A RID: 223850 RVA: 0x007500D7 File Offset: 0x0074E2D7
+		// (set) Token: 0x06036A6B RID: 223851 RVA: 0x007500DF File Offset: 0x0074E2DF
 		public string TemplateGuid { get; set; }
 
-		// Token: 0x1700D7BF RID: 55231
-		// (get) Token: 0x060337C2 RID: 210882 RVA: 0x006EF8DC File Offset: 0x006EDADC
-		// (set) Token: 0x060337C3 RID: 210883 RVA: 0x006EF8E4 File Offset: 0x006EDAE4
+		// Token: 0x1700E3A4 RID: 58276
+		// (get) Token: 0x06036A6C RID: 223852 RVA: 0x007500E8 File Offset: 0x0074E2E8
+		// (set) Token: 0x06036A6D RID: 223853 RVA: 0x007500F0 File Offset: 0x0074E2F0
 		public ITransformT Transform { get; set; }
 
-		// Token: 0x060337C4 RID: 210884 RVA: 0x006EF8ED File Offset: 0x006EDAED
+		// Token: 0x06036A6E RID: 223854 RVA: 0x007500F9 File Offset: 0x0074E2F9
 		public ISpawnChildT()
 		{
 			this.TemplateGuid = null;

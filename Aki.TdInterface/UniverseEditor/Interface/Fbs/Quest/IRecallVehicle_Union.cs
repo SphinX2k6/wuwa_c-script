@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200409D RID: 16541
+	// Token: 0x020044DE RID: 17630
 	public enum IRecallVehicle_Union : byte
 	{
-		// Token: 0x0400BC28 RID: 48168
+		// Token: 0x0400C60F RID: 50703
 		NONE,
-		// Token: 0x0400BC29 RID: 48169
+		// Token: 0x0400C610 RID: 50704
 		IRecallVehicle,
-		// Token: 0x0400BC2A RID: 48170
+		// Token: 0x0400C611 RID: 50705
 		IRecallFishingBoat
 	}
 }

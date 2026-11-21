@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B1E RID: 23326
+	// Token: 0x02006134 RID: 24884
 	public class IVehicleGenerationTypeT
 	{
-		// Token: 0x1700B015 RID: 45077
-		// (get) Token: 0x06027DDC RID: 163292 RVA: 0x0057BB36 File Offset: 0x00579D36
-		// (set) Token: 0x06027DDD RID: 163293 RVA: 0x0057BB3E File Offset: 0x00579D3E
+		// Token: 0x1700B95D RID: 47453
+		// (get) Token: 0x0602A3A0 RID: 172960 RVA: 0x005C358A File Offset: 0x005C178A
+		// (set) Token: 0x0602A3A1 RID: 172961 RVA: 0x005C3592 File Offset: 0x005C1792
 		public EVehicleGenerationType Type { get; set; }
 
-		// Token: 0x1700B016 RID: 45078
-		// (get) Token: 0x06027DDE RID: 163294 RVA: 0x0057BB47 File Offset: 0x00579D47
-		// (set) Token: 0x06027DDF RID: 163295 RVA: 0x0057BB4F File Offset: 0x00579D4F
+		// Token: 0x1700B95E RID: 47454
+		// (get) Token: 0x0602A3A2 RID: 172962 RVA: 0x005C359B File Offset: 0x005C179B
+		// (set) Token: 0x0602A3A3 RID: 172963 RVA: 0x005C35A3 File Offset: 0x005C17A3
 		public int Id { get; set; }
 
-		// Token: 0x1700B017 RID: 45079
-		// (get) Token: 0x06027DE0 RID: 163296 RVA: 0x0057BB58 File Offset: 0x00579D58
-		// (set) Token: 0x06027DE1 RID: 163297 RVA: 0x0057BB60 File Offset: 0x00579D60
+		// Token: 0x1700B95F RID: 47455
+		// (get) Token: 0x0602A3A4 RID: 172964 RVA: 0x005C35AC File Offset: 0x005C17AC
+		// (set) Token: 0x0602A3A5 RID: 172965 RVA: 0x005C35B4 File Offset: 0x005C17B4
 		public int Weight { get; set; }
 
-		// Token: 0x06027DE2 RID: 163298 RVA: 0x0057BB69 File Offset: 0x00579D69
+		// Token: 0x0602A3A6 RID: 172966 RVA: 0x005C35BD File Offset: 0x005C17BD
 		public IVehicleGenerationTypeT()
 		{
 			this.Type = EVehicleGenerationType.VehicleEntityTemplate;

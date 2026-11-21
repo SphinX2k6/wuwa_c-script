@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020B7 RID: 8375
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200230C RID: 8972
 	public class IWindProtagonistParkour1 : ILeisureInteractType
 	{
-		// Token: 0x0600B82C RID: 47148 RVA: 0x001AA614 File Offset: 0x001A8814
+		// Token: 0x0600C384 RID: 50052 RVA: 0x001C125C File Offset: 0x001BF45C
 		private IWindProtagonistParkour1_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B82D RID: 47149 RVA: 0x001AA64C File Offset: 0x001A884C
+		// Token: 0x0600C385 RID: 50053 RVA: 0x001C1294 File Offset: 0x001BF494
 		public static IWindProtagonistParkour1 Create([Nullable(2)] IWindProtagonistParkour1 instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B82E RID: 47150 RVA: 0x001AA65F File Offset: 0x001A885F
+		// Token: 0x0600C386 RID: 50054 RVA: 0x001C12A7 File Offset: 0x001BF4A7
 		public static IWindProtagonistParkour1 CreateFromSetValue([Nullable(2)] IWindProtagonistParkour1_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B82F RID: 47151 RVA: 0x001AA672 File Offset: 0x001A8872
+		// Token: 0x0600C387 RID: 50055 RVA: 0x001C12BA File Offset: 0x001BF4BA
 		public new IWindProtagonistParkour1_SetValue ToSetValue()
 		{
 			return new IWindProtagonistParkour1_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700385C RID: 14428
-		// (get) Token: 0x0600B830 RID: 47152 RVA: 0x001AA685 File Offset: 0x001A8885
-		// (set) Token: 0x0600B831 RID: 47153 RVA: 0x001AA6B0 File Offset: 0x001A88B0
+		// Token: 0x17003B40 RID: 15168
+		// (get) Token: 0x0600C388 RID: 50056 RVA: 0x001C12CD File Offset: 0x001BF4CD
+		// (set) Token: 0x0600C389 RID: 50057 RVA: 0x001C12F8 File Offset: 0x001BF4F8
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E71 RID: 28273
+		// Token: 0x0400748F RID: 29839
 		[Nullable(2)]
 		protected new IWindProtagonistParkour1 FbInstance;
 
-		// Token: 0x04006E72 RID: 28274
+		// Token: 0x04007490 RID: 29840
 		[Nullable(2)]
 		protected new IWindProtagonistParkour1_SetValue PocoInterface;
 	}

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028A8 RID: 10408
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B7D RID: 11133
 	public class ICameraLockTargetPosition : ICameraLockTargetBase
 	{
-		// Token: 0x0600E675 RID: 58997 RVA: 0x0021DBF8 File Offset: 0x0021BDF8
+		// Token: 0x0600F4A4 RID: 62628 RVA: 0x0023AB78 File Offset: 0x00238D78
 		public static ICameraLockTargetPosition Create(ICameraLockTargetPosition? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170046E7 RID: 18151
-		// (get) Token: 0x0600E676 RID: 58998 RVA: 0x0021DC17 File Offset: 0x0021BE17
+		// Token: 0x17004A58 RID: 19032
+		// (get) Token: 0x0600F4A5 RID: 62629 RVA: 0x0023AB97 File Offset: 0x00238D97
 		public override ECameraLockTargetType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046E8 RID: 18152
-		// (get) Token: 0x0600E677 RID: 58999 RVA: 0x0021DC24 File Offset: 0x0021BE24
+		// Token: 0x17004A59 RID: 19033
+		// (get) Token: 0x0600F4A6 RID: 62630 RVA: 0x0023ABA4 File Offset: 0x00238DA4
 		public virtual VectorInfo Pos
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F68 RID: 32616
+		// Token: 0x04008627 RID: 34343
 		private ICameraLockTargetPosition Instance;
 
-		// Token: 0x04007F69 RID: 32617
+		// Token: 0x04008628 RID: 34344
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x04007F6A RID: 32618
+		// Token: 0x04008629 RID: 34345
 		private bool _PosInited;
 	}
 }

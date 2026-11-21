@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001070 RID: 4208
+	// Token: 0x0200119E RID: 4510
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class IQuestDefine
 	{
-		// Token: 0x06005E9F RID: 24223 RVA: 0x000E4F54 File Offset: 0x000E3154
+		// Token: 0x06006494 RID: 25748 RVA: 0x000F2004 File Offset: 0x000F0204
 		// Note: this type is marked as 'beforefieldinit'.
 		static IQuestDefine()
 		{
@@ -81,16 +81,16 @@ namespace Aki.TDConfigMgr.Quest
 			IQuestDefine.questRegionCNMapper = dictionary7;
 		}
 
-		// Token: 0x04003905 RID: 14597
+		// Token: 0x04003C50 RID: 15440
 		public static readonly IReadOnlyDictionary<string, Dictionary<string, string>> combatStateConfig;
 
-		// Token: 0x04003906 RID: 14598
+		// Token: 0x04003C51 RID: 15441
 		public static readonly IReadOnlyDictionary<string, string> questSubTypeCnMapper;
 
-		// Token: 0x04003907 RID: 14599
+		// Token: 0x04003C52 RID: 15442
 		public static readonly IReadOnlyDictionary<string, string> questTypeCNMapper;
 
-		// Token: 0x04003908 RID: 14600
+		// Token: 0x04003C53 RID: 15443
 		public static readonly IReadOnlyDictionary<string, string> questRegionCNMapper;
 	}
 }

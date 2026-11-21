@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002031 RID: 8241
+	// Token: 0x02000673 RID: 1651
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.LGUIComponentsRegistry")]
 	[UnrealStructLayout(512, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 512)]
 	public class ULGUIComponentsRegistry : UActorComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601F2DD RID: 127709 RVA: 0x002E49B5 File Offset: 0x002E2BB5
+		// Token: 0x06008FF3 RID: 36851 RVA: 0x000D7DF2 File Offset: 0x000D5FF2
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ULGUIComponentsRegistry._ClassPtr;
 		}
 
-		// Token: 0x0601F2DE RID: 127710 RVA: 0x002E49C4 File Offset: 0x002E2BC4
+		// Token: 0x06008FF4 RID: 36852 RVA: 0x000D7E00 File Offset: 0x000D6000
 		public ULGUIComponentsRegistry() : this(BuiltinUtils.AllocNativeUObject(ULGUIComponentsRegistry.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601F2DF RID: 127711 RVA: 0x002E49EC File Offset: 0x002E2BEC
+		// Token: 0x06008FF5 RID: 36853 RVA: 0x000D7E28 File Offset: 0x000D6028
 		public ULGUIComponentsRegistry(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ULGUIComponentsRegistry.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007BA5 RID: 31653
-		// (get) Token: 0x0601F2E0 RID: 127712 RVA: 0x002E4A1F File Offset: 0x002E2C1F
-		// (set) Token: 0x0601F2E1 RID: 127713 RVA: 0x002E4A33 File Offset: 0x002E2C33
+		// Token: 0x17001B19 RID: 6937
+		// (get) Token: 0x06008FF6 RID: 36854 RVA: 0x000D7E5B File Offset: 0x000D605B
+		// (set) Token: 0x06008FF7 RID: 36855 RVA: 0x000D7E6F File Offset: 0x000D606F
 		public unsafe string TsClassName
 		{
 			get
@@ -44,30 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BA6 RID: 31654
-		// (get) Token: 0x0601F2E2 RID: 127714 RVA: 0x002E4A48 File Offset: 0x002E2C48
-		// (set) Token: 0x0601F2E3 RID: 127715 RVA: 0x002E4A81 File Offset: 0x002E2C81
-		public TMap<string, FRegisterRuntimeData> RuntimeRegistryData
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TMap<string, FRegisterRuntimeData> result;
-				if ((result = this._RuntimeRegistryData) == null)
-				{
-					result = (this._RuntimeRegistryData = new TMap<string, FRegisterRuntimeData>(base.NativePtr + (IntPtr)ULGUIComponentsRegistry.__PropertyOffset_RuntimeRegistryData, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.RuntimeRegistryData.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17007BA7 RID: 31655
-		// (get) Token: 0x0601F2E4 RID: 127716 RVA: 0x002E4A90 File Offset: 0x002E2C90
-		// (set) Token: 0x0601F2E5 RID: 127717 RVA: 0x002E4AC9 File Offset: 0x002E2CC9
+		// Token: 0x17001B1A RID: 6938
+		// (get) Token: 0x06008FF8 RID: 36856 RVA: 0x000D7E84 File Offset: 0x000D6084
+		// (set) Token: 0x06008FF9 RID: 36857 RVA: 0x000D7EBD File Offset: 0x000D60BD
 		public TArray<AActor> Components
 		{
 			get
@@ -86,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BA8 RID: 31656
-		// (get) Token: 0x0601F2E6 RID: 127718 RVA: 0x002E4AD8 File Offset: 0x002E2CD8
-		// (set) Token: 0x0601F2E7 RID: 127719 RVA: 0x002E4B11 File Offset: 0x002E2D11
+		// Token: 0x17001B1B RID: 6939
+		// (get) Token: 0x06008FFA RID: 36858 RVA: 0x000D7ECC File Offset: 0x000D60CC
+		// (set) Token: 0x06008FFB RID: 36859 RVA: 0x000D7F05 File Offset: 0x000D6105
 		public TMap<int, string> MissingComponents
 		{
 			get
@@ -107,7 +86,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601F2E8 RID: 127720 RVA: 0x002E4B1F File Offset: 0x002E2D1F
+		// Token: 0x06008FFC RID: 36860 RVA: 0x000D7F13 File Offset: 0x000D6113
 		public void SetComponents([Nullable(new byte[]
 		{
 			2,
@@ -117,70 +96,58 @@ namespace UnrealEngine
 			ULGUIComponentsRegistry.__SetComponents_Internal(base.NativePtr, (NewComponents ?? new TArray<AActor>()).NativePtr);
 		}
 
-		// Token: 0x0601F2E9 RID: 127721 RVA: 0x002E4B3C File Offset: 0x002E2D3C
+		// Token: 0x06008FFD RID: 36861 RVA: 0x000D7F30 File Offset: 0x000D6130
 		public TArray<AActor> GetComponents()
 		{
 			return new TArray<AActor>(ULGUIComponentsRegistry.__GetComponents_Internal(base.NativePtr), null);
 		}
 
-		// Token: 0x0601F2EA RID: 127722 RVA: 0x002E4B4F File Offset: 0x002E2D4F
+		// Token: 0x06008FFE RID: 36862 RVA: 0x000D7F43 File Offset: 0x000D6143
 		[NullableContext(2)]
 		public void CopyFrom(ULGUIComponentsRegistry Other)
 		{
 			ULGUIComponentsRegistry.__CopyFrom_Internal(base.NativePtr, (Other != null) ? Other.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601F2EB RID: 127723
+		// Token: 0x06008FFF RID: 36863
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetComponents_Internal(IntPtr @this, IntPtr NewComponents);
 
-		// Token: 0x0601F2EC RID: 127724
+		// Token: 0x06009000 RID: 36864
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetComponents_Internal(IntPtr @this);
 
-		// Token: 0x0601F2ED RID: 127725
+		// Token: 0x06009001 RID: 36865
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CopyFrom_Internal(IntPtr @this, IntPtr Other);
 
-		// Token: 0x0601F2EE RID: 127726 RVA: 0x002E4B6C File Offset: 0x002E2D6C
+		// Token: 0x06009002 RID: 36866 RVA: 0x000D7F60 File Offset: 0x000D6160
 		static ULGUIComponentsRegistry()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.LGUIComponentsRegistry");
 		}
 
-		// Token: 0x0601F2EF RID: 127727 RVA: 0x002E4B7A File Offset: 0x002E2D7A
+		// Token: 0x06009003 RID: 36867 RVA: 0x000D7F6E File Offset: 0x000D616E
 		protected ULGUIComponentsRegistry(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010E0A RID: 69130
+		// Token: 0x04003EEE RID: 16110
 		public new const string __ObjectPath = "/Script/LGUI.LGUIComponentsRegistry";
 
-		// Token: 0x04010E0B RID: 69131
+		// Token: 0x04003EEF RID: 16111
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04010E0C RID: 69132
+		// Token: 0x04003EF0 RID: 16112
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04010E0D RID: 69133
+		// Token: 0x04003EF1 RID: 16113
 		internal static int __PropertyOffset_TsClassName;
 
-		// Token: 0x04010E0E RID: 69134
-		internal static int __PropertyOffset_RuntimeRegistryData;
-
-		// Token: 0x04010E0F RID: 69135
-		[Nullable(new byte[]
-		{
-			2,
-			1,
-			1
-		})]
-		private TMap<string, FRegisterRuntimeData> _RuntimeRegistryData;
-
-		// Token: 0x04010E10 RID: 69136
+		// Token: 0x04003EF2 RID: 16114
 		internal static int __PropertyOffset_Components;
 
-		// Token: 0x04010E11 RID: 69137
+		// Token: 0x04003EF3 RID: 16115
 		[Nullable(new byte[]
 		{
 			2,
@@ -188,10 +155,10 @@ namespace UnrealEngine
 		})]
 		private TArray<AActor> _Components;
 
-		// Token: 0x04010E12 RID: 69138
+		// Token: 0x04003EF4 RID: 16116
 		internal static int __PropertyOffset_MissingComponents;
 
-		// Token: 0x04010E13 RID: 69139
+		// Token: 0x04003EF5 RID: 16117
 		[Nullable(new byte[]
 		{
 			2,

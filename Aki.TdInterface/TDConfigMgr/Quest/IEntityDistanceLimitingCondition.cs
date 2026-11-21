@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F5D RID: 3933
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001087 RID: 4231
 	public class IEntityDistanceLimitingCondition
 	{
-		// Token: 0x06005768 RID: 22376 RVA: 0x000D5BE8 File Offset: 0x000D3DE8
+		// Token: 0x06005D3C RID: 23868 RVA: 0x000E2654 File Offset: 0x000E0854
 		private IEntityDistanceLimitingCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005769 RID: 22377 RVA: 0x000D5C20 File Offset: 0x000D3E20
+		// Token: 0x06005D3D RID: 23869 RVA: 0x000E268C File Offset: 0x000E088C
 		public static IEntityDistanceLimitingCondition Create([Nullable(2)] IEntityDistanceLimitingCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600576A RID: 22378 RVA: 0x000D5C33 File Offset: 0x000D3E33
+		// Token: 0x06005D3E RID: 23870 RVA: 0x000E269F File Offset: 0x000E089F
 		public static IEntityDistanceLimitingCondition CreateFromSetValue([Nullable(2)] IEntityDistanceLimitingCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600576B RID: 22379 RVA: 0x000D5C46 File Offset: 0x000D3E46
+		// Token: 0x06005D3F RID: 23871 RVA: 0x000E26B2 File Offset: 0x000E08B2
 		public IEntityDistanceLimitingCondition_SetValue ToSetValue()
 		{
 			return new IEntityDistanceLimitingCondition_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D2A RID: 7466
-		// (get) Token: 0x0600576C RID: 22380 RVA: 0x000D5C71 File Offset: 0x000D3E71
-		// (set) Token: 0x0600576D RID: 22381 RVA: 0x000D5C9C File Offset: 0x000D3E9C
+		// Token: 0x17001ED0 RID: 7888
+		// (get) Token: 0x06005D40 RID: 23872 RVA: 0x000E26DD File Offset: 0x000E08DD
+		// (set) Token: 0x06005D41 RID: 23873 RVA: 0x000E2708 File Offset: 0x000E0908
 		public virtual int EntityId
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D2B RID: 7467
-		// (get) Token: 0x0600576E RID: 22382 RVA: 0x000D5CAA File Offset: 0x000D3EAA
-		// (set) Token: 0x0600576F RID: 22383 RVA: 0x000D5CD9 File Offset: 0x000D3ED9
+		// Token: 0x17001ED1 RID: 7889
+		// (get) Token: 0x06005D42 RID: 23874 RVA: 0x000E2716 File Offset: 0x000E0916
+		// (set) Token: 0x06005D43 RID: 23875 RVA: 0x000E2745 File Offset: 0x000E0945
 		public virtual float MaxDistance
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D2C RID: 7468
-		// (get) Token: 0x06005770 RID: 22384 RVA: 0x000D5CE7 File Offset: 0x000D3EE7
-		// (set) Token: 0x06005771 RID: 22385 RVA: 0x000D5D16 File Offset: 0x000D3F16
+		// Token: 0x17001ED2 RID: 7890
+		// (get) Token: 0x06005D44 RID: 23876 RVA: 0x000E2753 File Offset: 0x000E0953
+		// (set) Token: 0x06005D45 RID: 23877 RVA: 0x000E2782 File Offset: 0x000E0982
 		public virtual float OverMaxCountdown
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040034DF RID: 13535
+		// Token: 0x04003810 RID: 14352
 		[Nullable(2)]
 		protected IEntityDistanceLimitingCondition FbInstance;
 
-		// Token: 0x040034E0 RID: 13536
+		// Token: 0x04003811 RID: 14353
 		[Nullable(2)]
 		protected IEntityDistanceLimitingCondition_SetValue PocoInterface;
 	}

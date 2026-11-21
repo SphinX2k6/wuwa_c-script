@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006EA RID: 1770
+	// Token: 0x02000702 RID: 1794
 	public class ConfigPhotoMontageByRoleId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600298C RID: 10636 RVA: 0x0014429C File Offset: 0x0014249C
+		// Token: 0x06002A1C RID: 10780 RVA: 0x0014AD18 File Offset: 0x00148F18
 		static ConfigPhotoMontageByRoleId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotoMontageByRoleId.CreateStaticDefaultValue), new Action(ConfigPhotoMontageByRoleId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600298D RID: 10637 RVA: 0x001442BC File Offset: 0x001424BC
+		// Token: 0x06002A1D RID: 10781 RVA: 0x0014AD38 File Offset: 0x00148F38
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotoMontageByRoleId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600298E RID: 10638 RVA: 0x0014433B File Offset: 0x0014253B
+		// Token: 0x06002A1E RID: 10782 RVA: 0x0014ADB7 File Offset: 0x00148FB7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotoMontageByRoleId.LogPair = null;
 			ConfigPhotoMontageByRoleId.HandleId = 0;
 		}
 
-		// Token: 0x0600298F RID: 10639 RVA: 0x00144349 File Offset: 0x00142549
+		// Token: 0x06002A1F RID: 10783 RVA: 0x0014ADC5 File Offset: 0x00148FC5
 		public static void Init()
 		{
 			ConfigPhotoMontageByRoleId.HandleId = ConfigCommon.InitDataStatement(ConfigPhotoMontageByRoleId.HandleId, "db_photograph.db", "select BinData from `PhotoMontage` where RoleId=?");
 		}
 
-		// Token: 0x06002990 RID: 10640 RVA: 0x00144364 File Offset: 0x00142564
+		// Token: 0x06002A20 RID: 10784 RVA: 0x0014ADE0 File Offset: 0x00148FE0
 		[NullableContext(2)]
 		public static IReadOnlyList<PhotoMontage> GetConfigList(int p0RoleId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400304C RID: 12364
+		// Token: 0x040030F4 RID: 12532
 		private const string DB = "db_photograph.db";
 
-		// Token: 0x0400304D RID: 12365
+		// Token: 0x040030F5 RID: 12533
 		private const string FILE = "p.拍照.xlsx";
 
-		// Token: 0x0400304E RID: 12366
+		// Token: 0x040030F6 RID: 12534
 		private const string TABLE = "PhotoMontage";
 
-		// Token: 0x0400304F RID: 12367
+		// Token: 0x040030F7 RID: 12535
 		private const string COMMAND = "select BinData from `PhotoMontage` where RoleId=?";
 
-		// Token: 0x04003050 RID: 12368
+		// Token: 0x040030F8 RID: 12536
 		private const string KEY_PREFIX = "PhotoMontageByRoleId";
 
-		// Token: 0x04003051 RID: 12369
+		// Token: 0x040030F9 RID: 12537
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003052 RID: 12370
+		// Token: 0x040030FA RID: 12538
 		private static int HandleId;
 	}
 }

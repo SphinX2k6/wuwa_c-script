@@ -7,33 +7,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200274A RID: 10058
+	// Token: 0x020007FE RID: 2046
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/SharpherealTest.TestClass_UFunction_Direct_Interface")]
 	[UnrealStructLayout(128, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 128)]
 	public class UTestClass_UFunction_Direct_Interface : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602572A RID: 153386 RVA: 0x00381ECD File Offset: 0x003800CD
+		// Token: 0x0600B207 RID: 45575 RVA: 0x001115C4 File Offset: 0x0010F7C4
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UTestClass_UFunction_Direct_Interface._ClassPtr;
 		}
 
-		// Token: 0x0602572B RID: 153387 RVA: 0x00381EDC File Offset: 0x003800DC
+		// Token: 0x0600B208 RID: 45576 RVA: 0x001115D0 File Offset: 0x0010F7D0
 		public UTestClass_UFunction_Direct_Interface() : this(BuiltinUtils.AllocNativeUObject(UTestClass_UFunction_Direct_Interface.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602572C RID: 153388 RVA: 0x00381F04 File Offset: 0x00380104
+		// Token: 0x0600B209 RID: 45577 RVA: 0x001115F8 File Offset: 0x0010F7F8
 		[NullableContext(1)]
 		public UTestClass_UFunction_Direct_Interface(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UTestClass_UFunction_Direct_Interface.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17009084 RID: 36996
-		// (get) Token: 0x0602572D RID: 153389 RVA: 0x00381F37 File Offset: 0x00380137
-		// (set) Token: 0x0602572E RID: 153390 RVA: 0x00381F4B File Offset: 0x0038014B
+		// Token: 0x1700216C RID: 8556
+		// (get) Token: 0x0600B20A RID: 45578 RVA: 0x0011162B File Offset: 0x0010F82B
+		// (set) Token: 0x0600B20B RID: 45579 RVA: 0x0011163F File Offset: 0x0010F83F
 		public unsafe USharpherealTestSimpleClass Object
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009085 RID: 36997
-		// (get) Token: 0x0602572F RID: 153391 RVA: 0x00381F60 File Offset: 0x00380160
-		// (set) Token: 0x06025730 RID: 153392 RVA: 0x00381F74 File Offset: 0x00380174
+		// Token: 0x1700216D RID: 8557
+		// (get) Token: 0x0600B20C RID: 45580 RVA: 0x00111654 File Offset: 0x0010F854
+		// (set) Token: 0x0600B20D RID: 45581 RVA: 0x00111668 File Offset: 0x0010F868
 		public unsafe USharpherealTestSimpleClass ObjectCmp
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009086 RID: 36998
-		// (get) Token: 0x06025731 RID: 153393 RVA: 0x00381F89 File Offset: 0x00380189
-		// (set) Token: 0x06025732 RID: 153394 RVA: 0x00381FA3 File Offset: 0x003801A3
+		// Token: 0x1700216E RID: 8558
+		// (get) Token: 0x0600B20E RID: 45582 RVA: 0x0011167D File Offset: 0x0010F87D
+		// (set) Token: 0x0600B20F RID: 45583 RVA: 0x00111697 File Offset: 0x0010F897
 		public unsafe ISharpherealTestInterface Interface
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009087 RID: 36999
-		// (get) Token: 0x06025733 RID: 153395 RVA: 0x00381FCC File Offset: 0x003801CC
-		// (set) Token: 0x06025734 RID: 153396 RVA: 0x00382005 File Offset: 0x00380205
+		// Token: 0x1700216F RID: 8559
+		// (get) Token: 0x0600B210 RID: 45584 RVA: 0x001116C0 File Offset: 0x0010F8C0
+		// (set) Token: 0x0600B211 RID: 45585 RVA: 0x001116F9 File Offset: 0x0010F8F9
 		[Nullable(1)]
 		public TArray<ISharpherealTestInterface> InterfaceArray
 		{
@@ -100,9 +100,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009088 RID: 37000
-		// (get) Token: 0x06025735 RID: 153397 RVA: 0x00382013 File Offset: 0x00380213
-		// (set) Token: 0x06025736 RID: 153398 RVA: 0x0038202D File Offset: 0x0038022D
+		// Token: 0x17002170 RID: 8560
+		// (get) Token: 0x0600B212 RID: 45586 RVA: 0x00111707 File Offset: 0x0010F907
+		// (set) Token: 0x0600B213 RID: 45587 RVA: 0x00111721 File Offset: 0x0010F921
 		public unsafe ISharpherealTestInterface2 Interface2
 		{
 			get
@@ -115,9 +115,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009089 RID: 37001
-		// (get) Token: 0x06025737 RID: 153399 RVA: 0x00382054 File Offset: 0x00380254
-		// (set) Token: 0x06025738 RID: 153400 RVA: 0x0038208D File Offset: 0x0038028D
+		// Token: 0x17002171 RID: 8561
+		// (get) Token: 0x0600B214 RID: 45588 RVA: 0x00111748 File Offset: 0x0010F948
+		// (set) Token: 0x0600B215 RID: 45589 RVA: 0x00111781 File Offset: 0x0010F981
 		[Nullable(1)]
 		public TArray<ISharpherealTestInterface2> Interface2Array
 		{
@@ -139,9 +139,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06025739 RID: 153401 RVA: 0x0038209C File Offset: 0x0038029C
+		// Token: 0x0600B216 RID: 45590 RVA: 0x00111790 File Offset: 0x0010F990
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetInterfaceArray([Nullable(new byte[]
 		{
 			2,
@@ -154,13 +153,12 @@ namespace UnrealEngine
 			{
 				InInterfaceArray.CopyTo(&ptr->InInterfaceArray, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__SetInterfaceArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__SetInterfaceArray_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_Interface.__SetInterfaceArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602573A RID: 153402 RVA: 0x00382108 File Offset: 0x00380308
+		// Token: 0x0600B217 RID: 45591 RVA: 0x001117FC File Offset: 0x0010F9FC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetInterface2Array([Nullable(new byte[]
 		{
 			2,
@@ -173,35 +171,32 @@ namespace UnrealEngine
 			{
 				InInterface2Array.CopyTo(&ptr->InInterface2Array, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__SetInterface2Array_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__SetInterface2Array_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_Interface.__SetInterface2Array_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602573B RID: 153403 RVA: 0x00382174 File Offset: 0x00380374
+		// Token: 0x0600B218 RID: 45592 RVA: 0x00111868 File Offset: 0x0010FA68
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetInterface2(ISharpherealTestInterface2 InInterface2)
 		{
 			UTestClass_UFunction_Direct_Interface.__SetInterface2_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_Interface.__SetInterface2_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_Direct_Interface.__SetInterface2_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_Interface.__SetInterface2_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InInterface2 = new FScriptInterface(InInterface2, (InInterface2 != null) ? InInterface2.InterfaceOffset() : 0);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__SetInterface2_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__SetInterface2_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602573C RID: 153404 RVA: 0x003821CC File Offset: 0x003803CC
+		// Token: 0x0600B219 RID: 45593 RVA: 0x001118C0 File Offset: 0x0010FAC0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetInterface(ISharpherealTestInterface InInterface)
 		{
 			UTestClass_UFunction_Direct_Interface.__SetInterface_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_Interface.__SetInterface_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_Direct_Interface.__SetInterface_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_Interface.__SetInterface_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InInterface = new FScriptInterface(InInterface, (InInterface != null) ? InInterface.InterfaceOffset() : 0);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__SetInterface_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__SetInterface_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602573D RID: 153405 RVA: 0x00382224 File Offset: 0x00380424
+		// Token: 0x0600B21A RID: 45594 RVA: 0x00111918 File Offset: 0x0010FB18
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutInterfaceArray([Nullable(new byte[]
 		{
 			2,
@@ -215,7 +210,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutInterfaceArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__OutInterfaceArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__OutInterfaceArray_NativeFunctionPtr, (void*)ptr);
 			TArray<ISharpherealTestInterface> tarray2 = OutInterfaceArray;
 			if (tarray2 != null)
 			{
@@ -224,9 +219,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_Interface.__OutInterfaceArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602573E RID: 153406 RVA: 0x003822A0 File Offset: 0x003804A0
+		// Token: 0x0600B21B RID: 45595 RVA: 0x00111990 File Offset: 0x0010FB90
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutInterface2Array([Nullable(new byte[]
 		{
 			2,
@@ -240,7 +234,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutInterface2Array);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__OutInterface2Array_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__OutInterface2Array_NativeFunctionPtr, (void*)ptr);
 			TArray<ISharpherealTestInterface2> tarray2 = OutInterface2Array;
 			if (tarray2 != null)
 			{
@@ -249,9 +243,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_Interface.__OutInterface2Array_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602573F RID: 153407 RVA: 0x0038231C File Offset: 0x0038051C
+		// Token: 0x0600B21C RID: 45596 RVA: 0x00111A08 File Offset: 0x0010FC08
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutInterface2(ref ISharpherealTestInterface2 OutInterface2)
 		{
 			UTestClass_UFunction_Direct_Interface.__OutInterface2_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_Interface.__OutInterface2_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_Direct_Interface.__OutInterface2_FunctionParams) & -16L;
@@ -260,13 +253,12 @@ namespace UnrealEngine
 			IUnrealNativeInterface @object = OutInterface2;
 			ISharpherealTestInterface2 sharpherealTestInterface = OutInterface2;
 			ptr2.OutInterface2 = new FScriptInterface(@object, (sharpherealTestInterface != null) ? sharpherealTestInterface.InterfaceOffset() : 0);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__OutInterface2_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__OutInterface2_NativeFunctionPtr, (void*)ptr);
 			OutInterface2 = (BuiltinUtils.GetOrCreateUObjectByNativePointer(ptr->OutInterface2.ObjectPointer) as ISharpherealTestInterface2);
 		}
 
-		// Token: 0x06025740 RID: 153408 RVA: 0x00382390 File Offset: 0x00380590
+		// Token: 0x0600B21D RID: 45597 RVA: 0x00111A7C File Offset: 0x0010FC7C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutInterface(ref ISharpherealTestInterface OutInterface)
 		{
 			UTestClass_UFunction_Direct_Interface.__OutInterface_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_Interface.__OutInterface_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_Direct_Interface.__OutInterface_FunctionParams) & -16L;
@@ -275,13 +267,12 @@ namespace UnrealEngine
 			IUnrealNativeInterface @object = OutInterface;
 			ISharpherealTestInterface sharpherealTestInterface = OutInterface;
 			ptr2.OutInterface = new FScriptInterface(@object, (sharpherealTestInterface != null) ? sharpherealTestInterface.InterfaceOffset() : 0);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__OutInterface_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__OutInterface_NativeFunctionPtr, (void*)ptr);
 			OutInterface = (BuiltinUtils.GetOrCreateUObjectByNativePointer(ptr->OutInterface.ObjectPointer) as ISharpherealTestInterface);
 		}
 
-		// Token: 0x06025741 RID: 153409 RVA: 0x00382404 File Offset: 0x00380604
+		// Token: 0x0600B21E RID: 45598 RVA: 0x00111AF0 File Offset: 0x0010FCF0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InInterfaceArray([Nullable(new byte[]
 		{
 			2,
@@ -295,7 +286,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->InInterfaceArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__InInterfaceArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__InInterfaceArray_NativeFunctionPtr, (void*)ptr);
 			TArray<ISharpherealTestInterface> tarray2 = InInterfaceArray;
 			if (tarray2 != null)
 			{
@@ -304,9 +295,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_Interface.__InInterfaceArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025742 RID: 153410 RVA: 0x00382480 File Offset: 0x00380680
+		// Token: 0x0600B21F RID: 45599 RVA: 0x00111B68 File Offset: 0x0010FD68
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InInterface2Array([Nullable(new byte[]
 		{
 			2,
@@ -320,7 +310,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->InInterface2Array);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__InInterface2Array_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__InInterface2Array_NativeFunctionPtr, (void*)ptr);
 			TArray<ISharpherealTestInterface2> tarray2 = InInterface2Array;
 			if (tarray2 != null)
 			{
@@ -329,9 +319,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_Interface.__InInterface2Array_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025743 RID: 153411 RVA: 0x003824FC File Offset: 0x003806FC
+		// Token: 0x0600B220 RID: 45600 RVA: 0x00111BE0 File Offset: 0x0010FDE0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InInterface2(in ISharpherealTestInterface2 InInterface2)
 		{
 			UTestClass_UFunction_Direct_Interface.__InInterface2_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_Interface.__InInterface2_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_Direct_Interface.__InInterface2_FunctionParams) & -16L;
@@ -340,12 +329,11 @@ namespace UnrealEngine
 			IUnrealNativeInterface @object = InInterface2;
 			ISharpherealTestInterface2 sharpherealTestInterface = InInterface2;
 			ptr2.InInterface2 = new FScriptInterface(@object, (sharpherealTestInterface != null) ? sharpherealTestInterface.InterfaceOffset() : 0);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__InInterface2_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__InInterface2_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06025744 RID: 153412 RVA: 0x00382558 File Offset: 0x00380758
+		// Token: 0x0600B221 RID: 45601 RVA: 0x00111C3C File Offset: 0x0010FE3C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InInterface(in ISharpherealTestInterface InInterface)
 		{
 			UTestClass_UFunction_Direct_Interface.__InInterface_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_Interface.__InInterface_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_Direct_Interface.__InInterface_FunctionParams) & -16L;
@@ -354,93 +342,89 @@ namespace UnrealEngine
 			IUnrealNativeInterface @object = InInterface;
 			ISharpherealTestInterface sharpherealTestInterface = InInterface;
 			ptr2.InInterface = new FScriptInterface(@object, (sharpherealTestInterface != null) ? sharpherealTestInterface.InterfaceOffset() : 0);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__InInterface_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__InInterface_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06025745 RID: 153413 RVA: 0x003825B4 File Offset: 0x003807B4
+		// Token: 0x0600B222 RID: 45602 RVA: 0x00111C98 File Offset: 0x0010FE98
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TArray<ISharpherealTestInterface> GetInterfaceArray()
 		{
 			UTestClass_UFunction_Direct_Interface.__GetInterfaceArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_Interface.__GetInterfaceArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_Direct_Interface.__GetInterfaceArray_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_Interface.__GetInterfaceArray_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__GetInterfaceArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__GetInterfaceArray_NativeFunctionPtr, (void*)ptr);
 			TArray<ISharpherealTestInterface> result = new TArray<ISharpherealTestInterface>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_Interface.__GetInterfaceArray_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06025746 RID: 153414 RVA: 0x00382614 File Offset: 0x00380814
+		// Token: 0x0600B223 RID: 45603 RVA: 0x00111CF8 File Offset: 0x0010FEF8
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TArray<ISharpherealTestInterface2> GetInterface2Array()
 		{
 			UTestClass_UFunction_Direct_Interface.__GetInterface2Array_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_Interface.__GetInterface2Array_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_Direct_Interface.__GetInterface2Array_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_Interface.__GetInterface2Array_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__GetInterface2Array_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__GetInterface2Array_NativeFunctionPtr, (void*)ptr);
 			TArray<ISharpherealTestInterface2> result = new TArray<ISharpherealTestInterface2>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_Interface.__GetInterface2Array_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06025747 RID: 153415 RVA: 0x00382674 File Offset: 0x00380874
+		// Token: 0x0600B224 RID: 45604 RVA: 0x00111D58 File Offset: 0x0010FF58
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe ISharpherealTestInterface2 GetInterface2()
 		{
 			UTestClass_UFunction_Direct_Interface.__GetInterface2_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_Interface.__GetInterface2_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_Direct_Interface.__GetInterface2_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_Interface.__GetInterface2_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__GetInterface2_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__GetInterface2_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer(ptr->__Result.ObjectPointer) as ISharpherealTestInterface2;
 		}
 
-		// Token: 0x06025748 RID: 153416 RVA: 0x003826CC File Offset: 0x003808CC
+		// Token: 0x0600B225 RID: 45605 RVA: 0x00111DAC File Offset: 0x0010FFAC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe ISharpherealTestInterface GetInterface()
 		{
 			UTestClass_UFunction_Direct_Interface.__GetInterface_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_Interface.__GetInterface_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_Direct_Interface.__GetInterface_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_Interface.__GetInterface_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__GetInterface_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_Interface.__GetInterface_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer(ptr->__Result.ObjectPointer) as ISharpherealTestInterface;
 		}
 
-		// Token: 0x06025749 RID: 153417 RVA: 0x00382721 File Offset: 0x00380921
+		// Token: 0x0600B226 RID: 45606 RVA: 0x00111E00 File Offset: 0x00110000
 		static UTestClass_UFunction_Direct_Interface()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SharpherealTest.TestClass_UFunction_Direct_Interface");
 		}
 
-		// Token: 0x0602574A RID: 153418 RVA: 0x0038272F File Offset: 0x0038092F
+		// Token: 0x0600B227 RID: 45607 RVA: 0x00111E0E File Offset: 0x0011000E
 		protected UTestClass_UFunction_Direct_Interface(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401446A RID: 83050
+		// Token: 0x04004EC9 RID: 20169
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/SharpherealTest.TestClass_UFunction_Direct_Interface";
 
-		// Token: 0x0401446B RID: 83051
+		// Token: 0x04004ECA RID: 20170
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401446C RID: 83052
+		// Token: 0x04004ECB RID: 20171
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401446D RID: 83053
+		// Token: 0x04004ECC RID: 20172
 		internal static int __PropertyOffset_Object;
 
-		// Token: 0x0401446E RID: 83054
+		// Token: 0x04004ECD RID: 20173
 		internal static int __PropertyOffset_ObjectCmp;
 
-		// Token: 0x0401446F RID: 83055
+		// Token: 0x04004ECE RID: 20174
 		internal static int __PropertyOffset_Interface;
 
-		// Token: 0x04014470 RID: 83056
+		// Token: 0x04004ECF RID: 20175
 		internal static int __PropertyOffset_InterfaceArray;
 
-		// Token: 0x04014471 RID: 83057
+		// Token: 0x04004ED0 RID: 20176
 		[Nullable(new byte[]
 		{
 			2,
@@ -448,13 +432,13 @@ namespace UnrealEngine
 		})]
 		private TArray<ISharpherealTestInterface> _InterfaceArray;
 
-		// Token: 0x04014472 RID: 83058
+		// Token: 0x04004ED1 RID: 20177
 		internal static int __PropertyOffset_Interface2;
 
-		// Token: 0x04014473 RID: 83059
+		// Token: 0x04004ED2 RID: 20178
 		internal static int __PropertyOffset_Interface2Array;
 
-		// Token: 0x04014474 RID: 83060
+		// Token: 0x04004ED3 RID: 20179
 		[Nullable(new byte[]
 		{
 			2,
@@ -462,226 +446,226 @@ namespace UnrealEngine
 		})]
 		private TArray<ISharpherealTestInterface2> _Interface2Array;
 
-		// Token: 0x04014475 RID: 83061
+		// Token: 0x04004ED4 RID: 20180
 		private static IntPtr __SetInterfaceArray_NativeFunctionPtr;
 
-		// Token: 0x04014476 RID: 83062
+		// Token: 0x04004ED5 RID: 20181
 		private static IntPtr __SetInterface2Array_NativeFunctionPtr;
 
-		// Token: 0x04014477 RID: 83063
+		// Token: 0x04004ED6 RID: 20182
 		private static IntPtr __SetInterface2_NativeFunctionPtr;
 
-		// Token: 0x04014478 RID: 83064
+		// Token: 0x04004ED7 RID: 20183
 		private static IntPtr __SetInterface_NativeFunctionPtr;
 
-		// Token: 0x04014479 RID: 83065
+		// Token: 0x04004ED8 RID: 20184
 		private static IntPtr __OutInterfaceArray_NativeFunctionPtr;
 
-		// Token: 0x0401447A RID: 83066
+		// Token: 0x04004ED9 RID: 20185
 		private static IntPtr __OutInterface2Array_NativeFunctionPtr;
 
-		// Token: 0x0401447B RID: 83067
+		// Token: 0x04004EDA RID: 20186
 		private static IntPtr __OutInterface2_NativeFunctionPtr;
 
-		// Token: 0x0401447C RID: 83068
+		// Token: 0x04004EDB RID: 20187
 		private static IntPtr __OutInterface_NativeFunctionPtr;
 
-		// Token: 0x0401447D RID: 83069
+		// Token: 0x04004EDC RID: 20188
 		private static IntPtr __InInterfaceArray_NativeFunctionPtr;
 
-		// Token: 0x0401447E RID: 83070
+		// Token: 0x04004EDD RID: 20189
 		private static IntPtr __InInterface2Array_NativeFunctionPtr;
 
-		// Token: 0x0401447F RID: 83071
+		// Token: 0x04004EDE RID: 20190
 		private static IntPtr __InInterface2_NativeFunctionPtr;
 
-		// Token: 0x04014480 RID: 83072
+		// Token: 0x04004EDF RID: 20191
 		private static IntPtr __InInterface_NativeFunctionPtr;
 
-		// Token: 0x04014481 RID: 83073
+		// Token: 0x04004EE0 RID: 20192
 		private static IntPtr __GetInterfaceArray_NativeFunctionPtr;
 
-		// Token: 0x04014482 RID: 83074
+		// Token: 0x04004EE1 RID: 20193
 		private static IntPtr __GetInterface2Array_NativeFunctionPtr;
 
-		// Token: 0x04014483 RID: 83075
+		// Token: 0x04004EE2 RID: 20194
 		private static IntPtr __GetInterface2_NativeFunctionPtr;
 
-		// Token: 0x04014484 RID: 83076
+		// Token: 0x04004EE3 RID: 20195
 		private static IntPtr __GetInterface_NativeFunctionPtr;
 
-		// Token: 0x02003883 RID: 14467
+		// Token: 0x02001155 RID: 4437
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetInterfaceArray_FunctionParams
 		{
-			// Token: 0x040179AA RID: 96682
+			// Token: 0x0400655D RID: 25949
 			[FieldOffset(0)]
 			public byte InInterfaceArray;
 		}
 
-		// Token: 0x02003884 RID: 14468
+		// Token: 0x02001156 RID: 4438
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetInterface2Array_FunctionParams
 		{
-			// Token: 0x040179AB RID: 96683
+			// Token: 0x0400655E RID: 25950
 			[FieldOffset(0)]
 			public byte InInterface2Array;
 		}
 
-		// Token: 0x02003885 RID: 14469
+		// Token: 0x02001157 RID: 4439
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetInterface2_FunctionParams
 		{
-			// Token: 0x040179AC RID: 96684
+			// Token: 0x0400655F RID: 25951
 			[FieldOffset(0)]
 			public FScriptInterface InInterface2;
 		}
 
-		// Token: 0x02003886 RID: 14470
+		// Token: 0x02001158 RID: 4440
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetInterface_FunctionParams
 		{
-			// Token: 0x040179AD RID: 96685
+			// Token: 0x04006560 RID: 25952
 			[FieldOffset(0)]
 			public FScriptInterface InInterface;
 		}
 
-		// Token: 0x02003887 RID: 14471
+		// Token: 0x02001159 RID: 4441
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OutInterfaceArray_FunctionParams
 		{
-			// Token: 0x040179AE RID: 96686
+			// Token: 0x04006561 RID: 25953
 			[FieldOffset(0)]
 			public byte OutInterfaceArray;
 		}
 
-		// Token: 0x02003888 RID: 14472
+		// Token: 0x0200115A RID: 4442
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OutInterface2Array_FunctionParams
 		{
-			// Token: 0x040179AF RID: 96687
+			// Token: 0x04006562 RID: 25954
 			[FieldOffset(0)]
 			public byte OutInterface2Array;
 		}
 
-		// Token: 0x02003889 RID: 14473
+		// Token: 0x0200115B RID: 4443
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OutInterface2_FunctionParams
 		{
-			// Token: 0x040179B0 RID: 96688
+			// Token: 0x04006563 RID: 25955
 			[FieldOffset(0)]
 			public FScriptInterface OutInterface2;
 		}
 
-		// Token: 0x0200388A RID: 14474
+		// Token: 0x0200115C RID: 4444
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OutInterface_FunctionParams
 		{
-			// Token: 0x040179B1 RID: 96689
+			// Token: 0x04006564 RID: 25956
 			[FieldOffset(0)]
 			public FScriptInterface OutInterface;
 		}
 
-		// Token: 0x0200388B RID: 14475
+		// Token: 0x0200115D RID: 4445
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InInterfaceArray_FunctionParams
 		{
-			// Token: 0x040179B2 RID: 96690
+			// Token: 0x04006565 RID: 25957
 			[FieldOffset(0)]
 			public byte InInterfaceArray;
 		}
 
-		// Token: 0x0200388C RID: 14476
+		// Token: 0x0200115E RID: 4446
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InInterface2Array_FunctionParams
 		{
-			// Token: 0x040179B3 RID: 96691
+			// Token: 0x04006566 RID: 25958
 			[FieldOffset(0)]
 			public byte InInterface2Array;
 		}
 
-		// Token: 0x0200388D RID: 14477
+		// Token: 0x0200115F RID: 4447
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InInterface2_FunctionParams
 		{
-			// Token: 0x040179B4 RID: 96692
+			// Token: 0x04006567 RID: 25959
 			[FieldOffset(0)]
 			public FScriptInterface InInterface2;
 		}
 
-		// Token: 0x0200388E RID: 14478
+		// Token: 0x02001160 RID: 4448
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InInterface_FunctionParams
 		{
-			// Token: 0x040179B5 RID: 96693
+			// Token: 0x04006568 RID: 25960
 			[FieldOffset(0)]
 			public FScriptInterface InInterface;
 		}
 
-		// Token: 0x0200388F RID: 14479
+		// Token: 0x02001161 RID: 4449
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetInterfaceArray_FunctionParams
 		{
-			// Token: 0x040179B6 RID: 96694
+			// Token: 0x04006569 RID: 25961
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003890 RID: 14480
+		// Token: 0x02001162 RID: 4450
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetInterface2Array_FunctionParams
 		{
-			// Token: 0x040179B7 RID: 96695
+			// Token: 0x0400656A RID: 25962
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003891 RID: 14481
+		// Token: 0x02001163 RID: 4451
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetInterface2_FunctionParams
 		{
-			// Token: 0x040179B8 RID: 96696
+			// Token: 0x0400656B RID: 25963
 			[FieldOffset(0)]
 			public FScriptInterface __Result;
 		}
 
-		// Token: 0x02003892 RID: 14482
+		// Token: 0x02001164 RID: 4452
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetInterface_FunctionParams
 		{
-			// Token: 0x040179B9 RID: 96697
+			// Token: 0x0400656C RID: 25964
 			[FieldOffset(0)]
 			public FScriptInterface __Result;
 		}

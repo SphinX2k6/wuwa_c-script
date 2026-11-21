@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025E3 RID: 9699
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028A2 RID: 10402
 	public class IAbsolutePos2 : IBasePos2
 	{
-		// Token: 0x0600D9FD RID: 55805 RVA: 0x0020800F File Offset: 0x0020620F
+		// Token: 0x0600E7C6 RID: 59334 RVA: 0x002246FB File Offset: 0x002228FB
 		public static IAbsolutePos2 Create(IAbsolutePos2? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FF9 RID: 16377
-		// (get) Token: 0x0600D9FE RID: 55806 RVA: 0x0020802E File Offset: 0x0020622E
+		// Token: 0x17004330 RID: 17200
+		// (get) Token: 0x0600E7C7 RID: 59335 RVA: 0x0022471A File Offset: 0x0022291A
 		public override EPos2 Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FFA RID: 16378
-		// (get) Token: 0x0600D9FF RID: 55807 RVA: 0x0020803B File Offset: 0x0020623B
+		// Token: 0x17004331 RID: 17201
+		// (get) Token: 0x0600E7C8 RID: 59336 RVA: 0x00224727 File Offset: 0x00222927
 		public virtual VectorInfo Pos
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007911 RID: 30993
+		// Token: 0x04007FA8 RID: 32680
 		private IAbsolutePos2 Instance;
 
-		// Token: 0x04007912 RID: 30994
+		// Token: 0x04007FA9 RID: 32681
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x04007913 RID: 30995
+		// Token: 0x04007FAA RID: 32682
 		private bool _PosInited;
 	}
 }

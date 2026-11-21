@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200193D RID: 6461
+	// Token: 0x02001AC6 RID: 6854
 	public class IControlTrackingSelf_SetValue
 	{
-		// Token: 0x04005693 RID: 22163
+		// Token: 0x04005AE3 RID: 23267
 		public EControlTrackingType Type;
 	}
 }

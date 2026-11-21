@@ -6,12 +6,12 @@ using CSharpScript.Game.Camera.FightCameraController.SpecialGameplay;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02001083 RID: 4227
+// Token: 0x02000537 RID: 1335
 [NullableContext(1)]
 [Nullable(0)]
 public class RhythmGameCamera : ISpecialGameplayCamera
 {
-	// Token: 0x06006DA2 RID: 28066 RVA: 0x00161668 File Offset: 0x0015F868
+	// Token: 0x06004137 RID: 16695 RVA: 0x00169F9C File Offset: 0x0016819C
 	public void OnInit(ACameraActor camera, CameraModelInstance cameraModel)
 	{
 		this.CameraActor = camera;
@@ -23,7 +23,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		EventSystem.Instance.Add<bool>(EEventName.OnRhythmGameFreePhase, new Action<bool>(this.OnRhythmGameFreePhase));
 	}
 
-	// Token: 0x06006DA3 RID: 28067 RVA: 0x001616F4 File Offset: 0x0015F8F4
+	// Token: 0x06004138 RID: 16696 RVA: 0x0016A028 File Offset: 0x00168228
 	private void InitializeInterpolationState()
 	{
 		CameraInterpolationState interpolationState = new CameraInterpolationState
@@ -61,13 +61,13 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		this.PhaseState = phaseState;
 	}
 
-	// Token: 0x06006DA4 RID: 28068 RVA: 0x001618F4 File Offset: 0x0015FAF4
+	// Token: 0x06004139 RID: 16697 RVA: 0x0016A228 File Offset: 0x00168428
 	private float LerpFloat(float start, float end, float alpha)
 	{
 		return start + (end - start) * alpha;
 	}
 
-	// Token: 0x06006DA5 RID: 28069 RVA: 0x00161900 File Offset: 0x0015FB00
+	// Token: 0x0600413A RID: 16698 RVA: 0x0016A234 File Offset: 0x00168434
 	private void UpdateInterpolation(float deltaTime)
 	{
 		if (this.InterpolationState == null || !this.InterpolationState.IsInterpolating)
@@ -106,7 +106,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		}
 	}
 
-	// Token: 0x06006DA6 RID: 28070 RVA: 0x00161AE8 File Offset: 0x0015FCE8
+	// Token: 0x0600413B RID: 16699 RVA: 0x0016A41C File Offset: 0x0016861C
 	private void UpdateTargetValues(Vector targetPos, Rotator targetRot, float targetFov)
 	{
 		if (this.InterpolationState == null)
@@ -118,7 +118,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		this.InterpolationState.TargetFov = targetFov;
 	}
 
-	// Token: 0x06006DA7 RID: 28071 RVA: 0x00161B24 File Offset: 0x0015FD24
+	// Token: 0x0600413C RID: 16700 RVA: 0x0016A458 File Offset: 0x00168658
 	private void StartInterpolation(Vector targetPos, Rotator targetRot, float targetFov, RhythmGameSpeedLevelConfig prevConfig, float duration = 0.5f)
 	{
 		if (this.InterpolationState == null)
@@ -142,7 +142,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		this.InterpolationState.IsInterpolating = true;
 	}
 
-	// Token: 0x06006DA8 RID: 28072 RVA: 0x00161C1C File Offset: 0x0015FE1C
+	// Token: 0x0600413D RID: 16701 RVA: 0x0016A550 File Offset: 0x00168750
 	private void EnterStartPhase(FVectorDouble targetPos, FRotator targetRot, float targetFov, float duration)
 	{
 		if (this.PhaseState == null || this.InterpolationState == null)
@@ -194,7 +194,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		}
 	}
 
-	// Token: 0x06006DA9 RID: 28073 RVA: 0x00161E10 File Offset: 0x00160010
+	// Token: 0x0600413E RID: 16702 RVA: 0x0016A744 File Offset: 0x00168944
 	private void EnterEndPhase(FVectorDouble targetPos, FRotator targetRot, float targetFov, float duration)
 	{
 		if (this.PhaseState == null || this.InterpolationState == null)
@@ -229,7 +229,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		}
 	}
 
-	// Token: 0x06006DAA RID: 28074 RVA: 0x00161F70 File Offset: 0x00160170
+	// Token: 0x0600413F RID: 16703 RVA: 0x0016A8A4 File Offset: 0x00168AA4
 	private void ExitPhase()
 	{
 		if (this.PhaseState == null)
@@ -242,7 +242,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		EventSystem.Instance.Emit(EEventName.OnRhythmGameStartNormalPhase);
 	}
 
-	// Token: 0x06006DAB RID: 28075 RVA: 0x00161FC4 File Offset: 0x001601C4
+	// Token: 0x06004140 RID: 16704 RVA: 0x0016A8F8 File Offset: 0x00168AF8
 	private void UpdatePhase(float deltaTime)
 	{
 		if (this.PhaseState == null)
@@ -264,7 +264,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		}
 	}
 
-	// Token: 0x06006DAC RID: 28076 RVA: 0x00162000 File Offset: 0x00160200
+	// Token: 0x06004141 RID: 16705 RVA: 0x0016A934 File Offset: 0x00168B34
 	private void UpdatePerformancePhase(float deltaTime)
 	{
 		if (this.PhaseState == null)
@@ -330,7 +330,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		}
 	}
 
-	// Token: 0x06006DAD RID: 28077 RVA: 0x001622F4 File Offset: 0x001604F4
+	// Token: 0x06004142 RID: 16706 RVA: 0x0016AC28 File Offset: 0x00168E28
 	private void EnterFreePhase(IFreeCameraConfig config, float? interpDuration = null)
 	{
 		if (this.PhaseState == null || this.InterpolationState == null)
@@ -380,7 +380,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		this.PhaseState.ElapsedTime = 0f;
 	}
 
-	// Token: 0x06006DAE RID: 28078 RVA: 0x001624F8 File Offset: 0x001606F8
+	// Token: 0x06004143 RID: 16707 RVA: 0x0016AE2C File Offset: 0x0016902C
 	private void ExitFreePhase(float interpDuration = 0.5f)
 	{
 		ICameraPhaseState phaseState = this.PhaseState;
@@ -426,7 +426,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		this.LastConfigIndex = curSpeedLevelConfigIndex;
 	}
 
-	// Token: 0x06006DAF RID: 28079 RVA: 0x00162710 File Offset: 0x00160910
+	// Token: 0x06004144 RID: 16708 RVA: 0x0016B044 File Offset: 0x00169244
 	private void UpdateFreePhase(float deltaTime)
 	{
 		if (this.FreeState == null || this.InterpolationState == null)
@@ -583,7 +583,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		}
 	}
 
-	// Token: 0x06006DB0 RID: 28080 RVA: 0x00162F08 File Offset: 0x00161108
+	// Token: 0x06004145 RID: 16709 RVA: 0x0016B83C File Offset: 0x00169A3C
 	private float CalculateCameraTransform(Vector shipLocation, Rotator shipRotation, RhythmGameSpeedLevelConfig config, Vector outPos, Rotator outRot)
 	{
 		Quat quat = shipRotation.Quaternion(null);
@@ -597,7 +597,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		return config.Fov;
 	}
 
-	// Token: 0x06006DB1 RID: 28081 RVA: 0x00162F98 File Offset: 0x00161198
+	// Token: 0x06004146 RID: 16710 RVA: 0x0016B8CC File Offset: 0x00169ACC
 	public void Update(float deltaTime)
 	{
 		if (RhythmGameController.Instance.GetIsPause())
@@ -661,7 +661,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		this.CameraActor.CameraComponent.SetFieldOfView(this.InterpolationState.CurrentFov);
 	}
 
-	// Token: 0x06006DB2 RID: 28082 RVA: 0x001631D4 File Offset: 0x001613D4
+	// Token: 0x06004147 RID: 16711 RVA: 0x0016BB08 File Offset: 0x00169D08
 	private void OnRhythmGameStartPhase(RhythmGamePerformanceCameraConfig config)
 	{
 		if (config.Time > 0.02f)
@@ -670,7 +670,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		}
 	}
 
-	// Token: 0x06006DB3 RID: 28083 RVA: 0x00163201 File Offset: 0x00161401
+	// Token: 0x06004148 RID: 16712 RVA: 0x0016BB35 File Offset: 0x00169D35
 	private void OnRhythmGameEndPhase(RhythmGamePerformanceCameraConfig config)
 	{
 		if (config.Time > 0.02f)
@@ -679,7 +679,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		}
 	}
 
-	// Token: 0x06006DB4 RID: 28084 RVA: 0x00163230 File Offset: 0x00161430
+	// Token: 0x06004149 RID: 16713 RVA: 0x0016BB64 File Offset: 0x00169D64
 	private void OnRhythmGameFreePhase(bool isEnter)
 	{
 		RhythmGameFreeFlyCameraConfig freeFlyCameraConfig = RhythmGameModel.Instance.RhythmGameConfig.FreeFlyCameraConfig;
@@ -705,7 +705,7 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		this.ExitFreePhase(freeFlyCameraConfig.ExitTime);
 	}
 
-	// Token: 0x06006DB5 RID: 28085 RVA: 0x001632DC File Offset: 0x001614DC
+	// Token: 0x0600414A RID: 16714 RVA: 0x0016BC10 File Offset: 0x00169E10
 	public void OnDestroy()
 	{
 		if (this.CameraActor != null && this.CameraActor.IsValid())
@@ -720,29 +720,29 @@ public class RhythmGameCamera : ISpecialGameplayCamera
 		EventSystem.Instance.Remove<bool>(EEventName.OnRhythmGameFreePhase, new Action<bool>(this.OnRhythmGameFreePhase));
 	}
 
-	// Token: 0x040032A5 RID: 12965
+	// Token: 0x0400333E RID: 13118
 	private const float CameraInterpolationDuration = 1f;
 
-	// Token: 0x040032A6 RID: 12966
+	// Token: 0x0400333F RID: 13119
 	[Nullable(2)]
 	private ACameraActor CameraActor;
 
-	// Token: 0x040032A7 RID: 12967
+	// Token: 0x04003340 RID: 13120
 	[Nullable(2)]
 	private ICameraInterpolationState InterpolationState;
 
-	// Token: 0x040032A8 RID: 12968
+	// Token: 0x04003341 RID: 13121
 	[Nullable(2)]
 	private ICameraPhaseState PhaseState;
 
-	// Token: 0x040032A9 RID: 12969
+	// Token: 0x04003342 RID: 13122
 	[Nullable(2)]
 	private IFreeCameraState FreeState;
 
-	// Token: 0x040032AA RID: 12970
+	// Token: 0x04003343 RID: 13123
 	private int LastConfigIndex = -1;
 
-	// Token: 0x040032AB RID: 12971
+	// Token: 0x04003344 RID: 13124
 	[Nullable(2)]
 	private UKuroRhythmGameShipController ShipController;
 }

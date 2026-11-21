@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200287A RID: 10362
+// Token: 0x02001DF5 RID: 7669
 public interface ICostContentItemData
 {
-	// Token: 0x17001C72 RID: 7282
-	// (get) Token: 0x06015524 RID: 87332
-	// (set) Token: 0x06015525 RID: 87333
+	// Token: 0x17001CCA RID: 7370
+	// (get) Token: 0x06012F22 RID: 77602
+	// (set) Token: 0x06012F23 RID: 77603
 	int CostNum { get; set; }
 
-	// Token: 0x17001C73 RID: 7283
-	// (get) Token: 0x06015526 RID: 87334
-	// (set) Token: 0x06015527 RID: 87335
+	// Token: 0x17001CCB RID: 7371
+	// (get) Token: 0x06012F24 RID: 77604
+	// (set) Token: 0x06012F25 RID: 77605
 	EItemId CostType { get; set; }
 }

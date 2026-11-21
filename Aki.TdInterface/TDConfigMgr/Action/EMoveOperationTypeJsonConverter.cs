@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200239E RID: 9118
+	// Token: 0x02002629 RID: 9769
 	public class EMoveOperationTypeJsonConverter : JsonConverter<EMoveOperationType>
 	{
-		// Token: 0x0600C6C7 RID: 50887 RVA: 0x001D1BB8 File Offset: 0x001CFDB8
+		// Token: 0x0600D314 RID: 54036 RVA: 0x001EAD58 File Offset: 0x001E8F58
 		public override EMoveOperationType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EMoveOperationTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C6C8 RID: 50888 RVA: 0x001D1BDC File Offset: 0x001CFDDC
+		// Token: 0x0600D315 RID: 54037 RVA: 0x001EAD7C File Offset: 0x001E8F7C
 		public override void Write(Utf8JsonWriter writer, EMoveOperationType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

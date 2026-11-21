@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 {
-	// Token: 0x02006EBA RID: 28346
+	// Token: 0x0200603A RID: 24634
 	public enum EDollGrabMachineClawState
 	{
-		// Token: 0x04023F25 RID: 147237
+		// Token: 0x0401F1D8 RID: 127448
 		Idle,
-		// Token: 0x04023F26 RID: 147238
+		// Token: 0x0401F1D9 RID: 127449
 		MovingDown,
-		// Token: 0x04023F27 RID: 147239
+		// Token: 0x0401F1DA RID: 127450
 		MovingUp,
-		// Token: 0x04023F28 RID: 147240
+		// Token: 0x0401F1DB RID: 127451
 		Grabbing,
-		// Token: 0x04023F29 RID: 147241
+		// Token: 0x0401F1DC RID: 127452
 		Release,
-		// Token: 0x04023F2A RID: 147242
+		// Token: 0x0401F1DD RID: 127453
 		Reset
 	}
 }

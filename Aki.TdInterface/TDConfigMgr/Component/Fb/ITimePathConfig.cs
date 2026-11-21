@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C53 RID: 3155
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D2C RID: 3372
 	public class ITimePathConfig
 	{
-		// Token: 0x0600484A RID: 18506 RVA: 0x000B5BBE File Offset: 0x000B3DBE
+		// Token: 0x06004CCF RID: 19663 RVA: 0x000C01B2 File Offset: 0x000BE3B2
 		public static ITimePathConfig Create(ITimePathConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001561 RID: 5473
-		// (get) Token: 0x0600484B RID: 18507 RVA: 0x000B5BDD File Offset: 0x000B3DDD
+		// Token: 0x17001672 RID: 5746
+		// (get) Token: 0x06004CD0 RID: 19664 RVA: 0x000C01D1 File Offset: 0x000BE3D1
 		public virtual float TotalTime
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001562 RID: 5474
-		// (get) Token: 0x0600484C RID: 18508 RVA: 0x000B5BEA File Offset: 0x000B3DEA
+		// Token: 0x17001673 RID: 5747
+		// (get) Token: 0x06004CD1 RID: 19665 RVA: 0x000C01DE File Offset: 0x000BE3DE
 		public virtual string TimePathCurve
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400292E RID: 10542
+		// Token: 0x04002B8F RID: 11151
 		private ITimePathConfig Instance;
 	}
 }

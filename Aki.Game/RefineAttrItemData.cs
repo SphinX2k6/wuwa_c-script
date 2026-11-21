@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x0200172A RID: 5930
+// Token: 0x02000BE2 RID: 3042
 public class RefineAttrItemData : IRefineAttrItemData
 {
-	// Token: 0x17000E26 RID: 3622
-	// (get) Token: 0x0600AB54 RID: 43860 RVA: 0x00267C8F File Offset: 0x00265E8F
-	// (set) Token: 0x0600AB55 RID: 43861 RVA: 0x00267C97 File Offset: 0x00265E97
+	// Token: 0x17000E47 RID: 3655
+	// (get) Token: 0x06007F36 RID: 32566 RVA: 0x00272067 File Offset: 0x00270267
+	// (set) Token: 0x06007F37 RID: 32567 RVA: 0x0027206F File Offset: 0x0027026F
 	public int PropItemId { get; set; }
 
-	// Token: 0x17000E27 RID: 3623
-	// (get) Token: 0x0600AB56 RID: 43862 RVA: 0x00267CA0 File Offset: 0x00265EA0
-	// (set) Token: 0x0600AB57 RID: 43863 RVA: 0x00267CA8 File Offset: 0x00265EA8
+	// Token: 0x17000E48 RID: 3656
+	// (get) Token: 0x06007F38 RID: 32568 RVA: 0x00272078 File Offset: 0x00270278
+	// (set) Token: 0x06007F39 RID: 32569 RVA: 0x00272080 File Offset: 0x00270280
 	public int PropIndexId { get; set; }
 
-	// Token: 0x17000E28 RID: 3624
-	// (get) Token: 0x0600AB58 RID: 43864 RVA: 0x00267CB1 File Offset: 0x00265EB1
-	// (set) Token: 0x0600AB59 RID: 43865 RVA: 0x00267CB9 File Offset: 0x00265EB9
+	// Token: 0x17000E49 RID: 3657
+	// (get) Token: 0x06007F3A RID: 32570 RVA: 0x00272089 File Offset: 0x00270289
+	// (set) Token: 0x06007F3B RID: 32571 RVA: 0x00272091 File Offset: 0x00270291
 	public bool IsRecommend { get; set; }
 
-	// Token: 0x17000E29 RID: 3625
-	// (get) Token: 0x0600AB5A RID: 43866 RVA: 0x00267CC2 File Offset: 0x00265EC2
-	// (set) Token: 0x0600AB5B RID: 43867 RVA: 0x00267CCA File Offset: 0x00265ECA
+	// Token: 0x17000E4A RID: 3658
+	// (get) Token: 0x06007F3C RID: 32572 RVA: 0x0027209A File Offset: 0x0027029A
+	// (set) Token: 0x06007F3D RID: 32573 RVA: 0x002720A2 File Offset: 0x002702A2
 	public bool IsDisable { get; set; }
 }

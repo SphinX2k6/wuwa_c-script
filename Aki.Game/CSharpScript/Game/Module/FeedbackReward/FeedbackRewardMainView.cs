@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FeedbackReward
 {
-	// Token: 0x02005A86 RID: 23174
+	// Token: 0x02004A62 RID: 19042
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FeedbackRewardMainView : UiViewBase
 	{
-		// Token: 0x0603AB28 RID: 240424 RVA: 0x00DFADE9 File Offset: 0x00DF8FE9
+		// Token: 0x0602FA71 RID: 195185 RVA: 0x00D4B37D File Offset: 0x00D4957D
 		public FeedbackRewardMainView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603AB29 RID: 240425 RVA: 0x00DFAE14 File Offset: 0x00DF9014
+		// Token: 0x0602FA72 RID: 195186 RVA: 0x00D4B3A8 File Offset: 0x00D495A8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603AB2A RID: 240426 RVA: 0x00DFB0F8 File Offset: 0x00DF92F8
+		// Token: 0x0602FA73 RID: 195187 RVA: 0x00D4B68C File Offset: 0x00D4988C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FeedbackRewardMainView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -89,19 +89,19 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AB2B RID: 240427 RVA: 0x00DFB13B File Offset: 0x00DF933B
+		// Token: 0x0602FA74 RID: 195188 RVA: 0x00D4B6CF File Offset: 0x00D498CF
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.FeedbackRewardRefresh, new Action(this.FeedbackRewardRefresh));
 		}
 
-		// Token: 0x0603AB2C RID: 240428 RVA: 0x00DFB159 File Offset: 0x00DF9359
+		// Token: 0x0602FA75 RID: 195189 RVA: 0x00D4B6ED File Offset: 0x00D498ED
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.FeedbackRewardRefresh, new Action(this.FeedbackRewardRefresh));
 		}
 
-		// Token: 0x0603AB2D RID: 240429 RVA: 0x00DFB178 File Offset: 0x00DF9378
+		// Token: 0x0602FA76 RID: 195190 RVA: 0x00D4B70C File Offset: 0x00D4990C
 		protected override void OnStart()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -124,19 +124,19 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			this.RefreshTaskPanel();
 		}
 
-		// Token: 0x0603AB2E RID: 240430 RVA: 0x00DFB268 File Offset: 0x00DF9468
+		// Token: 0x0602FA77 RID: 195191 RVA: 0x00D4B7FC File Offset: 0x00D499FC
 		private RewardItem InitRewardItem()
 		{
 			return new RewardItem();
 		}
 
-		// Token: 0x0603AB2F RID: 240431 RVA: 0x00DFB26F File Offset: 0x00DF946F
+		// Token: 0x0602FA78 RID: 195192 RVA: 0x00D4B803 File Offset: 0x00D49A03
 		private TaskItem InitTaskItem()
 		{
 			return new TaskItem();
 		}
 
-		// Token: 0x0603AB30 RID: 240432 RVA: 0x00DFB278 File Offset: 0x00DF9478
+		// Token: 0x0602FA79 RID: 195193 RVA: 0x00D4B80C File Offset: 0x00D49A0C
 		private void RefreshRewardPanel()
 		{
 			int num = this.ShowRewardList[this.CurrentShowRewardIndex];
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			}
 		}
 
-		// Token: 0x0603AB31 RID: 240433 RVA: 0x00DFB4B4 File Offset: 0x00DF96B4
+		// Token: 0x0602FA7A RID: 195194 RVA: 0x00D4BA48 File Offset: 0x00D49C48
 		private void RefreshRewardLayout()
 		{
 			GenericScrollViewNew<RewardItem, int> rewardScrollView = this.RewardScrollView;
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			base.GetText(14).SetText(Math.Min(FeedbackRewardModel.Instance.CurrentPointCount, FeedbackRewardModel.Instance.MaxShowScore).ToString(), true);
 		}
 
-		// Token: 0x0603AB32 RID: 240434 RVA: 0x00DFB514 File Offset: 0x00DF9714
+		// Token: 0x0602FA7B RID: 195195 RVA: 0x00D4BAA8 File Offset: 0x00D49CA8
 		private void RefreshTaskPanel()
 		{
 			base.GetArtText(11).SetText(FeedbackRewardModel.Instance.CurrentLoginDayCount.ToString());
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			taskLayout.RefreshByData(feedbackTaskList, null, false);
 		}
 
-		// Token: 0x0603AB33 RID: 240435 RVA: 0x00DFB55C File Offset: 0x00DF975C
+		// Token: 0x0602FA7C RID: 195196 RVA: 0x00D4BAF0 File Offset: 0x00D49CF0
 		private void OnClickLeftBtn()
 		{
 			if (this.CurrentShowRewardIndex <= 0)
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			this.CurrentShowRewardIndex--;
 		}
 
-		// Token: 0x0603AB34 RID: 240436 RVA: 0x00DFB5A4 File Offset: 0x00DF97A4
+		// Token: 0x0602FA7D RID: 195197 RVA: 0x00D4BB38 File Offset: 0x00D49D38
 		private void OnClickRightBtn()
 		{
 			if (this.CurrentShowRewardIndex >= this.ShowRewardList.Count - 1)
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			this.CurrentShowRewardIndex++;
 		}
 
-		// Token: 0x0603AB35 RID: 240437 RVA: 0x00DFB5F8 File Offset: 0x00DF97F8
+		// Token: 0x0602FA7E RID: 195198 RVA: 0x00D4BB8C File Offset: 0x00D49D8C
 		private void OnClickDetailBtn()
 		{
 			int id = this.ShowRewardList[this.CurrentShowRewardIndex];
@@ -261,10 +261,10 @@ namespace CSharpScript.Game.Module.FeedbackReward
 				UiManager.Instance.OpenView(EUiViewName.FlySkinShowView, givebackScoreRewardById.Value.SkipParam, null);
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(givebackScoreRewardById.Value.SkipParam, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(givebackScoreRewardById.Value.SkipParam, true, null, false);
 		}
 
-		// Token: 0x0603AB36 RID: 240438 RVA: 0x00DFB6C0 File Offset: 0x00DF98C0
+		// Token: 0x0602FA7F RID: 195199 RVA: 0x00D4BC54 File Offset: 0x00D49E54
 		private void FeedbackRewardRefresh()
 		{
 			foreach (int num in this.ShowRewardList)
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			this.RefreshRewardLayout();
 		}
 
-		// Token: 0x0603AB37 RID: 240439 RVA: 0x00DFB73C File Offset: 0x00DF993C
+		// Token: 0x0602FA80 RID: 195200 RVA: 0x00D4BCD0 File Offset: 0x00D49ED0
 		private void OnPlaySequenceEvent(string sequenceName, string eventName)
 		{
 			if (eventName == "Sequence_Item_Switch")
@@ -288,27 +288,27 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			}
 		}
 
-		// Token: 0x0401EA3A RID: 125498
+		// Token: 0x040194E1 RID: 103649
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401EA3B RID: 125499
+		// Token: 0x040194E2 RID: 103650
 		private readonly List<PageItem> PageList = new List<PageItem>();
 
-		// Token: 0x0401EA3C RID: 125500
+		// Token: 0x040194E3 RID: 103651
 		private List<int> RewardList = new List<int>();
 
-		// Token: 0x0401EA3D RID: 125501
+		// Token: 0x040194E4 RID: 103652
 		private readonly List<int> ShowRewardList = new List<int>();
 
-		// Token: 0x0401EA3E RID: 125502
+		// Token: 0x040194E5 RID: 103653
 		private int CurrentShowRewardIndex;
 
-		// Token: 0x0401EA3F RID: 125503
+		// Token: 0x040194E6 RID: 103654
 		[Nullable(2)]
 		private RewardPanel RewardPanelItem;
 
-		// Token: 0x0401EA40 RID: 125504
+		// Token: 0x040194E7 RID: 103655
 		[Nullable(new byte[]
 		{
 			2,
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 		})]
 		private GenericScrollViewNew<RewardItem, int> RewardScrollView;
 
-		// Token: 0x0401EA41 RID: 125505
+		// Token: 0x040194E8 RID: 103656
 		[Nullable(new byte[]
 		{
 			2,
@@ -324,43 +324,43 @@ namespace CSharpScript.Game.Module.FeedbackReward
 		})]
 		private GenericLayout<TaskItem, int> TaskLayout;
 
-		// Token: 0x0200BCBA RID: 48314
+		// Token: 0x0200A6C3 RID: 42691
 		[NullableContext(0)]
 		private enum ECompDefine
 		{
-			// Token: 0x04038EEC RID: 233196
+			// Token: 0x040338B7 RID: 211127
 			CaptionItem,
-			// Token: 0x04038EED RID: 233197
+			// Token: 0x040338B8 RID: 211128
 			LeftBtn,
-			// Token: 0x04038EEE RID: 233198
+			// Token: 0x040338B9 RID: 211129
 			RightBtn,
-			// Token: 0x04038EEF RID: 233199
+			// Token: 0x040338BA RID: 211130
 			DetailBtn,
-			// Token: 0x04038EF0 RID: 233200
+			// Token: 0x040338BB RID: 211131
 			RewardDesText,
-			// Token: 0x04038EF1 RID: 233201
+			// Token: 0x040338BC RID: 211132
 			RewardNameText,
-			// Token: 0x04038EF2 RID: 233202
+			// Token: 0x040338BD RID: 211133
 			CanGetItem,
-			// Token: 0x04038EF3 RID: 233203
+			// Token: 0x040338BE RID: 211134
 			HaveGetItem,
-			// Token: 0x04038EF4 RID: 233204
+			// Token: 0x040338BF RID: 211135
 			PageLayout,
-			// Token: 0x04038EF5 RID: 233205
+			// Token: 0x040338C0 RID: 211136
 			PageItem,
-			// Token: 0x04038EF6 RID: 233206
+			// Token: 0x040338C1 RID: 211137
 			RewardRootItem,
-			// Token: 0x04038EF7 RID: 233207
+			// Token: 0x040338C2 RID: 211138
 			DayText,
-			// Token: 0x04038EF8 RID: 233208
+			// Token: 0x040338C3 RID: 211139
 			TaskLayout,
-			// Token: 0x04038EF9 RID: 233209
+			// Token: 0x040338C4 RID: 211140
 			TaskItem,
-			// Token: 0x04038EFA RID: 233210
+			// Token: 0x040338C5 RID: 211141
 			PointText,
-			// Token: 0x04038EFB RID: 233211
+			// Token: 0x040338C6 RID: 211142
 			RewardScrollView,
-			// Token: 0x04038EFC RID: 233212
+			// Token: 0x040338C7 RID: 211143
 			RewardItem
 		}
 	}

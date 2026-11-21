@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029DA RID: 10714
+	// Token: 0x02002CC7 RID: 11463
 	public class IOpenPanelQteQte : IOpenQteConfig
 	{
-		// Token: 0x0600ECB9 RID: 60601 RVA: 0x00228ED0 File Offset: 0x002270D0
-		[NullableContext(1)]
+		// Token: 0x0600FB50 RID: 64336 RVA: 0x00246854 File Offset: 0x00244A54
 		public static IOpenPanelQteQte Create(IOpenPanelQteQte? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AC7 RID: 19143
-		// (get) Token: 0x0600ECBA RID: 60602 RVA: 0x00228EEF File Offset: 0x002270EF
+		// Token: 0x17004E70 RID: 20080
+		// (get) Token: 0x0600FB51 RID: 64337 RVA: 0x00246873 File Offset: 0x00244A73
 		public override EOpenQteType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AC8 RID: 19144
-		// (get) Token: 0x0600ECBB RID: 60603 RVA: 0x00228EFC File Offset: 0x002270FC
+		// Token: 0x17004E71 RID: 20081
+		// (get) Token: 0x0600FB52 RID: 64338 RVA: 0x00246880 File Offset: 0x00244A80
 		public virtual int Id
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400825E RID: 33374
+		// Token: 0x0400894F RID: 35151
 		private IOpenPanelQteQte Instance;
 	}
 }

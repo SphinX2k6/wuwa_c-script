@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x020010B7 RID: 4279
+// Token: 0x0200056B RID: 1387
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityTaskData
 {
-	// Token: 0x06006F53 RID: 28499 RVA: 0x0016B720 File Offset: 0x00169920
+	// Token: 0x060042E9 RID: 17129 RVA: 0x00174098 File Offset: 0x00172298
 	public void Refresh(ConditionTask task, TChangeCallback statusChangeCallback = null)
 	{
 		this.Id = task.Id;
@@ -21,7 +21,7 @@ public class ActivityTaskData
 		}
 	}
 
-	// Token: 0x06006F54 RID: 28500 RVA: 0x0016B78C File Offset: 0x0016998C
+	// Token: 0x060042EA RID: 17130 RVA: 0x00174104 File Offset: 0x00172304
 	public void Refresh(ActivityTask task, TChangeCallback statusChangeCallback = null)
 	{
 		this.Id = task.Id;
@@ -35,18 +35,18 @@ public class ActivityTaskData
 		}
 	}
 
-	// Token: 0x040033C8 RID: 13256
+	// Token: 0x04003461 RID: 13409
 	public int Id;
 
-	// Token: 0x040033C9 RID: 13257
+	// Token: 0x04003462 RID: 13410
 	public int TypeId;
 
-	// Token: 0x040033CA RID: 13258
+	// Token: 0x04003463 RID: 13411
 	public int Current;
 
-	// Token: 0x040033CB RID: 13259
+	// Token: 0x04003464 RID: 13412
 	public int Target = 1;
 
-	// Token: 0x040033CC RID: 13260
+	// Token: 0x04003465 RID: 13413
 	public EActivityTaskState Status = EActivityTaskState.Active;
 }

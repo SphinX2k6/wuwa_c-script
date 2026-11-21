@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02003083 RID: 12419
+// Token: 0x020025DA RID: 9690
 public enum EShieldReferenceTargetType
 {
-	// Token: 0x0400CBC8 RID: 52168
+	// Token: 0x0400CFAB RID: 53163
 	FromInstigator,
-	// Token: 0x0400CBC9 RID: 52169
+	// Token: 0x0400CFAC RID: 53164
 	FromSelf
 }

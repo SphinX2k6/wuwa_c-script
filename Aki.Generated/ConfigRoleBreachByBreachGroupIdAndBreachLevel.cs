@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200088E RID: 2190
+	// Token: 0x020008AA RID: 2218
 	public class ConfigRoleBreachByBreachGroupIdAndBreachLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003366 RID: 13158 RVA: 0x0017BEE7 File Offset: 0x0017A0E7
+		// Token: 0x0600340E RID: 13326 RVA: 0x001831CF File Offset: 0x001813CF
 		static ConfigRoleBreachByBreachGroupIdAndBreachLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleBreachByBreachGroupIdAndBreachLevel.CreateStaticDefaultValue), new Action(ConfigRoleBreachByBreachGroupIdAndBreachLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003367 RID: 13159 RVA: 0x0017BF08 File Offset: 0x0017A108
+		// Token: 0x0600340F RID: 13327 RVA: 0x001831F0 File Offset: 0x001813F0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleBreachByBreachGroupIdAndBreachLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003368 RID: 13160 RVA: 0x0017BF87 File Offset: 0x0017A187
+		// Token: 0x06003410 RID: 13328 RVA: 0x0018326F File Offset: 0x0018146F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleBreachByBreachGroupIdAndBreachLevel.LogPair = null;
 			ConfigRoleBreachByBreachGroupIdAndBreachLevel.HandleId = 0;
 		}
 
-		// Token: 0x06003369 RID: 13161 RVA: 0x0017BF95 File Offset: 0x0017A195
+		// Token: 0x06003411 RID: 13329 RVA: 0x0018327D File Offset: 0x0018147D
 		public static void Init()
 		{
 			ConfigRoleBreachByBreachGroupIdAndBreachLevel.HandleId = ConfigCommon.InitDataStatement(ConfigRoleBreachByBreachGroupIdAndBreachLevel.HandleId, "db_role_level.db", "select BinData from `RoleBreach` where BreachGroupId=? AND BreachLevel=?");
 		}
 
-		// Token: 0x0600336A RID: 13162 RVA: 0x0017BFB0 File Offset: 0x0017A1B0
+		// Token: 0x06003412 RID: 13330 RVA: 0x00183298 File Offset: 0x00181498
 		public static RoleBreach? GetConfig(int p0BreachGroupId, int p1BreachLevel, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleBreachByBreachGroupIdAndBreachLevel.HandleId, ConfigRoleBreachByBreachGroupIdAndBreachLevel.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new RoleBreach?(rootAsRoleBreach);
 		}
 
-		// Token: 0x04003BC8 RID: 15304
+		// Token: 0x04003C8C RID: 15500
 		private const string DB = "db_role_level.db";
 
-		// Token: 0x04003BC9 RID: 15305
+		// Token: 0x04003C8D RID: 15501
 		private const string FILE = "j.角色升级突破.xlsx";
 
-		// Token: 0x04003BCA RID: 15306
+		// Token: 0x04003C8E RID: 15502
 		private const string TABLE = "RoleBreach";
 
-		// Token: 0x04003BCB RID: 15307
+		// Token: 0x04003C8F RID: 15503
 		private const string COMMAND = "select BinData from `RoleBreach` where BreachGroupId=? AND BreachLevel=?";
 
-		// Token: 0x04003BCC RID: 15308
+		// Token: 0x04003C90 RID: 15504
 		private const string KEY_PREFIX = "RoleBreachByBreachGroupIdAndBreachLevel";
 
-		// Token: 0x04003BCD RID: 15309
+		// Token: 0x04003C91 RID: 15505
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003BCE RID: 15310
+		// Token: 0x04003C92 RID: 15506
 		private static int HandleId;
 	}
 }

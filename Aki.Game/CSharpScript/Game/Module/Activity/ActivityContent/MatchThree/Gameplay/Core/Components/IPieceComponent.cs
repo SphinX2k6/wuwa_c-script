@@ -2,11 +2,11 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Core.Components
 {
-	// Token: 0x02006537 RID: 25911
+	// Token: 0x020054B5 RID: 21685
 	public interface IPieceComponent
 	{
-		// Token: 0x17009530 RID: 38192
-		// (get) Token: 0x06040F24 RID: 266020 RVA: 0x00FBCCD8 File Offset: 0x00FBAED8
+		// Token: 0x17006892 RID: 26770
+		// (get) Token: 0x06035BE9 RID: 220137 RVA: 0x00F03D1C File Offset: 0x00F01F1C
 		EPieceCaps Caps
 		{
 			get
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040F25 RID: 266021 RVA: 0x00FBCCDB File Offset: 0x00FBAEDB
+		// Token: 0x06035BEA RID: 220138 RVA: 0x00F03D1F File Offset: 0x00F01F1F
 		void OnAttach(ref PieceComponentState state)
 		{
 		}

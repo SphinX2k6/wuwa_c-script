@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000037 RID: 55
 	public class BuffProducerComponent_SetValue
 	{
-		// Token: 0x0400013E RID: 318
+		// Token: 0x04000143 RID: 323
 		public bool? Disabled;
 
-		// Token: 0x0400013F RID: 319
+		// Token: 0x04000144 RID: 324
 		public bool? EdIsLocked;
 
-		// Token: 0x04000140 RID: 320
-		[Nullable(1)]
+		// Token: 0x04000145 RID: 325
 		public IAddBuffMode AddBuffMode;
 
-		// Token: 0x04000141 RID: 321
+		// Token: 0x04000146 RID: 326
 		public long BuffId;
 	}
 }

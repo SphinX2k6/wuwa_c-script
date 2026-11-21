@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002804 RID: 10244
+// Token: 0x02001D7F RID: 7551
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleDevPhantomSuitItemData
 {
-	// Token: 0x06015049 RID: 86089 RVA: 0x00552AB2 File Offset: 0x00550CB2
+	// Token: 0x06012A49 RID: 76361 RVA: 0x0057D886 File Offset: 0x0057BA86
 	[NullableContext(2)]
 	public void Init(int fetterGroupId, int roleId, VisionFetterRecommendInfo visionFetterRecommendInfo)
 	{
@@ -17,8 +17,8 @@ public class RoleDevPhantomSuitItemData
 		this.VisionFetterRecommendInfoInternal = visionFetterRecommendInfo;
 	}
 
-	// Token: 0x17001BB0 RID: 7088
-	// (get) Token: 0x0601504A RID: 86090 RVA: 0x00552AC9 File Offset: 0x00550CC9
+	// Token: 0x17001C08 RID: 7176
+	// (get) Token: 0x06012A4A RID: 76362 RVA: 0x0057D89D File Offset: 0x0057BA9D
 	public int SuitId
 	{
 		get
@@ -27,8 +27,8 @@ public class RoleDevPhantomSuitItemData
 		}
 	}
 
-	// Token: 0x17001BB1 RID: 7089
-	// (get) Token: 0x0601504B RID: 86091 RVA: 0x00552AD1 File Offset: 0x00550CD1
+	// Token: 0x17001C09 RID: 7177
+	// (get) Token: 0x06012A4B RID: 76363 RVA: 0x0057D8A5 File Offset: 0x0057BAA5
 	public int RoleId
 	{
 		get
@@ -37,8 +37,8 @@ public class RoleDevPhantomSuitItemData
 		}
 	}
 
-	// Token: 0x17001BB2 RID: 7090
-	// (get) Token: 0x0601504C RID: 86092 RVA: 0x00552AD9 File Offset: 0x00550CD9
+	// Token: 0x17001C0A RID: 7178
+	// (get) Token: 0x06012A4C RID: 76364 RVA: 0x0057D8AD File Offset: 0x0057BAAD
 	public List<int> RecommendGroupIds
 	{
 		get
@@ -48,8 +48,8 @@ public class RoleDevPhantomSuitItemData
 		}
 	}
 
-	// Token: 0x17001BB3 RID: 7091
-	// (get) Token: 0x0601504D RID: 86093 RVA: 0x00552AF6 File Offset: 0x00550CF6
+	// Token: 0x17001C0B RID: 7179
+	// (get) Token: 0x06012A4D RID: 76365 RVA: 0x0057D8CA File Offset: 0x0057BACA
 	public int UseRate
 	{
 		get
@@ -63,8 +63,8 @@ public class RoleDevPhantomSuitItemData
 		}
 	}
 
-	// Token: 0x17001BB4 RID: 7092
-	// (get) Token: 0x0601504E RID: 86094 RVA: 0x00552B09 File Offset: 0x00550D09
+	// Token: 0x17001C0C RID: 7180
+	// (get) Token: 0x06012A4E RID: 76366 RVA: 0x0057D8DD File Offset: 0x0057BADD
 	public string UseRateText
 	{
 		get
@@ -74,8 +74,8 @@ public class RoleDevPhantomSuitItemData
 		}
 	}
 
-	// Token: 0x17001BB5 RID: 7093
-	// (get) Token: 0x0601504F RID: 86095 RVA: 0x00552B28 File Offset: 0x00550D28
+	// Token: 0x17001C0D RID: 7181
+	// (get) Token: 0x06012A4F RID: 76367 RVA: 0x0057D8FC File Offset: 0x0057BAFC
 	public PhantomFetterGroup? FetterGroupConfig
 	{
 		get
@@ -89,8 +89,8 @@ public class RoleDevPhantomSuitItemData
 		}
 	}
 
-	// Token: 0x17001BB6 RID: 7094
-	// (get) Token: 0x06015050 RID: 86096 RVA: 0x00552B58 File Offset: 0x00550D58
+	// Token: 0x17001C0E RID: 7182
+	// (get) Token: 0x06012A50 RID: 76368 RVA: 0x0057D92C File Offset: 0x0057BB2C
 	public string SuitName
 	{
 		get
@@ -100,8 +100,8 @@ public class RoleDevPhantomSuitItemData
 		}
 	}
 
-	// Token: 0x17001BB7 RID: 7095
-	// (get) Token: 0x06015051 RID: 86097 RVA: 0x00552B90 File Offset: 0x00550D90
+	// Token: 0x17001C0F RID: 7183
+	// (get) Token: 0x06012A51 RID: 76369 RVA: 0x0057D964 File Offset: 0x0057BB64
 	public bool HasElementIcon
 	{
 		get
@@ -111,8 +111,8 @@ public class RoleDevPhantomSuitItemData
 		}
 	}
 
-	// Token: 0x17001BB8 RID: 7096
-	// (get) Token: 0x06015052 RID: 86098 RVA: 0x00552BC8 File Offset: 0x00550DC8
+	// Token: 0x17001C10 RID: 7184
+	// (get) Token: 0x06012A52 RID: 76370 RVA: 0x0057D99C File Offset: 0x0057BB9C
 	[Nullable(2)]
 	public string ElementColor
 	{
@@ -128,8 +128,8 @@ public class RoleDevPhantomSuitItemData
 		}
 	}
 
-	// Token: 0x17001BB9 RID: 7097
-	// (get) Token: 0x06015053 RID: 86099 RVA: 0x00552BF8 File Offset: 0x00550DF8
+	// Token: 0x17001C11 RID: 7185
+	// (get) Token: 0x06012A53 RID: 76371 RVA: 0x0057D9CC File Offset: 0x0057BBCC
 	[Nullable(2)]
 	public string ElementIconPath
 	{
@@ -145,8 +145,8 @@ public class RoleDevPhantomSuitItemData
 		}
 	}
 
-	// Token: 0x17001BBA RID: 7098
-	// (get) Token: 0x06015054 RID: 86100 RVA: 0x00552C28 File Offset: 0x00550E28
+	// Token: 0x17001C12 RID: 7186
+	// (get) Token: 0x06012A54 RID: 76372 RVA: 0x0057D9FC File Offset: 0x0057BBFC
 	public List<int> DungeonIdList
 	{
 		get
@@ -166,13 +166,13 @@ public class RoleDevPhantomSuitItemData
 		}
 	}
 
-	// Token: 0x04009E01 RID: 40449
+	// Token: 0x0400A1EA RID: 41450
 	private int SuitIdInternal;
 
-	// Token: 0x04009E02 RID: 40450
+	// Token: 0x0400A1EB RID: 41451
 	private int RoleIdInternal;
 
-	// Token: 0x04009E03 RID: 40451
+	// Token: 0x0400A1EC RID: 41452
 	[Nullable(2)]
 	private VisionFetterRecommendInfo VisionFetterRecommendInfoInternal;
 }

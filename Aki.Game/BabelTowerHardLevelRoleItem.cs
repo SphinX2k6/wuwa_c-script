@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200115E RID: 4446
+// Token: 0x02000612 RID: 1554
 internal class BabelTowerHardLevelRoleItem : GridProxyAbstract<int>
 {
-	// Token: 0x06007524 RID: 29988 RVA: 0x001818F4 File Offset: 0x0017FAF4
+	// Token: 0x060048BB RID: 18619 RVA: 0x0018A424 File Offset: 0x00188624
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -21,7 +21,7 @@ internal class BabelTowerHardLevelRoleItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007525 RID: 29989 RVA: 0x00181960 File Offset: 0x0017FB60
+	// Token: 0x060048BC RID: 18620 RVA: 0x0018A490 File Offset: 0x00188690
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		RoleModel instance = RoleModel.Instance;

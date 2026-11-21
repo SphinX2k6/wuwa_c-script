@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AF6 RID: 19190
+	// Token: 0x02004FD1 RID: 20433
 	public struct ICheckPlayerPosition : IFlatbufferObject
 	{
-		// Token: 0x17008B26 RID: 35622
-		// (get) Token: 0x0601E284 RID: 123524 RVA: 0x0043AA40 File Offset: 0x00438C40
+		// Token: 0x17009227 RID: 37415
+		// (get) Token: 0x0601FDC5 RID: 130501 RVA: 0x0046CAEC File Offset: 0x0046ACEC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E285 RID: 123525 RVA: 0x0043AA4D File Offset: 0x00438C4D
+		// Token: 0x0601FDC6 RID: 130502 RVA: 0x0046CAF9 File Offset: 0x0046ACF9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E286 RID: 123526 RVA: 0x0043AA54 File Offset: 0x00438C54
+		// Token: 0x0601FDC7 RID: 130503 RVA: 0x0046CB00 File Offset: 0x0046AD00
 		public static ICheckPlayerPosition GetRootAsICheckPlayerPosition(ByteBuffer _bb)
 		{
 			return ICheckPlayerPosition.GetRootAsICheckPlayerPosition(_bb, default(ICheckPlayerPosition));
 		}
 
-		// Token: 0x0601E287 RID: 123527 RVA: 0x0043AA70 File Offset: 0x00438C70
+		// Token: 0x0601FDC8 RID: 130504 RVA: 0x0046CB1C File Offset: 0x0046AD1C
 		public static ICheckPlayerPosition GetRootAsICheckPlayerPosition(ByteBuffer _bb, ICheckPlayerPosition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E288 RID: 123528 RVA: 0x0043AA8D File Offset: 0x00438C8D
+		// Token: 0x0601FDC9 RID: 130505 RVA: 0x0046CB39 File Offset: 0x0046AD39
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E289 RID: 123529 RVA: 0x0043AA9C File Offset: 0x00438C9C
+		// Token: 0x0601FDCA RID: 130506 RVA: 0x0046CB48 File Offset: 0x0046AD48
 		public ICheckPlayerPosition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008B27 RID: 35623
-		// (get) Token: 0x0601E28A RID: 123530 RVA: 0x0043AAAC File Offset: 0x00438CAC
+		// Token: 0x17009228 RID: 37416
+		// (get) Token: 0x0601FDCB RID: 130507 RVA: 0x0046CB58 File Offset: 0x0046AD58
 		public ECondition Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008B28 RID: 35624
-		// (get) Token: 0x0601E28B RID: 123531 RVA: 0x0043AAE8 File Offset: 0x00438CE8
+		// Token: 0x17009229 RID: 37417
+		// (get) Token: 0x0601FDCC RID: 130508 RVA: 0x0046CB94 File Offset: 0x0046AD94
 		public TRange RangeType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E28C RID: 123532 RVA: 0x0043AB24 File Offset: 0x00438D24
+		// Token: 0x0601FDCD RID: 130509 RVA: 0x0046CBD0 File Offset: 0x0046ADD0
 		public TTable? Range<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,26 +89,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601E28D RID: 123533 RVA: 0x0043AB68 File Offset: 0x00438D68
+		// Token: 0x0601FDCE RID: 130510 RVA: 0x0046CC14 File Offset: 0x0046AE14
 		public IBoxRange RangeAsIBoxRange()
 		{
 			return this.Range<IBoxRange>().Value;
 		}
 
-		// Token: 0x0601E28E RID: 123534 RVA: 0x0043AB84 File Offset: 0x00438D84
+		// Token: 0x0601FDCF RID: 130511 RVA: 0x0046CC30 File Offset: 0x0046AE30
 		public ICircleRange RangeAsICircleRange()
 		{
 			return this.Range<ICircleRange>().Value;
 		}
 
-		// Token: 0x0601E28F RID: 123535 RVA: 0x0043ABA0 File Offset: 0x00438DA0
+		// Token: 0x0601FDD0 RID: 130512 RVA: 0x0046CC4C File Offset: 0x0046AE4C
 		public ICylinder RangeAsICylinder()
 		{
 			return this.Range<ICylinder>().Value;
 		}
 
-		// Token: 0x17008B29 RID: 35625
-		// (get) Token: 0x0601E290 RID: 123536 RVA: 0x0043ABBC File Offset: 0x00438DBC
+		// Token: 0x1700922A RID: 37418
+		// (get) Token: 0x0601FDD1 RID: 130513 RVA: 0x0046CC68 File Offset: 0x0046AE68
 		public bool IsOnRange
 		{
 			get
@@ -118,7 +118,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E291 RID: 123537 RVA: 0x0043ABFC File Offset: 0x00438DFC
+		// Token: 0x0601FDD2 RID: 130514 RVA: 0x0046CCA8 File Offset: 0x0046AEA8
 		public static Offset<ICheckPlayerPosition> CreateICheckPlayerPosition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, TRange Range_type = TRange.NONE, int RangeOffset = 0, bool IsOnRange = false)
 		{
 			builder.StartTable(4);
@@ -129,43 +129,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPlayerPosition.EndICheckPlayerPosition(builder);
 		}
 
-		// Token: 0x0601E292 RID: 123538 RVA: 0x0043AC28 File Offset: 0x00438E28
+		// Token: 0x0601FDD3 RID: 130515 RVA: 0x0046CCD4 File Offset: 0x0046AED4
 		public static void StartICheckPlayerPosition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601E293 RID: 123539 RVA: 0x0043AC31 File Offset: 0x00438E31
+		// Token: 0x0601FDD4 RID: 130516 RVA: 0x0046CCDD File Offset: 0x0046AEDD
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E294 RID: 123540 RVA: 0x0043AC3C File Offset: 0x00438E3C
+		// Token: 0x0601FDD5 RID: 130517 RVA: 0x0046CCE8 File Offset: 0x0046AEE8
 		public static void AddRangeType(FlatBufferBuilder builder, TRange rangeType)
 		{
 			builder.AddByte(1, (byte)rangeType, 0);
 		}
 
-		// Token: 0x0601E295 RID: 123541 RVA: 0x0043AC47 File Offset: 0x00438E47
+		// Token: 0x0601FDD6 RID: 130518 RVA: 0x0046CCF3 File Offset: 0x0046AEF3
 		public static void AddRange(FlatBufferBuilder builder, int rangeOffset)
 		{
 			builder.AddOffset(2, rangeOffset, 0);
 		}
 
-		// Token: 0x0601E296 RID: 123542 RVA: 0x0043AC52 File Offset: 0x00438E52
+		// Token: 0x0601FDD7 RID: 130519 RVA: 0x0046CCFE File Offset: 0x0046AEFE
 		public static void AddIsOnRange(FlatBufferBuilder builder, bool isOnRange)
 		{
 			builder.AddBool(3, isOnRange, false);
 		}
 
-		// Token: 0x0601E297 RID: 123543 RVA: 0x0043AC5D File Offset: 0x00438E5D
+		// Token: 0x0601FDD8 RID: 130520 RVA: 0x0046CD09 File Offset: 0x0046AF09
 		public static Offset<ICheckPlayerPosition> EndICheckPlayerPosition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckPlayerPosition>(builder.EndTable());
 		}
 
-		// Token: 0x0601E298 RID: 123544 RVA: 0x0043AC6C File Offset: 0x00438E6C
+		// Token: 0x0601FDD9 RID: 130521 RVA: 0x0046CD18 File Offset: 0x0046AF18
 		public ICheckPlayerPositionT UnPack()
 		{
 			ICheckPlayerPositionT checkPlayerPositionT = new ICheckPlayerPositionT();
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkPlayerPositionT;
 		}
 
-		// Token: 0x0601E299 RID: 123545 RVA: 0x0043AC88 File Offset: 0x00438E88
+		// Token: 0x0601FDDA RID: 130522 RVA: 0x0046CD34 File Offset: 0x0046AF34
 		public void UnPackTo(ICheckPlayerPositionT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.IsOnRange = this.IsOnRange;
 		}
 
-		// Token: 0x0601E29A RID: 123546 RVA: 0x0043AD90 File Offset: 0x00438F90
+		// Token: 0x0601FDDB RID: 130523 RVA: 0x0046CE3C File Offset: 0x0046B03C
 		public static Offset<ICheckPlayerPosition> Pack(FlatBufferBuilder builder, ICheckPlayerPositionT _o)
 		{
 			if (_o == null)
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPlayerPosition.CreateICheckPlayerPosition(builder, _o.Type, range_type, rangeOffset, _o.IsOnRange);
 		}
 
-		// Token: 0x0400D388 RID: 54152
+		// Token: 0x0400DE79 RID: 56953
 		private Table __p;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005217 RID: 21015
+	// Token: 0x0200577F RID: 22399
 	public class IExtraRangeTypeT
 	{
-		// Token: 0x170099EF RID: 39407
-		// (get) Token: 0x06022278 RID: 139896 RVA: 0x004BD1D6 File Offset: 0x004BB3D6
-		// (set) Token: 0x06022279 RID: 139897 RVA: 0x004BD1DE File Offset: 0x004BB3DE
+		// Token: 0x1700A1EB RID: 41451
+		// (get) Token: 0x0602420E RID: 147982 RVA: 0x004F7C9A File Offset: 0x004F5E9A
+		// (set) Token: 0x0602420F RID: 147983 RVA: 0x004F7CA2 File Offset: 0x004F5EA2
 		public EExtraRangeType Type { get; set; }
 
-		// Token: 0x0602227A RID: 139898 RVA: 0x004BD1E7 File Offset: 0x004BB3E7
+		// Token: 0x06024210 RID: 147984 RVA: 0x004F7CAB File Offset: 0x004F5EAB
 		public IExtraRangeTypeT()
 		{
 			this.Type = EExtraRangeType.SunSpiritBlock;

@@ -6,12 +6,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 {
-	// Token: 0x0200655A RID: 25946
+	// Token: 0x020054D8 RID: 21720
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LineCrossActivityData : ActivityBaseData
 	{
-		// Token: 0x06041053 RID: 266323 RVA: 0x00FC2368 File Offset: 0x00FC0568
+		// Token: 0x06035D18 RID: 220440 RVA: 0x00F09350 File Offset: 0x00F07550
 		protected override void PhraseEx(ActivityData data)
 		{
 			LineCrossActivityData lineCrossActivityData = data.LineCrossActivityData;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			}
 		}
 
-		// Token: 0x06041054 RID: 266324 RVA: 0x00FC2400 File Offset: 0x00FC0600
+		// Token: 0x06035D19 RID: 220441 RVA: 0x00F093E8 File Offset: 0x00F075E8
 		[NullableContext(2)]
 		public LineCrossChallengeData GetChallengeData(int id)
 		{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return result;
 		}
 
-		// Token: 0x06041055 RID: 266325 RVA: 0x00FC2420 File Offset: 0x00FC0620
+		// Token: 0x06035D1A RID: 220442 RVA: 0x00F09408 File Offset: 0x00F07608
 		public void OnChallengeDataUpdate(LineCrossChallengeData data)
 		{
 			LineCrossChallengeData challengeData = this.GetChallengeData(data.ChallengeId);
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			this.ChallengeMap.Add(lineCrossChallengeData.GetId(), lineCrossChallengeData);
 		}
 
-		// Token: 0x06041056 RID: 266326 RVA: 0x00FC2464 File Offset: 0x00FC0664
+		// Token: 0x06035D1B RID: 220443 RVA: 0x00F0944C File Offset: 0x00F0764C
 		public int GetChallengeNumber()
 		{
 			return this.ChallengeMap.Count;
 		}
 
-		// Token: 0x06041057 RID: 266327 RVA: 0x00FC2474 File Offset: 0x00FC0674
+		// Token: 0x06035D1C RID: 220444 RVA: 0x00F0945C File Offset: 0x00F0765C
 		public int GetFinishChallengeNumber()
 		{
 			int num = 0;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return num;
 		}
 
-		// Token: 0x06041058 RID: 266328 RVA: 0x00FC24D4 File Offset: 0x00FC06D4
+		// Token: 0x06035D1D RID: 220445 RVA: 0x00F094BC File Offset: 0x00F076BC
 		public int GetGroupChallengeNumber(int groupId)
 		{
 			LineCrossGroup value = LineCrossConfig.Instance.GetLineCrossGroupByGroupId(groupId).Value;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return num;
 		}
 
-		// Token: 0x06041059 RID: 266329 RVA: 0x00FC2524 File Offset: 0x00FC0724
+		// Token: 0x06035D1E RID: 220446 RVA: 0x00F0950C File Offset: 0x00F0770C
 		public int GetGroupRewardProgress(int groupId)
 		{
 			LineCrossGroup value = LineCrossConfig.Instance.GetLineCrossGroupByGroupId(groupId).Value;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return num;
 		}
 
-		// Token: 0x0604105A RID: 266330 RVA: 0x00FC2580 File Offset: 0x00FC0780
+		// Token: 0x06035D1F RID: 220447 RVA: 0x00F09568 File Offset: 0x00F07768
 		public long GetGroupUnlockTime(int groupId)
 		{
 			LineCrossGroup value = LineCrossConfig.Instance.GetLineCrossGroupByGroupId(groupId).Value;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return num;
 		}
 
-		// Token: 0x0604105B RID: 266331 RVA: 0x00FC25E4 File Offset: 0x00FC07E4
+		// Token: 0x06035D20 RID: 220448 RVA: 0x00F095CC File Offset: 0x00F077CC
 		public bool GetGroupHasGetReward(int groupId)
 		{
 			LineCrossGroup value = LineCrossConfig.Instance.GetLineCrossGroupByGroupId(groupId).Value;
@@ -146,20 +146,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return true;
 		}
 
-		// Token: 0x0604105C RID: 266332 RVA: 0x00FC263C File Offset: 0x00FC083C
+		// Token: 0x06035D21 RID: 220449 RVA: 0x00F09624 File Offset: 0x00F07824
 		public bool GetIfHiddenGroup(int groupId)
 		{
 			return LineCrossConfig.Instance.GetLineCrossGroupByGroupId(groupId).Value.NeedFinishGroupLength > 0;
 		}
 
-		// Token: 0x0604105D RID: 266333 RVA: 0x00FC2667 File Offset: 0x00FC0867
+		// Token: 0x06035D22 RID: 220450 RVA: 0x00F0964F File Offset: 0x00F0784F
 		public bool GetChallengeRequireFinishState(int challengeId)
 		{
 			LineCrossChallengeData challengeData = this.GetChallengeData(challengeId);
 			return challengeData != null && challengeData.GetPreChallengeState();
 		}
 
-		// Token: 0x0604105E RID: 266334 RVA: 0x00FC267C File Offset: 0x00FC087C
+		// Token: 0x06035D23 RID: 220451 RVA: 0x00F09664 File Offset: 0x00F07864
 		public bool IfGroupShow(int groupId)
 		{
 			if (this.GetIfHiddenGroup(groupId))
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return true;
 		}
 
-		// Token: 0x0604105F RID: 266335 RVA: 0x00FC26D0 File Offset: 0x00FC08D0
+		// Token: 0x06035D24 RID: 220452 RVA: 0x00F096B8 File Offset: 0x00F078B8
 		public ELineCrossGroupState GetGroupState(int groupId)
 		{
 			LineCrossGroup value = LineCrossConfig.Instance.GetLineCrossGroupByGroupId(groupId).Value;
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return ELineCrossGroupState.Normal;
 		}
 
-		// Token: 0x06041060 RID: 266336 RVA: 0x00FC273C File Offset: 0x00FC093C
+		// Token: 0x06035D25 RID: 220453 RVA: 0x00F09724 File Offset: 0x00F07924
 		public int[] GetShowGroupList()
 		{
 			LineCrossEntrance value = LineCrossConfig.Instance.GetLineCrossEntranceById(base.Id).Value;
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return list.ToArray();
 		}
 
-		// Token: 0x06041061 RID: 266337 RVA: 0x00FC279C File Offset: 0x00FC099C
+		// Token: 0x06035D26 RID: 220454 RVA: 0x00F09784 File Offset: 0x00F07984
 		public bool GetGroupIfOverUnlockTime(int groupId)
 		{
 			double serverTime = TimeUtil.Instance.GetServerTime();
@@ -227,14 +227,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return serverTime >= (double)groupUnlockTime;
 		}
 
-		// Token: 0x06041062 RID: 266338 RVA: 0x00FC27C2 File Offset: 0x00FC09C2
+		// Token: 0x06035D27 RID: 220455 RVA: 0x00F097AA File Offset: 0x00F079AA
 		public bool GetChallengeIfGetReward(int challengeId)
 		{
 			LineCrossChallengeData challengeData = this.GetChallengeData(challengeId);
 			return challengeData != null && challengeData.GetHasGetReward();
 		}
 
-		// Token: 0x06041063 RID: 266339 RVA: 0x00FC27D8 File Offset: 0x00FC09D8
+		// Token: 0x06035D28 RID: 220456 RVA: 0x00F097C0 File Offset: 0x00F079C0
 		private bool IfAllChallengeFinished()
 		{
 			using (Dictionary<int, LineCrossChallengeData>.ValueCollection.Enumerator enumerator = this.ChallengeMap.Values.GetEnumerator())
@@ -250,13 +250,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return true;
 		}
 
-		// Token: 0x06041064 RID: 266340 RVA: 0x00FC2838 File Offset: 0x00FC0A38
+		// Token: 0x06035D29 RID: 220457 RVA: 0x00F09820 File Offset: 0x00F07A20
 		protected override bool GetExDataFinishShowState()
 		{
 			return this.IfAllChallengeFinished();
 		}
 
-		// Token: 0x06041065 RID: 266341 RVA: 0x00FC2840 File Offset: 0x00FC0A40
+		// Token: 0x06035D2A RID: 220458 RVA: 0x00F09828 File Offset: 0x00F07A28
 		public override bool GetExDataRedPointShowState()
 		{
 			if (!base.GetPreGuideQuestFinishState())
@@ -273,13 +273,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return false;
 		}
 
-		// Token: 0x06041066 RID: 266342 RVA: 0x00FC28B4 File Offset: 0x00FC0AB4
+		// Token: 0x06035D2B RID: 220459 RVA: 0x00F0989C File Offset: 0x00F07A9C
 		public bool CheckIfHaveChallenge(int challengeId)
 		{
 			return this.ChallengeMap.ContainsKey(challengeId);
 		}
 
-		// Token: 0x04021E62 RID: 138850
+		// Token: 0x0401C793 RID: 116627
 		private readonly Dictionary<int, LineCrossChallengeData> ChallengeMap = new Dictionary<int, LineCrossChallengeData>();
 	}
 }

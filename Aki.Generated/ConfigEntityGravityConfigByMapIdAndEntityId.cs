@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000278 RID: 632
+	// Token: 0x0200028C RID: 652
 	public class ConfigEntityGravityConfigByMapIdAndEntityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000ED5 RID: 3797 RVA: 0x000AD48B File Offset: 0x000AB68B
+		// Token: 0x06000F4D RID: 3917 RVA: 0x000B374F File Offset: 0x000B194F
 		static ConfigEntityGravityConfigByMapIdAndEntityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEntityGravityConfigByMapIdAndEntityId.CreateStaticDefaultValue), new Action(ConfigEntityGravityConfigByMapIdAndEntityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000ED6 RID: 3798 RVA: 0x000AD4AC File Offset: 0x000AB6AC
+		// Token: 0x06000F4E RID: 3918 RVA: 0x000B3770 File Offset: 0x000B1970
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEntityGravityConfigByMapIdAndEntityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000ED7 RID: 3799 RVA: 0x000AD52B File Offset: 0x000AB72B
+		// Token: 0x06000F4F RID: 3919 RVA: 0x000B37EF File Offset: 0x000B19EF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEntityGravityConfigByMapIdAndEntityId.LogPair = null;
 			ConfigEntityGravityConfigByMapIdAndEntityId.HandleId = 0;
 		}
 
-		// Token: 0x06000ED8 RID: 3800 RVA: 0x000AD539 File Offset: 0x000AB739
+		// Token: 0x06000F50 RID: 3920 RVA: 0x000B37FD File Offset: 0x000B19FD
 		public static void Init()
 		{
 			ConfigEntityGravityConfigByMapIdAndEntityId.HandleId = ConfigCommon.InitDataStatement(ConfigEntityGravityConfigByMapIdAndEntityId.HandleId, "db_entitygravity.db", "select BinData from `EntityGravityConfig` where MapId=? And EntityId=?");
 		}
 
-		// Token: 0x06000ED9 RID: 3801 RVA: 0x000AD554 File Offset: 0x000AB754
+		// Token: 0x06000F51 RID: 3921 RVA: 0x000B3818 File Offset: 0x000B1A18
 		public static EntityGravityConfig? GetConfig(int p0MapId, int p1EntityId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEntityGravityConfigByMapIdAndEntityId.HandleId, ConfigEntityGravityConfigByMapIdAndEntityId.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new EntityGravityConfig?(rootAsEntityGravityConfig);
 		}
 
-		// Token: 0x0400112C RID: 4396
+		// Token: 0x040011B8 RID: 4536
 		private const string DB = "db_entitygravity.db";
 
-		// Token: 0x0400112D RID: 4397
+		// Token: 0x040011B9 RID: 4537
 		private const string FILE = "UniverseEditor/Gravity/重力方向_Json_GravityAbnormalEntityList.csv";
 
-		// Token: 0x0400112E RID: 4398
+		// Token: 0x040011BA RID: 4538
 		private const string TABLE = "EntityGravityConfig";
 
-		// Token: 0x0400112F RID: 4399
+		// Token: 0x040011BB RID: 4539
 		private const string COMMAND = "select BinData from `EntityGravityConfig` where MapId=? And EntityId=?";
 
-		// Token: 0x04001130 RID: 4400
+		// Token: 0x040011BC RID: 4540
 		private const string KEY_PREFIX = "EntityGravityConfigByMapIdAndEntityId";
 
-		// Token: 0x04001131 RID: 4401
+		// Token: 0x040011BD RID: 4541
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001132 RID: 4402
+		// Token: 0x040011BE RID: 4542
 		private static int HandleId;
 	}
 }

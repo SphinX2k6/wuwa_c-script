@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006C25 RID: 27685
+	// Token: 0x02005D9E RID: 23966
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenSystemTetrisBoardGameEndlessLevel : OpenSystemBase
 	{
-		// Token: 0x06044484 RID: 279684 RVA: 0x010D2BFF File Offset: 0x010D0DFF
+		// Token: 0x0603A5DC RID: 239068 RVA: 0x0107CB53 File Offset: 0x0107AD53
 		public OpenSystemTetrisBoardGameEndlessLevel(LevelEventOpenSystem eventBase) : base(eventBase)
 		{
 		}
 
-		// Token: 0x06044485 RID: 279685 RVA: 0x010D2C08 File Offset: 0x010D0E08
+		// Token: 0x0603A5DD RID: 239069 RVA: 0x0107CB5C File Offset: 0x0107AD5C
 		[return: Nullable(0)]
 		public override UniTask<bool> ExecuteOpenView(OpenSystemBoard inParams, GeneralContext context)
 		{
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			return <ExecuteOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044486 RID: 279686 RVA: 0x010D2C4B File Offset: 0x010D0E4B
+		// Token: 0x0603A5DE RID: 239070 RVA: 0x0107CB9F File Offset: 0x0107AD9F
 		[NullableContext(2)]
 		public override EUiViewName? GetViewName(OpenSystemBoard inParams = null, GeneralContext context = null)
 		{

@@ -6,12 +6,12 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.Common;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x020019C7 RID: 6599
+// Token: 0x02000E86 RID: 3718
 [NullableContext(2)]
 [Nullable(0)]
 public class CommonTipsComponentUtil
 {
-	// Token: 0x0600C0BE RID: 49342 RVA: 0x002B74B0 File Offset: 0x002B56B0
+	// Token: 0x060094CB RID: 38091 RVA: 0x002C247C File Offset: 0x002C067C
 	public static WeaponTipsData GetWeaponTipsDataByUniqueId(int uniqueId)
 	{
 		AttributeItemData attributeItemData = InventoryModel.Instance.GetAttributeItemData(uniqueId);
@@ -27,7 +27,7 @@ public class CommonTipsComponentUtil
 		return CommonTipsComponentUtil.GetWeaponTipsData(config.As<WeaponConf>().Value, new int?(uniqueId));
 	}
 
-	// Token: 0x0600C0BF RID: 49343 RVA: 0x002B74FC File Offset: 0x002B56FC
+	// Token: 0x060094CC RID: 38092 RVA: 0x002C24C8 File Offset: 0x002C06C8
 	public static PhantomTipsData GetPhantomTipsDataByUniqueId(int uniqueId)
 	{
 		AttributeItemData attributeItemData = InventoryModel.Instance.GetAttributeItemData(uniqueId);
@@ -43,7 +43,7 @@ public class CommonTipsComponentUtil
 		return CommonTipsComponentUtil.GetPhantomTipsData(config.As<Aki.Config.PhantomItem>().Value, new int?(uniqueId));
 	}
 
-	// Token: 0x0600C0C0 RID: 49344 RVA: 0x002B7548 File Offset: 0x002B5748
+	// Token: 0x060094CD RID: 38093 RVA: 0x002C2514 File Offset: 0x002C0714
 	public static CommonTipsBaseData GetTipsDataByItemId(int itemId)
 	{
 		InventoryDefine.EItemDataType itemDataTypeByConfigId = InventoryConfig.Instance.GetItemDataTypeByConfigId(new int?(itemId));
@@ -58,7 +58,7 @@ public class CommonTipsComponentUtil
 		return null;
 	}
 
-	// Token: 0x0600C0C1 RID: 49345 RVA: 0x002B75B0 File Offset: 0x002B57B0
+	// Token: 0x060094CE RID: 38094 RVA: 0x002C257C File Offset: 0x002C077C
 	public static WeaponTipsData GetWeaponTipsDataByItemId(int itemId)
 	{
 		WeaponConf? weaponItemConfig = InventoryConfig.Instance.GetWeaponItemConfig(itemId);
@@ -69,7 +69,7 @@ public class CommonTipsComponentUtil
 		return CommonTipsComponentUtil.GetWeaponTipsData(weaponItemConfig.Value, null);
 	}
 
-	// Token: 0x0600C0C2 RID: 49346 RVA: 0x002B75EC File Offset: 0x002B57EC
+	// Token: 0x060094CF RID: 38095 RVA: 0x002C25B8 File Offset: 0x002C07B8
 	public static PhantomTipsData GetPhantomTipsDataByItemId(int itemId)
 	{
 		Aki.Config.PhantomItem? phantomItemConfig = InventoryConfig.Instance.GetPhantomItemConfig(itemId);
@@ -80,7 +80,7 @@ public class CommonTipsComponentUtil
 		return CommonTipsComponentUtil.GetPhantomTipsData(phantomItemConfig.Value, null);
 	}
 
-	// Token: 0x0600C0C3 RID: 49347 RVA: 0x002B7628 File Offset: 0x002B5828
+	// Token: 0x060094D0 RID: 38096 RVA: 0x002C25F4 File Offset: 0x002C07F4
 	[NullableContext(1)]
 	protected static WeaponTipsData GetWeaponTipsData(WeaponConf config, int? incId = null)
 	{
@@ -139,7 +139,7 @@ public class CommonTipsComponentUtil
 		return weaponTipsData;
 	}
 
-	// Token: 0x0600C0C4 RID: 49348 RVA: 0x002B795C File Offset: 0x002B5B5C
+	// Token: 0x060094D1 RID: 38097 RVA: 0x002C2928 File Offset: 0x002C0B28
 	[NullableContext(1)]
 	protected static PhantomTipsData GetPhantomTipsData(Aki.Config.PhantomItem config, int? incId = null)
 	{

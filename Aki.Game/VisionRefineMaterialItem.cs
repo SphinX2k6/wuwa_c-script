@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Item;
 
-// Token: 0x0200176D RID: 5997
+// Token: 0x02000C26 RID: 3110
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -12,7 +12,7 @@ using CSharpScript.Game.Module.Item;
 })]
 public class VisionRefineMaterialItem : LoopScrollMediumItemGrid<ISelectedData>
 {
-	// Token: 0x0600ADE5 RID: 44517 RVA: 0x00272ED4 File Offset: 0x002710D4
+	// Token: 0x060081CC RID: 33228 RVA: 0x0027D398 File Offset: 0x0027B598
 	protected override void OnRefresh(ISelectedData data, bool isSelected, int gridIndex)
 	{
 		int count = data.Count;
@@ -47,16 +47,16 @@ public class VisionRefineMaterialItem : LoopScrollMediumItemGrid<ISelectedData>
 		base.Apply<PropMediumItemGrid>(parameters);
 	}
 
-	// Token: 0x0600ADE6 RID: 44518 RVA: 0x00272F8E File Offset: 0x0027118E
+	// Token: 0x060081CD RID: 33229 RVA: 0x0027D452 File Offset: 0x0027B652
 	protected override bool OnCanExecuteChange()
 	{
 		return false;
 	}
 
-	// Token: 0x0600ADE7 RID: 44519 RVA: 0x00272F94 File Offset: 0x00271194
+	// Token: 0x060081CE RID: 33230 RVA: 0x0027D458 File Offset: 0x0027B658
 	protected override void OnExtendToggleClicked()
 	{
 		ISelectedData selectedData = this.Data as ISelectedData;
-		ItemController.Instance.OpenItemTipsByItemId(selectedData.ItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(selectedData.ItemId, true, null, false);
 	}
 }

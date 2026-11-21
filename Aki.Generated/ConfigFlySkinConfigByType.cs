@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200033D RID: 829
+	// Token: 0x02000352 RID: 850
 	public class ConfigFlySkinConfigByType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001373 RID: 4979 RVA: 0x000C7538 File Offset: 0x000C5738
+		// Token: 0x060013F1 RID: 5105 RVA: 0x000CDA44 File Offset: 0x000CBC44
 		static ConfigFlySkinConfigByType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFlySkinConfigByType.CreateStaticDefaultValue), new Action(ConfigFlySkinConfigByType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001374 RID: 4980 RVA: 0x000C7558 File Offset: 0x000C5758
+		// Token: 0x060013F2 RID: 5106 RVA: 0x000CDA64 File Offset: 0x000CBC64
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFlySkinConfigByType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001375 RID: 4981 RVA: 0x000C75D7 File Offset: 0x000C57D7
+		// Token: 0x060013F3 RID: 5107 RVA: 0x000CDAE3 File Offset: 0x000CBCE3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFlySkinConfigByType.LogPair = null;
 			ConfigFlySkinConfigByType.HandleId = 0;
 		}
 
-		// Token: 0x06001376 RID: 4982 RVA: 0x000C75E5 File Offset: 0x000C57E5
+		// Token: 0x060013F4 RID: 5108 RVA: 0x000CDAF1 File Offset: 0x000CBCF1
 		public static void Init()
 		{
 			ConfigFlySkinConfigByType.HandleId = ConfigCommon.InitDataStatement(ConfigFlySkinConfigByType.HandleId, "db_skin.db", "select BinData from `FlySkinConfig` where SkinType=?");
 		}
 
-		// Token: 0x06001377 RID: 4983 RVA: 0x000C7600 File Offset: 0x000C5800
+		// Token: 0x060013F5 RID: 5109 RVA: 0x000CDB0C File Offset: 0x000CBD0C
 		[NullableContext(2)]
 		public static IReadOnlyList<FlySkinConfig> GetConfigList(int p0SkinType, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400168F RID: 5775
+		// Token: 0x04001722 RID: 5922
 		private const string DB = "db_skin.db";
 
-		// Token: 0x04001690 RID: 5776
+		// Token: 0x04001723 RID: 5923
 		private const string FILE = "p.皮肤外观.xlsx";
 
-		// Token: 0x04001691 RID: 5777
+		// Token: 0x04001724 RID: 5924
 		private const string TABLE = "FlySkinConfig";
 
-		// Token: 0x04001692 RID: 5778
+		// Token: 0x04001725 RID: 5925
 		private const string COMMAND = "select BinData from `FlySkinConfig` where SkinType=?";
 
-		// Token: 0x04001693 RID: 5779
+		// Token: 0x04001726 RID: 5926
 		private const string KEY_PREFIX = "FlySkinConfigByType";
 
-		// Token: 0x04001694 RID: 5780
+		// Token: 0x04001727 RID: 5927
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001695 RID: 5781
+		// Token: 0x04001728 RID: 5928
 		private static int HandleId;
 	}
 }

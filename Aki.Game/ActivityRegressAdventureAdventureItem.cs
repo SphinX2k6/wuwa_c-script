@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200143A RID: 5178
+// Token: 0x020008EE RID: 2286
 [NullableContext(1)]
 [Nullable(0)]
 internal class ActivityRegressAdventureAdventureItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600923B RID: 37435 RVA: 0x001F3FC4 File Offset: 0x001F21C4
+	// Token: 0x060065D0 RID: 26064 RVA: 0x001FCB00 File Offset: 0x001FAD00
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ internal class ActivityRegressAdventureAdventureItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0600923C RID: 37436 RVA: 0x001F40E0 File Offset: 0x001F22E0
+	// Token: 0x060065D1 RID: 26065 RVA: 0x001FCC1C File Offset: 0x001FAE1C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRegressAdventureAdventureItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -50,19 +50,19 @@ internal class ActivityRegressAdventureAdventureItem : GridProxyAbstract<int>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600923D RID: 37437 RVA: 0x001F4123 File Offset: 0x001F2323
+	// Token: 0x060065D2 RID: 26066 RVA: 0x001FCC5F File Offset: 0x001FAE5F
 	protected override void OnStart()
 	{
 		this.RewardLayout = new GenericLayout<NewSoundDetectRewardItem, INewSoundDetectRewardItemData>(base.GetHorizontalLayout(3), new Func<NewSoundDetectRewardItem>(this.InitRewardItem), null, false, true);
 	}
 
-	// Token: 0x0600923E RID: 37438 RVA: 0x001F4146 File Offset: 0x001F2346
+	// Token: 0x060065D3 RID: 26067 RVA: 0x001FCC82 File Offset: 0x001FAE82
 	private NewSoundDetectRewardItem InitRewardItem()
 	{
 		return new NewSoundDetectRewardItem();
 	}
 
-	// Token: 0x0600923F RID: 37439 RVA: 0x001F4150 File Offset: 0x001F2350
+	// Token: 0x060065D4 RID: 26068 RVA: 0x001FCC8C File Offset: 0x001FAE8C
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		GachaRoleDevelopIns? gachaRoleDevelopIns = ActivityRegressConfig.Instance.GetGachaRoleDevelopIns(data);
@@ -185,7 +185,7 @@ internal class ActivityRegressAdventureAdventureItem : GridProxyAbstract<int>
 		this.RefreshRewardLayout(this.DataSilent);
 	}
 
-	// Token: 0x06009240 RID: 37440 RVA: 0x001F44BC File Offset: 0x001F26BC
+	// Token: 0x060065D5 RID: 26069 RVA: 0x001FCFF8 File Offset: 0x001FB1F8
 	private void OnClickLockBtn()
 	{
 		int? num = null;
@@ -237,19 +237,19 @@ internal class ActivityRegressAdventureAdventureItem : GridProxyAbstract<int>
 		UiManager.Instance.OpenView(EUiViewName.CommonConditionView, param, null);
 	}
 
-	// Token: 0x06009241 RID: 37441 RVA: 0x001F469A File Offset: 0x001F289A
+	// Token: 0x060065D6 RID: 26070 RVA: 0x001FD1D6 File Offset: 0x001FB3D6
 	private void RefreshRewardLayout(DungeonDetectionRecord record)
 	{
 		this.RefreshRewardLayoutInternal(record.Conf);
 	}
 
-	// Token: 0x06009242 RID: 37442 RVA: 0x001F46AD File Offset: 0x001F28AD
+	// Token: 0x060065D7 RID: 26071 RVA: 0x001FD1E9 File Offset: 0x001FB3E9
 	private void RefreshRewardLayout(SilentAreaDetectionRecord record)
 	{
 		this.RefreshRewardLayoutInternal(record.Conf);
 	}
 
-	// Token: 0x06009243 RID: 37443 RVA: 0x001F46C0 File Offset: 0x001F28C0
+	// Token: 0x060065D8 RID: 26072 RVA: 0x001FD1FC File Offset: 0x001FB3FC
 	private void RefreshRewardLayoutInternal(object recordConf)
 	{
 		int curWorldLevel = WorldLevelModel.Instance.CurWorldLevel;
@@ -319,7 +319,7 @@ internal class ActivityRegressAdventureAdventureItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06009244 RID: 37444 RVA: 0x001F48EC File Offset: 0x001F2AEC
+	// Token: 0x060065D9 RID: 26073 RVA: 0x001FD428 File Offset: 0x001FB628
 	private void OnClickJumpToBtn()
 	{
 		Action onClickJumpToCallBack = this.OnClickJumpToCallBack;
@@ -370,7 +370,7 @@ internal class ActivityRegressAdventureAdventureItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06009245 RID: 37445 RVA: 0x001F4A44 File Offset: 0x001F2C44
+	// Token: 0x060065DA RID: 26074 RVA: 0x001FD580 File Offset: 0x001FB780
 	private void HandlePreOpenDetection()
 	{
 		if (OnlineModel.Instance.GetIsTeamModel())
@@ -404,7 +404,7 @@ internal class ActivityRegressAdventureAdventureItem : GridProxyAbstract<int>
 		this.HandlePreOpenDetectionConfirmAction();
 	}
 
-	// Token: 0x06009246 RID: 37446 RVA: 0x001F4B28 File Offset: 0x001F2D28
+	// Token: 0x060065DB RID: 26075 RVA: 0x001FD664 File Offset: 0x001FB864
 	private void HandlePreOpenDetectionConfirmAction()
 	{
 		if (this.DataDungeon != null)
@@ -417,25 +417,25 @@ internal class ActivityRegressAdventureAdventureItem : GridProxyAbstract<int>
 		AdventureGuideController.Instance.HandlePreOpenDetection(conf2.Id, ESoundAreaDataType.SilentArea, conf2.PreOpenId);
 	}
 
-	// Token: 0x06009248 RID: 37448 RVA: 0x001F4B90 File Offset: 0x001F2D90
+	// Token: 0x060065DD RID: 26077 RVA: 0x001FD6CC File Offset: 0x001FB8CC
 	[CompilerGenerated]
 	private void <HandlePreOpenDetection>g__ConfirmFunction|16_0()
 	{
 		this.HandlePreOpenDetectionConfirmAction();
 	}
 
-	// Token: 0x040040BD RID: 16573
+	// Token: 0x04004155 RID: 16725
 	[Nullable(2)]
 	private DungeonDetectionRecord DataDungeon;
 
-	// Token: 0x040040BE RID: 16574
+	// Token: 0x04004156 RID: 16726
 	[Nullable(2)]
 	private SilentAreaDetectionRecord DataSilent;
 
-	// Token: 0x040040BF RID: 16575
+	// Token: 0x04004157 RID: 16727
 	private int GetGachaRoleDevelopInsId;
 
-	// Token: 0x040040C0 RID: 16576
+	// Token: 0x04004158 RID: 16728
 	[Nullable(new byte[]
 	{
 		2,
@@ -444,11 +444,11 @@ internal class ActivityRegressAdventureAdventureItem : GridProxyAbstract<int>
 	})]
 	private GenericLayout<NewSoundDetectRewardItem, INewSoundDetectRewardItemData> RewardLayout;
 
-	// Token: 0x040040C1 RID: 16577
+	// Token: 0x04004159 RID: 16729
 	[Nullable(2)]
 	private AdventureTag AdventureTag;
 
-	// Token: 0x040040C2 RID: 16578
+	// Token: 0x0400415A RID: 16730
 	[Nullable(2)]
 	public Action OnClickJumpToCallBack;
 }

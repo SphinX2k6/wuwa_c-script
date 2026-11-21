@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CAD RID: 3245
+	// Token: 0x02000D8F RID: 3471
 	public class IExploreSkillInteractType
 	{
-		// Token: 0x06004A4B RID: 19019 RVA: 0x000BA093 File Offset: 0x000B8293
-		[NullableContext(1)]
+		// Token: 0x06004EF9 RID: 20217 RVA: 0x000C4AA3 File Offset: 0x000C2CA3
 		public static IExploreSkillInteractType Create(IExploreSkillInteractType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016AE RID: 5806
-		// (get) Token: 0x06004A4C RID: 19020 RVA: 0x000BA0B2 File Offset: 0x000B82B2
+		// Token: 0x170017D6 RID: 6102
+		// (get) Token: 0x06004EFA RID: 20218 RVA: 0x000C4AC2 File Offset: 0x000C2CC2
 		public virtual EExploreSkillInteractType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A66 RID: 10854
+		// Token: 0x04002CE0 RID: 11488
 		private IExploreSkillInteractType Instance;
 	}
 }

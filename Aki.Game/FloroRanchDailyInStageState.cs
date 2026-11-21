@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001B52 RID: 6994
+// Token: 0x02001011 RID: 4113
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchDailyInStageState : FloroRanchStateBase
 {
-	// Token: 0x0600CF82 RID: 53122 RVA: 0x002F4326 File Offset: 0x002F2526
+	// Token: 0x0600A393 RID: 41875 RVA: 0x002FF3FE File Offset: 0x002FD5FE
 	public FloroRanchDailyInStageState(FloroRanchStageFsm stageFsm) : base(stageFsm)
 	{
 	}
 
-	// Token: 0x0600CF83 RID: 53123 RVA: 0x002F433C File Offset: 0x002F253C
+	// Token: 0x0600A394 RID: 41876 RVA: 0x002FF414 File Offset: 0x002FD614
 	protected override void OnEnter()
 	{
 		List<FloroRanchPlayTask> dailyTaskList = FloroRanchGamePlayModel.Instance.GetDailyTaskList();
@@ -22,14 +22,14 @@ public class FloroRanchDailyInStageState : FloroRanchStateBase
 		this.TryExecuteTask();
 	}
 
-	// Token: 0x0600CF84 RID: 53124 RVA: 0x002F4361 File Offset: 0x002F2561
+	// Token: 0x0600A395 RID: 41877 RVA: 0x002FF439 File Offset: 0x002FD639
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<IReadOnlyList<FloroRanchPlayTask>>(EEventName.OnFloroRanchNextDayTaskRefresh, new Action<IReadOnlyList<FloroRanchPlayTask>>(this.OnFloroRanchNextDayTaskRefresh));
 		EventSystem.Instance.Add<IReadOnlyList<FloroRanchPlayTask>>(EEventName.OnFloroRanchInsertTask, new Action<IReadOnlyList<FloroRanchPlayTask>>(this.OnFloroRanchInsertTask));
 	}
 
-	// Token: 0x0600CF85 RID: 53125 RVA: 0x002F439C File Offset: 0x002F259C
+	// Token: 0x0600A396 RID: 41878 RVA: 0x002FF474 File Offset: 0x002FD674
 	private void UpdateTaskList(IReadOnlyList<FloroRanchPlayTask> taskList)
 	{
 		foreach (FloroRanchPlayTask taskData in taskList)
@@ -39,7 +39,7 @@ public class FloroRanchDailyInStageState : FloroRanchStateBase
 		}
 	}
 
-	// Token: 0x0600CF86 RID: 53126 RVA: 0x002F43F4 File Offset: 0x002F25F4
+	// Token: 0x0600A397 RID: 41879 RVA: 0x002FF4CC File Offset: 0x002FD6CC
 	private void InsertTaskList(IReadOnlyList<FloroRanchPlayTask> taskList)
 	{
 		List<FloroRanchDailyTaskBase> list = new List<FloroRanchDailyTaskBase>();
@@ -63,7 +63,7 @@ public class FloroRanchDailyInStageState : FloroRanchStateBase
 		}
 	}
 
-	// Token: 0x0600CF87 RID: 53127 RVA: 0x002F44C8 File Offset: 0x002F26C8
+	// Token: 0x0600A398 RID: 41880 RVA: 0x002FF5A0 File Offset: 0x002FD7A0
 	private void TryExecuteTask()
 	{
 		if (!this.IsActive)
@@ -92,14 +92,14 @@ public class FloroRanchDailyInStageState : FloroRanchStateBase
 		}
 	}
 
-	// Token: 0x0600CF88 RID: 53128 RVA: 0x002F454C File Offset: 0x002F274C
+	// Token: 0x0600A399 RID: 41881 RVA: 0x002FF624 File Offset: 0x002FD824
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnFloroRanchNextDayTaskRefresh, new Action<IReadOnlyList<FloroRanchPlayTask>>(this.OnFloroRanchNextDayTaskRefresh));
 		EventSystem.Instance.Remove(EEventName.OnFloroRanchInsertTask, new Action<IReadOnlyList<FloroRanchPlayTask>>(this.OnFloroRanchInsertTask));
 	}
 
-	// Token: 0x0600CF89 RID: 53129 RVA: 0x002F4586 File Offset: 0x002F2786
+	// Token: 0x0600A39A RID: 41882 RVA: 0x002FF65E File Offset: 0x002FD85E
 	protected override void OnExit()
 	{
 		if (this.CurrentTask != null)
@@ -109,7 +109,7 @@ public class FloroRanchDailyInStageState : FloroRanchStateBase
 		}
 	}
 
-	// Token: 0x0600CF8A RID: 53130 RVA: 0x002F45A4 File Offset: 0x002F27A4
+	// Token: 0x0600A39B RID: 41883 RVA: 0x002FF67C File Offset: 0x002FD87C
 	private void OnTaskFinish(int taskId, Action preExcuteNextCallback)
 	{
 		if (this.CurrentTask == null)
@@ -131,27 +131,27 @@ public class FloroRanchDailyInStageState : FloroRanchStateBase
 		this.TryExecuteTask();
 	}
 
-	// Token: 0x0600CF8B RID: 53131 RVA: 0x002F4629 File Offset: 0x002F2829
+	// Token: 0x0600A39C RID: 41884 RVA: 0x002FF701 File Offset: 0x002FD901
 	private void OnFloroRanchNextDayTaskRefresh(IReadOnlyList<FloroRanchPlayTask> taskList)
 	{
 		this.UpdateTaskList(taskList);
 		this.TryExecuteTask();
 	}
 
-	// Token: 0x0600CF8C RID: 53132 RVA: 0x002F4638 File Offset: 0x002F2838
+	// Token: 0x0600A39D RID: 41885 RVA: 0x002FF710 File Offset: 0x002FD910
 	private void OnFloroRanchInsertTask(IReadOnlyList<FloroRanchPlayTask> taskList)
 	{
 		this.InsertTaskList(taskList);
 		this.TryExecuteTask();
 	}
 
-	// Token: 0x0600CF8D RID: 53133 RVA: 0x002F4647 File Offset: 0x002F2847
+	// Token: 0x0600A39E RID: 41886 RVA: 0x002FF71F File Offset: 0x002FD91F
 	private void OnDayAllTaskFinish()
 	{
 		FloroRanchEntityActionSystem.DayEnd();
 	}
 
-	// Token: 0x0600CF8E RID: 53134 RVA: 0x002F4650 File Offset: 0x002F2850
+	// Token: 0x0600A39F RID: 41887 RVA: 0x002FF728 File Offset: 0x002FD928
 	private FloroRanchDailyTaskBase CreateTask(FloroRanchPlayTask taskData)
 	{
 		FloroRanchDailyTaskBase floroRanchDailyTaskBase;
@@ -189,16 +189,16 @@ public class FloroRanchDailyInStageState : FloroRanchStateBase
 		return floroRanchDailyTaskBase;
 	}
 
-	// Token: 0x0600CF8F RID: 53135 RVA: 0x002F4717 File Offset: 0x002F2917
+	// Token: 0x0600A3A0 RID: 41888 RVA: 0x002FF7EF File Offset: 0x002FD9EF
 	public bool IsExecutingTask()
 	{
 		return this.CurrentTask != null;
 	}
 
-	// Token: 0x04005F72 RID: 24434
+	// Token: 0x04006041 RID: 24641
 	private readonly List<FloroRanchDailyTaskBase> TaskList = new List<FloroRanchDailyTaskBase>();
 
-	// Token: 0x04005F73 RID: 24435
+	// Token: 0x04006042 RID: 24642
 	[Nullable(2)]
 	private FloroRanchDailyTaskBase CurrentTask;
 }

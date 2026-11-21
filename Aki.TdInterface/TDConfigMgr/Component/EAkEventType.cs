@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200006D RID: 109
+	// Token: 0x02000070 RID: 112
 	[EnumExtensions]
 	public enum EAkEventType
 	{
-		// Token: 0x0400022A RID: 554
+		// Token: 0x04000238 RID: 568
 		Point,
-		// Token: 0x0400022B RID: 555
+		// Token: 0x04000239 RID: 569
 		Box,
-		// Token: 0x0400022C RID: 556
+		// Token: 0x0400023A RID: 570
 		Default
 	}
 }

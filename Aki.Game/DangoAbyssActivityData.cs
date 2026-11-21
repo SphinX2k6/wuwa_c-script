@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using Google.Protobuf.Collections;
 
-// Token: 0x0200121E RID: 4638
+// Token: 0x020006D2 RID: 1746
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoAbyssActivityData : ActivityBaseData
 {
-	// Token: 0x06007C95 RID: 31893 RVA: 0x001A5208 File Offset: 0x001A3408
+	// Token: 0x0600502B RID: 20523 RVA: 0x001ADE90 File Offset: 0x001AC090
 	protected override void PhraseEx(ActivityData data)
 	{
 		this.InitAllRoleData();
@@ -25,14 +24,14 @@ public class DangoAbyssActivityData : ActivityBaseData
 			this.UpdateRoleInfo(data3, false);
 		}
 		this.CurrentLikeCount = abyssInfo.LikeCount;
-		this.PhraseChallengeData(abyssInfo.ChallengeInfos.ToArray<AbyssChallenge>());
-		this.PhraseRewardInfo(abyssInfo.RewardInfo.ToArray<Aki.Protocol.AbyssRewardInfo>());
+		this.PhraseChallengeData(abyssInfo.ChallengeInfos);
+		this.PhraseRewardInfo(abyssInfo.RewardInfo);
 		this.LimitStartTime = MathUtils.Instance.LongToBigInt(abyssInfo.LimitBeginTime) / 1000L;
 		this.LimitEndTime = MathUtils.Instance.LongToBigInt(abyssInfo.LimitEndTime) / 1000L;
 	}
 
-	// Token: 0x17000A92 RID: 2706
-	// (get) Token: 0x06007C96 RID: 31894 RVA: 0x001A530C File Offset: 0x001A350C
+	// Token: 0x17000AB2 RID: 2738
+	// (get) Token: 0x0600502C RID: 20524 RVA: 0x001ADF88 File Offset: 0x001AC188
 	public override bool RedPointShowState
 	{
 		get
@@ -41,7 +40,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007C97 RID: 31895 RVA: 0x001A5334 File Offset: 0x001A3534
+	// Token: 0x0600502D RID: 20525 RVA: 0x001ADFB0 File Offset: 0x001AC1B0
 	protected override bool GetExDataFinishShowState()
 	{
 		foreach (int tab in this.GetRewardTypeTabList(2))
@@ -58,7 +57,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x06007C98 RID: 31896 RVA: 0x001A5384 File Offset: 0x001A3584
+	// Token: 0x0600502E RID: 20526 RVA: 0x001AE000 File Offset: 0x001AC200
 	public override bool GetExDataRedPointShowState()
 	{
 		bool rewardTypeIfHaveCanTakeReward = this.GetRewardTypeIfHaveCanTakeReward(EAbyssShopType.Common);
@@ -67,14 +66,14 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return base.GetPreGuideQuestFinishState() && (rewardTypeIfHaveCanTakeReward || rewardTypeIfHaveCanTakeReward2 || dangoNewRedDot);
 	}
 
-	// Token: 0x06007C99 RID: 31897 RVA: 0x001A53BC File Offset: 0x001A35BC
+	// Token: 0x0600502F RID: 20527 RVA: 0x001AE038 File Offset: 0x001AC238
 	public bool CheckInLimitTime()
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
 		return serverTime >= (double)this.LimitStartTime && serverTime <= (double)this.LimitEndTime;
 	}
 
-	// Token: 0x06007C9A RID: 31898 RVA: 0x001A53F0 File Offset: 0x001A35F0
+	// Token: 0x06005030 RID: 20528 RVA: 0x001AE06C File Offset: 0x001AC26C
 	public string GetRemainTimeText()
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -82,14 +81,14 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return TimeUtil.Instance.GetRemainTimeDataFormat(remainTime).CountDownText ?? "";
 	}
 
-	// Token: 0x06007C9B RID: 31899 RVA: 0x001A5439 File Offset: 0x001A3639
+	// Token: 0x06005031 RID: 20529 RVA: 0x001AE0B5 File Offset: 0x001AC2B5
 	public bool EntranceRedDot()
 	{
 		return this.GetExDataRedPointShowState();
 	}
 
-	// Token: 0x06007C9C RID: 31900 RVA: 0x001A5444 File Offset: 0x001A3644
-	private void PhraseChallengeData(AbyssChallenge[] data)
+	// Token: 0x06005032 RID: 20530 RVA: 0x001AE0C0 File Offset: 0x001AC2C0
+	private void PhraseChallengeData(IReadOnlyList<AbyssChallenge> data)
 	{
 		foreach (AbyssChallenge abyssChallenge in data)
 		{
@@ -107,8 +106,8 @@ public class DangoAbyssActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007C9D RID: 31901 RVA: 0x001A54A8 File Offset: 0x001A36A8
-	private void PhraseRewardInfo(Aki.Protocol.AbyssRewardInfo[] data)
+	// Token: 0x06005033 RID: 20531 RVA: 0x001AE140 File Offset: 0x001AC340
+	private void PhraseRewardInfo(IReadOnlyList<Aki.Protocol.AbyssRewardInfo> data)
 	{
 		foreach (Aki.Protocol.AbyssRewardInfo abyssRewardInfo in data)
 		{
@@ -127,7 +126,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007C9E RID: 31902 RVA: 0x001A5510 File Offset: 0x001A3710
+	// Token: 0x06005034 RID: 20532 RVA: 0x001AE1C8 File Offset: 0x001AC3C8
 	[NullableContext(2)]
 	public global::AbyssRewardInfo GetRewardInfoById(int id)
 	{
@@ -139,7 +138,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x06007C9F RID: 31903 RVA: 0x001A5530 File Offset: 0x001A3730
+	// Token: 0x06005035 RID: 20533 RVA: 0x001AE1E8 File Offset: 0x001AC3E8
 	public void OnRoleInfoUpdate(AbyssRoleInfoUpdateNotify notify)
 	{
 		foreach (AbyssRoleInfo data in notify.RoleList)
@@ -148,7 +147,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007CA0 RID: 31904 RVA: 0x001A5580 File Offset: 0x001A3780
+	// Token: 0x06005036 RID: 20534 RVA: 0x001AE238 File Offset: 0x001AC438
 	public void OnAddRoleInfo(AbyssRoleAddNotify notify)
 	{
 		foreach (AbyssRoleInfo data in notify.RoleList)
@@ -157,7 +156,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007CA1 RID: 31905 RVA: 0x001A55D0 File Offset: 0x001A37D0
+	// Token: 0x06005037 RID: 20535 RVA: 0x001AE288 File Offset: 0x001AC488
 	public void OnPluginInfoUpdate(AbyssPluginItemInfoUpdateNotify notify)
 	{
 		foreach (Aki.Protocol.AbyssPluginItemInfo data in notify.PluginItems)
@@ -166,7 +165,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007CA2 RID: 31906 RVA: 0x001A5620 File Offset: 0x001A3820
+	// Token: 0x06005038 RID: 20536 RVA: 0x001AE2D8 File Offset: 0x001AC4D8
 	public void OnPluginAdd(AbyssPluginItemAddNotify notify)
 	{
 		foreach (Aki.Protocol.AbyssPluginItemInfo data in notify.PluginItems)
@@ -175,13 +174,13 @@ public class DangoAbyssActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007CA3 RID: 31907 RVA: 0x001A5670 File Offset: 0x001A3870
+	// Token: 0x06005039 RID: 20537 RVA: 0x001AE328 File Offset: 0x001AC528
 	public void OnPluginEquip(AbyssRoleInfo data)
 	{
 		this.UpdateRoleInfo(data, false);
 	}
 
-	// Token: 0x06007CA4 RID: 31908 RVA: 0x001A567C File Offset: 0x001A387C
+	// Token: 0x0600503A RID: 20538 RVA: 0x001AE334 File Offset: 0x001AC534
 	public void OnPluginRemove(AbyssPluginItemRemoveNotify notify)
 	{
 		foreach (int key in notify.IncrIds)
@@ -190,7 +189,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007CA5 RID: 31909 RVA: 0x001A56D0 File Offset: 0x001A38D0
+	// Token: 0x0600503B RID: 20539 RVA: 0x001AE388 File Offset: 0x001AC588
 	public void OnUpdateRewardIdList(AbyssRewardsUpdateNotify notify)
 	{
 		foreach (Aki.Protocol.AbyssRewardInfo abyssRewardInfo in notify.RewardInfos)
@@ -210,7 +209,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007CA6 RID: 31910 RVA: 0x001A575C File Offset: 0x001A395C
+	// Token: 0x0600503C RID: 20540 RVA: 0x001AE414 File Offset: 0x001AC614
 	public string GetRewardFinishProgressText()
 	{
 		int[] rewardTypeTabList = this.GetRewardTypeTabList(2);
@@ -234,7 +233,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		});
 	}
 
-	// Token: 0x06007CA7 RID: 31911 RVA: 0x001A57EC File Offset: 0x001A39EC
+	// Token: 0x0600503D RID: 20541 RVA: 0x001AE4A4 File Offset: 0x001AC6A4
 	public bool GetRewardTypeIfHaveCanTakeReward(EAbyssShopType rewardType)
 	{
 		if (rewardType == EAbyssShopType.Limit && !this.CheckInLimitTime())
@@ -254,7 +253,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06007CA8 RID: 31912 RVA: 0x001A5858 File Offset: 0x001A3A58
+	// Token: 0x0600503E RID: 20542 RVA: 0x001AE510 File Offset: 0x001AC710
 	public int[] GetRewardTypeTabList(int rewardType)
 	{
 		List<int> list = new List<int>();
@@ -270,7 +269,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return list.ToArray();
 	}
 
-	// Token: 0x06007CA9 RID: 31913 RVA: 0x001A58D0 File Offset: 0x001A3AD0
+	// Token: 0x0600503F RID: 20543 RVA: 0x001AE588 File Offset: 0x001AC788
 	public global::AbyssRewardInfo[] GetRewardInfoByRewardTypeAndTab(int rewardType, int tab)
 	{
 		Dictionary<int, List<global::AbyssRewardInfo>> dictionary;
@@ -286,7 +285,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return list.ToArray();
 	}
 
-	// Token: 0x06007CAA RID: 31914 RVA: 0x001A590C File Offset: 0x001A3B0C
+	// Token: 0x06005040 RID: 20544 RVA: 0x001AE5C4 File Offset: 0x001AC7C4
 	public IActivityRewardData[] GetTaskActivityRewardDataList(int rewardType, int tab)
 	{
 		global::AbyssRewardInfo[] rewardInfoByRewardTypeAndTab = this.GetRewardInfoByRewardTypeAndTab(rewardType, tab);
@@ -301,7 +300,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return list.ToArray();
 	}
 
-	// Token: 0x06007CAB RID: 31915 RVA: 0x001A5960 File Offset: 0x001A3B60
+	// Token: 0x06005041 RID: 20545 RVA: 0x001AE618 File Offset: 0x001AC818
 	private int SortReward(IActivityRewardData a, IActivityRewardData b)
 	{
 		int rewardSort = this.GetRewardSort(b);
@@ -313,7 +312,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return rewardSort - rewardSort2;
 	}
 
-	// Token: 0x06007CAC RID: 31916 RVA: 0x001A59A4 File Offset: 0x001A3BA4
+	// Token: 0x06005042 RID: 20546 RVA: 0x001AE65C File Offset: 0x001AC85C
 	private int GetRewardSort(IActivityRewardData data)
 	{
 		int result;
@@ -335,7 +334,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06007CAD RID: 31917 RVA: 0x001A59E0 File Offset: 0x001A3BE0
+	// Token: 0x06005043 RID: 20547 RVA: 0x001AE698 File Offset: 0x001AC898
 	private void RefreshRewardCategoryMap(global::AbyssRewardInfo data)
 	{
 		Dictionary<int, List<global::AbyssRewardInfo>> dictionary;
@@ -367,13 +366,13 @@ public class DangoAbyssActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007CAE RID: 31918 RVA: 0x001A5A7D File Offset: 0x001A3C7D
+	// Token: 0x06005044 RID: 20548 RVA: 0x001AE735 File Offset: 0x001AC935
 	public void OnUpdateUnlockChallengeIdList(AbyssChallengeUpdateNotify notify)
 	{
-		this.PhraseChallengeData(notify.ChallengeInfos.ToArray<AbyssChallenge>());
+		this.PhraseChallengeData(notify.ChallengeInfos);
 	}
 
-	// Token: 0x06007CAF RID: 31919 RVA: 0x001A5A90 File Offset: 0x001A3C90
+	// Token: 0x06005045 RID: 20549 RVA: 0x001AE744 File Offset: 0x001AC944
 	public int[] GetUnLockChallengeIdList()
 	{
 		List<int> list = new List<int>();
@@ -387,7 +386,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return list.ToArray();
 	}
 
-	// Token: 0x06007CB0 RID: 31920 RVA: 0x001A5B08 File Offset: 0x001A3D08
+	// Token: 0x06005046 RID: 20550 RVA: 0x001AE7BC File Offset: 0x001AC9BC
 	public int[] GetCanChallengeIdList()
 	{
 		List<int> list = new List<int>();
@@ -401,13 +400,13 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return list.ToArray();
 	}
 
-	// Token: 0x06007CB1 RID: 31921 RVA: 0x001A5B80 File Offset: 0x001A3D80
+	// Token: 0x06005047 RID: 20551 RVA: 0x001AE834 File Offset: 0x001ACA34
 	public int GetLikeCount()
 	{
 		return this.CurrentLikeCount;
 	}
 
-	// Token: 0x06007CB2 RID: 31922 RVA: 0x001A5B88 File Offset: 0x001A3D88
+	// Token: 0x06005048 RID: 20552 RVA: 0x001AE83C File Offset: 0x001ACA3C
 	private void InitAllRoleData()
 	{
 		if (this.InitDangoState)
@@ -424,7 +423,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007CB3 RID: 31923 RVA: 0x001A5C14 File Offset: 0x001A3E14
+	// Token: 0x06005049 RID: 20553 RVA: 0x001AE8C8 File Offset: 0x001ACAC8
 	private void UpdateRoleInfo(AbyssRoleInfo data, bool isAdd = false)
 	{
 		this.UpdatePluginRoleInfo(data);
@@ -458,7 +457,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		abyssDangoRoleData.Phrase(data, list.ToArray());
 	}
 
-	// Token: 0x06007CB4 RID: 31924 RVA: 0x001A5D24 File Offset: 0x001A3F24
+	// Token: 0x0600504A RID: 20554 RVA: 0x001AE9D8 File Offset: 0x001ACBD8
 	private void UpdatePluginRoleInfo(AbyssRoleInfo data)
 	{
 		AbyssDangoRoleData abyssDangoRoleData;
@@ -501,7 +500,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007CB5 RID: 31925 RVA: 0x001A5E1C File Offset: 0x001A401C
+	// Token: 0x0600504B RID: 20555 RVA: 0x001AEAD0 File Offset: 0x001ACCD0
 	[NullableContext(2)]
 	public AbyssDangoRoleData GetRoleDataById(int id)
 	{
@@ -513,7 +512,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x06007CB6 RID: 31926 RVA: 0x001A5E3C File Offset: 0x001A403C
+	// Token: 0x0600504C RID: 20556 RVA: 0x001AEAF0 File Offset: 0x001ACCF0
 	public AbyssDangoRoleData[] GetAllDangoList()
 	{
 		List<AbyssDangoRoleData> list = new List<AbyssDangoRoleData>();
@@ -524,7 +523,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return list.ToArray();
 	}
 
-	// Token: 0x06007CB7 RID: 31927 RVA: 0x001A5EA4 File Offset: 0x001A40A4
+	// Token: 0x0600504D RID: 20557 RVA: 0x001AEB58 File Offset: 0x001ACD58
 	public string GetAbyssWorldProgressText()
 	{
 		int num = 0;
@@ -542,7 +541,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		});
 	}
 
-	// Token: 0x06007CB8 RID: 31928 RVA: 0x001A5F34 File Offset: 0x001A4134
+	// Token: 0x0600504E RID: 20558 RVA: 0x001AEBE8 File Offset: 0x001ACDE8
 	public float GetAbyssWorldProgressPercentage()
 	{
 		int num = 0;
@@ -556,7 +555,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return (float)num / (float)this.RoleMap.Count;
 	}
 
-	// Token: 0x06007CB9 RID: 31929 RVA: 0x001A5FA4 File Offset: 0x001A41A4
+	// Token: 0x0600504F RID: 20559 RVA: 0x001AEC58 File Offset: 0x001ACE58
 	public string GetAbyssProgressText()
 	{
 		int num = this.GetCanChallengeIdList().Length;
@@ -568,7 +567,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		});
 	}
 
-	// Token: 0x06007CBA RID: 31930 RVA: 0x001A5FEC File Offset: 0x001A41EC
+	// Token: 0x06005050 RID: 20560 RVA: 0x001AECA0 File Offset: 0x001ACEA0
 	public bool GetPreChallengeFinishState(int challengeId)
 	{
 		List<AbyssChallengeData> list = new List<AbyssChallengeData>();
@@ -587,7 +586,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06007CBB RID: 31931 RVA: 0x001A608C File Offset: 0x001A428C
+	// Token: 0x06005051 RID: 20561 RVA: 0x001AED40 File Offset: 0x001ACF40
 	public int GetCurrentLastFinishChallengeId()
 	{
 		int num = 0;
@@ -615,7 +614,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06007CBC RID: 31932 RVA: 0x001A6144 File Offset: 0x001A4344
+	// Token: 0x06005052 RID: 20562 RVA: 0x001AEDF8 File Offset: 0x001ACFF8
 	public int GetCurrentCanSelectChallengeId()
 	{
 		int num = 0;
@@ -648,7 +647,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06007CBD RID: 31933 RVA: 0x001A6214 File Offset: 0x001A4414
+	// Token: 0x06005053 RID: 20563 RVA: 0x001AEEC8 File Offset: 0x001AD0C8
 	private bool GetChallengeIfCanEnterState(AbyssChallengeData challengeData)
 	{
 		bool canChallenge = challengeData.GetCanChallenge();
@@ -658,7 +657,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return canChallenge && preChallengeFinishState && conditionFinishState && overUnlockTime;
 	}
 
-	// Token: 0x06007CBE RID: 31934 RVA: 0x001A6248 File Offset: 0x001A4448
+	// Token: 0x06005054 RID: 20564 RVA: 0x001AEEFC File Offset: 0x001AD0FC
 	public int GetFirstUnlockChallengeId()
 	{
 		foreach (KeyValuePair<int, AbyssChallengeData> keyValuePair in this.ChallengeDataMap)
@@ -671,7 +670,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return 0;
 	}
 
-	// Token: 0x06007CBF RID: 31935 RVA: 0x001A62B4 File Offset: 0x001A44B4
+	// Token: 0x06005055 RID: 20565 RVA: 0x001AEF68 File Offset: 0x001AD168
 	private void UpdatePluginInfo(Aki.Protocol.AbyssPluginItemInfo data)
 	{
 		global::AbyssPluginItemInfo value;
@@ -682,7 +681,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007CC0 RID: 31936 RVA: 0x001A62F0 File Offset: 0x001A44F0
+	// Token: 0x06005056 RID: 20566 RVA: 0x001AEFA4 File Offset: 0x001AD1A4
 	[NullableContext(2)]
 	public global::AbyssPluginItemInfo GetPluginItemInfoById(int incId)
 	{
@@ -694,7 +693,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x06007CC1 RID: 31937 RVA: 0x001A6310 File Offset: 0x001A4510
+	// Token: 0x06005057 RID: 20567 RVA: 0x001AEFC4 File Offset: 0x001AD1C4
 	public global::AbyssPluginItemInfo[] GetPluginItemInfoAll()
 	{
 		List<global::AbyssPluginItemInfo> list = new List<global::AbyssPluginItemInfo>();
@@ -705,7 +704,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return list.ToArray();
 	}
 
-	// Token: 0x06007CC2 RID: 31938 RVA: 0x001A6378 File Offset: 0x001A4578
+	// Token: 0x06005058 RID: 20568 RVA: 0x001AF02C File Offset: 0x001AD22C
 	public AbyssChallengeData[] GetAbyssChallengeDataList()
 	{
 		List<AbyssChallengeData> list = new List<AbyssChallengeData>();
@@ -716,7 +715,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return list.ToArray();
 	}
 
-	// Token: 0x06007CC3 RID: 31939 RVA: 0x001A63E0 File Offset: 0x001A45E0
+	// Token: 0x06005059 RID: 20569 RVA: 0x001AF094 File Offset: 0x001AD294
 	public AbyssChallengeData[] GetAbyssChallengeRankList()
 	{
 		List<AbyssChallengeData> list = new List<AbyssChallengeData>();
@@ -737,7 +736,7 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return list2.ToArray();
 	}
 
-	// Token: 0x06007CC4 RID: 31940 RVA: 0x001A64C0 File Offset: 0x001A46C0
+	// Token: 0x0600505A RID: 20570 RVA: 0x001AF174 File Offset: 0x001AD374
 	[NullableContext(2)]
 	public AbyssChallengeData GetAbyssChallengeDataById(int id)
 	{
@@ -749,30 +748,30 @@ public class DangoAbyssActivityData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x040038E9 RID: 14569
+	// Token: 0x04003982 RID: 14722
 	private bool InitDangoState;
 
-	// Token: 0x040038EA RID: 14570
+	// Token: 0x04003983 RID: 14723
 	private readonly Dictionary<int, global::AbyssRewardInfo> RewardMap = new Dictionary<int, global::AbyssRewardInfo>();
 
-	// Token: 0x040038EB RID: 14571
+	// Token: 0x04003984 RID: 14724
 	private readonly Dictionary<int, Dictionary<int, List<global::AbyssRewardInfo>>> RewardCategoryMap = new Dictionary<int, Dictionary<int, List<global::AbyssRewardInfo>>>();
 
-	// Token: 0x040038EC RID: 14572
+	// Token: 0x04003985 RID: 14725
 	private readonly Dictionary<int, AbyssDangoRoleData> RoleMap = new Dictionary<int, AbyssDangoRoleData>();
 
-	// Token: 0x040038ED RID: 14573
+	// Token: 0x04003986 RID: 14726
 	private readonly Dictionary<int, global::AbyssPluginItemInfo> PluginItemMap = new Dictionary<int, global::AbyssPluginItemInfo>();
 
-	// Token: 0x040038EE RID: 14574
+	// Token: 0x04003987 RID: 14727
 	private readonly Dictionary<int, AbyssChallengeData> ChallengeDataMap = new Dictionary<int, AbyssChallengeData>();
 
-	// Token: 0x040038EF RID: 14575
+	// Token: 0x04003988 RID: 14728
 	private int CurrentLikeCount;
 
-	// Token: 0x040038F0 RID: 14576
+	// Token: 0x04003989 RID: 14729
 	private long LimitStartTime;
 
-	// Token: 0x040038F1 RID: 14577
+	// Token: 0x0400398A RID: 14730
 	private long LimitEndTime;
 }

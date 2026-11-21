@@ -3,19 +3,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001570 RID: 5488
+	// Token: 0x020015E6 RID: 5606
 	public enum BossRushBuffSelectionStatus
 	{
-		// Token: 0x0400A68F RID: 42639
+		// Token: 0x0400AB1C RID: 43804
 		[OriginalName("BuffEmpty")]
 		BuffEmpty,
-		// Token: 0x0400A690 RID: 42640
+		// Token: 0x0400AB1D RID: 43805
 		[OriginalName("BuffSelected")]
 		BuffSelected,
-		// Token: 0x0400A691 RID: 42641
+		// Token: 0x0400AB1E RID: 43806
 		[OriginalName("BuffLocked")]
 		BuffLocked,
-		// Token: 0x0400A692 RID: 42642
+		// Token: 0x0400AB1F RID: 43807
 		[OriginalName("BuffInactive")]
 		BuffInactive
 	}

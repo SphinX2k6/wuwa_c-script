@@ -5,10 +5,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200485B RID: 18523
+	// Token: 0x02004CC3 RID: 19651
 	public static class IEditorConfigVerify
 	{
-		// Token: 0x0601CBB5 RID: 117685 RVA: 0x0040FA28 File Offset: 0x0040DC28
+		// Token: 0x0601E3BC RID: 123836 RVA: 0x0043C4C4 File Offset: 0x0043A6C4
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyString(tablePos, 4, false) && verifier.VerifyField(tablePos, 6, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 8, 1UL, 1UL, false))
@@ -43,9 +43,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 							{
 								verifyAction4 = (IEditorConfigVerify.<>O.<3>__Verify = new VerifyTableAction(IEditorIndentationDisplaySettingVerify.Verify));
 							}
-							if (verifier.VerifyTable(tablePos, offsetId4, verifyAction4, false) && verifier.VerifyField(tablePos, 38, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 40, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 42, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 44, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 46, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 48, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 50, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 52, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 54, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 56, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 58, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 60, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 62, 1UL, 1UL, false))
+							if (verifier.VerifyTable(tablePos, offsetId4, verifyAction4, false) && verifier.VerifyField(tablePos, 38, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 40, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 42, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 44, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 46, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 48, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 50, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 52, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 54, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 56, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 58, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 60, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 62, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 64, 1UL, 1UL, false))
 							{
-								short offsetId5 = 64;
+								short offsetId5 = 66;
 								VerifyTableAction verifyAction5;
 								if ((verifyAction5 = IEditorConfigVerify.<>O.<4>__Verify) == null)
 								{
@@ -53,13 +53,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 								}
 								if (verifier.VerifyVectorOfTables(tablePos, offsetId5, verifyAction5, false))
 								{
-									short offsetId6 = 66;
+									short offsetId6 = 68;
 									VerifyTableAction verifyAction6;
 									if ((verifyAction6 = IEditorConfigVerify.<>O.<4>__Verify) == null)
 									{
 										verifyAction6 = (IEditorConfigVerify.<>O.<4>__Verify = new VerifyTableAction(Record_String_BooleanVerify.Verify));
 									}
-									if (verifier.VerifyVectorOfTables(tablePos, offsetId6, verifyAction6, false) && verifier.VerifyField(tablePos, 68, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 70, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 72, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 74, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 76, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 78, 1UL, 1UL, false) && verifier.VerifyString(tablePos, 80, false) && verifier.VerifyString(tablePos, 82, false))
+									if (verifier.VerifyVectorOfTables(tablePos, offsetId6, verifyAction6, false) && verifier.VerifyField(tablePos, 70, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 72, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 74, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 76, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 78, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 80, 1UL, 1UL, false) && verifier.VerifyString(tablePos, 82, false) && verifier.VerifyString(tablePos, 84, false))
 									{
 										return verifier.VerifyTableEnd(tablePos);
 									}
@@ -72,23 +72,23 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return false;
 		}
 
-		// Token: 0x02007A0E RID: 31246
+		// Token: 0x02008257 RID: 33367
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040133C3 RID: 78787
+			// Token: 0x0401442A RID: 82986
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x040133C4 RID: 78788
+			// Token: 0x0401442B RID: 82987
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x040133C5 RID: 78789
+			// Token: 0x0401442C RID: 82988
 			public static VerifyTableAction <2>__Verify;
 
-			// Token: 0x040133C6 RID: 78790
+			// Token: 0x0401442D RID: 82989
 			public static VerifyTableAction <3>__Verify;
 
-			// Token: 0x040133C7 RID: 78791
+			// Token: 0x0401442E RID: 82990
 			public static VerifyTableAction <4>__Verify;
 		}
 	}

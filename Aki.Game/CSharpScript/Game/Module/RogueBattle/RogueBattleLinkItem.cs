@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E63 RID: 20067
+	// Token: 0x02003E2C RID: 15916
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueBattleLinkItem : UiPanelBase
 	{
-		// Token: 0x06033AEF RID: 211695 RVA: 0x00C1A078 File Offset: 0x00C18278
+		// Token: 0x0602895A RID: 166234 RVA: 0x00B635A0 File Offset: 0x00B617A0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,13 +31,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033AF0 RID: 211696 RVA: 0x00C1A121 File Offset: 0x00C18321
+		// Token: 0x0602895B RID: 166235 RVA: 0x00B63649 File Offset: 0x00B61849
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x06033AF1 RID: 211697 RVA: 0x00C1A134 File Offset: 0x00C18334
+		// Token: 0x0602895C RID: 166236 RVA: 0x00B6365C File Offset: 0x00B6185C
 		private void OnBtnSelf()
 		{
 			Action onClickCallBack = this.OnClickCallBack;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			onClickCallBack();
 		}
 
-		// Token: 0x06033AF2 RID: 211698 RVA: 0x00C1A148 File Offset: 0x00C18348
+		// Token: 0x0602895D RID: 166237 RVA: 0x00B63670 File Offset: 0x00B61870
 		private bool IsAnyBondLinkCanActivate()
 		{
 			foreach (RoleBondInfo roleBondInfo in RogueBattleModel.Instance.GetAllOwnedRoleBondData())
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return false;
 		}
 
-		// Token: 0x06033AF3 RID: 211699 RVA: 0x00C1A1B4 File Offset: 0x00C183B4
+		// Token: 0x0602895E RID: 166238 RVA: 0x00B636DC File Offset: 0x00B618DC
 		public void RefreshLinkInfo(int formationIndex)
 		{
 			RogueResFormation formationDataByIndex = RogueBattleModel.Instance.GetFormationDataByIndex(formationIndex);
@@ -116,10 +116,10 @@ namespace CSharpScript.Game.Module.RogueBattle
 			EventSystem.Instance.Emit<bool>(EEventName.RogueTeamEditViewLinkBtnRefresh, linkId != 0);
 		}
 
-		// Token: 0x0401B6AD RID: 112301
+		// Token: 0x04016080 RID: 90240
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401B6AE RID: 112302
+		// Token: 0x04016081 RID: 90241
 		public Action OnClickCallBack;
 	}
 }

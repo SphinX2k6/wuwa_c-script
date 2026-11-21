@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001104 RID: 4356
+// Token: 0x020005B8 RID: 1464
 public class ArtemisQteRingSingleAreaItem : UiPanelBase
 {
-	// Token: 0x0600719C RID: 29084 RVA: 0x00173D8C File Offset: 0x00171F8C
+	// Token: 0x06004532 RID: 17714 RVA: 0x0017C748 File Offset: 0x0017A948
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,13 +16,13 @@ public class ArtemisQteRingSingleAreaItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600719D RID: 29085 RVA: 0x00173DC5 File Offset: 0x00171FC5
+	// Token: 0x06004533 RID: 17715 RVA: 0x0017C781 File Offset: 0x0017A981
 	protected override void OnBeforeDestroy()
 	{
 		this.ProgressParamName = null;
 	}
 
-	// Token: 0x0600719E RID: 29086 RVA: 0x00173DD3 File Offset: 0x00171FD3
+	// Token: 0x06004534 RID: 17716 RVA: 0x0017C78F File Offset: 0x0017A98F
 	public void SetFillAmount(float amount)
 	{
 		UUITexture texture = base.GetTexture(0);
@@ -38,7 +38,7 @@ public class ArtemisQteRingSingleAreaItem : UiPanelBase
 		texture2.SetFillAmount(amount);
 	}
 
-	// Token: 0x0600719F RID: 29087 RVA: 0x00173DFA File Offset: 0x00171FFA
+	// Token: 0x06004535 RID: 17717 RVA: 0x0017C7B6 File Offset: 0x0017A9B6
 	public void SetCustomMaterialScalarParameter(float amount)
 	{
 		UUITexture texture = base.GetTexture(0);
@@ -54,23 +54,23 @@ public class ArtemisQteRingSingleAreaItem : UiPanelBase
 		texture2.SetCustomMaterialScalarParameter(this.ProgressParamName, amount);
 	}
 
-	// Token: 0x060071A0 RID: 29088 RVA: 0x00173E2D File Offset: 0x0017202D
+	// Token: 0x06004536 RID: 17718 RVA: 0x0017C7E9 File Offset: 0x0017A9E9
 	public void SetHighLight(bool isHighLight)
 	{
 		base.GetTexture(0).SetUIActive(!isHighLight);
 		base.GetTexture(1).SetUIActive(isHighLight);
 	}
 
-	// Token: 0x040034C4 RID: 13508
+	// Token: 0x0400355D RID: 13661
 	private FName ProgressParamName = new FName("Progress");
 
-	// Token: 0x020076C6 RID: 30406
+	// Token: 0x0200685A RID: 26714
 	private class EComponents
 	{
-		// Token: 0x04027335 RID: 160565
+		// Token: 0x0402267E RID: 140926
 		public const int TextureArea = 0;
 
-		// Token: 0x04027336 RID: 160566
+		// Token: 0x0402267F RID: 140927
 		public const int TextureAreaHighLight = 1;
 	}
 }

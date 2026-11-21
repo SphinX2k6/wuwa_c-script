@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054DB RID: 21723
+	// Token: 0x020044AE RID: 17582
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CustomMarkItem : ServerMarkItem
 	{
-		// Token: 0x17008528 RID: 34088
-		// (get) Token: 0x06037772 RID: 227186 RVA: 0x00D2CC6A File Offset: 0x00D2AE6A
+		// Token: 0x170058B2 RID: 22706
+		// (get) Token: 0x0602C628 RID: 181800 RVA: 0x00C7AD16 File Offset: 0x00C78F16
 		public override EMarkType MarkType
 		{
 			get
@@ -24,8 +24,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x17008529 RID: 34089
-		// (get) Token: 0x06037773 RID: 227187 RVA: 0x00D2CC6E File Offset: 0x00D2AE6E
+		// Token: 0x170058B3 RID: 22707
+		// (get) Token: 0x0602C629 RID: 181801 RVA: 0x00C7AD1A File Offset: 0x00C78F1A
 		public bool IsNewCustomMarkItem
 		{
 			get
@@ -34,8 +34,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x1700852A RID: 34090
-		// (get) Token: 0x06037774 RID: 227188 RVA: 0x00D2CC76 File Offset: 0x00D2AE76
+		// Token: 0x170058B4 RID: 22708
+		// (get) Token: 0x0602C62A RID: 181802 RVA: 0x00C7AD22 File Offset: 0x00C78F22
 		public override bool PermanentUpdate
 		{
 			get
@@ -44,18 +44,28 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x06037775 RID: 227189 RVA: 0x00D2CC88 File Offset: 0x00D2AE88
+		// Token: 0x170058B5 RID: 22709
+		// (get) Token: 0x0602C62B RID: 181803 RVA: 0x00C7AD34 File Offset: 0x00C78F34
+		public override bool EnableVerticalPointer
+		{
+			get
+			{
+				return false;
+			}
+		}
+
+		// Token: 0x0602C62C RID: 181804 RVA: 0x00C7AD37 File Offset: 0x00C78F37
 		public override bool IsMultiMap()
 		{
 			return false;
 		}
 
-		// Token: 0x06037776 RID: 227190 RVA: 0x00D2CC8B File Offset: 0x00D2AE8B
+		// Token: 0x0602C62D RID: 181805 RVA: 0x00C7AD3A File Offset: 0x00C78F3A
 		public CustomMarkItem(DynamicMarkCreateInfo markPointInfo, UUIItem parent, EMapType mapType, float markScale) : base(markPointInfo, parent, mapType, markScale)
 		{
 		}
 
-		// Token: 0x06037777 RID: 227191 RVA: 0x00D2CC98 File Offset: 0x00D2AE98
+		// Token: 0x0602C62E RID: 181806 RVA: 0x00C7AD48 File Offset: 0x00C78F48
 		protected override void OnInitialize()
 		{
 			base.OnInitialize();
@@ -81,34 +91,33 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 					Log.Instance.Error(ELogModule.Map, ELogAuthor.LK, "未定义的类型", default(ReadOnlySpan<ValueTuple<string, object>>));
 				}
 			}
-			base.MarkItemEntity.ViewLifeCircle.EnableVerticalPointer = false;
 			this.SetConfigId(base.ConfigId);
 			CustomMark? config = ConfigCustomMarkByMarkId.GetConfig(base.ConfigId, true);
 			base.ShowPriority = ((config != null) ? config.GetValueOrDefault().ShowPriority : 0);
 			this.UpdateVisibleRelativeState();
 		}
 
-		// Token: 0x06037778 RID: 227192 RVA: 0x00D2CDCB File Offset: 0x00D2AFCB
+		// Token: 0x0602C62F RID: 181807 RVA: 0x00C7AE6A File Offset: 0x00C7906A
 		[PreserveBaseOverrides]
 		protected new virtual CustomMarkItemView CreateView()
 		{
 			return new CustomMarkItemView(this);
 		}
 
-		// Token: 0x06037779 RID: 227193 RVA: 0x00D2CDD3 File Offset: 0x00D2AFD3
+		// Token: 0x0602C630 RID: 181808 RVA: 0x00C7AE72 File Offset: 0x00C79072
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.CustomMarkItemView;
 		}
 
-		// Token: 0x0603777A RID: 227194 RVA: 0x00D2CDD6 File Offset: 0x00D2AFD6
+		// Token: 0x0602C631 RID: 181809 RVA: 0x00C7AE75 File Offset: 0x00C79075
 		public void SetConfigId(int configId)
 		{
 			this.ServerMarkInfo.MarkConfigId = configId;
 			this.OnSetConfigId(configId);
 		}
 
-		// Token: 0x0603777B RID: 227195 RVA: 0x00D2CDEC File Offset: 0x00D2AFEC
+		// Token: 0x0602C632 RID: 181810 RVA: 0x00C7AE8C File Offset: 0x00C7908C
 		public void OnSetConfigId(int configId)
 		{
 			CustomMark? customMarkConfig = MapConfig.Instance.GetCustomMarkConfig(configId);
@@ -121,20 +130,20 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			});
 		}
 
-		// Token: 0x0603777C RID: 227196 RVA: 0x00D2CE6E File Offset: 0x00D2B06E
+		// Token: 0x0602C633 RID: 181811 RVA: 0x00C7AF0E File Offset: 0x00C7910E
 		public void SetIsNew(bool isNew)
 		{
 			this.IsNew = isNew;
 		}
 
-		// Token: 0x0603777D RID: 227197 RVA: 0x00D2CE77 File Offset: 0x00D2B077
+		// Token: 0x0602C634 RID: 181812 RVA: 0x00C7AF17 File Offset: 0x00C79117
 		[NullableContext(2)]
 		public override string GetTitleText()
 		{
 			return TextConfig.Instance.GetTextById("CustomMarkName");
 		}
 
-		// Token: 0x0603777E RID: 227198 RVA: 0x00D2CE88 File Offset: 0x00D2B088
+		// Token: 0x0602C635 RID: 181813 RVA: 0x00C7AF28 File Offset: 0x00C79128
 		public override bool CheckCanShowView()
 		{
 			if (base.MapType == EMapType.MiniMap)
@@ -144,28 +153,28 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return WorldMapModel.Instance.CustomMarksIsShow && base.CheckCanShowView();
 		}
 
-		// Token: 0x0603777F RID: 227199 RVA: 0x00D2CEB2 File Offset: 0x00D2B0B2
+		// Token: 0x0602C636 RID: 181814 RVA: 0x00C7AF52 File Offset: 0x00C79152
 		protected override bool CheckCanShowInBoxArea()
 		{
 			return base.MapType != EMapType.WorldMap || !WorldMapModel.Instance.IsCustomMarkDisabled;
 		}
 
-		// Token: 0x06037780 RID: 227200 RVA: 0x00D2CECC File Offset: 0x00D2B0CC
+		// Token: 0x0602C637 RID: 181815 RVA: 0x00C7AF6C File Offset: 0x00C7916C
 		public override bool GetInteractiveFlag()
 		{
 			return !this.IsNewCustomMarkItem && base.GetInteractiveFlag();
 		}
 
-		// Token: 0x06037781 RID: 227201 RVA: 0x00D2CEDE File Offset: 0x00D2B0DE
+		// Token: 0x0602C638 RID: 181816 RVA: 0x00C7AF7E File Offset: 0x00C7917E
 		public override ESecondaryPanel GetSecondaryUiType()
 		{
 			return ESecondaryPanel.CustomMarkPanel;
 		}
 
-		// Token: 0x0401D396 RID: 119702
+		// Token: 0x04017E11 RID: 97809
 		public bool IsCreated;
 
-		// Token: 0x0401D397 RID: 119703
+		// Token: 0x04017E12 RID: 97810
 		private bool IsNew;
 	}
 }

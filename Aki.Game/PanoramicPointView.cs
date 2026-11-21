@@ -11,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002311 RID: 8977
+// Token: 0x020017F5 RID: 6133
 [NullableContext(1)]
 [Nullable(0)]
 public class PanoramicPointView : UiPanelBase
 {
-	// Token: 0x06011BC5 RID: 72645 RVA: 0x0045D380 File Offset: 0x0045B580
+	// Token: 0x0600F062 RID: 61538 RVA: 0x0046A05C File Offset: 0x0046825C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -34,7 +34,7 @@ public class PanoramicPointView : UiPanelBase
 		}
 	}
 
-	// Token: 0x06011BC6 RID: 72646 RVA: 0x0045D410 File Offset: 0x0045B610
+	// Token: 0x0600F063 RID: 61539 RVA: 0x0046A0EC File Offset: 0x004682EC
 	protected override void OnStart()
 	{
 		UUIItem uiRootItem = UiLayer.Instance.UiRootItem;
@@ -85,7 +85,7 @@ public class PanoramicPointView : UiPanelBase
 		this.ViewType = EPanoramicType.Default;
 	}
 
-	// Token: 0x06011BC7 RID: 72647 RVA: 0x0045D564 File Offset: 0x0045B764
+	// Token: 0x0600F064 RID: 61540 RVA: 0x0046A240 File Offset: 0x00468440
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PanoramicPointView.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -96,12 +96,12 @@ public class PanoramicPointView : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011BC8 RID: 72648 RVA: 0x0045D5A7 File Offset: 0x0045B7A7
+	// Token: 0x0600F065 RID: 61541 RVA: 0x0046A283 File Offset: 0x00468483
 	protected override void OnAfterShow()
 	{
 	}
 
-	// Token: 0x06011BC9 RID: 72649 RVA: 0x0045D5A9 File Offset: 0x0045B7A9
+	// Token: 0x0600F066 RID: 61542 RVA: 0x0046A285 File Offset: 0x00468485
 	[NullableContext(2)]
 	public void DestroySelf(Action callback)
 	{
@@ -116,7 +116,7 @@ public class PanoramicPointView : UiPanelBase
 		}
 	}
 
-	// Token: 0x06011BCA RID: 72650 RVA: 0x0045D5C8 File Offset: 0x0045B7C8
+	// Token: 0x0600F067 RID: 61543 RVA: 0x0046A2A4 File Offset: 0x004684A4
 	public void Update()
 	{
 		TsCharacterController characterController = Global.CharacterController;
@@ -188,7 +188,7 @@ public class PanoramicPointView : UiPanelBase
 		}
 	}
 
-	// Token: 0x06011BCB RID: 72651 RVA: 0x0045D810 File Offset: 0x0045BA10
+	// Token: 0x0600F068 RID: 61544 RVA: 0x0046A4EC File Offset: 0x004686EC
 	[NullableContext(2)]
 	public void SetTargetPos(Vector offset)
 	{
@@ -197,7 +197,7 @@ public class PanoramicPointView : UiPanelBase
 		this.TargetPos.Z = ((offset != null) ? offset.Z : 0.0);
 	}
 
-	// Token: 0x06011BCC RID: 72652 RVA: 0x0045D87C File Offset: 0x0045BA7C
+	// Token: 0x0600F069 RID: 61545 RVA: 0x0046A558 File Offset: 0x00468758
 	protected bool ClampToEllipse(Vector2D vector, bool inFront)
 	{
 		double x = vector.X;
@@ -213,7 +213,7 @@ public class PanoramicPointView : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x06011BCD RID: 72653 RVA: 0x0045D8F0 File Offset: 0x0045BAF0
+	// Token: 0x0600F06A RID: 61546 RVA: 0x0046A5CC File Offset: 0x004687CC
 	public void ChangePointType(EPanoramicType type)
 	{
 		if (this.ViewType == type)
@@ -377,68 +377,68 @@ public class PanoramicPointView : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400868F RID: 34447
+	// Token: 0x040087CF RID: 34767
 	private const float CENTER_Y = 62.5f;
 
-	// Token: 0x04008690 RID: 34448
+	// Token: 0x040087D0 RID: 34768
 	private Vector2D center = Vector2D.Create(0.0, 62.5);
 
-	// Token: 0x04008691 RID: 34449
+	// Token: 0x040087D1 RID: 34769
 	[Nullable(2)]
 	private UUIItem SprArrow;
 
-	// Token: 0x04008692 RID: 34450
+	// Token: 0x040087D2 RID: 34770
 	[Nullable(2)]
 	private InputMultiKeyItem KeyItem;
 
-	// Token: 0x04008693 RID: 34451
+	// Token: 0x040087D3 RID: 34771
 	protected readonly FVector2D ScreenPositionRef = new FVector2D();
 
-	// Token: 0x04008694 RID: 34452
+	// Token: 0x040087D4 RID: 34772
 	[Nullable(2)]
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x04008695 RID: 34453
+	// Token: 0x040087D5 RID: 34773
 	private readonly Vector TargetPos = Vector.Create();
 
-	// Token: 0x04008696 RID: 34454
+	// Token: 0x040087D6 RID: 34774
 	protected readonly Vector2D ScreenPosition = Vector2D.Create();
 
-	// Token: 0x04008697 RID: 34455
+	// Token: 0x040087D7 RID: 34775
 	private readonly Vector2D LastScreenPosition = Vector2D.Create();
 
-	// Token: 0x04008698 RID: 34456
+	// Token: 0x040087D8 RID: 34776
 	private readonly Rotator TempRotator = Rotator.Create();
 
-	// Token: 0x04008699 RID: 34457
+	// Token: 0x040087D9 RID: 34777
 	private float LimitA;
 
-	// Token: 0x0400869A RID: 34458
+	// Token: 0x040087DA RID: 34778
 	private float LimitB;
 
-	// Token: 0x0400869B RID: 34459
+	// Token: 0x040087DB RID: 34779
 	private bool InRange;
 
-	// Token: 0x0400869C RID: 34460
+	// Token: 0x040087DC RID: 34780
 	private readonly Vector2D PointTransport = Vector2D.Create(1.0, -1.0);
 
-	// Token: 0x0400869D RID: 34461
+	// Token: 0x040087DD RID: 34781
 	private EPanoramicType ViewType;
 
-	// Token: 0x0400869E RID: 34462
+	// Token: 0x040087DE RID: 34782
 	public int Id = -1;
 
-	// Token: 0x0200888F RID: 34959
+	// Token: 0x02007A15 RID: 31253
 	[NullableContext(0)]
 	private class EPanoramicViewDefine
 	{
-		// Token: 0x0402C632 RID: 181810
+		// Token: 0x04027940 RID: 162112
 		public const int PanelOffset = 0;
 
-		// Token: 0x0402C633 RID: 181811
+		// Token: 0x04027941 RID: 162113
 		public const int SprArrow = 1;
 
-		// Token: 0x0402C634 RID: 181812
+		// Token: 0x04027942 RID: 162114
 		public const int KeyPanel = 2;
 	}
 }

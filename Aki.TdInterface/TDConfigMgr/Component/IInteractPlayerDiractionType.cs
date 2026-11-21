@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000487 RID: 1159
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004E0 RID: 1248
 	public class IInteractPlayerDiractionType
 	{
-		// Token: 0x06001752 RID: 5970 RVA: 0x00046CD8 File Offset: 0x00044ED8
+		// Token: 0x060018EC RID: 6380 RVA: 0x0004AA20 File Offset: 0x00048C20
 		private IInteractPlayerDiractionType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001753 RID: 5971 RVA: 0x00046D10 File Offset: 0x00044F10
+		// Token: 0x060018ED RID: 6381 RVA: 0x0004AA58 File Offset: 0x00048C58
 		public static IInteractPlayerDiractionType Create([Nullable(2)] IInteractPlayerDiractionType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001754 RID: 5972 RVA: 0x00046D23 File Offset: 0x00044F23
+		// Token: 0x060018EE RID: 6382 RVA: 0x0004AA6B File Offset: 0x00048C6B
 		public static IInteractPlayerDiractionType CreateFromSetValue([Nullable(2)] IInteractPlayerDiractionType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001755 RID: 5973 RVA: 0x00046D36 File Offset: 0x00044F36
+		// Token: 0x060018EF RID: 6383 RVA: 0x0004AA7E File Offset: 0x00048C7E
 		public IInteractPlayerDiractionType_SetValue ToSetValue()
 		{
 			return new IInteractPlayerDiractionType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700063D RID: 1597
-		// (get) Token: 0x06001756 RID: 5974 RVA: 0x00046D49 File Offset: 0x00044F49
-		// (set) Token: 0x06001757 RID: 5975 RVA: 0x00046D74 File Offset: 0x00044F74
+		// Token: 0x170006A4 RID: 1700
+		// (get) Token: 0x060018F0 RID: 6384 RVA: 0x0004AA91 File Offset: 0x00048C91
+		// (set) Token: 0x060018F1 RID: 6385 RVA: 0x0004AABC File Offset: 0x00048CBC
 		public virtual EInteractPlayerDiractionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001182 RID: 4482
+		// Token: 0x040012A4 RID: 4772
 		[Nullable(2)]
 		protected IInteractPlayerDiractionType FbInstance;
 
-		// Token: 0x04001183 RID: 4483
+		// Token: 0x040012A5 RID: 4773
 		[Nullable(2)]
 		protected IInteractPlayerDiractionType_SetValue PocoInterface;
 	}

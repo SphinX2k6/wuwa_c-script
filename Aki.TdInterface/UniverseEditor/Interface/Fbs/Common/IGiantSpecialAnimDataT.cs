@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DCE RID: 24014
+	// Token: 0x0200640B RID: 25611
 	public class IGiantSpecialAnimDataT
 	{
-		// Token: 0x1700B3C6 RID: 46022
-		// (get) Token: 0x060291A6 RID: 168358 RVA: 0x005A4453 File Offset: 0x005A2653
-		// (set) Token: 0x060291A7 RID: 168359 RVA: 0x005A445B File Offset: 0x005A265B
+		// Token: 0x1700BD2C RID: 48428
+		// (get) Token: 0x0602B830 RID: 178224 RVA: 0x005ED183 File Offset: 0x005EB383
+		// (set) Token: 0x0602B831 RID: 178225 RVA: 0x005ED18B File Offset: 0x005EB38B
 		public EGiantAnimationType Type { get; set; }
 
-		// Token: 0x1700B3C7 RID: 46023
-		// (get) Token: 0x060291A8 RID: 168360 RVA: 0x005A4464 File Offset: 0x005A2664
-		// (set) Token: 0x060291A9 RID: 168361 RVA: 0x005A446C File Offset: 0x005A266C
+		// Token: 0x1700BD2D RID: 48429
+		// (get) Token: 0x0602B832 RID: 178226 RVA: 0x005ED194 File Offset: 0x005EB394
+		// (set) Token: 0x0602B833 RID: 178227 RVA: 0x005ED19C File Offset: 0x005EB39C
 		public string MontagePath { get; set; }
 
-		// Token: 0x1700B3C8 RID: 46024
-		// (get) Token: 0x060291AA RID: 168362 RVA: 0x005A4475 File Offset: 0x005A2675
-		// (set) Token: 0x060291AB RID: 168363 RVA: 0x005A447D File Offset: 0x005A267D
+		// Token: 0x1700BD2E RID: 48430
+		// (get) Token: 0x0602B834 RID: 178228 RVA: 0x005ED1A5 File Offset: 0x005EB3A5
+		// (set) Token: 0x0602B835 RID: 178229 RVA: 0x005ED1AD File Offset: 0x005EB3AD
 		public bool IsCanBeInterrupt { get; set; }
 
-		// Token: 0x1700B3C9 RID: 46025
-		// (get) Token: 0x060291AC RID: 168364 RVA: 0x005A4486 File Offset: 0x005A2686
-		// (set) Token: 0x060291AD RID: 168365 RVA: 0x005A448E File Offset: 0x005A268E
+		// Token: 0x1700BD2F RID: 48431
+		// (get) Token: 0x0602B836 RID: 178230 RVA: 0x005ED1B6 File Offset: 0x005EB3B6
+		// (set) Token: 0x0602B837 RID: 178231 RVA: 0x005ED1BE File Offset: 0x005EB3BE
 		public byte NullMask { get; set; }
 
-		// Token: 0x060291AE RID: 168366 RVA: 0x005A4497 File Offset: 0x005A2697
+		// Token: 0x0602B838 RID: 178232 RVA: 0x005ED1C7 File Offset: 0x005EB3C7
 		public IGiantSpecialAnimDataT()
 		{
 			this.Type = EGiantAnimationType.Idle;

@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F49 RID: 8009
+// Token: 0x0200140B RID: 5131
 public class FollowShootVisionCarUnit : HudUnitBase
 {
-	// Token: 0x0600F798 RID: 63384 RVA: 0x003BE2F8 File Offset: 0x003BC4F8
+	// Token: 0x0600CBB7 RID: 52151 RVA: 0x003C9DE4 File Offset: 0x003C7FE4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -25,7 +25,7 @@ public class FollowShootVisionCarUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F799 RID: 63385 RVA: 0x003BE382 File Offset: 0x003BC582
+	// Token: 0x0600CBB8 RID: 52152 RVA: 0x003C9E6E File Offset: 0x003C806E
 	protected override void OnStart()
 	{
 		this.TargetItem = base.GetItem(0);
@@ -35,7 +35,7 @@ public class FollowShootVisionCarUnit : HudUnitBase
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600F79A RID: 63386 RVA: 0x003BE3BC File Offset: 0x003BC5BC
+	// Token: 0x0600CBB9 RID: 52153 RVA: 0x003C9EA8 File Offset: 0x003C80A8
 	protected override void OnBeforeDestroy()
 	{
 		this.TargetItem = null;
@@ -48,7 +48,7 @@ public class FollowShootVisionCarUnit : HudUnitBase
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600F79B RID: 63387 RVA: 0x003BE3E4 File Offset: 0x003BC5E4
+	// Token: 0x0600CBBA RID: 52154 RVA: 0x003C9ED0 File Offset: 0x003C80D0
 	public override void SetActive(bool active)
 	{
 		if (base.IsCreateOrCreating)
@@ -87,7 +87,7 @@ public class FollowShootVisionCarUnit : HudUnitBase
 		this.PlayCloseSequenceAsync().Forget();
 	}
 
-	// Token: 0x0600F79C RID: 63388 RVA: 0x003BE494 File Offset: 0x003BC694
+	// Token: 0x0600CBBB RID: 52155 RVA: 0x003C9F80 File Offset: 0x003C8180
 	private UniTask PlayCloseSequenceAsync()
 	{
 		FollowShootVisionCarUnit.<PlayCloseSequenceAsync>d__10 <PlayCloseSequenceAsync>d__;
@@ -98,7 +98,7 @@ public class FollowShootVisionCarUnit : HudUnitBase
 		return <PlayCloseSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F79D RID: 63389 RVA: 0x003BE4D7 File Offset: 0x003BC6D7
+	// Token: 0x0600CBBC RID: 52156 RVA: 0x003C9FC3 File Offset: 0x003C81C3
 	public void SetTargetItemOffset(float x, float y)
 	{
 		if (this.TargetItem == null)
@@ -109,7 +109,7 @@ public class FollowShootVisionCarUnit : HudUnitBase
 		this.TargetItem.SetAnchorOffsetY(y);
 	}
 
-	// Token: 0x0600F79E RID: 63390 RVA: 0x003BE4FC File Offset: 0x003BC6FC
+	// Token: 0x0600CBBD RID: 52157 RVA: 0x003C9FE8 File Offset: 0x003C81E8
 	public void SetTargetAimVisible(bool isVisible, bool isTargetChanged)
 	{
 		if (this.IsClosing || this.TargetItem == null)
@@ -154,7 +154,7 @@ public class FollowShootVisionCarUnit : HudUnitBase
 		levelSequencePlayer4.PlaySequencePurely("StartL", false, false, null, null, false);
 	}
 
-	// Token: 0x0600F79F RID: 63391 RVA: 0x003BE5C0 File Offset: 0x003BC7C0
+	// Token: 0x0600CBBE RID: 52158 RVA: 0x003CA0AC File Offset: 0x003C82AC
 	private UniTask PlayCloseTargetSequenceAsync()
 	{
 		FollowShootVisionCarUnit.<PlayCloseTargetSequenceAsync>d__13 <PlayCloseTargetSequenceAsync>d__;
@@ -165,31 +165,31 @@ public class FollowShootVisionCarUnit : HudUnitBase
 		return <PlayCloseTargetSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x040072D2 RID: 29394
+	// Token: 0x040073B3 RID: 29619
 	[Nullable(2)]
 	private UUIItem TargetItem;
 
-	// Token: 0x040072D3 RID: 29395
+	// Token: 0x040073B4 RID: 29620
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040072D4 RID: 29396
+	// Token: 0x040073B5 RID: 29621
 	private bool IsActive;
 
-	// Token: 0x040072D5 RID: 29397
+	// Token: 0x040073B6 RID: 29622
 	private bool IsTargetItemActive;
 
-	// Token: 0x040072D6 RID: 29398
+	// Token: 0x040073B7 RID: 29623
 	private bool IsClosing;
 
-	// Token: 0x0200853A RID: 34106
+	// Token: 0x020076BF RID: 30399
 	private enum EChildType
 	{
-		// Token: 0x0402B5FF RID: 177663
+		// Token: 0x04026923 RID: 157987
 		TargetItem,
-		// Token: 0x0402B600 RID: 177664
+		// Token: 0x04026924 RID: 157988
 		Left,
-		// Token: 0x0402B601 RID: 177665
+		// Token: 0x04026925 RID: 157989
 		Right
 	}
 }

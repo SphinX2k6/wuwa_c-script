@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000797 RID: 1943
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000838 RID: 2104
 	public class ITrafficAudioControl : IAudioControlType
 	{
-		// Token: 0x06002A18 RID: 10776 RVA: 0x0006EA78 File Offset: 0x0006CC78
+		// Token: 0x06002D40 RID: 11584 RVA: 0x00075D20 File Offset: 0x00073F20
 		private ITrafficAudioControl_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002A19 RID: 10777 RVA: 0x0006EAB0 File Offset: 0x0006CCB0
+		// Token: 0x06002D41 RID: 11585 RVA: 0x00075D58 File Offset: 0x00073F58
 		public static ITrafficAudioControl Create([Nullable(2)] ITrafficAudioControl instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A1A RID: 10778 RVA: 0x0006EAC3 File Offset: 0x0006CCC3
+		// Token: 0x06002D42 RID: 11586 RVA: 0x00075D6B File Offset: 0x00073F6B
 		public static ITrafficAudioControl CreateFromSetValue([Nullable(2)] ITrafficAudioControl_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A1B RID: 10779 RVA: 0x0006EAD8 File Offset: 0x0006CCD8
+		// Token: 0x06002D43 RID: 11587 RVA: 0x00075D80 File Offset: 0x00073F80
 		public new ITrafficAudioControl_SetValue ToSetValue()
 		{
 			return new ITrafficAudioControl_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B0B RID: 2827
-		// (get) Token: 0x06002A1C RID: 10780 RVA: 0x0006EB26 File Offset: 0x0006CD26
-		// (set) Token: 0x06002A1D RID: 10781 RVA: 0x0006EB51 File Offset: 0x0006CD51
+		// Token: 0x17000BCD RID: 3021
+		// (get) Token: 0x06002D44 RID: 11588 RVA: 0x00075DCE File Offset: 0x00073FCE
+		// (set) Token: 0x06002D45 RID: 11589 RVA: 0x00075DF9 File Offset: 0x00073FF9
 		public override EAudioControlType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B0C RID: 2828
-		// (get) Token: 0x06002A1E RID: 10782 RVA: 0x0006EB5F File Offset: 0x0006CD5F
-		// (set) Token: 0x06002A1F RID: 10783 RVA: 0x0006EB8A File Offset: 0x0006CD8A
+		// Token: 0x17000BCE RID: 3022
+		// (get) Token: 0x06002D46 RID: 11590 RVA: 0x00075E07 File Offset: 0x00074007
+		// (set) Token: 0x06002D47 RID: 11591 RVA: 0x00075E32 File Offset: 0x00074032
 		public virtual string EngineAudio
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B0D RID: 2829
-		// (get) Token: 0x06002A20 RID: 10784 RVA: 0x0006EB98 File Offset: 0x0006CD98
-		// (set) Token: 0x06002A21 RID: 10785 RVA: 0x0006EBC3 File Offset: 0x0006CDC3
+		// Token: 0x17000BCF RID: 3023
+		// (get) Token: 0x06002D48 RID: 11592 RVA: 0x00075E40 File Offset: 0x00074040
+		// (set) Token: 0x06002D49 RID: 11593 RVA: 0x00075E6B File Offset: 0x0007406B
 		public virtual string BrakingAudio
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B0E RID: 2830
-		// (get) Token: 0x06002A22 RID: 10786 RVA: 0x0006EBD1 File Offset: 0x0006CDD1
-		// (set) Token: 0x06002A23 RID: 10787 RVA: 0x0006EBFC File Offset: 0x0006CDFC
+		// Token: 0x17000BD0 RID: 3024
+		// (get) Token: 0x06002D4A RID: 11594 RVA: 0x00075E79 File Offset: 0x00074079
+		// (set) Token: 0x06002D4B RID: 11595 RVA: 0x00075EA4 File Offset: 0x000740A4
 		public virtual string BrakingShortAudio
 		{
 			get
@@ -155,9 +153,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B0F RID: 2831
-		// (get) Token: 0x06002A24 RID: 10788 RVA: 0x0006EC0A File Offset: 0x0006CE0A
-		// (set) Token: 0x06002A25 RID: 10789 RVA: 0x0006EC35 File Offset: 0x0006CE35
+		// Token: 0x17000BD1 RID: 3025
+		// (get) Token: 0x06002D4C RID: 11596 RVA: 0x00075EB2 File Offset: 0x000740B2
+		// (set) Token: 0x06002D4D RID: 11597 RVA: 0x00075EDD File Offset: 0x000740DD
 		public virtual string HornAudio
 		{
 			get
@@ -178,11 +176,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C2A RID: 7210
+		// Token: 0x04001E33 RID: 7731
 		[Nullable(2)]
 		protected new ITrafficAudioControl FbInstance;
 
-		// Token: 0x04001C2B RID: 7211
+		// Token: 0x04001E34 RID: 7732
 		[Nullable(2)]
 		protected new ITrafficAudioControl_SetValue PocoInterface;
 	}

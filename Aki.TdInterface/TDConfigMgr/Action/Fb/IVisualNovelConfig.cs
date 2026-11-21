@@ -1,16 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025CA RID: 9674
+	// Token: 0x02002879 RID: 10361
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IVisualNovelConfig
 	{
-		// Token: 0x0600D976 RID: 55670 RVA: 0x00206E96 File Offset: 0x00205096
-		[NullableContext(1)]
+		// Token: 0x0600E6F0 RID: 59120 RVA: 0x00222B6A File Offset: 0x00220D6A
+		[NullableContext(0)]
 		public static IVisualNovelConfig Create(IVisualNovelConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FA4 RID: 16292
-		// (get) Token: 0x0600D977 RID: 55671 RVA: 0x00206EB8 File Offset: 0x002050B8
+		// Token: 0x170042AC RID: 17068
+		// (get) Token: 0x0600E6F1 RID: 59121 RVA: 0x00222B8C File Offset: 0x00220D8C
 		public virtual EVisualNovelSubType? VisualNovelSubType
 		{
 			get
@@ -37,8 +38,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FA5 RID: 16293
-		// (get) Token: 0x0600D978 RID: 55672 RVA: 0x00206EF0 File Offset: 0x002050F0
+		// Token: 0x170042AD RID: 17069
+		// (get) Token: 0x0600E6F2 RID: 59122 RVA: 0x00222BC4 File Offset: 0x00220DC4
 		public virtual bool? EnableReadRecord
 		{
 			get
@@ -51,9 +52,9 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FA6 RID: 16294
-		// (get) Token: 0x0600D979 RID: 55673 RVA: 0x00206F28 File Offset: 0x00205128
-		public virtual bool? HideControlUi
+		// Token: 0x170042AE RID: 17070
+		// (get) Token: 0x0600E6F3 RID: 59123 RVA: 0x00222BFC File Offset: 0x00220DFC
+		public virtual bool? EnableFastForward
 		{
 			get
 			{
@@ -61,13 +62,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 				{
 					return null;
 				}
-				return new bool?(this.Instance.HideControlUi);
+				return new bool?(this.Instance.EnableFastForward);
 			}
 		}
 
-		// Token: 0x17003FA7 RID: 16295
-		// (get) Token: 0x0600D97A RID: 55674 RVA: 0x00206F60 File Offset: 0x00205160
-		public virtual int? InitialBackgroundId
+		// Token: 0x170042AF RID: 17071
+		// (get) Token: 0x0600E6F4 RID: 59124 RVA: 0x00222C34 File Offset: 0x00220E34
+		public virtual bool? HideControlUi
 		{
 			get
 			{
@@ -75,22 +76,61 @@ namespace Aki.TDConfigMgr.Action.Fb
 				{
 					return null;
 				}
+				return new bool?(this.Instance.HideControlUi);
+			}
+		}
+
+		// Token: 0x170042B0 RID: 17072
+		// (get) Token: 0x0600E6F5 RID: 59125 RVA: 0x00222C6C File Offset: 0x00220E6C
+		public virtual int? InitialBackgroundId
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 16) == 0)
+				{
+					return null;
+				}
 				return new int?(this.Instance.InitialBackgroundId);
 			}
 		}
 
-		// Token: 0x17003FA8 RID: 16296
-		// (get) Token: 0x0600D97B RID: 55675 RVA: 0x00206F96 File Offset: 0x00205196
-		public virtual string InitialAudioEvent
+		// Token: 0x170042B1 RID: 17073
+		// (get) Token: 0x0600E6F6 RID: 59126 RVA: 0x00222CA4 File Offset: 0x00220EA4
+		[Nullable(new byte[]
 		{
+			2,
+			0
+		})]
+		public virtual List<string> InitialAudioEvents
+		{
+			[return: Nullable(new byte[]
+			{
+				2,
+				0
+			})]
 			get
 			{
-				return this.Instance.InitialAudioEvent;
+				if (this._InitialAudioEventsInited)
+				{
+					return this._InitialAudioEventsCache;
+				}
+				this._InitialAudioEventsInited = true;
+				if ((this.Instance.NullMask & 32) == 0)
+				{
+					return null;
+				}
+				int initialAudioEventsLength = this.Instance.InitialAudioEventsLength;
+				this._InitialAudioEventsCache = new List<string>(initialAudioEventsLength);
+				for (int i = 0; i < initialAudioEventsLength; i++)
+				{
+					this._InitialAudioEventsCache.Add(this.Instance.InitialAudioEvents(i));
+				}
+				return this._InitialAudioEventsCache;
 			}
 		}
 
-		// Token: 0x17003FA9 RID: 16297
-		// (get) Token: 0x0600D97C RID: 55676 RVA: 0x00206FA3 File Offset: 0x002051A3
+		// Token: 0x170042B2 RID: 17074
+		// (get) Token: 0x0600E6F7 RID: 59127 RVA: 0x00222D1A File Offset: 0x00220F1A
 		public virtual ISolarSchoolTime InitialTime
 		{
 			get
@@ -105,13 +145,38 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078C2 RID: 30914
+		// Token: 0x170042B3 RID: 17075
+		// (get) Token: 0x0600E6F8 RID: 59128 RVA: 0x00222D50 File Offset: 0x00220F50
+		public virtual float? EndFadeOutTime
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 64) == 0)
+				{
+					return null;
+				}
+				return new float?(this.Instance.EndFadeOutTime);
+			}
+		}
+
+		// Token: 0x04007F29 RID: 32553
 		private IVisualNovelConfig Instance;
 
-		// Token: 0x040078C3 RID: 30915
+		// Token: 0x04007F2A RID: 32554
+		[Nullable(new byte[]
+		{
+			2,
+			0
+		})]
+		private List<string> _InitialAudioEventsCache;
+
+		// Token: 0x04007F2B RID: 32555
+		private bool _InitialAudioEventsInited;
+
+		// Token: 0x04007F2C RID: 32556
 		private ISolarSchoolTime _InitialTimeCache;
 
-		// Token: 0x040078C4 RID: 30916
+		// Token: 0x04007F2D RID: 32557
 		private bool _InitialTimeInited;
 	}
 }

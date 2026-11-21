@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,19 +11,19 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200657A RID: 25978
+	// Token: 0x020054F8 RID: 21752
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ActivityFishingController : ActivityControllerBase
 	{
-		// Token: 0x060411B8 RID: 266680 RVA: 0x00FC784A File Offset: 0x00FC5A4A
+		// Token: 0x06035E7D RID: 220797 RVA: 0x00F0E82E File Offset: 0x00F0CA2E
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x060411B9 RID: 266681 RVA: 0x00FC7850 File Offset: 0x00FC5A50
+		// Token: 0x06035E7E RID: 220798 RVA: 0x00F0E834 File Offset: 0x00F0CA34
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 			if (GameModeModel.Instance.IsMulti)
@@ -47,31 +46,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			WorldMapController.Instance.FocalMarkItem(EMarkType.FishingDock, fishingPortConfig.MarkId);
 		}
 
-		// Token: 0x060411BA RID: 266682 RVA: 0x00FC78D9 File Offset: 0x00FC5AD9
+		// Token: 0x06035E7F RID: 220799 RVA: 0x00F0E8BD File Offset: 0x00F0CABD
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_FishingActivity";
 		}
 
-		// Token: 0x060411BB RID: 266683 RVA: 0x00FC78E0 File Offset: 0x00FC5AE0
+		// Token: 0x06035E80 RID: 220800 RVA: 0x00F0E8C4 File Offset: 0x00F0CAC4
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new ActivityFishingSubView();
 		}
 
-		// Token: 0x060411BC RID: 266684 RVA: 0x00FC78E7 File Offset: 0x00FC5AE7
+		// Token: 0x06035E81 RID: 220801 RVA: 0x00F0E8CB File Offset: 0x00F0CACB
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			return new ActivityFishingData();
 		}
 
-		// Token: 0x060411BD RID: 266685 RVA: 0x00FC78EE File Offset: 0x00FC5AEE
+		// Token: 0x06035E82 RID: 220802 RVA: 0x00F0E8D2 File Offset: 0x00F0CAD2
 		public override void OnShowActivityFirstUnlockView(ActivityBaseData data)
 		{
 			UiManager.Instance.OpenView(EUiViewName.FishingActivityUnlockView, null, null);
 		}
 
-		// Token: 0x060411BE RID: 266686 RVA: 0x00FC7904 File Offset: 0x00FC5B04
+		// Token: 0x06035E83 RID: 220803 RVA: 0x00F0E8E8 File Offset: 0x00F0CAE8
 		protected override void OnAddEvents()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -92,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			instance2.Add<IReadOnlyDictionary<int, HashSet<int>>>(name2, handle2);
 		}
 
-		// Token: 0x060411BF RID: 266687 RVA: 0x00FC7968 File Offset: 0x00FC5B68
+		// Token: 0x06035E84 RID: 220804 RVA: 0x00F0E94C File Offset: 0x00F0CB4C
 		protected override void OnRemoveEvents()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -113,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			instance2.Remove(name2, handle2);
 		}
 
-		// Token: 0x060411C0 RID: 266688 RVA: 0x00FC79CC File Offset: 0x00FC5BCC
+		// Token: 0x06035E85 RID: 220805 RVA: 0x00F0E9B0 File Offset: 0x00F0CBB0
 		protected override void OnRegisterNetEvent()
 		{
 			Net instance = Net.Instance;
@@ -142,7 +141,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			instance3.Register(id3, callback3);
 		}
 
-		// Token: 0x060411C1 RID: 266689 RVA: 0x00FC7A5A File Offset: 0x00FC5C5A
+		// Token: 0x06035E86 RID: 220806 RVA: 0x00F0EA3E File Offset: 0x00F0CC3E
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.FishingActivityLimitTaskNotify);
@@ -150,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			Net.Instance.UnRegister(ENotifyMessageId.FishingActivityMilestoneItemNumNotify);
 		}
 
-		// Token: 0x060411C2 RID: 266690 RVA: 0x00FC7A8C File Offset: 0x00FC5C8C
+		// Token: 0x06035E87 RID: 220807 RVA: 0x00F0EA70 File Offset: 0x00F0CC70
 		public static ActivityFishingData GetCurrentActivityData()
 		{
 			List<ActivityBaseData> currentActivitiesByType = ActivityModel.Instance.GetCurrentActivitiesByType(ActivityType.FishingActivity);
@@ -165,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return result;
 		}
 
-		// Token: 0x060411C3 RID: 266691 RVA: 0x00FC7AEC File Offset: 0x00FC5CEC
+		// Token: 0x06035E88 RID: 220808 RVA: 0x00F0EAD0 File Offset: 0x00F0CCD0
 		[NullableContext(2)]
 		private static void OnFishingActivityLimitTaskNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -175,11 +174,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			{
 				return;
 			}
-			currentActivityData.RefreshLimitTimeTaskDataList(fishingActivityLimitTaskNotify.ActivityTasks.ToList<ActivityTask>(), true);
+			currentActivityData.RefreshLimitTimeTaskDataList(fishingActivityLimitTaskNotify.ActivityTasks, true);
 			currentActivityData.RefreshActivityRedDotState();
 		}
 
-		// Token: 0x060411C4 RID: 266692 RVA: 0x00FC7B24 File Offset: 0x00FC5D24
+		// Token: 0x06035E89 RID: 220809 RVA: 0x00F0EB04 File Offset: 0x00F0CD04
 		[NullableContext(2)]
 		private static void OnFishingActivityMileStoneNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -193,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			currentActivityData.RefreshActivityRedDotState();
 		}
 
-		// Token: 0x060411C5 RID: 266693 RVA: 0x00FC7B58 File Offset: 0x00FC5D58
+		// Token: 0x06035E8A RID: 220810 RVA: 0x00F0EB38 File Offset: 0x00F0CD38
 		[NullableContext(2)]
 		private static void OnFishingActivityMilestoneItemNumNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -206,7 +205,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			currentActivityData.MilestoneRewardItemAccumulate = fishingActivityMilestoneItemNumNotify.MilestoneItemNum;
 		}
 
-		// Token: 0x060411C6 RID: 266694 RVA: 0x00FC7B82 File Offset: 0x00FC5D82
+		// Token: 0x06035E8B RID: 220811 RVA: 0x00F0EB62 File Offset: 0x00F0CD62
 		private static void OnUnlockGoods(IReadOnlyDictionary<int, HashSet<int>> payShopMap)
 		{
 			if (payShopMap.ContainsKey(209))
@@ -215,7 +214,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060411C7 RID: 266695 RVA: 0x00FC7B98 File Offset: 0x00FC5D98
+		// Token: 0x06035E8C RID: 220812 RVA: 0x00F0EB78 File Offset: 0x00F0CD78
 		private static void OnRefreshRedDot()
 		{
 			ActivityFishingData currentActivityData = ActivityFishingController.GetCurrentActivityData();
@@ -226,7 +225,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			currentActivityData.RefreshActivityRedDotState();
 		}
 
-		// Token: 0x060411C8 RID: 266696 RVA: 0x00FC7BB8 File Offset: 0x00FC5DB8
+		// Token: 0x06035E8D RID: 220813 RVA: 0x00F0EB98 File Offset: 0x00F0CD98
 		public static void FishingActivityLimitRewardRequest(int taskId)
 		{
 			FishingActivityLimitRewardRequest fishingActivityLimitRewardRequest = Aki.Protocol.FishingActivityLimitRewardRequest.Create();
@@ -240,13 +239,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				}
 				if (fishingActivityLimitRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingActivityLimitRewardResponse.ErrorCode, 18435, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingActivityLimitRewardResponse.ErrorCode, 23099, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x060411C9 RID: 266697 RVA: 0x00FC7C04 File Offset: 0x00FC5E04
-		public static void FishingActivityMilestoneRewardRequest(List<int> ids)
+		// Token: 0x06035E8E RID: 220814 RVA: 0x00F0EBE4 File Offset: 0x00F0CDE4
+		public static void FishingActivityMilestoneRewardRequest(IEnumerable<int> ids)
 		{
 			FishingActivityMilestoneRewardRequest fishingActivityMilestoneRewardRequest = Aki.Protocol.FishingActivityMilestoneRewardRequest.Create();
 			ActivityFishingData currentActivityData = ActivityFishingController.GetCurrentActivityData();
@@ -265,13 +264,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				}
 				if (fishingActivityMilestoneRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingActivityMilestoneRewardResponse.ErrorCode, 27837, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingActivityMilestoneRewardResponse.ErrorCode, 21498, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x1700954C RID: 38220
-		// (get) Token: 0x060411CA RID: 266698 RVA: 0x00FC7C69 File Offset: 0x00FC5E69
+		// Token: 0x170068AE RID: 26798
+		// (get) Token: 0x06035E8F RID: 220815 RVA: 0x00F0EC49 File Offset: 0x00F0CE49
 		public static ActivityFishingController Instance
 		{
 			get
@@ -280,7 +279,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060411CB RID: 266699 RVA: 0x00FC7C70 File Offset: 0x00FC5E70
+		// Token: 0x06035E90 RID: 220816 RVA: 0x00F0EC50 File Offset: 0x00F0CE50
 		public static ActivityFishingController GetOrCreateInstance()
 		{
 			if (ActivityFishingController._Instance == null)
@@ -290,7 +289,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return ActivityFishingController._Instance;
 		}
 
-		// Token: 0x060411CC RID: 266700 RVA: 0x00FC7C84 File Offset: 0x00FC5E84
+		// Token: 0x06035E91 RID: 220817 RVA: 0x00F0EC64 File Offset: 0x00F0CE64
 		public static bool CreateInstance()
 		{
 			if (ActivityFishingController._Instance != null)
@@ -301,36 +300,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return true;
 		}
 
-		// Token: 0x060411CD RID: 266701 RVA: 0x00FC7C9A File Offset: 0x00FC5E9A
+		// Token: 0x06035E92 RID: 220818 RVA: 0x00F0EC7A File Offset: 0x00F0CE7A
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060411CE RID: 266702 RVA: 0x00FC7C9C File Offset: 0x00FC5E9C
+		// Token: 0x06035E93 RID: 220819 RVA: 0x00F0EC7C File Offset: 0x00F0CE7C
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityFishingController._Instance = null;
 		}
 
-		// Token: 0x060411CF RID: 266703 RVA: 0x00FC7CA4 File Offset: 0x00FC5EA4
+		// Token: 0x06035E94 RID: 220820 RVA: 0x00F0EC84 File Offset: 0x00F0CE84
 		static ActivityFishingController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityFishingController.CreateStaticDefaultValue), new Action(ActivityFishingController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04021EC0 RID: 138944
+		// Token: 0x0401C7F1 RID: 116721
 		[Nullable(2)]
 		private static ActivityFishingController _Instance;
 
-		// Token: 0x0200C773 RID: 51059
+		// Token: 0x0200B158 RID: 45400
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403C42B RID: 246827
+			// Token: 0x04036D7D RID: 224637
 			[Nullable(0)]
 			public static Action <0>__OnRefreshRedDot;
 
-			// Token: 0x0403C42C RID: 246828
+			// Token: 0x04036D7E RID: 224638
 			[Nullable(new byte[]
 			{
 				0,
@@ -339,7 +338,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			})]
 			public static Action<IReadOnlyDictionary<int, HashSet<int>>> <1>__OnUnlockGoods;
 
-			// Token: 0x0403C42D RID: 246829
+			// Token: 0x04036D7F RID: 224639
 			[Nullable(new byte[]
 			{
 				0,
@@ -348,7 +347,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <2>__OnFishingActivityLimitTaskNotify;
 
-			// Token: 0x0403C42E RID: 246830
+			// Token: 0x04036D80 RID: 224640
 			[Nullable(new byte[]
 			{
 				0,
@@ -357,7 +356,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <3>__OnFishingActivityMileStoneNotify;
 
-			// Token: 0x0403C42F RID: 246831
+			// Token: 0x04036D81 RID: 224641
 			[Nullable(new byte[]
 			{
 				0,

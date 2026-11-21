@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Activity
 {
-	// Token: 0x0200578A RID: 22410
+	// Token: 0x02004761 RID: 18273
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class KurotatoMainView : UiViewBase
 	{
-		// Token: 0x06038ED0 RID: 233168 RVA: 0x00D87B56 File Offset: 0x00D85D56
+		// Token: 0x0602DDE0 RID: 187872 RVA: 0x00CD68B2 File Offset: 0x00CD4AB2
 		[NullableContext(1)]
 		public KurotatoMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038ED1 RID: 233169 RVA: 0x00D87B60 File Offset: 0x00D85D60
+		// Token: 0x0602DDE1 RID: 187873 RVA: 0x00CD68BC File Offset: 0x00CD4ABC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038ED2 RID: 233170 RVA: 0x00D87C70 File Offset: 0x00D85E70
+		// Token: 0x0602DDE2 RID: 187874 RVA: 0x00CD69CC File Offset: 0x00CD4BCC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoMainView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038ED3 RID: 233171 RVA: 0x00D87CB4 File Offset: 0x00D85EB4
+		// Token: 0x0602DDE3 RID: 187875 RVA: 0x00CD6A10 File Offset: 0x00CD4C10
 		protected override void OnBeforeShow()
 		{
 			this.RefreshMainView();
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.TimerHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnTimerTick), 1000f, 1f, null, null, true);
 		}
 
-		// Token: 0x06038ED4 RID: 233172 RVA: 0x00D87D18 File Offset: 0x00D85F18
+		// Token: 0x0602DDE4 RID: 187876 RVA: 0x00CD6A74 File Offset: 0x00CD4C74
 		protected override void OnBeforeHide()
 		{
 			KurotatoNormalRewardButton normalRewardBtn = this.NormalRewardBtn;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.ClearTimer();
 		}
 
-		// Token: 0x06038ED5 RID: 233173 RVA: 0x00D87D42 File Offset: 0x00D85F42
+		// Token: 0x0602DDE5 RID: 187877 RVA: 0x00CD6A9E File Offset: 0x00CD4C9E
 		private void ClearTimer()
 		{
 			if (this.TimerHandle != null)
@@ -102,14 +102,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			}
 		}
 
-		// Token: 0x06038ED6 RID: 233174 RVA: 0x00D87D64 File Offset: 0x00D85F64
+		// Token: 0x0602DDE6 RID: 187878 RVA: 0x00CD6AC0 File Offset: 0x00CD4CC0
 		private void OnTimerTick(float delta)
 		{
 			this.RefreshInfiniteStageEntrance();
 			this.RefreshBottomTimeText();
 		}
 
-		// Token: 0x06038ED7 RID: 233175 RVA: 0x00D87D74 File Offset: 0x00D85F74
+		// Token: 0x0602DDE7 RID: 187879 RVA: 0x00CD6AD0 File Offset: 0x00CD4CD0
 		private void RefreshInfiniteStageEntrance()
 		{
 			bool flag = this.ActivityBaseData.IsStageEntranceUnLock(EKurotatoLevelMode.Endless);
@@ -137,19 +137,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			}
 		}
 
-		// Token: 0x06038ED8 RID: 233176 RVA: 0x00D87DCF File Offset: 0x00D85FCF
+		// Token: 0x0602DDE8 RID: 187880 RVA: 0x00CD6B2B File Offset: 0x00CD4D2B
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x06038ED9 RID: 233177 RVA: 0x00D87DED File Offset: 0x00D85FED
+		// Token: 0x0602DDE9 RID: 187881 RVA: 0x00CD6B49 File Offset: 0x00CD4D49
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x06038EDA RID: 233178 RVA: 0x00D87E0B File Offset: 0x00D8600B
+		// Token: 0x0602DDEA RID: 187882 RVA: 0x00CD6B67 File Offset: 0x00CD4D67
 		private void OnRefreshCommonActivityRedDot(int id)
 		{
 			if (this.ActivityBaseData.Id != id)
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.RefreshMainView();
 		}
 
-		// Token: 0x06038EDB RID: 233179 RVA: 0x00D87E24 File Offset: 0x00D86024
+		// Token: 0x0602DDEB RID: 187883 RVA: 0x00CD6B80 File Offset: 0x00CD4D80
 		public void RefreshMainView()
 		{
 			KurotatoStageEntrance teachStageEntrance = this.TeachStageEntrance;
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.RefreshInfiniteStageEntrance();
 		}
 
-		// Token: 0x06038EDC RID: 233180 RVA: 0x00D87EB8 File Offset: 0x00D860B8
+		// Token: 0x0602DDEC RID: 187884 RVA: 0x00CD6C14 File Offset: 0x00CD4E14
 		private void RefreshBottomTimeText()
 		{
 			bool uiactive = this.ActivityBaseData.CheckIfInLimitTime();
@@ -204,19 +204,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.LimitTimeRewardBtn.SetLimitTimeText(remainTimeText ?? "");
 		}
 
-		// Token: 0x06038EDD RID: 233181 RVA: 0x00D87F0E File Offset: 0x00D8610E
+		// Token: 0x0602DDED RID: 187885 RVA: 0x00CD6C6A File Offset: 0x00CD4E6A
 		private void OnNormalRewardBtnClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.KurotatoNormalRewardView, null, null);
 		}
 
-		// Token: 0x06038EDE RID: 233182 RVA: 0x00D87F21 File Offset: 0x00D86121
+		// Token: 0x0602DDEE RID: 187886 RVA: 0x00CD6C7D File Offset: 0x00CD4E7D
 		private void OnLimitTimeRewardBtnClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.KurotatoLimitedTimeRewardView, null, null);
 		}
 
-		// Token: 0x06038EDF RID: 233183 RVA: 0x00D87F34 File Offset: 0x00D86134
+		// Token: 0x0602DDEF RID: 187887 RVA: 0x00CD6C90 File Offset: 0x00CD4E90
 		private void OnTeachStageEntranceClick()
 		{
 			int latestUnfinishedLevelId = this.ActivityBaseData.GetLatestUnfinishedLevelId(1);
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			UiManager.Instance.OpenView(EUiViewName.KurotatoLevelSelectView, param, null);
 		}
 
-		// Token: 0x06038EE0 RID: 233184 RVA: 0x00D87F74 File Offset: 0x00D86174
+		// Token: 0x0602DDF0 RID: 187888 RVA: 0x00CD6CD0 File Offset: 0x00CD4ED0
 		private void OnInfiniteStageEntranceClick()
 		{
 			KurotatoLevelSelectViewData param = new KurotatoLevelSelectViewData
@@ -239,62 +239,62 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			UiManager.Instance.OpenView(EUiViewName.KurotatoLevelSelectView, param, null);
 		}
 
-		// Token: 0x06038EE1 RID: 233185 RVA: 0x00D87FA6 File Offset: 0x00D861A6
+		// Token: 0x0602DDF1 RID: 187889 RVA: 0x00CD6D02 File Offset: 0x00CD4F02
 		private void OnCollectBtnClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.KurotatoHandBookView, null, null);
 		}
 
-		// Token: 0x06038EE2 RID: 233186 RVA: 0x00D87FB9 File Offset: 0x00D861B9
+		// Token: 0x0602DDF2 RID: 187890 RVA: 0x00CD6D15 File Offset: 0x00CD4F15
 		private void OnCloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401DD74 RID: 122228
+		// Token: 0x0401880A RID: 100362
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401DD75 RID: 122229
+		// Token: 0x0401880B RID: 100363
 		private KurotatoNormalRewardButton NormalRewardBtn;
 
-		// Token: 0x0401DD76 RID: 122230
+		// Token: 0x0401880C RID: 100364
 		private KurotatoLimitTimeRewardButton LimitTimeRewardBtn;
 
-		// Token: 0x0401DD77 RID: 122231
+		// Token: 0x0401880D RID: 100365
 		private KurotatoStageEntrance TeachStageEntrance;
 
-		// Token: 0x0401DD78 RID: 122232
+		// Token: 0x0401880E RID: 100366
 		private KurotatoStageEntranceEndless InfiniteStageEntrance;
 
-		// Token: 0x0401DD79 RID: 122233
+		// Token: 0x0401880F RID: 100367
 		private KurotatoStageEntranceEndlessLock InfiniteStageEntranceLock;
 
-		// Token: 0x0401DD7A RID: 122234
+		// Token: 0x04018810 RID: 100368
 		private KurotatoCollectBtn CollectBtn;
 
-		// Token: 0x0401DD7B RID: 122235
+		// Token: 0x04018811 RID: 100369
 		protected KurotatoActivityData ActivityBaseData;
 
-		// Token: 0x0401DD7C RID: 122236
+		// Token: 0x04018812 RID: 100370
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0200B9B0 RID: 47536
+		// Token: 0x0200A3C6 RID: 41926
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403824B RID: 229963
+			// Token: 0x04032C3C RID: 207932
 			Caption,
-			// Token: 0x0403824C RID: 229964
+			// Token: 0x04032C3D RID: 207933
 			TeachStageEntrance,
-			// Token: 0x0403824D RID: 229965
+			// Token: 0x04032C3E RID: 207934
 			InfiniteStageEntrance,
-			// Token: 0x0403824E RID: 229966
+			// Token: 0x04032C3F RID: 207935
 			InfiniteStageEntranceLock,
-			// Token: 0x0403824F RID: 229967
+			// Token: 0x04032C40 RID: 207936
 			LimitTimeRewardBtn,
-			// Token: 0x04038250 RID: 229968
+			// Token: 0x04032C41 RID: 207937
 			NormalRewardBtn,
-			// Token: 0x04038251 RID: 229969
+			// Token: 0x04032C42 RID: 207938
 			CollectBtn
 		}
 	}

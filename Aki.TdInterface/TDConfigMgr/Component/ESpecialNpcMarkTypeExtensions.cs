@@ -2,32 +2,32 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A18 RID: 2584
+	// Token: 0x02000ADD RID: 2781
 	public static class ESpecialNpcMarkTypeExtensions
 	{
-		// Token: 0x0600391D RID: 14621 RVA: 0x000937C0 File Offset: 0x000919C0
+		// Token: 0x06003CF5 RID: 15605 RVA: 0x0009C0B0 File Offset: 0x0009A2B0
 		public static string ToEnumString(this ESpecialNpcMarkType value)
 		{
 			string result;
-			if (value != ESpecialNpcMarkType.TrafficLight)
+			switch (value)
 			{
-				if (value != ESpecialNpcMarkType.IgnoreCameraHideNpc)
-				{
-					result = value.ToString();
-				}
-				else
-				{
-					result = "IgnoreCameraHideNpc";
-				}
-			}
-			else
-			{
+			case ESpecialNpcMarkType.TrafficLight:
 				result = "TrafficLight";
+				break;
+			case ESpecialNpcMarkType.IgnoreCameraHideNpc:
+				result = "IgnoreCameraHideNpc";
+				break;
+			case ESpecialNpcMarkType.TriggerBlueprintFootprintEvent:
+				result = "TriggerBlueprintFootprintEvent";
+				break;
+			default:
+				result = value.ToString();
+				break;
 			}
 			return result;
 		}
 
-		// Token: 0x0600391E RID: 14622 RVA: 0x000937F8 File Offset: 0x000919F8
+		// Token: 0x06003CF6 RID: 15606 RVA: 0x0009C0F8 File Offset: 0x0009A2F8
 		public static ESpecialNpcMarkType FromString(string name)
 		{
 			ESpecialNpcMarkType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600391F RID: 14623 RVA: 0x00093821 File Offset: 0x00091A21
+		// Token: 0x06003CF7 RID: 15607 RVA: 0x0009C124 File Offset: 0x0009A324
 		public static bool TryFromString(string name, out ESpecialNpcMarkType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -51,42 +51,50 @@ namespace Aki.TDConfigMgr.Component
 				value = ESpecialNpcMarkType.TrafficLight;
 				return true;
 			}
-			if (!(name == "IgnoreCameraHideNpc"))
+			if (name == "IgnoreCameraHideNpc")
+			{
+				value = ESpecialNpcMarkType.IgnoreCameraHideNpc;
+				return true;
+			}
+			if (!(name == "TriggerBlueprintFootprintEvent"))
 			{
 				value = ESpecialNpcMarkType.TrafficLight;
 				return false;
 			}
-			value = ESpecialNpcMarkType.IgnoreCameraHideNpc;
+			value = ESpecialNpcMarkType.TriggerBlueprintFootprintEvent;
 			return true;
 		}
 
-		// Token: 0x06003920 RID: 14624 RVA: 0x0009385A File Offset: 0x00091A5A
+		// Token: 0x06003CF8 RID: 15608 RVA: 0x0009C17A File Offset: 0x0009A37A
 		public static string[] GetStringValues()
 		{
 			return new string[]
 			{
 				"TrafficLight",
-				"IgnoreCameraHideNpc"
+				"IgnoreCameraHideNpc",
+				"TriggerBlueprintFootprintEvent"
 			};
 		}
 
-		// Token: 0x06003921 RID: 14625 RVA: 0x00093872 File Offset: 0x00091A72
+		// Token: 0x06003CF9 RID: 15609 RVA: 0x0009C19A File Offset: 0x0009A39A
 		public static ESpecialNpcMarkType[] GetValues()
 		{
 			return new ESpecialNpcMarkType[]
 			{
 				ESpecialNpcMarkType.TrafficLight,
-				ESpecialNpcMarkType.IgnoreCameraHideNpc
+				ESpecialNpcMarkType.IgnoreCameraHideNpc,
+				ESpecialNpcMarkType.TriggerBlueprintFootprintEvent
 			};
 		}
 
-		// Token: 0x06003922 RID: 14626 RVA: 0x0009387E File Offset: 0x00091A7E
+		// Token: 0x06003CFA RID: 15610 RVA: 0x0009C1AA File Offset: 0x0009A3AA
 		public static string[] GetNames()
 		{
 			return new string[]
 			{
 				"TrafficLight",
-				"IgnoreCameraHideNpc"
+				"IgnoreCameraHideNpc",
+				"TriggerBlueprintFootprintEvent"
 			};
 		}
 	}

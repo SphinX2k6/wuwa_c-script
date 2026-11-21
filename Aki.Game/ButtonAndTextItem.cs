@@ -5,18 +5,18 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017E8 RID: 6120
+// Token: 0x02000CA1 RID: 3233
 [NullableContext(1)]
 [Nullable(0)]
 public class ButtonAndTextItem : UiPanelBase
 {
-	// Token: 0x0600B305 RID: 45829 RVA: 0x002876F9 File Offset: 0x002858F9
+	// Token: 0x060086EF RID: 34543 RVA: 0x00291DCD File Offset: 0x0028FFCD
 	public ButtonAndTextItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600B306 RID: 45830 RVA: 0x00287710 File Offset: 0x00285910
+	// Token: 0x060086F0 RID: 34544 RVA: 0x00291DE4 File Offset: 0x0028FFE4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -37,19 +37,19 @@ public class ButtonAndTextItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B307 RID: 45831 RVA: 0x002877B6 File Offset: 0x002859B6
+	// Token: 0x060086F1 RID: 34545 RVA: 0x00291E8A File Offset: 0x0029008A
 	public void RefreshText(string textId, params object[] args)
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(1), textId, args);
 	}
 
-	// Token: 0x0600B308 RID: 45832 RVA: 0x002877CB File Offset: 0x002859CB
+	// Token: 0x060086F2 RID: 34546 RVA: 0x00291E9F File Offset: 0x0029009F
 	public void RefreshTextNew(string textId, params object[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, args);
 	}
 
-	// Token: 0x0600B309 RID: 45833 RVA: 0x002877E0 File Offset: 0x002859E0
+	// Token: 0x060086F3 RID: 34547 RVA: 0x00291EB4 File Offset: 0x002900B4
 	public void SetText(string content)
 	{
 		UUIText text = base.GetText(1);
@@ -60,7 +60,7 @@ public class ButtonAndTextItem : UiPanelBase
 		text.SetText(content, true);
 	}
 
-	// Token: 0x0600B30A RID: 45834 RVA: 0x002877F5 File Offset: 0x002859F5
+	// Token: 0x060086F4 RID: 34548 RVA: 0x00291EC9 File Offset: 0x002900C9
 	public void SetTextColor(FColor newColor)
 	{
 		UUIText text = base.GetText(1);
@@ -71,7 +71,7 @@ public class ButtonAndTextItem : UiPanelBase
 		text.SetColor(newColor);
 	}
 
-	// Token: 0x0600B30B RID: 45835 RVA: 0x00287809 File Offset: 0x00285A09
+	// Token: 0x060086F5 RID: 34549 RVA: 0x00291EDD File Offset: 0x002900DD
 	public void RefreshEnable(bool isEnable)
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -82,7 +82,7 @@ public class ButtonAndTextItem : UiPanelBase
 		button.SetSelfInteractive(isEnable);
 	}
 
-	// Token: 0x0600B30C RID: 45836 RVA: 0x0028781D File Offset: 0x00285A1D
+	// Token: 0x060086F6 RID: 34550 RVA: 0x00291EF1 File Offset: 0x002900F1
 	public void BindCallback(Action onCallback)
 	{
 		if (this.OnCallback != null)
@@ -92,7 +92,7 @@ public class ButtonAndTextItem : UiPanelBase
 		this.OnCallback = onCallback;
 	}
 
-	// Token: 0x0600B30D RID: 45837 RVA: 0x0028782F File Offset: 0x00285A2F
+	// Token: 0x060086F7 RID: 34551 RVA: 0x00291F03 File Offset: 0x00290103
 	private void OnClick()
 	{
 		if (this.OnCallback != null)
@@ -101,18 +101,18 @@ public class ButtonAndTextItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04005116 RID: 20758
+	// Token: 0x040051C1 RID: 20929
 	[Nullable(2)]
 	private Action OnCallback;
 
-	// Token: 0x02007DD5 RID: 32213
+	// Token: 0x02006F5B RID: 28507
 	[NullableContext(0)]
 	private class EButtonItemDefine
 	{
-		// Token: 0x0402930E RID: 168718
+		// Token: 0x04024639 RID: 149049
 		public const int Button = 0;
 
-		// Token: 0x0402930F RID: 168719
+		// Token: 0x0402463A RID: 149050
 		public const int Text = 1;
 	}
 }

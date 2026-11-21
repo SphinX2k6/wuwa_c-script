@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 {
-	// Token: 0x020062E0 RID: 25312
+	// Token: 0x0200525E RID: 21086
 	[NullableContext(1)]
 	public interface IPinballWeaponEquipTitleItemData
 	{
-		// Token: 0x1700929D RID: 37533
-		// (get) Token: 0x0603FB01 RID: 260865
-		// (set) Token: 0x0603FB02 RID: 260866
+		// Token: 0x170065FF RID: 26111
+		// (get) Token: 0x060347C2 RID: 214978
+		// (set) Token: 0x060347C3 RID: 214979
 		string TypeIconPath { get; set; }
 
-		// Token: 0x1700929E RID: 37534
-		// (get) Token: 0x0603FB03 RID: 260867
-		// (set) Token: 0x0603FB04 RID: 260868
+		// Token: 0x17006600 RID: 26112
+		// (get) Token: 0x060347C4 RID: 214980
+		// (set) Token: 0x060347C5 RID: 214981
 		TableTextArgNew DescTextData { get; set; }
 
-		// Token: 0x1700929F RID: 37535
-		// (get) Token: 0x0603FB05 RID: 260869
-		// (set) Token: 0x0603FB06 RID: 260870
+		// Token: 0x17006601 RID: 26113
+		// (get) Token: 0x060347C6 RID: 214982
+		// (set) Token: 0x060347C7 RID: 214983
 		bool CanEquip { get; set; }
 	}
 }

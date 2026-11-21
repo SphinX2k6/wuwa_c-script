@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002B0C RID: 11020
+// Token: 0x02002088 RID: 8328
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class SurvivorsWeaponAttributeItem : GridProxyAbstract<ISurvivorsWeaponAttributeData>
 {
-	// Token: 0x06016E86 RID: 93830 RVA: 0x005D010C File Offset: 0x005CE30C
+	// Token: 0x060148B7 RID: 84151 RVA: 0x005FCC8C File Offset: 0x005FAE8C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class SurvivorsWeaponAttributeItem : GridProxyAbstract<ISurvivorsWeaponAt
 		};
 	}
 
-	// Token: 0x06016E87 RID: 93831 RVA: 0x005D0168 File Offset: 0x005CE368
+	// Token: 0x060148B8 RID: 84152 RVA: 0x005FCCE8 File Offset: 0x005FAEE8
 	[NullableContext(1)]
 	public override void Refresh(ISurvivorsWeaponAttributeData data, bool isSelected, int gridIndex)
 	{
@@ -39,16 +39,16 @@ public class SurvivorsWeaponAttributeItem : GridProxyAbstract<ISurvivorsWeaponAt
 		base.GetItem(2).SetUIActive(gridIndex % 2 == 0);
 	}
 
-	// Token: 0x02009115 RID: 37141
+	// Token: 0x02008358 RID: 33624
 	private static class EAttributeComponents
 	{
-		// Token: 0x0402EFDC RID: 192476
+		// Token: 0x0402A6E1 RID: 173793
 		public const int TexIcon = 0;
 
-		// Token: 0x0402EFDD RID: 192477
+		// Token: 0x0402A6E2 RID: 173794
 		public const int TxtDesc = 1;
 
-		// Token: 0x0402EFDE RID: 192478
+		// Token: 0x0402A6E3 RID: 173795
 		public const int BgItem = 2;
 	}
 }

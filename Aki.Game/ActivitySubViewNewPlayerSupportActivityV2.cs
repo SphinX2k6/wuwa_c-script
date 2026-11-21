@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -10,18 +9,18 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020013B2 RID: 5042
+// Token: 0x02000866 RID: 2150
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 {
-	// Token: 0x06008DE6 RID: 36326 RVA: 0x001E973B File Offset: 0x001E793B
+	// Token: 0x0600617C RID: 24956 RVA: 0x001F2387 File Offset: 0x001F0587
 	protected override void OnSetData()
 	{
 		this.ActivityData = (this.ActivityBaseData as ActivityNewPlayerSupportActivityV2Data);
 	}
 
-	// Token: 0x06008DE7 RID: 36327 RVA: 0x001E9750 File Offset: 0x001E7950
+	// Token: 0x0600617D RID: 24957 RVA: 0x001F239C File Offset: 0x001F059C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -74,7 +73,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008DE8 RID: 36328 RVA: 0x001E9A14 File Offset: 0x001E7C14
+	// Token: 0x0600617E RID: 24958 RVA: 0x001F2660 File Offset: 0x001F0860
 	protected override void OnStart()
 	{
 		this.RemainTimeText = (ConfigMultiTextLang.GetLocalTextNew("ActivityRemainingTime", null) ?? string.Empty);
@@ -92,33 +91,33 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		this.RefreshViewState();
 	}
 
-	// Token: 0x06008DE9 RID: 36329 RVA: 0x001E9A83 File Offset: 0x001E7C83
+	// Token: 0x0600617F RID: 24959 RVA: 0x001F26CF File Offset: 0x001F08CF
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRedDot));
 		EventSystem.Instance.Add<EFunctionType, bool>(EEventName.OnFunctionOpenUpdate, new Action<EFunctionType, bool>(this.OnFunctionOpenChanged));
 	}
 
-	// Token: 0x06008DEA RID: 36330 RVA: 0x001E9ABD File Offset: 0x001E7CBD
+	// Token: 0x06006180 RID: 24960 RVA: 0x001F2709 File Offset: 0x001F0909
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRedDot));
 		EventSystem.Instance.Remove<EFunctionType, bool>(EEventName.OnFunctionOpenUpdate, new Action<EFunctionType, bool>(this.OnFunctionOpenChanged));
 	}
 
-	// Token: 0x06008DEB RID: 36331 RVA: 0x001E9AF7 File Offset: 0x001E7CF7
+	// Token: 0x06006181 RID: 24961 RVA: 0x001F2743 File Offset: 0x001F0943
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshRemainTime();
 	}
 
-	// Token: 0x06008DEC RID: 36332 RVA: 0x001E9AFF File Offset: 0x001E7CFF
+	// Token: 0x06006182 RID: 24962 RVA: 0x001F274B File Offset: 0x001F094B
 	protected override void OnRefreshView()
 	{
 		this.RefreshViewState();
 	}
 
-	// Token: 0x06008DED RID: 36333 RVA: 0x001E9B07 File Offset: 0x001E7D07
+	// Token: 0x06006183 RID: 24963 RVA: 0x001F2753 File Offset: 0x001F0953
 	private void RefreshViewState()
 	{
 		this.RefreshRemainTime();
@@ -128,7 +127,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		this.RefreshEntranceRedDot();
 	}
 
-	// Token: 0x06008DEE RID: 36334 RVA: 0x001E9B28 File Offset: 0x001E7D28
+	// Token: 0x06006184 RID: 24964 RVA: 0x001F2774 File Offset: 0x001F0974
 	private void RefreshRemainTime()
 	{
 		if (this.ActivityData == null)
@@ -151,7 +150,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		text.SetText(remainTimeText ?? string.Empty, true);
 	}
 
-	// Token: 0x06008DEF RID: 36335 RVA: 0x001E9B9C File Offset: 0x001E7D9C
+	// Token: 0x06006185 RID: 24965 RVA: 0x001F27E8 File Offset: 0x001F09E8
 	private void OnRefreshRedDot(int activityId)
 	{
 		ActivityNewPlayerSupportActivityV2Data activityData = this.ActivityData;
@@ -163,7 +162,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		this.RefreshViewState();
 	}
 
-	// Token: 0x06008DF0 RID: 36336 RVA: 0x001E9BE4 File Offset: 0x001E7DE4
+	// Token: 0x06006186 RID: 24966 RVA: 0x001F2830 File Offset: 0x001F0A30
 	private void OnFunctionOpenChanged(EFunctionType functionType, bool isOpen)
 	{
 		if (functionType == EFunctionType.DailyActivity)
@@ -172,7 +171,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008DF1 RID: 36337 RVA: 0x001E9BF4 File Offset: 0x001E7DF4
+	// Token: 0x06006187 RID: 24967 RVA: 0x001F2840 File Offset: 0x001F0A40
 	private void OnClickRole()
 	{
 		ActivityNewPlayerSupportActivityV2Controller.ReportEntranceClick(ENewPlayerSupportEntrance.Liveness);
@@ -194,7 +193,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		UiManager.Instance.OpenView(EUiViewName.AdventureGuideView, param, null);
 	}
 
-	// Token: 0x06008DF2 RID: 36338 RVA: 0x001E9C62 File Offset: 0x001E7E62
+	// Token: 0x06006188 RID: 24968 RVA: 0x001F28AE File Offset: 0x001F0AAE
 	private void OnClickAdventureView()
 	{
 		ActivityNewPlayerSupportActivityV2Controller.ReportEntranceClick(ENewPlayerSupportEntrance.GiftPack);
@@ -211,7 +210,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		controller.OpenAdventureV2View();
 	}
 
-	// Token: 0x06008DF3 RID: 36339 RVA: 0x001E9C8B File Offset: 0x001E7E8B
+	// Token: 0x06006189 RID: 24969 RVA: 0x001F28D7 File Offset: 0x001F0AD7
 	private void OnClickShopEntrance()
 	{
 		ActivityNewPlayerSupportActivityV2Controller.ReportEntranceClick(ENewPlayerSupportEntrance.WeekCard);
@@ -229,7 +228,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		instance.OpenPayShopViewWithTabResolver(tabResolver);
 	}
 
-	// Token: 0x06008DF4 RID: 36340 RVA: 0x001E9CCC File Offset: 0x001E7ECC
+	// Token: 0x0600618A RID: 24970 RVA: 0x001F2918 File Offset: 0x001F0B18
 	private void OnClickGachaEntrance()
 	{
 		ActivityNewPlayerSupportActivityV2Controller.ReportEntranceClick(ENewPlayerSupportEntrance.Gacha);
@@ -243,7 +242,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		GachaController.Instance.OpenGachaView(num.GetValueOrDefault());
 	}
 
-	// Token: 0x06008DF5 RID: 36341 RVA: 0x001E9D1C File Offset: 0x001E7F1C
+	// Token: 0x0600618B RID: 24971 RVA: 0x001F2968 File Offset: 0x001F0B68
 	private void OnClickTrial()
 	{
 		ActivityNewPlayerSupportActivityV2Controller controller = this.GetController();
@@ -254,7 +253,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		controller.OpenTrialRoleView(null);
 	}
 
-	// Token: 0x06008DF6 RID: 36342 RVA: 0x001E9D42 File Offset: 0x001E7F42
+	// Token: 0x0600618C RID: 24972 RVA: 0x001F298E File Offset: 0x001F0B8E
 	[NullableContext(2)]
 	private ActivityNewPlayerSupportActivityV2Controller GetController()
 	{
@@ -265,7 +264,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		return ActivityManager.GetActivityController(this.ActivityData.Type) as ActivityNewPlayerSupportActivityV2Controller;
 	}
 
-	// Token: 0x06008DF7 RID: 36343 RVA: 0x001E9D70 File Offset: 0x001E7F70
+	// Token: 0x0600618D RID: 24973 RVA: 0x001F29BC File Offset: 0x001F0BBC
 	private void RefreshTrialRoleDisplay()
 	{
 		ActivityNewPlayerSupportActivityV2Data activityData = this.ActivityData;
@@ -308,7 +307,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		this.RefreshTrialButtonText(flag, roleConfig);
 	}
 
-	// Token: 0x06008DF8 RID: 36344 RVA: 0x001E9ECC File Offset: 0x001E80CC
+	// Token: 0x0600618E RID: 24974 RVA: 0x001F2B18 File Offset: 0x001F0D18
 	private void RefreshTrialButtonText(bool hasRole, RoleInfo? roleConfig)
 	{
 		UUIText text = base.GetText(12);
@@ -330,7 +329,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		LguiUtil.Instance.SetLocalTextNew(text, "NewPlayer_Trial_001", Array.Empty<object>());
 	}
 
-	// Token: 0x06008DF9 RID: 36345 RVA: 0x001E9F4F File Offset: 0x001E814F
+	// Token: 0x0600618F RID: 24975 RVA: 0x001F2B9B File Offset: 0x001F0D9B
 	private void RefreshRoleRelatedPanels(bool hasRole)
 	{
 		UUIItem item = base.GetItem(7);
@@ -351,7 +350,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		item3.SetUIActive(!hasRole);
 	}
 
-	// Token: 0x06008DFA RID: 36346 RVA: 0x001E9F90 File Offset: 0x001E8190
+	// Token: 0x06006190 RID: 24976 RVA: 0x001F2BDC File Offset: 0x001F0DDC
 	private void RefreshBgTexture(bool hasRole, bool isRover, string bgPath)
 	{
 		UUITexture texture = base.GetTexture(9);
@@ -367,7 +366,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008DFB RID: 36347 RVA: 0x001E9FDC File Offset: 0x001E81DC
+	// Token: 0x06006191 RID: 24977 RVA: 0x001F2C28 File Offset: 0x001F0E28
 	private void RefreshRoleTexture(bool hasRole, string rolePath)
 	{
 		UUITexture texture = base.GetTexture(10);
@@ -383,14 +382,14 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008DFC RID: 36348 RVA: 0x001EA01C File Offset: 0x001E821C
+	// Token: 0x06006192 RID: 24978 RVA: 0x001F2C68 File Offset: 0x001F0E68
 	private string GetSilhouetteTexturePathByGender()
 	{
 		string resourceIdOrPath = (PlayerInfoModel.Instance.GetPlayerGender() == EPlayerGender.Male) ? "T_PrivilegeRoleRoverMale" : "T_PrivilegeRoleRoverFemale";
 		return this.ResolveTexturePath(resourceIdOrPath) ?? string.Empty;
 	}
 
-	// Token: 0x06008DFD RID: 36349 RVA: 0x001EA054 File Offset: 0x001E8254
+	// Token: 0x06006193 RID: 24979 RVA: 0x001F2CA0 File Offset: 0x001F0EA0
 	[NullableContext(2)]
 	private string ResolveTexturePath(string resourceIdOrPath)
 	{
@@ -406,7 +405,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		return null;
 	}
 
-	// Token: 0x06008DFE RID: 36350 RVA: 0x001EA088 File Offset: 0x001E8288
+	// Token: 0x06006194 RID: 24980 RVA: 0x001F2CD4 File Offset: 0x001F0ED4
 	private void RefreshEntranceRedDot()
 	{
 		UUIItem item = base.GetItem(13);
@@ -429,7 +428,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		this.SetEntranceButtonRedDotVisible(componentType4, activityData5 != null && activityData5.GetGachaEntranceRedDotState());
 	}
 
-	// Token: 0x06008DFF RID: 36351 RVA: 0x001EA120 File Offset: 0x001E8320
+	// Token: 0x06006195 RID: 24981 RVA: 0x001F2D6C File Offset: 0x001F0F6C
 	private void RefreshGachaEntrance2Visual()
 	{
 		UUIItem uuiitem = this.TryGetNestedUiItem(5, 1);
@@ -444,7 +443,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008E00 RID: 36352 RVA: 0x001EA154 File Offset: 0x001E8354
+	// Token: 0x06006196 RID: 24982 RVA: 0x001F2DA0 File Offset: 0x001F0FA0
 	private void RefreshRoleEntranceCompositeVisual()
 	{
 		bool flag = ActivitySubViewNewPlayerSupportActivityV2.IsExperienceBonusLivenessEntranceUnlocked();
@@ -476,13 +475,13 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		this.ApplyExperienceBonusRoleButtonLockExtension(!flag);
 	}
 
-	// Token: 0x06008E01 RID: 36353 RVA: 0x001EA1DB File Offset: 0x001E83DB
+	// Token: 0x06006197 RID: 24983 RVA: 0x001F2E27 File Offset: 0x001F1027
 	private static bool IsExperienceBonusLivenessEntranceUnlocked()
 	{
 		return FunctionModel.Instance.IsOpen(10023005);
 	}
 
-	// Token: 0x06008E02 RID: 36354 RVA: 0x001EA1EC File Offset: 0x001E83EC
+	// Token: 0x06006198 RID: 24984 RVA: 0x001F2E38 File Offset: 0x001F1038
 	private void ApplyExperienceBonusRoleButtonLockExtension(bool showLockVisual)
 	{
 		UUIButtonComponent button = base.GetButton(2);
@@ -492,26 +491,9 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		}
 		button.SetSelfInteractive(true);
 		button.SetEnable(true);
-		ActivitySubViewNewPlayerSupportActivityV2.InvokeOptionalButtonMethod(button, "SetLivenessLock", showLockVisual);
-		ActivitySubViewNewPlayerSupportActivityV2.InvokeOptionalButtonMethod(button, "RefreshLivenessLock", showLockVisual);
-		ActivitySubViewNewPlayerSupportActivityV2.InvokeOptionalButtonMethod(button, "SetShowLock", showLockVisual);
 	}
 
-	// Token: 0x06008E03 RID: 36355 RVA: 0x001EA238 File Offset: 0x001E8438
-	private static void InvokeOptionalButtonMethod(UUIButtonComponent button, string methodName, bool arg)
-	{
-		MethodInfo method = button.GetType().GetMethod(methodName, BindingFlags.Instance | BindingFlags.Public);
-		ParameterInfo[] array = (method != null) ? method.GetParameters() : null;
-		if (array != null && array.Length == 1 && array[0].ParameterType == typeof(bool))
-		{
-			method.Invoke(button, new object[]
-			{
-				arg
-			});
-		}
-	}
-
-	// Token: 0x06008E04 RID: 36356 RVA: 0x001EA29C File Offset: 0x001E849C
+	// Token: 0x06006199 RID: 24985 RVA: 0x001F2E60 File Offset: 0x001F1060
 	[NullableContext(2)]
 	private ULGUIComponentsRegistry GetNestedRegistryForButton(int buttonType)
 	{
@@ -539,7 +521,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		return ulguicomponentsRegistry;
 	}
 
-	// Token: 0x06008E05 RID: 36357 RVA: 0x001EA348 File Offset: 0x001E8548
+	// Token: 0x0600619A RID: 24986 RVA: 0x001F2F0C File Offset: 0x001F110C
 	[NullableContext(2)]
 	private UUIItem TryGetNestedUiItem(int buttonType, int index)
 	{
@@ -552,7 +534,7 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		return ((aactor != null) ? aactor.GetComponentByClass(UUIItem.StaticClass()) : null) as UUIItem;
 	}
 
-	// Token: 0x06008E06 RID: 36358 RVA: 0x001EA398 File Offset: 0x001E8598
+	// Token: 0x0600619B RID: 24987 RVA: 0x001F2F5C File Offset: 0x001F115C
 	[NullableContext(2)]
 	private UUIText TryGetNestedText(int buttonType, int index)
 	{
@@ -565,31 +547,18 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		return ((aactor != null) ? aactor.GetComponentByClass(UUIText.StaticClass()) : null) as UUIText;
 	}
 
-	// Token: 0x06008E07 RID: 36359 RVA: 0x001EA3E8 File Offset: 0x001E85E8
+	// Token: 0x0600619C RID: 24988 RVA: 0x001F2FAB File Offset: 0x001F11AB
 	private void SetEntranceButtonRedDotVisible(int componentType, bool visible)
 	{
 		UUIItem uuiitem = this.TryGetNestedUiItem(componentType, 4);
-		if (uuiitem != null)
-		{
-			uuiitem.SetUIActive(visible);
-			return;
-		}
-		UUIButtonComponent button = base.GetButton(componentType);
-		MethodInfo methodInfo = (button != null) ? button.GetType().GetMethod("SetRedDotVisible", new Type[]
-		{
-			typeof(bool)
-		}) : null;
-		if (methodInfo == null)
+		if (uuiitem == null)
 		{
 			return;
 		}
-		methodInfo.Invoke(button, new object[]
-		{
-			visible
-		});
+		uuiitem.SetUIActive(visible);
 	}
 
-	// Token: 0x06008E08 RID: 36360 RVA: 0x001EA458 File Offset: 0x001E8658
+	// Token: 0x0600619D RID: 24989 RVA: 0x001F2FC0 File Offset: 0x001F11C0
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -614,88 +583,88 @@ public class ActivitySubViewNewPlayerSupportActivityV2 : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x04003EEF RID: 16111
+	// Token: 0x04003F87 RID: 16263
 	private const string NewPlayerSupportV2MaleSilhouetteResourceId = "T_PrivilegeRoleRoverMale";
 
-	// Token: 0x04003EF0 RID: 16112
+	// Token: 0x04003F88 RID: 16264
 	private const string NewPlayerSupportV2FemaleSilhouetteResourceId = "T_PrivilegeRoleRoverFemale";
 
-	// Token: 0x04003EF1 RID: 16113
+	// Token: 0x04003F89 RID: 16265
 	[Nullable(2)]
 	private ActivityNewPlayerSupportActivityV2Data ActivityData;
 
-	// Token: 0x04003EF2 RID: 16114
+	// Token: 0x04003F8A RID: 16266
 	private string RemainTimeText = string.Empty;
 
-	// Token: 0x02007A26 RID: 31270
+	// Token: 0x02006BAC RID: 27564
 	[NullableContext(0)]
 	private class EComponentType
 	{
-		// Token: 0x04028353 RID: 164691
+		// Token: 0x04023670 RID: 145008
 		public const int TxtTitle = 0;
 
-		// Token: 0x04028354 RID: 164692
+		// Token: 0x04023671 RID: 145009
 		public const int TxtRestTime = 1;
 
-		// Token: 0x04028355 RID: 164693
+		// Token: 0x04023672 RID: 145010
 		public const int BtnRole = 2;
 
-		// Token: 0x04028356 RID: 164694
+		// Token: 0x04023673 RID: 145011
 		public const int BtnGift = 3;
 
-		// Token: 0x04028357 RID: 164695
+		// Token: 0x04023674 RID: 145012
 		public const int BtnLuckDraw = 4;
 
-		// Token: 0x04028358 RID: 164696
+		// Token: 0x04023675 RID: 145013
 		public const int BtnEntrance2 = 5;
 
-		// Token: 0x04028359 RID: 164697
+		// Token: 0x04023676 RID: 145014
 		public const int BtnTrial = 6;
 
-		// Token: 0x0402835A RID: 164698
+		// Token: 0x04023677 RID: 145015
 		public const int TrialRoleStarLayout = 7;
 
-		// Token: 0x0402835B RID: 164699
+		// Token: 0x04023678 RID: 145016
 		public const int Star = 8;
 
-		// Token: 0x0402835C RID: 164700
+		// Token: 0x04023679 RID: 145017
 		public const int TexBg = 9;
 
-		// Token: 0x0402835D RID: 164701
+		// Token: 0x0402367A RID: 145018
 		public const int TexRole = 10;
 
-		// Token: 0x0402835E RID: 164702
+		// Token: 0x0402367B RID: 145019
 		public const int RoverDecoration = 11;
 
-		// Token: 0x0402835F RID: 164703
+		// Token: 0x0402367C RID: 145020
 		public const int TxtBtnTrialName = 12;
 
-		// Token: 0x04028360 RID: 164704
+		// Token: 0x0402367D RID: 145021
 		public const int TrialBtnRedDot = 13;
 	}
 
-	// Token: 0x02007A27 RID: 31271
+	// Token: 0x02006BAD RID: 27565
 	[NullableContext(0)]
 	private static class ECompositeEntranceNested
 	{
-		// Token: 0x04028361 RID: 164705
+		// Token: 0x0402367E RID: 145022
 		public const int PnlIconNor = 1;
 
-		// Token: 0x04028362 RID: 164706
+		// Token: 0x0402367F RID: 145023
 		public const int IconLock = 2;
 
-		// Token: 0x04028363 RID: 164707
+		// Token: 0x04023680 RID: 145024
 		public const int TxtDescription = 3;
 
-		// Token: 0x04028364 RID: 164708
+		// Token: 0x04023681 RID: 145025
 		public const int RedDot = 4;
 	}
 
-	// Token: 0x02007A28 RID: 31272
+	// Token: 0x02006BAE RID: 27566
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04028365 RID: 164709
+		// Token: 0x04023682 RID: 145026
 		[Nullable(new byte[]
 		{
 			0,

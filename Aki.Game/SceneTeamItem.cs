@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002953 RID: 10579
+// Token: 0x02001ECE RID: 7886
 [NullableContext(2)]
 [Nullable(0)]
 public class SceneTeamItem
 {
-	// Token: 0x06015DAB RID: 89515 RVA: 0x00583CBC File Offset: 0x00581EBC
+	// Token: 0x060137AF RID: 79791 RVA: 0x005AECBC File Offset: 0x005ACEBC
 	[NullableContext(1)]
 	public static SceneTeamItem Create(ETeamGroupType groupType, int playerId, int configId, long creatureDataId)
 	{
@@ -36,38 +36,38 @@ public class SceneTeamItem
 		return sceneTeamItem;
 	}
 
-	// Token: 0x06015DAC RID: 89516 RVA: 0x00583D38 File Offset: 0x00581F38
+	// Token: 0x060137B0 RID: 79792 RVA: 0x005AED38 File Offset: 0x005ACF38
 	public void Reset()
 	{
 		this.CreatureDataId = 0L;
 		this.EntityHandleInternal = null;
 	}
 
-	// Token: 0x06015DAD RID: 89517 RVA: 0x00583D49 File Offset: 0x00581F49
+	// Token: 0x060137B1 RID: 79793 RVA: 0x005AED49 File Offset: 0x005ACF49
 	public ETeamGroupType GetGroupType()
 	{
 		return this.GroupType;
 	}
 
-	// Token: 0x06015DAE RID: 89518 RVA: 0x00583D51 File Offset: 0x00581F51
+	// Token: 0x060137B2 RID: 79794 RVA: 0x005AED51 File Offset: 0x005ACF51
 	public int GetPlayerId()
 	{
 		return this.PlayerId;
 	}
 
-	// Token: 0x06015DAF RID: 89519 RVA: 0x00583D59 File Offset: 0x00581F59
+	// Token: 0x060137B3 RID: 79795 RVA: 0x005AED59 File Offset: 0x005ACF59
 	public bool IsMyRole()
 	{
 		return this.IsMyRoleInternal;
 	}
 
-	// Token: 0x06015DB0 RID: 89520 RVA: 0x00583D61 File Offset: 0x00581F61
+	// Token: 0x060137B4 RID: 79796 RVA: 0x005AED61 File Offset: 0x005ACF61
 	public bool IsAutoRole()
 	{
 		return this.IsAutoRoleInternal;
 	}
 
-	// Token: 0x06015DB1 RID: 89521 RVA: 0x00583D6C File Offset: 0x00581F6C
+	// Token: 0x060137B5 RID: 79797 RVA: 0x005AED6C File Offset: 0x005ACF6C
 	public bool IsControl()
 	{
 		if (!this.IsMyRoleInternal)
@@ -84,8 +84,8 @@ public class SceneTeamItem
 		return false;
 	}
 
-	// Token: 0x17001D56 RID: 7510
-	// (get) Token: 0x06015DB2 RID: 89522 RVA: 0x00583DB5 File Offset: 0x00581FB5
+	// Token: 0x17001DAF RID: 7599
+	// (get) Token: 0x060137B6 RID: 79798 RVA: 0x005AEDB5 File Offset: 0x005ACFB5
 	public int GetConfigId
 	{
 		get
@@ -94,20 +94,20 @@ public class SceneTeamItem
 		}
 	}
 
-	// Token: 0x06015DB3 RID: 89523 RVA: 0x00583DBD File Offset: 0x00581FBD
+	// Token: 0x060137B7 RID: 79799 RVA: 0x005AEDBD File Offset: 0x005ACFBD
 	public long GetCreatureDataId()
 	{
 		return this.CreatureDataId;
 	}
 
-	// Token: 0x06015DB4 RID: 89524 RVA: 0x00583DC5 File Offset: 0x00581FC5
+	// Token: 0x060137B8 RID: 79800 RVA: 0x005AEDC5 File Offset: 0x005ACFC5
 	public void UpdateEntityHandle()
 	{
 		this.EntityHandleInternal = CreatureModel.Instance.GetEntity(this.CreatureDataId);
 	}
 
-	// Token: 0x17001D57 RID: 7511
-	// (get) Token: 0x06015DB5 RID: 89525 RVA: 0x00583DE0 File Offset: 0x00581FE0
+	// Token: 0x17001DB0 RID: 7600
+	// (get) Token: 0x060137B9 RID: 79801 RVA: 0x005AEDE0 File Offset: 0x005ACFE0
 	public EntityHandle EntityHandle
 	{
 		get
@@ -129,7 +129,7 @@ public class SceneTeamItem
 		}
 	}
 
-	// Token: 0x06015DB6 RID: 89526 RVA: 0x00583E3C File Offset: 0x0058203C
+	// Token: 0x060137BA RID: 79802 RVA: 0x005AEE3C File Offset: 0x005AD03C
 	public bool IsDead()
 	{
 		EntityHandle entityHandle = this.EntityHandle;
@@ -142,7 +142,7 @@ public class SceneTeamItem
 		return component == null || component.IsDead();
 	}
 
-	// Token: 0x06015DB7 RID: 89527 RVA: 0x00583E74 File Offset: 0x00582074
+	// Token: 0x060137BB RID: 79803 RVA: 0x005AEE74 File Offset: 0x005AD074
 	public EGoBattleResultType CanGoBattle()
 	{
 		EntityHandle entityHandle = this.EntityHandle;
@@ -169,7 +169,7 @@ public class SceneTeamItem
 		return EGoBattleResultType.Success;
 	}
 
-	// Token: 0x06015DB8 RID: 89528 RVA: 0x00583EFC File Offset: 0x005820FC
+	// Token: 0x060137BC RID: 79804 RVA: 0x005AEEFC File Offset: 0x005AD0FC
 	public bool CanControl(bool skipCheckDead = false)
 	{
 		EntityHandle entityHandle = this.EntityHandle;
@@ -189,33 +189,33 @@ public class SceneTeamItem
 		return !this.IsAutoRoleInternal;
 	}
 
-	// Token: 0x06015DB9 RID: 89529 RVA: 0x00583F43 File Offset: 0x00582143
+	// Token: 0x060137BD RID: 79805 RVA: 0x005AEF43 File Offset: 0x005AD143
 	public void SetRemoteIsControl(bool isControl)
 	{
 		this.RemoteIsControl = isControl;
 	}
 
-	// Token: 0x0400A2BE RID: 41662
+	// Token: 0x0400A6A8 RID: 42664
 	private bool IsMyRoleInternal;
 
-	// Token: 0x0400A2BF RID: 41663
+	// Token: 0x0400A6A9 RID: 42665
 	private bool IsAutoRoleInternal;
 
-	// Token: 0x0400A2C0 RID: 41664
+	// Token: 0x0400A6AA RID: 42666
 	private ETeamGroupType GroupType;
 
-	// Token: 0x0400A2C1 RID: 41665
+	// Token: 0x0400A6AB RID: 42667
 	private int PlayerId;
 
-	// Token: 0x0400A2C2 RID: 41666
+	// Token: 0x0400A6AC RID: 42668
 	private int ConfigId;
 
-	// Token: 0x0400A2C3 RID: 41667
+	// Token: 0x0400A6AD RID: 42669
 	private long CreatureDataId;
 
-	// Token: 0x0400A2C4 RID: 41668
+	// Token: 0x0400A6AE RID: 42670
 	private EntityHandle EntityHandleInternal;
 
-	// Token: 0x0400A2C5 RID: 41669
+	// Token: 0x0400A6AF RID: 42671
 	private bool RemoteIsControl;
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200622E RID: 25134
+	// Token: 0x0200689F RID: 26783
 	public class IBubbleDataT
 	{
-		// Token: 0x1700BB47 RID: 47943
-		// (get) Token: 0x0602B534 RID: 177460 RVA: 0x005F73EB File Offset: 0x005F55EB
-		// (set) Token: 0x0602B535 RID: 177461 RVA: 0x005F73F3 File Offset: 0x005F55F3
+		// Token: 0x1700C4CF RID: 50383
+		// (get) Token: 0x0602DC95 RID: 187541 RVA: 0x006421F3 File Offset: 0x006403F3
+		// (set) Token: 0x0602DC96 RID: 187542 RVA: 0x006421FB File Offset: 0x006403FB
 		public IBubbleIndexT FlowIndex { get; set; }
 
-		// Token: 0x1700BB48 RID: 47944
-		// (get) Token: 0x0602B536 RID: 177462 RVA: 0x005F73FC File Offset: 0x005F55FC
-		// (set) Token: 0x0602B537 RID: 177463 RVA: 0x005F7404 File Offset: 0x005F5604
+		// Token: 0x1700C4D0 RID: 50384
+		// (get) Token: 0x0602DC97 RID: 187543 RVA: 0x00642204 File Offset: 0x00640404
+		// (set) Token: 0x0602DC98 RID: 187544 RVA: 0x0064220C File Offset: 0x0064040C
 		public int WaitTime { get; set; }
 
-		// Token: 0x0602B538 RID: 177464 RVA: 0x005F740D File Offset: 0x005F560D
+		// Token: 0x0602DC99 RID: 187545 RVA: 0x00642215 File Offset: 0x00640415
 		public IBubbleDataT()
 		{
 			this.FlowIndex = null;

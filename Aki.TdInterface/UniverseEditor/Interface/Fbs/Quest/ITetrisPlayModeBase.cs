@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041BD RID: 16829
+	// Token: 0x02004616 RID: 17942
 	public struct ITetrisPlayModeBase : IFlatbufferObject
 	{
-		// Token: 0x17007755 RID: 30549
-		// (get) Token: 0x06018C86 RID: 101510 RVA: 0x00391517 File Offset: 0x0038F717
+		// Token: 0x17007D81 RID: 32129
+		// (get) Token: 0x0601A3DC RID: 107484 RVA: 0x003BC96B File Offset: 0x003BAB6B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018C87 RID: 101511 RVA: 0x00391524 File Offset: 0x0038F724
+		// Token: 0x0601A3DD RID: 107485 RVA: 0x003BC978 File Offset: 0x003BAB78
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018C88 RID: 101512 RVA: 0x0039152C File Offset: 0x0038F72C
+		// Token: 0x0601A3DE RID: 107486 RVA: 0x003BC980 File Offset: 0x003BAB80
 		public static ITetrisPlayModeBase GetRootAsITetrisPlayModeBase(ByteBuffer _bb)
 		{
 			return ITetrisPlayModeBase.GetRootAsITetrisPlayModeBase(_bb, default(ITetrisPlayModeBase));
 		}
 
-		// Token: 0x06018C89 RID: 101513 RVA: 0x00391548 File Offset: 0x0038F748
+		// Token: 0x0601A3DF RID: 107487 RVA: 0x003BC99C File Offset: 0x003BAB9C
 		public static ITetrisPlayModeBase GetRootAsITetrisPlayModeBase(ByteBuffer _bb, ITetrisPlayModeBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018C8A RID: 101514 RVA: 0x00391565 File Offset: 0x0038F765
+		// Token: 0x0601A3E0 RID: 107488 RVA: 0x003BC9B9 File Offset: 0x003BABB9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018C8B RID: 101515 RVA: 0x00391574 File Offset: 0x0038F774
+		// Token: 0x0601A3E1 RID: 107489 RVA: 0x003BC9C8 File Offset: 0x003BABC8
 		public ITetrisPlayModeBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007756 RID: 30550
-		// (get) Token: 0x06018C8C RID: 101516 RVA: 0x00391584 File Offset: 0x0038F784
+		// Token: 0x17007D82 RID: 32130
+		// (get) Token: 0x0601A3E2 RID: 107490 RVA: 0x003BC9D8 File Offset: 0x003BABD8
 		public ETetrisPlayMode Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018C8D RID: 101517 RVA: 0x003915C0 File Offset: 0x0038F7C0
+		// Token: 0x0601A3E3 RID: 107491 RVA: 0x003BCA14 File Offset: 0x003BAC14
 		public static Offset<ITetrisPlayModeBase> CreateITetrisPlayModeBase(FlatBufferBuilder builder, ETetrisPlayMode Type = ETetrisPlayMode.Normal)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITetrisPlayModeBase.EndITetrisPlayModeBase(builder);
 		}
 
-		// Token: 0x06018C8E RID: 101518 RVA: 0x003915D6 File Offset: 0x0038F7D6
+		// Token: 0x0601A3E4 RID: 107492 RVA: 0x003BCA2A File Offset: 0x003BAC2A
 		public static void StartITetrisPlayModeBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06018C8F RID: 101519 RVA: 0x003915DF File Offset: 0x0038F7DF
+		// Token: 0x0601A3E5 RID: 107493 RVA: 0x003BCA33 File Offset: 0x003BAC33
 		public static void AddType(FlatBufferBuilder builder, ETetrisPlayMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06018C90 RID: 101520 RVA: 0x003915EA File Offset: 0x0038F7EA
+		// Token: 0x0601A3E6 RID: 107494 RVA: 0x003BCA3E File Offset: 0x003BAC3E
 		public static Offset<ITetrisPlayModeBase> EndITetrisPlayModeBase(FlatBufferBuilder builder)
 		{
 			return new Offset<ITetrisPlayModeBase>(builder.EndTable());
 		}
 
-		// Token: 0x06018C91 RID: 101521 RVA: 0x003915F8 File Offset: 0x0038F7F8
+		// Token: 0x0601A3E7 RID: 107495 RVA: 0x003BCA4C File Offset: 0x003BAC4C
 		public ITetrisPlayModeBaseT UnPack()
 		{
 			ITetrisPlayModeBaseT tetrisPlayModeBaseT = new ITetrisPlayModeBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return tetrisPlayModeBaseT;
 		}
 
-		// Token: 0x06018C92 RID: 101522 RVA: 0x00391613 File Offset: 0x0038F813
+		// Token: 0x0601A3E8 RID: 107496 RVA: 0x003BCA67 File Offset: 0x003BAC67
 		public void UnPackTo(ITetrisPlayModeBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06018C93 RID: 101523 RVA: 0x00391624 File Offset: 0x0038F824
+		// Token: 0x0601A3E9 RID: 107497 RVA: 0x003BCA78 File Offset: 0x003BAC78
 		public static Offset<ITetrisPlayModeBase> Pack(FlatBufferBuilder builder, ITetrisPlayModeBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITetrisPlayModeBase.CreateITetrisPlayModeBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400BE01 RID: 48641
+		// Token: 0x0400C80B RID: 51211
 		private Table __p;
 	}
 }

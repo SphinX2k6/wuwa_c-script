@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02001135 RID: 4405
+// Token: 0x020005E9 RID: 1513
 public class BabelTowerItemInfoViewInfo : IBabelTowerItemInfoViewInfo
 {
-	// Token: 0x170009E6 RID: 2534
-	// (get) Token: 0x060073A1 RID: 29601 RVA: 0x0017BAAC File Offset: 0x00179CAC
-	// (set) Token: 0x060073A2 RID: 29602 RVA: 0x0017BAB4 File Offset: 0x00179CB4
+	// Token: 0x17000A06 RID: 2566
+	// (get) Token: 0x06004738 RID: 18232 RVA: 0x001845FA File Offset: 0x001827FA
+	// (set) Token: 0x06004739 RID: 18233 RVA: 0x00184602 File Offset: 0x00182802
 	public bool IsDeTerm { get; set; }
 
-	// Token: 0x170009E7 RID: 2535
-	// (get) Token: 0x060073A3 RID: 29603 RVA: 0x0017BABD File Offset: 0x00179CBD
-	// (set) Token: 0x060073A4 RID: 29604 RVA: 0x0017BAC5 File Offset: 0x00179CC5
+	// Token: 0x17000A07 RID: 2567
+	// (get) Token: 0x0600473A RID: 18234 RVA: 0x0018460B File Offset: 0x0018280B
+	// (set) Token: 0x0600473B RID: 18235 RVA: 0x00184613 File Offset: 0x00182813
 	public int ConfigId { get; set; }
 
-	// Token: 0x170009E8 RID: 2536
-	// (get) Token: 0x060073A5 RID: 29605 RVA: 0x0017BACE File Offset: 0x00179CCE
-	// (set) Token: 0x060073A6 RID: 29606 RVA: 0x0017BAD6 File Offset: 0x00179CD6
+	// Token: 0x17000A08 RID: 2568
+	// (get) Token: 0x0600473C RID: 18236 RVA: 0x0018461C File Offset: 0x0018281C
+	// (set) Token: 0x0600473D RID: 18237 RVA: 0x00184624 File Offset: 0x00182824
 	public bool ShowWays { get; set; }
 }

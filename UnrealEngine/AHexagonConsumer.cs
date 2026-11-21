@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A9F RID: 6815
+	// Token: 0x020004AF RID: 1199
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.HexagonConsumer")]
 	[UnrealStructLayout(1696, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1696)]
 	public class AHexagonConsumer : AFSRayCastingActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601937E RID: 103294 RVA: 0x00254DDD File Offset: 0x00252FDD
+		// Token: 0x06006EC8 RID: 28360 RVA: 0x000A3FF4 File Offset: 0x000A21F4
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AHexagonConsumer._ClassPtr;
 		}
 
-		// Token: 0x0601937F RID: 103295 RVA: 0x00254DEC File Offset: 0x00252FEC
+		// Token: 0x06006EC9 RID: 28361 RVA: 0x000A4000 File Offset: 0x000A2200
 		public AHexagonConsumer() : this(BuiltinUtils.AllocNativeUObject(AHexagonConsumer.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06019380 RID: 103296 RVA: 0x00254E14 File Offset: 0x00253014
+		// Token: 0x06006ECA RID: 28362 RVA: 0x000A4028 File Offset: 0x000A2228
 		public AHexagonConsumer(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AHexagonConsumer.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700647B RID: 25723
-		// (get) Token: 0x06019381 RID: 103297 RVA: 0x00254E47 File Offset: 0x00253047
-		// (set) Token: 0x06019382 RID: 103298 RVA: 0x00254E5B File Offset: 0x0025305B
+		// Token: 0x170015A0 RID: 5536
+		// (get) Token: 0x06006ECB RID: 28363 RVA: 0x000A405B File Offset: 0x000A225B
+		// (set) Token: 0x06006ECC RID: 28364 RVA: 0x000A406F File Offset: 0x000A226F
 		[Nullable(2)]
 		public unsafe USceneComponent Root
 		{
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700647C RID: 25724
-		// (get) Token: 0x06019383 RID: 103299 RVA: 0x00254E70 File Offset: 0x00253070
-		// (set) Token: 0x06019384 RID: 103300 RVA: 0x00254E84 File Offset: 0x00253084
+		// Token: 0x170015A1 RID: 5537
+		// (get) Token: 0x06006ECD RID: 28365 RVA: 0x000A4084 File Offset: 0x000A2284
+		// (set) Token: 0x06006ECE RID: 28366 RVA: 0x000A4098 File Offset: 0x000A2298
 		[Nullable(2)]
 		public unsafe UTextureRenderTarget2D RenderTarget
 		{
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700647D RID: 25725
-		// (get) Token: 0x06019385 RID: 103301 RVA: 0x00254E99 File Offset: 0x00253099
-		// (set) Token: 0x06019386 RID: 103302 RVA: 0x00254EAD File Offset: 0x002530AD
+		// Token: 0x170015A2 RID: 5538
+		// (get) Token: 0x06006ECF RID: 28367 RVA: 0x000A40AD File Offset: 0x000A22AD
+		// (set) Token: 0x06006ED0 RID: 28368 RVA: 0x000A40C1 File Offset: 0x000A22C1
 		public unsafe FVector2D Center
 		{
 			get
@@ -80,9 +80,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700647E RID: 25726
-		// (get) Token: 0x06019387 RID: 103303 RVA: 0x00254EC2 File Offset: 0x002530C2
-		// (set) Token: 0x06019388 RID: 103304 RVA: 0x00254ED6 File Offset: 0x002530D6
+		// Token: 0x170015A3 RID: 5539
+		// (get) Token: 0x06006ED1 RID: 28369 RVA: 0x000A40D6 File Offset: 0x000A22D6
+		// (set) Token: 0x06006ED2 RID: 28370 RVA: 0x000A40EA File Offset: 0x000A22EA
 		public unsafe FLinearColor Color
 		{
 			get
@@ -95,9 +95,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700647F RID: 25727
-		// (get) Token: 0x06019389 RID: 103305 RVA: 0x00254EEB File Offset: 0x002530EB
-		// (set) Token: 0x0601938A RID: 103306 RVA: 0x00254EFF File Offset: 0x002530FF
+		// Token: 0x170015A4 RID: 5540
+		// (get) Token: 0x06006ED3 RID: 28371 RVA: 0x000A40FF File Offset: 0x000A22FF
+		// (set) Token: 0x06006ED4 RID: 28372 RVA: 0x000A4113 File Offset: 0x000A2313
 		public unsafe FVector ActorCenterWorld
 		{
 			get
@@ -110,9 +110,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006480 RID: 25728
-		// (get) Token: 0x0601938B RID: 103307 RVA: 0x00254F14 File Offset: 0x00253114
-		// (set) Token: 0x0601938C RID: 103308 RVA: 0x00254F28 File Offset: 0x00253128
+		// Token: 0x170015A5 RID: 5541
+		// (get) Token: 0x06006ED5 RID: 28373 RVA: 0x000A4128 File Offset: 0x000A2328
+		// (set) Token: 0x06006ED6 RID: 28374 RVA: 0x000A413C File Offset: 0x000A233C
 		public unsafe FVector NewPointWorld
 		{
 			get
@@ -125,9 +125,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006481 RID: 25729
-		// (get) Token: 0x0601938D RID: 103309 RVA: 0x00254F3D File Offset: 0x0025313D
-		// (set) Token: 0x0601938E RID: 103310 RVA: 0x00254F4D File Offset: 0x0025314D
+		// Token: 0x170015A6 RID: 5542
+		// (get) Token: 0x06006ED7 RID: 28375 RVA: 0x000A4151 File Offset: 0x000A2351
+		// (set) Token: 0x06006ED8 RID: 28376 RVA: 0x000A4161 File Offset: 0x000A2361
 		public unsafe int RayCount
 		{
 			get
@@ -140,9 +140,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006482 RID: 25730
-		// (get) Token: 0x0601938F RID: 103311 RVA: 0x00254F60 File Offset: 0x00253160
-		// (set) Token: 0x06019390 RID: 103312 RVA: 0x00254F99 File Offset: 0x00253199
+		// Token: 0x170015A7 RID: 5543
+		// (get) Token: 0x06006ED9 RID: 28377 RVA: 0x000A4174 File Offset: 0x000A2374
+		// (set) Token: 0x06006EDA RID: 28378 RVA: 0x000A41AD File Offset: 0x000A23AD
 		public TArray<float> RayLengths
 		{
 			get
@@ -161,9 +161,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006483 RID: 25731
-		// (get) Token: 0x06019391 RID: 103313 RVA: 0x00254FA7 File Offset: 0x002531A7
-		// (set) Token: 0x06019392 RID: 103314 RVA: 0x00254FB7 File Offset: 0x002531B7
+		// Token: 0x170015A8 RID: 5544
+		// (get) Token: 0x06006EDB RID: 28379 RVA: 0x000A41BB File Offset: 0x000A23BB
+		// (set) Token: 0x06006EDC RID: 28380 RVA: 0x000A41CB File Offset: 0x000A23CB
 		public unsafe float MaxDis
 		{
 			get
@@ -176,9 +176,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006484 RID: 25732
-		// (get) Token: 0x06019393 RID: 103315 RVA: 0x00254FC8 File Offset: 0x002531C8
-		// (set) Token: 0x06019394 RID: 103316 RVA: 0x00255001 File Offset: 0x00253201
+		// Token: 0x170015A9 RID: 5545
+		// (get) Token: 0x06006EDD RID: 28381 RVA: 0x000A41DC File Offset: 0x000A23DC
+		// (set) Token: 0x06006EDE RID: 28382 RVA: 0x000A4215 File Offset: 0x000A2415
 		public TArray<FVector> Dirs
 		{
 			get
@@ -197,9 +197,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006485 RID: 25733
-		// (get) Token: 0x06019395 RID: 103317 RVA: 0x0025500F File Offset: 0x0025320F
-		// (set) Token: 0x06019396 RID: 103318 RVA: 0x0025501F File Offset: 0x0025321F
+		// Token: 0x170015AA RID: 5546
+		// (get) Token: 0x06006EDF RID: 28383 RVA: 0x000A4223 File Offset: 0x000A2423
+		// (set) Token: 0x06006EE0 RID: 28384 RVA: 0x000A4233 File Offset: 0x000A2433
 		public unsafe int renderOrder
 		{
 			get
@@ -212,9 +212,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006486 RID: 25734
-		// (get) Token: 0x06019397 RID: 103319 RVA: 0x00255030 File Offset: 0x00253230
-		// (set) Token: 0x06019398 RID: 103320 RVA: 0x00255040 File Offset: 0x00253240
+		// Token: 0x170015AB RID: 5547
+		// (get) Token: 0x06006EE1 RID: 28385 RVA: 0x000A4244 File Offset: 0x000A2444
+		// (set) Token: 0x06006EE2 RID: 28386 RVA: 0x000A4254 File Offset: 0x000A2454
 		public unsafe bool bUseDistanceBasedRenderOrder
 		{
 			get
@@ -227,9 +227,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006487 RID: 25735
-		// (get) Token: 0x06019399 RID: 103321 RVA: 0x00255051 File Offset: 0x00253251
-		// (set) Token: 0x0601939A RID: 103322 RVA: 0x00255065 File Offset: 0x00253265
+		// Token: 0x170015AC RID: 5548
+		// (get) Token: 0x06006EE3 RID: 28387 RVA: 0x000A4265 File Offset: 0x000A2465
+		// (set) Token: 0x06006EE4 RID: 28388 RVA: 0x000A4279 File Offset: 0x000A2479
 		public unsafe FLinearColor MaxColor
 		{
 			get
@@ -242,9 +242,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006488 RID: 25736
-		// (get) Token: 0x0601939B RID: 103323 RVA: 0x0025507A File Offset: 0x0025327A
-		// (set) Token: 0x0601939C RID: 103324 RVA: 0x0025508A File Offset: 0x0025328A
+		// Token: 0x170015AD RID: 5549
+		// (get) Token: 0x06006EE5 RID: 28389 RVA: 0x000A428E File Offset: 0x000A248E
+		// (set) Token: 0x06006EE6 RID: 28390 RVA: 0x000A429E File Offset: 0x000A249E
 		public unsafe float FadeRate
 		{
 			get
@@ -257,85 +257,84 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601939D RID: 103325 RVA: 0x0025509B File Offset: 0x0025329B
+		// Token: 0x06006EE7 RID: 28391 RVA: 0x000A42AF File Offset: 0x000A24AF
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void afterBeginPlay()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, AHexagonConsumer.__afterBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, AHexagonConsumer.__afterBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601939E RID: 103326 RVA: 0x002550B0 File Offset: 0x002532B0
+		// Token: 0x06006EE8 RID: 28392 RVA: 0x000A42C3 File Offset: 0x000A24C3
 		static AHexagonConsumer()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.HexagonConsumer");
 		}
 
-		// Token: 0x0601939F RID: 103327 RVA: 0x002550BE File Offset: 0x002532BE
+		// Token: 0x06006EE9 RID: 28393 RVA: 0x000A42D1 File Offset: 0x000A24D1
 		protected AHexagonConsumer(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400DC1A RID: 56346
+		// Token: 0x04002FED RID: 12269
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.HexagonConsumer";
 
-		// Token: 0x0400DC1B RID: 56347
+		// Token: 0x04002FEE RID: 12270
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400DC1C RID: 56348
+		// Token: 0x04002FEF RID: 12271
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400DC1D RID: 56349
+		// Token: 0x04002FF0 RID: 12272
 		internal static int __PropertyOffset_Root;
 
-		// Token: 0x0400DC1E RID: 56350
+		// Token: 0x04002FF1 RID: 12273
 		internal static int __PropertyOffset_RenderTarget;
 
-		// Token: 0x0400DC1F RID: 56351
+		// Token: 0x04002FF2 RID: 12274
 		internal static int __PropertyOffset_Center;
 
-		// Token: 0x0400DC20 RID: 56352
+		// Token: 0x04002FF3 RID: 12275
 		internal static int __PropertyOffset_Color;
 
-		// Token: 0x0400DC21 RID: 56353
+		// Token: 0x04002FF4 RID: 12276
 		internal static int __PropertyOffset_ActorCenterWorld;
 
-		// Token: 0x0400DC22 RID: 56354
+		// Token: 0x04002FF5 RID: 12277
 		internal static int __PropertyOffset_NewPointWorld;
 
-		// Token: 0x0400DC23 RID: 56355
+		// Token: 0x04002FF6 RID: 12278
 		internal static int __PropertyOffset_RayCount;
 
-		// Token: 0x0400DC24 RID: 56356
+		// Token: 0x04002FF7 RID: 12279
 		internal static int __PropertyOffset_RayLengths;
 
-		// Token: 0x0400DC25 RID: 56357
+		// Token: 0x04002FF8 RID: 12280
 		[Nullable(2)]
 		private TArray<float> _RayLengths;
 
-		// Token: 0x0400DC26 RID: 56358
+		// Token: 0x04002FF9 RID: 12281
 		internal static int __PropertyOffset_MaxDis;
 
-		// Token: 0x0400DC27 RID: 56359
+		// Token: 0x04002FFA RID: 12282
 		internal static int __PropertyOffset_Dirs;
 
-		// Token: 0x0400DC28 RID: 56360
+		// Token: 0x04002FFB RID: 12283
 		[Nullable(2)]
 		private TArray<FVector> _Dirs;
 
-		// Token: 0x0400DC29 RID: 56361
+		// Token: 0x04002FFC RID: 12284
 		internal static int __PropertyOffset_renderOrder;
 
-		// Token: 0x0400DC2A RID: 56362
+		// Token: 0x04002FFD RID: 12285
 		internal static int __PropertyOffset_bUseDistanceBasedRenderOrder;
 
-		// Token: 0x0400DC2B RID: 56363
+		// Token: 0x04002FFE RID: 12286
 		internal static int __PropertyOffset_MaxColor;
 
-		// Token: 0x0400DC2C RID: 56364
+		// Token: 0x04002FFF RID: 12287
 		internal static int __PropertyOffset_FadeRate;
 
-		// Token: 0x0400DC2D RID: 56365
+		// Token: 0x04003000 RID: 12288
 		private static IntPtr __afterBeginPlay_NativeFunctionPtr;
 	}
 }

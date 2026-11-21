@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.HotPatchKuroSdk
 {
-	// Token: 0x020001DE RID: 478
+	// Token: 0x020001E3 RID: 483
 	public class LauncherSdkCloud : LauncherSdkBase
 	{
-		// Token: 0x06000CC0 RID: 3264 RVA: 0x0004DB70 File Offset: 0x0004BD70
+		// Token: 0x06000D00 RID: 3328 RVA: 0x000505D4 File Offset: 0x0004E7D4
 		[NullableContext(1)]
 		public override void OpenUrl(string title, string url, bool isLandscape, bool transparent, bool webAccelerated, string identifier = "Default")
 		{

@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200773D RID: 30525
+	// Token: 0x02007F66 RID: 32614
 	public enum TNpcLookAtType : byte
 	{
-		// Token: 0x0401287A RID: 75898
+		// Token: 0x0401390F RID: 80143
 		NONE,
-		// Token: 0x0401287B RID: 75899
+		// Token: 0x04013910 RID: 80144
 		INpcLookAtEntity,
-		// Token: 0x0401287C RID: 75900
+		// Token: 0x04013911 RID: 80145
 		INpcLookAtPlayer,
-		// Token: 0x0401287D RID: 75901
+		// Token: 0x04013912 RID: 80146
 		INpcLookAtPosition
 	}
 }

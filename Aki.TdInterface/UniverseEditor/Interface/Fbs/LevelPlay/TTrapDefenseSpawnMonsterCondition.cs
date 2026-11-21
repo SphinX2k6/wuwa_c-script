@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200461D RID: 17949
+	// Token: 0x02004A85 RID: 19077
 	public enum TTrapDefenseSpawnMonsterCondition : byte
 	{
-		// Token: 0x0400C746 RID: 51014
+		// Token: 0x0400D175 RID: 53621
 		NONE,
-		// Token: 0x0400C747 RID: 51015
+		// Token: 0x0400D176 RID: 53622
 		ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion,
-		// Token: 0x0400C748 RID: 51016
+		// Token: 0x0400D177 RID: 53623
 		ITrapDefenseSpawnMonsterConditionCompleted,
-		// Token: 0x0400C749 RID: 51017
+		// Token: 0x0400D178 RID: 53624
 		ITrapDefenseSpawnMonsterConditionOpen
 	}
 }

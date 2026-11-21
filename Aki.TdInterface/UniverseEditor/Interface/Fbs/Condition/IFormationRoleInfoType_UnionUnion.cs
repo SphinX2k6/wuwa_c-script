@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C2C RID: 19500
+	// Token: 0x0200511F RID: 20767
 	public class IFormationRoleInfoType_UnionUnion
 	{
-		// Token: 0x17008DA8 RID: 36264
-		// (get) Token: 0x0601EE53 RID: 126547 RVA: 0x00452D6D File Offset: 0x00450F6D
-		// (set) Token: 0x0601EE54 RID: 126548 RVA: 0x00452D75 File Offset: 0x00450F75
+		// Token: 0x170094D1 RID: 38097
+		// (get) Token: 0x06020A57 RID: 133719 RVA: 0x00486649 File Offset: 0x00484849
+		// (set) Token: 0x06020A58 RID: 133720 RVA: 0x00486651 File Offset: 0x00484851
 		public IFormationRoleInfoType_Union Type { get; set; }
 
-		// Token: 0x17008DA9 RID: 36265
-		// (get) Token: 0x0601EE55 RID: 126549 RVA: 0x00452D7E File Offset: 0x00450F7E
-		// (set) Token: 0x0601EE56 RID: 126550 RVA: 0x00452D86 File Offset: 0x00450F86
+		// Token: 0x170094D2 RID: 38098
+		// (get) Token: 0x06020A59 RID: 133721 RVA: 0x0048665A File Offset: 0x0048485A
+		// (set) Token: 0x06020A5A RID: 133722 RVA: 0x00486662 File Offset: 0x00484862
 		public object Value { get; set; }
 
-		// Token: 0x0601EE57 RID: 126551 RVA: 0x00452D8F File Offset: 0x00450F8F
+		// Token: 0x06020A5B RID: 133723 RVA: 0x0048666B File Offset: 0x0048486B
 		public IFormationRoleInfoType_UnionUnion()
 		{
 			this.Type = IFormationRoleInfoType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601EE58 RID: 126552 RVA: 0x00452DA5 File Offset: 0x00450FA5
+		// Token: 0x06020A5C RID: 133724 RVA: 0x00486681 File Offset: 0x00484881
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601EE59 RID: 126553 RVA: 0x00452DB7 File Offset: 0x00450FB7
+		// Token: 0x06020A5D RID: 133725 RVA: 0x00486693 File Offset: 0x00484893
 		public IFormationRoleInfoTypeT AsIFormationRoleInfoType()
 		{
 			return this.As<IFormationRoleInfoTypeT>();
 		}
 
-		// Token: 0x0601EE5A RID: 126554 RVA: 0x00452DBF File Offset: 0x00450FBF
+		// Token: 0x06020A5E RID: 133726 RVA: 0x0048669B File Offset: 0x0048489B
 		public static IFormationRoleInfoType_UnionUnion FromIFormationRoleInfoType(IFormationRoleInfoTypeT _iformationroleinfotype)
 		{
 			return new IFormationRoleInfoType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601EE5B RID: 126555 RVA: 0x00452DD4 File Offset: 0x00450FD4
+		// Token: 0x06020A5F RID: 133727 RVA: 0x004866B0 File Offset: 0x004848B0
 		public IRoleLevelT AsIRoleLevel()
 		{
 			return this.As<IRoleLevelT>();
 		}
 
-		// Token: 0x0601EE5C RID: 126556 RVA: 0x00452DDC File Offset: 0x00450FDC
+		// Token: 0x06020A60 RID: 133728 RVA: 0x004866B8 File Offset: 0x004848B8
 		public static IFormationRoleInfoType_UnionUnion FromIRoleLevel(IRoleLevelT _irolelevel)
 		{
 			return new IFormationRoleInfoType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601EE5D RID: 126557 RVA: 0x00452DF1 File Offset: 0x00450FF1
+		// Token: 0x06020A61 RID: 133729 RVA: 0x004866CD File Offset: 0x004848CD
 		public IWeaponLevelT AsIWeaponLevel()
 		{
 			return this.As<IWeaponLevelT>();
 		}
 
-		// Token: 0x0601EE5E RID: 126558 RVA: 0x00452DF9 File Offset: 0x00450FF9
+		// Token: 0x06020A62 RID: 133730 RVA: 0x004866D5 File Offset: 0x004848D5
 		public static IFormationRoleInfoType_UnionUnion FromIWeaponLevel(IWeaponLevelT _iweaponlevel)
 		{
 			return new IFormationRoleInfoType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601EE5F RID: 126559 RVA: 0x00452E0E File Offset: 0x0045100E
+		// Token: 0x06020A63 RID: 133731 RVA: 0x004866EA File Offset: 0x004848EA
 		public IHasEquippedVisionT AsIHasEquippedVision()
 		{
 			return this.As<IHasEquippedVisionT>();
 		}
 
-		// Token: 0x0601EE60 RID: 126560 RVA: 0x00452E16 File Offset: 0x00451016
+		// Token: 0x06020A64 RID: 133732 RVA: 0x004866F2 File Offset: 0x004848F2
 		public static IFormationRoleInfoType_UnionUnion FromIHasEquippedVision(IHasEquippedVisionT _ihasequippedvision)
 		{
 			return new IFormationRoleInfoType_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601EE61 RID: 126561 RVA: 0x00452E2B File Offset: 0x0045102B
+		// Token: 0x06020A65 RID: 133733 RVA: 0x00486707 File Offset: 0x00484907
 		public IHasUpgradableVisionT AsIHasUpgradableVision()
 		{
 			return this.As<IHasUpgradableVisionT>();
 		}
 
-		// Token: 0x0601EE62 RID: 126562 RVA: 0x00452E33 File Offset: 0x00451033
+		// Token: 0x06020A66 RID: 133734 RVA: 0x0048670F File Offset: 0x0048490F
 		public static IFormationRoleInfoType_UnionUnion FromIHasUpgradableVision(IHasUpgradableVisionT _ihasupgradablevision)
 		{
 			return new IFormationRoleInfoType_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601EE63 RID: 126563 RVA: 0x00452E48 File Offset: 0x00451048
+		// Token: 0x06020A67 RID: 133735 RVA: 0x00486724 File Offset: 0x00484924
 		public IFeatureCollectionLevelT AsIFeatureCollectionLevel()
 		{
 			return this.As<IFeatureCollectionLevelT>();
 		}
 
-		// Token: 0x0601EE64 RID: 126564 RVA: 0x00452E50 File Offset: 0x00451050
+		// Token: 0x06020A68 RID: 133736 RVA: 0x0048672C File Offset: 0x0048492C
 		public static IFormationRoleInfoType_UnionUnion FromIFeatureCollectionLevel(IFeatureCollectionLevelT _ifeaturecollectionlevel)
 		{
 			return new IFormationRoleInfoType_UnionUnion
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601EE65 RID: 126565 RVA: 0x00452E68 File Offset: 0x00451068
+		// Token: 0x06020A69 RID: 133737 RVA: 0x00486744 File Offset: 0x00484944
 		public static int Pack(FlatBufferBuilder builder, IFormationRoleInfoType_UnionUnion _o)
 		{
 			switch (_o.Type)

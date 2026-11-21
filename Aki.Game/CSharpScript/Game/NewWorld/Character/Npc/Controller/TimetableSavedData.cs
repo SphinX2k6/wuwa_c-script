@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 {
-	// Token: 0x02007099 RID: 28825
+	// Token: 0x020062FE RID: 25342
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TimetableSavedData
 	{
-		// Token: 0x060463CE RID: 287694 RVA: 0x011930AB File Offset: 0x011912AB
+		// Token: 0x0603D4B9 RID: 251065 RVA: 0x011B61B7 File Offset: 0x011B43B7
 		public TimetableSavedData(TimetableConfigData config)
 		{
 			this.TimetableConfig = config;
 		}
 
-		// Token: 0x060463CF RID: 287695 RVA: 0x011930D0 File Offset: 0x011912D0
+		// Token: 0x0603D4BA RID: 251066 RVA: 0x011B61DC File Offset: 0x011B43DC
 		public TimetableSavedData DeepCopy()
 		{
 			TimetableSavedData timetableSavedData = new TimetableSavedData(this.TimetableConfig);
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			return timetableSavedData;
 		}
 
-		// Token: 0x060463D0 RID: 287696 RVA: 0x01193120 File Offset: 0x01191320
+		// Token: 0x0603D4BB RID: 251067 RVA: 0x011B622C File Offset: 0x011B442C
 		public bool IsValid()
 		{
 			if (this.TimetableConfig == null)
@@ -47,18 +47,18 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			return true;
 		}
 
-		// Token: 0x04024CE3 RID: 150755
+		// Token: 0x04020835 RID: 133173
 		[Nullable(2)]
 		public TimetableConfigData TimetableConfig;
 
-		// Token: 0x04024CE4 RID: 150756
+		// Token: 0x04020836 RID: 133174
 		public BehaviorTreeSavedData BehaviorTreeData = new BehaviorTreeSavedData();
 
-		// Token: 0x04024CE5 RID: 150757
+		// Token: 0x04020837 RID: 133175
 		[Nullable(2)]
 		public PatrolSavedData PatrolData;
 
-		// Token: 0x04024CE6 RID: 150758
+		// Token: 0x04020838 RID: 133176
 		public string SavedSelectedBTPath = "";
 	}
 }

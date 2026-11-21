@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EC7 RID: 7879
+// Token: 0x02001389 RID: 5001
 [NullableContext(1)]
 [Nullable(0)]
 public class TargetTog : UiPanelBase
 {
-	// Token: 0x0600F25A RID: 62042 RVA: 0x003A6738 File Offset: 0x003A4938
+	// Token: 0x0600C679 RID: 50809 RVA: 0x003B2238 File Offset: 0x003B0438
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -35,13 +35,13 @@ public class TargetTog : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F25B RID: 62043 RVA: 0x003A6820 File Offset: 0x003A4A20
+	// Token: 0x0600C67A RID: 50810 RVA: 0x003B2320 File Offset: 0x003B0520
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).CanExecuteChange.Bind(() => this.CanToggleChange == null || this.Target == null || this.CanToggleChange(this.Target.Value));
 	}
 
-	// Token: 0x0600F25C RID: 62044 RVA: 0x003A683F File Offset: 0x003A4A3F
+	// Token: 0x0600C67B RID: 50811 RVA: 0x003B233F File Offset: 0x003B053F
 	public void RefreshTog(ETarget target, bool isUnLock)
 	{
 		this.Target = new ETarget?(target);
@@ -50,7 +50,7 @@ public class TargetTog : UiPanelBase
 		base.GetItem(2).SetUIActive(!this.IsUnLock);
 	}
 
-	// Token: 0x0600F25D RID: 62045 RVA: 0x003A687B File Offset: 0x003A4A7B
+	// Token: 0x0600C67C RID: 50812 RVA: 0x003B237B File Offset: 0x003B057B
 	private void OnTogClick(EToggleState toggleState)
 	{
 		Action onClickToggleBack = this.OnClickToggleBack;
@@ -61,8 +61,8 @@ public class TargetTog : UiPanelBase
 		onClickToggleBack();
 	}
 
-	// Token: 0x170012EE RID: 4846
-	// (get) Token: 0x0600F25E RID: 62046 RVA: 0x003A688D File Offset: 0x003A4A8D
+	// Token: 0x17001318 RID: 4888
+	// (get) Token: 0x0600C67D RID: 50813 RVA: 0x003B238D File Offset: 0x003B058D
 	public UUIExtendToggle GetTog
 	{
 		get
@@ -71,23 +71,23 @@ public class TargetTog : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F25F RID: 62047 RVA: 0x003A6896 File Offset: 0x003A4A96
+	// Token: 0x0600C67E RID: 50814 RVA: 0x003B2396 File Offset: 0x003B0596
 	public void SetRedDotShow(bool isShow)
 	{
 		base.GetItem(3).SetUIActive(isShow);
 	}
 
-	// Token: 0x04007036 RID: 28726
+	// Token: 0x04007117 RID: 28951
 	private bool IsUnLock;
 
-	// Token: 0x04007037 RID: 28727
+	// Token: 0x04007118 RID: 28952
 	public ETarget? Target;
 
-	// Token: 0x04007038 RID: 28728
+	// Token: 0x04007119 RID: 28953
 	[Nullable(2)]
 	public Action OnClickToggleBack;
 
-	// Token: 0x04007039 RID: 28729
+	// Token: 0x0400711A RID: 28954
 	[Nullable(2)]
 	public Func<ETarget, bool> CanToggleChange;
 }

@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BFE RID: 7166
+// Token: 0x020010BD RID: 4285
 [NullableContext(1)]
 [Nullable(0)]
 internal class Formation3DTabItem : EditFormationTabItem
 {
-	// Token: 0x0600D5EF RID: 54767 RVA: 0x00316CC1 File Offset: 0x00314EC1
+	// Token: 0x0600AA02 RID: 43522 RVA: 0x00321F99 File Offset: 0x00320199
 	public Formation3DTabItem(Func<int, bool> isCurrentTab) : base(false)
 	{
 		this.IsCurrentTab = isCurrentTab;
 	}
 
-	// Token: 0x0600D5F0 RID: 54768 RVA: 0x00316CD1 File Offset: 0x00314ED1
+	// Token: 0x0600AA03 RID: 43523 RVA: 0x00321FA9 File Offset: 0x003201A9
 	protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 		base.OnRefresh(data, isSelected, gridIndex);
@@ -21,7 +21,7 @@ internal class Formation3DTabItem : EditFormationTabItem
 		base.ShowTeamBattleTips(this.IsCurrentTab(gridIndex + 1));
 	}
 
-	// Token: 0x0600D5F1 RID: 54769 RVA: 0x00316D05 File Offset: 0x00314F05
+	// Token: 0x0600AA04 RID: 43524 RVA: 0x00321FDD File Offset: 0x003201DD
 	public override void OnSelected(bool fireEvent)
 	{
 		this.GetTabToggle().SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
@@ -31,12 +31,12 @@ internal class Formation3DTabItem : EditFormationTabItem
 		}
 	}
 
-	// Token: 0x0600D5F2 RID: 54770 RVA: 0x00316D2A File Offset: 0x00314F2A
+	// Token: 0x0600AA05 RID: 43525 RVA: 0x00322002 File Offset: 0x00320202
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.GetTabToggle().SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x040061DA RID: 25050
+	// Token: 0x040062AC RID: 25260
 	private readonly Func<int, bool> IsCurrentTab;
 }

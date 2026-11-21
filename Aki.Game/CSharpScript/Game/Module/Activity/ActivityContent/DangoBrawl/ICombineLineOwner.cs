@@ -4,23 +4,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006790 RID: 26512
+	// Token: 0x020056E0 RID: 22240
 	[NullableContext(2)]
 	public interface ICombineLineOwner
 	{
-		// Token: 0x060421E2 RID: 270818
+		// Token: 0x06036D38 RID: 224568
 		int GetOwnerUid();
 
-		// Token: 0x060421E3 RID: 270819
+		// Token: 0x06036D39 RID: 224569
 		int GetOwnerConfigId();
 
-		// Token: 0x060421E4 RID: 270820
+		// Token: 0x06036D3A RID: 224570
 		UUIItem GetOwnerRootItem();
 
-		// Token: 0x060421E5 RID: 270821
+		// Token: 0x06036D3B RID: 224571
 		void NotifyAsPartner(int requesterUid, bool show);
 
-		// Token: 0x060421E6 RID: 270822
+		// Token: 0x06036D3C RID: 224572
 		void RefreshLineAngles();
 	}
 }

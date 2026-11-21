@@ -12,7 +12,7 @@ namespace CSharpScript.Launcher
 	[Nullable(0)]
 	public class HotPatchLoginReport
 	{
-		// Token: 0x0600028D RID: 653 RVA: 0x0000D17C File Offset: 0x0000B37C
+		// Token: 0x0600028E RID: 654 RVA: 0x0000D49C File Offset: 0x0000B69C
 		public static void HotPatchLogAppendDefaultData(HotPatchLog data)
 		{
 			data.s_version = HotPatchLogReport.Instance.Version;
@@ -21,7 +21,7 @@ namespace CSharpScript.Launcher
 			data.device_id = HotPatchLogReport.Instance.DeviceId;
 		}
 
-		// Token: 0x0600028E RID: 654 RVA: 0x0000D1CC File Offset: 0x0000B3CC
+		// Token: 0x0600028F RID: 655 RVA: 0x0000D4EC File Offset: 0x0000B6EC
 		[NullableContext(2)]
 		[return: Nullable(1)]
 		public static HotPatchLog CreateHotPatchLog([Nullable(1)] string eventId, [Nullable(1)] string s_step_result, string s_step_id = null, string uniqueId = null, string playerId = null, string s_url_prefix = null)
@@ -37,7 +37,7 @@ namespace CSharpScript.Launcher
 			return hotPatchLog;
 		}
 
-		// Token: 0x0600028F RID: 655 RVA: 0x0000D228 File Offset: 0x0000B428
+		// Token: 0x06000290 RID: 656 RVA: 0x0000D548 File Offset: 0x0000B748
 		public static Dictionary<string, string> GetDataMapFormHotPatchLog(HotPatchLog log)
 		{
 			Dictionary<string, string> dictionary = new Dictionary<string, string>();
@@ -54,13 +54,13 @@ namespace CSharpScript.Launcher
 			return dictionary;
 		}
 
-		// Token: 0x06000290 RID: 656 RVA: 0x0000D335 File Offset: 0x0000B535
+		// Token: 0x06000291 RID: 657 RVA: 0x0000D655 File Offset: 0x0000B855
 		public static void Report(HotPatchLog data)
 		{
 			LauncherSdk.Get().ReportChannelEvent(data);
 		}
 
-		// Token: 0x06000291 RID: 657 RVA: 0x0000D344 File Offset: 0x0000B544
+		// Token: 0x06000292 RID: 658 RVA: 0x0000D664 File Offset: 0x0000B864
 		public static void ReportGameLoadComplete(HotPatchLog data)
 		{
 			if (LauncherStorageLib.Instance.GetDeviceSaved<int>(ELauncherStorageDeviceKey.GameLoadCompleteFlag, 0) != 0)

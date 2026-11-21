@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B83 RID: 2947
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C51 RID: 3153
 	public class SpawnMonsterComponent : IComponentBase
 	{
-		// Token: 0x060043D2 RID: 17362 RVA: 0x000AC993 File Offset: 0x000AAB93
+		// Token: 0x0600482B RID: 18475 RVA: 0x000B6A57 File Offset: 0x000B4C57
 		public static SpawnMonsterComponent Create(ISpawnMonsterComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001289 RID: 4745
-		// (get) Token: 0x060043D3 RID: 17363 RVA: 0x000AC9B4 File Offset: 0x000AABB4
+		// Token: 0x17001384 RID: 4996
+		// (get) Token: 0x0600482C RID: 18476 RVA: 0x000B6A78 File Offset: 0x000B4C78
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700128A RID: 4746
-		// (get) Token: 0x060043D4 RID: 17364 RVA: 0x000AC9EC File Offset: 0x000AABEC
+		// Token: 0x17001385 RID: 4997
+		// (get) Token: 0x0600482D RID: 18477 RVA: 0x000B6AB0 File Offset: 0x000B4CB0
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700128B RID: 4747
-		// (get) Token: 0x060043D5 RID: 17365 RVA: 0x000ACA02 File Offset: 0x000AAC02
+		// Token: 0x17001386 RID: 4998
+		// (get) Token: 0x0600482E RID: 18478 RVA: 0x000B6AC6 File Offset: 0x000B4CC6
 		public virtual ISpawnMonsterStartCondition ActiveType
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700128C RID: 4748
-		// (get) Token: 0x060043D6 RID: 17366 RVA: 0x000ACA34 File Offset: 0x000AAC34
+		// Token: 0x17001387 RID: 4999
+		// (get) Token: 0x0600482F RID: 18479 RVA: 0x000B6AF8 File Offset: 0x000B4CF8
 		public virtual List<ISpawnMonsterConfig> SpawnMonsterConfigs
 		{
 			get
@@ -84,8 +82,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700128D RID: 4749
-		// (get) Token: 0x060043D7 RID: 17367 RVA: 0x000ACAA0 File Offset: 0x000AACA0
+		// Token: 0x17001388 RID: 5000
+		// (get) Token: 0x06004830 RID: 18480 RVA: 0x000B6B64 File Offset: 0x000B4D64
 		public virtual bool? IssharedHatred
 		{
 			get
@@ -98,8 +96,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700128E RID: 4750
-		// (get) Token: 0x060043D8 RID: 17368 RVA: 0x000ACAD6 File Offset: 0x000AACD6
+		// Token: 0x17001389 RID: 5001
+		// (get) Token: 0x06004831 RID: 18481 RVA: 0x000B6B9A File Offset: 0x000B4D9A
 		[Nullable(2)]
 		public virtual ISpawnMonsterConstraintAnnularSector SpawnMonsterConstraintType
 		{
@@ -116,26 +114,26 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400263C RID: 9788
+		// Token: 0x04002884 RID: 10372
 		private ISpawnMonsterComponent Instance;
 
-		// Token: 0x0400263D RID: 9789
+		// Token: 0x04002885 RID: 10373
 		private ISpawnMonsterStartCondition _ActiveTypeCache;
 
-		// Token: 0x0400263E RID: 9790
+		// Token: 0x04002886 RID: 10374
 		private bool _ActiveTypeInited;
 
-		// Token: 0x0400263F RID: 9791
+		// Token: 0x04002887 RID: 10375
 		private List<ISpawnMonsterConfig> _SpawnMonsterConfigsCache;
 
-		// Token: 0x04002640 RID: 9792
+		// Token: 0x04002888 RID: 10376
 		private bool _SpawnMonsterConfigsInited;
 
-		// Token: 0x04002641 RID: 9793
+		// Token: 0x04002889 RID: 10377
 		[Nullable(2)]
 		private ISpawnMonsterConstraintAnnularSector _SpawnMonsterConstraintTypeCache;
 
-		// Token: 0x04002642 RID: 9794
+		// Token: 0x0400288A RID: 10378
 		private bool _SpawnMonsterConstraintTypeInited;
 	}
 }

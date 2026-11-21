@@ -1,24 +1,21 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000677 RID: 1655
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000716 RID: 1814
 	public class IRenderBookPage_SetValue
 	{
-		// Token: 0x04001872 RID: 6258
+		// Token: 0x04001A6B RID: 6763
 		public ERenderSpecifiedRangeType Type;
 
-		// Token: 0x04001873 RID: 6259
+		// Token: 0x04001A6C RID: 6764
 		public int Radius;
 
-		// Token: 0x04001874 RID: 6260
+		// Token: 0x04001A6D RID: 6765
 		public ITargetEntityType CenterTarget;
 
-		// Token: 0x04001875 RID: 6261
+		// Token: 0x04001A6E RID: 6766
 		public string AkEvent;
 	}
 }

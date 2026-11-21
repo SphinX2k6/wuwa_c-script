@@ -9,7 +9,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.Monster.Common
 {
-	// Token: 0x02004250 RID: 16976
+	// Token: 0x020032C8 RID: 13000
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(20, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 20)]
@@ -17,7 +17,7 @@ namespace AkiClient.Game.Aki.Character.Monster.Common
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 20)]
 	public struct SAiAttributeRate : IEqualityOperators<SAiAttributeRate, SAiAttributeRate, bool>, IEquatable<SAiAttributeRate>, IUnrealScriptStruct
 	{
-		// Token: 0x0602BFA2 RID: 180130 RVA: 0x00A10CF2 File Offset: 0x00A0EEF2
+		// Token: 0x06020ED8 RID: 134872 RVA: 0x00952B32 File Offset: 0x00950D32
 		public SAiAttributeRate(TEnumAsByte<EAttributeType> Numerator, TEnumAsByte<EAttributeType> Denominator, FFloatRange Range)
 		{
 			this.Numerator = Numerator;
@@ -25,25 +25,25 @@ namespace AkiClient.Game.Aki.Character.Monster.Common
 			this.Range = Range;
 		}
 
-		// Token: 0x0602BFA3 RID: 180131 RVA: 0x00A10D09 File Offset: 0x00A0EF09
+		// Token: 0x06020ED9 RID: 134873 RVA: 0x00952B49 File Offset: 0x00950D49
 		public static bool operator ==(SAiAttributeRate left, SAiAttributeRate right)
 		{
 			return left.Numerator == right.Numerator && left.Denominator == right.Denominator && left.Range == right.Range;
 		}
 
-		// Token: 0x0602BFA4 RID: 180132 RVA: 0x00A10D44 File Offset: 0x00A0EF44
+		// Token: 0x06020EDA RID: 134874 RVA: 0x00952B84 File Offset: 0x00950D84
 		public static bool operator !=(SAiAttributeRate left, SAiAttributeRate right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x0602BFA5 RID: 180133 RVA: 0x00A10D50 File Offset: 0x00A0EF50
+		// Token: 0x06020EDB RID: 134875 RVA: 0x00952B90 File Offset: 0x00950D90
 		public bool Equals(SAiAttributeRate other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x0602BFA6 RID: 180134 RVA: 0x00A10D60 File Offset: 0x00A0EF60
+		// Token: 0x06020EDC RID: 134876 RVA: 0x00952BA0 File Offset: 0x00950DA0
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -55,34 +55,34 @@ namespace AkiClient.Game.Aki.Character.Monster.Common
 			return false;
 		}
 
-		// Token: 0x0602BFA7 RID: 180135 RVA: 0x00A10D85 File Offset: 0x00A0EF85
+		// Token: 0x06020EDD RID: 134877 RVA: 0x00952BC5 File Offset: 0x00950DC5
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<TEnumAsByte<EAttributeType>, TEnumAsByte<EAttributeType>, FFloatRange>(this.Numerator, this.Denominator, this.Range);
 		}
 
-		// Token: 0x0602BFA8 RID: 180136 RVA: 0x00A10D9E File Offset: 0x00A0EF9E
+		// Token: 0x06020EDE RID: 134878 RVA: 0x00952BDE File Offset: 0x00950DDE
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SAiAttributeRate._ScriptStructPtr != 0) ? SAiAttributeRate._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/Monster/Common/SAiAttributeRate.SAiAttributeRate", ref SAiAttributeRate._ScriptStructPtr);
 		}
 
-		// Token: 0x04016F81 RID: 94081
+		// Token: 0x04011D5F RID: 73055
 		[FieldOffset(0)]
 		public TEnumAsByte<EAttributeType> Numerator;
 
-		// Token: 0x04016F82 RID: 94082
+		// Token: 0x04011D60 RID: 73056
 		[FieldOffset(1)]
 		public TEnumAsByte<EAttributeType> Denominator;
 
-		// Token: 0x04016F83 RID: 94083
+		// Token: 0x04011D61 RID: 73057
 		[FieldOffset(4)]
 		public FFloatRange Range;
 
-		// Token: 0x04016F84 RID: 94084
+		// Token: 0x04011D62 RID: 73058
 		public const string __ObjectPath = "/Game/Aki/Character/Monster/Common/SAiAttributeRate.SAiAttributeRate";
 
-		// Token: 0x04016F85 RID: 94085
+		// Token: 0x04011D63 RID: 73059
 		private static IntPtr _ScriptStructPtr;
 	}
 }

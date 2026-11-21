@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200205D RID: 8285
+// Token: 0x02001530 RID: 5424
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class LevelPlayConfig : ConfigBase
 {
-	// Token: 0x060104B5 RID: 66741 RVA: 0x003F8E28 File Offset: 0x003F7028
+	// Token: 0x0600D91D RID: 55581 RVA: 0x00405394 File Offset: 0x00403594
 	public unsafe ExchangeReward? GetExchangeRewardInfo(int id)
 	{
 		ExchangeReward? config = ConfigExchangeRewardById.GetConfig(id, true);
@@ -26,7 +26,7 @@ public class LevelPlayConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x060104B6 RID: 66742 RVA: 0x003F8EA4 File Offset: 0x003F70A4
+	// Token: 0x0600D91E RID: 55582 RVA: 0x00405410 File Offset: 0x00403610
 	public LevelPlayData? GetLevelPlayConfig(int levelPlayId)
 	{
 		LevelPlayData? config = ConfigLevelPlayDataById.GetConfig(levelPlayId, false);
@@ -42,7 +42,7 @@ public class LevelPlayConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x060104B7 RID: 66743 RVA: 0x003F8EF0 File Offset: 0x003F70F0
+	// Token: 0x0600D91F RID: 55583 RVA: 0x0040545C File Offset: 0x0040365C
 	public unsafe LevelPlayNodeData? GetLevelPlayNodeConfig(int levelPlayId, int nodeId)
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
@@ -64,8 +64,8 @@ public class LevelPlayConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x17001418 RID: 5144
-	// (get) Token: 0x060104B8 RID: 66744 RVA: 0x003F8F97 File Offset: 0x003F7197
+	// Token: 0x17001445 RID: 5189
+	// (get) Token: 0x0600D920 RID: 55584 RVA: 0x00405503 File Offset: 0x00403703
 	public static LevelPlayConfig Instance
 	{
 		get
@@ -74,7 +74,7 @@ public class LevelPlayConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060104B9 RID: 66745 RVA: 0x003F8F9E File Offset: 0x003F719E
+	// Token: 0x0600D921 RID: 55585 RVA: 0x0040550A File Offset: 0x0040370A
 	public static LevelPlayConfig GetOrCreateInstance()
 	{
 		if (LevelPlayConfig._Instance == null)
@@ -84,7 +84,7 @@ public class LevelPlayConfig : ConfigBase
 		return LevelPlayConfig._Instance;
 	}
 
-	// Token: 0x060104BA RID: 66746 RVA: 0x003F8FB2 File Offset: 0x003F71B2
+	// Token: 0x0600D922 RID: 55586 RVA: 0x0040551E File Offset: 0x0040371E
 	public static bool CreateInstance()
 	{
 		if (LevelPlayConfig._Instance != null)
@@ -95,24 +95,24 @@ public class LevelPlayConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060104BB RID: 66747 RVA: 0x003F8FC8 File Offset: 0x003F71C8
+	// Token: 0x0600D923 RID: 55587 RVA: 0x00405534 File Offset: 0x00403734
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060104BC RID: 66748 RVA: 0x003F8FCA File Offset: 0x003F71CA
+	// Token: 0x0600D924 RID: 55588 RVA: 0x00405536 File Offset: 0x00403736
 	public static void ResetStaticDefaultValue()
 	{
 		LevelPlayConfig._Instance = null;
 	}
 
-	// Token: 0x060104BD RID: 66749 RVA: 0x003F8FD2 File Offset: 0x003F71D2
+	// Token: 0x0600D925 RID: 55589 RVA: 0x0040553E File Offset: 0x0040373E
 	static LevelPlayConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LevelPlayConfig.CreateStaticDefaultValue), new Action(LevelPlayConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007875 RID: 30837
+	// Token: 0x0400795E RID: 31070
 	[Nullable(2)]
 	private static LevelPlayConfig _Instance;
 }

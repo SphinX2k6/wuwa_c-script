@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020028A0 RID: 10400
+// Token: 0x02001E1B RID: 7707
 public class RoleSkillBranchTeamTabData : IRoleSkillBranchTeamTabData
 {
-	// Token: 0x17001CCA RID: 7370
-	// (get) Token: 0x0601576E RID: 87918 RVA: 0x0056A040 File Offset: 0x00568240
-	// (set) Token: 0x0601576F RID: 87919 RVA: 0x0056A048 File Offset: 0x00568248
+	// Token: 0x17001D22 RID: 7458
+	// (get) Token: 0x0601316E RID: 78190 RVA: 0x00594E88 File Offset: 0x00593088
+	// (set) Token: 0x0601316F RID: 78191 RVA: 0x00594E90 File Offset: 0x00593090
 	public int TeamIndex { get; set; }
 
-	// Token: 0x17001CCB RID: 7371
-	// (get) Token: 0x06015770 RID: 87920 RVA: 0x0056A051 File Offset: 0x00568251
-	// (set) Token: 0x06015771 RID: 87921 RVA: 0x0056A059 File Offset: 0x00568259
+	// Token: 0x17001D23 RID: 7459
+	// (get) Token: 0x06013170 RID: 78192 RVA: 0x00594E99 File Offset: 0x00593099
+	// (set) Token: 0x06013171 RID: 78193 RVA: 0x00594EA1 File Offset: 0x005930A1
 	[TupleElementNames(new string[]
 	{
 		"RoleId",

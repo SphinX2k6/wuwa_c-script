@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A3F RID: 19007
+	// Token: 0x020039E7 RID: 14823
 	public class ITrapDefenseMachineIdInfo
 	{
-		// Token: 0x0401A60D RID: 108045
+		// Token: 0x04014F5F RID: 85855
 		public ETrapDefenseMachineType MachineType;
 
-		// Token: 0x0401A60E RID: 108046
+		// Token: 0x04014F60 RID: 85856
 		public int DataType;
 
-		// Token: 0x0401A60F RID: 108047
+		// Token: 0x04014F61 RID: 85857
 		public int Level;
 
-		// Token: 0x0401A610 RID: 108048
+		// Token: 0x04014F62 RID: 85858
 		public int Branch;
 	}
 }

@@ -5,13 +5,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.World.Controller
 {
-	// Token: 0x02004539 RID: 17721
+	// Token: 0x02003461 RID: 13409
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class MultiInteractionActorController : ControllerBase
 	{
-		// Token: 0x0602DCA8 RID: 187560 RVA: 0x00A86170 File Offset: 0x00A84370
+		// Token: 0x0602238A RID: 140170 RVA: 0x009B1998 File Offset: 0x009AFB98
 		protected override void OnTick(float delta)
 		{
 			if (this.WaitDestroyActors.Size <= 0)
@@ -34,21 +34,21 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x0602DCA9 RID: 187561 RVA: 0x00A861CA File Offset: 0x00A843CA
+		// Token: 0x0602238B RID: 140171 RVA: 0x009B19F2 File Offset: 0x009AFBF2
 		protected override bool OnClear()
 		{
 			this.ProcessRemainingActor();
 			return true;
 		}
 
-		// Token: 0x0602DCAA RID: 187562 RVA: 0x00A861D3 File Offset: 0x00A843D3
+		// Token: 0x0602238C RID: 140172 RVA: 0x009B19FB File Offset: 0x009AFBFB
 		protected override bool OnLeaveLevel()
 		{
 			this.ProcessRemainingActor();
 			return true;
 		}
 
-		// Token: 0x0602DCAB RID: 187563 RVA: 0x00A861DC File Offset: 0x00A843DC
+		// Token: 0x0602238D RID: 140173 RVA: 0x009B1A04 File Offset: 0x009AFC04
 		private void ProcessRemainingActor()
 		{
 			while (this.WaitDestroyActors.Size > 0)
@@ -61,15 +61,15 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x0602DCAC RID: 187564 RVA: 0x00A86216 File Offset: 0x00A84416
+		// Token: 0x0602238E RID: 140174 RVA: 0x009B1A3E File Offset: 0x009AFC3E
 		public void AddWaitDestroyActor(SceneInteractionActor actor)
 		{
 			this.WaitDestroyActors.Push(actor);
 			AttachToActorController.Instance.DetachActor(actor, false, "MultiInteractionActorController.AddWaitDestroyActor", EDetachmentRule.KeepWorld, EDetachmentRule.KeepWorld, EDetachmentRule.KeepWorld);
 		}
 
-		// Token: 0x17007541 RID: 30017
-		// (get) Token: 0x0602DCAD RID: 187565 RVA: 0x00A86239 File Offset: 0x00A84439
+		// Token: 0x170047F8 RID: 18424
+		// (get) Token: 0x0602238F RID: 140175 RVA: 0x009B1A61 File Offset: 0x009AFC61
 		public static MultiInteractionActorController Instance
 		{
 			get
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x0602DCAE RID: 187566 RVA: 0x00A86240 File Offset: 0x00A84440
+		// Token: 0x06022390 RID: 140176 RVA: 0x009B1A68 File Offset: 0x009AFC68
 		public static MultiInteractionActorController GetOrCreateInstance()
 		{
 			if (MultiInteractionActorController._Instance == null)
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.World.Controller
 			return MultiInteractionActorController._Instance;
 		}
 
-		// Token: 0x0602DCAF RID: 187567 RVA: 0x00A86254 File Offset: 0x00A84454
+		// Token: 0x06022391 RID: 140177 RVA: 0x009B1A7C File Offset: 0x009AFC7C
 		public static bool CreateInstance()
 		{
 			if (MultiInteractionActorController._Instance != null)
@@ -99,30 +99,30 @@ namespace CSharpScript.Game.World.Controller
 			return true;
 		}
 
-		// Token: 0x0602DCB0 RID: 187568 RVA: 0x00A8626A File Offset: 0x00A8446A
+		// Token: 0x06022392 RID: 140178 RVA: 0x009B1A92 File Offset: 0x009AFC92
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DCB1 RID: 187569 RVA: 0x00A8626C File Offset: 0x00A8446C
+		// Token: 0x06022393 RID: 140179 RVA: 0x009B1A94 File Offset: 0x009AFC94
 		public static void ResetStaticDefaultValue()
 		{
 			MultiInteractionActorController._Instance = null;
 		}
 
-		// Token: 0x0602DCB2 RID: 187570 RVA: 0x00A86274 File Offset: 0x00A84474
+		// Token: 0x06022394 RID: 140180 RVA: 0x009B1A9C File Offset: 0x009AFC9C
 		static MultiInteractionActorController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MultiInteractionActorController.CreateStaticDefaultValue), new Action(MultiInteractionActorController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401874A RID: 100170
+		// Token: 0x04012D84 RID: 77188
 		private const int MAX_DESTROY_TIME = 3;
 
-		// Token: 0x0401874B RID: 100171
+		// Token: 0x04012D85 RID: 77189
 		private readonly Queue<SceneInteractionActor> WaitDestroyActors = new Queue<SceneInteractionActor>(4);
 
-		// Token: 0x0401874C RID: 100172
+		// Token: 0x04012D86 RID: 77190
 		[Nullable(2)]
 		private static MultiInteractionActorController _Instance;
 	}

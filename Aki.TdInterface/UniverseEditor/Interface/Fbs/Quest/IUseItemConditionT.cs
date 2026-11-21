@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004242 RID: 16962
+	// Token: 0x0200469E RID: 18078
 	public class IUseItemConditionT
 	{
-		// Token: 0x1700786F RID: 30831
-		// (get) Token: 0x06019161 RID: 102753 RVA: 0x0039B9AB File Offset: 0x00399BAB
-		// (set) Token: 0x06019162 RID: 102754 RVA: 0x0039B9B3 File Offset: 0x00399BB3
+		// Token: 0x17007EA0 RID: 32416
+		// (get) Token: 0x0601A8CD RID: 108749 RVA: 0x003C7083 File Offset: 0x003C5283
+		// (set) Token: 0x0601A8CE RID: 108750 RVA: 0x003C708B File Offset: 0x003C528B
 		public int ItemId { get; set; }
 
-		// Token: 0x17007870 RID: 30832
-		// (get) Token: 0x06019163 RID: 102755 RVA: 0x0039B9BC File Offset: 0x00399BBC
-		// (set) Token: 0x06019164 RID: 102756 RVA: 0x0039B9C4 File Offset: 0x00399BC4
+		// Token: 0x17007EA1 RID: 32417
+		// (get) Token: 0x0601A8CF RID: 108751 RVA: 0x003C7094 File Offset: 0x003C5294
+		// (set) Token: 0x0601A8D0 RID: 108752 RVA: 0x003C709C File Offset: 0x003C529C
 		public int Count { get; set; }
 
-		// Token: 0x17007871 RID: 30833
-		// (get) Token: 0x06019165 RID: 102757 RVA: 0x0039B9CD File Offset: 0x00399BCD
-		// (set) Token: 0x06019166 RID: 102758 RVA: 0x0039B9D5 File Offset: 0x00399BD5
+		// Token: 0x17007EA2 RID: 32418
+		// (get) Token: 0x0601A8D1 RID: 108753 RVA: 0x003C70A5 File Offset: 0x003C52A5
+		// (set) Token: 0x0601A8D2 RID: 108754 RVA: 0x003C70AD File Offset: 0x003C52AD
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x17007872 RID: 30834
-		// (get) Token: 0x06019167 RID: 102759 RVA: 0x0039B9DE File Offset: 0x00399BDE
-		// (set) Token: 0x06019168 RID: 102760 RVA: 0x0039B9E6 File Offset: 0x00399BE6
+		// Token: 0x17007EA3 RID: 32419
+		// (get) Token: 0x0601A8D3 RID: 108755 RVA: 0x003C70B6 File Offset: 0x003C52B6
+		// (set) Token: 0x0601A8D4 RID: 108756 RVA: 0x003C70BE File Offset: 0x003C52BE
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x06019169 RID: 102761 RVA: 0x0039B9EF File Offset: 0x00399BEF
+		// Token: 0x0601A8D5 RID: 108757 RVA: 0x003C70C7 File Offset: 0x003C52C7
 		public IUseItemConditionT()
 		{
 			this.ItemId = 0;

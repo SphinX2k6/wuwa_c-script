@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019BE RID: 6590
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B4B RID: 6987
 	public class IDollGrabShowcase : IUiGame
 	{
-		// Token: 0x06008D2F RID: 36143 RVA: 0x0014AF90 File Offset: 0x00149190
+		// Token: 0x06009471 RID: 38001 RVA: 0x0015AA9C File Offset: 0x00158C9C
 		private IDollGrabShowcase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008D30 RID: 36144 RVA: 0x0014AFC8 File Offset: 0x001491C8
+		// Token: 0x06009472 RID: 38002 RVA: 0x0015AAD4 File Offset: 0x00158CD4
 		public static IDollGrabShowcase Create([Nullable(2)] IDollGrabShowcase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008D31 RID: 36145 RVA: 0x0014AFDB File Offset: 0x001491DB
+		// Token: 0x06009473 RID: 38003 RVA: 0x0015AAE7 File Offset: 0x00158CE7
 		public static IDollGrabShowcase CreateFromSetValue([Nullable(2)] IDollGrabShowcase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008D32 RID: 36146 RVA: 0x0014AFEE File Offset: 0x001491EE
+		// Token: 0x06009474 RID: 38004 RVA: 0x0015AAFA File Offset: 0x00158CFA
 		public new IDollGrabShowcase_SetValue ToSetValue()
 		{
 			return new IDollGrabShowcase_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D4F RID: 11599
-		// (get) Token: 0x06008D33 RID: 36147 RVA: 0x0014B00D File Offset: 0x0014920D
-		// (set) Token: 0x06008D34 RID: 36148 RVA: 0x0014B038 File Offset: 0x00149238
+		// Token: 0x17002F54 RID: 12116
+		// (get) Token: 0x06009475 RID: 38005 RVA: 0x0015AB19 File Offset: 0x00158D19
+		// (set) Token: 0x06009476 RID: 38006 RVA: 0x0015AB44 File Offset: 0x00158D44
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D50 RID: 11600
-		// (get) Token: 0x06008D35 RID: 36149 RVA: 0x0014B046 File Offset: 0x00149246
-		// (set) Token: 0x06008D36 RID: 36150 RVA: 0x0014B071 File Offset: 0x00149271
+		// Token: 0x17002F55 RID: 12117
+		// (get) Token: 0x06009477 RID: 38007 RVA: 0x0015AB52 File Offset: 0x00158D52
+		// (set) Token: 0x06009478 RID: 38008 RVA: 0x0015AB7D File Offset: 0x00158D7D
 		public virtual int ShowcaseEntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040057C2 RID: 22466
+		// Token: 0x04005C17 RID: 23575
 		[Nullable(2)]
 		protected new IDollGrabShowcase FbInstance;
 
-		// Token: 0x040057C3 RID: 22467
+		// Token: 0x04005C18 RID: 23576
 		[Nullable(2)]
 		protected new IDollGrabShowcase_SetValue PocoInterface;
 	}

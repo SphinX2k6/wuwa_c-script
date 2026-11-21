@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,12 +7,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x020052EE RID: 21230
+	// Token: 0x020042BE RID: 17086
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityPermanentRogueData : ActivityBaseData
 	{
-		// Token: 0x0603651A RID: 222490 RVA: 0x00CD94F8 File Offset: 0x00CD76F8
+		// Token: 0x0602B415 RID: 177173 RVA: 0x00C26CB8 File Offset: 0x00C24EB8
 		protected override bool GetExDataFinishShowState()
 		{
 			if (!base.GetPreGuideQuestFinishState())
@@ -41,7 +40,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return true;
 		}
 
-		// Token: 0x0603651B RID: 222491 RVA: 0x00CD95B4 File Offset: 0x00CD77B4
+		// Token: 0x0602B416 RID: 177174 RVA: 0x00C26D74 File Offset: 0x00C24F74
 		public override bool GetExDataRedPointShowState()
 		{
 			if (!base.GetPreGuideQuestFinishState())
@@ -57,13 +56,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return instance.CheckAllTaskRedDot() || instance.CheckShopRedDot(newSeasonId);
 		}
 
-		// Token: 0x0603651C RID: 222492 RVA: 0x00CD95F6 File Offset: 0x00CD77F6
+		// Token: 0x0602B417 RID: 177175 RVA: 0x00C26DB6 File Offset: 0x00C24FB6
 		public bool GetFirstCheckRedDotState(EPermanentRogueSaveFlag saveFlag)
 		{
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, (int)saveFlag, 0, 0) == 0;
 		}
 
-		// Token: 0x0603651D RID: 222493 RVA: 0x00CD960F File Offset: 0x00CD780F
+		// Token: 0x0602B418 RID: 177176 RVA: 0x00C26DCF File Offset: 0x00C24FCF
 		public bool SaveFirstCheckRedDotState(EPermanentRogueSaveFlag saveFlag)
 		{
 			if (ActivityModel.Instance.GetActivityCacheData(base.Id, 0, (int)saveFlag, 0, 0) == 1)
@@ -74,7 +73,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return false;
 		}
 
-		// Token: 0x0603651E RID: 222494 RVA: 0x00CD9644 File Offset: 0x00CD7844
+		// Token: 0x0602B419 RID: 177177 RVA: 0x00C26E04 File Offset: 0x00C25004
 		public bool CheckAllRightSideRedDot()
 		{
 			if (!base.GetPreGuideQuestFinishState())
@@ -86,7 +85,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return instance.CheckSkillTreeRedDot(newSeasonId) || instance.CheckIllustratedRedDot() || (instance.CheckEndingAwardRedDot(newSeasonId) || instance.CheckDungeonRedDot(newSeasonId));
 		}
 
-		// Token: 0x0603651F RID: 222495 RVA: 0x00CD9694 File Offset: 0x00CD7894
+		// Token: 0x0602B41A RID: 177178 RVA: 0x00C26E54 File Offset: 0x00C25054
 		public bool IsIllustratedReward()
 		{
 			foreach (KeyValuePair<int, SignState> keyValuePair in this.IllustratedState)
@@ -99,7 +98,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return false;
 		}
 
-		// Token: 0x06036520 RID: 222496 RVA: 0x00CD96F4 File Offset: 0x00CD78F4
+		// Token: 0x0602B41B RID: 177179 RVA: 0x00C26EB4 File Offset: 0x00C250B4
 		public bool IsTaskReward()
 		{
 			if (this.GetFirstCheckRedDotState(EPermanentRogueSaveFlag.NewTaskCheck))
@@ -116,7 +115,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return false;
 		}
 
-		// Token: 0x06036521 RID: 222497 RVA: 0x00CD9764 File Offset: 0x00CD7964
+		// Token: 0x0602B41C RID: 177180 RVA: 0x00C26F24 File Offset: 0x00C25124
 		protected override void PhraseEx(ActivityData data)
 		{
 			RogueResActivityData rogueResActivityData = data.RogueResActivityData;
@@ -134,7 +133,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.InitShopItem(rogueResActivityData.RogueResSeasonData);
 		}
 
-		// Token: 0x06036522 RID: 222498 RVA: 0x00CD97F0 File Offset: 0x00CD79F0
+		// Token: 0x0602B41D RID: 177181 RVA: 0x00C26FB0 File Offset: 0x00C251B0
 		[NullableContext(2)]
 		public RogueResSeasonData GetSeasonDataById(int seasonId)
 		{
@@ -146,7 +145,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return null;
 		}
 
-		// Token: 0x06036523 RID: 222499 RVA: 0x00CD9810 File Offset: 0x00CD7A10
+		// Token: 0x0602B41E RID: 177182 RVA: 0x00C26FD0 File Offset: 0x00C251D0
 		public int GetNewSeasonId()
 		{
 			int num = -1;
@@ -160,14 +159,14 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return num;
 		}
 
-		// Token: 0x06036524 RID: 222500 RVA: 0x00CD9874 File Offset: 0x00CD7A74
+		// Token: 0x0602B41F RID: 177183 RVA: 0x00C27034 File Offset: 0x00C25234
 		public long GetCycleRemainTime()
 		{
 			int newSeasonId = this.GetNewSeasonId();
 			return this.GetSeasonDataById(newSeasonId).EndTime;
 		}
 
-		// Token: 0x06036525 RID: 222501 RVA: 0x00CD9894 File Offset: 0x00CD7A94
+		// Token: 0x0602B420 RID: 177184 RVA: 0x00C27054 File Offset: 0x00C25254
 		private void InitIllustratedData(RogueResActivityData rogueData)
 		{
 			if (this.IllustratedTokenMap.Count == 0)
@@ -194,7 +193,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x06036526 RID: 222502 RVA: 0x00CD9954 File Offset: 0x00CD7B54
+		// Token: 0x0602B421 RID: 177185 RVA: 0x00C27114 File Offset: 0x00C25314
 		private void InitIllustratedMap()
 		{
 			IReadOnlyList<RogueResTheme> configList = ConfigRogueResThemeAll.GetConfigList(true);
@@ -213,7 +212,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x06036527 RID: 222503 RVA: 0x00CD9A18 File Offset: 0x00CD7C18
+		// Token: 0x0602B422 RID: 177186 RVA: 0x00C271D8 File Offset: 0x00C253D8
 		private void SetTokenMapInfo(int tokenIndex)
 		{
 			this.IllustratedTokenMap[0].Add(tokenIndex);
@@ -224,19 +223,52 @@ namespace CSharpScript.Game.Module.PermanentRogue
 				int key = keyValuePair.Key;
 				if (flag)
 				{
-					if (config == null || !config.Value.SeasonsIter().Contains(key))
+					bool flag2 = false;
+					if (config != null)
+					{
+						using (IEnumerator<int> enumerator2 = config.Value.SeasonsIter().GetEnumerator())
+						{
+							while (enumerator2.MoveNext())
+							{
+								if (enumerator2.Current == key)
+								{
+									flag2 = true;
+									break;
+								}
+							}
+						}
+					}
+					if (!flag2)
 					{
 						this.IllustratedTokenMap[key].Add(tokenIndex);
 					}
 				}
-				else if (config != null && config.Value.SeasonsIter().Contains(key))
+				else
 				{
-					this.IllustratedTokenMap[key].Add(tokenIndex);
+					bool flag3 = false;
+					if (config != null)
+					{
+						using (IEnumerator<int> enumerator2 = config.Value.SeasonsIter().GetEnumerator())
+						{
+							while (enumerator2.MoveNext())
+							{
+								if (enumerator2.Current == key)
+								{
+									flag3 = true;
+									break;
+								}
+							}
+						}
+					}
+					if (flag3)
+					{
+						this.IllustratedTokenMap[key].Add(tokenIndex);
+					}
 				}
 			}
 		}
 
-		// Token: 0x06036528 RID: 222504 RVA: 0x00CD9B38 File Offset: 0x00CD7D38
+		// Token: 0x0602B423 RID: 177187 RVA: 0x00C2736C File Offset: 0x00C2556C
 		private void SetNormalMapInfo(int index)
 		{
 			this.IllustratedNormalMap[0].Add(index);
@@ -247,19 +279,52 @@ namespace CSharpScript.Game.Module.PermanentRogue
 				int key = keyValuePair.Key;
 				if (flag)
 				{
-					if (config == null || !config.Value.SeasonsIter().Contains(key))
+					bool flag2 = false;
+					if (config != null)
+					{
+						using (IEnumerator<int> enumerator2 = config.Value.SeasonsIter().GetEnumerator())
+						{
+							while (enumerator2.MoveNext())
+							{
+								if (enumerator2.Current == key)
+								{
+									flag2 = true;
+									break;
+								}
+							}
+						}
+					}
+					if (!flag2)
 					{
 						this.IllustratedNormalMap[key].Add(index);
 					}
 				}
-				else if (config != null && config.Value.SeasonsIter().Contains(key))
+				else
 				{
-					this.IllustratedNormalMap[key].Add(index);
+					bool flag3 = false;
+					if (config != null)
+					{
+						using (IEnumerator<int> enumerator2 = config.Value.SeasonsIter().GetEnumerator())
+						{
+							while (enumerator2.MoveNext())
+							{
+								if (enumerator2.Current == key)
+								{
+									flag3 = true;
+									break;
+								}
+							}
+						}
+					}
+					if (flag3)
+					{
+						this.IllustratedNormalMap[key].Add(index);
+					}
 				}
 			}
 		}
 
-		// Token: 0x06036529 RID: 222505 RVA: 0x00CD9C58 File Offset: 0x00CD7E58
+		// Token: 0x0602B424 RID: 177188 RVA: 0x00C27500 File Offset: 0x00C25700
 		private void SetMapMapInfo(int index)
 		{
 			this.IllustratedMapMap[0].Add(index);
@@ -270,19 +335,52 @@ namespace CSharpScript.Game.Module.PermanentRogue
 				int key = keyValuePair.Key;
 				if (flag)
 				{
-					if (config == null || !config.Value.SeasonsIter().Contains(key))
+					bool flag2 = false;
+					if (config != null)
+					{
+						using (IEnumerator<int> enumerator2 = config.Value.SeasonsIter().GetEnumerator())
+						{
+							while (enumerator2.MoveNext())
+							{
+								if (enumerator2.Current == key)
+								{
+									flag2 = true;
+									break;
+								}
+							}
+						}
+					}
+					if (!flag2)
 					{
 						this.IllustratedMapMap[key].Add(index);
 					}
 				}
-				else if (config != null && config.Value.SeasonsIter().Contains(key))
+				else
 				{
-					this.IllustratedMapMap[key].Add(index);
+					bool flag3 = false;
+					if (config != null)
+					{
+						using (IEnumerator<int> enumerator2 = config.Value.SeasonsIter().GetEnumerator())
+						{
+							while (enumerator2.MoveNext())
+							{
+								if (enumerator2.Current == key)
+								{
+									flag3 = true;
+									break;
+								}
+							}
+						}
+					}
+					if (flag3)
+					{
+						this.IllustratedMapMap[key].Add(index);
+					}
 				}
 			}
 		}
 
-		// Token: 0x0603652A RID: 222506 RVA: 0x00CD9D78 File Offset: 0x00CD7F78
+		// Token: 0x0602B425 RID: 177189 RVA: 0x00C27694 File Offset: 0x00C25894
 		public void UpdateIllustrateState(RogueResIllustrationUpdateNotify updateData)
 		{
 			foreach (int num in updateData.Dict.Keys)
@@ -306,7 +404,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			EventSystem.Instance.Emit(EEventName.PermanentRogueRewardUpdate);
 		}
 
-		// Token: 0x0603652B RID: 222507 RVA: 0x00CD9E34 File Offset: 0x00CD8034
+		// Token: 0x0602B426 RID: 177190 RVA: 0x00C27750 File Offset: 0x00C25950
 		public HashSet<int> GetTokenIndexSet(int seasonId)
 		{
 			HashSet<int> result;
@@ -317,7 +415,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return new HashSet<int>();
 		}
 
-		// Token: 0x0603652C RID: 222508 RVA: 0x00CD9E58 File Offset: 0x00CD8058
+		// Token: 0x0602B427 RID: 177191 RVA: 0x00C27774 File Offset: 0x00C25974
 		public List<int> GetTokenInSeason(int token)
 		{
 			List<int> list = new List<int>();
@@ -331,7 +429,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return list;
 		}
 
-		// Token: 0x0603652D RID: 222509 RVA: 0x00CD9EC8 File Offset: 0x00CD80C8
+		// Token: 0x0602B428 RID: 177192 RVA: 0x00C277E4 File Offset: 0x00C259E4
 		public HashSet<int> GetNormalIndexSet(int seasonId)
 		{
 			HashSet<int> result;
@@ -342,7 +440,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return new HashSet<int>();
 		}
 
-		// Token: 0x0603652E RID: 222510 RVA: 0x00CD9EEC File Offset: 0x00CD80EC
+		// Token: 0x0602B429 RID: 177193 RVA: 0x00C27808 File Offset: 0x00C25A08
 		public List<int> GetEventNormalInSeason(int id)
 		{
 			List<int> list = new List<int>();
@@ -356,7 +454,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return list;
 		}
 
-		// Token: 0x0603652F RID: 222511 RVA: 0x00CD9F5C File Offset: 0x00CD815C
+		// Token: 0x0602B42A RID: 177194 RVA: 0x00C27878 File Offset: 0x00C25A78
 		public HashSet<int> GetMapIndexSet(int seasonId)
 		{
 			HashSet<int> result;
@@ -367,7 +465,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return new HashSet<int>();
 		}
 
-		// Token: 0x06036530 RID: 222512 RVA: 0x00CD9F80 File Offset: 0x00CD8180
+		// Token: 0x0602B42B RID: 177195 RVA: 0x00C2789C File Offset: 0x00C25A9C
 		public List<int> GetEventMapInSeason(int id)
 		{
 			List<int> list = new List<int>();
@@ -381,7 +479,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return list;
 		}
 
-		// Token: 0x06036531 RID: 222513 RVA: 0x00CD9FF0 File Offset: 0x00CD81F0
+		// Token: 0x0602B42C RID: 177196 RVA: 0x00C2790C File Offset: 0x00C25B0C
 		public SignState GetCollectItemState(int index)
 		{
 			if (!this.IllustratedState.ContainsKey(index))
@@ -391,13 +489,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return this.IllustratedState[index];
 		}
 
-		// Token: 0x06036532 RID: 222514 RVA: 0x00CDA00E File Offset: 0x00CD820E
+		// Token: 0x0602B42D RID: 177197 RVA: 0x00C2792A File Offset: 0x00C25B2A
 		public Dictionary<int, SignState> GetAllIllustratedState()
 		{
 			return this.IllustratedState;
 		}
 
-		// Token: 0x06036533 RID: 222515 RVA: 0x00CDA018 File Offset: 0x00CD8218
+		// Token: 0x0602B42E RID: 177198 RVA: 0x00C27934 File Offset: 0x00C25B34
 		public void SetIllustratedRewardGot(int[] indexList)
 		{
 			foreach (int key in indexList)
@@ -406,7 +504,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x06036534 RID: 222516 RVA: 0x00CDA048 File Offset: 0x00CD8248
+		// Token: 0x0602B42F RID: 177199 RVA: 0x00C27964 File Offset: 0x00C25B64
 		private void InitRogueQuest(RogueResActivityData rogueData)
 		{
 			RogueResTaskUpdateNotify rogueResTaskUpdateNotify = rogueData.RogueResGlobalInfo.RogueResTaskUpdateNotify;
@@ -442,7 +540,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x06036535 RID: 222517 RVA: 0x00CDA1EC File Offset: 0x00CD83EC
+		// Token: 0x0602B430 RID: 177200 RVA: 0x00C27B08 File Offset: 0x00C25D08
 		public List<int> GetTaskListByType(int type)
 		{
 			List<int> result;
@@ -453,19 +551,19 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return new List<int>();
 		}
 
-		// Token: 0x06036536 RID: 222518 RVA: 0x00CDA210 File Offset: 0x00CD8410
+		// Token: 0x0602B431 RID: 177201 RVA: 0x00C27B2C File Offset: 0x00C25D2C
 		public RogueTaskData GetTaskById(int configId)
 		{
 			return this.TaskDataMap[configId];
 		}
 
-		// Token: 0x06036537 RID: 222519 RVA: 0x00CDA21E File Offset: 0x00CD841E
+		// Token: 0x0602B432 RID: 177202 RVA: 0x00C27B3A File Offset: 0x00C25D3A
 		public int GetTaskThemeId()
 		{
 			return this.RogueTaskConfigId;
 		}
 
-		// Token: 0x06036538 RID: 222520 RVA: 0x00CDA226 File Offset: 0x00CD8426
+		// Token: 0x0602B433 RID: 177203 RVA: 0x00C27B42 File Offset: 0x00C25D42
 		public void SetTaskRewardGot(int configId)
 		{
 			if (!this.TaskDataMap.ContainsKey(configId))
@@ -475,7 +573,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.TaskDataMap[configId].Status = ActivityTaskState.ActivityTaskTaken;
 		}
 
-		// Token: 0x06036539 RID: 222521 RVA: 0x00CDA24C File Offset: 0x00CD844C
+		// Token: 0x0602B434 RID: 177204 RVA: 0x00C27B68 File Offset: 0x00C25D68
 		public void UpdateTaskNotify(RogueResTaskUpdateNotify updateData)
 		{
 			if (updateData.RogueResBranchTaskTheme != null)
@@ -501,7 +599,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			EventSystem.Instance.Emit(EEventName.PermanentRogueRewardUpdate);
 		}
 
-		// Token: 0x0603653A RID: 222522 RVA: 0x00CDA368 File Offset: 0x00CD8568
+		// Token: 0x0602B435 RID: 177205 RVA: 0x00C27C84 File Offset: 0x00C25E84
 		private void InitEnding(IList<RogueResSeasonData> seasons)
 		{
 			foreach (RogueResSeasonData rogueResSeasonData in seasons)
@@ -529,14 +627,14 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x0603653B RID: 222523 RVA: 0x00CDA4F4 File Offset: 0x00CD86F4
+		// Token: 0x0602B436 RID: 177206 RVA: 0x00C27E10 File Offset: 0x00C26010
 		public bool GetEndingReachedById(int seasonId, int endingId)
 		{
 			HashSet<int> hashSet;
 			return this.EndingSetMap.TryGetValue(seasonId, out hashSet) && hashSet.Contains(endingId);
 		}
 
-		// Token: 0x0603653C RID: 222524 RVA: 0x00CDA51C File Offset: 0x00CD871C
+		// Token: 0x0602B437 RID: 177207 RVA: 0x00C27E38 File Offset: 0x00C26038
 		public void UpdateEndingAward(int taskId)
 		{
 			IActivityRewardData activityRewardData = this.EndingMultiRewardState[taskId];
@@ -544,7 +642,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.EndingMultiRewardState[taskId] = activityRewardData;
 		}
 
-		// Token: 0x0603653D RID: 222525 RVA: 0x00CDA54C File Offset: 0x00CD874C
+		// Token: 0x0602B438 RID: 177208 RVA: 0x00C27E68 File Offset: 0x00C26068
 		public void UpdateEndingNotify(RogueResEndingUpdateNotify message)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -577,7 +675,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x0603653E RID: 222526 RVA: 0x00CDA710 File Offset: 0x00CD8910
+		// Token: 0x0602B439 RID: 177209 RVA: 0x00C2802C File Offset: 0x00C2622C
 		private void UpdateEndingReward(ActivityTask data)
 		{
 			IActivityRewardData activityRewardData;
@@ -625,7 +723,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.EndingMultiRewardState[data.Id] = activityRewardData;
 		}
 
-		// Token: 0x0603653F RID: 222527 RVA: 0x00CDA904 File Offset: 0x00CD8B04
+		// Token: 0x0602B43A RID: 177210 RVA: 0x00C28220 File Offset: 0x00C26420
 		public List<IActivityRewardData> GetEndingAwardList(int seasonId)
 		{
 			List<int> list;
@@ -641,7 +739,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return list2;
 		}
 
-		// Token: 0x06036540 RID: 222528 RVA: 0x00CDA97C File Offset: 0x00CD8B7C
+		// Token: 0x0602B43B RID: 177211 RVA: 0x00C28298 File Offset: 0x00C26498
 		public void InitShopItem(IList<RogueResSeasonData> data)
 		{
 			foreach (RogueResSeasonData rogueResSeasonData in data)
@@ -650,13 +748,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x06036541 RID: 222529 RVA: 0x00CDA9D0 File Offset: 0x00CD8BD0
+		// Token: 0x0602B43C RID: 177212 RVA: 0x00C282EC File Offset: 0x00C264EC
 		public void UpdateTotalShopItem(int season, int count)
 		{
 			this.ShopItemCount[season] = count;
 		}
 
-		// Token: 0x06036542 RID: 222530 RVA: 0x00CDA9E0 File Offset: 0x00CD8BE0
+		// Token: 0x0602B43D RID: 177213 RVA: 0x00C282FC File Offset: 0x00C264FC
 		public int GetTotalShopItem(int season)
 		{
 			int result;
@@ -667,16 +765,16 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return 0;
 		}
 
-		// Token: 0x06036543 RID: 222531 RVA: 0x00CDAA00 File Offset: 0x00CD8C00
+		// Token: 0x0602B43E RID: 177214 RVA: 0x00C2831C File Offset: 0x00C2651C
 		public void UpgradeSkill(int skillId, int level)
 		{
 			this.GetSeasonDataById(ConfigRogueResTalentTreeById.GetConfig(skillId, true).Value.SeasonId).TalentSkillDict[skillId] = level;
 		}
 
-		// Token: 0x0401CB29 RID: 117545
+		// Token: 0x0401755E RID: 95582
 		private const int ALL_SEASON_ID = 0;
 
-		// Token: 0x0401CB2A RID: 117546
+		// Token: 0x0401755F RID: 95583
 		private readonly Dictionary<ActivityTaskState, EActivityRewardState> TaskStateToRewardState = new Dictionary<ActivityTaskState, EActivityRewardState>
 		{
 			{
@@ -693,43 +791,43 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		};
 
-		// Token: 0x0401CB2B RID: 117547
+		// Token: 0x04017560 RID: 95584
 		private readonly Dictionary<int, RogueResSeasonData> RogueSeasonDataMap = new Dictionary<int, RogueResSeasonData>();
 
-		// Token: 0x0401CB2C RID: 117548
+		// Token: 0x04017561 RID: 95585
 		private readonly Dictionary<int, SignState> IllustratedState = new Dictionary<int, SignState>();
 
-		// Token: 0x0401CB2D RID: 117549
+		// Token: 0x04017562 RID: 95586
 		private readonly Dictionary<int, HashSet<int>> IllustratedTokenMap = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x0401CB2E RID: 117550
+		// Token: 0x04017563 RID: 95587
 		private readonly Dictionary<int, HashSet<int>> IllustratedNormalMap = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x0401CB2F RID: 117551
+		// Token: 0x04017564 RID: 95588
 		private readonly Dictionary<int, HashSet<int>> IllustratedMapMap = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x0401CB30 RID: 117552
+		// Token: 0x04017565 RID: 95589
 		private readonly Dictionary<int, RogueTaskData> TaskDataMap = new Dictionary<int, RogueTaskData>();
 
-		// Token: 0x0401CB31 RID: 117553
+		// Token: 0x04017566 RID: 95590
 		public long TaskEndTime;
 
-		// Token: 0x0401CB32 RID: 117554
+		// Token: 0x04017567 RID: 95591
 		private readonly Dictionary<int, List<int>> TaskDataListMap = new Dictionary<int, List<int>>();
 
-		// Token: 0x0401CB33 RID: 117555
+		// Token: 0x04017568 RID: 95592
 		private readonly Dictionary<int, HashSet<int>> EndingSetMap = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x0401CB34 RID: 117556
+		// Token: 0x04017569 RID: 95593
 		private readonly Dictionary<int, List<int>> EndingMultiReward = new Dictionary<int, List<int>>();
 
-		// Token: 0x0401CB35 RID: 117557
+		// Token: 0x0401756A RID: 95594
 		private readonly Dictionary<int, IActivityRewardData> EndingMultiRewardState = new Dictionary<int, IActivityRewardData>();
 
-		// Token: 0x0401CB36 RID: 117558
+		// Token: 0x0401756B RID: 95595
 		private readonly Dictionary<int, int> ShopItemCount = new Dictionary<int, int>();
 
-		// Token: 0x0401CB37 RID: 117559
+		// Token: 0x0401756C RID: 95596
 		private int RogueTaskConfigId;
 	}
 }

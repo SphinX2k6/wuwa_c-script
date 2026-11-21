@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055E1 RID: 21985
+	// Token: 0x020045B7 RID: 17847
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRoguePanelFetter : UiPanelBase
 	{
-		// Token: 0x0603801E RID: 229406 RVA: 0x00D43D30 File Offset: 0x00D41F30
+		// Token: 0x0602CF1C RID: 184092 RVA: 0x00C91A78 File Offset: 0x00C8FC78
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0603801F RID: 229407 RVA: 0x00D43DF4 File Offset: 0x00D41FF4
+		// Token: 0x0602CF1D RID: 184093 RVA: 0x00C91B3C File Offset: 0x00C8FD3C
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayerInstance = new LevelSequencePlayer(this.RootItem);
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.RefreshTxt();
 		}
 
-		// Token: 0x06038020 RID: 229408 RVA: 0x00D43E51 File Offset: 0x00D42051
+		// Token: 0x0602CF1E RID: 184094 RVA: 0x00C91B99 File Offset: 0x00C8FD99
 		protected override void OnBeforeShow()
 		{
 			this.RefreshFetter();
 		}
 
-		// Token: 0x06038021 RID: 229409 RVA: 0x00D43E5C File Offset: 0x00D4205C
+		// Token: 0x0602CF1F RID: 184095 RVA: 0x00C91BA4 File Offset: 0x00C8FDA4
 		public void RefreshFetter()
 		{
 			List<RoleBondInfo> allOwnedRoleBondData = RogueBattleModel.Instance.GetAllOwnedRoleBondData();
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.FetterLayout.RefreshByData(data, null, false);
 		}
 
-		// Token: 0x06038022 RID: 229410 RVA: 0x00D43F1C File Offset: 0x00D4211C
+		// Token: 0x0602CF20 RID: 184096 RVA: 0x00C91C64 File Offset: 0x00C8FE64
 		private FetterItem OnCreateItem()
 		{
 			return new FetterItem
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x06038023 RID: 229411 RVA: 0x00D43F38 File Offset: 0x00D42138
+		// Token: 0x0602CF21 RID: 184097 RVA: 0x00C91C80 File Offset: 0x00C8FE80
 		private void OnBtnFetterClick()
 		{
 			if (this.CheckCanOpenMenu != null && !this.CheckCanOpenMenu())
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			MapRogueController.Instance.OpenRogueFetterView(null);
 		}
 
-		// Token: 0x06038024 RID: 229412 RVA: 0x00D43F70 File Offset: 0x00D42170
+		// Token: 0x0602CF22 RID: 184098 RVA: 0x00C91CB8 File Offset: 0x00C8FEB8
 		private void OnCloseEvent(string sequenceName)
 		{
 			if (sequenceName == "Close")
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038025 RID: 229413 RVA: 0x00D43FC8 File Offset: 0x00D421C8
+		// Token: 0x0602CF23 RID: 184099 RVA: 0x00C91D10 File Offset: 0x00C8FF10
 		private void OnTogFoldClick(EToggleState state)
 		{
 			this.VisibleState = !this.VisibleState;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.LevelSequencePlayerInstance.PlayOrReplaySequenceByName("Close", false, null);
 		}
 
-		// Token: 0x06038026 RID: 229414 RVA: 0x00D4405B File Offset: 0x00D4225B
+		// Token: 0x0602CF24 RID: 184100 RVA: 0x00C91DA3 File Offset: 0x00C8FFA3
 		private void OnFetterItemClick(IRogueBattleRoleBondUpdateInfo fetterData)
 		{
 			if (fetterData.NewRoleBondInfo.ConfigId == 0)
@@ -131,20 +131,20 @@ namespace CSharpScript.Game.Module.MapRogue
 			MapRogueController.Instance.OpenRogueFetterView(new int?(fetterData.NewRoleBondInfo.ConfigId));
 		}
 
-		// Token: 0x06038027 RID: 229415 RVA: 0x00D4409C File Offset: 0x00D4229C
+		// Token: 0x0602CF25 RID: 184101 RVA: 0x00C91DE4 File Offset: 0x00C8FFE4
 		private void RefreshTxt()
 		{
 			string textStringId = this.VisibleState ? "RogueRes_BondMain_Open" : "RogueRes_BondMain_Close";
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), textStringId, Array.Empty<object>());
 		}
 
-		// Token: 0x06038028 RID: 229416 RVA: 0x00D440D8 File Offset: 0x00D422D8
+		// Token: 0x0602CF26 RID: 184102 RVA: 0x00C91E20 File Offset: 0x00C90020
 		public void SetToggleVisible(bool bVisible)
 		{
 			base.GetExtendToggle(3).RootUIComp.Get().SetUIActive(bVisible);
 		}
 
-		// Token: 0x06038029 RID: 229417 RVA: 0x00D44100 File Offset: 0x00D42300
+		// Token: 0x0602CF27 RID: 184103 RVA: 0x00C91E48 File Offset: 0x00C90048
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -169,11 +169,11 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0401D6C7 RID: 120519
+		// Token: 0x04018152 RID: 98642
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayerInstance;
 
-		// Token: 0x0401D6C8 RID: 120520
+		// Token: 0x04018153 RID: 98643
 		[Nullable(new byte[]
 		{
 			2,
@@ -182,21 +182,21 @@ namespace CSharpScript.Game.Module.MapRogue
 		})]
 		protected GenericLayout<FetterItem, IRogueBattleRoleBondUpdateInfo> FetterLayout;
 
-		// Token: 0x0401D6C9 RID: 120521
+		// Token: 0x04018154 RID: 98644
 		[Nullable(2)]
 		public Func<bool> CheckCanOpenMenu;
 
-		// Token: 0x0401D6CA RID: 120522
+		// Token: 0x04018155 RID: 98645
 		private bool VisibleState = true;
 
-		// Token: 0x0401D6CB RID: 120523
+		// Token: 0x04018156 RID: 98646
 		private const int FETTER_DISPLAY_NUM = 5;
 
-		// Token: 0x0200B7AA RID: 47018
+		// Token: 0x0200A1D5 RID: 41429
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04037945 RID: 227653
+			// Token: 0x0403236F RID: 205679
 			[Nullable(new byte[]
 			{
 				0,

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AE9 RID: 2793
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000BB4 RID: 2996
 	public class IFinishStateTrigger
 	{
-		// Token: 0x06004053 RID: 16467 RVA: 0x000A43D2 File Offset: 0x000A25D2
+		// Token: 0x06004482 RID: 17538 RVA: 0x000ADA06 File Offset: 0x000ABC06
 		public static IFinishStateTrigger Create(IFinishStateTrigger? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700103E RID: 4158
-		// (get) Token: 0x06004054 RID: 16468 RVA: 0x000A43F1 File Offset: 0x000A25F1
+		// Token: 0x17001115 RID: 4373
+		// (get) Token: 0x06004483 RID: 17539 RVA: 0x000ADA25 File Offset: 0x000ABC25
 		public virtual bool IsSilenceEntities
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700103F RID: 4159
-		// (get) Token: 0x06004055 RID: 16469 RVA: 0x000A43FE File Offset: 0x000A25FE
+		// Token: 0x17001116 RID: 4374
+		// (get) Token: 0x06004484 RID: 17540 RVA: 0x000ADA32 File Offset: 0x000ABC32
 		public virtual IEntityGroupCondition GroupCondition
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040023D4 RID: 9172
+		// Token: 0x040025F1 RID: 9713
 		private IFinishStateTrigger Instance;
 
-		// Token: 0x040023D5 RID: 9173
+		// Token: 0x040025F2 RID: 9714
 		[Nullable(2)]
 		private IEntityGroupCondition _GroupConditionCache;
 
-		// Token: 0x040023D6 RID: 9174
+		// Token: 0x040025F3 RID: 9715
 		private bool _GroupConditionInited;
 	}
 }

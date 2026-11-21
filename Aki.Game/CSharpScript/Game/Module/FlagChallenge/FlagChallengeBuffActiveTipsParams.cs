@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A51 RID: 23121
+	// Token: 0x02004A2D RID: 18989
 	public class FlagChallengeBuffActiveTipsParams
 	{
-		// Token: 0x0401E8DE RID: 125150
+		// Token: 0x04019385 RID: 103301
 		public int ActivityId;
 	}
 }

@@ -1,54 +1,54 @@
 ﻿using System;
 
-// Token: 0x02002903 RID: 10499
+// Token: 0x02001E7E RID: 7806
 public enum ERouletteExploreId
 {
-	// Token: 0x0400A142 RID: 41282
+	// Token: 0x0400A52D RID: 42285
 	钩索 = 1001,
-	// Token: 0x0400A143 RID: 41283
+	// Token: 0x0400A52E RID: 42286
 	悬浮驱动 = 1003,
-	// Token: 0x0400A144 RID: 41284
+	// Token: 0x0400A52F RID: 42287
 	声域感知,
-	// Token: 0x0400A145 RID: 41285
+	// Token: 0x0400A530 RID: 42288
 	声骸显像 = 1007,
-	// Token: 0x0400A146 RID: 41286
+	// Token: 0x0400A531 RID: 42289
 	溯言刻录,
-	// Token: 0x0400A147 RID: 41287
+	// Token: 0x0400A532 RID: 42290
 	影像速采,
-	// Token: 0x0400A148 RID: 41288
+	// Token: 0x0400A533 RID: 42291
 	道具装配 = 3001,
-	// Token: 0x0400A149 RID: 41289
+	// Token: 0x0400A534 RID: 42292
 	道具空置,
-	// Token: 0x0400A14A RID: 41290
+	// Token: 0x0400A535 RID: 42293
 	临时传送 = 1010,
-	// Token: 0x0400A14B RID: 41291
+	// Token: 0x0400A536 RID: 42294
 	声匣探测,
-	// Token: 0x0400A14C RID: 41292
+	// Token: 0x0400A537 RID: 42295
 	物资探测,
-	// Token: 0x0400A14D RID: 41293
+	// Token: 0x0400A538 RID: 42296
 	辅助机,
-	// Token: 0x0400A14E RID: 41294
+	// Token: 0x0400A539 RID: 42297
 	翱翔 = 1015,
-	// Token: 0x0400A14F RID: 41295
+	// Token: 0x0400A53A RID: 42298
 	捕鱼诱饵 = 1018,
-	// Token: 0x0400A150 RID: 41296
+	// Token: 0x0400A53B RID: 42299
 	捕鱼回城,
-	// Token: 0x0400A151 RID: 41297
+	// Token: 0x0400A53C RID: 42300
 	捕鱼驱散幽灵,
-	// Token: 0x0400A152 RID: 41298
+	// Token: 0x0400A53D RID: 42301
 	捕鱼炸鱼,
-	// Token: 0x0400A153 RID: 41299
+	// Token: 0x0400A53E RID: 42302
 	时停相机 = 1029,
-	// Token: 0x0400A154 RID: 41300
+	// Token: 0x0400A53F RID: 42303
 	摩托自动巡航 = 6001,
-	// Token: 0x0400A155 RID: 41301
+	// Token: 0x0400A540 RID: 42304
 	摩托车电台 = 6003,
-	// Token: 0x0400A156 RID: 41302
+	// Token: 0x0400A541 RID: 42305
 	摩托上车接自动巡航 = 6006,
-	// Token: 0x0400A157 RID: 41303
+	// Token: 0x0400A542 RID: 42306
 	摩托车声骸显像 = 6008,
-	// Token: 0x0400A158 RID: 41304
+	// Token: 0x0400A543 RID: 42307
 	摩托车停靠 = 6015,
-	// Token: 0x0400A159 RID: 41305
+	// Token: 0x0400A544 RID: 42308
 	摩托车切换科技树 = 6020
 }

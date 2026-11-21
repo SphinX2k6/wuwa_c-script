@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067E3 RID: 26595
+	// Token: 0x02005733 RID: 22323
 	public class DangoBrawlBackpackOccupationBtnItem : UiPanelBase
 	{
-		// Token: 0x060423BD RID: 271293 RVA: 0x01012138 File Offset: 0x01010338
+		// Token: 0x06036F13 RID: 225043 RVA: 0x00F535D0 File Offset: 0x00F517D0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060423BE RID: 271294 RVA: 0x01012220 File Offset: 0x01010420
+		// Token: 0x06036F14 RID: 225044 RVA: 0x00F536B8 File Offset: 0x00F518B8
 		public void Refresh(int occupationId)
 		{
 			this.OccupationId = occupationId;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060423BF RID: 271295 RVA: 0x010122FC File Offset: 0x010104FC
+		// Token: 0x06036F15 RID: 225045 RVA: 0x00F53794 File Offset: 0x00F51994
 		private void OnClickItem()
 		{
 			DangoBrawlHandBookViewOpenData param = new DangoBrawlHandBookViewOpenData
@@ -68,19 +68,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			UiManager.Instance.OpenView(EUiViewName.DangoBrawlHandBookView, param, null);
 		}
 
-		// Token: 0x04022909 RID: 141577
+		// Token: 0x0401D166 RID: 119142
 		private int OccupationId;
 
-		// Token: 0x0200C8FA RID: 51450
+		// Token: 0x0200B2CA RID: 45770
 		private enum EBtnComponents
 		{
-			// Token: 0x0403CAC5 RID: 248517
+			// Token: 0x040373BA RID: 226234
 			BtnItem,
-			// Token: 0x0403CAC6 RID: 248518
+			// Token: 0x040373BB RID: 226235
 			TexIcon,
-			// Token: 0x0403CAC7 RID: 248519
+			// Token: 0x040373BC RID: 226236
 			TxtDesc,
-			// Token: 0x0403CAC8 RID: 248520
+			// Token: 0x040373BD RID: 226237
 			TxtDescExtra
 		}
 	}

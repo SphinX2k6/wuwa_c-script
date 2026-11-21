@@ -13,14 +13,14 @@ using Cysharp.Threading.Tasks;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x020025E0 RID: 9696
+// Token: 0x02001ACB RID: 6859
 [NullableContext(2)]
 [Nullable(0)]
 [Controller(0)]
 [TickController(0)]
 public class PilotThrowController : ControllerBase
 {
-	// Token: 0x06013B55 RID: 80725 RVA: 0x004F054C File Offset: 0x004EE74C
+	// Token: 0x06011037 RID: 69687 RVA: 0x004FF27C File Offset: 0x004FD47C
 	[NullableContext(1)]
 	public unsafe void EnterInteractHookPoint(int hookPointPbDataId, int titanEntityId, List<IPilotThrowTarget> pilotThrowTarget)
 	{
@@ -98,8 +98,8 @@ public class PilotThrowController : ControllerBase
 		}
 	}
 
-	// Token: 0x17001946 RID: 6470
-	// (get) Token: 0x06013B56 RID: 80726 RVA: 0x004F08B6 File Offset: 0x004EEAB6
+	// Token: 0x1700197E RID: 6526
+	// (get) Token: 0x06011038 RID: 69688 RVA: 0x004FF5E6 File Offset: 0x004FD7E6
 	public USplineComponent ProjectileSpline
 	{
 		get
@@ -108,7 +108,7 @@ public class PilotThrowController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013B57 RID: 80727 RVA: 0x004F08C0 File Offset: 0x004EEAC0
+	// Token: 0x06011039 RID: 69689 RVA: 0x004FF5F0 File Offset: 0x004FD7F0
 	public void GenerateProjectilePoints()
 	{
 		if (this.PathPositions == null)
@@ -167,7 +167,7 @@ public class PilotThrowController : ControllerBase
 		base.ResumeTick();
 	}
 
-	// Token: 0x06013B58 RID: 80728 RVA: 0x004F0AFC File Offset: 0x004EECFC
+	// Token: 0x0601103A RID: 69690 RVA: 0x004FF82C File Offset: 0x004FDA2C
 	public void ClearProjectilePoints()
 	{
 		if (this.CacheProjectileEffectHandle != null && EffectSystem.Instance.IsValid(this.CacheProjectileEffectHandle.Value))
@@ -189,7 +189,7 @@ public class PilotThrowController : ControllerBase
 		base.PauseTick();
 	}
 
-	// Token: 0x06013B59 RID: 80729 RVA: 0x004F0BF4 File Offset: 0x004EEDF4
+	// Token: 0x0601103B RID: 69691 RVA: 0x004FF924 File Offset: 0x004FDB24
 	private void UpdateProjectileSpline()
 	{
 		if (this.CacheProjectileSplineComp == null)
@@ -337,20 +337,20 @@ public class PilotThrowController : ControllerBase
 		this.FinalDestinationEffectHandle = new int?(instance.SpawnEffect(world, ftransformDouble2, setting.终点特效.ToAssetPathName(), "[PilotThrowController] FinalDestinationEffectHandle", new EffectContext(new int?(getCurrentEntity2.Entity.Id), null, false), EEffectType.Scene, null, null, null, false, false));
 	}
 
-	// Token: 0x06013B5A RID: 80730 RVA: 0x004F126B File Offset: 0x004EF46B
+	// Token: 0x0601103C RID: 69692 RVA: 0x004FFF9B File Offset: 0x004FE19B
 	protected override void OnTick(float delta)
 	{
 		this.UpdateProjectileSpline();
 	}
 
-	// Token: 0x06013B5B RID: 80731 RVA: 0x004F1273 File Offset: 0x004EF473
+	// Token: 0x0601103D RID: 69693 RVA: 0x004FFFA3 File Offset: 0x004FE1A3
 	protected override bool OnInit()
 	{
 		base.PauseTick();
 		return true;
 	}
 
-	// Token: 0x06013B5C RID: 80732 RVA: 0x004F127C File Offset: 0x004EF47C
+	// Token: 0x0601103E RID: 69694 RVA: 0x004FFFAC File Offset: 0x004FE1AC
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	private unsafe global::Vector CalculateLaunchAngle(global::Vector startPos, global::Vector targetPos, float gravity, float v0, EPilotThrowAutoThrowType launchType)
@@ -418,7 +418,7 @@ public class PilotThrowController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013B5D RID: 80733 RVA: 0x004F150C File Offset: 0x004EF70C
+	// Token: 0x0601103F RID: 69695 RVA: 0x0050023C File Offset: 0x004FE43C
 	public void RequestChangePilotState(bool isLaunch)
 	{
 		PilotThrowOperationRequest pilotThrowOperationRequest = PilotThrowOperationRequest.Create();
@@ -428,8 +428,8 @@ public class PilotThrowController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x17001947 RID: 6471
-	// (get) Token: 0x06013B5E RID: 80734 RVA: 0x004F155C File Offset: 0x004EF75C
+	// Token: 0x1700197F RID: 6527
+	// (get) Token: 0x06011040 RID: 69696 RVA: 0x0050028C File Offset: 0x004FE48C
 	[Nullable(1)]
 	public static PilotThrowController Instance
 	{
@@ -440,7 +440,7 @@ public class PilotThrowController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013B5F RID: 80735 RVA: 0x004F1563 File Offset: 0x004EF763
+	// Token: 0x06011041 RID: 69697 RVA: 0x00500293 File Offset: 0x004FE493
 	[NullableContext(1)]
 	public static PilotThrowController GetOrCreateInstance()
 	{
@@ -451,7 +451,7 @@ public class PilotThrowController : ControllerBase
 		return PilotThrowController._Instance;
 	}
 
-	// Token: 0x06013B60 RID: 80736 RVA: 0x004F1577 File Offset: 0x004EF777
+	// Token: 0x06011042 RID: 69698 RVA: 0x005002A7 File Offset: 0x004FE4A7
 	public static bool CreateInstance()
 	{
 		if (PilotThrowController._Instance != null)
@@ -462,42 +462,42 @@ public class PilotThrowController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06013B61 RID: 80737 RVA: 0x004F158D File Offset: 0x004EF78D
+	// Token: 0x06011043 RID: 69699 RVA: 0x005002BD File Offset: 0x004FE4BD
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013B62 RID: 80738 RVA: 0x004F158F File Offset: 0x004EF78F
+	// Token: 0x06011044 RID: 69700 RVA: 0x005002BF File Offset: 0x004FE4BF
 	public static void ResetStaticDefaultValue()
 	{
 		PilotThrowController._Instance = null;
 	}
 
-	// Token: 0x06013B63 RID: 80739 RVA: 0x004F1597 File Offset: 0x004EF797
+	// Token: 0x06011045 RID: 69701 RVA: 0x005002C7 File Offset: 0x004FE4C7
 	static PilotThrowController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PilotThrowController.CreateStaticDefaultValue), new Action(PilotThrowController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009471 RID: 38001
+	// Token: 0x040095C8 RID: 38344
 	public bool NeedKeepCameraAndUi = true;
 
-	// Token: 0x04009472 RID: 38002
+	// Token: 0x040095C9 RID: 38345
 	private TArray<FVectorDouble> PathPositions;
 
-	// Token: 0x04009473 RID: 38003
+	// Token: 0x040095CA RID: 38346
 	private int? CacheProjectileEffectHandle;
 
-	// Token: 0x04009474 RID: 38004
+	// Token: 0x040095CB RID: 38347
 	private AActor CacheProjectileActor;
 
-	// Token: 0x04009475 RID: 38005
+	// Token: 0x040095CC RID: 38348
 	private USplineComponent CacheProjectileSplineComp;
 
-	// Token: 0x04009476 RID: 38006
+	// Token: 0x040095CD RID: 38349
 	private int? FinalDestinationEffectHandle;
 
-	// Token: 0x04009477 RID: 38007
+	// Token: 0x040095CE RID: 38350
 	[Nullable(new byte[]
 	{
 		2,
@@ -505,38 +505,38 @@ public class PilotThrowController : ControllerBase
 	})]
 	private TArray<TEnumAsByte<EObjectTypeQuery>> TraceObjectTypes;
 
-	// Token: 0x04009478 RID: 38008
+	// Token: 0x040095CF RID: 38351
 	private FPredictProjectilePathParams ProjectilePathParams;
 
-	// Token: 0x04009479 RID: 38009
+	// Token: 0x040095D0 RID: 38352
 	private FPredictProjectilePathResult ProjectilePathResult;
 
-	// Token: 0x0400947A RID: 38010
+	// Token: 0x040095D1 RID: 38353
 	[Nullable(1)]
 	private readonly global::Vector LauncherVelocity = global::Vector.Create();
 
-	// Token: 0x0400947B RID: 38011
+	// Token: 0x040095D2 RID: 38354
 	[Nullable(1)]
 	private readonly global::Rotator CameraRot = global::Rotator.Create();
 
-	// Token: 0x0400947C RID: 38012
+	// Token: 0x040095D3 RID: 38355
 	private global::Rotator OffsetRot;
 
-	// Token: 0x0400947D RID: 38013
+	// Token: 0x040095D4 RID: 38356
 	private const int PILOT_AUTO_THROW_SKILL_ID = 210043;
 
-	// Token: 0x0400947E RID: 38014
+	// Token: 0x040095D5 RID: 38357
 	private static PilotThrowController _Instance;
 
-	// Token: 0x02008C18 RID: 35864
+	// Token: 0x02007DA1 RID: 32161
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402D7B8 RID: 186296
+		// Token: 0x04028AD0 RID: 166608
 		[Nullable(0)]
 		public static Func<float, float, float> <0>__Max;
 
-		// Token: 0x0402D7B9 RID: 186297
+		// Token: 0x04028AD1 RID: 166609
 		[Nullable(0)]
 		public static Func<float, float, float> <1>__Min;
 	}

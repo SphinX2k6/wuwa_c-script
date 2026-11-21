@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019C2 RID: 6594
+	// Token: 0x0200045A RID: 1114
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroMath.EKuroMathSampleSpacing")]
 	public enum EKuroMathSampleSpacing : byte
 	{
-		// Token: 0x0400D3FB RID: 54267
+		// Token: 0x04002D9D RID: 11677
 		UniformDistance,
-		// Token: 0x0400D3FC RID: 54268
+		// Token: 0x04002D9E RID: 11678
 		UniformTime,
-		// Token: 0x0400D3FD RID: 54269
+		// Token: 0x04002D9F RID: 11679
 		ErrorTolerance,
-		// Token: 0x0400D3FE RID: 54270
+		// Token: 0x04002DA0 RID: 11680
 		OriginPoints,
-		// Token: 0x0400D3FF RID: 54271
+		// Token: 0x04002DA1 RID: 11681
 		EKuroMathSampleSpacing_MAX
 	}
 }

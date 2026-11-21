@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Effect;
 using UnrealEngine;
 
-// Token: 0x02002FC0 RID: 12224
+// Token: 0x02002514 RID: 9492
 [NullableContext(2)]
 [Nullable(0)]
 public class GameplayCueFromSummoned : GameplayCueBase
 {
-	// Token: 0x06019EAF RID: 106159 RVA: 0x006C7648 File Offset: 0x006C5848
+	// Token: 0x060177C1 RID: 96193 RVA: 0x006EDF14 File Offset: 0x006EC114
 	protected override void OnInit()
 	{
 		EntityHandle instigator = this.Instigator;
@@ -40,7 +40,7 @@ public class GameplayCueFromSummoned : GameplayCueBase
 		this.SummonedEntityId = new int?(worldEntity.Id);
 	}
 
-	// Token: 0x06019EB0 RID: 106160 RVA: 0x006C7710 File Offset: 0x006C5910
+	// Token: 0x060177C2 RID: 96194 RVA: 0x006EDFDC File Offset: 0x006EC1DC
 	protected override void OnCreate()
 	{
 		if (this.Summoned == null)
@@ -59,7 +59,7 @@ public class GameplayCueFromSummoned : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019EB1 RID: 106161 RVA: 0x006C77A3 File Offset: 0x006C59A3
+	// Token: 0x060177C3 RID: 96195 RVA: 0x006EE06F File Offset: 0x006EC26F
 	protected override void OnTick(float delta)
 	{
 		if (this.NeedAttach)
@@ -68,7 +68,7 @@ public class GameplayCueFromSummoned : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019EB2 RID: 106162 RVA: 0x006C77B4 File Offset: 0x006C59B4
+	// Token: 0x060177C4 RID: 96196 RVA: 0x006EE080 File Offset: 0x006EC280
 	protected override void OnDestroy()
 	{
 		this.Summoned = null;
@@ -85,7 +85,7 @@ public class GameplayCueFromSummoned : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019EB3 RID: 106163 RVA: 0x006C7830 File Offset: 0x006C5A30
+	// Token: 0x060177C5 RID: 96197 RVA: 0x006EE0FC File Offset: 0x006EC2FC
 	private void InitConfig()
 	{
 		Aki.Config.Vector value = this.CueConfig.Location.Value;
@@ -103,7 +103,7 @@ public class GameplayCueFromSummoned : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019EB4 RID: 106164 RVA: 0x006C7948 File Offset: 0x006C5B48
+	// Token: 0x060177C6 RID: 96198 RVA: 0x006EE214 File Offset: 0x006EC414
 	private void UpdateEffect()
 	{
 		if (!EffectSystem.Instance.IsValid(this.EffectViewHandle))
@@ -147,27 +147,27 @@ public class GameplayCueFromSummoned : GameplayCueBase
 		self.D_K2_SetActorLocationAndRotation(fvectorDouble, frotator, false, ref WorldGlobal.SweepHitResult, true);
 	}
 
-	// Token: 0x0400C41E RID: 50206
+	// Token: 0x0400C7C7 RID: 51143
 	private TsBaseCharacter Summoned;
 
-	// Token: 0x0400C41F RID: 50207
+	// Token: 0x0400C7C8 RID: 51144
 	private int? SummonedEntityId;
 
-	// Token: 0x0400C420 RID: 50208
+	// Token: 0x0400C7C9 RID: 51145
 	private List<FName> Sockets;
 
-	// Token: 0x0400C421 RID: 50209
+	// Token: 0x0400C7CA RID: 51146
 	private Transform RelativeTransform;
 
-	// Token: 0x0400C422 RID: 50210
+	// Token: 0x0400C7CB RID: 51147
 	private int EffectViewHandle;
 
-	// Token: 0x0400C423 RID: 50211
+	// Token: 0x0400C7CC RID: 51148
 	private Transform CurrentTransform;
 
-	// Token: 0x0400C424 RID: 50212
+	// Token: 0x0400C7CD RID: 51149
 	private Transform EffectTransform;
 
-	// Token: 0x0400C425 RID: 50213
+	// Token: 0x0400C7CE RID: 51150
 	private bool NeedAttach;
 }

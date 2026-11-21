@@ -1,30 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Utils;
 using UnrealEngine;
 
-// Token: 0x02002FEB RID: 12267
+// Token: 0x02002540 RID: 9536
 [NullableContext(1)]
 [Nullable(0)]
 public class BeDamageTrigger : Trigger
 {
-	// Token: 0x06019FFE RID: 106494 RVA: 0x006CE52C File Offset: 0x006CC72C
+	// Token: 0x06017932 RID: 96562 RVA: 0x006F63D8 File Offset: 0x006F45D8
 	[NullableContext(2)]
 	public BeDamageTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x06019FFF RID: 106495 RVA: 0x006CE540 File Offset: 0x006CC740
+	// Token: 0x06017933 RID: 96563 RVA: 0x006F63EC File Offset: 0x006F45EC
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.TargetType = (ETriggerTargetType)Convert.ToInt32((triggerParams.Length != 0) ? triggerParams[0] : "0");
 		this.CalculateType = (ECalculationType)Convert.ToInt32((triggerParams.Length > 1) ? triggerParams[1] : 0.ToString());
 	}
 
-	// Token: 0x0601A000 RID: 106496 RVA: 0x006CE588 File Offset: 0x006CC788
+	// Token: 0x06017934 RID: 96564 RVA: 0x006F6434 File Offset: 0x006F4634
 	protected override void OnActive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -35,7 +34,7 @@ public class BeDamageTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A001 RID: 106497 RVA: 0x006CE5E0 File Offset: 0x006CC7E0
+	// Token: 0x06017935 RID: 96565 RVA: 0x006F648C File Offset: 0x006F468C
 	protected override void OnInactive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -46,7 +45,7 @@ public class BeDamageTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A002 RID: 106498 RVA: 0x006CE638 File Offset: 0x006CC838
+	// Token: 0x06017936 RID: 96566 RVA: 0x006F64E4 File Offset: 0x006F46E4
 	private void OnEvent(Entity attacker, Entity victim, RequirementPayload req, DamageResult result, FVectorDouble _)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -73,22 +72,20 @@ public class BeDamageTrigger : Trigger
 		dictionary["IsCritical"] = req.IsCritical.GetValueOrDefault();
 		dictionary["SkillDamageCount"] = req.SkillDamageCount.GetValueOrDefault(9999);
 		dictionary["BulletDamageCount"] = req.BulletDamageCount.GetValueOrDefault(9999);
-		string key = "BattleFlags";
-		IReadOnlyList<string> battleFlags = req.BattleFlags;
-		dictionary[key] = (((battleFlags != null) ? battleFlags.ToArray<string>() : null) ?? Array.Empty<string>());
+		dictionary["BattleFlags"] = TriggerUtils.GetBattleFlags(req.BattleFlags);
 		dictionary["CounterType"] = (int)req.CounterType.GetValueOrDefault();
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x0601A003 RID: 106499 RVA: 0x006CE7EF File Offset: 0x006CC9EF
+	// Token: 0x06017937 RID: 96567 RVA: 0x006F668B File Offset: 0x006F488B
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4CB RID: 50379
+	// Token: 0x0400C893 RID: 51347
 	protected ETriggerTargetType TargetType;
 
-	// Token: 0x0400C4CC RID: 50380
+	// Token: 0x0400C894 RID: 51348
 	protected ECalculationType CalculateType;
 }

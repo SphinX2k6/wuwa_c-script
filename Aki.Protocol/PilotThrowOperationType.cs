@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015AB RID: 5547
+	// Token: 0x0200161D RID: 5661
 	public enum PilotThrowOperationType
 	{
-		// Token: 0x0400A845 RID: 43077
+		// Token: 0x0400ACC4 RID: 44228
 		[OriginalName("PTOThrow")]
 		Ptothrow,
-		// Token: 0x0400A846 RID: 43078
+		// Token: 0x0400ACC5 RID: 44229
 		[OriginalName("PTOCancel")]
 		Ptocancel
 	}

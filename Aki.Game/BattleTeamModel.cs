@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -8,12 +7,12 @@ using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Game.Module.InstanceDungeon.Define;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02001BEB RID: 7147
+// Token: 0x020010AA RID: 4266
 [NullableContext(1)]
 [Nullable(0)]
 public class BattleTeamModel : ModelBase
 {
-	// Token: 0x0600D4DE RID: 54494 RVA: 0x0030FBE0 File Offset: 0x0030DDE0
+	// Token: 0x0600A8F0 RID: 43248 RVA: 0x0031AD54 File Offset: 0x00318F54
 	public BattleTeamModel()
 	{
 		this.Initializer = new BattleTeamSlotInitializer(this);
@@ -23,8 +22,8 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700117E RID: 4478
-	// (get) Token: 0x0600D4DF RID: 54495 RVA: 0x0030FC45 File Offset: 0x0030DE45
+	// Token: 0x170011A3 RID: 4515
+	// (get) Token: 0x0600A8F1 RID: 43249 RVA: 0x0031ADB9 File Offset: 0x00318FB9
 	public bool IsInInstanceDungeon
 	{
 		get
@@ -33,7 +32,7 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D4E0 RID: 54496 RVA: 0x0030FC54 File Offset: 0x0030DE54
+	// Token: 0x0600A8F2 RID: 43250 RVA: 0x0031ADC8 File Offset: 0x00318FC8
 	[NullableContext(2)]
 	public BattleRoleSlotData GetSlot(int position)
 	{
@@ -45,13 +44,13 @@ public class BattleTeamModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600D4E1 RID: 54497 RVA: 0x0030FC74 File Offset: 0x0030DE74
+	// Token: 0x0600A8F3 RID: 43251 RVA: 0x0031ADE8 File Offset: 0x00318FE8
 	public List<BattleRoleSlotData> GetAllSlots()
 	{
 		return new List<BattleRoleSlotData>(this.RoleSlotDataMap.Values);
 	}
 
-	// Token: 0x0600D4E2 RID: 54498 RVA: 0x0030FC88 File Offset: 0x0030DE88
+	// Token: 0x0600A8F4 RID: 43252 RVA: 0x0031ADFC File Offset: 0x00318FFC
 	public void ResetAllSlots()
 	{
 		foreach (BattleRoleSlotData battleRoleSlotData in this.RoleSlotDataMap.Values)
@@ -62,7 +61,7 @@ public class BattleTeamModel : ModelBase
 		Log.Instance.Info(ELogModule.Formation, ELogAuthor.SYB, "[Formation] 还原所有战前编队数据", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600D4E3 RID: 54499 RVA: 0x0030FD04 File Offset: 0x0030DF04
+	// Token: 0x0600A8F5 RID: 43253 RVA: 0x0031AE78 File Offset: 0x00319078
 	public void InitAllRoleSlotData()
 	{
 		this.Initializer.InitAll();
@@ -70,7 +69,7 @@ public class BattleTeamModel : ModelBase
 		this.PrintRoleSlotsDebugString();
 	}
 
-	// Token: 0x0600D4E4 RID: 54500 RVA: 0x0030FD38 File Offset: 0x0030DF38
+	// Token: 0x0600A8F6 RID: 43254 RVA: 0x0031AEAC File Offset: 0x003190AC
 	public void RefreshAllMultiRoleData()
 	{
 		IReadOnlyList<PrewarFormationData> prewarFormationDataList = InstanceDungeonModel.Instance.GetPrewarFormationDataList();
@@ -78,7 +77,7 @@ public class BattleTeamModel : ModelBase
 		EventSystem.Instance.Emit<ERefreshRoleSlotReason>(EEventName.OnRefreshBattleRoleSlot, ERefreshRoleSlotReason.RefreshPrewarTeamOnline);
 	}
 
-	// Token: 0x0600D4E5 RID: 54501 RVA: 0x0030FD70 File Offset: 0x0030DF70
+	// Token: 0x0600A8F7 RID: 43255 RVA: 0x0031AEE4 File Offset: 0x003190E4
 	public void InitTrailRoleInstance()
 	{
 		this.TrialRoleInstanceMap.Clear();
@@ -103,20 +102,32 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D4E6 RID: 54502 RVA: 0x0030FE11 File Offset: 0x0030E011
+	// Token: 0x0600A8F8 RID: 43256 RVA: 0x0031AF85 File Offset: 0x00319185
 	public void ApplyRoleIdList(int[] roleIdArray, bool reset)
 	{
 		this.Initializer.ApplyRoleIdList(roleIdArray, reset);
 		EventSystem.Instance.Emit<ERefreshRoleSlotReason>(EEventName.OnRefreshBattleRoleSlot, ERefreshRoleSlotReason.SetTeamByRoleId);
 	}
 
-	// Token: 0x0600D4E7 RID: 54503 RVA: 0x0030FE31 File Offset: 0x0030E031
+	// Token: 0x0600A8F9 RID: 43257 RVA: 0x0031AFA5 File Offset: 0x003191A5
 	public BattleRoleData CreateRoleDataFromRoleInstance(RoleDataBase roleInstance)
 	{
 		return this.Initializer.CreateRoleDataFromInstance(roleInstance);
 	}
 
-	// Token: 0x0600D4E8 RID: 54504 RVA: 0x0030FE40 File Offset: 0x0030E040
+	// Token: 0x0600A8FA RID: 43258 RVA: 0x0031AFB4 File Offset: 0x003191B4
+	public BattleRoleData CreateEmptyRoleData(int roleConfigId)
+	{
+		int value = PlayerInfoModel.Instance.GetId().Value;
+		string accountName = PlayerInfoModel.Instance.GetAccountName(true);
+		RoleInfo? roleInfo;
+		int skinId = (RoleConfig.Instance.GetRoleConfig(roleConfigId) != null) ? roleInfo.GetValueOrDefault().SkinId : 0;
+		BattleRoleData battleRoleData = new BattleRoleData();
+		battleRoleData.Init(value, roleConfigId, skinId, new int?(1), accountName, 0, true, this.IsSelfReady);
+		return battleRoleData;
+	}
+
+	// Token: 0x0600A8FB RID: 43259 RVA: 0x0031B028 File Offset: 0x00319228
 	public void SetLeaderPlayerId(int? playerId)
 	{
 		Log instance = Log.Instance;
@@ -128,8 +139,8 @@ public class BattleTeamModel : ModelBase
 		this.LeaderPlayerIdInternal = playerId;
 	}
 
-	// Token: 0x1700117F RID: 4479
-	// (get) Token: 0x0600D4E9 RID: 54505 RVA: 0x0030FE80 File Offset: 0x0030E080
+	// Token: 0x170011A4 RID: 4516
+	// (get) Token: 0x0600A8FC RID: 43260 RVA: 0x0031B068 File Offset: 0x00319268
 	public int? LeaderPlayerId
 	{
 		get
@@ -138,8 +149,8 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001180 RID: 4480
-	// (get) Token: 0x0600D4EA RID: 54506 RVA: 0x0030FE88 File Offset: 0x0030E088
+	// Token: 0x170011A5 RID: 4517
+	// (get) Token: 0x0600A8FD RID: 43261 RVA: 0x0031B070 File Offset: 0x00319270
 	public bool IsLeaderSelf
 	{
 		get
@@ -154,14 +165,14 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D4EB RID: 54507 RVA: 0x0030FED7 File Offset: 0x0030E0D7
+	// Token: 0x0600A8FE RID: 43262 RVA: 0x0031B0BF File Offset: 0x003192BF
 	public void SetCurrentEditPosition(int position)
 	{
 		this.CurrentEditPosition = new int?(position);
 	}
 
-	// Token: 0x17001181 RID: 4481
-	// (get) Token: 0x0600D4EC RID: 54508 RVA: 0x0030FEE5 File Offset: 0x0030E0E5
+	// Token: 0x170011A6 RID: 4518
+	// (get) Token: 0x0600A8FF RID: 43263 RVA: 0x0031B0CD File Offset: 0x003192CD
 	[Nullable(2)]
 	public BattleRoleSlotData CurrentEditRoleSlotData
 	{
@@ -176,7 +187,7 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D4ED RID: 54509 RVA: 0x0030FF08 File Offset: 0x0030E108
+	// Token: 0x0600A900 RID: 43264 RVA: 0x0031B0F0 File Offset: 0x003192F0
 	public bool IsInBattleTeam(int roleConfigId, bool isOwnRoleOnly = false)
 	{
 		int? id = PlayerInfoModel.Instance.GetId();
@@ -203,7 +214,7 @@ public class BattleTeamModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600D4EE RID: 54510 RVA: 0x0030FF9C File Offset: 0x0030E19C
+	// Token: 0x0600A901 RID: 43265 RVA: 0x0031B184 File Offset: 0x00319384
 	[NullableContext(2)]
 	public BattleRoleSlotData GetSlotDataByConfigId(int roleConfigId)
 	{
@@ -218,8 +229,8 @@ public class BattleTeamModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x17001182 RID: 4482
-	// (get) Token: 0x0600D4EF RID: 54511 RVA: 0x0031000C File Offset: 0x0030E20C
+	// Token: 0x170011A7 RID: 4519
+	// (get) Token: 0x0600A902 RID: 43266 RVA: 0x0031B1F4 File Offset: 0x003193F4
 	public List<int> AllRoleConfigIdList
 	{
 		get
@@ -243,8 +254,8 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001183 RID: 4483
-	// (get) Token: 0x0600D4F0 RID: 54512 RVA: 0x003100B4 File Offset: 0x0030E2B4
+	// Token: 0x170011A8 RID: 4520
+	// (get) Token: 0x0600A903 RID: 43267 RVA: 0x0031B29C File Offset: 0x0031949C
 	[Nullable(new byte[]
 	{
 		0,
@@ -282,8 +293,8 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001184 RID: 4484
-	// (get) Token: 0x0600D4F1 RID: 54513 RVA: 0x0031016C File Offset: 0x0030E36C
+	// Token: 0x170011A9 RID: 4521
+	// (get) Token: 0x0600A904 RID: 43268 RVA: 0x0031B354 File Offset: 0x00319554
 	public int OwnRoleCountInRoleSlot
 	{
 		get
@@ -292,8 +303,8 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001185 RID: 4485
-	// (get) Token: 0x0600D4F2 RID: 54514 RVA: 0x0031017C File Offset: 0x0030E37C
+	// Token: 0x170011AA RID: 4522
+	// (get) Token: 0x0600A905 RID: 43269 RVA: 0x0031B364 File Offset: 0x00319564
 	public int RoleCountInRoleSlot
 	{
 		get
@@ -313,7 +324,7 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D4F3 RID: 54515 RVA: 0x003101DC File Offset: 0x0030E3DC
+	// Token: 0x0600A906 RID: 43270 RVA: 0x0031B3C4 File Offset: 0x003195C4
 	public int GetPlayerRoleNumber(int? playerId)
 	{
 		int num = 0;
@@ -339,7 +350,7 @@ public class BattleTeamModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600D4F4 RID: 54516 RVA: 0x00310264 File Offset: 0x0030E464
+	// Token: 0x0600A907 RID: 43271 RVA: 0x0031B44C File Offset: 0x0031964C
 	public bool HasSameConfigIdInAnyOwnRoleSlot(int configId)
 	{
 		using (List<BattleRoleData>.Enumerator enumerator = this.GetAllSelfRoleData().GetEnumerator())
@@ -355,7 +366,7 @@ public class BattleTeamModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600D4F5 RID: 54517 RVA: 0x003102C0 File Offset: 0x0030E4C0
+	// Token: 0x0600A908 RID: 43272 RVA: 0x0031B4A8 File Offset: 0x003196A8
 	public bool IsRoleConflict(int playerId, int roleId)
 	{
 		foreach (BattleRoleSlotData battleRoleSlotData in this.RoleSlotDataMap.Values)
@@ -369,8 +380,8 @@ public class BattleTeamModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x17001186 RID: 4486
-	// (get) Token: 0x0600D4F6 RID: 54518 RVA: 0x00310334 File Offset: 0x0030E534
+	// Token: 0x170011AB RID: 4523
+	// (get) Token: 0x0600A909 RID: 43273 RVA: 0x0031B51C File Offset: 0x0031971C
 	public bool IsAllRoleDie
 	{
 		get
@@ -394,8 +405,8 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001187 RID: 4487
-	// (get) Token: 0x0600D4F7 RID: 54519 RVA: 0x003103B4 File Offset: 0x0030E5B4
+	// Token: 0x170011AC RID: 4524
+	// (get) Token: 0x0600A90A RID: 43274 RVA: 0x0031B59C File Offset: 0x0031979C
 	public bool HasSameRole
 	{
 		get
@@ -416,17 +427,27 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001188 RID: 4488
-	// (get) Token: 0x0600D4F8 RID: 54520 RVA: 0x0031046C File Offset: 0x0030E66C
+	// Token: 0x170011AD RID: 4525
+	// (get) Token: 0x0600A90B RID: 43275 RVA: 0x0031B654 File Offset: 0x00319854
 	public bool HasSpecialTrialRole
 	{
 		get
 		{
-			return this.GetAllSelfRoleData().Any((BattleRoleData r) => RoleUtils.IsSpecialTrialRole(r.ConfigId));
+			using (List<BattleRoleData>.Enumerator enumerator = this.GetAllSelfRoleData().GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (RoleUtils.IsSpecialTrialRole(enumerator.Current.ConfigId))
+					{
+						return true;
+					}
+				}
+			}
+			return false;
 		}
 	}
 
-	// Token: 0x0600D4F9 RID: 54521 RVA: 0x00310498 File Offset: 0x0030E698
+	// Token: 0x0600A90C RID: 43276 RVA: 0x0031B6B4 File Offset: 0x003198B4
 	public int GetParentRolePositionInEditBattleTeam(int roleConfigId)
 	{
 		if (!RoleUtils.IsTrialRole(roleConfigId))
@@ -451,7 +472,7 @@ public class BattleTeamModel : ModelBase
 		return slotDataByConfigId.Position;
 	}
 
-	// Token: 0x0600D4FA RID: 54522 RVA: 0x00310570 File Offset: 0x0030E770
+	// Token: 0x0600A90D RID: 43277 RVA: 0x0031B78C File Offset: 0x0031998C
 	public void RefreshAllEmptySlotData()
 	{
 		int count = this.RoleSlotDataMap.Count;
@@ -478,8 +499,8 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001189 RID: 4489
-	// (get) Token: 0x0600D4FB RID: 54523 RVA: 0x003105EC File Offset: 0x0030E7EC
+	// Token: 0x170011AE RID: 4526
+	// (get) Token: 0x0600A90E RID: 43278 RVA: 0x0031B808 File Offset: 0x00319A08
 	public List<int> SelfRoleSlotDataRoleIdList
 	{
 		get
@@ -496,7 +517,7 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D4FC RID: 54524 RVA: 0x00310654 File Offset: 0x0030E854
+	// Token: 0x0600A90F RID: 43279 RVA: 0x0031B870 File Offset: 0x00319A70
 	public void SetPlayerReady(int playerId, bool bReady)
 	{
 		foreach (BattleRoleSlotData battleRoleSlotData in this.RoleSlotDataMap.Values)
@@ -510,8 +531,8 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700118A RID: 4490
-	// (get) Token: 0x0600D4FD RID: 54525 RVA: 0x003106D8 File Offset: 0x0030E8D8
+	// Token: 0x170011AF RID: 4527
+	// (get) Token: 0x0600A910 RID: 43280 RVA: 0x0031B8F4 File Offset: 0x00319AF4
 	public bool IsAllReady
 	{
 		get
@@ -542,8 +563,8 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700118B RID: 4491
-	// (get) Token: 0x0600D4FE RID: 54526 RVA: 0x00310774 File Offset: 0x0030E974
+	// Token: 0x170011B0 RID: 4528
+	// (get) Token: 0x0600A911 RID: 43281 RVA: 0x0031B990 File Offset: 0x00319B90
 	public bool IsSelfReady
 	{
 		get
@@ -553,7 +574,7 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D4FF RID: 54527 RVA: 0x003107A0 File Offset: 0x0030E9A0
+	// Token: 0x0600A912 RID: 43282 RVA: 0x0031B9BC File Offset: 0x00319BBC
 	public void ChangeMainRoleData()
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -587,7 +608,7 @@ public class BattleTeamModel : ModelBase
 		EventSystem.Instance.Emit<ERefreshRoleSlotReason>(EEventName.OnRefreshBattleRoleSlot, ERefreshRoleSlotReason.ChangeMainRoleOffline);
 	}
 
-	// Token: 0x0600D500 RID: 54528 RVA: 0x003108D0 File Offset: 0x0030EAD0
+	// Token: 0x0600A913 RID: 43283 RVA: 0x0031BAEC File Offset: 0x00319CEC
 	public List<RoleDataBase> GetRoleList()
 	{
 		RoleModel instance = RoleModel.Instance;
@@ -620,7 +641,7 @@ public class BattleTeamModel : ModelBase
 		return this.FilterByCurrentGender(list);
 	}
 
-	// Token: 0x0600D501 RID: 54529 RVA: 0x003109FC File Offset: 0x0030EBFC
+	// Token: 0x0600A914 RID: 43284 RVA: 0x0031BC18 File Offset: 0x00319E18
 	private List<RoleDataBase> FilterByCurrentGender(List<RoleDataBase> roleDataList)
 	{
 		RoleModel instance = RoleModel.Instance;
@@ -650,7 +671,7 @@ public class BattleTeamModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600D502 RID: 54530 RVA: 0x00310AF8 File Offset: 0x0030ECF8
+	// Token: 0x0600A915 RID: 43285 RVA: 0x0031BD14 File Offset: 0x00319F14
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -669,7 +690,7 @@ public class BattleTeamModel : ModelBase
 		return new ValueTuple<bool, int>(true, 0);
 	}
 
-	// Token: 0x0600D503 RID: 54531 RVA: 0x00310B68 File Offset: 0x0030ED68
+	// Token: 0x0600A916 RID: 43286 RVA: 0x0031BD84 File Offset: 0x00319F84
 	public unsafe void PrintRoleSlotsDebugString()
 	{
 		for (int i = 1; i <= 4; i++)
@@ -689,7 +710,7 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D504 RID: 54532 RVA: 0x00310BF8 File Offset: 0x0030EDF8
+	// Token: 0x0600A917 RID: 43287 RVA: 0x0031BE14 File Offset: 0x0031A014
 	private List<BattleRoleData> GetAllSelfRoleData()
 	{
 		List<BattleRoleData> list = new List<BattleRoleData>();
@@ -704,7 +725,7 @@ public class BattleTeamModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600D505 RID: 54533 RVA: 0x00310C68 File Offset: 0x0030EE68
+	// Token: 0x0600A918 RID: 43288 RVA: 0x0031BE84 File Offset: 0x0031A084
 	private int ResolveParentRoleId(BattleRoleData roleData)
 	{
 		if (!RoleUtils.IsTrialRole(roleData.ConfigId))
@@ -719,8 +740,8 @@ public class BattleTeamModel : ModelBase
 		return trialRoleInfo.GetValueOrDefault().ParentId;
 	}
 
-	// Token: 0x1700118C RID: 4492
-	// (get) Token: 0x0600D506 RID: 54534 RVA: 0x00310CAF File Offset: 0x0030EEAF
+	// Token: 0x170011B1 RID: 4529
+	// (get) Token: 0x0600A919 RID: 43289 RVA: 0x0031BECB File Offset: 0x0031A0CB
 	public static BattleTeamModel Instance
 	{
 		get
@@ -729,7 +750,7 @@ public class BattleTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D507 RID: 54535 RVA: 0x00310CB6 File Offset: 0x0030EEB6
+	// Token: 0x0600A91A RID: 43290 RVA: 0x0031BED2 File Offset: 0x0031A0D2
 	public static BattleTeamModel GetOrCreateInstance()
 	{
 		if (BattleTeamModel._Instance == null)
@@ -739,7 +760,7 @@ public class BattleTeamModel : ModelBase
 		return BattleTeamModel._Instance;
 	}
 
-	// Token: 0x0600D508 RID: 54536 RVA: 0x00310CCA File Offset: 0x0030EECA
+	// Token: 0x0600A91B RID: 43291 RVA: 0x0031BEE6 File Offset: 0x0031A0E6
 	public static bool CreateInstance()
 	{
 		if (BattleTeamModel._Instance != null)
@@ -750,59 +771,59 @@ public class BattleTeamModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600D509 RID: 54537 RVA: 0x00310CE0 File Offset: 0x0030EEE0
+	// Token: 0x0600A91C RID: 43292 RVA: 0x0031BEFC File Offset: 0x0031A0FC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600D50A RID: 54538 RVA: 0x00310CE2 File Offset: 0x0030EEE2
+	// Token: 0x0600A91D RID: 43293 RVA: 0x0031BEFE File Offset: 0x0031A0FE
 	public static void ResetStaticDefaultValue()
 	{
 		BattleTeamModel._Instance = null;
 	}
 
-	// Token: 0x0600D50B RID: 54539 RVA: 0x00310CEA File Offset: 0x0030EEEA
+	// Token: 0x0600A91E RID: 43294 RVA: 0x0031BF06 File Offset: 0x0031A106
 	static BattleTeamModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BattleTeamModel.CreateStaticDefaultValue), new Action(BattleTeamModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006182 RID: 24962
+	// Token: 0x04006251 RID: 25169
 	private readonly Dictionary<int, BattleRoleSlotData> RoleSlotDataMap = new Dictionary<int, BattleRoleSlotData>();
 
-	// Token: 0x04006183 RID: 24963
+	// Token: 0x04006252 RID: 25170
 	private int? CurrentEditPosition;
 
-	// Token: 0x04006184 RID: 24964
+	// Token: 0x04006253 RID: 25171
 	private int? LeaderPlayerIdInternal;
 
-	// Token: 0x04006185 RID: 24965
+	// Token: 0x04006254 RID: 25172
 	public readonly Dictionary<int, RoleDataBase> TrialRoleInstanceMap = new Dictionary<int, RoleDataBase>();
 
-	// Token: 0x04006186 RID: 24966
+	// Token: 0x04006255 RID: 25173
 	[Nullable(2)]
 	private List<int> CurrentGenderRoleList;
 
-	// Token: 0x04006187 RID: 24967
+	// Token: 0x04006256 RID: 25174
 	public readonly BattleTeamDungeonContext Context = new BattleTeamDungeonContext();
 
-	// Token: 0x04006188 RID: 24968
+	// Token: 0x04006257 RID: 25175
 	public bool NeedEntrance = true;
 
-	// Token: 0x04006189 RID: 24969
+	// Token: 0x04006258 RID: 25176
 	public bool IsFormTeleportAction;
 
-	// Token: 0x0400618A RID: 24970
+	// Token: 0x04006259 RID: 25177
 	[Nullable(2)]
 	public IFastReturnDungeonContext FastReturnDungeonContext;
 
-	// Token: 0x0400618B RID: 24971
+	// Token: 0x0400625A RID: 25178
 	public bool CanUseSpecialTrialRole;
 
-	// Token: 0x0400618C RID: 24972
+	// Token: 0x0400625B RID: 25179
 	private readonly BattleTeamSlotInitializer Initializer;
 
-	// Token: 0x0400618D RID: 24973
+	// Token: 0x0400625C RID: 25180
 	[Nullable(2)]
 	private static BattleTeamModel _Instance;
 }

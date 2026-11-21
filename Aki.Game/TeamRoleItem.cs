@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001387 RID: 4999
+// Token: 0x0200083B RID: 2107
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 internal class TeamRoleItem : GridProxyAbstract<TeamData>
 {
-	// Token: 0x06008C14 RID: 35860 RVA: 0x001E0208 File Offset: 0x001DE408
+	// Token: 0x06005FAF RID: 24495 RVA: 0x001E905C File Offset: 0x001E725C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,14 +25,14 @@ internal class TeamRoleItem : GridProxyAbstract<TeamData>
 		};
 	}
 
-	// Token: 0x06008C15 RID: 35861 RVA: 0x001E0262 File Offset: 0x001DE462
+	// Token: 0x06005FB0 RID: 24496 RVA: 0x001E90B6 File Offset: 0x001E72B6
 	public override void Refresh(TeamData data, bool isSelected, int gridIndex)
 	{
 		this.CurrentTeamData = data;
 		this.RefreshRoleTexture();
 	}
 
-	// Token: 0x06008C16 RID: 35862 RVA: 0x001E0274 File Offset: 0x001DE474
+	// Token: 0x06005FB1 RID: 24497 RVA: 0x001E90C8 File Offset: 0x001E72C8
 	private void RefreshRoleTexture()
 	{
 		if (this.CurrentTeamData.RoleId == 0)
@@ -44,20 +44,20 @@ internal class TeamRoleItem : GridProxyAbstract<TeamData>
 		base.SetRoleIcon(RoleConfig.Instance.GetRoleConfig(this.CurrentTeamData.RoleId).Value.RoleHeadIconCircle, base.GetTexture(2), this.CurrentTeamData.RoleId, null, null);
 	}
 
-	// Token: 0x04003E1C RID: 15900
+	// Token: 0x04003EB4 RID: 16052
 	private TeamData CurrentTeamData = new TeamData();
 
-	// Token: 0x020079FA RID: 31226
+	// Token: 0x02006B84 RID: 27524
 	[NullableContext(0)]
 	private class ETeamRoleComponent
 	{
-		// Token: 0x04028263 RID: 164451
+		// Token: 0x04023590 RID: 144784
 		public const int Button = 0;
 
-		// Token: 0x04028264 RID: 164452
+		// Token: 0x04023591 RID: 144785
 		public const int BgSprite = 1;
 
-		// Token: 0x04028265 RID: 164453
+		// Token: 0x04023592 RID: 144786
 		public const int RoleTexture = 2;
 	}
 }

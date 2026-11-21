@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.HotPatchKuroSdk
 {
-	// Token: 0x020001DA RID: 474
+	// Token: 0x020001DE RID: 478
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class HotPatchKuroTdm
 	{
-		// Token: 0x06000C95 RID: 3221 RVA: 0x0004CE2A File Offset: 0x0004B02A
+		// Token: 0x06000CCC RID: 3276 RVA: 0x0004F63E File Offset: 0x0004D83E
 		public static bool IfCanUseTdm()
 		{
 			return UKuroStaticLibrary.IsModuleLoaded("KuroTDM");
 		}
 
-		// Token: 0x06000C96 RID: 3222 RVA: 0x0004CE3C File Offset: 0x0004B03C
+		// Token: 0x06000CCD RID: 3277 RVA: 0x0004F650 File Offset: 0x0004D850
 		public unsafe static void Init()
 		{
 			if (!HotPatchKuroTdm.IfCanUseTdm())
@@ -89,10 +89,10 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			instance5.Info(message5, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple4));
 		}
 
-		// Token: 0x040007E7 RID: 2023
+		// Token: 0x04000824 RID: 2084
 		private const string GLOBALROUTORADDRESS = "https://sg.tdatamaster.com:8013/tdm/v1/route";
 
-		// Token: 0x040007E8 RID: 2024
+		// Token: 0x04000825 RID: 2085
 		private const string ROUTORADDRESS = "https://hc.tdm.qq.com:8013/tdm/v2/route";
 	}
 }

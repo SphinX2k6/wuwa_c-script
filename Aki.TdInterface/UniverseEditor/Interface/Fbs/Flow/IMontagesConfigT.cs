@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Flow
 {
-	// Token: 0x02004743 RID: 18243
+	// Token: 0x02004BAB RID: 19371
 	public class IMontagesConfigT
 	{
-		// Token: 0x170082E8 RID: 33512
-		// (get) Token: 0x0601C135 RID: 114997 RVA: 0x003FA5BD File Offset: 0x003F87BD
-		// (set) Token: 0x0601C136 RID: 114998 RVA: 0x003FA5C5 File Offset: 0x003F87C5
+		// Token: 0x17008929 RID: 35113
+		// (get) Token: 0x0601D90A RID: 121098 RVA: 0x00426859 File Offset: 0x00424A59
+		// (set) Token: 0x0601D90B RID: 121099 RVA: 0x00426861 File Offset: 0x00424A61
 		public List<IMontageConfigT> Montages { get; set; }
 
-		// Token: 0x0601C137 RID: 114999 RVA: 0x003FA5CE File Offset: 0x003F87CE
+		// Token: 0x0601D90C RID: 121100 RVA: 0x0042686A File Offset: 0x00424A6A
 		public IMontagesConfigT()
 		{
 			this.Montages = null;

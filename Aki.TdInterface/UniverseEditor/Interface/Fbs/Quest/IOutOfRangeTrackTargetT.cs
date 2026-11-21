@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F6C RID: 16236
+	// Token: 0x020043AA RID: 17322
 	public class IOutOfRangeTrackTargetT
 	{
-		// Token: 0x170070EC RID: 28908
-		// (get) Token: 0x060171A0 RID: 94624 RVA: 0x003544CC File Offset: 0x003526CC
-		// (set) Token: 0x060171A1 RID: 94625 RVA: 0x003544D4 File Offset: 0x003526D4
+		// Token: 0x170076DD RID: 30429
+		// (get) Token: 0x06018802 RID: 100354 RVA: 0x0037D940 File Offset: 0x0037BB40
+		// (set) Token: 0x06018803 RID: 100355 RVA: 0x0037D948 File Offset: 0x0037BB48
 		public IVectorInfoT TrackPos { get; set; }
 
-		// Token: 0x170070ED RID: 28909
-		// (get) Token: 0x060171A2 RID: 94626 RVA: 0x003544DD File Offset: 0x003526DD
-		// (set) Token: 0x060171A3 RID: 94627 RVA: 0x003544E5 File Offset: 0x003526E5
+		// Token: 0x170076DE RID: 30430
+		// (get) Token: 0x06018804 RID: 100356 RVA: 0x0037D951 File Offset: 0x0037BB51
+		// (set) Token: 0x06018805 RID: 100357 RVA: 0x0037D959 File Offset: 0x0037BB59
 		public IVectorInfoT Center { get; set; }
 
-		// Token: 0x170070EE RID: 28910
-		// (get) Token: 0x060171A4 RID: 94628 RVA: 0x003544EE File Offset: 0x003526EE
-		// (set) Token: 0x060171A5 RID: 94629 RVA: 0x003544F6 File Offset: 0x003526F6
+		// Token: 0x170076DF RID: 30431
+		// (get) Token: 0x06018806 RID: 100358 RVA: 0x0037D962 File Offset: 0x0037BB62
+		// (set) Token: 0x06018807 RID: 100359 RVA: 0x0037D96A File Offset: 0x0037BB6A
 		public int Radius { get; set; }
 
-		// Token: 0x170070EF RID: 28911
-		// (get) Token: 0x060171A6 RID: 94630 RVA: 0x003544FF File Offset: 0x003526FF
-		// (set) Token: 0x060171A7 RID: 94631 RVA: 0x00354507 File Offset: 0x00352707
+		// Token: 0x170076E0 RID: 30432
+		// (get) Token: 0x06018808 RID: 100360 RVA: 0x0037D973 File Offset: 0x0037BB73
+		// (set) Token: 0x06018809 RID: 100361 RVA: 0x0037D97B File Offset: 0x0037BB7B
 		public bool OverrideChildNodeTrackTarget { get; set; }
 
-		// Token: 0x170070F0 RID: 28912
-		// (get) Token: 0x060171A8 RID: 94632 RVA: 0x00354510 File Offset: 0x00352710
-		// (set) Token: 0x060171A9 RID: 94633 RVA: 0x00354518 File Offset: 0x00352718
+		// Token: 0x170076E1 RID: 30433
+		// (get) Token: 0x0601880A RID: 100362 RVA: 0x0037D984 File Offset: 0x0037BB84
+		// (set) Token: 0x0601880B RID: 100363 RVA: 0x0037D98C File Offset: 0x0037BB8C
 		public byte NullMask { get; set; }
 
-		// Token: 0x060171AA RID: 94634 RVA: 0x00354521 File Offset: 0x00352721
+		// Token: 0x0601880C RID: 100364 RVA: 0x0037D995 File Offset: 0x0037BB95
 		public IOutOfRangeTrackTargetT()
 		{
 			this.TrackPos = null;

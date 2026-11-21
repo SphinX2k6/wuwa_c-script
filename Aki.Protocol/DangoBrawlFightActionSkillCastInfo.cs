@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000355 RID: 853
+	// Token: 0x0200035D RID: 861
 	public sealed class DangoBrawlFightActionSkillCastInfo : IMessage<DangoBrawlFightActionSkillCastInfo>, IMessage, IEquatable<DangoBrawlFightActionSkillCastInfo>, IDeepCloneable<DangoBrawlFightActionSkillCastInfo>, IBufferMessage
 	{
-		// Token: 0x0600553F RID: 21823 RVA: 0x000D048A File Offset: 0x000CE68A
+		// Token: 0x0600562C RID: 22060 RVA: 0x000D2B16 File Offset: 0x000D0D16
 		[NullableContext(1)]
 		public static DangoBrawlFightActionSkillCastInfo Create()
 		{
 			return new DangoBrawlFightActionSkillCastInfo();
 		}
 
-		// Token: 0x17000F95 RID: 3989
-		// (get) Token: 0x06005540 RID: 21824 RVA: 0x000D0491 File Offset: 0x000CE691
+		// Token: 0x17000FC6 RID: 4038
+		// (get) Token: 0x0600562D RID: 22061 RVA: 0x000D2B1D File Offset: 0x000D0D1D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000F96 RID: 3990
-		// (get) Token: 0x06005541 RID: 21825 RVA: 0x000D0494 File Offset: 0x000CE694
+		// Token: 0x17000FC7 RID: 4039
+		// (get) Token: 0x0600562E RID: 22062 RVA: 0x000D2B20 File Offset: 0x000D0D20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005542 RID: 21826 RVA: 0x000D049B File Offset: 0x000CE69B
+		// Token: 0x0600562F RID: 22063 RVA: 0x000D2B27 File Offset: 0x000D0D27
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlFightActionSkillCastInfo()
 		{
 		}
 
-		// Token: 0x06005543 RID: 21827 RVA: 0x000D04A4 File Offset: 0x000CE6A4
+		// Token: 0x06005630 RID: 22064 RVA: 0x000D2B30 File Offset: 0x000D0D30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlFightActionSkillCastInfo(DangoBrawlFightActionSkillCastInfo other) : this()
@@ -63,7 +63,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06005544 RID: 21828 RVA: 0x000D052C File Offset: 0x000CE72C
+		// Token: 0x06005631 RID: 22065 RVA: 0x000D2BB8 File Offset: 0x000D0DB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlFightActionSkillCastInfo Clone()
@@ -71,9 +71,9 @@ namespace Aki.Protocol
 			return new DangoBrawlFightActionSkillCastInfo(this);
 		}
 
-		// Token: 0x17000F97 RID: 3991
-		// (get) Token: 0x06005545 RID: 21829 RVA: 0x000D0534 File Offset: 0x000CE734
-		// (set) Token: 0x06005546 RID: 21830 RVA: 0x000D053C File Offset: 0x000CE73C
+		// Token: 0x17000FC8 RID: 4040
+		// (get) Token: 0x06005632 RID: 22066 RVA: 0x000D2BC0 File Offset: 0x000D0DC0
+		// (set) Token: 0x06005633 RID: 22067 RVA: 0x000D2BC8 File Offset: 0x000D0DC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SourceFighterUId
@@ -88,9 +88,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000F98 RID: 3992
-		// (get) Token: 0x06005547 RID: 21831 RVA: 0x000D0545 File Offset: 0x000CE745
-		// (set) Token: 0x06005548 RID: 21832 RVA: 0x000D054D File Offset: 0x000CE74D
+		// Token: 0x17000FC9 RID: 4041
+		// (get) Token: 0x06005634 RID: 22068 RVA: 0x000D2BD1 File Offset: 0x000D0DD1
+		// (set) Token: 0x06005635 RID: 22069 RVA: 0x000D2BD9 File Offset: 0x000D0DD9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SkillConfigId
@@ -105,9 +105,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000F99 RID: 3993
-		// (get) Token: 0x06005549 RID: 21833 RVA: 0x000D0556 File Offset: 0x000CE756
-		// (set) Token: 0x0600554A RID: 21834 RVA: 0x000D055E File Offset: 0x000CE75E
+		// Token: 0x17000FCA RID: 4042
+		// (get) Token: 0x06005636 RID: 22070 RVA: 0x000D2BE2 File Offset: 0x000D0DE2
+		// (set) Token: 0x06005637 RID: 22071 RVA: 0x000D2BEA File Offset: 0x000D0DEA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int WeaponItemId
@@ -122,9 +122,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000F9A RID: 3994
-		// (get) Token: 0x0600554B RID: 21835 RVA: 0x000D0567 File Offset: 0x000CE767
-		// (set) Token: 0x0600554C RID: 21836 RVA: 0x000D056F File Offset: 0x000CE76F
+		// Token: 0x17000FCB RID: 4043
+		// (get) Token: 0x06005638 RID: 22072 RVA: 0x000D2BF3 File Offset: 0x000D0DF3
+		// (set) Token: 0x06005639 RID: 22073 RVA: 0x000D2BFB File Offset: 0x000D0DFB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TargetFighterUId
@@ -139,9 +139,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000F9B RID: 3995
-		// (get) Token: 0x0600554D RID: 21837 RVA: 0x000D0578 File Offset: 0x000CE778
-		// (set) Token: 0x0600554E RID: 21838 RVA: 0x000D0580 File Offset: 0x000CE780
+		// Token: 0x17000FCC RID: 4044
+		// (get) Token: 0x0600563A RID: 22074 RVA: 0x000D2C04 File Offset: 0x000D0E04
+		// (set) Token: 0x0600563B RID: 22075 RVA: 0x000D2C0C File Offset: 0x000D0E0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlDamageInfo DamageInfo
@@ -156,9 +156,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000F9C RID: 3996
-		// (get) Token: 0x0600554F RID: 21839 RVA: 0x000D0589 File Offset: 0x000CE789
-		// (set) Token: 0x06005550 RID: 21840 RVA: 0x000D0591 File Offset: 0x000CE791
+		// Token: 0x17000FCD RID: 4045
+		// (get) Token: 0x0600563C RID: 22076 RVA: 0x000D2C15 File Offset: 0x000D0E15
+		// (set) Token: 0x0600563D RID: 22077 RVA: 0x000D2C1D File Offset: 0x000D0E1D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int WeaponItemUId
@@ -173,9 +173,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000F9D RID: 3997
-		// (get) Token: 0x06005551 RID: 21841 RVA: 0x000D059A File Offset: 0x000CE79A
-		// (set) Token: 0x06005552 RID: 21842 RVA: 0x000D05A2 File Offset: 0x000CE7A2
+		// Token: 0x17000FCE RID: 4046
+		// (get) Token: 0x0600563E RID: 22078 RVA: 0x000D2C26 File Offset: 0x000D0E26
+		// (set) Token: 0x0600563F RID: 22079 RVA: 0x000D2C2E File Offset: 0x000D0E2E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int NextReadyMs
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005553 RID: 21843 RVA: 0x000D05AB File Offset: 0x000CE7AB
+		// Token: 0x06005640 RID: 22080 RVA: 0x000D2C37 File Offset: 0x000D0E37
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DangoBrawlFightActionSkillCastInfo);
 		}
 
-		// Token: 0x06005554 RID: 21844 RVA: 0x000D05BC File Offset: 0x000CE7BC
+		// Token: 0x06005641 RID: 22081 RVA: 0x000D2C48 File Offset: 0x000D0E48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DangoBrawlFightActionSkillCastInfo other)
@@ -206,7 +206,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.SourceFighterUId == other.SourceFighterUId && this.SkillConfigId == other.SkillConfigId && this.WeaponItemId == other.WeaponItemId && this.TargetFighterUId == other.TargetFighterUId && object.Equals(this.DamageInfo, other.DamageInfo) && this.WeaponItemUId == other.WeaponItemUId && this.NextReadyMs == other.NextReadyMs && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06005555 RID: 21845 RVA: 0x000D065C File Offset: 0x000CE85C
+		// Token: 0x06005642 RID: 22082 RVA: 0x000D2CE8 File Offset: 0x000D0EE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -247,7 +247,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005556 RID: 21846 RVA: 0x000D072E File Offset: 0x000CE92E
+		// Token: 0x06005643 RID: 22083 RVA: 0x000D2DBA File Offset: 0x000D0FBA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -255,7 +255,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06005557 RID: 21847 RVA: 0x000D073B File Offset: 0x000CE93B
+		// Token: 0x06005644 RID: 22084 RVA: 0x000D2DC7 File Offset: 0x000D0FC7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -263,7 +263,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06005558 RID: 21848 RVA: 0x000D0744 File Offset: 0x000CE944
+		// Token: 0x06005645 RID: 22085 RVA: 0x000D2DD0 File Offset: 0x000D0FD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -309,7 +309,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005559 RID: 21849 RVA: 0x000D0828 File Offset: 0x000CEA28
+		// Token: 0x06005646 RID: 22086 RVA: 0x000D2EB4 File Offset: 0x000D10B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -350,7 +350,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600555A RID: 21850 RVA: 0x000D08F8 File Offset: 0x000CEAF8
+		// Token: 0x06005647 RID: 22087 RVA: 0x000D2F84 File Offset: 0x000D1184
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DangoBrawlFightActionSkillCastInfo other)
@@ -394,7 +394,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600555B RID: 21851 RVA: 0x000D09C4 File Offset: 0x000CEBC4
+		// Token: 0x06005648 RID: 22088 RVA: 0x000D3050 File Offset: 0x000D1250
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -402,7 +402,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600555C RID: 21852 RVA: 0x000D09D0 File Offset: 0x000CEBD0
+		// Token: 0x06005649 RID: 22089 RVA: 0x000D305C File Offset: 0x000D125C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -466,49 +466,49 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003413 RID: 13331
+		// Token: 0x040034AF RID: 13487
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003414 RID: 13332
+		// Token: 0x040034B0 RID: 13488
 		public const int SourceFighterUIdFieldNumber = 1;
 
-		// Token: 0x04003415 RID: 13333
+		// Token: 0x040034B1 RID: 13489
 		private int sourceFighterUId_;
 
-		// Token: 0x04003416 RID: 13334
+		// Token: 0x040034B2 RID: 13490
 		public const int SkillConfigIdFieldNumber = 2;
 
-		// Token: 0x04003417 RID: 13335
+		// Token: 0x040034B3 RID: 13491
 		private int skillConfigId_;
 
-		// Token: 0x04003418 RID: 13336
+		// Token: 0x040034B4 RID: 13492
 		public const int WeaponItemIdFieldNumber = 3;
 
-		// Token: 0x04003419 RID: 13337
+		// Token: 0x040034B5 RID: 13493
 		private int weaponItemId_;
 
-		// Token: 0x0400341A RID: 13338
+		// Token: 0x040034B6 RID: 13494
 		public const int TargetFighterUIdFieldNumber = 4;
 
-		// Token: 0x0400341B RID: 13339
+		// Token: 0x040034B7 RID: 13495
 		private int targetFighterUId_;
 
-		// Token: 0x0400341C RID: 13340
+		// Token: 0x040034B8 RID: 13496
 		public const int DamageInfoFieldNumber = 5;
 
-		// Token: 0x0400341D RID: 13341
+		// Token: 0x040034B9 RID: 13497
 		private DangoBrawlDamageInfo damageInfo_;
 
-		// Token: 0x0400341E RID: 13342
+		// Token: 0x040034BA RID: 13498
 		public const int WeaponItemUIdFieldNumber = 6;
 
-		// Token: 0x0400341F RID: 13343
+		// Token: 0x040034BB RID: 13499
 		private int weaponItemUId_;
 
-		// Token: 0x04003420 RID: 13344
+		// Token: 0x040034BC RID: 13500
 		public const int NextReadyMsFieldNumber = 7;
 
-		// Token: 0x04003421 RID: 13345
+		// Token: 0x040034BD RID: 13501
 		private int nextReadyMs_;
 	}
 }

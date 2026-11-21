@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008D9 RID: 2265
+	// Token: 0x02000924 RID: 2340
 	public class ConfigRougePopularEntrieAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003529 RID: 13609 RVA: 0x00185DE8 File Offset: 0x00183FE8
+		// Token: 0x060036EB RID: 14059 RVA: 0x00193008 File Offset: 0x00191208
 		static ConfigRougePopularEntrieAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRougePopularEntrieAll.CreateStaticDefaultValue), new Action(ConfigRougePopularEntrieAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600352A RID: 13610 RVA: 0x00185E08 File Offset: 0x00184008
+		// Token: 0x060036EC RID: 14060 RVA: 0x00193028 File Offset: 0x00191228
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRougePopularEntrieAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600352B RID: 13611 RVA: 0x00185E87 File Offset: 0x00184087
+		// Token: 0x060036ED RID: 14061 RVA: 0x001930A7 File Offset: 0x001912A7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRougePopularEntrieAll.LogPair = null;
 			ConfigRougePopularEntrieAll.HandleId = 0;
 		}
 
-		// Token: 0x0600352C RID: 13612 RVA: 0x00185E95 File Offset: 0x00184095
+		// Token: 0x060036EE RID: 14062 RVA: 0x001930B5 File Offset: 0x001912B5
 		public static void Init()
 		{
 			ConfigRougePopularEntrieAll.HandleId = ConfigCommon.InitDataStatement(ConfigRougePopularEntrieAll.HandleId, "db_rogue.db", "select BinData from `RougePopularEntrie`");
 		}
 
-		// Token: 0x0600352D RID: 13613 RVA: 0x00185EB0 File Offset: 0x001840B0
+		// Token: 0x060036EF RID: 14063 RVA: 0x001930D0 File Offset: 0x001912D0
 		[NullableContext(2)]
 		public static IReadOnlyList<RougePopularEntrie> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003DD5 RID: 15829
+		// Token: 0x04003FE2 RID: 16354
 		private const string DB = "db_rogue.db";
 
-		// Token: 0x04003DD6 RID: 15830
+		// Token: 0x04003FE3 RID: 16355
 		private const string FILE = "r.肉鸽.xlsx";
 
-		// Token: 0x04003DD7 RID: 15831
+		// Token: 0x04003FE4 RID: 16356
 		private const string TABLE = "RougePopularEntrie";
 
-		// Token: 0x04003DD8 RID: 15832
+		// Token: 0x04003FE5 RID: 16357
 		private const string COMMAND = "select BinData from `RougePopularEntrie`";
 
-		// Token: 0x04003DD9 RID: 15833
+		// Token: 0x04003FE6 RID: 16358
 		private const string KEY_PREFIX = "RougePopularEntrieAll";
 
-		// Token: 0x04003DDA RID: 15834
+		// Token: 0x04003FE7 RID: 16359
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003DDB RID: 15835
+		// Token: 0x04003FE8 RID: 16360
 		private static int HandleId;
 	}
 }

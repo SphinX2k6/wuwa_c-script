@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F2D RID: 16173
+	// Token: 0x0200436B RID: 17259
 	public class IMechaTrackScoreStuntActionT
 	{
-		// Token: 0x17007073 RID: 28787
-		// (get) Token: 0x06016F86 RID: 94086 RVA: 0x003505AA File Offset: 0x0034E7AA
-		// (set) Token: 0x06016F87 RID: 94087 RVA: 0x003505B2 File Offset: 0x0034E7B2
+		// Token: 0x17007662 RID: 30306
+		// (get) Token: 0x060185DE RID: 99806 RVA: 0x003797D2 File Offset: 0x003779D2
+		// (set) Token: 0x060185DF RID: 99807 RVA: 0x003797DA File Offset: 0x003779DA
 		public EMechaTrackScoreDetectionType Type { get; set; }
 
-		// Token: 0x06016F88 RID: 94088 RVA: 0x003505BB File Offset: 0x0034E7BB
+		// Token: 0x060185E0 RID: 99808 RVA: 0x003797E3 File Offset: 0x003779E3
 		public IMechaTrackScoreStuntActionT()
 		{
 			this.Type = EMechaTrackScoreDetectionType.StuntAction;

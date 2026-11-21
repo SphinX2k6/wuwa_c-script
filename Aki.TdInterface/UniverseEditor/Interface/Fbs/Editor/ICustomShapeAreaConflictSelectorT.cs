@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004848 RID: 18504
+	// Token: 0x02004CB0 RID: 19632
 	public class ICustomShapeAreaConflictSelectorT
 	{
-		// Token: 0x170084D5 RID: 34005
-		// (get) Token: 0x0601C9F4 RID: 117236 RVA: 0x0040BC99 File Offset: 0x00409E99
-		// (set) Token: 0x0601C9F5 RID: 117237 RVA: 0x0040BCA1 File Offset: 0x00409EA1
+		// Token: 0x17008B20 RID: 35616
+		// (get) Token: 0x0601E1F1 RID: 123377 RVA: 0x004385E9 File Offset: 0x004367E9
+		// (set) Token: 0x0601E1F2 RID: 123378 RVA: 0x004385F1 File Offset: 0x004367F1
 		public EAreaConflictSelector Type { get; set; }
 
-		// Token: 0x170084D6 RID: 34006
-		// (get) Token: 0x0601C9F6 RID: 117238 RVA: 0x0040BCAA File Offset: 0x00409EAA
-		// (set) Token: 0x0601C9F7 RID: 117239 RVA: 0x0040BCB2 File Offset: 0x00409EB2
+		// Token: 0x17008B21 RID: 35617
+		// (get) Token: 0x0601E1F3 RID: 123379 RVA: 0x004385FA File Offset: 0x004367FA
+		// (set) Token: 0x0601E1F4 RID: 123380 RVA: 0x00438602 File Offset: 0x00436802
 		public TAreaConflictCheckTriggerShapeUnion Shape { get; set; }
 
-		// Token: 0x170084D7 RID: 34007
-		// (get) Token: 0x0601C9F8 RID: 117240 RVA: 0x0040BCBB File Offset: 0x00409EBB
-		// (set) Token: 0x0601C9F9 RID: 117241 RVA: 0x0040BCC3 File Offset: 0x00409EC3
+		// Token: 0x17008B22 RID: 35618
+		// (get) Token: 0x0601E1F5 RID: 123381 RVA: 0x0043860B File Offset: 0x0043680B
+		// (set) Token: 0x0601E1F6 RID: 123382 RVA: 0x00438613 File Offset: 0x00436813
 		public IVectorInfoT Rotator { get; set; }
 
-		// Token: 0x0601C9FA RID: 117242 RVA: 0x0040BCCC File Offset: 0x00409ECC
+		// Token: 0x0601E1F7 RID: 123383 RVA: 0x0043861C File Offset: 0x0043681C
 		public ICustomShapeAreaConflictSelectorT()
 		{
 			this.Type = EAreaConflictSelector.Quest;

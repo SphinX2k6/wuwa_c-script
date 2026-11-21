@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006526 RID: 25894
+	// Token: 0x02006B94 RID: 27540
 	public class IDaemonHackT
 	{
-		// Token: 0x1700C090 RID: 49296
-		// (get) Token: 0x0602CEDD RID: 184029 RVA: 0x0062B907 File Offset: 0x00629B07
-		// (set) Token: 0x0602CEDE RID: 184030 RVA: 0x0062B90F File Offset: 0x00629B0F
+		// Token: 0x1700CA22 RID: 51746
+		// (get) Token: 0x0602F67B RID: 194171 RVA: 0x00677DB3 File Offset: 0x00675FB3
+		// (set) Token: 0x0602F67C RID: 194172 RVA: 0x00677DBB File Offset: 0x00675FBB
 		public ESimpleGameplayType Type { get; set; }
 
-		// Token: 0x1700C091 RID: 49297
-		// (get) Token: 0x0602CEDF RID: 184031 RVA: 0x0062B918 File Offset: 0x00629B18
-		// (set) Token: 0x0602CEE0 RID: 184032 RVA: 0x0062B920 File Offset: 0x00629B20
+		// Token: 0x1700CA23 RID: 51747
+		// (get) Token: 0x0602F67D RID: 194173 RVA: 0x00677DC4 File Offset: 0x00675FC4
+		// (set) Token: 0x0602F67E RID: 194174 RVA: 0x00677DCC File Offset: 0x00675FCC
 		public List<int> Ids { get; set; }
 
-		// Token: 0x1700C092 RID: 49298
-		// (get) Token: 0x0602CEE1 RID: 184033 RVA: 0x0062B929 File Offset: 0x00629B29
-		// (set) Token: 0x0602CEE2 RID: 184034 RVA: 0x0062B931 File Offset: 0x00629B31
+		// Token: 0x1700CA24 RID: 51748
+		// (get) Token: 0x0602F67F RID: 194175 RVA: 0x00677DD5 File Offset: 0x00675FD5
+		// (set) Token: 0x0602F680 RID: 194176 RVA: 0x00677DDD File Offset: 0x00675FDD
 		public bool FinishOnClose { get; set; }
 
-		// Token: 0x1700C093 RID: 49299
-		// (get) Token: 0x0602CEE3 RID: 184035 RVA: 0x0062B93A File Offset: 0x00629B3A
-		// (set) Token: 0x0602CEE4 RID: 184036 RVA: 0x0062B942 File Offset: 0x00629B42
+		// Token: 0x1700CA25 RID: 51749
+		// (get) Token: 0x0602F681 RID: 194177 RVA: 0x00677DE6 File Offset: 0x00675FE6
+		// (set) Token: 0x0602F682 RID: 194178 RVA: 0x00677DEE File Offset: 0x00675FEE
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602CEE5 RID: 184037 RVA: 0x0062B94B File Offset: 0x00629B4B
+		// Token: 0x0602F683 RID: 194179 RVA: 0x00677DF7 File Offset: 0x00675FF7
 		public IDaemonHackT()
 		{
 			this.Type = ESimpleGameplayType.Cipher;

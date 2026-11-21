@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020000C1 RID: 193
+	// Token: 0x020000C2 RID: 194
 	public sealed class AdventureRewardData : IMessage<AdventureRewardData>, IMessage, IEquatable<AdventureRewardData>, IDeepCloneable<AdventureRewardData>, IBufferMessage
 	{
-		// Token: 0x06001EDC RID: 7900 RVA: 0x000544B2 File Offset: 0x000526B2
+		// Token: 0x06001F25 RID: 7973 RVA: 0x00055166 File Offset: 0x00053366
 		[NullableContext(1)]
 		public static AdventureRewardData Create()
 		{
 			return new AdventureRewardData();
 		}
 
-		// Token: 0x170003A8 RID: 936
-		// (get) Token: 0x06001EDD RID: 7901 RVA: 0x000544B9 File Offset: 0x000526B9
+		// Token: 0x170003B1 RID: 945
+		// (get) Token: 0x06001F26 RID: 7974 RVA: 0x0005516D File Offset: 0x0005336D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<AdventureRewardData> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170003A9 RID: 937
-		// (get) Token: 0x06001EDE RID: 7902 RVA: 0x000544C0 File Offset: 0x000526C0
+		// Token: 0x170003B2 RID: 946
+		// (get) Token: 0x06001F27 RID: 7975 RVA: 0x00055174 File Offset: 0x00053374
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170003AA RID: 938
-		// (get) Token: 0x06001EDF RID: 7903 RVA: 0x000544C3 File Offset: 0x000526C3
+		// Token: 0x170003B3 RID: 947
+		// (get) Token: 0x06001F28 RID: 7976 RVA: 0x00055177 File Offset: 0x00053377
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001EE0 RID: 7904 RVA: 0x000544CA File Offset: 0x000526CA
+		// Token: 0x06001F29 RID: 7977 RVA: 0x0005517E File Offset: 0x0005337E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AdventureRewardData()
 		{
 		}
 
-		// Token: 0x06001EE1 RID: 7905 RVA: 0x000544DD File Offset: 0x000526DD
+		// Token: 0x06001F2A RID: 7978 RVA: 0x00055191 File Offset: 0x00053391
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AdventureRewardData(AdventureRewardData other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06001EE2 RID: 7906 RVA: 0x00054513 File Offset: 0x00052713
+		// Token: 0x06001F2B RID: 7979 RVA: 0x000551C7 File Offset: 0x000533C7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AdventureRewardData Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new AdventureRewardData(this);
 		}
 
-		// Token: 0x170003AB RID: 939
-		// (get) Token: 0x06001EE3 RID: 7907 RVA: 0x0005451B File Offset: 0x0005271B
-		// (set) Token: 0x06001EE4 RID: 7908 RVA: 0x00054523 File Offset: 0x00052723
+		// Token: 0x170003B4 RID: 948
+		// (get) Token: 0x06001F2C RID: 7980 RVA: 0x000551CF File Offset: 0x000533CF
+		// (set) Token: 0x06001F2D RID: 7981 RVA: 0x000551D7 File Offset: 0x000533D7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int DropId
@@ -96,8 +96,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170003AC RID: 940
-		// (get) Token: 0x06001EE5 RID: 7909 RVA: 0x0005452C File Offset: 0x0005272C
+		// Token: 0x170003B5 RID: 949
+		// (get) Token: 0x06001F2E RID: 7982 RVA: 0x000551E0 File Offset: 0x000533E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<AdventureItemData> Items
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001EE6 RID: 7910 RVA: 0x00054534 File Offset: 0x00052734
+		// Token: 0x06001F2F RID: 7983 RVA: 0x000551E8 File Offset: 0x000533E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AdventureRewardData);
 		}
 
-		// Token: 0x06001EE7 RID: 7911 RVA: 0x00054544 File Offset: 0x00052744
+		// Token: 0x06001F30 RID: 7984 RVA: 0x000551F8 File Offset: 0x000533F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AdventureRewardData other)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.DropId == other.DropId && this.items_.Equals(other.items_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06001EE8 RID: 7912 RVA: 0x00054594 File Offset: 0x00052794
+		// Token: 0x06001F31 RID: 7985 RVA: 0x00055248 File Offset: 0x00053448
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001EE9 RID: 7913 RVA: 0x000545E1 File Offset: 0x000527E1
+		// Token: 0x06001F32 RID: 7986 RVA: 0x00055295 File Offset: 0x00053495
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06001EEA RID: 7914 RVA: 0x000545EE File Offset: 0x000527EE
+		// Token: 0x06001F33 RID: 7987 RVA: 0x000552A2 File Offset: 0x000534A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -158,7 +158,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06001EEB RID: 7915 RVA: 0x000545F8 File Offset: 0x000527F8
+		// Token: 0x06001F34 RID: 7988 RVA: 0x000552AC File Offset: 0x000534AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001EEC RID: 7916 RVA: 0x00054648 File Offset: 0x00052848
+		// Token: 0x06001F35 RID: 7989 RVA: 0x000552FC File Offset: 0x000534FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001EED RID: 7917 RVA: 0x0005469C File Offset: 0x0005289C
+		// Token: 0x06001F36 RID: 7990 RVA: 0x00055350 File Offset: 0x00053550
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AdventureRewardData other)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06001EEE RID: 7918 RVA: 0x000546E9 File Offset: 0x000528E9
+		// Token: 0x06001F37 RID: 7991 RVA: 0x0005539D File Offset: 0x0005359D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06001EEF RID: 7919 RVA: 0x000546F4 File Offset: 0x000528F4
+		// Token: 0x06001F38 RID: 7992 RVA: 0x000553A8 File Offset: 0x000535A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -248,25 +248,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002393 RID: 9107
+		// Token: 0x040023F6 RID: 9206
 		private static readonly MessageParser<AdventureRewardData> _parser = new MessageParser<AdventureRewardData>(() => new AdventureRewardData());
 
-		// Token: 0x04002394 RID: 9108
+		// Token: 0x040023F7 RID: 9207
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002395 RID: 9109
+		// Token: 0x040023F8 RID: 9208
 		public const int DropIdFieldNumber = 1;
 
-		// Token: 0x04002396 RID: 9110
+		// Token: 0x040023F9 RID: 9209
 		private int dropId_;
 
-		// Token: 0x04002397 RID: 9111
+		// Token: 0x040023FA RID: 9210
 		public const int ItemsFieldNumber = 2;
 
-		// Token: 0x04002398 RID: 9112
+		// Token: 0x040023FB RID: 9211
 		private static readonly FieldCodec<AdventureItemData> _repeated_items_codec = FieldCodec.ForMessage<AdventureItemData>(18U, AdventureItemData.Parser);
 
-		// Token: 0x04002399 RID: 9113
+		// Token: 0x040023FC RID: 9212
 		private readonly RepeatedField<AdventureItemData> items_ = new RepeatedField<AdventureItemData>();
 	}
 }

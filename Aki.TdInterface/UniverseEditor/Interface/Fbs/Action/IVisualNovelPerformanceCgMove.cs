@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075A1 RID: 30113
+	// Token: 0x02007D9A RID: 32154
 	public struct IVisualNovelPerformanceCgMove : IFlatbufferObject
 	{
-		// Token: 0x1700E45D RID: 58461
-		// (get) Token: 0x06036CA4 RID: 224420 RVA: 0x0076FEE8 File Offset: 0x0076E0E8
+		// Token: 0x1700F08A RID: 61578
+		// (get) Token: 0x0603A0D2 RID: 237778 RVA: 0x007D3467 File Offset: 0x007D1667
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036CA5 RID: 224421 RVA: 0x0076FEF5 File Offset: 0x0076E0F5
+		// Token: 0x0603A0D3 RID: 237779 RVA: 0x007D3474 File Offset: 0x007D1674
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036CA6 RID: 224422 RVA: 0x0076FEFC File Offset: 0x0076E0FC
+		// Token: 0x0603A0D4 RID: 237780 RVA: 0x007D347C File Offset: 0x007D167C
 		public static IVisualNovelPerformanceCgMove GetRootAsIVisualNovelPerformanceCgMove(ByteBuffer _bb)
 		{
 			return IVisualNovelPerformanceCgMove.GetRootAsIVisualNovelPerformanceCgMove(_bb, default(IVisualNovelPerformanceCgMove));
 		}
 
-		// Token: 0x06036CA7 RID: 224423 RVA: 0x0076FF18 File Offset: 0x0076E118
+		// Token: 0x0603A0D5 RID: 237781 RVA: 0x007D3498 File Offset: 0x007D1698
 		public static IVisualNovelPerformanceCgMove GetRootAsIVisualNovelPerformanceCgMove(ByteBuffer _bb, IVisualNovelPerformanceCgMove obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036CA8 RID: 224424 RVA: 0x0076FF35 File Offset: 0x0076E135
+		// Token: 0x0603A0D6 RID: 237782 RVA: 0x007D34B5 File Offset: 0x007D16B5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036CA9 RID: 224425 RVA: 0x0076FF44 File Offset: 0x0076E144
+		// Token: 0x0603A0D7 RID: 237783 RVA: 0x007D34C4 File Offset: 0x007D16C4
 		public IVisualNovelPerformanceCgMove __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E45E RID: 58462
-		// (get) Token: 0x06036CAA RID: 224426 RVA: 0x0076FF54 File Offset: 0x0076E154
+		// Token: 0x1700F08B RID: 61579
+		// (get) Token: 0x0603A0D8 RID: 237784 RVA: 0x007D34D4 File Offset: 0x007D16D4
 		public EVisualNovelPerformanceType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E45F RID: 58463
-		// (get) Token: 0x06036CAB RID: 224427 RVA: 0x0076FF90 File Offset: 0x0076E190
+		// Token: 0x1700F08C RID: 61580
+		// (get) Token: 0x0603A0D9 RID: 237785 RVA: 0x007D3510 File Offset: 0x007D1710
 		public float StartTime
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E460 RID: 58464
-		// (get) Token: 0x06036CAC RID: 224428 RVA: 0x0076FFD0 File Offset: 0x0076E1D0
+		// Token: 0x1700F08D RID: 61581
+		// (get) Token: 0x0603A0DA RID: 237786 RVA: 0x007D3550 File Offset: 0x007D1750
 		public IVisualNovelPortraitTransform? StartTransform
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E461 RID: 58465
-		// (get) Token: 0x06036CAD RID: 224429 RVA: 0x00770030 File Offset: 0x0076E230
+		// Token: 0x1700F08E RID: 61582
+		// (get) Token: 0x0603A0DB RID: 237787 RVA: 0x007D35B0 File Offset: 0x007D17B0
 		public IVisualNovelPortraitTransform? TargetTransform
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E462 RID: 58466
-		// (get) Token: 0x06036CAE RID: 224430 RVA: 0x00770090 File Offset: 0x0076E290
+		// Token: 0x1700F08F RID: 61583
+		// (get) Token: 0x0603A0DC RID: 237788 RVA: 0x007D3610 File Offset: 0x007D1810
 		public TEaseCurveType EaseCurveType
 		{
 			get
@@ -123,7 +123,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036CAF RID: 224431 RVA: 0x007700D0 File Offset: 0x0076E2D0
+		// Token: 0x0603A0DD RID: 237789 RVA: 0x007D3650 File Offset: 0x007D1850
 		public TTable? EaseCurve<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(14);
@@ -134,20 +134,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06036CB0 RID: 224432 RVA: 0x00770118 File Offset: 0x0076E318
+		// Token: 0x0603A0DE RID: 237790 RVA: 0x007D3698 File Offset: 0x007D1898
 		public IEaseCurveCustom EaseCurveAsIEaseCurveCustom()
 		{
 			return this.EaseCurve<IEaseCurveCustom>().Value;
 		}
 
-		// Token: 0x06036CB1 RID: 224433 RVA: 0x00770134 File Offset: 0x0076E334
+		// Token: 0x0603A0DF RID: 237791 RVA: 0x007D36B4 File Offset: 0x007D18B4
 		public IEaseCurvePreset EaseCurveAsIEaseCurvePreset()
 		{
 			return this.EaseCurve<IEaseCurvePreset>().Value;
 		}
 
-		// Token: 0x1700E463 RID: 58467
-		// (get) Token: 0x06036CB2 RID: 224434 RVA: 0x00770150 File Offset: 0x0076E350
+		// Token: 0x1700F090 RID: 61584
+		// (get) Token: 0x0603A0E0 RID: 237792 RVA: 0x007D36D0 File Offset: 0x007D18D0
 		public float Duration
 		{
 			get
@@ -161,8 +161,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E464 RID: 58468
-		// (get) Token: 0x06036CB3 RID: 224435 RVA: 0x00770194 File Offset: 0x0076E394
+		// Token: 0x1700F091 RID: 61585
+		// (get) Token: 0x0603A0E1 RID: 237793 RVA: 0x007D3714 File Offset: 0x007D1914
 		public byte NullMask
 		{
 			get
@@ -176,7 +176,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036CB4 RID: 224436 RVA: 0x007701D4 File Offset: 0x0076E3D4
+		// Token: 0x0603A0E2 RID: 237794 RVA: 0x007D3754 File Offset: 0x007D1954
 		public static Offset<IVisualNovelPerformanceCgMove> CreateIVisualNovelPerformanceCgMove(FlatBufferBuilder builder, EVisualNovelPerformanceType Type = EVisualNovelPerformanceType.Enter, float StartTime = 0f, Offset<IVisualNovelPortraitTransform> StartTransformOffset = default(Offset<IVisualNovelPortraitTransform>), Offset<IVisualNovelPortraitTransform> TargetTransformOffset = default(Offset<IVisualNovelPortraitTransform>), TEaseCurveType EaseCurve_type = TEaseCurveType.NONE, int EaseCurveOffset = 0, float Duration = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(8);
@@ -191,67 +191,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelPerformanceCgMove.EndIVisualNovelPerformanceCgMove(builder);
 		}
 
-		// Token: 0x06036CB5 RID: 224437 RVA: 0x0077022B File Offset: 0x0076E42B
+		// Token: 0x0603A0E3 RID: 237795 RVA: 0x007D37AB File Offset: 0x007D19AB
 		public static void StartIVisualNovelPerformanceCgMove(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x06036CB6 RID: 224438 RVA: 0x00770234 File Offset: 0x0076E434
+		// Token: 0x0603A0E4 RID: 237796 RVA: 0x007D37B4 File Offset: 0x007D19B4
 		public static void AddType(FlatBufferBuilder builder, EVisualNovelPerformanceType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036CB7 RID: 224439 RVA: 0x0077023F File Offset: 0x0076E43F
+		// Token: 0x0603A0E5 RID: 237797 RVA: 0x007D37BF File Offset: 0x007D19BF
 		public static void AddStartTime(FlatBufferBuilder builder, float startTime)
 		{
 			builder.AddFloat(1, startTime, 0.0);
 		}
 
-		// Token: 0x06036CB8 RID: 224440 RVA: 0x00770252 File Offset: 0x0076E452
+		// Token: 0x0603A0E6 RID: 237798 RVA: 0x007D37D2 File Offset: 0x007D19D2
 		public static void AddStartTransform(FlatBufferBuilder builder, Offset<IVisualNovelPortraitTransform> startTransformOffset)
 		{
 			builder.AddOffset(2, startTransformOffset.Value, 0);
 		}
 
-		// Token: 0x06036CB9 RID: 224441 RVA: 0x00770262 File Offset: 0x0076E462
+		// Token: 0x0603A0E7 RID: 237799 RVA: 0x007D37E2 File Offset: 0x007D19E2
 		public static void AddTargetTransform(FlatBufferBuilder builder, Offset<IVisualNovelPortraitTransform> targetTransformOffset)
 		{
 			builder.AddOffset(3, targetTransformOffset.Value, 0);
 		}
 
-		// Token: 0x06036CBA RID: 224442 RVA: 0x00770272 File Offset: 0x0076E472
+		// Token: 0x0603A0E8 RID: 237800 RVA: 0x007D37F2 File Offset: 0x007D19F2
 		public static void AddEaseCurveType(FlatBufferBuilder builder, TEaseCurveType easeCurveType)
 		{
 			builder.AddByte(4, (byte)easeCurveType, 0);
 		}
 
-		// Token: 0x06036CBB RID: 224443 RVA: 0x0077027D File Offset: 0x0076E47D
+		// Token: 0x0603A0E9 RID: 237801 RVA: 0x007D37FD File Offset: 0x007D19FD
 		public static void AddEaseCurve(FlatBufferBuilder builder, int easeCurveOffset)
 		{
 			builder.AddOffset(5, easeCurveOffset, 0);
 		}
 
-		// Token: 0x06036CBC RID: 224444 RVA: 0x00770288 File Offset: 0x0076E488
+		// Token: 0x0603A0EA RID: 237802 RVA: 0x007D3808 File Offset: 0x007D1A08
 		public static void AddDuration(FlatBufferBuilder builder, float duration)
 		{
 			builder.AddFloat(6, duration, 0.0);
 		}
 
-		// Token: 0x06036CBD RID: 224445 RVA: 0x0077029B File Offset: 0x0076E49B
+		// Token: 0x0603A0EB RID: 237803 RVA: 0x007D381B File Offset: 0x007D1A1B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(7, nullMask, 0);
 		}
 
-		// Token: 0x06036CBE RID: 224446 RVA: 0x007702A6 File Offset: 0x0076E4A6
+		// Token: 0x0603A0EC RID: 237804 RVA: 0x007D3826 File Offset: 0x007D1A26
 		public static Offset<IVisualNovelPerformanceCgMove> EndIVisualNovelPerformanceCgMove(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisualNovelPerformanceCgMove>(builder.EndTable());
 		}
 
-		// Token: 0x06036CBF RID: 224447 RVA: 0x007702B4 File Offset: 0x0076E4B4
+		// Token: 0x0603A0ED RID: 237805 RVA: 0x007D3834 File Offset: 0x007D1A34
 		public IVisualNovelPerformanceCgMoveT UnPack()
 		{
 			IVisualNovelPerformanceCgMoveT visualNovelPerformanceCgMoveT = new IVisualNovelPerformanceCgMoveT();
@@ -259,7 +259,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return visualNovelPerformanceCgMoveT;
 		}
 
-		// Token: 0x06036CC0 RID: 224448 RVA: 0x007702D0 File Offset: 0x0076E4D0
+		// Token: 0x0603A0EE RID: 237806 RVA: 0x007D3850 File Offset: 0x007D1A50
 		public void UnPackTo(IVisualNovelPerformanceCgMoveT _o)
 		{
 			_o.Type = this.Type;
@@ -284,7 +284,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06036CC1 RID: 224449 RVA: 0x00770408 File Offset: 0x0076E608
+		// Token: 0x0603A0EF RID: 237807 RVA: 0x007D3988 File Offset: 0x007D1B88
 		public static Offset<IVisualNovelPerformanceCgMove> Pack(FlatBufferBuilder builder, IVisualNovelPerformanceCgMoveT _o)
 		{
 			if (_o == null)
@@ -298,7 +298,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelPerformanceCgMove.CreateIVisualNovelPerformanceCgMove(builder, _o.Type, _o.StartTime, startTransformOffset, targetTransformOffset, easeCurve_type, easeCurveOffset, _o.Duration, _o.NullMask);
 		}
 
-		// Token: 0x040124C6 RID: 74950
+		// Token: 0x040134F9 RID: 79097
 		private Table __p;
 	}
 }

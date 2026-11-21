@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001317 RID: 4887
+	// Token: 0x02001467 RID: 5223
 	public class IZaxisViewRange
 	{
-		// Token: 0x06007035 RID: 28725 RVA: 0x0010F1A4 File Offset: 0x0010D3A4
-		[NullableContext(1)]
+		// Token: 0x060076D5 RID: 30421 RVA: 0x0011D710 File Offset: 0x0011B910
 		public static IZaxisViewRange Create(IZaxisViewRange? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170023DA RID: 9178
-		// (get) Token: 0x06007036 RID: 28726 RVA: 0x0010F1C4 File Offset: 0x0010D3C4
+		// Token: 0x170025A9 RID: 9641
+		// (get) Token: 0x060076D6 RID: 30422 RVA: 0x0011D730 File Offset: 0x0011B930
 		public virtual int? Up
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023DB RID: 9179
-		// (get) Token: 0x06007037 RID: 28727 RVA: 0x0010F1FC File Offset: 0x0010D3FC
+		// Token: 0x170025AA RID: 9642
+		// (get) Token: 0x060076D7 RID: 30423 RVA: 0x0011D768 File Offset: 0x0011B968
 		public virtual int? Down
 		{
 			get
@@ -49,7 +47,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040BD RID: 16573
+		// Token: 0x04004439 RID: 17465
 		private IZaxisViewRange Instance;
 	}
 }

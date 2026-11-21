@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028F1 RID: 10481
+// Token: 0x02001E6C RID: 7788
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleAttrListScrollItem : UiPanelBase
 {
-	// Token: 0x06015A34 RID: 88628 RVA: 0x00575F70 File Offset: 0x00574170
+	// Token: 0x06013438 RID: 78904 RVA: 0x005A0E44 File Offset: 0x0059F044
 	public RoleAttrListScrollItem(UUIItem uiItem, CommonComponentDefine.EAttributeType type)
 	{
 		this.Type = type;
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x06015A35 RID: 88629 RVA: 0x00575F8C File Offset: 0x0057418C
+	// Token: 0x06013439 RID: 78905 RVA: 0x005A0E60 File Offset: 0x0059F060
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ public class RoleAttrListScrollItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06015A36 RID: 88630 RVA: 0x005760A4 File Offset: 0x005742A4
+	// Token: 0x0601343A RID: 78906 RVA: 0x005A0F78 File Offset: 0x0059F178
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -49,7 +49,7 @@ public class RoleAttrListScrollItem : UiPanelBase
 		base.GetItem(7).SetUIActive(false);
 	}
 
-	// Token: 0x06015A37 RID: 88631 RVA: 0x0057610B File Offset: 0x0057430B
+	// Token: 0x0601343B RID: 78907 RVA: 0x005A0FDF File Offset: 0x0059F1DF
 	protected override void OnBeforeDestroy()
 	{
 		if (this.LevelSequencePlayer != null)
@@ -59,7 +59,7 @@ public class RoleAttrListScrollItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015A38 RID: 88632 RVA: 0x00576128 File Offset: 0x00574328
+	// Token: 0x0601343C RID: 78908 RVA: 0x005A0FFC File Offset: 0x0059F1FC
 	public void ShowTemp(AttrListScrollData data, int index)
 	{
 		base.GetSprite(1).SetUIActive(index % 2 == 1);
@@ -78,7 +78,7 @@ public class RoleAttrListScrollItem : UiPanelBase
 		base.GetItem(6).SetUIActive(false);
 	}
 
-	// Token: 0x06015A39 RID: 88633 RVA: 0x005761D0 File Offset: 0x005743D0
+	// Token: 0x0601343D RID: 78909 RVA: 0x005A10A4 File Offset: 0x0059F2A4
 	protected void SetAttrValue(AttrListScrollData attrData)
 	{
 		double? num = null;
@@ -123,14 +123,14 @@ public class RoleAttrListScrollItem : UiPanelBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x06015A3A RID: 88634 RVA: 0x00576379 File Offset: 0x00574579
+	// Token: 0x0601343E RID: 78910 RVA: 0x005A124D File Offset: 0x0059F44D
 	private bool CanClickLikeToggle()
 	{
 		AttrListScrollData data = this.Data;
 		return !string.IsNullOrEmpty((data != null) ? data.GetDesc() : null);
 	}
 
-	// Token: 0x06015A3B RID: 88635 RVA: 0x00576398 File Offset: 0x00574598
+	// Token: 0x0601343F RID: 78911 RVA: 0x005A126C File Offset: 0x0059F46C
 	protected void ToggleEvent(EToggleState bState)
 	{
 		bool flag = bState == EToggleState.ETT_Checked;
@@ -144,14 +144,14 @@ public class RoleAttrListScrollItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400A0F2 RID: 41202
+	// Token: 0x0400A4DD RID: 42205
 	private readonly CommonComponentDefine.EAttributeType Type;
 
-	// Token: 0x0400A0F3 RID: 41203
+	// Token: 0x0400A4DE RID: 42206
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400A0F4 RID: 41204
+	// Token: 0x0400A4DF RID: 42207
 	[Nullable(2)]
 	private AttrListScrollData Data;
 }

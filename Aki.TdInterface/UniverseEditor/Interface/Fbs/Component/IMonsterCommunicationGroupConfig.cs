@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200556F RID: 21871
+	// Token: 0x02005B0D RID: 23309
 	public struct IMonsterCommunicationGroupConfig : IFlatbufferObject
 	{
-		// Token: 0x1700A190 RID: 41360
-		// (get) Token: 0x060242DD RID: 148189 RVA: 0x004FF23A File Offset: 0x004FD43A
+		// Token: 0x1700AA13 RID: 43539
+		// (get) Token: 0x060264CA RID: 156874 RVA: 0x0053F135 File Offset: 0x0053D335
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060242DE RID: 148190 RVA: 0x004FF247 File Offset: 0x004FD447
+		// Token: 0x060264CB RID: 156875 RVA: 0x0053F142 File Offset: 0x0053D342
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060242DF RID: 148191 RVA: 0x004FF250 File Offset: 0x004FD450
+		// Token: 0x060264CC RID: 156876 RVA: 0x0053F14C File Offset: 0x0053D34C
 		public static IMonsterCommunicationGroupConfig GetRootAsIMonsterCommunicationGroupConfig(ByteBuffer _bb)
 		{
 			return IMonsterCommunicationGroupConfig.GetRootAsIMonsterCommunicationGroupConfig(_bb, default(IMonsterCommunicationGroupConfig));
 		}
 
-		// Token: 0x060242E0 RID: 148192 RVA: 0x004FF26C File Offset: 0x004FD46C
+		// Token: 0x060264CD RID: 156877 RVA: 0x0053F168 File Offset: 0x0053D368
 		public static IMonsterCommunicationGroupConfig GetRootAsIMonsterCommunicationGroupConfig(ByteBuffer _bb, IMonsterCommunicationGroupConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060242E1 RID: 148193 RVA: 0x004FF289 File Offset: 0x004FD489
+		// Token: 0x060264CE RID: 156878 RVA: 0x0053F185 File Offset: 0x0053D385
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060242E2 RID: 148194 RVA: 0x004FF298 File Offset: 0x004FD498
+		// Token: 0x060264CF RID: 156879 RVA: 0x0053F194 File Offset: 0x0053D394
 		public IMonsterCommunicationGroupConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A191 RID: 41361
-		// (get) Token: 0x060242E3 RID: 148195 RVA: 0x004FF2A8 File Offset: 0x004FD4A8
+		// Token: 0x1700AA14 RID: 43540
+		// (get) Token: 0x060264D0 RID: 156880 RVA: 0x0053F1A4 File Offset: 0x0053D3A4
 		public int GroupId
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060242E4 RID: 148196 RVA: 0x004FF2E4 File Offset: 0x004FD4E4
+		// Token: 0x060264D1 RID: 156881 RVA: 0x0053F1E0 File Offset: 0x0053D3E0
 		public static Offset<IMonsterCommunicationGroupConfig> CreateIMonsterCommunicationGroupConfig(FlatBufferBuilder builder, int GroupId = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMonsterCommunicationGroupConfig.EndIMonsterCommunicationGroupConfig(builder);
 		}
 
-		// Token: 0x060242E5 RID: 148197 RVA: 0x004FF2FA File Offset: 0x004FD4FA
+		// Token: 0x060264D2 RID: 156882 RVA: 0x0053F1F6 File Offset: 0x0053D3F6
 		public static void StartIMonsterCommunicationGroupConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060242E6 RID: 148198 RVA: 0x004FF303 File Offset: 0x004FD503
+		// Token: 0x060264D3 RID: 156883 RVA: 0x0053F1FF File Offset: 0x0053D3FF
 		public static void AddGroupId(FlatBufferBuilder builder, int groupId)
 		{
 			builder.AddInt(0, groupId, 0);
 		}
 
-		// Token: 0x060242E7 RID: 148199 RVA: 0x004FF30E File Offset: 0x004FD50E
+		// Token: 0x060264D4 RID: 156884 RVA: 0x0053F20A File Offset: 0x0053D40A
 		public static Offset<IMonsterCommunicationGroupConfig> EndIMonsterCommunicationGroupConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IMonsterCommunicationGroupConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060242E8 RID: 148200 RVA: 0x004FF31C File Offset: 0x004FD51C
+		// Token: 0x060264D5 RID: 156885 RVA: 0x0053F218 File Offset: 0x0053D418
 		public IMonsterCommunicationGroupConfigT UnPack()
 		{
 			IMonsterCommunicationGroupConfigT monsterCommunicationGroupConfigT = new IMonsterCommunicationGroupConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return monsterCommunicationGroupConfigT;
 		}
 
-		// Token: 0x060242E9 RID: 148201 RVA: 0x004FF337 File Offset: 0x004FD537
+		// Token: 0x060264D6 RID: 156886 RVA: 0x0053F233 File Offset: 0x0053D433
 		public void UnPackTo(IMonsterCommunicationGroupConfigT _o)
 		{
 			_o.GroupId = this.GroupId;
 		}
 
-		// Token: 0x060242EA RID: 148202 RVA: 0x004FF348 File Offset: 0x004FD548
+		// Token: 0x060264D7 RID: 156887 RVA: 0x0053F244 File Offset: 0x0053D444
 		public static Offset<IMonsterCommunicationGroupConfig> Pack(FlatBufferBuilder builder, IMonsterCommunicationGroupConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMonsterCommunicationGroupConfig.CreateIMonsterCommunicationGroupConfig(builder, _o.GroupId);
 		}
 
-		// Token: 0x0400E892 RID: 59538
+		// Token: 0x0400F4F2 RID: 62706
 		private Table __p;
 	}
 }

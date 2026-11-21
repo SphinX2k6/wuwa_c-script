@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000A1 RID: 161
+	// Token: 0x020000A9 RID: 169
 	public class ConfigAreaByCountryAndLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060003C7 RID: 967 RVA: 0x0006EFA7 File Offset: 0x0006D1A7
+		// Token: 0x060003F7 RID: 1015 RVA: 0x0007385B File Offset: 0x00071A5B
 		static ConfigAreaByCountryAndLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAreaByCountryAndLevel.CreateStaticDefaultValue), new Action(ConfigAreaByCountryAndLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060003C8 RID: 968 RVA: 0x0006EFC8 File Offset: 0x0006D1C8
+		// Token: 0x060003F8 RID: 1016 RVA: 0x0007387C File Offset: 0x00071A7C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAreaByCountryAndLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060003C9 RID: 969 RVA: 0x0006F047 File Offset: 0x0006D247
+		// Token: 0x060003F9 RID: 1017 RVA: 0x000738FB File Offset: 0x00071AFB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAreaByCountryAndLevel.LogPair = null;
 			ConfigAreaByCountryAndLevel.HandleId = 0;
 		}
 
-		// Token: 0x060003CA RID: 970 RVA: 0x0006F055 File Offset: 0x0006D255
+		// Token: 0x060003FA RID: 1018 RVA: 0x00073909 File Offset: 0x00071B09
 		public static void Init()
 		{
 			ConfigAreaByCountryAndLevel.HandleId = ConfigCommon.InitDataStatement(ConfigAreaByCountryAndLevel.HandleId, "db_area.db", "select BinData from `Area` where CountryId=? And Level=?");
 		}
 
-		// Token: 0x060003CB RID: 971 RVA: 0x0006F070 File Offset: 0x0006D270
+		// Token: 0x060003FB RID: 1019 RVA: 0x00073924 File Offset: 0x00071B24
 		[NullableContext(2)]
 		public static IReadOnlyList<Area> GetConfigList(int p0CountryId, int p1Level, bool useCache = true)
 		{
@@ -99,22 +99,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400044B RID: 1099
+		// Token: 0x04000483 RID: 1155
 		private const string DB = "db_area.db";
 
-		// Token: 0x0400044C RID: 1100
+		// Token: 0x04000484 RID: 1156
 		private const string FILE = "q.区域.xlsx";
 
-		// Token: 0x0400044D RID: 1101
+		// Token: 0x04000485 RID: 1157
 		private const string TABLE = "Area";
 
-		// Token: 0x0400044E RID: 1102
+		// Token: 0x04000486 RID: 1158
 		private const string COMMAND = "select BinData from `Area` where CountryId=? And Level=?";
 
-		// Token: 0x0400044F RID: 1103
+		// Token: 0x04000487 RID: 1159
 		private const string KEY_PREFIX = "AreaByCountryAndLevel";
 
-		// Token: 0x04000450 RID: 1104
+		// Token: 0x04000488 RID: 1160
 		[Nullable(new byte[]
 		{
 			2,
@@ -124,7 +124,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000451 RID: 1105
+		// Token: 0x04000489 RID: 1161
 		private static int HandleId;
 	}
 }

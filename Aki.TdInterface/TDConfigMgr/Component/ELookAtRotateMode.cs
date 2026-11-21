@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000DB RID: 219
+	// Token: 0x020000E3 RID: 227
 	[EnumExtensions]
 	public enum ELookAtRotateMode
 	{
-		// Token: 0x040004BF RID: 1215
+		// Token: 0x040004E3 RID: 1251
 		KeepInitialPitchRoll,
-		// Token: 0x040004C0 RID: 1216
+		// Token: 0x040004E4 RID: 1252
 		AllAxisLookAt
 	}
 }

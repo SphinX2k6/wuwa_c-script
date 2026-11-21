@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001293 RID: 4755
+// Token: 0x02000747 RID: 1863
 [NullableContext(1)]
 [Nullable(0)]
 public class LifePointDrawActivityData : ActivityBaseData
 {
-	// Token: 0x0600820F RID: 33295 RVA: 0x001B939C File Offset: 0x001B759C
+	// Token: 0x060055A6 RID: 21926 RVA: 0x001C206C File Offset: 0x001C026C
 	protected override void PhraseEx(ActivityData data)
 	{
 		LifePointChallengeActivityData lifePointChallenge = data.LifePointChallenge;
@@ -37,7 +37,7 @@ public class LifePointDrawActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06008210 RID: 33296 RVA: 0x001B9494 File Offset: 0x001B7694
+	// Token: 0x060055A7 RID: 21927 RVA: 0x001C2164 File Offset: 0x001C0364
 	public LifePointChallengeDataInstance GetChallengeData(int id)
 	{
 		LifePointChallengeDataInstance result;
@@ -45,7 +45,7 @@ public class LifePointDrawActivityData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06008211 RID: 33297 RVA: 0x001B94B4 File Offset: 0x001B76B4
+	// Token: 0x060055A8 RID: 21928 RVA: 0x001C2184 File Offset: 0x001C0384
 	public void OnLifePointChallengeDataUpdate(LifePointChallengeData data)
 	{
 		LifePointChallengeDataInstance challengeData = this.GetChallengeData(data.ChallengeId);
@@ -59,13 +59,13 @@ public class LifePointDrawActivityData : ActivityBaseData
 		this.ChallengeMap[lifePointChallengeDataInstance.GetId()] = lifePointChallengeDataInstance;
 	}
 
-	// Token: 0x06008212 RID: 33298 RVA: 0x001B94F8 File Offset: 0x001B76F8
+	// Token: 0x060055A9 RID: 21929 RVA: 0x001C21C8 File Offset: 0x001C03C8
 	public int GetChallengeNumber()
 	{
 		return this.ChallengeMap.Count;
 	}
 
-	// Token: 0x06008213 RID: 33299 RVA: 0x001B9508 File Offset: 0x001B7708
+	// Token: 0x060055AA RID: 21930 RVA: 0x001C21D8 File Offset: 0x001C03D8
 	public int GetFinishChallengeNumber()
 	{
 		int num = 0;
@@ -82,7 +82,7 @@ public class LifePointDrawActivityData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06008214 RID: 33300 RVA: 0x001B9568 File Offset: 0x001B7768
+	// Token: 0x060055AB RID: 21931 RVA: 0x001C2238 File Offset: 0x001C0438
 	public int GetGroupChallengeNumber(int groupId)
 	{
 		int num = 0;
@@ -97,7 +97,7 @@ public class LifePointDrawActivityData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06008215 RID: 33301 RVA: 0x001B95CC File Offset: 0x001B77CC
+	// Token: 0x060055AC RID: 21932 RVA: 0x001C229C File Offset: 0x001C049C
 	public long GetGroupUnlockTime(int groupId)
 	{
 		long num = 0L;
@@ -113,7 +113,7 @@ public class LifePointDrawActivityData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06008216 RID: 33302 RVA: 0x001B9640 File Offset: 0x001B7840
+	// Token: 0x060055AD RID: 21933 RVA: 0x001C2310 File Offset: 0x001C0510
 	public bool GetGroupIfOverUnlockTime(int groupId)
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -121,7 +121,7 @@ public class LifePointDrawActivityData : ActivityBaseData
 		return serverTime >= (double)groupUnlockTime;
 	}
 
-	// Token: 0x06008217 RID: 33303 RVA: 0x001B9668 File Offset: 0x001B7868
+	// Token: 0x060055AE RID: 21934 RVA: 0x001C2338 File Offset: 0x001C0538
 	public bool GetGroupHasGetReward(int groupId)
 	{
 		for (int i = 0; i < LifePointDrawConfig.Instance.GetLifePointGroupByGroupId(groupId).Value.ChallengeListLength; i++)
@@ -136,7 +136,7 @@ public class LifePointDrawActivityData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x06008218 RID: 33304 RVA: 0x001B96D0 File Offset: 0x001B78D0
+	// Token: 0x060055AF RID: 21935 RVA: 0x001C23A0 File Offset: 0x001C05A0
 	public int GetGroupRewardProgress(int groupId)
 	{
 		int num = 0;
@@ -152,27 +152,27 @@ public class LifePointDrawActivityData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06008219 RID: 33305 RVA: 0x001B9740 File Offset: 0x001B7940
+	// Token: 0x060055B0 RID: 21936 RVA: 0x001C2410 File Offset: 0x001C0610
 	public bool GetChallengeIfGetReward(int challengeId)
 	{
 		LifePointChallengeDataInstance challengeData = this.GetChallengeData(challengeId);
 		return challengeData != null && challengeData.GetHasGetReward();
 	}
 
-	// Token: 0x0600821A RID: 33306 RVA: 0x001B9760 File Offset: 0x001B7960
+	// Token: 0x060055B1 RID: 21937 RVA: 0x001C2430 File Offset: 0x001C0630
 	public bool GetChallengeRequireFinishState(int challengeId)
 	{
 		LifePointChallengeDataInstance challengeData = this.GetChallengeData(challengeId);
 		return challengeData != null && challengeData.GetPreChallengeState();
 	}
 
-	// Token: 0x0600821B RID: 33307 RVA: 0x001B9780 File Offset: 0x001B7980
+	// Token: 0x060055B2 RID: 21938 RVA: 0x001C2450 File Offset: 0x001C0650
 	public bool CheckIfHaveChallenge(int challengeId)
 	{
 		return this.ChallengeMap.ContainsKey(challengeId);
 	}
 
-	// Token: 0x0600821C RID: 33308 RVA: 0x001B9790 File Offset: 0x001B7990
+	// Token: 0x060055B3 RID: 21939 RVA: 0x001C2460 File Offset: 0x001C0660
 	public override bool GetExDataRedPointShowState()
 	{
 		if (!base.GetPreGuideQuestFinishState())
@@ -189,6 +189,6 @@ public class LifePointDrawActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x04003AD2 RID: 15058
+	// Token: 0x04003B6A RID: 15210
 	private Dictionary<int, LifePointChallengeDataInstance> ChallengeMap = new Dictionary<int, LifePointChallengeDataInstance>();
 }

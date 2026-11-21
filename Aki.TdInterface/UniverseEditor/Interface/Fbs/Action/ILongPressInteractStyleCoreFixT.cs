@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A4E RID: 27214
+	// Token: 0x02007170 RID: 29040
 	public class ILongPressInteractStyleCoreFixT
 	{
-		// Token: 0x1700C9E8 RID: 51688
-		// (get) Token: 0x0602FA6C RID: 195180 RVA: 0x0067C582 File Offset: 0x0067A782
-		// (set) Token: 0x0602FA6D RID: 195181 RVA: 0x0067C58A File Offset: 0x0067A78A
+		// Token: 0x1700D493 RID: 54419
+		// (get) Token: 0x06032792 RID: 206738 RVA: 0x006D2642 File Offset: 0x006D0842
+		// (set) Token: 0x06032793 RID: 206739 RVA: 0x006D264A File Offset: 0x006D084A
 		public ELongPressInteractStyle Type { get; set; }
 
-		// Token: 0x0602FA6E RID: 195182 RVA: 0x0067C593 File Offset: 0x0067A793
+		// Token: 0x06032794 RID: 206740 RVA: 0x006D2653 File Offset: 0x006D0853
 		public ILongPressInteractStyleCoreFixT()
 		{
 			this.Type = ELongPressInteractStyle.Default;

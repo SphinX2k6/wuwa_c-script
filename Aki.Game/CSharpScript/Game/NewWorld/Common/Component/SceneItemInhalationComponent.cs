@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x0200708C RID: 28812
+	// Token: 0x0200620D RID: 25101
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemInhalationComponent : EntityComponent
 	{
-		// Token: 0x06046335 RID: 287541 RVA: 0x0118C054 File Offset: 0x0118A254
+		// Token: 0x0603C571 RID: 247153 RVA: 0x0113519C File Offset: 0x0113339C
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			CreateEntityData p = args.GetP1<CreateEntityData>();
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046336 RID: 287542 RVA: 0x0118C104 File Offset: 0x0118A304
+		// Token: 0x0603C572 RID: 247154 RVA: 0x0113524C File Offset: 0x0113344C
 		protected override bool OnStart()
 		{
 			this.SceneItemActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -58,19 +58,29 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046337 RID: 287543 RVA: 0x0118C18C File Offset: 0x0118A38C
+		// Token: 0x0603C573 RID: 247155 RVA: 0x011352D4 File Offset: 0x011334D4
 		protected override void OnActivate()
 		{
 			if (this.RangeComp == null || this.StateComp == null || this.SceneItemActorComp == null)
 			{
 				return;
 			}
-			IReadOnlyDictionary<int, EntityHandle> entitiesInRangeLocal = this.RangeComp.GetEntitiesInRangeLocal();
+			IEnumerable<KeyValuePair<int, EntityHandle>> entitiesInRangeLocal = this.RangeComp.GetEntitiesInRangeLocal();
+			Dictionary<int, EntityHandle> dictionary;
 			if (entitiesInRangeLocal == null)
+			{
+				dictionary = null;
+			}
+			else
+			{
+				dictionary = NoLinq.ToDictionary<KeyValuePair<int, EntityHandle>, int, EntityHandle>(entitiesInRangeLocal, (KeyValuePair<int, EntityHandle> pair) => pair.Key, (KeyValuePair<int, EntityHandle> pair) => pair.Value);
+			}
+			Dictionary<int, EntityHandle> dictionary2 = dictionary;
+			if (dictionary2 == null)
 			{
 				return;
 			}
-			foreach (EntityHandle entityHandle in entitiesInRangeLocal.Values)
+			foreach (EntityHandle entityHandle in dictionary2.Values)
 			{
 				WorldEntity entity = entityHandle.Entity;
 				if (!(!entity) && this.CheckCanInhalation(entity))
@@ -81,7 +91,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046338 RID: 287544 RVA: 0x0118C230 File Offset: 0x0118A430
+		// Token: 0x0603C574 RID: 247156 RVA: 0x011353C8 File Offset: 0x011335C8
 		protected override bool OnEnd()
 		{
 			this.RangeComp = null;
@@ -90,7 +100,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x06046339 RID: 287545 RVA: 0x0118C264 File Offset: 0x0118A464
+		// Token: 0x0603C575 RID: 247157 RVA: 0x011353FC File Offset: 0x011335FC
 		[NullableContext(1)]
 		private bool CheckCanInhalation(Entity entity)
 		{
@@ -150,7 +160,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x0604633A RID: 287546 RVA: 0x0118C450 File Offset: 0x0118A650
+		// Token: 0x0603C576 RID: 247158 RVA: 0x011355E8 File Offset: 0x011337E8
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			if (this.RangeComp == null || this.StateComp == null || this.SceneItemActorComp == null)
@@ -163,12 +173,22 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return;
 			}
 			this.CurState = new int?(stateId);
-			IReadOnlyDictionary<int, EntityHandle> entitiesInRangeLocal = this.RangeComp.GetEntitiesInRangeLocal();
+			IEnumerable<KeyValuePair<int, EntityHandle>> entitiesInRangeLocal = this.RangeComp.GetEntitiesInRangeLocal();
+			Dictionary<int, EntityHandle> dictionary;
 			if (entitiesInRangeLocal == null)
+			{
+				dictionary = null;
+			}
+			else
+			{
+				dictionary = NoLinq.ToDictionary<KeyValuePair<int, EntityHandle>, int, EntityHandle>(entitiesInRangeLocal, (KeyValuePair<int, EntityHandle> pair) => pair.Key, (KeyValuePair<int, EntityHandle> pair) => pair.Value);
+			}
+			Dictionary<int, EntityHandle> dictionary2 = dictionary;
+			if (dictionary2 == null)
 			{
 				return;
 			}
-			foreach (EntityHandle entityHandle in entitiesInRangeLocal.Values)
+			foreach (EntityHandle entityHandle in dictionary2.Values)
 			{
 				WorldEntity entity = entityHandle.Entity;
 				if (entity != null)
@@ -190,7 +210,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604633B RID: 287547 RVA: 0x0118C550 File Offset: 0x0118A750
+		// Token: 0x0603C577 RID: 247159 RVA: 0x01135740 File Offset: 0x01133940
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -199,77 +219,92 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return false;
 			}
 			SceneItemInhalationComponent sceneItemInhalationComponent = (SceneItemInhalationComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemInhalationComponent.Config == null)
 			{
-				if (sceneItemInhalationComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<InhalationAbilityComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("SceneItemActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (sceneItemInhalationComponent.SceneItemActorComp == null)
-				{
-					this.SceneItemActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.SceneItemActorComp), "SceneItemActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("RangeComp"))
+			if (sceneItemInhalationComponent.SceneItemActorComp == null)
 			{
-				if (sceneItemInhalationComponent.RangeComp == null)
-				{
-					this.RangeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>(this.RangeComp), "RangeComp"))
-				{
-					return false;
-				}
+				this.SceneItemActorComp = null;
 			}
-			if (base.CanResetComponentProperty("StateComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SceneItemActorComp), "SceneItemActorComp"))
 			{
-				if (sceneItemInhalationComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurState"))
+			if (sceneItemInhalationComponent.RangeComp == null)
 			{
-				this.CurState = sceneItemInhalationComponent.CurState;
+				this.RangeComp = null;
 			}
-			return (!base.CanResetComponentProperty("TargetStateConfigMap") || sceneItemInhalationComponent.TargetStateConfigMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, HashSet<int>>>(this.TargetStateConfigMap), "TargetStateConfigMap")) && (!base.CanResetComponentProperty("HalingEntities") || sceneItemInhalationComponent.HalingEntities == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.HalingEntities), "HalingEntities"));
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RangeComp), "RangeComp"))
+			{
+				return false;
+			}
+			if (sceneItemInhalationComponent.StateComp == null)
+			{
+				this.StateComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
+			{
+				return false;
+			}
+			this.CurState = sceneItemInhalationComponent.CurState;
+			return (sceneItemInhalationComponent.TargetStateConfigMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetStateConfigMap), "TargetStateConfigMap")) && (sceneItemInhalationComponent.HalingEntities == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.HalingEntities), "HalingEntities"));
 		}
 
-		// Token: 0x04024C68 RID: 150632
+		// Token: 0x170071E8 RID: 29160
+		// (get) Token: 0x0603C578 RID: 247160 RVA: 0x0113585C File Offset: 0x01133A5C
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071E9 RID: 29161
+		// (get) Token: 0x0603C579 RID: 247161 RVA: 0x0113585F File Offset: 0x01133A5F
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071EA RID: 29162
+		// (get) Token: 0x0603C57A RID: 247162 RVA: 0x01135862 File Offset: 0x01133A62
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FF23 RID: 130851
 		private InhalationAbilityComponent Config;
 
-		// Token: 0x04024C69 RID: 150633
+		// Token: 0x0401FF24 RID: 130852
 		private SceneItemActorComponent SceneItemActorComp;
 
-		// Token: 0x04024C6A RID: 150634
+		// Token: 0x0401FF25 RID: 130853
 		private CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent RangeComp;
 
-		// Token: 0x04024C6B RID: 150635
+		// Token: 0x0401FF26 RID: 130854
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x04024C6C RID: 150636
+		// Token: 0x0401FF27 RID: 130855
 		private int? CurState;
 
-		// Token: 0x04024C6D RID: 150637
+		// Token: 0x0401FF28 RID: 130856
 		[Nullable(1)]
 		private readonly Dictionary<int, HashSet<int>> TargetStateConfigMap = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x04024C6E RID: 150638
+		// Token: 0x0401FF29 RID: 130857
 		[Nullable(1)]
 		private readonly HashSet<Entity> HalingEntities = new HashSet<Entity>();
 	}

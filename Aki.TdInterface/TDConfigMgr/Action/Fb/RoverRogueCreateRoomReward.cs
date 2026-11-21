@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A0B RID: 10763
+	// Token: 0x02002CF8 RID: 11512
 	public class RoverRogueCreateRoomReward : ActionParams
 	{
-		// Token: 0x0600ED68 RID: 60776 RVA: 0x00229D12 File Offset: 0x00227F12
-		[NullableContext(1)]
+		// Token: 0x0600FBFF RID: 64511 RVA: 0x00247696 File Offset: 0x00245896
 		public static RoverRogueCreateRoomReward Create(IRoverRogueCreateRoomReward? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B14 RID: 19220
-		// (get) Token: 0x0600ED69 RID: 60777 RVA: 0x00229D31 File Offset: 0x00227F31
+		// Token: 0x17004EBD RID: 20157
+		// (get) Token: 0x0600FC00 RID: 64512 RVA: 0x002476B5 File Offset: 0x002458B5
 		public virtual int RewardType
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082AF RID: 33455
+		// Token: 0x040089A0 RID: 35232
 		private IRoverRogueCreateRoomReward Instance;
 	}
 }

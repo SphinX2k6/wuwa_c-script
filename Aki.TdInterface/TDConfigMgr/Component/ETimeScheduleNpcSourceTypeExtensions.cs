@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A3A RID: 2618
+	// Token: 0x02000AFF RID: 2815
 	public static class ETimeScheduleNpcSourceTypeExtensions
 	{
-		// Token: 0x060039B6 RID: 14774 RVA: 0x00094EF0 File Offset: 0x000930F0
+		// Token: 0x06003D8E RID: 15758 RVA: 0x0009D824 File Offset: 0x0009BA24
 		public static string ToEnumString(this ETimeScheduleNpcSourceType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060039B7 RID: 14775 RVA: 0x00094F18 File Offset: 0x00093118
+		// Token: 0x06003D8F RID: 15759 RVA: 0x0009D84C File Offset: 0x0009BA4C
 		public static ETimeScheduleNpcSourceType FromString(string name)
 		{
 			ETimeScheduleNpcSourceType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060039B8 RID: 14776 RVA: 0x00094F41 File Offset: 0x00093141
+		// Token: 0x06003D90 RID: 15760 RVA: 0x0009D875 File Offset: 0x0009BA75
 		public static bool TryFromString(string name, out ETimeScheduleNpcSourceType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060039B9 RID: 14777 RVA: 0x00094F66 File Offset: 0x00093166
+		// Token: 0x06003D91 RID: 15761 RVA: 0x0009D89A File Offset: 0x0009BA9A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060039BA RID: 14778 RVA: 0x00094F76 File Offset: 0x00093176
+		// Token: 0x06003D92 RID: 15762 RVA: 0x0009D8AA File Offset: 0x0009BAAA
 		public static ETimeScheduleNpcSourceType[] GetValues()
 		{
 			return new ETimeScheduleNpcSourceType[1];
 		}
 
-		// Token: 0x060039BB RID: 14779 RVA: 0x00094F7E File Offset: 0x0009317E
+		// Token: 0x06003D93 RID: 15763 RVA: 0x0009D8B2 File Offset: 0x0009BAB2
 		public static string[] GetNames()
 		{
 			return new string[]

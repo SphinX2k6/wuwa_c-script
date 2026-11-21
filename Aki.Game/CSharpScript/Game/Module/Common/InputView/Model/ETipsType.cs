@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.Common.InputView.Model
 {
-	// Token: 0x02005B82 RID: 23426
+	// Token: 0x02004B62 RID: 19298
 	public enum ETipsType
 	{
-		// Token: 0x0401EE64 RID: 126564
+		// Token: 0x04019915 RID: 104725
 		Normal,
-		// Token: 0x0401EE65 RID: 126565
+		// Token: 0x04019916 RID: 104726
 		NoneText,
-		// Token: 0x0401EE66 RID: 126566
+		// Token: 0x04019917 RID: 104727
 		MsgTooLong,
-		// Token: 0x0401EE67 RID: 126567
+		// Token: 0x04019918 RID: 104728
 		MsgTooShort,
-		// Token: 0x0401EE68 RID: 126568
+		// Token: 0x04019919 RID: 104729
 		IllegalCharacters,
-		// Token: 0x0401EE69 RID: 126569
+		// Token: 0x0401991A RID: 104730
 		Blank,
-		// Token: 0x0401EE6A RID: 126570
+		// Token: 0x0401991B RID: 104731
 		InValidCdKey,
-		// Token: 0x0401EE6B RID: 126571
+		// Token: 0x0401991C RID: 104732
 		CdKeyInCd
 	}
 }

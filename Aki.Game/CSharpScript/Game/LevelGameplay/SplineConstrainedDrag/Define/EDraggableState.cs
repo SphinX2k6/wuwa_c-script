@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.Define
 {
-	// Token: 0x02006A43 RID: 27203
+	// Token: 0x02005BA0 RID: 23456
 	public enum EDraggableState
 	{
-		// Token: 0x0402351D RID: 144669
+		// Token: 0x0401E70F RID: 124687
 		None,
-		// Token: 0x0402351E RID: 144670
+		// Token: 0x0401E710 RID: 124688
 		Selectable,
-		// Token: 0x0402351F RID: 144671
+		// Token: 0x0401E711 RID: 124689
 		Hover,
-		// Token: 0x04023520 RID: 144672
+		// Token: 0x0401E712 RID: 124690
 		Selected
 	}
 }

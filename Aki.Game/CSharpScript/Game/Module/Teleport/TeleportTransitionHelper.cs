@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Teleport
 {
-	// Token: 0x02004B73 RID: 19315
+	// Token: 0x02003B1D RID: 15133
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TeleportTransitionHelper : TeleportContextHolder
 	{
-		// Token: 0x06032097 RID: 204951 RVA: 0x00B9D779 File Offset: 0x00B9B979
+		// Token: 0x06026E28 RID: 159272 RVA: 0x00AE1929 File Offset: 0x00ADFB29
 		public TeleportTransitionHelper(TeleportContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06032098 RID: 204952 RVA: 0x00B9D784 File Offset: 0x00B9B984
+		// Token: 0x06026E29 RID: 159273 RVA: 0x00AE1934 File Offset: 0x00ADFB34
 		[NullableContext(0)]
 		public UniTask<bool> PlayTeleportTransition()
 		{
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTeleportTransition>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032099 RID: 204953 RVA: 0x00B9D7C8 File Offset: 0x00B9B9C8
+		// Token: 0x06026E2A RID: 159274 RVA: 0x00AE1978 File Offset: 0x00ADFB78
 		[NullableContext(0)]
 		public UniTask<bool> WaitTeleportTransition()
 		{
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <WaitTeleportTransition>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603209A RID: 204954 RVA: 0x00B9D80C File Offset: 0x00B9BA0C
+		// Token: 0x06026E2B RID: 159275 RVA: 0x00AE19BC File Offset: 0x00ADFBBC
 		private UniTask PlayTransition()
 		{
 			TeleportTransitionHelper.<PlayTransition>d__3 <PlayTransition>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransition>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603209B RID: 204955 RVA: 0x00B9D850 File Offset: 0x00B9BA50
+		// Token: 0x06026E2C RID: 159276 RVA: 0x00AE1A00 File Offset: 0x00ADFC00
 		[NullableContext(2)]
 		private UniTask WaitTransition(TransitionOptionPb option)
 		{
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <WaitTransition>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603209C RID: 204956 RVA: 0x00B9D89C File Offset: 0x00B9BA9C
+		// Token: 0x06026E2D RID: 159277 RVA: 0x00AE1A4C File Offset: 0x00ADFC4C
 		private UniTask PlayTransitionByConfig(ITeleportTransitionType option)
 		{
 			TeleportTransitionHelper.<PlayTransitionByConfig>d__5 <PlayTransitionByConfig>d__;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionByConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603209D RID: 204957 RVA: 0x00B9D8E8 File Offset: 0x00B9BAE8
+		// Token: 0x06026E2E RID: 159278 RVA: 0x00AE1A98 File Offset: 0x00ADFC98
 		private UniTask WaitTransitionByConfig(ITeleportTransitionType option)
 		{
 			TeleportTransitionHelper.<WaitTransitionByConfig>d__6 <WaitTransitionByConfig>d__;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <WaitTransitionByConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603209E RID: 204958 RVA: 0x00B9D934 File Offset: 0x00B9BB34
+		// Token: 0x06026E2F RID: 159279 RVA: 0x00AE1AE4 File Offset: 0x00ADFCE4
 		private UniTask PlayTransitionMp4ByConfig(ITeleportTransitionWithMp4 mp4Option)
 		{
 			TeleportTransitionHelper.<PlayTransitionMp4ByConfig>d__7 <PlayTransitionMp4ByConfig>d__;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionMp4ByConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603209F RID: 204959 RVA: 0x00B9D980 File Offset: 0x00B9BB80
+		// Token: 0x06026E30 RID: 159280 RVA: 0x00AE1B30 File Offset: 0x00ADFD30
 		private static UniTask PlayTransitionCenterTextByConfig(ITeleportTransitionWithCenterText option, bool? needGuarantee = null)
 		{
 			TeleportTransitionHelper.<PlayTransitionCenterTextByConfig>d__8 <PlayTransitionCenterTextByConfig>d__;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionCenterTextByConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320A0 RID: 204960 RVA: 0x00B9D9CC File Offset: 0x00B9BBCC
+		// Token: 0x06026E31 RID: 159281 RVA: 0x00AE1B7C File Offset: 0x00ADFD7C
 		private static void PlayTransitionEffectByConfig(ITeleportTransitionWithEffect option)
 		{
 			global::Log instance = global::Log.Instance;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Teleport
 			global::Log.Instance.Info(ELogModule.TeleportMisc, ELogAuthor.CK, "传送过渡: PlayEffect完成", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060320A1 RID: 204961 RVA: 0x00B9DA58 File Offset: 0x00B9BC58
+		// Token: 0x06026E32 RID: 159282 RVA: 0x00AE1C08 File Offset: 0x00ADFE08
 		private static UniTask PlayTransitionFadeInScreenByConfig(ITeleportTransitionWithFadeInScreen option)
 		{
 			TeleportTransitionHelper.<PlayTransitionFadeInScreenByConfig>d__10 <PlayTransitionFadeInScreenByConfig>d__;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionFadeInScreenByConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320A2 RID: 204962 RVA: 0x00B9DA9C File Offset: 0x00B9BC9C
+		// Token: 0x06026E33 RID: 159283 RVA: 0x00AE1C4C File Offset: 0x00ADFE4C
 		private static UniTask PlayTransitionSpecialByConfig(ITeleportTransitionWithCustomScreen option)
 		{
 			TeleportTransitionHelper.<PlayTransitionSpecialByConfig>d__11 <PlayTransitionSpecialByConfig>d__;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionSpecialByConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320A3 RID: 204963 RVA: 0x00B9DAE0 File Offset: 0x00B9BCE0
+		// Token: 0x06026E34 RID: 159284 RVA: 0x00AE1C90 File Offset: 0x00ADFE90
 		private static UniTask PlayTransitionSpecialCustomLoadingByConfig(ITeleportTransitionWithSpecialCustomLoading option)
 		{
 			TeleportTransitionHelper.<PlayTransitionSpecialCustomLoadingByConfig>d__12 <PlayTransitionSpecialCustomLoadingByConfig>d__;
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionSpecialCustomLoadingByConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320A4 RID: 204964 RVA: 0x00B9DB24 File Offset: 0x00B9BD24
+		// Token: 0x06026E35 RID: 159285 RVA: 0x00AE1CD4 File Offset: 0x00ADFED4
 		private static UniTask PlayTransitionWithPlayFlowByConfig(ITeleportTransitionWithPlayFlow option, Action onFlowEnd)
 		{
 			TeleportTransitionHelper.<PlayTransitionWithPlayFlowByConfig>d__13 <PlayTransitionWithPlayFlowByConfig>d__;
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionWithPlayFlowByConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320A5 RID: 204965 RVA: 0x00B9DB70 File Offset: 0x00B9BD70
+		// Token: 0x06026E36 RID: 159286 RVA: 0x00AE1D20 File Offset: 0x00ADFF20
 		private static UniTask WaitPlayFlowFadeOutByConfig(ITeleportTransitionWithPlayFlow option)
 		{
 			TeleportTransitionHelper.<WaitPlayFlowFadeOutByConfig>d__14 <WaitPlayFlowFadeOutByConfig>d__;
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <WaitPlayFlowFadeOutByConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320A6 RID: 204966 RVA: 0x00B9DBB4 File Offset: 0x00B9BDB4
+		// Token: 0x06026E37 RID: 159287 RVA: 0x00AE1D64 File Offset: 0x00ADFF64
 		private UniTask PlayTransitionFallback()
 		{
 			TeleportTransitionHelper.<PlayTransitionFallback>d__15 <PlayTransitionFallback>d__;
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionFallback>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320A7 RID: 204967 RVA: 0x00B9DBF8 File Offset: 0x00B9BDF8
+		// Token: 0x06026E38 RID: 159288 RVA: 0x00AE1DA8 File Offset: 0x00ADFFA8
 		private UniTask PlayTransitionMp4(TransitionMp4Pb protoTransitionMp4)
 		{
 			TeleportTransitionHelper.<PlayTransitionMp4>d__16 <PlayTransitionMp4>d__;
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionMp4>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320A8 RID: 204968 RVA: 0x00B9DC44 File Offset: 0x00B9BE44
+		// Token: 0x06026E39 RID: 159289 RVA: 0x00AE1DF4 File Offset: 0x00ADFFF4
 		[NullableContext(2)]
 		public static UniTask PlayTransitionCenterText(TransitionFlowPb transitionFlow, bool? needGuarantee = null)
 		{
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionCenterText>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320A9 RID: 204969 RVA: 0x00B9DC90 File Offset: 0x00B9BE90
+		// Token: 0x06026E3A RID: 159290 RVA: 0x00AE1E40 File Offset: 0x00AE0040
 		private static void PlayTransitionEffect(TransitionMp4Pb protoTransitionMp4)
 		{
 			global::Log.Instance.Info(ELogModule.TeleportMisc, ELogAuthor.WRY, "传送过渡: PlayEffect 开始执行 PlayTransitionEffect", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x060320AA RID: 204970 RVA: 0x00B9DD28 File Offset: 0x00B9BF28
+		// Token: 0x06026E3B RID: 159291 RVA: 0x00AE1ED8 File Offset: 0x00AE00D8
 		private static UniTask PlayTransitionFadeInScreen(int? fadeInScreenShowType)
 		{
 			TeleportTransitionHelper.<PlayTransitionFadeInScreen>d__19 <PlayTransitionFadeInScreen>d__;
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionFadeInScreen>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320AB RID: 204971 RVA: 0x00B9DD6C File Offset: 0x00B9BF6C
+		// Token: 0x06026E3C RID: 159292 RVA: 0x00AE1F1C File Offset: 0x00AE011C
 		private static UniTask PlayTransitionCharacterDisplay(int? styleId)
 		{
 			TeleportTransitionHelper.<PlayTransitionCharacterDisplay>d__20 <PlayTransitionCharacterDisplay>d__;
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionCharacterDisplay>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320AC RID: 204972 RVA: 0x00B9DDB0 File Offset: 0x00B9BFB0
+		// Token: 0x06026E3D RID: 159293 RVA: 0x00AE1F60 File Offset: 0x00AE0160
 		private static UniTask PlayTransitionCustomLoading(int? configId)
 		{
 			TeleportTransitionHelper.<PlayTransitionCustomLoading>d__21 <PlayTransitionCustomLoading>d__;
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionCustomLoading>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320AD RID: 204973 RVA: 0x00B9DDF4 File Offset: 0x00B9BFF4
+		// Token: 0x06026E3E RID: 159294 RVA: 0x00AE1FA4 File Offset: 0x00AE01A4
 		private static UniTask PlayTransitionSpecialCustomLoading(TransitionWithSpecialCustomLoadingPb protoTransition)
 		{
 			TeleportTransitionHelper.<PlayTransitionSpecialCustomLoading>d__22 <PlayTransitionSpecialCustomLoading>d__;
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionSpecialCustomLoading>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320AE RID: 204974 RVA: 0x00B9DE38 File Offset: 0x00B9C038
+		// Token: 0x06026E3F RID: 159295 RVA: 0x00AE1FE8 File Offset: 0x00AE01E8
 		[NullableContext(2)]
 		public static UniTask PlayTransitionSpecial(TransitionWithSpineLoadingPb pb, string tag = null)
 		{
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionSpecial>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320AF RID: 204975 RVA: 0x00B9DE84 File Offset: 0x00B9C084
+		// Token: 0x06026E40 RID: 159296 RVA: 0x00AE2034 File Offset: 0x00AE0234
 		public static TransitionOptionPb ParseTeleportTransitionOptionToPb([Nullable(2)] ITeleportTransitionType optionCfg)
 		{
 			TransitionOptionPb transitionOptionPb = TransitionOptionPb.Create();
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return transitionOptionPb;
 		}
 
-		// Token: 0x060320B0 RID: 204976 RVA: 0x00B9E480 File Offset: 0x00B9C680
+		// Token: 0x06026E41 RID: 159297 RVA: 0x00AE2630 File Offset: 0x00AE0830
 		private static void CreateSpecialTransitionPb(TransitionOptionPb transitionOption, ITeleportTransitionWithCustomScreen optionCfg)
 		{
 			transitionOption.TransitionType = TransitionType.WithSpine;
@@ -533,7 +533,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x060320B1 RID: 204977 RVA: 0x00B9E5B0 File Offset: 0x00B9C7B0
+		// Token: 0x06026E42 RID: 159298 RVA: 0x00AE2760 File Offset: 0x00AE0960
 		private static void CreateSpecialCustomLoadingTransitionPb(TransitionOptionPb transitionOption, ITeleportTransitionWithSpecialCustomLoading optionCfg)
 		{
 			transitionOption.TransitionType = TransitionType.WithSpecialCustomLoading;
@@ -546,7 +546,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x060320B2 RID: 204978 RVA: 0x00B9E600 File Offset: 0x00B9C800
+		// Token: 0x06026E43 RID: 159299 RVA: 0x00AE27B0 File Offset: 0x00AE09B0
 		public static UniTask PlayTransitionWithPlayFlow([Nullable(2)] TransitionPlayFlowPb playFlowPb, Action onFlowEnd)
 		{
 			TeleportTransitionHelper.<PlayTransitionWithPlayFlow>d__27 <PlayTransitionWithPlayFlow>d__;
@@ -558,7 +558,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <PlayTransitionWithPlayFlow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320B3 RID: 204979 RVA: 0x00B9E64C File Offset: 0x00B9C84C
+		// Token: 0x06026E44 RID: 159300 RVA: 0x00AE27FC File Offset: 0x00AE09FC
 		[NullableContext(2)]
 		public static UniTask WaitPlayFlowFadeOut(TransitionPlayFlowPb playFlowPb)
 		{
@@ -570,7 +570,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <WaitPlayFlowFadeOut>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320B4 RID: 204980 RVA: 0x00B9E690 File Offset: 0x00B9C890
+		// Token: 0x06026E45 RID: 159301 RVA: 0x00AE2840 File Offset: 0x00AE0A40
 		private ELoadingPerform QueryDefaultTeleportMode()
 		{
 			if (GameModeController.Instance.IsInInstance())
@@ -599,7 +599,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return ELoadingPerform.FadeLoading;
 		}
 
-		// Token: 0x060320B5 RID: 204981 RVA: 0x00B9E730 File Offset: 0x00B9C930
+		// Token: 0x06026E46 RID: 159302 RVA: 0x00AE28E0 File Offset: 0x00AE0AE0
 		[CompilerGenerated]
 		private UniTask <PlayTransitionFallback>g__PlayTransitionFallbackWithoutLog|15_0()
 		{
@@ -611,7 +611,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <<PlayTransitionFallback>g__PlayTransitionFallbackWithoutLog|15_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x060320B6 RID: 204982 RVA: 0x00B9E774 File Offset: 0x00B9C974
+		// Token: 0x06026E47 RID: 159303 RVA: 0x00AE2924 File Offset: 0x00AE0B24
 		[CompilerGenerated]
 		private UniTask <PlayTransitionMp4>g__PlayTransitionMp4WithoutLog|16_0(TransitionMp4Pb protoTransitionMp4)
 		{
@@ -624,7 +624,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <<PlayTransitionMp4>g__PlayTransitionMp4WithoutLog|16_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x060320B8 RID: 204984 RVA: 0x00B9E82C File Offset: 0x00B9CA2C
+		// Token: 0x06026E49 RID: 159305 RVA: 0x00AE29DC File Offset: 0x00AE0BDC
 		[NullableContext(2)]
 		[CompilerGenerated]
 		internal static UniTask <PlayTransitionCenterText>g__PlayTransitionCenterTextWithoutLog|17_0(TransitionFlowPb transitionFlow, bool? needGuarantee = null)
@@ -638,7 +638,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <<PlayTransitionCenterText>g__PlayTransitionCenterTextWithoutLog|17_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x060320B9 RID: 204985 RVA: 0x00B9E877 File Offset: 0x00B9CA77
+		// Token: 0x06026E4A RID: 159306 RVA: 0x00AE2A27 File Offset: 0x00AE0C27
 		[CompilerGenerated]
 		internal static void <PlayTransitionEffect>g__PlayTransitionEffectWithoutLog|18_0(TransitionMp4Pb protoTransitionMp4)
 		{
@@ -653,7 +653,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x060320BA RID: 204986 RVA: 0x00B9E8A8 File Offset: 0x00B9CAA8
+		// Token: 0x06026E4B RID: 159307 RVA: 0x00AE2A58 File Offset: 0x00AE0C58
 		[CompilerGenerated]
 		internal static UniTask <PlayTransitionFadeInScreen>g__PlayTransitionFadeInScreenWithoutLog|19_0(int? fadeInScreenShowType)
 		{
@@ -665,7 +665,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <<PlayTransitionFadeInScreen>g__PlayTransitionFadeInScreenWithoutLog|19_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x060320BB RID: 204987 RVA: 0x00B9E8EC File Offset: 0x00B9CAEC
+		// Token: 0x06026E4C RID: 159308 RVA: 0x00AE2A9C File Offset: 0x00AE0C9C
 		[CompilerGenerated]
 		internal static UniTask <PlayTransitionCharacterDisplay>g__PlayTransitionCharacterDisplayWithoutLog|20_0(int? styleId)
 		{
@@ -677,7 +677,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <<PlayTransitionCharacterDisplay>g__PlayTransitionCharacterDisplayWithoutLog|20_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x060320BC RID: 204988 RVA: 0x00B9E930 File Offset: 0x00B9CB30
+		// Token: 0x06026E4D RID: 159309 RVA: 0x00AE2AE0 File Offset: 0x00AE0CE0
 		[CompilerGenerated]
 		internal static UniTask <PlayTransitionCustomLoading>g__PlayTransitionCustomLoadingWithoutLog|21_0(int? configId)
 		{
@@ -689,7 +689,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <<PlayTransitionCustomLoading>g__PlayTransitionCustomLoadingWithoutLog|21_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x060320BD RID: 204989 RVA: 0x00B9E974 File Offset: 0x00B9CB74
+		// Token: 0x06026E4E RID: 159310 RVA: 0x00AE2B24 File Offset: 0x00AE0D24
 		[CompilerGenerated]
 		internal static UniTask <PlayTransitionSpecialCustomLoading>g__PlayTransitionSpecialCustomLoadingWithoutLog|22_0(TransitionWithSpecialCustomLoadingPb protoTransition)
 		{
@@ -701,7 +701,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <<PlayTransitionSpecialCustomLoading>g__PlayTransitionSpecialCustomLoadingWithoutLog|22_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x060320BE RID: 204990 RVA: 0x00B9E9B8 File Offset: 0x00B9CBB8
+		// Token: 0x06026E4F RID: 159311 RVA: 0x00AE2B68 File Offset: 0x00AE0D68
 		[NullableContext(2)]
 		[CompilerGenerated]
 		internal static UniTask <PlayTransitionSpecial>g__PlayTransitionSpecialWithoutLog|23_0(TransitionWithSpineLoadingPb pb, string tag = null)
@@ -715,7 +715,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <<PlayTransitionSpecial>g__PlayTransitionSpecialWithoutLog|23_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x060320BF RID: 204991 RVA: 0x00B9EA04 File Offset: 0x00B9CC04
+		// Token: 0x06026E50 RID: 159312 RVA: 0x00AE2BB4 File Offset: 0x00AE0DB4
 		[CompilerGenerated]
 		internal static UniTask <PlayTransitionWithPlayFlow>g__PlayTransitionWithPlayFlowWithoutLog|27_0([Nullable(2)] TransitionPlayFlowPb playFlowPb, Action onFlowEnd)
 		{

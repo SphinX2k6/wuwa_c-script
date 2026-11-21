@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001ACC RID: 6860
+// Token: 0x02000F8B RID: 3979
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class MapExploreStoryItem : GridProxyAbstract<IMapExploreStoryItemData>
 {
-	// Token: 0x0600CB92 RID: 52114 RVA: 0x002E76D8 File Offset: 0x002E58D8
+	// Token: 0x06009FA3 RID: 40867 RVA: 0x002F282C File Offset: 0x002F0A2C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -36,19 +36,19 @@ public class MapExploreStoryItem : GridProxyAbstract<IMapExploreStoryItemData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600CB93 RID: 52115 RVA: 0x002E77C5 File Offset: 0x002E59C5
+	// Token: 0x06009FA4 RID: 40868 RVA: 0x002F2919 File Offset: 0x002F0B19
 	protected override void OnBeforeCreate()
 	{
 		this.Sequence = new LevelSequencePlayer(this.RootItem);
 		this.Sequence.BindSequenceCloseEvent(new TSequenceEndEvent(this.SequenceCloseEvent), false);
 	}
 
-	// Token: 0x0600CB94 RID: 52116 RVA: 0x002E77F0 File Offset: 0x002E59F0
+	// Token: 0x06009FA5 RID: 40869 RVA: 0x002F2944 File Offset: 0x002F0B44
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x0600CB95 RID: 52117 RVA: 0x002E77F2 File Offset: 0x002E59F2
+	// Token: 0x06009FA6 RID: 40870 RVA: 0x002F2946 File Offset: 0x002F0B46
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer sequence = this.Sequence;
@@ -59,7 +59,7 @@ public class MapExploreStoryItem : GridProxyAbstract<IMapExploreStoryItemData>
 		sequence.Clear();
 	}
 
-	// Token: 0x0600CB96 RID: 52118 RVA: 0x002E7804 File Offset: 0x002E5A04
+	// Token: 0x06009FA7 RID: 40871 RVA: 0x002F2958 File Offset: 0x002F0B58
 	private void SetTextNew(MapExploreStoryItem.EChildType index, string text = null)
 	{
 		UUIText text2 = base.GetText((int)index);
@@ -77,7 +77,7 @@ public class MapExploreStoryItem : GridProxyAbstract<IMapExploreStoryItemData>
 		}
 	}
 
-	// Token: 0x0600CB97 RID: 52119 RVA: 0x002E783C File Offset: 0x002E5A3C
+	// Token: 0x06009FA8 RID: 40872 RVA: 0x002F2990 File Offset: 0x002F0B90
 	public override void Refresh(IMapExploreStoryItemData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -97,7 +97,7 @@ public class MapExploreStoryItem : GridProxyAbstract<IMapExploreStoryItemData>
 		this.SetLockedState();
 	}
 
-	// Token: 0x0600CB98 RID: 52120 RVA: 0x002E78AC File Offset: 0x002E5AAC
+	// Token: 0x06009FA9 RID: 40873 RVA: 0x002F2A00 File Offset: 0x002F0C00
 	private void SetOpenState()
 	{
 		UUIItem item = base.GetItem(3);
@@ -119,7 +119,7 @@ public class MapExploreStoryItem : GridProxyAbstract<IMapExploreStoryItemData>
 		item2.SetUIActive(!string.IsNullOrEmpty((itemData != null) ? itemData.StoryTitle : null));
 	}
 
-	// Token: 0x0600CB99 RID: 52121 RVA: 0x002E790A File Offset: 0x002E5B0A
+	// Token: 0x06009FAA RID: 40874 RVA: 0x002F2A5E File Offset: 0x002F0C5E
 	private void SetLockedState()
 	{
 		UUIItem item = base.GetItem(3);
@@ -140,7 +140,7 @@ public class MapExploreStoryItem : GridProxyAbstract<IMapExploreStoryItemData>
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x0600CB9A RID: 52122 RVA: 0x002E7944 File Offset: 0x002E5B44
+	// Token: 0x06009FAB RID: 40875 RVA: 0x002F2A98 File Offset: 0x002F0C98
 	public void PlayNewOpenAnim()
 	{
 		LevelSequencePlayer sequence = this.Sequence;
@@ -151,7 +151,7 @@ public class MapExploreStoryItem : GridProxyAbstract<IMapExploreStoryItemData>
 		sequence.PlayLevelSequenceByName("Unlock", false, null, false);
 	}
 
-	// Token: 0x0600CB9B RID: 52123 RVA: 0x002E7971 File Offset: 0x002E5B71
+	// Token: 0x06009FAC RID: 40876 RVA: 0x002F2AC5 File Offset: 0x002F0CC5
 	private void SequenceCloseEvent(string sequenceName)
 	{
 		if (sequenceName != "Unlock")
@@ -161,27 +161,27 @@ public class MapExploreStoryItem : GridProxyAbstract<IMapExploreStoryItemData>
 		this.SetOpenState();
 	}
 
-	// Token: 0x04005DA0 RID: 23968
+	// Token: 0x04005E6F RID: 24175
 	private LevelSequencePlayer Sequence;
 
-	// Token: 0x04005DA1 RID: 23969
+	// Token: 0x04005E70 RID: 24176
 	private IMapExploreStoryItemData ItemData;
 
-	// Token: 0x0200802D RID: 32813
+	// Token: 0x020071BB RID: 29115
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029D95 RID: 171413
+		// Token: 0x040250C9 RID: 151753
 		ItemRoot,
-		// Token: 0x04029D96 RID: 171414
+		// Token: 0x040250CA RID: 151754
 		TxtTitle,
-		// Token: 0x04029D97 RID: 171415
+		// Token: 0x040250CB RID: 151755
 		TxtContent,
-		// Token: 0x04029D98 RID: 171416
+		// Token: 0x040250CC RID: 151756
 		ItemRootLocked,
-		// Token: 0x04029D99 RID: 171417
+		// Token: 0x040250CD RID: 151757
 		TxtContentLocked,
-		// Token: 0x04029D9A RID: 171418
+		// Token: 0x040250CE RID: 151758
 		ItemTitleRoot
 	}
 }

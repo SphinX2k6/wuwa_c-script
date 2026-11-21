@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E7D RID: 28285
+	// Token: 0x02005FFE RID: 24574
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemElementalFieldComponent : EntityComponent
 	{
-		// Token: 0x06044EF1 RID: 282353 RVA: 0x0110743C File Offset: 0x0110563C
+		// Token: 0x0603B09D RID: 241821 RVA: 0x010B1A0C File Offset: 0x010AFC0C
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			Entity entity = base.Entity;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044EF2 RID: 282354 RVA: 0x011074F8 File Offset: 0x011056F8
+		// Token: 0x0603B09E RID: 241822 RVA: 0x010B1AC8 File Offset: 0x010AFCC8
 		protected override bool OnStart()
 		{
 			this.BaseActorComponent = base.Entity.GetComponent<BaseActorComponent>();
@@ -91,13 +91,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044EF3 RID: 282355 RVA: 0x0110765C File Offset: 0x0110585C
+		// Token: 0x0603B09F RID: 241823 RVA: 0x010B1C2C File Offset: 0x010AFE2C
 		protected override void OnActivate()
 		{
 			this.RefreshShape();
 		}
 
-		// Token: 0x06044EF4 RID: 282356 RVA: 0x01107664 File Offset: 0x01105864
+		// Token: 0x0603B0A0 RID: 241824 RVA: 0x010B1C34 File Offset: 0x010AFE34
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.OnEntitySelfDirectionUpdate, new Action(this.OnDirectionUpdate));
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044EF5 RID: 282357 RVA: 0x01107700 File Offset: 0x01105900
+		// Token: 0x0603B0A1 RID: 241825 RVA: 0x010B1CD0 File Offset: 0x010AFED0
 		protected override bool OnClear()
 		{
 			this.FieldShape = null;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044EF6 RID: 282358 RVA: 0x01107718 File Offset: 0x01105918
+		// Token: 0x0603B0A2 RID: 241826 RVA: 0x010B1CE8 File Offset: 0x010AFEE8
 		[NullableContext(1)]
 		private List<EElementalFieldReactionType> BuildReactions(EElementalType? type)
 		{
@@ -136,13 +136,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return list;
 		}
 
-		// Token: 0x06044EF7 RID: 282359 RVA: 0x01107745 File Offset: 0x01105945
+		// Token: 0x0603B0A3 RID: 241827 RVA: 0x010B1D15 File Offset: 0x010AFF15
 		public EElementalType? GetElementalType()
 		{
 			return this.ElementalType;
 		}
 
-		// Token: 0x06044EF8 RID: 282360 RVA: 0x0110774D File Offset: 0x0110594D
+		// Token: 0x0603B0A4 RID: 241828 RVA: 0x010B1D1D File Offset: 0x010AFF1D
 		public void UpdateFieldOpened(bool isOpen)
 		{
 			if (isOpen == this.FieldOpened)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044EF9 RID: 282361 RVA: 0x01107784 File Offset: 0x01105984
+		// Token: 0x0603B0A5 RID: 241829 RVA: 0x010B1D54 File Offset: 0x010AFF54
 		private void UpdateRenderMask()
 		{
 			if (this.NeedFieldRenderMask)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044EFA RID: 282362 RVA: 0x011077E8 File Offset: 0x011059E8
+		// Token: 0x0603B0A6 RID: 241830 RVA: 0x010B1DB8 File Offset: 0x010AFFB8
 		private void RefreshShape()
 		{
 			if (!this.FieldOpened)
@@ -244,13 +244,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.SyncShapeTransform();
 		}
 
-		// Token: 0x06044EFB RID: 282363 RVA: 0x01107A23 File Offset: 0x01105C23
+		// Token: 0x0603B0A7 RID: 241831 RVA: 0x010B1FF3 File Offset: 0x010B01F3
 		private void OnDirectionUpdate()
 		{
 			this.SyncShapeTransform();
 		}
 
-		// Token: 0x06044EFC RID: 282364 RVA: 0x01107A2B File Offset: 0x01105C2B
+		// Token: 0x0603B0A8 RID: 241832 RVA: 0x010B1FFB File Offset: 0x010B01FB
 		[NullableContext(1)]
 		private void OnOwnerRemoved(ERemoveEntityType removeType, EntityHandle handle)
 		{
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.DestroyFieldShape();
 		}
 
-		// Token: 0x06044EFD RID: 282365 RVA: 0x01107A48 File Offset: 0x01105C48
+		// Token: 0x0603B0A9 RID: 241833 RVA: 0x010B2018 File Offset: 0x010B0218
 		private void DestroyFieldShape()
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(base.Entity.Id);
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044EFE RID: 282366 RVA: 0x01107B09 File Offset: 0x01105D09
+		// Token: 0x0603B0AA RID: 241834 RVA: 0x010B20D9 File Offset: 0x010B02D9
 		public void SyncShapeTransform()
 		{
 			if (this.ShapeStrategy == null)
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			EventSystem.Instance.EmitWithTarget<ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType>>(this, EEventName.OnSceneItemElementalFieldSnapshotChange, this.GetSnapshot());
 		}
 
-		// Token: 0x06044EFF RID: 282367 RVA: 0x01107B48 File Offset: 0x01105D48
+		// Token: 0x0603B0AB RID: 241835 RVA: 0x010B2118 File Offset: 0x010B0318
 		public ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType> GetSnapshot()
 		{
 			SceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType> sceneItemElementalFieldSnapshot = new SceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType>();
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return shapeStrategy.FillSnapshot(arg);
 		}
 
-		// Token: 0x06044F00 RID: 282368 RVA: 0x01107BA4 File Offset: 0x01105DA4
+		// Token: 0x0603B0AC RID: 241836 RVA: 0x010B2174 File Offset: 0x010B0374
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -325,112 +325,125 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 				return false;
 			}
 			SceneItemElementalFieldComponent sceneItemElementalFieldComponent = (SceneItemElementalFieldComponent)componentTemplate;
-			if (base.CanResetComponentProperty("BaseActorComponent"))
+			if (sceneItemElementalFieldComponent.BaseActorComponent == null)
 			{
-				if (sceneItemElementalFieldComponent.BaseActorComponent == null)
-				{
-					this.BaseActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.BaseActorComponent), "BaseActorComponent"))
-				{
-					return false;
-				}
+				this.BaseActorComponent = null;
 			}
-			if (base.CanResetComponentProperty("ShapeConfig"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BaseActorComponent), "BaseActorComponent"))
 			{
-				if (sceneItemElementalFieldComponent.ShapeConfig == null)
-				{
-					this.ShapeConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITriggerShape>(this.ShapeConfig), "ShapeConfig"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ElementalType"))
+			if (sceneItemElementalFieldComponent.ShapeConfig == null)
 			{
-				this.ElementalType = sceneItemElementalFieldComponent.ElementalType;
+				this.ShapeConfig = null;
 			}
-			if (base.CanResetComponentProperty("NeedFieldRenderMask"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ShapeConfig), "ShapeConfig"))
 			{
-				this.NeedFieldRenderMask = sceneItemElementalFieldComponent.NeedFieldRenderMask;
+				return false;
 			}
-			if (base.CanResetComponentProperty("FieldOpened"))
+			this.ElementalType = sceneItemElementalFieldComponent.ElementalType;
+			this.NeedFieldRenderMask = sceneItemElementalFieldComponent.NeedFieldRenderMask;
+			this.FieldOpened = sceneItemElementalFieldComponent.FieldOpened;
+			if (sceneItemElementalFieldComponent.FieldShape == null)
 			{
-				this.FieldOpened = sceneItemElementalFieldComponent.FieldOpened;
+				this.FieldShape = null;
 			}
-			if (base.CanResetComponentProperty("FieldShape"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FieldShape), "FieldShape"))
 			{
-				if (sceneItemElementalFieldComponent.FieldShape == null)
-				{
-					this.FieldShape = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroFastCollisionShapeComponent>(this.FieldShape), "FieldShape"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ShapeStrategy"))
+			if (sceneItemElementalFieldComponent.ShapeStrategy == null)
 			{
-				if (sceneItemElementalFieldComponent.ShapeStrategy == null)
-				{
-					this.ShapeStrategy = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ISceneItemElementalFieldShapeStrategy>(this.ShapeStrategy), "ShapeStrategy"))
-				{
-					return false;
-				}
+				this.ShapeStrategy = null;
 			}
-			if (base.CanResetComponentProperty("ShapeContext"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ShapeStrategy), "ShapeStrategy"))
 			{
-				if (sceneItemElementalFieldComponent.ShapeContext == null)
-				{
-					this.ShapeContext = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ISceneItemElementalFieldShapeContext>(this.ShapeContext), "ShapeContext"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("VolumeProvider"))
+			if (sceneItemElementalFieldComponent.ShapeContext == null)
 			{
-				if (sceneItemElementalFieldComponent.VolumeProvider == null)
-				{
-					this.VolumeProvider = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IElementalFieldVolumeProvider>(this.VolumeProvider), "VolumeProvider"))
-				{
-					return false;
-				}
+				this.ShapeContext = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ShapeContext), "ShapeContext"))
+			{
+				return false;
+			}
+			if (sceneItemElementalFieldComponent.VolumeProvider == null)
+			{
+				this.VolumeProvider = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VolumeProvider), "VolumeProvider"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04023E47 RID: 147015
+		// Token: 0x17006F83 RID: 28547
+		// (get) Token: 0x0603B0AD RID: 241837 RVA: 0x010B22BA File Offset: 0x010B04BA
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17006F84 RID: 28548
+		// (get) Token: 0x0603B0AE RID: 241838 RVA: 0x010B22BD File Offset: 0x010B04BD
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17006F85 RID: 28549
+		// (get) Token: 0x0603B0AF RID: 241839 RVA: 0x010B22C0 File Offset: 0x010B04C0
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17006F86 RID: 28550
+		// (get) Token: 0x0603B0B0 RID: 241840 RVA: 0x010B22C3 File Offset: 0x010B04C3
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401F0FF RID: 127231
 		private BaseActorComponent BaseActorComponent;
 
-		// Token: 0x04023E48 RID: 147016
+		// Token: 0x0401F100 RID: 127232
 		private ITriggerShape ShapeConfig;
 
-		// Token: 0x04023E49 RID: 147017
+		// Token: 0x0401F101 RID: 127233
 		private EElementalType? ElementalType;
 
-		// Token: 0x04023E4A RID: 147018
+		// Token: 0x0401F102 RID: 127234
 		private bool NeedFieldRenderMask;
 
-		// Token: 0x04023E4B RID: 147019
+		// Token: 0x0401F103 RID: 127235
 		private bool FieldOpened;
 
-		// Token: 0x04023E4C RID: 147020
+		// Token: 0x0401F104 RID: 127236
 		private UKuroFastCollisionShapeComponent FieldShape;
 
-		// Token: 0x04023E4D RID: 147021
+		// Token: 0x0401F105 RID: 127237
 		private ISceneItemElementalFieldShapeStrategy ShapeStrategy;
 
-		// Token: 0x04023E4E RID: 147022
+		// Token: 0x0401F106 RID: 127238
 		private ISceneItemElementalFieldShapeContext ShapeContext;
 
-		// Token: 0x04023E4F RID: 147023
+		// Token: 0x0401F107 RID: 127239
 		private IElementalFieldVolumeProvider VolumeProvider;
 	}
 }

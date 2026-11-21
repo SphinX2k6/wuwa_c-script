@@ -8,7 +8,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.Data
 {
-	// Token: 0x02003DDE RID: 15838
+	// Token: 0x02003112 RID: 12562
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(16, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 16)]
@@ -16,32 +16,32 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.Data
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 16)]
 	public struct SEffectFloatParameter : IEqualityOperators<SEffectFloatParameter, SEffectFloatParameter, bool>, IEquatable<SEffectFloatParameter>, IUnrealScriptStruct
 	{
-		// Token: 0x060277E6 RID: 161766 RVA: 0x00992FFC File Offset: 0x009911FC
+		// Token: 0x0601EC6B RID: 126059 RVA: 0x0091D0A0 File Offset: 0x0091B2A0
 		public SEffectFloatParameter(FName Name, float Value)
 		{
 			this.Name = Name;
 			this.Value = Value;
 		}
 
-		// Token: 0x060277E7 RID: 161767 RVA: 0x0099300C File Offset: 0x0099120C
+		// Token: 0x0601EC6C RID: 126060 RVA: 0x0091D0B0 File Offset: 0x0091B2B0
 		public static bool operator ==(SEffectFloatParameter left, SEffectFloatParameter right)
 		{
 			return left.Name == right.Name && left.Value == right.Value;
 		}
 
-		// Token: 0x060277E8 RID: 161768 RVA: 0x00993031 File Offset: 0x00991231
+		// Token: 0x0601EC6D RID: 126061 RVA: 0x0091D0D5 File Offset: 0x0091B2D5
 		public static bool operator !=(SEffectFloatParameter left, SEffectFloatParameter right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x060277E9 RID: 161769 RVA: 0x0099303D File Offset: 0x0099123D
+		// Token: 0x0601EC6E RID: 126062 RVA: 0x0091D0E1 File Offset: 0x0091B2E1
 		public bool Equals(SEffectFloatParameter other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x060277EA RID: 161770 RVA: 0x0099304C File Offset: 0x0099124C
+		// Token: 0x0601EC6F RID: 126063 RVA: 0x0091D0F0 File Offset: 0x0091B2F0
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -53,30 +53,30 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.Data
 			return false;
 		}
 
-		// Token: 0x060277EB RID: 161771 RVA: 0x00993071 File Offset: 0x00991271
+		// Token: 0x0601EC70 RID: 126064 RVA: 0x0091D115 File Offset: 0x0091B315
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<FName, float>(this.Name, this.Value);
 		}
 
-		// Token: 0x060277EC RID: 161772 RVA: 0x00993084 File Offset: 0x00991284
+		// Token: 0x0601EC71 RID: 126065 RVA: 0x0091D128 File Offset: 0x0091B328
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SEffectFloatParameter._ScriptStructPtr != 0) ? SEffectFloatParameter._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Render/RuntimeBP/Effect/Data/SEffectFloatParameter.SEffectFloatParameter", ref SEffectFloatParameter._ScriptStructPtr);
 		}
 
-		// Token: 0x04013F67 RID: 81767
+		// Token: 0x04010597 RID: 66967
 		[FieldOffset(0)]
 		public FName Name;
 
-		// Token: 0x04013F68 RID: 81768
+		// Token: 0x04010598 RID: 66968
 		[FieldOffset(12)]
 		public float Value;
 
-		// Token: 0x04013F69 RID: 81769
+		// Token: 0x04010599 RID: 66969
 		public const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Effect/Data/SEffectFloatParameter.SEffectFloatParameter";
 
-		// Token: 0x04013F6A RID: 81770
+		// Token: 0x0401059A RID: 66970
 		private static IntPtr _ScriptStructPtr;
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DAD RID: 28077
+	// Token: 0x02007528 RID: 29992
 	public enum IPresentationType_Union : byte
 	{
-		// Token: 0x04011782 RID: 71554
+		// Token: 0x040126FE RID: 75518
 		NONE,
-		// Token: 0x04011783 RID: 71555
+		// Token: 0x040126FF RID: 75519
 		IPresentationType,
-		// Token: 0x04011784 RID: 71556
+		// Token: 0x04012700 RID: 75520
 		IResetPresentationFailure
 	}
 }

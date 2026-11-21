@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200255E RID: 9566
+// Token: 0x02001A49 RID: 6729
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class PhotoDecoItem : GridProxyAbstract<PhotoDecoData>
 {
-	// Token: 0x060134B6 RID: 79030 RVA: 0x004CCA60 File Offset: 0x004CAC60
+	// Token: 0x06010998 RID: 67992 RVA: 0x004DB694 File Offset: 0x004D9894
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,13 +35,13 @@ public class PhotoDecoItem : GridProxyAbstract<PhotoDecoData>
 		};
 	}
 
-	// Token: 0x060134B7 RID: 79031 RVA: 0x004CCB4B File Offset: 0x004CAD4B
+	// Token: 0x06010999 RID: 67993 RVA: 0x004DB77F File Offset: 0x004D997F
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).bLockStateOnSelect = true;
 	}
 
-	// Token: 0x060134B8 RID: 79032 RVA: 0x004CCB5C File Offset: 0x004CAD5C
+	// Token: 0x0601099A RID: 67994 RVA: 0x004DB790 File Offset: 0x004D9990
 	public override void Refresh(PhotoDecoData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -76,7 +76,7 @@ public class PhotoDecoItem : GridProxyAbstract<PhotoDecoData>
 		this.UnlockAnimPlayer.TryPlay(this.RootItem, data.RelativeItem);
 	}
 
-	// Token: 0x060134B9 RID: 79033 RVA: 0x004CCC10 File Offset: 0x004CAE10
+	// Token: 0x0601099B RID: 67995 RVA: 0x004DB844 File Offset: 0x004D9A44
 	private void RefreshIcon(PhotoDecoData data)
 	{
 		UUITexture texture = base.GetTexture(4);
@@ -135,7 +135,7 @@ public class PhotoDecoItem : GridProxyAbstract<PhotoDecoData>
 		}, ResourceSystem.EResourceLoadPriority.Ui, "js_undefined");
 	}
 
-	// Token: 0x060134BA RID: 79034 RVA: 0x004CCD15 File Offset: 0x004CAF15
+	// Token: 0x0601099C RID: 67996 RVA: 0x004DB949 File Offset: 0x004D9B49
 	private void CancelLangTextureLoad()
 	{
 		if (this.LangTextureHandleId != -1)
@@ -145,14 +145,14 @@ public class PhotoDecoItem : GridProxyAbstract<PhotoDecoData>
 		}
 	}
 
-	// Token: 0x060134BB RID: 79035 RVA: 0x004CCD37 File Offset: 0x004CAF37
+	// Token: 0x0601099D RID: 67997 RVA: 0x004DB96B File Offset: 0x004D9B6B
 	protected override void OnBeforeDestroy()
 	{
 		this.CancelLangTextureLoad();
 		this.UnlockAnimPlayer.Clear();
 	}
 
-	// Token: 0x060134BC RID: 79036 RVA: 0x004CCD4A File Offset: 0x004CAF4A
+	// Token: 0x0601099E RID: 67998 RVA: 0x004DB97E File Offset: 0x004D9B7E
 	private void SetToggleState(bool isSelect, bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -163,25 +163,25 @@ public class PhotoDecoItem : GridProxyAbstract<PhotoDecoData>
 		extendToggle.SetToggleStateForce(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 	}
 
-	// Token: 0x060134BD RID: 79037 RVA: 0x004CCD67 File Offset: 0x004CAF67
+	// Token: 0x0601099F RID: 67999 RVA: 0x004DB99B File Offset: 0x004D9B9B
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true, fireEvent);
 	}
 
-	// Token: 0x060134BE RID: 79038 RVA: 0x004CCD71 File Offset: 0x004CAF71
+	// Token: 0x060109A0 RID: 68000 RVA: 0x004DB9A5 File Offset: 0x004D9BA5
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false, fireEvent);
 	}
 
-	// Token: 0x060134BF RID: 79039 RVA: 0x004CCD7B File Offset: 0x004CAF7B
+	// Token: 0x060109A1 RID: 68001 RVA: 0x004DB9AF File Offset: 0x004D9BAF
 	public override object GetKey(PhotoDecoData data, int displayIndex)
 	{
 		return data.Id;
 	}
 
-	// Token: 0x060134C0 RID: 79040 RVA: 0x004CCD88 File Offset: 0x004CAF88
+	// Token: 0x060109A2 RID: 68002 RVA: 0x004DB9BC File Offset: 0x004D9BBC
 	private void OnToggleClick(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -193,49 +193,49 @@ public class PhotoDecoItem : GridProxyAbstract<PhotoDecoData>
 			this.SetToggleState(false, false);
 			if (this.Data.RelativeItem != 0)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(this.Data.RelativeItem, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(this.Data.RelativeItem, true, null, false);
 			}
 			return;
 		}
 		this.OnDecoClick(base.GridIndex);
 	}
 
-	// Token: 0x04009192 RID: 37266
+	// Token: 0x040092EB RID: 37611
 	private PhotoDecoData Data;
 
-	// Token: 0x04009193 RID: 37267
+	// Token: 0x040092EC RID: 37612
 	private bool IsUnlock = true;
 
-	// Token: 0x04009194 RID: 37268
+	// Token: 0x040092ED RID: 37613
 	public Action<int> OnDecoClick = delegate(int gridIndex)
 	{
 	};
 
-	// Token: 0x04009195 RID: 37269
+	// Token: 0x040092EE RID: 37614
 	private int LangTextureHandleId = -1;
 
-	// Token: 0x04009196 RID: 37270
+	// Token: 0x040092EF RID: 37615
 	private readonly PhotoUnlockAnimPlayer UnlockAnimPlayer = new PhotoUnlockAnimPlayer();
 
-	// Token: 0x02008B2A RID: 35626
+	// Token: 0x02007CB0 RID: 31920
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D2EB RID: 185067
+		// Token: 0x040285F8 RID: 165368
 		ToggleItem,
-		// Token: 0x0402D2EC RID: 185068
+		// Token: 0x040285F9 RID: 165369
 		ItemNormalState,
-		// Token: 0x0402D2ED RID: 185069
+		// Token: 0x040285FA RID: 165370
 		ItemContent,
-		// Token: 0x0402D2EE RID: 185070
+		// Token: 0x040285FB RID: 165371
 		SpriteIcon,
-		// Token: 0x0402D2EF RID: 185071
+		// Token: 0x040285FC RID: 165372
 		TextureIcon,
-		// Token: 0x0402D2F0 RID: 185072
+		// Token: 0x040285FD RID: 165373
 		SpriteRedDot,
-		// Token: 0x0402D2F1 RID: 185073
+		// Token: 0x040285FE RID: 165374
 		ItemLockPanel,
-		// Token: 0x0402D2F2 RID: 185074
+		// Token: 0x040285FF RID: 165375
 		LangTextureIcon
 	}
 }

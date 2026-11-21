@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x02002022 RID: 8226
+// Token: 0x020014F5 RID: 5365
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class SpecialItemModel : ModelBase
 {
-	// Token: 0x060101F6 RID: 66038 RVA: 0x003ECEEC File Offset: 0x003EB0EC
+	// Token: 0x0600D65E RID: 54878 RVA: 0x003F94E4 File Offset: 0x003F76E4
 	protected override bool OnInit()
 	{
 		foreach (SpecialItemDefine.ESpecialItemType especialItemType in this.NeedLoadSpecialItemType)
@@ -28,7 +28,7 @@ public class SpecialItemModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060101F7 RID: 66039 RVA: 0x003ECF5C File Offset: 0x003EB15C
+	// Token: 0x0600D65F RID: 54879 RVA: 0x003F9554 File Offset: 0x003F7754
 	[NullableContext(2)]
 	public SpecialItemLogicBase GetSpecialItemLogic(SpecialItemDefine.ESpecialItemType itemType)
 	{
@@ -53,7 +53,7 @@ public class SpecialItemModel : ModelBase
 		return specialItemLogicBase;
 	}
 
-	// Token: 0x060101F8 RID: 66040 RVA: 0x003ECFCC File Offset: 0x003EB1CC
+	// Token: 0x0600D660 RID: 54880 RVA: 0x003F95C4 File Offset: 0x003F77C4
 	public int? GetEquipSpecialItemId()
 	{
 		if (RouletteModel.Instance.EquipItemType.GetValueOrDefault() == InventoryDefine.EItemType.SpecialItem)
@@ -63,7 +63,7 @@ public class SpecialItemModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060101F9 RID: 66041 RVA: 0x003ED008 File Offset: 0x003EB208
+	// Token: 0x0600D661 RID: 54881 RVA: 0x003F9600 File Offset: 0x003F7800
 	protected override bool OnClear()
 	{
 		foreach (KeyValuePair<SpecialItemDefine.ESpecialItemType, SpecialItemLogicBase> keyValuePair in this.SpecialItemLogicMap)
@@ -74,8 +74,8 @@ public class SpecialItemModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x170013B1 RID: 5041
-	// (get) Token: 0x060101FA RID: 66042 RVA: 0x003ED06C File Offset: 0x003EB26C
+	// Token: 0x170013DE RID: 5086
+	// (get) Token: 0x0600D662 RID: 54882 RVA: 0x003F9664 File Offset: 0x003F7864
 	public static SpecialItemModel Instance
 	{
 		get
@@ -84,7 +84,7 @@ public class SpecialItemModel : ModelBase
 		}
 	}
 
-	// Token: 0x060101FB RID: 66043 RVA: 0x003ED073 File Offset: 0x003EB273
+	// Token: 0x0600D663 RID: 54883 RVA: 0x003F966B File Offset: 0x003F786B
 	public static SpecialItemModel GetOrCreateInstance()
 	{
 		if (SpecialItemModel._Instance == null)
@@ -94,7 +94,7 @@ public class SpecialItemModel : ModelBase
 		return SpecialItemModel._Instance;
 	}
 
-	// Token: 0x060101FC RID: 66044 RVA: 0x003ED087 File Offset: 0x003EB287
+	// Token: 0x0600D664 RID: 54884 RVA: 0x003F967F File Offset: 0x003F787F
 	public static bool CreateInstance()
 	{
 		if (SpecialItemModel._Instance != null)
@@ -105,43 +105,43 @@ public class SpecialItemModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060101FD RID: 66045 RVA: 0x003ED09D File Offset: 0x003EB29D
+	// Token: 0x0600D665 RID: 54885 RVA: 0x003F9695 File Offset: 0x003F7895
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060101FE RID: 66046 RVA: 0x003ED09F File Offset: 0x003EB29F
+	// Token: 0x0600D666 RID: 54886 RVA: 0x003F9697 File Offset: 0x003F7897
 	public static void ResetStaticDefaultValue()
 	{
 		SpecialItemModel._Instance = null;
 	}
 
-	// Token: 0x060101FF RID: 66047 RVA: 0x003ED0A7 File Offset: 0x003EB2A7
+	// Token: 0x0600D667 RID: 54887 RVA: 0x003F969F File Offset: 0x003F789F
 	static SpecialItemModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SpecialItemModel.CreateStaticDefaultValue), new Action(SpecialItemModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400774B RID: 30539
+	// Token: 0x04007834 RID: 30772
 	private readonly Dictionary<SpecialItemDefine.ESpecialItemType, SpecialItemLogicBase> SpecialItemLogicMap = new Dictionary<SpecialItemDefine.ESpecialItemType, SpecialItemLogicBase>();
 
-	// Token: 0x0400774C RID: 30540
+	// Token: 0x04007835 RID: 30773
 	private readonly SpecialItemDefine.ESpecialItemType[] NeedLoadSpecialItemType = Array.Empty<SpecialItemDefine.ESpecialItemType>();
 
-	// Token: 0x0400774D RID: 30541
+	// Token: 0x04007836 RID: 30774
 	public int? TagWatchedItemId;
 
-	// Token: 0x0400774E RID: 30542
+	// Token: 0x04007837 RID: 30775
 	[Nullable(2)]
 	public EntityHandle TagWatchedEntityHandle;
 
-	// Token: 0x0400774F RID: 30543
+	// Token: 0x04007838 RID: 30776
 	public HashSet<int> WatchedAllowTagIds = new HashSet<int>();
 
-	// Token: 0x04007750 RID: 30544
+	// Token: 0x04007839 RID: 30777
 	public HashSet<int> WatchedBanTagIds = new HashSet<int>();
 
-	// Token: 0x04007751 RID: 30545
+	// Token: 0x0400783A RID: 30778
 	[Nullable(2)]
 	private static SpecialItemModel _Instance;
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000159 RID: 345
+	// Token: 0x02000169 RID: 361
 	public class ConfigChildUiCameraMappingAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000817 RID: 2071 RVA: 0x00087464 File Offset: 0x00085664
+		// Token: 0x06000877 RID: 2167 RVA: 0x0008CFC1 File Offset: 0x0008B1C1
 		static ConfigChildUiCameraMappingAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigChildUiCameraMappingAll.CreateStaticDefaultValue), new Action(ConfigChildUiCameraMappingAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000818 RID: 2072 RVA: 0x00087484 File Offset: 0x00085684
+		// Token: 0x06000878 RID: 2168 RVA: 0x0008CFE0 File Offset: 0x0008B1E0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigChildUiCameraMappingAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000819 RID: 2073 RVA: 0x00087503 File Offset: 0x00085703
+		// Token: 0x06000879 RID: 2169 RVA: 0x0008D05F File Offset: 0x0008B25F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigChildUiCameraMappingAll.LogPair = null;
 			ConfigChildUiCameraMappingAll.HandleId = 0;
 		}
 
-		// Token: 0x0600081A RID: 2074 RVA: 0x00087511 File Offset: 0x00085711
+		// Token: 0x0600087A RID: 2170 RVA: 0x0008D06D File Offset: 0x0008B26D
 		public static void Init()
 		{
 			ConfigChildUiCameraMappingAll.HandleId = ConfigCommon.InitDataStatement(ConfigChildUiCameraMappingAll.HandleId, "db_uicamera.db", "select BinData from `ChildUiCameraMapping`");
 		}
 
-		// Token: 0x0600081B RID: 2075 RVA: 0x0008752C File Offset: 0x0008572C
+		// Token: 0x0600087B RID: 2171 RVA: 0x0008D088 File Offset: 0x0008B288
 		[NullableContext(2)]
 		public static IReadOnlyList<ChildUiCameraMapping> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000953 RID: 2387
+		// Token: 0x040009C3 RID: 2499
 		private const string DB = "db_uicamera.db";
 
-		// Token: 0x04000954 RID: 2388
+		// Token: 0x040009C4 RID: 2500
 		private const string FILE = "u.Ui相机.xlsx";
 
-		// Token: 0x04000955 RID: 2389
+		// Token: 0x040009C5 RID: 2501
 		private const string TABLE = "ChildUiCameraMapping";
 
-		// Token: 0x04000956 RID: 2390
+		// Token: 0x040009C6 RID: 2502
 		private const string COMMAND = "select BinData from `ChildUiCameraMapping`";
 
-		// Token: 0x04000957 RID: 2391
+		// Token: 0x040009C7 RID: 2503
 		private const string KEY_PREFIX = "ChildUiCameraMappingAll";
 
-		// Token: 0x04000958 RID: 2392
+		// Token: 0x040009C8 RID: 2504
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000959 RID: 2393
+		// Token: 0x040009C9 RID: 2505
 		private static int HandleId;
 	}
 }

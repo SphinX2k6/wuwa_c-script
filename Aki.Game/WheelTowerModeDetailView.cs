@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,18 +11,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200161D RID: 5661
+// Token: 0x02000AD5 RID: 2773
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerModeDetailView : UiViewBase
 {
-	// Token: 0x06009F41 RID: 40769 RVA: 0x0022E240 File Offset: 0x0022C440
+	// Token: 0x0600731F RID: 29471 RVA: 0x00238058 File Offset: 0x00236258
 	[NullableContext(1)]
 	public WheelTowerModeDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009F42 RID: 40770 RVA: 0x0022E24C File Offset: 0x0022C44C
+	// Token: 0x06007320 RID: 29472 RVA: 0x00238064 File Offset: 0x00236264
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 30;
@@ -104,7 +103,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009F43 RID: 40771 RVA: 0x0022E6EC File Offset: 0x0022C8EC
+	// Token: 0x06007321 RID: 29473 RVA: 0x00238504 File Offset: 0x00236704
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerModeDetailView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -115,7 +114,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009F44 RID: 40772 RVA: 0x0022E72F File Offset: 0x0022C92F
+	// Token: 0x06007322 RID: 29474 RVA: 0x00238547 File Offset: 0x00236747
 	protected override void OnBeforeShow()
 	{
 		WheelTowerBossHandBookButtonItem bossHandBookButtonItem = this.BossHandBookButtonItem;
@@ -126,7 +125,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		this.RefreshDefaultRound();
 	}
 
-	// Token: 0x06009F45 RID: 40773 RVA: 0x0022E748 File Offset: 0x0022C948
+	// Token: 0x06007323 RID: 29475 RVA: 0x00238560 File Offset: 0x00236760
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -134,7 +133,11 @@ public class WheelTowerModeDetailView : UiViewBase
 	})]
 	private List<TeamChallengeInfo> GetTeamList()
 	{
-		List<TeamChallengeInfo> list = WheelTowerModel.Instance.GetCurrentLevelRecord(null).TeamChallengeInfos.Cast<TeamChallengeInfo>().ToList<TeamChallengeInfo>();
+		List<TeamChallengeInfo> list = new List<TeamChallengeInfo>();
+		foreach (TeamChallengeInfo item in WheelTowerModel.Instance.GetCurrentLevelRecord(null).TeamChallengeInfos)
+		{
+			list.Add(item);
+		}
 		if (WheelTowerModel.Instance.EndlessMode)
 		{
 			list.Add(null);
@@ -147,7 +150,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06009F46 RID: 40774 RVA: 0x0022E7A0 File Offset: 0x0022C9A0
+	// Token: 0x06007324 RID: 29476 RVA: 0x002385EC File Offset: 0x002367EC
 	private void UpdateShareBtnItem()
 	{
 		if (this.ShareBtnItem == null)
@@ -176,7 +179,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x06009F47 RID: 40775 RVA: 0x0022E81C File Offset: 0x0022CA1C
+	// Token: 0x06007325 RID: 29477 RVA: 0x00238668 File Offset: 0x00236868
 	private void RefreshDefaultRound()
 	{
 		int maxChallengeRound = WheelTowerModel.Instance.GetMaxChallengeRound(null);
@@ -190,7 +193,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		this.RefreshRound(round, true);
 	}
 
-	// Token: 0x06009F48 RID: 40776 RVA: 0x0022E86C File Offset: 0x0022CA6C
+	// Token: 0x06007326 RID: 29478 RVA: 0x002386B8 File Offset: 0x002368B8
 	private void RefreshRound(int round, bool force = true)
 	{
 		WheelTowerModel instance = WheelTowerModel.Instance;
@@ -254,7 +257,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		this.UpdateShareBtnItem();
 	}
 
-	// Token: 0x06009F49 RID: 40777 RVA: 0x0022E9F0 File Offset: 0x0022CBF0
+	// Token: 0x06007327 RID: 29479 RVA: 0x0023883C File Offset: 0x00236A3C
 	private void RefreshScoreLevel(int scoreLevel)
 	{
 		NewTowerScoreLevel? scoreLevelConfigById = WheelTowerConfig.Instance.GetScoreLevelConfigById(scoreLevel);
@@ -302,7 +305,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		texture7.SetUIActive(flag);
 	}
 
-	// Token: 0x06009F4A RID: 40778 RVA: 0x0022EB2C File Offset: 0x0022CD2C
+	// Token: 0x06007328 RID: 29480 RVA: 0x00238978 File Offset: 0x00236B78
 	private void RefreshBossList(int round)
 	{
 		WheelTowerModel model = WheelTowerModel.Instance;
@@ -370,7 +373,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x06009F4B RID: 40779 RVA: 0x0022ED18 File Offset: 0x0022CF18
+	// Token: 0x06007329 RID: 29481 RVA: 0x00238B64 File Offset: 0x00236D64
 	private void RefreshButton(int round)
 	{
 		WheelTowerModel instance = WheelTowerModel.Instance;
@@ -400,7 +403,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		item.SetUIActive(flag);
 	}
 
-	// Token: 0x06009F4C RID: 40780 RVA: 0x0022EDBE File Offset: 0x0022CFBE
+	// Token: 0x0600732A RID: 29482 RVA: 0x00238C0A File Offset: 0x00236E0A
 	private void BossToggleClick(int index, int bossId)
 	{
 		GenericScrollViewNew<WheelTowerSmallBossItem, IBossItemData> bossScrollView = this.BossScrollView;
@@ -411,14 +414,14 @@ public class WheelTowerModeDetailView : UiViewBase
 		bossScrollView.SelectGridProxy(index, false);
 	}
 
-	// Token: 0x06009F4D RID: 40781 RVA: 0x0022EDD4 File Offset: 0x0022CFD4
+	// Token: 0x0600732B RID: 29483 RVA: 0x00238C20 File Offset: 0x00236E20
 	private void TeamToggleClick(int round)
 	{
 		base.PlayOrReplaySequence("Switch", false, null);
 		this.RefreshRound(round, true);
 	}
 
-	// Token: 0x06009F4E RID: 40782 RVA: 0x0022EE00 File Offset: 0x0022D000
+	// Token: 0x0600732C RID: 29484 RVA: 0x00238C4C File Offset: 0x00236E4C
 	private void OnCloseBtnClick()
 	{
 		if (GameModeController.Instance.IsInInstance() && !UiManager.Instance.IsViewHide(EUiViewName.WheelTowerMainView))
@@ -429,7 +432,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009F4F RID: 40783 RVA: 0x0022EE4F File Offset: 0x0022D04F
+	// Token: 0x0600732D RID: 29485 RVA: 0x00238C9B File Offset: 0x00236E9B
 	private void OnRecordBtnClick()
 	{
 		if (WheelTowerModel.Instance.GetTotalScore() == 0)
@@ -440,13 +443,13 @@ public class WheelTowerModeDetailView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerRecordView, null, null);
 	}
 
-	// Token: 0x06009F50 RID: 40784 RVA: 0x0022EE83 File Offset: 0x0022D083
+	// Token: 0x0600732E RID: 29486 RVA: 0x00238CCF File Offset: 0x00236ECF
 	private void OnRankLevelRuleBtnClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerScoreLevelRuleView, null, null);
 	}
 
-	// Token: 0x06009F51 RID: 40785 RVA: 0x0022EE98 File Offset: 0x0022D098
+	// Token: 0x0600732F RID: 29487 RVA: 0x00238CE4 File Offset: 0x00236EE4
 	private void OnResetBtnClick()
 	{
 		if (!WheelTowerModel.Instance.HasChallengeAnyRound(null))
@@ -462,7 +465,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06009F52 RID: 40786 RVA: 0x0022EEEC File Offset: 0x0022D0EC
+	// Token: 0x06007330 RID: 29488 RVA: 0x00238D38 File Offset: 0x00236F38
 	private void OnContinueBtnClick()
 	{
 		WheelTowerModel instance = WheelTowerModel.Instance;
@@ -479,7 +482,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerPrepareView, null, null);
 	}
 
-	// Token: 0x06009F53 RID: 40787 RVA: 0x0022EF68 File Offset: 0x0022D168
+	// Token: 0x06007331 RID: 29489 RVA: 0x00238DB4 File Offset: 0x00236FB4
 	[NullableContext(1)]
 	private WheelTowerSmallBossItem CreateBossItem()
 	{
@@ -489,7 +492,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		return wheelTowerSmallBossItem;
 	}
 
-	// Token: 0x06009F54 RID: 40788 RVA: 0x0022EF88 File Offset: 0x0022D188
+	// Token: 0x06007332 RID: 29490 RVA: 0x00238DD4 File Offset: 0x00236FD4
 	[NullableContext(1)]
 	private WheelTowerNewTeamItem CreateTeamItem()
 	{
@@ -499,7 +502,7 @@ public class WheelTowerModeDetailView : UiViewBase
 		};
 	}
 
-	// Token: 0x06009F55 RID: 40789 RVA: 0x0022EFA1 File Offset: 0x0022D1A1
+	// Token: 0x06007333 RID: 29491 RVA: 0x00238DED File Offset: 0x00236FED
 	private void AddHomeBtnExtraCallback()
 	{
 		UiBehaviourHomeBtn uiBehaviourHomeBtn = this.UiBehaviourHomeBtn;
@@ -517,13 +520,13 @@ public class WheelTowerModeDetailView : UiViewBase
 		});
 	}
 
-	// Token: 0x040047D6 RID: 18390
+	// Token: 0x0400487C RID: 18556
 	private const int NormalModeTeamMaxNum = 3;
 
-	// Token: 0x040047D7 RID: 18391
+	// Token: 0x0400487D RID: 18557
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x040047D8 RID: 18392
+	// Token: 0x0400487E RID: 18558
 	[Nullable(new byte[]
 	{
 		2,
@@ -532,7 +535,7 @@ public class WheelTowerModeDetailView : UiViewBase
 	})]
 	private GenericScrollViewNew<WheelTowerSmallBossItem, IBossItemData> BossScrollView;
 
-	// Token: 0x040047D9 RID: 18393
+	// Token: 0x0400487F RID: 18559
 	[Nullable(new byte[]
 	{
 		2,
@@ -541,12 +544,12 @@ public class WheelTowerModeDetailView : UiViewBase
 	})]
 	private GenericScrollViewNew<WheelTowerNewTeamItem, TeamChallengeInfo> TeamScrollView;
 
-	// Token: 0x040047DA RID: 18394
+	// Token: 0x04004880 RID: 18560
 	private ButtonItem GoButton;
 
-	// Token: 0x040047DB RID: 18395
+	// Token: 0x04004881 RID: 18561
 	private WheelTowerBossHandBookButtonItem BossHandBookButtonItem;
 
-	// Token: 0x040047DC RID: 18396
+	// Token: 0x04004882 RID: 18562
 	private ShareBtnItem ShareBtnItem;
 }

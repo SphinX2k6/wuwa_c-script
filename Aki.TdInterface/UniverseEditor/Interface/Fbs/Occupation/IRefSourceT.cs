@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x020043C0 RID: 17344
+	// Token: 0x02004822 RID: 18466
 	public class IRefSourceT
 	{
-		// Token: 0x17007AAA RID: 31402
-		// (get) Token: 0x06019DCC RID: 105932 RVA: 0x003B3B86 File Offset: 0x003B1D86
-		// (set) Token: 0x06019DCD RID: 105933 RVA: 0x003B3B8E File Offset: 0x003B1D8E
+		// Token: 0x170080E1 RID: 32993
+		// (get) Token: 0x0601B567 RID: 111975 RVA: 0x003DF81E File Offset: 0x003DDA1E
+		// (set) Token: 0x0601B568 RID: 111976 RVA: 0x003DF826 File Offset: 0x003DDA26
 		public ERefSourceType Type { get; set; }
 
-		// Token: 0x06019DCE RID: 105934 RVA: 0x003B3B97 File Offset: 0x003B1D97
+		// Token: 0x0601B569 RID: 111977 RVA: 0x003DF82F File Offset: 0x003DDA2F
 		public IRefSourceT()
 		{
 			this.Type = ERefSourceType.AwakeEntity;

@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DA4 RID: 15780
+	// Token: 0x020041BB RID: 16827
 	public class ICompareVarConditionInQuestFailedT
 	{
-		// Token: 0x17006C92 RID: 27794
-		// (get) Token: 0x06015EFE RID: 89854 RVA: 0x0032AF07 File Offset: 0x00329107
-		// (set) Token: 0x06015EFF RID: 89855 RVA: 0x0032AF0F File Offset: 0x0032910F
+		// Token: 0x1700724C RID: 29260
+		// (get) Token: 0x06017436 RID: 95286 RVA: 0x00352233 File Offset: 0x00350433
+		// (set) Token: 0x06017437 RID: 95287 RVA: 0x0035223B File Offset: 0x0035043B
 		public EConditionCount Count { get; set; }
 
-		// Token: 0x17006C93 RID: 27795
-		// (get) Token: 0x06015F00 RID: 89856 RVA: 0x0032AF18 File Offset: 0x00329118
-		// (set) Token: 0x06015F01 RID: 89857 RVA: 0x0032AF20 File Offset: 0x00329120
+		// Token: 0x1700724D RID: 29261
+		// (get) Token: 0x06017438 RID: 95288 RVA: 0x00352244 File Offset: 0x00350444
+		// (set) Token: 0x06017439 RID: 95289 RVA: 0x0035224C File Offset: 0x0035044C
 		public List<ICompareVarInChildQuestT> Conditions { get; set; }
 
-		// Token: 0x06015F02 RID: 89858 RVA: 0x0032AF29 File Offset: 0x00329129
+		// Token: 0x0601743A RID: 95290 RVA: 0x00352255 File Offset: 0x00350455
 		public ICompareVarConditionInQuestFailedT()
 		{
 			this.Count = EConditionCount.All;

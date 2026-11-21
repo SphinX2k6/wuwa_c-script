@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 {
-	// Token: 0x02005A06 RID: 23046
+	// Token: 0x020049E2 RID: 18914
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBuffDetailView : UiViewBase
 	{
-		// Token: 0x0603A694 RID: 239252 RVA: 0x00DE4F04 File Offset: 0x00DE3104
+		// Token: 0x0602F5DD RID: 194013 RVA: 0x00D35454 File Offset: 0x00D33654
 		private int GetBuffTypeIndex(EDangoBrawlBuffType buffType)
 		{
 			int num = Array.IndexOf<EDangoBrawlBuffType>(this.BuffTypeList, buffType);
@@ -30,34 +29,39 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			return num;
 		}
 
-		// Token: 0x0603A695 RID: 239253 RVA: 0x00DE4F25 File Offset: 0x00DE3125
+		// Token: 0x0602F5DE RID: 194014 RVA: 0x00D35475 File Offset: 0x00D33675
 		private List<DangoBrawlBattleBuffDetailItemData> GetSideBuffList(EDangoBrawlBuffDetailSide side)
 		{
 			return ((side == EDangoBrawlBuffDetailSide.Self) ? this.ViewOpenData.SelfSide : this.ViewOpenData.OpponentSide).BuffDetailDataList;
 		}
 
-		// Token: 0x0603A696 RID: 239254 RVA: 0x00DE4F48 File Offset: 0x00DE3148
+		// Token: 0x0602F5DF RID: 194015 RVA: 0x00D35498 File Offset: 0x00D33698
 		private List<DangoBrawlBattleBuffDetailItemData> GetBuffDetailDataListByType(EDangoBrawlBuffType buffType)
 		{
-			return this.BuffDetailDataList.Where(delegate(DangoBrawlBattleBuffDetailItemData data)
+			List<DangoBrawlBattleBuffDetailItemData> list = new List<DangoBrawlBattleBuffDetailItemData>();
+			foreach (DangoBrawlBattleBuffDetailItemData dangoBrawlBattleBuffDetailItemData in this.BuffDetailDataList)
 			{
-				DangoBrawlBuff? buffConfigById = DangoBrawlConfig.Instance.GetBuffConfigById(data.BaseData.ConfigId);
-				return buffConfigById != null && buffConfigById.Value.BuffType == (int)buffType && buffConfigById.Value.IsShow;
-			}).ToList<DangoBrawlBattleBuffDetailItemData>();
+				DangoBrawlBuff? buffConfigById = DangoBrawlConfig.Instance.GetBuffConfigById(dangoBrawlBattleBuffDetailItemData.BaseData.ConfigId);
+				if (buffConfigById != null && buffConfigById.Value.BuffType == (int)buffType && buffConfigById.Value.IsShow)
+				{
+					list.Add(dangoBrawlBattleBuffDetailItemData);
+				}
+			}
+			return list;
 		}
 
-		// Token: 0x0603A697 RID: 239255 RVA: 0x00DE4F7E File Offset: 0x00DE317E
+		// Token: 0x0602F5E0 RID: 194016 RVA: 0x00D35538 File Offset: 0x00D33738
 		private int GetTargetScrollIndex(EDangoBrawlBuffType buffType)
 		{
 			return this.GetBuffDetailDataListByType(buffType).FindIndex((DangoBrawlBattleBuffDetailItemData data) => data.IsSelected);
 		}
 
-		// Token: 0x0603A698 RID: 239256 RVA: 0x00DE4FAB File Offset: 0x00DE31AB
+		// Token: 0x0602F5E1 RID: 194017 RVA: 0x00D35565 File Offset: 0x00D33765
 		public DangoBrawlBuffDetailView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A699 RID: 239257 RVA: 0x00DE4FD4 File Offset: 0x00DE31D4
+		// Token: 0x0602F5E2 RID: 194018 RVA: 0x00D35590 File Offset: 0x00D33790
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -98,7 +102,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A69A RID: 239258 RVA: 0x00DE51CC File Offset: 0x00DE33CC
+		// Token: 0x0602F5E3 RID: 194019 RVA: 0x00D35788 File Offset: 0x00D33988
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlBuffDetailView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -109,7 +113,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A69B RID: 239259 RVA: 0x00DE520F File Offset: 0x00DE340F
+		// Token: 0x0602F5E4 RID: 194020 RVA: 0x00D357CB File Offset: 0x00D339CB
 		protected override void OnBeforeShow()
 		{
 			IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -120,7 +124,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			childPopView.SetTitleByTextIdAndArg("DangoBrawlBattleUIText_035", Array.Empty<object>());
 		}
 
-		// Token: 0x0603A69C RID: 239260 RVA: 0x00DE522B File Offset: 0x00DE342B
+		// Token: 0x0602F5E5 RID: 194021 RVA: 0x00D357E7 File Offset: 0x00D339E7
 		private DangoBrawlBattleBuffDetailTogItem CreateTogItem()
 		{
 			return new DangoBrawlBattleBuffDetailTogItem
@@ -129,7 +133,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			};
 		}
 
-		// Token: 0x0603A69D RID: 239261 RVA: 0x00DE5244 File Offset: 0x00DE3444
+		// Token: 0x0602F5E6 RID: 194022 RVA: 0x00D35800 File Offset: 0x00D33A00
 		private void RefreshRoleDisplay()
 		{
 			DangoBrawlBuffSideDetailData selfSide = this.ViewOpenData.SelfSide;
@@ -152,7 +156,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			}
 		}
 
-		// Token: 0x0603A69E RID: 239262 RVA: 0x00DE5314 File Offset: 0x00DE3514
+		// Token: 0x0602F5E7 RID: 194023 RVA: 0x00D358D0 File Offset: 0x00D33AD0
 		private void RefreshSideButtonState()
 		{
 			bool flag = this.CurrentSide == EDangoBrawlBuffDetailSide.Self;
@@ -178,7 +182,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			uuiitem2.SetUIActive(flag);
 		}
 
-		// Token: 0x0603A69F RID: 239263 RVA: 0x00DE5378 File Offset: 0x00DE3578
+		// Token: 0x0602F5E8 RID: 194024 RVA: 0x00D35934 File Offset: 0x00D33B34
 		private void SwitchSide(EDangoBrawlBuffDetailSide side)
 		{
 			if (this.CurrentSide == side)
@@ -191,14 +195,14 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			this.RefreshBuffScroll(this.CurrentBuffType, this.GetTargetScrollIndex(this.CurrentBuffType));
 		}
 
-		// Token: 0x0603A6A0 RID: 239264 RVA: 0x00DE53B8 File Offset: 0x00DE35B8
+		// Token: 0x0602F5E9 RID: 194025 RVA: 0x00D35974 File Offset: 0x00D33B74
 		private void RefreshBuffScroll(EDangoBrawlBuffType buffType, int scrollIndex = -1)
 		{
 			List<DangoBrawlBattleBuffDetailItemData> buffDetailDataListByType = this.GetBuffDetailDataListByType(buffType);
 			this.RefreshBuffScrollAsync(buffDetailDataListByType, scrollIndex).Forget();
 		}
 
-		// Token: 0x0603A6A1 RID: 239265 RVA: 0x00DE53DC File Offset: 0x00DE35DC
+		// Token: 0x0602F5EA RID: 194026 RVA: 0x00D35998 File Offset: 0x00D33B98
 		private UniTask RefreshBuffScrollAsync(List<DangoBrawlBattleBuffDetailItemData> dataList, int scrollIndex = -1)
 		{
 			DangoBrawlBuffDetailView.<RefreshBuffScrollAsync>d__21 <RefreshBuffScrollAsync>d__;
@@ -211,7 +215,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			return <RefreshBuffScrollAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A6A2 RID: 239266 RVA: 0x00DE542F File Offset: 0x00DE362F
+		// Token: 0x0602F5EB RID: 194027 RVA: 0x00D359EB File Offset: 0x00D33BEB
 		private void OnClickBuffType(EDangoBrawlBuffType buffType)
 		{
 			this.CurrentBuffType = buffType;
@@ -223,7 +227,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			this.RefreshBuffScroll(buffType, this.GetTargetScrollIndex(buffType));
 		}
 
-		// Token: 0x0603A6A3 RID: 239267 RVA: 0x00DE5460 File Offset: 0x00DE3660
+		// Token: 0x0602F5EC RID: 194028 RVA: 0x00D35A1C File Offset: 0x00D33C1C
 		private void OnClickBtnReviewSelfBuff()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -234,7 +238,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			this.SwitchSide(EDangoBrawlBuffDetailSide.Self);
 		}
 
-		// Token: 0x0603A6A4 RID: 239268 RVA: 0x00DE5494 File Offset: 0x00DE3694
+		// Token: 0x0602F5ED RID: 194029 RVA: 0x00D35A50 File Offset: 0x00D33C50
 		private void OnClickBtnReviewOpponentBuff()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -245,27 +249,27 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			this.SwitchSide(EDangoBrawlBuffDetailSide.Opponent);
 		}
 
-		// Token: 0x0401E716 RID: 124694
+		// Token: 0x040191BD RID: 102845
 		private readonly EDangoBrawlBuffType[] BuffTypeList = new EDangoBrawlBuffType[]
 		{
 			EDangoBrawlBuffType.Buff,
 			EDangoBrawlBuffType.DeBuff
 		};
 
-		// Token: 0x0401E717 RID: 124695
+		// Token: 0x040191BE RID: 102846
 		[Nullable(2)]
 		private DangoBrawlBuffDetailViewOpenData ViewOpenData;
 
-		// Token: 0x0401E718 RID: 124696
+		// Token: 0x040191BF RID: 102847
 		private EDangoBrawlBuffDetailSide CurrentSide;
 
-		// Token: 0x0401E719 RID: 124697
+		// Token: 0x040191C0 RID: 102848
 		private EDangoBrawlBuffType CurrentBuffType;
 
-		// Token: 0x0401E71A RID: 124698
+		// Token: 0x040191C1 RID: 102849
 		private List<DangoBrawlBattleBuffDetailItemData> BuffDetailDataList = new List<DangoBrawlBattleBuffDetailItemData>();
 
-		// Token: 0x0401E71B RID: 124699
+		// Token: 0x040191C2 RID: 102850
 		[Nullable(new byte[]
 		{
 			2,
@@ -273,7 +277,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 		})]
 		private GenericLayout<DangoBrawlBattleBuffDetailTogItem, EDangoBrawlBuffType> TogLayout;
 
-		// Token: 0x0401E71C RID: 124700
+		// Token: 0x040191C3 RID: 102851
 		[Nullable(new byte[]
 		{
 			2,
@@ -282,31 +286,31 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 		})]
 		private GenericScrollViewNew<DangoBrawlBattleBuffDetailItem, DangoBrawlBattleBuffDetailItemData> BuffScrollView;
 
-		// Token: 0x0200BC57 RID: 48215
+		// Token: 0x0200A661 RID: 42593
 		[NullableContext(0)]
 		private enum EBuffComponent
 		{
-			// Token: 0x04038D20 RID: 232736
+			// Token: 0x040336ED RID: 210669
 			TogLayout,
-			// Token: 0x04038D21 RID: 232737
+			// Token: 0x040336EE RID: 210670
 			TogItem,
-			// Token: 0x04038D22 RID: 232738
+			// Token: 0x040336EF RID: 210671
 			BuffScrollView,
-			// Token: 0x04038D23 RID: 232739
+			// Token: 0x040336F0 RID: 210672
 			BuffLayout,
-			// Token: 0x04038D24 RID: 232740
+			// Token: 0x040336F1 RID: 210673
 			BuffItem,
-			// Token: 0x04038D25 RID: 232741
+			// Token: 0x040336F2 RID: 210674
 			BtnReviewSelfBuff,
-			// Token: 0x04038D26 RID: 232742
+			// Token: 0x040336F3 RID: 210675
 			TexRoleSelf,
-			// Token: 0x04038D27 RID: 232743
+			// Token: 0x040336F4 RID: 210676
 			TxtRoleSelf,
-			// Token: 0x04038D28 RID: 232744
+			// Token: 0x040336F5 RID: 210677
 			BtnReviewOpponentBuff,
-			// Token: 0x04038D29 RID: 232745
+			// Token: 0x040336F6 RID: 210678
 			TexRoleOpponent,
-			// Token: 0x04038D2A RID: 232746
+			// Token: 0x040336F7 RID: 210679
 			TxtRoleOpponent
 		}
 	}

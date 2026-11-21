@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.DiffPatch.Procedure
 {
-	// Token: 0x02000216 RID: 534
+	// Token: 0x0200021B RID: 539
 	public class IosDiffPatchProcedure : MobileDiffPatchProcedure
 	{
-		// Token: 0x06000DE4 RID: 3556 RVA: 0x00053DE6 File Offset: 0x00051FE6
+		// Token: 0x06000E25 RID: 3621 RVA: 0x000568DA File Offset: 0x00054ADA
 		[NullableContext(1)]
 		public IosDiffPatchProcedure(AppPathMisc pathMisc, HotFixManager viewMgr) : base(pathMisc, viewMgr)
 		{
 		}
 
-		// Token: 0x06000DE5 RID: 3557 RVA: 0x00053DF0 File Offset: 0x00051FF0
+		// Token: 0x06000E26 RID: 3622 RVA: 0x000568E4 File Offset: 0x00054AE4
 		protected override UniTask<bool> PromptDownload(long updateSize, [Nullable(1)] DiffUpdate update)
 		{
 			IosDiffPatchProcedure.<PromptDownload>d__1 <PromptDownload>d__;

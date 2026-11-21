@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C38 RID: 3128
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D0B RID: 3339
 	public class ICommonSplinePoint : IBaseSplinePointType
 	{
-		// Token: 0x0600479E RID: 18334 RVA: 0x000B453D File Offset: 0x000B273D
+		// Token: 0x06004C0E RID: 19470 RVA: 0x000BE8ED File Offset: 0x000BCAED
 		public static ICommonSplinePoint Create(ICommonSplinePoint? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014EB RID: 5355
-		// (get) Token: 0x0600479F RID: 18335 RVA: 0x000B455C File Offset: 0x000B275C
+		// Token: 0x170015F3 RID: 5619
+		// (get) Token: 0x06004C0F RID: 19471 RVA: 0x000BE90C File Offset: 0x000BCB0C
 		public override VectorInfo Position
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014EC RID: 5356
-		// (get) Token: 0x060047A0 RID: 18336 RVA: 0x000B4590 File Offset: 0x000B2790
+		// Token: 0x170015F4 RID: 5620
+		// (get) Token: 0x06004C10 RID: 19472 RVA: 0x000BE940 File Offset: 0x000BCB40
 		public override VectorInfo ArriveTangent
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014ED RID: 5357
-		// (get) Token: 0x060047A1 RID: 18337 RVA: 0x000B45C4 File Offset: 0x000B27C4
+		// Token: 0x170015F5 RID: 5621
+		// (get) Token: 0x06004C11 RID: 19473 RVA: 0x000BE974 File Offset: 0x000BCB74
 		public override VectorInfo LeaveTangent
 		{
 			get
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014EE RID: 5358
-		// (get) Token: 0x060047A2 RID: 18338 RVA: 0x000B45F8 File Offset: 0x000B27F8
+		// Token: 0x170015F6 RID: 5622
+		// (get) Token: 0x06004C12 RID: 19474 RVA: 0x000BE9A8 File Offset: 0x000BCBA8
 		public override ESplineLine LineType
 		{
 			get
@@ -81,8 +79,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014EF RID: 5359
-		// (get) Token: 0x060047A3 RID: 18339 RVA: 0x000B4605 File Offset: 0x000B2805
+		// Token: 0x170015F7 RID: 5623
+		// (get) Token: 0x06004C13 RID: 19475 RVA: 0x000BE9B5 File Offset: 0x000BCBB5
 		[Nullable(2)]
 		public override VectorInfo Rotation
 		{
@@ -99,35 +97,35 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040028B5 RID: 10421
+		// Token: 0x04002B0A RID: 11018
 		private ICommonSplinePoint Instance;
 
-		// Token: 0x040028B6 RID: 10422
+		// Token: 0x04002B0B RID: 11019
 		[Nullable(2)]
 		private VectorInfo _PositionCache;
 
-		// Token: 0x040028B7 RID: 10423
+		// Token: 0x04002B0C RID: 11020
 		private bool _PositionInited;
 
-		// Token: 0x040028B8 RID: 10424
+		// Token: 0x04002B0D RID: 11021
 		[Nullable(2)]
 		private VectorInfo _ArriveTangentCache;
 
-		// Token: 0x040028B9 RID: 10425
+		// Token: 0x04002B0E RID: 11022
 		private bool _ArriveTangentInited;
 
-		// Token: 0x040028BA RID: 10426
+		// Token: 0x04002B0F RID: 11023
 		[Nullable(2)]
 		private VectorInfo _LeaveTangentCache;
 
-		// Token: 0x040028BB RID: 10427
+		// Token: 0x04002B10 RID: 11024
 		private bool _LeaveTangentInited;
 
-		// Token: 0x040028BC RID: 10428
+		// Token: 0x04002B11 RID: 11025
 		[Nullable(2)]
 		private VectorInfo _RotationCache;
 
-		// Token: 0x040028BD RID: 10429
+		// Token: 0x04002B12 RID: 11026
 		private bool _RotationInited;
 	}
 }

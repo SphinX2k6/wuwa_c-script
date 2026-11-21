@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B4A RID: 11082
+// Token: 0x020020C6 RID: 8390
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueRewardView : UiTickViewBase
 {
-	// Token: 0x06016FE3 RID: 94179 RVA: 0x005D66B6 File Offset: 0x005D48B6
+	// Token: 0x06014A14 RID: 84500 RVA: 0x00603222 File Offset: 0x00601422
 	public SurvivorsRogueRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016FE4 RID: 94180 RVA: 0x005D66D4 File Offset: 0x005D48D4
+	// Token: 0x06014A15 RID: 84501 RVA: 0x00603240 File Offset: 0x00601440
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class SurvivorsRogueRewardView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06016FE5 RID: 94181 RVA: 0x005D67C0 File Offset: 0x005D49C0
+	// Token: 0x06014A16 RID: 84502 RVA: 0x0060332C File Offset: 0x0060152C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRogueRewardView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -51,25 +51,25 @@ public class SurvivorsRogueRewardView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016FE6 RID: 94182 RVA: 0x005D6803 File Offset: 0x005D4A03
+	// Token: 0x06014A17 RID: 84503 RVA: 0x0060336F File Offset: 0x0060156F
 	protected override void OnBeforeShow()
 	{
 		SurvivorsActivityController.Instance.CheckIsActivityClose();
 	}
 
-	// Token: 0x06016FE7 RID: 94183 RVA: 0x005D680F File Offset: 0x005D4A0F
+	// Token: 0x06014A18 RID: 84504 RVA: 0x0060337B File Offset: 0x0060157B
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshView));
 	}
 
-	// Token: 0x06016FE8 RID: 94184 RVA: 0x005D682D File Offset: 0x005D4A2D
+	// Token: 0x06014A19 RID: 84505 RVA: 0x00603399 File Offset: 0x00601599
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshView));
 	}
 
-	// Token: 0x06016FE9 RID: 94185 RVA: 0x005D684C File Offset: 0x005D4A4C
+	// Token: 0x06014A1A RID: 84506 RVA: 0x006033B8 File Offset: 0x006015B8
 	private void OnRefreshView(int activityId)
 	{
 		if (this.ActivityDataBase.Id != activityId)
@@ -85,13 +85,13 @@ public class SurvivorsRogueRewardView : UiTickViewBase
 		this.RefreshProgressItem();
 	}
 
-	// Token: 0x06016FEA RID: 94186 RVA: 0x005D689D File Offset: 0x005D4A9D
+	// Token: 0x06014A1B RID: 84507 RVA: 0x00603409 File Offset: 0x00601609
 	private SurvivorsRewardTabItem CreateTabItem()
 	{
 		return new SurvivorsRewardTabItem();
 	}
 
-	// Token: 0x06016FEB RID: 94187 RVA: 0x005D68A4 File Offset: 0x005D4AA4
+	// Token: 0x06014A1C RID: 84508 RVA: 0x00603410 File Offset: 0x00601610
 	private void OnTabClickCallBack(SurvivorRewardTaskTabData data)
 	{
 		if (this.CurTaskTabTypeId != data.Type && this.CurTaskTabTypeId != -1)
@@ -107,13 +107,13 @@ public class SurvivorsRogueRewardView : UiTickViewBase
 		this.RefreshTaskLayout();
 	}
 
-	// Token: 0x06016FEC RID: 94188 RVA: 0x005D690F File Offset: 0x005D4B0F
+	// Token: 0x06014A1D RID: 84509 RVA: 0x0060347B File Offset: 0x0060167B
 	private bool GetTabRedDotState(SurvivorRewardTaskTabData data)
 	{
 		return this.ActivityDataBase.GetTypeRedDotState(data.Type);
 	}
 
-	// Token: 0x06016FED RID: 94189 RVA: 0x005D6924 File Offset: 0x005D4B24
+	// Token: 0x06014A1E RID: 84510 RVA: 0x00603490 File Offset: 0x00601690
 	private IReadOnlyList<SurvivorRewardTaskTabData> GetTaskTabList()
 	{
 		List<SurvivorRewardTaskTabData> list = new List<SurvivorRewardTaskTabData>();
@@ -148,7 +148,7 @@ public class SurvivorsRogueRewardView : UiTickViewBase
 		return list;
 	}
 
-	// Token: 0x06016FEE RID: 94190 RVA: 0x005D6A5C File Offset: 0x005D4C5C
+	// Token: 0x06014A1F RID: 84511 RVA: 0x006035C8 File Offset: 0x006017C8
 	private SurvivorsRewardTaskItem CreateTaskItem()
 	{
 		return new SurvivorsRewardTaskItem
@@ -157,7 +157,7 @@ public class SurvivorsRogueRewardView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06016FEF RID: 94191 RVA: 0x005D6A78 File Offset: 0x005D4C78
+	// Token: 0x06014A20 RID: 84512 RVA: 0x006035E4 File Offset: 0x006017E4
 	private void RefreshTaskLayout()
 	{
 		List<ActivityTaskData> rewardTaskDataListByTypeId = this.ActivityDataBase.GetRewardTaskDataListByTypeId(this.CurTaskTabTypeId);
@@ -167,7 +167,7 @@ public class SurvivorsRogueRewardView : UiTickViewBase
 		}, true);
 	}
 
-	// Token: 0x06016FF0 RID: 94192 RVA: 0x005D6AB0 File Offset: 0x005D4CB0
+	// Token: 0x06014A21 RID: 84513 RVA: 0x0060361C File Offset: 0x0060181C
 	private void OnTaskClickCallBack()
 	{
 		List<int> availableGetTaskRewardIdsByType = this.ActivityDataBase.GetAvailableGetTaskRewardIdsByType(this.CurTaskTabTypeId);
@@ -177,7 +177,7 @@ public class SurvivorsRogueRewardView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016FF1 RID: 94193 RVA: 0x005D6AE8 File Offset: 0x005D4CE8
+	// Token: 0x06014A22 RID: 84514 RVA: 0x00603654 File Offset: 0x00601854
 	private void RefreshProgressItem()
 	{
 		SurvivorsRogueRewardView.<>c__DisplayClass20_0 CS$<>8__locals1 = new SurvivorsRogueRewardView.<>c__DisplayClass20_0();
@@ -196,7 +196,7 @@ public class SurvivorsRogueRewardView : UiTickViewBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x06016FF2 RID: 94194 RVA: 0x005D6B44 File Offset: 0x005D4D44
+	// Token: 0x06014A23 RID: 84515 RVA: 0x006036B0 File Offset: 0x006018B0
 	private void OnClickGetProgressReward()
 	{
 		List<int> allAvailableGetMilestoneRewardIds = this.ActivityDataBase.GetAllAvailableGetMilestoneRewardIds();
@@ -206,13 +206,13 @@ public class SurvivorsRogueRewardView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016FF3 RID: 94195 RVA: 0x005D6B76 File Offset: 0x005D4D76
+	// Token: 0x06014A24 RID: 84516 RVA: 0x006036E2 File Offset: 0x006018E2
 	protected override void OnTick(float delta)
 	{
 		this.RefreshTimeText();
 	}
 
-	// Token: 0x06016FF4 RID: 94196 RVA: 0x005D6B80 File Offset: 0x005D4D80
+	// Token: 0x06014A25 RID: 84517 RVA: 0x006036EC File Offset: 0x006018EC
 	private void RefreshTimeText()
 	{
 		if (this.ActivityDataBase == null || !this.ActivityDataBase.CheckIfInOpenTime())
@@ -228,39 +228,39 @@ public class SurvivorsRogueRewardView : UiTickViewBase
 		text.SetText(remainTimeText, true);
 	}
 
-	// Token: 0x06016FF5 RID: 94197 RVA: 0x005D6BD4 File Offset: 0x005D4DD4
+	// Token: 0x06014A26 RID: 84518 RVA: 0x00603740 File Offset: 0x00601940
 	private void OnCardDetailBtnClick()
 	{
 		SurvivorsActivityConfig? survivorsActivityConfig;
 		int? num = (SurvivorsRogueModel.Instance.GetRogueActivityConfig() != null) ? new int?(survivorsActivityConfig.GetValueOrDefault().TaskDisplayItemId) : null;
 		if (num != null)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(num.Value, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(num.Value, true, null, false);
 		}
 	}
 
-	// Token: 0x06016FF6 RID: 94198 RVA: 0x005D6C31 File Offset: 0x005D4E31
+	// Token: 0x06014A27 RID: 84519 RVA: 0x0060379E File Offset: 0x0060199E
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400AB8F RID: 43919
+	// Token: 0x0400AF95 RID: 44949
 	[Nullable(2)]
 	protected SurvivorsActivityData ActivityDataBase;
 
-	// Token: 0x0400AB90 RID: 43920
+	// Token: 0x0400AF96 RID: 44950
 	private int CurTaskTabTypeId = -1;
 
-	// Token: 0x0400AB91 RID: 43921
+	// Token: 0x0400AF97 RID: 44951
 	private GenericLayout<SurvivorsRewardTabItem, SurvivorRewardTaskTabData> TabLayout;
 
-	// Token: 0x0400AB92 RID: 43922
+	// Token: 0x0400AF98 RID: 44952
 	private GenericScrollViewNew<SurvivorsRewardTaskItem, ActivityTaskData> TaskLayout;
 
-	// Token: 0x0400AB93 RID: 43923
+	// Token: 0x0400AF99 RID: 44953
 	private SurvivorsScoreProgressPanel ProgressItem;
 
-	// Token: 0x0400AB94 RID: 43924
+	// Token: 0x0400AF9A RID: 44954
 	private string RemainTimeText = string.Empty;
 }

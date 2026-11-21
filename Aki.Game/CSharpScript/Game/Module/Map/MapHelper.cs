@@ -12,12 +12,12 @@ using CSharpScript.Game.Module.RecallQuest.Model;
 
 namespace CSharpScript.Game.Module.Map
 {
-	// Token: 0x02005485 RID: 21637
+	// Token: 0x02004468 RID: 17512
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class MapHelper
 	{
-		// Token: 0x06037383 RID: 226179 RVA: 0x00D182B8 File Offset: 0x00D164B8
+		// Token: 0x0602C2CC RID: 180940 RVA: 0x00C67768 File Offset: 0x00C65968
 		public static bool IsRecallContextMismatched(int markId)
 		{
 			MapMark? mapMark;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Map
 			return RecallQuestModel.Instance.IsInRecallInstance() != flag;
 		}
 
-		// Token: 0x06037384 RID: 226180 RVA: 0x00D18300 File Offset: 0x00D16500
+		// Token: 0x0602C2CD RID: 180941 RVA: 0x00C677B0 File Offset: 0x00C659B0
 		public static void CheckAndShowCrossMapTips(int markId, EMarkType markType, int? areaId, global::Vector worldPosition)
 		{
 			int markMapConfigId = MapModel.Instance.GetMarkMapConfigId(markId, markType);
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x06037385 RID: 226181 RVA: 0x00D183AC File Offset: 0x00D165AC
+		// Token: 0x0602C2CE RID: 180942 RVA: 0x00C6785C File Offset: 0x00C65A5C
 		public static string GetLevelOneAreaNameLocalTextId(int areaId)
 		{
 			int levelOneAreaId = AreaConfig.Instance.GetLevelOneAreaId(areaId);
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Map
 			return ((areaInfo != null) ? areaInfo.GetValueOrDefault().Title : null) ?? "";
 		}
 
-		// Token: 0x06037386 RID: 226182 RVA: 0x00D18400 File Offset: 0x00D16600
+		// Token: 0x0602C2CF RID: 180943 RVA: 0x00C678B0 File Offset: 0x00C65AB0
 		[return: Nullable(new byte[]
 		{
 			0,

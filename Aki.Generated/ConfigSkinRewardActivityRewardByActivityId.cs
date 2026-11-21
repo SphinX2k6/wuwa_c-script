@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200094E RID: 2382
+	// Token: 0x02000999 RID: 2457
 	public class ConfigSkinRewardActivityRewardByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060037E7 RID: 14311 RVA: 0x001958B7 File Offset: 0x00193AB7
+		// Token: 0x060039A9 RID: 14761 RVA: 0x001A2AD7 File Offset: 0x001A0CD7
 		static ConfigSkinRewardActivityRewardByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSkinRewardActivityRewardByActivityId.CreateStaticDefaultValue), new Action(ConfigSkinRewardActivityRewardByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060037E8 RID: 14312 RVA: 0x001958D8 File Offset: 0x00193AD8
+		// Token: 0x060039AA RID: 14762 RVA: 0x001A2AF8 File Offset: 0x001A0CF8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSkinRewardActivityRewardByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060037E9 RID: 14313 RVA: 0x00195957 File Offset: 0x00193B57
+		// Token: 0x060039AB RID: 14763 RVA: 0x001A2B77 File Offset: 0x001A0D77
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSkinRewardActivityRewardByActivityId.LogPair = null;
 			ConfigSkinRewardActivityRewardByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x060037EA RID: 14314 RVA: 0x00195965 File Offset: 0x00193B65
+		// Token: 0x060039AC RID: 14764 RVA: 0x001A2B85 File Offset: 0x001A0D85
 		public static void Init()
 		{
 			ConfigSkinRewardActivityRewardByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigSkinRewardActivityRewardByActivityId.HandleId, "db_skinreward.db", "select BinData from `SkinRewardActivityReward` where ActivityId=?");
 		}
 
-		// Token: 0x060037EB RID: 14315 RVA: 0x00195980 File Offset: 0x00193B80
+		// Token: 0x060039AD RID: 14765 RVA: 0x001A2BA0 File Offset: 0x001A0DA0
 		public static SkinRewardActivityReward? GetConfig(int p0ActivityId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSkinRewardActivityRewardByActivityId.HandleId, ConfigSkinRewardActivityRewardByActivityId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SkinRewardActivityReward?(rootAsSkinRewardActivityReward);
 		}
 
-		// Token: 0x04004108 RID: 16648
+		// Token: 0x04004315 RID: 17173
 		private const string DB = "db_skinreward.db";
 
-		// Token: 0x04004109 RID: 16649
+		// Token: 0x04004316 RID: 17174
 		private const string FILE = "p.皮肤领取活动.xlsx";
 
-		// Token: 0x0400410A RID: 16650
+		// Token: 0x04004317 RID: 17175
 		private const string TABLE = "SkinRewardActivityReward";
 
-		// Token: 0x0400410B RID: 16651
+		// Token: 0x04004318 RID: 17176
 		private const string COMMAND = "select BinData from `SkinRewardActivityReward` where ActivityId=?";
 
-		// Token: 0x0400410C RID: 16652
+		// Token: 0x04004319 RID: 17177
 		private const string KEY_PREFIX = "SkinRewardActivityRewardByActivityId";
 
-		// Token: 0x0400410D RID: 16653
+		// Token: 0x0400431A RID: 17178
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400410E RID: 16654
+		// Token: 0x0400431B RID: 17179
 		private static int HandleId;
 	}
 }

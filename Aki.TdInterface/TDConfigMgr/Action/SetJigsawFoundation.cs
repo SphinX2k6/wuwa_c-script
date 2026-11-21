@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021BF RID: 8639
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200242A RID: 9258
 	public class SetJigsawFoundation : ActionParams
 	{
-		// Token: 0x0600BDC0 RID: 48576 RVA: 0x001B4FC8 File Offset: 0x001B31C8
+		// Token: 0x0600C97A RID: 51578 RVA: 0x001CC600 File Offset: 0x001CA800
 		private SetJigsawFoundation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BDC1 RID: 48577 RVA: 0x001B5000 File Offset: 0x001B3200
+		// Token: 0x0600C97B RID: 51579 RVA: 0x001CC638 File Offset: 0x001CA838
 		public static SetJigsawFoundation Create([Nullable(2)] SetJigsawFoundation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDC2 RID: 48578 RVA: 0x001B5013 File Offset: 0x001B3213
+		// Token: 0x0600C97C RID: 51580 RVA: 0x001CC64B File Offset: 0x001CA84B
 		public static SetJigsawFoundation CreateFromSetValue([Nullable(2)] SetJigsawFoundation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDC3 RID: 48579 RVA: 0x001B5026 File Offset: 0x001B3226
+		// Token: 0x0600C97D RID: 51581 RVA: 0x001CC65E File Offset: 0x001CA85E
 		public SetJigsawFoundation_SetValue ToSetValue()
 		{
 			return new SetJigsawFoundation_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039A2 RID: 14754
-		// (get) Token: 0x0600BDC4 RID: 48580 RVA: 0x001B503C File Offset: 0x001B323C
-		// (set) Token: 0x0600BDC5 RID: 48581 RVA: 0x001B509D File Offset: 0x001B329D
+		// Token: 0x17003C96 RID: 15510
+		// (get) Token: 0x0600C97E RID: 51582 RVA: 0x001CC674 File Offset: 0x001CA874
+		// (set) Token: 0x0600C97F RID: 51583 RVA: 0x001CC6D5 File Offset: 0x001CA8D5
 		public virtual ISetPieceState Config
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400713F RID: 28991
+		// Token: 0x04007787 RID: 30599
 		[Nullable(2)]
 		protected new SetJigsawFoundation FbInstance;
 
-		// Token: 0x04007140 RID: 28992
+		// Token: 0x04007788 RID: 30600
 		[Nullable(2)]
 		protected SetJigsawFoundation_SetValue PocoInterface;
 
-		// Token: 0x04007141 RID: 28993
+		// Token: 0x04007789 RID: 30601
 		private ISetPieceState _ConfigCache;
 
-		// Token: 0x04007142 RID: 28994
+		// Token: 0x0400778A RID: 30602
 		private bool _ConfigInited;
 	}
 }

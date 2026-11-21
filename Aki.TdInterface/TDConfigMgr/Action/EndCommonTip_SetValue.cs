@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200164F RID: 5711
+	// Token: 0x020017BC RID: 6076
 	public class EndCommonTip_SetValue
 	{
-		// Token: 0x04004C84 RID: 19588
-		[Nullable(1)]
+		// Token: 0x04005078 RID: 20600
 		public string Token;
 	}
 }

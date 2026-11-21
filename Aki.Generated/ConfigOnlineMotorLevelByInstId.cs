@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200062B RID: 1579
+	// Token: 0x02000643 RID: 1603
 	public class ConfigOnlineMotorLevelByInstId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002512 RID: 9490 RVA: 0x0012B4C0 File Offset: 0x001296C0
+		// Token: 0x060025A2 RID: 9634 RVA: 0x00131F3C File Offset: 0x0013013C
 		static ConfigOnlineMotorLevelByInstId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigOnlineMotorLevelByInstId.CreateStaticDefaultValue), new Action(ConfigOnlineMotorLevelByInstId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002513 RID: 9491 RVA: 0x0012B4E0 File Offset: 0x001296E0
+		// Token: 0x060025A3 RID: 9635 RVA: 0x00131F5C File Offset: 0x0013015C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigOnlineMotorLevelByInstId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002514 RID: 9492 RVA: 0x0012B55F File Offset: 0x0012975F
+		// Token: 0x060025A4 RID: 9636 RVA: 0x00131FDB File Offset: 0x001301DB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigOnlineMotorLevelByInstId.LogPair = null;
 			ConfigOnlineMotorLevelByInstId.HandleId = 0;
 		}
 
-		// Token: 0x06002515 RID: 9493 RVA: 0x0012B56D File Offset: 0x0012976D
+		// Token: 0x060025A5 RID: 9637 RVA: 0x00131FE9 File Offset: 0x001301E9
 		public static void Init()
 		{
 			ConfigOnlineMotorLevelByInstId.HandleId = ConfigCommon.InitDataStatement(ConfigOnlineMotorLevelByInstId.HandleId, "db.onlinemotor.db", "select BinData from `OnlineMotorLevel` where InstId=?");
 		}
 
-		// Token: 0x06002516 RID: 9494 RVA: 0x0012B588 File Offset: 0x00129788
+		// Token: 0x060025A6 RID: 9638 RVA: 0x00132004 File Offset: 0x00130204
 		public static OnlineMotorLevel? GetConfig(int p0InstId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigOnlineMotorLevelByInstId.HandleId, ConfigOnlineMotorLevelByInstId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new OnlineMotorLevel?(rootAsOnlineMotorLevel);
 		}
 
-		// Token: 0x04002B13 RID: 11027
+		// Token: 0x04002BBB RID: 11195
 		private const string DB = "db.onlinemotor.db";
 
-		// Token: 0x04002B14 RID: 11028
+		// Token: 0x04002BBC RID: 11196
 		private const string FILE = "l.联机摩托跑酷.xlsx";
 
-		// Token: 0x04002B15 RID: 11029
+		// Token: 0x04002BBD RID: 11197
 		private const string TABLE = "OnlineMotorLevel";
 
-		// Token: 0x04002B16 RID: 11030
+		// Token: 0x04002BBE RID: 11198
 		private const string COMMAND = "select BinData from `OnlineMotorLevel` where InstId=?";
 
-		// Token: 0x04002B17 RID: 11031
+		// Token: 0x04002BBF RID: 11199
 		private const string KEY_PREFIX = "OnlineMotorLevelByInstId";
 
-		// Token: 0x04002B18 RID: 11032
+		// Token: 0x04002BC0 RID: 11200
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002B19 RID: 11033
+		// Token: 0x04002BC1 RID: 11201
 		private static int HandleId;
 	}
 }

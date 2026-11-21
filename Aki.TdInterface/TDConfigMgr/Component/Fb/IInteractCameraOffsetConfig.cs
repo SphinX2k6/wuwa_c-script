@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A79 RID: 2681
+	// Token: 0x02000B43 RID: 2883
 	public class IInteractCameraOffsetConfig
 	{
-		// Token: 0x06003DBA RID: 15802 RVA: 0x0009E44D File Offset: 0x0009C64D
-		[NullableContext(1)]
+		// Token: 0x060041E3 RID: 16867 RVA: 0x000A7A05 File Offset: 0x000A5C05
 		public static IInteractCameraOffsetConfig Create(IInteractCameraOffsetConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E85 RID: 3717
-		// (get) Token: 0x06003DBB RID: 15803 RVA: 0x0009E46C File Offset: 0x0009C66C
+		// Token: 0x17000F58 RID: 3928
+		// (get) Token: 0x060041E4 RID: 16868 RVA: 0x000A7A24 File Offset: 0x000A5C24
 		public virtual int? CenterOffsetPercent
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E86 RID: 3718
-		// (get) Token: 0x06003DBC RID: 15804 RVA: 0x0009E4A4 File Offset: 0x0009C6A4
+		// Token: 0x17000F59 RID: 3929
+		// (get) Token: 0x060041E5 RID: 16869 RVA: 0x000A7A5C File Offset: 0x000A5C5C
 		public virtual float? OffsetZ
 		{
 			get
@@ -49,7 +47,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002260 RID: 8800
+		// Token: 0x0400247C RID: 9340
 		private IInteractCameraOffsetConfig Instance;
 	}
 }

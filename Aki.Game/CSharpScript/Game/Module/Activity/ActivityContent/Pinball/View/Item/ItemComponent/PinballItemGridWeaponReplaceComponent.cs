@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.ItemComponent
 {
-	// Token: 0x0200635F RID: 25439
+	// Token: 0x020052DD RID: 21213
 	public class PinballItemGridWeaponReplaceComponent : PinballItemGridComponentBase
 	{
-		// Token: 0x06040014 RID: 262164 RVA: 0x00F7BC79 File Offset: 0x00F79E79
+		// Token: 0x06034CD5 RID: 216277 RVA: 0x00EC2BD9 File Offset: 0x00EC0DD9
 		[NullableContext(2)]
 		protected override string OnGetResourceId()
 		{
 			return "UiItem_ItemBaseWeaponLift";
 		}
 
-		// Token: 0x06040015 RID: 262165 RVA: 0x00F7BC80 File Offset: 0x00F79E80
+		// Token: 0x06034CD6 RID: 216278 RVA: 0x00EC2BE0 File Offset: 0x00EC0DE0
 		[NullableContext(1)]
 		protected override void OnRefresh(params object[] args)
 		{

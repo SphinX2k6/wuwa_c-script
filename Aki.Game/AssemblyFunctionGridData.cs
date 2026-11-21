@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002914 RID: 10516
+// Token: 0x02001E8F RID: 7823
 public class AssemblyFunctionGridData : AssemblyGridData
 {
-	// Token: 0x06015AF2 RID: 88818 RVA: 0x00578664 File Offset: 0x00576864
+	// Token: 0x060134F6 RID: 79094 RVA: 0x005A3558 File Offset: 0x005A1758
 	public AssemblyFunctionGridData()
 	{
 		this.IconPath = "";
 	}
 
-	// Token: 0x0400A18D RID: 41357
+	// Token: 0x0400A578 RID: 42360
 	[Nullable(1)]
 	public string IconPath;
 }

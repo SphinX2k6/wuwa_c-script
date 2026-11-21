@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002A2D RID: 10797
+// Token: 0x02001FA8 RID: 8104
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleSkinShareView : UiPanelBase
 {
-	// Token: 0x06016776 RID: 92022 RVA: 0x005B0FC8 File Offset: 0x005AF1C8
+	// Token: 0x0601417F RID: 82303 RVA: 0x005DC010 File Offset: 0x005DA210
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -26,14 +26,14 @@ public class RoleSkinShareView : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06016777 RID: 92023 RVA: 0x005B1052 File Offset: 0x005AF252
+	// Token: 0x06014180 RID: 82304 RVA: 0x005DC09A File Offset: 0x005DA29A
 	protected override void OnStart()
 	{
 		this.CurrentData = (this.OpenParam as RoleSkinData);
 		this.RefreshView();
 	}
 
-	// Token: 0x06016778 RID: 92024 RVA: 0x005B106B File Offset: 0x005AF26B
+	// Token: 0x06014181 RID: 82305 RVA: 0x005DC0B3 File Offset: 0x005DA2B3
 	private void RefreshView()
 	{
 		this.RefreshRoleTexture(this.CurrentData);
@@ -41,7 +41,7 @@ public class RoleSkinShareView : UiPanelBase
 		this.RefreshSubTitleText(this.CurrentData);
 	}
 
-	// Token: 0x06016779 RID: 92025 RVA: 0x005B1094 File Offset: 0x005AF294
+	// Token: 0x06014182 RID: 82306 RVA: 0x005DC0DC File Offset: 0x005DA2DC
 	private void RefreshRoleTexture(RoleSkinData data)
 	{
 		if (data == null)
@@ -52,30 +52,30 @@ public class RoleSkinShareView : UiPanelBase
 		base.SetTextureByPath(shareTexturePath, base.GetTexture(0), null, null);
 	}
 
-	// Token: 0x0601677A RID: 92026 RVA: 0x005B10C4 File Offset: 0x005AF2C4
+	// Token: 0x06014183 RID: 82307 RVA: 0x005DC10C File Offset: 0x005DA30C
 	private void RefreshTitleText(RoleSkinData data)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.GetTitleName(), Array.Empty<object>());
 	}
 
-	// Token: 0x0601677B RID: 92027 RVA: 0x005B10E2 File Offset: 0x005AF2E2
+	// Token: 0x06014184 RID: 82308 RVA: 0x005DC12A File Offset: 0x005DA32A
 	private void RefreshSubTitleText(RoleSkinData data)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), data.GetSubTitle(), Array.Empty<object>());
 	}
 
-	// Token: 0x0400A6EB RID: 42731
+	// Token: 0x0400AAD5 RID: 43733
 	private RoleSkinData CurrentData;
 
-	// Token: 0x0200906F RID: 36975
+	// Token: 0x020082B6 RID: 33462
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402ECDB RID: 191707
+		// Token: 0x0402A3D3 RID: 173011
 		RoleTexture,
-		// Token: 0x0402ECDC RID: 191708
+		// Token: 0x0402A3D4 RID: 173012
 		TitleText,
-		// Token: 0x0402ECDD RID: 191709
+		// Token: 0x0402A3D5 RID: 173013
 		SubTitleText
 	}
 }

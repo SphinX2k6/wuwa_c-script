@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200081E RID: 2078
+	// Token: 0x0200083A RID: 2106
 	public class ConfigRogueBuffPoolById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060030C6 RID: 12486 RVA: 0x0016D040 File Offset: 0x0016B240
+		// Token: 0x0600316E RID: 12654 RVA: 0x00174328 File Offset: 0x00172528
 		static ConfigRogueBuffPoolById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueBuffPoolById.CreateStaticDefaultValue), new Action(ConfigRogueBuffPoolById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060030C7 RID: 12487 RVA: 0x0016D060 File Offset: 0x0016B260
+		// Token: 0x0600316F RID: 12655 RVA: 0x00174348 File Offset: 0x00172548
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueBuffPoolById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060030C8 RID: 12488 RVA: 0x0016D0DF File Offset: 0x0016B2DF
+		// Token: 0x06003170 RID: 12656 RVA: 0x001743C7 File Offset: 0x001725C7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueBuffPoolById.LogPair = null;
 			ConfigRogueBuffPoolById.HandleId = 0;
 		}
 
-		// Token: 0x060030C9 RID: 12489 RVA: 0x0016D0ED File Offset: 0x0016B2ED
+		// Token: 0x06003171 RID: 12657 RVA: 0x001743D5 File Offset: 0x001725D5
 		public static void Init()
 		{
 			ConfigRogueBuffPoolById.HandleId = ConfigCommon.InitDataStatement(ConfigRogueBuffPoolById.HandleId, "db_rogue.db", "select BinData from `RogueBuffPool` where Id=?");
 		}
 
-		// Token: 0x060030CA RID: 12490 RVA: 0x0016D108 File Offset: 0x0016B308
+		// Token: 0x06003172 RID: 12658 RVA: 0x001743F0 File Offset: 0x001725F0
 		public static RogueBuffPool? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRogueBuffPoolById.HandleId, ConfigRogueBuffPoolById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RogueBuffPool?(rootAsRogueBuffPool);
 		}
 
-		// Token: 0x040038B8 RID: 14520
+		// Token: 0x0400397C RID: 14716
 		private const string DB = "db_rogue.db";
 
-		// Token: 0x040038B9 RID: 14521
+		// Token: 0x0400397D RID: 14717
 		private const string FILE = "r.肉鸽.xlsx";
 
-		// Token: 0x040038BA RID: 14522
+		// Token: 0x0400397E RID: 14718
 		private const string TABLE = "RogueBuffPool";
 
-		// Token: 0x040038BB RID: 14523
+		// Token: 0x0400397F RID: 14719
 		private const string COMMAND = "select BinData from `RogueBuffPool` where Id=?";
 
-		// Token: 0x040038BC RID: 14524
+		// Token: 0x04003980 RID: 14720
 		private const string KEY_PREFIX = "RogueBuffPoolById";
 
-		// Token: 0x040038BD RID: 14525
+		// Token: 0x04003981 RID: 14721
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040038BE RID: 14526
+		// Token: 0x04003982 RID: 14722
 		private static int HandleId;
 	}
 }

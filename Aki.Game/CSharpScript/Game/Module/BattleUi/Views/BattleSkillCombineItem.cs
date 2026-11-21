@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CDE RID: 23774
+	// Token: 0x02004CC0 RID: 19648
 	public class BattleSkillCombineItem : UiPanelBase
 	{
-		// Token: 0x0603C28A RID: 246410 RVA: 0x00E669AC File Offset: 0x00E64BAC
+		// Token: 0x060311E0 RID: 201184 RVA: 0x00DB6F60 File Offset: 0x00DB5160
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C28B RID: 246411 RVA: 0x00E669F4 File Offset: 0x00E64BF4
+		// Token: 0x060311E1 RID: 201185 RVA: 0x00DB6FA8 File Offset: 0x00DB51A8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleSkillCombineItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -35,12 +35,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C28C RID: 246412 RVA: 0x00E66A37 File Offset: 0x00E64C37
+		// Token: 0x060311E2 RID: 201186 RVA: 0x00DB6FEB File Offset: 0x00DB51EB
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x0603C28D RID: 246413 RVA: 0x00E66A39 File Offset: 0x00E64C39
+		// Token: 0x060311E3 RID: 201187 RVA: 0x00DB6FED File Offset: 0x00DB51ED
 		public void SetVisible(bool bVisible)
 		{
 			if (bVisible)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C28E RID: 246414 RVA: 0x00E66A5D File Offset: 0x00E64C5D
+		// Token: 0x060311E4 RID: 201188 RVA: 0x00DB7011 File Offset: 0x00DB5211
 		public void Refresh()
 		{
 			CommonKeyItem keyItem = this.KeyItem;
@@ -68,14 +68,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshAction("组合主键");
 		}
 
-		// Token: 0x0401F5C5 RID: 128453
+		// Token: 0x0401A07E RID: 106622
 		[Nullable(2)]
 		private CommonKeyItem KeyItem;
 
-		// Token: 0x0200BF35 RID: 48949
+		// Token: 0x0200A93B RID: 43323
 		private enum EChildType
 		{
-			// Token: 0x04039ACC RID: 236236
+			// Token: 0x0403448E RID: 214158
 			KeyItem
 		}
 	}

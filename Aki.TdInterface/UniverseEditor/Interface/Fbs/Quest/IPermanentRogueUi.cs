@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F77 RID: 16247
+	// Token: 0x020043B8 RID: 17336
 	public struct IPermanentRogueUi : IFlatbufferObject
 	{
-		// Token: 0x17007168 RID: 29032
-		// (get) Token: 0x06017304 RID: 94980 RVA: 0x00358AA5 File Offset: 0x00356CA5
+		// Token: 0x17007766 RID: 30566
+		// (get) Token: 0x06018993 RID: 100755 RVA: 0x003826BD File Offset: 0x003808BD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017305 RID: 94981 RVA: 0x00358AB2 File Offset: 0x00356CB2
+		// Token: 0x06018994 RID: 100756 RVA: 0x003826CA File Offset: 0x003808CA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017306 RID: 94982 RVA: 0x00358ABC File Offset: 0x00356CBC
+		// Token: 0x06018995 RID: 100757 RVA: 0x003826D4 File Offset: 0x003808D4
 		public static IPermanentRogueUi GetRootAsIPermanentRogueUi(ByteBuffer _bb)
 		{
 			return IPermanentRogueUi.GetRootAsIPermanentRogueUi(_bb, default(IPermanentRogueUi));
 		}
 
-		// Token: 0x06017307 RID: 94983 RVA: 0x00358AD8 File Offset: 0x00356CD8
+		// Token: 0x06018996 RID: 100758 RVA: 0x003826F0 File Offset: 0x003808F0
 		public static IPermanentRogueUi GetRootAsIPermanentRogueUi(ByteBuffer _bb, IPermanentRogueUi obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017308 RID: 94984 RVA: 0x00358AF5 File Offset: 0x00356CF5
+		// Token: 0x06018997 RID: 100759 RVA: 0x0038270D File Offset: 0x0038090D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017309 RID: 94985 RVA: 0x00358B04 File Offset: 0x00356D04
+		// Token: 0x06018998 RID: 100760 RVA: 0x0038271C File Offset: 0x0038091C
 		public IPermanentRogueUi __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007169 RID: 29033
-		// (get) Token: 0x0601730A RID: 94986 RVA: 0x00358B14 File Offset: 0x00356D14
+		// Token: 0x17007767 RID: 30567
+		// (get) Token: 0x06018999 RID: 100761 RVA: 0x0038272C File Offset: 0x0038092C
 		public EShowUiType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700716A RID: 29034
-		// (get) Token: 0x0601730B RID: 94987 RVA: 0x00358B50 File Offset: 0x00356D50
+		// Token: 0x17007768 RID: 30568
+		// (get) Token: 0x0601899A RID: 100762 RVA: 0x00382768 File Offset: 0x00380968
 		public ERogueUiType UiType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700716B RID: 29035
-		// (get) Token: 0x0601730C RID: 94988 RVA: 0x00358B8C File Offset: 0x00356D8C
+		// Token: 0x17007769 RID: 30569
+		// (get) Token: 0x0601899B RID: 100763 RVA: 0x003827A4 File Offset: 0x003809A4
 		public int BindId
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601730D RID: 94989 RVA: 0x00358BC8 File Offset: 0x00356DC8
+		// Token: 0x0601899C RID: 100764 RVA: 0x003827E0 File Offset: 0x003809E0
 		public static Offset<IPermanentRogueUi> CreateIPermanentRogueUi(FlatBufferBuilder builder, EShowUiType Type = EShowUiType.All, ERogueUiType UiType = ERogueUiType.None, int BindId = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPermanentRogueUi.EndIPermanentRogueUi(builder);
 		}
 
-		// Token: 0x0601730E RID: 94990 RVA: 0x00358BEC File Offset: 0x00356DEC
+		// Token: 0x0601899D RID: 100765 RVA: 0x00382804 File Offset: 0x00380A04
 		public static void StartIPermanentRogueUi(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601730F RID: 94991 RVA: 0x00358BF5 File Offset: 0x00356DF5
+		// Token: 0x0601899E RID: 100766 RVA: 0x0038280D File Offset: 0x00380A0D
 		public static void AddType(FlatBufferBuilder builder, EShowUiType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017310 RID: 94992 RVA: 0x00358C00 File Offset: 0x00356E00
+		// Token: 0x0601899F RID: 100767 RVA: 0x00382818 File Offset: 0x00380A18
 		public static void AddUiType(FlatBufferBuilder builder, ERogueUiType uiType)
 		{
 			builder.AddByte(1, (byte)uiType, 0);
 		}
 
-		// Token: 0x06017311 RID: 94993 RVA: 0x00358C0B File Offset: 0x00356E0B
+		// Token: 0x060189A0 RID: 100768 RVA: 0x00382823 File Offset: 0x00380A23
 		public static void AddBindId(FlatBufferBuilder builder, int bindId)
 		{
 			builder.AddInt(2, bindId, 0);
 		}
 
-		// Token: 0x06017312 RID: 94994 RVA: 0x00358C16 File Offset: 0x00356E16
+		// Token: 0x060189A1 RID: 100769 RVA: 0x0038282E File Offset: 0x00380A2E
 		public static Offset<IPermanentRogueUi> EndIPermanentRogueUi(FlatBufferBuilder builder)
 		{
 			return new Offset<IPermanentRogueUi>(builder.EndTable());
 		}
 
-		// Token: 0x06017313 RID: 94995 RVA: 0x00358C24 File Offset: 0x00356E24
+		// Token: 0x060189A2 RID: 100770 RVA: 0x0038283C File Offset: 0x00380A3C
 		public IPermanentRogueUiT UnPack()
 		{
 			IPermanentRogueUiT permanentRogueUiT = new IPermanentRogueUiT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return permanentRogueUiT;
 		}
 
-		// Token: 0x06017314 RID: 94996 RVA: 0x00358C3F File Offset: 0x00356E3F
+		// Token: 0x060189A3 RID: 100771 RVA: 0x00382857 File Offset: 0x00380A57
 		public void UnPackTo(IPermanentRogueUiT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.BindId = this.BindId;
 		}
 
-		// Token: 0x06017315 RID: 94997 RVA: 0x00358C68 File Offset: 0x00356E68
+		// Token: 0x060189A4 RID: 100772 RVA: 0x00382880 File Offset: 0x00380A80
 		public static Offset<IPermanentRogueUi> Pack(FlatBufferBuilder builder, IPermanentRogueUiT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPermanentRogueUi.CreateIPermanentRogueUi(builder, _o.Type, _o.UiType, _o.BindId);
 		}
 
-		// Token: 0x0400B9C9 RID: 47561
+		// Token: 0x0400C3AE RID: 50094
 		private Table __p;
 	}
 }

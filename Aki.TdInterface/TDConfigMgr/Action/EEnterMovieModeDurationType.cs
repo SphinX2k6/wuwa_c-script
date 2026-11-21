@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015D5 RID: 5589
+	// Token: 0x02001734 RID: 5940
 	[EnumExtensions]
 	public enum EEnterMovieModeDurationType
 	{
-		// Token: 0x04004A7B RID: 19067
+		// Token: 0x04004E35 RID: 20021
 		BorderAnimFinished,
-		// Token: 0x04004A7C RID: 19068
+		// Token: 0x04004E36 RID: 20022
 		FixedTime
 	}
 }

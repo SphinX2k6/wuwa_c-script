@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B4E RID: 2894
+	// Token: 0x02000C1C RID: 3100
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IThrowMotionFreeFall : IThrowMotion
 	{
-		// Token: 0x060042AF RID: 17071 RVA: 0x000AA42A File Offset: 0x000A862A
-		[NullableContext(1)]
+		// Token: 0x06004708 RID: 18184 RVA: 0x000B44EE File Offset: 0x000B26EE
+		[NullableContext(0)]
 		public static IThrowMotionFreeFall Create(IThrowMotionFreeFall? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011D0 RID: 4560
-		// (get) Token: 0x060042B0 RID: 17072 RVA: 0x000AA449 File Offset: 0x000A8649
+		// Token: 0x170012CB RID: 4811
+		// (get) Token: 0x06004709 RID: 18185 RVA: 0x000B450D File Offset: 0x000B270D
 		public override EThrowMotion Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011D1 RID: 4561
-		// (get) Token: 0x060042B1 RID: 17073 RVA: 0x000AA456 File Offset: 0x000A8656
+		// Token: 0x170012CC RID: 4812
+		// (get) Token: 0x0600470A RID: 18186 RVA: 0x000B451A File Offset: 0x000B271A
 		public virtual VectorInfo Velocity
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011D2 RID: 4562
-		// (get) Token: 0x060042B2 RID: 17074 RVA: 0x000AA48A File Offset: 0x000A868A
+		// Token: 0x170012CD RID: 4813
+		// (get) Token: 0x0600470B RID: 18187 RVA: 0x000B454E File Offset: 0x000B274E
 		public virtual IAngularVelocityConfig AngularVelocity
 		{
 			get
@@ -66,19 +66,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400258B RID: 9611
+		// Token: 0x040027D3 RID: 10195
 		private IThrowMotionFreeFall Instance;
 
-		// Token: 0x0400258C RID: 9612
+		// Token: 0x040027D4 RID: 10196
 		private VectorInfo _VelocityCache;
 
-		// Token: 0x0400258D RID: 9613
+		// Token: 0x040027D5 RID: 10197
 		private bool _VelocityInited;
 
-		// Token: 0x0400258E RID: 9614
+		// Token: 0x040027D6 RID: 10198
 		private IAngularVelocityConfig _AngularVelocityCache;
 
-		// Token: 0x0400258F RID: 9615
+		// Token: 0x040027D7 RID: 10199
 		private bool _AngularVelocityInited;
 	}
 }

@@ -7,27 +7,27 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001261 RID: 4705
+// Token: 0x02000715 RID: 1813
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewDoubleReward : ActivitySubViewBase
 {
-	// Token: 0x17000AE6 RID: 2790
-	// (get) Token: 0x06007FE0 RID: 32736 RVA: 0x001B0DBF File Offset: 0x001AEFBF
-	// (set) Token: 0x06007FE1 RID: 32737 RVA: 0x001B0DC7 File Offset: 0x001AEFC7
+	// Token: 0x17000B06 RID: 2822
+	// (get) Token: 0x06005377 RID: 21367 RVA: 0x001B9A90 File Offset: 0x001B7C90
+	// (set) Token: 0x06005378 RID: 21368 RVA: 0x001B9A98 File Offset: 0x001B7C98
 	protected ActivityDoubleRewardData ActivityData { get; set; }
 
-	// Token: 0x17000AE7 RID: 2791
-	// (get) Token: 0x06007FE2 RID: 32738 RVA: 0x001B0DD0 File Offset: 0x001AEFD0
-	// (set) Token: 0x06007FE3 RID: 32739 RVA: 0x001B0DD8 File Offset: 0x001AEFD8
+	// Token: 0x17000B07 RID: 2823
+	// (get) Token: 0x06005379 RID: 21369 RVA: 0x001B9AA1 File Offset: 0x001B7CA1
+	// (set) Token: 0x0600537A RID: 21370 RVA: 0x001B9AA9 File Offset: 0x001B7CA9
 	private ActivityTitleTypeA TitleComponent { get; set; }
 
-	// Token: 0x17000AE8 RID: 2792
-	// (get) Token: 0x06007FE4 RID: 32740 RVA: 0x001B0DE1 File Offset: 0x001AEFE1
-	// (set) Token: 0x06007FE5 RID: 32741 RVA: 0x001B0DE9 File Offset: 0x001AEFE9
+	// Token: 0x17000B08 RID: 2824
+	// (get) Token: 0x0600537B RID: 21371 RVA: 0x001B9AB2 File Offset: 0x001B7CB2
+	// (set) Token: 0x0600537C RID: 21372 RVA: 0x001B9ABA File Offset: 0x001B7CBA
 	private ActivityDescriptionTypeA DescriptionComponent { get; set; }
 
-	// Token: 0x06007FE6 RID: 32742 RVA: 0x001B0DF4 File Offset: 0x001AEFF4
+	// Token: 0x0600537D RID: 21373 RVA: 0x001B9AC4 File Offset: 0x001B7CC4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -62,13 +62,13 @@ public class ActivitySubViewDoubleReward : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007FE7 RID: 32743 RVA: 0x001B0F83 File Offset: 0x001AF183
+	// Token: 0x0600537E RID: 21374 RVA: 0x001B9C53 File Offset: 0x001B7E53
 	protected override void OnSetData()
 	{
 		this.ActivityData = (this.ActivityBaseData as ActivityDoubleRewardData);
 	}
 
-	// Token: 0x06007FE8 RID: 32744 RVA: 0x001B0F98 File Offset: 0x001AF198
+	// Token: 0x0600537F RID: 21375 RVA: 0x001B9C68 File Offset: 0x001B7E68
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewDoubleReward.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -79,7 +79,7 @@ public class ActivitySubViewDoubleReward : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007FE9 RID: 32745 RVA: 0x001B0FDC File Offset: 0x001AF1DC
+	// Token: 0x06005380 RID: 21376 RVA: 0x001B9CAC File Offset: 0x001B7EAC
 	protected override void OnStart()
 	{
 		Activity? localConfig = this.ActivityData.LocalConfig;
@@ -100,13 +100,13 @@ public class ActivitySubViewDoubleReward : ActivitySubViewBase
 		this.OnRefreshView();
 	}
 
-	// Token: 0x06007FEA RID: 32746 RVA: 0x001B1093 File Offset: 0x001AF293
+	// Token: 0x06005381 RID: 21377 RVA: 0x001B9D63 File Offset: 0x001B7F63
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x06007FEB RID: 32747 RVA: 0x001B109C File Offset: 0x001AF29C
+	// Token: 0x06005382 RID: 21378 RVA: 0x001B9D6C File Offset: 0x001B7F6C
 	protected override void OnRefreshView()
 	{
 		ValueTuple<string, int, int> numTxtAndParam = this.ActivityData.GetNumTxtAndParam();
@@ -133,7 +133,7 @@ public class ActivitySubViewDoubleReward : ActivitySubViewBase
 		this.ActivityData.ReadDailyRedDot();
 	}
 
-	// Token: 0x06007FEC RID: 32748 RVA: 0x001B11A0 File Offset: 0x001AF3A0
+	// Token: 0x06005383 RID: 21379 RVA: 0x001B9E70 File Offset: 0x001B8070
 	private void RefreshTimerText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -146,7 +146,7 @@ public class ActivitySubViewDoubleReward : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007FED RID: 32749 RVA: 0x001B11DD File Offset: 0x001AF3DD
+	// Token: 0x06005384 RID: 21380 RVA: 0x001B9EAD File Offset: 0x001B80AD
 	private void OnClickJump()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -155,38 +155,38 @@ public class ActivitySubViewDoubleReward : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06007FEE RID: 32750 RVA: 0x001B11FB File Offset: 0x001AF3FB
+	// Token: 0x06005385 RID: 21381 RVA: 0x001B9ECB File Offset: 0x001B80CB
 	private void OnClickLock()
 	{
 		ActivityController.Instance.OpenActivityConditionView(this.ActivityData.Id);
 	}
 
-	// Token: 0x02007872 RID: 30834
+	// Token: 0x020069FD RID: 27133
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027AFC RID: 162556
+		// Token: 0x04022E2D RID: 142893
 		public const int TitleItem = 0;
 
-		// Token: 0x04027AFD RID: 162557
+		// Token: 0x04022E2E RID: 142894
 		public const int DescriptionItem = 1;
 
-		// Token: 0x04027AFE RID: 162558
+		// Token: 0x04022E2F RID: 142895
 		public const int TxtNum = 2;
 
-		// Token: 0x04027AFF RID: 162559
+		// Token: 0x04022E30 RID: 142896
 		public const int BtnJump = 3;
 
-		// Token: 0x04027B00 RID: 162560
+		// Token: 0x04022E31 RID: 142897
 		public const int ItemDoubleTip = 4;
 
-		// Token: 0x04027B01 RID: 162561
+		// Token: 0x04022E32 RID: 142898
 		public const int ItemLockTip = 5;
 
-		// Token: 0x04027B02 RID: 162562
+		// Token: 0x04022E33 RID: 142899
 		public const int TxtLockTip = 6;
 
-		// Token: 0x04027B03 RID: 162563
+		// Token: 0x04022E34 RID: 142900
 		public const int ButtonLock = 7;
 	}
 }

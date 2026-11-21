@@ -2,10 +2,10 @@
 
 namespace UnrealEngine
 {
-	// Token: 0x02000059 RID: 89
+	// Token: 0x0200003E RID: 62
 	public sealed class BoolArrayProcessor : PodBaseArrayProcessor<bool>
 	{
-		// Token: 0x060008ED RID: 2285 RVA: 0x00010D0E File Offset: 0x0000EF0E
+		// Token: 0x06000872 RID: 2162 RVA: 0x0000D57A File Offset: 0x0000B77A
 		public BoolArrayProcessor()
 		{
 			this.HasGetTypeHash = true;
@@ -13,7 +13,7 @@ namespace UnrealEngine
 			this.MinAlignment = 1;
 		}
 
-		// Token: 0x060008EE RID: 2286 RVA: 0x00010D2C File Offset: 0x0000EF2C
+		// Token: 0x06000873 RID: 2163 RVA: 0x0000D598 File Offset: 0x0000B798
 		public override int FindIndex(IntPtr Data, int Num, bool Value)
 		{
 			for (int i = 0; i < Num; i++)

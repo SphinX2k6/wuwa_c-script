@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003C7 RID: 967
+	// Token: 0x02000412 RID: 1042
 	public class IFreeAngleItem_SetValue
 	{
-		// Token: 0x04000F75 RID: 3957
+		// Token: 0x04001076 RID: 4214
 		public int InitAngle;
 
-		// Token: 0x04000F76 RID: 3958
+		// Token: 0x04001077 RID: 4215
 		public int TargetAngle;
 	}
 }

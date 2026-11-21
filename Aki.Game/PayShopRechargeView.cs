@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200236F RID: 9071
+// Token: 0x02001854 RID: 6228
 [NullableContext(1)]
 [Nullable(0)]
 public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 {
-	// Token: 0x060121B1 RID: 74161 RVA: 0x004724C4 File Offset: 0x004706C4
+	// Token: 0x0600F661 RID: 63073 RVA: 0x0047F644 File Offset: 0x0047D844
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		};
 	}
 
-	// Token: 0x060121B2 RID: 74162 RVA: 0x004725A4 File Offset: 0x004707A4
+	// Token: 0x0600F662 RID: 63074 RVA: 0x0047F724 File Offset: 0x0047D924
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.GoodsSoldOut, new Action<int>(this.OnGoodsSoldOut));
@@ -41,7 +41,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		EventSystem.Instance.Add<PayItemSuccess>(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x060121B3 RID: 74163 RVA: 0x00472620 File Offset: 0x00470820
+	// Token: 0x0600F663 RID: 63075 RVA: 0x0047F7A0 File Offset: 0x0047D9A0
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.GoodsSoldOut, new Action<int>(this.OnGoodsSoldOut));
@@ -50,7 +50,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		EventSystem.Instance.Remove<PayItemSuccess>(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x060121B4 RID: 74164 RVA: 0x0047269A File Offset: 0x0047089A
+	// Token: 0x0600F664 RID: 63076 RVA: 0x0047F81A File Offset: 0x0047DA1A
 	private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 	{
 		if (this.CurrentShopId == (int)shopId && this.CurrentSelectTabId == tabId)
@@ -60,13 +60,13 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		}
 	}
 
-	// Token: 0x060121B5 RID: 74165 RVA: 0x004726BF File Offset: 0x004708BF
+	// Token: 0x0600F665 RID: 63077 RVA: 0x0047F83F File Offset: 0x0047DA3F
 	private void OnGoodsSoldOut(int goodsId)
 	{
 		this.RefreshLoopScroll(this.CurrentSelectTabId);
 	}
 
-	// Token: 0x060121B6 RID: 74166 RVA: 0x004726D0 File Offset: 0x004708D0
+	// Token: 0x0600F666 RID: 63078 RVA: 0x0047F850 File Offset: 0x0047DA50
 	protected override void OnStart()
 	{
 		this.TabGroup = new TabComponent<PayShopSwitchItem>(base.GetHorizontalLayout(2).GetRootComponent(), new Func<UUIItem, int?, PayShopSwitchItem>(this.TabItemProxyCreate), new Action<int>(this.ToggleCallBack), base.GetItem(3));
@@ -83,13 +83,13 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060121B7 RID: 74167 RVA: 0x00472797 File Offset: 0x00470997
+	// Token: 0x0600F667 RID: 63079 RVA: 0x0047F917 File Offset: 0x0047DB17
 	protected UUIItem GetScrollItem()
 	{
 		return base.GetItem(6);
 	}
 
-	// Token: 0x060121B8 RID: 74168 RVA: 0x004727A0 File Offset: 0x004709A0
+	// Token: 0x0600F668 RID: 63080 RVA: 0x0047F920 File Offset: 0x0047DB20
 	protected PayShopBigItem InitItem()
 	{
 		PayShopBigItem payShopBigItem = new PayShopBigItem();
@@ -103,19 +103,19 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		return payShopBigItem;
 	}
 
-	// Token: 0x060121B9 RID: 74169 RVA: 0x004727CC File Offset: 0x004709CC
+	// Token: 0x0600F669 RID: 63081 RVA: 0x0047F94C File Offset: 0x0047DB4C
 	protected IPayShopUnionData GetProxyData(int gridIndex)
 	{
 		return this.PayShopGoodsList[gridIndex];
 	}
 
-	// Token: 0x060121BA RID: 74170 RVA: 0x004727DA File Offset: 0x004709DA
+	// Token: 0x0600F66A RID: 63082 RVA: 0x0047F95A File Offset: 0x0047DB5A
 	private PayShopSwitchItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new PayShopSwitchItem();
 	}
 
-	// Token: 0x060121BB RID: 74171 RVA: 0x004727E4 File Offset: 0x004709E4
+	// Token: 0x0600F66B RID: 63083 RVA: 0x0047F964 File Offset: 0x0047DB64
 	private void ToggleCallBack(int tabIndex)
 	{
 		Log instance = Log.Instance;
@@ -133,7 +133,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		LogReportController.Instance.LogReport(onClickPayShopTabLogEvent);
 	}
 
-	// Token: 0x060121BC RID: 74172 RVA: 0x00472874 File Offset: 0x00470A74
+	// Token: 0x0600F66C RID: 63084 RVA: 0x0047F9F4 File Offset: 0x0047DBF4
 	protected void RefreshLoopScroll(int tabId)
 	{
 		List<PayItemData> dataList = PayItemModel.Instance.GetDataList();
@@ -159,7 +159,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		base.GetLoopScrollViewComponent(1).RootUIComp.Get().SetUIActive(true);
 	}
 
-	// Token: 0x060121BD RID: 74173 RVA: 0x00472968 File Offset: 0x00470B68
+	// Token: 0x0600F66D RID: 63085 RVA: 0x0047FAE8 File Offset: 0x0047DCE8
 	private bool CheckSdkProductInfoConfirmIfCanShow(List<PayItemData> currentShowData)
 	{
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
@@ -183,7 +183,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		return false;
 	}
 
-	// Token: 0x060121BE RID: 74174 RVA: 0x00472A08 File Offset: 0x00470C08
+	// Token: 0x0600F66E RID: 63086 RVA: 0x0047FB88 File Offset: 0x0047DD88
 	private UniTask OpenThirdPartyMessageBox()
 	{
 		PayShopRechargeView.<OpenThirdPartyMessageBox>d__24 <OpenThirdPartyMessageBox>d__;
@@ -193,7 +193,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		return <OpenThirdPartyMessageBox>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060121BF RID: 74175 RVA: 0x00472A44 File Offset: 0x00470C44
+	// Token: 0x0600F66F RID: 63087 RVA: 0x0047FBC4 File Offset: 0x0047DDC4
 	protected override UniTask OnBeforeShowAsyncImplement()
 	{
 		PayShopRechargeView.<OnBeforeShowAsyncImplement>d__25 <OnBeforeShowAsyncImplement>d__;
@@ -204,7 +204,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060121C0 RID: 74176 RVA: 0x00472A88 File Offset: 0x00470C88
+	// Token: 0x0600F670 RID: 63088 RVA: 0x0047FC08 File Offset: 0x0047DE08
 	protected override void OnBeforeShow()
 	{
 		base.GetItem(4).SetUIActive(false);
@@ -214,14 +214,14 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		LogReportController.Instance.LogReport(onClickPayShopTabLogEvent);
 	}
 
-	// Token: 0x060121C1 RID: 74177 RVA: 0x00472ACB File Offset: 0x00470CCB
+	// Token: 0x0600F671 RID: 63089 RVA: 0x0047FC4B File Offset: 0x0047DE4B
 	protected override void OnShowUiTabViewFromToggle()
 	{
 		this.TabShowState = true;
 		this.AfterShowUiTabViewFromToggle();
 	}
 
-	// Token: 0x060121C2 RID: 74178 RVA: 0x00472ADA File Offset: 0x00470CDA
+	// Token: 0x0600F672 RID: 63090 RVA: 0x0047FC5A File Offset: 0x0047DE5A
 	protected void AfterShowUiTabViewFromToggle()
 	{
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
@@ -232,7 +232,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		platformSdk.ShowPlayStationStoreIcon(0);
 	}
 
-	// Token: 0x060121C3 RID: 74179 RVA: 0x00472AF1 File Offset: 0x00470CF1
+	// Token: 0x0600F673 RID: 63091 RVA: 0x0047FC71 File Offset: 0x0047DE71
 	protected override void OnHideUiTabViewBase(bool fromToggle)
 	{
 		this.RemoveTimer();
@@ -240,7 +240,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		this.AfterHideTabViewBase(fromToggle);
 	}
 
-	// Token: 0x060121C4 RID: 74180 RVA: 0x00472B07 File Offset: 0x00470D07
+	// Token: 0x0600F674 RID: 63092 RVA: 0x0047FC87 File Offset: 0x0047DE87
 	protected void AfterHideTabViewBase(bool fromToggle)
 	{
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
@@ -251,7 +251,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		platformSdk.HidePlayStationStoreIcon();
 	}
 
-	// Token: 0x060121C5 RID: 74181 RVA: 0x00472B20 File Offset: 0x00470D20
+	// Token: 0x0600F675 RID: 63093 RVA: 0x0047FCA0 File Offset: 0x0047DEA0
 	protected override void OnAfterShow()
 	{
 		this.CurrentShopId = (int)this.Params;
@@ -269,13 +269,13 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		this.OnDiscountShopAfterShow();
 	}
 
-	// Token: 0x060121C6 RID: 74182 RVA: 0x00472BB9 File Offset: 0x00470DB9
+	// Token: 0x0600F676 RID: 63094 RVA: 0x0047FD39 File Offset: 0x0047DF39
 	protected virtual void OnDiscountShopAfterShow()
 	{
 		base.GetText(5).SetUIActive(true);
 	}
 
-	// Token: 0x060121C7 RID: 74183 RVA: 0x00472BC8 File Offset: 0x00470DC8
+	// Token: 0x0600F677 RID: 63095 RVA: 0x0047FD48 File Offset: 0x0047DF48
 	private void AddTimer()
 	{
 		this.TimerHandle = TimerSystem.GameplayTimeInstance.Forever(delegate(float _)
@@ -284,7 +284,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x060121C8 RID: 74184 RVA: 0x00472BF3 File Offset: 0x00470DF3
+	// Token: 0x0600F678 RID: 63096 RVA: 0x0047FD73 File Offset: 0x0047DF73
 	private void RemoveTimer()
 	{
 		if (this.TimerHandle != null)
@@ -294,13 +294,13 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		}
 	}
 
-	// Token: 0x060121C9 RID: 74185 RVA: 0x00472C15 File Offset: 0x00470E15
+	// Token: 0x0600F679 RID: 63097 RVA: 0x0047FD95 File Offset: 0x0047DF95
 	private void OnRefreshTimer()
 	{
 		EventSystem.Instance.Emit(EEventName.DiscountShopTimerRefresh);
 	}
 
-	// Token: 0x060121CA RID: 74186 RVA: 0x00472C28 File Offset: 0x00470E28
+	// Token: 0x0600F67A RID: 63098 RVA: 0x0047FDA8 File Offset: 0x0047DFA8
 	protected void TryRefreshTabs()
 	{
 		List<int> payShopTabIdList = PayShopModel.Instance.GetPayShopTabIdList((PayShopDefine.EPayShopTabType)this.CurrentShopId, true);
@@ -312,7 +312,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		this.UpdateTabs((num == -1) ? 0 : num);
 	}
 
-	// Token: 0x060121CB RID: 74187 RVA: 0x00472C78 File Offset: 0x00470E78
+	// Token: 0x0600F67B RID: 63099 RVA: 0x0047FDF8 File Offset: 0x0047DFF8
 	protected unsafe void UpdateTabs(int selectIndex)
 	{
 		List<int> tabIdList = PayShopModel.Instance.GetPayShopTabIdList((PayShopDefine.EPayShopTabType)this.CurrentShopId, true);
@@ -347,7 +347,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060121CC RID: 74188 RVA: 0x00472D71 File Offset: 0x00470F71
+	// Token: 0x0600F67C RID: 63100 RVA: 0x0047FEF1 File Offset: 0x0047E0F1
 	[NullableContext(2)]
 	public void RefreshView(object @params)
 	{
@@ -359,12 +359,12 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		this.RefreshLoopScroll(this.CurrentSelectTabId);
 	}
 
-	// Token: 0x060121CD RID: 74189 RVA: 0x00472D8E File Offset: 0x00470F8E
+	// Token: 0x0600F67D RID: 63101 RVA: 0x0047FF0E File Offset: 0x0047E10E
 	private void OnPayItemSuccess(PayItemSuccess notify)
 	{
 	}
 
-	// Token: 0x060121CE RID: 74190 RVA: 0x00472D90 File Offset: 0x00470F90
+	// Token: 0x0600F67E RID: 63102 RVA: 0x0047FF10 File Offset: 0x0047E110
 	private void OnRefreshPayItemList()
 	{
 		if (!this.OnShowRequestInfo)
@@ -384,13 +384,13 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		this.OnShowRequestInfo = false;
 	}
 
-	// Token: 0x060121CF RID: 74191 RVA: 0x00472DEB File Offset: 0x00470FEB
+	// Token: 0x0600F67F RID: 63103 RVA: 0x0047FF6B File Offset: 0x0047E16B
 	private void OnSdkPayEnd(ESdkDialogResult _)
 	{
 		this.CheckIfNeedShowPlayStationStoreIcon();
 	}
 
-	// Token: 0x060121D0 RID: 74192 RVA: 0x00472DF4 File Offset: 0x00470FF4
+	// Token: 0x0600F680 RID: 63104 RVA: 0x0047FF74 File Offset: 0x0047E174
 	private void CheckIfNeedShowPlayStationStoreIcon()
 	{
 		if (!this.TabShowState)
@@ -430,7 +430,7 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 		}
 	}
 
-	// Token: 0x040088F5 RID: 35061
+	// Token: 0x04008A3A RID: 35386
 	[Nullable(new byte[]
 	{
 		2,
@@ -438,13 +438,13 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 	})]
 	protected TabComponent<PayShopSwitchItem> TabGroup;
 
-	// Token: 0x040088F6 RID: 35062
+	// Token: 0x04008A3B RID: 35387
 	protected List<IPayShopUnionData> PayShopGoodsList = new List<IPayShopUnionData>();
 
-	// Token: 0x040088F7 RID: 35063
+	// Token: 0x04008A3C RID: 35388
 	protected int CurrentSelectTabId;
 
-	// Token: 0x040088F8 RID: 35064
+	// Token: 0x04008A3D RID: 35389
 	[Nullable(new byte[]
 	{
 		2,
@@ -453,48 +453,48 @@ public class PayShopRechargeView : UiTabViewBase, IUiTabViewRefresh
 	})]
 	protected LoopScrollView<PayShopBigItem, IPayShopUnionData> LoopScrollView;
 
-	// Token: 0x040088F9 RID: 35065
+	// Token: 0x04008A3E RID: 35390
 	protected int CurrentShopId;
 
-	// Token: 0x040088FA RID: 35066
+	// Token: 0x04008A3F RID: 35391
 	protected int CurTabNum;
 
-	// Token: 0x040088FB RID: 35067
+	// Token: 0x04008A40 RID: 35392
 	private bool OnShowRequestInfo;
 
-	// Token: 0x040088FC RID: 35068
+	// Token: 0x04008A41 RID: 35393
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x040088FD RID: 35069
+	// Token: 0x04008A42 RID: 35394
 	private bool TabShowState;
 
-	// Token: 0x040088FE RID: 35070
+	// Token: 0x04008A43 RID: 35395
 	private const int TIMEGAP = 1000;
 
-	// Token: 0x02008901 RID: 35073
+	// Token: 0x02007A8B RID: 31371
 	[NullableContext(0)]
 	private enum EDiscountShopComponent
 	{
-		// Token: 0x0402C856 RID: 182358
+		// Token: 0x04027B6E RID: 162670
 		ScrollerItem,
-		// Token: 0x0402C857 RID: 182359
+		// Token: 0x04027B6F RID: 162671
 		Scroller,
-		// Token: 0x0402C858 RID: 182360
+		// Token: 0x04027B70 RID: 162672
 		HoriGroupScroller,
-		// Token: 0x0402C859 RID: 182361
+		// Token: 0x04027B71 RID: 162673
 		TabItem,
-		// Token: 0x0402C85A RID: 182362
+		// Token: 0x04027B72 RID: 162674
 		TabPanel,
-		// Token: 0x0402C85B RID: 182363
+		// Token: 0x04027B73 RID: 162675
 		TitleTips,
-		// Token: 0x0402C85C RID: 182364
+		// Token: 0x04027B74 RID: 162676
 		ScrollerItemNew,
-		// Token: 0x0402C85D RID: 182365
+		// Token: 0x04027B75 RID: 162677
 		PanelItem,
-		// Token: 0x0402C85E RID: 182366
+		// Token: 0x04027B76 RID: 162678
 		EmptyItem,
-		// Token: 0x0402C85F RID: 182367
+		// Token: 0x04027B77 RID: 162679
 		EmptyText
 	}
 }

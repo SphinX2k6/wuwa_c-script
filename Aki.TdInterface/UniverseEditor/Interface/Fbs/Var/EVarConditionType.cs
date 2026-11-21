@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A02 RID: 14850
+	// Token: 0x02003DDD RID: 15837
 	public enum EVarConditionType : byte
 	{
-		// Token: 0x0400AE5D RID: 44637
+		// Token: 0x0400B77F RID: 46975
 		All,
-		// Token: 0x0400AE5E RID: 44638
+		// Token: 0x0400B780 RID: 46976
 		Any
 	}
 }

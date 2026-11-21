@@ -3,17 +3,17 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EDA RID: 20186
+	// Token: 0x02003EA3 RID: 16035
 	public interface IRogueBattleMapSummeryOpenInfo
 	{
-		// Token: 0x17007F2D RID: 32557
-		// (get) Token: 0x06033CF4 RID: 212212
-		// (set) Token: 0x06033CF5 RID: 212213
+		// Token: 0x170052DD RID: 21213
+		// (get) Token: 0x06028B5F RID: 166751
+		// (set) Token: 0x06028B60 RID: 166752
 		EUiTabViewName TabName { get; set; }
 
-		// Token: 0x17007F2E RID: 32558
-		// (get) Token: 0x06033CF6 RID: 212214
-		// (set) Token: 0x06033CF7 RID: 212215
+		// Token: 0x170052DE RID: 21214
+		// (get) Token: 0x06028B61 RID: 166753
+		// (set) Token: 0x06028B62 RID: 166754
 		int? FetterId { get; set; }
 	}
 }

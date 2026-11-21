@@ -2,26 +2,26 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006037 RID: 24631
+	// Token: 0x02006697 RID: 26263
 	public enum ETimerType : byte
 	{
-		// Token: 0x04010163 RID: 65891
+		// Token: 0x04010F53 RID: 69459
 		CountDownChallenge,
-		// Token: 0x04010164 RID: 65892
+		// Token: 0x04010F54 RID: 69460
 		PlayStartCountDown,
-		// Token: 0x04010165 RID: 65893
+		// Token: 0x04010F55 RID: 69461
 		PublicTime,
-		// Token: 0x04010166 RID: 65894
+		// Token: 0x04010F56 RID: 69462
 		WaitTime,
-		// Token: 0x04010167 RID: 65895
+		// Token: 0x04010F57 RID: 69463
 		BehaviorTreeTimer1,
-		// Token: 0x04010168 RID: 65896
+		// Token: 0x04010F58 RID: 69464
 		BehaviorTreeTimer2,
-		// Token: 0x04010169 RID: 65897
+		// Token: 0x04010F59 RID: 69465
 		BehaviorTreeTimer3,
-		// Token: 0x0401016A RID: 65898
+		// Token: 0x04010F5A RID: 69466
 		BehaviorTreeTimer4,
-		// Token: 0x0401016B RID: 65899
+		// Token: 0x04010F5B RID: 69467
 		BehaviorTreeTimer5
 	}
 }

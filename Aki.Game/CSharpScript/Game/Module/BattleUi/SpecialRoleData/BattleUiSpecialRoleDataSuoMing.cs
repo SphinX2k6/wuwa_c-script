@@ -3,10 +3,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 {
-	// Token: 0x02005E53 RID: 24147
+	// Token: 0x02004E38 RID: 20024
 	public class BattleUiSpecialRoleDataSuoMing : BattleUiSpecialRoleDataBase
 	{
-		// Token: 0x0603D682 RID: 251522 RVA: 0x00ED00B8 File Offset: 0x00ECE2B8
+		// Token: 0x06032612 RID: 206354 RVA: 0x00E21628 File Offset: 0x00E1F828
 		protected override void OnInit()
 		{
 			base.OnInit();
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			this.RefreshSuperSkillState();
 		}
 
-		// Token: 0x0603D683 RID: 251523 RVA: 0x00ED0158 File Offset: 0x00ECE358
+		// Token: 0x06032613 RID: 206355 RVA: 0x00E216C8 File Offset: 0x00E1F8C8
 		protected override void OnClear()
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -53,19 +53,19 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			attributeComponent2.RemoveListener(EAttributeType.EnergyMax, new Action<EAttributeType, float, float>(this.OnEnergyChanged));
 		}
 
-		// Token: 0x0603D684 RID: 251524 RVA: 0x00ED01B9 File Offset: 0x00ECE3B9
+		// Token: 0x06032614 RID: 206356 RVA: 0x00E21729 File Offset: 0x00E1F929
 		private void OnEnergyTagChanged(int tagId, bool tagExist)
 		{
 			this.RefreshSuperSkillState();
 		}
 
-		// Token: 0x0603D685 RID: 251525 RVA: 0x00ED01C1 File Offset: 0x00ECE3C1
+		// Token: 0x06032615 RID: 206357 RVA: 0x00E21731 File Offset: 0x00E1F931
 		private void OnEnergyChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.RefreshSuperSkillState();
 		}
 
-		// Token: 0x0603D686 RID: 251526 RVA: 0x00ED01CC File Offset: 0x00ECE3CC
+		// Token: 0x06032616 RID: 206358 RVA: 0x00E2173C File Offset: 0x00E1F93C
 		private void RefreshSuperSkillState()
 		{
 			BattleUiRoleData roleData = this.RoleData;

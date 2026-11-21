@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000E6 RID: 230
+	// Token: 0x020000F5 RID: 245
 	public class ConfigBattlePassRewardByBattlePassId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000565 RID: 1381 RVA: 0x000781FC File Offset: 0x000763FC
+		// Token: 0x060005BF RID: 1471 RVA: 0x0007DB60 File Offset: 0x0007BD60
 		static ConfigBattlePassRewardByBattlePassId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBattlePassRewardByBattlePassId.CreateStaticDefaultValue), new Action(ConfigBattlePassRewardByBattlePassId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000566 RID: 1382 RVA: 0x0007821C File Offset: 0x0007641C
+		// Token: 0x060005C0 RID: 1472 RVA: 0x0007DB80 File Offset: 0x0007BD80
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBattlePassRewardByBattlePassId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000567 RID: 1383 RVA: 0x0007829B File Offset: 0x0007649B
+		// Token: 0x060005C1 RID: 1473 RVA: 0x0007DBFF File Offset: 0x0007BDFF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBattlePassRewardByBattlePassId.LogPair = null;
 			ConfigBattlePassRewardByBattlePassId.HandleId = 0;
 		}
 
-		// Token: 0x06000568 RID: 1384 RVA: 0x000782A9 File Offset: 0x000764A9
+		// Token: 0x060005C2 RID: 1474 RVA: 0x0007DC0D File Offset: 0x0007BE0D
 		public static void Init()
 		{
 			ConfigBattlePassRewardByBattlePassId.HandleId = ConfigCommon.InitDataStatement(ConfigBattlePassRewardByBattlePassId.HandleId, "db_battle_pass.db", "select BinData from `BattlePassReward` where BattlePassId=?");
 		}
 
-		// Token: 0x06000569 RID: 1385 RVA: 0x000782C4 File Offset: 0x000764C4
+		// Token: 0x060005C3 RID: 1475 RVA: 0x0007DC28 File Offset: 0x0007BE28
 		[NullableContext(2)]
 		public static IReadOnlyList<BattlePassReward> GetConfigList(int p0BattlePassId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400062E RID: 1582
+		// Token: 0x04000697 RID: 1687
 		private const string DB = "db_battle_pass.db";
 
-		// Token: 0x0400062F RID: 1583
+		// Token: 0x04000698 RID: 1688
 		private const string FILE = "z.战令.xlsx";
 
-		// Token: 0x04000630 RID: 1584
+		// Token: 0x04000699 RID: 1689
 		private const string TABLE = "BattlePassReward";
 
-		// Token: 0x04000631 RID: 1585
+		// Token: 0x0400069A RID: 1690
 		private const string COMMAND = "select BinData from `BattlePassReward` where BattlePassId=?";
 
-		// Token: 0x04000632 RID: 1586
+		// Token: 0x0400069B RID: 1691
 		private const string KEY_PREFIX = "BattlePassRewardByBattlePassId";
 
-		// Token: 0x04000633 RID: 1587
+		// Token: 0x0400069C RID: 1692
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000634 RID: 1588
+		// Token: 0x0400069D RID: 1693
 		private static int HandleId;
 	}
 }

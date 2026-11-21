@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002153 RID: 8531
+	// Token: 0x020023B4 RID: 9140
 	public class RemovePreloadResourceAction_SetValue
 	{
-		// Token: 0x04007039 RID: 28729
-		[Nullable(1)]
+		// Token: 0x0400766E RID: 30318
 		public IRemovePreloadResourceCharacterType RemovePreloadResourceObjectType;
 	}
 }

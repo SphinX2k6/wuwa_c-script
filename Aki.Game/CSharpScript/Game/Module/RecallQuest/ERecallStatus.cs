@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.RecallQuest
 {
-	// Token: 0x02004F15 RID: 20245
+	// Token: 0x02003EDE RID: 16094
 	public enum ERecallStatus
 	{
-		// Token: 0x0401B96C RID: 113004
+		// Token: 0x0401633F RID: 90943
 		InActive,
-		// Token: 0x0401B96D RID: 113005
+		// Token: 0x04016340 RID: 90944
 		InProgress,
-		// Token: 0x0401B96E RID: 113006
+		// Token: 0x04016341 RID: 90945
 		Finished
 	}
 }

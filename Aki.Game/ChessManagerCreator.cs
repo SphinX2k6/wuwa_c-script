@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Activity.ActivityContent.ChessGameplay.StackableChess;
 
-// Token: 0x020011CF RID: 4559
+// Token: 0x02000683 RID: 1667
 public static class ChessManagerCreator
 {
-	// Token: 0x06007974 RID: 31092 RVA: 0x00199D12 File Offset: 0x00197F12
+	// Token: 0x06004D0B RID: 19723 RVA: 0x001A29C2 File Offset: 0x001A0BC2
 	[NullableContext(2)]
 	public static IChessManager CreateChessManager(EChessMode mode)
 	{

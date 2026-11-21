@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DC2 RID: 3522
+	// Token: 0x02000EBE RID: 3774
 	public class ILookAtTargetEntity : ILookAtTargetBase
 	{
-		// Token: 0x06004FEB RID: 20459 RVA: 0x000C5A73 File Offset: 0x000C3C73
-		[NullableContext(1)]
+		// Token: 0x06005510 RID: 21776 RVA: 0x000D12C3 File Offset: 0x000CF4C3
 		public static ILookAtTargetEntity Create(ILookAtTargetEntity? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A24 RID: 6692
-		// (get) Token: 0x06004FEC RID: 20460 RVA: 0x000C5A92 File Offset: 0x000C3C92
+		// Token: 0x17001B8F RID: 7055
+		// (get) Token: 0x06005511 RID: 21777 RVA: 0x000D12E2 File Offset: 0x000CF4E2
 		public override ELookAtTargetType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A25 RID: 6693
-		// (get) Token: 0x06004FED RID: 20461 RVA: 0x000C5A9F File Offset: 0x000C3C9F
+		// Token: 0x17001B90 RID: 7056
+		// (get) Token: 0x06005512 RID: 21778 RVA: 0x000D12EF File Offset: 0x000CF4EF
 		public virtual int EntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DD5 RID: 11733
+		// Token: 0x0400309B RID: 12443
 		private ILookAtTargetEntity Instance;
 	}
 }

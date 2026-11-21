@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B0B RID: 6923
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001CBA RID: 7354
 	public class IHideWorldEntityAndLevelPlay : IHideRangeType
 	{
-		// Token: 0x0600943C RID: 37948 RVA: 0x00157698 File Offset: 0x00155898
-		[NullableContext(1)]
+		// Token: 0x06009C26 RID: 39974 RVA: 0x00168374 File Offset: 0x00166574
 		private IHideWorldEntityAndLevelPlay_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600943D RID: 37949 RVA: 0x001576D0 File Offset: 0x001558D0
-		[NullableContext(1)]
+		// Token: 0x06009C27 RID: 39975 RVA: 0x001683AC File Offset: 0x001665AC
 		public static IHideWorldEntityAndLevelPlay Create([Nullable(2)] IHideWorldEntityAndLevelPlay instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600943E RID: 37950 RVA: 0x001576E3 File Offset: 0x001558E3
-		[NullableContext(1)]
+		// Token: 0x06009C28 RID: 39976 RVA: 0x001683BF File Offset: 0x001665BF
 		public static IHideWorldEntityAndLevelPlay CreateFromSetValue([Nullable(2)] IHideWorldEntityAndLevelPlay_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600943F RID: 37951 RVA: 0x001576F6 File Offset: 0x001558F6
-		[NullableContext(1)]
+		// Token: 0x06009C29 RID: 39977 RVA: 0x001683D2 File Offset: 0x001665D2
 		public new IHideWorldEntityAndLevelPlay_SetValue ToSetValue()
 		{
 			return new IHideWorldEntityAndLevelPlay_SetValue
@@ -65,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EE3 RID: 12003
-		// (get) Token: 0x06009440 RID: 37952 RVA: 0x00157715 File Offset: 0x00155915
-		// (set) Token: 0x06009441 RID: 37953 RVA: 0x00157740 File Offset: 0x00155940
+		// Token: 0x17003109 RID: 12553
+		// (get) Token: 0x06009C2A RID: 39978 RVA: 0x001683F1 File Offset: 0x001665F1
+		// (set) Token: 0x06009C2B RID: 39979 RVA: 0x0016841C File Offset: 0x0016661C
 		public override EHideType Type
 		{
 			get
@@ -88,11 +82,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EE4 RID: 12004
-		// (get) Token: 0x06009442 RID: 37954 RVA: 0x0015774E File Offset: 0x0015594E
-		// (set) Token: 0x06009443 RID: 37955 RVA: 0x00157775 File Offset: 0x00155975
+		// Token: 0x1700310A RID: 12554
+		// (get) Token: 0x06009C2C RID: 39980 RVA: 0x0016842A File Offset: 0x0016662A
+		// (set) Token: 0x06009C2D RID: 39981 RVA: 0x00168451 File Offset: 0x00166651
+		[Nullable(2)]
 		public virtual List<int> ExcludeEntities
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -106,16 +102,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.ExcludeEntities;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().ExcludeEntities = value;
 			}
 		}
 
-		// Token: 0x04005AEC RID: 23276
+		// Token: 0x04005F8A RID: 24458
+		[Nullable(2)]
 		protected new IHideWorldEntityAndLevelPlay FbInstance;
 
-		// Token: 0x04005AED RID: 23277
+		// Token: 0x04005F8B RID: 24459
+		[Nullable(2)]
 		protected new IHideWorldEntityAndLevelPlay_SetValue PocoInterface;
 	}
 }

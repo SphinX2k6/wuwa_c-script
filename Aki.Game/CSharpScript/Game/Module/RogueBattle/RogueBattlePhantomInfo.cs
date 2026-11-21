@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E82 RID: 20098
+	// Token: 0x02003E4B RID: 15947
 	public class RogueBattlePhantomInfo : UiPanelBase
 	{
-		// Token: 0x06033B50 RID: 211792 RVA: 0x00C1C58C File Offset: 0x00C1A78C
+		// Token: 0x060289BB RID: 166331 RVA: 0x00B65AAC File Offset: 0x00B63CAC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,14 +28,14 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B51 RID: 211793 RVA: 0x00C1C63E File Offset: 0x00C1A83E
+		// Token: 0x060289BC RID: 166332 RVA: 0x00B65B5E File Offset: 0x00B63D5E
 		[NullableContext(1)]
 		private RogueBattlePhantomInfoAffix CreateAffixItem()
 		{
 			return new RogueBattlePhantomInfoAffix();
 		}
 
-		// Token: 0x06033B52 RID: 211794 RVA: 0x00C1C648 File Offset: 0x00C1A848
+		// Token: 0x060289BD RID: 166333 RVA: 0x00B65B68 File Offset: 0x00B63D68
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattlePhantomInfo.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401B724 RID: 112420
+		// Token: 0x040160F7 RID: 90359
 		[Nullable(new byte[]
 		{
 			2,

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200096D RID: 2413
+	// Token: 0x02000A42 RID: 2626
 	public class ConfigSpecialHateAndSenseById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060038A2 RID: 14498 RVA: 0x00199C6D File Offset: 0x00197E6D
+		// Token: 0x06003DA0 RID: 15776 RVA: 0x001B9001 File Offset: 0x001B7201
 		static ConfigSpecialHateAndSenseById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSpecialHateAndSenseById.CreateStaticDefaultValue), new Action(ConfigSpecialHateAndSenseById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060038A3 RID: 14499 RVA: 0x00199C8C File Offset: 0x00197E8C
+		// Token: 0x06003DA1 RID: 15777 RVA: 0x001B9020 File Offset: 0x001B7220
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSpecialHateAndSenseById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060038A4 RID: 14500 RVA: 0x00199D0B File Offset: 0x00197F0B
+		// Token: 0x06003DA2 RID: 15778 RVA: 0x001B909F File Offset: 0x001B729F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSpecialHateAndSenseById.LogPair = null;
 			ConfigSpecialHateAndSenseById.HandleId = 0;
 		}
 
-		// Token: 0x060038A5 RID: 14501 RVA: 0x00199D19 File Offset: 0x00197F19
+		// Token: 0x06003DA3 RID: 15779 RVA: 0x001B90AD File Offset: 0x001B72AD
 		public static void Init()
 		{
 			ConfigSpecialHateAndSenseById.HandleId = ConfigCommon.InitDataStatement(ConfigSpecialHateAndSenseById.HandleId, "db_specialhateandsense.db", "select BinData from `SpecialHateAndSense` where id=?");
 		}
 
-		// Token: 0x060038A6 RID: 14502 RVA: 0x00199D34 File Offset: 0x00197F34
+		// Token: 0x06003DA4 RID: 15780 RVA: 0x001B90C8 File Offset: 0x001B72C8
 		public static SpecialHateAndSense? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSpecialHateAndSenseById.HandleId, ConfigSpecialHateAndSenseById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SpecialHateAndSense?(rootAsSpecialHateAndSense);
 		}
 
-		// Token: 0x040041E1 RID: 16865
+		// Token: 0x040047B4 RID: 18356
 		private const string DB = "db_specialhateandsense.db";
 
-		// Token: 0x040041E2 RID: 16866
+		// Token: 0x040047B5 RID: 18357
 		private const string FILE = "k.可视化编辑/c.Csv/t.特殊仇恨感知/*.csv*";
 
-		// Token: 0x040041E3 RID: 16867
+		// Token: 0x040047B6 RID: 18358
 		private const string TABLE = "SpecialHateAndSense";
 
-		// Token: 0x040041E4 RID: 16868
+		// Token: 0x040047B7 RID: 18359
 		private const string COMMAND = "select BinData from `SpecialHateAndSense` where id=?";
 
-		// Token: 0x040041E5 RID: 16869
+		// Token: 0x040047B8 RID: 18360
 		private const string KEY_PREFIX = "SpecialHateAndSenseById";
 
-		// Token: 0x040041E6 RID: 16870
+		// Token: 0x040047B9 RID: 18361
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040041E7 RID: 16871
+		// Token: 0x040047BA RID: 18362
 		private static int HandleId;
 	}
 }

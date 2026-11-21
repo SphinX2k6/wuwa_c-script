@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F73 RID: 24435
+	// Token: 0x020065B8 RID: 26040
 	public enum EFixedLookAtTargetType : byte
 	{
-		// Token: 0x0400FD7E RID: 64894
+		// Token: 0x04010B02 RID: 68354
 		RangeEntity
 	}
 }

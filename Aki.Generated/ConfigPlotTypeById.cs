@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200074F RID: 1871
+	// Token: 0x02000767 RID: 1895
 	public class ConfigPlotTypeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002BEB RID: 11243 RVA: 0x00151AEB File Offset: 0x0014FCEB
+		// Token: 0x06002C7B RID: 11387 RVA: 0x00158567 File Offset: 0x00156767
 		static ConfigPlotTypeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPlotTypeById.CreateStaticDefaultValue), new Action(ConfigPlotTypeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002BEC RID: 11244 RVA: 0x00151B0C File Offset: 0x0014FD0C
+		// Token: 0x06002C7C RID: 11388 RVA: 0x00158588 File Offset: 0x00156788
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPlotTypeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002BED RID: 11245 RVA: 0x00151B8B File Offset: 0x0014FD8B
+		// Token: 0x06002C7D RID: 11389 RVA: 0x00158607 File Offset: 0x00156807
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPlotTypeById.LogPair = null;
 			ConfigPlotTypeById.HandleId = 0;
 		}
 
-		// Token: 0x06002BEE RID: 11246 RVA: 0x00151B99 File Offset: 0x0014FD99
+		// Token: 0x06002C7E RID: 11390 RVA: 0x00158615 File Offset: 0x00156815
 		public static void Init()
 		{
 			ConfigPlotTypeById.HandleId = ConfigCommon.InitDataStatement(ConfigPlotTypeById.HandleId, "db_handbook.db", "select BinData from `PlotType` where Id=?");
 		}
 
-		// Token: 0x06002BEF RID: 11247 RVA: 0x00151BB4 File Offset: 0x0014FDB4
+		// Token: 0x06002C7F RID: 11391 RVA: 0x00158630 File Offset: 0x00156830
 		public static PlotType? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPlotTypeById.HandleId, ConfigPlotTypeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PlotType?(rootAsPlotType);
 		}
 
-		// Token: 0x0400330F RID: 13071
+		// Token: 0x040033B7 RID: 13239
 		private const string DB = "db_handbook.db";
 
-		// Token: 0x04003310 RID: 13072
+		// Token: 0x040033B8 RID: 13240
 		private const string FILE = "t.图鉴系统.xlsx";
 
-		// Token: 0x04003311 RID: 13073
+		// Token: 0x040033B9 RID: 13241
 		private const string TABLE = "PlotType";
 
-		// Token: 0x04003312 RID: 13074
+		// Token: 0x040033BA RID: 13242
 		private const string COMMAND = "select BinData from `PlotType` where Id=?";
 
-		// Token: 0x04003313 RID: 13075
+		// Token: 0x040033BB RID: 13243
 		private const string KEY_PREFIX = "PlotTypeById";
 
-		// Token: 0x04003314 RID: 13076
+		// Token: 0x040033BC RID: 13244
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003315 RID: 13077
+		// Token: 0x040033BD RID: 13245
 		private static int HandleId;
 	}
 }

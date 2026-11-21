@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020008AC RID: 2220
+	// Token: 0x0200018B RID: 395
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.BillboardComponent")]
 	[UnrealStructLayout(1680, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1680)]
 	public class UBillboardComponent : UPrimitiveComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600795D RID: 31069 RVA: 0x000ADAB7 File Offset: 0x000ABCB7
+		// Token: 0x060019C5 RID: 6597 RVA: 0x00026B2D File Offset: 0x00024D2D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UBillboardComponent._ClassPtr;
 		}
 
-		// Token: 0x0600795E RID: 31070 RVA: 0x000ADAC4 File Offset: 0x000ABCC4
+		// Token: 0x060019C6 RID: 6598 RVA: 0x00026B3C File Offset: 0x00024D3C
 		public UBillboardComponent() : this(BuiltinUtils.AllocNativeUObject(UBillboardComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600795F RID: 31071 RVA: 0x000ADAEC File Offset: 0x000ABCEC
+		// Token: 0x060019C7 RID: 6599 RVA: 0x00026B64 File Offset: 0x00024D64
 		[NullableContext(1)]
 		public UBillboardComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UBillboardComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17001CAB RID: 7339
-		// (get) Token: 0x06007960 RID: 31072 RVA: 0x000ADB1F File Offset: 0x000ABD1F
-		// (set) Token: 0x06007961 RID: 31073 RVA: 0x000ADB33 File Offset: 0x000ABD33
+		// Token: 0x170002F4 RID: 756
+		// (get) Token: 0x060019C8 RID: 6600 RVA: 0x00026B97 File Offset: 0x00024D97
+		// (set) Token: 0x060019C9 RID: 6601 RVA: 0x00026BAB File Offset: 0x00024DAB
 		public unsafe UTexture2D Sprite
 		{
 			get
@@ -45,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001CAC RID: 7340
-		// (get) Token: 0x06007962 RID: 31074 RVA: 0x000ADB48 File Offset: 0x000ABD48
-		// (set) Token: 0x06007963 RID: 31075 RVA: 0x000ADB61 File Offset: 0x000ABD61
+		// Token: 0x170002F5 RID: 757
+		// (get) Token: 0x060019CA RID: 6602 RVA: 0x00026BC0 File Offset: 0x00024DC0
+		// (set) Token: 0x060019CB RID: 6603 RVA: 0x00026BD9 File Offset: 0x00024DD9
 		public unsafe bool bIsScreenSizeScaled
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001CAD RID: 7341
-		// (get) Token: 0x06007964 RID: 31076 RVA: 0x000ADB91 File Offset: 0x000ABD91
-		// (set) Token: 0x06007965 RID: 31077 RVA: 0x000ADBA1 File Offset: 0x000ABDA1
+		// Token: 0x170002F6 RID: 758
+		// (get) Token: 0x060019CC RID: 6604 RVA: 0x00026C09 File Offset: 0x00024E09
+		// (set) Token: 0x060019CD RID: 6605 RVA: 0x00026C19 File Offset: 0x00024E19
 		public unsafe float ScreenSize
 		{
 			get
@@ -75,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001CAE RID: 7342
-		// (get) Token: 0x06007966 RID: 31078 RVA: 0x000ADBB2 File Offset: 0x000ABDB2
-		// (set) Token: 0x06007967 RID: 31079 RVA: 0x000ADBC2 File Offset: 0x000ABDC2
+		// Token: 0x170002F7 RID: 759
+		// (get) Token: 0x060019CE RID: 6606 RVA: 0x00026C2A File Offset: 0x00024E2A
+		// (set) Token: 0x060019CF RID: 6607 RVA: 0x00026C3A File Offset: 0x00024E3A
 		public unsafe float U
 		{
 			get
@@ -90,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001CAF RID: 7343
-		// (get) Token: 0x06007968 RID: 31080 RVA: 0x000ADBD3 File Offset: 0x000ABDD3
-		// (set) Token: 0x06007969 RID: 31081 RVA: 0x000ADBE3 File Offset: 0x000ABDE3
+		// Token: 0x170002F8 RID: 760
+		// (get) Token: 0x060019D0 RID: 6608 RVA: 0x00026C4B File Offset: 0x00024E4B
+		// (set) Token: 0x060019D1 RID: 6609 RVA: 0x00026C5B File Offset: 0x00024E5B
 		public unsafe float UL
 		{
 			get
@@ -105,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001CB0 RID: 7344
-		// (get) Token: 0x0600796A RID: 31082 RVA: 0x000ADBF4 File Offset: 0x000ABDF4
-		// (set) Token: 0x0600796B RID: 31083 RVA: 0x000ADC04 File Offset: 0x000ABE04
+		// Token: 0x170002F9 RID: 761
+		// (get) Token: 0x060019D2 RID: 6610 RVA: 0x00026C6C File Offset: 0x00024E6C
+		// (set) Token: 0x060019D3 RID: 6611 RVA: 0x00026C7C File Offset: 0x00024E7C
 		public unsafe float V
 		{
 			get
@@ -120,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001CB1 RID: 7345
-		// (get) Token: 0x0600796C RID: 31084 RVA: 0x000ADC15 File Offset: 0x000ABE15
-		// (set) Token: 0x0600796D RID: 31085 RVA: 0x000ADC25 File Offset: 0x000ABE25
+		// Token: 0x170002FA RID: 762
+		// (get) Token: 0x060019D4 RID: 6612 RVA: 0x00026C8D File Offset: 0x00024E8D
+		// (set) Token: 0x060019D5 RID: 6613 RVA: 0x00026C9D File Offset: 0x00024E9D
 		public unsafe float VL
 		{
 			get
@@ -135,79 +135,79 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600796E RID: 31086 RVA: 0x000ADC36 File Offset: 0x000ABE36
+		// Token: 0x060019D6 RID: 6614 RVA: 0x00026CAE File Offset: 0x00024EAE
 		public void SetUV(int NewU, int NewUL, int NewV, int NewVL)
 		{
 			UBillboardComponent.__SetUV_Internal(base.NativePtr, NewU, NewUL, NewV, NewVL);
 		}
 
-		// Token: 0x0600796F RID: 31087 RVA: 0x000ADC48 File Offset: 0x000ABE48
+		// Token: 0x060019D7 RID: 6615 RVA: 0x00026CC0 File Offset: 0x00024EC0
 		public void SetSpriteAndUV(UTexture2D NewSprite, int NewU, int NewUL, int NewV, int NewVL)
 		{
 			UBillboardComponent.__SetSpriteAndUV_Internal(base.NativePtr, (NewSprite != null) ? NewSprite.NativePtr : IntPtr.Zero, NewU, NewUL, NewV, NewVL);
 		}
 
-		// Token: 0x06007970 RID: 31088 RVA: 0x000ADC6B File Offset: 0x000ABE6B
+		// Token: 0x060019D8 RID: 6616 RVA: 0x00026CE3 File Offset: 0x00024EE3
 		public void SetSprite(UTexture2D NewSprite)
 		{
 			UBillboardComponent.__SetSprite_Internal(base.NativePtr, (NewSprite != null) ? NewSprite.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06007971 RID: 31089
+		// Token: 0x060019D9 RID: 6617
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetUV_Internal(IntPtr @this, int NewU, int NewUL, int NewV, int NewVL);
 
-		// Token: 0x06007972 RID: 31090
+		// Token: 0x060019DA RID: 6618
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSpriteAndUV_Internal(IntPtr @this, IntPtr NewSprite, int NewU, int NewUL, int NewV, int NewVL);
 
-		// Token: 0x06007973 RID: 31091
+		// Token: 0x060019DB RID: 6619
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSprite_Internal(IntPtr @this, IntPtr NewSprite);
 
-		// Token: 0x06007974 RID: 31092 RVA: 0x000ADC88 File Offset: 0x000ABE88
+		// Token: 0x060019DC RID: 6620 RVA: 0x00026D00 File Offset: 0x00024F00
 		static UBillboardComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.BillboardComponent");
 		}
 
-		// Token: 0x06007975 RID: 31093 RVA: 0x000ADC96 File Offset: 0x000ABE96
+		// Token: 0x060019DD RID: 6621 RVA: 0x00026D0E File Offset: 0x00024F0E
 		protected UBillboardComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04003A54 RID: 14932
+		// Token: 0x0400083B RID: 2107
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.BillboardComponent";
 
-		// Token: 0x04003A55 RID: 14933
+		// Token: 0x0400083C RID: 2108
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04003A56 RID: 14934
+		// Token: 0x0400083D RID: 2109
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04003A57 RID: 14935
+		// Token: 0x0400083E RID: 2110
 		internal static int __PropertyOffset_Sprite;
 
-		// Token: 0x04003A58 RID: 14936
+		// Token: 0x0400083F RID: 2111
 		internal static int __PropertyOffset_bIsScreenSizeScaled;
 
-		// Token: 0x04003A59 RID: 14937
+		// Token: 0x04000840 RID: 2112
 		internal static byte __PropertyMask_bIsScreenSizeScaled;
 
-		// Token: 0x04003A5A RID: 14938
+		// Token: 0x04000841 RID: 2113
 		internal static int __PropertyOffset_ScreenSize;
 
-		// Token: 0x04003A5B RID: 14939
+		// Token: 0x04000842 RID: 2114
 		internal static int __PropertyOffset_U;
 
-		// Token: 0x04003A5C RID: 14940
+		// Token: 0x04000843 RID: 2115
 		internal static int __PropertyOffset_UL;
 
-		// Token: 0x04003A5D RID: 14941
+		// Token: 0x04000844 RID: 2116
 		internal static int __PropertyOffset_V;
 
-		// Token: 0x04003A5E RID: 14942
+		// Token: 0x04000845 RID: 2117
 		internal static int __PropertyOffset_VL;
 	}
 }

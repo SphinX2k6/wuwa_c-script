@@ -5,12 +5,12 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F83 RID: 28547
+	// Token: 0x02006104 RID: 24836
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelFlowEnableSplineMoveModel : LevelFlowActionBase
 	{
-		// Token: 0x060456E0 RID: 284384 RVA: 0x011373E9 File Offset: 0x011355E9
+		// Token: 0x0603B88E RID: 243854 RVA: 0x010E11ED File Offset: 0x010DF3ED
 		[NullableContext(1)]
 		public LevelFlowEnableSplineMoveModel Init(EnableSplineMoveModel inParams, [Nullable(2)] GeneralContext context)
 		{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x060456E1 RID: 284385 RVA: 0x011373FC File Offset: 0x011355FC
+		// Token: 0x0603B88F RID: 243855 RVA: 0x010E1200 File Offset: 0x010DF400
 		protected unsafe override void OnExecute()
 		{
 			ISplineMoveConfig config = this.InParams.Config;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x060456E2 RID: 284386 RVA: 0x011376A2 File Offset: 0x011358A2
+		// Token: 0x0603B890 RID: 243856 RVA: 0x010E14A6 File Offset: 0x010DF6A6
 		private void OnRefreshBaseCharacter(float _)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -125,16 +125,16 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.Execute();
 		}
 
-		// Token: 0x040243B2 RID: 148402
+		// Token: 0x0401F667 RID: 128615
 		private EnableSplineMoveModel InParams;
 
-		// Token: 0x040243B3 RID: 148403
+		// Token: 0x0401F668 RID: 128616
 		private GeneralContext Context;
 
-		// Token: 0x040243B4 RID: 148404
+		// Token: 0x0401F669 RID: 128617
 		private TimerHandle DelayExecuteHandle;
 
-		// Token: 0x040243B5 RID: 148405
+		// Token: 0x0401F66A RID: 128618
 		private const int CHECK_BASE_CHARACTER_INTERVAL = 500;
 	}
 }

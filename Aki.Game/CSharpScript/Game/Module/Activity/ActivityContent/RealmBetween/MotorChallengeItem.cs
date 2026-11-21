@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x02006286 RID: 25222
+	// Token: 0x02005204 RID: 20996
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,12 +16,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 	})]
 	public class MotorChallengeItem : RealmBetweenTaskItemBase<ActivityTaskData>
 	{
-		// Token: 0x0603F7A9 RID: 260009 RVA: 0x00F58AB0 File Offset: 0x00F56CB0
+		// Token: 0x0603446A RID: 214122 RVA: 0x00E9FA0C File Offset: 0x00E9DC0C
 		public MotorChallengeItem(ActivityRealmBetweenData activityBaseData) : base(activityBaseData)
 		{
 		}
 
-		// Token: 0x0603F7AA RID: 260010 RVA: 0x00F58ABC File Offset: 0x00F56CBC
+		// Token: 0x0603446B RID: 214123 RVA: 0x00E9FA18 File Offset: 0x00E9DC18
 		public override void Refresh(ActivityTaskData taskData, bool isSelected, int gridIndex)
 		{
 			this.TaskData = taskData;
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			base.GetItem(5).SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603F7AB RID: 260011 RVA: 0x00F58B9B File Offset: 0x00F56D9B
+		// Token: 0x0603446C RID: 214124 RVA: 0x00E9FAF7 File Offset: 0x00E9DCF7
 		public void SetClickRewardCb(Action clickRewardCb)
 		{
 			this.OnClickRewardCb = clickRewardCb;
 		}
 
-		// Token: 0x0603F7AC RID: 260012 RVA: 0x00F58BA4 File Offset: 0x00F56DA4
+		// Token: 0x0603446D RID: 214125 RVA: 0x00E9FB00 File Offset: 0x00E9DD00
 		private void RefreshRewardData(int rewardId)
 		{
 			List<IItemGridData> list = new List<IItemGridData>();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.RewardScrollView.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603F7AD RID: 260013 RVA: 0x00F58C34 File Offset: 0x00F56E34
+		// Token: 0x0603446E RID: 214126 RVA: 0x00E9FB90 File Offset: 0x00E9DD90
 		protected override void OnClickedRewardButton()
 		{
 			Action onClickRewardCb = this.OnClickRewardCb;
@@ -73,10 +73,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			onClickRewardCb();
 		}
 
-		// Token: 0x040212CF RID: 135887
+		// Token: 0x0401BBFE RID: 113662
 		protected new ActivityTaskData TaskData;
 
-		// Token: 0x040212D0 RID: 135888
+		// Token: 0x0401BBFF RID: 113663
 		[Nullable(2)]
 		private Action OnClickRewardCb;
 	}

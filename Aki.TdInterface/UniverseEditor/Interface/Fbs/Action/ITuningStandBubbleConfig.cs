@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007496 RID: 29846
+	// Token: 0x02007C89 RID: 31881
 	public struct ITuningStandBubbleConfig : IFlatbufferObject
 	{
-		// Token: 0x1700E2A1 RID: 58017
-		// (get) Token: 0x06036406 RID: 222214 RVA: 0x007600BF File Offset: 0x0075E2BF
+		// Token: 0x1700EEC0 RID: 61120
+		// (get) Token: 0x060397F3 RID: 235507 RVA: 0x007C2E7B File Offset: 0x007C107B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036407 RID: 222215 RVA: 0x007600CC File Offset: 0x0075E2CC
+		// Token: 0x060397F4 RID: 235508 RVA: 0x007C2E88 File Offset: 0x007C1088
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036408 RID: 222216 RVA: 0x007600D4 File Offset: 0x0075E2D4
+		// Token: 0x060397F5 RID: 235509 RVA: 0x007C2E90 File Offset: 0x007C1090
 		public static ITuningStandBubbleConfig GetRootAsITuningStandBubbleConfig(ByteBuffer _bb)
 		{
 			return ITuningStandBubbleConfig.GetRootAsITuningStandBubbleConfig(_bb, default(ITuningStandBubbleConfig));
 		}
 
-		// Token: 0x06036409 RID: 222217 RVA: 0x007600F0 File Offset: 0x0075E2F0
+		// Token: 0x060397F6 RID: 235510 RVA: 0x007C2EAC File Offset: 0x007C10AC
 		public static ITuningStandBubbleConfig GetRootAsITuningStandBubbleConfig(ByteBuffer _bb, ITuningStandBubbleConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603640A RID: 222218 RVA: 0x0076010D File Offset: 0x0075E30D
+		// Token: 0x060397F7 RID: 235511 RVA: 0x007C2EC9 File Offset: 0x007C10C9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603640B RID: 222219 RVA: 0x0076011C File Offset: 0x0075E31C
+		// Token: 0x060397F8 RID: 235512 RVA: 0x007C2ED8 File Offset: 0x007C10D8
 		public ITuningStandBubbleConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E2A2 RID: 58018
-		// (get) Token: 0x0603640C RID: 222220 RVA: 0x0076012C File Offset: 0x0075E32C
+		// Token: 0x1700EEC1 RID: 61121
+		// (get) Token: 0x060397F9 RID: 235513 RVA: 0x007C2EE8 File Offset: 0x007C10E8
 		public ETuningStandBubbleTriggerType TriggerType
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E2A3 RID: 58019
-		// (get) Token: 0x0603640D RID: 222221 RVA: 0x00760168 File Offset: 0x0075E368
+		// Token: 0x1700EEC2 RID: 61122
+		// (get) Token: 0x060397FA RID: 235514 RVA: 0x007C2F24 File Offset: 0x007C1124
 		public IPlayFlow? Flow
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603640E RID: 222222 RVA: 0x007601C5 File Offset: 0x0075E3C5
+		// Token: 0x060397FB RID: 235515 RVA: 0x007C2F81 File Offset: 0x007C1181
 		public static Offset<ITuningStandBubbleConfig> CreateITuningStandBubbleConfig(FlatBufferBuilder builder, ETuningStandBubbleTriggerType TriggerType = ETuningStandBubbleTriggerType.Enter, Offset<IPlayFlow> FlowOffset = default(Offset<IPlayFlow>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITuningStandBubbleConfig.EndITuningStandBubbleConfig(builder);
 		}
 
-		// Token: 0x0603640F RID: 222223 RVA: 0x007601E2 File Offset: 0x0075E3E2
+		// Token: 0x060397FC RID: 235516 RVA: 0x007C2F9E File Offset: 0x007C119E
 		public static void StartITuningStandBubbleConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06036410 RID: 222224 RVA: 0x007601EB File Offset: 0x0075E3EB
+		// Token: 0x060397FD RID: 235517 RVA: 0x007C2FA7 File Offset: 0x007C11A7
 		public static void AddTriggerType(FlatBufferBuilder builder, ETuningStandBubbleTriggerType triggerType)
 		{
 			builder.AddByte(0, (byte)triggerType, 0);
 		}
 
-		// Token: 0x06036411 RID: 222225 RVA: 0x007601F6 File Offset: 0x0075E3F6
+		// Token: 0x060397FE RID: 235518 RVA: 0x007C2FB2 File Offset: 0x007C11B2
 		public static void AddFlow(FlatBufferBuilder builder, Offset<IPlayFlow> flowOffset)
 		{
 			builder.AddOffset(1, flowOffset.Value, 0);
 		}
 
-		// Token: 0x06036412 RID: 222226 RVA: 0x00760206 File Offset: 0x0075E406
+		// Token: 0x060397FF RID: 235519 RVA: 0x007C2FC2 File Offset: 0x007C11C2
 		public static Offset<ITuningStandBubbleConfig> EndITuningStandBubbleConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ITuningStandBubbleConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06036413 RID: 222227 RVA: 0x00760214 File Offset: 0x0075E414
+		// Token: 0x06039800 RID: 235520 RVA: 0x007C2FD0 File Offset: 0x007C11D0
 		public ITuningStandBubbleConfigT UnPack()
 		{
 			ITuningStandBubbleConfigT tuningStandBubbleConfigT = new ITuningStandBubbleConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return tuningStandBubbleConfigT;
 		}
 
-		// Token: 0x06036414 RID: 222228 RVA: 0x00760230 File Offset: 0x0075E430
+		// Token: 0x06039801 RID: 235521 RVA: 0x007C2FEC File Offset: 0x007C11EC
 		public void UnPackTo(ITuningStandBubbleConfigT _o)
 		{
 			_o.TriggerType = this.TriggerType;
 			_o.Flow = ((this.Flow != null) ? this.Flow.Value.UnPack() : null);
 		}
 
-		// Token: 0x06036415 RID: 222229 RVA: 0x00760278 File Offset: 0x0075E478
+		// Token: 0x06039802 RID: 235522 RVA: 0x007C3034 File Offset: 0x007C1234
 		public static Offset<ITuningStandBubbleConfig> Pack(FlatBufferBuilder builder, ITuningStandBubbleConfigT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITuningStandBubbleConfig.CreateITuningStandBubbleConfig(builder, _o.TriggerType, flowOffset);
 		}
 
-		// Token: 0x04012335 RID: 74549
+		// Token: 0x0401335D RID: 78685
 		private Table __p;
 	}
 }

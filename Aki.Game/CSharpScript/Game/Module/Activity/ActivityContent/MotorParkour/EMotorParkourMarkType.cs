@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 {
-	// Token: 0x020063EC RID: 25580
+	// Token: 0x0200536A RID: 21354
 	public enum EMotorParkourMarkType
 	{
-		// Token: 0x04021780 RID: 137088
+		// Token: 0x0401C0AF RID: 114863
 		Player = 1,
-		// Token: 0x04021781 RID: 137089
+		// Token: 0x0401C0B0 RID: 114864
 		EndPoint
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004950 RID: 18768
+	// Token: 0x02004E07 RID: 19975
 	public enum ERogueThemeType : byte
 	{
-		// Token: 0x0400D113 RID: 53523
+		// Token: 0x0400DBDA RID: 56282
 		ZhongQu
 	}
 }

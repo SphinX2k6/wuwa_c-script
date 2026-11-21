@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055A1 RID: 21921
+	// Token: 0x02004577 RID: 17783
 	public enum EMapForbiddenTag
 	{
-		// Token: 0x0401D599 RID: 120217
+		// Token: 0x04018024 RID: 98340
 		AsyncUi,
-		// Token: 0x0401D59A RID: 120218
+		// Token: 0x04018025 RID: 98341
 		StageLock,
-		// Token: 0x0401D59B RID: 120219
+		// Token: 0x04018026 RID: 98342
 		Teleport,
-		// Token: 0x0401D59C RID: 120220
+		// Token: 0x04018027 RID: 98343
 		WaitExecuteOp,
-		// Token: 0x0401D59D RID: 120221
+		// Token: 0x04018028 RID: 98344
 		FocusLock,
-		// Token: 0x0401D59E RID: 120222
+		// Token: 0x04018029 RID: 98345
 		GridCreate
 	}
 }

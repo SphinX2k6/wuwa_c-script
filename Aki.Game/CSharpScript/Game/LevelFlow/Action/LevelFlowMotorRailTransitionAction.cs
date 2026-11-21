@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F8E RID: 28558
+	// Token: 0x0200610F RID: 24847
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelFlowMotorRailTransitionAction : LevelFlowActionBase
 	{
-		// Token: 0x0604571E RID: 284446 RVA: 0x01138A09 File Offset: 0x01136C09
+		// Token: 0x0603B8CC RID: 243916 RVA: 0x010E280D File Offset: 0x010E0A0D
 		[NullableContext(1)]
 		public LevelFlowMotorRailTransitionAction Init(int entityId, int splineEntityId)
 		{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x0604571F RID: 284447 RVA: 0x01138A1C File Offset: 0x01136C1C
+		// Token: 0x0603B8CD RID: 243917 RVA: 0x010E2820 File Offset: 0x010E0A20
 		protected override void OnExecute()
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(this.EntityId);
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			motorcycleJumpToRailMoveData.Enter(null);
 		}
 
-		// Token: 0x06045720 RID: 284448 RVA: 0x01138C18 File Offset: 0x01136E18
+		// Token: 0x0603B8CE RID: 243918 RVA: 0x010E2A1C File Offset: 0x010E0C1C
 		protected override void OnTick(float deltaTime)
 		{
 			if (this.MoveData == null)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			moveData.Tick(deltaTime);
 		}
 
-		// Token: 0x06045721 RID: 284449 RVA: 0x01138C50 File Offset: 0x01136E50
+		// Token: 0x0603B8CF RID: 243919 RVA: 0x010E2A54 File Offset: 0x010E0C54
 		private void VehicleRailMoveUpdater(Vector loc, Rotator rot, Vector velocity, bool bSweep = true)
 		{
 			if (this.ActorComp == null)
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x06045722 RID: 284450 RVA: 0x01138D7C File Offset: 0x01136F7C
+		// Token: 0x0603B8D0 RID: 243920 RVA: 0x010E2B80 File Offset: 0x010E0D80
 		private bool VehicleRailMoveGetter(Vector outLoc, Rotator outRot, Vector outVelocity)
 		{
 			if (this.ActorComp == null)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return false;
 		}
 
-		// Token: 0x06045723 RID: 284451 RVA: 0x01138E50 File Offset: 0x01137050
+		// Token: 0x0603B8D1 RID: 243921 RVA: 0x010E2C54 File Offset: 0x010E0E54
 		protected unsafe override void LogExecuteInfo()
 		{
 			Log instance = Log.Instance;
@@ -193,16 +193,16 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x040243C2 RID: 148418
+		// Token: 0x0401F677 RID: 128631
 		private int EntityId;
 
-		// Token: 0x040243C3 RID: 148419
+		// Token: 0x0401F678 RID: 128632
 		private int SplineEntityId;
 
-		// Token: 0x040243C4 RID: 148420
+		// Token: 0x0401F679 RID: 128633
 		private VehicleActorComponent ActorComp;
 
-		// Token: 0x040243C5 RID: 148421
+		// Token: 0x0401F67A RID: 128634
 		private MotorcycleJumpToRailMoveData MoveData;
 	}
 }

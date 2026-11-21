@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064D1 RID: 25809
+	// Token: 0x02006B3C RID: 27452
 	public struct IControlElementalBoxTypeBase : IFlatbufferObject
 	{
-		// Token: 0x1700C012 RID: 49170
-		// (get) Token: 0x0602CC56 RID: 183382 RVA: 0x00627331 File Offset: 0x00625531
+		// Token: 0x1700C99F RID: 51615
+		// (get) Token: 0x0602F3DA RID: 193498 RVA: 0x00673459 File Offset: 0x00671659
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CC57 RID: 183383 RVA: 0x0062733E File Offset: 0x0062553E
+		// Token: 0x0602F3DB RID: 193499 RVA: 0x00673466 File Offset: 0x00671666
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CC58 RID: 183384 RVA: 0x00627348 File Offset: 0x00625548
+		// Token: 0x0602F3DC RID: 193500 RVA: 0x00673470 File Offset: 0x00671670
 		public static IControlElementalBoxTypeBase GetRootAsIControlElementalBoxTypeBase(ByteBuffer _bb)
 		{
 			return IControlElementalBoxTypeBase.GetRootAsIControlElementalBoxTypeBase(_bb, default(IControlElementalBoxTypeBase));
 		}
 
-		// Token: 0x0602CC59 RID: 183385 RVA: 0x00627364 File Offset: 0x00625564
+		// Token: 0x0602F3DD RID: 193501 RVA: 0x0067348C File Offset: 0x0067168C
 		public static IControlElementalBoxTypeBase GetRootAsIControlElementalBoxTypeBase(ByteBuffer _bb, IControlElementalBoxTypeBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CC5A RID: 183386 RVA: 0x00627381 File Offset: 0x00625581
+		// Token: 0x0602F3DE RID: 193502 RVA: 0x006734A9 File Offset: 0x006716A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CC5B RID: 183387 RVA: 0x00627390 File Offset: 0x00625590
+		// Token: 0x0602F3DF RID: 193503 RVA: 0x006734B8 File Offset: 0x006716B8
 		public IControlElementalBoxTypeBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C013 RID: 49171
-		// (get) Token: 0x0602CC5C RID: 183388 RVA: 0x006273A0 File Offset: 0x006255A0
+		// Token: 0x1700C9A0 RID: 51616
+		// (get) Token: 0x0602F3E0 RID: 193504 RVA: 0x006734C8 File Offset: 0x006716C8
 		public EControlElementalBoxType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CC5D RID: 183389 RVA: 0x006273DC File Offset: 0x006255DC
+		// Token: 0x0602F3E1 RID: 193505 RVA: 0x00673504 File Offset: 0x00671704
 		public static Offset<IControlElementalBoxTypeBase> CreateIControlElementalBoxTypeBase(FlatBufferBuilder builder, EControlElementalBoxType Type = EControlElementalBoxType.Capture)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IControlElementalBoxTypeBase.EndIControlElementalBoxTypeBase(builder);
 		}
 
-		// Token: 0x0602CC5E RID: 183390 RVA: 0x006273F2 File Offset: 0x006255F2
+		// Token: 0x0602F3E2 RID: 193506 RVA: 0x0067351A File Offset: 0x0067171A
 		public static void StartIControlElementalBoxTypeBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602CC5F RID: 183391 RVA: 0x006273FB File Offset: 0x006255FB
+		// Token: 0x0602F3E3 RID: 193507 RVA: 0x00673523 File Offset: 0x00671723
 		public static void AddType(FlatBufferBuilder builder, EControlElementalBoxType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602CC60 RID: 183392 RVA: 0x00627406 File Offset: 0x00625606
+		// Token: 0x0602F3E4 RID: 193508 RVA: 0x0067352E File Offset: 0x0067172E
 		public static Offset<IControlElementalBoxTypeBase> EndIControlElementalBoxTypeBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IControlElementalBoxTypeBase>(builder.EndTable());
 		}
 
-		// Token: 0x0602CC61 RID: 183393 RVA: 0x00627414 File Offset: 0x00625614
+		// Token: 0x0602F3E5 RID: 193509 RVA: 0x0067353C File Offset: 0x0067173C
 		public IControlElementalBoxTypeBaseT UnPack()
 		{
 			IControlElementalBoxTypeBaseT controlElementalBoxTypeBaseT = new IControlElementalBoxTypeBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return controlElementalBoxTypeBaseT;
 		}
 
-		// Token: 0x0602CC62 RID: 183394 RVA: 0x0062742F File Offset: 0x0062562F
+		// Token: 0x0602F3E6 RID: 193510 RVA: 0x00673557 File Offset: 0x00671757
 		public void UnPackTo(IControlElementalBoxTypeBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602CC63 RID: 183395 RVA: 0x00627440 File Offset: 0x00625640
+		// Token: 0x0602F3E7 RID: 193511 RVA: 0x00673568 File Offset: 0x00671768
 		public static Offset<IControlElementalBoxTypeBase> Pack(FlatBufferBuilder builder, IControlElementalBoxTypeBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IControlElementalBoxTypeBase.CreateIControlElementalBoxTypeBase(builder, _o.Type);
 		}
 
-		// Token: 0x04010B09 RID: 68361
+		// Token: 0x0401191F RID: 71967
 		private Table __p;
 	}
 }

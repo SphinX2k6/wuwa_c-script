@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000158 RID: 344
+	// Token: 0x02000167 RID: 359
 	public class ConfigChatThemeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000811 RID: 2065 RVA: 0x0008721B File Offset: 0x0008541B
+		// Token: 0x0600086B RID: 2155 RVA: 0x0008CB7F File Offset: 0x0008AD7F
 		static ConfigChatThemeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigChatThemeById.CreateStaticDefaultValue), new Action(ConfigChatThemeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000812 RID: 2066 RVA: 0x0008723C File Offset: 0x0008543C
+		// Token: 0x0600086C RID: 2156 RVA: 0x0008CBA0 File Offset: 0x0008ADA0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigChatThemeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000813 RID: 2067 RVA: 0x000872BB File Offset: 0x000854BB
+		// Token: 0x0600086D RID: 2157 RVA: 0x0008CC1F File Offset: 0x0008AE1F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigChatThemeById.LogPair = null;
 			ConfigChatThemeById.HandleId = 0;
 		}
 
-		// Token: 0x06000814 RID: 2068 RVA: 0x000872C9 File Offset: 0x000854C9
+		// Token: 0x0600086E RID: 2158 RVA: 0x0008CC2D File Offset: 0x0008AE2D
 		public static void Init()
 		{
 			ConfigChatThemeById.HandleId = ConfigCommon.InitDataStatement(ConfigChatThemeById.HandleId, "db_phonemsg.db", "select BinData from `ChatTheme` where Id=?");
 		}
 
-		// Token: 0x06000815 RID: 2069 RVA: 0x000872E4 File Offset: 0x000854E4
+		// Token: 0x0600086F RID: 2159 RVA: 0x0008CC48 File Offset: 0x0008AE48
 		public static ChatTheme? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigChatThemeById.HandleId, ConfigChatThemeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ChatTheme?(rootAsChatTheme);
 		}
 
-		// Token: 0x0400094C RID: 2380
+		// Token: 0x040009B5 RID: 2485
 		private const string DB = "db_phonemsg.db";
 
-		// Token: 0x0400094D RID: 2381
+		// Token: 0x040009B6 RID: 2486
 		private const string FILE = "s.手机系统.xlsx";
 
-		// Token: 0x0400094E RID: 2382
+		// Token: 0x040009B7 RID: 2487
 		private const string TABLE = "ChatTheme";
 
-		// Token: 0x0400094F RID: 2383
+		// Token: 0x040009B8 RID: 2488
 		private const string COMMAND = "select BinData from `ChatTheme` where Id=?";
 
-		// Token: 0x04000950 RID: 2384
+		// Token: 0x040009B9 RID: 2489
 		private const string KEY_PREFIX = "ChatThemeById";
 
-		// Token: 0x04000951 RID: 2385
+		// Token: 0x040009BA RID: 2490
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000952 RID: 2386
+		// Token: 0x040009BB RID: 2491
 		private static int HandleId;
 	}
 }

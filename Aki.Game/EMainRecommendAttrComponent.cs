@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020024B5 RID: 9397
+// Token: 0x0200199C RID: 6556
 internal enum EMainRecommendAttrComponent
 {
-	// Token: 0x04008E0E RID: 36366
+	// Token: 0x04008F58 RID: 36696
 	Layout,
-	// Token: 0x04008E0F RID: 36367
+	// Token: 0x04008F59 RID: 36697
 	LayoutItem,
-	// Token: 0x04008E10 RID: 36368
+	// Token: 0x04008F5A RID: 36698
 	ToggleAll
 }

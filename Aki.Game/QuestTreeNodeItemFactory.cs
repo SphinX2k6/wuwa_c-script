@@ -4,19 +4,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020026AB RID: 9899
+// Token: 0x02001B96 RID: 7062
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestTreeNodeItemFactory : Singleton
 {
-	// Token: 0x0601446B RID: 83051 RVA: 0x0051FCFE File Offset: 0x0051DEFE
+	// Token: 0x0601194D RID: 72013 RVA: 0x0052EA36 File Offset: 0x0052CC36
 	protected override bool OnInit()
 	{
 		this.InitializeLoader();
 		return true;
 	}
 
-	// Token: 0x0601446C RID: 83052 RVA: 0x0051FD08 File Offset: 0x0051DF08
+	// Token: 0x0601194E RID: 72014 RVA: 0x0052EA40 File Offset: 0x0052CC40
 	public void InitializeLoader()
 	{
 		this.Loader = new QuestTreeNodeItemLoader();
@@ -26,7 +26,7 @@ public class QuestTreeNodeItemFactory : Singleton
 		this.Loader.RegisterNodeType(EQuestTreeNodeType.Container, typeof(QuestTreeNodeContainer));
 	}
 
-	// Token: 0x0601446D RID: 83053 RVA: 0x0051FD78 File Offset: 0x0051DF78
+	// Token: 0x0601194F RID: 72015 RVA: 0x0052EAB0 File Offset: 0x0052CCB0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -44,7 +44,7 @@ public class QuestTreeNodeItemFactory : Singleton
 		return <CreateAndLoadNode>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601446E RID: 83054 RVA: 0x0051FDCB File Offset: 0x0051DFCB
+	// Token: 0x06011950 RID: 72016 RVA: 0x0052EB03 File Offset: 0x0052CD03
 	[NullableContext(2)]
 	[return: Nullable(new byte[]
 	{
@@ -56,8 +56,8 @@ public class QuestTreeNodeItemFactory : Singleton
 		return this.Loader.CreateLogicalNodeItem<TData>(type);
 	}
 
-	// Token: 0x17001A4B RID: 6731
-	// (get) Token: 0x0601446F RID: 83055 RVA: 0x0051FDD9 File Offset: 0x0051DFD9
+	// Token: 0x17001A83 RID: 6787
+	// (get) Token: 0x06011951 RID: 72017 RVA: 0x0052EB11 File Offset: 0x0052CD11
 	public static QuestTreeNodeItemFactory Instance
 	{
 		get
@@ -71,12 +71,12 @@ public class QuestTreeNodeItemFactory : Singleton
 		}
 	}
 
-	// Token: 0x06014470 RID: 83056 RVA: 0x0051FDFC File Offset: 0x0051DFFC
+	// Token: 0x06011952 RID: 72018 RVA: 0x0052EB34 File Offset: 0x0052CD34
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06014471 RID: 83057 RVA: 0x0051FDFE File Offset: 0x0051DFFE
+	// Token: 0x06011953 RID: 72019 RVA: 0x0052EB36 File Offset: 0x0052CD36
 	public static void ResetStaticDefaultValue()
 	{
 		QuestTreeNodeItemFactory instance = QuestTreeNodeItemFactory._instance;
@@ -87,16 +87,16 @@ public class QuestTreeNodeItemFactory : Singleton
 		QuestTreeNodeItemFactory._instance = null;
 	}
 
-	// Token: 0x06014472 RID: 83058 RVA: 0x0051FE17 File Offset: 0x0051E017
+	// Token: 0x06011954 RID: 72020 RVA: 0x0052EB4F File Offset: 0x0052CD4F
 	static QuestTreeNodeItemFactory()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(QuestTreeNodeItemFactory.CreateStaticDefaultValue), new Action(QuestTreeNodeItemFactory.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400988B RID: 39051
+	// Token: 0x040099E3 RID: 39395
 	private QuestTreeNodeItemLoader Loader;
 
-	// Token: 0x0400988C RID: 39052
+	// Token: 0x040099E4 RID: 39396
 	[Nullable(2)]
 	private static QuestTreeNodeItemFactory _instance;
 }

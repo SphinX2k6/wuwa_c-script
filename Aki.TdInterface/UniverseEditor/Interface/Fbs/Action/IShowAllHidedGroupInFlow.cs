@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070D3 RID: 28883
+	// Token: 0x0200789F RID: 30879
 	public struct IShowAllHidedGroupInFlow : IFlatbufferObject
 	{
-		// Token: 0x1700D686 RID: 54918
-		// (get) Token: 0x06033276 RID: 209526 RVA: 0x006E5955 File Offset: 0x006E3B55
+		// Token: 0x1700E269 RID: 57961
+		// (get) Token: 0x06036518 RID: 222488 RVA: 0x00745F61 File Offset: 0x00744161
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,50 +16,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033277 RID: 209527 RVA: 0x006E5962 File Offset: 0x006E3B62
+		// Token: 0x06036519 RID: 222489 RVA: 0x00745F6E File Offset: 0x0074416E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033278 RID: 209528 RVA: 0x006E596C File Offset: 0x006E3B6C
+		// Token: 0x0603651A RID: 222490 RVA: 0x00745F78 File Offset: 0x00744178
 		public static IShowAllHidedGroupInFlow GetRootAsIShowAllHidedGroupInFlow(ByteBuffer _bb)
 		{
 			return IShowAllHidedGroupInFlow.GetRootAsIShowAllHidedGroupInFlow(_bb, default(IShowAllHidedGroupInFlow));
 		}
 
-		// Token: 0x06033279 RID: 209529 RVA: 0x006E5988 File Offset: 0x006E3B88
+		// Token: 0x0603651B RID: 222491 RVA: 0x00745F94 File Offset: 0x00744194
 		public static IShowAllHidedGroupInFlow GetRootAsIShowAllHidedGroupInFlow(ByteBuffer _bb, IShowAllHidedGroupInFlow obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603327A RID: 209530 RVA: 0x006E59A5 File Offset: 0x006E3BA5
+		// Token: 0x0603651C RID: 222492 RVA: 0x00745FB1 File Offset: 0x007441B1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603327B RID: 209531 RVA: 0x006E59B4 File Offset: 0x006E3BB4
+		// Token: 0x0603651D RID: 222493 RVA: 0x00745FC0 File Offset: 0x007441C0
 		public IShowAllHidedGroupInFlow __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0603327C RID: 209532 RVA: 0x006E59C4 File Offset: 0x006E3BC4
+		// Token: 0x0603651E RID: 222494 RVA: 0x00745FD0 File Offset: 0x007441D0
 		public static void StartIShowAllHidedGroupInFlow(FlatBufferBuilder builder)
 		{
 			builder.StartTable(0);
 		}
 
-		// Token: 0x0603327D RID: 209533 RVA: 0x006E59CD File Offset: 0x006E3BCD
+		// Token: 0x0603651F RID: 222495 RVA: 0x00745FD9 File Offset: 0x007441D9
 		public static Offset<IShowAllHidedGroupInFlow> EndIShowAllHidedGroupInFlow(FlatBufferBuilder builder)
 		{
 			return new Offset<IShowAllHidedGroupInFlow>(builder.EndTable());
 		}
 
-		// Token: 0x0603327E RID: 209534 RVA: 0x006E59DC File Offset: 0x006E3BDC
+		// Token: 0x06036520 RID: 222496 RVA: 0x00745FE8 File Offset: 0x007441E8
 		public IShowAllHidedGroupInFlowT UnPack()
 		{
 			IShowAllHidedGroupInFlowT showAllHidedGroupInFlowT = new IShowAllHidedGroupInFlowT();
@@ -67,12 +67,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return showAllHidedGroupInFlowT;
 		}
 
-		// Token: 0x0603327F RID: 209535 RVA: 0x006E59F7 File Offset: 0x006E3BF7
+		// Token: 0x06036521 RID: 222497 RVA: 0x00746003 File Offset: 0x00744203
 		public void UnPackTo(IShowAllHidedGroupInFlowT _o)
 		{
 		}
 
-		// Token: 0x06033280 RID: 209536 RVA: 0x006E59FC File Offset: 0x006E3BFC
+		// Token: 0x06036522 RID: 222498 RVA: 0x00746008 File Offset: 0x00744208
 		public static Offset<IShowAllHidedGroupInFlow> Pack(FlatBufferBuilder builder, IShowAllHidedGroupInFlowT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IShowAllHidedGroupInFlow.EndIShowAllHidedGroupInFlow(builder);
 		}
 
-		// Token: 0x04011B3F RID: 72511
+		// Token: 0x04012B2D RID: 76589
 		private Table __p;
 	}
 }

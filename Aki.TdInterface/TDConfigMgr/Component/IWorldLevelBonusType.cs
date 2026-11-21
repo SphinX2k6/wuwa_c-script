@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007F1 RID: 2033
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000894 RID: 2196
 	public class IWorldLevelBonusType
 	{
-		// Token: 0x06002C2F RID: 11311 RVA: 0x00072F08 File Offset: 0x00071108
+		// Token: 0x06002F5F RID: 12127 RVA: 0x0007A26C File Offset: 0x0007846C
 		private IWorldLevelBonusType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002C30 RID: 11312 RVA: 0x00072F40 File Offset: 0x00071140
+		// Token: 0x06002F60 RID: 12128 RVA: 0x0007A2A4 File Offset: 0x000784A4
 		public static IWorldLevelBonusType Create([Nullable(2)] IWorldLevelBonusType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C31 RID: 11313 RVA: 0x00072F53 File Offset: 0x00071153
+		// Token: 0x06002F61 RID: 12129 RVA: 0x0007A2B7 File Offset: 0x000784B7
 		public static IWorldLevelBonusType CreateFromSetValue([Nullable(2)] IWorldLevelBonusType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C32 RID: 11314 RVA: 0x00072F66 File Offset: 0x00071166
+		// Token: 0x06002F62 RID: 12130 RVA: 0x0007A2CA File Offset: 0x000784CA
 		public IWorldLevelBonusType_SetValue ToSetValue()
 		{
 			return new IWorldLevelBonusType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B91 RID: 2961
-		// (get) Token: 0x06002C33 RID: 11315 RVA: 0x00072F79 File Offset: 0x00071179
-		// (set) Token: 0x06002C34 RID: 11316 RVA: 0x00072FA4 File Offset: 0x000711A4
+		// Token: 0x17000C54 RID: 3156
+		// (get) Token: 0x06002F63 RID: 12131 RVA: 0x0007A2DD File Offset: 0x000784DD
+		// (set) Token: 0x06002F64 RID: 12132 RVA: 0x0007A308 File Offset: 0x00078508
 		public virtual EWorldLevelBonus Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D4D RID: 7501
+		// Token: 0x04001F59 RID: 8025
 		[Nullable(2)]
 		protected IWorldLevelBonusType FbInstance;
 
-		// Token: 0x04001D4E RID: 7502
+		// Token: 0x04001F5A RID: 8026
 		[Nullable(2)]
 		protected IWorldLevelBonusType_SetValue PocoInterface;
 	}

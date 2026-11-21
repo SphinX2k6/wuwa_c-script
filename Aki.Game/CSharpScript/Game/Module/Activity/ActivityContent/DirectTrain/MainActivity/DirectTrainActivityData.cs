@@ -7,10 +7,10 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActivity
 {
-	// Token: 0x02006749 RID: 26441
+	// Token: 0x02005699 RID: 22169
 	public class DirectTrainActivityData : ActivityBaseData
 	{
-		// Token: 0x06041FEB RID: 270315 RVA: 0x01001FE0 File Offset: 0x010001E0
+		// Token: 0x06036B3A RID: 224058 RVA: 0x00F433D4 File Offset: 0x00F415D4
 		[NullableContext(1)]
 		protected override void PhraseEx(ActivityData data)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			}
 		}
 
-		// Token: 0x06041FEC RID: 270316 RVA: 0x01002030 File Offset: 0x01000230
+		// Token: 0x06036B3B RID: 224059 RVA: 0x00F43424 File Offset: 0x00F41624
 		[NullableContext(2)]
 		private bool IsAllSubActivityFinishedOrAbsent(IReadOnlyList<int> subActivityIds)
 		{
@@ -48,21 +48,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			return true;
 		}
 
-		// Token: 0x06041FED RID: 270317 RVA: 0x010020A4 File Offset: 0x010002A4
+		// Token: 0x06036B3C RID: 224060 RVA: 0x00F43498 File Offset: 0x00F41698
 		public override bool GetExDataRedPointShowState()
 		{
 			DirectTrainModel instance = DirectTrainModel.Instance;
 			return instance != null && instance.HasUnReadSubActivity();
 		}
 
-		// Token: 0x06041FEE RID: 270318 RVA: 0x010020B6 File Offset: 0x010002B6
+		// Token: 0x06036B3D RID: 224061 RVA: 0x00F434AA File Offset: 0x00F416AA
 		protected override bool GetExDataFinishShowState()
 		{
 			return false;
 		}
 
-		// Token: 0x17009664 RID: 38500
-		// (get) Token: 0x06041FEF RID: 270319 RVA: 0x010020B9 File Offset: 0x010002B9
+		// Token: 0x170069A3 RID: 27043
+		// (get) Token: 0x06036B3E RID: 224062 RVA: 0x00F434AD File Offset: 0x00F416AD
 		public override bool RedPointShowState
 		{
 			get

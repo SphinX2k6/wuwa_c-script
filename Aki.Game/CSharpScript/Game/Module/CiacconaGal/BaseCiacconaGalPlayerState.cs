@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BBF RID: 23487
+	// Token: 0x02004B9F RID: 19359
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,7 +12,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 	})]
 	public class BaseCiacconaGalPlayerState : StateBase<CiacconaGalPlayer, ECiacconaGalPlayerState>
 	{
-		// Token: 0x0603B63E RID: 243262 RVA: 0x00E2A8AD File Offset: 0x00E28AAD
+		// Token: 0x0603058A RID: 198026 RVA: 0x00D7ABA2 File Offset: 0x00D78DA2
 		public BaseCiacconaGalPlayerState(CiacconaGalPlayer owner, ECiacconaGalPlayerState state, [Nullable(new byte[]
 		{
 			2,
@@ -21,14 +21,14 @@ namespace CSharpScript.Game.Module.CiacconaGal
 		{
 		}
 
-		// Token: 0x0603B63F RID: 243263 RVA: 0x00E2A8B8 File Offset: 0x00E28AB8
+		// Token: 0x0603058B RID: 198027 RVA: 0x00D7ABAD File Offset: 0x00D78DAD
 		protected override void OnEnter(ECiacconaGalPlayerState? lastState)
 		{
 			this.Owner.ClearStatePendingToSwitchByState(this);
 			this.Owner.NotifyStateChange(this.State);
 		}
 
-		// Token: 0x0603B640 RID: 243264 RVA: 0x00E2A8D7 File Offset: 0x00E28AD7
+		// Token: 0x0603058C RID: 198028 RVA: 0x00D7ABCC File Offset: 0x00D78DCC
 		public virtual void OnClick(int? id = null)
 		{
 		}

@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000EE6 RID: 3814
+	// Token: 0x02000FCB RID: 4043
 	public struct PhantomFetterGroup : IFlatbufferObject
 	{
-		// Token: 0x170026C3 RID: 9923
-		// (get) Token: 0x0600A889 RID: 43145 RVA: 0x002B30E7 File Offset: 0x002B12E7
+		// Token: 0x17002729 RID: 10025
+		// (get) Token: 0x0600AEAA RID: 44714 RVA: 0x002D0132 File Offset: 0x002CE332
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A88A RID: 43146 RVA: 0x002B30F4 File Offset: 0x002B12F4
+		// Token: 0x0600AEAB RID: 44715 RVA: 0x002D013F File Offset: 0x002CE33F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A88B RID: 43147 RVA: 0x002B30FC File Offset: 0x002B12FC
+		// Token: 0x0600AEAC RID: 44716 RVA: 0x002D0148 File Offset: 0x002CE348
 		public static PhantomFetterGroup GetRootAsPhantomFetterGroup(ByteBuffer _bb)
 		{
 			return PhantomFetterGroup.GetRootAsPhantomFetterGroup(_bb, default(PhantomFetterGroup));
 		}
 
-		// Token: 0x0600A88C RID: 43148 RVA: 0x002B3118 File Offset: 0x002B1318
+		// Token: 0x0600AEAD RID: 44717 RVA: 0x002D0164 File Offset: 0x002CE364
 		public static PhantomFetterGroup GetRootAsPhantomFetterGroup(ByteBuffer _bb, PhantomFetterGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A88D RID: 43149 RVA: 0x002B3135 File Offset: 0x002B1335
+		// Token: 0x0600AEAE RID: 44718 RVA: 0x002D0181 File Offset: 0x002CE381
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A88E RID: 43150 RVA: 0x002B3144 File Offset: 0x002B1344
+		// Token: 0x0600AEAF RID: 44719 RVA: 0x002D0190 File Offset: 0x002CE390
 		public PhantomFetterGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170026C4 RID: 9924
-		// (get) Token: 0x0600A88F RID: 43151 RVA: 0x002B3154 File Offset: 0x002B1354
+		// Token: 0x1700272A RID: 10026
+		// (get) Token: 0x0600AEB0 RID: 44720 RVA: 0x002D01A0 File Offset: 0x002CE3A0
 		public int Id
 		{
 			get
@@ -66,7 +66,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A890 RID: 43152 RVA: 0x002B3190 File Offset: 0x002B1390
+		// Token: 0x0600AEB1 RID: 44721 RVA: 0x002D01DC File Offset: 0x002CE3DC
 		public DicIntInt? FetterMap(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -77,8 +77,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170026C5 RID: 9925
-		// (get) Token: 0x0600A891 RID: 43153 RVA: 0x002B31F0 File Offset: 0x002B13F0
+		// Token: 0x1700272B RID: 10027
+		// (get) Token: 0x0600AEB2 RID: 44722 RVA: 0x002D023C File Offset: 0x002CE43C
 		public int FetterMapLength
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170026C6 RID: 9926
-		// (get) Token: 0x0600A892 RID: 43154 RVA: 0x002B321C File Offset: 0x002B141C
+		// Token: 0x1700272C RID: 10028
+		// (get) Token: 0x0600AEB3 RID: 44723 RVA: 0x002D0268 File Offset: 0x002CE468
 		public int FetterType
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170026C7 RID: 9927
-		// (get) Token: 0x0600A893 RID: 43155 RVA: 0x002B3258 File Offset: 0x002B1458
+		// Token: 0x1700272D RID: 10029
+		// (get) Token: 0x0600AEB4 RID: 44724 RVA: 0x002D02A4 File Offset: 0x002CE4A4
 		public string FetterGroupName
 		{
 			get
@@ -122,20 +122,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A894 RID: 43156 RVA: 0x002B3290 File Offset: 0x002B1490
+		// Token: 0x0600AEB5 RID: 44725 RVA: 0x002D02DC File Offset: 0x002CE4DC
 		public Span<byte> GetFetterGroupNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600A895 RID: 43157 RVA: 0x002B32A0 File Offset: 0x002B14A0
+		// Token: 0x0600AEB6 RID: 44726 RVA: 0x002D02EC File Offset: 0x002CE4EC
 		public byte[] GetFetterGroupNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170026C8 RID: 9928
-		// (get) Token: 0x0600A896 RID: 43158 RVA: 0x002B32B8 File Offset: 0x002B14B8
+		// Token: 0x1700272E RID: 10030
+		// (get) Token: 0x0600AEB7 RID: 44727 RVA: 0x002D0304 File Offset: 0x002CE504
 		public int AccessId
 		{
 			get
@@ -149,8 +149,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170026C9 RID: 9929
-		// (get) Token: 0x0600A897 RID: 43159 RVA: 0x002B32F8 File Offset: 0x002B14F8
+		// Token: 0x1700272F RID: 10031
+		// (get) Token: 0x0600AEB8 RID: 44728 RVA: 0x002D0344 File Offset: 0x002CE544
 		public string FetterGroupDesc
 		{
 			get
@@ -164,20 +164,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A898 RID: 43160 RVA: 0x002B3330 File Offset: 0x002B1530
+		// Token: 0x0600AEB9 RID: 44729 RVA: 0x002D037C File Offset: 0x002CE57C
 		public Span<byte> GetFetterGroupDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600A899 RID: 43161 RVA: 0x002B3340 File Offset: 0x002B1540
+		// Token: 0x0600AEBA RID: 44730 RVA: 0x002D038C File Offset: 0x002CE58C
 		public byte[] GetFetterGroupDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170026CA RID: 9930
-		// (get) Token: 0x0600A89A RID: 43162 RVA: 0x002B3358 File Offset: 0x002B1558
+		// Token: 0x17002730 RID: 10032
+		// (get) Token: 0x0600AEBB RID: 44731 RVA: 0x002D03A4 File Offset: 0x002CE5A4
 		public int SortId
 		{
 			get
@@ -191,8 +191,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170026CB RID: 9931
-		// (get) Token: 0x0600A89B RID: 43163 RVA: 0x002B3398 File Offset: 0x002B1598
+		// Token: 0x17002731 RID: 10033
+		// (get) Token: 0x0600AEBC RID: 44732 RVA: 0x002D03E4 File Offset: 0x002CE5E4
 		public string FetterElementColor
 		{
 			get
@@ -206,20 +206,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A89C RID: 43164 RVA: 0x002B33D0 File Offset: 0x002B15D0
+		// Token: 0x0600AEBD RID: 44733 RVA: 0x002D041C File Offset: 0x002CE61C
 		public Span<byte> GetFetterElementColorBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x0600A89D RID: 43165 RVA: 0x002B33E0 File Offset: 0x002B15E0
+		// Token: 0x0600AEBE RID: 44734 RVA: 0x002D042C File Offset: 0x002CE62C
 		public byte[] GetFetterElementColorArray()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170026CC RID: 9932
-		// (get) Token: 0x0600A89E RID: 43166 RVA: 0x002B33F8 File Offset: 0x002B15F8
+		// Token: 0x17002732 RID: 10034
+		// (get) Token: 0x0600AEBF RID: 44735 RVA: 0x002D0444 File Offset: 0x002CE644
 		public string FetterElementPath
 		{
 			get
@@ -233,20 +233,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A89F RID: 43167 RVA: 0x002B3430 File Offset: 0x002B1630
+		// Token: 0x0600AEC0 RID: 44736 RVA: 0x002D047C File Offset: 0x002CE67C
 		public Span<byte> GetFetterElementPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(20, 1);
 		}
 
-		// Token: 0x0600A8A0 RID: 43168 RVA: 0x002B3440 File Offset: 0x002B1640
+		// Token: 0x0600AEC1 RID: 44737 RVA: 0x002D048C File Offset: 0x002CE68C
 		public byte[] GetFetterElementPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(20) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170026CD RID: 9933
-		// (get) Token: 0x0600A8A1 RID: 43169 RVA: 0x002B3458 File Offset: 0x002B1658
+		// Token: 0x17002733 RID: 10035
+		// (get) Token: 0x0600AEC2 RID: 44738 RVA: 0x002D04A4 File Offset: 0x002CE6A4
 		public string AimModelElementPath
 		{
 			get
@@ -260,36 +260,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A8A2 RID: 43170 RVA: 0x002B3490 File Offset: 0x002B1690
+		// Token: 0x0600AEC3 RID: 44739 RVA: 0x002D04DC File Offset: 0x002CE6DC
 		public Span<byte> GetAimModelElementPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x0600A8A3 RID: 43171 RVA: 0x002B34A0 File Offset: 0x002B16A0
+		// Token: 0x0600AEC4 RID: 44740 RVA: 0x002D04EC File Offset: 0x002CE6EC
 		public byte[] GetAimModelElementPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(22) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600A8A4 RID: 43172 RVA: 0x002B34B8 File Offset: 0x002B16B8
+		// Token: 0x0600AEC5 RID: 44741 RVA: 0x002D0504 File Offset: 0x002CE704
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用FetterMapFrozenDict()缓存字典，遍历请使用FetterMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> FetterMap()
+		public Dictionary<int, int> FetterMap()
 		{
 			return this.FetterMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600A8A5 RID: 43173 RVA: 0x002B350E File Offset: 0x002B170E
+		// Token: 0x0600AEC6 RID: 44742 RVA: 0x002D055A File Offset: 0x002CE75A
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> FetterMapIter()
+		public IEnumerable<DicIntInt> FetterMapIter()
 		{
 			PhantomFetterGroup.<FetterMapIter>d__40 <FetterMapIter>d__ = new PhantomFetterGroup.<FetterMapIter>d__40(-2);
 			<FetterMapIter>d__.<>3__<>4__this = this;
 			return <FetterMapIter>d__;
 		}
 
-		// Token: 0x0600A8A6 RID: 43174 RVA: 0x002B3524 File Offset: 0x002B1724
+		// Token: 0x0600AEC7 RID: 44743 RVA: 0x002D0570 File Offset: 0x002CE770
 		public int? GetFetterMap(int key)
 		{
 			this.EnsureFetterMapCacheIfNeeded();
@@ -301,7 +300,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600A8A7 RID: 43175 RVA: 0x002B3558 File Offset: 0x002B1758
+		// Token: 0x0600AEC8 RID: 44744 RVA: 0x002D05A4 File Offset: 0x002CE7A4
 		private void EnsureFetterMapCacheIfNeeded()
 		{
 			if (this.FetterMapCache != null)
@@ -311,18 +310,18 @@ namespace Aki.Config
 			this.FetterMapCache = this.FetterMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600A8A8 RID: 43176 RVA: 0x002B35BE File Offset: 0x002B17BE
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetFetterMapFrozenDict(int key)
+		// Token: 0x0600AEC9 RID: 44745 RVA: 0x002D060A File Offset: 0x002CE80A
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetFetterMapFrozenDict()
 		{
 			this.EnsureFetterMapCacheIfNeeded();
 			return this.FetterMapCache;
 		}
 
-		// Token: 0x04004FA7 RID: 20391
+		// Token: 0x0400558C RID: 21900
 		private Table __p;
 
-		// Token: 0x04004FA8 RID: 20392
+		// Token: 0x0400558D RID: 21901
 		[Nullable(2)]
 		private FrozenDictionary<int, int> FetterMapCache;
 	}

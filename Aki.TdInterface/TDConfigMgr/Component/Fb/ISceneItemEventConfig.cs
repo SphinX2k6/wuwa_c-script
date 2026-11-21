@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DAA RID: 3498
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EA6 RID: 3750
 	public class ISceneItemEventConfig
 	{
-		// Token: 0x06004F7B RID: 20347 RVA: 0x000C4D11 File Offset: 0x000C2F11
+		// Token: 0x060054A0 RID: 21664 RVA: 0x000D0561 File Offset: 0x000CE761
 		public static ISceneItemEventConfig Create(ISceneItemEventConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019E4 RID: 6628
-		// (get) Token: 0x06004F7C RID: 20348 RVA: 0x000C4D30 File Offset: 0x000C2F30
+		// Token: 0x17001B4F RID: 6991
+		// (get) Token: 0x060054A1 RID: 21665 RVA: 0x000D0580 File Offset: 0x000CE780
 		public virtual string EntityStateTagName
 		{
 			get
@@ -33,19 +31,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019E5 RID: 6629
-		// (get) Token: 0x06004F7D RID: 20349 RVA: 0x000C4D40 File Offset: 0x000C2F40
+		// Token: 0x17001B50 RID: 6992
+		// (get) Token: 0x060054A2 RID: 21666 RVA: 0x000D0590 File Offset: 0x000CE790
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ISceneItemSequenceEventData> SequenceEvents
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -68,18 +66,18 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D9B RID: 11675
+		// Token: 0x04003061 RID: 12385
 		private ISceneItemEventConfig Instance;
 
-		// Token: 0x04002D9C RID: 11676
+		// Token: 0x04003062 RID: 12386
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ISceneItemSequenceEventData> _SequenceEventsCache;
 
-		// Token: 0x04002D9D RID: 11677
+		// Token: 0x04003063 RID: 12387
 		private bool _SequenceEventsInited;
 	}
 }

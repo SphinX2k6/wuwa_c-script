@@ -3,19 +3,19 @@ using CSharpScript.Game.Input;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005843 RID: 22595
+	// Token: 0x0200481B RID: 18459
 	public interface ILongPressInteractRestriction
 	{
-		// Token: 0x060396FF RID: 235263
+		// Token: 0x0602E616 RID: 189974
 		void Enter(EInputAction? triggerAction);
 
-		// Token: 0x06039700 RID: 235264
+		// Token: 0x0602E617 RID: 189975
 		void Press(EInputAction? triggerAction);
 
-		// Token: 0x06039701 RID: 235265
+		// Token: 0x0602E618 RID: 189976
 		void Release(EInputAction? triggerAction);
 
-		// Token: 0x06039702 RID: 235266
+		// Token: 0x0602E619 RID: 189977
 		void Exit(EInputAction? triggerAction);
 	}
 }

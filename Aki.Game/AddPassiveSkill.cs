@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002F45 RID: 12101
+// Token: 0x02002498 RID: 9368
 [NullableContext(1)]
 [Nullable(0)]
 public class AddPassiveSkill : BuffEffect
 {
-	// Token: 0x06019C35 RID: 105525 RVA: 0x006B7063 File Offset: 0x006B5263
+	// Token: 0x06017540 RID: 95552 RVA: 0x006DD387 File Offset: 0x006DB587
 	public AddPassiveSkill(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C36 RID: 105526 RVA: 0x006B7088 File Offset: 0x006B5288
+	// Token: 0x06017541 RID: 95553 RVA: 0x006DD3AC File Offset: 0x006DB5AC
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -31,26 +30,26 @@ public class AddPassiveSkill : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C37 RID: 105527 RVA: 0x006B70E7 File Offset: 0x006B52E7
+	// Token: 0x06017542 RID: 95554 RVA: 0x006DD40B File Offset: 0x006DB60B
 	public override void OnCreated()
 	{
 		this.UpdateTeamListenAndApply(true);
 	}
 
-	// Token: 0x06019C38 RID: 105528 RVA: 0x006B70F0 File Offset: 0x006B52F0
+	// Token: 0x06017543 RID: 95555 RVA: 0x006DD414 File Offset: 0x006DB614
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C39 RID: 105529 RVA: 0x006B70F3 File Offset: 0x006B52F3
+	// Token: 0x06017544 RID: 95556 RVA: 0x006DD417 File Offset: 0x006DB617
 	public override void OnRemoved(bool bPremature)
 	{
 		this.UpdateTeamListenAndApply(false);
 	}
 
-	// Token: 0x06019C3A RID: 105530 RVA: 0x006B70FC File Offset: 0x006B52FC
+	// Token: 0x06017545 RID: 95557 RVA: 0x006DD420 File Offset: 0x006DB620
 	private void UpdateTeamListenAndApply(bool learn)
 	{
 		Entity exactOwnerEntity = base.ExactOwnerEntity;
@@ -84,7 +83,7 @@ public class AddPassiveSkill : BuffEffect
 		this.ApplyPassiveSkills(skillComp, learn);
 	}
 
-	// Token: 0x06019C3B RID: 105531 RVA: 0x006B71FC File Offset: 0x006B53FC
+	// Token: 0x06017546 RID: 95558 RVA: 0x006DD520 File Offset: 0x006DB720
 	[NullableContext(2)]
 	private void ApplyPassiveSkills(CharacterPassiveSkillComponent skillComp, bool learn)
 	{
@@ -115,13 +114,12 @@ public class AddPassiveSkill : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C3C RID: 105532 RVA: 0x006B72B0 File Offset: 0x006B54B0
+	// Token: 0x06017547 RID: 95559 RVA: 0x006DD5D4 File Offset: 0x006DB7D4
 	private void OnChangeTeam()
 	{
 		SceneTeamModel instance = SceneTeamModel.Instance;
 		List<EntityHandle> list = ((instance != null) ? instance.GetTeamEntities(false) : null) ?? new List<EntityHandle>();
-		List<long> list2 = (from handle in list
-		select handle.CreatureDataId).ToList<long>();
+		List<long> list2 = list.ConvertAll<long>((EntityHandle handle) => handle.CreatureDataId);
 		foreach (EntityHandle entityHandle in list)
 		{
 			if (!this.TeamCreatureDataIds.Contains(entityHandle.CreatureDataId))
@@ -141,7 +139,7 @@ public class AddPassiveSkill : BuffEffect
 		this.TeamCreatureDataIds = list2;
 	}
 
-	// Token: 0x06019C3D RID: 105533 RVA: 0x006B73C4 File Offset: 0x006B55C4
+	// Token: 0x06017548 RID: 95560 RVA: 0x006DD6E0 File Offset: 0x006DB8E0
 	private void ApplyPassiveSkillsByCreatureDataId(long creatureDataId, bool learn)
 	{
 		CreatureModel instance = CreatureModel.Instance;
@@ -160,7 +158,7 @@ public class AddPassiveSkill : BuffEffect
 		this.ApplyPassiveSkills(skillComp, learn);
 	}
 
-	// Token: 0x06019C3E RID: 105534 RVA: 0x006B7404 File Offset: 0x006B5604
+	// Token: 0x06017549 RID: 95561 RVA: 0x006DD720 File Offset: 0x006DB920
 	public override string GetDebugEffectString()
 	{
 		Entity exactOwnerEntity = base.ExactOwnerEntity;
@@ -168,9 +166,9 @@ public class AddPassiveSkill : BuffEffect
 		return ((baseBuffComponent != null && baseBuffComponent.IsTeamBuffComponent()) ? "编队buff" : "非编队buff") + "添加被动技能" + string.Join<long>(",", this.SkillIds);
 	}
 
-	// Token: 0x0400C236 RID: 49718
+	// Token: 0x0400C5D8 RID: 50648
 	protected long[] SkillIds = Array.Empty<long>();
 
-	// Token: 0x0400C237 RID: 49719
+	// Token: 0x0400C5D9 RID: 50649
 	private List<long> TeamCreatureDataIds = new List<long>();
 }

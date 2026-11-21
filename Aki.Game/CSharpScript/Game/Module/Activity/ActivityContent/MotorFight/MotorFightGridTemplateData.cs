@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006410 RID: 25616
+	// Token: 0x0200538E RID: 21390
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,13 +13,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 	})]
 	public class MotorFightGridTemplateData : MultiTemplateGridDataBase<MotorFightItemData, MotorFightGridItem>
 	{
-		// Token: 0x060406E7 RID: 263911 RVA: 0x00F96189 File Offset: 0x00F94389
+		// Token: 0x060353A8 RID: 218024 RVA: 0x00EDD129 File Offset: 0x00EDB329
 		public override int GetTemplateIndex()
 		{
 			return 1;
 		}
 
-		// Token: 0x060406E8 RID: 263912 RVA: 0x00F9618C File Offset: 0x00F9438C
+		// Token: 0x060353A9 RID: 218025 RVA: 0x00EDD12C File Offset: 0x00EDB32C
 		public override MotorFightGridItem CreateProxy()
 		{
 			MotorFightGridItem proxy = new MotorFightGridItem();
@@ -31,10 +31,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return proxy;
 		}
 
-		// Token: 0x04021808 RID: 137224
+		// Token: 0x0401C137 RID: 114999
 		public Func<int, bool> IsSelected = (int id) => false;
 
-		// Token: 0x04021809 RID: 137225
+		// Token: 0x0401C138 RID: 115000
 		public Action<MotorFightItemData, int> OnClickCb;
 	}
 }

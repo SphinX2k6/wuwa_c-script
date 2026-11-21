@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x020039EC RID: 14828
+	// Token: 0x02003043 RID: 12355
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 子弹命中前 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F0E8 RID: 127208 RVA: 0x008A91CB File Offset: 0x008A73CB
+		// Token: 0x0601D549 RID: 120137 RVA: 0x008F182B File Offset: 0x008EFA2B
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 子弹命中前.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F0E9 RID: 127209 RVA: 0x008A91D7 File Offset: 0x008A73D7
+		// Token: 0x0601D54A RID: 120138 RVA: 0x008F1837 File Offset: 0x008EFA37
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__子弹命中前__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,32 +28,31 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__子弹命中前__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F0EA RID: 127210 RVA: 0x008A91FA File Offset: 0x008A73FA
+		// Token: 0x0601D54B RID: 120139 RVA: 0x008F185A File Offset: 0x008EFA5A
 		public 子弹命中前()
 		{
 		}
 
-		// Token: 0x0601F0EB RID: 127211 RVA: 0x008A9202 File Offset: 0x008A7402
+		// Token: 0x0601D54C RID: 120140 RVA: 0x008F1862 File Offset: 0x008EFA62
 		[NullableContext(2)]
 		public 子弹命中前(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F0EC RID: 127212 RVA: 0x008A920C File Offset: 0x008A740C
+		// Token: 0x0601D54D RID: 120141 RVA: 0x008F186C File Offset: 0x008EFA6C
 		public 子弹命中前(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F0ED RID: 127213 RVA: 0x008A9217 File Offset: 0x008A7417
+		// Token: 0x0601D54E RID: 120142 RVA: 0x008F1877 File Offset: 0x008EFA77
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int, int>) ?? ((Action<int, int>)Delegate.CreateDelegate(typeof(Action<int, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F0EE RID: 127214 RVA: 0x008A9249 File Offset: 0x008A7449
+		// Token: 0x0601D54F RID: 120143 RVA: 0x008F18A9 File Offset: 0x008EFAA9
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<int, int> Callback)
 		{
 			if (子弹命中前.RegisterId == 0)
@@ -68,17 +67,15 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, 子弹命中前.RegisterId);
 		}
 
-		// Token: 0x0601F0EF RID: 127215 RVA: 0x008A9283 File Offset: 0x008A7483
+		// Token: 0x0601D550 RID: 120144 RVA: 0x008F18E3 File Offset: 0x008EFAE3
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<int, int> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F0F0 RID: 127216 RVA: 0x008A928C File Offset: 0x008A748C
+		// Token: 0x0601D551 RID: 120145 RVA: 0x008F18EC File Offset: 0x008EFAEC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int BulletId, int EntityId)
 		{
 			子弹命中前.__子弹命中前_DelegateParams* ptr = stackalloc 子弹命中前.__子弹命中前_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(子弹命中前.__子弹命中前_DelegateParams) & -16L;
@@ -88,10 +85,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F0F1 RID: 127217 RVA: 0x008A92D0 File Offset: 0x008A74D0
+		// Token: 0x0601D552 RID: 120146 RVA: 0x008F1930 File Offset: 0x008EFB30
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, int> action = target as Action<int, int>;
@@ -102,32 +98,32 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(((子弹命中前.__子弹命中前_DelegateParams*)__Parameters)->BulletId, ((子弹命中前.__子弹命中前_DelegateParams*)__Parameters)->EntityId);
 		}
 
-		// Token: 0x0400EE1A RID: 60954
+		// Token: 0x0400F742 RID: 63298
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:子弹命中前__DelegateSignature";
 
-		// Token: 0x0400EE1B RID: 60955
+		// Token: 0x0400F743 RID: 63299
 		private static int RegisterId;
 
-		// Token: 0x020099E7 RID: 39399
+		// Token: 0x02008C9B RID: 35995
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __子弹命中前_DelegateParams
+		private ref struct __子弹命中前_DelegateParams
 		{
-			// Token: 0x04030EBB RID: 200379
+			// Token: 0x0402C79B RID: 182171
 			[FieldOffset(0)]
 			public int BulletId;
 
-			// Token: 0x04030EBC RID: 200380
+			// Token: 0x0402C79C RID: 182172
 			[FieldOffset(4)]
 			public int EntityId;
 		}
 
-		// Token: 0x020099E8 RID: 39400
+		// Token: 0x02008C9C RID: 35996
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030EBD RID: 200381
+			// Token: 0x0402C79D RID: 182173
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

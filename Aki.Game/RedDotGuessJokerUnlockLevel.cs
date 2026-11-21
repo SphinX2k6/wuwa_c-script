@@ -1,30 +1,30 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003434 RID: 13364
+// Token: 0x020029A8 RID: 10664
 public class RedDotGuessJokerUnlockLevel : RedDotBase
 {
-	// Token: 0x0601CDEB RID: 118251 RVA: 0x0080D6C1 File Offset: 0x0080B8C1
+	// Token: 0x0601AAEB RID: 109291 RVA: 0x00833DA9 File Offset: 0x00831FA9
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnGuessJokerRedDotNotify, new Action(base.EventCheck));
 		EventSystem.Instance.Add(EEventName.SpringManorFunctionOpenNotify, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CDEC RID: 118252 RVA: 0x0080D6FB File Offset: 0x0080B8FB
+	// Token: 0x0601AAEC RID: 109292 RVA: 0x00833DE3 File Offset: 0x00831FE3
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnGuessJokerRedDotNotify, new Action(base.EventCheck));
 		EventSystem.Instance.Remove(EEventName.SpringManorFunctionOpenNotify, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CDED RID: 118253 RVA: 0x0080D735 File Offset: 0x0080B935
+	// Token: 0x0601AAED RID: 109293 RVA: 0x00833E1D File Offset: 0x0083201D
 	protected override bool OnCheck(int uId = 0)
 	{
 		return GuessJokerGamePlayModel.Instance.CheckRedDot();
 	}
 
-	// Token: 0x0601CDEE RID: 118254 RVA: 0x0080D741 File Offset: 0x0080B941
+	// Token: 0x0601AAEE RID: 109294 RVA: 0x00833E29 File Offset: 0x00832029
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.SpringManorGameEntrance);

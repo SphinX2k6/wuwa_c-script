@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020029B3 RID: 10675
+// Token: 0x02001F2E RID: 7982
 public class ShipTowerScoreItemViewParams : IShipTowerScoreItemViewParams
 {
-	// Token: 0x17001D9F RID: 7583
-	// (get) Token: 0x06016230 RID: 90672 RVA: 0x005995A7 File Offset: 0x005977A7
-	// (set) Token: 0x06016231 RID: 90673 RVA: 0x005995AF File Offset: 0x005977AF
+	// Token: 0x17001DF8 RID: 7672
+	// (get) Token: 0x06013C36 RID: 80950 RVA: 0x005C4533 File Offset: 0x005C2733
+	// (set) Token: 0x06013C37 RID: 80951 RVA: 0x005C453B File Offset: 0x005C273B
 	public int CurScore { get; set; }
 
-	// Token: 0x17001DA0 RID: 7584
-	// (get) Token: 0x06016232 RID: 90674 RVA: 0x005995B8 File Offset: 0x005977B8
-	// (set) Token: 0x06016233 RID: 90675 RVA: 0x005995C0 File Offset: 0x005977C0
+	// Token: 0x17001DF9 RID: 7673
+	// (get) Token: 0x06013C38 RID: 80952 RVA: 0x005C4544 File Offset: 0x005C2744
+	// (set) Token: 0x06013C39 RID: 80953 RVA: 0x005C454C File Offset: 0x005C274C
 	public int MaxScore { get; set; }
 }

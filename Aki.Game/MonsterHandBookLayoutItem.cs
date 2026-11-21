@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E34 RID: 7732
+// Token: 0x020012F6 RID: 4854
 [NullableContext(1)]
 [Nullable(0)]
 internal class MonsterHandBookLayoutItem : UiPanelBase
 {
-	// Token: 0x0600EB07 RID: 60167 RVA: 0x0037ADE0 File Offset: 0x00378FE0
+	// Token: 0x0600BF26 RID: 48934 RVA: 0x00386A6C File Offset: 0x00384C6C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,13 +19,13 @@ internal class MonsterHandBookLayoutItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600EB08 RID: 60168 RVA: 0x0037AE03 File Offset: 0x00379003
+	// Token: 0x0600BF27 RID: 48935 RVA: 0x00386A8F File Offset: 0x00384C8F
 	protected override void OnStart()
 	{
 		this.GridLayout = new GenericLayout<MonsterHandBookMonsterItem, int>(base.GetGridLayout(0), new Func<MonsterHandBookMonsterItem>(this.InitItem), null, false, true);
 	}
 
-	// Token: 0x0600EB09 RID: 60169 RVA: 0x0037AE26 File Offset: 0x00379026
+	// Token: 0x0600BF28 RID: 48936 RVA: 0x00386AB2 File Offset: 0x00384CB2
 	private MonsterHandBookMonsterItem InitItem()
 	{
 		return new MonsterHandBookMonsterItem
@@ -34,7 +34,7 @@ internal class MonsterHandBookLayoutItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600EB0A RID: 60170 RVA: 0x0037AE39 File Offset: 0x00379039
+	// Token: 0x0600BF29 RID: 48937 RVA: 0x00386AC5 File Offset: 0x00384CC5
 	public void Update(int[] dataList)
 	{
 		if (this.GridLayout != null)
@@ -54,7 +54,7 @@ internal class MonsterHandBookLayoutItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04006D08 RID: 27912
+	// Token: 0x04006DE9 RID: 28137
 	[Nullable(new byte[]
 	{
 		2,
@@ -62,7 +62,7 @@ internal class MonsterHandBookLayoutItem : UiPanelBase
 	})]
 	public Action<UUIExtendToggle, int, bool> OnClickCallBack;
 
-	// Token: 0x04006D09 RID: 27913
+	// Token: 0x04006DEA RID: 28138
 	[Nullable(new byte[]
 	{
 		2,

@@ -2,23 +2,23 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002B89 RID: 11145
+// Token: 0x02002105 RID: 8453
 [NullableContext(1)]
 public interface ISurvivorsLevelInfo
 {
-	// Token: 0x17001ED9 RID: 7897
-	// (get) Token: 0x06017189 RID: 94601
+	// Token: 0x17001F31 RID: 7985
+	// (get) Token: 0x06014BBA RID: 84922
 	int LevelId { get; }
 
-	// Token: 0x17001EDA RID: 7898
-	// (get) Token: 0x0601718A RID: 94602
+	// Token: 0x17001F32 RID: 7986
+	// (get) Token: 0x06014BBB RID: 84923
 	long OpenTime { get; }
 
-	// Token: 0x17001EDB RID: 7899
-	// (get) Token: 0x0601718B RID: 94603
+	// Token: 0x17001F33 RID: 7987
+	// (get) Token: 0x06014BBC RID: 84924
 	bool IsEndlessMode { get; }
 
-	// Token: 0x17001EDC RID: 7900
-	// (get) Token: 0x0601718C RID: 94604
+	// Token: 0x17001F34 RID: 7988
+	// (get) Token: 0x06014BBD RID: 84925
 	ModeInfo Info { get; }
 }

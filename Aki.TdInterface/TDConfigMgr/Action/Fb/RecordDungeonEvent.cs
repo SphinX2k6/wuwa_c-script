@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A04 RID: 10756
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CF1 RID: 11505
 	public class RecordDungeonEvent : ActionParams
 	{
-		// Token: 0x0600ED58 RID: 60760 RVA: 0x00229BC0 File Offset: 0x00227DC0
+		// Token: 0x0600FBEF RID: 64495 RVA: 0x00247544 File Offset: 0x00245744
 		public static RecordDungeonEvent Create(IRecordDungeonEvent? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B12 RID: 19218
-		// (get) Token: 0x0600ED59 RID: 60761 RVA: 0x00229BDF File Offset: 0x00227DDF
+		// Token: 0x17004EBB RID: 20155
+		// (get) Token: 0x0600FBF0 RID: 64496 RVA: 0x00247563 File Offset: 0x00245763
 		public virtual IRecordTimeStampType EventConfig
 		{
 			get
@@ -38,14 +36,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082A6 RID: 33446
+		// Token: 0x04008997 RID: 35223
 		private IRecordDungeonEvent Instance;
 
-		// Token: 0x040082A7 RID: 33447
+		// Token: 0x04008998 RID: 35224
 		[Nullable(2)]
 		private IRecordTimeStampType _EventConfigCache;
 
-		// Token: 0x040082A8 RID: 33448
+		// Token: 0x04008999 RID: 35225
 		private bool _EventConfigInited;
 	}
 }

@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 {
-	// Token: 0x02005AEB RID: 23275
+	// Token: 0x02004ACC RID: 19148
 	internal enum EUnlockDetailComponent
 	{
-		// Token: 0x0401EC0A RID: 125962
+		// Token: 0x040196C6 RID: 104134
 		BtnConfirm,
-		// Token: 0x0401EC0B RID: 125963
+		// Token: 0x040196C7 RID: 104135
 		TxtName,
-		// Token: 0x0401EC0C RID: 125964
+		// Token: 0x040196C8 RID: 104136
 		ItemDialog,
-		// Token: 0x0401EC0D RID: 125965
+		// Token: 0x040196C9 RID: 104137
 		TxtDangoSay,
-		// Token: 0x0401EC0E RID: 125966
+		// Token: 0x040196CA RID: 104138
 		ItemNameRoot,
-		// Token: 0x0401EC0F RID: 125967
+		// Token: 0x040196CB RID: 104139
 		BuffText,
-		// Token: 0x0401EC10 RID: 125968
+		// Token: 0x040196CC RID: 104140
 		LevelText
 	}
 }

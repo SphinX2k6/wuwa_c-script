@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001549 RID: 5449
+	// Token: 0x020015BF RID: 5567
 	public enum ActivityOpenType
 	{
-		// Token: 0x0400A574 RID: 42356
+		// Token: 0x0400A9D2 RID: 43474
 		[OriginalName("TimeLimited")]
 		TimeLimited,
-		// Token: 0x0400A575 RID: 42357
+		// Token: 0x0400A9D3 RID: 43475
 		[OriginalName("Permanent")]
 		Permanent,
-		// Token: 0x0400A576 RID: 42358
+		// Token: 0x0400A9D4 RID: 43476
 		[OriginalName("LimitToPermanent")]
 		LimitToPermanent
 	}

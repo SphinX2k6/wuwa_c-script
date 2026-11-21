@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BB1 RID: 2993
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C7F RID: 3199
 	public class INpcStandbyShowFinitely : INpcStandbyShowMode
 	{
-		// Token: 0x060044A4 RID: 17572 RVA: 0x000AE473 File Offset: 0x000AC673
+		// Token: 0x060048FD RID: 18685 RVA: 0x000B8537 File Offset: 0x000B6737
 		public static INpcStandbyShowFinitely Create(INpcStandbyShowFinitely? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012FF RID: 4863
-		// (get) Token: 0x060044A5 RID: 17573 RVA: 0x000AE492 File Offset: 0x000AC692
+		// Token: 0x170013FA RID: 5114
+		// (get) Token: 0x060048FE RID: 18686 RVA: 0x000B8556 File Offset: 0x000B6756
 		public override ENpcStandbyShowMode Type
 		{
 			get
@@ -34,19 +32,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001300 RID: 4864
-		// (get) Token: 0x060044A6 RID: 17574 RVA: 0x000AE4A0 File Offset: 0x000AC6A0
+		// Token: 0x170013FB RID: 5115
+		// (get) Token: 0x060048FF RID: 18687 RVA: 0x000B8564 File Offset: 0x000B6764
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<INpcLookAtConfig> LookAtConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001301 RID: 4865
-		// (get) Token: 0x060044A7 RID: 17575 RVA: 0x000AE51A File Offset: 0x000AC71A
+		// Token: 0x170013FC RID: 5116
+		// (get) Token: 0x06004900 RID: 18688 RVA: 0x000B85DE File Offset: 0x000B67DE
 		public virtual ENpcStandbyShowFinitelyPlayMode PlayMode
 		{
 			get
@@ -79,8 +77,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001302 RID: 4866
-		// (get) Token: 0x060044A8 RID: 17576 RVA: 0x000AE528 File Offset: 0x000AC728
+		// Token: 0x170013FD RID: 5117
+		// (get) Token: 0x06004901 RID: 18689 RVA: 0x000B85EC File Offset: 0x000B67EC
 		public virtual List<INpcStandbyShowFinitelyInfo> Montages
 		{
 			get
@@ -100,24 +98,24 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026CE RID: 9934
+		// Token: 0x04002916 RID: 10518
 		private INpcStandbyShowFinitely Instance;
 
-		// Token: 0x040026CF RID: 9935
+		// Token: 0x04002917 RID: 10519
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<INpcLookAtConfig> _LookAtConfigsCache;
 
-		// Token: 0x040026D0 RID: 9936
+		// Token: 0x04002918 RID: 10520
 		private bool _LookAtConfigsInited;
 
-		// Token: 0x040026D1 RID: 9937
+		// Token: 0x04002919 RID: 10521
 		private List<INpcStandbyShowFinitelyInfo> _MontagesCache;
 
-		// Token: 0x040026D2 RID: 9938
+		// Token: 0x0400291A RID: 10522
 		private bool _MontagesInited;
 	}
 }

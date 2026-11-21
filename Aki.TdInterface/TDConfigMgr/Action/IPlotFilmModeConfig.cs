@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D2A RID: 7466
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F3B RID: 7995
 	public class IPlotFilmModeConfig
 	{
-		// Token: 0x0600A03B RID: 41019 RVA: 0x0016DA8C File Offset: 0x0016BC8C
+		// Token: 0x0600AA27 RID: 43559 RVA: 0x00181EB0 File Offset: 0x001800B0
 		private IPlotFilmModeConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A03C RID: 41020 RVA: 0x0016DAC4 File Offset: 0x0016BCC4
+		// Token: 0x0600AA28 RID: 43560 RVA: 0x00181EE8 File Offset: 0x001800E8
 		public static IPlotFilmModeConfig Create([Nullable(2)] IPlotFilmModeConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A03D RID: 41021 RVA: 0x0016DAD7 File Offset: 0x0016BCD7
+		// Token: 0x0600AA29 RID: 43561 RVA: 0x00181EFB File Offset: 0x001800FB
 		public static IPlotFilmModeConfig CreateFromSetValue([Nullable(2)] IPlotFilmModeConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A03E RID: 41022 RVA: 0x0016DAEA File Offset: 0x0016BCEA
+		// Token: 0x0600AA2A RID: 43562 RVA: 0x00181F0E File Offset: 0x0018010E
 		public IPlotFilmModeConfig_SetValue ToSetValue()
 		{
 			return new IPlotFilmModeConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031B5 RID: 12725
-		// (get) Token: 0x0600A03F RID: 41023 RVA: 0x0016DB00 File Offset: 0x0016BD00
-		// (set) Token: 0x0600A040 RID: 41024 RVA: 0x0016DB3A File Offset: 0x0016BD3A
+		// Token: 0x17003449 RID: 13385
+		// (get) Token: 0x0600AA2B RID: 43563 RVA: 0x00181F24 File Offset: 0x00180124
+		// (set) Token: 0x0600AA2C RID: 43564 RVA: 0x00181F5E File Offset: 0x0018015E
 		public virtual bool? IsAdaptFilmAspectRatio
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400609A RID: 24730
+		// Token: 0x04006616 RID: 26134
 		[Nullable(2)]
 		protected IPlotFilmModeConfig FbInstance;
 
-		// Token: 0x0400609B RID: 24731
+		// Token: 0x04006617 RID: 26135
 		[Nullable(2)]
 		protected IPlotFilmModeConfig_SetValue PocoInterface;
 	}

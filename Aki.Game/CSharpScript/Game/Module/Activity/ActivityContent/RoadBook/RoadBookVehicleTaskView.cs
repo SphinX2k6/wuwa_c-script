@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061F9 RID: 25081
+	// Token: 0x02005177 RID: 20855
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoadBookVehicleTaskView : UiViewBase
 	{
-		// Token: 0x0603F486 RID: 259206 RVA: 0x00F4AC58 File Offset: 0x00F48E58
+		// Token: 0x06034147 RID: 213319 RVA: 0x00E91BB0 File Offset: 0x00E8FDB0
 		public RoadBookVehicleTaskView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F487 RID: 259207 RVA: 0x00F4AC68 File Offset: 0x00F48E68
+		// Token: 0x06034148 RID: 213320 RVA: 0x00E91BC0 File Offset: 0x00E8FDC0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F488 RID: 259208 RVA: 0x00F4AD6C File Offset: 0x00F48F6C
+		// Token: 0x06034149 RID: 213321 RVA: 0x00E91CC4 File Offset: 0x00E8FEC4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoadBookVehicleTaskView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -53,19 +53,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F489 RID: 259209 RVA: 0x00F4ADAF File Offset: 0x00F48FAF
+		// Token: 0x0603414A RID: 213322 RVA: 0x00E91D07 File Offset: 0x00E8FF07
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.RoadBookMotorRefresh, new Action(this.OnRoadBookMotorRefresh));
 		}
 
-		// Token: 0x0603F48A RID: 259210 RVA: 0x00F4ADCD File Offset: 0x00F48FCD
+		// Token: 0x0603414B RID: 213323 RVA: 0x00E91D25 File Offset: 0x00E8FF25
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RoadBookMotorRefresh, new Action(this.OnRoadBookMotorRefresh));
 		}
 
-		// Token: 0x0603F48B RID: 259211 RVA: 0x00F4ADEC File Offset: 0x00F48FEC
+		// Token: 0x0603414C RID: 213324 RVA: 0x00E91D44 File Offset: 0x00E8FF44
 		private void OnRoadBookMotorRefresh()
 		{
 			MotorChallengePlayData tabData = this.ActivityBaseData.GetAllMotorTabData()[this.SelectedTabIndex];
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.RefreshContent(tabData);
 		}
 
-		// Token: 0x0603F48C RID: 259212 RVA: 0x00F4AE22 File Offset: 0x00F49022
+		// Token: 0x0603414D RID: 213325 RVA: 0x00E91D7A File Offset: 0x00E8FF7A
 		private TabGroupGridItem OnCreateMenuItem()
 		{
 			return new TabGroupGridItem
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F48D RID: 259213 RVA: 0x00F4AE3B File Offset: 0x00F4903B
+		// Token: 0x0603414E RID: 213326 RVA: 0x00E91D93 File Offset: 0x00E8FF93
 		private MotorChallengeItem OnCreateTaskItem()
 		{
 			MotorChallengeItem motorChallengeItem = new MotorChallengeItem(this.ActivityBaseData);
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return motorChallengeItem;
 		}
 
-		// Token: 0x0603F48E RID: 259214 RVA: 0x00F4AE5C File Offset: 0x00F4905C
+		// Token: 0x0603414F RID: 213327 RVA: 0x00E91DB4 File Offset: 0x00E8FFB4
 		private void OnClickRewardCb()
 		{
 			MotorChallengePlayData motorChallengePlayData = this.ActivityBaseData.GetAllMotorTabData()[this.SelectedTabIndex];
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			ActivityRoadBookController.Instance.RequestMultiTakeMotorChallengeReward(list.ToArray());
 		}
 
-		// Token: 0x0603F48F RID: 259215 RVA: 0x00F4AEF4 File Offset: 0x00F490F4
+		// Token: 0x06034150 RID: 213328 RVA: 0x00E91E4C File Offset: 0x00E9004C
 		private void OnClickChildToggle(MotorChallengePlayData tabData, MenuTabToggleItem tabItem)
 		{
 			if (this.SelectChildToggle != null)
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.RefreshContent(tabData);
 		}
 
-		// Token: 0x0603F490 RID: 259216 RVA: 0x00F4AF70 File Offset: 0x00F49170
+		// Token: 0x06034151 RID: 213329 RVA: 0x00E91EC8 File Offset: 0x00E900C8
 		private UniTask RefreshTabGroup()
 		{
 			RoadBookVehicleTaskView.<RefreshTabGroup>d__17 <RefreshTabGroup>d__;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <RefreshTabGroup>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F491 RID: 259217 RVA: 0x00F4AFB4 File Offset: 0x00F491B4
+		// Token: 0x06034152 RID: 213330 RVA: 0x00E91F0C File Offset: 0x00E9010C
 		private void RefreshContent(MotorChallengePlayData tabData)
 		{
 			bool isUnlock = tabData.IsUnlock;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.TaskScroll.RefreshByData(data, null, true);
 		}
 
-		// Token: 0x0603F492 RID: 259218 RVA: 0x00F4B044 File Offset: 0x00F49244
+		// Token: 0x06034153 RID: 213331 RVA: 0x00E91F9C File Offset: 0x00E9019C
 		private void OnClickBtnJump()
 		{
 			foreach (MotorChallengePlayData motorChallengePlayData in this.ActivityBaseData.GetAllMotorTabData())
@@ -176,33 +176,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F493 RID: 259219 RVA: 0x00F4B0B4 File Offset: 0x00F492B4
+		// Token: 0x06034154 RID: 213332 RVA: 0x00E9200C File Offset: 0x00E9020C
 		private void OnClickHelpBtn()
 		{
 			HelpController.Instance.OpenHelpById(this.ActivityBaseData.LocalConfig.Value.HelpId);
 		}
 
-		// Token: 0x0402102B RID: 135211
+		// Token: 0x0401B95A RID: 112986
 		[Nullable(2)]
 		private PopupCaptionItem CaptionComponent;
 
-		// Token: 0x0402102C RID: 135212
+		// Token: 0x0401B95B RID: 112987
 		private ActivityRoadBookData ActivityBaseData;
 
-		// Token: 0x0402102D RID: 135213
+		// Token: 0x0401B95C RID: 112988
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0402102E RID: 135214
+		// Token: 0x0401B95D RID: 112989
 		private GenericScrollViewNew<TabGroupGridItem, ITabGroupData> MenuScroll;
 
-		// Token: 0x0402102F RID: 135215
+		// Token: 0x0401B95E RID: 112990
 		private GenericScrollViewNew<MotorChallengeItem, ActivityTaskData> TaskScroll;
 
-		// Token: 0x04021030 RID: 135216
+		// Token: 0x0401B95F RID: 112991
 		private int SelectedTabIndex = -1;
 
-		// Token: 0x04021031 RID: 135217
+		// Token: 0x0401B960 RID: 112992
 		[Nullable(2)]
 		private MenuTabToggleItem SelectChildToggle;
 	}

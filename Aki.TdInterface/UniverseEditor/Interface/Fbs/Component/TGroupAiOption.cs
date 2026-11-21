@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C2A RID: 23594
+	// Token: 0x0200624F RID: 25167
 	public enum TGroupAiOption : byte
 	{
-		// Token: 0x0400F409 RID: 62473
+		// Token: 0x04010133 RID: 65843
 		NONE,
-		// Token: 0x0400F40A RID: 62474
+		// Token: 0x04010134 RID: 65844
 		IGroupAiModeDefault,
-		// Token: 0x0400F40B RID: 62475
+		// Token: 0x04010135 RID: 65845
 		IGroupAiMonsterEcology,
-		// Token: 0x0400F40C RID: 62476
+		// Token: 0x04010136 RID: 65846
 		IGroupAiPatrol
 	}
 }

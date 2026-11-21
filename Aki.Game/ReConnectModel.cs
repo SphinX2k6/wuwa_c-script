@@ -5,13 +5,13 @@ using Aki.Config;
 using CSharpScript.Launcher;
 using UnrealEngine;
 
-// Token: 0x02002751 RID: 10065
+// Token: 0x02001C3C RID: 7228
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ReConnectModel : ModelBase
 {
-	// Token: 0x06014A3B RID: 84539 RVA: 0x005392C0 File Offset: 0x005374C0
+	// Token: 0x06011F1E RID: 73502 RVA: 0x00548154 File Offset: 0x00546354
 	protected override bool OnInit()
 	{
 		this.ClearReconnectData();
@@ -32,14 +32,14 @@ public class ReConnectModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06014A3C RID: 84540 RVA: 0x00539381 File Offset: 0x00537581
+	// Token: 0x06011F1F RID: 73503 RVA: 0x00548215 File Offset: 0x00546415
 	protected override bool OnClear()
 	{
 		this.ClearReconnectData();
 		return true;
 	}
 
-	// Token: 0x06014A3D RID: 84541 RVA: 0x0053938A File Offset: 0x0053758A
+	// Token: 0x06011F20 RID: 73504 RVA: 0x0054821E File Offset: 0x0054641E
 	public void ClearReconnectData()
 	{
 		this.ReConnectCount = 0;
@@ -48,8 +48,8 @@ public class ReConnectModel : ModelBase
 		this.ReconvTraceId = string.Empty;
 	}
 
-	// Token: 0x17001B09 RID: 6921
-	// (get) Token: 0x06014A3E RID: 84542 RVA: 0x005393AB File Offset: 0x005375AB
+	// Token: 0x17001B42 RID: 6978
+	// (get) Token: 0x06011F21 RID: 73505 RVA: 0x0054823F File Offset: 0x0054643F
 	public int ServerChannelCloseTimeMs
 	{
 		get
@@ -58,25 +58,25 @@ public class ReConnectModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014A3F RID: 84543 RVA: 0x005393B9 File Offset: 0x005375B9
+	// Token: 0x06011F22 RID: 73506 RVA: 0x0054824D File Offset: 0x0054644D
 	public void AddRpc(int rpcId)
 	{
 		this.RpcSet.Add(rpcId);
 	}
 
-	// Token: 0x06014A40 RID: 84544 RVA: 0x005393C8 File Offset: 0x005375C8
+	// Token: 0x06011F23 RID: 73507 RVA: 0x0054825C File Offset: 0x0054645C
 	public void DelRpc(int rpcId)
 	{
 		this.RpcSet.Remove(rpcId);
 	}
 
-	// Token: 0x06014A41 RID: 84545 RVA: 0x005393D7 File Offset: 0x005375D7
+	// Token: 0x06011F24 RID: 73508 RVA: 0x0054826B File Offset: 0x0054646B
 	public bool IsRpcEmpty()
 	{
 		return this.RpcSet.Count <= 0;
 	}
 
-	// Token: 0x06014A42 RID: 84546 RVA: 0x005393EC File Offset: 0x005375EC
+	// Token: 0x06011F25 RID: 73509 RVA: 0x00548280 File Offset: 0x00546480
 	public string GetUnResponsedRpcStr()
 	{
 		string text = string.Empty;
@@ -92,25 +92,25 @@ public class ReConnectModel : ModelBase
 		return text;
 	}
 
-	// Token: 0x06014A43 RID: 84547 RVA: 0x00539478 File Offset: 0x00537678
+	// Token: 0x06011F26 RID: 73510 RVA: 0x0054830C File Offset: 0x0054650C
 	public bool IsReConnectMaxCount()
 	{
 		return this.ReConnectCount > this.ReConnectMaxCount;
 	}
 
-	// Token: 0x06014A44 RID: 84548 RVA: 0x00539488 File Offset: 0x00537688
+	// Token: 0x06011F27 RID: 73511 RVA: 0x0054831C File Offset: 0x0054651C
 	public int GetReConnectCount()
 	{
 		return this.ReConnectCount;
 	}
 
-	// Token: 0x06014A45 RID: 84549 RVA: 0x00539490 File Offset: 0x00537690
+	// Token: 0x06011F28 RID: 73512 RVA: 0x00548324 File Offset: 0x00546524
 	public void ReSetReConnectCount()
 	{
 		this.ReConnectCount = 0;
 	}
 
-	// Token: 0x06014A46 RID: 84550 RVA: 0x00539499 File Offset: 0x00537699
+	// Token: 0x06011F29 RID: 73513 RVA: 0x0054832D File Offset: 0x0054652D
 	public int AddReConnectCount()
 	{
 		this.ReConnectCount++;
@@ -118,26 +118,26 @@ public class ReConnectModel : ModelBase
 		return this.ReConnectCount;
 	}
 
-	// Token: 0x06014A47 RID: 84551 RVA: 0x005394BD File Offset: 0x005376BD
+	// Token: 0x06011F2A RID: 73514 RVA: 0x00548351 File Offset: 0x00546551
 	public bool IsTryMaxCount()
 	{
 		return !this.DebugForeverTryReconnect && this.TryReconnectCount >= this.TryReConnectMaxCount;
 	}
 
-	// Token: 0x06014A48 RID: 84552 RVA: 0x005394DA File Offset: 0x005376DA
+	// Token: 0x06011F2B RID: 73515 RVA: 0x0054836E File Offset: 0x0054656E
 	public void AddTryCount()
 	{
 		this.TryReconnectCount++;
 	}
 
-	// Token: 0x06014A49 RID: 84553 RVA: 0x005394EA File Offset: 0x005376EA
+	// Token: 0x06011F2C RID: 73516 RVA: 0x0054837E File Offset: 0x0054657E
 	public int GetTryCount()
 	{
 		return this.TryReconnectCount;
 	}
 
-	// Token: 0x17001B0A RID: 6922
-	// (get) Token: 0x06014A4A RID: 84554 RVA: 0x005394F2 File Offset: 0x005376F2
+	// Token: 0x17001B43 RID: 6979
+	// (get) Token: 0x06011F2D RID: 73517 RVA: 0x00548386 File Offset: 0x00546586
 	public int GetTotalReConnectCount
 	{
 		get
@@ -146,25 +146,25 @@ public class ReConnectModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014A4B RID: 84555 RVA: 0x005394FA File Offset: 0x005376FA
+	// Token: 0x06011F2E RID: 73518 RVA: 0x0054838E File Offset: 0x0054658E
 	public EReConnectStatus GetReConnectStatus()
 	{
 		return this.ReConnectStatus;
 	}
 
-	// Token: 0x06014A4C RID: 84556 RVA: 0x00539502 File Offset: 0x00537702
+	// Token: 0x06011F2F RID: 73519 RVA: 0x00548396 File Offset: 0x00546596
 	public void ResetReconnectStatus()
 	{
 		this.ReConnectStatus = EReConnectStatus.NoReConnect;
 	}
 
-	// Token: 0x06014A4D RID: 84557 RVA: 0x0053950B File Offset: 0x0053770B
+	// Token: 0x06011F30 RID: 73520 RVA: 0x0054839F File Offset: 0x0054659F
 	public void SetReconnectDoing()
 	{
 		this.ReConnectStatus = EReConnectStatus.ReConnectDoing;
 	}
 
-	// Token: 0x06014A4E RID: 84558 RVA: 0x00539514 File Offset: 0x00537714
+	// Token: 0x06011F31 RID: 73521 RVA: 0x005483A8 File Offset: 0x005465A8
 	public void CancelShowMaskTimer()
 	{
 		if (this.ShowMaskTimer != null)
@@ -174,7 +174,7 @@ public class ReConnectModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014A4F RID: 84559 RVA: 0x00539538 File Offset: 0x00537738
+	// Token: 0x06011F32 RID: 73522 RVA: 0x005483CC File Offset: 0x005465CC
 	public void StartShowMaskTimer(Action callback)
 	{
 		this.ShowMaskTimer = TimerSystem.Instance.Delay(delegate(float _)
@@ -184,27 +184,27 @@ public class ReConnectModel : ModelBase
 		}, (float)this.SilentTimeMs, null, null, true, 1f);
 	}
 
-	// Token: 0x06014A50 RID: 84560 RVA: 0x00539584 File Offset: 0x00537784
+	// Token: 0x06011F33 RID: 73523 RVA: 0x00548418 File Offset: 0x00546618
 	public void SetCurIncId()
 	{
 		this.CurIncId = this.ReConnectIncId;
 	}
 
-	// Token: 0x06014A51 RID: 84561 RVA: 0x00539592 File Offset: 0x00537792
+	// Token: 0x06011F34 RID: 73524 RVA: 0x00548426 File Offset: 0x00546626
 	public bool IsReConnectIdSame()
 	{
 		return this.CurIncId == this.ReConnectIncId;
 	}
 
-	// Token: 0x06014A52 RID: 84562 RVA: 0x005395A2 File Offset: 0x005377A2
+	// Token: 0x06011F35 RID: 73525 RVA: 0x00548436 File Offset: 0x00546636
 	public void AddReConnectIncId()
 	{
 		this.ReConnectIncId++;
 	}
 
-	// Token: 0x17001B0B RID: 6923
-	// (get) Token: 0x06014A53 RID: 84563 RVA: 0x005395B2 File Offset: 0x005377B2
-	// (set) Token: 0x06014A54 RID: 84564 RVA: 0x005395BA File Offset: 0x005377BA
+	// Token: 0x17001B44 RID: 6980
+	// (get) Token: 0x06011F36 RID: 73526 RVA: 0x00548446 File Offset: 0x00546646
+	// (set) Token: 0x06011F37 RID: 73527 RVA: 0x0054844E File Offset: 0x0054664E
 	[Nullable(2)]
 	public Action DisconnectedFunction
 	{
@@ -220,9 +220,9 @@ public class ReConnectModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001B0C RID: 6924
-	// (get) Token: 0x06014A55 RID: 84565 RVA: 0x005395C3 File Offset: 0x005377C3
-	// (set) Token: 0x06014A56 RID: 84566 RVA: 0x005395CB File Offset: 0x005377CB
+	// Token: 0x17001B45 RID: 6981
+	// (get) Token: 0x06011F38 RID: 73528 RVA: 0x00548457 File Offset: 0x00546657
+	// (set) Token: 0x06011F39 RID: 73529 RVA: 0x0054845F File Offset: 0x0054665F
 	public string ReconvTraceId
 	{
 		get
@@ -235,9 +235,9 @@ public class ReConnectModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001B0D RID: 6925
-	// (get) Token: 0x06014A57 RID: 84567 RVA: 0x005395D4 File Offset: 0x005377D4
-	// (set) Token: 0x06014A58 RID: 84568 RVA: 0x005395DC File Offset: 0x005377DC
+	// Token: 0x17001B46 RID: 6982
+	// (get) Token: 0x06011F3A RID: 73530 RVA: 0x00548468 File Offset: 0x00546668
+	// (set) Token: 0x06011F3B RID: 73531 RVA: 0x00548470 File Offset: 0x00546670
 	public unsafe ENetworkType LastNetworkType
 	{
 		get
@@ -258,8 +258,8 @@ public class ReConnectModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001B0E RID: 6926
-	// (get) Token: 0x06014A59 RID: 84569 RVA: 0x00539652 File Offset: 0x00537852
+	// Token: 0x17001B47 RID: 6983
+	// (get) Token: 0x06011F3C RID: 73532 RVA: 0x005484E6 File Offset: 0x005466E6
 	public UKuroNetworkChange NetworkListener
 	{
 		get
@@ -272,8 +272,8 @@ public class ReConnectModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001B0F RID: 6927
-	// (get) Token: 0x06014A5A RID: 84570 RVA: 0x0053966D File Offset: 0x0053786D
+	// Token: 0x17001B48 RID: 6984
+	// (get) Token: 0x06011F3D RID: 73533 RVA: 0x00548501 File Offset: 0x00546701
 	public static ReConnectModel Instance
 	{
 		get
@@ -282,7 +282,7 @@ public class ReConnectModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014A5B RID: 84571 RVA: 0x00539674 File Offset: 0x00537874
+	// Token: 0x06011F3E RID: 73534 RVA: 0x00548508 File Offset: 0x00546708
 	public static ReConnectModel GetOrCreateInstance()
 	{
 		if (ReConnectModel._Instance == null)
@@ -292,7 +292,7 @@ public class ReConnectModel : ModelBase
 		return ReConnectModel._Instance;
 	}
 
-	// Token: 0x06014A5C RID: 84572 RVA: 0x00539688 File Offset: 0x00537888
+	// Token: 0x06011F3F RID: 73535 RVA: 0x0054851C File Offset: 0x0054671C
 	public static bool CreateInstance()
 	{
 		if (ReConnectModel._Instance != null)
@@ -303,78 +303,78 @@ public class ReConnectModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06014A5D RID: 84573 RVA: 0x0053969E File Offset: 0x0053789E
+	// Token: 0x06011F40 RID: 73536 RVA: 0x00548532 File Offset: 0x00546732
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06014A5E RID: 84574 RVA: 0x005396A0 File Offset: 0x005378A0
+	// Token: 0x06011F41 RID: 73537 RVA: 0x00548534 File Offset: 0x00546734
 	public static void ResetStaticDefaultValue()
 	{
 		ReConnectModel._Instance = null;
 	}
 
-	// Token: 0x06014A5F RID: 84575 RVA: 0x005396A8 File Offset: 0x005378A8
+	// Token: 0x06011F42 RID: 73538 RVA: 0x0054853C File Offset: 0x0054673C
 	static ReConnectModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ReConnectModel.CreateStaticDefaultValue), new Action(ReConnectModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009B25 RID: 39717
+	// Token: 0x04009C7E RID: 40062
 	private bool DebugForeverTryReconnect;
 
-	// Token: 0x04009B26 RID: 39718
+	// Token: 0x04009C7F RID: 40063
 	private int ReConnectIncId;
 
-	// Token: 0x04009B27 RID: 39719
+	// Token: 0x04009C80 RID: 40064
 	private int ReConnectCount;
 
-	// Token: 0x04009B28 RID: 39720
+	// Token: 0x04009C81 RID: 40065
 	private int TryReconnectCount;
 
-	// Token: 0x04009B29 RID: 39721
+	// Token: 0x04009C82 RID: 40066
 	private EReConnectStatus ReConnectStatus;
 
-	// Token: 0x04009B2A RID: 39722
+	// Token: 0x04009C83 RID: 40067
 	private int TotalReConnectCount;
 
-	// Token: 0x04009B2B RID: 39723
+	// Token: 0x04009C84 RID: 40068
 	private readonly HashSet<int> RpcSet = new HashSet<int>();
 
-	// Token: 0x04009B2C RID: 39724
+	// Token: 0x04009C85 RID: 40069
 	private int TryReConnectMaxCount;
 
-	// Token: 0x04009B2D RID: 39725
+	// Token: 0x04009C86 RID: 40070
 	private int ReConnectMaxCount;
 
-	// Token: 0x04009B2E RID: 39726
+	// Token: 0x04009C87 RID: 40071
 	private int CurIncId;
 
-	// Token: 0x04009B2F RID: 39727
+	// Token: 0x04009C88 RID: 40072
 	[Nullable(2)]
 	private TimerHandle ShowMaskTimer;
 
-	// Token: 0x04009B30 RID: 39728
+	// Token: 0x04009C89 RID: 40073
 	private int SilentTimeMs = 1000;
 
-	// Token: 0x04009B31 RID: 39729
+	// Token: 0x04009C8A RID: 40074
 	private int ServerChannelCloseSeconds = 60;
 
-	// Token: 0x04009B32 RID: 39730
+	// Token: 0x04009C8B RID: 40075
 	[Nullable(2)]
 	private Action DisconnectedFunctionInternal;
 
-	// Token: 0x04009B33 RID: 39731
+	// Token: 0x04009C8C RID: 40076
 	private string ReconvTraceIdInternal = string.Empty;
 
-	// Token: 0x04009B34 RID: 39732
+	// Token: 0x04009C8D RID: 40077
 	private ENetworkType LastNetworkTypeInternal = ENetworkType.None;
 
-	// Token: 0x04009B35 RID: 39733
+	// Token: 0x04009C8E RID: 40078
 	[Nullable(2)]
 	private UKuroNetworkChange NetworkListenerInternal;
 
-	// Token: 0x04009B36 RID: 39734
+	// Token: 0x04009C8F RID: 40079
 	[Nullable(2)]
 	private static ReConnectModel _Instance;
 }

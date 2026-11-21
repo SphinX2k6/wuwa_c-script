@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000EFA RID: 3834
+// Token: 0x020003AF RID: 943
 public enum EModifierType
 {
-	// Token: 0x04002BFC RID: 11260
+	// Token: 0x04002C95 RID: 11413
 	Override,
-	// Token: 0x04002BFD RID: 11261
+	// Token: 0x04002C96 RID: 11414
 	IncreaseModify,
-	// Token: 0x04002BFE RID: 11262
+	// Token: 0x04002C97 RID: 11415
 	DecreaseModify
 }

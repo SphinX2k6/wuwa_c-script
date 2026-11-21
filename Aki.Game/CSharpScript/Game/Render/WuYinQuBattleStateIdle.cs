@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x02004598 RID: 17816
+	// Token: 0x020034C0 RID: 13504
 	public class WuYinQuBattleStateIdle : WuYinQuBattleStateBase
 	{
-		// Token: 0x0602DF0E RID: 188174 RVA: 0x00A909F8 File Offset: 0x00A8EBF8
+		// Token: 0x060225F8 RID: 140792 RVA: 0x009BCC18 File Offset: 0x009BAE18
 		[NullableContext(1)]
 		public WuYinQuBattleStateIdle(WuYinQuBattleActor Owner, EWuYinQuBattleState State, [Nullable(new byte[]
 		{
@@ -16,25 +16,25 @@ namespace CSharpScript.Game.Render
 		{
 		}
 
-		// Token: 0x0602DF0F RID: 188175 RVA: 0x00A90A03 File Offset: 0x00A8EC03
+		// Token: 0x060225F9 RID: 140793 RVA: 0x009BCC23 File Offset: 0x009BAE23
 		protected override void OnStart()
 		{
 			this.OnEnter(new EWuYinQuBattleState?(EWuYinQuBattleState.Idle));
 		}
 
-		// Token: 0x0602DF10 RID: 188176 RVA: 0x00A90A14 File Offset: 0x00A8EC14
+		// Token: 0x060225FA RID: 140794 RVA: 0x009BCC34 File Offset: 0x009BAE34
 		protected override void OnEnter(EWuYinQuBattleState? lastState)
 		{
 			Log.Instance.Info(ELogModule.RenderBattle, ELogAuthor.HCS, "进入idle状态", default(ReadOnlySpan<ValueTuple<string, object>>));
 			this.Owner.当前状态 = "静止状态";
 		}
 
-		// Token: 0x0602DF11 RID: 188177 RVA: 0x00A90A4D File Offset: 0x00A8EC4D
+		// Token: 0x060225FB RID: 140795 RVA: 0x009BCC6D File Offset: 0x009BAE6D
 		protected override void OnUpdate(float delta)
 		{
 		}
 
-		// Token: 0x0602DF12 RID: 188178 RVA: 0x00A90A4F File Offset: 0x00A8EC4F
+		// Token: 0x060225FC RID: 140796 RVA: 0x009BCC6F File Offset: 0x009BAE6F
 		protected override void OnExit(EWuYinQuBattleState lastState)
 		{
 		}

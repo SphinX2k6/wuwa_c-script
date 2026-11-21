@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x020047D9 RID: 18393
+	// Token: 0x02004C41 RID: 19521
 	public class IEntityTemplateConfigT
 	{
-		// Token: 0x17008439 RID: 33849
-		// (get) Token: 0x0601C707 RID: 116487 RVA: 0x004062F9 File Offset: 0x004044F9
-		// (set) Token: 0x0601C708 RID: 116488 RVA: 0x00406301 File Offset: 0x00404501
+		// Token: 0x17008A84 RID: 35460
+		// (get) Token: 0x0601DF04 RID: 122628 RVA: 0x00432C49 File Offset: 0x00430E49
+		// (set) Token: 0x0601DF05 RID: 122629 RVA: 0x00432C51 File Offset: 0x00430E51
 		public List<IEntityTemplateT> Templates { get; set; }
 
-		// Token: 0x0601C709 RID: 116489 RVA: 0x0040630A File Offset: 0x0040450A
+		// Token: 0x0601DF06 RID: 122630 RVA: 0x00432C5A File Offset: 0x00430E5A
 		public IEntityTemplateConfigT()
 		{
 			this.Templates = null;

@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003C0 RID: 960
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200040B RID: 1035
 	public class IFoxJumpPositionOnPathDrivenSpawnedActor : IFoxJumpInteractPointRelationType
 	{
-		// Token: 0x0600132F RID: 4911 RVA: 0x0003E8AC File Offset: 0x0003CAAC
+		// Token: 0x06001485 RID: 5253 RVA: 0x00041E4C File Offset: 0x0004004C
 		private IFoxJumpPositionOnPathDrivenSpawnedActor_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001330 RID: 4912 RVA: 0x0003E8E4 File Offset: 0x0003CAE4
+		// Token: 0x06001486 RID: 5254 RVA: 0x00041E84 File Offset: 0x00040084
 		public static IFoxJumpPositionOnPathDrivenSpawnedActor Create([Nullable(2)] IFoxJumpPositionOnPathDrivenSpawnedActor instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001331 RID: 4913 RVA: 0x0003E8F7 File Offset: 0x0003CAF7
+		// Token: 0x06001487 RID: 5255 RVA: 0x00041E97 File Offset: 0x00040097
 		public static IFoxJumpPositionOnPathDrivenSpawnedActor CreateFromSetValue([Nullable(2)] IFoxJumpPositionOnPathDrivenSpawnedActor_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001332 RID: 4914 RVA: 0x0003E90C File Offset: 0x0003CB0C
+		// Token: 0x06001488 RID: 5256 RVA: 0x00041EAC File Offset: 0x000400AC
 		public new IFoxJumpPositionOnPathDrivenSpawnedActor_SetValue ToSetValue()
 		{
 			return new IFoxJumpPositionOnPathDrivenSpawnedActor_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000555 RID: 1365
-		// (get) Token: 0x06001333 RID: 4915 RVA: 0x0003E972 File Offset: 0x0003CB72
-		// (set) Token: 0x06001334 RID: 4916 RVA: 0x0003E99D File Offset: 0x0003CB9D
+		// Token: 0x170005AF RID: 1455
+		// (get) Token: 0x06001489 RID: 5257 RVA: 0x00041F12 File Offset: 0x00040112
+		// (set) Token: 0x0600148A RID: 5258 RVA: 0x00041F3D File Offset: 0x0004013D
 		public override EFoxJumpInteractPointRelationType Type
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000556 RID: 1366
-		// (get) Token: 0x06001335 RID: 4917 RVA: 0x0003E9AC File Offset: 0x0003CBAC
-		// (set) Token: 0x06001336 RID: 4918 RVA: 0x0003EA0D File Offset: 0x0003CC0D
+		// Token: 0x170005B0 RID: 1456
+		// (get) Token: 0x0600148B RID: 5259 RVA: 0x00041F4C File Offset: 0x0004014C
+		// (set) Token: 0x0600148C RID: 5260 RVA: 0x00041FAD File Offset: 0x000401AD
 		[Nullable(2)]
 		public override VectorInfo Offset
 		{
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000557 RID: 1367
-		// (get) Token: 0x06001337 RID: 4919 RVA: 0x0003EA24 File Offset: 0x0003CC24
-		// (set) Token: 0x06001338 RID: 4920 RVA: 0x0003EA85 File Offset: 0x0003CC85
+		// Token: 0x170005B1 RID: 1457
+		// (get) Token: 0x0600148D RID: 5261 RVA: 0x00041FC4 File Offset: 0x000401C4
+		// (set) Token: 0x0600148E RID: 5262 RVA: 0x00042025 File Offset: 0x00040225
 		[Nullable(2)]
 		public override VectorInfo RaycastDestOffset
 		{
@@ -156,9 +154,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000558 RID: 1368
-		// (get) Token: 0x06001339 RID: 4921 RVA: 0x0003EA9C File Offset: 0x0003CC9C
-		// (set) Token: 0x0600133A RID: 4922 RVA: 0x0003EAFD File Offset: 0x0003CCFD
+		// Token: 0x170005B2 RID: 1458
+		// (get) Token: 0x0600148F RID: 5263 RVA: 0x0004203C File Offset: 0x0004023C
+		// (set) Token: 0x06001490 RID: 5264 RVA: 0x0004209D File Offset: 0x0004029D
 		public virtual IFoxJumpShapeAndPointsParams BottomParams
 		{
 			get
@@ -186,9 +184,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000559 RID: 1369
-		// (get) Token: 0x0600133B RID: 4923 RVA: 0x0003EB14 File Offset: 0x0003CD14
-		// (set) Token: 0x0600133C RID: 4924 RVA: 0x0003EB4E File Offset: 0x0003CD4E
+		// Token: 0x170005B3 RID: 1459
+		// (get) Token: 0x06001491 RID: 5265 RVA: 0x000420B4 File Offset: 0x000402B4
+		// (set) Token: 0x06001492 RID: 5266 RVA: 0x000420EE File Offset: 0x000402EE
 		public virtual int? BottomRangeSplineEntityId
 		{
 			get
@@ -210,9 +208,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700055A RID: 1370
-		// (get) Token: 0x0600133D RID: 4925 RVA: 0x0003EB5C File Offset: 0x0003CD5C
-		// (set) Token: 0x0600133E RID: 4926 RVA: 0x0003EBBD File Offset: 0x0003CDBD
+		// Token: 0x170005B4 RID: 1460
+		// (get) Token: 0x06001493 RID: 5267 RVA: 0x000420FC File Offset: 0x000402FC
+		// (set) Token: 0x06001494 RID: 5268 RVA: 0x0004215D File Offset: 0x0004035D
 		public virtual IFoxJumpShapeAndPointsParams TopParams
 		{
 			get
@@ -240,9 +238,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700055B RID: 1371
-		// (get) Token: 0x0600133F RID: 4927 RVA: 0x0003EBD4 File Offset: 0x0003CDD4
-		// (set) Token: 0x06001340 RID: 4928 RVA: 0x0003EC35 File Offset: 0x0003CE35
+		// Token: 0x170005B5 RID: 1461
+		// (get) Token: 0x06001495 RID: 5269 RVA: 0x00042174 File Offset: 0x00040374
+		// (set) Token: 0x06001496 RID: 5270 RVA: 0x000421D5 File Offset: 0x000403D5
 		public virtual IBoxTriggerShape HollowShape
 		{
 			get
@@ -270,42 +268,42 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F4E RID: 3918
+		// Token: 0x0400104F RID: 4175
 		[Nullable(2)]
 		protected new IFoxJumpPositionOnPathDrivenSpawnedActor FbInstance;
 
-		// Token: 0x04000F4F RID: 3919
+		// Token: 0x04001050 RID: 4176
 		[Nullable(2)]
 		protected new IFoxJumpPositionOnPathDrivenSpawnedActor_SetValue PocoInterface;
 
-		// Token: 0x04000F50 RID: 3920
+		// Token: 0x04001051 RID: 4177
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04000F51 RID: 3921
+		// Token: 0x04001052 RID: 4178
 		private bool _OffsetInited;
 
-		// Token: 0x04000F52 RID: 3922
+		// Token: 0x04001053 RID: 4179
 		private VectorInfo _RaycastDestOffsetCache;
 
-		// Token: 0x04000F53 RID: 3923
+		// Token: 0x04001054 RID: 4180
 		private bool _RaycastDestOffsetInited;
 
-		// Token: 0x04000F54 RID: 3924
+		// Token: 0x04001055 RID: 4181
 		private IFoxJumpShapeAndPointsParams _BottomParamsCache;
 
-		// Token: 0x04000F55 RID: 3925
+		// Token: 0x04001056 RID: 4182
 		private bool _BottomParamsInited;
 
-		// Token: 0x04000F56 RID: 3926
+		// Token: 0x04001057 RID: 4183
 		private IFoxJumpShapeAndPointsParams _TopParamsCache;
 
-		// Token: 0x04000F57 RID: 3927
+		// Token: 0x04001058 RID: 4184
 		private bool _TopParamsInited;
 
-		// Token: 0x04000F58 RID: 3928
+		// Token: 0x04001059 RID: 4185
 		private IBoxTriggerShape _HollowShapeCache;
 
-		// Token: 0x04000F59 RID: 3929
+		// Token: 0x0400105A RID: 4186
 		private bool _HollowShapeInited;
 	}
 }

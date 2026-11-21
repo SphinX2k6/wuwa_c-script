@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007629 RID: 30249
+	// Token: 0x02007E37 RID: 32311
 	public class TActionContextUnion
 	{
-		// Token: 0x1700E5AF RID: 58799
-		// (get) Token: 0x0603718A RID: 225674 RVA: 0x00778EDA File Offset: 0x007770DA
-		// (set) Token: 0x0603718B RID: 225675 RVA: 0x00778EE2 File Offset: 0x007770E2
+		// Token: 0x1700F1ED RID: 61933
+		// (get) Token: 0x0603A62F RID: 239151 RVA: 0x007DCFD6 File Offset: 0x007DB1D6
+		// (set) Token: 0x0603A630 RID: 239152 RVA: 0x007DCFDE File Offset: 0x007DB1DE
 		public TActionContext Type { get; set; }
 
-		// Token: 0x1700E5B0 RID: 58800
-		// (get) Token: 0x0603718C RID: 225676 RVA: 0x00778EEB File Offset: 0x007770EB
-		// (set) Token: 0x0603718D RID: 225677 RVA: 0x00778EF3 File Offset: 0x007770F3
+		// Token: 0x1700F1EE RID: 61934
+		// (get) Token: 0x0603A631 RID: 239153 RVA: 0x007DCFE7 File Offset: 0x007DB1E7
+		// (set) Token: 0x0603A632 RID: 239154 RVA: 0x007DCFEF File Offset: 0x007DB1EF
 		public object Value { get; set; }
 
-		// Token: 0x0603718E RID: 225678 RVA: 0x00778EFC File Offset: 0x007770FC
+		// Token: 0x0603A633 RID: 239155 RVA: 0x007DCFF8 File Offset: 0x007DB1F8
 		public TActionContextUnion()
 		{
 			this.Type = TActionContext.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603718F RID: 225679 RVA: 0x00778F12 File Offset: 0x00777112
+		// Token: 0x0603A634 RID: 239156 RVA: 0x007DD00E File Offset: 0x007DB20E
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037190 RID: 225680 RVA: 0x00778F24 File Offset: 0x00777124
+		// Token: 0x0603A635 RID: 239157 RVA: 0x007DD020 File Offset: 0x007DB220
 		public ICommonBtActionContextT AsICommonBtActionContext()
 		{
 			return this.As<ICommonBtActionContextT>();
 		}
 
-		// Token: 0x06037191 RID: 225681 RVA: 0x00778F2C File Offset: 0x0077712C
+		// Token: 0x0603A636 RID: 239158 RVA: 0x007DD028 File Offset: 0x007DB228
 		public static TActionContextUnion FromICommonBtActionContext(ICommonBtActionContextT _icommonbtactioncontext)
 		{
 			return new TActionContextUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037192 RID: 225682 RVA: 0x00778F41 File Offset: 0x00777141
+		// Token: 0x0603A637 RID: 239159 RVA: 0x007DD03D File Offset: 0x007DB23D
 		public ICsvActionContextT AsICsvActionContext()
 		{
 			return this.As<ICsvActionContextT>();
 		}
 
-		// Token: 0x06037193 RID: 225683 RVA: 0x00778F49 File Offset: 0x00777149
+		// Token: 0x0603A638 RID: 239160 RVA: 0x007DD045 File Offset: 0x007DB245
 		public static TActionContextUnion FromICsvActionContext(ICsvActionContextT _icsvactioncontext)
 		{
 			return new TActionContextUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037194 RID: 225684 RVA: 0x00778F5E File Offset: 0x0077715E
+		// Token: 0x0603A639 RID: 239161 RVA: 0x007DD05A File Offset: 0x007DB25A
 		public IEntityActionContextT AsIEntityActionContext()
 		{
 			return this.As<IEntityActionContextT>();
 		}
 
-		// Token: 0x06037195 RID: 225685 RVA: 0x00778F66 File Offset: 0x00777166
+		// Token: 0x0603A63A RID: 239162 RVA: 0x007DD062 File Offset: 0x007DB262
 		public static TActionContextUnion FromIEntityActionContext(IEntityActionContextT _ientityactioncontext)
 		{
 			return new TActionContextUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037196 RID: 225686 RVA: 0x00778F7B File Offset: 0x0077717B
+		// Token: 0x0603A63B RID: 239163 RVA: 0x007DD077 File Offset: 0x007DB277
 		public IFlowActionContextT AsIFlowActionContext()
 		{
 			return this.As<IFlowActionContextT>();
 		}
 
-		// Token: 0x06037197 RID: 225687 RVA: 0x00778F83 File Offset: 0x00777183
+		// Token: 0x0603A63C RID: 239164 RVA: 0x007DD07F File Offset: 0x007DB27F
 		public static TActionContextUnion FromIFlowActionContext(IFlowActionContextT _iflowactioncontext)
 		{
 			return new TActionContextUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037198 RID: 225688 RVA: 0x00778F98 File Offset: 0x00777198
+		// Token: 0x0603A63D RID: 239165 RVA: 0x007DD094 File Offset: 0x007DB294
 		public IGmActionContextT AsIGmActionContext()
 		{
 			return this.As<IGmActionContextT>();
 		}
 
-		// Token: 0x06037199 RID: 225689 RVA: 0x00778FA0 File Offset: 0x007771A0
+		// Token: 0x0603A63E RID: 239166 RVA: 0x007DD09C File Offset: 0x007DB29C
 		public static TActionContextUnion FromIGmActionContext(IGmActionContextT _igmactioncontext)
 		{
 			return new TActionContextUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603719A RID: 225690 RVA: 0x00778FB5 File Offset: 0x007771B5
+		// Token: 0x0603A63F RID: 239167 RVA: 0x007DD0B1 File Offset: 0x007DB2B1
 		public ILevelPlayActionContextT AsILevelPlayActionContext()
 		{
 			return this.As<ILevelPlayActionContextT>();
 		}
 
-		// Token: 0x0603719B RID: 225691 RVA: 0x00778FBD File Offset: 0x007771BD
+		// Token: 0x0603A640 RID: 239168 RVA: 0x007DD0B9 File Offset: 0x007DB2B9
 		public static TActionContextUnion FromILevelPlayActionContext(ILevelPlayActionContextT _ilevelplayactioncontext)
 		{
 			return new TActionContextUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603719C RID: 225692 RVA: 0x00778FD2 File Offset: 0x007771D2
+		// Token: 0x0603A641 RID: 239169 RVA: 0x007DD0CE File Offset: 0x007DB2CE
 		public IQuestActionContextT AsIQuestActionContext()
 		{
 			return this.As<IQuestActionContextT>();
 		}
 
-		// Token: 0x0603719D RID: 225693 RVA: 0x00778FDA File Offset: 0x007771DA
+		// Token: 0x0603A642 RID: 239170 RVA: 0x007DD0D6 File Offset: 0x007DB2D6
 		public static TActionContextUnion FromIQuestActionContext(IQuestActionContextT _iquestactioncontext)
 		{
 			return new TActionContextUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603719E RID: 225694 RVA: 0x00778FEF File Offset: 0x007771EF
+		// Token: 0x0603A643 RID: 239171 RVA: 0x007DD0EB File Offset: 0x007DB2EB
 		public IToolEditorActionContextT AsIToolEditorActionContext()
 		{
 			return this.As<IToolEditorActionContextT>();
 		}
 
-		// Token: 0x0603719F RID: 225695 RVA: 0x00778FF7 File Offset: 0x007771F7
+		// Token: 0x0603A644 RID: 239172 RVA: 0x007DD0F3 File Offset: 0x007DB2F3
 		public static TActionContextUnion FromIToolEditorActionContext(IToolEditorActionContextT _itooleditoractioncontext)
 		{
 			return new TActionContextUnion
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060371A0 RID: 225696 RVA: 0x0077900C File Offset: 0x0077720C
+		// Token: 0x0603A645 RID: 239173 RVA: 0x007DD108 File Offset: 0x007DB308
 		public static int Pack(FlatBufferBuilder builder, TActionContextUnion _o)
 		{
 			switch (_o.Type)

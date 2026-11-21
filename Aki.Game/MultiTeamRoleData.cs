@@ -2,18 +2,38 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002789 RID: 10121
+// Token: 0x02001C74 RID: 7284
 [NullableContext(1)]
 [Nullable(0)]
 public class MultiTeamRoleData
 {
-	// Token: 0x06014C2C RID: 85036 RVA: 0x00540D1A File Offset: 0x0053EF1A
+	// Token: 0x06012113 RID: 74003 RVA: 0x0054FBF6 File Offset: 0x0054DDF6
+	public void SetPromoteToTopPredicate([Nullable(new byte[]
+	{
+		2,
+		1
+	})] Func<MultiTeamRoleGridData, bool> predicate)
+	{
+		this.PromoteToTopPredicate = predicate;
+	}
+
+	// Token: 0x06012114 RID: 74004 RVA: 0x0054FBFF File Offset: 0x0054DDFF
+	public void SetSinkToBottomPredicate([Nullable(new byte[]
+	{
+		2,
+		1
+	})] Func<MultiTeamRoleGridData, bool> predicate)
+	{
+		this.SinkToBottomPredicate = predicate;
+	}
+
+	// Token: 0x06012115 RID: 74005 RVA: 0x0054FC08 File Offset: 0x0054DE08
 	public string GetTitle()
 	{
 		return this.Title;
 	}
 
-	// Token: 0x06014C2D RID: 85037 RVA: 0x00540D24 File Offset: 0x0053EF24
+	// Token: 0x06012116 RID: 74006 RVA: 0x0054FC10 File Offset: 0x0054DE10
 	public List<RoleDataBase> GetSourceRoleList()
 	{
 		List<RoleDataBase> list = new List<RoleDataBase>();
@@ -28,7 +48,7 @@ public class MultiTeamRoleData
 		return list;
 	}
 
-	// Token: 0x06014C2E RID: 85038 RVA: 0x00540D88 File Offset: 0x0053EF88
+	// Token: 0x06012117 RID: 74007 RVA: 0x0054FC74 File Offset: 0x0054DE74
 	public void SetSortedRoleList([Nullable(new byte[]
 	{
 		2,
@@ -45,6 +65,7 @@ public class MultiTeamRoleData
 					this.SortedTeamRoleList.Add(multiTeamRoleGridData);
 				}
 			}
+			this.ApplySortPriority();
 			return;
 		}
 		this.SortedRoleList = roleList;
@@ -67,15 +88,51 @@ public class MultiTeamRoleData
 			}
 			return this.SortedRoleList.IndexOf(role2) - this.SortedRoleList.IndexOf(role3);
 		});
+		this.ApplySortPriority();
 	}
 
-	// Token: 0x06014C2F RID: 85039 RVA: 0x00540E80 File Offset: 0x0053F080
+	// Token: 0x06012118 RID: 74008 RVA: 0x0054FD78 File Offset: 0x0054DF78
+	private void ApplySortPriority()
+	{
+		if ((this.PromoteToTopPredicate == null && this.SinkToBottomPredicate == null) || this.SortedTeamRoleList.Count == 0)
+		{
+			return;
+		}
+		List<MultiTeamRoleGridData> list = new List<MultiTeamRoleGridData>();
+		List<MultiTeamRoleGridData> list2 = new List<MultiTeamRoleGridData>(this.SortedTeamRoleList.Count);
+		List<MultiTeamRoleGridData> list3 = new List<MultiTeamRoleGridData>();
+		foreach (MultiTeamRoleGridData multiTeamRoleGridData in this.SortedTeamRoleList)
+		{
+			Func<MultiTeamRoleGridData, bool> promoteToTopPredicate = this.PromoteToTopPredicate;
+			if (promoteToTopPredicate != null && promoteToTopPredicate(multiTeamRoleGridData))
+			{
+				list.Add(multiTeamRoleGridData);
+			}
+			else
+			{
+				Func<MultiTeamRoleGridData, bool> sinkToBottomPredicate = this.SinkToBottomPredicate;
+				if (sinkToBottomPredicate != null && sinkToBottomPredicate(multiTeamRoleGridData))
+				{
+					list3.Add(multiTeamRoleGridData);
+				}
+				else
+				{
+					list2.Add(multiTeamRoleGridData);
+				}
+			}
+		}
+		list.AddRange(list2);
+		list.AddRange(list3);
+		this.SortedTeamRoleList = list;
+	}
+
+	// Token: 0x06012119 RID: 74009 RVA: 0x0054FE60 File Offset: 0x0054E060
 	public List<MultiTeamRoleGridData> GetShowMultiTeamRoleGridDataList()
 	{
 		return this.SortedTeamRoleList;
 	}
 
-	// Token: 0x06014C30 RID: 85040 RVA: 0x00540E88 File Offset: 0x0053F088
+	// Token: 0x0601211A RID: 74010 RVA: 0x0054FE68 File Offset: 0x0054E068
 	public static MultiTeamRoleData Phrase(string title, List<MultiTeamRoleGridData> roleList)
 	{
 		MultiTeamRoleData multiTeamRoleData = new MultiTeamRoleData();
@@ -85,15 +142,31 @@ public class MultiTeamRoleData
 		return multiTeamRoleData;
 	}
 
-	// Token: 0x04009C23 RID: 39971
+	// Token: 0x04009D81 RID: 40321
 	private string Title = "";
 
-	// Token: 0x04009C24 RID: 39972
+	// Token: 0x04009D82 RID: 40322
 	private List<MultiTeamRoleGridData> MultiTeamRoleGridDataList = new List<MultiTeamRoleGridData>();
 
-	// Token: 0x04009C25 RID: 39973
+	// Token: 0x04009D83 RID: 40323
 	private List<MultiTeamRoleGridData> SortedTeamRoleList = new List<MultiTeamRoleGridData>();
 
-	// Token: 0x04009C26 RID: 39974
+	// Token: 0x04009D84 RID: 40324
 	private List<RoleDataBase> SortedRoleList = new List<RoleDataBase>();
+
+	// Token: 0x04009D85 RID: 40325
+	[Nullable(new byte[]
+	{
+		2,
+		1
+	})]
+	private Func<MultiTeamRoleGridData, bool> PromoteToTopPredicate;
+
+	// Token: 0x04009D86 RID: 40326
+	[Nullable(new byte[]
+	{
+		2,
+		1
+	})]
+	private Func<MultiTeamRoleGridData, bool> SinkToBottomPredicate;
 }

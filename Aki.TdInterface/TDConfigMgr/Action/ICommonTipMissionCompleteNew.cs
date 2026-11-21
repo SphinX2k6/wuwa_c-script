@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001920 RID: 6432
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AA9 RID: 6825
 	public class ICommonTipMissionCompleteNew : ICommonTipType
 	{
-		// Token: 0x060089E5 RID: 35301 RVA: 0x00145328 File Offset: 0x00143528
+		// Token: 0x06009111 RID: 37137 RVA: 0x00154C68 File Offset: 0x00152E68
 		private ICommonTipMissionCompleteNew_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060089E6 RID: 35302 RVA: 0x00145360 File Offset: 0x00143560
+		// Token: 0x06009112 RID: 37138 RVA: 0x00154CA0 File Offset: 0x00152EA0
 		public static ICommonTipMissionCompleteNew Create([Nullable(2)] ICommonTipMissionCompleteNew instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060089E7 RID: 35303 RVA: 0x00145373 File Offset: 0x00143573
+		// Token: 0x06009113 RID: 37139 RVA: 0x00154CB3 File Offset: 0x00152EB3
 		public static ICommonTipMissionCompleteNew CreateFromSetValue([Nullable(2)] ICommonTipMissionCompleteNew_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060089E8 RID: 35304 RVA: 0x00145386 File Offset: 0x00143586
+		// Token: 0x06009114 RID: 37140 RVA: 0x00154CC6 File Offset: 0x00152EC6
 		public new ICommonTipMissionCompleteNew_SetValue ToSetValue()
 		{
 			return new ICommonTipMissionCompleteNew_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C97 RID: 11415
-		// (get) Token: 0x060089E9 RID: 35305 RVA: 0x001453B1 File Offset: 0x001435B1
-		// (set) Token: 0x060089EA RID: 35306 RVA: 0x001453DC File Offset: 0x001435DC
+		// Token: 0x17002E97 RID: 11927
+		// (get) Token: 0x06009115 RID: 37141 RVA: 0x00154CF1 File Offset: 0x00152EF1
+		// (set) Token: 0x06009116 RID: 37142 RVA: 0x00154D1C File Offset: 0x00152F1C
 		public override ECommonTipType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C98 RID: 11416
-		// (get) Token: 0x060089EB RID: 35307 RVA: 0x001453EA File Offset: 0x001435EA
-		// (set) Token: 0x060089EC RID: 35308 RVA: 0x00145415 File Offset: 0x00143615
+		// Token: 0x17002E98 RID: 11928
+		// (get) Token: 0x06009117 RID: 37143 RVA: 0x00154D2A File Offset: 0x00152F2A
+		// (set) Token: 0x06009118 RID: 37144 RVA: 0x00154D55 File Offset: 0x00152F55
 		public virtual EQuestCommonTipType QuestType
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C99 RID: 11417
-		// (get) Token: 0x060089ED RID: 35309 RVA: 0x00145423 File Offset: 0x00143623
-		// (set) Token: 0x060089EE RID: 35310 RVA: 0x0014544E File Offset: 0x0014364E
+		// Token: 0x17002E99 RID: 11929
+		// (get) Token: 0x06009119 RID: 37145 RVA: 0x00154D63 File Offset: 0x00152F63
+		// (set) Token: 0x0600911A RID: 37146 RVA: 0x00154D8E File Offset: 0x00152F8E
 		public virtual string TipTextKey
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400564E RID: 22094
+		// Token: 0x04005A9E RID: 23198
 		[Nullable(2)]
 		protected new ICommonTipMissionCompleteNew FbInstance;
 
-		// Token: 0x0400564F RID: 22095
+		// Token: 0x04005A9F RID: 23199
 		[Nullable(2)]
 		protected new ICommonTipMissionCompleteNew_SetValue PocoInterface;
 	}

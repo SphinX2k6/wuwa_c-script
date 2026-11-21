@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x02005809 RID: 22537
+	// Token: 0x020047E0 RID: 18400
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardExploreTargetReached : UiPanelBase
 	{
-		// Token: 0x0603949C RID: 234652 RVA: 0x00D962AA File Offset: 0x00D944AA
+		// Token: 0x0602E3B0 RID: 189360 RVA: 0x00CE5112 File Offset: 0x00CE3312
 		public RewardExploreTargetReached(AActor rootActor)
 		{
 			base.CreateThenShowByActor(rootActor, null);
 		}
 
-		// Token: 0x0603949D RID: 234653 RVA: 0x00D962BC File Offset: 0x00D944BC
+		// Token: 0x0602E3B1 RID: 189361 RVA: 0x00CE5124 File Offset: 0x00CE3324
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -33,14 +33,14 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x0603949E RID: 234654 RVA: 0x00D96330 File Offset: 0x00D94530
+		// Token: 0x0602E3B2 RID: 189362 RVA: 0x00CE5198 File Offset: 0x00CE3398
 		public void Refresh(IRewardExploreTargetReached rewardExploreBarData)
 		{
 			this.SetTargetSpriteActive(rewardExploreBarData.IsReached);
 			this.SetDescriptionText(rewardExploreBarData.DescriptionTextId, rewardExploreBarData.Target);
 		}
 
-		// Token: 0x0603949F RID: 234655 RVA: 0x00D96350 File Offset: 0x00D94550
+		// Token: 0x0602E3B3 RID: 189363 RVA: 0x00CE51B8 File Offset: 0x00CE33B8
 		private void SetTargetSpriteActive(bool active)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			sprite.SetUIActive(active);
 		}
 
-		// Token: 0x060394A0 RID: 234656 RVA: 0x00D96364 File Offset: 0x00D94564
+		// Token: 0x0602E3B4 RID: 189364 RVA: 0x00CE51CC File Offset: 0x00CE33CC
 		private void SetDescriptionText(string descriptionTextId, List<string> target)
 		{
 			UUIText text = base.GetText(1);
@@ -70,14 +70,14 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x0200BA0A RID: 47626
+		// Token: 0x0200A420 RID: 42016
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040383C0 RID: 230336
+			// Token: 0x04032DAD RID: 208301
 			public const int TargetSprite = 0;
 
-			// Token: 0x040383C1 RID: 230337
+			// Token: 0x04032DAE RID: 208302
 			public const int DescriptionText = 1;
 		}
 	}

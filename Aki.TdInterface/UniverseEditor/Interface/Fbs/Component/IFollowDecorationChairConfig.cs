@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200528B RID: 21131
+	// Token: 0x020057F3 RID: 22515
 	public struct IFollowDecorationChairConfig : IFlatbufferObject
 	{
-		// Token: 0x17009AEF RID: 39663
-		// (get) Token: 0x060226DD RID: 141021 RVA: 0x004C5E95 File Offset: 0x004C4095
+		// Token: 0x1700A2ED RID: 41709
+		// (get) Token: 0x06024677 RID: 149111 RVA: 0x00500A05 File Offset: 0x004FEC05
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060226DE RID: 141022 RVA: 0x004C5EA2 File Offset: 0x004C40A2
+		// Token: 0x06024678 RID: 149112 RVA: 0x00500A12 File Offset: 0x004FEC12
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060226DF RID: 141023 RVA: 0x004C5EAC File Offset: 0x004C40AC
+		// Token: 0x06024679 RID: 149113 RVA: 0x00500A1C File Offset: 0x004FEC1C
 		public static IFollowDecorationChairConfig GetRootAsIFollowDecorationChairConfig(ByteBuffer _bb)
 		{
 			return IFollowDecorationChairConfig.GetRootAsIFollowDecorationChairConfig(_bb, default(IFollowDecorationChairConfig));
 		}
 
-		// Token: 0x060226E0 RID: 141024 RVA: 0x004C5EC8 File Offset: 0x004C40C8
+		// Token: 0x0602467A RID: 149114 RVA: 0x00500A38 File Offset: 0x004FEC38
 		public static IFollowDecorationChairConfig GetRootAsIFollowDecorationChairConfig(ByteBuffer _bb, IFollowDecorationChairConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060226E1 RID: 141025 RVA: 0x004C5EE5 File Offset: 0x004C40E5
+		// Token: 0x0602467B RID: 149115 RVA: 0x00500A55 File Offset: 0x004FEC55
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060226E2 RID: 141026 RVA: 0x004C5EF4 File Offset: 0x004C40F4
+		// Token: 0x0602467C RID: 149116 RVA: 0x00500A64 File Offset: 0x004FEC64
 		public IFollowDecorationChairConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009AF0 RID: 39664
-		// (get) Token: 0x060226E3 RID: 141027 RVA: 0x004C5F04 File Offset: 0x004C4104
+		// Token: 0x1700A2EE RID: 41710
+		// (get) Token: 0x0602467D RID: 149117 RVA: 0x00500A74 File Offset: 0x004FEC74
 		public EFollowDecorationType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009AF1 RID: 39665
-		// (get) Token: 0x060226E4 RID: 141028 RVA: 0x004C5F40 File Offset: 0x004C4140
+		// Token: 0x1700A2EF RID: 41711
+		// (get) Token: 0x0602467E RID: 149118 RVA: 0x00500AB0 File Offset: 0x004FECB0
 		public string Config
 		{
 			get
@@ -78,20 +78,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060226E5 RID: 141029 RVA: 0x004C5F77 File Offset: 0x004C4177
+		// Token: 0x0602467F RID: 149119 RVA: 0x00500AE7 File Offset: 0x004FECE7
 		public Span<byte> GetConfigBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060226E6 RID: 141030 RVA: 0x004C5F86 File Offset: 0x004C4186
+		// Token: 0x06024680 RID: 149120 RVA: 0x00500AF6 File Offset: 0x004FECF6
 		public byte[] GetConfigArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x17009AF2 RID: 39666
-		// (get) Token: 0x060226E7 RID: 141031 RVA: 0x004C5F94 File Offset: 0x004C4194
+		// Token: 0x1700A2F0 RID: 41712
+		// (get) Token: 0x06024681 RID: 149121 RVA: 0x00500B04 File Offset: 0x004FED04
 		public TTriggerShape CollisionDetectionRangeType
 		{
 			get
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060226E8 RID: 141032 RVA: 0x004C5FD0 File Offset: 0x004C41D0
+		// Token: 0x06024682 RID: 149122 RVA: 0x00500B40 File Offset: 0x004FED40
 		public TTable? CollisionDetectionRange<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -116,73 +116,73 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060226E9 RID: 141033 RVA: 0x004C6018 File Offset: 0x004C4218
+		// Token: 0x06024683 RID: 149123 RVA: 0x00500B88 File Offset: 0x004FED88
 		public IActorCollisionTriggerShape CollisionDetectionRangeAsIActorCollisionTriggerShape()
 		{
 			return this.CollisionDetectionRange<IActorCollisionTriggerShape>().Value;
 		}
 
-		// Token: 0x060226EA RID: 141034 RVA: 0x004C6034 File Offset: 0x004C4234
+		// Token: 0x06024684 RID: 149124 RVA: 0x00500BA4 File Offset: 0x004FEDA4
 		public IActorRefVolume CollisionDetectionRangeAsIActorRefVolume()
 		{
 			return this.CollisionDetectionRange<IActorRefVolume>().Value;
 		}
 
-		// Token: 0x060226EB RID: 141035 RVA: 0x004C6050 File Offset: 0x004C4250
+		// Token: 0x06024685 RID: 149125 RVA: 0x00500BC0 File Offset: 0x004FEDC0
 		public IBoxTriggerShape CollisionDetectionRangeAsIBoxTriggerShape()
 		{
 			return this.CollisionDetectionRange<IBoxTriggerShape>().Value;
 		}
 
-		// Token: 0x060226EC RID: 141036 RVA: 0x004C606C File Offset: 0x004C426C
+		// Token: 0x06024686 RID: 149126 RVA: 0x00500BDC File Offset: 0x004FEDDC
 		public ICombinationTriggerShape CollisionDetectionRangeAsICombinationTriggerShape()
 		{
 			return this.CollisionDetectionRange<ICombinationTriggerShape>().Value;
 		}
 
-		// Token: 0x060226ED RID: 141037 RVA: 0x004C6088 File Offset: 0x004C4288
+		// Token: 0x06024687 RID: 149127 RVA: 0x00500BF8 File Offset: 0x004FEDF8
 		public IConeTriggerShape CollisionDetectionRangeAsIConeTriggerShape()
 		{
 			return this.CollisionDetectionRange<IConeTriggerShape>().Value;
 		}
 
-		// Token: 0x060226EE RID: 141038 RVA: 0x004C60A4 File Offset: 0x004C42A4
+		// Token: 0x06024688 RID: 149128 RVA: 0x00500C14 File Offset: 0x004FEE14
 		public ICylinderTriggerShape CollisionDetectionRangeAsICylinderTriggerShape()
 		{
 			return this.CollisionDetectionRange<ICylinderTriggerShape>().Value;
 		}
 
-		// Token: 0x060226EF RID: 141039 RVA: 0x004C60C0 File Offset: 0x004C42C0
+		// Token: 0x06024689 RID: 149129 RVA: 0x00500C30 File Offset: 0x004FEE30
 		public IHollowCylinderTriggerShape CollisionDetectionRangeAsIHollowCylinderTriggerShape()
 		{
 			return this.CollisionDetectionRange<IHollowCylinderTriggerShape>().Value;
 		}
 
-		// Token: 0x060226F0 RID: 141040 RVA: 0x004C60DC File Offset: 0x004C42DC
+		// Token: 0x0602468A RID: 149130 RVA: 0x00500C4C File Offset: 0x004FEE4C
 		public IHollowSphereTriggerShape CollisionDetectionRangeAsIHollowSphereTriggerShape()
 		{
 			return this.CollisionDetectionRange<IHollowSphereTriggerShape>().Value;
 		}
 
-		// Token: 0x060226F1 RID: 141041 RVA: 0x004C60F8 File Offset: 0x004C42F8
+		// Token: 0x0602468B RID: 149131 RVA: 0x00500C68 File Offset: 0x004FEE68
 		public ISphereTriggerShape CollisionDetectionRangeAsISphereTriggerShape()
 		{
 			return this.CollisionDetectionRange<ISphereTriggerShape>().Value;
 		}
 
-		// Token: 0x060226F2 RID: 141042 RVA: 0x004C6114 File Offset: 0x004C4314
+		// Token: 0x0602468C RID: 149132 RVA: 0x00500C84 File Offset: 0x004FEE84
 		public ISpotlightTriggerShape CollisionDetectionRangeAsISpotlightTriggerShape()
 		{
 			return this.CollisionDetectionRange<ISpotlightTriggerShape>().Value;
 		}
 
-		// Token: 0x060226F3 RID: 141043 RVA: 0x004C6130 File Offset: 0x004C4330
+		// Token: 0x0602468D RID: 149133 RVA: 0x00500CA0 File Offset: 0x004FEEA0
 		public IVolumeTriggerShape CollisionDetectionRangeAsIVolumeTriggerShape()
 		{
 			return this.CollisionDetectionRange<IVolumeTriggerShape>().Value;
 		}
 
-		// Token: 0x060226F4 RID: 141044 RVA: 0x004C614B File Offset: 0x004C434B
+		// Token: 0x0602468E RID: 149134 RVA: 0x00500CBB File Offset: 0x004FEEBB
 		public static Offset<IFollowDecorationChairConfig> CreateIFollowDecorationChairConfig(FlatBufferBuilder builder, EFollowDecorationType Type = EFollowDecorationType.Chair, StringOffset ConfigOffset = default(StringOffset), TTriggerShape CollisionDetectionRange_type = TTriggerShape.NONE, int CollisionDetectionRangeOffset = 0)
 		{
 			builder.StartTable(4);
@@ -193,43 +193,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFollowDecorationChairConfig.EndIFollowDecorationChairConfig(builder);
 		}
 
-		// Token: 0x060226F5 RID: 141045 RVA: 0x004C6177 File Offset: 0x004C4377
+		// Token: 0x0602468F RID: 149135 RVA: 0x00500CE7 File Offset: 0x004FEEE7
 		public static void StartIFollowDecorationChairConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060226F6 RID: 141046 RVA: 0x004C6180 File Offset: 0x004C4380
+		// Token: 0x06024690 RID: 149136 RVA: 0x00500CF0 File Offset: 0x004FEEF0
 		public static void AddType(FlatBufferBuilder builder, EFollowDecorationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060226F7 RID: 141047 RVA: 0x004C618B File Offset: 0x004C438B
+		// Token: 0x06024691 RID: 149137 RVA: 0x00500CFB File Offset: 0x004FEEFB
 		public static void AddConfig(FlatBufferBuilder builder, StringOffset configOffset)
 		{
 			builder.AddOffset(1, configOffset.Value, 0);
 		}
 
-		// Token: 0x060226F8 RID: 141048 RVA: 0x004C619B File Offset: 0x004C439B
+		// Token: 0x06024692 RID: 149138 RVA: 0x00500D0B File Offset: 0x004FEF0B
 		public static void AddCollisionDetectionRangeType(FlatBufferBuilder builder, TTriggerShape collisionDetectionRangeType)
 		{
 			builder.AddByte(2, (byte)collisionDetectionRangeType, 0);
 		}
 
-		// Token: 0x060226F9 RID: 141049 RVA: 0x004C61A6 File Offset: 0x004C43A6
+		// Token: 0x06024693 RID: 149139 RVA: 0x00500D16 File Offset: 0x004FEF16
 		public static void AddCollisionDetectionRange(FlatBufferBuilder builder, int collisionDetectionRangeOffset)
 		{
 			builder.AddOffset(3, collisionDetectionRangeOffset, 0);
 		}
 
-		// Token: 0x060226FA RID: 141050 RVA: 0x004C61B1 File Offset: 0x004C43B1
+		// Token: 0x06024694 RID: 149140 RVA: 0x00500D21 File Offset: 0x004FEF21
 		public static Offset<IFollowDecorationChairConfig> EndIFollowDecorationChairConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IFollowDecorationChairConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060226FB RID: 141051 RVA: 0x004C61C0 File Offset: 0x004C43C0
+		// Token: 0x06024695 RID: 149141 RVA: 0x00500D30 File Offset: 0x004FEF30
 		public IFollowDecorationChairConfigT UnPack()
 		{
 			IFollowDecorationChairConfigT followDecorationChairConfigT = new IFollowDecorationChairConfigT();
@@ -237,7 +237,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return followDecorationChairConfigT;
 		}
 
-		// Token: 0x060226FC RID: 141052 RVA: 0x004C61DC File Offset: 0x004C43DC
+		// Token: 0x06024696 RID: 149142 RVA: 0x00500D4C File Offset: 0x004FEF4C
 		public void UnPackTo(IFollowDecorationChairConfigT _o)
 		{
 			_o.Type = this.Type;
@@ -284,7 +284,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060226FD RID: 141053 RVA: 0x004C64BC File Offset: 0x004C46BC
+		// Token: 0x06024697 RID: 149143 RVA: 0x0050102C File Offset: 0x004FF22C
 		public static Offset<IFollowDecorationChairConfig> Pack(FlatBufferBuilder builder, IFollowDecorationChairConfigT _o)
 		{
 			if (_o == null)
@@ -297,7 +297,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFollowDecorationChairConfig.CreateIFollowDecorationChairConfig(builder, _o.Type, configOffset, collisionDetectionRange_type, collisionDetectionRangeOffset);
 		}
 
-		// Token: 0x0400E3F6 RID: 58358
+		// Token: 0x0400EFFD RID: 61437
 		private Table __p;
 	}
 }

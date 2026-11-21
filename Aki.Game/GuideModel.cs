@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Guide.GroupInfo;
@@ -10,14 +9,14 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001DBE RID: 7614
+// Token: 0x02001280 RID: 4736
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class GuideModel : ModelBase
 {
-	// Token: 0x17001272 RID: 4722
-	// (get) Token: 0x0600E736 RID: 59190 RVA: 0x00367514 File Offset: 0x00365714
+	// Token: 0x1700129C RID: 4764
+	// (get) Token: 0x0600BB54 RID: 47956 RVA: 0x00373174 File Offset: 0x00371374
 	public bool IsGuideLockingInput
 	{
 		get
@@ -26,7 +25,7 @@ public class GuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E737 RID: 59191 RVA: 0x0036751F File Offset: 0x0036571F
+	// Token: 0x0600BB55 RID: 47957 RVA: 0x0037317F File Offset: 0x0037137F
 	public void AddGuideLockInput()
 	{
 		this.LockingInputGuideStepCount++;
@@ -36,7 +35,7 @@ public class GuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E738 RID: 59192 RVA: 0x0036753E File Offset: 0x0036573E
+	// Token: 0x0600BB56 RID: 47958 RVA: 0x0037319E File Offset: 0x0037139E
 	public void RemoveGuideLockInput()
 	{
 		this.LockingInputGuideStepCount--;
@@ -46,7 +45,7 @@ public class GuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E739 RID: 59193 RVA: 0x0036755C File Offset: 0x0036575C
+	// Token: 0x0600BB57 RID: 47959 RVA: 0x003731BC File Offset: 0x003713BC
 	private void RefreshLockInput()
 	{
 		UiLayer.Instance.SetShowNormalMaskLayer(this.IsGuideLockingInput, "Guide");
@@ -58,7 +57,7 @@ public class GuideModel : ModelBase
 		instance.RefreshInputDistributeTag();
 	}
 
-	// Token: 0x0600E73A RID: 59194 RVA: 0x00367584 File Offset: 0x00365784
+	// Token: 0x0600BB58 RID: 47960 RVA: 0x003731E4 File Offset: 0x003713E4
 	protected override bool OnInit()
 	{
 		this.FinishedGroupIdSet = new HashSet<int>();
@@ -88,19 +87,19 @@ public class GuideModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600E73B RID: 59195 RVA: 0x00367640 File Offset: 0x00365840
+	// Token: 0x0600BB59 RID: 47961 RVA: 0x003732A0 File Offset: 0x003714A0
 	public bool CheckGuideInfoExist(int guideId)
 	{
 		return this.CurrentGroupMap.ContainsKey(guideId);
 	}
 
-	// Token: 0x0600E73C RID: 59196 RVA: 0x0036764E File Offset: 0x0036584E
+	// Token: 0x0600BB5A RID: 47962 RVA: 0x003732AE File Offset: 0x003714AE
 	public bool IsLocked()
 	{
 		return this.IsGmLock || this.IsLock;
 	}
 
-	// Token: 0x0600E73D RID: 59197 RVA: 0x00367660 File Offset: 0x00365860
+	// Token: 0x0600BB5B RID: 47963 RVA: 0x003732C0 File Offset: 0x003714C0
 	public void SetLock(bool value)
 	{
 		if (value == this.IsLock)
@@ -114,7 +113,7 @@ public class GuideModel : ModelBase
 		this.IsLock = value;
 	}
 
-	// Token: 0x0600E73E RID: 59198 RVA: 0x0036767C File Offset: 0x0036587C
+	// Token: 0x0600BB5C RID: 47964 RVA: 0x003732DC File Offset: 0x003714DC
 	public void SetGmLock(bool value)
 	{
 		if (value == this.IsGmLock)
@@ -128,7 +127,7 @@ public class GuideModel : ModelBase
 		this.IsGmLock = value;
 	}
 
-	// Token: 0x0600E73F RID: 59199 RVA: 0x00367698 File Offset: 0x00365898
+	// Token: 0x0600BB5D RID: 47965 RVA: 0x003732F8 File Offset: 0x003714F8
 	public void AddTutorialInfo(TutorialListInfo tutorialInfo)
 	{
 		if (this.TutorialList == null)
@@ -143,7 +142,7 @@ public class GuideModel : ModelBase
 		this.TryShowTutorial();
 	}
 
-	// Token: 0x0600E740 RID: 59200 RVA: 0x003676FC File Offset: 0x003658FC
+	// Token: 0x0600BB5E RID: 47966 RVA: 0x0037335C File Offset: 0x0037155C
 	public void TryShowTutorial()
 	{
 		if (this.TutorialList.Count <= 0)
@@ -169,7 +168,7 @@ public class GuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E741 RID: 59201 RVA: 0x00367770 File Offset: 0x00365970
+	// Token: 0x0600BB5F RID: 47967 RVA: 0x003733D0 File Offset: 0x003715D0
 	private void DoShowTutorial(TutorialListInfo tutorialListInfo)
 	{
 		this.CurrentShowTutorial = tutorialListInfo;
@@ -187,7 +186,7 @@ public class GuideModel : ModelBase
 		this.TryShowGuideTutorialView(false);
 	}
 
-	// Token: 0x0600E742 RID: 59202 RVA: 0x003677DC File Offset: 0x003659DC
+	// Token: 0x0600BB60 RID: 47968 RVA: 0x0037343C File Offset: 0x0037163C
 	private UniTask ShowTutorialViewUponMultipleQueued()
 	{
 		GuideModel.<ShowTutorialViewUponMultipleQueued>d__27 <ShowTutorialViewUponMultipleQueued>d__;
@@ -198,7 +197,7 @@ public class GuideModel : ModelBase
 		return <ShowTutorialViewUponMultipleQueued>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E743 RID: 59203 RVA: 0x00367820 File Offset: 0x00365A20
+	// Token: 0x0600BB61 RID: 47969 RVA: 0x00373480 File Offset: 0x00371680
 	public void TryShowGuideTutorialView(bool isFromTips = false)
 	{
 		if (isFromTips && this.AreMultipleTutorialsQueued())
@@ -234,7 +233,7 @@ public class GuideModel : ModelBase
 		});
 	}
 
-	// Token: 0x0600E744 RID: 59204 RVA: 0x0036790C File Offset: 0x00365B0C
+	// Token: 0x0600BB62 RID: 47970 RVA: 0x0037356C File Offset: 0x0037176C
 	public void ShowFailedOpenTutorialView()
 	{
 		if (this.GuideTutorialViewOpenFailed)
@@ -243,7 +242,7 @@ public class GuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E745 RID: 59205 RVA: 0x00367920 File Offset: 0x00365B20
+	// Token: 0x0600BB63 RID: 47971 RVA: 0x00373580 File Offset: 0x00371780
 	public void ClipTipState()
 	{
 		foreach (TutorialListInfo tutorialListInfo in this.TutorialList)
@@ -255,7 +254,7 @@ public class GuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E746 RID: 59206 RVA: 0x0036797C File Offset: 0x00365B7C
+	// Token: 0x0600BB64 RID: 47972 RVA: 0x003735DC File Offset: 0x003717DC
 	public void RemoveCurrentTutorialInfo()
 	{
 		int num = this.TutorialList.IndexOf(this.CurrentShowTutorial);
@@ -268,20 +267,20 @@ public class GuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E747 RID: 59207 RVA: 0x003679C9 File Offset: 0x00365BC9
+	// Token: 0x0600BB65 RID: 47973 RVA: 0x00373629 File Offset: 0x00371829
 	public bool HaveCurrentTutorial()
 	{
 		return this.CurrentShowTutorial != null;
 	}
 
-	// Token: 0x0600E748 RID: 59208 RVA: 0x003679D4 File Offset: 0x00365BD4
+	// Token: 0x0600BB66 RID: 47974 RVA: 0x00373634 File Offset: 0x00371834
 	public bool AreMultipleTutorialsQueued()
 	{
 		List<TutorialListInfo> tutorialList = this.TutorialList;
 		return ((tutorialList != null) ? tutorialList.Count : 0) > 1;
 	}
 
-	// Token: 0x0600E749 RID: 59209 RVA: 0x003679EC File Offset: 0x00365BEC
+	// Token: 0x0600BB67 RID: 47975 RVA: 0x0037364C File Offset: 0x0037184C
 	public void TryPauseTimer()
 	{
 		if (this.TimeHandler != null && !this.TimeHandler.IsPause() && (this.TutorialList.Count == 0 || (this.CurrentShowTutorial != null && this.CurrentShowTutorial.TipState == ETutorialListType.Pop)))
@@ -290,7 +289,7 @@ public class GuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E74A RID: 59210 RVA: 0x00367A44 File Offset: 0x00365C44
+	// Token: 0x0600BB68 RID: 47976 RVA: 0x003736A4 File Offset: 0x003718A4
 	private void TryResumeTimer()
 	{
 		if (this.TimeHandler != null && this.TimeHandler.IsPause() && this.TutorialList.Count > 0 && (this.CurrentShowTutorial == null || this.CurrentShowTutorial.TipState != ETutorialListType.Pop))
@@ -304,7 +303,7 @@ public class GuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E74B RID: 59211 RVA: 0x00367AD8 File Offset: 0x00365CD8
+	// Token: 0x0600BB69 RID: 47977 RVA: 0x00373738 File Offset: 0x00371938
 	private void TutorialListCheckFunc(float delta)
 	{
 		for (int i = 0; i < this.TutorialList.Count; i++)
@@ -318,7 +317,7 @@ public class GuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E74C RID: 59212 RVA: 0x00367B2C File Offset: 0x00365D2C
+	// Token: 0x0600BB6A RID: 47978 RVA: 0x0037378C File Offset: 0x0037198C
 	public void BreakTypeViewStep(EGuideViewType type)
 	{
 		GuideStepInfo guideStepInfo;
@@ -329,7 +328,7 @@ public class GuideModel : ModelBase
 		this.TypeViewSingletonMap[type] = null;
 	}
 
-	// Token: 0x0600E74D RID: 59213 RVA: 0x00367B60 File Offset: 0x00365D60
+	// Token: 0x0600BB6B RID: 47979 RVA: 0x003737C0 File Offset: 0x003719C0
 	public void OpenGuideView(GuideStepInfo stepInfo)
 	{
 		int contentType = stepInfo.Config.ContentType;
@@ -342,7 +341,7 @@ public class GuideModel : ModelBase
 		UiManager.Instance.OpenView(EUiViewName.GuideTipsView, stepInfo, null);
 	}
 
-	// Token: 0x0600E74E RID: 59214 RVA: 0x00367BB0 File Offset: 0x00365DB0
+	// Token: 0x0600BB6C RID: 47980 RVA: 0x00373810 File Offset: 0x00371A10
 	public void RemoveStepViewSingletonMap(GuideStepInfo stepInfo)
 	{
 		int contentType = stepInfo.Config.ContentType;
@@ -353,7 +352,7 @@ public class GuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E74F RID: 59215 RVA: 0x00367BF0 File Offset: 0x00365DF0
+	// Token: 0x0600BB6D RID: 47981 RVA: 0x00373850 File Offset: 0x00371A50
 	public void EnsureCurrentDungeonId()
 	{
 		int instanceId = CreatureModel.Instance.GetInstanceId();
@@ -376,14 +375,14 @@ public class GuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E750 RID: 59216 RVA: 0x00367CCC File Offset: 0x00365ECC
+	// Token: 0x0600BB6E RID: 47982 RVA: 0x0037392C File Offset: 0x00371B2C
 	public void GmResetAllGuideGroup()
 	{
 		this.FinishedGroupIdSet.Clear();
 		this.ClearAllGroup();
 	}
 
-	// Token: 0x0600E751 RID: 59217 RVA: 0x00367CE0 File Offset: 0x00365EE0
+	// Token: 0x0600BB6F RID: 47983 RVA: 0x00373940 File Offset: 0x00371B40
 	public void ClearAllGroup()
 	{
 		foreach (GuideGroupInfo guideGroupInfo in this.CurrentGroupMap.Values)
@@ -393,7 +392,7 @@ public class GuideModel : ModelBase
 		this.CurrentGroupMap.Clear();
 	}
 
-	// Token: 0x0600E752 RID: 59218 RVA: 0x00367D40 File Offset: 0x00365F40
+	// Token: 0x0600BB70 RID: 47984 RVA: 0x003739A0 File Offset: 0x00371BA0
 	public void FinishGroup(int groupId)
 	{
 		GuideGroupInfo guideGroupInfo;
@@ -405,13 +404,13 @@ public class GuideModel : ModelBase
 		this.FinishedGroupIdSet.Add(groupId);
 	}
 
-	// Token: 0x0600E753 RID: 59219 RVA: 0x00367D7D File Offset: 0x00365F7D
+	// Token: 0x0600BB71 RID: 47985 RVA: 0x003739DD File Offset: 0x00371BDD
 	public void ResetFinishedGuide(int groupId)
 	{
 		this.FinishedGroupIdSet.Remove(groupId);
 	}
 
-	// Token: 0x0600E754 RID: 59220 RVA: 0x00367D8C File Offset: 0x00365F8C
+	// Token: 0x0600BB72 RID: 47986 RVA: 0x003739EC File Offset: 0x00371BEC
 	public bool? IsGroupFinished(int groupId)
 	{
 		HashSet<int> finishedGroupIdSet = this.FinishedGroupIdSet;
@@ -422,20 +421,20 @@ public class GuideModel : ModelBase
 		return new bool?(finishedGroupIdSet.Contains(groupId));
 	}
 
-	// Token: 0x0600E755 RID: 59221 RVA: 0x00367DB8 File Offset: 0x00365FB8
+	// Token: 0x0600BB73 RID: 47987 RVA: 0x00373A18 File Offset: 0x00371C18
 	public bool CanGroupInvoke(int groupId)
 	{
 		return !this.IsGroupFinished(groupId).GetValueOrDefault() || this.IsGroupCanRepeat(groupId);
 	}
 
-	// Token: 0x0600E756 RID: 59222 RVA: 0x00367DE0 File Offset: 0x00365FE0
+	// Token: 0x0600BB74 RID: 47988 RVA: 0x00373A40 File Offset: 0x00371C40
 	public bool IsGroupCanRepeat(int groupId)
 	{
 		HashSet<int> limitRepeatStepSetOfGroup = GuideConfig.Instance.GetLimitRepeatStepSetOfGroup(groupId);
 		return limitRepeatStepSetOfGroup.Count == 0 || (!limitRepeatStepSetOfGroup.Contains(-1) && (!this.CheckGuideInfoExist(groupId) || !this.CurrentGroupMap[groupId].HasAnyFinishedStep(limitRepeatStepSetOfGroup)));
 	}
 
-	// Token: 0x0600E757 RID: 59223 RVA: 0x00367E30 File Offset: 0x00366030
+	// Token: 0x0600BB75 RID: 47989 RVA: 0x00373A90 File Offset: 0x00371C90
 	[NullableContext(2)]
 	public unsafe GuideGroupInfo TryGetGuideGroup(int groupId)
 	{
@@ -578,7 +577,7 @@ public class GuideModel : ModelBase
 		return guideGroupInfo;
 	}
 
-	// Token: 0x0600E758 RID: 59224 RVA: 0x003683A0 File Offset: 0x003665A0
+	// Token: 0x0600BB76 RID: 47990 RVA: 0x00374000 File Offset: 0x00372200
 	public void SwitchGroupState(int groupId, EGuideGroupState groupState)
 	{
 		GuideGroupInfo guideGroupInfo;
@@ -595,7 +594,7 @@ public class GuideModel : ModelBase
 		guideGroupInfo.SwitchState(groupState);
 	}
 
-	// Token: 0x0600E759 RID: 59225 RVA: 0x003683F4 File Offset: 0x003665F4
+	// Token: 0x0600BB77 RID: 47991 RVA: 0x00374054 File Offset: 0x00372254
 	public unsafe bool CheckGroupStatus(int groupId, EGuideGroupState targetState, string operatorStr)
 	{
 		if (this.FinishedGroupIdSet == null)
@@ -634,7 +633,7 @@ public class GuideModel : ModelBase
 		return GuideModel.CheckOperator((int)left, (int)targetState, operatorStr);
 	}
 
-	// Token: 0x0600E75A RID: 59226 RVA: 0x00368508 File Offset: 0x00366708
+	// Token: 0x0600BB78 RID: 47992 RVA: 0x00374168 File Offset: 0x00372368
 	private static bool CheckOperator(int left, int right, string operatorStr)
 	{
 		if (operatorStr == "")
@@ -660,7 +659,7 @@ public class GuideModel : ModelBase
 		return operatorStr == "<=" && left <= right;
 	}
 
-	// Token: 0x0600E75B RID: 59227 RVA: 0x0036858C File Offset: 0x0036678C
+	// Token: 0x0600BB79 RID: 47993 RVA: 0x003741EC File Offset: 0x003723EC
 	protected override bool OnClear()
 	{
 		this.FinishedGroupIdSet.Clear();
@@ -685,7 +684,7 @@ public class GuideModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600E75C RID: 59228 RVA: 0x00368624 File Offset: 0x00366824
+	// Token: 0x0600BB7A RID: 47994 RVA: 0x00374284 File Offset: 0x00372484
 	public int[] GetRunningGroupIdList()
 	{
 		List<int> list = new List<int>();
@@ -700,7 +699,7 @@ public class GuideModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600E75D RID: 59229 RVA: 0x0036869C File Offset: 0x0036689C
+	// Token: 0x0600BB7B RID: 47995 RVA: 0x003742FC File Offset: 0x003724FC
 	public int[] GetRunningWithoutPendingGroupIdList()
 	{
 		List<int> list = new List<int>();
@@ -715,7 +714,7 @@ public class GuideModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600E75E RID: 59230 RVA: 0x00368714 File Offset: 0x00366914
+	// Token: 0x0600BB7C RID: 47996 RVA: 0x00374374 File Offset: 0x00372574
 	public unsafe void AddFocusGuideGroupToView(GuideGroupInfo group)
 	{
 		GuideGroupInfo group2 = group;
@@ -738,7 +737,7 @@ public class GuideModel : ModelBase
 			return;
 		}
 		List<GuideGroupInfo> list = this.FocusGroupMapByView[(EUiViewName)guideFocusTargetViewName];
-		if (list.Any((GuideGroupInfo g) => g.Id == group.Id))
+		if (list.Exists((GuideGroupInfo g) => g.Id == group.Id))
 		{
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.Guide;
@@ -753,7 +752,7 @@ public class GuideModel : ModelBase
 		list.Add(group);
 	}
 
-	// Token: 0x0600E75F RID: 59231 RVA: 0x0036887C File Offset: 0x00366A7C
+	// Token: 0x0600BB7D RID: 47997 RVA: 0x003744DC File Offset: 0x003726DC
 	public unsafe void RemoveFocusGuideGroupFromView(GuideGroupInfo group)
 	{
 		GuideGroupInfo group2 = group;
@@ -796,7 +795,7 @@ public class GuideModel : ModelBase
 		instance2.Warn(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
 	}
 
-	// Token: 0x0600E760 RID: 59232 RVA: 0x00368A24 File Offset: 0x00366C24
+	// Token: 0x0600BB7E RID: 47998 RVA: 0x00374684 File Offset: 0x00372884
 	public void FinishFocusGuideGroupOnView(EUiViewName viewName)
 	{
 		List<GuideGroupInfo> list;
@@ -818,14 +817,14 @@ public class GuideModel : ModelBase
 		this.FocusGroupMapByView.Remove(viewName);
 	}
 
-	// Token: 0x0600E761 RID: 59233 RVA: 0x00368AA8 File Offset: 0x00366CA8
+	// Token: 0x0600BB7F RID: 47999 RVA: 0x00374708 File Offset: 0x00372908
 	public bool HasFocusGuideGroupOnView(EUiViewName viewName)
 	{
 		List<GuideGroupInfo> list;
 		return this.FocusGroupMapByView.TryGetValue(viewName, out list) && list.Count > 0;
 	}
 
-	// Token: 0x0600E762 RID: 59234 RVA: 0x00368AD0 File Offset: 0x00366CD0
+	// Token: 0x0600BB80 RID: 48000 RVA: 0x00374730 File Offset: 0x00372930
 	private int[] GetAvailableDungeonIdList(int groupId)
 	{
 		GuideGroup? group = GuideConfig.Instance.GetGroup(groupId);
@@ -849,10 +848,12 @@ public class GuideModel : ModelBase
 				}
 			}
 		}
-		return hashSet.ToArray<int>();
+		int[] array3 = new int[hashSet.Count];
+		hashSet.CopyTo(array3);
+		return array3;
 	}
 
-	// Token: 0x0600E763 RID: 59235 RVA: 0x00368BAC File Offset: 0x00366DAC
+	// Token: 0x0600BB81 RID: 48001 RVA: 0x0037481C File Offset: 0x00372A1C
 	public bool CheckDungeonAvailable(int groupId, int dungeonId, bool log = false)
 	{
 		if (GuideTestUtil.CheckIsTestGroup(groupId))
@@ -866,7 +867,7 @@ public class GuideModel : ModelBase
 		}
 		if (group.Value.DungeonSets() == null || group.Value.DungeonSets().Length == 0)
 		{
-			return group.Value.DungeonId().Contains(dungeonId);
+			return Array.IndexOf<int>(group.Value.DungeonId(), dungeonId) >= 0;
 		}
 		foreach (string setId in group.Value.DungeonSets())
 		{
@@ -879,14 +880,14 @@ public class GuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600E764 RID: 59236 RVA: 0x00368C60 File Offset: 0x00366E60
+	// Token: 0x0600BB82 RID: 48002 RVA: 0x003748D8 File Offset: 0x00372AD8
 	public bool CheckDungeonAvailableForSetDefine(string setDefineId, int dungeonId, bool log = false)
 	{
 		GuideDungeonSetDefine? guideDungeonSet = GuideConfig.Instance.GetGuideDungeonSet(setDefineId);
 		return guideDungeonSet != null && GuideModel.CheckDungeonAvailableBySet(guideDungeonSet.Value, dungeonId, log);
 	}
 
-	// Token: 0x0600E765 RID: 59237 RVA: 0x00368C9C File Offset: 0x00366E9C
+	// Token: 0x0600BB83 RID: 48003 RVA: 0x00374914 File Offset: 0x00372B14
 	private static bool CheckDungeonAvailableBySet(GuideDungeonSetDefine setConfig, int dungeonId, bool log = false)
 	{
 		for (int i = 0; i < setConfig.ExcludeIdListLength; i++)
@@ -920,8 +921,8 @@ public class GuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x17001273 RID: 4723
-	// (get) Token: 0x0600E766 RID: 59238 RVA: 0x00368D8C File Offset: 0x00366F8C
+	// Token: 0x1700129D RID: 4765
+	// (get) Token: 0x0600BB84 RID: 48004 RVA: 0x00374A04 File Offset: 0x00372C04
 	public static GuideModel Instance
 	{
 		get
@@ -930,7 +931,7 @@ public class GuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E767 RID: 59239 RVA: 0x00368D93 File Offset: 0x00366F93
+	// Token: 0x0600BB85 RID: 48005 RVA: 0x00374A0B File Offset: 0x00372C0B
 	public static GuideModel GetOrCreateInstance()
 	{
 		if (GuideModel._Instance == null)
@@ -940,7 +941,7 @@ public class GuideModel : ModelBase
 		return GuideModel._Instance;
 	}
 
-	// Token: 0x0600E768 RID: 59240 RVA: 0x00368DA7 File Offset: 0x00366FA7
+	// Token: 0x0600BB86 RID: 48006 RVA: 0x00374A1F File Offset: 0x00372C1F
 	public static bool CreateInstance()
 	{
 		if (GuideModel._Instance != null)
@@ -951,44 +952,44 @@ public class GuideModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600E769 RID: 59241 RVA: 0x00368DBD File Offset: 0x00366FBD
+	// Token: 0x0600BB87 RID: 48007 RVA: 0x00374A35 File Offset: 0x00372C35
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600E76A RID: 59242 RVA: 0x00368DBF File Offset: 0x00366FBF
+	// Token: 0x0600BB88 RID: 48008 RVA: 0x00374A37 File Offset: 0x00372C37
 	public static void ResetStaticDefaultValue()
 	{
 		GuideModel._Instance = null;
 	}
 
-	// Token: 0x0600E76B RID: 59243 RVA: 0x00368DC7 File Offset: 0x00366FC7
+	// Token: 0x0600BB89 RID: 48009 RVA: 0x00374A3F File Offset: 0x00372C3F
 	static GuideModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GuideModel.CreateStaticDefaultValue), new Action(GuideModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006AF6 RID: 27382
+	// Token: 0x04006BD7 RID: 27607
 	public bool IsLock;
 
-	// Token: 0x04006AF7 RID: 27383
+	// Token: 0x04006BD8 RID: 27608
 	public bool IsGmLock;
 
-	// Token: 0x04006AF8 RID: 27384
+	// Token: 0x04006BD9 RID: 27609
 	public bool IsGmInvoke;
 
-	// Token: 0x04006AF9 RID: 27385
+	// Token: 0x04006BDA RID: 27610
 	public bool ShouldBlockGuideBecauseUiNotRender;
 
-	// Token: 0x04006AFA RID: 27386
+	// Token: 0x04006BDB RID: 27611
 	[Nullable(2)]
 	private HashSet<int> DungeonResetIdList;
 
-	// Token: 0x04006AFB RID: 27387
+	// Token: 0x04006BDC RID: 27612
 	[Nullable(2)]
 	private HashSet<int> FinishedGroupIdSet;
 
-	// Token: 0x04006AFC RID: 27388
+	// Token: 0x04006BDD RID: 27613
 	[Nullable(new byte[]
 	{
 		2,
@@ -996,10 +997,10 @@ public class GuideModel : ModelBase
 	})]
 	public Dictionary<int, GuideGroupInfo> CurrentGroupMap;
 
-	// Token: 0x04006AFD RID: 27389
+	// Token: 0x04006BDE RID: 27614
 	public Dictionary<EUiViewName, List<GuideGroupInfo>> FocusGroupMapByView;
 
-	// Token: 0x04006AFE RID: 27390
+	// Token: 0x04006BDF RID: 27615
 	[Nullable(new byte[]
 	{
 		2,
@@ -1007,25 +1008,25 @@ public class GuideModel : ModelBase
 	})]
 	private List<TutorialListInfo> TutorialList;
 
-	// Token: 0x04006AFF RID: 27391
+	// Token: 0x04006BE0 RID: 27616
 	[Nullable(2)]
 	private TimerHandle TimeHandler;
 
-	// Token: 0x04006B00 RID: 27392
+	// Token: 0x04006BE1 RID: 27617
 	[Nullable(2)]
 	private TutorialListInfo CurrentShowTutorial;
 
-	// Token: 0x04006B01 RID: 27393
+	// Token: 0x04006BE2 RID: 27618
 	private bool GuideTutorialViewOpenFailed;
 
-	// Token: 0x04006B02 RID: 27394
+	// Token: 0x04006BE3 RID: 27619
 	[Nullable(2)]
 	private Dictionary<EGuideViewType, GuideStepInfo> TypeViewSingletonMap;
 
-	// Token: 0x04006B03 RID: 27395
+	// Token: 0x04006BE4 RID: 27620
 	private int LockingInputGuideStepCount;
 
-	// Token: 0x04006B04 RID: 27396
+	// Token: 0x04006BE5 RID: 27621
 	[Nullable(2)]
 	private static GuideModel _Instance;
 }

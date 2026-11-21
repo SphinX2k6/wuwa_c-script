@@ -8,12 +8,12 @@ using CSharpScript.Game.LevelGamePlay.LevelListeners;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x0200707F RID: 28799
+	// Token: 0x02006200 RID: 25088
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ClientConditionListenerComponent : EntityComponent
 	{
-		// Token: 0x0604621A RID: 287258 RVA: 0x011825E0 File Offset: 0x011807E0
+		// Token: 0x0603C429 RID: 246825 RVA: 0x0112BD58 File Offset: 0x01129F58
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604621B RID: 287259 RVA: 0x01182658 File Offset: 0x01180858
+		// Token: 0x0603C42A RID: 246826 RVA: 0x0112BDD0 File Offset: 0x01129FD0
 		protected override bool OnClear()
 		{
 			this.ClearListenCondition();
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604621C RID: 287260 RVA: 0x01182674 File Offset: 0x01180874
+		// Token: 0x0603C42B RID: 246827 RVA: 0x0112BDEC File Offset: 0x01129FEC
 		private void ClearListenCondition()
 		{
 			if (this.ListenConditionGroups == null)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604621D RID: 287261 RVA: 0x0118270C File Offset: 0x0118090C
+		// Token: 0x0603C42C RID: 246828 RVA: 0x0112BE84 File Offset: 0x0112A084
 		private void ListenCondition(IClientConditionListener listener)
 		{
 			int conditionGroupIncId = LevelGeneralModel.Instance.MakeConditionGroupIncId();
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604621E RID: 287262 RVA: 0x0118283C File Offset: 0x01180A3C
+		// Token: 0x0603C42D RID: 246829 RVA: 0x0112BFB4 File Offset: 0x0112A1B4
 		[NullableContext(2)]
 		private void OnConditionListenCallback(int conditionGroupIncId, GeneralContext callbackContext, [Nullable(new byte[]
 		{
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.Execute(conditionListenInfo.ConditionListener, context);
 		}
 
-		// Token: 0x0604621F RID: 287263 RVA: 0x0118292C File Offset: 0x01180B2C
+		// Token: 0x0603C42E RID: 246830 RVA: 0x0112C0A4 File Offset: 0x0112A2A4
 		private void Execute(IClientConditionListener conditionListener, GeneralContext context)
 		{
 			EntityContext entityContext = context as EntityContext;
@@ -167,29 +167,35 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046220 RID: 287264 RVA: 0x011829E0 File Offset: 0x01180BE0
+		// Token: 0x0603C42F RID: 246831 RVA: 0x0112C158 File Offset: 0x0112A358
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
 			{
 				return false;
 			}
-			ClientConditionListenerComponent clientConditionListenerComponent = (ClientConditionListenerComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ListenConditionGroups"))
+			if (((ClientConditionListenerComponent)componentTemplate).ListenConditionGroups == null)
 			{
-				if (clientConditionListenerComponent.ListenConditionGroups == null)
-				{
-					this.ListenConditionGroups = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, ConditionListenInfo>>(this.ListenConditionGroups), "ListenConditionGroups"))
-				{
-					return false;
-				}
+				this.ListenConditionGroups = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ListenConditionGroups), "ListenConditionGroups"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024BD3 RID: 150483
+		// Token: 0x170071B8 RID: 29112
+		// (get) Token: 0x0603C430 RID: 246832 RVA: 0x0112C196 File Offset: 0x0112A396
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FE8E RID: 130702
 		[Nullable(new byte[]
 		{
 			2,

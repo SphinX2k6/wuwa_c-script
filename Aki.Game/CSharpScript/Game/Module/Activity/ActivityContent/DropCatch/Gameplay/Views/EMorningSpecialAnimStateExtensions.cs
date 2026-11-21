@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x02006713 RID: 26387
+	// Token: 0x02005663 RID: 22115
 	public static class EMorningSpecialAnimStateExtensions
 	{
-		// Token: 0x06041E70 RID: 269936 RVA: 0x00FFC628 File Offset: 0x00FFA828
+		// Token: 0x060369BC RID: 223676 RVA: 0x00F3D9F4 File Offset: 0x00F3BBF4
 		public static string ToEnumString(this EMorningSpecialAnimState value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			return result;
 		}
 
-		// Token: 0x06041E71 RID: 269937 RVA: 0x00FFC67C File Offset: 0x00FFA87C
+		// Token: 0x060369BD RID: 223677 RVA: 0x00F3DA48 File Offset: 0x00F3BC48
 		public static EMorningSpecialAnimState FromString(string name)
 		{
 			EMorningSpecialAnimState result;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			return result;
 		}
 
-		// Token: 0x06041E72 RID: 269938 RVA: 0x00FFC6A8 File Offset: 0x00FFA8A8
+		// Token: 0x060369BE RID: 223678 RVA: 0x00F3DA74 File Offset: 0x00F3BC74
 		public static bool TryFromString(string name, out EMorningSpecialAnimState value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			return true;
 		}
 
-		// Token: 0x06041E73 RID: 269939 RVA: 0x00FFC710 File Offset: 0x00FFA910
+		// Token: 0x060369BF RID: 223679 RVA: 0x00F3DADC File Offset: 0x00F3BCDC
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			};
 		}
 
-		// Token: 0x06041E74 RID: 269940 RVA: 0x00FFC738 File Offset: 0x00FFA938
+		// Token: 0x060369C0 RID: 223680 RVA: 0x00F3DB04 File Offset: 0x00F3BD04
 		public static EMorningSpecialAnimState[] GetValues()
 		{
 			return new EMorningSpecialAnimState[]
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			};
 		}
 
-		// Token: 0x06041E75 RID: 269941 RVA: 0x00FFC74B File Offset: 0x00FFA94B
+		// Token: 0x060369C1 RID: 223681 RVA: 0x00F3DB17 File Offset: 0x00F3BD17
 		public static string[] GetNames()
 		{
 			return new string[]

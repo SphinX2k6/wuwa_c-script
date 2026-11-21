@@ -1,40 +1,40 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003425 RID: 13349
+// Token: 0x02002997 RID: 10647
 public class RedDotFlySkinChildTab : RedDotBase
 {
-	// Token: 0x0601CD9A RID: 118170 RVA: 0x0080CA35 File Offset: 0x0080AC35
+	// Token: 0x0601AA92 RID: 109202 RVA: 0x00832FF9 File Offset: 0x008311F9
 	protected override bool IsMultiple()
 	{
 		return true;
 	}
 
-	// Token: 0x0601CD9B RID: 118171 RVA: 0x0080CA38 File Offset: 0x0080AC38
+	// Token: 0x0601AA93 RID: 109203 RVA: 0x00832FFC File Offset: 0x008311FC
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.FlySkinTab);
 	}
 
-	// Token: 0x0601CD9C RID: 118172 RVA: 0x0080CA41 File Offset: 0x0080AC41
+	// Token: 0x0601AA94 RID: 109204 RVA: 0x00833005 File Offset: 0x00831205
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<EFlySkinType>(EEventName.RefreshFlySkinChildTabRed, new Action<EFlySkinType>(this.OnRefreshFlySkinChildTabRed));
 	}
 
-	// Token: 0x0601CD9D RID: 118173 RVA: 0x0080CA5F File Offset: 0x0080AC5F
+	// Token: 0x0601AA95 RID: 109205 RVA: 0x00833023 File Offset: 0x00831223
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove<EFlySkinType>(EEventName.RefreshFlySkinChildTabRed, new Action<EFlySkinType>(this.OnRefreshFlySkinChildTabRed));
 	}
 
-	// Token: 0x0601CD9E RID: 118174 RVA: 0x0080CA7D File Offset: 0x0080AC7D
+	// Token: 0x0601AA96 RID: 109206 RVA: 0x00833041 File Offset: 0x00831241
 	protected override bool OnCheck(int uId = 0)
 	{
 		return FlySkinModel.Instance.CheckFlySkinHasRedDotBySkinType((EFlySkinType)uId);
 	}
 
-	// Token: 0x0601CD9F RID: 118175 RVA: 0x0080CA8A File Offset: 0x0080AC8A
+	// Token: 0x0601AA97 RID: 109207 RVA: 0x0083304E File Offset: 0x0083124E
 	private void OnRefreshFlySkinChildTabRed(EFlySkinType skinType)
 	{
 		base.EventCheckWithUid((int)skinType);

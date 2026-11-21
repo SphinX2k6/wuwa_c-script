@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BB4 RID: 23476
+	// Token: 0x02004B94 RID: 19348
 	public enum ECiacconaGalEndingType
 	{
-		// Token: 0x0401EF08 RID: 126728
+		// Token: 0x040199B9 RID: 104889
 		Main = 1,
-		// Token: 0x0401EF09 RID: 126729
+		// Token: 0x040199BA RID: 104890
 		Side
 	}
 }

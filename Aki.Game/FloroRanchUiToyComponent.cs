@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001B20 RID: 6944
+// Token: 0x02000FDF RID: 4063
 [NullableContext(2)]
 [Nullable(0)]
 [FloroRanchEntityComponent(EFloroRanchEntityComponent.FloroRanchUiToyComponent)]
 public class FloroRanchUiToyComponent : FloroRanchUiItemBaseComponent
 {
-	// Token: 0x0600CE13 RID: 52755 RVA: 0x002EE930 File Offset: 0x002ECB30
+	// Token: 0x0600A224 RID: 41508 RVA: 0x002F9A10 File Offset: 0x002F7C10
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -25,7 +25,7 @@ public class FloroRanchUiToyComponent : FloroRanchUiItemBaseComponent
 		return <PlayShowAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE14 RID: 52756 RVA: 0x002EE974 File Offset: 0x002ECB74
+	// Token: 0x0600A225 RID: 41509 RVA: 0x002F9A54 File Offset: 0x002F7C54
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -41,7 +41,7 @@ public class FloroRanchUiToyComponent : FloroRanchUiItemBaseComponent
 		return <CreateUiItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE15 RID: 52757 RVA: 0x002EE9B8 File Offset: 0x002ECBB8
+	// Token: 0x0600A226 RID: 41510 RVA: 0x002F9A98 File Offset: 0x002F7C98
 	public override UniTask PlayHideAnim()
 	{
 		FloroRanchUiToyComponent.<PlayHideAnim>d__3 <PlayHideAnim>d__;
@@ -52,7 +52,7 @@ public class FloroRanchUiToyComponent : FloroRanchUiItemBaseComponent
 		return <PlayHideAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE16 RID: 52758 RVA: 0x002EE9FC File Offset: 0x002ECBFC
+	// Token: 0x0600A227 RID: 41511 RVA: 0x002F9ADC File Offset: 0x002F7CDC
 	public override UniTask PlayNormalAnim()
 	{
 		FloroRanchUiToyComponent.<PlayNormalAnim>d__4 <PlayNormalAnim>d__;
@@ -63,7 +63,7 @@ public class FloroRanchUiToyComponent : FloroRanchUiItemBaseComponent
 		return <PlayNormalAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE17 RID: 52759 RVA: 0x002EEA40 File Offset: 0x002ECC40
+	// Token: 0x0600A228 RID: 41512 RVA: 0x002F9B20 File Offset: 0x002F7D20
 	public UniTask PlayToyLevelUpAnim()
 	{
 		FloroRanchUiToyComponent.<PlayToyLevelUpAnim>d__5 <PlayToyLevelUpAnim>d__;
@@ -74,7 +74,7 @@ public class FloroRanchUiToyComponent : FloroRanchUiItemBaseComponent
 		return <PlayToyLevelUpAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE18 RID: 52760 RVA: 0x002EEA84 File Offset: 0x002ECC84
+	// Token: 0x0600A229 RID: 41513 RVA: 0x002F9B64 File Offset: 0x002F7D64
 	[PreserveBaseOverrides]
 	public new virtual FloroRanchUiToyItem GetUiItem()
 	{
@@ -90,6 +90,6 @@ public class FloroRanchUiToyComponent : FloroRanchUiItemBaseComponent
 		return this._floroRanchUiToyItem;
 	}
 
-	// Token: 0x04005E6C RID: 24172
+	// Token: 0x04005F3B RID: 24379
 	private FloroRanchUiToyItem _floroRanchUiToyItem;
 }

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DC8 RID: 19912
+	// Token: 0x020052CC RID: 21196
 	public enum ELiftBuffType : byte
 	{
-		// Token: 0x0400DA25 RID: 55845
+		// Token: 0x0400E574 RID: 58740
 		DefaultLiftBuff,
-		// Token: 0x0400DA26 RID: 55846
+		// Token: 0x0400E575 RID: 58741
 		AllowJumpDash
 	}
 }

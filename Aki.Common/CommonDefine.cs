@@ -230,137 +230,137 @@ public static class CommonDefine
 		}
 	};
 
-	// Token: 0x0200002C RID: 44
+	// Token: 0x0200002D RID: 45
 	[NullableContext(0)]
 	public enum ETimeType
 	{
-		// Token: 0x0400023E RID: 574
+		// Token: 0x04000243 RID: 579
 		Second,
-		// Token: 0x0400023F RID: 575
+		// Token: 0x04000244 RID: 580
 		Minute,
-		// Token: 0x04000240 RID: 576
+		// Token: 0x04000245 RID: 581
 		Hour,
-		// Token: 0x04000241 RID: 577
+		// Token: 0x04000246 RID: 582
 		Day
 	}
 
-	// Token: 0x0200002D RID: 45
+	// Token: 0x0200002E RID: 46
 	public interface IRemainTime
 	{
 		// Token: 0x17000026 RID: 38
-		// (get) Token: 0x06000106 RID: 262
-		// (set) Token: 0x06000107 RID: 263
+		// (get) Token: 0x06000175 RID: 373
+		// (set) Token: 0x06000176 RID: 374
 		int TimeValue { get; set; }
 
 		// Token: 0x17000027 RID: 39
-		// (get) Token: 0x06000108 RID: 264
-		// (set) Token: 0x06000109 RID: 265
+		// (get) Token: 0x06000177 RID: 375
+		// (set) Token: 0x06000178 RID: 376
 		double RemainingTime { get; set; }
 
 		// Token: 0x17000028 RID: 40
-		// (get) Token: 0x0600010A RID: 266
-		// (set) Token: 0x0600010B RID: 267
+		// (get) Token: 0x06000179 RID: 377
+		// (set) Token: 0x0600017A RID: 378
 		string TextId { get; set; }
 	}
 
-	// Token: 0x0200002E RID: 46
+	// Token: 0x0200002F RID: 47
 	[Nullable(0)]
 	public class RemainTime : CommonDefine.IRemainTime
 	{
 		// Token: 0x17000029 RID: 41
-		// (get) Token: 0x0600010C RID: 268 RVA: 0x0000B5D2 File Offset: 0x000097D2
-		// (set) Token: 0x0600010D RID: 269 RVA: 0x0000B5DA File Offset: 0x000097DA
+		// (get) Token: 0x0600017B RID: 379 RVA: 0x0000EDBF File Offset: 0x0000CFBF
+		// (set) Token: 0x0600017C RID: 380 RVA: 0x0000EDC7 File Offset: 0x0000CFC7
 		public int TimeValue { get; set; }
 
 		// Token: 0x1700002A RID: 42
-		// (get) Token: 0x0600010E RID: 270 RVA: 0x0000B5E3 File Offset: 0x000097E3
-		// (set) Token: 0x0600010F RID: 271 RVA: 0x0000B5EB File Offset: 0x000097EB
+		// (get) Token: 0x0600017D RID: 381 RVA: 0x0000EDD0 File Offset: 0x0000CFD0
+		// (set) Token: 0x0600017E RID: 382 RVA: 0x0000EDD8 File Offset: 0x0000CFD8
 		public double RemainingTime { get; set; }
 
 		// Token: 0x1700002B RID: 43
-		// (get) Token: 0x06000110 RID: 272 RVA: 0x0000B5F4 File Offset: 0x000097F4
-		// (set) Token: 0x06000111 RID: 273 RVA: 0x0000B5FC File Offset: 0x000097FC
+		// (get) Token: 0x0600017F RID: 383 RVA: 0x0000EDE1 File Offset: 0x0000CFE1
+		// (set) Token: 0x06000180 RID: 384 RVA: 0x0000EDE9 File Offset: 0x0000CFE9
 		public string TextId { get; set; }
 	}
 
-	// Token: 0x0200002F RID: 47
+	// Token: 0x02000030 RID: 48
 	public interface IPayShowCountDownRemainTime
 	{
 	}
 
-	// Token: 0x02000030 RID: 48
+	// Token: 0x02000031 RID: 49
 	[NullableContext(0)]
 	public class PayShowCountDownRemainTime<[Nullable(2)] T> : CommonDefine.IPayShowCountDownRemainTime
 	{
-		// Token: 0x04000245 RID: 581
+		// Token: 0x0400024A RID: 586
 		[Nullable(1)]
 		public T Value;
 	}
 
-	// Token: 0x02000031 RID: 49
+	// Token: 0x02000032 RID: 50
 	[NullableContext(2)]
 	public interface ICountDown
 	{
 		// Token: 0x1700002C RID: 44
-		// (get) Token: 0x06000114 RID: 276
-		// (set) Token: 0x06000115 RID: 277
+		// (get) Token: 0x06000183 RID: 387
+		// (set) Token: 0x06000184 RID: 388
 		string CountDownText { get; set; }
 
 		// Token: 0x1700002D RID: 45
-		// (get) Token: 0x06000116 RID: 278
-		// (set) Token: 0x06000117 RID: 279
+		// (get) Token: 0x06000185 RID: 389
+		// (set) Token: 0x06000186 RID: 390
 		double RemainingTime { get; set; }
 	}
 
-	// Token: 0x02000032 RID: 50
+	// Token: 0x02000033 RID: 51
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CountDown : CommonDefine.ICountDown
 	{
 		// Token: 0x1700002E RID: 46
-		// (get) Token: 0x06000118 RID: 280 RVA: 0x0000B615 File Offset: 0x00009815
-		// (set) Token: 0x06000119 RID: 281 RVA: 0x0000B61D File Offset: 0x0000981D
+		// (get) Token: 0x06000187 RID: 391 RVA: 0x0000EE02 File Offset: 0x0000D002
+		// (set) Token: 0x06000188 RID: 392 RVA: 0x0000EE0A File Offset: 0x0000D00A
 		public string CountDownText { get; set; }
 
 		// Token: 0x1700002F RID: 47
-		// (get) Token: 0x0600011A RID: 282 RVA: 0x0000B626 File Offset: 0x00009826
-		// (set) Token: 0x0600011B RID: 283 RVA: 0x0000B62E File Offset: 0x0000982E
+		// (get) Token: 0x06000189 RID: 393 RVA: 0x0000EE13 File Offset: 0x0000D013
+		// (set) Token: 0x0600018A RID: 394 RVA: 0x0000EE1B File Offset: 0x0000D01B
 		public double RemainingTime { get; set; }
-	}
-
-	// Token: 0x02000033 RID: 51
-	[NullableContext(0)]
-	public enum ETimeTextType
-	{
-		// Token: 0x04000249 RID: 585
-		TimeType1,
-		// Token: 0x0400024A RID: 586
-		TimeType2
 	}
 
 	// Token: 0x02000034 RID: 52
 	[NullableContext(0)]
-	public enum ESkillType
+	public enum ETimeTextType
 	{
-		// Token: 0x0400024C RID: 588
-		ExploreType = 1,
-		// Token: 0x0400024D RID: 589
-		BattleType
+		// Token: 0x0400024E RID: 590
+		TimeType1,
+		// Token: 0x0400024F RID: 591
+		TimeType2
 	}
 
 	// Token: 0x02000035 RID: 53
 	[NullableContext(0)]
+	public enum ESkillType
+	{
+		// Token: 0x04000251 RID: 593
+		ExploreType = 1,
+		// Token: 0x04000252 RID: 594
+		BattleType
+	}
+
+	// Token: 0x02000036 RID: 54
+	[NullableContext(0)]
 	public enum EQualityIconType
 	{
-		// Token: 0x0400024F RID: 591
+		// Token: 0x04000254 RID: 596
 		BackgroundSprite,
-		// Token: 0x04000250 RID: 592
+		// Token: 0x04000255 RID: 597
 		VerticalGradientSprite,
-		// Token: 0x04000251 RID: 593
+		// Token: 0x04000256 RID: 598
 		TipsSprite,
-		// Token: 0x04000252 RID: 594
+		// Token: 0x04000257 RID: 599
 		MediumItemGridQualitySpritePath,
-		// Token: 0x04000253 RID: 595
+		// Token: 0x04000258 RID: 600
 		TypeAGridQualitySpritePath
 	}
 }

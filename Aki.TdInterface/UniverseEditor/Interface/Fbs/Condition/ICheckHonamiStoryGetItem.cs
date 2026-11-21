@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A5A RID: 19034
+	// Token: 0x02004F20 RID: 20256
 	public struct ICheckHonamiStoryGetItem : IFlatbufferObject
 	{
-		// Token: 0x170089CC RID: 35276
-		// (get) Token: 0x0601DCFA RID: 122106 RVA: 0x00430990 File Offset: 0x0042EB90
+		// Token: 0x170090A8 RID: 37032
+		// (get) Token: 0x0601F79D RID: 128925 RVA: 0x00461B1C File Offset: 0x0045FD1C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DCFB RID: 122107 RVA: 0x0043099D File Offset: 0x0042EB9D
+		// Token: 0x0601F79E RID: 128926 RVA: 0x00461B29 File Offset: 0x0045FD29
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DCFC RID: 122108 RVA: 0x004309A4 File Offset: 0x0042EBA4
+		// Token: 0x0601F79F RID: 128927 RVA: 0x00461B30 File Offset: 0x0045FD30
 		public static ICheckHonamiStoryGetItem GetRootAsICheckHonamiStoryGetItem(ByteBuffer _bb)
 		{
 			return ICheckHonamiStoryGetItem.GetRootAsICheckHonamiStoryGetItem(_bb, default(ICheckHonamiStoryGetItem));
 		}
 
-		// Token: 0x0601DCFD RID: 122109 RVA: 0x004309C0 File Offset: 0x0042EBC0
+		// Token: 0x0601F7A0 RID: 128928 RVA: 0x00461B4C File Offset: 0x0045FD4C
 		public static ICheckHonamiStoryGetItem GetRootAsICheckHonamiStoryGetItem(ByteBuffer _bb, ICheckHonamiStoryGetItem obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DCFE RID: 122110 RVA: 0x004309DD File Offset: 0x0042EBDD
+		// Token: 0x0601F7A1 RID: 128929 RVA: 0x00461B69 File Offset: 0x0045FD69
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DCFF RID: 122111 RVA: 0x004309EC File Offset: 0x0042EBEC
+		// Token: 0x0601F7A2 RID: 128930 RVA: 0x00461B78 File Offset: 0x0045FD78
 		public ICheckHonamiStoryGetItem __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170089CD RID: 35277
-		// (get) Token: 0x0601DD00 RID: 122112 RVA: 0x004309FC File Offset: 0x0042EBFC
+		// Token: 0x170090A9 RID: 37033
+		// (get) Token: 0x0601F7A3 RID: 128931 RVA: 0x00461B88 File Offset: 0x0045FD88
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x170089CE RID: 35278
-		// (get) Token: 0x0601DD01 RID: 122113 RVA: 0x00430A38 File Offset: 0x0042EC38
+		// Token: 0x170090AA RID: 37034
+		// (get) Token: 0x0601F7A4 RID: 128932 RVA: 0x00461BC4 File Offset: 0x0045FDC4
 		public int ItemId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DD02 RID: 122114 RVA: 0x00430A74 File Offset: 0x0042EC74
+		// Token: 0x0601F7A5 RID: 128933 RVA: 0x00461C00 File Offset: 0x0045FE00
 		public static Offset<ICheckHonamiStoryGetItem> CreateICheckHonamiStoryGetItem(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int ItemId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckHonamiStoryGetItem.EndICheckHonamiStoryGetItem(builder);
 		}
 
-		// Token: 0x0601DD03 RID: 122115 RVA: 0x00430A91 File Offset: 0x0042EC91
+		// Token: 0x0601F7A6 RID: 128934 RVA: 0x00461C1D File Offset: 0x0045FE1D
 		public static void StartICheckHonamiStoryGetItem(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601DD04 RID: 122116 RVA: 0x00430A9A File Offset: 0x0042EC9A
+		// Token: 0x0601F7A7 RID: 128935 RVA: 0x00461C26 File Offset: 0x0045FE26
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DD05 RID: 122117 RVA: 0x00430AA5 File Offset: 0x0042ECA5
+		// Token: 0x0601F7A8 RID: 128936 RVA: 0x00461C31 File Offset: 0x0045FE31
 		public static void AddItemId(FlatBufferBuilder builder, int itemId)
 		{
 			builder.AddInt(1, itemId, 0);
 		}
 
-		// Token: 0x0601DD06 RID: 122118 RVA: 0x00430AB0 File Offset: 0x0042ECB0
+		// Token: 0x0601F7A9 RID: 128937 RVA: 0x00461C3C File Offset: 0x0045FE3C
 		public static Offset<ICheckHonamiStoryGetItem> EndICheckHonamiStoryGetItem(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckHonamiStoryGetItem>(builder.EndTable());
 		}
 
-		// Token: 0x0601DD07 RID: 122119 RVA: 0x00430AC0 File Offset: 0x0042ECC0
+		// Token: 0x0601F7AA RID: 128938 RVA: 0x00461C4C File Offset: 0x0045FE4C
 		public ICheckHonamiStoryGetItemT UnPack()
 		{
 			ICheckHonamiStoryGetItemT checkHonamiStoryGetItemT = new ICheckHonamiStoryGetItemT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkHonamiStoryGetItemT;
 		}
 
-		// Token: 0x0601DD08 RID: 122120 RVA: 0x00430ADB File Offset: 0x0042ECDB
+		// Token: 0x0601F7AB RID: 128939 RVA: 0x00461C67 File Offset: 0x0045FE67
 		public void UnPackTo(ICheckHonamiStoryGetItemT _o)
 		{
 			_o.Type = this.Type;
 			_o.ItemId = this.ItemId;
 		}
 
-		// Token: 0x0601DD09 RID: 122121 RVA: 0x00430AF8 File Offset: 0x0042ECF8
+		// Token: 0x0601F7AC RID: 128940 RVA: 0x00461C84 File Offset: 0x0045FE84
 		public static Offset<ICheckHonamiStoryGetItem> Pack(FlatBufferBuilder builder, ICheckHonamiStoryGetItemT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckHonamiStoryGetItem.CreateICheckHonamiStoryGetItem(builder, _o.Type, _o.ItemId);
 		}
 
-		// Token: 0x0400D2B8 RID: 53944
+		// Token: 0x0400DD93 RID: 56723
 		private Table __p;
 	}
 }

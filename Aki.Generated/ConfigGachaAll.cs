@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200036C RID: 876
+	// Token: 0x02000381 RID: 897
 	public class ConfigGachaAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600148D RID: 5261 RVA: 0x000CDA10 File Offset: 0x000CBC10
+		// Token: 0x0600150B RID: 5387 RVA: 0x000D3F1C File Offset: 0x000D211C
 		static ConfigGachaAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGachaAll.CreateStaticDefaultValue), new Action(ConfigGachaAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600148E RID: 5262 RVA: 0x000CDA30 File Offset: 0x000CBC30
+		// Token: 0x0600150C RID: 5388 RVA: 0x000D3F3C File Offset: 0x000D213C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGachaAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600148F RID: 5263 RVA: 0x000CDAAF File Offset: 0x000CBCAF
+		// Token: 0x0600150D RID: 5389 RVA: 0x000D3FBB File Offset: 0x000D21BB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGachaAll.LogPair = null;
 			ConfigGachaAll.HandleId = 0;
 		}
 
-		// Token: 0x06001490 RID: 5264 RVA: 0x000CDABD File Offset: 0x000CBCBD
+		// Token: 0x0600150E RID: 5390 RVA: 0x000D3FC9 File Offset: 0x000D21C9
 		public static void Init()
 		{
 			ConfigGachaAll.HandleId = ConfigCommon.InitDataStatement(ConfigGachaAll.HandleId, "db_gacha.db", "select BinData from `Gacha`");
 		}
 
-		// Token: 0x06001491 RID: 5265 RVA: 0x000CDAD8 File Offset: 0x000CBCD8
+		// Token: 0x0600150F RID: 5391 RVA: 0x000D3FE4 File Offset: 0x000D21E4
 		[NullableContext(2)]
 		public static IReadOnlyList<Gacha> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040017D8 RID: 6104
+		// Token: 0x0400186B RID: 6251
 		private const string DB = "db_gacha.db";
 
-		// Token: 0x040017D9 RID: 6105
+		// Token: 0x0400186C RID: 6252
 		private const string FILE = "c.抽卡.xlsx";
 
-		// Token: 0x040017DA RID: 6106
+		// Token: 0x0400186D RID: 6253
 		private const string TABLE = "Gacha";
 
-		// Token: 0x040017DB RID: 6107
+		// Token: 0x0400186E RID: 6254
 		private const string COMMAND = "select BinData from `Gacha`";
 
-		// Token: 0x040017DC RID: 6108
+		// Token: 0x0400186F RID: 6255
 		private const string KEY_PREFIX = "GachaAll";
 
-		// Token: 0x040017DD RID: 6109
+		// Token: 0x04001870 RID: 6256
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040017DE RID: 6110
+		// Token: 0x04001871 RID: 6257
 		private static int HandleId;
 	}
 }

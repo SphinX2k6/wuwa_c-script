@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000528 RID: 1320
+	// Token: 0x0200053E RID: 1342
 	public class ConfigMapRoadWaysByMapId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001EFB RID: 7931 RVA: 0x001085CF File Offset: 0x001067CF
+		// Token: 0x06001F7F RID: 8063 RVA: 0x0010ED23 File Offset: 0x0010CF23
 		static ConfigMapRoadWaysByMapId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMapRoadWaysByMapId.CreateStaticDefaultValue), new Action(ConfigMapRoadWaysByMapId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001EFC RID: 7932 RVA: 0x001085F0 File Offset: 0x001067F0
+		// Token: 0x06001F80 RID: 8064 RVA: 0x0010ED44 File Offset: 0x0010CF44
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMapRoadWaysByMapId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001EFD RID: 7933 RVA: 0x0010866F File Offset: 0x0010686F
+		// Token: 0x06001F81 RID: 8065 RVA: 0x0010EDC3 File Offset: 0x0010CFC3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMapRoadWaysByMapId.LogPair = null;
 			ConfigMapRoadWaysByMapId.HandleId = 0;
 		}
 
-		// Token: 0x06001EFE RID: 7934 RVA: 0x0010867D File Offset: 0x0010687D
+		// Token: 0x06001F82 RID: 8066 RVA: 0x0010EDD1 File Offset: 0x0010CFD1
 		public static void Init()
 		{
 			ConfigMapRoadWaysByMapId.HandleId = ConfigCommon.InitDataStatement(ConfigMapRoadWaysByMapId.HandleId, "db_map.db", "select BinData from `MapRoadWays` where MapId=?");
 		}
 
-		// Token: 0x06001EFF RID: 7935 RVA: 0x00108698 File Offset: 0x00106898
+		// Token: 0x06001F83 RID: 8067 RVA: 0x0010EDEC File Offset: 0x0010CFEC
 		[NullableContext(2)]
 		public static IReadOnlyList<MapRoadWays> GetConfigList(int p0MapId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040023FC RID: 9212
+		// Token: 0x04002496 RID: 9366
 		private const string DB = "db_map.db";
 
-		// Token: 0x040023FD RID: 9213
+		// Token: 0x04002497 RID: 9367
 		private const string FILE = "d.地图.xlsx";
 
-		// Token: 0x040023FE RID: 9214
+		// Token: 0x04002498 RID: 9368
 		private const string TABLE = "MapRoadWays";
 
-		// Token: 0x040023FF RID: 9215
+		// Token: 0x04002499 RID: 9369
 		private const string COMMAND = "select BinData from `MapRoadWays` where MapId=?";
 
-		// Token: 0x04002400 RID: 9216
+		// Token: 0x0400249A RID: 9370
 		private const string KEY_PREFIX = "MapRoadWaysByMapId";
 
-		// Token: 0x04002401 RID: 9217
+		// Token: 0x0400249B RID: 9371
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002402 RID: 9218
+		// Token: 0x0400249C RID: 9372
 		private static int HandleId;
 	}
 }

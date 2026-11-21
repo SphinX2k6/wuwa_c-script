@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using Aki.Config;
 
-// Token: 0x02002318 RID: 8984
+// Token: 0x020017FD RID: 6141
 [NullableContext(2)]
 [Nullable(0)]
 [Config(0)]
 public class PayItemConfig : ConfigBase
 {
-	// Token: 0x06011BF5 RID: 72693 RVA: 0x0045E627 File Offset: 0x0045C827
+	// Token: 0x0600F0A5 RID: 61605 RVA: 0x0046B693 File Offset: 0x00469893
 	public IReadOnlyList<PayItem> GetPayItemList()
 	{
 		return ConfigPayItemAll.GetConfigList(true);
 	}
 
-	// Token: 0x06011BF6 RID: 72694 RVA: 0x0045E630 File Offset: 0x0045C830
+	// Token: 0x0600F0A6 RID: 61606 RVA: 0x0046B69C File Offset: 0x0046989C
 	public string GetProductIdByPayId(int id)
 	{
 		Pay? config = ConfigPayById.GetConfig(id, true);
@@ -27,7 +27,7 @@ public class PayItemConfig : ConfigBase
 		return config.GetValueOrDefault().ProductId;
 	}
 
-	// Token: 0x06011BF7 RID: 72695 RVA: 0x0045E660 File Offset: 0x0045C860
+	// Token: 0x0600F0A7 RID: 61607 RVA: 0x0046B6CC File Offset: 0x004698CC
 	public string GetProductIdByPayItemId(int payItemId)
 	{
 		PayItem? payItem;
@@ -44,7 +44,7 @@ public class PayItemConfig : ConfigBase
 		return config.GetValueOrDefault().ProductId;
 	}
 
-	// Token: 0x06011BF8 RID: 72696 RVA: 0x0045E6D4 File Offset: 0x0045C8D4
+	// Token: 0x0600F0A8 RID: 61608 RVA: 0x0046B740 File Offset: 0x00469940
 	public Pay? GetPayConf(int payId)
 	{
 		string currentSelectPayServerName = LoginServerModel.Instance.GetCurrentSelectPayServerName();
@@ -64,13 +64,13 @@ public class PayItemConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x06011BF9 RID: 72697 RVA: 0x0045E745 File Offset: 0x0045C945
+	// Token: 0x0600F0A9 RID: 61609 RVA: 0x0046B7B1 File Offset: 0x004699B1
 	public IReadOnlyList<Pay> GetCurrentRegionPayConfigList()
 	{
 		return ConfigPayByRegion.GetConfigList(LoginServerModel.Instance.GetCurrentSelectPayServerName(), true);
 	}
 
-	// Token: 0x06011BFA RID: 72698 RVA: 0x0045E757 File Offset: 0x0045C957
+	// Token: 0x0600F0AA RID: 61610 RVA: 0x0046B7C3 File Offset: 0x004699C3
 	[NullableContext(1)]
 	public string GetPayShowCurrency()
 	{
@@ -81,7 +81,7 @@ public class PayItemConfig : ConfigBase
 		return this.GetMainlandCurrencyChar();
 	}
 
-	// Token: 0x06011BFB RID: 72699 RVA: 0x0045E774 File Offset: 0x0045C974
+	// Token: 0x0600F0AB RID: 61611 RVA: 0x0046B7E0 File Offset: 0x004699E0
 	[NullableContext(1)]
 	public string GetPayShow(int payId)
 	{
@@ -99,7 +99,7 @@ public class PayItemConfig : ConfigBase
 		return stringBuilder.ToString();
 	}
 
-	// Token: 0x06011BFC RID: 72700 RVA: 0x0045E7CC File Offset: 0x0045C9CC
+	// Token: 0x0600F0AC RID: 61612 RVA: 0x0046B838 File Offset: 0x00469A38
 	public int? GetPayIdByPayItemId(int payItemId)
 	{
 		if (ConfigPayItemById.GetConfig(payItemId, true) == null)
@@ -110,31 +110,31 @@ public class PayItemConfig : ConfigBase
 		return new int?(payItem.GetValueOrDefault().PayId);
 	}
 
-	// Token: 0x06011BFD RID: 72701 RVA: 0x0045E808 File Offset: 0x0045CA08
+	// Token: 0x0600F0AD RID: 61613 RVA: 0x0046B874 File Offset: 0x00469A74
 	public PayItem? GetPayItem(int payItemId)
 	{
 		return ConfigPayItemById.GetConfig(payItemId, true);
 	}
 
-	// Token: 0x06011BFE RID: 72702 RVA: 0x0045E811 File Offset: 0x0045CA11
+	// Token: 0x0600F0AE RID: 61614 RVA: 0x0046B87D File Offset: 0x00469A7D
 	public int? GetWaitPaySuccessTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("MaxWaitSuccessTime");
 	}
 
-	// Token: 0x06011BFF RID: 72703 RVA: 0x0045E81D File Offset: 0x0045CA1D
+	// Token: 0x0600F0AF RID: 61615 RVA: 0x0046B889 File Offset: 0x00469A89
 	public string GetMainlandCurrencyChar()
 	{
 		return ConfigCommonParamById.GetStringConfig("MainlandCurrencyChar");
 	}
 
-	// Token: 0x06011C00 RID: 72704 RVA: 0x0045E829 File Offset: 0x0045CA29
+	// Token: 0x0600F0B0 RID: 61616 RVA: 0x0046B895 File Offset: 0x00469A95
 	public string GetGlobalCurrencyChar()
 	{
 		return ConfigCommonParamById.GetStringConfig("GlobalCurrencyChar");
 	}
 
-	// Token: 0x06011C01 RID: 72705 RVA: 0x0045E838 File Offset: 0x0045CA38
+	// Token: 0x0600F0B1 RID: 61617 RVA: 0x0046B8A4 File Offset: 0x00469AA4
 	public PayGift? GetRechargeGiftConfig(int id)
 	{
 		foreach (PayGift value in ConfigPayGiftAll.GetConfigList(true))
@@ -147,13 +147,13 @@ public class PayItemConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x06011C02 RID: 72706 RVA: 0x0045E89C File Offset: 0x0045CA9C
+	// Token: 0x0600F0B2 RID: 61618 RVA: 0x0046B908 File Offset: 0x00469B08
 	public int GetRechargeItemRate()
 	{
 		return ConfigCommonParamById.GetIntConfig("RechargeItemRate").GetValueOrDefault();
 	}
 
-	// Token: 0x06011C03 RID: 72707 RVA: 0x0045E8BC File Offset: 0x0045CABC
+	// Token: 0x0600F0B3 RID: 61619 RVA: 0x0046B928 File Offset: 0x00469B28
 	[NullableContext(1)]
 	public string GetRegionMainCurrency()
 	{
@@ -171,8 +171,8 @@ public class PayItemConfig : ConfigBase
 		return "";
 	}
 
-	// Token: 0x170016B1 RID: 5809
-	// (get) Token: 0x06011C04 RID: 72708 RVA: 0x0045E92C File Offset: 0x0045CB2C
+	// Token: 0x170016EB RID: 5867
+	// (get) Token: 0x0600F0B4 RID: 61620 RVA: 0x0046B998 File Offset: 0x00469B98
 	[Nullable(1)]
 	public static PayItemConfig Instance
 	{
@@ -183,7 +183,7 @@ public class PayItemConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06011C05 RID: 72709 RVA: 0x0045E933 File Offset: 0x0045CB33
+	// Token: 0x0600F0B5 RID: 61621 RVA: 0x0046B99F File Offset: 0x00469B9F
 	[NullableContext(1)]
 	public static PayItemConfig GetOrCreateInstance()
 	{
@@ -194,7 +194,7 @@ public class PayItemConfig : ConfigBase
 		return PayItemConfig._Instance;
 	}
 
-	// Token: 0x06011C06 RID: 72710 RVA: 0x0045E947 File Offset: 0x0045CB47
+	// Token: 0x0600F0B6 RID: 61622 RVA: 0x0046B9B3 File Offset: 0x00469BB3
 	public static bool CreateInstance()
 	{
 		if (PayItemConfig._Instance != null)
@@ -205,23 +205,23 @@ public class PayItemConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06011C07 RID: 72711 RVA: 0x0045E95D File Offset: 0x0045CB5D
+	// Token: 0x0600F0B7 RID: 61623 RVA: 0x0046B9C9 File Offset: 0x00469BC9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011C08 RID: 72712 RVA: 0x0045E95F File Offset: 0x0045CB5F
+	// Token: 0x0600F0B8 RID: 61624 RVA: 0x0046B9CB File Offset: 0x00469BCB
 	public static void ResetStaticDefaultValue()
 	{
 		PayItemConfig._Instance = null;
 	}
 
-	// Token: 0x06011C09 RID: 72713 RVA: 0x0045E967 File Offset: 0x0045CB67
+	// Token: 0x0600F0B9 RID: 61625 RVA: 0x0046B9D3 File Offset: 0x00469BD3
 	static PayItemConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PayItemConfig.CreateStaticDefaultValue), new Action(PayItemConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040086B4 RID: 34484
+	// Token: 0x040087F7 RID: 34807
 	private static PayItemConfig _Instance;
 }

@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02002577 RID: 9591
+// Token: 0x02001A62 RID: 6754
 public class PhotoToggleSetItem : PhotographSetupBase
 {
-	// Token: 0x060135F0 RID: 79344 RVA: 0x004D204C File Offset: 0x004D024C
+	// Token: 0x06010AD3 RID: 68307 RVA: 0x004E0CB4 File Offset: 0x004DEEB4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,14 +23,14 @@ public class PhotoToggleSetItem : PhotographSetupBase
 		};
 	}
 
-	// Token: 0x060135F1 RID: 79345 RVA: 0x004D20DF File Offset: 0x004D02DF
+	// Token: 0x06010AD4 RID: 68308 RVA: 0x004E0D47 File Offset: 0x004DEF47
 	protected override void OnStart()
 	{
 		PhotographController instance = PhotographController.Instance;
 		instance.OnPhotographOptionChanged = (Action<EPhotoSetupValueType, float>)Delegate.Combine(instance.OnPhotographOptionChanged, new Action<EPhotoSetupValueType, float>(this.OnPhotographOptionChanged));
 	}
 
-	// Token: 0x060135F2 RID: 79346 RVA: 0x004D2108 File Offset: 0x004D0308
+	// Token: 0x06010AD5 RID: 68309 RVA: 0x004E0D70 File Offset: 0x004DEF70
 	public override void Refresh()
 	{
 		if (this.SetupConfig == null || this.SetupConfig.Value.Type != 0)
@@ -47,7 +47,7 @@ public class PhotoToggleSetItem : PhotographSetupBase
 		this.RefreshSelectedBg(flag);
 	}
 
-	// Token: 0x060135F3 RID: 79347 RVA: 0x004D21A4 File Offset: 0x004D03A4
+	// Token: 0x06010AD6 RID: 68310 RVA: 0x004E0E0C File Offset: 0x004DF00C
 	private void OnToggleStateChanged(EToggleState state)
 	{
 		if (this.SetupConfig == null)
@@ -60,7 +60,7 @@ public class PhotoToggleSetItem : PhotographSetupBase
 		this.ApplySubOptions((float)num);
 	}
 
-	// Token: 0x060135F4 RID: 79348 RVA: 0x004D21F8 File Offset: 0x004D03F8
+	// Token: 0x06010AD7 RID: 68311 RVA: 0x004E0E60 File Offset: 0x004DF060
 	private void RefreshSelectedBg(bool isOn)
 	{
 		bool flag = this.SetupConfig != null && this.SetupConfig.GetValueOrDefault().SubOptionsLength > 0;
@@ -72,7 +72,7 @@ public class PhotoToggleSetItem : PhotographSetupBase
 		item.SetUIActive(isOn && flag);
 	}
 
-	// Token: 0x060135F5 RID: 79349 RVA: 0x004D223C File Offset: 0x004D043C
+	// Token: 0x06010AD8 RID: 68312 RVA: 0x004E0EA4 File Offset: 0x004DF0A4
 	public override void SetSubItem(bool bSubItem)
 	{
 		UUIItem item = base.GetItem(3);
@@ -83,7 +83,7 @@ public class PhotoToggleSetItem : PhotographSetupBase
 		item.SetUIActive(bSubItem);
 	}
 
-	// Token: 0x060135F6 RID: 79350 RVA: 0x004D2250 File Offset: 0x004D0450
+	// Token: 0x06010AD9 RID: 68313 RVA: 0x004E0EB8 File Offset: 0x004DF0B8
 	public void RefreshSubOption()
 	{
 		if (this.SetupConfig == null)
@@ -94,7 +94,7 @@ public class PhotoToggleSetItem : PhotographSetupBase
 		this.ApplySubOptions(valueOrDefault);
 	}
 
-	// Token: 0x060135F7 RID: 79351 RVA: 0x004D228C File Offset: 0x004D048C
+	// Token: 0x06010ADA RID: 68314 RVA: 0x004E0EF4 File Offset: 0x004DF0F4
 	private void ApplySubOptions(float currentIndex)
 	{
 		if (this.SetupConfig == null || this.RefreshSubOptions == null)
@@ -129,14 +129,14 @@ public class PhotoToggleSetItem : PhotographSetupBase
 		this.RefreshSubOptions(list, list2, subOptionBanType);
 	}
 
-	// Token: 0x060135F8 RID: 79352 RVA: 0x004D23A6 File Offset: 0x004D05A6
+	// Token: 0x06010ADB RID: 68315 RVA: 0x004E100E File Offset: 0x004DF20E
 	protected override void OnBeforeDestroy()
 	{
 		PhotographController instance = PhotographController.Instance;
 		instance.OnPhotographOptionChanged = (Action<EPhotoSetupValueType, float>)Delegate.Remove(instance.OnPhotographOptionChanged, new Action<EPhotoSetupValueType, float>(this.OnPhotographOptionChanged));
 	}
 
-	// Token: 0x060135F9 RID: 79353 RVA: 0x004D23CE File Offset: 0x004D05CE
+	// Token: 0x06010ADC RID: 68316 RVA: 0x004E1036 File Offset: 0x004DF236
 	private void OnPhotographOptionChanged(EPhotoSetupValueType valueType, float value)
 	{
 		if (!this.IsInCurrentMode)
@@ -151,14 +151,14 @@ public class PhotoToggleSetItem : PhotographSetupBase
 		this.RefreshSubOption();
 	}
 
-	// Token: 0x060135FA RID: 79354 RVA: 0x004D23EF File Offset: 0x004D05EF
+	// Token: 0x06010ADD RID: 68317 RVA: 0x004E1057 File Offset: 0x004DF257
 	[NullableContext(1)]
 	public void BindRefreshSubOptions(Action<List<EPhotoSetupValueType>, List<EPhotoSetupValueType>, EPhotoSubOptionBanType> callback)
 	{
 		this.RefreshSubOptions = callback;
 	}
 
-	// Token: 0x040091E4 RID: 37348
+	// Token: 0x0400933D RID: 37693
 	[Nullable(new byte[]
 	{
 		2,
@@ -167,16 +167,16 @@ public class PhotoToggleSetItem : PhotographSetupBase
 	})]
 	private Action<List<EPhotoSetupValueType>, List<EPhotoSetupValueType>, EPhotoSubOptionBanType> RefreshSubOptions;
 
-	// Token: 0x02008B6B RID: 35691
+	// Token: 0x02007CF1 RID: 31985
 	private enum EComponents
 	{
-		// Token: 0x0402D454 RID: 185428
+		// Token: 0x04028761 RID: 165729
 		TextSettingTitle,
-		// Token: 0x0402D455 RID: 185429
+		// Token: 0x04028762 RID: 165730
 		ToggleRoot,
-		// Token: 0x0402D456 RID: 185430
+		// Token: 0x04028763 RID: 165731
 		ItemSelectedBg,
-		// Token: 0x0402D457 RID: 185431
+		// Token: 0x04028764 RID: 165732
 		ItemSubIconBg
 	}
 }

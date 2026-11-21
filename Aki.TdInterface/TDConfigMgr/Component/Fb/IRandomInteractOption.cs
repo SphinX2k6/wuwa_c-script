@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A74 RID: 2676
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B3E RID: 2878
 	public class IRandomInteractOption
 	{
-		// Token: 0x06003DA8 RID: 15784 RVA: 0x0009E277 File Offset: 0x0009C477
+		// Token: 0x060041D1 RID: 16849 RVA: 0x000A782F File Offset: 0x000A5A2F
 		public static IRandomInteractOption Create(IRandomInteractOption? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E7D RID: 3709
-		// (get) Token: 0x06003DA9 RID: 15785 RVA: 0x0009E296 File Offset: 0x0009C496
+		// Token: 0x17000F50 RID: 3920
+		// (get) Token: 0x060041D2 RID: 16850 RVA: 0x000A784E File Offset: 0x000A5A4E
 		public virtual int Weight
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E7E RID: 3710
-		// (get) Token: 0x06003DAA RID: 15786 RVA: 0x0009E2A3 File Offset: 0x0009C4A3
+		// Token: 0x17000F51 RID: 3921
+		// (get) Token: 0x060041D3 RID: 16851 RVA: 0x000A785B File Offset: 0x000A5A5B
 		public virtual IInteractOption Option
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002255 RID: 8789
+		// Token: 0x04002471 RID: 9329
 		private IRandomInteractOption Instance;
 
-		// Token: 0x04002256 RID: 8790
+		// Token: 0x04002472 RID: 9330
 		[Nullable(2)]
 		private IInteractOption _OptionCache;
 
-		// Token: 0x04002257 RID: 8791
+		// Token: 0x04002473 RID: 9331
 		private bool _OptionInited;
 	}
 }

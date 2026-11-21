@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x0200120F RID: 4623
+// Token: 0x020006C3 RID: 1731
 public class DailyAdventureRewardData
 {
-	// Token: 0x06007BD1 RID: 31697 RVA: 0x001A1F5C File Offset: 0x001A015C
+	// Token: 0x06004F67 RID: 20327 RVA: 0x001AABD4 File Offset: 0x001A8DD4
 	public void RefreshState(bool hasTaken, int? currentPoint = null)
 	{
 		if (hasTaken)
@@ -19,12 +19,12 @@ public class DailyAdventureRewardData
 		}
 	}
 
-	// Token: 0x040038B4 RID: 14516
+	// Token: 0x0400394D RID: 14669
 	public int RewardId;
 
-	// Token: 0x040038B5 RID: 14517
+	// Token: 0x0400394E RID: 14670
 	public int Point;
 
-	// Token: 0x040038B6 RID: 14518
+	// Token: 0x0400394F RID: 14671
 	public ERewardState RewardState = ERewardState.Progress;
 }

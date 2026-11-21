@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D48 RID: 7496
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F59 RID: 8025
 	public class IPreloadLinkResource : IPreloadCharacterType
 	{
-		// Token: 0x0600A0D3 RID: 41171 RVA: 0x0016EB70 File Offset: 0x0016CD70
+		// Token: 0x0600AABF RID: 43711 RVA: 0x00182F94 File Offset: 0x00181194
 		private IPreloadLinkResource_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A0D4 RID: 41172 RVA: 0x0016EBA8 File Offset: 0x0016CDA8
+		// Token: 0x0600AAC0 RID: 43712 RVA: 0x00182FCC File Offset: 0x001811CC
 		public static IPreloadLinkResource Create([Nullable(2)] IPreloadLinkResource instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A0D5 RID: 41173 RVA: 0x0016EBBB File Offset: 0x0016CDBB
+		// Token: 0x0600AAC1 RID: 43713 RVA: 0x00182FDF File Offset: 0x001811DF
 		public static IPreloadLinkResource CreateFromSetValue([Nullable(2)] IPreloadLinkResource_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A0D6 RID: 41174 RVA: 0x0016EBCE File Offset: 0x0016CDCE
+		// Token: 0x0600AAC2 RID: 43714 RVA: 0x00182FF2 File Offset: 0x001811F2
 		public new IPreloadLinkResource_SetValue ToSetValue()
 		{
 			return new IPreloadLinkResource_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031D4 RID: 12756
-		// (get) Token: 0x0600A0D7 RID: 41175 RVA: 0x0016EBED File Offset: 0x0016CDED
-		// (set) Token: 0x0600A0D8 RID: 41176 RVA: 0x0016EC18 File Offset: 0x0016CE18
+		// Token: 0x17003468 RID: 13416
+		// (get) Token: 0x0600AAC3 RID: 43715 RVA: 0x00183011 File Offset: 0x00181211
+		// (set) Token: 0x0600AAC4 RID: 43716 RVA: 0x0018303C File Offset: 0x0018123C
 		public override EPreloadObjectType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031D5 RID: 12757
-		// (get) Token: 0x0600A0D9 RID: 41177 RVA: 0x0016EC26 File Offset: 0x0016CE26
-		// (set) Token: 0x0600A0DA RID: 41178 RVA: 0x0016EC51 File Offset: 0x0016CE51
+		// Token: 0x17003469 RID: 13417
+		// (get) Token: 0x0600AAC5 RID: 43717 RVA: 0x0018304A File Offset: 0x0018124A
+		// (set) Token: 0x0600AAC6 RID: 43718 RVA: 0x00183075 File Offset: 0x00181275
 		public virtual int LinkResourceId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040060E1 RID: 24801
+		// Token: 0x0400665D RID: 26205
 		[Nullable(2)]
 		protected new IPreloadLinkResource FbInstance;
 
-		// Token: 0x040060E2 RID: 24802
+		// Token: 0x0400665E RID: 26206
 		[Nullable(2)]
 		protected new IPreloadLinkResource_SetValue PocoInterface;
 	}

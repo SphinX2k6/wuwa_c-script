@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 {
-	// Token: 0x020071B9 RID: 29113
+	// Token: 0x0200626E RID: 25198
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RefCompModifyActorMedia : RefCompControllerBase
 	{
-		// Token: 0x060473F6 RID: 291830 RVA: 0x0121E00A File Offset: 0x0121C20A
+		// Token: 0x0603CCF1 RID: 249073 RVA: 0x01177F16 File Offset: 0x01176116
 		public RefCompModifyActorMedia(Entity entity, long creatureDataId, int pbDataId) : base(entity, creatureDataId, pbDataId)
 		{
 		}
 
-		// Token: 0x17009DBC RID: 40380
-		// (get) Token: 0x060473F7 RID: 291831 RVA: 0x0121E015 File Offset: 0x0121C215
+		// Token: 0x1700730C RID: 29452
+		// (get) Token: 0x0603CCF2 RID: 249074 RVA: 0x01177F21 File Offset: 0x01176121
 		public override RefCompDefine.ERefCompControllerType Type
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473F8 RID: 291832 RVA: 0x0121E018 File Offset: 0x0121C218
+		// Token: 0x0603CCF3 RID: 249075 RVA: 0x01177F24 File Offset: 0x01176124
 		public void HandleActorMedia(ModifyActorMedia inConfig)
 		{
 			if (inConfig.Config.Type == EModifyActorMediaType.ChangeMediaPlayDA)
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473F9 RID: 291833 RVA: 0x0121E034 File Offset: 0x0121C234
+		// Token: 0x0603CCF4 RID: 249076 RVA: 0x01177F40 File Offset: 0x01176140
 		private void HandleChangeMediaPlayDataAsset(IChangeMediaPlayDa inConfig)
 		{
 			string inPath = inConfig.MediaPlayDa;

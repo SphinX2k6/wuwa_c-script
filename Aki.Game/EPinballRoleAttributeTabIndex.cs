@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200140D RID: 5133
+// Token: 0x020008C1 RID: 2241
 public enum EPinballRoleAttributeTabIndex
 {
-	// Token: 0x04004014 RID: 16404
+	// Token: 0x040040AC RID: 16556
 	None = -1,
-	// Token: 0x04004015 RID: 16405
+	// Token: 0x040040AD RID: 16557
 	Attr,
-	// Token: 0x04004016 RID: 16406
+	// Token: 0x040040AE RID: 16558
 	Skill
 }

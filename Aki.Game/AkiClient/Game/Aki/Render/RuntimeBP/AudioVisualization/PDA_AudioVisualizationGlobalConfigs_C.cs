@@ -7,14 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.AudioVisualization
 {
-	// Token: 0x02003E3D RID: 15933
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02003143 RID: 12611
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/AudioVisualization/PDA_AudioVisualizationGlobalConfigs.PDA_AudioVisualizationGlobalConfigs_C")]
 	[UnrealStructLayout(104, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 104)]
 	public class PDA_AudioVisualizationGlobalConfigs_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06028083 RID: 163971 RVA: 0x009A2592 File Offset: 0x009A0792
+		// Token: 0x0601F034 RID: 127028 RVA: 0x0092402E File Offset: 0x0092222E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (PDA_AudioVisualizationGlobalConfigs_C._ClassPtr == IntPtr.Zero)
@@ -24,81 +22,51 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.AudioVisualization
 			return PDA_AudioVisualizationGlobalConfigs_C._ClassPtr;
 		}
 
-		// Token: 0x06028084 RID: 163972 RVA: 0x009A25B8 File Offset: 0x009A07B8
+		// Token: 0x0601F035 RID: 127029 RVA: 0x00924054 File Offset: 0x00922254
 		public PDA_AudioVisualizationGlobalConfigs_C() : this(BuiltinUtils.AllocNativeUObject(PDA_AudioVisualizationGlobalConfigs_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06028085 RID: 163973 RVA: 0x009A25E0 File Offset: 0x009A07E0
+		// Token: 0x0601F036 RID: 127030 RVA: 0x0092407C File Offset: 0x0092227C
+		[NullableContext(1)]
 		public PDA_AudioVisualizationGlobalConfigs_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(PDA_AudioVisualizationGlobalConfigs_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005B6F RID: 23407
-		// (get) Token: 0x06028086 RID: 163974 RVA: 0x009A2614 File Offset: 0x009A0814
-		// (set) Token: 0x06028087 RID: 163975 RVA: 0x009A264D File Offset: 0x009A084D
-		public TArray<SGlobalRtpcEntry> GlobalRtpcs
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<SGlobalRtpcEntry> result;
-				if ((result = this._GlobalRtpcs) == null)
-				{
-					result = (this._GlobalRtpcs = new TArray<SGlobalRtpcEntry>(base.NativePtr + (IntPtr)PDA_AudioVisualizationGlobalConfigs_C.__PropertyOffset_0, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.GlobalRtpcs.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17005B70 RID: 23408
-		// (get) Token: 0x06028088 RID: 163976 RVA: 0x009A265B File Offset: 0x009A085B
-		// (set) Token: 0x06028089 RID: 163977 RVA: 0x009A266F File Offset: 0x009A086F
+		// Token: 0x170036E2 RID: 14050
+		// (get) Token: 0x0601F037 RID: 127031 RVA: 0x009240AF File Offset: 0x009222AF
+		// (set) Token: 0x0601F038 RID: 127032 RVA: 0x009240C3 File Offset: 0x009222C3
 		[Nullable(2)]
 		public unsafe UMaterialParameterCollection MPCFile
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UMaterialParameterCollection>(base.NativePtr / (IntPtr)sizeof(void*) + PDA_AudioVisualizationGlobalConfigs_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UMaterialParameterCollection>(base.NativePtr / (IntPtr)sizeof(void*) + PDA_AudioVisualizationGlobalConfigs_C.__PropertyOffset_MPCFile);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PDA_AudioVisualizationGlobalConfigs_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PDA_AudioVisualizationGlobalConfigs_C.__PropertyOffset_MPCFile, value);
 			}
 		}
 
-		// Token: 0x0602808A RID: 163978 RVA: 0x009A2684 File Offset: 0x009A0884
+		// Token: 0x0601F039 RID: 127033 RVA: 0x009240D8 File Offset: 0x009222D8
 		protected PDA_AudioVisualizationGlobalConfigs_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014544 RID: 83268
+		// Token: 0x04010875 RID: 67701
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/AudioVisualization/PDA_AudioVisualizationGlobalConfigs.PDA_AudioVisualizationGlobalConfigs_C";
 
-		// Token: 0x04014545 RID: 83269
+		// Token: 0x04010876 RID: 67702
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014546 RID: 83270
+		// Token: 0x04010877 RID: 67703
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04014547 RID: 83271
-		internal static int __PropertyOffset_0;
-
-		// Token: 0x04014548 RID: 83272
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<SGlobalRtpcEntry> _GlobalRtpcs;
-
-		// Token: 0x04014549 RID: 83273
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010878 RID: 67704
+		internal static int __PropertyOffset_MPCFile;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game;
@@ -11,18 +10,18 @@ using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016CA RID: 5834
+// Token: 0x02000B82 RID: 2946
 [NullableContext(2)]
 [Nullable(0)]
 public class AdviceAllView : UiViewBase
 {
-	// Token: 0x0600A6C6 RID: 42694 RVA: 0x00255C4E File Offset: 0x00253E4E
+	// Token: 0x06007AA6 RID: 31398 RVA: 0x0026005E File Offset: 0x0025E25E
 	[NullableContext(1)]
 	public AdviceAllView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600A6C7 RID: 42695 RVA: 0x00255C64 File Offset: 0x00253E64
+	// Token: 0x06007AA7 RID: 31399 RVA: 0x00260074 File Offset: 0x0025E274
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -53,7 +52,7 @@ public class AdviceAllView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600A6C8 RID: 42696 RVA: 0x00255E50 File Offset: 0x00254050
+	// Token: 0x06007AA8 RID: 31400 RVA: 0x00260260 File Offset: 0x0025E460
 	protected override void OnStart()
 	{
 		this.AdviceSelectItem = new AdivceSelectItem(base.GetItem(6));
@@ -64,7 +63,7 @@ public class AdviceAllView : UiViewBase
 		this.ListCurrentEntityBattleTag();
 	}
 
-	// Token: 0x0600A6C9 RID: 42697 RVA: 0x00255ED9 File Offset: 0x002540D9
+	// Token: 0x06007AA9 RID: 31401 RVA: 0x002602E9 File Offset: 0x0025E4E9
 	protected override void OnBeforeShow()
 	{
 		IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -80,7 +79,7 @@ public class AdviceAllView : UiViewBase
 		popItem.SetHelpButtonActive(false);
 	}
 
-	// Token: 0x0600A6CA RID: 42698 RVA: 0x00255EF8 File Offset: 0x002540F8
+	// Token: 0x06007AAA RID: 31402 RVA: 0x00260308 File Offset: 0x0025E508
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnClickAdviceSelectItem, new Action(this.OnClickAdviceSelectItem));
@@ -90,7 +89,7 @@ public class AdviceAllView : UiViewBase
 		EventSystem.Instance.Add(EEventName.OnChangeAdviceWord, new Action(this.RefreshConfirmBtn));
 	}
 
-	// Token: 0x0600A6CB RID: 42699 RVA: 0x00255F94 File Offset: 0x00254194
+	// Token: 0x06007AAB RID: 31403 RVA: 0x002603A4 File Offset: 0x0025E5A4
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnClickAdviceSelectItem, new Action(this.OnClickAdviceSelectItem));
@@ -100,7 +99,7 @@ public class AdviceAllView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnChangeAdviceWord, new Action(this.RefreshConfirmBtn));
 	}
 
-	// Token: 0x0600A6CC RID: 42700 RVA: 0x00256030 File Offset: 0x00254230
+	// Token: 0x06007AAC RID: 31404 RVA: 0x00260440 File Offset: 0x0025E640
 	private void ListCurrentEntityBattleTag()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -122,7 +121,7 @@ public class AdviceAllView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A6CD RID: 42701 RVA: 0x002560A1 File Offset: 0x002542A1
+	// Token: 0x06007AAD RID: 31405 RVA: 0x002604B1 File Offset: 0x0025E6B1
 	private void RemoveEnterFightTask()
 	{
 		if (this.EnterFightTask != null)
@@ -132,7 +131,7 @@ public class AdviceAllView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A6CE RID: 42702 RVA: 0x002560C4 File Offset: 0x002542C4
+	// Token: 0x06007AAE RID: 31406 RVA: 0x002604D4 File Offset: 0x0025E6D4
 	[NullableContext(1)]
 	private void ListenPlayerEnterFight(EntityHandle playerEntity)
 	{
@@ -144,7 +143,7 @@ public class AdviceAllView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A6CF RID: 42703 RVA: 0x00256114 File Offset: 0x00254314
+	// Token: 0x06007AAF RID: 31407 RVA: 0x00260524 File Offset: 0x0025E724
 	private void OnPlayerEnterFight(int tagId, bool tagExists)
 	{
 		this.IsPlayerEnterFight = tagExists;
@@ -154,13 +153,13 @@ public class AdviceAllView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A6D0 RID: 42704 RVA: 0x00256127 File Offset: 0x00254327
+	// Token: 0x06007AB0 RID: 31408 RVA: 0x00260537 File Offset: 0x0025E737
 	private void OnClickSwitchButton()
 	{
 		AdviceController.Instance.OpenAdviceView();
 	}
 
-	// Token: 0x0600A6D1 RID: 42705 RVA: 0x00256134 File Offset: 0x00254334
+	// Token: 0x06007AB1 RID: 31409 RVA: 0x00260544 File Offset: 0x0025E744
 	private void OnClickCreateButton()
 	{
 		if (AdviceModel.Instance.GetIfCanCreateAdvice(AdviceModel.Instance.CurrentLineModel))
@@ -194,13 +193,13 @@ public class AdviceAllView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A6D2 RID: 42706 RVA: 0x00256237 File Offset: 0x00254437
+	// Token: 0x06007AB2 RID: 31410 RVA: 0x00260647 File Offset: 0x0025E847
 	private void OnEnsureRole(int roleId)
 	{
 		this.RoleSelectionSelectedEvent(roleId);
 	}
 
-	// Token: 0x0600A6D3 RID: 42707 RVA: 0x00256240 File Offset: 0x00254440
+	// Token: 0x06007AB3 RID: 31411 RVA: 0x00260650 File Offset: 0x0025E850
 	private void OnClickChangeRole()
 	{
 		int preSelectRoleId = AdviceModel.Instance.PreSelectRoleId;
@@ -210,11 +209,11 @@ public class AdviceAllView : UiViewBase
 			return;
 		}
 		RoleInstance[] roleList = RoleModel.Instance.GetRoleList();
-		TeamRoleSelectViewData data = new TeamRoleSelectViewData(EFilterSortGroupId.Role, roleInstanceById.GetRoleId(), roleList.Cast<RoleDataBase>().ToList<RoleDataBase>(), new Action<int>(this.OnEnsureRole), null, null, null);
+		TeamRoleSelectViewData data = new TeamRoleSelectViewData(EFilterSortGroupId.Role, roleInstanceById.GetRoleId(), new List<RoleDataBase>(roleList), new Action<int>(this.OnEnsureRole), null, null, null);
 		RoleController.Instance.OpenTeamRoleSelectView(data);
 	}
 
-	// Token: 0x0600A6D4 RID: 42708 RVA: 0x002562B8 File Offset: 0x002544B8
+	// Token: 0x06007AB4 RID: 31412 RVA: 0x002606C4 File Offset: 0x0025E8C4
 	private void OnClickAdviceSelectItem()
 	{
 		EAdviceSelectItemEnum preSelectAdviceItemId = (EAdviceSelectItemEnum)AdviceModel.Instance.PreSelectAdviceItemId;
@@ -245,25 +244,25 @@ public class AdviceAllView : UiViewBase
 		this.RefreshConfirmBtn();
 	}
 
-	// Token: 0x0600A6D5 RID: 42709 RVA: 0x0025631D File Offset: 0x0025451D
+	// Token: 0x06007AB5 RID: 31413 RVA: 0x00260729 File Offset: 0x0025E929
 	private void OnClickSelectWordBtn(int wordIndex)
 	{
 		AdviceController.Instance.OpenAdviceWordSelectView(wordIndex);
 	}
 
-	// Token: 0x0600A6D6 RID: 42710 RVA: 0x0025632A File Offset: 0x0025452A
+	// Token: 0x06007AB6 RID: 31414 RVA: 0x00260736 File Offset: 0x0025E936
 	private void OnClickChangeWordBtn()
 	{
 		AdviceController.Instance.OpenAdviceSentenceSelectView();
 	}
 
-	// Token: 0x0600A6D7 RID: 42711 RVA: 0x00256336 File Offset: 0x00254536
+	// Token: 0x06007AB7 RID: 31415 RVA: 0x00260742 File Offset: 0x0025E942
 	private void OnClickChangeConjunctionBtn()
 	{
 		AdviceController.Instance.OpenAdviceConjunctionSelectView();
 	}
 
-	// Token: 0x0600A6D8 RID: 42712 RVA: 0x00256344 File Offset: 0x00254544
+	// Token: 0x06007AB8 RID: 31416 RVA: 0x00260750 File Offset: 0x0025E950
 	private void ChangeLineMode()
 	{
 		if (AdviceModel.Instance.CurrentLineModel == ELineMode.SingleLine)
@@ -279,13 +278,13 @@ public class AdviceAllView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600A6D9 RID: 42713 RVA: 0x00256391 File Offset: 0x00254591
+	// Token: 0x06007AB9 RID: 31417 RVA: 0x0026079D File Offset: 0x0025E99D
 	private void OnClickCurrentEmojiBtn()
 	{
 		AdviceController.Instance.OpenAdviceExpressionView();
 	}
 
-	// Token: 0x0600A6DA RID: 42714 RVA: 0x0025639D File Offset: 0x0025459D
+	// Token: 0x06007ABA RID: 31418 RVA: 0x002607A9 File Offset: 0x0025E9A9
 	protected override void OnAfterShow()
 	{
 		this.CurrentViewState = new int?(0);
@@ -295,7 +294,7 @@ public class AdviceAllView : UiViewBase
 		this.RefreshTitle();
 	}
 
-	// Token: 0x0600A6DB RID: 42715 RVA: 0x002563C8 File Offset: 0x002545C8
+	// Token: 0x06007ABB RID: 31419 RVA: 0x002607D4 File Offset: 0x0025E9D4
 	private void RefreshTitle()
 	{
 		IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -306,7 +305,7 @@ public class AdviceAllView : UiViewBase
 		childPopView.SetTitleByTextIdAndArg("AdviceName", Array.Empty<object>());
 	}
 
-	// Token: 0x0600A6DC RID: 42716 RVA: 0x002563E4 File Offset: 0x002545E4
+	// Token: 0x06007ABC RID: 31420 RVA: 0x002607F0 File Offset: 0x0025E9F0
 	private void OnTimer(float deltaTime)
 	{
 		this.CurrentRunningTime += 1000;
@@ -321,7 +320,7 @@ public class AdviceAllView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A6DD RID: 42717 RVA: 0x00256434 File Offset: 0x00254634
+	// Token: 0x06007ABD RID: 31421 RVA: 0x00260840 File Offset: 0x0025EA40
 	private void ShowAdviceModel()
 	{
 		this.TryEnableEntity();
@@ -333,7 +332,7 @@ public class AdviceAllView : UiViewBase
 		this.AdviceCreateActor = AdviceModel.Instance.GetAdviceCreateActor();
 	}
 
-	// Token: 0x0600A6DE RID: 42718 RVA: 0x00256486 File Offset: 0x00254686
+	// Token: 0x06007ABE RID: 31422 RVA: 0x00260892 File Offset: 0x0025EA92
 	private void TryEnableEntity()
 	{
 		if (this.EntityDisableHandle > 0)
@@ -351,7 +350,7 @@ public class AdviceAllView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A6DF RID: 42719 RVA: 0x002564C4 File Offset: 0x002546C4
+	// Token: 0x06007ABF RID: 31423 RVA: 0x002608D0 File Offset: 0x0025EAD0
 	private void OnClickMotion()
 	{
 		this.CurrentRunningTime = 0;
@@ -377,7 +376,7 @@ public class AdviceAllView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A6E0 RID: 42720 RVA: 0x00256519 File Offset: 0x00254719
+	// Token: 0x06007AC0 RID: 31424 RVA: 0x00260925 File Offset: 0x0025EB25
 	private void OnDeleteAdvice()
 	{
 		this.RefreshView();
@@ -385,7 +384,7 @@ public class AdviceAllView : UiViewBase
 		this.RefreshConfirmBtn();
 	}
 
-	// Token: 0x0600A6E1 RID: 42721 RVA: 0x00256530 File Offset: 0x00254730
+	// Token: 0x06007AC1 RID: 31425 RVA: 0x0026093C File Offset: 0x0025EB3C
 	private void RoleSelectionSelectedEvent(int roleId)
 	{
 		AdviceModel.Instance.PreSelectRoleId = roleId;
@@ -401,7 +400,7 @@ public class AdviceAllView : UiViewBase
 		EventSystem.Instance.Emit(EEventName.OnClickAdviceMotion);
 	}
 
-	// Token: 0x0600A6E2 RID: 42722 RVA: 0x002565B4 File Offset: 0x002547B4
+	// Token: 0x06007AC2 RID: 31426 RVA: 0x002609C0 File Offset: 0x0025EBC0
 	private void OnClickChangeBtn()
 	{
 		int? currentViewState = this.CurrentViewState;
@@ -431,7 +430,7 @@ public class AdviceAllView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600A6E3 RID: 42723 RVA: 0x00256634 File Offset: 0x00254834
+	// Token: 0x06007AC3 RID: 31427 RVA: 0x00260A40 File Offset: 0x0025EC40
 	private void RefreshView()
 	{
 		this.RefreshContentView();
@@ -446,7 +445,7 @@ public class AdviceAllView : UiViewBase
 		adviceAllViewShowContent.RefreshView();
 	}
 
-	// Token: 0x0600A6E4 RID: 42724 RVA: 0x00256660 File Offset: 0x00254860
+	// Token: 0x06007AC4 RID: 31428 RVA: 0x00260A6C File Offset: 0x0025EC6C
 	private void RefreshStateText()
 	{
 		if (this.CurrentViewState.GetValueOrDefault() == 1)
@@ -457,7 +456,7 @@ public class AdviceAllView : UiViewBase
 		LguiUtil.Instance.SetLocalText(base.GetText(3), "TextAndExpression", Array.Empty<object>());
 	}
 
-	// Token: 0x0600A6E5 RID: 42725 RVA: 0x002566B4 File Offset: 0x002548B4
+	// Token: 0x06007AC5 RID: 31429 RVA: 0x00260AC0 File Offset: 0x0025ECC0
 	private void RefreshContentView()
 	{
 		bool flag = false;
@@ -577,13 +576,13 @@ public class AdviceAllView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A6E6 RID: 42726 RVA: 0x00256887 File Offset: 0x00254A87
+	// Token: 0x06007AC6 RID: 31430 RVA: 0x00260C93 File Offset: 0x0025EE93
 	private void RefreshCreateLimitText()
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(14), AdviceModel.Instance.GetCreateConditionFailText(), Array.Empty<object>());
 	}
 
-	// Token: 0x0600A6E7 RID: 42727 RVA: 0x002568AC File Offset: 0x00254AAC
+	// Token: 0x06007AC7 RID: 31431 RVA: 0x00260CB8 File Offset: 0x0025EEB8
 	private void RefreshSwitchBtnRedPoint()
 	{
 		AdviceData[] adviceArray = AdviceModel.Instance.GetAdviceArray();
@@ -596,7 +595,7 @@ public class AdviceAllView : UiViewBase
 		item.SetUIActive(adviceArray != null && adviceArray.Length >= valueOrDefault);
 	}
 
-	// Token: 0x0600A6E8 RID: 42728 RVA: 0x002568F8 File Offset: 0x00254AF8
+	// Token: 0x06007AC8 RID: 31432 RVA: 0x00260D04 File Offset: 0x0025EF04
 	private void RefreshConfirmBtn()
 	{
 		AdviceData[] adviceArray = AdviceModel.Instance.GetAdviceArray();
@@ -633,7 +632,7 @@ public class AdviceAllView : UiViewBase
 		LguiUtil.Instance.SetLocalText(base.GetText(11), "Advice_Publish", Array.Empty<object>());
 	}
 
-	// Token: 0x0600A6E9 RID: 42729 RVA: 0x002569D0 File Offset: 0x00254BD0
+	// Token: 0x06007AC9 RID: 31433 RVA: 0x00260DDC File Offset: 0x0025EFDC
 	protected override void OnBeforeDestroy()
 	{
 		AdviceCreateActor adviceCreateActor = this.AdviceCreateActor;
@@ -648,103 +647,103 @@ public class AdviceAllView : UiViewBase
 		}
 	}
 
-	// Token: 0x04004B5F RID: 19295
+	// Token: 0x04004C06 RID: 19462
 	private const int CHECKTIMEER = 1000;
 
-	// Token: 0x04004B60 RID: 19296
+	// Token: 0x04004C07 RID: 19463
 	private const int ANIMATIONGAP = 5000;
 
-	// Token: 0x04004B61 RID: 19297
+	// Token: 0x04004C08 RID: 19464
 	private int EntityDisableHandle;
 
-	// Token: 0x04004B62 RID: 19298
+	// Token: 0x04004C09 RID: 19465
 	private int? CurrentViewState = new int?(0);
 
-	// Token: 0x04004B63 RID: 19299
+	// Token: 0x04004C0A RID: 19466
 	private AdivceSelectItem AdviceSelectItem;
 
-	// Token: 0x04004B64 RID: 19300
+	// Token: 0x04004C0B RID: 19467
 	private AdviceSelectMotionItem AdviceSelectMotionItem;
 
-	// Token: 0x04004B65 RID: 19301
+	// Token: 0x04004C0C RID: 19468
 	private AdviceAllViewShowContent AdviceAllViewShowContent;
 
-	// Token: 0x04004B66 RID: 19302
+	// Token: 0x04004C0D RID: 19469
 	private AdviceCreateActor AdviceCreateActor;
 
-	// Token: 0x04004B67 RID: 19303
+	// Token: 0x04004C0E RID: 19470
 	private TimerHandle Timer;
 
-	// Token: 0x04004B68 RID: 19304
+	// Token: 0x04004C0F RID: 19471
 	private int CurrentRunningTime;
 
-	// Token: 0x04004B69 RID: 19305
+	// Token: 0x04004C10 RID: 19472
 	private object EnterFightTask;
 
-	// Token: 0x04004B6A RID: 19306
+	// Token: 0x04004C11 RID: 19473
 	private bool IsPlayerEnterFight;
 
-	// Token: 0x02007C9E RID: 31902
+	// Token: 0x02006E23 RID: 28195
 	[NullableContext(0)]
 	private static class EComponents
 	{
-		// Token: 0x04028E03 RID: 167427
+		// Token: 0x0402412C RID: 147756
 		public const int CanNotCreateTips = 0;
 
-		// Token: 0x04028E04 RID: 167428
+		// Token: 0x0402412D RID: 147757
 		public const int LeftBtn = 1;
 
-		// Token: 0x04028E05 RID: 167429
+		// Token: 0x0402412E RID: 147758
 		public const int RightBtn = 2;
 
-		// Token: 0x04028E06 RID: 167430
+		// Token: 0x0402412F RID: 147759
 		public const int BtnText = 3;
 
-		// Token: 0x04028E07 RID: 167431
+		// Token: 0x04024130 RID: 147760
 		public const int CreateBtn = 4;
 
-		// Token: 0x04028E08 RID: 167432
+		// Token: 0x04024131 RID: 147761
 		public const int SwitchBtn = 5;
 
-		// Token: 0x04028E09 RID: 167433
+		// Token: 0x04024132 RID: 147762
 		public const int SelectItem = 6;
 
-		// Token: 0x04028E0A RID: 167434
+		// Token: 0x04024133 RID: 147763
 		public const int MotionItem = 7;
 
-		// Token: 0x04028E0B RID: 167435
+		// Token: 0x04024134 RID: 147764
 		public const int WordItem = 8;
 
-		// Token: 0x04028E0C RID: 167436
+		// Token: 0x04024135 RID: 147765
 		public const int ContentItem = 9;
 
-		// Token: 0x04028E0D RID: 167437
+		// Token: 0x04024136 RID: 147766
 		public const int SwitchBtnRedPoint = 10;
 
-		// Token: 0x04028E0E RID: 167438
+		// Token: 0x04024137 RID: 147767
 		public const int ConfirmBtnText = 11;
 
-		// Token: 0x04028E0F RID: 167439
+		// Token: 0x04024138 RID: 147768
 		public const int SwitchContainer = 12;
 
-		// Token: 0x04028E10 RID: 167440
+		// Token: 0x04024139 RID: 147769
 		public const int RoleContainer = 13;
 
-		// Token: 0x04028E11 RID: 167441
+		// Token: 0x0402413A RID: 147770
 		public const int CreateLimitText = 14;
 
-		// Token: 0x04028E12 RID: 167442
+		// Token: 0x0402413B RID: 147771
 		public const int CreateLimitTipsText = 15;
 	}
 
-	// Token: 0x02007C9F RID: 31903
+	// Token: 0x02006E24 RID: 28196
 	[NullableContext(0)]
 	private static class EViewState
 	{
-		// Token: 0x04028E13 RID: 167443
+		// Token: 0x0402413C RID: 147772
 		public const int Normal = 0;
 
-		// Token: 0x04028E14 RID: 167444
+		// Token: 0x0402413D RID: 147773
 		public const int Motion = 1;
 	}
 }

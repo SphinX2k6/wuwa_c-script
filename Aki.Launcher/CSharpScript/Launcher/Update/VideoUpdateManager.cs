@@ -6,12 +6,12 @@ using CSharpScript.Launcher.Download;
 
 namespace CSharpScript.Launcher.Update
 {
-	// Token: 0x0200009C RID: 156
+	// Token: 0x0200009F RID: 159
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VideoUpdateManager : Singleton
 	{
-		// Token: 0x06000573 RID: 1395 RVA: 0x00031B6C File Offset: 0x0002FD6C
+		// Token: 0x0600058A RID: 1418 RVA: 0x000330D4 File Offset: 0x000312D4
 		private VideoUpdater CreateUpdater(string name)
 		{
 			VideoUpdater videoUpdater = new VideoUpdater();
@@ -23,7 +23,7 @@ namespace CSharpScript.Launcher.Update
 			return videoUpdater;
 		}
 
-		// Token: 0x06000574 RID: 1396 RVA: 0x00031BBB File Offset: 0x0002FDBB
+		// Token: 0x0600058B RID: 1419 RVA: 0x00033123 File Offset: 0x00031323
 		public VideoUpdater GetInGameUpdater()
 		{
 			if (this.InGameUpdater == null)
@@ -33,7 +33,7 @@ namespace CSharpScript.Launcher.Update
 			return this.InGameUpdater;
 		}
 
-		// Token: 0x06000575 RID: 1397 RVA: 0x00031BDC File Offset: 0x0002FDDC
+		// Token: 0x0600058C RID: 1420 RVA: 0x00033144 File Offset: 0x00031344
 		public VideoUpdater GetVideoUpdater(EVideoResSizeType resType)
 		{
 			if (this.VideoUpdaterMap.ContainsKey(resType))
@@ -47,7 +47,7 @@ namespace CSharpScript.Launcher.Update
 			return videoUpdater;
 		}
 
-		// Token: 0x06000576 RID: 1398 RVA: 0x00031C34 File Offset: 0x0002FE34
+		// Token: 0x0600058D RID: 1421 RVA: 0x0003319C File Offset: 0x0003139C
 		public VideoUpdater GetVideoUpdaterWithName(EVideoResSizeType resType, string name)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
@@ -64,7 +64,7 @@ namespace CSharpScript.Launcher.Update
 			return videoUpdater;
 		}
 
-		// Token: 0x06000577 RID: 1399 RVA: 0x00031C9F File Offset: 0x0002FE9F
+		// Token: 0x0600058E RID: 1422 RVA: 0x00033207 File Offset: 0x00031407
 		public VideoUpdater GetLoginLoadingUpdater()
 		{
 			if (this.LoginLoadingUpdater == null)
@@ -74,7 +74,7 @@ namespace CSharpScript.Launcher.Update
 			return this.LoginLoadingUpdater;
 		}
 
-		// Token: 0x06000578 RID: 1400 RVA: 0x00031CC0 File Offset: 0x0002FEC0
+		// Token: 0x0600058F RID: 1423 RVA: 0x00033228 File Offset: 0x00031428
 		public void StopAllDownload()
 		{
 			if (this.InGameUpdater != null)
@@ -83,8 +83,8 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x170000C8 RID: 200
-		// (get) Token: 0x06000579 RID: 1401 RVA: 0x00031CD5 File Offset: 0x0002FED5
+		// Token: 0x170000CA RID: 202
+		// (get) Token: 0x06000590 RID: 1424 RVA: 0x0003323D File Offset: 0x0003143D
 		public static VideoUpdateManager Instance
 		{
 			get
@@ -98,12 +98,12 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x0600057A RID: 1402 RVA: 0x00031CF8 File Offset: 0x0002FEF8
+		// Token: 0x06000591 RID: 1425 RVA: 0x00033260 File Offset: 0x00031460
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0600057B RID: 1403 RVA: 0x00031CFA File Offset: 0x0002FEFA
+		// Token: 0x06000592 RID: 1426 RVA: 0x00033262 File Offset: 0x00031462
 		public static void ResetStaticDefaultValue()
 		{
 			VideoUpdateManager instance = VideoUpdateManager._instance;
@@ -114,27 +114,27 @@ namespace CSharpScript.Launcher.Update
 			VideoUpdateManager._instance = null;
 		}
 
-		// Token: 0x0600057C RID: 1404 RVA: 0x00031D13 File Offset: 0x0002FF13
+		// Token: 0x06000593 RID: 1427 RVA: 0x0003327B File Offset: 0x0003147B
 		static VideoUpdateManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(VideoUpdateManager.CreateStaticDefaultValue), new Action(VideoUpdateManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04000360 RID: 864
+		// Token: 0x0400038E RID: 910
 		[Nullable(2)]
 		private VideoUpdater LoginLoadingUpdater;
 
-		// Token: 0x04000361 RID: 865
+		// Token: 0x0400038F RID: 911
 		[Nullable(2)]
 		private VideoUpdater InGameUpdater;
 
-		// Token: 0x04000362 RID: 866
+		// Token: 0x04000390 RID: 912
 		private readonly Dictionary<string, VideoUpdater> VideoUpdaterMapWithName = new Dictionary<string, VideoUpdater>();
 
-		// Token: 0x04000363 RID: 867
+		// Token: 0x04000391 RID: 913
 		private readonly Dictionary<EVideoResSizeType, VideoUpdater> VideoUpdaterMap = new Dictionary<EVideoResSizeType, VideoUpdater>();
 
-		// Token: 0x04000364 RID: 868
+		// Token: 0x04000392 RID: 914
 		[Nullable(2)]
 		private static VideoUpdateManager _instance;
 	}

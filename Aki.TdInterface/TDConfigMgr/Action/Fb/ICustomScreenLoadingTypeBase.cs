@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200269E RID: 9886
+	// Token: 0x02002961 RID: 10593
 	public class ICustomScreenLoadingTypeBase
 	{
-		// Token: 0x0600DD42 RID: 56642 RVA: 0x0020DFFC File Offset: 0x0020C1FC
-		[NullableContext(1)]
+		// Token: 0x0600EB19 RID: 60185 RVA: 0x0022A79C File Offset: 0x0022899C
 		public static ICustomScreenLoadingTypeBase Create(ICustomScreenLoadingTypeBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041C8 RID: 16840
-		// (get) Token: 0x0600DD43 RID: 56643 RVA: 0x0020E01B File Offset: 0x0020C21B
+		// Token: 0x17004505 RID: 17669
+		// (get) Token: 0x0600EB1A RID: 60186 RVA: 0x0022A7BB File Offset: 0x002289BB
 		public virtual ECustomScreenLoading Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AE2 RID: 31458
+		// Token: 0x0400817F RID: 33151
 		private ICustomScreenLoadingTypeBase Instance;
 	}
 }

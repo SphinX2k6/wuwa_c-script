@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 {
-	// Token: 0x0200567C RID: 22140
+	// Token: 0x02004652 RID: 18002
 	public enum EComposeCheckResult
 	{
-		// Token: 0x0401D9C4 RID: 121284
+		// Token: 0x0401844F RID: 99407
 		CanComposeAll,
-		// Token: 0x0401D9C5 RID: 121285
+		// Token: 0x04018450 RID: 99408
 		CanComposePartial,
-		// Token: 0x0401D9C6 RID: 121286
+		// Token: 0x04018451 RID: 99409
 		CannotCompose
 	}
 }

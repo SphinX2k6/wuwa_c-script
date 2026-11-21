@@ -4,23 +4,23 @@ using Aki.Config;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x0200701A RID: 28698
+	// Token: 0x0200619B RID: 24987
 	[NullableContext(1)]
 	public interface ITouchUiEditDataFacade
 	{
-		// Token: 0x06045D89 RID: 286089
+		// Token: 0x0603BF3F RID: 245567
 		void Init();
 
-		// Token: 0x06045D8A RID: 286090
+		// Token: 0x0603BF40 RID: 245568
 		CommonTouchUiEditGroup? GetGroupConfig();
 
-		// Token: 0x06045D8B RID: 286091
+		// Token: 0x0603BF41 RID: 245569
 		string[] GetResIdList();
 
-		// Token: 0x06045D8C RID: 286092
+		// Token: 0x0603BF42 RID: 245570
 		int GetStorageId(string resId, int index);
 
-		// Token: 0x06045D8D RID: 286093
+		// Token: 0x0603BF43 RID: 245571
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -28,41 +28,41 @@ namespace CSharpScript.Game.InputSetting
 		})]
 		ValueTuple<string, int>? GetResPair(int storageId);
 
-		// Token: 0x06045D8E RID: 286094
+		// Token: 0x0603BF44 RID: 245572
 		[return: Nullable(2)]
 		ITouchUiEditData GetDefaultData(string resId, int index);
 
-		// Token: 0x06045D8F RID: 286095
+		// Token: 0x0603BF45 RID: 245573
 		void SaveData(ITouchUiEditData[] dataList);
 
-		// Token: 0x06045D90 RID: 286096
+		// Token: 0x0603BF46 RID: 245574
 		[return: Nullable(2)]
 		ITouchUiEditData GetData(string resId, int index);
 
-		// Token: 0x06045D91 RID: 286097
+		// Token: 0x0603BF47 RID: 245575
 		void Clear();
 
-		// Token: 0x06045D92 RID: 286098
+		// Token: 0x0603BF48 RID: 245576
 		void ResetEditData();
 
-		// Token: 0x17009BB8 RID: 39864
-		// (get) Token: 0x06045D93 RID: 286099
+		// Token: 0x170070F8 RID: 28920
+		// (get) Token: 0x0603BF49 RID: 245577
 		int MinTouchMoveDifference { get; }
 
-		// Token: 0x17009BB9 RID: 39865
-		// (get) Token: 0x06045D94 RID: 286100
+		// Token: 0x170070F9 RID: 28921
+		// (get) Token: 0x0603BF4A RID: 245578
 		int MaxTouchMoveDifference { get; }
 
-		// Token: 0x17009BBA RID: 39866
-		// (get) Token: 0x06045D95 RID: 286101
+		// Token: 0x170070FA RID: 28922
+		// (get) Token: 0x0603BF4B RID: 245579
 		float MaxTouchMoveValue { get; }
 
-		// Token: 0x17009BBB RID: 39867
-		// (get) Token: 0x06045D96 RID: 286102
+		// Token: 0x170070FB RID: 28923
+		// (get) Token: 0x0603BF4C RID: 245580
 		float MinTouchMoveValue { get; }
 
-		// Token: 0x17009BBC RID: 39868
-		// (get) Token: 0x06045D97 RID: 286103
+		// Token: 0x170070FC RID: 28924
+		// (get) Token: 0x0603BF4D RID: 245581
 		float ControlScaleRate { get; }
 	}
 }

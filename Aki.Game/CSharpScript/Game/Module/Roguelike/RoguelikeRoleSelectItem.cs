@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DDF RID: 19935
+	// Token: 0x02003DA8 RID: 15784
 	public class RoguelikeRoleSelectItem : UiPanelBase
 	{
-		// Token: 0x06033749 RID: 210761 RVA: 0x00C05BA4 File Offset: 0x00C03DA4
+		// Token: 0x060285B4 RID: 165300 RVA: 0x00B4F0B4 File Offset: 0x00B4D2B4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603374A RID: 210762 RVA: 0x00C05CAD File Offset: 0x00C03EAD
+		// Token: 0x060285B5 RID: 165301 RVA: 0x00B4F1BD File Offset: 0x00B4D3BD
 		private void OnClickRole()
 		{
 			Action<int> onClickRoleCallback = this.OnClickRoleCallback;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			onClickRoleCallback(this.Index);
 		}
 
-		// Token: 0x0603374B RID: 210763 RVA: 0x00C05CC8 File Offset: 0x00C03EC8
+		// Token: 0x060285B6 RID: 165302 RVA: 0x00B4F1D8 File Offset: 0x00B4D3D8
 		public void Refresh(int roleId)
 		{
 			bool flag = roleId == 0;
@@ -70,35 +70,35 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.SetRoleSkinIcon(roleHeadIconCircle, base.GetTexture(2), roleSkinId, null, null);
 		}
 
-		// Token: 0x0603374C RID: 210764 RVA: 0x00C05D55 File Offset: 0x00C03F55
+		// Token: 0x060285B7 RID: 165303 RVA: 0x00B4F265 File Offset: 0x00B4D465
 		public void ShowNewUnlockRole(bool isShow)
 		{
 			base.GetItem(4).SetUIActive(isShow);
 		}
 
-		// Token: 0x0401B50B RID: 111883
+		// Token: 0x04015EDE RID: 89822
 		[Nullable(2)]
 		public Action<int> OnClickRoleCallback;
 
-		// Token: 0x0401B50C RID: 111884
+		// Token: 0x04015EDF RID: 89823
 		public int Index;
 
-		// Token: 0x0200AF64 RID: 44900
+		// Token: 0x02009999 RID: 39321
 		private class EComponents
 		{
-			// Token: 0x04035420 RID: 218144
+			// Token: 0x0402FE53 RID: 196179
 			public const int BtnRole = 0;
 
-			// Token: 0x04035421 RID: 218145
+			// Token: 0x0402FE54 RID: 196180
 			public const int PanelRole = 1;
 
-			// Token: 0x04035422 RID: 218146
+			// Token: 0x0402FE55 RID: 196181
 			public const int TexRole = 2;
 
-			// Token: 0x04035423 RID: 218147
+			// Token: 0x0402FE56 RID: 196182
 			public const int PanelEmpty = 3;
 
-			// Token: 0x04035424 RID: 218148
+			// Token: 0x0402FE57 RID: 196183
 			public const int PanelNewUnlock = 4;
 		}
 	}

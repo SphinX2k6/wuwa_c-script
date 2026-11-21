@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Module.HonamiStory;
 
-// Token: 0x02001E6C RID: 7788
+// Token: 0x0200132E RID: 4910
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryEquipItemData : HonamiStoryItemDataBase
 {
-	// Token: 0x0600ED21 RID: 60705 RVA: 0x00388044 File Offset: 0x00386244
+	// Token: 0x0600C140 RID: 49472 RVA: 0x00393C50 File Offset: 0x00391E50
 	public override void Init(HonamiStoryItemInfo itemInfo)
 	{
 		base.Init(itemInfo);
@@ -21,8 +20,8 @@ public class HonamiStoryEquipItemData : HonamiStoryItemDataBase
 			return;
 		}
 		this.MainPropLibraryId = honamiStoryEquipItemInfo.MainPropLibraryId;
-		this.OriBuffTempId = honamiStoryEquipItemInfo.OriBuffTempId.ToList<int>();
-		this.ChildBuffTempId = honamiStoryEquipItemInfo.ChildBuffTempId.ToList<int>();
+		this.OriBuffTempId = new List<int>(honamiStoryEquipItemInfo.OriBuffTempId);
+		this.ChildBuffTempId = new List<int>(honamiStoryEquipItemInfo.ChildBuffTempId);
 		HonamiStoryEquip? config = this.GetConfig();
 		this.RoleId = config.Value.RoleId;
 		this.GroupId = config.Value.GroupId;
@@ -32,55 +31,55 @@ public class HonamiStoryEquipItemData : HonamiStoryItemDataBase
 		this.RoleEnhance = config.Value.RoleEnhanceLevel;
 	}
 
-	// Token: 0x0600ED22 RID: 60706 RVA: 0x00388116 File Offset: 0x00386316
+	// Token: 0x0600C141 RID: 49473 RVA: 0x00393D22 File Offset: 0x00391F22
 	public HonamiStoryEquip? GetConfig()
 	{
 		return HonamiStoryConfig.Instance.GetHonamiStoryEquip(base.GetItemId());
 	}
 
-	// Token: 0x0600ED23 RID: 60707 RVA: 0x00388128 File Offset: 0x00386328
+	// Token: 0x0600C142 RID: 49474 RVA: 0x00393D34 File Offset: 0x00391F34
 	public int GetRoleId()
 	{
 		return this.RoleId;
 	}
 
-	// Token: 0x0600ED24 RID: 60708 RVA: 0x00388130 File Offset: 0x00386330
+	// Token: 0x0600C143 RID: 49475 RVA: 0x00393D3C File Offset: 0x00391F3C
 	public int GetGroupId()
 	{
 		return this.GroupId;
 	}
 
-	// Token: 0x0600ED25 RID: 60709 RVA: 0x00388138 File Offset: 0x00386338
+	// Token: 0x0600C144 RID: 49476 RVA: 0x00393D44 File Offset: 0x00391F44
 	public int GetBaseEnhance()
 	{
 		return this.BaseEnhance;
 	}
 
-	// Token: 0x0600ED26 RID: 60710 RVA: 0x00388140 File Offset: 0x00386340
+	// Token: 0x0600C145 RID: 49477 RVA: 0x00393D4C File Offset: 0x00391F4C
 	public int GetWeaponTag()
 	{
 		return this.WeaponTag;
 	}
 
-	// Token: 0x0600ED27 RID: 60711 RVA: 0x00388148 File Offset: 0x00386348
+	// Token: 0x0600C146 RID: 49478 RVA: 0x00393D54 File Offset: 0x00391F54
 	public int GetWeaponEnhance()
 	{
 		return this.WeaponEnhance;
 	}
 
-	// Token: 0x0600ED28 RID: 60712 RVA: 0x00388150 File Offset: 0x00386350
+	// Token: 0x0600C147 RID: 49479 RVA: 0x00393D5C File Offset: 0x00391F5C
 	public int GetRoleEnhance()
 	{
 		return this.RoleEnhance;
 	}
 
-	// Token: 0x0600ED29 RID: 60713 RVA: 0x00388158 File Offset: 0x00386358
+	// Token: 0x0600C148 RID: 49480 RVA: 0x00393D64 File Offset: 0x00391F64
 	public int[] GetMainPropList()
 	{
 		return HonamiStoryConfig.Instance.GetHonamiStoryPropLibrary(this.MainPropLibraryId);
 	}
 
-	// Token: 0x0600ED2A RID: 60714 RVA: 0x0038816C File Offset: 0x0038636C
+	// Token: 0x0600C149 RID: 49481 RVA: 0x00393D78 File Offset: 0x00391F78
 	public List<string> GetOriBuffDescList()
 	{
 		List<string> list = new List<string>();
@@ -95,7 +94,7 @@ public class HonamiStoryEquipItemData : HonamiStoryItemDataBase
 		return list;
 	}
 
-	// Token: 0x0600ED2B RID: 60715 RVA: 0x003881D8 File Offset: 0x003863D8
+	// Token: 0x0600C14A RID: 49482 RVA: 0x00393DE4 File Offset: 0x00391FE4
 	public List<IHonamiStoryTipsBuffInfo> GetBuffTempIdList(bool fromTeamView = false)
 	{
 		List<IHonamiStoryTipsBuffInfo> list = new List<IHonamiStoryTipsBuffInfo>();
@@ -120,7 +119,7 @@ public class HonamiStoryEquipItemData : HonamiStoryItemDataBase
 		return list;
 	}
 
-	// Token: 0x0600ED2C RID: 60716 RVA: 0x003882E4 File Offset: 0x003864E4
+	// Token: 0x0600C14B RID: 49483 RVA: 0x00393EF0 File Offset: 0x003920F0
 	public List<string> GetChildBuffDescList()
 	{
 		List<string> list = new List<string>();
@@ -135,30 +134,30 @@ public class HonamiStoryEquipItemData : HonamiStoryItemDataBase
 		return list;
 	}
 
-	// Token: 0x04006E15 RID: 28181
+	// Token: 0x04006EF6 RID: 28406
 	protected int MainPropLibraryId = -1;
 
-	// Token: 0x04006E16 RID: 28182
+	// Token: 0x04006EF7 RID: 28407
 	protected List<int> OriBuffTempId = new List<int>();
 
-	// Token: 0x04006E17 RID: 28183
+	// Token: 0x04006EF8 RID: 28408
 	protected List<int> ChildBuffTempId = new List<int>();
 
-	// Token: 0x04006E18 RID: 28184
+	// Token: 0x04006EF9 RID: 28409
 	protected int GroupId = -1;
 
-	// Token: 0x04006E19 RID: 28185
+	// Token: 0x04006EFA RID: 28410
 	protected int RoleId = -1;
 
-	// Token: 0x04006E1A RID: 28186
+	// Token: 0x04006EFB RID: 28411
 	protected int RoleEnhance = -1;
 
-	// Token: 0x04006E1B RID: 28187
+	// Token: 0x04006EFC RID: 28412
 	protected int BaseEnhance = -1;
 
-	// Token: 0x04006E1C RID: 28188
+	// Token: 0x04006EFD RID: 28413
 	protected int WeaponTag = -1;
 
-	// Token: 0x04006E1D RID: 28189
+	// Token: 0x04006EFE RID: 28414
 	protected int WeaponEnhance = -1;
 }

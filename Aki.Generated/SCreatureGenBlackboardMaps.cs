@@ -7,13 +7,13 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011DC RID: 4572
+	// Token: 0x02001313 RID: 4883
 	[NullableContext(1)]
 	[Nullable(0)]
 	public struct SCreatureGenBlackboardMaps : IFlatbufferObject
 	{
-		// Token: 0x17003F1E RID: 16158
-		// (get) Token: 0x0600EB23 RID: 60195 RVA: 0x0034975E File Offset: 0x0034795E
+		// Token: 0x17004286 RID: 17030
+		// (get) Token: 0x0600F89C RID: 63644 RVA: 0x0037444E File Offset: 0x0037264E
 		[Nullable(0)]
 		public ByteBuffer ByteBuffer
 		{
@@ -24,34 +24,34 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EB24 RID: 60196 RVA: 0x0034976B File Offset: 0x0034796B
+		// Token: 0x0600F89D RID: 63645 RVA: 0x0037445B File Offset: 0x0037265B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600EB25 RID: 60197 RVA: 0x00349774 File Offset: 0x00347974
+		// Token: 0x0600F89E RID: 63646 RVA: 0x00374464 File Offset: 0x00372664
 		[NullableContext(0)]
 		public static SCreatureGenBlackboardMaps GetRootAsSCreatureGenBlackboardMaps(ByteBuffer _bb)
 		{
 			return SCreatureGenBlackboardMaps.GetRootAsSCreatureGenBlackboardMaps(_bb, default(SCreatureGenBlackboardMaps));
 		}
 
-		// Token: 0x0600EB26 RID: 60198 RVA: 0x00349790 File Offset: 0x00347990
+		// Token: 0x0600F89F RID: 63647 RVA: 0x00374480 File Offset: 0x00372680
 		[NullableContext(0)]
 		public static SCreatureGenBlackboardMaps GetRootAsSCreatureGenBlackboardMaps(ByteBuffer _bb, SCreatureGenBlackboardMaps obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600EB27 RID: 60199 RVA: 0x003497AD File Offset: 0x003479AD
+		// Token: 0x0600F8A0 RID: 63648 RVA: 0x0037449D File Offset: 0x0037269D
 		[NullableContext(0)]
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600EB28 RID: 60200 RVA: 0x003497BC File Offset: 0x003479BC
+		// Token: 0x0600F8A1 RID: 63649 RVA: 0x003744AC File Offset: 0x003726AC
 		[NullableContext(0)]
 		public SCreatureGenBlackboardMaps __assign(int _i, ByteBuffer _bb)
 		{
@@ -59,7 +59,7 @@ namespace Aki.Config
 			return this;
 		}
 
-		// Token: 0x0600EB29 RID: 60201 RVA: 0x003497CC File Offset: 0x003479CC
+		// Token: 0x0600F8A2 RID: 63650 RVA: 0x003744BC File Offset: 0x003726BC
 		public DicStringString? MapString(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -70,8 +70,8 @@ namespace Aki.Config
 			return new DicStringString?(default(DicStringString).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003F1F RID: 16159
-		// (get) Token: 0x0600EB2A RID: 60202 RVA: 0x0034982C File Offset: 0x00347A2C
+		// Token: 0x17004287 RID: 17031
+		// (get) Token: 0x0600F8A3 RID: 63651 RVA: 0x0037451C File Offset: 0x0037271C
 		public int MapStringLength
 		{
 			get
@@ -85,7 +85,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EB2B RID: 60203 RVA: 0x00349858 File Offset: 0x00347A58
+		// Token: 0x0600F8A4 RID: 63652 RVA: 0x00374548 File Offset: 0x00372748
 		public DicStringInt? MapInt(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -96,8 +96,8 @@ namespace Aki.Config
 			return new DicStringInt?(default(DicStringInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003F20 RID: 16160
-		// (get) Token: 0x0600EB2C RID: 60204 RVA: 0x003498B8 File Offset: 0x00347AB8
+		// Token: 0x17004288 RID: 17032
+		// (get) Token: 0x0600F8A5 RID: 63653 RVA: 0x003745A8 File Offset: 0x003727A8
 		public int MapIntLength
 		{
 			get
@@ -111,7 +111,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EB2D RID: 60205 RVA: 0x003498E4 File Offset: 0x00347AE4
+		// Token: 0x0600F8A6 RID: 63654 RVA: 0x003745D4 File Offset: 0x003727D4
 		public DicStringBool? MapBool(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -122,8 +122,8 @@ namespace Aki.Config
 			return new DicStringBool?(default(DicStringBool).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003F21 RID: 16161
-		// (get) Token: 0x0600EB2E RID: 60206 RVA: 0x00349944 File Offset: 0x00347B44
+		// Token: 0x17004289 RID: 17033
+		// (get) Token: 0x0600F8A7 RID: 63655 RVA: 0x00374634 File Offset: 0x00372834
 		public int MapBoolLength
 		{
 			get
@@ -137,52 +137,49 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EB2F RID: 60207 RVA: 0x00349970 File Offset: 0x00347B70
-		[Obsolete("已废弃，请使用MapBoolFrozenDict()缓存字典，遍历请使用MapBoolIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<string, bool> MapBool()
+		// Token: 0x0600F8A8 RID: 63656 RVA: 0x00374660 File Offset: 0x00372860
+		public Dictionary<string, bool> MapBool()
 		{
 			return this.MapBoolIter().ToDictionary((DicStringBool element) => element.Key, (DicStringBool element) => element.Value);
 		}
 
-		// Token: 0x0600EB30 RID: 60208 RVA: 0x003499C6 File Offset: 0x00347BC6
-		public readonly IEnumerable<DicStringBool> MapBoolIter()
+		// Token: 0x0600F8A9 RID: 63657 RVA: 0x003746B6 File Offset: 0x003728B6
+		public IEnumerable<DicStringBool> MapBoolIter()
 		{
 			SCreatureGenBlackboardMaps.<MapBoolIter>d__18 <MapBoolIter>d__ = new SCreatureGenBlackboardMaps.<MapBoolIter>d__18(-2);
 			<MapBoolIter>d__.<>3__<>4__this = this;
 			return <MapBoolIter>d__;
 		}
 
-		// Token: 0x0600EB31 RID: 60209 RVA: 0x003499DC File Offset: 0x00347BDC
-		[Obsolete("已废弃，请使用MapIntFrozenDict()缓存字典，遍历请使用MapIntIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<string, int> MapInt()
+		// Token: 0x0600F8AA RID: 63658 RVA: 0x003746CC File Offset: 0x003728CC
+		public Dictionary<string, int> MapInt()
 		{
 			return this.MapIntIter().ToDictionary((DicStringInt element) => element.Key, (DicStringInt element) => element.Value);
 		}
 
-		// Token: 0x0600EB32 RID: 60210 RVA: 0x00349A32 File Offset: 0x00347C32
-		public readonly IEnumerable<DicStringInt> MapIntIter()
+		// Token: 0x0600F8AB RID: 63659 RVA: 0x00374722 File Offset: 0x00372922
+		public IEnumerable<DicStringInt> MapIntIter()
 		{
 			SCreatureGenBlackboardMaps.<MapIntIter>d__20 <MapIntIter>d__ = new SCreatureGenBlackboardMaps.<MapIntIter>d__20(-2);
 			<MapIntIter>d__.<>3__<>4__this = this;
 			return <MapIntIter>d__;
 		}
 
-		// Token: 0x0600EB33 RID: 60211 RVA: 0x00349A48 File Offset: 0x00347C48
-		[Obsolete("已废弃，请使用MapStringFrozenDict()缓存字典，遍历请使用MapStringIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<string, string> MapString()
+		// Token: 0x0600F8AC RID: 63660 RVA: 0x00374738 File Offset: 0x00372938
+		public Dictionary<string, string> MapString()
 		{
 			return this.MapStringIter().ToDictionary((DicStringString element) => element.Key, (DicStringString element) => element.Value);
 		}
 
-		// Token: 0x0600EB34 RID: 60212 RVA: 0x00349A9E File Offset: 0x00347C9E
-		public readonly IEnumerable<DicStringString> MapStringIter()
+		// Token: 0x0600F8AD RID: 63661 RVA: 0x0037478E File Offset: 0x0037298E
+		public IEnumerable<DicStringString> MapStringIter()
 		{
 			SCreatureGenBlackboardMaps.<MapStringIter>d__22 <MapStringIter>d__ = new SCreatureGenBlackboardMaps.<MapStringIter>d__22(-2);
 			<MapStringIter>d__.<>3__<>4__this = this;
 			return <MapStringIter>d__;
 		}
 
-		// Token: 0x0600EB35 RID: 60213 RVA: 0x00349AB4 File Offset: 0x00347CB4
+		// Token: 0x0600F8AE RID: 63662 RVA: 0x003747A4 File Offset: 0x003729A4
 		public bool? GetMapBool(string key)
 		{
 			this.EnsureMapBoolCacheIfNeeded();
@@ -194,7 +191,7 @@ namespace Aki.Config
 			return new bool?(value);
 		}
 
-		// Token: 0x0600EB36 RID: 60214 RVA: 0x00349AE8 File Offset: 0x00347CE8
+		// Token: 0x0600F8AF RID: 63663 RVA: 0x003747D8 File Offset: 0x003729D8
 		public int? GetMapInt(string key)
 		{
 			this.EnsureMapIntCacheIfNeeded();
@@ -206,7 +203,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600EB37 RID: 60215 RVA: 0x00349B1C File Offset: 0x00347D1C
+		// Token: 0x0600F8B0 RID: 63664 RVA: 0x0037480C File Offset: 0x00372A0C
 		[return: Nullable(2)]
 		public string GetMapString(string key)
 		{
@@ -219,7 +216,7 @@ namespace Aki.Config
 			return result;
 		}
 
-		// Token: 0x0600EB38 RID: 60216 RVA: 0x00349B44 File Offset: 0x00347D44
+		// Token: 0x0600F8B1 RID: 63665 RVA: 0x00374834 File Offset: 0x00372A34
 		private void EnsureMapBoolCacheIfNeeded()
 		{
 			if (this.MapBoolCache != null)
@@ -229,7 +226,7 @@ namespace Aki.Config
 			this.MapBoolCache = this.MapBoolIter().ToFrozenDictionary((DicStringBool kvp) => kvp.Key, (DicStringBool kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600EB39 RID: 60217 RVA: 0x00349BAC File Offset: 0x00347DAC
+		// Token: 0x0600F8B2 RID: 63666 RVA: 0x0037489C File Offset: 0x00372A9C
 		private void EnsureMapIntCacheIfNeeded()
 		{
 			if (this.MapIntCache != null)
@@ -239,7 +236,7 @@ namespace Aki.Config
 			this.MapIntCache = this.MapIntIter().ToFrozenDictionary((DicStringInt kvp) => kvp.Key, (DicStringInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600EB3A RID: 60218 RVA: 0x00349C14 File Offset: 0x00347E14
+		// Token: 0x0600F8B3 RID: 63667 RVA: 0x00374904 File Offset: 0x00372B04
 		private void EnsureMapStringCacheIfNeeded()
 		{
 			if (this.MapStringCache != null)
@@ -249,47 +246,31 @@ namespace Aki.Config
 			this.MapStringCache = this.MapStringIter().ToFrozenDictionary((DicStringString kvp) => kvp.Key, (DicStringString kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600EB3B RID: 60219 RVA: 0x00349C7A File Offset: 0x00347E7A
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		public FrozenDictionary<string, bool> GetMapBoolFrozenDict(string key)
+		// Token: 0x0600F8B4 RID: 63668 RVA: 0x0037496A File Offset: 0x00372B6A
+		public FrozenDictionary<string, bool> GetMapBoolFrozenDict()
 		{
 			this.EnsureMapBoolCacheIfNeeded();
 			return this.MapBoolCache;
 		}
 
-		// Token: 0x0600EB3C RID: 60220 RVA: 0x00349C88 File Offset: 0x00347E88
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		public FrozenDictionary<string, int> GetMapIntFrozenDict(string key)
+		// Token: 0x0600F8B5 RID: 63669 RVA: 0x00374978 File Offset: 0x00372B78
+		public FrozenDictionary<string, int> GetMapIntFrozenDict()
 		{
 			this.EnsureMapIntCacheIfNeeded();
 			return this.MapIntCache;
 		}
 
-		// Token: 0x0600EB3D RID: 60221 RVA: 0x00349C96 File Offset: 0x00347E96
-		[return: Nullable(new byte[]
-		{
-			2,
-			1,
-			1
-		})]
-		public FrozenDictionary<string, string> GetMapStringFrozenDict(string key)
+		// Token: 0x0600F8B6 RID: 63670 RVA: 0x00374986 File Offset: 0x00372B86
+		public FrozenDictionary<string, string> GetMapStringFrozenDict()
 		{
 			this.EnsureMapStringCacheIfNeeded();
 			return this.MapStringCache;
 		}
 
-		// Token: 0x0400534F RID: 21327
+		// Token: 0x04005993 RID: 22931
 		private Table __p;
 
-		// Token: 0x04005350 RID: 21328
+		// Token: 0x04005994 RID: 22932
 		[Nullable(new byte[]
 		{
 			2,
@@ -297,7 +278,7 @@ namespace Aki.Config
 		})]
 		private FrozenDictionary<string, bool> MapBoolCache;
 
-		// Token: 0x04005351 RID: 21329
+		// Token: 0x04005995 RID: 22933
 		[Nullable(new byte[]
 		{
 			2,
@@ -305,7 +286,7 @@ namespace Aki.Config
 		})]
 		private FrozenDictionary<string, int> MapIntCache;
 
-		// Token: 0x04005352 RID: 21330
+		// Token: 0x04005996 RID: 22934
 		[Nullable(new byte[]
 		{
 			2,

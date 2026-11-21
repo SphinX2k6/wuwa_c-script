@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.PayShop;
@@ -10,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011EA RID: 4586
+// Token: 0x0200069E RID: 1694
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityShopScrollItem<[Nullable(0)] TGrid> : UiPanelBase where TGrid : IActivityGrid
 {
-	// Token: 0x06007A75 RID: 31349 RVA: 0x0019C923 File Offset: 0x0019AB23
+	// Token: 0x06004E0C RID: 19980 RVA: 0x001A55CF File Offset: 0x001A37CF
 	public ActivityShopScrollItem(UUILoopScrollViewComponent scroller, UUIItem item, int sourceViewId, Func<TGrid> gridConstructor)
 	{
 		this.Scroller = scroller;
@@ -24,28 +23,28 @@ public class ActivityShopScrollItem<[Nullable(0)] TGrid> : UiPanelBase where TGr
 		this.GridConstructor = gridConstructor;
 	}
 
-	// Token: 0x06007A76 RID: 31350 RVA: 0x0019C948 File Offset: 0x0019AB48
+	// Token: 0x06004E0D RID: 19981 RVA: 0x001A55F4 File Offset: 0x001A37F4
 	public void AddEventListener()
 	{
 		EventSystem.Instance.Add<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 		EventSystem.Instance.Add(EEventName.ShopVersionCodeChange, new Action(this.OnShopVersionCodeChange));
 	}
 
-	// Token: 0x06007A77 RID: 31351 RVA: 0x0019C982 File Offset: 0x0019AB82
+	// Token: 0x06004E0E RID: 19982 RVA: 0x001A562E File Offset: 0x001A382E
 	public void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 		EventSystem.Instance.Remove(EEventName.ShopVersionCodeChange, new Action(this.OnShopVersionCodeChange));
 	}
 
-	// Token: 0x06007A78 RID: 31352 RVA: 0x0019C9BC File Offset: 0x0019ABBC
+	// Token: 0x06004E0F RID: 19983 RVA: 0x001A5668 File Offset: 0x001A3868
 	private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 	{
 		List<PayShopGoods> payShopTabData = PayShopModel.Instance.GetPayShopTabData(shopId, 1, true);
-		this.LoopScrollView.RefreshByDataAsync(payShopTabData.Cast<IPayShopUnionData>().ToList<IPayShopUnionData>(), false, true).Forget();
+		this.LoopScrollView.RefreshByDataAsync(new List<IPayShopUnionData>(payShopTabData), false, true).Forget();
 	}
 
-	// Token: 0x06007A79 RID: 31353 RVA: 0x0019C9F4 File Offset: 0x0019ABF4
+	// Token: 0x06004E10 RID: 19984 RVA: 0x001A569C File Offset: 0x001A389C
 	private void OnShopVersionCodeChange()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.PayShopRefresh);
@@ -58,20 +57,20 @@ public class ActivityShopScrollItem<[Nullable(0)] TGrid> : UiPanelBase where TGr
 		Log.Instance.Info(ELogModule.Activity, ELogAuthor.YZY, "PayShop:DockyardBuyTabView 商品VersionCode不同步,打开弹窗", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06007A7A RID: 31354 RVA: 0x0019CA51 File Offset: 0x0019AC51
+	// Token: 0x06004E11 RID: 19985 RVA: 0x001A56F9 File Offset: 0x001A38F9
 	protected override void OnStart()
 	{
 		this.LoopScrollView = new LoopScrollView<ActivityGrid, IPayShopUnionData>(this.Scroller, this.Item.GetOwner() as AUIBaseActor, new Func<ActivityGrid>(this.InitItem), false);
 		this.AddEventListener();
 	}
 
-	// Token: 0x06007A7B RID: 31355 RVA: 0x0019CA87 File Offset: 0x0019AC87
+	// Token: 0x06004E12 RID: 19986 RVA: 0x001A572F File Offset: 0x001A392F
 	private ActivityGrid InitItem()
 	{
 		return this.GridConstructor() as ActivityGrid;
 	}
 
-	// Token: 0x06007A7C RID: 31356 RVA: 0x0019CAA0 File Offset: 0x0019ACA0
+	// Token: 0x06004E13 RID: 19987 RVA: 0x001A5748 File Offset: 0x001A3948
 	public UniTask Refresh(int shopId)
 	{
 		ActivityShopScrollItem<TGrid>.<Refresh>d__12 <Refresh>d__;
@@ -83,13 +82,13 @@ public class ActivityShopScrollItem<[Nullable(0)] TGrid> : UiPanelBase where TGr
 		return <Refresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007A7D RID: 31357 RVA: 0x0019CAEB File Offset: 0x0019ACEB
+	// Token: 0x06004E14 RID: 19988 RVA: 0x001A5793 File Offset: 0x001A3993
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEventListener();
 	}
 
-	// Token: 0x0400381E RID: 14366
+	// Token: 0x040038B7 RID: 14519
 	[Nullable(new byte[]
 	{
 		2,
@@ -98,15 +97,15 @@ public class ActivityShopScrollItem<[Nullable(0)] TGrid> : UiPanelBase where TGr
 	})]
 	protected LoopScrollView<ActivityGrid, IPayShopUnionData> LoopScrollView;
 
-	// Token: 0x0400381F RID: 14367
+	// Token: 0x040038B8 RID: 14520
 	private readonly UUILoopScrollViewComponent Scroller;
 
-	// Token: 0x04003820 RID: 14368
+	// Token: 0x040038B9 RID: 14521
 	private readonly UUIItem Item;
 
-	// Token: 0x04003821 RID: 14369
+	// Token: 0x040038BA RID: 14522
 	private readonly int SourceViewId;
 
-	// Token: 0x04003822 RID: 14370
+	// Token: 0x040038BB RID: 14523
 	private readonly Func<TGrid> GridConstructor;
 }

@@ -9,17 +9,17 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002006 RID: 8198
+// Token: 0x020014D9 RID: 5337
 [NullableContext(1)]
 [Nullable(0)]
 public class ItemRewardView : UiTickViewBase
 {
-	// Token: 0x0601013E RID: 65854 RVA: 0x003EAE0B File Offset: 0x003E900B
+	// Token: 0x0600D5A6 RID: 54694 RVA: 0x003F7403 File Offset: 0x003F5603
 	public ItemRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601013F RID: 65855 RVA: 0x003EAE2C File Offset: 0x003E902C
+	// Token: 0x0600D5A7 RID: 54695 RVA: 0x003F7424 File Offset: 0x003F5624
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,14 +30,14 @@ public class ItemRewardView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06010140 RID: 65856 RVA: 0x003EAE86 File Offset: 0x003E9086
+	// Token: 0x0600D5A8 RID: 54696 RVA: 0x003F747E File Offset: 0x003F567E
 	protected override void OnStart()
 	{
 		this.Initialize();
 		this.RefreshRewardItem();
 	}
 
-	// Token: 0x06010141 RID: 65857 RVA: 0x003EAE94 File Offset: 0x003E9094
+	// Token: 0x0600D5A9 RID: 54697 RVA: 0x003F748C File Offset: 0x003F568C
 	private ILayoutItem<CommonItemDropGrid> InitItem(object tempData, UUIItem uiItem, int index)
 	{
 		ItemRewardInfo itemRewardInfo = tempData as ItemRewardInfo;
@@ -51,7 +51,7 @@ public class ItemRewardView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06010142 RID: 65858 RVA: 0x003EAF04 File Offset: 0x003E9104
+	// Token: 0x0600D5AA RID: 54698 RVA: 0x003F74FC File Offset: 0x003F56FC
 	private void Initialize()
 	{
 		this.RestTime = 0f;
@@ -68,7 +68,7 @@ public class ItemRewardView : UiTickViewBase
 		LguiUtil.Instance.SetLocalText(base.GetText(2), StringUtils.IsEmpty(title) ? "MiddleRequirementDefault" : title, Array.Empty<object>());
 	}
 
-	// Token: 0x06010143 RID: 65859 RVA: 0x003EAFF0 File Offset: 0x003E91F0
+	// Token: 0x0600D5AB RID: 54699 RVA: 0x003F75E8 File Offset: 0x003F57E8
 	private void RefreshRewardItem()
 	{
 		this.PromiseList.Clear();
@@ -93,7 +93,7 @@ public class ItemRewardView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06010144 RID: 65860 RVA: 0x003EB0AB File Offset: 0x003E92AB
+	// Token: 0x0600D5AC RID: 54700 RVA: 0x003F76A3 File Offset: 0x003F58A3
 	protected override void OnBeforeDestroy()
 	{
 		this.OpenNormal(false);
@@ -101,7 +101,7 @@ public class ItemRewardView : UiTickViewBase
 		this.ItemRewardData = null;
 	}
 
-	// Token: 0x06010145 RID: 65861 RVA: 0x003EB0C6 File Offset: 0x003E92C6
+	// Token: 0x0600D5AD RID: 54701 RVA: 0x003F76BE File Offset: 0x003F58BE
 	private void OpenNormal(bool isOpen)
 	{
 		if (this.ViewInfo.Name == EUiViewName.ItemRewardView)
@@ -111,13 +111,13 @@ public class ItemRewardView : UiTickViewBase
 		UiLayer.Instance.SetShowNormalMaskLayer(isOpen, "");
 	}
 
-	// Token: 0x06010146 RID: 65862 RVA: 0x003EB0F0 File Offset: 0x003E92F0
+	// Token: 0x0600D5AE RID: 54702 RVA: 0x003F76E8 File Offset: 0x003F58E8
 	protected override void OnAfterPlayStartSequence()
 	{
 		this.SetResetTime();
 	}
 
-	// Token: 0x06010147 RID: 65863 RVA: 0x003EB0F8 File Offset: 0x003E92F8
+	// Token: 0x0600D5AF RID: 54703 RVA: 0x003F76F0 File Offset: 0x003F58F0
 	protected unsafe void SetResetTime()
 	{
 		int showTime = this.DropShowPlan.Value.ShowTime;
@@ -135,7 +135,7 @@ public class ItemRewardView : UiTickViewBase
 		this.RestTime = (float)showTime;
 	}
 
-	// Token: 0x06010148 RID: 65864 RVA: 0x003EB194 File Offset: 0x003E9394
+	// Token: 0x0600D5B0 RID: 54704 RVA: 0x003F778C File Offset: 0x003F598C
 	protected override void OnTick(float delta)
 	{
 		if (this.RestTime <= 0f)
@@ -152,10 +152,10 @@ public class ItemRewardView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x040076E7 RID: 30439
+	// Token: 0x040077D0 RID: 30672
 	private const int MAX_LENGTH = 3;
 
-	// Token: 0x040076E8 RID: 30440
+	// Token: 0x040077D1 RID: 30673
 	[Nullable(new byte[]
 	{
 		2,
@@ -163,17 +163,17 @@ public class ItemRewardView : UiTickViewBase
 	})]
 	private GenericLayoutNew<CommonItemDropGrid> Layout;
 
-	// Token: 0x040076E9 RID: 30441
+	// Token: 0x040077D2 RID: 30674
 	[Nullable(2)]
 	private ItemRewardData ItemRewardData;
 
-	// Token: 0x040076EA RID: 30442
+	// Token: 0x040077D3 RID: 30675
 	private DropShowPlan? DropShowPlan;
 
-	// Token: 0x040076EB RID: 30443
+	// Token: 0x040077D4 RID: 30676
 	private float RestTime = -1f;
 
-	// Token: 0x040076EC RID: 30444
+	// Token: 0x040077D5 RID: 30677
 	[Nullable(new byte[]
 	{
 		2,
@@ -181,21 +181,21 @@ public class ItemRewardView : UiTickViewBase
 	})]
 	private ItemRewardInfo[] ItemRewardInfoList;
 
-	// Token: 0x040076ED RID: 30445
+	// Token: 0x040077D6 RID: 30678
 	private List<UniTask> PromiseList = new List<UniTask>();
 
-	// Token: 0x040076EE RID: 30446
+	// Token: 0x040077D7 RID: 30679
 	public float TickDelta;
 
-	// Token: 0x0200860F RID: 34319
+	// Token: 0x02007796 RID: 30614
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402BA11 RID: 178705
+		// Token: 0x04026D20 RID: 159008
 		ItemHorizontal,
-		// Token: 0x0402BA12 RID: 178706
+		// Token: 0x04026D21 RID: 159009
 		SourceItemGrid,
-		// Token: 0x0402BA13 RID: 178707
+		// Token: 0x04026D22 RID: 159010
 		TxtTitle
 	}
 }

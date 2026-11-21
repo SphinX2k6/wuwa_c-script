@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001991 RID: 6545
+// Token: 0x02000E4E RID: 3662
 [NullableContext(2)]
 public interface ISmallItemGridSkinComponentParams
 {
-	// Token: 0x17000FF2 RID: 4082
-	// (get) Token: 0x0600BF36 RID: 48950
-	// (set) Token: 0x0600BF37 RID: 48951
+	// Token: 0x17001016 RID: 4118
+	// (get) Token: 0x0600933E RID: 37694
+	// (set) Token: 0x0600933F RID: 37695
 	int? SkinId { get; set; }
 
-	// Token: 0x17000FF3 RID: 4083
-	// (get) Token: 0x0600BF38 RID: 48952
-	// (set) Token: 0x0600BF39 RID: 48953
+	// Token: 0x17001017 RID: 4119
+	// (get) Token: 0x06009340 RID: 37696
+	// (set) Token: 0x06009341 RID: 37697
 	string BottomText { get; set; }
 
-	// Token: 0x17000FF4 RID: 4084
-	// (get) Token: 0x0600BF3A RID: 48954
-	// (set) Token: 0x0600BF3B RID: 48955
+	// Token: 0x17001018 RID: 4120
+	// (get) Token: 0x06009342 RID: 37698
+	// (set) Token: 0x06009343 RID: 37699
 	int? QualityId { get; set; }
 }

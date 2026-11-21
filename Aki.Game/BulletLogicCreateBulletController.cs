@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Core.Fight;
 using UnrealEngine;
 
-// Token: 0x02002DCC RID: 11724
+// Token: 0x02002326 RID: 8998
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,13 +14,13 @@ using UnrealEngine;
 })]
 public class BulletLogicCreateBulletController : BulletLogicController<LogicDataCreateBullet, object>
 {
-	// Token: 0x06018A06 RID: 100870 RVA: 0x0064BF7A File Offset: 0x0064A17A
+	// Token: 0x060162AE RID: 90798 RVA: 0x00671D5E File Offset: 0x0066FF5E
 	public BulletLogicCreateBulletController(LogicDataCreateBullet bulletLogicBase, Entity bullet) : base(bulletLogicBase, bullet)
 	{
 		this.Parameter = bulletLogicBase;
 	}
 
-	// Token: 0x06018A07 RID: 100871 RVA: 0x0064BF8C File Offset: 0x0064A18C
+	// Token: 0x060162AF RID: 90799 RVA: 0x00671D70 File Offset: 0x0066FF70
 	[NullableContext(2)]
 	public override void BulletLogicAction(object param = null)
 	{
@@ -118,7 +118,7 @@ public class BulletLogicCreateBulletController : BulletLogicController<LogicData
 		component3.NeedDetach = true;
 	}
 
-	// Token: 0x06018A08 RID: 100872 RVA: 0x0064C278 File Offset: 0x0064A478
+	// Token: 0x060162B0 RID: 90800 RVA: 0x0067205C File Offset: 0x0067025C
 	[return: Nullable(2)]
 	private BaseActorComponent GetBulletCharacterActor(EBulletObject bulletObject, Entity victim)
 	{
@@ -138,7 +138,7 @@ public class BulletLogicCreateBulletController : BulletLogicController<LogicData
 		return this.Bullet.GetBulletInfo().AttackerActorComp;
 	}
 
-	// Token: 0x0400B750 RID: 46928
+	// Token: 0x0400BACB RID: 47819
 	[Nullable(2)]
 	private readonly LogicDataCreateBullet Parameter;
 }

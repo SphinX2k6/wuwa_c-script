@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FAD RID: 16301
+	// Token: 0x020043EE RID: 17390
 	public struct IPositionRollbackConfig : IFlatbufferObject
 	{
-		// Token: 0x170071D2 RID: 29138
-		// (get) Token: 0x060174C8 RID: 95432 RVA: 0x0035BEF3 File Offset: 0x0035A0F3
+		// Token: 0x170077D0 RID: 30672
+		// (get) Token: 0x06018B57 RID: 101207 RVA: 0x00385B0B File Offset: 0x00383D0B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060174C9 RID: 95433 RVA: 0x0035BF00 File Offset: 0x0035A100
+		// Token: 0x06018B58 RID: 101208 RVA: 0x00385B18 File Offset: 0x00383D18
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060174CA RID: 95434 RVA: 0x0035BF08 File Offset: 0x0035A108
+		// Token: 0x06018B59 RID: 101209 RVA: 0x00385B20 File Offset: 0x00383D20
 		public static IPositionRollbackConfig GetRootAsIPositionRollbackConfig(ByteBuffer _bb)
 		{
 			return IPositionRollbackConfig.GetRootAsIPositionRollbackConfig(_bb, default(IPositionRollbackConfig));
 		}
 
-		// Token: 0x060174CB RID: 95435 RVA: 0x0035BF24 File Offset: 0x0035A124
+		// Token: 0x06018B5A RID: 101210 RVA: 0x00385B3C File Offset: 0x00383D3C
 		public static IPositionRollbackConfig GetRootAsIPositionRollbackConfig(ByteBuffer _bb, IPositionRollbackConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060174CC RID: 95436 RVA: 0x0035BF41 File Offset: 0x0035A141
+		// Token: 0x06018B5B RID: 101211 RVA: 0x00385B59 File Offset: 0x00383D59
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060174CD RID: 95437 RVA: 0x0035BF50 File Offset: 0x0035A150
+		// Token: 0x06018B5C RID: 101212 RVA: 0x00385B68 File Offset: 0x00383D68
 		public IPositionRollbackConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170071D3 RID: 29139
-		// (get) Token: 0x060174CE RID: 95438 RVA: 0x0035BF60 File Offset: 0x0035A160
+		// Token: 0x170077D1 RID: 30673
+		// (get) Token: 0x06018B5D RID: 101213 RVA: 0x00385B78 File Offset: 0x00383D78
 		public IVectorInfo? CheckPoint
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170071D4 RID: 29140
-		// (get) Token: 0x060174CF RID: 95439 RVA: 0x0035BFC0 File Offset: 0x0035A1C0
+		// Token: 0x170077D2 RID: 30674
+		// (get) Token: 0x06018B5E RID: 101214 RVA: 0x00385BD8 File Offset: 0x00383DD8
 		public int CheckRange
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170071D5 RID: 29141
-		// (get) Token: 0x060174D0 RID: 95440 RVA: 0x0035BFFC File Offset: 0x0035A1FC
+		// Token: 0x170077D3 RID: 30675
+		// (get) Token: 0x06018B5F RID: 101215 RVA: 0x00385C14 File Offset: 0x00383E14
 		public Aki.UniverseEditor.Interface.Fbs.Action.IPosA? Position
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060174D1 RID: 95441 RVA: 0x0035C059 File Offset: 0x0035A259
+		// Token: 0x06018B60 RID: 101216 RVA: 0x00385C71 File Offset: 0x00383E71
 		public static Offset<IPositionRollbackConfig> CreateIPositionRollbackConfig(FlatBufferBuilder builder, Offset<IVectorInfo> CheckPointOffset = default(Offset<IVectorInfo>), int CheckRange = 0, Offset<Aki.UniverseEditor.Interface.Fbs.Action.IPosA> PositionOffset = default(Offset<Aki.UniverseEditor.Interface.Fbs.Action.IPosA>))
 		{
 			builder.StartTable(3);
@@ -104,37 +104,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPositionRollbackConfig.EndIPositionRollbackConfig(builder);
 		}
 
-		// Token: 0x060174D2 RID: 95442 RVA: 0x0035C07D File Offset: 0x0035A27D
+		// Token: 0x06018B61 RID: 101217 RVA: 0x00385C95 File Offset: 0x00383E95
 		public static void StartIPositionRollbackConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060174D3 RID: 95443 RVA: 0x0035C086 File Offset: 0x0035A286
+		// Token: 0x06018B62 RID: 101218 RVA: 0x00385C9E File Offset: 0x00383E9E
 		public static void AddCheckPoint(FlatBufferBuilder builder, Offset<IVectorInfo> checkPointOffset)
 		{
 			builder.AddOffset(0, checkPointOffset.Value, 0);
 		}
 
-		// Token: 0x060174D4 RID: 95444 RVA: 0x0035C096 File Offset: 0x0035A296
+		// Token: 0x06018B63 RID: 101219 RVA: 0x00385CAE File Offset: 0x00383EAE
 		public static void AddCheckRange(FlatBufferBuilder builder, int checkRange)
 		{
 			builder.AddInt(1, checkRange, 0);
 		}
 
-		// Token: 0x060174D5 RID: 95445 RVA: 0x0035C0A1 File Offset: 0x0035A2A1
+		// Token: 0x06018B64 RID: 101220 RVA: 0x00385CB9 File Offset: 0x00383EB9
 		public static void AddPosition(FlatBufferBuilder builder, Offset<Aki.UniverseEditor.Interface.Fbs.Action.IPosA> positionOffset)
 		{
 			builder.AddOffset(2, positionOffset.Value, 0);
 		}
 
-		// Token: 0x060174D6 RID: 95446 RVA: 0x0035C0B1 File Offset: 0x0035A2B1
+		// Token: 0x06018B65 RID: 101221 RVA: 0x00385CC9 File Offset: 0x00383EC9
 		public static Offset<IPositionRollbackConfig> EndIPositionRollbackConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IPositionRollbackConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060174D7 RID: 95447 RVA: 0x0035C0C0 File Offset: 0x0035A2C0
+		// Token: 0x06018B66 RID: 101222 RVA: 0x00385CD8 File Offset: 0x00383ED8
 		public IPositionRollbackConfigT UnPack()
 		{
 			IPositionRollbackConfigT positionRollbackConfigT = new IPositionRollbackConfigT();
@@ -142,7 +142,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return positionRollbackConfigT;
 		}
 
-		// Token: 0x060174D8 RID: 95448 RVA: 0x0035C0DC File Offset: 0x0035A2DC
+		// Token: 0x06018B67 RID: 101223 RVA: 0x00385CF4 File Offset: 0x00383EF4
 		public void UnPackTo(IPositionRollbackConfigT _o)
 		{
 			_o.CheckPoint = ((this.CheckPoint != null) ? this.CheckPoint.Value.UnPack() : null);
@@ -150,7 +150,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.Position = ((this.Position != null) ? this.Position.Value.UnPack() : null);
 		}
 
-		// Token: 0x060174D9 RID: 95449 RVA: 0x0035C154 File Offset: 0x0035A354
+		// Token: 0x06018B68 RID: 101224 RVA: 0x00385D6C File Offset: 0x00383F6C
 		public static Offset<IPositionRollbackConfig> Pack(FlatBufferBuilder builder, IPositionRollbackConfigT _o)
 		{
 			if (_o == null)
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPositionRollbackConfig.CreateIPositionRollbackConfig(builder, checkPointOffset, _o.CheckRange, positionOffset);
 		}
 
-		// Token: 0x0400BA16 RID: 47638
+		// Token: 0x0400C3FB RID: 50171
 		private Table __p;
 	}
 }

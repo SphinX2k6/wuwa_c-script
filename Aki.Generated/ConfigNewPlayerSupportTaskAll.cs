@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005F5 RID: 1525
+	// Token: 0x0200060D RID: 1549
 	public class ConfigNewPlayerSupportTaskAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060023CD RID: 9165 RVA: 0x00123E78 File Offset: 0x00122078
+		// Token: 0x0600245D RID: 9309 RVA: 0x0012A8F4 File Offset: 0x00128AF4
 		static ConfigNewPlayerSupportTaskAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigNewPlayerSupportTaskAll.CreateStaticDefaultValue), new Action(ConfigNewPlayerSupportTaskAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060023CE RID: 9166 RVA: 0x00123E98 File Offset: 0x00122098
+		// Token: 0x0600245E RID: 9310 RVA: 0x0012A914 File Offset: 0x00128B14
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigNewPlayerSupportTaskAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060023CF RID: 9167 RVA: 0x00123F17 File Offset: 0x00122117
+		// Token: 0x0600245F RID: 9311 RVA: 0x0012A993 File Offset: 0x00128B93
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigNewPlayerSupportTaskAll.LogPair = null;
 			ConfigNewPlayerSupportTaskAll.HandleId = 0;
 		}
 
-		// Token: 0x060023D0 RID: 9168 RVA: 0x00123F25 File Offset: 0x00122125
+		// Token: 0x06002460 RID: 9312 RVA: 0x0012A9A1 File Offset: 0x00128BA1
 		public static void Init()
 		{
 			ConfigNewPlayerSupportTaskAll.HandleId = ConfigCommon.InitDataStatement(ConfigNewPlayerSupportTaskAll.HandleId, "db_newplayersupport.db", "select BinData from `NewPlayerSupportTask`");
 		}
 
-		// Token: 0x060023D1 RID: 9169 RVA: 0x00123F40 File Offset: 0x00122140
+		// Token: 0x06002461 RID: 9313 RVA: 0x0012A9BC File Offset: 0x00128BBC
 		[NullableContext(2)]
 		public static IReadOnlyList<NewPlayerSupportTask> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002999 RID: 10649
+		// Token: 0x04002A41 RID: 10817
 		private const string DB = "db_newplayersupport.db";
 
-		// Token: 0x0400299A RID: 10650
+		// Token: 0x04002A42 RID: 10818
 		private const string FILE = "x.新玩家助力活动.xlsx";
 
-		// Token: 0x0400299B RID: 10651
+		// Token: 0x04002A43 RID: 10819
 		private const string TABLE = "NewPlayerSupportTask";
 
-		// Token: 0x0400299C RID: 10652
+		// Token: 0x04002A44 RID: 10820
 		private const string COMMAND = "select BinData from `NewPlayerSupportTask`";
 
-		// Token: 0x0400299D RID: 10653
+		// Token: 0x04002A45 RID: 10821
 		private const string KEY_PREFIX = "NewPlayerSupportTaskAll";
 
-		// Token: 0x0400299E RID: 10654
+		// Token: 0x04002A46 RID: 10822
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400299F RID: 10655
+		// Token: 0x04002A47 RID: 10823
 		private static int HandleId;
 	}
 }

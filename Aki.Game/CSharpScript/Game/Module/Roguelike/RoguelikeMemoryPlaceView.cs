@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,23 +10,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E14 RID: 19988
+	// Token: 0x02003DDD RID: 15837
 	public class RoguelikeMemoryPlaceView : UiViewBase
 	{
-		// Token: 0x060338FC RID: 211196 RVA: 0x00C0D932 File Offset: 0x00C0BB32
+		// Token: 0x06028767 RID: 165735 RVA: 0x00B56E3E File Offset: 0x00B5503E
 		[NullableContext(1)]
 		public RoguelikeMemoryPlaceView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060338FD RID: 211197 RVA: 0x00C0D93B File Offset: 0x00C0BB3B
+		// Token: 0x06028768 RID: 165736 RVA: 0x00B56E47 File Offset: 0x00B55047
 		[NullableContext(1)]
 		private RoguelikeMemoryRewardItem CreateLoopScrollItem()
 		{
 			return new RoguelikeMemoryRewardItem();
 		}
 
-		// Token: 0x060338FE RID: 211198 RVA: 0x00C0D944 File Offset: 0x00C0BB44
+		// Token: 0x06028769 RID: 165737 RVA: 0x00B56E50 File Offset: 0x00B55050
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -64,7 +63,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060338FF RID: 211199 RVA: 0x00C0DAF8 File Offset: 0x00C0BCF8
+		// Token: 0x0602876A RID: 165738 RVA: 0x00B57004 File Offset: 0x00B55204
 		protected override void OnStart()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -78,7 +77,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.SeasonData = (this.OpenParam as SeasonData);
 			IReadOnlyList<Aki.Config.RogueSeasonReward> rogueSeasonReward = RoguelikeConfig.Instance.GetRogueSeasonReward(this.SeasonData.SeasonId);
 			List<RoguelikeMemoryRewardItemData> list = new List<RoguelikeMemoryRewardItemData>();
-			for (int i = 0; i < rogueSeasonReward.Count<Aki.Config.RogueSeasonReward>(); i++)
+			for (int i = 0; i < rogueSeasonReward.Count; i++)
 			{
 				Aki.Config.RogueSeasonReward value = rogueSeasonReward[i];
 				list.Add(new RoguelikeMemoryRewardItemData
@@ -91,26 +90,26 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.UpdateView();
 		}
 
-		// Token: 0x06033900 RID: 211200 RVA: 0x00C0DC18 File Offset: 0x00C0BE18
+		// Token: 0x0602876B RID: 165739 RVA: 0x00B57124 File Offset: 0x00B55324
 		private void OnBtnTokenOverViewClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RoguelikeTokenOverView, this.SeasonData, null);
 		}
 
-		// Token: 0x06033901 RID: 211201 RVA: 0x00C0DC30 File Offset: 0x00C0BE30
+		// Token: 0x0602876C RID: 165740 RVA: 0x00B5713C File Offset: 0x00B5533C
 		private void OnBtnAchievementViewClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RoguelikeAchievementView, null, null);
 		}
 
-		// Token: 0x06033902 RID: 211202 RVA: 0x00C0DC44 File Offset: 0x00C0BE44
+		// Token: 0x0602876D RID: 165741 RVA: 0x00B57150 File Offset: 0x00B55350
 		protected void UpdateView()
 		{
-			int num = this.SeasonData.SeasonRewardList.Count<SeasonReward>();
+			int count = this.SeasonData.SeasonRewardList.Count;
 			int pointItem = RoguelikeModel.Instance.GetParamConfigBySeasonId(null).Value.PointItem;
 			int itemCountByConfigId = InventoryModel.Instance.GetItemCountByConfigId(pointItem, 0);
 			RogueParam? paramConfigBySeasonId = RoguelikeModel.Instance.GetParamConfigBySeasonId(null);
-			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), "Roguelike_MemoryPlace_Level", new <>z__ReadOnlySingleElementList<object>(num.ToString()));
+			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), "Roguelike_MemoryPlace_Level", new <>z__ReadOnlySingleElementList<object>(count.ToString()));
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), "Roguelike_MemoryPlace_Exp", new <>z__ReadOnlyArray<object>(new object[]
 			{
 				itemCountByConfigId,
@@ -118,32 +117,32 @@ namespace CSharpScript.Game.Module.Roguelike
 			}));
 			RogueSeason? rogueSeasonConfigById = RoguelikeConfig.Instance.GetRogueSeasonConfigById(this.SeasonData.SeasonId);
 			List<AchievementGroupData> achievementCategoryGroups = AchievementModel.Instance.GetAchievementCategoryGroups(rogueSeasonConfigById.Value.Achievement, true);
+			int num = 0;
 			int num2 = 0;
-			int num3 = 0;
 			foreach (AchievementGroupData achievementGroupData in achievementCategoryGroups)
 			{
-				num3 += achievementGroupData.GetMaxProgress();
-				num2 += achievementGroupData.GetCurrentProgress();
+				num2 += achievementGroupData.GetMaxProgress();
+				num += achievementGroupData.GetCurrentProgress();
 			}
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(5), "Rogue_MemoryPlace_Progress", new <>z__ReadOnlyArray<object>(new object[]
 			{
-				num2,
-				num3
+				num,
+				num2
 			}));
-			int num4 = RoguelikeConfig.Instance.GetRogueTokenBySeasonId(this.SeasonData.SeasonId).Count<Aki.Config.RogueToken>();
-			int num5 = this.SeasonData.RoguelikeTokenList.Count<RoguelikeToken>();
+			int count2 = RoguelikeConfig.Instance.GetRogueTokenBySeasonId(this.SeasonData.SeasonId).Count;
+			int count3 = this.SeasonData.RoguelikeTokenList.Count;
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(6), "Rogue_MemoryPlace_Progress", new <>z__ReadOnlyArray<object>(new object[]
 			{
-				num5,
-				num4
+				count3,
+				count2
 			}));
 		}
 
-		// Token: 0x0401B594 RID: 112020
+		// Token: 0x04015F67 RID: 89959
 		[Nullable(2)]
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401B595 RID: 112021
+		// Token: 0x04015F68 RID: 89960
 		[Nullable(new byte[]
 		{
 			2,
@@ -152,41 +151,41 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		protected LoopScrollView<RoguelikeMemoryRewardItem, RoguelikeMemoryRewardItemData> LoopScrollView;
 
-		// Token: 0x0401B596 RID: 112022
+		// Token: 0x04015F69 RID: 89961
 		[Nullable(2)]
 		protected SeasonData SeasonData;
 
-		// Token: 0x0200AFAC RID: 44972
+		// Token: 0x020099E1 RID: 39393
 		private class ERoguelikeMemoryPlaceViewDefine
 		{
-			// Token: 0x0403554F RID: 218447
+			// Token: 0x0402FF82 RID: 196482
 			public const int CaptionItem = 0;
 
-			// Token: 0x04035550 RID: 218448
+			// Token: 0x0402FF83 RID: 196483
 			public const int BtnTokenOverView = 1;
 
-			// Token: 0x04035551 RID: 218449
+			// Token: 0x0402FF84 RID: 196484
 			public const int BtnAchievementView = 2;
 
-			// Token: 0x04035552 RID: 218450
+			// Token: 0x0402FF85 RID: 196485
 			public const int TxtCurLevel = 3;
 
-			// Token: 0x04035553 RID: 218451
+			// Token: 0x0402FF86 RID: 196486
 			public const int TxtScore = 4;
 
-			// Token: 0x04035554 RID: 218452
+			// Token: 0x0402FF87 RID: 196487
 			public const int TxtAchievementCollect = 5;
 
-			// Token: 0x04035555 RID: 218453
+			// Token: 0x0402FF88 RID: 196488
 			public const int TxtTokenCollect = 6;
 
-			// Token: 0x04035556 RID: 218454
+			// Token: 0x0402FF89 RID: 196489
 			public const int LoopScrollView = 7;
 
-			// Token: 0x04035557 RID: 218455
+			// Token: 0x0402FF8A RID: 196490
 			public const int LoopScrollItem = 8;
 
-			// Token: 0x04035558 RID: 218456
+			// Token: 0x0402FF8B RID: 196491
 			public const int PanelBottom = 9;
 		}
 	}

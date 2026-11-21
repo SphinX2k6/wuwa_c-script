@@ -3,15 +3,15 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050DF RID: 20703
+	// Token: 0x02005644 RID: 22084
 	public class IDynamicEntityRewardTypeT
 	{
-		// Token: 0x170096BB RID: 38587
-		// (get) Token: 0x06021543 RID: 136515 RVA: 0x004A0F86 File Offset: 0x0049F186
-		// (set) Token: 0x06021544 RID: 136516 RVA: 0x004A0F8E File Offset: 0x0049F18E
+		// Token: 0x17009EA8 RID: 40616
+		// (get) Token: 0x06023497 RID: 144535 RVA: 0x004DAF12 File Offset: 0x004D9112
+		// (set) Token: 0x06023498 RID: 144536 RVA: 0x004DAF1A File Offset: 0x004D911A
 		public EDynamicEntityRewardType Type { get; set; }
 
-		// Token: 0x06021545 RID: 136517 RVA: 0x004A0F97 File Offset: 0x0049F197
+		// Token: 0x06023499 RID: 144537 RVA: 0x004DAF23 File Offset: 0x004D9123
 		public IDynamicEntityRewardTypeT()
 		{
 			this.Type = EDynamicEntityRewardType.Traffic;

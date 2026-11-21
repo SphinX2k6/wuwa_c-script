@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007AB RID: 1963
+	// Token: 0x0200084C RID: 2124
 	public class ITriggerRangeStartCondition_SetValue
 	{
-		// Token: 0x04001C68 RID: 7272
+		// Token: 0x04001E71 RID: 7793
 		public ESpawnMonsterStartCondition Type;
 
-		// Token: 0x04001C69 RID: 7273
+		// Token: 0x04001E72 RID: 7794
 		public int Range;
 	}
 }

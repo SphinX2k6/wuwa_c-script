@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007815 RID: 30741
+	// Token: 0x02008056 RID: 32854
 	public static class TVisualNovelPerformanceVerify
 	{
-		// Token: 0x06037BE5 RID: 228325 RVA: 0x00788F3C File Offset: 0x0078713C
+		// Token: 0x0603B194 RID: 242068 RVA: 0x007EE97C File Offset: 0x007ECB7C
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -59,9 +59,6 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				break;
 			case 16:
 				result = IVisualNovelPerformanceTransitionVerify.Verify(verifier, tablePos);
-				break;
-			case 17:
-				result = IVisualNovelPerformanceUiShakeVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

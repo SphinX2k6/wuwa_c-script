@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using Aki.Config;
@@ -13,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020022C2 RID: 8898
+// Token: 0x020017A6 RID: 6054
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleMusicPlayerView : UiViewBase
 {
-	// Token: 0x0601175C RID: 71516 RVA: 0x004475F4 File Offset: 0x004457F4
+	// Token: 0x0600EBF4 RID: 60404 RVA: 0x0045424C File Offset: 0x0045244C
 	public MotorcycleMusicPlayerView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601175D RID: 71517 RVA: 0x00447668 File Offset: 0x00445868
+	// Token: 0x0600EBF5 RID: 60405 RVA: 0x004542C0 File Offset: 0x004524C0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -74,28 +73,28 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601175E RID: 71518 RVA: 0x00447A2D File Offset: 0x00445C2D
+	// Token: 0x0600EBF6 RID: 60406 RVA: 0x00454685 File Offset: 0x00452885
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnMotorSwitchMusic, new Action(this.OnMotorSwitchMusic));
 		EventSystem.Instance.Add<int>(EEventName.OnMotorMusicForceRefresh, new Action<int>(this.OnMotorMusicForceRefresh));
 	}
 
-	// Token: 0x0601175F RID: 71519 RVA: 0x00447A67 File Offset: 0x00445C67
+	// Token: 0x0600EBF7 RID: 60407 RVA: 0x004546BF File Offset: 0x004528BF
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnMotorSwitchMusic, new Action(this.OnMotorSwitchMusic));
 		EventSystem.Instance.Remove<int>(EEventName.OnMotorMusicForceRefresh, new Action<int>(this.OnMotorMusicForceRefresh));
 	}
 
-	// Token: 0x06011760 RID: 71520 RVA: 0x00447AA4 File Offset: 0x00445CA4
+	// Token: 0x0600EBF8 RID: 60408 RVA: 0x004546FC File Offset: 0x004528FC
 	private void OnMotorMusicForceRefresh(int albumId)
 	{
 		this.StartAlbumIndex = null;
 		this.SelectAlbumId = -1;
 		this.InitAlbumUiDataList(albumId);
 		this.AlbumListView.ReloadView(this.AlbumUiDataList.Length, this.AlbumUiDataList, 0);
-		int num = this.AlbumUiDataList.ToList<IAlbumUiData>().FindIndex((IAlbumUiData x) => x.Id == albumId);
+		int num = Array.FindIndex<IAlbumUiData>(this.AlbumUiDataList, (IAlbumUiData x) => x.Id == albumId);
 		if (num == -1)
 		{
 			num = 0;
@@ -109,7 +108,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		this.RefreshTimeLimitSprite(albumId2);
 	}
 
-	// Token: 0x06011761 RID: 71521 RVA: 0x00447B7C File Offset: 0x00445D7C
+	// Token: 0x0600EBF9 RID: 60409 RVA: 0x004547D0 File Offset: 0x004529D0
 	protected UniTask LoadCurveResource()
 	{
 		MotorcycleMusicPlayerView.<LoadCurveResource>d__27 <LoadCurveResource>d__;
@@ -119,7 +118,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		return <LoadCurveResource>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011762 RID: 71522 RVA: 0x00447BB8 File Offset: 0x00445DB8
+	// Token: 0x0600EBFA RID: 60410 RVA: 0x0045480C File Offset: 0x00452A0C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleMusicPlayerView.<OnBeforeStartAsync>d__28 <OnBeforeStartAsync>d__;
@@ -130,7 +129,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011763 RID: 71523 RVA: 0x00447BFC File Offset: 0x00445DFC
+	// Token: 0x0600EBFB RID: 60411 RVA: 0x00454850 File Offset: 0x00452A50
 	private void RefreshTimeLimitSprite(int albumId)
 	{
 		IAlbumTimeInfo albumTimeInfo = MotorcycleMusicPlayerModel.Instance.GetAlbumTimeInfo(albumId);
@@ -168,19 +167,19 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), "MotorMusicList", Array.Empty<object>());
 	}
 
-	// Token: 0x06011764 RID: 71524 RVA: 0x00447CF0 File Offset: 0x00445EF0
+	// Token: 0x0600EBFC RID: 60412 RVA: 0x00454944 File Offset: 0x00452B44
 	private void OnClickBtnHelp()
 	{
 		HelpController.Instance.OpenHelpById(653);
 	}
 
-	// Token: 0x06011765 RID: 71525 RVA: 0x00447D01 File Offset: 0x00445F01
+	// Token: 0x0600EBFD RID: 60413 RVA: 0x00454955 File Offset: 0x00452B55
 	private void CloseView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011766 RID: 71526 RVA: 0x00447D0C File Offset: 0x00445F0C
+	// Token: 0x0600EBFE RID: 60414 RVA: 0x00454960 File Offset: 0x00452B60
 	private void InitScrollView()
 	{
 		this.AlbumListView = new NoCircleAttachView<IAlbumUiData, MotorcycleAlbumItemGrid>(base.GetItem(2).GetOwner(), true);
@@ -203,7 +202,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		this.ScrollView = new LoopScrollView<MotorcycleMusicItemGrid, IMusicUiData>(loopScrollViewComponent, auibaseActor, new Func<MotorcycleMusicItemGrid>(this.CreateMusicItem), false);
 	}
 
-	// Token: 0x06011767 RID: 71527 RVA: 0x00447DF8 File Offset: 0x00445FF8
+	// Token: 0x0600EBFF RID: 60415 RVA: 0x00454A4C File Offset: 0x00452C4C
 	private void InitMusicListData()
 	{
 		PhonographConfig instance = PhonographConfig.Instance;
@@ -222,7 +221,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 				}
 			}
 		}
-		this.FavoriteMusicList = MotorcycleMusicPlayerModel.Instance.GetFavoriteMusicList().ToList<int>();
+		this.FavoriteMusicList = new List<int>(MotorcycleMusicPlayerModel.Instance.GetFavoriteMusicList());
 		foreach (List<int> list in this.Album2MusicMap.Values)
 		{
 			MotorcycleMusicPlayerModel model = MotorcycleMusicPlayerModel.Instance;
@@ -243,7 +242,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011768 RID: 71528 RVA: 0x00447F2C File Offset: 0x0044612C
+	// Token: 0x0600EC00 RID: 60416 RVA: 0x00454B80 File Offset: 0x00452D80
 	private void InitLongPressButton()
 	{
 		LongPressButtonItem longPressButtonItem = new LongPressButtonItem(new OneOf<UUIButtonComponent, UUIExtendToggle>?(base.GetButton(26)), new LongPressButtonItem.ELongPressConfigId?(LongPressButtonItem.ELongPressConfigId.LongPressOne), new Action<bool>(this.OnLongPressNextButton));
@@ -252,7 +251,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		longPressButtonItem2.ShouldPlayLongPressSound = true;
 	}
 
-	// Token: 0x06011769 RID: 71529 RVA: 0x00447F9C File Offset: 0x0044619C
+	// Token: 0x0600EC01 RID: 60417 RVA: 0x00454BF0 File Offset: 0x00452DF0
 	protected override void OnBeforeShow()
 	{
 		FIntPoint viewportSize = this.RootItem.GetRootCanvas().GetViewportSize();
@@ -263,13 +262,13 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		UiLayer.Instance.UiRootItem.GetRootCanvas().ProjectCenterOffset = this.ProjectOffset.ToUeVector2D(false);
 	}
 
-	// Token: 0x0601176A RID: 71530 RVA: 0x0044805C File Offset: 0x0044625C
+	// Token: 0x0600EC02 RID: 60418 RVA: 0x00454CB0 File Offset: 0x00452EB0
 	protected override void OnAfterHide()
 	{
 		UiLayer.Instance.UiRootItem.GetRootCanvas().ProjectCenterOffset = Vector2D.ZeroVector;
 	}
 
-	// Token: 0x0601176B RID: 71531 RVA: 0x00448078 File Offset: 0x00446278
+	// Token: 0x0600EC03 RID: 60419 RVA: 0x00454CCC File Offset: 0x00452ECC
 	private void OnMoveItemsCallback()
 	{
 		List<MotorcycleAlbumItemGrid> items = this.AlbumListView.GetItems();
@@ -290,9 +289,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 				this.TempAlbumSortDataList[i].Distance = Math.Abs(items[i].GetCurrentMovePercentage() - 0.5f);
 			}
 		}
-		this.TempAlbumSortDataList = (from x in this.TempAlbumSortDataList
-		orderby x.Distance
-		select x).ToList<MotorcycleMusicPlayerView.TempAlbumSortData>();
+		NoLinq.SortStable<MotorcycleMusicPlayerView.TempAlbumSortData>(this.TempAlbumSortDataList, (MotorcycleMusicPlayerView.TempAlbumSortData left, MotorcycleMusicPlayerView.TempAlbumSortData right) => left.Distance.CompareTo(right.Distance));
 		bool flag = false;
 		for (int j = 1; j < this.TempAlbumSortDataList.Count; j += 2)
 		{
@@ -312,7 +309,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601176C RID: 71532 RVA: 0x00448248 File Offset: 0x00446448
+	// Token: 0x0600EC04 RID: 60420 RVA: 0x00454E90 File Offset: 0x00453090
 	private void TimerUpdate(float delta)
 	{
 		if (MotorcycleMusicPlayerModel.Instance.GetIsPause())
@@ -330,32 +327,38 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		sprite.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x0601176D RID: 71533 RVA: 0x004482BF File Offset: 0x004464BF
+	// Token: 0x0600EC05 RID: 60421 RVA: 0x00454F07 File Offset: 0x00453107
 	private void OnRefreshProgressTimer(float delta)
 	{
 		this.RefreshCurMusicProgress();
 	}
 
-	// Token: 0x0601176E RID: 71534 RVA: 0x004482C8 File Offset: 0x004464C8
+	// Token: 0x0600EC06 RID: 60422 RVA: 0x00454F10 File Offset: 0x00453110
 	private void InitAlbumUiDataList(int curPlayAlbum)
 	{
 		PhonographConfig instance = PhonographConfig.Instance;
-		List<IAlbumUiData> list = (from x in (from x in ((instance != null) ? instance.GetMusicAlbumList() : null) ?? new List<PhonographAlbum>()
-		where MotorcycleMusicPlayerModel.Instance.IsAlbumInTimeRange(x.Id)
-		select x).ToList<PhonographAlbum>()
-		select new AlbumUiData
+		IReadOnlyList<PhonographAlbum> readOnlyList = ((instance != null) ? instance.GetMusicAlbumList() : null) ?? new List<PhonographAlbum>();
+		List<IAlbumUiData> list = new List<IAlbumUiData>(readOnlyList.Count);
+		for (int i = 0; i < readOnlyList.Count; i++)
 		{
-			Id = x.Id,
-			Config = x,
-			UnlockMusicNum = MotorcycleMusicPlayerModel.Instance.GetUnlockMusicByAlbum(x.Id).Count,
-			AllMusicNum = (this.Album2MusicMap.ContainsKey(x.Id) ? this.Album2MusicMap[x.Id].Count : 0),
-			IsSelected = new bool?(x.Id == curPlayAlbum)
-		}).ToList<IAlbumUiData>();
+			PhonographAlbum config = readOnlyList[i];
+			if (MotorcycleMusicPlayerModel.Instance.IsAlbumInTimeRange(config.Id))
+			{
+				list.Add(new AlbumUiData
+				{
+					Id = config.Id,
+					Config = config,
+					UnlockMusicNum = MotorcycleMusicPlayerModel.Instance.GetUnlockMusicByAlbum(config.Id).Count,
+					AllMusicNum = (this.Album2MusicMap.ContainsKey(config.Id) ? this.Album2MusicMap[config.Id].Count : 0),
+					IsSelected = new bool?(config.Id == curPlayAlbum)
+				});
+			}
+		}
 		list.Sort((IAlbumUiData a, IAlbumUiData b) => a.Config.SortIndex - b.Config.SortIndex);
 		this.AlbumUiDataList = list.ToArray();
 	}
 
-	// Token: 0x0601176F RID: 71535 RVA: 0x00448374 File Offset: 0x00446574
+	// Token: 0x0600EC07 RID: 60423 RVA: 0x00455030 File Offset: 0x00453230
 	protected override void OnBeforeDestroy()
 	{
 		if (this.DescTweenDelegate != null)
@@ -384,7 +387,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 			this.SaveTempFavoriteMusicList(true);
 			if (MotorcycleMusicPlayerModel.Instance.GetCurPlayAlbum() == MotorcycleMusicPlayerConfig.Instance.GetFavoriteAlbumId())
 			{
-				MotorcycleMusicPlayerModel.Instance.SetPlayList(MotorcycleMusicPlayerModel.Instance.GetFavoriteMusicList().ToList<int>());
+				MotorcycleMusicPlayerModel.Instance.SetPlayList(new List<int>(MotorcycleMusicPlayerModel.Instance.GetFavoriteMusicList()));
 			}
 		}
 		MotorcycleMusicPlayerController.Instance.SendFavoriteUpdateRequest();
@@ -395,20 +398,25 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		MotorcycleAlbumItemGrid.AlphaCurve = null;
 	}
 
-	// Token: 0x06011770 RID: 71536 RVA: 0x00448498 File Offset: 0x00446698
+	// Token: 0x0600EC08 RID: 60424 RVA: 0x00455154 File Offset: 0x00453354
 	private void SaveTempFavoriteMusicList(bool isSendRequest = false)
 	{
 		if (this.FavoriteMusicList == null)
 		{
 			return;
 		}
-		List<int> favoriteMusicList = (from x in this.FavoriteMusicList
-		where MotorcycleMusicPlayerModel.Instance.IsMusicFavorite(x)
-		select x).ToList<int>();
-		MotorcycleMusicPlayerModel.Instance.SetFavoriteMusicList(favoriteMusicList);
+		List<int> list = new List<int>();
+		foreach (int num in this.FavoriteMusicList)
+		{
+			if (MotorcycleMusicPlayerModel.Instance.IsMusicFavorite(num))
+			{
+				list.Add(num);
+			}
+		}
+		MotorcycleMusicPlayerModel.Instance.SetFavoriteMusicList(list);
 	}
 
-	// Token: 0x06011771 RID: 71537 RVA: 0x004484EC File Offset: 0x004466EC
+	// Token: 0x0600EC09 RID: 60425 RVA: 0x004551D0 File Offset: 0x004533D0
 	private void OnMotorSwitchMusic()
 	{
 		int curPlayAlbum = MotorcycleMusicPlayerModel.Instance.GetCurPlayAlbum();
@@ -443,7 +451,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		this.PlayDescTween();
 	}
 
-	// Token: 0x06011772 RID: 71538 RVA: 0x00448570 File Offset: 0x00446770
+	// Token: 0x0600EC0A RID: 60426 RVA: 0x00455254 File Offset: 0x00453454
 	private MotorcycleAlbumItemGrid CreateAlbumItem(AActor actor, int index, int showNum)
 	{
 		return new MotorcycleAlbumItemGrid(actor)
@@ -454,7 +462,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		};
 	}
 
-	// Token: 0x06011773 RID: 71539 RVA: 0x004485AE File Offset: 0x004467AE
+	// Token: 0x0600EC0B RID: 60427 RVA: 0x00455292 File Offset: 0x00453492
 	private MotorcycleMusicItemGrid CreateMusicItem()
 	{
 		return new MotorcycleMusicItemGrid
@@ -464,13 +472,13 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		};
 	}
 
-	// Token: 0x06011774 RID: 71540 RVA: 0x004485D9 File Offset: 0x004467D9
+	// Token: 0x0600EC0C RID: 60428 RVA: 0x004552BD File Offset: 0x004534BD
 	private void OnClickMusicItem(int musicId)
 	{
 		this.PlayMusic(musicId);
 	}
 
-	// Token: 0x06011775 RID: 71541 RVA: 0x004485E4 File Offset: 0x004467E4
+	// Token: 0x0600EC0D RID: 60429 RVA: 0x004552C8 File Offset: 0x004534C8
 	private void OnDescTweenComplete()
 	{
 		if (TimerSystem.Instance.Has(this.MusicDescTimer))
@@ -484,13 +492,13 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		}, 3000f, null, null, true, 1f);
 	}
 
-	// Token: 0x06011776 RID: 71542 RVA: 0x00448644 File Offset: 0x00446844
+	// Token: 0x0600EC0E RID: 60430 RVA: 0x00455328 File Offset: 0x00453528
 	private void OnSetDescOffsetX(float value)
 	{
 		base.GetText(10).SetAnchorOffsetX(value);
 	}
 
-	// Token: 0x06011777 RID: 71543 RVA: 0x00448654 File Offset: 0x00446854
+	// Token: 0x0600EC0F RID: 60431 RVA: 0x00455338 File Offset: 0x00453538
 	private void PlayDescTween()
 	{
 		this.OnSetDescOffsetX(0f);
@@ -512,7 +520,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		}, 1500f, null, null, true, 1f);
 	}
 
-	// Token: 0x06011778 RID: 71544 RVA: 0x004486BE File Offset: 0x004468BE
+	// Token: 0x0600EC10 RID: 60432 RVA: 0x004553A2 File Offset: 0x004535A2
 	private void ClearDescTween()
 	{
 		if (this.DescTween != null)
@@ -522,7 +530,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011779 RID: 71545 RVA: 0x004486DC File Offset: 0x004468DC
+	// Token: 0x0600EC11 RID: 60433 RVA: 0x004553C0 File Offset: 0x004535C0
 	private void PlayMusic(int musicId)
 	{
 		int albumId = this.SelectAlbumId;
@@ -550,14 +558,13 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		}
 		else if (MotorcycleMusicPlayerModel.Instance.GetCurPlayAlbum() != this.SelectAlbumId && this.SelectAlbumId != MotorcycleMusicPlayerConfig.Instance.GetFavoriteAlbumId())
 		{
-			MotorcycleMusicPlayerModel.Instance.SetPlayList((from x in MotorcycleMusicPlayerModel.Instance.GetUnlockMusicByAlbum(this.SelectAlbumId)
-			select x.Id).ToList<int>());
+			MotorcycleMusicPlayerModel.Instance.SetPlayList(MotorcycleMusicPlayerModel.Instance.GetUnlockMusicByAlbum(this.SelectAlbumId).ConvertAll<int>((PhonographMusic x) => x.Id));
 		}
-		MotorcycleMusicPlayerController.Instance.PlayAlbumMusic(albumId, musicId);
+		MotorcycleMusicPlayerController.Instance.PlayAlbumMusic(albumId, musicId, false);
 		this.RefreshPointerTween();
 	}
 
-	// Token: 0x0601177A RID: 71546 RVA: 0x00448818 File Offset: 0x00446A18
+	// Token: 0x0600EC12 RID: 60434 RVA: 0x004554F8 File Offset: 0x004536F8
 	private void OnClickLikeMusic(int musicId)
 	{
 		if (musicId == -1)
@@ -577,7 +584,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		{
 			if (MotorcycleMusicPlayerModel.Instance.GetCurPlayAlbum() == MotorcycleMusicPlayerConfig.Instance.GetFavoriteAlbumId())
 			{
-				MotorcycleMusicPlayerModel.Instance.SetPlayList(MotorcycleMusicPlayerModel.Instance.GetFavoriteMusicList().ToList<int>());
+				MotorcycleMusicPlayerModel.Instance.SetPlayList(new List<int>(MotorcycleMusicPlayerModel.Instance.GetFavoriteMusicList()));
 			}
 			this.RefreshMusicInfoAndList();
 			return;
@@ -604,7 +611,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		this.AlbumListView.RefreshItems();
 	}
 
-	// Token: 0x0601177B RID: 71547 RVA: 0x00448940 File Offset: 0x00446B40
+	// Token: 0x0600EC13 RID: 60435 RVA: 0x00455620 File Offset: 0x00453820
 	private void OnClickAlbumPlay(MotorcycleAlbumItemGrid itemGrid, int albumId)
 	{
 		if (this.SelectAlbumId != albumId)
@@ -612,7 +619,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 			NoCircleAttachView<IAlbumUiData, MotorcycleAlbumItemGrid> albumListView = this.AlbumListView;
 			if (albumListView != null)
 			{
-				albumListView.AttachToIndex(this.AlbumUiDataList.ToList<IAlbumUiData>().FindIndex((IAlbumUiData x) => x.Id == albumId), false);
+				albumListView.AttachToIndex(Array.FindIndex<IAlbumUiData>(this.AlbumUiDataList, (IAlbumUiData x) => x.Id == albumId), false);
 			}
 			this.SelectAlbumId = albumId;
 		}
@@ -625,7 +632,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		this.AlbumListView.RefreshItems();
 	}
 
-	// Token: 0x0601177C RID: 71548 RVA: 0x004489FD File Offset: 0x00446BFD
+	// Token: 0x0600EC14 RID: 60436 RVA: 0x004556D8 File Offset: 0x004538D8
 	private void OnClickAlbumItem(MotorcycleAlbumItemGrid itemGrid, int _)
 	{
 		NoCircleAttachView<IAlbumUiData, MotorcycleAlbumItemGrid> albumListView = this.AlbumListView;
@@ -636,7 +643,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		albumListView.AttachToIndex(itemGrid.GetCurrentShowItemIndex(), false);
 	}
 
-	// Token: 0x0601177D RID: 71549 RVA: 0x00448A18 File Offset: 0x00446C18
+	// Token: 0x0600EC15 RID: 60437 RVA: 0x004556F4 File Offset: 0x004538F4
 	private void OnSelectAlbumItem(int albumId)
 	{
 		if (this.StartAlbumIndex != null)
@@ -656,14 +663,14 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		{
 			if (MotorcycleMusicPlayerModel.Instance.GetCurPlayAlbum() == MotorcycleMusicPlayerConfig.Instance.GetFavoriteAlbumId())
 			{
-				MotorcycleMusicPlayerModel.Instance.SetPlayList(favoriteMusicList.ToList<int>());
+				MotorcycleMusicPlayerModel.Instance.SetPlayList(new List<int>(favoriteMusicList));
 			}
 			this.SaveTempFavoriteMusicList(false);
 		}
 		this.SelectAlbumId = albumId;
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "MotorMusicAlbum", new <>z__ReadOnlyArray<object>(new object[]
 		{
-			this.AlbumUiDataList.ToList<IAlbumUiData>().FindIndex((IAlbumUiData x) => x.Id == albumId) + 1,
+			Array.FindIndex<IAlbumUiData>(this.AlbumUiDataList, (IAlbumUiData x) => x.Id == albumId) + 1,
 			this.AlbumUiDataList.Length
 		}));
 		this.RefreshMusicList(albumId, true, false, delegate
@@ -731,7 +738,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		this.RefreshTimeLimitSprite(this.SelectAlbumId);
 	}
 
-	// Token: 0x0601177E RID: 71550 RVA: 0x00448C78 File Offset: 0x00446E78
+	// Token: 0x0600EC16 RID: 60438 RVA: 0x00455950 File Offset: 0x00453B50
 	private void RefreshCurMusicInfo()
 	{
 		int curPlayMusicId = MotorcycleMusicPlayerModel.Instance.GetCurPlayMusicId();
@@ -757,7 +764,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		this.RefreshCurMusicProgress();
 	}
 
-	// Token: 0x0601177F RID: 71551 RVA: 0x00448D7C File Offset: 0x00446F7C
+	// Token: 0x0600EC17 RID: 60439 RVA: 0x00455A54 File Offset: 0x00453C54
 	private void RefreshCurMusicProgress()
 	{
 		MotorcycleMusicPlayerModel instance = MotorcycleMusicPlayerModel.Instance;
@@ -772,7 +779,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		base.GetText(13).SetText("/" + TimeUtil.Instance.GetTimeDataFormat((double)instance.CurrentPlayMusicTotalTime), true);
 	}
 
-	// Token: 0x06011780 RID: 71552 RVA: 0x00448E04 File Offset: 0x00447004
+	// Token: 0x0600EC18 RID: 60440 RVA: 0x00455ADC File Offset: 0x00453CDC
 	[NullableContext(2)]
 	private List<int> GetMusicList(int albumId)
 	{
@@ -787,7 +794,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		return this.Album2MusicMap[albumId];
 	}
 
-	// Token: 0x06011781 RID: 71553 RVA: 0x00448E38 File Offset: 0x00447038
+	// Token: 0x0600EC19 RID: 60441 RVA: 0x00455B10 File Offset: 0x00453D10
 	private bool IsFavoriteMusicExpired(int musicId)
 	{
 		MotorcycleMusicPlayerModel model = MotorcycleMusicPlayerModel.Instance;
@@ -802,10 +809,10 @@ public class MotorcycleMusicPlayerView : UiViewBase
 			return false;
 		}
 		int[] albumArray = phonographMusic.Value.GetAlbumArray();
-		return albumArray != null && !albumArray.Any((int id) => model.IsAlbumInTimeRange(id));
+		return albumArray != null && !Array.Exists<int>(albumArray, (int id) => model.IsAlbumInTimeRange(id));
 	}
 
-	// Token: 0x06011782 RID: 71554 RVA: 0x00448EB8 File Offset: 0x004470B8
+	// Token: 0x0600EC1A RID: 60442 RVA: 0x00455B90 File Offset: 0x00453D90
 	[NullableContext(2)]
 	private void RefreshMusicList(int albumId, bool isClick = false, bool isPlayAnim = false, Action onComplete = null)
 	{
@@ -814,16 +821,25 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		{
 			if (isClick)
 			{
-				list = MotorcycleMusicPlayerModel.Instance.GetFavoriteMusicList().ToList<int>();
+				list = new List<int>(MotorcycleMusicPlayerModel.Instance.GetFavoriteMusicList());
 				this.FavoriteMusicList = list;
 			}
 			else
 			{
 				list = this.FavoriteMusicList;
 			}
-			list = ((list != null) ? (from id in list
-			where !this.IsFavoriteMusicExpired(id)
-			select id).ToList<int>() : null);
+			if (list != null)
+			{
+				List<int> list2 = new List<int>(list.Count);
+				foreach (int num in list)
+				{
+					if (!this.IsFavoriteMusicExpired(num))
+					{
+						list2.Add(num);
+					}
+				}
+				list = list2;
+			}
 			this.FavoriteMusicList = list;
 			MotorcycleMusicPlayerModel.Instance.SetFavoriteMusicList(list ?? new List<int>());
 		}
@@ -831,23 +847,27 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		{
 			list = new List<int>();
 		}
-		List<IMusicUiData> list2 = (from id in list
-		select new MusicUiData
+		List<IMusicUiData> list3 = new List<IMusicUiData>(list.Count);
+		for (int i = 0; i < list.Count; i++)
 		{
-			Id = id,
-			IsFavorite = new bool?(MotorcycleMusicPlayerModel.Instance.IsMusicFavorite(id))
-		}).ToList<IMusicUiData>();
-		this.MusicUiDataList = list2;
-		this.ScrollView.RefreshByData(list2, false, onComplete, isPlayAnim);
+			int id = list[i];
+			list3.Add(new MusicUiData
+			{
+				Id = id,
+				IsFavorite = new bool?(MotorcycleMusicPlayerModel.Instance.IsMusicFavorite(id))
+			});
+		}
+		this.MusicUiDataList = list3;
+		this.ScrollView.RefreshByData(list3, false, onComplete, isPlayAnim);
 		UUIItem item = base.GetItem(23);
 		if (item == null)
 		{
 			return;
 		}
-		item.SetUIActive(list2.Count == 0);
+		item.SetUIActive(list3.Count == 0);
 	}
 
-	// Token: 0x06011783 RID: 71555 RVA: 0x00448FB2 File Offset: 0x004471B2
+	// Token: 0x0600EC1B RID: 60443 RVA: 0x00455CF8 File Offset: 0x00453EF8
 	private void RefreshMusicInfoAndList()
 	{
 		this.RefreshCurMusicInfo();
@@ -855,13 +875,13 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		this.AlbumListView.RefreshItems();
 	}
 
-	// Token: 0x06011784 RID: 71556 RVA: 0x00448FD4 File Offset: 0x004471D4
+	// Token: 0x0600EC1C RID: 60444 RVA: 0x00455D1C File Offset: 0x00453F1C
 	private void OnPlayModeChanged()
 	{
 		this.SetSpriteByPath(UiResourceConfig.Instance.GetResourcePath(MotorcycleMusicPlayerDefine.motorMusicPlayModeIcon[MotorcycleMusicPlayerModel.Instance.GetPlayMode()]), base.GetSprite(21), false, null, null);
 	}
 
-	// Token: 0x06011785 RID: 71557 RVA: 0x00449018 File Offset: 0x00447218
+	// Token: 0x0600EC1D RID: 60445 RVA: 0x00455D60 File Offset: 0x00453F60
 	private void OnClickBtnSort()
 	{
 		if (MotorcycleMusicPlayerModel.Instance.GetFavoriteMusicList().Count >= 2)
@@ -875,31 +895,31 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011786 RID: 71558 RVA: 0x0044906C File Offset: 0x0044726C
+	// Token: 0x0600EC1E RID: 60446 RVA: 0x00455DB4 File Offset: 0x00453FB4
 	private void OnSortFinishCallback(List<int> musicList)
 	{
 		this.FavoriteMusicList = musicList;
 		this.RefreshMusicList(this.SelectAlbumId, false, true, null);
 		if (MotorcycleMusicPlayerModel.Instance.GetCurPlayAlbum() == MotorcycleMusicPlayerConfig.Instance.GetFavoriteAlbumId())
 		{
-			MotorcycleMusicPlayerModel.Instance.SetPlayList(this.FavoriteMusicList.ToList<int>());
+			MotorcycleMusicPlayerModel.Instance.SetPlayList(new List<int>(this.FavoriteMusicList));
 		}
 	}
 
-	// Token: 0x06011787 RID: 71559 RVA: 0x004490BA File Offset: 0x004472BA
+	// Token: 0x0600EC1F RID: 60447 RVA: 0x00455E02 File Offset: 0x00454002
 	private void OnExtendToggleLike(EToggleState toggleState)
 	{
 		this.OnClickLikeMusic(MotorcycleMusicPlayerModel.Instance.GetCurPlayMusicId());
 	}
 
-	// Token: 0x06011788 RID: 71560 RVA: 0x004490CC File Offset: 0x004472CC
+	// Token: 0x0600EC20 RID: 60448 RVA: 0x00455E14 File Offset: 0x00454014
 	private void OnClickBtnBack()
 	{
 		MotorcycleMusicPlayerController.Instance.QuickPlayMusic(false);
 		this.RefreshPointerTween();
 	}
 
-	// Token: 0x06011789 RID: 71561 RVA: 0x004490DF File Offset: 0x004472DF
+	// Token: 0x0600EC21 RID: 60449 RVA: 0x00455E27 File Offset: 0x00454027
 	private void OnExtendToggleTogPlay(EToggleState toggleState)
 	{
 		if (MotorcycleMusicPlayerModel.Instance.GetIsPause())
@@ -914,7 +934,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		this.RefreshMusicInfoAndList();
 	}
 
-	// Token: 0x0601178A RID: 71562 RVA: 0x00449110 File Offset: 0x00447310
+	// Token: 0x0600EC22 RID: 60450 RVA: 0x00455E58 File Offset: 0x00454058
 	private void RefreshPointerTween()
 	{
 		bool isPause = MotorcycleMusicPlayerModel.Instance.GetIsPause();
@@ -955,14 +975,14 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601178B RID: 71563 RVA: 0x0044917F File Offset: 0x0044737F
+	// Token: 0x0600EC23 RID: 60451 RVA: 0x00455EC7 File Offset: 0x004540C7
 	private void OnClickBtnNext()
 	{
 		MotorcycleMusicPlayerController.Instance.QuickPlayMusic(true);
 		this.RefreshPointerTween();
 	}
 
-	// Token: 0x0601178C RID: 71564 RVA: 0x00449192 File Offset: 0x00447392
+	// Token: 0x0600EC24 RID: 60452 RVA: 0x00455EDA File Offset: 0x004540DA
 	private void OnLongPressNextButton(bool isShortPress)
 	{
 		UiNavigationNewController.Instance.ResetNavigationFocusForViewWithDirtyCheck();
@@ -974,7 +994,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		albumListView.AttachToNextItem(1);
 	}
 
-	// Token: 0x0601178D RID: 71565 RVA: 0x004491AF File Offset: 0x004473AF
+	// Token: 0x0600EC25 RID: 60453 RVA: 0x00455EF7 File Offset: 0x004540F7
 	private void OnClickBtnNextAlbum()
 	{
 		UiNavigationNewController.Instance.ResetNavigationFocusForViewWithDirtyCheck();
@@ -986,7 +1006,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		albumListView.AttachToNextItem(1);
 	}
 
-	// Token: 0x0601178E RID: 71566 RVA: 0x004491CC File Offset: 0x004473CC
+	// Token: 0x0600EC26 RID: 60454 RVA: 0x00455F14 File Offset: 0x00454114
 	private void OnLongPressPreButton(bool isShortPress)
 	{
 		UiNavigationNewController.Instance.ResetNavigationFocusForViewWithDirtyCheck();
@@ -998,7 +1018,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		albumListView.AttachToNextItem(-1);
 	}
 
-	// Token: 0x0601178F RID: 71567 RVA: 0x004491E9 File Offset: 0x004473E9
+	// Token: 0x0600EC27 RID: 60455 RVA: 0x00455F31 File Offset: 0x00454131
 	private void OnClickBtnPrevAlbum()
 	{
 		UiNavigationNewController.Instance.ResetNavigationFocusForViewWithDirtyCheck();
@@ -1010,7 +1030,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		albumListView.AttachToNextItem(-1);
 	}
 
-	// Token: 0x06011790 RID: 71568 RVA: 0x00449208 File Offset: 0x00447408
+	// Token: 0x0600EC28 RID: 60456 RVA: 0x00455F50 File Offset: 0x00454150
 	private void OnClickBtnType()
 	{
 		EMotorMusicPlayMode emotorMusicPlayMode = MotorcycleMusicPlayerModel.Instance.GetPlayMode();
@@ -1031,7 +1051,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		this.OnPlayModeChanged();
 	}
 
-	// Token: 0x06011791 RID: 71569 RVA: 0x0044926C File Offset: 0x0044746C
+	// Token: 0x0600EC29 RID: 60457 RVA: 0x00455FB1 File Offset: 0x004541B1
 	private void OnClickBtnLikeMarkPos()
 	{
 		NoCircleAttachView<IAlbumUiData, MotorcycleAlbumItemGrid> albumListView = this.AlbumListView;
@@ -1039,10 +1059,10 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		{
 			return;
 		}
-		albumListView.AttachToIndex(this.AlbumUiDataList.ToList<IAlbumUiData>().FindIndex((IAlbumUiData x) => x.Id == MotorcycleMusicPlayerConfig.Instance.GetFavoriteAlbumId()), false);
+		albumListView.AttachToIndex(Array.FindIndex<IAlbumUiData>(this.AlbumUiDataList, (IAlbumUiData x) => x.Id == MotorcycleMusicPlayerConfig.Instance.GetFavoriteAlbumId()), false);
 	}
 
-	// Token: 0x06011792 RID: 71570 RVA: 0x004492BC File Offset: 0x004474BC
+	// Token: 0x0600EC2A RID: 60458 RVA: 0x00455FF0 File Offset: 0x004541F0
 	public bool IsItemInViewport(int gridIndex, int tolerance = 0)
 	{
 		if (this.ScrollView == null)
@@ -1072,7 +1092,7 @@ public class MotorcycleMusicPlayerView : UiViewBase
 		return -anchorOffsetY >= uuiitem.GetAnchorOffsetY() && -anchorOffsetY + height <= uuiitem.GetAnchorOffsetY() + height2;
 	}
 
-	// Token: 0x040084A5 RID: 33957
+	// Token: 0x040085E3 RID: 34275
 	[Nullable(new byte[]
 	{
 		2,
@@ -1081,10 +1101,10 @@ public class MotorcycleMusicPlayerView : UiViewBase
 	})]
 	private LoopScrollView<MotorcycleMusicItemGrid, IMusicUiData> ScrollView;
 
-	// Token: 0x040084A6 RID: 33958
+	// Token: 0x040085E4 RID: 34276
 	private readonly Dictionary<int, List<int>> Album2MusicMap = new Dictionary<int, List<int>>();
 
-	// Token: 0x040084A7 RID: 33959
+	// Token: 0x040085E5 RID: 34277
 	[Nullable(new byte[]
 	{
 		2,
@@ -1093,169 +1113,169 @@ public class MotorcycleMusicPlayerView : UiViewBase
 	})]
 	private NoCircleAttachView<IAlbumUiData, MotorcycleAlbumItemGrid> AlbumListView;
 
-	// Token: 0x040084A8 RID: 33960
+	// Token: 0x040085E6 RID: 34278
 	private int SelectAlbumId = -1;
 
-	// Token: 0x040084A9 RID: 33961
+	// Token: 0x040085E7 RID: 34279
 	private IAlbumUiData[] AlbumUiDataList;
 
-	// Token: 0x040084AA RID: 33962
+	// Token: 0x040085E8 RID: 34280
 	[Nullable(2)]
 	private List<int> FavoriteMusicList;
 
-	// Token: 0x040084AB RID: 33963
+	// Token: 0x040085E9 RID: 34281
 	[Nullable(2)]
 	private FLTweenFloatSetterDynamic DescTweenDelegate;
 
-	// Token: 0x040084AC RID: 33964
+	// Token: 0x040085EA RID: 34282
 	[Nullable(2)]
 	private ULTweener DescTween;
 
-	// Token: 0x040084AD RID: 33965
+	// Token: 0x040085EB RID: 34283
 	[Nullable(2)]
 	private TimerHandle MusicDescTimer;
 
-	// Token: 0x040084AE RID: 33966
+	// Token: 0x040085EC RID: 34284
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x040084AF RID: 33967
+	// Token: 0x040085ED RID: 34285
 	[Nullable(2)]
 	private TimerHandle PlayTimeTimer;
 
-	// Token: 0x040084B0 RID: 33968
+	// Token: 0x040085EE RID: 34286
 	private float RotateAngle;
 
-	// Token: 0x040084B1 RID: 33969
+	// Token: 0x040085EF RID: 34287
 	[Nullable(2)]
 	private ULGUIPlayTweenComponent StartTweenComp;
 
-	// Token: 0x040084B2 RID: 33970
+	// Token: 0x040085F0 RID: 34288
 	[Nullable(2)]
 	private ULGUIPlayTweenComponent StopTweenComp;
 
-	// Token: 0x040084B3 RID: 33971
+	// Token: 0x040085F1 RID: 34289
 	private readonly Rotator CdRotator = Rotator.Create(0f, 0f, 0f);
 
-	// Token: 0x040084B4 RID: 33972
+	// Token: 0x040085F2 RID: 34290
 	private bool IsPointerPause;
 
-	// Token: 0x040084B5 RID: 33973
+	// Token: 0x040085F3 RID: 34291
 	private readonly Vector2D ProjectOffset = Vector2D.Create(0.0, 0.0);
 
-	// Token: 0x040084B6 RID: 33974
+	// Token: 0x040085F4 RID: 34292
 	private List<MotorcycleMusicPlayerView.TempAlbumSortData> TempAlbumSortDataList = new List<MotorcycleMusicPlayerView.TempAlbumSortData>();
 
-	// Token: 0x040084B7 RID: 33975
+	// Token: 0x040085F5 RID: 34293
 	private List<IMusicUiData> MusicUiDataList = new List<IMusicUiData>();
 
-	// Token: 0x040084B8 RID: 33976
+	// Token: 0x040085F6 RID: 34294
 	private int? StartAlbumIndex;
 
-	// Token: 0x02008833 RID: 34867
+	// Token: 0x020079B8 RID: 31160
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402C413 RID: 181267
+		// Token: 0x0402771A RID: 161562
 		public const int UiItemCaption = 0;
 
-		// Token: 0x0402C414 RID: 181268
+		// Token: 0x0402771B RID: 161563
 		public const int TxtAlbumNum = 1;
 
-		// Token: 0x0402C415 RID: 181269
+		// Token: 0x0402771C RID: 161564
 		public const int PanelDrag = 2;
 
-		// Token: 0x0402C416 RID: 181270
+		// Token: 0x0402771D RID: 161565
 		public const int TogAlbum = 3;
 
-		// Token: 0x0402C417 RID: 181271
+		// Token: 0x0402771E RID: 161566
 		public const int TxtDescName = 4;
 
-		// Token: 0x0402C418 RID: 181272
+		// Token: 0x0402771F RID: 161567
 		public const int BtnSort = 5;
 
-		// Token: 0x0402C419 RID: 181273
+		// Token: 0x04027720 RID: 161568
 		public const int Content = 6;
 
-		// Token: 0x0402C41A RID: 181274
+		// Token: 0x04027721 RID: 161569
 		public const int TogCommon2 = 7;
 
-		// Token: 0x0402C41B RID: 181275
+		// Token: 0x04027722 RID: 161570
 		public const int TxtMusicName = 8;
 
-		// Token: 0x0402C41C RID: 181276
+		// Token: 0x04027723 RID: 161571
 		public const int PanelClip = 9;
 
-		// Token: 0x0402C41D RID: 181277
+		// Token: 0x04027724 RID: 161572
 		public const int TxtDesc = 10;
 
-		// Token: 0x0402C41E RID: 181278
+		// Token: 0x04027725 RID: 161573
 		public const int TxtDescTimeL = 11;
 
-		// Token: 0x0402C41F RID: 181279
+		// Token: 0x04027726 RID: 161574
 		public const int SpriteProgressBar = 12;
 
-		// Token: 0x0402C420 RID: 181280
+		// Token: 0x04027727 RID: 161575
 		public const int TxtDescTimeR = 13;
 
-		// Token: 0x0402C421 RID: 181281
+		// Token: 0x04027728 RID: 161576
 		public const int TogLike = 14;
 
-		// Token: 0x0402C422 RID: 181282
+		// Token: 0x04027729 RID: 161577
 		public const int BtnBack = 15;
 
-		// Token: 0x0402C423 RID: 181283
+		// Token: 0x0402772A RID: 161578
 		public const int TogPlay = 16;
 
-		// Token: 0x0402C424 RID: 181284
+		// Token: 0x0402772B RID: 161579
 		public const int BtnNext = 17;
 
-		// Token: 0x0402C425 RID: 181285
+		// Token: 0x0402772C RID: 161580
 		public const int BtnType = 18;
 
-		// Token: 0x0402C426 RID: 181286
+		// Token: 0x0402772D RID: 161581
 		public const int BtnLikeMarkPos = 19;
 
-		// Token: 0x0402C427 RID: 181287
+		// Token: 0x0402772E RID: 161582
 		public const int SvDefault = 20;
 
-		// Token: 0x0402C428 RID: 181288
+		// Token: 0x0402772F RID: 161583
 		public const int SpritePlayMode = 21;
 
-		// Token: 0x0402C429 RID: 181289
+		// Token: 0x04027730 RID: 161584
 		public const int SpriteCDIcon = 22;
 
-		// Token: 0x0402C42A RID: 181290
+		// Token: 0x04027731 RID: 161585
 		public const int PanelEmpty = 23;
 
-		// Token: 0x0402C42B RID: 181291
+		// Token: 0x04027732 RID: 161586
 		public const int StartTween = 24;
 
-		// Token: 0x0402C42C RID: 181292
+		// Token: 0x04027733 RID: 161587
 		public const int StopTween = 25;
 
-		// Token: 0x0402C42D RID: 181293
+		// Token: 0x04027734 RID: 161588
 		public const int BtnNextAlbum = 26;
 
-		// Token: 0x0402C42E RID: 181294
+		// Token: 0x04027735 RID: 161589
 		public const int BtnPrevAlbum = 27;
 
-		// Token: 0x0402C42F RID: 181295
+		// Token: 0x04027736 RID: 161590
 		public const int SprTimeLimit = 28;
 
-		// Token: 0x0402C430 RID: 181296
+		// Token: 0x04027737 RID: 161591
 		public const int BtnHelpB = 29;
 	}
 
-	// Token: 0x02008834 RID: 34868
+	// Token: 0x020079B9 RID: 31161
 	[NullableContext(0)]
 	private class TempAlbumSortData
 	{
-		// Token: 0x0402C431 RID: 181297
+		// Token: 0x04027738 RID: 161592
 		[Nullable(1)]
 		public UUIItem UiItem;
 
-		// Token: 0x0402C432 RID: 181298
+		// Token: 0x04027739 RID: 161593
 		public float Distance;
 	}
 }

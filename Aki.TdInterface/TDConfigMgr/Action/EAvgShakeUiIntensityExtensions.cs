@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022AF RID: 8879
+	// Token: 0x0200251E RID: 9502
 	public static class EAvgShakeUiIntensityExtensions
 	{
-		// Token: 0x0600C292 RID: 49810 RVA: 0x001C6E78 File Offset: 0x001C5078
+		// Token: 0x0600CE61 RID: 52833 RVA: 0x001DEC80 File Offset: 0x001DCE80
 		public static string ToEnumString(this EAvgShakeUiIntensity value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C293 RID: 49811 RVA: 0x001C6EB0 File Offset: 0x001C50B0
+		// Token: 0x0600CE62 RID: 52834 RVA: 0x001DECB8 File Offset: 0x001DCEB8
 		public static EAvgShakeUiIntensity FromString(string name)
 		{
 			EAvgShakeUiIntensity result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C294 RID: 49812 RVA: 0x001C6ED9 File Offset: 0x001C50D9
+		// Token: 0x0600CE63 RID: 52835 RVA: 0x001DECE1 File Offset: 0x001DCEE1
 		public static bool TryFromString(string name, out EAvgShakeUiIntensity value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C295 RID: 49813 RVA: 0x001C6F12 File Offset: 0x001C5112
+		// Token: 0x0600CE64 RID: 52836 RVA: 0x001DED1A File Offset: 0x001DCF1A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C296 RID: 49814 RVA: 0x001C6F2A File Offset: 0x001C512A
+		// Token: 0x0600CE65 RID: 52837 RVA: 0x001DED32 File Offset: 0x001DCF32
 		public static EAvgShakeUiIntensity[] GetValues()
 		{
 			return new EAvgShakeUiIntensity[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C297 RID: 49815 RVA: 0x001C6F36 File Offset: 0x001C5136
+		// Token: 0x0600CE66 RID: 52838 RVA: 0x001DED3E File Offset: 0x001DCF3E
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C15 RID: 23573
+	// Token: 0x02006234 RID: 25140
 	public enum TExhibitConfig : byte
 	{
-		// Token: 0x0400F3D2 RID: 62418
+		// Token: 0x040100ED RID: 65773
 		NONE,
-		// Token: 0x0400F3D3 RID: 62419
+		// Token: 0x040100EE RID: 65774
 		IPhantomExhibitConfig,
-		// Token: 0x0400F3D4 RID: 62420
+		// Token: 0x040100EF RID: 65775
 		IWeaponExhibitConfig
 	}
 }

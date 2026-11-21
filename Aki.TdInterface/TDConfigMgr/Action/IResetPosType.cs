@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DB2 RID: 7602
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FC9 RID: 8137
 	[JsonConverter(typeof(IResetPosTypeConverter))]
 	public class IResetPosType
 	{
-		// Token: 0x0600A2DD RID: 41693 RVA: 0x001722A0 File Offset: 0x001704A0
+		// Token: 0x0600ACE7 RID: 44263 RVA: 0x001869C8 File Offset: 0x00184BC8
 		private IResetPosType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A2DE RID: 41694 RVA: 0x001722D8 File Offset: 0x001704D8
+		// Token: 0x0600ACE8 RID: 44264 RVA: 0x00186A00 File Offset: 0x00184C00
 		public static IResetPosType Create([Nullable(2)] IResetPosType instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2DF RID: 41695 RVA: 0x001722EB File Offset: 0x001704EB
+		// Token: 0x0600ACE9 RID: 44265 RVA: 0x00186A13 File Offset: 0x00184C13
 		public static IResetPosType CreateFromSetValue([Nullable(2)] IResetPosType_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2E0 RID: 41696 RVA: 0x001722FE File Offset: 0x001704FE
+		// Token: 0x0600ACEA RID: 44266 RVA: 0x00186A26 File Offset: 0x00184C26
 		public IResetPosType_SetValue ToSetValue()
 		{
 			return new IResetPosType_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700323A RID: 12858
-		// (get) Token: 0x0600A2E1 RID: 41697 RVA: 0x00172311 File Offset: 0x00170511
-		// (set) Token: 0x0600A2E2 RID: 41698 RVA: 0x0017233C File Offset: 0x0017053C
+		// Token: 0x170034D4 RID: 13524
+		// (get) Token: 0x0600ACEB RID: 44267 RVA: 0x00186A39 File Offset: 0x00184C39
+		// (set) Token: 0x0600ACEC RID: 44268 RVA: 0x00186A64 File Offset: 0x00184C64
 		public virtual EResetPosType Type
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061C1 RID: 25025
+		// Token: 0x04006749 RID: 26441
 		[Nullable(2)]
 		protected IResetPosType FbInstance;
 
-		// Token: 0x040061C2 RID: 25026
+		// Token: 0x0400674A RID: 26442
 		[Nullable(2)]
 		protected IResetPosType_SetValue PocoInterface;
 	}

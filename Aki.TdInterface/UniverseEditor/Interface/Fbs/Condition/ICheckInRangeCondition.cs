@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A7B RID: 19067
+	// Token: 0x02004F41 RID: 20289
 	public struct ICheckInRangeCondition : IFlatbufferObject
 	{
-		// Token: 0x17008A19 RID: 35353
-		// (get) Token: 0x0601DE24 RID: 122404 RVA: 0x00432856 File Offset: 0x00430A56
+		// Token: 0x170090F5 RID: 37109
+		// (get) Token: 0x0601F8C7 RID: 129223 RVA: 0x004639E2 File Offset: 0x00461BE2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DE25 RID: 122405 RVA: 0x00432863 File Offset: 0x00430A63
+		// Token: 0x0601F8C8 RID: 129224 RVA: 0x004639EF File Offset: 0x00461BEF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DE26 RID: 122406 RVA: 0x0043286C File Offset: 0x00430A6C
+		// Token: 0x0601F8C9 RID: 129225 RVA: 0x004639F8 File Offset: 0x00461BF8
 		public static ICheckInRangeCondition GetRootAsICheckInRangeCondition(ByteBuffer _bb)
 		{
 			return ICheckInRangeCondition.GetRootAsICheckInRangeCondition(_bb, default(ICheckInRangeCondition));
 		}
 
-		// Token: 0x0601DE27 RID: 122407 RVA: 0x00432888 File Offset: 0x00430A88
+		// Token: 0x0601F8CA RID: 129226 RVA: 0x00463A14 File Offset: 0x00461C14
 		public static ICheckInRangeCondition GetRootAsICheckInRangeCondition(ByteBuffer _bb, ICheckInRangeCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DE28 RID: 122408 RVA: 0x004328A5 File Offset: 0x00430AA5
+		// Token: 0x0601F8CB RID: 129227 RVA: 0x00463A31 File Offset: 0x00461C31
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DE29 RID: 122409 RVA: 0x004328B4 File Offset: 0x00430AB4
+		// Token: 0x0601F8CC RID: 129228 RVA: 0x00463A40 File Offset: 0x00461C40
 		public ICheckInRangeCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008A1A RID: 35354
-		// (get) Token: 0x0601DE2A RID: 122410 RVA: 0x004328C4 File Offset: 0x00430AC4
+		// Token: 0x170090F6 RID: 37110
+		// (get) Token: 0x0601F8CD RID: 129229 RVA: 0x00463A50 File Offset: 0x00461C50
 		public ECondition Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DE2B RID: 122411 RVA: 0x00432900 File Offset: 0x00430B00
+		// Token: 0x0601F8CE RID: 129230 RVA: 0x00463A8C File Offset: 0x00461C8C
 		public int RangeEntities(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17008A1B RID: 35355
-		// (get) Token: 0x0601DE2C RID: 122412 RVA: 0x00432940 File Offset: 0x00430B40
+		// Token: 0x170090F7 RID: 37111
+		// (get) Token: 0x0601F8CF RID: 129231 RVA: 0x00463ACC File Offset: 0x00461CCC
 		public int RangeEntitiesLength
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DE2D RID: 122413 RVA: 0x0043296B File Offset: 0x00430B6B
+		// Token: 0x0601F8D0 RID: 129232 RVA: 0x00463AF7 File Offset: 0x00461CF7
 		public Span<int> GetRangeEntitiesBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0601DE2E RID: 122414 RVA: 0x0043297A File Offset: 0x00430B7A
+		// Token: 0x0601F8D1 RID: 129233 RVA: 0x00463B06 File Offset: 0x00461D06
 		public int[] GetRangeEntitiesArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x17008A1C RID: 35356
-		// (get) Token: 0x0601DE2F RID: 122415 RVA: 0x00432988 File Offset: 0x00430B88
+		// Token: 0x170090F8 RID: 37112
+		// (get) Token: 0x0601F8D2 RID: 129234 RVA: 0x00463B14 File Offset: 0x00461D14
 		public bool InRange
 		{
 			get
@@ -112,8 +112,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A1D RID: 35357
-		// (get) Token: 0x0601DE30 RID: 122416 RVA: 0x004329C8 File Offset: 0x00430BC8
+		// Token: 0x170090F9 RID: 37113
+		// (get) Token: 0x0601F8D3 RID: 129235 RVA: 0x00463B54 File Offset: 0x00461D54
 		public TOnlinePlayerConditionTarget OnlinePlayerConditionTargetOptionType
 		{
 			get
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DE31 RID: 122417 RVA: 0x00432A08 File Offset: 0x00430C08
+		// Token: 0x0601F8D4 RID: 129236 RVA: 0x00463B94 File Offset: 0x00461D94
 		public TTable? OnlinePlayerConditionTargetOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -138,19 +138,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601DE32 RID: 122418 RVA: 0x00432A50 File Offset: 0x00430C50
+		// Token: 0x0601F8D5 RID: 129237 RVA: 0x00463BDC File Offset: 0x00461DDC
 		public IOnlinePlayerConditionTargetHost OnlinePlayerConditionTargetOptionAsIOnlinePlayerConditionTargetHost()
 		{
 			return this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetHost>().Value;
 		}
 
-		// Token: 0x0601DE33 RID: 122419 RVA: 0x00432A6C File Offset: 0x00430C6C
+		// Token: 0x0601F8D6 RID: 129238 RVA: 0x00463BF8 File Offset: 0x00461DF8
 		public IOnlinePlayerConditionTargetParticipator OnlinePlayerConditionTargetOptionAsIOnlinePlayerConditionTargetParticipator()
 		{
 			return this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>().Value;
 		}
 
-		// Token: 0x0601DE34 RID: 122420 RVA: 0x00432A87 File Offset: 0x00430C87
+		// Token: 0x0601F8D7 RID: 129239 RVA: 0x00463C13 File Offset: 0x00461E13
 		public static Offset<ICheckInRangeCondition> CreateICheckInRangeCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, VectorOffset RangeEntitiesOffset = default(VectorOffset), bool InRange = false, TOnlinePlayerConditionTarget OnlinePlayerConditionTargetOption_type = TOnlinePlayerConditionTarget.NONE, int OnlinePlayerConditionTargetOptionOffset = 0)
 		{
 			builder.StartTable(5);
@@ -162,25 +162,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckInRangeCondition.EndICheckInRangeCondition(builder);
 		}
 
-		// Token: 0x0601DE35 RID: 122421 RVA: 0x00432ABB File Offset: 0x00430CBB
+		// Token: 0x0601F8D8 RID: 129240 RVA: 0x00463C47 File Offset: 0x00461E47
 		public static void StartICheckInRangeCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601DE36 RID: 122422 RVA: 0x00432AC4 File Offset: 0x00430CC4
+		// Token: 0x0601F8D9 RID: 129241 RVA: 0x00463C50 File Offset: 0x00461E50
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DE37 RID: 122423 RVA: 0x00432ACF File Offset: 0x00430CCF
+		// Token: 0x0601F8DA RID: 129242 RVA: 0x00463C5B File Offset: 0x00461E5B
 		public static void AddRangeEntities(FlatBufferBuilder builder, VectorOffset rangeEntitiesOffset)
 		{
 			builder.AddOffset(1, rangeEntitiesOffset.Value, 0);
 		}
 
-		// Token: 0x0601DE38 RID: 122424 RVA: 0x00432AE0 File Offset: 0x00430CE0
+		// Token: 0x0601F8DB RID: 129243 RVA: 0x00463C6C File Offset: 0x00461E6C
 		public static VectorOffset CreateRangeEntitiesVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601DE39 RID: 122425 RVA: 0x00432B17 File Offset: 0x00430D17
+		// Token: 0x0601F8DC RID: 129244 RVA: 0x00463CA3 File Offset: 0x00461EA3
 		public static VectorOffset CreateRangeEntitiesVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -199,7 +199,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601DE3A RID: 122426 RVA: 0x00432B31 File Offset: 0x00430D31
+		// Token: 0x0601F8DD RID: 129245 RVA: 0x00463CBD File Offset: 0x00461EBD
 		public static VectorOffset CreateRangeEntitiesVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601DE3B RID: 122427 RVA: 0x00432B4F File Offset: 0x00430D4F
+		// Token: 0x0601F8DE RID: 129246 RVA: 0x00463CDB File Offset: 0x00461EDB
 		public static VectorOffset CreateRangeEntitiesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -215,37 +215,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601DE3C RID: 122428 RVA: 0x00432B68 File Offset: 0x00430D68
+		// Token: 0x0601F8DF RID: 129247 RVA: 0x00463CF4 File Offset: 0x00461EF4
 		public static void StartRangeEntitiesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601DE3D RID: 122429 RVA: 0x00432B73 File Offset: 0x00430D73
+		// Token: 0x0601F8E0 RID: 129248 RVA: 0x00463CFF File Offset: 0x00461EFF
 		public static void AddInRange(FlatBufferBuilder builder, bool inRange)
 		{
 			builder.AddBool(2, inRange, false);
 		}
 
-		// Token: 0x0601DE3E RID: 122430 RVA: 0x00432B7E File Offset: 0x00430D7E
+		// Token: 0x0601F8E1 RID: 129249 RVA: 0x00463D0A File Offset: 0x00461F0A
 		public static void AddOnlinePlayerConditionTargetOptionType(FlatBufferBuilder builder, TOnlinePlayerConditionTarget onlinePlayerConditionTargetOptionType)
 		{
 			builder.AddByte(3, (byte)onlinePlayerConditionTargetOptionType, 0);
 		}
 
-		// Token: 0x0601DE3F RID: 122431 RVA: 0x00432B89 File Offset: 0x00430D89
+		// Token: 0x0601F8E2 RID: 129250 RVA: 0x00463D15 File Offset: 0x00461F15
 		public static void AddOnlinePlayerConditionTargetOption(FlatBufferBuilder builder, int onlinePlayerConditionTargetOptionOffset)
 		{
 			builder.AddOffset(4, onlinePlayerConditionTargetOptionOffset, 0);
 		}
 
-		// Token: 0x0601DE40 RID: 122432 RVA: 0x00432B94 File Offset: 0x00430D94
+		// Token: 0x0601F8E3 RID: 129251 RVA: 0x00463D20 File Offset: 0x00461F20
 		public static Offset<ICheckInRangeCondition> EndICheckInRangeCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckInRangeCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601DE41 RID: 122433 RVA: 0x00432BA4 File Offset: 0x00430DA4
+		// Token: 0x0601F8E4 RID: 129252 RVA: 0x00463D30 File Offset: 0x00461F30
 		public ICheckInRangeConditionT UnPack()
 		{
 			ICheckInRangeConditionT checkInRangeConditionT = new ICheckInRangeConditionT();
@@ -253,7 +253,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkInRangeConditionT;
 		}
 
-		// Token: 0x0601DE42 RID: 122434 RVA: 0x00432BC0 File Offset: 0x00430DC0
+		// Token: 0x0601F8E5 RID: 129253 RVA: 0x00463D4C File Offset: 0x00461F4C
 		public void UnPackTo(ICheckInRangeConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -278,7 +278,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.OnlinePlayerConditionTargetOption.Value = ((this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>() != null) ? this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0601DE43 RID: 122435 RVA: 0x00432CAC File Offset: 0x00430EAC
+		// Token: 0x0601F8E6 RID: 129254 RVA: 0x00463E38 File Offset: 0x00462038
 		public static Offset<ICheckInRangeCondition> Pack(FlatBufferBuilder builder, ICheckInRangeConditionT _o)
 		{
 			if (_o == null)
@@ -296,7 +296,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckInRangeCondition.CreateICheckInRangeCondition(builder, _o.Type, rangeEntitiesOffset, _o.InRange, onlinePlayerConditionTargetOption_type, onlinePlayerConditionTargetOptionOffset);
 		}
 
-		// Token: 0x0400D2E4 RID: 53988
+		// Token: 0x0400DDBF RID: 56767
 		private Table __p;
 	}
 }

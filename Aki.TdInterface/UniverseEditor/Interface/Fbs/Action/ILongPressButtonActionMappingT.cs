@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A39 RID: 27193
+	// Token: 0x0200715B RID: 29019
 	public class ILongPressButtonActionMappingT
 	{
-		// Token: 0x1700C9B1 RID: 51633
-		// (get) Token: 0x0602F97C RID: 194940 RVA: 0x0067A483 File Offset: 0x00678683
-		// (set) Token: 0x0602F97D RID: 194941 RVA: 0x0067A48B File Offset: 0x0067868B
+		// Token: 0x1700D45C RID: 54364
+		// (get) Token: 0x060326A2 RID: 206498 RVA: 0x006D0543 File Offset: 0x006CE743
+		// (set) Token: 0x060326A3 RID: 206499 RVA: 0x006D054B File Offset: 0x006CE74B
 		public int Id { get; set; }
 
-		// Token: 0x1700C9B2 RID: 51634
-		// (get) Token: 0x0602F97E RID: 194942 RVA: 0x0067A494 File Offset: 0x00678694
-		// (set) Token: 0x0602F97F RID: 194943 RVA: 0x0067A49C File Offset: 0x0067869C
+		// Token: 0x1700D45D RID: 54365
+		// (get) Token: 0x060326A4 RID: 206500 RVA: 0x006D0554 File Offset: 0x006CE754
+		// (set) Token: 0x060326A5 RID: 206501 RVA: 0x006D055C File Offset: 0x006CE75C
 		public string ActionName { get; set; }
 
-		// Token: 0x0602F980 RID: 194944 RVA: 0x0067A4A5 File Offset: 0x006786A5
+		// Token: 0x060326A6 RID: 206502 RVA: 0x006D0565 File Offset: 0x006CE765
 		public ILongPressButtonActionMappingT()
 		{
 			this.Id = 0;

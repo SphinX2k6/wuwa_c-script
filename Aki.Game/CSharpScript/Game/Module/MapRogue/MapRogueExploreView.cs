@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055F4 RID: 22004
+	// Token: 0x020045CA RID: 17866
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueExploreView : UiViewBase
 	{
-		// Token: 0x06038068 RID: 229480 RVA: 0x00D44F38 File Offset: 0x00D43138
+		// Token: 0x0602CF66 RID: 184166 RVA: 0x00C92C80 File Offset: 0x00C90E80
 		public MapRogueExploreView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06038069 RID: 229481 RVA: 0x00D44F44 File Offset: 0x00D43144
+		// Token: 0x0602CF67 RID: 184167 RVA: 0x00C92C8C File Offset: 0x00C90E8C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0603806A RID: 229482 RVA: 0x00D44FB4 File Offset: 0x00D431B4
+		// Token: 0x0602CF68 RID: 184168 RVA: 0x00C92CFC File Offset: 0x00C90EFC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MapRogueExploreView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603806B RID: 229483 RVA: 0x00D44FF8 File Offset: 0x00D431F8
+		// Token: 0x0602CF69 RID: 184169 RVA: 0x00C92D40 File Offset: 0x00C90F40
 		protected override void OnBeforeShow()
 		{
 			MapRogueGameInfo gameInfo = MapRogueModel.Instance.GameInfo;
@@ -67,19 +67,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			listLayout.RefreshByData(gameInfo.GetAllExplorationData(), null, true);
 		}
 
-		// Token: 0x0603806C RID: 229484 RVA: 0x00D4507E File Offset: 0x00D4327E
+		// Token: 0x0602CF6A RID: 184170 RVA: 0x00C92DC6 File Offset: 0x00C90FC6
 		private RogueExploreListItem CreateItem()
 		{
 			return new RogueExploreListItem();
 		}
 
-		// Token: 0x0603806D RID: 229485 RVA: 0x00D45085 File Offset: 0x00D43285
+		// Token: 0x0602CF6B RID: 184171 RVA: 0x00C92DCD File Offset: 0x00C90FCD
 		private void OnBackBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401D70C RID: 120588
+		// Token: 0x04018197 RID: 98711
 		[Nullable(new byte[]
 		{
 			2,
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.MapRogue
 		})]
 		private GenericScrollViewNew<RogueExploreListItem, IExploreData> ListLayout;
 
-		// Token: 0x0401D70D RID: 120589
+		// Token: 0x04018198 RID: 98712
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 	}

@@ -4,27 +4,27 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Define
 {
-	// Token: 0x02000243 RID: 579
+	// Token: 0x02000248 RID: 584
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LaunchGameSettingMenuConfig
 	{
-		// Token: 0x17000166 RID: 358
-		// (get) Token: 0x06000E96 RID: 3734 RVA: 0x00056566 File Offset: 0x00054766
-		// (set) Token: 0x06000E97 RID: 3735 RVA: 0x0005656E File Offset: 0x0005476E
+		// Token: 0x1700016C RID: 364
+		// (get) Token: 0x06000ED7 RID: 3799 RVA: 0x000590AA File Offset: 0x000572AA
+		// (set) Token: 0x06000ED8 RID: 3800 RVA: 0x000590B2 File Offset: 0x000572B2
 		public int FunctionId { get; private set; }
 
-		// Token: 0x17000167 RID: 359
-		// (get) Token: 0x06000E98 RID: 3736 RVA: 0x00056577 File Offset: 0x00054777
-		// (set) Token: 0x06000E99 RID: 3737 RVA: 0x0005657F File Offset: 0x0005477F
+		// Token: 0x1700016D RID: 365
+		// (get) Token: 0x06000ED9 RID: 3801 RVA: 0x000590BB File Offset: 0x000572BB
+		// (set) Token: 0x06000EDA RID: 3802 RVA: 0x000590C3 File Offset: 0x000572C3
 		public int OptionsDefault { get; private set; }
 
-		// Token: 0x17000168 RID: 360
-		// (get) Token: 0x06000E9A RID: 3738 RVA: 0x00056588 File Offset: 0x00054788
-		// (set) Token: 0x06000E9B RID: 3739 RVA: 0x00056590 File Offset: 0x00054790
+		// Token: 0x1700016E RID: 366
+		// (get) Token: 0x06000EDB RID: 3803 RVA: 0x000590CC File Offset: 0x000572CC
+		// (set) Token: 0x06000EDC RID: 3804 RVA: 0x000590D4 File Offset: 0x000572D4
 		public float SliderDefault { get; private set; }
 
-		// Token: 0x06000E9C RID: 3740 RVA: 0x00056599 File Offset: 0x00054799
+		// Token: 0x06000EDD RID: 3805 RVA: 0x000590DD File Offset: 0x000572DD
 		private LaunchGameSettingMenuConfig(int functionId, int optionsDefault, float sliderDefault)
 		{
 			this.FunctionId = functionId;
@@ -32,25 +32,25 @@ namespace CSharpScript.Launcher.Define
 			this.SliderDefault = sliderDefault;
 		}
 
-		// Token: 0x06000E9D RID: 3741 RVA: 0x000565B6 File Offset: 0x000547B6
+		// Token: 0x06000EDE RID: 3806 RVA: 0x000590FA File Offset: 0x000572FA
 		public static string GetTableName()
 		{
 			return "MenuConfig";
 		}
 
-		// Token: 0x06000E9E RID: 3742 RVA: 0x000565BD File Offset: 0x000547BD
+		// Token: 0x06000EDF RID: 3807 RVA: 0x00059101 File Offset: 0x00057301
 		public static string GetLanguageTableName()
 		{
 			return "LanguageDefine";
 		}
 
-		// Token: 0x06000E9F RID: 3743 RVA: 0x000565C4 File Offset: 0x000547C4
+		// Token: 0x06000EE0 RID: 3808 RVA: 0x00059108 File Offset: 0x00057308
 		public static string GetTableFile()
 		{
 			return "s.设置系统.xlsx";
 		}
 
-		// Token: 0x06000EA0 RID: 3744 RVA: 0x000565CC File Offset: 0x000547CC
+		// Token: 0x06000EE1 RID: 3809 RVA: 0x00059110 File Offset: 0x00057310
 		public static LaunchGameSettingMenuConfig Parse(UKuroSqliteResultSet rs)
 		{
 			int functionId = 0;
@@ -74,7 +74,7 @@ namespace CSharpScript.Launcher.Define
 			return new LaunchGameSettingMenuConfig(functionId, optionsDefault, sliderDefault);
 		}
 
-		// Token: 0x06000EA1 RID: 3745 RVA: 0x00056666 File Offset: 0x00054866
+		// Token: 0x06000EE2 RID: 3810 RVA: 0x000591AA File Offset: 0x000573AA
 		public float GetDefaultValue()
 		{
 			if (this.SliderDefault == 0f)
@@ -84,13 +84,13 @@ namespace CSharpScript.Launcher.Define
 			return this.SliderDefault;
 		}
 
-		// Token: 0x0400096B RID: 2411
+		// Token: 0x040009B3 RID: 2483
 		private const string TableName = "MenuConfig";
 
-		// Token: 0x0400096C RID: 2412
+		// Token: 0x040009B4 RID: 2484
 		private const string LanguageTableName = "LanguageDefine";
 
-		// Token: 0x0400096D RID: 2413
+		// Token: 0x040009B5 RID: 2485
 		private const string TableFile = "s.设置系统.xlsx";
 	}
 }

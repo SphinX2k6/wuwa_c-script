@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020010FB RID: 4347
+// Token: 0x020005AF RID: 1455
 public enum EArtemisTipsType
 {
-	// Token: 0x04003487 RID: 13447
+	// Token: 0x04003520 RID: 13600
 	None,
-	// Token: 0x04003488 RID: 13448
+	// Token: 0x04003521 RID: 13601
 	Miss,
-	// Token: 0x04003489 RID: 13449
+	// Token: 0x04003522 RID: 13602
 	Perfect
 }

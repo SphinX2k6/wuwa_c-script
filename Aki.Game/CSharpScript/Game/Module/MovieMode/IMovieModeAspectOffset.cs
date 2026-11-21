@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.MovieMode
 {
-	// Token: 0x02005383 RID: 21379
+	// Token: 0x02004366 RID: 17254
 	public interface IMovieModeAspectOffset
 	{
-		// Token: 0x17008381 RID: 33665
-		// (get) Token: 0x060369F7 RID: 223735
-		// (set) Token: 0x060369F8 RID: 223736
+		// Token: 0x1700574D RID: 22349
+		// (get) Token: 0x0602B93D RID: 178493
+		// (set) Token: 0x0602B93E RID: 178494
 		bool IsFadeIn { get; set; }
 
-		// Token: 0x17008382 RID: 33666
-		// (get) Token: 0x060369F9 RID: 223737
-		// (set) Token: 0x060369FA RID: 223738
+		// Token: 0x1700574E RID: 22350
+		// (get) Token: 0x0602B93F RID: 178495
+		// (set) Token: 0x0602B940 RID: 178496
 		bool IsWidthBlend { get; set; }
 
-		// Token: 0x17008383 RID: 33667
-		// (get) Token: 0x060369FB RID: 223739
-		// (set) Token: 0x060369FC RID: 223740
+		// Token: 0x1700574F RID: 22351
+		// (get) Token: 0x0602B941 RID: 178497
+		// (set) Token: 0x0602B942 RID: 178498
 		float Offset { get; set; }
 
-		// Token: 0x17008384 RID: 33668
-		// (get) Token: 0x060369FD RID: 223741
-		// (set) Token: 0x060369FE RID: 223742
+		// Token: 0x17005750 RID: 22352
+		// (get) Token: 0x0602B943 RID: 178499
+		// (set) Token: 0x0602B944 RID: 178500
 		float Progress { get; set; }
 	}
 }

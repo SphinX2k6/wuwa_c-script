@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001640 RID: 5696
+// Token: 0x02000AF8 RID: 2808
 public class WheelTowerRoundTipsView : UiTickViewBase
 {
-	// Token: 0x0600A017 RID: 40983 RVA: 0x00233831 File Offset: 0x00231A31
+	// Token: 0x060073F5 RID: 29685 RVA: 0x0023D675 File Offset: 0x0023B875
 	[NullableContext(1)]
 	public WheelTowerRoundTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600A018 RID: 40984 RVA: 0x0023383C File Offset: 0x00231A3C
+	// Token: 0x060073F6 RID: 29686 RVA: 0x0023D680 File Offset: 0x0023B880
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -32,7 +32,7 @@ public class WheelTowerRoundTipsView : UiTickViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A019 RID: 40985 RVA: 0x002338E8 File Offset: 0x00231AE8
+	// Token: 0x060073F7 RID: 29687 RVA: 0x0023D72C File Offset: 0x0023B92C
 	protected override void OnStart()
 	{
 		object openParam = this.OpenParam;
@@ -70,7 +70,7 @@ public class WheelTowerRoundTipsView : UiTickViewBase
 		this.RemainTime = 3000f;
 	}
 
-	// Token: 0x0600A01A RID: 40986 RVA: 0x00233977 File Offset: 0x00231B77
+	// Token: 0x060073F8 RID: 29688 RVA: 0x0023D7BB File Offset: 0x0023B9BB
 	protected override void OnTick(float delta)
 	{
 		if (this.IsTimerDone)
@@ -85,12 +85,12 @@ public class WheelTowerRoundTipsView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x040048D4 RID: 18644
+	// Token: 0x0400497A RID: 18810
 	private const float ShowTimeMs = 3000f;
 
-	// Token: 0x040048D5 RID: 18645
+	// Token: 0x0400497B RID: 18811
 	private float RemainTime;
 
-	// Token: 0x040048D6 RID: 18646
+	// Token: 0x0400497C RID: 18812
 	private bool IsTimerDone;
 }

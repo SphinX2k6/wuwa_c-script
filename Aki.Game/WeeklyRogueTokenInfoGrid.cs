@@ -4,12 +4,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x02002D46 RID: 11590
+// Token: 0x020022A0 RID: 8864
 public class WeeklyRogueTokenInfoGrid : LoopScrollMediumItemGrid<int>
 {
-	// Token: 0x170020D8 RID: 8408
-	// (get) Token: 0x060185A8 RID: 99752 RVA: 0x006333DF File Offset: 0x006315DF
-	// (set) Token: 0x060185A9 RID: 99753 RVA: 0x006333EC File Offset: 0x006315EC
+	// Token: 0x17002133 RID: 8499
+	// (get) Token: 0x06015E4A RID: 89674 RVA: 0x006593EF File Offset: 0x006575EF
+	// (set) Token: 0x06015E4B RID: 89675 RVA: 0x006593FC File Offset: 0x006575FC
 	public new int Data
 	{
 		get
@@ -22,13 +22,13 @@ public class WeeklyRogueTokenInfoGrid : LoopScrollMediumItemGrid<int>
 		}
 	}
 
-	// Token: 0x060185AA RID: 99754 RVA: 0x006333FA File Offset: 0x006315FA
+	// Token: 0x06015E4C RID: 89676 RVA: 0x0065940A File Offset: 0x0065760A
 	public WeeklyRogueTokenInfoGrid()
 	{
 		this.Data = 0;
 	}
 
-	// Token: 0x060185AB RID: 99755 RVA: 0x0063340C File Offset: 0x0063160C
+	// Token: 0x06015E4D RID: 89677 RVA: 0x0065941C File Offset: 0x0065761C
 	protected override void OnRefresh(int data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -61,7 +61,7 @@ public class WeeklyRogueTokenInfoGrid : LoopScrollMediumItemGrid<int>
 		base.SetToggleInteractive(true);
 	}
 
-	// Token: 0x060185AC RID: 99756 RVA: 0x006334E1 File Offset: 0x006316E1
+	// Token: 0x06015E4E RID: 89678 RVA: 0x006594F1 File Offset: 0x006576F1
 	protected override void OnExtendToggleStateChanged(EToggleState state)
 	{
 		Action<int, bool> onSelectedChange = this.OnSelectedChange;
@@ -72,7 +72,7 @@ public class WeeklyRogueTokenInfoGrid : LoopScrollMediumItemGrid<int>
 		onSelectedChange(this.Data, state == EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x060185AD RID: 99757 RVA: 0x006334FD File Offset: 0x006316FD
+	// Token: 0x06015E4F RID: 89679 RVA: 0x0065950D File Offset: 0x0065770D
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, false);
@@ -87,20 +87,20 @@ public class WeeklyRogueTokenInfoGrid : LoopScrollMediumItemGrid<int>
 		}
 	}
 
-	// Token: 0x060185AE RID: 99758 RVA: 0x00633521 File Offset: 0x00631721
+	// Token: 0x06015E50 RID: 89680 RVA: 0x00659531 File Offset: 0x00657731
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, false);
 	}
 
-	// Token: 0x060185AF RID: 99759 RVA: 0x0063352B File Offset: 0x0063172B
+	// Token: 0x06015E51 RID: 89681 RVA: 0x0065953B File Offset: 0x0065773B
 	[NullableContext(1)]
 	public override object GetKey(int data, int gridIndex)
 	{
 		return this.Data;
 	}
 
-	// Token: 0x0400B4C4 RID: 46276
+	// Token: 0x0400B839 RID: 47161
 	[Nullable(2)]
 	public Action<int, bool> OnSelectedChange;
 }

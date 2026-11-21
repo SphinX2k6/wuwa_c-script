@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Roguelike;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BB6 RID: 19382
+	// Token: 0x02003B60 RID: 15200
 	public class SkipTaskRogueActivity : SkipTask
 	{
-		// Token: 0x060322FA RID: 205562 RVA: 0x00BA95DE File Offset: 0x00BA77DE
+		// Token: 0x0602708B RID: 159883 RVA: 0x00AED88A File Offset: 0x00AEBA8A
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

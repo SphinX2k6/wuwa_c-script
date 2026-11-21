@@ -9,13 +9,13 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001A05 RID: 6661
+// Token: 0x02000EC4 RID: 3780
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class DamageUiController : ControllerBase
 {
-	// Token: 0x0600C2F2 RID: 49906 RVA: 0x002C0EBF File Offset: 0x002BF0BF
+	// Token: 0x06009700 RID: 38656 RVA: 0x002CBEAB File Offset: 0x002CA0AB
 	protected override bool OnInit()
 	{
 		DamageUiManager.Instance.Initialize();
@@ -23,7 +23,7 @@ public class DamageUiController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C2F3 RID: 49907 RVA: 0x002C0ED2 File Offset: 0x002BF0D2
+	// Token: 0x06009701 RID: 38657 RVA: 0x002CBEBE File Offset: 0x002CA0BE
 	protected override bool OnClear()
 	{
 		this.RemoveEvents();
@@ -33,7 +33,7 @@ public class DamageUiController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C2F4 RID: 49908 RVA: 0x002C0EF5 File Offset: 0x002BF0F5
+	// Token: 0x06009702 RID: 38658 RVA: 0x002CBEE1 File Offset: 0x002CA0E1
 	protected override bool OnLeaveLevel()
 	{
 		DamageUiManager.Instance.OnLeaveLevel();
@@ -41,7 +41,7 @@ public class DamageUiController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C2F5 RID: 49909 RVA: 0x002C0F08 File Offset: 0x002BF108
+	// Token: 0x06009703 RID: 38659 RVA: 0x002CBEF4 File Offset: 0x002CA0F4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -79,13 +79,13 @@ public class DamageUiController : ControllerBase
 		return new ValueTuple<string, CustomPromise<bool>>?(new ValueTuple<string, CustomPromise<bool>>("DamageUiController Preload", promise));
 	}
 
-	// Token: 0x0600C2F6 RID: 49910 RVA: 0x002C0F68 File Offset: 0x002BF168
+	// Token: 0x06009704 RID: 38660 RVA: 0x002CBF54 File Offset: 0x002CA154
 	protected override void OnTick(float delta)
 	{
 		DamageUiManager.Instance.Tick(delta);
 	}
 
-	// Token: 0x0600C2F7 RID: 49911 RVA: 0x002C0F78 File Offset: 0x002BF178
+	// Token: 0x06009705 RID: 38661 RVA: 0x002CBF64 File Offset: 0x002CA164
 	public void AddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnUpdateSceneTeam, new Action(this.OnFormationLoadCompleted));
@@ -102,7 +102,7 @@ public class DamageUiController : ControllerBase
 		BattleUiModel.Instance.ChildViewData.AddCallback(EBattleUiChild.DamageView, new Action(this.OnBattleUiChildVisibleChanged));
 	}
 
-	// Token: 0x0600C2F8 RID: 49912 RVA: 0x002C108C File Offset: 0x002BF28C
+	// Token: 0x06009706 RID: 38662 RVA: 0x002CC078 File Offset: 0x002CA278
 	public void RemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnUpdateSceneTeam, new Action(this.OnFormationLoadCompleted));
@@ -119,13 +119,13 @@ public class DamageUiController : ControllerBase
 		BattleUiModel.Instance.ChildViewData.RemoveCallback(EBattleUiChild.DamageView, new Action(this.OnBattleUiChildVisibleChanged));
 	}
 
-	// Token: 0x0600C2F9 RID: 49913 RVA: 0x002C119D File Offset: 0x002BF39D
+	// Token: 0x06009707 RID: 38663 RVA: 0x002CC189 File Offset: 0x002CA389
 	private void OnWorldDone()
 	{
 		this.StartUeDamageUiManager();
 	}
 
-	// Token: 0x0600C2FA RID: 49914 RVA: 0x002C11A8 File Offset: 0x002BF3A8
+	// Token: 0x06009708 RID: 38664 RVA: 0x002CC194 File Offset: 0x002CA394
 	private void OnFormationLoadCompleted()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -135,7 +135,7 @@ public class DamageUiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C2FB RID: 49915 RVA: 0x002C11D0 File Offset: 0x002BF3D0
+	// Token: 0x06009709 RID: 38665 RVA: 0x002CC1BC File Offset: 0x002CA3BC
 	private void OnChangeRoleCompleted(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -145,7 +145,7 @@ public class DamageUiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C2FC RID: 49916 RVA: 0x002C11F8 File Offset: 0x002BF3F8
+	// Token: 0x0600970A RID: 38666 RVA: 0x002CC1E4 File Offset: 0x002CA3E4
 	private void OnRoleGoDown(int entityId)
 	{
 		Entity entity = EntitySystem.Instance.Get(entityId);
@@ -156,19 +156,19 @@ public class DamageUiController : ControllerBase
 		this.RemoveEntityEvents(entity);
 	}
 
-	// Token: 0x0600C2FD RID: 49917 RVA: 0x002C121C File Offset: 0x002BF41C
+	// Token: 0x0600970B RID: 38667 RVA: 0x002CC208 File Offset: 0x002CA408
 	private void OnAddEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 	{
 		this.AddEntityEvents(handle.Entity);
 	}
 
-	// Token: 0x0600C2FE RID: 49918 RVA: 0x002C122A File Offset: 0x002BF42A
+	// Token: 0x0600970C RID: 38668 RVA: 0x002CC216 File Offset: 0x002CA416
 	private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		this.RemoveEntityEvents(handle.Entity);
 	}
 
-	// Token: 0x0600C2FF RID: 49919 RVA: 0x002C1238 File Offset: 0x002BF438
+	// Token: 0x0600970D RID: 38669 RVA: 0x002CC224 File Offset: 0x002CA424
 	[NullableContext(2)]
 	private void AddEntityEvents(Entity entity)
 	{
@@ -182,7 +182,7 @@ public class DamageUiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C300 RID: 49920 RVA: 0x002C1273 File Offset: 0x002BF473
+	// Token: 0x0600970E RID: 38670 RVA: 0x002CC25F File Offset: 0x002CA45F
 	[NullableContext(2)]
 	private void RemoveEntityEvents(Entity entity)
 	{
@@ -196,7 +196,7 @@ public class DamageUiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C301 RID: 49921 RVA: 0x002C12B0 File Offset: 0x002BF4B0
+	// Token: 0x0600970F RID: 38671 RVA: 0x002CC29C File Offset: 0x002CA49C
 	private void OnEntityApplyDamage(Entity attacker, Entity victim, RequirementPayload requirements, DamageResult damageResult, FVectorDouble damagePosition)
 	{
 		float damage = damageResult.Damage;
@@ -216,7 +216,7 @@ public class DamageUiController : ControllerBase
 		DamageUiManager.Instance.ApplyDamage(-damage, 0, component.ActorLocation, victim, false, true, damageData.DamageTextType, "", damageData.DamageTextAreaId);
 	}
 
-	// Token: 0x0600C302 RID: 49922 RVA: 0x002C1368 File Offset: 0x002BF568
+	// Token: 0x06009710 RID: 38672 RVA: 0x002CC354 File Offset: 0x002CA554
 	private void OnAddBuffDamageUi(int entityId, GameplayCue cue, bool isAdd, int handleId)
 	{
 		if (!isAdd)
@@ -229,13 +229,13 @@ public class DamageUiController : ControllerBase
 		DamageUiManager.Instance.ApplyDamage(-1f, 0, component.ActorLocation, entity, false, true, (array.Length != 0) ? int.Parse(array[0]) : 0, (array.Length > 1) ? array[1] : "", (array.Length > 2) ? int.Parse(array[2]) : 0);
 	}
 
-	// Token: 0x0600C303 RID: 49923 RVA: 0x002C13DD File Offset: 0x002BF5DD
+	// Token: 0x06009711 RID: 38673 RVA: 0x002CC3C9 File Offset: 0x002CA5C9
 	private void InputControllerChange(EInputControllerType last, EInputControllerType now)
 	{
 		DamageUiManager.Instance.OnEditorPlatformChanged();
 	}
 
-	// Token: 0x0600C304 RID: 49924 RVA: 0x002C13EC File Offset: 0x002BF5EC
+	// Token: 0x06009712 RID: 38674 RVA: 0x002CC3D8 File Offset: 0x002CA5D8
 	private void OnBattleUiChildVisibleChanged()
 	{
 		UUIItem battleViewUnit = UiLayer.Instance.GetBattleViewUnit(0);
@@ -243,50 +243,79 @@ public class DamageUiController : ControllerBase
 		battleViewUnit.SetUIActive(childVisible);
 	}
 
-	// Token: 0x0600C305 RID: 49925 RVA: 0x002C141C File Offset: 0x002BF61C
+	// Token: 0x06009713 RID: 38675 RVA: 0x002CC408 File Offset: 0x002CA608
 	public void SetDamageTimeScaleEnable(bool bEnable)
 	{
 		DamageUiManager.Instance.SetDamageTimeScaleEnable(bEnable);
 	}
 
-	// Token: 0x0600C306 RID: 49926 RVA: 0x002C1429 File Offset: 0x002BF629
+	// Token: 0x06009714 RID: 38676 RVA: 0x002CC415 File Offset: 0x002CA615
 	public int EnableDamageViewOptimization()
 	{
 		return DamageUiManager.Instance.EnableDamageViewOptimization();
 	}
 
-	// Token: 0x0600C307 RID: 49927 RVA: 0x002C1435 File Offset: 0x002BF635
+	// Token: 0x06009715 RID: 38677 RVA: 0x002CC421 File Offset: 0x002CA621
 	public void DisableDamageViewOptimization(int id)
 	{
 		DamageUiManager.Instance.DisableDamageViewOptimization(id);
 	}
 
-	// Token: 0x0600C308 RID: 49928 RVA: 0x002C1442 File Offset: 0x002BF642
+	// Token: 0x06009716 RID: 38678 RVA: 0x002CC42E File Offset: 0x002CA62E
+	[NullableContext(2)]
+	[CombatListen(ENotifyMessageId.DamageShowNotify, false, false)]
+	public static void DamageShowNotify(Entity owner, [Nullable(1)] DamageShowNotify data, CombatCommon combatCommon = null)
+	{
+		if (owner == null)
+		{
+			return;
+		}
+		DamageUiController.Instance.ApplyExtraDamage(data.Id, data.Damage, owner);
+	}
+
+	// Token: 0x06009717 RID: 38679 RVA: 0x002CC44C File Offset: 0x002CA64C
+	public void ApplyExtraDamage(int id, int damage, Entity victim)
+	{
+		if (damage == 0)
+		{
+			return;
+		}
+		ExtraDamageText? config = ConfigExtraDamageTextById.GetConfig(id, true);
+		if (config == null)
+		{
+			return;
+		}
+		CharacterActorComponent component = victim.GetComponent<CharacterActorComponent>();
+		bool bCure = damage > 0;
+		DamageUiManager.Instance.ApplyDamage((float)damage, 0, component.ActorLocation, victim, false, bCure, config.Value.DamageTextId, "", config.Value.DamageTextAreaId);
+	}
+
+	// Token: 0x06009718 RID: 38680 RVA: 0x002CC4B4 File Offset: 0x002CA6B4
 	public void StartUeDamageUiManager()
 	{
 		DamageUiManager.Instance.StartUeDamageUiManager();
 	}
 
-	// Token: 0x0600C309 RID: 49929 RVA: 0x002C144E File Offset: 0x002BF64E
+	// Token: 0x06009719 RID: 38681 RVA: 0x002CC4C0 File Offset: 0x002CA6C0
 	public void StopUeDamageUiManager()
 	{
 		DamageUiManager.Instance.StopUeDamageUiManager();
 	}
 
-	// Token: 0x0600C30A RID: 49930 RVA: 0x002C145A File Offset: 0x002BF65A
+	// Token: 0x0600971A RID: 38682 RVA: 0x002CC4CC File Offset: 0x002CA6CC
 	public void SetUeDamageConfig(FDamageConfig config, bool hideDamageCritEffect = false)
 	{
 		DamageUiManager.Instance.SetUeDamageConfig(config, hideDamageCritEffect);
 	}
 
-	// Token: 0x0600C30B RID: 49931 RVA: 0x002C1468 File Offset: 0x002BF668
+	// Token: 0x0600971B RID: 38683 RVA: 0x002CC4DA File Offset: 0x002CA6DA
 	public void UpdateKscWorld()
 	{
 		DamageUiManager.Instance.UpdateKscWorld();
 	}
 
-	// Token: 0x17001049 RID: 4169
-	// (get) Token: 0x0600C30C RID: 49932 RVA: 0x002C1474 File Offset: 0x002BF674
+	// Token: 0x1700106E RID: 4206
+	// (get) Token: 0x0600971C RID: 38684 RVA: 0x002CC4E6 File Offset: 0x002CA6E6
 	public static DamageUiController Instance
 	{
 		get
@@ -295,7 +324,7 @@ public class DamageUiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C30D RID: 49933 RVA: 0x002C147B File Offset: 0x002BF67B
+	// Token: 0x0600971D RID: 38685 RVA: 0x002CC4ED File Offset: 0x002CA6ED
 	public static DamageUiController GetOrCreateInstance()
 	{
 		if (DamageUiController._Instance == null)
@@ -305,7 +334,7 @@ public class DamageUiController : ControllerBase
 		return DamageUiController._Instance;
 	}
 
-	// Token: 0x0600C30E RID: 49934 RVA: 0x002C148F File Offset: 0x002BF68F
+	// Token: 0x0600971E RID: 38686 RVA: 0x002CC501 File Offset: 0x002CA701
 	public static bool CreateInstance()
 	{
 		if (DamageUiController._Instance != null)
@@ -316,24 +345,24 @@ public class DamageUiController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C30F RID: 49935 RVA: 0x002C14A5 File Offset: 0x002BF6A5
+	// Token: 0x0600971F RID: 38687 RVA: 0x002CC517 File Offset: 0x002CA717
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C310 RID: 49936 RVA: 0x002C14A7 File Offset: 0x002BF6A7
+	// Token: 0x06009720 RID: 38688 RVA: 0x002CC519 File Offset: 0x002CA719
 	public static void ResetStaticDefaultValue()
 	{
 		DamageUiController._Instance = null;
 	}
 
-	// Token: 0x0600C311 RID: 49937 RVA: 0x002C14AF File Offset: 0x002BF6AF
+	// Token: 0x06009721 RID: 38689 RVA: 0x002CC521 File Offset: 0x002CA721
 	static DamageUiController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DamageUiController.CreateStaticDefaultValue), new Action(DamageUiController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040059E9 RID: 23017
+	// Token: 0x04005AB8 RID: 23224
 	[Nullable(2)]
 	private static DamageUiController _Instance;
 }

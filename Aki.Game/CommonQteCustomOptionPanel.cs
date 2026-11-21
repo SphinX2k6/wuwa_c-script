@@ -5,7 +5,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002610 RID: 9744
+// Token: 0x02001AFB RID: 6907
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class CommonQteCustomOptionPanel : CommonQteItemBase<CommonQteSelectOptionContext>
 {
-	// Token: 0x06013E16 RID: 81430 RVA: 0x004FE2E2 File Offset: 0x004FC4E2
+	// Token: 0x060112F8 RID: 70392 RVA: 0x0050D11E File Offset: 0x0050B31E
 	protected override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -24,13 +24,13 @@ public class CommonQteCustomOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		};
 	}
 
-	// Token: 0x06013E17 RID: 81431 RVA: 0x004FE30B File Offset: 0x004FC50B
+	// Token: 0x060112F9 RID: 70393 RVA: 0x0050D147 File Offset: 0x0050B347
 	public override void SetPreloadQte(int qteId)
 	{
 		this.PreloadQteId = qteId;
 	}
 
-	// Token: 0x06013E18 RID: 81432 RVA: 0x004FE314 File Offset: 0x004FC514
+	// Token: 0x060112FA RID: 70394 RVA: 0x0050D150 File Offset: 0x0050B350
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonQteCustomOptionPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -41,14 +41,14 @@ public class CommonQteCustomOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013E19 RID: 81433 RVA: 0x004FE357 File Offset: 0x004FC557
+	// Token: 0x060112FB RID: 70395 RVA: 0x0050D193 File Offset: 0x0050B393
 	protected override void OnStart()
 	{
 		base.OnStart();
 		base.SetUiActive(false);
 	}
 
-	// Token: 0x06013E1A RID: 81434 RVA: 0x004FE368 File Offset: 0x004FC568
+	// Token: 0x060112FC RID: 70396 RVA: 0x0050D1A4 File Offset: 0x0050B3A4
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -59,13 +59,13 @@ public class CommonQteCustomOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		this.OptionItemList.Clear();
 	}
 
-	// Token: 0x06013E1B RID: 81435 RVA: 0x004FE3CC File Offset: 0x004FC5CC
+	// Token: 0x060112FD RID: 70397 RVA: 0x0050D208 File Offset: 0x0050B408
 	protected override bool IsContextMatched(CommonQteContextBase context)
 	{
 		return context is CommonQteSelectOptionContext;
 	}
 
-	// Token: 0x06013E1C RID: 81436 RVA: 0x004FE3D8 File Offset: 0x004FC5D8
+	// Token: 0x060112FE RID: 70398 RVA: 0x0050D214 File Offset: 0x0050B414
 	public override void SetQteContext(CommonQteContextBase context)
 	{
 		CommonQteSelectOptionContext commonQteSelectOptionContext = context as CommonQteSelectOptionContext;
@@ -83,7 +83,7 @@ public class CommonQteCustomOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		this.PlayQteStart();
 	}
 
-	// Token: 0x06013E1D RID: 81437 RVA: 0x004FE454 File Offset: 0x004FC654
+	// Token: 0x060112FF RID: 70399 RVA: 0x0050D290 File Offset: 0x0050B490
 	protected override void OnPlayQteStart()
 	{
 		this.IsQteStart = true;
@@ -95,7 +95,7 @@ public class CommonQteCustomOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		}
 	}
 
-	// Token: 0x06013E1E RID: 81438 RVA: 0x004FE4BC File Offset: 0x004FC6BC
+	// Token: 0x06011300 RID: 70400 RVA: 0x0050D2F8 File Offset: 0x0050B4F8
 	protected override void OnHandleQteEnd()
 	{
 		foreach (CommonQteCustomOptionItem commonQteCustomOptionItem in new List<CommonQteCustomOptionItem>(this.OptionItemList))
@@ -104,7 +104,7 @@ public class CommonQteCustomOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		}
 	}
 
-	// Token: 0x06013E1F RID: 81439 RVA: 0x004FE514 File Offset: 0x004FC714
+	// Token: 0x06011301 RID: 70401 RVA: 0x0050D350 File Offset: 0x0050B550
 	public void OnOptionItemPlayEnded(CommonQteCustomOptionItem optionItem)
 	{
 		int num = this.OptionItemList.IndexOf(optionItem);
@@ -118,7 +118,7 @@ public class CommonQteCustomOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		}
 	}
 
-	// Token: 0x06013E20 RID: 81440 RVA: 0x004FE554 File Offset: 0x004FC754
+	// Token: 0x06011302 RID: 70402 RVA: 0x0050D390 File Offset: 0x0050B590
 	protected override void OnTickQteItem(float delta)
 	{
 		if (!this.CommonQteContext.IsPermanent)
@@ -144,23 +144,23 @@ public class CommonQteCustomOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		}
 	}
 
-	// Token: 0x06013E21 RID: 81441 RVA: 0x004FE634 File Offset: 0x004FC834
+	// Token: 0x06011303 RID: 70403 RVA: 0x0050D470 File Offset: 0x0050B670
 	protected override bool IsUseBaseAction()
 	{
 		return false;
 	}
 
-	// Token: 0x040095D0 RID: 38352
+	// Token: 0x04009727 RID: 38695
 	private int PreloadQteId;
 
-	// Token: 0x040095D1 RID: 38353
+	// Token: 0x04009728 RID: 38696
 	private readonly List<CommonQteCustomOptionItem> OptionItemList = new List<CommonQteCustomOptionItem>();
 
-	// Token: 0x02008C50 RID: 35920
+	// Token: 0x02007DD9 RID: 32217
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402D8CB RID: 186571
+		// Token: 0x04028BE2 RID: 166882
 		OffsetPanel
 	}
 }

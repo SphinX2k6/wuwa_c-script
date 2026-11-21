@@ -7,19 +7,19 @@ using AkiClient.Game.Aki.Character.Vision;
 using CSharpScript.Utils;
 using UnrealEngine;
 
-// Token: 0x02002ED4 RID: 11988
+// Token: 0x02002427 RID: 9255
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 {
-	// Token: 0x060199D5 RID: 104917 RVA: 0x006A6622 File Offset: 0x006A4822
+	// Token: 0x060172D4 RID: 94932 RVA: 0x006CC7C6 File Offset: 0x006CA9C6
 	static CharacterPassiveSkillCustomAction()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterPassiveSkillCustomAction.CreateStaticDefaultValue), new Action(CharacterPassiveSkillCustomAction.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700236D RID: 9069
-	// (get) Token: 0x060199D6 RID: 104918 RVA: 0x006A6641 File Offset: 0x006A4841
+	// Token: 0x17002422 RID: 9250
+	// (get) Token: 0x060172D5 RID: 94933 RVA: 0x006CC7E5 File Offset: 0x006CA9E5
 	private static Dictionary<string, Func<TFormulaValue[], TFormulaValue>> BuiltinFunc
 	{
 		get
@@ -28,7 +28,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060199D7 RID: 104919 RVA: 0x006A6648 File Offset: 0x006A4848
+	// Token: 0x060172D6 RID: 94934 RVA: 0x006CC7EC File Offset: 0x006CA9EC
 	[NullableContext(2)]
 	private static ContextParam GetContext(TFormulaValue value)
 	{
@@ -40,7 +40,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x060199D8 RID: 104920 RVA: 0x006A6668 File Offset: 0x006A4868
+	// Token: 0x060172D7 RID: 94935 RVA: 0x006CC80C File Offset: 0x006CAA0C
 	[NullableContext(2)]
 	private static Entity GetEntityOrNull(TFormulaValue value)
 	{
@@ -52,7 +52,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x060199D9 RID: 104921 RVA: 0x006A6684 File Offset: 0x006A4884
+	// Token: 0x060172D8 RID: 94936 RVA: 0x006CC828 File Offset: 0x006CAA28
 	private static TFormulaValue FromJsonElement(JsonElement json)
 	{
 		switch (json.ValueKind)
@@ -117,7 +117,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		return default(TFormulaValue);
 	}
 
-	// Token: 0x060199DA RID: 104922 RVA: 0x006A683C File Offset: 0x006A4A3C
+	// Token: 0x060172D9 RID: 94937 RVA: 0x006CC9E0 File Offset: 0x006CABE0
 	private static long GetInstigatorId([Nullable(2)] Entity instigator, CharacterBuffComponent buffComp)
 	{
 		CreatureDataComponent creatureDataComponent = (instigator != null) ? instigator.GetComponent<CreatureDataComponent>() : null;
@@ -129,7 +129,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		return buffComp.CreatureDataId;
 	}
 
-	// Token: 0x060199DB RID: 104923 RVA: 0x006A6888 File Offset: 0x006A4A88
+	// Token: 0x060172DA RID: 94938 RVA: 0x006CCA2C File Offset: 0x006CAC2C
 	[NullableContext(2)]
 	private unsafe static bool AddCustomBuff([Nullable(1)] ContextParam context, Entity targetEntity, long buffId, int stackCount, Entity instigator)
 	{
@@ -167,7 +167,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x060199DC RID: 104924 RVA: 0x006A69EC File Offset: 0x006A4BEC
+	// Token: 0x060172DB RID: 94939 RVA: 0x006CCB90 File Offset: 0x006CAD90
 	private static bool AddCustomBulletInternal(Entity owner, Entity attacker, Entity target, long bulletId, string[] hitCaseArray, int hitCaseIndex, long skillId, long? combatMessageId)
 	{
 		if (!attacker.Valid || !target.Valid)
@@ -207,7 +207,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x060199DD RID: 104925 RVA: 0x006A6AEC File Offset: 0x006A4CEC
+	// Token: 0x060172DC RID: 94940 RVA: 0x006CCC90 File Offset: 0x006CAE90
 	private unsafe static TFormulaValue RefreshBuffDuration(TFormulaValue[] args)
 	{
 		ContextParam context = CharacterPassiveSkillCustomAction.GetContext(args[0]);
@@ -233,7 +233,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		return TFormulaValue.FromBool(true);
 	}
 
-	// Token: 0x060199DE RID: 104926 RVA: 0x006A6BC8 File Offset: 0x006A4DC8
+	// Token: 0x060172DD RID: 94941 RVA: 0x006CCD6C File Offset: 0x006CAF6C
 	private unsafe static TFormulaValue UpdateTag(TFormulaValue[] args)
 	{
 		ContextParam context = CharacterPassiveSkillCustomAction.GetContext(args[0]);
@@ -266,7 +266,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		return TFormulaValue.FromBool(true);
 	}
 
-	// Token: 0x060199DF RID: 104927 RVA: 0x006A6D0C File Offset: 0x006A4F0C
+	// Token: 0x060172DE RID: 94942 RVA: 0x006CCEB0 File Offset: 0x006CB0B0
 	private static TFormulaValue AddBuffByArray(TFormulaValue[] args)
 	{
 		ContextParam context = CharacterPassiveSkillCustomAction.GetContext(args[0]);
@@ -288,7 +288,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		return TFormulaValue.FromBool(CharacterPassiveSkillCustomAction.AddCustomBuff(context, entityOrNull, array[num], stackCount, instigator));
 	}
 
-	// Token: 0x060199E0 RID: 104928 RVA: 0x006A6DCC File Offset: 0x006A4FCC
+	// Token: 0x060172DF RID: 94943 RVA: 0x006CCF70 File Offset: 0x006CB170
 	private static TFormulaValue EndAbilityVision(TFormulaValue[] args)
 	{
 		Entity entityOrNull = CharacterPassiveSkillCustomAction.GetEntityOrNull(args[1]);
@@ -301,7 +301,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		return TFormulaValue.FromBool(true);
 	}
 
-	// Token: 0x060199E1 RID: 104929 RVA: 0x006A6E1C File Offset: 0x006A501C
+	// Token: 0x060172E0 RID: 94944 RVA: 0x006CCFC0 File Offset: 0x006CB1C0
 	private static TFormulaValue AddCustomBullet(TFormulaValue[] args)
 	{
 		CharacterPassiveSkillCustomAction.<>c__DisplayClass14_0 CS$<>8__locals1 = new CharacterPassiveSkillCustomAction.<>c__DisplayClass14_0();
@@ -334,7 +334,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		return TFormulaValue.FromBool(true);
 	}
 
-	// Token: 0x060199E2 RID: 104930 RVA: 0x006A6F88 File Offset: 0x006A5188
+	// Token: 0x060172E1 RID: 94945 RVA: 0x006CD12C File Offset: 0x006CB32C
 	private static TFormulaValue ExecDamage(TFormulaValue[] args)
 	{
 		ContextParam context = CharacterPassiveSkillCustomAction.GetContext(args[0]);
@@ -373,7 +373,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		return TFormulaValue.FromBool(true);
 	}
 
-	// Token: 0x060199E3 RID: 104931 RVA: 0x006A70A8 File Offset: 0x006A52A8
+	// Token: 0x060172E2 RID: 94946 RVA: 0x006CD24C File Offset: 0x006CB44C
 	private unsafe static TFormulaValue RemoveBuffStack(TFormulaValue[] args)
 	{
 		ContextParam context = CharacterPassiveSkillCustomAction.GetContext(args[0]);
@@ -409,7 +409,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		return TFormulaValue.FromBool(true);
 	}
 
-	// Token: 0x060199E4 RID: 104932 RVA: 0x006A71E4 File Offset: 0x006A53E4
+	// Token: 0x060172E3 RID: 94947 RVA: 0x006CD388 File Offset: 0x006CB588
 	[return: Nullable(2)]
 	public static Formula AddCustomAction(PassiveSkill? config, Entity owner, Dictionary<string, Func<TFormulaValue[], TFormulaValue>> buildInFunctions)
 	{
@@ -427,7 +427,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		return new Formula(config.Value.SkillActionScript).SetBuiltinFunctions(builtinFunctions).SetContextBuiltinFunctions(CharacterPassiveSkillCustomAction.BuiltinFunc).SetDefaultParams(config.Value.ActionScriptParams).SetDefaultParam("Owner", TFormulaValue.FromEntity(owner));
 	}
 
-	// Token: 0x060199E5 RID: 104933 RVA: 0x006A727C File Offset: 0x006A547C
+	// Token: 0x060172E4 RID: 94948 RVA: 0x006CD420 File Offset: 0x006CB620
 	public static void CreateStaticDefaultValue()
 	{
 		Dictionary<string, Func<TFormulaValue[], TFormulaValue>> dictionary = new Dictionary<string, Func<TFormulaValue[], TFormulaValue>>();
@@ -492,13 +492,13 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		CharacterPassiveSkillCustomAction._builtinFunc = dictionary;
 	}
 
-	// Token: 0x060199E6 RID: 104934 RVA: 0x006A73C7 File Offset: 0x006A55C7
+	// Token: 0x060172E5 RID: 94949 RVA: 0x006CD56B File Offset: 0x006CB76B
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterPassiveSkillCustomAction._builtinFunc = null;
 	}
 
-	// Token: 0x0400BFCB RID: 49099
+	// Token: 0x0400C366 RID: 50022
 	[Nullable(new byte[]
 	{
 		2,
@@ -508,11 +508,11 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 	})]
 	private static Dictionary<string, Func<TFormulaValue[], TFormulaValue>> _builtinFunc;
 
-	// Token: 0x020095F7 RID: 38391
+	// Token: 0x0200881C RID: 34844
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04030215 RID: 197141
+		// Token: 0x0402B8A9 RID: 178345
 		[Nullable(new byte[]
 		{
 			0,
@@ -520,7 +520,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		})]
 		public static Func<TFormulaValue[], TFormulaValue> <0>__RefreshBuffDuration;
 
-		// Token: 0x04030216 RID: 197142
+		// Token: 0x0402B8AA RID: 178346
 		[Nullable(new byte[]
 		{
 			0,
@@ -528,7 +528,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		})]
 		public static Func<TFormulaValue[], TFormulaValue> <1>__UpdateTag;
 
-		// Token: 0x04030217 RID: 197143
+		// Token: 0x0402B8AB RID: 178347
 		[Nullable(new byte[]
 		{
 			0,
@@ -536,7 +536,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		})]
 		public static Func<TFormulaValue[], TFormulaValue> <2>__AddBuffByArray;
 
-		// Token: 0x04030218 RID: 197144
+		// Token: 0x0402B8AC RID: 178348
 		[Nullable(new byte[]
 		{
 			0,
@@ -544,7 +544,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		})]
 		public static Func<TFormulaValue[], TFormulaValue> <3>__EndAbilityVision;
 
-		// Token: 0x04030219 RID: 197145
+		// Token: 0x0402B8AD RID: 178349
 		[Nullable(new byte[]
 		{
 			0,
@@ -552,7 +552,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		})]
 		public static Func<TFormulaValue[], TFormulaValue> <4>__AddCustomBullet;
 
-		// Token: 0x0403021A RID: 197146
+		// Token: 0x0402B8AE RID: 178350
 		[Nullable(new byte[]
 		{
 			0,
@@ -560,7 +560,7 @@ public class CharacterPassiveSkillCustomAction : IStaticVariableResetter
 		})]
 		public static Func<TFormulaValue[], TFormulaValue> <5>__ExecDamage;
 
-		// Token: 0x0403021B RID: 197147
+		// Token: 0x0402B8AF RID: 178351
 		[Nullable(new byte[]
 		{
 			0,

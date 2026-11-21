@@ -4,14 +4,14 @@ using CSharpScript.Game.Module.TrainingDegree;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057C7 RID: 22471
+	// Token: 0x0200479E RID: 18334
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardExploreBar : IRewardExploreBar
 	{
-		// Token: 0x1700899B RID: 35227
-		// (get) Token: 0x0603923D RID: 234045 RVA: 0x00D90061 File Offset: 0x00D8E261
-		// (set) Token: 0x0603923E RID: 234046 RVA: 0x00D90069 File Offset: 0x00D8E269
+		// Token: 0x17005D63 RID: 23907
+		// (get) Token: 0x0602E14D RID: 188749 RVA: 0x00CDEE99 File Offset: 0x00CDD099
+		// (set) Token: 0x0602E14E RID: 188750 RVA: 0x00CDEEA1 File Offset: 0x00CDD0A1
 		public TrainingData TrainingData { get; set; }
 	}
 }

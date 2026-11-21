@@ -2,55 +2,55 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200617D RID: 24957
+	// Token: 0x020067E8 RID: 26600
 	public class IAirPassageMoveT
 	{
-		// Token: 0x1700BA16 RID: 47638
-		// (get) Token: 0x0602AFD4 RID: 176084 RVA: 0x005EE751 File Offset: 0x005EC951
-		// (set) Token: 0x0602AFD5 RID: 176085 RVA: 0x005EE759 File Offset: 0x005EC959
+		// Token: 0x1700C394 RID: 50068
+		// (get) Token: 0x0602D705 RID: 186117 RVA: 0x00638FC5 File Offset: 0x006371C5
+		// (set) Token: 0x0602D706 RID: 186118 RVA: 0x00638FCD File Offset: 0x006371CD
 		public ESplineMovePattern Type { get; set; }
 
-		// Token: 0x1700BA17 RID: 47639
-		// (get) Token: 0x0602AFD6 RID: 176086 RVA: 0x005EE762 File Offset: 0x005EC962
-		// (set) Token: 0x0602AFD7 RID: 176087 RVA: 0x005EE76A File Offset: 0x005EC96A
+		// Token: 0x1700C395 RID: 50069
+		// (get) Token: 0x0602D707 RID: 186119 RVA: 0x00638FD6 File Offset: 0x006371D6
+		// (set) Token: 0x0602D708 RID: 186120 RVA: 0x00638FDE File Offset: 0x006371DE
 		public float MaxOffsetDistance { get; set; }
 
-		// Token: 0x1700BA18 RID: 47640
-		// (get) Token: 0x0602AFD8 RID: 176088 RVA: 0x005EE773 File Offset: 0x005EC973
-		// (set) Token: 0x0602AFD9 RID: 176089 RVA: 0x005EE77B File Offset: 0x005EC97B
+		// Token: 0x1700C396 RID: 50070
+		// (get) Token: 0x0602D709 RID: 186121 RVA: 0x00638FE7 File Offset: 0x006371E7
+		// (set) Token: 0x0602D70A RID: 186122 RVA: 0x00638FEF File Offset: 0x006371EF
 		public bool IsOneWay { get; set; }
 
-		// Token: 0x1700BA19 RID: 47641
-		// (get) Token: 0x0602AFDA RID: 176090 RVA: 0x005EE784 File Offset: 0x005EC984
-		// (set) Token: 0x0602AFDB RID: 176091 RVA: 0x005EE78C File Offset: 0x005EC98C
+		// Token: 0x1700C397 RID: 50071
+		// (get) Token: 0x0602D70B RID: 186123 RVA: 0x00638FF8 File Offset: 0x006371F8
+		// (set) Token: 0x0602D70C RID: 186124 RVA: 0x00639000 File Offset: 0x00637200
 		public float LayerVerticalLimit { get; set; }
 
-		// Token: 0x1700BA1A RID: 47642
-		// (get) Token: 0x0602AFDC RID: 176092 RVA: 0x005EE795 File Offset: 0x005EC995
-		// (set) Token: 0x0602AFDD RID: 176093 RVA: 0x005EE79D File Offset: 0x005EC99D
+		// Token: 0x1700C398 RID: 50072
+		// (get) Token: 0x0602D70D RID: 186125 RVA: 0x00639009 File Offset: 0x00637209
+		// (set) Token: 0x0602D70E RID: 186126 RVA: 0x00639011 File Offset: 0x00637211
 		public bool DynamicGravity { get; set; }
 
-		// Token: 0x1700BA1B RID: 47643
-		// (get) Token: 0x0602AFDE RID: 176094 RVA: 0x005EE7A6 File Offset: 0x005EC9A6
-		// (set) Token: 0x0602AFDF RID: 176095 RVA: 0x005EE7AE File Offset: 0x005EC9AE
+		// Token: 0x1700C399 RID: 50073
+		// (get) Token: 0x0602D70F RID: 186127 RVA: 0x0063901A File Offset: 0x0063721A
+		// (set) Token: 0x0602D710 RID: 186128 RVA: 0x00639022 File Offset: 0x00637222
 		public float GravitySwitchAngularVelocity { get; set; }
 
-		// Token: 0x1700BA1C RID: 47644
-		// (get) Token: 0x0602AFE0 RID: 176096 RVA: 0x005EE7B7 File Offset: 0x005EC9B7
-		// (set) Token: 0x0602AFE1 RID: 176097 RVA: 0x005EE7BF File Offset: 0x005EC9BF
+		// Token: 0x1700C39A RID: 50074
+		// (get) Token: 0x0602D711 RID: 186129 RVA: 0x0063902B File Offset: 0x0063722B
+		// (set) Token: 0x0602D712 RID: 186130 RVA: 0x00639033 File Offset: 0x00637233
 		public int AutoExitDistance { get; set; }
 
-		// Token: 0x1700BA1D RID: 47645
-		// (get) Token: 0x0602AFE2 RID: 176098 RVA: 0x005EE7C8 File Offset: 0x005EC9C8
-		// (set) Token: 0x0602AFE3 RID: 176099 RVA: 0x005EE7D0 File Offset: 0x005EC9D0
+		// Token: 0x1700C39B RID: 50075
+		// (get) Token: 0x0602D713 RID: 186131 RVA: 0x0063903C File Offset: 0x0063723C
+		// (set) Token: 0x0602D714 RID: 186132 RVA: 0x00639044 File Offset: 0x00637244
 		public IAirPassageMoveLimitT Limit { get; set; }
 
-		// Token: 0x1700BA1E RID: 47646
-		// (get) Token: 0x0602AFE4 RID: 176100 RVA: 0x005EE7D9 File Offset: 0x005EC9D9
-		// (set) Token: 0x0602AFE5 RID: 176101 RVA: 0x005EE7E1 File Offset: 0x005EC9E1
+		// Token: 0x1700C39C RID: 50076
+		// (get) Token: 0x0602D715 RID: 186133 RVA: 0x0063904D File Offset: 0x0063724D
+		// (set) Token: 0x0602D716 RID: 186134 RVA: 0x00639055 File Offset: 0x00637255
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602AFE6 RID: 176102 RVA: 0x005EE7EC File Offset: 0x005EC9EC
+		// Token: 0x0602D717 RID: 186135 RVA: 0x00639060 File Offset: 0x00637260
 		public IAirPassageMoveT()
 		{
 			this.Type = ESplineMovePattern.PathLine;

@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020028D8 RID: 10456
+// Token: 0x02001E53 RID: 7763
 public class RoleUiDefine : IStaticVariableResetter
 {
-	// Token: 0x06015960 RID: 88416 RVA: 0x00572904 File Offset: 0x00570B04
+	// Token: 0x06013364 RID: 78692 RVA: 0x0059D7CD File Offset: 0x0059B9CD
 	static RoleUiDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleUiDefine.CreateStaticDefaultValue), new Action(RoleUiDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06015961 RID: 88417 RVA: 0x00572924 File Offset: 0x00570B24
+	// Token: 0x06013365 RID: 78693 RVA: 0x0059D7EC File Offset: 0x0059B9EC
 	public static void CreateStaticDefaultValue()
 	{
 		RoleUiDefine.roleSystemModeUiParam = new Dictionary<ERoleSystemMode, IRoleSystemUiParams>
@@ -94,13 +94,13 @@ public class RoleUiDefine : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06015962 RID: 88418 RVA: 0x00572AB2 File Offset: 0x00570CB2
+	// Token: 0x06013366 RID: 78694 RVA: 0x0059D97A File Offset: 0x0059BB7A
 	public static void ResetStaticDefaultValue()
 	{
 		RoleUiDefine.roleSystemModeUiParam = null;
 	}
 
-	// Token: 0x0400A0AE RID: 41134
+	// Token: 0x0400A498 RID: 42136
 	[Nullable(new byte[]
 	{
 		2,

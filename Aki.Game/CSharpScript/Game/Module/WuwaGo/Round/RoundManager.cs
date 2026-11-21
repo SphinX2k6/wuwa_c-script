@@ -10,18 +10,18 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Round
 {
-	// Token: 0x02004729 RID: 18217
+	// Token: 0x0200365A RID: 13914
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoundManager : IStaticVariableResetter
 	{
-		// Token: 0x0602F9A8 RID: 194984 RVA: 0x00B06DB3 File Offset: 0x00B04FB3
+		// Token: 0x06024172 RID: 147826 RVA: 0x00A36C3F File Offset: 0x00A34E3F
 		static RoundManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RoundManager.CreateStaticDefaultValue), new Action(RoundManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602F9A9 RID: 194985 RVA: 0x00B06DD4 File Offset: 0x00B04FD4
+		// Token: 0x06024173 RID: 147827 RVA: 0x00A36C60 File Offset: 0x00A34E60
 		public static void CreateStaticDefaultValue()
 		{
 			List<RoundManager.RoundSequenceNode> list = new List<RoundManager.RoundSequenceNode>();
@@ -37,14 +37,14 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			RoundManager._resolutionSequence = list;
 		}
 
-		// Token: 0x0602F9AA RID: 194986 RVA: 0x00B06EE7 File Offset: 0x00B050E7
+		// Token: 0x06024174 RID: 147828 RVA: 0x00A36D73 File Offset: 0x00A34F73
 		public static void ResetStaticDefaultValue()
 		{
 			RoundManager._resolutionSequence = null;
 		}
 
-		// Token: 0x170076F3 RID: 30451
-		// (get) Token: 0x0602F9AB RID: 194987 RVA: 0x00B06EF0 File Offset: 0x00B050F0
+		// Token: 0x170049AF RID: 18863
+		// (get) Token: 0x06024175 RID: 147829 RVA: 0x00A36D7C File Offset: 0x00A34F7C
 		[Nullable(2)]
 		public WuWaGoRoleController CurProcessUnit
 		{
@@ -60,23 +60,23 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			}
 		}
 
-		// Token: 0x170076F4 RID: 30452
-		// (get) Token: 0x0602F9AC RID: 194988 RVA: 0x00B06F0F File Offset: 0x00B0510F
-		// (set) Token: 0x0602F9AD RID: 194989 RVA: 0x00B06F17 File Offset: 0x00B05117
+		// Token: 0x170049B0 RID: 18864
+		// (get) Token: 0x06024176 RID: 147830 RVA: 0x00A36D9B File Offset: 0x00A34F9B
+		// (set) Token: 0x06024177 RID: 147831 RVA: 0x00A36DA3 File Offset: 0x00A34FA3
 		public bool IsBusy { get; private set; }
 
-		// Token: 0x170076F5 RID: 30453
-		// (get) Token: 0x0602F9AE RID: 194990 RVA: 0x00B06F20 File Offset: 0x00B05120
-		// (set) Token: 0x0602F9AF RID: 194991 RVA: 0x00B06F28 File Offset: 0x00B05128
+		// Token: 0x170049B1 RID: 18865
+		// (get) Token: 0x06024178 RID: 147832 RVA: 0x00A36DAC File Offset: 0x00A34FAC
+		// (set) Token: 0x06024179 RID: 147833 RVA: 0x00A36DB4 File Offset: 0x00A34FB4
 		public ERoundStep? CurrentStep { get; private set; }
 
-		// Token: 0x170076F6 RID: 30454
-		// (get) Token: 0x0602F9B0 RID: 194992 RVA: 0x00B06F31 File Offset: 0x00B05131
-		// (set) Token: 0x0602F9B1 RID: 194993 RVA: 0x00B06F39 File Offset: 0x00B05139
+		// Token: 0x170049B2 RID: 18866
+		// (get) Token: 0x0602417A RID: 147834 RVA: 0x00A36DBD File Offset: 0x00A34FBD
+		// (set) Token: 0x0602417B RID: 147835 RVA: 0x00A36DC5 File Offset: 0x00A34FC5
 		[Nullable(2)]
 		public string CurrentProcessDebugName { [NullableContext(2)] get; [NullableContext(2)] private set; }
 
-		// Token: 0x0602F9B2 RID: 194994 RVA: 0x00B06F44 File Offset: 0x00B05144
+		// Token: 0x0602417C RID: 147836 RVA: 0x00A36DD0 File Offset: 0x00A34FD0
 		public void Init(WuWaGoGameData gameData, IWuWaGoGridMutationService gridMutationService, [Nullable(new byte[]
 		{
 			2,
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			this.StepExecutors[ERoundStep.BowTrap] = value;
 		}
 
-		// Token: 0x0602F9B3 RID: 194995 RVA: 0x00B0703C File Offset: 0x00B0523C
+		// Token: 0x0602417D RID: 147837 RVA: 0x00A36EC8 File Offset: 0x00A350C8
 		public void RegisterUnit(ERoundStep step, IExecutableUnit unit)
 		{
 			List<IExecutableUnit> list;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			}
 		}
 
-		// Token: 0x0602F9B4 RID: 194996 RVA: 0x00B07060 File Offset: 0x00B05260
+		// Token: 0x0602417E RID: 147838 RVA: 0x00A36EEC File Offset: 0x00A350EC
 		public void Clear()
 		{
 			this.ExecutionToken++;
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			this.HasMoveMonsterActed = false;
 		}
 
-		// Token: 0x0602F9B5 RID: 194997 RVA: 0x00B070F8 File Offset: 0x00B052F8
+		// Token: 0x0602417F RID: 147839 RVA: 0x00A36F84 File Offset: 0x00A35184
 		public void ResetForRollback()
 		{
 			this.ExecutionToken++;
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			this.HasMoveMonsterActed = false;
 		}
 
-		// Token: 0x0602F9B6 RID: 194998 RVA: 0x00B07140 File Offset: 0x00B05340
+		// Token: 0x06024180 RID: 147840 RVA: 0x00A36FCC File Offset: 0x00A351CC
 		public unsafe void RemoveController(WuWaGoRoleController controller)
 		{
 			ERoundStep eroundStep = controller.BaseRole.IsMonster ? ERoundStep.MonsterAction : ERoundStep.PlayerAction;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			}
 		}
 
-		// Token: 0x0602F9B7 RID: 194999 RVA: 0x00B071E8 File Offset: 0x00B053E8
+		// Token: 0x06024181 RID: 147841 RVA: 0x00A37074 File Offset: 0x00A35274
 		public void Tick(float delta)
 		{
 			if (!this.IsBusy)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			}
 		}
 
-		// Token: 0x0602F9B8 RID: 195000 RVA: 0x00B071F8 File Offset: 0x00B053F8
+		// Token: 0x06024182 RID: 147842 RVA: 0x00A37084 File Offset: 0x00A35284
 		public void EnterNextRound()
 		{
 			this.GameData.Round++;
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			this.ProcessCurrentRound(executionToken).Forget();
 		}
 
-		// Token: 0x0602F9B9 RID: 195001 RVA: 0x00B07244 File Offset: 0x00B05444
+		// Token: 0x06024183 RID: 147843 RVA: 0x00A370D0 File Offset: 0x00A352D0
 		private UniTask ProcessCurrentRound(int executionToken)
 		{
 			RoundManager.<ProcessCurrentRound>d__33 <ProcessCurrentRound>d__;
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			return <ProcessCurrentRound>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F9BA RID: 195002 RVA: 0x00B07290 File Offset: 0x00B05490
+		// Token: 0x06024184 RID: 147844 RVA: 0x00A3711C File Offset: 0x00A3531C
 		private UniTask ProcessPlayerPhase(int executionToken)
 		{
 			RoundManager.<ProcessPlayerPhase>d__34 <ProcessPlayerPhase>d__;
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			return <ProcessPlayerPhase>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F9BB RID: 195003 RVA: 0x00B072DC File Offset: 0x00B054DC
+		// Token: 0x06024185 RID: 147845 RVA: 0x00A37168 File Offset: 0x00A35368
 		private UniTask ProcessResolutionPhase(int executionToken)
 		{
 			RoundManager.<ProcessResolutionPhase>d__35 <ProcessResolutionPhase>d__;
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			return <ProcessResolutionPhase>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F9BC RID: 195004 RVA: 0x00B07328 File Offset: 0x00B05528
+		// Token: 0x06024186 RID: 147846 RVA: 0x00A371B4 File Offset: 0x00A353B4
 		public UniTask RunResolutionPhaseAsync()
 		{
 			RoundManager.<RunResolutionPhaseAsync>d__36 <RunResolutionPhaseAsync>d__;
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			return <RunResolutionPhaseAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F9BD RID: 195005 RVA: 0x00B0736C File Offset: 0x00B0556C
+		// Token: 0x06024187 RID: 147847 RVA: 0x00A371F8 File Offset: 0x00A353F8
 		private UniTask ProcessSequence(IReadOnlyList<RoundManager.RoundSequenceNode> sequence, int executionToken)
 		{
 			RoundManager.<ProcessSequence>d__37 <ProcessSequence>d__;
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			return <ProcessSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F9BE RID: 195006 RVA: 0x00B073C0 File Offset: 0x00B055C0
+		// Token: 0x06024188 RID: 147848 RVA: 0x00A3724C File Offset: 0x00A3544C
 		private UniTask ProcessStep(ERoundStep step, int executionToken)
 		{
 			RoundManager.<ProcessStep>d__38 <ProcessStep>d__;
@@ -263,13 +263,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			return <ProcessStep>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F9BF RID: 195007 RVA: 0x00B07413 File Offset: 0x00B05613
+		// Token: 0x06024189 RID: 147849 RVA: 0x00A3729F File Offset: 0x00A3549F
 		public bool ShouldAbortCurrentRound()
 		{
 			return this.ShouldAbortRound(this.ExecutionToken);
 		}
 
-		// Token: 0x0602F9C0 RID: 195008 RVA: 0x00B07424 File Offset: 0x00B05624
+		// Token: 0x0602418A RID: 147850 RVA: 0x00A372B0 File Offset: 0x00A354B0
 		private bool ShouldAbortRound(int executionToken)
 		{
 			if (this.ExecutionToken != executionToken)
@@ -289,19 +289,19 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			return gridById != null && gridById.IsEndPoint;
 		}
 
-		// Token: 0x0602F9C1 RID: 195009 RVA: 0x00B07473 File Offset: 0x00B05673
+		// Token: 0x0602418B RID: 147851 RVA: 0x00A372FF File Offset: 0x00A354FF
 		public void NotifyMoveMonsterActed()
 		{
 			this.HasMoveMonsterActed = true;
 		}
 
-		// Token: 0x0602F9C2 RID: 195010 RVA: 0x00B0747C File Offset: 0x00B0567C
+		// Token: 0x0602418C RID: 147852 RVA: 0x00A37308 File Offset: 0x00A35508
 		private IRoundStepExecutor GetStepExecutor(ERoundStep step)
 		{
 			return this.StepExecutors.GetValueOrDefault(step) ?? this.DefaultStepExecutor;
 		}
 
-		// Token: 0x0602F9C3 RID: 195011 RVA: 0x00B07494 File Offset: 0x00B05694
+		// Token: 0x0602418D RID: 147853 RVA: 0x00A37320 File Offset: 0x00A35520
 		[NullableContext(2)]
 		private void SetCurrentProcess(IExecutableUnit unit = null, string debugName = null)
 		{
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			this.CurrentProcessDebugName = currentProcessDebugName;
 		}
 
-		// Token: 0x0602F9C4 RID: 195012 RVA: 0x00B074F0 File Offset: 0x00B056F0
+		// Token: 0x0602418E RID: 147854 RVA: 0x00A3737C File Offset: 0x00A3557C
 		public RoundManager()
 		{
 			Dictionary<ERoundStep, List<IExecutableUnit>> dictionary = new Dictionary<ERoundStep, List<IExecutableUnit>>();
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			base..ctor();
 		}
 
-		// Token: 0x04019B48 RID: 105288
+		// Token: 0x040141F8 RID: 82424
 		[Nullable(new byte[]
 		{
 			2,
@@ -349,33 +349,33 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 		})]
 		private static IReadOnlyList<RoundManager.RoundSequenceNode> _resolutionSequence;
 
-		// Token: 0x04019B49 RID: 105289
+		// Token: 0x040141F9 RID: 82425
 		protected WuWaGoGameData GameData;
 
-		// Token: 0x04019B4A RID: 105290
+		// Token: 0x040141FA RID: 82426
 		private readonly Dictionary<ERoundStep, List<IExecutableUnit>> StepUnits;
 
-		// Token: 0x04019B4B RID: 105291
+		// Token: 0x040141FB RID: 82427
 		[Nullable(2)]
 		private IExecutableUnit CurProcess;
 
-		// Token: 0x04019B4C RID: 105292
+		// Token: 0x040141FC RID: 82428
 		private bool HasMoveMonsterActed;
 
-		// Token: 0x04019B4D RID: 105293
+		// Token: 0x040141FD RID: 82429
 		private int ExecutionToken;
 
-		// Token: 0x04019B4E RID: 105294
+		// Token: 0x040141FE RID: 82430
 		private readonly Dictionary<ERoundStep, IRoundStepExecutor> StepExecutors;
 
-		// Token: 0x04019B4F RID: 105295
+		// Token: 0x040141FF RID: 82431
 		private IRoundStepExecutor DefaultStepExecutor;
 
-		// Token: 0x0200A985 RID: 43397
+		// Token: 0x0200933F RID: 37695
 		[Nullable(0)]
 		private class RoundSequenceNode : IEquatable<RoundManager.RoundSequenceNode>
 		{
-			// Token: 0x0604D6E1 RID: 317153 RVA: 0x0145F8EE File Offset: 0x0145DAEE
+			// Token: 0x06043C05 RID: 277509 RVA: 0x0140DEAA File Offset: 0x0140C0AA
 			public RoundSequenceNode(ERoundStep Step, string PhaseTag, [Nullable(new byte[]
 			{
 				2,
@@ -388,8 +388,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 				base..ctor();
 			}
 
-			// Token: 0x1700A153 RID: 41299
-			// (get) Token: 0x0604D6E2 RID: 317154 RVA: 0x0145F90B File Offset: 0x0145DB0B
+			// Token: 0x170078E9 RID: 30953
+			// (get) Token: 0x06043C06 RID: 277510 RVA: 0x0140DEC7 File Offset: 0x0140C0C7
 			[CompilerGenerated]
 			protected virtual Type EqualityContract
 			{
@@ -400,19 +400,19 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 				}
 			}
 
-			// Token: 0x1700A154 RID: 41300
-			// (get) Token: 0x0604D6E3 RID: 317155 RVA: 0x0145F917 File Offset: 0x0145DB17
-			// (set) Token: 0x0604D6E4 RID: 317156 RVA: 0x0145F91F File Offset: 0x0145DB1F
+			// Token: 0x170078EA RID: 30954
+			// (get) Token: 0x06043C07 RID: 277511 RVA: 0x0140DED3 File Offset: 0x0140C0D3
+			// (set) Token: 0x06043C08 RID: 277512 RVA: 0x0140DEDB File Offset: 0x0140C0DB
 			public ERoundStep Step { get; set; }
 
-			// Token: 0x1700A155 RID: 41301
-			// (get) Token: 0x0604D6E5 RID: 317157 RVA: 0x0145F928 File Offset: 0x0145DB28
-			// (set) Token: 0x0604D6E6 RID: 317158 RVA: 0x0145F930 File Offset: 0x0145DB30
+			// Token: 0x170078EB RID: 30955
+			// (get) Token: 0x06043C09 RID: 277513 RVA: 0x0140DEE4 File Offset: 0x0140C0E4
+			// (set) Token: 0x06043C0A RID: 277514 RVA: 0x0140DEEC File Offset: 0x0140C0EC
 			public string PhaseTag { get; set; }
 
-			// Token: 0x1700A156 RID: 41302
-			// (get) Token: 0x0604D6E7 RID: 317159 RVA: 0x0145F939 File Offset: 0x0145DB39
-			// (set) Token: 0x0604D6E8 RID: 317160 RVA: 0x0145F941 File Offset: 0x0145DB41
+			// Token: 0x170078EC RID: 30956
+			// (get) Token: 0x06043C0B RID: 277515 RVA: 0x0140DEF5 File Offset: 0x0140C0F5
+			// (set) Token: 0x06043C0C RID: 277516 RVA: 0x0140DEFD File Offset: 0x0140C0FD
 			[Nullable(new byte[]
 			{
 				2,
@@ -428,7 +428,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 				1
 			})] set; }
 
-			// Token: 0x0604D6E9 RID: 317161 RVA: 0x0145F94C File Offset: 0x0145DB4C
+			// Token: 0x06043C0D RID: 277517 RVA: 0x0140DF08 File Offset: 0x0140C108
 			[CompilerGenerated]
 			public override string ToString()
 			{
@@ -443,7 +443,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 				return stringBuilder.ToString();
 			}
 
-			// Token: 0x0604D6EA RID: 317162 RVA: 0x0145F998 File Offset: 0x0145DB98
+			// Token: 0x06043C0E RID: 277518 RVA: 0x0140DF54 File Offset: 0x0140C154
 			[CompilerGenerated]
 			protected virtual bool PrintMembers(StringBuilder builder)
 			{
@@ -457,7 +457,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 				return true;
 			}
 
-			// Token: 0x0604D6EB RID: 317163 RVA: 0x0145FA04 File Offset: 0x0145DC04
+			// Token: 0x06043C0F RID: 277519 RVA: 0x0140DFC0 File Offset: 0x0140C1C0
 			[NullableContext(2)]
 			[CompilerGenerated]
 			public static bool operator !=(RoundManager.RoundSequenceNode left, RoundManager.RoundSequenceNode right)
@@ -465,7 +465,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 				return !(left == right);
 			}
 
-			// Token: 0x0604D6EC RID: 317164 RVA: 0x0145FA10 File Offset: 0x0145DC10
+			// Token: 0x06043C10 RID: 277520 RVA: 0x0140DFCC File Offset: 0x0140C1CC
 			[NullableContext(2)]
 			[CompilerGenerated]
 			public static bool operator ==(RoundManager.RoundSequenceNode left, RoundManager.RoundSequenceNode right)
@@ -473,14 +473,14 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 				return left == right || (left != null && left.Equals(right));
 			}
 
-			// Token: 0x0604D6ED RID: 317165 RVA: 0x0145FA24 File Offset: 0x0145DC24
+			// Token: 0x06043C11 RID: 277521 RVA: 0x0140DFE0 File Offset: 0x0140C1E0
 			[CompilerGenerated]
 			public override int GetHashCode()
 			{
 				return ((EqualityComparer<Type>.Default.GetHashCode(this.EqualityContract) * -1521134295 + EqualityComparer<ERoundStep>.Default.GetHashCode(this.<Step>k__BackingField)) * -1521134295 + EqualityComparer<string>.Default.GetHashCode(this.<PhaseTag>k__BackingField)) * -1521134295 + EqualityComparer<Func<RoundManager, bool>>.Default.GetHashCode(this.<ShouldExecute>k__BackingField);
 			}
 
-			// Token: 0x0604D6EE RID: 317166 RVA: 0x0145FA86 File Offset: 0x0145DC86
+			// Token: 0x06043C12 RID: 277522 RVA: 0x0140E042 File Offset: 0x0140C242
 			[NullableContext(2)]
 			[CompilerGenerated]
 			public override bool Equals(object obj)
@@ -488,7 +488,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 				return this.Equals(obj as RoundManager.RoundSequenceNode);
 			}
 
-			// Token: 0x0604D6EF RID: 317167 RVA: 0x0145FA94 File Offset: 0x0145DC94
+			// Token: 0x06043C13 RID: 277523 RVA: 0x0140E050 File Offset: 0x0140C250
 			[NullableContext(2)]
 			[CompilerGenerated]
 			public virtual bool Equals(RoundManager.RoundSequenceNode other)
@@ -496,7 +496,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 				return this == other || (other != null && this.EqualityContract == other.EqualityContract && EqualityComparer<ERoundStep>.Default.Equals(this.<Step>k__BackingField, other.<Step>k__BackingField) && EqualityComparer<string>.Default.Equals(this.<PhaseTag>k__BackingField, other.<PhaseTag>k__BackingField) && EqualityComparer<Func<RoundManager, bool>>.Default.Equals(this.<ShouldExecute>k__BackingField, other.<ShouldExecute>k__BackingField));
 			}
 
-			// Token: 0x0604D6F1 RID: 317169 RVA: 0x0145FB0D File Offset: 0x0145DD0D
+			// Token: 0x06043C15 RID: 277525 RVA: 0x0140E0C9 File Offset: 0x0140C2C9
 			[CompilerGenerated]
 			protected RoundSequenceNode(RoundManager.RoundSequenceNode original)
 			{
@@ -505,7 +505,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 				this.ShouldExecute = original.<ShouldExecute>k__BackingField;
 			}
 
-			// Token: 0x0604D6F2 RID: 317170 RVA: 0x0145FB39 File Offset: 0x0145DD39
+			// Token: 0x06043C16 RID: 277526 RVA: 0x0140E0F5 File Offset: 0x0140C2F5
 			[CompilerGenerated]
 			public void Deconstruct(out ERoundStep Step, out string PhaseTag, [Nullable(new byte[]
 			{

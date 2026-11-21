@@ -4,10 +4,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DEC RID: 24044
+	// Token: 0x02004DD1 RID: 19921
 	public class SpecialEnergyBarLuhesSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D204 RID: 250372 RVA: 0x00EB7804 File Offset: 0x00EB5A04
+		// Token: 0x06032193 RID: 205203 RVA: 0x00E08D44 File Offset: 0x00E06F44
 		[NullableContext(2)]
 		public void SwitchKeyItem(SpecialEnergyBarInfo cfg)
 		{
@@ -41,14 +41,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem3.RefreshKeyEnable(this.GetKeyEnable(), false);
 		}
 
-		// Token: 0x0603D205 RID: 250373 RVA: 0x00EB7892 File Offset: 0x00EB5A92
+		// Token: 0x06032194 RID: 205204 RVA: 0x00E08DD2 File Offset: 0x00E06FD2
 		public void SetBarState(bool isAdvance = false)
 		{
 			this.IsAdvance = isAdvance;
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D206 RID: 250374 RVA: 0x00EB78A4 File Offset: 0x00EB5AA4
+		// Token: 0x06032195 RID: 205205 RVA: 0x00E08DE4 File Offset: 0x00E06FE4
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(keyEnable, isStart);
 		}
 
-		// Token: 0x0401FDCE RID: 130510
+		// Token: 0x0401A895 RID: 108693
 		private bool IsAdvance;
 	}
 }

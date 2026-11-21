@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D40 RID: 3392
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E3A RID: 3642
 	public class IBatchBulletItem
 	{
-		// Token: 0x06004D5E RID: 19806 RVA: 0x000C0792 File Offset: 0x000BE992
+		// Token: 0x0600527A RID: 21114 RVA: 0x000CBED6 File Offset: 0x000CA0D6
 		public static IBatchBulletItem Create(IBatchBulletItem? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700189B RID: 6299
-		// (get) Token: 0x06004D5F RID: 19807 RVA: 0x000C07B1 File Offset: 0x000BE9B1
+		// Token: 0x17001A01 RID: 6657
+		// (get) Token: 0x0600527B RID: 21115 RVA: 0x000CBEF5 File Offset: 0x000CA0F5
 		public virtual int Time
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700189C RID: 6300
-		// (get) Token: 0x06004D60 RID: 19808 RVA: 0x000C07C0 File Offset: 0x000BE9C0
+		// Token: 0x17001A02 RID: 6658
+		// (get) Token: 0x0600527C RID: 21116 RVA: 0x000CBF04 File Offset: 0x000CA104
 		public virtual List<IBatchBulletCaster> CasterList
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C5B RID: 11355
+		// Token: 0x04002F1B RID: 12059
 		private IBatchBulletItem Instance;
 
-		// Token: 0x04002C5C RID: 11356
+		// Token: 0x04002F1C RID: 12060
 		private List<IBatchBulletCaster> _CasterListCache;
 
-		// Token: 0x04002C5D RID: 11357
+		// Token: 0x04002F1D RID: 12061
 		private bool _CasterListInited;
 	}
 }

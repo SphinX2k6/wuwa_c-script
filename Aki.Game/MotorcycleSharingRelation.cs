@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020031FD RID: 12797
+// Token: 0x0200276C RID: 10092
 public class MotorcycleSharingRelation : NpcRelation
 {
-	// Token: 0x17002631 RID: 9777
-	// (get) Token: 0x0601B9BF RID: 113087 RVA: 0x00794B19 File Offset: 0x00792D19
+	// Token: 0x17002872 RID: 10354
+	// (get) Token: 0x06019544 RID: 103748 RVA: 0x007BD165 File Offset: 0x007BB365
 	public override ENpcRelationType RelationType
 	{
 		get

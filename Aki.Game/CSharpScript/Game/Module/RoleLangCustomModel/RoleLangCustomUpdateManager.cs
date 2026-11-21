@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleLangCustomModel
 {
-	// Token: 0x02004D7A RID: 19834
+	// Token: 0x02003D43 RID: 15683
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleLangCustomUpdateManager
 	{
-		// Token: 0x06033430 RID: 209968 RVA: 0x00BF490D File Offset: 0x00BF2B0D
+		// Token: 0x0602829E RID: 164510 RVA: 0x00B3DB2D File Offset: 0x00B3BD2D
 		public void Init()
 		{
 		}
 
-		// Token: 0x06033431 RID: 209969 RVA: 0x00BF490F File Offset: 0x00BF2B0F
+		// Token: 0x0602829F RID: 164511 RVA: 0x00B3DB2F File Offset: 0x00B3BD2F
 		public void Clear()
 		{
 			this.UpdaterMap.Clear();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			this.RunningSet.Clear();
 		}
 
-		// Token: 0x06033432 RID: 209970 RVA: 0x00BF4940 File Offset: 0x00BF2B40
+		// Token: 0x060282A0 RID: 164512 RVA: 0x00B3DB60 File Offset: 0x00B3BD60
 		public string GetPackageName(IRoleLangCustomLangPackageInfo info)
 		{
 			string roleLangStateGroup = RoleConfig.Instance.GetRoleLangStateGroup(info.RoleId);
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			});
 		}
 
-		// Token: 0x06033433 RID: 209971 RVA: 0x00BF49CC File Offset: 0x00BF2BCC
+		// Token: 0x060282A1 RID: 164513 RVA: 0x00B3DBEC File Offset: 0x00B3BDEC
 		[NullableContext(0)]
 		public UniTask<bool> StartDownload([Nullable(1)] IRoleLangCustomLangPackageInfo info)
 		{
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return <StartDownload>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033434 RID: 209972 RVA: 0x00BF4A18 File Offset: 0x00BF2C18
+		// Token: 0x060282A2 RID: 164514 RVA: 0x00B3DC38 File Offset: 0x00B3BE38
 		protected void CheckAllDownloadComplete(EResDownloadStatus state)
 		{
 			if (state == EResDownloadStatus.NoSpace)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			}
 		}
 
-		// Token: 0x06033435 RID: 209973 RVA: 0x00BF4B70 File Offset: 0x00BF2D70
+		// Token: 0x060282A3 RID: 164515 RVA: 0x00B3DD90 File Offset: 0x00B3BF90
 		public bool IsDownloading(IRoleLangCustomLangPackageInfo info)
 		{
 			string packageName = this.GetPackageName(info);
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return this.UpdaterMap.TryGetValue(packageName, out resourceDiffUpdater) && resourceDiffUpdater.UpdateStatus == EResDownloadStatus.Downloading;
 		}
 
-		// Token: 0x06033436 RID: 209974 RVA: 0x00BF4BC0 File Offset: 0x00BF2DC0
+		// Token: 0x060282A4 RID: 164516 RVA: 0x00B3DDE0 File Offset: 0x00B3BFE0
 		public unsafe void PauseDownload(IRoleLangCustomLangPackageInfo info)
 		{
 			string packageName = this.GetPackageName(info);
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			resourceDiffUpdater.Stop();
 		}
 
-		// Token: 0x06033437 RID: 209975 RVA: 0x00BF4C8C File Offset: 0x00BF2E8C
+		// Token: 0x060282A5 RID: 164517 RVA: 0x00B3DEAC File Offset: 0x00B3C0AC
 		public List<int> GetDownloadProgress(IRoleLangCustomLangPackageInfo info)
 		{
 			string packageName = this.GetPackageName(info);
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			};
 		}
 
-		// Token: 0x06033438 RID: 209976 RVA: 0x00BF4D34 File Offset: 0x00BF2F34
+		// Token: 0x060282A6 RID: 164518 RVA: 0x00B3DF54 File Offset: 0x00B3C154
 		public long GetDownloadingSavedSizeTotal()
 		{
 			long num = 0L;
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return num;
 		}
 
-		// Token: 0x06033439 RID: 209977 RVA: 0x00BF4DA8 File Offset: 0x00BF2FA8
+		// Token: 0x060282A7 RID: 164519 RVA: 0x00B3DFC8 File Offset: 0x00B3C1C8
 		public ELanguageDownloadStatus GetDownloadStatus(IRoleLangCustomLangPackageInfo info)
 		{
 			if (!ResourceDiffUpdaterManager.Instance.VoiceModule.IsVoiceDownloadEnable())
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return ELanguageDownloadStatus.Done;
 		}
 
-		// Token: 0x0603343A RID: 209978 RVA: 0x00BF4E20 File Offset: 0x00BF3020
+		// Token: 0x060282A8 RID: 164520 RVA: 0x00B3E040 File Offset: 0x00B3C240
 		public void DeletePackage(List<IRoleLangCustomLangPackageInfo> infoList)
 		{
 			List<string> list = new List<string>();
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			ResourceDiffUpdaterManager.Instance.VoiceModule.Delete(list);
 		}
 
-		// Token: 0x0603343B RID: 209979 RVA: 0x00BF4EBC File Offset: 0x00BF30BC
+		// Token: 0x060282A9 RID: 164521 RVA: 0x00B3E0DC File Offset: 0x00B3C2DC
 		public bool IsListDownloading()
 		{
 			if (this.ListCreating != null)
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return listUpdater != null && listUpdater.UpdateStatus == EResDownloadStatus.Downloading;
 		}
 
-		// Token: 0x0603343C RID: 209980 RVA: 0x00BF4EE4 File Offset: 0x00BF30E4
+		// Token: 0x060282AA RID: 164522 RVA: 0x00B3E104 File Offset: 0x00B3C304
 		private List<string> GetListPackageNames(List<IRoleLangCustomLangPackageInfo> infoList)
 		{
 			List<string> list = new List<string>();
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return list;
 		}
 
-		// Token: 0x0603343D RID: 209981 RVA: 0x00BF4F4C File Offset: 0x00BF314C
+		// Token: 0x060282AB RID: 164523 RVA: 0x00B3E16C File Offset: 0x00B3C36C
 		[NullableContext(0)]
 		public UniTask<bool> StartDownloadList([Nullable(1)] List<IRoleLangCustomLangPackageInfo> infoList)
 		{
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return <StartDownloadList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603343E RID: 209982 RVA: 0x00BF4F98 File Offset: 0x00BF3198
+		// Token: 0x060282AC RID: 164524 RVA: 0x00B3E1B8 File Offset: 0x00B3C3B8
 		public void PauseDownloadList()
 		{
 			if (this.ListCreating != null)
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			this.ListUpdater.Stop();
 		}
 
-		// Token: 0x0603343F RID: 209983 RVA: 0x00BF4FE8 File Offset: 0x00BF31E8
+		// Token: 0x060282AD RID: 164525 RVA: 0x00B3E208 File Offset: 0x00B3C408
 		public void DeletePackageList(List<IRoleLangCustomLangPackageInfo> infoList)
 		{
 			List<string> listPackageNames = this.GetListPackageNames(infoList);
@@ -329,16 +329,16 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			ResourceDiffUpdaterManager.Instance.VoiceModule.Delete(listPackageNames);
 		}
 
-		// Token: 0x0401B344 RID: 111428
+		// Token: 0x04015D16 RID: 89366
 		private const string PACKAGE_NAME = "{0}_{1}";
 
-		// Token: 0x0401B345 RID: 111429
+		// Token: 0x04015D17 RID: 89367
 		private const int COOLDOWNTIME = 1000;
 
-		// Token: 0x0401B346 RID: 111430
+		// Token: 0x04015D18 RID: 89368
 		private readonly Dictionary<string, ResourceDiffUpdater> UpdaterMap = new Dictionary<string, ResourceDiffUpdater>();
 
-		// Token: 0x0401B347 RID: 111431
+		// Token: 0x04015D19 RID: 89369
 		[Nullable(new byte[]
 		{
 			1,
@@ -348,24 +348,24 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 		})]
 		private readonly Dictionary<string, UniTaskCompletionSource<ResourceDiffUpdater>> CreatingMap = new Dictionary<string, UniTaskCompletionSource<ResourceDiffUpdater>>();
 
-		// Token: 0x0401B348 RID: 111432
+		// Token: 0x04015D1A RID: 89370
 		private readonly HashSet<string> CreatingPauseMap = new HashSet<string>();
 
-		// Token: 0x0401B349 RID: 111433
+		// Token: 0x04015D1B RID: 89371
 		private readonly HashSet<string> RunningSet = new HashSet<string>();
 
-		// Token: 0x0401B34A RID: 111434
+		// Token: 0x04015D1C RID: 89372
 		protected double NoSpaceTime;
 
-		// Token: 0x0401B34B RID: 111435
+		// Token: 0x04015D1D RID: 89373
 		[Nullable(2)]
 		private ResourceDiffUpdater ListUpdater;
 
-		// Token: 0x0401B34C RID: 111436
+		// Token: 0x04015D1E RID: 89374
 		[Nullable(2)]
 		private UniTaskCompletionSource<ResourceDiffUpdater> ListCreating;
 
-		// Token: 0x0401B34D RID: 111437
+		// Token: 0x04015D1F RID: 89375
 		private bool ListCreatingPaused;
 	}
 }

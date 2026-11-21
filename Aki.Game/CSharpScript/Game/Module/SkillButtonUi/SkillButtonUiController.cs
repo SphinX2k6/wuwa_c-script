@@ -13,25 +13,25 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C0C RID: 19468
+	// Token: 0x02003BBD RID: 15293
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SkillButtonUiController : UiControllerBase
 	{
-		// Token: 0x0603261B RID: 206363 RVA: 0x00BBA8BA File Offset: 0x00BB8ABA
+		// Token: 0x060273CB RID: 160715 RVA: 0x00AFF43E File Offset: 0x00AFD63E
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x0603261C RID: 206364 RVA: 0x00BBA8BD File Offset: 0x00BB8ABD
+		// Token: 0x060273CC RID: 160716 RVA: 0x00AFF441 File Offset: 0x00AFD641
 		protected override bool OnClear()
 		{
 			this.EventInterfaceMap.Clear();
 			return true;
 		}
 
-		// Token: 0x0603261D RID: 206365 RVA: 0x00BBA8CC File Offset: 0x00BB8ACC
+		// Token: 0x060273CD RID: 160717 RVA: 0x00AFF450 File Offset: 0x00AFD650
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			InputDistributeController.Instance.BindActionIgnoreLimit("通用交互", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputInteractButton));
 		}
 
-		// Token: 0x0603261E RID: 206366 RVA: 0x00BBAC9C File Offset: 0x00BB8E9C
+		// Token: 0x060273CE RID: 160718 RVA: 0x00AFF820 File Offset: 0x00AFDA20
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -332,34 +332,34 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			InputDistributeController.Instance.UnBindActionIgnoreLimit("通用交互", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputInteractButton));
 		}
 
-		// Token: 0x0603261F RID: 206367 RVA: 0x00BBB06D File Offset: 0x00BB926D
+		// Token: 0x060273CF RID: 160719 RVA: 0x00AFFBF1 File Offset: 0x00AFDDF1
 		[NullableContext(2)]
 		private static void MultiSkillIdChanged(int entityId, MultiSkillInfo info, int visionEntityId)
 		{
 			SkillButtonUiModel.Instance.ExecuteMultiSkillIdChanged(entityId, info, visionEntityId);
 		}
 
-		// Token: 0x06032620 RID: 206368 RVA: 0x00BBB07C File Offset: 0x00BB927C
+		// Token: 0x060273D0 RID: 160720 RVA: 0x00AFFC00 File Offset: 0x00AFDE00
 		[NullableContext(2)]
 		private static void MultiSkillEnable(int entityId, MultiSkillInfo info, int visionEntityId)
 		{
 			SkillButtonUiModel.Instance.ExecuteMultiSkillEnable(entityId, info, visionEntityId);
 		}
 
-		// Token: 0x06032621 RID: 206369 RVA: 0x00BBB08B File Offset: 0x00BB928B
+		// Token: 0x060273D1 RID: 160721 RVA: 0x00AFFC0F File Offset: 0x00AFDE0F
 		private void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 		{
 			SkillButtonUiController.RefreshSkillButtonData(newEntityHandle, ESkillButtonRefreshReason.ChangeRole);
 		}
 
-		// Token: 0x06032622 RID: 206370 RVA: 0x00BBB094 File Offset: 0x00BB9294
+		// Token: 0x060273D2 RID: 160722 RVA: 0x00AFFC18 File Offset: 0x00AFDE18
 		private static void OnFormationLoaded()
 		{
 			SkillButtonUiModel.Instance.CheckAndRemoveInvalidEntityData();
 			SkillButtonUiModel.Instance.CreateAllSkillButtonEntityData();
 		}
 
-		// Token: 0x06032623 RID: 206371 RVA: 0x00BBB0AC File Offset: 0x00BB92AC
+		// Token: 0x060273D3 RID: 160723 RVA: 0x00AFFC30 File Offset: 0x00AFDE30
 		private void ShowTypeChange(global::EOperationType eOperationType, global::EOperationType operationType)
 		{
 			SkillButtonUiModel.Instance.RefreshSkillButtonIndexOnOperationTypeChanged();
@@ -371,14 +371,14 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			SkillButtonUiController.RefreshSkillButtonData(getCurrentEntity, ESkillButtonRefreshReason.None);
 		}
 
-		// Token: 0x06032624 RID: 206372 RVA: 0x00BBB0D9 File Offset: 0x00BB92D9
+		// Token: 0x060273D4 RID: 160724 RVA: 0x00AFFC5D File Offset: 0x00AFDE5D
 		[NullableContext(2)]
 		private static void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			SkillButtonUiModel.Instance.OnRemoveEntity(handle);
 		}
 
-		// Token: 0x06032625 RID: 206373 RVA: 0x00BBB0E8 File Offset: 0x00BB92E8
+		// Token: 0x060273D5 RID: 160725 RVA: 0x00AFFC6C File Offset: 0x00AFDE6C
 		[NullableContext(2)]
 		private static void RefreshSkillButtonData(EntityHandle entityHandle, ESkillButtonRefreshReason refreshReason = ESkillButtonRefreshReason.None)
 		{
@@ -386,7 +386,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			SkillButtonUiModel.Instance.RefreshSkillButtonData(entityHandle, desktopOrPad, refreshReason);
 		}
 
-		// Token: 0x06032626 RID: 206374 RVA: 0x00BBB110 File Offset: 0x00BB9310
+		// Token: 0x060273D6 RID: 160726 RVA: 0x00AFFC94 File Offset: 0x00AFDE94
 		[NullableContext(2)]
 		public int GetRoleId(Entity entity)
 		{
@@ -399,7 +399,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return RoleConfig.Instance.GetBaseRoleId(roleId);
 		}
 
-		// Token: 0x06032627 RID: 206375 RVA: 0x00BBB13B File Offset: 0x00BB933B
+		// Token: 0x060273D7 RID: 160727 RVA: 0x00AFFCBF File Offset: 0x00AFDEBF
 		public void AddEventInterface(ISkillButtonUiEventInterface eventInterface)
 		{
 			if (eventInterface == null)
@@ -409,7 +409,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.EventInterfaceMap.Add(eventInterface);
 		}
 
-		// Token: 0x06032628 RID: 206376 RVA: 0x00BBB14E File Offset: 0x00BB934E
+		// Token: 0x060273D8 RID: 160728 RVA: 0x00AFFCD2 File Offset: 0x00AFDED2
 		public void RemoveEventInterface(ISkillButtonUiEventInterface eventInterface)
 		{
 			if (eventInterface == null)
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.EventInterfaceMap.Remove(eventInterface);
 		}
 
-		// Token: 0x06032629 RID: 206377 RVA: 0x00BBB164 File Offset: 0x00BB9364
+		// Token: 0x060273D9 RID: 160729 RVA: 0x00AFFCE8 File Offset: 0x00AFDEE8
 		private void OnEquipExplorePhantomSkill()
 		{
 			int currentExploreSkillId = RouletteModel.Instance.CurrentExploreSkillId;
@@ -434,7 +434,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x0603262A RID: 206378 RVA: 0x00BBB1F4 File Offset: 0x00BB93F4
+		// Token: 0x060273DA RID: 160730 RVA: 0x00AFFD78 File Offset: 0x00AFDF78
 		[NullableContext(2)]
 		private void OnSkillCountChanged(GroupSkillCdInfo groupSkillCdInfo)
 		{
@@ -445,7 +445,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x0603262B RID: 206379 RVA: 0x00BBB250 File Offset: 0x00BB9450
+		// Token: 0x060273DB RID: 160731 RVA: 0x00AFFDD4 File Offset: 0x00AFDFD4
 		[NullableContext(2)]
 		private void OnSkillRemainCdChanged(GroupSkillCdInfo groupSkillCdInfo)
 		{
@@ -456,31 +456,31 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x0603262C RID: 206380 RVA: 0x00BBB2AC File Offset: 0x00BB94AC
+		// Token: 0x060273DC RID: 160732 RVA: 0x00AFFE30 File Offset: 0x00AFE030
 		private static void OnBattleUiFollowerAimStateChanged(bool b, bool b1)
 		{
 			SkillButtonUiController.OnAimStateChanged();
 		}
 
-		// Token: 0x0603262D RID: 206381 RVA: 0x00BBB2B3 File Offset: 0x00BB94B3
+		// Token: 0x060273DD RID: 160733 RVA: 0x00AFFE37 File Offset: 0x00AFE037
 		private static void OnAimStateChanged()
 		{
 			SkillButtonUiModel.Instance.OnAimStateChanged();
 		}
 
-		// Token: 0x0603262E RID: 206382 RVA: 0x00BBB2BF File Offset: 0x00BB94BF
+		// Token: 0x060273DE RID: 160734 RVA: 0x00AFFE43 File Offset: 0x00AFE043
 		private static void OnActionKeyChanged(string actionName)
 		{
 			SkillButtonUiModel.Instance.OnActionKeyChanged(actionName);
 		}
 
-		// Token: 0x0603262F RID: 206383 RVA: 0x00BBB2CC File Offset: 0x00BB94CC
+		// Token: 0x060273DF RID: 160735 RVA: 0x00AFFE50 File Offset: 0x00AFE050
 		private static void OnInputEnableChanged(EInputAction inputAction, bool enable)
 		{
 			SkillButtonUiModel.Instance.OnInputEnableChanged(inputAction, enable);
 		}
 
-		// Token: 0x06032630 RID: 206384 RVA: 0x00BBB2DA File Offset: 0x00BB94DA
+		// Token: 0x060273E0 RID: 160736 RVA: 0x00AFFE5E File Offset: 0x00AFE05E
 		private static void OnFollowerAimStateChanged(bool isAiming, bool b)
 		{
 			SkillButtonFormationData skillButtonFormationData = SkillButtonUiModel.Instance.SkillButtonFormationData;
@@ -491,25 +491,25 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			skillButtonFormationData.RefreshOnFollowerAimStateChange(isAiming);
 		}
 
-		// Token: 0x06032631 RID: 206385 RVA: 0x00BBB2F1 File Offset: 0x00BB94F1
+		// Token: 0x060273E1 RID: 160737 RVA: 0x00AFFE75 File Offset: 0x00AFE075
 		private static void OnInputVisibleChanged(EInputAction inputAction, bool visible)
 		{
 			SkillButtonUiModel.Instance.OnInputVisibleChanged(inputAction, visible);
 		}
 
-		// Token: 0x06032632 RID: 206386 RVA: 0x00BBB2FF File Offset: 0x00BB94FF
+		// Token: 0x060273E2 RID: 160738 RVA: 0x00AFFE83 File Offset: 0x00AFE083
 		private static void OnFollowShooterPossessed(EntityHandle follower)
 		{
 			SkillButtonUiModel.Instance.CreateSkillButtonFollowerEntityData(follower);
 		}
 
-		// Token: 0x06032633 RID: 206387 RVA: 0x00BBB30C File Offset: 0x00BB950C
+		// Token: 0x060273E3 RID: 160739 RVA: 0x00AFFE90 File Offset: 0x00AFE090
 		private static void OnFollowShooterUnPossessed()
 		{
 			SkillButtonUiModel.Instance.ClearSkillButtonFollowerEntityData();
 		}
 
-		// Token: 0x06032634 RID: 206388 RVA: 0x00BBB318 File Offset: 0x00BB9518
+		// Token: 0x060273E4 RID: 160740 RVA: 0x00AFFE9C File Offset: 0x00AFE09C
 		private static void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!info.IsRolePassenger(true))
@@ -525,7 +525,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x06032635 RID: 206389 RVA: 0x00BBB368 File Offset: 0x00BB9568
+		// Token: 0x060273E5 RID: 160741 RVA: 0x00AFFEEC File Offset: 0x00AFE0EC
 		private static void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!info.IsRolePassenger(true))
@@ -535,7 +535,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			SkillButtonUiModel.Instance.ClearSkillButtonVehicleEntityData();
 		}
 
-		// Token: 0x06032636 RID: 206390 RVA: 0x00BBB380 File Offset: 0x00BB9580
+		// Token: 0x060273E6 RID: 160742 RVA: 0x00AFFF04 File Offset: 0x00AFE104
 		private static void OnOpenView(EUiViewName viewName, int viewId)
 		{
 			if (viewName == EUiViewName.MenuView)
@@ -547,7 +547,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x06032637 RID: 206391 RVA: 0x00BBB3E8 File Offset: 0x00BB95E8
+		// Token: 0x060273E7 RID: 160743 RVA: 0x00AFFF6C File Offset: 0x00AFE16C
 		private static void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			if (viewName == EUiViewName.MenuView)
@@ -560,7 +560,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x06032638 RID: 206392 RVA: 0x00BBB458 File Offset: 0x00BB9658
+		// Token: 0x060273E8 RID: 160744 RVA: 0x00AFFFDC File Offset: 0x00AFE1DC
 		private void HandlePressCombineButton(string actionName, bool bPress)
 		{
 			if (actionName != "组合主键")
@@ -576,13 +576,13 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.SetIsPressCombineButton(bPress);
 		}
 
-		// Token: 0x06032639 RID: 206393 RVA: 0x00BBB48F File Offset: 0x00BB968F
+		// Token: 0x060273E9 RID: 160745 RVA: 0x00B00013 File Offset: 0x00AFE213
 		private void OnGuideLimitActionInput(string actionName, bool bPress)
 		{
 			this.HandlePressCombineButton(actionName, bPress);
 		}
 
-		// Token: 0x0603263A RID: 206394 RVA: 0x00BBB49C File Offset: 0x00BB969C
+		// Token: 0x060273EA RID: 160746 RVA: 0x00B00020 File Offset: 0x00AFE220
 		private void OnBattleUiMotorcycleStateChanged(bool isDriving)
 		{
 			if (InputDistributeModel.Instance.IsActionInPress("组合主键"))
@@ -601,19 +601,19 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x0603263B RID: 206395 RVA: 0x00BBB4E8 File Offset: 0x00BB96E8
+		// Token: 0x060273EB RID: 160747 RVA: 0x00B0006C File Offset: 0x00AFE26C
 		private static void InputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			SkillButtonUiModel.Instance.OnInputControllerChange(last, now);
 		}
 
-		// Token: 0x0603263C RID: 206396 RVA: 0x00BBB4F6 File Offset: 0x00BB96F6
+		// Token: 0x060273EC RID: 160748 RVA: 0x00B0007A File Offset: 0x00AFE27A
 		private void OnInputCombineButton(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			this.HandlePressCombineButton(actionName, actionType == InputDistributeDefine.EActionType.Press);
 		}
 
-		// Token: 0x0603263D RID: 206397 RVA: 0x00BBB503 File Offset: 0x00BB9703
+		// Token: 0x060273ED RID: 160749 RVA: 0x00B00087 File Offset: 0x00AFE287
 		private void SetIsPressCombineButton(bool isPress)
 		{
 			this.StatusType = ESkillButtonStatusType.Normal;
@@ -625,7 +625,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			EventSystem.Instance.Emit<bool>(EEventName.BattleUiPressCombineButtonChanged, isPress);
 		}
 
-		// Token: 0x0603263E RID: 206398 RVA: 0x00BBB534 File Offset: 0x00BB9734
+		// Token: 0x060273EE RID: 160750 RVA: 0x00B000B8 File Offset: 0x00AFE2B8
 		private void SetIsPressMotorcycleCombineButton(bool isPress)
 		{
 			this.StatusType = ESkillButtonStatusType.Motorcycle;
@@ -637,7 +637,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			EventSystem.Instance.Emit<bool>(EEventName.BattleUiPressMotorcycleCombineButtonChanged, isPress);
 		}
 
-		// Token: 0x0603263F RID: 206399 RVA: 0x00BBB568 File Offset: 0x00BB9768
+		// Token: 0x060273EF RID: 160751 RVA: 0x00B000EC File Offset: 0x00AFE2EC
 		private void OnInputInteractButton(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			bool bPress = actionType == InputDistributeDefine.EActionType.Press;
@@ -649,7 +649,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			gamepadData.SwitchInteractData.InputInteractButton(bPress);
 		}
 
-		// Token: 0x06032640 RID: 206400 RVA: 0x00BBB594 File Offset: 0x00BB9794
+		// Token: 0x060273F0 RID: 160752 RVA: 0x00B00118 File Offset: 0x00AFE318
 		public void PlayExtraEffect(ESkillButtonType buttonType, ESkillButtonExtraEffect effectType, float duration = 0f)
 		{
 			SkillButtonFormationData skillButtonFormationData = SkillButtonUiModel.Instance.SkillButtonFormationData;
@@ -663,8 +663,8 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			EventSystem.Instance.Emit<ESkillButtonType>(EEventName.OnSkillButtonExtraEffectRefresh, buttonType);
 		}
 
-		// Token: 0x17007C8B RID: 31883
-		// (get) Token: 0x06032641 RID: 206401 RVA: 0x00BBB5DC File Offset: 0x00BB97DC
+		// Token: 0x17005035 RID: 20533
+		// (get) Token: 0x060273F1 RID: 160753 RVA: 0x00B00160 File Offset: 0x00AFE360
 		public static SkillButtonUiController Instance
 		{
 			get
@@ -673,7 +673,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x06032642 RID: 206402 RVA: 0x00BBB5E3 File Offset: 0x00BB97E3
+		// Token: 0x060273F2 RID: 160754 RVA: 0x00B00167 File Offset: 0x00AFE367
 		public static SkillButtonUiController GetOrCreateInstance()
 		{
 			if (SkillButtonUiController._Instance == null)
@@ -683,7 +683,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return SkillButtonUiController._Instance;
 		}
 
-		// Token: 0x06032643 RID: 206403 RVA: 0x00BBB5F7 File Offset: 0x00BB97F7
+		// Token: 0x060273F3 RID: 160755 RVA: 0x00B0017B File Offset: 0x00AFE37B
 		public static bool CreateInstance()
 		{
 			if (SkillButtonUiController._Instance != null)
@@ -694,45 +694,45 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return true;
 		}
 
-		// Token: 0x06032644 RID: 206404 RVA: 0x00BBB60D File Offset: 0x00BB980D
+		// Token: 0x060273F4 RID: 160756 RVA: 0x00B00191 File Offset: 0x00AFE391
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06032645 RID: 206405 RVA: 0x00BBB60F File Offset: 0x00BB980F
+		// Token: 0x060273F5 RID: 160757 RVA: 0x00B00193 File Offset: 0x00AFE393
 		public static void ResetStaticDefaultValue()
 		{
 			SkillButtonUiController._Instance = null;
 		}
 
-		// Token: 0x06032646 RID: 206406 RVA: 0x00BBB617 File Offset: 0x00BB9817
+		// Token: 0x060273F6 RID: 160758 RVA: 0x00B0019B File Offset: 0x00AFE39B
 		static SkillButtonUiController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SkillButtonUiController.CreateStaticDefaultValue), new Action(SkillButtonUiController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401ACF9 RID: 109817
+		// Token: 0x04015655 RID: 87637
 		private readonly Stat ChangeRoleStat = Stat.Create("[ChangeRole]SkillButtonUiController", "", "");
 
-		// Token: 0x0401ACFA RID: 109818
+		// Token: 0x04015656 RID: 87638
 		private readonly HashSet<ISkillButtonUiEventInterface> EventInterfaceMap = new HashSet<ISkillButtonUiEventInterface>();
 
-		// Token: 0x0401ACFB RID: 109819
+		// Token: 0x04015657 RID: 87639
 		private ESkillButtonStatusType StatusType;
 
-		// Token: 0x0401ACFC RID: 109820
+		// Token: 0x04015658 RID: 87640
 		[Nullable(2)]
 		private static SkillButtonUiController _Instance;
 
-		// Token: 0x0200ADF2 RID: 44530
+		// Token: 0x02009811 RID: 38929
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04034D56 RID: 216406
+			// Token: 0x0402F6FD RID: 194301
 			[Nullable(0)]
 			public static Action <0>__OnFormationLoaded;
 
-			// Token: 0x04034D57 RID: 216407
+			// Token: 0x0402F6FE RID: 194302
 			[Nullable(new byte[]
 			{
 				0,
@@ -740,7 +740,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			})]
 			public static Action<ERemoveEntityType, EntityHandle> <1>__OnRemoveEntity;
 
-			// Token: 0x04034D58 RID: 216408
+			// Token: 0x0402F6FF RID: 194303
 			[Nullable(new byte[]
 			{
 				0,
@@ -748,7 +748,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			})]
 			public static Action<int, MultiSkillInfo, int> <2>__MultiSkillIdChanged;
 
-			// Token: 0x04034D59 RID: 216409
+			// Token: 0x0402F700 RID: 194304
 			[Nullable(new byte[]
 			{
 				0,
@@ -756,15 +756,15 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			})]
 			public static Action<int, MultiSkillInfo, int> <3>__MultiSkillEnable;
 
-			// Token: 0x04034D5A RID: 216410
+			// Token: 0x0402F701 RID: 194305
 			[Nullable(0)]
 			public static Action <4>__OnAimStateChanged;
 
-			// Token: 0x04034D5B RID: 216411
+			// Token: 0x0402F702 RID: 194306
 			[Nullable(0)]
 			public static Action<bool, bool> <5>__OnBattleUiFollowerAimStateChanged;
 
-			// Token: 0x04034D5C RID: 216412
+			// Token: 0x0402F703 RID: 194307
 			[Nullable(new byte[]
 			{
 				0,
@@ -772,19 +772,19 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			})]
 			public static Action<string> <6>__OnActionKeyChanged;
 
-			// Token: 0x04034D5D RID: 216413
+			// Token: 0x0402F704 RID: 194308
 			[Nullable(0)]
 			public static Action<EInputAction, bool> <7>__OnInputEnableChanged;
 
-			// Token: 0x04034D5E RID: 216414
+			// Token: 0x0402F705 RID: 194309
 			[Nullable(0)]
 			public static Action<EInputAction, bool> <8>__OnInputVisibleChanged;
 
-			// Token: 0x04034D5F RID: 216415
+			// Token: 0x0402F706 RID: 194310
 			[Nullable(0)]
 			public static Action<bool, bool> <9>__OnFollowerAimStateChanged;
 
-			// Token: 0x04034D60 RID: 216416
+			// Token: 0x0402F707 RID: 194311
 			[Nullable(new byte[]
 			{
 				0,
@@ -792,11 +792,11 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			})]
 			public static Action<EntityHandle> <10>__OnFollowShooterPossessed;
 
-			// Token: 0x04034D61 RID: 216417
+			// Token: 0x0402F708 RID: 194312
 			[Nullable(0)]
 			public static Action <11>__OnFollowShooterUnPossessed;
 
-			// Token: 0x04034D62 RID: 216418
+			// Token: 0x0402F709 RID: 194313
 			[Nullable(new byte[]
 			{
 				0,
@@ -804,7 +804,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			})]
 			public static Action<VehiclePassengerInfo, bool> <12>__OnEnterVehicle;
 
-			// Token: 0x04034D63 RID: 216419
+			// Token: 0x0402F70A RID: 194314
 			[Nullable(new byte[]
 			{
 				0,
@@ -812,15 +812,15 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			})]
 			public static Action<VehiclePassengerInfo, bool> <13>__OnLeaveVehicle;
 
-			// Token: 0x04034D64 RID: 216420
+			// Token: 0x0402F70B RID: 194315
 			[Nullable(0)]
 			public static Action<EUiViewName, int> <14>__OnOpenView;
 
-			// Token: 0x04034D65 RID: 216421
+			// Token: 0x0402F70C RID: 194316
 			[Nullable(0)]
 			public static Action<EUiViewName, int> <15>__OnCloseView;
 
-			// Token: 0x04034D66 RID: 216422
+			// Token: 0x0402F70D RID: 194317
 			[Nullable(0)]
 			public static Action<EInputControllerType, EInputControllerType> <16>__InputControllerChange;
 		}

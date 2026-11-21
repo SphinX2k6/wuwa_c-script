@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000941 RID: 2369
+	// Token: 0x020009EE RID: 2542
 	public class EExploreSkillSearchTargetCfgJsonConverter : JsonConverter<EExploreSkillSearchTargetCfg>
 	{
-		// Token: 0x06003557 RID: 13655 RVA: 0x0008B61C File Offset: 0x0008981C
+		// Token: 0x060038C3 RID: 14531 RVA: 0x000931F8 File Offset: 0x000913F8
 		public override EExploreSkillSearchTargetCfg Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EExploreSkillSearchTargetCfgExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003558 RID: 13656 RVA: 0x0008B640 File Offset: 0x00089840
+		// Token: 0x060038C4 RID: 14532 RVA: 0x0009321C File Offset: 0x0009141C
 		public override void Write(Utf8JsonWriter writer, EExploreSkillSearchTargetCfg value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -10,12 +10,12 @@ namespace CSharpScript.Launcher
 	[Nullable(0)]
 	public class RemoteConfig
 	{
-		// Token: 0x060002A1 RID: 673 RVA: 0x0000D798 File Offset: 0x0000B998
+		// Token: 0x060002A2 RID: 674 RVA: 0x0000DAB8 File Offset: 0x0000BCB8
 		public RemoteConfig()
 		{
 		}
 
-		// Token: 0x060002A2 RID: 674 RVA: 0x0000D7F0 File Offset: 0x0000B9F0
+		// Token: 0x060002A3 RID: 675 RVA: 0x0000DB10 File Offset: 0x0000BD10
 		public RemoteConfig(Partial<RemoteConfig> data)
 		{
 			this.PackageVersion = (data.GetValue<string>(([Nullable(1)] RemoteConfig r) => r.PackageVersion) ?? "");
@@ -53,25 +53,25 @@ namespace CSharpScript.Launcher
 			}
 		}
 
-		// Token: 0x0400019A RID: 410
+		// Token: 0x040001A6 RID: 422
 		public string PackageVersion = "";
 
-		// Token: 0x0400019B RID: 411
+		// Token: 0x040001A7 RID: 423
 		public string LauncherPackageVersion = "";
 
-		// Token: 0x0400019C RID: 412
+		// Token: 0x040001A8 RID: 424
 		public string LauncherVersion = "";
 
-		// Token: 0x0400019D RID: 413
+		// Token: 0x040001A9 RID: 425
 		public string ResourceVersion = "";
 
-		// Token: 0x0400019E RID: 414
+		// Token: 0x040001AA RID: 426
 		public string ChangeList = "";
 
-		// Token: 0x0400019F RID: 415
+		// Token: 0x040001AB RID: 427
 		public long? UpdateTime = new long?(0L);
 
-		// Token: 0x040001A0 RID: 416
+		// Token: 0x040001AC RID: 428
 		[Nullable(new byte[]
 		{
 			2,
@@ -80,7 +80,7 @@ namespace CSharpScript.Launcher
 		})]
 		public Dictionary<string, string> LauncherIndexSha1;
 
-		// Token: 0x040001A1 RID: 417
+		// Token: 0x040001AD RID: 429
 		[Nullable(new byte[]
 		{
 			2,
@@ -89,7 +89,7 @@ namespace CSharpScript.Launcher
 		})]
 		public Dictionary<string, string> ResourceIndexSha1;
 
-		// Token: 0x040001A2 RID: 418
+		// Token: 0x040001AE RID: 430
 		[Nullable(new byte[]
 		{
 			2,

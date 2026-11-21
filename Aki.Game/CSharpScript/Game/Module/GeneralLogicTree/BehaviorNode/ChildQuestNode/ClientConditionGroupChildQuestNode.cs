@@ -8,18 +8,18 @@ using CSharpScript.Game.LevelGamePlay.LevelListeners;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059CD RID: 22989
+	// Token: 0x020049A6 RID: 18854
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ClientConditionGroupChildQuestNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A46B RID: 238699 RVA: 0x00DDB75D File Offset: 0x00DD995D
+		// Token: 0x0602F392 RID: 193426 RVA: 0x00D2AFE5 File Offset: 0x00D291E5
 		public ClientConditionGroupChildQuestNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x17008B98 RID: 35736
-		// (get) Token: 0x0603A46C RID: 238700 RVA: 0x00DDB771 File Offset: 0x00DD9971
+		// Token: 0x17005F65 RID: 24421
+		// (get) Token: 0x0602F393 RID: 193427 RVA: 0x00D2AFF9 File Offset: 0x00D291F9
 		protected override List<int> CorrelativeEntities
 		{
 			get
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A46D RID: 238701 RVA: 0x00DDB774 File Offset: 0x00DD9974
+		// Token: 0x0602F394 RID: 193428 RVA: 0x00D2AFFC File Offset: 0x00D291FC
 		[NullableContext(1)]
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A46E RID: 238702 RVA: 0x00DDB7BD File Offset: 0x00DD99BD
+		// Token: 0x0602F395 RID: 193429 RVA: 0x00D2B045 File Offset: 0x00D29245
 		protected override void OnStart(ENodeStatusUpdateReason reason)
 		{
 			base.OnStart(reason);
@@ -58,28 +58,28 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.TrySubmit();
 		}
 
-		// Token: 0x0603A46F RID: 238703 RVA: 0x00DDB7D3 File Offset: 0x00DD99D3
+		// Token: 0x0602F396 RID: 193430 RVA: 0x00D2B05B File Offset: 0x00D2925B
 		protected override void OnEnd(bool bFinished)
 		{
 			this.HasSubmitted = false;
 			base.OnEnd(bFinished);
 		}
 
-		// Token: 0x0603A470 RID: 238704 RVA: 0x00DDB7E3 File Offset: 0x00DD99E3
+		// Token: 0x0602F397 RID: 193431 RVA: 0x00D2B06B File Offset: 0x00D2926B
 		protected override void AddEventsOnChildQuestStart()
 		{
 			base.AddEventsOnChildQuestStart();
 			this.ListenConditions();
 		}
 
-		// Token: 0x0603A471 RID: 238705 RVA: 0x00DDB7F1 File Offset: 0x00DD99F1
+		// Token: 0x0602F398 RID: 193432 RVA: 0x00D2B079 File Offset: 0x00D29279
 		protected override void RemoveEventsOnChildQuestEnd()
 		{
 			this.UnListenConditions();
 			base.RemoveEventsOnChildQuestEnd();
 		}
 
-		// Token: 0x0603A472 RID: 238706 RVA: 0x00DDB800 File Offset: 0x00DD9A00
+		// Token: 0x0602F399 RID: 193433 RVA: 0x00D2B088 File Offset: 0x00D29288
 		private void ListenConditions()
 		{
 			if (this.ConditionGroup == null || this.ConditionGroup.Conditions == null)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A473 RID: 238707 RVA: 0x00DDB898 File Offset: 0x00DD9A98
+		// Token: 0x0602F39A RID: 193434 RVA: 0x00D2B120 File Offset: 0x00D29320
 		private void UnListenConditions()
 		{
 			foreach (int listenerId in this.LevelListenerIds)
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.LevelListenerIds = new List<int>();
 		}
 
-		// Token: 0x0603A474 RID: 238708 RVA: 0x00DDB8F4 File Offset: 0x00DD9AF4
+		// Token: 0x0602F39B RID: 193435 RVA: 0x00D2B17C File Offset: 0x00D2937C
 		private void OnConditionListenCallback(GeneralContext callbackContext, [Nullable(new byte[]
 		{
 			1,
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.TrySubmit();
 		}
 
-		// Token: 0x0603A475 RID: 238709 RVA: 0x00DDB8FC File Offset: 0x00DD9AFC
+		// Token: 0x0602F39C RID: 193436 RVA: 0x00D2B184 File Offset: 0x00D29384
 		private void TrySubmit()
 		{
 			if (this.HasSubmitted)
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.SubmitNode(null);
 		}
 
-		// Token: 0x0603A476 RID: 238710 RVA: 0x00DDB920 File Offset: 0x00DD9B20
+		// Token: 0x0602F39D RID: 193437 RVA: 0x00D2B1A8 File Offset: 0x00D293A8
 		private bool CheckConditionSatisfied()
 		{
 			if (this.ConditionGroup == null)
@@ -144,14 +144,14 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return LevelGeneralController.Instance.CheckConditionNew(this.ConditionGroup, null, this.Context, null);
 		}
 
-		// Token: 0x0401E621 RID: 124449
+		// Token: 0x040190C0 RID: 102592
 		private IConditionGroup ConditionGroup;
 
-		// Token: 0x0401E622 RID: 124450
+		// Token: 0x040190C1 RID: 102593
 		[Nullable(1)]
 		private List<int> LevelListenerIds = new List<int>();
 
-		// Token: 0x0401E623 RID: 124451
+		// Token: 0x040190C2 RID: 102594
 		private bool HasSubmitted;
 	}
 }

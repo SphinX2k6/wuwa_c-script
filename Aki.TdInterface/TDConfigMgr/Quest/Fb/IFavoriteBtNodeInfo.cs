@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001443 RID: 5187
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200159B RID: 5531
 	public class IFavoriteBtNodeInfo
 	{
-		// Token: 0x060075F5 RID: 30197 RVA: 0x00119C21 File Offset: 0x00117E21
+		// Token: 0x06007CBD RID: 31933 RVA: 0x001286F5 File Offset: 0x001268F5
 		public static IFavoriteBtNodeInfo Create(IFavoriteBtNodeInfo? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002742 RID: 10050
-		// (get) Token: 0x060075F6 RID: 30198 RVA: 0x00119C40 File Offset: 0x00117E40
+		// Token: 0x17002929 RID: 10537
+		// (get) Token: 0x06007CBE RID: 31934 RVA: 0x00128714 File Offset: 0x00126914
 		public virtual int Id
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002743 RID: 10051
-		// (get) Token: 0x060075F7 RID: 30199 RVA: 0x00119C4D File Offset: 0x00117E4D
+		// Token: 0x1700292A RID: 10538
+		// (get) Token: 0x06007CBF RID: 31935 RVA: 0x00128721 File Offset: 0x00126921
 		public virtual string Desc
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004473 RID: 17523
+		// Token: 0x04004809 RID: 18441
 		private IFavoriteBtNodeInfo Instance;
 	}
 }

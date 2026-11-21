@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002720 RID: 10016
+// Token: 0x02001C0B RID: 7179
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class RacingBetsRewardItem : GridProxyAbstract<RacingBetsRewardData>
 {
-	// Token: 0x06014868 RID: 84072 RVA: 0x0052EAFC File Offset: 0x0052CCFC
+	// Token: 0x06011D4A RID: 73034 RVA: 0x0053D818 File Offset: 0x0053BA18
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ public class RacingBetsRewardItem : GridProxyAbstract<RacingBetsRewardData>
 		};
 	}
 
-	// Token: 0x06014869 RID: 84073 RVA: 0x0052EC14 File Offset: 0x0052CE14
+	// Token: 0x06011D4B RID: 73035 RVA: 0x0053D930 File Offset: 0x0053BB30
 	protected override UniTask OnBeforeShowAsyncImplement()
 	{
 		RacingBetsRewardItem.<OnBeforeShowAsyncImplement>d__5 <OnBeforeShowAsyncImplement>d__;
@@ -49,7 +49,7 @@ public class RacingBetsRewardItem : GridProxyAbstract<RacingBetsRewardData>
 		return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601486A RID: 84074 RVA: 0x0052EC58 File Offset: 0x0052CE58
+	// Token: 0x06011D4C RID: 73036 RVA: 0x0053D974 File Offset: 0x0053BB74
 	public override void Refresh(RacingBetsRewardData data, bool isSelected, int gridIndex)
 	{
 		this.RewardData = data;
@@ -92,7 +92,7 @@ public class RacingBetsRewardItem : GridProxyAbstract<RacingBetsRewardData>
 		text5.ShowTextNew("Dango_CurrencyPage_Status_3");
 	}
 
-	// Token: 0x0601486B RID: 84075 RVA: 0x0052ED2C File Offset: 0x0052CF2C
+	// Token: 0x06011D4D RID: 73037 RVA: 0x0053DA48 File Offset: 0x0053BC48
 	private void RefreshState(ConditionTaskStatus rewardStatus)
 	{
 		UUIButtonComponent button = base.GetButton(4);
@@ -131,13 +131,13 @@ public class RacingBetsRewardItem : GridProxyAbstract<RacingBetsRewardData>
 		item.SetUIActive(rewardStatus == ConditionTaskStatus.TaskFinish);
 	}
 
-	// Token: 0x0601486C RID: 84076 RVA: 0x0052EDCA File Offset: 0x0052CFCA
+	// Token: 0x06011D4E RID: 73038 RVA: 0x0053DAE6 File Offset: 0x0053BCE6
 	public void BindClickGetButtonCallBack(Action callback)
 	{
 		this.ClickGetButtonCallback = callback;
 	}
 
-	// Token: 0x0601486D RID: 84077 RVA: 0x0052EDD3 File Offset: 0x0052CFD3
+	// Token: 0x06011D4F RID: 73039 RVA: 0x0053DAEF File Offset: 0x0053BCEF
 	private void OnClickGetButton()
 	{
 		Action clickGetButtonCallback = this.ClickGetButtonCallback;
@@ -148,41 +148,41 @@ public class RacingBetsRewardItem : GridProxyAbstract<RacingBetsRewardData>
 		clickGetButtonCallback();
 	}
 
-	// Token: 0x04009A5D RID: 39517
+	// Token: 0x04009BB5 RID: 39861
 	private RacingBetsRewardData RewardData;
 
-	// Token: 0x04009A5E RID: 39518
+	// Token: 0x04009BB6 RID: 39862
 	[Nullable(2)]
 	private CommonItemSmallItemGrid RewardIconItem;
 
-	// Token: 0x04009A5F RID: 39519
+	// Token: 0x04009BB7 RID: 39863
 	private Action ClickGetButtonCallback = delegate()
 	{
 	};
 
-	// Token: 0x02008D73 RID: 36211
+	// Token: 0x02007EFC RID: 32508
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402DE54 RID: 187988
+		// Token: 0x0402916B RID: 168299
 		RewardItem,
-		// Token: 0x0402DE55 RID: 187989
+		// Token: 0x0402916C RID: 168300
 		DescText,
-		// Token: 0x0402DE56 RID: 187990
+		// Token: 0x0402916D RID: 168301
 		ProgressText,
-		// Token: 0x0402DE57 RID: 187991
+		// Token: 0x0402916E RID: 168302
 		JumpBtn,
-		// Token: 0x0402DE58 RID: 187992
+		// Token: 0x0402916F RID: 168303
 		ReceiveBtn,
-		// Token: 0x0402DE59 RID: 187993
+		// Token: 0x04029170 RID: 168304
 		DoingText,
-		// Token: 0x0402DE5A RID: 187994
+		// Token: 0x04029171 RID: 168305
 		ReceivedSprite,
-		// Token: 0x0402DE5B RID: 187995
+		// Token: 0x04029172 RID: 168306
 		JumpBtnText,
-		// Token: 0x0402DE5C RID: 187996
+		// Token: 0x04029173 RID: 168307
 		ReceiveBtnText,
-		// Token: 0x0402DE5D RID: 187997
+		// Token: 0x04029174 RID: 168308
 		RedDotItem
 	}
 }

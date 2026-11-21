@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014F2 RID: 5362
+	// Token: 0x0200164B RID: 5707
 	public class ClaimDungeonReward : ActionParams
 	{
-		// Token: 0x060079FC RID: 31228 RVA: 0x0012394B File Offset: 0x00121B4B
-		[NullableContext(1)]
+		// Token: 0x060080C9 RID: 32969 RVA: 0x00132583 File Offset: 0x00130783
 		public static ClaimDungeonReward Create([Nullable(2)] ClaimDungeonReward instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x040046B6 RID: 18102
+		// Token: 0x04004A51 RID: 19025
 		[Nullable(2)]
 		protected new ClaimDungeonReward FbInstance;
 	}

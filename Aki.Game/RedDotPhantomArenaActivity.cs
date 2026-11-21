@@ -2,10 +2,10 @@
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.PhantomArena;
 
-// Token: 0x020033EB RID: 13291
+// Token: 0x0200295D RID: 10589
 public class RedDotPhantomArenaActivity : RedDotBase
 {
-	// Token: 0x0601CC7F RID: 117887 RVA: 0x0080A320 File Offset: 0x00808520
+	// Token: 0x0601A977 RID: 108919 RVA: 0x008308E4 File Offset: 0x0082EAE4
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnPhantomArenaChallengeUpdate, new Action(base.EventCheck));
@@ -17,7 +17,7 @@ public class RedDotPhantomArenaActivity : RedDotBase
 		EventSystem.Instance.Add(EEventName.OnPhantomArenaShopOpen, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CC80 RID: 117888 RVA: 0x0080A3F4 File Offset: 0x008085F4
+	// Token: 0x0601A978 RID: 108920 RVA: 0x008309B8 File Offset: 0x0082EBB8
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPhantomArenaChallengeUpdate, new Action(base.EventCheck));
@@ -29,13 +29,13 @@ public class RedDotPhantomArenaActivity : RedDotBase
 		EventSystem.Instance.Remove(EEventName.OnPhantomArenaShopOpen, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CC81 RID: 117889 RVA: 0x0080A4C5 File Offset: 0x008086C5
+	// Token: 0x0601A979 RID: 108921 RVA: 0x00830A89 File Offset: 0x0082EC89
 	protected override bool IsMultiple()
 	{
 		return true;
 	}
 
-	// Token: 0x0601CC82 RID: 117890 RVA: 0x0080A4C8 File Offset: 0x008086C8
+	// Token: 0x0601A97A RID: 108922 RVA: 0x00830A8C File Offset: 0x0082EC8C
 	protected override bool OnCheck(int uId = 0)
 	{
 		return uId != 0 && PhantomArenaModel.Instance.GetPhantomArenaButtonRedDot(uId);

@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x0200539F RID: 21407
+	// Token: 0x02004382 RID: 17282
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Morale
 	})]
 	public class MoraleAreaProgressItem : GridProxyAbstract<MoraleAreaProgressData>
 	{
-		// Token: 0x06036B20 RID: 224032 RVA: 0x00CF1F84 File Offset: 0x00CF0184
+		// Token: 0x0602BA66 RID: 178790 RVA: 0x00C4102C File Offset: 0x00C3F22C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,14 +28,14 @@ namespace CSharpScript.Game.Module.Morale
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06036B21 RID: 224033 RVA: 0x00CF1FCC File Offset: 0x00CF01CC
+		// Token: 0x0602BA67 RID: 178791 RVA: 0x00C41074 File Offset: 0x00C3F274
 		public override void Refresh(MoraleAreaProgressData data, bool isSelected, int gridIndex)
 		{
 			this.ItemData = data;
 			this.SetUiProgressByScore(data.StartScore);
 		}
 
-		// Token: 0x06036B22 RID: 224034 RVA: 0x00CF1FE1 File Offset: 0x00CF01E1
+		// Token: 0x0602BA68 RID: 178792 RVA: 0x00C41089 File Offset: 0x00C3F289
 		private float GetProgress(int score)
 		{
 			if (score >= this.ItemData.TargetScore)
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Morale
 			return (float)(score - this.ItemData.LastTargetScore) / (float)(this.ItemData.TargetScore - this.ItemData.LastTargetScore);
 		}
 
-		// Token: 0x06036B23 RID: 224035 RVA: 0x00CF201E File Offset: 0x00CF021E
+		// Token: 0x0602BA69 RID: 178793 RVA: 0x00C410C6 File Offset: 0x00C3F2C6
 		private void SetUiProgress(float percent)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -56,20 +56,20 @@ namespace CSharpScript.Game.Module.Morale
 			sprite.SetFillAmount(percent);
 		}
 
-		// Token: 0x06036B24 RID: 224036 RVA: 0x00CF2032 File Offset: 0x00CF0232
+		// Token: 0x0602BA6A RID: 178794 RVA: 0x00C410DA File Offset: 0x00C3F2DA
 		public void SetUiProgressByScore(int score)
 		{
 			this.SetUiProgress(this.GetProgress(score));
 		}
 
-		// Token: 0x0401CE34 RID: 118324
+		// Token: 0x040178CC RID: 96460
 		public MoraleAreaProgressData ItemData;
 
-		// Token: 0x0200B619 RID: 46617
+		// Token: 0x0200A051 RID: 41041
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04037294 RID: 225940
+			// Token: 0x04031CE9 RID: 204009
 			SpriteProgress
 		}
 	}

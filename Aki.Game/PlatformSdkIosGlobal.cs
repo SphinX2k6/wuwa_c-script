@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x02000E4F RID: 3663
+// Token: 0x02000304 RID: 772
 [NullableContext(1)]
 [Nullable(0)]
 public class PlatformSdkIosGlobal : PlatformSdkBase
 {
-	// Token: 0x060058CF RID: 22735 RVA: 0x00101198 File Offset: 0x000FF398
+	// Token: 0x06002C65 RID: 11365 RVA: 0x00108E0C File Offset: 0x0010700C
 	protected override void OnInit()
 	{
 		this.CurrentDid = UKuroSDKManager.GetBasicInfo().DeviceId;
@@ -23,7 +23,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		FCrashSightProxy.SetCustomData("SdkChannelId", this.GetChannelId());
 	}
 
-	// Token: 0x060058D0 RID: 22736 RVA: 0x001011F8 File Offset: 0x000FF3F8
+	// Token: 0x06002C66 RID: 11366 RVA: 0x00108E6C File Offset: 0x0010706C
 	protected override void BindSpecialEvent()
 	{
 		UKuroSDKManager.Get().AnnounceRedPointDelegate.Clear();
@@ -32,7 +32,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		UKuroSDKManager.Get().CustomerServiceResultDelegate.Add(new Action<string>(this.CustomerServiceResultCallBack));
 	}
 
-	// Token: 0x060058D1 RID: 22737 RVA: 0x00101254 File Offset: 0x000FF454
+	// Token: 0x06002C67 RID: 11367 RVA: 0x00108EC8 File Offset: 0x001070C8
 	public void CustomerServiceResultCallBack(string result)
 	{
 		PlatformSdkIosGlobal.ISdkCustomerService sdkCustomerService = Json.Parse<PlatformSdkIosGlobal.ISdkCustomerService>(result, null);
@@ -43,7 +43,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		EventSystem.Instance.Emit(EEventName.SdkCustomerRedPointRefresh);
 	}
 
-	// Token: 0x060058D2 RID: 22738 RVA: 0x0010128C File Offset: 0x000FF48C
+	// Token: 0x06002C68 RID: 11368 RVA: 0x00108F00 File Offset: 0x00107100
 	public override void OpenCustomerService(EKuroSdkOpenCustomerServerType fromType)
 	{
 		LoginModel instance = LoginModel.Instance;
@@ -61,7 +61,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		}, KuroSdkJsonOptions.Unescaped));
 	}
 
-	// Token: 0x060058D3 RID: 22739 RVA: 0x00101320 File Offset: 0x000FF520
+	// Token: 0x06002C69 RID: 11369 RVA: 0x00108F94 File Offset: 0x00107194
 	public override string GetChannelId()
 	{
 		PlatformSdkIosGlobal.IUserInfo cacheUserInfo = this.GetCacheUserInfo();
@@ -76,7 +76,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		return cacheUserInfo.channelId;
 	}
 
-	// Token: 0x060058D4 RID: 22740 RVA: 0x00101350 File Offset: 0x000FF550
+	// Token: 0x06002C6A RID: 11370 RVA: 0x00108FC4 File Offset: 0x001071C4
 	private string Getidfv()
 	{
 		PlatformSdkIosGlobal.IUserInfo cacheUserInfo = this.GetCacheUserInfo();
@@ -91,7 +91,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		return cacheUserInfo.idfv;
 	}
 
-	// Token: 0x060058D5 RID: 22741 RVA: 0x00101380 File Offset: 0x000FF580
+	// Token: 0x06002C6B RID: 11371 RVA: 0x00108FF4 File Offset: 0x001071F4
 	public override string GetJyDid()
 	{
 		PlatformSdkIosGlobal.IUserInfo cacheUserInfo = this.GetCacheUserInfo();
@@ -106,7 +106,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		return cacheUserInfo.jyDeviceId;
 	}
 
-	// Token: 0x060058D6 RID: 22742 RVA: 0x001013B0 File Offset: 0x000FF5B0
+	// Token: 0x06002C6C RID: 11372 RVA: 0x00109024 File Offset: 0x00107224
 	private PlatformSdkIosGlobal.IUserInfo GetCacheUserInfo()
 	{
 		if (this.CacheUserInfo == null)
@@ -117,7 +117,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		return this.CacheUserInfo;
 	}
 
-	// Token: 0x060058D7 RID: 22743 RVA: 0x001013E4 File Offset: 0x000FF5E4
+	// Token: 0x06002C6D RID: 11373 RVA: 0x00109058 File Offset: 0x00107258
 	public override void QueryProduct(string[] productList, string channelId)
 	{
 		string text = "";
@@ -133,7 +133,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		UKuroSDKManager.QueryProductInfo(text);
 	}
 
-	// Token: 0x060058D8 RID: 22744 RVA: 0x0010142C File Offset: 0x000FF62C
+	// Token: 0x06002C6E RID: 11374 RVA: 0x001090A0 File Offset: 0x001072A0
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -165,7 +165,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		return list.ToArray();
 	}
 
-	// Token: 0x060058D9 RID: 22745 RVA: 0x001014EC File Offset: 0x000FF6EC
+	// Token: 0x06002C6F RID: 11375 RVA: 0x00109160 File Offset: 0x00107360
 	protected override void OnGetSharePlatform(string str)
 	{
 		PlatformSdkIosGlobal.SharePlatform sharePlatform = Json.Parse<PlatformSdkIosGlobal.SharePlatform>(str, null);
@@ -192,7 +192,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		base.OnGetSharePlatform(str);
 	}
 
-	// Token: 0x060058DA RID: 22746 RVA: 0x001015A8 File Offset: 0x000FF7A8
+	// Token: 0x06002C70 RID: 11376 RVA: 0x0010921C File Offset: 0x0010741C
 	public override void SdkPay(ISDKPayment paymentInfo)
 	{
 		ISDKPayRole sdkPayRoleInfo = this.GetSdkPayRoleInfo();
@@ -201,7 +201,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		UKuroSDKManager.KuroSDKEvent(ukuroSDKEventType, paymentInfo2);
 	}
 
-	// Token: 0x060058DB RID: 22747 RVA: 0x001015D0 File Offset: 0x000FF7D0
+	// Token: 0x06002C71 RID: 11377 RVA: 0x00109244 File Offset: 0x00107444
 	private ISDKPayRole GetSdkPayRoleInfo()
 	{
 		FunctionModel instance = FunctionModel.Instance;
@@ -221,7 +221,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		};
 	}
 
-	// Token: 0x060058DC RID: 22748 RVA: 0x00101694 File Offset: 0x000FF894
+	// Token: 0x06002C72 RID: 11378 RVA: 0x00109308 File Offset: 0x00107508
 	private string GetPaymentInfo(ISDKPayment payment, ISDKPayRole roleInfo)
 	{
 		return JsonSerializer.Serialize<PayInfoMacIosGlobal>(new PayInfoMacIosGlobal
@@ -241,21 +241,21 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		}, KuroSdkJsonOptions.Unescaped) ?? "";
 	}
 
-	// Token: 0x060058DD RID: 22749 RVA: 0x00101780 File Offset: 0x000FF980
+	// Token: 0x06002C73 RID: 11379 RVA: 0x001093F4 File Offset: 0x001075F4
 	public override void Share(ShareData shareData, string imagePath)
 	{
-		string sKuroSDKEventParameter = Json.Stringify<ShareData>(shareData, null);
+		string sKuroSDKEventParameter = Json.Stringify(shareData, null);
 		UKuroSDKStaticLibrary.Share(imagePath, sKuroSDKEventParameter);
 	}
 
-	// Token: 0x060058DE RID: 22750 RVA: 0x0010179C File Offset: 0x000FF99C
+	// Token: 0x06002C74 RID: 11380 RVA: 0x00109410 File Offset: 0x00107610
 	public override void ShareTexture(ShareData shareData, string texturePath)
 	{
-		string sKuroSDKEventParameter = Json.Stringify<ShareData>(shareData, null);
+		string sKuroSDKEventParameter = Json.Stringify(shareData, null);
 		UKuroSDKStaticLibrary.Share(texturePath, sKuroSDKEventParameter);
 	}
 
-	// Token: 0x060058DF RID: 22751 RVA: 0x001017B8 File Offset: 0x000FF9B8
+	// Token: 0x06002C75 RID: 11381 RVA: 0x0010942C File Offset: 0x0010762C
 	public override void SetFont()
 	{
 		string deviceFontAsset = KuroSdkModel.Instance.GetDeviceFontAsset();
@@ -268,7 +268,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		UKuroSDKManager.SetFont(deviceFontAsset);
 	}
 
-	// Token: 0x060058E0 RID: 22752 RVA: 0x00101800 File Offset: 0x000FFA00
+	// Token: 0x06002C76 RID: 11382 RVA: 0x00109474 File Offset: 0x00107674
 	protected unsafe override void OnShareResult(int code, string platform, string msg)
 	{
 		Log instance = Log.Instance;
@@ -288,7 +288,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnShareResult, false);
 	}
 
-	// Token: 0x060058E1 RID: 22753 RVA: 0x001018A4 File Offset: 0x000FFAA4
+	// Token: 0x06002C77 RID: 11383 RVA: 0x00109518 File Offset: 0x00107718
 	public override void SdkOpenUrlWnd(string title, string url, bool isLandscape, bool transparent, bool webAccelerated = true)
 	{
 		if (KuroSdkController.Instance.CanUseSdk())
@@ -303,19 +303,19 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x060058E2 RID: 22754 RVA: 0x00101921 File Offset: 0x000FFB21
+	// Token: 0x06002C78 RID: 11384 RVA: 0x00109595 File Offset: 0x00107795
 	public override void OpenExternalUrl(string url)
 	{
 		UKuroSDKManager.OpenDefaultWebView(url);
 	}
 
-	// Token: 0x060058E3 RID: 22755 RVA: 0x00101929 File Offset: 0x000FFB29
+	// Token: 0x06002C79 RID: 11385 RVA: 0x0010959D File Offset: 0x0010779D
 	protected override int CurrentPlatformYearReviewTime()
 	{
 		return 3;
 	}
 
-	// Token: 0x060058E4 RID: 22756 RVA: 0x0010192C File Offset: 0x000FFB2C
+	// Token: 0x06002C7A RID: 11386 RVA: 0x001095A0 File Offset: 0x001077A0
 	protected unsafe void KuroBindExternalLoginResult()
 	{
 		UKuroSDKManager.Get().ExternalLoginCallBack.Clear();
@@ -338,7 +338,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		});
 	}
 
-	// Token: 0x060058E5 RID: 22757 RVA: 0x00101958 File Offset: 0x000FFB58
+	// Token: 0x06002C7B RID: 11387 RVA: 0x001095CC File Offset: 0x001077CC
 	protected override void BindExternalEvent()
 	{
 		this.KuroBindExternalLoginResult();
@@ -346,13 +346,13 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		base.KuroBindExternalAchievementQueryResult();
 	}
 
-	// Token: 0x060058E6 RID: 22758 RVA: 0x0010196C File Offset: 0x000FFB6C
+	// Token: 0x06002C7C RID: 11388 RVA: 0x001095E0 File Offset: 0x001077E0
 	public override void UnlockSdkTrophy(string id)
 	{
 		this.UpdateExternalAchievementProgress(id, 100);
 	}
 
-	// Token: 0x060058E7 RID: 22759 RVA: 0x00101978 File Offset: 0x000FFB78
+	// Token: 0x06002C7D RID: 11389 RVA: 0x001095EC File Offset: 0x001077EC
 	public void UpdateExternalAchievementProgress(string achievementName, int progress)
 	{
 		if (!this.ExternalLoginState)
@@ -372,7 +372,7 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		SdkAchievementContentData sdkAchievementContentData = new SdkAchievementContentData();
 		sdkAchievementContentData.AchievementId = achievementName;
 		sdkAchievementContentData.Progress = progress;
-		UKuroSDKManager.WriteExternalAchievements(Json.Stringify<SdkAchievementData>(new SdkAchievementData
+		UKuroSDKManager.WriteExternalAchievements(Json.Stringify(new SdkAchievementData
 		{
 			Achievements = new SdkAchievementContentData[]
 			{
@@ -381,17 +381,17 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		}, null) ?? "");
 	}
 
-	// Token: 0x040028A4 RID: 10404
+	// Token: 0x0400293F RID: 10559
 	private const int WEBVIEWCD = 5000;
 
-	// Token: 0x040028A5 RID: 10405
+	// Token: 0x04002940 RID: 10560
 	private const int MAXREVIEWTIME = 3;
 
-	// Token: 0x040028A6 RID: 10406
+	// Token: 0x04002941 RID: 10561
 	[Nullable(2)]
 	private PlatformSdkIosGlobal.IUserInfo CacheUserInfo;
 
-	// Token: 0x040028A7 RID: 10407
+	// Token: 0x04002942 RID: 10562
 	public readonly Action<string> AnnounceRedPointCallBack = delegate(string result)
 	{
 		if (result.Contains("showRed") && (result.Contains("1") || result.Contains("YES")))
@@ -404,79 +404,79 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		EventSystem.Instance.Emit(EEventName.SdkPostWebViewRedPointRefresh);
 	};
 
-	// Token: 0x020074D0 RID: 29904
+	// Token: 0x02006664 RID: 26212
 	private interface ISharePlatformContent
 	{
-		// Token: 0x17009FE7 RID: 40935
-		// (get) Token: 0x06048A6D RID: 297581
-		// (set) Token: 0x06048A6E RID: 297582
+		// Token: 0x17007785 RID: 30597
+		// (get) Token: 0x0603EECD RID: 257741
+		// (set) Token: 0x0603EECE RID: 257742
 		string iconUrl { get; set; }
 
-		// Token: 0x17009FE8 RID: 40936
-		// (get) Token: 0x06048A6F RID: 297583
-		// (set) Token: 0x06048A70 RID: 297584
+		// Token: 0x17007786 RID: 30598
+		// (get) Token: 0x0603EECF RID: 257743
+		// (set) Token: 0x0603EED0 RID: 257744
 		string platform { get; set; }
 	}
 
-	// Token: 0x020074D1 RID: 29905
+	// Token: 0x02006665 RID: 26213
 	[Nullable(0)]
 	private class SharePlatformContent : PlatformSdkIosGlobal.ISharePlatformContent
 	{
-		// Token: 0x17009FE9 RID: 40937
-		// (get) Token: 0x06048A71 RID: 297585 RVA: 0x012B4A66 File Offset: 0x012B2C66
-		// (set) Token: 0x06048A72 RID: 297586 RVA: 0x012B4A6E File Offset: 0x012B2C6E
+		// Token: 0x17007787 RID: 30599
+		// (get) Token: 0x0603EED1 RID: 257745 RVA: 0x01257DCE File Offset: 0x01255FCE
+		// (set) Token: 0x0603EED2 RID: 257746 RVA: 0x01257DD6 File Offset: 0x01255FD6
 		public string iconUrl { get; set; }
 
-		// Token: 0x17009FEA RID: 40938
-		// (get) Token: 0x06048A73 RID: 297587 RVA: 0x012B4A77 File Offset: 0x012B2C77
-		// (set) Token: 0x06048A74 RID: 297588 RVA: 0x012B4A7F File Offset: 0x012B2C7F
+		// Token: 0x17007788 RID: 30600
+		// (get) Token: 0x0603EED3 RID: 257747 RVA: 0x01257DDF File Offset: 0x01255FDF
+		// (set) Token: 0x0603EED4 RID: 257748 RVA: 0x01257DE7 File Offset: 0x01255FE7
 		public string platform { get; set; }
 	}
 
-	// Token: 0x020074D2 RID: 29906
+	// Token: 0x02006666 RID: 26214
 	private interface ISharePlatform
 	{
-		// Token: 0x17009FEB RID: 40939
-		// (get) Token: 0x06048A76 RID: 297590
-		// (set) Token: 0x06048A77 RID: 297591
+		// Token: 0x17007789 RID: 30601
+		// (get) Token: 0x0603EED6 RID: 257750
+		// (set) Token: 0x0603EED7 RID: 257751
 		string KROVERSEA_SDK_KEY_DATA { get; set; }
 
-		// Token: 0x17009FEC RID: 40940
-		// (get) Token: 0x06048A78 RID: 297592
-		// (set) Token: 0x06048A79 RID: 297593
+		// Token: 0x1700778A RID: 30602
+		// (get) Token: 0x0603EED8 RID: 257752
+		// (set) Token: 0x0603EED9 RID: 257753
 		string KROVERSEA_SDK_KEY_REASON { get; set; }
 
-		// Token: 0x17009FED RID: 40941
-		// (get) Token: 0x06048A7A RID: 297594
-		// (set) Token: 0x06048A7B RID: 297595
+		// Token: 0x1700778B RID: 30603
+		// (get) Token: 0x0603EEDA RID: 257754
+		// (set) Token: 0x0603EEDB RID: 257755
 		int KROVERSEA_SDK_KEY_RESULT { get; set; }
 	}
 
-	// Token: 0x020074D3 RID: 29907
+	// Token: 0x02006667 RID: 26215
 	[Nullable(0)]
 	private class SharePlatform : PlatformSdkIosGlobal.ISharePlatform
 	{
-		// Token: 0x17009FEE RID: 40942
-		// (get) Token: 0x06048A7C RID: 297596 RVA: 0x012B4A90 File Offset: 0x012B2C90
-		// (set) Token: 0x06048A7D RID: 297597 RVA: 0x012B4A98 File Offset: 0x012B2C98
+		// Token: 0x1700778C RID: 30604
+		// (get) Token: 0x0603EEDC RID: 257756 RVA: 0x01257DF8 File Offset: 0x01255FF8
+		// (set) Token: 0x0603EEDD RID: 257757 RVA: 0x01257E00 File Offset: 0x01256000
 		public string KROVERSEA_SDK_KEY_DATA { get; set; }
 
-		// Token: 0x17009FEF RID: 40943
-		// (get) Token: 0x06048A7E RID: 297598 RVA: 0x012B4AA1 File Offset: 0x012B2CA1
-		// (set) Token: 0x06048A7F RID: 297599 RVA: 0x012B4AA9 File Offset: 0x012B2CA9
+		// Token: 0x1700778D RID: 30605
+		// (get) Token: 0x0603EEDE RID: 257758 RVA: 0x01257E09 File Offset: 0x01256009
+		// (set) Token: 0x0603EEDF RID: 257759 RVA: 0x01257E11 File Offset: 0x01256011
 		public string KROVERSEA_SDK_KEY_REASON { get; set; }
 
-		// Token: 0x17009FF0 RID: 40944
-		// (get) Token: 0x06048A80 RID: 297600 RVA: 0x012B4AB2 File Offset: 0x012B2CB2
-		// (set) Token: 0x06048A81 RID: 297601 RVA: 0x012B4ABA File Offset: 0x012B2CBA
+		// Token: 0x1700778E RID: 30606
+		// (get) Token: 0x0603EEE0 RID: 257760 RVA: 0x01257E1A File Offset: 0x0125601A
+		// (set) Token: 0x0603EEE1 RID: 257761 RVA: 0x01257E22 File Offset: 0x01256022
 		public int KROVERSEA_SDK_KEY_RESULT { get; set; }
 	}
 
-	// Token: 0x020074D4 RID: 29908
+	// Token: 0x02006668 RID: 26216
 	[NullableContext(0)]
 	private class IQueryProduct
 	{
-		// Token: 0x04026B40 RID: 158528
+		// Token: 0x04021E85 RID: 138885
 		[Nullable(new byte[]
 		{
 			2,
@@ -484,161 +484,161 @@ public class PlatformSdkIosGlobal : PlatformSdkBase
 		})]
 		public PlatformSdkIosGlobal.QueryProductContent[] products;
 
-		// Token: 0x04026B41 RID: 158529
+		// Token: 0x04021E86 RID: 138886
 		public int code;
 
-		// Token: 0x04026B42 RID: 158530
+		// Token: 0x04021E87 RID: 138887
 		[Nullable(1)]
 		public string msg;
 	}
 
-	// Token: 0x020074D5 RID: 29909
+	// Token: 0x02006669 RID: 26217
 	private interface IQueryProductContent
 	{
-		// Token: 0x17009FF1 RID: 40945
-		// (get) Token: 0x06048A84 RID: 297604
-		// (set) Token: 0x06048A85 RID: 297605
+		// Token: 0x1700778F RID: 30607
+		// (get) Token: 0x0603EEE4 RID: 257764
+		// (set) Token: 0x0603EEE5 RID: 257765
 		string goodsId { get; set; }
 
-		// Token: 0x17009FF2 RID: 40946
-		// (get) Token: 0x06048A86 RID: 297606
-		// (set) Token: 0x06048A87 RID: 297607
+		// Token: 0x17007790 RID: 30608
+		// (get) Token: 0x0603EEE6 RID: 257766
+		// (set) Token: 0x0603EEE7 RID: 257767
 		string name { get; set; }
 
-		// Token: 0x17009FF3 RID: 40947
-		// (get) Token: 0x06048A88 RID: 297608
-		// (set) Token: 0x06048A89 RID: 297609
+		// Token: 0x17007791 RID: 30609
+		// (get) Token: 0x0603EEE8 RID: 257768
+		// (set) Token: 0x0603EEE9 RID: 257769
 		string desc { get; set; }
 
-		// Token: 0x17009FF4 RID: 40948
-		// (get) Token: 0x06048A8A RID: 297610
-		// (set) Token: 0x06048A8B RID: 297611
+		// Token: 0x17007792 RID: 30610
+		// (get) Token: 0x0603EEEA RID: 257770
+		// (set) Token: 0x0603EEEB RID: 257771
 		string currency { get; set; }
 
-		// Token: 0x17009FF5 RID: 40949
-		// (get) Token: 0x06048A8C RID: 297612
-		// (set) Token: 0x06048A8D RID: 297613
+		// Token: 0x17007793 RID: 30611
+		// (get) Token: 0x0603EEEC RID: 257772
+		// (set) Token: 0x0603EEED RID: 257773
 		float price { get; set; }
 	}
 
-	// Token: 0x020074D6 RID: 29910
+	// Token: 0x0200666A RID: 26218
 	[Nullable(0)]
 	private class QueryProductContent : PlatformSdkIosGlobal.IQueryProductContent
 	{
-		// Token: 0x17009FF6 RID: 40950
-		// (get) Token: 0x06048A8E RID: 297614 RVA: 0x012B4AD3 File Offset: 0x012B2CD3
-		// (set) Token: 0x06048A8F RID: 297615 RVA: 0x012B4ADB File Offset: 0x012B2CDB
+		// Token: 0x17007794 RID: 30612
+		// (get) Token: 0x0603EEEE RID: 257774 RVA: 0x01257E3B File Offset: 0x0125603B
+		// (set) Token: 0x0603EEEF RID: 257775 RVA: 0x01257E43 File Offset: 0x01256043
 		public string goodsId { get; set; }
 
-		// Token: 0x17009FF7 RID: 40951
-		// (get) Token: 0x06048A90 RID: 297616 RVA: 0x012B4AE4 File Offset: 0x012B2CE4
-		// (set) Token: 0x06048A91 RID: 297617 RVA: 0x012B4AEC File Offset: 0x012B2CEC
+		// Token: 0x17007795 RID: 30613
+		// (get) Token: 0x0603EEF0 RID: 257776 RVA: 0x01257E4C File Offset: 0x0125604C
+		// (set) Token: 0x0603EEF1 RID: 257777 RVA: 0x01257E54 File Offset: 0x01256054
 		public string name { get; set; }
 
-		// Token: 0x17009FF8 RID: 40952
-		// (get) Token: 0x06048A92 RID: 297618 RVA: 0x012B4AF5 File Offset: 0x012B2CF5
-		// (set) Token: 0x06048A93 RID: 297619 RVA: 0x012B4AFD File Offset: 0x012B2CFD
+		// Token: 0x17007796 RID: 30614
+		// (get) Token: 0x0603EEF2 RID: 257778 RVA: 0x01257E5D File Offset: 0x0125605D
+		// (set) Token: 0x0603EEF3 RID: 257779 RVA: 0x01257E65 File Offset: 0x01256065
 		public string desc { get; set; }
 
-		// Token: 0x17009FF9 RID: 40953
-		// (get) Token: 0x06048A94 RID: 297620 RVA: 0x012B4B06 File Offset: 0x012B2D06
-		// (set) Token: 0x06048A95 RID: 297621 RVA: 0x012B4B0E File Offset: 0x012B2D0E
+		// Token: 0x17007797 RID: 30615
+		// (get) Token: 0x0603EEF4 RID: 257780 RVA: 0x01257E6E File Offset: 0x0125606E
+		// (set) Token: 0x0603EEF5 RID: 257781 RVA: 0x01257E76 File Offset: 0x01256076
 		public string currency { get; set; }
 
-		// Token: 0x17009FFA RID: 40954
-		// (get) Token: 0x06048A96 RID: 297622 RVA: 0x012B4B17 File Offset: 0x012B2D17
-		// (set) Token: 0x06048A97 RID: 297623 RVA: 0x012B4B1F File Offset: 0x012B2D1F
+		// Token: 0x17007798 RID: 30616
+		// (get) Token: 0x0603EEF6 RID: 257782 RVA: 0x01257E7F File Offset: 0x0125607F
+		// (set) Token: 0x0603EEF7 RID: 257783 RVA: 0x01257E87 File Offset: 0x01256087
 		public float price { get; set; }
 	}
 
-	// Token: 0x020074D7 RID: 29911
+	// Token: 0x0200666B RID: 26219
 	private interface IUserInfo
 	{
-		// Token: 0x17009FFB RID: 40955
-		// (get) Token: 0x06048A99 RID: 297625
-		// (set) Token: 0x06048A9A RID: 297626
+		// Token: 0x17007799 RID: 30617
+		// (get) Token: 0x0603EEF9 RID: 257785
+		// (set) Token: 0x0603EEFA RID: 257786
 		string token { get; set; }
 
-		// Token: 0x17009FFC RID: 40956
-		// (get) Token: 0x06048A9B RID: 297627
-		// (set) Token: 0x06048A9C RID: 297628
+		// Token: 0x1700779A RID: 30618
+		// (get) Token: 0x0603EEFB RID: 257787
+		// (set) Token: 0x0603EEFC RID: 257788
 		string userId { get; set; }
 
-		// Token: 0x17009FFD RID: 40957
-		// (get) Token: 0x06048A9D RID: 297629
-		// (set) Token: 0x06048A9E RID: 297630
+		// Token: 0x1700779B RID: 30619
+		// (get) Token: 0x0603EEFD RID: 257789
+		// (set) Token: 0x0603EEFE RID: 257790
 		string userName { get; set; }
 
-		// Token: 0x17009FFE RID: 40958
-		// (get) Token: 0x06048A9F RID: 297631
-		// (set) Token: 0x06048AA0 RID: 297632
+		// Token: 0x1700779C RID: 30620
+		// (get) Token: 0x0603EEFF RID: 257791
+		// (set) Token: 0x0603EF00 RID: 257792
 		string extendParams { get; set; }
 
-		// Token: 0x17009FFF RID: 40959
-		// (get) Token: 0x06048AA1 RID: 297633
-		// (set) Token: 0x06048AA2 RID: 297634
+		// Token: 0x1700779D RID: 30621
+		// (get) Token: 0x0603EF01 RID: 257793
+		// (set) Token: 0x0603EF02 RID: 257794
 		string channelId { get; set; }
 
-		// Token: 0x1700A000 RID: 40960
-		// (get) Token: 0x06048AA3 RID: 297635
-		// (set) Token: 0x06048AA4 RID: 297636
+		// Token: 0x1700779E RID: 30622
+		// (get) Token: 0x0603EF03 RID: 257795
+		// (set) Token: 0x0603EF04 RID: 257796
 		string idfv { get; set; }
 
-		// Token: 0x1700A001 RID: 40961
-		// (get) Token: 0x06048AA5 RID: 297637
-		// (set) Token: 0x06048AA6 RID: 297638
+		// Token: 0x1700779F RID: 30623
+		// (get) Token: 0x0603EF05 RID: 257797
+		// (set) Token: 0x0603EF06 RID: 257798
 		string jyDeviceId { get; set; }
 	}
 
-	// Token: 0x020074D8 RID: 29912
+	// Token: 0x0200666C RID: 26220
 	[Nullable(0)]
 	private class UserInfo : PlatformSdkIosGlobal.IUserInfo
 	{
-		// Token: 0x1700A002 RID: 40962
-		// (get) Token: 0x06048AA7 RID: 297639 RVA: 0x012B4B30 File Offset: 0x012B2D30
-		// (set) Token: 0x06048AA8 RID: 297640 RVA: 0x012B4B38 File Offset: 0x012B2D38
+		// Token: 0x170077A0 RID: 30624
+		// (get) Token: 0x0603EF07 RID: 257799 RVA: 0x01257E98 File Offset: 0x01256098
+		// (set) Token: 0x0603EF08 RID: 257800 RVA: 0x01257EA0 File Offset: 0x012560A0
 		public string token { get; set; }
 
-		// Token: 0x1700A003 RID: 40963
-		// (get) Token: 0x06048AA9 RID: 297641 RVA: 0x012B4B41 File Offset: 0x012B2D41
-		// (set) Token: 0x06048AAA RID: 297642 RVA: 0x012B4B49 File Offset: 0x012B2D49
+		// Token: 0x170077A1 RID: 30625
+		// (get) Token: 0x0603EF09 RID: 257801 RVA: 0x01257EA9 File Offset: 0x012560A9
+		// (set) Token: 0x0603EF0A RID: 257802 RVA: 0x01257EB1 File Offset: 0x012560B1
 		public string userId { get; set; }
 
-		// Token: 0x1700A004 RID: 40964
-		// (get) Token: 0x06048AAB RID: 297643 RVA: 0x012B4B52 File Offset: 0x012B2D52
-		// (set) Token: 0x06048AAC RID: 297644 RVA: 0x012B4B5A File Offset: 0x012B2D5A
+		// Token: 0x170077A2 RID: 30626
+		// (get) Token: 0x0603EF0B RID: 257803 RVA: 0x01257EBA File Offset: 0x012560BA
+		// (set) Token: 0x0603EF0C RID: 257804 RVA: 0x01257EC2 File Offset: 0x012560C2
 		public string userName { get; set; }
 
-		// Token: 0x1700A005 RID: 40965
-		// (get) Token: 0x06048AAD RID: 297645 RVA: 0x012B4B63 File Offset: 0x012B2D63
-		// (set) Token: 0x06048AAE RID: 297646 RVA: 0x012B4B6B File Offset: 0x012B2D6B
+		// Token: 0x170077A3 RID: 30627
+		// (get) Token: 0x0603EF0D RID: 257805 RVA: 0x01257ECB File Offset: 0x012560CB
+		// (set) Token: 0x0603EF0E RID: 257806 RVA: 0x01257ED3 File Offset: 0x012560D3
 		public string extendParams { get; set; }
 
-		// Token: 0x1700A006 RID: 40966
-		// (get) Token: 0x06048AAF RID: 297647 RVA: 0x012B4B74 File Offset: 0x012B2D74
-		// (set) Token: 0x06048AB0 RID: 297648 RVA: 0x012B4B7C File Offset: 0x012B2D7C
+		// Token: 0x170077A4 RID: 30628
+		// (get) Token: 0x0603EF0F RID: 257807 RVA: 0x01257EDC File Offset: 0x012560DC
+		// (set) Token: 0x0603EF10 RID: 257808 RVA: 0x01257EE4 File Offset: 0x012560E4
 		public string channelId { get; set; }
 
-		// Token: 0x1700A007 RID: 40967
-		// (get) Token: 0x06048AB1 RID: 297649 RVA: 0x012B4B85 File Offset: 0x012B2D85
-		// (set) Token: 0x06048AB2 RID: 297650 RVA: 0x012B4B8D File Offset: 0x012B2D8D
+		// Token: 0x170077A5 RID: 30629
+		// (get) Token: 0x0603EF11 RID: 257809 RVA: 0x01257EED File Offset: 0x012560ED
+		// (set) Token: 0x0603EF12 RID: 257810 RVA: 0x01257EF5 File Offset: 0x012560F5
 		public string idfv { get; set; }
 
-		// Token: 0x1700A008 RID: 40968
-		// (get) Token: 0x06048AB3 RID: 297651 RVA: 0x012B4B96 File Offset: 0x012B2D96
-		// (set) Token: 0x06048AB4 RID: 297652 RVA: 0x012B4B9E File Offset: 0x012B2D9E
+		// Token: 0x170077A6 RID: 30630
+		// (get) Token: 0x0603EF13 RID: 257811 RVA: 0x01257EFE File Offset: 0x012560FE
+		// (set) Token: 0x0603EF14 RID: 257812 RVA: 0x01257F06 File Offset: 0x01256106
 		public string jyDeviceId { get; set; }
 	}
 
-	// Token: 0x020074D9 RID: 29913
+	// Token: 0x0200666D RID: 26221
 	[NullableContext(0)]
 	private class ISdkCustomerService
 	{
-		// Token: 0x04026B4F RID: 158543
+		// Token: 0x04021E94 RID: 138900
 		[Nullable(1)]
 		public string cuid;
 
-		// Token: 0x04026B50 RID: 158544
+		// Token: 0x04021E95 RID: 138901
 		public int isredot;
 	}
 }

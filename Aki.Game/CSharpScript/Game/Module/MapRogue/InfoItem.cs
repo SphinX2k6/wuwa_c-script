@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005634 RID: 22068
+	// Token: 0x0200460A RID: 17930
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.MapRogue
 	})]
 	public class InfoItem : GridProxyAbstract<IItemInfoData>
 	{
-		// Token: 0x060381EB RID: 229867 RVA: 0x00D4B333 File Offset: 0x00D49533
+		// Token: 0x0602D0E9 RID: 184553 RVA: 0x00C9907B File Offset: 0x00C9727B
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x060381EC RID: 229868 RVA: 0x00D4B36C File Offset: 0x00D4956C
+		// Token: 0x0602D0EA RID: 184554 RVA: 0x00C990B4 File Offset: 0x00C972B4
 		public override void Refresh(IItemInfoData data, bool isSelected, int gridIndex)
 		{
 			UUIText text = base.GetText(0);

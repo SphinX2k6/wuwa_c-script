@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020031D5 RID: 12757
+// Token: 0x02002744 RID: 10052
 public enum EMatDataType
 {
-	// Token: 0x0400D800 RID: 55296
+	// Token: 0x0400DC87 RID: 56455
 	Unknown,
-	// Token: 0x0400D801 RID: 55297
+	// Token: 0x0400DC88 RID: 56456
 	SimpleMatData,
-	// Token: 0x0400D802 RID: 55298
+	// Token: 0x0400DC89 RID: 56457
 	MatControllerData,
-	// Token: 0x0400D803 RID: 55299
+	// Token: 0x0400DC8A RID: 56458
 	MatControllerGroup
 }

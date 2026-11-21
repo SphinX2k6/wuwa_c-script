@@ -4,12 +4,12 @@ using System.Text.Json;
 
 namespace CSharpScript.Game.Common.LocalStorageJson
 {
-	// Token: 0x02007291 RID: 29329
+	// Token: 0x02006410 RID: 25616
 	[NullableContext(2)]
 	[Nullable(0)]
 	public static class LocalStorageSerializer
 	{
-		// Token: 0x06047E1B RID: 294427 RVA: 0x01265280 File Offset: 0x01263480
+		// Token: 0x0603E1DB RID: 254427 RVA: 0x01205C90 File Offset: 0x01203E90
 		public unsafe static string Encode<T>([Nullable(1)] T value)
 		{
 			string result;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			return result;
 		}
 
-		// Token: 0x06047E1C RID: 294428 RVA: 0x0126535C File Offset: 0x0126355C
+		// Token: 0x0603E1DC RID: 254428 RVA: 0x01205D6C File Offset: 0x01203F6C
 		public unsafe static T Decode<T>([Nullable(1)] string text)
 		{
 			T result;

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A71 RID: 2673
+	// Token: 0x02000B46 RID: 2886
 	public class ConfigVehicleRidingRolesById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003EBA RID: 16058 RVA: 0x001BCB58 File Offset: 0x001BAD58
+		// Token: 0x060043B8 RID: 17336 RVA: 0x001DBEEC File Offset: 0x001DA0EC
 		static ConfigVehicleRidingRolesById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigVehicleRidingRolesById.CreateStaticDefaultValue), new Action(ConfigVehicleRidingRolesById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003EBB RID: 16059 RVA: 0x001BCB78 File Offset: 0x001BAD78
+		// Token: 0x060043B9 RID: 17337 RVA: 0x001DBF0C File Offset: 0x001DA10C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigVehicleRidingRolesById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003EBC RID: 16060 RVA: 0x001BCBF7 File Offset: 0x001BADF7
+		// Token: 0x060043BA RID: 17338 RVA: 0x001DBF8B File Offset: 0x001DA18B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigVehicleRidingRolesById.LogPair = null;
 			ConfigVehicleRidingRolesById.HandleId = 0;
 		}
 
-		// Token: 0x06003EBD RID: 16061 RVA: 0x001BCC05 File Offset: 0x001BAE05
+		// Token: 0x060043BB RID: 17339 RVA: 0x001DBF99 File Offset: 0x001DA199
 		public static void Init()
 		{
 			ConfigVehicleRidingRolesById.HandleId = ConfigCommon.InitDataStatement(ConfigVehicleRidingRolesById.HandleId, "db_vehicleridingroles.db", "select BinData from `VehicleRidingRoles` where Id=?");
 		}
 
-		// Token: 0x06003EBE RID: 16062 RVA: 0x001BCC20 File Offset: 0x001BAE20
+		// Token: 0x060043BC RID: 17340 RVA: 0x001DBFB4 File Offset: 0x001DA1B4
 		public static VehicleRidingRoles? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigVehicleRidingRolesById.HandleId, ConfigVehicleRidingRolesById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new VehicleRidingRoles?(rootAsVehicleRidingRoles);
 		}
 
-		// Token: 0x040048FD RID: 18685
+		// Token: 0x04004ED0 RID: 20176
 		private const string DB = "db_vehicleridingroles.db";
 
-		// Token: 0x040048FE RID: 18686
+		// Token: 0x04004ED1 RID: 20177
 		private const string FILE = "k.可视化编辑/c.Csv/z.载具共乘角色配置/*.csv*";
 
-		// Token: 0x040048FF RID: 18687
+		// Token: 0x04004ED2 RID: 20178
 		private const string TABLE = "VehicleRidingRoles";
 
-		// Token: 0x04004900 RID: 18688
+		// Token: 0x04004ED3 RID: 20179
 		private const string COMMAND = "select BinData from `VehicleRidingRoles` where Id=?";
 
-		// Token: 0x04004901 RID: 18689
+		// Token: 0x04004ED4 RID: 20180
 		private const string KEY_PREFIX = "VehicleRidingRolesById";
 
-		// Token: 0x04004902 RID: 18690
+		// Token: 0x04004ED5 RID: 20181
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004903 RID: 18691
+		// Token: 0x04004ED6 RID: 20182
 		private static int HandleId;
 	}
 }

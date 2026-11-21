@@ -5,40 +5,40 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Launcher.Ui.HotFix
 {
-	// Token: 0x020000E6 RID: 230
+	// Token: 0x020000E9 RID: 233
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class HttpSubPackageResult
 	{
-		// Token: 0x0400047D RID: 1149
+		// Token: 0x040004AC RID: 1196
 		[JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
 		public int code;
 
-		// Token: 0x0400047E RID: 1150
+		// Token: 0x040004AD RID: 1197
 		[JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
 		public long userId;
 
-		// Token: 0x0400047F RID: 1151
+		// Token: 0x040004AE RID: 1198
 		[JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
 		public List<int> needConfirmQuestIdSet;
 
-		// Token: 0x04000480 RID: 1152
+		// Token: 0x040004AF RID: 1199
 		[JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
 		public List<int> finishQuestIdSet;
 
-		// Token: 0x04000481 RID: 1153
+		// Token: 0x040004B0 RID: 1200
 		[JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
 		public List<int> currentBlockIdSet;
 
-		// Token: 0x04000482 RID: 1154
+		// Token: 0x040004B1 RID: 1201
 		[JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
 		public List<uint> mp4FinishQuestFlag;
 
-		// Token: 0x04000483 RID: 1155
+		// Token: 0x040004B2 RID: 1202
 		[JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
 		public int sex;
 
-		// Token: 0x04000484 RID: 1156
+		// Token: 0x040004B3 RID: 1203
 		[Nullable(new byte[]
 		{
 			2,
@@ -46,7 +46,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 		})]
 		public List<ResourcePackagePositionData> positions;
 
-		// Token: 0x04000485 RID: 1157
+		// Token: 0x040004B4 RID: 1204
 		public int curRecallId;
 	}
 }

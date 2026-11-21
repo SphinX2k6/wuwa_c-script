@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200604A RID: 24650
+	// Token: 0x02004FC8 RID: 20424
 	internal enum <SpringManorPhantomExhibitGrid>F7628B2096D15C9D8B0D2AE355E0B2595D1E57216DB705A4B151E2B9ECCD68C62__EPhantomGridComponent
 	{
-		// Token: 0x04020972 RID: 133490
+		// Token: 0x0401B29F RID: 111263
 		Toggle,
-		// Token: 0x04020973 RID: 133491
+		// Token: 0x0401B2A0 RID: 111264
 		MonsterItem,
-		// Token: 0x04020974 RID: 133492
+		// Token: 0x0401B2A1 RID: 111265
 		NameText,
-		// Token: 0x04020975 RID: 133493
+		// Token: 0x0401B2A2 RID: 111266
 		NewItem,
-		// Token: 0x04020976 RID: 133494
+		// Token: 0x0401B2A3 RID: 111267
 		StarLayout,
-		// Token: 0x04020977 RID: 133495
+		// Token: 0x0401B2A4 RID: 111268
 		ItemCheck
 	}
 }

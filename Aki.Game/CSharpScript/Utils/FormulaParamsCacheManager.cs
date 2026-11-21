@@ -5,28 +5,28 @@ using System.Text.Json;
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x02004509 RID: 17673
+	// Token: 0x0200342B RID: 13355
 	public class FormulaParamsCacheManager : IStaticVariableResetter
 	{
-		// Token: 0x0602D7E2 RID: 186338 RVA: 0x00A43E1A File Offset: 0x00A4201A
+		// Token: 0x06021EB2 RID: 138930 RVA: 0x0096FC2A File Offset: 0x0096DE2A
 		static FormulaParamsCacheManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FormulaParamsCacheManager.CreateStaticDefaultValue), new Action(FormulaParamsCacheManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602D7E3 RID: 186339 RVA: 0x00A43E39 File Offset: 0x00A42039
+		// Token: 0x06021EB3 RID: 138931 RVA: 0x0096FC49 File Offset: 0x0096DE49
 		public static void CreateStaticDefaultValue()
 		{
 			FormulaParamsCacheManager.Cache = new Dictionary<string, FormulaParamsCacheManager.CachedParamsEntry>();
 		}
 
-		// Token: 0x0602D7E4 RID: 186340 RVA: 0x00A43E45 File Offset: 0x00A42045
+		// Token: 0x06021EB4 RID: 138932 RVA: 0x0096FC55 File Offset: 0x0096DE55
 		public static void ResetStaticDefaultValue()
 		{
 			FormulaParamsCacheManager.Cache = null;
 		}
 
-		// Token: 0x0602D7E5 RID: 186341 RVA: 0x00A43E50 File Offset: 0x00A42050
+		// Token: 0x06021EB5 RID: 138933 RVA: 0x0096FC60 File Offset: 0x0096DE60
 		[NullableContext(1)]
 		public static Dictionary<string, TFormulaValue> Acquire(string paramsRaw)
 		{
@@ -58,7 +58,7 @@ namespace CSharpScript.Utils
 			return result;
 		}
 
-		// Token: 0x0602D7E6 RID: 186342 RVA: 0x00A43F58 File Offset: 0x00A42158
+		// Token: 0x06021EB6 RID: 138934 RVA: 0x0096FD68 File Offset: 0x0096DF68
 		[NullableContext(1)]
 		public static void Release(string paramsRaw)
 		{
@@ -74,7 +74,7 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0401850D RID: 99597
+		// Token: 0x04012B35 RID: 76597
 		[Nullable(new byte[]
 		{
 			2,
@@ -83,14 +83,14 @@ namespace CSharpScript.Utils
 		})]
 		private static Dictionary<string, FormulaParamsCacheManager.CachedParamsEntry> Cache;
 
-		// Token: 0x0200A746 RID: 42822
+		// Token: 0x020090FE RID: 37118
 		private class CachedParamsEntry
 		{
-			// Token: 0x0403283A RID: 206906
+			// Token: 0x0402CFE0 RID: 184288
 			[Nullable(1)]
 			public Dictionary<string, TFormulaValue> Params = new Dictionary<string, TFormulaValue>();
 
-			// Token: 0x0403283B RID: 206907
+			// Token: 0x0402CFE1 RID: 184289
 			public int RefCount;
 		}
 	}

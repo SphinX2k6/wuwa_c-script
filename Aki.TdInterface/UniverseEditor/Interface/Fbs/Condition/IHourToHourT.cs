@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C41 RID: 19521
+	// Token: 0x02005134 RID: 20788
 	public class IHourToHourT
 	{
-		// Token: 0x17008DD1 RID: 36305
-		// (get) Token: 0x0601EF13 RID: 126739 RVA: 0x00454252 File Offset: 0x00452452
-		// (set) Token: 0x0601EF14 RID: 126740 RVA: 0x0045425A File Offset: 0x0045245A
+		// Token: 0x170094FA RID: 38138
+		// (get) Token: 0x06020B17 RID: 133911 RVA: 0x00487B2E File Offset: 0x00485D2E
+		// (set) Token: 0x06020B18 RID: 133912 RVA: 0x00487B36 File Offset: 0x00485D36
 		public IHourT Start { get; set; }
 
-		// Token: 0x17008DD2 RID: 36306
-		// (get) Token: 0x0601EF15 RID: 126741 RVA: 0x00454263 File Offset: 0x00452463
-		// (set) Token: 0x0601EF16 RID: 126742 RVA: 0x0045426B File Offset: 0x0045246B
+		// Token: 0x170094FB RID: 38139
+		// (get) Token: 0x06020B19 RID: 133913 RVA: 0x00487B3F File Offset: 0x00485D3F
+		// (set) Token: 0x06020B1A RID: 133914 RVA: 0x00487B47 File Offset: 0x00485D47
 		public IHourT End { get; set; }
 
-		// Token: 0x0601EF17 RID: 126743 RVA: 0x00454274 File Offset: 0x00452474
+		// Token: 0x06020B1B RID: 133915 RVA: 0x00487B50 File Offset: 0x00485D50
 		public IHourToHourT()
 		{
 			this.Start = null;

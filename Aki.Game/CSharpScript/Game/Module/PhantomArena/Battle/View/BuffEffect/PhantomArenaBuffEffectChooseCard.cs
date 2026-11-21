@@ -5,29 +5,29 @@ using CSharpScript.Game.Module.PhantomArena.Battle.Model;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 {
-	// Token: 0x0200527D RID: 21117
+	// Token: 0x0200424D RID: 16973
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBuffEffectChooseCard
 	{
-		// Token: 0x06036028 RID: 221224 RVA: 0x00CC805C File Offset: 0x00CC625C
+		// Token: 0x0602AF23 RID: 175907 RVA: 0x00C1575C File Offset: 0x00C1395C
 		public PhantomArenaBuffEffectChooseCard(IBuffEffectData data, PhantomArenaBuffEffectManager manager)
 		{
 			this.Data = data;
 			this.Manager = manager;
 		}
 
-		// Token: 0x06036029 RID: 221225 RVA: 0x00CC8074 File Offset: 0x00CC6274
+		// Token: 0x0602AF24 RID: 175908 RVA: 0x00C15774 File Offset: 0x00C13974
 		public void ShowChooseCard()
 		{
 			PhantomBattleCardSelectEffectCtx phantomBattleCardSelectEffectCtx = this.Data.Effect.PhantomBattleCardSelectEffectCtx;
 			this.Manager.Proxy.ServerActionQueue.PushChooseCardAction(phantomBattleCardSelectEffectCtx);
 		}
 
-		// Token: 0x0401C998 RID: 117144
+		// Token: 0x040173CD RID: 95181
 		protected IBuffEffectData Data;
 
-		// Token: 0x0401C999 RID: 117145
+		// Token: 0x040173CE RID: 95182
 		protected PhantomArenaBuffEffectManager Manager;
 	}
 }

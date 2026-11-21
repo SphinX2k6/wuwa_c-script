@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C5D RID: 3165
+	// Token: 0x02000D41 RID: 3393
 	public struct FarmGoldRecommendTag : IFlatbufferObject
 	{
-		// Token: 0x17001051 RID: 4177
-		// (get) Token: 0x06006CAC RID: 27820 RVA: 0x0022B234 File Offset: 0x00229434
+		// Token: 0x170010AE RID: 4270
+		// (get) Token: 0x060072B7 RID: 29367 RVA: 0x0024A584 File Offset: 0x00248784
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006CAD RID: 27821 RVA: 0x0022B241 File Offset: 0x00229441
+		// Token: 0x060072B8 RID: 29368 RVA: 0x0024A591 File Offset: 0x00248791
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006CAE RID: 27822 RVA: 0x0022B248 File Offset: 0x00229448
+		// Token: 0x060072B9 RID: 29369 RVA: 0x0024A598 File Offset: 0x00248798
 		public static FarmGoldRecommendTag GetRootAsFarmGoldRecommendTag(ByteBuffer _bb)
 		{
 			return FarmGoldRecommendTag.GetRootAsFarmGoldRecommendTag(_bb, default(FarmGoldRecommendTag));
 		}
 
-		// Token: 0x06006CAF RID: 27823 RVA: 0x0022B264 File Offset: 0x00229464
+		// Token: 0x060072BA RID: 29370 RVA: 0x0024A5B4 File Offset: 0x002487B4
 		public static FarmGoldRecommendTag GetRootAsFarmGoldRecommendTag(ByteBuffer _bb, FarmGoldRecommendTag obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006CB0 RID: 27824 RVA: 0x0022B281 File Offset: 0x00229481
+		// Token: 0x060072BB RID: 29371 RVA: 0x0024A5D1 File Offset: 0x002487D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006CB1 RID: 27825 RVA: 0x0022B290 File Offset: 0x00229490
+		// Token: 0x060072BC RID: 29372 RVA: 0x0024A5E0 File Offset: 0x002487E0
 		public FarmGoldRecommendTag __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001052 RID: 4178
-		// (get) Token: 0x06006CB2 RID: 27826 RVA: 0x0022B2A0 File Offset: 0x002294A0
+		// Token: 0x170010AF RID: 4271
+		// (get) Token: 0x060072BD RID: 29373 RVA: 0x0024A5F0 File Offset: 0x002487F0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001053 RID: 4179
-		// (get) Token: 0x06006CB3 RID: 27827 RVA: 0x0022B2DC File Offset: 0x002294DC
+		// Token: 0x170010B0 RID: 4272
+		// (get) Token: 0x060072BE RID: 29374 RVA: 0x0024A62C File Offset: 0x0024882C
 		public string RecommendText
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006CB4 RID: 27828 RVA: 0x0022B313 File Offset: 0x00229513
+		// Token: 0x060072BF RID: 29375 RVA: 0x0024A663 File Offset: 0x00248863
 		public Span<byte> GetRecommendTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06006CB5 RID: 27829 RVA: 0x0022B322 File Offset: 0x00229522
+		// Token: 0x060072C0 RID: 29376 RVA: 0x0024A672 File Offset: 0x00248872
 		public byte[] GetRecommendTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001054 RID: 4180
-		// (get) Token: 0x06006CB6 RID: 27830 RVA: 0x0022B33C File Offset: 0x0022953C
+		// Token: 0x170010B1 RID: 4273
+		// (get) Token: 0x060072C1 RID: 29377 RVA: 0x0024A68C File Offset: 0x0024888C
 		public string RecommendIcon
 		{
 			get
@@ -104,19 +104,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006CB7 RID: 27831 RVA: 0x0022B373 File Offset: 0x00229573
+		// Token: 0x060072C2 RID: 29378 RVA: 0x0024A6C3 File Offset: 0x002488C3
 		public Span<byte> GetRecommendIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06006CB8 RID: 27832 RVA: 0x0022B382 File Offset: 0x00229582
+		// Token: 0x060072C3 RID: 29379 RVA: 0x0024A6D2 File Offset: 0x002488D2
 		public byte[] GetRecommendIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004CA8 RID: 19624
+		// Token: 0x0400528C RID: 21132
 		private Table __p;
 	}
 }

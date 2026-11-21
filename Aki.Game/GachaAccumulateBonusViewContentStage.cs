@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C6A RID: 7274
+// Token: 0x02001129 RID: 4393
 [NullableContext(1)]
 [Nullable(0)]
 public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentBase
 {
-	// Token: 0x0600DB2F RID: 56111 RVA: 0x0032EB0C File Offset: 0x0032CD0C
+	// Token: 0x0600AF45 RID: 44869 RVA: 0x00339F58 File Offset: 0x00338158
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 18;
@@ -59,7 +59,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600DB30 RID: 56112 RVA: 0x0032ED90 File Offset: 0x0032CF90
+	// Token: 0x0600AF46 RID: 44870 RVA: 0x0033A1DC File Offset: 0x003383DC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GachaAccumulateBonusViewContentStage.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -70,7 +70,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DB31 RID: 56113 RVA: 0x0032EDD4 File Offset: 0x0032CFD4
+	// Token: 0x0600AF47 RID: 44871 RVA: 0x0033A220 File Offset: 0x00338420
 	protected override void OnStart()
 	{
 		this.UiSequencePlayer = new UiSequencePlayer(this.RootItem);
@@ -82,7 +82,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		this.LoopScroll.BindLateUpdate(new Action<float>(this.OnLoopScrollLateUpdate));
 	}
 
-	// Token: 0x0600DB32 RID: 56114 RVA: 0x0032EE63 File Offset: 0x0032D063
+	// Token: 0x0600AF48 RID: 44872 RVA: 0x0033A2AF File Offset: 0x003384AF
 	protected override void OnBeforeDestroy()
 	{
 		if (this.LoopScroll != null)
@@ -93,7 +93,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		}
 	}
 
-	// Token: 0x0600DB33 RID: 56115 RVA: 0x0032EE8C File Offset: 0x0032D08C
+	// Token: 0x0600AF49 RID: 44873 RVA: 0x0033A2D8 File Offset: 0x003384D8
 	public override UniTask PlayStartSequence()
 	{
 		GachaAccumulateBonusViewContentStage.<PlayStartSequence>d__23 <PlayStartSequence>d__;
@@ -104,7 +104,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		return <PlayStartSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DB34 RID: 56116 RVA: 0x0032EED0 File Offset: 0x0032D0D0
+	// Token: 0x0600AF4A RID: 44874 RVA: 0x0033A31C File Offset: 0x0033851C
 	public override UniTask PlayCloseSequence()
 	{
 		GachaAccumulateBonusViewContentStage.<PlayCloseSequence>d__24 <PlayCloseSequence>d__;
@@ -115,19 +115,19 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		return <PlayCloseSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DB35 RID: 56117 RVA: 0x0032EF13 File Offset: 0x0032D113
+	// Token: 0x0600AF4B RID: 44875 RVA: 0x0033A35F File Offset: 0x0033855F
 	public override void SetOnClickBackButtonCallBack(Action callback)
 	{
 		this.OnClickBackButtonCallBack = callback;
 	}
 
-	// Token: 0x0600DB36 RID: 56118 RVA: 0x0032EF1C File Offset: 0x0032D11C
+	// Token: 0x0600AF4C RID: 44876 RVA: 0x0033A368 File Offset: 0x00338568
 	private void OnBackButtonClick()
 	{
 		this.OnClickBackButtonCallBack();
 	}
 
-	// Token: 0x0600DB37 RID: 56119 RVA: 0x0032EF2C File Offset: 0x0032D12C
+	// Token: 0x0600AF4D RID: 44877 RVA: 0x0033A378 File Offset: 0x00338578
 	private void RefreshCaptionHelpBtn(int accumulateId)
 	{
 		int helpId = GachaAccumulateConfig.Instance.GetHelpId(accumulateId);
@@ -161,7 +161,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		}
 	}
 
-	// Token: 0x0600DB38 RID: 56120 RVA: 0x0032EF9C File Offset: 0x0032D19C
+	// Token: 0x0600AF4E RID: 44878 RVA: 0x0033A3E8 File Offset: 0x003385E8
 	public override void RefreshView(int accumulateId)
 	{
 		this.CurrentAccumulateId = accumulateId;
@@ -210,7 +210,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		this.RefreshBigRewardByScroll(accumulateData);
 	}
 
-	// Token: 0x0600DB39 RID: 56121 RVA: 0x0032F0AC File Offset: 0x0032D2AC
+	// Token: 0x0600AF4F RID: 44879 RVA: 0x0033A4F8 File Offset: 0x003386F8
 	private void ApplyLayoutVisibility(bool useFixed)
 	{
 		LoopScrollView<GachaAccumulateRewardItemStage, GachaAccumulateRewardItemStageData> loopScroll = this.LoopScroll;
@@ -225,7 +225,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		base.GetItem(13).SetUIActive(useFixed);
 	}
 
-	// Token: 0x0600DB3A RID: 56122 RVA: 0x0032F128 File Offset: 0x0032D328
+	// Token: 0x0600AF50 RID: 44880 RVA: 0x0033A574 File Offset: 0x00338774
 	private void RefreshLayout(int accumulateId, GachaAccumulateData accumulateData)
 	{
 		List<GachaAccumulateRewardItemStageData> list = new List<GachaAccumulateRewardItemStageData>();
@@ -252,7 +252,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		this.LoopScroll.RefreshByData(list, false, null, false);
 	}
 
-	// Token: 0x0600DB3B RID: 56123 RVA: 0x0032F1DC File Offset: 0x0032D3DC
+	// Token: 0x0600AF51 RID: 44881 RVA: 0x0033A628 File Offset: 0x00338828
 	private void RefreshProgressBar(GachaAccumulateData accumulateData)
 	{
 		this.EnsurePointItems(accumulateData);
@@ -261,7 +261,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		this.RefreshPointItemsState(this.SpawnedPointItems, milestones, accumulateData.CurGachaNum);
 	}
 
-	// Token: 0x0600DB3C RID: 56124 RVA: 0x0032F224 File Offset: 0x0032D424
+	// Token: 0x0600AF52 RID: 44882 RVA: 0x0033A670 File Offset: 0x00338870
 	private void RefreshFixedLayout(int accumulateId, GachaAccumulateData accumulateData)
 	{
 		if (!this.FixedSpawnStarted)
@@ -279,7 +279,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		this.RefreshFixedRewardItemsData(accumulateId, accumulateData);
 	}
 
-	// Token: 0x0600DB3D RID: 56125 RVA: 0x0032F274 File Offset: 0x0032D474
+	// Token: 0x0600AF53 RID: 44883 RVA: 0x0033A6C0 File Offset: 0x003388C0
 	private UniTask SpawnFixedItemsAsync(int accumulateId, int count)
 	{
 		GachaAccumulateBonusViewContentStage.<SpawnFixedItemsAsync>d__33 <SpawnFixedItemsAsync>d__;
@@ -292,7 +292,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		return <SpawnFixedItemsAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DB3E RID: 56126 RVA: 0x0032F2C8 File Offset: 0x0032D4C8
+	// Token: 0x0600AF54 RID: 44884 RVA: 0x0033A714 File Offset: 0x00338914
 	private void RefreshFixedRewardItemsData(int accumulateId, GachaAccumulateData accumulateData)
 	{
 		GachaAccumulateRewardData lastData = null;
@@ -318,7 +318,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		}
 	}
 
-	// Token: 0x0600DB3F RID: 56127 RVA: 0x0032F36C File Offset: 0x0032D56C
+	// Token: 0x0600AF55 RID: 44885 RVA: 0x0033A7B8 File Offset: 0x003389B8
 	private void SpawnFixedPointItems(int count)
 	{
 		UUIItem item = base.GetItem(16);
@@ -336,7 +336,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		}
 	}
 
-	// Token: 0x0600DB40 RID: 56128 RVA: 0x0032F3D0 File Offset: 0x0032D5D0
+	// Token: 0x0600AF56 RID: 44886 RVA: 0x0033A81C File Offset: 0x00338A1C
 	private void RefreshFixedProgressBar(GachaAccumulateData accumulateData)
 	{
 		List<int> milestones = this.CollectNonCyclicMilestones(accumulateData);
@@ -346,7 +346,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		this.RefreshPointItemsState(this.SpawnedFixedPointItems, milestones, accumulateData.CurGachaNum);
 	}
 
-	// Token: 0x0600DB41 RID: 56129 RVA: 0x0032F430 File Offset: 0x0032D630
+	// Token: 0x0600AF57 RID: 44887 RVA: 0x0033A87C File Offset: 0x00338A7C
 	private void RefreshPointItemsState(List<UUIItem> pointItems, List<int> milestones, int cur)
 	{
 		for (int i = 0; i < pointItems.Count; i++)
@@ -360,7 +360,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		}
 	}
 
-	// Token: 0x0600DB42 RID: 56130 RVA: 0x0032F480 File Offset: 0x0032D680
+	// Token: 0x0600AF58 RID: 44888 RVA: 0x0033A8CC File Offset: 0x00338ACC
 	private List<int> CollectNonCyclicMilestones(GachaAccumulateData accumulateData)
 	{
 		List<int> list = new List<int>();
@@ -374,7 +374,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		return list;
 	}
 
-	// Token: 0x0600DB43 RID: 56131 RVA: 0x0032F4EC File Offset: 0x0032D6EC
+	// Token: 0x0600AF59 RID: 44889 RVA: 0x0033A938 File Offset: 0x00338B38
 	private float CalcProgressFillAmount(List<int> milestones, int cur)
 	{
 		if (milestones.Count == 0)
@@ -408,7 +408,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		return (float)((num8 < 0.0) ? 0.0 : ((num8 > 1.0) ? 1.0 : num8));
 	}
 
-	// Token: 0x0600DB44 RID: 56132 RVA: 0x0032F604 File Offset: 0x0032D804
+	// Token: 0x0600AF5A RID: 44890 RVA: 0x0033AA50 File Offset: 0x00338C50
 	private float CalcFixedProgressFillAmount(List<int> milestones, int cur, float pointListWidth)
 	{
 		if (milestones.Count == 0)
@@ -460,7 +460,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		return 1f;
 	}
 
-	// Token: 0x0600DB45 RID: 56133 RVA: 0x0032F768 File Offset: 0x0032D968
+	// Token: 0x0600AF5B RID: 44891 RVA: 0x0033ABB4 File Offset: 0x00338DB4
 	private void EnsurePointItems(GachaAccumulateData accumulateData)
 	{
 		UUIItem item = base.GetItem(7);
@@ -492,7 +492,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		}
 	}
 
-	// Token: 0x0600DB46 RID: 56134 RVA: 0x0032F870 File Offset: 0x0032DA70
+	// Token: 0x0600AF5C RID: 44892 RVA: 0x0033ACBC File Offset: 0x00338EBC
 	private void OnLoopScrollLateUpdate(float deltaTime)
 	{
 		if (!this.NeedLateUpdate || this.LoopScroll == null)
@@ -509,7 +509,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		this.LoopScroll.ScrollToGridIndex(gridIndex, true);
 	}
 
-	// Token: 0x0600DB47 RID: 56135 RVA: 0x0032F8C0 File Offset: 0x0032DAC0
+	// Token: 0x0600AF5D RID: 44893 RVA: 0x0033AD0C File Offset: 0x00338F0C
 	private int FindHighestClaimedIndex(GachaAccumulateData accumulateData)
 	{
 		int num = -1;
@@ -532,7 +532,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		return 0;
 	}
 
-	// Token: 0x0600DB48 RID: 56136 RVA: 0x0032F934 File Offset: 0x0032DB34
+	// Token: 0x0600AF5E RID: 44894 RVA: 0x0033AD80 File Offset: 0x00338F80
 	private void OnLoopScrollValueChanged()
 	{
 		if (this.LoopScroll == null)
@@ -557,7 +557,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		this.RefreshBigRewardByScroll(accumulateData);
 	}
 
-	// Token: 0x0600DB49 RID: 56137 RVA: 0x0032F988 File Offset: 0x0032DB88
+	// Token: 0x0600AF5F RID: 44895 RVA: 0x0033ADD4 File Offset: 0x00338FD4
 	private void RefreshBigRewardByScroll(GachaAccumulateData accumulateData)
 	{
 		BigRewardSlot bigRewardSlot = this.PickBigRewardSlot(accumulateData);
@@ -617,7 +617,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		}
 	}
 
-	// Token: 0x0600DB4A RID: 56138 RVA: 0x0032FA70 File Offset: 0x0032DC70
+	// Token: 0x0600AF60 RID: 44896 RVA: 0x0033AEBC File Offset: 0x003390BC
 	private BigRewardSlot PickBigRewardSlot(GachaAccumulateData accumulateData)
 	{
 		GachaAccumulateBonusViewContentStage.<>c__DisplayClass46_0 CS$<>8__locals1 = new GachaAccumulateBonusViewContentStage.<>c__DisplayClass46_0();
@@ -657,7 +657,7 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		return BigRewardSlot.MakeNone();
 	}
 
-	// Token: 0x0600DB4B RID: 56139 RVA: 0x0032FB80 File Offset: 0x0032DD80
+	// Token: 0x0600AF61 RID: 44897 RVA: 0x0033AFCC File Offset: 0x003391CC
 	private BigRewardSlot PickInitialSlot(List<GachaAccumulateRewardData> nonCyclicBigList, bool cyclicAllowed)
 	{
 		if (nonCyclicBigList.Count > 0)
@@ -671,23 +671,23 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 		return BigRewardSlot.MakeCyclic();
 	}
 
-	// Token: 0x04006466 RID: 25702
+	// Token: 0x04006538 RID: 25912
 	private const int FirstRewardPixelOffset = 90;
 
-	// Token: 0x04006467 RID: 25703
+	// Token: 0x04006539 RID: 25913
 	private const int BetweenRewardPixelOffset = 180;
 
-	// Token: 0x04006468 RID: 25704
+	// Token: 0x0400653A RID: 25914
 	private const int UnobservedEndGridIndex = -2;
 
-	// Token: 0x04006469 RID: 25705
+	// Token: 0x0400653B RID: 25915
 	private const int FixedLayoutMaxCount = 9;
 
-	// Token: 0x0400646A RID: 25706
+	// Token: 0x0400653C RID: 25916
 	[Nullable(2)]
 	private UiSequencePlayer UiSequencePlayer;
 
-	// Token: 0x0400646B RID: 25707
+	// Token: 0x0400653D RID: 25917
 	[Nullable(new byte[]
 	{
 		2,
@@ -696,47 +696,47 @@ public class GachaAccumulateBonusViewContentStage : GachaAccumulateBonusContentB
 	})]
 	private LoopScrollView<GachaAccumulateRewardItemStage, GachaAccumulateRewardItemStageData> LoopScroll;
 
-	// Token: 0x0400646C RID: 25708
+	// Token: 0x0400653E RID: 25918
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400646D RID: 25709
+	// Token: 0x0400653F RID: 25919
 	[Nullable(2)]
 	private GachaAccumulateStageBigRewardPanel BigRewardPanel;
 
-	// Token: 0x0400646E RID: 25710
+	// Token: 0x04006540 RID: 25920
 	[Nullable(2)]
 	private GachaAccumulateStageCyclicPanel CyclicPanel;
 
-	// Token: 0x0400646F RID: 25711
+	// Token: 0x04006541 RID: 25921
 	private Action OnClickBackButtonCallBack = delegate()
 	{
 	};
 
-	// Token: 0x04006470 RID: 25712
+	// Token: 0x04006542 RID: 25922
 	private int CurrentAccumulateId;
 
-	// Token: 0x04006471 RID: 25713
+	// Token: 0x04006543 RID: 25923
 	private int LastSeenEndGridIndex = -2;
 
-	// Token: 0x04006472 RID: 25714
+	// Token: 0x04006544 RID: 25924
 	private int LastAutoScrollAccumulateId;
 
-	// Token: 0x04006473 RID: 25715
+	// Token: 0x04006545 RID: 25925
 	private bool NeedLateUpdate;
 
-	// Token: 0x04006474 RID: 25716
+	// Token: 0x04006546 RID: 25926
 	private readonly List<UUIItem> SpawnedPointItems = new List<UUIItem>();
 
-	// Token: 0x04006475 RID: 25717
+	// Token: 0x04006547 RID: 25927
 	private readonly List<GachaAccumulateRewardItemStage> SpawnedFixedRewardItems = new List<GachaAccumulateRewardItemStage>();
 
-	// Token: 0x04006476 RID: 25718
+	// Token: 0x04006548 RID: 25928
 	private readonly List<UUIItem> SpawnedFixedPointItems = new List<UUIItem>();
 
-	// Token: 0x04006477 RID: 25719
+	// Token: 0x04006549 RID: 25929
 	private bool FixedSpawnStarted;
 
-	// Token: 0x04006478 RID: 25720
+	// Token: 0x0400654A RID: 25930
 	private bool FixedReady;
 }

@@ -5,17 +5,17 @@ using CSharpScript.Game.Module.Map.Misc.PreemptiveFrameQueue;
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapFrameTaskQueue
 {
-	// Token: 0x020054AB RID: 21675
+	// Token: 0x0200448E RID: 17550
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapUpdateTaskPreemptiveFrameQueue : SimplePreemptiveFrameQueue
 	{
-		// Token: 0x06037617 RID: 226839 RVA: 0x00D276EF File Offset: 0x00D258EF
+		// Token: 0x0602C56D RID: 181613 RVA: 0x00C7746B File Offset: 0x00C7566B
 		public MapUpdateTaskPreemptiveFrameQueue(int perFrameTaskLimit, int executeFrameInterval = 0) : base(perFrameTaskLimit, executeFrameInterval)
 		{
 		}
 
-		// Token: 0x06037618 RID: 226840 RVA: 0x00D27704 File Offset: 0x00D25904
+		// Token: 0x0602C56E RID: 181614 RVA: 0x00C77480 File Offset: 0x00C75680
 		public override void AddTask(IPreemptiveFrameTask task)
 		{
 			IMapMarkPreemptiveFrameTask mapMarkPreemptiveFrameTask = task as IMapMarkPreemptiveFrameTask;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapFrameTaskQueue
 			base.AddTask(mapMarkPreemptiveFrameTask);
 		}
 
-		// Token: 0x06037619 RID: 226841 RVA: 0x00D2774C File Offset: 0x00D2594C
+		// Token: 0x0602C56F RID: 181615 RVA: 0x00C774C8 File Offset: 0x00C756C8
 		protected override void OnTaskComplete(IPreemptiveFrameTask task)
 		{
 			IMapMarkPreemptiveFrameTask mapMarkPreemptiveFrameTask = task as IMapMarkPreemptiveFrameTask;
@@ -41,14 +41,14 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapFrameTaskQueue
 			}
 		}
 
-		// Token: 0x0603761A RID: 226842 RVA: 0x00D27775 File Offset: 0x00D25975
+		// Token: 0x0602C570 RID: 181616 RVA: 0x00C774F1 File Offset: 0x00C756F1
 		public override void Dispose()
 		{
 			base.Dispose();
 			this.MarkTaskMap.Clear();
 		}
 
-		// Token: 0x0401D2C6 RID: 119494
+		// Token: 0x04017D62 RID: 97634
 		private readonly Dictionary<int, IMapMarkPreemptiveFrameTask> MarkTaskMap = new Dictionary<int, IMapMarkPreemptiveFrameTask>();
 	}
 }

@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x02005398 RID: 21400
+	// Token: 0x0200437B RID: 17275
 	public class MoraleAreaInfoFlagDescPanel : UiPanelBase
 	{
-		// Token: 0x06036AC6 RID: 223942 RVA: 0x00CF0750 File Offset: 0x00CEE950
+		// Token: 0x0602BA0C RID: 178700 RVA: 0x00C3F7F8 File Offset: 0x00C3D9F8
 		[NullableContext(1)]
 		public UniTask Init(UUIItem item)
 		{
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036AC7 RID: 223943 RVA: 0x00CF079C File Offset: 0x00CEE99C
+		// Token: 0x0602BA0D RID: 178701 RVA: 0x00C3F844 File Offset: 0x00C3DA44
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06036AC8 RID: 223944 RVA: 0x00CF0863 File Offset: 0x00CEEA63
+		// Token: 0x0602BA0E RID: 178702 RVA: 0x00C3F90B File Offset: 0x00C3DB0B
 		[NullableContext(1)]
 		public void UpdateDesc(string descKey)
 		{
@@ -60,20 +60,20 @@ namespace CSharpScript.Game.Module.Morale
 			text.ShowTextNew(descKey);
 		}
 
-		// Token: 0x06036AC9 RID: 223945 RVA: 0x00CF0877 File Offset: 0x00CEEA77
+		// Token: 0x0602BA0F RID: 178703 RVA: 0x00C3F91F File Offset: 0x00C3DB1F
 		private void OnBtnMask()
 		{
 			this.SetActive(false);
 		}
 
-		// Token: 0x0200B602 RID: 46594
+		// Token: 0x0200A03A RID: 41018
 		private enum EChildType
 		{
-			// Token: 0x04037219 RID: 225817
+			// Token: 0x04031C6E RID: 203886
 			BtnMask,
-			// Token: 0x0403721A RID: 225818
+			// Token: 0x04031C6F RID: 203887
 			ItemRoot,
-			// Token: 0x0403721B RID: 225819
+			// Token: 0x04031C70 RID: 203888
 			TextDesc
 		}
 	}

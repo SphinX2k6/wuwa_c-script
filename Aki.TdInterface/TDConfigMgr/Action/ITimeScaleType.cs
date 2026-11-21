@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FC6 RID: 8134
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200220B RID: 8715
 	public class ITimeScaleType
 	{
-		// Token: 0x0600B2EE RID: 45806 RVA: 0x001A0CD8 File Offset: 0x0019EED8
+		// Token: 0x0600BDFC RID: 48636 RVA: 0x001B7188 File Offset: 0x001B5388
 		private ITimeScaleType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B2EF RID: 45807 RVA: 0x001A0D10 File Offset: 0x0019EF10
+		// Token: 0x0600BDFD RID: 48637 RVA: 0x001B71C0 File Offset: 0x001B53C0
 		public static ITimeScaleType Create([Nullable(2)] ITimeScaleType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B2F0 RID: 45808 RVA: 0x001A0D23 File Offset: 0x0019EF23
+		// Token: 0x0600BDFE RID: 48638 RVA: 0x001B71D3 File Offset: 0x001B53D3
 		public static ITimeScaleType CreateFromSetValue([Nullable(2)] ITimeScaleType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B2F1 RID: 45809 RVA: 0x001A0D36 File Offset: 0x0019EF36
+		// Token: 0x0600BDFF RID: 48639 RVA: 0x001B71E6 File Offset: 0x001B53E6
 		public ITimeScaleType_SetValue ToSetValue()
 		{
 			return new ITimeScaleType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003726 RID: 14118
-		// (get) Token: 0x0600B2F2 RID: 45810 RVA: 0x001A0D49 File Offset: 0x0019EF49
-		// (set) Token: 0x0600B2F3 RID: 45811 RVA: 0x001A0D74 File Offset: 0x0019EF74
+		// Token: 0x170039FD RID: 14845
+		// (get) Token: 0x0600BE00 RID: 48640 RVA: 0x001B71F9 File Offset: 0x001B53F9
+		// (set) Token: 0x0600BE01 RID: 48641 RVA: 0x001B7224 File Offset: 0x001B5424
 		public virtual ETimeScaleType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C03 RID: 27651
+		// Token: 0x04007202 RID: 29186
 		[Nullable(2)]
 		protected ITimeScaleType FbInstance;
 
-		// Token: 0x04006C04 RID: 27652
+		// Token: 0x04007203 RID: 29187
 		[Nullable(2)]
 		protected ITimeScaleType_SetValue PocoInterface;
 	}

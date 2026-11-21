@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickTimeAction.Context
 {
-	// Token: 0x02004F43 RID: 20291
+	// Token: 0x02003F0C RID: 16140
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QtaCustomizationLimitedHoldLogic : QtaCustomizationBaseLogic
 	{
-		// Token: 0x06034075 RID: 213109 RVA: 0x00C33618 File Offset: 0x00C31818
+		// Token: 0x06028EE3 RID: 167651 RVA: 0x00B7CDB8 File Offset: 0x00B7AFB8
 		public override void OnSetConfig(QtaCustomizationContext qtaContext, SQta qtaConfig, BP_QtaCustomizationBase_C daConfig)
 		{
 			if (qtaConfig == null || daConfig == null)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			}
 		}
 
-		// Token: 0x06034076 RID: 213110 RVA: 0x00C3386C File Offset: 0x00C31A6C
+		// Token: 0x06028EE4 RID: 167652 RVA: 0x00B7D00C File Offset: 0x00B7B20C
 		public override void OnQtaStart()
 		{
 			if (this.SubConfig == null || this.QtaContext == null)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			this.AddEvents();
 		}
 
-		// Token: 0x06034077 RID: 213111 RVA: 0x00C338C0 File Offset: 0x00C31AC0
+		// Token: 0x06028EE5 RID: 167653 RVA: 0x00B7D060 File Offset: 0x00B7B260
 		private void AddEvents()
 		{
 			SQtaCustomization_LimitedHold subConfig = this.SubConfig;
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			}
 		}
 
-		// Token: 0x06034078 RID: 213112 RVA: 0x00C339B7 File Offset: 0x00C31BB7
+		// Token: 0x06028EE6 RID: 167654 RVA: 0x00B7D157 File Offset: 0x00B7B357
 		private void RemoveEvents()
 		{
 			if (EventSystem.Instance.Has(EEventName.CheckClientEvent, new Action<FGameplayTag>(this.OnCheckClientEvent)))
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			}
 		}
 
-		// Token: 0x06034079 RID: 213113 RVA: 0x00C339F4 File Offset: 0x00C31BF4
+		// Token: 0x06028EE7 RID: 167655 RVA: 0x00B7D194 File Offset: 0x00B7B394
 		private void OnCheckClientEvent(FGameplayTag tag)
 		{
 			List<float> list;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			}
 		}
 
-		// Token: 0x0603407A RID: 213114 RVA: 0x00C33A2A File Offset: 0x00C31C2A
+		// Token: 0x06028EE8 RID: 167656 RVA: 0x00B7D1CA File Offset: 0x00B7B3CA
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			return this.Actions;
 		}
 
-		// Token: 0x0603407B RID: 213115 RVA: 0x00C33A34 File Offset: 0x00C31C34
+		// Token: 0x06028EE9 RID: 167657 RVA: 0x00B7D1D4 File Offset: 0x00B7B3D4
 		private void SetSpeed(float frontSpeed, float bgSpeed)
 		{
 			this.MainProgress.SetSpeed(frontSpeed);
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			}
 		}
 
-		// Token: 0x0603407C RID: 213116 RVA: 0x00C33A98 File Offset: 0x00C31C98
+		// Token: 0x06028EEA RID: 167658 RVA: 0x00B7D238 File Offset: 0x00B7B438
 		public override void OnQtaResponse(bool press = true)
 		{
 			if (press)
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			this.OnResponseEnd();
 		}
 
-		// Token: 0x0603407D RID: 213117 RVA: 0x00C33AAC File Offset: 0x00C31CAC
+		// Token: 0x06028EEB RID: 167659 RVA: 0x00B7D24C File Offset: 0x00B7B44C
 		private void OnResponseStart()
 		{
 			if (this.SubConfig == null || this.QtaConfig == null)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			this.CheckCanEnd();
 		}
 
-		// Token: 0x0603407E RID: 213118 RVA: 0x00C33B2B File Offset: 0x00C31D2B
+		// Token: 0x06028EEC RID: 167660 RVA: 0x00B7D2CB File Offset: 0x00B7B4CB
 		private void OnResponseEnd()
 		{
 			this.IsPressing = false;
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			}
 		}
 
-		// Token: 0x0603407F RID: 213119 RVA: 0x00C33B68 File Offset: 0x00C31D68
+		// Token: 0x06028EED RID: 167661 RVA: 0x00B7D308 File Offset: 0x00B7B508
 		public override void OnUpdateTime(float delta)
 		{
 			if (this.SubConfig == null)
@@ -239,13 +239,13 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			}
 		}
 
-		// Token: 0x06034080 RID: 213120 RVA: 0x00C33C7C File Offset: 0x00C31E7C
+		// Token: 0x06028EEE RID: 167662 RVA: 0x00B7D41C File Offset: 0x00B7B61C
 		public override float GetProgress()
 		{
 			return this.MainProgress.Progress;
 		}
 
-		// Token: 0x06034081 RID: 213121 RVA: 0x00C33C89 File Offset: 0x00C31E89
+		// Token: 0x06028EEF RID: 167663 RVA: 0x00B7D429 File Offset: 0x00B7B629
 		public override float GetBgProgress(int index = 0)
 		{
 			if (index >= 0 && index < this.BgBarList.Count)
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			return 0f;
 		}
 
-		// Token: 0x06034082 RID: 213122 RVA: 0x00C33CBC File Offset: 0x00C31EBC
+		// Token: 0x06028EF0 RID: 167664 RVA: 0x00B7D45C File Offset: 0x00B7B65C
 		public QtaCzBgBarValue GetBgValue(int index = 0)
 		{
 			QtaCzBgBarValue qtaCzBgBarValue = new QtaCzBgBarValue();
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			return qtaCzBgBarValue;
 		}
 
-		// Token: 0x06034083 RID: 213123 RVA: 0x00C33D2C File Offset: 0x00C31F2C
+		// Token: 0x06028EF1 RID: 167665 RVA: 0x00B7D4CC File Offset: 0x00B7B6CC
 		private void CheckEnterValidRange()
 		{
 			bool flag = this.CheckIsValid();
@@ -294,13 +294,13 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			this.IsValidState = flag;
 		}
 
-		// Token: 0x06034084 RID: 213124 RVA: 0x00C33DCC File Offset: 0x00C31FCC
+		// Token: 0x06028EF2 RID: 167666 RVA: 0x00B7D56C File Offset: 0x00B7B76C
 		public bool IsWithinRange()
 		{
 			return this.CheckIsValid();
 		}
 
-		// Token: 0x06034085 RID: 213125 RVA: 0x00C33DD4 File Offset: 0x00C31FD4
+		// Token: 0x06028EF3 RID: 167667 RVA: 0x00B7D574 File Offset: 0x00B7B774
 		protected override bool CheckIsValid()
 		{
 			float mainPct = 1f - this.GetProgress();
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			return this.BgAnchor.CheckIsValid(mainPct, bgProgress);
 		}
 
-		// Token: 0x06034086 RID: 213126 RVA: 0x00C33E03 File Offset: 0x00C32003
+		// Token: 0x06028EF4 RID: 167668 RVA: 0x00B7D5A3 File Offset: 0x00B7B7A3
 		private bool CheckCanEnd()
 		{
 			if (this.QtaContext.State != EQtaState.Pending)
@@ -323,60 +323,60 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			return false;
 		}
 
-		// Token: 0x06034087 RID: 213127 RVA: 0x00C33E38 File Offset: 0x00C32038
+		// Token: 0x06028EF5 RID: 167669 RVA: 0x00B7D5D8 File Offset: 0x00B7B7D8
 		private bool CheckCanEndInner()
 		{
 			return this.TimesRelease >= this.TimesLimit || (this.IsPressing && this.TimeoutOnPressCheck > 0f && this.PassTimeWithDilation > this.TimeoutOnPressCheck) || (!this.IsPressing && this.TimeoutOnIdleCheck > 0f && this.PassTimeWithDilation > this.TimeoutOnIdleCheck) || this.MainProgress.IsFinish;
 		}
 
-		// Token: 0x06034088 RID: 213128 RVA: 0x00C33EA8 File Offset: 0x00C320A8
+		// Token: 0x06028EF6 RID: 167670 RVA: 0x00B7D648 File Offset: 0x00B7B848
 		public override void OnQtaEnd(bool success = false)
 		{
 			this.RemoveEvents();
 			QtaLog.Info(this.QtaContext, "OnQtaEnd:定制型-限次长按型", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0401BA23 RID: 113187
+		// Token: 0x040163F8 RID: 91128
 		[Nullable(2)]
 		private SQtaCustomization_LimitedHold SubConfig;
 
-		// Token: 0x0401BA24 RID: 113188
+		// Token: 0x040163F9 RID: 91129
 		private readonly QtaCzProgress MainProgress = new QtaCzProgress();
 
-		// Token: 0x0401BA25 RID: 113189
+		// Token: 0x040163FA RID: 91130
 		private readonly List<QtaCzBgBar> BgBarList = new List<QtaCzBgBar>();
 
-		// Token: 0x0401BA26 RID: 113190
+		// Token: 0x040163FB RID: 91131
 		private int TimesRelease;
 
-		// Token: 0x0401BA27 RID: 113191
+		// Token: 0x040163FC RID: 91132
 		private int TimesLimit;
 
-		// Token: 0x0401BA28 RID: 113192
+		// Token: 0x040163FD RID: 91133
 		private float TimeoutOnPressCheck;
 
-		// Token: 0x0401BA29 RID: 113193
+		// Token: 0x040163FE RID: 91134
 		private float TimeoutOnIdleCheck;
 
-		// Token: 0x0401BA2A RID: 113194
+		// Token: 0x040163FF RID: 91135
 		private float PassTimeWithDilation;
 
-		// Token: 0x0401BA2B RID: 113195
+		// Token: 0x04016400 RID: 91136
 		private readonly QtaCzBgAnchor BgAnchor = new QtaCzBgAnchor();
 
-		// Token: 0x0401BA2C RID: 113196
+		// Token: 0x04016401 RID: 91137
 		private readonly List<string> Actions = new List<string>();
 
-		// Token: 0x0401BA2D RID: 113197
+		// Token: 0x04016402 RID: 91138
 		private bool IsPressing;
 
-		// Token: 0x0401BA2E RID: 113198
+		// Token: 0x04016403 RID: 91139
 		private readonly Dictionary<int, List<float>> EventParamMap = new Dictionary<int, List<float>>();
 
-		// Token: 0x0401BA2F RID: 113199
+		// Token: 0x04016404 RID: 91140
 		private bool IsEnterFxPlayed;
 
-		// Token: 0x0401BA30 RID: 113200
+		// Token: 0x04016405 RID: 91141
 		private bool IsValidState;
 	}
 }

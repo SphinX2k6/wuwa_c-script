@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F5C RID: 20316
+	// Token: 0x0200548B RID: 21643
 	public class ICategoryMatchingAnimationT
 	{
-		// Token: 0x170092A9 RID: 37545
-		// (get) Token: 0x06020371 RID: 131953 RVA: 0x0047B901 File Offset: 0x00479B01
-		// (set) Token: 0x06020372 RID: 131954 RVA: 0x0047B909 File Offset: 0x00479B09
+		// Token: 0x17009A22 RID: 39458
+		// (get) Token: 0x060220C3 RID: 139459 RVA: 0x004B18F1 File Offset: 0x004AFAF1
+		// (set) Token: 0x060220C4 RID: 139460 RVA: 0x004B18F9 File Offset: 0x004AFAF9
 		public IVectorInfoT MatchPos { get; set; }
 
-		// Token: 0x170092AA RID: 37546
-		// (get) Token: 0x06020373 RID: 131955 RVA: 0x0047B912 File Offset: 0x00479B12
-		// (set) Token: 0x06020374 RID: 131956 RVA: 0x0047B91A File Offset: 0x00479B1A
+		// Token: 0x17009A23 RID: 39459
+		// (get) Token: 0x060220C5 RID: 139461 RVA: 0x004B1902 File Offset: 0x004AFB02
+		// (set) Token: 0x060220C6 RID: 139462 RVA: 0x004B190A File Offset: 0x004AFB0A
 		public IVectorInfoT MatchRot { get; set; }
 
-		// Token: 0x170092AB RID: 37547
-		// (get) Token: 0x06020375 RID: 131957 RVA: 0x0047B923 File Offset: 0x00479B23
-		// (set) Token: 0x06020376 RID: 131958 RVA: 0x0047B92B File Offset: 0x00479B2B
+		// Token: 0x17009A24 RID: 39460
+		// (get) Token: 0x060220C7 RID: 139463 RVA: 0x004B1913 File Offset: 0x004AFB13
+		// (set) Token: 0x060220C8 RID: 139464 RVA: 0x004B191B File Offset: 0x004AFB1B
 		public string MatchReferenceKey { get; set; }
 
-		// Token: 0x170092AC RID: 37548
-		// (get) Token: 0x06020377 RID: 131959 RVA: 0x0047B934 File Offset: 0x00479B34
-		// (set) Token: 0x06020378 RID: 131960 RVA: 0x0047B93C File Offset: 0x00479B3C
+		// Token: 0x17009A25 RID: 39461
+		// (get) Token: 0x060220C9 RID: 139465 RVA: 0x004B1924 File Offset: 0x004AFB24
+		// (set) Token: 0x060220CA RID: 139466 RVA: 0x004B192C File Offset: 0x004AFB2C
 		public string MatchSequence { get; set; }
 
-		// Token: 0x170092AD RID: 37549
-		// (get) Token: 0x06020379 RID: 131961 RVA: 0x0047B945 File Offset: 0x00479B45
-		// (set) Token: 0x0602037A RID: 131962 RVA: 0x0047B94D File Offset: 0x00479B4D
+		// Token: 0x17009A26 RID: 39462
+		// (get) Token: 0x060220CB RID: 139467 RVA: 0x004B1935 File Offset: 0x004AFB35
+		// (set) Token: 0x060220CC RID: 139468 RVA: 0x004B193D File Offset: 0x004AFB3D
 		public IVectorInfoT MatchSequenceOffset { get; set; }
 
-		// Token: 0x0602037B RID: 131963 RVA: 0x0047B956 File Offset: 0x00479B56
+		// Token: 0x060220CD RID: 139469 RVA: 0x004B1946 File Offset: 0x004AFB46
 		public ICategoryMatchingAnimationT()
 		{
 			this.MatchPos = null;

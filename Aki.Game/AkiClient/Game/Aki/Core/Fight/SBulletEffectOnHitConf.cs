@@ -6,140 +6,131 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Core.Fight
 {
-	// Token: 0x0200400C RID: 16396
+	// Token: 0x0200326E RID: 12910
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Core/Fight/SBulletEffectOnHitConf.SBulletEffectOnHitConf")]
 	[UnrealStructLayout(24, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class SBulletEffectOnHitConf : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06029FB7 RID: 171959 RVA: 0x009D299F File Offset: 0x009D0B9F
+		// Token: 0x06020377 RID: 131959 RVA: 0x009404E8 File Offset: 0x0093E6E8
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SBulletEffectOnHitConf._ScriptStructPtr != 0) ? SBulletEffectOnHitConf._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Core/Fight/SBulletEffectOnHitConf.SBulletEffectOnHitConf", ref SBulletEffectOnHitConf._ScriptStructPtr);
 		}
 
-		// Token: 0x1700661B RID: 26139
-		// (get) Token: 0x06029FB8 RID: 171960 RVA: 0x009D29C3 File Offset: 0x009D0BC3
-		// (set) Token: 0x06029FB9 RID: 171961 RVA: 0x009D29D7 File Offset: 0x009D0BD7
+		// Token: 0x17003DE4 RID: 15844
+		// (get) Token: 0x06020378 RID: 131960 RVA: 0x0094050C File Offset: 0x0093E70C
+		// (set) Token: 0x06020379 RID: 131961 RVA: 0x00940520 File Offset: 0x0093E720
 		public unsafe TEnumAsByte<EBulletEffectOnHitType> 类型
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_类型);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_类型) = value;
 			}
 		}
 
-		// Token: 0x1700661C RID: 26140
-		// (get) Token: 0x06029FBA RID: 171962 RVA: 0x009D29EC File Offset: 0x009D0BEC
-		// (set) Token: 0x06029FBB RID: 171963 RVA: 0x009D29FC File Offset: 0x009D0BFC
+		// Token: 0x17003DE5 RID: 15845
+		// (get) Token: 0x0602037A RID: 131962 RVA: 0x00940535 File Offset: 0x0093E735
+		// (set) Token: 0x0602037B RID: 131963 RVA: 0x00940545 File Offset: 0x0093E745
 		public unsafe bool 启用约束
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_1) != 0;
+				return *(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_启用约束) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_1) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_启用约束) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700661D RID: 26141
-		// (get) Token: 0x06029FBC RID: 171964 RVA: 0x009D2A0D File Offset: 0x009D0C0D
-		// (set) Token: 0x06029FBD RID: 171965 RVA: 0x009D2A21 File Offset: 0x009D0C21
+		// Token: 0x17003DE6 RID: 15846
+		// (get) Token: 0x0602037C RID: 131964 RVA: 0x00940556 File Offset: 0x0093E756
+		// (set) Token: 0x0602037D RID: 131965 RVA: 0x0094056A File Offset: 0x0093E76A
 		public unsafe FVector2D 高度约束
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_高度约束);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_高度约束) = value;
 			}
 		}
 
-		// Token: 0x1700661E RID: 26142
-		// (get) Token: 0x06029FBE RID: 171966 RVA: 0x009D2A36 File Offset: 0x009D0C36
-		// (set) Token: 0x06029FBF RID: 171967 RVA: 0x009D2A4A File Offset: 0x009D0C4A
+		// Token: 0x17003DE7 RID: 15847
+		// (get) Token: 0x0602037E RID: 131966 RVA: 0x0094057F File Offset: 0x0093E77F
+		// (set) Token: 0x0602037F RID: 131967 RVA: 0x00940593 File Offset: 0x0093E793
 		public unsafe FVector 大小缩放
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_大小缩放);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SBulletEffectOnHitConf.__PropertyOffset_大小缩放) = value;
 			}
 		}
 
-		// Token: 0x06029FC0 RID: 171968 RVA: 0x009D2A5F File Offset: 0x009D0C5F
+		// Token: 0x06020380 RID: 131968 RVA: 0x009405A8 File Offset: 0x0093E7A8
 		public SBulletEffectOnHitConf()
 		{
 		}
 
-		// Token: 0x06029FC1 RID: 171969 RVA: 0x009D2A67 File Offset: 0x009D0C67
-		public SBulletEffectOnHitConf(TEnumAsByte<EBulletEffectOnHitType> 类型, bool 启用约束, FVector2D 高度约束, FVector 大小缩放)
-		{
-			this.类型 = 类型;
-			this.启用约束 = 启用约束;
-			this.高度约束 = 高度约束;
-			this.大小缩放 = 大小缩放;
-		}
-
-		// Token: 0x06029FC2 RID: 171970 RVA: 0x009D2A8C File Offset: 0x009D0C8C
+		// Token: 0x06020381 RID: 131969 RVA: 0x009405B0 File Offset: 0x0093E7B0
 		protected override IntPtr GetUStructPtr()
 		{
 			return SBulletEffectOnHitConf.StaticStruct();
 		}
 
-		// Token: 0x06029FC3 RID: 171971 RVA: 0x009D2A98 File Offset: 0x009D0C98
+		// Token: 0x06020382 RID: 131970 RVA: 0x009405BC File Offset: 0x0093E7BC
 		[NullableContext(2)]
 		public SBulletEffectOnHitConf(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06029FC4 RID: 171972 RVA: 0x009D2AA2 File Offset: 0x009D0CA2
+		// Token: 0x06020383 RID: 131971 RVA: 0x009405C6 File Offset: 0x0093E7C6
 		public SBulletEffectOnHitConf(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06029FC5 RID: 171973 RVA: 0x009D2AAD File Offset: 0x009D0CAD
+		// Token: 0x06020384 RID: 131972 RVA: 0x009405D1 File Offset: 0x0093E7D1
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SBulletEffectOnHitConf(Pointer, false, true);
 		}
 
-		// Token: 0x06029FC6 RID: 171974 RVA: 0x009D2AB7 File Offset: 0x009D0CB7
+		// Token: 0x06020385 RID: 131973 RVA: 0x009405DB File Offset: 0x0093E7DB
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SBulletEffectOnHitConf(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040159E9 RID: 88553
+		// Token: 0x04011640 RID: 71232
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Core/Fight/SBulletEffectOnHitConf.SBulletEffectOnHitConf";
 
-		// Token: 0x040159EA RID: 88554
+		// Token: 0x04011641 RID: 71233
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040159EB RID: 88555
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011642 RID: 71234
+		internal static int __PropertyOffset_类型;
 
-		// Token: 0x040159EC RID: 88556
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011643 RID: 71235
+		internal static int __PropertyOffset_启用约束;
 
-		// Token: 0x040159ED RID: 88557
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011644 RID: 71236
+		internal static int __PropertyOffset_高度约束;
 
-		// Token: 0x040159EE RID: 88558
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011645 RID: 71237
+		internal static int __PropertyOffset_大小缩放;
 	}
 }

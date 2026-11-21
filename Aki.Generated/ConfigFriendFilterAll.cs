@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000354 RID: 852
+	// Token: 0x02000369 RID: 873
 	public class ConfigFriendFilterAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060013FD RID: 5117 RVA: 0x000CA8C8 File Offset: 0x000C8AC8
+		// Token: 0x0600147B RID: 5243 RVA: 0x000D0DD4 File Offset: 0x000CEFD4
 		static ConfigFriendFilterAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFriendFilterAll.CreateStaticDefaultValue), new Action(ConfigFriendFilterAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060013FE RID: 5118 RVA: 0x000CA8E8 File Offset: 0x000C8AE8
+		// Token: 0x0600147C RID: 5244 RVA: 0x000D0DF4 File Offset: 0x000CEFF4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFriendFilterAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060013FF RID: 5119 RVA: 0x000CA967 File Offset: 0x000C8B67
+		// Token: 0x0600147D RID: 5245 RVA: 0x000D0E73 File Offset: 0x000CF073
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFriendFilterAll.LogPair = null;
 			ConfigFriendFilterAll.HandleId = 0;
 		}
 
-		// Token: 0x06001400 RID: 5120 RVA: 0x000CA975 File Offset: 0x000C8B75
+		// Token: 0x0600147E RID: 5246 RVA: 0x000D0E81 File Offset: 0x000CF081
 		public static void Init()
 		{
 			ConfigFriendFilterAll.HandleId = ConfigCommon.InitDataStatement(ConfigFriendFilterAll.HandleId, "db_friend.db", "select BinData from `FriendFilter`");
 		}
 
-		// Token: 0x06001401 RID: 5121 RVA: 0x000CA990 File Offset: 0x000C8B90
+		// Token: 0x0600147F RID: 5247 RVA: 0x000D0E9C File Offset: 0x000CF09C
 		[NullableContext(2)]
 		public static IReadOnlyList<FriendFilter> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001730 RID: 5936
+		// Token: 0x040017C3 RID: 6083
 		private const string DB = "db_friend.db";
 
-		// Token: 0x04001731 RID: 5937
+		// Token: 0x040017C4 RID: 6084
 		private const string FILE = "h.好友.xlsx";
 
-		// Token: 0x04001732 RID: 5938
+		// Token: 0x040017C5 RID: 6085
 		private const string TABLE = "FriendFilter";
 
-		// Token: 0x04001733 RID: 5939
+		// Token: 0x040017C6 RID: 6086
 		private const string COMMAND = "select BinData from `FriendFilter`";
 
-		// Token: 0x04001734 RID: 5940
+		// Token: 0x040017C7 RID: 6087
 		private const string KEY_PREFIX = "FriendFilterAll";
 
-		// Token: 0x04001735 RID: 5941
+		// Token: 0x040017C8 RID: 6088
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001736 RID: 5942
+		// Token: 0x040017C9 RID: 6089
 		private static int HandleId;
 	}
 }

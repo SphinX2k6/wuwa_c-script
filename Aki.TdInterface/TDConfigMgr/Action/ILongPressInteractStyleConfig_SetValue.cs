@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BA3 RID: 7075
+	// Token: 0x02001D8A RID: 7562
 	public class ILongPressInteractStyleConfig_SetValue
 	{
-		// Token: 0x04005C82 RID: 23682
+		// Token: 0x04006197 RID: 24983
 		public ELongPressInteractStyle Type;
 	}
 }

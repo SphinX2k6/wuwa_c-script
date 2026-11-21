@@ -5,24 +5,24 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Input
 {
-	// Token: 0x02006FCC RID: 28620
+	// Token: 0x0200614D RID: 24909
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputFilterManager : IStaticVariableResetter
 	{
-		// Token: 0x060459B9 RID: 285113 RVA: 0x01149C3C File Offset: 0x01147E3C
+		// Token: 0x0603BB69 RID: 244585 RVA: 0x010F3A34 File Offset: 0x010F1C34
 		static InputFilterManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InputFilterManager.CreateStaticDefaultValue), new Action(InputFilterManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060459BA RID: 285114 RVA: 0x01149D82 File Offset: 0x01147F82
+		// Token: 0x0603BB6A RID: 244586 RVA: 0x010F3B7A File Offset: 0x010F1D7A
 		public static void UpdateCharacterSystemActions(EInputAction inputAction, EUiViewName uiViewName)
 		{
 			InputFilterManager.CharacterSystemActions[inputAction] = uiViewName;
 		}
 
-		// Token: 0x060459BB RID: 285115 RVA: 0x01149D90 File Offset: 0x01147F90
+		// Token: 0x0603BB6B RID: 244587 RVA: 0x010F3B88 File Offset: 0x010F1D88
 		public static void CreateStaticDefaultValue()
 		{
 			InputFilterManager.CharacterSystemActions = new Dictionary<EInputAction, EUiViewName>();
@@ -32,14 +32,14 @@ namespace CSharpScript.Game.Input
 			InputFilterManager.CharacterSystemViewActions = dictionary;
 		}
 
-		// Token: 0x060459BC RID: 285116 RVA: 0x01149DC3 File Offset: 0x01147FC3
+		// Token: 0x0603BB6C RID: 244588 RVA: 0x010F3BBB File Offset: 0x010F1DBB
 		public static void ResetStaticDefaultValue()
 		{
 			InputFilterManager.CharacterSystemActions = null;
 			InputFilterManager.CharacterSystemViewActions = null;
 		}
 
-		// Token: 0x04024550 RID: 148816
+		// Token: 0x0401F805 RID: 129029
 		[StaticVariableRuleIgnore]
 		public static readonly HashSet<EInputAction> CharacterActions = new HashSet<EInputAction>
 		{
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Input
 			EInputAction.移动输入按键事件
 		};
 
-		// Token: 0x04024551 RID: 148817
+		// Token: 0x0401F806 RID: 129030
 		public static Dictionary<EInputAction, EUiViewName> CharacterSystemActions;
 
-		// Token: 0x04024552 RID: 148818
+		// Token: 0x0401F807 RID: 129031
 		public static Dictionary<EUiViewName, HashSet<EInputAction>> CharacterSystemViewActions;
 
-		// Token: 0x04024553 RID: 148819
+		// Token: 0x0401F808 RID: 129032
 		[StaticVariableRuleIgnore]
 		public static readonly HashSet<EInputAxis> CharacterAxes = new HashSet<EInputAxis>
 		{

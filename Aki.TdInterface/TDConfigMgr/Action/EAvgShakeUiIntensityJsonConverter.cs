@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022B0 RID: 8880
+	// Token: 0x0200251F RID: 9503
 	public class EAvgShakeUiIntensityJsonConverter : JsonConverter<EAvgShakeUiIntensity>
 	{
-		// Token: 0x0600C298 RID: 49816 RVA: 0x001C6F50 File Offset: 0x001C5150
+		// Token: 0x0600CE67 RID: 52839 RVA: 0x001DED58 File Offset: 0x001DCF58
 		public override EAvgShakeUiIntensity Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EAvgShakeUiIntensityExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C299 RID: 49817 RVA: 0x001C6F74 File Offset: 0x001C5174
+		// Token: 0x0600CE68 RID: 52840 RVA: 0x001DED7C File Offset: 0x001DCF7C
 		public override void Write(Utf8JsonWriter writer, EAvgShakeUiIntensity value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

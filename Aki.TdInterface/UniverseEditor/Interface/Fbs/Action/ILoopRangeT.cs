@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A63 RID: 27235
+	// Token: 0x02007185 RID: 29061
 	public class ILoopRangeT
 	{
-		// Token: 0x1700CA0C RID: 51724
-		// (get) Token: 0x0602FB26 RID: 195366 RVA: 0x0067DB36 File Offset: 0x0067BD36
-		// (set) Token: 0x0602FB27 RID: 195367 RVA: 0x0067DB3E File Offset: 0x0067BD3E
+		// Token: 0x1700D4B7 RID: 54455
+		// (get) Token: 0x0603284C RID: 206924 RVA: 0x006D3BF6 File Offset: 0x006D1DF6
+		// (set) Token: 0x0603284D RID: 206925 RVA: 0x006D3BFE File Offset: 0x006D1DFE
 		public string LeftMark { get; set; }
 
-		// Token: 0x1700CA0D RID: 51725
-		// (get) Token: 0x0602FB28 RID: 195368 RVA: 0x0067DB47 File Offset: 0x0067BD47
-		// (set) Token: 0x0602FB29 RID: 195369 RVA: 0x0067DB4F File Offset: 0x0067BD4F
+		// Token: 0x1700D4B8 RID: 54456
+		// (get) Token: 0x0603284E RID: 206926 RVA: 0x006D3C07 File Offset: 0x006D1E07
+		// (set) Token: 0x0603284F RID: 206927 RVA: 0x006D3C0F File Offset: 0x006D1E0F
 		public string RightMark { get; set; }
 
-		// Token: 0x0602FB2A RID: 195370 RVA: 0x0067DB58 File Offset: 0x0067BD58
+		// Token: 0x06032850 RID: 206928 RVA: 0x006D3C18 File Offset: 0x006D1E18
 		public ILoopRangeT()
 		{
 			this.LeftMark = null;

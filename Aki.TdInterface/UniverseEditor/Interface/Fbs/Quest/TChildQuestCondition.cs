@@ -2,140 +2,140 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042C0 RID: 17088
+	// Token: 0x0200471C RID: 18204
 	public enum TChildQuestCondition : byte
 	{
-		// Token: 0x0400BF83 RID: 49027
+		// Token: 0x0400C990 RID: 51600
 		NONE,
-		// Token: 0x0400BF84 RID: 49028
+		// Token: 0x0400C991 RID: 51601
 		IAtomicProcess,
-		// Token: 0x0400BF85 RID: 49029
+		// Token: 0x0400C992 RID: 51602
 		IAwakeAndLoadEntityCondition,
-		// Token: 0x0400BF86 RID: 49030
+		// Token: 0x0400C993 RID: 51603
 		ICheckActivityStateCondition,
-		// Token: 0x0400BF87 RID: 49031
+		// Token: 0x0400C994 RID: 51604
 		ICheckClientConditionGroupQuestCondition,
-		// Token: 0x0400BF88 RID: 49032
+		// Token: 0x0400C995 RID: 51605
 		ICheckConditionGroupQuestCondition,
-		// Token: 0x0400BF89 RID: 49033
+		// Token: 0x0400C996 RID: 51606
 		ICheckEntityStateQuestCondition,
-		// Token: 0x0400BF8A RID: 49034
+		// Token: 0x0400C997 RID: 51607
 		ICheckLevelPlayQuestCondition,
-		// Token: 0x0400BF8B RID: 49035
+		// Token: 0x0400C998 RID: 51608
 		ICheckPlayerInputCondition,
-		// Token: 0x0400BF8C RID: 49036
+		// Token: 0x0400C999 RID: 51609
 		ICheckSpringFestivalGameplayCompleted,
-		// Token: 0x0400BF8D RID: 49037
+		// Token: 0x0400C99A RID: 51610
 		ICheckTargetBattleAttributeCondition,
-		// Token: 0x0400BF8E RID: 49038
+		// Token: 0x0400C99B RID: 51611
 		ICheckTrapDefenseEventCondition,
-		// Token: 0x0400BF8F RID: 49039
+		// Token: 0x0400C99C RID: 51612
 		ICheckUiGameQuestCondition,
-		// Token: 0x0400BF90 RID: 49040
+		// Token: 0x0400C99D RID: 51613
 		ICompareActorVar,
-		// Token: 0x0400BF91 RID: 49041
+		// Token: 0x0400C99E RID: 51614
 		ICompareVarConditionInChildQuest,
-		// Token: 0x0400BF92 RID: 49042
+		// Token: 0x0400C99F RID: 51615
 		ICrossSceneSyncKillMonster,
-		// Token: 0x0400BF93 RID: 49043
+		// Token: 0x0400C9A0 RID: 51616
 		IDetectCombatState2Condition,
-		// Token: 0x0400BF94 RID: 49044
+		// Token: 0x0400C9A1 RID: 51617
 		IDetectCombatStateCondition,
-		// Token: 0x0400BF95 RID: 49045
+		// Token: 0x0400C9A2 RID: 51618
 		IDoInteractQuestCondition,
-		// Token: 0x0400BF96 RID: 49046
+		// Token: 0x0400C9A3 RID: 51619
 		IEnterDungeonCondition,
-		// Token: 0x0400BF97 RID: 49047
+		// Token: 0x0400C9A4 RID: 51620
 		IFinishArcadeGameplay,
-		// Token: 0x0400BF98 RID: 49048
+		// Token: 0x0400C9A5 RID: 51621
 		IFinishBvbChallenge,
-		// Token: 0x0400BF99 RID: 49049
+		// Token: 0x0400C9A6 RID: 51622
 		IFinishDungeonQuestCondition,
-		// Token: 0x0400BF9A RID: 49050
+		// Token: 0x0400C9A7 RID: 51623
 		IFinishFlipperCondition,
-		// Token: 0x0400BF9B RID: 49051
+		// Token: 0x0400C9A8 RID: 51624
 		IFinishJellyfishReturnCondition,
-		// Token: 0x0400BF9C RID: 49052
+		// Token: 0x0400C9A9 RID: 51625
 		IFinishKuroSimpleCombatKillMonster,
-		// Token: 0x0400BF9D RID: 49053
+		// Token: 0x0400C9AA RID: 51626
 		IFinishKurotatoCondition,
-		// Token: 0x0400BF9E RID: 49054
+		// Token: 0x0400C9AB RID: 51627
 		IFinishRhythmSpaceshipCondition,
-		// Token: 0x0400BF9F RID: 49055
+		// Token: 0x0400C9AC RID: 51628
 		IFinishRoleTowerCondition,
-		// Token: 0x0400BFA0 RID: 49056
+		// Token: 0x0400C9AD RID: 51629
 		IFinishRollBlock,
-		// Token: 0x0400BFA1 RID: 49057
+		// Token: 0x0400C9AE RID: 51630
 		IFinishSurvivorsRougeCondition,
-		// Token: 0x0400BFA2 RID: 49058
+		// Token: 0x0400C9AF RID: 51631
 		IFinishTetris,
-		// Token: 0x0400BFA3 RID: 49059
+		// Token: 0x0400C9B0 RID: 51632
 		IFinishTrapDefenseCondition,
-		// Token: 0x0400BFA4 RID: 49060
+		// Token: 0x0400C9B1 RID: 51633
 		IGetItemQuestCondition,
-		// Token: 0x0400BFA5 RID: 49061
+		// Token: 0x0400C9B2 RID: 51634
 		IGetSkillQuestCondition,
-		// Token: 0x0400BFA6 RID: 49062
+		// Token: 0x0400C9B3 RID: 51635
 		IGuideCondition,
-		// Token: 0x0400BFA7 RID: 49063
+		// Token: 0x0400C9B4 RID: 51636
 		IHandInItemsCondition,
-		// Token: 0x0400BFA8 RID: 49064
+		// Token: 0x0400C9B5 RID: 51637
 		IInformationViewCheckCondition,
-		// Token: 0x0400BFA9 RID: 49065
+		// Token: 0x0400C9B6 RID: 51638
 		IKillChildQuestCondition,
-		// Token: 0x0400BFAA RID: 49066
+		// Token: 0x0400C9B7 RID: 51639
 		ILeaveDungeonCondition,
-		// Token: 0x0400BFAB RID: 49067
+		// Token: 0x0400C9B8 RID: 51640
 		IListenToEvent,
-		// Token: 0x0400BFAC RID: 49068
+		// Token: 0x0400C9B9 RID: 51641
 		IMonsterCreatorQuestCondition,
-		// Token: 0x0400BFAD RID: 49069
+		// Token: 0x0400C9BA RID: 51642
 		INewHandInItemsCondition,
-		// Token: 0x0400BFAE RID: 49070
+		// Token: 0x0400C9BB RID: 51643
 		IParallaxAlignQuestCondition,
-		// Token: 0x0400BFAF RID: 49071
+		// Token: 0x0400C9BC RID: 51644
 		IParkourQuestCondition,
-		// Token: 0x0400BFB0 RID: 49072
+		// Token: 0x0400C9BD RID: 51645
 		IPlaybackShowTimelineQuestCondition,
-		// Token: 0x0400BFB1 RID: 49073
+		// Token: 0x0400C9BE RID: 51646
 		IPlayFlowQuestCondition,
-		// Token: 0x0400BFB2 RID: 49074
+		// Token: 0x0400C9BF RID: 51647
 		IProgramSpecialProcess,
-		// Token: 0x0400BFB3 RID: 49075
+		// Token: 0x0400C9C0 RID: 51648
 		IReachAreaQuestCondition,
-		// Token: 0x0400BFB4 RID: 49076
+		// Token: 0x0400C9C1 RID: 51649
 		IReadMailCondition,
-		// Token: 0x0400BFB5 RID: 49077
+		// Token: 0x0400C9C2 RID: 51650
 		IReadPhoneMessageQuestCondition,
-		// Token: 0x0400BFB6 RID: 49078
+		// Token: 0x0400C9C3 RID: 51651
 		IReceiveTelecomChildQuestCondition,
-		// Token: 0x0400BFB7 RID: 49079
+		// Token: 0x0400C9C4 RID: 51652
 		IScheduleTimeCondition,
-		// Token: 0x0400BFB8 RID: 49080
+		// Token: 0x0400C9C5 RID: 51653
 		IShowUiCondition,
-		// Token: 0x0400BFB9 RID: 49081
+		// Token: 0x0400C9C6 RID: 51654
 		ITakePhoto2Condition,
-		// Token: 0x0400BFBA RID: 49082
+		// Token: 0x0400C9C7 RID: 51655
 		ITakePhotoCondition,
-		// Token: 0x0400BFBB RID: 49083
+		// Token: 0x0400C9C8 RID: 51656
 		ITimerQuestCondition,
-		// Token: 0x0400BFBC RID: 49084
+		// Token: 0x0400C9C9 RID: 51657
 		ITimeScaledPhotograph,
-		// Token: 0x0400BFBD RID: 49085
+		// Token: 0x0400C9CA RID: 51658
 		IUseItemCondition,
-		// Token: 0x0400BFBE RID: 49086
+		// Token: 0x0400C9CB RID: 51659
 		IUseSkillQuestCondition,
-		// Token: 0x0400BFBF RID: 49087
+		// Token: 0x0400C9CC RID: 51660
 		IUseWeatherSwitchCondition,
-		// Token: 0x0400BFC0 RID: 49088
+		// Token: 0x0400C9CD RID: 51661
 		IVisionSystemQuestCondition,
-		// Token: 0x0400BFC1 RID: 49089
+		// Token: 0x0400C9CE RID: 51662
 		IWaitBattleCondition,
-		// Token: 0x0400BFC2 RID: 49090
+		// Token: 0x0400C9CF RID: 51663
 		IWaitTimeCondition,
-		// Token: 0x0400BFC3 RID: 49091
+		// Token: 0x0400C9D0 RID: 51664
 		IWaitUntilLevelSequenceReachMark,
-		// Token: 0x0400BFC4 RID: 49092
+		// Token: 0x0400C9D1 RID: 51665
 		IWalkingPatternCondition
 	}
 }

@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005082 RID: 20610
+	// Token: 0x020055E7 RID: 21991
 	public class IDestroyCfgT
 	{
-		// Token: 0x1700958B RID: 38283
-		// (get) Token: 0x060210C9 RID: 135369 RVA: 0x00497401 File Offset: 0x00495601
-		// (set) Token: 0x060210CA RID: 135370 RVA: 0x00497409 File Offset: 0x00495609
+		// Token: 0x17009D78 RID: 40312
+		// (get) Token: 0x0602301D RID: 143389 RVA: 0x004D1345 File Offset: 0x004CF545
+		// (set) Token: 0x0602301E RID: 143390 RVA: 0x004D134D File Offset: 0x004CF54D
 		public List<TTeleControlDestroyConditionUnion> Conditions { get; set; }
 
-		// Token: 0x1700958C RID: 38284
-		// (get) Token: 0x060210CB RID: 135371 RVA: 0x00497412 File Offset: 0x00495612
-		// (set) Token: 0x060210CC RID: 135372 RVA: 0x0049741A File Offset: 0x0049561A
+		// Token: 0x17009D79 RID: 40313
+		// (get) Token: 0x0602301F RID: 143391 RVA: 0x004D1356 File Offset: 0x004CF556
+		// (set) Token: 0x06023020 RID: 143392 RVA: 0x004D135E File Offset: 0x004CF55E
 		public bool StopPhysicAfterDestroyed { get; set; }
 
-		// Token: 0x1700958D RID: 38285
-		// (get) Token: 0x060210CD RID: 135373 RVA: 0x00497423 File Offset: 0x00495623
-		// (set) Token: 0x060210CE RID: 135374 RVA: 0x0049742B File Offset: 0x0049562B
+		// Token: 0x17009D7A RID: 40314
+		// (get) Token: 0x06023021 RID: 143393 RVA: 0x004D1367 File Offset: 0x004CF567
+		// (set) Token: 0x06023022 RID: 143394 RVA: 0x004D136F File Offset: 0x004CF56F
 		public byte NullMask { get; set; }
 
-		// Token: 0x060210CF RID: 135375 RVA: 0x00497434 File Offset: 0x00495634
+		// Token: 0x06023023 RID: 143395 RVA: 0x004D1378 File Offset: 0x004CF578
 		public IDestroyCfgT()
 		{
 			this.Conditions = null;

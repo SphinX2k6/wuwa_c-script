@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Components
 {
-	// Token: 0x02005771 RID: 22385
+	// Token: 0x02004748 RID: 18248
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,20 +16,20 @@ namespace CSharpScript.Game.Module.Kurotato.View.Components
 	})]
 	public class KurotatoWeaponMediumItemGrid : LoopScrollMediumItemGrid<IKurotatoMediumItemGridData>
 	{
-		// Token: 0x06038DD0 RID: 232912 RVA: 0x00D82A7D File Offset: 0x00D80C7D
+		// Token: 0x0602DCE0 RID: 187616 RVA: 0x00CD1579 File Offset: 0x00CCF779
 		protected override void OnStart()
 		{
 			this.GetItemGridExtendToggle().bLockStateOnSelect = true;
 		}
 
-		// Token: 0x06038DD1 RID: 232913 RVA: 0x00D82A8B File Offset: 0x00D80C8B
+		// Token: 0x0602DCE1 RID: 187617 RVA: 0x00CD1587 File Offset: 0x00CCF787
 		protected override void OnRefresh(IKurotatoMediumItemGridData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
 			this.Refresh(data, new bool?(isSelected));
 		}
 
-		// Token: 0x06038DD2 RID: 232914 RVA: 0x00D82AA4 File Offset: 0x00D80CA4
+		// Token: 0x0602DCE2 RID: 187618 RVA: 0x00CD15A0 File Offset: 0x00CCF7A0
 		public void Refresh(IKurotatoMediumItemGridData data, bool? isSelected = null)
 		{
 			this.Data = data;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Components
 			}
 		}
 
-		// Token: 0x06038DD3 RID: 232915 RVA: 0x00D82B00 File Offset: 0x00D80D00
+		// Token: 0x0602DCE3 RID: 187619 RVA: 0x00CD15FC File Offset: 0x00CCF7FC
 		private void RefreshWeapon(IKurotatoMediumItemGridData data)
 		{
 			int id = data.Id;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Components
 			base.Apply<KurotatoMediumItemGrid>(parameters);
 		}
 
-		// Token: 0x06038DD4 RID: 232916 RVA: 0x00D82BF0 File Offset: 0x00D80DF0
+		// Token: 0x0602DCE4 RID: 187620 RVA: 0x00CD16EC File Offset: 0x00CCF8EC
 		private void RefreshItem(IKurotatoMediumItemGridData data)
 		{
 			int id = data.Id;
@@ -117,13 +117,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Components
 			base.Apply<KurotatoMediumItemGrid>(parameters);
 		}
 
-		// Token: 0x06038DD5 RID: 232917 RVA: 0x00D82D1A File Offset: 0x00D80F1A
+		// Token: 0x0602DCE5 RID: 187621 RVA: 0x00CD1816 File Offset: 0x00CCFA16
 		public void BindCallback(Action<EToggleState> onSelectedCallback)
 		{
 			this.OnSelectedCallback = onSelectedCallback;
 		}
 
-		// Token: 0x06038DD6 RID: 232918 RVA: 0x00D82D23 File Offset: 0x00D80F23
+		// Token: 0x0602DCE6 RID: 187622 RVA: 0x00CD181F File Offset: 0x00CCFA1F
 		protected override void OnExtendToggleStateChanged(EToggleState state)
 		{
 			if (this.OnSelectedCallback != null)
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Components
 			}
 		}
 
-		// Token: 0x06038DD7 RID: 232919 RVA: 0x00D82D3C File Offset: 0x00D80F3C
+		// Token: 0x0602DCE7 RID: 187623 RVA: 0x00CD1838 File Offset: 0x00CCFA38
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, true);
@@ -148,35 +148,35 @@ namespace CSharpScript.Game.Module.Kurotato.View.Components
 			base.SetNewVisible(new bool?(false));
 		}
 
-		// Token: 0x06038DD8 RID: 232920 RVA: 0x00D82DA5 File Offset: 0x00D80FA5
+		// Token: 0x0602DCE8 RID: 187624 RVA: 0x00CD18A1 File Offset: 0x00CCFAA1
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, true);
 		}
 
-		// Token: 0x06038DD9 RID: 232921 RVA: 0x00D82DAF File Offset: 0x00D80FAF
+		// Token: 0x0602DCE9 RID: 187625 RVA: 0x00CD18AB File Offset: 0x00CCFAAB
 		public override object GetKey(IKurotatoMediumItemGridData data, int gridIndex)
 		{
 			return data.Id;
 		}
 
-		// Token: 0x0401DD2E RID: 122158
+		// Token: 0x040187C4 RID: 100292
 		[Nullable(2)]
 		public new IKurotatoMediumItemGridData Data;
 
-		// Token: 0x0401DD2F RID: 122159
+		// Token: 0x040187C5 RID: 100293
 		public new int GridIndex;
 
-		// Token: 0x0401DD30 RID: 122160
+		// Token: 0x040187C6 RID: 100294
 		public bool IsShowItemCount = true;
 
-		// Token: 0x0401DD31 RID: 122161
+		// Token: 0x040187C7 RID: 100295
 		public bool IsShowLock;
 
-		// Token: 0x0401DD32 RID: 122162
+		// Token: 0x040187C8 RID: 100296
 		public bool IsShowNew;
 
-		// Token: 0x0401DD33 RID: 122163
+		// Token: 0x040187C9 RID: 100297
 		[Nullable(2)]
 		private Action<EToggleState> OnSelectedCallback;
 	}

@@ -7,17 +7,17 @@ using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020024CC RID: 9420
+// Token: 0x020019B3 RID: 6579
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionIntensifyView : UiViewBase
 {
-	// Token: 0x06012EC8 RID: 77512 RVA: 0x004AE27F File Offset: 0x004AC47F
+	// Token: 0x06010387 RID: 66439 RVA: 0x004BBE7F File Offset: 0x004BA07F
 	public VisionIntensifyView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06012EC9 RID: 77513 RVA: 0x004AE2A0 File Offset: 0x004AC4A0
+	// Token: 0x06010388 RID: 66440 RVA: 0x004BBEA0 File Offset: 0x004BA0A0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class VisionIntensifyView : UiViewBase
 		};
 	}
 
-	// Token: 0x06012ECA RID: 77514 RVA: 0x004AE2FC File Offset: 0x004AC4FC
+	// Token: 0x06010389 RID: 66441 RVA: 0x004BBEFC File Offset: 0x004BA0FC
 	protected override void OnStart()
 	{
 		CommonTabComponentData<CommonTabItem> data = new CommonTabComponentData<CommonTabItem>(new Func<UUIItem, int?, CommonTabItem>(this.ProxyCreate), new Action<int>(this.ToggleCallBack), new Func<int, CommonTabData>(this.GetCommonData));
@@ -40,7 +40,7 @@ public class VisionIntensifyView : UiViewBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnVisionIntensifyViewShow, true);
 	}
 
-	// Token: 0x06012ECB RID: 77515 RVA: 0x004AE3A8 File Offset: 0x004AC5A8
+	// Token: 0x0601038A RID: 66442 RVA: 0x004BBFA8 File Offset: 0x004BA1A8
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<bool>(EEventName.RefreshVisionIntensifyViewBackBtnState, new Action<bool>(this.OnRefreshVisionIntensifyViewBackBtnState));
@@ -49,7 +49,7 @@ public class VisionIntensifyView : UiViewBase
 		EventSystem.Instance.Add(EEventName.OnClickVisionIntensifyItemJump, new Action(this.OnClickVisionIntensifyItemJump));
 	}
 
-	// Token: 0x06012ECC RID: 77516 RVA: 0x004AE428 File Offset: 0x004AC628
+	// Token: 0x0601038B RID: 66443 RVA: 0x004BC028 File Offset: 0x004BA228
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshVisionIntensifyViewBackBtnState, new Action<bool>(this.OnRefreshVisionIntensifyViewBackBtnState));
@@ -58,7 +58,7 @@ public class VisionIntensifyView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnClickVisionIntensifyItemJump, new Action(this.OnClickVisionIntensifyItemJump));
 	}
 
-	// Token: 0x06012ECD RID: 77517 RVA: 0x004AE4A8 File Offset: 0x004AC6A8
+	// Token: 0x0601038C RID: 66444 RVA: 0x004BC0A8 File Offset: 0x004BA2A8
 	private void OnPhantomStackMerge(int mergedIncrId, int representativeIncrId)
 	{
 		if (this.CurrentUniqueId != mergedIncrId)
@@ -77,19 +77,19 @@ public class VisionIntensifyView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012ECE RID: 77518 RVA: 0x004AE4EA File Offset: 0x004AC6EA
+	// Token: 0x0601038D RID: 66445 RVA: 0x004BC0EA File Offset: 0x004BA2EA
 	private void OnRefreshVisionIntensifyViewBackBtnState(bool state)
 	{
 		this.TabComponent.SetCloseBtnShowState(state);
 	}
 
-	// Token: 0x06012ECF RID: 77519 RVA: 0x004AE4F8 File Offset: 0x004AC6F8
+	// Token: 0x0601038E RID: 66446 RVA: 0x004BC0F8 File Offset: 0x004BA2F8
 	private void OnClickVisionIntensifyItemJump()
 	{
 		this.TabComponent.SelectToggleByIndex(1, false);
 	}
 
-	// Token: 0x06012ED0 RID: 77520 RVA: 0x004AE508 File Offset: 0x004AC708
+	// Token: 0x0601038F RID: 66447 RVA: 0x004BC108 File Offset: 0x004BA308
 	private void OnVisionLevelUp()
 	{
 		PhantomBattleData phantomBattleData = PhantomBattleModel.Instance.GetPhantomBattleData(this.CurrentUniqueId);
@@ -104,7 +104,7 @@ public class VisionIntensifyView : UiViewBase
 		this.RefreshTabUnlockState();
 	}
 
-	// Token: 0x06012ED1 RID: 77521 RVA: 0x004AE53C File Offset: 0x004AC73C
+	// Token: 0x06010390 RID: 66448 RVA: 0x004BC13C File Offset: 0x004BA33C
 	protected bool CanToggleChange(int index, bool? _)
 	{
 		UiDynamicTab tabData = this.TabDataList[index];
@@ -120,13 +120,13 @@ public class VisionIntensifyView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x06012ED2 RID: 77522 RVA: 0x004AE5A5 File Offset: 0x004AC7A5
+	// Token: 0x06010391 RID: 66449 RVA: 0x004BC1A5 File Offset: 0x004BA3A5
 	private CommonTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new VisionTabItem();
 	}
 
-	// Token: 0x06012ED3 RID: 77523 RVA: 0x004AE5AC File Offset: 0x004AC7AC
+	// Token: 0x06010392 RID: 66450 RVA: 0x004BC1AC File Offset: 0x004BA3AC
 	[return: TupleElementNames(new string[]
 	{
 		"IsUnlocked",
@@ -169,7 +169,7 @@ public class VisionIntensifyView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012ED4 RID: 77524 RVA: 0x004AE6A8 File Offset: 0x004AC8A8
+	// Token: 0x06010393 RID: 66451 RVA: 0x004BC2A8 File Offset: 0x004BA4A8
 	protected override void OnBeforePlayCloseSequence()
 	{
 		UiTabViewBase currentTabView = this.TabViewComponent.GetCurrentTabView();
@@ -179,7 +179,7 @@ public class VisionIntensifyView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012ED5 RID: 77525 RVA: 0x004AE6E4 File Offset: 0x004AC8E4
+	// Token: 0x06010394 RID: 66452 RVA: 0x004BC2E4 File Offset: 0x004BA4E4
 	private void ToggleCallBack(int index)
 	{
 		UiDynamicTab data = this.TabDataList[index];
@@ -198,7 +198,7 @@ public class VisionIntensifyView : UiViewBase
 		this.CurSelectTabIndex = index;
 	}
 
-	// Token: 0x06012ED6 RID: 77526 RVA: 0x004AE77D File Offset: 0x004AC97D
+	// Token: 0x06010395 RID: 66453 RVA: 0x004BC37D File Offset: 0x004BA57D
 	private void HandleVisionSkeletal(EUiTabViewName viewName)
 	{
 		if (viewName == EUiTabViewName.VisionRefineTabView)
@@ -209,7 +209,7 @@ public class VisionIntensifyView : UiViewBase
 		this.ShowVisionSkeletal();
 	}
 
-	// Token: 0x06012ED7 RID: 77527 RVA: 0x004AE79C File Offset: 0x004AC99C
+	// Token: 0x06010396 RID: 66454 RVA: 0x004BC39C File Offset: 0x004BA59C
 	private void ShowVisionSkeletal()
 	{
 		PhantomBattleData phantomItemDataByUniqueId = PhantomBattleController.Instance.GetPhantomItemDataByUniqueId(this.CurrentUniqueId);
@@ -229,13 +229,13 @@ public class VisionIntensifyView : UiViewBase
 		PhantomBattleController.Instance.SetMeshShow(phantomItemDataByUniqueId.GetConfigId(true), null, visionSkeletalHandle, true);
 	}
 
-	// Token: 0x06012ED8 RID: 77528 RVA: 0x004AE7F7 File Offset: 0x004AC9F7
+	// Token: 0x06010397 RID: 66455 RVA: 0x004BC3F7 File Offset: 0x004BA5F7
 	private void DestroyVisionSkeletal()
 	{
 		UiSceneManager.Instance.DestroyVisionSkeletalHandle();
 	}
 
-	// Token: 0x06012ED9 RID: 77529 RVA: 0x004AE804 File Offset: 0x004ACA04
+	// Token: 0x06010398 RID: 66456 RVA: 0x004BC404 File Offset: 0x004BA604
 	[NullableContext(2)]
 	public object CreateExtraParams(EUiTabViewName viewName)
 	{
@@ -274,7 +274,7 @@ public class VisionIntensifyView : UiViewBase
 		return result;
 	}
 
-	// Token: 0x06012EDA RID: 77530 RVA: 0x004AE8EF File Offset: 0x004ACAEF
+	// Token: 0x06010399 RID: 66457 RVA: 0x004BC4EF File Offset: 0x004BA6EF
 	public void SetCurrencyItemList(EUiTabViewName viewName)
 	{
 		this.CurrencyItemList.Clear();
@@ -285,26 +285,26 @@ public class VisionIntensifyView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012EDB RID: 77531 RVA: 0x004AE927 File Offset: 0x004ACB27
+	// Token: 0x0601039A RID: 66458 RVA: 0x004BC527 File Offset: 0x004BA727
 	private void OnClickHelpButton()
 	{
 		HelpController.Instance.OpenHelpById(32);
 	}
 
-	// Token: 0x06012EDC RID: 77532 RVA: 0x004AE938 File Offset: 0x004ACB38
+	// Token: 0x0601039B RID: 66459 RVA: 0x004BC538 File Offset: 0x004BA738
 	private CommonTabData GetCommonData(int index)
 	{
 		UiDynamicTab uiDynamicTab = this.TabDataList[index];
 		return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x06012EDD RID: 77533 RVA: 0x004AE970 File Offset: 0x004ACB70
+	// Token: 0x0601039C RID: 66460 RVA: 0x004BC570 File Offset: 0x004BA770
 	protected void CloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06012EDE RID: 77534 RVA: 0x004AE97C File Offset: 0x004ACB7C
+	// Token: 0x0601039D RID: 66461 RVA: 0x004BC57C File Offset: 0x004BA77C
 	protected override void OnHandleLoadScene()
 	{
 		EUiTabViewName? currentTabViewName = this.TabViewComponent.GetCurrentTabViewName(null);
@@ -315,13 +315,13 @@ public class VisionIntensifyView : UiViewBase
 		this.HandleVisionSkeletal(currentTabViewName.Value);
 	}
 
-	// Token: 0x06012EDF RID: 77535 RVA: 0x004AE9B5 File Offset: 0x004ACBB5
+	// Token: 0x0601039E RID: 66462 RVA: 0x004BC5B5 File Offset: 0x004BA7B5
 	protected override void OnHandleReleaseScene()
 	{
 		this.DestroyVisionSkeletal();
 	}
 
-	// Token: 0x06012EE0 RID: 77536 RVA: 0x004AE9C0 File Offset: 0x004ACBC0
+	// Token: 0x0601039F RID: 66463 RVA: 0x004BC5C0 File Offset: 0x004BA7C0
 	protected override void OnBeforeShow()
 	{
 		PhantomBattleModel instance = PhantomBattleModel.Instance;
@@ -363,7 +363,7 @@ public class VisionIntensifyView : UiViewBase
 		tabComponent2.RefreshTabItemByLength(num, new Action(this.RefreshTabCallBack));
 	}
 
-	// Token: 0x06012EE1 RID: 77537 RVA: 0x004AEAC8 File Offset: 0x004ACCC8
+	// Token: 0x060103A0 RID: 66464 RVA: 0x004BC6C8 File Offset: 0x004BA8C8
 	private void RefreshTabUnlockState()
 	{
 		TabComponentWithCaptionItem<CommonTabItem> tabComponent = this.TabComponent;
@@ -400,7 +400,7 @@ public class VisionIntensifyView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012EE2 RID: 77538 RVA: 0x004AEBB8 File Offset: 0x004ACDB8
+	// Token: 0x060103A1 RID: 66465 RVA: 0x004BC7B8 File Offset: 0x004BA9B8
 	private void RefreshTabCallBack()
 	{
 		this.RefreshTabUnlockState();
@@ -410,7 +410,7 @@ public class VisionIntensifyView : UiViewBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshVisionIdentifyRedPoint, this.CurrentUniqueId);
 	}
 
-	// Token: 0x06012EE3 RID: 77539 RVA: 0x004AEC08 File Offset: 0x004ACE08
+	// Token: 0x060103A2 RID: 66466 RVA: 0x004BC808 File Offset: 0x004BAA08
 	private void BindRedDot()
 	{
 		int num = -1;
@@ -432,7 +432,7 @@ public class VisionIntensifyView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012EE4 RID: 77540 RVA: 0x004AEC84 File Offset: 0x004ACE84
+	// Token: 0x060103A3 RID: 66467 RVA: 0x004BC884 File Offset: 0x004BAA84
 	private void UnBindRedDot()
 	{
 		int num = -1;
@@ -454,7 +454,7 @@ public class VisionIntensifyView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012EE5 RID: 77541 RVA: 0x004AECF2 File Offset: 0x004ACEF2
+	// Token: 0x060103A4 RID: 66468 RVA: 0x004BC8F2 File Offset: 0x004BAAF2
 	protected override void OnBeforeHide()
 	{
 		this.UnBindRedDot();
@@ -466,7 +466,7 @@ public class VisionIntensifyView : UiViewBase
 		instance.ReduceNeedCameraFocusMethodDisableViewCount();
 	}
 
-	// Token: 0x06012EE6 RID: 77542 RVA: 0x004AED0C File Offset: 0x004ACF0C
+	// Token: 0x060103A5 RID: 66469 RVA: 0x004BC90C File Offset: 0x004BAB0C
 	protected override void OnAfterHide()
 	{
 		UiTabViewBase currentTabView = this.TabViewComponent.GetCurrentTabView();
@@ -476,7 +476,7 @@ public class VisionIntensifyView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012EE7 RID: 77543 RVA: 0x004AED30 File Offset: 0x004ACF30
+	// Token: 0x060103A6 RID: 66470 RVA: 0x004BC930 File Offset: 0x004BAB30
 	protected override void OnBeforeCreate()
 	{
 		VisionIntensifyViewPassData visionIntensifyViewPassData = this.OpenParam as VisionIntensifyViewPassData;
@@ -488,7 +488,7 @@ public class VisionIntensifyView : UiViewBase
 		this.CurrentRoleId = visionIntensifyViewPassData.RoleId;
 	}
 
-	// Token: 0x06012EE8 RID: 77544 RVA: 0x004AED65 File Offset: 0x004ACF65
+	// Token: 0x060103A7 RID: 66471 RVA: 0x004BC965 File Offset: 0x004BAB65
 	protected override void OnBeforeDestroy()
 	{
 		this.TabViewComponent.DestroyTabViewComponent();
@@ -496,7 +496,7 @@ public class VisionIntensifyView : UiViewBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnVisionIntensifyViewShow, false);
 	}
 
-	// Token: 0x06012EE9 RID: 77545 RVA: 0x004AED90 File Offset: 0x004ACF90
+	// Token: 0x060103A8 RID: 66472 RVA: 0x004BC990 File Offset: 0x004BAB90
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -533,16 +533,16 @@ public class VisionIntensifyView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x06012EEA RID: 77546 RVA: 0x004AEE33 File Offset: 0x004AD033
+	// Token: 0x060103A9 RID: 66473 RVA: 0x004BCA33 File Offset: 0x004BAC33
 	public int GetCurrentUniqueId()
 	{
 		return this.CurrentUniqueId;
 	}
 
-	// Token: 0x04008E97 RID: 36503
+	// Token: 0x04008FE1 RID: 36833
 	private const int VISION_INTENSIFY_HELPID = 32;
 
-	// Token: 0x04008E98 RID: 36504
+	// Token: 0x04008FE2 RID: 36834
 	[Nullable(new byte[]
 	{
 		2,
@@ -550,34 +550,34 @@ public class VisionIntensifyView : UiViewBase
 	})]
 	protected TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-	// Token: 0x04008E99 RID: 36505
+	// Token: 0x04008FE3 RID: 36835
 	[Nullable(2)]
 	protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-	// Token: 0x04008E9A RID: 36506
+	// Token: 0x04008FE4 RID: 36836
 	private readonly List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-	// Token: 0x04008E9B RID: 36507
+	// Token: 0x04008FE5 RID: 36837
 	private int CurrentUniqueId;
 
-	// Token: 0x04008E9C RID: 36508
+	// Token: 0x04008FE6 RID: 36838
 	private int CurrentRoleId;
 
-	// Token: 0x04008E9D RID: 36509
+	// Token: 0x04008FE7 RID: 36839
 	private readonly List<int> CurrencyItemList = new List<int>();
 
-	// Token: 0x04008E9E RID: 36510
+	// Token: 0x04008FE8 RID: 36840
 	private int CurSelectTabIndex;
 
-	// Token: 0x02008A57 RID: 35415
+	// Token: 0x02007BE0 RID: 31712
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CEB8 RID: 183992
+		// Token: 0x040281D6 RID: 164310
 		Item,
-		// Token: 0x0402CEB9 RID: 183993
+		// Token: 0x040281D7 RID: 164311
 		MountItem,
-		// Token: 0x0402CEBA RID: 183994
+		// Token: 0x040281D8 RID: 164312
 		Bg
 	}
 }

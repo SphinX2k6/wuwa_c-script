@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F91 RID: 28561
+	// Token: 0x02006112 RID: 24850
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowParallelAction : LevelFlowActionBase
 	{
-		// Token: 0x06045737 RID: 284471 RVA: 0x01139BCF File Offset: 0x01137DCF
+		// Token: 0x0603B8E5 RID: 243941 RVA: 0x010E39D3 File Offset: 0x010E1BD3
 		public LevelFlowParallelAction Init(List<LevelFlowActionBase> actions)
 		{
 			this.Actions = actions;
 			return this;
 		}
 
-		// Token: 0x06045738 RID: 284472 RVA: 0x01139BDC File Offset: 0x01137DDC
+		// Token: 0x0603B8E6 RID: 243942 RVA: 0x010E39E0 File Offset: 0x010E1BE0
 		protected override void OnExecute()
 		{
 			if (this.Actions.Count <= 0)
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x06045739 RID: 284473 RVA: 0x01139C60 File Offset: 0x01137E60
+		// Token: 0x0603B8E7 RID: 243943 RVA: 0x010E3A64 File Offset: 0x010E1C64
 		protected override void OnTick(float deltaTime)
 		{
 			foreach (LevelFlowActionBase levelFlowActionBase in this.Actions)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x0604573A RID: 284474 RVA: 0x01139CB4 File Offset: 0x01137EB4
+		// Token: 0x0603B8E8 RID: 243944 RVA: 0x010E3AB8 File Offset: 0x010E1CB8
 		private void OnActionComplete(LevelFlowActionBase action, bool isSuccess)
 		{
 			if (!isSuccess)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x0604573B RID: 284475 RVA: 0x01139CF0 File Offset: 0x01137EF0
+		// Token: 0x0603B8E9 RID: 243945 RVA: 0x010E3AF4 File Offset: 0x010E1CF4
 		protected override void OnReset()
 		{
 			foreach (LevelFlowActionBase levelFlowActionBase in this.Actions)
@@ -66,10 +66,10 @@ namespace CSharpScript.Game.LevelFlow.Action
 			this.FinishActionSet.Clear();
 		}
 
-		// Token: 0x040243CD RID: 148429
+		// Token: 0x0401F682 RID: 128642
 		private List<LevelFlowActionBase> Actions = new List<LevelFlowActionBase>();
 
-		// Token: 0x040243CE RID: 148430
+		// Token: 0x0401F683 RID: 128643
 		private readonly HashSet<LevelFlowActionBase> FinishActionSet = new HashSet<LevelFlowActionBase>();
 	}
 }

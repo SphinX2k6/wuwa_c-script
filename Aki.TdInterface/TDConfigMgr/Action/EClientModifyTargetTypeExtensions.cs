@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022E5 RID: 8933
+	// Token: 0x02002556 RID: 9558
 	public static class EClientModifyTargetTypeExtensions
 	{
-		// Token: 0x0600C385 RID: 50053 RVA: 0x001C9074 File Offset: 0x001C7274
+		// Token: 0x0600CF5D RID: 53085 RVA: 0x001E0F9C File Offset: 0x001DF19C
 		public static string ToEnumString(this EClientModifyTargetType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C386 RID: 50054 RVA: 0x001C90AC File Offset: 0x001C72AC
+		// Token: 0x0600CF5E RID: 53086 RVA: 0x001E0FD4 File Offset: 0x001DF1D4
 		public static EClientModifyTargetType FromString(string name)
 		{
 			EClientModifyTargetType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C387 RID: 50055 RVA: 0x001C90D5 File Offset: 0x001C72D5
+		// Token: 0x0600CF5F RID: 53087 RVA: 0x001E0FFD File Offset: 0x001DF1FD
 		public static bool TryFromString(string name, out EClientModifyTargetType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C388 RID: 50056 RVA: 0x001C910E File Offset: 0x001C730E
+		// Token: 0x0600CF60 RID: 53088 RVA: 0x001E1036 File Offset: 0x001DF236
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C389 RID: 50057 RVA: 0x001C9126 File Offset: 0x001C7326
+		// Token: 0x0600CF61 RID: 53089 RVA: 0x001E104E File Offset: 0x001DF24E
 		public static EClientModifyTargetType[] GetValues()
 		{
 			return new EClientModifyTargetType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C38A RID: 50058 RVA: 0x001C9132 File Offset: 0x001C7332
+		// Token: 0x0600CF62 RID: 53090 RVA: 0x001E105A File Offset: 0x001DF25A
 		public static string[] GetNames()
 		{
 			return new string[]

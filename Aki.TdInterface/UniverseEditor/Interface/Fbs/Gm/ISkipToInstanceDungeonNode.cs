@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x0200469F RID: 18079
+	// Token: 0x02004B07 RID: 19207
 	public struct ISkipToInstanceDungeonNode : IFlatbufferObject
 	{
-		// Token: 0x17008060 RID: 32864
-		// (get) Token: 0x0601B755 RID: 112469 RVA: 0x003E63DA File Offset: 0x003E45DA
+		// Token: 0x170086A1 RID: 34465
+		// (get) Token: 0x0601CF2A RID: 118570 RVA: 0x00412676 File Offset: 0x00410876
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B756 RID: 112470 RVA: 0x003E63E7 File Offset: 0x003E45E7
+		// Token: 0x0601CF2B RID: 118571 RVA: 0x00412683 File Offset: 0x00410883
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B757 RID: 112471 RVA: 0x003E63F0 File Offset: 0x003E45F0
+		// Token: 0x0601CF2C RID: 118572 RVA: 0x0041268C File Offset: 0x0041088C
 		public static ISkipToInstanceDungeonNode GetRootAsISkipToInstanceDungeonNode(ByteBuffer _bb)
 		{
 			return ISkipToInstanceDungeonNode.GetRootAsISkipToInstanceDungeonNode(_bb, default(ISkipToInstanceDungeonNode));
 		}
 
-		// Token: 0x0601B758 RID: 112472 RVA: 0x003E640C File Offset: 0x003E460C
+		// Token: 0x0601CF2D RID: 118573 RVA: 0x004126A8 File Offset: 0x004108A8
 		public static ISkipToInstanceDungeonNode GetRootAsISkipToInstanceDungeonNode(ByteBuffer _bb, ISkipToInstanceDungeonNode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B759 RID: 112473 RVA: 0x003E6429 File Offset: 0x003E4629
+		// Token: 0x0601CF2E RID: 118574 RVA: 0x004126C5 File Offset: 0x004108C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B75A RID: 112474 RVA: 0x003E6438 File Offset: 0x003E4638
+		// Token: 0x0601CF2F RID: 118575 RVA: 0x004126D4 File Offset: 0x004108D4
 		public ISkipToInstanceDungeonNode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008061 RID: 32865
-		// (get) Token: 0x0601B75B RID: 112475 RVA: 0x003E6448 File Offset: 0x003E4648
+		// Token: 0x170086A2 RID: 34466
+		// (get) Token: 0x0601CF30 RID: 118576 RVA: 0x004126E4 File Offset: 0x004108E4
 		public EGmCommand Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17008062 RID: 32866
-		// (get) Token: 0x0601B75C RID: 112476 RVA: 0x003E6484 File Offset: 0x003E4684
+		// Token: 0x170086A3 RID: 34467
+		// (get) Token: 0x0601CF31 RID: 118577 RVA: 0x00412720 File Offset: 0x00410920
 		public int ChildQuestId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17008063 RID: 32867
-		// (get) Token: 0x0601B75D RID: 112477 RVA: 0x003E64C0 File Offset: 0x003E46C0
+		// Token: 0x170086A4 RID: 34468
+		// (get) Token: 0x0601CF32 RID: 118578 RVA: 0x0041275C File Offset: 0x0041095C
 		public bool IsTeleport
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17008064 RID: 32868
-		// (get) Token: 0x0601B75E RID: 112478 RVA: 0x003E6500 File Offset: 0x003E4700
+		// Token: 0x170086A5 RID: 34469
+		// (get) Token: 0x0601CF33 RID: 118579 RVA: 0x0041279C File Offset: 0x0041099C
 		public bool IsFastMode
 		{
 			get
@@ -99,7 +99,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B75F RID: 112479 RVA: 0x003E6540 File Offset: 0x003E4740
+		// Token: 0x0601CF34 RID: 118580 RVA: 0x004127DC File Offset: 0x004109DC
 		public static Offset<ISkipToInstanceDungeonNode> CreateISkipToInstanceDungeonNode(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode, int ChildQuestId = 0, bool IsTeleport = false, bool IsFastMode = false)
 		{
 			builder.StartTable(4);
@@ -110,43 +110,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return ISkipToInstanceDungeonNode.EndISkipToInstanceDungeonNode(builder);
 		}
 
-		// Token: 0x0601B760 RID: 112480 RVA: 0x003E656C File Offset: 0x003E476C
+		// Token: 0x0601CF35 RID: 118581 RVA: 0x00412808 File Offset: 0x00410A08
 		public static void StartISkipToInstanceDungeonNode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601B761 RID: 112481 RVA: 0x003E6575 File Offset: 0x003E4775
+		// Token: 0x0601CF36 RID: 118582 RVA: 0x00412811 File Offset: 0x00410A11
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B762 RID: 112482 RVA: 0x003E6580 File Offset: 0x003E4780
+		// Token: 0x0601CF37 RID: 118583 RVA: 0x0041281C File Offset: 0x00410A1C
 		public static void AddChildQuestId(FlatBufferBuilder builder, int childQuestId)
 		{
 			builder.AddInt(1, childQuestId, 0);
 		}
 
-		// Token: 0x0601B763 RID: 112483 RVA: 0x003E658B File Offset: 0x003E478B
+		// Token: 0x0601CF38 RID: 118584 RVA: 0x00412827 File Offset: 0x00410A27
 		public static void AddIsTeleport(FlatBufferBuilder builder, bool isTeleport)
 		{
 			builder.AddBool(2, isTeleport, false);
 		}
 
-		// Token: 0x0601B764 RID: 112484 RVA: 0x003E6596 File Offset: 0x003E4796
+		// Token: 0x0601CF39 RID: 118585 RVA: 0x00412832 File Offset: 0x00410A32
 		public static void AddIsFastMode(FlatBufferBuilder builder, bool isFastMode)
 		{
 			builder.AddBool(3, isFastMode, false);
 		}
 
-		// Token: 0x0601B765 RID: 112485 RVA: 0x003E65A1 File Offset: 0x003E47A1
+		// Token: 0x0601CF3A RID: 118586 RVA: 0x0041283D File Offset: 0x00410A3D
 		public static Offset<ISkipToInstanceDungeonNode> EndISkipToInstanceDungeonNode(FlatBufferBuilder builder)
 		{
 			return new Offset<ISkipToInstanceDungeonNode>(builder.EndTable());
 		}
 
-		// Token: 0x0601B766 RID: 112486 RVA: 0x003E65B0 File Offset: 0x003E47B0
+		// Token: 0x0601CF3B RID: 118587 RVA: 0x0041284C File Offset: 0x00410A4C
 		public ISkipToInstanceDungeonNodeT UnPack()
 		{
 			ISkipToInstanceDungeonNodeT skipToInstanceDungeonNodeT = new ISkipToInstanceDungeonNodeT();
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return skipToInstanceDungeonNodeT;
 		}
 
-		// Token: 0x0601B767 RID: 112487 RVA: 0x003E65CB File Offset: 0x003E47CB
+		// Token: 0x0601CF3C RID: 118588 RVA: 0x00412867 File Offset: 0x00410A67
 		public void UnPackTo(ISkipToInstanceDungeonNodeT _o)
 		{
 			_o.Type = this.Type;
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			_o.IsFastMode = this.IsFastMode;
 		}
 
-		// Token: 0x0601B768 RID: 112488 RVA: 0x003E6600 File Offset: 0x003E4800
+		// Token: 0x0601CF3D RID: 118589 RVA: 0x0041289C File Offset: 0x00410A9C
 		public static Offset<ISkipToInstanceDungeonNode> Pack(FlatBufferBuilder builder, ISkipToInstanceDungeonNodeT _o)
 		{
 			if (_o == null)
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return ISkipToInstanceDungeonNode.CreateISkipToInstanceDungeonNode(builder, _o.Type, _o.ChildQuestId, _o.IsTeleport, _o.IsFastMode);
 		}
 
-		// Token: 0x0400C864 RID: 51300
+		// Token: 0x0400D293 RID: 53907
 		private Table __p;
 	}
 }

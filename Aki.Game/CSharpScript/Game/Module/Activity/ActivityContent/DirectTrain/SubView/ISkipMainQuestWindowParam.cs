@@ -3,14 +3,14 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.SubView
 {
-	// Token: 0x02006746 RID: 26438
+	// Token: 0x02005696 RID: 22166
 	public class ISkipMainQuestWindowParam
 	{
-		// Token: 0x040225FC RID: 140796
+		// Token: 0x0401CE55 RID: 118357
 		[Nullable(2)]
 		public TSkipMainQuestWindowSkipCallBack SkipCallBack;
 
-		// Token: 0x040225FD RID: 140797
+		// Token: 0x0401CE56 RID: 118358
 		public int ActivityId;
 	}
 }

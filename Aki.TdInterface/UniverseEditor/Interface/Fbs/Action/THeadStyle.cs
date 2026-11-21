@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076E6 RID: 30438
+	// Token: 0x02007EFA RID: 32506
 	public enum THeadStyle : byte
 	{
-		// Token: 0x04012778 RID: 75640
+		// Token: 0x040137D6 RID: 79830
 		NONE,
-		// Token: 0x04012779 RID: 75641
+		// Token: 0x040137D7 RID: 79831
 		IHeadStyleMonsterDisplay,
-		// Token: 0x0401277A RID: 75642
+		// Token: 0x040137D8 RID: 79832
 		IHeadStyleNormal,
-		// Token: 0x0401277B RID: 75643
+		// Token: 0x040137D9 RID: 79833
 		IHeadStyleVoiceOnly,
-		// Token: 0x0401277C RID: 75644
+		// Token: 0x040137DA RID: 79834
 		IHeadStyleWarning,
-		// Token: 0x0401277D RID: 75645
+		// Token: 0x040137DB RID: 79835
 		IHeadStyleWeakSignal
 	}
 }

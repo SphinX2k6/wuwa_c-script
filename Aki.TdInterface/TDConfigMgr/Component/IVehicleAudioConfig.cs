@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007B1 RID: 1969
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000854 RID: 2132
 	public class IVehicleAudioConfig
 	{
-		// Token: 0x06002AAD RID: 10925 RVA: 0x0006FCEC File Offset: 0x0006DEEC
+		// Token: 0x06002DDD RID: 11741 RVA: 0x00077050 File Offset: 0x00075250
 		private IVehicleAudioConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002AAE RID: 10926 RVA: 0x0006FD24 File Offset: 0x0006DF24
+		// Token: 0x06002DDE RID: 11742 RVA: 0x00077088 File Offset: 0x00075288
 		public static IVehicleAudioConfig Create([Nullable(2)] IVehicleAudioConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002AAF RID: 10927 RVA: 0x0006FD37 File Offset: 0x0006DF37
+		// Token: 0x06002DDF RID: 11743 RVA: 0x0007709B File Offset: 0x0007529B
 		public static IVehicleAudioConfig CreateFromSetValue([Nullable(2)] IVehicleAudioConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002AB0 RID: 10928 RVA: 0x0006FD4A File Offset: 0x0006DF4A
+		// Token: 0x06002DE0 RID: 11744 RVA: 0x000770AE File Offset: 0x000752AE
 		public IVehicleAudioConfig_SetValue ToSetValue()
 		{
 			return new IVehicleAudioConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B30 RID: 2864
-		// (get) Token: 0x06002AB1 RID: 10929 RVA: 0x0006FD75 File Offset: 0x0006DF75
-		// (set) Token: 0x06002AB2 RID: 10930 RVA: 0x0006FDA4 File Offset: 0x0006DFA4
+		// Token: 0x17000BF3 RID: 3059
+		// (get) Token: 0x06002DE1 RID: 11745 RVA: 0x000770D9 File Offset: 0x000752D9
+		// (set) Token: 0x06002DE2 RID: 11746 RVA: 0x00077108 File Offset: 0x00075308
 		public virtual float MinVehicleSpeed
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B31 RID: 2865
-		// (get) Token: 0x06002AB3 RID: 10931 RVA: 0x0006FDB2 File Offset: 0x0006DFB2
-		// (set) Token: 0x06002AB4 RID: 10932 RVA: 0x0006FDE1 File Offset: 0x0006DFE1
+		// Token: 0x17000BF4 RID: 3060
+		// (get) Token: 0x06002DE3 RID: 11747 RVA: 0x00077116 File Offset: 0x00075316
+		// (set) Token: 0x06002DE4 RID: 11748 RVA: 0x00077145 File Offset: 0x00075345
 		public virtual float MaxVehicleSpeed
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B32 RID: 2866
-		// (get) Token: 0x06002AB5 RID: 10933 RVA: 0x0006FDEF File Offset: 0x0006DFEF
-		// (set) Token: 0x06002AB6 RID: 10934 RVA: 0x0006FE1A File Offset: 0x0006E01A
+		// Token: 0x17000BF5 RID: 3061
+		// (get) Token: 0x06002DE5 RID: 11749 RVA: 0x00077153 File Offset: 0x00075353
+		// (set) Token: 0x06002DE6 RID: 11750 RVA: 0x0007717E File Offset: 0x0007537E
 		public virtual string AudioEvent
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C74 RID: 7284
+		// Token: 0x04001E80 RID: 7808
 		[Nullable(2)]
 		protected IVehicleAudioConfig FbInstance;
 
-		// Token: 0x04001C75 RID: 7285
+		// Token: 0x04001E81 RID: 7809
 		[Nullable(2)]
 		protected IVehicleAudioConfig_SetValue PocoInterface;
 	}

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DDC RID: 15836
+	// Token: 0x02004217 RID: 16919
 	public struct IDistributeParams : IFlatbufferObject
 	{
-		// Token: 0x17006D5A RID: 27994
-		// (get) Token: 0x060161DD RID: 90589 RVA: 0x00332473 File Offset: 0x00330673
+		// Token: 0x1700733A RID: 29498
+		// (get) Token: 0x060177FC RID: 96252 RVA: 0x0035AE77 File Offset: 0x00359077
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060161DE RID: 90590 RVA: 0x00332480 File Offset: 0x00330680
+		// Token: 0x060177FD RID: 96253 RVA: 0x0035AE84 File Offset: 0x00359084
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060161DF RID: 90591 RVA: 0x00332488 File Offset: 0x00330688
+		// Token: 0x060177FE RID: 96254 RVA: 0x0035AE8C File Offset: 0x0035908C
 		public static IDistributeParams GetRootAsIDistributeParams(ByteBuffer _bb)
 		{
 			return IDistributeParams.GetRootAsIDistributeParams(_bb, default(IDistributeParams));
 		}
 
-		// Token: 0x060161E0 RID: 90592 RVA: 0x003324A4 File Offset: 0x003306A4
+		// Token: 0x060177FF RID: 96255 RVA: 0x0035AEA8 File Offset: 0x003590A8
 		public static IDistributeParams GetRootAsIDistributeParams(ByteBuffer _bb, IDistributeParams obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060161E1 RID: 90593 RVA: 0x003324C1 File Offset: 0x003306C1
+		// Token: 0x06017800 RID: 96256 RVA: 0x0035AEC5 File Offset: 0x003590C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060161E2 RID: 90594 RVA: 0x003324D0 File Offset: 0x003306D0
+		// Token: 0x06017801 RID: 96257 RVA: 0x0035AED4 File Offset: 0x003590D4
 		public IDistributeParams __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006D5B RID: 27995
-		// (get) Token: 0x060161E3 RID: 90595 RVA: 0x003324E0 File Offset: 0x003306E0
+		// Token: 0x1700733B RID: 29499
+		// (get) Token: 0x06017802 RID: 96258 RVA: 0x0035AEE4 File Offset: 0x003590E4
 		public int InformationViewCheck
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006D5C RID: 27996
-		// (get) Token: 0x060161E4 RID: 90596 RVA: 0x0033251C File Offset: 0x0033071C
+		// Token: 0x1700733C RID: 29500
+		// (get) Token: 0x06017803 RID: 96259 RVA: 0x0035AF20 File Offset: 0x00359120
 		public IItemConfig? UseItem
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006D5D RID: 27997
-		// (get) Token: 0x060161E5 RID: 90597 RVA: 0x0033257C File Offset: 0x0033077C
+		// Token: 0x1700733D RID: 29501
+		// (get) Token: 0x06017804 RID: 96260 RVA: 0x0035AF80 File Offset: 0x00359180
 		public byte NullMask
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060161E6 RID: 90598 RVA: 0x003325B8 File Offset: 0x003307B8
+		// Token: 0x06017805 RID: 96261 RVA: 0x0035AFBC File Offset: 0x003591BC
 		public static Offset<IDistributeParams> CreateIDistributeParams(FlatBufferBuilder builder, int InformationViewCheck = 0, Offset<IItemConfig> UseItemOffset = default(Offset<IItemConfig>), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IDistributeParams.EndIDistributeParams(builder);
 		}
 
-		// Token: 0x060161E7 RID: 90599 RVA: 0x003325DC File Offset: 0x003307DC
+		// Token: 0x06017806 RID: 96262 RVA: 0x0035AFE0 File Offset: 0x003591E0
 		public static void StartIDistributeParams(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060161E8 RID: 90600 RVA: 0x003325E5 File Offset: 0x003307E5
+		// Token: 0x06017807 RID: 96263 RVA: 0x0035AFE9 File Offset: 0x003591E9
 		public static void AddInformationViewCheck(FlatBufferBuilder builder, int informationViewCheck)
 		{
 			builder.AddInt(0, informationViewCheck, 0);
 		}
 
-		// Token: 0x060161E9 RID: 90601 RVA: 0x003325F0 File Offset: 0x003307F0
+		// Token: 0x06017808 RID: 96264 RVA: 0x0035AFF4 File Offset: 0x003591F4
 		public static void AddUseItem(FlatBufferBuilder builder, Offset<IItemConfig> useItemOffset)
 		{
 			builder.AddOffset(1, useItemOffset.Value, 0);
 		}
 
-		// Token: 0x060161EA RID: 90602 RVA: 0x00332600 File Offset: 0x00330800
+		// Token: 0x06017809 RID: 96265 RVA: 0x0035B004 File Offset: 0x00359204
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x060161EB RID: 90603 RVA: 0x0033260B File Offset: 0x0033080B
+		// Token: 0x0601780A RID: 96266 RVA: 0x0035B00F File Offset: 0x0035920F
 		public static Offset<IDistributeParams> EndIDistributeParams(FlatBufferBuilder builder)
 		{
 			return new Offset<IDistributeParams>(builder.EndTable());
 		}
 
-		// Token: 0x060161EC RID: 90604 RVA: 0x00332618 File Offset: 0x00330818
+		// Token: 0x0601780B RID: 96267 RVA: 0x0035B01C File Offset: 0x0035921C
 		public IDistributeParamsT UnPack()
 		{
 			IDistributeParamsT distributeParamsT = new IDistributeParamsT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return distributeParamsT;
 		}
 
-		// Token: 0x060161ED RID: 90605 RVA: 0x00332634 File Offset: 0x00330834
+		// Token: 0x0601780C RID: 96268 RVA: 0x0035B038 File Offset: 0x00359238
 		public void UnPackTo(IDistributeParamsT _o)
 		{
 			_o.InformationViewCheck = this.InformationViewCheck;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060161EE RID: 90606 RVA: 0x00332688 File Offset: 0x00330888
+		// Token: 0x0601780D RID: 96269 RVA: 0x0035B08C File Offset: 0x0035928C
 		public static Offset<IDistributeParams> Pack(FlatBufferBuilder builder, IDistributeParamsT _o)
 		{
 			if (_o == null)
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IDistributeParams.CreateIDistributeParams(builder, _o.InformationViewCheck, useItemOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400B723 RID: 46883
+		// Token: 0x0400C0F7 RID: 49399
 		private Table __p;
 	}
 }

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003469 RID: 13417
+// Token: 0x020029DD RID: 10717
 [NullableContext(1)]
 [Nullable(0)]
 public class EffectTriggerActionParameterNames
 {
-	// Token: 0x0601D19C RID: 119196 RVA: 0x0081CC08 File Offset: 0x0081AE08
+	// Token: 0x0601AEA4 RID: 110244 RVA: 0x00843F08 File Offset: 0x00842108
 	public EffectTriggerActionParameterNames(IReadOnlyList<FName> trigger, IReadOnlyList<FName> duration, IReadOnlyList<FName> attackRadius, IReadOnlyList<FName> attackMagnitude, IReadOnlyList<FName> actorLocation, IReadOnlyList<FName> curveFloat, IReadOnlyList<FName> elapsedTime, IReadOnlyList<FName> textureHeight)
 	{
 		this.Trigger = trigger;
@@ -21,27 +21,27 @@ public class EffectTriggerActionParameterNames
 		this.TextureHeight = textureHeight;
 	}
 
-	// Token: 0x0400E517 RID: 58647
+	// Token: 0x0400E9CF RID: 59855
 	public readonly IReadOnlyList<FName> Trigger;
 
-	// Token: 0x0400E518 RID: 58648
+	// Token: 0x0400E9D0 RID: 59856
 	public readonly IReadOnlyList<FName> Duration;
 
-	// Token: 0x0400E519 RID: 58649
+	// Token: 0x0400E9D1 RID: 59857
 	public readonly IReadOnlyList<FName> AttackRadius;
 
-	// Token: 0x0400E51A RID: 58650
+	// Token: 0x0400E9D2 RID: 59858
 	public readonly IReadOnlyList<FName> AttackMagnitude;
 
-	// Token: 0x0400E51B RID: 58651
+	// Token: 0x0400E9D3 RID: 59859
 	public readonly IReadOnlyList<FName> ActorLocation;
 
-	// Token: 0x0400E51C RID: 58652
+	// Token: 0x0400E9D4 RID: 59860
 	public readonly IReadOnlyList<FName> CurveFloat;
 
-	// Token: 0x0400E51D RID: 58653
+	// Token: 0x0400E9D5 RID: 59861
 	public readonly IReadOnlyList<FName> ElapsedTime;
 
-	// Token: 0x0400E51E RID: 58654
+	// Token: 0x0400E9D6 RID: 59862
 	public readonly IReadOnlyList<FName> TextureHeight;
 }

@@ -8,12 +8,12 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002FBB RID: 12219
+// Token: 0x0200250F RID: 9487
 [NullableContext(1)]
 [Nullable(0)]
 public class GameplayCueEffect : GameplayCueMagnitude
 {
-	// Token: 0x06019E71 RID: 106097 RVA: 0x006C56F4 File Offset: 0x006C38F4
+	// Token: 0x06017783 RID: 96131 RVA: 0x006EBFB8 File Offset: 0x006EA1B8
 	protected unsafe override void OnInit()
 	{
 		base.OnInit();
@@ -44,13 +44,13 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		this.IsSeekNeedProcess = false;
 	}
 
-	// Token: 0x06019E72 RID: 106098 RVA: 0x006C589A File Offset: 0x006C3A9A
+	// Token: 0x06017784 RID: 96132 RVA: 0x006EC15E File Offset: 0x006EA35E
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
 	}
 
-	// Token: 0x06019E73 RID: 106099 RVA: 0x006C58A4 File Offset: 0x006C3AA4
+	// Token: 0x06017785 RID: 96133 RVA: 0x006EC168 File Offset: 0x006EA368
 	protected override void OnCreate()
 	{
 		this.SetTargetMeshAndSocket();
@@ -80,7 +80,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		base.OnCreate();
 	}
 
-	// Token: 0x06019E74 RID: 106100 RVA: 0x006C594C File Offset: 0x006C3B4C
+	// Token: 0x06017786 RID: 96134 RVA: 0x006EC210 File Offset: 0x006EA410
 	protected override void OnDestroy()
 	{
 		base.OnDestroy();
@@ -118,7 +118,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		}
 	}
 
-	// Token: 0x06019E75 RID: 106101 RVA: 0x006C5A72 File Offset: 0x006C3C72
+	// Token: 0x06017787 RID: 96135 RVA: 0x006EC336 File Offset: 0x006EA536
 	protected override void OnSetMagnitude(float normalizedValue)
 	{
 		if (this.IsSeekNeedProcess)
@@ -129,21 +129,21 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		EffectSystem.Instance.HandleSeekToTime(this.EffectViewHandle, normalizedValue, true, false);
 	}
 
-	// Token: 0x06019E76 RID: 106102 RVA: 0x006C5AA8 File Offset: 0x006C3CA8
+	// Token: 0x06017788 RID: 96136 RVA: 0x006EC36C File Offset: 0x006EA56C
 	public override void OnChangeRole(EntityHandle newEntityHandle)
 	{
 		base.OnChangeRole(newEntityHandle);
 		this.RefreshEffectStatus(true);
 	}
 
-	// Token: 0x06019E77 RID: 106103 RVA: 0x006C5AB8 File Offset: 0x006C3CB8
+	// Token: 0x06017789 RID: 96137 RVA: 0x006EC37C File Offset: 0x006EA57C
 	public void SyncMagnitude(GameplayCueEffect cueRef)
 	{
 		float passTime = EffectSystem.Instance.GetPassTime(cueRef.EffectViewHandle);
 		EffectSystem.Instance.HandleSeekToTime(this.EffectViewHandle, passTime, true, false);
 	}
 
-	// Token: 0x06019E78 RID: 106104 RVA: 0x006C5AEA File Offset: 0x006C3CEA
+	// Token: 0x0601778A RID: 96138 RVA: 0x006EC3AE File Offset: 0x006EA5AE
 	protected virtual void RefreshEffectStatus(bool onChangeRole)
 	{
 		this.SetTargetMeshAndSocket();
@@ -151,7 +151,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		EffectSystem.Instance.AttachSkeletalMesh(this.EffectViewHandle, this.CreateEffectContext());
 	}
 
-	// Token: 0x06019E79 RID: 106105 RVA: 0x006C5B10 File Offset: 0x006C3D10
+	// Token: 0x0601778B RID: 96139 RVA: 0x006EC3D4 File Offset: 0x006EA5D4
 	protected virtual void AttachEffect(bool onChangeRole = false)
 	{
 		OneOf<KuroEffectActorHandle, AActor> effectActor = EffectSystem.Instance.GetEffectActor(this.EffectViewHandle);
@@ -182,7 +182,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		}
 	}
 
-	// Token: 0x06019E7A RID: 106106 RVA: 0x006C5C08 File Offset: 0x006C3E08
+	// Token: 0x0601778C RID: 96140 RVA: 0x006EC4CC File Offset: 0x006EA6CC
 	protected unsafe virtual void SetTargetMeshAndSocket()
 	{
 		if (this.CueConfig.Comp == 2)
@@ -280,7 +280,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		}
 	}
 
-	// Token: 0x06019E7B RID: 106107 RVA: 0x006C5E90 File Offset: 0x006C4090
+	// Token: 0x0601778D RID: 96141 RVA: 0x006EC754 File Offset: 0x006EA954
 	public override void OnGameplayCueEffectOverride(IGameplayCueEffectOverride @override)
 	{
 		if (@override.SocketName != null)
@@ -295,7 +295,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		this.AttachEffect(false);
 	}
 
-	// Token: 0x06019E7C RID: 106108 RVA: 0x006C5F04 File Offset: 0x006C4104
+	// Token: 0x0601778E RID: 96142 RVA: 0x006EC7C8 File Offset: 0x006EA9C8
 	private void ApplyRelativeTransformOverride(FVector? position, FVector? rotation, FVector? scale)
 	{
 		if (this.RelativeTransform == null)
@@ -317,7 +317,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		}
 	}
 
-	// Token: 0x06019E7D RID: 106109 RVA: 0x006C5FE8 File Offset: 0x006C41E8
+	// Token: 0x0601778F RID: 96143 RVA: 0x006EC8AC File Offset: 0x006EAAAC
 	public void SetSocketAndReattach(string socketName)
 	{
 		if (this.TargetMesh == null)
@@ -336,7 +336,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		this.AttachEffect(false);
 	}
 
-	// Token: 0x06019E7E RID: 106110 RVA: 0x006C6048 File Offset: 0x006C4248
+	// Token: 0x06017790 RID: 96144 RVA: 0x006EC90C File Offset: 0x006EAB0C
 	protected virtual SkeletalMeshEffectContext CreateEffectContext()
 	{
 		return new SkeletalMeshEffectContext(null, null, false)
@@ -346,7 +346,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		};
 	}
 
-	// Token: 0x06019E7F RID: 106111 RVA: 0x006C6088 File Offset: 0x006C4288
+	// Token: 0x06017791 RID: 96145 RVA: 0x006EC94C File Offset: 0x006EAB4C
 	private void ListenForeverTimeScale()
 	{
 		WorldEntity entity = this.EntityHandle.Entity;
@@ -361,7 +361,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		}
 	}
 
-	// Token: 0x06019E80 RID: 106112 RVA: 0x006C60CC File Offset: 0x006C42CC
+	// Token: 0x06017792 RID: 96146 RVA: 0x006EC990 File Offset: 0x006EAB90
 	[NullableContext(2)]
 	private USkeletalMeshComponent GetAttachedComponent()
 	{
@@ -390,7 +390,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		return null;
 	}
 
-	// Token: 0x06019E81 RID: 106113 RVA: 0x006C61B4 File Offset: 0x006C43B4
+	// Token: 0x06017793 RID: 96147 RVA: 0x006ECA80 File Offset: 0x006EAC80
 	[NullableContext(2)]
 	private CharacterWeaponComponent GetWeaponComponent()
 	{
@@ -407,7 +407,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		return characterWeaponComponent;
 	}
 
-	// Token: 0x06019E82 RID: 106114 RVA: 0x006C6204 File Offset: 0x006C4404
+	// Token: 0x06017794 RID: 96148 RVA: 0x006ECAD0 File Offset: 0x006EACD0
 	[NullableContext(2)]
 	private CharacterWeapon GetCharacterWeapon()
 	{
@@ -437,7 +437,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		return weaponMesh.CharacterWeapons[num];
 	}
 
-	// Token: 0x06019E83 RID: 106115 RVA: 0x006C6284 File Offset: 0x006C4484
+	// Token: 0x06017795 RID: 96149 RVA: 0x006ECB50 File Offset: 0x006EAD50
 	private void ScaleEffect([Nullable(new byte[]
 	{
 		0,
@@ -483,13 +483,13 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		effectActor.D_SetActorScale3D(fvectorDouble);
 	}
 
-	// Token: 0x06019E84 RID: 106116 RVA: 0x006C63A8 File Offset: 0x006C45A8
+	// Token: 0x06017796 RID: 96150 RVA: 0x006ECC74 File Offset: 0x006EAE74
 	private bool IsValidEffect()
 	{
 		return EffectSystem.Instance.IsValid(this.EffectViewHandle) && EffectSystem.Instance.GetEffectActor(this.EffectViewHandle).IsValid();
 	}
 
-	// Token: 0x06019E85 RID: 106117 RVA: 0x006C63D8 File Offset: 0x006C45D8
+	// Token: 0x06017797 RID: 96151 RVA: 0x006ECCA4 File Offset: 0x006EAEA4
 	private void AddFinishCallback()
 	{
 		if (this.EndCallback != null && !this.IsInstant)
@@ -506,7 +506,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		}
 	}
 
-	// Token: 0x06019E86 RID: 106118 RVA: 0x006C6408 File Offset: 0x006C4608
+	// Token: 0x06017798 RID: 96152 RVA: 0x006ECCD4 File Offset: 0x006EAED4
 	private ETimeScaleType GetEffectTimeScaleType()
 	{
 		if (this.BuffHandleId <= 0)
@@ -539,7 +539,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		return ETimeScaleType.ImmuneForeverTimeScale;
 	}
 
-	// Token: 0x06019E87 RID: 106119 RVA: 0x006C6490 File Offset: 0x006C4690
+	// Token: 0x06017799 RID: 96153 RVA: 0x006ECD5C File Offset: 0x006EAF5C
 	private void AddWeaponRefreshListener()
 	{
 		if (this.IsInstant)
@@ -557,7 +557,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		}
 	}
 
-	// Token: 0x06019E88 RID: 106120 RVA: 0x006C6500 File Offset: 0x006C4700
+	// Token: 0x0601779A RID: 96154 RVA: 0x006ECDCC File Offset: 0x006EAFCC
 	private void RemoveWeaponRefreshListener()
 	{
 		WorldEntity entity = this.EntityHandle.Entity;
@@ -571,7 +571,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		}
 	}
 
-	// Token: 0x06019E89 RID: 106121 RVA: 0x006C6558 File Offset: 0x006C4758
+	// Token: 0x0601779B RID: 96155 RVA: 0x006ECE24 File Offset: 0x006EB024
 	private unsafe void OnCharacterWeaponLoaded(string weaponCaseName)
 	{
 		USkeletalMeshComponent targetMesh = this.TargetMesh;
@@ -602,7 +602,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		this.RemoveWeaponRefreshListener();
 	}
 
-	// Token: 0x06019E8A RID: 106122 RVA: 0x006C6684 File Offset: 0x006C4884
+	// Token: 0x0601779C RID: 96156 RVA: 0x006ECF50 File Offset: 0x006EB150
 	private void AddMorphTypeChangedListener()
 	{
 		if (this.IsInstant)
@@ -620,7 +620,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		}
 	}
 
-	// Token: 0x06019E8B RID: 106123 RVA: 0x006C66F4 File Offset: 0x006C48F4
+	// Token: 0x0601779D RID: 96157 RVA: 0x006ECFC0 File Offset: 0x006EB1C0
 	private void RemoveMorphTypeChangedListener()
 	{
 		WorldEntity entity = this.EntityHandle.Entity;
@@ -634,7 +634,7 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		}
 	}
 
-	// Token: 0x06019E8C RID: 106124 RVA: 0x006C674C File Offset: 0x006C494C
+	// Token: 0x0601779E RID: 96158 RVA: 0x006ED018 File Offset: 0x006EB218
 	private void OnCharacterMorphTypeChanged(Entity entity, EMorphType morphType, EMorphType oldMorphType)
 	{
 		OneOf<KuroEffectActorHandle, AActor> effectActor = EffectSystem.Instance.GetEffectActor(this.EffectViewHandle);
@@ -644,54 +644,54 @@ public class GameplayCueEffect : GameplayCueMagnitude
 		}
 	}
 
-	// Token: 0x0400C3F1 RID: 50161
+	// Token: 0x0400C79A RID: 51098
 	private const float RATE = 50f;
 
-	// Token: 0x0400C3F2 RID: 50162
+	// Token: 0x0400C79B RID: 51099
 	private const float VOLUME_MIN = 5f;
 
-	// Token: 0x0400C3F3 RID: 50163
+	// Token: 0x0400C79C RID: 51100
 	private const float VOLUME_MAX = 60f;
 
-	// Token: 0x0400C3F4 RID: 50164
+	// Token: 0x0400C79D RID: 51101
 	public int EffectViewHandle;
 
-	// Token: 0x0400C3F5 RID: 50165
+	// Token: 0x0400C79E RID: 51102
 	[Nullable(2)]
 	protected USkeletalMeshComponent TargetMesh;
 
-	// Token: 0x0400C3F6 RID: 50166
+	// Token: 0x0400C79F RID: 51103
 	protected FName TargetSocket;
 
-	// Token: 0x0400C3F7 RID: 50167
+	// Token: 0x0400C7A0 RID: 51104
 	[Nullable(2)]
 	private CharacterWeapon TargetCharacterWeapon;
 
-	// Token: 0x0400C3F8 RID: 50168
+	// Token: 0x0400C7A1 RID: 51105
 	[Nullable(2)]
 	protected Transform RelativeTransform;
 
-	// Token: 0x0400C3F9 RID: 50169
+	// Token: 0x0400C7A2 RID: 51106
 	protected bool IsSeekNeedProcess;
 
-	// Token: 0x0400C3FA RID: 50170
+	// Token: 0x0400C7A3 RID: 51107
 	protected readonly Transform SocketTransform = Transform.Create();
 
-	// Token: 0x0400C3FB RID: 50171
+	// Token: 0x0400C7A4 RID: 51108
 	protected readonly Transform TargetTransform = Transform.Create();
 
-	// Token: 0x0400C3FC RID: 50172
+	// Token: 0x0400C7A5 RID: 51109
 	protected ETimeScaleType EffectTimeScaleType;
 
-	// Token: 0x0400C3FD RID: 50173
+	// Token: 0x0400C7A6 RID: 51110
 	protected bool IsInitScaleEffect;
 
-	// Token: 0x0400C3FE RID: 50174
+	// Token: 0x0400C7A7 RID: 51111
 	protected FVectorDouble OriginScale;
 
-	// Token: 0x0400C3FF RID: 50175
+	// Token: 0x0400C7A8 RID: 51112
 	protected bool IsListenScaleChanged;
 
-	// Token: 0x0400C400 RID: 50176
+	// Token: 0x0400C7A9 RID: 51113
 	public bool IsForceRecycle;
 }

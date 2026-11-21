@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E86 RID: 20102
+	// Token: 0x02005397 RID: 21399
 	public struct IAirPassageComponent : IFlatbufferObject
 	{
-		// Token: 0x1700900D RID: 36877
-		// (get) Token: 0x0601F9BC RID: 129468 RVA: 0x00467112 File Offset: 0x00465312
+		// Token: 0x17009746 RID: 38726
+		// (get) Token: 0x06021607 RID: 136711 RVA: 0x0049B12A File Offset: 0x0049932A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F9BD RID: 129469 RVA: 0x0046711F File Offset: 0x0046531F
+		// Token: 0x06021608 RID: 136712 RVA: 0x0049B137 File Offset: 0x00499337
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F9BE RID: 129470 RVA: 0x00467128 File Offset: 0x00465328
+		// Token: 0x06021609 RID: 136713 RVA: 0x0049B140 File Offset: 0x00499340
 		public static IAirPassageComponent GetRootAsIAirPassageComponent(ByteBuffer _bb)
 		{
 			return IAirPassageComponent.GetRootAsIAirPassageComponent(_bb, default(IAirPassageComponent));
 		}
 
-		// Token: 0x0601F9BF RID: 129471 RVA: 0x00467144 File Offset: 0x00465344
+		// Token: 0x0602160A RID: 136714 RVA: 0x0049B15C File Offset: 0x0049935C
 		public static IAirPassageComponent GetRootAsIAirPassageComponent(ByteBuffer _bb, IAirPassageComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F9C0 RID: 129472 RVA: 0x00467161 File Offset: 0x00465361
+		// Token: 0x0602160B RID: 136715 RVA: 0x0049B179 File Offset: 0x00499379
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F9C1 RID: 129473 RVA: 0x00467170 File Offset: 0x00465370
+		// Token: 0x0602160C RID: 136716 RVA: 0x0049B188 File Offset: 0x00499388
 		public IAirPassageComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700900E RID: 36878
-		// (get) Token: 0x0601F9C2 RID: 129474 RVA: 0x00467180 File Offset: 0x00465380
+		// Token: 0x17009747 RID: 38727
+		// (get) Token: 0x0602160D RID: 136717 RVA: 0x0049B198 File Offset: 0x00499398
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700900F RID: 36879
-		// (get) Token: 0x0601F9C3 RID: 129475 RVA: 0x004671C0 File Offset: 0x004653C0
+		// Token: 0x17009748 RID: 38728
+		// (get) Token: 0x0602160E RID: 136718 RVA: 0x0049B1D8 File Offset: 0x004993D8
 		public byte NullMask
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F9C4 RID: 129476 RVA: 0x004671FC File Offset: 0x004653FC
+		// Token: 0x0602160F RID: 136719 RVA: 0x0049B214 File Offset: 0x00499414
 		public static Offset<IAirPassageComponent> CreateIAirPassageComponent(FlatBufferBuilder builder, bool Disabled = false, byte NullMask = 0)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAirPassageComponent.EndIAirPassageComponent(builder);
 		}
 
-		// Token: 0x0601F9C5 RID: 129477 RVA: 0x00467219 File Offset: 0x00465419
+		// Token: 0x06021610 RID: 136720 RVA: 0x0049B231 File Offset: 0x00499431
 		public static void StartIAirPassageComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601F9C6 RID: 129478 RVA: 0x00467222 File Offset: 0x00465422
+		// Token: 0x06021611 RID: 136721 RVA: 0x0049B23A File Offset: 0x0049943A
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x0601F9C7 RID: 129479 RVA: 0x0046722D File Offset: 0x0046542D
+		// Token: 0x06021612 RID: 136722 RVA: 0x0049B245 File Offset: 0x00499445
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(1, nullMask, 0);
 		}
 
-		// Token: 0x0601F9C8 RID: 129480 RVA: 0x00467238 File Offset: 0x00465438
+		// Token: 0x06021613 RID: 136723 RVA: 0x0049B250 File Offset: 0x00499450
 		public static Offset<IAirPassageComponent> EndIAirPassageComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IAirPassageComponent>(builder.EndTable());
 		}
 
-		// Token: 0x0601F9C9 RID: 129481 RVA: 0x00467248 File Offset: 0x00465448
+		// Token: 0x06021614 RID: 136724 RVA: 0x0049B260 File Offset: 0x00499460
 		public IAirPassageComponentT UnPack()
 		{
 			IAirPassageComponentT airPassageComponentT = new IAirPassageComponentT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return airPassageComponentT;
 		}
 
-		// Token: 0x0601F9CA RID: 129482 RVA: 0x00467263 File Offset: 0x00465463
+		// Token: 0x06021615 RID: 136725 RVA: 0x0049B27B File Offset: 0x0049947B
 		public void UnPackTo(IAirPassageComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601F9CB RID: 129483 RVA: 0x00467280 File Offset: 0x00465480
+		// Token: 0x06021616 RID: 136726 RVA: 0x0049B298 File Offset: 0x00499498
 		public static Offset<IAirPassageComponent> Pack(FlatBufferBuilder builder, IAirPassageComponentT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAirPassageComponent.CreateIAirPassageComponent(builder, _o.Disabled, _o.NullMask);
 		}
 
-		// Token: 0x0400DC4A RID: 56394
+		// Token: 0x0400E7C4 RID: 59332
 		private Table __p;
 	}
 }

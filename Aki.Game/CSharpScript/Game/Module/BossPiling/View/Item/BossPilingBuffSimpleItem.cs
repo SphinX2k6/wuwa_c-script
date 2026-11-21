@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View.Item
 {
-	// Token: 0x02005C23 RID: 23587
+	// Token: 0x02004C03 RID: 19459
 	public class BossPilingBuffSimpleItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603B96E RID: 244078 RVA: 0x00E366F0 File Offset: 0x00E348F0
+		// Token: 0x060308B9 RID: 198841 RVA: 0x00D86A4C File Offset: 0x00D84C4C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B96F RID: 244079 RVA: 0x00E36863 File Offset: 0x00E34A63
+		// Token: 0x060308BA RID: 198842 RVA: 0x00D86BBF File Offset: 0x00D84DBF
 		protected override void OnStart()
 		{
 			UUISprite sprite = base.GetSprite(4);
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			extendToggle.SetSelfInteractive(false);
 		}
 
-		// Token: 0x0603B970 RID: 244080 RVA: 0x00E368A0 File Offset: 0x00E34AA0
+		// Token: 0x060308BB RID: 198843 RVA: 0x00D86BFC File Offset: 0x00D84DFC
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			BossPilingBuff value = BossPilingConfig.Instance.GetBuffInfo(data).Value;
@@ -69,28 +69,28 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			base.SetTextureByPath(value.Icon, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x0200BE0D RID: 48653
+		// Token: 0x0200A815 RID: 43029
 		private enum EChildType
 		{
-			// Token: 0x040394EC RID: 234732
+			// Token: 0x04033EAF RID: 212655
 			QualitySprite,
-			// Token: 0x040394ED RID: 234733
+			// Token: 0x04033EB0 RID: 212656
 			ItemTexture,
-			// Token: 0x040394EE RID: 234734
+			// Token: 0x04033EB1 RID: 212657
 			BottomTextItem,
-			// Token: 0x040394EF RID: 234735
+			// Token: 0x04033EB2 RID: 212658
 			BottomText,
-			// Token: 0x040394F0 RID: 234736
+			// Token: 0x04033EB3 RID: 212659
 			BottomTextBgSprite,
-			// Token: 0x040394F1 RID: 234737
+			// Token: 0x04033EB4 RID: 212660
 			BottomAdditionItem,
-			// Token: 0x040394F2 RID: 234738
+			// Token: 0x04033EB5 RID: 212661
 			TopAdditionItem,
-			// Token: 0x040394F3 RID: 234739
+			// Token: 0x04033EB6 RID: 212662
 			ExtendToggle,
-			// Token: 0x040394F4 RID: 234740
+			// Token: 0x04033EB7 RID: 212663
 			SkinQualitySprite,
-			// Token: 0x040394F5 RID: 234741
+			// Token: 0x04033EB8 RID: 212664
 			UnderTextAdditionItem
 		}
 	}

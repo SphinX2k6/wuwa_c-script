@@ -2,42 +2,42 @@
 
 namespace CSharpScript.Game.Module.MingSu.View
 {
-	// Token: 0x020053DE RID: 21470
+	// Token: 0x020043C1 RID: 17345
 	internal enum EChildType
 	{
-		// Token: 0x0401CF51 RID: 118609
+		// Token: 0x040179E9 RID: 96745
 		LeftButton,
-		// Token: 0x0401CF52 RID: 118610
+		// Token: 0x040179EA RID: 96746
 		RightButton,
-		// Token: 0x0401CF53 RID: 118611
+		// Token: 0x040179EB RID: 96747
 		ProgressBarSprite,
-		// Token: 0x0401CF54 RID: 118612
+		// Token: 0x040179EC RID: 96748
 		LevelText,
-		// Token: 0x0401CF55 RID: 118613
+		// Token: 0x040179ED RID: 96749
 		NeedCountText,
-		// Token: 0x0401CF56 RID: 118614
+		// Token: 0x040179EE RID: 96750
 		ContentItem,
-		// Token: 0x0401CF57 RID: 118615
+		// Token: 0x040179EF RID: 96751
 		TipsText,
-		// Token: 0x0401CF58 RID: 118616
+		// Token: 0x040179F0 RID: 96752
 		ConfirmButton,
-		// Token: 0x0401CF59 RID: 118617
+		// Token: 0x040179F1 RID: 96753
 		ConfirmButtonText,
-		// Token: 0x0401CF5A RID: 118618
+		// Token: 0x040179F2 RID: 96754
 		ConfirmButtonItem,
-		// Token: 0x0401CF5B RID: 118619
+		// Token: 0x040179F3 RID: 96755
 		ItemCountText,
-		// Token: 0x0401CF5C RID: 118620
+		// Token: 0x040179F4 RID: 96756
 		ItemButton,
-		// Token: 0x0401CF5D RID: 118621
+		// Token: 0x040179F5 RID: 96757
 		CloseButton,
-		// Token: 0x0401CF5E RID: 118622
+		// Token: 0x040179F6 RID: 96758
 		AllDoneItem,
-		// Token: 0x0401CF5F RID: 118623
+		// Token: 0x040179F7 RID: 96759
 		TextureCostItemIcon,
-		// Token: 0x0401CF60 RID: 118624
+		// Token: 0x040179F8 RID: 96760
 		TextureCostItemIcon2,
-		// Token: 0x0401CF61 RID: 118625
+		// Token: 0x040179F9 RID: 96761
 		TxtTitle
 	}
 }

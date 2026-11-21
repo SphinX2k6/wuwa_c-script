@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200520D RID: 21005
+	// Token: 0x02005775 RID: 22389
 	public struct IExploreSkillStatueInteractPoint : IFlatbufferObject
 	{
-		// Token: 0x170099D6 RID: 39382
-		// (get) Token: 0x06022206 RID: 139782 RVA: 0x004BC3D8 File Offset: 0x004BA5D8
+		// Token: 0x1700A1D2 RID: 41426
+		// (get) Token: 0x0602419C RID: 147868 RVA: 0x004F6E9C File Offset: 0x004F509C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022207 RID: 139783 RVA: 0x004BC3E5 File Offset: 0x004BA5E5
+		// Token: 0x0602419D RID: 147869 RVA: 0x004F6EA9 File Offset: 0x004F50A9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022208 RID: 139784 RVA: 0x004BC3EC File Offset: 0x004BA5EC
+		// Token: 0x0602419E RID: 147870 RVA: 0x004F6EB0 File Offset: 0x004F50B0
 		public static IExploreSkillStatueInteractPoint GetRootAsIExploreSkillStatueInteractPoint(ByteBuffer _bb)
 		{
 			return IExploreSkillStatueInteractPoint.GetRootAsIExploreSkillStatueInteractPoint(_bb, default(IExploreSkillStatueInteractPoint));
 		}
 
-		// Token: 0x06022209 RID: 139785 RVA: 0x004BC408 File Offset: 0x004BA608
+		// Token: 0x0602419F RID: 147871 RVA: 0x004F6ECC File Offset: 0x004F50CC
 		public static IExploreSkillStatueInteractPoint GetRootAsIExploreSkillStatueInteractPoint(ByteBuffer _bb, IExploreSkillStatueInteractPoint obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602220A RID: 139786 RVA: 0x004BC425 File Offset: 0x004BA625
+		// Token: 0x060241A0 RID: 147872 RVA: 0x004F6EE9 File Offset: 0x004F50E9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602220B RID: 139787 RVA: 0x004BC434 File Offset: 0x004BA634
+		// Token: 0x060241A1 RID: 147873 RVA: 0x004F6EF8 File Offset: 0x004F50F8
 		public IExploreSkillStatueInteractPoint __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170099D7 RID: 39383
-		// (get) Token: 0x0602220C RID: 139788 RVA: 0x004BC444 File Offset: 0x004BA644
+		// Token: 0x1700A1D3 RID: 41427
+		// (get) Token: 0x060241A2 RID: 147874 RVA: 0x004F6F08 File Offset: 0x004F5108
 		public EExploreSkillInteractType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170099D8 RID: 39384
-		// (get) Token: 0x0602220D RID: 139789 RVA: 0x004BC480 File Offset: 0x004BA680
+		// Token: 0x1700A1D4 RID: 41428
+		// (get) Token: 0x060241A3 RID: 147875 RVA: 0x004F6F44 File Offset: 0x004F5144
 		public float PullTime
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602220E RID: 139790 RVA: 0x004BC4C0 File Offset: 0x004BA6C0
+		// Token: 0x060241A4 RID: 147876 RVA: 0x004F6F84 File Offset: 0x004F5184
 		public string HangingPointList(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170099D9 RID: 39385
-		// (get) Token: 0x0602220F RID: 139791 RVA: 0x004BC4FC File Offset: 0x004BA6FC
+		// Token: 0x1700A1D5 RID: 41429
+		// (get) Token: 0x060241A5 RID: 147877 RVA: 0x004F6FC0 File Offset: 0x004F51C0
 		public int HangingPointListLength
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022210 RID: 139792 RVA: 0x004BC527 File Offset: 0x004BA727
+		// Token: 0x060241A6 RID: 147878 RVA: 0x004F6FEB File Offset: 0x004F51EB
 		public static Offset<IExploreSkillStatueInteractPoint> CreateIExploreSkillStatueInteractPoint(FlatBufferBuilder builder, EExploreSkillInteractType Type = EExploreSkillInteractType.PullGiant, float PullTime = 0f, VectorOffset HangingPointListOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -114,31 +114,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IExploreSkillStatueInteractPoint.EndIExploreSkillStatueInteractPoint(builder);
 		}
 
-		// Token: 0x06022211 RID: 139793 RVA: 0x004BC54B File Offset: 0x004BA74B
+		// Token: 0x060241A7 RID: 147879 RVA: 0x004F700F File Offset: 0x004F520F
 		public static void StartIExploreSkillStatueInteractPoint(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06022212 RID: 139794 RVA: 0x004BC554 File Offset: 0x004BA754
+		// Token: 0x060241A8 RID: 147880 RVA: 0x004F7018 File Offset: 0x004F5218
 		public static void AddType(FlatBufferBuilder builder, EExploreSkillInteractType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06022213 RID: 139795 RVA: 0x004BC55F File Offset: 0x004BA75F
+		// Token: 0x060241A9 RID: 147881 RVA: 0x004F7023 File Offset: 0x004F5223
 		public static void AddPullTime(FlatBufferBuilder builder, float pullTime)
 		{
 			builder.AddFloat(1, pullTime, 0.0);
 		}
 
-		// Token: 0x06022214 RID: 139796 RVA: 0x004BC572 File Offset: 0x004BA772
+		// Token: 0x060241AA RID: 147882 RVA: 0x004F7036 File Offset: 0x004F5236
 		public static void AddHangingPointList(FlatBufferBuilder builder, VectorOffset hangingPointListOffset)
 		{
 			builder.AddOffset(2, hangingPointListOffset.Value, 0);
 		}
 
-		// Token: 0x06022215 RID: 139797 RVA: 0x004BC584 File Offset: 0x004BA784
+		// Token: 0x060241AB RID: 147883 RVA: 0x004F7048 File Offset: 0x004F5248
 		public static VectorOffset CreateHangingPointListVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022216 RID: 139798 RVA: 0x004BC5C4 File Offset: 0x004BA7C4
+		// Token: 0x060241AC RID: 147884 RVA: 0x004F7088 File Offset: 0x004F5288
 		public static VectorOffset CreateHangingPointListVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022217 RID: 139799 RVA: 0x004BC5DE File Offset: 0x004BA7DE
+		// Token: 0x060241AD RID: 147885 RVA: 0x004F70A2 File Offset: 0x004F52A2
 		public static VectorOffset CreateHangingPointListVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022218 RID: 139800 RVA: 0x004BC5FC File Offset: 0x004BA7FC
+		// Token: 0x060241AE RID: 147886 RVA: 0x004F70C0 File Offset: 0x004F52C0
 		public static VectorOffset CreateHangingPointListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -173,19 +173,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022219 RID: 139801 RVA: 0x004BC615 File Offset: 0x004BA815
+		// Token: 0x060241AF RID: 147887 RVA: 0x004F70D9 File Offset: 0x004F52D9
 		public static void StartHangingPointListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602221A RID: 139802 RVA: 0x004BC620 File Offset: 0x004BA820
+		// Token: 0x060241B0 RID: 147888 RVA: 0x004F70E4 File Offset: 0x004F52E4
 		public static Offset<IExploreSkillStatueInteractPoint> EndIExploreSkillStatueInteractPoint(FlatBufferBuilder builder)
 		{
 			return new Offset<IExploreSkillStatueInteractPoint>(builder.EndTable());
 		}
 
-		// Token: 0x0602221B RID: 139803 RVA: 0x004BC630 File Offset: 0x004BA830
+		// Token: 0x060241B1 RID: 147889 RVA: 0x004F70F4 File Offset: 0x004F52F4
 		public IExploreSkillStatueInteractPointT UnPack()
 		{
 			IExploreSkillStatueInteractPointT exploreSkillStatueInteractPointT = new IExploreSkillStatueInteractPointT();
@@ -193,7 +193,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return exploreSkillStatueInteractPointT;
 		}
 
-		// Token: 0x0602221C RID: 139804 RVA: 0x004BC64C File Offset: 0x004BA84C
+		// Token: 0x060241B2 RID: 147890 RVA: 0x004F7110 File Offset: 0x004F5310
 		public void UnPackTo(IExploreSkillStatueInteractPointT _o)
 		{
 			_o.Type = this.Type;
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602221D RID: 139805 RVA: 0x004BC6A0 File Offset: 0x004BA8A0
+		// Token: 0x060241B3 RID: 147891 RVA: 0x004F7164 File Offset: 0x004F5364
 		public static Offset<IExploreSkillStatueInteractPoint> Pack(FlatBufferBuilder builder, IExploreSkillStatueInteractPointT _o)
 		{
 			if (_o == null)
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IExploreSkillStatueInteractPoint.CreateIExploreSkillStatueInteractPoint(builder, _o.Type, _o.PullTime, hangingPointListOffset);
 		}
 
-		// Token: 0x0400E341 RID: 58177
+		// Token: 0x0400EF47 RID: 61255
 		private Table __p;
 	}
 }

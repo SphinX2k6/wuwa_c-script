@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 {
-	// Token: 0x020062D5 RID: 25301
+	// Token: 0x02005253 RID: 21075
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 	})]
 	public class PinballRankItem : GridProxyAbstract<PinballRankData>
 	{
-		// Token: 0x0603FAB7 RID: 260791 RVA: 0x00F67A24 File Offset: 0x00F65C24
+		// Token: 0x06034778 RID: 214904 RVA: 0x00EAE980 File Offset: 0x00EACB80
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -44,13 +44,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FAB8 RID: 260792 RVA: 0x00F67B75 File Offset: 0x00F65D75
+		// Token: 0x06034779 RID: 214905 RVA: 0x00EAEAD1 File Offset: 0x00EACCD1
 		protected override void OnStart()
 		{
 			this.FormationLayout = new GenericLayout<PinballRankRoleHeadItem, PinballRankRoleHeadData>(base.GetHorizontalLayout(6), new Func<PinballRankRoleHeadItem>(this.CreateRoleHeadItem), base.GetItem(8).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x0603FAB9 RID: 260793 RVA: 0x00F67BA8 File Offset: 0x00F65DA8
+		// Token: 0x0603477A RID: 214906 RVA: 0x00EAEB04 File Offset: 0x00EACD04
 		public override void Refresh(PinballRankData data, bool isSelected, int gridIndex)
 		{
 			int rank = gridIndex + 1;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.RefreshFormationList(data);
 		}
 
-		// Token: 0x0603FABA RID: 260794 RVA: 0x00F67C00 File Offset: 0x00F65E00
+		// Token: 0x0603477B RID: 214907 RVA: 0x00EAEB5C File Offset: 0x00EACD5C
 		private void RefreshRankDisplay(int rank)
 		{
 			UUITexture texture = base.GetTexture(0);
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			}
 		}
 
-		// Token: 0x0603FABB RID: 260795 RVA: 0x00F67CC0 File Offset: 0x00F65EC0
+		// Token: 0x0603477C RID: 214908 RVA: 0x00EAEC1C File Offset: 0x00EACE1C
 		[NullableContext(2)]
 		private string GetTopRankIconPath(int rank)
 		{
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			return null;
 		}
 
-		// Token: 0x0603FABC RID: 260796 RVA: 0x00F67D00 File Offset: 0x00F65F00
+		// Token: 0x0603477D RID: 214909 RVA: 0x00EAEC5C File Offset: 0x00EACE5C
 		private void RefreshPlayerInfo(PinballRankData data)
 		{
 			if (data.HasData)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			}
 		}
 
-		// Token: 0x0603FABD RID: 260797 RVA: 0x00F67E38 File Offset: 0x00F66038
+		// Token: 0x0603477E RID: 214910 RVA: 0x00EAED94 File Offset: 0x00EACF94
 		private void RefreshFormationList(PinballRankData data)
 		{
 			List<ValueTuple<int, int>> formation = data.Formation;
@@ -299,13 +299,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			}
 		}
 
-		// Token: 0x0603FABE RID: 260798 RVA: 0x00F67F58 File Offset: 0x00F66158
+		// Token: 0x0603477F RID: 214911 RVA: 0x00EAEEB4 File Offset: 0x00EAD0B4
 		private PinballRankRoleHeadItem CreateRoleHeadItem()
 		{
 			return new PinballRankRoleHeadItem();
 		}
 
-		// Token: 0x04021439 RID: 136249
+		// Token: 0x0401BD68 RID: 114024
 		[Nullable(new byte[]
 		{
 			2,
@@ -314,30 +314,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 		})]
 		private GenericLayout<PinballRankRoleHeadItem, PinballRankRoleHeadData> FormationLayout;
 
-		// Token: 0x0402143A RID: 136250
+		// Token: 0x0401BD69 RID: 114025
 		private const int TOP_RANK_COUNT = 3;
 
-		// Token: 0x0200C4C2 RID: 50370
+		// Token: 0x0200AEA9 RID: 44713
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403B5F3 RID: 243187
+			// Token: 0x04035F55 RID: 221013
 			RankIcon,
-			// Token: 0x0403B5F4 RID: 243188
+			// Token: 0x04035F56 RID: 221014
 			TxtNum,
-			// Token: 0x0403B5F5 RID: 243189
+			// Token: 0x04035F57 RID: 221015
 			TxtNone,
-			// Token: 0x0403B5F6 RID: 243190
+			// Token: 0x04035F58 RID: 221016
 			TxtName,
-			// Token: 0x0403B5F7 RID: 243191
+			// Token: 0x04035F59 RID: 221017
 			TxtLevel,
-			// Token: 0x0403B5F8 RID: 243192
+			// Token: 0x04035F5A RID: 221018
 			TxtTime,
-			// Token: 0x0403B5F9 RID: 243193
+			// Token: 0x04035F5B RID: 221019
 			PhiPlaylist,
-			// Token: 0x0403B5FA RID: 243194
+			// Token: 0x04035F5C RID: 221020
 			Empty,
-			// Token: 0x0403B5FB RID: 243195
+			// Token: 0x04035F5D RID: 221021
 			RankRoleHead
 		}
 	}

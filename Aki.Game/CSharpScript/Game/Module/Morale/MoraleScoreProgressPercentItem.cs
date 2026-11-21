@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053B8 RID: 21432
+	// Token: 0x0200439B RID: 17307
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Morale
 	})]
 	public class MoraleScoreProgressPercentItem : GridProxyAbstract<MoraleProgressRewardData>
 	{
-		// Token: 0x06036C37 RID: 224311 RVA: 0x00CF6214 File Offset: 0x00CF4414
+		// Token: 0x0602BB7D RID: 179069 RVA: 0x00C452BC File Offset: 0x00C434BC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036C38 RID: 224312 RVA: 0x00CF6270 File Offset: 0x00CF4470
+		// Token: 0x0602BB7E RID: 179070 RVA: 0x00C45318 File Offset: 0x00C43518
 		public override void Refresh(MoraleProgressRewardData data, bool isSelected, int gridIndex)
 		{
 			this.ItemData = data;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Morale
 			sprite.SetFillAmount(stageProgressPercent);
 		}
 
-		// Token: 0x06036C39 RID: 224313 RVA: 0x00CF62B8 File Offset: 0x00CF44B8
+		// Token: 0x0602BB7F RID: 179071 RVA: 0x00C45360 File Offset: 0x00C43560
 		public void UpdatePercentHandle()
 		{
 			UUISprite sprite = base.GetSprite(1);
@@ -62,20 +62,20 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x0401CE76 RID: 118390
+		// Token: 0x0401790E RID: 96526
 		private MoraleProgressRewardData ItemData;
 
-		// Token: 0x0200B658 RID: 46680
+		// Token: 0x0200A090 RID: 41104
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040373E0 RID: 226272
+			// Token: 0x04031E35 RID: 204341
 			public const int ItemSelf = 0;
 
-			// Token: 0x040373E1 RID: 226273
+			// Token: 0x04031E36 RID: 204342
 			public const int SpritePercent = 1;
 
-			// Token: 0x040373E2 RID: 226274
+			// Token: 0x04031E37 RID: 204343
 			public const int SpriteHandle = 2;
 		}
 	}

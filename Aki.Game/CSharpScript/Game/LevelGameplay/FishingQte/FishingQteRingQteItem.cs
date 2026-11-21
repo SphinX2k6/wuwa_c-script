@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
@@ -10,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E46 RID: 28230
+	// Token: 0x02005FC7 RID: 24519
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingQteRingQteItem : UiPanelBase
 	{
-		// Token: 0x06044D02 RID: 281858 RVA: 0x010FB111 File Offset: 0x010F9311
+		// Token: 0x0603AE8F RID: 241295 RVA: 0x010A5695 File Offset: 0x010A3895
 		public FishingQteRingQteItem(FishingQteGameInfo GameInfo, FishingQteRingInfo RingInfo, [Nullable(2)] IFishingQteConfig RingConfig)
 		{
 			this.GameInfo = GameInfo;
@@ -23,7 +22,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.RingConfig = RingConfig;
 		}
 
-		// Token: 0x06044D03 RID: 281859 RVA: 0x010FB150 File Offset: 0x010F9350
+		// Token: 0x0603AE90 RID: 241296 RVA: 0x010A56D4 File Offset: 0x010A38D4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -35,14 +34,14 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06044D04 RID: 281860 RVA: 0x010FB198 File Offset: 0x010F9398
+		// Token: 0x0603AE91 RID: 241297 RVA: 0x010A571C File Offset: 0x010A391C
 		protected override void OnStart()
 		{
 			this.TextureRing = base.GetItem(0);
 			this.TextureRing.SetUIActive(false);
 		}
 
-		// Token: 0x06044D05 RID: 281861 RVA: 0x010FB1B3 File Offset: 0x010F93B3
+		// Token: 0x0603AE92 RID: 241298 RVA: 0x010A5737 File Offset: 0x010A3937
 		protected override void OnBeforeDestroy()
 		{
 			this.TextureRing = null;
@@ -51,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.CachedTexture.Clear();
 		}
 
-		// Token: 0x06044D06 RID: 281862 RVA: 0x010FB1E0 File Offset: 0x010F93E0
+		// Token: 0x0603AE93 RID: 241299 RVA: 0x010A5764 File Offset: 0x010A3964
 		private int GetAreaRandomSize(List<int> rangeConfig)
 		{
 			int result = 3;
@@ -62,13 +61,13 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return result;
 		}
 
-		// Token: 0x06044D07 RID: 281863 RVA: 0x010FB20E File Offset: 0x010F940E
+		// Token: 0x0603AE94 RID: 241300 RVA: 0x010A5792 File Offset: 0x010A3992
 		private int RandomRangeInt(int start, int end)
 		{
 			return Math.Min(end, (int)Math.Floor(MathUtils.Instance.GetRandomRange((double)start, (double)(end + 1))));
 		}
 
-		// Token: 0x06044D08 RID: 281864 RVA: 0x010FB22C File Offset: 0x010F942C
+		// Token: 0x0603AE95 RID: 241301 RVA: 0x010A57B0 File Offset: 0x010A39B0
 		public void ResetArea(int continuousIndex, EFishingAreaType areaType)
 		{
 			if (areaType != EFishingAreaType.QteArea)
@@ -100,7 +99,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044D09 RID: 281865 RVA: 0x010FB2BB File Offset: 0x010F94BB
+		// Token: 0x0603AE96 RID: 241302 RVA: 0x010A583F File Offset: 0x010A3A3F
 		public void ResetAreaInLink(int continuousIndex, EFishingAreaType areaType)
 		{
 			if (areaType != EFishingAreaType.QteArea)
@@ -123,20 +122,20 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044D0A RID: 281866 RVA: 0x010FB2F8 File Offset: 0x010F94F8
+		// Token: 0x0603AE97 RID: 241303 RVA: 0x010A587C File Offset: 0x010A3A7C
 		public void ResetAllArea()
 		{
-			foreach (int continuousIndex in this.QteAreaTextures.Keys.ToList<int>())
+			foreach (int continuousIndex in this.QteAreaTextures.Keys)
 			{
 				this.ResetArea(continuousIndex, EFishingAreaType.QteArea);
 			}
-			foreach (int continuousIndex2 in this.PerfectAreaTextures.Keys.ToList<int>())
+			foreach (int continuousIndex2 in this.PerfectAreaTextures.Keys)
 			{
 				this.ResetArea(continuousIndex2, EFishingAreaType.PerfectArea);
 			}
 		}
 
-		// Token: 0x06044D0B RID: 281867 RVA: 0x010FB3A4 File Offset: 0x010F95A4
+		// Token: 0x0603AE98 RID: 241304 RVA: 0x010A5920 File Offset: 0x010A3B20
 		private UniTask GenerateAreaWithTexture(int continuousIndex, EFishingAreaType areaType, int startIndex, int areaSize)
 		{
 			FishingQteRingQteItem.<GenerateAreaWithTexture>d__16 <GenerateAreaWithTexture>d__;
@@ -151,7 +150,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return <GenerateAreaWithTexture>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044D0C RID: 281868 RVA: 0x010FB408 File Offset: 0x010F9608
+		// Token: 0x0603AE99 RID: 241305 RVA: 0x010A5984 File Offset: 0x010A3B84
 		private UniTask GenerateQteArea(int continuousIndex, int startIndex, int areaSize)
 		{
 			FishingQteRingQteItem.<GenerateQteArea>d__17 <GenerateQteArea>d__;
@@ -165,7 +164,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return <GenerateQteArea>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044D0D RID: 281869 RVA: 0x010FB464 File Offset: 0x010F9664
+		// Token: 0x0603AE9A RID: 241306 RVA: 0x010A59E0 File Offset: 0x010A3BE0
 		public void SpawnAreaAtValidArea(int continuousIndex, RingArea validArea)
 		{
 			int startCellIndex = validArea.StartCellIndex;
@@ -188,7 +187,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.GenerateQteArea(continuousIndex, startIndex2, areaRandomSize);
 		}
 
-		// Token: 0x06044D0E RID: 281870 RVA: 0x010FB4EC File Offset: 0x010F96EC
+		// Token: 0x0603AE9B RID: 241307 RVA: 0x010A5A68 File Offset: 0x010A3C68
 		private void SpawnWholeRingAllArea()
 		{
 			ContinuousRingArea continuousRingArea;
@@ -222,7 +221,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044D0F RID: 281871 RVA: 0x010FB604 File Offset: 0x010F9804
+		// Token: 0x0603AE9C RID: 241308 RVA: 0x010A5B80 File Offset: 0x010A3D80
 		private void SpawnIncompleteRingAllArea()
 		{
 			this.ResetAllArea();
@@ -233,7 +232,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044D10 RID: 281872 RVA: 0x010FB642 File Offset: 0x010F9842
+		// Token: 0x0603AE9D RID: 241309 RVA: 0x010A5BBE File Offset: 0x010A3DBE
 		public void InitAllQteAreas()
 		{
 			if (this.RingInfo.IsWholeRing)
@@ -244,7 +243,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.SpawnIncompleteRingAllArea();
 		}
 
-		// Token: 0x06044D11 RID: 281873 RVA: 0x010FB660 File Offset: 0x010F9860
+		// Token: 0x0603AE9E RID: 241310 RVA: 0x010A5BDC File Offset: 0x010A3DDC
 		public void SpawnContinuousArea(int continuousIndex, EFishingAreaType type = EFishingAreaType.QteArea)
 		{
 			if (this.RingInfo.IsWholeRing)
@@ -276,19 +275,19 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044D12 RID: 281874 RVA: 0x010FB6E3 File Offset: 0x010F98E3
+		// Token: 0x0603AE9F RID: 241311 RVA: 0x010A5C5F File Offset: 0x010A3E5F
 		public UUIItem GetQteAreaTexture(int continuousIndex)
 		{
 			return this.QteAreaTextures[continuousIndex].GetRootItem();
 		}
 
-		// Token: 0x06044D13 RID: 281875 RVA: 0x010FB6F6 File Offset: 0x010F98F6
+		// Token: 0x0603AEA0 RID: 241312 RVA: 0x010A5C72 File Offset: 0x010A3E72
 		public UUIItem GetPerfectAreaTexture(int continuousIndex)
 		{
 			return this.PerfectAreaTextures[continuousIndex].GetRootItem();
 		}
 
-		// Token: 0x06044D14 RID: 281876 RVA: 0x010FB70C File Offset: 0x010F990C
+		// Token: 0x0603AEA1 RID: 241313 RVA: 0x010A5C88 File Offset: 0x010A3E88
 		public void PlayAnim(string sequenceName)
 		{
 			if (!(sequenceName == "Fail"))
@@ -334,34 +333,34 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x04023CCC RID: 146636
+		// Token: 0x0401EF81 RID: 126849
 		protected FishingQteGameInfo GameInfo;
 
-		// Token: 0x04023CCD RID: 146637
+		// Token: 0x0401EF82 RID: 126850
 		protected FishingQteRingInfo RingInfo;
 
-		// Token: 0x04023CCE RID: 146638
+		// Token: 0x0401EF83 RID: 126851
 		[Nullable(2)]
 		protected IFishingQteConfig RingConfig;
 
-		// Token: 0x04023CCF RID: 146639
+		// Token: 0x0401EF84 RID: 126852
 		[Nullable(2)]
 		private UUIItem TextureRing;
 
-		// Token: 0x04023CD0 RID: 146640
+		// Token: 0x0401EF85 RID: 126853
 		private Dictionary<int, FishingQteRingQteSingleItem> QteAreaTextures = new Dictionary<int, FishingQteRingQteSingleItem>();
 
-		// Token: 0x04023CD1 RID: 146641
+		// Token: 0x0401EF86 RID: 126854
 		private Dictionary<int, FishingQteRingQteSingleItem> PerfectAreaTextures = new Dictionary<int, FishingQteRingQteSingleItem>();
 
-		// Token: 0x04023CD2 RID: 146642
+		// Token: 0x0401EF87 RID: 126855
 		private List<FishingQteRingQteSingleItem> CachedTexture = new List<FishingQteRingQteSingleItem>();
 
-		// Token: 0x0200CCFE RID: 52478
+		// Token: 0x0200B8EE RID: 47342
 		[NullableContext(0)]
 		private class EQteComponents
 		{
-			// Token: 0x0403DCFC RID: 253180
+			// Token: 0x0403911E RID: 233758
 			public const int QteItem = 0;
 		}
 	}

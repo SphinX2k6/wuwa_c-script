@@ -5,24 +5,24 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055B3 RID: 21939
+	// Token: 0x02004589 RID: 17801
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueOpChangeEvent : MapRogueOp
 	{
-		// Token: 0x170086C3 RID: 34499
-		// (get) Token: 0x06037EEB RID: 229099 RVA: 0x00D40761 File Offset: 0x00D3E961
-		// (set) Token: 0x06037EEC RID: 229100 RVA: 0x00D40769 File Offset: 0x00D3E969
+		// Token: 0x17005A8A RID: 23178
+		// (get) Token: 0x0602CDE9 RID: 183785 RVA: 0x00C8E4A9 File Offset: 0x00C8C6A9
+		// (set) Token: 0x0602CDEA RID: 183786 RVA: 0x00C8E4B1 File Offset: 0x00C8C6B1
 		public override int StepSize { get; set; } = 1;
 
-		// Token: 0x06037EED RID: 229101 RVA: 0x00D40774 File Offset: 0x00D3E974
+		// Token: 0x0602CDEB RID: 183787 RVA: 0x00C8E4BC File Offset: 0x00C8C6BC
 		public MapRogueOpChangeEvent()
 		{
 			this.ExecuteInMapView = true;
 			this.ExecuteAfterMapViewShow = true;
 		}
 
-		// Token: 0x06037EEE RID: 229102 RVA: 0x00D407C0 File Offset: 0x00D3E9C0
+		// Token: 0x0602CDEC RID: 183788 RVA: 0x00C8E508 File Offset: 0x00C8C708
 		public override string ToString()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(20, 1);
@@ -31,13 +31,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06037EEF RID: 229103 RVA: 0x00D407F7 File Offset: 0x00D3E9F7
+		// Token: 0x0602CDED RID: 183789 RVA: 0x00C8E53F File Offset: 0x00C8C73F
 		protected override void OnStartExecute(MapRogueGameInfo gameInfo)
 		{
 			base.Execute(gameInfo, null);
 		}
 
-		// Token: 0x06037EF0 RID: 229104 RVA: 0x00D40804 File Offset: 0x00D3EA04
+		// Token: 0x0602CDEE RID: 183790 RVA: 0x00C8E54C File Offset: 0x00C8C74C
 		protected override void OnExecute(MapRogueGameInfo gameInfo)
 		{
 			ChangeEventByPosOp changeEventByPosOp = this.Data.ChangeEventByPosOp;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037EF1 RID: 229105 RVA: 0x00D40874 File Offset: 0x00D3EA74
+		// Token: 0x0602CDEF RID: 183791 RVA: 0x00C8E5BC File Offset: 0x00C8C7BC
 		private void SingleGridChangeFlow(MapRogueGameInfo gameInfo, int gridIndex, RogueResGridData gridInfo, bool finishChangeFlow)
 		{
 			MapRogueOpChangeEvent.<>c__DisplayClass10_0 CS$<>8__locals1 = new MapRogueOpChangeEvent.<>c__DisplayClass10_0();
@@ -76,22 +76,22 @@ namespace CSharpScript.Game.Module.MapRogue
 			TaskSystem.Instance.Run();
 		}
 
-		// Token: 0x06037EF2 RID: 229106 RVA: 0x00D408DB File Offset: 0x00D3EADB
+		// Token: 0x0602CDF0 RID: 183792 RVA: 0x00C8E623 File Offset: 0x00C8C823
 		private void FinishChangeFlow(MapRogueGameInfo gameInfo)
 		{
 			gameInfo.SetInteractAvailable(EMapForbiddenTag.FocusLock, true);
 			base.Execute(gameInfo, null);
 		}
 
-		// Token: 0x06037EF3 RID: 229107 RVA: 0x00D408ED File Offset: 0x00D3EAED
+		// Token: 0x0602CDF1 RID: 183793 RVA: 0x00C8E635 File Offset: 0x00C8C835
 		protected override void OnFinish(MapRogueGameInfo gameInfo)
 		{
 		}
 
-		// Token: 0x0401D616 RID: 120342
+		// Token: 0x040180A1 RID: 98465
 		private readonly float FocusTweenTime = (float)MapRogueConfig.Instance.GetGlobalParamConfig().Value.FocusTime;
 
-		// Token: 0x0401D618 RID: 120344
+		// Token: 0x040180A3 RID: 98467
 		private const int EVENT_CHANGE_ANIM_TIME = 500;
 	}
 }

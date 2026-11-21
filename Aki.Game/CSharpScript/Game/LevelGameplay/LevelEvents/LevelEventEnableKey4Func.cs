@@ -7,15 +7,15 @@ using CSharpScript.Game.Module.BattleUi;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B17 RID: 27415
+	// Token: 0x02005C8F RID: 23695
 	public class LevelEventEnableKey4Func : LevelEventBase
 	{
-		// Token: 0x060440A5 RID: 278693 RVA: 0x010B96A0 File Offset: 0x010B78A0
+		// Token: 0x0603A1F7 RID: 238071 RVA: 0x01062F2C File Offset: 0x0106112C
 		public LevelEventEnableKey4Func(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060440A6 RID: 278694 RVA: 0x010B96AC File Offset: 0x010B78AC
+		// Token: 0x0603A1F8 RID: 238072 RVA: 0x01062F38 File Offset: 0x01061138
 		[NullableContext(1)]
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060440A7 RID: 278695 RVA: 0x010B9764 File Offset: 0x010B7964
+		// Token: 0x0603A1F9 RID: 238073 RVA: 0x01062FF0 File Offset: 0x010611F0
 		protected override void OnUpdateGuarantee()
 		{
 			GuaranteeActionInfo p = new GuaranteeActionInfo
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			EventSystem.Instance.Emit<string, GeneralContext, GuaranteeActionInfo, bool?>(EEventName.RemGuaranteeAction, this.Type, this.BaseContext, p, null);
 		}
 
-		// Token: 0x040238E3 RID: 145635
+		// Token: 0x0401EB85 RID: 125829
 		private bool Enable;
 	}
 }

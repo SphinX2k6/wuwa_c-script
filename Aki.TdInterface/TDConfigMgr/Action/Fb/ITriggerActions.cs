@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024E3 RID: 9443
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002788 RID: 10120
 	public class ITriggerActions
 	{
-		// Token: 0x0600D2C4 RID: 53956 RVA: 0x001F4315 File Offset: 0x001F2515
+		// Token: 0x0600E019 RID: 57369 RVA: 0x0020FB71 File Offset: 0x0020DD71
 		public static ITriggerActions Create(ITriggerActions? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003AC0 RID: 15040
-		// (get) Token: 0x0600D2C5 RID: 53957 RVA: 0x001F4334 File Offset: 0x001F2534
+		// Token: 0x17003DB7 RID: 15799
+		// (get) Token: 0x0600E01A RID: 57370 RVA: 0x0020FB90 File Offset: 0x0020DD90
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400739D RID: 29597
+		// Token: 0x040079EA RID: 31210
 		private ITriggerActions Instance;
 
-		// Token: 0x0400739E RID: 29598
+		// Token: 0x040079EB RID: 31211
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x0400739F RID: 29599
+		// Token: 0x040079EC RID: 31212
 		private bool _ActionsInited;
 	}
 }

@@ -12,13 +12,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CC3 RID: 7363
+// Token: 0x02001185 RID: 4485
 [NullableContext(1)]
 [Nullable(0)]
 public class KurotatoMainViewProxy : GameMainViewProxy
 {
-	// Token: 0x17001207 RID: 4615
-	// (get) Token: 0x0600DEC6 RID: 57030 RVA: 0x0034207A File Offset: 0x0034027A
+	// Token: 0x17001231 RID: 4657
+	// (get) Token: 0x0600B2E3 RID: 45795 RVA: 0x0034DAA2 File Offset: 0x0034BCA2
 	protected override EBattleUiCommonChildVisibleReason? BattleUiCommonChildVisibleReason
 	{
 		get
@@ -27,7 +27,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600DEC7 RID: 57031 RVA: 0x00342084 File Offset: 0x00340284
+	// Token: 0x0600B2E4 RID: 45796 RVA: 0x0034DAAC File Offset: 0x0034BCAC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		KurotatoMainViewProxy.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DEC8 RID: 57032 RVA: 0x003420C8 File Offset: 0x003402C8
+	// Token: 0x0600B2E5 RID: 45797 RVA: 0x0034DAF0 File Offset: 0x0034BCF0
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearStepAdvanceTimer();
@@ -51,13 +51,13 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		this.KurotatoChildPanelMap.Clear();
 	}
 
-	// Token: 0x0600DEC9 RID: 57033 RVA: 0x0034213C File Offset: 0x0034033C
+	// Token: 0x0600B2E6 RID: 45798 RVA: 0x0034DB64 File Offset: 0x0034BD64
 	protected override void OnStart()
 	{
 		this.AttrChangePanel.SetUiActive(false);
 	}
 
-	// Token: 0x0600DECA RID: 57034 RVA: 0x0034214C File Offset: 0x0034034C
+	// Token: 0x0600B2E7 RID: 45799 RVA: 0x0034DB74 File Offset: 0x0034BD74
 	protected override void OnAfterShow()
 	{
 		foreach (UiPanelBase uiPanelBase in this.KurotatoChildPanelMap.Values)
@@ -79,7 +79,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600DECB RID: 57035 RVA: 0x00342260 File Offset: 0x00340460
+	// Token: 0x0600B2E8 RID: 45800 RVA: 0x0034DC88 File Offset: 0x0034BE88
 	protected override void OnAfterHide()
 	{
 		foreach (UiPanelBase uiPanelBase in this.KurotatoChildPanelMap.Values)
@@ -97,7 +97,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		BattleUiModel.Instance.ChildViewData.RemoveBattleUiCommonChildVisibleReason(EBattleUiCommonChildVisibleReason.Kurotato);
 	}
 
-	// Token: 0x0600DECC RID: 57036 RVA: 0x00342350 File Offset: 0x00340550
+	// Token: 0x0600B2E9 RID: 45801 RVA: 0x0034DD78 File Offset: 0x0034BF78
 	protected override void OnTick(float delta)
 	{
 		if (this.CurStep == EKurotatoStep.Combat)
@@ -118,7 +118,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		this.AttrChangePanel.OnTick(delta);
 	}
 
-	// Token: 0x0600DECD RID: 57037 RVA: 0x00342438 File Offset: 0x00340638
+	// Token: 0x0600B2EA RID: 45802 RVA: 0x0034DE60 File Offset: 0x0034C060
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<EKurotatoStep>(EEventName.KurotatoOnStepChanged, new Action<EKurotatoStep>(this.OnStepChanged));
@@ -136,7 +136,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		behaviorDelegate.AddTreeVarUpdateDelegate(EKurotatoSystemVarType.RoleLevel.ToEnumString(), new TTreeVarUpdateDelegate(this.OnRoleLevelUpdate));
 	}
 
-	// Token: 0x0600DECE RID: 57038 RVA: 0x0034258C File Offset: 0x0034078C
+	// Token: 0x0600B2EB RID: 45803 RVA: 0x0034DFB4 File Offset: 0x0034C1B4
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<EKurotatoStep>(EEventName.KurotatoOnStepChanged, new Action<EKurotatoStep>(this.OnStepChanged));
@@ -146,7 +146,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		EventSystem.Instance.Remove(EEventName.KurotatoOnPlayerDie, new Action(this.OnPlayerDie));
 	}
 
-	// Token: 0x0600DECF RID: 57039 RVA: 0x00342628 File Offset: 0x00340828
+	// Token: 0x0600B2EC RID: 45804 RVA: 0x0034E050 File Offset: 0x0034C250
 	private void AddScreenEffectFightRoot()
 	{
 		BP_ScreenEffectSystem_C instance = ScreenEffectSystem.GetInstance();
@@ -165,7 +165,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		ScreenEffectModel.Instance.SetFightRootInited(true);
 	}
 
-	// Token: 0x0600DED0 RID: 57040 RVA: 0x00342690 File Offset: 0x00340890
+	// Token: 0x0600B2ED RID: 45805 RVA: 0x0034E0B8 File Offset: 0x0034C2B8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -184,7 +184,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		return <CreateKurotatoChildPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DED1 RID: 57041 RVA: 0x003426EC File Offset: 0x003408EC
+	// Token: 0x0600B2EE RID: 45806 RVA: 0x0034E114 File Offset: 0x0034C314
 	private UniTask CreateResidentWaveTipsPanel()
 	{
 		KurotatoMainViewProxy.<CreateResidentWaveTipsPanel>d__27 <CreateResidentWaveTipsPanel>d__;
@@ -195,7 +195,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		return <CreateResidentWaveTipsPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DED2 RID: 57042 RVA: 0x00342730 File Offset: 0x00340930
+	// Token: 0x0600B2EF RID: 45807 RVA: 0x0034E158 File Offset: 0x0034C358
 	private UniTask CreateCountDownTipsPanel()
 	{
 		KurotatoMainViewProxy.<CreateCountDownTipsPanel>d__28 <CreateCountDownTipsPanel>d__;
@@ -206,7 +206,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		return <CreateCountDownTipsPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DED3 RID: 57043 RVA: 0x00342774 File Offset: 0x00340974
+	// Token: 0x0600B2F0 RID: 45808 RVA: 0x0034E19C File Offset: 0x0034C39C
 	private UniTask CreatePlayerTrackedMarkerPanel()
 	{
 		KurotatoMainViewProxy.<CreatePlayerTrackedMarkerPanel>d__29 <CreatePlayerTrackedMarkerPanel>d__;
@@ -217,7 +217,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		return <CreatePlayerTrackedMarkerPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DED4 RID: 57044 RVA: 0x003427B8 File Offset: 0x003409B8
+	// Token: 0x0600B2F1 RID: 45809 RVA: 0x0034E1E0 File Offset: 0x0034C3E0
 	private UniTask CreateMainPanel()
 	{
 		KurotatoMainViewProxy.<CreateMainPanel>d__30 <CreateMainPanel>d__;
@@ -228,7 +228,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		return <CreateMainPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DED5 RID: 57045 RVA: 0x003427FC File Offset: 0x003409FC
+	// Token: 0x0600B2F2 RID: 45810 RVA: 0x0034E224 File Offset: 0x0034C424
 	private UniTask CreateAttrChangePanel()
 	{
 		KurotatoMainViewProxy.<CreateAttrChangePanel>d__31 <CreateAttrChangePanel>d__;
@@ -239,7 +239,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		return <CreateAttrChangePanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DED6 RID: 57046 RVA: 0x00342840 File Offset: 0x00340A40
+	// Token: 0x0600B2F3 RID: 45811 RVA: 0x0034E268 File Offset: 0x0034C468
 	private UniTask CreateWaveTipsPanel()
 	{
 		KurotatoMainViewProxy.<CreateWaveTipsPanel>d__32 <CreateWaveTipsPanel>d__;
@@ -250,7 +250,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		return <CreateWaveTipsPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DED7 RID: 57047 RVA: 0x00342884 File Offset: 0x00340A84
+	// Token: 0x0600B2F4 RID: 45812 RVA: 0x0034E2AC File Offset: 0x0034C4AC
 	private UniTask CreateBossSpawnTipsPanel()
 	{
 		KurotatoMainViewProxy.<CreateBossSpawnTipsPanel>d__33 <CreateBossSpawnTipsPanel>d__;
@@ -261,7 +261,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		return <CreateBossSpawnTipsPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DED8 RID: 57048 RVA: 0x003428C8 File Offset: 0x00340AC8
+	// Token: 0x0600B2F5 RID: 45813 RVA: 0x0034E2F0 File Offset: 0x0034C4F0
 	private UniTask CreateEliteWaveTipsPanel()
 	{
 		KurotatoMainViewProxy.<CreateEliteWaveTipsPanel>d__34 <CreateEliteWaveTipsPanel>d__;
@@ -272,7 +272,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		return <CreateEliteWaveTipsPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DED9 RID: 57049 RVA: 0x0034290C File Offset: 0x00340B0C
+	// Token: 0x0600B2F6 RID: 45814 RVA: 0x0034E334 File Offset: 0x0034C534
 	public void UpdateTipsByState(EKurotatoStep state)
 	{
 		this.CurStep = state;
@@ -317,19 +317,19 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600DEDA RID: 57050 RVA: 0x003429D8 File Offset: 0x00340BD8
+	// Token: 0x0600B2F7 RID: 45815 RVA: 0x0034E400 File Offset: 0x0034C600
 	private void OnStepChanged(EKurotatoStep step)
 	{
 		this.UpdateTipsByState(step);
 	}
 
-	// Token: 0x0600DEDB RID: 57051 RVA: 0x003429E1 File Offset: 0x00340BE1
+	// Token: 0x0600B2F8 RID: 45816 RVA: 0x0034E409 File Offset: 0x0034C609
 	private void OnPropertyUpdate(IDictionary<int, int> propertyValues)
 	{
 		this.AttrChangePanel.ShowAttrChange(propertyValues);
 	}
 
-	// Token: 0x0600DEDC RID: 57052 RVA: 0x003429F0 File Offset: 0x00340BF0
+	// Token: 0x0600B2F9 RID: 45817 RVA: 0x0034E418 File Offset: 0x0034C618
 	private void OnCurrencyUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		int num = (int)MathUtils.Instance.LongToNumber(newVarDefine.Int);
@@ -337,7 +337,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		this.MainPanel.RefreshCurrencyNum(num, increment);
 	}
 
-	// Token: 0x0600DEDD RID: 57053 RVA: 0x00342A38 File Offset: 0x00340C38
+	// Token: 0x0600B2FA RID: 45818 RVA: 0x0034E460 File Offset: 0x0034C660
 	private void OnSpareGoldUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		int num = (int)MathUtils.Instance.LongToNumber(newVarDefine.Int);
@@ -345,7 +345,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		this.MainPanel.RefreshSpareGold(num, increment);
 	}
 
-	// Token: 0x0600DEDE RID: 57054 RVA: 0x00342A80 File Offset: 0x00340C80
+	// Token: 0x0600B2FB RID: 45819 RVA: 0x0034E4A8 File Offset: 0x0034C6A8
 	private void OnChestUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		int num = (int)MathUtils.Instance.LongToNumber(newVarDefine.Int);
@@ -353,7 +353,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		this.MainPanel.RefreshChestCount(num, bPlayAcquireAnim);
 	}
 
-	// Token: 0x0600DEDF RID: 57055 RVA: 0x00342AC8 File Offset: 0x00340CC8
+	// Token: 0x0600B2FC RID: 45820 RVA: 0x0034E4F0 File Offset: 0x0034C6F0
 	private void OnUpgradeCountUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		int num = (int)MathUtils.Instance.LongToNumber(newVarDefine.Int);
@@ -361,20 +361,20 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		this.MainPanel.RefreshLevelUpCount(num, bPlayAcquireAnim);
 	}
 
-	// Token: 0x0600DEE0 RID: 57056 RVA: 0x00342B0F File Offset: 0x00340D0F
+	// Token: 0x0600B2FD RID: 45821 RVA: 0x0034E537 File Offset: 0x0034C737
 	private void OnExpUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		this.MainPanel.RefreshExp();
 	}
 
-	// Token: 0x0600DEE1 RID: 57057 RVA: 0x00342B1C File Offset: 0x00340D1C
+	// Token: 0x0600B2FE RID: 45822 RVA: 0x0034E544 File Offset: 0x0034C744
 	private void OnComboUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		int comboNum = (int)MathUtils.Instance.LongToNumber(newVarDefine.Int);
 		this.MainPanel.RefreshComboNum(comboNum);
 	}
 
-	// Token: 0x0600DEE2 RID: 57058 RVA: 0x00342B48 File Offset: 0x00340D48
+	// Token: 0x0600B2FF RID: 45823 RVA: 0x0034E570 File Offset: 0x0034C770
 	private void OnRoleLevelUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		int num = (lastVarDefine != null) ? ((int)MathUtils.Instance.LongToNumber(lastVarDefine.Int)) : 0;
@@ -388,7 +388,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		EventSystem.Instance.Emit<string>(EEventName.OnGuideTriggerEvent, "KurotatoRoleLevelUp");
 	}
 
-	// Token: 0x0600DEE3 RID: 57059 RVA: 0x00342BB8 File Offset: 0x00340DB8
+	// Token: 0x0600B300 RID: 45824 RVA: 0x0034E5E0 File Offset: 0x0034C7E0
 	private void OnPlayerDie()
 	{
 		this.WaveTipsPanel.PlayFail("Kurotato_LevelFail");
@@ -404,7 +404,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		this.KurotatoTreasureBoxTrackedMarkerMap.Clear();
 	}
 
-	// Token: 0x0600DEE4 RID: 57060 RVA: 0x00342C78 File Offset: 0x00340E78
+	// Token: 0x0600B301 RID: 45825 RVA: 0x0034E6A0 File Offset: 0x0034C8A0
 	private void StartStepAdvanceWatch()
 	{
 		this.ClearStepAdvanceTimer();
@@ -414,13 +414,13 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		}, 3000f, null, null, true, 1f);
 	}
 
-	// Token: 0x0600DEE5 RID: 57061 RVA: 0x00342CA9 File Offset: 0x00340EA9
+	// Token: 0x0600B302 RID: 45826 RVA: 0x0034E6D1 File Offset: 0x0034C8D1
 	private void OnWaveTipsFinish()
 	{
 		this.TriggerStepAdvance();
 	}
 
-	// Token: 0x0600DEE6 RID: 57062 RVA: 0x00342CB4 File Offset: 0x00340EB4
+	// Token: 0x0600B303 RID: 45827 RVA: 0x0034E6DC File Offset: 0x0034C8DC
 	private void TriggerStepAdvance()
 	{
 		TimerHandle stepAdvanceTimer = this.StepAdvanceTimer;
@@ -436,7 +436,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		KurotatoController.Instance.RequestKurotatoStepAdvance().Forget<bool>();
 	}
 
-	// Token: 0x0600DEE7 RID: 57063 RVA: 0x00342D05 File Offset: 0x00340F05
+	// Token: 0x0600B304 RID: 45828 RVA: 0x0034E72D File Offset: 0x0034C92D
 	private void ClearStepAdvanceTimer()
 	{
 		if (this.StepAdvanceTimer != null)
@@ -446,7 +446,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600DEE8 RID: 57064 RVA: 0x00342D24 File Offset: 0x00340F24
+	// Token: 0x0600B305 RID: 45829 RVA: 0x0034E74C File Offset: 0x0034C94C
 	private UniTask CreateKurotatoBossTrackedMarkerPanel(int entityId)
 	{
 		KurotatoMainViewProxy.<CreateKurotatoBossTrackedMarkerPanel>d__50 <CreateKurotatoBossTrackedMarkerPanel>d__;
@@ -458,7 +458,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		return <CreateKurotatoBossTrackedMarkerPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DEE9 RID: 57065 RVA: 0x00342D70 File Offset: 0x00340F70
+	// Token: 0x0600B306 RID: 45830 RVA: 0x0034E798 File Offset: 0x0034C998
 	public void OnKurotatoBossTrackedMarkerUpdate(int entityId, bool isAdd)
 	{
 		if (isAdd)
@@ -474,7 +474,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600DEEA RID: 57066 RVA: 0x00342DB0 File Offset: 0x00340FB0
+	// Token: 0x0600B307 RID: 45831 RVA: 0x0034E7D8 File Offset: 0x0034C9D8
 	private void KurotatoCleanAllBossTrackedMarker()
 	{
 		if (this.KurotatoBossTrackedMarkerMap.Count == 0)
@@ -489,7 +489,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		this.KurotatoBossTrackedMarkerMap.Clear();
 	}
 
-	// Token: 0x0600DEEB RID: 57067 RVA: 0x00342E40 File Offset: 0x00341040
+	// Token: 0x0600B308 RID: 45832 RVA: 0x0034E868 File Offset: 0x0034CA68
 	private UniTask CreateKurotatoTreasureBoxTrackedMarkerPanel(int entityId)
 	{
 		KurotatoMainViewProxy.<CreateKurotatoTreasureBoxTrackedMarkerPanel>d__53 <CreateKurotatoTreasureBoxTrackedMarkerPanel>d__;
@@ -501,7 +501,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		return <CreateKurotatoTreasureBoxTrackedMarkerPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DEEC RID: 57068 RVA: 0x00342E8C File Offset: 0x0034108C
+	// Token: 0x0600B309 RID: 45833 RVA: 0x0034E8B4 File Offset: 0x0034CAB4
 	public void OnKurotatoTreasureBoxTrackedMarkerUpdate(int entityId, bool isAdd)
 	{
 		if (isAdd)
@@ -517,7 +517,7 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600DEED RID: 57069 RVA: 0x00342ECC File Offset: 0x003410CC
+	// Token: 0x0600B30A RID: 45834 RVA: 0x0034E8F4 File Offset: 0x0034CAF4
 	private void KurotatoCleanAllTreasureBoxTrackedMarker()
 	{
 		if (this.KurotatoTreasureBoxTrackedMarkerMap.Count == 0)
@@ -532,50 +532,50 @@ public class KurotatoMainViewProxy : GameMainViewProxy
 		this.KurotatoTreasureBoxTrackedMarkerMap.Clear();
 	}
 
-	// Token: 0x0400665C RID: 26204
+	// Token: 0x0400673B RID: 26427
 	private const float STEP_ADVANCE_FALLBACK_MS = 3000f;
 
-	// Token: 0x0400665D RID: 26205
+	// Token: 0x0400673C RID: 26428
 	protected Dictionary<Type, UiPanelBase> KurotatoChildPanelMap = new Dictionary<Type, UiPanelBase>();
 
-	// Token: 0x0400665E RID: 26206
+	// Token: 0x0400673D RID: 26429
 	public KurotatoResidentWaveTipsPanel ResidentWaveTips;
 
-	// Token: 0x0400665F RID: 26207
+	// Token: 0x0400673E RID: 26430
 	public KurotatoCountDownTipsPanel CountDownTips;
 
-	// Token: 0x04006660 RID: 26208
+	// Token: 0x0400673F RID: 26431
 	private SurvivorsRoguePlayerTrackerMarker PlayerTrackedMarker;
 
-	// Token: 0x04006661 RID: 26209
+	// Token: 0x04006740 RID: 26432
 	public KurotatoMainPanel MainPanel;
 
-	// Token: 0x04006662 RID: 26210
+	// Token: 0x04006741 RID: 26433
 	public KurotatoAttrChangePanel AttrChangePanel;
 
-	// Token: 0x04006663 RID: 26211
+	// Token: 0x04006742 RID: 26434
 	public KurotatoWaveTipsPanel WaveTipsPanel;
 
-	// Token: 0x04006664 RID: 26212
+	// Token: 0x04006743 RID: 26435
 	public KurotatoBossSpawnTipsPanel BossSpawnTipsPanel;
 
-	// Token: 0x04006665 RID: 26213
+	// Token: 0x04006744 RID: 26436
 	public KurotatoEliteWaveTipsPanel EliteWaveTipsPanel;
 
-	// Token: 0x04006666 RID: 26214
+	// Token: 0x04006745 RID: 26437
 	[Nullable(2)]
 	private AUIContainerActor ScreenEffectFightRoot;
 
-	// Token: 0x04006667 RID: 26215
+	// Token: 0x04006746 RID: 26438
 	private readonly Dictionary<int, KurotatoBossTrackedMarker> KurotatoBossTrackedMarkerMap = new Dictionary<int, KurotatoBossTrackedMarker>();
 
-	// Token: 0x04006668 RID: 26216
+	// Token: 0x04006747 RID: 26439
 	private readonly Dictionary<int, KurotatoTreasureBoxTrackedMarker> KurotatoTreasureBoxTrackedMarkerMap = new Dictionary<int, KurotatoTreasureBoxTrackedMarker>();
 
-	// Token: 0x04006669 RID: 26217
+	// Token: 0x04006748 RID: 26440
 	private EKurotatoStep CurStep = EKurotatoStep.None;
 
-	// Token: 0x0400666A RID: 26218
+	// Token: 0x04006749 RID: 26441
 	[Nullable(2)]
 	private TimerHandle StepAdvanceTimer;
 }

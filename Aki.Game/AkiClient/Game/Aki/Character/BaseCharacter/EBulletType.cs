@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x0200429B RID: 17051
+	// Token: 0x020032F7 RID: 13047
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/EBulletType.EBulletType")]
 	public enum EBulletType : byte
 	{
-		// Token: 0x040172DA RID: 94938
+		// Token: 0x04011FDC RID: 73692
 		远程子弹,
-		// Token: 0x040172DB RID: 94939
+		// Token: 0x04011FDD RID: 73693
 		瞄准射击子弹,
-		// Token: 0x040172DC RID: 94940
+		// Token: 0x04011FDE RID: 73694
 		近战攻击子弹,
-		// Token: 0x040172DD RID: 94941
+		// Token: 0x04011FDF RID: 73695
 		大范围子弹,
-		// Token: 0x040172DE RID: 94942
+		// Token: 0x04011FE0 RID: 73696
 		地刺型子弹,
-		// Token: 0x040172DF RID: 94943
+		// Token: 0x04011FE1 RID: 73697
 		EBulletType_MAX
 	}
 }

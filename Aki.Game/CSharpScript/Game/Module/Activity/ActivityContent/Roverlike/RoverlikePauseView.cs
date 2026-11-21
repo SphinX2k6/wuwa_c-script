@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200614B RID: 24907
+	// Token: 0x020050C9 RID: 20681
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikePauseView : UiViewBase
 	{
-		// Token: 0x0603EF5D RID: 257885 RVA: 0x00F358D1 File Offset: 0x00F33AD1
+		// Token: 0x06033C1D RID: 211997 RVA: 0x00E7C7B1 File Offset: 0x00E7A9B1
 		public RoverlikePauseView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603EF5E RID: 257886 RVA: 0x00F358DC File Offset: 0x00F33ADC
+		// Token: 0x06033C1E RID: 211998 RVA: 0x00E7C7BC File Offset: 0x00E7A9BC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603EF5F RID: 257887 RVA: 0x00F35AD4 File Offset: 0x00F33CD4
+		// Token: 0x06033C1F RID: 211999 RVA: 0x00E7C9B4 File Offset: 0x00E7ABB4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikePauseView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EF60 RID: 257888 RVA: 0x00F35B18 File Offset: 0x00F33D18
+		// Token: 0x06033C20 RID: 212000 RVA: 0x00E7C9F8 File Offset: 0x00E7ABF8
 		protected override void OnBeforeShow()
 		{
 			RoverlikeInstanceData instanceData = RoverlikeModel.Instance.InstanceData;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			infoList.RefreshByConfig(new RoverRogueIns?(insConfig.Value));
 		}
 
-		// Token: 0x0603EF61 RID: 257889 RVA: 0x00F35B7F File Offset: 0x00F33D7F
+		// Token: 0x06033C21 RID: 212001 RVA: 0x00E7CA5F File Offset: 0x00E7AC5F
 		private void RefreshTitle(RoverlikeInstanceData instanceData)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(8), "RoverRogue_ProcessingStage", new <>z__ReadOnlyArray<object>(new object[]
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}));
 		}
 
-		// Token: 0x0603EF62 RID: 257890 RVA: 0x00F35BBE File Offset: 0x00F33DBE
+		// Token: 0x06033C22 RID: 212002 RVA: 0x00E7CA9E File Offset: 0x00E7AC9E
 		private void RefreshLevelTips(RoverlikeInstanceData instanceData)
 		{
 			RoverlikeLevelTipsItem levelTips = this.LevelTips;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			levelTips.Refresh(instanceData, true, null);
 		}
 
-		// Token: 0x0603EF63 RID: 257891 RVA: 0x00F35BD4 File Offset: 0x00F33DD4
+		// Token: 0x06033C23 RID: 212003 RVA: 0x00E7CAB4 File Offset: 0x00E7ACB4
 		private void OnClickQuit()
 		{
 			int? currentActivityId = RoverlikeActivityController.Instance.GetCurrentActivityId();
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EF64 RID: 257892 RVA: 0x00F35C08 File Offset: 0x00F33E08
+		// Token: 0x06033C24 RID: 212004 RVA: 0x00E7CAE8 File Offset: 0x00E7ACE8
 		private void OnClickSettle()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.RoverlikeResultConfirm);
@@ -135,19 +135,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603EF65 RID: 257893 RVA: 0x00F35C44 File Offset: 0x00F33E44
+		// Token: 0x06033C25 RID: 212005 RVA: 0x00E7CB24 File Offset: 0x00E7AD24
 		private void OnClickSetting()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MenuView, null, null);
 		}
 
-		// Token: 0x0603EF66 RID: 257894 RVA: 0x00F35C57 File Offset: 0x00F33E57
+		// Token: 0x06033C26 RID: 212006 RVA: 0x00E7CB37 File Offset: 0x00E7AD37
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603EF68 RID: 257896 RVA: 0x00F35C6C File Offset: 0x00F33E6C
+		// Token: 0x06033C28 RID: 212008 RVA: 0x00E7CB4C File Offset: 0x00E7AD4C
 		[CompilerGenerated]
 		private void <OnClickSettle>g__settle|11_0()
 		{
@@ -166,47 +166,47 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x04020DBC RID: 134588
+		// Token: 0x0401B6E9 RID: 112361
 		[Nullable(2)]
 		private PopupCaptionItem Caption;
 
-		// Token: 0x04020DBD RID: 134589
+		// Token: 0x0401B6EA RID: 112362
 		[Nullable(2)]
 		private RoverlikeLevelTipsItem LevelTips;
 
-		// Token: 0x04020DBE RID: 134590
+		// Token: 0x0401B6EB RID: 112363
 		[Nullable(2)]
 		private RoverlikeLevelInfoList InfoList;
 
-		// Token: 0x0200C3AB RID: 50091
+		// Token: 0x0200AD92 RID: 44434
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B0AC RID: 241836
+			// Token: 0x04035A0D RID: 219661
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403B0AD RID: 241837
+			// Token: 0x04035A0E RID: 219662
 			public const int BtnQuit = 1;
 
-			// Token: 0x0403B0AE RID: 241838
+			// Token: 0x04035A0F RID: 219663
 			public const int BtnSettle = 2;
 
-			// Token: 0x0403B0AF RID: 241839
+			// Token: 0x04035A10 RID: 219664
 			public const int BtnSetting = 3;
 
-			// Token: 0x0403B0B0 RID: 241840
+			// Token: 0x04035A11 RID: 219665
 			public const int BtnClose = 4;
 
-			// Token: 0x0403B0B1 RID: 241841
+			// Token: 0x04035A12 RID: 219666
 			public const int ItemLevelTips = 5;
 
-			// Token: 0x0403B0B2 RID: 241842
+			// Token: 0x04035A13 RID: 219667
 			public const int SvInfo = 6;
 
-			// Token: 0x0403B0B3 RID: 241843
+			// Token: 0x04035A14 RID: 219668
 			public const int ItemSkillTips = 7;
 
-			// Token: 0x0403B0B4 RID: 241844
+			// Token: 0x04035A15 RID: 219669
 			public const int TxtTitle = 8;
 		}
 	}

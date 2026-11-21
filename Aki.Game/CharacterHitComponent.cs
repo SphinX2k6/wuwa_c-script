@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -23,19 +22,19 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x02003062 RID: 12386
+// Token: 0x020025B8 RID: 9656
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 {
-	// Token: 0x0601A5B7 RID: 107959 RVA: 0x00702DB0 File Offset: 0x00700FB0
+	// Token: 0x06017F67 RID: 98151 RVA: 0x00729A7C File Offset: 0x00727C7C
 	static CharacterHitComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterHitComponent.CreateStaticDefaultValue), new Action(CharacterHitComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17002448 RID: 9288
-	// (get) Token: 0x0601A5B8 RID: 107960 RVA: 0x00703044 File Offset: 0x00701244
+	// Token: 0x17002576 RID: 9590
+	// (get) Token: 0x06017F68 RID: 98152 RVA: 0x00729D10 File Offset: 0x00727F10
 	public bool HadTriggerCounterAttack
 	{
 		get
@@ -44,7 +43,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5B9 RID: 107961 RVA: 0x0070304C File Offset: 0x0070124C
+	// Token: 0x06017F69 RID: 98153 RVA: 0x00729D18 File Offset: 0x00727F18
 	private void OnPositionStateChanged(global::ECharPositionState oldPositionState, global::ECharPositionState newPositionState)
 	{
 		if (newPositionState == global::ECharPositionState.Ground)
@@ -70,14 +69,14 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5BA RID: 107962 RVA: 0x007030AD File Offset: 0x007012AD
+	// Token: 0x06017F6A RID: 98154 RVA: 0x00729D79 File Offset: 0x00727F79
 	[NullableContext(2)]
 	public global::HitInformation GetHitData()
 	{
 		return this.HitData;
 	}
 
-	// Token: 0x0601A5BB RID: 107963 RVA: 0x007030B5 File Offset: 0x007012B5
+	// Token: 0x06017F6B RID: 98155 RVA: 0x00729D81 File Offset: 0x00727F81
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -85,7 +84,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601A5BC RID: 107964 RVA: 0x007030C3 File Offset: 0x007012C3
+	// Token: 0x06017F6C RID: 98156 RVA: 0x00729D8F File Offset: 0x00727F8F
 	protected override bool OnInit()
 	{
 		this.TmpBoneFeedbackAnimHitInfo = new FBoneFeedbackAnimHitInfo();
@@ -101,7 +100,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601A5BD RID: 107965 RVA: 0x00703104 File Offset: 0x00701304
+	// Token: 0x06017F6D RID: 98157 RVA: 0x00729DD0 File Offset: 0x00727FD0
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -162,7 +161,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601A5BE RID: 107966 RVA: 0x00703298 File Offset: 0x00701498
+	// Token: 0x06017F6E RID: 98158 RVA: 0x00729F64 File Offset: 0x00728164
 	private void AddTag(int gameplayTagId)
 	{
 		BaseTagComponent ownerTagComponent = this.OwnerTagComponent;
@@ -173,7 +172,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		ownerTagComponent.AddTag(new int?(gameplayTagId));
 	}
 
-	// Token: 0x0601A5BF RID: 107967 RVA: 0x007032B0 File Offset: 0x007014B0
+	// Token: 0x06017F6F RID: 98159 RVA: 0x00729F7C File Offset: 0x0072817C
 	private void RemoveTag(int gameplayTagId)
 	{
 		BaseTagComponent ownerTagComponent = this.OwnerTagComponent;
@@ -184,14 +183,14 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		ownerTagComponent.RemoveTag(new int?(gameplayTagId));
 	}
 
-	// Token: 0x0601A5C0 RID: 107968 RVA: 0x007032C9 File Offset: 0x007014C9
+	// Token: 0x06017F70 RID: 98160 RVA: 0x00729F95 File Offset: 0x00728195
 	private bool ContainsTag(int gameplayTagId)
 	{
 		BaseTagComponent ownerTagComponent = this.OwnerTagComponent;
 		return ownerTagComponent != null && ownerTagComponent.HasTag(gameplayTagId);
 	}
 
-	// Token: 0x0601A5C1 RID: 107969 RVA: 0x007032E0 File Offset: 0x007014E0
+	// Token: 0x06017F71 RID: 98161 RVA: 0x00729FAC File Offset: 0x007281AC
 	private bool ContainsAnyTag(int[] gameplayTagIds)
 	{
 		foreach (int gameplayTagId in gameplayTagIds)
@@ -204,7 +203,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0601A5C2 RID: 107970 RVA: 0x00703310 File Offset: 0x00701510
+	// Token: 0x06017F72 RID: 98162 RVA: 0x00729FDC File Offset: 0x007281DC
 	private void OnInitByCreatureData()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -241,7 +240,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5C3 RID: 107971 RVA: 0x00703404 File Offset: 0x00701604
+	// Token: 0x06017F73 RID: 98163 RVA: 0x0072A0D0 File Offset: 0x007282D0
 	protected override bool OnEnd()
 	{
 		if (this.OnHitMaterialAction != null)
@@ -259,7 +258,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601A5C4 RID: 107972 RVA: 0x0070349C File Offset: 0x0070169C
+	// Token: 0x06017F74 RID: 98164 RVA: 0x0072A168 File Offset: 0x00728368
 	protected override bool OnClear()
 	{
 		if (this.DelayRemoveStiff != null && TimerSystem.Instance.Has(this.DelayRemoveStiff))
@@ -272,7 +271,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601A5C5 RID: 107973 RVA: 0x007034EA File Offset: 0x007016EA
+	// Token: 0x06017F75 RID: 98165 RVA: 0x0072A1B6 File Offset: 0x007283B6
 	public bool GetAcceptedNewBeHitAndReset()
 	{
 		bool acceptedNewBeHit = this.AcceptedNewBeHit;
@@ -284,7 +283,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return acceptedNewBeHit;
 	}
 
-	// Token: 0x0601A5C6 RID: 107974 RVA: 0x0070351B File Offset: 0x0070171B
+	// Token: 0x06017F76 RID: 98166 RVA: 0x0072A1E7 File Offset: 0x007283E7
 	private void SetAcceptedNewBeHit(bool beHit)
 	{
 		if (this.AcceptedNewBeHit != beHit)
@@ -294,13 +293,13 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5C7 RID: 107975 RVA: 0x00703549 File Offset: 0x00701749
+	// Token: 0x06017F77 RID: 98167 RVA: 0x0072A215 File Offset: 0x00728415
 	public bool GetEnterFk()
 	{
 		return this.EnterFk;
 	}
 
-	// Token: 0x0601A5C8 RID: 107976 RVA: 0x00703551 File Offset: 0x00701751
+	// Token: 0x06017F78 RID: 98168 RVA: 0x0072A21D File Offset: 0x0072841D
 	public bool GetEnterFkAndReset()
 	{
 		bool enterFk = this.EnterFk;
@@ -308,7 +307,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return enterFk;
 	}
 
-	// Token: 0x0601A5C9 RID: 107977 RVA: 0x00703560 File Offset: 0x00701760
+	// Token: 0x06017F79 RID: 98169 RVA: 0x0072A22C File Offset: 0x0072842C
 	public bool GetDoubleHitInAir()
 	{
 		if (this.IsDoubleHitInAirLastOpen != Time.Instance.Frame)
@@ -318,19 +317,19 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return this.IsDoubleHitInAir;
 	}
 
-	// Token: 0x0601A5CA RID: 107978 RVA: 0x00703581 File Offset: 0x00701781
+	// Token: 0x06017F7A RID: 98170 RVA: 0x0072A24D File Offset: 0x0072844D
 	public FBoneFeedbackAnimHitInfo GetFbHitInfo()
 	{
 		return this.TmpBoneFeedbackAnimHitInfo;
 	}
 
-	// Token: 0x0601A5CB RID: 107979 RVA: 0x00703589 File Offset: 0x00701789
+	// Token: 0x06017F7B RID: 98171 RVA: 0x0072A255 File Offset: 0x00728455
 	public void SetBeHitIgnoreRotate(bool ignoreRotate)
 	{
 		this.BeHitIgnoreRotate = ignoreRotate;
 	}
 
-	// Token: 0x0601A5CC RID: 107980 RVA: 0x00703594 File Offset: 0x00701794
+	// Token: 0x06017F7C RID: 98172 RVA: 0x0072A260 File Offset: 0x00728460
 	private bool GetBeHitIgnoreRotate()
 	{
 		if (this.IsTriggerCounterAttack)
@@ -350,13 +349,13 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return unifiedComp != null && unifiedComp.PositionState <= global::ECharPositionState.Ground;
 	}
 
-	// Token: 0x0601A5CD RID: 107981 RVA: 0x007035EA File Offset: 0x007017EA
+	// Token: 0x06017F7D RID: 98173 RVA: 0x0072A2B6 File Offset: 0x007284B6
 	public void SetRageModeId(int id)
 	{
 		this.RageModeId = id;
 	}
 
-	// Token: 0x0601A5CE RID: 107982 RVA: 0x007035F3 File Offset: 0x007017F3
+	// Token: 0x06017F7E RID: 98174 RVA: 0x0072A2BF File Offset: 0x007284BF
 	public void SetHardnessModeId(int id)
 	{
 		this.HardnessModeId = id;
@@ -366,7 +365,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5CF RID: 107983 RVA: 0x00703625 File Offset: 0x00701825
+	// Token: 0x06017F7F RID: 98175 RVA: 0x0072A2F1 File Offset: 0x007284F1
 	public void SetCounterAttackInfo(SCounterAttack counterAttackInfo)
 	{
 		this.CounterAttackInfoInternal = counterAttackInfo;
@@ -374,14 +373,14 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.AddTag(GameplayTagDefine.EGameplayTagId["怪物.逻辑.处于前摇中"]);
 	}
 
-	// Token: 0x0601A5D0 RID: 107984 RVA: 0x00703658 File Offset: 0x00701858
+	// Token: 0x06017F80 RID: 98176 RVA: 0x0072A324 File Offset: 0x00728524
 	public void SetVisionCounterAttackInfo(SVisionCounterAttack visionCounterAttackInfo)
 	{
 		this.VisionCounterAttackInfoInternal = visionCounterAttackInfo;
 		this.AddTag(GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.可被对策"]);
 	}
 
-	// Token: 0x0601A5D1 RID: 107985 RVA: 0x00703678 File Offset: 0x00701878
+	// Token: 0x06017F81 RID: 98177 RVA: 0x0072A344 File Offset: 0x00728544
 	public void SetWindupAttackInfo(SCounterWindupAttack windupAttackInfo, long anMessageId)
 	{
 		this.WindupAttackInfoInternal = windupAttackInfo;
@@ -408,20 +407,20 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5D2 RID: 107986 RVA: 0x0070371C File Offset: 0x0070191C
+	// Token: 0x06017F82 RID: 98178 RVA: 0x0072A3E8 File Offset: 0x007285E8
 	public void SetCounterAttackAnsInfo(long? anMessageId, int anIndex)
 	{
 		this.CounterAttackAnsMessageId = anMessageId;
 		this.CounterAttackAnsIndex = anIndex;
 	}
 
-	// Token: 0x0601A5D3 RID: 107987 RVA: 0x0070372C File Offset: 0x0070192C
+	// Token: 0x06017F83 RID: 98179 RVA: 0x0072A3F8 File Offset: 0x007285F8
 	public HardnessMode? GetRageMode()
 	{
 		return this.RageModeConfig;
 	}
 
-	// Token: 0x0601A5D4 RID: 107988 RVA: 0x00703734 File Offset: 0x00701934
+	// Token: 0x06017F84 RID: 98180 RVA: 0x0072A400 File Offset: 0x00728600
 	public void RefreshRageModeConfig()
 	{
 		if (this.RageModeId != 0)
@@ -444,13 +443,13 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5D5 RID: 107989 RVA: 0x007037A6 File Offset: 0x007019A6
+	// Token: 0x06017F85 RID: 98181 RVA: 0x0072A472 File Offset: 0x00728672
 	public HardnessMode? GetHardnessMode()
 	{
 		return this.HardnessModeConfig;
 	}
 
-	// Token: 0x0601A5D6 RID: 107990 RVA: 0x007037B0 File Offset: 0x007019B0
+	// Token: 0x06017F86 RID: 98182 RVA: 0x0072A47C File Offset: 0x0072867C
 	public void RefreshHardnessModeConfig()
 	{
 		if (this.HardnessModeId != 0)
@@ -473,7 +472,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5D7 RID: 107991 RVA: 0x00703824 File Offset: 0x00701A24
+	// Token: 0x06017F87 RID: 98183 RVA: 0x0072A4F0 File Offset: 0x007286F0
 	protected override void ReceiveOnHit(global::HitInformation hitData, Entity attackEntity, bool hasBeHitData, bool isChangeVictimRotation, bool enterFk, bool isHitWeakness, bool isTriggerCounterattack, bool isTriggerVisionCounterAttack, FRotator victimRotation, int fightState, EHitAnim beHitAnim)
 	{
 		if (this.ContainsAnyTag(CharacterHitComponent.forbidHitTagIds))
@@ -578,7 +577,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.OnEndHitClear();
 	}
 
-	// Token: 0x0601A5D8 RID: 107992 RVA: 0x00703B34 File Offset: 0x00701D34
+	// Token: 0x06017F88 RID: 98184 RVA: 0x0072A800 File Offset: 0x00728A00
 	private void DoHitRequest(BulletEntity bulletEntity)
 	{
 		if (this.ActorComp.CreatureData.GetEntityType() == EEntityType.Monster && !this.UnifiedComp.IsInFightState())
@@ -615,7 +614,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		});
 	}
 
-	// Token: 0x0601A5D9 RID: 107993 RVA: 0x00703C48 File Offset: 0x00701E48
+	// Token: 0x06017F89 RID: 98185 RVA: 0x0072A914 File Offset: 0x00728B14
 	[NullableContext(2)]
 	public void OnHit([Nullable(1)] global::HitInformation hitData, BulletEntity bullet, bool addAttackerEnergy, bool haveGuaranteedHit, [Nullable(new byte[]
 	{
@@ -678,7 +677,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.OnEndHitClear();
 	}
 
-	// Token: 0x0601A5DA RID: 107994 RVA: 0x00703D6B File Offset: 0x00701F6B
+	// Token: 0x06017F8A RID: 98186 RVA: 0x0072AA37 File Offset: 0x00728C37
 	private void OnEndHitClear()
 	{
 		this.HitData = null;
@@ -689,7 +688,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.CurrentFightStateHandle = 0;
 	}
 
-	// Token: 0x0601A5DB RID: 107995 RVA: 0x00703D98 File Offset: 0x00701F98
+	// Token: 0x06017F8B RID: 98187 RVA: 0x0072AA64 File Offset: 0x00728C64
 	public void ActiveStiff(float duration)
 	{
 		if (duration == 0f)
@@ -711,7 +710,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5DC RID: 107996 RVA: 0x00703E28 File Offset: 0x00702028
+	// Token: 0x06017F8C RID: 98188 RVA: 0x0072AAF4 File Offset: 0x00728CF4
 	private void DelayHandle()
 	{
 		if (base.Entity.Valid)
@@ -721,7 +720,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5DD RID: 107997 RVA: 0x00703E54 File Offset: 0x00702054
+	// Token: 0x06017F8D RID: 98189 RVA: 0x0072AB20 File Offset: 0x00728D20
 	public void DeActiveStiff(string reason = "")
 	{
 		if (this.DelayRemoveStiff != null && TimerSystem.Instance.Has(this.DelayRemoveStiff))
@@ -732,13 +731,13 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.RemoveTag(GameplayTagDefine.EGameplayTagId["功能.功能制作.被击硬直时间"]);
 	}
 
-	// Token: 0x0601A5DE RID: 107998 RVA: 0x00703EA8 File Offset: 0x007020A8
+	// Token: 0x06017F8E RID: 98190 RVA: 0x0072AB74 File Offset: 0x00728D74
 	public bool IsStiff()
 	{
 		return this.ContainsTag(GameplayTagDefine.EGameplayTagId["功能.功能制作.被击硬直时间"]);
 	}
 
-	// Token: 0x0601A5DF RID: 107999 RVA: 0x00703EC0 File Offset: 0x007020C0
+	// Token: 0x06017F8F RID: 98191 RVA: 0x0072AB8C File Offset: 0x00728D8C
 	[NullableContext(2)]
 	private void RefreshBeHitBones(FName[] boneNames)
 	{
@@ -769,7 +768,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.BeHitSocketName = new FName?(FNameUtil.EMPTY);
 	}
 
-	// Token: 0x0601A5E0 RID: 108000 RVA: 0x00703F84 File Offset: 0x00702184
+	// Token: 0x06017F90 RID: 98192 RVA: 0x0072AC50 File Offset: 0x00728E50
 	[NullableContext(2)]
 	private void CheckCounterAttack(BulletEntity bulletEntity)
 	{
@@ -806,7 +805,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5E1 RID: 108001 RVA: 0x0070403C File Offset: 0x0070223C
+	// Token: 0x06017F91 RID: 98193 RVA: 0x0072AD08 File Offset: 0x00728F08
 	[NullableContext(2)]
 	private bool CheckNormalCounterAttack(Entity bullet)
 	{
@@ -877,7 +876,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return num2 < (double)最大触发距离 && num3 > num4;
 	}
 
-	// Token: 0x0601A5E2 RID: 108002 RVA: 0x0070427C File Offset: 0x0070247C
+	// Token: 0x06017F92 RID: 98194 RVA: 0x0072AF48 File Offset: 0x00729148
 	[NullableContext(2)]
 	private bool CheckVisionCounterAttack(Entity bulletEntity)
 	{
@@ -885,7 +884,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return bulletEntity2 != null && bulletEntity2.Data.Logic.CanVisionCounterAttack && this.ContainsTag(GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.可被对策"]);
 	}
 
-	// Token: 0x0601A5E3 RID: 108003 RVA: 0x007042C4 File Offset: 0x007024C4
+	// Token: 0x06017F93 RID: 98195 RVA: 0x0072AF90 File Offset: 0x00729190
 	[NullableContext(2)]
 	private unsafe void ProcessTimeScale(Entity bulletEntity)
 	{
@@ -956,7 +955,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5E4 RID: 108004 RVA: 0x0070456C File Offset: 0x0070276C
+	// Token: 0x06017F94 RID: 98196 RVA: 0x0072B238 File Offset: 0x00729438
 	private void ProcessSelfCenter(global::HitInformation hitData)
 	{
 		if (!CharacterModel.Instance.EnabledSelfCentered)
@@ -981,7 +980,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5E5 RID: 108005 RVA: 0x00704600 File Offset: 0x00702800
+	// Token: 0x06017F95 RID: 98197 RVA: 0x0072B2CC File Offset: 0x007294CC
 	[NullableContext(2)]
 	private Dictionary<FName, EHitEffectType> GetHitEffects()
 	{
@@ -1012,7 +1011,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return BulletCollisionUtil.GetHitEffects(this.ActorComp, reBulletData.Render, this.IsHitWeakness, boneName, this.HitData.DamageId > 0L, enablePartHitAudio, this, this.OwnerTagComponent, this.AttackerEntity);
 	}
 
-	// Token: 0x0601A5E6 RID: 108006 RVA: 0x007046C4 File Offset: 0x007028C4
+	// Token: 0x06017F96 RID: 98198 RVA: 0x0072B390 File Offset: 0x00729590
 	private void ProcessHitEffect()
 	{
 		Dictionary<FName, EHitEffectType> hitEffects = this.GetHitEffects();
@@ -1055,7 +1054,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5E7 RID: 108007 RVA: 0x00704868 File Offset: 0x00702A68
+	// Token: 0x06017F97 RID: 98199 RVA: 0x0072B534 File Offset: 0x00729734
 	[NullableContext(2)]
 	private void ProcessDamage(BulletEntity bulletEntity)
 	{
@@ -1086,7 +1085,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.ProcessDamageSingle(hitInformation);
 	}
 
-	// Token: 0x0601A5E8 RID: 108008 RVA: 0x007048FC File Offset: 0x00702AFC
+	// Token: 0x06017F98 RID: 98200 RVA: 0x0072B5C8 File Offset: 0x007297C8
 	private void ProcessDamageSingle(global::HitInformation realHitInfo)
 	{
 		if (this.ShieldPartList != null && this.ShieldPartList.Length != 0)
@@ -1101,7 +1100,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5E9 RID: 108009 RVA: 0x0070494C File Offset: 0x00702B4C
+	// Token: 0x06017F99 RID: 98201 RVA: 0x0072B618 File Offset: 0x00729818
 	private void ProcessBlockDamage(CharacterPart[] blockPartList, global::HitInformation realHitInfo)
 	{
 		bool flag = false;
@@ -1125,7 +1124,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5EA RID: 108010 RVA: 0x007049E8 File Offset: 0x00702BE8
+	// Token: 0x06017F9A RID: 98202 RVA: 0x0072B6B4 File Offset: 0x007298B4
 	private void ProcessSeparateParts([Nullable(new byte[]
 	{
 		2,
@@ -1143,7 +1142,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5EB RID: 108011 RVA: 0x00704A2C File Offset: 0x00702C2C
+	// Token: 0x06017F9B RID: 98203 RVA: 0x0072B6F8 File Offset: 0x007298F8
 	private void ProcessGuarantee([Nullable(new byte[]
 	{
 		2,
@@ -1165,7 +1164,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.ToughDecreaseValue = damage2;
 	}
 
-	// Token: 0x0601A5EC RID: 108012 RVA: 0x00704A8C File Offset: 0x00702C8C
+	// Token: 0x06017F9C RID: 98204 RVA: 0x0072B758 File Offset: 0x00729958
 	private float GetDamage(global::HitInformation realHitInfo, bool forceCritical, bool blockDamage, int partId = -1, float extraRate = 1f)
 	{
 		long damageId = realHitInfo.DamageId;
@@ -1207,7 +1206,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return bulletDamageResult.ToughResult;
 	}
 
-	// Token: 0x0601A5ED RID: 108013 RVA: 0x00704C78 File Offset: 0x00702E78
+	// Token: 0x06017F9D RID: 98205 RVA: 0x0072B944 File Offset: 0x00729B44
 	private global::HitInformation SetRealHitInfo(global::HitInformation hitInfo)
 	{
 		CharacterFollowComponent component = this.AttackerEntity.GetComponent<CharacterFollowComponent>();
@@ -1221,7 +1220,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return hitInfo;
 	}
 
-	// Token: 0x0601A5EE RID: 108014 RVA: 0x00704CD4 File Offset: 0x00702ED4
+	// Token: 0x06017F9E RID: 98206 RVA: 0x0072B9A0 File Offset: 0x00729BA0
 	private void ProcessCameraEffect()
 	{
 		if (this.IsCooling)
@@ -1248,7 +1247,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 			ResourceSystem.Instance.LoadAsync<UClass>(fname.ToString(), delegate([Nullable(2)] UClass res, string _)
 			{
 				FVectorDouble value = Global.CharacterCameraManager.D_GetCameraLocation();
-				CameraController.Instance.PlayWorldCameraShake(res, new FVectorDouble?(value), 0f, 100f, 1f, false, "MainCamera");
+				CameraController.Instance.PlayWorldCameraShake(new TSubclassOf<UCameraShakeBase>?(res), new FVectorDouble?(value), 0f, 100f, 1f, false, "MainCamera");
 			}, 100, "js_undefined");
 			return;
 		}
@@ -1257,12 +1256,12 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 			ResourceSystem.Instance.LoadAsync<UClass>(victimCameraShakeOnHit.ToString(), delegate([Nullable(2)] UClass res, string _)
 			{
 				FVectorDouble value = Global.CharacterCameraManager.D_GetCameraLocation();
-				CameraController.Instance.PlayWorldCameraShake(res, new FVectorDouble?(value), 0f, 100f, 1f, false, "MainCamera");
+				CameraController.Instance.PlayWorldCameraShake(new TSubclassOf<UCameraShakeBase>?(res), new FVectorDouble?(value), 0f, 100f, 1f, false, "MainCamera");
 			}, 100, "js_undefined");
 		}
 	}
 
-	// Token: 0x0601A5EF RID: 108015 RVA: 0x00704E04 File Offset: 0x00703004
+	// Token: 0x06017F9F RID: 98207 RVA: 0x0072BAD0 File Offset: 0x00729CD0
 	[NullableContext(2)]
 	private void EnableFk(BulletEntity bulletEntity, EHitAnim beHitAnim)
 	{
@@ -1321,7 +1320,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5F0 RID: 108016 RVA: 0x00705020 File Offset: 0x00703220
+	// Token: 0x06017FA0 RID: 98208 RVA: 0x0072BCEC File Offset: 0x00729EEC
 	private void ProcessMain(BulletEntity bulletEntity)
 	{
 		if (this.IsTriggerCounterAttack)
@@ -1429,13 +1428,13 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.PlayForceFeedback(CharacterHitComponent.lightHits.Contains(this.BeHitAnim) ? EHitFeedbackType.Light : EHitFeedbackType.Heavy);
 	}
 
-	// Token: 0x0601A5F1 RID: 108017 RVA: 0x00705373 File Offset: 0x00703573
+	// Token: 0x06017FA1 RID: 98209 RVA: 0x0072C03F File Offset: 0x0072A23F
 	public void ConfirmExecutedBeHitState()
 	{
 		this.ExecutedBeHitState = true;
 	}
 
-	// Token: 0x0601A5F2 RID: 108018 RVA: 0x0070537C File Offset: 0x0070357C
+	// Token: 0x06017FA2 RID: 98210 RVA: 0x0072C048 File Offset: 0x0072A248
 	private void TriggerBeHitStateMachine()
 	{
 		if (!this.IsTriggerCounterAttack && this.IsCooling)
@@ -1477,7 +1476,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5F3 RID: 108019 RVA: 0x00705474 File Offset: 0x00703674
+	// Token: 0x06017FA3 RID: 98211 RVA: 0x0072C140 File Offset: 0x0072A340
 	private void RemoveBuffByTag()
 	{
 		if (this.ContainsTag(GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.可被弹反"]))
@@ -1486,7 +1485,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5F4 RID: 108020 RVA: 0x007054C8 File Offset: 0x007036C8
+	// Token: 0x06017FA4 RID: 98212 RVA: 0x0072C194 File Offset: 0x0072A394
 	protected override void BroadcastEvent(global::HitInformation hitData)
 	{
 		int visionCounterAttackId = 0;
@@ -1562,7 +1561,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		component3.Tick(0f);
 	}
 
-	// Token: 0x0601A5F5 RID: 108021 RVA: 0x00705738 File Offset: 0x00703938
+	// Token: 0x06017FA5 RID: 98213 RVA: 0x0072C404 File Offset: 0x0072A604
 	private void SwitchHitEffect(SHitEffect hitEffect)
 	{
 		if (this.ContainsTag(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.攀爬"]))
@@ -1645,7 +1644,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.GroundHit(hitEffect);
 	}
 
-	// Token: 0x0601A5F6 RID: 108022 RVA: 0x00705920 File Offset: 0x00703B20
+	// Token: 0x06017FA6 RID: 98214 RVA: 0x0072C5EC File Offset: 0x0072A7EC
 	private void BeginWhirlpool(SHitWhirlpool whirlpool, float duration)
 	{
 		CharacterMoveComponent component = base.Entity.GetComponent<CharacterMoveComponent>();
@@ -1682,13 +1681,13 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5F7 RID: 108023 RVA: 0x00705A60 File Offset: 0x00703C60
+	// Token: 0x06017FA7 RID: 98215 RVA: 0x0072C72C File Offset: 0x0072A92C
 	private bool IsBeginWhirlpool(float duration)
 	{
 		return duration > 0f;
 	}
 
-	// Token: 0x0601A5F8 RID: 108024 RVA: 0x00705A6C File Offset: 0x00703C6C
+	// Token: 0x06017FA8 RID: 98216 RVA: 0x0072C738 File Offset: 0x0072A938
 	private void SimulateSwitchHitEffect(SHitEffect hitEffect)
 	{
 		this.SetAcceptedNewBeHit(true);
@@ -1702,7 +1701,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.GroundHit(hitEffect);
 	}
 
-	// Token: 0x0601A5F9 RID: 108025 RVA: 0x00705ABC File Offset: 0x00703CBC
+	// Token: 0x06017FA9 RID: 98217 RVA: 0x0072C788 File Offset: 0x0072A988
 	private void AirHit(SHitEffect hitEffect, bool inAir)
 	{
 		this.ActiveStiff(-1f);
@@ -1747,7 +1746,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A5FA RID: 108026 RVA: 0x00705C50 File Offset: 0x00703E50
+	// Token: 0x06017FAA RID: 98218 RVA: 0x0072C91C File Offset: 0x0072AB1C
 	private unsafe void DoubleAirHit()
 	{
 		if (!this.DoubleHitInAirEffect.Valid)
@@ -1798,7 +1797,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.IsDoubleHitInAirLastOpen = Time.Instance.Frame;
 	}
 
-	// Token: 0x0601A5FB RID: 108027 RVA: 0x00705F0C File Offset: 0x0070410C
+	// Token: 0x06017FAB RID: 98219 RVA: 0x0072CBD8 File Offset: 0x0072ADD8
 	private void GroundHit(SHitEffect hitEffect)
 	{
 		FVectorDouble fvectorDouble = new FVectorDouble((double)hitEffect.地面受击速度.X, (double)hitEffect.地面受击速度.Y, 0.0);
@@ -1825,7 +1824,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.ActiveStiff(命中硬直时间);
 	}
 
-	// Token: 0x0601A5FC RID: 108028 RVA: 0x00706010 File Offset: 0x00704210
+	// Token: 0x06017FAC RID: 98220 RVA: 0x0072CCDC File Offset: 0x0072AEDC
 	private EHitAnim HitOverride(EHitAnim hitAnim)
 	{
 		EHitAnim result;
@@ -1854,7 +1853,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0601A5FD RID: 108029 RVA: 0x00706094 File Offset: 0x00704294
+	// Token: 0x06017FAD RID: 98221 RVA: 0x0072CD60 File Offset: 0x0072AF60
 	private void ProcessCounterAttackBuff()
 	{
 		RoleAudioController.Instance.PlayRoleAudio(this.AttackerEntity, ERoleAudioType.Parry, null);
@@ -1921,7 +1920,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		});
 	}
 
-	// Token: 0x0601A5FE RID: 108030 RVA: 0x00706290 File Offset: 0x00704490
+	// Token: 0x06017FAE RID: 98222 RVA: 0x0072CF5C File Offset: 0x0072B15C
 	private void BeCounterAttack(global::HitInformation hitData)
 	{
 		ECounterAttackType counterAttackType = this.CounterAttackType;
@@ -1937,7 +1936,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.BeVisionCounterAttack(hitData);
 	}
 
-	// Token: 0x0601A5FF RID: 108031 RVA: 0x007062BC File Offset: 0x007044BC
+	// Token: 0x06017FAF RID: 98223 RVA: 0x0072CF88 File Offset: 0x0072B188
 	private void BeNormalCounterAttack(global::HitInformation hitData)
 	{
 		SCounterAttackEffect counterAttackEffect = this.CounterAttackInfoInternal.无弹反动作效果;
@@ -1966,7 +1965,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A600 RID: 108032 RVA: 0x007063C4 File Offset: 0x007045C4
+	// Token: 0x06017FB0 RID: 98224 RVA: 0x0072D090 File Offset: 0x0072B290
 	private void BeVisionCounterAttack(global::HitInformation hitData)
 	{
 		this.IsTriggerCounterAnimation = !this.VisionCounterAttackInfoInternal.广播对策事件;
@@ -1980,7 +1979,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.BeCounterAttackMontage();
 	}
 
-	// Token: 0x0601A601 RID: 108033 RVA: 0x00706438 File Offset: 0x00704638
+	// Token: 0x06017FB1 RID: 98225 RVA: 0x0072D104 File Offset: 0x0072B304
 	private void CounterAttackChangeTough()
 	{
 		if (this.BuffComp == null)
@@ -2007,7 +2006,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.ToughReduceHandle = this.BuffComp.AddAttributeRateModifierLocal(EAttributeType.ToughReduce, this.CounterAttackInfoInternal.削韧倍率, "弹反修改韧性倍率");
 	}
 
-	// Token: 0x0601A602 RID: 108034 RVA: 0x007064FC File Offset: 0x007046FC
+	// Token: 0x06017FB2 RID: 98226 RVA: 0x0072D1C8 File Offset: 0x0072B3C8
 	public void CounterAttackEnd()
 	{
 		if (this.ToughReduceHandle != 0)
@@ -2033,7 +2032,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.HadTriggerCounterAttackInternal = false;
 	}
 
-	// Token: 0x0601A603 RID: 108035 RVA: 0x007065CE File Offset: 0x007047CE
+	// Token: 0x06017FB3 RID: 98227 RVA: 0x0072D29A File Offset: 0x0072B49A
 	public void VisionCounterAttackEnd()
 	{
 		this.RemoveTag(GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.可被对策"]);
@@ -2044,7 +2043,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.HadTriggerCounterAttackInternal = false;
 	}
 
-	// Token: 0x0601A604 RID: 108036 RVA: 0x007065FC File Offset: 0x007047FC
+	// Token: 0x06017FB4 RID: 98228 RVA: 0x0072D2C8 File Offset: 0x0072B4C8
 	public void WindupAttackEnd()
 	{
 		this.RemoveTag(GameplayTagDefine.EGameplayTagId["怪物.逻辑.处于前摇中"]);
@@ -2065,7 +2064,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A605 RID: 108037 RVA: 0x00706690 File Offset: 0x00704890
+	// Token: 0x06017FB5 RID: 98229 RVA: 0x0072D35C File Offset: 0x0072B55C
 	private bool CheckBuff()
 	{
 		if (this.CounterAttackInfoInternal.受击动画忽略Buff检测)
@@ -2089,7 +2088,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601A606 RID: 108038 RVA: 0x007066FC File Offset: 0x007048FC
+	// Token: 0x06017FB6 RID: 98230 RVA: 0x0072D3C8 File Offset: 0x0072B5C8
 	public void SetCounterAttackEndTime(float baseTime)
 	{
 		UAnimInstance mainAnimInstance = base.Entity.GetComponent<CharacterAnimationComponent>().MainAnimInstance;
@@ -2099,7 +2098,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A607 RID: 108039 RVA: 0x00706734 File Offset: 0x00704934
+	// Token: 0x06017FB7 RID: 98231 RVA: 0x0072D400 File Offset: 0x0072B600
 	public void OnReboundSuccess(TSoftObjectPtr<UEffectModelBase> onReboundDa, FTransformDouble transform, bool disablePostProcess)
 	{
 		EffectContext context = HitStaticFunction.CreateEffectContext(base.Entity, disablePostProcess);
@@ -2118,12 +2117,13 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 			EffectSystem.Instance.SetTimeScale(num, freezeTimeScale * base.TimeDilation, true);
 			EffectSystem.Instance.SetAdditionTimeScale(ETimeScaleSourceType.SelfCentered, num, CharacterModel.Instance.InverseSelfCenteredTimeDilation);
 		}
-		List<int> list = this.BeHitEffectIdList.ToList<int>();
-		list.Add(num);
-		this.BeHitEffectIdList = list.ToArray();
+		int[] array = new int[this.BeHitEffectIdList.Length + 1];
+		this.BeHitEffectIdList.CopyTo(array, 0);
+		array[this.BeHitEffectIdList.Length] = num;
+		this.BeHitEffectIdList = array;
 	}
 
-	// Token: 0x0601A608 RID: 108040 RVA: 0x007067E8 File Offset: 0x007049E8
+	// Token: 0x06017FB8 RID: 98232 RVA: 0x0072D4C4 File Offset: 0x0072B6C4
 	private void BeCounterAttackEffect(global::HitInformation hitData, SCounterAttackEffect counterAttackEffect)
 	{
 		FSoftObjectPath 特效DA = counterAttackEffect.特效DA;
@@ -2136,7 +2136,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.PlayCounterAttackEffect(hitData, effectPath, new FVectorDouble(ref 特效Scale));
 	}
 
-	// Token: 0x0601A609 RID: 108041 RVA: 0x00706828 File Offset: 0x00704A28
+	// Token: 0x06017FB9 RID: 98233 RVA: 0x0072D504 File Offset: 0x0072B704
 	public void PlayCounterAttackEffect(global::HitInformation hitData, string effectPath, FVectorDouble scale)
 	{
 		if (string.IsNullOrEmpty(effectPath))
@@ -2164,12 +2164,13 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 			EffectSystem.Instance.SetTimeScale(num, freezeTimeScale * base.TimeDilation, true);
 			EffectSystem.Instance.SetAdditionTimeScale(ETimeScaleSourceType.SelfCentered, num, CharacterModel.Instance.InverseSelfCenteredTimeDilation);
 		}
-		List<int> list = this.BeHitEffectIdList.ToList<int>();
-		list.Add(num);
-		this.BeHitEffectIdList = list.ToArray();
+		int[] array = new int[this.BeHitEffectIdList.Length + 1];
+		this.BeHitEffectIdList.CopyTo(array, 0);
+		array[this.BeHitEffectIdList.Length] = num;
+		this.BeHitEffectIdList = array;
 	}
 
-	// Token: 0x0601A60A RID: 108042 RVA: 0x0070693C File Offset: 0x00704B3C
+	// Token: 0x06017FBA RID: 98234 RVA: 0x0072D628 File Offset: 0x0072B828
 	private void BeCounterAttackTimeScale(SCounterAttackEffect counterAttackEffect)
 	{
 		STimeScale stimeScale = counterAttackEffect.被击者顿帧;
@@ -2182,18 +2183,18 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.AttackerEntity.GetComponent<PawnTimeScaleComponent>().SetTimeScale(stimeScale.优先级, stimeScale.时间膨胀值, stimeScale.时间膨胀变化曲线, stimeScale.时间膨胀时长, ETimeScaleSourceType.Counter, false, true);
 	}
 
-	// Token: 0x0601A60B RID: 108043 RVA: 0x007069B0 File Offset: 0x00704BB0
+	// Token: 0x06017FBB RID: 98235 RVA: 0x0072D69C File Offset: 0x0072B89C
 	private void BeCounterAttackCamera(SCounterAttackEffect counterAttackEffect)
 	{
 		if (!CameraController.Instance.MainModel.IsModeEnabled(ECustomCameraMode.Widget) && !CameraController.Instance.MainModel.IsModeEnabled(ECustomCameraMode.Sequence))
 		{
 			FVectorDouble value = CameraModel.Instance.MainModel.FightCamera.GetComponent<FightCameraDisplayComponent>().CameraActor.D_K2_GetActorLocation();
-			CameraController.Instance.PlayWorldCameraShake(counterAttackEffect.震屏.Get().ToClass(), new FVectorDouble?(value), 0f, 100f, 1f, false, "MainCamera");
+			CameraController.Instance.PlayWorldCameraShake(new TSubclassOf<UCameraShakeBase>?(counterAttackEffect.震屏.Get().ToClass()), new FVectorDouble?(value), 0f, 100f, 1f, false, "MainCamera");
 		}
 		CameraController.Instance.MainModel.FightCamera.LogicComponent.ApplyCameraModify(new FGameplayTag?(counterAttackEffect.摄像机设置.Tag), counterAttackEffect.摄像机设置.持续时间, counterAttackEffect.摄像机设置.淡入时间, counterAttackEffect.摄像机设置.淡出时间, counterAttackEffect.摄像机设置.摄像机配置, null, counterAttackEffect.摄像机设置.打断淡出时间, null, null, default(OneOf<TsBaseCharacter, TsBaseVehicle>), counterAttackEffect.摄像机设置.CameraAttachSocket, default(OneOf<TsBaseCharacter, TsBaseVehicle>));
 	}
 
-	// Token: 0x0601A60C RID: 108044 RVA: 0x00706AC0 File Offset: 0x00704CC0
+	// Token: 0x06017FBC RID: 98236 RVA: 0x0072D7B0 File Offset: 0x0072B9B0
 	private void BeCounterAttackMontage()
 	{
 		if (!this.ContainsAnyTag(CharacterHitComponent.forbidHitTagIds))
@@ -2206,8 +2207,8 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002449 RID: 9289
-	// (get) Token: 0x0601A60D RID: 108045 RVA: 0x00706AFA File Offset: 0x00704CFA
+	// Token: 0x17002577 RID: 9591
+	// (get) Token: 0x06017FBD RID: 98237 RVA: 0x0072D7EA File Offset: 0x0072B9EA
 	public bool IsTriggerCounterAttack
 	{
 		get
@@ -2216,7 +2217,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A60E RID: 108046 RVA: 0x00706B08 File Offset: 0x00704D08
+	// Token: 0x06017FBE RID: 98238 RVA: 0x0072D7F8 File Offset: 0x0072B9F8
 	private void RequestTriggerCounterAttack()
 	{
 		if (!this.IsTriggerCounterAttack)
@@ -2239,7 +2240,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		CombatNet.Instance.Send(EPushMessageId.BeforeHitPush, base.Entity, beforeHitPush, null, null, null);
 	}
 
-	// Token: 0x0601A60F RID: 108047 RVA: 0x00706BB8 File Offset: 0x00704DB8
+	// Token: 0x06017FBF RID: 98239 RVA: 0x0072D8A8 File Offset: 0x0072BAA8
 	private void ImmuneTimeScaleEffect()
 	{
 		if (base.Entity.GetComponent<BaseFrozenComponent>() != null)
@@ -2252,7 +2253,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A610 RID: 108048 RVA: 0x00706BFD File Offset: 0x00704DFD
+	// Token: 0x06017FC0 RID: 98240 RVA: 0x0072D8ED File Offset: 0x0072BAED
 	public void AddImmuneTimeScaleEffectTimer(float timeScaleEffectImmuneDuration)
 	{
 		if (!this.RemoveImmuneTimeScaleEffectTimer())
@@ -2266,7 +2267,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}, timeScaleEffectImmuneDuration, null, null, true, 1f);
 	}
 
-	// Token: 0x0601A611 RID: 108049 RVA: 0x00706C33 File Offset: 0x00704E33
+	// Token: 0x06017FC1 RID: 98241 RVA: 0x0072D923 File Offset: 0x0072BB23
 	private bool RemoveImmuneTimeScaleEffectTimer()
 	{
 		if (TimerSystem.Instance.Has(this.ImmuneTimeScaleEffectTimer))
@@ -2278,13 +2279,13 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0601A612 RID: 108050 RVA: 0x00706C62 File Offset: 0x00704E62
+	// Token: 0x06017FC2 RID: 98242 RVA: 0x0072D952 File Offset: 0x0072BB52
 	public bool IsImmuneTimeScaleEffect()
 	{
 		return TimerSystem.Instance.Has(this.ImmuneTimeScaleEffectTimer);
 	}
 
-	// Token: 0x0601A613 RID: 108051 RVA: 0x00706C74 File Offset: 0x00704E74
+	// Token: 0x06017FC3 RID: 98243 RVA: 0x0072D964 File Offset: 0x0072BB64
 	private void PlayForceFeedback(EHitFeedbackType type)
 	{
 		Entity entity = base.Entity;
@@ -2296,14 +2297,14 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		GamepadController.Instance.PlayForceFeedbackByHit(type);
 	}
 
-	// Token: 0x0601A614 RID: 108052 RVA: 0x00706C9B File Offset: 0x00704E9B
+	// Token: 0x06017FC4 RID: 98244 RVA: 0x0072D98B File Offset: 0x0072BB8B
 	[NullableContext(2)]
 	public Entity GetAttackerEntity()
 	{
 		return this.AttackerEntity;
 	}
 
-	// Token: 0x0601A615 RID: 108053 RVA: 0x00706CA4 File Offset: 0x00704EA4
+	// Token: 0x06017FC5 RID: 98245 RVA: 0x0072D994 File Offset: 0x0072BB94
 	private void InitOnHitMaterialAction()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -2313,7 +2314,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A616 RID: 108054 RVA: 0x00706D00 File Offset: 0x00704F00
+	// Token: 0x06017FC6 RID: 98246 RVA: 0x0072D9F0 File Offset: 0x0072BBF0
 	public void ProcessOnHitMaterial()
 	{
 		if (this.IsCooling || !BulletModel.Instance.OpenHitMaterial || this.OnHitMaterialAction == null)
@@ -2357,7 +2358,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A617 RID: 108055 RVA: 0x00706E54 File Offset: 0x00705054
+	// Token: 0x06017FC7 RID: 98247 RVA: 0x0072DB44 File Offset: 0x0072BD44
 	public bool ReplaceHitEffect(BP_ReplaceHitEffect_C dataAsset)
 	{
 		if (this.HitEffectReplaced != null)
@@ -2370,21 +2371,21 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601A618 RID: 108056 RVA: 0x00706E99 File Offset: 0x00705099
+	// Token: 0x06017FC8 RID: 98248 RVA: 0x0072DB89 File Offset: 0x0072BD89
 	public void RemoveHitEffectReplaced()
 	{
 		this.HitEffectReplaced = null;
 		this.HitEffectReplacedIgnoreBones = null;
 	}
 
-	// Token: 0x0601A619 RID: 108057 RVA: 0x00706EA9 File Offset: 0x007050A9
+	// Token: 0x06017FC9 RID: 98249 RVA: 0x0072DB99 File Offset: 0x0072BD99
 	[NullableContext(2)]
 	public BP_ReplaceHitEffect_C GetHitEffectReplaced()
 	{
 		return this.HitEffectReplaced;
 	}
 
-	// Token: 0x0601A61A RID: 108058 RVA: 0x00706EB4 File Offset: 0x007050B4
+	// Token: 0x06017FCA RID: 98250 RVA: 0x0072DBA4 File Offset: 0x0072BDA4
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -2414,7 +2415,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		return this.HitEffectReplacedIgnoreBones;
 	}
 
-	// Token: 0x0601A61B RID: 108059 RVA: 0x00706F34 File Offset: 0x00705134
+	// Token: 0x06017FCB RID: 98251 RVA: 0x0072DC24 File Offset: 0x0072BE24
 	public void OnHitByKuroBullet(int attackerEntityId, long damageId, FVectorDouble hitPosition, FWorldEntityBulletParam extraParam)
 	{
 		this.HitData = null;
@@ -2435,7 +2436,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		this.OnEndHitClear();
 	}
 
-	// Token: 0x0601A61C RID: 108060 RVA: 0x00706FC8 File Offset: 0x007051C8
+	// Token: 0x06017FCC RID: 98252 RVA: 0x0072DCB8 File Offset: 0x0072BEB8
 	public float ProcessDamageByKuroBullet(long damageId, FVectorDouble hitPosition, FWorldEntityBulletParam extraParam)
 	{
 		CharacterDamageComponent component = base.Entity.GetComponent<CharacterDamageComponent>();
@@ -2463,19 +2464,19 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}, extraParam);
 	}
 
-	// Token: 0x0601A61D RID: 108061 RVA: 0x007070A1 File Offset: 0x007052A1
+	// Token: 0x06017FCD RID: 98253 RVA: 0x0072DD91 File Offset: 0x0072BF91
 	public static void CreateStaticDefaultValue()
 	{
 		CharacterHitComponent.RotateBeHitAnimations = null;
 	}
 
-	// Token: 0x0601A61E RID: 108062 RVA: 0x007070A9 File Offset: 0x007052A9
+	// Token: 0x06017FCE RID: 98254 RVA: 0x0072DD99 File Offset: 0x0072BF99
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterHitComponent.RotateBeHitAnimations = null;
 	}
 
-	// Token: 0x0601A61F RID: 108063 RVA: 0x007070B4 File Offset: 0x007052B4
+	// Token: 0x06017FCF RID: 98255 RVA: 0x0072DDA4 File Offset: 0x0072BFA4
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -2483,530 +2484,378 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 			return false;
 		}
 		CharacterHitComponent characterHitComponent = (CharacterHitComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterHitComponent.ActorComp == null)
 		{
-			if (characterHitComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("SkillComp"))
-		{
-			if (characterHitComponent.SkillComp == null)
-			{
-				this.SkillComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterSkillComponent>(this.SkillComp), "SkillComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("UnifiedComp"))
-		{
-			if (characterHitComponent.UnifiedComp == null)
-			{
-				this.UnifiedComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedComp), "UnifiedComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MoveSyncComp"))
-		{
-			if (characterHitComponent.MoveSyncComp == null)
-			{
-				this.MoveSyncComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMovementSyncComponent>(this.MoveSyncComp), "MoveSyncComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TimeScaleComp"))
-		{
-			if (characterHitComponent.TimeScaleComp == null)
-			{
-				this.TimeScaleComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnTimeScaleComponent>(this.TimeScaleComp), "TimeScaleComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AttackerEntity"))
-		{
-			if (characterHitComponent.AttackerEntity == null)
-			{
-				this.AttackerEntity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.AttackerEntity), "AttackerEntity"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("FightStateComp"))
-		{
-			if (characterHitComponent.FightStateComp == null)
-			{
-				this.FightStateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterFightStateComponent>(this.FightStateComp), "FightStateComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("HitData"))
-		{
-			if (characterHitComponent.HitData == null)
-			{
-				this.HitData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::HitInformation>(this.HitData), "HitData"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("LastHitData"))
-		{
-			if (characterHitComponent.LastHitData == null)
-			{
-				this.LastHitData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::HitInformation>(this.LastHitData), "LastHitData"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsHitWeakness"))
-		{
-			this.IsHitWeakness = characterHitComponent.IsHitWeakness;
-		}
-		if (base.CanResetComponentProperty("AddAttackerEnergy"))
-		{
-			this.AddAttackerEnergy = characterHitComponent.AddAttackerEnergy;
-		}
-		if (base.CanResetComponentProperty("ShieldPartList"))
-		{
-			if (characterHitComponent.ShieldPartList == null)
-			{
-				this.ShieldPartList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterPart[]>(this.ShieldPartList), "ShieldPartList"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SeparatePartList"))
-		{
-			if (characterHitComponent.SeparatePartList == null)
-			{
-				this.SeparatePartList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterPart[]>(this.SeparatePartList), "SeparatePartList"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CommonPartList"))
-		{
-			if (characterHitComponent.CommonPartList == null)
-			{
-				this.CommonPartList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterPart[]>(this.CommonPartList), "CommonPartList"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CounterAttackType"))
-		{
-			this.CounterAttackType = characterHitComponent.CounterAttackType;
-		}
-		if (base.CanResetComponentProperty("HadTriggerCounterAttackInternal"))
-		{
-			this.HadTriggerCounterAttackInternal = characterHitComponent.HadTriggerCounterAttackInternal;
-		}
-		if (base.CanResetComponentProperty("VictimRotation"))
-		{
-			this.VictimRotation = characterHitComponent.VictimRotation;
-		}
-		if (base.CanResetComponentProperty("RageModeConfig"))
-		{
-			this.RageModeConfig = characterHitComponent.RageModeConfig;
-		}
-		if (base.CanResetComponentProperty("HardnessModeConfig"))
-		{
-			this.HardnessModeConfig = characterHitComponent.HardnessModeConfig;
-		}
-		if (base.CanResetComponentProperty("CurrentFightStateHandle"))
-		{
-			this.CurrentFightStateHandle = characterHitComponent.CurrentFightStateHandle;
-		}
-		if (base.CanResetComponentProperty("RageModeId"))
-		{
-			this.RageModeId = characterHitComponent.RageModeId;
-		}
-		if (base.CanResetComponentProperty("HardnessModeId"))
-		{
-			this.HardnessModeId = characterHitComponent.HardnessModeId;
-		}
-		if (base.CanResetComponentProperty("BeHitBones"))
-		{
-			if (characterHitComponent.BeHitBones == null)
-			{
-				this.BeHitBones = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FName[]>(this.BeHitBones), "BeHitBones"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ToughDecreaseValue"))
-		{
-			this.ToughDecreaseValue = characterHitComponent.ToughDecreaseValue;
-		}
-		if (base.CanResetComponentProperty("BeHitIgnoreRotate"))
-		{
-			this.BeHitIgnoreRotate = characterHitComponent.BeHitIgnoreRotate;
-		}
-		if (base.CanResetComponentProperty("CounterAttackInfoInternal"))
-		{
-			if (characterHitComponent.CounterAttackInfoInternal == null)
-			{
-				this.CounterAttackInfoInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SCounterAttack>(this.CounterAttackInfoInternal), "CounterAttackInfoInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("VisionCounterAttackInfoInternal"))
-		{
-			if (characterHitComponent.VisionCounterAttackInfoInternal == null)
-			{
-				this.VisionCounterAttackInfoInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SVisionCounterAttack>(this.VisionCounterAttackInfoInternal), "VisionCounterAttackInfoInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("WindupAttackInfoInternal"))
-		{
-			if (characterHitComponent.WindupAttackInfoInternal == null)
-			{
-				this.WindupAttackInfoInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SCounterWindupAttack>(this.WindupAttackInfoInternal), "WindupAttackInfoInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BeHitTime"))
-		{
-			this.BeHitTime = characterHitComponent.BeHitTime;
-		}
-		if (base.CanResetComponentProperty("NeedCalculateFallInjure"))
-		{
-			this.NeedCalculateFallInjure = characterHitComponent.NeedCalculateFallInjure;
-		}
-		if (base.CanResetComponentProperty("BeHitAnim"))
-		{
-			this.BeHitAnim = characterHitComponent.BeHitAnim;
-		}
-		if (base.CanResetComponentProperty("AcceptedNewBeHit"))
-		{
-			this.AcceptedNewBeHit = characterHitComponent.AcceptedNewBeHit;
-		}
-		if (base.CanResetComponentProperty("EnterFk"))
-		{
-			this.EnterFk = characterHitComponent.EnterFk;
-		}
-		if (base.CanResetComponentProperty("HitInfoCollectFrame"))
-		{
-			this.HitInfoCollectFrame = characterHitComponent.HitInfoCollectFrame;
-		}
-		if (base.CanResetComponentProperty("HasBeHitAnim"))
-		{
-			this.HasBeHitAnim = characterHitComponent.HasBeHitAnim;
-		}
-		if (base.CanResetComponentProperty("BeHitDirect") && characterHitComponent.BeHitDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.BeHitDirect), "BeHitDirect"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BeHitLocation") && characterHitComponent.BeHitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.BeHitLocation), "BeHitLocation"))
+		if (characterHitComponent.SkillComp == null)
+		{
+			this.SkillComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComp), "SkillComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BeHitSocketName"))
+		if (characterHitComponent.UnifiedComp == null)
 		{
-			this.BeHitSocketName = characterHitComponent.BeHitSocketName;
+			this.UnifiedComp = null;
 		}
-		if (base.CanResetComponentProperty("BeHitMapping"))
-		{
-			if (characterHitComponent.BeHitMapping == null)
-			{
-				this.BeHitMapping = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SHitMapping>(this.BeHitMapping), "BeHitMapping"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsTriggerCounterAnimation"))
-		{
-			this.IsTriggerCounterAnimation = characterHitComponent.IsTriggerCounterAnimation;
-		}
-		if (base.CanResetComponentProperty("ToughReduceHandle"))
-		{
-			this.ToughReduceHandle = characterHitComponent.ToughReduceHandle;
-		}
-		if (base.CanResetComponentProperty("CounterAttackEndTimeInternal"))
-		{
-			this.CounterAttackEndTimeInternal = characterHitComponent.CounterAttackEndTimeInternal;
-		}
-		if (base.CanResetComponentProperty("BeHitEffectIdList"))
-		{
-			if (characterHitComponent.BeHitEffectIdList == null)
-			{
-				this.BeHitEffectIdList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int[]>(this.BeHitEffectIdList), "BeHitEffectIdList"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OwnerAttributeComponent"))
-		{
-			if (characterHitComponent.OwnerAttributeComponent == null)
-			{
-				this.OwnerAttributeComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseAttributeComponent>(this.OwnerAttributeComponent), "OwnerAttributeComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BuffComp"))
-		{
-			if (characterHitComponent.BuffComp == null)
-			{
-				this.BuffComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterBuffComponent>(this.BuffComp), "BuffComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OwnerTagComponent"))
-		{
-			if (characterHitComponent.OwnerTagComponent == null)
-			{
-				this.OwnerTagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.OwnerTagComponent), "OwnerTagComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("VelocityAdditionHandler"))
-		{
-			this.VelocityAdditionHandler = characterHitComponent.VelocityAdditionHandler;
-		}
-		if (base.CanResetComponentProperty("HaveGuaranteedHit"))
-		{
-			this.HaveGuaranteedHit = characterHitComponent.HaveGuaranteedHit;
-		}
-		if (base.CanResetComponentProperty("DelayRemoveStiff"))
-		{
-			if (characterHitComponent.DelayRemoveStiff == null)
-			{
-				this.DelayRemoveStiff = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DelayRemoveStiff), "DelayRemoveStiff"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TmpRotator") && characterHitComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.TmpRotator), "TmpRotator"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedComp), "UnifiedComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpQuat") && characterHitComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat), "TmpQuat"))
+		if (characterHitComponent.MoveSyncComp == null)
+		{
+			this.MoveSyncComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveSyncComp), "MoveSyncComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("OnTimeScale"))
+		if (characterHitComponent.TimeScaleComp == null)
 		{
-			if (characterHitComponent.OnTimeScale == null)
-			{
-				this.OnTimeScale = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<float, ETimeScaleSourceType>>(this.OnTimeScale), "OnTimeScale"))
-			{
-				return false;
-			}
+			this.TimeScaleComp = null;
 		}
-		if (base.CanResetComponentProperty("HitEffectMap"))
-		{
-			if (characterHitComponent.HitEffectMap == null)
-			{
-				this.HitEffectMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, Queue<int>>>(this.HitEffectMap), "HitEffectMap"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OnHitMaterialAction"))
-		{
-			if (characterHitComponent.OnHitMaterialAction == null)
-			{
-				this.OnHitMaterialAction = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<OnHitMaterialAction>(this.OnHitMaterialAction), "OnHitMaterialAction"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("HitEffectReplaced"))
-		{
-			if (characterHitComponent.HitEffectReplaced == null)
-			{
-				this.HitEffectReplaced = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BP_ReplaceHitEffect_C>(this.HitEffectReplaced), "HitEffectReplaced"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("HitEffectReplacedIgnoreBones"))
-		{
-			if (characterHitComponent.HitEffectReplacedIgnoreBones == null)
-			{
-				this.HitEffectReplacedIgnoreBones = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.HitEffectReplacedIgnoreBones), "HitEffectReplacedIgnoreBones"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("Optimize"))
-		{
-			if (characterHitComponent.Optimize == null)
-			{
-				this.Optimize = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterHitOptimize>(this.Optimize), "Optimize"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsCooling"))
-		{
-			this.IsCooling = characterHitComponent.IsCooling;
-		}
-		if (base.CanResetComponentProperty("ShouldOptimize"))
-		{
-			this.ShouldOptimize = characterHitComponent.ShouldOptimize;
-		}
-		if (base.CanResetComponentProperty("OnCharPositionStateChanged"))
-		{
-			if (characterHitComponent.OnCharPositionStateChanged == null)
-			{
-				this.OnCharPositionStateChanged = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<global::ECharPositionState, global::ECharPositionState>>(this.OnCharPositionStateChanged), "OnCharPositionStateChanged"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsDoubleHitInAir"))
-		{
-			this.IsDoubleHitInAir = characterHitComponent.IsDoubleHitInAir;
-		}
-		if (base.CanResetComponentProperty("IsDoubleHitInAirLastOpen"))
-		{
-			this.IsDoubleHitInAirLastOpen = characterHitComponent.IsDoubleHitInAirLastOpen;
-		}
-		if (base.CanResetComponentProperty("TmpBoneFeedbackAnimHitInfo"))
-		{
-			if (characterHitComponent.TmpBoneFeedbackAnimHitInfo == null)
-			{
-				this.TmpBoneFeedbackAnimHitInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FBoneFeedbackAnimHitInfo>(this.TmpBoneFeedbackAnimHitInfo), "TmpBoneFeedbackAnimHitInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CounterAttackAnsMessageId"))
-		{
-			this.CounterAttackAnsMessageId = characterHitComponent.CounterAttackAnsMessageId;
-		}
-		if (base.CanResetComponentProperty("CounterAttackAnsIndex"))
-		{
-			this.CounterAttackAnsIndex = characterHitComponent.CounterAttackAnsIndex;
-		}
-		if (base.CanResetComponentProperty("VictimToAttacker") && characterHitComponent.VictimToAttacker != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.VictimToAttacker), "VictimToAttacker"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimeScaleComp), "TimeScaleComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BoneLocation") && characterHitComponent.BoneLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.BoneLocation), "BoneLocation"))
+		if (characterHitComponent.AttackerEntity == null)
+		{
+			this.AttackerEntity = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttackerEntity), "AttackerEntity"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("HitEffectTransform") && characterHitComponent.HitEffectTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.HitEffectTransform), "HitEffectTransform"))
+		if (characterHitComponent.FightStateComp == null)
+		{
+			this.FightStateComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FightStateComp), "FightStateComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ExecutedBeHitState"))
+		if (characterHitComponent.HitData == null)
 		{
-			this.ExecutedBeHitState = characterHitComponent.ExecutedBeHitState;
+			this.HitData = null;
 		}
-		if (base.CanResetComponentProperty("BeginWhirlpoolTempVector") && characterHitComponent.BeginWhirlpoolTempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.BeginWhirlpoolTempVector), "BeginWhirlpoolTempVector"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitData), "HitData"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("AirHitVelocity") && characterHitComponent.AirHitVelocity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.AirHitVelocity), "AirHitVelocity"))
+		if (characterHitComponent.LastHitData == null)
+		{
+			this.LastHitData = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastHitData), "LastHitData"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("AirHitForceSpeed") && characterHitComponent.AirHitForceSpeed != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.AirHitForceSpeed), "AirHitForceSpeed"))
+		this.IsHitWeakness = characterHitComponent.IsHitWeakness;
+		this.AddAttackerEnergy = characterHitComponent.AddAttackerEnergy;
+		if (characterHitComponent.ShieldPartList == null)
+		{
+			this.ShieldPartList = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ShieldPartList), "ShieldPartList"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("DoubleHitInAirEffect"))
+		if (characterHitComponent.SeparatePartList == null)
 		{
-			if (characterHitComponent.DoubleHitInAirEffect == null)
-			{
-				this.DoubleHitInAirEffect = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DoubleHitInAirEffect>(this.DoubleHitInAirEffect), "DoubleHitInAirEffect"))
-			{
-				return false;
-			}
+			this.SeparatePartList = null;
 		}
-		if (base.CanResetComponentProperty("ImmuneTimeScaleEffectTimer"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SeparatePartList), "SeparatePartList"))
 		{
-			if (characterHitComponent.ImmuneTimeScaleEffectTimer == null)
-			{
-				this.ImmuneTimeScaleEffectTimer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.ImmuneTimeScaleEffectTimer), "ImmuneTimeScaleEffectTimer"))
-			{
-				return false;
-			}
+			return false;
+		}
+		if (characterHitComponent.CommonPartList == null)
+		{
+			this.CommonPartList = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CommonPartList), "CommonPartList"))
+		{
+			return false;
+		}
+		this.CounterAttackType = characterHitComponent.CounterAttackType;
+		this.HadTriggerCounterAttackInternal = characterHitComponent.HadTriggerCounterAttackInternal;
+		this.VictimRotation = characterHitComponent.VictimRotation;
+		this.RageModeConfig = characterHitComponent.RageModeConfig;
+		this.HardnessModeConfig = characterHitComponent.HardnessModeConfig;
+		this.CurrentFightStateHandle = characterHitComponent.CurrentFightStateHandle;
+		this.RageModeId = characterHitComponent.RageModeId;
+		this.HardnessModeId = characterHitComponent.HardnessModeId;
+		if (characterHitComponent.BeHitBones == null)
+		{
+			this.BeHitBones = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BeHitBones), "BeHitBones"))
+		{
+			return false;
+		}
+		this.ToughDecreaseValue = characterHitComponent.ToughDecreaseValue;
+		this.BeHitIgnoreRotate = characterHitComponent.BeHitIgnoreRotate;
+		if (characterHitComponent.CounterAttackInfoInternal == null)
+		{
+			this.CounterAttackInfoInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CounterAttackInfoInternal), "CounterAttackInfoInternal"))
+		{
+			return false;
+		}
+		if (characterHitComponent.VisionCounterAttackInfoInternal == null)
+		{
+			this.VisionCounterAttackInfoInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VisionCounterAttackInfoInternal), "VisionCounterAttackInfoInternal"))
+		{
+			return false;
+		}
+		if (characterHitComponent.WindupAttackInfoInternal == null)
+		{
+			this.WindupAttackInfoInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WindupAttackInfoInternal), "WindupAttackInfoInternal"))
+		{
+			return false;
+		}
+		this.BeHitTime = characterHitComponent.BeHitTime;
+		this.NeedCalculateFallInjure = characterHitComponent.NeedCalculateFallInjure;
+		this.BeHitAnim = characterHitComponent.BeHitAnim;
+		this.AcceptedNewBeHit = characterHitComponent.AcceptedNewBeHit;
+		this.EnterFk = characterHitComponent.EnterFk;
+		this.HitInfoCollectFrame = characterHitComponent.HitInfoCollectFrame;
+		this.HasBeHitAnim = characterHitComponent.HasBeHitAnim;
+		if (characterHitComponent.BeHitDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BeHitDirect), "BeHitDirect"))
+		{
+			return false;
+		}
+		if (characterHitComponent.BeHitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BeHitLocation), "BeHitLocation"))
+		{
+			return false;
+		}
+		this.BeHitSocketName = characterHitComponent.BeHitSocketName;
+		if (characterHitComponent.BeHitMapping == null)
+		{
+			this.BeHitMapping = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BeHitMapping), "BeHitMapping"))
+		{
+			return false;
+		}
+		this.IsTriggerCounterAnimation = characterHitComponent.IsTriggerCounterAnimation;
+		this.ToughReduceHandle = characterHitComponent.ToughReduceHandle;
+		this.CounterAttackEndTimeInternal = characterHitComponent.CounterAttackEndTimeInternal;
+		if (characterHitComponent.BeHitEffectIdList == null)
+		{
+			this.BeHitEffectIdList = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BeHitEffectIdList), "BeHitEffectIdList"))
+		{
+			return false;
+		}
+		if (characterHitComponent.OwnerAttributeComponent == null)
+		{
+			this.OwnerAttributeComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OwnerAttributeComponent), "OwnerAttributeComponent"))
+		{
+			return false;
+		}
+		if (characterHitComponent.BuffComp == null)
+		{
+			this.BuffComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComp), "BuffComp"))
+		{
+			return false;
+		}
+		if (characterHitComponent.OwnerTagComponent == null)
+		{
+			this.OwnerTagComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OwnerTagComponent), "OwnerTagComponent"))
+		{
+			return false;
+		}
+		this.VelocityAdditionHandler = characterHitComponent.VelocityAdditionHandler;
+		this.HaveGuaranteedHit = characterHitComponent.HaveGuaranteedHit;
+		if (characterHitComponent.DelayRemoveStiff == null)
+		{
+			this.DelayRemoveStiff = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelayRemoveStiff), "DelayRemoveStiff"))
+		{
+			return false;
+		}
+		if (characterHitComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator), "TmpRotator"))
+		{
+			return false;
+		}
+		if (characterHitComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat), "TmpQuat"))
+		{
+			return false;
+		}
+		if (characterHitComponent.OnTimeScale == null)
+		{
+			this.OnTimeScale = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnTimeScale), "OnTimeScale"))
+		{
+			return false;
+		}
+		if (characterHitComponent.HitEffectMap == null)
+		{
+			this.HitEffectMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitEffectMap), "HitEffectMap"))
+		{
+			return false;
+		}
+		if (characterHitComponent.OnHitMaterialAction == null)
+		{
+			this.OnHitMaterialAction = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnHitMaterialAction), "OnHitMaterialAction"))
+		{
+			return false;
+		}
+		if (characterHitComponent.HitEffectReplaced == null)
+		{
+			this.HitEffectReplaced = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitEffectReplaced), "HitEffectReplaced"))
+		{
+			return false;
+		}
+		if (characterHitComponent.HitEffectReplacedIgnoreBones == null)
+		{
+			this.HitEffectReplacedIgnoreBones = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.HitEffectReplacedIgnoreBones), "HitEffectReplacedIgnoreBones"))
+		{
+			return false;
+		}
+		if (characterHitComponent.Optimize == null)
+		{
+			this.Optimize = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Optimize), "Optimize"))
+		{
+			return false;
+		}
+		this.IsCooling = characterHitComponent.IsCooling;
+		this.ShouldOptimize = characterHitComponent.ShouldOptimize;
+		if (characterHitComponent.OnCharPositionStateChanged == null)
+		{
+			this.OnCharPositionStateChanged = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnCharPositionStateChanged), "OnCharPositionStateChanged"))
+		{
+			return false;
+		}
+		this.IsDoubleHitInAir = characterHitComponent.IsDoubleHitInAir;
+		this.IsDoubleHitInAirLastOpen = characterHitComponent.IsDoubleHitInAirLastOpen;
+		if (characterHitComponent.TmpBoneFeedbackAnimHitInfo == null)
+		{
+			this.TmpBoneFeedbackAnimHitInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpBoneFeedbackAnimHitInfo), "TmpBoneFeedbackAnimHitInfo"))
+		{
+			return false;
+		}
+		this.CounterAttackAnsMessageId = characterHitComponent.CounterAttackAnsMessageId;
+		this.CounterAttackAnsIndex = characterHitComponent.CounterAttackAnsIndex;
+		if (characterHitComponent.VictimToAttacker != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.VictimToAttacker), "VictimToAttacker"))
+		{
+			return false;
+		}
+		if (characterHitComponent.BoneLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BoneLocation), "BoneLocation"))
+		{
+			return false;
+		}
+		if (characterHitComponent.HitEffectTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitEffectTransform), "HitEffectTransform"))
+		{
+			return false;
+		}
+		this.ExecutedBeHitState = characterHitComponent.ExecutedBeHitState;
+		if (characterHitComponent.BeginWhirlpoolTempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BeginWhirlpoolTempVector), "BeginWhirlpoolTempVector"))
+		{
+			return false;
+		}
+		if (characterHitComponent.AirHitVelocity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.AirHitVelocity), "AirHitVelocity"))
+		{
+			return false;
+		}
+		if (characterHitComponent.AirHitForceSpeed != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.AirHitForceSpeed), "AirHitForceSpeed"))
+		{
+			return false;
+		}
+		if (characterHitComponent.DoubleHitInAirEffect == null)
+		{
+			this.DoubleHitInAirEffect = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DoubleHitInAirEffect), "DoubleHitInAirEffect"))
+		{
+			return false;
+		}
+		if (characterHitComponent.ImmuneTimeScaleEffectTimer == null)
+		{
+			this.ImmuneTimeScaleEffectTimer = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ImmuneTimeScaleEffectTimer), "ImmuneTimeScaleEffectTimer"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0601A625 RID: 108069 RVA: 0x00707EB8 File Offset: 0x007060B8
+	// Token: 0x17002578 RID: 9592
+	// (get) Token: 0x06017FD0 RID: 98256 RVA: 0x0072E616 File Offset: 0x0072C816
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002579 RID: 9593
+	// (get) Token: 0x06017FD1 RID: 98257 RVA: 0x0072E619 File Offset: 0x0072C819
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700257A RID: 9594
+	// (get) Token: 0x06017FD2 RID: 98258 RVA: 0x0072E61C File Offset: 0x0072C81C
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700257B RID: 9595
+	// (get) Token: 0x06017FD3 RID: 98259 RVA: 0x0072E61F File Offset: 0x0072C81F
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x06017FD9 RID: 98265 RVA: 0x0072E7F4 File Offset: 0x0072C9F4
 	[CompilerGenerated]
 	private void <AddImmuneTimeScaleEffectTimer>g__SetTimeScaleEffect|191_0(bool bStart)
 	{
@@ -3033,26 +2882,26 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0400C99C RID: 51612
+	// Token: 0x0400CD76 RID: 52598
 	private const int MASS_RATE = 100;
 
-	// Token: 0x0400C99D RID: 51613
+	// Token: 0x0400CD77 RID: 52599
 	public const int OUTER_RADIUS = 100;
 
-	// Token: 0x0400C99E RID: 51614
+	// Token: 0x0400CD78 RID: 52600
 	public const int MAX_HIT_EFFECT_COUNT = 3;
 
-	// Token: 0x0400C99F RID: 51615
+	// Token: 0x0400CD79 RID: 52601
 	private const int SECOND_TO_MILLISECOND = 1000;
 
-	// Token: 0x0400C9A0 RID: 51616
+	// Token: 0x0400CD7A RID: 52602
 	[StaticVariableRuleIgnore]
 	private static readonly FName DEFALUT_SLOT_NAME = new FName("DefaultSlot");
 
-	// Token: 0x0400C9A1 RID: 51617
+	// Token: 0x0400CD7B RID: 52603
 	private const bool DEBUG = false;
 
-	// Token: 0x0400C9A2 RID: 51618
+	// Token: 0x0400CD7C RID: 52604
 	[StaticVariableRuleIgnore]
 	private static readonly int[] forbidHitTagIds = new int[]
 	{
@@ -3063,7 +2912,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		GameplayTagDefine.EGameplayTagId["行为状态.位置状态.水中"]
 	};
 
-	// Token: 0x0400C9A3 RID: 51619
+	// Token: 0x0400CD7D RID: 52605
 	[StaticVariableRuleIgnore]
 	private static readonly int[] enterFkForbidHitTagIds = new int[]
 	{
@@ -3073,7 +2922,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		GameplayTagDefine.EGameplayTagId["行为状态.位置状态.水中"]
 	};
 
-	// Token: 0x0400C9A4 RID: 51620
+	// Token: 0x0400CD7E RID: 52606
 	[StaticVariableRuleIgnore]
 	private static readonly HashSet<EHitAnim> lightHits = new HashSet<EHitAnim>
 	{
@@ -3083,49 +2932,49 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 		EHitAnim.轻后
 	};
 
-	// Token: 0x0400C9A5 RID: 51621
+	// Token: 0x0400CD7F RID: 52607
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400C9A6 RID: 51622
+	// Token: 0x0400CD80 RID: 52608
 	[Nullable(2)]
 	private CharacterSkillComponent SkillComp;
 
-	// Token: 0x0400C9A7 RID: 51623
+	// Token: 0x0400CD81 RID: 52609
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent UnifiedComp;
 
-	// Token: 0x0400C9A8 RID: 51624
+	// Token: 0x0400CD82 RID: 52610
 	[Nullable(2)]
 	private CharacterMovementSyncComponent MoveSyncComp;
 
-	// Token: 0x0400C9A9 RID: 51625
+	// Token: 0x0400CD83 RID: 52611
 	[Nullable(2)]
 	private PawnTimeScaleComponent TimeScaleComp;
 
-	// Token: 0x0400C9AA RID: 51626
+	// Token: 0x0400CD84 RID: 52612
 	[Nullable(2)]
 	private Entity AttackerEntity;
 
-	// Token: 0x0400C9AB RID: 51627
+	// Token: 0x0400CD85 RID: 52613
 	[Nullable(2)]
 	private CharacterFightStateComponent FightStateComp;
 
-	// Token: 0x0400C9AC RID: 51628
+	// Token: 0x0400CD86 RID: 52614
 	[Nullable(2)]
 	private global::HitInformation HitData;
 
-	// Token: 0x0400C9AD RID: 51629
+	// Token: 0x0400CD87 RID: 52615
 	[Nullable(2)]
 	public global::HitInformation LastHitData;
 
-	// Token: 0x0400C9AE RID: 51630
+	// Token: 0x0400CD88 RID: 52616
 	private bool IsHitWeakness;
 
-	// Token: 0x0400C9AF RID: 51631
+	// Token: 0x0400CD89 RID: 52617
 	private bool AddAttackerEnergy;
 
-	// Token: 0x0400C9B0 RID: 51632
+	// Token: 0x0400CD8A RID: 52618
 	[Nullable(new byte[]
 	{
 		2,
@@ -3133,7 +2982,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 	})]
 	private CharacterPart[] ShieldPartList = new CharacterPart[0];
 
-	// Token: 0x0400C9B1 RID: 51633
+	// Token: 0x0400CD8B RID: 52619
 	[Nullable(new byte[]
 	{
 		2,
@@ -3141,7 +2990,7 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 	})]
 	private CharacterPart[] SeparatePartList = new CharacterPart[0];
 
-	// Token: 0x0400C9B2 RID: 51634
+	// Token: 0x0400CD8C RID: 52620
 	[Nullable(new byte[]
 	{
 		2,
@@ -3149,146 +2998,146 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 	})]
 	private CharacterPart[] CommonPartList = new CharacterPart[0];
 
-	// Token: 0x0400C9B3 RID: 51635
+	// Token: 0x0400CD8D RID: 52621
 	private ECounterAttackType CounterAttackType;
 
-	// Token: 0x0400C9B4 RID: 51636
+	// Token: 0x0400CD8E RID: 52622
 	private bool HadTriggerCounterAttackInternal;
 
-	// Token: 0x0400C9B5 RID: 51637
+	// Token: 0x0400CD8F RID: 52623
 	private FRotator? VictimRotation;
 
-	// Token: 0x0400C9B6 RID: 51638
+	// Token: 0x0400CD90 RID: 52624
 	private HardnessMode? RageModeConfig;
 
-	// Token: 0x0400C9B7 RID: 51639
+	// Token: 0x0400CD91 RID: 52625
 	private HardnessMode? HardnessModeConfig;
 
-	// Token: 0x0400C9B8 RID: 51640
+	// Token: 0x0400CD92 RID: 52626
 	private int CurrentFightStateHandle;
 
-	// Token: 0x0400C9B9 RID: 51641
+	// Token: 0x0400CD93 RID: 52627
 	public int RageModeId;
 
-	// Token: 0x0400C9BA RID: 51642
+	// Token: 0x0400CD94 RID: 52628
 	public int HardnessModeId;
 
-	// Token: 0x0400C9BB RID: 51643
+	// Token: 0x0400CD95 RID: 52629
 	public FName[] BeHitBones = new FName[0];
 
-	// Token: 0x0400C9BC RID: 51644
+	// Token: 0x0400CD96 RID: 52630
 	public float ToughDecreaseValue;
 
-	// Token: 0x0400C9BD RID: 51645
+	// Token: 0x0400CD97 RID: 52631
 	public bool BeHitIgnoreRotate;
 
-	// Token: 0x0400C9BE RID: 51646
+	// Token: 0x0400CD98 RID: 52632
 	[Nullable(2)]
 	public SCounterAttack CounterAttackInfoInternal;
 
-	// Token: 0x0400C9BF RID: 51647
+	// Token: 0x0400CD99 RID: 52633
 	[Nullable(2)]
 	public SVisionCounterAttack VisionCounterAttackInfoInternal;
 
-	// Token: 0x0400C9C0 RID: 51648
+	// Token: 0x0400CD9A RID: 52634
 	[Nullable(2)]
 	public SCounterWindupAttack WindupAttackInfoInternal;
 
-	// Token: 0x0400C9C1 RID: 51649
+	// Token: 0x0400CD9B RID: 52635
 	public float BeHitTime;
 
-	// Token: 0x0400C9C2 RID: 51650
+	// Token: 0x0400CD9C RID: 52636
 	public bool NeedCalculateFallInjure;
 
-	// Token: 0x0400C9C3 RID: 51651
+	// Token: 0x0400CD9D RID: 52637
 	public EHitAnim BeHitAnim;
 
-	// Token: 0x0400C9C4 RID: 51652
+	// Token: 0x0400CD9E RID: 52638
 	public bool AcceptedNewBeHit;
 
-	// Token: 0x0400C9C5 RID: 51653
+	// Token: 0x0400CD9F RID: 52639
 	public bool EnterFk;
 
-	// Token: 0x0400C9C6 RID: 51654
+	// Token: 0x0400CDA0 RID: 52640
 	private int HitInfoCollectFrame = -1;
 
-	// Token: 0x0400C9C7 RID: 51655
+	// Token: 0x0400CDA1 RID: 52641
 	private bool HasBeHitAnim;
 
-	// Token: 0x0400C9C8 RID: 51656
+	// Token: 0x0400CDA2 RID: 52642
 	public readonly global::Vector BeHitDirect = global::Vector.Create();
 
-	// Token: 0x0400C9C9 RID: 51657
+	// Token: 0x0400CDA3 RID: 52643
 	public readonly global::Vector BeHitLocation = global::Vector.Create();
 
-	// Token: 0x0400C9CA RID: 51658
+	// Token: 0x0400CDA4 RID: 52644
 	public FName? BeHitSocketName;
 
-	// Token: 0x0400C9CB RID: 51659
+	// Token: 0x0400CDA5 RID: 52645
 	[Nullable(2)]
 	public SHitMapping BeHitMapping;
 
-	// Token: 0x0400C9CC RID: 51660
+	// Token: 0x0400CDA6 RID: 52646
 	private bool IsTriggerCounterAnimation;
 
-	// Token: 0x0400C9CD RID: 51661
+	// Token: 0x0400CDA7 RID: 52647
 	private int ToughReduceHandle;
 
-	// Token: 0x0400C9CE RID: 51662
+	// Token: 0x0400CDA8 RID: 52648
 	private float CounterAttackEndTimeInternal;
 
-	// Token: 0x0400C9CF RID: 51663
+	// Token: 0x0400CDA9 RID: 52649
 	[Nullable(2)]
 	private int[] BeHitEffectIdList;
 
-	// Token: 0x0400C9D0 RID: 51664
+	// Token: 0x0400CDAA RID: 52650
 	[Nullable(2)]
 	private BaseAttributeComponent OwnerAttributeComponent;
 
-	// Token: 0x0400C9D1 RID: 51665
+	// Token: 0x0400CDAB RID: 52651
 	[Nullable(2)]
 	private CharacterBuffComponent BuffComp;
 
-	// Token: 0x0400C9D2 RID: 51666
+	// Token: 0x0400CDAC RID: 52652
 	[Nullable(2)]
 	private BaseTagComponent OwnerTagComponent;
 
-	// Token: 0x0400C9D3 RID: 51667
+	// Token: 0x0400CDAD RID: 52653
 	private int VelocityAdditionHandler;
 
-	// Token: 0x0400C9D4 RID: 51668
+	// Token: 0x0400CDAE RID: 52654
 	private bool HaveGuaranteedHit;
 
-	// Token: 0x0400C9D5 RID: 51669
+	// Token: 0x0400CDAF RID: 52655
 	[Nullable(2)]
 	private TimerHandle DelayRemoveStiff;
 
-	// Token: 0x0400C9D6 RID: 51670
+	// Token: 0x0400CDB0 RID: 52656
 	private readonly global::Rotator TmpRotator = global::Rotator.Create();
 
-	// Token: 0x0400C9D7 RID: 51671
+	// Token: 0x0400CDB1 RID: 52657
 	private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400C9D8 RID: 51672
+	// Token: 0x0400CDB2 RID: 52658
 	[Nullable(2)]
 	private static HashSet<EHitAnim> RotateBeHitAnimations = null;
 
-	// Token: 0x0400C9D9 RID: 51673
+	// Token: 0x0400CDB3 RID: 52659
 	[Nullable(2)]
 	private Action<float, ETimeScaleSourceType> OnTimeScale;
 
-	// Token: 0x0400C9DA RID: 51674
+	// Token: 0x0400CDB4 RID: 52660
 	public Dictionary<string, Queue<int>> HitEffectMap = new Dictionary<string, Queue<int>>();
 
-	// Token: 0x0400C9DB RID: 51675
+	// Token: 0x0400CDB5 RID: 52661
 	[Nullable(2)]
 	private OnHitMaterialAction OnHitMaterialAction;
 
-	// Token: 0x0400C9DC RID: 51676
+	// Token: 0x0400CDB6 RID: 52662
 	[Nullable(2)]
 	private BP_ReplaceHitEffect_C HitEffectReplaced;
 
-	// Token: 0x0400C9DD RID: 51677
+	// Token: 0x0400CDB7 RID: 52663
 	[Nullable(new byte[]
 	{
 		2,
@@ -3296,126 +3145,126 @@ public class CharacterHitComponent : BaseHitComponent, IStaticVariableResetter
 	})]
 	private HashSet<string> HitEffectReplacedIgnoreBones;
 
-	// Token: 0x0400C9DE RID: 51678
+	// Token: 0x0400CDB8 RID: 52664
 	[Nullable(2)]
 	private CharacterHitOptimize Optimize;
 
-	// Token: 0x0400C9DF RID: 51679
+	// Token: 0x0400CDB9 RID: 52665
 	private bool IsCooling;
 
-	// Token: 0x0400C9E0 RID: 51680
+	// Token: 0x0400CDBA RID: 52666
 	public bool ShouldOptimize;
 
-	// Token: 0x0400C9E1 RID: 51681
+	// Token: 0x0400CDBB RID: 52667
 	[Nullable(2)]
 	private Action<global::ECharPositionState, global::ECharPositionState> OnCharPositionStateChanged;
 
-	// Token: 0x0400C9E2 RID: 51682
+	// Token: 0x0400CDBC RID: 52668
 	private bool IsDoubleHitInAir;
 
-	// Token: 0x0400C9E3 RID: 51683
+	// Token: 0x0400CDBD RID: 52669
 	private int IsDoubleHitInAirLastOpen;
 
-	// Token: 0x0400C9E4 RID: 51684
+	// Token: 0x0400CDBE RID: 52670
 	[Nullable(2)]
 	private FBoneFeedbackAnimHitInfo TmpBoneFeedbackAnimHitInfo;
 
-	// Token: 0x0400C9E5 RID: 51685
+	// Token: 0x0400CDBF RID: 52671
 	private long? CounterAttackAnsMessageId;
 
-	// Token: 0x0400C9E6 RID: 51686
+	// Token: 0x0400CDC0 RID: 52672
 	private int CounterAttackAnsIndex = -1;
 
-	// Token: 0x0400C9E7 RID: 51687
+	// Token: 0x0400CDC1 RID: 52673
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnHitStat = Stat.Create("OnHit", "", "");
 
-	// Token: 0x0400C9E8 RID: 51688
+	// Token: 0x0400CDC2 RID: 52674
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnHitStatCounterAttack = Stat.Create("OnHit_CounterAttack", "", "");
 
-	// Token: 0x0400C9E9 RID: 51689
+	// Token: 0x0400CDC3 RID: 52675
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnHitStatRemoveByTag = Stat.Create("OnHit_RemoveByTag", "", "");
 
-	// Token: 0x0400C9EA RID: 51690
+	// Token: 0x0400CDC4 RID: 52676
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnHitStatProcessDamage = Stat.Create("OnHit_ProcessDamage", "", "");
 
-	// Token: 0x0400C9EB RID: 51691
+	// Token: 0x0400CDC5 RID: 52677
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnHitStatCameraEffect = Stat.Create("OnHit_CameraEffect", "", "");
 
-	// Token: 0x0400C9EC RID: 51692
+	// Token: 0x0400CDC6 RID: 52678
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnHitStatProcessMain = Stat.Create("OnHit_ProcessMain", "", "");
 
-	// Token: 0x0400C9ED RID: 51693
+	// Token: 0x0400CDC7 RID: 52679
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnHitStatBroadcastEvent = Stat.Create("OnHit_BroadcastEvent", "", "");
 
-	// Token: 0x0400C9EE RID: 51694
+	// Token: 0x0400CDC8 RID: 52680
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnHitStatOnHitMaterial = Stat.Create("OnHit_OnHitMaterial", "", "");
 
-	// Token: 0x0400C9EF RID: 51695
+	// Token: 0x0400CDC9 RID: 52681
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnHitStatBeHitStateMachine = Stat.Create("OnHit_BeHitStateMachine", "", "");
 
-	// Token: 0x0400C9F0 RID: 51696
+	// Token: 0x0400CDCA RID: 52682
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnHitByKuroBulletStat = Stat.Create("OnHitByKuroBullet", "", "");
 
-	// Token: 0x0400C9F1 RID: 51697
+	// Token: 0x0400CDCB RID: 52683
 	private readonly global::Vector VictimToAttacker = global::Vector.Create();
 
-	// Token: 0x0400C9F2 RID: 51698
+	// Token: 0x0400CDCC RID: 52684
 	private readonly global::Vector BoneLocation = global::Vector.Create();
 
-	// Token: 0x0400C9F3 RID: 51699
+	// Token: 0x0400CDCD RID: 52685
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PlayHitEffectStat = Stat.Create("PlayHitEffect", "", "");
 
-	// Token: 0x0400C9F4 RID: 51700
+	// Token: 0x0400CDCE RID: 52686
 	private readonly global::Transform HitEffectTransform = global::Transform.Create();
 
-	// Token: 0x0400C9F5 RID: 51701
+	// Token: 0x0400CDCF RID: 52687
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ProcessMainStat1 = Stat.Create("ProcessMain1", "", "");
 
-	// Token: 0x0400C9F6 RID: 51702
+	// Token: 0x0400CDD0 RID: 52688
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ProcessMainStat2 = Stat.Create("ProcessMain2", "", "");
 
-	// Token: 0x0400C9F7 RID: 51703
+	// Token: 0x0400CDD1 RID: 52689
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ProcessMainStat3 = Stat.Create("ProcessMain3", "", "");
 
-	// Token: 0x0400C9F8 RID: 51704
+	// Token: 0x0400CDD2 RID: 52690
 	private bool ExecutedBeHitState;
 
-	// Token: 0x0400C9F9 RID: 51705
+	// Token: 0x0400CDD3 RID: 52691
 	private readonly global::Vector BeginWhirlpoolTempVector = global::Vector.Create();
 
-	// Token: 0x0400C9FA RID: 51706
+	// Token: 0x0400CDD4 RID: 52692
 	private readonly global::Vector AirHitVelocity = global::Vector.Create();
 
-	// Token: 0x0400C9FB RID: 51707
+	// Token: 0x0400CDD5 RID: 52693
 	private readonly global::Vector AirHitForceSpeed = global::Vector.Create();
 
-	// Token: 0x0400C9FC RID: 51708
+	// Token: 0x0400CDD6 RID: 52694
 	[Nullable(2)]
 	public DoubleHitInAirEffect DoubleHitInAirEffect;
 
-	// Token: 0x0400C9FD RID: 51709
+	// Token: 0x0400CDD7 RID: 52695
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector BounceScaleOrthogonal = global::Vector.Create();
 
-	// Token: 0x0400C9FE RID: 51710
+	// Token: 0x0400CDD8 RID: 52696
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector BounceScaleWorld = global::Vector.Create();
 
-	// Token: 0x0400C9FF RID: 51711
+	// Token: 0x0400CDD9 RID: 52697
 	[Nullable(2)]
 	private TimerHandle ImmuneTimeScaleEffectTimer;
 }

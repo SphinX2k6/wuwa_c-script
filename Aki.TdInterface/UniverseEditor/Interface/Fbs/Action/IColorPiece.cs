@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200645A RID: 25690
+	// Token: 0x02006AC2 RID: 27330
 	public struct IColorPiece : IFlatbufferObject
 	{
-		// Token: 0x1700BF32 RID: 48946
-		// (get) Token: 0x0602C74D RID: 182093 RVA: 0x00618EC4 File Offset: 0x006170C4
+		// Token: 0x1700C8B4 RID: 51380
+		// (get) Token: 0x0602EE92 RID: 192146 RVA: 0x00663F90 File Offset: 0x00662190
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,21 +16,21 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C74E RID: 182094 RVA: 0x00618ED1 File Offset: 0x006170D1
+		// Token: 0x0602EE93 RID: 192147 RVA: 0x00663F9D File Offset: 0x0066219D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Struct(_i, _bb);
 		}
 
-		// Token: 0x0602C74F RID: 182095 RVA: 0x00618EE0 File Offset: 0x006170E0
+		// Token: 0x0602EE94 RID: 192148 RVA: 0x00663FAC File Offset: 0x006621AC
 		public IColorPiece __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BF33 RID: 48947
-		// (get) Token: 0x0602C750 RID: 182096 RVA: 0x00618EF0 File Offset: 0x006170F0
+		// Token: 0x1700C8B5 RID: 51381
+		// (get) Token: 0x0602EE95 RID: 192149 RVA: 0x00663FBC File Offset: 0x006621BC
 		public EPieceColorType Color
 		{
 			get
@@ -39,7 +39,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C751 RID: 182097 RVA: 0x00618F0D File Offset: 0x0061710D
+		// Token: 0x0602EE96 RID: 192150 RVA: 0x00663FD9 File Offset: 0x006621D9
 		public static Offset<IColorPiece> CreateIColorPiece(FlatBufferBuilder builder, EPieceColorType Color)
 		{
 			builder.Prep(1, 1);
@@ -47,7 +47,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new Offset<IColorPiece>(builder.Offset);
 		}
 
-		// Token: 0x0602C752 RID: 182098 RVA: 0x00618F2C File Offset: 0x0061712C
+		// Token: 0x0602EE97 RID: 192151 RVA: 0x00663FF8 File Offset: 0x006621F8
 		public IColorPieceT UnPack()
 		{
 			IColorPieceT colorPieceT = new IColorPieceT();
@@ -55,13 +55,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return colorPieceT;
 		}
 
-		// Token: 0x0602C753 RID: 182099 RVA: 0x00618F47 File Offset: 0x00617147
+		// Token: 0x0602EE98 RID: 192152 RVA: 0x00664013 File Offset: 0x00662213
 		public void UnPackTo(IColorPieceT _o)
 		{
 			_o.Color = this.Color;
 		}
 
-		// Token: 0x0602C754 RID: 182100 RVA: 0x00618F58 File Offset: 0x00617158
+		// Token: 0x0602EE99 RID: 192153 RVA: 0x00664024 File Offset: 0x00662224
 		public static Offset<IColorPiece> Pack(FlatBufferBuilder builder, IColorPieceT _o)
 		{
 			if (_o == null)
@@ -71,7 +71,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IColorPiece.CreateIColorPiece(builder, _o.Color);
 		}
 
-		// Token: 0x04010A58 RID: 68184
+		// Token: 0x04011863 RID: 71779
 		private Struct __p;
 	}
 }

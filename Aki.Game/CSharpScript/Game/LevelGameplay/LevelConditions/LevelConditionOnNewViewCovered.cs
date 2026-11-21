@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006D30 RID: 27952
+	// Token: 0x02005EAD RID: 24237
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionOnNewViewCovered : LevelConditionBase
 	{
-		// Token: 0x06044704 RID: 280324 RVA: 0x010E10F4 File Offset: 0x010DF2F4
+		// Token: 0x0603A864 RID: 239716 RVA: 0x0108B280 File Offset: 0x01089480
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			string limitParams = inConditionInfo.GetLimitParams("FocusView");
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return limitParams != euiViewName && !LevelConditionOnNewViewCovered.WhiteList.Contains(euiViewName);
 		}
 
-		// Token: 0x040239D6 RID: 145878
+		// Token: 0x0401EC78 RID: 126072
 		[StaticVariableRuleIgnore]
 		private static readonly HashSet<EUiViewName> WhiteList = new HashSet<EUiViewName>
 		{

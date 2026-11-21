@@ -9,19 +9,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200249F RID: 9375
+// Token: 0x02001986 RID: 6534
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionDetailTop : UiPanelBase
 {
-	// Token: 0x06012D26 RID: 77094 RVA: 0x004A551F File Offset: 0x004A371F
+	// Token: 0x060101E7 RID: 66023 RVA: 0x004B3027 File Offset: 0x004B1227
 	[NullableContext(1)]
 	public VisionDetailTop(UUIItem actor)
 	{
 		this.SourceItem = actor;
 	}
 
-	// Token: 0x06012D27 RID: 77095 RVA: 0x004A5530 File Offset: 0x004A3730
+	// Token: 0x060101E8 RID: 66024 RVA: 0x004B3038 File Offset: 0x004B1238
 	public UniTask Init()
 	{
 		VisionDetailTop.<Init>d__5 <Init>d__;
@@ -32,7 +32,7 @@ public class VisionDetailTop : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012D28 RID: 77096 RVA: 0x004A5574 File Offset: 0x004A3774
+	// Token: 0x060101E9 RID: 66025 RVA: 0x004B307C File Offset: 0x004B127C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -65,19 +65,19 @@ public class VisionDetailTop : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06012D29 RID: 77097 RVA: 0x004A56E2 File Offset: 0x004A38E2
+	// Token: 0x060101EA RID: 66026 RVA: 0x004B31EA File Offset: 0x004B13EA
 	protected void OnClickLockToggle(EToggleState toggleState)
 	{
 		InventoryController.Instance.ItemLockRequest(this.CurrentData.GetUniqueId(), !this.CurrentData.GetIsLock());
 	}
 
-	// Token: 0x06012D2A RID: 77098 RVA: 0x004A5707 File Offset: 0x004A3907
+	// Token: 0x060101EB RID: 66027 RVA: 0x004B320F File Offset: 0x004B140F
 	protected void OnClickDeprecateToggle(EToggleState toggleState)
 	{
 		InventoryController.Instance.ItemDeprecateRequest(this.CurrentData.GetUniqueId(), !this.CurrentData.GetIsDeprecated());
 	}
 
-	// Token: 0x06012D2B RID: 77099 RVA: 0x004A572C File Offset: 0x004A392C
+	// Token: 0x060101EC RID: 66028 RVA: 0x004B3234 File Offset: 0x004B1434
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionDetailTop.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -88,14 +88,14 @@ public class VisionDetailTop : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012D2C RID: 77100 RVA: 0x004A576F File Offset: 0x004A396F
+	// Token: 0x060101ED RID: 66029 RVA: 0x004B3277 File Offset: 0x004B1477
 	protected override void OnStart()
 	{
 		this.VisionNameText = new VisionNameText(base.GetText(0));
 		EventSystem.Instance.Add<int>(EEventName.OnItemFuncValueChange, new Action<int>(this.RefreshToggle));
 	}
 
-	// Token: 0x06012D2D RID: 77101 RVA: 0x004A57A0 File Offset: 0x004A39A0
+	// Token: 0x060101EE RID: 66030 RVA: 0x004B32A8 File Offset: 0x004B14A8
 	private void RefreshToggle(int incId)
 	{
 		PhantomBattleData currentData = this.CurrentData;
@@ -114,7 +114,7 @@ public class VisionDetailTop : UiPanelBase
 		base.GetExtendToggle(6).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x06012D2E RID: 77102 RVA: 0x004A5814 File Offset: 0x004A3A14
+	// Token: 0x060101EF RID: 66031 RVA: 0x004B331C File Offset: 0x004B151C
 	[NullableContext(1)]
 	public void Update(PhantomBattleData data)
 	{
@@ -131,21 +131,21 @@ public class VisionDetailTop : UiPanelBase
 		this.VisionFetterSuitItem.Update(new PhantomFetterGroup?(fetterGroupConfig));
 	}
 
-	// Token: 0x06012D2F RID: 77103 RVA: 0x004A58AE File Offset: 0x004A3AAE
+	// Token: 0x060101F0 RID: 66032 RVA: 0x004B33B6 File Offset: 0x004B15B6
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnItemFuncValueChange, new Action<int>(this.RefreshToggle));
 	}
 
-	// Token: 0x04008DC6 RID: 36294
+	// Token: 0x04008F10 RID: 36624
 	private PhantomBattleData CurrentData;
 
-	// Token: 0x04008DC7 RID: 36295
+	// Token: 0x04008F11 RID: 36625
 	private VisionNameText VisionNameText;
 
-	// Token: 0x04008DC8 RID: 36296
+	// Token: 0x04008F12 RID: 36626
 	private readonly UUIItem SourceItem;
 
-	// Token: 0x04008DC9 RID: 36297
+	// Token: 0x04008F13 RID: 36627
 	private VisionFetterSuitItem VisionFetterSuitItem;
 }

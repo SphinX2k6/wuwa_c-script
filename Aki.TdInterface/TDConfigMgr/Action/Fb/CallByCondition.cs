@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002604 RID: 9732
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028C4 RID: 10436
 	public class CallByCondition : ActionParams
 	{
-		// Token: 0x0600DA99 RID: 55961 RVA: 0x00209189 File Offset: 0x00207389
+		// Token: 0x0600E866 RID: 59494 RVA: 0x002258DD File Offset: 0x00223ADD
 		public static CallByCondition Create(ICallByCondition? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004053 RID: 16467
-		// (get) Token: 0x0600DA9A RID: 55962 RVA: 0x002091A8 File Offset: 0x002073A8
+		// Token: 0x1700438C RID: 17292
+		// (get) Token: 0x0600E867 RID: 59495 RVA: 0x002258FC File Offset: 0x00223AFC
 		public virtual IConditions Conditions
 		{
 			get
@@ -39,19 +37,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004054 RID: 16468
-		// (get) Token: 0x0600DA9B RID: 55963 RVA: 0x002091DC File Offset: 0x002073DC
+		// Token: 0x1700438D RID: 17293
+		// (get) Token: 0x0600E868 RID: 59496 RVA: 0x00225930 File Offset: 0x00223B30
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> TrueActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -74,19 +72,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004055 RID: 16469
-		// (get) Token: 0x0600DA9C RID: 55964 RVA: 0x00209258 File Offset: 0x00207458
+		// Token: 0x1700438E RID: 17294
+		// (get) Token: 0x0600E869 RID: 59497 RVA: 0x002259AC File Offset: 0x00223BAC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> FalseActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -109,36 +107,36 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007968 RID: 31080
+		// Token: 0x04008002 RID: 32770
 		private ICallByCondition Instance;
 
-		// Token: 0x04007969 RID: 31081
+		// Token: 0x04008003 RID: 32771
 		[Nullable(2)]
 		private IConditions _ConditionsCache;
 
-		// Token: 0x0400796A RID: 31082
+		// Token: 0x04008004 RID: 32772
 		private bool _ConditionsInited;
 
-		// Token: 0x0400796B RID: 31083
+		// Token: 0x04008005 RID: 32773
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _TrueActionsCache;
 
-		// Token: 0x0400796C RID: 31084
+		// Token: 0x04008006 RID: 32774
 		private bool _TrueActionsInited;
 
-		// Token: 0x0400796D RID: 31085
+		// Token: 0x04008007 RID: 32775
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _FalseActionsCache;
 
-		// Token: 0x0400796E RID: 31086
+		// Token: 0x04008008 RID: 32776
 		private bool _FalseActionsInited;
 	}
 }

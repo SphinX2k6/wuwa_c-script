@@ -7,13 +7,13 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x020019D4 RID: 6612
+// Token: 0x02000E93 RID: 3731
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ConfirmBoxController : ControllerBase
 {
-	// Token: 0x0600C116 RID: 49430 RVA: 0x002B9280 File Offset: 0x002B7480
+	// Token: 0x06009523 RID: 38179 RVA: 0x002C424C File Offset: 0x002C244C
 	public bool ShowConfirmBoxNew(ConfirmBoxDataNew confirmBoxDataNew)
 	{
 		ConfirmBox? confirmBoxConfig = ConfirmBoxConfig.Instance.GetConfirmBoxConfig((int)confirmBoxDataNew.ConfigId);
@@ -43,7 +43,7 @@ public class ConfirmBoxController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x0600C117 RID: 49431 RVA: 0x002B9338 File Offset: 0x002B7538
+	// Token: 0x06009524 RID: 38180 RVA: 0x002C4304 File Offset: 0x002C2504
 	public bool CheckIsConfirmBoxOpen()
 	{
 		foreach (EUiViewName viewName in this.ConfirmBoxMapNameMap.Values)
@@ -56,7 +56,7 @@ public class ConfirmBoxController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x0600C118 RID: 49432 RVA: 0x002B93A0 File Offset: 0x002B75A0
+	// Token: 0x06009525 RID: 38181 RVA: 0x002C436C File Offset: 0x002C256C
 	public void CloseConfirmBoxView()
 	{
 		foreach (EUiViewName name in this.ConfirmBoxMapNameMap.Values)
@@ -65,21 +65,21 @@ public class ConfirmBoxController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C119 RID: 49433 RVA: 0x002B9400 File Offset: 0x002B7600
+	// Token: 0x06009526 RID: 38182 RVA: 0x002C43CC File Offset: 0x002C25CC
 	public void ShowNetWorkConfirmBoxView(ConfirmBoxDataNew confirmBoxDataNew, [Nullable(2)] TOpenViewCallBack finishCallback = null)
 	{
 		confirmBoxDataNew.NotAddChildToTopStackView = true;
 		UiManager.Instance.OpenView(EUiViewName.NetWorkConfirmBoxView, confirmBoxDataNew, finishCallback);
 	}
 
-	// Token: 0x0600C11A RID: 49434 RVA: 0x002B941A File Offset: 0x002B761A
+	// Token: 0x06009527 RID: 38183 RVA: 0x002C43E6 File Offset: 0x002C25E6
 	[NullableContext(2)]
 	public void CloseNetWorkConfirmBoxView(int viewId, Action<bool> finishCallback = null)
 	{
 		UiManager.Instance.CloseViewById(viewId, finishCallback);
 	}
 
-	// Token: 0x0600C11B RID: 49435 RVA: 0x002B9428 File Offset: 0x002B7628
+	// Token: 0x06009528 RID: 38184 RVA: 0x002C43F4 File Offset: 0x002C25F4
 	public void ShowFirstCurrencyConfirm()
 	{
 		int? num = GachaConfig.Instance.PrimaryCurrency();
@@ -100,7 +100,7 @@ public class ConfirmBoxController : ControllerBase
 		this.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600C11C RID: 49436 RVA: 0x002B94A8 File Offset: 0x002B76A8
+	// Token: 0x06009529 RID: 38185 RVA: 0x002C4474 File Offset: 0x002C2674
 	public void ShowExitGameConfirmBox()
 	{
 		if (KuroSdkController.Instance.CanUseSdk())
@@ -121,7 +121,7 @@ public class ConfirmBoxController : ControllerBase
 		this.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600C11D RID: 49437 RVA: 0x002B9508 File Offset: 0x002B7708
+	// Token: 0x0600952A RID: 38186 RVA: 0x002C44D4 File Offset: 0x002C26D4
 	public void ShowReturnLoginConfirmBox()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ExitGameOrReturnLogin);
@@ -137,7 +137,7 @@ public class ConfirmBoxController : ControllerBase
 		this.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600C11E RID: 49438 RVA: 0x002B9588 File Offset: 0x002B7788
+	// Token: 0x0600952B RID: 38187 RVA: 0x002C4554 File Offset: 0x002C2754
 	public EUiViewName? GetUiViewName(int configId)
 	{
 		EConfirmBoxType valueOrDefault = (EConfirmBoxType)ConfirmBoxConfig.Instance.GetUiShowType(configId).GetValueOrDefault();
@@ -149,8 +149,8 @@ public class ConfirmBoxController : ControllerBase
 		return new EUiViewName?(value);
 	}
 
-	// Token: 0x1700102B RID: 4139
-	// (get) Token: 0x0600C11F RID: 49439 RVA: 0x002B95C9 File Offset: 0x002B77C9
+	// Token: 0x17001050 RID: 4176
+	// (get) Token: 0x0600952C RID: 38188 RVA: 0x002C4595 File Offset: 0x002C2795
 	public static ConfirmBoxController Instance
 	{
 		get
@@ -159,7 +159,7 @@ public class ConfirmBoxController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C120 RID: 49440 RVA: 0x002B95D0 File Offset: 0x002B77D0
+	// Token: 0x0600952D RID: 38189 RVA: 0x002C459C File Offset: 0x002C279C
 	public static ConfirmBoxController GetOrCreateInstance()
 	{
 		if (ConfirmBoxController._Instance == null)
@@ -169,7 +169,7 @@ public class ConfirmBoxController : ControllerBase
 		return ConfirmBoxController._Instance;
 	}
 
-	// Token: 0x0600C121 RID: 49441 RVA: 0x002B95E4 File Offset: 0x002B77E4
+	// Token: 0x0600952E RID: 38190 RVA: 0x002C45B0 File Offset: 0x002C27B0
 	public static bool CreateInstance()
 	{
 		if (ConfirmBoxController._Instance != null)
@@ -180,24 +180,24 @@ public class ConfirmBoxController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C122 RID: 49442 RVA: 0x002B95FA File Offset: 0x002B77FA
+	// Token: 0x0600952F RID: 38191 RVA: 0x002C45C6 File Offset: 0x002C27C6
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C123 RID: 49443 RVA: 0x002B95FC File Offset: 0x002B77FC
+	// Token: 0x06009530 RID: 38192 RVA: 0x002C45C8 File Offset: 0x002C27C8
 	public static void ResetStaticDefaultValue()
 	{
 		ConfirmBoxController._Instance = null;
 	}
 
-	// Token: 0x0600C124 RID: 49444 RVA: 0x002B9604 File Offset: 0x002B7804
+	// Token: 0x06009531 RID: 38193 RVA: 0x002C45D0 File Offset: 0x002C27D0
 	static ConfirmBoxController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ConfirmBoxController.CreateStaticDefaultValue), new Action(ConfirmBoxController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040056D6 RID: 22230
+	// Token: 0x04005788 RID: 22408
 	private readonly Dictionary<EConfirmBoxType, EUiViewName> ConfirmBoxMapNameMap = new Dictionary<EConfirmBoxType, EUiViewName>
 	{
 		{
@@ -235,10 +235,14 @@ public class ConfirmBoxController : ControllerBase
 		{
 			EConfirmBoxType.DangoBrawl,
 			EUiViewName.DangoBrawlConfirmBoxView
+		},
+		{
+			EConfirmBoxType.SolarSchool,
+			EUiViewName.SolarSchoolConfirmPopupView
 		}
 	};
 
-	// Token: 0x040056D7 RID: 22231
+	// Token: 0x04005789 RID: 22409
 	[Nullable(2)]
 	private static ConfirmBoxController _Instance;
 }

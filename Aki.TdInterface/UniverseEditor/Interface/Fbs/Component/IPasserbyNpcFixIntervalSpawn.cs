@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056C2 RID: 22210
+	// Token: 0x02005C78 RID: 23672
 	public struct IPasserbyNpcFixIntervalSpawn : IFlatbufferObject
 	{
-		// Token: 0x1700A547 RID: 42311
-		// (get) Token: 0x06025190 RID: 151952 RVA: 0x0051F51B File Offset: 0x0051D71B
+		// Token: 0x1700ADEA RID: 44522
+		// (get) Token: 0x0602743F RID: 160831 RVA: 0x00560BBE File Offset: 0x0055EDBE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025191 RID: 151953 RVA: 0x0051F528 File Offset: 0x0051D728
+		// Token: 0x06027440 RID: 160832 RVA: 0x00560BCB File Offset: 0x0055EDCB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025192 RID: 151954 RVA: 0x0051F530 File Offset: 0x0051D730
+		// Token: 0x06027441 RID: 160833 RVA: 0x00560BD4 File Offset: 0x0055EDD4
 		public static IPasserbyNpcFixIntervalSpawn GetRootAsIPasserbyNpcFixIntervalSpawn(ByteBuffer _bb)
 		{
 			return IPasserbyNpcFixIntervalSpawn.GetRootAsIPasserbyNpcFixIntervalSpawn(_bb, default(IPasserbyNpcFixIntervalSpawn));
 		}
 
-		// Token: 0x06025193 RID: 151955 RVA: 0x0051F54C File Offset: 0x0051D74C
+		// Token: 0x06027442 RID: 160834 RVA: 0x00560BF0 File Offset: 0x0055EDF0
 		public static IPasserbyNpcFixIntervalSpawn GetRootAsIPasserbyNpcFixIntervalSpawn(ByteBuffer _bb, IPasserbyNpcFixIntervalSpawn obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025194 RID: 151956 RVA: 0x0051F569 File Offset: 0x0051D769
+		// Token: 0x06027443 RID: 160835 RVA: 0x00560C0D File Offset: 0x0055EE0D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025195 RID: 151957 RVA: 0x0051F578 File Offset: 0x0051D778
+		// Token: 0x06027444 RID: 160836 RVA: 0x00560C1C File Offset: 0x0055EE1C
 		public IPasserbyNpcFixIntervalSpawn __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A548 RID: 42312
-		// (get) Token: 0x06025196 RID: 151958 RVA: 0x0051F588 File Offset: 0x0051D788
+		// Token: 0x1700ADEB RID: 44523
+		// (get) Token: 0x06027445 RID: 160837 RVA: 0x00560C2C File Offset: 0x0055EE2C
 		public EPasserbyNpcSpawnType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A549 RID: 42313
-		// (get) Token: 0x06025197 RID: 151959 RVA: 0x0051F5C4 File Offset: 0x0051D7C4
+		// Token: 0x1700ADEC RID: 44524
+		// (get) Token: 0x06027446 RID: 160838 RVA: 0x00560C68 File Offset: 0x0055EE68
 		public int MaxSpawnCount
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A54A RID: 42314
-		// (get) Token: 0x06025198 RID: 151960 RVA: 0x0051F600 File Offset: 0x0051D800
+		// Token: 0x1700ADED RID: 44525
+		// (get) Token: 0x06027447 RID: 160839 RVA: 0x00560CA4 File Offset: 0x0055EEA4
 		public int MinDistance
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A54B RID: 42315
-		// (get) Token: 0x06025199 RID: 151961 RVA: 0x0051F63C File Offset: 0x0051D83C
+		// Token: 0x1700ADEE RID: 44526
+		// (get) Token: 0x06027448 RID: 160840 RVA: 0x00560CE0 File Offset: 0x0055EEE0
 		public float Interval
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A54C RID: 42316
-		// (get) Token: 0x0602519A RID: 151962 RVA: 0x0051F680 File Offset: 0x0051D880
+		// Token: 0x1700ADEF RID: 44527
+		// (get) Token: 0x06027449 RID: 160841 RVA: 0x00560D24 File Offset: 0x0055EF24
 		public byte NullMask
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602519B RID: 151963 RVA: 0x0051F6BD File Offset: 0x0051D8BD
+		// Token: 0x0602744A RID: 160842 RVA: 0x00560D61 File Offset: 0x0055EF61
 		public static Offset<IPasserbyNpcFixIntervalSpawn> CreateIPasserbyNpcFixIntervalSpawn(FlatBufferBuilder builder, EPasserbyNpcSpawnType Type = EPasserbyNpcSpawnType.FixInterval, int MaxSpawnCount = 0, int MinDistance = 0, float Interval = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -134,49 +134,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPasserbyNpcFixIntervalSpawn.EndIPasserbyNpcFixIntervalSpawn(builder);
 		}
 
-		// Token: 0x0602519C RID: 151964 RVA: 0x0051F6F1 File Offset: 0x0051D8F1
+		// Token: 0x0602744B RID: 160843 RVA: 0x00560D95 File Offset: 0x0055EF95
 		public static void StartIPasserbyNpcFixIntervalSpawn(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602519D RID: 151965 RVA: 0x0051F6FA File Offset: 0x0051D8FA
+		// Token: 0x0602744C RID: 160844 RVA: 0x00560D9E File Offset: 0x0055EF9E
 		public static void AddType(FlatBufferBuilder builder, EPasserbyNpcSpawnType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602519E RID: 151966 RVA: 0x0051F705 File Offset: 0x0051D905
+		// Token: 0x0602744D RID: 160845 RVA: 0x00560DA9 File Offset: 0x0055EFA9
 		public static void AddMaxSpawnCount(FlatBufferBuilder builder, int maxSpawnCount)
 		{
 			builder.AddInt(1, maxSpawnCount, 0);
 		}
 
-		// Token: 0x0602519F RID: 151967 RVA: 0x0051F710 File Offset: 0x0051D910
+		// Token: 0x0602744E RID: 160846 RVA: 0x00560DB4 File Offset: 0x0055EFB4
 		public static void AddMinDistance(FlatBufferBuilder builder, int minDistance)
 		{
 			builder.AddInt(2, minDistance, 0);
 		}
 
-		// Token: 0x060251A0 RID: 151968 RVA: 0x0051F71B File Offset: 0x0051D91B
+		// Token: 0x0602744F RID: 160847 RVA: 0x00560DBF File Offset: 0x0055EFBF
 		public static void AddInterval(FlatBufferBuilder builder, float interval)
 		{
 			builder.AddFloat(3, interval, 0.0);
 		}
 
-		// Token: 0x060251A1 RID: 151969 RVA: 0x0051F72E File Offset: 0x0051D92E
+		// Token: 0x06027450 RID: 160848 RVA: 0x00560DD2 File Offset: 0x0055EFD2
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x060251A2 RID: 151970 RVA: 0x0051F739 File Offset: 0x0051D939
+		// Token: 0x06027451 RID: 160849 RVA: 0x00560DDD File Offset: 0x0055EFDD
 		public static Offset<IPasserbyNpcFixIntervalSpawn> EndIPasserbyNpcFixIntervalSpawn(FlatBufferBuilder builder)
 		{
 			return new Offset<IPasserbyNpcFixIntervalSpawn>(builder.EndTable());
 		}
 
-		// Token: 0x060251A3 RID: 151971 RVA: 0x0051F748 File Offset: 0x0051D948
+		// Token: 0x06027452 RID: 160850 RVA: 0x00560DEC File Offset: 0x0055EFEC
 		public IPasserbyNpcFixIntervalSpawnT UnPack()
 		{
 			IPasserbyNpcFixIntervalSpawnT passerbyNpcFixIntervalSpawnT = new IPasserbyNpcFixIntervalSpawnT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return passerbyNpcFixIntervalSpawnT;
 		}
 
-		// Token: 0x060251A4 RID: 151972 RVA: 0x0051F763 File Offset: 0x0051D963
+		// Token: 0x06027453 RID: 160851 RVA: 0x00560E07 File Offset: 0x0055F007
 		public void UnPackTo(IPasserbyNpcFixIntervalSpawnT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060251A5 RID: 151973 RVA: 0x0051F7A4 File Offset: 0x0051D9A4
+		// Token: 0x06027454 RID: 160852 RVA: 0x00560E48 File Offset: 0x0055F048
 		public static Offset<IPasserbyNpcFixIntervalSpawn> Pack(FlatBufferBuilder builder, IPasserbyNpcFixIntervalSpawnT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPasserbyNpcFixIntervalSpawn.CreateIPasserbyNpcFixIntervalSpawn(builder, _o.Type, _o.MaxSpawnCount, _o.MinDistance, _o.Interval, _o.NullMask);
 		}
 
-		// Token: 0x0400EAF8 RID: 60152
+		// Token: 0x0400F77C RID: 63356
 		private Table __p;
 	}
 }

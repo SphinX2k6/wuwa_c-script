@@ -1,13 +1,13 @@
 ﻿using System;
 
-// Token: 0x020010EE RID: 4334
+// Token: 0x020005A2 RID: 1442
 public interface IArtemisDayItemData
 {
-	// Token: 0x1700098A RID: 2442
-	// (get) Token: 0x060070FF RID: 28927
+	// Token: 0x170009AA RID: 2474
+	// (get) Token: 0x06004495 RID: 17557
 	int Index { get; }
 
-	// Token: 0x1700098B RID: 2443
-	// (get) Token: 0x06007100 RID: 28928
+	// Token: 0x170009AB RID: 2475
+	// (get) Token: 0x06004496 RID: 17558
 	EArtemisState? State { get; }
 }

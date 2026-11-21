@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001211 RID: 4625
+// Token: 0x020006C5 RID: 1733
 public class ActivityDailyAdventureDefine : IStaticVariableResetter
 {
-	// Token: 0x06007BD3 RID: 31699 RVA: 0x001A1FB6 File Offset: 0x001A01B6
+	// Token: 0x06004F69 RID: 20329 RVA: 0x001AAC2E File Offset: 0x001A8E2E
 	static ActivityDailyAdventureDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityDailyAdventureDefine.CreateStaticDefaultValue), new Action(ActivityDailyAdventureDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06007BD4 RID: 31700 RVA: 0x001A1FD5 File Offset: 0x001A01D5
+	// Token: 0x06004F6A RID: 20330 RVA: 0x001AAC4D File Offset: 0x001A8E4D
 	public static void CreateStaticDefaultValue()
 	{
 		ActivityDailyAdventureDefine.RewardStateResolver = new Dictionary<DailyAdventureTaskState, ERewardState>
@@ -32,16 +32,16 @@ public class ActivityDailyAdventureDefine : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06007BD5 RID: 31701 RVA: 0x001A1FF9 File Offset: 0x001A01F9
+	// Token: 0x06004F6B RID: 20331 RVA: 0x001AAC71 File Offset: 0x001A8E71
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityDailyAdventureDefine.RewardStateResolver = null;
 	}
 
-	// Token: 0x040038BC RID: 14524
+	// Token: 0x04003955 RID: 14677
 	public const int DAILY_ADVENTURE_PT_CONFIGID = 13;
 
-	// Token: 0x040038BD RID: 14525
+	// Token: 0x04003956 RID: 14678
 	[Nullable(1)]
 	public static Dictionary<DailyAdventureTaskState, ERewardState> RewardStateResolver;
 }

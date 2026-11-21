@@ -3,14 +3,14 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 using UnrealEngine;
 
-// Token: 0x0200325F RID: 12895
+// Token: 0x020027CE RID: 10190
 [NullableContext(1)]
 [Nullable(0)]
-public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDependency
+public class SimpleNpcAnimationComponent : BaseAnimationComponent
 {
-	// Token: 0x1700265B RID: 9819
-	// (get) Token: 0x0601BDAD RID: 114093 RVA: 0x007B4494 File Offset: 0x007B2694
-	public static Type[] Dependencies
+	// Token: 0x170028E7 RID: 10471
+	// (get) Token: 0x0601997D RID: 104829 RVA: 0x007DC669 File Offset: 0x007DA869
+	public override Type[] Dependencies
 	{
 		get
 		{
@@ -22,8 +22,8 @@ public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x1700265C RID: 9820
-	// (get) Token: 0x0601BDAE RID: 114094 RVA: 0x007B44B6 File Offset: 0x007B26B6
+	// Token: 0x170028E8 RID: 10472
+	// (get) Token: 0x0601997E RID: 104830 RVA: 0x007DC68B File Offset: 0x007DA88B
 	[Nullable(2)]
 	protected new SimpleNpcActorComponent ActorComp
 	{
@@ -34,7 +34,7 @@ public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601BDAF RID: 114095 RVA: 0x007B44C4 File Offset: 0x007B26C4
+	// Token: 0x0601997F RID: 104831 RVA: 0x007DC698 File Offset: 0x007DA898
 	private void ResetTemporaryHidden()
 	{
 		if (this.HiddenCount > 0)
@@ -57,7 +57,7 @@ public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601BDB0 RID: 114096 RVA: 0x007B456C File Offset: 0x007B276C
+	// Token: 0x06019980 RID: 104832 RVA: 0x007DC740 File Offset: 0x007DA940
 	protected override bool OnInit()
 	{
 		base.OnInit();
@@ -76,7 +76,7 @@ public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDep
 		return true;
 	}
 
-	// Token: 0x0601BDB1 RID: 114097 RVA: 0x007B4644 File Offset: 0x007B2844
+	// Token: 0x06019981 RID: 104833 RVA: 0x007DC818 File Offset: 0x007DAA18
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.CheckGetComponent<SimpleNpcActorComponent>();
@@ -103,7 +103,7 @@ public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDep
 		return true;
 	}
 
-	// Token: 0x0601BDB2 RID: 114098 RVA: 0x007B46F1 File Offset: 0x007B28F1
+	// Token: 0x06019982 RID: 104834 RVA: 0x007DC8C5 File Offset: 0x007DAAC5
 	protected override void InitBaseInfo()
 	{
 		this.SightDirect.DeepCopy(Vector.RightVectorProxy);
@@ -113,13 +113,13 @@ public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.SetAnimParams(true);
 	}
 
-	// Token: 0x0601BDB3 RID: 114099 RVA: 0x007B4728 File Offset: 0x007B2928
+	// Token: 0x06019983 RID: 104835 RVA: 0x007DC8FC File Offset: 0x007DAAFC
 	protected override void OnActivate()
 	{
 		base.StartAnimInstance();
 	}
 
-	// Token: 0x0601BDB4 RID: 114100 RVA: 0x007B4730 File Offset: 0x007B2930
+	// Token: 0x06019984 RID: 104836 RVA: 0x007DC904 File Offset: 0x007DAB04
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -127,7 +127,7 @@ public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.UpdateHeadRotation(delta);
 	}
 
-	// Token: 0x0601BDB5 RID: 114101 RVA: 0x007B4748 File Offset: 0x007B2948
+	// Token: 0x06019985 RID: 104837 RVA: 0x007DC91C File Offset: 0x007DAB1C
 	protected override void OnDisable(string reason)
 	{
 		if (this.HiddenCount >= 0)
@@ -158,7 +158,7 @@ public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601BDB6 RID: 114102 RVA: 0x007B4818 File Offset: 0x007B2A18
+	// Token: 0x06019986 RID: 104838 RVA: 0x007DC9EC File Offset: 0x007DABEC
 	private void UpdateHeadRotation(float delta)
 	{
 		if (!this.EnableSightDirectInternal)
@@ -176,7 +176,7 @@ public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.LerpSightDirect(delta);
 	}
 
-	// Token: 0x0601BDB7 RID: 114103 RVA: 0x007B486C File Offset: 0x007B2A6C
+	// Token: 0x06019987 RID: 104839 RVA: 0x007DCA40 File Offset: 0x007DAC40
 	private unsafe void LerpSightDirect(float delta)
 	{
 		this.TmpDirect.FromUeVector(this.TmpTargetSight);
@@ -214,7 +214,7 @@ public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601BDB8 RID: 114104 RVA: 0x007B4B08 File Offset: 0x007B2D08
+	// Token: 0x06019988 RID: 104840 RVA: 0x007DCCDC File Offset: 0x007DAEDC
 	private void UpdateSightTargetRotation(Vector @out)
 	{
 		BaseActorComponent sightTargetItem = base.GetSightTargetItem();
@@ -242,7 +242,7 @@ public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.SightFix(@out);
 	}
 
-	// Token: 0x0601BDB9 RID: 114105 RVA: 0x007B4BE4 File Offset: 0x007B2DE4
+	// Token: 0x06019989 RID: 104841 RVA: 0x007DCDB8 File Offset: 0x007DAFB8
 	private void SightFix(Vector sightDirect)
 	{
 		if (this.SightFixQuat == null)
@@ -255,7 +255,7 @@ public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.ActorComp.ActorQuatProxy.RotateVector(sightDirect, sightDirect);
 	}
 
-	// Token: 0x0601BDBA RID: 114106 RVA: 0x007B4C3C File Offset: 0x007B2E3C
+	// Token: 0x0601998A RID: 104842 RVA: 0x007DCE10 File Offset: 0x007DB010
 	private void SetAnimParams(bool bUseDistanceMap = true)
 	{
 		bool flag = Info.Instance.IsMobilePlatform();
@@ -293,7 +293,7 @@ public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601BDBB RID: 114107 RVA: 0x007B4DB0 File Offset: 0x007B2FB0
+	// Token: 0x0601998B RID: 104843 RVA: 0x007DCF84 File Offset: 0x007DB184
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -301,99 +301,154 @@ public class SimpleNpcAnimationComponent : BaseAnimationComponent, IComponentDep
 			return false;
 		}
 		SimpleNpcAnimationComponent simpleNpcAnimationComponent = (SimpleNpcAnimationComponent)componentTemplate;
-		if (base.CanResetComponentProperty("SlopeStepPeriodicCurve"))
+		if (simpleNpcAnimationComponent.SlopeStepPeriodicCurve == null)
 		{
-			if (simpleNpcAnimationComponent.SlopeStepPeriodicCurve == null)
-			{
-				this.SlopeStepPeriodicCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCurveFloat>(this.SlopeStepPeriodicCurve), "SlopeStepPeriodicCurve"))
-			{
-				return false;
-			}
+			this.SlopeStepPeriodicCurve = null;
 		}
-		if (base.CanResetComponentProperty("SlopeStepSizeCurve"))
-		{
-			if (simpleNpcAnimationComponent.SlopeStepSizeCurve == null)
-			{
-				this.SlopeStepSizeCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCurveFloat>(this.SlopeStepSizeCurve), "SlopeStepSizeCurve"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TmpTargetSight") && simpleNpcAnimationComponent.TmpTargetSight != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpTargetSight), "TmpTargetSight"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SlopeStepPeriodicCurve), "SlopeStepPeriodicCurve"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SightFixQuat"))
+		if (simpleNpcAnimationComponent.SlopeStepSizeCurve == null)
 		{
-			if (simpleNpcAnimationComponent.SightFixQuat == null)
-			{
-				this.SightFixQuat = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.SightFixQuat), "SightFixQuat"))
-			{
-				return false;
-			}
+			this.SlopeStepSizeCurve = null;
 		}
-		if (base.CanResetComponentProperty("TmpQuat") && simpleNpcAnimationComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat), "TmpQuat"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SlopeStepSizeCurve), "SlopeStepSizeCurve"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpDirect") && simpleNpcAnimationComponent.TmpDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpDirect), "TmpDirect"))
+		if (simpleNpcAnimationComponent.TmpTargetSight != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTargetSight), "TmpTargetSight"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpDirect2") && simpleNpcAnimationComponent.TmpDirect2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpDirect2), "TmpDirect2"))
+		if (simpleNpcAnimationComponent.SightFixQuat == null)
+		{
+			this.SightFixQuat = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SightFixQuat), "SightFixQuat"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TemporaryHiddenHandle"))
+		if (simpleNpcAnimationComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat), "TmpQuat"))
 		{
-			this.TemporaryHiddenHandle = simpleNpcAnimationComponent.TemporaryHiddenHandle;
+			return false;
 		}
-		if (base.CanResetComponentProperty("HiddenCount"))
+		if (simpleNpcAnimationComponent.TmpDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpDirect), "TmpDirect"))
 		{
-			this.HiddenCount = simpleNpcAnimationComponent.HiddenCount;
+			return false;
 		}
+		if (simpleNpcAnimationComponent.TmpDirect2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpDirect2), "TmpDirect2"))
+		{
+			return false;
+		}
+		this.TemporaryHiddenHandle = simpleNpcAnimationComponent.TemporaryHiddenHandle;
+		this.HiddenCount = simpleNpcAnimationComponent.HiddenCount;
 		return true;
 	}
 
-	// Token: 0x0400DBC9 RID: 56265
+	// Token: 0x170028E9 RID: 10473
+	// (get) Token: 0x0601998C RID: 104844 RVA: 0x007DD0C5 File Offset: 0x007DB2C5
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028EA RID: 10474
+	// (get) Token: 0x0601998D RID: 104845 RVA: 0x007DD0C8 File Offset: 0x007DB2C8
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028EB RID: 10475
+	// (get) Token: 0x0601998E RID: 104846 RVA: 0x007DD0CB File Offset: 0x007DB2CB
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028EC RID: 10476
+	// (get) Token: 0x0601998F RID: 104847 RVA: 0x007DD0CE File Offset: 0x007DB2CE
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028ED RID: 10477
+	// (get) Token: 0x06019990 RID: 104848 RVA: 0x007DD0D1 File Offset: 0x007DB2D1
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028EE RID: 10478
+	// (get) Token: 0x06019991 RID: 104849 RVA: 0x007DD0D4 File Offset: 0x007DB2D4
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028EF RID: 10479
+	// (get) Token: 0x06019992 RID: 104850 RVA: 0x007DD0D7 File Offset: 0x007DB2D7
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E068 RID: 57448
 	[Nullable(2)]
 	protected UCurveFloat SlopeStepPeriodicCurve;
 
-	// Token: 0x0400DBCA RID: 56266
+	// Token: 0x0400E069 RID: 57449
 	[Nullable(2)]
 	protected UCurveFloat SlopeStepSizeCurve;
 
-	// Token: 0x0400DBCB RID: 56267
+	// Token: 0x0400E06A RID: 57450
 	private readonly Vector TmpTargetSight = Vector.Create();
 
-	// Token: 0x0400DBCC RID: 56268
+	// Token: 0x0400E06B RID: 57451
 	[Nullable(2)]
 	private Quat SightFixQuat;
 
-	// Token: 0x0400DBCD RID: 56269
+	// Token: 0x0400E06C RID: 57452
 	private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400DBCE RID: 56270
+	// Token: 0x0400E06D RID: 57453
 	private readonly Vector TmpDirect = Vector.Create();
 
-	// Token: 0x0400DBCF RID: 56271
+	// Token: 0x0400E06E RID: 57454
 	private readonly Vector TmpDirect2 = Vector.Create();
 
-	// Token: 0x0400DBD0 RID: 56272
+	// Token: 0x0400E06F RID: 57455
 	private int? TemporaryHiddenHandle = new int?(0);
 
-	// Token: 0x0400DBD1 RID: 56273
+	// Token: 0x0400E070 RID: 57456
 	private int HiddenCount = -1;
 
-	// Token: 0x0400DBD2 RID: 56274
+	// Token: 0x0400E071 RID: 57457
 	private const float TURN_SPEED = 0.36f;
 
-	// Token: 0x0400DBD3 RID: 56275
+	// Token: 0x0400E072 RID: 57458
 	private const float TURN_RATIO = 0.04f;
 }

@@ -7,124 +7,116 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x020043C2 RID: 17346
+	// Token: 0x020033DD RID: 13277
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/SBaseCurve.SBaseCurve")]
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class SBaseCurve : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602CD73 RID: 183667 RVA: 0x00A2A0FC File Offset: 0x00A282FC
+		// Token: 0x0602197C RID: 137596 RVA: 0x00964CAB File Offset: 0x00962EAB
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SBaseCurve._ScriptStructPtr != 0) ? SBaseCurve._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/Camera/SBaseCurve.SBaseCurve", ref SBaseCurve._ScriptStructPtr);
 		}
 
-		// Token: 0x1700710B RID: 28939
-		// (get) Token: 0x0602CD74 RID: 183668 RVA: 0x00A2A120 File Offset: 0x00A28320
-		// (set) Token: 0x0602CD75 RID: 183669 RVA: 0x00A2A134 File Offset: 0x00A28334
+		// Token: 0x1700450B RID: 17675
+		// (get) Token: 0x0602197D RID: 137597 RVA: 0x00964CCF File Offset: 0x00962ECF
+		// (set) Token: 0x0602197E RID: 137598 RVA: 0x00964CE3 File Offset: 0x00962EE3
 		public unsafe TEnumAsByte<EBaseCurveType> CurveType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBaseCurve.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SBaseCurve.__PropertyOffset_CurveType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBaseCurve.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SBaseCurve.__PropertyOffset_CurveType) = value;
 			}
 		}
 
-		// Token: 0x1700710C RID: 28940
-		// (get) Token: 0x0602CD76 RID: 183670 RVA: 0x00A2A149 File Offset: 0x00A28349
-		// (set) Token: 0x0602CD77 RID: 183671 RVA: 0x00A2A159 File Offset: 0x00A28359
+		// Token: 0x1700450C RID: 17676
+		// (get) Token: 0x0602197F RID: 137599 RVA: 0x00964CF8 File Offset: 0x00962EF8
+		// (set) Token: 0x06021980 RID: 137600 RVA: 0x00964D08 File Offset: 0x00962F08
 		public unsafe float N
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBaseCurve.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SBaseCurve.__PropertyOffset_N);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBaseCurve.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SBaseCurve.__PropertyOffset_N) = value;
 			}
 		}
 
-		// Token: 0x1700710D RID: 28941
-		// (get) Token: 0x0602CD78 RID: 183672 RVA: 0x00A2A16A File Offset: 0x00A2836A
-		// (set) Token: 0x0602CD79 RID: 183673 RVA: 0x00A2A17E File Offset: 0x00A2837E
+		// Token: 0x1700450D RID: 17677
+		// (get) Token: 0x06021981 RID: 137601 RVA: 0x00964D19 File Offset: 0x00962F19
+		// (set) Token: 0x06021982 RID: 137602 RVA: 0x00964D2D File Offset: 0x00962F2D
 		[Nullable(2)]
 		public unsafe UCurveFloat FloatCurve
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + SBaseCurve.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + SBaseCurve.__PropertyOffset_FloatCurve);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SBaseCurve.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SBaseCurve.__PropertyOffset_FloatCurve, value);
 			}
 		}
 
-		// Token: 0x0602CD7A RID: 183674 RVA: 0x00A2A193 File Offset: 0x00A28393
+		// Token: 0x06021983 RID: 137603 RVA: 0x00964D42 File Offset: 0x00962F42
 		public SBaseCurve()
 		{
 		}
 
-		// Token: 0x0602CD7B RID: 183675 RVA: 0x00A2A19B File Offset: 0x00A2839B
-		public SBaseCurve(TEnumAsByte<EBaseCurveType> CurveType, float N, [Nullable(1)] UCurveFloat FloatCurve)
-		{
-			this.CurveType = CurveType;
-			this.N = N;
-			this.FloatCurve = FloatCurve;
-		}
-
-		// Token: 0x0602CD7C RID: 183676 RVA: 0x00A2A1B8 File Offset: 0x00A283B8
+		// Token: 0x06021984 RID: 137604 RVA: 0x00964D4A File Offset: 0x00962F4A
 		protected override IntPtr GetUStructPtr()
 		{
 			return SBaseCurve.StaticStruct();
 		}
 
-		// Token: 0x0602CD7D RID: 183677 RVA: 0x00A2A1C4 File Offset: 0x00A283C4
+		// Token: 0x06021985 RID: 137605 RVA: 0x00964D56 File Offset: 0x00962F56
 		[NullableContext(2)]
 		public SBaseCurve(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602CD7E RID: 183678 RVA: 0x00A2A1CE File Offset: 0x00A283CE
+		// Token: 0x06021986 RID: 137606 RVA: 0x00964D60 File Offset: 0x00962F60
 		public SBaseCurve(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602CD7F RID: 183679 RVA: 0x00A2A1D9 File Offset: 0x00A283D9
+		// Token: 0x06021987 RID: 137607 RVA: 0x00964D6B File Offset: 0x00962F6B
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SBaseCurve(Pointer, false, true);
 		}
 
-		// Token: 0x0602CD80 RID: 183680 RVA: 0x00A2A1E3 File Offset: 0x00A283E3
+		// Token: 0x06021988 RID: 137608 RVA: 0x00964D75 File Offset: 0x00962F75
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SBaseCurve(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017CA0 RID: 97440
+		// Token: 0x04012808 RID: 75784
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/Camera/SBaseCurve.SBaseCurve";
 
-		// Token: 0x04017CA1 RID: 97441
+		// Token: 0x04012809 RID: 75785
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017CA2 RID: 97442
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401280A RID: 75786
+		internal static int __PropertyOffset_CurveType;
 
-		// Token: 0x04017CA3 RID: 97443
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401280B RID: 75787
+		internal static int __PropertyOffset_N;
 
-		// Token: 0x04017CA4 RID: 97444
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401280C RID: 75788
+		internal static int __PropertyOffset_FloatCurve;
 	}
 }

@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001938 RID: 6456
+// Token: 0x02000DF4 RID: 3572
 public class MediumItemGridSubIconComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BCD0 RID: 48336 RVA: 0x002AB973 File Offset: 0x002A9B73
+	// Token: 0x060090CB RID: 37067 RVA: 0x002B643F File Offset: 0x002B463F
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemAIcon";
 	}
 
-	// Token: 0x0600BCD1 RID: 48337 RVA: 0x002AB97C File Offset: 0x002A9B7C
+	// Token: 0x060090CC RID: 37068 RVA: 0x002B6448 File Offset: 0x002B4648
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -26,7 +26,7 @@ public class MediumItemGridSubIconComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BCD2 RID: 48338 RVA: 0x002AB9C4 File Offset: 0x002A9BC4
+	// Token: 0x060090CD RID: 37069 RVA: 0x002B6490 File Offset: 0x002B4690
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -43,16 +43,16 @@ public class MediumItemGridSubIconComponent : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x0600BCD3 RID: 48339 RVA: 0x002AB9FF File Offset: 0x002A9BFF
+	// Token: 0x060090CE RID: 37070 RVA: 0x002B64CB File Offset: 0x002B46CB
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.UnderText;
 	}
 
-	// Token: 0x02007E9D RID: 32413
+	// Token: 0x0200702A RID: 28714
 	private class EChildType
 	{
-		// Token: 0x0402967C RID: 169596
+		// Token: 0x040249B4 RID: 149940
 		public const int TextureIcon = 0;
 	}
 }

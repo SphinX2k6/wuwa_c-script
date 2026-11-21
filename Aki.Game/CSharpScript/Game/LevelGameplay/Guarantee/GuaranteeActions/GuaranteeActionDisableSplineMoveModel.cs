@@ -4,10 +4,26 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.Guarantee.GuaranteeActions
 {
-	// Token: 0x02006E10 RID: 28176
-	public class GuaranteeActionDisableSplineMoveModel : GuaranteeActionBase
+	// Token: 0x02005F90 RID: 24464
+	public class GuaranteeActionDisableSplineMoveModel : GuaranteeActionBase, IGuaranteeActionComparer
 	{
-		// Token: 0x06044B65 RID: 281445 RVA: 0x010F5970 File Offset: 0x010F3B70
+		// Token: 0x0603ACCB RID: 240843 RVA: 0x0109FD30 File Offset: 0x0109DF30
+		[NullableContext(2)]
+		public bool IsSameAction(ActionParams left, ActionParams right)
+		{
+			EnableSplineMoveModel enableSplineMoveModel = left as EnableSplineMoveModel;
+			if (enableSplineMoveModel != null)
+			{
+				EnableSplineMoveModel enableSplineMoveModel2 = right as EnableSplineMoveModel;
+				if (enableSplineMoveModel2 != null && enableSplineMoveModel.Config.Target.Type == enableSplineMoveModel2.Config.Target.Type)
+				{
+					return enableSplineMoveModel.Config.Target.Type != ETargetEntityType.Player || enableSplineMoveModel.Config.SplineEntityId == enableSplineMoveModel2.Config.SplineEntityId;
+				}
+			}
+			return false;
+		}
+
+		// Token: 0x0603ACCC RID: 240844 RVA: 0x0109FDA4 File Offset: 0x0109DFA4
 		[NullableContext(2)]
 		protected override void OnExecute(ActionParams @params)
 		{

@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006632 RID: 26162
+	// Token: 0x020055B0 RID: 21936
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingWarningTips : UiTickViewBase
 	{
-		// Token: 0x0604194F RID: 268623 RVA: 0x00FE8057 File Offset: 0x00FE6257
+		// Token: 0x06036614 RID: 222740 RVA: 0x00F2F10F File Offset: 0x00F2D30F
 		public FishingWarningTips(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06041950 RID: 268624 RVA: 0x00FE8068 File Offset: 0x00FE6268
+		// Token: 0x06036615 RID: 222741 RVA: 0x00F2F120 File Offset: 0x00F2D320
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06041951 RID: 268625 RVA: 0x00FE80F4 File Offset: 0x00FE62F4
+		// Token: 0x06036616 RID: 222742 RVA: 0x00F2F1AC File Offset: 0x00F2D3AC
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(base.GetItem(2));
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.SpriteBar.SetFillAmount(this.LastBarValue / this.BarMaxValue);
 		}
 
-		// Token: 0x06041952 RID: 268626 RVA: 0x00FE818F File Offset: 0x00FE638F
+		// Token: 0x06036617 RID: 222743 RVA: 0x00F2F247 File Offset: 0x00F2D447
 		private void OnEndSequence(string sequenceName)
 		{
 			if (sequenceName == "NumChange")
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041953 RID: 268627 RVA: 0x00FE81B1 File Offset: 0x00FE63B1
+		// Token: 0x06036618 RID: 222744 RVA: 0x00F2F269 File Offset: 0x00F2D469
 		protected override void OnAddEventListener()
 		{
 			FishingShipData shipData = FishingModel.Instance.GetShipData();
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			shipData.AddAttributeListener(EAttributeType.SpecialEnergy1Max, new Action<EAttributeType, float, float>(this.OnAttributeMaxChanged));
 		}
 
-		// Token: 0x06041954 RID: 268628 RVA: 0x00FE81E4 File Offset: 0x00FE63E4
+		// Token: 0x06036619 RID: 222745 RVA: 0x00F2F29C File Offset: 0x00F2D49C
 		protected override void OnRemoveEventListener()
 		{
 			FishingShipData shipData = FishingModel.Instance.GetShipData();
@@ -74,13 +74,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			shipData.RemoveAttributeListener(EAttributeType.SpecialEnergy1Max, new Action<EAttributeType, float, float>(this.OnAttributeMaxChanged));
 		}
 
-		// Token: 0x06041955 RID: 268629 RVA: 0x00FE8217 File Offset: 0x00FE6417
+		// Token: 0x0603661A RID: 222746 RVA: 0x00F2F2CF File Offset: 0x00F2D4CF
 		protected override void OnBeforeDestroy()
 		{
 			this.SequencePlayer.Clear();
 		}
 
-		// Token: 0x06041956 RID: 268630 RVA: 0x00FE8224 File Offset: 0x00FE6424
+		// Token: 0x0603661B RID: 222747 RVA: 0x00F2F2DC File Offset: 0x00F2D4DC
 		private void OnAttributeChanged(EAttributeType id, float newValue, float oldValue)
 		{
 			this.TargetValue = newValue;
@@ -89,14 +89,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.HandleShowAddValue();
 		}
 
-		// Token: 0x06041957 RID: 268631 RVA: 0x00FE8244 File Offset: 0x00FE6444
+		// Token: 0x0603661C RID: 222748 RVA: 0x00F2F2FC File Offset: 0x00F2D4FC
 		private void OnAttributeMaxChanged(EAttributeType id, float newValue, float oldValue)
 		{
 			this.BarMaxValue = newValue;
 			this.HandleWarningBar(0f);
 		}
 
-		// Token: 0x06041958 RID: 268632 RVA: 0x00FE8258 File Offset: 0x00FE6458
+		// Token: 0x0603661D RID: 222749 RVA: 0x00F2F310 File Offset: 0x00F2D510
 		protected override void OnTick(float delta)
 		{
 			if (!this.IsTick)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041959 RID: 268633 RVA: 0x00FE8280 File Offset: 0x00FE6480
+		// Token: 0x0603661E RID: 222750 RVA: 0x00F2F338 File Offset: 0x00F2D538
 		protected void HandleWarningBar(float delta)
 		{
 			double num = (double)(20f * delta) * TimeUtil.Instance.Millisecond;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.SpriteBar.SetFillAmount(this.LastBarValue / this.BarMaxValue);
 		}
 
-		// Token: 0x0604195A RID: 268634 RVA: 0x00FE82E4 File Offset: 0x00FE64E4
+		// Token: 0x0603661F RID: 222751 RVA: 0x00F2F39C File Offset: 0x00F2D59C
 		protected void HandleShowAddValue()
 		{
 			if (this.AddValue > 1)
@@ -136,47 +136,47 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x040221E4 RID: 139748
+		// Token: 0x0401CB15 RID: 117525
 		private const int ADD_VALUE = 20;
 
-		// Token: 0x040221E5 RID: 139749
+		// Token: 0x0401CB16 RID: 117526
 		protected UUIText AddText;
 
-		// Token: 0x040221E6 RID: 139750
+		// Token: 0x0401CB17 RID: 117527
 		protected UUISprite SpriteBar;
 
-		// Token: 0x040221E7 RID: 139751
+		// Token: 0x0401CB18 RID: 117528
 		protected int AddValue;
 
-		// Token: 0x040221E8 RID: 139752
+		// Token: 0x0401CB19 RID: 117529
 		protected float LastBarValue;
 
-		// Token: 0x040221E9 RID: 139753
+		// Token: 0x0401CB1A RID: 117530
 		protected float BarMaxValue;
 
-		// Token: 0x040221EA RID: 139754
+		// Token: 0x0401CB1B RID: 117531
 		protected float TargetValue;
 
-		// Token: 0x040221EB RID: 139755
+		// Token: 0x0401CB1C RID: 117532
 		private bool IsTick = true;
 
-		// Token: 0x040221EC RID: 139756
+		// Token: 0x0401CB1D RID: 117533
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x040221ED RID: 139757
+		// Token: 0x0401CB1E RID: 117534
 		private bool IsTextActive;
 
-		// Token: 0x0200C84F RID: 51279
+		// Token: 0x0200B231 RID: 45617
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C820 RID: 247840
+			// Token: 0x04037165 RID: 225637
 			public const int SpriteBar = 0;
 
-			// Token: 0x0403C821 RID: 247841
+			// Token: 0x04037166 RID: 225638
 			public const int AddText = 1;
 
-			// Token: 0x0403C822 RID: 247842
+			// Token: 0x04037167 RID: 225639
 			public const int NumberItem = 2;
 		}
 	}

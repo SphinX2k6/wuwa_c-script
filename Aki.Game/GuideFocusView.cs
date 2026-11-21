@@ -8,24 +8,24 @@ using CSharpScript.Game.Guide.StepInfo;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001DC8 RID: 7624
+// Token: 0x0200128A RID: 4746
 [NullableContext(1)]
 [Nullable(0)]
 public class GuideFocusView : GuideBaseView
 {
-	// Token: 0x0600E7DF RID: 59359 RVA: 0x0036C497 File Offset: 0x0036A697
+	// Token: 0x0600BBFE RID: 48126 RVA: 0x0037812B File Offset: 0x0037632B
 	public GuideFocusView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E7E0 RID: 59360 RVA: 0x0036C4C2 File Offset: 0x0036A6C2
+	// Token: 0x0600BBFF RID: 48127 RVA: 0x00378162 File Offset: 0x00376362
 	protected override void OnBeforeGuideBaseViewCreate()
 	{
 		this.Config = new GuideFocusNew?((GuideFocusNew)this.GuideStepInfo.ViewData.ViewConf);
 		this.BindInputAfterSequence();
 	}
 
-	// Token: 0x0600E7E1 RID: 59361 RVA: 0x0036C4EC File Offset: 0x0036A6EC
+	// Token: 0x0600BC00 RID: 48128 RVA: 0x0037818C File Offset: 0x0037638C
 	protected override void OnGuideBaseViewStart()
 	{
 		base.GetRootItem().SetAlpha(0f);
@@ -54,12 +54,12 @@ public class GuideFocusView : GuideBaseView
 		{
 			UiViewBase topView = UiModel.Instance.GetTopView(ELayerType.Pop);
 			string guideFocusTargetViewName = GuideTestUtil.GetGuideFocusTargetViewName(this.Config.Value.ViewName, this.GuideStepInfo.Id);
-			if (topView != null)
+			if (topView != null && topView.IsShowOrShowing)
 			{
 				string a = guideFocusTargetViewName;
 				UiViewInfo viewInfo = topView.ViewInfo;
 				EUiViewName? euiViewName = (viewInfo != null) ? new EUiViewName?(viewInfo.Name) : null;
-				if (a != ((euiViewName != null) ? euiViewName.GetValueOrDefault() : null))
+				if (a != ((euiViewName != null) ? euiViewName.GetValueOrDefault() : null) && !this.guidePopupIgnoreView.Contains(topView.ViewInfo.Name))
 				{
 					UiViewInfo viewInfo2 = topView.ViewInfo;
 					this.OccurredOtherPopupViewName = ((viewInfo2 != null) ? new EUiViewName?(viewInfo2.Name) : null);
@@ -70,21 +70,21 @@ public class GuideFocusView : GuideBaseView
 		}
 	}
 
-	// Token: 0x0600E7E2 RID: 59362 RVA: 0x0036C6EF File Offset: 0x0036A8EF
+	// Token: 0x0600BC01 RID: 48129 RVA: 0x003783B2 File Offset: 0x003765B2
 	protected override void OnGuideBaseViewAddEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnSkillButtonIndexRefresh, new Action(this.CheckSkillItem));
 		EventSystem.Instance.Add<bool>(EEventName.OnPreparePhotoScreenShot, new Action<bool>(this.OnPreparePhotoScreenShot));
 	}
 
-	// Token: 0x0600E7E3 RID: 59363 RVA: 0x0036C729 File Offset: 0x0036A929
+	// Token: 0x0600BC02 RID: 48130 RVA: 0x003783EC File Offset: 0x003765EC
 	protected override void OnGuideBaseViewRemoveEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnSkillButtonIndexRefresh, new Action(this.CheckSkillItem));
 		EventSystem.Instance.Remove(EEventName.OnPreparePhotoScreenShot, new Action<bool>(this.OnPreparePhotoScreenShot));
 	}
 
-	// Token: 0x0600E7E4 RID: 59364 RVA: 0x0036C764 File Offset: 0x0036A964
+	// Token: 0x0600BC03 RID: 48131 RVA: 0x00378428 File Offset: 0x00376628
 	protected override void OnGuideViewAfterShow()
 	{
 		this.RootItem.SetRaycastTarget(false);
@@ -93,7 +93,7 @@ public class GuideFocusView : GuideBaseView
 		InputManager.Instance.SetShowCursor(this.Config.Value.ShowMouse, true);
 	}
 
-	// Token: 0x0600E7E5 RID: 59365 RVA: 0x0036C7A8 File Offset: 0x0036A9A8
+	// Token: 0x0600BC04 RID: 48132 RVA: 0x0037846C File Offset: 0x0037666C
 	protected override void OnGuideBaseViewAfterHide()
 	{
 		EventSystem.Instance.Emit(EEventName.RefreshCursor);
@@ -102,7 +102,7 @@ public class GuideFocusView : GuideBaseView
 		EventSystem.Instance.Emit(EEventName.RefreshCursor);
 	}
 
-	// Token: 0x0600E7E6 RID: 59366 RVA: 0x0036C804 File Offset: 0x0036AA04
+	// Token: 0x0600BC05 RID: 48133 RVA: 0x003784C8 File Offset: 0x003766C8
 	protected override void OnGuideBaseViewDestroy()
 	{
 		if (this.FocusItem != null)
@@ -117,8 +117,8 @@ public class GuideFocusView : GuideBaseView
 		}
 	}
 
-	// Token: 0x17001277 RID: 4727
-	// (get) Token: 0x0600E7E7 RID: 59367 RVA: 0x0036C880 File Offset: 0x0036AA80
+	// Token: 0x170012A1 RID: 4769
+	// (get) Token: 0x0600BC06 RID: 48134 RVA: 0x00378544 File Offset: 0x00376744
 	private bool IsSkillButtonGuide
 	{
 		get
@@ -127,7 +127,7 @@ public class GuideFocusView : GuideBaseView
 		}
 	}
 
-	// Token: 0x0600E7E8 RID: 59368 RVA: 0x0036C910 File Offset: 0x0036AB10
+	// Token: 0x0600BC07 RID: 48135 RVA: 0x003785D4 File Offset: 0x003767D4
 	private void CheckSkillItem()
 	{
 		if (this.IsSkillButtonGuide)
@@ -157,7 +157,7 @@ public class GuideFocusView : GuideBaseView
 		}
 	}
 
-	// Token: 0x0600E7E9 RID: 59369 RVA: 0x0036C988 File Offset: 0x0036AB88
+	// Token: 0x0600BC08 RID: 48136 RVA: 0x0037864C File Offset: 0x0037684C
 	protected override void OnGuideBaseViewTick(float delta)
 	{
 		this.CheckAttachedItemVisible();
@@ -187,7 +187,7 @@ public class GuideFocusView : GuideBaseView
 		}
 	}
 
-	// Token: 0x0600E7EA RID: 59370 RVA: 0x0036CA44 File Offset: 0x0036AC44
+	// Token: 0x0600BC09 RID: 48137 RVA: 0x00378708 File Offset: 0x00376908
 	protected override void OnDurationChange(float remainDuration)
 	{
 		GuideFocusItem focusItem = this.FocusItem;
@@ -198,7 +198,7 @@ public class GuideFocusView : GuideBaseView
 		focusItem.OnDurationChange(remainDuration);
 	}
 
-	// Token: 0x0600E7EB RID: 59371 RVA: 0x0036CA58 File Offset: 0x0036AC58
+	// Token: 0x0600BC0A RID: 48138 RVA: 0x0037871C File Offset: 0x0037691C
 	private bool GetAttachedItemVisible()
 	{
 		this.IsAttachViewReady = false;
@@ -233,7 +233,11 @@ public class GuideFocusView : GuideBaseView
 		}
 		if (this.OccurredOtherPopupViewName != null)
 		{
-			return false;
+			UiViewBase viewByName = UiManager.Instance.GetViewByName(this.OccurredOtherPopupViewName.Value);
+			if (viewByName != null && viewByName.IsShowOrShowing)
+			{
+				return false;
+			}
 		}
 		this.IsAttachViewReady = true;
 		if (!this.GuideStepInfo.ViewData.IsMultiAttach)
@@ -256,7 +260,7 @@ public class GuideFocusView : GuideBaseView
 		return true;
 	}
 
-	// Token: 0x0600E7EC RID: 59372 RVA: 0x0036CBAC File Offset: 0x0036ADAC
+	// Token: 0x0600BC0B RID: 48139 RVA: 0x00378890 File Offset: 0x00376A90
 	private bool HasBlockingPopup()
 	{
 		if (this.Config == null)
@@ -265,10 +269,10 @@ public class GuideFocusView : GuideBaseView
 		}
 		string guideFocusTargetViewName = GuideTestUtil.GetGuideFocusTargetViewName(this.Config.Value.ViewName, this.GuideStepInfo.Id);
 		UiViewBase topView = UiModel.Instance.GetTopView(ELayerType.Pop);
-		return topView != null && topView.ViewInfo.Name != guideFocusTargetViewName && !this.guidePopupIgnoreView.Contains(topView.ViewInfo.Name);
+		return topView != null && topView.IsShowOrShowing && (topView.ViewInfo.Name != guideFocusTargetViewName && !this.guidePopupIgnoreView.Contains(topView.ViewInfo.Name));
 	}
 
-	// Token: 0x0600E7ED RID: 59373 RVA: 0x0036CC30 File Offset: 0x0036AE30
+	// Token: 0x0600BC0C RID: 48140 RVA: 0x00378924 File Offset: 0x00376B24
 	private void CheckAttachedItemVisible()
 	{
 		bool attachedItemVisible = this.GetAttachedItemVisible();
@@ -285,13 +289,13 @@ public class GuideFocusView : GuideBaseView
 		}
 	}
 
-	// Token: 0x0600E7EE RID: 59374 RVA: 0x0036CC78 File Offset: 0x0036AE78
+	// Token: 0x0600BC0D RID: 48141 RVA: 0x0037896C File Offset: 0x00376B6C
 	private void OnStartSequenceEnd(string _)
 	{
 		this.UiViewSequence.PlaySequence("AutoLoopManual", false, null);
 	}
 
-	// Token: 0x0600E7EF RID: 59375 RVA: 0x0036CCA0 File Offset: 0x0036AEA0
+	// Token: 0x0600BC0E RID: 48142 RVA: 0x00378994 File Offset: 0x00376B94
 	private void InitFocusItem()
 	{
 		UUIItem attachedUiItem = this.GuideStepInfo.ViewData.GetAttachedUiItem();
@@ -303,7 +307,7 @@ public class GuideFocusView : GuideBaseView
 		this.FocusItem = this.CreateFocusItem(attachedUiItem, attachedUiItemForShow);
 	}
 
-	// Token: 0x0600E7F0 RID: 59376 RVA: 0x0036CCF0 File Offset: 0x0036AEF0
+	// Token: 0x0600BC0F RID: 48143 RVA: 0x003789E4 File Offset: 0x00376BE4
 	private void ShowInner()
 	{
 		if (!base.GetActive())
@@ -324,7 +328,7 @@ public class GuideFocusView : GuideBaseView
 		this.OnStartSequenceEnd("");
 	}
 
-	// Token: 0x0600E7F1 RID: 59377 RVA: 0x0036CD58 File Offset: 0x0036AF58
+	// Token: 0x0600BC10 RID: 48144 RVA: 0x00378A4C File Offset: 0x00376C4C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -336,27 +340,27 @@ public class GuideFocusView : GuideBaseView
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E7F2 RID: 59378 RVA: 0x0036CDA0 File Offset: 0x0036AFA0
+	// Token: 0x0600BC11 RID: 48145 RVA: 0x00378A94 File Offset: 0x00376C94
 	[NullableContext(2)]
 	public GuideStepInfo GetGuideStepInfo()
 	{
 		return this.GuideStepInfo;
 	}
 
-	// Token: 0x0600E7F3 RID: 59379 RVA: 0x0036CDA8 File Offset: 0x0036AFA8
+	// Token: 0x0600BC12 RID: 48146 RVA: 0x00378A9C File Offset: 0x00376C9C
 	public GuideFocusNew? GetFocusViewConf()
 	{
 		return this.Config;
 	}
 
-	// Token: 0x0600E7F4 RID: 59380 RVA: 0x0036CDB0 File Offset: 0x0036AFB0
+	// Token: 0x0600BC13 RID: 48147 RVA: 0x00378AA4 File Offset: 0x00376CA4
 	public void BindInputAfterSequence()
 	{
 		List<string> list = new List<string>(this.Config.Value.InputEnumsIter());
 		base.BindInput(list, list, new TInputHandle<float>(this.ProcessInput));
 	}
 
-	// Token: 0x0600E7F5 RID: 59381 RVA: 0x0036CDEC File Offset: 0x0036AFEC
+	// Token: 0x0600BC14 RID: 48148 RVA: 0x00378AE0 File Offset: 0x00376CE0
 	private void ProcessInput([Nullable(2)] string name, float value, InputIdentification _)
 	{
 		if (this.RootItem != null && !this.RootItem.bIsUIActive)
@@ -376,7 +380,7 @@ public class GuideFocusView : GuideBaseView
 		base.DoCloseByFinished();
 	}
 
-	// Token: 0x0600E7F6 RID: 59382 RVA: 0x0036CE5C File Offset: 0x0036B05C
+	// Token: 0x0600BC15 RID: 48149 RVA: 0x00378B50 File Offset: 0x00376D50
 	protected override void OnGuideViewCloseWhenFinish()
 	{
 		UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -392,7 +396,7 @@ public class GuideFocusView : GuideBaseView
 		focusItem.OnBaseViewCloseWhenFinish();
 	}
 
-	// Token: 0x0600E7F7 RID: 59383 RVA: 0x0036CE94 File Offset: 0x0036B094
+	// Token: 0x0600BC16 RID: 48150 RVA: 0x00378B88 File Offset: 0x00376D88
 	private GuideFocusItem CreateFocusItem(UUIItem attachedItem, UUIItem attachedItemForShow)
 	{
 		UUIItem item = base.GetItem(0);
@@ -402,7 +406,7 @@ public class GuideFocusView : GuideBaseView
 		return guideFocusItem;
 	}
 
-	// Token: 0x0600E7F8 RID: 59384 RVA: 0x0036CEC0 File Offset: 0x0036B0C0
+	// Token: 0x0600BC17 RID: 48151 RVA: 0x00378BB4 File Offset: 0x00376DB4
 	private void OnOtherPopupViewDone(EUiViewName viewName, UiViewBase view)
 	{
 		UiViewInfo viewInfo = view.ViewInfo;
@@ -410,14 +414,14 @@ public class GuideFocusView : GuideBaseView
 		{
 			return;
 		}
-		if (GuideTestUtil.GetGuideFocusTargetViewName(this.Config.Value.ViewName, this.GuideStepInfo.Id) == viewName)
+		if (GuideTestUtil.GetGuideFocusTargetViewName(this.Config.Value.ViewName, this.GuideStepInfo.Id) == viewName || this.guidePopupIgnoreView.Contains(viewName))
 		{
 			return;
 		}
 		this.OccurredOtherPopupViewName = new EUiViewName?(viewName);
 	}
 
-	// Token: 0x0600E7F9 RID: 59385 RVA: 0x0036CF28 File Offset: 0x0036B128
+	// Token: 0x0600BC18 RID: 48152 RVA: 0x00378C28 File Offset: 0x00376E28
 	private void OnOtherPopupViewClose(EUiViewName viewName, int viewId)
 	{
 		if (this.OccurredOtherPopupViewName == viewName)
@@ -426,7 +430,7 @@ public class GuideFocusView : GuideBaseView
 		}
 	}
 
-	// Token: 0x0600E7FA RID: 59386 RVA: 0x0036CF65 File Offset: 0x0036B165
+	// Token: 0x0600BC19 RID: 48153 RVA: 0x00378C65 File Offset: 0x00376E65
 	private void OnPreparePhotoScreenShot(bool bShow)
 	{
 		UUIItem rootItem = base.GetRootItem();
@@ -437,43 +441,44 @@ public class GuideFocusView : GuideBaseView
 		rootItem.SetUIActive(bShow);
 	}
 
-	// Token: 0x04006B4B RID: 27467
+	// Token: 0x04006C2C RID: 27692
 	private readonly HashSet<EUiViewName> guidePopupIgnoreView = new HashSet<EUiViewName>
 	{
-		EUiViewName.FightPhotoFocusView
+		EUiViewName.FightPhotoFocusView,
+		EUiViewName.RoleTowerExitButtonView
 	};
 
-	// Token: 0x04006B4C RID: 27468
+	// Token: 0x04006C2D RID: 27693
 	public GuideFocusNew? Config;
 
-	// Token: 0x04006B4D RID: 27469
+	// Token: 0x04006C2E RID: 27694
 	public bool IsAttachItemsReady;
 
-	// Token: 0x04006B4E RID: 27470
+	// Token: 0x04006C2F RID: 27695
 	private bool IsAttachViewReady;
 
-	// Token: 0x04006B4F RID: 27471
+	// Token: 0x04006C30 RID: 27696
 	public bool ReadyToShow;
 
-	// Token: 0x04006B50 RID: 27472
+	// Token: 0x04006C31 RID: 27697
 	private float FindAttachmentTime = 4000f;
 
-	// Token: 0x04006B51 RID: 27473
+	// Token: 0x04006C32 RID: 27698
 	[Nullable(2)]
 	private GuideFocusItem FocusItem;
 
-	// Token: 0x04006B52 RID: 27474
+	// Token: 0x04006C33 RID: 27699
 	[Nullable(2)]
 	private string StartSequenceName;
 
-	// Token: 0x04006B53 RID: 27475
+	// Token: 0x04006C34 RID: 27700
 	private EUiViewName? OccurredOtherPopupViewName;
 
-	// Token: 0x0200839D RID: 33693
+	// Token: 0x02007525 RID: 29989
 	[NullableContext(0)]
 	private enum EGuideFocusView
 	{
-		// Token: 0x0402ADFD RID: 175613
+		// Token: 0x04026123 RID: 155939
 		FocusItem
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200468C RID: 18060
+	// Token: 0x020035BD RID: 13757
 	public class ReconnectInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E9A2 RID: 190882 RVA: 0x00ACA6FC File Offset: 0x00AC88FC
+		// Token: 0x060230EC RID: 143596 RVA: 0x009F8430 File Offset: 0x009F6630
 		public override bool OnRefresh()
 		{
 			if (!this.IsReConnect())
@@ -29,13 +29,13 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602E9A3 RID: 190883 RVA: 0x00ACA77D File Offset: 0x00AC897D
+		// Token: 0x060230ED RID: 143597 RVA: 0x009F84B1 File Offset: 0x009F66B1
 		private bool CanClickInReconnect()
 		{
 			return UiManager.Instance.GetViewByName(EUiViewName.NetWorkConfirmBoxView) != null;
 		}
 
-		// Token: 0x0602E9A4 RID: 190884 RVA: 0x00ACA791 File Offset: 0x00AC8991
+		// Token: 0x060230EE RID: 143598 RVA: 0x009F84C5 File Offset: 0x009F66C5
 		private bool IsReConnect()
 		{
 			return ReConnectModel.Instance.GetReConnectStatus() == EReConnectStatus.ReConnectDoing;

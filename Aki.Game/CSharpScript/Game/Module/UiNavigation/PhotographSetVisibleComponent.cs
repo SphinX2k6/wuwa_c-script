@@ -5,21 +5,21 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049AF RID: 18863
+	// Token: 0x02003929 RID: 14633
 	public class PhotographSetVisibleComponent : HotKeyComponent
 	{
-		// Token: 0x0603118F RID: 201103 RVA: 0x00B64727 File Offset: 0x00B62927
+		// Token: 0x06025CC5 RID: 154821 RVA: 0x00A9F677 File Offset: 0x00A9D877
 		public PhotographSetVisibleComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031190 RID: 201104 RVA: 0x00B64730 File Offset: 0x00B62930
+		// Token: 0x06025CC6 RID: 154822 RVA: 0x00A9F680 File Offset: 0x00A9D880
 		protected override void OnPress(HotKeyMap config)
 		{
 			EventSystem.Instance.Emit(EEventName.OnPhotographSetVisible);
 		}
 
-		// Token: 0x06031191 RID: 201105 RVA: 0x00B64742 File Offset: 0x00B62942
+		// Token: 0x06025CC7 RID: 154823 RVA: 0x00A9F692 File Offset: 0x00A9D892
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

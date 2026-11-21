@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200090E RID: 2318
+	// Token: 0x020009BB RID: 2491
 	public static class EConfigComponentExtensions
 	{
-		// Token: 0x06003470 RID: 13424 RVA: 0x00085CF0 File Offset: 0x00083EF0
+		// Token: 0x060037DC RID: 14300 RVA: 0x0008D7FC File Offset: 0x0008B9FC
 		public static string ToEnumString(this EConfigComponent value)
 		{
 			string result;
@@ -626,6 +626,12 @@ namespace Aki.TDConfigMgr.Component
 			case EConfigComponent.DynamicLevelPlayComponent:
 				result = "DynamicLevelPlayComponent";
 				break;
+			case EConfigComponent.FrequencyPaintComponent:
+				result = "FrequencyPaintComponent";
+				break;
+			case EConfigComponent.TurntableConnectorComponent:
+				result = "TurntableConnectorComponent";
+				break;
 			default:
 				result = value.ToString();
 				break;
@@ -633,7 +639,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003471 RID: 13425 RVA: 0x000868F0 File Offset: 0x00084AF0
+		// Token: 0x060037DD RID: 14301 RVA: 0x0008E418 File Offset: 0x0008C618
 		public static EConfigComponent FromString(string name)
 		{
 			EConfigComponent result;
@@ -644,7 +650,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003472 RID: 13426 RVA: 0x0008691C File Offset: 0x00084B1C
+		// Token: 0x060037DE RID: 14302 RVA: 0x0008E444 File Offset: 0x0008C644
 		public static bool TryFromString(string name, out EConfigComponent value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -1884,6 +1890,9 @@ namespace Aki.TDConfigMgr.Component
 								return true;
 							}
 							break;
+						case 'o':
+						case 'q':
+							break;
 						case 'p':
 							if (name == "AirWallSpawnerComponent")
 							{
@@ -1896,6 +1905,16 @@ namespace Aki.TDConfigMgr.Component
 							{
 								value = EConfigComponent.AiGearStrategyComponent;
 								return true;
+							}
+							break;
+						default:
+							if (c == 'y')
+							{
+								if (name == "FrequencyPaintComponent")
+								{
+									value = EConfigComponent.FrequencyPaintComponent;
+									return true;
+								}
 							}
 							break;
 						}
@@ -2142,18 +2161,76 @@ namespace Aki.TDConfigMgr.Component
 				}
 				case 27:
 				{
-					char c = name[10];
-					if (c <= 'h')
+					char c = name[5];
+					if (c <= 'P')
 					{
-						if (c <= 'M')
+						if (c != 'I')
 						{
-							if (c != 'I')
+							if (c == 'P')
 							{
-								if (c == 'M')
+								if (name == "LevelPrefabPerformComponent")
 								{
-									if (name == "ProceduralMaterialComponent")
+									value = EConfigComponent.LevelPrefabPerformComponent;
+									return true;
+								}
+							}
+						}
+						else
+						{
+							if (name == "SceneItemAttributeComponent")
+							{
+								value = EConfigComponent.SceneItemAttributeComponent;
+								return true;
+							}
+							if (name == "SceneItemLifeCycleComponent")
+							{
+								value = EConfigComponent.SceneItemLifeCycleComponent;
+								return true;
+							}
+						}
+					}
+					else
+					{
+						switch (c)
+						{
+						case 'a':
+							if (name == "TurntableConnectorComponent")
+							{
+								value = EConfigComponent.TurntableConnectorComponent;
+								return true;
+							}
+							break;
+						case 'b':
+							break;
+						case 'c':
+							if (name == "CharacterConnectorComponent")
+							{
+								value = EConfigComponent.CharacterConnectorComponent;
+								return true;
+							}
+							break;
+						case 'd':
+							if (name == "ProceduralMaterialComponent")
+							{
+								value = EConfigComponent.ProceduralMaterialComponent;
+								return true;
+							}
+							break;
+						case 'e':
+							if (name == "ProgressBarControlComponent")
+							{
+								value = EConfigComponent.ProgressBarControlComponent;
+								return true;
+							}
+							break;
+						default:
+							if (c != 'o')
+							{
+								if (c == 'y')
+								{
+									if (name == "EntityBatchRefreshComponent")
 									{
-										value = EConfigComponent.ProceduralMaterialComponent;
+										value = EConfigComponent.EntityBatchRefreshComponent;
 										return true;
 									}
 								}
@@ -2163,58 +2240,8 @@ namespace Aki.TDConfigMgr.Component
 								value = EConfigComponent.RoleMotionInteractComponent;
 								return true;
 							}
+							break;
 						}
-						else if (c != 'b')
-						{
-							if (c == 'h')
-							{
-								if (name == "EntityBatchRefreshComponent")
-								{
-									value = EConfigComponent.EntityBatchRefreshComponent;
-									return true;
-								}
-							}
-						}
-						else if (name == "LevelPrefabPerformComponent")
-						{
-							value = EConfigComponent.LevelPrefabPerformComponent;
-							return true;
-						}
-					}
-					else if (c <= 'o')
-					{
-						if (c != 'i')
-						{
-							if (c == 'o')
-							{
-								if (name == "CharacterConnectorComponent")
-								{
-									value = EConfigComponent.CharacterConnectorComponent;
-									return true;
-								}
-							}
-						}
-						else if (name == "SceneItemLifeCycleComponent")
-						{
-							value = EConfigComponent.SceneItemLifeCycleComponent;
-							return true;
-						}
-					}
-					else if (c != 'r')
-					{
-						if (c == 't')
-						{
-							if (name == "SceneItemAttributeComponent")
-							{
-								value = EConfigComponent.SceneItemAttributeComponent;
-								return true;
-							}
-						}
-					}
-					else if (name == "ProgressBarControlComponent")
-					{
-						value = EConfigComponent.ProgressBarControlComponent;
-						return true;
 					}
 					break;
 				}
@@ -2426,7 +2453,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003473 RID: 13427 RVA: 0x00088758 File Offset: 0x00086958
+		// Token: 0x060037DF RID: 14303 RVA: 0x000902A8 File Offset: 0x0008E4A8
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -2635,11 +2662,13 @@ namespace Aki.TDConfigMgr.Component
 				"NoiseRemovalComponent",
 				"SceneTextComponent",
 				"NavMeshComponent",
-				"DynamicLevelPlayComponent"
+				"DynamicLevelPlayComponent",
+				"FrequencyPaintComponent",
+				"TurntableConnectorComponent"
 			};
 		}
 
-		// Token: 0x06003474 RID: 13428 RVA: 0x00088F82 File Offset: 0x00087182
+		// Token: 0x060037E0 RID: 14304 RVA: 0x00090AEA File Offset: 0x0008ECEA
 		public static EConfigComponent[] GetValues()
 		{
 			return new EConfigComponent[]
@@ -2848,11 +2877,13 @@ namespace Aki.TDConfigMgr.Component
 				EConfigComponent.NoiseRemovalComponent,
 				EConfigComponent.SceneTextComponent,
 				EConfigComponent.NavMeshComponent,
-				EConfigComponent.DynamicLevelPlayComponent
+				EConfigComponent.DynamicLevelPlayComponent,
+				EConfigComponent.FrequencyPaintComponent,
+				EConfigComponent.TurntableConnectorComponent
 			};
 		}
 
-		// Token: 0x06003475 RID: 13429 RVA: 0x00088F9C File Offset: 0x0008719C
+		// Token: 0x060037E1 RID: 14305 RVA: 0x00090B04 File Offset: 0x0008ED04
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -3061,7 +3092,9 @@ namespace Aki.TDConfigMgr.Component
 				"NoiseRemovalComponent",
 				"SceneTextComponent",
 				"NavMeshComponent",
-				"DynamicLevelPlayComponent"
+				"DynamicLevelPlayComponent",
+				"FrequencyPaintComponent",
+				"TurntableConnectorComponent"
 			};
 		}
 	}

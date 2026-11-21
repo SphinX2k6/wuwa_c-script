@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E9D RID: 7837
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020D4 RID: 8404
 	public class ISpecificScanEffect
 	{
-		// Token: 0x0600A7A6 RID: 42918 RVA: 0x0017ACD4 File Offset: 0x00178ED4
+		// Token: 0x0600B26E RID: 45678 RVA: 0x00190BB8 File Offset: 0x0018EDB8
 		private ISpecificScanEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A7A7 RID: 42919 RVA: 0x0017AD0C File Offset: 0x00178F0C
+		// Token: 0x0600B26F RID: 45679 RVA: 0x00190BF0 File Offset: 0x0018EDF0
 		public static ISpecificScanEffect Create([Nullable(2)] ISpecificScanEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A7A8 RID: 42920 RVA: 0x0017AD1F File Offset: 0x00178F1F
+		// Token: 0x0600B270 RID: 45680 RVA: 0x00190C03 File Offset: 0x0018EE03
 		public static ISpecificScanEffect CreateFromSetValue([Nullable(2)] ISpecificScanEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A7A9 RID: 42921 RVA: 0x0017AD32 File Offset: 0x00178F32
+		// Token: 0x0600B271 RID: 45681 RVA: 0x00190C16 File Offset: 0x0018EE16
 		public ISpecificScanEffect_SetValue ToSetValue()
 		{
 			return new ISpecificScanEffect_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700333F RID: 13119
-		// (get) Token: 0x0600A7AA RID: 42922 RVA: 0x0017AD45 File Offset: 0x00178F45
-		// (set) Token: 0x0600A7AB RID: 42923 RVA: 0x0017AD70 File Offset: 0x00178F70
+		// Token: 0x17003608 RID: 13832
+		// (get) Token: 0x0600B272 RID: 45682 RVA: 0x00190C29 File Offset: 0x0018EE29
+		// (set) Token: 0x0600B273 RID: 45683 RVA: 0x00190C54 File Offset: 0x0018EE54
 		public virtual ESpecificScanType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063F8 RID: 25592
+		// Token: 0x040069E3 RID: 27107
 		[Nullable(2)]
 		protected ISpecificScanEffect FbInstance;
 
-		// Token: 0x040063F9 RID: 25593
+		// Token: 0x040069E4 RID: 27108
 		[Nullable(2)]
 		protected ISpecificScanEffect_SetValue PocoInterface;
 	}

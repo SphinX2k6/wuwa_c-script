@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
+using CSharpScript.Game.Module.RecallQuest.Model;
 
-// Token: 0x0200291A RID: 10522
+// Token: 0x02001E95 RID: 7829
 [NullableContext(1)]
 [Nullable(0)]
 public class RouletteListDataFunc : RouletteListDataBase
 {
-	// Token: 0x17001D2D RID: 7469
-	// (get) Token: 0x06015B2E RID: 88878 RVA: 0x0057960C File Offset: 0x0057780C
+	// Token: 0x17001D87 RID: 7559
+	// (get) Token: 0x06013532 RID: 79154 RVA: 0x005A4530 File Offset: 0x005A2730
 	public override ERoulettePriority Priority
 	{
 		get
@@ -20,7 +20,7 @@ public class RouletteListDataFunc : RouletteListDataBase
 		}
 	}
 
-	// Token: 0x06015B2F RID: 88879 RVA: 0x00579610 File Offset: 0x00577810
+	// Token: 0x06013533 RID: 79155 RVA: 0x005A4534 File Offset: 0x005A2734
 	public override List<int> GetRouletteIdList()
 	{
 		if (this.IsRouletteReplace())
@@ -30,26 +30,26 @@ public class RouletteListDataFunc : RouletteListDataBase
 		return this.RouletteIdListServer;
 	}
 
-	// Token: 0x06015B30 RID: 88880 RVA: 0x00579627 File Offset: 0x00577827
+	// Token: 0x06013534 RID: 79156 RVA: 0x005A454B File Offset: 0x005A274B
 	public override int GetExtraItemId()
 	{
 		return 0;
 	}
 
-	// Token: 0x06015B31 RID: 88881 RVA: 0x0057962A File Offset: 0x0057782A
+	// Token: 0x06013535 RID: 79157 RVA: 0x005A454E File Offset: 0x005A274E
 	public override int GetEquipExploreSkillId()
 	{
 		return 0;
 	}
 
-	// Token: 0x06015B32 RID: 88882 RVA: 0x0057962D File Offset: 0x0057782D
+	// Token: 0x06013536 RID: 79158 RVA: 0x005A4551 File Offset: 0x005A2751
 	public override bool IsActivate()
 	{
 		return true;
 	}
 
-	// Token: 0x17001D2E RID: 7470
-	// (get) Token: 0x06015B33 RID: 88883 RVA: 0x00579630 File Offset: 0x00577830
+	// Token: 0x17001D88 RID: 7560
+	// (get) Token: 0x06013537 RID: 79159 RVA: 0x005A4554 File Offset: 0x005A2754
 	public override ERouletteType RouletteType
 	{
 		get
@@ -58,38 +58,38 @@ public class RouletteListDataFunc : RouletteListDataBase
 		}
 	}
 
-	// Token: 0x06015B34 RID: 88884 RVA: 0x00579633 File Offset: 0x00577833
+	// Token: 0x06013538 RID: 79160 RVA: 0x005A4557 File Offset: 0x005A2757
 	public override void Init()
 	{
 		this.InitFunctionRouletteReplaceConfig();
 		this.OnAddEvents();
 	}
 
-	// Token: 0x06015B35 RID: 88885 RVA: 0x00579641 File Offset: 0x00577841
+	// Token: 0x06013539 RID: 79161 RVA: 0x005A4565 File Offset: 0x005A2765
 	public override void Clear()
 	{
 		this.OnRemoveEvents();
 	}
 
-	// Token: 0x06015B36 RID: 88886 RVA: 0x00579649 File Offset: 0x00577849
+	// Token: 0x0601353A RID: 79162 RVA: 0x005A456D File Offset: 0x005A276D
 	public override bool IsRouletteReplace()
 	{
 		return this.FuncReplaceId != null;
 	}
 
-	// Token: 0x06015B37 RID: 88887 RVA: 0x0057965B File Offset: 0x0057785B
+	// Token: 0x0601353B RID: 79163 RVA: 0x005A457F File Offset: 0x005A277F
 	public override bool IsRouletteOpen()
 	{
 		return FunctionModel.Instance.IsOpen(10056);
 	}
 
-	// Token: 0x06015B38 RID: 88888 RVA: 0x0057966C File Offset: 0x0057786C
+	// Token: 0x0601353C RID: 79164 RVA: 0x005A4590 File Offset: 0x005A2790
 	public override bool IsMainRouletteCanOpenView(bool checkTips)
 	{
 		return RouletteModel.Instance.IsFunctionRouletteOpen();
 	}
 
-	// Token: 0x06015B39 RID: 88889 RVA: 0x00579678 File Offset: 0x00577878
+	// Token: 0x0601353D RID: 79165 RVA: 0x005A459C File Offset: 0x005A279C
 	public override Dictionary<ERouletteGridType, List<AssemblyGridData>> CreateAssemblyGridData()
 	{
 		return new Dictionary<ERouletteGridType, List<AssemblyGridData>>
@@ -101,7 +101,7 @@ public class RouletteListDataFunc : RouletteListDataBase
 		};
 	}
 
-	// Token: 0x06015B3A RID: 88890 RVA: 0x0057968C File Offset: 0x0057788C
+	// Token: 0x0601353E RID: 79166 RVA: 0x005A45B0 File Offset: 0x005A27B0
 	public override int? GetRouletteGridId(int index, ERouletteGridType type, bool useDisplay)
 	{
 		if (type != ERouletteGridType.Function)
@@ -113,7 +113,16 @@ public class RouletteListDataFunc : RouletteListDataBase
 			List<int> rouletteIdList = this.GetRouletteIdList();
 			if (index >= 0 && index < rouletteIdList.Count)
 			{
-				return new int?(rouletteIdList[index]);
+				int num = rouletteIdList[index];
+				if (num != 0 && RecallQuestModel.Instance.IsInRecallInstance())
+				{
+					FuncMenuWheel? funcConfigById = RouletteConfig.Instance.GetFuncConfigById(num);
+					if (funcConfigById != null && funcConfigById.Value.UnlockCondition > 0 && !RecallQuestModel.Instance.CheckRecallRouletteFunction(funcConfigById.Value.UnlockCondition))
+					{
+						return new int?(0);
+					}
+				}
+				return new int?(num);
 			}
 			return null;
 		}
@@ -127,13 +136,13 @@ public class RouletteListDataFunc : RouletteListDataBase
 		}
 	}
 
-	// Token: 0x06015B3B RID: 88891 RVA: 0x00579702 File Offset: 0x00577902
+	// Token: 0x0601353F RID: 79167 RVA: 0x005A4689 File Offset: 0x005A2889
 	public override RouletteMainViewProxyBase GetRouletteMainViewProxy()
 	{
 		return new RouletteMainViewProxy();
 	}
 
-	// Token: 0x06015B3C RID: 88892 RVA: 0x00579709 File Offset: 0x00577909
+	// Token: 0x06013540 RID: 79168 RVA: 0x005A4690 File Offset: 0x005A2890
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -145,19 +154,19 @@ public class RouletteListDataFunc : RouletteListDataBase
 		return this.FunctionRouletteMap;
 	}
 
-	// Token: 0x06015B3D RID: 88893 RVA: 0x00579711 File Offset: 0x00577911
+	// Token: 0x06013541 RID: 79169 RVA: 0x005A4698 File Offset: 0x005A2898
 	protected void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 	}
 
-	// Token: 0x06015B3E RID: 88894 RVA: 0x0057972F File Offset: 0x0057792F
+	// Token: 0x06013542 RID: 79170 RVA: 0x005A46B6 File Offset: 0x005A28B6
 	protected void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 	}
 
-	// Token: 0x06015B3F RID: 88895 RVA: 0x00579750 File Offset: 0x00577950
+	// Token: 0x06013543 RID: 79171 RVA: 0x005A46D4 File Offset: 0x005A28D4
 	private void InitFunctionRouletteReplaceConfig()
 	{
 		this.InstSubTypeWithReplaceList.Clear();
@@ -178,7 +187,7 @@ public class RouletteListDataFunc : RouletteListDataBase
 		}
 	}
 
-	// Token: 0x06015B40 RID: 88896 RVA: 0x00579808 File Offset: 0x00577A08
+	// Token: 0x06013544 RID: 79172 RVA: 0x005A478C File Offset: 0x005A298C
 	private void OnWorldDone()
 	{
 		int instanceId = CreatureModel.Instance.GetInstanceId();
@@ -196,7 +205,7 @@ public class RouletteListDataFunc : RouletteListDataBase
 		this.TryActiveFunctionRouletteReplaceConfig(instanceId, config.Value.InstSubType);
 	}
 
-	// Token: 0x06015B41 RID: 88897 RVA: 0x00579870 File Offset: 0x00577A70
+	// Token: 0x06013545 RID: 79173 RVA: 0x005A47F4 File Offset: 0x005A29F4
 	private void TryActiveFunctionRouletteReplaceConfig(int instId, int instSubType)
 	{
 		FuncMenuReplace? funcMenuReplace = null;
@@ -244,7 +253,7 @@ public class RouletteListDataFunc : RouletteListDataBase
 		instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 	}
 
-	// Token: 0x06015B42 RID: 88898 RVA: 0x005799B8 File Offset: 0x00577BB8
+	// Token: 0x06013546 RID: 79174 RVA: 0x005A493C File Offset: 0x005A2B3C
 	private void DisActiveFunctionRouletteReplaceConfig()
 	{
 		if (this.FuncReplaceId == null)
@@ -260,7 +269,7 @@ public class RouletteListDataFunc : RouletteListDataBase
 		this.FuncReplaceId = null;
 	}
 
-	// Token: 0x06015B43 RID: 88899 RVA: 0x00579A10 File Offset: 0x00577C10
+	// Token: 0x06013547 RID: 79175 RVA: 0x005A4994 File Offset: 0x005A2B94
 	private List<AssemblyGridData> CreateAllAssemblyDataFunction()
 	{
 		List<AssemblyFunctionGridData> list = new List<AssemblyFunctionGridData>();
@@ -281,10 +290,10 @@ public class RouletteListDataFunc : RouletteListDataBase
 			}
 		}
 		list.Sort((AssemblyFunctionGridData dataA, AssemblyFunctionGridData dataB) => dataA.SortId - dataB.SortId);
-		return list.Cast<AssemblyGridData>().ToList<AssemblyGridData>();
+		return new List<AssemblyGridData>(list);
 	}
 
-	// Token: 0x0400A1B3 RID: 41395
+	// Token: 0x0400A59E RID: 42398
 	[Nullable(new byte[]
 	{
 		1,
@@ -327,15 +336,15 @@ public class RouletteListDataFunc : RouletteListDataBase
 		}, ERouletteComponentNode.RouletteItem8, ERouletteGridType.Function)
 	};
 
-	// Token: 0x0400A1B4 RID: 41396
+	// Token: 0x0400A59F RID: 42399
 	private int? FuncReplaceId;
 
-	// Token: 0x0400A1B5 RID: 41397
+	// Token: 0x0400A5A0 RID: 42400
 	private readonly List<int> InstSubTypeWithReplaceList = new List<int>();
 
-	// Token: 0x0400A1B6 RID: 41398
+	// Token: 0x0400A5A1 RID: 42401
 	private readonly Dictionary<int, int> InstId2ReplaceId = new Dictionary<int, int>();
 
-	// Token: 0x0400A1B7 RID: 41399
+	// Token: 0x0400A5A2 RID: 42402
 	private readonly List<int> RouletteIdListReplace = new List<int>();
 }

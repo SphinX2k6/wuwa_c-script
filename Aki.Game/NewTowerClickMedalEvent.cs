@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002110 RID: 8464
+// Token: 0x020015E8 RID: 5608
 [NullableContext(1)]
 [Nullable(0)]
 public class NewTowerClickMedalEvent : PlayerCommonLogData
 {
-	// Token: 0x170014B6 RID: 5302
-	// (get) Token: 0x0601096C RID: 67948 RVA: 0x0040B485 File Offset: 0x00409685
-	// (set) Token: 0x0601096D RID: 67949 RVA: 0x0040B48D File Offset: 0x0040968D
+	// Token: 0x170014E4 RID: 5348
+	// (get) Token: 0x0600DDDF RID: 56799 RVA: 0x00417BB9 File Offset: 0x00415DB9
+	// (set) Token: 0x0600DDE0 RID: 56800 RVA: 0x00417BC1 File Offset: 0x00415DC1
 	public override string event_id { get; set; } = "1070";
 
-	// Token: 0x04007C98 RID: 31896
+	// Token: 0x04007D9A RID: 32154
 	public int i_activity_id;
 
-	// Token: 0x04007C99 RID: 31897
+	// Token: 0x04007D9B RID: 32155
 	public int i_season_id;
 
-	// Token: 0x04007C9A RID: 31898
+	// Token: 0x04007D9C RID: 32156
 	public int i_item_id;
 }

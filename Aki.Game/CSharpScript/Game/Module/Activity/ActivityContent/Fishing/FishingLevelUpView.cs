@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065CD RID: 26061
+	// Token: 0x0200554B RID: 21835
 	public class FishingLevelUpView : UiViewBase
 	{
-		// Token: 0x060415DA RID: 267738 RVA: 0x00FD72CB File Offset: 0x00FD54CB
+		// Token: 0x0603629F RID: 221855 RVA: 0x00F1E30B File Offset: 0x00F1C50B
 		[NullableContext(1)]
 		public FishingLevelUpView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060415DB RID: 267739 RVA: 0x00FD72D4 File Offset: 0x00FD54D4
+		// Token: 0x060362A0 RID: 221856 RVA: 0x00F1E314 File Offset: 0x00F1C514
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060415DC RID: 267740 RVA: 0x00FD73BC File Offset: 0x00FD55BC
+		// Token: 0x060362A1 RID: 221857 RVA: 0x00F1E3FC File Offset: 0x00F1C5FC
 		protected override void OnStart()
 		{
 			FishingLevelUpData fishingLevelUpData = this.OpenParam as FishingLevelUpData;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshView(fishingLevelUpData.LastLevel, fishingLevelUpData.CurrentLevel, isMax);
 		}
 
-		// Token: 0x060415DD RID: 267741 RVA: 0x00FD73F0 File Offset: 0x00FD55F0
+		// Token: 0x060362A2 RID: 221858 RVA: 0x00F1E430 File Offset: 0x00F1C630
 		private void RefreshView(int lastLevel, int currentLevel, bool isMax)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "Fishing_LevelUpTip", new <>z__ReadOnlySingleElementList<object>(lastLevel));
@@ -57,25 +57,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetItem(3).SetUIActive(isMax);
 		}
 
-		// Token: 0x060415DE RID: 267742 RVA: 0x00FD744C File Offset: 0x00FD564C
+		// Token: 0x060362A3 RID: 221859 RVA: 0x00F1E48C File Offset: 0x00F1C68C
 		private void OnClickButton()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0200C7F5 RID: 51189
+		// Token: 0x0200B1D8 RID: 45528
 		private class EComponents
 		{
-			// Token: 0x0403C63F RID: 247359
+			// Token: 0x04036F8D RID: 225165
 			public const int Button = 0;
 
-			// Token: 0x0403C640 RID: 247360
+			// Token: 0x04036F8E RID: 225166
 			public const int TxtLast = 1;
 
-			// Token: 0x0403C641 RID: 247361
+			// Token: 0x04036F8F RID: 225167
 			public const int TxtCurrent = 2;
 
-			// Token: 0x0403C642 RID: 247362
+			// Token: 0x04036F90 RID: 225168
 			public const int MaxItem = 3;
 		}
 	}

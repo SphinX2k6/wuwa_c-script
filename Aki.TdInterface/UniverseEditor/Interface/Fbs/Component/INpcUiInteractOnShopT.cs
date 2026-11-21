@@ -3,60 +3,60 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200567B RID: 22139
+	// Token: 0x02005C1C RID: 23580
 	public class INpcUiInteractOnShopT
 	{
-		// Token: 0x1700A453 RID: 42067
-		// (get) Token: 0x06024E0B RID: 151051 RVA: 0x00516FB0 File Offset: 0x005151B0
-		// (set) Token: 0x06024E0C RID: 151052 RVA: 0x00516FB8 File Offset: 0x005151B8
+		// Token: 0x1700ACE2 RID: 44258
+		// (get) Token: 0x06027044 RID: 159812 RVA: 0x00557B4C File Offset: 0x00555D4C
+		// (set) Token: 0x06027045 RID: 159813 RVA: 0x00557B54 File Offset: 0x00555D54
 		public ENpcUiInteractType Type { get; set; }
 
-		// Token: 0x1700A454 RID: 42068
-		// (get) Token: 0x06024E0D RID: 151053 RVA: 0x00516FC1 File Offset: 0x005151C1
-		// (set) Token: 0x06024E0E RID: 151054 RVA: 0x00516FC9 File Offset: 0x005151C9
+		// Token: 0x1700ACE3 RID: 44259
+		// (get) Token: 0x06027046 RID: 159814 RVA: 0x00557B5D File Offset: 0x00555D5D
+		// (set) Token: 0x06027047 RID: 159815 RVA: 0x00557B65 File Offset: 0x00555D65
 		public string EnterMontage { get; set; }
 
-		// Token: 0x1700A455 RID: 42069
-		// (get) Token: 0x06024E0F RID: 151055 RVA: 0x00516FD2 File Offset: 0x005151D2
-		// (set) Token: 0x06024E10 RID: 151056 RVA: 0x00516FDA File Offset: 0x005151DA
+		// Token: 0x1700ACE4 RID: 44260
+		// (get) Token: 0x06027048 RID: 159816 RVA: 0x00557B6E File Offset: 0x00555D6E
+		// (set) Token: 0x06027049 RID: 159817 RVA: 0x00557B76 File Offset: 0x00555D76
 		public string StandByMontage { get; set; }
 
-		// Token: 0x1700A456 RID: 42070
-		// (get) Token: 0x06024E11 RID: 151057 RVA: 0x00516FE3 File Offset: 0x005151E3
-		// (set) Token: 0x06024E12 RID: 151058 RVA: 0x00516FEB File Offset: 0x005151EB
+		// Token: 0x1700ACE5 RID: 44261
+		// (get) Token: 0x0602704A RID: 159818 RVA: 0x00557B7F File Offset: 0x00555D7F
+		// (set) Token: 0x0602704B RID: 159819 RVA: 0x00557B87 File Offset: 0x00555D87
 		public string ShopSuccessMontage { get; set; }
 
-		// Token: 0x1700A457 RID: 42071
-		// (get) Token: 0x06024E13 RID: 151059 RVA: 0x00516FF4 File Offset: 0x005151F4
-		// (set) Token: 0x06024E14 RID: 151060 RVA: 0x00516FFC File Offset: 0x005151FC
+		// Token: 0x1700ACE6 RID: 44262
+		// (get) Token: 0x0602704C RID: 159820 RVA: 0x00557B90 File Offset: 0x00555D90
+		// (set) Token: 0x0602704D RID: 159821 RVA: 0x00557B98 File Offset: 0x00555D98
 		public IPlayFlowT EnterFlow { get; set; }
 
-		// Token: 0x1700A458 RID: 42072
-		// (get) Token: 0x06024E15 RID: 151061 RVA: 0x00517005 File Offset: 0x00515205
-		// (set) Token: 0x06024E16 RID: 151062 RVA: 0x0051700D File Offset: 0x0051520D
+		// Token: 0x1700ACE7 RID: 44263
+		// (get) Token: 0x0602704E RID: 159822 RVA: 0x00557BA1 File Offset: 0x00555DA1
+		// (set) Token: 0x0602704F RID: 159823 RVA: 0x00557BA9 File Offset: 0x00555DA9
 		public IPlayFlowT ShopSuccessFlow { get; set; }
 
-		// Token: 0x1700A459 RID: 42073
-		// (get) Token: 0x06024E17 RID: 151063 RVA: 0x00517016 File Offset: 0x00515216
-		// (set) Token: 0x06024E18 RID: 151064 RVA: 0x0051701E File Offset: 0x0051521E
+		// Token: 0x1700ACE8 RID: 44264
+		// (get) Token: 0x06027050 RID: 159824 RVA: 0x00557BB2 File Offset: 0x00555DB2
+		// (set) Token: 0x06027051 RID: 159825 RVA: 0x00557BBA File Offset: 0x00555DBA
 		public IPlayFlowT ShopFailedFlow { get; set; }
 
-		// Token: 0x1700A45A RID: 42074
-		// (get) Token: 0x06024E19 RID: 151065 RVA: 0x00517027 File Offset: 0x00515227
-		// (set) Token: 0x06024E1A RID: 151066 RVA: 0x0051702F File Offset: 0x0051522F
+		// Token: 0x1700ACE9 RID: 44265
+		// (get) Token: 0x06027052 RID: 159826 RVA: 0x00557BC3 File Offset: 0x00555DC3
+		// (set) Token: 0x06027053 RID: 159827 RVA: 0x00557BCB File Offset: 0x00555DCB
 		public IPlayFlowT WorkingFlow { get; set; }
 
-		// Token: 0x1700A45B RID: 42075
-		// (get) Token: 0x06024E1B RID: 151067 RVA: 0x00517038 File Offset: 0x00515238
-		// (set) Token: 0x06024E1C RID: 151068 RVA: 0x00517040 File Offset: 0x00515240
+		// Token: 0x1700ACEA RID: 44266
+		// (get) Token: 0x06027054 RID: 159828 RVA: 0x00557BD4 File Offset: 0x00555DD4
+		// (set) Token: 0x06027055 RID: 159829 RVA: 0x00557BDC File Offset: 0x00555DDC
 		public TMontageConfigUnion ExitMontage { get; set; }
 
-		// Token: 0x1700A45C RID: 42076
-		// (get) Token: 0x06024E1D RID: 151069 RVA: 0x00517049 File Offset: 0x00515249
-		// (set) Token: 0x06024E1E RID: 151070 RVA: 0x00517051 File Offset: 0x00515251
+		// Token: 0x1700ACEB RID: 44267
+		// (get) Token: 0x06027056 RID: 159830 RVA: 0x00557BE5 File Offset: 0x00555DE5
+		// (set) Token: 0x06027057 RID: 159831 RVA: 0x00557BED File Offset: 0x00555DED
 		public IPlayFlowT ExitFlow { get; set; }
 
-		// Token: 0x06024E1F RID: 151071 RVA: 0x0051705C File Offset: 0x0051525C
+		// Token: 0x06027058 RID: 159832 RVA: 0x00557BF8 File Offset: 0x00555DF8
 		public INpcUiInteractOnShopT()
 		{
 			this.Type = ENpcUiInteractType.HandInItem;

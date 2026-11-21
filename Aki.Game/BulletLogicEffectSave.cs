@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.EffectSave;
 using UnrealEngine;
 
-// Token: 0x02002DD0 RID: 11728
+// Token: 0x0200232A RID: 9002
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,12 +13,12 @@ using UnrealEngine;
 })]
 public class BulletLogicEffectSave : BulletLogicController<LogicDataEffectSave, object>
 {
-	// Token: 0x06018A18 RID: 100888 RVA: 0x0064CBB5 File Offset: 0x0064ADB5
+	// Token: 0x060162C0 RID: 90816 RVA: 0x00672999 File Offset: 0x00670B99
 	public BulletLogicEffectSave(LogicDataEffectSave logicController, Entity bullet) : base(logicController, bullet)
 	{
 	}
 
-	// Token: 0x06018A19 RID: 100889 RVA: 0x0064CBC0 File Offset: 0x0064ADC0
+	// Token: 0x060162C1 RID: 90817 RVA: 0x006729A4 File Offset: 0x00670BA4
 	[NullableContext(2)]
 	public override void BulletLogicAction(object param = null)
 	{

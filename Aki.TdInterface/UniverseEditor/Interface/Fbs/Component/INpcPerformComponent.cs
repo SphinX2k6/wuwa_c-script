@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005632 RID: 22066
+	// Token: 0x02005BD0 RID: 23504
 	public struct INpcPerformComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A34B RID: 41803
-		// (get) Token: 0x06024A2F RID: 150063 RVA: 0x0050DD4C File Offset: 0x0050BF4C
+		// Token: 0x1700ABD3 RID: 43987
+		// (get) Token: 0x06026C42 RID: 158786 RVA: 0x0054E40C File Offset: 0x0054C60C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024A30 RID: 150064 RVA: 0x0050DD59 File Offset: 0x0050BF59
+		// Token: 0x06026C43 RID: 158787 RVA: 0x0054E419 File Offset: 0x0054C619
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06024A31 RID: 150065 RVA: 0x0050DD60 File Offset: 0x0050BF60
+		// Token: 0x06026C44 RID: 158788 RVA: 0x0054E420 File Offset: 0x0054C620
 		public static INpcPerformComponent GetRootAsINpcPerformComponent(ByteBuffer _bb)
 		{
 			return INpcPerformComponent.GetRootAsINpcPerformComponent(_bb, default(INpcPerformComponent));
 		}
 
-		// Token: 0x06024A32 RID: 150066 RVA: 0x0050DD7C File Offset: 0x0050BF7C
+		// Token: 0x06026C45 RID: 158789 RVA: 0x0054E43C File Offset: 0x0054C63C
 		public static INpcPerformComponent GetRootAsINpcPerformComponent(ByteBuffer _bb, INpcPerformComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06024A33 RID: 150067 RVA: 0x0050DD99 File Offset: 0x0050BF99
+		// Token: 0x06026C46 RID: 158790 RVA: 0x0054E459 File Offset: 0x0054C659
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06024A34 RID: 150068 RVA: 0x0050DDA8 File Offset: 0x0050BFA8
+		// Token: 0x06026C47 RID: 158791 RVA: 0x0054E468 File Offset: 0x0054C668
 		public INpcPerformComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A34C RID: 41804
-		// (get) Token: 0x06024A35 RID: 150069 RVA: 0x0050DDB8 File Offset: 0x0050BFB8
+		// Token: 0x1700ABD4 RID: 43988
+		// (get) Token: 0x06026C48 RID: 158792 RVA: 0x0054E478 File Offset: 0x0054C678
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A34D RID: 41805
-		// (get) Token: 0x06024A36 RID: 150070 RVA: 0x0050DDF8 File Offset: 0x0050BFF8
+		// Token: 0x1700ABD5 RID: 43989
+		// (get) Token: 0x06026C49 RID: 158793 RVA: 0x0054E4B8 File Offset: 0x0054C6B8
 		public IBaseRoleNpcPerform? SpecialNpcPerformConfig
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A34E RID: 41806
-		// (get) Token: 0x06024A37 RID: 150071 RVA: 0x0050DE58 File Offset: 0x0050C058
+		// Token: 0x1700ABD6 RID: 43990
+		// (get) Token: 0x06026C4A RID: 158794 RVA: 0x0054E518 File Offset: 0x0054C718
 		public bool IsStare
 		{
 			get
@@ -85,8 +85,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A34F RID: 41807
-		// (get) Token: 0x06024A38 RID: 150072 RVA: 0x0050DE98 File Offset: 0x0050C098
+		// Token: 0x1700ABD7 RID: 43991
+		// (get) Token: 0x06026C4B RID: 158795 RVA: 0x0054E558 File Offset: 0x0054C758
 		public INpcHitShow? NpcHitShow
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A350 RID: 41808
-		// (get) Token: 0x06024A39 RID: 150073 RVA: 0x0050DEF8 File Offset: 0x0050C0F8
+		// Token: 0x1700ABD8 RID: 43992
+		// (get) Token: 0x06026C4C RID: 158796 RVA: 0x0054E5B8 File Offset: 0x0054C7B8
 		public bool IsShowStrike
 		{
 			get
@@ -111,8 +111,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A351 RID: 41809
-		// (get) Token: 0x06024A3A RID: 150074 RVA: 0x0050DF38 File Offset: 0x0050C138
+		// Token: 0x1700ABD9 RID: 43993
+		// (get) Token: 0x06026C4D RID: 158797 RVA: 0x0054E5F8 File Offset: 0x0054C7F8
 		public INpcBumpShow? NpcBumpShow
 		{
 			get
@@ -126,8 +126,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A352 RID: 41810
-		// (get) Token: 0x06024A3B RID: 150075 RVA: 0x0050DF98 File Offset: 0x0050C198
+		// Token: 0x1700ABDA RID: 43994
+		// (get) Token: 0x06026C4E RID: 158798 RVA: 0x0054E658 File Offset: 0x0054C858
 		public INpcAwakeShow? ShowOnAwake
 		{
 			get
@@ -141,8 +141,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A353 RID: 41811
-		// (get) Token: 0x06024A3C RID: 150076 RVA: 0x0050DFF8 File Offset: 0x0050C1F8
+		// Token: 0x1700ABDB RID: 43995
+		// (get) Token: 0x06026C4F RID: 158799 RVA: 0x0054E6B8 File Offset: 0x0054C8B8
 		public TNpcStandbyShowOption ShowOnStandbyType
 		{
 			get
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024A3D RID: 150077 RVA: 0x0050E038 File Offset: 0x0050C238
+		// Token: 0x06026C50 RID: 158800 RVA: 0x0054E6F8 File Offset: 0x0054C8F8
 		public TTable? ShowOnStandby<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(20);
@@ -167,26 +167,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06024A3E RID: 150078 RVA: 0x0050E080 File Offset: 0x0050C280
+		// Token: 0x06026C51 RID: 158801 RVA: 0x0054E740 File Offset: 0x0054C940
 		public INpcStandbyShowFinitely ShowOnStandbyAsINpcStandbyShowFinitely()
 		{
 			return this.ShowOnStandby<INpcStandbyShowFinitely>().Value;
 		}
 
-		// Token: 0x06024A3F RID: 150079 RVA: 0x0050E09C File Offset: 0x0050C29C
+		// Token: 0x06026C52 RID: 158802 RVA: 0x0054E75C File Offset: 0x0054C95C
 		public INpcStandbyShowLooply ShowOnStandbyAsINpcStandbyShowLooply()
 		{
 			return this.ShowOnStandby<INpcStandbyShowLooply>().Value;
 		}
 
-		// Token: 0x06024A40 RID: 150080 RVA: 0x0050E0B8 File Offset: 0x0050C2B8
+		// Token: 0x06026C53 RID: 158803 RVA: 0x0054E778 File Offset: 0x0054C978
 		public INpcStandbySit ShowOnStandbyAsINpcStandbySit()
 		{
 			return this.ShowOnStandby<INpcStandbySit>().Value;
 		}
 
-		// Token: 0x1700A354 RID: 41812
-		// (get) Token: 0x06024A41 RID: 150081 RVA: 0x0050E0D4 File Offset: 0x0050C2D4
+		// Token: 0x1700ABDC RID: 43996
+		// (get) Token: 0x06026C54 RID: 158804 RVA: 0x0054E794 File Offset: 0x0054C994
 		public INpcPerformOnInteract? ShowOnInteract
 		{
 			get
@@ -200,7 +200,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024A42 RID: 150082 RVA: 0x0050E134 File Offset: 0x0050C334
+		// Token: 0x06026C55 RID: 158805 RVA: 0x0054E7F4 File Offset: 0x0054C9F4
 		public IConditionalNpcPerformOnInteract? ConditionalShowOnInteracts(int j)
 		{
 			int num = this.__p.__offset(24);
@@ -211,8 +211,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IConditionalNpcPerformOnInteract?(default(IConditionalNpcPerformOnInteract).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A355 RID: 41813
-		// (get) Token: 0x06024A43 RID: 150083 RVA: 0x0050E198 File Offset: 0x0050C398
+		// Token: 0x1700ABDD RID: 43997
+		// (get) Token: 0x06026C56 RID: 158806 RVA: 0x0054E858 File Offset: 0x0054CA58
 		public int ConditionalShowOnInteractsLength
 		{
 			get
@@ -226,8 +226,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A356 RID: 41814
-		// (get) Token: 0x06024A44 RID: 150084 RVA: 0x0050E1C4 File Offset: 0x0050C3C4
+		// Token: 0x1700ABDE RID: 43998
+		// (get) Token: 0x06026C57 RID: 158807 RVA: 0x0054E884 File Offset: 0x0054CA84
 		public TNpcUiInteractOption ShowOnUiInteractType
 		{
 			get
@@ -241,7 +241,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024A45 RID: 150085 RVA: 0x0050E204 File Offset: 0x0050C404
+		// Token: 0x06026C58 RID: 158808 RVA: 0x0054E8C4 File Offset: 0x0054CAC4
 		public TTable? ShowOnUiInteract<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(28);
@@ -252,73 +252,73 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06024A46 RID: 150086 RVA: 0x0050E24C File Offset: 0x0050C44C
+		// Token: 0x06026C59 RID: 158809 RVA: 0x0054E90C File Offset: 0x0054CB0C
 		public INpcUiInteractOnAntiqueShop ShowOnUiInteractAsINpcUiInteractOnAntiqueShop()
 		{
 			return this.ShowOnUiInteract<INpcUiInteractOnAntiqueShop>().Value;
 		}
 
-		// Token: 0x06024A47 RID: 150087 RVA: 0x0050E268 File Offset: 0x0050C468
+		// Token: 0x06026C5A RID: 158810 RVA: 0x0054E928 File Offset: 0x0054CB28
 		public INpcUiInteractOnChengXiaoShanShop ShowOnUiInteractAsINpcUiInteractOnChengXiaoShanShop()
 		{
 			return this.ShowOnUiInteract<INpcUiInteractOnChengXiaoShanShop>().Value;
 		}
 
-		// Token: 0x06024A48 RID: 150088 RVA: 0x0050E284 File Offset: 0x0050C484
+		// Token: 0x06026C5B RID: 158811 RVA: 0x0054E944 File Offset: 0x0054CB44
 		public INpcUiInteractOnDollGrabDelivery ShowOnUiInteractAsINpcUiInteractOnDollGrabDelivery()
 		{
 			return this.ShowOnUiInteract<INpcUiInteractOnDollGrabDelivery>().Value;
 		}
 
-		// Token: 0x06024A49 RID: 150089 RVA: 0x0050E2A0 File Offset: 0x0050C4A0
+		// Token: 0x06026C5C RID: 158812 RVA: 0x0054E960 File Offset: 0x0054CB60
 		public INpcUiInteractOnGramophone ShowOnUiInteractAsINpcUiInteractOnGramophone()
 		{
 			return this.ShowOnUiInteract<INpcUiInteractOnGramophone>().Value;
 		}
 
-		// Token: 0x06024A4A RID: 150090 RVA: 0x0050E2BC File Offset: 0x0050C4BC
+		// Token: 0x06026C5D RID: 158813 RVA: 0x0054E97C File Offset: 0x0054CB7C
 		public INpcUiInteractOnHandInItem ShowOnUiInteractAsINpcUiInteractOnHandInItem()
 		{
 			return this.ShowOnUiInteract<INpcUiInteractOnHandInItem>().Value;
 		}
 
-		// Token: 0x06024A4B RID: 150091 RVA: 0x0050E2D8 File Offset: 0x0050C4D8
+		// Token: 0x06026C5E RID: 158814 RVA: 0x0054E998 File Offset: 0x0054CB98
 		public INpcUiInteractOnShop ShowOnUiInteractAsINpcUiInteractOnShop()
 		{
 			return this.ShowOnUiInteract<INpcUiInteractOnShop>().Value;
 		}
 
-		// Token: 0x06024A4C RID: 150092 RVA: 0x0050E2F4 File Offset: 0x0050C4F4
+		// Token: 0x06026C5F RID: 158815 RVA: 0x0054E9B4 File Offset: 0x0054CBB4
 		public INpcUiInteractOnShopNew ShowOnUiInteractAsINpcUiInteractOnShopNew()
 		{
 			return this.ShowOnUiInteract<INpcUiInteractOnShopNew>().Value;
 		}
 
-		// Token: 0x06024A4D RID: 150093 RVA: 0x0050E310 File Offset: 0x0050C510
+		// Token: 0x06026C60 RID: 158816 RVA: 0x0054E9D0 File Offset: 0x0054CBD0
 		public INpcUiInteractOnSoundBox3 ShowOnUiInteractAsINpcUiInteractOnSoundBox3()
 		{
 			return this.ShowOnUiInteract<INpcUiInteractOnSoundBox3>().Value;
 		}
 
-		// Token: 0x06024A4E RID: 150094 RVA: 0x0050E32C File Offset: 0x0050C52C
+		// Token: 0x06026C61 RID: 158817 RVA: 0x0054E9EC File Offset: 0x0054CBEC
 		public INpcUiInteractOnSoundBox35 ShowOnUiInteractAsINpcUiInteractOnSoundBox35()
 		{
 			return this.ShowOnUiInteract<INpcUiInteractOnSoundBox35>().Value;
 		}
 
-		// Token: 0x06024A4F RID: 150095 RVA: 0x0050E348 File Offset: 0x0050C548
+		// Token: 0x06026C62 RID: 158818 RVA: 0x0054EA08 File Offset: 0x0054CC08
 		public INpcUiInteractOnSunSpirit ShowOnUiInteractAsINpcUiInteractOnSunSpirit()
 		{
 			return this.ShowOnUiInteract<INpcUiInteractOnSunSpirit>().Value;
 		}
 
-		// Token: 0x06024A50 RID: 150096 RVA: 0x0050E364 File Offset: 0x0050C564
+		// Token: 0x06026C63 RID: 158819 RVA: 0x0054EA24 File Offset: 0x0054CC24
 		public INpcUiInteractOnVillageInfr ShowOnUiInteractAsINpcUiInteractOnVillageInfr()
 		{
 			return this.ShowOnUiInteract<INpcUiInteractOnVillageInfr>().Value;
 		}
 
-		// Token: 0x06024A51 RID: 150097 RVA: 0x0050E380 File Offset: 0x0050C580
+		// Token: 0x06026C64 RID: 158820 RVA: 0x0054EA40 File Offset: 0x0054CC40
 		public TNpcRideInVehiclePerformType ShowOnRideInVehicleType(int j)
 		{
 			int num = this.__p.__offset(30);
@@ -329,8 +329,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return (TNpcRideInVehiclePerformType)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x1700A357 RID: 41815
-		// (get) Token: 0x06024A52 RID: 150098 RVA: 0x0050E3C0 File Offset: 0x0050C5C0
+		// Token: 0x1700ABDF RID: 43999
+		// (get) Token: 0x06026C65 RID: 158821 RVA: 0x0054EA80 File Offset: 0x0054CC80
 		public int ShowOnRideInVehicleTypeLength
 		{
 			get
@@ -344,13 +344,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024A53 RID: 150099 RVA: 0x0050E3EC File Offset: 0x0050C5EC
+		// Token: 0x06026C66 RID: 158822 RVA: 0x0054EAAC File Offset: 0x0054CCAC
 		public Span<TNpcRideInVehiclePerformType> GetShowOnRideInVehicleTypeBytes()
 		{
 			return this.__p.__vector_as_span<TNpcRideInVehiclePerformType>(30, 1);
 		}
 
-		// Token: 0x06024A54 RID: 150100 RVA: 0x0050E3FC File Offset: 0x0050C5FC
+		// Token: 0x06026C67 RID: 158823 RVA: 0x0054EABC File Offset: 0x0054CCBC
 		public TNpcRideInVehiclePerformType[] GetShowOnRideInVehicleTypeArray()
 		{
 			int num = this.__p.__offset(30);
@@ -368,7 +368,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return array;
 		}
 
-		// Token: 0x06024A55 RID: 150101 RVA: 0x0050E468 File Offset: 0x0050C668
+		// Token: 0x06026C68 RID: 158824 RVA: 0x0054EB28 File Offset: 0x0054CD28
 		public TTable? ShowOnRideInVehicle<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(32);
@@ -379,8 +379,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x1700A358 RID: 41816
-		// (get) Token: 0x06024A56 RID: 150102 RVA: 0x0050E4B0 File Offset: 0x0050C6B0
+		// Token: 0x1700ABE0 RID: 44000
+		// (get) Token: 0x06026C69 RID: 158825 RVA: 0x0054EB70 File Offset: 0x0054CD70
 		public int ShowOnRideInVehicleLength
 		{
 			get
@@ -394,8 +394,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A359 RID: 41817
-		// (get) Token: 0x06024A57 RID: 150103 RVA: 0x0050E4DC File Offset: 0x0050C6DC
+		// Token: 0x1700ABE1 RID: 44001
+		// (get) Token: 0x06026C6A RID: 158826 RVA: 0x0054EB9C File Offset: 0x0054CD9C
 		public INpcPerformOnMonsterCloseby? NpcMonsterClosePerform
 		{
 			get
@@ -409,8 +409,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A35A RID: 41818
-		// (get) Token: 0x06024A58 RID: 150104 RVA: 0x0050E53C File Offset: 0x0050C73C
+		// Token: 0x1700ABE2 RID: 44002
+		// (get) Token: 0x06026C6B RID: 158827 RVA: 0x0054EBFC File Offset: 0x0054CDFC
 		public INpcPerformState? NpcPerformState
 		{
 			get
@@ -424,8 +424,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A35B RID: 41819
-		// (get) Token: 0x06024A59 RID: 150105 RVA: 0x0050E59C File Offset: 0x0050C79C
+		// Token: 0x1700ABE3 RID: 44003
+		// (get) Token: 0x06026C6C RID: 158828 RVA: 0x0054EC5C File Offset: 0x0054CE5C
 		public INpcDeathInteract? DeathInteract
 		{
 			get
@@ -439,8 +439,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A35C RID: 41820
-		// (get) Token: 0x06024A5A RID: 150106 RVA: 0x0050E5FC File Offset: 0x0050C7FC
+		// Token: 0x1700ABE4 RID: 44004
+		// (get) Token: 0x06026C6D RID: 158829 RVA: 0x0054ECBC File Offset: 0x0054CEBC
 		public bool FixedPosition
 		{
 			get
@@ -450,8 +450,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A35D RID: 41821
-		// (get) Token: 0x06024A5B RID: 150107 RVA: 0x0050E63C File Offset: 0x0050C83C
+		// Token: 0x1700ABE5 RID: 44005
+		// (get) Token: 0x06026C6E RID: 158830 RVA: 0x0054ECFC File Offset: 0x0054CEFC
 		public string DefaultAbpState
 		{
 			get
@@ -465,20 +465,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024A5C RID: 150108 RVA: 0x0050E674 File Offset: 0x0050C874
+		// Token: 0x06026C6F RID: 158831 RVA: 0x0054ED34 File Offset: 0x0054CF34
 		public Span<byte> GetDefaultAbpStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(42, 1);
 		}
 
-		// Token: 0x06024A5D RID: 150109 RVA: 0x0050E684 File Offset: 0x0050C884
+		// Token: 0x06026C70 RID: 158832 RVA: 0x0054ED44 File Offset: 0x0054CF44
 		public byte[] GetDefaultAbpStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(42);
 		}
 
-		// Token: 0x1700A35E RID: 41822
-		// (get) Token: 0x06024A5E RID: 150110 RVA: 0x0050E694 File Offset: 0x0050C894
+		// Token: 0x1700ABE6 RID: 44006
+		// (get) Token: 0x06026C71 RID: 158833 RVA: 0x0054ED54 File Offset: 0x0054CF54
 		public int DefaultFaceExpressionId
 		{
 			get
@@ -492,8 +492,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A35F RID: 41823
-		// (get) Token: 0x06024A5F RID: 150111 RVA: 0x0050E6D4 File Offset: 0x0050C8D4
+		// Token: 0x1700ABE7 RID: 44007
+		// (get) Token: 0x06026C72 RID: 158834 RVA: 0x0054ED94 File Offset: 0x0054CF94
 		public INpcDefaultPerform? DefaultPerform
 		{
 			get
@@ -507,7 +507,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024A60 RID: 150112 RVA: 0x0050E734 File Offset: 0x0050C934
+		// Token: 0x06026C73 RID: 158835 RVA: 0x0054EDF4 File Offset: 0x0054CFF4
 		public TNpcSpecialMark NpcSpecialMarksType(int j)
 		{
 			int num = this.__p.__offset(48);
@@ -518,8 +518,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return (TNpcSpecialMark)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x1700A360 RID: 41824
-		// (get) Token: 0x06024A61 RID: 150113 RVA: 0x0050E774 File Offset: 0x0050C974
+		// Token: 0x1700ABE8 RID: 44008
+		// (get) Token: 0x06026C74 RID: 158836 RVA: 0x0054EE34 File Offset: 0x0054D034
 		public int NpcSpecialMarksTypeLength
 		{
 			get
@@ -533,13 +533,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024A62 RID: 150114 RVA: 0x0050E7A0 File Offset: 0x0050C9A0
+		// Token: 0x06026C75 RID: 158837 RVA: 0x0054EE60 File Offset: 0x0054D060
 		public Span<TNpcSpecialMark> GetNpcSpecialMarksTypeBytes()
 		{
 			return this.__p.__vector_as_span<TNpcSpecialMark>(48, 1);
 		}
 
-		// Token: 0x06024A63 RID: 150115 RVA: 0x0050E7B0 File Offset: 0x0050C9B0
+		// Token: 0x06026C76 RID: 158838 RVA: 0x0054EE70 File Offset: 0x0054D070
 		public TNpcSpecialMark[] GetNpcSpecialMarksTypeArray()
 		{
 			int num = this.__p.__offset(48);
@@ -557,7 +557,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return array;
 		}
 
-		// Token: 0x06024A64 RID: 150116 RVA: 0x0050E81C File Offset: 0x0050CA1C
+		// Token: 0x06026C77 RID: 158839 RVA: 0x0054EEDC File Offset: 0x0054D0DC
 		public TTable? NpcSpecialMarks<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(50);
@@ -568,8 +568,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x1700A361 RID: 41825
-		// (get) Token: 0x06024A65 RID: 150117 RVA: 0x0050E864 File Offset: 0x0050CA64
+		// Token: 0x1700ABE9 RID: 44009
+		// (get) Token: 0x06026C78 RID: 158840 RVA: 0x0054EF24 File Offset: 0x0054D124
 		public int NpcSpecialMarksLength
 		{
 			get
@@ -583,9 +583,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A362 RID: 41826
-		// (get) Token: 0x06024A66 RID: 150118 RVA: 0x0050E890 File Offset: 0x0050CA90
-		public byte NullMask
+		// Token: 0x06026C79 RID: 158841 RVA: 0x0054EF50 File Offset: 0x0054D150
+		public EExtraMovementAbility ExtraMovementAbilities(int j)
+		{
+			int num = this.__p.__offset(52);
+			if (num == 0)
+			{
+				return EExtraMovementAbility.Diving;
+			}
+			return (EExtraMovementAbility)this.__p.bb.Get(this.__p.__vector(num) + j);
+		}
+
+		// Token: 0x1700ABEA RID: 44010
+		// (get) Token: 0x06026C7A RID: 158842 RVA: 0x0054EF90 File Offset: 0x0054D190
+		public int ExtraMovementAbilitiesLength
 		{
 			get
 			{
@@ -594,14 +605,54 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				{
 					return 0;
 				}
+				return this.__p.__vector_len(num);
+			}
+		}
+
+		// Token: 0x06026C7B RID: 158843 RVA: 0x0054EFBC File Offset: 0x0054D1BC
+		public Span<EExtraMovementAbility> GetExtraMovementAbilitiesBytes()
+		{
+			return this.__p.__vector_as_span<EExtraMovementAbility>(52, 1);
+		}
+
+		// Token: 0x06026C7C RID: 158844 RVA: 0x0054EFCC File Offset: 0x0054D1CC
+		public EExtraMovementAbility[] GetExtraMovementAbilitiesArray()
+		{
+			int num = this.__p.__offset(52);
+			if (num == 0)
+			{
+				return null;
+			}
+			int num2 = this.__p.__vector(num);
+			int num3 = this.__p.__vector_len(num);
+			EExtraMovementAbility[] array = new EExtraMovementAbility[num3];
+			for (int i = 0; i < num3; i++)
+			{
+				array[i] = (EExtraMovementAbility)this.__p.bb.Get(num2 + i);
+			}
+			return array;
+		}
+
+		// Token: 0x1700ABEB RID: 44011
+		// (get) Token: 0x06026C7D RID: 158845 RVA: 0x0054F038 File Offset: 0x0054D238
+		public byte NullMask
+		{
+			get
+			{
+				int num = this.__p.__offset(54);
+				if (num == 0)
+				{
+					return 0;
+				}
 				return this.__p.bb.Get(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x06024A67 RID: 150119 RVA: 0x0050E8D0 File Offset: 0x0050CAD0
-		public static Offset<INpcPerformComponent> CreateINpcPerformComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<IBaseRoleNpcPerform> SpecialNpcPerformConfigOffset = default(Offset<IBaseRoleNpcPerform>), bool IsStare = false, Offset<INpcHitShow> NpcHitShowOffset = default(Offset<INpcHitShow>), bool IsShowStrike = false, Offset<INpcBumpShow> NpcBumpShowOffset = default(Offset<INpcBumpShow>), Offset<INpcAwakeShow> ShowOnAwakeOffset = default(Offset<INpcAwakeShow>), TNpcStandbyShowOption ShowOnStandby_type = TNpcStandbyShowOption.NONE, int ShowOnStandbyOffset = 0, Offset<INpcPerformOnInteract> ShowOnInteractOffset = default(Offset<INpcPerformOnInteract>), VectorOffset ConditionalShowOnInteractsOffset = default(VectorOffset), TNpcUiInteractOption ShowOnUiInteract_type = TNpcUiInteractOption.NONE, int ShowOnUiInteractOffset = 0, VectorOffset ShowOnRideInVehicle_typeOffset = default(VectorOffset), VectorOffset ShowOnRideInVehicleOffset = default(VectorOffset), Offset<INpcPerformOnMonsterCloseby> NpcMonsterClosePerformOffset = default(Offset<INpcPerformOnMonsterCloseby>), Offset<INpcPerformState> NpcPerformStateOffset = default(Offset<INpcPerformState>), Offset<INpcDeathInteract> DeathInteractOffset = default(Offset<INpcDeathInteract>), bool FixedPosition = false, StringOffset DefaultAbpStateOffset = default(StringOffset), int DefaultFaceExpressionId = 0, Offset<INpcDefaultPerform> DefaultPerformOffset = default(Offset<INpcDefaultPerform>), VectorOffset NpcSpecialMarks_typeOffset = default(VectorOffset), VectorOffset NpcSpecialMarksOffset = default(VectorOffset), byte NullMask = 0)
+		// Token: 0x06026C7E RID: 158846 RVA: 0x0054F078 File Offset: 0x0054D278
+		public static Offset<INpcPerformComponent> CreateINpcPerformComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<IBaseRoleNpcPerform> SpecialNpcPerformConfigOffset = default(Offset<IBaseRoleNpcPerform>), bool IsStare = false, Offset<INpcHitShow> NpcHitShowOffset = default(Offset<INpcHitShow>), bool IsShowStrike = false, Offset<INpcBumpShow> NpcBumpShowOffset = default(Offset<INpcBumpShow>), Offset<INpcAwakeShow> ShowOnAwakeOffset = default(Offset<INpcAwakeShow>), TNpcStandbyShowOption ShowOnStandby_type = TNpcStandbyShowOption.NONE, int ShowOnStandbyOffset = 0, Offset<INpcPerformOnInteract> ShowOnInteractOffset = default(Offset<INpcPerformOnInteract>), VectorOffset ConditionalShowOnInteractsOffset = default(VectorOffset), TNpcUiInteractOption ShowOnUiInteract_type = TNpcUiInteractOption.NONE, int ShowOnUiInteractOffset = 0, VectorOffset ShowOnRideInVehicle_typeOffset = default(VectorOffset), VectorOffset ShowOnRideInVehicleOffset = default(VectorOffset), Offset<INpcPerformOnMonsterCloseby> NpcMonsterClosePerformOffset = default(Offset<INpcPerformOnMonsterCloseby>), Offset<INpcPerformState> NpcPerformStateOffset = default(Offset<INpcPerformState>), Offset<INpcDeathInteract> DeathInteractOffset = default(Offset<INpcDeathInteract>), bool FixedPosition = false, StringOffset DefaultAbpStateOffset = default(StringOffset), int DefaultFaceExpressionId = 0, Offset<INpcDefaultPerform> DefaultPerformOffset = default(Offset<INpcDefaultPerform>), VectorOffset NpcSpecialMarks_typeOffset = default(VectorOffset), VectorOffset NpcSpecialMarksOffset = default(VectorOffset), VectorOffset ExtraMovementAbilitiesOffset = default(VectorOffset), byte NullMask = 0)
 		{
-			builder.StartTable(25);
+			builder.StartTable(26);
+			INpcPerformComponent.AddExtraMovementAbilities(builder, ExtraMovementAbilitiesOffset);
 			INpcPerformComponent.AddNpcSpecialMarks(builder, NpcSpecialMarksOffset);
 			INpcPerformComponent.AddNpcSpecialMarksType(builder, NpcSpecialMarks_typeOffset);
 			INpcPerformComponent.AddDefaultPerform(builder, DefaultPerformOffset);
@@ -630,79 +681,79 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcPerformComponent.EndINpcPerformComponent(builder);
 		}
 
-		// Token: 0x06024A68 RID: 150120 RVA: 0x0050E9B0 File Offset: 0x0050CBB0
+		// Token: 0x06026C7F RID: 158847 RVA: 0x0054F160 File Offset: 0x0054D360
 		public static void StartINpcPerformComponent(FlatBufferBuilder builder)
 		{
-			builder.StartTable(25);
+			builder.StartTable(26);
 		}
 
-		// Token: 0x06024A69 RID: 150121 RVA: 0x0050E9BA File Offset: 0x0050CBBA
+		// Token: 0x06026C80 RID: 158848 RVA: 0x0054F16A File Offset: 0x0054D36A
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06024A6A RID: 150122 RVA: 0x0050E9C5 File Offset: 0x0050CBC5
+		// Token: 0x06026C81 RID: 158849 RVA: 0x0054F175 File Offset: 0x0054D375
 		public static void AddSpecialNpcPerformConfig(FlatBufferBuilder builder, Offset<IBaseRoleNpcPerform> specialNpcPerformConfigOffset)
 		{
 			builder.AddOffset(1, specialNpcPerformConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06024A6B RID: 150123 RVA: 0x0050E9D5 File Offset: 0x0050CBD5
+		// Token: 0x06026C82 RID: 158850 RVA: 0x0054F185 File Offset: 0x0054D385
 		public static void AddIsStare(FlatBufferBuilder builder, bool isStare)
 		{
 			builder.AddBool(2, isStare, false);
 		}
 
-		// Token: 0x06024A6C RID: 150124 RVA: 0x0050E9E0 File Offset: 0x0050CBE0
+		// Token: 0x06026C83 RID: 158851 RVA: 0x0054F190 File Offset: 0x0054D390
 		public static void AddNpcHitShow(FlatBufferBuilder builder, Offset<INpcHitShow> npcHitShowOffset)
 		{
 			builder.AddOffset(3, npcHitShowOffset.Value, 0);
 		}
 
-		// Token: 0x06024A6D RID: 150125 RVA: 0x0050E9F0 File Offset: 0x0050CBF0
+		// Token: 0x06026C84 RID: 158852 RVA: 0x0054F1A0 File Offset: 0x0054D3A0
 		public static void AddIsShowStrike(FlatBufferBuilder builder, bool isShowStrike)
 		{
 			builder.AddBool(4, isShowStrike, false);
 		}
 
-		// Token: 0x06024A6E RID: 150126 RVA: 0x0050E9FB File Offset: 0x0050CBFB
+		// Token: 0x06026C85 RID: 158853 RVA: 0x0054F1AB File Offset: 0x0054D3AB
 		public static void AddNpcBumpShow(FlatBufferBuilder builder, Offset<INpcBumpShow> npcBumpShowOffset)
 		{
 			builder.AddOffset(5, npcBumpShowOffset.Value, 0);
 		}
 
-		// Token: 0x06024A6F RID: 150127 RVA: 0x0050EA0B File Offset: 0x0050CC0B
+		// Token: 0x06026C86 RID: 158854 RVA: 0x0054F1BB File Offset: 0x0054D3BB
 		public static void AddShowOnAwake(FlatBufferBuilder builder, Offset<INpcAwakeShow> showOnAwakeOffset)
 		{
 			builder.AddOffset(6, showOnAwakeOffset.Value, 0);
 		}
 
-		// Token: 0x06024A70 RID: 150128 RVA: 0x0050EA1B File Offset: 0x0050CC1B
+		// Token: 0x06026C87 RID: 158855 RVA: 0x0054F1CB File Offset: 0x0054D3CB
 		public static void AddShowOnStandbyType(FlatBufferBuilder builder, TNpcStandbyShowOption showOnStandbyType)
 		{
 			builder.AddByte(7, (byte)showOnStandbyType, 0);
 		}
 
-		// Token: 0x06024A71 RID: 150129 RVA: 0x0050EA26 File Offset: 0x0050CC26
+		// Token: 0x06026C88 RID: 158856 RVA: 0x0054F1D6 File Offset: 0x0054D3D6
 		public static void AddShowOnStandby(FlatBufferBuilder builder, int showOnStandbyOffset)
 		{
 			builder.AddOffset(8, showOnStandbyOffset, 0);
 		}
 
-		// Token: 0x06024A72 RID: 150130 RVA: 0x0050EA31 File Offset: 0x0050CC31
+		// Token: 0x06026C89 RID: 158857 RVA: 0x0054F1E1 File Offset: 0x0054D3E1
 		public static void AddShowOnInteract(FlatBufferBuilder builder, Offset<INpcPerformOnInteract> showOnInteractOffset)
 		{
 			builder.AddOffset(9, showOnInteractOffset.Value, 0);
 		}
 
-		// Token: 0x06024A73 RID: 150131 RVA: 0x0050EA42 File Offset: 0x0050CC42
+		// Token: 0x06026C8A RID: 158858 RVA: 0x0054F1F2 File Offset: 0x0054D3F2
 		public static void AddConditionalShowOnInteracts(FlatBufferBuilder builder, VectorOffset conditionalShowOnInteractsOffset)
 		{
 			builder.AddOffset(10, conditionalShowOnInteractsOffset.Value, 0);
 		}
 
-		// Token: 0x06024A74 RID: 150132 RVA: 0x0050EA54 File Offset: 0x0050CC54
+		// Token: 0x06026C8B RID: 158859 RVA: 0x0054F204 File Offset: 0x0054D404
 		public static VectorOffset CreateConditionalShowOnInteractsVector(FlatBufferBuilder builder, Offset<IConditionalNpcPerformOnInteract>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -713,7 +764,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A75 RID: 150133 RVA: 0x0050EA94 File Offset: 0x0050CC94
+		// Token: 0x06026C8C RID: 158860 RVA: 0x0054F244 File Offset: 0x0054D444
 		public static VectorOffset CreateConditionalShowOnInteractsVectorBlock(FlatBufferBuilder builder, Offset<IConditionalNpcPerformOnInteract>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -721,7 +772,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A76 RID: 150134 RVA: 0x0050EAAE File Offset: 0x0050CCAE
+		// Token: 0x06026C8D RID: 158861 RVA: 0x0054F25E File Offset: 0x0054D45E
 		public static VectorOffset CreateConditionalShowOnInteractsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IConditionalNpcPerformOnInteract>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -729,7 +780,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A77 RID: 150135 RVA: 0x0050EACC File Offset: 0x0050CCCC
+		// Token: 0x06026C8E RID: 158862 RVA: 0x0054F27C File Offset: 0x0054D47C
 		public static VectorOffset CreateConditionalShowOnInteractsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -737,31 +788,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A78 RID: 150136 RVA: 0x0050EAE5 File Offset: 0x0050CCE5
+		// Token: 0x06026C8F RID: 158863 RVA: 0x0054F295 File Offset: 0x0054D495
 		public static void StartConditionalShowOnInteractsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06024A79 RID: 150137 RVA: 0x0050EAF0 File Offset: 0x0050CCF0
+		// Token: 0x06026C90 RID: 158864 RVA: 0x0054F2A0 File Offset: 0x0054D4A0
 		public static void AddShowOnUiInteractType(FlatBufferBuilder builder, TNpcUiInteractOption showOnUiInteractType)
 		{
 			builder.AddByte(11, (byte)showOnUiInteractType, 0);
 		}
 
-		// Token: 0x06024A7A RID: 150138 RVA: 0x0050EAFC File Offset: 0x0050CCFC
+		// Token: 0x06026C91 RID: 158865 RVA: 0x0054F2AC File Offset: 0x0054D4AC
 		public static void AddShowOnUiInteract(FlatBufferBuilder builder, int showOnUiInteractOffset)
 		{
 			builder.AddOffset(12, showOnUiInteractOffset, 0);
 		}
 
-		// Token: 0x06024A7B RID: 150139 RVA: 0x0050EB08 File Offset: 0x0050CD08
+		// Token: 0x06026C92 RID: 158866 RVA: 0x0054F2B8 File Offset: 0x0054D4B8
 		public static void AddShowOnRideInVehicleType(FlatBufferBuilder builder, VectorOffset showOnRideInVehicleTypeOffset)
 		{
 			builder.AddOffset(13, showOnRideInVehicleTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06024A7C RID: 150140 RVA: 0x0050EB1C File Offset: 0x0050CD1C
+		// Token: 0x06026C93 RID: 158867 RVA: 0x0054F2CC File Offset: 0x0054D4CC
 		public static VectorOffset CreateShowOnRideInVehicleTypeVector(FlatBufferBuilder builder, TNpcRideInVehiclePerformType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -772,7 +823,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A7D RID: 150141 RVA: 0x0050EB53 File Offset: 0x0050CD53
+		// Token: 0x06026C94 RID: 158868 RVA: 0x0054F303 File Offset: 0x0054D503
 		public static VectorOffset CreateShowOnRideInVehicleTypeVectorBlock(FlatBufferBuilder builder, TNpcRideInVehiclePerformType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -780,7 +831,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A7E RID: 150142 RVA: 0x0050EB6D File Offset: 0x0050CD6D
+		// Token: 0x06026C95 RID: 158869 RVA: 0x0054F31D File Offset: 0x0054D51D
 		public static VectorOffset CreateShowOnRideInVehicleTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TNpcRideInVehiclePerformType> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -788,7 +839,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A7F RID: 150143 RVA: 0x0050EB8B File Offset: 0x0050CD8B
+		// Token: 0x06026C96 RID: 158870 RVA: 0x0054F33B File Offset: 0x0054D53B
 		public static VectorOffset CreateShowOnRideInVehicleTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -796,19 +847,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A80 RID: 150144 RVA: 0x0050EBA4 File Offset: 0x0050CDA4
+		// Token: 0x06026C97 RID: 158871 RVA: 0x0054F354 File Offset: 0x0054D554
 		public static void StartShowOnRideInVehicleTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x06024A81 RID: 150145 RVA: 0x0050EBAF File Offset: 0x0050CDAF
+		// Token: 0x06026C98 RID: 158872 RVA: 0x0054F35F File Offset: 0x0054D55F
 		public static void AddShowOnRideInVehicle(FlatBufferBuilder builder, VectorOffset showOnRideInVehicleOffset)
 		{
 			builder.AddOffset(14, showOnRideInVehicleOffset.Value, 0);
 		}
 
-		// Token: 0x06024A82 RID: 150146 RVA: 0x0050EBC0 File Offset: 0x0050CDC0
+		// Token: 0x06026C99 RID: 158873 RVA: 0x0054F370 File Offset: 0x0054D570
 		public static VectorOffset CreateShowOnRideInVehicleVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -819,7 +870,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A83 RID: 150147 RVA: 0x0050EBF7 File Offset: 0x0050CDF7
+		// Token: 0x06026C9A RID: 158874 RVA: 0x0054F3A7 File Offset: 0x0054D5A7
 		public static VectorOffset CreateShowOnRideInVehicleVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -827,7 +878,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A84 RID: 150148 RVA: 0x0050EC11 File Offset: 0x0050CE11
+		// Token: 0x06026C9B RID: 158875 RVA: 0x0054F3C1 File Offset: 0x0054D5C1
 		public static VectorOffset CreateShowOnRideInVehicleVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -835,7 +886,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A85 RID: 150149 RVA: 0x0050EC2F File Offset: 0x0050CE2F
+		// Token: 0x06026C9C RID: 158876 RVA: 0x0054F3DF File Offset: 0x0054D5DF
 		public static VectorOffset CreateShowOnRideInVehicleVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -843,61 +894,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A86 RID: 150150 RVA: 0x0050EC48 File Offset: 0x0050CE48
+		// Token: 0x06026C9D RID: 158877 RVA: 0x0054F3F8 File Offset: 0x0054D5F8
 		public static void StartShowOnRideInVehicleVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06024A87 RID: 150151 RVA: 0x0050EC53 File Offset: 0x0050CE53
+		// Token: 0x06026C9E RID: 158878 RVA: 0x0054F403 File Offset: 0x0054D603
 		public static void AddNpcMonsterClosePerform(FlatBufferBuilder builder, Offset<INpcPerformOnMonsterCloseby> npcMonsterClosePerformOffset)
 		{
 			builder.AddOffset(15, npcMonsterClosePerformOffset.Value, 0);
 		}
 
-		// Token: 0x06024A88 RID: 150152 RVA: 0x0050EC64 File Offset: 0x0050CE64
+		// Token: 0x06026C9F RID: 158879 RVA: 0x0054F414 File Offset: 0x0054D614
 		public static void AddNpcPerformState(FlatBufferBuilder builder, Offset<INpcPerformState> npcPerformStateOffset)
 		{
 			builder.AddOffset(16, npcPerformStateOffset.Value, 0);
 		}
 
-		// Token: 0x06024A89 RID: 150153 RVA: 0x0050EC75 File Offset: 0x0050CE75
+		// Token: 0x06026CA0 RID: 158880 RVA: 0x0054F425 File Offset: 0x0054D625
 		public static void AddDeathInteract(FlatBufferBuilder builder, Offset<INpcDeathInteract> deathInteractOffset)
 		{
 			builder.AddOffset(17, deathInteractOffset.Value, 0);
 		}
 
-		// Token: 0x06024A8A RID: 150154 RVA: 0x0050EC86 File Offset: 0x0050CE86
+		// Token: 0x06026CA1 RID: 158881 RVA: 0x0054F436 File Offset: 0x0054D636
 		public static void AddFixedPosition(FlatBufferBuilder builder, bool fixedPosition)
 		{
 			builder.AddBool(18, fixedPosition, false);
 		}
 
-		// Token: 0x06024A8B RID: 150155 RVA: 0x0050EC92 File Offset: 0x0050CE92
+		// Token: 0x06026CA2 RID: 158882 RVA: 0x0054F442 File Offset: 0x0054D642
 		public static void AddDefaultAbpState(FlatBufferBuilder builder, StringOffset defaultAbpStateOffset)
 		{
 			builder.AddOffset(19, defaultAbpStateOffset.Value, 0);
 		}
 
-		// Token: 0x06024A8C RID: 150156 RVA: 0x0050ECA3 File Offset: 0x0050CEA3
+		// Token: 0x06026CA3 RID: 158883 RVA: 0x0054F453 File Offset: 0x0054D653
 		public static void AddDefaultFaceExpressionId(FlatBufferBuilder builder, int defaultFaceExpressionId)
 		{
 			builder.AddInt(20, defaultFaceExpressionId, 0);
 		}
 
-		// Token: 0x06024A8D RID: 150157 RVA: 0x0050ECAF File Offset: 0x0050CEAF
+		// Token: 0x06026CA4 RID: 158884 RVA: 0x0054F45F File Offset: 0x0054D65F
 		public static void AddDefaultPerform(FlatBufferBuilder builder, Offset<INpcDefaultPerform> defaultPerformOffset)
 		{
 			builder.AddOffset(21, defaultPerformOffset.Value, 0);
 		}
 
-		// Token: 0x06024A8E RID: 150158 RVA: 0x0050ECC0 File Offset: 0x0050CEC0
+		// Token: 0x06026CA5 RID: 158885 RVA: 0x0054F470 File Offset: 0x0054D670
 		public static void AddNpcSpecialMarksType(FlatBufferBuilder builder, VectorOffset npcSpecialMarksTypeOffset)
 		{
 			builder.AddOffset(22, npcSpecialMarksTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06024A8F RID: 150159 RVA: 0x0050ECD4 File Offset: 0x0050CED4
+		// Token: 0x06026CA6 RID: 158886 RVA: 0x0054F484 File Offset: 0x0054D684
 		public static VectorOffset CreateNpcSpecialMarksTypeVector(FlatBufferBuilder builder, TNpcSpecialMark[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -908,7 +959,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A90 RID: 150160 RVA: 0x0050ED0B File Offset: 0x0050CF0B
+		// Token: 0x06026CA7 RID: 158887 RVA: 0x0054F4BB File Offset: 0x0054D6BB
 		public static VectorOffset CreateNpcSpecialMarksTypeVectorBlock(FlatBufferBuilder builder, TNpcSpecialMark[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -916,7 +967,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A91 RID: 150161 RVA: 0x0050ED25 File Offset: 0x0050CF25
+		// Token: 0x06026CA8 RID: 158888 RVA: 0x0054F4D5 File Offset: 0x0054D6D5
 		public static VectorOffset CreateNpcSpecialMarksTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TNpcSpecialMark> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -924,7 +975,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A92 RID: 150162 RVA: 0x0050ED43 File Offset: 0x0050CF43
+		// Token: 0x06026CA9 RID: 158889 RVA: 0x0054F4F3 File Offset: 0x0054D6F3
 		public static VectorOffset CreateNpcSpecialMarksTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -932,19 +983,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A93 RID: 150163 RVA: 0x0050ED5C File Offset: 0x0050CF5C
+		// Token: 0x06026CAA RID: 158890 RVA: 0x0054F50C File Offset: 0x0054D70C
 		public static void StartNpcSpecialMarksTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x06024A94 RID: 150164 RVA: 0x0050ED67 File Offset: 0x0050CF67
+		// Token: 0x06026CAB RID: 158891 RVA: 0x0054F517 File Offset: 0x0054D717
 		public static void AddNpcSpecialMarks(FlatBufferBuilder builder, VectorOffset npcSpecialMarksOffset)
 		{
 			builder.AddOffset(23, npcSpecialMarksOffset.Value, 0);
 		}
 
-		// Token: 0x06024A95 RID: 150165 RVA: 0x0050ED78 File Offset: 0x0050CF78
+		// Token: 0x06026CAC RID: 158892 RVA: 0x0054F528 File Offset: 0x0054D728
 		public static VectorOffset CreateNpcSpecialMarksVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -955,7 +1006,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A96 RID: 150166 RVA: 0x0050EDAF File Offset: 0x0050CFAF
+		// Token: 0x06026CAD RID: 158893 RVA: 0x0054F55F File Offset: 0x0054D75F
 		public static VectorOffset CreateNpcSpecialMarksVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -963,7 +1014,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A97 RID: 150167 RVA: 0x0050EDC9 File Offset: 0x0050CFC9
+		// Token: 0x06026CAE RID: 158894 RVA: 0x0054F579 File Offset: 0x0054D779
 		public static VectorOffset CreateNpcSpecialMarksVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -971,7 +1022,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A98 RID: 150168 RVA: 0x0050EDE7 File Offset: 0x0050CFE7
+		// Token: 0x06026CAF RID: 158895 RVA: 0x0054F597 File Offset: 0x0054D797
 		public static VectorOffset CreateNpcSpecialMarksVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -979,25 +1030,72 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024A99 RID: 150169 RVA: 0x0050EE00 File Offset: 0x0050D000
+		// Token: 0x06026CB0 RID: 158896 RVA: 0x0054F5B0 File Offset: 0x0054D7B0
 		public static void StartNpcSpecialMarksVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06024A9A RID: 150170 RVA: 0x0050EE0B File Offset: 0x0050D00B
-		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
+		// Token: 0x06026CB1 RID: 158897 RVA: 0x0054F5BB File Offset: 0x0054D7BB
+		public static void AddExtraMovementAbilities(FlatBufferBuilder builder, VectorOffset extraMovementAbilitiesOffset)
 		{
-			builder.AddByte(24, nullMask, 0);
+			builder.AddOffset(24, extraMovementAbilitiesOffset.Value, 0);
 		}
 
-		// Token: 0x06024A9B RID: 150171 RVA: 0x0050EE17 File Offset: 0x0050D017
+		// Token: 0x06026CB2 RID: 158898 RVA: 0x0054F5CC File Offset: 0x0054D7CC
+		public static VectorOffset CreateExtraMovementAbilitiesVector(FlatBufferBuilder builder, EExtraMovementAbility[] data)
+		{
+			builder.StartVector(1, data.Length, 1);
+			for (int i = data.Length - 1; i >= 0; i--)
+			{
+				builder.AddByte((byte)data[i]);
+			}
+			return builder.EndVector();
+		}
+
+		// Token: 0x06026CB3 RID: 158899 RVA: 0x0054F603 File Offset: 0x0054D803
+		public static VectorOffset CreateExtraMovementAbilitiesVectorBlock(FlatBufferBuilder builder, EExtraMovementAbility[] data)
+		{
+			builder.StartVector(1, data.Length, 1);
+			builder.Add<EExtraMovementAbility>(data);
+			return builder.EndVector();
+		}
+
+		// Token: 0x06026CB4 RID: 158900 RVA: 0x0054F61D File Offset: 0x0054D81D
+		public static VectorOffset CreateExtraMovementAbilitiesVectorBlock(FlatBufferBuilder builder, ArraySegment<EExtraMovementAbility> data)
+		{
+			builder.StartVector(1, data.Count, 1);
+			builder.Add<EExtraMovementAbility>(data);
+			return builder.EndVector();
+		}
+
+		// Token: 0x06026CB5 RID: 158901 RVA: 0x0054F63B File Offset: 0x0054D83B
+		public static VectorOffset CreateExtraMovementAbilitiesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
+		{
+			builder.StartVector(1, sizeInBytes, 1);
+			builder.Add<EExtraMovementAbility>(dataPtr, sizeInBytes);
+			return builder.EndVector();
+		}
+
+		// Token: 0x06026CB6 RID: 158902 RVA: 0x0054F654 File Offset: 0x0054D854
+		public static void StartExtraMovementAbilitiesVector(FlatBufferBuilder builder, int numElems)
+		{
+			builder.StartVector(1, numElems, 1);
+		}
+
+		// Token: 0x06026CB7 RID: 158903 RVA: 0x0054F65F File Offset: 0x0054D85F
+		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
+		{
+			builder.AddByte(25, nullMask, 0);
+		}
+
+		// Token: 0x06026CB8 RID: 158904 RVA: 0x0054F66B File Offset: 0x0054D86B
 		public static Offset<INpcPerformComponent> EndINpcPerformComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<INpcPerformComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06024A9C RID: 150172 RVA: 0x0050EE24 File Offset: 0x0050D024
+		// Token: 0x06026CB9 RID: 158905 RVA: 0x0054F678 File Offset: 0x0054D878
 		public INpcPerformComponentT UnPack()
 		{
 			INpcPerformComponentT npcPerformComponentT = new INpcPerformComponentT();
@@ -1005,7 +1103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return npcPerformComponentT;
 		}
 
-		// Token: 0x06024A9D RID: 150173 RVA: 0x0050EE40 File Offset: 0x0050D040
+		// Token: 0x06026CBA RID: 158906 RVA: 0x0054F694 File Offset: 0x0054D894
 		public void UnPackTo(INpcPerformComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -1107,24 +1205,29 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			{
 				TNpcSpecialMarkUnion tnpcSpecialMarkUnion = new TNpcSpecialMarkUnion();
 				tnpcSpecialMarkUnion.Type = this.NpcSpecialMarksType(k);
-				TNpcSpecialMark tnpcSpecialMark = this.NpcSpecialMarksType(k);
-				if (tnpcSpecialMark != TNpcSpecialMark.INpcSpecialMarkIgnoreCameraHideNpc)
+				switch (this.NpcSpecialMarksType(k))
 				{
-					if (tnpcSpecialMark == TNpcSpecialMark.INpcSpecialMarkTrafficLight)
-					{
-						tnpcSpecialMarkUnion.Value = ((this.NpcSpecialMarks<INpcSpecialMarkTrafficLight>(k) != null) ? this.NpcSpecialMarks<INpcSpecialMarkTrafficLight>(k).Value.UnPack() : null);
-					}
-				}
-				else
-				{
+				case TNpcSpecialMark.INpcSpecialMarkIgnoreCameraHideNpc:
 					tnpcSpecialMarkUnion.Value = ((this.NpcSpecialMarks<INpcSpecialMarkIgnoreCameraHideNpc>(k) != null) ? this.NpcSpecialMarks<INpcSpecialMarkIgnoreCameraHideNpc>(k).Value.UnPack() : null);
+					break;
+				case TNpcSpecialMark.INpcSpecialMarkTrafficLight:
+					tnpcSpecialMarkUnion.Value = ((this.NpcSpecialMarks<INpcSpecialMarkTrafficLight>(k) != null) ? this.NpcSpecialMarks<INpcSpecialMarkTrafficLight>(k).Value.UnPack() : null);
+					break;
+				case TNpcSpecialMark.INpcSpecialMarkTriggerBlueprintFootprintEvent:
+					tnpcSpecialMarkUnion.Value = ((this.NpcSpecialMarks<INpcSpecialMarkTriggerBlueprintFootprintEvent>(k) != null) ? this.NpcSpecialMarks<INpcSpecialMarkTriggerBlueprintFootprintEvent>(k).Value.UnPack() : null);
+					break;
 				}
 				_o.NpcSpecialMarks.Add(tnpcSpecialMarkUnion);
+			}
+			_o.ExtraMovementAbilities = new List<EExtraMovementAbility>();
+			for (int l = 0; l < this.ExtraMovementAbilitiesLength; l++)
+			{
+				_o.ExtraMovementAbilities.Add(this.ExtraMovementAbilities(l));
 			}
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06024A9E RID: 150174 RVA: 0x0050F6AC File Offset: 0x0050D8AC
+		// Token: 0x06026CBB RID: 158907 RVA: 0x0054FF7C File Offset: 0x0054E17C
 		public static Offset<INpcPerformComponent> Pack(FlatBufferBuilder builder, INpcPerformComponentT _o)
 		{
 			if (_o == null)
@@ -1195,10 +1298,16 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				}
 				npcSpecialMarksOffset = INpcPerformComponent.CreateNpcSpecialMarksVector(builder, array5);
 			}
-			return INpcPerformComponent.CreateINpcPerformComponent(builder, _o.Disabled, specialNpcPerformConfigOffset, _o.IsStare, npcHitShowOffset, _o.IsShowStrike, npcBumpShowOffset, showOnAwakeOffset, showOnStandby_type, showOnStandbyOffset, showOnInteractOffset, conditionalShowOnInteractsOffset, showOnUiInteract_type, showOnUiInteractOffset, showOnRideInVehicle_typeOffset, showOnRideInVehicleOffset, npcMonsterClosePerformOffset, npcPerformStateOffset, deathInteractOffset, _o.FixedPosition, defaultAbpStateOffset, _o.DefaultFaceExpressionId, defaultPerformOffset, npcSpecialMarks_typeOffset, npcSpecialMarksOffset, _o.NullMask);
+			VectorOffset extraMovementAbilitiesOffset = default(VectorOffset);
+			if (_o.ExtraMovementAbilities != null)
+			{
+				EExtraMovementAbility[] data = _o.ExtraMovementAbilities.ToArray();
+				extraMovementAbilitiesOffset = INpcPerformComponent.CreateExtraMovementAbilitiesVector(builder, data);
+			}
+			return INpcPerformComponent.CreateINpcPerformComponent(builder, _o.Disabled, specialNpcPerformConfigOffset, _o.IsStare, npcHitShowOffset, _o.IsShowStrike, npcBumpShowOffset, showOnAwakeOffset, showOnStandby_type, showOnStandbyOffset, showOnInteractOffset, conditionalShowOnInteractsOffset, showOnUiInteract_type, showOnUiInteractOffset, showOnRideInVehicle_typeOffset, showOnRideInVehicleOffset, npcMonsterClosePerformOffset, npcPerformStateOffset, deathInteractOffset, _o.FixedPosition, defaultAbpStateOffset, _o.DefaultFaceExpressionId, defaultPerformOffset, npcSpecialMarks_typeOffset, npcSpecialMarksOffset, extraMovementAbilitiesOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E9C1 RID: 59841
+		// Token: 0x0400F625 RID: 63013
 		private Table __p;
 	}
 }

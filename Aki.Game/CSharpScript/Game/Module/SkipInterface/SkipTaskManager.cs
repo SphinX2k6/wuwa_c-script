@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.SkipInterface
 {
-	// Token: 0x02004BA3 RID: 19363
+	// Token: 0x02003B4D RID: 15181
 	public class SkipTaskManager : IStaticVariableResetter
 	{
-		// Token: 0x060322B8 RID: 205496 RVA: 0x00BA7FA4 File Offset: 0x00BA61A4
+		// Token: 0x06027048 RID: 159816 RVA: 0x00AEC110 File Offset: 0x00AEA310
 		static SkipTaskManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SkipTaskManager.CreateStaticDefaultValue), new Action(SkipTaskManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060322B9 RID: 205497 RVA: 0x00BA7FC4 File Offset: 0x00BA61C4
+		// Token: 0x06027049 RID: 159817 RVA: 0x00AEC130 File Offset: 0x00AEA330
 		public static void CreateStaticDefaultValue()
 		{
 			SkipTaskManager.SkipTaskMap = new Dictionary<ESkipName, SkipTask>();
@@ -42,16 +42,22 @@ namespace CSharpScript.Game.Module.SkipInterface
 				EUiViewName.MoonChasingTaskView,
 				EUiViewName.BuildingTipsInfoView
 			};
+			SkipTaskManager.SkipForbiddenViewNameList = new HashSet<EUiViewName>
+			{
+				EUiViewName.SolarSchoolRootView,
+				EUiViewName.SolarSchoolGalleryView
+			};
 		}
 
-		// Token: 0x060322BA RID: 205498 RVA: 0x00BA80B1 File Offset: 0x00BA62B1
+		// Token: 0x0602704A RID: 159818 RVA: 0x00AEC23F File Offset: 0x00AEA43F
 		public static void ResetStaticDefaultValue()
 		{
 			SkipTaskManager.SkipTaskMap = null;
 			SkipTaskManager.LimitRingViewNameList = null;
+			SkipTaskManager.SkipForbiddenViewNameList = null;
 		}
 
-		// Token: 0x060322BB RID: 205499 RVA: 0x00BA80BF File Offset: 0x00BA62BF
+		// Token: 0x0602704B RID: 159819 RVA: 0x00AEC253 File Offset: 0x00AEA453
 		public static void CheckContainRingView(EUiViewName viewName)
 		{
 			if (SkipTaskManager.CheckContainLimitViewName(viewName))
@@ -60,13 +66,33 @@ namespace CSharpScript.Game.Module.SkipInterface
 			}
 		}
 
-		// Token: 0x060322BC RID: 205500 RVA: 0x00BA80D5 File Offset: 0x00BA62D5
+		// Token: 0x0602704C RID: 159820 RVA: 0x00AEC269 File Offset: 0x00AEA469
 		public static bool CheckContainLimitViewName(EUiViewName viewName)
 		{
 			return SkipTaskManager.LimitRingViewNameList.Contains(viewName);
 		}
 
-		// Token: 0x060322BD RID: 205501 RVA: 0x00BA80E4 File Offset: 0x00BA62E4
+		// Token: 0x0602704D RID: 159821 RVA: 0x00AEC278 File Offset: 0x00AEA478
+		private static bool CheckSkipForbidden()
+		{
+			foreach (EUiViewName euiViewName in SkipTaskManager.SkipForbiddenViewNameList)
+			{
+				if (UiManager.Instance.GetViewByName(euiViewName) != null)
+				{
+					Log instance = Log.Instance;
+					ELogModule module = ELogModule.SkipInterface;
+					ELogAuthor author = ELogAuthor.YYZ;
+					string message = "存在黑名单界面，禁止跳转";
+					ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("viewName", euiViewName);
+					instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+					ScrollingTipsController.Instance.ShowTipsByTextId("SkipTask_Prevent", Array.Empty<object>());
+					return true;
+				}
+			}
+			return false;
+		}
+
+		// Token: 0x0602704E RID: 159822 RVA: 0x00AEC31C File Offset: 0x00AEA51C
 		[NullableContext(2)]
 		public unsafe static void RunByConfigId(int id, object @params = null)
 		{
@@ -83,6 +109,10 @@ namespace CSharpScript.Game.Module.SkipInterface
 			}
 			ESkipName skipName = (ESkipName)accessPathConfig.Value.SkipName;
 			if (skipName == ESkipName.NoSkip)
+			{
+				return;
+			}
+			if (SkipTaskManager.CheckSkipForbidden())
 			{
 				return;
 			}
@@ -129,13 +159,17 @@ namespace CSharpScript.Game.Module.SkipInterface
 			});
 		}
 
-		// Token: 0x060322BE RID: 205502 RVA: 0x00BA82C4 File Offset: 0x00BA64C4
+		// Token: 0x0602704F RID: 159823 RVA: 0x00AEC504 File Offset: 0x00AEA704
 		public static void Run(ESkipName name, [Nullable(new byte[]
 		{
 			1,
 			2
 		})] params object[] @params)
 		{
+			if (SkipTaskManager.CheckSkipForbidden())
+			{
+				return;
+			}
 			SkipTask skipTask = SkipTaskManager.GetSkipTask(name);
 			if (skipTask == null)
 			{
@@ -147,23 +181,23 @@ namespace CSharpScript.Game.Module.SkipInterface
 			}
 		}
 
-		// Token: 0x060322BF RID: 205503 RVA: 0x00BA82EC File Offset: 0x00BA64EC
+		// Token: 0x06027050 RID: 159824 RVA: 0x00AEC534 File Offset: 0x00AEA734
 		public static UniTask<ESkipTaskFinishType?> AsyncRun(ESkipName name, [Nullable(new byte[]
 		{
 			1,
 			2
 		})] params object[] @params)
 		{
-			SkipTaskManager.<AsyncRun>d__9 <AsyncRun>d__;
+			SkipTaskManager.<AsyncRun>d__11 <AsyncRun>d__;
 			<AsyncRun>d__.<>t__builder = AsyncUniTaskMethodBuilder<ESkipTaskFinishType?>.Create();
 			<AsyncRun>d__.name = name;
 			<AsyncRun>d__.@params = @params;
 			<AsyncRun>d__.<>1__state = -1;
-			<AsyncRun>d__.<>t__builder.Start<SkipTaskManager.<AsyncRun>d__9>(ref <AsyncRun>d__);
+			<AsyncRun>d__.<>t__builder.Start<SkipTaskManager.<AsyncRun>d__11>(ref <AsyncRun>d__);
 			return <AsyncRun>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060322C0 RID: 205504 RVA: 0x00BA8338 File Offset: 0x00BA6538
+		// Token: 0x06027051 RID: 159825 RVA: 0x00AEC580 File Offset: 0x00AEA780
 		[NullableContext(2)]
 		private static SkipTask NewSkipTask(ESkipName name)
 		{
@@ -193,7 +227,7 @@ namespace CSharpScript.Game.Module.SkipInterface
 			return skipTask;
 		}
 
-		// Token: 0x060322C1 RID: 205505 RVA: 0x00BA83B4 File Offset: 0x00BA65B4
+		// Token: 0x06027052 RID: 159826 RVA: 0x00AEC5FC File Offset: 0x00AEA7FC
 		[NullableContext(2)]
 		private static SkipTask GetSkipTask(ESkipName name)
 		{
@@ -202,7 +236,7 @@ namespace CSharpScript.Game.Module.SkipInterface
 			return result;
 		}
 
-		// Token: 0x060322C2 RID: 205506 RVA: 0x00BA83D0 File Offset: 0x00BA65D0
+		// Token: 0x06027053 RID: 159827 RVA: 0x00AEC618 File Offset: 0x00AEA818
 		public static void Stop(ESkipName name)
 		{
 			SkipTask skipTask;
@@ -217,7 +251,7 @@ namespace CSharpScript.Game.Module.SkipInterface
 			skipTask.Stop();
 		}
 
-		// Token: 0x060322C3 RID: 205507 RVA: 0x00BA83FC File Offset: 0x00BA65FC
+		// Token: 0x06027054 RID: 159828 RVA: 0x00AEC644 File Offset: 0x00AEA844
 		public static void Clear()
 		{
 			foreach (SkipTask skipTask in SkipTaskManager.SkipTaskMap.Values)
@@ -228,12 +262,16 @@ namespace CSharpScript.Game.Module.SkipInterface
 			Log.Instance.Info(ELogModule.SkipInterface, ELogAuthor.TL, "[Clear] 清理所有跳转任务", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0401AB81 RID: 109441
+		// Token: 0x040154D5 RID: 87253
 		[Nullable(1)]
 		private static Dictionary<ESkipName, SkipTask> SkipTaskMap;
 
-		// Token: 0x0401AB82 RID: 109442
+		// Token: 0x040154D6 RID: 87254
 		[Nullable(1)]
 		private static HashSet<EUiViewName> LimitRingViewNameList;
+
+		// Token: 0x040154D7 RID: 87255
+		[Nullable(1)]
+		private static HashSet<EUiViewName> SkipForbiddenViewNameList;
 	}
 }

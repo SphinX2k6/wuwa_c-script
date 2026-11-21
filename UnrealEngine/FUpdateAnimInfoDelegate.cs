@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001687 RID: 5767
+	// Token: 0x02000307 RID: 775
 	public sealed class FUpdateAnimInfoDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06014ED6 RID: 85718 RVA: 0x001EC31C File Offset: 0x001EA51C
+		// Token: 0x06005315 RID: 21269 RVA: 0x0007420E File Offset: 0x0007240E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FUpdateAnimInfoDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06014ED7 RID: 85719 RVA: 0x001EC328 File Offset: 0x001EA528
+		// Token: 0x06005316 RID: 21270 RVA: 0x0007421A File Offset: 0x0007241A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FUpdateAnimInfoDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FUpdateAnimInfoDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06014ED8 RID: 85720 RVA: 0x001EC34B File Offset: 0x001EA54B
+		// Token: 0x06005317 RID: 21271 RVA: 0x0007423D File Offset: 0x0007243D
 		public FUpdateAnimInfoDelegate()
 		{
 		}
 
-		// Token: 0x06014ED9 RID: 85721 RVA: 0x001EC353 File Offset: 0x001EA553
+		// Token: 0x06005318 RID: 21272 RVA: 0x00074245 File Offset: 0x00072445
 		[NullableContext(2)]
 		public FUpdateAnimInfoDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06014EDA RID: 85722 RVA: 0x001EC35D File Offset: 0x001EA55D
+		// Token: 0x06005319 RID: 21273 RVA: 0x0007424F File Offset: 0x0007244F
 		public FUpdateAnimInfoDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06014EDB RID: 85723 RVA: 0x001EC368 File Offset: 0x001EA568
+		// Token: 0x0600531A RID: 21274 RVA: 0x0007425A File Offset: 0x0007245A
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int>) ?? ((Action<int>)Delegate.CreateDelegate(typeof(Action<int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06014EDC RID: 85724 RVA: 0x001EC39A File Offset: 0x001EA59A
+		// Token: 0x0600531B RID: 21275 RVA: 0x0007428C File Offset: 0x0007248C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<int> Callback)
 		{
 			if (FUpdateAnimInfoDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FUpdateAnimInfoDelegate.RegisterId);
 		}
 
-		// Token: 0x06014EDD RID: 85725 RVA: 0x001EC3D4 File Offset: 0x001EA5D4
+		// Token: 0x0600531C RID: 21276 RVA: 0x000742C8 File Offset: 0x000724C8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int EntityId)
 		{
 			FUpdateAnimInfoDelegate.__FUpdateAnimInfoDelegate_DelegateParams* ptr = stackalloc FUpdateAnimInfoDelegate.__FUpdateAnimInfoDelegate_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FUpdateAnimInfoDelegate.__FUpdateAnimInfoDelegate_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06014EDE RID: 85726 RVA: 0x001EC414 File Offset: 0x001EA614
+		// Token: 0x0600531D RID: 21277 RVA: 0x00074308 File Offset: 0x00072508
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int> action = target as Action<int>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FUpdateAnimInfoDelegate.__FUpdateAnimInfoDelegate_DelegateParams*)__Parameters)->EntityId);
 		}
 
-		// Token: 0x0400B669 RID: 46697
+		// Token: 0x040021EB RID: 8683
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400B66A RID: 46698
+		// Token: 0x040021EC RID: 8684
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroAnim.UpdateAnimInfoDelegate__DelegateSignature";
 
-		// Token: 0x0400B66B RID: 46699
+		// Token: 0x040021ED RID: 8685
 		private static int RegisterId;
 
-		// Token: 0x02002EDB RID: 11995
+		// Token: 0x02000A14 RID: 2580
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FUpdateAnimInfoDelegate_DelegateParams
+		private ref struct __FUpdateAnimInfoDelegate_DelegateParams
 		{
-			// Token: 0x040169F9 RID: 92665
+			// Token: 0x040059D4 RID: 22996
 			[FieldOffset(0)]
 			public int EntityId;
 		}
 
-		// Token: 0x02002EDC RID: 11996
+		// Token: 0x02000A15 RID: 2581
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040169FA RID: 92666
+			// Token: 0x040059D5 RID: 22997
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

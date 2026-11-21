@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000788 RID: 1928
+	// Token: 0x020007A2 RID: 1954
 	public class ConfigQuestTimePointConfigAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002D41 RID: 11585 RVA: 0x00158F3C File Offset: 0x0015713C
+		// Token: 0x06002DDD RID: 11741 RVA: 0x0015FE48 File Offset: 0x0015E048
 		static ConfigQuestTimePointConfigAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuestTimePointConfigAll.CreateStaticDefaultValue), new Action(ConfigQuestTimePointConfigAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002D42 RID: 11586 RVA: 0x00158F5C File Offset: 0x0015715C
+		// Token: 0x06002DDE RID: 11742 RVA: 0x0015FE68 File Offset: 0x0015E068
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuestTimePointConfigAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002D43 RID: 11587 RVA: 0x00158FDB File Offset: 0x001571DB
+		// Token: 0x06002DDF RID: 11743 RVA: 0x0015FEE7 File Offset: 0x0015E0E7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuestTimePointConfigAll.LogPair = null;
 			ConfigQuestTimePointConfigAll.HandleId = 0;
 		}
 
-		// Token: 0x06002D44 RID: 11588 RVA: 0x00158FE9 File Offset: 0x001571E9
+		// Token: 0x06002DE0 RID: 11744 RVA: 0x0015FEF5 File Offset: 0x0015E0F5
 		public static void Init()
 		{
 			ConfigQuestTimePointConfigAll.HandleId = ConfigCommon.InitDataStatement(ConfigQuestTimePointConfigAll.HandleId, "db_questmultiline.db", "select BinData from `QuestTimePointConfig`");
 		}
 
-		// Token: 0x06002D45 RID: 11589 RVA: 0x00159004 File Offset: 0x00157204
+		// Token: 0x06002DE1 RID: 11745 RVA: 0x0015FF10 File Offset: 0x0015E110
 		[NullableContext(2)]
 		public static IReadOnlyList<QuestTimePointConfig> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400349E RID: 13470
+		// Token: 0x04003554 RID: 13652
 		private const string DB = "db_questmultiline.db";
 
-		// Token: 0x0400349F RID: 13471
+		// Token: 0x04003555 RID: 13653
 		private const string FILE = "r.任务分线.xlsx";
 
-		// Token: 0x040034A0 RID: 13472
+		// Token: 0x04003556 RID: 13654
 		private const string TABLE = "QuestTimePointConfig";
 
-		// Token: 0x040034A1 RID: 13473
+		// Token: 0x04003557 RID: 13655
 		private const string COMMAND = "select BinData from `QuestTimePointConfig`";
 
-		// Token: 0x040034A2 RID: 13474
+		// Token: 0x04003558 RID: 13656
 		private const string KEY_PREFIX = "QuestTimePointConfigAll";
 
-		// Token: 0x040034A3 RID: 13475
+		// Token: 0x04003559 RID: 13657
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040034A4 RID: 13476
+		// Token: 0x0400355A RID: 13658
 		private static int HandleId;
 	}
 }

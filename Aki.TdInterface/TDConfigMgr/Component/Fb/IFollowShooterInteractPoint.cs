@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CBC RID: 3260
+	// Token: 0x02000D9E RID: 3486
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFollowShooterInteractPoint : IExploreSkillInteractType
 	{
-		// Token: 0x06004A8E RID: 19086 RVA: 0x000BA8FE File Offset: 0x000B8AFE
-		[NullableContext(1)]
+		// Token: 0x06004F3C RID: 20284 RVA: 0x000C530E File Offset: 0x000C350E
+		[NullableContext(0)]
 		public static IFollowShooterInteractPoint Create(IFollowShooterInteractPoint? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016D3 RID: 5843
-		// (get) Token: 0x06004A8F RID: 19087 RVA: 0x000BA91D File Offset: 0x000B8B1D
+		// Token: 0x170017FB RID: 6139
+		// (get) Token: 0x06004F3D RID: 20285 RVA: 0x000C532D File Offset: 0x000C352D
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016D4 RID: 5844
-		// (get) Token: 0x06004A90 RID: 19088 RVA: 0x000BA92A File Offset: 0x000B8B2A
+		// Token: 0x170017FC RID: 6140
+		// (get) Token: 0x06004F3E RID: 20286 RVA: 0x000C533A File Offset: 0x000C353A
 		public virtual IThrowFollowShooterInteractConfig ThrowInteractConfig
 		{
 			get
@@ -49,13 +49,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A8F RID: 10895
+		// Token: 0x04002D09 RID: 11529
 		private IFollowShooterInteractPoint Instance;
 
-		// Token: 0x04002A90 RID: 10896
+		// Token: 0x04002D0A RID: 11530
 		private IThrowFollowShooterInteractConfig _ThrowInteractConfigCache;
 
-		// Token: 0x04002A91 RID: 10897
+		// Token: 0x04002D0B RID: 11531
 		private bool _ThrowInteractConfigInited;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009DE RID: 2526
+	// Token: 0x02000AA3 RID: 2723
 	public static class EProceduralMaterialTypeExtensions
 	{
-		// Token: 0x06003818 RID: 14360 RVA: 0x000917E4 File Offset: 0x0008F9E4
+		// Token: 0x06003BF0 RID: 15344 RVA: 0x0009A0A4 File Offset: 0x000982A4
 		public static string ToEnumString(this EProceduralMaterialType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003819 RID: 14361 RVA: 0x0009180C File Offset: 0x0008FA0C
+		// Token: 0x06003BF1 RID: 15345 RVA: 0x0009A0CC File Offset: 0x000982CC
 		public static EProceduralMaterialType FromString(string name)
 		{
 			EProceduralMaterialType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600381A RID: 14362 RVA: 0x00091835 File Offset: 0x0008FA35
+		// Token: 0x06003BF2 RID: 15346 RVA: 0x0009A0F5 File Offset: 0x000982F5
 		public static bool TryFromString(string name, out EProceduralMaterialType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x0600381B RID: 14363 RVA: 0x0009185A File Offset: 0x0008FA5A
+		// Token: 0x06003BF3 RID: 15347 RVA: 0x0009A11A File Offset: 0x0009831A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600381C RID: 14364 RVA: 0x0009186A File Offset: 0x0008FA6A
+		// Token: 0x06003BF4 RID: 15348 RVA: 0x0009A12A File Offset: 0x0009832A
 		public static EProceduralMaterialType[] GetValues()
 		{
 			return new EProceduralMaterialType[1];
 		}
 
-		// Token: 0x0600381D RID: 14365 RVA: 0x00091872 File Offset: 0x0008FA72
+		// Token: 0x06003BF5 RID: 15349 RVA: 0x0009A132 File Offset: 0x00098332
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FA6 RID: 28582
+	// Token: 0x0200776C RID: 30572
 	public class ISetAreaTimeBase_UnionUnion
 	{
-		// Token: 0x1700D441 RID: 54337
-		// (get) Token: 0x0603282B RID: 206891 RVA: 0x006D1289 File Offset: 0x006CF489
-		// (set) Token: 0x0603282C RID: 206892 RVA: 0x006D1291 File Offset: 0x006CF491
+		// Token: 0x1700E010 RID: 57360
+		// (get) Token: 0x06035A7B RID: 219771 RVA: 0x00730C41 File Offset: 0x0072EE41
+		// (set) Token: 0x06035A7C RID: 219772 RVA: 0x00730C49 File Offset: 0x0072EE49
 		public ISetAreaTimeBase_Union Type { get; set; }
 
-		// Token: 0x1700D442 RID: 54338
-		// (get) Token: 0x0603282D RID: 206893 RVA: 0x006D129A File Offset: 0x006CF49A
-		// (set) Token: 0x0603282E RID: 206894 RVA: 0x006D12A2 File Offset: 0x006CF4A2
+		// Token: 0x1700E011 RID: 57361
+		// (get) Token: 0x06035A7D RID: 219773 RVA: 0x00730C52 File Offset: 0x0072EE52
+		// (set) Token: 0x06035A7E RID: 219774 RVA: 0x00730C5A File Offset: 0x0072EE5A
 		public object Value { get; set; }
 
-		// Token: 0x0603282F RID: 206895 RVA: 0x006D12AB File Offset: 0x006CF4AB
+		// Token: 0x06035A7F RID: 219775 RVA: 0x00730C63 File Offset: 0x0072EE63
 		public ISetAreaTimeBase_UnionUnion()
 		{
 			this.Type = ISetAreaTimeBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06032830 RID: 206896 RVA: 0x006D12C1 File Offset: 0x006CF4C1
+		// Token: 0x06035A80 RID: 219776 RVA: 0x00730C79 File Offset: 0x0072EE79
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06032831 RID: 206897 RVA: 0x006D12D3 File Offset: 0x006CF4D3
+		// Token: 0x06035A81 RID: 219777 RVA: 0x00730C8B File Offset: 0x0072EE8B
 		public ISetAreaTimeBaseT AsISetAreaTimeBase()
 		{
 			return this.As<ISetAreaTimeBaseT>();
 		}
 
-		// Token: 0x06032832 RID: 206898 RVA: 0x006D12DB File Offset: 0x006CF4DB
+		// Token: 0x06035A82 RID: 219778 RVA: 0x00730C93 File Offset: 0x0072EE93
 		public static ISetAreaTimeBase_UnionUnion FromISetAreaTimeBase(ISetAreaTimeBaseT _isetareatimebase)
 		{
 			return new ISetAreaTimeBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032833 RID: 206899 RVA: 0x006D12F0 File Offset: 0x006CF4F0
+		// Token: 0x06035A83 RID: 219779 RVA: 0x00730CA8 File Offset: 0x0072EEA8
 		public ISetAreaTimeLockT AsISetAreaTimeLock()
 		{
 			return this.As<ISetAreaTimeLockT>();
 		}
 
-		// Token: 0x06032834 RID: 206900 RVA: 0x006D12F8 File Offset: 0x006CF4F8
+		// Token: 0x06035A84 RID: 219780 RVA: 0x00730CB0 File Offset: 0x0072EEB0
 		public static ISetAreaTimeBase_UnionUnion FromISetAreaTimeLock(ISetAreaTimeLockT _isetareatimelock)
 		{
 			return new ISetAreaTimeBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032835 RID: 206901 RVA: 0x006D130D File Offset: 0x006CF50D
+		// Token: 0x06035A85 RID: 219781 RVA: 0x00730CC5 File Offset: 0x0072EEC5
 		public ISetAreaTimeUnLockT AsISetAreaTimeUnLock()
 		{
 			return this.As<ISetAreaTimeUnLockT>();
 		}
 
-		// Token: 0x06032836 RID: 206902 RVA: 0x006D1315 File Offset: 0x006CF515
+		// Token: 0x06035A86 RID: 219782 RVA: 0x00730CCD File Offset: 0x0072EECD
 		public static ISetAreaTimeBase_UnionUnion FromISetAreaTimeUnLock(ISetAreaTimeUnLockT _isetareatimeunlock)
 		{
 			return new ISetAreaTimeBase_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032837 RID: 206903 RVA: 0x006D132C File Offset: 0x006CF52C
+		// Token: 0x06035A87 RID: 219783 RVA: 0x00730CE4 File Offset: 0x0072EEE4
 		public static int Pack(FlatBufferBuilder builder, ISetAreaTimeBase_UnionUnion _o)
 		{
 			switch (_o.Type)

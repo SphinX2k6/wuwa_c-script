@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000103 RID: 259
+	// Token: 0x02000112 RID: 274
 	public class ConfigBlueprintConfigByBlueprintType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000613 RID: 1555 RVA: 0x0007BFEF File Offset: 0x0007A1EF
+		// Token: 0x0600066D RID: 1645 RVA: 0x00081953 File Offset: 0x0007FB53
 		static ConfigBlueprintConfigByBlueprintType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBlueprintConfigByBlueprintType.CreateStaticDefaultValue), new Action(ConfigBlueprintConfigByBlueprintType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000614 RID: 1556 RVA: 0x0007C010 File Offset: 0x0007A210
+		// Token: 0x0600066E RID: 1646 RVA: 0x00081974 File Offset: 0x0007FB74
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBlueprintConfigByBlueprintType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000615 RID: 1557 RVA: 0x0007C08F File Offset: 0x0007A28F
+		// Token: 0x0600066F RID: 1647 RVA: 0x000819F3 File Offset: 0x0007FBF3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBlueprintConfigByBlueprintType.LogPair = null;
 			ConfigBlueprintConfigByBlueprintType.HandleId = 0;
 		}
 
-		// Token: 0x06000616 RID: 1558 RVA: 0x0007C09D File Offset: 0x0007A29D
+		// Token: 0x06000670 RID: 1648 RVA: 0x00081A01 File Offset: 0x0007FC01
 		public static void Init()
 		{
 			ConfigBlueprintConfigByBlueprintType.HandleId = ConfigCommon.InitDataStatement(ConfigBlueprintConfigByBlueprintType.HandleId, "db_blueprint.db", "select BinData from `BlueprintConfig` where BlueprintType=?");
 		}
 
-		// Token: 0x06000617 RID: 1559 RVA: 0x0007C0B8 File Offset: 0x0007A2B8
+		// Token: 0x06000671 RID: 1649 RVA: 0x00081A1C File Offset: 0x0007FC1C
 		public static BlueprintConfig? GetConfig(string p0BlueprintType, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBlueprintConfigByBlueprintType.HandleId, ConfigBlueprintConfigByBlueprintType.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new BlueprintConfig?(rootAsBlueprintConfig);
 		}
 
-		// Token: 0x040006F9 RID: 1785
+		// Token: 0x04000762 RID: 1890
 		private const string DB = "db_blueprint.db";
 
-		// Token: 0x040006FA RID: 1786
+		// Token: 0x04000763 RID: 1891
 		private const string FILE = "UniverseEditor/Entity/Blueprint.csv";
 
-		// Token: 0x040006FB RID: 1787
+		// Token: 0x04000764 RID: 1892
 		private const string TABLE = "BlueprintConfig";
 
-		// Token: 0x040006FC RID: 1788
+		// Token: 0x04000765 RID: 1893
 		private const string COMMAND = "select BinData from `BlueprintConfig` where BlueprintType=?";
 
-		// Token: 0x040006FD RID: 1789
+		// Token: 0x04000766 RID: 1894
 		private const string KEY_PREFIX = "BlueprintConfigByBlueprintType";
 
-		// Token: 0x040006FE RID: 1790
+		// Token: 0x04000767 RID: 1895
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040006FF RID: 1791
+		// Token: 0x04000768 RID: 1896
 		private static int HandleId;
 	}
 }

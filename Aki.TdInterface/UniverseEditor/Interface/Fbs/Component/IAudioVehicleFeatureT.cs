@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EDE RID: 20190
+	// Token: 0x0200540D RID: 21517
 	public class IAudioVehicleFeatureT
 	{
-		// Token: 0x170090EC RID: 37100
-		// (get) Token: 0x0601FD2F RID: 130351 RVA: 0x0046DA73 File Offset: 0x0046BC73
-		// (set) Token: 0x0601FD30 RID: 130352 RVA: 0x0046DA7B File Offset: 0x0046BC7B
+		// Token: 0x1700985F RID: 39007
+		// (get) Token: 0x06021A73 RID: 137843 RVA: 0x004A3843 File Offset: 0x004A1A43
+		// (set) Token: 0x06021A74 RID: 137844 RVA: 0x004A384B File Offset: 0x004A1A4B
 		public EVehicleFeatureFlag Type { get; set; }
 
-		// Token: 0x170090ED RID: 37101
-		// (get) Token: 0x0601FD31 RID: 130353 RVA: 0x0046DA84 File Offset: 0x0046BC84
-		// (set) Token: 0x0601FD32 RID: 130354 RVA: 0x0046DA8C File Offset: 0x0046BC8C
+		// Token: 0x17009860 RID: 39008
+		// (get) Token: 0x06021A75 RID: 137845 RVA: 0x004A3854 File Offset: 0x004A1A54
+		// (set) Token: 0x06021A76 RID: 137846 RVA: 0x004A385C File Offset: 0x004A1A5C
 		public IVehicleAudioConfigT AudioConfigs { get; set; }
 
-		// Token: 0x0601FD33 RID: 130355 RVA: 0x0046DA95 File Offset: 0x0046BC95
+		// Token: 0x06021A77 RID: 137847 RVA: 0x004A3865 File Offset: 0x004A1A65
 		public IAudioVehicleFeatureT()
 		{
 			this.Type = EVehicleFeatureFlag.None;

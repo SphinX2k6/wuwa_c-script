@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014A8 RID: 5288
+	// Token: 0x02001601 RID: 5633
 	public class AvgShakeUi_SetValue
 	{
-		// Token: 0x040045FA RID: 17914
+		// Token: 0x04004995 RID: 18837
 		public EAvgShakeUiIntensity Intensity;
 
-		// Token: 0x040045FB RID: 17915
+		// Token: 0x04004996 RID: 18838
 		public int RepeatCount;
 	}
 }

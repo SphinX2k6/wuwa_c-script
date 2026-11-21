@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020027FD RID: 10237
+// Token: 0x02001D78 RID: 7544
 [NullableContext(1)]
 [Nullable(0)]
 public class NotObtainedRoleDevPhantomData : RoleDevPhantomViewItemDataBase
 {
-	// Token: 0x0601502C RID: 86060 RVA: 0x005524B0 File Offset: 0x005506B0
+	// Token: 0x06012A2C RID: 76332 RVA: 0x0057D224 File Offset: 0x0057B424
 	protected override void InitByRoleType(int roleId)
 	{
 		if (base.RoleDevViewModel != null && !base.RoleDevViewModel.CheckRoleIdIsCreated(base.RoleId))
@@ -18,13 +18,13 @@ public class NotObtainedRoleDevPhantomData : RoleDevPhantomViewItemDataBase
 		this.RefreshSuitDataList();
 	}
 
-	// Token: 0x0601502D RID: 86061 RVA: 0x005524FC File Offset: 0x005506FC
+	// Token: 0x06012A2D RID: 76333 RVA: 0x0057D270 File Offset: 0x0057B470
 	protected override List<RoleDevPhantomSuitItemData> GetSuitDataList()
 	{
 		return this.SuitDataListInternal;
 	}
 
-	// Token: 0x0601502E RID: 86062 RVA: 0x00552504 File Offset: 0x00550704
+	// Token: 0x06012A2E RID: 76334 RVA: 0x0057D278 File Offset: 0x0057B478
 	public override void RefreshSuitDataList()
 	{
 		List<VisionFetterRecommendInfo> roleFetterRecommendInfo = VisionRecommendModel.Instance.GetRoleFetterRecommendInfo(base.RoleId);
@@ -40,6 +40,6 @@ public class NotObtainedRoleDevPhantomData : RoleDevPhantomViewItemDataBase
 		}
 	}
 
-	// Token: 0x04009DFD RID: 40445
+	// Token: 0x0400A1E6 RID: 41446
 	private List<RoleDevPhantomSuitItemData> SuitDataListInternal = new List<RoleDevPhantomSuitItemData>();
 }

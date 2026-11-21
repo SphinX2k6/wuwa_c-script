@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Core.Fight
 {
-	// Token: 0x02004000 RID: 16384
+	// Token: 0x02003264 RID: 12900
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Core/Fight/EBulletSyncType.EBulletSyncType")]
 	public enum EBulletSyncType : byte
 	{
-		// Token: 0x04015970 RID: 88432
+		// Token: 0x040115D0 RID: 71120
 		本地子弹,
-		// Token: 0x04015971 RID: 88433
+		// Token: 0x040115D1 RID: 71121
 		网络同步子弹,
-		// Token: 0x04015972 RID: 88434
+		// Token: 0x040115D2 RID: 71122
 		EBulletSyncType_MAX
 	}
 }

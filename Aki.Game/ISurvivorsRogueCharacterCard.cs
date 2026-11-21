@@ -1,21 +1,21 @@
 ﻿using System;
 
-// Token: 0x02002B8E RID: 11150
+// Token: 0x0200210A RID: 8458
 public interface ISurvivorsRogueCharacterCard : ISurvivorsRogueCardBase
 {
-	// Token: 0x17001F05 RID: 7941
-	// (get) Token: 0x060171CD RID: 94669
+	// Token: 0x17001F5D RID: 8029
+	// (get) Token: 0x06014BFE RID: 84990
 	ESurvivorsRogueItemType Type { get; }
 
-	// Token: 0x17001F06 RID: 7942
-	// (get) Token: 0x060171CE RID: 94670
+	// Token: 0x17001F5E RID: 8030
+	// (get) Token: 0x06014BFF RID: 84991
 	int Id { get; }
 
-	// Token: 0x17001F07 RID: 7943
-	// (get) Token: 0x060171CF RID: 94671
+	// Token: 0x17001F5F RID: 8031
+	// (get) Token: 0x06014C00 RID: 84992
 	int? PropertyId { get; }
 
-	// Token: 0x17001F08 RID: 7944
-	// (get) Token: 0x060171D0 RID: 94672
+	// Token: 0x17001F60 RID: 8032
+	// (get) Token: 0x06014C01 RID: 84993
 	int? LvUpCount { get; }
 }

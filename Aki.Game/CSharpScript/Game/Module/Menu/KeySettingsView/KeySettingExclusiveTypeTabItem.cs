@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.KeySettingsView
 {
-	// Token: 0x02005461 RID: 21601
+	// Token: 0x02004444 RID: 17476
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KeySettingExclusiveTypeTabItem : CommonTabItemBase
 	{
-		// Token: 0x06037226 RID: 225830 RVA: 0x00D11A10 File Offset: 0x00D0FC10
+		// Token: 0x0602C16F RID: 180591 RVA: 0x00C60E28 File Offset: 0x00C5F028
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,14 +25,14 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			};
 		}
 
-		// Token: 0x06037227 RID: 225831 RVA: 0x00D11A8D File Offset: 0x00D0FC8D
+		// Token: 0x0602C170 RID: 180592 RVA: 0x00C60EA5 File Offset: 0x00C5F0A5
 		protected override void OnStart()
 		{
 			base.OnStart();
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06037228 RID: 225832 RVA: 0x00D11AA8 File Offset: 0x00D0FCA8
+		// Token: 0x0602C171 RID: 180593 RVA: 0x00C60EC0 File Offset: 0x00C5F0C0
 		protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 		{
 			CommonTabData data2 = data.Data;
@@ -54,19 +54,19 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			instance.SetLocalTextNew(uiText, text2 ?? "", Array.Empty<object>());
 		}
 
-		// Token: 0x06037229 RID: 225833 RVA: 0x00D11B15 File Offset: 0x00D0FD15
+		// Token: 0x0602C172 RID: 180594 RVA: 0x00C60F2D File Offset: 0x00C5F12D
 		protected override UUIExtendToggle GetTabToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x0603722A RID: 225834 RVA: 0x00D11B20 File Offset: 0x00D0FD20
+		// Token: 0x0602C173 RID: 180595 RVA: 0x00C60F38 File Offset: 0x00C5F138
 		protected override void OnUpdateTabIcon(string iconPath)
 		{
 			base.SetTextureByPath(iconPath, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x0603722B RID: 225835 RVA: 0x00D11B48 File Offset: 0x00D0FD48
+		// Token: 0x0602C174 RID: 180596 RVA: 0x00C60F60 File Offset: 0x00C5F160
 		protected override void OnSetToggleState(EToggleState state, bool bFire)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			}
 		}
 
-		// Token: 0x0603722C RID: 225836 RVA: 0x00D11B6B File Offset: 0x00D0FD6B
+		// Token: 0x0602C175 RID: 180597 RVA: 0x00C60F83 File Offset: 0x00C5F183
 		private void ToggleClick(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -85,17 +85,17 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			}
 		}
 
-		// Token: 0x0200B6D6 RID: 46806
+		// Token: 0x0200A10E RID: 41230
 		[NullableContext(0)]
 		public class EComponent
 		{
-			// Token: 0x04037643 RID: 226883
+			// Token: 0x04032098 RID: 204952
 			public const int Toggle = 0;
 
-			// Token: 0x04037644 RID: 226884
+			// Token: 0x04032099 RID: 204953
 			public const int TexIcon = 1;
 
-			// Token: 0x04037645 RID: 226885
+			// Token: 0x0403209A RID: 204954
 			public const int TxtName = 2;
 		}
 	}

@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -7,19 +7,18 @@ using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.Module.AutoPilot;
 using CSharpScript.Game.Module.Map;
 using CSharpScript.Game.Module.Map.MapDefine;
-using CSharpScript.Game.Module.Map.Mark;
 using CSharpScript.Game.Module.Map.Marks.MarkItem;
 using CSharpScript.Game.Module.WorldMap.SubViews.Common;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 {
-	// Token: 0x020047C9 RID: 18377
+	// Token: 0x020036FA RID: 14074
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class WorldMapSecondaryUiLayoutHelper
 	{
-		// Token: 0x0603028C RID: 197260 RVA: 0x00B291A8 File Offset: 0x00B273A8
+		// Token: 0x06024A5C RID: 150108 RVA: 0x00A59014 File Offset: 0x00A57214
 		public static void UpdateAreaTxtByConfigMarkItem(WorldMapSecondaryUiContext context)
 		{
 			ConfigMarkItem configMarkItem = (ConfigMarkItem)context.MarkItem;
@@ -35,7 +34,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			}
 		}
 
-		// Token: 0x0603028D RID: 197261 RVA: 0x00B291E8 File Offset: 0x00B273E8
+		// Token: 0x06024A5D RID: 150109 RVA: 0x00A59054 File Offset: 0x00A57254
 		public static void UpdateAreaAndIconByConfigOrDynamicConfigMarkItem(WorldMapSecondaryUiContext context)
 		{
 			string text = null;
@@ -74,7 +73,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			}
 		}
 
-		// Token: 0x0603028E RID: 197262 RVA: 0x00B29264 File Offset: 0x00B27464
+		// Token: 0x06024A5E RID: 150110 RVA: 0x00A590D0 File Offset: 0x00A572D0
 		public static void UpdateAreaTxtByServerMarkItem(WorldMapSecondaryUiContext context)
 		{
 			ServerMarkItem serverMarkItem = context.MarkItem as ServerMarkItem;
@@ -90,7 +89,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			}
 		}
 
-		// Token: 0x0603028F RID: 197263 RVA: 0x00B292A4 File Offset: 0x00B274A4
+		// Token: 0x06024A5F RID: 150111 RVA: 0x00A59110 File Offset: 0x00A57310
 		public static void UpdateIconAndTitleByServerMarkItem(WorldMapSecondaryUiContext context)
 		{
 			ServerMarkItem serverMarkItem = (ServerMarkItem)context.MarkItem;
@@ -104,7 +103,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			title.ShowTextNew(((configMark != null) ? configMark.GetValueOrDefault().MarkTitle : null) ?? "");
 		}
 
-		// Token: 0x06030290 RID: 197264 RVA: 0x00B29310 File Offset: 0x00B27510
+		// Token: 0x06024A60 RID: 150112 RVA: 0x00A5917C File Offset: 0x00A5737C
 		public static void UpdateIconAndTitle(WorldMapSecondaryUiContext context)
 		{
 			WorldMapSecondaryUiLayoutHelper.UpdateIcon(context);
@@ -146,7 +145,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			title.ShowTextNew(key);
 		}
 
-		// Token: 0x06030291 RID: 197265 RVA: 0x00B293CC File Offset: 0x00B275CC
+		// Token: 0x06024A61 RID: 150113 RVA: 0x00A5923C File Offset: 0x00A5743C
 		public static void SetTitleUseChangeColor(WorldMapSecondaryUiContext context, bool useChangeColor)
 		{
 			UUIText title = context.Title;
@@ -170,7 +169,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			title.SetChangeColor(useChangeColor, fcolor);
 		}
 
-		// Token: 0x06030292 RID: 197266 RVA: 0x00B2940C File Offset: 0x00B2760C
+		// Token: 0x06024A62 RID: 150114 RVA: 0x00A5927C File Offset: 0x00A5747C
 		public static void UpdateIcon(WorldMapSecondaryUiContext context)
 		{
 			if (context.MarkItem != null && context.SetSpriteByPathAction != null)
@@ -179,7 +178,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			}
 		}
 
-		// Token: 0x06030293 RID: 197267 RVA: 0x00B29450 File Offset: 0x00B27650
+		// Token: 0x06024A63 RID: 150115 RVA: 0x00A592C0 File Offset: 0x00A574C0
 		public static void UpdateIconByServerMarkItem(WorldMapSecondaryUiContext context)
 		{
 			ServerMarkItem serverMarkItem = context.MarkItem as ServerMarkItem;
@@ -189,15 +188,15 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			}
 		}
 
-		// Token: 0x06030294 RID: 197268 RVA: 0x00B29498 File Offset: 0x00B27698
+		// Token: 0x06024A64 RID: 150116 RVA: 0x00A59308 File Offset: 0x00A57508
 		public static void UpdateDesc(WorldMapSecondaryUiContext context)
 		{
 			string key = "";
 			ConfigMarkItem configMarkItem = context.MarkItem as ConfigMarkItem;
 			if (configMarkItem != null)
 			{
-				ConfigMarkItem configMarkItem2 = configMarkItem;
-				key = (((configMarkItem2.MarkConfig != null) ? configMarkItem2.MarkConfig.GetValueOrDefault().MarkDesc : null) ?? "");
+				MapMark? mapMark;
+				key = (((configMarkItem.MarkConfig != null) ? mapMark.GetValueOrDefault().MarkDesc : null) ?? "");
 			}
 			else
 			{
@@ -232,7 +231,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			descriptionText.ShowTextNew(key);
 		}
 
-		// Token: 0x06030295 RID: 197269 RVA: 0x00B29578 File Offset: 0x00B27778
+		// Token: 0x06024A65 RID: 150117 RVA: 0x00A593F0 File Offset: 0x00A575F0
 		public static void UpdateBoxDesc(WorldMapSecondaryUiContext context)
 		{
 			IBoxMark boxMark = context.MarkItem as IBoxMark;
@@ -244,7 +243,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			descriptionText.ShowTextNew(((boxMark != null) ? boxMark.GetDescText() : null) ?? "");
 		}
 
-		// Token: 0x06030296 RID: 197270 RVA: 0x00B295B8 File Offset: 0x00B277B8
+		// Token: 0x06024A66 RID: 150118 RVA: 0x00A59430 File Offset: 0x00A57630
 		public static void UpdateServerMarkDesc(WorldMapSecondaryUiContext context)
 		{
 			ServerMarkItem serverMarkItem = (ServerMarkItem)context.MarkItem;
@@ -267,20 +266,20 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			descriptionText.ShowTextNew(key);
 		}
 
-		// Token: 0x06030297 RID: 197271 RVA: 0x00B29658 File Offset: 0x00B27858
+		// Token: 0x06024A67 RID: 150119 RVA: 0x00A594D0 File Offset: 0x00A576D0
 		public static void UpdateConfirmButtonTextWithFastMoveStyle(WorldMapSecondaryUiContext context)
 		{
 			string textContentIdById = TextConfig.Instance.GetTextContentIdById("TeleportFastMove");
 			context.SetConfirmBtnText(textContentIdById, Array.Empty<object>());
 		}
 
-		// Token: 0x06030298 RID: 197272 RVA: 0x00B29681 File Offset: 0x00B27881
+		// Token: 0x06024A68 RID: 150120 RVA: 0x00A594F9 File Offset: 0x00A576F9
 		public static void UpdateConfirmButtonTextWithStopDetectionStyle(WorldMapSecondaryUiContext context)
 		{
 			context.SetConfirmBtnText("Text_TeleportStop_Text", Array.Empty<object>());
 		}
 
-		// Token: 0x06030299 RID: 197273 RVA: 0x00B29694 File Offset: 0x00B27894
+		// Token: 0x06024A69 RID: 150121 RVA: 0x00A5950C File Offset: 0x00A5770C
 		public static void UpdateConfirmButtonTextWithTrackStyle(WorldMapSecondaryUiContext context)
 		{
 			MarkItem markItem = context.MarkItem;
@@ -297,7 +296,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			context.SetConfirmBtnText(textContentIdById, Array.Empty<object>());
 		}
 
-		// Token: 0x0603029A RID: 197274 RVA: 0x00B296E4 File Offset: 0x00B278E4
+		// Token: 0x06024A6A RID: 150122 RVA: 0x00A5955C File Offset: 0x00A5775C
 		public static void UpdateConfirmButtonEnableClickByTeleportState(WorldMapSecondaryUiContext context)
 		{
 			MarkItem markItem = context.MarkItem;
@@ -306,7 +305,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			context.SetConfirmBtnEnableClick(!flag);
 		}
 
-		// Token: 0x0603029B RID: 197275 RVA: 0x00B29728 File Offset: 0x00B27928
+		// Token: 0x06024A6B RID: 150123 RVA: 0x00A595A0 File Offset: 0x00A577A0
 		public static void UpdateTrackButtonTextWithTrackStyle(WorldMapSecondaryUiContext context)
 		{
 			MarkItem markItem = context.MarkItem;
@@ -327,7 +326,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			trackButtonItem.SetLocalText(textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0603029C RID: 197276 RVA: 0x00B29774 File Offset: 0x00B27974
+		// Token: 0x06024A6C RID: 150124 RVA: 0x00A595EC File Offset: 0x00A577EC
 		public static void UpdateDownStateIcon(WorldMapSecondaryUiContext context)
 		{
 			MarkItem markItem = context.MarkItem;
@@ -335,20 +334,20 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			{
 				return;
 			}
-			bool flag = markItem.MarkItemEntity.ViewLifeCircle.IsChildViewVisible(EMarkViewComponentType.ChildIcon, false);
-			string childIconPath = markItem.MarkItemEntity.Resource.ChildIconPath;
+			bool showChildIcon = markItem.ShowChildIcon;
+			string childIconPath = markItem.ChildIconPath;
 			UUISprite downStateIcon = context.DownStateIcon;
 			if (downStateIcon != null)
 			{
-				downStateIcon.SetUIActive(flag);
+				downStateIcon.SetUIActive(showChildIcon);
 			}
-			if (flag && context.SetSpriteByPathAction != null)
+			if (showChildIcon && context.SetSpriteByPathAction != null)
 			{
 				context.SetSpriteByPathAction(childIconPath, context.DownStateIcon, false, null, null);
 			}
 		}
 
-		// Token: 0x0603029D RID: 197277 RVA: 0x00B297EC File Offset: 0x00B279EC
+		// Token: 0x06024A6D RID: 150125 RVA: 0x00A5964C File Offset: 0x00A5784C
 		public static void UpdateAutoPilotState(WorldMapSecondaryUiAutoPilotContext context)
 		{
 			MarkItem markItem = context.LayoutContext.MarkItem;
@@ -399,7 +398,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			context.RefreshAutoPilotTrackBtnGroup(markItem.IsAutoPilotTracked);
 		}
 
-		// Token: 0x0603029E RID: 197278 RVA: 0x00B29964 File Offset: 0x00B27B64
+		// Token: 0x06024A6E RID: 150126 RVA: 0x00A597C4 File Offset: 0x00A579C4
 		private static bool UpdateAutoPilotTrackToggleActive(WorldMapSecondaryUiAutoPilotContext context, int autoPilotAreaId)
 		{
 			bool flag = WorldMapSecondaryUiLayoutHelper.CheckAutoPilotTrackToggleCanShow(context, autoPilotAreaId);
@@ -407,7 +406,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			return flag;
 		}
 
-		// Token: 0x0603029F RID: 197279 RVA: 0x00B29984 File Offset: 0x00B27B84
+		// Token: 0x06024A6F RID: 150127 RVA: 0x00A597E4 File Offset: 0x00A579E4
 		private static bool CheckAutoPilotTrackToggleCanShow(WorldMapSecondaryUiAutoPilotContext context, int autoPilotAreaId)
 		{
 			if (!WorldMapModel.Instance.IsCanAutoPilotTrack)
@@ -423,8 +422,26 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 				return false;
 			}
 			MarkItem markItem = context.LayoutContext.MarkItem;
-			int instanceId = markItem.InstanceDungeonId.GetValueOrDefault();
-			return instanceId == 0 || (MapConfig.Instance.GetMapRoadWaysByMapId(markItem.MapId) ?? Array.Empty<MapRoadWays>()).Any((MapRoadWays item) => (item.GetShowDungeonListArray() ?? Array.Empty<int>()).Contains(instanceId));
+			int valueOrDefault = markItem.InstanceDungeonId.GetValueOrDefault();
+			if (valueOrDefault != 0)
+			{
+				IEnumerable<MapRoadWays> enumerable = MapConfig.Instance.GetMapRoadWaysByMapId(markItem.MapId) ?? Array.Empty<MapRoadWays>();
+				bool flag = false;
+				foreach (MapRoadWays mapRoadWays in enumerable)
+				{
+					int[] showDungeonListArray = mapRoadWays.GetShowDungeonListArray();
+					if (showDungeonListArray != null && Array.IndexOf<int>(showDungeonListArray, valueOrDefault) >= 0)
+					{
+						flag = true;
+						break;
+					}
+				}
+				if (!flag)
+				{
+					return false;
+				}
+			}
+			return true;
 		}
 	}
 }

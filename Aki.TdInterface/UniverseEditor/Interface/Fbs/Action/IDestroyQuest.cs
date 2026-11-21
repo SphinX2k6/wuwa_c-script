@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006597 RID: 26007
+	// Token: 0x02006BFF RID: 27647
 	public struct IDestroyQuest : IFlatbufferObject
 	{
-		// Token: 0x1700C121 RID: 49441
-		// (get) Token: 0x0602D1C9 RID: 184777 RVA: 0x00630181 File Offset: 0x0062E381
+		// Token: 0x1700CAB0 RID: 51888
+		// (get) Token: 0x0602F94D RID: 194893 RVA: 0x0067C345 File Offset: 0x0067A545
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D1CA RID: 184778 RVA: 0x0063018E File Offset: 0x0062E38E
+		// Token: 0x0602F94E RID: 194894 RVA: 0x0067C352 File Offset: 0x0067A552
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D1CB RID: 184779 RVA: 0x00630198 File Offset: 0x0062E398
+		// Token: 0x0602F94F RID: 194895 RVA: 0x0067C35C File Offset: 0x0067A55C
 		public static IDestroyQuest GetRootAsIDestroyQuest(ByteBuffer _bb)
 		{
 			return IDestroyQuest.GetRootAsIDestroyQuest(_bb, default(IDestroyQuest));
 		}
 
-		// Token: 0x0602D1CC RID: 184780 RVA: 0x006301B4 File Offset: 0x0062E3B4
+		// Token: 0x0602F950 RID: 194896 RVA: 0x0067C378 File Offset: 0x0067A578
 		public static IDestroyQuest GetRootAsIDestroyQuest(ByteBuffer _bb, IDestroyQuest obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D1CD RID: 184781 RVA: 0x006301D1 File Offset: 0x0062E3D1
+		// Token: 0x0602F951 RID: 194897 RVA: 0x0067C395 File Offset: 0x0067A595
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D1CE RID: 184782 RVA: 0x006301E0 File Offset: 0x0062E3E0
+		// Token: 0x0602F952 RID: 194898 RVA: 0x0067C3A4 File Offset: 0x0067A5A4
 		public IDestroyQuest __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C122 RID: 49442
-		// (get) Token: 0x0602D1CF RID: 184783 RVA: 0x006301F0 File Offset: 0x0062E3F0
+		// Token: 0x1700CAB1 RID: 51889
+		// (get) Token: 0x0602F953 RID: 194899 RVA: 0x0067C3B4 File Offset: 0x0067A5B4
 		public int QuestId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C123 RID: 49443
-		// (get) Token: 0x0602D1D0 RID: 184784 RVA: 0x0063022C File Offset: 0x0062E42C
+		// Token: 0x1700CAB2 RID: 51890
+		// (get) Token: 0x0602F954 RID: 194900 RVA: 0x0067C3F0 File Offset: 0x0067A5F0
 		public bool IsDestroy
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C124 RID: 49444
-		// (get) Token: 0x0602D1D1 RID: 184785 RVA: 0x0063026C File Offset: 0x0062E46C
+		// Token: 0x1700CAB3 RID: 51891
+		// (get) Token: 0x0602F955 RID: 194901 RVA: 0x0067C430 File Offset: 0x0067A630
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D1D2 RID: 184786 RVA: 0x006302A8 File Offset: 0x0062E4A8
+		// Token: 0x0602F956 RID: 194902 RVA: 0x0067C46C File Offset: 0x0067A66C
 		public static Offset<IDestroyQuest> CreateIDestroyQuest(FlatBufferBuilder builder, int QuestId = 0, bool IsDestroy = false, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDestroyQuest.EndIDestroyQuest(builder);
 		}
 
-		// Token: 0x0602D1D3 RID: 184787 RVA: 0x006302CC File Offset: 0x0062E4CC
+		// Token: 0x0602F957 RID: 194903 RVA: 0x0067C490 File Offset: 0x0067A690
 		public static void StartIDestroyQuest(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602D1D4 RID: 184788 RVA: 0x006302D5 File Offset: 0x0062E4D5
+		// Token: 0x0602F958 RID: 194904 RVA: 0x0067C499 File Offset: 0x0067A699
 		public static void AddQuestId(FlatBufferBuilder builder, int questId)
 		{
 			builder.AddInt(0, questId, 0);
 		}
 
-		// Token: 0x0602D1D5 RID: 184789 RVA: 0x006302E0 File Offset: 0x0062E4E0
+		// Token: 0x0602F959 RID: 194905 RVA: 0x0067C4A4 File Offset: 0x0067A6A4
 		public static void AddIsDestroy(FlatBufferBuilder builder, bool isDestroy)
 		{
 			builder.AddBool(1, isDestroy, false);
 		}
 
-		// Token: 0x0602D1D6 RID: 184790 RVA: 0x006302EB File Offset: 0x0062E4EB
+		// Token: 0x0602F95A RID: 194906 RVA: 0x0067C4AF File Offset: 0x0067A6AF
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602D1D7 RID: 184791 RVA: 0x006302F6 File Offset: 0x0062E4F6
+		// Token: 0x0602F95B RID: 194907 RVA: 0x0067C4BA File Offset: 0x0067A6BA
 		public static Offset<IDestroyQuest> EndIDestroyQuest(FlatBufferBuilder builder)
 		{
 			return new Offset<IDestroyQuest>(builder.EndTable());
 		}
 
-		// Token: 0x0602D1D8 RID: 184792 RVA: 0x00630304 File Offset: 0x0062E504
+		// Token: 0x0602F95C RID: 194908 RVA: 0x0067C4C8 File Offset: 0x0067A6C8
 		public IDestroyQuestT UnPack()
 		{
 			IDestroyQuestT destroyQuestT = new IDestroyQuestT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return destroyQuestT;
 		}
 
-		// Token: 0x0602D1D9 RID: 184793 RVA: 0x0063031F File Offset: 0x0062E51F
+		// Token: 0x0602F95D RID: 194909 RVA: 0x0067C4E3 File Offset: 0x0067A6E3
 		public void UnPackTo(IDestroyQuestT _o)
 		{
 			_o.QuestId = this.QuestId;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602D1DA RID: 184794 RVA: 0x00630348 File Offset: 0x0062E548
+		// Token: 0x0602F95E RID: 194910 RVA: 0x0067C50C File Offset: 0x0067A70C
 		public static Offset<IDestroyQuest> Pack(FlatBufferBuilder builder, IDestroyQuestT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDestroyQuest.CreateIDestroyQuest(builder, _o.QuestId, _o.IsDestroy, _o.NullMask);
 		}
 
-		// Token: 0x04010BEF RID: 68591
+		// Token: 0x04011A01 RID: 72193
 		private Table __p;
 	}
 }

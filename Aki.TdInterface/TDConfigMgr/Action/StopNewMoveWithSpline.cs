@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002220 RID: 8736
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200248B RID: 9355
 	public class StopNewMoveWithSpline : ActionParams
 	{
-		// Token: 0x0600BFC6 RID: 49094 RVA: 0x001B8D60 File Offset: 0x001B6F60
+		// Token: 0x0600CB84 RID: 52100 RVA: 0x001D042C File Offset: 0x001CE62C
 		private StopNewMoveWithSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BFC7 RID: 49095 RVA: 0x001B8D98 File Offset: 0x001B6F98
+		// Token: 0x0600CB85 RID: 52101 RVA: 0x001D0464 File Offset: 0x001CE664
 		public static StopNewMoveWithSpline Create([Nullable(2)] StopNewMoveWithSpline instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFC8 RID: 49096 RVA: 0x001B8DAB File Offset: 0x001B6FAB
+		// Token: 0x0600CB86 RID: 52102 RVA: 0x001D0477 File Offset: 0x001CE677
 		public static StopNewMoveWithSpline CreateFromSetValue([Nullable(2)] StopNewMoveWithSpline_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFC9 RID: 49097 RVA: 0x001B8DBE File Offset: 0x001B6FBE
+		// Token: 0x0600CB87 RID: 52103 RVA: 0x001D048A File Offset: 0x001CE68A
 		public StopNewMoveWithSpline_SetValue ToSetValue()
 		{
 			return new StopNewMoveWithSpline_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A18 RID: 14872
-		// (get) Token: 0x0600BFCA RID: 49098 RVA: 0x001B8DDD File Offset: 0x001B6FDD
-		// (set) Token: 0x0600BFCB RID: 49099 RVA: 0x001B8E04 File Offset: 0x001B7004
+		// Token: 0x17003D0E RID: 15630
+		// (get) Token: 0x0600CB88 RID: 52104 RVA: 0x001D04A9 File Offset: 0x001CE6A9
+		// (set) Token: 0x0600CB89 RID: 52105 RVA: 0x001D04D0 File Offset: 0x001CE6D0
 		public virtual INewSplineStopTarget StopTarget
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A19 RID: 14873
-		// (get) Token: 0x0600BFCC RID: 49100 RVA: 0x001B8E12 File Offset: 0x001B7012
-		// (set) Token: 0x0600BFCD RID: 49101 RVA: 0x001B8E39 File Offset: 0x001B7039
+		// Token: 0x17003D0F RID: 15631
+		// (get) Token: 0x0600CB8A RID: 52106 RVA: 0x001D04DE File Offset: 0x001CE6DE
+		// (set) Token: 0x0600CB8B RID: 52107 RVA: 0x001D0505 File Offset: 0x001CE705
 		public virtual IStopNewMoveWithSplineType StopType
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400725E RID: 29278
+		// Token: 0x040078A8 RID: 30888
 		[Nullable(2)]
 		protected new StopNewMoveWithSpline FbInstance;
 
-		// Token: 0x0400725F RID: 29279
+		// Token: 0x040078A9 RID: 30889
 		[Nullable(2)]
 		protected StopNewMoveWithSpline_SetValue PocoInterface;
 	}

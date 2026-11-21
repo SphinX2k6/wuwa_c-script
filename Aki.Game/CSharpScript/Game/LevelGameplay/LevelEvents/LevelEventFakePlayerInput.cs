@@ -6,15 +6,15 @@ using CSharpScript.Game.Input;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B2C RID: 27436
+	// Token: 0x02005CA4 RID: 23716
 	public class LevelEventFakePlayerInput : LevelEventBase
 	{
-		// Token: 0x06044115 RID: 278805 RVA: 0x010BC874 File Offset: 0x010BAA74
+		// Token: 0x0603A267 RID: 238183 RVA: 0x01066100 File Offset: 0x01064300
 		public LevelEventFakePlayerInput(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044116 RID: 278806 RVA: 0x010BC880 File Offset: 0x010BAA80
+		// Token: 0x0603A268 RID: 238184 RVA: 0x0106610C File Offset: 0x0106430C
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			InputController.Instance.InputAction(einputAction, EInputState.Release);
 		}
 
-		// Token: 0x040238FC RID: 145660
+		// Token: 0x0401EB9E RID: 125854
 		[Nullable(2)]
 		private PlayerInput Params;
 	}

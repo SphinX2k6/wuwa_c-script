@@ -4,19 +4,19 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A58 RID: 19032
+	// Token: 0x02003A00 RID: 14848
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseResultViewInfo : ITrapDefenseResultViewInfo
 	{
-		// Token: 0x17007A72 RID: 31346
-		// (get) Token: 0x060315E1 RID: 202209 RVA: 0x00B72493 File Offset: 0x00B70693
-		// (set) Token: 0x060315E2 RID: 202210 RVA: 0x00B7249B File Offset: 0x00B7069B
+		// Token: 0x17004E1F RID: 19999
+		// (get) Token: 0x06026371 RID: 156529 RVA: 0x00AB6417 File Offset: 0x00AB4617
+		// (set) Token: 0x06026372 RID: 156530 RVA: 0x00AB641F File Offset: 0x00AB461F
 		public TrapDefenseChallengeResultNotify Notify { get; set; }
 
-		// Token: 0x17007A73 RID: 31347
-		// (get) Token: 0x060315E3 RID: 202211 RVA: 0x00B724A4 File Offset: 0x00B706A4
-		// (set) Token: 0x060315E4 RID: 202212 RVA: 0x00B724AC File Offset: 0x00B706AC
+		// Token: 0x17004E20 RID: 20000
+		// (get) Token: 0x06026373 RID: 156531 RVA: 0x00AB6428 File Offset: 0x00AB4628
+		// (set) Token: 0x06026374 RID: 156532 RVA: 0x00AB6430 File Offset: 0x00AB4630
 		public bool NeedShowViewAnim { get; set; }
 	}
 }

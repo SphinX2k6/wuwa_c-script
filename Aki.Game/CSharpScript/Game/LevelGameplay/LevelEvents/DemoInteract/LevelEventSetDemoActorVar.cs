@@ -1,35 +1,21 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
-using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.DemoInteract
 {
-	// Token: 0x02006C36 RID: 27702
+	// Token: 0x02005DAF RID: 23983
 	public class LevelEventSetDemoActorVar : LevelEventBase
 	{
-		// Token: 0x060444C0 RID: 279744 RVA: 0x010D37A4 File Offset: 0x010D19A4
+		// Token: 0x0603A618 RID: 239128 RVA: 0x0107D6C1 File Offset: 0x0107B8C1
 		public LevelEventSetDemoActorVar(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060444C1 RID: 279745 RVA: 0x010D37B0 File Offset: 0x010D19B0
+		// Token: 0x0603A619 RID: 239129 RVA: 0x0107D6CC File Offset: 0x0107B8CC
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
-			if (!Info.Instance.IsPlayInEditor)
-			{
-				return;
-			}
-			SetActorVar setActorVar = inParams as SetActorVar;
-			string[] array = setActorVar.ActorRef.PathName.Split('.', StringSplitOptions.None);
-			array[1] + "." + array[2];
-			string varLeft = setActorVar.VarLeft;
-			if (LevelGamePlayUtils.GetVarValue(setActorVar.VarRight, context) == null)
-			{
-				global::Log.Instance.Error(ELogModule.LevelEvent, ELogAuthor.ZYL, "[LevelEventSetDemoActorVar] 获取目标变量值失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-				return;
-			}
 		}
 	}
 }

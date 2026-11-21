@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 {
-	// Token: 0x0200633D RID: 25405
+	// Token: 0x020052BB RID: 21179
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballLevelInfoPanel : UiPanelBase
 	{
-		// Token: 0x0603FEE3 RID: 261859 RVA: 0x00F77B44 File Offset: 0x00F75D44
+		// Token: 0x06034BA4 RID: 215972 RVA: 0x00EBEAA0 File Offset: 0x00EBCCA0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 22;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FEE4 RID: 261860 RVA: 0x00F77E90 File Offset: 0x00F76090
+		// Token: 0x06034BA5 RID: 215973 RVA: 0x00EBEDEC File Offset: 0x00EBCFEC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballLevelInfoPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -90,20 +90,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FEE5 RID: 261861 RVA: 0x00F77ED4 File Offset: 0x00F760D4
+		// Token: 0x06034BA6 RID: 215974 RVA: 0x00EBEE30 File Offset: 0x00EBD030
 		protected override void OnStart()
 		{
 			this.FirstRewardScroll = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(10), new Func<CommonItemSmallItemGrid>(this.InitGridItem), null, false, null);
 			this.StarLayout = new GenericLayout<PinballLevelInfoStarItem, IPinballLevelStarData>(base.GetVerticalLayout(14), new Func<PinballLevelInfoStarItem>(this.InitStarItem), base.GetItem(15).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x0603FEE6 RID: 261862 RVA: 0x00F77F36 File Offset: 0x00F76136
+		// Token: 0x06034BA7 RID: 215975 RVA: 0x00EBEE92 File Offset: 0x00EBD092
 		private PinballLevelInfoStarItem InitStarItem()
 		{
 			return new PinballLevelInfoStarItem();
 		}
 
-		// Token: 0x0603FEE7 RID: 261863 RVA: 0x00F77F3D File Offset: 0x00F7613D
+		// Token: 0x06034BA8 RID: 215976 RVA: 0x00EBEE99 File Offset: 0x00EBD099
 		private CommonItemSmallItemGrid InitGridItem()
 		{
 			return new CommonItemSmallItemGrid
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			};
 		}
 
-		// Token: 0x0603FEE8 RID: 261864 RVA: 0x00F77F58 File Offset: 0x00F76158
+		// Token: 0x06034BA9 RID: 215977 RVA: 0x00EBEEB4 File Offset: 0x00EBD0B4
 		private void RefreshScoreInfo(int curScore, int scoreLevelRewardLength, Func<int, int> getScoreLevel, Func<int, int> getScoreLevelDropId)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), "Pinball_Level_Score", new <>z__ReadOnlySingleElementList<object>(curScore));
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			}
 		}
 
-		// Token: 0x0603FEE9 RID: 261865 RVA: 0x00F78034 File Offset: 0x00F76234
+		// Token: 0x06034BAA RID: 215978 RVA: 0x00EBEF90 File Offset: 0x00EBD190
 		private void RefreshStarInfo(int[] passedConditionIds, int starCondLength, Func<int, int> getStarCond)
 		{
 			List<IPinballLevelStarData> list = new List<IPinballLevelStarData>();
@@ -162,14 +162,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			this.StarLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603FEEA RID: 261866 RVA: 0x00F780D0 File Offset: 0x00F762D0
+		// Token: 0x06034BAB RID: 215979 RVA: 0x00EBF02C File Offset: 0x00EBD22C
 		private void RefreshFirstRewardInfo(int rewardDropId)
 		{
 			List<TItem> dropPackagePreviewItemList = CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreviewItemList(rewardDropId);
 			this.FirstRewardScroll.RefreshByData(dropPackagePreviewItemList, null, false);
 		}
 
-		// Token: 0x0603FEEB RID: 261867 RVA: 0x00F780F8 File Offset: 0x00F762F8
+		// Token: 0x06034BAC RID: 215980 RVA: 0x00EBF054 File Offset: 0x00EBD254
 		public void Refresh(IPinballLevelInfoData data)
 		{
 			this.Data = data;
@@ -222,19 +222,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			this.LockTipsItem.SetTextByText(data.LevelLockTexts ?? "");
 		}
 
-		// Token: 0x0603FEEC RID: 261868 RVA: 0x00F783EC File Offset: 0x00F765EC
+		// Token: 0x06034BAD RID: 215981 RVA: 0x00EBF348 File Offset: 0x00EBD548
 		private bool OnShowRewardReceivedCallBack(TItem data)
 		{
 			return this.Data != null && this.Data.RewardReceived.GetValueOrDefault();
 		}
 
-		// Token: 0x0603FEED RID: 261869 RVA: 0x00F78416 File Offset: 0x00F76616
+		// Token: 0x06034BAE RID: 215982 RVA: 0x00EBF372 File Offset: 0x00EBD572
 		private void OnBtnEnemyDetailClick()
 		{
 			PinballController.Instance.OpenMonsterDetailView(this.Data.RealLevelId).Forget<bool>();
 		}
 
-		// Token: 0x0603FEEE RID: 261870 RVA: 0x00F78434 File Offset: 0x00F76634
+		// Token: 0x06034BAF RID: 215983 RVA: 0x00EBF390 File Offset: 0x00EBD590
 		private void OnBtnConfirmClick()
 		{
 			PinballFormationViewData param = new PinballFormationViewData
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			UiManager.Instance.OpenView(EUiViewName.PinballFormationView, param, null);
 		}
 
-		// Token: 0x0603FEEF RID: 261871 RVA: 0x00F7846C File Offset: 0x00F7666C
+		// Token: 0x06034BB0 RID: 215984 RVA: 0x00EBF3C8 File Offset: 0x00EBD5C8
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -297,11 +297,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			};
 		}
 
-		// Token: 0x04021588 RID: 136584
+		// Token: 0x0401BEB7 RID: 114359
 		[Nullable(2)]
 		private IPinballLevelInfoData Data;
 
-		// Token: 0x04021589 RID: 136585
+		// Token: 0x0401BEB8 RID: 114360
 		[Nullable(new byte[]
 		{
 			2,
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> FirstRewardScroll;
 
-		// Token: 0x0402158A RID: 136586
+		// Token: 0x0401BEB9 RID: 114361
 		[Nullable(new byte[]
 		{
 			2,
@@ -318,64 +318,64 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 		})]
 		private GenericLayout<PinballLevelInfoStarItem, IPinballLevelStarData> StarLayout;
 
-		// Token: 0x0402158B RID: 136587
+		// Token: 0x0401BEBA RID: 114362
 		private readonly List<PinballLevelInfoScoreItem> ScoreRewardItems = new List<PinballLevelInfoScoreItem>();
 
-		// Token: 0x0402158C RID: 136588
+		// Token: 0x0401BEBB RID: 114363
 		[Nullable(2)]
 		private ButtonItem ConfirmBtnItem;
 
-		// Token: 0x0402158D RID: 136589
+		// Token: 0x0401BEBC RID: 114364
 		[Nullable(2)]
 		private FunctionalPanelConditionActivate LockTipsItem;
 
-		// Token: 0x0200C552 RID: 50514
+		// Token: 0x0200AF39 RID: 44857
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B8D5 RID: 243925
+			// Token: 0x04036237 RID: 221751
 			TxtTitle,
-			// Token: 0x0403B8D6 RID: 243926
+			// Token: 0x04036238 RID: 221752
 			TxtDesc,
-			// Token: 0x0403B8D7 RID: 243927
+			// Token: 0x04036239 RID: 221753
 			TxtSpecialExplan,
-			// Token: 0x0403B8D8 RID: 243928
+			// Token: 0x0403623A RID: 221754
 			BgScoreProgress,
-			// Token: 0x0403B8D9 RID: 243929
+			// Token: 0x0403623B RID: 221755
 			TxtScore,
-			// Token: 0x0403B8DA RID: 243930
+			// Token: 0x0403623C RID: 221756
 			SprBar1,
-			// Token: 0x0403B8DB RID: 243931
+			// Token: 0x0403623D RID: 221757
 			SprBar2,
-			// Token: 0x0403B8DC RID: 243932
+			// Token: 0x0403623E RID: 221758
 			ScoreRewardItem1,
-			// Token: 0x0403B8DD RID: 243933
+			// Token: 0x0403623F RID: 221759
 			ScoreRewardItem2,
-			// Token: 0x0403B8DE RID: 243934
+			// Token: 0x04036240 RID: 221760
 			ScoreRewardItem3,
-			// Token: 0x0403B8DF RID: 243935
+			// Token: 0x04036241 RID: 221761
 			FirstRewardScorll,
-			// Token: 0x0403B8E0 RID: 243936
+			// Token: 0x04036242 RID: 221762
 			FirstRewardItem,
-			// Token: 0x0403B8E1 RID: 243937
+			// Token: 0x04036243 RID: 221763
 			BtnEnemyDetail,
-			// Token: 0x0403B8E2 RID: 243938
+			// Token: 0x04036244 RID: 221764
 			BtnConfirm,
-			// Token: 0x0403B8E3 RID: 243939
+			// Token: 0x04036245 RID: 221765
 			StarLayout,
-			// Token: 0x0403B8E4 RID: 243940
+			// Token: 0x04036246 RID: 221766
 			StarItem,
-			// Token: 0x0403B8E5 RID: 243941
+			// Token: 0x04036247 RID: 221767
 			BgFirstReward,
-			// Token: 0x0403B8E6 RID: 243942
+			// Token: 0x04036248 RID: 221768
 			BgLockTips,
-			// Token: 0x0403B8E7 RID: 243943
+			// Token: 0x04036249 RID: 221769
 			TxtRewardClearTitleName,
-			// Token: 0x0403B8E8 RID: 243944
+			// Token: 0x0403624A RID: 221770
 			TxtRewardClearDoing,
-			// Token: 0x0403B8E9 RID: 243945
+			// Token: 0x0403624B RID: 221771
 			TexRewardClearFinish,
-			// Token: 0x0403B8EA RID: 243946
+			// Token: 0x0403624C RID: 221772
 			ItemScrollView
 		}
 	}

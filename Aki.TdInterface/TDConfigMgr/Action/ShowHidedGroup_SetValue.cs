@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002203 RID: 8707
+	// Token: 0x0200246E RID: 9326
 	public class ShowHidedGroup_SetValue
 	{
-		// Token: 0x040071FC RID: 29180
-		[Nullable(1)]
+		// Token: 0x04007845 RID: 30789
 		public string GroupKey;
 
-		// Token: 0x040071FD RID: 29181
+		// Token: 0x04007846 RID: 30790
 		public bool DelayShow;
 	}
 }

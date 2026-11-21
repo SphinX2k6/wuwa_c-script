@@ -16,18 +16,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200661E RID: 26142
+	// Token: 0x0200559C RID: 21916
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FishingQuestView : UiViewBase
 	{
-		// Token: 0x06041891 RID: 268433 RVA: 0x00FE2B6B File Offset: 0x00FE0D6B
+		// Token: 0x06036556 RID: 222550 RVA: 0x00F29BDB File Offset: 0x00F27DDB
 		[NullableContext(1)]
 		public FishingQuestView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06041892 RID: 268434 RVA: 0x00FE2B88 File Offset: 0x00FE0D88
+		// Token: 0x06036557 RID: 222551 RVA: 0x00F29BF8 File Offset: 0x00F27DF8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 28;
@@ -104,19 +104,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06041893 RID: 268435 RVA: 0x00FE2FE5 File Offset: 0x00FE11E5
+		// Token: 0x06036558 RID: 222552 RVA: 0x00F2A055 File Offset: 0x00F28255
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<bool, int?>(EEventName.FishingRefreshQuestView, new Action<bool, int?>(this.FishingRefreshQuestView));
 		}
 
-		// Token: 0x06041894 RID: 268436 RVA: 0x00FE3003 File Offset: 0x00FE1203
+		// Token: 0x06036559 RID: 222553 RVA: 0x00F2A073 File Offset: 0x00F28273
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<bool, int?>(EEventName.FishingRefreshQuestView, new Action<bool, int?>(this.FishingRefreshQuestView));
 		}
 
-		// Token: 0x06041895 RID: 268437 RVA: 0x00FE3024 File Offset: 0x00FE1224
+		// Token: 0x0603655A RID: 222554 RVA: 0x00F2A094 File Offset: 0x00F28294
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FishingQuestView.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
@@ -127,14 +127,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041896 RID: 268438 RVA: 0x00FE3068 File Offset: 0x00FE1268
+		// Token: 0x0603655B RID: 222555 RVA: 0x00F2A0D8 File Offset: 0x00F282D8
 		protected override void OnStart()
 		{
 			int currentTraceEntrust = FishingQuestModel.Instance.CurrentTraceEntrust;
 			this.RefreshScrollView(currentTraceEntrust);
 		}
 
-		// Token: 0x06041897 RID: 268439 RVA: 0x00FE3088 File Offset: 0x00FE1288
+		// Token: 0x0603655C RID: 222556 RVA: 0x00F2A0F8 File Offset: 0x00F282F8
 		protected override void OnBeforeShow()
 		{
 			if (!this.IsInitBeforeShow)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041898 RID: 268440 RVA: 0x00FE3108 File Offset: 0x00FE1308
+		// Token: 0x0603655D RID: 222557 RVA: 0x00F2A178 File Offset: 0x00F28378
 		private void RefreshScrollView(int target = 0)
 		{
 			List<int> entrustPool = FishingQuestModel.Instance.EntrustPool;
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, false);
 		}
 
-		// Token: 0x06041899 RID: 268441 RVA: 0x00FE3220 File Offset: 0x00FE1420
+		// Token: 0x0603655E RID: 222558 RVA: 0x00F2A290 File Offset: 0x00F28490
 		private void RefreshView(int selectEntrust)
 		{
 			this.CurrentSelectEntrust = selectEntrust;
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshBtn();
 		}
 
-		// Token: 0x0604189A RID: 268442 RVA: 0x00FE3384 File Offset: 0x00FE1584
+		// Token: 0x0603655F RID: 222559 RVA: 0x00F2A3F4 File Offset: 0x00F285F4
 		private void RefreshTargetAbout()
 		{
 			FishingEntrust? fishingEntrust = FishingConfig.Instance.GetFishingEntrust(this.CurrentSelectEntrust);
@@ -393,13 +393,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604189B RID: 268443 RVA: 0x00FE3718 File Offset: 0x00FE1918
+		// Token: 0x06036560 RID: 222560 RVA: 0x00F2A788 File Offset: 0x00F28988
 		private void OnClickLockBtn()
 		{
 			HelpController.Instance.OpenHelpById(191);
 		}
 
-		// Token: 0x0604189C RID: 268444 RVA: 0x00FE372C File Offset: 0x00FE192C
+		// Token: 0x06036561 RID: 222561 RVA: 0x00F2A79C File Offset: 0x00F2899C
 		private void OnClickRightBtn()
 		{
 			switch (this.RightBtnState)
@@ -482,7 +482,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604189D RID: 268445 RVA: 0x00FE3988 File Offset: 0x00FE1B88
+		// Token: 0x06036562 RID: 222562 RVA: 0x00F2A9F8 File Offset: 0x00F28BF8
 		private void OnClickLeftBtn()
 		{
 			switch (this.LeftBtnState)
@@ -562,7 +562,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604189E RID: 268446 RVA: 0x00FE3B64 File Offset: 0x00FE1D64
+		// Token: 0x06036563 RID: 222563 RVA: 0x00F2ABD4 File Offset: 0x00F28DD4
 		[NullableContext(1)]
 		private FishingQuestItem InitTaskItem()
 		{
@@ -572,14 +572,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			};
 		}
 
-		// Token: 0x0604189F RID: 268447 RVA: 0x00FE3B7D File Offset: 0x00FE1D7D
+		// Token: 0x06036564 RID: 222564 RVA: 0x00F2ABED File Offset: 0x00F28DED
 		[NullableContext(1)]
 		private CommonItemSmallItemGrid InitRewardItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x060418A0 RID: 268448 RVA: 0x00FE3B84 File Offset: 0x00FE1D84
+		// Token: 0x06036565 RID: 222565 RVA: 0x00F2ABF4 File Offset: 0x00F28DF4
 		[NullableContext(1)]
 		private void OnClickTaskToggle(int entrustId, UUIExtendToggle toggle, Action changeColorBack)
 		{
@@ -622,7 +622,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060418A1 RID: 268449 RVA: 0x00FE3C2A File Offset: 0x00FE1E2A
+		// Token: 0x06036566 RID: 222566 RVA: 0x00F2AC9A File Offset: 0x00F28E9A
 		private void FishingRefreshQuestView(bool keepSelect, int? targetId = null)
 		{
 			if (keepSelect)
@@ -633,7 +633,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshScrollView(targetId.GetValueOrDefault());
 		}
 
-		// Token: 0x060418A2 RID: 268450 RVA: 0x00FE3C4C File Offset: 0x00FE1E4C
+		// Token: 0x06036567 RID: 222567 RVA: 0x00F2ACBC File Offset: 0x00F28EBC
 		private void RefreshBtn()
 		{
 			FishingEntrust? fishingEntrust = FishingConfig.Instance.GetFishingEntrust(this.CurrentSelectEntrust);
@@ -736,13 +736,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x04022190 RID: 139664
+		// Token: 0x0401CAC1 RID: 117441
 		private int CurrentSelectEntrust = -1;
 
-		// Token: 0x04022191 RID: 139665
+		// Token: 0x0401CAC2 RID: 117442
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022192 RID: 139666
+		// Token: 0x0401CAC3 RID: 117443
 		[Nullable(new byte[]
 		{
 			2,
@@ -750,7 +750,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		private GenericScrollViewNew<FishingQuestItem, int> TaskScrollVieW;
 
-		// Token: 0x04022193 RID: 139667
+		// Token: 0x0401CAC4 RID: 117444
 		[Nullable(new byte[]
 		{
 			2,
@@ -758,120 +758,120 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-		// Token: 0x04022194 RID: 139668
+		// Token: 0x0401CAC5 RID: 117445
 		private FishingQuestShapePanel FishingQuestShapePanel;
 
-		// Token: 0x04022195 RID: 139669
+		// Token: 0x0401CAC6 RID: 117446
 		private FishingQuestShapePanel FishingQuestShapePanel2;
 
-		// Token: 0x04022196 RID: 139670
+		// Token: 0x0401CAC7 RID: 117447
 		private UUIExtendToggle CurrentSelectTaskToggle;
 
-		// Token: 0x04022197 RID: 139671
+		// Token: 0x0401CAC8 RID: 117448
 		private EFishingQuestLeftBtn LeftBtnState;
 
-		// Token: 0x04022198 RID: 139672
+		// Token: 0x0401CAC9 RID: 117449
 		private EFishingQuestRightBtn RightBtnState;
 
-		// Token: 0x04022199 RID: 139673
+		// Token: 0x0401CACA RID: 117450
 		[Nullable(1)]
 		private string FishingCurrencyItemIcon = "";
 
-		// Token: 0x0402219A RID: 139674
+		// Token: 0x0401CACB RID: 117451
 		private bool IsInitBeforeShow;
 
-		// Token: 0x0402219B RID: 139675
+		// Token: 0x0401CACC RID: 117452
 		private Action ChangeColorBackFunc;
 
-		// Token: 0x0402219C RID: 139676
+		// Token: 0x0401CACD RID: 117453
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200C833 RID: 51251
+		// Token: 0x0200B215 RID: 45589
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C772 RID: 247666
+			// Token: 0x040370B7 RID: 225463
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403C773 RID: 247667
+			// Token: 0x040370B8 RID: 225464
 			public const int TaskScrollView = 1;
 
-			// Token: 0x0403C774 RID: 247668
+			// Token: 0x040370B9 RID: 225465
 			public const int TaskItem = 2;
 
-			// Token: 0x0403C775 RID: 247669
+			// Token: 0x040370BA RID: 225466
 			public const int TagText = 3;
 
-			// Token: 0x0403C776 RID: 247670
+			// Token: 0x040370BB RID: 225467
 			public const int NameText = 4;
 
-			// Token: 0x0403C777 RID: 247671
+			// Token: 0x040370BC RID: 225468
 			public const int GirdPanelItem = 5;
 
-			// Token: 0x0403C778 RID: 247672
+			// Token: 0x040370BD RID: 225469
 			public const int DestinationText = 6;
 
-			// Token: 0x0403C779 RID: 247673
+			// Token: 0x040370BE RID: 225470
 			public const int LockItem = 7;
 
-			// Token: 0x0403C77A RID: 247674
+			// Token: 0x040370BF RID: 225471
 			public const int LockText = 8;
 
-			// Token: 0x0403C77B RID: 247675
+			// Token: 0x040370C0 RID: 225472
 			public const int LockBtn = 9;
 
-			// Token: 0x0403C77C RID: 247676
+			// Token: 0x040370C1 RID: 225473
 			public const int RewardScrollView = 10;
 
-			// Token: 0x0403C77D RID: 247677
+			// Token: 0x040370C2 RID: 225474
 			public const int RewardItem = 11;
 
-			// Token: 0x0403C77E RID: 247678
+			// Token: 0x040370C3 RID: 225475
 			public const int RefreshBtn = 12;
 
-			// Token: 0x0403C77F RID: 247679
+			// Token: 0x040370C4 RID: 225476
 			public const int RefreshBtnText = 13;
 
-			// Token: 0x0403C780 RID: 247680
+			// Token: 0x040370C5 RID: 225477
 			public const int ConfirmBtn = 14;
 
-			// Token: 0x0403C781 RID: 247681
+			// Token: 0x040370C6 RID: 225478
 			public const int ConfirmBtnText = 15;
 
-			// Token: 0x0403C782 RID: 247682
+			// Token: 0x040370C7 RID: 225479
 			public const int NotEnoughItem = 16;
 
-			// Token: 0x0403C783 RID: 247683
+			// Token: 0x040370C8 RID: 225480
 			public const int TargetText = 17;
 
-			// Token: 0x0403C784 RID: 247684
+			// Token: 0x040370C9 RID: 225481
 			public const int AllInfoItem = 18;
 
-			// Token: 0x0403C785 RID: 247685
+			// Token: 0x040370CA RID: 225482
 			public const int EmptyItem = 19;
 
-			// Token: 0x0403C786 RID: 247686
+			// Token: 0x040370CB RID: 225483
 			public const int GirdPanelItem2 = 20;
 
-			// Token: 0x0403C787 RID: 247687
+			// Token: 0x040370CC RID: 225484
 			public const int TargetText2 = 21;
 
-			// Token: 0x0403C788 RID: 247688
+			// Token: 0x040370CD RID: 225485
 			public const int TargetText2Item = 22;
 
-			// Token: 0x0403C789 RID: 247689
+			// Token: 0x040370CE RID: 225486
 			public const int TechNormalItem = 23;
 
-			// Token: 0x0403C78A RID: 247690
+			// Token: 0x040370CF RID: 225487
 			public const int EmptyText = 24;
 
-			// Token: 0x0403C78B RID: 247691
+			// Token: 0x040370D0 RID: 225488
 			public const int TechLockItem = 25;
 
-			// Token: 0x0403C78C RID: 247692
+			// Token: 0x040370D1 RID: 225489
 			public const int NightItem = 26;
 
-			// Token: 0x0403C78D RID: 247693
+			// Token: 0x040370D2 RID: 225490
 			public const int RightButtonRedDotItem = 27;
 		}
 	}

@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042DC RID: 17116
+	// Token: 0x0200332E RID: 13102
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/ESkillMode.ESkillMode")]
 	public enum ESkillMode : byte
 	{
-		// Token: 0x040174CC RID: 95436
+		// Token: 0x0401218E RID: 74126
 		Simple,
-		// Token: 0x040174CD RID: 95437
+		// Token: 0x0401218F RID: 74127
 		GameplayAbility,
-		// Token: 0x040174CE RID: 95438
+		// Token: 0x04012190 RID: 74128
 		Code,
-		// Token: 0x040174CF RID: 95439
+		// Token: 0x04012191 RID: 74129
 		ESkillMode_MAX
 	}
 }

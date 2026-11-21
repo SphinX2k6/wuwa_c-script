@@ -6,25 +6,25 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Utils;
 using UnrealEngine;
 
-// Token: 0x02002FEC RID: 12268
+// Token: 0x02002541 RID: 9537
 [NullableContext(1)]
 [Nullable(0)]
 public class DeathTrigger : Trigger
 {
-	// Token: 0x0601A004 RID: 106500 RVA: 0x006CE7F6 File Offset: 0x006CC9F6
+	// Token: 0x06017938 RID: 96568 RVA: 0x006F6692 File Offset: 0x006F4892
 	[NullableContext(2)]
 	public DeathTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A005 RID: 106501 RVA: 0x006CE807 File Offset: 0x006CCA07
+	// Token: 0x06017939 RID: 96569 RVA: 0x006F66A3 File Offset: 0x006F48A3
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.TargetType = (ETriggerTargetType)Convert.ToInt32((triggerParams.Length != 0) ? triggerParams[0] : "0");
 		this.ListenDeathType = (DeathTrigger.EListenDeathType)Convert.ToInt32((triggerParams.Length > 1) ? triggerParams[1] : "0");
 	}
 
-	// Token: 0x0601A006 RID: 106502 RVA: 0x006CE840 File Offset: 0x006CCA40
+	// Token: 0x0601793A RID: 96570 RVA: 0x006F66DC File Offset: 0x006F48DC
 	protected override void OnActive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -44,7 +44,7 @@ public class DeathTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A007 RID: 106503 RVA: 0x006CE8F4 File Offset: 0x006CCAF4
+	// Token: 0x0601793B RID: 96571 RVA: 0x006F6790 File Offset: 0x006F4990
 	protected override void OnInactive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -64,7 +64,7 @@ public class DeathTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A008 RID: 106504 RVA: 0x006CE9A8 File Offset: 0x006CCBA8
+	// Token: 0x0601793C RID: 96572 RVA: 0x006F6844 File Offset: 0x006F4A44
 	private void OnEvent(Entity attacker, Entity victim, RequirementPayload req, DamageResult result, FVectorDouble hitPos)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -88,7 +88,7 @@ public class DeathTrigger : Trigger
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x0601A009 RID: 106505 RVA: 0x006CEAC9 File Offset: 0x006CCCC9
+	// Token: 0x0601793D RID: 96573 RVA: 0x006F6965 File Offset: 0x006F4B65
 	private void OnDeathBefore()
 	{
 		if (base.Checker != null && !base.Checker())
@@ -98,25 +98,25 @@ public class DeathTrigger : Trigger
 		base.EvaluateAndExecute(new Dictionary<string, TFormulaValue>());
 	}
 
-	// Token: 0x0601A00A RID: 106506 RVA: 0x006CEAEC File Offset: 0x006CCCEC
+	// Token: 0x0601793E RID: 96574 RVA: 0x006F6988 File Offset: 0x006F4B88
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4CD RID: 50381
+	// Token: 0x0400C895 RID: 51349
 	protected ETriggerTargetType TargetType;
 
-	// Token: 0x0400C4CE RID: 50382
+	// Token: 0x0400C896 RID: 51350
 	protected DeathTrigger.EListenDeathType ListenDeathType;
 
-	// Token: 0x02009624 RID: 38436
+	// Token: 0x02008845 RID: 34885
 	[NullableContext(0)]
 	protected enum EListenDeathType
 	{
-		// Token: 0x040302C5 RID: 197317
+		// Token: 0x0402B952 RID: 178514
 		DamageDeath,
-		// Token: 0x040302C6 RID: 197318
+		// Token: 0x0402B953 RID: 178515
 		AllDeath
 	}
 }

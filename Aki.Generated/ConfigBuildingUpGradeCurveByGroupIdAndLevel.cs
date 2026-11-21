@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200012D RID: 301
+	// Token: 0x0200013C RID: 316
 	public class ConfigBuildingUpGradeCurveByGroupIdAndLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600070F RID: 1807 RVA: 0x00081907 File Offset: 0x0007FB07
+		// Token: 0x06000769 RID: 1897 RVA: 0x0008726B File Offset: 0x0008546B
 		static ConfigBuildingUpGradeCurveByGroupIdAndLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBuildingUpGradeCurveByGroupIdAndLevel.CreateStaticDefaultValue), new Action(ConfigBuildingUpGradeCurveByGroupIdAndLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000710 RID: 1808 RVA: 0x00081928 File Offset: 0x0007FB28
+		// Token: 0x0600076A RID: 1898 RVA: 0x0008728C File Offset: 0x0008548C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBuildingUpGradeCurveByGroupIdAndLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000711 RID: 1809 RVA: 0x000819A7 File Offset: 0x0007FBA7
+		// Token: 0x0600076B RID: 1899 RVA: 0x0008730B File Offset: 0x0008550B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBuildingUpGradeCurveByGroupIdAndLevel.LogPair = null;
 			ConfigBuildingUpGradeCurveByGroupIdAndLevel.HandleId = 0;
 		}
 
-		// Token: 0x06000712 RID: 1810 RVA: 0x000819B5 File Offset: 0x0007FBB5
+		// Token: 0x0600076C RID: 1900 RVA: 0x00087319 File Offset: 0x00085519
 		public static void Init()
 		{
 			ConfigBuildingUpGradeCurveByGroupIdAndLevel.HandleId = ConfigCommon.InitDataStatement(ConfigBuildingUpGradeCurveByGroupIdAndLevel.HandleId, "db_moonchasing.db", "select BinData from `BuildingUpGradeCurve` where GroupId=? AND Level=?");
 		}
 
-		// Token: 0x06000713 RID: 1811 RVA: 0x000819D0 File Offset: 0x0007FBD0
+		// Token: 0x0600076D RID: 1901 RVA: 0x00087334 File Offset: 0x00085534
 		public static BuildingUpGradeCurve? GetConfig(int p0GroupId, int p1Level, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBuildingUpGradeCurveByGroupIdAndLevel.HandleId, ConfigBuildingUpGradeCurveByGroupIdAndLevel.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new BuildingUpGradeCurve?(rootAsBuildingUpGradeCurve);
 		}
 
-		// Token: 0x0400081F RID: 2079
+		// Token: 0x04000888 RID: 2184
 		private const string DB = "db_moonchasing.db";
 
-		// Token: 0x04000820 RID: 2080
+		// Token: 0x04000889 RID: 2185
 		private const string FILE = "z.追月节.xlsx";
 
-		// Token: 0x04000821 RID: 2081
+		// Token: 0x0400088A RID: 2186
 		private const string TABLE = "BuildingUpGradeCurve";
 
-		// Token: 0x04000822 RID: 2082
+		// Token: 0x0400088B RID: 2187
 		private const string COMMAND = "select BinData from `BuildingUpGradeCurve` where GroupId=? AND Level=?";
 
-		// Token: 0x04000823 RID: 2083
+		// Token: 0x0400088C RID: 2188
 		private const string KEY_PREFIX = "BuildingUpGradeCurveByGroupIdAndLevel";
 
-		// Token: 0x04000824 RID: 2084
+		// Token: 0x0400088D RID: 2189
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000825 RID: 2085
+		// Token: 0x0400088E RID: 2190
 		private static int HandleId;
 	}
 }

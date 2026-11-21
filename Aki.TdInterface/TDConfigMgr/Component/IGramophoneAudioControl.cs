@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003D8 RID: 984
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000431 RID: 1073
 	public class IGramophoneAudioControl : IAudioControlType
 	{
-		// Token: 0x060013C7 RID: 5063 RVA: 0x0003FE64 File Offset: 0x0003E064
+		// Token: 0x06001561 RID: 5473 RVA: 0x00043BAC File Offset: 0x00041DAC
 		private IGramophoneAudioControl_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060013C8 RID: 5064 RVA: 0x0003FE9C File Offset: 0x0003E09C
+		// Token: 0x06001562 RID: 5474 RVA: 0x00043BE4 File Offset: 0x00041DE4
 		public static IGramophoneAudioControl Create([Nullable(2)] IGramophoneAudioControl instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060013C9 RID: 5065 RVA: 0x0003FEAF File Offset: 0x0003E0AF
+		// Token: 0x06001563 RID: 5475 RVA: 0x00043BF7 File Offset: 0x00041DF7
 		public static IGramophoneAudioControl CreateFromSetValue([Nullable(2)] IGramophoneAudioControl_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060013CA RID: 5066 RVA: 0x0003FEC2 File Offset: 0x0003E0C2
+		// Token: 0x06001564 RID: 5476 RVA: 0x00043C0A File Offset: 0x00041E0A
 		public new IGramophoneAudioControl_SetValue ToSetValue()
 		{
 			return new IGramophoneAudioControl_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700057D RID: 1405
-		// (get) Token: 0x060013CB RID: 5067 RVA: 0x0003FED5 File Offset: 0x0003E0D5
-		// (set) Token: 0x060013CC RID: 5068 RVA: 0x0003FF00 File Offset: 0x0003E100
+		// Token: 0x170005E4 RID: 1508
+		// (get) Token: 0x06001565 RID: 5477 RVA: 0x00043C1D File Offset: 0x00041E1D
+		// (set) Token: 0x06001566 RID: 5478 RVA: 0x00043C48 File Offset: 0x00041E48
 		public override EAudioControlType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000FB2 RID: 4018
+		// Token: 0x040010D4 RID: 4308
 		[Nullable(2)]
 		protected new IGramophoneAudioControl FbInstance;
 
-		// Token: 0x04000FB3 RID: 4019
+		// Token: 0x040010D5 RID: 4309
 		[Nullable(2)]
 		protected new IGramophoneAudioControl_SetValue PocoInterface;
 	}

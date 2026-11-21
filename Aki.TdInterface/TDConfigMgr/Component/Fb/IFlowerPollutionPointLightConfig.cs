@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DED RID: 3565
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EE9 RID: 3817
 	public class IFlowerPollutionPointLightConfig
 	{
-		// Token: 0x060050C2 RID: 20674 RVA: 0x000C7538 File Offset: 0x000C5738
+		// Token: 0x060055E9 RID: 21993 RVA: 0x000D2E00 File Offset: 0x000D1000
 		public static IFlowerPollutionPointLightConfig Create(IFlowerPollutionPointLightConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AA5 RID: 6821
-		// (get) Token: 0x060050C3 RID: 20675 RVA: 0x000C7558 File Offset: 0x000C5758
+		// Token: 0x17001C12 RID: 7186
+		// (get) Token: 0x060055EA RID: 21994 RVA: 0x000D2E20 File Offset: 0x000D1020
 		public virtual List<int> PointLightEntityIds
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AA6 RID: 6822
-		// (get) Token: 0x060050C4 RID: 20676 RVA: 0x000C75BC File Offset: 0x000C57BC
+		// Token: 0x17001C13 RID: 7187
+		// (get) Token: 0x060055EB RID: 21995 RVA: 0x000D2E84 File Offset: 0x000D1084
 		public virtual List<IPointLightOperations> PointLightConfig
 		{
 			get
@@ -65,19 +62,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E60 RID: 11872
+		// Token: 0x04003128 RID: 12584
 		private IFlowerPollutionPointLightConfig Instance;
 
-		// Token: 0x04002E61 RID: 11873
+		// Token: 0x04003129 RID: 12585
 		private List<int> _PointLightEntityIdsCache;
 
-		// Token: 0x04002E62 RID: 11874
+		// Token: 0x0400312A RID: 12586
 		private bool _PointLightEntityIdsInited;
 
-		// Token: 0x04002E63 RID: 11875
+		// Token: 0x0400312B RID: 12587
 		private List<IPointLightOperations> _PointLightConfigCache;
 
-		// Token: 0x04002E64 RID: 11876
+		// Token: 0x0400312C RID: 12588
 		private bool _PointLightConfigInited;
 	}
 }

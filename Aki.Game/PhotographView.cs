@@ -13,22 +13,23 @@ using CSharpScript.Game.LevelGamePlay.StaticScene;
 using CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode;
 using CSharpScript.Game.Module.Menu;
 using CSharpScript.Game.Module.Menu.SubViews.EyeProtect;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025D8 RID: 9688
+// Token: 0x02001AC3 RID: 6851
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotographView : UiTickViewBase
 {
-	// Token: 0x06013A9C RID: 80540 RVA: 0x004EB11C File Offset: 0x004E931C
+	// Token: 0x06010F7C RID: 69500 RVA: 0x004F9D1C File Offset: 0x004F7F1C
 	public PhotographView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06013A9D RID: 80541 RVA: 0x004EB1E8 File Offset: 0x004E93E8
+	// Token: 0x06010F7D RID: 69501 RVA: 0x004F9DE8 File Offset: 0x004F7FE8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -71,9 +72,11 @@ public class PhotographView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06013A9E RID: 80542 RVA: 0x004EB4F0 File Offset: 0x004E96F0
+	// Token: 0x06010F7E RID: 69502 RVA: 0x004FA0F0 File Offset: 0x004F82F0
 	protected override void OnStart()
 	{
+		int playerId = CreatureModel.Instance.GetPlayerId();
+		FormationDataController.Instance.AddPlayerTag(playerId, new int?(GameplayTagDefine.EGameplayTagId["系统.功能.进入拍照"]));
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Kuro.KuroEnableScreenShotSaveFile 0", null);
 		GlobalData.BpEventManager.OnEnterPhotograph.Broadcast();
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -90,7 +93,7 @@ public class PhotographView : UiTickViewBase
 		component.SetLodBias(-7);
 	}
 
-	// Token: 0x06013A9F RID: 80543 RVA: 0x004EB558 File Offset: 0x004E9758
+	// Token: 0x06010F7F RID: 69503 RVA: 0x004FA184 File Offset: 0x004F8384
 	protected override void OnAfterDestroy()
 	{
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Kuro.KuroEnableScreenShotSaveFile 1", null);
@@ -109,7 +112,7 @@ public class PhotographView : UiTickViewBase
 		component.SetLodBias(0);
 	}
 
-	// Token: 0x06013AA0 RID: 80544 RVA: 0x004EB5C0 File Offset: 0x004E97C0
+	// Token: 0x06010F80 RID: 69504 RVA: 0x004FA1EC File Offset: 0x004F83EC
 	protected override void OnAddEventListener()
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -173,7 +176,7 @@ public class PhotographView : UiTickViewBase
 		EventSystem.Instance.Add<bool, bool>(EEventName.OnPhotographViewCaptureMode, new Action<bool, bool>(this.OnPhotographViewCaptureMode));
 	}
 
-	// Token: 0x06013AA1 RID: 80545 RVA: 0x004EBAEC File Offset: 0x004E9CEC
+	// Token: 0x06010F81 RID: 69505 RVA: 0x004FA718 File Offset: 0x004F8918
 	protected override void OnRemoveEventListener()
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -229,7 +232,7 @@ public class PhotographView : UiTickViewBase
 		EventSystem.Instance.Remove<bool, bool>(EEventName.OnPhotographViewCaptureMode, new Action<bool, bool>(this.OnPhotographViewCaptureMode));
 	}
 
-	// Token: 0x06013AA2 RID: 80546 RVA: 0x004EBE4C File Offset: 0x004EA04C
+	// Token: 0x06010F82 RID: 69506 RVA: 0x004FAA78 File Offset: 0x004F8C78
 	protected override void OnAfterTick(float delta)
 	{
 		base.OnAfterTick(delta);
@@ -247,7 +250,7 @@ public class PhotographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013AA3 RID: 80547 RVA: 0x004EBEC8 File Offset: 0x004EA0C8
+	// Token: 0x06010F83 RID: 69507 RVA: 0x004FAAF4 File Offset: 0x004F8CF4
 	[NullableContext(2)]
 	private void OnPointerScrollCallBack(ULGUIPointerEventData eventData)
 	{
@@ -258,7 +261,7 @@ public class PhotographView : UiTickViewBase
 		this.ChangeFov(eventData.scrollAxisValue * this.CameraZoomSpeed);
 	}
 
-	// Token: 0x06013AA4 RID: 80548 RVA: 0x004EBEEB File Offset: 0x004EA0EB
+	// Token: 0x06010F84 RID: 69508 RVA: 0x004FAB17 File Offset: 0x004F8D17
 	private void OnInputUiIncrease(string axisName, float value, InputIdentification _)
 	{
 		if (value == 0f || !Info.Instance.IsInGamepad())
@@ -268,7 +271,7 @@ public class PhotographView : UiTickViewBase
 		this.ChangeFov(-value);
 	}
 
-	// Token: 0x06013AA5 RID: 80549 RVA: 0x004EBF0A File Offset: 0x004EA10A
+	// Token: 0x06010F85 RID: 69509 RVA: 0x004FAB36 File Offset: 0x004F8D36
 	private void OnInputUiReduce(string axisName, float value, InputIdentification _)
 	{
 		if (value == 0f || !Info.Instance.IsInGamepad())
@@ -278,17 +281,17 @@ public class PhotographView : UiTickViewBase
 		this.ChangeFov(-value);
 	}
 
-	// Token: 0x06013AA6 RID: 80550 RVA: 0x004EBF29 File Offset: 0x004EA129
+	// Token: 0x06010F86 RID: 69510 RVA: 0x004FAB55 File Offset: 0x004F8D55
 	protected override void OnBeforeCreate()
 	{
 		PhotographController.Instance.InitPhotographRelativeContent();
 	}
 
-	// Token: 0x06013AA7 RID: 80551 RVA: 0x004EBF38 File Offset: 0x004EA138
+	// Token: 0x06010F87 RID: 69511 RVA: 0x004FAB64 File Offset: 0x004F8D64
 	protected override void OnBeforeShow()
 	{
-		UiCameraPhotographerStructure photographerStructure = PhotographModel.Instance.GetPhotographerStructure();
-		if (photographerStructure == null)
+		UiCameraPhotographerComponent photographerComponent = PhotographModel.Instance.GetPhotographerComponent();
+		if (photographerComponent == null)
 		{
 			return;
 		}
@@ -299,10 +302,10 @@ public class PhotographView : UiTickViewBase
 			FVectorDouble fvectorDouble = new FVectorDouble(baseCharacter.D_K2_GetActorLocation().X, baseCharacter.D_K2_GetActorLocation().Y, PhotographController.Instance.GetFightCameraActor().D_K2_GetActorLocation().Z);
 			FRotator frotator = PhotographController.Instance.GetFightCameraActor().K2_GetActorRotation();
 			FVectorDouble fvectorDouble2 = PhotographController.Instance.GetFightCameraActor().D_GetActorScale3D();
-			photographerStructure.SetSpringArmLength(0f);
-			UiCameraPhotographerStructure uiCameraPhotographerStructure = photographerStructure;
+			photographerComponent.SetSpringArmLength(0f);
+			UiCameraPhotographerComponent uiCameraPhotographerComponent = photographerComponent;
 			FVector fvector = fvectorDouble2;
-			uiCameraPhotographerStructure.SetCameraInitializeTransform(new FTransformDouble(ref frotator, ref fvectorDouble, ref fvector));
+			uiCameraPhotographerComponent.SetCameraInitializeTransform(new FTransformDouble(ref frotator, ref fvectorDouble, ref fvector));
 		}
 		InputDistributeController.Instance.BindTouches(new int[]
 		{
@@ -330,7 +333,7 @@ public class PhotographView : UiTickViewBase
 		RedDotController.Instance.BindRedDot(ERedDotName.FunctionPhotograph, base.GetItem(19), null, 0);
 	}
 
-	// Token: 0x06013AA8 RID: 80552 RVA: 0x004EC12C File Offset: 0x004EA32C
+	// Token: 0x06010F88 RID: 69512 RVA: 0x004FAD58 File Offset: 0x004F8F58
 	protected override void OnAfterHide()
 	{
 		InputDistributeController.Instance.UnBindTouches(new int[]
@@ -347,7 +350,7 @@ public class PhotographView : UiTickViewBase
 		MenuController.Instance.OpenAllFilter();
 	}
 
-	// Token: 0x06013AA9 RID: 80553 RVA: 0x004EC1A4 File Offset: 0x004EA3A4
+	// Token: 0x06010F89 RID: 69513 RVA: 0x004FADD0 File Offset: 0x004F8FD0
 	private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification _)
 	{
 		int touchType = (int)touchData.TouchType;
@@ -358,7 +361,7 @@ public class PhotographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013AAA RID: 80554 RVA: 0x004EC1C8 File Offset: 0x004EA3C8
+	// Token: 0x06010F8A RID: 69514 RVA: 0x004FADF4 File Offset: 0x004F8FF4
 	protected override UniTask OnPlayingStartSequenceAsync()
 	{
 		PhotographView.<OnPlayingStartSequenceAsync>d__37 <OnPlayingStartSequenceAsync>d__;
@@ -369,7 +372,7 @@ public class PhotographView : UiTickViewBase
 		return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013AAB RID: 80555 RVA: 0x004EC20C File Offset: 0x004EA40C
+	// Token: 0x06010F8B RID: 69515 RVA: 0x004FAE38 File Offset: 0x004F9038
 	private UniTask PlayEntityCameraOpenSequenceAsync()
 	{
 		PhotographView.<PlayEntityCameraOpenSequenceAsync>d__38 <PlayEntityCameraOpenSequenceAsync>d__;
@@ -380,7 +383,7 @@ public class PhotographView : UiTickViewBase
 		return <PlayEntityCameraOpenSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013AAC RID: 80556 RVA: 0x004EC250 File Offset: 0x004EA450
+	// Token: 0x06010F8C RID: 69516 RVA: 0x004FAE7C File Offset: 0x004F907C
 	private void StopEntityCameraSequences()
 	{
 		foreach (SimpleLevelSequenceActor simpleLevelSequenceActor in this.EntityCameraSequenceActors)
@@ -390,7 +393,7 @@ public class PhotographView : UiTickViewBase
 		this.EntityCameraSequenceActors.Clear();
 	}
 
-	// Token: 0x06013AAD RID: 80557 RVA: 0x004EC2AC File Offset: 0x004EA4AC
+	// Token: 0x06010F8D RID: 69517 RVA: 0x004FAED8 File Offset: 0x004F90D8
 	private void HandleEntityPanel()
 	{
 		if (PhotographController.Instance.CheckIfInEntityCamera())
@@ -401,10 +404,10 @@ public class PhotographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013AAE RID: 80558 RVA: 0x004EC2E4 File Offset: 0x004EA4E4
+	// Token: 0x06010F8E RID: 69518 RVA: 0x004FAF10 File Offset: 0x004F9110
 	private void TouchMoved(int touchId)
 	{
-		if (PhotographModel.Instance.GetPhotographerStructure() == null)
+		if (PhotographModel.Instance.GetPhotographerComponent() == null)
 		{
 			return;
 		}
@@ -427,7 +430,7 @@ public class PhotographView : UiTickViewBase
 		this.ChangeFov(changeValue);
 	}
 
-	// Token: 0x06013AAF RID: 80559 RVA: 0x004EC3A8 File Offset: 0x004EA5A8
+	// Token: 0x06010F8F RID: 69519 RVA: 0x004FAFD4 File Offset: 0x004F91D4
 	private void SetVisibleMode(bool bVisible)
 	{
 		if (this.VisibleMode == bVisible)
@@ -454,7 +457,7 @@ public class PhotographView : UiTickViewBase
 		LoadingModel.Instance.IsShowUidView = this.VisibleMode;
 	}
 
-	// Token: 0x06013AB0 RID: 80560 RVA: 0x004EC434 File Offset: 0x004EA634
+	// Token: 0x06010F90 RID: 69520 RVA: 0x004FB060 File Offset: 0x004F9260
 	public void RefreshFightPhotoOptionTab()
 	{
 		FightPhotoOptionPanel fightPhotographOptionPanel = this.FightPhotographOptionPanel;
@@ -465,7 +468,7 @@ public class PhotographView : UiTickViewBase
 		fightPhotographOptionPanel.RefreshTabLayout().Forget();
 	}
 
-	// Token: 0x06013AB1 RID: 80561 RVA: 0x004EC44B File Offset: 0x004EA64B
+	// Token: 0x06010F91 RID: 69521 RVA: 0x004FB077 File Offset: 0x004F9277
 	public void RefreshFightPhotoMissionState()
 	{
 		FightPhotoOptionPanel fightPhotographOptionPanel = this.FightPhotographOptionPanel;
@@ -476,7 +479,7 @@ public class PhotographView : UiTickViewBase
 		fightPhotographOptionPanel.RefreshMissionState();
 	}
 
-	// Token: 0x06013AB2 RID: 80562 RVA: 0x004EC460 File Offset: 0x004EA660
+	// Token: 0x06010F92 RID: 69522 RVA: 0x004FB08C File Offset: 0x004F928C
 	private void OnPhotographViewCaptureMode(bool enter, bool showMark)
 	{
 		if (enter)
@@ -507,97 +510,97 @@ public class PhotographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013AB3 RID: 80563 RVA: 0x004EC4E6 File Offset: 0x004EA6E6
+	// Token: 0x06010F93 RID: 69523 RVA: 0x004FB112 File Offset: 0x004F9312
 	private void OnPhotographSetUpViewVisibleChanged(bool bVisible)
 	{
 		base.PlaySequence(bVisible ? "PhotoSetting_In" : "PhotoSetting_Out", null, false);
 	}
 
-	// Token: 0x06013AB4 RID: 80564 RVA: 0x004EC4FF File Offset: 0x004EA6FF
+	// Token: 0x06010F94 RID: 69524 RVA: 0x004FB12B File Offset: 0x004F932B
 	private void OnPhotographSetVisible()
 	{
 		this.SetVisibleMode(true);
 	}
 
-	// Token: 0x06013AB5 RID: 80565 RVA: 0x004EC508 File Offset: 0x004EA708
+	// Token: 0x06010F95 RID: 69525 RVA: 0x004FB134 File Offset: 0x004F9334
 	private void OnPressUpButton()
 	{
 		PhotographModel.Instance.UpValue = 1f;
 	}
 
-	// Token: 0x06013AB6 RID: 80566 RVA: 0x004EC519 File Offset: 0x004EA719
+	// Token: 0x06010F96 RID: 69526 RVA: 0x004FB145 File Offset: 0x004F9345
 	private void OnReleaseUpButton()
 	{
 		PhotographModel.Instance.UpValue = 0f;
 		PhotographController.Instance.SetIsLineTraceBlock(false);
 	}
 
-	// Token: 0x06013AB7 RID: 80567 RVA: 0x004EC535 File Offset: 0x004EA735
+	// Token: 0x06010F97 RID: 69527 RVA: 0x004FB161 File Offset: 0x004F9361
 	private void OnPressDownButton()
 	{
 		PhotographModel.Instance.UpValue = -1f;
 	}
 
-	// Token: 0x06013AB8 RID: 80568 RVA: 0x004EC546 File Offset: 0x004EA746
+	// Token: 0x06010F98 RID: 69528 RVA: 0x004FB172 File Offset: 0x004F9372
 	private void OnReleaseDownButton()
 	{
 		PhotographModel.Instance.UpValue = 0f;
 		PhotographController.Instance.SetIsLineTraceBlock(false);
 	}
 
-	// Token: 0x06013AB9 RID: 80569 RVA: 0x004EC562 File Offset: 0x004EA762
+	// Token: 0x06010F99 RID: 69529 RVA: 0x004FB18E File Offset: 0x004F938E
 	private void OnPressLeftButton()
 	{
 		PhotographModel.Instance.RightValue = -1f;
 	}
 
-	// Token: 0x06013ABA RID: 80570 RVA: 0x004EC573 File Offset: 0x004EA773
+	// Token: 0x06010F9A RID: 69530 RVA: 0x004FB19F File Offset: 0x004F939F
 	private void OnReleaseLeftButton()
 	{
 		PhotographModel.Instance.RightValue = 0f;
 		PhotographController.Instance.SetIsLineTraceBlock(false);
 	}
 
-	// Token: 0x06013ABB RID: 80571 RVA: 0x004EC58F File Offset: 0x004EA78F
+	// Token: 0x06010F9B RID: 69531 RVA: 0x004FB1BB File Offset: 0x004F93BB
 	private void OnPressRightButton()
 	{
 		PhotographModel.Instance.RightValue = 1f;
 	}
 
-	// Token: 0x06013ABC RID: 80572 RVA: 0x004EC5A0 File Offset: 0x004EA7A0
+	// Token: 0x06010F9C RID: 69532 RVA: 0x004FB1CC File Offset: 0x004F93CC
 	private void OnReleaseRightButton()
 	{
 		PhotographModel.Instance.RightValue = 0f;
 		PhotographController.Instance.SetIsLineTraceBlock(false);
 	}
 
-	// Token: 0x06013ABD RID: 80573 RVA: 0x004EC5BC File Offset: 0x004EA7BC
+	// Token: 0x06010F9D RID: 69533 RVA: 0x004FB1E8 File Offset: 0x004F93E8
 	private void OnPressForwardButton()
 	{
 		PhotographModel.Instance.ForwardValue = 1f;
 	}
 
-	// Token: 0x06013ABE RID: 80574 RVA: 0x004EC5CD File Offset: 0x004EA7CD
+	// Token: 0x06010F9E RID: 69534 RVA: 0x004FB1F9 File Offset: 0x004F93F9
 	private void OnReleaseForwardButton()
 	{
 		PhotographModel.Instance.ForwardValue = 0f;
 		PhotographController.Instance.SetIsLineTraceBlock(false);
 	}
 
-	// Token: 0x06013ABF RID: 80575 RVA: 0x004EC5E9 File Offset: 0x004EA7E9
+	// Token: 0x06010F9F RID: 69535 RVA: 0x004FB215 File Offset: 0x004F9415
 	private void OnPressBackButton()
 	{
 		PhotographModel.Instance.ForwardValue = -1f;
 	}
 
-	// Token: 0x06013AC0 RID: 80576 RVA: 0x004EC5FA File Offset: 0x004EA7FA
+	// Token: 0x06010FA0 RID: 69536 RVA: 0x004FB226 File Offset: 0x004F9426
 	private void OnReleaseBackButton()
 	{
 		PhotographModel.Instance.ForwardValue = 0f;
 		PhotographController.Instance.SetIsLineTraceBlock(false);
 	}
 
-	// Token: 0x06013AC1 RID: 80577 RVA: 0x004EC618 File Offset: 0x004EA818
+	// Token: 0x06010FA1 RID: 69537 RVA: 0x004FB244 File Offset: 0x004F9444
 	private void OnSetFov(float value)
 	{
 		if (PhotographController.Instance.CheckIfInEntityCamera())
@@ -611,17 +614,17 @@ public class PhotographView : UiTickViewBase
 		}
 		else
 		{
-			UiCameraPhotographerStructure photographerStructure = PhotographModel.Instance.GetPhotographerStructure();
-			if (photographerStructure != null)
+			UiCameraPhotographerComponent photographerComponent = PhotographModel.Instance.GetPhotographerComponent();
+			if (photographerComponent != null)
 			{
-				photographerStructure.GetFov();
+				photographerComponent.GetFov();
 			}
 			float fov = MathUtils.Instance.RangeClamp(value, this.MinFov, this.MaxFov, this.MaxFov, this.MinFov);
 			PhotographController.Instance.SetFov(fov);
 		}
 	}
 
-	// Token: 0x06013AC2 RID: 80578 RVA: 0x004EC72C File Offset: 0x004EA92C
+	// Token: 0x06010FA2 RID: 69538 RVA: 0x004FB358 File Offset: 0x004F9558
 	[NullableContext(2)]
 	private void OnDragMoved(ULGUIPointerEventData eventData)
 	{
@@ -633,27 +636,27 @@ public class PhotographView : UiTickViewBase
 		FVector pointerPosition = eventData.pointerPosition;
 		if (this.LastMoveVector != null)
 		{
-			UiCameraPhotographerStructure photographerStructure = PhotographModel.Instance.GetPhotographerStructure();
-			if (photographerStructure == null)
+			UiCameraPhotographerComponent photographerComponent = PhotographModel.Instance.GetPhotographerComponent();
+			if (photographerComponent == null)
 			{
 				return;
 			}
 			float num = (pointerPosition.Y - this.LastMoveVector.Value.Y) * this.ControlCameraRate;
 			float num2 = (this.LastMoveVector.Value.X - pointerPosition.X) * this.ControlCameraRate;
-			photographerStructure.AddCameraArmPitchInput(-num);
-			photographerStructure.AddCameraArmYawInput(-num2);
+			photographerComponent.AddCameraArmPitchInput(-num);
+			photographerComponent.AddCameraArmYawInput(-num2);
 		}
 		this.LastMoveVector = new FVector2D?(new FVector2D(pointerPosition.X, pointerPosition.Y));
 	}
 
-	// Token: 0x06013AC3 RID: 80579 RVA: 0x004EC7DB File Offset: 0x004EA9DB
+	// Token: 0x06010FA3 RID: 69539 RVA: 0x004FB407 File Offset: 0x004F9607
 	[NullableContext(2)]
 	private void OnDragBegin(ULGUIPointerEventData _)
 	{
 		this.InDragMove = false;
 	}
 
-	// Token: 0x06013AC4 RID: 80580 RVA: 0x004EC7E4 File Offset: 0x004EA9E4
+	// Token: 0x06010FA4 RID: 69540 RVA: 0x004FB410 File Offset: 0x004F9610
 	[NullableContext(2)]
 	private void OnDragEnded(ULGUIPointerEventData _)
 	{
@@ -665,33 +668,33 @@ public class PhotographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013AC5 RID: 80581 RVA: 0x004EC80C File Offset: 0x004EAA0C
+	// Token: 0x06010FA5 RID: 69541 RVA: 0x004FB438 File Offset: 0x004F9638
 	private void OnPressAddButton()
 	{
 		this.RemoveChangeFovTimer();
 		this.ChangeFovTimerId = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnAddFov), 100f, 1f, null, null, true);
 	}
 
-	// Token: 0x06013AC6 RID: 80582 RVA: 0x004EC83D File Offset: 0x004EAA3D
+	// Token: 0x06010FA6 RID: 69542 RVA: 0x004FB469 File Offset: 0x004F9669
 	private void OnReleaseAddButton()
 	{
 		this.RemoveChangeFovTimer();
 	}
 
-	// Token: 0x06013AC7 RID: 80583 RVA: 0x004EC845 File Offset: 0x004EAA45
+	// Token: 0x06010FA7 RID: 69543 RVA: 0x004FB471 File Offset: 0x004F9671
 	private void OnPressReduceButton()
 	{
 		this.RemoveChangeFovTimer();
 		this.ChangeFovTimerId = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnReduceFov), 100f, 1f, null, null, true);
 	}
 
-	// Token: 0x06013AC8 RID: 80584 RVA: 0x004EC876 File Offset: 0x004EAA76
+	// Token: 0x06010FA8 RID: 69544 RVA: 0x004FB4A2 File Offset: 0x004F96A2
 	private void OnReleaseReduceButton()
 	{
 		this.RemoveChangeFovTimer();
 	}
 
-	// Token: 0x06013AC9 RID: 80585 RVA: 0x004EC87E File Offset: 0x004EAA7E
+	// Token: 0x06010FA9 RID: 69545 RVA: 0x004FB4AA File Offset: 0x004F96AA
 	private void RemoveChangeFovTimer()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.ChangeFovTimerId))
@@ -700,31 +703,31 @@ public class PhotographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013ACA RID: 80586 RVA: 0x004EC8A3 File Offset: 0x004EAAA3
+	// Token: 0x06010FAA RID: 69546 RVA: 0x004FB4CF File Offset: 0x004F96CF
 	private void OnAddFov(float _)
 	{
 		this.ChangeFov(1f);
 	}
 
-	// Token: 0x06013ACB RID: 80587 RVA: 0x004EC8B0 File Offset: 0x004EAAB0
+	// Token: 0x06010FAB RID: 69547 RVA: 0x004FB4DC File Offset: 0x004F96DC
 	private void OnReduceFov(float _)
 	{
 		this.ChangeFov(-1f);
 	}
 
-	// Token: 0x06013ACC RID: 80588 RVA: 0x004EC8BD File Offset: 0x004EAABD
+	// Token: 0x06010FAC RID: 69548 RVA: 0x004FB4E9 File Offset: 0x004F96E9
 	private void OnAddButtonButtonClicked()
 	{
 		this.ChangeFov(1f);
 	}
 
-	// Token: 0x06013ACD RID: 80589 RVA: 0x004EC8CA File Offset: 0x004EAACA
+	// Token: 0x06010FAD RID: 69549 RVA: 0x004FB4F6 File Offset: 0x004F96F6
 	private void OnReduceButtonClicked()
 	{
 		this.ChangeFov(-1f);
 	}
 
-	// Token: 0x06013ACE RID: 80590 RVA: 0x004EC8D8 File Offset: 0x004EAAD8
+	// Token: 0x06010FAE RID: 69550 RVA: 0x004FB504 File Offset: 0x004F9704
 	private void OnSetupButtonClicked()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -747,14 +750,14 @@ public class PhotographView : UiTickViewBase
 		}, null);
 	}
 
-	// Token: 0x06013ACF RID: 80591 RVA: 0x004EC97C File Offset: 0x004EAB7C
+	// Token: 0x06010FAF RID: 69551 RVA: 0x004FB5A8 File Offset: 0x004F97A8
 	private void OnResetButtonClicked()
 	{
 		PhotographController.Instance.ResetCamera();
 		this.SetCameraFov(null, null);
 	}
 
-	// Token: 0x06013AD0 RID: 80592 RVA: 0x004EC9AC File Offset: 0x004EABAC
+	// Token: 0x06010FB0 RID: 69552 RVA: 0x004FB5D8 File Offset: 0x004F97D8
 	private void OnPhotographButtonClicked()
 	{
 		if (PhotographController.Instance.IsFightPhotoCameraClosing())
@@ -781,19 +784,19 @@ public class PhotographView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06013AD1 RID: 80593 RVA: 0x004ECA58 File Offset: 0x004EAC58
+	// Token: 0x06010FB1 RID: 69553 RVA: 0x004FB684 File Offset: 0x004F9884
 	protected virtual void OnBackButtonClicked()
 	{
 		PhotographController.Instance.ClosePhotograph(false);
 	}
 
-	// Token: 0x06013AD2 RID: 80594 RVA: 0x004ECA66 File Offset: 0x004EAC66
+	// Token: 0x06010FB2 RID: 69554 RVA: 0x004FB692 File Offset: 0x004F9892
 	private void OnVisibleButtonClicked()
 	{
 		this.SetVisibleMode(false);
 	}
 
-	// Token: 0x06013AD3 RID: 80595 RVA: 0x004ECA70 File Offset: 0x004EAC70
+	// Token: 0x06010FB3 RID: 69555 RVA: 0x004FB69C File Offset: 0x004F989C
 	private void OnEntitySearchGreat()
 	{
 		this.UiViewSequence.PlaySequence("ShowChanging", false, null);
@@ -801,7 +804,7 @@ public class PhotographView : UiTickViewBase
 		AudioSystem.Instance.PostEvent("play_ui_camera_task");
 	}
 
-	// Token: 0x06013AD4 RID: 80596 RVA: 0x004ECAC4 File Offset: 0x004EACC4
+	// Token: 0x06010FB4 RID: 69556 RVA: 0x004FB6F0 File Offset: 0x004F98F0
 	private void OnEntityCameraOneSituationChanged(string description, bool bShow, bool bIsOptional)
 	{
 		EntityInfoItem infoItemByDesc = this.EntityPanel.GetInfoItemByDesc(description);
@@ -811,7 +814,7 @@ public class PhotographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013AD5 RID: 80597 RVA: 0x004ECAE9 File Offset: 0x004EACE9
+	// Token: 0x06010FB5 RID: 69557 RVA: 0x004FB715 File Offset: 0x004F9915
 	private void OnEntityCameraMissTarget()
 	{
 		if (PhotographController.Instance.IsLastChecked)
@@ -821,7 +824,7 @@ public class PhotographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013AD6 RID: 80598 RVA: 0x004ECB1C File Offset: 0x004EAD1C
+	// Token: 0x06010FB6 RID: 69558 RVA: 0x004FB748 File Offset: 0x004F9948
 	private void OnEntityCameraOptionalSituationChanged(string description)
 	{
 		EntityInfoItem infoItemByDesc = this.EntityPanel.GetInfoItemByDesc(description);
@@ -831,7 +834,7 @@ public class PhotographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013AD7 RID: 80599 RVA: 0x004ECB44 File Offset: 0x004EAD44
+	// Token: 0x06010FB7 RID: 69559 RVA: 0x004FB770 File Offset: 0x004F9970
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhotographView.<OnBeforeStartAsync>d__82 <OnBeforeStartAsync>d__;
@@ -842,9 +845,11 @@ public class PhotographView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013AD8 RID: 80600 RVA: 0x004ECB88 File Offset: 0x004EAD88
+	// Token: 0x06010FB8 RID: 69560 RVA: 0x004FB7B4 File Offset: 0x004F99B4
 	protected override void OnBeforeDestroy()
 	{
+		int playerId = CreatureModel.Instance.GetPlayerId();
+		FormationDataController.Instance.RemovePlayerTag(playerId, new int?(GameplayTagDefine.EGameplayTagId["系统.功能.进入拍照"]));
 		this.RemoveChangeFovTimer();
 		PhotographController.Instance.ResetNpcFace();
 		this.EntityPanel.Destroy(null);
@@ -856,7 +861,7 @@ public class PhotographView : UiTickViewBase
 		}
 		this.SceneMarkItem = null;
 		this.TotalScreenPosition.Set(0f, 0f);
-		UiCameraManager.Clear();
+		UiCameraModel.Instance.ClearDisplay();
 		UiLayer.Instance.SetLayerActive(ELayerType.HUD, true);
 		LoadingModel.Instance.IsShowUidView = true;
 		UKuroSequencePerformanceManager.CloseKuroPerformanceMode();
@@ -867,7 +872,7 @@ public class PhotographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013AD9 RID: 80601 RVA: 0x004ECC2C File Offset: 0x004EAE2C
+	// Token: 0x06010FB9 RID: 69561 RVA: 0x004FB888 File Offset: 0x004F9A88
 	private unsafe void RefreshFov()
 	{
 		UUISliderComponent slider = base.GetSlider(10);
@@ -926,7 +931,7 @@ public class PhotographView : UiTickViewBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
 	}
 
-	// Token: 0x06013ADA RID: 80602 RVA: 0x004ECEA8 File Offset: 0x004EB0A8
+	// Token: 0x06010FBA RID: 69562 RVA: 0x004FBB04 File Offset: 0x004F9D04
 	public void SetCameraFov(float? fov = null, bool? updateByInput = null)
 	{
 		UUISliderComponent slider = base.GetSlider(10);
@@ -953,7 +958,7 @@ public class PhotographView : UiTickViewBase
 		PhotographController.Instance.SetFov(cameraInitialFov);
 	}
 
-	// Token: 0x06013ADB RID: 80603 RVA: 0x004ECF88 File Offset: 0x004EB188
+	// Token: 0x06010FBB RID: 69563 RVA: 0x004FBBE4 File Offset: 0x004F9DE4
 	private void ChangeFov(float changeValue)
 	{
 		UUISliderComponent slider = base.GetSlider(10);
@@ -961,13 +966,13 @@ public class PhotographView : UiTickViewBase
 		slider.SetValue(inValue, true);
 	}
 
-	// Token: 0x06013ADC RID: 80604 RVA: 0x004ECFB0 File Offset: 0x004EB1B0
+	// Token: 0x06010FBC RID: 69564 RVA: 0x004FBC0C File Offset: 0x004F9E0C
 	private void OnChangeFovByOption(int fov)
 	{
 		this.SetCameraFov(new float?((float)fov), null);
 	}
 
-	// Token: 0x06013ADD RID: 80605 RVA: 0x004ECFD3 File Offset: 0x004EB1D3
+	// Token: 0x06010FBD RID: 69565 RVA: 0x004FBC2F File Offset: 0x004F9E2F
 	private void OnBtFightPhotoTaskFinish()
 	{
 		FightPhotoOptionPanel fightPhotographOptionPanel = this.FightPhotographOptionPanel;
@@ -978,7 +983,7 @@ public class PhotographView : UiTickViewBase
 		fightPhotographOptionPanel.RefreshTip();
 	}
 
-	// Token: 0x06013ADE RID: 80606 RVA: 0x004ECFE5 File Offset: 0x004EB1E5
+	// Token: 0x06010FBE RID: 69566 RVA: 0x004FBC41 File Offset: 0x004F9E41
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		if (viewName == EUiViewName.FightPhotoResultView)
@@ -998,7 +1003,7 @@ public class PhotographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013ADF RID: 80607 RVA: 0x004ED020 File Offset: 0x004EB220
+	// Token: 0x06010FBF RID: 69567 RVA: 0x004FBC7C File Offset: 0x004F9E7C
 	private void OnOpenViewForTimeDilation(EUiViewName viewName, int viewId)
 	{
 		if (viewName != EUiViewName.PhotoSaveView)
@@ -1012,7 +1017,7 @@ public class PhotographView : UiTickViewBase
 		UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag(this.ViewInfo.Name);
 	}
 
-	// Token: 0x06013AE0 RID: 80608 RVA: 0x004ED057 File Offset: 0x004EB257
+	// Token: 0x06010FC0 RID: 69568 RVA: 0x004FBCB3 File Offset: 0x004F9EB3
 	private void OnCloseViewForTimeDilation(EUiViewName viewName, int viewId)
 	{
 		if (viewName != EUiViewName.PhotoSaveView)
@@ -1026,7 +1031,7 @@ public class PhotographView : UiTickViewBase
 		UiTimeDilation.Instance.AddWaitSetTimeDilationTag(this.ViewInfo.Name);
 	}
 
-	// Token: 0x06013AE1 RID: 80609 RVA: 0x004ED08E File Offset: 0x004EB28E
+	// Token: 0x06010FC1 RID: 69569 RVA: 0x004FBCEA File Offset: 0x004F9EEA
 	public void SetEntityCameraVisibility(bool bIsVisible)
 	{
 		base.GetItem(15).SetUIActive(bIsVisible);
@@ -1038,7 +1043,7 @@ public class PhotographView : UiTickViewBase
 		base.GetItem(17).SetUIActive(true);
 	}
 
-	// Token: 0x06013AE2 RID: 80610 RVA: 0x004ED0C8 File Offset: 0x004EB2C8
+	// Token: 0x06010FC2 RID: 69570 RVA: 0x004FBD24 File Offset: 0x004F9F24
 	private void InitEntityPanel()
 	{
 		bool flag = PhotographController.Instance.CheckIfInEntityCamera();
@@ -1055,7 +1060,7 @@ public class PhotographView : UiTickViewBase
 		this.InitializeMission();
 	}
 
-	// Token: 0x06013AE3 RID: 80611 RVA: 0x004ED110 File Offset: 0x004EB310
+	// Token: 0x06010FC3 RID: 69571 RVA: 0x004FBD6C File Offset: 0x004F9F6C
 	private void InitializeMission()
 	{
 		List<PhotoMission> missions = PhotographController.Instance.Missions;
@@ -1085,7 +1090,7 @@ public class PhotographView : UiTickViewBase
 		this.EntityPanel.SetInfoPanelVisible(false);
 	}
 
-	// Token: 0x06013AE4 RID: 80612 RVA: 0x004ED210 File Offset: 0x004EB410
+	// Token: 0x06010FC4 RID: 69572 RVA: 0x004FBE6C File Offset: 0x004FA06C
 	private void UpdateTxtUi(EntityInfoItem item, bool bShow)
 	{
 		item.RefreshFinishState(bShow);
@@ -1099,13 +1104,13 @@ public class PhotographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013AE5 RID: 80613 RVA: 0x004ED247 File Offset: 0x004EB447
+	// Token: 0x06010FC5 RID: 69573 RVA: 0x004FBEA3 File Offset: 0x004FA0A3
 	private void UpdateTxtLine(EntityInfoItem item, string description)
 	{
 		item.SetTextLine(description);
 	}
 
-	// Token: 0x06013AE6 RID: 80614 RVA: 0x004ED250 File Offset: 0x004EB450
+	// Token: 0x06010FC6 RID: 69574 RVA: 0x004FBEAC File Offset: 0x004FA0AC
 	private FVector2D UpdateVector2D(FVector2D pos)
 	{
 		pos = pos * this.UiRootSize;
@@ -1115,7 +1120,7 @@ public class PhotographView : UiTickViewBase
 		return pos;
 	}
 
-	// Token: 0x06013AE7 RID: 80615 RVA: 0x004ED290 File Offset: 0x004EB490
+	// Token: 0x06010FC7 RID: 69575 RVA: 0x004FBEEC File Offset: 0x004FA0EC
 	private void OnViewPortSizeChange()
 	{
 		APlayerController characterController = Global.CharacterController;
@@ -1132,7 +1137,7 @@ public class PhotographView : UiTickViewBase
 		this.ViewVector2D.Set(-uiRootItem.GetWidth() * 0.5f, -uiRootItem.GetHeight() * 0.5f);
 	}
 
-	// Token: 0x06013AE8 RID: 80616 RVA: 0x004ED30C File Offset: 0x004EB50C
+	// Token: 0x06010FC8 RID: 69576 RVA: 0x004FBF68 File Offset: 0x004FA168
 	private void UpdateIcon(EntityPhotoBehaviorNode node)
 	{
 		List<IPositionData> list = new List<IPositionData>();
@@ -1360,7 +1365,7 @@ public class PhotographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013AE9 RID: 80617 RVA: 0x004EDBDC File Offset: 0x004EBDDC
+	// Token: 0x06010FC9 RID: 69577 RVA: 0x004FC838 File Offset: 0x004FAA38
 	private void InitPhotographMode()
 	{
 		if (PhotographController.Instance.CameraCaptureType == ECameraCaptureType.EntityCamera)
@@ -1371,7 +1376,7 @@ public class PhotographView : UiTickViewBase
 		this.InitNormalCameraMode();
 	}
 
-	// Token: 0x06013AEA RID: 80618 RVA: 0x004EDBF8 File Offset: 0x004EBDF8
+	// Token: 0x06010FCA RID: 69578 RVA: 0x004FC854 File Offset: 0x004FAA54
 	private void InitEntityCameraMode()
 	{
 		base.GetItem(11).SetUIActive(true);
@@ -1380,13 +1385,13 @@ public class PhotographView : UiTickViewBase
 		base.GetButton(7).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x06013AEB RID: 80619 RVA: 0x004EDC63 File Offset: 0x004EBE63
+	// Token: 0x06010FCB RID: 69579 RVA: 0x004FC8BF File Offset: 0x004FAABF
 	private void InitNormalCameraMode()
 	{
 		base.GetItem(11).SetUIActive(true);
 	}
 
-	// Token: 0x06013AEC RID: 80620 RVA: 0x004EDC74 File Offset: 0x004EBE74
+	// Token: 0x06010FCC RID: 69580 RVA: 0x004FC8D0 File Offset: 0x004FAAD0
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1451,130 +1456,130 @@ public class PhotographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0400942E RID: 37934
+	// Token: 0x04009584 RID: 38276
 	private const int CHANGE_FOV_INTERVAL = 100;
 
-	// Token: 0x0400942F RID: 37935
+	// Token: 0x04009585 RID: 38277
 	[Nullable(2)]
 	private TimerHandle ChangeFovTimerId;
 
-	// Token: 0x04009430 RID: 37936
+	// Token: 0x04009586 RID: 38278
 	private FVector2D? LastMoveVector;
 
-	// Token: 0x04009431 RID: 37937
+	// Token: 0x04009587 RID: 38279
 	private float ControlCameraRate;
 
-	// Token: 0x04009432 RID: 37938
+	// Token: 0x04009588 RID: 38280
 	[Nullable(2)]
 	private PhotographEntityPanel EntityPanel;
 
-	// Token: 0x04009433 RID: 37939
+	// Token: 0x04009589 RID: 38281
 	[Nullable(2)]
 	private PhotoSaveMarkItem SceneMarkItem;
 
-	// Token: 0x04009434 RID: 37940
+	// Token: 0x0400958A RID: 38282
 	private bool PreviousVisibleMode = true;
 
-	// Token: 0x04009435 RID: 37941
+	// Token: 0x0400958B RID: 38283
 	private bool PreviousEntityPanelVisible;
 
-	// Token: 0x04009436 RID: 37942
+	// Token: 0x0400958C RID: 38284
 	private FVector2D ViewportSize = new FVector2D(0f, 0f);
 
-	// Token: 0x04009437 RID: 37943
+	// Token: 0x0400958D RID: 38285
 	private FVector2D ViewVector2D = new FVector2D(0f, 0f);
 
-	// Token: 0x04009438 RID: 37944
+	// Token: 0x0400958E RID: 38286
 	private FVector2D PointTransport = new FVector2D(1f, -1f);
 
-	// Token: 0x04009439 RID: 37945
+	// Token: 0x0400958F RID: 38287
 	private FVector2D TotalScreenPosition = new FVector2D(0f, 0f);
 
-	// Token: 0x0400943A RID: 37946
+	// Token: 0x04009590 RID: 38288
 	private FVector2D UiRootSize = new FVector2D(0f, 0f);
 
-	// Token: 0x0400943B RID: 37947
+	// Token: 0x04009591 RID: 38289
 	private FVector2D ZeroPos = new FVector2D(0f, 0f);
 
-	// Token: 0x0400943C RID: 37948
+	// Token: 0x04009592 RID: 38290
 	private bool InDragMove;
 
-	// Token: 0x0400943D RID: 37949
+	// Token: 0x04009593 RID: 38291
 	private bool VisibleMode = true;
 
-	// Token: 0x0400943E RID: 37950
+	// Token: 0x04009594 RID: 38292
 	private float MinFov = 30f;
 
-	// Token: 0x0400943F RID: 37951
+	// Token: 0x04009595 RID: 38293
 	private float MaxFov = 90f;
 
-	// Token: 0x04009440 RID: 37952
+	// Token: 0x04009596 RID: 38294
 	private float CameraZoomSpeed = 1f;
 
-	// Token: 0x04009441 RID: 37953
+	// Token: 0x04009597 RID: 38295
 	[Nullable(2)]
 	private ULevelStreamingDynamic FilterLevelDynamic;
 
-	// Token: 0x04009442 RID: 37954
+	// Token: 0x04009598 RID: 38296
 	[Nullable(2)]
 	private FightPhotoOptionPanel FightPhotographOptionPanel;
 
-	// Token: 0x04009443 RID: 37955
+	// Token: 0x04009599 RID: 38297
 	private readonly List<SimpleLevelSequenceActor> EntityCameraSequenceActors = new List<SimpleLevelSequenceActor>();
 
-	// Token: 0x02008BF2 RID: 35826
+	// Token: 0x02007D7A RID: 32122
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402D6E8 RID: 186088
+		// Token: 0x040289FD RID: 166397
 		UpButton,
-		// Token: 0x0402D6E9 RID: 186089
+		// Token: 0x040289FE RID: 166398
 		DownButton,
-		// Token: 0x0402D6EA RID: 186090
+		// Token: 0x040289FF RID: 166399
 		LeftButton,
-		// Token: 0x0402D6EB RID: 186091
+		// Token: 0x04028A00 RID: 166400
 		RightButton,
-		// Token: 0x0402D6EC RID: 186092
+		// Token: 0x04028A01 RID: 166401
 		AddButton,
-		// Token: 0x0402D6ED RID: 186093
+		// Token: 0x04028A02 RID: 166402
 		ReduceButton,
-		// Token: 0x0402D6EE RID: 186094
+		// Token: 0x04028A03 RID: 166403
 		FovBarSprite,
-		// Token: 0x0402D6EF RID: 186095
+		// Token: 0x04028A04 RID: 166404
 		ResetButton,
-		// Token: 0x0402D6F0 RID: 186096
+		// Token: 0x04028A05 RID: 166405
 		PhotographButton,
-		// Token: 0x0402D6F1 RID: 186097
+		// Token: 0x04028A06 RID: 166406
 		BackButton,
-		// Token: 0x0402D6F2 RID: 186098
+		// Token: 0x04028A07 RID: 166407
 		CameraFovSlider,
-		// Token: 0x0402D6F3 RID: 186099
+		// Token: 0x04028A08 RID: 166408
 		HideItem,
-		// Token: 0x0402D6F4 RID: 186100
+		// Token: 0x04028A09 RID: 166409
 		PanelLeft,
-		// Token: 0x0402D6F5 RID: 186101
+		// Token: 0x04028A0A RID: 166410
 		ControlScreenDraggable,
-		// Token: 0x0402D6F6 RID: 186102
+		// Token: 0x04028A0B RID: 166411
 		SetButton,
-		// Token: 0x0402D6F7 RID: 186103
+		// Token: 0x04028A0C RID: 166412
 		EntityPanel,
-		// Token: 0x0402D6F8 RID: 186104
+		// Token: 0x04028A0D RID: 166413
 		PanelContent,
-		// Token: 0x0402D6F9 RID: 186105
+		// Token: 0x04028A0E RID: 166414
 		PanelTitle,
-		// Token: 0x0402D6FA RID: 186106
+		// Token: 0x04028A0F RID: 166415
 		VisibleButton,
-		// Token: 0x0402D6FB RID: 186107
+		// Token: 0x04028A10 RID: 166416
 		RedDot,
-		// Token: 0x0402D6FC RID: 186108
+		// Token: 0x04028A11 RID: 166417
 		PanelKeyNormal,
-		// Token: 0x0402D6FD RID: 186109
+		// Token: 0x04028A12 RID: 166418
 		ForwardBtn,
-		// Token: 0x0402D6FE RID: 186110
+		// Token: 0x04028A13 RID: 166419
 		BackBtn,
-		// Token: 0x0402D6FF RID: 186111
+		// Token: 0x04028A14 RID: 166420
 		PlayerInfoMark,
-		// Token: 0x0402D700 RID: 186112
+		// Token: 0x04028A15 RID: 166421
 		PanelHideOnly
 	}
 }

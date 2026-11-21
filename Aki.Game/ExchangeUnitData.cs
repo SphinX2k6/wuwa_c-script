@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Item;
 
-// Token: 0x02001FED RID: 8173
+// Token: 0x020014C0 RID: 5312
 public class ExchangeUnitData
 {
-	// Token: 0x0601002F RID: 65583 RVA: 0x003E6D10 File Offset: 0x003E4F10
+	// Token: 0x0600D497 RID: 54423 RVA: 0x003F3308 File Offset: 0x003F1508
 	public void SetDataByItemId(int itemId, int? totalCount = null)
 	{
 		if (ItemConfig.Instance.GetConfig(itemId) != null)
@@ -18,13 +18,13 @@ public class ExchangeUnitData
 		}
 	}
 
-	// Token: 0x04007687 RID: 30343
+	// Token: 0x04007770 RID: 30576
 	public int ItemId;
 
-	// Token: 0x04007688 RID: 30344
+	// Token: 0x04007771 RID: 30577
 	[Nullable(1)]
 	public string Name = "";
 
-	// Token: 0x04007689 RID: 30345
+	// Token: 0x04007772 RID: 30578
 	public int TotalCount = 999999999;
 }

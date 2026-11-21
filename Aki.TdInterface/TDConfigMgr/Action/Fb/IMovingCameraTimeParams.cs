@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028BA RID: 10426
+	// Token: 0x02002B8F RID: 11151
 	public class IMovingCameraTimeParams
 	{
-		// Token: 0x0600E76F RID: 59247 RVA: 0x0021FCB5 File Offset: 0x0021DEB5
-		[NullableContext(1)]
+		// Token: 0x0600F59E RID: 62878 RVA: 0x0023CC35 File Offset: 0x0023AE35
 		public static IMovingCameraTimeParams Create(IMovingCameraTimeParams? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170047BD RID: 18365
-		// (get) Token: 0x0600E770 RID: 59248 RVA: 0x0021FCD4 File Offset: 0x0021DED4
+		// Token: 0x17004B2E RID: 19246
+		// (get) Token: 0x0600F59F RID: 62879 RVA: 0x0023CC54 File Offset: 0x0023AE54
 		public virtual float FadeInTime
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170047BE RID: 18366
-		// (get) Token: 0x0600E771 RID: 59249 RVA: 0x0021FCE1 File Offset: 0x0021DEE1
+		// Token: 0x17004B2F RID: 19247
+		// (get) Token: 0x0600F5A0 RID: 62880 RVA: 0x0023CC61 File Offset: 0x0023AE61
 		public virtual float AfterFadeInStayTime
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170047BF RID: 18367
-		// (get) Token: 0x0600E772 RID: 59250 RVA: 0x0021FCEE File Offset: 0x0021DEEE
+		// Token: 0x17004B30 RID: 19248
+		// (get) Token: 0x0600F5A1 RID: 62881 RVA: 0x0023CC6E File Offset: 0x0023AE6E
 		public virtual float FadeOutTime
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170047C0 RID: 18368
-		// (get) Token: 0x0600E773 RID: 59251 RVA: 0x0021FCFB File Offset: 0x0021DEFB
+		// Token: 0x17004B31 RID: 19249
+		// (get) Token: 0x0600F5A2 RID: 62882 RVA: 0x0023CC7B File Offset: 0x0023AE7B
 		public virtual float BeforeFadeOutStayTime
 		{
 			get
@@ -61,7 +59,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007FEC RID: 32748
+		// Token: 0x040086AB RID: 34475
 		private IMovingCameraTimeParams Instance;
 	}
 }

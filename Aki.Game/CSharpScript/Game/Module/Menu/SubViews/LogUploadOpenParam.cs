@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005421 RID: 21537
+	// Token: 0x02004404 RID: 17412
 	public class LogUploadOpenParam : ILogUploadOpenParam
 	{
-		// Token: 0x17008439 RID: 33849
-		// (get) Token: 0x0603707B RID: 225403 RVA: 0x00D0A280 File Offset: 0x00D08480
-		// (set) Token: 0x0603707C RID: 225404 RVA: 0x00D0A288 File Offset: 0x00D08488
+		// Token: 0x17005805 RID: 22533
+		// (get) Token: 0x0602BFC4 RID: 180164 RVA: 0x00C596A0 File Offset: 0x00C578A0
+		// (set) Token: 0x0602BFC5 RID: 180165 RVA: 0x00C596A8 File Offset: 0x00C578A8
 		public EKuroSdkOpenCustomerServerType? OpenSourceType { get; set; }
 
-		// Token: 0x1700843A RID: 33850
-		// (get) Token: 0x0603707D RID: 225405 RVA: 0x00D0A291 File Offset: 0x00D08491
-		// (set) Token: 0x0603707E RID: 225406 RVA: 0x00D0A299 File Offset: 0x00D08499
+		// Token: 0x17005806 RID: 22534
+		// (get) Token: 0x0602BFC6 RID: 180166 RVA: 0x00C596B1 File Offset: 0x00C578B1
+		// (set) Token: 0x0602BFC7 RID: 180167 RVA: 0x00C596B9 File Offset: 0x00C578B9
 		public bool? AutoStartUpload { get; set; }
 
-		// Token: 0x1700843B RID: 33851
-		// (get) Token: 0x0603707F RID: 225407 RVA: 0x00D0A2A2 File Offset: 0x00D084A2
-		// (set) Token: 0x06037080 RID: 225408 RVA: 0x00D0A2AA File Offset: 0x00D084AA
+		// Token: 0x17005807 RID: 22535
+		// (get) Token: 0x0602BFC8 RID: 180168 RVA: 0x00C596C2 File Offset: 0x00C578C2
+		// (set) Token: 0x0602BFC9 RID: 180169 RVA: 0x00C596CA File Offset: 0x00C578CA
 		public int? ErrorCode { get; set; }
 	}
 }

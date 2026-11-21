@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000745 RID: 1861
+	// Token: 0x0200075D RID: 1885
 	public class ConfigPlayerTitleAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002BAF RID: 11183 RVA: 0x001507F0 File Offset: 0x0014E9F0
+		// Token: 0x06002C3F RID: 11327 RVA: 0x0015726C File Offset: 0x0015546C
 		static ConfigPlayerTitleAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPlayerTitleAll.CreateStaticDefaultValue), new Action(ConfigPlayerTitleAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002BB0 RID: 11184 RVA: 0x00150810 File Offset: 0x0014EA10
+		// Token: 0x06002C40 RID: 11328 RVA: 0x0015728C File Offset: 0x0015548C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPlayerTitleAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002BB1 RID: 11185 RVA: 0x0015088F File Offset: 0x0014EA8F
+		// Token: 0x06002C41 RID: 11329 RVA: 0x0015730B File Offset: 0x0015550B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPlayerTitleAll.LogPair = null;
 			ConfigPlayerTitleAll.HandleId = 0;
 		}
 
-		// Token: 0x06002BB2 RID: 11186 RVA: 0x0015089D File Offset: 0x0014EA9D
+		// Token: 0x06002C42 RID: 11330 RVA: 0x00157319 File Offset: 0x00155519
 		public static void Init()
 		{
 			ConfigPlayerTitleAll.HandleId = ConfigCommon.InitDataStatement(ConfigPlayerTitleAll.HandleId, "db_personaltitle.db", "select BinData from `PlayerTitle`");
 		}
 
-		// Token: 0x06002BB3 RID: 11187 RVA: 0x001508B8 File Offset: 0x0014EAB8
+		// Token: 0x06002C43 RID: 11331 RVA: 0x00157334 File Offset: 0x00155534
 		[NullableContext(2)]
 		public static IReadOnlyList<PlayerTitle> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040032C9 RID: 13001
+		// Token: 0x04003371 RID: 13169
 		private const string DB = "db_personaltitle.db";
 
-		// Token: 0x040032CA RID: 13002
+		// Token: 0x04003372 RID: 13170
 		private const string FILE = "c.称号.xlsx";
 
-		// Token: 0x040032CB RID: 13003
+		// Token: 0x04003373 RID: 13171
 		private const string TABLE = "PlayerTitle";
 
-		// Token: 0x040032CC RID: 13004
+		// Token: 0x04003374 RID: 13172
 		private const string COMMAND = "select BinData from `PlayerTitle`";
 
-		// Token: 0x040032CD RID: 13005
+		// Token: 0x04003375 RID: 13173
 		private const string KEY_PREFIX = "PlayerTitleAll";
 
-		// Token: 0x040032CE RID: 13006
+		// Token: 0x04003376 RID: 13174
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040032CF RID: 13007
+		// Token: 0x04003377 RID: 13175
 		private static int HandleId;
 	}
 }

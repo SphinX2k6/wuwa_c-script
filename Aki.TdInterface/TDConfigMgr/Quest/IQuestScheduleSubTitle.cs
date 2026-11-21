@@ -6,13 +6,13 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010B3 RID: 4275
+	// Token: 0x020011E1 RID: 4577
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IQuestScheduleSubTitle
 	{
-		// Token: 0x0600606E RID: 24686 RVA: 0x000E920C File Offset: 0x000E740C
-		[NullableContext(1)]
+		// Token: 0x06006667 RID: 26215 RVA: 0x000F632C File Offset: 0x000F452C
+		[NullableContext(0)]
 		private IQuestScheduleSubTitle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +27,8 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600606F RID: 24687 RVA: 0x000E9244 File Offset: 0x000E7444
-		[NullableContext(1)]
+		// Token: 0x06006668 RID: 26216 RVA: 0x000F6364 File Offset: 0x000F4564
+		[NullableContext(0)]
 		public static IQuestScheduleSubTitle Create([Nullable(2)] IQuestScheduleSubTitle instance)
 		{
 			if (instance == null)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006070 RID: 24688 RVA: 0x000E9257 File Offset: 0x000E7457
-		[NullableContext(1)]
+		// Token: 0x06006669 RID: 26217 RVA: 0x000F6377 File Offset: 0x000F4577
+		[NullableContext(0)]
 		public static IQuestScheduleSubTitle CreateFromSetValue([Nullable(2)] IQuestScheduleSubTitle_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006071 RID: 24689 RVA: 0x000E926C File Offset: 0x000E746C
-		[NullableContext(1)]
+		// Token: 0x0600666A RID: 26218 RVA: 0x000F638C File Offset: 0x000F458C
+		[NullableContext(0)]
 		public IQuestScheduleSubTitle_SetValue ToSetValue()
 		{
 			return new IQuestScheduleSubTitle_SetValue
@@ -73,13 +73,13 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001FAE RID: 8110
-		// (get) Token: 0x06006072 RID: 24690 RVA: 0x000E92EA File Offset: 0x000E74EA
-		// (set) Token: 0x06006073 RID: 24691 RVA: 0x000E9315 File Offset: 0x000E7515
-		[Nullable(1)]
+		// Token: 0x17002160 RID: 8544
+		// (get) Token: 0x0600666B RID: 26219 RVA: 0x000F640A File Offset: 0x000F460A
+		// (set) Token: 0x0600666C RID: 26220 RVA: 0x000F6435 File Offset: 0x000F4635
+		[Nullable(0)]
 		public virtual string TidTitle
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -92,16 +92,16 @@ namespace Aki.TDConfigMgr.Quest
 				}
 				return this.PocoInterface.TidTitle;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().TidTitle = value;
 			}
 		}
 
-		// Token: 0x17001FAF RID: 8111
-		// (get) Token: 0x06006074 RID: 24692 RVA: 0x000E9323 File Offset: 0x000E7523
-		// (set) Token: 0x06006075 RID: 24693 RVA: 0x000E934A File Offset: 0x000E754A
+		// Token: 0x17002161 RID: 8545
+		// (get) Token: 0x0600666D RID: 26221 RVA: 0x000F6443 File Offset: 0x000F4643
+		// (set) Token: 0x0600666E RID: 26222 RVA: 0x000F646A File Offset: 0x000F466A
 		public virtual IQuestScheduleType QuestScheduleType
 		{
 			get
@@ -123,9 +123,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FB0 RID: 8112
-		// (get) Token: 0x06006076 RID: 24694 RVA: 0x000E9358 File Offset: 0x000E7558
-		// (set) Token: 0x06006077 RID: 24695 RVA: 0x000E93B9 File Offset: 0x000E75B9
+		// Token: 0x17002162 RID: 8546
+		// (get) Token: 0x0600666F RID: 26223 RVA: 0x000F6478 File Offset: 0x000F4678
+		// (set) Token: 0x06006670 RID: 26224 RVA: 0x000F64D9 File Offset: 0x000F46D9
 		public virtual IConditionGroup ShowConditions
 		{
 			get
@@ -153,9 +153,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FB1 RID: 8113
-		// (get) Token: 0x06006078 RID: 24696 RVA: 0x000E93D0 File Offset: 0x000E75D0
-		// (set) Token: 0x06006079 RID: 24697 RVA: 0x000E940A File Offset: 0x000E760A
+		// Token: 0x17002163 RID: 8547
+		// (get) Token: 0x06006671 RID: 26225 RVA: 0x000F64F0 File Offset: 0x000F46F0
+		// (set) Token: 0x06006672 RID: 26226 RVA: 0x000F652A File Offset: 0x000F472A
 		public virtual int? CustomIcon
 		{
 			get
@@ -177,9 +177,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FB2 RID: 8114
-		// (get) Token: 0x0600607A RID: 24698 RVA: 0x000E9418 File Offset: 0x000E7618
-		// (set) Token: 0x0600607B RID: 24699 RVA: 0x000E9479 File Offset: 0x000E7679
+		// Token: 0x17002164 RID: 8548
+		// (get) Token: 0x06006673 RID: 26227 RVA: 0x000F6538 File Offset: 0x000F4738
+		// (set) Token: 0x06006674 RID: 26228 RVA: 0x000F6599 File Offset: 0x000F4799
 		public virtual IProgressBar ProgressBar
 		{
 			get
@@ -207,20 +207,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FB3 RID: 8115
-		// (get) Token: 0x0600607C RID: 24700 RVA: 0x000E9490 File Offset: 0x000E7690
-		// (set) Token: 0x0600607D RID: 24701 RVA: 0x000E9523 File Offset: 0x000E7723
+		// Token: 0x17002165 RID: 8549
+		// (get) Token: 0x06006675 RID: 26229 RVA: 0x000F65B0 File Offset: 0x000F47B0
+		// (set) Token: 0x06006676 RID: 26230 RVA: 0x000F6643 File Offset: 0x000F4843
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IConditionText> ConditionText
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -251,7 +251,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -260,9 +260,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FB4 RID: 8116
-		// (get) Token: 0x0600607E RID: 24702 RVA: 0x000E9538 File Offset: 0x000E7738
-		// (set) Token: 0x0600607F RID: 24703 RVA: 0x000E9572 File Offset: 0x000E7772
+		// Token: 0x17002166 RID: 8550
+		// (get) Token: 0x06006677 RID: 26231 RVA: 0x000F6658 File Offset: 0x000F4858
+		// (set) Token: 0x06006678 RID: 26232 RVA: 0x000F6692 File Offset: 0x000F4892
 		public virtual bool? BlankTitleStillShow
 		{
 			get
@@ -284,20 +284,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FB5 RID: 8117
-		// (get) Token: 0x06006080 RID: 24704 RVA: 0x000E9580 File Offset: 0x000E7780
-		// (set) Token: 0x06006081 RID: 24705 RVA: 0x000E9613 File Offset: 0x000E7813
+		// Token: 0x17002167 RID: 8551
+		// (get) Token: 0x06006679 RID: 26233 RVA: 0x000F66A0 File Offset: 0x000F48A0
+		// (set) Token: 0x0600667A RID: 26234 RVA: 0x000F6733 File Offset: 0x000F4933
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ICustomPlaceholderBindingProgress> CustomPlaceholderBindingProgressList
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -328,7 +328,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -337,9 +337,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FB6 RID: 8118
-		// (get) Token: 0x06006082 RID: 24706 RVA: 0x000E9628 File Offset: 0x000E7828
-		// (set) Token: 0x06006083 RID: 24707 RVA: 0x000E963F File Offset: 0x000E783F
+		// Token: 0x17002168 RID: 8552
+		// (get) Token: 0x0600667B RID: 26235 RVA: 0x000F6748 File Offset: 0x000F4948
+		// (set) Token: 0x0600667C RID: 26236 RVA: 0x000F675F File Offset: 0x000F495F
 		public virtual string EdTidTitle
 		{
 			get
@@ -356,46 +356,46 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003A1B RID: 14875
+		// Token: 0x04003D68 RID: 15720
 		protected IQuestScheduleSubTitle FbInstance;
 
-		// Token: 0x04003A1C RID: 14876
+		// Token: 0x04003D69 RID: 15721
 		protected IQuestScheduleSubTitle_SetValue PocoInterface;
 
-		// Token: 0x04003A1D RID: 14877
-		[Nullable(1)]
+		// Token: 0x04003D6A RID: 15722
+		[Nullable(0)]
 		private IConditionGroup _ShowConditionsCache;
 
-		// Token: 0x04003A1E RID: 14878
+		// Token: 0x04003D6B RID: 15723
 		private bool _ShowConditionsInited;
 
-		// Token: 0x04003A1F RID: 14879
-		[Nullable(1)]
+		// Token: 0x04003D6C RID: 15724
+		[Nullable(0)]
 		private IProgressBar _ProgressBarCache;
 
-		// Token: 0x04003A20 RID: 14880
+		// Token: 0x04003D6D RID: 15725
 		private bool _ProgressBarInited;
 
-		// Token: 0x04003A21 RID: 14881
+		// Token: 0x04003D6E RID: 15726
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IConditionText> _ConditionTextCache;
 
-		// Token: 0x04003A22 RID: 14882
+		// Token: 0x04003D6F RID: 15727
 		private bool _ConditionTextInited;
 
-		// Token: 0x04003A23 RID: 14883
+		// Token: 0x04003D70 RID: 15728
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ICustomPlaceholderBindingProgress> _CustomPlaceholderBindingProgressListCache;
 
-		// Token: 0x04003A24 RID: 14884
+		// Token: 0x04003D71 RID: 15729
 		private bool _CustomPlaceholderBindingProgressListInited;
 	}
 }

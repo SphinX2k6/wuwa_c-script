@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DBF RID: 19903
+	// Token: 0x020052C3 RID: 21187
 	public enum EInteractTurnAround : byte
 	{
-		// Token: 0x0400DA06 RID: 55814
+		// Token: 0x0400E555 RID: 58709
 		FaceEachOther,
-		// Token: 0x0400DA07 RID: 55815
+		// Token: 0x0400E556 RID: 58710
 		FaceEachOtherWithRecoveryImmediately,
-		// Token: 0x0400DA08 RID: 55816
+		// Token: 0x0400E557 RID: 58711
 		PlayerTurnToInteractor
 	}
 }

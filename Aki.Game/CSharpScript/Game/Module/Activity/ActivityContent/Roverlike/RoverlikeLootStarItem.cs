@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006167 RID: 24935
+	// Token: 0x020050E5 RID: 20709
 	public class RoverlikeLootStarItem : RoverlikeMultiUseGridProxyAbstract<bool>
 	{
-		// Token: 0x0603F07B RID: 258171 RVA: 0x00F3AFE8 File Offset: 0x00F391E8
+		// Token: 0x06033D3B RID: 212283 RVA: 0x00E81EBC File Offset: 0x00E800BC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F07C RID: 258172 RVA: 0x00F3B030 File Offset: 0x00F39230
+		// Token: 0x06033D3C RID: 212284 RVA: 0x00E81F04 File Offset: 0x00E80104
 		public override void Refresh(bool data, bool isSelected, int gridIndex)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -31,10 +31,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			sprite.SetUIActive(data);
 		}
 
-		// Token: 0x0200C3CB RID: 50123
+		// Token: 0x0200ADB2 RID: 44466
 		private class EComponents
 		{
-			// Token: 0x0403B158 RID: 242008
+			// Token: 0x04035AB9 RID: 219833
 			public const int SpLight = 0;
 		}
 	}

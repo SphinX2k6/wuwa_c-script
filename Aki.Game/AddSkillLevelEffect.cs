@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002F58 RID: 12120
+// Token: 0x020024AB RID: 9387
 [NullableContext(1)]
 [Nullable(0)]
 public class AddSkillLevelEffect : BuffEffect
 {
-	// Token: 0x06019CB6 RID: 105654 RVA: 0x006BA189 File Offset: 0x006B8389
+	// Token: 0x060175C1 RID: 95681 RVA: 0x006E04A5 File Offset: 0x006DE6A5
 	public AddSkillLevelEffect(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019CB7 RID: 105655 RVA: 0x006BA1A4 File Offset: 0x006B83A4
+	// Token: 0x060175C2 RID: 95682 RVA: 0x006E04C0 File Offset: 0x006DE6C0
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -35,7 +35,7 @@ public class AddSkillLevelEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019CB8 RID: 105656 RVA: 0x006BA20C File Offset: 0x006B840C
+	// Token: 0x060175C3 RID: 95683 RVA: 0x006E0528 File Offset: 0x006DE728
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
@@ -47,7 +47,7 @@ public class AddSkillLevelEffect : BuffEffect
 		return this.AddLevelMap.GetValueOrDefault(key, 0);
 	}
 
-	// Token: 0x06019CB9 RID: 105657 RVA: 0x006BA240 File Offset: 0x006B8440
+	// Token: 0x060175C4 RID: 95684 RVA: 0x006E055C File Offset: 0x006DE75C
 	public static int ApplyEffects(Entity ownerEntity, Aki.Config.Skill skill, int skillLevel)
 	{
 		BaseBuffComponent component = ownerEntity.GetComponent<BaseBuffComponent>();
@@ -94,7 +94,7 @@ public class AddSkillLevelEffect : BuffEffect
 		return Math.Min(num, valueOrDefault);
 	}
 
-	// Token: 0x06019CBA RID: 105658 RVA: 0x006BA3B4 File Offset: 0x006B85B4
+	// Token: 0x060175C5 RID: 95685 RVA: 0x006E06D0 File Offset: 0x006DE8D0
 	public override string GetDebugEffectString()
 	{
 		string text = "";
@@ -112,6 +112,6 @@ public class AddSkillLevelEffect : BuffEffect
 		return text;
 	}
 
-	// Token: 0x0400C26F RID: 49775
+	// Token: 0x0400C611 RID: 50705
 	public Dictionary<int, int> AddLevelMap = new Dictionary<int, int>();
 }

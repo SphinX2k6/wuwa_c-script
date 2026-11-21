@@ -5,68 +5,68 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.MovieMode
 {
-	// Token: 0x0200537F RID: 21375
+	// Token: 0x02004362 RID: 17250
 	[NullableContext(2)]
 	public interface IEnterMovieModeParams
 	{
-		// Token: 0x17008363 RID: 33635
-		// (get) Token: 0x060369B9 RID: 223673
-		// (set) Token: 0x060369BA RID: 223674
+		// Token: 0x1700572F RID: 22319
+		// (get) Token: 0x0602B8FF RID: 178431
+		// (set) Token: 0x0602B900 RID: 178432
 		float BlendTime { get; set; }
 
-		// Token: 0x17008364 RID: 33636
-		// (get) Token: 0x060369BB RID: 223675
-		// (set) Token: 0x060369BC RID: 223676
+		// Token: 0x17005730 RID: 22320
+		// (get) Token: 0x0602B901 RID: 178433
+		// (set) Token: 0x0602B902 RID: 178434
 		IMovieCameraConfig MovieCameraConfig { get; set; }
 
-		// Token: 0x17008365 RID: 33637
-		// (get) Token: 0x060369BD RID: 223677
-		// (set) Token: 0x060369BE RID: 223678
+		// Token: 0x17005731 RID: 22321
+		// (get) Token: 0x0602B903 RID: 178435
+		// (set) Token: 0x0602B904 RID: 178436
 		float? DelayDuration { get; set; }
 
-		// Token: 0x17008366 RID: 33638
-		// (get) Token: 0x060369BF RID: 223679
-		// (set) Token: 0x060369C0 RID: 223680
+		// Token: 0x17005732 RID: 22322
+		// (get) Token: 0x0602B905 RID: 178437
+		// (set) Token: 0x0602B906 RID: 178438
 		bool? IsEnableEsc { get; set; }
 
-		// Token: 0x17008367 RID: 33639
-		// (get) Token: 0x060369C1 RID: 223681
-		// (set) Token: 0x060369C2 RID: 223682
+		// Token: 0x17005733 RID: 22323
+		// (get) Token: 0x0602B907 RID: 178439
+		// (set) Token: 0x0602B908 RID: 178440
 		bool? IsEnablePhoto { get; set; }
 
-		// Token: 0x17008368 RID: 33640
-		// (get) Token: 0x060369C3 RID: 223683
-		// (set) Token: 0x060369C4 RID: 223684
+		// Token: 0x17005734 RID: 22324
+		// (get) Token: 0x0602B909 RID: 178441
+		// (set) Token: 0x0602B90A RID: 178442
 		bool? IsAutoExitInFlowSequence { get; set; }
 
-		// Token: 0x17008369 RID: 33641
-		// (get) Token: 0x060369C5 RID: 223685
-		// (set) Token: 0x060369C6 RID: 223686
+		// Token: 0x17005735 RID: 22325
+		// (get) Token: 0x0602B90B RID: 178443
+		// (set) Token: 0x0602B90C RID: 178444
 		bool? IsBanAdaptation { get; set; }
 
-		// Token: 0x1700836A RID: 33642
-		// (get) Token: 0x060369C7 RID: 223687
-		// (set) Token: 0x060369C8 RID: 223688
+		// Token: 0x17005736 RID: 22326
+		// (get) Token: 0x0602B90D RID: 178445
+		// (set) Token: 0x0602B90E RID: 178446
 		UiPanelBase Parent { get; set; }
 
-		// Token: 0x1700836B RID: 33643
-		// (get) Token: 0x060369C9 RID: 223689
-		// (set) Token: 0x060369CA RID: 223690
+		// Token: 0x17005737 RID: 22327
+		// (get) Token: 0x0602B90F RID: 178447
+		// (set) Token: 0x0602B910 RID: 178448
 		ELayerType? UiLayer { get; set; }
 
-		// Token: 0x1700836C RID: 33644
-		// (get) Token: 0x060369CB RID: 223691
-		// (set) Token: 0x060369CC RID: 223692
+		// Token: 0x17005738 RID: 22328
+		// (get) Token: 0x0602B911 RID: 178449
+		// (set) Token: 0x0602B912 RID: 178450
 		ELayerType[] AdaptUiLayers { get; set; }
 
-		// Token: 0x1700836D RID: 33645
-		// (get) Token: 0x060369CD RID: 223693
-		// (set) Token: 0x060369CE RID: 223694
+		// Token: 0x17005739 RID: 22329
+		// (get) Token: 0x0602B913 RID: 178451
+		// (set) Token: 0x0602B914 RID: 178452
 		bool? IsIgnoreUiLayerVisible { get; set; }
 
-		// Token: 0x1700836E RID: 33646
-		// (get) Token: 0x060369CF RID: 223695
-		// (set) Token: 0x060369D0 RID: 223696
+		// Token: 0x1700573A RID: 22330
+		// (get) Token: 0x0602B915 RID: 178453
+		// (set) Token: 0x0602B916 RID: 178454
 		bool? IsNeedMovieModeUi { get; set; }
 	}
 }

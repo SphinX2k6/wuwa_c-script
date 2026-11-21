@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200462C RID: 17964
+	// Token: 0x02003556 RID: 13654
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class UiBehaviorModelInput : IUiBehavior
 	{
-		// Token: 0x0602E44B RID: 189515 RVA: 0x00AB230E File Offset: 0x00AB050E
+		// Token: 0x06022B5E RID: 142174 RVA: 0x009DF09E File Offset: 0x009DD29E
 		[NullableContext(1)]
 		public void InitData(IUiModelInputData data)
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Ui
 			this.OnInitData();
 		}
 
-		// Token: 0x0602E44C RID: 189516 RVA: 0x00AB2320 File Offset: 0x00AB0520
+		// Token: 0x06022B5F RID: 142175 RVA: 0x009DF0B0 File Offset: 0x009DD2B0
 		public UniTask OnUiCreateAsync()
 		{
 			UiBehaviorModelInput.<OnUiCreateAsync>d__15 <OnUiCreateAsync>d__;
@@ -31,26 +31,26 @@ namespace CSharpScript.Game.Ui
 			return <OnUiCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E44D RID: 189517 RVA: 0x00AB235B File Offset: 0x00AB055B
-		public void OnAfterUiStart()
+		// Token: 0x06022B60 RID: 142176 RVA: 0x009DF0EB File Offset: 0x009DD2EB
+		public void OnUiStart()
 		{
 		}
 
-		// Token: 0x0602E44E RID: 189518 RVA: 0x00AB235D File Offset: 0x00AB055D
-		public void OnAfterUiShow()
+		// Token: 0x06022B61 RID: 142177 RVA: 0x009DF0ED File Offset: 0x009DD2ED
+		public void OnUiShow()
 		{
 			this.AddInputEventListener();
 		}
 
-		// Token: 0x0602E44F RID: 189519 RVA: 0x00AB2365 File Offset: 0x00AB0565
-		public void OnBeforeUiHide()
+		// Token: 0x06022B62 RID: 142178 RVA: 0x009DF0F5 File Offset: 0x009DD2F5
+		public void OnUiHide()
 		{
 			this.ResetInputState();
 			this.RemoveInputEventListener();
 		}
 
-		// Token: 0x0602E450 RID: 189520 RVA: 0x00AB2373 File Offset: 0x00AB0573
-		public void OnBeforeDestroy()
+		// Token: 0x06022B63 RID: 142179 RVA: 0x009DF103 File Offset: 0x009DD303
+		public void OnDestroy()
 		{
 			this.ResetInputState();
 			this.RemoveInputEventListener();
@@ -58,14 +58,14 @@ namespace CSharpScript.Game.Ui
 			this.InputDataComponent = null;
 		}
 
-		// Token: 0x0602E451 RID: 189521 RVA: 0x00AB238F File Offset: 0x00AB058F
+		// Token: 0x06022B64 RID: 142180 RVA: 0x009DF11F File Offset: 0x009DD31F
 		private void OnInitData()
 		{
 			IUiModelInputData data = this.Data;
 			this.InputDataComponent = ((data != null) ? data.ModelBase.CheckGetComponent<UiModelInputDataComponent>() : null);
 		}
 
-		// Token: 0x0602E452 RID: 189522 RVA: 0x00AB23B0 File Offset: 0x00AB05B0
+		// Token: 0x06022B65 RID: 142181 RVA: 0x009DF140 File Offset: 0x009DD340
 		private void ResetInputState()
 		{
 			this.CurrentDragPosition = null;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Ui
 			inputDataComponent3.UpdateAxisInput(ERotateAxis.Roll, 0f);
 		}
 
-		// Token: 0x0602E453 RID: 189523 RVA: 0x00AB2444 File Offset: 0x00AB0644
+		// Token: 0x06022B66 RID: 142182 RVA: 0x009DF1D4 File Offset: 0x009DD3D4
 		protected void AddInputEventListener()
 		{
 			if (this.IsInputEventListening || this.Data == null)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Ui
 			this.IsInputEventListening = true;
 		}
 
-		// Token: 0x0602E454 RID: 189524 RVA: 0x00AB24F0 File Offset: 0x00AB06F0
+		// Token: 0x06022B67 RID: 142183 RVA: 0x009DF280 File Offset: 0x009DD480
 		protected void RemoveInputEventListener()
 		{
 			if (!this.IsInputEventListening || this.Data == null)
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Ui
 			this.IsInputEventListening = false;
 		}
 
-		// Token: 0x0602E455 RID: 189525 RVA: 0x00AB2578 File Offset: 0x00AB0778
+		// Token: 0x06022B68 RID: 142184 RVA: 0x009DF308 File Offset: 0x009DD508
 		private void OnPointerBeginDragCallBack(ULGUIPointerEventData eventData)
 		{
 			if (!this.CanModelInput)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Ui
 			onDragBegin();
 		}
 
-		// Token: 0x0602E456 RID: 189526 RVA: 0x00AB25C0 File Offset: 0x00AB07C0
+		// Token: 0x06022B69 RID: 142185 RVA: 0x009DF350 File Offset: 0x009DD550
 		private void OnPointerDragCallBack(ULGUIPointerEventData eventData)
 		{
 			if (!this.CanModelInput || TouchFingerManager.Instance.GetTouchFingerCount() > 1)
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Ui
 			inputDataComponent2.UpdateAxisInput(ERotateAxis.Pitch, this.FilterDragAxisInput(value2));
 		}
 
-		// Token: 0x0602E457 RID: 189527 RVA: 0x00AB269F File Offset: 0x00AB089F
+		// Token: 0x06022B6A RID: 142186 RVA: 0x009DF42F File Offset: 0x009DD62F
 		private void OnPointerEndDragCallBack(ULGUIPointerEventData _)
 		{
 			if (!this.CanModelInput)
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Ui
 			onDragEnd();
 		}
 
-		// Token: 0x0602E458 RID: 189528 RVA: 0x00AB26CC File Offset: 0x00AB08CC
+		// Token: 0x06022B6B RID: 142187 RVA: 0x009DF45C File Offset: 0x009DD65C
 		private void OnInputUiLookUp(float value)
 		{
 			if (!this.CanModelInput || !Info.Instance.IsInGamepad())
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Ui
 			this.UpdateGamepadInputState();
 		}
 
-		// Token: 0x0602E459 RID: 189529 RVA: 0x00AB271C File Offset: 0x00AB091C
+		// Token: 0x06022B6C RID: 142188 RVA: 0x009DF4AC File Offset: 0x009DD6AC
 		private void OnInputUiTurn(float value)
 		{
 			if (!this.CanModelInput || !Info.Instance.IsInGamepad())
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Ui
 			this.UpdateGamepadInputState();
 		}
 
-		// Token: 0x0602E45A RID: 189530 RVA: 0x00AB2769 File Offset: 0x00AB0969
+		// Token: 0x06022B6D RID: 142189 RVA: 0x009DF4F9 File Offset: 0x009DD6F9
 		private float FilterGamepadAxisInput(float value)
 		{
 			if (Math.Abs(value) >= 0.1f)
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Ui
 			return 0f;
 		}
 
-		// Token: 0x0602E45B RID: 189531 RVA: 0x00AB277F File Offset: 0x00AB097F
+		// Token: 0x06022B6E RID: 142190 RVA: 0x009DF50F File Offset: 0x009DD70F
 		private float FilterDragAxisInput(float value)
 		{
 			if (Math.Abs(value) >= 1f)
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Ui
 			return 0f;
 		}
 
-		// Token: 0x0602E45C RID: 189532 RVA: 0x00AB2798 File Offset: 0x00AB0998
+		// Token: 0x06022B6F RID: 142191 RVA: 0x009DF528 File Offset: 0x009DD728
 		private void UpdateGamepadInputState()
 		{
 			bool flag = this.CurrentGamepadYaw != 0f || this.CurrentGamepadPitch != 0f;
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.Ui
 			onGamepadInputBegin();
 		}
 
-		// Token: 0x0602E45D RID: 189533 RVA: 0x00AB280B File Offset: 0x00AB0A0B
+		// Token: 0x06022B70 RID: 142192 RVA: 0x009DF59B File Offset: 0x009DD79B
 		private void ResetRotateAxisInput()
 		{
 			UiModelInputDataComponent inputDataComponent = this.InputDataComponent;
@@ -288,46 +288,46 @@ namespace CSharpScript.Game.Ui
 			inputDataComponent2.UpdateAxisInput(ERotateAxis.Pitch, 0f);
 		}
 
-		// Token: 0x04018D55 RID: 101717
+		// Token: 0x040133A2 RID: 78754
 		private const float GamepadAxisDeadZone = 0.1f;
 
-		// Token: 0x04018D56 RID: 101718
+		// Token: 0x040133A3 RID: 78755
 		private const float DragAxisThreshold = 1f;
 
-		// Token: 0x04018D57 RID: 101719
+		// Token: 0x040133A4 RID: 78756
 		private IUiModelInputData Data;
 
-		// Token: 0x04018D58 RID: 101720
+		// Token: 0x040133A5 RID: 78757
 		private UiModelInputDataComponent InputDataComponent;
 
-		// Token: 0x04018D59 RID: 101721
+		// Token: 0x040133A6 RID: 78758
 		private FVector? CurrentDragPosition;
 
-		// Token: 0x04018D5A RID: 101722
+		// Token: 0x040133A7 RID: 78759
 		private bool IsInputEventListening;
 
-		// Token: 0x04018D5B RID: 101723
+		// Token: 0x040133A8 RID: 78760
 		private bool IsGamepadInputActive;
 
-		// Token: 0x04018D5C RID: 101724
+		// Token: 0x040133A9 RID: 78761
 		private float CurrentGamepadYaw;
 
-		// Token: 0x04018D5D RID: 101725
+		// Token: 0x040133AA RID: 78762
 		private float CurrentGamepadPitch;
 
-		// Token: 0x04018D5E RID: 101726
+		// Token: 0x040133AB RID: 78763
 		public bool CanModelInput = true;
 
-		// Token: 0x04018D5F RID: 101727
+		// Token: 0x040133AC RID: 78764
 		public Action OnDragBegin;
 
-		// Token: 0x04018D60 RID: 101728
+		// Token: 0x040133AD RID: 78765
 		public Action OnDragEnd;
 
-		// Token: 0x04018D61 RID: 101729
+		// Token: 0x040133AE RID: 78766
 		public Action OnGamepadInputBegin;
 
-		// Token: 0x04018D62 RID: 101730
+		// Token: 0x040133AF RID: 78767
 		public Action OnGamepadInputEnd;
 	}
 }

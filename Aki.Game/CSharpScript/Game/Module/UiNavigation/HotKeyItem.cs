@@ -5,10 +5,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049EB RID: 18923
+	// Token: 0x02003965 RID: 14693
 	public abstract class HotKeyItem : UiPanelBase
 	{
-		// Token: 0x06031246 RID: 201286
+		// Token: 0x06025D7C RID: 155004
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -16,13 +16,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 		})]
 		public abstract List<HotKeyComponent> GetHotKeyComponentArray();
 
-		// Token: 0x06031247 RID: 201287 RVA: 0x00B65A03 File Offset: 0x00B63C03
+		// Token: 0x06025D7D RID: 155005 RVA: 0x00AA0953 File Offset: 0x00A9EB53
 		public void Clear()
 		{
 			this.OnClear();
 		}
 
-		// Token: 0x06031248 RID: 201288 RVA: 0x00B65A0B File Offset: 0x00B63C0B
+		// Token: 0x06025D7E RID: 155006 RVA: 0x00AA095B File Offset: 0x00A9EB5B
 		protected virtual void OnClear()
 		{
 		}

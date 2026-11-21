@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C01 RID: 23553
+	// Token: 0x02006220 RID: 25120
 	public class TCsvWuWaGoLevelDataT
 	{
-		// Token: 0x1700B1DD RID: 45533
-		// (get) Token: 0x0602868D RID: 165517 RVA: 0x00590120 File Offset: 0x0058E320
-		// (set) Token: 0x0602868E RID: 165518 RVA: 0x00590128 File Offset: 0x0058E328
+		// Token: 0x1700BB2B RID: 47915
+		// (get) Token: 0x0602AC7D RID: 175229 RVA: 0x005D8068 File Offset: 0x005D6268
+		// (set) Token: 0x0602AC7E RID: 175230 RVA: 0x005D8070 File Offset: 0x005D6270
 		public string Key { get; set; }
 
-		// Token: 0x1700B1DE RID: 45534
-		// (get) Token: 0x0602868F RID: 165519 RVA: 0x00590131 File Offset: 0x0058E331
-		// (set) Token: 0x06028690 RID: 165520 RVA: 0x00590139 File Offset: 0x0058E339
+		// Token: 0x1700BB2C RID: 47916
+		// (get) Token: 0x0602AC7F RID: 175231 RVA: 0x005D8079 File Offset: 0x005D6279
+		// (set) Token: 0x0602AC80 RID: 175232 RVA: 0x005D8081 File Offset: 0x005D6281
 		public List<IWuWaGoGridDataT> GridDatas { get; set; }
 
-		// Token: 0x1700B1DF RID: 45535
-		// (get) Token: 0x06028691 RID: 165521 RVA: 0x00590142 File Offset: 0x0058E342
-		// (set) Token: 0x06028692 RID: 165522 RVA: 0x0059014A File Offset: 0x0058E34A
+		// Token: 0x1700BB2D RID: 47917
+		// (get) Token: 0x0602AC81 RID: 175233 RVA: 0x005D808A File Offset: 0x005D628A
+		// (set) Token: 0x0602AC82 RID: 175234 RVA: 0x005D8092 File Offset: 0x005D6292
 		public List<IWuWaGoRoleInfoT> RoleList { get; set; }
 
-		// Token: 0x06028693 RID: 165523 RVA: 0x00590153 File Offset: 0x0058E353
+		// Token: 0x0602AC83 RID: 175235 RVA: 0x005D809B File Offset: 0x005D629B
 		public TCsvWuWaGoLevelDataT()
 		{
 			this.Key = null;

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CAC RID: 27820
+	// Token: 0x02007422 RID: 29730
 	public class IPhoneSystemInteractT
 	{
-		// Token: 0x1700CF26 RID: 53030
-		// (get) Token: 0x06031077 RID: 200823 RVA: 0x006A7A3D File Offset: 0x006A5C3D
-		// (set) Token: 0x06031078 RID: 200824 RVA: 0x006A7A45 File Offset: 0x006A5C45
+		// Token: 0x1700DA63 RID: 55907
+		// (get) Token: 0x0603404E RID: 213070 RVA: 0x00702C71 File Offset: 0x00700E71
+		// (set) Token: 0x0603404F RID: 213071 RVA: 0x00702C79 File Offset: 0x00700E79
 		public TPhoneSystemInteractUnion InteractType { get; set; }
 
-		// Token: 0x06031079 RID: 200825 RVA: 0x006A7A4E File Offset: 0x006A5C4E
+		// Token: 0x06034050 RID: 213072 RVA: 0x00702C82 File Offset: 0x00700E82
 		public IPhoneSystemInteractT()
 		{
 			this.InteractType = null;

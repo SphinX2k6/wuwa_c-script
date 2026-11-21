@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B67 RID: 19303
+	// Token: 0x02003B0F RID: 15119
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseTopHudHook : IBattleTopPanelHook
 	{
-		// Token: 0x06031F9D RID: 204701 RVA: 0x00B995B8 File Offset: 0x00B977B8
+		// Token: 0x06026D2C RID: 159020 RVA: 0x00ADD7F4 File Offset: 0x00ADB9F4
 		public UniTask OnInitAsync(TopPanel topPanel)
 		{
 			TowerDefenseTopHudHook.<OnInitAsync>d__1 <OnInitAsync>d__;
@@ -23,40 +23,40 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnInitAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F9E RID: 204702 RVA: 0x00B995FB File Offset: 0x00B977FB
+		// Token: 0x06026D2D RID: 159021 RVA: 0x00ADD837 File Offset: 0x00ADBA37
 		public void OnShow(TopPanel topPanel)
 		{
 			this.ApplyHide(true);
 		}
 
-		// Token: 0x06031F9F RID: 204703 RVA: 0x00B99604 File Offset: 0x00B97804
+		// Token: 0x06026D2E RID: 159022 RVA: 0x00ADD840 File Offset: 0x00ADBA40
 		public void OnHide(TopPanel topPanel)
 		{
 		}
 
-		// Token: 0x06031FA0 RID: 204704 RVA: 0x00B99606 File Offset: 0x00B97806
+		// Token: 0x06026D2F RID: 159023 RVA: 0x00ADD842 File Offset: 0x00ADBA42
 		public void OnAddEventListener(TopPanel topPanel)
 		{
 		}
 
-		// Token: 0x06031FA1 RID: 204705 RVA: 0x00B99608 File Offset: 0x00B97808
+		// Token: 0x06026D30 RID: 159024 RVA: 0x00ADD844 File Offset: 0x00ADBA44
 		public void OnRemoveEventListener(TopPanel topPanel)
 		{
 		}
 
-		// Token: 0x06031FA2 RID: 204706 RVA: 0x00B9960A File Offset: 0x00B9780A
+		// Token: 0x06026D31 RID: 159025 RVA: 0x00ADD846 File Offset: 0x00ADBA46
 		public void OnRefresh(TopPanel topPanel)
 		{
 			this.ApplyHide(true);
 		}
 
-		// Token: 0x06031FA3 RID: 204707 RVA: 0x00B99613 File Offset: 0x00B97813
+		// Token: 0x06026D32 RID: 159026 RVA: 0x00ADD84F File Offset: 0x00ADBA4F
 		public void OnReset(TopPanel topPanel)
 		{
 			this.ApplyHide(false);
 		}
 
-		// Token: 0x06031FA4 RID: 204708 RVA: 0x00B9961C File Offset: 0x00B9781C
+		// Token: 0x06026D33 RID: 159027 RVA: 0x00ADD858 File Offset: 0x00ADBA58
 		private void ApplyHide(bool hide)
 		{
 			BattleUiChildViewData childViewData = BattleUiModel.Instance.ChildViewData;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x0401AA45 RID: 109125
+		// Token: 0x04015397 RID: 86935
 		private readonly EBattleUiChild[] HideChildren = new EBattleUiChild[]
 		{
 			EBattleUiChild.TopButton,

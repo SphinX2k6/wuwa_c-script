@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020069FD RID: 27133
+	// Token: 0x020070AD RID: 28845
 	public class ILifePointMaxStepRewardRuleItemT
 	{
-		// Token: 0x1700C955 RID: 51541
-		// (get) Token: 0x0602F7B1 RID: 194481 RVA: 0x006776F8 File Offset: 0x006758F8
-		// (set) Token: 0x0602F7B2 RID: 194482 RVA: 0x00677700 File Offset: 0x00675900
+		// Token: 0x1700D355 RID: 54101
+		// (get) Token: 0x06032171 RID: 205169 RVA: 0x006C7A50 File Offset: 0x006C5C50
+		// (set) Token: 0x06032172 RID: 205170 RVA: 0x006C7A58 File Offset: 0x006C5C58
 		public int PaintCount { get; set; }
 
-		// Token: 0x1700C956 RID: 51542
-		// (get) Token: 0x0602F7B3 RID: 194483 RVA: 0x00677709 File Offset: 0x00675909
-		// (set) Token: 0x0602F7B4 RID: 194484 RVA: 0x00677711 File Offset: 0x00675911
+		// Token: 0x1700D356 RID: 54102
+		// (get) Token: 0x06032173 RID: 205171 RVA: 0x006C7A61 File Offset: 0x006C5C61
+		// (set) Token: 0x06032174 RID: 205172 RVA: 0x006C7A69 File Offset: 0x006C5C69
 		public int AddStep { get; set; }
 
-		// Token: 0x0602F7B5 RID: 194485 RVA: 0x0067771A File Offset: 0x0067591A
+		// Token: 0x06032175 RID: 205173 RVA: 0x006C7A72 File Offset: 0x006C5C72
 		public ILifePointMaxStepRewardRuleItemT()
 		{
 			this.PaintCount = 0;

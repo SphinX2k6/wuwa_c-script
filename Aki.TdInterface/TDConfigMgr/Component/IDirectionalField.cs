@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002B7 RID: 695
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002FE RID: 766
 	public class IDirectionalField : IConveyorBeltField
 	{
-		// Token: 0x06000D05 RID: 3333 RVA: 0x000313AC File Offset: 0x0002F5AC
+		// Token: 0x06000E35 RID: 3637 RVA: 0x000342E0 File Offset: 0x000324E0
 		private IDirectionalField_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000D06 RID: 3334 RVA: 0x000313E4 File Offset: 0x0002F5E4
+		// Token: 0x06000E36 RID: 3638 RVA: 0x00034318 File Offset: 0x00032518
 		public static IDirectionalField Create([Nullable(2)] IDirectionalField instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D07 RID: 3335 RVA: 0x000313F7 File Offset: 0x0002F5F7
+		// Token: 0x06000E37 RID: 3639 RVA: 0x0003432B File Offset: 0x0003252B
 		public static IDirectionalField CreateFromSetValue([Nullable(2)] IDirectionalField_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D08 RID: 3336 RVA: 0x0003140A File Offset: 0x0002F60A
+		// Token: 0x06000E38 RID: 3640 RVA: 0x0003433E File Offset: 0x0003253E
 		public new IDirectionalField_SetValue ToSetValue()
 		{
 			return new IDirectionalField_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003CD RID: 973
-		// (get) Token: 0x06000D09 RID: 3337 RVA: 0x00031429 File Offset: 0x0002F629
-		// (set) Token: 0x06000D0A RID: 3338 RVA: 0x00031454 File Offset: 0x0002F654
+		// Token: 0x1700041A RID: 1050
+		// (get) Token: 0x06000E39 RID: 3641 RVA: 0x0003435D File Offset: 0x0003255D
+		// (set) Token: 0x06000E3A RID: 3642 RVA: 0x00034388 File Offset: 0x00032588
 		public override EConveyorBeltFieldType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003CE RID: 974
-		// (get) Token: 0x06000D0B RID: 3339 RVA: 0x00031464 File Offset: 0x0002F664
-		// (set) Token: 0x06000D0C RID: 3340 RVA: 0x000314C5 File Offset: 0x0002F6C5
+		// Token: 0x1700041B RID: 1051
+		// (get) Token: 0x06000E3B RID: 3643 RVA: 0x00034398 File Offset: 0x00032598
+		// (set) Token: 0x06000E3C RID: 3644 RVA: 0x000343F9 File Offset: 0x000325F9
 		public virtual VectorInfo Direction
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BF0 RID: 3056
+		// Token: 0x04000CDA RID: 3290
 		[Nullable(2)]
 		protected new IDirectionalField FbInstance;
 
-		// Token: 0x04000BF1 RID: 3057
+		// Token: 0x04000CDB RID: 3291
 		[Nullable(2)]
 		protected new IDirectionalField_SetValue PocoInterface;
 
-		// Token: 0x04000BF2 RID: 3058
+		// Token: 0x04000CDC RID: 3292
 		private VectorInfo _DirectionCache;
 
-		// Token: 0x04000BF3 RID: 3059
+		// Token: 0x04000CDD RID: 3293
 		private bool _DirectionInited;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B50 RID: 19280
+	// Token: 0x02005037 RID: 20535
 	public struct ICheckTargetSunSpiritCollected : IFlatbufferObject
 	{
-		// Token: 0x17008BDC RID: 35804
-		// (get) Token: 0x0601E5C3 RID: 124355 RVA: 0x00440F68 File Offset: 0x0043F168
+		// Token: 0x170092EC RID: 37612
+		// (get) Token: 0x06020151 RID: 131409 RVA: 0x004737B4 File Offset: 0x004719B4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E5C4 RID: 124356 RVA: 0x00440F75 File Offset: 0x0043F175
+		// Token: 0x06020152 RID: 131410 RVA: 0x004737C1 File Offset: 0x004719C1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E5C5 RID: 124357 RVA: 0x00440F7C File Offset: 0x0043F17C
+		// Token: 0x06020153 RID: 131411 RVA: 0x004737C8 File Offset: 0x004719C8
 		public static ICheckTargetSunSpiritCollected GetRootAsICheckTargetSunSpiritCollected(ByteBuffer _bb)
 		{
 			return ICheckTargetSunSpiritCollected.GetRootAsICheckTargetSunSpiritCollected(_bb, default(ICheckTargetSunSpiritCollected));
 		}
 
-		// Token: 0x0601E5C6 RID: 124358 RVA: 0x00440F98 File Offset: 0x0043F198
+		// Token: 0x06020154 RID: 131412 RVA: 0x004737E4 File Offset: 0x004719E4
 		public static ICheckTargetSunSpiritCollected GetRootAsICheckTargetSunSpiritCollected(ByteBuffer _bb, ICheckTargetSunSpiritCollected obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E5C7 RID: 124359 RVA: 0x00440FB5 File Offset: 0x0043F1B5
+		// Token: 0x06020155 RID: 131413 RVA: 0x00473801 File Offset: 0x00471A01
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E5C8 RID: 124360 RVA: 0x00440FC4 File Offset: 0x0043F1C4
+		// Token: 0x06020156 RID: 131414 RVA: 0x00473810 File Offset: 0x00471A10
 		public ICheckTargetSunSpiritCollected __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008BDD RID: 35805
-		// (get) Token: 0x0601E5C9 RID: 124361 RVA: 0x00440FD4 File Offset: 0x0043F1D4
+		// Token: 0x170092ED RID: 37613
+		// (get) Token: 0x06020157 RID: 131415 RVA: 0x00473820 File Offset: 0x00471A20
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008BDE RID: 35806
-		// (get) Token: 0x0601E5CA RID: 124362 RVA: 0x00441010 File Offset: 0x0043F210
+		// Token: 0x170092EE RID: 37614
+		// (get) Token: 0x06020158 RID: 131416 RVA: 0x0047385C File Offset: 0x00471A5C
 		public int DungeonId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008BDF RID: 35807
-		// (get) Token: 0x0601E5CB RID: 124363 RVA: 0x0044104C File Offset: 0x0043F24C
+		// Token: 0x170092EF RID: 37615
+		// (get) Token: 0x06020159 RID: 131417 RVA: 0x00473898 File Offset: 0x00471A98
 		public int SunSpiritEntityId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008BE0 RID: 35808
-		// (get) Token: 0x0601E5CC RID: 124364 RVA: 0x00441088 File Offset: 0x0043F288
+		// Token: 0x170092F0 RID: 37616
+		// (get) Token: 0x0602015A RID: 131418 RVA: 0x004738D4 File Offset: 0x00471AD4
 		public bool IsCollected
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008BE1 RID: 35809
-		// (get) Token: 0x0601E5CD RID: 124365 RVA: 0x004410C8 File Offset: 0x0043F2C8
+		// Token: 0x170092F1 RID: 37617
+		// (get) Token: 0x0602015B RID: 131419 RVA: 0x00473914 File Offset: 0x00471B14
 		public TOnlinePlayerConditionTarget OnlinePlayerConditionTargetOptionType
 		{
 			get
@@ -118,7 +118,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E5CE RID: 124366 RVA: 0x00441108 File Offset: 0x0043F308
+		// Token: 0x0602015C RID: 131420 RVA: 0x00473954 File Offset: 0x00471B54
 		public TTable? OnlinePlayerConditionTargetOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(14);
@@ -129,19 +129,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601E5CF RID: 124367 RVA: 0x00441150 File Offset: 0x0043F350
+		// Token: 0x0602015D RID: 131421 RVA: 0x0047399C File Offset: 0x00471B9C
 		public IOnlinePlayerConditionTargetHost OnlinePlayerConditionTargetOptionAsIOnlinePlayerConditionTargetHost()
 		{
 			return this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetHost>().Value;
 		}
 
-		// Token: 0x0601E5D0 RID: 124368 RVA: 0x0044116C File Offset: 0x0043F36C
+		// Token: 0x0602015E RID: 131422 RVA: 0x004739B8 File Offset: 0x00471BB8
 		public IOnlinePlayerConditionTargetParticipator OnlinePlayerConditionTargetOptionAsIOnlinePlayerConditionTargetParticipator()
 		{
 			return this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>().Value;
 		}
 
-		// Token: 0x0601E5D1 RID: 124369 RVA: 0x00441187 File Offset: 0x0043F387
+		// Token: 0x0602015F RID: 131423 RVA: 0x004739D3 File Offset: 0x00471BD3
 		public static Offset<ICheckTargetSunSpiritCollected> CreateICheckTargetSunSpiritCollected(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int DungeonId = 0, int SunSpiritEntityId = 0, bool IsCollected = false, TOnlinePlayerConditionTarget OnlinePlayerConditionTargetOption_type = TOnlinePlayerConditionTarget.NONE, int OnlinePlayerConditionTargetOptionOffset = 0)
 		{
 			builder.StartTable(6);
@@ -154,55 +154,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckTargetSunSpiritCollected.EndICheckTargetSunSpiritCollected(builder);
 		}
 
-		// Token: 0x0601E5D2 RID: 124370 RVA: 0x004411C3 File Offset: 0x0043F3C3
+		// Token: 0x06020160 RID: 131424 RVA: 0x00473A0F File Offset: 0x00471C0F
 		public static void StartICheckTargetSunSpiritCollected(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0601E5D3 RID: 124371 RVA: 0x004411CC File Offset: 0x0043F3CC
+		// Token: 0x06020161 RID: 131425 RVA: 0x00473A18 File Offset: 0x00471C18
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E5D4 RID: 124372 RVA: 0x004411D7 File Offset: 0x0043F3D7
+		// Token: 0x06020162 RID: 131426 RVA: 0x00473A23 File Offset: 0x00471C23
 		public static void AddDungeonId(FlatBufferBuilder builder, int dungeonId)
 		{
 			builder.AddInt(1, dungeonId, 0);
 		}
 
-		// Token: 0x0601E5D5 RID: 124373 RVA: 0x004411E2 File Offset: 0x0043F3E2
+		// Token: 0x06020163 RID: 131427 RVA: 0x00473A2E File Offset: 0x00471C2E
 		public static void AddSunSpiritEntityId(FlatBufferBuilder builder, int sunSpiritEntityId)
 		{
 			builder.AddInt(2, sunSpiritEntityId, 0);
 		}
 
-		// Token: 0x0601E5D6 RID: 124374 RVA: 0x004411ED File Offset: 0x0043F3ED
+		// Token: 0x06020164 RID: 131428 RVA: 0x00473A39 File Offset: 0x00471C39
 		public static void AddIsCollected(FlatBufferBuilder builder, bool isCollected)
 		{
 			builder.AddBool(3, isCollected, false);
 		}
 
-		// Token: 0x0601E5D7 RID: 124375 RVA: 0x004411F8 File Offset: 0x0043F3F8
+		// Token: 0x06020165 RID: 131429 RVA: 0x00473A44 File Offset: 0x00471C44
 		public static void AddOnlinePlayerConditionTargetOptionType(FlatBufferBuilder builder, TOnlinePlayerConditionTarget onlinePlayerConditionTargetOptionType)
 		{
 			builder.AddByte(4, (byte)onlinePlayerConditionTargetOptionType, 0);
 		}
 
-		// Token: 0x0601E5D8 RID: 124376 RVA: 0x00441203 File Offset: 0x0043F403
+		// Token: 0x06020166 RID: 131430 RVA: 0x00473A4F File Offset: 0x00471C4F
 		public static void AddOnlinePlayerConditionTargetOption(FlatBufferBuilder builder, int onlinePlayerConditionTargetOptionOffset)
 		{
 			builder.AddOffset(5, onlinePlayerConditionTargetOptionOffset, 0);
 		}
 
-		// Token: 0x0601E5D9 RID: 124377 RVA: 0x0044120E File Offset: 0x0043F40E
+		// Token: 0x06020167 RID: 131431 RVA: 0x00473A5A File Offset: 0x00471C5A
 		public static Offset<ICheckTargetSunSpiritCollected> EndICheckTargetSunSpiritCollected(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckTargetSunSpiritCollected>(builder.EndTable());
 		}
 
-		// Token: 0x0601E5DA RID: 124378 RVA: 0x0044121C File Offset: 0x0043F41C
+		// Token: 0x06020168 RID: 131432 RVA: 0x00473A68 File Offset: 0x00471C68
 		public ICheckTargetSunSpiritCollectedT UnPack()
 		{
 			ICheckTargetSunSpiritCollectedT checkTargetSunSpiritCollectedT = new ICheckTargetSunSpiritCollectedT();
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkTargetSunSpiritCollectedT;
 		}
 
-		// Token: 0x0601E5DB RID: 124379 RVA: 0x00441238 File Offset: 0x0043F438
+		// Token: 0x06020169 RID: 131433 RVA: 0x00473A84 File Offset: 0x00471C84
 		public void UnPackTo(ICheckTargetSunSpiritCollectedT _o)
 		{
 			_o.Type = this.Type;
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.OnlinePlayerConditionTargetOption.Value = ((this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>() != null) ? this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0601E5DC RID: 124380 RVA: 0x0044130C File Offset: 0x0043F50C
+		// Token: 0x0602016A RID: 131434 RVA: 0x00473B58 File Offset: 0x00471D58
 		public static Offset<ICheckTargetSunSpiritCollected> Pack(FlatBufferBuilder builder, ICheckTargetSunSpiritCollectedT _o)
 		{
 			if (_o == null)
@@ -244,7 +244,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckTargetSunSpiritCollected.CreateICheckTargetSunSpiritCollected(builder, _o.Type, _o.DungeonId, _o.SunSpiritEntityId, _o.IsCollected, onlinePlayerConditionTargetOption_type, onlinePlayerConditionTargetOptionOffset);
 		}
 
-		// Token: 0x0400D40C RID: 54284
+		// Token: 0x0400DF0C RID: 57100
 		private Table __p;
 	}
 }

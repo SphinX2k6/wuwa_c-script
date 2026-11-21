@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002A68 RID: 10856
+// Token: 0x02001FE3 RID: 8163
 public enum ESkipQuestState
 {
-	// Token: 0x0400A7CA RID: 42954
+	// Token: 0x0400ABCE RID: 43982
 	Uncompleted,
-	// Token: 0x0400A7CB RID: 42955
+	// Token: 0x0400ABCF RID: 43983
 	Completed
 }

@@ -12,10 +12,10 @@ using UnrealEngine;
 
 namespace Ui.WorldMap.View.Component
 {
-	// Token: 0x020044C4 RID: 17604
+	// Token: 0x02002F51 RID: 12113
 	public class WorldMapSubMapItem : GridProxyAbstract<MultiMap>
 	{
-		// Token: 0x0602D624 RID: 185892 RVA: 0x00A3D99C File Offset: 0x00A3BB9C
+		// Token: 0x0601CB62 RID: 117602 RVA: 0x008C35FC File Offset: 0x008C17FC
 		public override void Refresh(MultiMap data, bool isSelected, int gridIndex)
 		{
 			this.MultiMapConfigId = data.Id;
@@ -74,7 +74,7 @@ namespace Ui.WorldMap.View.Component
 			}
 		}
 
-		// Token: 0x0602D625 RID: 185893 RVA: 0x00A3DB5C File Offset: 0x00A3BD5C
+		// Token: 0x0601CB63 RID: 117603 RVA: 0x008C37BC File Offset: 0x008C19BC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -92,7 +92,7 @@ namespace Ui.WorldMap.View.Component
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0602D626 RID: 185894 RVA: 0x00A3DC07 File Offset: 0x00A3BE07
+		// Token: 0x0601CB64 RID: 117604 RVA: 0x008C3867 File Offset: 0x008C1A67
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(3);
@@ -103,7 +103,7 @@ namespace Ui.WorldMap.View.Component
 			extendToggle.OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChange));
 		}
 
-		// Token: 0x0602D627 RID: 185895 RVA: 0x00A3DC2C File Offset: 0x00A3BE2C
+		// Token: 0x0601CB65 RID: 117605 RVA: 0x008C388C File Offset: 0x008C1A8C
 		private void OnToggleStateChange(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -114,7 +114,7 @@ namespace Ui.WorldMap.View.Component
 			}
 		}
 
-		// Token: 0x0602D628 RID: 185896 RVA: 0x00A3DC7E File Offset: 0x00A3BE7E
+		// Token: 0x0601CB66 RID: 117606 RVA: 0x008C38DE File Offset: 0x008C1ADE
 		public override void OnSelected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(3);
@@ -125,7 +125,7 @@ namespace Ui.WorldMap.View.Component
 			extendToggle.SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x0602D629 RID: 185897 RVA: 0x00A3DC96 File Offset: 0x00A3BE96
+		// Token: 0x0601CB67 RID: 117607 RVA: 0x008C38F6 File Offset: 0x008C1AF6
 		public override void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(3);
@@ -136,19 +136,19 @@ namespace Ui.WorldMap.View.Component
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x04018415 RID: 99349
+		// Token: 0x0400F1BD RID: 61885
 		public int MultiMapConfigId;
 
-		// Token: 0x0200A70F RID: 42767
+		// Token: 0x02008BE5 RID: 35813
 		private enum EWorldMapSubMapItemDefine
 		{
-			// Token: 0x0403274B RID: 206667
+			// Token: 0x0402C519 RID: 181529
 			SpriteIcon,
-			// Token: 0x0403274C RID: 206668
+			// Token: 0x0402C51A RID: 181530
 			SpriteAnimIcon,
-			// Token: 0x0403274D RID: 206669
+			// Token: 0x0402C51B RID: 181531
 			TextName,
-			// Token: 0x0403274E RID: 206670
+			// Token: 0x0402C51C RID: 181532
 			ExtendToggle
 		}
 	}

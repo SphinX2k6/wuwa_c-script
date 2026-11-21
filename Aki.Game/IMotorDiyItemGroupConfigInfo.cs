@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002288 RID: 8840
+// Token: 0x0200176C RID: 5996
 public interface IMotorDiyItemGroupConfigInfo
 {
-	// Token: 0x170015F7 RID: 5623
-	// (get) Token: 0x06011425 RID: 70693
-	// (set) Token: 0x06011426 RID: 70694
+	// Token: 0x1700162E RID: 5678
+	// (get) Token: 0x0600E8BB RID: 59579
+	// (set) Token: 0x0600E8BC RID: 59580
 	int? GroupId { get; set; }
 
-	// Token: 0x170015F8 RID: 5624
-	// (get) Token: 0x06011427 RID: 70695
-	// (set) Token: 0x06011428 RID: 70696
+	// Token: 0x1700162F RID: 5679
+	// (get) Token: 0x0600E8BD RID: 59581
+	// (set) Token: 0x0600E8BE RID: 59582
 	int? PartId { get; set; }
 }

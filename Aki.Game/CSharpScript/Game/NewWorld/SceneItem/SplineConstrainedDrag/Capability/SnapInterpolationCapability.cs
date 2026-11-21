@@ -6,16 +6,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag.Capability
 {
-	// Token: 0x020071AE RID: 29102
+	// Token: 0x02006263 RID: 25187
 	public class SnapInterpolationCapability : Capability
 	{
-		// Token: 0x06047370 RID: 291696 RVA: 0x012198D7 File Offset: 0x01217AD7
+		// Token: 0x0603CC6B RID: 248939 RVA: 0x011737DB File Offset: 0x011719DB
 		[NullableContext(2)]
 		public SnapInterpolationCapability(ICapabilityGameObject ownerGameObject = null) : base(ownerGameObject)
 		{
 		}
 
-		// Token: 0x06047371 RID: 291697 RVA: 0x012198E0 File Offset: 0x01217AE0
+		// Token: 0x0603CC6C RID: 248940 RVA: 0x011737E4 File Offset: 0x011719E4
 		[NullableContext(1)]
 		protected override ICapabilityConfig GetDefaultConfig()
 		{
@@ -28,17 +28,17 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag.Capability
 			};
 		}
 
-		// Token: 0x06047372 RID: 291698 RVA: 0x01219911 File Offset: 0x01217B11
+		// Token: 0x0603CC6D RID: 248941 RVA: 0x01173815 File Offset: 0x01171A15
 		public override void Setup()
 		{
 		}
 
-		// Token: 0x06047373 RID: 291699 RVA: 0x01219913 File Offset: 0x01217B13
+		// Token: 0x0603CC6E RID: 248942 RVA: 0x01173817 File Offset: 0x01171A17
 		public override void PreTick(float deltaMilliseconds)
 		{
 		}
 
-		// Token: 0x06047374 RID: 291700 RVA: 0x01219918 File Offset: 0x01217B18
+		// Token: 0x0603CC6F RID: 248943 RVA: 0x0117381C File Offset: 0x01171A1C
 		public override bool ShouldActivate()
 		{
 			ICapabilityGameObject ownerGameObject = this.OwnerGameObject;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag.Capability
 			return ((capabilityData != null) ? new bool?(capabilityData.Active) : null).GetValueOrDefault();
 		}
 
-		// Token: 0x06047375 RID: 291701 RVA: 0x01219964 File Offset: 0x01217B64
+		// Token: 0x0603CC70 RID: 248944 RVA: 0x01173868 File Offset: 0x01171A68
 		public override bool ShouldDeactivate()
 		{
 			ICapabilityGameObject ownerGameObject = this.OwnerGameObject;
@@ -62,17 +62,17 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag.Capability
 			return !((capabilityData != null) ? new bool?(capabilityData.Active) : null).GetValueOrDefault();
 		}
 
-		// Token: 0x06047376 RID: 291702 RVA: 0x012199B0 File Offset: 0x01217BB0
+		// Token: 0x0603CC71 RID: 248945 RVA: 0x011738B4 File Offset: 0x01171AB4
 		public override void OnActivated()
 		{
 		}
 
-		// Token: 0x06047377 RID: 291703 RVA: 0x012199B2 File Offset: 0x01217BB2
+		// Token: 0x0603CC72 RID: 248946 RVA: 0x011738B6 File Offset: 0x01171AB6
 		public override void OnDeactivated()
 		{
 		}
 
-		// Token: 0x06047378 RID: 291704 RVA: 0x012199B4 File Offset: 0x01217BB4
+		// Token: 0x0603CC73 RID: 248947 RVA: 0x011738B8 File Offset: 0x01171AB8
 		public override void TickActive(float deltaMilliseconds)
 		{
 			ICapabilityGameObject ownerGameObject = this.OwnerGameObject;

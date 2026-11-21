@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C18 RID: 7192
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E07 RID: 7687
 	public class IMotorcycleTrack : ISplineMovePattern
 	{
-		// Token: 0x06009A39 RID: 39481 RVA: 0x00162C64 File Offset: 0x00160E64
+		// Token: 0x0600A369 RID: 41833 RVA: 0x00175BB0 File Offset: 0x00173DB0
 		private IMotorcycleTrack_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009A3A RID: 39482 RVA: 0x00162C9C File Offset: 0x00160E9C
+		// Token: 0x0600A36A RID: 41834 RVA: 0x00175BE8 File Offset: 0x00173DE8
 		public static IMotorcycleTrack Create([Nullable(2)] IMotorcycleTrack instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A3B RID: 39483 RVA: 0x00162CAF File Offset: 0x00160EAF
+		// Token: 0x0600A36B RID: 41835 RVA: 0x00175BFB File Offset: 0x00173DFB
 		public static IMotorcycleTrack CreateFromSetValue([Nullable(2)] IMotorcycleTrack_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A3C RID: 39484 RVA: 0x00162CC4 File Offset: 0x00160EC4
+		// Token: 0x0600A36C RID: 41836 RVA: 0x00175C10 File Offset: 0x00173E10
 		public new IMotorcycleTrack_SetValue ToSetValue()
 		{
 			return new IMotorcycleTrack_SetValue
@@ -74,9 +72,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700304F RID: 12367
-		// (get) Token: 0x06009A3D RID: 39485 RVA: 0x00162D96 File Offset: 0x00160F96
-		// (set) Token: 0x06009A3E RID: 39486 RVA: 0x00162DC1 File Offset: 0x00160FC1
+		// Token: 0x170032B8 RID: 12984
+		// (get) Token: 0x0600A36D RID: 41837 RVA: 0x00175CE2 File Offset: 0x00173EE2
+		// (set) Token: 0x0600A36E RID: 41838 RVA: 0x00175D0D File Offset: 0x00173F0D
 		public override ESplineMovePattern Type
 		{
 			get
@@ -97,9 +95,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003050 RID: 12368
-		// (get) Token: 0x06009A3F RID: 39487 RVA: 0x00162DD0 File Offset: 0x00160FD0
-		// (set) Token: 0x06009A40 RID: 39488 RVA: 0x00162E0A File Offset: 0x0016100A
+		// Token: 0x170032B9 RID: 12985
+		// (get) Token: 0x0600A36F RID: 41839 RVA: 0x00175D1C File Offset: 0x00173F1C
+		// (set) Token: 0x0600A370 RID: 41840 RVA: 0x00175D56 File Offset: 0x00173F56
 		public override float? MaxOffsetDistance
 		{
 			get
@@ -121,9 +119,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003051 RID: 12369
-		// (get) Token: 0x06009A41 RID: 39489 RVA: 0x00162E18 File Offset: 0x00161018
-		// (set) Token: 0x06009A42 RID: 39490 RVA: 0x00162E52 File Offset: 0x00161052
+		// Token: 0x170032BA RID: 12986
+		// (get) Token: 0x0600A371 RID: 41841 RVA: 0x00175D64 File Offset: 0x00173F64
+		// (set) Token: 0x0600A372 RID: 41842 RVA: 0x00175D9E File Offset: 0x00173F9E
 		public override bool? IsOneWay
 		{
 			get
@@ -145,9 +143,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003052 RID: 12370
-		// (get) Token: 0x06009A43 RID: 39491 RVA: 0x00162E60 File Offset: 0x00161060
-		// (set) Token: 0x06009A44 RID: 39492 RVA: 0x00162E9A File Offset: 0x0016109A
+		// Token: 0x170032BB RID: 12987
+		// (get) Token: 0x0600A373 RID: 41843 RVA: 0x00175DAC File Offset: 0x00173FAC
+		// (set) Token: 0x0600A374 RID: 41844 RVA: 0x00175DE6 File Offset: 0x00173FE6
 		public override float? LayerVerticalLimit
 		{
 			get
@@ -169,9 +167,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003053 RID: 12371
-		// (get) Token: 0x06009A45 RID: 39493 RVA: 0x00162EA8 File Offset: 0x001610A8
-		// (set) Token: 0x06009A46 RID: 39494 RVA: 0x00162EE2 File Offset: 0x001610E2
+		// Token: 0x170032BC RID: 12988
+		// (get) Token: 0x0600A375 RID: 41845 RVA: 0x00175DF4 File Offset: 0x00173FF4
+		// (set) Token: 0x0600A376 RID: 41846 RVA: 0x00175E2E File Offset: 0x0017402E
 		public override bool? DynamicGravity
 		{
 			get
@@ -193,9 +191,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003054 RID: 12372
-		// (get) Token: 0x06009A47 RID: 39495 RVA: 0x00162EF0 File Offset: 0x001610F0
-		// (set) Token: 0x06009A48 RID: 39496 RVA: 0x00162F2A File Offset: 0x0016112A
+		// Token: 0x170032BD RID: 12989
+		// (get) Token: 0x0600A377 RID: 41847 RVA: 0x00175E3C File Offset: 0x0017403C
+		// (set) Token: 0x0600A378 RID: 41848 RVA: 0x00175E76 File Offset: 0x00174076
 		public override float? GravitySwitchAngularVelocity
 		{
 			get
@@ -217,9 +215,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003055 RID: 12373
-		// (get) Token: 0x06009A49 RID: 39497 RVA: 0x00162F38 File Offset: 0x00161138
-		// (set) Token: 0x06009A4A RID: 39498 RVA: 0x00162F72 File Offset: 0x00161172
+		// Token: 0x170032BE RID: 12990
+		// (get) Token: 0x0600A379 RID: 41849 RVA: 0x00175E84 File Offset: 0x00174084
+		// (set) Token: 0x0600A37A RID: 41850 RVA: 0x00175EBE File Offset: 0x001740BE
 		public override int? AutoExitDistance
 		{
 			get
@@ -241,9 +239,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003056 RID: 12374
-		// (get) Token: 0x06009A4B RID: 39499 RVA: 0x00162F80 File Offset: 0x00161180
-		// (set) Token: 0x06009A4C RID: 39500 RVA: 0x00162FBA File Offset: 0x001611BA
+		// Token: 0x170032BF RID: 12991
+		// (get) Token: 0x0600A37B RID: 41851 RVA: 0x00175ECC File Offset: 0x001740CC
+		// (set) Token: 0x0600A37C RID: 41852 RVA: 0x00175F06 File Offset: 0x00174106
 		public virtual bool? DisableAutoForward
 		{
 			get
@@ -265,9 +263,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003057 RID: 12375
-		// (get) Token: 0x06009A4D RID: 39501 RVA: 0x00162FC8 File Offset: 0x001611C8
-		// (set) Token: 0x06009A4E RID: 39502 RVA: 0x00163002 File Offset: 0x00161202
+		// Token: 0x170032C0 RID: 12992
+		// (get) Token: 0x0600A37D RID: 41853 RVA: 0x00175F14 File Offset: 0x00174114
+		// (set) Token: 0x0600A37E RID: 41854 RVA: 0x00175F4E File Offset: 0x0017414E
 		public virtual float? LongitudinalAngleLimit
 		{
 			get
@@ -289,9 +287,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003058 RID: 12376
-		// (get) Token: 0x06009A4F RID: 39503 RVA: 0x00163010 File Offset: 0x00161210
-		// (set) Token: 0x06009A50 RID: 39504 RVA: 0x0016303F File Offset: 0x0016123F
+		// Token: 0x170032C1 RID: 12993
+		// (get) Token: 0x0600A37F RID: 41855 RVA: 0x00175F5C File Offset: 0x0017415C
+		// (set) Token: 0x0600A380 RID: 41856 RVA: 0x00175F8B File Offset: 0x0017418B
 		public virtual float ForwardAngleLimit
 		{
 			get
@@ -312,9 +310,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003059 RID: 12377
-		// (get) Token: 0x06009A51 RID: 39505 RVA: 0x0016304D File Offset: 0x0016124D
-		// (set) Token: 0x06009A52 RID: 39506 RVA: 0x00163074 File Offset: 0x00161274
+		// Token: 0x170032C2 RID: 12994
+		// (get) Token: 0x0600A381 RID: 41857 RVA: 0x00175F99 File Offset: 0x00174199
+		// (set) Token: 0x0600A382 RID: 41858 RVA: 0x00175FC0 File Offset: 0x001741C0
 		[Nullable(2)]
 		public virtual string ForwardAngleLimitCurve
 		{
@@ -339,9 +337,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700305A RID: 12378
-		// (get) Token: 0x06009A53 RID: 39507 RVA: 0x00163082 File Offset: 0x00161282
-		// (set) Token: 0x06009A54 RID: 39508 RVA: 0x001630AD File Offset: 0x001612AD
+		// Token: 0x170032C3 RID: 12995
+		// (get) Token: 0x0600A383 RID: 41859 RVA: 0x00175FCE File Offset: 0x001741CE
+		// (set) Token: 0x0600A384 RID: 41860 RVA: 0x00175FF9 File Offset: 0x001741F9
 		public virtual string InputCorrectionCurve
 		{
 			get
@@ -362,9 +360,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700305B RID: 12379
-		// (get) Token: 0x06009A55 RID: 39509 RVA: 0x001630BC File Offset: 0x001612BC
-		// (set) Token: 0x06009A56 RID: 39510 RVA: 0x001630F6 File Offset: 0x001612F6
+		// Token: 0x170032C4 RID: 12996
+		// (get) Token: 0x0600A385 RID: 41861 RVA: 0x00176008 File Offset: 0x00174208
+		// (set) Token: 0x0600A386 RID: 41862 RVA: 0x00176042 File Offset: 0x00174242
 		public virtual float? InputCorrectionBaseAngle
 		{
 			get
@@ -386,9 +384,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700305C RID: 12380
-		// (get) Token: 0x06009A57 RID: 39511 RVA: 0x00163104 File Offset: 0x00161304
-		// (set) Token: 0x06009A58 RID: 39512 RVA: 0x0016313E File Offset: 0x0016133E
+		// Token: 0x170032C5 RID: 12997
+		// (get) Token: 0x0600A387 RID: 41863 RVA: 0x00176050 File Offset: 0x00174250
+		// (set) Token: 0x0600A388 RID: 41864 RVA: 0x0017608A File Offset: 0x0017428A
 		public virtual float? CorrectionPredictionDistance
 		{
 			get
@@ -410,9 +408,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700305D RID: 12381
-		// (get) Token: 0x06009A59 RID: 39513 RVA: 0x0016314C File Offset: 0x0016134C
-		// (set) Token: 0x06009A5A RID: 39514 RVA: 0x00163177 File Offset: 0x00161377
+		// Token: 0x170032C6 RID: 12998
+		// (get) Token: 0x0600A389 RID: 41865 RVA: 0x00176098 File Offset: 0x00174298
+		// (set) Token: 0x0600A38A RID: 41866 RVA: 0x001760C3 File Offset: 0x001742C3
 		public virtual string AccelerationCorrectionCurve
 		{
 			get
@@ -433,9 +431,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700305E RID: 12382
-		// (get) Token: 0x06009A5B RID: 39515 RVA: 0x00163188 File Offset: 0x00161388
-		// (set) Token: 0x06009A5C RID: 39516 RVA: 0x001631E9 File Offset: 0x001613E9
+		// Token: 0x170032C7 RID: 12999
+		// (get) Token: 0x0600A38B RID: 41867 RVA: 0x001760D4 File Offset: 0x001742D4
+		// (set) Token: 0x0600A38C RID: 41868 RVA: 0x00176135 File Offset: 0x00174335
 		[Nullable(2)]
 		public virtual IAutomaticDrive AutomaticDrive
 		{
@@ -466,18 +464,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005DD6 RID: 24022
+		// Token: 0x040062FD RID: 25341
 		[Nullable(2)]
 		protected new IMotorcycleTrack FbInstance;
 
-		// Token: 0x04005DD7 RID: 24023
+		// Token: 0x040062FE RID: 25342
 		[Nullable(2)]
 		protected new IMotorcycleTrack_SetValue PocoInterface;
 
-		// Token: 0x04005DD8 RID: 24024
+		// Token: 0x040062FF RID: 25343
 		private IAutomaticDrive _AutomaticDriveCache;
 
-		// Token: 0x04005DD9 RID: 24025
+		// Token: 0x04006300 RID: 25344
 		private bool _AutomaticDriveInited;
 	}
 }

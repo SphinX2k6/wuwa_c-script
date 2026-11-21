@@ -6,36 +6,36 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 {
-	// Token: 0x02006EB6 RID: 28342
+	// Token: 0x02006036 RID: 24630
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DollItemInfo
 	{
-		// Token: 0x0604508D RID: 282765 RVA: 0x0110ECBA File Offset: 0x0110CEBA
+		// Token: 0x0603B22E RID: 242222 RVA: 0x010B8D96 File Offset: 0x010B6F96
 		public bool IsCollectComplete()
 		{
 			return this.ShowedItemIds.Count == this.PartDollIdList.Count + 1;
 		}
 
-		// Token: 0x0604508E RID: 282766 RVA: 0x0110ECD6 File Offset: 0x0110CED6
+		// Token: 0x0603B22F RID: 242223 RVA: 0x010B8DB2 File Offset: 0x010B6FB2
 		public int GetShowedItemCount()
 		{
 			return this.ShowedItemIds.Count;
 		}
 
-		// Token: 0x0604508F RID: 282767 RVA: 0x0110ECE3 File Offset: 0x0110CEE3
+		// Token: 0x0603B230 RID: 242224 RVA: 0x010B8DBF File Offset: 0x010B6FBF
 		public int GetTotalItemCount()
 		{
 			return this.PartDollIdList.Count + 1;
 		}
 
-		// Token: 0x06045090 RID: 282768 RVA: 0x0110ECF2 File Offset: 0x0110CEF2
+		// Token: 0x0603B231 RID: 242225 RVA: 0x010B8DCE File Offset: 0x010B6FCE
 		public bool HasShowedItem(int itemId)
 		{
 			return this.ShowedItemIds.Contains(itemId);
 		}
 
-		// Token: 0x06045091 RID: 282769 RVA: 0x0110ED00 File Offset: 0x0110CF00
+		// Token: 0x0603B232 RID: 242226 RVA: 0x010B8DDC File Offset: 0x010B6FDC
 		public int GetIndexByItemId(int itemId)
 		{
 			if (itemId == this.MainItemId)
@@ -50,30 +50,30 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return -1;
 		}
 
-		// Token: 0x04023F12 RID: 147218
+		// Token: 0x0401F1C5 RID: 127429
 		[Nullable(2)]
 		public BP_DollShowCaseActor_C DollShowCaseActor;
 
-		// Token: 0x04023F13 RID: 147219
+		// Token: 0x0401F1C6 RID: 127430
 		public string DollIdleAnimPath = string.Empty;
 
-		// Token: 0x04023F14 RID: 147220
+		// Token: 0x0401F1C7 RID: 127431
 		public HashSet<int> ShowedItemIds = new HashSet<int>();
 
-		// Token: 0x04023F15 RID: 147221
+		// Token: 0x0401F1C8 RID: 127432
 		[Nullable(2)]
 		public DollViewCameraInfo ViewCameraInfo;
 
-		// Token: 0x04023F16 RID: 147222
+		// Token: 0x0401F1C9 RID: 127433
 		public int MainItemId;
 
-		// Token: 0x04023F17 RID: 147223
+		// Token: 0x0401F1CA RID: 127434
 		public List<int> PartDollIdList = new List<int>();
 
-		// Token: 0x04023F18 RID: 147224
+		// Token: 0x0401F1CB RID: 127435
 		public Dictionary<int, UMaterialInterface[]> OriginalMaterialMap = new Dictionary<int, UMaterialInterface[]>();
 
-		// Token: 0x04023F19 RID: 147225
+		// Token: 0x0401F1CC RID: 127436
 		public HashSet<int> BindingItemIdSet = new HashSet<int>();
 	}
 }

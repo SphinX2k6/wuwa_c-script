@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FCA RID: 28618
+	// Token: 0x02007793 RID: 30611
 	public class ISetBehaviorIsPausedT
 	{
-		// Token: 0x1700D477 RID: 54391
-		// (get) Token: 0x06032954 RID: 207188 RVA: 0x006D34C2 File Offset: 0x006D16C2
-		// (set) Token: 0x06032955 RID: 207189 RVA: 0x006D34CA File Offset: 0x006D16CA
+		// Token: 0x1700E04B RID: 57419
+		// (get) Token: 0x06035BBA RID: 220090 RVA: 0x00733106 File Offset: 0x00731306
+		// (set) Token: 0x06035BBB RID: 220091 RVA: 0x0073310E File Offset: 0x0073130E
 		public bool IsPaused { get; set; }
 
-		// Token: 0x06032956 RID: 207190 RVA: 0x006D34D3 File Offset: 0x006D16D3
+		// Token: 0x06035BBC RID: 220092 RVA: 0x00733117 File Offset: 0x00731317
 		public ISetBehaviorIsPausedT()
 		{
 			this.IsPaused = false;

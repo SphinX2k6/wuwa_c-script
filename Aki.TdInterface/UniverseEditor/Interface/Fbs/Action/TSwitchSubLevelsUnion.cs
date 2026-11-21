@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077BA RID: 30650
+	// Token: 0x02007FF2 RID: 32754
 	public class TSwitchSubLevelsUnion
 	{
-		// Token: 0x1700E6BF RID: 59071
-		// (get) Token: 0x060379C0 RID: 227776 RVA: 0x007859C6 File Offset: 0x00783BC6
-		// (set) Token: 0x060379C1 RID: 227777 RVA: 0x007859CE File Offset: 0x00783BCE
+		// Token: 0x1700F319 RID: 62233
+		// (get) Token: 0x0603AF41 RID: 241473 RVA: 0x007EAF96 File Offset: 0x007E9196
+		// (set) Token: 0x0603AF42 RID: 241474 RVA: 0x007EAF9E File Offset: 0x007E919E
 		public TSwitchSubLevels Type { get; set; }
 
-		// Token: 0x1700E6C0 RID: 59072
-		// (get) Token: 0x060379C2 RID: 227778 RVA: 0x007859D7 File Offset: 0x00783BD7
-		// (set) Token: 0x060379C3 RID: 227779 RVA: 0x007859DF File Offset: 0x00783BDF
+		// Token: 0x1700F31A RID: 62234
+		// (get) Token: 0x0603AF43 RID: 241475 RVA: 0x007EAFA7 File Offset: 0x007E91A7
+		// (set) Token: 0x0603AF44 RID: 241476 RVA: 0x007EAFAF File Offset: 0x007E91AF
 		public object Value { get; set; }
 
-		// Token: 0x060379C4 RID: 227780 RVA: 0x007859E8 File Offset: 0x00783BE8
+		// Token: 0x0603AF45 RID: 241477 RVA: 0x007EAFB8 File Offset: 0x007E91B8
 		public TSwitchSubLevelsUnion()
 		{
 			this.Type = TSwitchSubLevels.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060379C5 RID: 227781 RVA: 0x007859FE File Offset: 0x00783BFE
+		// Token: 0x0603AF46 RID: 241478 RVA: 0x007EAFCE File Offset: 0x007E91CE
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060379C6 RID: 227782 RVA: 0x00785A10 File Offset: 0x00783C10
+		// Token: 0x0603AF47 RID: 241479 RVA: 0x007EAFE0 File Offset: 0x007E91E0
 		public IPreloadSubLevelsT AsIPreloadSubLevels()
 		{
 			return this.As<IPreloadSubLevelsT>();
 		}
 
-		// Token: 0x060379C7 RID: 227783 RVA: 0x00785A18 File Offset: 0x00783C18
+		// Token: 0x0603AF48 RID: 241480 RVA: 0x007EAFE8 File Offset: 0x007E91E8
 		public static TSwitchSubLevelsUnion FromIPreloadSubLevels(IPreloadSubLevelsT _ipreloadsublevels)
 		{
 			return new TSwitchSubLevelsUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060379C8 RID: 227784 RVA: 0x00785A2D File Offset: 0x00783C2D
+		// Token: 0x0603AF49 RID: 241481 RVA: 0x007EAFFD File Offset: 0x007E91FD
 		public ISwitchPermissionT AsISwitchPermission()
 		{
 			return this.As<ISwitchPermissionT>();
 		}
 
-		// Token: 0x060379C9 RID: 227785 RVA: 0x00785A35 File Offset: 0x00783C35
+		// Token: 0x0603AF4A RID: 241482 RVA: 0x007EB005 File Offset: 0x007E9205
 		public static TSwitchSubLevelsUnion FromISwitchPermission(ISwitchPermissionT _iswitchpermission)
 		{
 			return new TSwitchSubLevelsUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060379CA RID: 227786 RVA: 0x00785A4A File Offset: 0x00783C4A
+		// Token: 0x0603AF4B RID: 241483 RVA: 0x007EB01A File Offset: 0x007E921A
 		public ISwitchSubLevelsDirectlyT AsISwitchSubLevelsDirectly()
 		{
 			return this.As<ISwitchSubLevelsDirectlyT>();
 		}
 
-		// Token: 0x060379CB RID: 227787 RVA: 0x00785A52 File Offset: 0x00783C52
+		// Token: 0x0603AF4C RID: 241484 RVA: 0x007EB022 File Offset: 0x007E9222
 		public static TSwitchSubLevelsUnion FromISwitchSubLevelsDirectly(ISwitchSubLevelsDirectlyT _iswitchsublevelsdirectly)
 		{
 			return new TSwitchSubLevelsUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060379CC RID: 227788 RVA: 0x00785A68 File Offset: 0x00783C68
+		// Token: 0x0603AF4D RID: 241485 RVA: 0x007EB038 File Offset: 0x007E9238
 		public static int Pack(FlatBufferBuilder builder, TSwitchSubLevelsUnion _o)
 		{
 			switch (_o.Type)

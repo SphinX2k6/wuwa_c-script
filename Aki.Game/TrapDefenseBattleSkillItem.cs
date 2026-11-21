@@ -2,10 +2,10 @@
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Module.BattleUi.Views;
 
-// Token: 0x02001D29 RID: 7465
+// Token: 0x020011EB RID: 4587
 public class TrapDefenseBattleSkillItem : BattleSkillItem
 {
-	// Token: 0x0600E21B RID: 57883 RVA: 0x00351C10 File Offset: 0x0034FE10
+	// Token: 0x0600B638 RID: 46648 RVA: 0x0035D640 File Offset: 0x0035B840
 	public void RefreshTrapDefenseSkillCoolDown()
 	{
 		int? followerProxyId = TowerDefensePlayerController.GetFollowerProxyId();
@@ -20,13 +20,13 @@ public class TrapDefenseBattleSkillItem : BattleSkillItem
 		}
 	}
 
-	// Token: 0x0600E21C RID: 57884 RVA: 0x00351C58 File Offset: 0x0034FE58
+	// Token: 0x0600B639 RID: 46649 RVA: 0x0035D688 File Offset: 0x0035B888
 	protected override bool IsNeedLongPress()
 	{
 		return !this.IsBanLongPress && this.SkillButtonData.GetIsLongPressControlCamera().Value;
 	}
 
-	// Token: 0x0600E21D RID: 57885 RVA: 0x00351C84 File Offset: 0x0034FE84
+	// Token: 0x0600B63A RID: 46650 RVA: 0x0035D6B4 File Offset: 0x0035B8B4
 	public override void RefreshSkillName()
 	{
 		string skillIconName = this.SkillButtonData.GetSkillIconName();
@@ -39,12 +39,12 @@ public class TrapDefenseBattleSkillItem : BattleSkillItem
 		this.SkillNameText.SetUIActive(false);
 	}
 
-	// Token: 0x0600E21E RID: 57886 RVA: 0x00351CE0 File Offset: 0x0034FEE0
+	// Token: 0x0600B63B RID: 46651 RVA: 0x0035D710 File Offset: 0x0035B910
 	public void SetIsBanLongPress(bool isBanLongPress)
 	{
 		this.IsBanLongPress = isBanLongPress;
 	}
 
-	// Token: 0x04006893 RID: 26771
+	// Token: 0x04006972 RID: 26994
 	private bool IsBanLongPress;
 }

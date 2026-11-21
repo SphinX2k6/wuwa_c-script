@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021D3 RID: 8659
+	// Token: 0x02000734 RID: 1844
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UITexture")]
 	[UnrealStructLayout(2528, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2528)]
 	public class UUITexture : UUITextureBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020FC7 RID: 135111 RVA: 0x0030AD87 File Offset: 0x00308F87
+		// Token: 0x0600A0AC RID: 41132 RVA: 0x000EDDEF File Offset: 0x000EBFEF
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUITexture._ClassPtr;
 		}
 
-		// Token: 0x06020FC8 RID: 135112 RVA: 0x0030AD94 File Offset: 0x00308F94
+		// Token: 0x0600A0AD RID: 41133 RVA: 0x000EDDFC File Offset: 0x000EBFFC
 		public UUITexture() : this(BuiltinUtils.AllocNativeUObject(UUITexture.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06020FC9 RID: 135113 RVA: 0x0030ADBC File Offset: 0x00308FBC
+		// Token: 0x0600A0AE RID: 41134 RVA: 0x000EDE24 File Offset: 0x000EC024
 		[NullableContext(1)]
 		public UUITexture(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUITexture.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170080C6 RID: 32966
-		// (get) Token: 0x06020FCA RID: 135114 RVA: 0x0030ADEF File Offset: 0x00308FEF
-		// (set) Token: 0x06020FCB RID: 135115 RVA: 0x0030ADFF File Offset: 0x00308FFF
+		// Token: 0x17001DE5 RID: 7653
+		// (get) Token: 0x0600A0AF RID: 41135 RVA: 0x000EDE57 File Offset: 0x000EC057
+		// (set) Token: 0x0600A0B0 RID: 41136 RVA: 0x000EDE67 File Offset: 0x000EC067
 		public unsafe UITextureType type
 		{
 			get
@@ -45,48 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080C7 RID: 32967
-		// (get) Token: 0x06020FCC RID: 135116 RVA: 0x0030AE10 File Offset: 0x00309010
-		// (set) Token: 0x06020FCD RID: 135117 RVA: 0x0030AE49 File Offset: 0x00309049
-		[Nullable(1)]
-		public FLGUISpriteInfo spriteData
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FLGUISpriteInfo result;
-				if ((result = this._spriteData) == null)
-				{
-					result = (this._spriteData = new FLGUISpriteInfo(base.NativePtr + (IntPtr)UUITexture.__PropertyOffset_spriteData, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLGUISpriteInfo.StaticStruct(), base.NativePtr + (IntPtr)UUITexture.__PropertyOffset_spriteData, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170080C8 RID: 32968
-		// (get) Token: 0x06020FCE RID: 135118 RVA: 0x0030AE6A File Offset: 0x0030906A
-		// (set) Token: 0x06020FCF RID: 135119 RVA: 0x0030AE7E File Offset: 0x0030907E
-		public unsafe ULGUITextureData textureData
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<ULGUITextureData>(base.NativePtr / (IntPtr)sizeof(void*) + UUITexture.__PropertyOffset_textureData);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UUITexture.__PropertyOffset_textureData, value);
-			}
-		}
-
-		// Token: 0x170080C9 RID: 32969
-		// (get) Token: 0x06020FD0 RID: 135120 RVA: 0x0030AE93 File Offset: 0x00309093
-		// (set) Token: 0x06020FD1 RID: 135121 RVA: 0x0030AEA7 File Offset: 0x003090A7
+		// Token: 0x17001DE6 RID: 7654
+		// (get) Token: 0x0600A0B1 RID: 41137 RVA: 0x000EDE78 File Offset: 0x000EC078
+		// (set) Token: 0x0600A0B2 RID: 41138 RVA: 0x000EDE8C File Offset: 0x000EC08C
 		public unsafe FVector4 uvRect
 		{
 			get
@@ -99,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080CA RID: 32970
-		// (get) Token: 0x06020FD2 RID: 135122 RVA: 0x0030AEBC File Offset: 0x003090BC
-		// (set) Token: 0x06020FD3 RID: 135123 RVA: 0x0030AECC File Offset: 0x003090CC
+		// Token: 0x17001DE7 RID: 7655
+		// (get) Token: 0x0600A0B3 RID: 41139 RVA: 0x000EDEA1 File Offset: 0x000EC0A1
+		// (set) Token: 0x0600A0B4 RID: 41140 RVA: 0x000EDEB1 File Offset: 0x000EC0B1
 		public unsafe UISpriteFillMethod fillMethod
 		{
 			get
@@ -114,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080CB RID: 32971
-		// (get) Token: 0x06020FD4 RID: 135124 RVA: 0x0030AEDD File Offset: 0x003090DD
-		// (set) Token: 0x06020FD5 RID: 135125 RVA: 0x0030AEED File Offset: 0x003090ED
+		// Token: 0x17001DE8 RID: 7656
+		// (get) Token: 0x0600A0B5 RID: 41141 RVA: 0x000EDEC2 File Offset: 0x000EC0C2
+		// (set) Token: 0x0600A0B6 RID: 41142 RVA: 0x000EDED2 File Offset: 0x000EC0D2
 		public unsafe byte fillOrigin
 		{
 			get
@@ -129,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080CC RID: 32972
-		// (get) Token: 0x06020FD6 RID: 135126 RVA: 0x0030AEFE File Offset: 0x003090FE
-		// (set) Token: 0x06020FD7 RID: 135127 RVA: 0x0030AF0E File Offset: 0x0030910E
+		// Token: 0x17001DE9 RID: 7657
+		// (get) Token: 0x0600A0B7 RID: 41143 RVA: 0x000EDEE3 File Offset: 0x000EC0E3
+		// (set) Token: 0x0600A0B8 RID: 41144 RVA: 0x000EDEF3 File Offset: 0x000EC0F3
 		public unsafe bool fillDirectionFlip
 		{
 			get
@@ -144,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080CD RID: 32973
-		// (get) Token: 0x06020FD8 RID: 135128 RVA: 0x0030AF1F File Offset: 0x0030911F
-		// (set) Token: 0x06020FD9 RID: 135129 RVA: 0x0030AF2F File Offset: 0x0030912F
+		// Token: 0x17001DEA RID: 7658
+		// (get) Token: 0x0600A0B9 RID: 41145 RVA: 0x000EDF04 File Offset: 0x000EC104
+		// (set) Token: 0x0600A0BA RID: 41146 RVA: 0x000EDF14 File Offset: 0x000EC114
 		public unsafe float fillAmount
 		{
 			get
@@ -159,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080CE RID: 32974
-		// (get) Token: 0x06020FDA RID: 135130 RVA: 0x0030AF40 File Offset: 0x00309140
-		// (set) Token: 0x06020FDB RID: 135131 RVA: 0x0030AF50 File Offset: 0x00309150
+		// Token: 0x17001DEB RID: 7659
+		// (get) Token: 0x0600A0BB RID: 41147 RVA: 0x000EDF25 File Offset: 0x000EC125
+		// (set) Token: 0x0600A0BC RID: 41148 RVA: 0x000EDF35 File Offset: 0x000EC135
 		public unsafe bool bTileAutoFit
 		{
 			get
@@ -174,9 +135,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080CF RID: 32975
-		// (get) Token: 0x06020FDC RID: 135132 RVA: 0x0030AF61 File Offset: 0x00309161
-		// (set) Token: 0x06020FDD RID: 135133 RVA: 0x0030AF71 File Offset: 0x00309171
+		// Token: 0x17001DEC RID: 7660
+		// (get) Token: 0x0600A0BD RID: 41149 RVA: 0x000EDF46 File Offset: 0x000EC146
+		// (set) Token: 0x0600A0BE RID: 41150 RVA: 0x000EDF56 File Offset: 0x000EC156
 		public unsafe float clampEdge
 		{
 			get
@@ -189,9 +150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080D0 RID: 32976
-		// (get) Token: 0x06020FDE RID: 135134 RVA: 0x0030AF82 File Offset: 0x00309182
-		// (set) Token: 0x06020FDF RID: 135135 RVA: 0x0030AF92 File Offset: 0x00309192
+		// Token: 0x17001DED RID: 7661
+		// (get) Token: 0x0600A0BF RID: 41151 RVA: 0x000EDF67 File Offset: 0x000EC167
+		// (set) Token: 0x0600A0C0 RID: 41152 RVA: 0x000EDF77 File Offset: 0x000EC177
 		public unsafe float tileX
 		{
 			get
@@ -204,9 +165,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080D1 RID: 32977
-		// (get) Token: 0x06020FE0 RID: 135136 RVA: 0x0030AFA3 File Offset: 0x003091A3
-		// (set) Token: 0x06020FE1 RID: 135137 RVA: 0x0030AFB3 File Offset: 0x003091B3
+		// Token: 0x17001DEE RID: 7662
+		// (get) Token: 0x0600A0C1 RID: 41153 RVA: 0x000EDF88 File Offset: 0x000EC188
+		// (set) Token: 0x0600A0C2 RID: 41154 RVA: 0x000EDF98 File Offset: 0x000EC198
 		public unsafe float tileY
 		{
 			get
@@ -219,9 +180,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080D2 RID: 32978
-		// (get) Token: 0x06020FE2 RID: 135138 RVA: 0x0030AFC4 File Offset: 0x003091C4
-		// (set) Token: 0x06020FE3 RID: 135139 RVA: 0x0030AFD4 File Offset: 0x003091D4
+		// Token: 0x17001DEF RID: 7663
+		// (get) Token: 0x0600A0C3 RID: 41155 RVA: 0x000EDFA9 File Offset: 0x000EC1A9
+		// (set) Token: 0x0600A0C4 RID: 41156 RVA: 0x000EDFB9 File Offset: 0x000EC1B9
 		public unsafe float offsetX
 		{
 			get
@@ -234,9 +195,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080D3 RID: 32979
-		// (get) Token: 0x06020FE4 RID: 135140 RVA: 0x0030AFE5 File Offset: 0x003091E5
-		// (set) Token: 0x06020FE5 RID: 135141 RVA: 0x0030AFF5 File Offset: 0x003091F5
+		// Token: 0x17001DF0 RID: 7664
+		// (get) Token: 0x0600A0C5 RID: 41157 RVA: 0x000EDFCA File Offset: 0x000EC1CA
+		// (set) Token: 0x0600A0C6 RID: 41158 RVA: 0x000EDFDA File Offset: 0x000EC1DA
 		public unsafe float offsetY
 		{
 			get
@@ -249,9 +210,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080D4 RID: 32980
-		// (get) Token: 0x06020FE6 RID: 135142 RVA: 0x0030B006 File Offset: 0x00309206
-		// (set) Token: 0x06020FE7 RID: 135143 RVA: 0x0030B01A File Offset: 0x0030921A
+		// Token: 0x17001DF1 RID: 7665
+		// (get) Token: 0x0600A0C7 RID: 41159 RVA: 0x000EDFEB File Offset: 0x000EC1EB
+		// (set) Token: 0x0600A0C8 RID: 41160 RVA: 0x000EDFFF File Offset: 0x000EC1FF
 		public unsafe UMaterialInterface HistoryCustomMaterial
 		{
 			get
@@ -264,9 +225,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080D5 RID: 32981
-		// (get) Token: 0x06020FE8 RID: 135144 RVA: 0x0030B02F File Offset: 0x0030922F
-		// (set) Token: 0x06020FE9 RID: 135145 RVA: 0x0030B03F File Offset: 0x0030923F
+		// Token: 0x17001DF2 RID: 7666
+		// (get) Token: 0x0600A0C9 RID: 41161 RVA: 0x000EE014 File Offset: 0x000EC214
+		// (set) Token: 0x0600A0CA RID: 41162 RVA: 0x000EE024 File Offset: 0x000EC224
 		public unsafe bool bIsFrameAnimate
 		{
 			get
@@ -279,9 +240,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080D6 RID: 32982
-		// (get) Token: 0x06020FEA RID: 135146 RVA: 0x0030B050 File Offset: 0x00309250
-		// (set) Token: 0x06020FEB RID: 135147 RVA: 0x0030B060 File Offset: 0x00309260
+		// Token: 0x17001DF3 RID: 7667
+		// (get) Token: 0x0600A0CB RID: 41163 RVA: 0x000EE035 File Offset: 0x000EC235
+		// (set) Token: 0x0600A0CC RID: 41164 RVA: 0x000EE045 File Offset: 0x000EC245
 		public unsafe bool bUseFrameSize
 		{
 			get
@@ -294,9 +255,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080D7 RID: 32983
-		// (get) Token: 0x06020FEC RID: 135148 RVA: 0x0030B071 File Offset: 0x00309271
-		// (set) Token: 0x06020FED RID: 135149 RVA: 0x0030B081 File Offset: 0x00309281
+		// Token: 0x17001DF4 RID: 7668
+		// (get) Token: 0x0600A0CD RID: 41165 RVA: 0x000EE056 File Offset: 0x000EC256
+		// (set) Token: 0x0600A0CE RID: 41166 RVA: 0x000EE066 File Offset: 0x000EC266
 		public unsafe int FrameAnimateRows
 		{
 			get
@@ -309,9 +270,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080D8 RID: 32984
-		// (get) Token: 0x06020FEE RID: 135150 RVA: 0x0030B092 File Offset: 0x00309292
-		// (set) Token: 0x06020FEF RID: 135151 RVA: 0x0030B0A2 File Offset: 0x003092A2
+		// Token: 0x17001DF5 RID: 7669
+		// (get) Token: 0x0600A0CF RID: 41167 RVA: 0x000EE077 File Offset: 0x000EC277
+		// (set) Token: 0x0600A0D0 RID: 41168 RVA: 0x000EE087 File Offset: 0x000EC287
 		public unsafe int FrameAnimateColumn
 		{
 			get
@@ -324,9 +285,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080D9 RID: 32985
-		// (get) Token: 0x06020FF0 RID: 135152 RVA: 0x0030B0B3 File Offset: 0x003092B3
-		// (set) Token: 0x06020FF1 RID: 135153 RVA: 0x0030B0C3 File Offset: 0x003092C3
+		// Token: 0x17001DF6 RID: 7670
+		// (get) Token: 0x0600A0D1 RID: 41169 RVA: 0x000EE098 File Offset: 0x000EC298
+		// (set) Token: 0x0600A0D2 RID: 41170 RVA: 0x000EE0A8 File Offset: 0x000EC2A8
 		public unsafe float CurFrame
 		{
 			get
@@ -339,9 +300,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080DA RID: 32986
-		// (get) Token: 0x06020FF2 RID: 135154 RVA: 0x0030B0D4 File Offset: 0x003092D4
-		// (set) Token: 0x06020FF3 RID: 135155 RVA: 0x0030B0E8 File Offset: 0x003092E8
+		// Token: 0x17001DF7 RID: 7671
+		// (get) Token: 0x0600A0D3 RID: 41171 RVA: 0x000EE0B9 File Offset: 0x000EC2B9
+		// (set) Token: 0x0600A0D4 RID: 41172 RVA: 0x000EE0CD File Offset: 0x000EC2CD
 		public unsafe FVector2D FrameSize
 		{
 			get
@@ -354,9 +315,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080DB RID: 32987
-		// (get) Token: 0x06020FF4 RID: 135156 RVA: 0x0030B0FD File Offset: 0x003092FD
-		// (set) Token: 0x06020FF5 RID: 135157 RVA: 0x0030B111 File Offset: 0x00309311
+		// Token: 0x17001DF8 RID: 7672
+		// (get) Token: 0x0600A0D5 RID: 41173 RVA: 0x000EE0E2 File Offset: 0x000EC2E2
+		// (set) Token: 0x0600A0D6 RID: 41174 RVA: 0x000EE0F6 File Offset: 0x000EC2F6
 		public unsafe UTexture DynamicAtlasTexture
 		{
 			get
@@ -369,7 +330,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020FF6 RID: 135158 RVA: 0x0030B128 File Offset: 0x00309328
+		// Token: 0x0600A0D7 RID: 41175 RVA: 0x000EE10C File Offset: 0x000EC30C
 		public unsafe void SetUVRect(FVector4 newUVRect)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -377,259 +338,209 @@ namespace UnrealEngine
 			UUITexture.__SetUVRect_Internal(base.NativePtr, ptr);
 		}
 
-		// Token: 0x06020FF7 RID: 135159 RVA: 0x0030B158 File Offset: 0x00309358
+		// Token: 0x0600A0D8 RID: 41176 RVA: 0x000EE13C File Offset: 0x000EC33C
 		public void SetTextureType(UITextureType newType)
 		{
 			UUITexture.__SetTextureType_Internal(base.NativePtr, newType);
 		}
 
-		// Token: 0x06020FF8 RID: 135160 RVA: 0x0030B166 File Offset: 0x00309366
-		public void SetTextureData(ULGUITextureData NewTextureData)
-		{
-			UUITexture.__SetTextureData_Internal(base.NativePtr, (NewTextureData != null) ? NewTextureData.NativePtr : IntPtr.Zero);
-		}
-
-		// Token: 0x06020FF9 RID: 135161 RVA: 0x0030B183 File Offset: 0x00309383
-		public void SetSpriteData(FLGUISpriteInfo newSpriteData)
-		{
-			UUITexture.__SetSpriteData_Internal(base.NativePtr, (newSpriteData ?? new FLGUISpriteInfo()).NativePtr);
-		}
-
-		// Token: 0x06020FFA RID: 135162 RVA: 0x0030B19F File Offset: 0x0030939F
+		// Token: 0x0600A0D9 RID: 41177 RVA: 0x000EE14A File Offset: 0x000EC34A
 		public void SetFillOrigin(byte newValue)
 		{
 			UUITexture.__SetFillOrigin_Internal(base.NativePtr, newValue);
 		}
 
-		// Token: 0x06020FFB RID: 135163 RVA: 0x0030B1AD File Offset: 0x003093AD
+		// Token: 0x0600A0DA RID: 41178 RVA: 0x000EE158 File Offset: 0x000EC358
 		public void SetFillMethod(UISpriteFillMethod newValue)
 		{
 			UUITexture.__SetFillMethod_Internal(base.NativePtr, newValue);
 		}
 
-		// Token: 0x06020FFC RID: 135164 RVA: 0x0030B1BB File Offset: 0x003093BB
+		// Token: 0x0600A0DB RID: 41179 RVA: 0x000EE166 File Offset: 0x000EC366
 		public void SetFillDirectionFlip(bool newValue)
 		{
 			UUITexture.__SetFillDirectionFlip_Internal(base.NativePtr, newValue);
 		}
 
-		// Token: 0x06020FFD RID: 135165 RVA: 0x0030B1C9 File Offset: 0x003093C9
+		// Token: 0x0600A0DC RID: 41180 RVA: 0x000EE174 File Offset: 0x000EC374
 		public void SetFillAmount(float newValue)
 		{
 			UUITexture.__SetFillAmount_Internal(base.NativePtr, newValue);
 		}
 
-		// Token: 0x06020FFE RID: 135166 RVA: 0x0030B1D7 File Offset: 0x003093D7
+		// Token: 0x0600A0DD RID: 41181 RVA: 0x000EE182 File Offset: 0x000EC382
 		public void SetCurFrame(float newCurFrame)
 		{
 			UUITexture.__SetCurFrame_Internal(base.NativePtr, newCurFrame);
 		}
 
-		// Token: 0x06020FFF RID: 135167 RVA: 0x0030B1E5 File Offset: 0x003093E5
+		// Token: 0x0600A0DE RID: 41182 RVA: 0x000EE190 File Offset: 0x000EC390
 		public FVector4 GetUVRect()
 		{
 			return UUITexture.__GetUVRect_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06021000 RID: 135168 RVA: 0x0030B1F2 File Offset: 0x003093F2
+		// Token: 0x0600A0DF RID: 41183 RVA: 0x000EE19D File Offset: 0x000EC39D
 		public UITextureType GetTextureType()
 		{
 			return UUITexture.__GetTextureType_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06021001 RID: 135169 RVA: 0x0030B1FF File Offset: 0x003093FF
-		public ULGUITextureData GetTextureData()
-		{
-			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ULGUITextureData>(UUITexture.__GetTextureData_Internal(base.NativePtr));
-		}
-
-		// Token: 0x06021002 RID: 135170 RVA: 0x0030B211 File Offset: 0x00309411
-		[NullableContext(1)]
-		public FLGUISpriteInfo GetSpriteData()
-		{
-			return new FLGUISpriteInfo(UUITexture.__GetSpriteData_Internal(base.NativePtr), null);
-		}
-
-		// Token: 0x06021003 RID: 135171 RVA: 0x0030B224 File Offset: 0x00309424
+		// Token: 0x0600A0E0 RID: 41184 RVA: 0x000EE1AA File Offset: 0x000EC3AA
 		public byte GetFillOrigin()
 		{
 			return UUITexture.__GetFillOrigin_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06021004 RID: 135172 RVA: 0x0030B231 File Offset: 0x00309431
+		// Token: 0x0600A0E1 RID: 41185 RVA: 0x000EE1B7 File Offset: 0x000EC3B7
 		public UISpriteFillMethod GetFillMethod()
 		{
 			return UUITexture.__GetFillMethod_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06021005 RID: 135173 RVA: 0x0030B23E File Offset: 0x0030943E
+		// Token: 0x0600A0E2 RID: 41186 RVA: 0x000EE1C4 File Offset: 0x000EC3C4
 		public bool GetFillDirectionFlip()
 		{
 			return UUITexture.__GetFillDirectionFlip_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06021006 RID: 135174 RVA: 0x0030B24B File Offset: 0x0030944B
+		// Token: 0x0600A0E3 RID: 41187 RVA: 0x000EE1D1 File Offset: 0x000EC3D1
 		public float GetFillAmount()
 		{
 			return UUITexture.__GetFillAmount_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06021007 RID: 135175
+		// Token: 0x0600A0E4 RID: 41188
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetUVRect_Internal(IntPtr @this, in FVector4 newUVRect);
 
-		// Token: 0x06021008 RID: 135176
+		// Token: 0x0600A0E5 RID: 41189
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTextureType_Internal(IntPtr @this, UITextureType newType);
 
-		// Token: 0x06021009 RID: 135177
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetTextureData_Internal(IntPtr @this, IntPtr NewTextureData);
-
-		// Token: 0x0602100A RID: 135178
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetSpriteData_Internal(IntPtr @this, IntPtr newSpriteData);
-
-		// Token: 0x0602100B RID: 135179
+		// Token: 0x0600A0E6 RID: 41190
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetFillOrigin_Internal(IntPtr @this, byte newValue);
 
-		// Token: 0x0602100C RID: 135180
+		// Token: 0x0600A0E7 RID: 41191
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetFillMethod_Internal(IntPtr @this, UISpriteFillMethod newValue);
 
-		// Token: 0x0602100D RID: 135181
+		// Token: 0x0600A0E8 RID: 41192
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetFillDirectionFlip_Internal(IntPtr @this, bool newValue);
 
-		// Token: 0x0602100E RID: 135182
+		// Token: 0x0600A0E9 RID: 41193
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetFillAmount_Internal(IntPtr @this, float newValue);
 
-		// Token: 0x0602100F RID: 135183
+		// Token: 0x0600A0EA RID: 41194
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCurFrame_Internal(IntPtr @this, float newCurFrame);
 
-		// Token: 0x06021010 RID: 135184
+		// Token: 0x0600A0EB RID: 41195
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 __GetUVRect_Internal(IntPtr @this);
 
-		// Token: 0x06021011 RID: 135185
+		// Token: 0x0600A0EC RID: 41196
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern UITextureType __GetTextureType_Internal(IntPtr @this);
 
-		// Token: 0x06021012 RID: 135186
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetTextureData_Internal(IntPtr @this);
-
-		// Token: 0x06021013 RID: 135187
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetSpriteData_Internal(IntPtr @this);
-
-		// Token: 0x06021014 RID: 135188
+		// Token: 0x0600A0ED RID: 41197
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern byte __GetFillOrigin_Internal(IntPtr @this);
 
-		// Token: 0x06021015 RID: 135189
+		// Token: 0x0600A0EE RID: 41198
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern UISpriteFillMethod __GetFillMethod_Internal(IntPtr @this);
 
-		// Token: 0x06021016 RID: 135190
+		// Token: 0x0600A0EF RID: 41199
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetFillDirectionFlip_Internal(IntPtr @this);
 
-		// Token: 0x06021017 RID: 135191
+		// Token: 0x0600A0F0 RID: 41200
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetFillAmount_Internal(IntPtr @this);
 
-		// Token: 0x06021018 RID: 135192 RVA: 0x0030B258 File Offset: 0x00309458
+		// Token: 0x0600A0F1 RID: 41201 RVA: 0x000EE1DE File Offset: 0x000EC3DE
 		static UUITexture()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UITexture");
 		}
 
-		// Token: 0x06021019 RID: 135193 RVA: 0x0030B266 File Offset: 0x00309466
+		// Token: 0x0600A0F2 RID: 41202 RVA: 0x000EE1EC File Offset: 0x000EC3EC
 		protected UUITexture(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040119BC RID: 72124
+		// Token: 0x040044D8 RID: 17624
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UITexture";
 
-		// Token: 0x040119BD RID: 72125
+		// Token: 0x040044D9 RID: 17625
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040119BE RID: 72126
+		// Token: 0x040044DA RID: 17626
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040119BF RID: 72127
+		// Token: 0x040044DB RID: 17627
 		internal static int __PropertyOffset_type;
 
-		// Token: 0x040119C0 RID: 72128
-		internal static int __PropertyOffset_spriteData;
-
-		// Token: 0x040119C1 RID: 72129
-		private FLGUISpriteInfo _spriteData;
-
-		// Token: 0x040119C2 RID: 72130
-		internal static int __PropertyOffset_textureData;
-
-		// Token: 0x040119C3 RID: 72131
+		// Token: 0x040044DC RID: 17628
 		internal static int __PropertyOffset_uvRect;
 
-		// Token: 0x040119C4 RID: 72132
+		// Token: 0x040044DD RID: 17629
 		internal static int __PropertyOffset_fillMethod;
 
-		// Token: 0x040119C5 RID: 72133
+		// Token: 0x040044DE RID: 17630
 		internal static int __PropertyOffset_fillOrigin;
 
-		// Token: 0x040119C6 RID: 72134
+		// Token: 0x040044DF RID: 17631
 		internal static int __PropertyOffset_fillDirectionFlip;
 
-		// Token: 0x040119C7 RID: 72135
+		// Token: 0x040044E0 RID: 17632
 		internal static int __PropertyOffset_fillAmount;
 
-		// Token: 0x040119C8 RID: 72136
+		// Token: 0x040044E1 RID: 17633
 		internal static int __PropertyOffset_bTileAutoFit;
 
-		// Token: 0x040119C9 RID: 72137
+		// Token: 0x040044E2 RID: 17634
 		internal static int __PropertyOffset_clampEdge;
 
-		// Token: 0x040119CA RID: 72138
+		// Token: 0x040044E3 RID: 17635
 		internal static int __PropertyOffset_tileX;
 
-		// Token: 0x040119CB RID: 72139
+		// Token: 0x040044E4 RID: 17636
 		internal static int __PropertyOffset_tileY;
 
-		// Token: 0x040119CC RID: 72140
+		// Token: 0x040044E5 RID: 17637
 		internal static int __PropertyOffset_offsetX;
 
-		// Token: 0x040119CD RID: 72141
+		// Token: 0x040044E6 RID: 17638
 		internal static int __PropertyOffset_offsetY;
 
-		// Token: 0x040119CE RID: 72142
+		// Token: 0x040044E7 RID: 17639
 		internal static int __PropertyOffset_HistoryCustomMaterial;
 
-		// Token: 0x040119CF RID: 72143
+		// Token: 0x040044E8 RID: 17640
 		internal static int __PropertyOffset_bIsFrameAnimate;
 
-		// Token: 0x040119D0 RID: 72144
+		// Token: 0x040044E9 RID: 17641
 		internal static int __PropertyOffset_bUseFrameSize;
 
-		// Token: 0x040119D1 RID: 72145
+		// Token: 0x040044EA RID: 17642
 		internal static int __PropertyOffset_FrameAnimateRows;
 
-		// Token: 0x040119D2 RID: 72146
+		// Token: 0x040044EB RID: 17643
 		internal static int __PropertyOffset_FrameAnimateColumn;
 
-		// Token: 0x040119D3 RID: 72147
+		// Token: 0x040044EC RID: 17644
 		internal static int __PropertyOffset_CurFrame;
 
-		// Token: 0x040119D4 RID: 72148
+		// Token: 0x040044ED RID: 17645
 		internal static int __PropertyOffset_FrameSize;
 
-		// Token: 0x040119D5 RID: 72149
+		// Token: 0x040044EE RID: 17646
 		internal static int __PropertyOffset_DynamicAtlasTexture;
 	}
 }

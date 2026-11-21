@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A19 RID: 18969
+	// Token: 0x02004ED9 RID: 20185
 	public class ICheckEntitySelfDirectionT
 	{
-		// Token: 0x17008956 RID: 35158
-		// (get) Token: 0x0601DAED RID: 121581 RVA: 0x0042D1FD File Offset: 0x0042B3FD
-		// (set) Token: 0x0601DAEE RID: 121582 RVA: 0x0042D205 File Offset: 0x0042B405
+		// Token: 0x17009026 RID: 36902
+		// (get) Token: 0x0601F560 RID: 128352 RVA: 0x0045DE69 File Offset: 0x0045C069
+		// (set) Token: 0x0601F561 RID: 128353 RVA: 0x0045DE71 File Offset: 0x0045C071
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008957 RID: 35159
-		// (get) Token: 0x0601DAEF RID: 121583 RVA: 0x0042D20E File Offset: 0x0042B40E
-		// (set) Token: 0x0601DAF0 RID: 121584 RVA: 0x0042D216 File Offset: 0x0042B416
+		// Token: 0x17009027 RID: 36903
+		// (get) Token: 0x0601F562 RID: 128354 RVA: 0x0045DE7A File Offset: 0x0045C07A
+		// (set) Token: 0x0601F563 RID: 128355 RVA: 0x0045DE82 File Offset: 0x0045C082
 		public IVectorInfoT Direction { get; set; }
 
-		// Token: 0x17008958 RID: 35160
-		// (get) Token: 0x0601DAF1 RID: 121585 RVA: 0x0042D21F File Offset: 0x0042B41F
-		// (set) Token: 0x0601DAF2 RID: 121586 RVA: 0x0042D227 File Offset: 0x0042B427
+		// Token: 0x17009028 RID: 36904
+		// (get) Token: 0x0601F564 RID: 128356 RVA: 0x0045DE8B File Offset: 0x0045C08B
+		// (set) Token: 0x0601F565 RID: 128357 RVA: 0x0045DE93 File Offset: 0x0045C093
 		public float Tolerance { get; set; }
 
-		// Token: 0x0601DAF3 RID: 121587 RVA: 0x0042D230 File Offset: 0x0042B430
+		// Token: 0x0601F566 RID: 128358 RVA: 0x0045DE9C File Offset: 0x0045C09C
 		public ICheckEntitySelfDirectionT()
 		{
 			this.Type = ECondition.CompareVar;

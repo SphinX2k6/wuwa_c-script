@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049A1 RID: 18849
+	// Token: 0x02004E58 RID: 20056
 	public class ICheckClientEventT
 	{
-		// Token: 0x17008838 RID: 34872
-		// (get) Token: 0x0601D682 RID: 120450 RVA: 0x00424EE9 File Offset: 0x004230E9
-		// (set) Token: 0x0601D683 RID: 120451 RVA: 0x00424EF1 File Offset: 0x004230F1
+		// Token: 0x17008EF3 RID: 36595
+		// (get) Token: 0x0601F0A7 RID: 127143 RVA: 0x0045539D File Offset: 0x0045359D
+		// (set) Token: 0x0601F0A8 RID: 127144 RVA: 0x004553A5 File Offset: 0x004535A5
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008839 RID: 34873
-		// (get) Token: 0x0601D684 RID: 120452 RVA: 0x00424EFA File Offset: 0x004230FA
-		// (set) Token: 0x0601D685 RID: 120453 RVA: 0x00424F02 File Offset: 0x00423102
+		// Token: 0x17008EF4 RID: 36596
+		// (get) Token: 0x0601F0A9 RID: 127145 RVA: 0x004553AE File Offset: 0x004535AE
+		// (set) Token: 0x0601F0AA RID: 127146 RVA: 0x004553B6 File Offset: 0x004535B6
 		public string EventName { get; set; }
 
-		// Token: 0x1700883A RID: 34874
-		// (get) Token: 0x0601D686 RID: 120454 RVA: 0x00424F0B File Offset: 0x0042310B
-		// (set) Token: 0x0601D687 RID: 120455 RVA: 0x00424F13 File Offset: 0x00423113
+		// Token: 0x17008EF5 RID: 36597
+		// (get) Token: 0x0601F0AB RID: 127147 RVA: 0x004553BF File Offset: 0x004535BF
+		// (set) Token: 0x0601F0AC RID: 127148 RVA: 0x004553C7 File Offset: 0x004535C7
 		public ISelfClientEventT ListenerTarget { get; set; }
 
-		// Token: 0x0601D688 RID: 120456 RVA: 0x00424F1C File Offset: 0x0042311C
+		// Token: 0x0601F0AD RID: 127149 RVA: 0x004553D0 File Offset: 0x004535D0
 		public ICheckClientEventT()
 		{
 			this.Type = ECondition.CompareVar;

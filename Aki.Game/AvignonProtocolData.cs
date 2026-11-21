@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x0200110C RID: 4364
+// Token: 0x020005C0 RID: 1472
 [NullableContext(1)]
 [Nullable(0)]
 public class AvignonProtocolData : ActivityBaseData
 {
-	// Token: 0x06007201 RID: 29185 RVA: 0x00175059 File Offset: 0x00173259
+	// Token: 0x06004597 RID: 17815 RVA: 0x0017DA15 File Offset: 0x0017BC15
 	protected override void OnInit(ActivityData data)
 	{
 		this.InitStages();
 	}
 
-	// Token: 0x06007202 RID: 29186 RVA: 0x00175064 File Offset: 0x00173264
+	// Token: 0x06004598 RID: 17816 RVA: 0x0017DA20 File Offset: 0x0017BC20
 	private void InitStages()
 	{
 		this.Stages.Clear();
@@ -28,7 +28,7 @@ public class AvignonProtocolData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007203 RID: 29187 RVA: 0x001750C4 File Offset: 0x001732C4
+	// Token: 0x06004599 RID: 17817 RVA: 0x0017DA80 File Offset: 0x0017BC80
 	protected override void PhraseEx(ActivityData data)
 	{
 		AvignonActivityInfo avignonActivityInfo = data.AvignonActivityInfo;
@@ -46,7 +46,7 @@ public class AvignonProtocolData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007204 RID: 29188 RVA: 0x00175160 File Offset: 0x00173360
+	// Token: 0x0600459A RID: 17818 RVA: 0x0017DB1C File Offset: 0x0017BD1C
 	public void UpdateTask(ActivityTask taskInfo)
 	{
 		if (taskInfo == null || taskInfo.Id == 0)
@@ -61,7 +61,7 @@ public class AvignonProtocolData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007205 RID: 29189 RVA: 0x001751A0 File Offset: 0x001733A0
+	// Token: 0x0600459B RID: 17819 RVA: 0x0017DB5C File Offset: 0x0017BD5C
 	public void UnlockStage(int stageId)
 	{
 		AvignonStageInfo avignonStageInfo;
@@ -71,7 +71,7 @@ public class AvignonProtocolData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007206 RID: 29190 RVA: 0x001751C4 File Offset: 0x001733C4
+	// Token: 0x0600459C RID: 17820 RVA: 0x0017DB80 File Offset: 0x0017BD80
 	public bool IsAllStagesUnlock()
 	{
 		using (Dictionary<int, AvignonStageInfo>.ValueCollection.Enumerator enumerator = this.Stages.Values.GetEnumerator())
@@ -87,7 +87,7 @@ public class AvignonProtocolData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x06007207 RID: 29191 RVA: 0x00175224 File Offset: 0x00173424
+	// Token: 0x0600459D RID: 17821 RVA: 0x0017DBE0 File Offset: 0x0017BDE0
 	public bool HasStageRewardRedDot()
 	{
 		using (Dictionary<int, AvignonStageInfo>.ValueCollection.Enumerator enumerator = this.Stages.Values.GetEnumerator())
@@ -103,14 +103,14 @@ public class AvignonProtocolData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06007208 RID: 29192 RVA: 0x00175284 File Offset: 0x00173484
+	// Token: 0x0600459E RID: 17822 RVA: 0x0017DC40 File Offset: 0x0017BE40
 	public override bool GetExDataRedPointShowState()
 	{
 		bool flag = AvignonModel.Instance.CheckRedDot();
 		return this.HasStageRewardRedDot() || flag;
 	}
 
-	// Token: 0x06007209 RID: 29193 RVA: 0x001752A4 File Offset: 0x001734A4
+	// Token: 0x0600459F RID: 17823 RVA: 0x0017DC60 File Offset: 0x0017BE60
 	public AvignonStageInfo GetStageInfo(int stageId)
 	{
 		AvignonStageInfo result;
@@ -121,7 +121,7 @@ public class AvignonProtocolData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x0600720A RID: 29194 RVA: 0x001752C4 File Offset: 0x001734C4
+	// Token: 0x060045A0 RID: 17824 RVA: 0x0017DC80 File Offset: 0x0017BE80
 	public int[] GetAllStagesId()
 	{
 		List<int> list = new List<int>(this.Stages.Keys);
@@ -129,7 +129,7 @@ public class AvignonProtocolData : ActivityBaseData
 		return list.ToArray();
 	}
 
-	// Token: 0x0600720B RID: 29195 RVA: 0x00175300 File Offset: 0x00173500
+	// Token: 0x060045A1 RID: 17825 RVA: 0x0017DCBC File Offset: 0x0017BEBC
 	public int? GetCurrentLockQuestId()
 	{
 		foreach (AvignonStageInfo avignonStageInfo in this.Stages.Values)
@@ -142,19 +142,19 @@ public class AvignonProtocolData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x0600720C RID: 29196 RVA: 0x00175390 File Offset: 0x00173590
+	// Token: 0x060045A2 RID: 17826 RVA: 0x0017DD4C File Offset: 0x0017BF4C
 	private int GetStageIdByTaskId(int taskId)
 	{
 		return AvignonConfig.Instance.GetAvignonTaskConfigByTaskId(taskId).Value.Step;
 	}
 
-	// Token: 0x0600720D RID: 29197 RVA: 0x001753B8 File Offset: 0x001735B8
+	// Token: 0x060045A3 RID: 17827 RVA: 0x0017DD74 File Offset: 0x0017BF74
 	public void TaskRewardGot(int taskId)
 	{
 		int stageIdByTaskId = this.GetStageIdByTaskId(taskId);
 		this.Stages[stageIdByTaskId].SetTaskRewardGot(taskId);
 	}
 
-	// Token: 0x040034DA RID: 13530
+	// Token: 0x04003573 RID: 13683
 	private readonly Dictionary<int, AvignonStageInfo> Stages = new Dictionary<int, AvignonStageInfo>();
 }

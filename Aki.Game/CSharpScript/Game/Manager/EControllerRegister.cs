@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Manager
 {
-	// Token: 0x02006940 RID: 26944
+	// Token: 0x02005A9B RID: 23195
 	public enum EControllerRegister
 	{
 

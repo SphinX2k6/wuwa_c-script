@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F3E RID: 3902
+	// Token: 0x02001023 RID: 4131
 	public struct PinballWeaponMainEntry : IFlatbufferObject
 	{
-		// Token: 0x17002A03 RID: 10755
-		// (get) Token: 0x0600B0BB RID: 45243 RVA: 0x002C5CDD File Offset: 0x002C3EDD
+		// Token: 0x17002A69 RID: 10857
+		// (get) Token: 0x0600B6DC RID: 46812 RVA: 0x002E25BF File Offset: 0x002E07BF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B0BC RID: 45244 RVA: 0x002C5CEA File Offset: 0x002C3EEA
+		// Token: 0x0600B6DD RID: 46813 RVA: 0x002E25CC File Offset: 0x002E07CC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B0BD RID: 45245 RVA: 0x002C5CF4 File Offset: 0x002C3EF4
+		// Token: 0x0600B6DE RID: 46814 RVA: 0x002E25D4 File Offset: 0x002E07D4
 		public static PinballWeaponMainEntry GetRootAsPinballWeaponMainEntry(ByteBuffer _bb)
 		{
 			return PinballWeaponMainEntry.GetRootAsPinballWeaponMainEntry(_bb, default(PinballWeaponMainEntry));
 		}
 
-		// Token: 0x0600B0BE RID: 45246 RVA: 0x002C5D10 File Offset: 0x002C3F10
+		// Token: 0x0600B6DF RID: 46815 RVA: 0x002E25F0 File Offset: 0x002E07F0
 		public static PinballWeaponMainEntry GetRootAsPinballWeaponMainEntry(ByteBuffer _bb, PinballWeaponMainEntry obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B0BF RID: 45247 RVA: 0x002C5D2D File Offset: 0x002C3F2D
+		// Token: 0x0600B6E0 RID: 46816 RVA: 0x002E260D File Offset: 0x002E080D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B0C0 RID: 45248 RVA: 0x002C5D3C File Offset: 0x002C3F3C
+		// Token: 0x0600B6E1 RID: 46817 RVA: 0x002E261C File Offset: 0x002E081C
 		public PinballWeaponMainEntry __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002A04 RID: 10756
-		// (get) Token: 0x0600B0C1 RID: 45249 RVA: 0x002C5D4C File Offset: 0x002C3F4C
+		// Token: 0x17002A6A RID: 10858
+		// (get) Token: 0x0600B6E2 RID: 46818 RVA: 0x002E262C File Offset: 0x002E082C
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002A05 RID: 10757
-		// (get) Token: 0x0600B0C2 RID: 45250 RVA: 0x002C5D88 File Offset: 0x002C3F88
+		// Token: 0x17002A6B RID: 10859
+		// (get) Token: 0x0600B6E3 RID: 46819 RVA: 0x002E2668 File Offset: 0x002E0868
 		public string ProperDesc
 		{
 			get
@@ -80,19 +80,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B0C3 RID: 45251 RVA: 0x002C5DBF File Offset: 0x002C3FBF
+		// Token: 0x0600B6E4 RID: 46820 RVA: 0x002E269F File Offset: 0x002E089F
 		public Span<byte> GetProperDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600B0C4 RID: 45252 RVA: 0x002C5DCE File Offset: 0x002C3FCE
+		// Token: 0x0600B6E5 RID: 46821 RVA: 0x002E26AE File Offset: 0x002E08AE
 		public byte[] GetProperDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600B0C5 RID: 45253 RVA: 0x002C5DE8 File Offset: 0x002C3FE8
+		// Token: 0x0600B6E6 RID: 46822 RVA: 0x002E26C8 File Offset: 0x002E08C8
 		public string ProperVal(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -103,8 +103,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002A06 RID: 10758
-		// (get) Token: 0x0600B0C6 RID: 45254 RVA: 0x002C5E24 File Offset: 0x002C4024
+		// Token: 0x17002A6C RID: 10860
+		// (get) Token: 0x0600B6E7 RID: 46823 RVA: 0x002E2704 File Offset: 0x002E0904
 		public int ProperValLength
 		{
 			get
@@ -118,8 +118,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002A07 RID: 10759
-		// (get) Token: 0x0600B0C7 RID: 45255 RVA: 0x002C5E50 File Offset: 0x002C4050
+		// Token: 0x17002A6D RID: 10861
+		// (get) Token: 0x0600B6E8 RID: 46824 RVA: 0x002E2730 File Offset: 0x002E0930
 		public int Buff
 		{
 			get
@@ -133,8 +133,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002A08 RID: 10760
-		// (get) Token: 0x0600B0C8 RID: 45256 RVA: 0x002C5E90 File Offset: 0x002C4090
+		// Token: 0x17002A6E RID: 10862
+		// (get) Token: 0x0600B6E9 RID: 46825 RVA: 0x002E2770 File Offset: 0x002E0970
 		public int KscAttrType
 		{
 			get
@@ -148,8 +148,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002A09 RID: 10761
-		// (get) Token: 0x0600B0C9 RID: 45257 RVA: 0x002C5ED0 File Offset: 0x002C40D0
+		// Token: 0x17002A6F RID: 10863
+		// (get) Token: 0x0600B6EA RID: 46826 RVA: 0x002E27B0 File Offset: 0x002E09B0
 		public int KscAttrValue
 		{
 			get
@@ -163,24 +163,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B0CA RID: 45258 RVA: 0x002C5F0D File Offset: 0x002C410D
+		// Token: 0x0600B6EB RID: 46827 RVA: 0x002E27ED File Offset: 0x002E09ED
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ProperValIter()或GetProperValBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] ProperVal()
+		public string[] ProperVal()
 		{
 			return this.ProperValIter().ToArray<string>();
 		}
 
-		// Token: 0x0600B0CB RID: 45259 RVA: 0x002C5F1A File Offset: 0x002C411A
+		// Token: 0x0600B6EC RID: 46828 RVA: 0x002E27FA File Offset: 0x002E09FA
 		[NullableContext(1)]
-		public readonly IEnumerable<string> ProperValIter()
+		public IEnumerable<string> ProperValIter()
 		{
 			PinballWeaponMainEntry.<ProperValIter>d__24 <ProperValIter>d__ = new PinballWeaponMainEntry.<ProperValIter>d__24(-2);
 			<ProperValIter>d__.<>3__<>4__this = this;
 			return <ProperValIter>d__;
 		}
 
-		// Token: 0x04005008 RID: 20488
+		// Token: 0x040055ED RID: 21997
 		private Table __p;
 	}
 }

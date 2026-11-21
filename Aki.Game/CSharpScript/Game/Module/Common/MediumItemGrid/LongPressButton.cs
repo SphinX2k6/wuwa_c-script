@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Common.MediumItemGrid
 {
-	// Token: 0x02005B66 RID: 23398
+	// Token: 0x02004B45 RID: 19269
 	public class LongPressButton
 	{
-		// Token: 0x0401EE1E RID: 126494
+		// Token: 0x040198CD RID: 104653
 		public bool? IsVisible;
 
-		// Token: 0x0401EE1F RID: 126495
+		// Token: 0x040198CE RID: 104654
 		public LongPressButtonItem.ELongPressConfigId? LongPressConfigId;
 	}
 }

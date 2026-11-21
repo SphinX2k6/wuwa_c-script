@@ -12,7 +12,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012A5 RID: 4773
+// Token: 0x02000759 RID: 1881
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -21,7 +21,7 @@ using UnrealEngine;
 })]
 public class LongShanTaskItem : GridProxyAbstract<LongShanTaskInfo>
 {
-	// Token: 0x060082EC RID: 33516 RVA: 0x001BD300 File Offset: 0x001BB500
+	// Token: 0x06005683 RID: 22147 RVA: 0x001C6090 File Offset: 0x001C4290
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -56,7 +56,7 @@ public class LongShanTaskItem : GridProxyAbstract<LongShanTaskInfo>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060082ED RID: 33517 RVA: 0x001BD490 File Offset: 0x001BB690
+	// Token: 0x06005684 RID: 22148 RVA: 0x001C6220 File Offset: 0x001C4420
 	protected override UniTask OnBeforeStartAsync()
 	{
 		LongShanTaskItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -67,13 +67,13 @@ public class LongShanTaskItem : GridProxyAbstract<LongShanTaskInfo>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060082EE RID: 33518 RVA: 0x001BD4D3 File Offset: 0x001BB6D3
+	// Token: 0x06005685 RID: 22149 RVA: 0x001C6263 File Offset: 0x001C4463
 	private CommonItemSmallItemGrid CreatePropItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x060082EF RID: 33519 RVA: 0x001BD4DC File Offset: 0x001BB6DC
+	// Token: 0x06005686 RID: 22150 RVA: 0x001C626C File Offset: 0x001C446C
 	public override void Refresh(LongShanTaskInfo data, bool isSelected, int gridIndex)
 	{
 		this.TaskInfo = data;
@@ -105,7 +105,7 @@ public class LongShanTaskItem : GridProxyAbstract<LongShanTaskInfo>
 		}));
 	}
 
-	// Token: 0x060082F0 RID: 33520 RVA: 0x001BD6A8 File Offset: 0x001BB8A8
+	// Token: 0x06005687 RID: 22151 RVA: 0x001C6438 File Offset: 0x001C4638
 	private bool IsConditionFinished(int conditionId)
 	{
 		foreach (int num in this.TaskInfo.FinishConditions)
@@ -118,7 +118,7 @@ public class LongShanTaskItem : GridProxyAbstract<LongShanTaskInfo>
 		return false;
 	}
 
-	// Token: 0x060082F1 RID: 33521 RVA: 0x001BD700 File Offset: 0x001BB900
+	// Token: 0x06005688 RID: 22152 RVA: 0x001C6490 File Offset: 0x001C4690
 	private void OnClickLockButton()
 	{
 		LongShanTaskInfo taskInfo = this.TaskInfo;
@@ -148,26 +148,26 @@ public class LongShanTaskItem : GridProxyAbstract<LongShanTaskInfo>
 		}
 	}
 
-	// Token: 0x060082F2 RID: 33522 RVA: 0x001BD810 File Offset: 0x001BBA10
+	// Token: 0x06005689 RID: 22153 RVA: 0x001C65A0 File Offset: 0x001C47A0
 	private void OnClickJump()
 	{
 		SkipTaskManager.RunByConfigId(ConfigLongShanTaskById.GetConfig(this.TaskId, true).Value.JumpId, null);
 	}
 
-	// Token: 0x060082F3 RID: 33523 RVA: 0x001BD83F File Offset: 0x001BBA3F
+	// Token: 0x0600568A RID: 22154 RVA: 0x001C65CF File Offset: 0x001C47CF
 	private void OnClickGetButton()
 	{
 		ActivityLongShanController.Instance.TakeTaskReward(this.TaskId);
 	}
 
-	// Token: 0x04003B09 RID: 15113
+	// Token: 0x04003BA1 RID: 15265
 	private int TaskId;
 
-	// Token: 0x04003B0A RID: 15114
+	// Token: 0x04003BA2 RID: 15266
 	[Nullable(2)]
 	private LongShanTaskInfo TaskInfo;
 
-	// Token: 0x04003B0B RID: 15115
+	// Token: 0x04003BA3 RID: 15267
 	[Nullable(new byte[]
 	{
 		2,
@@ -175,36 +175,36 @@ public class LongShanTaskItem : GridProxyAbstract<LongShanTaskInfo>
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-	// Token: 0x04003B0C RID: 15116
+	// Token: 0x04003BA4 RID: 15268
 	[Nullable(2)]
 	private FunctionalPanelConditionLock PanelLock;
 
-	// Token: 0x020078BF RID: 30911
+	// Token: 0x02006A49 RID: 27209
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027C7A RID: 162938
+		// Token: 0x04022FA8 RID: 143272
 		public const int JumpBtn = 0;
 
-		// Token: 0x04027C7B RID: 162939
+		// Token: 0x04022FA9 RID: 143273
 		public const int GetBtn = 1;
 
-		// Token: 0x04027C7C RID: 162940
+		// Token: 0x04022FAA RID: 143274
 		public const int DoingText = 2;
 
-		// Token: 0x04027C7D RID: 162941
+		// Token: 0x04022FAB RID: 143275
 		public const int FinishItem = 3;
 
-		// Token: 0x04027C7E RID: 162942
+		// Token: 0x04022FAC RID: 143276
 		public const int TxtName = 4;
 
-		// Token: 0x04027C7F RID: 162943
+		// Token: 0x04022FAD RID: 143277
 		public const int ProgressText = 5;
 
-		// Token: 0x04027C80 RID: 162944
+		// Token: 0x04022FAE RID: 143278
 		public const int RewardScroll = 6;
 
-		// Token: 0x04027C81 RID: 162945
+		// Token: 0x04022FAF RID: 143279
 		public const int ItemLockPanel = 7;
 	}
 }

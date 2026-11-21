@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001721 RID: 5921
+// Token: 0x02000BD9 RID: 3033
 public enum ECalabashRewardState
 {
-	// Token: 0x04004D92 RID: 19858
+	// Token: 0x04004E39 RID: 20025
 	None,
-	// Token: 0x04004D93 RID: 19859
+	// Token: 0x04004E3A RID: 20026
 	CantReceive,
-	// Token: 0x04004D94 RID: 19860
+	// Token: 0x04004E3B RID: 20027
 	CanReceive,
-	// Token: 0x04004D95 RID: 19861
+	// Token: 0x04004E3C RID: 20028
 	HasReceived
 }

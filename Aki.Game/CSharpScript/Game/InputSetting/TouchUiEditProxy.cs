@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x0200701D RID: 28701
+	// Token: 0x0200619E RID: 24990
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TouchUiEditProxy
 	{
-		// Token: 0x17009BBD RID: 39869
-		// (get) Token: 0x06045D9A RID: 286106 RVA: 0x0115DE9E File Offset: 0x0115C09E
+		// Token: 0x170070FD RID: 28925
+		// (get) Token: 0x0603BF50 RID: 245584 RVA: 0x0110829A File Offset: 0x0110649A
 		[Nullable(2)]
 		private ITouchUiEditItem CurrentSelectedItem
 		{
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045D9B RID: 286107 RVA: 0x0115DEA5 File Offset: 0x0115C0A5
+		// Token: 0x0603BF51 RID: 245585 RVA: 0x011082A1 File Offset: 0x011064A1
 		public TouchUiEditProxy(ITouchUiEditContainer container, ITouchUiEditDataFacade dataFacade, [Nullable(new byte[]
 		{
 			1,
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.InputSetting
 			this.ItemCreator = itemCreator;
 		}
 
-		// Token: 0x06045D9C RID: 286108 RVA: 0x0115DED8 File Offset: 0x0115C0D8
+		// Token: 0x0603BF52 RID: 245586 RVA: 0x011082D4 File Offset: 0x011064D4
 		public void SetView(ITouchUiEditView view)
 		{
 			this.View = view;
 		}
 
-		// Token: 0x06045D9D RID: 286109 RVA: 0x0115DEE4 File Offset: 0x0115C0E4
+		// Token: 0x0603BF53 RID: 245587 RVA: 0x011082E0 File Offset: 0x011064E0
 		public UniTask OnBeforeStartAsync()
 		{
 			TouchUiEditProxy.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.InputSetting
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045D9E RID: 286110 RVA: 0x0115DF28 File Offset: 0x0115C128
+		// Token: 0x0603BF54 RID: 245588 RVA: 0x01108324 File Offset: 0x01106524
 		public void OnStart()
 		{
 			TouchUiEditViewModel.SetRootItem(this.Container.GetRootItem());
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.InputSetting
 			this.BindTouchEvents();
 		}
 
-		// Token: 0x06045D9F RID: 286111 RVA: 0x0115E108 File Offset: 0x0115C308
+		// Token: 0x0603BF55 RID: 245589 RVA: 0x01108504 File Offset: 0x01106704
 		public void OnBeforeDestroy()
 		{
 			this.UnBindTouchEvents();
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.InputSetting
 			this.Container.OnViewDestroy();
 		}
 
-		// Token: 0x06045DA0 RID: 286112 RVA: 0x0115E188 File Offset: 0x0115C388
+		// Token: 0x0603BF56 RID: 245590 RVA: 0x01108584 File Offset: 0x01106784
 		public void OnTick(float deltaTime)
 		{
 			if (this.View == null)
@@ -142,19 +142,19 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045DA1 RID: 286113 RVA: 0x0115E1F2 File Offset: 0x0115C3F2
+		// Token: 0x0603BF57 RID: 245591 RVA: 0x011085EE File Offset: 0x011067EE
 		public void SetOffsetDeltaX(int offset)
 		{
 			this.OffsetDeltaX = offset;
 		}
 
-		// Token: 0x06045DA2 RID: 286114 RVA: 0x0115E1FB File Offset: 0x0115C3FB
+		// Token: 0x0603BF58 RID: 245592 RVA: 0x011085F7 File Offset: 0x011067F7
 		public void SetOffsetDeltaY(int offset)
 		{
 			this.OffsetDeltaY = offset;
 		}
 
-		// Token: 0x06045DA3 RID: 286115 RVA: 0x0115E204 File Offset: 0x0115C404
+		// Token: 0x0603BF59 RID: 245593 RVA: 0x01108600 File Offset: 0x01106800
 		public void SetScale(float scale)
 		{
 			ITouchUiEditItem currentSelectedItem = this.CurrentSelectedItem;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.InputSetting
 			currentSelectedItem.SetScale(scale);
 		}
 
-		// Token: 0x06045DA4 RID: 286116 RVA: 0x0115E217 File Offset: 0x0115C417
+		// Token: 0x0603BF5A RID: 245594 RVA: 0x01108613 File Offset: 0x01106813
 		public void SetAlpha(float alpha)
 		{
 			ITouchUiEditItem currentSelectedItem = this.CurrentSelectedItem;
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.InputSetting
 			currentSelectedItem.SetAlpha(alpha);
 		}
 
-		// Token: 0x06045DA5 RID: 286117 RVA: 0x0115E22A File Offset: 0x0115C42A
+		// Token: 0x0603BF5B RID: 245595 RVA: 0x01108626 File Offset: 0x01106826
 		public void SetHierarchyIndex(int index)
 		{
 			ITouchUiEditItem currentSelectedItem = this.CurrentSelectedItem;
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.InputSetting
 			currentSelectedItem.SetHierarchyIndex(index);
 		}
 
-		// Token: 0x06045DA6 RID: 286118 RVA: 0x0115E240 File Offset: 0x0115C440
+		// Token: 0x0603BF5C RID: 245596 RVA: 0x0110863C File Offset: 0x0110683C
 		public void Save(bool checkOverlap = true)
 		{
 			if (checkOverlap && this.CheckOverLap())
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.InputSetting
 			uiViewBase.CloseMe(null);
 		}
 
-		// Token: 0x06045DA7 RID: 286119 RVA: 0x0115E2A4 File Offset: 0x0115C4A4
+		// Token: 0x0603BF5D RID: 245597 RVA: 0x011086A0 File Offset: 0x011068A0
 		public void Reset()
 		{
 			foreach (ITouchUiEditItem touchUiEditItem in this.EditableItemMap.Values)
@@ -238,13 +238,13 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045DA8 RID: 286120 RVA: 0x0115E380 File Offset: 0x0115C580
+		// Token: 0x0603BF5E RID: 245598 RVA: 0x0110877C File Offset: 0x0110697C
 		public void ResetEditData()
 		{
 			this.DataFacade.ResetEditData();
 		}
 
-		// Token: 0x06045DA9 RID: 286121 RVA: 0x0115E390 File Offset: 0x0115C590
+		// Token: 0x0603BF5F RID: 245599 RVA: 0x0110878C File Offset: 0x0110698C
 		public bool IsEdited()
 		{
 			using (Dictionary<int, ITouchUiEditItem>.ValueCollection.Enumerator enumerator = this.EditableItemMap.Values.GetEnumerator())
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.InputSetting
 			return false;
 		}
 
-		// Token: 0x06045DAA RID: 286122 RVA: 0x0115E3F0 File Offset: 0x0115C5F0
+		// Token: 0x0603BF60 RID: 245600 RVA: 0x011087EC File Offset: 0x011069EC
 		private void SaveImp()
 		{
 			List<ITouchUiEditData> list = new List<ITouchUiEditData>();
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.InputSetting
 			EventSystem.Instance.Emit<ECommonTouchUiEditGroup>(EEventName.OnTouchUiEditSave, (ECommonTouchUiEditGroup)num);
 		}
 
-		// Token: 0x06045DAB RID: 286123 RVA: 0x0115E4C4 File Offset: 0x0115C6C4
+		// Token: 0x0603BF61 RID: 245601 RVA: 0x011088C0 File Offset: 0x01106AC0
 		private bool CheckOverLap()
 		{
 			for (int i = 0; i < this.AllItemList.Count; i++)
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.InputSetting
 			return false;
 		}
 
-		// Token: 0x06045DAC RID: 286124 RVA: 0x0115E563 File Offset: 0x0115C763
+		// Token: 0x0603BF62 RID: 245602 RVA: 0x0110895F File Offset: 0x01106B5F
 		private void BindTouchEvents()
 		{
 			InputDistributeController.Instance.BindTouches(new int[]
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.InputSetting
 			}, new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 		}
 
-		// Token: 0x06045DAD RID: 286125 RVA: 0x0115E58D File Offset: 0x0115C78D
+		// Token: 0x0603BF63 RID: 245603 RVA: 0x01108989 File Offset: 0x01106B89
 		private void UnBindTouchEvents()
 		{
 			InputDistributeController.Instance.UnBindTouches(new <>z__ReadOnlyArray<int>(new int[]
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.InputSetting
 			}), new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 		}
 
-		// Token: 0x06045DAE RID: 286126 RVA: 0x0115E5BC File Offset: 0x0115C7BC
+		// Token: 0x0603BF64 RID: 245604 RVA: 0x011089B8 File Offset: 0x01106BB8
 		private void OnTouchTrigger(bool bPress, int touchId)
 		{
 			TouchFingerData touchFingerData = TouchFingerManager.Instance.GetTouchFingerData((EFingerIndex)touchId);
@@ -353,7 +353,7 @@ namespace CSharpScript.Game.InputSetting
 			TouchUiEditViewModel.RemoveTouchFingerData(touchFingerData);
 		}
 
-		// Token: 0x06045DAF RID: 286127 RVA: 0x0115E5EC File Offset: 0x0115C7EC
+		// Token: 0x0603BF65 RID: 245605 RVA: 0x011089E8 File Offset: 0x01106BE8
 		private void OnTouchMove(int touchId)
 		{
 			if (this.CurrentSelectedItem == null)
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.InputSetting
 			this.CurrentSelectedItem.SetScale(scale);
 		}
 
-		// Token: 0x06045DB0 RID: 286128 RVA: 0x0115E6D4 File Offset: 0x0115C8D4
+		// Token: 0x0603BF66 RID: 245606 RVA: 0x01108AD0 File Offset: 0x01106CD0
 		private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification inputIdentification)
 		{
 			InputDistributeDefine.ETouchType touchType = touchData.TouchType;
@@ -403,29 +403,29 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x04024834 RID: 149556
+		// Token: 0x0401FAEA RID: 129770
 		[Nullable(2)]
 		private ITouchUiEditView View;
 
-		// Token: 0x04024835 RID: 149557
+		// Token: 0x0401FAEB RID: 129771
 		private readonly Dictionary<int, ITouchUiEditItem> EditableItemMap = new Dictionary<int, ITouchUiEditItem>();
 
-		// Token: 0x04024836 RID: 149558
+		// Token: 0x0401FAEC RID: 129772
 		private readonly List<ITouchUiEditItem> AllItemList = new List<ITouchUiEditItem>();
 
-		// Token: 0x04024837 RID: 149559
+		// Token: 0x0401FAED RID: 129773
 		private int OffsetDeltaX;
 
-		// Token: 0x04024838 RID: 149560
+		// Token: 0x0401FAEE RID: 129774
 		private int OffsetDeltaY;
 
-		// Token: 0x04024839 RID: 149561
+		// Token: 0x0401FAEF RID: 129775
 		private readonly ITouchUiEditContainer Container;
 
-		// Token: 0x0402483A RID: 149562
+		// Token: 0x0401FAF0 RID: 129776
 		private readonly ITouchUiEditDataFacade DataFacade;
 
-		// Token: 0x0402483B RID: 149563
+		// Token: 0x0401FAF1 RID: 129777
 		[Nullable(new byte[]
 		{
 			1,

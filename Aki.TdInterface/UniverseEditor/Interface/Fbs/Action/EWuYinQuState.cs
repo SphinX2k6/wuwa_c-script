@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006064 RID: 24676
+	// Token: 0x020066C6 RID: 26310
 	public enum EWuYinQuState : byte
 	{
-		// Token: 0x04010222 RID: 66082
+		// Token: 0x04011017 RID: 69655
 		End,
-		// Token: 0x04010223 RID: 66083
+		// Token: 0x04011018 RID: 69656
 		Start,
-		// Token: 0x04010224 RID: 66084
+		// Token: 0x04011019 RID: 69657
 		Nothing = 4
 	}
 }

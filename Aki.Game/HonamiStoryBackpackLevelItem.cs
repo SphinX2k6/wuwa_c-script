@@ -10,18 +10,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E9A RID: 7834
+// Token: 0x0200135C RID: 4956
 [NullableContext(2)]
 [Nullable(0)]
 public class HonamiStoryBackpackLevelItem : UiPanelBase
 {
-	// Token: 0x0600F085 RID: 61573 RVA: 0x0039B16E File Offset: 0x0039936E
+	// Token: 0x0600C4A4 RID: 50340 RVA: 0x003A6D2A File Offset: 0x003A4F2A
 	public HonamiStoryBackpackLevelItem(bool isInDungeon)
 	{
 		this.IsInDungeon = isInDungeon;
 	}
 
-	// Token: 0x0600F086 RID: 61574 RVA: 0x0039B180 File Offset: 0x00399380
+	// Token: 0x0600C4A5 RID: 50341 RVA: 0x003A6D3C File Offset: 0x003A4F3C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,7 +44,7 @@ public class HonamiStoryBackpackLevelItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F087 RID: 61575 RVA: 0x0039B2B0 File Offset: 0x003994B0
+	// Token: 0x0600C4A6 RID: 50342 RVA: 0x003A6E6C File Offset: 0x003A506C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryBackpackLevelItem.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -55,13 +55,13 @@ public class HonamiStoryBackpackLevelItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F088 RID: 61576 RVA: 0x0039B2F3 File Offset: 0x003994F3
+	// Token: 0x0600C4A7 RID: 50343 RVA: 0x003A6EAF File Offset: 0x003A50AF
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600F089 RID: 61577 RVA: 0x0039B308 File Offset: 0x00399508
+	// Token: 0x0600C4A8 RID: 50344 RVA: 0x003A6EC4 File Offset: 0x003A50C4
 	protected override void OnBeforeShow()
 	{
 		HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(false);
@@ -77,13 +77,13 @@ public class HonamiStoryBackpackLevelItem : UiPanelBase
 		EventSystem.Instance.Add(EEventName.OnHonamiStoryLifeSupportLevelUp, new Action(this.ShowSuccessPanel));
 	}
 
-	// Token: 0x0600F08A RID: 61578 RVA: 0x0039B37B File Offset: 0x0039957B
+	// Token: 0x0600C4A9 RID: 50345 RVA: 0x003A6F37 File Offset: 0x003A5137
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.OnHonamiStoryLifeSupportLevelUp, new Action(this.ShowSuccessPanel));
 	}
 
-	// Token: 0x0600F08B RID: 61579 RVA: 0x0039B39C File Offset: 0x0039959C
+	// Token: 0x0600C4AA RID: 50346 RVA: 0x003A6F58 File Offset: 0x003A5158
 	public void RefreshLifeSupport()
 	{
 		int lifeSupportMaxLevel = HonamiStoryModel.Instance.GetPlayerData().GetLifeSupportMaxLevel();
@@ -160,7 +160,7 @@ public class HonamiStoryBackpackLevelItem : UiPanelBase
 		this.SetSpriteByPath(lifeSupportIcon, base.GetSprite(6), false, null, null);
 	}
 
-	// Token: 0x0600F08C RID: 61580 RVA: 0x0039B5F8 File Offset: 0x003997F8
+	// Token: 0x0600C4AB RID: 50347 RVA: 0x003A71B4 File Offset: 0x003A53B4
 	public void RefreshPowerLevel(bool needAnim, bool isAdd, int oldValue, int newValue)
 	{
 		if (!this.ActivityOpen)
@@ -251,7 +251,7 @@ public class HonamiStoryBackpackLevelItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F08D RID: 61581 RVA: 0x0039B78F File Offset: 0x0039998F
+	// Token: 0x0600C4AC RID: 50348 RVA: 0x003A734B File Offset: 0x003A554B
 	public void SetIsEnable(bool value)
 	{
 		UUIItem rootItem = this.RootItem;
@@ -267,7 +267,7 @@ public class HonamiStoryBackpackLevelItem : UiPanelBase
 		button.SetSelfInteractive(value);
 	}
 
-	// Token: 0x0600F08E RID: 61582 RVA: 0x0039B7C4 File Offset: 0x003999C4
+	// Token: 0x0600C4AD RID: 50349 RVA: 0x003A7380 File Offset: 0x003A5580
 	public void CheckCanUpgrade()
 	{
 		HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
@@ -337,7 +337,7 @@ public class HonamiStoryBackpackLevelItem : UiPanelBase
 		uiNiagara2.SetUIActive(false);
 	}
 
-	// Token: 0x0600F08F RID: 61583 RVA: 0x0039B904 File Offset: 0x00399B04
+	// Token: 0x0600C4AE RID: 50350 RVA: 0x003A74C0 File Offset: 0x003A56C0
 	private void OnClickedUpdate()
 	{
 		if (this.IsInDungeon)
@@ -397,7 +397,7 @@ public class HonamiStoryBackpackLevelItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F090 RID: 61584 RVA: 0x0039BAF8 File Offset: 0x00399CF8
+	// Token: 0x0600C4AF RID: 50351 RVA: 0x003A76B4 File Offset: 0x003A58B4
 	private void RequestForUpgrade()
 	{
 		HonamiStoryController.Instance.RequestHonamiStoryLifeSupportUp().ContinueWith(delegate(bool _)
@@ -406,7 +406,7 @@ public class HonamiStoryBackpackLevelItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600F091 RID: 61585 RVA: 0x0039BB18 File Offset: 0x00399D18
+	// Token: 0x0600C4B0 RID: 50352 RVA: 0x003A76D4 File Offset: 0x003A58D4
 	private void ShowSuccessPanel()
 	{
 		this.CheckCanUpgrade();
@@ -438,7 +438,7 @@ public class HonamiStoryBackpackLevelItem : UiPanelBase
 		RoleLevelUpSuccessController.Instance.OpenSuccessAttributeView(data, null);
 	}
 
-	// Token: 0x0600F092 RID: 61586 RVA: 0x0039BC30 File Offset: 0x00399E30
+	// Token: 0x0600C4B1 RID: 50353 RVA: 0x003A77EC File Offset: 0x003A59EC
 	private void OnPowerAnim(float _)
 	{
 		this.FrameCount++;
@@ -467,72 +467,72 @@ public class HonamiStoryBackpackLevelItem : UiPanelBase
 		this.AnimTimerHandle = null;
 	}
 
-	// Token: 0x04006F45 RID: 28485
+	// Token: 0x04007026 RID: 28710
 	private const int ADD_FRAME = 9;
 
-	// Token: 0x04006F46 RID: 28486
+	// Token: 0x04007027 RID: 28711
 	private const int DOWN_FRAME = 6;
 
-	// Token: 0x04006F47 RID: 28487
+	// Token: 0x04007028 RID: 28712
 	private bool ActivityOpen;
 
-	// Token: 0x04006F48 RID: 28488
+	// Token: 0x04007029 RID: 28713
 	private bool IsAnimOn;
 
-	// Token: 0x04006F49 RID: 28489
+	// Token: 0x0400702A RID: 28714
 	private int OldValue;
 
-	// Token: 0x04006F4A RID: 28490
+	// Token: 0x0400702B RID: 28715
 	private int CurValue;
 
-	// Token: 0x04006F4B RID: 28491
+	// Token: 0x0400702C RID: 28716
 	private int NewValue;
 
-	// Token: 0x04006F4C RID: 28492
+	// Token: 0x0400702D RID: 28717
 	private bool IsAdd;
 
-	// Token: 0x04006F4D RID: 28493
+	// Token: 0x0400702E RID: 28718
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04006F4E RID: 28494
+	// Token: 0x0400702F RID: 28719
 	private TimerHandle AnimTimerHandle;
 
-	// Token: 0x04006F4F RID: 28495
+	// Token: 0x04007030 RID: 28720
 	private int FrameCount;
 
-	// Token: 0x04006F50 RID: 28496
+	// Token: 0x04007031 RID: 28721
 	private HonamiStoryLevelPowerItem PowerItem;
 
-	// Token: 0x04006F51 RID: 28497
+	// Token: 0x04007032 RID: 28722
 	private readonly bool IsInDungeon;
 
-	// Token: 0x02008461 RID: 33889
+	// Token: 0x020075E6 RID: 30182
 	[NullableContext(0)]
 	private enum EItem
 	{
-		// Token: 0x0402B167 RID: 176487
+		// Token: 0x0402648B RID: 156811
 		TxtPower,
-		// Token: 0x0402B168 RID: 176488
+		// Token: 0x0402648C RID: 156812
 		TxtLevel,
-		// Token: 0x0402B169 RID: 176489
+		// Token: 0x0402648D RID: 156813
 		TxtNum,
-		// Token: 0x0402B16A RID: 176490
+		// Token: 0x0402648E RID: 156814
 		BtnUpdate,
-		// Token: 0x0402B16B RID: 176491
+		// Token: 0x0402648F RID: 156815
 		Bar,
-		// Token: 0x0402B16C RID: 176492
+		// Token: 0x04026490 RID: 156816
 		PowerItem,
-		// Token: 0x0402B16D RID: 176493
+		// Token: 0x04026491 RID: 156817
 		StateSprite,
-		// Token: 0x0402B16E RID: 176494
+		// Token: 0x04026492 RID: 156818
 		Niagara,
-		// Token: 0x0402B16F RID: 176495
+		// Token: 0x04026493 RID: 156819
 		SpriteMax,
-		// Token: 0x0402B170 RID: 176496
+		// Token: 0x04026494 RID: 156820
 		TexBg,
-		// Token: 0x0402B171 RID: 176497
+		// Token: 0x04026495 RID: 156821
 		PanelTips,
-		// Token: 0x0402B172 RID: 176498
+		// Token: 0x04026496 RID: 156822
 		TxtName
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D18 RID: 7448
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F29 RID: 7977
 	public class IPlayMpcEffect : PlayEffect2
 	{
-		// Token: 0x06009FC3 RID: 40899 RVA: 0x0016CBF8 File Offset: 0x0016ADF8
+		// Token: 0x0600A9AF RID: 43439 RVA: 0x0018101C File Offset: 0x0017F21C
 		private IPlayMpcEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009FC4 RID: 40900 RVA: 0x0016CC30 File Offset: 0x0016AE30
+		// Token: 0x0600A9B0 RID: 43440 RVA: 0x00181054 File Offset: 0x0017F254
 		public static IPlayMpcEffect Create([Nullable(2)] IPlayMpcEffect instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009FC5 RID: 40901 RVA: 0x0016CC43 File Offset: 0x0016AE43
+		// Token: 0x0600A9B1 RID: 43441 RVA: 0x00181067 File Offset: 0x0017F267
 		public static IPlayMpcEffect CreateFromSetValue([Nullable(2)] IPlayMpcEffect_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009FC6 RID: 40902 RVA: 0x0016CC56 File Offset: 0x0016AE56
+		// Token: 0x0600A9B2 RID: 43442 RVA: 0x0018107A File Offset: 0x0017F27A
 		public new IPlayMpcEffect_SetValue ToSetValue()
 		{
 			return new IPlayMpcEffect_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003194 RID: 12692
-		// (get) Token: 0x06009FC7 RID: 40903 RVA: 0x0016CC8D File Offset: 0x0016AE8D
-		// (set) Token: 0x06009FC8 RID: 40904 RVA: 0x0016CCB8 File Offset: 0x0016AEB8
+		// Token: 0x17003428 RID: 13352
+		// (get) Token: 0x0600A9B3 RID: 43443 RVA: 0x001810B1 File Offset: 0x0017F2B1
+		// (set) Token: 0x0600A9B4 RID: 43444 RVA: 0x001810DC File Offset: 0x0017F2DC
 		public override EEffectType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003195 RID: 12693
-		// (get) Token: 0x06009FC9 RID: 40905 RVA: 0x0016CCC6 File Offset: 0x0016AEC6
-		// (set) Token: 0x06009FCA RID: 40906 RVA: 0x0016CCF1 File Offset: 0x0016AEF1
+		// Token: 0x17003429 RID: 13353
+		// (get) Token: 0x0600A9B5 RID: 43445 RVA: 0x001810EA File Offset: 0x0017F2EA
+		// (set) Token: 0x0600A9B6 RID: 43446 RVA: 0x00181115 File Offset: 0x0017F315
 		public override string Path
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003196 RID: 12694
-		// (get) Token: 0x06009FCB RID: 40907 RVA: 0x0016CCFF File Offset: 0x0016AEFF
-		// (set) Token: 0x06009FCC RID: 40908 RVA: 0x0016CD26 File Offset: 0x0016AF26
+		// Token: 0x1700342A RID: 13354
+		// (get) Token: 0x0600A9B7 RID: 43447 RVA: 0x00181123 File Offset: 0x0017F323
+		// (set) Token: 0x0600A9B8 RID: 43448 RVA: 0x0018114A File Offset: 0x0017F34A
 		public virtual IBasePos2 Pos2
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003197 RID: 12695
-		// (get) Token: 0x06009FCD RID: 40909 RVA: 0x0016CD34 File Offset: 0x0016AF34
-		// (set) Token: 0x06009FCE RID: 40910 RVA: 0x0016CDC7 File Offset: 0x0016AFC7
+		// Token: 0x1700342B RID: 13355
+		// (get) Token: 0x0600A9B9 RID: 43449 RVA: 0x00181158 File Offset: 0x0017F358
+		// (set) Token: 0x0600A9BA RID: 43450 RVA: 0x001811EB File Offset: 0x0017F3EB
 		public virtual List<IPostProcessVolumeCenterPosition> Params
 		{
 			get
@@ -171,18 +169,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400605F RID: 24671
+		// Token: 0x040065DB RID: 26075
 		[Nullable(2)]
 		protected new IPlayMpcEffect FbInstance;
 
-		// Token: 0x04006060 RID: 24672
+		// Token: 0x040065DC RID: 26076
 		[Nullable(2)]
 		protected new IPlayMpcEffect_SetValue PocoInterface;
 
-		// Token: 0x04006061 RID: 24673
+		// Token: 0x040065DD RID: 26077
 		private List<IPostProcessVolumeCenterPosition> _ParamsCache;
 
-		// Token: 0x04006062 RID: 24674
+		// Token: 0x040065DE RID: 26078
 		private bool _ParamsInited;
 	}
 }

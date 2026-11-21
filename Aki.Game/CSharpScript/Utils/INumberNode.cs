@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x020044F2 RID: 17650
+	// Token: 0x02003414 RID: 13332
 	public interface INumberNode
 	{
-		// Token: 0x170073B4 RID: 29620
-		// (get) Token: 0x0602D75E RID: 186206
-		// (set) Token: 0x0602D75F RID: 186207
+		// Token: 0x1700466C RID: 18028
+		// (get) Token: 0x06021E2E RID: 138798
+		// (set) Token: 0x06021E2F RID: 138799
 		EAstNodeType NodeType { get; set; }
 
-		// Token: 0x170073B5 RID: 29621
-		// (get) Token: 0x0602D760 RID: 186208
-		// (set) Token: 0x0602D761 RID: 186209
+		// Token: 0x1700466D RID: 18029
+		// (get) Token: 0x06021E30 RID: 138800
+		// (set) Token: 0x06021E31 RID: 138801
 		TFormulaValue Value { get; set; }
 	}
 }

@@ -13,14 +13,14 @@ using CSharpScript.Game.Utils;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x0200305D RID: 12381
+// Token: 0x020025B3 RID: 9651
 [NullableContext(1)]
 [Nullable(0)]
-public class CharacterFootEffectComponent : EntityComponent, IComponentDependency
+public class CharacterFootEffectComponent : EntityComponent
 {
-	// Token: 0x17002442 RID: 9282
-	// (get) Token: 0x0601A56A RID: 107882 RVA: 0x006FDBD8 File Offset: 0x006FBDD8
-	public static Type[] Dependencies
+	// Token: 0x1700256A RID: 9578
+	// (get) Token: 0x06017F13 RID: 98067 RVA: 0x00724AD4 File Offset: 0x00722CD4
+	public override Type[] Dependencies
 	{
 		get
 		{
@@ -35,14 +35,14 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		}
 	}
 
-	// Token: 0x0601A56B RID: 107883 RVA: 0x006FDC2C File Offset: 0x006FBE2C
+	// Token: 0x06017F14 RID: 98068 RVA: 0x00724B28 File Offset: 0x00722D28
 	protected override bool OnInit()
 	{
 		base.OnInit();
 		return true;
 	}
 
-	// Token: 0x0601A56C RID: 107884 RVA: 0x006FDC38 File Offset: 0x006FBE38
+	// Token: 0x06017F15 RID: 98069 RVA: 0x00724B34 File Offset: 0x00722D34
 	protected override bool OnStart()
 	{
 		base.OnStart();
@@ -119,7 +119,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		return true;
 	}
 
-	// Token: 0x0601A56D RID: 107885 RVA: 0x006FDF6C File Offset: 0x006FC16C
+	// Token: 0x06017F16 RID: 98070 RVA: 0x00724E68 File Offset: 0x00723068
 	protected override bool OnEnd()
 	{
 		this.ActorComp = null;
@@ -148,13 +148,13 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		return true;
 	}
 
-	// Token: 0x0601A56E RID: 107886 RVA: 0x006FE027 File Offset: 0x006FC227
+	// Token: 0x06017F17 RID: 98071 RVA: 0x00724F23 File Offset: 0x00723123
 	protected override void OnTick(float delta)
 	{
 		this.UpdateEnvironmentInfoAtFootLocation();
 	}
 
-	// Token: 0x0601A56F RID: 107887 RVA: 0x006FE030 File Offset: 0x006FC230
+	// Token: 0x06017F18 RID: 98072 RVA: 0x00724F2C File Offset: 0x0072312C
 	public TraceHandle DetectFootGround(FName boneName, FAsyncTraceDelegate delg)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -189,7 +189,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		return TraceElementCommon.Instance.AsyncSphereTrace(this.FootTraceElement, "CharacterFootEffectComponent_FootTrace", delg);
 	}
 
-	// Token: 0x0601A570 RID: 107888 RVA: 0x006FE160 File Offset: 0x006FC360
+	// Token: 0x06017F19 RID: 98073 RVA: 0x0072505C File Offset: 0x0072325C
 	private ESeason? GetPlayerInsideSeason()
 	{
 		SeasonController instance = SeasonController.Instance;
@@ -207,7 +207,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		return null;
 	}
 
-	// Token: 0x0601A571 RID: 107889 RVA: 0x006FE1E0 File Offset: 0x006FC3E0
+	// Token: 0x06017F1A RID: 98074 RVA: 0x007250DC File Offset: 0x007232DC
 	public CharacterFootEffectComponent.EFootstepTexture GetFootstepTexture()
 	{
 		if (this.FootTraceElement == null)
@@ -283,7 +283,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		return result;
 	}
 
-	// Token: 0x0601A572 RID: 107890 RVA: 0x006FE40C File Offset: 0x006FC60C
+	// Token: 0x06017F1B RID: 98075 RVA: 0x00725308 File Offset: 0x00723508
 	public void PostFootstepVoice()
 	{
 		if (Time.Instance.Now - this.LastDetectFootstepTime < 150.0)
@@ -315,7 +315,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		this.IsOnExposedSurface = false;
 	}
 
-	// Token: 0x0601A573 RID: 107891 RVA: 0x006FE5B8 File Offset: 0x006FC7B8
+	// Token: 0x06017F1C RID: 98076 RVA: 0x007254B4 File Offset: 0x007236B4
 	[return: Nullable(2)]
 	private string GetFootprintEffectPath(UPhysicalMaterial localPhysMaterial)
 	{
@@ -341,7 +341,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		return text;
 	}
 
-	// Token: 0x0601A574 RID: 107892 RVA: 0x006FE648 File Offset: 0x006FC848
+	// Token: 0x06017F1D RID: 98077 RVA: 0x00725544 File Offset: 0x00723744
 	private unsafe List<string> GetFootprintEffectPaths(UPhysicalMaterial localPhysMaterial)
 	{
 		string footprintEffectPath = this.GetFootprintEffectPath(localPhysMaterial);
@@ -363,7 +363,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		return list;
 	}
 
-	// Token: 0x0601A575 RID: 107893 RVA: 0x006FE6A4 File Offset: 0x006FC8A4
+	// Token: 0x06017F1E RID: 98078 RVA: 0x007255A0 File Offset: 0x007237A0
 	[NullableContext(2)]
 	private CharacterFootEffectComponent.CharacterSpecialFootEffectConfig GetBestCharacterFootEffectConfig()
 	{
@@ -392,7 +392,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		return result;
 	}
 
-	// Token: 0x0601A576 RID: 107894 RVA: 0x006FE774 File Offset: 0x006FC974
+	// Token: 0x06017F1F RID: 98079 RVA: 0x00725670 File Offset: 0x00723870
 	private List<string> ApplyCharacterEffectStrategy(CharacterFootEffectComponent.CharacterSpecialFootEffectConfig characterConfig, [Nullable(2)] string baseEffectPath)
 	{
 		TSoftObjectPtr<UEffectModelBase> effectPath = characterConfig.EffectPath;
@@ -427,7 +427,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		return list;
 	}
 
-	// Token: 0x0601A577 RID: 107895 RVA: 0x006FE7EC File Offset: 0x006FC9EC
+	// Token: 0x06017F20 RID: 98080 RVA: 0x007256E8 File Offset: 0x007238E8
 	private void CalculateFootprintTransform(UKuroHitResult hitResult, Vector baseLocation, Vector outLocation, Rotator outRotation)
 	{
 		if (this.ActorComp == null)
@@ -442,7 +442,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		MathUtils.Instance.LookRotationUpFirst(this.ActorComp.ActorForwardProxy, this.TmpVector2, outRotation);
 	}
 
-	// Token: 0x0601A578 RID: 107896 RVA: 0x006FE88C File Offset: 0x006FCA8C
+	// Token: 0x06017F21 RID: 98081 RVA: 0x00725788 File Offset: 0x00723988
 	private void SpawnRainFootEffect(Vector location, Rotator rotation, [Nullable(2)] UPhysicalMaterial localPhysmaterial)
 	{
 		if (localPhysmaterial == null || this.EnviInteractionComp == null || this.ActorComp == null || !this.EnviInteractionComp.bUpdateRainOcclusion)
@@ -468,7 +468,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		}
 	}
 
-	// Token: 0x0601A579 RID: 107897 RVA: 0x006FE99C File Offset: 0x006FCB9C
+	// Token: 0x06017F22 RID: 98082 RVA: 0x00725898 File Offset: 0x00723A98
 	[NullableContext(2)]
 	private void TriggerFootprintEffectInternal(UKuroHitResult hitResult)
 	{
@@ -497,7 +497,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		this.LastSpawnFootprintLocation.DeepCopy(tmpHitLocation);
 	}
 
-	// Token: 0x0601A57A RID: 107898 RVA: 0x006FEA70 File Offset: 0x006FCC70
+	// Token: 0x06017F23 RID: 98083 RVA: 0x0072596C File Offset: 0x00723B6C
 	public void TriggerFootprint(bool isLeftFoot)
 	{
 		if (this.FootTraceElement == null || this.FootTraceElement.HitResult == null || !this.FootTraceElement.HitResult.bBlockingHit || this.FootTraceElement.HitResult.GetHitCount() == 0)
@@ -607,7 +607,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		}
 	}
 
-	// Token: 0x0601A57B RID: 107899 RVA: 0x006FED90 File Offset: 0x006FCF90
+	// Token: 0x06017F24 RID: 98084 RVA: 0x00725C8C File Offset: 0x00723E8C
 	private unsafe void LeftFootprintHandle(bool hitResult, UTraceBaseElement element, double frame, double index)
 	{
 		if (this.TraceHandleLeftFootprint != null && frame < (double)this.TraceHandleLeftFootprint.Frame)
@@ -659,7 +659,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		WorldController.Instance.EnvironmentInfoUpdate(this.TmpHitLocation.ToUeVector(false), this.ActorComp.IsRoleAndCtrlByMe, false);
 	}
 
-	// Token: 0x0601A57C RID: 107900 RVA: 0x006FEF64 File Offset: 0x006FD164
+	// Token: 0x06017F25 RID: 98085 RVA: 0x00725E60 File Offset: 0x00724060
 	private unsafe void RightFootprintHandle(bool hitResult, UTraceBaseElement element, double frame, double index)
 	{
 		if (this.TraceHandleRightFootprint != null && frame < (double)this.TraceHandleRightFootprint.Frame)
@@ -715,7 +715,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		WorldController.Instance.EnvironmentInfoUpdate(this.TmpHitLocation.ToUeVector(false), this.ActorComp.IsRoleAndCtrlByMe, false);
 	}
 
-	// Token: 0x0601A57D RID: 107901 RVA: 0x006FF14C File Offset: 0x006FD34C
+	// Token: 0x06017F26 RID: 98086 RVA: 0x00726048 File Offset: 0x00724248
 	private unsafe void FootVoiceHandle(bool hitResult, UTraceBaseElement element, double frame, double index)
 	{
 		if (this.TraceHandleFootVoice != null && frame < (double)this.TraceHandleFootVoice.Frame)
@@ -752,7 +752,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		this.PostFootstepAudio();
 	}
 
-	// Token: 0x0601A57E RID: 107902 RVA: 0x006FF270 File Offset: 0x006FD470
+	// Token: 0x06017F27 RID: 98087 RVA: 0x0072616C File Offset: 0x0072436C
 	private void SeasonFootstepHandle(bool hitResult, UTraceBaseElement element, double frame, double index)
 	{
 		if (this.TraceHandleSnowFootprint != null && frame < (double)this.TraceHandleSnowFootprint.Frame)
@@ -796,7 +796,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		this.IsOnExposedSurface = true;
 	}
 
-	// Token: 0x0601A57F RID: 107903 RVA: 0x006FF39C File Offset: 0x006FD59C
+	// Token: 0x06017F28 RID: 98088 RVA: 0x00726298 File Offset: 0x00724498
 	private void PostFootstepAudio()
 	{
 		CharacterFootEffectComponent.EFootstepTexture footstepTexture = this.GetFootstepTexture();
@@ -808,7 +808,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		component.PostFootstepAudio(footstepTexture);
 	}
 
-	// Token: 0x0601A580 RID: 107904 RVA: 0x006FF3C8 File Offset: 0x006FD5C8
+	// Token: 0x06017F29 RID: 98089 RVA: 0x007262C4 File Offset: 0x007244C4
 	private void UpdateEnvironmentInfoAtFootLocation()
 	{
 		if (TeleportModel.Instance.IsTeleport || !this.ActorComp.EnableVoxelDetection)
@@ -826,7 +826,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		WorldController.Instance.EnvironmentInfoUpdate(this.ActorComp.ActorLocation, this.ActorComp.IsRoleAndCtrlByMe, false);
 	}
 
-	// Token: 0x0601A581 RID: 107905 RVA: 0x006FF434 File Offset: 0x006FD634
+	// Token: 0x06017F2A RID: 98090 RVA: 0x00726330 File Offset: 0x00724530
 	private CharacterFootEffectComponent.EFootstepTexture CheckWaterSurfaceType()
 	{
 		if (this.ActorComp == null)
@@ -851,7 +851,7 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		return CharacterFootEffectComponent.EFootstepTexture.WaterSurface;
 	}
 
-	// Token: 0x0601A582 RID: 107906 RVA: 0x006FF4C4 File Offset: 0x006FD6C4
+	// Token: 0x06017F2B RID: 98091 RVA: 0x007263C0 File Offset: 0x007245C0
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -859,515 +859,480 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 			return false;
 		}
 		CharacterFootEffectComponent characterFootEffectComponent = (CharacterFootEffectComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterFootEffectComponent.ActorComp == null)
 		{
-			if (characterFootEffectComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("UnifiedStateComp"))
-		{
-			if (characterFootEffectComponent.UnifiedStateComp == null)
-			{
-				this.UnifiedStateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedStateComp), "UnifiedStateComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("EnviInteractionComp"))
-		{
-			if (characterFootEffectComponent.EnviInteractionComp == null)
-			{
-				this.EnviInteractionComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroEnviInteractionComponent>(this.EnviInteractionComp), "EnviInteractionComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("FootTraceElement"))
-		{
-			if (characterFootEffectComponent.FootTraceElement == null)
-			{
-				this.FootTraceElement = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.FootTraceElement), "FootTraceElement"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("StartLocation") && characterFootEffectComponent.StartLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.StartLocation), "StartLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("EndLocation") && characterFootEffectComponent.EndLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.EndLocation), "EndLocation"))
+		if (characterFootEffectComponent.UnifiedStateComp == null)
+		{
+			this.UnifiedStateComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComp), "UnifiedStateComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpHitLocation") && characterFootEffectComponent.TmpHitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpHitLocation), "TmpHitLocation"))
+		if (characterFootEffectComponent.EnviInteractionComp == null)
+		{
+			this.EnviInteractionComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EnviInteractionComp), "EnviInteractionComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector") && characterFootEffectComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector), "TmpVector"))
+		if (characterFootEffectComponent.FootTraceElement == null)
+		{
+			this.FootTraceElement = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FootTraceElement), "FootTraceElement"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector2") && characterFootEffectComponent.TmpVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector2), "TmpVector2"))
+		if (characterFootEffectComponent.StartLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StartLocation), "StartLocation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector3") && characterFootEffectComponent.TmpVector3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector3), "TmpVector3"))
+		if (characterFootEffectComponent.EndLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndLocation), "EndLocation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpRotator") && characterFootEffectComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TmpRotator), "TmpRotator"))
+		if (characterFootEffectComponent.TmpHitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpHitLocation), "TmpHitLocation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("FootLocation") && characterFootEffectComponent.FootLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.FootLocation), "FootLocation"))
+		if (characterFootEffectComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector), "TmpVector"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatTraceDelegate"))
-		{
-			if (characterFootEffectComponent.StatTraceDelegate == null)
-			{
-				this.StatTraceDelegate = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatTraceDelegate), "StatTraceDelegate"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("StatGetFootTexture"))
-		{
-			if (characterFootEffectComponent.StatGetFootTexture == null)
-			{
-				this.StatGetFootTexture = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatGetFootTexture), "StatGetFootTexture"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("StatPostFootsteupAudio"))
-		{
-			if (characterFootEffectComponent.StatPostFootsteupAudio == null)
-			{
-				this.StatPostFootsteupAudio = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatPostFootsteupAudio), "StatPostFootsteupAudio"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("FootprintMap") && characterFootEffectComponent.FootprintMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EPhysicalSurface, CharacterFootEffectComponent.CharacterFootEffectConfig>>(this.FootprintMap), "FootprintMap"))
+		if (characterFootEffectComponent.TmpVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector2), "TmpVector2"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CharacterFootprintMap") && characterFootEffectComponent.CharacterFootprintMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, List<CharacterFootEffectComponent.CharacterSpecialFootEffectConfig>>>(this.CharacterFootprintMap), "CharacterFootprintMap"))
+		if (characterFootEffectComponent.TmpVector3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector3), "TmpVector3"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LastSpawnFootprintTime"))
-		{
-			this.LastSpawnFootprintTime = characterFootEffectComponent.LastSpawnFootprintTime;
-		}
-		if (base.CanResetComponentProperty("LastDetectFootstepTime"))
-		{
-			this.LastDetectFootstepTime = characterFootEffectComponent.LastDetectFootstepTime;
-		}
-		if (base.CanResetComponentProperty("LastSpawnFootprintLocation") && characterFootEffectComponent.LastSpawnFootprintLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.LastSpawnFootprintLocation), "LastSpawnFootprintLocation"))
+		if (characterFootEffectComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator), "TmpRotator"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LeftHitLocation") && characterFootEffectComponent.LeftHitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.LeftHitLocation), "LeftHitLocation"))
+		if (characterFootEffectComponent.FootLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.FootLocation), "FootLocation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("RightHitLocation") && characterFootEffectComponent.RightHitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.RightHitLocation), "RightHitLocation"))
+		if (characterFootEffectComponent.StatTraceDelegate == null)
+		{
+			this.StatTraceDelegate = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatTraceDelegate), "StatTraceDelegate"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LeftFootprintDelegate"))
+		if (characterFootEffectComponent.StatGetFootTexture == null)
 		{
-			if (characterFootEffectComponent.LeftFootprintDelegate == null)
-			{
-				this.LeftFootprintDelegate = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FAsyncTraceDelegate>(this.LeftFootprintDelegate), "LeftFootprintDelegate"))
-			{
-				return false;
-			}
+			this.StatGetFootTexture = null;
 		}
-		if (base.CanResetComponentProperty("RightFootprintDelegate"))
-		{
-			if (characterFootEffectComponent.RightFootprintDelegate == null)
-			{
-				this.RightFootprintDelegate = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FAsyncTraceDelegate>(this.RightFootprintDelegate), "RightFootprintDelegate"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("FootVoiceDelegate"))
-		{
-			if (characterFootEffectComponent.FootVoiceDelegate == null)
-			{
-				this.FootVoiceDelegate = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FAsyncTraceDelegate>(this.FootVoiceDelegate), "FootVoiceDelegate"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SeasonFootstepDelegate"))
-		{
-			if (characterFootEffectComponent.SeasonFootstepDelegate == null)
-			{
-				this.SeasonFootstepDelegate = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FAsyncTraceDelegate>(this.SeasonFootstepDelegate), "SeasonFootstepDelegate"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SeasonTraceElement"))
-		{
-			if (characterFootEffectComponent.SeasonTraceElement == null)
-			{
-				this.SeasonTraceElement = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceLineElement>(this.SeasonTraceElement), "SeasonTraceElement"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsOnExposedSurface"))
-		{
-			this.IsOnExposedSurface = characterFootEffectComponent.IsOnExposedSurface;
-		}
-		if (base.CanResetComponentProperty("SnowHitLocation") && characterFootEffectComponent.SnowHitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.SnowHitLocation), "SnowHitLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatGetFootTexture), "StatGetFootTexture"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("FootVoiceHitLocation") && characterFootEffectComponent.FootVoiceHitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.FootVoiceHitLocation), "FootVoiceHitLocation"))
+		if (characterFootEffectComponent.StatPostFootsteupAudio == null)
+		{
+			this.StatPostFootsteupAudio = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatPostFootsteupAudio), "StatPostFootsteupAudio"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("AnimComp"))
+		if (characterFootEffectComponent.FootprintMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.FootprintMap), "FootprintMap"))
 		{
-			if (characterFootEffectComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsLeftFootOnGround"))
+		if (characterFootEffectComponent.CharacterFootprintMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterFootprintMap), "CharacterFootprintMap"))
 		{
-			this.IsLeftFootOnGround = characterFootEffectComponent.IsLeftFootOnGround;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsRightFootOnGround"))
+		this.LastSpawnFootprintTime = characterFootEffectComponent.LastSpawnFootprintTime;
+		this.LastDetectFootstepTime = characterFootEffectComponent.LastDetectFootstepTime;
+		if (characterFootEffectComponent.LastSpawnFootprintLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastSpawnFootprintLocation), "LastSpawnFootprintLocation"))
 		{
-			this.IsRightFootOnGround = characterFootEffectComponent.IsRightFootOnGround;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsTriggerEffect"))
+		if (characterFootEffectComponent.LeftHitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LeftHitLocation), "LeftHitLocation"))
 		{
-			this.IsTriggerEffect = characterFootEffectComponent.IsTriggerEffect;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsLeftFootHit"))
+		if (characterFootEffectComponent.RightHitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.RightHitLocation), "RightHitLocation"))
 		{
-			this.IsLeftFootHit = characterFootEffectComponent.IsLeftFootHit;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsRightFootHit"))
+		if (characterFootEffectComponent.LeftFootprintDelegate == null)
 		{
-			this.IsRightFootHit = characterFootEffectComponent.IsRightFootHit;
+			this.LeftFootprintDelegate = null;
 		}
-		if (base.CanResetComponentProperty("TraceHandleLeftFootprint"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LeftFootprintDelegate), "LeftFootprintDelegate"))
 		{
-			if (characterFootEffectComponent.TraceHandleLeftFootprint == null)
-			{
-				this.TraceHandleLeftFootprint = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TraceHandle>(this.TraceHandleLeftFootprint), "TraceHandleLeftFootprint"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TraceHandleRightFootprint"))
+		if (characterFootEffectComponent.RightFootprintDelegate == null)
 		{
-			if (characterFootEffectComponent.TraceHandleRightFootprint == null)
-			{
-				this.TraceHandleRightFootprint = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TraceHandle>(this.TraceHandleRightFootprint), "TraceHandleRightFootprint"))
-			{
-				return false;
-			}
+			this.RightFootprintDelegate = null;
 		}
-		if (base.CanResetComponentProperty("TraceHandleFootVoice"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RightFootprintDelegate), "RightFootprintDelegate"))
 		{
-			if (characterFootEffectComponent.TraceHandleFootVoice == null)
-			{
-				this.TraceHandleFootVoice = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TraceHandle>(this.TraceHandleFootVoice), "TraceHandleFootVoice"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TraceHandleSnowFootprint"))
+		if (characterFootEffectComponent.FootVoiceDelegate == null)
 		{
-			if (characterFootEffectComponent.TraceHandleSnowFootprint == null)
-			{
-				this.TraceHandleSnowFootprint = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TraceHandle>(this.TraceHandleSnowFootprint), "TraceHandleSnowFootprint"))
-			{
-				return false;
-			}
+			this.FootVoiceDelegate = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FootVoiceDelegate), "FootVoiceDelegate"))
+		{
+			return false;
+		}
+		if (characterFootEffectComponent.SeasonFootstepDelegate == null)
+		{
+			this.SeasonFootstepDelegate = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SeasonFootstepDelegate), "SeasonFootstepDelegate"))
+		{
+			return false;
+		}
+		if (characterFootEffectComponent.SeasonTraceElement == null)
+		{
+			this.SeasonTraceElement = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SeasonTraceElement), "SeasonTraceElement"))
+		{
+			return false;
+		}
+		this.IsOnExposedSurface = characterFootEffectComponent.IsOnExposedSurface;
+		if (characterFootEffectComponent.SnowHitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SnowHitLocation), "SnowHitLocation"))
+		{
+			return false;
+		}
+		if (characterFootEffectComponent.FootVoiceHitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.FootVoiceHitLocation), "FootVoiceHitLocation"))
+		{
+			return false;
+		}
+		if (characterFootEffectComponent.AnimComp == null)
+		{
+			this.AnimComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
+		{
+			return false;
+		}
+		this.IsLeftFootOnGround = characterFootEffectComponent.IsLeftFootOnGround;
+		this.IsRightFootOnGround = characterFootEffectComponent.IsRightFootOnGround;
+		this.IsTriggerEffect = characterFootEffectComponent.IsTriggerEffect;
+		this.IsLeftFootHit = characterFootEffectComponent.IsLeftFootHit;
+		this.IsRightFootHit = characterFootEffectComponent.IsRightFootHit;
+		if (characterFootEffectComponent.TraceHandleLeftFootprint == null)
+		{
+			this.TraceHandleLeftFootprint = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceHandleLeftFootprint), "TraceHandleLeftFootprint"))
+		{
+			return false;
+		}
+		if (characterFootEffectComponent.TraceHandleRightFootprint == null)
+		{
+			this.TraceHandleRightFootprint = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceHandleRightFootprint), "TraceHandleRightFootprint"))
+		{
+			return false;
+		}
+		if (characterFootEffectComponent.TraceHandleFootVoice == null)
+		{
+			this.TraceHandleFootVoice = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceHandleFootVoice), "TraceHandleFootVoice"))
+		{
+			return false;
+		}
+		if (characterFootEffectComponent.TraceHandleSnowFootprint == null)
+		{
+			this.TraceHandleSnowFootprint = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceHandleSnowFootprint), "TraceHandleSnowFootprint"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400C8F8 RID: 51448
+	// Token: 0x1700256B RID: 9579
+	// (get) Token: 0x06017F2C RID: 98092 RVA: 0x00726919 File Offset: 0x00724B19
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700256C RID: 9580
+	// (get) Token: 0x06017F2D RID: 98093 RVA: 0x0072691C File Offset: 0x00724B1C
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700256D RID: 9581
+	// (get) Token: 0x06017F2E RID: 98094 RVA: 0x0072691F File Offset: 0x00724B1F
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700256E RID: 9582
+	// (get) Token: 0x06017F2F RID: 98095 RVA: 0x00726922 File Offset: 0x00724B22
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CCD2 RID: 52434
 	private const string PROFILE_KEY = "CharacterFootEffectComponent_FootTrace";
 
-	// Token: 0x0400C8F9 RID: 51449
+	// Token: 0x0400CCD3 RID: 52435
 	private const int FOOTPRINT_DETECT_DURATION = 150;
 
-	// Token: 0x0400C8FA RID: 51450
+	// Token: 0x0400CCD4 RID: 52436
 	private const int FOOTPRINT_SPAWN_DURATION = 200;
 
-	// Token: 0x0400C8FB RID: 51451
+	// Token: 0x0400CCD5 RID: 52437
 	private const int FOOTPRINT_SPAWN_MIN_DISTANCE_SQUARED = 500;
 
-	// Token: 0x0400C8FC RID: 51452
+	// Token: 0x0400CCD6 RID: 52438
 	private const int SPRINT_FOOTEFFECT_DETECT_HEIGHT = 50;
 
-	// Token: 0x0400C8FD RID: 51453
+	// Token: 0x0400CCD7 RID: 52439
 	private const int NORMAL_FOOTEFFECT_DETECT_HEIGHT = 15;
 
-	// Token: 0x0400C8FE RID: 51454
+	// Token: 0x0400CCD8 RID: 52440
 	private const int MATERIAL_ID_WAT = 6;
 
-	// Token: 0x0400C8FF RID: 51455
+	// Token: 0x0400CCD9 RID: 52441
 	private const int MATERIAL_ID_SHR = 14;
 
-	// Token: 0x0400C900 RID: 51456
+	// Token: 0x0400CCDA RID: 52442
 	private const int FOOTPRINT_FORWARD_OFFSET = 5;
 
-	// Token: 0x0400C901 RID: 51457
+	// Token: 0x0400CCDB RID: 52443
 	private const int SNOW_DETECT_SKY_HEIGHT = 5000;
 
-	// Token: 0x0400C902 RID: 51458
+	// Token: 0x0400CCDC RID: 52444
 	private const int SNOW_FOOTPRINT_EPSILON = 50;
 
-	// Token: 0x0400C903 RID: 51459
+	// Token: 0x0400CCDD RID: 52445
 	private const string RAIN_FOOT_EFFCT = "/Game/Aki/Effect/DataAsset/Niagara/Common/Water/DA_FX_SI3_Water_Step01.DA_FX_SI3_Water_Step01";
 
-	// Token: 0x0400C904 RID: 51460
+	// Token: 0x0400CCDE RID: 52446
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400C905 RID: 51461
+	// Token: 0x0400CCDF RID: 52447
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent UnifiedStateComp;
 
-	// Token: 0x0400C906 RID: 51462
+	// Token: 0x0400CCE0 RID: 52448
 	[Nullable(2)]
 	private UKuroEnviInteractionComponent EnviInteractionComp;
 
-	// Token: 0x0400C907 RID: 51463
+	// Token: 0x0400CCE1 RID: 52449
 	[Nullable(2)]
 	private UTraceSphereElement FootTraceElement;
 
-	// Token: 0x0400C908 RID: 51464
+	// Token: 0x0400CCE2 RID: 52450
 	private readonly Vector StartLocation = Vector.Create();
 
-	// Token: 0x0400C909 RID: 51465
+	// Token: 0x0400CCE3 RID: 52451
 	private readonly Vector EndLocation = Vector.Create();
 
-	// Token: 0x0400C90A RID: 51466
+	// Token: 0x0400CCE4 RID: 52452
 	private readonly Vector TmpHitLocation = Vector.Create();
 
-	// Token: 0x0400C90B RID: 51467
+	// Token: 0x0400CCE5 RID: 52453
 	private readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x0400C90C RID: 51468
+	// Token: 0x0400CCE6 RID: 52454
 	private readonly Vector TmpVector2 = Vector.Create();
 
-	// Token: 0x0400C90D RID: 51469
+	// Token: 0x0400CCE7 RID: 52455
 	private readonly Vector TmpVector3 = Vector.Create();
 
-	// Token: 0x0400C90E RID: 51470
+	// Token: 0x0400CCE8 RID: 52456
 	private readonly Rotator TmpRotator = Rotator.Create();
 
-	// Token: 0x0400C90F RID: 51471
+	// Token: 0x0400CCE9 RID: 52457
 	private readonly Vector FootLocation = Vector.Create();
 
-	// Token: 0x0400C910 RID: 51472
+	// Token: 0x0400CCEA RID: 52458
 	private Stat StatTraceDelegate = Stat.Create("CharacterFootEffectComponent.AsyncTraceDelegate", "", "");
 
-	// Token: 0x0400C911 RID: 51473
+	// Token: 0x0400CCEB RID: 52459
 	private Stat StatGetFootTexture = Stat.Create("CharacterFootEffectComponent.GetFootTexture", "", "");
 
-	// Token: 0x0400C912 RID: 51474
+	// Token: 0x0400CCEC RID: 52460
 	private Stat StatPostFootsteupAudio = Stat.Create("CharacterFootEffectComponent.PostFootStepAudio", "", "");
 
-	// Token: 0x0400C913 RID: 51475
+	// Token: 0x0400CCED RID: 52461
 	private readonly Dictionary<EPhysicalSurface, CharacterFootEffectComponent.CharacterFootEffectConfig> FootprintMap = new Dictionary<EPhysicalSurface, CharacterFootEffectComponent.CharacterFootEffectConfig>();
 
-	// Token: 0x0400C914 RID: 51476
+	// Token: 0x0400CCEE RID: 52462
 	private readonly Dictionary<int, List<CharacterFootEffectComponent.CharacterSpecialFootEffectConfig>> CharacterFootprintMap = new Dictionary<int, List<CharacterFootEffectComponent.CharacterSpecialFootEffectConfig>>();
 
-	// Token: 0x0400C915 RID: 51477
+	// Token: 0x0400CCEF RID: 52463
 	private double LastSpawnFootprintTime;
 
-	// Token: 0x0400C916 RID: 51478
+	// Token: 0x0400CCF0 RID: 52464
 	private double LastDetectFootstepTime;
 
-	// Token: 0x0400C917 RID: 51479
+	// Token: 0x0400CCF1 RID: 52465
 	private readonly Vector LastSpawnFootprintLocation = Vector.Create();
 
-	// Token: 0x0400C918 RID: 51480
+	// Token: 0x0400CCF2 RID: 52466
 	private readonly Vector LeftHitLocation = Vector.Create();
 
-	// Token: 0x0400C919 RID: 51481
+	// Token: 0x0400CCF3 RID: 52467
 	private readonly Vector RightHitLocation = Vector.Create();
 
-	// Token: 0x0400C91A RID: 51482
+	// Token: 0x0400CCF4 RID: 52468
 	public static readonly FName LeftFootSocketName = new FName("Bip001LFoot");
 
-	// Token: 0x0400C91B RID: 51483
+	// Token: 0x0400CCF5 RID: 52469
 	public static readonly FName RightFootSocketName = new FName("Bip001RFoot");
 
-	// Token: 0x0400C91C RID: 51484
+	// Token: 0x0400CCF6 RID: 52470
 	[Nullable(2)]
 	private FAsyncTraceDelegate LeftFootprintDelegate;
 
-	// Token: 0x0400C91D RID: 51485
+	// Token: 0x0400CCF7 RID: 52471
 	[Nullable(2)]
 	private FAsyncTraceDelegate RightFootprintDelegate;
 
-	// Token: 0x0400C91E RID: 51486
+	// Token: 0x0400CCF8 RID: 52472
 	[Nullable(2)]
 	private FAsyncTraceDelegate FootVoiceDelegate;
 
-	// Token: 0x0400C91F RID: 51487
+	// Token: 0x0400CCF9 RID: 52473
 	[Nullable(2)]
 	private FAsyncTraceDelegate SeasonFootstepDelegate;
 
-	// Token: 0x0400C920 RID: 51488
+	// Token: 0x0400CCFA RID: 52474
 	[Nullable(2)]
 	private UTraceLineElement SeasonTraceElement;
 
-	// Token: 0x0400C921 RID: 51489
+	// Token: 0x0400CCFB RID: 52475
 	public bool IsOnExposedSurface = true;
 
-	// Token: 0x0400C922 RID: 51490
+	// Token: 0x0400CCFC RID: 52476
 	private readonly Vector SnowHitLocation = Vector.Create();
 
-	// Token: 0x0400C923 RID: 51491
+	// Token: 0x0400CCFD RID: 52477
 	private readonly Vector FootVoiceHitLocation = Vector.Create();
 
-	// Token: 0x0400C924 RID: 51492
+	// Token: 0x0400CCFE RID: 52478
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400C925 RID: 51493
+	// Token: 0x0400CCFF RID: 52479
 	private bool IsLeftFootOnGround;
 
-	// Token: 0x0400C926 RID: 51494
+	// Token: 0x0400CD00 RID: 52480
 	private bool IsRightFootOnGround;
 
-	// Token: 0x0400C927 RID: 51495
+	// Token: 0x0400CD01 RID: 52481
 	private bool IsTriggerEffect;
 
-	// Token: 0x0400C928 RID: 51496
+	// Token: 0x0400CD02 RID: 52482
 	private bool IsLeftFootHit;
 
-	// Token: 0x0400C929 RID: 51497
+	// Token: 0x0400CD03 RID: 52483
 	private bool IsRightFootHit;
 
-	// Token: 0x0400C92A RID: 51498
+	// Token: 0x0400CD04 RID: 52484
 	public static readonly FName FootstepCurveName = new FName("Foot_voice");
 
-	// Token: 0x0400C92B RID: 51499
+	// Token: 0x0400CD05 RID: 52485
 	[Nullable(2)]
 	private TraceHandle TraceHandleLeftFootprint;
 
-	// Token: 0x0400C92C RID: 51500
+	// Token: 0x0400CD06 RID: 52486
 	[Nullable(2)]
 	private TraceHandle TraceHandleRightFootprint;
 
-	// Token: 0x0400C92D RID: 51501
+	// Token: 0x0400CD07 RID: 52487
 	[Nullable(2)]
 	private TraceHandle TraceHandleFootVoice;
 
-	// Token: 0x0400C92E RID: 51502
+	// Token: 0x0400CD08 RID: 52488
 	[Nullable(2)]
 	private TraceHandle TraceHandleSnowFootprint;
 
-	// Token: 0x02009648 RID: 38472
+	// Token: 0x02008869 RID: 34921
 	[NullableContext(0)]
 	[EnumExtensions]
 	public enum EFootstepTexture
 	{
-		// Token: 0x0403036D RID: 197485
+		// Token: 0x0402B9FA RID: 178682
 		[EnumStringMember("DirtSurface")]
 		DirtSurface,
-		// Token: 0x0403036E RID: 197486
+		// Token: 0x0402B9FB RID: 178683
 		[EnumStringMember("ConcreteSurface")]
 		ConcreteSurface,
-		// Token: 0x0403036F RID: 197487
+		// Token: 0x0402B9FC RID: 178684
 		[EnumStringMember("GrassSurface")]
 		GrassSurface,
-		// Token: 0x04030370 RID: 197488
+		// Token: 0x0402B9FD RID: 178685
 		[EnumStringMember("MetalSheetSurface")]
 		MetalSheetSurface,
-		// Token: 0x04030371 RID: 197489
+		// Token: 0x0402B9FE RID: 178686
 		[EnumStringMember("MetalHardSurface")]
 		MetalHardSurface,
-		// Token: 0x04030372 RID: 197490
+		// Token: 0x0402B9FF RID: 178687
 		[EnumStringMember("WoodFloorSurface")]
 		WoodFloorSurface,
-		// Token: 0x04030373 RID: 197491
+		// Token: 0x0402BA00 RID: 178688
 		[EnumStringMember("WaterSurface")]
 		WaterSurface,
-		// Token: 0x04030374 RID: 197492
+		// Token: 0x0402BA01 RID: 178689
 		[EnumStringMember("FabricSurface")]
 		FabricSurface,
-		// Token: 0x04030375 RID: 197493
+		// Token: 0x0402BA02 RID: 178690
 		[EnumStringMember("SandSurface")]
 		SandSurface,
-		// Token: 0x04030376 RID: 197494
+		// Token: 0x0402BA03 RID: 178691
 		[EnumStringMember("IceSurface")]
 		IceSurface,
-		// Token: 0x04030377 RID: 197495
+		// Token: 0x0402BA04 RID: 178692
 		[EnumStringMember("SnowSurface")]
 		SnowSurface,
-		// Token: 0x04030378 RID: 197496
+		// Token: 0x0402BA05 RID: 178693
 		[EnumStringMember("VoicelessSurface")]
 		VoicelessSurface
 	}
 
-	// Token: 0x02009649 RID: 38473
+	// Token: 0x0200886A RID: 34922
 	[NullableContext(0)]
 	public class CharacterFootEffectConfig
 	{
-		// Token: 0x04030379 RID: 197497
+		// Token: 0x0402BA06 RID: 178694
 		[Nullable(new byte[]
 		{
 			2,
@@ -1375,27 +1340,27 @@ public class CharacterFootEffectComponent : EntityComponent, IComponentDependenc
 		})]
 		public TSoftObjectPtr<UEffectModelBase> EffectPath;
 
-		// Token: 0x0403037A RID: 197498
+		// Token: 0x0402BA07 RID: 178695
 		public bool PriorToGlobal;
 	}
 
-	// Token: 0x0200964A RID: 38474
+	// Token: 0x0200886B RID: 34923
 	[NullableContext(0)]
 	public class CharacterSpecialFootEffectConfig
 	{
-		// Token: 0x0403037B RID: 197499
+		// Token: 0x0402BA08 RID: 178696
 		public FGameplayTag Tag;
 
-		// Token: 0x0403037C RID: 197500
+		// Token: 0x0402BA09 RID: 178697
 		public int SortId;
 
-		// Token: 0x0403037D RID: 197501
+		// Token: 0x0402BA0A RID: 178698
 		public int OverrideGlobalFootEffect;
 
-		// Token: 0x0403037E RID: 197502
+		// Token: 0x0402BA0B RID: 178699
 		public int OverrideOtherCharacterFootEffect;
 
-		// Token: 0x0403037F RID: 197503
+		// Token: 0x0402BA0C RID: 178700
 		[Nullable(new byte[]
 		{
 			2,

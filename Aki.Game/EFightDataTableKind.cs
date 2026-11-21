@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200313D RID: 12605
+// Token: 0x020026A0 RID: 9888
 public enum EFightDataTableKind
 {
-	// Token: 0x0400D300 RID: 54016
+	// Token: 0x0400D73F RID: 55103
 	Skill,
-	// Token: 0x0400D301 RID: 54017
+	// Token: 0x0400D740 RID: 55104
 	Bullet,
-	// Token: 0x0400D302 RID: 54018
+	// Token: 0x0400D741 RID: 55105
 	HitEffect
 }

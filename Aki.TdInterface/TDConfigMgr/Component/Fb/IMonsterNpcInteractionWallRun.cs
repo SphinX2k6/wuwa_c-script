@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C1A RID: 3098
+	// Token: 0x02000CEA RID: 3306
 	public class IMonsterNpcInteractionWallRun : IMonsterNpcInteractionConfig
 	{
-		// Token: 0x0600470A RID: 18186 RVA: 0x000B3008 File Offset: 0x000B1208
-		[NullableContext(1)]
+		// Token: 0x06004B6D RID: 19309 RVA: 0x000BD1D4 File Offset: 0x000BB3D4
 		public static IMonsterNpcInteractionWallRun Create(IMonsterNpcInteractionWallRun? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001493 RID: 5267
-		// (get) Token: 0x0600470B RID: 18187 RVA: 0x000B3027 File Offset: 0x000B1227
+		// Token: 0x17001594 RID: 5524
+		// (get) Token: 0x06004B6E RID: 19310 RVA: 0x000BD1F3 File Offset: 0x000BB3F3
 		public override EMonsterNpcInteractionType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002855 RID: 10325
+		// Token: 0x04002AA1 RID: 10913
 		private IMonsterNpcInteractionWallRun Instance;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006C1 RID: 1729
+	// Token: 0x020006D9 RID: 1753
 	public class ConfigPhoneTipShowListByDungeonSubType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002896 RID: 10390 RVA: 0x0013F00F File Offset: 0x0013D20F
+		// Token: 0x06002926 RID: 10534 RVA: 0x00145A8B File Offset: 0x00143C8B
 		static ConfigPhoneTipShowListByDungeonSubType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhoneTipShowListByDungeonSubType.CreateStaticDefaultValue), new Action(ConfigPhoneTipShowListByDungeonSubType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002897 RID: 10391 RVA: 0x0013F030 File Offset: 0x0013D230
+		// Token: 0x06002927 RID: 10535 RVA: 0x00145AAC File Offset: 0x00143CAC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhoneTipShowListByDungeonSubType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002898 RID: 10392 RVA: 0x0013F0AF File Offset: 0x0013D2AF
+		// Token: 0x06002928 RID: 10536 RVA: 0x00145B2B File Offset: 0x00143D2B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhoneTipShowListByDungeonSubType.LogPair = null;
 			ConfigPhoneTipShowListByDungeonSubType.HandleId = 0;
 		}
 
-		// Token: 0x06002899 RID: 10393 RVA: 0x0013F0BD File Offset: 0x0013D2BD
+		// Token: 0x06002929 RID: 10537 RVA: 0x00145B39 File Offset: 0x00143D39
 		public static void Init()
 		{
 			ConfigPhoneTipShowListByDungeonSubType.HandleId = ConfigCommon.InitDataStatement(ConfigPhoneTipShowListByDungeonSubType.HandleId, "db_phonemsg.db", "select BinData from `PhoneTipShowList` where DungeonSubType=?");
 		}
 
-		// Token: 0x0600289A RID: 10394 RVA: 0x0013F0D8 File Offset: 0x0013D2D8
+		// Token: 0x0600292A RID: 10538 RVA: 0x00145B54 File Offset: 0x00143D54
 		public static PhoneTipShowList? GetConfig(int p0DungeonSubType, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhoneTipShowListByDungeonSubType.HandleId, ConfigPhoneTipShowListByDungeonSubType.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhoneTipShowList?(rootAsPhoneTipShowList);
 		}
 
-		// Token: 0x04002F2D RID: 12077
+		// Token: 0x04002FD5 RID: 12245
 		private const string DB = "db_phonemsg.db";
 
-		// Token: 0x04002F2E RID: 12078
+		// Token: 0x04002FD6 RID: 12246
 		private const string FILE = "s.手机系统.xlsx";
 
-		// Token: 0x04002F2F RID: 12079
+		// Token: 0x04002FD7 RID: 12247
 		private const string TABLE = "PhoneTipShowList";
 
-		// Token: 0x04002F30 RID: 12080
+		// Token: 0x04002FD8 RID: 12248
 		private const string COMMAND = "select BinData from `PhoneTipShowList` where DungeonSubType=?";
 
-		// Token: 0x04002F31 RID: 12081
+		// Token: 0x04002FD9 RID: 12249
 		private const string KEY_PREFIX = "PhoneTipShowListByDungeonSubType";
 
-		// Token: 0x04002F32 RID: 12082
+		// Token: 0x04002FDA RID: 12250
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002F33 RID: 12083
+		// Token: 0x04002FDB RID: 12251
 		private static int HandleId;
 	}
 }

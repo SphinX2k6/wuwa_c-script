@@ -2,15 +2,15 @@
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049A0 RID: 18848
+	// Token: 0x0200391A RID: 14618
 	public class NavigationGroupPrevComponent : NavigationGroupPrevComponentBase
 	{
-		// Token: 0x06031157 RID: 201047 RVA: 0x00B63D55 File Offset: 0x00B61F55
+		// Token: 0x06025C8D RID: 154765 RVA: 0x00A9ECA5 File Offset: 0x00A9CEA5
 		public NavigationGroupPrevComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031158 RID: 201048 RVA: 0x00B63D5E File Offset: 0x00B61F5E
+		// Token: 0x06025C8E RID: 154766 RVA: 0x00A9ECAE File Offset: 0x00A9CEAE
 		protected override ENavigationDirectionType GetDirection()
 		{
 			return ENavigationDirectionType.Left;

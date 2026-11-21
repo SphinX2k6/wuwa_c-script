@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B5E RID: 2910
+	// Token: 0x02000C3E RID: 3134
 	public struct CalabashMesh : IFlatbufferObject
 	{
-		// Token: 0x170006DC RID: 1756
-		// (get) Token: 0x06005213 RID: 21011 RVA: 0x001EE9BE File Offset: 0x001ECBBE
+		// Token: 0x1700071C RID: 1820
+		// (get) Token: 0x060057D5 RID: 22485 RVA: 0x0020E76E File Offset: 0x0020C96E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005214 RID: 21012 RVA: 0x001EE9CB File Offset: 0x001ECBCB
+		// Token: 0x060057D6 RID: 22486 RVA: 0x0020E77B File Offset: 0x0020C97B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005215 RID: 21013 RVA: 0x001EE9D4 File Offset: 0x001ECBD4
+		// Token: 0x060057D7 RID: 22487 RVA: 0x0020E784 File Offset: 0x0020C984
 		public static CalabashMesh GetRootAsCalabashMesh(ByteBuffer _bb)
 		{
 			return CalabashMesh.GetRootAsCalabashMesh(_bb, default(CalabashMesh));
 		}
 
-		// Token: 0x06005216 RID: 21014 RVA: 0x001EE9F0 File Offset: 0x001ECBF0
+		// Token: 0x060057D8 RID: 22488 RVA: 0x0020E7A0 File Offset: 0x0020C9A0
 		public static CalabashMesh GetRootAsCalabashMesh(ByteBuffer _bb, CalabashMesh obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005217 RID: 21015 RVA: 0x001EEA0D File Offset: 0x001ECC0D
+		// Token: 0x060057D9 RID: 22489 RVA: 0x0020E7BD File Offset: 0x0020C9BD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005218 RID: 21016 RVA: 0x001EEA1C File Offset: 0x001ECC1C
+		// Token: 0x060057DA RID: 22490 RVA: 0x0020E7CC File Offset: 0x0020C9CC
 		public CalabashMesh __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170006DD RID: 1757
-		// (get) Token: 0x06005219 RID: 21017 RVA: 0x001EEA2C File Offset: 0x001ECC2C
+		// Token: 0x1700071D RID: 1821
+		// (get) Token: 0x060057DB RID: 22491 RVA: 0x0020E7DC File Offset: 0x0020C9DC
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170006DE RID: 1758
-		// (get) Token: 0x0600521A RID: 21018 RVA: 0x001EEA68 File Offset: 0x001ECC68
+		// Token: 0x1700071E RID: 1822
+		// (get) Token: 0x060057DC RID: 22492 RVA: 0x0020E818 File Offset: 0x0020CA18
 		public int MeshId
 		{
 			get
@@ -80,7 +80,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600521B RID: 21019 RVA: 0x001EEAA4 File Offset: 0x001ECCA4
+		// Token: 0x060057DD RID: 22493 RVA: 0x0020E854 File Offset: 0x0020CA54
 		public string OldEffects(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -91,8 +91,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170006DF RID: 1759
-		// (get) Token: 0x0600521C RID: 21020 RVA: 0x001EEAE0 File Offset: 0x001ECCE0
+		// Token: 0x1700071F RID: 1823
+		// (get) Token: 0x060057DE RID: 22494 RVA: 0x0020E890 File Offset: 0x0020CA90
 		public int OldEffectsLength
 		{
 			get
@@ -106,7 +106,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600521D RID: 21021 RVA: 0x001EEB0C File Offset: 0x001ECD0C
+		// Token: 0x060057DF RID: 22495 RVA: 0x0020E8BC File Offset: 0x0020CABC
 		public string NewEffects(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -117,8 +117,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170006E0 RID: 1760
-		// (get) Token: 0x0600521E RID: 21022 RVA: 0x001EEB48 File Offset: 0x001ECD48
+		// Token: 0x17000720 RID: 1824
+		// (get) Token: 0x060057E0 RID: 22496 RVA: 0x0020E8F8 File Offset: 0x0020CAF8
 		public int NewEffectsLength
 		{
 			get
@@ -132,8 +132,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170006E1 RID: 1761
-		// (get) Token: 0x0600521F RID: 21023 RVA: 0x001EEB74 File Offset: 0x001ECD74
+		// Token: 0x17000721 RID: 1825
+		// (get) Token: 0x060057E1 RID: 22497 RVA: 0x0020E924 File Offset: 0x0020CB24
 		public int HideParaglider
 		{
 			get
@@ -147,41 +147,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005220 RID: 21024 RVA: 0x001EEBB1 File Offset: 0x001ECDB1
+		// Token: 0x060057E2 RID: 22498 RVA: 0x0020E961 File Offset: 0x0020CB61
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用NewEffectsIter()或GetNewEffectsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] NewEffects()
+		public string[] NewEffects()
 		{
 			return this.NewEffectsIter().ToArray<string>();
 		}
 
-		// Token: 0x06005221 RID: 21025 RVA: 0x001EEBBE File Offset: 0x001ECDBE
+		// Token: 0x060057E3 RID: 22499 RVA: 0x0020E96E File Offset: 0x0020CB6E
 		[NullableContext(1)]
-		public readonly IEnumerable<string> NewEffectsIter()
+		public IEnumerable<string> NewEffectsIter()
 		{
 			CalabashMesh.<NewEffectsIter>d__21 <NewEffectsIter>d__ = new CalabashMesh.<NewEffectsIter>d__21(-2);
 			<NewEffectsIter>d__.<>3__<>4__this = this;
 			return <NewEffectsIter>d__;
 		}
 
-		// Token: 0x06005222 RID: 21026 RVA: 0x001EEBD3 File Offset: 0x001ECDD3
+		// Token: 0x060057E4 RID: 22500 RVA: 0x0020E983 File Offset: 0x0020CB83
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用OldEffectsIter()或GetOldEffectsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] OldEffects()
+		public string[] OldEffects()
 		{
 			return this.OldEffectsIter().ToArray<string>();
 		}
 
-		// Token: 0x06005223 RID: 21027 RVA: 0x001EEBE0 File Offset: 0x001ECDE0
+		// Token: 0x060057E5 RID: 22501 RVA: 0x0020E990 File Offset: 0x0020CB90
 		[NullableContext(1)]
-		public readonly IEnumerable<string> OldEffectsIter()
+		public IEnumerable<string> OldEffectsIter()
 		{
 			CalabashMesh.<OldEffectsIter>d__23 <OldEffectsIter>d__ = new CalabashMesh.<OldEffectsIter>d__23(-2);
 			<OldEffectsIter>d__.<>3__<>4__this = this;
 			return <OldEffectsIter>d__;
 		}
 
-		// Token: 0x04004B5E RID: 19294
+		// Token: 0x0400513E RID: 20798
 		private Table __p;
 	}
 }

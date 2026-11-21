@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D90 RID: 28048
+	// Token: 0x0200750B RID: 29963
 	public class IPreloadCharacterType_UnionUnion
 	{
-		// Token: 0x1700D13A RID: 53562
-		// (get) Token: 0x060318B1 RID: 202929 RVA: 0x006B71F1 File Offset: 0x006B53F1
-		// (set) Token: 0x060318B2 RID: 202930 RVA: 0x006B71F9 File Offset: 0x006B53F9
+		// Token: 0x1700DC82 RID: 56450
+		// (get) Token: 0x060348AD RID: 215213 RVA: 0x007128D9 File Offset: 0x00710AD9
+		// (set) Token: 0x060348AE RID: 215214 RVA: 0x007128E1 File Offset: 0x00710AE1
 		public IPreloadCharacterType_Union Type { get; set; }
 
-		// Token: 0x1700D13B RID: 53563
-		// (get) Token: 0x060318B3 RID: 202931 RVA: 0x006B7202 File Offset: 0x006B5402
-		// (set) Token: 0x060318B4 RID: 202932 RVA: 0x006B720A File Offset: 0x006B540A
+		// Token: 0x1700DC83 RID: 56451
+		// (get) Token: 0x060348AF RID: 215215 RVA: 0x007128EA File Offset: 0x00710AEA
+		// (set) Token: 0x060348B0 RID: 215216 RVA: 0x007128F2 File Offset: 0x00710AF2
 		public object Value { get; set; }
 
-		// Token: 0x060318B5 RID: 202933 RVA: 0x006B7213 File Offset: 0x006B5413
+		// Token: 0x060348B1 RID: 215217 RVA: 0x007128FB File Offset: 0x00710AFB
 		public IPreloadCharacterType_UnionUnion()
 		{
 			this.Type = IPreloadCharacterType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060318B6 RID: 202934 RVA: 0x006B7229 File Offset: 0x006B5429
+		// Token: 0x060348B2 RID: 215218 RVA: 0x00712911 File Offset: 0x00710B11
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060318B7 RID: 202935 RVA: 0x006B723B File Offset: 0x006B543B
+		// Token: 0x060348B3 RID: 215219 RVA: 0x00712923 File Offset: 0x00710B23
 		public IPreloadCharacterTypeT AsIPreloadCharacterType()
 		{
 			return this.As<IPreloadCharacterTypeT>();
 		}
 
-		// Token: 0x060318B8 RID: 202936 RVA: 0x006B7243 File Offset: 0x006B5443
+		// Token: 0x060348B4 RID: 215220 RVA: 0x0071292B File Offset: 0x00710B2B
 		public static IPreloadCharacterType_UnionUnion FromIPreloadCharacterType(IPreloadCharacterTypeT _ipreloadcharactertype)
 		{
 			return new IPreloadCharacterType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060318B9 RID: 202937 RVA: 0x006B7258 File Offset: 0x006B5458
+		// Token: 0x060348B5 RID: 215221 RVA: 0x00712940 File Offset: 0x00710B40
 		public IPreloadTrialCharacterForSkillT AsIPreloadTrialCharacterForSkill()
 		{
 			return this.As<IPreloadTrialCharacterForSkillT>();
 		}
 
-		// Token: 0x060318BA RID: 202938 RVA: 0x006B7260 File Offset: 0x006B5460
+		// Token: 0x060348B6 RID: 215222 RVA: 0x00712948 File Offset: 0x00710B48
 		public static IPreloadCharacterType_UnionUnion FromIPreloadTrialCharacterForSkill(IPreloadTrialCharacterForSkillT _ipreloadtrialcharacterforskill)
 		{
 			return new IPreloadCharacterType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060318BB RID: 202939 RVA: 0x006B7275 File Offset: 0x006B5475
+		// Token: 0x060348B7 RID: 215223 RVA: 0x0071295D File Offset: 0x00710B5D
 		public IPreloadPhantomCharacterForSkillT AsIPreloadPhantomCharacterForSkill()
 		{
 			return this.As<IPreloadPhantomCharacterForSkillT>();
 		}
 
-		// Token: 0x060318BC RID: 202940 RVA: 0x006B727D File Offset: 0x006B547D
+		// Token: 0x060348B8 RID: 215224 RVA: 0x00712965 File Offset: 0x00710B65
 		public static IPreloadCharacterType_UnionUnion FromIPreloadPhantomCharacterForSkill(IPreloadPhantomCharacterForSkillT _ipreloadphantomcharacterforskill)
 		{
 			return new IPreloadCharacterType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060318BD RID: 202941 RVA: 0x006B7292 File Offset: 0x006B5492
+		// Token: 0x060348B9 RID: 215225 RVA: 0x0071297A File Offset: 0x00710B7A
 		public IPreloadMp4sT AsIPreloadMp4s()
 		{
 			return this.As<IPreloadMp4sT>();
 		}
 
-		// Token: 0x060318BE RID: 202942 RVA: 0x006B729A File Offset: 0x006B549A
+		// Token: 0x060348BA RID: 215226 RVA: 0x00712982 File Offset: 0x00710B82
 		public static IPreloadCharacterType_UnionUnion FromIPreloadMp4s(IPreloadMp4sT _ipreloadmp4s)
 		{
 			return new IPreloadCharacterType_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060318BF RID: 202943 RVA: 0x006B72AF File Offset: 0x006B54AF
+		// Token: 0x060348BB RID: 215227 RVA: 0x00712997 File Offset: 0x00710B97
 		public IPreloadFlowsT AsIPreloadFlows()
 		{
 			return this.As<IPreloadFlowsT>();
 		}
 
-		// Token: 0x060318C0 RID: 202944 RVA: 0x006B72B7 File Offset: 0x006B54B7
+		// Token: 0x060348BC RID: 215228 RVA: 0x0071299F File Offset: 0x00710B9F
 		public static IPreloadCharacterType_UnionUnion FromIPreloadFlows(IPreloadFlowsT _ipreloadflows)
 		{
 			return new IPreloadCharacterType_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060318C1 RID: 202945 RVA: 0x006B72CC File Offset: 0x006B54CC
+		// Token: 0x060348BD RID: 215229 RVA: 0x007129B4 File Offset: 0x00710BB4
 		public IPreloadLinkResourceT AsIPreloadLinkResource()
 		{
 			return this.As<IPreloadLinkResourceT>();
 		}
 
-		// Token: 0x060318C2 RID: 202946 RVA: 0x006B72D4 File Offset: 0x006B54D4
+		// Token: 0x060348BE RID: 215230 RVA: 0x007129BC File Offset: 0x00710BBC
 		public static IPreloadCharacterType_UnionUnion FromIPreloadLinkResource(IPreloadLinkResourceT _ipreloadlinkresource)
 		{
 			return new IPreloadCharacterType_UnionUnion
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060318C3 RID: 202947 RVA: 0x006B72EC File Offset: 0x006B54EC
+		// Token: 0x060348BF RID: 215231 RVA: 0x007129D4 File Offset: 0x00710BD4
 		public static int Pack(FlatBufferBuilder builder, IPreloadCharacterType_UnionUnion _o)
 		{
 			switch (_o.Type)

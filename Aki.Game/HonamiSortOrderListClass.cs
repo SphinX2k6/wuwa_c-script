@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001E7A RID: 7802
+// Token: 0x0200133C RID: 4924
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiSortOrderListClass
 {
-	// Token: 0x0600EDCF RID: 60879 RVA: 0x0038A870 File Offset: 0x00388A70
+	// Token: 0x0600C1EE RID: 49646 RVA: 0x00396460 File Offset: 0x00394660
 	public List<List<int>> GetSortOrderList(int length)
 	{
 		if (length == this.CurCacheLength)
@@ -26,7 +26,7 @@ public class HonamiSortOrderListClass
 		return this.OutputResult;
 	}
 
-	// Token: 0x0600EDD0 RID: 60880 RVA: 0x0038A8DC File Offset: 0x00388ADC
+	// Token: 0x0600C1EF RID: 49647 RVA: 0x003964CC File Offset: 0x003946CC
 	private void CreateSortOrder()
 	{
 		if (this.TempOrderRes.Count == this.OccupyList.Count)
@@ -47,15 +47,15 @@ public class HonamiSortOrderListClass
 		}
 	}
 
-	// Token: 0x04006E55 RID: 28245
+	// Token: 0x04006F36 RID: 28470
 	private readonly List<int> TempOrderRes = new List<int>();
 
-	// Token: 0x04006E56 RID: 28246
+	// Token: 0x04006F37 RID: 28471
 	private readonly List<bool> OccupyList = new List<bool>();
 
-	// Token: 0x04006E57 RID: 28247
+	// Token: 0x04006F38 RID: 28472
 	private readonly List<List<int>> OutputResult = new List<List<int>>();
 
-	// Token: 0x04006E58 RID: 28248
+	// Token: 0x04006F39 RID: 28473
 	private int CurCacheLength;
 }

@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.AdventureGuide;
 using UnrealEngine;
 
-// Token: 0x0200169C RID: 5788
+// Token: 0x02000B54 RID: 2900
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class NewSoundDetectTabItemTitleItem : SyncGridProxyAbstract<NewSoundDetectTabItemData>
 {
-	// Token: 0x0600A54B RID: 42315 RVA: 0x0024EB9C File Offset: 0x0024CD9C
+	// Token: 0x0600792B RID: 31019 RVA: 0x00258FB8 File Offset: 0x002571B8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -37,7 +37,7 @@ public class NewSoundDetectTabItemTitleItem : SyncGridProxyAbstract<NewSoundDete
 		};
 	}
 
-	// Token: 0x0600A54C RID: 42316 RVA: 0x0024EC8C File Offset: 0x0024CE8C
+	// Token: 0x0600792C RID: 31020 RVA: 0x002590A8 File Offset: 0x002572A8
 	[NullableContext(1)]
 	public override void Refresh(NewSoundDetectTabItemData data)
 	{
@@ -72,7 +72,7 @@ public class NewSoundDetectTabItemTitleItem : SyncGridProxyAbstract<NewSoundDete
 		item2.SetUIActive(string.IsNullOrEmpty(data.IconPath));
 	}
 
-	// Token: 0x0600A54D RID: 42317 RVA: 0x0024ED78 File Offset: 0x0024CF78
+	// Token: 0x0600792D RID: 31021 RVA: 0x00259194 File Offset: 0x00257394
 	private void OnToggleStateChange(EToggleState state)
 	{
 		if (this.OnClickCallBack != null)
@@ -81,28 +81,28 @@ public class NewSoundDetectTabItemTitleItem : SyncGridProxyAbstract<NewSoundDete
 		}
 	}
 
-	// Token: 0x04004ACC RID: 19148
+	// Token: 0x04004B73 RID: 19315
 	private int Area;
 
-	// Token: 0x04004ACD RID: 19149
+	// Token: 0x04004B74 RID: 19316
 	private bool IsVisible;
 
-	// Token: 0x04004ACE RID: 19150
+	// Token: 0x04004B75 RID: 19317
 	[Nullable(2)]
 	public Action<int, bool> OnClickCallBack;
 
-	// Token: 0x02007C75 RID: 31861
+	// Token: 0x02006DFA RID: 28154
 	private enum ENewSoundDetectTabItemTitleItem
 	{
-		// Token: 0x04028D62 RID: 167266
+		// Token: 0x0402408B RID: 147595
 		Toggle,
-		// Token: 0x04028D63 RID: 167267
+		// Token: 0x0402408C RID: 147596
 		Title,
-		// Token: 0x04028D64 RID: 167268
+		// Token: 0x0402408D RID: 147597
 		Icon,
-		// Token: 0x04028D65 RID: 167269
+		// Token: 0x0402408E RID: 147598
 		PanelWithIconBg,
-		// Token: 0x04028D66 RID: 167270
+		// Token: 0x0402408F RID: 147599
 		PanelNoIconBg
 	}
 }

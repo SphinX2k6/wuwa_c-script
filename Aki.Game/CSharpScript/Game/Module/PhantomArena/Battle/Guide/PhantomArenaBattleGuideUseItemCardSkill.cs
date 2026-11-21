@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 {
-	// Token: 0x020052B5 RID: 21173
+	// Token: 0x02004285 RID: 17029
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,12 +14,12 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 	})]
 	public class PhantomArenaBattleGuideUseItemCardSkill : PhantomArenaBattleGuideDataBase<IBvbUseItemCardSkill>
 	{
-		// Token: 0x06036285 RID: 221829 RVA: 0x00CD015A File Offset: 0x00CCE35A
+		// Token: 0x0602B180 RID: 176512 RVA: 0x00C1D882 File Offset: 0x00C1BA82
 		public PhantomArenaBattleGuideUseItemCardSkill(EBvbPlayerOperationType type, BvbPlayerOperationConstraint param) : base(type, param)
 		{
 		}
 
-		// Token: 0x06036286 RID: 221830 RVA: 0x00CD016C File Offset: 0x00CCE36C
+		// Token: 0x0602B181 RID: 176513 RVA: 0x00C1D894 File Offset: 0x00C1BA94
 		public override bool CheckCanExecute(params object[] params_)
 		{
 			if (params_.Length < 1)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 			return this.Data.BoardPosIndexList == null || this.Data.BoardPosIndexList.Contains(num + 1);
 		}
 
-		// Token: 0x06036287 RID: 221831 RVA: 0x00CD01E2 File Offset: 0x00CCE3E2
+		// Token: 0x0602B182 RID: 176514 RVA: 0x00C1D90A File Offset: 0x00C1BB0A
 		public override void CacheGuideData(params object[] params_)
 		{
 			if (params_.Length >= 1)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 			}
 		}
 
-		// Token: 0x06036288 RID: 221832 RVA: 0x00CD01F8 File Offset: 0x00CCE3F8
+		// Token: 0x0602B183 RID: 176515 RVA: 0x00C1D920 File Offset: 0x00C1BB20
 		public override bool CheckCanFinishGuide(params object[] params_)
 		{
 			if (params_.Length < 2)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 			return !flag && (phantomArenaGuideCardSkillData.BuffType == null || !PhantomArenaSkillInteractFactory.HasSkillInteract((int)phantomArenaGuideCardSkillData.BuffType.Value)) && phantomArenaGuideCardSkillData.CardId == this.CardId;
 		}
 
-		// Token: 0x0401CA79 RID: 117369
+		// Token: 0x040174AE RID: 95406
 		protected int CardId = -1;
 	}
 }

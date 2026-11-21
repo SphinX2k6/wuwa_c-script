@@ -22,7 +22,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005056 RID: 20566
+	// Token: 0x02004026 RID: 16422
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -31,13 +31,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 	})]
 	public class PlotOptionItem : GridProxyAbstract<object>
 	{
-		// Token: 0x060349F0 RID: 215536 RVA: 0x00C6E84C File Offset: 0x00C6CA4C
+		// Token: 0x060298E3 RID: 170211 RVA: 0x00BBBAEC File Offset: 0x00BB9CEC
 		public PlotOptionItem(ISimulatePlot parentView)
 		{
 			this.ParentView = parentView;
 		}
 
-		// Token: 0x060349F1 RID: 215537 RVA: 0x00C6E870 File Offset: 0x00C6CA70
+		// Token: 0x060298E4 RID: 170212 RVA: 0x00BBBB10 File Offset: 0x00BB9D10
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349F2 RID: 215538 RVA: 0x00C6E910 File Offset: 0x00C6CB10
+		// Token: 0x060298E5 RID: 170213 RVA: 0x00BBBBB0 File Offset: 0x00BB9DB0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PlotOptionItem.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060349F3 RID: 215539 RVA: 0x00C6E954 File Offset: 0x00C6CB54
+		// Token: 0x060298E6 RID: 170214 RVA: 0x00BBBBF4 File Offset: 0x00BB9DF4
 		private void RefreshHotKey()
 		{
 			if (Info.Instance.IsInGamepad())
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			keyItem5.Show(null);
 		}
 
-		// Token: 0x060349F4 RID: 215540 RVA: 0x00C6EA34 File Offset: 0x00C6CC34
+		// Token: 0x060298E7 RID: 170215 RVA: 0x00BBBCD4 File Offset: 0x00BB9ED4
 		protected override void OnStart()
 		{
 			this.IsSelected = false;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			EventSystem.Instance.Add<global::EInputControllerType, global::EInputControllerType>(EEventName.InputControllerChange, new Action<global::EInputControllerType, global::EInputControllerType>(this.OnInputControllerChange));
 		}
 
-		// Token: 0x060349F5 RID: 215541 RVA: 0x00C6EAC3 File Offset: 0x00C6CCC3
+		// Token: 0x060298E8 RID: 170216 RVA: 0x00BBBD63 File Offset: 0x00BB9F63
 		private void OnInputControllerChange(global::EInputControllerType _1, global::EInputControllerType _2)
 		{
 			if (!Info.Instance.IsInTouch() && this.ParentView is PlotViewHud)
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349F6 RID: 215542 RVA: 0x00C6EAE4 File Offset: 0x00C6CCE4
+		// Token: 0x060298E9 RID: 170217 RVA: 0x00BBBD84 File Offset: 0x00BB9F84
 		private bool CanExecuteChange()
 		{
 			if (this.ActionItem.IsPlayingReleaseSequence)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return !this.IsSelected || toggleState != EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x060349F7 RID: 215543 RVA: 0x00C6EB20 File Offset: 0x00C6CD20
+		// Token: 0x060298EA RID: 170218 RVA: 0x00BBBDC0 File Offset: 0x00BB9FC0
 		protected override void OnBeforeDestroy()
 		{
 			this.UnBindHover();
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			EventSystem.Instance.Remove<global::EInputControllerType, global::EInputControllerType>(EEventName.InputControllerChange, new Action<global::EInputControllerType, global::EInputControllerType>(this.OnInputControllerChange));
 		}
 
-		// Token: 0x060349F8 RID: 215544 RVA: 0x00C6EB50 File Offset: 0x00C6CD50
+		// Token: 0x060298EB RID: 170219 RVA: 0x00BBBDF0 File Offset: 0x00BB9FF0
 		private void BindHover()
 		{
 			UUIExtendToggle toggleItem = this.ActionItem.GetToggleItem();
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			toggleItem.OnUnHover.Add(new Action(this.OnUnHover));
 		}
 
-		// Token: 0x060349F9 RID: 215545 RVA: 0x00C6EB8A File Offset: 0x00C6CD8A
+		// Token: 0x060298EC RID: 170220 RVA: 0x00BBBE2A File Offset: 0x00BBA02A
 		private void UnBindHover()
 		{
 			UUIExtendToggle toggleItem = this.ActionItem.GetToggleItem();
@@ -179,19 +179,19 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			toggleItem.OnUnHover.Clear();
 		}
 
-		// Token: 0x060349FA RID: 215546 RVA: 0x00C6EBAC File Offset: 0x00C6CDAC
+		// Token: 0x060298ED RID: 170221 RVA: 0x00BBBE4C File Offset: 0x00BBA04C
 		public void BindOnHover(Action<PlotOptionItem> callback)
 		{
 			this.OnHoverCallback = callback;
 		}
 
-		// Token: 0x060349FB RID: 215547 RVA: 0x00C6EBB5 File Offset: 0x00C6CDB5
+		// Token: 0x060298EE RID: 170222 RVA: 0x00BBBE55 File Offset: 0x00BBA055
 		public void BindOnUnHover(Action<PlotOptionItem> callback)
 		{
 			this.OnUnHoverCallback = callback;
 		}
 
-		// Token: 0x060349FC RID: 215548 RVA: 0x00C6EBBE File Offset: 0x00C6CDBE
+		// Token: 0x060298EF RID: 170223 RVA: 0x00BBBE5E File Offset: 0x00BBA05E
 		private void OnHover()
 		{
 			Action<PlotOptionItem> onHoverCallback = this.OnHoverCallback;
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			onHoverCallback(this);
 		}
 
-		// Token: 0x060349FD RID: 215549 RVA: 0x00C6EBD1 File Offset: 0x00C6CDD1
+		// Token: 0x060298F0 RID: 170224 RVA: 0x00BBBE71 File Offset: 0x00BBA071
 		private void OnUnHover()
 		{
 			Action<PlotOptionItem> onUnHoverCallback = this.OnUnHoverCallback;
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			onUnHoverCallback(this);
 		}
 
-		// Token: 0x060349FE RID: 215550 RVA: 0x00C6EBE4 File Offset: 0x00C6CDE4
+		// Token: 0x060298F1 RID: 170225 RVA: 0x00BBBE84 File Offset: 0x00BBA084
 		public void SetSelectedDisplay(bool value)
 		{
 			base.GetItem(1).SetUIActive(value);
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			toggleItem.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060349FF RID: 215551 RVA: 0x00C6EC60 File Offset: 0x00C6CE60
+		// Token: 0x060298F2 RID: 170226 RVA: 0x00BBBF00 File Offset: 0x00BBA100
 		public void SetupSubtitleOption(PlotOption inOption, int inTalkItemId)
 		{
 			this.OptionType = PlotOptionItem.EOptionType.Plot;
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034A00 RID: 215552 RVA: 0x00C6EDB4 File Offset: 0x00C6CFB4
+		// Token: 0x060298F3 RID: 170227 RVA: 0x00BBC054 File Offset: 0x00BBA254
 		public void SetupInteractiveOption(CommonInteractOption option, PawnInteractController controller)
 		{
 			this.OptionType = PlotOptionItem.EOptionType.Interaction;
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.SetOptionText(this.GetIconPath(), configTextByKey);
 		}
 
-		// Token: 0x06034A01 RID: 215553 RVA: 0x00C6EE9D File Offset: 0x00C6D09D
+		// Token: 0x060298F4 RID: 170228 RVA: 0x00BBC13D File Offset: 0x00BBA33D
 		public void SetupLeaveOption(string optionText)
 		{
 			this.IsLeave = true;
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.SetOptionText(this.GetIconPath(), optionText);
 		}
 
-		// Token: 0x06034A02 RID: 215554 RVA: 0x00C6EEC8 File Offset: 0x00C6D0C8
+		// Token: 0x060298F5 RID: 170229 RVA: 0x00BBC168 File Offset: 0x00BBA368
 		private string GetIconPath()
 		{
 			string text = null;
@@ -395,7 +395,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return text ?? "";
 		}
 
-		// Token: 0x06034A03 RID: 215555 RVA: 0x00C6F050 File Offset: 0x00C6D250
+		// Token: 0x060298F6 RID: 170230 RVA: 0x00BBC2F0 File Offset: 0x00BBA4F0
 		[NullableContext(2)]
 		private string GetPlotIcon()
 		{
@@ -433,13 +433,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return config.Value.Icon;
 		}
 
-		// Token: 0x06034A04 RID: 215556 RVA: 0x00C6F164 File Offset: 0x00C6D364
+		// Token: 0x060298F7 RID: 170231 RVA: 0x00BBC404 File Offset: 0x00BBA604
 		private void OptionClick()
 		{
 			this.OptionClick(null);
 		}
 
-		// Token: 0x06034A05 RID: 215557 RVA: 0x00C6F180 File Offset: 0x00C6D380
+		// Token: 0x060298F8 RID: 170232 RVA: 0x00BBC420 File Offset: 0x00BBA620
 		public unsafe void OptionClick(bool? bSelected = true)
 		{
 			if (!this.IsOptionConditionSatisfied())
@@ -533,13 +533,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}).Forget();
 		}
 
-		// Token: 0x06034A06 RID: 215558 RVA: 0x00C6F2B1 File Offset: 0x00C6D4B1
+		// Token: 0x060298F9 RID: 170233 RVA: 0x00BBC551 File Offset: 0x00BBA751
 		public bool IsOptionConditionSatisfied()
 		{
 			return (this.InteractOption == null || this.InteractOption.ConditionCheck) && (this.Option == null || this.Option.ConditionCheck);
 		}
 
-		// Token: 0x06034A07 RID: 215559 RVA: 0x00C6F2E2 File Offset: 0x00C6D4E2
+		// Token: 0x060298FA RID: 170234 RVA: 0x00BBC582 File Offset: 0x00BBA782
 		public int GetDisplayCharLength()
 		{
 			ToggleActionItem actionItem = this.ActionItem;
@@ -550,7 +550,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return actionItem.GetToggleText().GetDisplayCharLength();
 		}
 
-		// Token: 0x06034A08 RID: 215560 RVA: 0x00C6F2FC File Offset: 0x00C6D4FC
+		// Token: 0x060298FB RID: 170235 RVA: 0x00BBC59C File Offset: 0x00BBA79C
 		private void SetOptionText(string iconPath, string inText)
 		{
 			string text = inText;
@@ -562,7 +562,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ActionItem.SetToggleText(text);
 		}
 
-		// Token: 0x06034A09 RID: 215561 RVA: 0x00C6F340 File Offset: 0x00C6D540
+		// Token: 0x060298FC RID: 170236 RVA: 0x00BBC5E0 File Offset: 0x00BBA7E0
 		private string GetIconPathByGlobalConfig(string name)
 		{
 			GlobalConfigFromCsv? config = ConfigGlobalConfigFromCsvByName.GetConfig("EInteractIcon." + name, true);
@@ -577,7 +577,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return config.Value.Value;
 		}
 
-		// Token: 0x06034A0A RID: 215562 RVA: 0x00C6F398 File Offset: 0x00C6D598
+		// Token: 0x060298FD RID: 170237 RVA: 0x00BBC638 File Offset: 0x00BBA838
 		public bool IsTask()
 		{
 			CommonInteractOption interactOption = this.InteractOption;
@@ -585,7 +585,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return generalContext != null && (generalContext.Type.GetValueOrDefault() == EGeneralContextType.Quest || (generalContext.Type.GetValueOrDefault() == EGeneralContextType.GeneralLogicTree && ((GeneralLogicTreeContext)generalContext).BtType == BtType.Quest));
 		}
 
-		// Token: 0x06034A0B RID: 215563 RVA: 0x00C6F3EC File Offset: 0x00C6D5EC
+		// Token: 0x060298FE RID: 170238 RVA: 0x00BBC68C File Offset: 0x00BBA88C
 		public bool IsOpenSystemBoard()
 		{
 			CommonInteractOption interactOption = this.InteractOption;
@@ -616,13 +616,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return false;
 		}
 
-		// Token: 0x06034A0C RID: 215564 RVA: 0x00C6F490 File Offset: 0x00C6D690
+		// Token: 0x060298FF RID: 170239 RVA: 0x00BBC730 File Offset: 0x00BBA930
 		public bool IsLeaveItem()
 		{
 			return this.IsLeave;
 		}
 
-		// Token: 0x06034A0D RID: 215565 RVA: 0x00C6F498 File Offset: 0x00C6D698
+		// Token: 0x06029900 RID: 170240 RVA: 0x00BBC738 File Offset: 0x00BBA938
 		public bool CheckToggleGray()
 		{
 			if (this.IsLeave)
@@ -636,7 +636,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return this.Option != null && PlotModel.Instance.IsOptionGray(this.TalkItemId, this.OptionIndex) && PlotModel.Instance.IsOptionEntryFullyRead(this.TalkItemId, this.OptionIndex);
 		}
 
-		// Token: 0x06034A0E RID: 215566 RVA: 0x00C6F500 File Offset: 0x00C6D700
+		// Token: 0x06029901 RID: 170241 RVA: 0x00BBC7A0 File Offset: 0x00BBA9A0
 		[NullableContext(2)]
 		public override void Refresh(object data, bool isSelected, int gridIndex)
 		{
@@ -663,7 +663,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ActionItem.SetRaycastTarget(true);
 		}
 
-		// Token: 0x06034A0F RID: 215567 RVA: 0x00C6F560 File Offset: 0x00C6D760
+		// Token: 0x06029902 RID: 170242 RVA: 0x00BBC800 File Offset: 0x00BBAA00
 		private void HandleCommonInteractOption(CommonInteractOption option)
 		{
 			PlotView plotView = this.ParentView as PlotView;
@@ -674,21 +674,21 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034A10 RID: 215568 RVA: 0x00C6F590 File Offset: 0x00C6D790
+		// Token: 0x06029903 RID: 170243 RVA: 0x00BBC830 File Offset: 0x00BBAA30
 		private void HandleLeaveOption()
 		{
 			string localTextNew = ConfigMultiTextLang.GetLocalTextNew(ConfigTextById.GetConfig("Leave", true).Value.TextContent, null);
 			this.SetupLeaveOption(localTextNew);
 		}
 
-		// Token: 0x06034A11 RID: 215569 RVA: 0x00C6F5C8 File Offset: 0x00C6D7C8
+		// Token: 0x06029904 RID: 170244 RVA: 0x00BBC868 File Offset: 0x00BBAA68
 		private void HandleITalkOption(PlotOption option)
 		{
 			ITalkItem currentSubtitle = this.ParentView.CurrentSubtitle;
 			this.SetupSubtitleOption(option, currentSubtitle.Id);
 		}
 
-		// Token: 0x06034A12 RID: 215570 RVA: 0x00C6F5EE File Offset: 0x00C6D7EE
+		// Token: 0x06029905 RID: 170245 RVA: 0x00BBC88E File Offset: 0x00BBAA8E
 		[NullableContext(2)]
 		public UUIExtendToggle GetToggleItem()
 		{
@@ -700,7 +700,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return actionItem.GetToggleItem();
 		}
 
-		// Token: 0x06034A13 RID: 215571 RVA: 0x00C6F604 File Offset: 0x00C6D804
+		// Token: 0x06029906 RID: 170246 RVA: 0x00BBC8A4 File Offset: 0x00BBAAA4
 		private void HandleInteractSecondConfirmResult(int handle, bool isConfirm, CommonInteractOption option)
 		{
 			PlotController.Instance.EndInteraction(this.InteractOption.Type.Type == EInteractOption.Flow, false);
@@ -711,32 +711,32 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.InteractController.SecondConfirmHandle = 0;
 		}
 
-		// Token: 0x0401C0B5 RID: 114869
+		// Token: 0x04016AE0 RID: 92896
 		[Nullable(2)]
 		private ToggleActionItem ActionItem;
 
-		// Token: 0x0401C0B6 RID: 114870
+		// Token: 0x04016AE1 RID: 92897
 		private PlotOptionItem.EOptionType OptionType;
 
-		// Token: 0x0401C0B7 RID: 114871
+		// Token: 0x04016AE2 RID: 92898
 		[Nullable(2)]
 		public PlotOption Option;
 
-		// Token: 0x0401C0B8 RID: 114872
+		// Token: 0x04016AE3 RID: 92899
 		private string OptionText = "";
 
-		// Token: 0x0401C0B9 RID: 114873
+		// Token: 0x04016AE4 RID: 92900
 		[Nullable(2)]
 		private PawnInteractController InteractController;
 
-		// Token: 0x0401C0BA RID: 114874
+		// Token: 0x04016AE5 RID: 92901
 		[Nullable(2)]
 		private CommonInteractOption InteractOption;
 
-		// Token: 0x0401C0BB RID: 114875
+		// Token: 0x04016AE6 RID: 92902
 		private int TalkItemId;
 
-		// Token: 0x0401C0BC RID: 114876
+		// Token: 0x04016AE7 RID: 92903
 		[Nullable(new byte[]
 		{
 			2,
@@ -744,7 +744,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 		})]
 		private Action<PlotOptionItem> OnHoverCallback;
 
-		// Token: 0x0401C0BD RID: 114877
+		// Token: 0x04016AE8 RID: 92904
 		[Nullable(new byte[]
 		{
 			2,
@@ -752,40 +752,40 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 		})]
 		private Action<PlotOptionItem> OnUnHoverCallback;
 
-		// Token: 0x0401C0BE RID: 114878
+		// Token: 0x04016AE9 RID: 92905
 		public int OptionIndex = -1;
 
-		// Token: 0x0401C0BF RID: 114879
+		// Token: 0x04016AEA RID: 92906
 		private bool IsLeave;
 
-		// Token: 0x0401C0C0 RID: 114880
+		// Token: 0x04016AEB RID: 92907
 		private readonly ISimulatePlot ParentView;
 
-		// Token: 0x0401C0C1 RID: 114881
+		// Token: 0x04016AEC RID: 92908
 		private bool IsSelected;
 
-		// Token: 0x0401C0C2 RID: 114882
+		// Token: 0x04016AED RID: 92909
 		private InputMultiKeyItem KeyItem;
 
-		// Token: 0x0200B1B1 RID: 45489
+		// Token: 0x02009BEB RID: 39915
 		[NullableContext(0)]
 		private enum EPlotComponent
 		{
-			// Token: 0x04035E36 RID: 220726
+			// Token: 0x0403088B RID: 198795
 			ToggleActionItem,
-			// Token: 0x04035E37 RID: 220727
+			// Token: 0x0403088C RID: 198796
 			FKeyItem,
-			// Token: 0x04035E38 RID: 220728
+			// Token: 0x0403088D RID: 198797
 			HotKeyCombine
 		}
 
-		// Token: 0x0200B1B2 RID: 45490
+		// Token: 0x02009BEC RID: 39916
 		[NullableContext(0)]
 		private enum EOptionType
 		{
-			// Token: 0x04035E3A RID: 220730
+			// Token: 0x0403088F RID: 198799
 			Interaction,
-			// Token: 0x04035E3B RID: 220731
+			// Token: 0x04030890 RID: 198800
 			Plot
 		}
 	}

@@ -6,12 +6,12 @@ using CSharpScript.Launcher.BaseConfig;
 
 namespace CSharpScript.Launcher.Download
 {
-	// Token: 0x020001F4 RID: 500
+	// Token: 0x020001F9 RID: 505
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class CdnScoreFormula
 	{
-		// Token: 0x06000CF8 RID: 3320 RVA: 0x0004E768 File Offset: 0x0004C968
+		// Token: 0x06000D39 RID: 3385 RVA: 0x00051254 File Offset: 0x0004F454
 		public static CdnScoreSelectionResult Select([Nullable(2)] ICdnScoreCfg cfg)
 		{
 			if (cfg == null || cfg.Candidates == null)
@@ -67,7 +67,7 @@ namespace CSharpScript.Launcher.Download
 			};
 		}
 
-		// Token: 0x06000CF9 RID: 3321 RVA: 0x0004E864 File Offset: 0x0004CA64
+		// Token: 0x06000D3A RID: 3386 RVA: 0x00051350 File Offset: 0x0004F550
 		public static string Validate(ICdnScoreFormula formula)
 		{
 			if (string.IsNullOrEmpty(formula.Name) || string.IsNullOrEmpty(formula.Output))
@@ -105,7 +105,7 @@ namespace CSharpScript.Launcher.Download
 			return "ok";
 		}
 
-		// Token: 0x06000CFA RID: 3322 RVA: 0x0004E9AC File Offset: 0x0004CBAC
+		// Token: 0x06000D3B RID: 3387 RVA: 0x00051498 File Offset: 0x0004F698
 		public static CdnScoreEvalResult Evaluate(ICdnScoreFormula formula, IReadOnlyDictionary<string, double> vars)
 		{
 			Dictionary<string, double> dictionary = new Dictionary<string, double>();
@@ -160,7 +160,7 @@ namespace CSharpScript.Launcher.Download
 			};
 		}
 
-		// Token: 0x06000CFB RID: 3323 RVA: 0x0004EB7C File Offset: 0x0004CD7C
+		// Token: 0x06000D3C RID: 3388 RVA: 0x00051668 File Offset: 0x0004F868
 		private static CdnScoreEvalResult ResolveOperand(JsonElement operand, IReadOnlyDictionary<string, double> env, IReadOnlyDictionary<string, double> vars)
 		{
 			double value;
@@ -195,7 +195,7 @@ namespace CSharpScript.Launcher.Download
 			return CdnScoreFormula.Error("missing_operand:" + text);
 		}
 
-		// Token: 0x06000CFC RID: 3324 RVA: 0x0004EC20 File Offset: 0x0004CE20
+		// Token: 0x06000D3D RID: 3389 RVA: 0x0005170C File Offset: 0x0004F90C
 		private static CdnScoreEvalResult ApplyOp(string op, double a, double b)
 		{
 			if (op == "div" && b == 0.0)
@@ -319,7 +319,7 @@ namespace CSharpScript.Launcher.Download
 			};
 		}
 
-		// Token: 0x06000CFD RID: 3325 RVA: 0x0004EE10 File Offset: 0x0004D010
+		// Token: 0x06000D3E RID: 3390 RVA: 0x000518FC File Offset: 0x0004FAFC
 		private static CdnScoreEvalResult Error(string error)
 		{
 			return new CdnScoreEvalResult
@@ -328,7 +328,7 @@ namespace CSharpScript.Launcher.Download
 			};
 		}
 
-		// Token: 0x06000CFE RID: 3326 RVA: 0x0004EE20 File Offset: 0x0004D020
+		// Token: 0x06000D3F RID: 3391 RVA: 0x0005190C File Offset: 0x0004FB0C
 		private static bool IsSupportedOp(string op)
 		{
 			if (op != null)
@@ -432,10 +432,10 @@ namespace CSharpScript.Launcher.Download
 			return false;
 		}
 
-		// Token: 0x04000805 RID: 2053
+		// Token: 0x04000845 RID: 2117
 		public const string Ok = "ok";
 
-		// Token: 0x04000806 RID: 2054
+		// Token: 0x04000846 RID: 2118
 		public const string ClientBuiltinFormulaName = "client_builtin";
 	}
 }

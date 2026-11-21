@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200200C RID: 8204
+	// Token: 0x02002255 RID: 8789
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IUiAnimConfig
 	{
-		// Token: 0x0600B470 RID: 46192 RVA: 0x001A397C File Offset: 0x001A1B7C
-		[NullableContext(1)]
+		// Token: 0x0600BF92 RID: 49042 RVA: 0x001BA040 File Offset: 0x001B8240
+		[NullableContext(0)]
 		private IUiAnimConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B471 RID: 46193 RVA: 0x001A39B4 File Offset: 0x001A1BB4
-		[NullableContext(1)]
+		// Token: 0x0600BF93 RID: 49043 RVA: 0x001BA078 File Offset: 0x001B8278
+		[NullableContext(0)]
 		public static IUiAnimConfig Create([Nullable(2)] IUiAnimConfig instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B472 RID: 46194 RVA: 0x001A39C7 File Offset: 0x001A1BC7
-		[NullableContext(1)]
+		// Token: 0x0600BF94 RID: 49044 RVA: 0x001BA08B File Offset: 0x001B828B
+		[NullableContext(0)]
 		public static IUiAnimConfig CreateFromSetValue([Nullable(2)] IUiAnimConfig_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B473 RID: 46195 RVA: 0x001A39DA File Offset: 0x001A1BDA
-		[NullableContext(1)]
+		// Token: 0x0600BF95 RID: 49045 RVA: 0x001BA09E File Offset: 0x001B829E
+		[NullableContext(0)]
 		public IUiAnimConfig_SetValue ToSetValue()
 		{
 			return new IUiAnimConfig_SetValue
@@ -64,9 +64,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700377E RID: 14206
-		// (get) Token: 0x0600B474 RID: 46196 RVA: 0x001A39F9 File Offset: 0x001A1BF9
-		// (set) Token: 0x0600B475 RID: 46197 RVA: 0x001A3A20 File Offset: 0x001A1C20
+		// Token: 0x17003A59 RID: 14937
+		// (get) Token: 0x0600BF96 RID: 49046 RVA: 0x001BA0BD File Offset: 0x001B82BD
+		// (set) Token: 0x0600BF97 RID: 49047 RVA: 0x001BA0E4 File Offset: 0x001B82E4
 		public virtual string UiStartAnimName
 		{
 			get
@@ -88,9 +88,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700377F RID: 14207
-		// (get) Token: 0x0600B476 RID: 46198 RVA: 0x001A3A2E File Offset: 0x001A1C2E
-		// (set) Token: 0x0600B477 RID: 46199 RVA: 0x001A3A55 File Offset: 0x001A1C55
+		// Token: 0x17003A5A RID: 14938
+		// (get) Token: 0x0600BF98 RID: 49048 RVA: 0x001BA0F2 File Offset: 0x001B82F2
+		// (set) Token: 0x0600BF99 RID: 49049 RVA: 0x001BA119 File Offset: 0x001B8319
 		public virtual string UiEndAnimName
 		{
 			get
@@ -112,10 +112,10 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006CBF RID: 27839
+		// Token: 0x040072C6 RID: 29382
 		protected IUiAnimConfig FbInstance;
 
-		// Token: 0x04006CC0 RID: 27840
+		// Token: 0x040072C7 RID: 29383
 		protected IUiAnimConfig_SetValue PocoInterface;
 	}
 }

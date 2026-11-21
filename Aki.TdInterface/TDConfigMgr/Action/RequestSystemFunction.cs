@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200215A RID: 8538
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023BB RID: 9147
 	public class RequestSystemFunction : ActionParams
 	{
-		// Token: 0x0600BBE2 RID: 48098 RVA: 0x001B186C File Offset: 0x001AFA6C
+		// Token: 0x0600C770 RID: 51056 RVA: 0x001C8A20 File Offset: 0x001C6C20
 		private RequestSystemFunction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BBE3 RID: 48099 RVA: 0x001B18A4 File Offset: 0x001AFAA4
+		// Token: 0x0600C771 RID: 51057 RVA: 0x001C8A58 File Offset: 0x001C6C58
 		public static RequestSystemFunction Create([Nullable(2)] RequestSystemFunction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BBE4 RID: 48100 RVA: 0x001B18B7 File Offset: 0x001AFAB7
+		// Token: 0x0600C772 RID: 51058 RVA: 0x001C8A6B File Offset: 0x001C6C6B
 		public static RequestSystemFunction CreateFromSetValue([Nullable(2)] RequestSystemFunction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BBE5 RID: 48101 RVA: 0x001B18CA File Offset: 0x001AFACA
+		// Token: 0x0600C773 RID: 51059 RVA: 0x001C8A7E File Offset: 0x001C6C7E
 		public RequestSystemFunction_SetValue ToSetValue()
 		{
 			return new RequestSystemFunction_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003947 RID: 14663
-		// (get) Token: 0x0600BBE6 RID: 48102 RVA: 0x001B18E0 File Offset: 0x001AFAE0
-		// (set) Token: 0x0600BBE7 RID: 48103 RVA: 0x001B1941 File Offset: 0x001AFB41
+		// Token: 0x17003C34 RID: 15412
+		// (get) Token: 0x0600C774 RID: 51060 RVA: 0x001C8A94 File Offset: 0x001C6C94
+		// (set) Token: 0x0600C775 RID: 51061 RVA: 0x001C8AF5 File Offset: 0x001C6CF5
 		public virtual IBuyGoods SystemFunction
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007047 RID: 28743
+		// Token: 0x0400767C RID: 30332
 		[Nullable(2)]
 		protected new RequestSystemFunction FbInstance;
 
-		// Token: 0x04007048 RID: 28744
+		// Token: 0x0400767D RID: 30333
 		[Nullable(2)]
 		protected RequestSystemFunction_SetValue PocoInterface;
 
-		// Token: 0x04007049 RID: 28745
+		// Token: 0x0400767E RID: 30334
 		private IBuyGoods _SystemFunctionCache;
 
-		// Token: 0x0400704A RID: 28746
+		// Token: 0x0400767F RID: 30335
 		private bool _SystemFunctionInited;
 	}
 }

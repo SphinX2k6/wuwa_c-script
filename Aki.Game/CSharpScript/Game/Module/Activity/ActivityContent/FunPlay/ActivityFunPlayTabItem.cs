@@ -10,27 +10,27 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 {
-	// Token: 0x02006572 RID: 25970
+	// Token: 0x020054F0 RID: 21744
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityFunPlayTabItem : UiPanelBase, IGridProxy<ActivityFunPlayChallengeData>
 	{
-		// Token: 0x17009548 RID: 38216
-		// (get) Token: 0x06041154 RID: 266580 RVA: 0x00FC5E17 File Offset: 0x00FC4017
-		// (set) Token: 0x06041155 RID: 266581 RVA: 0x00FC5E1F File Offset: 0x00FC401F
+		// Token: 0x170068AA RID: 26794
+		// (get) Token: 0x06035E19 RID: 220697 RVA: 0x00F0CDFB File Offset: 0x00F0AFFB
+		// (set) Token: 0x06035E1A RID: 220698 RVA: 0x00F0CE03 File Offset: 0x00F0B003
 		public IScrollViewDelegate<IGridProxy<ActivityFunPlayChallengeData>, ActivityFunPlayChallengeData> ScrollViewDelegate { get; set; }
 
-		// Token: 0x17009549 RID: 38217
-		// (get) Token: 0x06041156 RID: 266582 RVA: 0x00FC5E28 File Offset: 0x00FC4028
-		// (set) Token: 0x06041157 RID: 266583 RVA: 0x00FC5E30 File Offset: 0x00FC4030
+		// Token: 0x170068AB RID: 26795
+		// (get) Token: 0x06035E1B RID: 220699 RVA: 0x00F0CE0C File Offset: 0x00F0B00C
+		// (set) Token: 0x06035E1C RID: 220700 RVA: 0x00F0CE14 File Offset: 0x00F0B014
 		public int GridIndex { get; set; }
 
-		// Token: 0x1700954A RID: 38218
-		// (get) Token: 0x06041158 RID: 266584 RVA: 0x00FC5E39 File Offset: 0x00FC4039
-		// (set) Token: 0x06041159 RID: 266585 RVA: 0x00FC5E41 File Offset: 0x00FC4041
+		// Token: 0x170068AC RID: 26796
+		// (get) Token: 0x06035E1D RID: 220701 RVA: 0x00F0CE1D File Offset: 0x00F0B01D
+		// (set) Token: 0x06035E1E RID: 220702 RVA: 0x00F0CE25 File Offset: 0x00F0B025
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x0604115A RID: 266586 RVA: 0x00FC5E4C File Offset: 0x00FC404C
+		// Token: 0x06035E1F RID: 220703 RVA: 0x00F0CE30 File Offset: 0x00F0B030
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604115B RID: 266587 RVA: 0x00FC6040 File Offset: 0x00FC4240
+		// Token: 0x06035E20 RID: 220704 RVA: 0x00F0D024 File Offset: 0x00F0B224
 		public void TryBindRedDot()
 		{
 			if (this.IsRedDotBind || this.ChallengeData == null)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			RedDotController.Instance.BindRedDot(ERedDotName.ActivityFunPlay, base.GetItem(6), null, this.ChallengeData.GetChallengeId());
 		}
 
-		// Token: 0x0604115C RID: 266588 RVA: 0x00FC60AA File Offset: 0x00FC42AA
+		// Token: 0x06035E21 RID: 220705 RVA: 0x00F0D08E File Offset: 0x00F0B28E
 		private void OnClickItem(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			}
 		}
 
-		// Token: 0x0604115D RID: 266589 RVA: 0x00FC60CD File Offset: 0x00FC42CD
+		// Token: 0x06035E22 RID: 220706 RVA: 0x00F0D0B1 File Offset: 0x00F0B2B1
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0604115E RID: 266590 RVA: 0x00FC60E8 File Offset: 0x00FC42E8
+		// Token: 0x06035E23 RID: 220707 RVA: 0x00F0D0CC File Offset: 0x00F0B2CC
 		protected override void OnBeforeDestroy()
 		{
 			if (this.ChallengeData == null)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.ActivityFunPlay, base.GetItem(6), this.ChallengeData.GetChallengeId());
 		}
 
-		// Token: 0x0604115F RID: 266591 RVA: 0x00FC6141 File Offset: 0x00FC4341
+		// Token: 0x06035E24 RID: 220708 RVA: 0x00F0D125 File Offset: 0x00F0B325
 		private void RefreshView()
 		{
 			this.RefreshBg();
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			this.RefreshLockItem();
 		}
 
-		// Token: 0x06041160 RID: 266592 RVA: 0x00FC615C File Offset: 0x00FC435C
+		// Token: 0x06035E25 RID: 220709 RVA: 0x00F0D140 File Offset: 0x00F0B340
 		private void RefreshBg()
 		{
 			if (this.ChallengeData == null)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			base.SetTextureByPath(this.ChallengeData.GetBackgroundTexturePath(), base.GetTexture(11), null, null);
 		}
 
-		// Token: 0x06041161 RID: 266593 RVA: 0x00FC6195 File Offset: 0x00FC4395
+		// Token: 0x06035E26 RID: 220710 RVA: 0x00F0D179 File Offset: 0x00F0B379
 		private void RefreshTitle()
 		{
 			if (this.ChallengeData == null)
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), this.ChallengeData.GetTabTitle(), Array.Empty<object>());
 		}
 
-		// Token: 0x06041162 RID: 266594 RVA: 0x00FC61C4 File Offset: 0x00FC43C4
+		// Token: 0x06035E27 RID: 220711 RVA: 0x00F0D1A8 File Offset: 0x00F0B3A8
 		private void RefreshFinishedItem()
 		{
 			if (this.ChallengeData == null)
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			}), base.GetSprite(7), false, null, null);
 		}
 
-		// Token: 0x06041163 RID: 266595 RVA: 0x00FC6264 File Offset: 0x00FC4464
+		// Token: 0x06035E28 RID: 220712 RVA: 0x00F0D248 File Offset: 0x00F0B448
 		private void RefreshLockItem()
 		{
 			if (this.ChallengeData == null)
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			item3.SetUIActive(!this.ChallengeData.GetIsUnlock());
 		}
 
-		// Token: 0x06041164 RID: 266596 RVA: 0x00FC62DA File Offset: 0x00FC44DA
+		// Token: 0x06035E29 RID: 220713 RVA: 0x00F0D2BE File Offset: 0x00F0B4BE
 		public void Refresh(ActivityFunPlayChallengeData data, bool isSelected, int gridIndex)
 		{
 			this.ChallengeData = data;
@@ -212,12 +212,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			this.RefreshView();
 		}
 
-		// Token: 0x06041165 RID: 266597 RVA: 0x00FC62EF File Offset: 0x00FC44EF
+		// Token: 0x06035E2A RID: 220714 RVA: 0x00F0D2D3 File Offset: 0x00F0B4D3
 		public void Clear()
 		{
 		}
 
-		// Token: 0x06041166 RID: 266598 RVA: 0x00FC62F4 File Offset: 0x00FC44F4
+		// Token: 0x06035E2B RID: 220715 RVA: 0x00F0D2D8 File Offset: 0x00F0B4D8
 		public void OnSelected(bool fireEvent)
 		{
 			if (this.ChallengeData == null)
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			this.ChallengeData.RefreshUnlockRedDot();
 		}
 
-		// Token: 0x06041167 RID: 266599 RVA: 0x00FC6351 File Offset: 0x00FC4551
+		// Token: 0x06035E2C RID: 220716 RVA: 0x00F0D335 File Offset: 0x00F0B535
 		public void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -245,60 +245,60 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x06041168 RID: 266600 RVA: 0x00FC6369 File Offset: 0x00FC4569
+		// Token: 0x06035E2D RID: 220717 RVA: 0x00F0D34D File Offset: 0x00F0B54D
 		public object GetKey(ActivityFunPlayChallengeData data, int gridIndex)
 		{
 			return this.GridIndex;
 		}
 
-		// Token: 0x04021E9E RID: 138910
+		// Token: 0x0401C7CF RID: 116687
 		private const string ROME_ICON_PATH = "/Game/Aki/UI/UIResources/Common/Atlas/SP_ComRomeText_0{0}.SP_ComRomeText_0{1}";
 
-		// Token: 0x04021EA2 RID: 138914
+		// Token: 0x0401C7D3 RID: 116691
 		[Nullable(2)]
 		private ActivityFunPlayChallengeData ChallengeData;
 
-		// Token: 0x04021EA3 RID: 138915
+		// Token: 0x0401C7D4 RID: 116692
 		private bool IsRedDotBind;
 
-		// Token: 0x0200C769 RID: 51049
+		// Token: 0x0200B14E RID: 45390
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403C3EF RID: 246767
+			// Token: 0x04036D41 RID: 224577
 			public const int Toggle = 0;
 
-			// Token: 0x0403C3F0 RID: 246768
+			// Token: 0x04036D42 RID: 224578
 			public const int Title = 1;
 
-			// Token: 0x0403C3F1 RID: 246769
+			// Token: 0x04036D43 RID: 224579
 			public const int SprRome = 2;
 
-			// Token: 0x0403C3F2 RID: 246770
+			// Token: 0x04036D44 RID: 224580
 			public const int SprDone = 3;
 
-			// Token: 0x0403C3F3 RID: 246771
+			// Token: 0x04036D45 RID: 224581
 			public const int LockItemSelected = 4;
 
-			// Token: 0x0403C3F4 RID: 246772
+			// Token: 0x04036D46 RID: 224582
 			public const int LockMask = 5;
 
-			// Token: 0x0403C3F5 RID: 246773
+			// Token: 0x04036D47 RID: 224583
 			public const int RedPointSelected = 6;
 
-			// Token: 0x0403C3F6 RID: 246774
+			// Token: 0x04036D48 RID: 224584
 			public const int SprRomeIcon = 7;
 
-			// Token: 0x0403C3F7 RID: 246775
+			// Token: 0x04036D49 RID: 224585
 			public const int SprDoneSelected = 8;
 
-			// Token: 0x0403C3F8 RID: 246776
+			// Token: 0x04036D4A RID: 224586
 			public const int LockItem = 9;
 
-			// Token: 0x0403C3F9 RID: 246777
+			// Token: 0x04036D4B RID: 224587
 			public const int RedPoint = 10;
 
-			// Token: 0x0403C3FA RID: 246778
+			// Token: 0x04036D4C RID: 224588
 			public const int TexBg = 11;
 		}
 	}

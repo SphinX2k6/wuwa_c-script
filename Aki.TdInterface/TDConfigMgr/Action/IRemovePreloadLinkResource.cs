@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D98 RID: 7576
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FAD RID: 8109
 	public class IRemovePreloadLinkResource : IRemovePreloadResourceCharacterType
 	{
-		// Token: 0x0600A261 RID: 41569 RVA: 0x001715B0 File Offset: 0x0016F7B0
+		// Token: 0x0600AC61 RID: 44129 RVA: 0x00185BD8 File Offset: 0x00183DD8
 		private IRemovePreloadLinkResource_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A262 RID: 41570 RVA: 0x001715E8 File Offset: 0x0016F7E8
+		// Token: 0x0600AC62 RID: 44130 RVA: 0x00185C10 File Offset: 0x00183E10
 		public static IRemovePreloadLinkResource Create([Nullable(2)] IRemovePreloadLinkResource instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A263 RID: 41571 RVA: 0x001715FB File Offset: 0x0016F7FB
+		// Token: 0x0600AC63 RID: 44131 RVA: 0x00185C23 File Offset: 0x00183E23
 		public static IRemovePreloadLinkResource CreateFromSetValue([Nullable(2)] IRemovePreloadLinkResource_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A264 RID: 41572 RVA: 0x0017160E File Offset: 0x0016F80E
+		// Token: 0x0600AC64 RID: 44132 RVA: 0x00185C36 File Offset: 0x00183E36
 		public new IRemovePreloadLinkResource_SetValue ToSetValue()
 		{
 			return new IRemovePreloadLinkResource_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003223 RID: 12835
-		// (get) Token: 0x0600A265 RID: 41573 RVA: 0x0017162D File Offset: 0x0016F82D
-		// (set) Token: 0x0600A266 RID: 41574 RVA: 0x00171658 File Offset: 0x0016F858
+		// Token: 0x170034BB RID: 13499
+		// (get) Token: 0x0600AC65 RID: 44133 RVA: 0x00185C55 File Offset: 0x00183E55
+		// (set) Token: 0x0600AC66 RID: 44134 RVA: 0x00185C80 File Offset: 0x00183E80
 		public override ERemovePreloadResourceObjectType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003224 RID: 12836
-		// (get) Token: 0x0600A267 RID: 41575 RVA: 0x00171666 File Offset: 0x0016F866
-		// (set) Token: 0x0600A268 RID: 41576 RVA: 0x00171691 File Offset: 0x0016F891
+		// Token: 0x170034BC RID: 13500
+		// (get) Token: 0x0600AC67 RID: 44135 RVA: 0x00185C8E File Offset: 0x00183E8E
+		// (set) Token: 0x0600AC68 RID: 44136 RVA: 0x00185CB9 File Offset: 0x00183EB9
 		public virtual int LinkResourceId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400618A RID: 24970
+		// Token: 0x0400670E RID: 26382
 		[Nullable(2)]
 		protected new IRemovePreloadLinkResource FbInstance;
 
-		// Token: 0x0400618B RID: 24971
+		// Token: 0x0400670F RID: 26383
 		[Nullable(2)]
 		protected new IRemovePreloadLinkResource_SetValue PocoInterface;
 	}

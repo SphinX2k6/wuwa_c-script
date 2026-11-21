@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006028 RID: 24616
+	// Token: 0x02006687 RID: 26247
 	public enum ETalkOptionPreConditionType : byte
 	{
-		// Token: 0x04010121 RID: 65825
+		// Token: 0x04010F0D RID: 69389
 		PreOption,
-		// Token: 0x04010122 RID: 65826
+		// Token: 0x04010F0E RID: 69390
 		Condition,
-		// Token: 0x04010123 RID: 65827
+		// Token: 0x04010F0F RID: 69391
 		FirstSelect,
-		// Token: 0x04010124 RID: 65828
+		// Token: 0x04010F10 RID: 69392
 		SystemCondition
 	}
 }

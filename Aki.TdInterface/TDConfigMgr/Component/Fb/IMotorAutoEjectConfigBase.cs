@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B0B RID: 2827
+	// Token: 0x02000BD8 RID: 3032
 	public class IMotorAutoEjectConfigBase
 	{
-		// Token: 0x06004150 RID: 16720 RVA: 0x000A7C4A File Offset: 0x000A5E4A
-		[NullableContext(1)]
+		// Token: 0x06004596 RID: 17814 RVA: 0x000B18EE File Offset: 0x000AFAEE
 		public static IMotorAutoEjectConfigBase Create(IMotorAutoEjectConfigBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170010F7 RID: 4343
-		// (get) Token: 0x06004151 RID: 16721 RVA: 0x000A7C69 File Offset: 0x000A5E69
+		// Token: 0x170011E1 RID: 4577
+		// (get) Token: 0x06004597 RID: 17815 RVA: 0x000B190D File Offset: 0x000AFB0D
 		public virtual EMotorAutoEjectType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040024CC RID: 9420
+		// Token: 0x04002707 RID: 9991
 		private IMotorAutoEjectConfigBase Instance;
 	}
 }

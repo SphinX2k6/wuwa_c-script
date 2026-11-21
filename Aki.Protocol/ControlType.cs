@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001582 RID: 5506
+	// Token: 0x020015F8 RID: 5624
 	public enum ControlType
 	{
-		// Token: 0x0400A76F RID: 42863
+		// Token: 0x0400ABFC RID: 44028
 		[OriginalName("Unknown")]
 		Unknown,
-		// Token: 0x0400A770 RID: 42864
+		// Token: 0x0400ABFD RID: 44029
 		[OriginalName("TemporaryTeleportCtrl")]
 		TemporaryTeleportCtrl
 	}

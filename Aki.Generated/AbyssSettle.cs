@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AB9 RID: 2745
+	// Token: 0x02000B8E RID: 2958
 	public struct AbyssSettle : IFlatbufferObject
 	{
 		// Token: 0x170000C4 RID: 196
-		// (get) Token: 0x06004204 RID: 16900 RVA: 0x001C8ED0 File Offset: 0x001C70D0
+		// (get) Token: 0x06004702 RID: 18178 RVA: 0x001E8130 File Offset: 0x001E6330
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,31 +20,31 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004205 RID: 16901 RVA: 0x001C8EDD File Offset: 0x001C70DD
+		// Token: 0x06004703 RID: 18179 RVA: 0x001E813D File Offset: 0x001E633D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004206 RID: 16902 RVA: 0x001C8EE4 File Offset: 0x001C70E4
+		// Token: 0x06004704 RID: 18180 RVA: 0x001E8144 File Offset: 0x001E6344
 		public static AbyssSettle GetRootAsAbyssSettle(ByteBuffer _bb)
 		{
 			return AbyssSettle.GetRootAsAbyssSettle(_bb, default(AbyssSettle));
 		}
 
-		// Token: 0x06004207 RID: 16903 RVA: 0x001C8F00 File Offset: 0x001C7100
+		// Token: 0x06004705 RID: 18181 RVA: 0x001E8160 File Offset: 0x001E6360
 		public static AbyssSettle GetRootAsAbyssSettle(ByteBuffer _bb, AbyssSettle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004208 RID: 16904 RVA: 0x001C8F1D File Offset: 0x001C711D
+		// Token: 0x06004706 RID: 18182 RVA: 0x001E817D File Offset: 0x001E637D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004209 RID: 16905 RVA: 0x001C8F2C File Offset: 0x001C712C
+		// Token: 0x06004707 RID: 18183 RVA: 0x001E818C File Offset: 0x001E638C
 		public AbyssSettle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
@@ -52,7 +52,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000C5 RID: 197
-		// (get) Token: 0x0600420A RID: 16906 RVA: 0x001C8F3C File Offset: 0x001C713C
+		// (get) Token: 0x06004708 RID: 18184 RVA: 0x001E819C File Offset: 0x001E639C
 		public int Id
 		{
 			get
@@ -67,7 +67,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000C6 RID: 198
-		// (get) Token: 0x0600420B RID: 16907 RVA: 0x001C8F78 File Offset: 0x001C7178
+		// (get) Token: 0x06004709 RID: 18185 RVA: 0x001E81D8 File Offset: 0x001E63D8
 		public string BattleScoreName
 		{
 			get
@@ -81,20 +81,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600420C RID: 16908 RVA: 0x001C8FAF File Offset: 0x001C71AF
+		// Token: 0x0600470A RID: 18186 RVA: 0x001E820F File Offset: 0x001E640F
 		public Span<byte> GetBattleScoreNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600420D RID: 16909 RVA: 0x001C8FBE File Offset: 0x001C71BE
+		// Token: 0x0600470B RID: 18187 RVA: 0x001E821E File Offset: 0x001E641E
 		public byte[] GetBattleScoreNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
 		// Token: 0x170000C7 RID: 199
-		// (get) Token: 0x0600420E RID: 16910 RVA: 0x001C8FD8 File Offset: 0x001C71D8
+		// (get) Token: 0x0600470C RID: 18188 RVA: 0x001E8238 File Offset: 0x001E6438
 		public bool IsTotalRatio
 		{
 			get
@@ -105,7 +105,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000C8 RID: 200
-		// (get) Token: 0x0600420F RID: 16911 RVA: 0x001C9018 File Offset: 0x001C7218
+		// (get) Token: 0x0600470D RID: 18189 RVA: 0x001E8278 File Offset: 0x001E6478
 		public string BaseTitle
 		{
 			get
@@ -119,19 +119,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004210 RID: 16912 RVA: 0x001C9050 File Offset: 0x001C7250
+		// Token: 0x0600470E RID: 18190 RVA: 0x001E82B0 File Offset: 0x001E64B0
 		public Span<byte> GetBaseTitleBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06004211 RID: 16913 RVA: 0x001C9060 File Offset: 0x001C7260
+		// Token: 0x0600470F RID: 18191 RVA: 0x001E82C0 File Offset: 0x001E64C0
 		public byte[] GetBaseTitleArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06004212 RID: 16914 RVA: 0x001C9078 File Offset: 0x001C7278
+		// Token: 0x06004710 RID: 18192 RVA: 0x001E82D8 File Offset: 0x001E64D8
 		public DicIntString? Title(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -143,7 +143,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000C9 RID: 201
-		// (get) Token: 0x06004213 RID: 16915 RVA: 0x001C90DC File Offset: 0x001C72DC
+		// (get) Token: 0x06004711 RID: 18193 RVA: 0x001E833C File Offset: 0x001E653C
 		public int TitleLength
 		{
 			get
@@ -157,24 +157,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004214 RID: 16916 RVA: 0x001C9108 File Offset: 0x001C7308
+		// Token: 0x06004712 RID: 18194 RVA: 0x001E8368 File Offset: 0x001E6568
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用TitleFrozenDict()缓存字典，遍历请使用TitleIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, string> Title()
+		public Dictionary<int, string> Title()
 		{
 			return this.TitleIter().ToDictionary((DicIntString element) => element.Key, (DicIntString element) => element.Value);
 		}
 
-		// Token: 0x06004215 RID: 16917 RVA: 0x001C915E File Offset: 0x001C735E
+		// Token: 0x06004713 RID: 18195 RVA: 0x001E83BE File Offset: 0x001E65BE
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntString> TitleIter()
+		public IEnumerable<DicIntString> TitleIter()
 		{
 			AbyssSettle.<TitleIter>d__24 <TitleIter>d__ = new AbyssSettle.<TitleIter>d__24(-2);
 			<TitleIter>d__.<>3__<>4__this = this;
 			return <TitleIter>d__;
 		}
 
-		// Token: 0x06004216 RID: 16918 RVA: 0x001C9174 File Offset: 0x001C7374
+		// Token: 0x06004714 RID: 18196 RVA: 0x001E83D4 File Offset: 0x001E65D4
 		[NullableContext(2)]
 		public string GetTitle(int key)
 		{
@@ -187,7 +186,7 @@ namespace Aki.Config
 			return result;
 		}
 
-		// Token: 0x06004217 RID: 16919 RVA: 0x001C919C File Offset: 0x001C739C
+		// Token: 0x06004715 RID: 18197 RVA: 0x001E83FC File Offset: 0x001E65FC
 		private void EnsureTitleCacheIfNeeded()
 		{
 			if (this.TitleCache != null)
@@ -197,22 +196,18 @@ namespace Aki.Config
 			this.TitleCache = this.TitleIter().ToFrozenDictionary((DicIntString kvp) => kvp.Key, (DicIntString kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06004218 RID: 16920 RVA: 0x001C9202 File Offset: 0x001C7402
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		public FrozenDictionary<int, string> GetTitleFrozenDict(int key)
+		// Token: 0x06004716 RID: 18198 RVA: 0x001E8462 File Offset: 0x001E6662
+		[NullableContext(1)]
+		public FrozenDictionary<int, string> GetTitleFrozenDict()
 		{
 			this.EnsureTitleCacheIfNeeded();
 			return this.TitleCache;
 		}
 
-		// Token: 0x04004A90 RID: 19088
+		// Token: 0x04005063 RID: 20579
 		private Table __p;
 
-		// Token: 0x04004A91 RID: 19089
+		// Token: 0x04005064 RID: 20580
 		[Nullable(new byte[]
 		{
 			2,

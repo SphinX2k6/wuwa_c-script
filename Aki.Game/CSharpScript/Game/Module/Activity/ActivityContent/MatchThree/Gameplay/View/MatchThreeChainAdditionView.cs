@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064D4 RID: 25812
+	// Token: 0x02005452 RID: 21586
 	public class MatchThreeChainAdditionView : MatchThreePieceAdditionView
 	{
-		// Token: 0x06040C4A RID: 265290 RVA: 0x00FAF264 File Offset: 0x00FAD464
+		// Token: 0x0603590E RID: 219406 RVA: 0x00EF62AC File Offset: 0x00EF44AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -21,13 +21,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040C4B RID: 265291 RVA: 0x00FAF2AC File Offset: 0x00FAD4AC
+		// Token: 0x0603590F RID: 219407 RVA: 0x00EF62F4 File Offset: 0x00EF44F4
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			return base.PlayAnimAsync("Start");
 		}
 
-		// Token: 0x06040C4C RID: 265292 RVA: 0x00FAF2BC File Offset: 0x00FAD4BC
+		// Token: 0x06035910 RID: 219408 RVA: 0x00EF6304 File Offset: 0x00EF4504
 		protected override void RefreshAppearance()
 		{
 			UUIText text = base.GetText(0);
@@ -51,10 +51,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x0200C6D6 RID: 50902
+		// Token: 0x0200B0BC RID: 45244
 		private enum EComponent
 		{
-			// Token: 0x0403C0AC RID: 245932
+			// Token: 0x04036A07 RID: 223751
 			TxtCounter
 		}
 	}

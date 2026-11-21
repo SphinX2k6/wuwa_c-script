@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200602C RID: 24620
+	// Token: 0x0200668B RID: 26251
 	public enum ETeamDisplayModeInSkillOp : byte
 	{
-		// Token: 0x04010137 RID: 65847
+		// Token: 0x04010F23 RID: 69411
 		Normal,
-		// Token: 0x04010138 RID: 65848
+		// Token: 0x04010F24 RID: 69412
 		Lock
 	}
 }

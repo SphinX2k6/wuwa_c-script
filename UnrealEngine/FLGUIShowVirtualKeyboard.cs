@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020020C3 RID: 8387
+	// Token: 0x020006BC RID: 1724
 	public sealed class FLGUIShowVirtualKeyboard : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F992 RID: 129426 RVA: 0x002EFA96 File Offset: 0x002EDC96
+		// Token: 0x060093C2 RID: 37826 RVA: 0x000DE9F6 File Offset: 0x000DCBF6
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIShowVirtualKeyboard.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F993 RID: 129427 RVA: 0x002EFAA2 File Offset: 0x002EDCA2
+		// Token: 0x060093C3 RID: 37827 RVA: 0x000DEA02 File Offset: 0x000DCC02
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIShowVirtualKeyboard._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLGUIShowVirtualKeyboard._FunctionPtr;
 		}
 
-		// Token: 0x0601F994 RID: 129428 RVA: 0x002EFAC5 File Offset: 0x002EDCC5
+		// Token: 0x060093C4 RID: 37828 RVA: 0x000DEA25 File Offset: 0x000DCC25
 		public FLGUIShowVirtualKeyboard()
 		{
 		}
 
-		// Token: 0x0601F995 RID: 129429 RVA: 0x002EFACD File Offset: 0x002EDCCD
+		// Token: 0x060093C5 RID: 37829 RVA: 0x000DEA2D File Offset: 0x000DCC2D
 		[NullableContext(2)]
 		public FLGUIShowVirtualKeyboard(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F996 RID: 129430 RVA: 0x002EFAD7 File Offset: 0x002EDCD7
+		// Token: 0x060093C6 RID: 37830 RVA: 0x000DEA37 File Offset: 0x000DCC37
 		public FLGUIShowVirtualKeyboard(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F997 RID: 129431 RVA: 0x002EFAE2 File Offset: 0x002EDCE2
+		// Token: 0x060093C7 RID: 37831 RVA: 0x000DEA42 File Offset: 0x000DCC42
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<bool>) ?? ((Action<bool>)Delegate.CreateDelegate(typeof(Action<bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F998 RID: 129432 RVA: 0x002EFB14 File Offset: 0x002EDD14
+		// Token: 0x060093C8 RID: 37832 RVA: 0x000DEA74 File Offset: 0x000DCC74
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<bool> Callback)
 		{
 			if (FLGUIShowVirtualKeyboard.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIShowVirtualKeyboard.RegisterId);
 		}
 
-		// Token: 0x0601F999 RID: 129433 RVA: 0x002EFB50 File Offset: 0x002EDD50
+		// Token: 0x060093C9 RID: 37833 RVA: 0x000DEAB0 File Offset: 0x000DCCB0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(bool state)
 		{
 			FLGUIShowVirtualKeyboard.__FLGUIShowVirtualKeyboard_DelegateParams* ptr = stackalloc FLGUIShowVirtualKeyboard.__FLGUIShowVirtualKeyboard_DelegateParams[(UIntPtr)16] + 15L / (long)sizeof(FLGUIShowVirtualKeyboard.__FLGUIShowVirtualKeyboard_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F99A RID: 129434 RVA: 0x002EFB90 File Offset: 0x002EDD90
+		// Token: 0x060093CA RID: 37834 RVA: 0x000DEAF0 File Offset: 0x000DCCF0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool> action = target as Action<bool>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FLGUIShowVirtualKeyboard.__FLGUIShowVirtualKeyboard_DelegateParams*)__Parameters)->state);
 		}
 
-		// Token: 0x040110E4 RID: 69860
+		// Token: 0x04004069 RID: 16489
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040110E5 RID: 69861
+		// Token: 0x0400406A RID: 16490
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIShowVirtualKeyboard__DelegateSignature";
 
-		// Token: 0x040110E6 RID: 69862
+		// Token: 0x0400406B RID: 16491
 		private static int RegisterId;
 
-		// Token: 0x020034BA RID: 13498
+		// Token: 0x02000EE8 RID: 3816
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __FLGUIShowVirtualKeyboard_DelegateParams
+		private ref struct __FLGUIShowVirtualKeyboard_DelegateParams
 		{
-			// Token: 0x040174C3 RID: 95427
+			// Token: 0x040062AA RID: 25258
 			[FieldOffset(0)]
 			public bool state;
 		}
 
-		// Token: 0x020034BB RID: 13499
+		// Token: 0x02000EE9 RID: 3817
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040174C4 RID: 95428
+			// Token: 0x040062AB RID: 25259
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053AD RID: 21421
+	// Token: 0x02004390 RID: 17296
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleBuffItem : UiPanelBase
 	{
-		// Token: 0x06036BCC RID: 224204 RVA: 0x00CF44F4 File Offset: 0x00CF26F4
+		// Token: 0x0602BB12 RID: 178962 RVA: 0x00C4359C File Offset: 0x00C4179C
 		public UniTask Init(UUIItem item, MoraleBuffData data)
 		{
 			MoraleBuffItem.<Init>d__3 <Init>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036BCD RID: 224205 RVA: 0x00CF4548 File Offset: 0x00CF2748
+		// Token: 0x0602BB13 RID: 178963 RVA: 0x00C435F0 File Offset: 0x00C417F0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036BCE RID: 224206 RVA: 0x00CF4634 File Offset: 0x00CF2834
+		// Token: 0x0602BB14 RID: 178964 RVA: 0x00C436DC File Offset: 0x00C418DC
 		public void UpdateData()
 		{
 			UUIText text = base.GetText(6);
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.UpdateState();
 		}
 
-		// Token: 0x06036BCF RID: 224207 RVA: 0x00CF4678 File Offset: 0x00CF2878
+		// Token: 0x0602BB15 RID: 178965 RVA: 0x00C43720 File Offset: 0x00C41920
 		public void UpdateToggleState()
 		{
 			EToggleState state = this.BuffData.IsSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Morale
 			extendToggle.SetToggleStateForce(state, false, false, false);
 		}
 
-		// Token: 0x06036BD0 RID: 224208 RVA: 0x00CF46AC File Offset: 0x00CF28AC
+		// Token: 0x0602BB16 RID: 178966 RVA: 0x00C43754 File Offset: 0x00C41954
 		public void UpdateState()
 		{
 			switch (this.BuffData.GetActiveState())
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036BD1 RID: 224209 RVA: 0x00CF46EC File Offset: 0x00CF28EC
+		// Token: 0x0602BB17 RID: 178967 RVA: 0x00C43794 File Offset: 0x00C41994
 		public void SetStateActive()
 		{
 			this.SetStarState(true);
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.UseIconChangeColor(true);
 		}
 
-		// Token: 0x06036BD2 RID: 224210 RVA: 0x00CF4720 File Offset: 0x00CF2920
+		// Token: 0x0602BB18 RID: 178968 RVA: 0x00C437C8 File Offset: 0x00C419C8
 		public void SetStateTempActive()
 		{
 			this.SetStarState(true);
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.UseIconChangeColor(true);
 		}
 
-		// Token: 0x06036BD3 RID: 224211 RVA: 0x00CF4754 File Offset: 0x00CF2954
+		// Token: 0x0602BB19 RID: 178969 RVA: 0x00C437FC File Offset: 0x00C419FC
 		public void SetStateNotActive()
 		{
 			this.SetStarState(false);
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.UseIconChangeColor(false);
 		}
 
-		// Token: 0x06036BD4 RID: 224212 RVA: 0x00CF4788 File Offset: 0x00CF2988
+		// Token: 0x0602BB1A RID: 178970 RVA: 0x00C43830 File Offset: 0x00C41A30
 		private void SetStarState(bool show)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Morale
 			sprite.SetUIActive(show);
 		}
 
-		// Token: 0x06036BD5 RID: 224213 RVA: 0x00CF479C File Offset: 0x00CF299C
+		// Token: 0x0602BB1B RID: 178971 RVA: 0x00C43844 File Offset: 0x00C41A44
 		private void SetLockState(bool show)
 		{
 			UUIItem item = base.GetItem(7);
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Morale
 			item.SetUIActive(show);
 		}
 
-		// Token: 0x06036BD6 RID: 224214 RVA: 0x00CF47B0 File Offset: 0x00CF29B0
+		// Token: 0x0602BB1C RID: 178972 RVA: 0x00C43858 File Offset: 0x00C41A58
 		private void SetStateItemShow(int index)
 		{
 			foreach (int num in new int[]
@@ -159,14 +159,14 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036BD7 RID: 224215 RVA: 0x00CF47F8 File Offset: 0x00CF29F8
+		// Token: 0x0602BB1D RID: 178973 RVA: 0x00C438A0 File Offset: 0x00C41AA0
 		private void SetIcon(string path)
 		{
 			UUITexture texture = base.GetTexture(5);
 			base.SetTextureByPath(path, texture, null, null);
 		}
 
-		// Token: 0x06036BD8 RID: 224216 RVA: 0x00CF4820 File Offset: 0x00CF2A20
+		// Token: 0x0602BB1E RID: 178974 RVA: 0x00C438C8 File Offset: 0x00C41AC8
 		private void UseIconChangeColor(bool isUse)
 		{
 			UUITexture texture = base.GetTexture(5);
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.Morale
 			uuiitem.SetChangeColor(isUse, fcolor);
 		}
 
-		// Token: 0x06036BD9 RID: 224217 RVA: 0x00CF484A File Offset: 0x00CF2A4A
+		// Token: 0x0602BB1F RID: 178975 RVA: 0x00C438F2 File Offset: 0x00C41AF2
 		private void OnToggleBuffRoot(EToggleState toggleState)
 		{
 			Action<MoraleBuffData> clickCallback = this.ClickCallback;
@@ -186,10 +186,10 @@ namespace CSharpScript.Game.Module.Morale
 			clickCallback(this.BuffData);
 		}
 
-		// Token: 0x0401CE5F RID: 118367
+		// Token: 0x040178F7 RID: 96503
 		public MoraleBuffData BuffData;
 
-		// Token: 0x0401CE60 RID: 118368
+		// Token: 0x040178F8 RID: 96504
 		[Nullable(new byte[]
 		{
 			2,
@@ -197,32 +197,32 @@ namespace CSharpScript.Game.Module.Morale
 		})]
 		public Action<MoraleBuffData> ClickCallback;
 
-		// Token: 0x0200B641 RID: 46657
+		// Token: 0x0200A079 RID: 41081
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04037361 RID: 226145
+			// Token: 0x04031DB6 RID: 204214
 			public const int SpriteStarActive = 0;
 
-			// Token: 0x04037362 RID: 226146
+			// Token: 0x04031DB7 RID: 204215
 			public const int ToggleBuffRoot = 1;
 
-			// Token: 0x04037363 RID: 226147
+			// Token: 0x04031DB8 RID: 204216
 			public const int ItemTempActive = 2;
 
-			// Token: 0x04037364 RID: 226148
+			// Token: 0x04031DB9 RID: 204217
 			public const int ItemActive = 3;
 
-			// Token: 0x04037365 RID: 226149
+			// Token: 0x04031DBA RID: 204218
 			public const int ItemUnActive = 4;
 
-			// Token: 0x04037366 RID: 226150
+			// Token: 0x04031DBB RID: 204219
 			public const int TextureIcon = 5;
 
-			// Token: 0x04037367 RID: 226151
+			// Token: 0x04031DBC RID: 204220
 			public const int TextNum = 6;
 
-			// Token: 0x04037368 RID: 226152
+			// Token: 0x04031DBD RID: 204221
 			public const int ItemLock = 7;
 		}
 	}

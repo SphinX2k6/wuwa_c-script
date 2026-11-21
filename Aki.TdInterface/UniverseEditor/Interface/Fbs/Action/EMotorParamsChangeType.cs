@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FAB RID: 24491
+	// Token: 0x020065FC RID: 26108
 	public enum EMotorParamsChangeType : byte
 	{
-		// Token: 0x0400FEB6 RID: 65206
+		// Token: 0x04010C68 RID: 68712
 		SpeedUp,
-		// Token: 0x0400FEB7 RID: 65207
+		// Token: 0x04010C69 RID: 68713
 		SpeedDown
 	}
 }

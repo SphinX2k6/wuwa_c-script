@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006783 RID: 26499
+	// Token: 0x020056D3 RID: 22227
 	public enum ERestoreZone
 	{
-		// Token: 0x040227DF RID: 141279
+		// Token: 0x0401D03C RID: 118844
 		Bag,
-		// Token: 0x040227E0 RID: 141280
+		// Token: 0x0401D03D RID: 118845
 		Bench
 	}
 }

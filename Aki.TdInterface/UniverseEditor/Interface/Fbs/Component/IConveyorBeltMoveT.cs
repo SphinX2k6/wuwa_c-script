@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005034 RID: 20532
+	// Token: 0x02005593 RID: 21907
 	public class IConveyorBeltMoveT
 	{
-		// Token: 0x17009502 RID: 38146
-		// (get) Token: 0x06020E5B RID: 134747 RVA: 0x0049304E File Offset: 0x0049124E
-		// (set) Token: 0x06020E5C RID: 134748 RVA: 0x00493056 File Offset: 0x00491256
+		// Token: 0x17009CE3 RID: 40163
+		// (get) Token: 0x06022D7B RID: 142715 RVA: 0x004CCA9E File Offset: 0x004CAC9E
+		// (set) Token: 0x06022D7C RID: 142716 RVA: 0x004CCAA6 File Offset: 0x004CACA6
 		public EConveyorBeltMoveType Type { get; set; }
 
-		// Token: 0x06020E5D RID: 134749 RVA: 0x0049305F File Offset: 0x0049125F
+		// Token: 0x06022D7D RID: 142717 RVA: 0x004CCAAF File Offset: 0x004CACAF
 		public IConveyorBeltMoveT()
 		{
 			this.Type = EConveyorBeltMoveType.FixSpeed;

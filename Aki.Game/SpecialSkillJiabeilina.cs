@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02003192 RID: 12690
+// Token: 0x020026FF RID: 9983
 [NullableContext(2)]
 [Nullable(0)]
 public class SpecialSkillJiabeilina : SpecialSkillBase
 {
-	// Token: 0x0601B534 RID: 111924 RVA: 0x00776230 File Offset: 0x00774430
+	// Token: 0x06019038 RID: 102456 RVA: 0x0079DBA8 File Offset: 0x0079BDA8
 	[NullableContext(1)]
 	public SpecialSkillJiabeilina(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B535 RID: 111925 RVA: 0x0077623C File Offset: 0x0077443C
+	// Token: 0x06019039 RID: 102457 RVA: 0x0079DBB4 File Offset: 0x0079BDB4
 	public override void OnStart()
 	{
 		if (!SpecialSkillJiabeilina.IsOptimizeEnableInitialized)
@@ -36,7 +36,7 @@ public class SpecialSkillJiabeilina : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B536 RID: 111926 RVA: 0x007762E0 File Offset: 0x007744E0
+	// Token: 0x0601903A RID: 102458 RVA: 0x0079DC58 File Offset: 0x0079BE58
 	public override void OnEnd()
 	{
 		HashSet<USkeletalMeshComponent> noUpdateMeshes = this.NoUpdateMeshes;
@@ -55,7 +55,7 @@ public class SpecialSkillJiabeilina : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B537 RID: 111927 RVA: 0x00776374 File Offset: 0x00774574
+	// Token: 0x0601903B RID: 102459 RVA: 0x0079DCEC File Offset: 0x0079BEEC
 	public override void OnActivate()
 	{
 		Entity entity = this.SpecialSkillComponent.Entity;
@@ -71,7 +71,7 @@ public class SpecialSkillJiabeilina : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B538 RID: 111928 RVA: 0x007763B8 File Offset: 0x007745B8
+	// Token: 0x0601903C RID: 102460 RVA: 0x0079DD30 File Offset: 0x0079BF30
 	private void InitNoUpdateMeshes()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -109,7 +109,7 @@ public class SpecialSkillJiabeilina : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B539 RID: 111929 RVA: 0x007764C4 File Offset: 0x007746C4
+	// Token: 0x0601903D RID: 102461 RVA: 0x0079DE3C File Offset: 0x0079C03C
 	[NullableContext(1)]
 	private void RefreshNoUpdateMeshes(HashSet<string> otherCases, bool isAdd)
 	{
@@ -151,7 +151,7 @@ public class SpecialSkillJiabeilina : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B53A RID: 111930 RVA: 0x0077658C File Offset: 0x0077478C
+	// Token: 0x0601903E RID: 102462 RVA: 0x0079DF04 File Offset: 0x0079C104
 	private void OnCharBeforeSkill(int skillId, bool isAutonomousProxy)
 	{
 		if (this.SkillOtherCasesMap == null)
@@ -221,7 +221,7 @@ public class SpecialSkillJiabeilina : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B53B RID: 111931 RVA: 0x007766D0 File Offset: 0x007748D0
+	// Token: 0x0601903F RID: 102463 RVA: 0x0079E048 File Offset: 0x0079C248
 	private void OnSkillEnd(int entityId, int skillId)
 	{
 		Dictionary<long, HashSet<string>> skillOtherCasesMap = this.SkillOtherCasesMap;
@@ -232,23 +232,23 @@ public class SpecialSkillJiabeilina : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B53C RID: 111932 RVA: 0x00776706 File Offset: 0x00774906
-	public new static void SetOptimizeEnable(bool enable)
+	// Token: 0x06019040 RID: 102464 RVA: 0x0079E07E File Offset: 0x0079C27E
+	public static void SetOptimizeEnable(bool enable)
 	{
 		SpecialSkillJiabeilina.IsOptimizeEnableInitialized = true;
 		SpecialSkillJiabeilina.IsOptimizeEnable = enable;
 	}
 
-	// Token: 0x0400D5A9 RID: 54697
+	// Token: 0x0400DA0C RID: 55820
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D5AA RID: 54698
+	// Token: 0x0400DA0D RID: 55821
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400D5AB RID: 54699
+	// Token: 0x0400DA0E RID: 55822
 	private BaseSkillComponent SkillComp;
 
-	// Token: 0x0400D5AC RID: 54700
+	// Token: 0x0400DA0F RID: 55823
 	[Nullable(new byte[]
 	{
 		2,
@@ -256,7 +256,7 @@ public class SpecialSkillJiabeilina : SpecialSkillBase
 	})]
 	private HashSet<USkeletalMeshComponent> NoUpdateMeshes;
 
-	// Token: 0x0400D5AD RID: 54701
+	// Token: 0x0400DA10 RID: 55824
 	[Nullable(new byte[]
 	{
 		2,
@@ -265,11 +265,11 @@ public class SpecialSkillJiabeilina : SpecialSkillBase
 	})]
 	private Dictionary<long, HashSet<string>> SkillOtherCasesMap;
 
-	// Token: 0x0400D5AE RID: 54702
+	// Token: 0x0400DA11 RID: 55825
 	[StaticVariableRuleIgnore]
 	private static bool IsOptimizeEnable;
 
-	// Token: 0x0400D5AF RID: 54703
+	// Token: 0x0400DA12 RID: 55826
 	[StaticVariableRuleIgnore]
 	private static bool IsOptimizeEnableInitialized;
 }

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DFF RID: 3583
+	// Token: 0x02000EE4 RID: 3812
 	public struct MatchThreeGoal : IFlatbufferObject
 	{
-		// Token: 0x17001E9C RID: 7836
-		// (get) Token: 0x060092D8 RID: 37592 RVA: 0x002828C4 File Offset: 0x00280AC4
+		// Token: 0x17001F00 RID: 7936
+		// (get) Token: 0x060098F4 RID: 39156 RVA: 0x002A07E8 File Offset: 0x0029E9E8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060092D9 RID: 37593 RVA: 0x002828D1 File Offset: 0x00280AD1
+		// Token: 0x060098F5 RID: 39157 RVA: 0x002A07F5 File Offset: 0x0029E9F5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060092DA RID: 37594 RVA: 0x002828D8 File Offset: 0x00280AD8
+		// Token: 0x060098F6 RID: 39158 RVA: 0x002A07FC File Offset: 0x0029E9FC
 		public static MatchThreeGoal GetRootAsMatchThreeGoal(ByteBuffer _bb)
 		{
 			return MatchThreeGoal.GetRootAsMatchThreeGoal(_bb, default(MatchThreeGoal));
 		}
 
-		// Token: 0x060092DB RID: 37595 RVA: 0x002828F4 File Offset: 0x00280AF4
+		// Token: 0x060098F7 RID: 39159 RVA: 0x002A0818 File Offset: 0x0029EA18
 		public static MatchThreeGoal GetRootAsMatchThreeGoal(ByteBuffer _bb, MatchThreeGoal obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060092DC RID: 37596 RVA: 0x00282911 File Offset: 0x00280B11
+		// Token: 0x060098F8 RID: 39160 RVA: 0x002A0835 File Offset: 0x0029EA35
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060092DD RID: 37597 RVA: 0x00282920 File Offset: 0x00280B20
+		// Token: 0x060098F9 RID: 39161 RVA: 0x002A0844 File Offset: 0x0029EA44
 		public MatchThreeGoal __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001E9D RID: 7837
-		// (get) Token: 0x060092DE RID: 37598 RVA: 0x00282930 File Offset: 0x00280B30
+		// Token: 0x17001F01 RID: 7937
+		// (get) Token: 0x060098FA RID: 39162 RVA: 0x002A0854 File Offset: 0x0029EA54
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001E9E RID: 7838
-		// (get) Token: 0x060092DF RID: 37599 RVA: 0x0028296C File Offset: 0x00280B6C
+		// Token: 0x17001F02 RID: 7938
+		// (get) Token: 0x060098FB RID: 39163 RVA: 0x002A0890 File Offset: 0x0029EA90
 		public int CondType
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001E9F RID: 7839
-		// (get) Token: 0x060092E0 RID: 37600 RVA: 0x002829A8 File Offset: 0x00280BA8
+		// Token: 0x17001F03 RID: 7939
+		// (get) Token: 0x060098FC RID: 39164 RVA: 0x002A08CC File Offset: 0x0029EACC
 		public string CondDesc
 		{
 			get
@@ -94,19 +94,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060092E1 RID: 37601 RVA: 0x002829DF File Offset: 0x00280BDF
+		// Token: 0x060098FD RID: 39165 RVA: 0x002A0903 File Offset: 0x0029EB03
 		public Span<byte> GetCondDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060092E2 RID: 37602 RVA: 0x002829EE File Offset: 0x00280BEE
+		// Token: 0x060098FE RID: 39166 RVA: 0x002A0912 File Offset: 0x0029EB12
 		public byte[] GetCondDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x060092E3 RID: 37603 RVA: 0x00282A08 File Offset: 0x00280C08
+		// Token: 0x060098FF RID: 39167 RVA: 0x002A092C File Offset: 0x0029EB2C
 		public int Params(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -117,8 +117,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001EA0 RID: 7840
-		// (get) Token: 0x060092E4 RID: 37604 RVA: 0x00282A48 File Offset: 0x00280C48
+		// Token: 0x17001F04 RID: 7940
+		// (get) Token: 0x06009900 RID: 39168 RVA: 0x002A096C File Offset: 0x0029EB6C
 		public int ParamsLength
 		{
 			get
@@ -132,37 +132,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060092E5 RID: 37605 RVA: 0x00282A74 File Offset: 0x00280C74
+		// Token: 0x06009901 RID: 39169 RVA: 0x002A0998 File Offset: 0x0029EB98
 		public Span<int> GetParamsBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x060092E6 RID: 37606 RVA: 0x00282A84 File Offset: 0x00280C84
+		// Token: 0x06009902 RID: 39170 RVA: 0x002A09A8 File Offset: 0x0029EBA8
 		public int[] GetParamsArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060092E7 RID: 37607 RVA: 0x00282A9C File Offset: 0x00280C9C
+		// Token: 0x06009903 RID: 39171 RVA: 0x002A09C0 File Offset: 0x0029EBC0
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ParamsIter()或GetParamsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Params()
+		public int[] Params()
 		{
-			MatchThreeGoal matchThreeGoal = this;
-			return matchThreeGoal.GetParamsArray() ?? Array.Empty<int>();
+			return this.GetParamsArray();
 		}
 
-		// Token: 0x060092E8 RID: 37608 RVA: 0x00282AC0 File Offset: 0x00280CC0
+		// Token: 0x06009904 RID: 39172 RVA: 0x002A09C8 File Offset: 0x0029EBC8
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ParamsIter()
+		public IEnumerable<int> ParamsIter()
 		{
 			MatchThreeGoal.<ParamsIter>d__22 <ParamsIter>d__ = new MatchThreeGoal.<ParamsIter>d__22(-2);
 			<ParamsIter>d__.<>3__<>4__this = this;
 			return <ParamsIter>d__;
 		}
 
-		// Token: 0x04004EA0 RID: 20128
+		// Token: 0x04005485 RID: 21637
 		private Table __p;
 	}
 }

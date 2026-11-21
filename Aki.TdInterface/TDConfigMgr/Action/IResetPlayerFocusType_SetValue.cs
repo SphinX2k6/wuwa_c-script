@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DAD RID: 7597
+	// Token: 0x02001FC4 RID: 8132
 	public class IResetPlayerFocusType_SetValue
 	{
-		// Token: 0x040061B9 RID: 25017
+		// Token: 0x04006741 RID: 26433
 		public EResetPlayerFocusType Type;
 	}
 }

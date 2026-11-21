@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200066B RID: 1643
+	// Token: 0x02000708 RID: 1800
 	public class IRefreshContent_SetValue
 	{
-		// Token: 0x04001854 RID: 6228
+		// Token: 0x04001A46 RID: 6726
 		public ERefreshContent Type;
 	}
 }

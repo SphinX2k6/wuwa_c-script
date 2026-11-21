@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200253F RID: 9535
+	// Token: 0x020027E6 RID: 10214
 	public class ITalkItemStyle
 	{
-		// Token: 0x0600D49B RID: 54427 RVA: 0x001F7CC6 File Offset: 0x001F5EC6
-		[NullableContext(1)]
+		// Token: 0x0600E1FB RID: 57851 RVA: 0x00213726 File Offset: 0x00211926
 		public static ITalkItemStyle Create(ITalkItemStyle? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003BDF RID: 15327
-		// (get) Token: 0x0600D49C RID: 54428 RVA: 0x001F7CE5 File Offset: 0x001F5EE5
+		// Token: 0x17003EDD RID: 16093
+		// (get) Token: 0x0600E1FC RID: 57852 RVA: 0x00213745 File Offset: 0x00211945
 		public virtual ETalkItemStyle Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400748B RID: 29835
+		// Token: 0x04007AE0 RID: 31456
 		private ITalkItemStyle Instance;
 	}
 }

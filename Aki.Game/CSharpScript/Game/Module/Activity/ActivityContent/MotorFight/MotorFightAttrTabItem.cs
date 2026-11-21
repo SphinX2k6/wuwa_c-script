@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006424 RID: 25636
+	// Token: 0x020053A2 RID: 21410
 	public class MotorFightAttrTabItem : GridProxyAbstract<EMotorFightAttrShowType>
 	{
-		// Token: 0x0604075F RID: 264031 RVA: 0x00F993E3 File Offset: 0x00F975E3
+		// Token: 0x06035420 RID: 218144 RVA: 0x00EE0383 File Offset: 0x00EDE583
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(1).bLockStateOnSelect = true;
 			this.SetToggleState(false);
 		}
 
-		// Token: 0x06040760 RID: 264032 RVA: 0x00F993FC File Offset: 0x00F975FC
+		// Token: 0x06035421 RID: 218145 RVA: 0x00EE039C File Offset: 0x00EDE59C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040761 RID: 264033 RVA: 0x00F994C3 File Offset: 0x00F976C3
+		// Token: 0x06035422 RID: 218146 RVA: 0x00EE0463 File Offset: 0x00EDE663
 		public override void Refresh(EMotorFightAttrShowType type, bool isSelected, int gridIndex)
 		{
 			this.Type = type;
@@ -53,57 +53,57 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x06040762 RID: 264034 RVA: 0x00F994FF File Offset: 0x00F976FF
+		// Token: 0x06035423 RID: 218147 RVA: 0x00EE049F File Offset: 0x00EDE69F
 		private void OnToggleClick(EToggleState _)
 		{
 			this.OnToggleClickCallBack(this.Type);
 		}
 
-		// Token: 0x06040763 RID: 264035 RVA: 0x00F99512 File Offset: 0x00F97712
+		// Token: 0x06035424 RID: 218148 RVA: 0x00EE04B2 File Offset: 0x00EDE6B2
 		[NullableContext(1)]
 		public override object GetKey(EMotorFightAttrShowType data, int displayIndex)
 		{
 			return data;
 		}
 
-		// Token: 0x06040764 RID: 264036 RVA: 0x00F9951C File Offset: 0x00F9771C
+		// Token: 0x06035425 RID: 218149 RVA: 0x00EE04BC File Offset: 0x00EDE6BC
 		public void SetToggleState(bool state)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(1).SetToggleState(state2, false, false, false);
 		}
 
-		// Token: 0x06040765 RID: 264037 RVA: 0x00F99542 File Offset: 0x00F97742
+		// Token: 0x06035426 RID: 218150 RVA: 0x00EE04E2 File Offset: 0x00EDE6E2
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleState(true);
 		}
 
-		// Token: 0x06040766 RID: 264038 RVA: 0x00F9954B File Offset: 0x00F9774B
+		// Token: 0x06035427 RID: 218151 RVA: 0x00EE04EB File Offset: 0x00EDE6EB
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleState(false);
 		}
 
-		// Token: 0x04021835 RID: 137269
+		// Token: 0x0401C164 RID: 115044
 		private EMotorFightAttrShowType Type;
 
-		// Token: 0x04021836 RID: 137270
+		// Token: 0x0401C165 RID: 115045
 		[Nullable(1)]
 		public Action<EMotorFightAttrShowType> OnToggleClickCallBack = delegate(EMotorFightAttrShowType type)
 		{
 		};
 
-		// Token: 0x0200C653 RID: 50771
+		// Token: 0x0200B03A RID: 45114
 		private class ETabComponent
 		{
-			// Token: 0x0403BDF6 RID: 245238
+			// Token: 0x04036753 RID: 223059
 			public const int TextName = 0;
 
-			// Token: 0x0403BDF7 RID: 245239
+			// Token: 0x04036754 RID: 223060
 			public const int ToggleRoot = 1;
 
-			// Token: 0x0403BDF8 RID: 245240
+			// Token: 0x04036755 RID: 223061
 			public const int ItemRedDot = 2;
 		}
 	}

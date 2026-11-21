@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061CE RID: 25038
+	// Token: 0x0200514C RID: 20812
 	public enum ETipsType
 	{
-		// Token: 0x04020F4D RID: 134989
+		// Token: 0x0401B87C RID: 112764
 		ExpAdd,
-		// Token: 0x04020F4E RID: 134990
+		// Token: 0x0401B87D RID: 112765
 		LevelUp,
-		// Token: 0x04020F4F RID: 134991
+		// Token: 0x0401B87E RID: 112766
 		LevelUpAndExpAdd
 	}
 }

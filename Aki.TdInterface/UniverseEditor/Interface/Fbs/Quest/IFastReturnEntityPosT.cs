@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E1C RID: 15900
+	// Token: 0x02004257 RID: 16983
 	public class IFastReturnEntityPosT
 	{
-		// Token: 0x17006DED RID: 28141
-		// (get) Token: 0x06016448 RID: 91208 RVA: 0x00337075 File Offset: 0x00335275
-		// (set) Token: 0x06016449 RID: 91209 RVA: 0x0033707D File Offset: 0x0033527D
+		// Token: 0x170073D3 RID: 29651
+		// (get) Token: 0x06017A75 RID: 96885 RVA: 0x0035FC6D File Offset: 0x0035DE6D
+		// (set) Token: 0x06017A76 RID: 96886 RVA: 0x0035FC75 File Offset: 0x0035DE75
 		public EFastReturnPosType Type { get; set; }
 
-		// Token: 0x17006DEE RID: 28142
-		// (get) Token: 0x0601644A RID: 91210 RVA: 0x00337086 File Offset: 0x00335286
-		// (set) Token: 0x0601644B RID: 91211 RVA: 0x0033708E File Offset: 0x0033528E
+		// Token: 0x170073D4 RID: 29652
+		// (get) Token: 0x06017A77 RID: 96887 RVA: 0x0035FC7E File Offset: 0x0035DE7E
+		// (set) Token: 0x06017A78 RID: 96888 RVA: 0x0035FC86 File Offset: 0x0035DE86
 		public int EntityId { get; set; }
 
-		// Token: 0x17006DEF RID: 28143
-		// (get) Token: 0x0601644C RID: 91212 RVA: 0x00337097 File Offset: 0x00335297
-		// (set) Token: 0x0601644D RID: 91213 RVA: 0x0033709F File Offset: 0x0033529F
+		// Token: 0x170073D5 RID: 29653
+		// (get) Token: 0x06017A79 RID: 96889 RVA: 0x0035FC8F File Offset: 0x0035DE8F
+		// (set) Token: 0x06017A7A RID: 96890 RVA: 0x0035FC97 File Offset: 0x0035DE97
 		public TTeleportTransitionOptionUnion TransitionOption { get; set; }
 
-		// Token: 0x0601644E RID: 91214 RVA: 0x003370A8 File Offset: 0x003352A8
+		// Token: 0x06017A7B RID: 96891 RVA: 0x0035FCA0 File Offset: 0x0035DEA0
 		public IFastReturnEntityPosT()
 		{
 			this.Type = EFastReturnPosType.EntityPos;

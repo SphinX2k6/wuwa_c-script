@@ -4,252 +4,254 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x020043AC RID: 17324
+	// Token: 0x020033CA RID: 13258
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/EFightCameraDefault.EFightCameraDefault")]
 	public enum EFightCameraDefault : byte
 	{
-		// Token: 0x04017B3A RID: 97082
+		// Token: 0x040126AC RID: 75436
 		None,
-		// Token: 0x04017B3B RID: 97083
+		// Token: 0x040126AD RID: 75437
 		基础臂长,
-		// Token: 0x04017B3C RID: 97084
+		// Token: 0x040126AE RID: 75438
 		最小臂长,
-		// Token: 0x04017B3D RID: 97085
+		// Token: 0x040126AF RID: 75439
 		最大臂长,
-		// Token: 0x04017B3E RID: 97086
+		// Token: 0x040126B0 RID: 75440
 		废弃1,
-		// Token: 0x04017B3F RID: 97087
+		// Token: 0x040126B1 RID: 75441
 		Fov,
-		// Token: 0x04017B40 RID: 97088
+		// Token: 0x040126B2 RID: 75442
 		相机臂偏移X,
-		// Token: 0x04017B41 RID: 97089
+		// Token: 0x040126B3 RID: 75443
 		相机臂偏移Y,
-		// Token: 0x04017B42 RID: 97090
+		// Token: 0x040126B4 RID: 75444
 		相机臂偏移Z,
-		// Token: 0x04017B43 RID: 97091
+		// Token: 0x040126B5 RID: 75445
 		切换角色相机臂中心点过渡时间,
-		// Token: 0x04017B44 RID: 97092
+		// Token: 0x040126B6 RID: 75446
 		在水中摄像机碰撞检测起点额外高度,
-		// Token: 0x04017B45 RID: 97093
+		// Token: 0x040126B7 RID: 75447
 		障碍碰撞检测胶囊体半径,
-		// Token: 0x04017B46 RID: 97094
+		// Token: 0x040126B8 RID: 75448
 		自动俯仰角输入水平偏移,
-		// Token: 0x04017B47 RID: 97095
+		// Token: 0x040126B9 RID: 75449
 		自动俯仰角输入垂直偏移,
-		// Token: 0x04017B48 RID: 97096
+		// Token: 0x040126BA RID: 75450
 		自动俯仰角输入下界,
-		// Token: 0x04017B49 RID: 97097
+		// Token: 0x040126BB RID: 75451
 		自动俯仰角输入中界,
-		// Token: 0x04017B4A RID: 97098
+		// Token: 0x040126BC RID: 75452
 		自动俯仰角输入上界,
-		// Token: 0x04017B4B RID: 97099
+		// Token: 0x040126BD RID: 75453
 		自动俯仰角输出下界,
-		// Token: 0x04017B4C RID: 97100
+		// Token: 0x040126BE RID: 75454
 		自动俯仰角输出中界,
-		// Token: 0x04017B4D RID: 97101
+		// Token: 0x040126BF RID: 75455
 		自动俯仰角输出上界,
-		// Token: 0x04017B4E RID: 97102
+		// Token: 0x040126C0 RID: 75456
 		弹簧臂中心点上下插值最小速度,
-		// Token: 0x04017B4F RID: 97103
+		// Token: 0x040126C1 RID: 75457
 		弹簧臂中心点上下插值最大速度,
-		// Token: 0x04017B50 RID: 97104
+		// Token: 0x040126C2 RID: 75458
 		弹簧臂中心点上下偏移距离下界,
-		// Token: 0x04017B51 RID: 97105
+		// Token: 0x040126C3 RID: 75459
 		弹簧臂中心点上下偏移距离上界,
-		// Token: 0x04017B52 RID: 97106
+		// Token: 0x040126C4 RID: 75460
 		最小上浮臂长,
-		// Token: 0x04017B53 RID: 97107
+		// Token: 0x040126C5 RID: 75461
 		最大上浮臂长,
-		// Token: 0x04017B54 RID: 97108
+		// Token: 0x040126C6 RID: 75462
 		弹簧臂中心点前后插值最小速度,
-		// Token: 0x04017B55 RID: 97109
+		// Token: 0x040126C7 RID: 75463
 		弹簧臂中心点前后插值最大速度,
-		// Token: 0x04017B56 RID: 97110
+		// Token: 0x040126C8 RID: 75464
 		弹簧臂中心点前后偏移距离下界,
-		// Token: 0x04017B57 RID: 97111
+		// Token: 0x040126C9 RID: 75465
 		弹簧臂中心点前后偏移距离上界,
-		// Token: 0x04017B58 RID: 97112
+		// Token: 0x040126CA RID: 75466
 		复查障碍碰撞检测胶囊体半径,
-		// Token: 0x04017B59 RID: 97113
+		// Token: 0x040126CB RID: 75467
 		复查障碍碰撞检测间隔距离,
-		// Token: 0x04017B5A RID: 97114
+		// Token: 0x040126CC RID: 75468
 		退出障碍碰撞检测胶囊体半径,
-		// Token: 0x04017B5B RID: 97115
+		// Token: 0x040126CD RID: 75469
 		Yaw限制Min,
-		// Token: 0x04017B5C RID: 97116
+		// Token: 0x040126CE RID: 75470
 		Yaw限制Max,
-		// Token: 0x04017B5D RID: 97117
+		// Token: 0x040126CF RID: 75471
 		MaxDistance,
-		// Token: 0x04017B5E RID: 97118
+		// Token: 0x040126D0 RID: 75472
 		InSpeed,
-		// Token: 0x04017B5F RID: 97119
+		// Token: 0x040126D1 RID: 75473
 		OutSpeed,
-		// Token: 0x04017B60 RID: 97120
+		// Token: 0x040126D2 RID: 75474
 		CollisionSizePercentage,
-		// Token: 0x04017B61 RID: 97121
+		// Token: 0x040126D3 RID: 75475
 		CenterCollisionSize,
-		// Token: 0x04017B62 RID: 97122
+		// Token: 0x040126D4 RID: 75476
 		角色开始虚化距离,
-		// Token: 0x04017B63 RID: 97123
+		// Token: 0x040126D5 RID: 75477
 		角色最大虚化距离,
-		// Token: 0x04017B64 RID: 97124
+		// Token: 0x040126D6 RID: 75478
 		角色开始虚化仰视角,
-		// Token: 0x04017B65 RID: 97125
+		// Token: 0x040126D7 RID: 75479
 		角色最大虚化仰视角,
-		// Token: 0x04017B66 RID: 97126
+		// Token: 0x040126D8 RID: 75480
 		角色虚化不透明度,
-		// Token: 0x04017B67 RID: 97127
+		// Token: 0x040126D9 RID: 75481
 		Pitch限制Min,
-		// Token: 0x04017B68 RID: 97128
+		// Token: 0x040126DA RID: 75482
 		Pitch限制Max,
-		// Token: 0x04017B69 RID: 97129
+		// Token: 0x040126DB RID: 75483
 		弹簧臂中心点左右插值最小速度,
-		// Token: 0x04017B6A RID: 97130
+		// Token: 0x040126DC RID: 75484
 		弹簧臂中心点左右插值最大速度,
-		// Token: 0x04017B6B RID: 97131
+		// Token: 0x040126DD RID: 75485
 		弹簧臂中心点左右偏移距离下界,
-		// Token: 0x04017B6C RID: 97132
+		// Token: 0x040126DE RID: 75486
 		弹簧臂中心点左右偏移距离上界,
-		// Token: 0x04017B6D RID: 97133
+		// Token: 0x040126DF RID: 75487
 		瞄准射击俯视Z轴偏移,
-		// Token: 0x04017B6E RID: 97134
+		// Token: 0x040126E0 RID: 75488
 		瞄准射击仰视Z轴偏移,
-		// Token: 0x04017B6F RID: 97135
+		// Token: 0x040126E1 RID: 75489
 		游标目标旋转Alpha速率下界,
-		// Token: 0x04017B70 RID: 97136
+		// Token: 0x040126E2 RID: 75490
 		游标目标旋转Alpha速率上界,
-		// Token: 0x04017B71 RID: 97137
+		// Token: 0x040126E3 RID: 75491
 		游标目标旋转Alpha速率,
-		// Token: 0x04017B72 RID: 97138
+		// Token: 0x040126E4 RID: 75492
 		禁用重置视角,
-		// Token: 0x04017B73 RID: 97139
+		// Token: 0x040126E5 RID: 75493
 		额外Pitch最小叠加值,
-		// Token: 0x04017B74 RID: 97140
+		// Token: 0x040126E6 RID: 75494
 		额外Pitch最大叠加值,
-		// Token: 0x04017B75 RID: 97141
+		// Token: 0x040126E7 RID: 75495
 		额外Pitch叠加高度,
-		// Token: 0x04017B76 RID: 97142
+		// Token: 0x040126E8 RID: 75496
 		WorldYaw限制Min,
-		// Token: 0x04017B77 RID: 97143
+		// Token: 0x040126E9 RID: 75497
 		WorldYaw限制Max,
-		// Token: 0x04017B78 RID: 97144
+		// Token: 0x040126EA RID: 75498
 		相机臂原点偏移X,
-		// Token: 0x04017B79 RID: 97145
+		// Token: 0x040126EB RID: 75499
 		相机臂原点偏移Y,
-		// Token: 0x04017B7A RID: 97146
+		// Token: 0x040126EC RID: 75500
 		相机臂原点偏移Z,
-		// Token: 0x04017B7B RID: 97147
+		// Token: 0x040126ED RID: 75501
 		相机臂原点最小地面偏移Z,
-		// Token: 0x04017B7C RID: 97148
+		// Token: 0x040126EE RID: 75502
 		Yaw软区Min,
-		// Token: 0x04017B7D RID: 97149
+		// Token: 0x040126EF RID: 75503
 		Yaw软区Max,
-		// Token: 0x04017B7E RID: 97150
+		// Token: 0x040126F0 RID: 75504
 		Yaw死区Min,
-		// Token: 0x04017B7F RID: 97151
+		// Token: 0x040126F1 RID: 75505
 		Yaw死区Max,
-		// Token: 0x04017B80 RID: 97152
+		// Token: 0x040126F2 RID: 75506
 		软区模式,
-		// Token: 0x04017B81 RID: 97153
+		// Token: 0x040126F3 RID: 75507
 		Yaw区间最小速度,
-		// Token: 0x04017B82 RID: 97154
+		// Token: 0x040126F4 RID: 75508
 		Yaw区间最大速度,
-		// Token: 0x04017B83 RID: 97155
+		// Token: 0x040126F5 RID: 75509
 		Yaw死区到软区过渡速度倍率,
-		// Token: 0x04017B84 RID: 97156
+		// Token: 0x040126F6 RID: 75510
 		Yaw回正速度倍率,
-		// Token: 0x04017B85 RID: 97157
+		// Token: 0x040126F7 RID: 75511
 		弹簧臂中心点左右回正速度,
-		// Token: 0x04017B86 RID: 97158
+		// Token: 0x040126F8 RID: 75512
 		弹簧臂中心点左右转向角度曲线参数范围,
-		// Token: 0x04017B87 RID: 97159
+		// Token: 0x040126F9 RID: 75513
 		Yaw输入启用时间,
-		// Token: 0x04017B88 RID: 97160
+		// Token: 0x040126FA RID: 75514
 		Yaw回正时间,
-		// Token: 0x04017B89 RID: 97161
+		// Token: 0x040126FB RID: 75515
 		Pitch输入启动时间,
-		// Token: 0x04017B8A RID: 97162
+		// Token: 0x040126FC RID: 75516
 		Pitch回正时间,
-		// Token: 0x04017B8B RID: 97163
+		// Token: 0x040126FD RID: 75517
 		Pitch软区Min,
-		// Token: 0x04017B8C RID: 97164
+		// Token: 0x040126FE RID: 75518
 		Pitch软区Max,
-		// Token: 0x04017B8D RID: 97165
+		// Token: 0x040126FF RID: 75519
 		Pitch死区Min,
-		// Token: 0x04017B8E RID: 97166
+		// Token: 0x04012700 RID: 75520
 		Pitch死区Max,
-		// Token: 0x04017B8F RID: 97167
+		// Token: 0x04012701 RID: 75521
 		Pitch区域基准值,
-		// Token: 0x04017B90 RID: 97168
+		// Token: 0x04012702 RID: 75522
 		Pitch区间最小速度,
-		// Token: 0x04017B91 RID: 97169
+		// Token: 0x04012703 RID: 75523
 		Pitch区间最大速度,
-		// Token: 0x04017B92 RID: 97170
+		// Token: 0x04012704 RID: 75524
 		相机臂Z随臂长变化自动偏移_最小臂长_,
-		// Token: 0x04017B93 RID: 97171
+		// Token: 0x04012705 RID: 75525
 		相机臂Z随臂长变化自动偏移_最大臂长_,
-		// Token: 0x04017B94 RID: 97172
+		// Token: 0x04012706 RID: 75526
 		相机臂Z随臂长变化自动偏移_最小Z偏移_,
-		// Token: 0x04017B95 RID: 97173
+		// Token: 0x04012707 RID: 75527
 		相机臂Z随臂长变化自动偏移_最大Z偏移_,
-		// Token: 0x04017B96 RID: 97174
+		// Token: 0x04012708 RID: 75528
 		角色叠加臂长,
-		// Token: 0x04017B97 RID: 97175
+		// Token: 0x04012709 RID: 75529
 		角色叠加偏移Z,
-		// Token: 0x04017B98 RID: 97176
+		// Token: 0x0401270A RID: 75530
 		战斗拍照角色开始虚化仰视角,
-		// Token: 0x04017B99 RID: 97177
+		// Token: 0x0401270B RID: 75531
 		战斗拍照角色最大虚化仰视角,
-		// Token: 0x04017B9A RID: 97178
+		// Token: 0x0401270C RID: 75532
 		战斗拍照角色开始虚化距离,
-		// Token: 0x04017B9B RID: 97179
+		// Token: 0x0401270D RID: 75533
 		战斗拍照角色最大虚化距离,
-		// Token: 0x04017B9C RID: 97180
+		// Token: 0x0401270E RID: 75534
 		战斗拍照角色虚化不透明度,
-		// Token: 0x04017B9D RID: 97181
+		// Token: 0x0401270F RID: 75535
 		拍照界面npc开始虚化距离,
-		// Token: 0x04017B9E RID: 97182
+		// Token: 0x04012710 RID: 75536
 		拍照界面npc最大虚化距离,
-		// Token: 0x04017B9F RID: 97183
+		// Token: 0x04012711 RID: 75537
 		拍照界面npc虚化不透明度,
-		// Token: 0x04017BA0 RID: 97184
+		// Token: 0x04012712 RID: 75538
 		开启动态FOV,
-		// Token: 0x04017BA1 RID: 97185
+		// Token: 0x04012713 RID: 75539
 		动态FOV下界,
-		// Token: 0x04017BA2 RID: 97186
+		// Token: 0x04012714 RID: 75540
 		动态FOV上界,
-		// Token: 0x04017BA3 RID: 97187
+		// Token: 0x04012715 RID: 75541
 		动态FOV映射下界,
-		// Token: 0x04017BA4 RID: 97188
+		// Token: 0x04012716 RID: 75542
 		动态FOV映射上界,
-		// Token: 0x04017BA5 RID: 97189
+		// Token: 0x04012717 RID: 75543
 		动态FOV插值速度,
-		// Token: 0x04017BA6 RID: 97190
+		// Token: 0x04012718 RID: 75544
 		Yaw软区过渡速度倍率,
-		// Token: 0x04017BA7 RID: 97191
+		// Token: 0x04012719 RID: 75545
 		弹簧臂中心点上下输入启用时间,
-		// Token: 0x04017BA8 RID: 97192
+		// Token: 0x0401271A RID: 75546
 		弹簧臂中心点上下回正启用时间,
-		// Token: 0x04017BA9 RID: 97193
+		// Token: 0x0401271B RID: 75547
 		弹簧臂中心点左右输入启用时间,
-		// Token: 0x04017BAA RID: 97194
+		// Token: 0x0401271C RID: 75548
 		弹簧臂中心点左右回正启用时间,
-		// Token: 0x04017BAB RID: 97195
+		// Token: 0x0401271D RID: 75549
 		弹簧臂中心点前后输入启用时间,
-		// Token: 0x04017BAC RID: 97196
+		// Token: 0x0401271E RID: 75550
 		弹簧臂中心点前后回正启用时间,
-		// Token: 0x04017BAD RID: 97197
+		// Token: 0x0401271F RID: 75551
 		弹簧臂左右固定,
-		// Token: 0x04017BAE RID: 97198
+		// Token: 0x04012720 RID: 75552
 		弹簧臂上下固定,
-		// Token: 0x04017BAF RID: 97199
+		// Token: 0x04012721 RID: 75553
 		弹簧臂前后固定,
-		// Token: 0x04017BB0 RID: 97200
+		// Token: 0x04012722 RID: 75554
 		WorldRoll限制Min,
-		// Token: 0x04017BB1 RID: 97201
+		// Token: 0x04012723 RID: 75555
 		WorldRoll限制Max,
-		// Token: 0x04017BB2 RID: 97202
+		// Token: 0x04012724 RID: 75556
+		Yaw软区回正时间,
+		// Token: 0x04012725 RID: 75557
 		EFightCameraDefault_MAX
 	}
 }

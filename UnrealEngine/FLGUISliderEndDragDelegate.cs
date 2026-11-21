@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x020020C5 RID: 8389
+	// Token: 0x020006BE RID: 1726
 	public sealed class FLGUISliderEndDragDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F9A4 RID: 129444 RVA: 0x002EFD1E File Offset: 0x002EDF1E
+		// Token: 0x060093D4 RID: 37844 RVA: 0x000DEC7E File Offset: 0x000DCE7E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUISliderEndDragDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F9A5 RID: 129445 RVA: 0x002EFD2A File Offset: 0x002EDF2A
+		// Token: 0x060093D5 RID: 37845 RVA: 0x000DEC8A File Offset: 0x000DCE8A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUISliderEndDragDelegate._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FLGUISliderEndDragDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F9A6 RID: 129446 RVA: 0x002EFD4D File Offset: 0x002EDF4D
+		// Token: 0x060093D6 RID: 37846 RVA: 0x000DECAD File Offset: 0x000DCEAD
 		public FLGUISliderEndDragDelegate()
 		{
 		}
 
-		// Token: 0x0601F9A7 RID: 129447 RVA: 0x002EFD55 File Offset: 0x002EDF55
+		// Token: 0x060093D7 RID: 37847 RVA: 0x000DECB5 File Offset: 0x000DCEB5
 		[NullableContext(2)]
 		public FLGUISliderEndDragDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F9A8 RID: 129448 RVA: 0x002EFD5F File Offset: 0x002EDF5F
+		// Token: 0x060093D8 RID: 37848 RVA: 0x000DECBF File Offset: 0x000DCEBF
 		public FLGUISliderEndDragDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F9A9 RID: 129449 RVA: 0x002EFD6A File Offset: 0x002EDF6A
+		// Token: 0x060093D9 RID: 37849 RVA: 0x000DECCA File Offset: 0x000DCECA
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F9AA RID: 129450 RVA: 0x002EFD9C File Offset: 0x002EDF9C
+		// Token: 0x060093DA RID: 37850 RVA: 0x000DECFC File Offset: 0x000DCEFC
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FLGUISliderEndDragDelegate.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUISliderEndDragDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F9AB RID: 129451 RVA: 0x002EFDD6 File Offset: 0x002EDFD6
+		// Token: 0x060093DB RID: 37851 RVA: 0x000DED36 File Offset: 0x000DCF36
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x0601F9AC RID: 129452 RVA: 0x002EFDE4 File Offset: 0x002EDFE4
+		// Token: 0x060093DC RID: 37852 RVA: 0x000DED44 File Offset: 0x000DCF44
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x040110EA RID: 69866
+		// Token: 0x0400406F RID: 16495
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040110EB RID: 69867
+		// Token: 0x04004070 RID: 16496
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUISliderEndDragDelegate__DelegateSignature";
 
-		// Token: 0x040110EC RID: 69868
+		// Token: 0x04004071 RID: 16497
 		private static int RegisterId;
 
-		// Token: 0x020034BE RID: 13502
+		// Token: 0x02000EEC RID: 3820
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040174C7 RID: 95431
+			// Token: 0x040062AE RID: 25262
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

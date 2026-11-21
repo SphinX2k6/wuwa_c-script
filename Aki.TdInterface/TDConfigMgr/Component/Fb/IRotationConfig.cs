@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A64 RID: 2660
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B2D RID: 2861
 	public class IRotationConfig : ICommonRotationConfig
 	{
-		// Token: 0x06003D4B RID: 15691 RVA: 0x0009D727 File Offset: 0x0009B927
+		// Token: 0x0600416B RID: 16747 RVA: 0x000A6B9F File Offset: 0x000A4D9F
 		public static IRotationConfig Create(IRotationConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E40 RID: 3648
-		// (get) Token: 0x06003D4C RID: 15692 RVA: 0x0009D746 File Offset: 0x0009B946
+		// Token: 0x17000F0C RID: 3852
+		// (get) Token: 0x0600416C RID: 16748 RVA: 0x000A6BBE File Offset: 0x000A4DBE
 		public override ERotationType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E41 RID: 3649
-		// (get) Token: 0x06003D4D RID: 15693 RVA: 0x0009D753 File Offset: 0x0009B953
+		// Token: 0x17000F0D RID: 3853
+		// (get) Token: 0x0600416D RID: 16749 RVA: 0x000A6BCB File Offset: 0x000A4DCB
 		public override float Time
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E42 RID: 3650
-		// (get) Token: 0x06003D4E RID: 15694 RVA: 0x0009D760 File Offset: 0x0009B960
+		// Token: 0x17000F0E RID: 3854
+		// (get) Token: 0x0600416E RID: 16750 RVA: 0x000A6BD8 File Offset: 0x000A4DD8
 		public override float? Cd
 		{
 			get
@@ -57,8 +55,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E43 RID: 3651
-		// (get) Token: 0x06003D4F RID: 15695 RVA: 0x0009D796 File Offset: 0x0009B996
+		// Token: 0x17000F0F RID: 3855
+		// (get) Token: 0x0600416F RID: 16751 RVA: 0x000A6C0E File Offset: 0x000A4E0E
 		[Nullable(2)]
 		public override string Curve
 		{
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E44 RID: 3652
-		// (get) Token: 0x06003D50 RID: 15696 RVA: 0x0009D7A3 File Offset: 0x0009B9A3
+		// Token: 0x17000F10 RID: 3856
+		// (get) Token: 0x06004170 RID: 16752 RVA: 0x000A6C1B File Offset: 0x000A4E1B
 		public virtual VectorInfo Axis
 		{
 			get
@@ -85,8 +83,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E45 RID: 3653
-		// (get) Token: 0x06003D51 RID: 15697 RVA: 0x0009D7D7 File Offset: 0x0009B9D7
+		// Token: 0x17000F11 RID: 3857
+		// (get) Token: 0x06004171 RID: 16753 RVA: 0x000A6C4F File Offset: 0x000A4E4F
 		public virtual float Angle
 		{
 			get
@@ -95,14 +93,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002225 RID: 8741
+		// Token: 0x0400243C RID: 9276
 		private IRotationConfig Instance;
 
-		// Token: 0x04002226 RID: 8742
+		// Token: 0x0400243D RID: 9277
 		[Nullable(2)]
 		private VectorInfo _AxisCache;
 
-		// Token: 0x04002227 RID: 8743
+		// Token: 0x0400243E RID: 9278
 		private bool _AxisInited;
 	}
 }

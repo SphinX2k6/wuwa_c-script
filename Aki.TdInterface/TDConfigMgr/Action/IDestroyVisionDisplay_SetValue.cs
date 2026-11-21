@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001993 RID: 6547
+	// Token: 0x02001B1A RID: 6938
 	public class IDestroyVisionDisplay_SetValue
 	{
-		// Token: 0x0400574B RID: 22347
+		// Token: 0x04005B94 RID: 23444
 		public EDynamicEntityType Type;
 	}
 }

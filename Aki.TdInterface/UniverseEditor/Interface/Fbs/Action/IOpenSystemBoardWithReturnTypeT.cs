@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C3D RID: 27709
+	// Token: 0x020073A4 RID: 29604
 	public class IOpenSystemBoardWithReturnTypeT
 	{
-		// Token: 0x1700CE62 RID: 52834
-		// (get) Token: 0x06030CF6 RID: 199926 RVA: 0x006A1852 File Offset: 0x0069FA52
-		// (set) Token: 0x06030CF7 RID: 199927 RVA: 0x006A185A File Offset: 0x0069FA5A
+		// Token: 0x1700D97D RID: 55677
+		// (get) Token: 0x06033C4F RID: 212047 RVA: 0x006FBD12 File Offset: 0x006F9F12
+		// (set) Token: 0x06033C50 RID: 212048 RVA: 0x006FBD1A File Offset: 0x006F9F1A
 		public ESystemType Type { get; set; }
 
-		// Token: 0x06030CF8 RID: 199928 RVA: 0x006A1863 File Offset: 0x0069FA63
+		// Token: 0x06033C51 RID: 212049 RVA: 0x006FBD23 File Offset: 0x006F9F23
 		public IOpenSystemBoardWithReturnTypeT()
 		{
 			this.Type = ESystemType.Shop;

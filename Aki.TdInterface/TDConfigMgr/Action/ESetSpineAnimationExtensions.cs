@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200240D RID: 9229
+	// Token: 0x020026AC RID: 9900
 	public static class ESetSpineAnimationExtensions
 	{
-		// Token: 0x0600C8B9 RID: 51385 RVA: 0x001D5EAC File Offset: 0x001D40AC
+		// Token: 0x0600D560 RID: 54624 RVA: 0x001EFAA8 File Offset: 0x001EDCA8
 		public static string ToEnumString(this ESetSpineAnimation value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8BA RID: 51386 RVA: 0x001D5ED4 File Offset: 0x001D40D4
+		// Token: 0x0600D561 RID: 54625 RVA: 0x001EFAD0 File Offset: 0x001EDCD0
 		public static ESetSpineAnimation FromString(string name)
 		{
 			ESetSpineAnimation result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8BB RID: 51387 RVA: 0x001D5EFD File Offset: 0x001D40FD
+		// Token: 0x0600D562 RID: 54626 RVA: 0x001EFAF9 File Offset: 0x001EDCF9
 		public static bool TryFromString(string name, out ESetSpineAnimation value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C8BC RID: 51388 RVA: 0x001D5F22 File Offset: 0x001D4122
+		// Token: 0x0600D563 RID: 54627 RVA: 0x001EFB1E File Offset: 0x001EDD1E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C8BD RID: 51389 RVA: 0x001D5F32 File Offset: 0x001D4132
+		// Token: 0x0600D564 RID: 54628 RVA: 0x001EFB2E File Offset: 0x001EDD2E
 		public static ESetSpineAnimation[] GetValues()
 		{
 			return new ESetSpineAnimation[1];
 		}
 
-		// Token: 0x0600C8BE RID: 51390 RVA: 0x001D5F3A File Offset: 0x001D413A
+		// Token: 0x0600D565 RID: 54629 RVA: 0x001EFB36 File Offset: 0x001EDD36
 		public static string[] GetNames()
 		{
 			return new string[]

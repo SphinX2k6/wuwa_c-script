@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200134A RID: 4938
+// Token: 0x020007FE RID: 2046
 public enum EBusinessSkipDefine
 {
-	// Token: 0x04003D58 RID: 15704
+	// Token: 0x04003DF0 RID: 15856
 	MainView,
-	// Token: 0x04003D59 RID: 15705
+	// Token: 0x04003DF1 RID: 15857
 	DelegationDetails
 }

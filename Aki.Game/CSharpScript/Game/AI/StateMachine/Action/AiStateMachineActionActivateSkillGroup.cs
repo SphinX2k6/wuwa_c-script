@@ -5,17 +5,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Action
 {
-	// Token: 0x0200734B RID: 29515
+	// Token: 0x020064CE RID: 25806
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineActionActivateSkillGroup : AiStateMachineAction
 	{
-		// Token: 0x06048696 RID: 296598 RVA: 0x012A07FC File Offset: 0x0129E9FC
+		// Token: 0x0603EAE3 RID: 256739 RVA: 0x01243284 File Offset: 0x01241484
 		public AiStateMachineActionActivateSkillGroup(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.Action action) : base(stateMachineNode, action)
 		{
 		}
 
-		// Token: 0x06048697 RID: 296599 RVA: 0x012A0806 File Offset: 0x0129EA06
+		// Token: 0x0603EAE4 RID: 256740 RVA: 0x0124328E File Offset: 0x0124148E
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Action action)
 		{
 			this.ConfigId = action.ActionActivateSkillGroup.ConfigId;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.AI.StateMachine.Action
 			return true;
 		}
 
-		// Token: 0x06048698 RID: 296600 RVA: 0x012A082B File Offset: 0x0129EA2B
+		// Token: 0x0603EAE5 RID: 256741 RVA: 0x012432B3 File Offset: 0x012414B3
 		public override void DoAction(long? contextId = null)
 		{
 			AiController aiController = this.Node.AiController;
@@ -39,16 +39,16 @@ namespace CSharpScript.Game.AI.StateMachine.Action
 			aiSkill.ActivateSkillGroup(this.ConfigId, this.Activate);
 		}
 
-		// Token: 0x06048699 RID: 296601 RVA: 0x012A0858 File Offset: 0x0129EA58
+		// Token: 0x0603EAE6 RID: 256742 RVA: 0x012432E0 File Offset: 0x012414E0
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x04026475 RID: 156789
+		// Token: 0x04021762 RID: 137058
 		public int ConfigId;
 
-		// Token: 0x04026476 RID: 156790
+		// Token: 0x04021763 RID: 137059
 		public bool Activate;
 	}
 }

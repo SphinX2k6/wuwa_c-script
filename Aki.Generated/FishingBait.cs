@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C78 RID: 3192
+	// Token: 0x02000D5C RID: 3420
 	public struct FishingBait : IFlatbufferObject
 	{
-		// Token: 0x1700112E RID: 4398
-		// (get) Token: 0x06006ED4 RID: 28372 RVA: 0x0022FD35 File Offset: 0x0022DF35
+		// Token: 0x1700118B RID: 4491
+		// (get) Token: 0x060074DF RID: 29919 RVA: 0x0024EF01 File Offset: 0x0024D101
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006ED5 RID: 28373 RVA: 0x0022FD42 File Offset: 0x0022DF42
+		// Token: 0x060074E0 RID: 29920 RVA: 0x0024EF0E File Offset: 0x0024D10E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006ED6 RID: 28374 RVA: 0x0022FD4C File Offset: 0x0022DF4C
+		// Token: 0x060074E1 RID: 29921 RVA: 0x0024EF18 File Offset: 0x0024D118
 		public static FishingBait GetRootAsFishingBait(ByteBuffer _bb)
 		{
 			return FishingBait.GetRootAsFishingBait(_bb, default(FishingBait));
 		}
 
-		// Token: 0x06006ED7 RID: 28375 RVA: 0x0022FD68 File Offset: 0x0022DF68
+		// Token: 0x060074E2 RID: 29922 RVA: 0x0024EF34 File Offset: 0x0024D134
 		public static FishingBait GetRootAsFishingBait(ByteBuffer _bb, FishingBait obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006ED8 RID: 28376 RVA: 0x0022FD85 File Offset: 0x0022DF85
+		// Token: 0x060074E3 RID: 29923 RVA: 0x0024EF51 File Offset: 0x0024D151
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006ED9 RID: 28377 RVA: 0x0022FD94 File Offset: 0x0022DF94
+		// Token: 0x060074E4 RID: 29924 RVA: 0x0024EF60 File Offset: 0x0024D160
 		public FishingBait __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700112F RID: 4399
-		// (get) Token: 0x06006EDA RID: 28378 RVA: 0x0022FDA4 File Offset: 0x0022DFA4
+		// Token: 0x1700118C RID: 4492
+		// (get) Token: 0x060074E5 RID: 29925 RVA: 0x0024EF70 File Offset: 0x0024D170
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001130 RID: 4400
-		// (get) Token: 0x06006EDB RID: 28379 RVA: 0x0022FDE0 File Offset: 0x0022DFE0
+		// Token: 0x1700118D RID: 4493
+		// (get) Token: 0x060074E6 RID: 29926 RVA: 0x0024EFAC File Offset: 0x0024D1AC
 		public int ExploreToolId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001131 RID: 4401
-		// (get) Token: 0x06006EDC RID: 28380 RVA: 0x0022FE1C File Offset: 0x0022E01C
+		// Token: 0x1700118E RID: 4494
+		// (get) Token: 0x060074E7 RID: 29927 RVA: 0x0024EFE8 File Offset: 0x0024D1E8
 		public int AreaId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001132 RID: 4402
-		// (get) Token: 0x06006EDD RID: 28381 RVA: 0x0022FE58 File Offset: 0x0022E058
+		// Token: 0x1700118F RID: 4495
+		// (get) Token: 0x060074E8 RID: 29928 RVA: 0x0024F024 File Offset: 0x0024D224
 		public int GamePlayId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001133 RID: 4403
-		// (get) Token: 0x06006EDE RID: 28382 RVA: 0x0022FE98 File Offset: 0x0022E098
+		// Token: 0x17001190 RID: 4496
+		// (get) Token: 0x060074E9 RID: 29929 RVA: 0x0024F064 File Offset: 0x0024D264
 		public int ItemId
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001134 RID: 4404
-		// (get) Token: 0x06006EDF RID: 28383 RVA: 0x0022FED8 File Offset: 0x0022E0D8
+		// Token: 0x17001191 RID: 4497
+		// (get) Token: 0x060074EA RID: 29930 RVA: 0x0024F0A4 File Offset: 0x0024D2A4
 		public int CountLimit
 		{
 			get
@@ -137,7 +137,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004CC3 RID: 19651
+		// Token: 0x040052A7 RID: 21159
 		private Table __p;
 	}
 }

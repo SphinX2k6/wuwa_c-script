@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Activity
 {
-	// Token: 0x02005793 RID: 22419
+	// Token: 0x0200476A RID: 18282
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 	})]
 	public class KurotatoRewardItem : GridProxyAbstract<KurotatoRewardItemData>
 	{
-		// Token: 0x06038F0E RID: 233230 RVA: 0x00D88B6C File Offset: 0x00D86D6C
+		// Token: 0x0602DE1E RID: 187934 RVA: 0x00CD78BC File Offset: 0x00CD5ABC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -53,19 +53,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038F0F RID: 233231 RVA: 0x00D88CFA File Offset: 0x00D86EFA
+		// Token: 0x0602DE1F RID: 187935 RVA: 0x00CD7A4A File Offset: 0x00CD5C4A
 		protected override void OnStart()
 		{
 			this.RewardScroll = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(2), () => new CommonItemSmallItemGrid(), null, false, null);
 		}
 
-		// Token: 0x06038F10 RID: 233232 RVA: 0x00D88D30 File Offset: 0x00D86F30
+		// Token: 0x0602DE20 RID: 187936 RVA: 0x00CD7A80 File Offset: 0x00CD5C80
 		public void SetReceiveClickCallback(Action callback)
 		{
 			this.ReceiveClickCallback = callback;
 		}
 
-		// Token: 0x06038F11 RID: 233233 RVA: 0x00D88D39 File Offset: 0x00D86F39
+		// Token: 0x0602DE21 RID: 187937 RVA: 0x00CD7A89 File Offset: 0x00CD5C89
 		private void OnClickReceive()
 		{
 			Action receiveClickCallback = this.ReceiveClickCallback;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			receiveClickCallback();
 		}
 
-		// Token: 0x06038F12 RID: 233234 RVA: 0x00D88D4C File Offset: 0x00D86F4C
+		// Token: 0x0602DE22 RID: 187938 RVA: 0x00CD7A9C File Offset: 0x00CD5C9C
 		public override void Refresh(KurotatoRewardItemData data, bool isSelected, int gridIndex)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.GetTitle(), Array.Empty<object>());
@@ -132,11 +132,11 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			item2.SetUIActive(uiactive2);
 		}
 
-		// Token: 0x0401DD86 RID: 122246
+		// Token: 0x0401881C RID: 100380
 		[Nullable(2)]
 		private Action ReceiveClickCallback;
 
-		// Token: 0x0401DD87 RID: 122247
+		// Token: 0x0401881D RID: 100381
 		[Nullable(new byte[]
 		{
 			2,
@@ -144,27 +144,27 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-		// Token: 0x0200B9B9 RID: 47545
+		// Token: 0x0200A3CF RID: 41935
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403827B RID: 230011
+			// Token: 0x04032C6C RID: 207980
 			TextName,
-			// Token: 0x0403827C RID: 230012
+			// Token: 0x04032C6D RID: 207981
 			TextProgress,
-			// Token: 0x0403827D RID: 230013
+			// Token: 0x04032C6E RID: 207982
 			Scroll,
-			// Token: 0x0403827E RID: 230014
+			// Token: 0x04032C6F RID: 207983
 			GridItem,
-			// Token: 0x0403827F RID: 230015
+			// Token: 0x04032C70 RID: 207984
 			TextDoing,
-			// Token: 0x04038280 RID: 230016
+			// Token: 0x04032C71 RID: 207985
 			BtnReceive,
-			// Token: 0x04038281 RID: 230017
+			// Token: 0x04032C72 RID: 207986
 			SpriteReceive,
-			// Token: 0x04038282 RID: 230018
+			// Token: 0x04032C73 RID: 207987
 			ItemRedDot,
-			// Token: 0x04038283 RID: 230019
+			// Token: 0x04032C74 RID: 207988
 			PanelDone
 		}
 	}

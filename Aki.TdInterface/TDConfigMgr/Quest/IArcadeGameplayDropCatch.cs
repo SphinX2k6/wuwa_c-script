@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EC4 RID: 3780
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FDA RID: 4058
 	public class IArcadeGameplayDropCatch : IArcadeGameplayBase
 	{
-		// Token: 0x0600537A RID: 21370 RVA: 0x000CD6C0 File Offset: 0x000CB8C0
+		// Token: 0x060058F6 RID: 22774 RVA: 0x000D9868 File Offset: 0x000D7A68
 		private IArcadeGameplayDropCatch_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600537B RID: 21371 RVA: 0x000CD6F8 File Offset: 0x000CB8F8
+		// Token: 0x060058F7 RID: 22775 RVA: 0x000D98A0 File Offset: 0x000D7AA0
 		public static IArcadeGameplayDropCatch Create([Nullable(2)] IArcadeGameplayDropCatch instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600537C RID: 21372 RVA: 0x000CD70B File Offset: 0x000CB90B
+		// Token: 0x060058F8 RID: 22776 RVA: 0x000D98B3 File Offset: 0x000D7AB3
 		public static IArcadeGameplayDropCatch CreateFromSetValue([Nullable(2)] IArcadeGameplayDropCatch_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600537D RID: 21373 RVA: 0x000CD71E File Offset: 0x000CB91E
+		// Token: 0x060058F9 RID: 22777 RVA: 0x000D98C6 File Offset: 0x000D7AC6
 		public new IArcadeGameplayDropCatch_SetValue ToSetValue()
 		{
 			return new IArcadeGameplayDropCatch_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C16 RID: 7190
-		// (get) Token: 0x0600537E RID: 21374 RVA: 0x000CD73D File Offset: 0x000CB93D
-		// (set) Token: 0x0600537F RID: 21375 RVA: 0x000CD768 File Offset: 0x000CB968
+		// Token: 0x17001DAE RID: 7598
+		// (get) Token: 0x060058FA RID: 22778 RVA: 0x000D98E5 File Offset: 0x000D7AE5
+		// (set) Token: 0x060058FB RID: 22779 RVA: 0x000D9910 File Offset: 0x000D7B10
 		public override EArcadeGameplayType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C17 RID: 7191
-		// (get) Token: 0x06005380 RID: 21376 RVA: 0x000CD776 File Offset: 0x000CB976
-		// (set) Token: 0x06005381 RID: 21377 RVA: 0x000CD7A1 File Offset: 0x000CB9A1
+		// Token: 0x17001DAF RID: 7599
+		// (get) Token: 0x060058FC RID: 22780 RVA: 0x000D991E File Offset: 0x000D7B1E
+		// (set) Token: 0x060058FD RID: 22781 RVA: 0x000D9949 File Offset: 0x000D7B49
 		public virtual int LevelId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003296 RID: 12950
+		// Token: 0x040035A3 RID: 13731
 		[Nullable(2)]
 		protected new IArcadeGameplayDropCatch FbInstance;
 
-		// Token: 0x04003297 RID: 12951
+		// Token: 0x040035A4 RID: 13732
 		[Nullable(2)]
 		protected new IArcadeGameplayDropCatch_SetValue PocoInterface;
 	}

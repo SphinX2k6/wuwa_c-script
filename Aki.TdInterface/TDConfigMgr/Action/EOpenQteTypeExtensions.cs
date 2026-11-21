@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023B7 RID: 9143
+	// Token: 0x02002648 RID: 9800
 	public static class EOpenQteTypeExtensions
 	{
-		// Token: 0x0600C736 RID: 50998 RVA: 0x001D2A9C File Offset: 0x001D0C9C
+		// Token: 0x0600D39E RID: 54174 RVA: 0x001EBED0 File Offset: 0x001EA0D0
 		public static string ToEnumString(this EOpenQteType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C737 RID: 50999 RVA: 0x001D2AD4 File Offset: 0x001D0CD4
+		// Token: 0x0600D39F RID: 54175 RVA: 0x001EBF08 File Offset: 0x001EA108
 		public static EOpenQteType FromString(string name)
 		{
 			EOpenQteType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C738 RID: 51000 RVA: 0x001D2AFD File Offset: 0x001D0CFD
+		// Token: 0x0600D3A0 RID: 54176 RVA: 0x001EBF31 File Offset: 0x001EA131
 		public static bool TryFromString(string name, out EOpenQteType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C739 RID: 51001 RVA: 0x001D2B36 File Offset: 0x001D0D36
+		// Token: 0x0600D3A1 RID: 54177 RVA: 0x001EBF6A File Offset: 0x001EA16A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C73A RID: 51002 RVA: 0x001D2B4E File Offset: 0x001D0D4E
+		// Token: 0x0600D3A2 RID: 54178 RVA: 0x001EBF82 File Offset: 0x001EA182
 		public static EOpenQteType[] GetValues()
 		{
 			return new EOpenQteType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C73B RID: 51003 RVA: 0x001D2B5A File Offset: 0x001D0D5A
+		// Token: 0x0600D3A3 RID: 54179 RVA: 0x001EBF8E File Offset: 0x001EA18E
 		public static string[] GetNames()
 		{
 			return new string[]

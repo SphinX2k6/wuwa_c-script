@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D30 RID: 3376
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E2A RID: 3626
 	public class IRaceStrategy : IAiGearStrategy
 	{
-		// Token: 0x06004D09 RID: 19721 RVA: 0x000BFB63 File Offset: 0x000BDD63
+		// Token: 0x06005225 RID: 21029 RVA: 0x000CB2A7 File Offset: 0x000C94A7
 		public static IRaceStrategy Create(IRaceStrategy? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001866 RID: 6246
-		// (get) Token: 0x06004D0A RID: 19722 RVA: 0x000BFB82 File Offset: 0x000BDD82
+		// Token: 0x170019CC RID: 6604
+		// (get) Token: 0x06005226 RID: 21030 RVA: 0x000CB2C6 File Offset: 0x000C94C6
 		public override EAiGearStrategy Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001867 RID: 6247
-		// (get) Token: 0x06004D0B RID: 19723 RVA: 0x000BFB8F File Offset: 0x000BDD8F
+		// Token: 0x170019CD RID: 6605
+		// (get) Token: 0x06005227 RID: 21031 RVA: 0x000CB2D3 File Offset: 0x000C94D3
 		[Nullable(2)]
 		public override IConditionGroup Condition
 		{
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001868 RID: 6248
-		// (get) Token: 0x06004D0C RID: 19724 RVA: 0x000BFBC3 File Offset: 0x000BDDC3
+		// Token: 0x170019CE RID: 6606
+		// (get) Token: 0x06005228 RID: 21032 RVA: 0x000CB307 File Offset: 0x000C9507
 		public virtual int SplineEntityId
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001869 RID: 6249
-		// (get) Token: 0x06004D0D RID: 19725 RVA: 0x000BFBD0 File Offset: 0x000BDDD0
+		// Token: 0x170019CF RID: 6607
+		// (get) Token: 0x06005229 RID: 21033 RVA: 0x000CB314 File Offset: 0x000C9514
 		public virtual string CommonConfig
 		{
 			get
@@ -71,14 +69,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C25 RID: 11301
+		// Token: 0x04002EE5 RID: 12005
 		private IRaceStrategy Instance;
 
-		// Token: 0x04002C26 RID: 11302
+		// Token: 0x04002EE6 RID: 12006
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002C27 RID: 11303
+		// Token: 0x04002EE7 RID: 12007
 		private bool _ConditionInited;
 	}
 }

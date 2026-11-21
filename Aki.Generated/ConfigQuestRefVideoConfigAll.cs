@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200077D RID: 1917
+	// Token: 0x02000797 RID: 1943
 	public class ConfigQuestRefVideoConfigAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002CFF RID: 11519 RVA: 0x00157850 File Offset: 0x00155A50
+		// Token: 0x06002D9B RID: 11675 RVA: 0x0015E75C File Offset: 0x0015C95C
 		static ConfigQuestRefVideoConfigAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuestRefVideoConfigAll.CreateStaticDefaultValue), new Action(ConfigQuestRefVideoConfigAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002D00 RID: 11520 RVA: 0x00157870 File Offset: 0x00155A70
+		// Token: 0x06002D9C RID: 11676 RVA: 0x0015E77C File Offset: 0x0015C97C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuestRefVideoConfigAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002D01 RID: 11521 RVA: 0x001578EF File Offset: 0x00155AEF
+		// Token: 0x06002D9D RID: 11677 RVA: 0x0015E7FB File Offset: 0x0015C9FB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuestRefVideoConfigAll.LogPair = null;
 			ConfigQuestRefVideoConfigAll.HandleId = 0;
 		}
 
-		// Token: 0x06002D02 RID: 11522 RVA: 0x001578FD File Offset: 0x00155AFD
+		// Token: 0x06002D9E RID: 11678 RVA: 0x0015E809 File Offset: 0x0015CA09
 		public static void Init()
 		{
 			ConfigQuestRefVideoConfigAll.HandleId = ConfigCommon.InitDataStatement(ConfigQuestRefVideoConfigAll.HandleId, "db_questrefvideo.db", "select BinData from `QuestRefVideoConfig`");
 		}
 
-		// Token: 0x06002D03 RID: 11523 RVA: 0x00157918 File Offset: 0x00155B18
+		// Token: 0x06002D9F RID: 11679 RVA: 0x0015E824 File Offset: 0x0015CA24
 		[NullableContext(2)]
 		public static IReadOnlyList<QuestRefVideoConfig> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003451 RID: 13393
+		// Token: 0x04003507 RID: 13575
 		private const string DB = "db_questrefvideo.db";
 
-		// Token: 0x04003452 RID: 13394
+		// Token: 0x04003508 RID: 13576
 		private const string FILE = "UniverseEditor/QuestRefVideoConfig/任务视频资源映射_Json_QuestRefMp4Config.csv";
 
-		// Token: 0x04003453 RID: 13395
+		// Token: 0x04003509 RID: 13577
 		private const string TABLE = "QuestRefVideoConfig";
 
-		// Token: 0x04003454 RID: 13396
+		// Token: 0x0400350A RID: 13578
 		private const string COMMAND = "select BinData from `QuestRefVideoConfig`";
 
-		// Token: 0x04003455 RID: 13397
+		// Token: 0x0400350B RID: 13579
 		private const string KEY_PREFIX = "QuestRefVideoConfigAll";
 
-		// Token: 0x04003456 RID: 13398
+		// Token: 0x0400350C RID: 13580
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003457 RID: 13399
+		// Token: 0x0400350D RID: 13581
 		private static int HandleId;
 	}
 }

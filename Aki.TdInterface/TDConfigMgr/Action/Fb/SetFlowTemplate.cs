@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002788 RID: 10120
+	// Token: 0x02002A5A RID: 10842
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SetFlowTemplate : ActionParams
 	{
-		// Token: 0x0600E14B RID: 57675 RVA: 0x00214950 File Offset: 0x00212B50
-		[NullableContext(1)]
+		// Token: 0x0600EF69 RID: 61289 RVA: 0x002316E4 File Offset: 0x0022F8E4
+		[NullableContext(0)]
 		public static SetFlowTemplate Create(ISetFlowTemplate? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043FD RID: 17405
-		// (get) Token: 0x0600E14C RID: 57676 RVA: 0x00214970 File Offset: 0x00212B70
+		// Token: 0x17004763 RID: 18275
+		// (get) Token: 0x0600EF6A RID: 61290 RVA: 0x00231704 File Offset: 0x0022F904
 		public virtual bool? _Folded
 		{
 			get
@@ -39,12 +39,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043FE RID: 17406
-		// (get) Token: 0x0600E14D RID: 57677 RVA: 0x002149A6 File Offset: 0x00212BA6
-		[Nullable(1)]
+		// Token: 0x17004764 RID: 18276
+		// (get) Token: 0x0600EF6B RID: 61291 RVA: 0x0023173A File Offset: 0x0022F93A
+		[Nullable(0)]
 		public virtual IFlowTemplateMode TemplateMode
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._TemplateModeInited)
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043FF RID: 17407
-		// (get) Token: 0x0600E14E RID: 57678 RVA: 0x002149DA File Offset: 0x00212BDA
+		// Token: 0x17004765 RID: 18277
+		// (get) Token: 0x0600EF6C RID: 61292 RVA: 0x0023176E File Offset: 0x0022F96E
 		public virtual PosAndRot TargetPos
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004400 RID: 17408
-		// (get) Token: 0x0600E14F RID: 57679 RVA: 0x00214A0E File Offset: 0x00212C0E
+		// Token: 0x17004766 RID: 18278
+		// (get) Token: 0x0600EF6D RID: 61293 RVA: 0x002317A2 File Offset: 0x0022F9A2
 		public virtual SetCameraAnim CameraAnim
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004401 RID: 17409
-		// (get) Token: 0x0600E150 RID: 57680 RVA: 0x00214A42 File Offset: 0x00212C42
+		// Token: 0x17004767 RID: 18279
+		// (get) Token: 0x0600EF6E RID: 61294 RVA: 0x002317D6 File Offset: 0x0022F9D6
 		public virtual VectorInfo CameraOffset
 		{
 			get
@@ -105,8 +105,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004402 RID: 17410
-		// (get) Token: 0x0600E151 RID: 57681 RVA: 0x00214A76 File Offset: 0x00212C76
+		// Token: 0x17004768 RID: 18280
+		// (get) Token: 0x0600EF6F RID: 61295 RVA: 0x0023180A File Offset: 0x0022FA0A
 		public virtual VectorInfo CameraRotate
 		{
 			get
@@ -121,8 +121,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004403 RID: 17411
-		// (get) Token: 0x0600E152 RID: 57682 RVA: 0x00214AAA File Offset: 0x00212CAA
+		// Token: 0x17004769 RID: 18281
+		// (get) Token: 0x0600EF70 RID: 61296 RVA: 0x0023183E File Offset: 0x0022FA3E
 		public virtual ICameraPosAndRot CameraPosAndRot
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004404 RID: 17412
-		// (get) Token: 0x0600E153 RID: 57683 RVA: 0x00214ADE File Offset: 0x00212CDE
+		// Token: 0x1700476A RID: 18282
+		// (get) Token: 0x0600EF71 RID: 61297 RVA: 0x00231872 File Offset: 0x0022FA72
 		public virtual ICameraSetting CameraSetting
 		{
 			get
@@ -153,12 +153,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004405 RID: 17413
-		// (get) Token: 0x0600E154 RID: 57684 RVA: 0x00214B12 File Offset: 0x00212D12
-		[Nullable(1)]
+		// Token: 0x1700476B RID: 18283
+		// (get) Token: 0x0600EF72 RID: 61298 RVA: 0x002318A6 File Offset: 0x0022FAA6
+		[Nullable(0)]
 		public virtual IShowTalkCameraMotion CameraMotion
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._CameraMotionInited)
@@ -171,8 +171,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004406 RID: 17414
-		// (get) Token: 0x0600E155 RID: 57685 RVA: 0x00214B41 File Offset: 0x00212D41
+		// Token: 0x1700476C RID: 18284
+		// (get) Token: 0x0600EF73 RID: 61299 RVA: 0x002318D5 File Offset: 0x0022FAD5
 		public virtual IFlowTemplateBlurTransitionEffect TransitionEffect
 		{
 			get
@@ -187,19 +187,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004407 RID: 17415
-		// (get) Token: 0x0600E156 RID: 57686 RVA: 0x00214B78 File Offset: 0x00212D78
+		// Token: 0x1700476D RID: 18285
+		// (get) Token: 0x0600EF74 RID: 61300 RVA: 0x0023190C File Offset: 0x0022FB0C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IFlowActorIndexData> ActorIndexArray
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -222,19 +222,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004408 RID: 17416
-		// (get) Token: 0x0600E157 RID: 57687 RVA: 0x00214BF4 File Offset: 0x00212DF4
+		// Token: 0x1700476E RID: 18286
+		// (get) Token: 0x0600EF75 RID: 61301 RVA: 0x00231988 File Offset: 0x0022FB88
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IFlowTemplateInitialLookAt> InitialLookAtArray
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -257,19 +257,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004409 RID: 17417
-		// (get) Token: 0x0600E158 RID: 57688 RVA: 0x00214C70 File Offset: 0x00212E70
+		// Token: 0x1700476F RID: 18287
+		// (get) Token: 0x0600EF76 RID: 61302 RVA: 0x00231A04 File Offset: 0x0022FC04
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IActorVisibility> ActorVisibilityArray
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -292,8 +292,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700440A RID: 17418
-		// (get) Token: 0x0600E159 RID: 57689 RVA: 0x00214CEC File Offset: 0x00212EEC
+		// Token: 0x17004770 RID: 18288
+		// (get) Token: 0x0600EF77 RID: 61303 RVA: 0x00231A80 File Offset: 0x0022FC80
 		public virtual float? DelayTime
 		{
 			get
@@ -306,95 +306,95 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CD4 RID: 31956
+		// Token: 0x0400838A RID: 33674
 		private ISetFlowTemplate Instance;
 
-		// Token: 0x04007CD5 RID: 31957
+		// Token: 0x0400838B RID: 33675
 		private IFlowTemplateMode _TemplateModeCache;
 
-		// Token: 0x04007CD6 RID: 31958
+		// Token: 0x0400838C RID: 33676
 		private bool _TemplateModeInited;
 
-		// Token: 0x04007CD7 RID: 31959
+		// Token: 0x0400838D RID: 33677
 		private PosAndRot _TargetPosCache;
 
-		// Token: 0x04007CD8 RID: 31960
+		// Token: 0x0400838E RID: 33678
 		private bool _TargetPosInited;
 
-		// Token: 0x04007CD9 RID: 31961
+		// Token: 0x0400838F RID: 33679
 		private SetCameraAnim _CameraAnimCache;
 
-		// Token: 0x04007CDA RID: 31962
+		// Token: 0x04008390 RID: 33680
 		private bool _CameraAnimInited;
 
-		// Token: 0x04007CDB RID: 31963
+		// Token: 0x04008391 RID: 33681
 		private VectorInfo _CameraOffsetCache;
 
-		// Token: 0x04007CDC RID: 31964
+		// Token: 0x04008392 RID: 33682
 		private bool _CameraOffsetInited;
 
-		// Token: 0x04007CDD RID: 31965
+		// Token: 0x04008393 RID: 33683
 		private VectorInfo _CameraRotateCache;
 
-		// Token: 0x04007CDE RID: 31966
+		// Token: 0x04008394 RID: 33684
 		private bool _CameraRotateInited;
 
-		// Token: 0x04007CDF RID: 31967
+		// Token: 0x04008395 RID: 33685
 		private ICameraPosAndRot _CameraPosAndRotCache;
 
-		// Token: 0x04007CE0 RID: 31968
+		// Token: 0x04008396 RID: 33686
 		private bool _CameraPosAndRotInited;
 
-		// Token: 0x04007CE1 RID: 31969
+		// Token: 0x04008397 RID: 33687
 		private ICameraSetting _CameraSettingCache;
 
-		// Token: 0x04007CE2 RID: 31970
+		// Token: 0x04008398 RID: 33688
 		private bool _CameraSettingInited;
 
-		// Token: 0x04007CE3 RID: 31971
-		[Nullable(1)]
+		// Token: 0x04008399 RID: 33689
+		[Nullable(0)]
 		private IShowTalkCameraMotion _CameraMotionCache;
 
-		// Token: 0x04007CE4 RID: 31972
+		// Token: 0x0400839A RID: 33690
 		private bool _CameraMotionInited;
 
-		// Token: 0x04007CE5 RID: 31973
+		// Token: 0x0400839B RID: 33691
 		private IFlowTemplateBlurTransitionEffect _TransitionEffectCache;
 
-		// Token: 0x04007CE6 RID: 31974
+		// Token: 0x0400839C RID: 33692
 		private bool _TransitionEffectInited;
 
-		// Token: 0x04007CE7 RID: 31975
+		// Token: 0x0400839D RID: 33693
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IFlowActorIndexData> _ActorIndexArrayCache;
 
-		// Token: 0x04007CE8 RID: 31976
+		// Token: 0x0400839E RID: 33694
 		private bool _ActorIndexArrayInited;
 
-		// Token: 0x04007CE9 RID: 31977
+		// Token: 0x0400839F RID: 33695
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IFlowTemplateInitialLookAt> _InitialLookAtArrayCache;
 
-		// Token: 0x04007CEA RID: 31978
+		// Token: 0x040083A0 RID: 33696
 		private bool _InitialLookAtArrayInited;
 
-		// Token: 0x04007CEB RID: 31979
+		// Token: 0x040083A1 RID: 33697
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IActorVisibility> _ActorVisibilityArrayCache;
 
-		// Token: 0x04007CEC RID: 31980
+		// Token: 0x040083A2 RID: 33698
 		private bool _ActorVisibilityArrayInited;
 	}
 }

@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CDF RID: 23775
+	// Token: 0x02004CC1 RID: 19649
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BattleSkillConfigLongPressItem : UiPanelBase
 	{
-		// Token: 0x0603C290 RID: 246416 RVA: 0x00E66A7C File Offset: 0x00E64C7C
+		// Token: 0x060311E6 RID: 201190 RVA: 0x00DB7030 File Offset: 0x00DB5230
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C291 RID: 246417 RVA: 0x00E66BD0 File Offset: 0x00E64DD0
+		// Token: 0x060311E7 RID: 201191 RVA: 0x00DB7184 File Offset: 0x00DB5384
 		protected override void OnStart()
 		{
 			this.ProgressTexA = base.GetTexture(0);
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetEnableBarB(this.EnableBarB, true);
 		}
 
-		// Token: 0x0603C292 RID: 246418 RVA: 0x00E66C97 File Offset: 0x00E64E97
+		// Token: 0x060311E8 RID: 201192 RVA: 0x00DB724B File Offset: 0x00DB544B
 		protected override void OnBeforeShow()
 		{
 			if (this.InputHandler != null)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C293 RID: 246419 RVA: 0x00E66CB1 File Offset: 0x00E64EB1
+		// Token: 0x060311E9 RID: 201193 RVA: 0x00DB7265 File Offset: 0x00DB5465
 		protected override void OnAfterHide()
 		{
 			if (this.InputHandler != null)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C294 RID: 246420 RVA: 0x00E66CCC File Offset: 0x00E64ECC
+		// Token: 0x060311EA RID: 201194 RVA: 0x00DB7280 File Offset: 0x00DB5480
 		public void SetComponentActive(bool visibility)
 		{
 			if (this.TargetActive == visibility && !this.IsFirstShow)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			progressTexA.SetFillAmount(0f);
 		}
 
-		// Token: 0x0603C295 RID: 246421 RVA: 0x00E66D20 File Offset: 0x00E64F20
+		// Token: 0x060311EB RID: 201195 RVA: 0x00DB72D4 File Offset: 0x00DB54D4
 		public void SetAction(in EInputAction action)
 		{
 			if (this.Action == action)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			progressTexA.SetFillAmount(0f);
 		}
 
-		// Token: 0x0603C296 RID: 246422 RVA: 0x00E66DB1 File Offset: 0x00E64FB1
+		// Token: 0x060311EC RID: 201196 RVA: 0x00DB7365 File Offset: 0x00DB5565
 		public void SetSharedFxActions(List<EInputAction> actions)
 		{
 			this.ExtraActions = actions;
@@ -141,19 +141,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			inputHandler.AddActionTypes(actions);
 		}
 
-		// Token: 0x0603C297 RID: 246423 RVA: 0x00E66DCC File Offset: 0x00E64FCC
+		// Token: 0x060311ED RID: 201197 RVA: 0x00DB7380 File Offset: 0x00DB5580
 		private bool IsValidAction(EInputAction action)
 		{
 			return (this.ExtraActions != null && this.ExtraActions.Contains(action)) || !(this.Action != action);
 		}
 
-		// Token: 0x0603C298 RID: 246424 RVA: 0x00E66E18 File Offset: 0x00E65018
+		// Token: 0x060311EE RID: 201198 RVA: 0x00DB73CC File Offset: 0x00DB55CC
 		public void SetDuration(float duration)
 		{
 			this.Duration = duration * (float)TimeUtil.Instance.InverseMillisecond;
 		}
 
-		// Token: 0x0603C299 RID: 246425 RVA: 0x00E66E2D File Offset: 0x00E6502D
+		// Token: 0x060311EF RID: 201199 RVA: 0x00DB73E1 File Offset: 0x00DB55E1
 		private void OnSkillLongPressStart(EInputAction action)
 		{
 			if (!this.IsValidAction(action))
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StartProgress();
 		}
 
-		// Token: 0x0603C29A RID: 246426 RVA: 0x00E66E4D File Offset: 0x00E6504D
+		// Token: 0x060311F0 RID: 201200 RVA: 0x00DB7401 File Offset: 0x00DB5601
 		private void OnSkillLongPressEnd(EInputAction action)
 		{
 			if (!this.IsValidAction(action))
@@ -183,13 +183,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			progressTexA.SetFillAmount(0f);
 		}
 
-		// Token: 0x0603C29B RID: 246427 RVA: 0x00E66E74 File Offset: 0x00E65074
+		// Token: 0x060311F1 RID: 201201 RVA: 0x00DB7428 File Offset: 0x00DB5628
 		private void StartProgress()
 		{
 			this.StartTime = (float)Time.Instance.WorldTime;
 		}
 
-		// Token: 0x0603C29C RID: 246428 RVA: 0x00E66E87 File Offset: 0x00E65087
+		// Token: 0x060311F2 RID: 201202 RVA: 0x00DB743B File Offset: 0x00DB563B
 		private void StopProgressA()
 		{
 			this.StartTime = 0f;
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			progressTexA.SetFillAmount(0f);
 		}
 
-		// Token: 0x0603C29D RID: 246429 RVA: 0x00E66EAC File Offset: 0x00E650AC
+		// Token: 0x060311F3 RID: 201203 RVA: 0x00DB7460 File Offset: 0x00DB5660
 		public void Tick(float delta)
 		{
 			if (this.CurState != BattleSkillConfigLongPressItem.EState.StateA)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			progressTexA.SetFillAmount(num2);
 		}
 
-		// Token: 0x0603C29E RID: 246430 RVA: 0x00E66F2C File Offset: 0x00E6512C
+		// Token: 0x060311F4 RID: 201204 RVA: 0x00DB74E0 File Offset: 0x00DB56E0
 		private void SetState(BattleSkillConfigLongPressItem.EState state, bool force = false)
 		{
 			if (this.CurState == state && !force)
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurState = state;
 		}
 
-		// Token: 0x0603C29F RID: 246431 RVA: 0x00E66FC4 File Offset: 0x00E651C4
+		// Token: 0x060311F5 RID: 201205 RVA: 0x00DB7578 File Offset: 0x00DB5778
 		private void SetEnableBarB(bool enableBarB, bool force = false)
 		{
 			if (this.EnableBarB == enableBarB && !force)
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item2.SetUIActive(this.EnableBarB);
 		}
 
-		// Token: 0x0603C2A0 RID: 246432 RVA: 0x00E67018 File Offset: 0x00E65218
+		// Token: 0x060311F6 RID: 201206 RVA: 0x00DB75CC File Offset: 0x00DB57CC
 		private void InitBarB()
 		{
 			if (this.ProgressTexB == null)
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshAttributeValue(this.InitEnergyB);
 		}
 
-		// Token: 0x0603C2A1 RID: 246433 RVA: 0x00E67068 File Offset: 0x00E65268
+		// Token: 0x060311F7 RID: 201207 RVA: 0x00DB761C File Offset: 0x00DB581C
 		public void SetCustomLogicParam(SkillButtonData skillButtonData, int from = -1, int param = 0)
 		{
 			if (skillButtonData == null)
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TickProgressB(0f);
 		}
 
-		// Token: 0x0603C2A2 RID: 246434 RVA: 0x00E67174 File Offset: 0x00E65374
+		// Token: 0x060311F8 RID: 201208 RVA: 0x00DB7728 File Offset: 0x00DB5928
 		private void TickProgressB(float delta)
 		{
 			if (this.CurState != BattleSkillConfigLongPressItem.EState.StateB)
@@ -359,7 +359,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C2A3 RID: 246435 RVA: 0x00E671C4 File Offset: 0x00E653C4
+		// Token: 0x060311F9 RID: 201209 RVA: 0x00DB7778 File Offset: 0x00DB5978
 		public void RefreshAttributeValue(float curEnergy)
 		{
 			if (!this.EnableBarB)
@@ -402,7 +402,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C2A4 RID: 246436 RVA: 0x00E6729C File Offset: 0x00E6549C
+		// Token: 0x060311FA RID: 201210 RVA: 0x00DB7850 File Offset: 0x00DB5A50
 		private void SetFlagEnable(bool enable)
 		{
 			if (!this.EnableBarB)
@@ -426,118 +426,118 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F5C6 RID: 128454
+		// Token: 0x0401A07F RID: 106623
 		private BattleSkillInputHandler InputHandler;
 
-		// Token: 0x0401F5C7 RID: 128455
+		// Token: 0x0401A080 RID: 106624
 		private BattleSkillConfigLongPressItem.EState CurState;
 
-		// Token: 0x0401F5C8 RID: 128456
+		// Token: 0x0401A081 RID: 106625
 		public bool TargetActive;
 
-		// Token: 0x0401F5C9 RID: 128457
+		// Token: 0x0401A082 RID: 106626
 		private UUITexture ProgressTexA;
 
-		// Token: 0x0401F5CA RID: 128458
+		// Token: 0x0401A083 RID: 106627
 		private EInputAction? Action;
 
-		// Token: 0x0401F5CB RID: 128459
+		// Token: 0x0401A084 RID: 106628
 		private float Duration;
 
-		// Token: 0x0401F5CC RID: 128460
+		// Token: 0x0401A085 RID: 106629
 		private float StartTime;
 
-		// Token: 0x0401F5CD RID: 128461
+		// Token: 0x0401A086 RID: 106630
 		private bool IsFirstShow = true;
 
-		// Token: 0x0401F5CE RID: 128462
+		// Token: 0x0401A087 RID: 106631
 		[Nullable(1)]
 		private BattleUiTweenAnimPlayer TweenAnimPlayer = new BattleUiTweenAnimPlayer();
 
-		// Token: 0x0401F5CF RID: 128463
+		// Token: 0x0401A088 RID: 106632
 		private List<EInputAction> ExtraActions;
 
-		// Token: 0x0401F5D0 RID: 128464
+		// Token: 0x0401A089 RID: 106633
 		private bool EnableBarB;
 
-		// Token: 0x0401F5D1 RID: 128465
+		// Token: 0x0401A08A RID: 106634
 		private BattleSkillConfigLongPressItem.ESkillButtonHoldFxRestoreMode UpdateRestoreMode;
 
-		// Token: 0x0401F5D2 RID: 128466
+		// Token: 0x0401A08B RID: 106635
 		private SkillButtonData SkillButtonData;
 
-		// Token: 0x0401F5D3 RID: 128467
+		// Token: 0x0401A08C RID: 106636
 		private UUITexture ProgressTexB;
 
-		// Token: 0x0401F5D4 RID: 128468
+		// Token: 0x0401A08D RID: 106637
 		private UUISprite FlagBg;
 
-		// Token: 0x0401F5D5 RID: 128469
+		// Token: 0x0401A08E RID: 106638
 		private float InitEnergyB;
 
-		// Token: 0x0401F5D6 RID: 128470
+		// Token: 0x0401A08F RID: 106639
 		private float EnergyMaxB = 1f;
 
-		// Token: 0x0401F5D7 RID: 128471
+		// Token: 0x0401A090 RID: 106640
 		[Nullable(1)]
 		private readonly MotorcyclePercentMachine RestoreMachine = new MotorcyclePercentMachine();
 
-		// Token: 0x0401F5D8 RID: 128472
+		// Token: 0x0401A091 RID: 106641
 		[StaticVariableRuleIgnore]
 		private static FColor FlagColorDefault;
 
-		// Token: 0x0401F5D9 RID: 128473
+		// Token: 0x0401A092 RID: 106642
 		[StaticVariableRuleIgnore]
 		private static FColor FlagColorGray;
 
-		// Token: 0x0401F5DA RID: 128474
+		// Token: 0x0401A093 RID: 106643
 		[StaticVariableRuleIgnore]
 		private static bool IsFlagColorInited;
 
-		// Token: 0x0401F5DB RID: 128475
+		// Token: 0x0401A094 RID: 106644
 		private bool FlagState = true;
 
-		// Token: 0x0200BF37 RID: 48951
+		// Token: 0x0200A93D RID: 43325
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039AD2 RID: 236242
+			// Token: 0x04034494 RID: 214164
 			ProgressTexA,
-			// Token: 0x04039AD3 RID: 236243
+			// Token: 0x04034495 RID: 214165
 			PnlFlagA,
-			// Token: 0x04039AD4 RID: 236244
+			// Token: 0x04034496 RID: 214166
 			PnlFlagB,
-			// Token: 0x04039AD5 RID: 236245
+			// Token: 0x04034497 RID: 214167
 			FlagNumB,
-			// Token: 0x04039AD6 RID: 236246
+			// Token: 0x04034498 RID: 214168
 			AniFlagSwitch,
-			// Token: 0x04039AD7 RID: 236247
+			// Token: 0x04034499 RID: 214169
 			PnlBarA,
-			// Token: 0x04039AD8 RID: 236248
+			// Token: 0x0403449A RID: 214170
 			PnlBarB,
-			// Token: 0x04039AD9 RID: 236249
+			// Token: 0x0403449B RID: 214171
 			ProgressTexB,
-			// Token: 0x04039ADA RID: 236250
+			// Token: 0x0403449C RID: 214172
 			FlagBg
 		}
 
-		// Token: 0x0200BF38 RID: 48952
+		// Token: 0x0200A93E RID: 43326
 		[NullableContext(0)]
 		private enum EState
 		{
-			// Token: 0x04039ADC RID: 236252
+			// Token: 0x0403449E RID: 214174
 			StateA,
-			// Token: 0x04039ADD RID: 236253
+			// Token: 0x0403449F RID: 214175
 			StateB
 		}
 
-		// Token: 0x0200BF39 RID: 48953
+		// Token: 0x0200A93F RID: 43327
 		[NullableContext(0)]
 		private enum ESkillButtonHoldFxRestoreMode
 		{
-			// Token: 0x04039ADF RID: 236255
+			// Token: 0x040344A1 RID: 214177
 			WithSimulate,
-			// Token: 0x04039AE0 RID: 236256
+			// Token: 0x040344A2 RID: 214178
 			WithAttribute
 		}
 	}

@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002879 RID: 10361
+	// Token: 0x02002B4F RID: 11087
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITuningStand : IUiGame
 	{
-		// Token: 0x0600E588 RID: 58760 RVA: 0x0021BE90 File Offset: 0x0021A090
-		[NullableContext(1)]
+		// Token: 0x0600F3B9 RID: 62393 RVA: 0x00238DE4 File Offset: 0x00236FE4
+		[NullableContext(0)]
 		public static ITuningStand Create(ITuningStand? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004658 RID: 18008
-		// (get) Token: 0x0600E589 RID: 58761 RVA: 0x0021BEAF File Offset: 0x0021A0AF
+		// Token: 0x170049C9 RID: 18889
+		// (get) Token: 0x0600F3BA RID: 62394 RVA: 0x00238E03 File Offset: 0x00237003
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004659 RID: 18009
-		// (get) Token: 0x0600E58A RID: 58762 RVA: 0x0021BEBC File Offset: 0x0021A0BC
+		// Token: 0x170049CA RID: 18890
+		// (get) Token: 0x0600F3BB RID: 62395 RVA: 0x00238E10 File Offset: 0x00237010
 		public virtual ETuningStandVisualType VisualType
 		{
 			get
@@ -44,19 +44,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700465A RID: 18010
-		// (get) Token: 0x0600E58B RID: 58763 RVA: 0x0021BECC File Offset: 0x0021A0CC
+		// Token: 0x170049CB RID: 18891
+		// (get) Token: 0x0600F3BC RID: 62396 RVA: 0x00238E20 File Offset: 0x00237020
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ITuningStandBubbleConfig> BubbleConfig
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -79,8 +79,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700465B RID: 18011
-		// (get) Token: 0x0600E58C RID: 58764 RVA: 0x0021BF46 File Offset: 0x0021A146
+		// Token: 0x170049CC RID: 18892
+		// (get) Token: 0x0600F3BD RID: 62397 RVA: 0x00238E9A File Offset: 0x0023709A
 		public virtual string GuidancePath
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700465C RID: 18012
-		// (get) Token: 0x0600E58D RID: 58765 RVA: 0x0021BF53 File Offset: 0x0021A153
+		// Token: 0x170049CD RID: 18893
+		// (get) Token: 0x0600F3BE RID: 62398 RVA: 0x00238EA7 File Offset: 0x002370A7
 		public virtual string MusicScorePath
 		{
 			get
@@ -99,8 +99,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700465D RID: 18013
-		// (get) Token: 0x0600E58E RID: 58766 RVA: 0x0021BF60 File Offset: 0x0021A160
+		// Token: 0x170049CE RID: 18894
+		// (get) Token: 0x0600F3BF RID: 62399 RVA: 0x00238EB4 File Offset: 0x002370B4
 		public virtual string NoteSequence
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700465E RID: 18014
-		// (get) Token: 0x0600E58F RID: 58767 RVA: 0x0021BF6D File Offset: 0x0021A16D
+		// Token: 0x170049CF RID: 18895
+		// (get) Token: 0x0600F3C0 RID: 62400 RVA: 0x00238EC1 File Offset: 0x002370C1
 		public virtual string CompleteMusic
 		{
 			get
@@ -119,12 +119,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700465F RID: 18015
-		// (get) Token: 0x0600E590 RID: 58768 RVA: 0x0021BF7A File Offset: 0x0021A17A
-		[Nullable(1)]
+		// Token: 0x170049D0 RID: 18896
+		// (get) Token: 0x0600F3C1 RID: 62401 RVA: 0x00238ECE File Offset: 0x002370CE
+		[Nullable(0)]
 		public virtual ITuningStandGridBoard BoardConfig
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._BoardConfigInited)
@@ -137,24 +137,24 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EED RID: 32493
+		// Token: 0x040085AD RID: 34221
 		private ITuningStand Instance;
 
-		// Token: 0x04007EEE RID: 32494
+		// Token: 0x040085AE RID: 34222
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ITuningStandBubbleConfig> _BubbleConfigCache;
 
-		// Token: 0x04007EEF RID: 32495
+		// Token: 0x040085AF RID: 34223
 		private bool _BubbleConfigInited;
 
-		// Token: 0x04007EF0 RID: 32496
+		// Token: 0x040085B0 RID: 34224
 		private ITuningStandGridBoard _BoardConfigCache;
 
-		// Token: 0x04007EF1 RID: 32497
+		// Token: 0x040085B1 RID: 34225
 		private bool _BoardConfigInited;
 	}
 }

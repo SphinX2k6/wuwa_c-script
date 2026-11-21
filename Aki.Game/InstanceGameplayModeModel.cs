@@ -2,41 +2,41 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001FA8 RID: 8104
+// Token: 0x0200146A RID: 5226
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class InstanceGameplayModeModel : ModelBase
 {
-	// Token: 0x0600FBE1 RID: 64481 RVA: 0x003D1062 File Offset: 0x003CF262
+	// Token: 0x0600D003 RID: 53251 RVA: 0x003DCCDE File Offset: 0x003DAEDE
 	protected override bool OnClear()
 	{
 		this.ClearAll();
 		return true;
 	}
 
-	// Token: 0x0600FBE2 RID: 64482 RVA: 0x003D106B File Offset: 0x003CF26B
+	// Token: 0x0600D004 RID: 53252 RVA: 0x003DCCE7 File Offset: 0x003DAEE7
 	protected override bool OnLeaveLevel()
 	{
 		this.ClearAll();
 		return true;
 	}
 
-	// Token: 0x0600FBE3 RID: 64483 RVA: 0x003D1074 File Offset: 0x003CF274
+	// Token: 0x0600D005 RID: 53253 RVA: 0x003DCCF0 File Offset: 0x003DAEF0
 	protected override bool OnChangeMode()
 	{
 		this.ClearAll();
 		return true;
 	}
 
-	// Token: 0x0600FBE4 RID: 64484 RVA: 0x003D107D File Offset: 0x003CF27D
+	// Token: 0x0600D006 RID: 53254 RVA: 0x003DCCF9 File Offset: 0x003DAEF9
 	private void ClearAll()
 	{
 		this.DisabledCreatureSet.Clear();
 	}
 
-	// Token: 0x1700134C RID: 4940
-	// (get) Token: 0x0600FBE5 RID: 64485 RVA: 0x003D108A File Offset: 0x003CF28A
+	// Token: 0x17001376 RID: 4982
+	// (get) Token: 0x0600D007 RID: 53255 RVA: 0x003DCD06 File Offset: 0x003DAF06
 	public static InstanceGameplayModeModel Instance
 	{
 		get
@@ -45,7 +45,7 @@ public class InstanceGameplayModeModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FBE6 RID: 64486 RVA: 0x003D1091 File Offset: 0x003CF291
+	// Token: 0x0600D008 RID: 53256 RVA: 0x003DCD0D File Offset: 0x003DAF0D
 	public static InstanceGameplayModeModel GetOrCreateInstance()
 	{
 		if (InstanceGameplayModeModel._Instance == null)
@@ -55,7 +55,7 @@ public class InstanceGameplayModeModel : ModelBase
 		return InstanceGameplayModeModel._Instance;
 	}
 
-	// Token: 0x0600FBE7 RID: 64487 RVA: 0x003D10A5 File Offset: 0x003CF2A5
+	// Token: 0x0600D009 RID: 53257 RVA: 0x003DCD21 File Offset: 0x003DAF21
 	public static bool CreateInstance()
 	{
 		if (InstanceGameplayModeModel._Instance != null)
@@ -66,30 +66,30 @@ public class InstanceGameplayModeModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600FBE8 RID: 64488 RVA: 0x003D10BB File Offset: 0x003CF2BB
+	// Token: 0x0600D00A RID: 53258 RVA: 0x003DCD37 File Offset: 0x003DAF37
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600FBE9 RID: 64489 RVA: 0x003D10BD File Offset: 0x003CF2BD
+	// Token: 0x0600D00B RID: 53259 RVA: 0x003DCD39 File Offset: 0x003DAF39
 	public static void ResetStaticDefaultValue()
 	{
 		InstanceGameplayModeModel._Instance = null;
 	}
 
-	// Token: 0x0600FBEA RID: 64490 RVA: 0x003D10C5 File Offset: 0x003CF2C5
+	// Token: 0x0600D00C RID: 53260 RVA: 0x003DCD41 File Offset: 0x003DAF41
 	static InstanceGameplayModeModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InstanceGameplayModeModel.CreateStaticDefaultValue), new Action(InstanceGameplayModeModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400751F RID: 29983
+	// Token: 0x04007602 RID: 30210
 	public EDefaultCameraMode DefaultCameraMode;
 
-	// Token: 0x04007520 RID: 29984
+	// Token: 0x04007603 RID: 30211
 	public HashSet<long> DisabledCreatureSet = new HashSet<long>();
 
-	// Token: 0x04007521 RID: 29985
+	// Token: 0x04007604 RID: 30212
 	[Nullable(2)]
 	private static InstanceGameplayModeModel _Instance;
 }

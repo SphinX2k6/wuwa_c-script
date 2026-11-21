@@ -6,19 +6,19 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo
 {
-	// Token: 0x0200471B RID: 18203
+	// Token: 0x0200364B RID: 13899
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WuWaGoTimeStop : IStaticVariableResetter
 	{
-		// Token: 0x0602F910 RID: 194832 RVA: 0x00B044AE File Offset: 0x00B026AE
+		// Token: 0x060240D6 RID: 147670 RVA: 0x00A3417E File Offset: 0x00A3237E
 		static WuWaGoTimeStop()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WuWaGoTimeStop.CreateStaticDefaultValue), new Action(WuWaGoTimeStop.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x170076F1 RID: 30449
-		// (get) Token: 0x0602F911 RID: 194833 RVA: 0x00B044CD File Offset: 0x00B026CD
+		// Token: 0x170049AD RID: 18861
+		// (get) Token: 0x060240D7 RID: 147671 RVA: 0x00A3419D File Offset: 0x00A3239D
 		public static bool IsPaused
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			}
 		}
 
-		// Token: 0x0602F912 RID: 194834 RVA: 0x00B044DC File Offset: 0x00B026DC
+		// Token: 0x060240D8 RID: 147672 RVA: 0x00A341AC File Offset: 0x00A323AC
 		public static void CreateStaticDefaultValue()
 		{
 			WuWaGoTimeStop.NextToken = 0;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			WuWaGoTimeStop.Participants = new HashSet<IWuWaGoTimeStopParticipant>();
 		}
 
-		// Token: 0x0602F913 RID: 194835 RVA: 0x00B044F8 File Offset: 0x00B026F8
+		// Token: 0x060240D9 RID: 147673 RVA: 0x00A341C8 File Offset: 0x00A323C8
 		public static void ResetStaticDefaultValue()
 		{
 			WuWaGoTimeStop.NextToken = 0;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			WuWaGoTimeStop.Participants = null;
 		}
 
-		// Token: 0x0602F914 RID: 194836 RVA: 0x00B0450C File Offset: 0x00B0270C
+		// Token: 0x060240DA RID: 147674 RVA: 0x00A341DC File Offset: 0x00A323DC
 		public static int Begin(string reason)
 		{
 			int num = ++WuWaGoTimeStop.NextToken;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return num;
 		}
 
-		// Token: 0x0602F915 RID: 194837 RVA: 0x00B04546 File Offset: 0x00B02746
+		// Token: 0x060240DB RID: 147675 RVA: 0x00A34216 File Offset: 0x00A32416
 		public static void End(int token)
 		{
 			if (!WuWaGoTimeStop.ActiveTokens.Remove(token))
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			}
 		}
 
-		// Token: 0x0602F916 RID: 194838 RVA: 0x00B04564 File Offset: 0x00B02764
+		// Token: 0x060240DC RID: 147676 RVA: 0x00A34234 File Offset: 0x00A32434
 		public static Action Register(IWuWaGoTimeStopParticipant participant, EWuWaGoTimeStopPolicy policy = EWuWaGoTimeStopPolicy.Pausable)
 		{
 			if (policy == EWuWaGoTimeStopPolicy.Ignore)
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			};
 		}
 
-		// Token: 0x0602F917 RID: 194839 RVA: 0x00B045D8 File Offset: 0x00B027D8
+		// Token: 0x060240DD RID: 147677 RVA: 0x00A342A8 File Offset: 0x00A324A8
 		[NullableContext(0)]
 		public static UniTask<EWuWaGoTimeStopWaitResult> Wait(int durationMs)
 		{
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <Wait>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F918 RID: 194840 RVA: 0x00B0461C File Offset: 0x00B0281C
+		// Token: 0x060240DE RID: 147678 RVA: 0x00A342EC File Offset: 0x00A324EC
 		public static void CancelAll(string reason)
 		{
 			foreach (IWuWaGoTimeStopParticipant wuWaGoTimeStopParticipant in new List<IWuWaGoTimeStopParticipant>(WuWaGoTimeStop.Participants))
@@ -117,14 +117,14 @@ namespace CSharpScript.Game.Module.WuwaGo
 			WuWaGoTimeStop.ActiveTokens.Clear();
 		}
 
-		// Token: 0x0602F919 RID: 194841 RVA: 0x00B04688 File Offset: 0x00B02888
+		// Token: 0x060240DF RID: 147679 RVA: 0x00A34358 File Offset: 0x00A32558
 		public static void Clear()
 		{
 			WuWaGoTimeStop.CancelAll("WuWaGoTimeStop.Clear");
 			WuWaGoTimeStop.NextToken = 0;
 		}
 
-		// Token: 0x0602F91A RID: 194842 RVA: 0x00B0469A File Offset: 0x00B0289A
+		// Token: 0x060240E0 RID: 147680 RVA: 0x00A3436A File Offset: 0x00A3256A
 		[NullableContext(2)]
 		public static void PauseTimerHandle(TimerHandle handle)
 		{
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			handle.Pause();
 		}
 
-		// Token: 0x0602F91B RID: 194843 RVA: 0x00B046BD File Offset: 0x00B028BD
+		// Token: 0x060240E1 RID: 147681 RVA: 0x00A3438D File Offset: 0x00A3258D
 		[NullableContext(2)]
 		public static void ResumeTimerHandle(TimerHandle handle)
 		{
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			handle.Resume();
 		}
 
-		// Token: 0x0602F91C RID: 194844 RVA: 0x00B046E0 File Offset: 0x00B028E0
+		// Token: 0x060240E2 RID: 147682 RVA: 0x00A343B0 File Offset: 0x00A325B0
 		private static void PauseAll()
 		{
 			foreach (IWuWaGoTimeStopParticipant participant in WuWaGoTimeStop.Participants)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			}
 		}
 
-		// Token: 0x0602F91D RID: 194845 RVA: 0x00B04730 File Offset: 0x00B02930
+		// Token: 0x060240E3 RID: 147683 RVA: 0x00A34400 File Offset: 0x00A32600
 		private static void ResumeAll()
 		{
 			foreach (IWuWaGoTimeStopParticipant participant in WuWaGoTimeStop.Participants)
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			}
 		}
 
-		// Token: 0x0602F91E RID: 194846 RVA: 0x00B04780 File Offset: 0x00B02980
+		// Token: 0x060240E4 RID: 147684 RVA: 0x00A34450 File Offset: 0x00A32650
 		private static void PauseParticipant(IWuWaGoTimeStopParticipant participant)
 		{
 			if (participant.PausedByTimeStop)
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			participant.PauseByTimeStop();
 		}
 
-		// Token: 0x0602F91F RID: 194847 RVA: 0x00B04798 File Offset: 0x00B02998
+		// Token: 0x060240E5 RID: 147685 RVA: 0x00A34468 File Offset: 0x00A32668
 		private static void ResumeParticipant(IWuWaGoTimeStopParticipant participant)
 		{
 			if (!participant.PausedByTimeStop)
@@ -186,10 +186,10 @@ namespace CSharpScript.Game.Module.WuwaGo
 			participant.ResumeByTimeStop();
 		}
 
-		// Token: 0x04019B13 RID: 105235
+		// Token: 0x040141C2 RID: 82370
 		private static int NextToken;
 
-		// Token: 0x04019B14 RID: 105236
+		// Token: 0x040141C3 RID: 82371
 		[Nullable(new byte[]
 		{
 			2,
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 		})]
 		private static Dictionary<int, string> ActiveTokens;
 
-		// Token: 0x04019B15 RID: 105237
+		// Token: 0x040141C4 RID: 82372
 		[Nullable(new byte[]
 		{
 			2,

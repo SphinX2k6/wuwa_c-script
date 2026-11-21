@@ -9,7 +9,7 @@ using UnrealEngine;
 [Nullable(0)]
 public class ActorSystemDebugger : Singleton
 {
-	// Token: 0x0600002B RID: 43 RVA: 0x0000395D File Offset: 0x00001B5D
+	// Token: 0x0600002B RID: 43 RVA: 0x0000356D File Offset: 0x0000176D
 	public void RecordGetPut(GetPutRecord record)
 	{
 		if (this.EnableDebugger)
@@ -18,7 +18,7 @@ public class ActorSystemDebugger : Singleton
 		}
 	}
 
-	// Token: 0x0600002C RID: 44 RVA: 0x00003974 File Offset: 0x00001B74
+	// Token: 0x0600002C RID: 44 RVA: 0x00003584 File Offset: 0x00001784
 	[NullableContext(2)]
 	public void OutPutCsv(string getRecordPath)
 	{
@@ -44,7 +44,7 @@ public class ActorSystemDebugger : Singleton
 	}
 
 	// Token: 0x17000005 RID: 5
-	// (get) Token: 0x0600002D RID: 45 RVA: 0x00003A90 File Offset: 0x00001C90
+	// (get) Token: 0x0600002D RID: 45 RVA: 0x000036A0 File Offset: 0x000018A0
 	public static ActorSystemDebugger Instance
 	{
 		get
@@ -58,12 +58,12 @@ public class ActorSystemDebugger : Singleton
 		}
 	}
 
-	// Token: 0x0600002E RID: 46 RVA: 0x00003AB3 File Offset: 0x00001CB3
+	// Token: 0x0600002E RID: 46 RVA: 0x000036C3 File Offset: 0x000018C3
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600002F RID: 47 RVA: 0x00003AB5 File Offset: 0x00001CB5
+	// Token: 0x0600002F RID: 47 RVA: 0x000036C5 File Offset: 0x000018C5
 	public static void ResetStaticDefaultValue()
 	{
 		ActorSystemDebugger instance = ActorSystemDebugger._instance;
@@ -74,7 +74,7 @@ public class ActorSystemDebugger : Singleton
 		ActorSystemDebugger._instance = null;
 	}
 
-	// Token: 0x06000030 RID: 48 RVA: 0x00003ACE File Offset: 0x00001CCE
+	// Token: 0x06000030 RID: 48 RVA: 0x000036DE File Offset: 0x000018DE
 	static ActorSystemDebugger()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActorSystemDebugger.CreateStaticDefaultValue), new Action(ActorSystemDebugger.ResetStaticDefaultValue));

@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 {
-	// Token: 0x02004B0A RID: 19210
+	// Token: 0x02003AB2 RID: 15026
 	public enum ETowerDefenseEventMonsterDeathType
 	{
-		// Token: 0x0401A901 RID: 108801
+		// Token: 0x04015253 RID: 86611
 		Normal,
-		// Token: 0x0401A902 RID: 108802
+		// Token: 0x04015254 RID: 86612
 		Pollute,
-		// Token: 0x0401A903 RID: 108803
+		// Token: 0x04015255 RID: 86613
 		Spawn,
-		// Token: 0x0401A904 RID: 108804
+		// Token: 0x04015256 RID: 86614
 		Buff
 	}
 }

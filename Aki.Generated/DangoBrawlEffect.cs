@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BC0 RID: 3008
+	// Token: 0x02000CA2 RID: 3234
 	public struct DangoBrawlEffect : IFlatbufferObject
 	{
-		// Token: 0x17000AD9 RID: 2777
-		// (get) Token: 0x06005D73 RID: 23923 RVA: 0x00208FF5 File Offset: 0x002071F5
+		// Token: 0x17000B1F RID: 2847
+		// (get) Token: 0x0600634C RID: 25420 RVA: 0x00228821 File Offset: 0x00226A21
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005D74 RID: 23924 RVA: 0x00209002 File Offset: 0x00207202
+		// Token: 0x0600634D RID: 25421 RVA: 0x0022882E File Offset: 0x00226A2E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005D75 RID: 23925 RVA: 0x0020900C File Offset: 0x0020720C
+		// Token: 0x0600634E RID: 25422 RVA: 0x00228838 File Offset: 0x00226A38
 		public static DangoBrawlEffect GetRootAsDangoBrawlEffect(ByteBuffer _bb)
 		{
 			return DangoBrawlEffect.GetRootAsDangoBrawlEffect(_bb, default(DangoBrawlEffect));
 		}
 
-		// Token: 0x06005D76 RID: 23926 RVA: 0x00209028 File Offset: 0x00207228
+		// Token: 0x0600634F RID: 25423 RVA: 0x00228854 File Offset: 0x00226A54
 		public static DangoBrawlEffect GetRootAsDangoBrawlEffect(ByteBuffer _bb, DangoBrawlEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005D77 RID: 23927 RVA: 0x00209045 File Offset: 0x00207245
+		// Token: 0x06006350 RID: 25424 RVA: 0x00228871 File Offset: 0x00226A71
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005D78 RID: 23928 RVA: 0x00209054 File Offset: 0x00207254
+		// Token: 0x06006351 RID: 25425 RVA: 0x00228880 File Offset: 0x00226A80
 		public DangoBrawlEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000ADA RID: 2778
-		// (get) Token: 0x06005D79 RID: 23929 RVA: 0x00209064 File Offset: 0x00207264
+		// Token: 0x17000B20 RID: 2848
+		// (get) Token: 0x06006352 RID: 25426 RVA: 0x00228890 File Offset: 0x00226A90
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000ADB RID: 2779
-		// (get) Token: 0x06005D7A RID: 23930 RVA: 0x002090A0 File Offset: 0x002072A0
+		// Token: 0x17000B21 RID: 2849
+		// (get) Token: 0x06006353 RID: 25427 RVA: 0x002288CC File Offset: 0x00226ACC
 		public int ActionType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000ADC RID: 2780
-		// (get) Token: 0x06005D7B RID: 23931 RVA: 0x002090DC File Offset: 0x002072DC
+		// Token: 0x17000B22 RID: 2850
+		// (get) Token: 0x06006354 RID: 25428 RVA: 0x00228908 File Offset: 0x00226B08
 		public int TriggerLimit
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000ADD RID: 2781
-		// (get) Token: 0x06005D7C RID: 23932 RVA: 0x00209118 File Offset: 0x00207318
+		// Token: 0x17000B23 RID: 2851
+		// (get) Token: 0x06006355 RID: 25429 RVA: 0x00228944 File Offset: 0x00226B44
 		public int ShowId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000ADE RID: 2782
-		// (get) Token: 0x06005D7D RID: 23933 RVA: 0x00209158 File Offset: 0x00207358
+		// Token: 0x17000B24 RID: 2852
+		// (get) Token: 0x06006356 RID: 25430 RVA: 0x00228984 File Offset: 0x00226B84
 		public bool IsClient
 		{
 			get
@@ -118,7 +118,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004BE9 RID: 19433
+		// Token: 0x040051CB RID: 20939
 		private Table __p;
 	}
 }

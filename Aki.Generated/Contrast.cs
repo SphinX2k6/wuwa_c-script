@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B9C RID: 2972
+	// Token: 0x02000C7E RID: 3198
 	public struct Contrast : IFlatbufferObject
 	{
-		// Token: 0x1700094B RID: 2379
-		// (get) Token: 0x06005921 RID: 22817 RVA: 0x001FF0DD File Offset: 0x001FD2DD
+		// Token: 0x17000991 RID: 2449
+		// (get) Token: 0x06005EFA RID: 24314 RVA: 0x0021EE7D File Offset: 0x0021D07D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005922 RID: 22818 RVA: 0x001FF0EA File Offset: 0x001FD2EA
+		// Token: 0x06005EFB RID: 24315 RVA: 0x0021EE8A File Offset: 0x0021D08A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005923 RID: 22819 RVA: 0x001FF0F4 File Offset: 0x001FD2F4
+		// Token: 0x06005EFC RID: 24316 RVA: 0x0021EE94 File Offset: 0x0021D094
 		public static Contrast GetRootAsContrast(ByteBuffer _bb)
 		{
 			return Contrast.GetRootAsContrast(_bb, default(Contrast));
 		}
 
-		// Token: 0x06005924 RID: 22820 RVA: 0x001FF110 File Offset: 0x001FD310
+		// Token: 0x06005EFD RID: 24317 RVA: 0x0021EEB0 File Offset: 0x0021D0B0
 		public static Contrast GetRootAsContrast(ByteBuffer _bb, Contrast obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005925 RID: 22821 RVA: 0x001FF12D File Offset: 0x001FD32D
+		// Token: 0x06005EFE RID: 24318 RVA: 0x0021EECD File Offset: 0x0021D0CD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005926 RID: 22822 RVA: 0x001FF13C File Offset: 0x001FD33C
+		// Token: 0x06005EFF RID: 24319 RVA: 0x0021EEDC File Offset: 0x0021D0DC
 		public Contrast __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700094C RID: 2380
-		// (get) Token: 0x06005927 RID: 22823 RVA: 0x001FF14C File Offset: 0x001FD34C
+		// Token: 0x17000992 RID: 2450
+		// (get) Token: 0x06005F00 RID: 24320 RVA: 0x0021EEEC File Offset: 0x0021D0EC
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700094D RID: 2381
-		// (get) Token: 0x06005928 RID: 22824 RVA: 0x001FF188 File Offset: 0x001FD388
+		// Token: 0x17000993 RID: 2451
+		// (get) Token: 0x06005F01 RID: 24321 RVA: 0x0021EF28 File Offset: 0x0021D128
 		public string BaseString
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005929 RID: 22825 RVA: 0x001FF1BF File Offset: 0x001FD3BF
+		// Token: 0x06005F02 RID: 24322 RVA: 0x0021EF5F File Offset: 0x0021D15F
 		public Span<byte> GetBaseStringBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600592A RID: 22826 RVA: 0x001FF1CE File Offset: 0x001FD3CE
+		// Token: 0x06005F03 RID: 24323 RVA: 0x0021EF6E File Offset: 0x0021D16E
 		public byte[] GetBaseStringArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700094E RID: 2382
-		// (get) Token: 0x0600592B RID: 22827 RVA: 0x001FF1E8 File Offset: 0x001FD3E8
+		// Token: 0x17000994 RID: 2452
+		// (get) Token: 0x06005F04 RID: 24324 RVA: 0x0021EF88 File Offset: 0x0021D188
 		public int TargetInt
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004BBD RID: 19389
+		// Token: 0x0400519F RID: 20895
 		private Table __p;
 	}
 }

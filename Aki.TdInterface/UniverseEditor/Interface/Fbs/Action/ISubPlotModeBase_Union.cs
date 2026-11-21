@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071F9 RID: 29177
+	// Token: 0x020079CE RID: 31182
 	public enum ISubPlotModeBase_Union : byte
 	{
-		// Token: 0x04011CDC RID: 72924
+		// Token: 0x04012CDE RID: 77022
 		NONE,
-		// Token: 0x04011CDD RID: 72925
+		// Token: 0x04012CDF RID: 77023
 		ISubPlotModeBase,
-		// Token: 0x04011CDE RID: 72926
+		// Token: 0x04012CE0 RID: 77024
 		ISubPlotModePromptWithProfilePic
 	}
 }

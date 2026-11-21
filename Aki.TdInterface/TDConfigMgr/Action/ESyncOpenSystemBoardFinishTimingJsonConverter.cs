@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002448 RID: 9288
+	// Token: 0x020026E9 RID: 9961
 	public class ESyncOpenSystemBoardFinishTimingJsonConverter : JsonConverter<ESyncOpenSystemBoardFinishTiming>
 	{
-		// Token: 0x0600C9C4 RID: 51652 RVA: 0x001D8920 File Offset: 0x001D6B20
+		// Token: 0x0600D674 RID: 54900 RVA: 0x001F27E8 File Offset: 0x001F09E8
 		public override ESyncOpenSystemBoardFinishTiming Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ESyncOpenSystemBoardFinishTimingExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C9C5 RID: 51653 RVA: 0x001D8944 File Offset: 0x001D6B44
+		// Token: 0x0600D675 RID: 54901 RVA: 0x001F280C File Offset: 0x001F0A0C
 		public override void Write(Utf8JsonWriter writer, ESyncOpenSystemBoardFinishTiming value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

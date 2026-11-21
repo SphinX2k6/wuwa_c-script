@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F9F RID: 24479
+	// Token: 0x02004F86 RID: 20358
 	public class TotalTopUpPickRoleItemPanel : UiPanelBase
 	{
-		// Token: 0x0603E161 RID: 254305 RVA: 0x00EFE2A4 File Offset: 0x00EFC4A4
+		// Token: 0x060330FB RID: 209147 RVA: 0x00E4FF5C File Offset: 0x00E4E15C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E162 RID: 254306 RVA: 0x00EFE30C File Offset: 0x00EFC50C
+		// Token: 0x060330FC RID: 209148 RVA: 0x00E4FFC4 File Offset: 0x00E4E1C4
 		[NullableContext(1)]
 		public void Refresh(TotalTopUpPickRoleViewModel viewModel)
 		{
@@ -44,13 +44,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}));
 		}
 
-		// Token: 0x0603E163 RID: 254307 RVA: 0x00EFE381 File Offset: 0x00EFC581
+		// Token: 0x060330FD RID: 209149 RVA: 0x00E50039 File Offset: 0x00E4E239
 		private void OnClickCheck()
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.ItemId, false, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.ItemId, false, null, false);
 		}
 
-		// Token: 0x040206E7 RID: 132839
+		// Token: 0x0401B1B9 RID: 111033
 		private int ItemId;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E2E RID: 24110
+	// Token: 0x0200646B RID: 25707
 	public class IPhotoTargetCaptureUiBaseT
 	{
-		// Token: 0x1700B456 RID: 46166
-		// (get) Token: 0x06029468 RID: 169064 RVA: 0x005A915A File Offset: 0x005A735A
-		// (set) Token: 0x06029469 RID: 169065 RVA: 0x005A9162 File Offset: 0x005A7362
+		// Token: 0x1700BDBC RID: 48572
+		// (get) Token: 0x0602BAF2 RID: 178930 RVA: 0x005F1E8A File Offset: 0x005F008A
+		// (set) Token: 0x0602BAF3 RID: 178931 RVA: 0x005F1E92 File Offset: 0x005F0092
 		public EPhotoTargetCaptureUiType Type { get; set; }
 
-		// Token: 0x0602946A RID: 169066 RVA: 0x005A916B File Offset: 0x005A736B
+		// Token: 0x0602BAF4 RID: 178932 RVA: 0x005F1E9B File Offset: 0x005F009B
 		public IPhotoTargetCaptureUiBaseT()
 		{
 			this.Type = EPhotoTargetCaptureUiType.RequiredPointsCenter;

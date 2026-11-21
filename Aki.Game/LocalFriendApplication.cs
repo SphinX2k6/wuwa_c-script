@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02001C34 RID: 7220
+// Token: 0x020010F3 RID: 4339
 public class LocalFriendApplication
 {
-	// Token: 0x0400630A RID: 25354
+	// Token: 0x040063DC RID: 25564
 	public bool Fresh;
 
-	// Token: 0x0400630B RID: 25355
+	// Token: 0x040063DD RID: 25565
 	public long CreatedTime;
 }

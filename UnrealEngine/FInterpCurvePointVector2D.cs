@@ -7,14 +7,14 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200073C RID: 1852
+	// Token: 0x02000122 RID: 290
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(32, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 32)]
 	[UnrealObjectPath("/Script/CoreUObject.InterpCurvePointVector2D")]
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 32)]
 	public struct FInterpCurvePointVector2D : IEqualityOperators<FInterpCurvePointVector2D, FInterpCurvePointVector2D, bool>, IEquatable<FInterpCurvePointVector2D>, IUnrealScriptStruct
 	{
-		// Token: 0x0600627B RID: 25211 RVA: 0x0008D4AA File Offset: 0x0008B6AA
+		// Token: 0x060011DB RID: 4571 RVA: 0x0001C49A File Offset: 0x0001A69A
 		public FInterpCurvePointVector2D(float InVal, FVector2D OutVal, FVector2D ArriveTangent, FVector2D LeaveTangent, TEnumAsByte<EInterpCurveMode> InterpMode)
 		{
 			this.InVal = InVal;
@@ -24,25 +24,25 @@ namespace UnrealEngine
 			this.InterpMode = InterpMode;
 		}
 
-		// Token: 0x0600627C RID: 25212 RVA: 0x0008D4D4 File Offset: 0x0008B6D4
+		// Token: 0x060011DC RID: 4572 RVA: 0x0001C4C4 File Offset: 0x0001A6C4
 		public static bool operator ==(FInterpCurvePointVector2D left, FInterpCurvePointVector2D right)
 		{
 			return left.InVal == right.InVal && left.OutVal == right.OutVal && left.ArriveTangent == right.ArriveTangent && left.LeaveTangent == right.LeaveTangent && left.InterpMode == right.InterpMode;
 		}
 
-		// Token: 0x0600627D RID: 25213 RVA: 0x0008D53B File Offset: 0x0008B73B
+		// Token: 0x060011DD RID: 4573 RVA: 0x0001C52B File Offset: 0x0001A72B
 		public static bool operator !=(FInterpCurvePointVector2D left, FInterpCurvePointVector2D right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x0600627E RID: 25214 RVA: 0x0008D547 File Offset: 0x0008B747
+		// Token: 0x060011DE RID: 4574 RVA: 0x0001C537 File Offset: 0x0001A737
 		public bool Equals(FInterpCurvePointVector2D other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x0600627F RID: 25215 RVA: 0x0008D558 File Offset: 0x0008B758
+		// Token: 0x060011DF RID: 4575 RVA: 0x0001C548 File Offset: 0x0001A748
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -54,42 +54,42 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06006280 RID: 25216 RVA: 0x0008D57D File Offset: 0x0008B77D
+		// Token: 0x060011E0 RID: 4576 RVA: 0x0001C56D File Offset: 0x0001A76D
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<float, FVector2D, FVector2D, FVector2D, TEnumAsByte<EInterpCurveMode>>(this.InVal, this.OutVal, this.ArriveTangent, this.LeaveTangent, this.InterpMode);
 		}
 
-		// Token: 0x06006281 RID: 25217 RVA: 0x0008D5A2 File Offset: 0x0008B7A2
+		// Token: 0x060011E1 RID: 4577 RVA: 0x0001C592 File Offset: 0x0001A792
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FInterpCurvePointVector2D._ScriptStructPtr != 0) ? FInterpCurvePointVector2D._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.InterpCurvePointVector2D", ref FInterpCurvePointVector2D._ScriptStructPtr);
 		}
 
-		// Token: 0x04002F15 RID: 12053
+		// Token: 0x0400054B RID: 1355
 		[FieldOffset(0)]
 		public float InVal;
 
-		// Token: 0x04002F16 RID: 12054
+		// Token: 0x0400054C RID: 1356
 		[FieldOffset(4)]
 		public FVector2D OutVal;
 
-		// Token: 0x04002F17 RID: 12055
+		// Token: 0x0400054D RID: 1357
 		[FieldOffset(12)]
 		public FVector2D ArriveTangent;
 
-		// Token: 0x04002F18 RID: 12056
+		// Token: 0x0400054E RID: 1358
 		[FieldOffset(20)]
 		public FVector2D LeaveTangent;
 
-		// Token: 0x04002F19 RID: 12057
+		// Token: 0x0400054F RID: 1359
 		[FieldOffset(28)]
 		public TEnumAsByte<EInterpCurveMode> InterpMode;
 
-		// Token: 0x04002F1A RID: 12058
+		// Token: 0x04000550 RID: 1360
 		public const string __ObjectPath = "/Script/CoreUObject.InterpCurvePointVector2D";
 
-		// Token: 0x04002F1B RID: 12059
+		// Token: 0x04000551 RID: 1361
 		private static IntPtr _ScriptStructPtr;
 	}
 }

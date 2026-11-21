@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 
-// Token: 0x02002B59 RID: 11097
+// Token: 0x020020D5 RID: 8405
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,7 +11,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 })]
 public class SurvivorsTeamEditRoleItemGird : LoopScrollMediumItemGrid<SurvivorsRoleData>
 {
-	// Token: 0x06017031 RID: 94257 RVA: 0x005D7E64 File Offset: 0x005D6064
+	// Token: 0x06014A62 RID: 84578 RVA: 0x006049D0 File Offset: 0x00602BD0
 	protected override void OnRefresh(SurvivorsRoleData data, bool isSelected, int gridIndex)
 	{
 		PropMediumItemGrid parameters = new PropMediumItemGrid
@@ -30,13 +30,13 @@ public class SurvivorsTeamEditRoleItemGird : LoopScrollMediumItemGrid<SurvivorsR
 		base.SetElement(new int?(data.GetRoleConfig().ElementId));
 	}
 
-	// Token: 0x06017032 RID: 94258 RVA: 0x005D7F1D File Offset: 0x005D611D
+	// Token: 0x06014A63 RID: 84579 RVA: 0x00604A89 File Offset: 0x00602C89
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, false);
 	}
 
-	// Token: 0x06017033 RID: 94259 RVA: 0x005D7F27 File Offset: 0x005D6127
+	// Token: 0x06014A64 RID: 84580 RVA: 0x00604A93 File Offset: 0x00602C93
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, true);

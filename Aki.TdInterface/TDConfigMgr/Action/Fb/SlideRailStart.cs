@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A16 RID: 10774
+	// Token: 0x02002D03 RID: 11523
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SlideRailStart : ActionParams
 	{
-		// Token: 0x0600ED8C RID: 60812 RVA: 0x00229FE5 File Offset: 0x002281E5
-		[NullableContext(1)]
+		// Token: 0x0600FC23 RID: 64547 RVA: 0x00247969 File Offset: 0x00245B69
+		[NullableContext(0)]
 		public static SlideRailStart Create(ISlideRailStart? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B22 RID: 19234
-		// (get) Token: 0x0600ED8D RID: 60813 RVA: 0x0022A004 File Offset: 0x00228204
+		// Token: 0x17004ECB RID: 20171
+		// (get) Token: 0x0600FC24 RID: 64548 RVA: 0x00247988 File Offset: 0x00245B88
 		public virtual int RailEntityId
 		{
 			get
@@ -33,20 +33,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B23 RID: 19235
-		// (get) Token: 0x0600ED8E RID: 60814 RVA: 0x0022A011 File Offset: 0x00228211
-		[Nullable(1)]
+		// Token: 0x17004ECC RID: 20172
+		// (get) Token: 0x0600FC25 RID: 64549 RVA: 0x00247995 File Offset: 0x00245B95
+		[Nullable(0)]
 		public virtual string SlidePerformDaPath
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.SlidePerformDaPath;
 			}
 		}
 
-		// Token: 0x17004B24 RID: 19236
-		// (get) Token: 0x0600ED8F RID: 60815 RVA: 0x0022A01E File Offset: 0x0022821E
+		// Token: 0x17004ECD RID: 20173
+		// (get) Token: 0x0600FC26 RID: 64550 RVA: 0x002479A2 File Offset: 0x00245BA2
 		public virtual ISlideRailFollowConfig SlideRailFollowConfig
 		{
 			get
@@ -61,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B25 RID: 19237
-		// (get) Token: 0x0600ED90 RID: 60816 RVA: 0x0022A052 File Offset: 0x00228252
+		// Token: 0x17004ECE RID: 20174
+		// (get) Token: 0x0600FC27 RID: 64551 RVA: 0x002479D6 File Offset: 0x00245BD6
 		public virtual ISlideRailRTPCParams RTPCParams
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082C0 RID: 33472
+		// Token: 0x040089B1 RID: 35249
 		private ISlideRailStart Instance;
 
-		// Token: 0x040082C1 RID: 33473
+		// Token: 0x040089B2 RID: 35250
 		private ISlideRailFollowConfig _SlideRailFollowConfigCache;
 
-		// Token: 0x040082C2 RID: 33474
+		// Token: 0x040089B3 RID: 35251
 		private bool _SlideRailFollowConfigInited;
 
-		// Token: 0x040082C3 RID: 33475
+		// Token: 0x040089B4 RID: 35252
 		private ISlideRailRTPCParams _RTPCParamsCache;
 
-		// Token: 0x040082C4 RID: 33476
+		// Token: 0x040089B5 RID: 35253
 		private bool _RTPCParamsInited;
 	}
 }

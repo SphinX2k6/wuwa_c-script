@@ -12,7 +12,7 @@ namespace Aki.Protocol
 	[NetMessage(EMessageId.AbyssPluginItemInfoUpdateNotify)]
 	public sealed class AbyssPluginItemInfoUpdateNotify : IMessage<AbyssPluginItemInfoUpdateNotify>, IMessage, IEquatable<AbyssPluginItemInfoUpdateNotify>, IDeepCloneable<AbyssPluginItemInfoUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x06001295 RID: 4757 RVA: 0x0003315C File Offset: 0x0003135C
+		// Token: 0x060012C0 RID: 4800 RVA: 0x00033710 File Offset: 0x00031910
 		[NullableContext(1)]
 		public static AbyssPluginItemInfoUpdateNotify Create()
 		{
@@ -20,7 +20,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x170000CE RID: 206
-		// (get) Token: 0x06001296 RID: 4758 RVA: 0x00033163 File Offset: 0x00031363
+		// (get) Token: 0x060012C1 RID: 4801 RVA: 0x00033717 File Offset: 0x00031917
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -32,7 +32,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x170000CF RID: 207
-		// (get) Token: 0x06001297 RID: 4759 RVA: 0x00033166 File Offset: 0x00031366
+		// (get) Token: 0x060012C2 RID: 4802 RVA: 0x0003371A File Offset: 0x0003191A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001298 RID: 4760 RVA: 0x0003316D File Offset: 0x0003136D
+		// Token: 0x060012C3 RID: 4803 RVA: 0x00033721 File Offset: 0x00031921
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssPluginItemInfoUpdateNotify()
 		{
 		}
 
-		// Token: 0x06001299 RID: 4761 RVA: 0x00033180 File Offset: 0x00031380
+		// Token: 0x060012C4 RID: 4804 RVA: 0x00033734 File Offset: 0x00031934
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssPluginItemInfoUpdateNotify(AbyssPluginItemInfoUpdateNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600129A RID: 4762 RVA: 0x000331AA File Offset: 0x000313AA
+		// Token: 0x060012C5 RID: 4805 RVA: 0x0003375E File Offset: 0x0003195E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssPluginItemInfoUpdateNotify Clone()
@@ -68,7 +68,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x170000D0 RID: 208
-		// (get) Token: 0x0600129B RID: 4763 RVA: 0x000331B2 File Offset: 0x000313B2
+		// (get) Token: 0x060012C6 RID: 4806 RVA: 0x00033766 File Offset: 0x00031966
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<AbyssPluginItemInfo> PluginItems
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600129C RID: 4764 RVA: 0x000331BA File Offset: 0x000313BA
+		// Token: 0x060012C7 RID: 4807 RVA: 0x0003376E File Offset: 0x0003196E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AbyssPluginItemInfoUpdateNotify);
 		}
 
-		// Token: 0x0600129D RID: 4765 RVA: 0x000331C8 File Offset: 0x000313C8
+		// Token: 0x060012C8 RID: 4808 RVA: 0x0003377C File Offset: 0x0003197C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AbyssPluginItemInfoUpdateNotify other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.pluginItems_.Equals(other.pluginItems_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600129E RID: 4766 RVA: 0x000331FC File Offset: 0x000313FC
+		// Token: 0x060012C9 RID: 4809 RVA: 0x000337B0 File Offset: 0x000319B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600129F RID: 4767 RVA: 0x00033230 File Offset: 0x00031430
+		// Token: 0x060012CA RID: 4810 RVA: 0x000337E4 File Offset: 0x000319E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060012A0 RID: 4768 RVA: 0x0003323D File Offset: 0x0003143D
+		// Token: 0x060012CB RID: 4811 RVA: 0x000337F1 File Offset: 0x000319F1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060012A1 RID: 4769 RVA: 0x00033246 File Offset: 0x00031446
+		// Token: 0x060012CC RID: 4812 RVA: 0x000337FA File Offset: 0x000319FA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060012A2 RID: 4770 RVA: 0x00033270 File Offset: 0x00031470
+		// Token: 0x060012CD RID: 4813 RVA: 0x00033824 File Offset: 0x00031A24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060012A3 RID: 4771 RVA: 0x000332A9 File Offset: 0x000314A9
+		// Token: 0x060012CE RID: 4814 RVA: 0x0003385D File Offset: 0x00031A5D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AbyssPluginItemInfoUpdateNotify other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060012A4 RID: 4772 RVA: 0x000332D7 File Offset: 0x000314D7
+		// Token: 0x060012CF RID: 4815 RVA: 0x0003388B File Offset: 0x00031A8B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060012A5 RID: 4773 RVA: 0x000332E0 File Offset: 0x000314E0
+		// Token: 0x060012D0 RID: 4816 RVA: 0x00033894 File Offset: 0x00031A94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 74U)
+				if (num != 18U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04001FD8 RID: 8152
+		// Token: 0x0400202E RID: 8238
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04001FD9 RID: 8153
-		public const int PluginItemsFieldNumber = 9;
+		// Token: 0x0400202F RID: 8239
+		public const int PluginItemsFieldNumber = 2;
 
-		// Token: 0x04001FDA RID: 8154
-		private static readonly FieldCodec<AbyssPluginItemInfo> _repeated_pluginItems_codec = FieldCodec.ForMessage<AbyssPluginItemInfo>(74U, AbyssPluginItemInfo.Parser);
+		// Token: 0x04002030 RID: 8240
+		private static readonly FieldCodec<AbyssPluginItemInfo> _repeated_pluginItems_codec = FieldCodec.ForMessage<AbyssPluginItemInfo>(18U, AbyssPluginItemInfo.Parser);
 
-		// Token: 0x04001FDB RID: 8155
+		// Token: 0x04002031 RID: 8241
 		private readonly RepeatedField<AbyssPluginItemInfo> pluginItems_ = new RepeatedField<AbyssPluginItemInfo>();
 	}
 }

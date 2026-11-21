@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000281 RID: 641
+	// Token: 0x020000D5 RID: 213
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/AkAudio.MovieSceneAkAudioEventSection")]
-	[UnrealStructLayout(536, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 536)]
+	[UnrealStructLayout(560, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 560)]
 	public class UMovieSceneAkAudioEventSection : UMovieSceneSection, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600240B RID: 9227 RVA: 0x00035796 File Offset: 0x00033996
+		// Token: 0x06000F31 RID: 3889 RVA: 0x000177AE File Offset: 0x000159AE
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneAkAudioEventSection._ClassPtr;
 		}
 
-		// Token: 0x0600240C RID: 9228 RVA: 0x000357A4 File Offset: 0x000339A4
+		// Token: 0x06000F32 RID: 3890 RVA: 0x000177BC File Offset: 0x000159BC
 		public UMovieSceneAkAudioEventSection() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneAkAudioEventSection.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600240D RID: 9229 RVA: 0x000357CC File Offset: 0x000339CC
+		// Token: 0x06000F33 RID: 3891 RVA: 0x000177E4 File Offset: 0x000159E4
 		public UMovieSceneAkAudioEventSection(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneAkAudioEventSection.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170008A9 RID: 2217
-		// (get) Token: 0x0600240E RID: 9230 RVA: 0x000357FF File Offset: 0x000339FF
-		// (set) Token: 0x0600240F RID: 9231 RVA: 0x00035813 File Offset: 0x00033A13
+		// Token: 0x17000152 RID: 338
+		// (get) Token: 0x06000F34 RID: 3892 RVA: 0x00017817 File Offset: 0x00015A17
+		// (set) Token: 0x06000F35 RID: 3893 RVA: 0x0001782B File Offset: 0x00015A2B
 		[Nullable(2)]
 		public unsafe UAkAudioEvent Event
 		{
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170008AA RID: 2218
-		// (get) Token: 0x06002410 RID: 9232 RVA: 0x00035828 File Offset: 0x00033A28
-		// (set) Token: 0x06002411 RID: 9233 RVA: 0x00035838 File Offset: 0x00033A38
+		// Token: 0x17000153 RID: 339
+		// (get) Token: 0x06000F36 RID: 3894 RVA: 0x00017840 File Offset: 0x00015A40
+		// (set) Token: 0x06000F37 RID: 3895 RVA: 0x00017850 File Offset: 0x00015A50
 		public unsafe bool RetriggerEvent
 		{
 			get
@@ -62,9 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170008AB RID: 2219
-		// (get) Token: 0x06002412 RID: 9234 RVA: 0x00035849 File Offset: 0x00033A49
-		// (set) Token: 0x06002413 RID: 9235 RVA: 0x00035859 File Offset: 0x00033A59
+		// Token: 0x17000154 RID: 340
+		// (get) Token: 0x06000F38 RID: 3896 RVA: 0x00017861 File Offset: 0x00015A61
+		// (set) Token: 0x06000F39 RID: 3897 RVA: 0x00017871 File Offset: 0x00015A71
 		public unsafe int ScrubTailLengthMs
 		{
 			get
@@ -77,9 +77,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170008AC RID: 2220
-		// (get) Token: 0x06002414 RID: 9236 RVA: 0x0003586A File Offset: 0x00033A6A
-		// (set) Token: 0x06002415 RID: 9237 RVA: 0x0003587A File Offset: 0x00033A7A
+		// Token: 0x17000155 RID: 341
+		// (get) Token: 0x06000F3A RID: 3898 RVA: 0x00017882 File Offset: 0x00015A82
+		// (set) Token: 0x06000F3B RID: 3899 RVA: 0x00017892 File Offset: 0x00015A92
 		public unsafe bool StopAtSectionEnd
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170008AD RID: 2221
-		// (get) Token: 0x06002416 RID: 9238 RVA: 0x0003588B File Offset: 0x00033A8B
-		// (set) Token: 0x06002417 RID: 9239 RVA: 0x0003589F File Offset: 0x00033A9F
+		// Token: 0x17000156 RID: 342
+		// (get) Token: 0x06000F3C RID: 3900 RVA: 0x000178A3 File Offset: 0x00015AA3
+		// (set) Token: 0x06000F3D RID: 3901 RVA: 0x000178B7 File Offset: 0x00015AB7
 		public unsafe string EventName
 		{
 			get
@@ -107,9 +107,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170008AE RID: 2222
-		// (get) Token: 0x06002418 RID: 9240 RVA: 0x000358B4 File Offset: 0x00033AB4
-		// (set) Token: 0x06002419 RID: 9241 RVA: 0x000358C4 File Offset: 0x00033AC4
+		// Token: 0x17000157 RID: 343
+		// (get) Token: 0x06000F3E RID: 3902 RVA: 0x000178CC File Offset: 0x00015ACC
+		// (set) Token: 0x06000F3F RID: 3903 RVA: 0x000178DC File Offset: 0x00015ADC
 		public unsafe float MaxSourceDuration
 		{
 			get
@@ -122,9 +122,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170008AF RID: 2223
-		// (get) Token: 0x0600241A RID: 9242 RVA: 0x000358D5 File Offset: 0x00033AD5
-		// (set) Token: 0x0600241B RID: 9243 RVA: 0x000358E9 File Offset: 0x00033AE9
+		// Token: 0x17000158 RID: 344
+		// (get) Token: 0x06000F40 RID: 3904 RVA: 0x000178ED File Offset: 0x00015AED
+		// (set) Token: 0x06000F41 RID: 3905 RVA: 0x00017901 File Offset: 0x00015B01
 		public unsafe string MaxDurationSourceID
 		{
 			get
@@ -137,30 +137,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170008B0 RID: 2224
-		// (get) Token: 0x0600241C RID: 9244 RVA: 0x00035900 File Offset: 0x00033B00
-		// (set) Token: 0x0600241D RID: 9245 RVA: 0x00035939 File Offset: 0x00033B39
-		public TArray<FAkExternalSourceInfo> ExternalSources
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FAkExternalSourceInfo> result;
-				if ((result = this._ExternalSources) == null)
-				{
-					result = (this._ExternalSources = new TArray<FAkExternalSourceInfo>(base.NativePtr + (IntPtr)UMovieSceneAkAudioEventSection.__PropertyOffset_ExternalSources, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ExternalSources.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170008B1 RID: 2225
-		// (get) Token: 0x0600241E RID: 9246 RVA: 0x00035947 File Offset: 0x00033B47
-		// (set) Token: 0x0600241F RID: 9247 RVA: 0x00035957 File Offset: 0x00033B57
+		// Token: 0x17000159 RID: 345
+		// (get) Token: 0x06000F42 RID: 3906 RVA: 0x00017916 File Offset: 0x00015B16
+		// (set) Token: 0x06000F43 RID: 3907 RVA: 0x00017926 File Offset: 0x00015B26
 		public unsafe int FadeOutMs
 		{
 			get
@@ -173,59 +152,94 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06002420 RID: 9248 RVA: 0x00035968 File Offset: 0x00033B68
+		// Token: 0x1700015A RID: 346
+		// (get) Token: 0x06000F44 RID: 3908 RVA: 0x00017938 File Offset: 0x00015B38
+		// (set) Token: 0x06000F45 RID: 3909 RVA: 0x00017971 File Offset: 0x00015B71
+		public FFrameNumber StartFrameOffset
+		{
+			get
+			{
+				base.FastCheckIsValid();
+				FFrameNumber result;
+				if ((result = this._StartFrameOffset) == null)
+				{
+					result = (this._StartFrameOffset = new FFrameNumber(base.NativePtr + (IntPtr)UMovieSceneAkAudioEventSection.__PropertyOffset_StartFrameOffset, this));
+				}
+				return result;
+			}
+			set
+			{
+				UnrealReflectionUtils.CopyNativeStruct(FFrameNumber.StaticStruct(), base.NativePtr + (IntPtr)UMovieSceneAkAudioEventSection.__PropertyOffset_StartFrameOffset, value.NativePtr, 1, false);
+			}
+		}
+
+		// Token: 0x1700015B RID: 347
+		// (get) Token: 0x06000F46 RID: 3910 RVA: 0x00017992 File Offset: 0x00015B92
+		// (set) Token: 0x06000F47 RID: 3911 RVA: 0x000179A2 File Offset: 0x00015BA2
+		public unsafe float StartOffsetSecondsDisplay
+		{
+			get
+			{
+				return *(base.NativePtr + (IntPtr)UMovieSceneAkAudioEventSection.__PropertyOffset_StartOffsetSecondsDisplay);
+			}
+			set
+			{
+				*(base.NativePtr + (IntPtr)UMovieSceneAkAudioEventSection.__PropertyOffset_StartOffsetSecondsDisplay) = value;
+			}
+		}
+
+		// Token: 0x06000F48 RID: 3912 RVA: 0x000179B3 File Offset: 0x00015BB3
 		static UMovieSceneAkAudioEventSection()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/AkAudio.MovieSceneAkAudioEventSection");
 		}
 
-		// Token: 0x06002421 RID: 9249 RVA: 0x00035976 File Offset: 0x00033B76
+		// Token: 0x06000F49 RID: 3913 RVA: 0x000179C1 File Offset: 0x00015BC1
 		protected UMovieSceneAkAudioEventSection(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04000DA7 RID: 3495
+		// Token: 0x04000350 RID: 848
 		public new const string __ObjectPath = "/Script/AkAudio.MovieSceneAkAudioEventSection";
 
-		// Token: 0x04000DA8 RID: 3496
+		// Token: 0x04000351 RID: 849
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04000DA9 RID: 3497
+		// Token: 0x04000352 RID: 850
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04000DAA RID: 3498
+		// Token: 0x04000353 RID: 851
 		internal static int __PropertyOffset_Event;
 
-		// Token: 0x04000DAB RID: 3499
+		// Token: 0x04000354 RID: 852
 		internal static int __PropertyOffset_RetriggerEvent;
 
-		// Token: 0x04000DAC RID: 3500
+		// Token: 0x04000355 RID: 853
 		internal static int __PropertyOffset_ScrubTailLengthMs;
 
-		// Token: 0x04000DAD RID: 3501
+		// Token: 0x04000356 RID: 854
 		internal static int __PropertyOffset_StopAtSectionEnd;
 
-		// Token: 0x04000DAE RID: 3502
+		// Token: 0x04000357 RID: 855
 		internal static int __PropertyOffset_EventName;
 
-		// Token: 0x04000DAF RID: 3503
+		// Token: 0x04000358 RID: 856
 		internal static int __PropertyOffset_MaxSourceDuration;
 
-		// Token: 0x04000DB0 RID: 3504
+		// Token: 0x04000359 RID: 857
 		internal static int __PropertyOffset_MaxDurationSourceID;
 
-		// Token: 0x04000DB1 RID: 3505
-		internal static int __PropertyOffset_ExternalSources;
-
-		// Token: 0x04000DB2 RID: 3506
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FAkExternalSourceInfo> _ExternalSources;
-
-		// Token: 0x04000DB3 RID: 3507
+		// Token: 0x0400035A RID: 858
 		internal static int __PropertyOffset_FadeOutMs;
+
+		// Token: 0x0400035B RID: 859
+		internal static int __PropertyOffset_StartFrameOffset;
+
+		// Token: 0x0400035C RID: 860
+		[Nullable(2)]
+		private FFrameNumber _StartFrameOffset;
+
+		// Token: 0x0400035D RID: 861
+		internal static int __PropertyOffset_StartOffsetSecondsDisplay;
 	}
 }

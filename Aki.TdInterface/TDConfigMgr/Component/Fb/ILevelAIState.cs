@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C9A RID: 3226
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D7C RID: 3452
 	public class ILevelAIState
 	{
-		// Token: 0x060049C1 RID: 18881 RVA: 0x000B8E09 File Offset: 0x000B7009
+		// Token: 0x06004E6F RID: 20079 RVA: 0x000C3819 File Offset: 0x000C1A19
 		public static ILevelAIState Create(ILevelAIState? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700164A RID: 5706
-		// (get) Token: 0x060049C2 RID: 18882 RVA: 0x000B8E28 File Offset: 0x000B7028
+		// Token: 0x17001772 RID: 6002
+		// (get) Token: 0x06004E70 RID: 20080 RVA: 0x000C3838 File Offset: 0x000C1A38
 		public virtual int StateId
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700164B RID: 5707
-		// (get) Token: 0x060049C3 RID: 18883 RVA: 0x000B8E35 File Offset: 0x000B7035
+		// Token: 0x17001773 RID: 6003
+		// (get) Token: 0x06004E71 RID: 20081 RVA: 0x000C3845 File Offset: 0x000C1A45
 		public virtual string StateName
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700164C RID: 5708
-		// (get) Token: 0x060049C4 RID: 18884 RVA: 0x000B8E42 File Offset: 0x000B7042
+		// Token: 0x17001774 RID: 6004
+		// (get) Token: 0x06004E72 RID: 20082 RVA: 0x000C3852 File Offset: 0x000C1A52
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700164D RID: 5709
-		// (get) Token: 0x060049C5 RID: 18885 RVA: 0x000B8E76 File Offset: 0x000B7076
+		// Token: 0x17001775 RID: 6005
+		// (get) Token: 0x06004E73 RID: 20083 RVA: 0x000C3886 File Offset: 0x000C1A86
 		public virtual ILevelAIBehaviourBase Behaviour
 		{
 			get
@@ -75,20 +73,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A1F RID: 10783
+		// Token: 0x04002C99 RID: 11417
 		private ILevelAIState Instance;
 
-		// Token: 0x04002A20 RID: 10784
+		// Token: 0x04002C9A RID: 11418
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002A21 RID: 10785
+		// Token: 0x04002C9B RID: 11419
 		private bool _ConditionInited;
 
-		// Token: 0x04002A22 RID: 10786
+		// Token: 0x04002C9C RID: 11420
 		private ILevelAIBehaviourBase _BehaviourCache;
 
-		// Token: 0x04002A23 RID: 10787
+		// Token: 0x04002C9D RID: 11421
 		private bool _BehaviourInited;
 	}
 }

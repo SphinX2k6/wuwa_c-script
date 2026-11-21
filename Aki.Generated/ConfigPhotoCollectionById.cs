@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006C9 RID: 1737
+	// Token: 0x020006E1 RID: 1761
 	public class ConfigPhotoCollectionById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060028C6 RID: 10438 RVA: 0x0013FF7F File Offset: 0x0013E17F
+		// Token: 0x06002956 RID: 10582 RVA: 0x001469FB File Offset: 0x00144BFB
 		static ConfigPhotoCollectionById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotoCollectionById.CreateStaticDefaultValue), new Action(ConfigPhotoCollectionById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060028C7 RID: 10439 RVA: 0x0013FFA0 File Offset: 0x0013E1A0
+		// Token: 0x06002957 RID: 10583 RVA: 0x00146A1C File Offset: 0x00144C1C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotoCollectionById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060028C8 RID: 10440 RVA: 0x0014001F File Offset: 0x0013E21F
+		// Token: 0x06002958 RID: 10584 RVA: 0x00146A9B File Offset: 0x00144C9B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotoCollectionById.LogPair = null;
 			ConfigPhotoCollectionById.HandleId = 0;
 		}
 
-		// Token: 0x060028C9 RID: 10441 RVA: 0x0014002D File Offset: 0x0013E22D
+		// Token: 0x06002959 RID: 10585 RVA: 0x00146AA9 File Offset: 0x00144CA9
 		public static void Init()
 		{
 			ConfigPhotoCollectionById.HandleId = ConfigCommon.InitDataStatement(ConfigPhotoCollectionById.HandleId, "db_photocollection.db", "select BinData from `PhotoCollection` where Id=?");
 		}
 
-		// Token: 0x060028CA RID: 10442 RVA: 0x00140048 File Offset: 0x0013E248
+		// Token: 0x0600295A RID: 10586 RVA: 0x00146AC4 File Offset: 0x00144CC4
 		public static PhotoCollection? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhotoCollectionById.HandleId, ConfigPhotoCollectionById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhotoCollection?(rootAsPhotoCollection);
 		}
 
-		// Token: 0x04002F65 RID: 12133
+		// Token: 0x0400300D RID: 12301
 		private const string DB = "db_photocollection.db";
 
-		// Token: 0x04002F66 RID: 12134
+		// Token: 0x0400300E RID: 12302
 		private const string FILE = "j.技能采集配置.xlsx";
 
-		// Token: 0x04002F67 RID: 12135
+		// Token: 0x0400300F RID: 12303
 		private const string TABLE = "PhotoCollection";
 
-		// Token: 0x04002F68 RID: 12136
+		// Token: 0x04003010 RID: 12304
 		private const string COMMAND = "select BinData from `PhotoCollection` where Id=?";
 
-		// Token: 0x04002F69 RID: 12137
+		// Token: 0x04003011 RID: 12305
 		private const string KEY_PREFIX = "PhotoCollectionById";
 
-		// Token: 0x04002F6A RID: 12138
+		// Token: 0x04003012 RID: 12306
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002F6B RID: 12139
+		// Token: 0x04003013 RID: 12307
 		private static int HandleId;
 	}
 }

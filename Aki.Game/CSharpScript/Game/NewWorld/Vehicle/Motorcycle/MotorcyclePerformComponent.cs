@@ -13,20 +13,20 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 {
-	// Token: 0x02007026 RID: 28710
+	// Token: 0x020061A7 RID: 24999
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcyclePerformComponent : VehiclePerformComponent, IStaticVariableResetter
 	{
-		// Token: 0x06045E2D RID: 286253 RVA: 0x01162C9D File Offset: 0x01160E9D
+		// Token: 0x0603BFFA RID: 245754 RVA: 0x0110CDCE File Offset: 0x0110AFCE
 		static MotorcyclePerformComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MotorcyclePerformComponent.CreateStaticDefaultValue), new Action(MotorcyclePerformComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x17009BC3 RID: 39875
-		// (get) Token: 0x06045E2E RID: 286254 RVA: 0x01162CCB File Offset: 0x01160ECB
-		// (set) Token: 0x06045E2F RID: 286255 RVA: 0x01162CD4 File Offset: 0x01160ED4
+		// Token: 0x1700711C RID: 28956
+		// (get) Token: 0x0603BFFB RID: 245755 RVA: 0x0110CDFC File Offset: 0x0110AFFC
+		// (set) Token: 0x0603BFFC RID: 245756 RVA: 0x0110CE04 File Offset: 0x0110B004
 		protected bool DrivingBuffActivating
 		{
 			get
@@ -76,9 +76,9 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x17009BC4 RID: 39876
-		// (get) Token: 0x06045E30 RID: 286256 RVA: 0x01162DF0 File Offset: 0x01160FF0
-		// (set) Token: 0x06045E31 RID: 286257 RVA: 0x01162DF8 File Offset: 0x01160FF8
+		// Token: 0x1700711D RID: 28957
+		// (get) Token: 0x0603BFFD RID: 245757 RVA: 0x0110CF20 File Offset: 0x0110B120
+		// (set) Token: 0x0603BFFE RID: 245758 RVA: 0x0110CF28 File Offset: 0x0110B128
 		protected int Hour
 		{
 			get
@@ -110,9 +110,9 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x17009BC5 RID: 39877
-		// (get) Token: 0x06045E32 RID: 286258 RVA: 0x01162E7C File Offset: 0x0116107C
-		// (set) Token: 0x06045E33 RID: 286259 RVA: 0x01162E84 File Offset: 0x01161084
+		// Token: 0x1700711E RID: 28958
+		// (get) Token: 0x0603BFFF RID: 245759 RVA: 0x0110CFAC File Offset: 0x0110B1AC
+		// (set) Token: 0x0603C000 RID: 245760 RVA: 0x0110CFB4 File Offset: 0x0110B1B4
 		protected long CurrentHourEffect
 		{
 			get
@@ -150,8 +150,8 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x17009BC6 RID: 39878
-		// (get) Token: 0x06045E34 RID: 286260 RVA: 0x01162F25 File Offset: 0x01161125
+		// Token: 0x1700711F RID: 28959
+		// (get) Token: 0x0603C001 RID: 245761 RVA: 0x0110D055 File Offset: 0x0110B255
 		public float LaunchSpeedFadeTime
 		{
 			get
@@ -160,8 +160,8 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x17009BC7 RID: 39879
-		// (get) Token: 0x06045E35 RID: 286261 RVA: 0x01162F2D File Offset: 0x0116112D
+		// Token: 0x17007120 RID: 28960
+		// (get) Token: 0x0603C002 RID: 245762 RVA: 0x0110D05D File Offset: 0x0110B25D
 		public float LaunchVehicleSpeedAddRatio
 		{
 			get
@@ -170,8 +170,8 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x17009BC8 RID: 39880
-		// (get) Token: 0x06045E36 RID: 286262 RVA: 0x01162F35 File Offset: 0x01161135
+		// Token: 0x17007121 RID: 28961
+		// (get) Token: 0x0603C003 RID: 245763 RVA: 0x0110D065 File Offset: 0x0110B265
 		[Nullable(2)]
 		public UCurveFloat LaunchSpeedFadeCurve
 		{
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E37 RID: 286263 RVA: 0x01162F40 File Offset: 0x01161140
+		// Token: 0x0603C004 RID: 245764 RVA: 0x0110D070 File Offset: 0x0110B270
 		protected override bool OnStart()
 		{
 			bool result = base.OnStart();
@@ -233,14 +233,14 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return result;
 		}
 
-		// Token: 0x06045E38 RID: 286264 RVA: 0x011630F4 File Offset: 0x011612F4
+		// Token: 0x0603C005 RID: 245765 RVA: 0x0110D228 File Offset: 0x0110B428
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveWithTarget<Entity, Entity>(base.Entity, EEventName.OnVehicleDriverChange, new Action<Entity, Entity>(this.OnVehicleDriverChange));
 			return base.OnEnd();
 		}
 
-		// Token: 0x06045E39 RID: 286265 RVA: 0x0116311E File Offset: 0x0116131E
+		// Token: 0x0603C006 RID: 245766 RVA: 0x0110D252 File Offset: 0x0110B452
 		[NullableContext(2)]
 		private void OnVehicleDriverChange(Entity oldDriver, Entity newDriver)
 		{
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.Hour = -1;
 		}
 
-		// Token: 0x06045E3A RID: 286266 RVA: 0x0116313C File Offset: 0x0116133C
+		// Token: 0x0603C007 RID: 245767 RVA: 0x0110D270 File Offset: 0x0110B470
 		protected override void OnTick(float delta)
 		{
 			base.OnTick(delta);
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E3B RID: 286267 RVA: 0x0116324C File Offset: 0x0116144C
+		// Token: 0x0603C008 RID: 245768 RVA: 0x0110D380 File Offset: 0x0110B580
 		protected override void OnSetDriver()
 		{
 			base.OnSetDriver();
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			vehicleMovementComponent.ResetMotorcycle();
 		}
 
-		// Token: 0x06045E3C RID: 286268 RVA: 0x01163358 File Offset: 0x01161558
+		// Token: 0x0603C009 RID: 245769 RVA: 0x0110D48C File Offset: 0x0110B68C
 		protected void RefreshSummonedEntity(VehiclePassengerInfo info, bool isEnter)
 		{
 			EntityHandle summonedEntity = PhantomUtil.GetSummonedEntity(base.Entity, ESummonType.ConcomitantMotorcycle, 1);
@@ -377,7 +377,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E3D RID: 286269 RVA: 0x01163423 File Offset: 0x01161623
+		// Token: 0x0603C00A RID: 245770 RVA: 0x0110D557 File Offset: 0x0110B757
 		protected override void EnterVehiclePerform(VehiclePassengerInfo info)
 		{
 			base.EnterVehiclePerform(info);
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.SetDitherEnable(info, true);
 		}
 
-		// Token: 0x06045E3E RID: 286270 RVA: 0x0116343C File Offset: 0x0116163C
+		// Token: 0x0603C00B RID: 245771 RVA: 0x0110D570 File Offset: 0x0110B770
 		protected override void LeaveVehiclePerform(VehiclePassengerInfo info)
 		{
 			base.LeaveVehiclePerform(info);
@@ -393,7 +393,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.RefreshSummonedEntity(info, false);
 		}
 
-		// Token: 0x06045E3F RID: 286271 RVA: 0x01163458 File Offset: 0x01161658
+		// Token: 0x0603C00C RID: 245772 RVA: 0x0110D58C File Offset: 0x0110B78C
 		protected override void OnHit(FHitResult hitResult)
 		{
 			base.OnHit(hitResult);
@@ -421,7 +421,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E40 RID: 286272 RVA: 0x01163500 File Offset: 0x01161700
+		// Token: 0x0603C00D RID: 245773 RVA: 0x0110D634 File Offset: 0x0110B834
 		protected unsafe void SetDitherEnable(VehiclePassengerInfo info, bool enable)
 		{
 			if (this.EnableDither == enable)
@@ -533,7 +533,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06045E41 RID: 286273 RVA: 0x0116377C File Offset: 0x0116197C
+		// Token: 0x0603C00E RID: 245774 RVA: 0x0110D8B0 File Offset: 0x0110BAB0
 		protected void SetDitherCollisionEnable(bool enable)
 		{
 			VehicleActorComponent actorComp = this.ActorComp;
@@ -556,7 +556,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			capsuleForDither2.SetGenerateOverlapEvents(enable);
 		}
 
-		// Token: 0x06045E42 RID: 286274 RVA: 0x011637D0 File Offset: 0x011619D0
+		// Token: 0x0603C00F RID: 245775 RVA: 0x0110D904 File Offset: 0x0110BB04
 		protected void InitMotorcycleDither()
 		{
 			VehicleActorComponent actorComp = this.ActorComp;
@@ -593,7 +593,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.DitherRemoveDistSquared = Math.Max(this.DitherRemoveDistSquared, num3 * num3);
 		}
 
-		// Token: 0x06045E43 RID: 286275 RVA: 0x01163950 File Offset: 0x01161B50
+		// Token: 0x0603C010 RID: 245776 RVA: 0x0110DA84 File Offset: 0x0110BC84
 		[NullableContext(2)]
 		protected void OnComponentBeginOverlap(UPrimitiveComponent overlappedComponent, AActor otherActor, UPrimitiveComponent otherComp, int otherBodyIndex, bool bFromSweep, [Nullable(1)] FHitResult sweepResult)
 		{
@@ -611,7 +611,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.PendingDitherActorSet.Add(tsBaseCharacter);
 		}
 
-		// Token: 0x06045E44 RID: 286276 RVA: 0x011639AC File Offset: 0x01161BAC
+		// Token: 0x0603C011 RID: 245777 RVA: 0x0110DAE0 File Offset: 0x0110BCE0
 		private void InitSmallItemTraceElement()
 		{
 			if (this.SmallItemTraceElement != null)
@@ -628,7 +628,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.SmallItemTraceElement.HalfHeight = this.DitherCapsuleHalfHeight;
 		}
 
-		// Token: 0x06045E45 RID: 286277 RVA: 0x01163A48 File Offset: 0x01161C48
+		// Token: 0x0603C012 RID: 245778 RVA: 0x0110DB7C File Offset: 0x0110BD7C
 		private void HandleSmallItemTrace()
 		{
 			if (this.OverlapSmallObjectEffectBuff <= 0L || !this.EnableDither)
@@ -676,7 +676,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.ApplySmallItemComponents();
 		}
 
-		// Token: 0x06045E46 RID: 286278 RVA: 0x01163C08 File Offset: 0x01161E08
+		// Token: 0x0603C013 RID: 245779 RVA: 0x0110DD3C File Offset: 0x0110BF3C
 		private void ApplySmallItemComponents()
 		{
 			foreach (UStaticMeshComponent ustaticMeshComponent in this.PendingSmallItemComponents)
@@ -698,7 +698,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.PendingSmallItemComponents = detectedSmallItemComponents;
 		}
 
-		// Token: 0x06045E47 RID: 286279 RVA: 0x01163CF4 File Offset: 0x01161EF4
+		// Token: 0x0603C014 RID: 245780 RVA: 0x0110DE28 File Offset: 0x0110C028
 		protected void HandlePendingDitherActor()
 		{
 			if (this.PendingDitherActorSet.Count <= 0)
@@ -760,7 +760,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E48 RID: 286280 RVA: 0x01163EC0 File Offset: 0x011620C0
+		// Token: 0x0603C015 RID: 245781 RVA: 0x0110DFF4 File Offset: 0x0110C1F4
 		protected double CalcDitherValue(BaseCharacterComponent otherActorComp)
 		{
 			double val = this.GetMinDistFromPointToCapsule(otherActorComp.ActorLocationProxy) - (double)this.DitherCapsuleRadius;
@@ -772,7 +772,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return num;
 		}
 
-		// Token: 0x06045E49 RID: 286281 RVA: 0x01163F44 File Offset: 0x01162144
+		// Token: 0x0603C016 RID: 245782 RVA: 0x0110E078 File Offset: 0x0110C278
 		protected void ResetAllPendingDitherActor()
 		{
 			foreach (TsBaseCharacter tsBaseCharacter in this.PendingDitherActorSet)
@@ -790,7 +790,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.PendingDitherActorSet.Clear();
 		}
 
-		// Token: 0x06045E4A RID: 286282 RVA: 0x01163FD4 File Offset: 0x011621D4
+		// Token: 0x0603C017 RID: 245783 RVA: 0x0110E108 File Offset: 0x0110C308
 		protected void CalculateCapsuleTransform()
 		{
 			Transform tmpTrans = this.TmpTrans1;
@@ -807,7 +807,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			GravityUtils.Instance.ConvertToPlanarVectorForActor(this.ActorComp, this.CapsulePointB);
 		}
 
-		// Token: 0x06045E4B RID: 286283 RVA: 0x011640BC File Offset: 0x011622BC
+		// Token: 0x0603C018 RID: 245784 RVA: 0x0110E1F0 File Offset: 0x0110C3F0
 		protected double GetMinDistFromPointToCapsule(global::Vector otherLocation)
 		{
 			this.TmpVector1.DeepCopy(otherLocation);
@@ -832,7 +832,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return global::Vector.Dist(this.TmpVector1, this.CapsulePointA);
 		}
 
-		// Token: 0x06045E4C RID: 286284 RVA: 0x011641DC File Offset: 0x011623DC
+		// Token: 0x0603C019 RID: 245785 RVA: 0x0110E310 File Offset: 0x0110C510
 		protected void TryDebugDraw()
 		{
 			if (!MotorcyclePerformComponent.DitherDebugMode)
@@ -849,7 +849,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			UKismetSystemLibrary.D_DrawDebugCapsule((actorComp2 != null) ? actorComp2.Actor : null, MathUtils.Instance.CommonTempVector.ToUeVector(false), (float)((double)this.DitherCapsuleHalfHeight * num), (float)((double)this.DitherCapsuleRadius * num2), this.TmpTrans2.GetRotation().Rotator(null).ToUeRotator(), new FLinearColor?(new FLinearColor(0f, 1f, 0f, 1f)), 0f, 5f);
 		}
 
-		// Token: 0x06045E4D RID: 286285 RVA: 0x01164340 File Offset: 0x01162540
+		// Token: 0x0603C01A RID: 245786 RVA: 0x0110E474 File Offset: 0x0110C674
 		protected override void OnAddTrialAttributeModifier(VehiclePassengerInfo info)
 		{
 			TrialMotor? trialMotorConfig = MotorConfig.Instance.GetTrialMotorConfig(this.TrialAttributeId.Value);
@@ -909,7 +909,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			FormationAttributeController.Instance.AddSpeedModifier(this.ModifierKey, EFormationAttributeId.MotorcycleStrength, EModifierType.Override, (float)motorLevelConfig.Value.NitrogenRecoverRate, 1);
 		}
 
-		// Token: 0x06045E4E RID: 286286 RVA: 0x01164508 File Offset: 0x01162708
+		// Token: 0x0603C01B RID: 245787 RVA: 0x0110E63C File Offset: 0x0110C83C
 		protected override void OnRemoveTrialAttributeModifier(VehiclePassengerInfo info)
 		{
 			TrialMotor? trialMotorConfig = MotorConfig.Instance.GetTrialMotorConfig(this.TrialAttributeId.Value);
@@ -944,7 +944,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			FormationAttributeController.Instance.RemoveSpeedModifier(this.ModifierKey, EFormationAttributeId.MotorcycleStrength);
 		}
 
-		// Token: 0x06045E4F RID: 286287 RVA: 0x0116461E File Offset: 0x0116281E
+		// Token: 0x0603C01C RID: 245788 RVA: 0x0110E752 File Offset: 0x0110C952
 		[NullableContext(2)]
 		public override void FixBornLocation(global::Vector target = null, string context = null)
 		{
@@ -957,7 +957,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			actorComp.SetActorLocation(target.ToUeVector(false), context, false);
 		}
 
-		// Token: 0x06045E50 RID: 286288 RVA: 0x01164648 File Offset: 0x01162848
+		// Token: 0x0603C01D RID: 245789 RVA: 0x0110E77C File Offset: 0x0110C97C
 		public override bool TryEnter(Entity entity, int seat)
 		{
 			bool flag = base.TryEnter(entity, seat);
@@ -974,7 +974,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return flag;
 		}
 
-		// Token: 0x06045E51 RID: 286289 RVA: 0x011646A0 File Offset: 0x011628A0
+		// Token: 0x0603C01E RID: 245790 RVA: 0x0110E7D4 File Offset: 0x0110C9D4
 		public override int TryEnterAtOnce(Entity entity, int seat, string reason = "", bool notSync = false)
 		{
 			int num = base.TryEnterAtOnce(entity, seat, reason, notSync);
@@ -991,7 +991,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return num;
 		}
 
-		// Token: 0x06045E52 RID: 286290 RVA: 0x011646FC File Offset: 0x011628FC
+		// Token: 0x0603C01F RID: 245791 RVA: 0x0110E830 File Offset: 0x0110CA30
 		protected void SendGetOnLogEvent(Entity entity)
 		{
 			BaseActorComponent component = entity.GetComponent<BaseActorComponent>();
@@ -1006,19 +1006,19 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E53 RID: 286291 RVA: 0x01164761 File Offset: 0x01162961
+		// Token: 0x0603C020 RID: 245792 RVA: 0x0110E895 File Offset: 0x0110CA95
 		public static void CreateStaticDefaultValue()
 		{
 			MotorcyclePerformComponent.DitherDebugMode = false;
 		}
 
-		// Token: 0x06045E54 RID: 286292 RVA: 0x01164769 File Offset: 0x01162969
+		// Token: 0x0603C021 RID: 245793 RVA: 0x0110E89D File Offset: 0x0110CA9D
 		public static void ResetStaticDefaultValue()
 		{
 			MotorcyclePerformComponent.DitherDebugMode = false;
 		}
 
-		// Token: 0x06045E55 RID: 286293 RVA: 0x01164774 File Offset: 0x01162974
+		// Token: 0x0603C022 RID: 245794 RVA: 0x0110E8A8 File Offset: 0x0110CAA8
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -1026,222 +1026,220 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				return false;
 			}
 			MotorcyclePerformComponent motorcyclePerformComponent = (MotorcyclePerformComponent)componentTemplate;
-			if (base.CanResetComponentProperty("BuffComp"))
+			if (motorcyclePerformComponent.BuffComp == null)
 			{
-				if (motorcyclePerformComponent.BuffComp == null)
-				{
-					this.BuffComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleBuffComponent>(this.BuffComp), "BuffComp"))
-				{
-					return false;
-				}
+				this.BuffComp = null;
 			}
-			if (base.CanResetComponentProperty("SetNoDriverFrame"))
-			{
-				this.SetNoDriverFrame = motorcyclePerformComponent.SetNoDriverFrame;
-			}
-			if (base.CanResetComponentProperty("DrivingBuffs") && motorcyclePerformComponent.DrivingBuffs != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<long>>(this.DrivingBuffs), "DrivingBuffs"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComp), "BuffComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("DrivingBuffActivatingInternal"))
-			{
-				this.DrivingBuffActivatingInternal = motorcyclePerformComponent.DrivingBuffActivatingInternal;
-			}
-			if (base.CanResetComponentProperty("HitBuffMap") && motorcyclePerformComponent.HitBuffMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EMotorPart, long>>(this.HitBuffMap), "HitBuffMap"))
+			this.SetNoDriverFrame = motorcyclePerformComponent.SetNoDriverFrame;
+			if (motorcyclePerformComponent.DrivingBuffs != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DrivingBuffs), "DrivingBuffs"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("DayTimeBuffs") && motorcyclePerformComponent.DayTimeBuffs != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ValueTuple<float, long>>>(this.DayTimeBuffs), "DayTimeBuffs"))
+			this.DrivingBuffActivatingInternal = motorcyclePerformComponent.DrivingBuffActivatingInternal;
+			if (motorcyclePerformComponent.HitBuffMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitBuffMap), "HitBuffMap"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("OverlapSmallObjectEffectBuff"))
+			if (motorcyclePerformComponent.DayTimeBuffs != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DayTimeBuffs), "DayTimeBuffs"))
 			{
-				this.OverlapSmallObjectEffectBuff = motorcyclePerformComponent.OverlapSmallObjectEffectBuff;
+				return false;
 			}
-			if (base.CanResetComponentProperty("DetectedSmallItemComponents"))
+			this.OverlapSmallObjectEffectBuff = motorcyclePerformComponent.OverlapSmallObjectEffectBuff;
+			if (motorcyclePerformComponent.DetectedSmallItemComponents == null)
 			{
-				if (motorcyclePerformComponent.DetectedSmallItemComponents == null)
-				{
-					this.DetectedSmallItemComponents = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UStaticMeshComponent>(this.DetectedSmallItemComponents), "DetectedSmallItemComponents"))
-				{
-					return false;
-				}
+				this.DetectedSmallItemComponents = null;
 			}
-			if (base.CanResetComponentProperty("PendingSmallItemComponents"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UStaticMeshComponent>(this.DetectedSmallItemComponents), "DetectedSmallItemComponents"))
 			{
-				if (motorcyclePerformComponent.PendingSmallItemComponents == null)
-				{
-					this.PendingSmallItemComponents = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UStaticMeshComponent>(this.PendingSmallItemComponents), "PendingSmallItemComponents"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SmallItemTraceElement"))
+			if (motorcyclePerformComponent.PendingSmallItemComponents == null)
 			{
-				if (motorcyclePerformComponent.SmallItemTraceElement == null)
-				{
-					this.SmallItemTraceElement = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceCapsuleElement>(this.SmallItemTraceElement), "SmallItemTraceElement"))
-				{
-					return false;
-				}
+				this.PendingSmallItemComponents = null;
 			}
-			if (base.CanResetComponentProperty("NextSmallItemTraceTime"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UStaticMeshComponent>(this.PendingSmallItemComponents), "PendingSmallItemComponents"))
 			{
-				this.NextSmallItemTraceTime = motorcyclePerformComponent.NextSmallItemTraceTime;
+				return false;
 			}
-			if (base.CanResetComponentProperty("HourInternal"))
+			if (motorcyclePerformComponent.SmallItemTraceElement == null)
 			{
-				this.HourInternal = motorcyclePerformComponent.HourInternal;
+				this.SmallItemTraceElement = null;
 			}
-			if (base.CanResetComponentProperty("CurrentHourEffectInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SmallItemTraceElement), "SmallItemTraceElement"))
 			{
-				this.CurrentHourEffectInternal = motorcyclePerformComponent.CurrentHourEffectInternal;
+				return false;
 			}
-			if (base.CanResetComponentProperty("LaunchSpeedFadeTimeInternal"))
+			this.NextSmallItemTraceTime = motorcyclePerformComponent.NextSmallItemTraceTime;
+			this.HourInternal = motorcyclePerformComponent.HourInternal;
+			this.CurrentHourEffectInternal = motorcyclePerformComponent.CurrentHourEffectInternal;
+			this.LaunchSpeedFadeTimeInternal = motorcyclePerformComponent.LaunchSpeedFadeTimeInternal;
+			this.LaunchVehicleSpeedAddRatioInternal = motorcyclePerformComponent.LaunchVehicleSpeedAddRatioInternal;
+			if (motorcyclePerformComponent.LaunchSpeedFadeCurveInternal == null)
 			{
-				this.LaunchSpeedFadeTimeInternal = motorcyclePerformComponent.LaunchSpeedFadeTimeInternal;
+				this.LaunchSpeedFadeCurveInternal = null;
 			}
-			if (base.CanResetComponentProperty("LaunchVehicleSpeedAddRatioInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LaunchSpeedFadeCurveInternal), "LaunchSpeedFadeCurveInternal"))
 			{
-				this.LaunchVehicleSpeedAddRatioInternal = motorcyclePerformComponent.LaunchVehicleSpeedAddRatioInternal;
+				return false;
 			}
-			if (base.CanResetComponentProperty("LaunchSpeedFadeCurveInternal"))
+			this.NextResetSeatTransTime = motorcyclePerformComponent.NextResetSeatTransTime;
+			this.DitherNpcRadius = motorcyclePerformComponent.DitherNpcRadius;
+			if (motorcyclePerformComponent.DitherDepthCurve == null)
 			{
-				if (motorcyclePerformComponent.LaunchSpeedFadeCurveInternal == null)
-				{
-					this.LaunchSpeedFadeCurveInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCurveFloat>(this.LaunchSpeedFadeCurveInternal), "LaunchSpeedFadeCurveInternal"))
-				{
-					return false;
-				}
+				this.DitherDepthCurve = null;
 			}
-			if (base.CanResetComponentProperty("NextResetSeatTransTime"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DitherDepthCurve), "DitherDepthCurve"))
 			{
-				this.NextResetSeatTransTime = motorcyclePerformComponent.NextResetSeatTransTime;
+				return false;
 			}
-			if (base.CanResetComponentProperty("DitherNpcRadius"))
+			this.DitherCapsuleHalfHeight = motorcyclePerformComponent.DitherCapsuleHalfHeight;
+			this.DitherCapsuleRadius = motorcyclePerformComponent.DitherCapsuleRadius;
+			if (motorcyclePerformComponent.DitherCapsuleRelativeTrans == null)
 			{
-				this.DitherNpcRadius = motorcyclePerformComponent.DitherNpcRadius;
+				this.DitherCapsuleRelativeTrans = null;
 			}
-			if (base.CanResetComponentProperty("DitherDepthCurve"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DitherCapsuleRelativeTrans), "DitherCapsuleRelativeTrans"))
 			{
-				if (motorcyclePerformComponent.DitherDepthCurve == null)
-				{
-					this.DitherDepthCurve = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCurveFloat>(this.DitherDepthCurve), "DitherDepthCurve"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("DitherCapsuleHalfHeight"))
+			if (motorcyclePerformComponent.CapsulePointA == null)
 			{
-				this.DitherCapsuleHalfHeight = motorcyclePerformComponent.DitherCapsuleHalfHeight;
+				this.CapsulePointA = null;
 			}
-			if (base.CanResetComponentProperty("DitherCapsuleRadius"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CapsulePointA), "CapsulePointA"))
 			{
-				this.DitherCapsuleRadius = motorcyclePerformComponent.DitherCapsuleRadius;
+				return false;
 			}
-			if (base.CanResetComponentProperty("DitherCapsuleRelativeTrans"))
+			if (motorcyclePerformComponent.CapsulePointB == null)
 			{
-				if (motorcyclePerformComponent.DitherCapsuleRelativeTrans == null)
-				{
-					this.DitherCapsuleRelativeTrans = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.DitherCapsuleRelativeTrans), "DitherCapsuleRelativeTrans"))
-				{
-					return false;
-				}
+				this.CapsulePointB = null;
 			}
-			if (base.CanResetComponentProperty("CapsulePointA"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CapsulePointB), "CapsulePointB"))
 			{
-				if (motorcyclePerformComponent.CapsulePointA == null)
-				{
-					this.CapsulePointA = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CapsulePointA), "CapsulePointA"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CapsulePointB"))
+			this.DitherRemoveDistSquared = motorcyclePerformComponent.DitherRemoveDistSquared;
+			if (motorcyclePerformComponent.PendingDitherActorSet == null)
 			{
-				if (motorcyclePerformComponent.CapsulePointB == null)
-				{
-					this.CapsulePointB = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CapsulePointB), "CapsulePointB"))
-				{
-					return false;
-				}
+				this.PendingDitherActorSet = null;
 			}
-			if (base.CanResetComponentProperty("DitherRemoveDistSquared"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsBaseCharacter>(this.PendingDitherActorSet), "PendingDitherActorSet"))
 			{
-				this.DitherRemoveDistSquared = motorcyclePerformComponent.DitherRemoveDistSquared;
+				return false;
 			}
-			if (base.CanResetComponentProperty("PendingDitherActorSet"))
-			{
-				if (motorcyclePerformComponent.PendingDitherActorSet == null)
-				{
-					this.PendingDitherActorSet = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsBaseCharacter>(this.PendingDitherActorSet), "PendingDitherActorSet"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("EnableDither"))
-			{
-				this.EnableDither = motorcyclePerformComponent.EnableDither;
-			}
+			this.EnableDither = motorcyclePerformComponent.EnableDither;
 			return true;
 		}
 
-		// Token: 0x0402489B RID: 149659
+		// Token: 0x17007122 RID: 28962
+		// (get) Token: 0x0603C023 RID: 245795 RVA: 0x0110EB84 File Offset: 0x0110CD84
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007123 RID: 28963
+		// (get) Token: 0x0603C024 RID: 245796 RVA: 0x0110EB87 File Offset: 0x0110CD87
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007124 RID: 28964
+		// (get) Token: 0x0603C025 RID: 245797 RVA: 0x0110EB8A File Offset: 0x0110CD8A
+		public override bool NeedPostActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007125 RID: 28965
+		// (get) Token: 0x0603C026 RID: 245798 RVA: 0x0110EB8D File Offset: 0x0110CD8D
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007126 RID: 28966
+		// (get) Token: 0x0603C027 RID: 245799 RVA: 0x0110EB90 File Offset: 0x0110CD90
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007127 RID: 28967
+		// (get) Token: 0x0603C028 RID: 245800 RVA: 0x0110EB93 File Offset: 0x0110CD93
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007128 RID: 28968
+		// (get) Token: 0x0603C029 RID: 245801 RVA: 0x0110EB96 File Offset: 0x0110CD96
+		public override bool NeedAfterTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FB51 RID: 129873
 		private const float MIN_NPC_DITHER_RADIUS = 20f;
 
-		// Token: 0x0402489C RID: 149660
+		// Token: 0x0401FB52 RID: 129874
 		private const float MAX_NPC_DITHER_RADIUS = 200f;
 
-		// Token: 0x0402489D RID: 149661
+		// Token: 0x0401FB53 RID: 129875
 		private const float REMOVE_DITHER_ENTITY_DIST_SQUARED = 250000f;
 
-		// Token: 0x0402489E RID: 149662
+		// Token: 0x0401FB54 RID: 129876
 		private static readonly FName SmallItemTag = new FName("SMALL_ITEM");
 
-		// Token: 0x0402489F RID: 149663
+		// Token: 0x0401FB55 RID: 129877
 		private const double SMALL_ITEM_TRACE_INTERVAL = 500.0;
 
-		// Token: 0x040248A0 RID: 149664
+		// Token: 0x0401FB56 RID: 129878
 		private const float SMALL_ITEM_TRACE_SPEED_THRESHOLD = 1000f;
 
-		// Token: 0x040248A1 RID: 149665
+		// Token: 0x0401FB57 RID: 129879
 		[Nullable(2)]
 		private VehicleBuffComponent BuffComp;
 
-		// Token: 0x040248A2 RID: 149666
+		// Token: 0x0401FB58 RID: 129880
 		protected int SetNoDriverFrame;
 
-		// Token: 0x040248A3 RID: 149667
+		// Token: 0x0401FB59 RID: 129881
 		private readonly List<long> DrivingBuffs = new List<long>();
 
-		// Token: 0x040248A4 RID: 149668
+		// Token: 0x0401FB5A RID: 129882
 		private bool DrivingBuffActivatingInternal;
 
-		// Token: 0x040248A5 RID: 149669
+		// Token: 0x0401FB5B RID: 129883
 		private readonly Dictionary<EMotorPart, long> HitBuffMap = new Dictionary<EMotorPart, long>();
 
-		// Token: 0x040248A6 RID: 149670
+		// Token: 0x0401FB5C RID: 129884
 		[Nullable(new byte[]
 		{
 			1,
@@ -1249,73 +1247,73 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 		})]
 		private readonly List<ValueTuple<float, long>> DayTimeBuffs = new List<ValueTuple<float, long>>();
 
-		// Token: 0x040248A7 RID: 149671
+		// Token: 0x0401FB5D RID: 129885
 		private long OverlapSmallObjectEffectBuff;
 
-		// Token: 0x040248A8 RID: 149672
+		// Token: 0x0401FB5E RID: 129886
 		private HashSet<UStaticMeshComponent> DetectedSmallItemComponents = new HashSet<UStaticMeshComponent>();
 
-		// Token: 0x040248A9 RID: 149673
+		// Token: 0x0401FB5F RID: 129887
 		private HashSet<UStaticMeshComponent> PendingSmallItemComponents = new HashSet<UStaticMeshComponent>();
 
-		// Token: 0x040248AA RID: 149674
+		// Token: 0x0401FB60 RID: 129888
 		[Nullable(2)]
 		private UTraceCapsuleElement SmallItemTraceElement;
 
-		// Token: 0x040248AB RID: 149675
+		// Token: 0x0401FB61 RID: 129889
 		private double NextSmallItemTraceTime;
 
-		// Token: 0x040248AC RID: 149676
+		// Token: 0x0401FB62 RID: 129890
 		private int HourInternal = -1;
 
-		// Token: 0x040248AD RID: 149677
+		// Token: 0x0401FB63 RID: 129891
 		private long CurrentHourEffectInternal;
 
-		// Token: 0x040248AE RID: 149678
+		// Token: 0x0401FB64 RID: 129892
 		private float LaunchSpeedFadeTimeInternal;
 
-		// Token: 0x040248AF RID: 149679
+		// Token: 0x0401FB65 RID: 129893
 		private float LaunchVehicleSpeedAddRatioInternal = 1f;
 
-		// Token: 0x040248B0 RID: 149680
+		// Token: 0x0401FB66 RID: 129894
 		[Nullable(2)]
 		private UCurveFloat LaunchSpeedFadeCurveInternal;
 
-		// Token: 0x040248B1 RID: 149681
+		// Token: 0x0401FB67 RID: 129895
 		private double NextResetSeatTransTime;
 
-		// Token: 0x040248B2 RID: 149682
+		// Token: 0x0401FB68 RID: 129896
 		protected float DitherNpcRadius = 20f;
 
-		// Token: 0x040248B3 RID: 149683
+		// Token: 0x0401FB69 RID: 129897
 		[Nullable(2)]
 		protected UCurveFloat DitherDepthCurve;
 
-		// Token: 0x040248B4 RID: 149684
+		// Token: 0x0401FB6A RID: 129898
 		protected float DitherCapsuleHalfHeight;
 
-		// Token: 0x040248B5 RID: 149685
+		// Token: 0x0401FB6B RID: 129899
 		protected float DitherCapsuleRadius;
 
-		// Token: 0x040248B6 RID: 149686
+		// Token: 0x0401FB6C RID: 129900
 		protected Transform DitherCapsuleRelativeTrans = Transform.Create();
 
-		// Token: 0x040248B7 RID: 149687
+		// Token: 0x0401FB6D RID: 129901
 		protected global::Vector CapsulePointA = global::Vector.Create();
 
-		// Token: 0x040248B8 RID: 149688
+		// Token: 0x0401FB6E RID: 129902
 		protected global::Vector CapsulePointB = global::Vector.Create();
 
-		// Token: 0x040248B9 RID: 149689
+		// Token: 0x0401FB6F RID: 129903
 		protected float DitherRemoveDistSquared = 250000f;
 
-		// Token: 0x040248BA RID: 149690
+		// Token: 0x0401FB70 RID: 129904
 		protected HashSet<TsBaseCharacter> PendingDitherActorSet = new HashSet<TsBaseCharacter>();
 
-		// Token: 0x040248BB RID: 149691
+		// Token: 0x0401FB71 RID: 129905
 		public bool EnableDither;
 
-		// Token: 0x040248BC RID: 149692
+		// Token: 0x0401FB72 RID: 129906
 		public static bool DitherDebugMode;
 	}
 }

@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E37 RID: 24119
+	// Token: 0x02004E1C RID: 19996
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class VisibleAnimMachine
 	{
-		// Token: 0x0603D53C RID: 251196 RVA: 0x00EC8B91 File Offset: 0x00EC6D91
+		// Token: 0x060324CC RID: 206028 RVA: 0x00E1A0FD File Offset: 0x00E182FD
 		public void InitCallback(Action<bool> visibleCallback, Action<bool> playAnimCallback, Action<bool> stopAnimCallback)
 		{
 			this.VisibleCallback = visibleCallback;
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StopAnimCallback = stopAnimCallback;
 		}
 
-		// Token: 0x0603D53D RID: 251197 RVA: 0x00EC8BA8 File Offset: 0x00EC6DA8
+		// Token: 0x060324CD RID: 206029 RVA: 0x00E1A114 File Offset: 0x00E18314
 		public void InitVisible(bool value)
 		{
 			this.Visible = value;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.State = 0;
 		}
 
-		// Token: 0x0603D53E RID: 251198 RVA: 0x00EC8BC4 File Offset: 0x00EC6DC4
+		// Token: 0x060324CE RID: 206030 RVA: 0x00E1A130 File Offset: 0x00E18330
 		public void SetVisible(bool value, float animTime)
 		{
 			if (this.Visible == value)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			visibleCallback2(value);
 		}
 
-		// Token: 0x0603D53F RID: 251199 RVA: 0x00EC8C88 File Offset: 0x00EC6E88
+		// Token: 0x060324CF RID: 206031 RVA: 0x00E1A1F4 File Offset: 0x00E183F4
 		public void ForcePlayShowAnim(int animTime)
 		{
 			if (this.State == 2)
@@ -106,13 +106,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AnimTimer = TimerSystem.Instance.Delay(new TTimerAction(this.OnAnimFinish), (float)animTime, null, null, true, 1f);
 		}
 
-		// Token: 0x0603D540 RID: 251200 RVA: 0x00EC8CFF File Offset: 0x00EC6EFF
+		// Token: 0x060324D0 RID: 206032 RVA: 0x00E1A26B File Offset: 0x00E1846B
 		public void Reset()
 		{
 			this.DestroyTimer();
 		}
 
-		// Token: 0x0603D541 RID: 251201 RVA: 0x00EC8D07 File Offset: 0x00EC6F07
+		// Token: 0x060324D1 RID: 206033 RVA: 0x00E1A273 File Offset: 0x00E18473
 		public void Deactivate()
 		{
 			this.DestroyTimer();
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			stopAnimCallback2(false);
 		}
 
-		// Token: 0x0603D542 RID: 251202 RVA: 0x00EC8D44 File Offset: 0x00EC6F44
+		// Token: 0x060324D2 RID: 206034 RVA: 0x00E1A2B0 File Offset: 0x00E184B0
 		private void OnAnimFinish(float _)
 		{
 			this.AnimTimer = null;
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			visibleCallback(false);
 		}
 
-		// Token: 0x0603D543 RID: 251203 RVA: 0x00EC8D7F File Offset: 0x00EC6F7F
+		// Token: 0x060324D3 RID: 206035 RVA: 0x00E1A2EB File Offset: 0x00E184EB
 		private void DestroyTimer()
 		{
 			if (this.AnimTimer != null)
@@ -168,35 +168,35 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FFD1 RID: 131025
+		// Token: 0x0401AA98 RID: 109208
 		public int State;
 
-		// Token: 0x0401FFD2 RID: 131026
+		// Token: 0x0401AA99 RID: 109209
 		public bool Visible;
 
-		// Token: 0x0401FFD3 RID: 131027
+		// Token: 0x0401AA9A RID: 109210
 		public Action<bool> VisibleCallback;
 
-		// Token: 0x0401FFD4 RID: 131028
+		// Token: 0x0401AA9B RID: 109211
 		public Action<bool> PlayAnimCallback;
 
-		// Token: 0x0401FFD5 RID: 131029
+		// Token: 0x0401AA9C RID: 109212
 		public Action<bool> StopAnimCallback;
 
-		// Token: 0x0401FFD6 RID: 131030
+		// Token: 0x0401AA9D RID: 109213
 		private TimerHandle AnimTimer;
 
-		// Token: 0x0200C1B4 RID: 49588
+		// Token: 0x0200ABC3 RID: 43971
 		[NullableContext(0)]
 		private enum EVisibleAnimState
 		{
-			// Token: 0x0403A88D RID: 239757
+			// Token: 0x0403527F RID: 217727
 			Hide,
-			// Token: 0x0403A88E RID: 239758
+			// Token: 0x04035280 RID: 217728
 			Show,
-			// Token: 0x0403A88F RID: 239759
+			// Token: 0x04035281 RID: 217729
 			ShowAnim,
-			// Token: 0x0403A890 RID: 239760
+			// Token: 0x04035282 RID: 217730
 			HideAnim
 		}
 	}

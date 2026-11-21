@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057CC RID: 22476
+	// Token: 0x02005DD3 RID: 24019
 	public struct IQuickHackLinkEffect : IFlatbufferObject
 	{
-		// Token: 0x1700A7C9 RID: 42953
-		// (get) Token: 0x06025BB0 RID: 154544 RVA: 0x005340EA File Offset: 0x005322EA
+		// Token: 0x1700B0ED RID: 45293
+		// (get) Token: 0x060280D0 RID: 164048 RVA: 0x0057A276 File Offset: 0x00578476
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025BB1 RID: 154545 RVA: 0x005340F7 File Offset: 0x005322F7
+		// Token: 0x060280D1 RID: 164049 RVA: 0x0057A283 File Offset: 0x00578483
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025BB2 RID: 154546 RVA: 0x00534100 File Offset: 0x00532300
+		// Token: 0x060280D2 RID: 164050 RVA: 0x0057A28C File Offset: 0x0057848C
 		public static IQuickHackLinkEffect GetRootAsIQuickHackLinkEffect(ByteBuffer _bb)
 		{
 			return IQuickHackLinkEffect.GetRootAsIQuickHackLinkEffect(_bb, default(IQuickHackLinkEffect));
 		}
 
-		// Token: 0x06025BB3 RID: 154547 RVA: 0x0053411C File Offset: 0x0053231C
+		// Token: 0x060280D3 RID: 164051 RVA: 0x0057A2A8 File Offset: 0x005784A8
 		public static IQuickHackLinkEffect GetRootAsIQuickHackLinkEffect(ByteBuffer _bb, IQuickHackLinkEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025BB4 RID: 154548 RVA: 0x00534139 File Offset: 0x00532339
+		// Token: 0x060280D4 RID: 164052 RVA: 0x0057A2C5 File Offset: 0x005784C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025BB5 RID: 154549 RVA: 0x00534148 File Offset: 0x00532348
+		// Token: 0x060280D5 RID: 164053 RVA: 0x0057A2D4 File Offset: 0x005784D4
 		public IQuickHackLinkEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A7CA RID: 42954
-		// (get) Token: 0x06025BB6 RID: 154550 RVA: 0x00534158 File Offset: 0x00532358
+		// Token: 0x1700B0EE RID: 45294
+		// (get) Token: 0x060280D6 RID: 164054 RVA: 0x0057A2E4 File Offset: 0x005784E4
 		public string RequiredState
 		{
 			get
@@ -63,20 +63,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025BB7 RID: 154551 RVA: 0x0053418F File Offset: 0x0053238F
+		// Token: 0x060280D7 RID: 164055 RVA: 0x0057A31B File Offset: 0x0057851B
 		public Span<byte> GetRequiredStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06025BB8 RID: 154552 RVA: 0x0053419E File Offset: 0x0053239E
+		// Token: 0x060280D8 RID: 164056 RVA: 0x0057A32A File Offset: 0x0057852A
 		public byte[] GetRequiredStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700A7CB RID: 42955
-		// (get) Token: 0x06025BB9 RID: 154553 RVA: 0x005341AC File Offset: 0x005323AC
+		// Token: 0x1700B0EF RID: 45295
+		// (get) Token: 0x060280D9 RID: 164057 RVA: 0x0057A338 File Offset: 0x00578538
 		public string EffectPath
 		{
 			get
@@ -90,20 +90,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025BBA RID: 154554 RVA: 0x005341E3 File Offset: 0x005323E3
+		// Token: 0x060280DA RID: 164058 RVA: 0x0057A36F File Offset: 0x0057856F
 		public Span<byte> GetEffectPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06025BBB RID: 154555 RVA: 0x005341F2 File Offset: 0x005323F2
+		// Token: 0x060280DB RID: 164059 RVA: 0x0057A37E File Offset: 0x0057857E
 		public byte[] GetEffectPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700A7CC RID: 42956
-		// (get) Token: 0x06025BBC RID: 154556 RVA: 0x00534200 File Offset: 0x00532400
+		// Token: 0x1700B0F0 RID: 45296
+		// (get) Token: 0x060280DC RID: 164060 RVA: 0x0057A38C File Offset: 0x0057858C
 		public IVectorInfo? StartPoint
 		{
 			get
@@ -117,8 +117,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A7CD RID: 42957
-		// (get) Token: 0x06025BBD RID: 154557 RVA: 0x00534260 File Offset: 0x00532460
+		// Token: 0x1700B0F1 RID: 45297
+		// (get) Token: 0x060280DD RID: 164061 RVA: 0x0057A3EC File Offset: 0x005785EC
 		public IVectorInfo? EndPoint
 		{
 			get
@@ -132,7 +132,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025BBE RID: 154558 RVA: 0x005342BE File Offset: 0x005324BE
+		// Token: 0x060280DE RID: 164062 RVA: 0x0057A44A File Offset: 0x0057864A
 		public static Offset<IQuickHackLinkEffect> CreateIQuickHackLinkEffect(FlatBufferBuilder builder, StringOffset RequiredStateOffset = default(StringOffset), StringOffset EffectPathOffset = default(StringOffset), Offset<IVectorInfo> StartPointOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> EndPointOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(4);
@@ -143,43 +143,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IQuickHackLinkEffect.EndIQuickHackLinkEffect(builder);
 		}
 
-		// Token: 0x06025BBF RID: 154559 RVA: 0x005342EA File Offset: 0x005324EA
+		// Token: 0x060280DF RID: 164063 RVA: 0x0057A476 File Offset: 0x00578676
 		public static void StartIQuickHackLinkEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06025BC0 RID: 154560 RVA: 0x005342F3 File Offset: 0x005324F3
+		// Token: 0x060280E0 RID: 164064 RVA: 0x0057A47F File Offset: 0x0057867F
 		public static void AddRequiredState(FlatBufferBuilder builder, StringOffset requiredStateOffset)
 		{
 			builder.AddOffset(0, requiredStateOffset.Value, 0);
 		}
 
-		// Token: 0x06025BC1 RID: 154561 RVA: 0x00534303 File Offset: 0x00532503
+		// Token: 0x060280E1 RID: 164065 RVA: 0x0057A48F File Offset: 0x0057868F
 		public static void AddEffectPath(FlatBufferBuilder builder, StringOffset effectPathOffset)
 		{
 			builder.AddOffset(1, effectPathOffset.Value, 0);
 		}
 
-		// Token: 0x06025BC2 RID: 154562 RVA: 0x00534313 File Offset: 0x00532513
+		// Token: 0x060280E2 RID: 164066 RVA: 0x0057A49F File Offset: 0x0057869F
 		public static void AddStartPoint(FlatBufferBuilder builder, Offset<IVectorInfo> startPointOffset)
 		{
 			builder.AddOffset(2, startPointOffset.Value, 0);
 		}
 
-		// Token: 0x06025BC3 RID: 154563 RVA: 0x00534323 File Offset: 0x00532523
+		// Token: 0x060280E3 RID: 164067 RVA: 0x0057A4AF File Offset: 0x005786AF
 		public static void AddEndPoint(FlatBufferBuilder builder, Offset<IVectorInfo> endPointOffset)
 		{
 			builder.AddOffset(3, endPointOffset.Value, 0);
 		}
 
-		// Token: 0x06025BC4 RID: 154564 RVA: 0x00534333 File Offset: 0x00532533
+		// Token: 0x060280E4 RID: 164068 RVA: 0x0057A4BF File Offset: 0x005786BF
 		public static Offset<IQuickHackLinkEffect> EndIQuickHackLinkEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuickHackLinkEffect>(builder.EndTable());
 		}
 
-		// Token: 0x06025BC5 RID: 154565 RVA: 0x00534340 File Offset: 0x00532540
+		// Token: 0x060280E5 RID: 164069 RVA: 0x0057A4CC File Offset: 0x005786CC
 		public IQuickHackLinkEffectT UnPack()
 		{
 			IQuickHackLinkEffectT quickHackLinkEffectT = new IQuickHackLinkEffectT();
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return quickHackLinkEffectT;
 		}
 
-		// Token: 0x06025BC6 RID: 154566 RVA: 0x0053435C File Offset: 0x0053255C
+		// Token: 0x060280E6 RID: 164070 RVA: 0x0057A4E8 File Offset: 0x005786E8
 		public void UnPackTo(IQuickHackLinkEffectT _o)
 		{
 			_o.RequiredState = this.RequiredState;
@@ -196,7 +196,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.EndPoint = ((this.EndPoint != null) ? this.EndPoint.Value.UnPack() : null);
 		}
 
-		// Token: 0x06025BC7 RID: 154567 RVA: 0x005343E0 File Offset: 0x005325E0
+		// Token: 0x060280E7 RID: 164071 RVA: 0x0057A56C File Offset: 0x0057876C
 		public static Offset<IQuickHackLinkEffect> Pack(FlatBufferBuilder builder, IQuickHackLinkEffectT _o)
 		{
 			if (_o == null)
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IQuickHackLinkEffect.CreateIQuickHackLinkEffect(builder, requiredStateOffset, effectPathOffset, startPointOffset, endPointOffset);
 		}
 
-		// Token: 0x0400ECAF RID: 60591
+		// Token: 0x0400F99A RID: 63898
 		private Table __p;
 	}
 }

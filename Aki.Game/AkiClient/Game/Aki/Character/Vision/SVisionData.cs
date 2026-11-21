@@ -6,130 +6,130 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.Vision
 {
-	// Token: 0x0200402D RID: 16429
+	// Token: 0x02003288 RID: 12936
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/Vision/SVisionData.SVisionData")]
 	[UnrealStructLayout(152, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 145)]
 	public class SVisionData : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602A243 RID: 172611 RVA: 0x009D73DC File Offset: 0x009D55DC
+		// Token: 0x060205B4 RID: 132532 RVA: 0x00944427 File Offset: 0x00942627
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SVisionData._ScriptStructPtr != 0) ? SVisionData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/Vision/SVisionData.SVisionData", ref SVisionData._ScriptStructPtr);
 		}
 
-		// Token: 0x170066DE RID: 26334
-		// (get) Token: 0x0602A244 RID: 172612 RVA: 0x009D7400 File Offset: 0x009D5600
-		// (set) Token: 0x0602A245 RID: 172613 RVA: 0x009D7410 File Offset: 0x009D5610
+		// Token: 0x17003E98 RID: 16024
+		// (get) Token: 0x060205B5 RID: 132533 RVA: 0x0094444B File Offset: 0x0094264B
+		// (set) Token: 0x060205B6 RID: 132534 RVA: 0x0094445B File Offset: 0x0094265B
 		public unsafe int Id
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_Id);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_Id) = value;
 			}
 		}
 
-		// Token: 0x170066DF RID: 26335
-		// (get) Token: 0x0602A246 RID: 172614 RVA: 0x009D7421 File Offset: 0x009D5621
-		// (set) Token: 0x0602A247 RID: 172615 RVA: 0x009D7435 File Offset: 0x009D5635
+		// Token: 0x17003E99 RID: 16025
+		// (get) Token: 0x060205B7 RID: 132535 RVA: 0x0094446C File Offset: 0x0094266C
+		// (set) Token: 0x060205B8 RID: 132536 RVA: 0x00944480 File Offset: 0x00942680
 		public unsafe string 说明
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SVisionData.__PropertyOffset_1)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SVisionData.__PropertyOffset_说明)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SVisionData.__PropertyOffset_1)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SVisionData.__PropertyOffset_说明)), value);
 			}
 		}
 
-		// Token: 0x170066E0 RID: 26336
-		// (get) Token: 0x0602A248 RID: 172616 RVA: 0x009D744A File Offset: 0x009D564A
-		// (set) Token: 0x0602A249 RID: 172617 RVA: 0x009D745A File Offset: 0x009D565A
+		// Token: 0x17003E9A RID: 16026
+		// (get) Token: 0x060205B9 RID: 132537 RVA: 0x00944495 File Offset: 0x00942695
+		// (set) Token: 0x060205BA RID: 132538 RVA: 0x009444A5 File Offset: 0x009426A5
 		public unsafe int 实体配置表Id
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_实体配置表Id);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_实体配置表Id) = value;
 			}
 		}
 
-		// Token: 0x170066E1 RID: 26337
-		// (get) Token: 0x0602A24A RID: 172618 RVA: 0x009D746B File Offset: 0x009D566B
-		// (set) Token: 0x0602A24B RID: 172619 RVA: 0x009D747F File Offset: 0x009D567F
+		// Token: 0x17003E9B RID: 16027
+		// (get) Token: 0x060205BB RID: 132539 RVA: 0x009444B6 File Offset: 0x009426B6
+		// (set) Token: 0x060205BC RID: 132540 RVA: 0x009444CA File Offset: 0x009426CA
 		[Nullable(0)]
 		public unsafe TEnumAsByte<EVisionType> 类型
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_类型);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_类型) = value;
 			}
 		}
 
-		// Token: 0x170066E2 RID: 26338
-		// (get) Token: 0x0602A24C RID: 172620 RVA: 0x009D7494 File Offset: 0x009D5694
-		// (set) Token: 0x0602A24D RID: 172621 RVA: 0x009D74A4 File Offset: 0x009D56A4
+		// Token: 0x17003E9C RID: 16028
+		// (get) Token: 0x060205BD RID: 132541 RVA: 0x009444DF File Offset: 0x009426DF
+		// (set) Token: 0x060205BE RID: 132542 RVA: 0x009444EF File Offset: 0x009426EF
 		public unsafe int 技能ID
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_技能ID);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_技能ID) = value;
 			}
 		}
 
-		// Token: 0x170066E3 RID: 26339
-		// (get) Token: 0x0602A24E RID: 172622 RVA: 0x009D74B5 File Offset: 0x009D56B5
-		// (set) Token: 0x0602A24F RID: 172623 RVA: 0x009D74C5 File Offset: 0x009D56C5
+		// Token: 0x17003E9D RID: 16029
+		// (get) Token: 0x060205BF RID: 132543 RVA: 0x00944500 File Offset: 0x00942700
+		// (set) Token: 0x060205C0 RID: 132544 RVA: 0x00944510 File Offset: 0x00942710
 		public unsafe bool 空中能否释放
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_5) != 0;
+				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_空中能否释放) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_5) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_空中能否释放) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170066E4 RID: 26340
-		// (get) Token: 0x0602A250 RID: 172624 RVA: 0x009D74D6 File Offset: 0x009D56D6
-		// (set) Token: 0x0602A251 RID: 172625 RVA: 0x009D74E6 File Offset: 0x009D56E6
+		// Token: 0x17003E9E RID: 16030
+		// (get) Token: 0x060205C1 RID: 132545 RVA: 0x00944521 File Offset: 0x00942721
+		// (set) Token: 0x060205C2 RID: 132546 RVA: 0x00944531 File Offset: 0x00942731
 		public unsafe bool 出生隐藏
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_6) != 0;
+				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_出生隐藏) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_6) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_出生隐藏) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170066E5 RID: 26341
-		// (get) Token: 0x0602A252 RID: 172626 RVA: 0x009D74F8 File Offset: 0x009D56F8
-		// (set) Token: 0x0602A253 RID: 172627 RVA: 0x009D753B File Offset: 0x009D573B
+		// Token: 0x17003E9F RID: 16031
+		// (get) Token: 0x060205C3 RID: 132547 RVA: 0x00944544 File Offset: 0x00942744
+		// (set) Token: 0x060205C4 RID: 132548 RVA: 0x00944587 File Offset: 0x00942787
 		public TArray<long> 葫芦轨迹子弹列表
 		{
 			get
@@ -138,7 +138,7 @@ namespace AkiClient.Game.Aki.Character.Vision
 				TArray<long> result;
 				if ((result = this._葫芦轨迹子弹列表) == null)
 				{
-					result = (this._葫芦轨迹子弹列表 = new TArray<long>(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_7, base.MemoryOwner ?? this));
+					result = (this._葫芦轨迹子弹列表 = new TArray<long>(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_葫芦轨迹子弹列表, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -148,24 +148,24 @@ namespace AkiClient.Game.Aki.Character.Vision
 			}
 		}
 
-		// Token: 0x170066E6 RID: 26342
-		// (get) Token: 0x0602A254 RID: 172628 RVA: 0x009D7549 File Offset: 0x009D5749
-		// (set) Token: 0x0602A255 RID: 172629 RVA: 0x009D7559 File Offset: 0x009D5759
+		// Token: 0x17003EA0 RID: 16032
+		// (get) Token: 0x060205C5 RID: 132549 RVA: 0x00944595 File Offset: 0x00942795
+		// (set) Token: 0x060205C6 RID: 132550 RVA: 0x009445A5 File Offset: 0x009427A5
 		public unsafe bool 战时是否播放出生动画
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_8) != 0;
+				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_战时是否播放出生动画) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_8) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_战时是否播放出生动画) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170066E7 RID: 26343
-		// (get) Token: 0x0602A256 RID: 172630 RVA: 0x009D756C File Offset: 0x009D576C
-		// (set) Token: 0x0602A257 RID: 172631 RVA: 0x009D75AF File Offset: 0x009D57AF
+		// Token: 0x17003EA1 RID: 16033
+		// (get) Token: 0x060205C7 RID: 132551 RVA: 0x009445B8 File Offset: 0x009427B8
+		// (set) Token: 0x060205C8 RID: 132552 RVA: 0x009445FB File Offset: 0x009427FB
 		public TArray<FGameplayTagContainer> 生命中Tag
 		{
 			get
@@ -174,7 +174,7 @@ namespace AkiClient.Game.Aki.Character.Vision
 				TArray<FGameplayTagContainer> result;
 				if ((result = this._生命中Tag) == null)
 				{
-					result = (this._生命中Tag = new TArray<FGameplayTagContainer>(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_9, base.MemoryOwner ?? this));
+					result = (this._生命中Tag = new TArray<FGameplayTagContainer>(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_生命中Tag, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -184,9 +184,9 @@ namespace AkiClient.Game.Aki.Character.Vision
 			}
 		}
 
-		// Token: 0x170066E8 RID: 26344
-		// (get) Token: 0x0602A258 RID: 172632 RVA: 0x009D75C0 File Offset: 0x009D57C0
-		// (set) Token: 0x0602A259 RID: 172633 RVA: 0x009D7603 File Offset: 0x009D5803
+		// Token: 0x17003EA2 RID: 16034
+		// (get) Token: 0x060205C9 RID: 132553 RVA: 0x0094460C File Offset: 0x0094280C
+		// (set) Token: 0x060205CA RID: 132554 RVA: 0x0094464F File Offset: 0x0094284F
 		public TArray<int> 出生Buff
 		{
 			get
@@ -195,7 +195,7 @@ namespace AkiClient.Game.Aki.Character.Vision
 				TArray<int> result;
 				if ((result = this._出生Buff) == null)
 				{
-					result = (this._出生Buff = new TArray<int>(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_10, base.MemoryOwner ?? this));
+					result = (this._出生Buff = new TArray<int>(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_出生Buff, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -205,9 +205,9 @@ namespace AkiClient.Game.Aki.Character.Vision
 			}
 		}
 
-		// Token: 0x170066E9 RID: 26345
-		// (get) Token: 0x0602A25A RID: 172634 RVA: 0x009D7614 File Offset: 0x009D5814
-		// (set) Token: 0x0602A25B RID: 172635 RVA: 0x009D7657 File Offset: 0x009D5857
+		// Token: 0x17003EA3 RID: 16035
+		// (get) Token: 0x060205CB RID: 132555 RVA: 0x00944660 File Offset: 0x00942860
+		// (set) Token: 0x060205CC RID: 132556 RVA: 0x009446A3 File Offset: 0x009428A3
 		public TArray<int> 出生时给召唤者Buff
 		{
 			get
@@ -216,7 +216,7 @@ namespace AkiClient.Game.Aki.Character.Vision
 				TArray<int> result;
 				if ((result = this._出生时给召唤者Buff) == null)
 				{
-					result = (this._出生时给召唤者Buff = new TArray<int>(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_11, base.MemoryOwner ?? this));
+					result = (this._出生时给召唤者Buff = new TArray<int>(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_出生时给召唤者Buff, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -226,24 +226,24 @@ namespace AkiClient.Game.Aki.Character.Vision
 			}
 		}
 
-		// Token: 0x170066EA RID: 26346
-		// (get) Token: 0x0602A25C RID: 172636 RVA: 0x009D7665 File Offset: 0x009D5865
-		// (set) Token: 0x0602A25D RID: 172637 RVA: 0x009D7679 File Offset: 0x009D5879
+		// Token: 0x17003EA4 RID: 16036
+		// (get) Token: 0x060205CD RID: 132557 RVA: 0x009446B1 File Offset: 0x009428B1
+		// (set) Token: 0x060205CE RID: 132558 RVA: 0x009446C5 File Offset: 0x009428C5
 		public unsafe FName 出生施放主动技能
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_出生施放主动技能);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_出生施放主动技能) = value;
 			}
 		}
 
-		// Token: 0x170066EB RID: 26347
-		// (get) Token: 0x0602A25E RID: 172638 RVA: 0x009D7690 File Offset: 0x009D5890
-		// (set) Token: 0x0602A25F RID: 172639 RVA: 0x009D76D3 File Offset: 0x009D58D3
+		// Token: 0x17003EA5 RID: 16037
+		// (get) Token: 0x060205CF RID: 132559 RVA: 0x009446DC File Offset: 0x009428DC
+		// (set) Token: 0x060205D0 RID: 132560 RVA: 0x0094471F File Offset: 0x0094291F
 		public TArray<FGameplayTag> 同步Tags
 		{
 			get
@@ -252,7 +252,7 @@ namespace AkiClient.Game.Aki.Character.Vision
 				TArray<FGameplayTag> result;
 				if ((result = this._同步Tags) == null)
 				{
-					result = (this._同步Tags = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_13, base.MemoryOwner ?? this));
+					result = (this._同步Tags = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_同步Tags, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -262,116 +262,96 @@ namespace AkiClient.Game.Aki.Character.Vision
 			}
 		}
 
-		// Token: 0x170066EC RID: 26348
-		// (get) Token: 0x0602A260 RID: 172640 RVA: 0x009D76E1 File Offset: 0x009D58E1
-		// (set) Token: 0x0602A261 RID: 172641 RVA: 0x009D76F1 File Offset: 0x009D58F1
+		// Token: 0x17003EA6 RID: 16038
+		// (get) Token: 0x060205D1 RID: 132561 RVA: 0x0094472D File Offset: 0x0094292D
+		// (set) Token: 0x060205D2 RID: 132562 RVA: 0x0094473D File Offset: 0x0094293D
 		public unsafe bool buff是否转移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_14) != 0;
+				return *(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_buff是否转移) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_14) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SVisionData.__PropertyOffset_buff是否转移) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602A262 RID: 172642 RVA: 0x009D7702 File Offset: 0x009D5902
+		// Token: 0x060205D3 RID: 132563 RVA: 0x0094474E File Offset: 0x0094294E
 		public SVisionData()
 		{
 		}
 
-		// Token: 0x0602A263 RID: 172643 RVA: 0x009D770C File Offset: 0x009D590C
-		public SVisionData(int Id, string 说明, int 实体配置表Id, [Nullable(0)] TEnumAsByte<EVisionType> 类型, int 技能ID, bool 空中能否释放, bool 出生隐藏, TArray<long> 葫芦轨迹子弹列表, bool 战时是否播放出生动画, TArray<FGameplayTagContainer> 生命中Tag, TArray<int> 出生Buff, TArray<int> 出生时给召唤者Buff, FName 出生施放主动技能, TArray<FGameplayTag> 同步Tags, bool buff是否转移)
-		{
-			this.Id = Id;
-			this.说明 = 说明;
-			this.实体配置表Id = 实体配置表Id;
-			this.类型 = 类型;
-			this.技能ID = 技能ID;
-			this.空中能否释放 = 空中能否释放;
-			this.出生隐藏 = 出生隐藏;
-			this.葫芦轨迹子弹列表 = 葫芦轨迹子弹列表;
-			this.战时是否播放出生动画 = 战时是否播放出生动画;
-			this.生命中Tag = 生命中Tag;
-			this.出生Buff = 出生Buff;
-			this.出生时给召唤者Buff = 出生时给召唤者Buff;
-			this.出生施放主动技能 = 出生施放主动技能;
-			this.同步Tags = 同步Tags;
-			this.buff是否转移 = buff是否转移;
-		}
-
-		// Token: 0x0602A264 RID: 172644 RVA: 0x009D7794 File Offset: 0x009D5994
+		// Token: 0x060205D4 RID: 132564 RVA: 0x00944756 File Offset: 0x00942956
 		protected override IntPtr GetUStructPtr()
 		{
 			return SVisionData.StaticStruct();
 		}
 
-		// Token: 0x0602A265 RID: 172645 RVA: 0x009D77A0 File Offset: 0x009D59A0
+		// Token: 0x060205D5 RID: 132565 RVA: 0x00944762 File Offset: 0x00942962
 		[NullableContext(2)]
 		public SVisionData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602A266 RID: 172646 RVA: 0x009D77AA File Offset: 0x009D59AA
+		// Token: 0x060205D6 RID: 132566 RVA: 0x0094476C File Offset: 0x0094296C
 		public SVisionData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602A267 RID: 172647 RVA: 0x009D77B5 File Offset: 0x009D59B5
+		// Token: 0x060205D7 RID: 132567 RVA: 0x00944777 File Offset: 0x00942977
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SVisionData(Pointer, false, true);
 		}
 
-		// Token: 0x0602A268 RID: 172648 RVA: 0x009D77BF File Offset: 0x009D59BF
+		// Token: 0x060205D8 RID: 132568 RVA: 0x00944781 File Offset: 0x00942981
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SVisionData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04015B78 RID: 88952
+		// Token: 0x04011791 RID: 71569
 		public const string __ObjectPath = "/Game/Aki/Character/Vision/SVisionData.SVisionData";
 
-		// Token: 0x04015B79 RID: 88953
+		// Token: 0x04011792 RID: 71570
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04015B7A RID: 88954
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011793 RID: 71571
+		internal static int __PropertyOffset_Id;
 
-		// Token: 0x04015B7B RID: 88955
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011794 RID: 71572
+		internal static int __PropertyOffset_说明;
 
-		// Token: 0x04015B7C RID: 88956
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011795 RID: 71573
+		internal static int __PropertyOffset_实体配置表Id;
 
-		// Token: 0x04015B7D RID: 88957
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011796 RID: 71574
+		internal static int __PropertyOffset_类型;
 
-		// Token: 0x04015B7E RID: 88958
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011797 RID: 71575
+		internal static int __PropertyOffset_技能ID;
 
-		// Token: 0x04015B7F RID: 88959
-		internal static int __PropertyOffset_5;
+		// Token: 0x04011798 RID: 71576
+		internal static int __PropertyOffset_空中能否释放;
 
-		// Token: 0x04015B80 RID: 88960
-		internal static int __PropertyOffset_6;
+		// Token: 0x04011799 RID: 71577
+		internal static int __PropertyOffset_出生隐藏;
 
-		// Token: 0x04015B81 RID: 88961
-		internal static int __PropertyOffset_7;
+		// Token: 0x0401179A RID: 71578
+		internal static int __PropertyOffset_葫芦轨迹子弹列表;
 
-		// Token: 0x04015B82 RID: 88962
+		// Token: 0x0401179B RID: 71579
 		[Nullable(2)]
 		private TArray<long> _葫芦轨迹子弹列表;
 
-		// Token: 0x04015B83 RID: 88963
-		internal static int __PropertyOffset_8;
+		// Token: 0x0401179C RID: 71580
+		internal static int __PropertyOffset_战时是否播放出生动画;
 
-		// Token: 0x04015B84 RID: 88964
-		internal static int __PropertyOffset_9;
+		// Token: 0x0401179D RID: 71581
+		internal static int __PropertyOffset_生命中Tag;
 
-		// Token: 0x04015B85 RID: 88965
+		// Token: 0x0401179E RID: 71582
 		[Nullable(new byte[]
 		{
 			2,
@@ -379,31 +359,31 @@ namespace AkiClient.Game.Aki.Character.Vision
 		})]
 		private TArray<FGameplayTagContainer> _生命中Tag;
 
-		// Token: 0x04015B86 RID: 88966
-		internal static int __PropertyOffset_10;
+		// Token: 0x0401179F RID: 71583
+		internal static int __PropertyOffset_出生Buff;
 
-		// Token: 0x04015B87 RID: 88967
+		// Token: 0x040117A0 RID: 71584
 		[Nullable(2)]
 		private TArray<int> _出生Buff;
 
-		// Token: 0x04015B88 RID: 88968
-		internal static int __PropertyOffset_11;
+		// Token: 0x040117A1 RID: 71585
+		internal static int __PropertyOffset_出生时给召唤者Buff;
 
-		// Token: 0x04015B89 RID: 88969
+		// Token: 0x040117A2 RID: 71586
 		[Nullable(2)]
 		private TArray<int> _出生时给召唤者Buff;
 
-		// Token: 0x04015B8A RID: 88970
-		internal static int __PropertyOffset_12;
+		// Token: 0x040117A3 RID: 71587
+		internal static int __PropertyOffset_出生施放主动技能;
 
-		// Token: 0x04015B8B RID: 88971
-		internal static int __PropertyOffset_13;
+		// Token: 0x040117A4 RID: 71588
+		internal static int __PropertyOffset_同步Tags;
 
-		// Token: 0x04015B8C RID: 88972
+		// Token: 0x040117A5 RID: 71589
 		[Nullable(2)]
 		private TArray<FGameplayTag> _同步Tags;
 
-		// Token: 0x04015B8D RID: 88973
-		internal static int __PropertyOffset_14;
+		// Token: 0x040117A6 RID: 71590
+		internal static int __PropertyOffset_buff是否转移;
 	}
 }

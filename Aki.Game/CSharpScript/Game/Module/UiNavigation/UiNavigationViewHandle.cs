@@ -5,14 +5,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004947 RID: 18759
+	// Token: 0x020038BE RID: 14526
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiNavigationViewHandle
 	{
-		// Token: 0x170079D5 RID: 31189
-		// (get) Token: 0x06030F49 RID: 200521 RVA: 0x00B5E61E File Offset: 0x00B5C81E
-		// (set) Token: 0x06030F4A RID: 200522 RVA: 0x00B5E626 File Offset: 0x00B5C826
+		// Token: 0x17004D3D RID: 19773
+		// (get) Token: 0x06025A75 RID: 154229 RVA: 0x00A99462 File Offset: 0x00A97662
+		// (set) Token: 0x06025A76 RID: 154230 RVA: 0x00A9946A File Offset: 0x00A9766A
 		public EViewHandleState State
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F4B RID: 200523 RVA: 0x00B5E63C File Offset: 0x00B5C83C
+		// Token: 0x06025A77 RID: 154231 RVA: 0x00A99480 File Offset: 0x00A97680
 		public UiNavigationViewHandle(int tagId, TsUiNavigationPanelConfig panelConfig)
 		{
 			this.TagId = tagId;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.InitGamepadControlMouse();
 		}
 
-		// Token: 0x06030F4C RID: 200524 RVA: 0x00B5E6D4 File Offset: 0x00B5C8D4
+		// Token: 0x06025A78 RID: 154232 RVA: 0x00A99518 File Offset: 0x00A97718
 		private void ResetState()
 		{
 			this.State = EViewHandleState.None;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F4D RID: 200525 RVA: 0x00B5E754 File Offset: 0x00B5C954
+		// Token: 0x06025A79 RID: 154233 RVA: 0x00A99598 File Offset: 0x00A97798
 		public int GetDepth()
 		{
 			if (this.CurrentPanel == null || !this.CurrentPanel.IsValid() || !this.CurrentPanel.RootUIComp.IsValid(false, false))
@@ -71,31 +71,31 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return this.CurrentPanel.RootUIComp.Get().GetFlattenHierarchyIndex();
 		}
 
-		// Token: 0x06030F4E RID: 200526 RVA: 0x00B5E7D6 File Offset: 0x00B5C9D6
+		// Token: 0x06025A7A RID: 154234 RVA: 0x00A9961A File Offset: 0x00A9781A
 		private bool HasNavigation()
 		{
 			return this.State == EViewHandleState.HasNavigation;
 		}
 
-		// Token: 0x06030F4F RID: 200527 RVA: 0x00B5E7E8 File Offset: 0x00B5C9E8
+		// Token: 0x06025A7B RID: 154235 RVA: 0x00A9962C File Offset: 0x00A9782C
 		private bool NeedFindAgain()
 		{
 			return this.State == EViewHandleState.NavigateNext || this.State == EViewHandleState.None;
 		}
 
-		// Token: 0x06030F50 RID: 200528 RVA: 0x00B5E80E File Offset: 0x00B5CA0E
+		// Token: 0x06025A7C RID: 154236 RVA: 0x00A99652 File Offset: 0x00A97852
 		public bool HasNavigationButDisActive()
 		{
 			return this.State == EViewHandleState.HasNavigationButDisActive;
 		}
 
-		// Token: 0x06030F51 RID: 200529 RVA: 0x00B5E820 File Offset: 0x00B5CA20
+		// Token: 0x06025A7D RID: 154237 RVA: 0x00A99664 File Offset: 0x00A97864
 		public bool IsNonNavigation()
 		{
 			return this.State == EViewHandleState.NonNavigation;
 		}
 
-		// Token: 0x06030F52 RID: 200530 RVA: 0x00B5E832 File Offset: 0x00B5CA32
+		// Token: 0x06025A7E RID: 154238 RVA: 0x00A99676 File Offset: 0x00A97876
 		public void SetIsInController(bool value)
 		{
 			if (this.IsInController == value)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F53 RID: 200531 RVA: 0x00B5E854 File Offset: 0x00B5CA54
+		// Token: 0x06025A7F RID: 154239 RVA: 0x00A99698 File Offset: 0x00A97898
 		public void ResetStateIfNullFocus()
 		{
 			if (this.FocusListener == null && this.IsNonNavigation())
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F54 RID: 200532 RVA: 0x00B5E871 File Offset: 0x00B5CA71
+		// Token: 0x06025A80 RID: 154240 RVA: 0x00A996B5 File Offset: 0x00A978B5
 		public void SetIsUsable(bool value)
 		{
 			this.IsUsable = value;
@@ -130,13 +130,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationViewManager.Instance.MarkCalculateCurrentPanelDirty();
 		}
 
-		// Token: 0x06030F55 RID: 200533 RVA: 0x00B5E88D File Offset: 0x00B5CA8D
+		// Token: 0x06025A81 RID: 154241 RVA: 0x00A996D1 File Offset: 0x00A978D1
 		public bool GetIsUsable()
 		{
 			return this.IsUsable;
 		}
 
-		// Token: 0x06030F56 RID: 200534 RVA: 0x00B5E895 File Offset: 0x00B5CA95
+		// Token: 0x06025A82 RID: 154242 RVA: 0x00A996D9 File Offset: 0x00A978D9
 		public void SetIsActive(bool value)
 		{
 			if (this.IsActive == value)
@@ -147,19 +147,19 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationViewManager.Instance.MarkCalculateCurrentPanelDirty();
 		}
 
-		// Token: 0x06030F57 RID: 200535 RVA: 0x00B5E8B2 File Offset: 0x00B5CAB2
+		// Token: 0x06025A83 RID: 154243 RVA: 0x00A996F6 File Offset: 0x00A978F6
 		public bool GetIsActive()
 		{
 			return this.IsActive;
 		}
 
-		// Token: 0x06030F58 RID: 200536 RVA: 0x00B5E8BA File Offset: 0x00B5CABA
+		// Token: 0x06025A84 RID: 154244 RVA: 0x00A996FE File Offset: 0x00A978FE
 		public TsUiNavigationBehaviorListener GetFocusListener()
 		{
 			return this.FocusListener;
 		}
 
-		// Token: 0x06030F59 RID: 200537 RVA: 0x00B5E8C4 File Offset: 0x00B5CAC4
+		// Token: 0x06025A85 RID: 154245 RVA: 0x00A99708 File Offset: 0x00A97908
 		public List<TsUiNavigationBehaviorListener> GetActiveListenerListByTag(string tag)
 		{
 			List<TsUiNavigationBehaviorListener> list = new List<TsUiNavigationBehaviorListener>();
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return list;
 		}
 
-		// Token: 0x06030F5A RID: 200538 RVA: 0x00B5E968 File Offset: 0x00B5CB68
+		// Token: 0x06025A86 RID: 154246 RVA: 0x00A997AC File Offset: 0x00A979AC
 		[return: Nullable(2)]
 		public TsUiNavigationBehaviorListener GetActiveListenerByTag(string tag)
 		{
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return this.GetActiveListenerByExitTag();
 		}
 
-		// Token: 0x06030F5B RID: 200539 RVA: 0x00B5E988 File Offset: 0x00B5CB88
+		// Token: 0x06025A87 RID: 154247 RVA: 0x00A997CC File Offset: 0x00A979CC
 		[return: Nullable(2)]
 		private TsUiNavigationBehaviorListener GetActiveListenerByNormalTag(string tag)
 		{
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return null;
 		}
 
-		// Token: 0x06030F5C RID: 200540 RVA: 0x00B5EA24 File Offset: 0x00B5CC24
+		// Token: 0x06025A88 RID: 154248 RVA: 0x00A99868 File Offset: 0x00A97A68
 		[NullableContext(2)]
 		private TsUiNavigationBehaviorListener GetActiveListenerByExitTag()
 		{
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return list[0];
 		}
 
-		// Token: 0x06030F5D RID: 200541 RVA: 0x00B5EB14 File Offset: 0x00B5CD14
+		// Token: 0x06025A89 RID: 154249 RVA: 0x00A99958 File Offset: 0x00A97B58
 		[return: Nullable(2)]
 		public NavigationGroup GetActiveNavigationGroupByNameCheckAll(string groupName)
 		{
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return navigationGroup;
 		}
 
-		// Token: 0x06030F5E RID: 200542 RVA: 0x00B5EB7C File Offset: 0x00B5CD7C
+		// Token: 0x06025A8A RID: 154250 RVA: 0x00A999C0 File Offset: 0x00A97BC0
 		[return: Nullable(2)]
 		public NavigationGroup GetNavigationGroupByName(string groupName)
 		{
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return currentPanel.GetNavigationGroup(groupName);
 		}
 
-		// Token: 0x06030F5F RID: 200543 RVA: 0x00B5EB90 File Offset: 0x00B5CD90
+		// Token: 0x06025A8B RID: 154251 RVA: 0x00A999D4 File Offset: 0x00A97BD4
 		private void FindSuitablePanel()
 		{
 			foreach (TsUiNavigationPanelConfig tsUiNavigationPanelConfig in this.PanelConfigMap.Values)
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F60 RID: 200544 RVA: 0x00B5EBF4 File Offset: 0x00B5CDF4
+		// Token: 0x06025A8C RID: 154252 RVA: 0x00A99A38 File Offset: 0x00A97C38
 		public void AddPanelConfig(int tagId, TsUiNavigationPanelConfig panelConfig)
 		{
 			panelConfig.SetViewHandle(this);
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.SkipMainPanelFallbackOnce = false;
 		}
 
-		// Token: 0x06030F61 RID: 200545 RVA: 0x00B5EC20 File Offset: 0x00B5CE20
+		// Token: 0x06025A8D RID: 154253 RVA: 0x00A99A64 File Offset: 0x00A97C64
 		public void DeletePanelConfig(int tagId)
 		{
 			TsUiNavigationPanelConfig tsUiNavigationPanelConfig;
@@ -314,13 +314,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.DeleteScrollData(tsUiNavigationPanelConfig.TsScrollBarGroup);
 		}
 
-		// Token: 0x06030F62 RID: 200546 RVA: 0x00B5ECAF File Offset: 0x00B5CEAF
+		// Token: 0x06025A8E RID: 154254 RVA: 0x00A99AF3 File Offset: 0x00A97CF3
 		public OrderedDictionary<int, TsUiNavigationPanelConfig> GetPanelConfigMap()
 		{
 			return this.PanelConfigMap;
 		}
 
-		// Token: 0x06030F63 RID: 200547 RVA: 0x00B5ECB8 File Offset: 0x00B5CEB8
+		// Token: 0x06025A8F RID: 154255 RVA: 0x00A99AFC File Offset: 0x00A97CFC
 		[NullableContext(2)]
 		public TsUiNavigationPanelConfig GetPanelConfigByType(ESpecialPanelHandleDefine type)
 		{
@@ -334,13 +334,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return null;
 		}
 
-		// Token: 0x06030F64 RID: 200548 RVA: 0x00B5ED24 File Offset: 0x00B5CF24
+		// Token: 0x06025A90 RID: 154256 RVA: 0x00A99B68 File Offset: 0x00A97D68
 		public TsUiNavigationPanelConfig GetCurrentPanel()
 		{
 			return this.CurrentPanel;
 		}
 
-		// Token: 0x06030F65 RID: 200549 RVA: 0x00B5ED2C File Offset: 0x00B5CF2C
+		// Token: 0x06025A91 RID: 154257 RVA: 0x00A99B70 File Offset: 0x00A97D70
 		public void ClearPanelConfig()
 		{
 			this.PanelConfigMap.Clear();
@@ -353,14 +353,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.CurrentPanel = null;
 		}
 
-		// Token: 0x06030F66 RID: 200550 RVA: 0x00B5ED5C File Offset: 0x00B5CF5C
+		// Token: 0x06025A92 RID: 154258 RVA: 0x00A99BA0 File Offset: 0x00A97DA0
 		public void SetCurrentAddPanel(TsUiNavigationPanelConfig panelConfig)
 		{
 			this.CurrentAddPanel = panelConfig;
 			UiNavigationGlobalData.NeedRefreshPanelId = this.TagId;
 		}
 
-		// Token: 0x06030F67 RID: 200551 RVA: 0x00B5ED70 File Offset: 0x00B5CF70
+		// Token: 0x06025A93 RID: 154259 RVA: 0x00A99BB4 File Offset: 0x00A97DB4
 		public bool HasAnyPanelActive()
 		{
 			using (OrderedDictionary<int, TsUiNavigationPanelConfig>.ValueCollection.Enumerator enumerator = this.PanelConfigMap.Values.GetEnumerator())
@@ -376,7 +376,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return false;
 		}
 
-		// Token: 0x06030F68 RID: 200552 RVA: 0x00B5EDD0 File Offset: 0x00B5CFD0
+		// Token: 0x06025A94 RID: 154260 RVA: 0x00A99C14 File Offset: 0x00A97E14
 		private void ResumeNavigation()
 		{
 			TsUiNavigationBehaviorListener focusListener = this.FocusListener;
@@ -400,7 +400,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.FocusListener = null;
 		}
 
-		// Token: 0x06030F69 RID: 200553 RVA: 0x00B5EE50 File Offset: 0x00B5D050
+		// Token: 0x06025A95 RID: 154261 RVA: 0x00A99C94 File Offset: 0x00A97E94
 		private bool HasOtherActiveSubPanel()
 		{
 			TsUiNavigationBehaviorListener focusListener = this.FocusListener;
@@ -415,7 +415,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return false;
 		}
 
-		// Token: 0x06030F6A RID: 200554 RVA: 0x00B5EED0 File Offset: 0x00B5D0D0
+		// Token: 0x06025A96 RID: 154262 RVA: 0x00A99D14 File Offset: 0x00A97F14
 		[NullableContext(2)]
 		private TsUiNavigationBehaviorListener GetResumeListener()
 		{
@@ -460,7 +460,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F6B RID: 200555 RVA: 0x00B5EFB5 File Offset: 0x00B5D1B5
+		// Token: 0x06025A97 RID: 154263 RVA: 0x00A99DF9 File Offset: 0x00A97FF9
 		private void PauseNavigation()
 		{
 			if (this.HasNavigation())
@@ -485,7 +485,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F6C RID: 200556 RVA: 0x00B5EFF5 File Offset: 0x00B5D1F5
+		// Token: 0x06025A98 RID: 154264 RVA: 0x00A99E39 File Offset: 0x00A98039
 		public void FindDefaultNavigation()
 		{
 			if (this.SwitchNavigationFocusListener != null)
@@ -503,7 +503,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F6D RID: 200557 RVA: 0x00B5F020 File Offset: 0x00B5D220
+		// Token: 0x06025A99 RID: 154265 RVA: 0x00A99E64 File Offset: 0x00A98064
 		[NullableContext(2)]
 		private TsUiNavigationBehaviorListener TryRestoreNonIndependentPanelFocus()
 		{
@@ -526,7 +526,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return null;
 		}
 
-		// Token: 0x06030F6E RID: 200558 RVA: 0x00B5F0B4 File Offset: 0x00B5D2B4
+		// Token: 0x06025A9A RID: 154266 RVA: 0x00A99EF8 File Offset: 0x00A980F8
 		public void FindSuitableNavigation(bool isDefault)
 		{
 			TsUiNavigationPanelConfig mainPanel = this.MainPanel;
@@ -569,7 +569,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F6F RID: 200559 RVA: 0x00B5F188 File Offset: 0x00B5D388
+		// Token: 0x06025A9B RID: 154267 RVA: 0x00A99FCC File Offset: 0x00A981CC
 		public void FindAddPanelConfigNavigation()
 		{
 			if (!this.IsNonNavigation())
@@ -597,13 +597,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F70 RID: 200560 RVA: 0x00B5F1F6 File Offset: 0x00B5D3F6
+		// Token: 0x06025A9C RID: 154268 RVA: 0x00A9A03A File Offset: 0x00A9823A
 		public void NotifyWaitingScrollPanelHidden()
 		{
 			this.SkipMainPanelFallbackOnce = true;
 		}
 
-		// Token: 0x06030F71 RID: 200561 RVA: 0x00B5F200 File Offset: 0x00B5D400
+		// Token: 0x06025A9D RID: 154269 RVA: 0x00A9A044 File Offset: 0x00A98244
 		private void FindNavigationInAllPanel(TsUiNavigationPanelConfig excludePanelConfig, bool isDefault)
 		{
 			if (this.SkipMainPanelFallbackOnce)
@@ -652,7 +652,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F72 RID: 200562 RVA: 0x00B5F304 File Offset: 0x00B5D504
+		// Token: 0x06025A9E RID: 154270 RVA: 0x00A9A148 File Offset: 0x00A98348
 		public void NotifySuitableNavigation(FindNavigationResult result)
 		{
 			if (result.IsFindNavigation())
@@ -679,13 +679,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.ResetState();
 		}
 
-		// Token: 0x06030F73 RID: 200563 RVA: 0x00B5F38B File Offset: 0x00B5D58B
+		// Token: 0x06025A9F RID: 154271 RVA: 0x00A9A1CF File Offset: 0x00A983CF
 		public void MarkRefreshScrollDataDirty()
 		{
 			this.RefreshScrollDataDirty = true;
 		}
 
-		// Token: 0x06030F74 RID: 200564 RVA: 0x00B5F394 File Offset: 0x00B5D594
+		// Token: 0x06025AA0 RID: 154272 RVA: 0x00A9A1D8 File Offset: 0x00A983D8
 		private void RefreshScrollData()
 		{
 			if (!this.RefreshScrollDataDirty)
@@ -705,20 +705,20 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.MarkRefreshHotKeyDirty();
 		}
 
-		// Token: 0x06030F75 RID: 200565 RVA: 0x00B5F41C File Offset: 0x00B5D61C
+		// Token: 0x06025AA1 RID: 154273 RVA: 0x00A9A260 File Offset: 0x00A98460
 		private void AddScrollData(List<NavigationGroup> groupArray)
 		{
 			this.ScrollBallData.AddScrollbar(groupArray);
 		}
 
-		// Token: 0x06030F76 RID: 200566 RVA: 0x00B5F42A File Offset: 0x00B5D62A
+		// Token: 0x06025AA2 RID: 154274 RVA: 0x00A9A26E File Offset: 0x00A9846E
 		[NullableContext(2)]
 		private void DeleteScrollData(NavigationGroup group)
 		{
 			this.ScrollBallData.DeleteScrollbar(group);
 		}
 
-		// Token: 0x06030F77 RID: 200567 RVA: 0x00B5F438 File Offset: 0x00B5D638
+		// Token: 0x06025AA3 RID: 154275 RVA: 0x00A9A27C File Offset: 0x00A9847C
 		public void FindNextScrollData()
 		{
 			NavigationScrollbarData scrollBallData = this.ScrollBallData;
@@ -729,7 +729,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			scrollBallData.FindNextScrollbar();
 		}
 
-		// Token: 0x06030F78 RID: 200568 RVA: 0x00B5F44A File Offset: 0x00B5D64A
+		// Token: 0x06025AA4 RID: 154276 RVA: 0x00A9A28E File Offset: 0x00A9848E
 		public void TryFindScrollData()
 		{
 			NavigationScrollbarData scrollBallData = this.ScrollBallData;
@@ -740,13 +740,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			scrollBallData.TryFindScrollbar();
 		}
 
-		// Token: 0x06030F79 RID: 200569 RVA: 0x00B5F45C File Offset: 0x00B5D65C
+		// Token: 0x06025AA5 RID: 154277 RVA: 0x00A9A2A0 File Offset: 0x00A984A0
 		public NavigationScrollbarData GetScrollbarData()
 		{
 			return this.ScrollBallData;
 		}
 
-		// Token: 0x06030F7A RID: 200570 RVA: 0x00B5F464 File Offset: 0x00B5D664
+		// Token: 0x06025AA6 RID: 154278 RVA: 0x00A9A2A8 File Offset: 0x00A984A8
 		[NullableContext(2)]
 		public unsafe void UpdateFocus(TsUiNavigationBehaviorListener listener)
 		{
@@ -793,7 +793,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.MarkRefreshHotKeyDirty();
 		}
 
-		// Token: 0x06030F7B RID: 200571 RVA: 0x00B5F5DC File Offset: 0x00B5D7DC
+		// Token: 0x06025AA7 RID: 154279 RVA: 0x00A9A420 File Offset: 0x00A98620
 		public void ResetNavigationListener()
 		{
 			this.ResetState();
@@ -801,14 +801,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.ClearDynamicScrollViewNavigationContext();
 		}
 
-		// Token: 0x06030F7C RID: 200572 RVA: 0x00B5F5F0 File Offset: 0x00B5D7F0
+		// Token: 0x06025AA8 RID: 154280 RVA: 0x00A9A434 File Offset: 0x00A98634
 		public void MarkResetCurrentPanelDirty()
 		{
 			this.ResetCurrentPanelDirty = true;
 		}
 
-		// Token: 0x170079D6 RID: 31190
-		// (get) Token: 0x06030F7D RID: 200573 RVA: 0x00B5F5F9 File Offset: 0x00B5D7F9
+		// Token: 0x17004D3E RID: 19774
+		// (get) Token: 0x06025AA9 RID: 154281 RVA: 0x00A9A43D File Offset: 0x00A9863D
 		public bool IsListenerCanFocusByPanelConfig
 		{
 			get
@@ -817,7 +817,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F7E RID: 200574 RVA: 0x00B5F606 File Offset: 0x00B5D806
+		// Token: 0x06025AAA RID: 154282 RVA: 0x00A9A44A File Offset: 0x00A9864A
 		public void UpdateHotKeyVisibleMode(TsUiNavigationPanelConfig panelConfig)
 		{
 			if (this.IsInController)
@@ -831,7 +831,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.MarkRefreshHotKeyDirty();
 		}
 
-		// Token: 0x06030F7F RID: 200575 RVA: 0x00B5F628 File Offset: 0x00B5D828
+		// Token: 0x06025AAB RID: 154283 RVA: 0x00A9A46C File Offset: 0x00A9866C
 		public void UpdateAllHotKeyVisibleMode()
 		{
 			foreach (TsUiNavigationPanelConfig panelConfig in this.PanelConfigMap.Values)
@@ -840,7 +840,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F80 RID: 200576 RVA: 0x00B5F680 File Offset: 0x00B5D880
+		// Token: 0x06025AAC RID: 154284 RVA: 0x00A9A4C4 File Offset: 0x00A986C4
 		private void RefreshHotKeyComponents()
 		{
 			if (!this.RefreshHotKeyDirty)
@@ -854,13 +854,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F81 RID: 200577 RVA: 0x00B5F6E8 File Offset: 0x00B5D8E8
+		// Token: 0x06025AAD RID: 154285 RVA: 0x00A9A52C File Offset: 0x00A9872C
 		public void MarkRefreshHotKeyDirty()
 		{
 			this.RefreshHotKeyDirty = true;
 		}
 
-		// Token: 0x06030F82 RID: 200578 RVA: 0x00B5F6F4 File Offset: 0x00B5D8F4
+		// Token: 0x06025AAE RID: 154286 RVA: 0x00A9A538 File Offset: 0x00A98738
 		private void RefreshHotKeyTextId()
 		{
 			if (!this.RefreshHotKeyTextIdDirty)
@@ -874,13 +874,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F83 RID: 200579 RVA: 0x00B5F75C File Offset: 0x00B5D95C
+		// Token: 0x06025AAF RID: 154287 RVA: 0x00A9A5A0 File Offset: 0x00A987A0
 		public void MarkRefreshHotKeyTextIdDirty()
 		{
 			this.RefreshHotKeyTextIdDirty = true;
 		}
 
-		// Token: 0x06030F84 RID: 200580 RVA: 0x00B5F765 File Offset: 0x00B5D965
+		// Token: 0x06025AB0 RID: 154288 RVA: 0x00A9A5A9 File Offset: 0x00A987A9
 		private void RefreshNavigation()
 		{
 			if (!this.RefreshNavigationDirty)
@@ -897,7 +897,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.FindSuitableNavigation(false);
 		}
 
-		// Token: 0x06030F85 RID: 200581 RVA: 0x00B5F7A0 File Offset: 0x00B5D9A0
+		// Token: 0x06025AB1 RID: 154289 RVA: 0x00A9A5E4 File Offset: 0x00A987E4
 		public void RestoreSwallowedRefreshNavigation()
 		{
 			if (!this.IsRefreshNavigationSwallowed)
@@ -908,20 +908,20 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.RefreshNavigationDirty = true;
 		}
 
-		// Token: 0x06030F86 RID: 200582 RVA: 0x00B5F7B9 File Offset: 0x00B5D9B9
+		// Token: 0x06025AB2 RID: 154290 RVA: 0x00A9A5FD File Offset: 0x00A987FD
 		public void DiscardSwallowedRefreshNavigation()
 		{
 			this.IsRefreshNavigationSwallowed = false;
 		}
 
-		// Token: 0x06030F87 RID: 200583 RVA: 0x00B5F7C2 File Offset: 0x00B5D9C2
+		// Token: 0x06025AB3 RID: 154291 RVA: 0x00A9A606 File Offset: 0x00A98806
 		public void MarkRefreshNavigationDirty(int instanceId = 0)
 		{
 			this.RefreshListenerInstanceId = instanceId;
 			this.RefreshNavigationDirty = true;
 		}
 
-		// Token: 0x06030F88 RID: 200584 RVA: 0x00B5F7D2 File Offset: 0x00B5D9D2
+		// Token: 0x06025AB4 RID: 154292 RVA: 0x00A9A616 File Offset: 0x00A98816
 		public void ResetNavigationDirty(int instanceId = 0)
 		{
 			if (this.RefreshListenerInstanceId != 0 && instanceId != 0 && this.RefreshListenerInstanceId != instanceId)
@@ -931,7 +931,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.RefreshNavigationDirty = false;
 		}
 
-		// Token: 0x06030F89 RID: 200585 RVA: 0x00B5F7F0 File Offset: 0x00B5D9F0
+		// Token: 0x06025AB5 RID: 154293 RVA: 0x00A9A634 File Offset: 0x00A98834
 		private void RefreshSwitchNavigationFocus()
 		{
 			if (this.SwitchNavigationFocusListener == null)
@@ -949,14 +949,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.DiscardSwallowedRefreshNavigation();
 		}
 
-		// Token: 0x06030F8A RID: 200586 RVA: 0x00B5F83E File Offset: 0x00B5DA3E
+		// Token: 0x06025AB6 RID: 154294 RVA: 0x00A9A682 File Offset: 0x00A98882
 		[NullableContext(2)]
 		public void MarkSwitchNavigationFocusDirty(TsUiNavigationBehaviorListener listener)
 		{
 			this.SwitchNavigationFocusListener = listener;
 		}
 
-		// Token: 0x06030F8B RID: 200587 RVA: 0x00B5F848 File Offset: 0x00B5DA48
+		// Token: 0x06025AB7 RID: 154295 RVA: 0x00A9A68C File Offset: 0x00A9888C
 		private void InitGamepadControlMouse()
 		{
 			if (this.HasGamepadControlMouse())
@@ -971,7 +971,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F8C RID: 200588 RVA: 0x00B5F8A3 File Offset: 0x00B5DAA3
+		// Token: 0x06025AB8 RID: 154296 RVA: 0x00A9A6E7 File Offset: 0x00A988E7
 		private void RefreshGamepadControl(float deltaTime)
 		{
 			GamepadControlMouse gamepadControlInternal = this.GamepadControlInternal;
@@ -982,14 +982,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			gamepadControlInternal.Tick(deltaTime);
 		}
 
-		// Token: 0x06030F8D RID: 200589 RVA: 0x00B5F8B6 File Offset: 0x00B5DAB6
+		// Token: 0x06025AB9 RID: 154297 RVA: 0x00A9A6FA File Offset: 0x00A988FA
 		public bool HasGamepadControlMouse()
 		{
 			TsUiNavigationPanelConfig mainPanel = this.MainPanel;
 			return mainPanel != null && mainPanel.IsGamepadControlMouse;
 		}
 
-		// Token: 0x06030F8E RID: 200590 RVA: 0x00B5F8C9 File Offset: 0x00B5DAC9
+		// Token: 0x06025ABA RID: 154298 RVA: 0x00A9A70D File Offset: 0x00A9890D
 		public void CanOverridePositionByGamepad(bool value)
 		{
 			GamepadControlMouse gamepadControlInternal = this.GamepadControlInternal;
@@ -1000,7 +1000,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			gamepadControlInternal.CanOverridePosition(value);
 		}
 
-		// Token: 0x06030F8F RID: 200591 RVA: 0x00B5F8DC File Offset: 0x00B5DADC
+		// Token: 0x06025ABB RID: 154299 RVA: 0x00A9A720 File Offset: 0x00A98920
 		public void SetGamepadMouseMoveForward(float value)
 		{
 			GamepadControlMouse gamepadControlInternal = this.GamepadControlInternal;
@@ -1011,7 +1011,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			gamepadControlInternal.MoveForwardByGamepad(value);
 		}
 
-		// Token: 0x06030F90 RID: 200592 RVA: 0x00B5F8EF File Offset: 0x00B5DAEF
+		// Token: 0x06025ABC RID: 154300 RVA: 0x00A9A733 File Offset: 0x00A98933
 		public void SetGamepadMouseMoveRight(float value)
 		{
 			GamepadControlMouse gamepadControlInternal = this.GamepadControlInternal;
@@ -1022,7 +1022,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			gamepadControlInternal.MoveRightByGamepad(value);
 		}
 
-		// Token: 0x06030F91 RID: 200593 RVA: 0x00B5F902 File Offset: 0x00B5DB02
+		// Token: 0x06025ABD RID: 154301 RVA: 0x00A9A746 File Offset: 0x00A98946
 		public void SetGamepadMouseTrigger(bool isPress)
 		{
 			GamepadControlMouse gamepadControlInternal = this.GamepadControlInternal;
@@ -1033,7 +1033,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			gamepadControlInternal.TriggerByGamepad(isPress);
 		}
 
-		// Token: 0x06030F92 RID: 200594 RVA: 0x00B5F915 File Offset: 0x00B5DB15
+		// Token: 0x06025ABE RID: 154302 RVA: 0x00A9A759 File Offset: 0x00A98959
 		public void UpdateMousePositionByItem(UUIItem uiItem)
 		{
 			GamepadControlMouse gamepadControlInternal = this.GamepadControlInternal;
@@ -1044,7 +1044,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			gamepadControlInternal.UpdateMousePositionByItem(uiItem);
 		}
 
-		// Token: 0x06030F93 RID: 200595 RVA: 0x00B5F928 File Offset: 0x00B5DB28
+		// Token: 0x06025ABF RID: 154303 RVA: 0x00A9A76C File Offset: 0x00A9896C
 		public void UpdateMousePositionForGuide(UUIItem uiItem)
 		{
 			GamepadControlMouse gamepadControlInternal = this.GamepadControlInternal;
@@ -1055,7 +1055,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			gamepadControlInternal.UpdateMousePositionForGuide(uiItem);
 		}
 
-		// Token: 0x06030F94 RID: 200596 RVA: 0x00B5F93B File Offset: 0x00B5DB3B
+		// Token: 0x06025AC0 RID: 154304 RVA: 0x00A9A77F File Offset: 0x00A9897F
 		public void ResetNavigationFocusForGuide()
 		{
 			GamepadControlMouse gamepadControlInternal = this.GamepadControlInternal;
@@ -1066,14 +1066,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			gamepadControlInternal.ResetNavigationFocusForGuide();
 		}
 
-		// Token: 0x06030F95 RID: 200597 RVA: 0x00B5F94D File Offset: 0x00B5DB4D
+		// Token: 0x06025AC1 RID: 154305 RVA: 0x00A9A791 File Offset: 0x00A98991
 		public bool IsGamepadHitListenerUseDrag()
 		{
 			GamepadControlMouse gamepadControlInternal = this.GamepadControlInternal;
 			return gamepadControlInternal != null && gamepadControlInternal.IsNearlyListenerUseDrag();
 		}
 
-		// Token: 0x06030F96 RID: 200598 RVA: 0x00B5F960 File Offset: 0x00B5DB60
+		// Token: 0x06025AC2 RID: 154306 RVA: 0x00A9A7A4 File Offset: 0x00A989A4
 		public void SetLockUseDragState(bool value)
 		{
 			GamepadControlMouse gamepadControlInternal = this.GamepadControlInternal;
@@ -1084,7 +1084,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			gamepadControlInternal.SetLockUseDragState(value);
 		}
 
-		// Token: 0x06030F97 RID: 200599 RVA: 0x00B5F973 File Offset: 0x00B5DB73
+		// Token: 0x06025AC3 RID: 154307 RVA: 0x00A9A7B7 File Offset: 0x00A989B7
 		[NullableContext(2)]
 		public TsUiNavigationBehaviorListener GetHitComponentListener()
 		{
@@ -1096,7 +1096,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return gamepadControlInternal.GetHitComponentListener();
 		}
 
-		// Token: 0x06030F98 RID: 200600 RVA: 0x00B5F986 File Offset: 0x00B5DB86
+		// Token: 0x06025AC4 RID: 154308 RVA: 0x00A9A7CA File Offset: 0x00A989CA
 		[NullableContext(2)]
 		public TsUiNavigationBehaviorListener GetGuideUiListener()
 		{
@@ -1108,7 +1108,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return gamepadControlInternal.GetGuideUiListener();
 		}
 
-		// Token: 0x06030F99 RID: 200601 RVA: 0x00B5F999 File Offset: 0x00B5DB99
+		// Token: 0x06025AC5 RID: 154309 RVA: 0x00A9A7DD File Offset: 0x00A989DD
 		[NullableContext(2)]
 		public TsUiNavigationBehaviorListener GetAdsorbedListener()
 		{
@@ -1120,7 +1120,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return gamepadControlInternal.GetAdsorbedListener();
 		}
 
-		// Token: 0x06030F9A RID: 200602 RVA: 0x00B5F9AC File Offset: 0x00B5DBAC
+		// Token: 0x06025AC6 RID: 154310 RVA: 0x00A9A7F0 File Offset: 0x00A989F0
 		public void NotifyNavigationMousePositionDragState(bool state)
 		{
 			GamepadControlMouse gamepadControlInternal = this.GamepadControlInternal;
@@ -1131,7 +1131,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			gamepadControlInternal.NotifyNavigationMousePositionDragState(state);
 		}
 
-		// Token: 0x06030F9B RID: 200603 RVA: 0x00B5F9BF File Offset: 0x00B5DBBF
+		// Token: 0x06025AC7 RID: 154311 RVA: 0x00A9A803 File Offset: 0x00A98A03
 		[NullableContext(2)]
 		public Vector2D GetMouseViewportPosition()
 		{
@@ -1143,14 +1143,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return gamepadControlInternal.GetMouseViewportPosition();
 		}
 
-		// Token: 0x06030F9C RID: 200604 RVA: 0x00B5F9D2 File Offset: 0x00B5DBD2
+		// Token: 0x06025AC8 RID: 154312 RVA: 0x00A9A816 File Offset: 0x00A98A16
 		public bool IsNavigationMousePositionDragging()
 		{
 			GamepadControlMouse gamepadControlInternal = this.GamepadControlInternal;
 			return gamepadControlInternal != null && gamepadControlInternal.IsNavigationMousePositionDragging();
 		}
 
-		// Token: 0x06030F9D RID: 200605 RVA: 0x00B5F9E5 File Offset: 0x00B5DBE5
+		// Token: 0x06025AC9 RID: 154313 RVA: 0x00A9A829 File Offset: 0x00A98A29
 		public void SetDynamicScrollViewNavigationContext(NavigationDynamicScrollViewFindContext context)
 		{
 			if (this.DynamicScrollViewNavigationContext != null)
@@ -1160,14 +1160,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.DynamicScrollViewNavigationContext = context;
 		}
 
-		// Token: 0x06030F9E RID: 200606 RVA: 0x00B5F9F7 File Offset: 0x00B5DBF7
+		// Token: 0x06025ACA RID: 154314 RVA: 0x00A9A83B File Offset: 0x00A98A3B
 		public void ClearDynamicScrollViewNavigationContext()
 		{
 			this.DynamicScrollViewNavigationContext = null;
 		}
 
-		// Token: 0x170079D7 RID: 31191
-		// (get) Token: 0x06030F9F RID: 200607 RVA: 0x00B5FA00 File Offset: 0x00B5DC00
+		// Token: 0x17004D3F RID: 19775
+		// (get) Token: 0x06025ACB RID: 154315 RVA: 0x00A9A844 File Offset: 0x00A98A44
 		public bool IsWaitToFindDynamicGrid
 		{
 			get
@@ -1176,14 +1176,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030FA0 RID: 200608 RVA: 0x00B5FA0B File Offset: 0x00B5DC0B
+		// Token: 0x06025ACC RID: 154316 RVA: 0x00A9A84F File Offset: 0x00A98A4F
 		[NullableContext(2)]
 		public NavigationDynamicScrollViewFindContext GetDynamicScrollViewNavigationContext()
 		{
 			return this.DynamicScrollViewNavigationContext;
 		}
 
-		// Token: 0x06030FA1 RID: 200609 RVA: 0x00B5FA13 File Offset: 0x00B5DC13
+		// Token: 0x06025ACD RID: 154317 RVA: 0x00A9A857 File Offset: 0x00A98A57
 		public void TickViewHandle(float deltaTime)
 		{
 			this.RefreshNavigation();
@@ -1194,85 +1194,85 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.RefreshGamepadControl(deltaTime);
 		}
 
-		// Token: 0x0401A45C RID: 107612
+		// Token: 0x04014CCF RID: 85199
 		public readonly int TagId;
 
-		// Token: 0x0401A45D RID: 107613
+		// Token: 0x04014CD0 RID: 85200
 		public readonly string ViewName;
 
-		// Token: 0x0401A45E RID: 107614
+		// Token: 0x04014CD1 RID: 85201
 		private readonly OrderedDictionary<int, TsUiNavigationPanelConfig> PanelConfigMap = new OrderedDictionary<int, TsUiNavigationPanelConfig>();
 
-		// Token: 0x0401A45F RID: 107615
+		// Token: 0x04014CD2 RID: 85202
 		[Nullable(2)]
 		public readonly TsUiNavigationPanelConfig MainPanel;
 
-		// Token: 0x0401A460 RID: 107616
+		// Token: 0x04014CD3 RID: 85203
 		[Nullable(2)]
 		private TsUiNavigationPanelConfig CurrentPanel;
 
-		// Token: 0x0401A461 RID: 107617
+		// Token: 0x04014CD4 RID: 85204
 		[Nullable(2)]
 		private TsUiNavigationPanelConfig CurrentAddPanel;
 
-		// Token: 0x0401A462 RID: 107618
+		// Token: 0x04014CD5 RID: 85205
 		[Nullable(2)]
 		private TsUiNavigationBehaviorListener FocusListener;
 
-		// Token: 0x0401A463 RID: 107619
+		// Token: 0x04014CD6 RID: 85206
 		private bool IsInController = true;
 
-		// Token: 0x0401A464 RID: 107620
+		// Token: 0x04014CD7 RID: 85207
 		private bool IsActive = true;
 
-		// Token: 0x0401A465 RID: 107621
+		// Token: 0x04014CD8 RID: 85208
 		private bool IsUsable = true;
 
-		// Token: 0x0401A466 RID: 107622
+		// Token: 0x04014CD9 RID: 85209
 		private readonly Dictionary<TsUiNavigationPanelConfig, TsUiNavigationBehaviorListener> NonIndependentPanelFocusCache = new Dictionary<TsUiNavigationPanelConfig, TsUiNavigationBehaviorListener>();
 
-		// Token: 0x0401A467 RID: 107623
+		// Token: 0x04014CDA RID: 85210
 		private readonly NavigationScrollbarData ScrollBallData;
 
-		// Token: 0x0401A468 RID: 107624
+		// Token: 0x04014CDB RID: 85211
 		private EViewHandleState StateInternal = EViewHandleState.None;
 
-		// Token: 0x0401A469 RID: 107625
+		// Token: 0x04014CDC RID: 85212
 		private bool ResetCurrentPanelDirty;
 
-		// Token: 0x0401A46A RID: 107626
+		// Token: 0x04014CDD RID: 85213
 		private bool SkipMainPanelFallbackOnce;
 
-		// Token: 0x0401A46B RID: 107627
+		// Token: 0x04014CDE RID: 85214
 		private readonly Stat StatsObject = Stat.Create("UiNavigationViewHandle", "", "");
 
-		// Token: 0x0401A46C RID: 107628
+		// Token: 0x04014CDF RID: 85215
 		private bool RefreshScrollDataDirty;
 
-		// Token: 0x0401A46D RID: 107629
+		// Token: 0x04014CE0 RID: 85216
 		private bool RefreshHotKeyDirty;
 
-		// Token: 0x0401A46E RID: 107630
+		// Token: 0x04014CE1 RID: 85217
 		private bool RefreshHotKeyTextIdDirty;
 
-		// Token: 0x0401A46F RID: 107631
+		// Token: 0x04014CE2 RID: 85218
 		private bool RefreshNavigationDirty;
 
-		// Token: 0x0401A470 RID: 107632
+		// Token: 0x04014CE3 RID: 85219
 		private int RefreshListenerInstanceId;
 
-		// Token: 0x0401A471 RID: 107633
+		// Token: 0x04014CE4 RID: 85220
 		private bool IsRefreshNavigationSwallowed;
 
-		// Token: 0x0401A472 RID: 107634
+		// Token: 0x04014CE5 RID: 85221
 		[Nullable(2)]
 		private TsUiNavigationBehaviorListener SwitchNavigationFocusListener;
 
-		// Token: 0x0401A473 RID: 107635
+		// Token: 0x04014CE6 RID: 85222
 		[Nullable(2)]
 		private GamepadControlMouse GamepadControlInternal;
 
-		// Token: 0x0401A474 RID: 107636
+		// Token: 0x04014CE7 RID: 85223
 		[Nullable(2)]
 		private NavigationDynamicScrollViewFindContext DynamicScrollViewNavigationContext;
 	}

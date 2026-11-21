@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D42 RID: 3394
+	// Token: 0x02000E3C RID: 3644
 	public class IVehicleFeature
 	{
-		// Token: 0x06004D6A RID: 19818 RVA: 0x000C09C1 File Offset: 0x000BEBC1
-		[NullableContext(1)]
+		// Token: 0x06005286 RID: 21126 RVA: 0x000CC105 File Offset: 0x000CA305
 		public static IVehicleFeature Create(IVehicleFeature? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018A3 RID: 6307
-		// (get) Token: 0x06004D6B RID: 19819 RVA: 0x000C09E0 File Offset: 0x000BEBE0
+		// Token: 0x17001A09 RID: 6665
+		// (get) Token: 0x06005287 RID: 21127 RVA: 0x000CC124 File Offset: 0x000CA324
 		public virtual EVehicleFeatureFlag Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C63 RID: 11363
+		// Token: 0x04002F23 RID: 12067
 		private IVehicleFeature Instance;
 	}
 }

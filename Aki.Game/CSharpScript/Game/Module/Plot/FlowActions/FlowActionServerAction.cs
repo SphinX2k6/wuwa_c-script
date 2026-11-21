@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Plot.Flow;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050CC RID: 20684
+	// Token: 0x0200409C RID: 16540
 	public class FlowActionServerAction : FlowActionBase
 	{
-		// Token: 0x06034F1C RID: 216860 RVA: 0x00C8A4C4 File Offset: 0x00C886C4
+		// Token: 0x06029E15 RID: 171541 RVA: 0x00BD77AC File Offset: 0x00BD59AC
 		[NullableContext(1)]
 		public unsafe override void Execute(ActionInfo actionInfo, FlowContext context, bool isAutoFinish)
 		{
@@ -45,19 +45,19 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}
 		}
 
-		// Token: 0x06034F1D RID: 216861 RVA: 0x00C8A5C7 File Offset: 0x00C887C7
+		// Token: 0x06029E16 RID: 171542 RVA: 0x00BD78AF File Offset: 0x00BD5AAF
 		protected override void OnExecute()
 		{
 			this.RequestServerAction(!this.IsAutoFinish, null);
 		}
 
-		// Token: 0x06034F1E RID: 216862 RVA: 0x00C8A5D9 File Offset: 0x00C887D9
+		// Token: 0x06029E17 RID: 171543 RVA: 0x00BD78C1 File Offset: 0x00BD5AC1
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();
 		}
 
-		// Token: 0x06034F1F RID: 216863 RVA: 0x00C8A5E4 File Offset: 0x00C887E4
+		// Token: 0x06029E18 RID: 171544 RVA: 0x00BD78CC File Offset: 0x00BD5ACC
 		[NullableContext(2)]
 		protected unsafe void RequestServerAction(bool endWhenResponse = false, Action<ErrorCode> callback = null)
 		{
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			});
 		}
 
-		// Token: 0x0401C30A RID: 115466
+		// Token: 0x04016D3B RID: 93499
 		private bool IsAutoFinish;
 	}
 }

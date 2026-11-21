@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 
-// Token: 0x020028F4 RID: 10484
+// Token: 0x02001E6F RID: 7791
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,13 +11,13 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 })]
 public class RoleSelectionMediumItemGrid : LoopScrollMediumItemGrid<RoleDataBase>
 {
-	// Token: 0x06015A58 RID: 88664 RVA: 0x00576FC1 File Offset: 0x005751C1
+	// Token: 0x0601345C RID: 78940 RVA: 0x005A1E89 File Offset: 0x005A0089
 	public void SetNeedShowTrial(bool state)
 	{
 		this.NeedShowTrial = state;
 	}
 
-	// Token: 0x06015A59 RID: 88665 RVA: 0x00576FCC File Offset: 0x005751CC
+	// Token: 0x0601345D RID: 78941 RVA: 0x005A1E94 File Offset: 0x005A0094
 	protected override void OnRefresh(RoleDataBase data, bool isSelected, int gridIndex)
 	{
 		int dataId = data.GetDataId();
@@ -45,7 +45,7 @@ public class RoleSelectionMediumItemGrid : LoopScrollMediumItemGrid<RoleDataBase
 		this.SetSelected(isSelected, false);
 	}
 
-	// Token: 0x06015A5A RID: 88666 RVA: 0x005770BC File Offset: 0x005752BC
+	// Token: 0x0601345E RID: 78942 RVA: 0x005A1F84 File Offset: 0x005A0184
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, false);
@@ -57,12 +57,12 @@ public class RoleSelectionMediumItemGrid : LoopScrollMediumItemGrid<RoleDataBase
 		}
 	}
 
-	// Token: 0x06015A5B RID: 88667 RVA: 0x005770F3 File Offset: 0x005752F3
+	// Token: 0x0601345F RID: 78943 RVA: 0x005A1FBB File Offset: 0x005A01BB
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, true);
 	}
 
-	// Token: 0x0400A101 RID: 41217
+	// Token: 0x0400A4EC RID: 42220
 	private bool NeedShowTrial;
 }

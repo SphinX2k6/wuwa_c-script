@@ -7,16 +7,16 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001B6F RID: 7023
+// Token: 0x0200102E RID: 4142
 public class FloroRanchPhaseTargetView : UiViewBase
 {
-	// Token: 0x0600D0E2 RID: 53474 RVA: 0x002FBD6B File Offset: 0x002F9F6B
+	// Token: 0x0600A4F3 RID: 42227 RVA: 0x00306E43 File Offset: 0x00305043
 	[NullableContext(1)]
 	public FloroRanchPhaseTargetView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D0E3 RID: 53475 RVA: 0x002FBD74 File Offset: 0x002F9F74
+	// Token: 0x0600A4F4 RID: 42228 RVA: 0x00306E4C File Offset: 0x0030504C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -47,7 +47,7 @@ public class FloroRanchPhaseTargetView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D0E4 RID: 53476 RVA: 0x002FBEC0 File Offset: 0x002FA0C0
+	// Token: 0x0600A4F5 RID: 42229 RVA: 0x00306F98 File Offset: 0x00305198
 	protected override void OnBeforeShow()
 	{
 		FloroRanchPhaseTargetViewParam floroRanchPhaseTargetViewParam = (FloroRanchPhaseTargetViewParam)this.OpenParam;
@@ -100,7 +100,7 @@ public class FloroRanchPhaseTargetView : UiViewBase
 		text3.SetText(stageStartData.Reward.ToString(), true);
 	}
 
-	// Token: 0x0600D0E5 RID: 53477 RVA: 0x002FC032 File Offset: 0x002FA232
+	// Token: 0x0600A4F6 RID: 42230 RVA: 0x0030710A File Offset: 0x0030530A
 	private void OnClickSureBtn()
 	{
 		base.CloseMe(null);
@@ -110,35 +110,35 @@ public class FloroRanchPhaseTargetView : UiViewBase
 		}
 	}
 
-	// Token: 0x04005FDB RID: 24539
+	// Token: 0x040060AA RID: 24746
 	[Nullable(2)]
 	private Func<UniTask> CloseCallback;
 
-	// Token: 0x020080E2 RID: 32994
+	// Token: 0x02007270 RID: 29296
 	private class EComponents
 	{
-		// Token: 0x0402A0D2 RID: 172242
+		// Token: 0x04025406 RID: 152582
 		public const int TextureTitleBg = 0;
 
-		// Token: 0x0402A0D3 RID: 172243
+		// Token: 0x04025407 RID: 152583
 		public const int TextTitle = 1;
 
-		// Token: 0x0402A0D4 RID: 172244
+		// Token: 0x04025408 RID: 152584
 		public const int TextDescription = 2;
 
-		// Token: 0x0402A0D5 RID: 172245
+		// Token: 0x04025409 RID: 152585
 		public const int TextDayNum = 3;
 
-		// Token: 0x0402A0D6 RID: 172246
+		// Token: 0x0402540A RID: 152586
 		public const int TextTarget = 4;
 
-		// Token: 0x0402A0D7 RID: 172247
+		// Token: 0x0402540B RID: 152587
 		public const int TextReward = 5;
 
-		// Token: 0x0402A0D8 RID: 172248
+		// Token: 0x0402540C RID: 152588
 		public const int BtnSure = 6;
 
-		// Token: 0x0402A0D9 RID: 172249
+		// Token: 0x0402540D RID: 152589
 		public const int EndlessTitleItem = 7;
 	}
 }

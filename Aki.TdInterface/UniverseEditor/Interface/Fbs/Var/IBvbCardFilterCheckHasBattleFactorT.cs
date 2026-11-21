@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A2E RID: 14894
+	// Token: 0x02003E09 RID: 15881
 	public class IBvbCardFilterCheckHasBattleFactorT
 	{
-		// Token: 0x17006611 RID: 26129
-		// (get) Token: 0x06014265 RID: 82533 RVA: 0x002F2593 File Offset: 0x002F0793
-		// (set) Token: 0x06014266 RID: 82534 RVA: 0x002F259B File Offset: 0x002F079B
+		// Token: 0x17006B41 RID: 27457
+		// (get) Token: 0x06015581 RID: 87425 RVA: 0x0031577F File Offset: 0x0031397F
+		// (set) Token: 0x06015582 RID: 87426 RVA: 0x00315787 File Offset: 0x00313987
 		public EBvbCardFilterType Type { get; set; }
 
-		// Token: 0x17006612 RID: 26130
-		// (get) Token: 0x06014267 RID: 82535 RVA: 0x002F25A4 File Offset: 0x002F07A4
-		// (set) Token: 0x06014268 RID: 82536 RVA: 0x002F25AC File Offset: 0x002F07AC
+		// Token: 0x17006B42 RID: 27458
+		// (get) Token: 0x06015583 RID: 87427 RVA: 0x00315790 File Offset: 0x00313990
+		// (set) Token: 0x06015584 RID: 87428 RVA: 0x00315798 File Offset: 0x00313998
 		public List<int> BattleFactorList { get; set; }
 
-		// Token: 0x06014269 RID: 82537 RVA: 0x002F25B5 File Offset: 0x002F07B5
+		// Token: 0x06015585 RID: 87429 RVA: 0x003157A1 File Offset: 0x003139A1
 		public IBvbCardFilterCheckHasBattleFactorT()
 		{
 			this.Type = EBvbCardFilterType.CompareCost;

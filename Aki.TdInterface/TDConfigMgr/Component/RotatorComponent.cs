@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000883 RID: 2179
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000926 RID: 2342
 	public class RotatorComponent : InteractiveComponent
 	{
-		// Token: 0x0600306B RID: 12395 RVA: 0x0007C860 File Offset: 0x0007AA60
+		// Token: 0x060033A7 RID: 13223 RVA: 0x00083D48 File Offset: 0x00081F48
 		private RotatorComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600306C RID: 12396 RVA: 0x0007C898 File Offset: 0x0007AA98
+		// Token: 0x060033A8 RID: 13224 RVA: 0x00083D80 File Offset: 0x00081F80
 		public static RotatorComponent Create([Nullable(2)] RotatorComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600306D RID: 12397 RVA: 0x0007C8AB File Offset: 0x0007AAAB
+		// Token: 0x060033A9 RID: 13225 RVA: 0x00083D93 File Offset: 0x00081F93
 		public static RotatorComponent CreateFromSetValue([Nullable(2)] RotatorComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600306E RID: 12398 RVA: 0x0007C8C0 File Offset: 0x0007AAC0
+		// Token: 0x060033AA RID: 13226 RVA: 0x00083DA8 File Offset: 0x00081FA8
 		public new RotatorComponent_SetValue ToSetValue()
 		{
 			return new RotatorComponent_SetValue
@@ -73,9 +71,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000CD4 RID: 3284
-		// (get) Token: 0x0600306F RID: 12399 RVA: 0x0007C97C File Offset: 0x0007AB7C
-		// (set) Token: 0x06003070 RID: 12400 RVA: 0x0007C9B6 File Offset: 0x0007ABB6
+		// Token: 0x17000D9D RID: 3485
+		// (get) Token: 0x060033AB RID: 13227 RVA: 0x00083E64 File Offset: 0x00082064
+		// (set) Token: 0x060033AC RID: 13228 RVA: 0x00083E9E File Offset: 0x0008209E
 		public override bool? Disabled
 		{
 			get
@@ -97,9 +95,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CD5 RID: 3285
-		// (get) Token: 0x06003071 RID: 12401 RVA: 0x0007C9C4 File Offset: 0x0007ABC4
-		// (set) Token: 0x06003072 RID: 12402 RVA: 0x0007C9EF File Offset: 0x0007ABEF
+		// Token: 0x17000D9E RID: 3486
+		// (get) Token: 0x060033AD RID: 13229 RVA: 0x00083EAC File Offset: 0x000820AC
+		// (set) Token: 0x060033AE RID: 13230 RVA: 0x00083ED7 File Offset: 0x000820D7
 		public override string Content
 		{
 			get
@@ -120,9 +118,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CD6 RID: 3286
-		// (get) Token: 0x06003073 RID: 12403 RVA: 0x0007C9FD File Offset: 0x0007ABFD
-		// (set) Token: 0x06003074 RID: 12404 RVA: 0x0007CA28 File Offset: 0x0007AC28
+		// Token: 0x17000D9F RID: 3487
+		// (get) Token: 0x060033AF RID: 13231 RVA: 0x00083EE5 File Offset: 0x000820E5
+		// (set) Token: 0x060033B0 RID: 13232 RVA: 0x00083F10 File Offset: 0x00082110
 		public override string Icon
 		{
 			get
@@ -143,9 +141,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CD7 RID: 3287
-		// (get) Token: 0x06003075 RID: 12405 RVA: 0x0007CA38 File Offset: 0x0007AC38
-		// (set) Token: 0x06003076 RID: 12406 RVA: 0x0007CA62 File Offset: 0x0007AC62
+		// Token: 0x17000DA0 RID: 3488
+		// (get) Token: 0x060033B1 RID: 13233 RVA: 0x00083F20 File Offset: 0x00082120
+		// (set) Token: 0x060033B2 RID: 13234 RVA: 0x00083F4A File Offset: 0x0008214A
 		public override bool? EdIsLocked
 		{
 			get
@@ -162,9 +160,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CD8 RID: 3288
-		// (get) Token: 0x06003077 RID: 12407 RVA: 0x0007CA70 File Offset: 0x0007AC70
-		// (set) Token: 0x06003078 RID: 12408 RVA: 0x0007CAD1 File Offset: 0x0007ACD1
+		// Token: 0x17000DA1 RID: 3489
+		// (get) Token: 0x060033B3 RID: 13235 RVA: 0x00083F58 File Offset: 0x00082158
+		// (set) Token: 0x060033B4 RID: 13236 RVA: 0x00083FB9 File Offset: 0x000821B9
 		public virtual VectorInfo RotatorSpeed
 		{
 			get
@@ -192,9 +190,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CD9 RID: 3289
-		// (get) Token: 0x06003079 RID: 12409 RVA: 0x0007CAE8 File Offset: 0x0007ACE8
-		// (set) Token: 0x0600307A RID: 12410 RVA: 0x0007CB49 File Offset: 0x0007AD49
+		// Token: 0x17000DA2 RID: 3490
+		// (get) Token: 0x060033B5 RID: 13237 RVA: 0x00083FD0 File Offset: 0x000821D0
+		// (set) Token: 0x060033B6 RID: 13238 RVA: 0x00084031 File Offset: 0x00082231
 		public virtual VectorInfo LocationOffset
 		{
 			get
@@ -222,9 +220,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CDA RID: 3290
-		// (get) Token: 0x0600307B RID: 12411 RVA: 0x0007CB60 File Offset: 0x0007AD60
-		// (set) Token: 0x0600307C RID: 12412 RVA: 0x0007CBC1 File Offset: 0x0007ADC1
+		// Token: 0x17000DA3 RID: 3491
+		// (get) Token: 0x060033B7 RID: 13239 RVA: 0x00084048 File Offset: 0x00082248
+		// (set) Token: 0x060033B8 RID: 13240 RVA: 0x000840A9 File Offset: 0x000822A9
 		public virtual VectorInfo RotationOffset
 		{
 			get
@@ -252,9 +250,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CDB RID: 3291
-		// (get) Token: 0x0600307D RID: 12413 RVA: 0x0007CBD8 File Offset: 0x0007ADD8
-		// (set) Token: 0x0600307E RID: 12414 RVA: 0x0007CC39 File Offset: 0x0007AE39
+		// Token: 0x17000DA4 RID: 3492
+		// (get) Token: 0x060033B9 RID: 13241 RVA: 0x000840C0 File Offset: 0x000822C0
+		// (set) Token: 0x060033BA RID: 13242 RVA: 0x00084121 File Offset: 0x00082321
 		public virtual VectorInfo RotationMapping
 		{
 			get
@@ -282,9 +280,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CDC RID: 3292
-		// (get) Token: 0x0600307F RID: 12415 RVA: 0x0007CC4E File Offset: 0x0007AE4E
-		// (set) Token: 0x06003080 RID: 12416 RVA: 0x0007CC79 File Offset: 0x0007AE79
+		// Token: 0x17000DA5 RID: 3493
+		// (get) Token: 0x060033BB RID: 13243 RVA: 0x00084136 File Offset: 0x00082336
+		// (set) Token: 0x060033BC RID: 13244 RVA: 0x00084161 File Offset: 0x00082361
 		public virtual bool IsLocalSpace
 		{
 			get
@@ -301,9 +299,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CDD RID: 3293
-		// (get) Token: 0x06003081 RID: 12417 RVA: 0x0007CC87 File Offset: 0x0007AE87
-		// (set) Token: 0x06003082 RID: 12418 RVA: 0x0007CCB2 File Offset: 0x0007AEB2
+		// Token: 0x17000DA6 RID: 3494
+		// (get) Token: 0x060033BD RID: 13245 RVA: 0x0008416F File Offset: 0x0008236F
+		// (set) Token: 0x060033BE RID: 13246 RVA: 0x0008419A File Offset: 0x0008239A
 		public virtual int EntityId
 		{
 			get
@@ -324,9 +322,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CDE RID: 3294
-		// (get) Token: 0x06003083 RID: 12419 RVA: 0x0007CCC0 File Offset: 0x0007AEC0
-		// (set) Token: 0x06003084 RID: 12420 RVA: 0x0007CCEB File Offset: 0x0007AEEB
+		// Token: 0x17000DA7 RID: 3495
+		// (get) Token: 0x060033BF RID: 13247 RVA: 0x000841A8 File Offset: 0x000823A8
+		// (set) Token: 0x060033C0 RID: 13248 RVA: 0x000841D3 File Offset: 0x000823D3
 		public virtual bool IsRotatorSelf
 		{
 			get
@@ -343,9 +341,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CDF RID: 3295
-		// (get) Token: 0x06003085 RID: 12421 RVA: 0x0007CCFC File Offset: 0x0007AEFC
-		// (set) Token: 0x06003086 RID: 12422 RVA: 0x0007CD5D File Offset: 0x0007AF5D
+		// Token: 0x17000DA8 RID: 3496
+		// (get) Token: 0x060033C1 RID: 13249 RVA: 0x000841E4 File Offset: 0x000823E4
+		// (set) Token: 0x060033C2 RID: 13250 RVA: 0x00084245 File Offset: 0x00082445
 		public virtual IEventRotator InteractAction
 		{
 			get
@@ -373,9 +371,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CE0 RID: 3296
-		// (get) Token: 0x06003087 RID: 12423 RVA: 0x0007CD72 File Offset: 0x0007AF72
-		// (set) Token: 0x06003088 RID: 12424 RVA: 0x0007CD9D File Offset: 0x0007AF9D
+		// Token: 0x17000DA9 RID: 3497
+		// (get) Token: 0x060033C3 RID: 13251 RVA: 0x0008425A File Offset: 0x0008245A
+		// (set) Token: 0x060033C4 RID: 13252 RVA: 0x00084285 File Offset: 0x00082485
 		public virtual bool IsLockZ
 		{
 			get
@@ -392,9 +390,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CE1 RID: 3297
-		// (get) Token: 0x06003089 RID: 12425 RVA: 0x0007CDAB File Offset: 0x0007AFAB
-		// (set) Token: 0x0600308A RID: 12426 RVA: 0x0007CDD6 File Offset: 0x0007AFD6
+		// Token: 0x17000DAA RID: 3498
+		// (get) Token: 0x060033C5 RID: 13253 RVA: 0x00084293 File Offset: 0x00082493
+		// (set) Token: 0x060033C6 RID: 13254 RVA: 0x000842BE File Offset: 0x000824BE
 		public virtual bool IsRecovery
 		{
 			get
@@ -411,42 +409,42 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001FD4 RID: 8148
+		// Token: 0x040021E6 RID: 8678
 		[Nullable(2)]
 		protected new RotatorComponent FbInstance;
 
-		// Token: 0x04001FD5 RID: 8149
+		// Token: 0x040021E7 RID: 8679
 		[Nullable(2)]
 		protected new RotatorComponent_SetValue PocoInterface;
 
-		// Token: 0x04001FD6 RID: 8150
+		// Token: 0x040021E8 RID: 8680
 		private VectorInfo _RotatorSpeedCache;
 
-		// Token: 0x04001FD7 RID: 8151
+		// Token: 0x040021E9 RID: 8681
 		private bool _RotatorSpeedInited;
 
-		// Token: 0x04001FD8 RID: 8152
+		// Token: 0x040021EA RID: 8682
 		private VectorInfo _LocationOffsetCache;
 
-		// Token: 0x04001FD9 RID: 8153
+		// Token: 0x040021EB RID: 8683
 		private bool _LocationOffsetInited;
 
-		// Token: 0x04001FDA RID: 8154
+		// Token: 0x040021EC RID: 8684
 		private VectorInfo _RotationOffsetCache;
 
-		// Token: 0x04001FDB RID: 8155
+		// Token: 0x040021ED RID: 8685
 		private bool _RotationOffsetInited;
 
-		// Token: 0x04001FDC RID: 8156
+		// Token: 0x040021EE RID: 8686
 		private VectorInfo _RotationMappingCache;
 
-		// Token: 0x04001FDD RID: 8157
+		// Token: 0x040021EF RID: 8687
 		private bool _RotationMappingInited;
 
-		// Token: 0x04001FDE RID: 8158
+		// Token: 0x040021F0 RID: 8688
 		private IEventRotator _InteractActionCache;
 
-		// Token: 0x04001FDF RID: 8159
+		// Token: 0x040021F1 RID: 8689
 		private bool _InteractActionInited;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DF8 RID: 3576
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EF4 RID: 3828
 	public class IDollGrabInfiniteModeData
 	{
-		// Token: 0x060050FC RID: 20732 RVA: 0x000C7DBA File Offset: 0x000C5FBA
+		// Token: 0x06005623 RID: 22051 RVA: 0x000D3682 File Offset: 0x000D1882
 		public static IDollGrabInfiniteModeData Create(IDollGrabInfiniteModeData? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AC9 RID: 6857
-		// (get) Token: 0x060050FD RID: 20733 RVA: 0x000C7DDC File Offset: 0x000C5FDC
+		// Token: 0x17001C36 RID: 7222
+		// (get) Token: 0x06005624 RID: 22052 RVA: 0x000D36A4 File Offset: 0x000D18A4
 		public virtual List<IDollGrabStandbyPoolItem> StandbyItemPool
 		{
 			get
@@ -44,8 +42,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001ACA RID: 6858
-		// (get) Token: 0x060050FE RID: 20734 RVA: 0x000C7E45 File Offset: 0x000C6045
+		// Token: 0x17001C37 RID: 7223
+		// (get) Token: 0x06005625 RID: 22053 RVA: 0x000D370D File Offset: 0x000D190D
 		public virtual string RefreshIntervalCurve
 		{
 			get
@@ -54,19 +52,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001ACB RID: 6859
-		// (get) Token: 0x060050FF RID: 20735 RVA: 0x000C7E54 File Offset: 0x000C6054
+		// Token: 0x17001C38 RID: 7224
+		// (get) Token: 0x06005626 RID: 22054 RVA: 0x000D371C File Offset: 0x000D191C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IDollGrabInfiniteStageConfig> StageConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -89,19 +87,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001ACC RID: 6860
-		// (get) Token: 0x06005100 RID: 20736 RVA: 0x000C7ED0 File Offset: 0x000C60D0
+		// Token: 0x17001C39 RID: 7225
+		// (get) Token: 0x06005627 RID: 22055 RVA: 0x000D3798 File Offset: 0x000D1998
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IDollGrabInfiniteScoreReward> ScoreRewards
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -124,8 +122,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001ACD RID: 6861
-		// (get) Token: 0x06005101 RID: 20737 RVA: 0x000C7F4A File Offset: 0x000C614A
+		// Token: 0x17001C3A RID: 7226
+		// (get) Token: 0x06005628 RID: 22056 RVA: 0x000D3812 File Offset: 0x000D1A12
 		[Nullable(2)]
 		public virtual IDollGrabInfiniteScoreReward ScoreReward
 		{
@@ -142,8 +140,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001ACE RID: 6862
-		// (get) Token: 0x06005102 RID: 20738 RVA: 0x000C7F80 File Offset: 0x000C6180
+		// Token: 0x17001C3B RID: 7227
+		// (get) Token: 0x06005629 RID: 22057 RVA: 0x000D3848 File Offset: 0x000D1A48
 		public virtual int? UnlockConditionGroupId
 		{
 			get
@@ -156,42 +154,42 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E8B RID: 11915
+		// Token: 0x04003153 RID: 12627
 		private IDollGrabInfiniteModeData Instance;
 
-		// Token: 0x04002E8C RID: 11916
+		// Token: 0x04003154 RID: 12628
 		private List<IDollGrabStandbyPoolItem> _StandbyItemPoolCache;
 
-		// Token: 0x04002E8D RID: 11917
+		// Token: 0x04003155 RID: 12629
 		private bool _StandbyItemPoolInited;
 
-		// Token: 0x04002E8E RID: 11918
+		// Token: 0x04003156 RID: 12630
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IDollGrabInfiniteStageConfig> _StageConfigsCache;
 
-		// Token: 0x04002E8F RID: 11919
+		// Token: 0x04003157 RID: 12631
 		private bool _StageConfigsInited;
 
-		// Token: 0x04002E90 RID: 11920
+		// Token: 0x04003158 RID: 12632
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IDollGrabInfiniteScoreReward> _ScoreRewardsCache;
 
-		// Token: 0x04002E91 RID: 11921
+		// Token: 0x04003159 RID: 12633
 		private bool _ScoreRewardsInited;
 
-		// Token: 0x04002E92 RID: 11922
+		// Token: 0x0400315A RID: 12634
 		[Nullable(2)]
 		private IDollGrabInfiniteScoreReward _ScoreRewardCache;
 
-		// Token: 0x04002E93 RID: 11923
+		// Token: 0x0400315B RID: 12635
 		private bool _ScoreRewardInited;
 	}
 }

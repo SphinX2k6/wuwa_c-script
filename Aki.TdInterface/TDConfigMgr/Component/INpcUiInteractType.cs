@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200059A RID: 1434
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000603 RID: 1539
 	public class INpcUiInteractType
 	{
-		// Token: 0x06001E08 RID: 7688 RVA: 0x00055388 File Offset: 0x00053588
+		// Token: 0x0600200E RID: 8206 RVA: 0x0005A244 File Offset: 0x00058444
 		private INpcUiInteractType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001E09 RID: 7689 RVA: 0x000553C0 File Offset: 0x000535C0
+		// Token: 0x0600200F RID: 8207 RVA: 0x0005A27C File Offset: 0x0005847C
 		public static INpcUiInteractType Create([Nullable(2)] INpcUiInteractType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001E0A RID: 7690 RVA: 0x000553D3 File Offset: 0x000535D3
+		// Token: 0x06002010 RID: 8208 RVA: 0x0005A28F File Offset: 0x0005848F
 		public static INpcUiInteractType CreateFromSetValue([Nullable(2)] INpcUiInteractType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001E0B RID: 7691 RVA: 0x000553E6 File Offset: 0x000535E6
+		// Token: 0x06002011 RID: 8209 RVA: 0x0005A2A2 File Offset: 0x000584A2
 		public INpcUiInteractType_SetValue ToSetValue()
 		{
 			return new INpcUiInteractType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170007FC RID: 2044
-		// (get) Token: 0x06001E0C RID: 7692 RVA: 0x000553F9 File Offset: 0x000535F9
-		// (set) Token: 0x06001E0D RID: 7693 RVA: 0x00055424 File Offset: 0x00053624
+		// Token: 0x17000881 RID: 2177
+		// (get) Token: 0x06002012 RID: 8210 RVA: 0x0005A2B5 File Offset: 0x000584B5
+		// (set) Token: 0x06002013 RID: 8211 RVA: 0x0005A2E0 File Offset: 0x000584E0
 		public virtual ENpcUiInteractType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400156E RID: 5486
+		// Token: 0x040016DC RID: 5852
 		[Nullable(2)]
 		protected INpcUiInteractType FbInstance;
 
-		// Token: 0x0400156F RID: 5487
+		// Token: 0x040016DD RID: 5853
 		[Nullable(2)]
 		protected INpcUiInteractType_SetValue PocoInterface;
 	}

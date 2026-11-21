@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x02006928 RID: 26920
+	// Token: 0x02005878 RID: 22648
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 	})]
 	public class AnniversaryWorldRewardItem : GridProxyAbstract<AnniversaryWorldRewardItemData>
 	{
-		// Token: 0x060431CB RID: 274891 RVA: 0x0105B3BC File Offset: 0x010595BC
+		// Token: 0x06037D23 RID: 228643 RVA: 0x00F9C9E8 File Offset: 0x00F9ABE8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			};
 		}
 
-		// Token: 0x060431CC RID: 274892 RVA: 0x0105B491 File Offset: 0x01059691
+		// Token: 0x06037D24 RID: 228644 RVA: 0x00F9CABD File Offset: 0x00F9ACBD
 		public void SetClickCallback(Action<int> callback)
 		{
 			this.ClickCallback = callback;
 		}
 
-		// Token: 0x060431CD RID: 274893 RVA: 0x0105B49C File Offset: 0x0105969C
+		// Token: 0x06037D25 RID: 228645 RVA: 0x00F9CAC8 File Offset: 0x00F9ACC8
 		public override void Refresh(AnniversaryWorldRewardItemData data, bool isSelected, int gridIndex)
 		{
 			if (data == null)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x060431CE RID: 274894 RVA: 0x0105B594 File Offset: 0x01059794
+		// Token: 0x06037D26 RID: 228646 RVA: 0x00F9CBC0 File Offset: 0x00F9ADC0
 		private void SetBgTexture(EAnniversaryProgressRewardState state)
 		{
 			string text = null;
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x060431CF RID: 274895 RVA: 0x0105B60B File Offset: 0x0105980B
+		// Token: 0x06037D27 RID: 228647 RVA: 0x00F9CC37 File Offset: 0x00F9AE37
 		private void OnClick()
 		{
 			if (this.Data != null)
@@ -126,37 +126,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x04022EFD RID: 143101
+		// Token: 0x0401D759 RID: 120665
 		[Nullable(2)]
 		private AnniversaryWorldRewardItemData Data;
 
-		// Token: 0x04022EFE RID: 143102
+		// Token: 0x0401D75A RID: 120666
 		[Nullable(2)]
 		private Action<int> ClickCallback;
 
-		// Token: 0x0200CACF RID: 51919
+		// Token: 0x0200B497 RID: 46231
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403D4AE RID: 251054
+			// Token: 0x04037D88 RID: 228744
 			public const int BtnItem = 0;
 
-			// Token: 0x0403D4AF RID: 251055
+			// Token: 0x04037D89 RID: 228745
 			public const int TexBgFinished = 1;
 
-			// Token: 0x0403D4B0 RID: 251056
+			// Token: 0x04037D8A RID: 228746
 			public const int TexRewardIcon = 2;
 
-			// Token: 0x0403D4B1 RID: 251057
+			// Token: 0x04037D8B RID: 228747
 			public const int TexFinishedIcon = 3;
 
-			// Token: 0x0403D4B2 RID: 251058
+			// Token: 0x04037D8C RID: 228748
 			public const int PnlFinished = 4;
 
-			// Token: 0x0403D4B3 RID: 251059
+			// Token: 0x04037D8D RID: 228749
 			public const int TxtProgress = 5;
 
-			// Token: 0x0403D4B4 RID: 251060
+			// Token: 0x04037D8E RID: 228750
 			public const int FxEffect = 6;
 		}
 	}

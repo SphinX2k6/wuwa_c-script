@@ -8,24 +8,24 @@ using CSharpScript.Game.Module.Plot.Flow;
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 {
-	// Token: 0x020069DD RID: 27101
+	// Token: 0x02005B39 RID: 23353
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TuningStandBubbleTypeBase
 	{
-		// Token: 0x060436CE RID: 276174 RVA: 0x0107A468 File Offset: 0x01078668
+		// Token: 0x0603970A RID: 235274 RVA: 0x0101E91C File Offset: 0x0101CB1C
 		public bool GetCanInterruptBySelf()
 		{
 			return this.CanInterruptBySelf;
 		}
 
-		// Token: 0x060436CF RID: 276175 RVA: 0x0107A470 File Offset: 0x01078670
+		// Token: 0x0603970B RID: 235275 RVA: 0x0101E924 File Offset: 0x0101CB24
 		public virtual bool TryStartBubble(bool canPlay)
 		{
 			return false;
 		}
 
-		// Token: 0x060436D0 RID: 276176 RVA: 0x0107A474 File Offset: 0x01078674
+		// Token: 0x0603970C RID: 235276 RVA: 0x0101E928 File Offset: 0x0101CB28
 		public unsafe void Init(PlayFlow playFlow)
 		{
 			this.PlayFlow = playFlow;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 			}
 		}
 
-		// Token: 0x060436D1 RID: 276177 RVA: 0x0107A5F4 File Offset: 0x010787F4
+		// Token: 0x0603970D RID: 235277 RVA: 0x0101EAA8 File Offset: 0x0101CCA8
 		public void Interrupted()
 		{
 			if (this.TimerHandle != null)
@@ -80,20 +80,20 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 			}
 		}
 
-		// Token: 0x060436D2 RID: 276178 RVA: 0x0107A628 File Offset: 0x01078828
+		// Token: 0x0603970E RID: 235278 RVA: 0x0101EADC File Offset: 0x0101CCDC
 		protected void OnBubbleEnd()
 		{
 			EventSystem.Instance.Emit<ETuningStandBubbleTriggerType>(EEventName.TuningStandBubbleEnd, this.BubbleType);
 		}
 
-		// Token: 0x060436D3 RID: 276179 RVA: 0x0107A640 File Offset: 0x01078840
+		// Token: 0x0603970F RID: 235279 RVA: 0x0101EAF4 File Offset: 0x0101CCF4
 		public void Destroy()
 		{
 			this.Interrupted();
 			this.PlayFlow = null;
 		}
 
-		// Token: 0x060436D4 RID: 276180 RVA: 0x0107A650 File Offset: 0x01078850
+		// Token: 0x06039710 RID: 235280 RVA: 0x0101EB04 File Offset: 0x0101CD04
 		[return: Nullable(2)]
 		protected ITuningStandBubbleData CreateBubbleData(ITalkItem talkData)
 		{
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 			return tuningStandBubbleData;
 		}
 
-		// Token: 0x060436D5 RID: 276181 RVA: 0x0107A710 File Offset: 0x01078910
+		// Token: 0x06039711 RID: 235281 RVA: 0x0101EBC4 File Offset: 0x0101CDC4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 			return new ValueTuple<bool, bool, string>(true, flag, headIconAsset);
 		}
 
-		// Token: 0x060436D6 RID: 276182 RVA: 0x0107A7BC File Offset: 0x010789BC
+		// Token: 0x06039712 RID: 235282 RVA: 0x0101EC70 File Offset: 0x0101CE70
 		protected void UpdateBubble()
 		{
 			if (this.CurIndex >= this.TalkList.Count)
@@ -173,27 +173,27 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 			}, (float)((long)(tuningStandBubbleData.WaitTime * 1000f)), null, null, true, 1f);
 		}
 
-		// Token: 0x040232F4 RID: 144116
+		// Token: 0x0401E4E4 RID: 124132
 		protected bool CanInterruptBySelf;
 
-		// Token: 0x040232F5 RID: 144117
+		// Token: 0x0401E4E5 RID: 124133
 		[Nullable(2)]
 		protected PlayFlow PlayFlow;
 
-		// Token: 0x040232F6 RID: 144118
+		// Token: 0x0401E4E6 RID: 124134
 		protected ETuningStandBubbleTriggerType BubbleType;
 
-		// Token: 0x040232F7 RID: 144119
+		// Token: 0x0401E4E7 RID: 124135
 		protected List<ITuningStandBubbleData> TalkList = new List<ITuningStandBubbleData>();
 
-		// Token: 0x040232F8 RID: 144120
+		// Token: 0x0401E4E8 RID: 124136
 		[Nullable(2)]
 		protected TimerHandle TimerHandle;
 
-		// Token: 0x040232F9 RID: 144121
+		// Token: 0x0401E4E9 RID: 124137
 		protected int CurIndex;
 
-		// Token: 0x040232FA RID: 144122
+		// Token: 0x0401E4EA RID: 124138
 		protected float RemainTime = 2f;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000091 RID: 145
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000096 RID: 150
 	public class EditCustomAoiComponent : IComponentBase
 	{
-		// Token: 0x06000354 RID: 852 RVA: 0x0001B930 File Offset: 0x00019B30
+		// Token: 0x06000358 RID: 856 RVA: 0x0001C2A4 File Offset: 0x0001A4A4
 		private EditCustomAoiComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000355 RID: 853 RVA: 0x0001B968 File Offset: 0x00019B68
+		// Token: 0x06000359 RID: 857 RVA: 0x0001C2DC File Offset: 0x0001A4DC
 		public static EditCustomAoiComponent Create([Nullable(2)] EditCustomAoiComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000356 RID: 854 RVA: 0x0001B97B File Offset: 0x00019B7B
+		// Token: 0x0600035A RID: 858 RVA: 0x0001C2EF File Offset: 0x0001A4EF
 		public static EditCustomAoiComponent CreateFromSetValue([Nullable(2)] EditCustomAoiComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000357 RID: 855 RVA: 0x0001B98E File Offset: 0x00019B8E
+		// Token: 0x0600035B RID: 859 RVA: 0x0001C302 File Offset: 0x0001A502
 		public new EditCustomAoiComponent_SetValue ToSetValue()
 		{
 			return new EditCustomAoiComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000120 RID: 288
-		// (get) Token: 0x06000358 RID: 856 RVA: 0x0001B9BC File Offset: 0x00019BBC
-		// (set) Token: 0x06000359 RID: 857 RVA: 0x0001B9F6 File Offset: 0x00019BF6
+		// Token: 0x17000122 RID: 290
+		// (get) Token: 0x0600035C RID: 860 RVA: 0x0001C330 File Offset: 0x0001A530
+		// (set) Token: 0x0600035D RID: 861 RVA: 0x0001C36A File Offset: 0x0001A56A
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000121 RID: 289
-		// (get) Token: 0x0600035A RID: 858 RVA: 0x0001BA04 File Offset: 0x00019C04
-		// (set) Token: 0x0600035B RID: 859 RVA: 0x0001BA2E File Offset: 0x00019C2E
+		// Token: 0x17000123 RID: 291
+		// (get) Token: 0x0600035E RID: 862 RVA: 0x0001C378 File Offset: 0x0001A578
+		// (set) Token: 0x0600035F RID: 863 RVA: 0x0001C3A2 File Offset: 0x0001A5A2
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000122 RID: 290
-		// (get) Token: 0x0600035C RID: 860 RVA: 0x0001BA3C File Offset: 0x00019C3C
-		// (set) Token: 0x0600035D RID: 861 RVA: 0x0001BA63 File Offset: 0x00019C63
+		// Token: 0x17000124 RID: 292
+		// (get) Token: 0x06000360 RID: 864 RVA: 0x0001C3B0 File Offset: 0x0001A5B0
+		// (set) Token: 0x06000361 RID: 865 RVA: 0x0001C3D7 File Offset: 0x0001A5D7
 		public virtual List<int> Entities
 		{
 			get
@@ -129,11 +127,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000398 RID: 920
+		// Token: 0x040003B1 RID: 945
 		[Nullable(2)]
 		protected new EditCustomAoiComponent FbInstance;
 
-		// Token: 0x04000399 RID: 921
+		// Token: 0x040003B2 RID: 946
 		[Nullable(2)]
 		protected new EditCustomAoiComponent_SetValue PocoInterface;
 	}

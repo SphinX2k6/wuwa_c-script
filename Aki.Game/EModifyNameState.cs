@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020023BB RID: 9147
+// Token: 0x020018A0 RID: 6304
 public enum EModifyNameState
 {
-	// Token: 0x04008A36 RID: 35382
+	// Token: 0x04008B7D RID: 35709
 	CanBeModified,
-	// Token: 0x04008A37 RID: 35383
+	// Token: 0x04008B7E RID: 35710
 	UnderModification,
-	// Token: 0x04008A38 RID: 35384
+	// Token: 0x04008B7F RID: 35711
 	UnModifiable
 }

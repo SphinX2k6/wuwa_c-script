@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
@@ -9,13 +8,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001250 RID: 4688
+// Token: 0x02000704 RID: 1796
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoMonopolyTaskView : DangoMonopolyViewBase
 {
-	// Token: 0x17000ACF RID: 2767
-	// (get) Token: 0x06007F56 RID: 32598 RVA: 0x001AF890 File Offset: 0x001ADA90
+	// Token: 0x17000AEF RID: 2799
+	// (get) Token: 0x060052ED RID: 21229 RVA: 0x001B8548 File Offset: 0x001B6748
 	[Nullable(2)]
 	public new DangoMonopolyTaskViewParam OpenParam
 	{
@@ -26,12 +25,12 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007F57 RID: 32599 RVA: 0x001AF89D File Offset: 0x001ADA9D
+	// Token: 0x060052EE RID: 21230 RVA: 0x001B8555 File Offset: 0x001B6755
 	public DangoMonopolyTaskView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007F58 RID: 32600 RVA: 0x001AF8A8 File Offset: 0x001ADAA8
+	// Token: 0x060052EF RID: 21231 RVA: 0x001B8560 File Offset: 0x001B6760
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -52,12 +51,12 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		};
 	}
 
-	// Token: 0x06007F59 RID: 32601 RVA: 0x001AF9AB File Offset: 0x001ADBAB
+	// Token: 0x060052F0 RID: 21232 RVA: 0x001B8663 File Offset: 0x001B6863
 	private void InitDataParam()
 	{
 	}
 
-	// Token: 0x06007F5A RID: 32602 RVA: 0x001AF9B0 File Offset: 0x001ADBB0
+	// Token: 0x060052F1 RID: 21233 RVA: 0x001B8668 File Offset: 0x001B6868
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoMonopolyTaskView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -68,7 +67,7 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007F5B RID: 32603 RVA: 0x001AF9F3 File Offset: 0x001ADBF3
+	// Token: 0x060052F2 RID: 21234 RVA: 0x001B86AB File Offset: 0x001B68AB
 	protected override void OnStart()
 	{
 		UUIText text = base.GetText(6);
@@ -79,19 +78,19 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		text.ShowTextNew("DangoMonopoly_title_4");
 	}
 
-	// Token: 0x06007F5C RID: 32604 RVA: 0x001AFA0B File Offset: 0x001ADC0B
+	// Token: 0x060052F3 RID: 21235 RVA: 0x001B86C3 File Offset: 0x001B68C3
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<EDangoMonopolyTaskUpdateType>(EEventName.DangoMonopolyTaskUpdate, new Action<EDangoMonopolyTaskUpdateType>(this.EventDangoMonopolyTaskUpdate));
 	}
 
-	// Token: 0x06007F5D RID: 32605 RVA: 0x001AFA29 File Offset: 0x001ADC29
+	// Token: 0x060052F4 RID: 21236 RVA: 0x001B86E1 File Offset: 0x001B68E1
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.DangoMonopolyTaskUpdate, new Action<EDangoMonopolyTaskUpdateType>(this.EventDangoMonopolyTaskUpdate));
 	}
 
-	// Token: 0x06007F5E RID: 32606 RVA: 0x001AFA48 File Offset: 0x001ADC48
+	// Token: 0x060052F5 RID: 21237 RVA: 0x001B8700 File Offset: 0x001B6900
 	protected override void OnBeforeShow()
 	{
 		this.TabFinish();
@@ -102,13 +101,13 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007F5F RID: 32607 RVA: 0x001AFA8F File Offset: 0x001ADC8F
+	// Token: 0x060052F6 RID: 21238 RVA: 0x001B8747 File Offset: 0x001B6947
 	protected override void OnAfterHide()
 	{
 		this.ClearTimer();
 	}
 
-	// Token: 0x06007F60 RID: 32608 RVA: 0x001AFA98 File Offset: 0x001ADC98
+	// Token: 0x060052F7 RID: 21239 RVA: 0x001B8750 File Offset: 0x001B6950
 	private void TabFinish()
 	{
 		Dictionary<int, ShipTowerTeamTabItem> tabItemMap = this.TabComponent.GetTabItemMap();
@@ -127,7 +126,7 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		this.TabComponent.SelectToggleByIndex(this.GetJumpTabIndex(), true, true);
 	}
 
-	// Token: 0x06007F61 RID: 32609 RVA: 0x001AFB54 File Offset: 0x001ADD54
+	// Token: 0x060052F8 RID: 21240 RVA: 0x001B880C File Offset: 0x001B6A0C
 	public void UpdateTabRedDotState()
 	{
 		Dictionary<int, ShipTowerTeamTabItem> tabItemMap = this.TabComponent.GetTabItemMap();
@@ -144,7 +143,7 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007F62 RID: 32610 RVA: 0x001AFBEC File Offset: 0x001ADDEC
+	// Token: 0x060052F9 RID: 21241 RVA: 0x001B88A4 File Offset: 0x001B6AA4
 	public bool GetTaskListRedDotState(int index)
 	{
 		DangoMonopolyTaskViewParam openParam = this.OpenParam;
@@ -155,7 +154,7 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		}
 		foreach (DangoMonopolyTaskData dangoMonopolyTaskData in list[index].TaskList)
 		{
-			if (dangoMonopolyTaskData.IsCanReceive() || !this.ActivityData.TaskLookedSet.Contains(dangoMonopolyTaskData.Id))
+			if (dangoMonopolyTaskData.IsCanReceive() || !this.ActivityData.IsTaskLooked(dangoMonopolyTaskData.Id))
 			{
 				return true;
 			}
@@ -163,7 +162,7 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		return false;
 	}
 
-	// Token: 0x06007F63 RID: 32611 RVA: 0x001AFC88 File Offset: 0x001ADE88
+	// Token: 0x060052FA RID: 21242 RVA: 0x001B893C File Offset: 0x001B6B3C
 	public void UpdateTabRedDotStateByIndex(int index)
 	{
 		ShipTowerTeamTabItem tabItemByIndex = this.TabComponent.GetTabItemByIndex(index);
@@ -186,7 +185,7 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007F64 RID: 32612 RVA: 0x001AFD20 File Offset: 0x001ADF20
+	// Token: 0x060052FB RID: 21243 RVA: 0x001B89D4 File Offset: 0x001B6BD4
 	private int GetJumpTabIndex()
 	{
 		if (this.OpenParam == null)
@@ -225,18 +224,18 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		return 0;
 	}
 
-	// Token: 0x06007F65 RID: 32613 RVA: 0x001AFE28 File Offset: 0x001AE028
+	// Token: 0x060052FC RID: 21244 RVA: 0x001B8ADC File Offset: 0x001B6CDC
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x06007F66 RID: 32614 RVA: 0x001AFE2A File Offset: 0x001AE02A
+	// Token: 0x060052FD RID: 21245 RVA: 0x001B8ADE File Offset: 0x001B6CDE
 	private ShipTowerTeamTabItem TabItemProxyCreate([Nullable(2)] UUIItem _1, int? _2)
 	{
 		return new ShipTowerTeamTabItem();
 	}
 
-	// Token: 0x06007F67 RID: 32615 RVA: 0x001AFE34 File Offset: 0x001AE034
+	// Token: 0x060052FE RID: 21246 RVA: 0x001B8AE8 File Offset: 0x001B6CE8
 	private void ToggleTwoTabCallBack(int index)
 	{
 		this.CurSelectTabIndex = index;
@@ -249,13 +248,13 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007F68 RID: 32616 RVA: 0x001AFE7C File Offset: 0x001AE07C
+	// Token: 0x060052FF RID: 21247 RVA: 0x001B8B30 File Offset: 0x001B6D30
 	private void UpdateTaskInfo(IDangoMonopolyTaskTabData data)
 	{
 		GenericLayout<DangoMonopolyTaskItem, DangoMonopolyTaskData> rewardScrollView = this.RewardScrollView;
 		if (rewardScrollView != null)
 		{
-			rewardScrollView.RefreshByData(data.TaskList.ToList<DangoMonopolyTaskData>(), null, true);
+			rewardScrollView.RefreshByData(data.TaskList, null, true);
 		}
 		this.UpdateRemainTimeInfo(data);
 		List<int> list = new List<int>();
@@ -270,7 +269,7 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007F69 RID: 32617 RVA: 0x001AFF1C File Offset: 0x001AE11C
+	// Token: 0x06005300 RID: 21248 RVA: 0x001B8BCC File Offset: 0x001B6DCC
 	public void UpdateRemainTimeInfo(IDangoMonopolyTaskTabData data)
 	{
 		UUIText text = base.GetText(4);
@@ -321,7 +320,7 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007F6A RID: 32618 RVA: 0x001AFFB0 File Offset: 0x001AE1B0
+	// Token: 0x06005301 RID: 21249 RVA: 0x001B8C60 File Offset: 0x001B6E60
 	private DangoMonopolyTaskItem CreateRewardItem()
 	{
 		return new DangoMonopolyTaskItem
@@ -330,7 +329,7 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		};
 	}
 
-	// Token: 0x06007F6B RID: 32619 RVA: 0x001AFFC9 File Offset: 0x001AE1C9
+	// Token: 0x06005302 RID: 21250 RVA: 0x001B8C79 File Offset: 0x001B6E79
 	private void OnClickReceive(DangoMonopolyTaskData data)
 	{
 		ActivityDangoMonopolyData activityData = this.ActivityData;
@@ -341,13 +340,13 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		activityData.RequestReceiveTask(data.Id, false);
 	}
 
-	// Token: 0x06007F6C RID: 32620 RVA: 0x001AFFE2 File Offset: 0x001AE1E2
+	// Token: 0x06005303 RID: 21251 RVA: 0x001B8C92 File Offset: 0x001B6E92
 	private void OnClickClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06007F6D RID: 32621 RVA: 0x001AFFEB File Offset: 0x001AE1EB
+	// Token: 0x06005304 RID: 21252 RVA: 0x001B8C9B File Offset: 0x001B6E9B
 	private void EventDangoMonopolyTaskUpdate(EDangoMonopolyTaskUpdateType updateType)
 	{
 		if (updateType != EDangoMonopolyTaskUpdateType.Update)
@@ -364,7 +363,7 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		this.UpdateTabRedDotState();
 	}
 
-	// Token: 0x06007F6E RID: 32622 RVA: 0x001B0014 File Offset: 0x001AE214
+	// Token: 0x06005305 RID: 21253 RVA: 0x001B8CC4 File Offset: 0x001B6EC4
 	public void ShowTipClose()
 	{
 		if (this.IsNeedClose)
@@ -381,7 +380,7 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06007F6F RID: 32623 RVA: 0x001B0068 File Offset: 0x001AE268
+	// Token: 0x06005306 RID: 21254 RVA: 0x001B8D18 File Offset: 0x001B6F18
 	private void OnTimerRefresh(float _)
 	{
 		if (this.EndTime > 0L)
@@ -393,7 +392,7 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007F70 RID: 32624 RVA: 0x001B00CF File Offset: 0x001AE2CF
+	// Token: 0x06005307 RID: 21255 RVA: 0x001B8D7F File Offset: 0x001B6F7F
 	private void ClearTimer()
 	{
 		if (this.RefreshTimerHandle != null && TimerSystem.RealTimeInstance.Has(this.RefreshTimerHandle))
@@ -403,7 +402,7 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x040039F6 RID: 14838
+	// Token: 0x04003A8E RID: 14990
 	[Nullable(new byte[]
 	{
 		2,
@@ -411,10 +410,10 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 	})]
 	private TabComponent<ShipTowerTeamTabItem> TabComponent;
 
-	// Token: 0x040039F7 RID: 14839
+	// Token: 0x04003A8F RID: 14991
 	private int CurSelectTabIndex;
 
-	// Token: 0x040039F8 RID: 14840
+	// Token: 0x04003A90 RID: 14992
 	[Nullable(new byte[]
 	{
 		2,
@@ -423,42 +422,42 @@ public class DangoMonopolyTaskView : DangoMonopolyViewBase
 	})]
 	private GenericLayout<DangoMonopolyTaskItem, DangoMonopolyTaskData> RewardScrollView;
 
-	// Token: 0x040039F9 RID: 14841
+	// Token: 0x04003A91 RID: 14993
 	[Nullable(2)]
 	private TimerHandle RefreshTimerHandle;
 
-	// Token: 0x040039FA RID: 14842
+	// Token: 0x04003A92 RID: 14994
 	private long EndTime;
 
-	// Token: 0x040039FB RID: 14843
+	// Token: 0x04003A93 RID: 14995
 	public bool IsNeedClose;
 
-	// Token: 0x040039FC RID: 14844
+	// Token: 0x04003A94 RID: 14996
 	[Nullable(2)]
 	public CommonCurrencyItemListComponent CurrencyItemListComponent;
 
-	// Token: 0x040039FD RID: 14845
+	// Token: 0x04003A95 RID: 14997
 	public bool IsShowRemainTime;
 
-	// Token: 0x0200786A RID: 30826
+	// Token: 0x020069F5 RID: 27125
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04027AD8 RID: 162520
+		// Token: 0x04022E09 RID: 142857
 		BtnClose,
-		// Token: 0x04027AD9 RID: 162521
+		// Token: 0x04022E0A RID: 142858
 		ItemTabComponent,
-		// Token: 0x04027ADA RID: 162522
+		// Token: 0x04022E0B RID: 142859
 		VLayoutReward,
-		// Token: 0x04027ADB RID: 162523
+		// Token: 0x04022E0C RID: 142860
 		ItemReward,
-		// Token: 0x04027ADC RID: 162524
+		// Token: 0x04022E0D RID: 142861
 		TxtCountDown,
-		// Token: 0x04027ADD RID: 162525
+		// Token: 0x04022E0E RID: 142862
 		BtnEmpty,
-		// Token: 0x04027ADE RID: 162526
+		// Token: 0x04022E0F RID: 142863
 		TxtTitle,
-		// Token: 0x04027ADF RID: 162527
+		// Token: 0x04022E10 RID: 142864
 		CostContent
 	}
 }

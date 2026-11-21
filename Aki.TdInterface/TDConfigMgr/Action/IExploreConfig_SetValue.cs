@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A32 RID: 6706
+	// Token: 0x02001BC7 RID: 7111
 	public class IExploreConfig_SetValue
 	{
-		// Token: 0x040058D0 RID: 22736
+		// Token: 0x04005D35 RID: 23861
 		public EExploreStateType Type;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002640 RID: 9792
+	// Token: 0x02002900 RID: 10496
 	public class IAwakePosType
 	{
-		// Token: 0x0600DBB5 RID: 56245 RVA: 0x0020B2FF File Offset: 0x002094FF
-		[NullableContext(1)]
+		// Token: 0x0600E983 RID: 59779 RVA: 0x00227ACB File Offset: 0x00225CCB
 		public static IAwakePosType Create(IAwakePosType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170040F7 RID: 16631
-		// (get) Token: 0x0600DBB6 RID: 56246 RVA: 0x0020B31E File Offset: 0x0020951E
+		// Token: 0x17004431 RID: 17457
+		// (get) Token: 0x0600E984 RID: 59780 RVA: 0x00227AEA File Offset: 0x00225CEA
 		public virtual EAwakePosType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A14 RID: 31252
+		// Token: 0x040080B0 RID: 32944
 		private IAwakePosType Instance;
 	}
 }

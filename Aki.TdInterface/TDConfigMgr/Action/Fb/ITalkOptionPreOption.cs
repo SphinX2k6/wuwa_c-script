@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200250A RID: 9482
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020027B0 RID: 10160
 	public class ITalkOptionPreOption : ITalkOptionPreConditionBase
 	{
-		// Token: 0x0600D38C RID: 54156 RVA: 0x001F59FE File Offset: 0x001F3BFE
+		// Token: 0x0600E0E8 RID: 57576 RVA: 0x002113F6 File Offset: 0x0020F5F6
 		public static ITalkOptionPreOption Create(ITalkOptionPreOption? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B3A RID: 15162
-		// (get) Token: 0x0600D38D RID: 54157 RVA: 0x001F5A1D File Offset: 0x001F3C1D
+		// Token: 0x17003E36 RID: 15926
+		// (get) Token: 0x0600E0E9 RID: 57577 RVA: 0x00211415 File Offset: 0x0020F615
 		public override ETalkOptionPreConditionType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B3B RID: 15163
-		// (get) Token: 0x0600D38E RID: 54158 RVA: 0x001F5A2C File Offset: 0x001F3C2C
+		// Token: 0x17003E37 RID: 15927
+		// (get) Token: 0x0600E0EA RID: 57578 RVA: 0x00211424 File Offset: 0x0020F624
 		public virtual List<int> PreOptions
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073F6 RID: 29686
+		// Token: 0x04007A48 RID: 31304
 		private ITalkOptionPreOption Instance;
 
-		// Token: 0x040073F7 RID: 29687
+		// Token: 0x04007A49 RID: 31305
 		private List<int> _PreOptionsCache;
 
-		// Token: 0x040073F8 RID: 29688
+		// Token: 0x04007A4A RID: 31306
 		private bool _PreOptionsInited;
 	}
 }

@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001EF0 RID: 7920
+// Token: 0x020013B2 RID: 5042
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class HonamiStorySellConfirmBoxItem : GridProxyAbstract<IHonamiStoryItemSellItemInfo>
 {
-	// Token: 0x0600F3BE RID: 62398 RVA: 0x003AC2D8 File Offset: 0x003AA4D8
+	// Token: 0x0600C7DD RID: 51165 RVA: 0x003B7DD4 File Offset: 0x003B5FD4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -35,7 +35,7 @@ public class HonamiStorySellConfirmBoxItem : GridProxyAbstract<IHonamiStoryItemS
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F3BF RID: 62399 RVA: 0x003AC3A4 File Offset: 0x003AA5A4
+	// Token: 0x0600C7DE RID: 51166 RVA: 0x003B7EA0 File Offset: 0x003B60A0
 	public override void Refresh(IHonamiStoryItemSellItemInfo data, bool isSelected, int gridIndex)
 	{
 		HonamiStoryItemDataBase itemData = data.ItemData;

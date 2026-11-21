@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.DiffPatch.Procedure
 {
-	// Token: 0x02000218 RID: 536
+	// Token: 0x0200021D RID: 541
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenHarmonyDiffPatchProcedure : MobileDiffPatchProcedure
 	{
-		// Token: 0x06000DEB RID: 3563 RVA: 0x00053F0C File Offset: 0x0005210C
+		// Token: 0x06000E2C RID: 3628 RVA: 0x00056A00 File Offset: 0x00054C00
 		public OpenHarmonyDiffPatchProcedure(AppPathMisc pathMisc, HotFixManager viewMgr) : base(pathMisc, viewMgr)
 		{
 			LauncherLog.Instance.Info("Create OpenHarmony DiffPatchProcedure", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -49,7 +49,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			}
 		}
 
-		// Token: 0x06000DEC RID: 3564 RVA: 0x00053FB0 File Offset: 0x000521B0
+		// Token: 0x06000E2D RID: 3629 RVA: 0x00056AA4 File Offset: 0x00054CA4
 		private void OnNearbyReceiveFinish()
 		{
 			if (this.bFinishHandled)
@@ -67,7 +67,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			activeUpdate.Stop();
 		}
 
-		// Token: 0x06000DED RID: 3565 RVA: 0x00053FFC File Offset: 0x000521FC
+		// Token: 0x06000E2E RID: 3630 RVA: 0x00056AF0 File Offset: 0x00054CF0
 		[NullableContext(0)]
 		public override UniTask<bool> UpdateResource(bool bUseBgDownload, [Nullable(1)] DiffUpdate update, bool bIsLauncher)
 		{
@@ -82,7 +82,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return <UpdateResource>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DEE RID: 3566 RVA: 0x00054058 File Offset: 0x00052258
+		// Token: 0x06000E2F RID: 3631 RVA: 0x00056B4C File Offset: 0x00054D4C
 		protected override UniTask OnAfterResolveManifests(DiffUpdate update)
 		{
 			OpenHarmonyDiffPatchProcedure.<OnAfterResolveManifests>d__11 <OnAfterResolveManifests>d__;
@@ -94,7 +94,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return <OnAfterResolveManifests>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DEF RID: 3567 RVA: 0x000540A4 File Offset: 0x000522A4
+		// Token: 0x06000E30 RID: 3632 RVA: 0x00056B98 File Offset: 0x00054D98
 		public void CleanupPresetResources()
 		{
 			LauncherLog.Instance.Info("OpenHarmony CleanupPresetResources", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -111,7 +111,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			this.PresetConsumer.Cleanup();
 		}
 
-		// Token: 0x06000DF0 RID: 3568 RVA: 0x00054104 File Offset: 0x00052304
+		// Token: 0x06000E31 RID: 3633 RVA: 0x00056BF8 File Offset: 0x00054DF8
 		public override void PreComplete()
 		{
 			base.PreComplete();
@@ -133,28 +133,28 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			}
 		}
 
-		// Token: 0x040008AD RID: 2221
+		// Token: 0x040008EE RID: 2286
 		private const int NearbyStateReceiveFinish = 6;
 
-		// Token: 0x040008AE RID: 2222
+		// Token: 0x040008EF RID: 2287
 		private readonly OHPresetResourceConsumer PresetConsumer = new OHPresetResourceConsumer();
 
-		// Token: 0x040008AF RID: 2223
+		// Token: 0x040008F0 RID: 2288
 		private readonly Action<int> TransferCb;
 
-		// Token: 0x040008B0 RID: 2224
+		// Token: 0x040008F1 RID: 2289
 		private UOHNearbyNotify NearbyNotify;
 
-		// Token: 0x040008B1 RID: 2225
+		// Token: 0x040008F2 RID: 2290
 		private FKuroNearbyTransferEvent TransferEvent;
 
-		// Token: 0x040008B2 RID: 2226
+		// Token: 0x040008F3 RID: 2291
 		private DiffUpdate ActiveUpdate;
 
-		// Token: 0x040008B3 RID: 2227
+		// Token: 0x040008F4 RID: 2292
 		private bool bActiveIsLauncher;
 
-		// Token: 0x040008B4 RID: 2228
+		// Token: 0x040008F5 RID: 2293
 		private bool bFinishHandled;
 	}
 }

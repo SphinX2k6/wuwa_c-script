@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010E4 RID: 4324
+	// Token: 0x0200121A RID: 4634
 	public struct SpringChat : IFlatbufferObject
 	{
-		// Token: 0x170037ED RID: 14317
-		// (get) Token: 0x0600D82F RID: 55343 RVA: 0x0031E94D File Offset: 0x0031CB4D
+		// Token: 0x17003B43 RID: 15171
+		// (get) Token: 0x0600E57A RID: 58746 RVA: 0x00349F81 File Offset: 0x00348181
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D830 RID: 55344 RVA: 0x0031E95A File Offset: 0x0031CB5A
+		// Token: 0x0600E57B RID: 58747 RVA: 0x00349F8E File Offset: 0x0034818E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D831 RID: 55345 RVA: 0x0031E964 File Offset: 0x0031CB64
+		// Token: 0x0600E57C RID: 58748 RVA: 0x00349F98 File Offset: 0x00348198
 		public static SpringChat GetRootAsSpringChat(ByteBuffer _bb)
 		{
 			return SpringChat.GetRootAsSpringChat(_bb, default(SpringChat));
 		}
 
-		// Token: 0x0600D832 RID: 55346 RVA: 0x0031E980 File Offset: 0x0031CB80
+		// Token: 0x0600E57D RID: 58749 RVA: 0x00349FB4 File Offset: 0x003481B4
 		public static SpringChat GetRootAsSpringChat(ByteBuffer _bb, SpringChat obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D833 RID: 55347 RVA: 0x0031E99D File Offset: 0x0031CB9D
+		// Token: 0x0600E57E RID: 58750 RVA: 0x00349FD1 File Offset: 0x003481D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D834 RID: 55348 RVA: 0x0031E9AC File Offset: 0x0031CBAC
+		// Token: 0x0600E57F RID: 58751 RVA: 0x00349FE0 File Offset: 0x003481E0
 		public SpringChat __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170037EE RID: 14318
-		// (get) Token: 0x0600D835 RID: 55349 RVA: 0x0031E9BC File Offset: 0x0031CBBC
+		// Token: 0x17003B44 RID: 15172
+		// (get) Token: 0x0600E580 RID: 58752 RVA: 0x00349FF0 File Offset: 0x003481F0
 		public int Id
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D836 RID: 55350 RVA: 0x0031E9F8 File Offset: 0x0031CBF8
+		// Token: 0x0600E581 RID: 58753 RVA: 0x0034A02C File Offset: 0x0034822C
 		public string ContentList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170037EF RID: 14319
-		// (get) Token: 0x0600D837 RID: 55351 RVA: 0x0031EA34 File Offset: 0x0031CC34
+		// Token: 0x17003B45 RID: 15173
+		// (get) Token: 0x0600E582 RID: 58754 RVA: 0x0034A068 File Offset: 0x00348268
 		public int ContentListLength
 		{
 			get
@@ -91,7 +91,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D838 RID: 55352 RVA: 0x0031EA60 File Offset: 0x0031CC60
+		// Token: 0x0600E583 RID: 58755 RVA: 0x0034A094 File Offset: 0x00348294
 		public int PosList(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -102,8 +102,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170037F0 RID: 14320
-		// (get) Token: 0x0600D839 RID: 55353 RVA: 0x0031EAA0 File Offset: 0x0031CCA0
+		// Token: 0x17003B46 RID: 15174
+		// (get) Token: 0x0600E584 RID: 58756 RVA: 0x0034A0D4 File Offset: 0x003482D4
 		public int PosListLength
 		{
 			get
@@ -117,19 +117,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D83A RID: 55354 RVA: 0x0031EACB File Offset: 0x0031CCCB
+		// Token: 0x0600E585 RID: 58757 RVA: 0x0034A0FF File Offset: 0x003482FF
 		public Span<int> GetPosListBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600D83B RID: 55355 RVA: 0x0031EADA File Offset: 0x0031CCDA
+		// Token: 0x0600E586 RID: 58758 RVA: 0x0034A10E File Offset: 0x0034830E
 		public int[] GetPosListArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600D83C RID: 55356 RVA: 0x0031EAF4 File Offset: 0x0031CCF4
+		// Token: 0x0600E587 RID: 58759 RVA: 0x0034A128 File Offset: 0x00348328
 		public string AnimNameList(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -140,8 +140,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170037F1 RID: 14321
-		// (get) Token: 0x0600D83D RID: 55357 RVA: 0x0031EB30 File Offset: 0x0031CD30
+		// Token: 0x17003B47 RID: 15175
+		// (get) Token: 0x0600E588 RID: 58760 RVA: 0x0034A164 File Offset: 0x00348364
 		public int AnimNameListLength
 		{
 			get
@@ -155,8 +155,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170037F2 RID: 14322
-		// (get) Token: 0x0600D83E RID: 55358 RVA: 0x0031EB5C File Offset: 0x0031CD5C
+		// Token: 0x17003B48 RID: 15176
+		// (get) Token: 0x0600E589 RID: 58761 RVA: 0x0034A190 File Offset: 0x00348390
 		public string LeftSpineAtlas
 		{
 			get
@@ -170,20 +170,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D83F RID: 55359 RVA: 0x0031EB94 File Offset: 0x0031CD94
+		// Token: 0x0600E58A RID: 58762 RVA: 0x0034A1C8 File Offset: 0x003483C8
 		public Span<byte> GetLeftSpineAtlasBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600D840 RID: 55360 RVA: 0x0031EBA4 File Offset: 0x0031CDA4
+		// Token: 0x0600E58B RID: 58763 RVA: 0x0034A1D8 File Offset: 0x003483D8
 		public byte[] GetLeftSpineAtlasArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170037F3 RID: 14323
-		// (get) Token: 0x0600D841 RID: 55361 RVA: 0x0031EBBC File Offset: 0x0031CDBC
+		// Token: 0x17003B49 RID: 15177
+		// (get) Token: 0x0600E58C RID: 58764 RVA: 0x0034A1F0 File Offset: 0x003483F0
 		public string LeftSpineSkeletonData
 		{
 			get
@@ -197,20 +197,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D842 RID: 55362 RVA: 0x0031EBF4 File Offset: 0x0031CDF4
+		// Token: 0x0600E58D RID: 58765 RVA: 0x0034A228 File Offset: 0x00348428
 		public Span<byte> GetLeftSpineSkeletonDataBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600D843 RID: 55363 RVA: 0x0031EC04 File Offset: 0x0031CE04
+		// Token: 0x0600E58E RID: 58766 RVA: 0x0034A238 File Offset: 0x00348438
 		public byte[] GetLeftSpineSkeletonDataArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170037F4 RID: 14324
-		// (get) Token: 0x0600D844 RID: 55364 RVA: 0x0031EC1C File Offset: 0x0031CE1C
+		// Token: 0x17003B4A RID: 15178
+		// (get) Token: 0x0600E58F RID: 58767 RVA: 0x0034A250 File Offset: 0x00348450
 		public string RightSpineAtlas
 		{
 			get
@@ -224,20 +224,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D845 RID: 55365 RVA: 0x0031EC54 File Offset: 0x0031CE54
+		// Token: 0x0600E590 RID: 58768 RVA: 0x0034A288 File Offset: 0x00348488
 		public Span<byte> GetRightSpineAtlasBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600D846 RID: 55366 RVA: 0x0031EC64 File Offset: 0x0031CE64
+		// Token: 0x0600E591 RID: 58769 RVA: 0x0034A298 File Offset: 0x00348498
 		public byte[] GetRightSpineAtlasArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170037F5 RID: 14325
-		// (get) Token: 0x0600D847 RID: 55367 RVA: 0x0031EC7C File Offset: 0x0031CE7C
+		// Token: 0x17003B4B RID: 15179
+		// (get) Token: 0x0600E592 RID: 58770 RVA: 0x0034A2B0 File Offset: 0x003484B0
 		public string RightSpineSkeletonData
 		{
 			get
@@ -251,71 +251,67 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D848 RID: 55368 RVA: 0x0031ECB4 File Offset: 0x0031CEB4
+		// Token: 0x0600E593 RID: 58771 RVA: 0x0034A2E8 File Offset: 0x003484E8
 		public Span<byte> GetRightSpineSkeletonDataBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x0600D849 RID: 55369 RVA: 0x0031ECC4 File Offset: 0x0031CEC4
+		// Token: 0x0600E594 RID: 58772 RVA: 0x0034A2F8 File Offset: 0x003484F8
 		public byte[] GetRightSpineSkeletonDataArray()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600D84A RID: 55370 RVA: 0x0031ECDC File Offset: 0x0031CEDC
+		// Token: 0x0600E595 RID: 58773 RVA: 0x0034A310 File Offset: 0x00348510
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用AnimNameListIter()或GetAnimNameListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] AnimNameList()
+		public string[] AnimNameList()
 		{
 			return this.AnimNameListIter().ToArray<string>();
 		}
 
-		// Token: 0x0600D84B RID: 55371 RVA: 0x0031ECE9 File Offset: 0x0031CEE9
+		// Token: 0x0600E596 RID: 58774 RVA: 0x0034A31D File Offset: 0x0034851D
 		[NullableContext(1)]
-		public readonly IEnumerable<string> AnimNameListIter()
+		public IEnumerable<string> AnimNameListIter()
 		{
 			SpringChat.<AnimNameListIter>d__38 <AnimNameListIter>d__ = new SpringChat.<AnimNameListIter>d__38(-2);
 			<AnimNameListIter>d__.<>3__<>4__this = this;
 			return <AnimNameListIter>d__;
 		}
 
-		// Token: 0x0600D84C RID: 55372 RVA: 0x0031ECFE File Offset: 0x0031CEFE
+		// Token: 0x0600E597 RID: 58775 RVA: 0x0034A332 File Offset: 0x00348532
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ContentListIter()或GetContentListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] ContentList()
+		public string[] ContentList()
 		{
 			return this.ContentListIter().ToArray<string>();
 		}
 
-		// Token: 0x0600D84D RID: 55373 RVA: 0x0031ED0B File Offset: 0x0031CF0B
+		// Token: 0x0600E598 RID: 58776 RVA: 0x0034A33F File Offset: 0x0034853F
 		[NullableContext(1)]
-		public readonly IEnumerable<string> ContentListIter()
+		public IEnumerable<string> ContentListIter()
 		{
 			SpringChat.<ContentListIter>d__40 <ContentListIter>d__ = new SpringChat.<ContentListIter>d__40(-2);
 			<ContentListIter>d__.<>3__<>4__this = this;
 			return <ContentListIter>d__;
 		}
 
-		// Token: 0x0600D84E RID: 55374 RVA: 0x0031ED20 File Offset: 0x0031CF20
+		// Token: 0x0600E599 RID: 58777 RVA: 0x0034A354 File Offset: 0x00348554
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PosListIter()或GetPosListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] PosList()
+		public int[] PosList()
 		{
-			SpringChat springChat = this;
-			return springChat.GetPosListArray() ?? Array.Empty<int>();
+			return this.GetPosListArray();
 		}
 
-		// Token: 0x0600D84F RID: 55375 RVA: 0x0031ED44 File Offset: 0x0031CF44
+		// Token: 0x0600E59A RID: 58778 RVA: 0x0034A35C File Offset: 0x0034855C
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PosListIter()
+		public IEnumerable<int> PosListIter()
 		{
 			SpringChat.<PosListIter>d__42 <PosListIter>d__ = new SpringChat.<PosListIter>d__42(-2);
 			<PosListIter>d__.<>3__<>4__this = this;
 			return <PosListIter>d__;
 		}
 
-		// Token: 0x04005217 RID: 21015
+		// Token: 0x0400585A RID: 22618
 		private Table __p;
 	}
 }

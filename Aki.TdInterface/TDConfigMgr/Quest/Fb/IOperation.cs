@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013CB RID: 5067
+	// Token: 0x02001522 RID: 5410
 	public class IOperation
 	{
-		// Token: 0x060073B5 RID: 29621 RVA: 0x001158D8 File Offset: 0x00113AD8
-		[NullableContext(1)]
+		// Token: 0x06007A76 RID: 31350 RVA: 0x001242BC File Offset: 0x001224BC
 		public static IOperation Create(IOperation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025F2 RID: 9714
-		// (get) Token: 0x060073B6 RID: 29622 RVA: 0x001158F7 File Offset: 0x00113AF7
+		// Token: 0x170027D4 RID: 10196
+		// (get) Token: 0x06007A77 RID: 31351 RVA: 0x001242DB File Offset: 0x001224DB
 		public virtual EOperation Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040042FF RID: 17151
+		// Token: 0x04004690 RID: 18064
 		private IOperation Instance;
 	}
 }

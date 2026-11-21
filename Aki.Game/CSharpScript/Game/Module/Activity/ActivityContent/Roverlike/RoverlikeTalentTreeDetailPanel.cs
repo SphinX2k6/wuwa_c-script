@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020061A3 RID: 24995
+	// Token: 0x02005121 RID: 20769
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoverlikeTalentTreeDetailPanel : UiPanelBase
 	{
-		// Token: 0x17009206 RID: 37382
-		// (get) Token: 0x0603F207 RID: 258567 RVA: 0x00F3F488 File Offset: 0x00F3D688
+		// Token: 0x17006568 RID: 25960
+		// (get) Token: 0x06033EC7 RID: 212679 RVA: 0x00E86350 File Offset: 0x00E84550
 		private RoverlikeTalentTreeData TreeData
 		{
 			get
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F208 RID: 258568 RVA: 0x00F3F4A0 File Offset: 0x00F3D6A0
+		// Token: 0x06033EC8 RID: 212680 RVA: 0x00E86368 File Offset: 0x00E84568
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F209 RID: 258569 RVA: 0x00F3F740 File Offset: 0x00F3D940
+		// Token: 0x06033EC9 RID: 212681 RVA: 0x00E86608 File Offset: 0x00E84808
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeTalentTreeDetailPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F20A RID: 258570 RVA: 0x00F3F784 File Offset: 0x00F3D984
+		// Token: 0x06033ECA RID: 212682 RVA: 0x00E8664C File Offset: 0x00E8484C
 		[NullableContext(1)]
 		public void Refresh(RoverlikeTalentNodeData data)
 		{
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshStatePanels(data, treeData);
 		}
 
-		// Token: 0x0603F20B RID: 258571 RVA: 0x00F3FA4C File Offset: 0x00F3DC4C
+		// Token: 0x06033ECB RID: 212683 RVA: 0x00E86914 File Offset: 0x00E84B14
 		[NullableContext(1)]
 		private void RefreshStatePanels(RoverlikeTalentNodeData data, RoverlikeTalentTreeData treeData)
 		{
@@ -242,14 +242,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.GetItem(9).SetUIActive(true);
 		}
 
-		// Token: 0x0603F20C RID: 258572 RVA: 0x00F3FB83 File Offset: 0x00F3DD83
+		// Token: 0x06033ECC RID: 212684 RVA: 0x00E86A4B File Offset: 0x00E84C4B
 		private void SetCostActive(bool isActive)
 		{
 			base.GetItem(12).SetUIActive(isActive);
 			base.GetItem(7).SetUIActive(isActive);
 		}
 
-		// Token: 0x0603F20D RID: 258573 RVA: 0x00F3FBA0 File Offset: 0x00F3DDA0
+		// Token: 0x06033ECD RID: 212685 RVA: 0x00E86A68 File Offset: 0x00E84C68
 		private void OnClickBtnUpgrade()
 		{
 			RoverlikeTalentNodeData data = this.Data;
@@ -285,16 +285,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			});
 		}
 
-		// Token: 0x04020E99 RID: 134809
+		// Token: 0x0401B7C6 RID: 112582
 		private RoverlikeTalentNodeData Data;
 
-		// Token: 0x04020E9A RID: 134810
+		// Token: 0x0401B7C7 RID: 112583
 		private RoverlikeTalentTreeLevelDescItem CurLevelItem;
 
-		// Token: 0x04020E9B RID: 134811
+		// Token: 0x0401B7C8 RID: 112584
 		private RoverlikeTalentTreeLevelDescItem NextLevelItem;
 
-		// Token: 0x04020E9C RID: 134812
+		// Token: 0x0401B7C9 RID: 112585
 		[Nullable(new byte[]
 		{
 			2,
@@ -302,59 +302,59 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		public Action<RoverlikeTalentNodeData> OnUnlockSuccess;
 
-		// Token: 0x0200C3ED RID: 50157
+		// Token: 0x0200ADD4 RID: 44500
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403B1F2 RID: 242162
+			// Token: 0x04035B53 RID: 219987
 			public const int TxtName = 0;
 
-			// Token: 0x0403B1F3 RID: 242163
+			// Token: 0x04035B54 RID: 219988
 			public const int SprIcon = 1;
 
-			// Token: 0x0403B1F4 RID: 242164
+			// Token: 0x04035B55 RID: 219989
 			public const int PnlCurLevel = 2;
 
-			// Token: 0x0403B1F5 RID: 242165
+			// Token: 0x04035B56 RID: 219990
 			public const int PnlNextLevel = 3;
 
-			// Token: 0x0403B1F6 RID: 242166
+			// Token: 0x04035B57 RID: 219991
 			public const int TxtCost = 4;
 
-			// Token: 0x0403B1F7 RID: 242167
+			// Token: 0x04035B58 RID: 219992
 			public const int BtnUpgrade = 5;
 
-			// Token: 0x0403B1F8 RID: 242168
+			// Token: 0x04035B59 RID: 219993
 			public const int TxtConfirm = 6;
 
-			// Token: 0x0403B1F9 RID: 242169
+			// Token: 0x04035B5A RID: 219994
 			public const int PnlCostNor = 7;
 
-			// Token: 0x0403B1FA RID: 242170
+			// Token: 0x04035B5B RID: 219995
 			public const int TexCostIcon = 8;
 
-			// Token: 0x0403B1FB RID: 242171
+			// Token: 0x04035B5C RID: 219996
 			public const int PnlMaxLevel = 9;
 
-			// Token: 0x0403B1FC RID: 242172
+			// Token: 0x04035B5D RID: 219997
 			public const int PnlActivateCondition = 10;
 
-			// Token: 0x0403B1FD RID: 242173
+			// Token: 0x04035B5E RID: 219998
 			public const int TxtActivateCondition = 11;
 
-			// Token: 0x0403B1FE RID: 242174
+			// Token: 0x04035B5F RID: 219999
 			public const int PnlCost = 12;
 
-			// Token: 0x0403B1FF RID: 242175
+			// Token: 0x04035B60 RID: 220000
 			public const int TexIcon = 13;
 
-			// Token: 0x0403B200 RID: 242176
+			// Token: 0x04035B61 RID: 220001
 			public const int TxtNameLevel = 14;
 
-			// Token: 0x0403B201 RID: 242177
+			// Token: 0x04035B62 RID: 220002
 			public const int SprType = 15;
 
-			// Token: 0x0403B202 RID: 242178
+			// Token: 0x04035B63 RID: 220003
 			public const int TxtType = 16;
 		}
 	}

@@ -2,23 +2,23 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029E0 RID: 10720
+// Token: 0x02001F5B RID: 8027
 [NullableContext(1)]
 [Nullable(0)]
 public class ParallaxItem : IParallaxItem
 {
-	// Token: 0x17001DAB RID: 7595
-	// (get) Token: 0x06016368 RID: 90984 RVA: 0x0059DF7E File Offset: 0x0059C17E
-	// (set) Token: 0x06016369 RID: 90985 RVA: 0x0059DF86 File Offset: 0x0059C186
+	// Token: 0x17001E04 RID: 7684
+	// (get) Token: 0x06013D6E RID: 81262 RVA: 0x005C8F36 File Offset: 0x005C7136
+	// (set) Token: 0x06013D6F RID: 81263 RVA: 0x005C8F3E File Offset: 0x005C713E
 	public UUIItem Item { get; set; }
 
-	// Token: 0x17001DAC RID: 7596
-	// (get) Token: 0x0601636A RID: 90986 RVA: 0x0059DF8F File Offset: 0x0059C18F
-	// (set) Token: 0x0601636B RID: 90987 RVA: 0x0059DF97 File Offset: 0x0059C197
+	// Token: 0x17001E05 RID: 7685
+	// (get) Token: 0x06013D70 RID: 81264 RVA: 0x005C8F47 File Offset: 0x005C7147
+	// (set) Token: 0x06013D71 RID: 81265 RVA: 0x005C8F4F File Offset: 0x005C714F
 	public float InitPosY { get; set; }
 
-	// Token: 0x17001DAD RID: 7597
-	// (get) Token: 0x0601636C RID: 90988 RVA: 0x0059DFA0 File Offset: 0x0059C1A0
-	// (set) Token: 0x0601636D RID: 90989 RVA: 0x0059DFA8 File Offset: 0x0059C1A8
+	// Token: 0x17001E06 RID: 7686
+	// (get) Token: 0x06013D72 RID: 81266 RVA: 0x005C8F58 File Offset: 0x005C7158
+	// (set) Token: 0x06013D73 RID: 81267 RVA: 0x005C8F60 File Offset: 0x005C7160
 	public float ParallaxSub { get; set; }
 }

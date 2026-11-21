@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005378 RID: 21368
+	// Token: 0x020058FE RID: 22782
 	public class IHitBulletTypeFixedBulletIdT
 	{
-		// Token: 0x17009D03 RID: 40195
-		// (get) Token: 0x06022F96 RID: 143254 RVA: 0x004D7BCB File Offset: 0x004D5DCB
-		// (set) Token: 0x06022F97 RID: 143255 RVA: 0x004D7BD3 File Offset: 0x004D5DD3
+		// Token: 0x1700A53B RID: 42299
+		// (get) Token: 0x0602504A RID: 151626 RVA: 0x00514A9F File Offset: 0x00512C9F
+		// (set) Token: 0x0602504B RID: 151627 RVA: 0x00514AA7 File Offset: 0x00512CA7
 		public EHitBulletType Type { get; set; }
 
-		// Token: 0x17009D04 RID: 40196
-		// (get) Token: 0x06022F98 RID: 143256 RVA: 0x004D7BDC File Offset: 0x004D5DDC
-		// (set) Token: 0x06022F99 RID: 143257 RVA: 0x004D7BE4 File Offset: 0x004D5DE4
+		// Token: 0x1700A53C RID: 42300
+		// (get) Token: 0x0602504C RID: 151628 RVA: 0x00514AB0 File Offset: 0x00512CB0
+		// (set) Token: 0x0602504D RID: 151629 RVA: 0x00514AB8 File Offset: 0x00512CB8
 		public List<long> BulletId { get; set; }
 
-		// Token: 0x17009D05 RID: 40197
-		// (get) Token: 0x06022F9A RID: 143258 RVA: 0x004D7BED File Offset: 0x004D5DED
-		// (set) Token: 0x06022F9B RID: 143259 RVA: 0x004D7BF5 File Offset: 0x004D5DF5
+		// Token: 0x1700A53D RID: 42301
+		// (get) Token: 0x0602504E RID: 151630 RVA: 0x00514AC1 File Offset: 0x00512CC1
+		// (set) Token: 0x0602504F RID: 151631 RVA: 0x00514AC9 File Offset: 0x00512CC9
 		public bool PlayerAttack { get; set; }
 
-		// Token: 0x17009D06 RID: 40198
-		// (get) Token: 0x06022F9C RID: 143260 RVA: 0x004D7BFE File Offset: 0x004D5DFE
-		// (set) Token: 0x06022F9D RID: 143261 RVA: 0x004D7C06 File Offset: 0x004D5E06
+		// Token: 0x1700A53E RID: 42302
+		// (get) Token: 0x06025050 RID: 151632 RVA: 0x00514AD2 File Offset: 0x00512CD2
+		// (set) Token: 0x06025051 RID: 151633 RVA: 0x00514ADA File Offset: 0x00512CDA
 		public byte NullMask { get; set; }
 
-		// Token: 0x06022F9E RID: 143262 RVA: 0x004D7C0F File Offset: 0x004D5E0F
+		// Token: 0x06025052 RID: 151634 RVA: 0x00514AE3 File Offset: 0x00512CE3
 		public IHitBulletTypeFixedBulletIdT()
 		{
 			this.Type = EHitBulletType.OnlyDropAttack;

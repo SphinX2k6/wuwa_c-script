@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001501 RID: 5377
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200165C RID: 5724
 	public class ClientPreEnableSubLevels : ActionParams
 	{
-		// Token: 0x06007A3C RID: 31292 RVA: 0x00123FA8 File Offset: 0x001221A8
+		// Token: 0x0600810F RID: 33039 RVA: 0x00132C88 File Offset: 0x00130E88
 		private ClientPreEnableSubLevels_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007A3D RID: 31293 RVA: 0x00123FE0 File Offset: 0x001221E0
+		// Token: 0x06008110 RID: 33040 RVA: 0x00132CC0 File Offset: 0x00130EC0
 		public static ClientPreEnableSubLevels Create([Nullable(2)] ClientPreEnableSubLevels instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A3E RID: 31294 RVA: 0x00123FF3 File Offset: 0x001221F3
+		// Token: 0x06008111 RID: 33041 RVA: 0x00132CD3 File Offset: 0x00130ED3
 		public static ClientPreEnableSubLevels CreateFromSetValue([Nullable(2)] ClientPreEnableSubLevels_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A3F RID: 31295 RVA: 0x00124006 File Offset: 0x00122206
+		// Token: 0x06008112 RID: 33042 RVA: 0x00132CE6 File Offset: 0x00130EE6
 		public ClientPreEnableSubLevels_SetValue ToSetValue()
 		{
 			return new ClientPreEnableSubLevels_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028D4 RID: 10452
-		// (get) Token: 0x06007A40 RID: 31296 RVA: 0x0012403D File Offset: 0x0012223D
-		// (set) Token: 0x06007A41 RID: 31297 RVA: 0x00124064 File Offset: 0x00122264
+		// Token: 0x17002ABE RID: 10942
+		// (get) Token: 0x06008113 RID: 33043 RVA: 0x00132D1D File Offset: 0x00130F1D
+		// (set) Token: 0x06008114 RID: 33044 RVA: 0x00132D44 File Offset: 0x00130F44
 		public virtual List<string> EnableLevels
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028D5 RID: 10453
-		// (get) Token: 0x06007A42 RID: 31298 RVA: 0x00124072 File Offset: 0x00122272
-		// (set) Token: 0x06007A43 RID: 31299 RVA: 0x00124099 File Offset: 0x00122299
+		// Token: 0x17002ABF RID: 10943
+		// (get) Token: 0x06008115 RID: 33045 RVA: 0x00132D52 File Offset: 0x00130F52
+		// (set) Token: 0x06008116 RID: 33046 RVA: 0x00132D79 File Offset: 0x00130F79
 		public virtual List<string> DisableLevels
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028D6 RID: 10454
-		// (get) Token: 0x06007A44 RID: 31300 RVA: 0x001240A8 File Offset: 0x001222A8
-		// (set) Token: 0x06007A45 RID: 31301 RVA: 0x00124109 File Offset: 0x00122309
+		// Token: 0x17002AC0 RID: 10944
+		// (get) Token: 0x06008117 RID: 33047 RVA: 0x00132D88 File Offset: 0x00130F88
+		// (set) Token: 0x06008118 RID: 33048 RVA: 0x00132DE9 File Offset: 0x00130FE9
 		[Nullable(2)]
 		public virtual IEnableSubLevelTransitionWithSceneCapture TransitionOption
 		{
@@ -144,9 +142,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028D7 RID: 10455
-		// (get) Token: 0x06007A46 RID: 31302 RVA: 0x00124120 File Offset: 0x00122320
-		// (set) Token: 0x06007A47 RID: 31303 RVA: 0x0012415A File Offset: 0x0012235A
+		// Token: 0x17002AC1 RID: 10945
+		// (get) Token: 0x06008119 RID: 33049 RVA: 0x00132E00 File Offset: 0x00131000
+		// (set) Token: 0x0600811A RID: 33050 RVA: 0x00132E3A File Offset: 0x0013103A
 		public virtual bool? IsWaitForEnableComplete
 		{
 			get
@@ -168,18 +166,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040046D2 RID: 18130
+		// Token: 0x04004A71 RID: 19057
 		[Nullable(2)]
 		protected new ClientPreEnableSubLevels FbInstance;
 
-		// Token: 0x040046D3 RID: 18131
+		// Token: 0x04004A72 RID: 19058
 		[Nullable(2)]
 		protected ClientPreEnableSubLevels_SetValue PocoInterface;
 
-		// Token: 0x040046D4 RID: 18132
+		// Token: 0x04004A73 RID: 19059
 		private IEnableSubLevelTransitionWithSceneCapture _TransitionOptionCache;
 
-		// Token: 0x040046D5 RID: 18133
+		// Token: 0x04004A74 RID: 19060
 		private bool _TransitionOptionInited;
 	}
 }

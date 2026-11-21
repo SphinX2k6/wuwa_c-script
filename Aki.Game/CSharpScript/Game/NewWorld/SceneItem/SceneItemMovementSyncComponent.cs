@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -8,12 +7,12 @@ using CSharpScript.Game.NewWorld.Character.Common.Component;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007186 RID: 29062
+	// Token: 0x0200623A RID: 25146
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemMovementSyncComponent : BaseMovementSyncComponent
 	{
-		// Token: 0x060470F4 RID: 291060 RVA: 0x0120406C File Offset: 0x0120226C
+		// Token: 0x0603C99C RID: 248220 RVA: 0x0115E1FC File Offset: 0x0115C3FC
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -45,7 +44,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060470F5 RID: 291061 RVA: 0x012040C4 File Offset: 0x012022C4
+		// Token: 0x0603C99D RID: 248221 RVA: 0x0115E254 File Offset: 0x0115C454
 		protected override bool OnStart()
 		{
 			base.OnStart();
@@ -78,7 +77,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060470F6 RID: 291062 RVA: 0x01204138 File Offset: 0x01202338
+		// Token: 0x0603C99E RID: 248222 RVA: 0x0115E2C8 File Offset: 0x0115C4C8
 		public void SetAutonomousId(int? playerId)
 		{
 			int valueOrDefault = playerId.GetValueOrDefault();
@@ -100,26 +99,26 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470F7 RID: 291063 RVA: 0x012041C6 File Offset: 0x012023C6
+		// Token: 0x0603C99F RID: 248223 RVA: 0x0115E356 File Offset: 0x0115C556
 		public int GetAutonomousId()
 		{
 			return this.MoveAutonomousId;
 		}
 
-		// Token: 0x060470F8 RID: 291064 RVA: 0x012041CE File Offset: 0x012023CE
+		// Token: 0x0603C9A0 RID: 248224 RVA: 0x0115E35E File Offset: 0x0115C55E
 		public bool HasMoveController()
 		{
 			return this.MoveAutonomousId != 0;
 		}
 
-		// Token: 0x060470F9 RID: 291065 RVA: 0x012041D9 File Offset: 0x012023D9
+		// Token: 0x0603C9A1 RID: 248225 RVA: 0x0115E369 File Offset: 0x0115C569
 		public bool HasMoveAuthority()
 		{
 			BaseActorComponent actorComp = this.ActorComp;
 			return actorComp != null && actorComp.IsMoveAutonomousProxy;
 		}
 
-		// Token: 0x060470FA RID: 291066 RVA: 0x012041EC File Offset: 0x012023EC
+		// Token: 0x0603C9A2 RID: 248226 RVA: 0x0115E37C File Offset: 0x0115C57C
 		[NullableContext(2)]
 		private void SetBlackboardInner(SceneItemBBKey key, SceneItemMovementSyncComponent.TBlackboardValue? value, bool fromRemote, string reason = null)
 		{
@@ -127,19 +126,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.StateEvents.Emit<SceneItemMovementSyncComponent.TBlackboardValue?, bool, string>(key, value, fromRemote, reason ?? "");
 		}
 
-		// Token: 0x060470FB RID: 291067 RVA: 0x01204215 File Offset: 0x01202415
+		// Token: 0x0603C9A3 RID: 248227 RVA: 0x0115E3A5 File Offset: 0x0115C5A5
 		public void ListenBlackboard(SceneItemBBKey key, Action<SceneItemMovementSyncComponent.TBlackboardValue?, bool, string> callback)
 		{
 			this.StateEvents.Add(key, callback);
 		}
 
-		// Token: 0x060470FC RID: 291068 RVA: 0x01204225 File Offset: 0x01202425
+		// Token: 0x0603C9A4 RID: 248228 RVA: 0x0115E3B5 File Offset: 0x0115C5B5
 		public void RemoveBlackboardListener(SceneItemBBKey key, Action<SceneItemMovementSyncComponent.TBlackboardValue?, bool, string> callback)
 		{
 			this.StateEvents.Remove(key, callback);
 		}
 
-		// Token: 0x060470FD RID: 291069 RVA: 0x01204238 File Offset: 0x01202438
+		// Token: 0x0603C9A5 RID: 248229 RVA: 0x0115E3C8 File Offset: 0x0115C5C8
 		public void ModifyBlackboardFromRemote(IList<SceneItemBlackboardParam> blackboards, bool isFullUpdate = false)
 		{
 			if (isFullUpdate)
@@ -166,7 +165,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 					IntArrayBlackboard intValues = sceneItemBlackboardParam.IntValues;
 					if (((intValues != null) ? intValues.Values : null) != null)
 					{
-						value = new SceneItemMovementSyncComponent.TBlackboardValue?(sceneItemBlackboardParam.IntValues.Values.ToArray<int>());
+						int[] array = new int[sceneItemBlackboardParam.IntValues.Values.Count];
+						sceneItemBlackboardParam.IntValues.Values.CopyTo(array, 0);
+						value = new SceneItemMovementSyncComponent.TBlackboardValue?(array);
 					}
 					break;
 				}
@@ -181,7 +182,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 					LongArrayBlackboard longValues = sceneItemBlackboardParam.LongValues;
 					if (((longValues != null) ? longValues.Values : null) != null)
 					{
-						value = new SceneItemMovementSyncComponent.TBlackboardValue?(sceneItemBlackboardParam.LongValues.Values.ToArray<long>());
+						long[] array2 = new long[sceneItemBlackboardParam.LongValues.Values.Count];
+						sceneItemBlackboardParam.LongValues.Values.CopyTo(array2, 0);
+						value = new SceneItemMovementSyncComponent.TBlackboardValue?(array2);
 					}
 					break;
 				}
@@ -199,7 +202,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 					FloatArrayBlackboard floatValues = sceneItemBlackboardParam.FloatValues;
 					if (((floatValues != null) ? floatValues.Values : null) != null)
 					{
-						value = new SceneItemMovementSyncComponent.TBlackboardValue?(sceneItemBlackboardParam.FloatValues.Values.ToArray<float>());
+						float[] array3 = new float[sceneItemBlackboardParam.FloatValues.Values.Count];
+						sceneItemBlackboardParam.FloatValues.Values.CopyTo(array3, 0);
+						value = new SceneItemMovementSyncComponent.TBlackboardValue?(array3);
 					}
 					break;
 				}
@@ -220,7 +225,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470FE RID: 291070 RVA: 0x012044D8 File Offset: 0x012026D8
+		// Token: 0x0603C9A6 RID: 248230 RVA: 0x0115E6C8 File Offset: 0x0115C8C8
 		public SceneItemMovementSyncComponent.TBlackboardValue? GetBlackboard(SceneItemBBKey key)
 		{
 			SceneItemMovementSyncComponent.TBlackboardValue? result;
@@ -231,7 +236,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return null;
 		}
 
-		// Token: 0x060470FF RID: 291071 RVA: 0x01204500 File Offset: 0x01202700
+		// Token: 0x0603C9A7 RID: 248231 RVA: 0x0115E6F0 File Offset: 0x0115C8F0
 		[NullableContext(2)]
 		public unsafe bool ModifyBlackboard(SceneItemBBKey key, SceneItemMovementSyncComponent.TBlackboardValue value, string reason = null)
 		{
@@ -293,7 +298,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return false;
 		}
 
-		// Token: 0x06047100 RID: 291072 RVA: 0x012047BC File Offset: 0x012029BC
+		// Token: 0x0603C9A8 RID: 248232 RVA: 0x0115E9AC File Offset: 0x0115CBAC
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -301,40 +306,87 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemMovementSyncComponent sceneItemMovementSyncComponent = (SceneItemMovementSyncComponent)componentTemplate;
-			if (base.CanResetComponentProperty("MoveAutonomousId"))
-			{
-				this.MoveAutonomousId = sceneItemMovementSyncComponent.MoveAutonomousId;
-			}
-			return (!base.CanResetComponentProperty("Blackboards") || sceneItemMovementSyncComponent.Blackboards == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<SceneItemBBKey, SceneItemMovementSyncComponent.TBlackboardValue?>>(this.Blackboards), "Blackboards")) && (!base.CanResetComponentProperty("StateEvents") || sceneItemMovementSyncComponent.StateEvents == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Event<SceneItemBBKey, Action<SceneItemMovementSyncComponent.TBlackboardValue?, bool, string>>>(this.StateEvents), "StateEvents"));
+			this.MoveAutonomousId = sceneItemMovementSyncComponent.MoveAutonomousId;
+			return (sceneItemMovementSyncComponent.Blackboards == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.Blackboards), "Blackboards")) && (sceneItemMovementSyncComponent.StateEvents == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateEvents), "StateEvents"));
 		}
 
-		// Token: 0x040255B5 RID: 153013
+		// Token: 0x17007290 RID: 29328
+		// (get) Token: 0x0603C9A9 RID: 248233 RVA: 0x0115EA1C File Offset: 0x0115CC1C
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007291 RID: 29329
+		// (get) Token: 0x0603C9AA RID: 248234 RVA: 0x0115EA1F File Offset: 0x0115CC1F
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007292 RID: 29330
+		// (get) Token: 0x0603C9AB RID: 248235 RVA: 0x0115EA22 File Offset: 0x0115CC22
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007293 RID: 29331
+		// (get) Token: 0x0603C9AC RID: 248236 RVA: 0x0115EA25 File Offset: 0x0115CC25
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007294 RID: 29332
+		// (get) Token: 0x0603C9AD RID: 248237 RVA: 0x0115EA28 File Offset: 0x0115CC28
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402021C RID: 131612
 		private const int INVALID_ID = 0;
 
-		// Token: 0x040255B6 RID: 153014
+		// Token: 0x0402021D RID: 131613
 		private int MoveAutonomousId;
 
-		// Token: 0x040255B7 RID: 153015
+		// Token: 0x0402021E RID: 131614
 		private readonly Dictionary<SceneItemBBKey, SceneItemMovementSyncComponent.TBlackboardValue?> Blackboards = new Dictionary<SceneItemBBKey, SceneItemMovementSyncComponent.TBlackboardValue?>();
 
-		// Token: 0x040255B8 RID: 153016
+		// Token: 0x0402021F RID: 131615
 		private readonly Event<SceneItemBBKey, Action<SceneItemMovementSyncComponent.TBlackboardValue?, bool, string>> StateEvents = new Event<SceneItemBBKey, Action<SceneItemMovementSyncComponent.TBlackboardValue?, bool, string>>();
 
-		// Token: 0x0200CED4 RID: 52948
-		// (Invoke) Token: 0x06051F7B RID: 335739
+		// Token: 0x0200BA6A RID: 47722
+		// (Invoke) Token: 0x06048725 RID: 296741
 		[NullableContext(0)]
 		public delegate void TStateEventCallback(SceneItemMovementSyncComponent.TBlackboardValue? value, bool fromRemote, string reason);
 
-		// Token: 0x0200CED5 RID: 52949
+		// Token: 0x0200BA6B RID: 47723
 		[Nullable(0)]
 		public struct TBlackboardValue
 		{
-			// Token: 0x1700A2CE RID: 41678
-			// (get) Token: 0x06051F7E RID: 335742 RVA: 0x01645BCC File Offset: 0x01643DCC
-			// (set) Token: 0x06051F7F RID: 335743 RVA: 0x01645BD4 File Offset: 0x01643DD4
+			// Token: 0x17007A68 RID: 31336
+			// (get) Token: 0x06048728 RID: 296744 RVA: 0x01617CF4 File Offset: 0x01615EF4
+			// (set) Token: 0x06048729 RID: 296745 RVA: 0x01617CFC File Offset: 0x01615EFC
 			public SceneItemMovementSyncComponent.TBlackboardValue.EBlackboardValueType ValueType { readonly get; private set; }
 
-			// Token: 0x06051F80 RID: 335744 RVA: 0x01645BE0 File Offset: 0x01643DE0
+			// Token: 0x0604872A RID: 296746 RVA: 0x01617D08 File Offset: 0x01615F08
 			public TBlackboardValue()
 			{
 				this.IntValueInternal = 0;
@@ -353,9 +405,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				this.ValueType = SceneItemMovementSyncComponent.TBlackboardValue.EBlackboardValueType.None;
 			}
 
-			// Token: 0x1700A2CF RID: 41679
-			// (get) Token: 0x06051F81 RID: 335745 RVA: 0x01645C54 File Offset: 0x01643E54
-			// (set) Token: 0x06051F82 RID: 335746 RVA: 0x01645CA0 File Offset: 0x01643EA0
+			// Token: 0x17007A69 RID: 31337
+			// (get) Token: 0x0604872B RID: 296747 RVA: 0x01617D7C File Offset: 0x01615F7C
+			// (set) Token: 0x0604872C RID: 296748 RVA: 0x01617DC8 File Offset: 0x01615FC8
 			public int IntValue
 			{
 				get
@@ -376,9 +428,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2D0 RID: 41680
-			// (get) Token: 0x06051F83 RID: 335747 RVA: 0x01645CB0 File Offset: 0x01643EB0
-			// (set) Token: 0x06051F84 RID: 335748 RVA: 0x01645CFC File Offset: 0x01643EFC
+			// Token: 0x17007A6A RID: 31338
+			// (get) Token: 0x0604872D RID: 296749 RVA: 0x01617DD8 File Offset: 0x01615FD8
+			// (set) Token: 0x0604872E RID: 296750 RVA: 0x01617E24 File Offset: 0x01616024
 			public int[] IntArrayValue
 			{
 				get
@@ -399,9 +451,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2D1 RID: 41681
-			// (get) Token: 0x06051F85 RID: 335749 RVA: 0x01645D0C File Offset: 0x01643F0C
-			// (set) Token: 0x06051F86 RID: 335750 RVA: 0x01645D58 File Offset: 0x01643F58
+			// Token: 0x17007A6B RID: 31339
+			// (get) Token: 0x0604872F RID: 296751 RVA: 0x01617E34 File Offset: 0x01616034
+			// (set) Token: 0x06048730 RID: 296752 RVA: 0x01617E80 File Offset: 0x01616080
 			public float FloatValue
 			{
 				get
@@ -422,9 +474,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2D2 RID: 41682
-			// (get) Token: 0x06051F87 RID: 335751 RVA: 0x01645D68 File Offset: 0x01643F68
-			// (set) Token: 0x06051F88 RID: 335752 RVA: 0x01645DB4 File Offset: 0x01643FB4
+			// Token: 0x17007A6C RID: 31340
+			// (get) Token: 0x06048731 RID: 296753 RVA: 0x01617E90 File Offset: 0x01616090
+			// (set) Token: 0x06048732 RID: 296754 RVA: 0x01617EDC File Offset: 0x016160DC
 			public float[] FloatArrayValue
 			{
 				get
@@ -445,9 +497,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2D3 RID: 41683
-			// (get) Token: 0x06051F89 RID: 335753 RVA: 0x01645DC4 File Offset: 0x01643FC4
-			// (set) Token: 0x06051F8A RID: 335754 RVA: 0x01645E10 File Offset: 0x01644010
+			// Token: 0x17007A6D RID: 31341
+			// (get) Token: 0x06048733 RID: 296755 RVA: 0x01617EEC File Offset: 0x016160EC
+			// (set) Token: 0x06048734 RID: 296756 RVA: 0x01617F38 File Offset: 0x01616138
 			public long LongValue
 			{
 				get
@@ -468,9 +520,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2D4 RID: 41684
-			// (get) Token: 0x06051F8B RID: 335755 RVA: 0x01645E20 File Offset: 0x01644020
-			// (set) Token: 0x06051F8C RID: 335756 RVA: 0x01645E6C File Offset: 0x0164406C
+			// Token: 0x17007A6E RID: 31342
+			// (get) Token: 0x06048735 RID: 296757 RVA: 0x01617F48 File Offset: 0x01616148
+			// (set) Token: 0x06048736 RID: 296758 RVA: 0x01617F94 File Offset: 0x01616194
 			public long[] LongArrayValue
 			{
 				get
@@ -491,9 +543,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2D5 RID: 41685
-			// (get) Token: 0x06051F8D RID: 335757 RVA: 0x01645E7C File Offset: 0x0164407C
-			// (set) Token: 0x06051F8E RID: 335758 RVA: 0x01645EC8 File Offset: 0x016440C8
+			// Token: 0x17007A6F RID: 31343
+			// (get) Token: 0x06048737 RID: 296759 RVA: 0x01617FA4 File Offset: 0x016161A4
+			// (set) Token: 0x06048738 RID: 296760 RVA: 0x01617FF0 File Offset: 0x016161F0
 			public global::Rotator RotatorValue
 			{
 				get
@@ -514,9 +566,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2D6 RID: 41686
-			// (get) Token: 0x06051F8F RID: 335759 RVA: 0x01645ED8 File Offset: 0x016440D8
-			// (set) Token: 0x06051F90 RID: 335760 RVA: 0x01645F24 File Offset: 0x01644124
+			// Token: 0x17007A70 RID: 31344
+			// (get) Token: 0x06048739 RID: 296761 RVA: 0x01618000 File Offset: 0x01616200
+			// (set) Token: 0x0604873A RID: 296762 RVA: 0x0161804C File Offset: 0x0161624C
 			public global::Rotator[] RotatorArrayValue
 			{
 				get
@@ -537,9 +589,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2D7 RID: 41687
-			// (get) Token: 0x06051F91 RID: 335761 RVA: 0x01645F34 File Offset: 0x01644134
-			// (set) Token: 0x06051F92 RID: 335762 RVA: 0x01645F81 File Offset: 0x01644181
+			// Token: 0x17007A71 RID: 31345
+			// (get) Token: 0x0604873B RID: 296763 RVA: 0x0161805C File Offset: 0x0161625C
+			// (set) Token: 0x0604873C RID: 296764 RVA: 0x016180A9 File Offset: 0x016162A9
 			public string StringValue
 			{
 				get
@@ -560,9 +612,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2D8 RID: 41688
-			// (get) Token: 0x06051F93 RID: 335763 RVA: 0x01645F94 File Offset: 0x01644194
-			// (set) Token: 0x06051F94 RID: 335764 RVA: 0x01645FE1 File Offset: 0x016441E1
+			// Token: 0x17007A72 RID: 31346
+			// (get) Token: 0x0604873D RID: 296765 RVA: 0x016180BC File Offset: 0x016162BC
+			// (set) Token: 0x0604873E RID: 296766 RVA: 0x01618109 File Offset: 0x01616309
 			public string[] StringArrayValue
 			{
 				get
@@ -583,9 +635,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2D9 RID: 41689
-			// (get) Token: 0x06051F95 RID: 335765 RVA: 0x01645FF4 File Offset: 0x016441F4
-			// (set) Token: 0x06051F96 RID: 335766 RVA: 0x01646041 File Offset: 0x01644241
+			// Token: 0x17007A73 RID: 31347
+			// (get) Token: 0x0604873F RID: 296767 RVA: 0x0161811C File Offset: 0x0161631C
+			// (set) Token: 0x06048740 RID: 296768 RVA: 0x01618169 File Offset: 0x01616369
 			public global::Vector VectorValue
 			{
 				get
@@ -606,9 +658,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2DA RID: 41690
-			// (get) Token: 0x06051F97 RID: 335767 RVA: 0x01646054 File Offset: 0x01644254
-			// (set) Token: 0x06051F98 RID: 335768 RVA: 0x016460A1 File Offset: 0x016442A1
+			// Token: 0x17007A74 RID: 31348
+			// (get) Token: 0x06048741 RID: 296769 RVA: 0x0161817C File Offset: 0x0161637C
+			// (set) Token: 0x06048742 RID: 296770 RVA: 0x016181C9 File Offset: 0x016163C9
 			public global::Vector[] VectorArrayValue
 			{
 				get
@@ -629,9 +681,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2DB RID: 41691
-			// (get) Token: 0x06051F99 RID: 335769 RVA: 0x016460B4 File Offset: 0x016442B4
-			// (set) Token: 0x06051F9A RID: 335770 RVA: 0x01646101 File Offset: 0x01644301
+			// Token: 0x17007A75 RID: 31349
+			// (get) Token: 0x06048743 RID: 296771 RVA: 0x016181DC File Offset: 0x016163DC
+			// (set) Token: 0x06048744 RID: 296772 RVA: 0x01618229 File Offset: 0x01616429
 			public bool BoolValue
 			{
 				get
@@ -652,7 +704,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x06051F9B RID: 335771 RVA: 0x01646114 File Offset: 0x01644314
+			// Token: 0x06048745 RID: 296773 RVA: 0x0161823C File Offset: 0x0161643C
 			public static implicit operator SceneItemMovementSyncComponent.TBlackboardValue(int value)
 			{
 				return new SceneItemMovementSyncComponent.TBlackboardValue
@@ -661,7 +713,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				};
 			}
 
-			// Token: 0x06051F9C RID: 335772 RVA: 0x01646134 File Offset: 0x01644334
+			// Token: 0x06048746 RID: 296774 RVA: 0x0161825C File Offset: 0x0161645C
 			public static implicit operator SceneItemMovementSyncComponent.TBlackboardValue(int[] value)
 			{
 				return new SceneItemMovementSyncComponent.TBlackboardValue
@@ -670,7 +722,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				};
 			}
 
-			// Token: 0x06051F9D RID: 335773 RVA: 0x01646154 File Offset: 0x01644354
+			// Token: 0x06048747 RID: 296775 RVA: 0x0161827C File Offset: 0x0161647C
 			public static implicit operator SceneItemMovementSyncComponent.TBlackboardValue(float value)
 			{
 				return new SceneItemMovementSyncComponent.TBlackboardValue
@@ -679,7 +731,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				};
 			}
 
-			// Token: 0x06051F9E RID: 335774 RVA: 0x01646174 File Offset: 0x01644374
+			// Token: 0x06048748 RID: 296776 RVA: 0x0161829C File Offset: 0x0161649C
 			public static implicit operator SceneItemMovementSyncComponent.TBlackboardValue(float[] value)
 			{
 				return new SceneItemMovementSyncComponent.TBlackboardValue
@@ -688,7 +740,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				};
 			}
 
-			// Token: 0x06051F9F RID: 335775 RVA: 0x01646194 File Offset: 0x01644394
+			// Token: 0x06048749 RID: 296777 RVA: 0x016182BC File Offset: 0x016164BC
 			public static implicit operator SceneItemMovementSyncComponent.TBlackboardValue(long value)
 			{
 				return new SceneItemMovementSyncComponent.TBlackboardValue
@@ -697,7 +749,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				};
 			}
 
-			// Token: 0x06051FA0 RID: 335776 RVA: 0x016461B4 File Offset: 0x016443B4
+			// Token: 0x0604874A RID: 296778 RVA: 0x016182DC File Offset: 0x016164DC
 			public static implicit operator SceneItemMovementSyncComponent.TBlackboardValue(long[] value)
 			{
 				return new SceneItemMovementSyncComponent.TBlackboardValue
@@ -706,7 +758,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				};
 			}
 
-			// Token: 0x06051FA1 RID: 335777 RVA: 0x016461D4 File Offset: 0x016443D4
+			// Token: 0x0604874B RID: 296779 RVA: 0x016182FC File Offset: 0x016164FC
 			public static implicit operator SceneItemMovementSyncComponent.TBlackboardValue(global::Rotator value)
 			{
 				return new SceneItemMovementSyncComponent.TBlackboardValue
@@ -715,7 +767,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				};
 			}
 
-			// Token: 0x06051FA2 RID: 335778 RVA: 0x016461F4 File Offset: 0x016443F4
+			// Token: 0x0604874C RID: 296780 RVA: 0x0161831C File Offset: 0x0161651C
 			public static implicit operator SceneItemMovementSyncComponent.TBlackboardValue(global::Rotator[] value)
 			{
 				return new SceneItemMovementSyncComponent.TBlackboardValue
@@ -724,7 +776,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				};
 			}
 
-			// Token: 0x06051FA3 RID: 335779 RVA: 0x01646214 File Offset: 0x01644414
+			// Token: 0x0604874D RID: 296781 RVA: 0x0161833C File Offset: 0x0161653C
 			public static implicit operator SceneItemMovementSyncComponent.TBlackboardValue(string value)
 			{
 				return new SceneItemMovementSyncComponent.TBlackboardValue
@@ -733,7 +785,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				};
 			}
 
-			// Token: 0x06051FA4 RID: 335780 RVA: 0x01646234 File Offset: 0x01644434
+			// Token: 0x0604874E RID: 296782 RVA: 0x0161835C File Offset: 0x0161655C
 			public static implicit operator SceneItemMovementSyncComponent.TBlackboardValue(string[] value)
 			{
 				return new SceneItemMovementSyncComponent.TBlackboardValue
@@ -742,7 +794,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				};
 			}
 
-			// Token: 0x06051FA5 RID: 335781 RVA: 0x01646254 File Offset: 0x01644454
+			// Token: 0x0604874F RID: 296783 RVA: 0x0161837C File Offset: 0x0161657C
 			public static implicit operator SceneItemMovementSyncComponent.TBlackboardValue(global::Vector value)
 			{
 				return new SceneItemMovementSyncComponent.TBlackboardValue
@@ -751,7 +803,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				};
 			}
 
-			// Token: 0x06051FA6 RID: 335782 RVA: 0x01646274 File Offset: 0x01644474
+			// Token: 0x06048750 RID: 296784 RVA: 0x0161839C File Offset: 0x0161659C
 			public static implicit operator SceneItemMovementSyncComponent.TBlackboardValue(global::Vector[] value)
 			{
 				return new SceneItemMovementSyncComponent.TBlackboardValue
@@ -760,7 +812,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				};
 			}
 
-			// Token: 0x06051FA7 RID: 335783 RVA: 0x01646294 File Offset: 0x01644494
+			// Token: 0x06048751 RID: 296785 RVA: 0x016183BC File Offset: 0x016165BC
 			public static implicit operator SceneItemMovementSyncComponent.TBlackboardValue(bool value)
 			{
 				return new SceneItemMovementSyncComponent.TBlackboardValue
@@ -769,32 +821,32 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				};
 			}
 
-			// Token: 0x0403E3A7 RID: 254887
+			// Token: 0x040396CD RID: 235213
 			private int IntValueInternal;
 
-			// Token: 0x0403E3A8 RID: 254888
+			// Token: 0x040396CE RID: 235214
 			[Nullable(2)]
 			private int[] IntArrayValueInternal;
 
-			// Token: 0x0403E3A9 RID: 254889
+			// Token: 0x040396CF RID: 235215
 			private float FloatValueInternal;
 
-			// Token: 0x0403E3AA RID: 254890
+			// Token: 0x040396D0 RID: 235216
 			[Nullable(2)]
 			private float[] FloatArrayValueInternal;
 
-			// Token: 0x0403E3AB RID: 254891
+			// Token: 0x040396D1 RID: 235217
 			private long LongValueInternal;
 
-			// Token: 0x0403E3AC RID: 254892
+			// Token: 0x040396D2 RID: 235218
 			[Nullable(2)]
 			private long[] LongArrayValueInternal;
 
-			// Token: 0x0403E3AD RID: 254893
+			// Token: 0x040396D3 RID: 235219
 			[Nullable(2)]
 			private global::Rotator RotatorValueInternal;
 
-			// Token: 0x0403E3AE RID: 254894
+			// Token: 0x040396D4 RID: 235220
 			[Nullable(new byte[]
 			{
 				2,
@@ -802,11 +854,11 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			})]
 			private global::Rotator[] RotatorArrayValueInternal;
 
-			// Token: 0x0403E3AF RID: 254895
+			// Token: 0x040396D5 RID: 235221
 			[Nullable(2)]
 			private string StringValueInternal;
 
-			// Token: 0x0403E3B0 RID: 254896
+			// Token: 0x040396D6 RID: 235222
 			[Nullable(new byte[]
 			{
 				2,
@@ -814,11 +866,11 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			})]
 			private string[] StringArrayValueInternal;
 
-			// Token: 0x0403E3B1 RID: 254897
+			// Token: 0x040396D7 RID: 235223
 			[Nullable(2)]
 			private global::Vector VectorValueInternal;
 
-			// Token: 0x0403E3B2 RID: 254898
+			// Token: 0x040396D8 RID: 235224
 			[Nullable(new byte[]
 			{
 				2,
@@ -826,40 +878,40 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			})]
 			private global::Vector[] VectorArrayValueInternal;
 
-			// Token: 0x0403E3B3 RID: 254899
+			// Token: 0x040396D9 RID: 235225
 			private bool BoolValueInternal;
 
-			// Token: 0x0200D1B6 RID: 53686
+			// Token: 0x0200BD99 RID: 48537
 			[NullableContext(0)]
 			public enum EBlackboardValueType
 			{
-				// Token: 0x0403EEC9 RID: 257737
+				// Token: 0x0403A326 RID: 238374
 				None,
-				// Token: 0x0403EECA RID: 257738
+				// Token: 0x0403A327 RID: 238375
 				Int,
-				// Token: 0x0403EECB RID: 257739
+				// Token: 0x0403A328 RID: 238376
 				IntArray,
-				// Token: 0x0403EECC RID: 257740
+				// Token: 0x0403A329 RID: 238377
 				Float,
-				// Token: 0x0403EECD RID: 257741
+				// Token: 0x0403A32A RID: 238378
 				FloatArray,
-				// Token: 0x0403EECE RID: 257742
+				// Token: 0x0403A32B RID: 238379
 				Long,
-				// Token: 0x0403EECF RID: 257743
+				// Token: 0x0403A32C RID: 238380
 				LongArray,
-				// Token: 0x0403EED0 RID: 257744
+				// Token: 0x0403A32D RID: 238381
 				Rotator,
-				// Token: 0x0403EED1 RID: 257745
+				// Token: 0x0403A32E RID: 238382
 				RotatorArray,
-				// Token: 0x0403EED2 RID: 257746
+				// Token: 0x0403A32F RID: 238383
 				String,
-				// Token: 0x0403EED3 RID: 257747
+				// Token: 0x0403A330 RID: 238384
 				StringArray,
-				// Token: 0x0403EED4 RID: 257748
+				// Token: 0x0403A331 RID: 238385
 				Vector,
-				// Token: 0x0403EED5 RID: 257749
+				// Token: 0x0403A332 RID: 238386
 				VectorArray,
-				// Token: 0x0403EED6 RID: 257750
+				// Token: 0x0403A333 RID: 238387
 				Bool
 			}
 		}

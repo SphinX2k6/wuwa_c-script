@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -19,34 +18,34 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 {
-	// Token: 0x0200483C RID: 18492
+	// Token: 0x0200376D RID: 14189
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CommonGamePlayPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x170078FB RID: 30971
-		// (get) Token: 0x06030640 RID: 198208 RVA: 0x00B3B7B3 File Offset: 0x00B399B3
-		// (set) Token: 0x06030641 RID: 198209 RVA: 0x00B3B7BB File Offset: 0x00B399BB
+		// Token: 0x17004BB8 RID: 19384
+		// (get) Token: 0x06024E10 RID: 151056 RVA: 0x00A6B87F File Offset: 0x00A69A7F
+		// (set) Token: 0x06024E11 RID: 151057 RVA: 0x00A6B887 File Offset: 0x00A69A87
 		public MapMoraleLvItem MapMoraleLvItem { get; set; }
 
-		// Token: 0x170078FC RID: 30972
-		// (get) Token: 0x06030642 RID: 198210 RVA: 0x00B3B7C4 File Offset: 0x00B399C4
-		// (set) Token: 0x06030643 RID: 198211 RVA: 0x00B3B7CC File Offset: 0x00B399CC
+		// Token: 0x17004BB9 RID: 19385
+		// (get) Token: 0x06024E12 RID: 151058 RVA: 0x00A6B890 File Offset: 0x00A69A90
+		// (set) Token: 0x06024E13 RID: 151059 RVA: 0x00A6B898 File Offset: 0x00A69A98
 		public MapMoraleWarnItem MapMoraleWarnItem { get; set; }
 
-		// Token: 0x170078FD RID: 30973
-		// (get) Token: 0x06030644 RID: 198212 RVA: 0x00B3B7D5 File Offset: 0x00B399D5
-		// (set) Token: 0x06030645 RID: 198213 RVA: 0x00B3B7DD File Offset: 0x00B399DD
+		// Token: 0x17004BBA RID: 19386
+		// (get) Token: 0x06024E14 RID: 151060 RVA: 0x00A6B8A1 File Offset: 0x00A69AA1
+		// (set) Token: 0x06024E15 RID: 151061 RVA: 0x00A6B8A9 File Offset: 0x00A69AA9
 		public RewardItemBar RewardsView { get; set; }
 
-		// Token: 0x06030646 RID: 198214 RVA: 0x00B3B7E6 File Offset: 0x00B399E6
+		// Token: 0x06024E16 RID: 151062 RVA: 0x00A6B8B2 File Offset: 0x00A69AB2
 		[NullableContext(1)]
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x06030647 RID: 198215 RVA: 0x00B3B7F0 File Offset: 0x00B399F0
+		// Token: 0x06024E17 RID: 151063 RVA: 0x00A6B8BC File Offset: 0x00A69ABC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CommonGamePlayPanel.<OnBeforeStartAsync>d__22 <OnBeforeStartAsync>d__;
@@ -57,7 +56,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030648 RID: 198216 RVA: 0x00B3B834 File Offset: 0x00B39A34
+		// Token: 0x06024E18 RID: 151064 RVA: 0x00A6B900 File Offset: 0x00A69B00
 		[NullableContext(1)]
 		protected override UniTask OnBeforeShowWorldMapSecondaryUiAsync(params object[] param)
 		{
@@ -70,7 +69,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			return <OnBeforeShowWorldMapSecondaryUiAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030649 RID: 198217 RVA: 0x00B3B87F File Offset: 0x00B39A7F
+		// Token: 0x06024E19 RID: 151065 RVA: 0x00A6B94B File Offset: 0x00A69B4B
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -87,7 +86,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			this.SetPanelItemLayoutActive(false);
 		}
 
-		// Token: 0x0603064A RID: 198218 RVA: 0x00B3B8B8 File Offset: 0x00B39AB8
+		// Token: 0x06024E1A RID: 151066 RVA: 0x00A6B984 File Offset: 0x00A69B84
 		private void SetPanelItemLayoutActive(bool active)
 		{
 			UUIVerticalLayout verticalLayout = base.GetVerticalLayout(7);
@@ -98,7 +97,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			verticalLayout.RootUIComp.Get().SetUIActive(active);
 		}
 
-		// Token: 0x0603064B RID: 198219 RVA: 0x00B3B8E4 File Offset: 0x00B39AE4
+		// Token: 0x06024E1B RID: 151067 RVA: 0x00A6B9B0 File Offset: 0x00A69BB0
 		[NullableContext(1)]
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
@@ -121,8 +120,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 					{
 						this.UpdateMoraleFlagReward(configMarkItem);
 					}
-					MapMark? markConfig = configMarkItem.MarkConfig;
-					if (markConfig.Value.RelativeType == 1)
+					if (configMarkItem.MarkConfig.Value.RelativeType == 1)
 					{
 						this.RefreshRewardItemBar(configMarkItem);
 					}
@@ -132,7 +130,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			}
 		}
 
-		// Token: 0x0603064C RID: 198220 RVA: 0x00B3B998 File Offset: 0x00B39B98
+		// Token: 0x06024E1C RID: 151068 RVA: 0x00A6BA64 File Offset: 0x00A69C64
 		[NullableContext(1)]
 		private void RefreshListLayout(ConfigMarkItem markItem)
 		{
@@ -167,7 +165,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			progressLayout.RefreshByData(list2, null, false);
 		}
 
-		// Token: 0x0603064D RID: 198221 RVA: 0x00B3BA78 File Offset: 0x00B39C78
+		// Token: 0x06024E1D RID: 151069 RVA: 0x00A6BB48 File Offset: 0x00A69D48
 		[NullableContext(1)]
 		private List<MapProgressItemData> GetTreasureChestRows(MapMark markConfig)
 		{
@@ -177,25 +175,46 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 				return new List<MapProgressItemData>();
 			}
 			TreasureChestCountTargetType targetType = (TreasureChestCountTargetType)treasureChestCountTargetArray[0];
-			return (from info in treasureChestCountTargetArray.Skip(1).SelectMany((int targetId) => MapModel.Instance.GetTreasureChestCountList(targetType, targetId))
-			group info by info.StatType).Select(delegate(IGrouping<TreasureChestStatType, TreasureChestCountData> group)
+			List<TreasureChestStatType> list = new List<TreasureChestStatType>();
+			Dictionary<TreasureChestStatType, ValueTuple<int, int>> dictionary = new Dictionary<TreasureChestStatType, ValueTuple<int, int>>();
+			for (int i = 1; i < treasureChestCountTargetArray.Length; i++)
 			{
-				int num = group.Sum((TreasureChestCountData info) => info.CurrentCount);
-				int num2 = group.Sum((TreasureChestCountData info) => info.TotalCount);
+				List<TreasureChestCountData> treasureChestCountList = MapModel.Instance.GetTreasureChestCountList(targetType, treasureChestCountTargetArray[i]);
+				if (treasureChestCountList != null)
+				{
+					foreach (TreasureChestCountData treasureChestCountData in treasureChestCountList)
+					{
+						ValueTuple<int, int> valueTuple;
+						if (!dictionary.TryGetValue(treasureChestCountData.StatType, out valueTuple))
+						{
+							list.Add(treasureChestCountData.StatType);
+						}
+						dictionary[treasureChestCountData.StatType] = new ValueTuple<int, int>(valueTuple.Item1 + treasureChestCountData.CurrentCount, valueTuple.Item2 + treasureChestCountData.TotalCount);
+					}
+				}
+			}
+			List<MapProgressItemData> list2 = new List<MapProgressItemData>(list.Count);
+			foreach (TreasureChestStatType key in list)
+			{
+				ValueTuple<int, int> valueTuple2 = dictionary[key];
+				int item = valueTuple2.Item1;
+				int item2 = valueTuple2.Item2;
+				List<MapProgressItemData> list3 = list2;
 				MapProgressItemData mapProgressItemData = new MapProgressItemData();
-				mapProgressItemData.TitleTextId = MapDefine.TreasureChestTitleTextId[group.Key];
+				mapProgressItemData.TitleTextId = MapDefine.TreasureChestTitleTextId[key];
 				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
-				defaultInterpolatedStringHandler.AppendFormatted<int>(num);
+				defaultInterpolatedStringHandler.AppendFormatted<int>(item);
 				defaultInterpolatedStringHandler.AppendLiteral("/");
-				defaultInterpolatedStringHandler.AppendFormatted<int>(num2);
+				defaultInterpolatedStringHandler.AppendFormatted<int>(item2);
 				mapProgressItemData.CountText = defaultInterpolatedStringHandler.ToStringAndClear();
-				mapProgressItemData.Completed = (num >= num2);
-				mapProgressItemData.IconPath = UiResourceConfig.Instance.GetResourcePath(MapDefine.TreasureChestIconResourceId[group.Key]);
-				return mapProgressItemData;
-			}).ToList<MapProgressItemData>();
+				mapProgressItemData.Completed = (item >= item2);
+				mapProgressItemData.IconPath = UiResourceConfig.Instance.GetResourcePath(MapDefine.TreasureChestIconResourceId[key]);
+				list3.Add(mapProgressItemData);
+			}
+			return list2;
 		}
 
-		// Token: 0x0603064E RID: 198222 RVA: 0x00B3BB10 File Offset: 0x00B39D10
+		// Token: 0x06024E1E RID: 151070 RVA: 0x00A6BD14 File Offset: 0x00A69F14
 		[NullableContext(1)]
 		private unsafe List<IMapSubViewListItemData> GetRedNameProLayoutData()
 		{
@@ -218,7 +237,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			return list;
 		}
 
-		// Token: 0x0603064F RID: 198223 RVA: 0x00B3BBA8 File Offset: 0x00B39DA8
+		// Token: 0x06024E1F RID: 151071 RVA: 0x00A6BDAC File Offset: 0x00A69FAC
 		private long CalcRedNameProCount(long elapsedSeconds)
 		{
 			int commonValue = WorldMapConfig.Instance.GetCommonValue("RedNameProBase");
@@ -243,7 +262,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			return Math.Min((long)commonValue + num * (long)commonValue2 + num3, 999999L);
 		}
 
-		// Token: 0x06030650 RID: 198224 RVA: 0x00B3BC64 File Offset: 0x00B39E64
+		// Token: 0x06024E20 RID: 151072 RVA: 0x00A6BE68 File Offset: 0x00A6A068
 		[NullableContext(1)]
 		public void UpdateMoraleFlagReward(ConfigMarkItem markItem)
 		{
@@ -280,7 +299,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			rewardsView2.SetTitleNewTxt("Morale_title_18");
 		}
 
-		// Token: 0x06030651 RID: 198225 RVA: 0x00B3BCE8 File Offset: 0x00B39EE8
+		// Token: 0x06024E21 RID: 151073 RVA: 0x00A6BEEC File Offset: 0x00A6A0EC
 		[NullableContext(0)]
 		private UniTask<bool> UpdateMoraleItem([Nullable(1)] ConfigMarkItem markItem)
 		{
@@ -293,7 +312,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			return <UpdateMoraleItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030652 RID: 198226 RVA: 0x00B3BD34 File Offset: 0x00B39F34
+		// Token: 0x06024E22 RID: 151074 RVA: 0x00A6BF38 File Offset: 0x00A6A138
 		private void SetMoraleItemHide()
 		{
 			WorldMapSecondaryUiLayoutHelper.SetTitleUseChangeColor(this.LayoutContext, false);
@@ -320,7 +339,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			uiBgItem.ShowMoraleBg(false);
 		}
 
-		// Token: 0x06030653 RID: 198227 RVA: 0x00B3BD96 File Offset: 0x00B39F96
+		// Token: 0x06024E23 RID: 151075 RVA: 0x00A6BF9A File Offset: 0x00A6A19A
 		private void SetNightMareItemHide()
 		{
 			SceneGameplayTipGrid rewardGrid = this.RewardGrid;
@@ -336,7 +355,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			this.SetPanelItemLayoutActive(false);
 		}
 
-		// Token: 0x06030654 RID: 198228 RVA: 0x00B3BDC4 File Offset: 0x00B39FC4
+		// Token: 0x06024E24 RID: 151076 RVA: 0x00A6BFC8 File Offset: 0x00A6A1C8
 		[NullableContext(1)]
 		private bool UpdateNightMareItem(ConfigMarkItem markItem)
 		{
@@ -354,7 +373,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			return true;
 		}
 
-		// Token: 0x06030655 RID: 198229 RVA: 0x00B3BE4C File Offset: 0x00B3A04C
+		// Token: 0x06024E25 RID: 151077 RVA: 0x00A6C058 File Offset: 0x00A6A258
 		[NullableContext(1)]
 		public void InitNightMareRewards(ConfigMarkItem markItem)
 		{
@@ -436,7 +455,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			this.UpdateNightMareReward(this.RewardGrid, this.RewardConfig, "ProbReward", item);
 		}
 
-		// Token: 0x06030656 RID: 198230 RVA: 0x00B3C090 File Offset: 0x00B3A290
+		// Token: 0x06024E26 RID: 151078 RVA: 0x00A6C2A4 File Offset: 0x00A6A4A4
 		[NullableContext(1)]
 		private void UpdateNightMareReward([Nullable(2)] SceneGameplayTipGrid grid, ExchangeReward? rewardConfig, string title, bool showDouble = false)
 		{
@@ -462,7 +481,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			this.SetPanelItemLayoutActive(true);
 		}
 
-		// Token: 0x06030657 RID: 198231 RVA: 0x00B3C0F4 File Offset: 0x00B3A2F4
+		// Token: 0x06024E27 RID: 151079 RVA: 0x00A6C308 File Offset: 0x00A6A508
 		[NullableContext(0)]
 		private UniTask<bool> UpdateFlagChallengeItem([Nullable(1)] ConfigMarkItem markItem)
 		{
@@ -475,7 +494,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			return <UpdateFlagChallengeItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030658 RID: 198232 RVA: 0x00B3C140 File Offset: 0x00B3A340
+		// Token: 0x06024E28 RID: 151080 RVA: 0x00A6C354 File Offset: 0x00A6A554
 		public UniTask CreateRewardItemBar()
 		{
 			CommonGamePlayPanel.<CreateRewardItemBar>d__39 <CreateRewardItemBar>d__;
@@ -486,12 +505,12 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			return <CreateRewardItemBar>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030659 RID: 198233 RVA: 0x00B3C184 File Offset: 0x00B3A384
+		// Token: 0x06024E29 RID: 151081 RVA: 0x00A6C398 File Offset: 0x00A6A598
 		[NullableContext(1)]
 		private void RefreshRewardItemBar(ConfigMarkItem selectedMarkItem)
 		{
-			int levelPlayId = (selectedMarkItem != null) ? selectedMarkItem.MarkConfig.Value.RelativeId : 0;
-			if (LevelPlayModel.Instance.GetLevelPlayConfig(levelPlayId) == null)
+			int relativeId = selectedMarkItem.MarkConfig.Value.RelativeId;
+			if (LevelPlayModel.Instance.GetLevelPlayConfig(relativeId) == null)
 			{
 				UUIVerticalLayout verticalLayout = base.GetVerticalLayout(7);
 				if (verticalLayout == null)
@@ -503,7 +522,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			}
 			else
 			{
-				List<TItem> gameplayDropPreviewItemList = selectedMarkItem.MarkItemEntity.GamePlay.GameplayDropPreviewItemList;
+				List<TItem> gameplayDropPreviewItemList = selectedMarkItem.GameplayDropPreviewItemList;
 				if (gameplayDropPreviewItemList.Count <= 0)
 				{
 					UUIVerticalLayout verticalLayout2 = base.GetVerticalLayout(7);
@@ -526,15 +545,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 					{
 						item.SetUIActive(true);
 					}
-					bool finishRecord;
-					if (selectedMarkItem.MarkItemEntity.GamePlay.GameplayCompleteRewardIds.Count > 0)
-					{
-						finishRecord = selectedMarkItem.MarkItemEntity.GamePlay.IsFinish;
-					}
-					else
-					{
-						finishRecord = selectedMarkItem.MarkItemEntity.GamePlay.IsAllRewardReceived;
-					}
+					bool finishRecord = (selectedMarkItem.GameplayCompleteRewardIds.Count > 0) ? selectedMarkItem.IsGamePlayFinishWithReward : selectedMarkItem.IsAllRewardReceived;
 					RewardItemBar rewardsView = this.RewardsView;
 					if (rewardsView != null)
 					{
@@ -555,7 +566,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			}
 		}
 
-		// Token: 0x0603065A RID: 198234 RVA: 0x00B3C2C0 File Offset: 0x00B3A4C0
+		// Token: 0x06024E2A RID: 151082 RVA: 0x00A6C4A8 File Offset: 0x00A6A6A8
 		protected override void OnBeforeDestroy()
 		{
 			if (this.RewardGrid != null)
@@ -574,25 +585,25 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0401A048 RID: 106568
+		// Token: 0x040146FC RID: 83708
 		private const long RED_NAME_PRO_MAX_COUNT = 999999L;
 
-		// Token: 0x0401A04C RID: 106572
+		// Token: 0x04014700 RID: 83712
 		private SceneGameplayTipGrid RewardGrid;
 
-		// Token: 0x0401A04D RID: 106573
+		// Token: 0x04014701 RID: 83713
 		private SceneGameplayTipGrid FirstRewardGrid;
 
-		// Token: 0x0401A04E RID: 106574
+		// Token: 0x04014702 RID: 83714
 		private global::LevelPlayInfo LevelPlayInfo;
 
-		// Token: 0x0401A04F RID: 106575
+		// Token: 0x04014703 RID: 83715
 		private ExchangeReward? RewardConfig;
 
-		// Token: 0x0401A050 RID: 106576
+		// Token: 0x04014704 RID: 83716
 		private ExchangeReward? FirstRewardConfig;
 
-		// Token: 0x0401A051 RID: 106577
+		// Token: 0x04014705 RID: 83717
 		[Nullable(new byte[]
 		{
 			2,
@@ -601,7 +612,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 		})]
 		private GenericLayout<MapVerticalLayoutItem, IMapSubViewListItemData> _listLayout;
 
-		// Token: 0x0401A052 RID: 106578
+		// Token: 0x04014706 RID: 83718
 		[Nullable(new byte[]
 		{
 			2,
@@ -610,11 +621,11 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 		})]
 		private GenericLayout<MapProgressItem, MapProgressItemData> _progressLayout;
 
-		// Token: 0x0200AB14 RID: 43796
+		// Token: 0x020094C3 RID: 38083
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033FE3 RID: 212963
+			// Token: 0x0402E763 RID: 190307
 			public const int CommonGamePlayPanel = 0;
 		}
 	}

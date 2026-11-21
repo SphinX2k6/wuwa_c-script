@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001444 RID: 5188
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200159C RID: 5532
 	public class IBehaviorTree
 	{
-		// Token: 0x060075F9 RID: 30201 RVA: 0x00119C62 File Offset: 0x00117E62
+		// Token: 0x06007CC1 RID: 31937 RVA: 0x00128736 File Offset: 0x00126936
 		public static IBehaviorTree Create(IBehaviorTree? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002744 RID: 10052
-		// (get) Token: 0x060075FA RID: 30202 RVA: 0x00119C84 File Offset: 0x00117E84
+		// Token: 0x1700292B RID: 10539
+		// (get) Token: 0x06007CC2 RID: 31938 RVA: 0x00128758 File Offset: 0x00126958
 		public virtual List<VarDefine> Vars
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002745 RID: 10053
-		// (get) Token: 0x060075FB RID: 30203 RVA: 0x00119CED File Offset: 0x00117EED
+		// Token: 0x1700292C RID: 10540
+		// (get) Token: 0x06007CC3 RID: 31939 RVA: 0x001287C1 File Offset: 0x001269C1
 		public virtual IStartBtNode Root
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002746 RID: 10054
-		// (get) Token: 0x060075FC RID: 30204 RVA: 0x00119D24 File Offset: 0x00117F24
+		// Token: 0x1700292D RID: 10541
+		// (get) Token: 0x06007CC4 RID: 31940 RVA: 0x001287F8 File Offset: 0x001269F8
 		[Nullable(2)]
 		public virtual List<int> _SelectedNodeIds
 		{
@@ -88,19 +86,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002747 RID: 10055
-		// (get) Token: 0x060075FD RID: 30205 RVA: 0x00119D9C File Offset: 0x00117F9C
+		// Token: 0x1700292E RID: 10542
+		// (get) Token: 0x06007CC5 RID: 31941 RVA: 0x00128870 File Offset: 0x00126A70
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IFavoriteBtNodeInfo> _FavoriteNodes
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -123,38 +121,38 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004474 RID: 17524
+		// Token: 0x0400480A RID: 18442
 		private IBehaviorTree Instance;
 
-		// Token: 0x04004475 RID: 17525
+		// Token: 0x0400480B RID: 18443
 		private List<VarDefine> _VarsCache;
 
-		// Token: 0x04004476 RID: 17526
+		// Token: 0x0400480C RID: 18444
 		private bool _VarsInited;
 
-		// Token: 0x04004477 RID: 17527
+		// Token: 0x0400480D RID: 18445
 		[Nullable(2)]
 		private IStartBtNode _RootCache;
 
-		// Token: 0x04004478 RID: 17528
+		// Token: 0x0400480E RID: 18446
 		private bool _RootInited;
 
-		// Token: 0x04004479 RID: 17529
+		// Token: 0x0400480F RID: 18447
 		[Nullable(2)]
 		private List<int> __SelectedNodeIdsCache;
 
-		// Token: 0x0400447A RID: 17530
+		// Token: 0x04004810 RID: 18448
 		private bool __SelectedNodeIdsInited;
 
-		// Token: 0x0400447B RID: 17531
+		// Token: 0x04004811 RID: 18449
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IFavoriteBtNodeInfo> __FavoriteNodesCache;
 
-		// Token: 0x0400447C RID: 17532
+		// Token: 0x04004812 RID: 18450
 		private bool __FavoriteNodesInited;
 	}
 }

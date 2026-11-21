@@ -2,12 +2,12 @@
 
 namespace GuideLineProcess
 {
-	// Token: 0x020044C6 RID: 17606
+	// Token: 0x02002F53 RID: 12115
 	public enum EProcessType
 	{
-		// Token: 0x0401841B RID: 99355
+		// Token: 0x0400F1C3 RID: 61891
 		StartShow,
-		// Token: 0x0401841C RID: 99356
+		// Token: 0x0400F1C4 RID: 61892
 		EndShow
 	}
 }

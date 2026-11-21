@@ -6,15 +6,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049D1 RID: 18897
+	// Token: 0x0200394B RID: 14667
 	public class ShipTowerSwitchRightTeamComponent : HotKeyComponent
 	{
-		// Token: 0x060311FE RID: 201214 RVA: 0x00B65331 File Offset: 0x00B63531
+		// Token: 0x06025D34 RID: 154932 RVA: 0x00AA0281 File Offset: 0x00A9E481
 		public ShipTowerSwitchRightTeamComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060311FF RID: 201215 RVA: 0x00B6533C File Offset: 0x00B6353C
+		// Token: 0x06025D35 RID: 154933 RVA: 0x00AA028C File Offset: 0x00A9E48C
 		protected override void OnRelease(HotKeyMap config)
 		{
 			TsUiNavigationBehaviorListener triggerListener = this.GetTriggerListener();
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06031200 RID: 201216 RVA: 0x00B65360 File Offset: 0x00B63560
+		// Token: 0x06025D36 RID: 154934 RVA: 0x00AA02B0 File Offset: 0x00A9E4B0
 		[NullableContext(2)]
 		private TsUiNavigationBehaviorListener GetTriggerListener()
 		{
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return result;
 		}
 
-		// Token: 0x06031201 RID: 201217 RVA: 0x00B653F8 File Offset: 0x00B635F8
+		// Token: 0x06025D37 RID: 154935 RVA: 0x00AA0348 File Offset: 0x00A9E548
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

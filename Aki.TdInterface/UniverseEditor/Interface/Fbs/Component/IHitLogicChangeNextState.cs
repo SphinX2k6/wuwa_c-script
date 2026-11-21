@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200539B RID: 21403
+	// Token: 0x02005921 RID: 22817
 	public struct IHitLogicChangeNextState : IFlatbufferObject
 	{
-		// Token: 0x17009D43 RID: 40259
-		// (get) Token: 0x060230D2 RID: 143570 RVA: 0x004DA5E1 File Offset: 0x004D87E1
+		// Token: 0x1700A57B RID: 42363
+		// (get) Token: 0x06025186 RID: 151942 RVA: 0x005174B5 File Offset: 0x005156B5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060230D3 RID: 143571 RVA: 0x004DA5EE File Offset: 0x004D87EE
+		// Token: 0x06025187 RID: 151943 RVA: 0x005174C2 File Offset: 0x005156C2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060230D4 RID: 143572 RVA: 0x004DA5F8 File Offset: 0x004D87F8
+		// Token: 0x06025188 RID: 151944 RVA: 0x005174CC File Offset: 0x005156CC
 		public static IHitLogicChangeNextState GetRootAsIHitLogicChangeNextState(ByteBuffer _bb)
 		{
 			return IHitLogicChangeNextState.GetRootAsIHitLogicChangeNextState(_bb, default(IHitLogicChangeNextState));
 		}
 
-		// Token: 0x060230D5 RID: 143573 RVA: 0x004DA614 File Offset: 0x004D8814
+		// Token: 0x06025189 RID: 151945 RVA: 0x005174E8 File Offset: 0x005156E8
 		public static IHitLogicChangeNextState GetRootAsIHitLogicChangeNextState(ByteBuffer _bb, IHitLogicChangeNextState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060230D6 RID: 143574 RVA: 0x004DA631 File Offset: 0x004D8831
+		// Token: 0x0602518A RID: 151946 RVA: 0x00517505 File Offset: 0x00515705
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060230D7 RID: 143575 RVA: 0x004DA640 File Offset: 0x004D8840
+		// Token: 0x0602518B RID: 151947 RVA: 0x00517514 File Offset: 0x00515714
 		public IHitLogicChangeNextState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009D44 RID: 40260
-		// (get) Token: 0x060230D8 RID: 143576 RVA: 0x004DA650 File Offset: 0x004D8850
+		// Token: 0x1700A57C RID: 42364
+		// (get) Token: 0x0602518C RID: 151948 RVA: 0x00517524 File Offset: 0x00515724
 		public EHitLogicType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060230D9 RID: 143577 RVA: 0x004DA68C File Offset: 0x004D888C
+		// Token: 0x0602518D RID: 151949 RVA: 0x00517560 File Offset: 0x00515760
 		public static Offset<IHitLogicChangeNextState> CreateIHitLogicChangeNextState(FlatBufferBuilder builder, EHitLogicType Type = EHitLogicType.ChangeNextState)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHitLogicChangeNextState.EndIHitLogicChangeNextState(builder);
 		}
 
-		// Token: 0x060230DA RID: 143578 RVA: 0x004DA6A2 File Offset: 0x004D88A2
+		// Token: 0x0602518E RID: 151950 RVA: 0x00517576 File Offset: 0x00515776
 		public static void StartIHitLogicChangeNextState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060230DB RID: 143579 RVA: 0x004DA6AB File Offset: 0x004D88AB
+		// Token: 0x0602518F RID: 151951 RVA: 0x0051757F File Offset: 0x0051577F
 		public static void AddType(FlatBufferBuilder builder, EHitLogicType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060230DC RID: 143580 RVA: 0x004DA6B6 File Offset: 0x004D88B6
+		// Token: 0x06025190 RID: 151952 RVA: 0x0051758A File Offset: 0x0051578A
 		public static Offset<IHitLogicChangeNextState> EndIHitLogicChangeNextState(FlatBufferBuilder builder)
 		{
 			return new Offset<IHitLogicChangeNextState>(builder.EndTable());
 		}
 
-		// Token: 0x060230DD RID: 143581 RVA: 0x004DA6C4 File Offset: 0x004D88C4
+		// Token: 0x06025191 RID: 151953 RVA: 0x00517598 File Offset: 0x00515798
 		public IHitLogicChangeNextStateT UnPack()
 		{
 			IHitLogicChangeNextStateT hitLogicChangeNextStateT = new IHitLogicChangeNextStateT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return hitLogicChangeNextStateT;
 		}
 
-		// Token: 0x060230DE RID: 143582 RVA: 0x004DA6DF File Offset: 0x004D88DF
+		// Token: 0x06025192 RID: 151954 RVA: 0x005175B3 File Offset: 0x005157B3
 		public void UnPackTo(IHitLogicChangeNextStateT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060230DF RID: 143583 RVA: 0x004DA6F0 File Offset: 0x004D88F0
+		// Token: 0x06025193 RID: 151955 RVA: 0x005175C4 File Offset: 0x005157C4
 		public static Offset<IHitLogicChangeNextState> Pack(FlatBufferBuilder builder, IHitLogicChangeNextStateT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHitLogicChangeNextState.CreateIHitLogicChangeNextState(builder, _o.Type);
 		}
 
-		// Token: 0x0400E585 RID: 58757
+		// Token: 0x0400F1B5 RID: 61877
 		private Table __p;
 	}
 }

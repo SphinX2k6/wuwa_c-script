@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002075 RID: 8309
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022BE RID: 8894
 	public class IVisualNovelOptionGroupConfigBase
 	{
-		// Token: 0x0600B67E RID: 46718 RVA: 0x001A7088 File Offset: 0x001A5288
+		// Token: 0x0600C1AA RID: 49578 RVA: 0x001BD8E0 File Offset: 0x001BBAE0
 		private IVisualNovelOptionGroupConfigBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B67F RID: 46719 RVA: 0x001A70C0 File Offset: 0x001A52C0
+		// Token: 0x0600C1AB RID: 49579 RVA: 0x001BD918 File Offset: 0x001BBB18
 		public static IVisualNovelOptionGroupConfigBase Create([Nullable(2)] IVisualNovelOptionGroupConfigBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B680 RID: 46720 RVA: 0x001A70D3 File Offset: 0x001A52D3
+		// Token: 0x0600C1AC RID: 49580 RVA: 0x001BD92B File Offset: 0x001BBB2B
 		public static IVisualNovelOptionGroupConfigBase CreateFromSetValue([Nullable(2)] IVisualNovelOptionGroupConfigBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B681 RID: 46721 RVA: 0x001A70E6 File Offset: 0x001A52E6
+		// Token: 0x0600C1AD RID: 49581 RVA: 0x001BD93E File Offset: 0x001BBB3E
 		public IVisualNovelOptionGroupConfigBase_SetValue ToSetValue()
 		{
 			return new IVisualNovelOptionGroupConfigBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037E8 RID: 14312
-		// (get) Token: 0x0600B682 RID: 46722 RVA: 0x001A70F9 File Offset: 0x001A52F9
-		// (set) Token: 0x0600B683 RID: 46723 RVA: 0x001A7124 File Offset: 0x001A5324
+		// Token: 0x17003AC8 RID: 15048
+		// (get) Token: 0x0600C1AE RID: 49582 RVA: 0x001BD951 File Offset: 0x001BBB51
+		// (set) Token: 0x0600C1AF RID: 49583 RVA: 0x001BD97C File Offset: 0x001BBB7C
 		public virtual EVisualNovelOptionGroupType Type
 		{
 			get
@@ -72,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 				}
 				if (this.PocoInterface == null)
 				{
-					return EVisualNovelOptionGroupType.SolarSchoolExam;
+					return EVisualNovelOptionGroupType.Normal;
 				}
 				return this.PocoInterface.Type;
 			}
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D9B RID: 28059
+		// Token: 0x040073A7 RID: 29607
 		[Nullable(2)]
 		protected IVisualNovelOptionGroupConfigBase FbInstance;
 
-		// Token: 0x04006D9C RID: 28060
+		// Token: 0x040073A8 RID: 29608
 		[Nullable(2)]
 		protected IVisualNovelOptionGroupConfigBase_SetValue PocoInterface;
 	}

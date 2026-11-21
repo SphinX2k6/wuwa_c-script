@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200696C RID: 26988
+	// Token: 0x0200701F RID: 28703
 	public struct IInstrumentKeyAttribute : IFlatbufferObject
 	{
-		// Token: 0x1700C824 RID: 51236
-		// (get) Token: 0x0602F1E4 RID: 192996 RVA: 0x0066B6EF File Offset: 0x006698EF
+		// Token: 0x1700D227 RID: 53799
+		// (get) Token: 0x06031BB4 RID: 203700 RVA: 0x006BBBD7 File Offset: 0x006B9DD7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F1E5 RID: 192997 RVA: 0x0066B6FC File Offset: 0x006698FC
+		// Token: 0x06031BB5 RID: 203701 RVA: 0x006BBBE4 File Offset: 0x006B9DE4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F1E6 RID: 192998 RVA: 0x0066B704 File Offset: 0x00669904
+		// Token: 0x06031BB6 RID: 203702 RVA: 0x006BBBEC File Offset: 0x006B9DEC
 		public static IInstrumentKeyAttribute GetRootAsIInstrumentKeyAttribute(ByteBuffer _bb)
 		{
 			return IInstrumentKeyAttribute.GetRootAsIInstrumentKeyAttribute(_bb, default(IInstrumentKeyAttribute));
 		}
 
-		// Token: 0x0602F1E7 RID: 192999 RVA: 0x0066B720 File Offset: 0x00669920
+		// Token: 0x06031BB7 RID: 203703 RVA: 0x006BBC08 File Offset: 0x006B9E08
 		public static IInstrumentKeyAttribute GetRootAsIInstrumentKeyAttribute(ByteBuffer _bb, IInstrumentKeyAttribute obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F1E8 RID: 193000 RVA: 0x0066B73D File Offset: 0x0066993D
+		// Token: 0x06031BB8 RID: 203704 RVA: 0x006BBC25 File Offset: 0x006B9E25
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F1E9 RID: 193001 RVA: 0x0066B74C File Offset: 0x0066994C
+		// Token: 0x06031BB9 RID: 203705 RVA: 0x006BBC34 File Offset: 0x006B9E34
 		public IInstrumentKeyAttribute __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C825 RID: 51237
-		// (get) Token: 0x0602F1EA RID: 193002 RVA: 0x0066B75C File Offset: 0x0066995C
+		// Token: 0x1700D228 RID: 53800
+		// (get) Token: 0x06031BBA RID: 203706 RVA: 0x006BBC44 File Offset: 0x006B9E44
 		public string FundamentalToneAssetPath
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F1EB RID: 193003 RVA: 0x0066B793 File Offset: 0x00669993
+		// Token: 0x06031BBB RID: 203707 RVA: 0x006BBC7B File Offset: 0x006B9E7B
 		public Span<byte> GetFundamentalToneAssetPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0602F1EC RID: 193004 RVA: 0x0066B7A2 File Offset: 0x006699A2
+		// Token: 0x06031BBC RID: 203708 RVA: 0x006BBC8A File Offset: 0x006B9E8A
 		public byte[] GetFundamentalToneAssetPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700C826 RID: 51238
-		// (get) Token: 0x0602F1ED RID: 193005 RVA: 0x0066B7B0 File Offset: 0x006699B0
+		// Token: 0x1700D229 RID: 53801
+		// (get) Token: 0x06031BBD RID: 203709 RVA: 0x006BBC98 File Offset: 0x006B9E98
 		public string OverToneAssetPath
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F1EE RID: 193006 RVA: 0x0066B7E7 File Offset: 0x006699E7
+		// Token: 0x06031BBE RID: 203710 RVA: 0x006BBCCF File Offset: 0x006B9ECF
 		public Span<byte> GetOverToneAssetPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602F1EF RID: 193007 RVA: 0x0066B7F6 File Offset: 0x006699F6
+		// Token: 0x06031BBF RID: 203711 RVA: 0x006BBCDE File Offset: 0x006B9EDE
 		public byte[] GetOverToneAssetPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700C827 RID: 51239
-		// (get) Token: 0x0602F1F0 RID: 193008 RVA: 0x0066B804 File Offset: 0x00669A04
+		// Token: 0x1700D22A RID: 53802
+		// (get) Token: 0x06031BC0 RID: 203712 RVA: 0x006BBCEC File Offset: 0x006B9EEC
 		public string TextureAssetPath
 		{
 			get
@@ -116,19 +116,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F1F1 RID: 193009 RVA: 0x0066B83B File Offset: 0x00669A3B
+		// Token: 0x06031BC1 RID: 203713 RVA: 0x006BBD23 File Offset: 0x006B9F23
 		public Span<byte> GetTextureAssetPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0602F1F2 RID: 193010 RVA: 0x0066B84A File Offset: 0x00669A4A
+		// Token: 0x06031BC2 RID: 203714 RVA: 0x006BBD32 File Offset: 0x006B9F32
 		public byte[] GetTextureAssetPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x0602F1F3 RID: 193011 RVA: 0x0066B858 File Offset: 0x00669A58
+		// Token: 0x06031BC3 RID: 203715 RVA: 0x006BBD40 File Offset: 0x006B9F40
 		public static Offset<IInstrumentKeyAttribute> CreateIInstrumentKeyAttribute(FlatBufferBuilder builder, StringOffset FundamentalToneAssetPathOffset = default(StringOffset), StringOffset OverToneAssetPathOffset = default(StringOffset), StringOffset TextureAssetPathOffset = default(StringOffset))
 		{
 			builder.StartTable(3);
@@ -138,37 +138,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInstrumentKeyAttribute.EndIInstrumentKeyAttribute(builder);
 		}
 
-		// Token: 0x0602F1F4 RID: 193012 RVA: 0x0066B87C File Offset: 0x00669A7C
+		// Token: 0x06031BC4 RID: 203716 RVA: 0x006BBD64 File Offset: 0x006B9F64
 		public static void StartIInstrumentKeyAttribute(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602F1F5 RID: 193013 RVA: 0x0066B885 File Offset: 0x00669A85
+		// Token: 0x06031BC5 RID: 203717 RVA: 0x006BBD6D File Offset: 0x006B9F6D
 		public static void AddFundamentalToneAssetPath(FlatBufferBuilder builder, StringOffset fundamentalToneAssetPathOffset)
 		{
 			builder.AddOffset(0, fundamentalToneAssetPathOffset.Value, 0);
 		}
 
-		// Token: 0x0602F1F6 RID: 193014 RVA: 0x0066B895 File Offset: 0x00669A95
+		// Token: 0x06031BC6 RID: 203718 RVA: 0x006BBD7D File Offset: 0x006B9F7D
 		public static void AddOverToneAssetPath(FlatBufferBuilder builder, StringOffset overToneAssetPathOffset)
 		{
 			builder.AddOffset(1, overToneAssetPathOffset.Value, 0);
 		}
 
-		// Token: 0x0602F1F7 RID: 193015 RVA: 0x0066B8A5 File Offset: 0x00669AA5
+		// Token: 0x06031BC7 RID: 203719 RVA: 0x006BBD8D File Offset: 0x006B9F8D
 		public static void AddTextureAssetPath(FlatBufferBuilder builder, StringOffset textureAssetPathOffset)
 		{
 			builder.AddOffset(2, textureAssetPathOffset.Value, 0);
 		}
 
-		// Token: 0x0602F1F8 RID: 193016 RVA: 0x0066B8B5 File Offset: 0x00669AB5
+		// Token: 0x06031BC8 RID: 203720 RVA: 0x006BBD9D File Offset: 0x006B9F9D
 		public static Offset<IInstrumentKeyAttribute> EndIInstrumentKeyAttribute(FlatBufferBuilder builder)
 		{
 			return new Offset<IInstrumentKeyAttribute>(builder.EndTable());
 		}
 
-		// Token: 0x0602F1F9 RID: 193017 RVA: 0x0066B8C4 File Offset: 0x00669AC4
+		// Token: 0x06031BC9 RID: 203721 RVA: 0x006BBDAC File Offset: 0x006B9FAC
 		public IInstrumentKeyAttributeT UnPack()
 		{
 			IInstrumentKeyAttributeT instrumentKeyAttributeT = new IInstrumentKeyAttributeT();
@@ -176,7 +176,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return instrumentKeyAttributeT;
 		}
 
-		// Token: 0x0602F1FA RID: 193018 RVA: 0x0066B8DF File Offset: 0x00669ADF
+		// Token: 0x06031BCA RID: 203722 RVA: 0x006BBDC7 File Offset: 0x006B9FC7
 		public void UnPackTo(IInstrumentKeyAttributeT _o)
 		{
 			_o.FundamentalToneAssetPath = this.FundamentalToneAssetPath;
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.TextureAssetPath = this.TextureAssetPath;
 		}
 
-		// Token: 0x0602F1FB RID: 193019 RVA: 0x0066B908 File Offset: 0x00669B08
+		// Token: 0x06031BCB RID: 203723 RVA: 0x006BBDF0 File Offset: 0x006B9FF0
 		public static Offset<IInstrumentKeyAttribute> Pack(FlatBufferBuilder builder, IInstrumentKeyAttributeT _o)
 		{
 			if (_o == null)
@@ -197,7 +197,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInstrumentKeyAttribute.CreateIInstrumentKeyAttribute(builder, fundamentalToneAssetPathOffset, overToneAssetPathOffset, textureAssetPathOffset);
 		}
 
-		// Token: 0x040110EF RID: 69871
+		// Token: 0x04011F5B RID: 73563
 		private Table __p;
 	}
 }

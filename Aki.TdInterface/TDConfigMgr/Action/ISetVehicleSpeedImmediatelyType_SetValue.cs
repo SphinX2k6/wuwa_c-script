@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E4F RID: 7759
+	// Token: 0x02002084 RID: 8324
 	public class ISetVehicleSpeedImmediatelyType_SetValue
 	{
-		// Token: 0x04006335 RID: 25397
+		// Token: 0x04006919 RID: 26905
 		public ESetVehicleSpeedImmediatelyType Type;
 	}
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025AB RID: 9643
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200285A RID: 10330
 	public class IActorTurnTo : ActionParams
 	{
-		// Token: 0x0600D8F1 RID: 55537 RVA: 0x00205F87 File Offset: 0x00204187
+		// Token: 0x0600E66B RID: 58987 RVA: 0x00221C5B File Offset: 0x0021FE5B
 		public static IActorTurnTo Create(IActorTurnTo? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F5D RID: 16221
-		// (get) Token: 0x0600D8F2 RID: 55538 RVA: 0x00205FA6 File Offset: 0x002041A6
+		// Token: 0x17004265 RID: 16997
+		// (get) Token: 0x0600E66C RID: 58988 RVA: 0x00221C7A File Offset: 0x0021FE7A
 		public virtual int ActorIndex
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F5E RID: 16222
-		// (get) Token: 0x0600D8F3 RID: 55539 RVA: 0x00205FB3 File Offset: 0x002041B3
+		// Token: 0x17004266 RID: 16998
+		// (get) Token: 0x0600E66D RID: 58989 RVA: 0x00221C87 File Offset: 0x0021FE87
 		public virtual IActorTurnToData Target
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F5F RID: 16223
-		// (get) Token: 0x0600D8F4 RID: 55540 RVA: 0x00205FE4 File Offset: 0x002041E4
+		// Token: 0x17004267 RID: 16999
+		// (get) Token: 0x0600E66E RID: 58990 RVA: 0x00221CB8 File Offset: 0x0021FEB8
 		public virtual float? DelayTime
 		{
 			get
@@ -62,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F60 RID: 16224
-		// (get) Token: 0x0600D8F5 RID: 55541 RVA: 0x0020601C File Offset: 0x0020421C
+		// Token: 0x17004268 RID: 17000
+		// (get) Token: 0x0600E66F RID: 58991 RVA: 0x00221CF0 File Offset: 0x0021FEF0
 		public virtual bool? UseLookAtForSmallAngle
 		{
 			get
@@ -76,8 +73,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F61 RID: 16225
-		// (get) Token: 0x0600D8F6 RID: 55542 RVA: 0x00206054 File Offset: 0x00204254
+		// Token: 0x17004269 RID: 17001
+		// (get) Token: 0x0600E670 RID: 58992 RVA: 0x00221D28 File Offset: 0x0021FF28
 		public virtual bool? UpdatePosCache
 		{
 			get
@@ -90,13 +87,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007887 RID: 30855
+		// Token: 0x04007EEE RID: 32494
 		private IActorTurnTo Instance;
 
-		// Token: 0x04007888 RID: 30856
+		// Token: 0x04007EEF RID: 32495
 		private IActorTurnToData _TargetCache;
 
-		// Token: 0x04007889 RID: 30857
+		// Token: 0x04007EF0 RID: 32496
 		private bool _TargetInited;
 	}
 }

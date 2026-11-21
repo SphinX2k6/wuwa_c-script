@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 {
-	// Token: 0x02005721 RID: 22305
+	// Token: 0x020046F8 RID: 18168
 	[NullableContext(1)]
 	public interface IKurotatoPopupUnlockRoleOpenParam
 	{
-		// Token: 0x1700885C RID: 34908
-		// (get) Token: 0x06038B74 RID: 232308
-		// (set) Token: 0x06038B75 RID: 232309
+		// Token: 0x17005C24 RID: 23588
+		// (get) Token: 0x0602DA83 RID: 187011
+		// (set) Token: 0x0602DA84 RID: 187012
 		List<int> RoleIds { get; set; }
 
-		// Token: 0x1700885D RID: 34909
-		// (get) Token: 0x06038B76 RID: 232310
-		// (set) Token: 0x06038B77 RID: 232311
+		// Token: 0x17005C25 RID: 23589
+		// (get) Token: 0x0602DA85 RID: 187013
+		// (set) Token: 0x0602DA86 RID: 187014
 		int Index { get; set; }
 	}
 }

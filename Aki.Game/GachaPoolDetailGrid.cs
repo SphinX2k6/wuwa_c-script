@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C84 RID: 7300
+// Token: 0x02001143 RID: 4419
 public class GachaPoolDetailGrid : UiPanelBase
 {
-	// Token: 0x0600DC46 RID: 56390 RVA: 0x00335A5C File Offset: 0x00333C5C
+	// Token: 0x0600B05C RID: 45148 RVA: 0x00340F88 File Offset: 0x0033F188
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -28,7 +28,7 @@ public class GachaPoolDetailGrid : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600DC47 RID: 56391 RVA: 0x00335B08 File Offset: 0x00333D08
+	// Token: 0x0600B05D RID: 45149 RVA: 0x00341034 File Offset: 0x0033F234
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GachaPoolDetailGrid.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -39,20 +39,20 @@ public class GachaPoolDetailGrid : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400650E RID: 25870
+	// Token: 0x040065E0 RID: 26080
 	[Nullable(2)]
 	public GachaPoolDetailData Data;
 
-	// Token: 0x02008259 RID: 33369
+	// Token: 0x020073E1 RID: 29665
 	private enum EGachaPoolDetailGridDefine
 	{
-		// Token: 0x0402A87E RID: 174206
+		// Token: 0x04025B9F RID: 154527
 		TxtDesc,
-		// Token: 0x0402A87F RID: 174207
+		// Token: 0x04025BA0 RID: 154528
 		ContentItem,
-		// Token: 0x0402A880 RID: 174208
+		// Token: 0x04025BA1 RID: 154529
 		Item,
-		// Token: 0x0402A881 RID: 174209
+		// Token: 0x04025BA2 RID: 154530
 		TxtTitle
 	}
 }

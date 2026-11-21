@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AE3 RID: 10979
+	// Token: 0x02002DD7 RID: 11735
 	public class IPresentationType
 	{
-		// Token: 0x0600F0AA RID: 61610 RVA: 0x0022EFBE File Offset: 0x0022D1BE
-		[NullableContext(1)]
+		// Token: 0x0600FF60 RID: 65376 RVA: 0x0024CCCA File Offset: 0x0024AECA
 		public static IPresentationType Create(IPresentationType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CA6 RID: 19622
-		// (get) Token: 0x0600F0AB RID: 61611 RVA: 0x0022EFDD File Offset: 0x0022D1DD
+		// Token: 0x17005060 RID: 20576
+		// (get) Token: 0x0600FF61 RID: 65377 RVA: 0x0024CCE9 File Offset: 0x0024AEE9
 		public virtual EResetPresentationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008469 RID: 33897
+		// Token: 0x04008B6D RID: 35693
 		private IPresentationType Instance;
 	}
 }

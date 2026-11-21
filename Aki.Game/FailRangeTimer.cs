@@ -5,17 +5,17 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D9A RID: 7578
+// Token: 0x0200125C RID: 4700
 [NullableContext(1)]
 [Nullable(0)]
 public class FailRangeTimer : LogicTreeTimerBase
 {
-	// Token: 0x0600E611 RID: 58897 RVA: 0x00363764 File Offset: 0x00361964
+	// Token: 0x0600BA2F RID: 47663 RVA: 0x0036F3C4 File Offset: 0x0036D5C4
 	public FailRangeTimer(long treeIncId, string timerType, double intervalTime) : base(treeIncId, timerType, true, intervalTime)
 	{
 	}
 
-	// Token: 0x0600E612 RID: 58898 RVA: 0x0036377B File Offset: 0x0036197B
+	// Token: 0x0600BA30 RID: 47664 RVA: 0x0036F3DB File Offset: 0x0036D5DB
 	public override void Destroy()
 	{
 		this.ProcessList.Clear();
@@ -24,19 +24,19 @@ public class FailRangeTimer : LogicTreeTimerBase
 		base.Destroy();
 	}
 
-	// Token: 0x0600E613 RID: 58899 RVA: 0x003637B9 File Offset: 0x003619B9
+	// Token: 0x0600BA31 RID: 47665 RVA: 0x0036F419 File Offset: 0x0036D619
 	public override void StartShowTimer(double endTime, double pauseTime)
 	{
 		this.ProcessList.Add(new StartShowProcess(endTime));
 	}
 
-	// Token: 0x0600E614 RID: 58900 RVA: 0x003637CC File Offset: 0x003619CC
+	// Token: 0x0600BA32 RID: 47666 RVA: 0x0036F42C File Offset: 0x0036D62C
 	public override void EndShowTimer()
 	{
 		this.ProcessList.Add(new EndShowProcess());
 	}
 
-	// Token: 0x0600E615 RID: 58901 RVA: 0x003637E0 File Offset: 0x003619E0
+	// Token: 0x0600BA33 RID: 47667 RVA: 0x0036F440 File Offset: 0x0036D640
 	protected override void OnTick(float delta)
 	{
 		if (this.ProcessList.Count == 0)
@@ -64,19 +64,19 @@ public class FailRangeTimer : LogicTreeTimerBase
 		EventSystem.Instance.Emit(EEventName.FailRangeTimerEndShow);
 	}
 
-	// Token: 0x0600E616 RID: 58902 RVA: 0x00363898 File Offset: 0x00361A98
+	// Token: 0x0600BA34 RID: 47668 RVA: 0x0036F4F8 File Offset: 0x0036D6F8
 	private void FinishCallbackForStart(bool success, int viewId)
 	{
 		this.FinishCallbackImpl(success);
 	}
 
-	// Token: 0x0600E617 RID: 58903 RVA: 0x003638A1 File Offset: 0x00361AA1
+	// Token: 0x0600BA35 RID: 47669 RVA: 0x0036F501 File Offset: 0x0036D701
 	private void FinishCallbackForEnd(bool success)
 	{
 		this.FinishCallbackImpl(success);
 	}
 
-	// Token: 0x0600E618 RID: 58904 RVA: 0x003638AC File Offset: 0x00361AAC
+	// Token: 0x0600BA36 RID: 47670 RVA: 0x0036F50C File Offset: 0x0036D70C
 	private void FinishCallbackImpl(bool success)
 	{
 		if (this.CurProcess != null)
@@ -88,10 +88,10 @@ public class FailRangeTimer : LogicTreeTimerBase
 		this.ProcessList.TryShift(out pendingProcess);
 	}
 
-	// Token: 0x04006A72 RID: 27250
+	// Token: 0x04006B53 RID: 27475
 	private readonly List<PendingProcess> ProcessList = new List<PendingProcess>();
 
-	// Token: 0x04006A73 RID: 27251
+	// Token: 0x04006B54 RID: 27476
 	[Nullable(2)]
 	private PendingProcess CurProcess;
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010E6 RID: 4326
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001214 RID: 4628
 	public class IRecallEntityList
 	{
-		// Token: 0x060061D6 RID: 25046 RVA: 0x000EC050 File Offset: 0x000EA250
+		// Token: 0x060067CF RID: 26575 RVA: 0x000F9170 File Offset: 0x000F7370
 		private IRecallEntityList_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060061D7 RID: 25047 RVA: 0x000EC088 File Offset: 0x000EA288
+		// Token: 0x060067D0 RID: 26576 RVA: 0x000F91A8 File Offset: 0x000F73A8
 		public static IRecallEntityList Create([Nullable(2)] IRecallEntityList instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060061D8 RID: 25048 RVA: 0x000EC09B File Offset: 0x000EA29B
+		// Token: 0x060067D1 RID: 26577 RVA: 0x000F91BB File Offset: 0x000F73BB
 		public static IRecallEntityList CreateFromSetValue([Nullable(2)] IRecallEntityList_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060061D9 RID: 25049 RVA: 0x000EC0AE File Offset: 0x000EA2AE
+		// Token: 0x060067D2 RID: 26578 RVA: 0x000F91CE File Offset: 0x000F73CE
 		public IRecallEntityList_SetValue ToSetValue()
 		{
 			return new IRecallEntityList_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002016 RID: 8214
-		// (get) Token: 0x060061DA RID: 25050 RVA: 0x000EC0CD File Offset: 0x000EA2CD
-		// (set) Token: 0x060061DB RID: 25051 RVA: 0x000EC0F8 File Offset: 0x000EA2F8
+		// Token: 0x170021C8 RID: 8648
+		// (get) Token: 0x060067D3 RID: 26579 RVA: 0x000F91ED File Offset: 0x000F73ED
+		// (set) Token: 0x060067D4 RID: 26580 RVA: 0x000F9218 File Offset: 0x000F7418
 		public virtual int LevelId
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002017 RID: 8215
-		// (get) Token: 0x060061DC RID: 25052 RVA: 0x000EC106 File Offset: 0x000EA306
-		// (set) Token: 0x060061DD RID: 25053 RVA: 0x000EC12D File Offset: 0x000EA32D
+		// Token: 0x170021C9 RID: 8649
+		// (get) Token: 0x060067D5 RID: 26581 RVA: 0x000F9226 File Offset: 0x000F7426
+		// (set) Token: 0x060067D6 RID: 26582 RVA: 0x000F924D File Offset: 0x000F744D
 		public virtual List<int> EntityList
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003AD7 RID: 15063
+		// Token: 0x04003E24 RID: 15908
 		[Nullable(2)]
 		protected IRecallEntityList FbInstance;
 
-		// Token: 0x04003AD8 RID: 15064
+		// Token: 0x04003E25 RID: 15909
 		[Nullable(2)]
 		protected IRecallEntityList_SetValue PocoInterface;
 	}

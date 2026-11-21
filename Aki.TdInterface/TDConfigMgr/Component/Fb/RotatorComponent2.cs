@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A68 RID: 2664
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B32 RID: 2866
 	public class RotatorComponent2 : IComponentBase
 	{
-		// Token: 0x06003D67 RID: 15719 RVA: 0x0009DAC2 File Offset: 0x0009BCC2
+		// Token: 0x06004190 RID: 16784 RVA: 0x000A707A File Offset: 0x000A527A
 		public static RotatorComponent2 Create(IRotatorComponent2? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E54 RID: 3668
-		// (get) Token: 0x06003D68 RID: 15720 RVA: 0x0009DAE4 File Offset: 0x0009BCE4
+		// Token: 0x17000F27 RID: 3879
+		// (get) Token: 0x06004191 RID: 16785 RVA: 0x000A709C File Offset: 0x000A529C
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E55 RID: 3669
-		// (get) Token: 0x06003D69 RID: 15721 RVA: 0x0009DB1C File Offset: 0x0009BD1C
+		// Token: 0x17000F28 RID: 3880
+		// (get) Token: 0x06004192 RID: 16786 RVA: 0x000A70D4 File Offset: 0x000A52D4
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E56 RID: 3670
-		// (get) Token: 0x06003D6A RID: 15722 RVA: 0x0009DB34 File Offset: 0x0009BD34
+		// Token: 0x17000F29 RID: 3881
+		// (get) Token: 0x06004193 RID: 16787 RVA: 0x000A70EC File Offset: 0x000A52EC
 		public virtual List<IStateRotationConfig> Config
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002235 RID: 8757
+		// Token: 0x04002451 RID: 9297
 		private IRotatorComponent2 Instance;
 
-		// Token: 0x04002236 RID: 8758
+		// Token: 0x04002452 RID: 9298
 		private List<IStateRotationConfig> _ConfigCache;
 
-		// Token: 0x04002237 RID: 8759
+		// Token: 0x04002453 RID: 9299
 		private bool _ConfigInited;
 	}
 }

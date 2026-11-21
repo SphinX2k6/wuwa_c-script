@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RecallQuest.Views
 {
-	// Token: 0x02004F1D RID: 20253
+	// Token: 0x02003EE6 RID: 16102
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RecallTopPanel : BattleVisibleChildView
 	{
-		// Token: 0x06033EE5 RID: 212709 RVA: 0x00C2C110 File Offset: 0x00C2A310
+		// Token: 0x06028D50 RID: 167248 RVA: 0x00B75784 File Offset: 0x00B73984
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033EE6 RID: 212710 RVA: 0x00C2C19C File Offset: 0x00C2A39C
+		// Token: 0x06028D51 RID: 167249 RVA: 0x00B75810 File Offset: 0x00B73A10
 		[NullableContext(2)]
 		protected override UniTask InitializeAsync(object param = null)
 		{
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033EE7 RID: 212711 RVA: 0x00C2C1E0 File Offset: 0x00C2A3E0
+		// Token: 0x06028D52 RID: 167250 RVA: 0x00B75854 File Offset: 0x00B73A54
 		private UniTask NewFunctionButton(int functionId)
 		{
 			RecallTopPanel.<NewFunctionButton>d__8 <NewFunctionButton>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			return <NewFunctionButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033EE8 RID: 212712 RVA: 0x00C2C22C File Offset: 0x00C2A42C
+		// Token: 0x06028D53 RID: 167251 RVA: 0x00B758A0 File Offset: 0x00B73AA0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -81,20 +81,20 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			return <NewBattleEntranceButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033EE9 RID: 212713 RVA: 0x00C2C2A2 File Offset: 0x00C2A4A2
+		// Token: 0x06028D54 RID: 167252 RVA: 0x00B75916 File Offset: 0x00B73B16
 		protected override void OnShowBattleChildView()
 		{
 			this.AddEvents();
 			this.RefreshButtonState();
 		}
 
-		// Token: 0x06033EEA RID: 212714 RVA: 0x00C2C2B0 File Offset: 0x00C2A4B0
+		// Token: 0x06028D55 RID: 167253 RVA: 0x00B75924 File Offset: 0x00B73B24
 		protected override void OnHideBattleChildView()
 		{
 			this.RemoveEvents();
 		}
 
-		// Token: 0x06033EEB RID: 212715 RVA: 0x00C2C2B8 File Offset: 0x00C2A4B8
+		// Token: 0x06028D56 RID: 167254 RVA: 0x00B7592C File Offset: 0x00B73B2C
 		private void AddEvents()
 		{
 			if (!this.EventListenState)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			}
 		}
 
-		// Token: 0x06033EEC RID: 212716 RVA: 0x00C2C2E5 File Offset: 0x00C2A4E5
+		// Token: 0x06028D57 RID: 167255 RVA: 0x00B75959 File Offset: 0x00B73B59
 		private void RemoveEvents()
 		{
 			if (this.EventListenState)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			}
 		}
 
-		// Token: 0x06033EED RID: 212717 RVA: 0x00C2C314 File Offset: 0x00C2A514
+		// Token: 0x06028D58 RID: 167256 RVA: 0x00B75988 File Offset: 0x00B73B88
 		private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 		{
 			if (state != QuestState.Finish)
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			}
 		}
 
-		// Token: 0x06033EEE RID: 212718 RVA: 0x00C2C378 File Offset: 0x00C2A578
+		// Token: 0x06028D59 RID: 167257 RVA: 0x00B759EC File Offset: 0x00B73BEC
 		private void RefreshButtonState()
 		{
 			if (this.ButtonList == null)
@@ -164,13 +164,13 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			}
 		}
 
-		// Token: 0x0401B983 RID: 113027
+		// Token: 0x04016356 RID: 90966
 		private readonly Dictionary<int, int> FunctionIndexMap = new Dictionary<int, int>();
 
-		// Token: 0x0401B984 RID: 113028
+		// Token: 0x04016357 RID: 90967
 		private readonly Dictionary<int, BattleEntranceButton> FunctionMap = new Dictionary<int, BattleEntranceButton>();
 
-		// Token: 0x0401B985 RID: 113029
+		// Token: 0x04016358 RID: 90968
 		[Nullable(new byte[]
 		{
 			2,
@@ -178,24 +178,24 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 		})]
 		private List<BattleEntranceButton> ButtonList;
 
-		// Token: 0x0401B986 RID: 113030
+		// Token: 0x04016359 RID: 90969
 		[Nullable(2)]
 		private List<int> CurrentShowFunctionIds;
 
-		// Token: 0x0401B987 RID: 113031
+		// Token: 0x0401635A RID: 90970
 		private bool EventListenState;
 
-		// Token: 0x0200B065 RID: 45157
+		// Token: 0x02009A95 RID: 39573
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403588F RID: 219279
+			// Token: 0x040302BA RID: 197306
 			public const int SettingBtn = 0;
 
-			// Token: 0x04035890 RID: 219280
+			// Token: 0x040302BB RID: 197307
 			public const int PhotoBtn = 1;
 
-			// Token: 0x04035891 RID: 219281
+			// Token: 0x040302BC RID: 197308
 			public const int TimeBtn = 2;
 		}
 	}

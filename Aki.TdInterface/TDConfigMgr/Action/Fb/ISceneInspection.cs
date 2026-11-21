@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002876 RID: 10358
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B4C RID: 11084
 	public class ISceneInspection : IUiGame
 	{
-		// Token: 0x0600E57C RID: 58748 RVA: 0x0021BCF1 File Offset: 0x00219EF1
+		// Token: 0x0600F3AD RID: 62381 RVA: 0x00238C45 File Offset: 0x00236E45
 		public static ISceneInspection Create(ISceneInspection? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004652 RID: 18002
-		// (get) Token: 0x0600E57D RID: 58749 RVA: 0x0021BD10 File Offset: 0x00219F10
+		// Token: 0x170049C3 RID: 18883
+		// (get) Token: 0x0600F3AE RID: 62382 RVA: 0x00238C64 File Offset: 0x00236E64
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004653 RID: 18003
-		// (get) Token: 0x0600E57E RID: 58750 RVA: 0x0021BD1D File Offset: 0x00219F1D
+		// Token: 0x170049C4 RID: 18884
+		// (get) Token: 0x0600F3AF RID: 62383 RVA: 0x00238C71 File Offset: 0x00236E71
 		public virtual string SaveVarName
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004654 RID: 18004
-		// (get) Token: 0x0600E57F RID: 58751 RVA: 0x0021BD2C File Offset: 0x00219F2C
+		// Token: 0x170049C5 RID: 18885
+		// (get) Token: 0x0600F3B0 RID: 62384 RVA: 0x00238C80 File Offset: 0x00236E80
 		public virtual List<ISceneInspectionPoint> InteractPoints
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EE4 RID: 32484
+		// Token: 0x040085A4 RID: 34212
 		private ISceneInspection Instance;
 
-		// Token: 0x04007EE5 RID: 32485
+		// Token: 0x040085A5 RID: 34213
 		private List<ISceneInspectionPoint> _InteractPointsCache;
 
-		// Token: 0x04007EE6 RID: 32486
+		// Token: 0x040085A6 RID: 34214
 		private bool _InteractPointsInited;
 	}
 }

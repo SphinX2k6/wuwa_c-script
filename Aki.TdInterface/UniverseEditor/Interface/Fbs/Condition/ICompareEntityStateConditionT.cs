@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B9C RID: 19356
+	// Token: 0x02005086 RID: 20614
 	public class ICompareEntityStateConditionT
 	{
-		// Token: 0x17008C79 RID: 35961
-		// (get) Token: 0x0601E844 RID: 124996 RVA: 0x004454D3 File Offset: 0x004436D3
-		// (set) Token: 0x0601E845 RID: 124997 RVA: 0x004454DB File Offset: 0x004436DB
+		// Token: 0x17009392 RID: 37778
+		// (get) Token: 0x060203F0 RID: 132080 RVA: 0x00478037 File Offset: 0x00476237
+		// (set) Token: 0x060203F1 RID: 132081 RVA: 0x0047803F File Offset: 0x0047623F
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008C7A RID: 35962
-		// (get) Token: 0x0601E846 RID: 124998 RVA: 0x004454E4 File Offset: 0x004436E4
-		// (set) Token: 0x0601E847 RID: 124999 RVA: 0x004454EC File Offset: 0x004436EC
+		// Token: 0x17009393 RID: 37779
+		// (get) Token: 0x060203F2 RID: 132082 RVA: 0x00478048 File Offset: 0x00476248
+		// (set) Token: 0x060203F3 RID: 132083 RVA: 0x00478050 File Offset: 0x00476250
 		public int EntityId { get; set; }
 
-		// Token: 0x17008C7B RID: 35963
-		// (get) Token: 0x0601E848 RID: 125000 RVA: 0x004454F5 File Offset: 0x004436F5
-		// (set) Token: 0x0601E849 RID: 125001 RVA: 0x004454FD File Offset: 0x004436FD
+		// Token: 0x17009394 RID: 37780
+		// (get) Token: 0x060203F4 RID: 132084 RVA: 0x00478059 File Offset: 0x00476259
+		// (set) Token: 0x060203F5 RID: 132085 RVA: 0x00478061 File Offset: 0x00476261
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008C7C RID: 35964
-		// (get) Token: 0x0601E84A RID: 125002 RVA: 0x00445506 File Offset: 0x00443706
-		// (set) Token: 0x0601E84B RID: 125003 RVA: 0x0044550E File Offset: 0x0044370E
+		// Token: 0x17009395 RID: 37781
+		// (get) Token: 0x060203F6 RID: 132086 RVA: 0x0047806A File Offset: 0x0047626A
+		// (set) Token: 0x060203F7 RID: 132087 RVA: 0x00478072 File Offset: 0x00476272
 		public string State { get; set; }
 
-		// Token: 0x0601E84C RID: 125004 RVA: 0x00445517 File Offset: 0x00443717
+		// Token: 0x060203F8 RID: 132088 RVA: 0x0047807B File Offset: 0x0047627B
 		public ICompareEntityStateConditionT()
 		{
 			this.Type = ECondition.CompareVar;

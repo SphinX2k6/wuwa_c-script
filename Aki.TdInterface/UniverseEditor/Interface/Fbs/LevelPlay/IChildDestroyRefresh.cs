@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004446 RID: 17478
+	// Token: 0x020048AE RID: 18606
 	public struct IChildDestroyRefresh : IFlatbufferObject
 	{
-		// Token: 0x17007B24 RID: 31524
-		// (get) Token: 0x0601A00E RID: 106510 RVA: 0x003B78CA File Offset: 0x003B5ACA
+		// Token: 0x17008163 RID: 33123
+		// (get) Token: 0x0601B7DF RID: 112607 RVA: 0x003E3AD6 File Offset: 0x003E1CD6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A00F RID: 106511 RVA: 0x003B78D7 File Offset: 0x003B5AD7
+		// Token: 0x0601B7E0 RID: 112608 RVA: 0x003E3AE3 File Offset: 0x003E1CE3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A010 RID: 106512 RVA: 0x003B78E0 File Offset: 0x003B5AE0
+		// Token: 0x0601B7E1 RID: 112609 RVA: 0x003E3AEC File Offset: 0x003E1CEC
 		public static IChildDestroyRefresh GetRootAsIChildDestroyRefresh(ByteBuffer _bb)
 		{
 			return IChildDestroyRefresh.GetRootAsIChildDestroyRefresh(_bb, default(IChildDestroyRefresh));
 		}
 
-		// Token: 0x0601A011 RID: 106513 RVA: 0x003B78FC File Offset: 0x003B5AFC
+		// Token: 0x0601B7E2 RID: 112610 RVA: 0x003E3B08 File Offset: 0x003E1D08
 		public static IChildDestroyRefresh GetRootAsIChildDestroyRefresh(ByteBuffer _bb, IChildDestroyRefresh obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A012 RID: 106514 RVA: 0x003B7919 File Offset: 0x003B5B19
+		// Token: 0x0601B7E3 RID: 112611 RVA: 0x003E3B25 File Offset: 0x003E1D25
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A013 RID: 106515 RVA: 0x003B7928 File Offset: 0x003B5B28
+		// Token: 0x0601B7E4 RID: 112612 RVA: 0x003E3B34 File Offset: 0x003E1D34
 		public IChildDestroyRefresh __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007B25 RID: 31525
-		// (get) Token: 0x0601A014 RID: 106516 RVA: 0x003B7938 File Offset: 0x003B5B38
+		// Token: 0x17008164 RID: 33124
+		// (get) Token: 0x0601B7E5 RID: 112613 RVA: 0x003E3B44 File Offset: 0x003E1D44
 		public ELevelPlayRefreshType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007B26 RID: 31526
-		// (get) Token: 0x0601A015 RID: 106517 RVA: 0x003B7974 File Offset: 0x003B5B74
+		// Token: 0x17008165 RID: 33125
+		// (get) Token: 0x0601B7E6 RID: 112614 RVA: 0x003E3B80 File Offset: 0x003E1D80
 		public int MinRefreshCd
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007B27 RID: 31527
-		// (get) Token: 0x0601A016 RID: 106518 RVA: 0x003B79B0 File Offset: 0x003B5BB0
+		// Token: 0x17008166 RID: 33126
+		// (get) Token: 0x0601B7E7 RID: 112615 RVA: 0x003E3BBC File Offset: 0x003E1DBC
 		public int MaxRefreshCd
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A017 RID: 106519 RVA: 0x003B79EC File Offset: 0x003B5BEC
+		// Token: 0x0601B7E8 RID: 112616 RVA: 0x003E3BF8 File Offset: 0x003E1DF8
 		public static Offset<IChildDestroyRefresh> CreateIChildDestroyRefresh(FlatBufferBuilder builder, ELevelPlayRefreshType Type = ELevelPlayRefreshType.None, int MinRefreshCd = 0, int MaxRefreshCd = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IChildDestroyRefresh.EndIChildDestroyRefresh(builder);
 		}
 
-		// Token: 0x0601A018 RID: 106520 RVA: 0x003B7A10 File Offset: 0x003B5C10
+		// Token: 0x0601B7E9 RID: 112617 RVA: 0x003E3C1C File Offset: 0x003E1E1C
 		public static void StartIChildDestroyRefresh(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601A019 RID: 106521 RVA: 0x003B7A19 File Offset: 0x003B5C19
+		// Token: 0x0601B7EA RID: 112618 RVA: 0x003E3C25 File Offset: 0x003E1E25
 		public static void AddType(FlatBufferBuilder builder, ELevelPlayRefreshType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601A01A RID: 106522 RVA: 0x003B7A24 File Offset: 0x003B5C24
+		// Token: 0x0601B7EB RID: 112619 RVA: 0x003E3C30 File Offset: 0x003E1E30
 		public static void AddMinRefreshCd(FlatBufferBuilder builder, int minRefreshCd)
 		{
 			builder.AddInt(1, minRefreshCd, 0);
 		}
 
-		// Token: 0x0601A01B RID: 106523 RVA: 0x003B7A2F File Offset: 0x003B5C2F
+		// Token: 0x0601B7EC RID: 112620 RVA: 0x003E3C3B File Offset: 0x003E1E3B
 		public static void AddMaxRefreshCd(FlatBufferBuilder builder, int maxRefreshCd)
 		{
 			builder.AddInt(2, maxRefreshCd, 0);
 		}
 
-		// Token: 0x0601A01C RID: 106524 RVA: 0x003B7A3A File Offset: 0x003B5C3A
+		// Token: 0x0601B7ED RID: 112621 RVA: 0x003E3C46 File Offset: 0x003E1E46
 		public static Offset<IChildDestroyRefresh> EndIChildDestroyRefresh(FlatBufferBuilder builder)
 		{
 			return new Offset<IChildDestroyRefresh>(builder.EndTable());
 		}
 
-		// Token: 0x0601A01D RID: 106525 RVA: 0x003B7A48 File Offset: 0x003B5C48
+		// Token: 0x0601B7EE RID: 112622 RVA: 0x003E3C54 File Offset: 0x003E1E54
 		public IChildDestroyRefreshT UnPack()
 		{
 			IChildDestroyRefreshT childDestroyRefreshT = new IChildDestroyRefreshT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return childDestroyRefreshT;
 		}
 
-		// Token: 0x0601A01E RID: 106526 RVA: 0x003B7A63 File Offset: 0x003B5C63
+		// Token: 0x0601B7EF RID: 112623 RVA: 0x003E3C6F File Offset: 0x003E1E6F
 		public void UnPackTo(IChildDestroyRefreshT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.MaxRefreshCd = this.MaxRefreshCd;
 		}
 
-		// Token: 0x0601A01F RID: 106527 RVA: 0x003B7A8C File Offset: 0x003B5C8C
+		// Token: 0x0601B7F0 RID: 112624 RVA: 0x003E3C98 File Offset: 0x003E1E98
 		public static Offset<IChildDestroyRefresh> Pack(FlatBufferBuilder builder, IChildDestroyRefreshT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IChildDestroyRefresh.CreateIChildDestroyRefresh(builder, _o.Type, _o.MinRefreshCd, _o.MaxRefreshCd);
 		}
 
-		// Token: 0x0400C414 RID: 50196
+		// Token: 0x0400CE42 RID: 52802
 		private Table __p;
 	}
 }

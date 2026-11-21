@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020000DD RID: 221
+	// Token: 0x020000DE RID: 222
 	[NetMessage(EMessageId.AlertAreaNotify)]
 	public sealed class AlertAreaNotify : IMessage<AlertAreaNotify>, IMessage, IEquatable<AlertAreaNotify>, IDeepCloneable<AlertAreaNotify>, IBufferMessage
 	{
-		// Token: 0x06002105 RID: 8453 RVA: 0x00058BE2 File Offset: 0x00056DE2
+		// Token: 0x0600214E RID: 8526 RVA: 0x00059896 File Offset: 0x00057A96
 		[NullableContext(1)]
 		public static AlertAreaNotify Create()
 		{
 			return new AlertAreaNotify();
 		}
 
-		// Token: 0x17000416 RID: 1046
-		// (get) Token: 0x06002106 RID: 8454 RVA: 0x00058BE9 File Offset: 0x00056DE9
+		// Token: 0x1700041F RID: 1055
+		// (get) Token: 0x0600214F RID: 8527 RVA: 0x0005989D File Offset: 0x00057A9D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000417 RID: 1047
-		// (get) Token: 0x06002107 RID: 8455 RVA: 0x00058BEC File Offset: 0x00056DEC
+		// Token: 0x17000420 RID: 1056
+		// (get) Token: 0x06002150 RID: 8528 RVA: 0x000598A0 File Offset: 0x00057AA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002108 RID: 8456 RVA: 0x00058BF3 File Offset: 0x00056DF3
+		// Token: 0x06002151 RID: 8529 RVA: 0x000598A7 File Offset: 0x00057AA7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AlertAreaNotify()
 		{
 		}
 
-		// Token: 0x06002109 RID: 8457 RVA: 0x00058C11 File Offset: 0x00056E11
+		// Token: 0x06002152 RID: 8530 RVA: 0x000598C5 File Offset: 0x00057AC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AlertAreaNotify(AlertAreaNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600210A RID: 8458 RVA: 0x00058C4C File Offset: 0x00056E4C
+		// Token: 0x06002153 RID: 8531 RVA: 0x00059900 File Offset: 0x00057B00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AlertAreaNotify Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol
 			return new AlertAreaNotify(this);
 		}
 
-		// Token: 0x17000418 RID: 1048
-		// (get) Token: 0x0600210B RID: 8459 RVA: 0x00058C54 File Offset: 0x00056E54
+		// Token: 0x17000421 RID: 1057
+		// (get) Token: 0x06002154 RID: 8532 RVA: 0x00059908 File Offset: 0x00057B08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<AlertArea> AlertAreas
@@ -80,8 +80,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000419 RID: 1049
-		// (get) Token: 0x0600210C RID: 8460 RVA: 0x00058C5C File Offset: 0x00056E5C
+		// Token: 0x17000422 RID: 1058
+		// (get) Token: 0x06002155 RID: 8533 RVA: 0x00059910 File Offset: 0x00057B10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> RemoveAreaIds
@@ -92,7 +92,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600210D RID: 8461 RVA: 0x00058C64 File Offset: 0x00056E64
+		// Token: 0x06002156 RID: 8534 RVA: 0x00059918 File Offset: 0x00057B18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -100,7 +100,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AlertAreaNotify);
 		}
 
-		// Token: 0x0600210E RID: 8462 RVA: 0x00058C74 File Offset: 0x00056E74
+		// Token: 0x06002157 RID: 8535 RVA: 0x00059928 File Offset: 0x00057B28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AlertAreaNotify other)
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.alertAreas_.Equals(other.alertAreas_) && this.removeAreaIds_.Equals(other.removeAreaIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600210F RID: 8463 RVA: 0x00058CC8 File Offset: 0x00056EC8
+		// Token: 0x06002158 RID: 8536 RVA: 0x0005997C File Offset: 0x00057B7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002110 RID: 8464 RVA: 0x00058D0A File Offset: 0x00056F0A
+		// Token: 0x06002159 RID: 8537 RVA: 0x000599BE File Offset: 0x00057BBE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002111 RID: 8465 RVA: 0x00058D17 File Offset: 0x00056F17
+		// Token: 0x0600215A RID: 8538 RVA: 0x000599CB File Offset: 0x00057BCB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -139,20 +139,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06002112 RID: 8466 RVA: 0x00058D20 File Offset: 0x00056F20
+		// Token: 0x0600215B RID: 8539 RVA: 0x000599D4 File Offset: 0x00057BD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.removeAreaIds_.WriteTo(ref output, AlertAreaNotify._repeated_removeAreaIds_codec);
 			this.alertAreas_.WriteTo(ref output, AlertAreaNotify._repeated_alertAreas_codec);
+			this.removeAreaIds_.WriteTo(ref output, AlertAreaNotify._repeated_removeAreaIds_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06002113 RID: 8467 RVA: 0x00058D58 File Offset: 0x00056F58
+		// Token: 0x0600215C RID: 8540 RVA: 0x00059A0C File Offset: 0x00057C0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002114 RID: 8468 RVA: 0x00058DA4 File Offset: 0x00056FA4
+		// Token: 0x0600215D RID: 8541 RVA: 0x00059A58 File Offset: 0x00057C58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AlertAreaNotify other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06002115 RID: 8469 RVA: 0x00058DE3 File Offset: 0x00056FE3
+		// Token: 0x0600215E RID: 8542 RVA: 0x00059A97 File Offset: 0x00057C97
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06002116 RID: 8470 RVA: 0x00058DEC File Offset: 0x00056FEC
+		// Token: 0x0600215F RID: 8543 RVA: 0x00059AA0 File Offset: 0x00057CA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,43 +201,43 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 88U && num != 90U)
+				if (num != 98U)
 				{
-					if (num != 98U)
+					if (num != 112U && num != 114U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.alertAreas_.AddEntriesFrom(ref input, AlertAreaNotify._repeated_alertAreas_codec);
+						this.removeAreaIds_.AddEntriesFrom(ref input, AlertAreaNotify._repeated_removeAreaIds_codec);
 					}
 				}
 				else
 				{
-					this.removeAreaIds_.AddEntriesFrom(ref input, AlertAreaNotify._repeated_removeAreaIds_codec);
+					this.alertAreas_.AddEntriesFrom(ref input, AlertAreaNotify._repeated_alertAreas_codec);
 				}
 			}
 		}
 
-		// Token: 0x04002421 RID: 9249
+		// Token: 0x04002484 RID: 9348
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002422 RID: 9250
+		// Token: 0x04002485 RID: 9349
 		public const int AlertAreasFieldNumber = 12;
 
-		// Token: 0x04002423 RID: 9251
+		// Token: 0x04002486 RID: 9350
 		private static readonly FieldCodec<AlertArea> _repeated_alertAreas_codec = FieldCodec.ForMessage<AlertArea>(98U, AlertArea.Parser);
 
-		// Token: 0x04002424 RID: 9252
+		// Token: 0x04002487 RID: 9351
 		private readonly RepeatedField<AlertArea> alertAreas_ = new RepeatedField<AlertArea>();
 
-		// Token: 0x04002425 RID: 9253
-		public const int RemoveAreaIdsFieldNumber = 11;
+		// Token: 0x04002488 RID: 9352
+		public const int RemoveAreaIdsFieldNumber = 14;
 
-		// Token: 0x04002426 RID: 9254
-		private static readonly FieldCodec<int> _repeated_removeAreaIds_codec = FieldCodec.ForInt32(90U);
+		// Token: 0x04002489 RID: 9353
+		private static readonly FieldCodec<int> _repeated_removeAreaIds_codec = FieldCodec.ForInt32(114U);
 
-		// Token: 0x04002427 RID: 9255
+		// Token: 0x0400248A RID: 9354
 		private readonly RepeatedField<int> removeAreaIds_ = new RepeatedField<int>();
 	}
 }

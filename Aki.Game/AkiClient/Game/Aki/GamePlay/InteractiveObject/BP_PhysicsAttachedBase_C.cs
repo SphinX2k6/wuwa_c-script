@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.GamePlay.InteractiveObject
 {
-	// Token: 0x02003E63 RID: 15971
+	// Token: 0x02003152 RID: 12626
 	[UnrealObjectPath("/Game/Aki/GamePlay/InteractiveObject/BP_PhysicsAttachedBase.BP_PhysicsAttachedBase_C")]
 	[UnrealStructLayout(1056, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1056)]
 	public class BP_PhysicsAttachedBase_C : AStaticMeshActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602829F RID: 164511 RVA: 0x009A5A4E File Offset: 0x009A3C4E
+		// Token: 0x0601F0E5 RID: 127205 RVA: 0x009255CA File Offset: 0x009237CA
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_PhysicsAttachedBase_C._ClassPtr == IntPtr.Zero)
@@ -22,30 +22,30 @@ namespace AkiClient.Game.Aki.GamePlay.InteractiveObject
 			return BP_PhysicsAttachedBase_C._ClassPtr;
 		}
 
-		// Token: 0x060282A0 RID: 164512 RVA: 0x009A5A74 File Offset: 0x009A3C74
+		// Token: 0x0601F0E6 RID: 127206 RVA: 0x009255F0 File Offset: 0x009237F0
 		public BP_PhysicsAttachedBase_C() : this(BuiltinUtils.AllocNativeUObject(BP_PhysicsAttachedBase_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060282A1 RID: 164513 RVA: 0x009A5A9C File Offset: 0x009A3C9C
+		// Token: 0x0601F0E7 RID: 127207 RVA: 0x00925618 File Offset: 0x00923818
 		[NullableContext(1)]
 		public BP_PhysicsAttachedBase_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_PhysicsAttachedBase_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x060282A2 RID: 164514 RVA: 0x009A5ACF File Offset: 0x009A3CCF
+		// Token: 0x0601F0E8 RID: 127208 RVA: 0x0092564B File Offset: 0x0092384B
 		protected BP_PhysicsAttachedBase_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014715 RID: 83733
+		// Token: 0x04010976 RID: 67958
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/GamePlay/InteractiveObject/BP_PhysicsAttachedBase.BP_PhysicsAttachedBase_C";
 
-		// Token: 0x04014716 RID: 83734
+		// Token: 0x04010977 RID: 67959
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014717 RID: 83735
+		// Token: 0x04010978 RID: 67960
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

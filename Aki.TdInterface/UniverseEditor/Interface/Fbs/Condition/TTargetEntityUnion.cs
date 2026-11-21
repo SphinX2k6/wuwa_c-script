@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D5B RID: 19803
+	// Token: 0x02005257 RID: 21079
 	public class TTargetEntityUnion
 	{
-		// Token: 0x17008F57 RID: 36695
-		// (get) Token: 0x0601F6AE RID: 128686 RVA: 0x004608C0 File Offset: 0x0045EAC0
-		// (set) Token: 0x0601F6AF RID: 128687 RVA: 0x004608C8 File Offset: 0x0045EAC8
+		// Token: 0x17009690 RID: 38544
+		// (get) Token: 0x060212F7 RID: 135927 RVA: 0x00494894 File Offset: 0x00492A94
+		// (set) Token: 0x060212F8 RID: 135928 RVA: 0x0049489C File Offset: 0x00492A9C
 		public TTargetEntity Type { get; set; }
 
-		// Token: 0x17008F58 RID: 36696
-		// (get) Token: 0x0601F6B0 RID: 128688 RVA: 0x004608D1 File Offset: 0x0045EAD1
-		// (set) Token: 0x0601F6B1 RID: 128689 RVA: 0x004608D9 File Offset: 0x0045EAD9
+		// Token: 0x17009691 RID: 38545
+		// (get) Token: 0x060212F9 RID: 135929 RVA: 0x004948A5 File Offset: 0x00492AA5
+		// (set) Token: 0x060212FA RID: 135930 RVA: 0x004948AD File Offset: 0x00492AAD
 		public object Value { get; set; }
 
-		// Token: 0x0601F6B2 RID: 128690 RVA: 0x004608E2 File Offset: 0x0045EAE2
+		// Token: 0x060212FB RID: 135931 RVA: 0x004948B6 File Offset: 0x00492AB6
 		public TTargetEntityUnion()
 		{
 			this.Type = TTargetEntity.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F6B3 RID: 128691 RVA: 0x004608F8 File Offset: 0x0045EAF8
+		// Token: 0x060212FC RID: 135932 RVA: 0x004948CC File Offset: 0x00492ACC
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F6B4 RID: 128692 RVA: 0x0046090A File Offset: 0x0045EB0A
+		// Token: 0x060212FD RID: 135933 RVA: 0x004948DE File Offset: 0x00492ADE
 		public IPlayerEntityT AsIPlayerEntity()
 		{
 			return this.As<IPlayerEntityT>();
 		}
 
-		// Token: 0x0601F6B5 RID: 128693 RVA: 0x00460912 File Offset: 0x0045EB12
+		// Token: 0x060212FE RID: 135934 RVA: 0x004948E6 File Offset: 0x00492AE6
 		public static TTargetEntityUnion FromIPlayerEntity(IPlayerEntityT _iplayerentity)
 		{
 			return new TTargetEntityUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6B6 RID: 128694 RVA: 0x00460927 File Offset: 0x0045EB27
+		// Token: 0x060212FF RID: 135935 RVA: 0x004948FB File Offset: 0x00492AFB
 		public ISelfEntityT AsISelfEntity()
 		{
 			return this.As<ISelfEntityT>();
 		}
 
-		// Token: 0x0601F6B7 RID: 128695 RVA: 0x0046092F File Offset: 0x0045EB2F
+		// Token: 0x06021300 RID: 135936 RVA: 0x00494903 File Offset: 0x00492B03
 		public static TTargetEntityUnion FromISelfEntity(ISelfEntityT _iselfentity)
 		{
 			return new TTargetEntityUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6B8 RID: 128696 RVA: 0x00460944 File Offset: 0x0045EB44
+		// Token: 0x06021301 RID: 135937 RVA: 0x00494918 File Offset: 0x00492B18
 		public ITargetEntityT AsITargetEntity()
 		{
 			return this.As<ITargetEntityT>();
 		}
 
-		// Token: 0x0601F6B9 RID: 128697 RVA: 0x0046094C File Offset: 0x0045EB4C
+		// Token: 0x06021302 RID: 135938 RVA: 0x00494920 File Offset: 0x00492B20
 		public static TTargetEntityUnion FromITargetEntity(ITargetEntityT _itargetentity)
 		{
 			return new TTargetEntityUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6BA RID: 128698 RVA: 0x00460961 File Offset: 0x0045EB61
+		// Token: 0x06021303 RID: 135939 RVA: 0x00494935 File Offset: 0x00492B35
 		public ITriggeredEntityT AsITriggeredEntity()
 		{
 			return this.As<ITriggeredEntityT>();
 		}
 
-		// Token: 0x0601F6BB RID: 128699 RVA: 0x00460969 File Offset: 0x0045EB69
+		// Token: 0x06021304 RID: 135940 RVA: 0x0049493D File Offset: 0x00492B3D
 		public static TTargetEntityUnion FromITriggeredEntity(ITriggeredEntityT _itriggeredentity)
 		{
 			return new TTargetEntityUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6BC RID: 128700 RVA: 0x00460980 File Offset: 0x0045EB80
+		// Token: 0x06021305 RID: 135941 RVA: 0x00494954 File Offset: 0x00492B54
 		public static int Pack(FlatBufferBuilder builder, TTargetEntityUnion _o)
 		{
 			switch (_o.Type)

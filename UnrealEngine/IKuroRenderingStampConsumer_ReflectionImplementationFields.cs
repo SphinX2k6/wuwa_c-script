@@ -2,37 +2,34 @@
 
 namespace UnrealEngine
 {
-	// Token: 0x02002ABA RID: 10938
+	// Token: 0x02000881 RID: 2177
 	internal static class IKuroRenderingStampConsumer_ReflectionImplementationFields
 	{
-		// Token: 0x04016144 RID: 90436
-		public static IntPtr __UpdateStampData_NativeFunctionPtr;
-
-		// Token: 0x04016145 RID: 90437
+		// Token: 0x0400559C RID: 21916
 		public static IntPtr __SetRenderTargetWorldRadius_NativeFunctionPtr;
 
-		// Token: 0x04016146 RID: 90438
+		// Token: 0x0400559D RID: 21917
 		public static IntPtr __SetRenderTargetWorldCenter_NativeFunctionPtr;
 
-		// Token: 0x04016147 RID: 90439
+		// Token: 0x0400559E RID: 21918
 		public static IntPtr __SetRenderTargetSize_NativeFunctionPtr;
 
-		// Token: 0x04016148 RID: 90440
+		// Token: 0x0400559F RID: 21919
 		public static IntPtr __SetRenderTarget_NativeFunctionPtr;
 
-		// Token: 0x04016149 RID: 90441
+		// Token: 0x040055A0 RID: 21920
 		public static IntPtr __SetClearColor_NativeFunctionPtr;
 
-		// Token: 0x0401614A RID: 90442
+		// Token: 0x040055A1 RID: 21921
 		public static IntPtr __SetAutoFadeEnabled_NativeFunctionPtr;
 
-		// Token: 0x0401614B RID: 90443
+		// Token: 0x040055A2 RID: 21922
 		public static IntPtr __InitializeWithCurrentValues_NativeFunctionPtr;
 
-		// Token: 0x0401614C RID: 90444
+		// Token: 0x040055A3 RID: 21923
 		public static IntPtr __DrawOnce_NativeFunctionPtr;
 
-		// Token: 0x0401614D RID: 90445
+		// Token: 0x040055A4 RID: 21924
 		public static IntPtr __ClearRT_NativeFunctionPtr;
 	}
 }

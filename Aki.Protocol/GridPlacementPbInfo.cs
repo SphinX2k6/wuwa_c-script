@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200071B RID: 1819
+	// Token: 0x02000707 RID: 1799
 	public sealed class GridPlacementPbInfo : IMessage<GridPlacementPbInfo>, IMessage, IEquatable<GridPlacementPbInfo>, IDeepCloneable<GridPlacementPbInfo>, IBufferMessage
 	{
-		// Token: 0x0600A552 RID: 42322 RVA: 0x0018EE94 File Offset: 0x0018D094
+		// Token: 0x0600A3FC RID: 41980 RVA: 0x0018C460 File Offset: 0x0018A660
 		[NullableContext(1)]
 		public static GridPlacementPbInfo Create()
 		{
 			return new GridPlacementPbInfo();
 		}
 
-		// Token: 0x1700213F RID: 8511
-		// (get) Token: 0x0600A553 RID: 42323 RVA: 0x0018EE9B File Offset: 0x0018D09B
+		// Token: 0x170020F5 RID: 8437
+		// (get) Token: 0x0600A3FD RID: 41981 RVA: 0x0018C467 File Offset: 0x0018A667
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<GridPlacementPbInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002140 RID: 8512
-		// (get) Token: 0x0600A554 RID: 42324 RVA: 0x0018EEA2 File Offset: 0x0018D0A2
+		// Token: 0x170020F6 RID: 8438
+		// (get) Token: 0x0600A3FE RID: 41982 RVA: 0x0018C46E File Offset: 0x0018A66E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002141 RID: 8513
-		// (get) Token: 0x0600A555 RID: 42325 RVA: 0x0018EEA5 File Offset: 0x0018D0A5
+		// Token: 0x170020F7 RID: 8439
+		// (get) Token: 0x0600A3FF RID: 41983 RVA: 0x0018C471 File Offset: 0x0018A671
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A556 RID: 42326 RVA: 0x0018EEAC File Offset: 0x0018D0AC
+		// Token: 0x0600A400 RID: 41984 RVA: 0x0018C478 File Offset: 0x0018A678
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GridPlacementPbInfo()
 		{
 		}
 
-		// Token: 0x0600A557 RID: 42327 RVA: 0x0018EEC0 File Offset: 0x0018D0C0
+		// Token: 0x0600A401 RID: 41985 RVA: 0x0018C48C File Offset: 0x0018A68C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GridPlacementPbInfo(GridPlacementPbInfo other) : this()
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600A558 RID: 42328 RVA: 0x0018EF20 File Offset: 0x0018D120
+		// Token: 0x0600A402 RID: 41986 RVA: 0x0018C4EC File Offset: 0x0018A6EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GridPlacementPbInfo Clone()
@@ -81,9 +81,9 @@ namespace Aki.Protocol
 			return new GridPlacementPbInfo(this);
 		}
 
-		// Token: 0x17002142 RID: 8514
-		// (get) Token: 0x0600A559 RID: 42329 RVA: 0x0018EF28 File Offset: 0x0018D128
-		// (set) Token: 0x0600A55A RID: 42330 RVA: 0x0018EF30 File Offset: 0x0018D130
+		// Token: 0x170020F8 RID: 8440
+		// (get) Token: 0x0600A403 RID: 41987 RVA: 0x0018C4F4 File Offset: 0x0018A6F4
+		// (set) Token: 0x0600A404 RID: 41988 RVA: 0x0018C4FC File Offset: 0x0018A6FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string ActorGuid
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002143 RID: 8515
-		// (get) Token: 0x0600A55B RID: 42331 RVA: 0x0018EF43 File Offset: 0x0018D143
-		// (set) Token: 0x0600A55C RID: 42332 RVA: 0x0018EF4B File Offset: 0x0018D14B
+		// Token: 0x170020F9 RID: 8441
+		// (get) Token: 0x0600A405 RID: 41989 RVA: 0x0018C50F File Offset: 0x0018A70F
+		// (set) Token: 0x0600A406 RID: 41990 RVA: 0x0018C517 File Offset: 0x0018A717
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int X
@@ -115,9 +115,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002144 RID: 8516
-		// (get) Token: 0x0600A55D RID: 42333 RVA: 0x0018EF54 File Offset: 0x0018D154
-		// (set) Token: 0x0600A55E RID: 42334 RVA: 0x0018EF5C File Offset: 0x0018D15C
+		// Token: 0x170020FA RID: 8442
+		// (get) Token: 0x0600A407 RID: 41991 RVA: 0x0018C520 File Offset: 0x0018A720
+		// (set) Token: 0x0600A408 RID: 41992 RVA: 0x0018C528 File Offset: 0x0018A728
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Y
@@ -132,9 +132,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002145 RID: 8517
-		// (get) Token: 0x0600A55F RID: 42335 RVA: 0x0018EF65 File Offset: 0x0018D165
-		// (set) Token: 0x0600A560 RID: 42336 RVA: 0x0018EF7D File Offset: 0x0018D17D
+		// Token: 0x170020FB RID: 8443
+		// (get) Token: 0x0600A409 RID: 41993 RVA: 0x0018C531 File Offset: 0x0018A731
+		// (set) Token: 0x0600A40A RID: 41994 RVA: 0x0018C549 File Offset: 0x0018A749
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GridPbDirection Direction
@@ -154,8 +154,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002146 RID: 8518
-		// (get) Token: 0x0600A561 RID: 42337 RVA: 0x0018EF94 File Offset: 0x0018D194
+		// Token: 0x170020FC RID: 8444
+		// (get) Token: 0x0600A40B RID: 41995 RVA: 0x0018C560 File Offset: 0x0018A760
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasDirection
@@ -166,7 +166,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A562 RID: 42338 RVA: 0x0018EFA1 File Offset: 0x0018D1A1
+		// Token: 0x0600A40C RID: 41996 RVA: 0x0018C56D File Offset: 0x0018A76D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearDirection()
@@ -174,7 +174,7 @@ namespace Aki.Protocol
 			this._hasBits0 &= -2;
 		}
 
-		// Token: 0x0600A563 RID: 42339 RVA: 0x0018EFB2 File Offset: 0x0018D1B2
+		// Token: 0x0600A40D RID: 41997 RVA: 0x0018C57E File Offset: 0x0018A77E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return this.Equals(other as GridPlacementPbInfo);
 		}
 
-		// Token: 0x0600A564 RID: 42340 RVA: 0x0018EFC0 File Offset: 0x0018D1C0
+		// Token: 0x0600A40E RID: 41998 RVA: 0x0018C58C File Offset: 0x0018A78C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(GridPlacementPbInfo other)
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (!(this.ActorGuid != other.ActorGuid) && this.X == other.X && this.Y == other.Y && this.Direction == other.Direction && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600A565 RID: 42341 RVA: 0x0018F030 File Offset: 0x0018D230
+		// Token: 0x0600A40F RID: 41999 RVA: 0x0018C5FC File Offset: 0x0018A7FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -219,7 +219,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600A566 RID: 42342 RVA: 0x0018F0C2 File Offset: 0x0018D2C2
+		// Token: 0x0600A410 RID: 42000 RVA: 0x0018C68E File Offset: 0x0018A88E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600A567 RID: 42343 RVA: 0x0018F0CF File Offset: 0x0018D2CF
+		// Token: 0x0600A411 RID: 42001 RVA: 0x0018C69B File Offset: 0x0018A89B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600A568 RID: 42344 RVA: 0x0018F0D8 File Offset: 0x0018D2D8
+		// Token: 0x0600A412 RID: 42002 RVA: 0x0018C6A4 File Offset: 0x0018A8A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -266,7 +266,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A569 RID: 42345 RVA: 0x0018F170 File Offset: 0x0018D370
+		// Token: 0x0600A413 RID: 42003 RVA: 0x0018C73C File Offset: 0x0018A93C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -295,7 +295,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600A56A RID: 42346 RVA: 0x0018F1FC File Offset: 0x0018D3FC
+		// Token: 0x0600A414 RID: 42004 RVA: 0x0018C7C8 File Offset: 0x0018A9C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(GridPlacementPbInfo other)
@@ -323,7 +323,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600A56B RID: 42347 RVA: 0x0018F279 File Offset: 0x0018D479
+		// Token: 0x0600A415 RID: 42005 RVA: 0x0018C845 File Offset: 0x0018AA45
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -331,7 +331,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600A56C RID: 42348 RVA: 0x0018F284 File Offset: 0x0018D484
+		// Token: 0x0600A416 RID: 42006 RVA: 0x0018C850 File Offset: 0x0018AA50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -373,40 +373,40 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04004C05 RID: 19461
+		// Token: 0x04004BFE RID: 19454
 		private static readonly MessageParser<GridPlacementPbInfo> _parser = new MessageParser<GridPlacementPbInfo>(() => new GridPlacementPbInfo());
 
-		// Token: 0x04004C06 RID: 19462
+		// Token: 0x04004BFF RID: 19455
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004C07 RID: 19463
+		// Token: 0x04004C00 RID: 19456
 		private int _hasBits0;
 
-		// Token: 0x04004C08 RID: 19464
+		// Token: 0x04004C01 RID: 19457
 		public const int ActorGuidFieldNumber = 1;
 
-		// Token: 0x04004C09 RID: 19465
+		// Token: 0x04004C02 RID: 19458
 		private string actorGuid_ = "";
 
-		// Token: 0x04004C0A RID: 19466
+		// Token: 0x04004C03 RID: 19459
 		public const int XFieldNumber = 2;
 
-		// Token: 0x04004C0B RID: 19467
+		// Token: 0x04004C04 RID: 19460
 		private int x_;
 
-		// Token: 0x04004C0C RID: 19468
+		// Token: 0x04004C05 RID: 19461
 		public const int YFieldNumber = 3;
 
-		// Token: 0x04004C0D RID: 19469
+		// Token: 0x04004C06 RID: 19462
 		private int y_;
 
-		// Token: 0x04004C0E RID: 19470
+		// Token: 0x04004C07 RID: 19463
 		public const int DirectionFieldNumber = 4;
 
-		// Token: 0x04004C0F RID: 19471
+		// Token: 0x04004C08 RID: 19464
 		private static readonly GridPbDirection DirectionDefaultValue = GridPbDirection.GridForward;
 
-		// Token: 0x04004C10 RID: 19472
+		// Token: 0x04004C09 RID: 19465
 		private GridPbDirection direction_;
 	}
 }

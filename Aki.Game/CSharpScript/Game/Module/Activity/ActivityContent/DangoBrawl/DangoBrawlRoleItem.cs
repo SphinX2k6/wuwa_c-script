@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006832 RID: 26674
+	// Token: 0x02005782 RID: 22402
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -19,12 +19,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 	})]
 	public class DangoBrawlRoleItem : GridProxyAbstract<DangoBrawlRoleData>
 	{
-		// Token: 0x1700974A RID: 38730
-		// (get) Token: 0x06042926 RID: 272678 RVA: 0x0102E26F File Offset: 0x0102C46F
-		// (set) Token: 0x06042927 RID: 272679 RVA: 0x0102E277 File Offset: 0x0102C477
+		// Token: 0x17006A8B RID: 27275
+		// (get) Token: 0x0603747A RID: 226426 RVA: 0x00F6F7AB File Offset: 0x00F6D9AB
+		// (set) Token: 0x0603747B RID: 226427 RVA: 0x00F6F7B3 File Offset: 0x00F6D9B3
 		public DangoBrawlRoleData RoleData { get; private set; }
 
-		// Token: 0x06042928 RID: 272680 RVA: 0x0102E280 File Offset: 0x0102C480
+		// Token: 0x0603747C RID: 226428 RVA: 0x00F6F7BC File Offset: 0x00F6D9BC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042929 RID: 272681 RVA: 0x0102E40E File Offset: 0x0102C60E
+		// Token: 0x0603747D RID: 226429 RVA: 0x00F6F94A File Offset: 0x00F6DB4A
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			extendToggle.CanExecuteChange.Bind(new Func<bool>(this.OnCanExecuteChange));
 		}
 
-		// Token: 0x0604292A RID: 272682 RVA: 0x0102E444 File Offset: 0x0102C644
+		// Token: 0x0603747E RID: 226430 RVA: 0x00F6F980 File Offset: 0x00F6DB80
 		[NullableContext(1)]
 		public override void Refresh(DangoBrawlRoleData data, bool isSelected, int gridIndex)
 		{
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x0604292B RID: 272683 RVA: 0x0102E590 File Offset: 0x0102C790
+		// Token: 0x0603747F RID: 226431 RVA: 0x00F6FACC File Offset: 0x00F6DCCC
 		private UniTask RefreshRoleSpriteTransition(DangoBrawlRole roleConfig)
 		{
 			DangoBrawlRoleItem.<RefreshRoleSpriteTransition>d__9 <RefreshRoleSpriteTransition>d__;
@@ -131,19 +131,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <RefreshRoleSpriteTransition>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604292C RID: 272684 RVA: 0x0102E5DB File Offset: 0x0102C7DB
+		// Token: 0x06037480 RID: 226432 RVA: 0x00F6FB17 File Offset: 0x00F6DD17
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleState(true, fireEvent);
 		}
 
-		// Token: 0x0604292D RID: 272685 RVA: 0x0102E5E5 File Offset: 0x0102C7E5
+		// Token: 0x06037481 RID: 226433 RVA: 0x00F6FB21 File Offset: 0x00F6DD21
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleState(false, fireEvent);
 		}
 
-		// Token: 0x0604292E RID: 272686 RVA: 0x0102E5F0 File Offset: 0x0102C7F0
+		// Token: 0x06037482 RID: 226434 RVA: 0x00F6FB2C File Offset: 0x00F6DD2C
 		private void SetToggleState(bool state, bool fireEvent)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x0604292F RID: 272687 RVA: 0x0102E624 File Offset: 0x0102C824
+		// Token: 0x06037483 RID: 226435 RVA: 0x00F6FB60 File Offset: 0x00F6DD60
 		private void PostRoleSelectAudio()
 		{
 			if (this.RoleData == null)
@@ -174,14 +174,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			AudioSystem.Instance.PostEvent(text);
 		}
 
-		// Token: 0x06042930 RID: 272688 RVA: 0x0102E684 File Offset: 0x0102C884
+		// Token: 0x06037484 RID: 226436 RVA: 0x00F6FBC0 File Offset: 0x00F6DDC0
 		private bool OnCanExecuteChange()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
 			return extendToggle == null || extendToggle.GetToggleState() != EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x06042931 RID: 272689 RVA: 0x0102E6AA File Offset: 0x0102C8AA
+		// Token: 0x06037485 RID: 226437 RVA: 0x00F6FBE6 File Offset: 0x00F6DDE6
 		public void SetNewVisible(bool visible)
 		{
 			UUIItem item = base.GetItem(3);
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item.SetUIActive(visible);
 		}
 
-		// Token: 0x06042932 RID: 272690 RVA: 0x0102E6BE File Offset: 0x0102C8BE
+		// Token: 0x06037486 RID: 226438 RVA: 0x00F6FBFA File Offset: 0x00F6DDFA
 		private void OnClickTogItem(EToggleState state)
 		{
 			if (this.RoleData == null)
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onClickRole(this);
 		}
 
-		// Token: 0x04022AE9 RID: 142057
+		// Token: 0x0401D346 RID: 119622
 		[Nullable(new byte[]
 		{
 			2,
@@ -215,27 +215,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		public Action<DangoBrawlRoleItem> OnClickRole;
 
-		// Token: 0x0200C9E6 RID: 51686
+		// Token: 0x0200B3B2 RID: 46002
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403CFF8 RID: 249848
+			// Token: 0x040378E2 RID: 227554
 			Toggle,
-			// Token: 0x0403CFF9 RID: 249849
+			// Token: 0x040378E3 RID: 227555
 			SprRole,
-			// Token: 0x0403CFFA RID: 249850
+			// Token: 0x040378E4 RID: 227556
 			SprRecommend,
-			// Token: 0x0403CFFB RID: 249851
+			// Token: 0x040378E5 RID: 227557
 			NewItem,
-			// Token: 0x0403CFFC RID: 249852
+			// Token: 0x040378E6 RID: 227558
 			TexOccupationType,
-			// Token: 0x0403CFFD RID: 249853
+			// Token: 0x040378E7 RID: 227559
 			LockItem,
-			// Token: 0x0403CFFE RID: 249854
+			// Token: 0x040378E8 RID: 227560
 			SprLockRole,
-			// Token: 0x0403CFFF RID: 249855
+			// Token: 0x040378E9 RID: 227561
 			NormalItem,
-			// Token: 0x0403D000 RID: 249856
+			// Token: 0x040378EA RID: 227562
 			SprRoleShadow
 		}
 	}

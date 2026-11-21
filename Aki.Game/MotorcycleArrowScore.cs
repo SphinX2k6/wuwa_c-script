@@ -6,12 +6,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CCF RID: 7375
+// Token: 0x02001191 RID: 4497
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleArrowScore : UiPanelBase
 {
-	// Token: 0x0600DF3D RID: 57149 RVA: 0x00344748 File Offset: 0x00342948
+	// Token: 0x0600B35A RID: 45914 RVA: 0x00350170 File Offset: 0x0034E370
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class MotorcycleArrowScore : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DF3E RID: 57150 RVA: 0x003447B8 File Offset: 0x003429B8
+	// Token: 0x0600B35B RID: 45915 RVA: 0x003501E0 File Offset: 0x0034E3E0
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -44,14 +44,14 @@ public class MotorcycleArrowScore : UiPanelBase
 		this.SetExpressState("SP_ScoreExpress1");
 	}
 
-	// Token: 0x0600DF3F RID: 57151 RVA: 0x003448A7 File Offset: 0x00342AA7
+	// Token: 0x0600B35C RID: 45916 RVA: 0x003502CF File Offset: 0x0034E4CF
 	protected override void OnBeforeDestroy()
 	{
 		this.SequencePlayer.Clear();
 		this.SequencePlayer = null;
 	}
 
-	// Token: 0x0600DF40 RID: 57152 RVA: 0x003448BC File Offset: 0x00342ABC
+	// Token: 0x0600B35D RID: 45917 RVA: 0x003502E4 File Offset: 0x0034E4E4
 	protected override void OnBeforeShow()
 	{
 		this.OnAddEventListener();
@@ -60,25 +60,25 @@ public class MotorcycleArrowScore : UiPanelBase
 		this.PlayLevelSequence("Start", false);
 	}
 
-	// Token: 0x0600DF41 RID: 57153 RVA: 0x003448F7 File Offset: 0x00342AF7
+	// Token: 0x0600B35E RID: 45918 RVA: 0x0035031F File Offset: 0x0034E51F
 	protected override void OnBeforeHide()
 	{
 		this.OnRemoveEventListener();
 	}
 
-	// Token: 0x0600DF42 RID: 57154 RVA: 0x003448FF File Offset: 0x00342AFF
+	// Token: 0x0600B35F RID: 45919 RVA: 0x00350327 File Offset: 0x0034E527
 	protected void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.MotorArrowScoreUpdate, new Action<int>(this.OnMotorArrowScoreUpdate));
 	}
 
-	// Token: 0x0600DF43 RID: 57155 RVA: 0x0034491D File Offset: 0x00342B1D
+	// Token: 0x0600B360 RID: 45920 RVA: 0x00350345 File Offset: 0x0034E545
 	protected void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.MotorArrowScoreUpdate, new Action<int>(this.OnMotorArrowScoreUpdate));
 	}
 
-	// Token: 0x0600DF44 RID: 57156 RVA: 0x0034493C File Offset: 0x00342B3C
+	// Token: 0x0600B361 RID: 45921 RVA: 0x00350364 File Offset: 0x0034E564
 	protected void OnMotorArrowScoreUpdate(int score)
 	{
 		float num = this.DigitScroll.SetTarget((float)score);
@@ -107,7 +107,7 @@ public class MotorcycleArrowScore : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DF45 RID: 57157 RVA: 0x003449D0 File Offset: 0x00342BD0
+	// Token: 0x0600B362 RID: 45922 RVA: 0x003503F8 File Offset: 0x0034E5F8
 	public void OnTick(float delta)
 	{
 		MotorcycleArrowSubModel motorcycleArrowSubModel = (MotorcycleArrowSubModel)KuroSimpleCombatController.Instance.CurSubModel;
@@ -137,7 +137,7 @@ public class MotorcycleArrowScore : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DF46 RID: 57158 RVA: 0x00344A9B File Offset: 0x00342C9B
+	// Token: 0x0600B363 RID: 45923 RVA: 0x003504C3 File Offset: 0x0034E6C3
 	private void OnCloseEvent(string sequenceName)
 	{
 		if (sequenceName == "Start" || sequenceName == "Double")
@@ -146,7 +146,7 @@ public class MotorcycleArrowScore : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DF47 RID: 57159 RVA: 0x00344AC4 File Offset: 0x00342CC4
+	// Token: 0x0600B364 RID: 45924 RVA: 0x003504EC File Offset: 0x0034E6EC
 	private void PlayLevelSequence(string state, bool bRestart)
 	{
 		if (this.CurSeqState == state && !bRestart)
@@ -172,7 +172,7 @@ public class MotorcycleArrowScore : UiPanelBase
 		this.SequencePlayer.PlayOrReplaySequenceByName(state, false, null);
 	}
 
-	// Token: 0x0600DF48 RID: 57160 RVA: 0x00344B93 File Offset: 0x00342D93
+	// Token: 0x0600B365 RID: 45925 RVA: 0x003505BB File Offset: 0x0034E7BB
 	private void UpdateEndSeqTime(string state)
 	{
 		if (state == "Scoring" || state == "Score")
@@ -183,7 +183,7 @@ public class MotorcycleArrowScore : UiPanelBase
 		this.EndSeqTime = 0f;
 	}
 
-	// Token: 0x0600DF49 RID: 57161 RVA: 0x00344BD4 File Offset: 0x00342DD4
+	// Token: 0x0600B366 RID: 45926 RVA: 0x003505FC File Offset: 0x0034E7FC
 	private void SetExpressState(string state)
 	{
 		if (this.ExpressState == state)
@@ -194,114 +194,114 @@ public class MotorcycleArrowScore : UiPanelBase
 		this.SetSpriteByPath(UiResourceConfig.Instance.GetResourcePath(state), this.SpriteExpress, false, null, null);
 	}
 
-	// Token: 0x0600DF4A RID: 57162 RVA: 0x00344C19 File Offset: 0x00342E19
+	// Token: 0x0600B367 RID: 45927 RVA: 0x00350641 File Offset: 0x0034E841
 	private void PlayerEffectDouble()
 	{
 		this.EffectDouble.SetUIActive(false);
 		this.EffectDouble.SetUIActive(true);
 	}
 
-	// Token: 0x040066A7 RID: 26279
+	// Token: 0x04006786 RID: 26502
 	private const int CONSECUTIVE_SCORE_DURATION = 5000;
 
-	// Token: 0x040066A8 RID: 26280
+	// Token: 0x04006787 RID: 26503
 	private const int SCORE_ANIM_DURATION = 500;
 
-	// Token: 0x040066A9 RID: 26281
+	// Token: 0x04006788 RID: 26504
 	[Nullable(2)]
 	protected UUISprite SpriteExpress;
 
-	// Token: 0x040066AA RID: 26282
+	// Token: 0x04006789 RID: 26505
 	[Nullable(2)]
 	protected UUIArtText ArtTextScore;
 
-	// Token: 0x040066AB RID: 26283
+	// Token: 0x0400678A RID: 26506
 	[Nullable(2)]
 	protected UUIText TextTime;
 
-	// Token: 0x040066AC RID: 26284
+	// Token: 0x0400678B RID: 26507
 	[Nullable(2)]
 	protected UUIItem EffectDouble;
 
-	// Token: 0x040066AD RID: 26285
+	// Token: 0x0400678C RID: 26508
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x040066AE RID: 26286
+	// Token: 0x0400678D RID: 26509
 	private int BigScoreThreshold = 10;
 
-	// Token: 0x040066AF RID: 26287
+	// Token: 0x0400678E RID: 26510
 	private string CurSeqState = "None";
 
-	// Token: 0x040066B0 RID: 26288
+	// Token: 0x0400678F RID: 26511
 	private float EndSeqTime;
 
-	// Token: 0x040066B1 RID: 26289
+	// Token: 0x04006790 RID: 26512
 	private string ExpressState = "None";
 
-	// Token: 0x040066B2 RID: 26290
+	// Token: 0x04006791 RID: 26513
 	private bool NeedDoubleEffect;
 
-	// Token: 0x040066B3 RID: 26291
+	// Token: 0x04006792 RID: 26514
 	private readonly DigitScroll DigitScroll = new DigitScroll();
 
-	// Token: 0x020082CF RID: 33487
+	// Token: 0x02007458 RID: 29784
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AAB7 RID: 174775
+		// Token: 0x04025DDF RID: 155103
 		public const int SpriteExpress = 0;
 
-		// Token: 0x0402AAB8 RID: 174776
+		// Token: 0x04025DE0 RID: 155104
 		public const int ArtTextScore = 1;
 
-		// Token: 0x0402AAB9 RID: 174777
+		// Token: 0x04025DE1 RID: 155105
 		public const int TextTime = 2;
 
-		// Token: 0x0402AABA RID: 174778
+		// Token: 0x04025DE2 RID: 155106
 		public const int EffectDouble = 3;
 	}
 
-	// Token: 0x020082D0 RID: 33488
+	// Token: 0x02007459 RID: 29785
 	[Nullable(0)]
 	private static class ELevelSequence
 	{
-		// Token: 0x0402AABB RID: 174779
+		// Token: 0x04025DE3 RID: 155107
 		public const string None = "None";
 
-		// Token: 0x0402AABC RID: 174780
+		// Token: 0x04025DE4 RID: 155108
 		public const string Start = "Start";
 
-		// Token: 0x0402AABD RID: 174781
+		// Token: 0x04025DE5 RID: 155109
 		public const string Score = "Score";
 
-		// Token: 0x0402AABE RID: 174782
+		// Token: 0x04025DE6 RID: 155110
 		public const string Scoring = "Scoring";
 
-		// Token: 0x0402AABF RID: 174783
+		// Token: 0x04025DE7 RID: 155111
 		public const string Double = "Double";
 
-		// Token: 0x0402AAC0 RID: 174784
+		// Token: 0x04025DE8 RID: 155112
 		public const string Close = "Close";
 
-		// Token: 0x0402AAC1 RID: 174785
+		// Token: 0x04025DE9 RID: 155113
 		public const string Loop = "Loop";
 	}
 
-	// Token: 0x020082D1 RID: 33489
+	// Token: 0x0200745A RID: 29786
 	[Nullable(0)]
 	private static class EExpressDefine
 	{
-		// Token: 0x0402AAC2 RID: 174786
+		// Token: 0x04025DEA RID: 155114
 		public const string None = "None";
 
-		// Token: 0x0402AAC3 RID: 174787
+		// Token: 0x04025DEB RID: 155115
 		public const string Close = "SP_ScoreExpress1";
 
-		// Token: 0x0402AAC4 RID: 174788
+		// Token: 0x04025DEC RID: 155116
 		public const string Double = "SP_ScoreExpress2";
 
-		// Token: 0x0402AAC5 RID: 174789
+		// Token: 0x04025DED RID: 155117
 		public const string Open = "SP_ScoreExpress3";
 	}
 }

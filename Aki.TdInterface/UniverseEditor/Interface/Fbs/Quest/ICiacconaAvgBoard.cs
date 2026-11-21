@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D8E RID: 15758
+	// Token: 0x020041A5 RID: 16805
 	public struct ICiacconaAvgBoard : IFlatbufferObject
 	{
-		// Token: 0x17006C58 RID: 27736
-		// (get) Token: 0x06015E08 RID: 89608 RVA: 0x00328DF2 File Offset: 0x00326FF2
+		// Token: 0x17007212 RID: 29202
+		// (get) Token: 0x06017340 RID: 95040 RVA: 0x0035011E File Offset: 0x0034E31E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015E09 RID: 89609 RVA: 0x00328DFF File Offset: 0x00326FFF
+		// Token: 0x06017341 RID: 95041 RVA: 0x0035012B File Offset: 0x0034E32B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015E0A RID: 89610 RVA: 0x00328E08 File Offset: 0x00327008
+		// Token: 0x06017342 RID: 95042 RVA: 0x00350134 File Offset: 0x0034E334
 		public static ICiacconaAvgBoard GetRootAsICiacconaAvgBoard(ByteBuffer _bb)
 		{
 			return ICiacconaAvgBoard.GetRootAsICiacconaAvgBoard(_bb, default(ICiacconaAvgBoard));
 		}
 
-		// Token: 0x06015E0B RID: 89611 RVA: 0x00328E24 File Offset: 0x00327024
+		// Token: 0x06017343 RID: 95043 RVA: 0x00350150 File Offset: 0x0034E350
 		public static ICiacconaAvgBoard GetRootAsICiacconaAvgBoard(ByteBuffer _bb, ICiacconaAvgBoard obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015E0C RID: 89612 RVA: 0x00328E41 File Offset: 0x00327041
+		// Token: 0x06017344 RID: 95044 RVA: 0x0035016D File Offset: 0x0034E36D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015E0D RID: 89613 RVA: 0x00328E50 File Offset: 0x00327050
+		// Token: 0x06017345 RID: 95045 RVA: 0x0035017C File Offset: 0x0034E37C
 		public ICiacconaAvgBoard __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006C59 RID: 27737
-		// (get) Token: 0x06015E0E RID: 89614 RVA: 0x00328E60 File Offset: 0x00327060
+		// Token: 0x17007213 RID: 29203
+		// (get) Token: 0x06017346 RID: 95046 RVA: 0x0035018C File Offset: 0x0034E38C
 		public EShowUiType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006C5A RID: 27738
-		// (get) Token: 0x06015E0F RID: 89615 RVA: 0x00328E9C File Offset: 0x0032709C
+		// Token: 0x17007214 RID: 29204
+		// (get) Token: 0x06017347 RID: 95047 RVA: 0x003501C8 File Offset: 0x0034E3C8
 		public int EndingId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006C5B RID: 27739
-		// (get) Token: 0x06015E10 RID: 89616 RVA: 0x00328ED8 File Offset: 0x003270D8
+		// Token: 0x17007215 RID: 29205
+		// (get) Token: 0x06017348 RID: 95048 RVA: 0x00350204 File Offset: 0x0034E404
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015E11 RID: 89617 RVA: 0x00328F14 File Offset: 0x00327114
+		// Token: 0x06017349 RID: 95049 RVA: 0x00350240 File Offset: 0x0034E440
 		public static Offset<ICiacconaAvgBoard> CreateICiacconaAvgBoard(FlatBufferBuilder builder, EShowUiType Type = EShowUiType.All, int EndingId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICiacconaAvgBoard.EndICiacconaAvgBoard(builder);
 		}
 
-		// Token: 0x06015E12 RID: 89618 RVA: 0x00328F38 File Offset: 0x00327138
+		// Token: 0x0601734A RID: 95050 RVA: 0x00350264 File Offset: 0x0034E464
 		public static void StartICiacconaAvgBoard(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06015E13 RID: 89619 RVA: 0x00328F41 File Offset: 0x00327141
+		// Token: 0x0601734B RID: 95051 RVA: 0x0035026D File Offset: 0x0034E46D
 		public static void AddType(FlatBufferBuilder builder, EShowUiType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015E14 RID: 89620 RVA: 0x00328F4C File Offset: 0x0032714C
+		// Token: 0x0601734C RID: 95052 RVA: 0x00350278 File Offset: 0x0034E478
 		public static void AddEndingId(FlatBufferBuilder builder, int endingId)
 		{
 			builder.AddInt(1, endingId, 0);
 		}
 
-		// Token: 0x06015E15 RID: 89621 RVA: 0x00328F57 File Offset: 0x00327157
+		// Token: 0x0601734D RID: 95053 RVA: 0x00350283 File Offset: 0x0034E483
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06015E16 RID: 89622 RVA: 0x00328F62 File Offset: 0x00327162
+		// Token: 0x0601734E RID: 95054 RVA: 0x0035028E File Offset: 0x0034E48E
 		public static Offset<ICiacconaAvgBoard> EndICiacconaAvgBoard(FlatBufferBuilder builder)
 		{
 			return new Offset<ICiacconaAvgBoard>(builder.EndTable());
 		}
 
-		// Token: 0x06015E17 RID: 89623 RVA: 0x00328F70 File Offset: 0x00327170
+		// Token: 0x0601734F RID: 95055 RVA: 0x0035029C File Offset: 0x0034E49C
 		public ICiacconaAvgBoardT UnPack()
 		{
 			ICiacconaAvgBoardT ciacconaAvgBoardT = new ICiacconaAvgBoardT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ciacconaAvgBoardT;
 		}
 
-		// Token: 0x06015E18 RID: 89624 RVA: 0x00328F8B File Offset: 0x0032718B
+		// Token: 0x06017350 RID: 95056 RVA: 0x003502B7 File Offset: 0x0034E4B7
 		public void UnPackTo(ICiacconaAvgBoardT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06015E19 RID: 89625 RVA: 0x00328FB4 File Offset: 0x003271B4
+		// Token: 0x06017351 RID: 95057 RVA: 0x003502E0 File Offset: 0x0034E4E0
 		public static Offset<ICiacconaAvgBoard> Pack(FlatBufferBuilder builder, ICiacconaAvgBoardT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICiacconaAvgBoard.CreateICiacconaAvgBoard(builder, _o.Type, _o.EndingId, _o.NullMask);
 		}
 
-		// Token: 0x0400B695 RID: 46741
+		// Token: 0x0400C042 RID: 49218
 		private Table __p;
 	}
 }

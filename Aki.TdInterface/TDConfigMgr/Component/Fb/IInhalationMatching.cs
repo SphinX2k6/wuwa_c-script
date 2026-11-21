@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D5D RID: 3421
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E57 RID: 3671
 	public class IInhalationMatching
 	{
-		// Token: 0x06004DF4 RID: 19956 RVA: 0x000C1B7D File Offset: 0x000BFD7D
+		// Token: 0x06005310 RID: 21264 RVA: 0x000CD2C1 File Offset: 0x000CB4C1
 		public static IInhalationMatching Create(IInhalationMatching? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018F7 RID: 6391
-		// (get) Token: 0x06004DF5 RID: 19957 RVA: 0x000C1B9C File Offset: 0x000BFD9C
+		// Token: 0x17001A5D RID: 6749
+		// (get) Token: 0x06005311 RID: 21265 RVA: 0x000CD2E0 File Offset: 0x000CB4E0
 		public virtual int InhalationStrength
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018F8 RID: 6392
-		// (get) Token: 0x06004DF6 RID: 19958 RVA: 0x000C1BA9 File Offset: 0x000BFDA9
+		// Token: 0x17001A5E RID: 6750
+		// (get) Token: 0x06005312 RID: 21266 RVA: 0x000CD2ED File Offset: 0x000CB4ED
 		public virtual ICategoryMatchingCondition EntityMatch
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CB0 RID: 11440
+		// Token: 0x04002F70 RID: 12144
 		private IInhalationMatching Instance;
 
-		// Token: 0x04002CB1 RID: 11441
+		// Token: 0x04002F71 RID: 12145
 		[Nullable(2)]
 		private ICategoryMatchingCondition _EntityMatchCache;
 
-		// Token: 0x04002CB2 RID: 11442
+		// Token: 0x04002F72 RID: 12146
 		private bool _EntityMatchInited;
 	}
 }

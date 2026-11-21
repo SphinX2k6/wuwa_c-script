@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D31 RID: 23857
+	// Token: 0x02004D13 RID: 19731
 	public class GrapplingHookTracked : UiPanelBase
 	{
-		// Token: 0x0603C814 RID: 247828 RVA: 0x00E83F7E File Offset: 0x00E8217E
+		// Token: 0x0603176D RID: 202605 RVA: 0x00DD471E File Offset: 0x00DD291E
 		[NullableContext(1)]
 		public GrapplingHookTracked(UUIItem parentItem)
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}).Forget();
 		}
 
-		// Token: 0x0603C815 RID: 247829 RVA: 0x00E83FAC File Offset: 0x00E821AC
+		// Token: 0x0603176E RID: 202606 RVA: 0x00DD474C File Offset: 0x00DD294C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603C816 RID: 247830 RVA: 0x00E84054 File Offset: 0x00E82254
+		// Token: 0x0603176F RID: 202607 RVA: 0x00DD47F4 File Offset: 0x00DD29F4
 		[NullableContext(1)]
 		public void Refresh(in FVector2D screenPosition, Vector targetLocation)
 		{
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TargetLocation = targetLocation;
 		}
 
-		// Token: 0x0603C817 RID: 247831 RVA: 0x00E840C6 File Offset: 0x00E822C6
+		// Token: 0x06031770 RID: 202608 RVA: 0x00DD4866 File Offset: 0x00DD2A66
 		private void OnClickedTrackedButton()
 		{
 			if (this.TargetLocation == null)
@@ -68,32 +68,32 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			BattleUiControl.Instance.FocusToTargetLocation(this.TargetLocation);
 		}
 
-		// Token: 0x0603C818 RID: 247832 RVA: 0x00E840E1 File Offset: 0x00E822E1
+		// Token: 0x06031771 RID: 202609 RVA: 0x00DD4881 File Offset: 0x00DD2A81
 		public bool GetIsTrackedActivated()
 		{
 			return this.IsTrackedActivated;
 		}
 
-		// Token: 0x0603C819 RID: 247833 RVA: 0x00E840E9 File Offset: 0x00E822E9
+		// Token: 0x06031772 RID: 202610 RVA: 0x00DD4889 File Offset: 0x00DD2A89
 		protected override void OnBeforeDestroy()
 		{
 			this.IsTrackedActivated = false;
 			this.TargetLocation = null;
 		}
 
-		// Token: 0x0401F864 RID: 129124
+		// Token: 0x0401A31D RID: 107293
 		private bool IsTrackedActivated;
 
-		// Token: 0x0401F865 RID: 129125
+		// Token: 0x0401A31E RID: 107294
 		[Nullable(2)]
 		private Vector TargetLocation;
 
-		// Token: 0x0200BFC8 RID: 49096
+		// Token: 0x0200A9CE RID: 43470
 		private enum EChildType
 		{
-			// Token: 0x04039DB7 RID: 236983
+			// Token: 0x04034779 RID: 214905
 			DirectionItem,
-			// Token: 0x04039DB8 RID: 236984
+			// Token: 0x0403477A RID: 214906
 			TrackedButton
 		}
 	}

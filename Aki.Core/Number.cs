@@ -9,7 +9,7 @@ using System.Text.Json.Serialization;
 [StructLayout(LayoutKind.Explicit)]
 public struct Number
 {
-	// Token: 0x0600015B RID: 347 RVA: 0x00009B68 File Offset: 0x00007D68
+	// Token: 0x0600015D RID: 349 RVA: 0x0000984C File Offset: 0x00007A4C
 	private static bool IsZero(Number value)
 	{
 		if (value.IsInt())
@@ -23,7 +23,7 @@ public struct Number
 		return Math.Abs(value.GetFloat()) < 1.1754944E-38f;
 	}
 
-	// Token: 0x0600015C RID: 348 RVA: 0x00009BBD File Offset: 0x00007DBD
+	// Token: 0x0600015E RID: 350 RVA: 0x000098A1 File Offset: 0x00007AA1
 	private static double GetEqualityThreshold(Number a, Number b)
 	{
 		if (!a.IsDouble() && !b.IsDouble())
@@ -33,7 +33,7 @@ public struct Number
 		return 2.2250738585072014E-308;
 	}
 
-	// Token: 0x0600015D RID: 349 RVA: 0x00009BE4 File Offset: 0x00007DE4
+	// Token: 0x0600015F RID: 351 RVA: 0x000098C8 File Offset: 0x00007AC8
 	private Number(long value, byte tag)
 	{
 		this._floatValue = 0f;
@@ -42,13 +42,13 @@ public struct Number
 		this._typeTag = tag;
 	}
 
-	// Token: 0x0600015E RID: 350 RVA: 0x00009C0E File Offset: 0x00007E0E
+	// Token: 0x06000160 RID: 352 RVA: 0x000098F2 File Offset: 0x00007AF2
 	public static Number FromInt(int value)
 	{
 		return new Number((long)value, 0);
 	}
 
-	// Token: 0x0600015F RID: 351 RVA: 0x00009C18 File Offset: 0x00007E18
+	// Token: 0x06000161 RID: 353 RVA: 0x000098FC File Offset: 0x00007AFC
 	public static Number FromDouble(double value)
 	{
 		return new Number(0L, 1)
@@ -57,7 +57,7 @@ public struct Number
 		};
 	}
 
-	// Token: 0x06000160 RID: 352 RVA: 0x00009C38 File Offset: 0x00007E38
+	// Token: 0x06000162 RID: 354 RVA: 0x0000991C File Offset: 0x00007B1C
 	public static Number FromFloat(float value)
 	{
 		return new Number(0L, 2)
@@ -66,31 +66,31 @@ public struct Number
 		};
 	}
 
-	// Token: 0x06000161 RID: 353 RVA: 0x00009C58 File Offset: 0x00007E58
+	// Token: 0x06000163 RID: 355 RVA: 0x0000993C File Offset: 0x00007B3C
 	public bool IsInt()
 	{
 		return this._typeTag == 0;
 	}
 
-	// Token: 0x06000162 RID: 354 RVA: 0x00009C63 File Offset: 0x00007E63
+	// Token: 0x06000164 RID: 356 RVA: 0x00009947 File Offset: 0x00007B47
 	public bool IsDouble()
 	{
 		return this._typeTag == 1;
 	}
 
-	// Token: 0x06000163 RID: 355 RVA: 0x00009C6E File Offset: 0x00007E6E
+	// Token: 0x06000165 RID: 357 RVA: 0x00009952 File Offset: 0x00007B52
 	public bool IsFloat()
 	{
 		return this._typeTag == 2;
 	}
 
-	// Token: 0x06000164 RID: 356 RVA: 0x00009C79 File Offset: 0x00007E79
+	// Token: 0x06000166 RID: 358 RVA: 0x0000995D File Offset: 0x00007B5D
 	public bool IsNaN()
 	{
 		return (this.IsDouble() && double.IsNaN(this._doubleValue)) || (this.IsFloat() && float.IsNaN(this._floatValue));
 	}
 
-	// Token: 0x06000165 RID: 357 RVA: 0x00009CA7 File Offset: 0x00007EA7
+	// Token: 0x06000167 RID: 359 RVA: 0x0000998B File Offset: 0x00007B8B
 	public bool IsInfinity()
 	{
 		if (this.IsDouble())
@@ -100,7 +100,7 @@ public struct Number
 		return this.IsFloat() && float.IsInfinity(this._floatValue);
 	}
 
-	// Token: 0x06000166 RID: 358 RVA: 0x00009CD2 File Offset: 0x00007ED2
+	// Token: 0x06000168 RID: 360 RVA: 0x000099B6 File Offset: 0x00007BB6
 	public int GetInt()
 	{
 		if (!this.IsInt())
@@ -110,7 +110,7 @@ public struct Number
 		return (int)this._longValue;
 	}
 
-	// Token: 0x06000167 RID: 359 RVA: 0x00009CEE File Offset: 0x00007EEE
+	// Token: 0x06000169 RID: 361 RVA: 0x000099D2 File Offset: 0x00007BD2
 	public long GetLong()
 	{
 		if (!this.IsInt())
@@ -120,7 +120,7 @@ public struct Number
 		return this._longValue;
 	}
 
-	// Token: 0x06000168 RID: 360 RVA: 0x00009D0C File Offset: 0x00007F0C
+	// Token: 0x0600016A RID: 362 RVA: 0x000099F0 File Offset: 0x00007BF0
 	public double GetDouble()
 	{
 		byte typeTag = this._typeTag;
@@ -143,7 +143,7 @@ public struct Number
 		return result;
 	}
 
-	// Token: 0x06000169 RID: 361 RVA: 0x00009D48 File Offset: 0x00007F48
+	// Token: 0x0600016B RID: 363 RVA: 0x00009A2C File Offset: 0x00007C2C
 	public float GetFloat()
 	{
 		byte typeTag = this._typeTag;
@@ -166,43 +166,43 @@ public struct Number
 		return result;
 	}
 
-	// Token: 0x0600016A RID: 362 RVA: 0x00009D80 File Offset: 0x00007F80
+	// Token: 0x0600016C RID: 364 RVA: 0x00009A64 File Offset: 0x00007C64
 	public static implicit operator Number(int value)
 	{
 		return Number.FromInt(value);
 	}
 
-	// Token: 0x0600016B RID: 363 RVA: 0x00009D88 File Offset: 0x00007F88
+	// Token: 0x0600016D RID: 365 RVA: 0x00009A6C File Offset: 0x00007C6C
 	public static implicit operator Number(double value)
 	{
 		return Number.FromDouble(value);
 	}
 
-	// Token: 0x0600016C RID: 364 RVA: 0x00009D90 File Offset: 0x00007F90
+	// Token: 0x0600016E RID: 366 RVA: 0x00009A74 File Offset: 0x00007C74
 	public static implicit operator Number(float value)
 	{
 		return Number.FromFloat(value);
 	}
 
-	// Token: 0x0600016D RID: 365 RVA: 0x00009D98 File Offset: 0x00007F98
+	// Token: 0x0600016F RID: 367 RVA: 0x00009A7C File Offset: 0x00007C7C
 	public static implicit operator int(Number number)
 	{
 		return number.GetInt();
 	}
 
-	// Token: 0x0600016E RID: 366 RVA: 0x00009DA1 File Offset: 0x00007FA1
+	// Token: 0x06000170 RID: 368 RVA: 0x00009A85 File Offset: 0x00007C85
 	public static implicit operator double(Number number)
 	{
 		return number.GetDouble();
 	}
 
-	// Token: 0x0600016F RID: 367 RVA: 0x00009DAA File Offset: 0x00007FAA
+	// Token: 0x06000171 RID: 369 RVA: 0x00009A8E File Offset: 0x00007C8E
 	public static implicit operator float(Number number)
 	{
 		return number.GetFloat();
 	}
 
-	// Token: 0x06000170 RID: 368 RVA: 0x00009DB4 File Offset: 0x00007FB4
+	// Token: 0x06000172 RID: 370 RVA: 0x00009A98 File Offset: 0x00007C98
 	public static Number operator +(Number a, Number b)
 	{
 		if (a.IsDouble() || b.IsDouble())
@@ -216,7 +216,7 @@ public struct Number
 		return Number.FromFloat(a.GetFloat() + b.GetFloat());
 	}
 
-	// Token: 0x06000171 RID: 369 RVA: 0x00009E24 File Offset: 0x00008024
+	// Token: 0x06000173 RID: 371 RVA: 0x00009B08 File Offset: 0x00007D08
 	public static Number operator -(Number a, Number b)
 	{
 		if (a.IsDouble() || b.IsDouble())
@@ -230,7 +230,7 @@ public struct Number
 		return Number.FromFloat(a.GetFloat() - b.GetFloat());
 	}
 
-	// Token: 0x06000172 RID: 370 RVA: 0x00009E94 File Offset: 0x00008094
+	// Token: 0x06000174 RID: 372 RVA: 0x00009B78 File Offset: 0x00007D78
 	public static Number operator *(Number a, Number b)
 	{
 		if (a.IsDouble() || b.IsDouble())
@@ -244,7 +244,7 @@ public struct Number
 		return Number.FromFloat(a.GetFloat() * b.GetFloat());
 	}
 
-	// Token: 0x06000173 RID: 371 RVA: 0x00009F04 File Offset: 0x00008104
+	// Token: 0x06000175 RID: 373 RVA: 0x00009BE8 File Offset: 0x00007DE8
 	public static Number operator /(Number a, Number b)
 	{
 		if (Number.IsZero(b))
@@ -262,7 +262,7 @@ public struct Number
 		return Number.FromDouble(a.GetDouble() / b.GetDouble());
 	}
 
-	// Token: 0x06000174 RID: 372 RVA: 0x00009F88 File Offset: 0x00008188
+	// Token: 0x06000176 RID: 374 RVA: 0x00009C6C File Offset: 0x00007E6C
 	public static Number operator %(Number a, Number b)
 	{
 		if (Number.IsZero(b))
@@ -280,7 +280,7 @@ public struct Number
 		return Number.FromInt(a.GetInt() % b.GetInt());
 	}
 
-	// Token: 0x06000175 RID: 373 RVA: 0x0000A00C File Offset: 0x0000820C
+	// Token: 0x06000177 RID: 375 RVA: 0x00009CF0 File Offset: 0x00007EF0
 	public static Number operator ++(Number a)
 	{
 		if (a.IsDouble())
@@ -294,7 +294,7 @@ public struct Number
 		return Number.FromInt(a.GetInt() + 1);
 	}
 
-	// Token: 0x06000176 RID: 374 RVA: 0x0000A064 File Offset: 0x00008264
+	// Token: 0x06000178 RID: 376 RVA: 0x00009D48 File Offset: 0x00007F48
 	public static Number operator --(Number a)
 	{
 		if (a.IsDouble())
@@ -308,7 +308,7 @@ public struct Number
 		return Number.FromInt(a.GetInt() - 1);
 	}
 
-	// Token: 0x06000177 RID: 375 RVA: 0x0000A0BC File Offset: 0x000082BC
+	// Token: 0x06000179 RID: 377 RVA: 0x00009DA0 File Offset: 0x00007FA0
 	public static bool operator ==(Number a, Number b)
 	{
 		if (a.IsInt() && b.IsInt())
@@ -318,37 +318,37 @@ public struct Number
 		return Math.Abs(a.GetDouble() - b.GetDouble()) < Number.GetEqualityThreshold(a, b);
 	}
 
-	// Token: 0x06000178 RID: 376 RVA: 0x0000A109 File Offset: 0x00008309
+	// Token: 0x0600017A RID: 378 RVA: 0x00009DED File Offset: 0x00007FED
 	public static bool operator !=(Number a, Number b)
 	{
 		return !(a == b);
 	}
 
-	// Token: 0x06000179 RID: 377 RVA: 0x0000A115 File Offset: 0x00008315
+	// Token: 0x0600017B RID: 379 RVA: 0x00009DF9 File Offset: 0x00007FF9
 	public static bool operator >(Number a, Number b)
 	{
 		return a.GetDouble() > b.GetDouble();
 	}
 
-	// Token: 0x0600017A RID: 378 RVA: 0x0000A127 File Offset: 0x00008327
+	// Token: 0x0600017C RID: 380 RVA: 0x00009E0B File Offset: 0x0000800B
 	public static bool operator <=(Number a, Number b)
 	{
 		return a.GetDouble() <= b.GetDouble();
 	}
 
-	// Token: 0x0600017B RID: 379 RVA: 0x0000A13C File Offset: 0x0000833C
+	// Token: 0x0600017D RID: 381 RVA: 0x00009E20 File Offset: 0x00008020
 	public static bool operator >=(Number a, Number b)
 	{
 		return a.GetDouble() >= b.GetDouble();
 	}
 
-	// Token: 0x0600017C RID: 380 RVA: 0x0000A151 File Offset: 0x00008351
+	// Token: 0x0600017E RID: 382 RVA: 0x00009E35 File Offset: 0x00008035
 	public static bool operator <(Number a, Number b)
 	{
 		return a.GetDouble() < b.GetDouble();
 	}
 
-	// Token: 0x0600017D RID: 381 RVA: 0x0000A164 File Offset: 0x00008364
+	// Token: 0x0600017F RID: 383 RVA: 0x00009E48 File Offset: 0x00008048
 	[NullableContext(1)]
 	public override string ToString()
 	{
@@ -372,31 +372,31 @@ public struct Number
 		return result;
 	}
 
-	// Token: 0x0400016E RID: 366
+	// Token: 0x0400016F RID: 367
 	[FieldOffset(0)]
 	private long _longValue;
 
-	// Token: 0x0400016F RID: 367
+	// Token: 0x04000170 RID: 368
 	[FieldOffset(0)]
 	private double _doubleValue;
 
-	// Token: 0x04000170 RID: 368
+	// Token: 0x04000171 RID: 369
 	[FieldOffset(0)]
 	private float _floatValue;
 
-	// Token: 0x04000171 RID: 369
+	// Token: 0x04000172 RID: 370
 	[FieldOffset(8)]
 	private byte _typeTag;
 
-	// Token: 0x04000172 RID: 370
+	// Token: 0x04000173 RID: 371
 	private const byte IntTag = 0;
 
-	// Token: 0x04000173 RID: 371
+	// Token: 0x04000174 RID: 372
 	private const byte DoubleTag = 1;
 
-	// Token: 0x04000174 RID: 372
+	// Token: 0x04000175 RID: 373
 	private const byte FloatTag = 2;
 
-	// Token: 0x04000175 RID: 373
+	// Token: 0x04000176 RID: 374
 	private const long TagMask = 255L;
 }

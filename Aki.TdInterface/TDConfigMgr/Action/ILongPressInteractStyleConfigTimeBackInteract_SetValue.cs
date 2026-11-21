@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BA7 RID: 7079
+	// Token: 0x02001D8E RID: 7566
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ILongPressInteractStyleConfigTimeBackInteract_SetValue
 	{
-		// Token: 0x04005C88 RID: 23688
+		// Token: 0x0400619D RID: 24989
 		public ELongPressInteractStyle Type;
 
-		// Token: 0x04005C89 RID: 23689
+		// Token: 0x0400619E RID: 24990
 		public string TidContent;
 
-		// Token: 0x04005C8A RID: 23690
+		// Token: 0x0400619F RID: 24991
 		public float? StartProgress;
 
-		// Token: 0x04005C8B RID: 23691
+		// Token: 0x040061A0 RID: 24992
 		public string EdTidContent;
 	}
 }

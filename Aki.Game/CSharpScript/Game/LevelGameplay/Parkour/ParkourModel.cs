@@ -9,25 +9,25 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.LevelGamePlay.Parkour
 {
-	// Token: 0x02006ABD RID: 27325
+	// Token: 0x02005C35 RID: 23605
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ParkourModel : ModelBase
 	{
-		// Token: 0x06043E47 RID: 278087 RVA: 0x010A4B60 File Offset: 0x010A2D60
+		// Token: 0x06039F8E RID: 237454 RVA: 0x0104E144 File Offset: 0x0104C344
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x06043E48 RID: 278088 RVA: 0x010A4B63 File Offset: 0x010A2D63
+		// Token: 0x06039F8F RID: 237455 RVA: 0x0104E147 File Offset: 0x0104C347
 		protected override bool OnClear()
 		{
 			this.CurParkours.Clear();
 			return true;
 		}
 
-		// Token: 0x06043E49 RID: 278089 RVA: 0x010A4B74 File Offset: 0x010A2D74
+		// Token: 0x06039F90 RID: 237456 RVA: 0x0104E158 File Offset: 0x0104C358
 		[NullableContext(2)]
 		public bool AddParkour(int inConfigId, GeneralLogicTreeContext inContext = null, [Nullable(new byte[]
 		{
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			return true;
 		}
 
-		// Token: 0x06043E4A RID: 278090 RVA: 0x010A4E28 File Offset: 0x010A3028
+		// Token: 0x06039F91 RID: 237457 RVA: 0x0104E40C File Offset: 0x0104C60C
 		public void RemoveParkour(int inConfigId)
 		{
 			ParkourConfig parkourConfig;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			this.CurParkours.Remove(inConfigId);
 		}
 
-		// Token: 0x06043E4B RID: 278091 RVA: 0x010A4E6C File Offset: 0x010A306C
+		// Token: 0x06039F92 RID: 237458 RVA: 0x0104E450 File Offset: 0x0104C650
 		[NullableContext(2)]
 		public ParkourConfig GetParkour(int inConfigId)
 		{
@@ -160,8 +160,8 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			return result;
 		}
 
-		// Token: 0x17009965 RID: 39269
-		// (get) Token: 0x06043E4C RID: 278092 RVA: 0x010A4E89 File Offset: 0x010A3089
+		// Token: 0x17006E68 RID: 28264
+		// (get) Token: 0x06039F93 RID: 237459 RVA: 0x0104E46D File Offset: 0x0104C66D
 		public static ParkourModel Instance
 		{
 			get
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			}
 		}
 
-		// Token: 0x06043E4D RID: 278093 RVA: 0x010A4E90 File Offset: 0x010A3090
+		// Token: 0x06039F94 RID: 237460 RVA: 0x0104E474 File Offset: 0x0104C674
 		public static ParkourModel GetOrCreateInstance()
 		{
 			if (ParkourModel._Instance == null)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			return ParkourModel._Instance;
 		}
 
-		// Token: 0x06043E4E RID: 278094 RVA: 0x010A4EA4 File Offset: 0x010A30A4
+		// Token: 0x06039F95 RID: 237461 RVA: 0x0104E488 File Offset: 0x0104C688
 		public static bool CreateInstance()
 		{
 			if (ParkourModel._Instance != null)
@@ -191,27 +191,27 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			return true;
 		}
 
-		// Token: 0x06043E4F RID: 278095 RVA: 0x010A4EBA File Offset: 0x010A30BA
+		// Token: 0x06039F96 RID: 237462 RVA: 0x0104E49E File Offset: 0x0104C69E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043E50 RID: 278096 RVA: 0x010A4EBC File Offset: 0x010A30BC
+		// Token: 0x06039F97 RID: 237463 RVA: 0x0104E4A0 File Offset: 0x0104C6A0
 		public static void ResetStaticDefaultValue()
 		{
 			ParkourModel._Instance = null;
 		}
 
-		// Token: 0x06043E51 RID: 278097 RVA: 0x010A4EC4 File Offset: 0x010A30C4
+		// Token: 0x06039F98 RID: 237464 RVA: 0x0104E4A8 File Offset: 0x0104C6A8
 		static ParkourModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ParkourModel.CreateStaticDefaultValue), new Action(ParkourModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040237C3 RID: 145347
+		// Token: 0x0401EA60 RID: 125536
 		private readonly Dictionary<int, ParkourConfig> CurParkours = new Dictionary<int, ParkourConfig>();
 
-		// Token: 0x040237C4 RID: 145348
+		// Token: 0x0401EA61 RID: 125537
 		[Nullable(2)]
 		private static ParkourModel _Instance;
 	}

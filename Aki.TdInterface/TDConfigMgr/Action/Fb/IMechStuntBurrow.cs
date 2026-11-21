@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002810 RID: 10256
+	// Token: 0x02002AE3 RID: 10979
 	public class IMechStuntBurrow : IMechStuntConfigType
 	{
-		// Token: 0x0600E387 RID: 58247 RVA: 0x0021878A File Offset: 0x0021698A
-		[NullableContext(1)]
+		// Token: 0x0600F1AC RID: 61868 RVA: 0x002355EE File Offset: 0x002337EE
 		public static IMechStuntBurrow Create(IMechStuntBurrow? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004529 RID: 17705
-		// (get) Token: 0x0600E388 RID: 58248 RVA: 0x002187A9 File Offset: 0x002169A9
+		// Token: 0x17004894 RID: 18580
+		// (get) Token: 0x0600F1AD RID: 61869 RVA: 0x0023560D File Offset: 0x0023380D
 		public override EMechStuntType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DF6 RID: 32246
+		// Token: 0x040084B3 RID: 33971
 		private IMechStuntBurrow Instance;
 	}
 }

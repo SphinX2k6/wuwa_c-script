@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BC8 RID: 7112
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DAF RID: 7599
 	public class IMechEscortFly : ILeisureInteractType
 	{
-		// Token: 0x0600985D RID: 39005 RVA: 0x0015F37C File Offset: 0x0015D57C
+		// Token: 0x0600A161 RID: 41313 RVA: 0x00171E3C File Offset: 0x0017003C
 		private IMechEscortFly_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600985E RID: 39006 RVA: 0x0015F3B4 File Offset: 0x0015D5B4
+		// Token: 0x0600A162 RID: 41314 RVA: 0x00171E74 File Offset: 0x00170074
 		public static IMechEscortFly Create([Nullable(2)] IMechEscortFly instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600985F RID: 39007 RVA: 0x0015F3C7 File Offset: 0x0015D5C7
+		// Token: 0x0600A163 RID: 41315 RVA: 0x00171E87 File Offset: 0x00170087
 		public static IMechEscortFly CreateFromSetValue([Nullable(2)] IMechEscortFly_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009860 RID: 39008 RVA: 0x0015F3DA File Offset: 0x0015D5DA
+		// Token: 0x0600A164 RID: 41316 RVA: 0x00171E9A File Offset: 0x0017009A
 		public new IMechEscortFly_SetValue ToSetValue()
 		{
 			return new IMechEscortFly_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002FD9 RID: 12249
-		// (get) Token: 0x06009861 RID: 39009 RVA: 0x0015F411 File Offset: 0x0015D611
-		// (set) Token: 0x06009862 RID: 39010 RVA: 0x0015F43C File Offset: 0x0015D63C
+		// Token: 0x17003238 RID: 12856
+		// (get) Token: 0x0600A165 RID: 41317 RVA: 0x00171ED1 File Offset: 0x001700D1
+		// (set) Token: 0x0600A166 RID: 41318 RVA: 0x00171EFC File Offset: 0x001700FC
 		public override ELeisureInteract Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002FDA RID: 12250
-		// (get) Token: 0x06009863 RID: 39011 RVA: 0x0015F44A File Offset: 0x0015D64A
-		// (set) Token: 0x06009864 RID: 39012 RVA: 0x0015F475 File Offset: 0x0015D675
+		// Token: 0x17003239 RID: 12857
+		// (get) Token: 0x0600A167 RID: 41319 RVA: 0x00171F0A File Offset: 0x0017010A
+		// (set) Token: 0x0600A168 RID: 41320 RVA: 0x00171F35 File Offset: 0x00170135
 		public virtual int TargetEntity
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002FDB RID: 12251
-		// (get) Token: 0x06009865 RID: 39013 RVA: 0x0015F483 File Offset: 0x0015D683
-		// (set) Token: 0x06009866 RID: 39014 RVA: 0x0015F4AE File Offset: 0x0015D6AE
+		// Token: 0x1700323A RID: 12858
+		// (get) Token: 0x0600A169 RID: 41321 RVA: 0x00171F43 File Offset: 0x00170143
+		// (set) Token: 0x0600A16A RID: 41322 RVA: 0x00171F6E File Offset: 0x0017016E
 		public virtual int TargetSpline
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002FDC RID: 12252
-		// (get) Token: 0x06009867 RID: 39015 RVA: 0x0015F4BC File Offset: 0x0015D6BC
-		// (set) Token: 0x06009868 RID: 39016 RVA: 0x0015F54F File Offset: 0x0015D74F
+		// Token: 0x1700323B RID: 12859
+		// (get) Token: 0x0600A16B RID: 41323 RVA: 0x00171F7C File Offset: 0x0017017C
+		// (set) Token: 0x0600A16C RID: 41324 RVA: 0x0017200F File Offset: 0x0017020F
 		public virtual List<IMechEscortPoint> EscortPoints
 		{
 			get
@@ -170,18 +168,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005CF0 RID: 23792
+		// Token: 0x04006205 RID: 25093
 		[Nullable(2)]
 		protected new IMechEscortFly FbInstance;
 
-		// Token: 0x04005CF1 RID: 23793
+		// Token: 0x04006206 RID: 25094
 		[Nullable(2)]
 		protected new IMechEscortFly_SetValue PocoInterface;
 
-		// Token: 0x04005CF2 RID: 23794
+		// Token: 0x04006207 RID: 25095
 		private List<IMechEscortPoint> _EscortPointsCache;
 
-		// Token: 0x04005CF3 RID: 23795
+		// Token: 0x04006208 RID: 25096
 		private bool _EscortPointsInited;
 	}
 }

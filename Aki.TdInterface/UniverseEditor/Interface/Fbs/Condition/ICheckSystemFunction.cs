@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B3E RID: 19262
+	// Token: 0x02005025 RID: 20517
 	public struct ICheckSystemFunction : IFlatbufferObject
 	{
-		// Token: 0x17008BBF RID: 35775
-		// (get) Token: 0x0601E508 RID: 124168 RVA: 0x0043F4BA File Offset: 0x0043D6BA
+		// Token: 0x170092CF RID: 37583
+		// (get) Token: 0x06020093 RID: 131219 RVA: 0x00471C66 File Offset: 0x0046FE66
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E509 RID: 124169 RVA: 0x0043F4C7 File Offset: 0x0043D6C7
+		// Token: 0x06020094 RID: 131220 RVA: 0x00471C73 File Offset: 0x0046FE73
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E50A RID: 124170 RVA: 0x0043F4D0 File Offset: 0x0043D6D0
+		// Token: 0x06020095 RID: 131221 RVA: 0x00471C7C File Offset: 0x0046FE7C
 		public static ICheckSystemFunction GetRootAsICheckSystemFunction(ByteBuffer _bb)
 		{
 			return ICheckSystemFunction.GetRootAsICheckSystemFunction(_bb, default(ICheckSystemFunction));
 		}
 
-		// Token: 0x0601E50B RID: 124171 RVA: 0x0043F4EC File Offset: 0x0043D6EC
+		// Token: 0x06020096 RID: 131222 RVA: 0x00471C98 File Offset: 0x0046FE98
 		public static ICheckSystemFunction GetRootAsICheckSystemFunction(ByteBuffer _bb, ICheckSystemFunction obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E50C RID: 124172 RVA: 0x0043F509 File Offset: 0x0043D709
+		// Token: 0x06020097 RID: 131223 RVA: 0x00471CB5 File Offset: 0x0046FEB5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E50D RID: 124173 RVA: 0x0043F518 File Offset: 0x0043D718
+		// Token: 0x06020098 RID: 131224 RVA: 0x00471CC4 File Offset: 0x0046FEC4
 		public ICheckSystemFunction __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008BC0 RID: 35776
-		// (get) Token: 0x0601E50E RID: 124174 RVA: 0x0043F528 File Offset: 0x0043D728
+		// Token: 0x170092D0 RID: 37584
+		// (get) Token: 0x06020099 RID: 131225 RVA: 0x00471CD4 File Offset: 0x0046FED4
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008BC1 RID: 35777
-		// (get) Token: 0x0601E50F RID: 124175 RVA: 0x0043F564 File Offset: 0x0043D764
+		// Token: 0x170092D1 RID: 37585
+		// (get) Token: 0x0602009A RID: 131226 RVA: 0x00471D10 File Offset: 0x0046FF10
 		public int SystemId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008BC2 RID: 35778
-		// (get) Token: 0x0601E510 RID: 124176 RVA: 0x0043F5A0 File Offset: 0x0043D7A0
+		// Token: 0x170092D2 RID: 37586
+		// (get) Token: 0x0602009B RID: 131227 RVA: 0x00471D4C File Offset: 0x0046FF4C
 		public ECompare Compare
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E511 RID: 124177 RVA: 0x0043F5DC File Offset: 0x0043D7DC
+		// Token: 0x0602009C RID: 131228 RVA: 0x00471D88 File Offset: 0x0046FF88
 		public static Offset<ICheckSystemFunction> CreateICheckSystemFunction(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int SystemId = 0, ECompare Compare = ECompare.Eq)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckSystemFunction.EndICheckSystemFunction(builder);
 		}
 
-		// Token: 0x0601E512 RID: 124178 RVA: 0x0043F600 File Offset: 0x0043D800
+		// Token: 0x0602009D RID: 131229 RVA: 0x00471DAC File Offset: 0x0046FFAC
 		public static void StartICheckSystemFunction(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E513 RID: 124179 RVA: 0x0043F609 File Offset: 0x0043D809
+		// Token: 0x0602009E RID: 131230 RVA: 0x00471DB5 File Offset: 0x0046FFB5
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E514 RID: 124180 RVA: 0x0043F614 File Offset: 0x0043D814
+		// Token: 0x0602009F RID: 131231 RVA: 0x00471DC0 File Offset: 0x0046FFC0
 		public static void AddSystemId(FlatBufferBuilder builder, int systemId)
 		{
 			builder.AddInt(1, systemId, 0);
 		}
 
-		// Token: 0x0601E515 RID: 124181 RVA: 0x0043F61F File Offset: 0x0043D81F
+		// Token: 0x060200A0 RID: 131232 RVA: 0x00471DCB File Offset: 0x0046FFCB
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(2, (byte)compare, 0);
 		}
 
-		// Token: 0x0601E516 RID: 124182 RVA: 0x0043F62A File Offset: 0x0043D82A
+		// Token: 0x060200A1 RID: 131233 RVA: 0x00471DD6 File Offset: 0x0046FFD6
 		public static Offset<ICheckSystemFunction> EndICheckSystemFunction(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckSystemFunction>(builder.EndTable());
 		}
 
-		// Token: 0x0601E517 RID: 124183 RVA: 0x0043F638 File Offset: 0x0043D838
+		// Token: 0x060200A2 RID: 131234 RVA: 0x00471DE4 File Offset: 0x0046FFE4
 		public ICheckSystemFunctionT UnPack()
 		{
 			ICheckSystemFunctionT checkSystemFunctionT = new ICheckSystemFunctionT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkSystemFunctionT;
 		}
 
-		// Token: 0x0601E518 RID: 124184 RVA: 0x0043F653 File Offset: 0x0043D853
+		// Token: 0x060200A3 RID: 131235 RVA: 0x00471DFF File Offset: 0x0046FFFF
 		public void UnPackTo(ICheckSystemFunctionT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.Compare = this.Compare;
 		}
 
-		// Token: 0x0601E519 RID: 124185 RVA: 0x0043F67C File Offset: 0x0043D87C
+		// Token: 0x060200A4 RID: 131236 RVA: 0x00471E28 File Offset: 0x00470028
 		public static Offset<ICheckSystemFunction> Pack(FlatBufferBuilder builder, ICheckSystemFunctionT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckSystemFunction.CreateICheckSystemFunction(builder, _o.Type, _o.SystemId, _o.Compare);
 		}
 
-		// Token: 0x0400D3E6 RID: 54246
+		// Token: 0x0400DEE5 RID: 57061
 		private Table __p;
 	}
 }

@@ -5,12 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001484 RID: 5252
+	// Token: 0x020015DD RID: 5597
 	[JsonConverter(typeof(ActionParamsConverter))]
 	public class ActionParams
 	{
-		// Token: 0x0600778D RID: 30605 RVA: 0x0011EF7D File Offset: 0x0011D17D
-		[NullableContext(1)]
+		// Token: 0x06007E5A RID: 32346 RVA: 0x0012DBC9 File Offset: 0x0012BDC9
 		public static ActionParams Create([Nullable(2)] ActionParams instance)
 		{
 			if (instance == null)
@@ -23,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0400458C RID: 17804
+		// Token: 0x04004927 RID: 18727
 		[Nullable(2)]
 		protected ActionParams FbInstance;
 	}

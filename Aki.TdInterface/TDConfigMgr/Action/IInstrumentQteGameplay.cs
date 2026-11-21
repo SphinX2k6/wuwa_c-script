@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B42 RID: 6978
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CF1 RID: 7409
 	public class IInstrumentQteGameplay : IUiGame
 	{
-		// Token: 0x06009555 RID: 38229 RVA: 0x00159498 File Offset: 0x00157698
+		// Token: 0x06009D3F RID: 40255 RVA: 0x0016A174 File Offset: 0x00168374
 		private IInstrumentQteGameplay_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009556 RID: 38230 RVA: 0x001594D0 File Offset: 0x001576D0
+		// Token: 0x06009D40 RID: 40256 RVA: 0x0016A1AC File Offset: 0x001683AC
 		public static IInstrumentQteGameplay Create([Nullable(2)] IInstrumentQteGameplay instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009557 RID: 38231 RVA: 0x001594E3 File Offset: 0x001576E3
+		// Token: 0x06009D41 RID: 40257 RVA: 0x0016A1BF File Offset: 0x001683BF
 		public static IInstrumentQteGameplay CreateFromSetValue([Nullable(2)] IInstrumentQteGameplay_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009558 RID: 38232 RVA: 0x001594F6 File Offset: 0x001576F6
+		// Token: 0x06009D42 RID: 40258 RVA: 0x0016A1D2 File Offset: 0x001683D2
 		public new IInstrumentQteGameplay_SetValue ToSetValue()
 		{
 			return new IInstrumentQteGameplay_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F1E RID: 12062
-		// (get) Token: 0x06009559 RID: 38233 RVA: 0x00159521 File Offset: 0x00157721
-		// (set) Token: 0x0600955A RID: 38234 RVA: 0x0015954C File Offset: 0x0015774C
+		// Token: 0x17003144 RID: 12612
+		// (get) Token: 0x06009D43 RID: 40259 RVA: 0x0016A1FD File Offset: 0x001683FD
+		// (set) Token: 0x06009D44 RID: 40260 RVA: 0x0016A228 File Offset: 0x00168428
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F1F RID: 12063
-		// (get) Token: 0x0600955B RID: 38235 RVA: 0x0015955A File Offset: 0x0015775A
-		// (set) Token: 0x0600955C RID: 38236 RVA: 0x00159585 File Offset: 0x00157785
+		// Token: 0x17003145 RID: 12613
+		// (get) Token: 0x06009D45 RID: 40261 RVA: 0x0016A236 File Offset: 0x00168436
+		// (set) Token: 0x06009D46 RID: 40262 RVA: 0x0016A261 File Offset: 0x00168461
 		public virtual EInstrumentType InstrumentType
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F20 RID: 12064
-		// (get) Token: 0x0600955D RID: 38237 RVA: 0x00159593 File Offset: 0x00157793
-		// (set) Token: 0x0600955E RID: 38238 RVA: 0x001595BE File Offset: 0x001577BE
+		// Token: 0x17003146 RID: 12614
+		// (get) Token: 0x06009D47 RID: 40263 RVA: 0x0016A26F File Offset: 0x0016846F
+		// (set) Token: 0x06009D48 RID: 40264 RVA: 0x0016A29A File Offset: 0x0016849A
 		public virtual int Id
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B65 RID: 23397
+		// Token: 0x04006003 RID: 24579
 		[Nullable(2)]
 		protected new IInstrumentQteGameplay FbInstance;
 
-		// Token: 0x04005B66 RID: 23398
+		// Token: 0x04006004 RID: 24580
 		[Nullable(2)]
 		protected new IInstrumentQteGameplay_SetValue PocoInterface;
 	}

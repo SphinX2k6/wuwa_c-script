@@ -8,12 +8,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007B9 RID: 1977
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200085C RID: 2140
 	public class IVehicleGenerationConfig
 	{
-		// Token: 0x06002AD9 RID: 10969 RVA: 0x0007017C File Offset: 0x0006E37C
+		// Token: 0x06002E09 RID: 11785 RVA: 0x000774E0 File Offset: 0x000756E0
 		private IVehicleGenerationConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,7 +26,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002ADA RID: 10970 RVA: 0x000701B4 File Offset: 0x0006E3B4
+		// Token: 0x06002E0A RID: 11786 RVA: 0x00077518 File Offset: 0x00075718
 		public static IVehicleGenerationConfig Create([Nullable(2)] IVehicleGenerationConfig instance)
 		{
 			if (instance == null)
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002ADB RID: 10971 RVA: 0x000701C7 File Offset: 0x0006E3C7
+		// Token: 0x06002E0B RID: 11787 RVA: 0x0007752B File Offset: 0x0007572B
 		public static IVehicleGenerationConfig CreateFromSetValue([Nullable(2)] IVehicleGenerationConfig_SetValue value)
 		{
 			if (value == null)
@@ -54,7 +52,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002ADC RID: 10972 RVA: 0x000701DC File Offset: 0x0006E3DC
+		// Token: 0x06002E0C RID: 11788 RVA: 0x00077540 File Offset: 0x00075740
 		public IVehicleGenerationConfig_SetValue ToSetValue()
 		{
 			return new IVehicleGenerationConfig_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B3A RID: 2874
-		// (get) Token: 0x06002ADD RID: 10973 RVA: 0x0007022A File Offset: 0x0006E42A
-		// (set) Token: 0x06002ADE RID: 10974 RVA: 0x00070259 File Offset: 0x0006E459
+		// Token: 0x17000BFD RID: 3069
+		// (get) Token: 0x06002E0D RID: 11789 RVA: 0x0007758E File Offset: 0x0007578E
+		// (set) Token: 0x06002E0E RID: 11790 RVA: 0x000775BD File Offset: 0x000757BD
 		public virtual float Range
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B3B RID: 2875
-		// (get) Token: 0x06002ADF RID: 10975 RVA: 0x00070268 File Offset: 0x0006E468
-		// (set) Token: 0x06002AE0 RID: 10976 RVA: 0x000702FB File Offset: 0x0006E4FB
+		// Token: 0x17000BFE RID: 3070
+		// (get) Token: 0x06002E0F RID: 11791 RVA: 0x000775CC File Offset: 0x000757CC
+		// (set) Token: 0x06002E10 RID: 11792 RVA: 0x0007765F File Offset: 0x0007585F
 		public virtual List<Aki.TDConfigMgr.Action.ISplineWayPoint> Destinations
 		{
 			get
@@ -128,9 +126,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B3C RID: 2876
-		// (get) Token: 0x06002AE1 RID: 10977 RVA: 0x00070310 File Offset: 0x0006E510
-		// (set) Token: 0x06002AE2 RID: 10978 RVA: 0x00070337 File Offset: 0x0006E537
+		// Token: 0x17000BFF RID: 3071
+		// (get) Token: 0x06002E11 RID: 11793 RVA: 0x00077674 File Offset: 0x00075874
+		// (set) Token: 0x06002E12 RID: 11794 RVA: 0x0007769B File Offset: 0x0007589B
 		public virtual List<IVehicleGenerationType> VehicleConfig
 		{
 			get
@@ -152,9 +150,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B3D RID: 2877
-		// (get) Token: 0x06002AE3 RID: 10979 RVA: 0x00070345 File Offset: 0x0006E545
-		// (set) Token: 0x06002AE4 RID: 10980 RVA: 0x00070374 File Offset: 0x0006E574
+		// Token: 0x17000C00 RID: 3072
+		// (get) Token: 0x06002E13 RID: 11795 RVA: 0x000776A9 File Offset: 0x000758A9
+		// (set) Token: 0x06002E14 RID: 11796 RVA: 0x000776D8 File Offset: 0x000758D8
 		public virtual float Cd
 		{
 			get
@@ -175,9 +173,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B3E RID: 2878
-		// (get) Token: 0x06002AE5 RID: 10981 RVA: 0x00070384 File Offset: 0x0006E584
-		// (set) Token: 0x06002AE6 RID: 10982 RVA: 0x000703E5 File Offset: 0x0006E5E5
+		// Token: 0x17000C01 RID: 3073
+		// (get) Token: 0x06002E15 RID: 11797 RVA: 0x000776E8 File Offset: 0x000758E8
+		// (set) Token: 0x06002E16 RID: 11798 RVA: 0x00077749 File Offset: 0x00075949
 		[Nullable(2)]
 		public virtual VectorInfo Offset
 		{
@@ -208,24 +206,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C86 RID: 7302
+		// Token: 0x04001E92 RID: 7826
 		[Nullable(2)]
 		protected IVehicleGenerationConfig FbInstance;
 
-		// Token: 0x04001C87 RID: 7303
+		// Token: 0x04001E93 RID: 7827
 		[Nullable(2)]
 		protected IVehicleGenerationConfig_SetValue PocoInterface;
 
-		// Token: 0x04001C88 RID: 7304
+		// Token: 0x04001E94 RID: 7828
 		private List<Aki.TDConfigMgr.Action.ISplineWayPoint> _DestinationsCache;
 
-		// Token: 0x04001C89 RID: 7305
+		// Token: 0x04001E95 RID: 7829
 		private bool _DestinationsInited;
 
-		// Token: 0x04001C8A RID: 7306
+		// Token: 0x04001E96 RID: 7830
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04001C8B RID: 7307
+		// Token: 0x04001E97 RID: 7831
 		private bool _OffsetInited;
 	}
 }

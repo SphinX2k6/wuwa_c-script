@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002760 RID: 10080
+	// Token: 0x02002A2C RID: 10796
 	public class ISwordIntentTip : ICommonTipType
 	{
-		// Token: 0x0600E095 RID: 57493 RVA: 0x0021329A File Offset: 0x0021149A
-		[NullableContext(1)]
+		// Token: 0x0600EE95 RID: 61077 RVA: 0x0022FDD2 File Offset: 0x0022DFD2
 		public static ISwordIntentTip Create(ISwordIntentTip? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004397 RID: 17303
-		// (get) Token: 0x0600E096 RID: 57494 RVA: 0x002132B9 File Offset: 0x002114B9
+		// Token: 0x170046EB RID: 18155
+		// (get) Token: 0x0600EE96 RID: 61078 RVA: 0x0022FDF1 File Offset: 0x0022DFF1
 		public override ECommonTipType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C60 RID: 31840
+		// Token: 0x0400830E RID: 33550
 		private ISwordIntentTip Instance;
 	}
 }

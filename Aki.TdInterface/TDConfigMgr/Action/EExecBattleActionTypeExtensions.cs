@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002327 RID: 8999
+	// Token: 0x02002598 RID: 9624
 	public static class EExecBattleActionTypeExtensions
 	{
-		// Token: 0x0600C4AE RID: 50350 RVA: 0x001CB3E0 File Offset: 0x001C95E0
+		// Token: 0x0600D086 RID: 53382 RVA: 0x001E33BC File Offset: 0x001E15BC
 		public static string ToEnumString(this EExecBattleActionType value)
 		{
 			string result;
@@ -32,6 +32,12 @@ namespace Aki.TDConfigMgr.Action
 			case EExecBattleActionType.ExitMonsterMoveWithSpline:
 				result = "ExitMonsterMoveWithSpline";
 				break;
+			case EExecBattleActionType.AssistCharacterMoveToPoint:
+				result = "AssistCharacterMoveToPoint";
+				break;
+			case EExecBattleActionType.AssistCharacterStopMoveToPoint:
+				result = "AssistCharacterStopMoveToPoint";
+				break;
 			default:
 				result = value.ToString();
 				break;
@@ -39,7 +45,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C4AF RID: 50351 RVA: 0x001CB458 File Offset: 0x001C9658
+		// Token: 0x0600D087 RID: 53383 RVA: 0x001E344C File Offset: 0x001E164C
 		public static EExecBattleActionType FromString(string name)
 		{
 			EExecBattleActionType result;
@@ -50,7 +56,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C4B0 RID: 50352 RVA: 0x001CB484 File Offset: 0x001C9684
+		// Token: 0x0600D088 RID: 53384 RVA: 0x001E3478 File Offset: 0x001E1678
 		public static bool TryFromString(string name, out EExecBattleActionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -61,17 +67,54 @@ namespace Aki.TDConfigMgr.Action
 			if (name != null)
 			{
 				int length = name.Length;
-				if (length <= 16)
+				if (length <= 26)
 				{
 					if (length != 13)
 					{
-						if (length == 16)
+						switch (length)
 						{
+						case 16:
 							if (name == "SendBattleEvents")
 							{
 								value = EExecBattleActionType.SendBattleEvents;
 								return true;
 							}
+							break;
+						case 20:
+							if (name == "SetMonsterMoveTarget")
+							{
+								value = EExecBattleActionType.SetMonsterMoveTarget;
+								return true;
+							}
+							break;
+						case 21:
+							if (name == "ExitMonsterMoveTarget")
+							{
+								value = EExecBattleActionType.ExitMonsterMoveTarget;
+								return true;
+							}
+							break;
+						case 24:
+							if (name == "SetMonsterMoveWithSpline")
+							{
+								value = EExecBattleActionType.SetMonsterMoveWithSpline;
+								return true;
+							}
+							break;
+						case 25:
+							if (name == "ExitMonsterMoveWithSpline")
+							{
+								value = EExecBattleActionType.ExitMonsterMoveWithSpline;
+								return true;
+							}
+							break;
+						case 26:
+							if (name == "AssistCharacterMoveToPoint")
+							{
+								value = EExecBattleActionType.AssistCharacterMoveToPoint;
+								return true;
+							}
+							break;
 						}
 					}
 					else if (name == "SetBattleTags")
@@ -80,59 +123,28 @@ namespace Aki.TDConfigMgr.Action
 						return true;
 					}
 				}
-				else
+				else if (length != 30)
 				{
-					switch (length)
+					if (length == 32)
 					{
-					case 20:
-						if (name == "SetMonsterMoveTarget")
+						if (name == "SendBattleEventsForMonsterSummon")
 						{
-							value = EExecBattleActionType.SetMonsterMoveTarget;
+							value = EExecBattleActionType.SendBattleEventsForMonsterSummon;
 							return true;
 						}
-						break;
-					case 21:
-						if (name == "ExitMonsterMoveTarget")
-						{
-							value = EExecBattleActionType.ExitMonsterMoveTarget;
-							return true;
-						}
-						break;
-					case 22:
-					case 23:
-						break;
-					case 24:
-						if (name == "SetMonsterMoveWithSpline")
-						{
-							value = EExecBattleActionType.SetMonsterMoveWithSpline;
-							return true;
-						}
-						break;
-					case 25:
-						if (name == "ExitMonsterMoveWithSpline")
-						{
-							value = EExecBattleActionType.ExitMonsterMoveWithSpline;
-							return true;
-						}
-						break;
-					default:
-						if (length == 32)
-						{
-							if (name == "SendBattleEventsForMonsterSummon")
-							{
-								value = EExecBattleActionType.SendBattleEventsForMonsterSummon;
-								return true;
-							}
-						}
-						break;
 					}
+				}
+				else if (name == "AssistCharacterStopMoveToPoint")
+				{
+					value = EExecBattleActionType.AssistCharacterStopMoveToPoint;
+					return true;
 				}
 			}
 			value = EExecBattleActionType.SetBattleTags;
 			return false;
 		}
 
-		// Token: 0x0600C4B1 RID: 50353 RVA: 0x001CB57A File Offset: 0x001C977A
+		// Token: 0x0600D089 RID: 53385 RVA: 0x001E35BC File Offset: 0x001E17BC
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -143,11 +155,13 @@ namespace Aki.TDConfigMgr.Action
 				"SetMonsterMoveTarget",
 				"ExitMonsterMoveTarget",
 				"SetMonsterMoveWithSpline",
-				"ExitMonsterMoveWithSpline"
+				"ExitMonsterMoveWithSpline",
+				"AssistCharacterMoveToPoint",
+				"AssistCharacterStopMoveToPoint"
 			};
 		}
 
-		// Token: 0x0600C4B2 RID: 50354 RVA: 0x001CB5BA File Offset: 0x001C97BA
+		// Token: 0x0600D08A RID: 53386 RVA: 0x001E3618 File Offset: 0x001E1818
 		public static EExecBattleActionType[] GetValues()
 		{
 			return new EExecBattleActionType[]
@@ -158,11 +172,13 @@ namespace Aki.TDConfigMgr.Action
 				EExecBattleActionType.SetMonsterMoveTarget,
 				EExecBattleActionType.ExitMonsterMoveTarget,
 				EExecBattleActionType.SetMonsterMoveWithSpline,
-				EExecBattleActionType.ExitMonsterMoveWithSpline
+				EExecBattleActionType.ExitMonsterMoveWithSpline,
+				EExecBattleActionType.AssistCharacterMoveToPoint,
+				EExecBattleActionType.AssistCharacterStopMoveToPoint
 			};
 		}
 
-		// Token: 0x0600C4B3 RID: 50355 RVA: 0x001CB5CD File Offset: 0x001C97CD
+		// Token: 0x0600D08B RID: 53387 RVA: 0x001E362C File Offset: 0x001E182C
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -173,7 +189,9 @@ namespace Aki.TDConfigMgr.Action
 				"SetMonsterMoveTarget",
 				"ExitMonsterMoveTarget",
 				"SetMonsterMoveWithSpline",
-				"ExitMonsterMoveWithSpline"
+				"ExitMonsterMoveWithSpline",
+				"AssistCharacterMoveToPoint",
+				"AssistCharacterStopMoveToPoint"
 			};
 		}
 	}

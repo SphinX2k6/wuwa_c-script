@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BF2 RID: 7154
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DE1 RID: 7649
 	public class IMoneHackingDoorInteract : ILeisureInteractType
 	{
-		// Token: 0x06009937 RID: 39223 RVA: 0x00160B18 File Offset: 0x0015ED18
+		// Token: 0x0600A265 RID: 41573 RVA: 0x00173A10 File Offset: 0x00171C10
 		private IMoneHackingDoorInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009938 RID: 39224 RVA: 0x00160B50 File Offset: 0x0015ED50
+		// Token: 0x0600A266 RID: 41574 RVA: 0x00173A48 File Offset: 0x00171C48
 		public static IMoneHackingDoorInteract Create([Nullable(2)] IMoneHackingDoorInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009939 RID: 39225 RVA: 0x00160B63 File Offset: 0x0015ED63
+		// Token: 0x0600A267 RID: 41575 RVA: 0x00173A5B File Offset: 0x00171C5B
 		public static IMoneHackingDoorInteract CreateFromSetValue([Nullable(2)] IMoneHackingDoorInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600993A RID: 39226 RVA: 0x00160B76 File Offset: 0x0015ED76
+		// Token: 0x0600A268 RID: 41576 RVA: 0x00173A6E File Offset: 0x00171C6E
 		public new IMoneHackingDoorInteract_SetValue ToSetValue()
 		{
 			return new IMoneHackingDoorInteract_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003007 RID: 12295
-		// (get) Token: 0x0600993B RID: 39227 RVA: 0x00160B89 File Offset: 0x0015ED89
-		// (set) Token: 0x0600993C RID: 39228 RVA: 0x00160BB4 File Offset: 0x0015EDB4
+		// Token: 0x1700326F RID: 12911
+		// (get) Token: 0x0600A269 RID: 41577 RVA: 0x00173A81 File Offset: 0x00171C81
+		// (set) Token: 0x0600A26A RID: 41578 RVA: 0x00173AAC File Offset: 0x00171CAC
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D50 RID: 23888
+		// Token: 0x04006276 RID: 25206
 		[Nullable(2)]
 		protected new IMoneHackingDoorInteract FbInstance;
 
-		// Token: 0x04005D51 RID: 23889
+		// Token: 0x04006277 RID: 25207
 		[Nullable(2)]
 		protected new IMoneHackingDoorInteract_SetValue PocoInterface;
 	}

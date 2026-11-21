@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 {
-	// Token: 0x02006F3B RID: 28475
+	// Token: 0x020060BC RID: 24764
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TicTacToeBoard
 	{
-		// Token: 0x06045461 RID: 283745 RVA: 0x011245D8 File Offset: 0x011227D8
+		// Token: 0x0603B60F RID: 243215 RVA: 0x010CE584 File Offset: 0x010CC784
 		public void GetBoardInfo(List<int> infos)
 		{
 			infos.Clear();
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x06045462 RID: 283746 RVA: 0x0112460C File Offset: 0x0112280C
+		// Token: 0x0603B610 RID: 243216 RVA: 0x010CE5B8 File Offset: 0x010CC7B8
 		public void GetNextPoints(List<int> points)
 		{
 			points.Clear();
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x06045463 RID: 283747 RVA: 0x01124640 File Offset: 0x01122840
+		// Token: 0x0603B611 RID: 243217 RVA: 0x010CE5EC File Offset: 0x010CC7EC
 		public void GetPrePoints(List<int> points)
 		{
 			points.Clear();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x06045464 RID: 283748 RVA: 0x01124674 File Offset: 0x01122874
+		// Token: 0x0603B612 RID: 243218 RVA: 0x010CE620 File Offset: 0x010CC820
 		public void GetCirclePoints(List<int> points)
 		{
 			points.Clear();
@@ -50,8 +50,8 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x17009B22 RID: 39714
-		// (get) Token: 0x06045465 RID: 283749 RVA: 0x011246A7 File Offset: 0x011228A7
+		// Token: 0x17007061 RID: 28769
+		// (get) Token: 0x0603B613 RID: 243219 RVA: 0x010CE653 File Offset: 0x010CC853
 		public int BoardLength
 		{
 			get
@@ -60,8 +60,8 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x17009B23 RID: 39715
-		// (get) Token: 0x06045466 RID: 283750 RVA: 0x011246AF File Offset: 0x011228AF
+		// Token: 0x17007062 RID: 28770
+		// (get) Token: 0x0603B614 RID: 243220 RVA: 0x010CE65B File Offset: 0x010CC85B
 		public int CenterIndex
 		{
 			get
@@ -70,8 +70,8 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x17009B24 RID: 39716
-		// (get) Token: 0x06045467 RID: 283751 RVA: 0x011246B7 File Offset: 0x011228B7
+		// Token: 0x17007063 RID: 28771
+		// (get) Token: 0x0603B615 RID: 243221 RVA: 0x010CE663 File Offset: 0x010CC863
 		public int WinLineCount
 		{
 			get
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x06045468 RID: 283752 RVA: 0x011246BF File Offset: 0x011228BF
+		// Token: 0x0603B616 RID: 243222 RVA: 0x010CE66B File Offset: 0x010CC86B
 		public void Init(int winLineCount, Action<ETicTacToeBoardContent> onGameOver, Action onEndRound)
 		{
 			this.WinLineCountInternal = winLineCount;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			this.OnEndRound = onEndRound;
 		}
 
-		// Token: 0x06045469 RID: 283753 RVA: 0x011246D8 File Offset: 0x011228D8
+		// Token: 0x0603B617 RID: 243223 RVA: 0x010CE684 File Offset: 0x010CC884
 		public void InitOriginBoardInfo(ETicTacToeBoardContent[] originInfo)
 		{
 			Array.Resize<int>(ref this.OriginBoardInfo, originInfo.Length);
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x0604546A RID: 283754 RVA: 0x01124728 File Offset: 0x01122928
+		// Token: 0x0603B618 RID: 243224 RVA: 0x010CE6D4 File Offset: 0x010CC8D4
 		public void InitBoardInfo(ETicTacToeBoardContent[] originInfo)
 		{
 			Array.Resize<int>(ref this.BoardInfo, originInfo.Length);
@@ -110,12 +110,12 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x0604546B RID: 283755 RVA: 0x0112475C File Offset: 0x0112295C
+		// Token: 0x0603B619 RID: 243225 RVA: 0x010CE708 File Offset: 0x010CC908
 		public void StartGame()
 		{
 		}
 
-		// Token: 0x0604546C RID: 283756 RVA: 0x01124760 File Offset: 0x01122960
+		// Token: 0x0603B61A RID: 243226 RVA: 0x010CE70C File Offset: 0x010CC90C
 		public void ResetGame()
 		{
 			this.BoardInfo = new int[this.OriginBoardInfo.Length];
@@ -125,19 +125,19 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x0604546D RID: 283757 RVA: 0x011247A3 File Offset: 0x011229A3
+		// Token: 0x0603B61B RID: 243227 RVA: 0x010CE74F File Offset: 0x010CC94F
 		public bool CheckPieceSelect(int index, ETicTacToeBoardContent camp)
 		{
 			return this.BoardInfo.Length > index && this.BoardInfo[index] == (int)camp;
 		}
 
-		// Token: 0x0604546E RID: 283758 RVA: 0x011247C0 File Offset: 0x011229C0
+		// Token: 0x0603B61C RID: 243228 RVA: 0x010CE76C File Offset: 0x010CC96C
 		public bool CheckPieceMove(int index, int oldIndex, ETicTacToeBoardContent camp)
 		{
 			return this.BoardInfo[index] == (int)camp && this.BoardInfo[oldIndex] == 0 && (index == this.CenterIndexInternal || oldIndex == this.CenterIndexInternal || this.PrePoints[oldIndex] == index || this.NextPoints[oldIndex] == index);
 		}
 
-		// Token: 0x0604546F RID: 283759 RVA: 0x01124814 File Offset: 0x01122A14
+		// Token: 0x0603B61D RID: 243229 RVA: 0x010CE7C0 File Offset: 0x010CC9C0
 		public bool OnPieceMove(int index, int newIndex)
 		{
 			if (this.BoardInfo[newIndex] != 0)
@@ -154,13 +154,13 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return true;
 		}
 
-		// Token: 0x06045470 RID: 283760 RVA: 0x01124865 File Offset: 0x01122A65
+		// Token: 0x0603B61E RID: 243230 RVA: 0x010CE811 File Offset: 0x010CCA11
 		public bool CheckBoardValue(int index, ETicTacToeBoardContent value)
 		{
 			return this.BoardInfo[index] == (int)value;
 		}
 
-		// Token: 0x06045471 RID: 283761 RVA: 0x01124874 File Offset: 0x01122A74
+		// Token: 0x0603B61F RID: 243231 RVA: 0x010CE820 File Offset: 0x010CCA20
 		public IReadOnlyList<int> GetNoneNeighbors(int selectIndex)
 		{
 			this.SelectNeighbors.Clear();
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return this.SelectNeighbors;
 		}
 
-		// Token: 0x06045472 RID: 283762 RVA: 0x011249F4 File Offset: 0x01122BF4
+		// Token: 0x0603B620 RID: 243232 RVA: 0x010CE9A0 File Offset: 0x010CCBA0
 		public IReadOnlyList<int> GetNoneNeighborsWithCustomInfos(List<int> infos, int selectIndex)
 		{
 			List<int> list = new List<int>();
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return list;
 		}
 
-		// Token: 0x06045473 RID: 283763 RVA: 0x01124B54 File Offset: 0x01122D54
+		// Token: 0x0603B621 RID: 243233 RVA: 0x010CEB00 File Offset: 0x010CCD00
 		public bool CheckGameOver(int startIndex)
 		{
 			int num = this.BoardInfo[startIndex];
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return false;
 		}
 
-		// Token: 0x06045474 RID: 283764 RVA: 0x01124CC4 File Offset: 0x01122EC4
+		// Token: 0x0603B622 RID: 243234 RVA: 0x010CEC70 File Offset: 0x010CCE70
 		public void GetDebugBoardInfo(TArray<int> infos)
 		{
 			infos.Empty(true);
@@ -366,7 +366,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x04024204 RID: 147972
+		// Token: 0x0401F4B9 RID: 128185
 		protected int[] OriginBoardInfo = new int[]
 		{
 			0,
@@ -380,7 +380,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			2
 		};
 
-		// Token: 0x04024205 RID: 147973
+		// Token: 0x0401F4BA RID: 128186
 		protected int[] BoardInfo = new int[]
 		{
 			0,
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			2
 		};
 
-		// Token: 0x04024206 RID: 147974
+		// Token: 0x0401F4BB RID: 128187
 		protected int[] NextPoints = new int[]
 		{
 			1,
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			7
 		};
 
-		// Token: 0x04024207 RID: 147975
+		// Token: 0x0401F4BC RID: 128188
 		protected int[] PrePoints = new int[]
 		{
 			3,
@@ -422,7 +422,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			5
 		};
 
-		// Token: 0x04024208 RID: 147976
+		// Token: 0x0401F4BD RID: 128189
 		protected int[] CirclePoints = new int[]
 		{
 			1,
@@ -435,24 +435,24 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			0
 		};
 
-		// Token: 0x04024209 RID: 147977
+		// Token: 0x0401F4BE RID: 128190
 		private readonly int BoardLengthInternal = 3;
 
-		// Token: 0x0402420A RID: 147978
+		// Token: 0x0401F4BF RID: 128191
 		private readonly int CenterIndexInternal = 4;
 
-		// Token: 0x0402420B RID: 147979
+		// Token: 0x0401F4C0 RID: 128192
 		private int WinLineCountInternal = 3;
 
-		// Token: 0x0402420C RID: 147980
+		// Token: 0x0401F4C1 RID: 128193
 		[Nullable(2)]
 		private Action<ETicTacToeBoardContent> OnGameOver;
 
-		// Token: 0x0402420D RID: 147981
+		// Token: 0x0401F4C2 RID: 128194
 		[Nullable(2)]
 		private Action OnEndRound;
 
-		// Token: 0x0402420E RID: 147982
+		// Token: 0x0401F4C3 RID: 128195
 		protected List<int> SelectNeighbors = new List<int>();
 	}
 }

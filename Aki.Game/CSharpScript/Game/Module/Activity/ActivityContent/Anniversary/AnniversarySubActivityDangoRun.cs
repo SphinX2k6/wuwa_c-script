@@ -8,18 +8,18 @@ using CSharpScript.Game.Module.RacingBets.Data;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x0200691D RID: 26909
+	// Token: 0x0200586D RID: 22637
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AnniversarySubActivityDangoRun : AnniversarySubActivityDataBase
 	{
-		// Token: 0x06043190 RID: 274832 RVA: 0x01059E20 File Offset: 0x01058020
+		// Token: 0x06037CE8 RID: 228584 RVA: 0x00F9B44C File Offset: 0x00F9964C
 		public AnniversarySubActivityDangoRun(int id) : base(id)
 		{
 		}
 
-		// Token: 0x170097EA RID: 38890
-		// (get) Token: 0x06043191 RID: 274833 RVA: 0x01059E29 File Offset: 0x01058029
+		// Token: 0x17006B2A RID: 27434
+		// (get) Token: 0x06037CE9 RID: 228585 RVA: 0x00F9B455 File Offset: 0x00F99655
 		public RacingBetsSeasonData ActivityData
 		{
 			get
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x06043192 RID: 274834 RVA: 0x01059E4C File Offset: 0x0105804C
+		// Token: 0x06037CEA RID: 228586 RVA: 0x00F9B478 File Offset: 0x00F99678
 		public string GetCurrentDangoIconStr()
 		{
 			RacingBetsSeasonData racingBetsSeasonData = RacingBetsModel.Instance.GetRacingBetsSeasonData();
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return dangoById.Value.IconSmall;
 		}
 
-		// Token: 0x06043193 RID: 274835 RVA: 0x01059ECC File Offset: 0x010580CC
+		// Token: 0x06037CEB RID: 228587 RVA: 0x00F9B4F8 File Offset: 0x00F996F8
 		[NullableContext(0)]
 		public override ValueTuple<int, int> GetCurrentProgress()
 		{
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return new ValueTuple<int, int>(num2, num);
 		}
 
-		// Token: 0x06043194 RID: 274836 RVA: 0x0105A164 File Offset: 0x01058364
+		// Token: 0x06037CEC RID: 228588 RVA: 0x00F9B790 File Offset: 0x00F99990
 		private int GetProgressFromAnniversaryRemainder()
 		{
 			List<ActivityBaseData> activitiesByType = ActivityModel.Instance.GetActivitiesByType(97);
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return personalCurProgress - num;
 		}
 
-		// Token: 0x04022EEC RID: 143084
+		// Token: 0x0401D748 RID: 120648
 		private RacingBetsSeasonData ActivityDataCache;
 	}
 }

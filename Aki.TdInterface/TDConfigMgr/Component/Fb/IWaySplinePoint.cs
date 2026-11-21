@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C60 RID: 3168
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D39 RID: 3385
 	public class IWaySplinePoint : IBaseSplinePointType
 	{
-		// Token: 0x0600488D RID: 18573 RVA: 0x000B62F9 File Offset: 0x000B44F9
+		// Token: 0x06004D12 RID: 19730 RVA: 0x000C08ED File Offset: 0x000BEAED
 		public static IWaySplinePoint Create(IWaySplinePoint? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700158A RID: 5514
-		// (get) Token: 0x0600488E RID: 18574 RVA: 0x000B6318 File Offset: 0x000B4518
+		// Token: 0x1700169B RID: 5787
+		// (get) Token: 0x06004D13 RID: 19731 RVA: 0x000C090C File Offset: 0x000BEB0C
 		public override VectorInfo Position
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700158B RID: 5515
-		// (get) Token: 0x0600488F RID: 18575 RVA: 0x000B634C File Offset: 0x000B454C
+		// Token: 0x1700169C RID: 5788
+		// (get) Token: 0x06004D14 RID: 19732 RVA: 0x000C0940 File Offset: 0x000BEB40
 		public override VectorInfo ArriveTangent
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700158C RID: 5516
-		// (get) Token: 0x06004890 RID: 18576 RVA: 0x000B6380 File Offset: 0x000B4580
+		// Token: 0x1700169D RID: 5789
+		// (get) Token: 0x06004D15 RID: 19733 RVA: 0x000C0974 File Offset: 0x000BEB74
 		public override VectorInfo LeaveTangent
 		{
 			get
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700158D RID: 5517
-		// (get) Token: 0x06004891 RID: 18577 RVA: 0x000B63B4 File Offset: 0x000B45B4
+		// Token: 0x1700169E RID: 5790
+		// (get) Token: 0x06004D16 RID: 19734 RVA: 0x000C09A8 File Offset: 0x000BEBA8
 		public override ESplineLine LineType
 		{
 			get
@@ -81,8 +79,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700158E RID: 5518
-		// (get) Token: 0x06004892 RID: 18578 RVA: 0x000B63C1 File Offset: 0x000B45C1
+		// Token: 0x1700169F RID: 5791
+		// (get) Token: 0x06004D17 RID: 19735 RVA: 0x000C09B5 File Offset: 0x000BEBB5
 		[Nullable(2)]
 		public override VectorInfo Rotation
 		{
@@ -99,8 +97,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700158F RID: 5519
-		// (get) Token: 0x06004893 RID: 18579 RVA: 0x000B63F5 File Offset: 0x000B45F5
+		// Token: 0x170016A0 RID: 5792
+		// (get) Token: 0x06004D18 RID: 19736 RVA: 0x000C09E9 File Offset: 0x000BEBE9
 		public virtual IWaySplinePointType PointType
 		{
 			get
@@ -115,41 +113,41 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002953 RID: 10579
+		// Token: 0x04002BB4 RID: 11188
 		private IWaySplinePoint Instance;
 
-		// Token: 0x04002954 RID: 10580
+		// Token: 0x04002BB5 RID: 11189
 		[Nullable(2)]
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04002955 RID: 10581
+		// Token: 0x04002BB6 RID: 11190
 		private bool _PositionInited;
 
-		// Token: 0x04002956 RID: 10582
+		// Token: 0x04002BB7 RID: 11191
 		[Nullable(2)]
 		private VectorInfo _ArriveTangentCache;
 
-		// Token: 0x04002957 RID: 10583
+		// Token: 0x04002BB8 RID: 11192
 		private bool _ArriveTangentInited;
 
-		// Token: 0x04002958 RID: 10584
+		// Token: 0x04002BB9 RID: 11193
 		[Nullable(2)]
 		private VectorInfo _LeaveTangentCache;
 
-		// Token: 0x04002959 RID: 10585
+		// Token: 0x04002BBA RID: 11194
 		private bool _LeaveTangentInited;
 
-		// Token: 0x0400295A RID: 10586
+		// Token: 0x04002BBB RID: 11195
 		[Nullable(2)]
 		private VectorInfo _RotationCache;
 
-		// Token: 0x0400295B RID: 10587
+		// Token: 0x04002BBC RID: 11196
 		private bool _RotationInited;
 
-		// Token: 0x0400295C RID: 10588
+		// Token: 0x04002BBD RID: 11197
 		private IWaySplinePointType _PointTypeCache;
 
-		// Token: 0x0400295D RID: 10589
+		// Token: 0x04002BBE RID: 11198
 		private bool _PointTypeInited;
 	}
 }

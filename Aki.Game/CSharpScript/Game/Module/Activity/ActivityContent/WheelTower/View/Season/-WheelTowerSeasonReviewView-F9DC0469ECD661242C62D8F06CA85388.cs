@@ -2,26 +2,26 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Season
 {
-	// Token: 0x02005F6E RID: 24430
+	// Token: 0x02004F55 RID: 20309
 	internal enum <WheelTowerSeasonReviewView>F9DC0469ECD661242C62D8F06CA85388435C8984DEF349ED8E051487AF5B3E31A__EWheelTowerSeasonReviewViewComponent
 	{
-		// Token: 0x04020624 RID: 132644
+		// Token: 0x0401B0F6 RID: 110838
 		SeasonTitleTxt,
-		// Token: 0x04020625 RID: 132645
+		// Token: 0x0401B0F7 RID: 110839
 		SeasonMedalTitleTxt,
-		// Token: 0x04020626 RID: 132646
+		// Token: 0x0401B0F8 RID: 110840
 		MedalItemLayout,
-		// Token: 0x04020627 RID: 132647
+		// Token: 0x0401B0F9 RID: 110841
 		MedalItem,
-		// Token: 0x04020628 RID: 132648
+		// Token: 0x0401B0FA RID: 110842
 		StageMedalTitle,
-		// Token: 0x04020629 RID: 132649
+		// Token: 0x0401B0FB RID: 110843
 		StageItemLayout,
-		// Token: 0x0402062A RID: 132650
+		// Token: 0x0401B0FC RID: 110844
 		StageItem,
-		// Token: 0x0402062B RID: 132651
+		// Token: 0x0401B0FD RID: 110845
 		ConfirmBtn,
-		// Token: 0x0402062C RID: 132652
+		// Token: 0x0401B0FE RID: 110846
 		ShareBtn
 	}
 }

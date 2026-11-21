@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 {
-	// Token: 0x02005088 RID: 20616
+	// Token: 0x02004058 RID: 16472
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotComponentUtils
 	{
-		// Token: 0x06034D09 RID: 216329 RVA: 0x00C7DC70 File Offset: 0x00C7BE70
+		// Token: 0x06029BFE RID: 171006 RVA: 0x00BCB048 File Offset: 0x00BC9248
 		public static float GetTalkWaitTime(ITalkItem talkItem)
 		{
 			float? waitTime = talkItem.WaitTime;
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return waitTime.Value;
 		}
 
-		// Token: 0x06034D0A RID: 216330 RVA: 0x00C7DD24 File Offset: 0x00C7BF24
+		// Token: 0x06029BFF RID: 171007 RVA: 0x00BCB0FC File Offset: 0x00BC92FC
 		public static bool GetContentTextNeedRefresh(ITalkItem talkItem)
 		{
 			return PlotModel.Instance.PlotConfig.PlotLevel.GetValueOrDefault() == EPlotLevel.LevelD;
 		}
 
-		// Token: 0x06034D0B RID: 216331 RVA: 0x00C7DD40 File Offset: 0x00C7BF40
+		// Token: 0x06029C00 RID: 171008 RVA: 0x00BCB118 File Offset: 0x00BC9318
 		public static float GetTextWriterAnimSpeed(bool bIsInteraction)
 		{
 			float result;
@@ -55,13 +55,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return result;
 		}
 
-		// Token: 0x06034D0C RID: 216332 RVA: 0x00C7DDA4 File Offset: 0x00C7BFA4
+		// Token: 0x06029C01 RID: 171009 RVA: 0x00BCB17C File Offset: 0x00BC937C
 		public static float GetTextScrollDelayCharNum()
 		{
 			return (float)ConfigCommonParamById.GetIntConfig("PlotAutoScrollDelayCharNum").Value;
 		}
 
-		// Token: 0x06034D0D RID: 216333 RVA: 0x00C7DDC4 File Offset: 0x00C7BFC4
+		// Token: 0x06029C02 RID: 171010 RVA: 0x00BCB19C File Offset: 0x00BC939C
 		public static float GetTextWriterAnimDuration(ITalkItem talkItem, UUIText textComponent, float speed)
 		{
 			ICaptionParam captionParams = talkItem.CaptionParams;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return (float)textComponent.GetDisplayCharLength() / speed;
 		}
 
-		// Token: 0x06034D0E RID: 216334 RVA: 0x00C7DE04 File Offset: 0x00C7C004
+		// Token: 0x06029C03 RID: 171011 RVA: 0x00BCB1DC File Offset: 0x00BC93DC
 		public static float GetAutoPlayEndWaitTime(bool bIsInteraction)
 		{
 			float num = 1f;

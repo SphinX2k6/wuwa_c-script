@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CDC RID: 3292
+	// Token: 0x02000DD3 RID: 3539
 	public class IModelConfig
 	{
-		// Token: 0x06004B3D RID: 19261 RVA: 0x000BC0EB File Offset: 0x000BA2EB
-		[NullableContext(1)]
+		// Token: 0x06005045 RID: 20549 RVA: 0x000C74E9 File Offset: 0x000C56E9
 		public static IModelConfig Create(IModelConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001742 RID: 5954
-		// (get) Token: 0x06004B3E RID: 19262 RVA: 0x000BC10A File Offset: 0x000BA30A
+		// Token: 0x1700189A RID: 6298
+		// (get) Token: 0x06005046 RID: 20550 RVA: 0x000C7508 File Offset: 0x000C5708
 		public virtual EModelType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B0D RID: 11021
+		// Token: 0x04002DC2 RID: 11714
 		private IModelConfig Instance;
 	}
 }

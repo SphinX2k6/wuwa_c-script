@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065BF RID: 26047
+	// Token: 0x0200553D RID: 21821
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardShopMainView : UiViewBase
 	{
-		// Token: 0x06041555 RID: 267605 RVA: 0x00FD4FFE File Offset: 0x00FD31FE
+		// Token: 0x0603621A RID: 221722 RVA: 0x00F1C03A File Offset: 0x00F1A23A
 		public DockyardShopMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06041556 RID: 267606 RVA: 0x00FD5030 File Offset: 0x00FD3230
+		// Token: 0x0603621B RID: 221723 RVA: 0x00F1C06C File Offset: 0x00F1A26C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06041557 RID: 267607 RVA: 0x00FD50FC File Offset: 0x00FD32FC
+		// Token: 0x0603621C RID: 221724 RVA: 0x00F1C138 File Offset: 0x00F1A338
 		private void InitCaption()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
 		}
 
-		// Token: 0x06041558 RID: 267608 RVA: 0x00FD5110 File Offset: 0x00FD3310
+		// Token: 0x0603621D RID: 221725 RVA: 0x00F1C14C File Offset: 0x00F1A34C
 		private UniTask RefreshCurrency(EUiTabViewName viewName)
 		{
 			DockyardShopMainView.<RefreshCurrency>d__13 <RefreshCurrency>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <RefreshCurrency>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041559 RID: 267609 RVA: 0x00FD515C File Offset: 0x00FD335C
+		// Token: 0x0603621E RID: 221726 RVA: 0x00F1C198 File Offset: 0x00F1A398
 		private void RefreshBuyTabItemRedDot()
 		{
 			int shopId = DockyardModel.Instance.ShopId;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.TabItemList[this.TabItemList.Count - 1].SetRedDotActive(redDotActive);
 		}
 
-		// Token: 0x0604155A RID: 267610 RVA: 0x00FD51A0 File Offset: 0x00FD33A0
+		// Token: 0x0603621F RID: 221727 RVA: 0x00F1C1DC File Offset: 0x00F1A3DC
 		private UniTask InitTabItem(UUIItem uiItem)
 		{
 			DockyardShopMainView.<InitTabItem>d__15 <InitTabItem>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitTabItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604155B RID: 267611 RVA: 0x00FD51EC File Offset: 0x00FD33EC
+		// Token: 0x06036220 RID: 221728 RVA: 0x00F1C228 File Offset: 0x00F1A428
 		private UniTask InitTabComponent()
 		{
 			DockyardShopMainView.<InitTabComponent>d__16 <InitTabComponent>d__;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitTabComponent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604155C RID: 267612 RVA: 0x00FD5230 File Offset: 0x00FD3430
+		// Token: 0x06036221 RID: 221729 RVA: 0x00F1C26C File Offset: 0x00F1A46C
 		private UniTask InitPlotPanel()
 		{
 			DockyardShopMainView.<InitPlotPanel>d__17 <InitPlotPanel>d__;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitPlotPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604155D RID: 267613 RVA: 0x00FD5273 File Offset: 0x00FD3473
+		// Token: 0x06036222 RID: 221730 RVA: 0x00F1C2AF File Offset: 0x00F1A4AF
 		private void InitUiBlur()
 		{
 			AUIBaseActor rootActor = this.RootActor;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			uiBlur.SetEnableUiBlur(false);
 		}
 
-		// Token: 0x0604155E RID: 267614 RVA: 0x00FD52B0 File Offset: 0x00FD34B0
+		// Token: 0x06036223 RID: 221731 RVA: 0x00F1C2EC File Offset: 0x00F1A4EC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DockyardShopMainView.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -125,14 +125,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604155F RID: 267615 RVA: 0x00FD52F3 File Offset: 0x00FD34F3
+		// Token: 0x06036224 RID: 221732 RVA: 0x00F1C32F File Offset: 0x00F1A52F
 		protected override void OnStart()
 		{
 			this.CacheData = UiTimeDilation.Instance.GetTimeDilationDataCopy();
 			this.ShowPlotPanel("OpenShopView");
 		}
 
-		// Token: 0x06041560 RID: 267616 RVA: 0x00FD5310 File Offset: 0x00FD3510
+		// Token: 0x06036225 RID: 221733 RVA: 0x00F1C34C File Offset: 0x00F1A54C
 		protected void PauseTimeDilation()
 		{
 			UiViewInfoForTimeDilation uiViewInfoForTimeDilation = new UiViewInfoForTimeDilation();
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			UiTimeDilation.Instance.SetGameTimeDilation(gameTimeDilation);
 		}
 
-		// Token: 0x06041561 RID: 267617 RVA: 0x00FD5378 File Offset: 0x00FD3578
+		// Token: 0x06036226 RID: 221734 RVA: 0x00F1C3B4 File Offset: 0x00F1A5B4
 		protected void ResumeTimeDilation()
 		{
 			if (this.CacheData != null)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041562 RID: 267618 RVA: 0x00FD53DD File Offset: 0x00FD35DD
+		// Token: 0x06036227 RID: 221735 RVA: 0x00F1C419 File Offset: 0x00F1A619
 		protected override void OnBeforeShow()
 		{
 			this.HideCharacter();
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.PauseTimeDilation();
 		}
 
-		// Token: 0x06041563 RID: 267619 RVA: 0x00FD53FD File Offset: 0x00FD35FD
+		// Token: 0x06036228 RID: 221736 RVA: 0x00F1C439 File Offset: 0x00F1A639
 		protected override void OnBeforeHide()
 		{
 			this.ResumeTimeDilation();
@@ -185,27 +185,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ShowCharacter();
 		}
 
-		// Token: 0x06041564 RID: 267620 RVA: 0x00FD541D File Offset: 0x00FD361D
+		// Token: 0x06036229 RID: 221737 RVA: 0x00F1C459 File Offset: 0x00F1A659
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.PayShopGoodsBuy, new Action(this.HandleBuyItem));
 			EventSystem.Instance.Add<EUiTabViewName?, UiTabViewBase>(EEventName.OpenTabView, new Action<EUiTabViewName?, UiTabViewBase>(this.OpenTabView));
 		}
 
-		// Token: 0x06041565 RID: 267621 RVA: 0x00FD5454 File Offset: 0x00FD3654
+		// Token: 0x0603622A RID: 221738 RVA: 0x00F1C490 File Offset: 0x00F1A690
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.PayShopGoodsBuy, new Action(this.HandleBuyItem));
 			EventSystem.Instance.Remove(EEventName.OpenTabView, new Action<EUiTabViewName?, UiTabViewBase>(this.OpenTabView));
 		}
 
-		// Token: 0x06041566 RID: 267622 RVA: 0x00FD548B File Offset: 0x00FD368B
+		// Token: 0x0603622B RID: 221739 RVA: 0x00F1C4C7 File Offset: 0x00F1A6C7
 		private void HandleBuyItem()
 		{
 			this.ShowPlotPanel("BuyItem");
 		}
 
-		// Token: 0x06041567 RID: 267623 RVA: 0x00FD5498 File Offset: 0x00FD3698
+		// Token: 0x0603622C RID: 221740 RVA: 0x00F1C4D4 File Offset: 0x00F1A6D4
 		private void OpenTabView(EUiTabViewName? viewName, UiTabViewBase _)
 		{
 			if (viewName == EUiTabViewName.DockyardBuyTabView)
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041568 RID: 267624 RVA: 0x00FD54D0 File Offset: 0x00FD36D0
+		// Token: 0x0603622D RID: 221741 RVA: 0x00F1C50C File Offset: 0x00F1A70C
 		private void ToggleCallback(int tabIndex)
 		{
 			int currentTabIndex = this.CurrentTabIndex;
@@ -234,13 +234,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.TabViewComponent.ToggleCallBack(data, euiTabViewName, this.TabItemList[tabIndex], null, null);
 		}
 
-		// Token: 0x06041569 RID: 267625 RVA: 0x00FD557D File Offset: 0x00FD377D
+		// Token: 0x0603622E RID: 221742 RVA: 0x00F1C5B9 File Offset: 0x00F1A7B9
 		private void CloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0604156A RID: 267626 RVA: 0x00FD5588 File Offset: 0x00FD3788
+		// Token: 0x0603622F RID: 221743 RVA: 0x00F1C5C4 File Offset: 0x00F1A7C4
 		private bool CanExecuteChange(int tabIndex, bool isForce)
 		{
 			if (this.CurrentTabIndex != -1 && (EUiTabViewName)this.TabDataList[this.CurrentTabIndex].ChildViewName == EUiTabViewName.DockyardSellTabView && this.SellViewModel.BackpackPanelModel.IsInSelectState)
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return this.CurrentTabIndex != tabIndex;
 		}
 
-		// Token: 0x0604156B RID: 267627 RVA: 0x00FD55FC File Offset: 0x00FD37FC
+		// Token: 0x06036230 RID: 221744 RVA: 0x00F1C638 File Offset: 0x00F1A838
 		protected void HideCharacter()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604156C RID: 267628 RVA: 0x00FD5630 File Offset: 0x00FD3830
+		// Token: 0x06036231 RID: 221745 RVA: 0x00F1C66C File Offset: 0x00F1A86C
 		protected void ShowCharacter()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -271,19 +271,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604156D RID: 267629 RVA: 0x00FD5664 File Offset: 0x00FD3864
+		// Token: 0x06036232 RID: 221746 RVA: 0x00F1C6A0 File Offset: 0x00F1A8A0
 		public void ShowPlotPanel(string performId)
 		{
 			this.PlotPanel.ShowPanel(performId);
 		}
 
-		// Token: 0x0604156E RID: 267630 RVA: 0x00FD5672 File Offset: 0x00FD3872
+		// Token: 0x06036233 RID: 221747 RVA: 0x00F1C6AE File Offset: 0x00F1A8AE
 		public void HidePlotPanel()
 		{
 			this.PlotPanel.HidePanel();
 		}
 
-		// Token: 0x0604156F RID: 267631 RVA: 0x00FD567F File Offset: 0x00FD387F
+		// Token: 0x06036234 RID: 221748 RVA: 0x00F1C6BB File Offset: 0x00F1A8BB
 		public void NotifyUiBlur(bool isActive)
 		{
 			TsUiBlur uiBlur = this.UiBlur;
@@ -294,52 +294,52 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			uiBlur.SetEnableUiBlur(isActive);
 		}
 
-		// Token: 0x04021FFF RID: 139263
+		// Token: 0x0401C930 RID: 117040
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022000 RID: 139264
+		// Token: 0x0401C931 RID: 117041
 		protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-		// Token: 0x04022001 RID: 139265
+		// Token: 0x0401C932 RID: 117042
 		protected List<DockyardShopTabItem> TabItemList = new List<DockyardShopTabItem>();
 
-		// Token: 0x04022002 RID: 139266
+		// Token: 0x0401C933 RID: 117043
 		protected List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-		// Token: 0x04022003 RID: 139267
+		// Token: 0x0401C934 RID: 117044
 		protected int CurrentTabIndex = -1;
 
-		// Token: 0x04022004 RID: 139268
+		// Token: 0x0401C935 RID: 117045
 		protected DockyardShopTabViewModel SellViewModel = new DockyardShopTabViewModel();
 
-		// Token: 0x04022005 RID: 139269
+		// Token: 0x0401C936 RID: 117046
 		protected DockyardShopPlotPanel PlotPanel;
 
-		// Token: 0x04022006 RID: 139270
+		// Token: 0x0401C937 RID: 117047
 		[Nullable(2)]
 		protected TsUiBlur UiBlur;
 
-		// Token: 0x04022007 RID: 139271
+		// Token: 0x0401C938 RID: 117048
 		[Nullable(2)]
 		protected IUiViewInfoForTimeDilation CacheData;
 
-		// Token: 0x0200C7DD RID: 51165
+		// Token: 0x0200B1C0 RID: 45504
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C5DB RID: 247259
+			// Token: 0x04036F29 RID: 225065
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403C5DC RID: 247260
+			// Token: 0x04036F2A RID: 225066
 			public const int TabComponent = 1;
 
-			// Token: 0x0403C5DD RID: 247261
+			// Token: 0x04036F2B RID: 225067
 			public const int ShopTabItem = 2;
 
-			// Token: 0x0403C5DE RID: 247262
+			// Token: 0x04036F2C RID: 225068
 			public const int BuyTabItem = 3;
 
-			// Token: 0x0403C5DF RID: 247263
+			// Token: 0x04036F2D RID: 225069
 			public const int PlotItem = 4;
 		}
 	}

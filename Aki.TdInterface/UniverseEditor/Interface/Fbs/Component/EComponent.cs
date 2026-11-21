@@ -2,418 +2,422 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D82 RID: 19842
+	// Token: 0x02005283 RID: 21123
 	public enum EComponent : byte
 	{
-		// Token: 0x0400D85B RID: 55387
+		// Token: 0x0400E39D RID: 58269
 		AirWallSpawnerComponent,
-		// Token: 0x0400D85C RID: 55388
+		// Token: 0x0400E39E RID: 58270
 		ActorStateComponent,
-		// Token: 0x0400D85D RID: 55389
+		// Token: 0x0400E39F RID: 58271
 		BehaviorFlowComponent,
-		// Token: 0x0400D85E RID: 55390
+		// Token: 0x0400E3A0 RID: 58272
 		CalculateComponent,
-		// Token: 0x0400D85F RID: 55391
+		// Token: 0x0400E3A1 RID: 58273
 		EntitySpawnerComponent,
-		// Token: 0x0400D860 RID: 55392
+		// Token: 0x0400E3A2 RID: 58274
 		EventComponent,
-		// Token: 0x0400D861 RID: 55393
+		// Token: 0x0400E3A3 RID: 58275
 		FlowComponent,
-		// Token: 0x0400D862 RID: 55394
+		// Token: 0x0400E3A4 RID: 58276
 		GrabComponent,
-		// Token: 0x0400D863 RID: 55395
+		// Token: 0x0400E3A5 RID: 58277
 		InteractiveComponent,
-		// Token: 0x0400D864 RID: 55396
+		// Token: 0x0400E3A6 RID: 58278
 		LampComponent,
-		// Token: 0x0400D865 RID: 55397
+		// Token: 0x0400E3A7 RID: 58279
 		MoveComponent,
-		// Token: 0x0400D866 RID: 55398
+		// Token: 0x0400E3A8 RID: 58280
 		NpcComponent,
-		// Token: 0x0400D867 RID: 55399
+		// Token: 0x0400E3A9 RID: 58281
 		RefreshEntityComponent,
-		// Token: 0x0400D868 RID: 55400
+		// Token: 0x0400E3AA RID: 58282
 		RefreshSingleComponent,
-		// Token: 0x0400D869 RID: 55401
+		// Token: 0x0400E3AB RID: 58283
 		RotatorComponent,
-		// Token: 0x0400D86A RID: 55402
+		// Token: 0x0400E3AC RID: 58284
 		RotatorComponent2,
-		// Token: 0x0400D86B RID: 55403
+		// Token: 0x0400E3AD RID: 58285
 		RoleMotionInteractComponent,
-		// Token: 0x0400D86C RID: 55404
+		// Token: 0x0400E3AE RID: 58286
 		SimpleComponent,
-		// Token: 0x0400D86D RID: 55405
+		// Token: 0x0400E3AF RID: 58287
 		SphereComponent,
-		// Token: 0x0400D86E RID: 55406
+		// Token: 0x0400E3B0 RID: 58288
 		SphereFactoryComponent,
-		// Token: 0x0400D86F RID: 55407
+		// Token: 0x0400E3B1 RID: 58289
 		SpringBoardComponent,
-		// Token: 0x0400D870 RID: 55408
+		// Token: 0x0400E3B2 RID: 58290
 		SpringComponent,
-		// Token: 0x0400D871 RID: 55409
+		// Token: 0x0400E3B3 RID: 58291
 		StateComponent,
-		// Token: 0x0400D872 RID: 55410
+		// Token: 0x0400E3B4 RID: 58292
 		SwitcherComponent,
-		// Token: 0x0400D873 RID: 55411
+		// Token: 0x0400E3B5 RID: 58293
 		SpawnMonsterComponent,
-		// Token: 0x0400D874 RID: 55412
+		// Token: 0x0400E3B6 RID: 58294
 		TalkComponent,
-		// Token: 0x0400D875 RID: 55413
+		// Token: 0x0400E3B7 RID: 58295
 		TrampleUe5Component,
-		// Token: 0x0400D876 RID: 55414
+		// Token: 0x0400E3B8 RID: 58296
 		TriggerComponent,
-		// Token: 0x0400D877 RID: 55415
+		// Token: 0x0400E3B9 RID: 58297
 		ClientTriggerComponent,
-		// Token: 0x0400D878 RID: 55416
+		// Token: 0x0400E3BA RID: 58298
 		TriggerUe5Component,
-		// Token: 0x0400D879 RID: 55417
+		// Token: 0x0400E3BB RID: 58299
 		UndergroundComponent,
-		// Token: 0x0400D87A RID: 55418
+		// Token: 0x0400E3BC RID: 58300
 		InteractComponent,
-		// Token: 0x0400D87B RID: 55419
+		// Token: 0x0400E3BD RID: 58301
 		VarComponent,
-		// Token: 0x0400D87C RID: 55420
+		// Token: 0x0400E3BE RID: 58302
 		AiComponent,
-		// Token: 0x0400D87D RID: 55421
+		// Token: 0x0400E3BF RID: 58303
 		LevelAiComponent,
-		// Token: 0x0400D87E RID: 55422
+		// Token: 0x0400E3C0 RID: 58304
 		AttributeComponent,
-		// Token: 0x0400D87F RID: 55423
+		// Token: 0x0400E3C1 RID: 58305
 		BaseInfoComponent,
-		// Token: 0x0400D880 RID: 55424
+		// Token: 0x0400E3C2 RID: 58306
 		RewardComponent,
-		// Token: 0x0400D881 RID: 55425
+		// Token: 0x0400E3C3 RID: 58307
 		RefreshComponent,
-		// Token: 0x0400D882 RID: 55426
+		// Token: 0x0400E3C4 RID: 58308
 		RefreshGroupComponent,
-		// Token: 0x0400D883 RID: 55427
+		// Token: 0x0400E3C5 RID: 58309
 		TreasureBoxComponent,
-		// Token: 0x0400D884 RID: 55428
+		// Token: 0x0400E3C6 RID: 58310
 		EntityStateComponent,
-		// Token: 0x0400D885 RID: 55429
+		// Token: 0x0400E3C7 RID: 58311
 		SceneItemAttributeComponent,
-		// Token: 0x0400D886 RID: 55430
+		// Token: 0x0400E3C8 RID: 58312
 		HookLockPoint,
-		// Token: 0x0400D887 RID: 55431
+		// Token: 0x0400E3C9 RID: 58313
 		HookFetchComponent,
-		// Token: 0x0400D888 RID: 55432
+		// Token: 0x0400E3CA RID: 58314
 		TargetGearComponent,
-		// Token: 0x0400D889 RID: 55433
+		// Token: 0x0400E3CB RID: 58315
 		TargetGearGroupComponent,
-		// Token: 0x0400D88A RID: 55434
+		// Token: 0x0400E3CC RID: 58316
 		ItemFoundation,
-		// Token: 0x0400D88B RID: 55435
+		// Token: 0x0400E3CD RID: 58317
 		ItemFoundation2,
-		// Token: 0x0400D88C RID: 55436
+		// Token: 0x0400E3CE RID: 58318
 		PullingObjectFoundation,
-		// Token: 0x0400D88D RID: 55437
+		// Token: 0x0400E3CF RID: 58319
 		JigsawItem,
-		// Token: 0x0400D88E RID: 55438
+		// Token: 0x0400E3D0 RID: 58320
 		JigsawFoundation,
-		// Token: 0x0400D88F RID: 55439
+		// Token: 0x0400E3D1 RID: 58321
 		CollectComponent,
-		// Token: 0x0400D890 RID: 55440
+		// Token: 0x0400E3D2 RID: 58322
 		TeleControl2,
-		// Token: 0x0400D891 RID: 55441
+		// Token: 0x0400E3D3 RID: 58323
 		DestructibleItem,
-		// Token: 0x0400D892 RID: 55442
+		// Token: 0x0400E3D4 RID: 58324
 		LevelPlayComponent,
-		// Token: 0x0400D893 RID: 55443
+		// Token: 0x0400E3D5 RID: 58325
 		VisionComponent,
-		// Token: 0x0400D894 RID: 55444
+		// Token: 0x0400E3D6 RID: 58326
 		VisionCaptureComponent,
-		// Token: 0x0400D895 RID: 55445
+		// Token: 0x0400E3D7 RID: 58327
 		EntityGroupComponent,
-		// Token: 0x0400D896 RID: 55446
+		// Token: 0x0400E3D8 RID: 58328
 		ResetEntitiesPosComponent,
-		// Token: 0x0400D897 RID: 55447
+		// Token: 0x0400E3D9 RID: 58329
 		ResetSelfPosComponent,
-		// Token: 0x0400D898 RID: 55448
+		// Token: 0x0400E3DA RID: 58330
 		AdsorbComponent,
-		// Token: 0x0400D899 RID: 55449
+		// Token: 0x0400E3DB RID: 58331
 		TeleportComponent,
-		// Token: 0x0400D89A RID: 55450
+		// Token: 0x0400E3DC RID: 58332
 		TrampleComponent,
-		// Token: 0x0400D89B RID: 55451
+		// Token: 0x0400E3DD RID: 58333
 		NpcPerformComponent,
-		// Token: 0x0400D89C RID: 55452
+		// Token: 0x0400E3DE RID: 58334
 		InteractGearComponent,
-		// Token: 0x0400D89D RID: 55453
+		// Token: 0x0400E3DF RID: 58335
 		LiftComponent,
-		// Token: 0x0400D89E RID: 55454
+		// Token: 0x0400E3E0 RID: 58336
 		FollowTrackComponent,
-		// Token: 0x0400D89F RID: 55455
+		// Token: 0x0400E3E1 RID: 58337
 		SceneItemLifeCycleComponent,
-		// Token: 0x0400D8A0 RID: 55456
+		// Token: 0x0400E3E2 RID: 58338
 		BubbleComponent,
-		// Token: 0x0400D8A1 RID: 55457
+		// Token: 0x0400E3E3 RID: 58339
 		FightInteractComponent,
-		// Token: 0x0400D8A2 RID: 55458
+		// Token: 0x0400E3E4 RID: 58340
 		NearbyTrackingComponent,
-		// Token: 0x0400D8A3 RID: 55459
+		// Token: 0x0400E3E5 RID: 58341
 		EntityPackageComponent,
-		// Token: 0x0400D8A4 RID: 55460
+		// Token: 0x0400E3E6 RID: 58342
 		SkyboxComponent,
-		// Token: 0x0400D8A5 RID: 55461
+		// Token: 0x0400E3E7 RID: 58343
 		StateHintComponent,
-		// Token: 0x0400D8A6 RID: 55462
+		// Token: 0x0400E3E8 RID: 58344
 		EntityVisibleComponent,
-		// Token: 0x0400D8A7 RID: 55463
+		// Token: 0x0400E3E9 RID: 58345
 		CombinedVisibleGroupComponent,
-		// Token: 0x0400D8A8 RID: 55464
+		// Token: 0x0400E3EA RID: 58346
 		WeaponComponent,
-		// Token: 0x0400D8A9 RID: 55465
+		// Token: 0x0400E3EB RID: 58347
 		DungeonEntryComponent,
-		// Token: 0x0400D8AA RID: 55466
+		// Token: 0x0400E3EC RID: 58348
 		ResurrectionComponent,
-		// Token: 0x0400D8AB RID: 55467
+		// Token: 0x0400E3ED RID: 58349
 		BuffProducerComponent,
-		// Token: 0x0400D8AC RID: 55468
+		// Token: 0x0400E3EE RID: 58350
 		BuffConsumerComponent,
-		// Token: 0x0400D8AD RID: 55469
+		// Token: 0x0400E3EF RID: 58351
 		GuideLineCreatorComponent,
-		// Token: 0x0400D8AE RID: 55470
+		// Token: 0x0400E3F0 RID: 58352
 		InteractAudioComponent,
-		// Token: 0x0400D8AF RID: 55471
+		// Token: 0x0400E3F1 RID: 58353
 		DropComponent,
-		// Token: 0x0400D8B0 RID: 55472
+		// Token: 0x0400E3F2 RID: 58354
 		AdviseItemComponent,
-		// Token: 0x0400D8B1 RID: 55473
+		// Token: 0x0400E3F3 RID: 58355
 		VisionItemComponent,
-		// Token: 0x0400D8B2 RID: 55474
+		// Token: 0x0400E3F4 RID: 58356
 		MonsterComponent,
-		// Token: 0x0400D8B3 RID: 55475
+		// Token: 0x0400E3F5 RID: 58357
 		CombatComponent,
-		// Token: 0x0400D8B4 RID: 55476
+		// Token: 0x0400E3F6 RID: 58358
 		EntityListComponent,
-		// Token: 0x0400D8B5 RID: 55477
+		// Token: 0x0400E3F7 RID: 58359
 		AnimalComponent,
-		// Token: 0x0400D8B6 RID: 55478
+		// Token: 0x0400E3F8 RID: 58360
 		EntityAudioComponent,
-		// Token: 0x0400D8B7 RID: 55479
+		// Token: 0x0400E3F9 RID: 58361
 		EntityStateAudioComponent,
-		// Token: 0x0400D8B8 RID: 55480
+		// Token: 0x0400E3FA RID: 58362
 		EntityCustomAudioComponent,
-		// Token: 0x0400D8B9 RID: 55481
+		// Token: 0x0400E3FB RID: 58363
 		SceneItemMovementComponent,
-		// Token: 0x0400D8BA RID: 55482
+		// Token: 0x0400E3FC RID: 58364
 		RangeComponent,
-		// Token: 0x0400D8BB RID: 55483
+		// Token: 0x0400E3FD RID: 58365
 		ExtraRangeComponent,
-		// Token: 0x0400D8BC RID: 55484
+		// Token: 0x0400E3FE RID: 58366
 		TimelineTrackControlComponent,
-		// Token: 0x0400D8BD RID: 55485
+		// Token: 0x0400E3FF RID: 58367
 		SplineComponent,
-		// Token: 0x0400D8BE RID: 55486
+		// Token: 0x0400E400 RID: 58368
 		SceneActorRefComponent,
-		// Token: 0x0400D8BF RID: 55487
+		// Token: 0x0400E401 RID: 58369
 		EditCustomAoiComponent,
-		// Token: 0x0400D8C0 RID: 55488
+		// Token: 0x0400E402 RID: 58370
 		SceneBulletComponent,
-		// Token: 0x0400D8C1 RID: 55489
+		// Token: 0x0400E403 RID: 58371
 		TurntableControlComponent,
-		// Token: 0x0400D8C2 RID: 55490
+		// Token: 0x0400E404 RID: 58372
 		ConditionListenerComponent,
-		// Token: 0x0400D8C3 RID: 55491
+		// Token: 0x0400E405 RID: 58373
 		AttachTargetComponent,
-		// Token: 0x0400D8C4 RID: 55492
+		// Token: 0x0400E406 RID: 58374
 		ReboundComponent,
-		// Token: 0x0400D8C5 RID: 55493
+		// Token: 0x0400E407 RID: 58375
 		LevitateMagnetComponent,
-		// Token: 0x0400D8C6 RID: 55494
+		// Token: 0x0400E408 RID: 58376
 		PhotoTargetComponent,
-		// Token: 0x0400D8C7 RID: 55495
+		// Token: 0x0400E409 RID: 58377
 		AiAlertNotifyComponent,
-		// Token: 0x0400D8C8 RID: 55496
+		// Token: 0x0400E40A RID: 58378
 		MonsterGachaItemComponent,
-		// Token: 0x0400D8C9 RID: 55497
+		// Token: 0x0400E40B RID: 58379
 		MonsterGachaBaseComponent,
-		// Token: 0x0400D8CA RID: 55498
+		// Token: 0x0400E40C RID: 58380
 		ProgressBarControlComponent,
-		// Token: 0x0400D8CB RID: 55499
+		// Token: 0x0400E40D RID: 58381
 		ConveyorBeltComponent,
-		// Token: 0x0400D8CC RID: 55500
+		// Token: 0x0400E40E RID: 58382
 		DynamicTeleportComponent,
-		// Token: 0x0400D8CD RID: 55501
+		// Token: 0x0400E40F RID: 58383
 		ExploreSkillInteractComponent,
-		// Token: 0x0400D8CE RID: 55502
+		// Token: 0x0400E410 RID: 58384
 		ExploreSkillInteractGroupComponent,
-		// Token: 0x0400D8CF RID: 55503
+		// Token: 0x0400E411 RID: 58385
 		FanComponent,
-		// Token: 0x0400D8D0 RID: 55504
+		// Token: 0x0400E412 RID: 58386
 		PasserbyNpcSpawnComponent,
-		// Token: 0x0400D8D1 RID: 55505
+		// Token: 0x0400E413 RID: 58387
 		ModelComponent,
-		// Token: 0x0400D8D2 RID: 55506
+		// Token: 0x0400E414 RID: 58388
 		EntityBundleComponent,
-		// Token: 0x0400D8D3 RID: 55507
+		// Token: 0x0400E415 RID: 58389
 		BeamCastComponent,
-		// Token: 0x0400D8D4 RID: 55508
+		// Token: 0x0400E416 RID: 58390
 		BeamReceiveComponent,
-		// Token: 0x0400D8D5 RID: 55509
+		// Token: 0x0400E417 RID: 58391
 		TimeStopComponent,
-		// Token: 0x0400D8D6 RID: 55510
+		// Token: 0x0400E418 RID: 58392
 		PortalComponent,
-		// Token: 0x0400D8D7 RID: 55511
+		// Token: 0x0400E419 RID: 58393
 		NoRenderPortalComponent,
-		// Token: 0x0400D8D8 RID: 55512
+		// Token: 0x0400E41A RID: 58394
 		EffectAreaComponent,
-		// Token: 0x0400D8D9 RID: 55513
+		// Token: 0x0400E41B RID: 58395
 		PhysicsConstraintComponent,
-		// Token: 0x0400D8DA RID: 55514
+		// Token: 0x0400E41C RID: 58396
 		FollowDecorationComponent,
-		// Token: 0x0400D8DB RID: 55515
+		// Token: 0x0400E41D RID: 58397
 		FollowShooterComponent,
-		// Token: 0x0400D8DC RID: 55516
+		// Token: 0x0400E41E RID: 58398
 		ConnectorComponent,
-		// Token: 0x0400D8DD RID: 55517
+		// Token: 0x0400E41F RID: 58399
 		CharacterConnectorComponent,
-		// Token: 0x0400D8DE RID: 55518
+		// Token: 0x0400E420 RID: 58400
 		HitComponent,
-		// Token: 0x0400D8DF RID: 55519
+		// Token: 0x0400E421 RID: 58401
 		DynamicPortalCreatorComponent,
-		// Token: 0x0400D8E0 RID: 55520
+		// Token: 0x0400E422 RID: 58402
 		AiGearStrategyComponent,
-		// Token: 0x0400D8E1 RID: 55521
+		// Token: 0x0400E423 RID: 58403
 		PickInteractComponent,
-		// Token: 0x0400D8E2 RID: 55522
+		// Token: 0x0400E424 RID: 58404
 		LocationSafetyComponent,
-		// Token: 0x0400D8E3 RID: 55523
+		// Token: 0x0400E425 RID: 58405
 		BatchBulletCasterComponent,
-		// Token: 0x0400D8E4 RID: 55524
+		// Token: 0x0400E426 RID: 58406
 		VehicleComponent,
-		// Token: 0x0400D8E5 RID: 55525
+		// Token: 0x0400E427 RID: 58407
 		EnrichmentAreaComponent,
-		// Token: 0x0400D8E6 RID: 55526
+		// Token: 0x0400E428 RID: 58408
 		ChessmanComponent,
-		// Token: 0x0400D8E7 RID: 55527
+		// Token: 0x0400E429 RID: 58409
 		MonitorComponent,
-		// Token: 0x0400D8E8 RID: 55528
+		// Token: 0x0400E42A RID: 58410
 		GroupAiComponent,
-		// Token: 0x0400D8E9 RID: 55529
+		// Token: 0x0400E42B RID: 58411
 		InhalationAbilityComponent,
-		// Token: 0x0400D8EA RID: 55530
+		// Token: 0x0400E42C RID: 58412
 		InhaledItemComponent,
-		// Token: 0x0400D8EB RID: 55531
+		// Token: 0x0400E42D RID: 58413
 		AirPassageComponent,
-		// Token: 0x0400D8EC RID: 55532
+		// Token: 0x0400E42E RID: 58414
 		RenderSpecifiedRangeComponent,
-		// Token: 0x0400D8ED RID: 55533
+		// Token: 0x0400E42F RID: 58415
 		LevelPrefabPerformComponent,
-		// Token: 0x0400D8EE RID: 55534
+		// Token: 0x0400E430 RID: 58416
 		SceneItemAiComponent,
-		// Token: 0x0400D8EF RID: 55535
+		// Token: 0x0400E431 RID: 58417
 		GravityFlipComponent,
-		// Token: 0x0400D8F0 RID: 55536
+		// Token: 0x0400E432 RID: 58418
 		LevelSequenceFrameEventComponent,
-		// Token: 0x0400D8F1 RID: 55537
+		// Token: 0x0400E433 RID: 58419
 		LevelQteComponent,
-		// Token: 0x0400D8F2 RID: 55538
+		// Token: 0x0400E434 RID: 58420
 		WalkingPatternComponent,
-		// Token: 0x0400D8F3 RID: 55539
+		// Token: 0x0400E435 RID: 58421
 		LifePointCenterComponent,
-		// Token: 0x0400D8F4 RID: 55540
+		// Token: 0x0400E436 RID: 58422
 		HackManagementComponent,
-		// Token: 0x0400D8F5 RID: 55541
+		// Token: 0x0400E437 RID: 58423
 		ClientConditionListenerComponent,
-		// Token: 0x0400D8F6 RID: 55542
+		// Token: 0x0400E438 RID: 58424
 		TemplateEntitySpawnerComponent,
-		// Token: 0x0400D8F7 RID: 55543
+		// Token: 0x0400E439 RID: 58425
 		WindSourceComponent,
-		// Token: 0x0400D8F8 RID: 55544
+		// Token: 0x0400E43A RID: 58426
 		SlideRailComponent,
-		// Token: 0x0400D8F9 RID: 55545
+		// Token: 0x0400E43B RID: 58427
 		CurveControlComponent,
-		// Token: 0x0400D8FA RID: 55546
+		// Token: 0x0400E43C RID: 58428
 		EntityBatchRefreshComponent,
-		// Token: 0x0400D8FB RID: 55547
+		// Token: 0x0400E43D RID: 58429
 		SimpleCombatComponent,
-		// Token: 0x0400D8FC RID: 55548
+		// Token: 0x0400E43E RID: 58430
 		GridObjectComponent,
-		// Token: 0x0400D8FD RID: 55549
+		// Token: 0x0400E43F RID: 58431
 		GodKingFrequencyControllerComponent,
-		// Token: 0x0400D8FE RID: 55550
+		// Token: 0x0400E440 RID: 58432
 		PerformanceOptimizationComponent,
-		// Token: 0x0400D8FF RID: 55551
+		// Token: 0x0400E441 RID: 58433
 		SceneItemEventListenerComponent,
-		// Token: 0x0400D900 RID: 55552
+		// Token: 0x0400E442 RID: 58434
 		DynamicSpawnMonsterPointComponent,
-		// Token: 0x0400D901 RID: 55553
+		// Token: 0x0400E443 RID: 58435
 		DynamicSpawnMonsterComponent,
-		// Token: 0x0400D902 RID: 55554
+		// Token: 0x0400E444 RID: 58436
 		RollBlockComponent,
-		// Token: 0x0400D903 RID: 55555
+		// Token: 0x0400E445 RID: 58437
 		RollBlockFloorComponent,
-		// Token: 0x0400D904 RID: 55556
+		// Token: 0x0400E446 RID: 58438
 		RollBlockItemComponent,
-		// Token: 0x0400D905 RID: 55557
+		// Token: 0x0400E447 RID: 58439
 		SunSpiritCollectComponent,
-		// Token: 0x0400D906 RID: 55558
+		// Token: 0x0400E448 RID: 58440
 		SunSpiritLauncherComponent,
-		// Token: 0x0400D907 RID: 55559
+		// Token: 0x0400E449 RID: 58441
 		SunSpiritGearComponent,
-		// Token: 0x0400D908 RID: 55560
+		// Token: 0x0400E44A RID: 58442
 		MotorSlideComponent,
-		// Token: 0x0400D909 RID: 55561
+		// Token: 0x0400E44B RID: 58443
 		ProceduralVisualComponent,
-		// Token: 0x0400D90A RID: 55562
+		// Token: 0x0400E44C RID: 58444
 		RoadNetworkNavigationComponent,
-		// Token: 0x0400D90B RID: 55563
+		// Token: 0x0400E44D RID: 58445
 		DynamicEntityRewardComponent,
-		// Token: 0x0400D90C RID: 55564
+		// Token: 0x0400E44E RID: 58446
 		FurnitureSlotComponent,
-		// Token: 0x0400D90D RID: 55565
+		// Token: 0x0400E44F RID: 58447
 		VisionDisplayComponent,
-		// Token: 0x0400D90E RID: 55566
+		// Token: 0x0400E450 RID: 58448
 		SystemModuleDataSyncComponent,
-		// Token: 0x0400D90F RID: 55567
+		// Token: 0x0400E451 RID: 58449
 		ExhibitComponent,
-		// Token: 0x0400D910 RID: 55568
+		// Token: 0x0400E452 RID: 58450
 		SlidePerformComponent,
-		// Token: 0x0400D911 RID: 55569
+		// Token: 0x0400E453 RID: 58451
 		TimeScheduleComponent,
-		// Token: 0x0400D912 RID: 55570
+		// Token: 0x0400E454 RID: 58452
 		ProjectorComponent,
-		// Token: 0x0400D913 RID: 55571
+		// Token: 0x0400E455 RID: 58453
 		ProceduralMaterialComponent,
-		// Token: 0x0400D914 RID: 55572
+		// Token: 0x0400E456 RID: 58454
 		GameplayDataPersistenceComponent,
-		// Token: 0x0400D915 RID: 55573
+		// Token: 0x0400E457 RID: 58455
 		FlowerPollutionComponent,
-		// Token: 0x0400D916 RID: 55574
+		// Token: 0x0400E458 RID: 58456
 		QuickHackComponent,
-		// Token: 0x0400D917 RID: 55575
+		// Token: 0x0400E459 RID: 58457
 		DollGrabMachineComponent,
-		// Token: 0x0400D918 RID: 55576
+		// Token: 0x0400E45A RID: 58458
 		DollGrabShowcaseComponent,
-		// Token: 0x0400D919 RID: 55577
+		// Token: 0x0400E45B RID: 58459
 		WuWaGoComponent,
-		// Token: 0x0400D91A RID: 55578
+		// Token: 0x0400E45C RID: 58460
 		DragActorPlayComponent,
-		// Token: 0x0400D91B RID: 55579
+		// Token: 0x0400E45D RID: 58461
 		PathDrivenActorSpawnerComponent,
-		// Token: 0x0400D91C RID: 55580
+		// Token: 0x0400E45E RID: 58462
 		ElementalHolderComponent,
-		// Token: 0x0400D91D RID: 55581
+		// Token: 0x0400E45F RID: 58463
 		ElementalEffectComponent,
-		// Token: 0x0400D91E RID: 55582
+		// Token: 0x0400E460 RID: 58464
 		IndependentSystemRewardComponent,
-		// Token: 0x0400D91F RID: 55583
+		// Token: 0x0400E461 RID: 58465
 		Graph3dComponent,
-		// Token: 0x0400D920 RID: 55584
+		// Token: 0x0400E462 RID: 58466
 		Graph3dEffectComponent,
-		// Token: 0x0400D921 RID: 55585
+		// Token: 0x0400E463 RID: 58467
 		ElementalBoxFoundationComponent,
-		// Token: 0x0400D922 RID: 55586
+		// Token: 0x0400E464 RID: 58468
 		ElementalWellComponent,
-		// Token: 0x0400D923 RID: 55587
+		// Token: 0x0400E465 RID: 58469
 		StreamingSourceTriggerPointComponent,
-		// Token: 0x0400D924 RID: 55588
+		// Token: 0x0400E466 RID: 58470
 		NoiseRemovalComponent,
-		// Token: 0x0400D925 RID: 55589
+		// Token: 0x0400E467 RID: 58471
 		SceneTextComponent,
-		// Token: 0x0400D926 RID: 55590
+		// Token: 0x0400E468 RID: 58472
 		NavMeshComponent,
-		// Token: 0x0400D927 RID: 55591
-		DynamicLevelPlayComponent
+		// Token: 0x0400E469 RID: 58473
+		DynamicLevelPlayComponent,
+		// Token: 0x0400E46A RID: 58474
+		FrequencyPaintComponent,
+		// Token: 0x0400E46B RID: 58475
+		TurntableConnectorComponent
 	}
 }

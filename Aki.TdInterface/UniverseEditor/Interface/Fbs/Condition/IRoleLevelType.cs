@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CB5 RID: 19637
+	// Token: 0x020051AE RID: 20910
 	public struct IRoleLevelType : IFlatbufferObject
 	{
-		// Token: 0x17008E97 RID: 36503
-		// (get) Token: 0x0601F28B RID: 127627 RVA: 0x0045A03C File Offset: 0x0045823C
+		// Token: 0x170095C5 RID: 38341
+		// (get) Token: 0x06020EAD RID: 134829 RVA: 0x0048DB8C File Offset: 0x0048BD8C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F28C RID: 127628 RVA: 0x0045A049 File Offset: 0x00458249
+		// Token: 0x06020EAE RID: 134830 RVA: 0x0048DB99 File Offset: 0x0048BD99
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F28D RID: 127629 RVA: 0x0045A050 File Offset: 0x00458250
+		// Token: 0x06020EAF RID: 134831 RVA: 0x0048DBA0 File Offset: 0x0048BDA0
 		public static IRoleLevelType GetRootAsIRoleLevelType(ByteBuffer _bb)
 		{
 			return IRoleLevelType.GetRootAsIRoleLevelType(_bb, default(IRoleLevelType));
 		}
 
-		// Token: 0x0601F28E RID: 127630 RVA: 0x0045A06C File Offset: 0x0045826C
+		// Token: 0x06020EB0 RID: 134832 RVA: 0x0048DBBC File Offset: 0x0048BDBC
 		public static IRoleLevelType GetRootAsIRoleLevelType(ByteBuffer _bb, IRoleLevelType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F28F RID: 127631 RVA: 0x0045A089 File Offset: 0x00458289
+		// Token: 0x06020EB1 RID: 134833 RVA: 0x0048DBD9 File Offset: 0x0048BDD9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F290 RID: 127632 RVA: 0x0045A098 File Offset: 0x00458298
+		// Token: 0x06020EB2 RID: 134834 RVA: 0x0048DBE8 File Offset: 0x0048BDE8
 		public IRoleLevelType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008E98 RID: 36504
-		// (get) Token: 0x0601F291 RID: 127633 RVA: 0x0045A0A8 File Offset: 0x004582A8
+		// Token: 0x170095C6 RID: 38342
+		// (get) Token: 0x06020EB3 RID: 134835 RVA: 0x0048DBF8 File Offset: 0x0048BDF8
 		public ERoleLevelType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F292 RID: 127634 RVA: 0x0045A0E4 File Offset: 0x004582E4
+		// Token: 0x06020EB4 RID: 134836 RVA: 0x0048DC34 File Offset: 0x0048BE34
 		public static Offset<IRoleLevelType> CreateIRoleLevelType(FlatBufferBuilder builder, ERoleLevelType Type = ERoleLevelType.SpecifyRole)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IRoleLevelType.EndIRoleLevelType(builder);
 		}
 
-		// Token: 0x0601F293 RID: 127635 RVA: 0x0045A0FA File Offset: 0x004582FA
+		// Token: 0x06020EB5 RID: 134837 RVA: 0x0048DC4A File Offset: 0x0048BE4A
 		public static void StartIRoleLevelType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601F294 RID: 127636 RVA: 0x0045A103 File Offset: 0x00458303
+		// Token: 0x06020EB6 RID: 134838 RVA: 0x0048DC53 File Offset: 0x0048BE53
 		public static void AddType(FlatBufferBuilder builder, ERoleLevelType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601F295 RID: 127637 RVA: 0x0045A10E File Offset: 0x0045830E
+		// Token: 0x06020EB7 RID: 134839 RVA: 0x0048DC5E File Offset: 0x0048BE5E
 		public static Offset<IRoleLevelType> EndIRoleLevelType(FlatBufferBuilder builder)
 		{
 			return new Offset<IRoleLevelType>(builder.EndTable());
 		}
 
-		// Token: 0x0601F296 RID: 127638 RVA: 0x0045A11C File Offset: 0x0045831C
+		// Token: 0x06020EB8 RID: 134840 RVA: 0x0048DC6C File Offset: 0x0048BE6C
 		public IRoleLevelTypeT UnPack()
 		{
 			IRoleLevelTypeT roleLevelTypeT = new IRoleLevelTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return roleLevelTypeT;
 		}
 
-		// Token: 0x0601F297 RID: 127639 RVA: 0x0045A137 File Offset: 0x00458337
+		// Token: 0x06020EB9 RID: 134841 RVA: 0x0048DC87 File Offset: 0x0048BE87
 		public void UnPackTo(IRoleLevelTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601F298 RID: 127640 RVA: 0x0045A148 File Offset: 0x00458348
+		// Token: 0x06020EBA RID: 134842 RVA: 0x0048DC98 File Offset: 0x0048BE98
 		public static Offset<IRoleLevelType> Pack(FlatBufferBuilder builder, IRoleLevelTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IRoleLevelType.CreateIRoleLevelType(builder, _o.Type);
 		}
 
-		// Token: 0x0400D678 RID: 54904
+		// Token: 0x0400E19F RID: 57759
 		private Table __p;
 	}
 }

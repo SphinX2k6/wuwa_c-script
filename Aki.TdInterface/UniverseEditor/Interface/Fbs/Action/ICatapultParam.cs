@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062B7 RID: 25271
+	// Token: 0x02006928 RID: 26920
 	public struct ICatapultParam : IFlatbufferObject
 	{
-		// Token: 0x1700BCA4 RID: 48292
-		// (get) Token: 0x0602BAB5 RID: 178869 RVA: 0x00602BF8 File Offset: 0x00600DF8
+		// Token: 0x1700C62E RID: 50734
+		// (get) Token: 0x0602E21E RID: 188958 RVA: 0x0064DC03 File Offset: 0x0064BE03
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BAB6 RID: 178870 RVA: 0x00602C05 File Offset: 0x00600E05
+		// Token: 0x0602E21F RID: 188959 RVA: 0x0064DC10 File Offset: 0x0064BE10
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BAB7 RID: 178871 RVA: 0x00602C0C File Offset: 0x00600E0C
+		// Token: 0x0602E220 RID: 188960 RVA: 0x0064DC18 File Offset: 0x0064BE18
 		public static ICatapultParam GetRootAsICatapultParam(ByteBuffer _bb)
 		{
 			return ICatapultParam.GetRootAsICatapultParam(_bb, default(ICatapultParam));
 		}
 
-		// Token: 0x0602BAB8 RID: 178872 RVA: 0x00602C28 File Offset: 0x00600E28
+		// Token: 0x0602E221 RID: 188961 RVA: 0x0064DC34 File Offset: 0x0064BE34
 		public static ICatapultParam GetRootAsICatapultParam(ByteBuffer _bb, ICatapultParam obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BAB9 RID: 178873 RVA: 0x00602C45 File Offset: 0x00600E45
+		// Token: 0x0602E222 RID: 188962 RVA: 0x0064DC51 File Offset: 0x0064BE51
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BABA RID: 178874 RVA: 0x00602C54 File Offset: 0x00600E54
+		// Token: 0x0602E223 RID: 188963 RVA: 0x0064DC60 File Offset: 0x0064BE60
 		public ICatapultParam __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BCA5 RID: 48293
-		// (get) Token: 0x0602BABB RID: 178875 RVA: 0x00602C64 File Offset: 0x00600E64
+		// Token: 0x1700C62F RID: 50735
+		// (get) Token: 0x0602E224 RID: 188964 RVA: 0x0064DC70 File Offset: 0x0064BE70
 		public IVectorInfo? P1
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BCA6 RID: 48294
-		// (get) Token: 0x0602BABC RID: 178876 RVA: 0x00602CC4 File Offset: 0x00600EC4
+		// Token: 0x1700C630 RID: 50736
+		// (get) Token: 0x0602E225 RID: 188965 RVA: 0x0064DCD0 File Offset: 0x0064BED0
 		public IVectorInfo? P2
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BCA7 RID: 48295
-		// (get) Token: 0x0602BABD RID: 178877 RVA: 0x00602D24 File Offset: 0x00600F24
+		// Token: 0x1700C631 RID: 50737
+		// (get) Token: 0x0602E226 RID: 188966 RVA: 0x0064DD30 File Offset: 0x0064BF30
 		public float Gravity
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BCA8 RID: 48296
-		// (get) Token: 0x0602BABE RID: 178878 RVA: 0x00602D64 File Offset: 0x00600F64
+		// Token: 0x1700C632 RID: 50738
+		// (get) Token: 0x0602E227 RID: 188967 RVA: 0x0064DD70 File Offset: 0x0064BF70
 		public float Time
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BCA9 RID: 48297
-		// (get) Token: 0x0602BABF RID: 178879 RVA: 0x00602DA8 File Offset: 0x00600FA8
+		// Token: 0x1700C633 RID: 50739
+		// (get) Token: 0x0602E228 RID: 188968 RVA: 0x0064DDB4 File Offset: 0x0064BFB4
 		public string MotionCurve
 		{
 			get
@@ -123,20 +123,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BAC0 RID: 178880 RVA: 0x00602DE0 File Offset: 0x00600FE0
+		// Token: 0x0602E229 RID: 188969 RVA: 0x0064DDEC File Offset: 0x0064BFEC
 		public Span<byte> GetMotionCurveBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0602BAC1 RID: 178881 RVA: 0x00602DF0 File Offset: 0x00600FF0
+		// Token: 0x0602E22A RID: 188970 RVA: 0x0064DDFC File Offset: 0x0064BFFC
 		public byte[] GetMotionCurveArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x1700BCAA RID: 48298
-		// (get) Token: 0x0602BAC2 RID: 178882 RVA: 0x00602E00 File Offset: 0x00601000
+		// Token: 0x1700C634 RID: 50740
+		// (get) Token: 0x0602E22B RID: 188971 RVA: 0x0064DE0C File Offset: 0x0064C00C
 		public byte NullMask
 		{
 			get
@@ -150,7 +150,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BAC3 RID: 178883 RVA: 0x00602E3D File Offset: 0x0060103D
+		// Token: 0x0602E22C RID: 188972 RVA: 0x0064DE49 File Offset: 0x0064C049
 		public static Offset<ICatapultParam> CreateICatapultParam(FlatBufferBuilder builder, Offset<IVectorInfo> P1Offset = default(Offset<IVectorInfo>), Offset<IVectorInfo> P2Offset = default(Offset<IVectorInfo>), float Gravity = 0f, float Time = 0f, StringOffset MotionCurveOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -163,55 +163,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICatapultParam.EndICatapultParam(builder);
 		}
 
-		// Token: 0x0602BAC4 RID: 178884 RVA: 0x00602E79 File Offset: 0x00601079
+		// Token: 0x0602E22D RID: 188973 RVA: 0x0064DE85 File Offset: 0x0064C085
 		public static void StartICatapultParam(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0602BAC5 RID: 178885 RVA: 0x00602E82 File Offset: 0x00601082
+		// Token: 0x0602E22E RID: 188974 RVA: 0x0064DE8E File Offset: 0x0064C08E
 		public static void AddP1(FlatBufferBuilder builder, Offset<IVectorInfo> p1Offset)
 		{
 			builder.AddOffset(0, p1Offset.Value, 0);
 		}
 
-		// Token: 0x0602BAC6 RID: 178886 RVA: 0x00602E92 File Offset: 0x00601092
+		// Token: 0x0602E22F RID: 188975 RVA: 0x0064DE9E File Offset: 0x0064C09E
 		public static void AddP2(FlatBufferBuilder builder, Offset<IVectorInfo> p2Offset)
 		{
 			builder.AddOffset(1, p2Offset.Value, 0);
 		}
 
-		// Token: 0x0602BAC7 RID: 178887 RVA: 0x00602EA2 File Offset: 0x006010A2
+		// Token: 0x0602E230 RID: 188976 RVA: 0x0064DEAE File Offset: 0x0064C0AE
 		public static void AddGravity(FlatBufferBuilder builder, float gravity)
 		{
 			builder.AddFloat(2, gravity, 0.0);
 		}
 
-		// Token: 0x0602BAC8 RID: 178888 RVA: 0x00602EB5 File Offset: 0x006010B5
+		// Token: 0x0602E231 RID: 188977 RVA: 0x0064DEC1 File Offset: 0x0064C0C1
 		public static void AddTime(FlatBufferBuilder builder, float time)
 		{
 			builder.AddFloat(3, time, 0.0);
 		}
 
-		// Token: 0x0602BAC9 RID: 178889 RVA: 0x00602EC8 File Offset: 0x006010C8
+		// Token: 0x0602E232 RID: 188978 RVA: 0x0064DED4 File Offset: 0x0064C0D4
 		public static void AddMotionCurve(FlatBufferBuilder builder, StringOffset motionCurveOffset)
 		{
 			builder.AddOffset(4, motionCurveOffset.Value, 0);
 		}
 
-		// Token: 0x0602BACA RID: 178890 RVA: 0x00602ED8 File Offset: 0x006010D8
+		// Token: 0x0602E233 RID: 188979 RVA: 0x0064DEE4 File Offset: 0x0064C0E4
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x0602BACB RID: 178891 RVA: 0x00602EE3 File Offset: 0x006010E3
+		// Token: 0x0602E234 RID: 188980 RVA: 0x0064DEEF File Offset: 0x0064C0EF
 		public static Offset<ICatapultParam> EndICatapultParam(FlatBufferBuilder builder)
 		{
 			return new Offset<ICatapultParam>(builder.EndTable());
 		}
 
-		// Token: 0x0602BACC RID: 178892 RVA: 0x00602EF0 File Offset: 0x006010F0
+		// Token: 0x0602E235 RID: 188981 RVA: 0x0064DEFC File Offset: 0x0064C0FC
 		public ICatapultParamT UnPack()
 		{
 			ICatapultParamT catapultParamT = new ICatapultParamT();
@@ -219,7 +219,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return catapultParamT;
 		}
 
-		// Token: 0x0602BACD RID: 178893 RVA: 0x00602F0C File Offset: 0x0060110C
+		// Token: 0x0602E236 RID: 188982 RVA: 0x0064DF18 File Offset: 0x0064C118
 		public void UnPackTo(ICatapultParamT _o)
 		{
 			_o.P1 = ((this.P1 != null) ? this.P1.Value.UnPack() : null);
@@ -230,7 +230,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602BACE RID: 178894 RVA: 0x00602FA8 File Offset: 0x006011A8
+		// Token: 0x0602E237 RID: 188983 RVA: 0x0064DFB4 File Offset: 0x0064C1B4
 		public static Offset<ICatapultParam> Pack(FlatBufferBuilder builder, ICatapultParamT _o)
 		{
 			if (_o == null)
@@ -243,7 +243,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICatapultParam.CreateICatapultParam(builder, p1Offset, p2Offset, _o.Gravity, _o.Time, motionCurveOffset, _o.NullMask);
 		}
 
-		// Token: 0x04010855 RID: 67669
+		// Token: 0x0401166B RID: 71275
 		private Table __p;
 	}
 }

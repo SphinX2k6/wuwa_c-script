@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002274 RID: 8820
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024E1 RID: 9441
 	public class VehicleMoveWithPathLine_SetValue
 	{
-		// Token: 0x04007345 RID: 29509
+		// Token: 0x04007992 RID: 31122
 		public ITargetVehicle TargetVehicle;
 
-		// Token: 0x04007346 RID: 29510
+		// Token: 0x04007993 RID: 31123
 		public int SplineEntityId;
 
-		// Token: 0x04007347 RID: 29511
+		// Token: 0x04007994 RID: 31124
 		public IVehicleControlType ControlType;
 	}
 }

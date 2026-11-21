@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 {
-	// Token: 0x020051B7 RID: 20919
+	// Token: 0x02004187 RID: 16775
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaCollectBadgeTabView : UiTabViewBase
 	{
-		// Token: 0x060358F2 RID: 219378 RVA: 0x00CAFC64 File Offset: 0x00CADE64
+		// Token: 0x0602A7ED RID: 174061 RVA: 0x00BFD2A0 File Offset: 0x00BFB4A0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			};
 		}
 
-		// Token: 0x060358F3 RID: 219379 RVA: 0x00CAFDB8 File Offset: 0x00CADFB8
+		// Token: 0x0602A7EE RID: 174062 RVA: 0x00BFD3F4 File Offset: 0x00BFB5F4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaCollectBadgeTabView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060358F4 RID: 219380 RVA: 0x00CAFDFC File Offset: 0x00CADFFC
+		// Token: 0x0602A7EF RID: 174063 RVA: 0x00BFD438 File Offset: 0x00BFB638
 		protected override void OnStart()
 		{
 			this.RewardLayout = new GenericLayout<CollectRewardItem, int>(base.GetHorizontalLayout(2), new Func<CollectRewardItem>(this.CreateRewardItem), null, false, true);
@@ -57,19 +57,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			this.SkillLayout = new GenericLayout<CollectBadgeSkillItem, BadgeGroupSkillData>(base.GetVerticalLayout(8), new Func<CollectBadgeSkillItem>(this.CreateSkillItem), null, false, true);
 		}
 
-		// Token: 0x060358F5 RID: 219381 RVA: 0x00CAFE6C File Offset: 0x00CAE06C
+		// Token: 0x0602A7F0 RID: 174064 RVA: 0x00BFD4A8 File Offset: 0x00BFB6A8
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnPhantomArenaBadgeRewardUpdate, new Action(this.OnBadgeRewardUpdate));
 		}
 
-		// Token: 0x060358F6 RID: 219382 RVA: 0x00CAFE8A File Offset: 0x00CAE08A
+		// Token: 0x0602A7F1 RID: 174065 RVA: 0x00BFD4C6 File Offset: 0x00BFB6C6
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnPhantomArenaBadgeRewardUpdate, new Action(this.OnBadgeRewardUpdate));
 		}
 
-		// Token: 0x060358F7 RID: 219383 RVA: 0x00CAFEA8 File Offset: 0x00CAE0A8
+		// Token: 0x0602A7F2 RID: 174066 RVA: 0x00BFD4E4 File Offset: 0x00BFB6E4
 		private CollectRewardItem CreateRewardItem()
 		{
 			return new CollectRewardItem
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			};
 		}
 
-		// Token: 0x060358F8 RID: 219384 RVA: 0x00CAFEC8 File Offset: 0x00CAE0C8
+		// Token: 0x0602A7F3 RID: 174067 RVA: 0x00BFD504 File Offset: 0x00BFB704
 		private CollectBadgeGroupItem CreateBadgeGroupItem()
 		{
 			return new CollectBadgeGroupItem
@@ -89,26 +89,26 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			};
 		}
 
-		// Token: 0x060358F9 RID: 219385 RVA: 0x00CAFEF3 File Offset: 0x00CAE0F3
+		// Token: 0x0602A7F4 RID: 174068 RVA: 0x00BFD52F File Offset: 0x00BFB72F
 		private CollectBadgeSkillItem CreateSkillItem()
 		{
 			return new CollectBadgeSkillItem();
 		}
 
-		// Token: 0x060358FA RID: 219386 RVA: 0x00CAFEFA File Offset: 0x00CAE0FA
+		// Token: 0x0602A7F5 RID: 174069 RVA: 0x00BFD536 File Offset: 0x00BFB736
 		protected override void OnBeforeShow()
 		{
 			this.RefreshBadge();
 			this.RefreshReward();
 		}
 
-		// Token: 0x060358FB RID: 219387 RVA: 0x00CAFF08 File Offset: 0x00CAE108
+		// Token: 0x0602A7F6 RID: 174070 RVA: 0x00BFD544 File Offset: 0x00BFB744
 		protected override void OnAfterShow()
 		{
 			this.UiViewSequence.PlaySequence("Start", false, null);
 		}
 
-		// Token: 0x060358FC RID: 219388 RVA: 0x00CAFF30 File Offset: 0x00CAE130
+		// Token: 0x0602A7F7 RID: 174071 RVA: 0x00BFD56C File Offset: 0x00BFB76C
 		private void OnRefreshBadgeFinish()
 		{
 			int num = 0;
@@ -125,14 +125,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			this.RefreshInfo();
 		}
 
-		// Token: 0x060358FD RID: 219389 RVA: 0x00CAFFB8 File Offset: 0x00CAE1B8
+		// Token: 0x0602A7F8 RID: 174072 RVA: 0x00BFD5F4 File Offset: 0x00BFB7F4
 		private void RefreshBadge()
 		{
 			List<CollectBadgeGroupData> collectBadgeGroupDataList = PhantomArenaModel.Instance.GetCollectBadgeGroupDataList(this.ActivityId);
 			this.BadgeScroll.RefreshByData(collectBadgeGroupDataList, new Action(this.OnRefreshBadgeFinish), false);
 		}
 
-		// Token: 0x060358FE RID: 219390 RVA: 0x00CAFFF0 File Offset: 0x00CAE1F0
+		// Token: 0x0602A7F9 RID: 174073 RVA: 0x00BFD62C File Offset: 0x00BFB82C
 		private void RefreshInfo()
 		{
 			if (this.CurrentBadge <= 0)
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			this.SetSpriteByPath(phantomBattleBadgeById.ShowIcon, sprite, false, null, null);
 		}
 
-		// Token: 0x060358FF RID: 219391 RVA: 0x00CB0168 File Offset: 0x00CAE368
+		// Token: 0x0602A7FA RID: 174074 RVA: 0x00BFD7A4 File Offset: 0x00BFB9A4
 		private void RefreshReward()
 		{
 			List<int> badgeRewardConfigList = PhantomArenaModel.Instance.GetBadgeRewardConfigList(this.ActivityId);
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			base.GetSprite(1).SetFillAmount(badgeRewardProgress);
 		}
 
-		// Token: 0x06035900 RID: 219392 RVA: 0x00CB01D8 File Offset: 0x00CAE3D8
+		// Token: 0x0602A7FB RID: 174075 RVA: 0x00BFD814 File Offset: 0x00BFBA14
 		private void RequestReward()
 		{
 			List<int> badgeRewardConfigList = PhantomArenaModel.Instance.GetBadgeRewardConfigList(this.ActivityId);
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			PhantomArenaController.Instance.BadgeRewardRequest(list.ToArray(), this.ActivityId);
 		}
 
-		// Token: 0x06035901 RID: 219393 RVA: 0x00CB026C File Offset: 0x00CAE46C
+		// Token: 0x0602A7FC RID: 174076 RVA: 0x00BFD8A8 File Offset: 0x00BFBAA8
 		private void OnClickReward(int rewardId, UUIItem root)
 		{
 			if (PhantomArenaModel.Instance.GetBadgeRewardStateById(rewardId) == ECollectRewardState.Finish)
@@ -215,13 +215,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			this.RewardPopup.Refresh(data);
 		}
 
-		// Token: 0x06035902 RID: 219394 RVA: 0x00CB02D9 File Offset: 0x00CAE4D9
+		// Token: 0x0602A7FD RID: 174077 RVA: 0x00BFD915 File Offset: 0x00BFBB15
 		private void OnBadgeRewardUpdate()
 		{
 			this.RefreshReward();
 		}
 
-		// Token: 0x06035903 RID: 219395 RVA: 0x00CB02E4 File Offset: 0x00CAE4E4
+		// Token: 0x0602A7FE RID: 174078 RVA: 0x00BFD920 File Offset: 0x00BFBB20
 		private void OnClickBadge(int badgeId, CollectBadgeGroupItem groupItem)
 		{
 			if (this.CurrentGroup != null && this.CurrentBadge != badgeId)
@@ -234,77 +234,77 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			this.RefreshInfo();
 		}
 
-		// Token: 0x06035904 RID: 219396 RVA: 0x00CB0332 File Offset: 0x00CAE532
+		// Token: 0x0602A7FF RID: 174079 RVA: 0x00BFD96E File Offset: 0x00BFBB6E
 		private bool OnCanChange(int badgeId, EToggleState state)
 		{
 			return true;
 		}
 
-		// Token: 0x0401C6ED RID: 116461
+		// Token: 0x04017122 RID: 94498
 		protected int ActivityId;
 
-		// Token: 0x0401C6EE RID: 116462
+		// Token: 0x04017123 RID: 94499
 		private int CurrentBadge;
 
-		// Token: 0x0401C6EF RID: 116463
+		// Token: 0x04017124 RID: 94500
 		private CollectBadgeGroupItem CurrentGroup;
 
-		// Token: 0x0401C6F0 RID: 116464
+		// Token: 0x04017125 RID: 94501
 		private GenericLayout<CollectBadgeSkillItem, BadgeGroupSkillData> SkillLayout;
 
-		// Token: 0x0401C6F1 RID: 116465
+		// Token: 0x04017126 RID: 94502
 		private GenericLayout<CollectRewardItem, int> RewardLayout;
 
-		// Token: 0x0401C6F2 RID: 116466
+		// Token: 0x04017127 RID: 94503
 		private CollectRewardPopup RewardPopup;
 
-		// Token: 0x0401C6F3 RID: 116467
+		// Token: 0x04017128 RID: 94504
 		private GenericScrollViewNew<CollectBadgeGroupItem, CollectBadgeGroupData> BadgeScroll;
 
-		// Token: 0x0200B340 RID: 45888
+		// Token: 0x02009D78 RID: 40312
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x04036535 RID: 222517
+			// Token: 0x04030F88 RID: 200584
 			public const int TextArtNum = 0;
 
-			// Token: 0x04036536 RID: 222518
+			// Token: 0x04030F89 RID: 200585
 			public const int SpriteBar = 1;
 
-			// Token: 0x04036537 RID: 222519
+			// Token: 0x04030F8A RID: 200586
 			public const int LayoutReward = 2;
 
-			// Token: 0x04036538 RID: 222520
+			// Token: 0x04030F8B RID: 200587
 			public const int PanelReward = 3;
 
-			// Token: 0x04036539 RID: 222521
+			// Token: 0x04030F8C RID: 200588
 			public const int ScrollBadge = 4;
 
-			// Token: 0x0403653A RID: 222522
+			// Token: 0x04030F8D RID: 200589
 			public const int ItemBadgeType = 5;
 
-			// Token: 0x0403653B RID: 222523
+			// Token: 0x04030F8E RID: 200590
 			public const int TextName = 6;
 
-			// Token: 0x0403653C RID: 222524
+			// Token: 0x04030F8F RID: 200591
 			public const int IconBadge = 7;
 
-			// Token: 0x0403653D RID: 222525
+			// Token: 0x04030F90 RID: 200592
 			public const int LayoutSkill = 8;
 
-			// Token: 0x0403653E RID: 222526
+			// Token: 0x04030F91 RID: 200593
 			public const int PanelDesc = 9;
 
-			// Token: 0x0403653F RID: 222527
+			// Token: 0x04030F92 RID: 200594
 			public const int TextDesc = 10;
 
-			// Token: 0x04036540 RID: 222528
+			// Token: 0x04030F93 RID: 200595
 			public const int PanelUnlock = 11;
 
-			// Token: 0x04036541 RID: 222529
+			// Token: 0x04030F94 RID: 200596
 			public const int PanelLock = 12;
 
-			// Token: 0x04036542 RID: 222530
+			// Token: 0x04030F95 RID: 200597
 			public const int TextGroupTitle = 13;
 		}
 	}

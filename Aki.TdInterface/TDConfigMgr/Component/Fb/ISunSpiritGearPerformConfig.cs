@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DBA RID: 3514
+	// Token: 0x02000EB6 RID: 3766
 	public class ISunSpiritGearPerformConfig
 	{
-		// Token: 0x06004FC7 RID: 20423 RVA: 0x000C56B9 File Offset: 0x000C38B9
-		[NullableContext(1)]
+		// Token: 0x060054EC RID: 21740 RVA: 0x000D0F09 File Offset: 0x000CF109
 		public static ISunSpiritGearPerformConfig Create(ISunSpiritGearPerformConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A10 RID: 6672
-		// (get) Token: 0x06004FC8 RID: 20424 RVA: 0x000C56D8 File Offset: 0x000C38D8
+		// Token: 0x17001B7B RID: 7035
+		// (get) Token: 0x060054ED RID: 21741 RVA: 0x000D0F28 File Offset: 0x000CF128
 		public virtual ESunSpiritGearPerformType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DC5 RID: 11717
+		// Token: 0x0400308B RID: 12427
 		private ISunSpiritGearPerformConfig Instance;
 	}
 }

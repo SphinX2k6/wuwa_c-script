@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200230E RID: 8974
+	// Token: 0x0200257D RID: 9597
 	public class EDynamicEntityTypeJsonConverter : JsonConverter<EDynamicEntityType>
 	{
-		// Token: 0x0600C43F RID: 50239 RVA: 0x001CA630 File Offset: 0x001C8830
+		// Token: 0x0600D00E RID: 53262 RVA: 0x001E24F8 File Offset: 0x001E06F8
 		public override EDynamicEntityType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EDynamicEntityTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C440 RID: 50240 RVA: 0x001CA654 File Offset: 0x001C8854
+		// Token: 0x0600D00F RID: 53263 RVA: 0x001E251C File Offset: 0x001E071C
 		public override void Write(Utf8JsonWriter writer, EDynamicEntityType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

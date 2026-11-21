@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AAF RID: 23215
+	// Token: 0x02004A8B RID: 19083
 	public class DreamLinkWhiteCatSettlePanel : UiPanelBase
 	{
-		// Token: 0x0603ACEA RID: 240874 RVA: 0x00E032B8 File Offset: 0x00E014B8
+		// Token: 0x0602FC36 RID: 195638 RVA: 0x00D53880 File Offset: 0x00D51A80
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603ACEB RID: 240875 RVA: 0x00E03324 File Offset: 0x00E01524
+		// Token: 0x0602FC37 RID: 195639 RVA: 0x00D538EC File Offset: 0x00D51AEC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DreamLinkWhiteCatSettlePanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -39,14 +39,14 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603ACEC RID: 240876 RVA: 0x00E03367 File Offset: 0x00E01567
+		// Token: 0x0602FC38 RID: 195640 RVA: 0x00D5392F File Offset: 0x00D51B2F
 		[NullableContext(1)]
 		protected DreamLinkWhiteCatSettleItem OnCreateItem()
 		{
 			return new DreamLinkWhiteCatSettleItem();
 		}
 
-		// Token: 0x0401EB0D RID: 125709
+		// Token: 0x040195B4 RID: 103860
 		[Nullable(new byte[]
 		{
 			2,
@@ -55,21 +55,21 @@ namespace CSharpScript.Game.Module.DreamLink
 		})]
 		protected GenericScrollViewNew<DreamLinkWhiteCatSettleItem, IDreamLinkReachedData> Layout;
 
-		// Token: 0x0401EB0E RID: 125710
+		// Token: 0x040195B5 RID: 103861
 		[Nullable(2)]
 		protected DreamLinkWhiteCatSettleRecordItem RecordPanel;
 
-		// Token: 0x0401EB0F RID: 125711
+		// Token: 0x040195B6 RID: 103862
 		[Nullable(2)]
 		public RogueBossLinkSettleNotify Data;
 
-		// Token: 0x0200BD02 RID: 48386
+		// Token: 0x0200A70A RID: 42762
 		private class EChildType
 		{
-			// Token: 0x04038FFF RID: 233471
+			// Token: 0x040339C9 RID: 211401
 			public const int BarVerticalItem = 0;
 
-			// Token: 0x04039000 RID: 233472
+			// Token: 0x040339CA RID: 211402
 			public const int RecordItem = 1;
 		}
 	}

@@ -2,28 +2,28 @@
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.TrapDefense;
 
-// Token: 0x0200344A RID: 13386
+// Token: 0x020029BE RID: 10686
 public class RedDotTrapDefenseLimitReward : RedDotBase
 {
-	// Token: 0x0601CE3E RID: 118334 RVA: 0x0080DEE6 File Offset: 0x0080C0E6
+	// Token: 0x0601AB3E RID: 109374 RVA: 0x008345CE File Offset: 0x008327CE
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.TrapDefense);
 	}
 
-	// Token: 0x0601CE3F RID: 118335 RVA: 0x0080DEF2 File Offset: 0x0080C0F2
+	// Token: 0x0601AB3F RID: 109375 RVA: 0x008345DA File Offset: 0x008327DA
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.RedDotUpdateTrapDefenseLimitReward, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CE40 RID: 118336 RVA: 0x0080DF10 File Offset: 0x0080C110
+	// Token: 0x0601AB40 RID: 109376 RVA: 0x008345F8 File Offset: 0x008327F8
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.RedDotUpdateTrapDefenseLimitReward, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CE41 RID: 118337 RVA: 0x0080DF2E File Offset: 0x0080C12E
+	// Token: 0x0601AB41 RID: 109377 RVA: 0x00834616 File Offset: 0x00832816
 	protected override bool OnCheck(int uId = 0)
 	{
 		TrapDefenseModel instance = TrapDefenseModel.Instance;

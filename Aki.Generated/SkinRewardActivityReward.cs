@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010CA RID: 4298
+	// Token: 0x020011C5 RID: 4549
 	public struct SkinRewardActivityReward : IFlatbufferObject
 	{
-		// Token: 0x17003729 RID: 14121
-		// (get) Token: 0x0600D63D RID: 54845 RVA: 0x0031A490 File Offset: 0x00318690
+		// Token: 0x1700383A RID: 14394
+		// (get) Token: 0x0600DE1A RID: 56858 RVA: 0x00339484 File Offset: 0x00337684
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D63E RID: 54846 RVA: 0x0031A49D File Offset: 0x0031869D
+		// Token: 0x0600DE1B RID: 56859 RVA: 0x00339491 File Offset: 0x00337691
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D63F RID: 54847 RVA: 0x0031A4A4 File Offset: 0x003186A4
+		// Token: 0x0600DE1C RID: 56860 RVA: 0x00339498 File Offset: 0x00337698
 		public static SkinRewardActivityReward GetRootAsSkinRewardActivityReward(ByteBuffer _bb)
 		{
 			return SkinRewardActivityReward.GetRootAsSkinRewardActivityReward(_bb, default(SkinRewardActivityReward));
 		}
 
-		// Token: 0x0600D640 RID: 54848 RVA: 0x0031A4C0 File Offset: 0x003186C0
+		// Token: 0x0600DE1D RID: 56861 RVA: 0x003394B4 File Offset: 0x003376B4
 		public static SkinRewardActivityReward GetRootAsSkinRewardActivityReward(ByteBuffer _bb, SkinRewardActivityReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D641 RID: 54849 RVA: 0x0031A4DD File Offset: 0x003186DD
+		// Token: 0x0600DE1E RID: 56862 RVA: 0x003394D1 File Offset: 0x003376D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D642 RID: 54850 RVA: 0x0031A4EC File Offset: 0x003186EC
+		// Token: 0x0600DE1F RID: 56863 RVA: 0x003394E0 File Offset: 0x003376E0
 		public SkinRewardActivityReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700372A RID: 14122
-		// (get) Token: 0x0600D643 RID: 54851 RVA: 0x0031A4FC File Offset: 0x003186FC
+		// Token: 0x1700383B RID: 14395
+		// (get) Token: 0x0600DE20 RID: 56864 RVA: 0x003394F0 File Offset: 0x003376F0
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700372B RID: 14123
-		// (get) Token: 0x0600D644 RID: 54852 RVA: 0x0031A538 File Offset: 0x00318738
+		// Token: 0x1700383C RID: 14396
+		// (get) Token: 0x0600DE21 RID: 56865 RVA: 0x0033952C File Offset: 0x0033772C
 		public int ActivityId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700372C RID: 14124
-		// (get) Token: 0x0600D645 RID: 54853 RVA: 0x0031A574 File Offset: 0x00318774
+		// Token: 0x1700383D RID: 14397
+		// (get) Token: 0x0600DE22 RID: 56866 RVA: 0x00339568 File Offset: 0x00337768
 		public int ConditionGroup
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700372D RID: 14125
-		// (get) Token: 0x0600D646 RID: 54854 RVA: 0x0031A5B0 File Offset: 0x003187B0
+		// Token: 0x1700383E RID: 14398
+		// (get) Token: 0x0600DE23 RID: 56867 RVA: 0x003395A4 File Offset: 0x003377A4
 		public int TargetQuestID
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700372E RID: 14126
-		// (get) Token: 0x0600D647 RID: 54855 RVA: 0x0031A5F0 File Offset: 0x003187F0
+		// Token: 0x1700383F RID: 14399
+		// (get) Token: 0x0600DE24 RID: 56868 RVA: 0x003395E4 File Offset: 0x003377E4
 		public int DirectTrainActivityId
 		{
 			get
@@ -124,7 +124,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D648 RID: 54856 RVA: 0x0031A630 File Offset: 0x00318830
+		// Token: 0x0600DE25 RID: 56869 RVA: 0x00339624 File Offset: 0x00337824
 		public int PathQuestArray(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -135,8 +135,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700372F RID: 14127
-		// (get) Token: 0x0600D649 RID: 54857 RVA: 0x0031A670 File Offset: 0x00318870
+		// Token: 0x17003840 RID: 14400
+		// (get) Token: 0x0600DE26 RID: 56870 RVA: 0x00339664 File Offset: 0x00337864
 		public int PathQuestArrayLength
 		{
 			get
@@ -150,20 +150,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D64A RID: 54858 RVA: 0x0031A69C File Offset: 0x0031889C
+		// Token: 0x0600DE27 RID: 56871 RVA: 0x00339690 File Offset: 0x00337890
 		public Span<int> GetPathQuestArrayBytes()
 		{
 			return this.__p.__vector_as_span<int>(14, 4);
 		}
 
-		// Token: 0x0600D64B RID: 54859 RVA: 0x0031A6AC File Offset: 0x003188AC
+		// Token: 0x0600DE28 RID: 56872 RVA: 0x003396A0 File Offset: 0x003378A0
 		public int[] GetPathQuestArrayArray()
 		{
 			return this.__p.__vector_as_array<int>(14) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17003730 RID: 14128
-		// (get) Token: 0x0600D64C RID: 54860 RVA: 0x0031A6C4 File Offset: 0x003188C4
+		// Token: 0x17003841 RID: 14401
+		// (get) Token: 0x0600DE29 RID: 56873 RVA: 0x003396B8 File Offset: 0x003378B8
 		public int MaleSkinId
 		{
 			get
@@ -177,8 +177,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003731 RID: 14129
-		// (get) Token: 0x0600D64D RID: 54861 RVA: 0x0031A704 File Offset: 0x00318904
+		// Token: 0x17003842 RID: 14402
+		// (get) Token: 0x0600DE2A RID: 56874 RVA: 0x003396F8 File Offset: 0x003378F8
 		public int FemaleSkinId
 		{
 			get
@@ -192,25 +192,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D64E RID: 54862 RVA: 0x0031A744 File Offset: 0x00318944
+		// Token: 0x0600DE2B RID: 56875 RVA: 0x00339735 File Offset: 0x00337935
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PathQuestArrayIter()或GetPathQuestArrayBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] PathQuestArray()
+		public int[] PathQuestArray()
 		{
-			SkinRewardActivityReward skinRewardActivityReward = this;
-			return skinRewardActivityReward.GetPathQuestArrayArray() ?? Array.Empty<int>();
+			return this.GetPathQuestArrayArray();
 		}
 
-		// Token: 0x0600D64F RID: 54863 RVA: 0x0031A768 File Offset: 0x00318968
+		// Token: 0x0600DE2C RID: 56876 RVA: 0x0033973D File Offset: 0x0033793D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PathQuestArrayIter()
+		public IEnumerable<int> PathQuestArrayIter()
 		{
 			SkinRewardActivityReward.<PathQuestArrayIter>d__28 <PathQuestArrayIter>d__ = new SkinRewardActivityReward.<PathQuestArrayIter>d__28(-2);
 			<PathQuestArrayIter>d__.<>3__<>4__this = this;
 			return <PathQuestArrayIter>d__;
 		}
 
-		// Token: 0x040051FC RID: 20988
+		// Token: 0x040057FB RID: 22523
 		private Table __p;
 	}
 }

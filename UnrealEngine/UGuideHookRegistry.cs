@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002014 RID: 8212
+	// Token: 0x02000661 RID: 1633
 	[UnrealObjectPath("/Script/LGUI.GuideHookRegistry")]
 	[UnrealStructLayout(360, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 360)]
 	public class UGuideHookRegistry : UActorComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601EF39 RID: 126777 RVA: 0x002E0752 File Offset: 0x002DE952
+		// Token: 0x06008DAE RID: 36270 RVA: 0x000D55DA File Offset: 0x000D37DA
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UGuideHookRegistry._ClassPtr;
 		}
 
-		// Token: 0x0601EF3A RID: 126778 RVA: 0x002E0760 File Offset: 0x002DE960
+		// Token: 0x06008DAF RID: 36271 RVA: 0x000D55E8 File Offset: 0x000D37E8
 		public UGuideHookRegistry() : this(BuiltinUtils.AllocNativeUObject(UGuideHookRegistry.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601EF3B RID: 126779 RVA: 0x002E0788 File Offset: 0x002DE988
+		// Token: 0x06008DB0 RID: 36272 RVA: 0x000D5610 File Offset: 0x000D3810
 		[NullableContext(1)]
 		public UGuideHookRegistry(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UGuideHookRegistry.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007B3B RID: 31547
-		// (get) Token: 0x0601EF3C RID: 126780 RVA: 0x002E07BC File Offset: 0x002DE9BC
-		// (set) Token: 0x0601EF3D RID: 126781 RVA: 0x002E07F5 File Offset: 0x002DE9F5
+		// Token: 0x17001AD8 RID: 6872
+		// (get) Token: 0x06008DB1 RID: 36273 RVA: 0x000D5644 File Offset: 0x000D3844
+		// (set) Token: 0x06008DB2 RID: 36274 RVA: 0x000D567D File Offset: 0x000D387D
 		[Nullable(new byte[]
 		{
 			1,
@@ -70,31 +70,31 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601EF3E RID: 126782 RVA: 0x002E0803 File Offset: 0x002DEA03
+		// Token: 0x06008DB3 RID: 36275 RVA: 0x000D568B File Offset: 0x000D388B
 		static UGuideHookRegistry()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.GuideHookRegistry");
 		}
 
-		// Token: 0x0601EF3F RID: 126783 RVA: 0x002E0811 File Offset: 0x002DEA11
+		// Token: 0x06008DB4 RID: 36276 RVA: 0x000D5699 File Offset: 0x000D3899
 		protected UGuideHookRegistry(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010D3F RID: 68927
+		// Token: 0x04003E6F RID: 15983
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.GuideHookRegistry";
 
-		// Token: 0x04010D40 RID: 68928
+		// Token: 0x04003E70 RID: 15984
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04010D41 RID: 68929
+		// Token: 0x04003E71 RID: 15985
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04010D42 RID: 68930
+		// Token: 0x04003E72 RID: 15986
 		internal static int __PropertyOffset_GuideHookComponents;
 
-		// Token: 0x04010D43 RID: 68931
+		// Token: 0x04003E73 RID: 15987
 		[Nullable(new byte[]
 		{
 			2,

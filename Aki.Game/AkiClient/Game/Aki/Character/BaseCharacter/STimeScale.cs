@@ -7,144 +7,134 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004337 RID: 17207
+	// Token: 0x0200336E RID: 13166
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/STimeScale.STimeScale")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 20)]
 	public class STimeScale : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602CA04 RID: 182788 RVA: 0x00A2459A File Offset: 0x00A2279A
+		// Token: 0x060216EA RID: 136938 RVA: 0x0096077D File Offset: 0x0095E97D
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (STimeScale._ScriptStructPtr != 0) ? STimeScale._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/STimeScale.STimeScale", ref STimeScale._ScriptStructPtr);
 		}
 
-		// Token: 0x17007043 RID: 28739
-		// (get) Token: 0x0602CA05 RID: 182789 RVA: 0x00A245BE File Offset: 0x00A227BE
-		// (set) Token: 0x0602CA06 RID: 182790 RVA: 0x00A245D2 File Offset: 0x00A227D2
+		// Token: 0x1700446C RID: 17516
+		// (get) Token: 0x060216EB RID: 136939 RVA: 0x009607A1 File Offset: 0x0095E9A1
+		// (set) Token: 0x060216EC RID: 136940 RVA: 0x009607B5 File Offset: 0x0095E9B5
 		[Nullable(2)]
 		public unsafe UCurveFloat 时间膨胀变化曲线
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + STimeScale.__PropertyOffset_0);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + STimeScale.__PropertyOffset_时间膨胀变化曲线);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + STimeScale.__PropertyOffset_0, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + STimeScale.__PropertyOffset_时间膨胀变化曲线, value);
 			}
 		}
 
-		// Token: 0x17007044 RID: 28740
-		// (get) Token: 0x0602CA07 RID: 182791 RVA: 0x00A245E7 File Offset: 0x00A227E7
-		// (set) Token: 0x0602CA08 RID: 182792 RVA: 0x00A245F7 File Offset: 0x00A227F7
+		// Token: 0x1700446D RID: 17517
+		// (get) Token: 0x060216ED RID: 136941 RVA: 0x009607CA File Offset: 0x0095E9CA
+		// (set) Token: 0x060216EE RID: 136942 RVA: 0x009607DA File Offset: 0x0095E9DA
 		public unsafe float 时间膨胀时长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)STimeScale.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)STimeScale.__PropertyOffset_时间膨胀时长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)STimeScale.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)STimeScale.__PropertyOffset_时间膨胀时长) = value;
 			}
 		}
 
-		// Token: 0x17007045 RID: 28741
-		// (get) Token: 0x0602CA09 RID: 182793 RVA: 0x00A24608 File Offset: 0x00A22808
-		// (set) Token: 0x0602CA0A RID: 182794 RVA: 0x00A24618 File Offset: 0x00A22818
+		// Token: 0x1700446E RID: 17518
+		// (get) Token: 0x060216EF RID: 136943 RVA: 0x009607EB File Offset: 0x0095E9EB
+		// (set) Token: 0x060216F0 RID: 136944 RVA: 0x009607FB File Offset: 0x0095E9FB
 		public unsafe float 时间膨胀值
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)STimeScale.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)STimeScale.__PropertyOffset_时间膨胀值);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)STimeScale.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)STimeScale.__PropertyOffset_时间膨胀值) = value;
 			}
 		}
 
-		// Token: 0x17007046 RID: 28742
-		// (get) Token: 0x0602CA0B RID: 182795 RVA: 0x00A24629 File Offset: 0x00A22829
-		// (set) Token: 0x0602CA0C RID: 182796 RVA: 0x00A24639 File Offset: 0x00A22839
+		// Token: 0x1700446F RID: 17519
+		// (get) Token: 0x060216F1 RID: 136945 RVA: 0x0096080C File Offset: 0x0095EA0C
+		// (set) Token: 0x060216F2 RID: 136946 RVA: 0x0096081C File Offset: 0x0095EA1C
 		public unsafe int 优先级
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)STimeScale.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)STimeScale.__PropertyOffset_优先级);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)STimeScale.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)STimeScale.__PropertyOffset_优先级) = value;
 			}
 		}
 
-		// Token: 0x0602CA0D RID: 182797 RVA: 0x00A2464A File Offset: 0x00A2284A
+		// Token: 0x060216F3 RID: 136947 RVA: 0x0096082D File Offset: 0x0095EA2D
 		public STimeScale()
 		{
 		}
 
-		// Token: 0x0602CA0E RID: 182798 RVA: 0x00A24652 File Offset: 0x00A22852
-		[NullableContext(1)]
-		public STimeScale(UCurveFloat 时间膨胀变化曲线, float 时间膨胀时长, float 时间膨胀值, int 优先级)
-		{
-			this.时间膨胀变化曲线 = 时间膨胀变化曲线;
-			this.时间膨胀时长 = 时间膨胀时长;
-			this.时间膨胀值 = 时间膨胀值;
-			this.优先级 = 优先级;
-		}
-
-		// Token: 0x0602CA0F RID: 182799 RVA: 0x00A24677 File Offset: 0x00A22877
+		// Token: 0x060216F4 RID: 136948 RVA: 0x00960835 File Offset: 0x0095EA35
 		protected override IntPtr GetUStructPtr()
 		{
 			return STimeScale.StaticStruct();
 		}
 
-		// Token: 0x0602CA10 RID: 182800 RVA: 0x00A24683 File Offset: 0x00A22883
+		// Token: 0x060216F5 RID: 136949 RVA: 0x00960841 File Offset: 0x0095EA41
 		[NullableContext(2)]
 		public STimeScale(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602CA11 RID: 182801 RVA: 0x00A2468D File Offset: 0x00A2288D
+		// Token: 0x060216F6 RID: 136950 RVA: 0x0096084B File Offset: 0x0095EA4B
 		public STimeScale(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602CA12 RID: 182802 RVA: 0x00A24698 File Offset: 0x00A22898
+		// Token: 0x060216F7 RID: 136951 RVA: 0x00960856 File Offset: 0x0095EA56
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new STimeScale(Pointer, false, true);
 		}
 
-		// Token: 0x0602CA13 RID: 182803 RVA: 0x00A246A2 File Offset: 0x00A228A2
+		// Token: 0x060216F8 RID: 136952 RVA: 0x00960860 File Offset: 0x0095EA60
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new STimeScale(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017865 RID: 96357
+		// Token: 0x0401245C RID: 74844
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/STimeScale.STimeScale";
 
-		// Token: 0x04017866 RID: 96358
+		// Token: 0x0401245D RID: 74845
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017867 RID: 96359
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401245E RID: 74846
+		internal static int __PropertyOffset_时间膨胀变化曲线;
 
-		// Token: 0x04017868 RID: 96360
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401245F RID: 74847
+		internal static int __PropertyOffset_时间膨胀时长;
 
-		// Token: 0x04017869 RID: 96361
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012460 RID: 74848
+		internal static int __PropertyOffset_时间膨胀值;
 
-		// Token: 0x0401786A RID: 96362
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012461 RID: 74849
+		internal static int __PropertyOffset_优先级;
 	}
 }

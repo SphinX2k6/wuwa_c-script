@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using Aki.Config;
@@ -24,14 +23,14 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Module.InstanceDungeon;
 using Google.Protobuf.Collections;
 
-// Token: 0x0200168D RID: 5773
+// Token: 0x02000B45 RID: 2885
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class AdventureGuideModel : ModelBase
 {
-	// Token: 0x17000DCD RID: 3533
-	// (get) Token: 0x0600A41B RID: 42011 RVA: 0x00246C52 File Offset: 0x00244E52
+	// Token: 0x17000DEE RID: 3566
+	// (get) Token: 0x060077FA RID: 30714 RVA: 0x00250EFA File Offset: 0x0024F0FA
 	public bool HasInitData
 	{
 		get
@@ -40,7 +39,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A41C RID: 42012 RVA: 0x00246C5A File Offset: 0x00244E5A
+	// Token: 0x060077FB RID: 30715 RVA: 0x00250F02 File Offset: 0x0024F102
 	public void UpdateSilentFirstAwards(int id, bool isReceive = false)
 	{
 		if (isReceive)
@@ -54,13 +53,13 @@ public class AdventureGuideModel : ModelBase
 		EventSystem.Instance.Emit<int>(EEventName.SilentRewardReceived, id);
 	}
 
-	// Token: 0x0600A41D RID: 42013 RVA: 0x00246C8C File Offset: 0x00244E8C
+	// Token: 0x060077FC RID: 30716 RVA: 0x00250F34 File Offset: 0x0024F134
 	protected override bool OnLeaveLevel()
 	{
 		return true;
 	}
 
-	// Token: 0x0600A41E RID: 42014 RVA: 0x00246C90 File Offset: 0x00244E90
+	// Token: 0x060077FD RID: 30717 RVA: 0x00250F38 File Offset: 0x0024F138
 	public SlientFirstAwardState? GetSilentFirstAwardById(int id)
 	{
 		SlientFirstAwardState value;
@@ -71,7 +70,7 @@ public class AdventureGuideModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600A41F RID: 42015 RVA: 0x00246CC0 File Offset: 0x00244EC0
+	// Token: 0x060077FE RID: 30718 RVA: 0x00250F68 File Offset: 0x0024F168
 	public bool CheckCanGetFirstAward()
 	{
 		using (Dictionary<int, SlientFirstAwardState>.ValueCollection.Enumerator enumerator = this.SilentFirstAwardsMap.Values.GetEnumerator())
@@ -87,14 +86,14 @@ public class AdventureGuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A420 RID: 42016 RVA: 0x00246D1C File Offset: 0x00244F1C
+	// Token: 0x060077FF RID: 30719 RVA: 0x00250FC4 File Offset: 0x0024F1C4
 	public bool CheckCanGetFirstAwardById(int id)
 	{
 		SlientFirstAwardState slientFirstAwardState;
 		return this.SilentFirstAwardsMap.TryGetValue(id, out slientFirstAwardState) && slientFirstAwardState == SlientFirstAwardState.IsFinish;
 	}
 
-	// Token: 0x0600A421 RID: 42017 RVA: 0x00246D40 File Offset: 0x00244F40
+	// Token: 0x06007800 RID: 30720 RVA: 0x00250FE8 File Offset: 0x0024F1E8
 	public bool CheckCanGetFirstAwardByTypeId(int typeId)
 	{
 		foreach (KeyValuePair<int, SlientFirstAwardState> keyValuePair in this.SilentFirstAwardsMap)
@@ -107,7 +106,7 @@ public class AdventureGuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A422 RID: 42018 RVA: 0x00246DBC File Offset: 0x00244FBC
+	// Token: 0x06007801 RID: 30721 RVA: 0x00251064 File Offset: 0x0024F264
 	public UiDynamicTab[] GetAdventureGuideTabList()
 	{
 		List<UiDynamicTab> viewTabList = DynamicTabConfig.Instance.GetViewTabList(EUiViewName.AdventureGuideView);
@@ -137,43 +136,43 @@ public class AdventureGuideModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600A423 RID: 42019 RVA: 0x00246EAC File Offset: 0x002450AC
+	// Token: 0x06007802 RID: 30722 RVA: 0x00251154 File Offset: 0x0024F354
 	public int[] GetRewardChaptersList()
 	{
 		return this.RewardChapters;
 	}
 
-	// Token: 0x0600A424 RID: 42020 RVA: 0x00246EB4 File Offset: 0x002450B4
+	// Token: 0x06007803 RID: 30723 RVA: 0x0025115C File Offset: 0x0024F35C
 	public int[] GetUnLockChaptersList()
 	{
 		return this.UnLockChapters;
 	}
 
-	// Token: 0x0600A425 RID: 42021 RVA: 0x00246EBC File Offset: 0x002450BC
+	// Token: 0x06007804 RID: 30724 RVA: 0x00251164 File Offset: 0x0024F364
 	public bool GetIsFromManualDetect()
 	{
 		return this.IsFromManualDetect;
 	}
 
-	// Token: 0x0600A426 RID: 42022 RVA: 0x00246EC4 File Offset: 0x002450C4
+	// Token: 0x06007805 RID: 30725 RVA: 0x0025116C File Offset: 0x0024F36C
 	public void SetFromManualDetect(bool fromManual)
 	{
 		this.IsFromManualDetect = fromManual;
 	}
 
-	// Token: 0x0600A427 RID: 42023 RVA: 0x00246ECD File Offset: 0x002450CD
+	// Token: 0x06007806 RID: 30726 RVA: 0x00251175 File Offset: 0x0024F375
 	public void SetUnLockChapters(int[] chapters)
 	{
 		this.UnLockChapters = chapters;
 	}
 
-	// Token: 0x0600A428 RID: 42024 RVA: 0x00246ED6 File Offset: 0x002450D6
+	// Token: 0x06007807 RID: 30727 RVA: 0x0025117E File Offset: 0x0024F37E
 	public void SetRewardChapters(int[] chapters)
 	{
 		this.RewardChapters = chapters;
 	}
 
-	// Token: 0x0600A429 RID: 42025 RVA: 0x00246EE0 File Offset: 0x002450E0
+	// Token: 0x06007808 RID: 30728 RVA: 0x00251188 File Offset: 0x0024F388
 	public void SetTaskById(int id, AdventreTaskSate state, int progress)
 	{
 		AdventureTaskRecord taskRecordById = this.GetTaskRecordById(id, null);
@@ -191,49 +190,49 @@ public class AdventureGuideModel : ModelBase
 		taskRecordById.Progress = progress;
 	}
 
-	// Token: 0x0600A42A RID: 42026 RVA: 0x00246F3E File Offset: 0x0024513E
+	// Token: 0x06007809 RID: 30729 RVA: 0x002511E6 File Offset: 0x0024F3E6
 	public int GetDetectingMonsterMarkId()
 	{
 		return this.DetectingMonsterMarkId;
 	}
 
-	// Token: 0x0600A42B RID: 42027 RVA: 0x00246F46 File Offset: 0x00245146
+	// Token: 0x0600780A RID: 30730 RVA: 0x002511EE File Offset: 0x0024F3EE
 	public int GetDetectingDungeonMarkId()
 	{
 		return this.DetectingDungeonMarkId;
 	}
 
-	// Token: 0x0600A42C RID: 42028 RVA: 0x00246F4E File Offset: 0x0024514E
+	// Token: 0x0600780B RID: 30731 RVA: 0x002511F6 File Offset: 0x0024F3F6
 	public int GetDetectingSilentAreaMarkId()
 	{
 		return this.DetectingSilentAreaMarkId;
 	}
 
-	// Token: 0x0600A42D RID: 42029 RVA: 0x00246F56 File Offset: 0x00245156
+	// Token: 0x0600780C RID: 30732 RVA: 0x002511FE File Offset: 0x0024F3FE
 	public EMarkType? GetDetectingSlientAreaMarkType()
 	{
 		return this.DetectingSlientAreaMarkType;
 	}
 
-	// Token: 0x0600A42E RID: 42030 RVA: 0x00246F5E File Offset: 0x0024515E
+	// Token: 0x0600780D RID: 30733 RVA: 0x00251206 File Offset: 0x0024F406
 	public int GetCurDetectingMonsterConfId()
 	{
 		return this.DetectingMonsterConfId;
 	}
 
-	// Token: 0x0600A42F RID: 42031 RVA: 0x00246F66 File Offset: 0x00245166
+	// Token: 0x0600780E RID: 30734 RVA: 0x0025120E File Offset: 0x0024F40E
 	public int GetCurDetectingDungeonConfId()
 	{
 		return this.DetectingDungeonConfId;
 	}
 
-	// Token: 0x0600A430 RID: 42032 RVA: 0x00246F6E File Offset: 0x0024516E
+	// Token: 0x0600780F RID: 30735 RVA: 0x00251216 File Offset: 0x0024F416
 	public int GetCurDetectingSilentAreaConfId()
 	{
 		return this.DetectingSilentAreaConfId;
 	}
 
-	// Token: 0x0600A431 RID: 42033 RVA: 0x00246F78 File Offset: 0x00245178
+	// Token: 0x06007810 RID: 30736 RVA: 0x00251220 File Offset: 0x0024F420
 	[NullableContext(2)]
 	public MonsterDetectionRecord GetMonsterDetectData(int id)
 	{
@@ -242,7 +241,7 @@ public class AdventureGuideModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600A432 RID: 42034 RVA: 0x00246F98 File Offset: 0x00245198
+	// Token: 0x06007811 RID: 30737 RVA: 0x00251240 File Offset: 0x0024F440
 	public int? GetMonsterDetectIdByBlueprintType(string blueprintType)
 	{
 		int num;
@@ -254,73 +253,73 @@ public class AdventureGuideModel : ModelBase
 		return new int?(num);
 	}
 
-	// Token: 0x0600A433 RID: 42035 RVA: 0x00246FC7 File Offset: 0x002451C7
+	// Token: 0x06007812 RID: 30738 RVA: 0x0025126F File Offset: 0x0024F46F
 	public int GetDetectingMonsterId()
 	{
 		return this.DetectingMonsterId;
 	}
 
-	// Token: 0x0600A434 RID: 42036 RVA: 0x00246FCF File Offset: 0x002451CF
+	// Token: 0x06007813 RID: 30739 RVA: 0x00251277 File Offset: 0x0024F477
 	public void SetDetectingMonsterId(int id)
 	{
 		this.DetectingMonsterId = id;
 	}
 
-	// Token: 0x0600A435 RID: 42037 RVA: 0x00246FD8 File Offset: 0x002451D8
+	// Token: 0x06007814 RID: 30740 RVA: 0x00251280 File Offset: 0x0024F480
 	public void SetDetectingDungeonId(int id)
 	{
 		this.DetectingDungeonId = id;
 	}
 
-	// Token: 0x0600A436 RID: 42038 RVA: 0x00246FE1 File Offset: 0x002451E1
+	// Token: 0x06007815 RID: 30741 RVA: 0x00251289 File Offset: 0x0024F489
 	public int GetDetectingDungeonId()
 	{
 		return this.DetectingDungeonId;
 	}
 
-	// Token: 0x0600A437 RID: 42039 RVA: 0x00246FE9 File Offset: 0x002451E9
+	// Token: 0x06007816 RID: 30742 RVA: 0x00251291 File Offset: 0x0024F491
 	public void SetDetectingSilentAreaId(int id)
 	{
 		this.DetectingSilentAreaId = id;
 	}
 
-	// Token: 0x0600A438 RID: 42040 RVA: 0x00246FF2 File Offset: 0x002451F2
+	// Token: 0x06007817 RID: 30743 RVA: 0x0025129A File Offset: 0x0024F49A
 	public int GetDetectingSilentAreaId()
 	{
 		return this.DetectingSilentAreaId;
 	}
 
-	// Token: 0x0600A439 RID: 42041 RVA: 0x00246FFA File Offset: 0x002451FA
+	// Token: 0x06007818 RID: 30744 RVA: 0x002512A2 File Offset: 0x0024F4A2
 	public int GetPendingMonsterConfId()
 	{
 		return this.PendingMonsterDetectId;
 	}
 
-	// Token: 0x0600A43A RID: 42042 RVA: 0x00247002 File Offset: 0x00245202
+	// Token: 0x06007819 RID: 30745 RVA: 0x002512AA File Offset: 0x0024F4AA
 	public bool GetIsMaterialDetect()
 	{
 		return this.IsMaterialDetect;
 	}
 
-	// Token: 0x0600A43B RID: 42043 RVA: 0x0024700A File Offset: 0x0024520A
+	// Token: 0x0600781A RID: 30746 RVA: 0x002512B2 File Offset: 0x0024F4B2
 	public void SetIsMaterialDetect(bool isMaterialDetect)
 	{
 		this.IsMaterialDetect = isMaterialDetect;
 	}
 
-	// Token: 0x0600A43C RID: 42044 RVA: 0x00247013 File Offset: 0x00245213
+	// Token: 0x0600781B RID: 30747 RVA: 0x002512BB File Offset: 0x0024F4BB
 	public int GetPendingDungeonConfId()
 	{
 		return this.PendingDungeonDetectId;
 	}
 
-	// Token: 0x0600A43D RID: 42045 RVA: 0x0024701B File Offset: 0x0024521B
+	// Token: 0x0600781C RID: 30748 RVA: 0x002512C3 File Offset: 0x0024F4C3
 	public int GetPendingSilentAreaConfId()
 	{
 		return this.PendingSilentAreaDetectId;
 	}
 
-	// Token: 0x0600A43E RID: 42046 RVA: 0x00247024 File Offset: 0x00245224
+	// Token: 0x0600781D RID: 30749 RVA: 0x002512CC File Offset: 0x0024F4CC
 	public AdventureGuideModel.ChapterProgress GetChapterProgress(int chapter)
 	{
 		AdventureTaskRecord[] array;
@@ -346,7 +345,7 @@ public class AdventureGuideModel : ModelBase
 		return chapterProgress;
 	}
 
-	// Token: 0x0600A43F RID: 42047 RVA: 0x00247090 File Offset: 0x00245290
+	// Token: 0x0600781E RID: 30750 RVA: 0x00251338 File Offset: 0x0024F538
 	public int GetChapterReceivedCount(int chapter)
 	{
 		AdventureTaskRecord[] array;
@@ -366,7 +365,7 @@ public class AdventureGuideModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600A440 RID: 42048 RVA: 0x002470D4 File Offset: 0x002452D4
+	// Token: 0x0600781F RID: 30751 RVA: 0x0025137C File Offset: 0x0024F57C
 	public int GetChapterFinishCount(int chapter)
 	{
 		AdventureTaskRecord[] array;
@@ -386,7 +385,7 @@ public class AdventureGuideModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600A441 RID: 42049 RVA: 0x00247118 File Offset: 0x00245318
+	// Token: 0x06007820 RID: 30752 RVA: 0x002513C0 File Offset: 0x0024F5C0
 	public int GetLevelOfLevelPlay(int id)
 	{
 		ILevelPlay levelPlayConfig = LevelPlayModel.Instance.GetLevelPlayConfig(id);
@@ -423,7 +422,7 @@ public class AdventureGuideModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600A442 RID: 42050 RVA: 0x00247204 File Offset: 0x00245404
+	// Token: 0x06007821 RID: 30753 RVA: 0x002514AC File Offset: 0x0024F6AC
 	public int GetCostOfLevelPlay(int id)
 	{
 		ILevelPlay levelPlayConfig = LevelPlayModel.Instance.GetLevelPlayConfig(id);
@@ -449,14 +448,22 @@ public class AdventureGuideModel : ModelBase
 		{
 			exchangeReward = new ExchangeReward?(LevelPlayConfig.Instance.GetExchangeRewardInfo((levelPlayRewardConfig as IInteractRewardParam).RewardId).Value);
 		}
-		if (exchangeReward == null)
+		int result = 0;
+		if (exchangeReward != null)
 		{
-			return 0;
+			foreach (DicIntInt dicIntInt in exchangeReward.Value.CostIter())
+			{
+				if (dicIntInt.Key == 5)
+				{
+					result = dicIntInt.Value;
+					break;
+				}
+			}
 		}
-		return exchangeReward.GetValueOrDefault().CostIter().FirstOrDefault((DicIntInt x) => x.Key == 5).Value;
+		return result;
 	}
 
-	// Token: 0x0600A443 RID: 42051 RVA: 0x002472E8 File Offset: 0x002454E8
+	// Token: 0x06007822 RID: 30754 RVA: 0x002515B4 File Offset: 0x0024F7B4
 	public global::Vector GetPlayLevelPosition(int id)
 	{
 		ILevelPlay levelPlayConfig = LevelPlayModel.Instance.GetLevelPlayConfig(id);
@@ -464,7 +471,7 @@ public class AdventureGuideModel : ModelBase
 		return global::Vector.Create((double)entityData.Transform.Pos.X.GetValueOrDefault(), (double)entityData.Transform.Pos.Y.GetValueOrDefault(), (double)entityData.Transform.Pos.Z.GetValueOrDefault());
 	}
 
-	// Token: 0x0600A444 RID: 42052 RVA: 0x00247370 File Offset: 0x00245570
+	// Token: 0x06007823 RID: 30755 RVA: 0x0025163C File Offset: 0x0024F83C
 	[NullableContext(2)]
 	public SilentAreaDetectionRecord GetSilentAreaDetectData(int id)
 	{
@@ -473,7 +480,7 @@ public class AdventureGuideModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600A445 RID: 42053 RVA: 0x00247390 File Offset: 0x00245590
+	// Token: 0x06007824 RID: 30756 RVA: 0x0025165C File Offset: 0x0024F85C
 	[NullableContext(2)]
 	public DungeonDetectionRecord GetSoundAreaDetectData(int id)
 	{
@@ -482,7 +489,7 @@ public class AdventureGuideModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600A446 RID: 42054 RVA: 0x002473B0 File Offset: 0x002455B0
+	// Token: 0x06007825 RID: 30757 RVA: 0x0025167C File Offset: 0x0024F87C
 	public bool TryAdventureJumpByDungeon(DungeonDetectionRecord recordType)
 	{
 		DetectionRecord<DungeonDetection> soundAreaDetectData = this.GetSoundAreaDetectData(recordType.Conf.Id);
@@ -509,7 +516,7 @@ public class AdventureGuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A447 RID: 42055 RVA: 0x00247490 File Offset: 0x00245690
+	// Token: 0x06007826 RID: 30758 RVA: 0x0025175C File Offset: 0x0024F95C
 	public bool TryAdventureJumpBySilent(SilentAreaDetectionRecord recordType)
 	{
 		EDetectionJumpType jumpType = (EDetectionJumpType)recordType.Conf.JumpType;
@@ -541,7 +548,7 @@ public class AdventureGuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A448 RID: 42056 RVA: 0x002475E4 File Offset: 0x002457E4
+	// Token: 0x06007827 RID: 30759 RVA: 0x002518B0 File Offset: 0x0024FAB0
 	[NullableContext(2)]
 	public void HandleInstanceDungeonEntranceJump(int entranceId, int dungeonId, int selectInstanceId = 0, Action callBack = null)
 	{
@@ -561,7 +568,7 @@ public class AdventureGuideModel : ModelBase
 		FormationController.Instance.OpenBattleTeamView(dungeonId, false, false, false, null);
 	}
 
-	// Token: 0x0600A449 RID: 42057 RVA: 0x00247638 File Offset: 0x00245838
+	// Token: 0x06007828 RID: 30760 RVA: 0x00251904 File Offset: 0x0024FB04
 	public void HandleGachaRoleDevelopEntranceJump(int gachaRoleDevelopInsId)
 	{
 		GachaRoleDevelopIns? gachaRoleDevelopIns = ActivityRegressConfig.Instance.GetGachaRoleDevelopIns(gachaRoleDevelopInsId);
@@ -578,7 +585,7 @@ public class AdventureGuideModel : ModelBase
 		});
 	}
 
-	// Token: 0x0600A44A RID: 42058 RVA: 0x002476BC File Offset: 0x002458BC
+	// Token: 0x06007829 RID: 30761 RVA: 0x00251988 File Offset: 0x0024FB88
 	private void CreateEnterDungeon(int silentId, int dungeonId)
 	{
 		AdventureSilentCtx adventureSilentCtx = new AdventureSilentCtx
@@ -589,19 +596,19 @@ public class AdventureGuideModel : ModelBase
 		InstanceDungeonEntranceModel.Instance.InstanceId = dungeonId;
 	}
 
-	// Token: 0x0600A44B RID: 42059 RVA: 0x002476F1 File Offset: 0x002458F1
+	// Token: 0x0600782A RID: 30762 RVA: 0x002519BD File Offset: 0x0024FBBD
 	public Dictionary<int, MonsterDetectionRecord> GetAllDetectMonsters()
 	{
 		return this.AllMonsterDetectionRecord;
 	}
 
-	// Token: 0x0600A44C RID: 42060 RVA: 0x002476F9 File Offset: 0x002458F9
+	// Token: 0x0600782B RID: 30763 RVA: 0x002519C5 File Offset: 0x0024FBC5
 	public Dictionary<int, DungeonDetectionRecord> GetAllDetectDungeons()
 	{
 		return this.AllDungeonDetectionRecord;
 	}
 
-	// Token: 0x0600A44D RID: 42061 RVA: 0x00247704 File Offset: 0x00245904
+	// Token: 0x0600782C RID: 30764 RVA: 0x002519D0 File Offset: 0x0024FBD0
 	public List<SoundAreaDetectionRecord> GetDungeonRecordsForRedDot(EDungeonType typeId, EMatType? matType = null)
 	{
 		List<SoundAreaDetectionRecord> list = new List<SoundAreaDetectionRecord>();
@@ -626,7 +633,7 @@ public class AdventureGuideModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600A44E RID: 42062 RVA: 0x002477BC File Offset: 0x002459BC
+	// Token: 0x0600782D RID: 30765 RVA: 0x00251A88 File Offset: 0x0024FC88
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -731,13 +738,13 @@ public class AdventureGuideModel : ModelBase
 		return new ValueTuple<bool, List<SoundAreaDetectionRecord>>((list[0].DungeonDetectionRecord != null && list[0].DungeonDetectionRecord.Conf.DetectionTabType != 0) || (list[0].SilentAreaDetectionRecord != null && list[0].SilentAreaDetectionRecord.Conf.DetectionTabType != 0), list);
 	}
 
-	// Token: 0x0600A44F RID: 42063 RVA: 0x00247998 File Offset: 0x00245B98
+	// Token: 0x0600782E RID: 30766 RVA: 0x00251C64 File Offset: 0x0024FE64
 	public Dictionary<int, SilentAreaDetectionRecord> GetAllDetectSilentAreas()
 	{
 		return this.AllSilentAreaDetectionRecord;
 	}
 
-	// Token: 0x0600A450 RID: 42064 RVA: 0x002479A0 File Offset: 0x00245BA0
+	// Token: 0x0600782F RID: 30767 RVA: 0x00251C6C File Offset: 0x0024FE6C
 	[NullableContext(2)]
 	public DungeonDetectionRecord GetDungeonDetectRecordByEntryId(int id)
 	{
@@ -753,7 +760,7 @@ public class AdventureGuideModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600A451 RID: 42065 RVA: 0x00247A20 File Offset: 0x00245C20
+	// Token: 0x06007830 RID: 30768 RVA: 0x00251CEC File Offset: 0x0024FEEC
 	public bool GetAllTaskFinish()
 	{
 		foreach (KeyValuePair<int, AdventureTaskRecord[]> keyValuePair in this.AllTasks)
@@ -770,7 +777,7 @@ public class AdventureGuideModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600A452 RID: 42066 RVA: 0x00247A98 File Offset: 0x00245C98
+	// Token: 0x06007831 RID: 30769 RVA: 0x00251D64 File Offset: 0x0024FF64
 	public void SetCurDetectingMonsterConfId(int id)
 	{
 		if (this.DetectingMonsterConfId != 0)
@@ -791,7 +798,7 @@ public class AdventureGuideModel : ModelBase
 		this.DetectingMonsterConfId = id;
 	}
 
-	// Token: 0x0600A453 RID: 42067 RVA: 0x00247AEC File Offset: 0x00245CEC
+	// Token: 0x06007832 RID: 30770 RVA: 0x00251DB8 File Offset: 0x0024FFB8
 	public void SetDetectingMonsterRefreshTime(int id, long time)
 	{
 		MonsterDetectionRecord monsterDetectionRecord;
@@ -802,7 +809,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A454 RID: 42068 RVA: 0x00247B18 File Offset: 0x00245D18
+	// Token: 0x06007833 RID: 30771 RVA: 0x00251DE4 File Offset: 0x0024FFE4
 	public void SetCurDetectingDungeonConfId(int id)
 	{
 		if (this.DetectingDungeonConfId != 0)
@@ -823,26 +830,26 @@ public class AdventureGuideModel : ModelBase
 		this.DetectingDungeonConfId = id;
 	}
 
-	// Token: 0x0600A455 RID: 42069 RVA: 0x00247B6B File Offset: 0x00245D6B
+	// Token: 0x06007834 RID: 30772 RVA: 0x00251E37 File Offset: 0x00250037
 	public void SetCurDetectingMonsterMarkId(int id)
 	{
 		this.DetectingMonsterMarkId = id;
 	}
 
-	// Token: 0x0600A456 RID: 42070 RVA: 0x00247B74 File Offset: 0x00245D74
+	// Token: 0x06007835 RID: 30773 RVA: 0x00251E40 File Offset: 0x00250040
 	public void SetDetectingDungeonMarkId(int id)
 	{
 		this.DetectingDungeonMarkId = id;
 	}
 
-	// Token: 0x0600A457 RID: 42071 RVA: 0x00247B7D File Offset: 0x00245D7D
+	// Token: 0x06007836 RID: 30774 RVA: 0x00251E49 File Offset: 0x00250049
 	public void SetDetectingSilentAreaMarkId(int id, EMarkType? markType = null)
 	{
 		this.DetectingSilentAreaMarkId = id;
 		this.DetectingSlientAreaMarkType = markType;
 	}
 
-	// Token: 0x0600A458 RID: 42072 RVA: 0x00247B90 File Offset: 0x00245D90
+	// Token: 0x06007837 RID: 30775 RVA: 0x00251E5C File Offset: 0x0025005C
 	public void SetCurDetectingSilentAreaConfId(int id)
 	{
 		SilentAreaDetectionRecord silentAreaDetectionRecord;
@@ -860,7 +867,7 @@ public class AdventureGuideModel : ModelBase
 		this.DetectingSilentAreaConfId = id;
 	}
 
-	// Token: 0x0600A459 RID: 42073 RVA: 0x00247BE4 File Offset: 0x00245DE4
+	// Token: 0x06007838 RID: 30776 RVA: 0x00251EB0 File Offset: 0x002500B0
 	public bool GetSilentAreaConfVaild(int id)
 	{
 		SilentAreaDetectionRecord result;
@@ -868,14 +875,14 @@ public class AdventureGuideModel : ModelBase
 		return result != null;
 	}
 
-	// Token: 0x0600A45A RID: 42074 RVA: 0x00247C06 File Offset: 0x00245E06
+	// Token: 0x06007839 RID: 30777 RVA: 0x00251ED2 File Offset: 0x002500D2
 	protected override bool OnInit()
 	{
 		this.InitAdventureTaskConfig();
 		return true;
 	}
 
-	// Token: 0x0600A45B RID: 42075 RVA: 0x00247C10 File Offset: 0x00245E10
+	// Token: 0x0600783A RID: 30778 RVA: 0x00251EDC File Offset: 0x002500DC
 	public void InitDetectionData()
 	{
 		IReadOnlyList<MonsterDetection> allMonsterDetection = AdventureGuideConfig.Instance.GetAllMonsterDetection();
@@ -947,68 +954,62 @@ public class AdventureGuideModel : ModelBase
 		AdventureGuideController.Instance.GetDetectionLabelInfoRequest();
 	}
 
-	// Token: 0x0600A45C RID: 42076 RVA: 0x00247EC0 File Offset: 0x002460C0
+	// Token: 0x0600783B RID: 30779 RVA: 0x0025218C File Offset: 0x0025038C
 	[NullableContext(2)]
 	public void UpdateByAdventureManualResponse(AdventureManualResponse response)
 	{
 		if (response == null || response.Code > Aki.Protocol.ErrorCode.Success)
 		{
-			ErrorCodeController.Instance.OpenErrorCodeTipView(response.Code, 23292, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(response.Code, 19686, null, true, true);
 			return;
 		}
 		this.HasInitDataInternal = true;
-		int[] array;
-		if (response == null)
-		{
-			array = null;
-		}
-		else
-		{
-			AdventureManualData adventureManualData = response.AdventureManualData;
-			if (adventureManualData == null)
-			{
-				array = null;
-			}
-			else
-			{
-				RepeatedField<int> unLockChapters = adventureManualData.UnLockChapters;
-				array = ((unLockChapters != null) ? unLockChapters.ToArray<int>() : null);
-			}
-		}
-		this.UnLockChapters = (array ?? new int[0]);
-		int[] array2;
-		if (response == null)
-		{
-			array2 = null;
-		}
-		else
-		{
-			AdventureManualData adventureManualData2 = response.AdventureManualData;
-			if (adventureManualData2 == null)
-			{
-				array2 = null;
-			}
-			else
-			{
-				RepeatedField<int> rewardChapters = adventureManualData2.RewardChapters;
-				array2 = ((rewardChapters != null) ? rewardChapters.ToArray<int>() : null);
-			}
-		}
-		this.RewardChapters = (array2 ?? new int[0]);
-		RepeatedField<AdventreTask> repeatedField;
+		RepeatedField<int> repeatedField;
 		if (response == null)
 		{
 			repeatedField = null;
 		}
 		else
 		{
-			AdventureManualData adventureManualData3 = response.AdventureManualData;
-			repeatedField = ((adventureManualData3 != null) ? adventureManualData3.AdventreTask : null);
+			AdventureManualData adventureManualData = response.AdventureManualData;
+			repeatedField = ((adventureManualData != null) ? adventureManualData.UnLockChapters : null);
 		}
-		RepeatedField<AdventreTask> repeatedField2 = repeatedField;
+		RepeatedField<int> repeatedField2 = repeatedField;
+		this.UnLockChapters = new int[(repeatedField2 != null) ? repeatedField2.Count : 0];
 		if (repeatedField2 != null)
 		{
-			foreach (AdventreTask task in repeatedField2)
+			repeatedField2.CopyTo(this.UnLockChapters, 0);
+		}
+		RepeatedField<int> repeatedField3;
+		if (response == null)
+		{
+			repeatedField3 = null;
+		}
+		else
+		{
+			AdventureManualData adventureManualData2 = response.AdventureManualData;
+			repeatedField3 = ((adventureManualData2 != null) ? adventureManualData2.RewardChapters : null);
+		}
+		RepeatedField<int> repeatedField4 = repeatedField3;
+		this.RewardChapters = new int[(repeatedField4 != null) ? repeatedField4.Count : 0];
+		if (repeatedField4 != null)
+		{
+			repeatedField4.CopyTo(this.RewardChapters, 0);
+		}
+		RepeatedField<AdventreTask> repeatedField5;
+		if (response == null)
+		{
+			repeatedField5 = null;
+		}
+		else
+		{
+			AdventureManualData adventureManualData3 = response.AdventureManualData;
+			repeatedField5 = ((adventureManualData3 != null) ? adventureManualData3.AdventreTask : null);
+		}
+		RepeatedField<AdventreTask> repeatedField6 = repeatedField5;
+		if (repeatedField6 != null)
+		{
+			foreach (AdventreTask task in repeatedField6)
 			{
 				this.HandleAdventureTask(task);
 			}
@@ -1021,54 +1022,34 @@ public class AdventureGuideModel : ModelBase
 			}
 		}
 		this.HandleMonsterDetectLockStatus((response != null) ? response.DetectionUnlocks : null);
-		ESoundAreaDataType dataType = ESoundAreaDataType.SilentArea;
-		PreOpenDetections[] array3;
-		if (response == null)
+		RepeatedField<PreOpenDetections> repeatedField7 = (response != null) ? response.PreOpenSilenceAreaDetections : null;
+		PreOpenDetections[] array = new PreOpenDetections[(repeatedField7 != null) ? repeatedField7.Count : 0];
+		if (repeatedField7 != null)
 		{
-			array3 = null;
+			repeatedField7.CopyTo(array, 0);
 		}
-		else
+		this.FullUpdateDetectionPreOpenData(ESoundAreaDataType.SilentArea, array);
+		RepeatedField<PreOpenDetections> repeatedField8 = (response != null) ? response.PreOpenDungeonDetections : null;
+		PreOpenDetections[] array2 = new PreOpenDetections[(repeatedField8 != null) ? repeatedField8.Count : 0];
+		if (repeatedField8 != null)
 		{
-			RepeatedField<PreOpenDetections> preOpenSilenceAreaDetections = response.PreOpenSilenceAreaDetections;
-			array3 = ((preOpenSilenceAreaDetections != null) ? preOpenSilenceAreaDetections.ToArray<PreOpenDetections>() : null);
+			repeatedField8.CopyTo(array2, 0);
 		}
-		this.FullUpdateDetectionPreOpenData(dataType, array3 ?? new PreOpenDetections[0]);
-		ESoundAreaDataType dataType2 = ESoundAreaDataType.Dungeon;
-		PreOpenDetections[] array4;
-		if (response == null)
+		this.FullUpdateDetectionPreOpenData(ESoundAreaDataType.Dungeon, array2);
+		RepeatedField<AdventureDetectionConfig> repeatedField9 = (response != null) ? response.DungeonDetectionConfigs : null;
+		AdventureDetectionConfig[] array3 = new AdventureDetectionConfig[(repeatedField9 != null) ? repeatedField9.Count : 0];
+		if (repeatedField9 != null)
 		{
-			array4 = null;
+			repeatedField9.CopyTo(array3, 0);
 		}
-		else
+		this.UpdateDetectionServerConfig(ESoundAreaDataType.Dungeon, array3);
+		RepeatedField<AdventureDetectionConfig> repeatedField10 = (response != null) ? response.SilenceAreaConfigs : null;
+		AdventureDetectionConfig[] array4 = new AdventureDetectionConfig[(repeatedField10 != null) ? repeatedField10.Count : 0];
+		if (repeatedField10 != null)
 		{
-			RepeatedField<PreOpenDetections> preOpenDungeonDetections = response.PreOpenDungeonDetections;
-			array4 = ((preOpenDungeonDetections != null) ? preOpenDungeonDetections.ToArray<PreOpenDetections>() : null);
+			repeatedField10.CopyTo(array4, 0);
 		}
-		this.FullUpdateDetectionPreOpenData(dataType2, array4 ?? new PreOpenDetections[0]);
-		ESoundAreaDataType dataType3 = ESoundAreaDataType.Dungeon;
-		AdventureDetectionConfig[] array5;
-		if (response == null)
-		{
-			array5 = null;
-		}
-		else
-		{
-			RepeatedField<AdventureDetectionConfig> dungeonDetectionConfigs = response.DungeonDetectionConfigs;
-			array5 = ((dungeonDetectionConfigs != null) ? dungeonDetectionConfigs.ToArray<AdventureDetectionConfig>() : null);
-		}
-		this.UpdateDetectionServerConfig(dataType3, array5 ?? new AdventureDetectionConfig[0]);
-		ESoundAreaDataType dataType4 = ESoundAreaDataType.SilentArea;
-		AdventureDetectionConfig[] array6;
-		if (response == null)
-		{
-			array6 = null;
-		}
-		else
-		{
-			RepeatedField<AdventureDetectionConfig> silenceAreaConfigs = response.SilenceAreaConfigs;
-			array6 = ((silenceAreaConfigs != null) ? silenceAreaConfigs.ToArray<AdventureDetectionConfig>() : null);
-		}
-		this.UpdateDetectionServerConfig(dataType4, array6 ?? new AdventureDetectionConfig[0]);
+		this.UpdateDetectionServerConfig(ESoundAreaDataType.SilentArea, array4);
 		this.SilentFirstAwardsMap.Clear();
 		if (((response != null) ? response.SlientFirstAwardMap : null) == null || response.SlientFirstAwardMap.Count == 0)
 		{
@@ -1086,7 +1067,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A45D RID: 42077 RVA: 0x00248154 File Offset: 0x00246354
+	// Token: 0x0600783C RID: 30780 RVA: 0x00252478 File Offset: 0x00250678
 	public void FullUpdateDetectionPreOpenData(ESoundAreaDataType dataType, PreOpenDetections[] configs)
 	{
 		Dictionary<int, PreOpenDetections> dictionary;
@@ -1103,7 +1084,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A45E RID: 42078 RVA: 0x002481B0 File Offset: 0x002463B0
+	// Token: 0x0600783D RID: 30781 RVA: 0x002524D4 File Offset: 0x002506D4
 	public void UpdateDetectionServerConfig(ESoundAreaDataType dataType, AdventureDetectionConfig[] configs)
 	{
 		Dictionary<int, AdventureDetectionConfig> dictionary;
@@ -1120,7 +1101,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A45F RID: 42079 RVA: 0x0024820C File Offset: 0x0024640C
+	// Token: 0x0600783E RID: 30782 RVA: 0x00252530 File Offset: 0x00250730
 	[NullableContext(2)]
 	public void HandleMonsterDetectLockStatus(DetectionUnlock unLocks)
 	{
@@ -1171,7 +1152,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A460 RID: 42080 RVA: 0x0024834C File Offset: 0x0024654C
+	// Token: 0x0600783F RID: 30783 RVA: 0x00252670 File Offset: 0x00250870
 	private void HandleAdventureTask(AdventreTask task)
 	{
 		AdventureTask? adventureTaskConfig = AdventureGuideConfig.Instance.GetAdventureTaskConfig(task.Id);
@@ -1205,12 +1186,12 @@ public class AdventureGuideModel : ModelBase
 			adventureTaskRecord.Status = (AdventreTaskSate)task.State;
 			return;
 		}
-		List<AdventureTaskRecord> list = array2.ToList<AdventureTaskRecord>();
+		List<AdventureTaskRecord> list = new List<AdventureTaskRecord>(array2);
 		list.Add(new AdventureTaskRecord(adventureTaskConfig.Value, (AdventreTaskSate)task.State));
 		this.AllTasks[chapterId] = list.ToArray();
 	}
 
-	// Token: 0x0600A461 RID: 42081 RVA: 0x00248478 File Offset: 0x00246678
+	// Token: 0x06007840 RID: 30784 RVA: 0x0025279C File Offset: 0x0025099C
 	private void HandleDetectingData(DetectionTarget detection)
 	{
 		switch (detection.Type)
@@ -1311,7 +1292,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A462 RID: 42082 RVA: 0x00248758 File Offset: 0x00246958
+	// Token: 0x06007841 RID: 30785 RVA: 0x00252A7C File Offset: 0x00250C7C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1324,7 +1305,7 @@ public class AdventureGuideModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600A463 RID: 42083 RVA: 0x00248778 File Offset: 0x00246978
+	// Token: 0x06007842 RID: 30786 RVA: 0x00252A9C File Offset: 0x00250C9C
 	public bool HaveChapterTasksFinish(int chapter)
 	{
 		AdventureTaskRecord[] array;
@@ -1343,7 +1324,7 @@ public class AdventureGuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A464 RID: 42084 RVA: 0x002487B8 File Offset: 0x002469B8
+	// Token: 0x06007843 RID: 30787 RVA: 0x00252ADC File Offset: 0x00250CDC
 	public bool HaveChapterTasksUnFinish(int chapter)
 	{
 		AdventureTaskRecord[] array;
@@ -1362,7 +1343,7 @@ public class AdventureGuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A465 RID: 42085 RVA: 0x002487F4 File Offset: 0x002469F4
+	// Token: 0x06007844 RID: 30788 RVA: 0x00252B18 File Offset: 0x00250D18
 	public AdventureTaskRecord[] SortChapterTasks(int chapter)
 	{
 		AdventureTaskRecord[] array;
@@ -1384,7 +1365,7 @@ public class AdventureGuideModel : ModelBase
 		return array ?? new AdventureTaskRecord[0];
 	}
 
-	// Token: 0x0600A466 RID: 42086 RVA: 0x00248850 File Offset: 0x00246A50
+	// Token: 0x06007845 RID: 30789 RVA: 0x00252B74 File Offset: 0x00250D74
 	[NullableContext(2)]
 	public AdventureTaskRecord GetTaskRecordById(int id, int? chapterId = null)
 	{
@@ -1425,7 +1406,7 @@ public class AdventureGuideModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600A467 RID: 42087 RVA: 0x0024894C File Offset: 0x00246B4C
+	// Token: 0x06007846 RID: 30790 RVA: 0x00252C70 File Offset: 0x00250E70
 	public void InitAdventureTaskConfig()
 	{
 		IReadOnlyList<AdventureTask> allAdventureTaskConfig = AdventureGuideConfig.Instance.GetAllAdventureTaskConfig();
@@ -1446,14 +1427,14 @@ public class AdventureGuideModel : ModelBase
 				{
 					array2 = this.AllTasks[chapterId];
 				}
-				List<AdventureTaskRecord> list = array2.ToList<AdventureTaskRecord>();
+				List<AdventureTaskRecord> list = new List<AdventureTaskRecord>(array2);
 				list.Add(new AdventureTaskRecord(adventureBase, AdventreTaskSate.UnFinish));
 				this.AllTasks[chapterId] = list.ToArray();
 			}
 		}
 	}
 
-	// Token: 0x0600A468 RID: 42088 RVA: 0x00248A0C File Offset: 0x00246C0C
+	// Token: 0x06007847 RID: 30791 RVA: 0x00252D30 File Offset: 0x00250F30
 	public int GetMaxLevelOfBlueprintType(string type)
 	{
 		IList<int> allEntityIdOfBlueprintType = CreatureModel.Instance.GetAllEntityIdOfBlueprintType(type);
@@ -1482,7 +1463,7 @@ public class AdventureGuideModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600A469 RID: 42089 RVA: 0x00248AE0 File Offset: 0x00246CE0
+	// Token: 0x06007848 RID: 30792 RVA: 0x00252E04 File Offset: 0x00251004
 	public int? GetSilentAreaLevel(int entityId)
 	{
 		IEntityData entityData = CreatureModel.Instance.GetEntityData(new int?(entityId), null);
@@ -1498,7 +1479,7 @@ public class AdventureGuideModel : ModelBase
 		return new int?(component.Level);
 	}
 
-	// Token: 0x0600A46A RID: 42090 RVA: 0x00248B44 File Offset: 0x00246D44
+	// Token: 0x06007849 RID: 30793 RVA: 0x00252E68 File Offset: 0x00251068
 	public void UpdatePendingMonsterList(DetectionTargetData[] detectionTargetData, int targetId, bool isMaterialDetect = false)
 	{
 		if (detectionTargetData.Length == 0)
@@ -1547,13 +1528,13 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A46B RID: 42091 RVA: 0x00248C9C File Offset: 0x00246E9C
+	// Token: 0x0600784A RID: 30794 RVA: 0x00252FC0 File Offset: 0x002511C0
 	public void DeletePendingMonsterList(int target)
 	{
 		this.AlternativeDetectMonsterMap.Remove(target);
 	}
 
-	// Token: 0x0600A46C RID: 42092 RVA: 0x00248CAC File Offset: 0x00246EAC
+	// Token: 0x0600784B RID: 30795 RVA: 0x00252FD0 File Offset: 0x002511D0
 	public void UpdatePendingDungeonList(DetectionTargetData[] detectionTargetData, int targetId)
 	{
 		if (targetId != this.GetCurDetectingDungeonConfId())
@@ -1592,7 +1573,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A46D RID: 42093 RVA: 0x00248E54 File Offset: 0x00247054
+	// Token: 0x0600784C RID: 30796 RVA: 0x00253178 File Offset: 0x00251378
 	public void UpdatePendingSilentAreaList(DetectionTargetData[] detectionTarget, int targetId)
 	{
 		if (targetId != this.GetCurDetectingSilentAreaConfId())
@@ -1640,32 +1621,32 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A46E RID: 42094 RVA: 0x00248FBC File Offset: 0x002471BC
+	// Token: 0x0600784D RID: 30797 RVA: 0x002532E0 File Offset: 0x002514E0
 	public Dictionary<int, IDetectingObj> GetMonsterPendingList()
 	{
 		return this.AlternativeDetectMonsterMap;
 	}
 
-	// Token: 0x0600A46F RID: 42095 RVA: 0x00248FC4 File Offset: 0x002471C4
+	// Token: 0x0600784E RID: 30798 RVA: 0x002532E8 File Offset: 0x002514E8
 	public Dictionary<int, IDetectingObj> GetDungeonPendingList()
 	{
 		return this.AlternativeDetectDungeonMap;
 	}
 
-	// Token: 0x0600A470 RID: 42096 RVA: 0x00248FCC File Offset: 0x002471CC
+	// Token: 0x0600784F RID: 30799 RVA: 0x002532F0 File Offset: 0x002514F0
 	public Dictionary<int, IDetectingObj> GetSilentAreaPendingList()
 	{
 		return this.AlternativeDetectSilentAreaMap;
 	}
 
-	// Token: 0x0600A471 RID: 42097 RVA: 0x00248FD4 File Offset: 0x002471D4
+	// Token: 0x06007850 RID: 30800 RVA: 0x002532F8 File Offset: 0x002514F8
 	public bool IsTaskOfChapter(int id, int chapter)
 	{
 		AdventureTaskRecord taskRecordById = this.GetTaskRecordById(id, null);
 		return taskRecordById != null && taskRecordById.AdventureTaskBase.ChapterId == chapter;
 	}
 
-	// Token: 0x0600A472 RID: 42098 RVA: 0x00249004 File Offset: 0x00247204
+	// Token: 0x06007851 RID: 30801 RVA: 0x00253328 File Offset: 0x00251528
 	public void CleanCurTrackingMonster()
 	{
 		MonsterDetectionRecord monsterDetectData = this.GetMonsterDetectData(this.DetectingMonsterConfId);
@@ -1678,7 +1659,7 @@ public class AdventureGuideModel : ModelBase
 		this.SetDetectingMonsterId(0);
 	}
 
-	// Token: 0x0600A473 RID: 42099 RVA: 0x00249040 File Offset: 0x00247240
+	// Token: 0x06007852 RID: 30802 RVA: 0x00253364 File Offset: 0x00251564
 	public void CleanCurTrackingDungeon()
 	{
 		DungeonDetectionRecord soundAreaDetectData = this.GetSoundAreaDetectData(this.DetectingDungeonConfId);
@@ -1691,7 +1672,7 @@ public class AdventureGuideModel : ModelBase
 		this.SetDetectingDungeonId(0);
 	}
 
-	// Token: 0x0600A474 RID: 42100 RVA: 0x0024907C File Offset: 0x0024727C
+	// Token: 0x06007853 RID: 30803 RVA: 0x002533A0 File Offset: 0x002515A0
 	public void CleanCurTrackingSilentArea()
 	{
 		SilentAreaDetectionRecord silentAreaDetectData = this.GetSilentAreaDetectData(this.DetectingSilentAreaConfId);
@@ -1704,7 +1685,7 @@ public class AdventureGuideModel : ModelBase
 		this.SetDetectingSilentAreaId(0);
 	}
 
-	// Token: 0x0600A475 RID: 42101 RVA: 0x002490C0 File Offset: 0x002472C0
+	// Token: 0x06007854 RID: 30804 RVA: 0x002533E4 File Offset: 0x002515E4
 	public HashSet<int> GetAllCulledMonsters()
 	{
 		if (this.AllCulledMonsters == null)
@@ -1729,7 +1710,7 @@ public class AdventureGuideModel : ModelBase
 		return this.AllCulledMonsters;
 	}
 
-	// Token: 0x0600A476 RID: 42102 RVA: 0x00249144 File Offset: 0x00247344
+	// Token: 0x06007855 RID: 30805 RVA: 0x00253468 File Offset: 0x00251668
 	public bool CheckTargetDungeonTypeCanShow(EDungeonType type)
 	{
 		CheckDungeonTypeCanShowHandlerBase checkDungeonTypeCanShowHandlerBase;
@@ -1740,7 +1721,7 @@ public class AdventureGuideModel : ModelBase
 		return this.TypeUnLockMap.GetValueOrDefault(type, false);
 	}
 
-	// Token: 0x0600A477 RID: 42103 RVA: 0x00249174 File Offset: 0x00247374
+	// Token: 0x06007856 RID: 30806 RVA: 0x00253498 File Offset: 0x00251698
 	public List<int> GetAllCanShowDungeonTypeList(EUiTabViewName? tab = null, bool needSort = true)
 	{
 		EGuideType? eguideType = null;
@@ -1804,7 +1785,7 @@ public class AdventureGuideModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600A478 RID: 42104 RVA: 0x002493D4 File Offset: 0x002475D4
+	// Token: 0x06007857 RID: 30807 RVA: 0x002536F8 File Offset: 0x002518F8
 	public bool GetIsTabViewHaveData(EUiTabViewName tabView)
 	{
 		EGuideType? eguideType = null;
@@ -1859,8 +1840,8 @@ public class AdventureGuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x17000DCE RID: 3534
-	// (get) Token: 0x0600A479 RID: 42105 RVA: 0x002495A4 File Offset: 0x002477A4
+	// Token: 0x17000DEF RID: 3567
+	// (get) Token: 0x06007858 RID: 30808 RVA: 0x002538C8 File Offset: 0x00251AC8
 	public ISilentAreaDetectionDynamicData[] DetectionSilentAreasDataList
 	{
 		get
@@ -1869,7 +1850,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A47A RID: 42106 RVA: 0x002495B4 File Offset: 0x002477B4
+	// Token: 0x06007859 RID: 30809 RVA: 0x002538D8 File Offset: 0x00251AD8
 	public void InitAllDetectSilentAreasList()
 	{
 		Dictionary<int, List<SilentAreaDetectionRecord>> dictionary = new Dictionary<int, List<SilentAreaDetectionRecord>>();
@@ -1897,7 +1878,7 @@ public class AdventureGuideModel : ModelBase
 			}
 			list3.Sort(comparison);
 		}
-		List<int> list4 = dictionary.Keys.ToList<int>();
+		List<int> list4 = new List<int>(dictionary.Keys);
 		list4.Sort((int a, int b) => b - a);
 		foreach (int key in list4)
 		{
@@ -1920,7 +1901,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A47B RID: 42107 RVA: 0x002497B4 File Offset: 0x002479B4
+	// Token: 0x0600785A RID: 30810 RVA: 0x00253AD8 File Offset: 0x00251CD8
 	public void UpdateDetectSilentAreas(SilentAreaDetectionRecord silentAreaDetectionRecord)
 	{
 		foreach (ISilentAreaDetectionDynamicData silentAreaDetectionDynamicData in this.SilentAreasDataList)
@@ -1933,7 +1914,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A47C RID: 42108 RVA: 0x00249834 File Offset: 0x00247A34
+	// Token: 0x0600785B RID: 30811 RVA: 0x00253B58 File Offset: 0x00251D58
 	public void GetShowSilentAreasList(List<ISilentAreaDetectionDynamicData> outList, int? selectedType = null, int? selectedAreaId = null)
 	{
 		if (selectedType != null)
@@ -1964,13 +1945,13 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A47D RID: 42109 RVA: 0x00249964 File Offset: 0x00247B64
+	// Token: 0x0600785C RID: 30812 RVA: 0x00253C88 File Offset: 0x00251E88
 	private void AddResultData(List<ISilentAreaDetectionDynamicData> outList, ISilentAreaDetectionDynamicData data, int? selectedType)
 	{
 		outList.Add(data);
 	}
 
-	// Token: 0x0600A47E RID: 42110 RVA: 0x00249970 File Offset: 0x00247B70
+	// Token: 0x0600785D RID: 30813 RVA: 0x00253C94 File Offset: 0x00251E94
 	public bool CheckShowDoubleRewardRedDot()
 	{
 		if (!ActivityDoubleRewardController.Instance.HasAnyDoubleRewardActivityShowing())
@@ -1998,7 +1979,7 @@ public class AdventureGuideModel : ModelBase
 		return num2.GetValueOrDefault() < num3 & num2 != null;
 	}
 
-	// Token: 0x0600A47F RID: 42111 RVA: 0x00249A38 File Offset: 0x00247C38
+	// Token: 0x0600785E RID: 30814 RVA: 0x00253D5C File Offset: 0x00251F5C
 	public bool CheckRedDotAdventureNewSoundAreaTab()
 	{
 		if (this.CheckShowDoubleRewardRedDot())
@@ -2015,7 +1996,7 @@ public class AdventureGuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A480 RID: 42112 RVA: 0x00249AAC File Offset: 0x00247CAC
+	// Token: 0x0600785F RID: 30815 RVA: 0x00253DD0 File Offset: 0x00251FD0
 	public bool CheckRedDotChallengeTab()
 	{
 		foreach (int type in this.GetAllCanShowDungeonTypeList(new EUiTabViewName?(EUiTabViewName.DisposableChallengeView), false))
@@ -2028,7 +2009,7 @@ public class AdventureGuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A481 RID: 42113 RVA: 0x00249B14 File Offset: 0x00247D14
+	// Token: 0x06007860 RID: 30816 RVA: 0x00253E38 File Offset: 0x00252038
 	public bool CheckRedDotSecondary(EDungeonType type)
 	{
 		foreach (SoundAreaDetectionRecord record in this.GetDungeonRecordsForRedDot(type, null))
@@ -2041,7 +2022,7 @@ public class AdventureGuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A482 RID: 42114 RVA: 0x00249B7C File Offset: 0x00247D7C
+	// Token: 0x06007861 RID: 30817 RVA: 0x00253EA0 File Offset: 0x002520A0
 	public bool CheckRedDotDetectionItemByRecord(SoundAreaDetectionRecord record)
 	{
 		if (record.Conf == null || record.IsLock.GetValueOrDefault())
@@ -2060,13 +2041,13 @@ public class AdventureGuideModel : ModelBase
 		return !this.IsDetectionFinished(record);
 	}
 
-	// Token: 0x0600A483 RID: 42115 RVA: 0x00249C04 File Offset: 0x00247E04
+	// Token: 0x06007862 RID: 30818 RVA: 0x00253F28 File Offset: 0x00252128
 	public bool CheckRedDotPeriodicityTab()
 	{
 		return this.GetPeriodicityRedDot(EPeriodicityChallengeType.TowerVariation, TowerModel.Instance.CurrentSeason) || this.GetPeriodicityRedDot(EPeriodicityChallengeType.ShipTowerPeriodicity, ShipTowerModel.Instance.CurSeason) || (this.GetPeriodicityRedDot(EPeriodicityChallengeType.WheelTowerEndless, 0) || this.GetPeriodicityRedDot(EPeriodicityChallengeType.WheelTowerNormal, 0));
 	}
 
-	// Token: 0x0600A484 RID: 42116 RVA: 0x00249C54 File Offset: 0x00247E54
+	// Token: 0x06007863 RID: 30819 RVA: 0x00253F78 File Offset: 0x00252178
 	public bool IsDetectionFinished(SoundAreaDetectionRecord record)
 	{
 		int secondary = record.Secondary;
@@ -2082,7 +2063,7 @@ public class AdventureGuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A485 RID: 42117 RVA: 0x00249CC8 File Offset: 0x00247EC8
+	// Token: 0x06007864 RID: 30820 RVA: 0x00253FEC File Offset: 0x002521EC
 	public void RecordAllDetectionBySecondary(EDungeonType type)
 	{
 		foreach (SoundAreaDetectionRecord soundAreaDetectionRecord in this.GetDungeonRecordsForRedDot(type, null))
@@ -2094,7 +2075,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A486 RID: 42118 RVA: 0x00249D30 File Offset: 0x00247F30
+	// Token: 0x06007865 RID: 30821 RVA: 0x00254054 File Offset: 0x00252254
 	public void RecordDetection(SoundAreaDetectionRecord data)
 	{
 		int id = data.Id;
@@ -2105,7 +2086,7 @@ public class AdventureGuideModel : ModelBase
 		this.DetectionRedDotCache.Add(id);
 	}
 
-	// Token: 0x0600A487 RID: 42119 RVA: 0x00249D68 File Offset: 0x00247F68
+	// Token: 0x06007866 RID: 30822 RVA: 0x0025408C File Offset: 0x0025228C
 	public bool CheckExtraRedDotSecondary(EDungeonType type)
 	{
 		foreach (SoundAreaDetectionRecord record in this.GetDungeonRecordsForRedDot(type, null))
@@ -2118,19 +2099,19 @@ public class AdventureGuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A488 RID: 42120 RVA: 0x00249DD0 File Offset: 0x00247FD0
+	// Token: 0x06007867 RID: 30823 RVA: 0x002540F4 File Offset: 0x002522F4
 	public bool CheckExtraRedDotDetectionItemByRecord(SoundAreaDetectionRecord record)
 	{
 		return false;
 	}
 
-	// Token: 0x0600A489 RID: 42121 RVA: 0x00249DD3 File Offset: 0x00247FD3
+	// Token: 0x06007868 RID: 30824 RVA: 0x002540F7 File Offset: 0x002522F7
 	public bool IsDetectionTypeAllowPreOpen(ESoundAreaDataType type)
 	{
 		return this.PreOpenDetectionTypeSet.Contains(type);
 	}
 
-	// Token: 0x0600A48A RID: 42122 RVA: 0x00249DE4 File Offset: 0x00247FE4
+	// Token: 0x06007869 RID: 30825 RVA: 0x00254108 File Offset: 0x00252308
 	public bool GetIsDetectionPreOpen(int id, ESoundAreaDataType type, int preOpenId)
 	{
 		if (!this.IsDetectionTypeAllowPreOpen(type))
@@ -2148,7 +2129,7 @@ public class AdventureGuideModel : ModelBase
 		{
 			foreach (EAdventurePreOpenPlayType value in playerType)
 			{
-				if (preOpenDetectionConf.Value.PlayTypeArray().Contains((int)value))
+				if (Array.IndexOf<int>(preOpenDetectionConf.Value.PlayTypeArray(), (int)value) >= 0)
 				{
 					flag = true;
 					break;
@@ -2186,32 +2167,32 @@ public class AdventureGuideModel : ModelBase
 		return flag2 && flag3;
 	}
 
-	// Token: 0x0600A48B RID: 42123 RVA: 0x00249F34 File Offset: 0x00248134
+	// Token: 0x0600786A RID: 30826 RVA: 0x00254258 File Offset: 0x00252458
 	public bool GetIsDetectionPreOpenByData(SoundAreaDetectionRecord detectionData)
 	{
 		return this.GetIsDetectionPreOpen(detectionData.Id, detectionData.Type.Value, detectionData.PreOpenId);
 	}
 
-	// Token: 0x0600A48C RID: 42124 RVA: 0x00249F54 File Offset: 0x00248154
+	// Token: 0x0600786B RID: 30827 RVA: 0x00254278 File Offset: 0x00252478
 	public bool GetIsDetectionPreOpenByRecord(DungeonDetectionRecord detectionData)
 	{
 		return this.GetIsDetectionPreOpen(detectionData.Conf.Id, ESoundAreaDataType.Dungeon, detectionData.Conf.PreOpenId);
 	}
 
-	// Token: 0x0600A48D RID: 42125 RVA: 0x00249F84 File Offset: 0x00248184
+	// Token: 0x0600786C RID: 30828 RVA: 0x002542A8 File Offset: 0x002524A8
 	public bool GetIsDetectionPreOpenByRecord(SilentAreaDetectionRecord detectionData)
 	{
 		return this.GetIsDetectionPreOpen(detectionData.Conf.Id, ESoundAreaDataType.SilentArea, detectionData.Conf.PreOpenId);
 	}
 
-	// Token: 0x0600A48E RID: 42126 RVA: 0x00249FB4 File Offset: 0x002481B4
+	// Token: 0x0600786D RID: 30829 RVA: 0x002542D8 File Offset: 0x002524D8
 	public bool GetIsDetectionPreOpenByPreOpenId(int preOpenId)
 	{
 		PreOpenDetection? preOpenDetectionConfById = AdventureGuideConfig.Instance.GetPreOpenDetectionConfById(preOpenId);
 		return preOpenDetectionConfById != null && this.GetIsDetectionPreOpen(preOpenDetectionConfById.Value.DetectionId, (ESoundAreaDataType)preOpenDetectionConfById.Value.SoundAreaType, preOpenDetectionConfById.Value.Id);
 	}
 
-	// Token: 0x0600A48F RID: 42127 RVA: 0x0024A00C File Offset: 0x0024820C
+	// Token: 0x0600786E RID: 30830 RVA: 0x00254330 File Offset: 0x00252530
 	public bool GetIsDetectionPreOpenByDungeonType(EDungeonType type)
 	{
 		List<SoundAreaDetectionRecord> list;
@@ -2229,7 +2210,7 @@ public class AdventureGuideModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A490 RID: 42128 RVA: 0x0024A078 File Offset: 0x00248278
+	// Token: 0x0600786F RID: 30831 RVA: 0x0025439C File Offset: 0x0025259C
 	public bool IsDetectionNewContentOpen(SoundAreaDetectionRecord detectionData)
 	{
 		Dictionary<int, AdventureDetectionConfig> dictionary;
@@ -2253,7 +2234,7 @@ public class AdventureGuideModel : ModelBase
 		return flag && this.IsAdventrueItemNew(detectionData.Id);
 	}
 
-	// Token: 0x0600A491 RID: 42129 RVA: 0x0024A0F4 File Offset: 0x002482F4
+	// Token: 0x06007870 RID: 30832 RVA: 0x00254418 File Offset: 0x00252618
 	public PreOpenDetection? GetPreOpenDetectionConf(int detectionId, ESoundAreaDataType soundAreaDataType, int preOpenDetectionId)
 	{
 		List<PreOpenDetection> preOpenDetectionConfList = AdventureGuideConfig.Instance.GetPreOpenDetectionConfList(detectionId, soundAreaDataType, preOpenDetectionId);
@@ -2274,7 +2255,7 @@ public class AdventureGuideModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600A492 RID: 42130 RVA: 0x0024A1AC File Offset: 0x002483AC
+	// Token: 0x06007871 RID: 30833 RVA: 0x002544D0 File Offset: 0x002526D0
 	public MonsterDetectionRecord[] GetSearchList(MonsterDetectionRecord[] list, string searchText)
 	{
 		List<MonsterDetectionRecord> list2 = new List<MonsterDetectionRecord>();
@@ -2305,20 +2286,20 @@ public class AdventureGuideModel : ModelBase
 		return list2.ToArray();
 	}
 
-	// Token: 0x0600A493 RID: 42131 RVA: 0x0024A250 File Offset: 0x00248450
+	// Token: 0x06007872 RID: 30834 RVA: 0x00254574 File Offset: 0x00252774
 	public void UpdateNightMareMsg(int instId, int levelPlayId, Dictionary<string, VarDefinePb> varsMap)
 	{
 		string nightMareKey = this.GetNightMareKey(instId, levelPlayId);
 		this.NightMareTimesMap[nightMareKey] = varsMap;
 	}
 
-	// Token: 0x0600A494 RID: 42132 RVA: 0x0024A273 File Offset: 0x00248473
+	// Token: 0x06007873 RID: 30835 RVA: 0x00254597 File Offset: 0x00252797
 	private string GetNightMareKey(int instId, int levelPlayId)
 	{
 		return MapUtil.GetGamePlayKey(instId, levelPlayId);
 	}
 
-	// Token: 0x0600A495 RID: 42133 RVA: 0x0024A27C File Offset: 0x0024847C
+	// Token: 0x06007874 RID: 30836 RVA: 0x002545A0 File Offset: 0x002527A0
 	private int GetNightMarePreOpenTargetMaxByDungeonId(int dungeonId)
 	{
 		GachaRoleDevelopIns? gachaRoleDevelopInsByDungeonId = ActivityRegressConfig.Instance.GetGachaRoleDevelopInsByDungeonId(dungeonId);
@@ -2329,7 +2310,7 @@ public class AdventureGuideModel : ModelBase
 		return gachaRoleDevelopInsByDungeonId.Value.LevelPlayParam;
 	}
 
-	// Token: 0x0600A496 RID: 42134 RVA: 0x0024A2B0 File Offset: 0x002484B0
+	// Token: 0x06007875 RID: 30837 RVA: 0x002545D4 File Offset: 0x002527D4
 	[NullableContext(0)]
 	public ValueTuple<long, int> GetNightMarePreOpenTarget(int dungeonId)
 	{
@@ -2339,7 +2320,7 @@ public class AdventureGuideModel : ModelBase
 		return new ValueTuple<long, int>(item, nightMarePreOpenTargetMaxByDungeonId);
 	}
 
-	// Token: 0x0600A497 RID: 42135 RVA: 0x0024A2E4 File Offset: 0x002484E4
+	// Token: 0x06007876 RID: 30838 RVA: 0x00254608 File Offset: 0x00252808
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetNightMareTarget(int? instId, int? levelPlayId)
 	{
@@ -2373,7 +2354,7 @@ public class AdventureGuideModel : ModelBase
 		return new ValueTuple<int, int>(array2[0], array2[1]);
 	}
 
-	// Token: 0x0600A498 RID: 42136 RVA: 0x0024A3C8 File Offset: 0x002485C8
+	// Token: 0x06007877 RID: 30839 RVA: 0x002546EC File Offset: 0x002528EC
 	[NullableContext(0)]
 	public T? GetVar<T>(int instId, int levelPlayId, [Nullable(1)] string varKey) where T : struct
 	{
@@ -2427,13 +2408,13 @@ public class AdventureGuideModel : ModelBase
 		return (T?)obj;
 	}
 
-	// Token: 0x0600A499 RID: 42137 RVA: 0x0024A4A8 File Offset: 0x002486A8
+	// Token: 0x06007878 RID: 30840 RVA: 0x002547CC File Offset: 0x002529CC
 	public bool IsNightMareHaveConfig(int instId, int levelPlayId)
 	{
 		return AdventureGuideConfig.Instance.GetLevelPlayNightMareConfig(levelPlayId) != null;
 	}
 
-	// Token: 0x0600A49A RID: 42138 RVA: 0x0024A4B8 File Offset: 0x002486B8
+	// Token: 0x06007879 RID: 30841 RVA: 0x002547DC File Offset: 0x002529DC
 	public bool IsRoleTutorialNew(int instanceId)
 	{
 		bool flag;
@@ -2441,7 +2422,7 @@ public class AdventureGuideModel : ModelBase
 		return !flag;
 	}
 
-	// Token: 0x0600A49B RID: 42139 RVA: 0x0024A4E8 File Offset: 0x002486E8
+	// Token: 0x0600787A RID: 30842 RVA: 0x0025480C File Offset: 0x00252A0C
 	public bool IsAdventrueItemNew(int adventureDataId)
 	{
 		bool flag;
@@ -2449,7 +2430,7 @@ public class AdventureGuideModel : ModelBase
 		return !flag;
 	}
 
-	// Token: 0x0600A49C RID: 42140 RVA: 0x0024A518 File Offset: 0x00248718
+	// Token: 0x0600787B RID: 30843 RVA: 0x0025483C File Offset: 0x00252A3C
 	public void SetRoleTutorialNew(int instanceId)
 	{
 		Dictionary<int, bool> dictionary = LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.RoleTutorialNew, null) ?? new Dictionary<int, bool>();
@@ -2457,7 +2438,7 @@ public class AdventureGuideModel : ModelBase
 		LocalStorage.SetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.RoleTutorialNew, dictionary);
 	}
 
-	// Token: 0x0600A49D RID: 42141 RVA: 0x0024A550 File Offset: 0x00248750
+	// Token: 0x0600787C RID: 30844 RVA: 0x00254874 File Offset: 0x00252A74
 	public void SetAdventureItemNew(int adventureDataId)
 	{
 		Dictionary<int, bool> dictionary = LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.AdventrueItemNew, null) ?? new Dictionary<int, bool>();
@@ -2465,31 +2446,31 @@ public class AdventureGuideModel : ModelBase
 		LocalStorage.SetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.AdventrueItemNew, dictionary);
 	}
 
-	// Token: 0x0600A49E RID: 42142 RVA: 0x0024A586 File Offset: 0x00248786
+	// Token: 0x0600787D RID: 30845 RVA: 0x002548AA File Offset: 0x00252AAA
 	public bool IsTowerType(EPeriodicityChallengeType type)
 	{
 		return type == EPeriodicityChallengeType.TowerVariation || type == EPeriodicityChallengeType.TowerLow || type == EPeriodicityChallengeType.TowerHigh || type == EPeriodicityChallengeType.TowerOverLoad;
 	}
 
-	// Token: 0x0600A49F RID: 42143 RVA: 0x0024A59A File Offset: 0x0024879A
+	// Token: 0x0600787E RID: 30846 RVA: 0x002548BE File Offset: 0x00252ABE
 	public bool IsShipTowerType(EPeriodicityChallengeType type)
 	{
 		return type == EPeriodicityChallengeType.ShipTowerPeriodicity || type == EPeriodicityChallengeType.ShipTowerNormal;
 	}
 
-	// Token: 0x0600A4A0 RID: 42144 RVA: 0x0024A5A6 File Offset: 0x002487A6
+	// Token: 0x0600787F RID: 30847 RVA: 0x002548CA File Offset: 0x00252ACA
 	public bool IsWeeklyRogueType(EPeriodicityChallengeType type)
 	{
 		return type == EPeriodicityChallengeType.WeeklyRogue;
 	}
 
-	// Token: 0x0600A4A1 RID: 42145 RVA: 0x0024A5AC File Offset: 0x002487AC
+	// Token: 0x06007880 RID: 30848 RVA: 0x002548D0 File Offset: 0x00252AD0
 	public bool IsWheelTowerType(EPeriodicityChallengeType type)
 	{
 		return type == EPeriodicityChallengeType.WheelTowerNormal || type == EPeriodicityChallengeType.WheelTowerEndless;
 	}
 
-	// Token: 0x0600A4A2 RID: 42146 RVA: 0x0024A5BC File Offset: 0x002487BC
+	// Token: 0x06007881 RID: 30849 RVA: 0x002548E0 File Offset: 0x00252AE0
 	public int[] GetShipTowerStateListByType(EPeriodicityChallengeType type)
 	{
 		List<int> list = new List<int>();
@@ -2514,7 +2495,7 @@ public class AdventureGuideModel : ModelBase
 		return new int[0];
 	}
 
-	// Token: 0x0600A4A3 RID: 42147 RVA: 0x0024A678 File Offset: 0x00248878
+	// Token: 0x06007882 RID: 30850 RVA: 0x0025499C File Offset: 0x00252B9C
 	public bool GetPeriodicityRedDot(EPeriodicityChallengeType type, int curSeason)
 	{
 		if (this.IsTowerType(type))
@@ -2533,7 +2514,7 @@ public class AdventureGuideModel : ModelBase
 		return data != null && data.HasNewCycle();
 	}
 
-	// Token: 0x0600A4A4 RID: 42148 RVA: 0x0024A6F8 File Offset: 0x002488F8
+	// Token: 0x06007883 RID: 30851 RVA: 0x00254A1C File Offset: 0x00252C1C
 	public void SetPeriodicityRedDot(EPeriodicityChallengeType type, int curSeason)
 	{
 		if (this.IsTowerType(type))
@@ -2547,7 +2528,7 @@ public class AdventureGuideModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.RedDotAdventurePeriodicityTabUpdate);
 	}
 
-	// Token: 0x0600A4A5 RID: 42149 RVA: 0x0024A75F File Offset: 0x0024895F
+	// Token: 0x06007884 RID: 30852 RVA: 0x00254A83 File Offset: 0x00252C83
 	private static int GeneratePeriodicActivityRedLogKey(EDungeonSubType type, int round, EPeriodicActivityRedLogType logType, int stepId = 0)
 	{
 		if (round <= 0 || type <= (EDungeonSubType)0 || logType <= (EPeriodicActivityRedLogType)0 || stepId < 0)
@@ -2557,7 +2538,7 @@ public class AdventureGuideModel : ModelBase
 		return stepId << 28 | (int)((int)(type & (EDungeonSubType)255) << 20) | (round & 65535) << 4 | (int)(logType & (EPeriodicActivityRedLogType)15);
 	}
 
-	// Token: 0x0600A4A6 RID: 42150 RVA: 0x0024A794 File Offset: 0x00248994
+	// Token: 0x06007885 RID: 30853 RVA: 0x00254AB8 File Offset: 0x00252CB8
 	[NullableContext(2)]
 	private IPeriodicActivityCommonData GetPeriodicActivityCommonData(EDungeonSubType type)
 	{
@@ -2594,13 +2575,13 @@ public class AdventureGuideModel : ModelBase
 		};
 	}
 
-	// Token: 0x0600A4A7 RID: 42151 RVA: 0x0024A80A File Offset: 0x00248A0A
+	// Token: 0x06007886 RID: 30854 RVA: 0x00254B2E File Offset: 0x00252D2E
 	private bool GetPeriodicActivityIsOpenByWorld(EDungeonSubType type)
 	{
 		return type == EDungeonSubType.LoopTower || (type == EDungeonSubType.ShipTower && ShipTowerModel.Instance.IsOpenedViewByWorld);
 	}
 
-	// Token: 0x0600A4A8 RID: 42152 RVA: 0x0024A828 File Offset: 0x00248A28
+	// Token: 0x06007887 RID: 30855 RVA: 0x00254B4C File Offset: 0x00252D4C
 	[NullableContext(2)]
 	private int[] GetAllPeriodicActivityRewardStepId(EDungeonSubType type)
 	{
@@ -2644,7 +2625,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A4A9 RID: 42153 RVA: 0x0024A938 File Offset: 0x00248B38
+	// Token: 0x06007888 RID: 30856 RVA: 0x00254C5C File Offset: 0x00252E5C
 	[NullableContext(2)]
 	private int[] GetPeriodicActivityRewardStepId(EDungeonSubType type, bool isCanReceive)
 	{
@@ -2664,7 +2645,7 @@ public class AdventureGuideModel : ModelBase
 		return rewardIdsByDifficulties.ToArray();
 	}
 
-	// Token: 0x0600A4AA RID: 42154 RVA: 0x0024A96C File Offset: 0x00248B6C
+	// Token: 0x06007889 RID: 30857 RVA: 0x00254C90 File Offset: 0x00252E90
 	private void ClearOldPeriodicActivityData(EDungeonSubType type, int currentRound)
 	{
 		int num = currentRound - 3;
@@ -2690,7 +2671,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A4AB RID: 42155 RVA: 0x0024AA0C File Offset: 0x00248C0C
+	// Token: 0x0600788A RID: 30858 RVA: 0x00254D30 File Offset: 0x00252F30
 	public void ReportPeriodicActivityRedAppear(EDungeonSubType type)
 	{
 		IPeriodicActivityCommonData periodicActivityCommonData = this.GetPeriodicActivityCommonData(type);
@@ -2712,7 +2693,7 @@ public class AdventureGuideModel : ModelBase
 		LogReportController.Instance.LogReport(periodicActivityRedAppearReport);
 	}
 
-	// Token: 0x0600A4AC RID: 42156 RVA: 0x0024AA90 File Offset: 0x00248C90
+	// Token: 0x0600788B RID: 30859 RVA: 0x00254DB4 File Offset: 0x00252FB4
 	public void ReportPeriodicActivityRedClear(EDungeonSubType type, bool hasRedPointAfter)
 	{
 		IPeriodicActivityCommonData periodicActivityCommonData = this.GetPeriodicActivityCommonData(type);
@@ -2736,7 +2717,7 @@ public class AdventureGuideModel : ModelBase
 		LogReportController.Instance.LogReport(periodicActivityRedClearReport);
 	}
 
-	// Token: 0x0600A4AD RID: 42157 RVA: 0x0024AB44 File Offset: 0x00248D44
+	// Token: 0x0600788C RID: 30860 RVA: 0x00254E68 File Offset: 0x00253068
 	public void ReportPeriodicActivityRewardAppear(EDungeonSubType type)
 	{
 		IPeriodicActivityCommonData periodicActivityCommonData = this.GetPeriodicActivityCommonData(type);
@@ -2765,7 +2746,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A4AE RID: 42158 RVA: 0x0024ABF0 File Offset: 0x00248DF0
+	// Token: 0x0600788D RID: 30861 RVA: 0x00254F14 File Offset: 0x00253114
 	public void ReportPeriodicActivityRewardClear(EDungeonSubType type)
 	{
 		IPeriodicActivityCommonData periodicActivityCommonData = this.GetPeriodicActivityCommonData(type);
@@ -2796,7 +2777,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A4AF RID: 42159 RVA: 0x0024ACD0 File Offset: 0x00248ED0
+	// Token: 0x0600788E RID: 30862 RVA: 0x00254FF4 File Offset: 0x002531F4
 	public SoundAreaDetectionRecord GetRecordById(int id)
 	{
 		DungeonDetectionRecord dungeonDetectionRecord;
@@ -2807,21 +2788,32 @@ public class AdventureGuideModel : ModelBase
 		return new SoundAreaDetectionRecord(ESoundAreaDataType.SilentArea, null, this.AllSilentAreaDetectionRecord.GetValueOrDefault(id));
 	}
 
-	// Token: 0x0600A4B0 RID: 42160 RVA: 0x0024AD09 File Offset: 0x00248F09
+	// Token: 0x0600788F RID: 30863 RVA: 0x0025502D File Offset: 0x0025322D
 	public long? GetRedDotAdventureNewSoundAreaTabLastUpdateTime()
 	{
-		ServerStorageUtil.OverrideLocalNumberToServerLong(ELocalStoragePlayerKey.RedDotAdventureNewSoundAreaTabLastUpdateTime, EClientStorageSystemIdType.RedDotAdventureNewSoundAreaTabLastUpdateTime);
+		ServerStorageUtil.OverrideLocalNumberToServerLong(ELocalStoragePlayerKey.RedDotAdventureNewSoundAreaTabLastUpdateTime, EClientStorageSystemIdType.RedDotAdventureNewSoundAreaTabLastUpdateTime, true);
 		return (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.RedDotAdventureNewSoundAreaTabLastUpdateTime) as ServerStorageLong).Get();
 	}
 
-	// Token: 0x0600A4B1 RID: 42161 RVA: 0x0024AD2B File Offset: 0x00248F2B
+	// Token: 0x06007890 RID: 30864 RVA: 0x00255050 File Offset: 0x00253250
 	public void SetRedDotAdventureNewSoundAreaTabLastUpdateTime(long time)
 	{
 		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.RedDotAdventureNewSoundAreaTabLastUpdateTime) as ServerStorageLong).Set(new long?(time));
 	}
 
-	// Token: 0x17000DCF RID: 3535
-	// (get) Token: 0x0600A4B2 RID: 42162 RVA: 0x0024AD49 File Offset: 0x00248F49
+	// Token: 0x06007891 RID: 30865 RVA: 0x00255070 File Offset: 0x00253270
+	public void SendAdventureGuideBtnClickLogData(EAdventureGuideBtnClickType btnType, int instId, int instSecondary, EAdventureGuideBtnComboType comboType)
+	{
+		AdventureGuideBtnClickLogEvent adventureGuideBtnClickLogEvent = new AdventureGuideBtnClickLogEvent();
+		adventureGuideBtnClickLogEvent.i_btn_type = (int)btnType;
+		adventureGuideBtnClickLogEvent.i_type = (int)comboType;
+		adventureGuideBtnClickLogEvent.i_inst_id = instId;
+		adventureGuideBtnClickLogEvent.i_inst_sub_type = instSecondary;
+		LogReportController.Instance.LogReport(adventureGuideBtnClickLogEvent);
+	}
+
+	// Token: 0x17000DF0 RID: 3568
+	// (get) Token: 0x06007892 RID: 30866 RVA: 0x002550AB File Offset: 0x002532AB
 	public static AdventureGuideModel Instance
 	{
 		get
@@ -2830,7 +2822,7 @@ public class AdventureGuideModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A4B3 RID: 42163 RVA: 0x0024AD50 File Offset: 0x00248F50
+	// Token: 0x06007893 RID: 30867 RVA: 0x002550B2 File Offset: 0x002532B2
 	public static AdventureGuideModel GetOrCreateInstance()
 	{
 		if (AdventureGuideModel._Instance == null)
@@ -2840,7 +2832,7 @@ public class AdventureGuideModel : ModelBase
 		return AdventureGuideModel._Instance;
 	}
 
-	// Token: 0x0600A4B4 RID: 42164 RVA: 0x0024AD64 File Offset: 0x00248F64
+	// Token: 0x06007894 RID: 30868 RVA: 0x002550C6 File Offset: 0x002532C6
 	public static bool CreateInstance()
 	{
 		if (AdventureGuideModel._Instance != null)
@@ -2851,226 +2843,226 @@ public class AdventureGuideModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600A4B5 RID: 42165 RVA: 0x0024AD7A File Offset: 0x00248F7A
+	// Token: 0x06007895 RID: 30869 RVA: 0x002550DC File Offset: 0x002532DC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A4B6 RID: 42166 RVA: 0x0024AD7C File Offset: 0x00248F7C
+	// Token: 0x06007896 RID: 30870 RVA: 0x002550DE File Offset: 0x002532DE
 	public static void ResetStaticDefaultValue()
 	{
 		AdventureGuideModel._Instance = null;
 	}
 
-	// Token: 0x0600A4B7 RID: 42167 RVA: 0x0024AD84 File Offset: 0x00248F84
+	// Token: 0x06007897 RID: 30871 RVA: 0x002550E6 File Offset: 0x002532E6
 	static AdventureGuideModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AdventureGuideModel.CreateStaticDefaultValue), new Action(AdventureGuideModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004A5D RID: 19037
+	// Token: 0x04004B04 RID: 19204
 	private const int DEFAULT_SEASON_ID = -100;
 
-	// Token: 0x04004A5E RID: 19038
+	// Token: 0x04004B05 RID: 19205
 	private const int ENERGYCOST_ID = 5;
 
-	// Token: 0x04004A5F RID: 19039
+	// Token: 0x04004B06 RID: 19206
 	private bool HasInitDataInternal;
 
-	// Token: 0x04004A60 RID: 19040
+	// Token: 0x04004B07 RID: 19207
 	private readonly Dictionary<int, SlientFirstAwardState> SilentFirstAwardsMap = new Dictionary<int, SlientFirstAwardState>();
 
-	// Token: 0x04004A61 RID: 19041
+	// Token: 0x04004B08 RID: 19208
 	private readonly Dictionary<ESoundAreaDataType, Dictionary<int, PreOpenDetections>> PreOpenDetectionServerConfigMap = new Dictionary<ESoundAreaDataType, Dictionary<int, PreOpenDetections>>();
 
-	// Token: 0x04004A62 RID: 19042
+	// Token: 0x04004B09 RID: 19209
 	private readonly Dictionary<ESoundAreaDataType, Dictionary<int, AdventureDetectionConfig>> DetectionServerConfigMap = new Dictionary<ESoundAreaDataType, Dictionary<int, AdventureDetectionConfig>>();
 
-	// Token: 0x04004A63 RID: 19043
+	// Token: 0x04004B0A RID: 19210
 	public EUiTabViewName? CurrentGuideTabName;
 
-	// Token: 0x04004A64 RID: 19044
+	// Token: 0x04004B0B RID: 19211
 	private const int PERIODIC_ACTIVITY_CLEAR_ROUND_COUNT = 3;
 
-	// Token: 0x04004A65 RID: 19045
+	// Token: 0x04004B0C RID: 19212
 	private readonly Dictionary<int, AdventureTaskRecord[]> AllTasks = new Dictionary<int, AdventureTaskRecord[]>();
 
-	// Token: 0x04004A66 RID: 19046
+	// Token: 0x04004B0D RID: 19213
 	private int DetectingMonsterConfId;
 
-	// Token: 0x04004A67 RID: 19047
+	// Token: 0x04004B0E RID: 19214
 	private int DetectingDungeonConfId;
 
-	// Token: 0x04004A68 RID: 19048
+	// Token: 0x04004B0F RID: 19215
 	private int DetectingSilentAreaConfId;
 
-	// Token: 0x04004A69 RID: 19049
+	// Token: 0x04004B10 RID: 19216
 	private int DetectingMonsterMarkId;
 
-	// Token: 0x04004A6A RID: 19050
+	// Token: 0x04004B11 RID: 19217
 	private int DetectingDungeonMarkId;
 
-	// Token: 0x04004A6B RID: 19051
+	// Token: 0x04004B12 RID: 19218
 	private int DetectingSilentAreaMarkId;
 
-	// Token: 0x04004A6C RID: 19052
+	// Token: 0x04004B13 RID: 19219
 	private EMarkType? DetectingSlientAreaMarkType;
 
-	// Token: 0x04004A6D RID: 19053
+	// Token: 0x04004B14 RID: 19220
 	private int DetectingMonsterId;
 
-	// Token: 0x04004A6E RID: 19054
+	// Token: 0x04004B15 RID: 19221
 	private int DetectingDungeonId;
 
-	// Token: 0x04004A6F RID: 19055
+	// Token: 0x04004B16 RID: 19222
 	private int DetectingSilentAreaId;
 
-	// Token: 0x04004A70 RID: 19056
+	// Token: 0x04004B17 RID: 19223
 	private int PendingMonsterDetectId;
 
-	// Token: 0x04004A71 RID: 19057
+	// Token: 0x04004B18 RID: 19224
 	private bool IsMaterialDetect;
 
-	// Token: 0x04004A72 RID: 19058
+	// Token: 0x04004B19 RID: 19225
 	private int PendingDungeonDetectId;
 
-	// Token: 0x04004A73 RID: 19059
+	// Token: 0x04004B1A RID: 19226
 	private int PendingSilentAreaDetectId;
 
-	// Token: 0x04004A74 RID: 19060
+	// Token: 0x04004B1B RID: 19227
 	private bool IsFromManualDetect;
 
-	// Token: 0x04004A75 RID: 19061
+	// Token: 0x04004B1C RID: 19228
 	public int? CurrentMonsterId = new int?(0);
 
-	// Token: 0x04004A76 RID: 19062
+	// Token: 0x04004B1D RID: 19229
 	public int CurrentSilentId;
 
-	// Token: 0x04004A77 RID: 19063
+	// Token: 0x04004B1E RID: 19230
 	[Nullable(2)]
 	public ServerStorageSet DetectionRedDotCache;
 
-	// Token: 0x04004A78 RID: 19064
+	// Token: 0x04004B1F RID: 19231
 	private readonly Dictionary<int, IDetectingObj> AlternativeDetectMonsterMap = new Dictionary<int, IDetectingObj>();
 
-	// Token: 0x04004A79 RID: 19065
+	// Token: 0x04004B20 RID: 19232
 	private readonly Dictionary<int, IDetectingObj> AlternativeDetectDungeonMap = new Dictionary<int, IDetectingObj>();
 
-	// Token: 0x04004A7A RID: 19066
+	// Token: 0x04004B21 RID: 19233
 	private readonly Dictionary<int, IDetectingObj> AlternativeDetectSilentAreaMap = new Dictionary<int, IDetectingObj>();
 
-	// Token: 0x04004A7B RID: 19067
+	// Token: 0x04004B22 RID: 19234
 	public readonly Dictionary<int, MonsterDetectionRecord> AllMonsterDetectionRecord = new Dictionary<int, MonsterDetectionRecord>();
 
-	// Token: 0x04004A7C RID: 19068
+	// Token: 0x04004B23 RID: 19235
 	private readonly Dictionary<string, int> BlueprintTypeToMonsterDetectionMap = new Dictionary<string, int>();
 
-	// Token: 0x04004A7D RID: 19069
+	// Token: 0x04004B24 RID: 19236
 	public readonly Dictionary<int, DungeonDetectionRecord> AllDungeonDetectionRecord = new Dictionary<int, DungeonDetectionRecord>();
 
-	// Token: 0x04004A7E RID: 19070
+	// Token: 0x04004B25 RID: 19237
 	public readonly Dictionary<int, SilentAreaDetectionRecord> AllSilentAreaDetectionRecord = new Dictionary<int, SilentAreaDetectionRecord>();
 
-	// Token: 0x04004A7F RID: 19071
+	// Token: 0x04004B26 RID: 19238
 	private int[] UnLockChapters = new int[0];
 
-	// Token: 0x04004A80 RID: 19072
+	// Token: 0x04004B27 RID: 19239
 	private int[] RewardChapters = new int[0];
 
-	// Token: 0x04004A81 RID: 19073
+	// Token: 0x04004B28 RID: 19240
 	public int CurrentShowLevel = 1;
 
-	// Token: 0x04004A82 RID: 19074
+	// Token: 0x04004B29 RID: 19241
 	public int CurrentSelectSuitIndex;
 
-	// Token: 0x04004A83 RID: 19075
+	// Token: 0x04004B2A RID: 19242
 	public int HandleShowNightMareParam;
 
-	// Token: 0x04004A84 RID: 19076
+	// Token: 0x04004B2B RID: 19243
 	private readonly Dictionary<EDungeonType, List<SoundAreaDetectionRecord>> TypeToRecordsMap = new Dictionary<EDungeonType, List<SoundAreaDetectionRecord>>();
 
-	// Token: 0x04004A85 RID: 19077
+	// Token: 0x04004B2C RID: 19244
 	public readonly Dictionary<EDungeonType, bool> TypeUnLockMap = new Dictionary<EDungeonType, bool>();
 
-	// Token: 0x04004A86 RID: 19078
+	// Token: 0x04004B2D RID: 19245
 	public readonly Dictionary<EGuideType, bool> GuideTypeUnLockMap = new Dictionary<EGuideType, bool>();
 
-	// Token: 0x04004A87 RID: 19079
+	// Token: 0x04004B2E RID: 19246
 	[Nullable(2)]
 	private HashSet<int> AllCulledMonsters;
 
-	// Token: 0x04004A88 RID: 19080
+	// Token: 0x04004B2F RID: 19247
 	private readonly List<ISilentAreaDetectionDynamicData> SilentAreasDataList = new List<ISilentAreaDetectionDynamicData>();
 
-	// Token: 0x04004A89 RID: 19081
+	// Token: 0x04004B30 RID: 19248
 	private readonly HashSet<ESoundAreaDataType> PreOpenDetectionTypeSet = new HashSet<ESoundAreaDataType>
 	{
 		ESoundAreaDataType.Dungeon,
 		ESoundAreaDataType.SilentArea
 	};
 
-	// Token: 0x04004A8A RID: 19082
+	// Token: 0x04004B31 RID: 19249
 	private readonly Dictionary<string, Dictionary<string, VarDefinePb>> NightMareTimesMap = new Dictionary<string, Dictionary<string, VarDefinePb>>();
 
-	// Token: 0x04004A8B RID: 19083
+	// Token: 0x04004B32 RID: 19250
 	[Nullable(2)]
 	private static AdventureGuideModel _Instance;
 
-	// Token: 0x02007C63 RID: 31843
+	// Token: 0x02006DE8 RID: 28136
 	[NullableContext(0)]
 	public class ChapterProgress
 	{
-		// Token: 0x1700A034 RID: 41012
-		// (get) Token: 0x06049906 RID: 301318 RVA: 0x0130C1D6 File Offset: 0x0130A3D6
-		// (set) Token: 0x06049907 RID: 301319 RVA: 0x0130C1DE File Offset: 0x0130A3DE
+		// Token: 0x170077D2 RID: 30674
+		// (get) Token: 0x0603FD16 RID: 261398 RVA: 0x012AF3DA File Offset: 0x012AD5DA
+		// (set) Token: 0x0603FD17 RID: 261399 RVA: 0x012AF3E2 File Offset: 0x012AD5E2
 		public int Received { get; set; }
 
-		// Token: 0x1700A035 RID: 41013
-		// (get) Token: 0x06049908 RID: 301320 RVA: 0x0130C1E7 File Offset: 0x0130A3E7
-		// (set) Token: 0x06049909 RID: 301321 RVA: 0x0130C1EF File Offset: 0x0130A3EF
+		// Token: 0x170077D3 RID: 30675
+		// (get) Token: 0x0603FD18 RID: 261400 RVA: 0x012AF3EB File Offset: 0x012AD5EB
+		// (set) Token: 0x0603FD19 RID: 261401 RVA: 0x012AF3F3 File Offset: 0x012AD5F3
 		public int Total { get; set; }
 	}
 
-	// Token: 0x02007C64 RID: 31844
+	// Token: 0x02006DE9 RID: 28137
 	[NullableContext(0)]
 	public class DetectingObj : IDetectingObj
 	{
-		// Token: 0x1700A036 RID: 41014
-		// (get) Token: 0x0604990B RID: 301323 RVA: 0x0130C200 File Offset: 0x0130A400
-		// (set) Token: 0x0604990C RID: 301324 RVA: 0x0130C208 File Offset: 0x0130A408
+		// Token: 0x170077D4 RID: 30676
+		// (get) Token: 0x0603FD1B RID: 261403 RVA: 0x012AF404 File Offset: 0x012AD604
+		// (set) Token: 0x0603FD1C RID: 261404 RVA: 0x012AF40C File Offset: 0x012AD60C
 		public int Id { get; set; }
 
-		// Token: 0x1700A037 RID: 41015
-		// (get) Token: 0x0604990D RID: 301325 RVA: 0x0130C211 File Offset: 0x0130A411
-		// (set) Token: 0x0604990E RID: 301326 RVA: 0x0130C219 File Offset: 0x0130A419
+		// Token: 0x170077D5 RID: 30677
+		// (get) Token: 0x0603FD1D RID: 261405 RVA: 0x012AF415 File Offset: 0x012AD615
+		// (set) Token: 0x0603FD1E RID: 261406 RVA: 0x012AF41D File Offset: 0x012AD61D
 		public long RefreshTime { get; set; }
 
-		// Token: 0x1700A038 RID: 41016
-		// (get) Token: 0x0604990F RID: 301327 RVA: 0x0130C222 File Offset: 0x0130A422
-		// (set) Token: 0x06049910 RID: 301328 RVA: 0x0130C22A File Offset: 0x0130A42A
+		// Token: 0x170077D6 RID: 30678
+		// (get) Token: 0x0603FD1F RID: 261407 RVA: 0x012AF426 File Offset: 0x012AD626
+		// (set) Token: 0x0603FD20 RID: 261408 RVA: 0x012AF42E File Offset: 0x012AD62E
 		public int MapId { get; set; }
 
-		// Token: 0x1700A039 RID: 41017
-		// (get) Token: 0x06049911 RID: 301329 RVA: 0x0130C233 File Offset: 0x0130A433
-		// (set) Token: 0x06049912 RID: 301330 RVA: 0x0130C23B File Offset: 0x0130A43B
+		// Token: 0x170077D7 RID: 30679
+		// (get) Token: 0x0603FD21 RID: 261409 RVA: 0x012AF437 File Offset: 0x012AD637
+		// (set) Token: 0x0603FD22 RID: 261410 RVA: 0x012AF43F File Offset: 0x012AD63F
 		public float PositionX { get; set; }
 
-		// Token: 0x1700A03A RID: 41018
-		// (get) Token: 0x06049913 RID: 301331 RVA: 0x0130C244 File Offset: 0x0130A444
-		// (set) Token: 0x06049914 RID: 301332 RVA: 0x0130C24C File Offset: 0x0130A44C
+		// Token: 0x170077D8 RID: 30680
+		// (get) Token: 0x0603FD23 RID: 261411 RVA: 0x012AF448 File Offset: 0x012AD648
+		// (set) Token: 0x0603FD24 RID: 261412 RVA: 0x012AF450 File Offset: 0x012AD650
 		public float PositionY { get; set; }
 
-		// Token: 0x1700A03B RID: 41019
-		// (get) Token: 0x06049915 RID: 301333 RVA: 0x0130C255 File Offset: 0x0130A455
-		// (set) Token: 0x06049916 RID: 301334 RVA: 0x0130C25D File Offset: 0x0130A45D
+		// Token: 0x170077D9 RID: 30681
+		// (get) Token: 0x0603FD25 RID: 261413 RVA: 0x012AF459 File Offset: 0x012AD659
+		// (set) Token: 0x0603FD26 RID: 261414 RVA: 0x012AF461 File Offset: 0x012AD661
 		public float PositionZ { get; set; }
 	}
 
-	// Token: 0x02007C65 RID: 31845
+	// Token: 0x02006DEA RID: 28138
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04028CFD RID: 167165
+		// Token: 0x04024027 RID: 147495
 		[Nullable(new byte[]
 		{
 			0,

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001518 RID: 5400
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001671 RID: 5745
 	public class CommonTip2 : ActionParams
 	{
-		// Token: 0x06007AAA RID: 31402 RVA: 0x00124BA4 File Offset: 0x00122DA4
+		// Token: 0x06008175 RID: 33141 RVA: 0x001337CC File Offset: 0x001319CC
 		private CommonTip2_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007AAB RID: 31403 RVA: 0x00124BDC File Offset: 0x00122DDC
+		// Token: 0x06008176 RID: 33142 RVA: 0x00133804 File Offset: 0x00131A04
 		public static CommonTip2 Create([Nullable(2)] CommonTip2 instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007AAC RID: 31404 RVA: 0x00124BEF File Offset: 0x00122DEF
+		// Token: 0x06008177 RID: 33143 RVA: 0x00133817 File Offset: 0x00131A17
 		public static CommonTip2 CreateFromSetValue([Nullable(2)] CommonTip2_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007AAD RID: 31405 RVA: 0x00124C02 File Offset: 0x00122E02
+		// Token: 0x06008178 RID: 33144 RVA: 0x0013382A File Offset: 0x00131A2A
 		public CommonTip2_SetValue ToSetValue()
 		{
 			return new CommonTip2_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028E9 RID: 10473
-		// (get) Token: 0x06007AAE RID: 31406 RVA: 0x00124C18 File Offset: 0x00122E18
-		// (set) Token: 0x06007AAF RID: 31407 RVA: 0x00124C79 File Offset: 0x00122E79
+		// Token: 0x17002AD2 RID: 10962
+		// (get) Token: 0x06008179 RID: 33145 RVA: 0x00133840 File Offset: 0x00131A40
+		// (set) Token: 0x0600817A RID: 33146 RVA: 0x001338A1 File Offset: 0x00131AA1
 		public virtual ICommonTip2PrepareCountdown TipOption
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004706 RID: 18182
+		// Token: 0x04004AA2 RID: 19106
 		[Nullable(2)]
 		protected new CommonTip2 FbInstance;
 
-		// Token: 0x04004707 RID: 18183
+		// Token: 0x04004AA3 RID: 19107
 		[Nullable(2)]
 		protected CommonTip2_SetValue PocoInterface;
 
-		// Token: 0x04004708 RID: 18184
+		// Token: 0x04004AA4 RID: 19108
 		private ICommonTip2PrepareCountdown _TipOptionCache;
 
-		// Token: 0x04004709 RID: 18185
+		// Token: 0x04004AA5 RID: 19109
 		private bool _TipOptionInited;
 	}
 }

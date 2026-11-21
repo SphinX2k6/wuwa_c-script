@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EF7 RID: 28407
+	// Token: 0x02006077 RID: 24695
 	public class DollDescriptionIconItemPanel : UiPanelBase
 	{
-		// Token: 0x0604529C RID: 283292 RVA: 0x0111B270 File Offset: 0x01119470
+		// Token: 0x0603B445 RID: 242757 RVA: 0x010C5000 File Offset: 0x010C3200
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604529D RID: 283293 RVA: 0x0111B408 File Offset: 0x01119608
+		// Token: 0x0603B446 RID: 242758 RVA: 0x010C5198 File Offset: 0x010C3398
 		[NullableContext(1)]
 		public void SetIconTexture(string iconPath)
 		{

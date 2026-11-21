@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A0B RID: 27147
+	// Token: 0x020070BB RID: 28859
 	public struct ILiftMoveTypeTeleport : IFlatbufferObject
 	{
-		// Token: 0x1700C967 RID: 51559
-		// (get) Token: 0x0602F809 RID: 194569 RVA: 0x00677E91 File Offset: 0x00676091
+		// Token: 0x1700D367 RID: 54119
+		// (get) Token: 0x060321C9 RID: 205257 RVA: 0x006C81E9 File Offset: 0x006C63E9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F80A RID: 194570 RVA: 0x00677E9E File Offset: 0x0067609E
+		// Token: 0x060321CA RID: 205258 RVA: 0x006C81F6 File Offset: 0x006C63F6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F80B RID: 194571 RVA: 0x00677EA8 File Offset: 0x006760A8
+		// Token: 0x060321CB RID: 205259 RVA: 0x006C8200 File Offset: 0x006C6400
 		public static ILiftMoveTypeTeleport GetRootAsILiftMoveTypeTeleport(ByteBuffer _bb)
 		{
 			return ILiftMoveTypeTeleport.GetRootAsILiftMoveTypeTeleport(_bb, default(ILiftMoveTypeTeleport));
 		}
 
-		// Token: 0x0602F80C RID: 194572 RVA: 0x00677EC4 File Offset: 0x006760C4
+		// Token: 0x060321CC RID: 205260 RVA: 0x006C821C File Offset: 0x006C641C
 		public static ILiftMoveTypeTeleport GetRootAsILiftMoveTypeTeleport(ByteBuffer _bb, ILiftMoveTypeTeleport obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F80D RID: 194573 RVA: 0x00677EE1 File Offset: 0x006760E1
+		// Token: 0x060321CD RID: 205261 RVA: 0x006C8239 File Offset: 0x006C6439
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F80E RID: 194574 RVA: 0x00677EF0 File Offset: 0x006760F0
+		// Token: 0x060321CE RID: 205262 RVA: 0x006C8248 File Offset: 0x006C6448
 		public ILiftMoveTypeTeleport __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C968 RID: 51560
-		// (get) Token: 0x0602F80F RID: 194575 RVA: 0x00677F00 File Offset: 0x00676100
+		// Token: 0x1700D368 RID: 54120
+		// (get) Token: 0x060321CF RID: 205263 RVA: 0x006C8258 File Offset: 0x006C6458
 		public ELiftMoveType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C969 RID: 51561
-		// (get) Token: 0x0602F810 RID: 194576 RVA: 0x00677F3C File Offset: 0x0067613C
+		// Token: 0x1700D369 RID: 54121
+		// (get) Token: 0x060321D0 RID: 205264 RVA: 0x006C8294 File Offset: 0x006C6494
 		public float StartTeleportOffsetDistance
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C96A RID: 51562
-		// (get) Token: 0x0602F811 RID: 194577 RVA: 0x00677F7C File Offset: 0x0067617C
+		// Token: 0x1700D36A RID: 54122
+		// (get) Token: 0x060321D1 RID: 205265 RVA: 0x006C82D4 File Offset: 0x006C64D4
 		public float EndTeleportOffsetDistance
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C96B RID: 51563
-		// (get) Token: 0x0602F812 RID: 194578 RVA: 0x00677FBC File Offset: 0x006761BC
+		// Token: 0x1700D36B RID: 54123
+		// (get) Token: 0x060321D2 RID: 205266 RVA: 0x006C8314 File Offset: 0x006C6514
 		public bool SendTeleportEvent
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C96C RID: 51564
-		// (get) Token: 0x0602F813 RID: 194579 RVA: 0x00677FFC File Offset: 0x006761FC
+		// Token: 0x1700D36C RID: 54124
+		// (get) Token: 0x060321D3 RID: 205267 RVA: 0x006C8354 File Offset: 0x006C6554
 		public float TeleportStartEventOffsetDistance
 		{
 			get
@@ -118,7 +118,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F814 RID: 194580 RVA: 0x0067803D File Offset: 0x0067623D
+		// Token: 0x060321D4 RID: 205268 RVA: 0x006C8395 File Offset: 0x006C6595
 		public static Offset<ILiftMoveTypeTeleport> CreateILiftMoveTypeTeleport(FlatBufferBuilder builder, ELiftMoveType Type = ELiftMoveType.Default, float StartTeleportOffsetDistance = 0f, float EndTeleportOffsetDistance = 0f, bool SendTeleportEvent = false, float TeleportStartEventOffsetDistance = 0f)
 		{
 			builder.StartTable(5);
@@ -130,49 +130,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ILiftMoveTypeTeleport.EndILiftMoveTypeTeleport(builder);
 		}
 
-		// Token: 0x0602F815 RID: 194581 RVA: 0x00678071 File Offset: 0x00676271
+		// Token: 0x060321D5 RID: 205269 RVA: 0x006C83C9 File Offset: 0x006C65C9
 		public static void StartILiftMoveTypeTeleport(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602F816 RID: 194582 RVA: 0x0067807A File Offset: 0x0067627A
+		// Token: 0x060321D6 RID: 205270 RVA: 0x006C83D2 File Offset: 0x006C65D2
 		public static void AddType(FlatBufferBuilder builder, ELiftMoveType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602F817 RID: 194583 RVA: 0x00678085 File Offset: 0x00676285
+		// Token: 0x060321D7 RID: 205271 RVA: 0x006C83DD File Offset: 0x006C65DD
 		public static void AddStartTeleportOffsetDistance(FlatBufferBuilder builder, float startTeleportOffsetDistance)
 		{
 			builder.AddFloat(1, startTeleportOffsetDistance, 0.0);
 		}
 
-		// Token: 0x0602F818 RID: 194584 RVA: 0x00678098 File Offset: 0x00676298
+		// Token: 0x060321D8 RID: 205272 RVA: 0x006C83F0 File Offset: 0x006C65F0
 		public static void AddEndTeleportOffsetDistance(FlatBufferBuilder builder, float endTeleportOffsetDistance)
 		{
 			builder.AddFloat(2, endTeleportOffsetDistance, 0.0);
 		}
 
-		// Token: 0x0602F819 RID: 194585 RVA: 0x006780AB File Offset: 0x006762AB
+		// Token: 0x060321D9 RID: 205273 RVA: 0x006C8403 File Offset: 0x006C6603
 		public static void AddSendTeleportEvent(FlatBufferBuilder builder, bool sendTeleportEvent)
 		{
 			builder.AddBool(3, sendTeleportEvent, false);
 		}
 
-		// Token: 0x0602F81A RID: 194586 RVA: 0x006780B6 File Offset: 0x006762B6
+		// Token: 0x060321DA RID: 205274 RVA: 0x006C840E File Offset: 0x006C660E
 		public static void AddTeleportStartEventOffsetDistance(FlatBufferBuilder builder, float teleportStartEventOffsetDistance)
 		{
 			builder.AddFloat(4, teleportStartEventOffsetDistance, 0.0);
 		}
 
-		// Token: 0x0602F81B RID: 194587 RVA: 0x006780C9 File Offset: 0x006762C9
+		// Token: 0x060321DB RID: 205275 RVA: 0x006C8421 File Offset: 0x006C6621
 		public static Offset<ILiftMoveTypeTeleport> EndILiftMoveTypeTeleport(FlatBufferBuilder builder)
 		{
 			return new Offset<ILiftMoveTypeTeleport>(builder.EndTable());
 		}
 
-		// Token: 0x0602F81C RID: 194588 RVA: 0x006780D8 File Offset: 0x006762D8
+		// Token: 0x060321DC RID: 205276 RVA: 0x006C8430 File Offset: 0x006C6630
 		public ILiftMoveTypeTeleportT UnPack()
 		{
 			ILiftMoveTypeTeleportT liftMoveTypeTeleportT = new ILiftMoveTypeTeleportT();
@@ -180,7 +180,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return liftMoveTypeTeleportT;
 		}
 
-		// Token: 0x0602F81D RID: 194589 RVA: 0x006780F3 File Offset: 0x006762F3
+		// Token: 0x060321DD RID: 205277 RVA: 0x006C844B File Offset: 0x006C664B
 		public void UnPackTo(ILiftMoveTypeTeleportT _o)
 		{
 			_o.Type = this.Type;
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.TeleportStartEventOffsetDistance = this.TeleportStartEventOffsetDistance;
 		}
 
-		// Token: 0x0602F81E RID: 194590 RVA: 0x00678134 File Offset: 0x00676334
+		// Token: 0x060321DE RID: 205278 RVA: 0x006C848C File Offset: 0x006C668C
 		public static Offset<ILiftMoveTypeTeleport> Pack(FlatBufferBuilder builder, ILiftMoveTypeTeleportT _o)
 		{
 			if (_o == null)
@@ -200,7 +200,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ILiftMoveTypeTeleport.CreateILiftMoveTypeTeleport(builder, _o.Type, _o.StartTeleportOffsetDistance, _o.EndTeleportOffsetDistance, _o.SendTeleportEvent, _o.TeleportStartEventOffsetDistance);
 		}
 
-		// Token: 0x0401120A RID: 70154
+		// Token: 0x04012074 RID: 73844
 		private Table __p;
 	}
 }

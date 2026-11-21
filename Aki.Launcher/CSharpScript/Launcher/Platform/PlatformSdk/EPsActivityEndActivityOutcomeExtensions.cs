@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x020001A2 RID: 418
+	// Token: 0x020001A6 RID: 422
 	public static class EPsActivityEndActivityOutcomeExtensions
 	{
-		// Token: 0x06000B82 RID: 2946 RVA: 0x00048D34 File Offset: 0x00046F34
+		// Token: 0x06000BB9 RID: 3001 RVA: 0x0004B524 File Offset: 0x00049724
 		public static string ToEnumString(this EPsActivityEndActivityOutcome value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return result;
 		}
 
-		// Token: 0x06000B83 RID: 2947 RVA: 0x00048D7C File Offset: 0x00046F7C
+		// Token: 0x06000BBA RID: 3002 RVA: 0x0004B56C File Offset: 0x0004976C
 		public static EPsActivityEndActivityOutcome FromString(string name)
 		{
 			EPsActivityEndActivityOutcome result;
@@ -38,7 +38,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return result;
 		}
 
-		// Token: 0x06000B84 RID: 2948 RVA: 0x00048DA8 File Offset: 0x00046FA8
+		// Token: 0x06000BBB RID: 3003 RVA: 0x0004B598 File Offset: 0x00049798
 		public static bool TryFromString(string name, out EPsActivityEndActivityOutcome value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return true;
 		}
 
-		// Token: 0x06000B85 RID: 2949 RVA: 0x00048DFE File Offset: 0x00046FFE
+		// Token: 0x06000BBC RID: 3004 RVA: 0x0004B5EE File Offset: 0x000497EE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			};
 		}
 
-		// Token: 0x06000B86 RID: 2950 RVA: 0x00048E1E File Offset: 0x0004701E
+		// Token: 0x06000BBD RID: 3005 RVA: 0x0004B60E File Offset: 0x0004980E
 		public static EPsActivityEndActivityOutcome[] GetValues()
 		{
 			return new EPsActivityEndActivityOutcome[]
@@ -87,7 +87,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			};
 		}
 
-		// Token: 0x06000B87 RID: 2951 RVA: 0x00048E2E File Offset: 0x0004702E
+		// Token: 0x06000BBE RID: 3006 RVA: 0x0004B61E File Offset: 0x0004981E
 		public static string[] GetNames()
 		{
 			return new string[]

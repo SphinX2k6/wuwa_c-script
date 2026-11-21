@@ -7,19 +7,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.StateApplier
 {
-	// Token: 0x02006A33 RID: 27187
+	// Token: 0x02005B90 RID: 23440
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MaterialParamDraggableStateApplier : IDraggableStateApplier
 	{
-		// Token: 0x06043A1D RID: 277021 RVA: 0x0108D004 File Offset: 0x0108B204
+		// Token: 0x06039A6B RID: 236139 RVA: 0x0103180C File Offset: 0x0102FA0C
 		public void Initialize(AActor actor)
 		{
 			this.CollectStaticMeshComponents(actor);
 			this.WriteStateParams(0, 0, 0);
 		}
 
-		// Token: 0x06043A1E RID: 277022 RVA: 0x0108D018 File Offset: 0x0108B218
+		// Token: 0x06039A6C RID: 236140 RVA: 0x01031820 File Offset: 0x0102FA20
 		public void ApplyState(AActor actor, EDraggableState state)
 		{
 			if (this.CachedStaticMeshComponents.Count == 0)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.StateApplier
 			this.WriteStateParams(0, 0, 0);
 		}
 
-		// Token: 0x06043A1F RID: 277023 RVA: 0x0108D078 File Offset: 0x0108B278
+		// Token: 0x06039A6D RID: 236141 RVA: 0x01031880 File Offset: 0x0102FA80
 		public void Dispose(AActor actor)
 		{
 			if (this.CachedStaticMeshComponents.Count == 0)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.StateApplier
 			this.CachedStaticMeshComponents = new List<UStaticMeshComponent>();
 		}
 
-		// Token: 0x06043A20 RID: 277024 RVA: 0x0108D0A4 File Offset: 0x0108B2A4
+		// Token: 0x06039A6E RID: 236142 RVA: 0x010318AC File Offset: 0x0102FAAC
 		private void CollectStaticMeshComponents(AActor actor)
 		{
 			this.CachedStaticMeshComponents = new List<UStaticMeshComponent>();
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.StateApplier
 			}
 		}
 
-		// Token: 0x06043A21 RID: 277025 RVA: 0x0108D154 File Offset: 0x0108B354
+		// Token: 0x06039A6F RID: 236143 RVA: 0x0103195C File Offset: 0x0102FB5C
 		private void WriteStateParams(int state1, int state2, int state3)
 		{
 			foreach (UStaticMeshComponent ustaticMeshComponent in this.CachedStaticMeshComponents)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.StateApplier
 			}
 		}
 
-		// Token: 0x040234DF RID: 144607
+		// Token: 0x0401E6D1 RID: 124625
 		private List<UStaticMeshComponent> CachedStaticMeshComponents = new List<UStaticMeshComponent>();
 	}
 }

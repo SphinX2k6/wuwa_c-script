@@ -7,10 +7,10 @@ using CSharpScript.Game.ServerStorage.Container;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x0200691F RID: 26911
+	// Token: 0x0200586F RID: 22639
 	public abstract class AnniversarySubActivityDataBase
 	{
-		// Token: 0x06043199 RID: 274841 RVA: 0x0105A324 File Offset: 0x01058524
+		// Token: 0x06037CF1 RID: 228593 RVA: 0x00F9B950 File Offset: 0x00F99B50
 		public AnniversarySubActivityDataBase(int id)
 		{
 			this.Id = id;
@@ -21,33 +21,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x0604319A RID: 274842 RVA: 0x0105A368 File Offset: 0x01058568
+		// Token: 0x06037CF2 RID: 228594 RVA: 0x00F9B994 File Offset: 0x00F99B94
 		public EAnniversarySubId GetSubId()
 		{
 			return (EAnniversarySubId)this.Id;
 		}
 
-		// Token: 0x0604319B RID: 274843 RVA: 0x0105A370 File Offset: 0x01058570
+		// Token: 0x06037CF3 RID: 228595 RVA: 0x00F9B99C File Offset: 0x00F99B9C
 		public int GetActivityId()
 		{
 			return this.ActivityId;
 		}
 
-		// Token: 0x0604319C RID: 274844 RVA: 0x0105A378 File Offset: 0x01058578
+		// Token: 0x06037CF4 RID: 228596 RVA: 0x00F9B9A4 File Offset: 0x00F99BA4
 		[NullableContext(2)]
 		public ActivityBaseData GetActivityData()
 		{
 			return ActivityModel.Instance.GetActivityById(this.ActivityId);
 		}
 
-		// Token: 0x0604319D RID: 274845 RVA: 0x0105A38A File Offset: 0x0105858A
+		// Token: 0x06037CF5 RID: 228597 RVA: 0x00F9B9B6 File Offset: 0x00F99BB6
 		public void SetUnlockTime(long unlockTime)
 		{
 			this.UnlockTime = unlockTime;
 		}
 
-		// Token: 0x170097EB RID: 38891
-		// (get) Token: 0x0604319E RID: 274846 RVA: 0x0105A393 File Offset: 0x01058593
+		// Token: 0x17006B2B RID: 27435
+		// (get) Token: 0x06037CF6 RID: 228598 RVA: 0x00F9B9BF File Offset: 0x00F99BBF
 		public long GetUnlockTime
 		{
 			get
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x0604319F RID: 274847 RVA: 0x0105A39C File Offset: 0x0105859C
+		// Token: 0x06037CF7 RID: 228599 RVA: 0x00F9B9C8 File Offset: 0x00F99BC8
 		public EAnniversaryActivityState GetCurrentState()
 		{
 			ActivityBaseData activityData = this.GetActivityData();
@@ -75,16 +75,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return EAnniversaryActivityState.Unlock;
 		}
 
-		// Token: 0x060431A0 RID: 274848 RVA: 0x0105A3CA File Offset: 0x010585CA
+		// Token: 0x06037CF8 RID: 228600 RVA: 0x00F9B9F6 File Offset: 0x00F99BF6
 		public virtual void FirstClickOpenView()
 		{
 			ActivityController.Instance.OpenActivityById(this.ActivityId, EActivityViewOpenType.Other, null, null);
 		}
 
-		// Token: 0x060431A1 RID: 274849
+		// Token: 0x06037CF9 RID: 228601
 		public abstract ValueTuple<int, int> GetCurrentProgress();
 
-		// Token: 0x060431A2 RID: 274850 RVA: 0x0105A3E0 File Offset: 0x010585E0
+		// Token: 0x06037CFA RID: 228602 RVA: 0x00F9BA0C File Offset: 0x00F99C0C
 		public bool NeedPlayUnlockSequence()
 		{
 			if (ActivityModel.Instance.GetActivityById(this.ActivityId) == null)
@@ -95,13 +95,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return serverStorageSet == null || !serverStorageSet.Has(this.ActivityId);
 		}
 
-		// Token: 0x04022EEE RID: 143086
+		// Token: 0x0401D74A RID: 120650
 		protected int Id;
 
-		// Token: 0x04022EEF RID: 143087
+		// Token: 0x0401D74B RID: 120651
 		protected int ActivityId;
 
-		// Token: 0x04022EF0 RID: 143088
+		// Token: 0x0401D74C RID: 120652
 		protected long UnlockTime;
 	}
 }

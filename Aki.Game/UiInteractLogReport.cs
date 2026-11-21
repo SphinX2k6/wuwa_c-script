@@ -3,48 +3,48 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020034A5 RID: 13477
+// Token: 0x02002A19 RID: 10777
 public class UiInteractLogReport : IStaticVariableResetter
 {
-	// Token: 0x0601D573 RID: 120179 RVA: 0x0082DB05 File Offset: 0x0082BD05
+	// Token: 0x0601B270 RID: 111216 RVA: 0x00854CB1 File Offset: 0x00852EB1
 	static UiInteractLogReport()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiInteractLogReport.CreateStaticDefaultValue), new Action(UiInteractLogReport.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601D574 RID: 120180 RVA: 0x0082DB24 File Offset: 0x0082BD24
+	// Token: 0x0601B271 RID: 111217 RVA: 0x00854CD0 File Offset: 0x00852ED0
 	public static void CreateStaticDefaultValue()
 	{
 		UiInteractLogReport.RouletteData = new UiInteractRouletteData();
 		UiInteractLogReport.ChatData = new UiInteractChatData();
 	}
 
-	// Token: 0x0601D575 RID: 120181 RVA: 0x0082DB3A File Offset: 0x0082BD3A
+	// Token: 0x0601B272 RID: 111218 RVA: 0x00854CE6 File Offset: 0x00852EE6
 	public static void ResetStaticDefaultValue()
 	{
 		UiInteractLogReport.RouletteData = null;
 		UiInteractLogReport.ChatData = null;
 	}
 
-	// Token: 0x0601D576 RID: 120182 RVA: 0x0082DB48 File Offset: 0x0082BD48
+	// Token: 0x0601B273 RID: 111219 RVA: 0x00854CF4 File Offset: 0x00852EF4
 	private static bool IsGamepadInteract()
 	{
 		return Info.Instance.IsInGamepad();
 	}
 
-	// Token: 0x0601D577 RID: 120183 RVA: 0x0082DB54 File Offset: 0x0082BD54
+	// Token: 0x0601B274 RID: 111220 RVA: 0x00854D00 File Offset: 0x00852F00
 	private static bool IsKeyboardInteract()
 	{
 		return Info.Instance.IsInKeyBoard() && LguiEventSystemManager.Instance.LguiEventSystemActor.IsInNavigationInputType();
 	}
 
-	// Token: 0x0601D578 RID: 120184 RVA: 0x0082DB73 File Offset: 0x0082BD73
+	// Token: 0x0601B275 RID: 111221 RVA: 0x00854D1F File Offset: 0x00852F1F
 	private static bool IsMouseInteract()
 	{
 		return Info.Instance.IsInKeyBoard() && LguiEventSystemManager.Instance.LguiEventSystemActor.IsInPointerInputType();
 	}
 
-	// Token: 0x0601D579 RID: 120185 RVA: 0x0082DB94 File Offset: 0x0082BD94
+	// Token: 0x0601B276 RID: 111222 RVA: 0x00854D40 File Offset: 0x00852F40
 	public static void ReportSpaceKeyInteract(EUiInteractSpaceKeyType type)
 	{
 		if (Info.Instance.IsInTouch())
@@ -68,7 +68,7 @@ public class UiInteractLogReport : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601D57A RID: 120186 RVA: 0x0082DC02 File Offset: 0x0082BE02
+	// Token: 0x0601B277 RID: 111223 RVA: 0x00854DAE File Offset: 0x00852FAE
 	public static void RecordRouletteOpen()
 	{
 		if (UiInteractLogReport.RouletteData.IsStart)
@@ -83,7 +83,7 @@ public class UiInteractLogReport : IStaticVariableResetter
 		UiInteractLogReport.RouletteData.TriggerOpen();
 	}
 
-	// Token: 0x0601D57B RID: 120187 RVA: 0x0082DC34 File Offset: 0x0082BE34
+	// Token: 0x0601B278 RID: 111224 RVA: 0x00854DE0 File Offset: 0x00852FE0
 	public static void RecordRouletteClose()
 	{
 		if (!UiInteractLogReport.RouletteData.IsStart)
@@ -100,7 +100,7 @@ public class UiInteractLogReport : IStaticVariableResetter
 		LogReportController.Instance.LogReport(uiInteractRouletteLogEvent);
 	}
 
-	// Token: 0x0601D57C RID: 120188 RVA: 0x0082DCB9 File Offset: 0x0082BEB9
+	// Token: 0x0601B279 RID: 111225 RVA: 0x00854E65 File Offset: 0x00853065
 	public static void RecordChatOpen()
 	{
 		if (UiInteractLogReport.ChatData.IsStart)
@@ -115,7 +115,7 @@ public class UiInteractLogReport : IStaticVariableResetter
 		UiInteractLogReport.ChatData.TriggerOpen();
 	}
 
-	// Token: 0x0601D57D RID: 120189 RVA: 0x0082DCEC File Offset: 0x0082BEEC
+	// Token: 0x0601B27A RID: 111226 RVA: 0x00854E98 File Offset: 0x00853098
 	public static void RecordChatClose()
 	{
 		if (!UiInteractLogReport.ChatData.IsStart)
@@ -132,11 +132,11 @@ public class UiInteractLogReport : IStaticVariableResetter
 		LogReportController.Instance.LogReport(uiInteractChatLogEvent);
 	}
 
-	// Token: 0x0400E730 RID: 59184
+	// Token: 0x0400EBE4 RID: 60388
 	[Nullable(2)]
 	private static UiInteractRouletteData RouletteData;
 
-	// Token: 0x0400E731 RID: 59185
+	// Token: 0x0400EBE5 RID: 60389
 	[Nullable(2)]
 	private static UiInteractChatData ChatData;
 }

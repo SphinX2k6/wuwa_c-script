@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005180 RID: 20864
+	// Token: 0x020056E5 RID: 22245
 	public struct IEntityGroupFailureCondition : IFlatbufferObject
 	{
-		// Token: 0x17009871 RID: 39025
-		// (get) Token: 0x06021BC5 RID: 138181 RVA: 0x004AE6B5 File Offset: 0x004AC8B5
+		// Token: 0x1700A060 RID: 41056
+		// (get) Token: 0x06023B1D RID: 146205 RVA: 0x004E86D5 File Offset: 0x004E68D5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021BC6 RID: 138182 RVA: 0x004AE6C2 File Offset: 0x004AC8C2
+		// Token: 0x06023B1E RID: 146206 RVA: 0x004E86E2 File Offset: 0x004E68E2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021BC7 RID: 138183 RVA: 0x004AE6CC File Offset: 0x004AC8CC
+		// Token: 0x06023B1F RID: 146207 RVA: 0x004E86EC File Offset: 0x004E68EC
 		public static IEntityGroupFailureCondition GetRootAsIEntityGroupFailureCondition(ByteBuffer _bb)
 		{
 			return IEntityGroupFailureCondition.GetRootAsIEntityGroupFailureCondition(_bb, default(IEntityGroupFailureCondition));
 		}
 
-		// Token: 0x06021BC8 RID: 138184 RVA: 0x004AE6E8 File Offset: 0x004AC8E8
+		// Token: 0x06023B20 RID: 146208 RVA: 0x004E8708 File Offset: 0x004E6908
 		public static IEntityGroupFailureCondition GetRootAsIEntityGroupFailureCondition(ByteBuffer _bb, IEntityGroupFailureCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021BC9 RID: 138185 RVA: 0x004AE705 File Offset: 0x004AC905
+		// Token: 0x06023B21 RID: 146209 RVA: 0x004E8725 File Offset: 0x004E6925
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021BCA RID: 138186 RVA: 0x004AE714 File Offset: 0x004AC914
+		// Token: 0x06023B22 RID: 146210 RVA: 0x004E8734 File Offset: 0x004E6934
 		public IEntityGroupFailureCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009872 RID: 39026
-		// (get) Token: 0x06021BCB RID: 138187 RVA: 0x004AE724 File Offset: 0x004AC924
+		// Token: 0x1700A061 RID: 41057
+		// (get) Token: 0x06023B23 RID: 146211 RVA: 0x004E8744 File Offset: 0x004E6944
 		public EEntityGroupFailureCondition Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021BCC RID: 138188 RVA: 0x004AE760 File Offset: 0x004AC960
+		// Token: 0x06023B24 RID: 146212 RVA: 0x004E8780 File Offset: 0x004E6980
 		public static Offset<IEntityGroupFailureCondition> CreateIEntityGroupFailureCondition(FlatBufferBuilder builder, EEntityGroupFailureCondition Type = EEntityGroupFailureCondition.SequentialState)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityGroupFailureCondition.EndIEntityGroupFailureCondition(builder);
 		}
 
-		// Token: 0x06021BCD RID: 138189 RVA: 0x004AE776 File Offset: 0x004AC976
+		// Token: 0x06023B25 RID: 146213 RVA: 0x004E8796 File Offset: 0x004E6996
 		public static void StartIEntityGroupFailureCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06021BCE RID: 138190 RVA: 0x004AE77F File Offset: 0x004AC97F
+		// Token: 0x06023B26 RID: 146214 RVA: 0x004E879F File Offset: 0x004E699F
 		public static void AddType(FlatBufferBuilder builder, EEntityGroupFailureCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06021BCF RID: 138191 RVA: 0x004AE78A File Offset: 0x004AC98A
+		// Token: 0x06023B27 RID: 146215 RVA: 0x004E87AA File Offset: 0x004E69AA
 		public static Offset<IEntityGroupFailureCondition> EndIEntityGroupFailureCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IEntityGroupFailureCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06021BD0 RID: 138192 RVA: 0x004AE798 File Offset: 0x004AC998
+		// Token: 0x06023B28 RID: 146216 RVA: 0x004E87B8 File Offset: 0x004E69B8
 		public IEntityGroupFailureConditionT UnPack()
 		{
 			IEntityGroupFailureConditionT entityGroupFailureConditionT = new IEntityGroupFailureConditionT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return entityGroupFailureConditionT;
 		}
 
-		// Token: 0x06021BD1 RID: 138193 RVA: 0x004AE7B3 File Offset: 0x004AC9B3
+		// Token: 0x06023B29 RID: 146217 RVA: 0x004E87D3 File Offset: 0x004E69D3
 		public void UnPackTo(IEntityGroupFailureConditionT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06021BD2 RID: 138194 RVA: 0x004AE7C4 File Offset: 0x004AC9C4
+		// Token: 0x06023B2A RID: 146218 RVA: 0x004E87E4 File Offset: 0x004E69E4
 		public static Offset<IEntityGroupFailureCondition> Pack(FlatBufferBuilder builder, IEntityGroupFailureConditionT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityGroupFailureCondition.CreateIEntityGroupFailureCondition(builder, _o.Type);
 		}
 
-		// Token: 0x0400E24F RID: 57935
+		// Token: 0x0400EE4D RID: 61005
 		private Table __p;
 	}
 }

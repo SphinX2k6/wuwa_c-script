@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EC0 RID: 7872
+	// Token: 0x020020F9 RID: 8441
 	public class IStopGuestUiAnimation_SetValue
 	{
-		// Token: 0x04006467 RID: 25703
+		// Token: 0x04006A56 RID: 27222
 		public EGuestOperateUiAnimation Type;
 
-		// Token: 0x04006468 RID: 25704
-		[Nullable(1)]
+		// Token: 0x04006A57 RID: 27223
 		public IStopGuestCartethyia StopGuestUiAnimation;
 	}
 }

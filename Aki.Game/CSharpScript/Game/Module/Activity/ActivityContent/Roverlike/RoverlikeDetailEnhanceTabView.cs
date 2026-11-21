@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200612A RID: 24874
+	// Token: 0x020050A8 RID: 20648
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeDetailEnhanceTabView : UiTabViewBase
 	{
-		// Token: 0x0603EE25 RID: 257573 RVA: 0x00F303A0 File Offset: 0x00F2E5A0
+		// Token: 0x06033AE7 RID: 211687 RVA: 0x00E771B4 File Offset: 0x00E753B4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EE26 RID: 257574 RVA: 0x00F30538 File Offset: 0x00F2E738
+		// Token: 0x06033AE8 RID: 211688 RVA: 0x00E7734C File Offset: 0x00E7554C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeDetailEnhanceTabView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EE27 RID: 257575 RVA: 0x00F3057B File Offset: 0x00F2E77B
+		// Token: 0x06033AE9 RID: 211689 RVA: 0x00E7738F File Offset: 0x00E7558F
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(4);
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshList();
 		}
 
-		// Token: 0x0603EE28 RID: 257576 RVA: 0x00F30596 File Offset: 0x00F2E796
+		// Token: 0x06033AEA RID: 211690 RVA: 0x00E773AA File Offset: 0x00E755AA
 		protected override void OnShowUiTabViewFromToggle()
 		{
 			if (this.MultiList != null)
@@ -78,13 +78,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EE29 RID: 257577 RVA: 0x00F305A6 File Offset: 0x00F2E7A6
+		// Token: 0x06033AEB RID: 211691 RVA: 0x00E773BA File Offset: 0x00E755BA
 		protected override void OnBeforeDestroy()
 		{
 			this.MultiListAnimController = null;
 		}
 
-		// Token: 0x0603EE2A RID: 257578 RVA: 0x00F305B0 File Offset: 0x00F2E7B0
+		// Token: 0x06033AEC RID: 211692 RVA: 0x00E773C4 File Offset: 0x00E755C4
 		private void RefreshList()
 		{
 			this.ScrollDataList.Clear();
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ShowEmptyDetail();
 		}
 
-		// Token: 0x0603EE2B RID: 257579 RVA: 0x00F3073C File Offset: 0x00F2E93C
+		// Token: 0x06033AED RID: 211693 RVA: 0x00E77550 File Offset: 0x00E75750
 		private void PushTitle(string titleKey)
 		{
 			RoverlikeCollectTitleTemplateData roverlikeCollectTitleTemplateData = new RoverlikeCollectTitleTemplateData();
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ScrollDataList.Add(roverlikeCollectTitleTemplateData);
 		}
 
-		// Token: 0x0603EE2C RID: 257580 RVA: 0x00F30770 File Offset: 0x00F2E970
+		// Token: 0x06033AEE RID: 211694 RVA: 0x00E77584 File Offset: 0x00E75784
 		private int PushGrid(RoverlikeGainEntry entry)
 		{
 			RoverlikeEntryGridItemTemplateData roverlikeEntryGridItemTemplateData = new RoverlikeEntryGridItemTemplateData();
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return this.ScrollDataList.Count - 1;
 		}
 
-		// Token: 0x0603EE2D RID: 257581 RVA: 0x00F307C8 File Offset: 0x00F2E9C8
+		// Token: 0x06033AEF RID: 211695 RVA: 0x00E775DC File Offset: 0x00E757DC
 		private void PushEmpty(string txt)
 		{
 			RoverlikeCollectEmptyItemTemplateData roverlikeCollectEmptyItemTemplateData = new RoverlikeCollectEmptyItemTemplateData();
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ScrollDataList.Add(roverlikeCollectEmptyItemTemplateData);
 		}
 
-		// Token: 0x0603EE2E RID: 257582 RVA: 0x00F307FC File Offset: 0x00F2E9FC
+		// Token: 0x06033AF0 RID: 211696 RVA: 0x00E77610 File Offset: 0x00E75810
 		private void SelectByGridIndex(int gridIndex)
 		{
 			int selectedGridIndex = this.SelectedGridIndex;
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EE2F RID: 257583 RVA: 0x00F30880 File Offset: 0x00F2EA80
+		// Token: 0x06033AF1 RID: 211697 RVA: 0x00E77694 File Offset: 0x00E75894
 		[NullableContext(2)]
 		private void RefreshDetail(RoverlikeGainEntry entry)
 		{
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EE30 RID: 257584 RVA: 0x00F30974 File Offset: 0x00F2EB74
+		// Token: 0x06033AF2 RID: 211698 RVA: 0x00E77788 File Offset: 0x00E75988
 		private void ShowEmptyDetail()
 		{
 			UUIItem item = base.GetItem(6);
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			item4.SetUIActive(true);
 		}
 
-		// Token: 0x0603EE31 RID: 257585 RVA: 0x00F309CD File Offset: 0x00F2EBCD
+		// Token: 0x06033AF3 RID: 211699 RVA: 0x00E777E1 File Offset: 0x00E759E1
 		private void OnGridClick(RoverlikeGainEntry data, int gridIndex)
 		{
 			if (gridIndex == this.SelectedGridIndex)
@@ -306,59 +306,59 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SelectByGridIndex(gridIndex);
 		}
 
-		// Token: 0x0603EE32 RID: 257586 RVA: 0x00F309E0 File Offset: 0x00F2EBE0
+		// Token: 0x06033AF4 RID: 211700 RVA: 0x00E777F4 File Offset: 0x00E759F4
 		private bool IsGridSelected(RoverlikeGainEntry data, int gridIndex)
 		{
 			return gridIndex == this.SelectedGridIndex;
 		}
 
-		// Token: 0x04020D4D RID: 134477
+		// Token: 0x0401B67A RID: 112250
 		[Nullable(2)]
 		private MultiTemplateScrollView MultiList;
 
-		// Token: 0x04020D4E RID: 134478
+		// Token: 0x0401B67B RID: 112251
 		[Nullable(2)]
 		private UUIInturnAnimController MultiListAnimController;
 
-		// Token: 0x04020D4F RID: 134479
+		// Token: 0x0401B67C RID: 112252
 		[Nullable(2)]
 		private RoverlikeReinforcementCardItem ReinforceCard;
 
-		// Token: 0x04020D50 RID: 134480
+		// Token: 0x0401B67D RID: 112253
 		[Nullable(2)]
 		private RoverlikePropCardItem PropCard;
 
-		// Token: 0x04020D51 RID: 134481
+		// Token: 0x0401B67E RID: 112254
 		private readonly List<IMultiTemplateGridData> ScrollDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x04020D52 RID: 134482
+		// Token: 0x0401B67F RID: 112255
 		private int SelectedGridIndex = -1;
 
-		// Token: 0x0200C384 RID: 50052
+		// Token: 0x0200AD6C RID: 44396
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403B00E RID: 241678
+			// Token: 0x04035973 RID: 219507
 			SvMulti,
-			// Token: 0x0403B00F RID: 241679
+			// Token: 0x04035974 RID: 219508
 			PanelTitle,
-			// Token: 0x0403B010 RID: 241680
+			// Token: 0x04035975 RID: 219509
 			ItemBaseGrid,
-			// Token: 0x0403B011 RID: 241681
+			// Token: 0x04035976 RID: 219510
 			PanelEmpty,
-			// Token: 0x0403B012 RID: 241682
+			// Token: 0x04035977 RID: 219511
 			ItemBlessDetail,
-			// Token: 0x0403B013 RID: 241683
+			// Token: 0x04035978 RID: 219512
 			ItemPropDetail,
-			// Token: 0x0403B014 RID: 241684
+			// Token: 0x04035979 RID: 219513
 			ItemReinforceDetail,
-			// Token: 0x0403B015 RID: 241685
+			// Token: 0x0403597A RID: 219514
 			PanelEmptySlot,
-			// Token: 0x0403B016 RID: 241686
+			// Token: 0x0403597B RID: 219515
 			SprEmptyIcon,
-			// Token: 0x0403B017 RID: 241687
+			// Token: 0x0403597C RID: 219516
 			TxtEmptyName,
-			// Token: 0x0403B018 RID: 241688
+			// Token: 0x0403597D RID: 219517
 			PanelEmptyGeneral
 		}
 	}

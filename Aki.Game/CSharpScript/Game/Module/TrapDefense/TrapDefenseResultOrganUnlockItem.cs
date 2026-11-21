@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AA9 RID: 19113
+	// Token: 0x02003A51 RID: 14929
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseResultOrganUnlockItem : GridProxyAbstract<ITrapDefenseResultUnlockInfo>
 	{
-		// Token: 0x06031861 RID: 202849 RVA: 0x00B7B6AC File Offset: 0x00B798AC
+		// Token: 0x060265F1 RID: 157169 RVA: 0x00ABF660 File Offset: 0x00ABD860
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -42,13 +42,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031862 RID: 202850 RVA: 0x00B7B794 File Offset: 0x00B79994
+		// Token: 0x060265F2 RID: 157170 RVA: 0x00ABF748 File Offset: 0x00ABD948
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetItem(3));
 		}
 
-		// Token: 0x06031863 RID: 202851 RVA: 0x00B7B7A8 File Offset: 0x00B799A8
+		// Token: 0x060265F3 RID: 157171 RVA: 0x00ABF75C File Offset: 0x00ABD95C
 		public override void Refresh(ITrapDefenseResultUnlockInfo data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.Data.IsNewUnlock = null;
 		}
 
-		// Token: 0x06031864 RID: 202852 RVA: 0x00B7B887 File Offset: 0x00B79A87
+		// Token: 0x060265F4 RID: 157172 RVA: 0x00ABF83B File Offset: 0x00ABDA3B
 		private void OnClicked()
 		{
 			if (this.Data.Type != ETrapDefenseResultUnlockType.Organ)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			UiManager.Instance.OpenView(EUiViewName.TrapDefenseBuildingMachineInfoView, this.OrganData, null);
 		}
 
-		// Token: 0x06031865 RID: 202853 RVA: 0x00B7B8B0 File Offset: 0x00B79AB0
+		// Token: 0x060265F5 RID: 157173 RVA: 0x00ABF864 File Offset: 0x00ABDA64
 		public void PlayUnlockAnim()
 		{
 			if (this.Data.Type != ETrapDefenseResultUnlockType.Organ)
@@ -95,13 +95,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.LevelSequencePlayer.PlayOrReplaySequenceByName("Unlock", false, null);
 		}
 
-		// Token: 0x0401A78C RID: 108428
+		// Token: 0x040150DE RID: 86238
 		protected ITrapDefenseResultUnlockInfo Data;
 
-		// Token: 0x0401A78D RID: 108429
+		// Token: 0x040150DF RID: 86239
 		protected TrapDefenseBuildingDevelopItemData OrganData;
 
-		// Token: 0x0401A78E RID: 108430
+		// Token: 0x040150E0 RID: 86240
 		protected LevelSequencePlayer LevelSequencePlayer;
 	}
 }

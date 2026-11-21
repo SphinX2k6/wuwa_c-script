@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002867 RID: 10343
+	// Token: 0x02000822 RID: 2082
 	[UnrealObjectPath("/Script/SMSystem.ASMConditionBase")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 56)]
-	public abstract class UASMConditionBase : UObject, IUnrealUObject, IUnrealObject
+	public abstract class UASMConditionBase : UASMConfigBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602655A RID: 157018 RVA: 0x003A3B7E File Offset: 0x003A1D7E
+		// Token: 0x0600B603 RID: 46595 RVA: 0x0012183E File Offset: 0x0011FA3E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UASMConditionBase._ClassPtr;
 		}
 
-		// Token: 0x170093F7 RID: 37879
-		// (get) Token: 0x0602655B RID: 157019 RVA: 0x003A3B8A File Offset: 0x003A1D8A
-		// (set) Token: 0x0602655C RID: 157020 RVA: 0x003A3B9A File Offset: 0x003A1D9A
+		// Token: 0x17002215 RID: 8725
+		// (get) Token: 0x0600B604 RID: 46596 RVA: 0x0012184A File Offset: 0x0011FA4A
+		// (set) Token: 0x0600B605 RID: 46597 RVA: 0x0012185A File Offset: 0x0011FA5A
 		public unsafe bool Reverse
 		{
 			get
@@ -32,33 +32,33 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0602655D RID: 157021 RVA: 0x003A3BAB File Offset: 0x003A1DAB
+		// Token: 0x0600B606 RID: 46598 RVA: 0x0012186B File Offset: 0x0011FA6B
 		static UASMConditionBase()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SMSystem.ASMConditionBase");
 		}
 
-		// Token: 0x0602655E RID: 157022 RVA: 0x003A3BBC File Offset: 0x003A1DBC
+		// Token: 0x0600B607 RID: 46599 RVA: 0x0012187C File Offset: 0x0011FA7C
 		protected UASMConditionBase() : this(BuiltinUtils.AllocNativeUObject(UASMConditionBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602655F RID: 157023 RVA: 0x003A3BE4 File Offset: 0x003A1DE4
+		// Token: 0x0600B608 RID: 46600 RVA: 0x001218A4 File Offset: 0x0011FAA4
 		protected UASMConditionBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04015053 RID: 86099
+		// Token: 0x0400523F RID: 21055
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/SMSystem.ASMConditionBase";
 
-		// Token: 0x04015054 RID: 86100
+		// Token: 0x04005240 RID: 21056
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04015055 RID: 86101
+		// Token: 0x04005241 RID: 21057
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04015056 RID: 86102
+		// Token: 0x04005242 RID: 21058
 		internal static int __PropertyOffset_Reverse;
 	}
 }

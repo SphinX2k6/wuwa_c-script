@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051AD RID: 20909
+	// Token: 0x02005712 RID: 22290
 	public struct IEntityScanFunction : IFlatbufferObject
 	{
-		// Token: 0x170098CB RID: 39115
-		// (get) Token: 0x06021D7B RID: 138619 RVA: 0x004B1C97 File Offset: 0x004AFE97
+		// Token: 0x1700A0BA RID: 41146
+		// (get) Token: 0x06023CD3 RID: 146643 RVA: 0x004EBCFF File Offset: 0x004E9EFF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021D7C RID: 138620 RVA: 0x004B1CA4 File Offset: 0x004AFEA4
+		// Token: 0x06023CD4 RID: 146644 RVA: 0x004EBD0C File Offset: 0x004E9F0C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021D7D RID: 138621 RVA: 0x004B1CAC File Offset: 0x004AFEAC
+		// Token: 0x06023CD5 RID: 146645 RVA: 0x004EBD14 File Offset: 0x004E9F14
 		public static IEntityScanFunction GetRootAsIEntityScanFunction(ByteBuffer _bb)
 		{
 			return IEntityScanFunction.GetRootAsIEntityScanFunction(_bb, default(IEntityScanFunction));
 		}
 
-		// Token: 0x06021D7E RID: 138622 RVA: 0x004B1CC8 File Offset: 0x004AFEC8
+		// Token: 0x06023CD6 RID: 146646 RVA: 0x004EBD30 File Offset: 0x004E9F30
 		public static IEntityScanFunction GetRootAsIEntityScanFunction(ByteBuffer _bb, IEntityScanFunction obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021D7F RID: 138623 RVA: 0x004B1CE5 File Offset: 0x004AFEE5
+		// Token: 0x06023CD7 RID: 146647 RVA: 0x004EBD4D File Offset: 0x004E9F4D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021D80 RID: 138624 RVA: 0x004B1CF4 File Offset: 0x004AFEF4
+		// Token: 0x06023CD8 RID: 146648 RVA: 0x004EBD5C File Offset: 0x004E9F5C
 		public IEntityScanFunction __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170098CC RID: 39116
-		// (get) Token: 0x06021D81 RID: 138625 RVA: 0x004B1D04 File Offset: 0x004AFF04
+		// Token: 0x1700A0BB RID: 41147
+		// (get) Token: 0x06023CD9 RID: 146649 RVA: 0x004EBD6C File Offset: 0x004E9F6C
 		public int ScanId
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170098CD RID: 39117
-		// (get) Token: 0x06021D82 RID: 138626 RVA: 0x004B1D40 File Offset: 0x004AFF40
+		// Token: 0x1700A0BC RID: 41148
+		// (get) Token: 0x06023CDA RID: 146650 RVA: 0x004EBDA8 File Offset: 0x004E9FA8
 		public bool IsConcealed
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170098CE RID: 39118
-		// (get) Token: 0x06021D83 RID: 138627 RVA: 0x004B1D80 File Offset: 0x004AFF80
+		// Token: 0x1700A0BD RID: 41149
+		// (get) Token: 0x06023CDB RID: 146651 RVA: 0x004EBDE8 File Offset: 0x004E9FE8
 		public IScanTraceEffect? TraceEffect
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170098CF RID: 39119
-		// (get) Token: 0x06021D84 RID: 138628 RVA: 0x004B1DE0 File Offset: 0x004AFFE0
+		// Token: 0x1700A0BE RID: 41150
+		// (get) Token: 0x06023CDC RID: 146652 RVA: 0x004EBE48 File Offset: 0x004EA048
 		public ESpecificScanType SpecificScanType
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170098D0 RID: 39120
-		// (get) Token: 0x06021D85 RID: 138629 RVA: 0x004B1E20 File Offset: 0x004B0020
+		// Token: 0x1700A0BF RID: 41151
+		// (get) Token: 0x06023CDD RID: 146653 RVA: 0x004EBE88 File Offset: 0x004EA088
 		public byte NullMask
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021D86 RID: 138630 RVA: 0x004B1E5D File Offset: 0x004B005D
+		// Token: 0x06023CDE RID: 146654 RVA: 0x004EBEC5 File Offset: 0x004EA0C5
 		public static Offset<IEntityScanFunction> CreateIEntityScanFunction(FlatBufferBuilder builder, int ScanId = 0, bool IsConcealed = false, Offset<IScanTraceEffect> TraceEffectOffset = default(Offset<IScanTraceEffect>), ESpecificScanType SpecificScanType = ESpecificScanType.None, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -131,49 +131,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityScanFunction.EndIEntityScanFunction(builder);
 		}
 
-		// Token: 0x06021D87 RID: 138631 RVA: 0x004B1E91 File Offset: 0x004B0091
+		// Token: 0x06023CDF RID: 146655 RVA: 0x004EBEF9 File Offset: 0x004EA0F9
 		public static void StartIEntityScanFunction(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06021D88 RID: 138632 RVA: 0x004B1E9A File Offset: 0x004B009A
+		// Token: 0x06023CE0 RID: 146656 RVA: 0x004EBF02 File Offset: 0x004EA102
 		public static void AddScanId(FlatBufferBuilder builder, int scanId)
 		{
 			builder.AddInt(0, scanId, 0);
 		}
 
-		// Token: 0x06021D89 RID: 138633 RVA: 0x004B1EA5 File Offset: 0x004B00A5
+		// Token: 0x06023CE1 RID: 146657 RVA: 0x004EBF0D File Offset: 0x004EA10D
 		public static void AddIsConcealed(FlatBufferBuilder builder, bool isConcealed)
 		{
 			builder.AddBool(1, isConcealed, false);
 		}
 
-		// Token: 0x06021D8A RID: 138634 RVA: 0x004B1EB0 File Offset: 0x004B00B0
+		// Token: 0x06023CE2 RID: 146658 RVA: 0x004EBF18 File Offset: 0x004EA118
 		public static void AddTraceEffect(FlatBufferBuilder builder, Offset<IScanTraceEffect> traceEffectOffset)
 		{
 			builder.AddOffset(2, traceEffectOffset.Value, 0);
 		}
 
-		// Token: 0x06021D8B RID: 138635 RVA: 0x004B1EC0 File Offset: 0x004B00C0
+		// Token: 0x06023CE3 RID: 146659 RVA: 0x004EBF28 File Offset: 0x004EA128
 		public static void AddSpecificScanType(FlatBufferBuilder builder, ESpecificScanType specificScanType)
 		{
 			builder.AddByte(3, (byte)specificScanType, 0);
 		}
 
-		// Token: 0x06021D8C RID: 138636 RVA: 0x004B1ECB File Offset: 0x004B00CB
+		// Token: 0x06023CE4 RID: 146660 RVA: 0x004EBF33 File Offset: 0x004EA133
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06021D8D RID: 138637 RVA: 0x004B1ED6 File Offset: 0x004B00D6
+		// Token: 0x06023CE5 RID: 146661 RVA: 0x004EBF3E File Offset: 0x004EA13E
 		public static Offset<IEntityScanFunction> EndIEntityScanFunction(FlatBufferBuilder builder)
 		{
 			return new Offset<IEntityScanFunction>(builder.EndTable());
 		}
 
-		// Token: 0x06021D8E RID: 138638 RVA: 0x004B1EE4 File Offset: 0x004B00E4
+		// Token: 0x06023CE6 RID: 146662 RVA: 0x004EBF4C File Offset: 0x004EA14C
 		public IEntityScanFunctionT UnPack()
 		{
 			IEntityScanFunctionT entityScanFunctionT = new IEntityScanFunctionT();
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return entityScanFunctionT;
 		}
 
-		// Token: 0x06021D8F RID: 138639 RVA: 0x004B1F00 File Offset: 0x004B0100
+		// Token: 0x06023CE7 RID: 146663 RVA: 0x004EBF68 File Offset: 0x004EA168
 		public void UnPackTo(IEntityScanFunctionT _o)
 		{
 			_o.ScanId = this.ScanId;
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06021D90 RID: 138640 RVA: 0x004B1F6C File Offset: 0x004B016C
+		// Token: 0x06023CE8 RID: 146664 RVA: 0x004EBFD4 File Offset: 0x004EA1D4
 		public static Offset<IEntityScanFunction> Pack(FlatBufferBuilder builder, IEntityScanFunctionT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityScanFunction.CreateIEntityScanFunction(builder, _o.ScanId, _o.IsConcealed, traceEffectOffset, _o.SpecificScanType, _o.NullMask);
 		}
 
-		// Token: 0x0400E290 RID: 58000
+		// Token: 0x0400EE8E RID: 61070
 		private Table __p;
 	}
 }

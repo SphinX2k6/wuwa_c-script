@@ -4,17 +4,17 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200494F RID: 18767
+	// Token: 0x020038C7 RID: 14535
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ClickBtnInsideComponent : HotKeyComponent
 	{
-		// Token: 0x06030FDE RID: 200670 RVA: 0x00B608BE File Offset: 0x00B5EABE
+		// Token: 0x06025B0E RID: 154382 RVA: 0x00A9B79E File Offset: 0x00A9999E
 		public ClickBtnInsideComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06030FDF RID: 200671 RVA: 0x00B608C8 File Offset: 0x00B5EAC8
+		// Token: 0x06025B0F RID: 154383 RVA: 0x00A9B7A8 File Offset: 0x00A999A8
 		private void ClickButtonInside(ENavigationDirectionType direction)
 		{
 			if (base.IsAxisAllDirection())
@@ -33,25 +33,25 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030FE0 RID: 200672 RVA: 0x00B60927 File Offset: 0x00B5EB27
+		// Token: 0x06025B10 RID: 154384 RVA: 0x00A9B807 File Offset: 0x00A99A07
 		protected override void OnPress(HotKeyMap config)
 		{
 			UiNavigationNewController.Instance.ClickButtonInside(config.BindButtonTag);
 		}
 
-		// Token: 0x06030FE1 RID: 200673 RVA: 0x00B6093A File Offset: 0x00B5EB3A
+		// Token: 0x06025B11 RID: 154385 RVA: 0x00A9B81A File Offset: 0x00A99A1A
 		protected override void OnStartInputAxis(string axisName)
 		{
 			UiNavigationJoystickInput.RegisterLeftJoystickFunction(new Action<ENavigationDirectionType>(this.ClickButtonInside));
 		}
 
-		// Token: 0x06030FE2 RID: 200674 RVA: 0x00B6094D File Offset: 0x00B5EB4D
+		// Token: 0x06025B12 RID: 154386 RVA: 0x00A9B82D File Offset: 0x00A99A2D
 		protected override void OnFinishInputAxis(string axisName)
 		{
 			UiNavigationJoystickInput.UnRegisterLeftJoystickFunction(new Action<ENavigationDirectionType>(this.ClickButtonInside));
 		}
 
-		// Token: 0x06030FE3 RID: 200675 RVA: 0x00B60960 File Offset: 0x00B5EB60
+		// Token: 0x06025B13 RID: 154387 RVA: 0x00A9B840 File Offset: 0x00A99A40
 		protected override void OnRefreshHotKeyText(UiNavigationViewHandle viewHandle)
 		{
 			string bindButtonTag = base.GetBindButtonTag();
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.ResetHotKeyDescTextForce();
 		}
 
-		// Token: 0x06030FE4 RID: 200676 RVA: 0x00B609C8 File Offset: 0x00B5EBC8
+		// Token: 0x06025B14 RID: 154388 RVA: 0x00A9B8A8 File Offset: 0x00A99AA8
 		protected override void OnRefreshHotKeyTextId(UiNavigationViewHandle viewHandle)
 		{
 			if (this.CurComponent.GetIsForceSetText())
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.RefreshHotKeyNameText();
 		}
 
-		// Token: 0x06030FE5 RID: 200677 RVA: 0x00B60A30 File Offset: 0x00B5EC30
+		// Token: 0x06025B15 RID: 154389 RVA: 0x00A9B910 File Offset: 0x00A99B10
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
 			string bindButtonTag = base.GetBindButtonTag();

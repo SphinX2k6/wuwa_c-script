@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006424 RID: 25636
+	// Token: 0x02006A9E RID: 27294
 	public struct IClosePathLineMove : IFlatbufferObject
 	{
-		// Token: 0x1700BEE5 RID: 48869
-		// (get) Token: 0x0602C5C7 RID: 181703 RVA: 0x00616518 File Offset: 0x00614718
+		// Token: 0x1700C877 RID: 51319
+		// (get) Token: 0x0602ED75 RID: 191861 RVA: 0x0066202C File Offset: 0x0066022C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C5C8 RID: 181704 RVA: 0x00616525 File Offset: 0x00614725
+		// Token: 0x0602ED76 RID: 191862 RVA: 0x00662039 File Offset: 0x00660239
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C5C9 RID: 181705 RVA: 0x0061652C File Offset: 0x0061472C
+		// Token: 0x0602ED77 RID: 191863 RVA: 0x00662040 File Offset: 0x00660240
 		public static IClosePathLineMove GetRootAsIClosePathLineMove(ByteBuffer _bb)
 		{
 			return IClosePathLineMove.GetRootAsIClosePathLineMove(_bb, default(IClosePathLineMove));
 		}
 
-		// Token: 0x0602C5CA RID: 181706 RVA: 0x00616548 File Offset: 0x00614748
+		// Token: 0x0602ED78 RID: 191864 RVA: 0x0066205C File Offset: 0x0066025C
 		public static IClosePathLineMove GetRootAsIClosePathLineMove(ByteBuffer _bb, IClosePathLineMove obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C5CB RID: 181707 RVA: 0x00616565 File Offset: 0x00614765
+		// Token: 0x0602ED79 RID: 191865 RVA: 0x00662079 File Offset: 0x00660279
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C5CC RID: 181708 RVA: 0x00616574 File Offset: 0x00614774
+		// Token: 0x0602ED7A RID: 191866 RVA: 0x00662088 File Offset: 0x00660288
 		public IClosePathLineMove __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BEE6 RID: 48870
-		// (get) Token: 0x0602C5CD RID: 181709 RVA: 0x00616584 File Offset: 0x00614784
+		// Token: 0x1700C878 RID: 51320
+		// (get) Token: 0x0602ED7B RID: 191867 RVA: 0x00662098 File Offset: 0x00660298
 		public ESplineMovePattern Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BEE7 RID: 48871
-		// (get) Token: 0x0602C5CE RID: 181710 RVA: 0x006165C0 File Offset: 0x006147C0
+		// Token: 0x1700C879 RID: 51321
+		// (get) Token: 0x0602ED7C RID: 191868 RVA: 0x006620D4 File Offset: 0x006602D4
 		public float GravitySwitchAngularVelocity
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BEE8 RID: 48872
-		// (get) Token: 0x0602C5CF RID: 181711 RVA: 0x00616600 File Offset: 0x00614800
+		// Token: 0x1700C87A RID: 51322
+		// (get) Token: 0x0602ED7D RID: 191869 RVA: 0x00662114 File Offset: 0x00660314
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C5D0 RID: 181712 RVA: 0x0061663C File Offset: 0x0061483C
+		// Token: 0x0602ED7E RID: 191870 RVA: 0x00662150 File Offset: 0x00660350
 		public static Offset<IClosePathLineMove> CreateIClosePathLineMove(FlatBufferBuilder builder, ESplineMovePattern Type = ESplineMovePattern.PathLine, float GravitySwitchAngularVelocity = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClosePathLineMove.EndIClosePathLineMove(builder);
 		}
 
-		// Token: 0x0602C5D1 RID: 181713 RVA: 0x00616660 File Offset: 0x00614860
+		// Token: 0x0602ED7F RID: 191871 RVA: 0x00662174 File Offset: 0x00660374
 		public static void StartIClosePathLineMove(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602C5D2 RID: 181714 RVA: 0x00616669 File Offset: 0x00614869
+		// Token: 0x0602ED80 RID: 191872 RVA: 0x0066217D File Offset: 0x0066037D
 		public static void AddType(FlatBufferBuilder builder, ESplineMovePattern type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602C5D3 RID: 181715 RVA: 0x00616674 File Offset: 0x00614874
+		// Token: 0x0602ED81 RID: 191873 RVA: 0x00662188 File Offset: 0x00660388
 		public static void AddGravitySwitchAngularVelocity(FlatBufferBuilder builder, float gravitySwitchAngularVelocity)
 		{
 			builder.AddFloat(1, gravitySwitchAngularVelocity, 0.0);
 		}
 
-		// Token: 0x0602C5D4 RID: 181716 RVA: 0x00616687 File Offset: 0x00614887
+		// Token: 0x0602ED82 RID: 191874 RVA: 0x0066219B File Offset: 0x0066039B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602C5D5 RID: 181717 RVA: 0x00616692 File Offset: 0x00614892
+		// Token: 0x0602ED83 RID: 191875 RVA: 0x006621A6 File Offset: 0x006603A6
 		public static Offset<IClosePathLineMove> EndIClosePathLineMove(FlatBufferBuilder builder)
 		{
 			return new Offset<IClosePathLineMove>(builder.EndTable());
 		}
 
-		// Token: 0x0602C5D6 RID: 181718 RVA: 0x006166A0 File Offset: 0x006148A0
+		// Token: 0x0602ED84 RID: 191876 RVA: 0x006621B4 File Offset: 0x006603B4
 		public IClosePathLineMoveT UnPack()
 		{
 			IClosePathLineMoveT closePathLineMoveT = new IClosePathLineMoveT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return closePathLineMoveT;
 		}
 
-		// Token: 0x0602C5D7 RID: 181719 RVA: 0x006166BB File Offset: 0x006148BB
+		// Token: 0x0602ED85 RID: 191877 RVA: 0x006621CF File Offset: 0x006603CF
 		public void UnPackTo(IClosePathLineMoveT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602C5D8 RID: 181720 RVA: 0x006166E4 File Offset: 0x006148E4
+		// Token: 0x0602ED86 RID: 191878 RVA: 0x006621F8 File Offset: 0x006603F8
 		public static Offset<IClosePathLineMove> Pack(FlatBufferBuilder builder, IClosePathLineMoveT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClosePathLineMove.CreateIClosePathLineMove(builder, _o.Type, _o.GravitySwitchAngularVelocity, _o.NullMask);
 		}
 
-		// Token: 0x04010A15 RID: 68117
+		// Token: 0x04011836 RID: 71734
 		private Table __p;
 	}
 }

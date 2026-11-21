@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200130F RID: 4879
+// Token: 0x020007C3 RID: 1987
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class EditTeamItem : GridProxyAbstract<EditTeamData>
 {
-	// Token: 0x06008728 RID: 34600 RVA: 0x001CD64C File Offset: 0x001CB84C
+	// Token: 0x06005AC3 RID: 23235 RVA: 0x001D64B8 File Offset: 0x001D46B8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ public class EditTeamItem : GridProxyAbstract<EditTeamData>
 		};
 	}
 
-	// Token: 0x06008729 RID: 34601 RVA: 0x001CD7AC File Offset: 0x001CB9AC
+	// Token: 0x06005AC4 RID: 23236 RVA: 0x001D6618 File Offset: 0x001D4818
 	private UniTask InitCharacterItem(UUIItem uiItem)
 	{
 		EditTeamItem.<InitCharacterItem>d__8 <InitCharacterItem>d__;
@@ -53,7 +53,7 @@ public class EditTeamItem : GridProxyAbstract<EditTeamData>
 		return <InitCharacterItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600872A RID: 34602 RVA: 0x001CD7F8 File Offset: 0x001CB9F8
+	// Token: 0x06005AC5 RID: 23237 RVA: 0x001D6664 File Offset: 0x001D4864
 	protected override UniTask OnBeforeStartAsync()
 	{
 		EditTeamItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -64,7 +64,7 @@ public class EditTeamItem : GridProxyAbstract<EditTeamData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600872B RID: 34603 RVA: 0x001CD83C File Offset: 0x001CBA3C
+	// Token: 0x06005AC6 RID: 23238 RVA: 0x001D66A8 File Offset: 0x001D48A8
 	public override void Refresh(EditTeamData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -97,7 +97,7 @@ public class EditTeamItem : GridProxyAbstract<EditTeamData>
 		this.RefreshRedDot(this.Data.Id);
 	}
 
-	// Token: 0x0600872C RID: 34604 RVA: 0x001CD9DC File Offset: 0x001CBBDC
+	// Token: 0x06005AC7 RID: 23239 RVA: 0x001D6848 File Offset: 0x001D4A48
 	public void RefreshRedDot(int roleId)
 	{
 		bool flag = MoonChasingModel.Instance.CheckRoleIdRedDotState(roleId);
@@ -109,7 +109,7 @@ public class EditTeamItem : GridProxyAbstract<EditTeamData>
 		base.GetItem(11).SetUIActive(this.RedDotState);
 	}
 
-	// Token: 0x0600872D RID: 34605 RVA: 0x001CDA19 File Offset: 0x001CBC19
+	// Token: 0x06005AC8 RID: 23240 RVA: 0x001D6885 File Offset: 0x001D4A85
 	private void ReadRedDot()
 	{
 		if (!this.RedDotState)
@@ -124,119 +124,119 @@ public class EditTeamItem : GridProxyAbstract<EditTeamData>
 		this.RefreshRedDot(this.Data.Id);
 	}
 
-	// Token: 0x0600872E RID: 34606 RVA: 0x001CDA58 File Offset: 0x001CBC58
+	// Token: 0x06005AC9 RID: 23241 RVA: 0x001D68C4 File Offset: 0x001D4AC4
 	private void OnToggle(EToggleState state)
 	{
 		this.ReadRedDot();
 		this.OnClickEvent(this.Data.Id, state == EToggleState.ETT_Checked, base.GridIndex);
 	}
 
-	// Token: 0x0600872F RID: 34607 RVA: 0x001CDA80 File Offset: 0x001CBC80
+	// Token: 0x06005ACA RID: 23242 RVA: 0x001D68EC File Offset: 0x001D4AEC
 	private bool OnCanExecuteChange()
 	{
 		EToggleState toggleState = base.GetExtendToggle(0).ToggleState;
 		return this.CanExecuteChange == null || this.CanExecuteChange(this.Data.Id, toggleState);
 	}
 
-	// Token: 0x06008730 RID: 34608 RVA: 0x001CDABB File Offset: 0x001CBCBB
+	// Token: 0x06005ACB RID: 23243 RVA: 0x001D6927 File Offset: 0x001D4B27
 	public void SetClickEvent(TEditTeamClick onClickEvent)
 	{
 		this.OnClickEvent = onClickEvent;
 	}
 
-	// Token: 0x06008731 RID: 34609 RVA: 0x001CDAC4 File Offset: 0x001CBCC4
+	// Token: 0x06005ACC RID: 23244 RVA: 0x001D6930 File Offset: 0x001D4B30
 	[NullableContext(2)]
 	public void SetCanExecuteChange(TEditTeamCanExecuteChange canExecuteChange)
 	{
 		this.CanExecuteChange = canExecuteChange;
 	}
 
-	// Token: 0x06008732 RID: 34610 RVA: 0x001CDACD File Offset: 0x001CBCCD
+	// Token: 0x06005ACD RID: 23245 RVA: 0x001D6939 File Offset: 0x001D4B39
 	[NullableContext(2)]
 	public void SetIsItemSelected(TEditTeamItemSelected isItemSelected)
 	{
 		this.IsItemSelected = isItemSelected;
 	}
 
-	// Token: 0x06008733 RID: 34611 RVA: 0x001CDAD6 File Offset: 0x001CBCD6
+	// Token: 0x06005ACE RID: 23246 RVA: 0x001D6942 File Offset: 0x001D4B42
 	public void SetToggleState(bool isSelected, bool bFireEvent = false)
 	{
 		base.GetExtendToggle(0).SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, bFireEvent, false, false);
 	}
 
-	// Token: 0x06008734 RID: 34612 RVA: 0x001CDAEF File Offset: 0x001CBCEF
+	// Token: 0x06005ACF RID: 23247 RVA: 0x001D695B File Offset: 0x001D4B5B
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true, fireEvent);
 	}
 
-	// Token: 0x06008735 RID: 34613 RVA: 0x001CDAF9 File Offset: 0x001CBCF9
+	// Token: 0x06005AD0 RID: 23248 RVA: 0x001D6965 File Offset: 0x001D4B65
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false, false);
 	}
 
-	// Token: 0x04003C57 RID: 15447
+	// Token: 0x04003CEF RID: 15599
 	protected List<CharacterItem> CharacterList = new List<CharacterItem>();
 
-	// Token: 0x04003C58 RID: 15448
+	// Token: 0x04003CF0 RID: 15600
 	protected TEditTeamClick OnClickEvent;
 
-	// Token: 0x04003C59 RID: 15449
+	// Token: 0x04003CF1 RID: 15601
 	[Nullable(2)]
 	protected TEditTeamCanExecuteChange CanExecuteChange;
 
-	// Token: 0x04003C5A RID: 15450
+	// Token: 0x04003CF2 RID: 15602
 	[Nullable(2)]
 	protected TEditTeamItemSelected IsItemSelected;
 
-	// Token: 0x04003C5B RID: 15451
+	// Token: 0x04003CF3 RID: 15603
 	protected EditTeamData Data;
 
-	// Token: 0x04003C5C RID: 15452
+	// Token: 0x04003CF4 RID: 15604
 	protected bool RedDotState;
 
-	// Token: 0x0200794B RID: 31051
+	// Token: 0x02006AD5 RID: 27349
 	[NullableContext(0)]
 	private static class EEditTeamItem
 	{
-		// Token: 0x04027F2E RID: 163630
+		// Token: 0x0402325B RID: 143963
 		public const int Toggle = 0;
 
-		// Token: 0x04027F2F RID: 163631
+		// Token: 0x0402325C RID: 143964
 		public const int RoleIcon = 1;
 
-		// Token: 0x04027F30 RID: 163632
+		// Token: 0x0402325D RID: 143965
 		public const int RoleLockIcon = 2;
 
-		// Token: 0x04027F31 RID: 163633
+		// Token: 0x0402325E RID: 143966
 		public const int RoleLevel = 3;
 
-		// Token: 0x04027F32 RID: 163634
+		// Token: 0x0402325F RID: 143967
 		public const int RoleName = 4;
 
-		// Token: 0x04027F33 RID: 163635
+		// Token: 0x04023260 RID: 143968
 		public const int FirstCharacterItem = 5;
 
-		// Token: 0x04027F34 RID: 163636
+		// Token: 0x04023261 RID: 143969
 		public const int SecondCharacterItem = 6;
 
-		// Token: 0x04027F35 RID: 163637
+		// Token: 0x04023262 RID: 143970
 		public const int ThirdCharacterItem = 7;
 
-		// Token: 0x04027F36 RID: 163638
+		// Token: 0x04023263 RID: 143971
 		public const int LockItem = 8;
 
-		// Token: 0x04027F37 RID: 163639
+		// Token: 0x04023264 RID: 143972
 		public const int LockText = 9;
 
-		// Token: 0x04027F38 RID: 163640
+		// Token: 0x04023265 RID: 143973
 		public const int UnlockItem = 10;
 
-		// Token: 0x04027F39 RID: 163641
+		// Token: 0x04023266 RID: 143974
 		public const int RedDot = 11;
 
-		// Token: 0x04027F3A RID: 163642
+		// Token: 0x04023267 RID: 143975
 		public const int TaskTipItem = 12;
 	}
 }

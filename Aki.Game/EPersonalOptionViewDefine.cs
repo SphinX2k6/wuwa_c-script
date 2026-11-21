@@ -1,46 +1,46 @@
 ﻿using System;
 
-// Token: 0x020023D8 RID: 9176
+// Token: 0x020018BD RID: 6333
 public enum EPersonalOptionViewDefine
 {
-	// Token: 0x04008AB2 RID: 35506
+	// Token: 0x04008BF9 RID: 35833
 	HeadPhotoItem,
-	// Token: 0x04008AB3 RID: 35507
+	// Token: 0x04008BFA RID: 35834
 	HeadFrameSprite,
-	// Token: 0x04008AB4 RID: 35508
+	// Token: 0x04008BFB RID: 35835
 	NameText,
-	// Token: 0x04008AB5 RID: 35509
+	// Token: 0x04008BFC RID: 35836
 	BracketNameParent,
-	// Token: 0x04008AB6 RID: 35510
+	// Token: 0x04008BFD RID: 35837
 	BracketNameText,
-	// Token: 0x04008AB7 RID: 35511
+	// Token: 0x04008BFE RID: 35838
 	LevelNumberText,
-	// Token: 0x04008AB8 RID: 35512
+	// Token: 0x04008BFF RID: 35839
 	ChatBtn,
-	// Token: 0x04008AB9 RID: 35513
+	// Token: 0x04008C00 RID: 35840
 	LevelText,
-	// Token: 0x04008ABA RID: 35514
+	// Token: 0x04008C01 RID: 35841
 	BlockShowItem,
-	// Token: 0x04008ABB RID: 35515
+	// Token: 0x04008C02 RID: 35842
 	GirdLayout,
-	// Token: 0x04008ABC RID: 35516
+	// Token: 0x04008C03 RID: 35843
 	Title,
-	// Token: 0x04008ABD RID: 35517
+	// Token: 0x04008C04 RID: 35844
 	SignText,
-	// Token: 0x04008ABE RID: 35518
+	// Token: 0x04008C05 RID: 35845
 	PlayStationItem,
-	// Token: 0x04008ABF RID: 35519
+	// Token: 0x04008C06 RID: 35846
 	PlayStationText,
-	// Token: 0x04008AC0 RID: 35520
+	// Token: 0x04008C07 RID: 35847
 	PlayerTitleItem,
-	// Token: 0x04008AC1 RID: 35521
+	// Token: 0x04008C08 RID: 35848
 	PlayStationTexture,
-	// Token: 0x04008AC2 RID: 35522
+	// Token: 0x04008C09 RID: 35849
 	PcItem,
-	// Token: 0x04008AC3 RID: 35523
+	// Token: 0x04008C0A RID: 35850
 	Card,
-	// Token: 0x04008AC4 RID: 35524
+	// Token: 0x04008C0B RID: 35851
 	XboxButton,
-	// Token: 0x04008AC5 RID: 35525
+	// Token: 0x04008C0C RID: 35852
 	XboxText
 }

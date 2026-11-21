@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02000EC1 RID: 3777
+// Token: 0x02000376 RID: 886
 public enum ESurvivorsRogueEntityType
 {
-	// Token: 0x04002AAA RID: 10922
+	// Token: 0x04002B45 RID: 11077
 	None,
-	// Token: 0x04002AAB RID: 10923
+	// Token: 0x04002B46 RID: 11078
 	Monster,
-	// Token: 0x04002AAC RID: 10924
+	// Token: 0x04002B47 RID: 11079
 	PlayerCharacter,
-	// Token: 0x04002AAD RID: 10925
+	// Token: 0x04002B48 RID: 11080
 	Weapon,
-	// Token: 0x04002AAE RID: 10926
+	// Token: 0x04002B49 RID: 11081
 	GoldenCoin
 }

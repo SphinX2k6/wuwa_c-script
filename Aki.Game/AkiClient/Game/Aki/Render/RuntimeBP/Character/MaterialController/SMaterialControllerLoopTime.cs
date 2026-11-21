@@ -8,7 +8,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 {
-	// Token: 0x02003E1C RID: 15900
+	// Token: 0x02003134 RID: 12596
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(12, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 12)]
@@ -16,7 +16,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 12)]
 	public struct SMaterialControllerLoopTime : IEqualityOperators<SMaterialControllerLoopTime, SMaterialControllerLoopTime, bool>, IEquatable<SMaterialControllerLoopTime>, IUnrealScriptStruct
 	{
-		// Token: 0x06027DBB RID: 163259 RVA: 0x0099D1F2 File Offset: 0x0099B3F2
+		// Token: 0x0601EFC6 RID: 126918 RVA: 0x00922DB8 File Offset: 0x00920FB8
 		public SMaterialControllerLoopTime(float Start, float Loop, float End)
 		{
 			this.Start = Start;
@@ -24,25 +24,25 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 			this.End = End;
 		}
 
-		// Token: 0x06027DBC RID: 163260 RVA: 0x0099D209 File Offset: 0x0099B409
+		// Token: 0x0601EFC7 RID: 126919 RVA: 0x00922DCF File Offset: 0x00920FCF
 		public static bool operator ==(SMaterialControllerLoopTime left, SMaterialControllerLoopTime right)
 		{
 			return left.Start == right.Start && left.Loop == right.Loop && left.End == right.End;
 		}
 
-		// Token: 0x06027DBD RID: 163261 RVA: 0x0099D237 File Offset: 0x0099B437
+		// Token: 0x0601EFC8 RID: 126920 RVA: 0x00922DFD File Offset: 0x00920FFD
 		public static bool operator !=(SMaterialControllerLoopTime left, SMaterialControllerLoopTime right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x06027DBE RID: 163262 RVA: 0x0099D243 File Offset: 0x0099B443
+		// Token: 0x0601EFC9 RID: 126921 RVA: 0x00922E09 File Offset: 0x00921009
 		public bool Equals(SMaterialControllerLoopTime other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06027DBF RID: 163263 RVA: 0x0099D254 File Offset: 0x0099B454
+		// Token: 0x0601EFCA RID: 126922 RVA: 0x00922E18 File Offset: 0x00921018
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -54,34 +54,34 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 			return false;
 		}
 
-		// Token: 0x06027DC0 RID: 163264 RVA: 0x0099D279 File Offset: 0x0099B479
+		// Token: 0x0601EFCB RID: 126923 RVA: 0x00922E3D File Offset: 0x0092103D
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<float, float, float>(this.Start, this.Loop, this.End);
 		}
 
-		// Token: 0x06027DC1 RID: 163265 RVA: 0x0099D292 File Offset: 0x0099B492
+		// Token: 0x0601EFCC RID: 126924 RVA: 0x00922E56 File Offset: 0x00921056
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SMaterialControllerLoopTime._ScriptStructPtr != 0) ? SMaterialControllerLoopTime._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Render/RuntimeBP/Character/MaterialController/SMaterialControllerLoopTime.SMaterialControllerLoopTime", ref SMaterialControllerLoopTime._ScriptStructPtr);
 		}
 
-		// Token: 0x0401434C RID: 82764
+		// Token: 0x040107F7 RID: 67575
 		[FieldOffset(0)]
 		public float Start;
 
-		// Token: 0x0401434D RID: 82765
+		// Token: 0x040107F8 RID: 67576
 		[FieldOffset(4)]
 		public float Loop;
 
-		// Token: 0x0401434E RID: 82766
+		// Token: 0x040107F9 RID: 67577
 		[FieldOffset(8)]
 		public float End;
 
-		// Token: 0x0401434F RID: 82767
+		// Token: 0x040107FA RID: 67578
 		public const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Character/MaterialController/SMaterialControllerLoopTime.SMaterialControllerLoopTime";
 
-		// Token: 0x04014350 RID: 82768
+		// Token: 0x040107FB RID: 67579
 		private static IntPtr _ScriptStructPtr;
 	}
 }

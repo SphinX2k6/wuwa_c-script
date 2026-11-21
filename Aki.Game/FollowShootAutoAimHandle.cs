@@ -13,12 +13,12 @@ using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
 using CSharpScript.Game.NewWorld.SceneItem;
 using UnrealEngine;
 
-// Token: 0x02001F2C RID: 7980
+// Token: 0x020013EE RID: 5102
 [NullableContext(1)]
 [Nullable(0)]
 public class FollowShootAutoAimHandle : HudUnitHandleBase
 {
-	// Token: 0x0600F5D9 RID: 62937 RVA: 0x003B531C File Offset: 0x003B351C
+	// Token: 0x0600C9F8 RID: 51704 RVA: 0x003C0E08 File Offset: 0x003BF008
 	protected override void OnInitialize()
 	{
 		base.OnInitialize();
@@ -27,7 +27,7 @@ public class FollowShootAutoAimHandle : HudUnitHandleBase
 		this.RefreshEntity(entityHandle);
 	}
 
-	// Token: 0x0600F5DA RID: 62938 RVA: 0x003B5350 File Offset: 0x003B3550
+	// Token: 0x0600C9F9 RID: 51705 RVA: 0x003C0E3C File Offset: 0x003BF03C
 	[NullableContext(2)]
 	private void RefreshEntity(EntityHandle entityHandle)
 	{
@@ -52,37 +52,37 @@ public class FollowShootAutoAimHandle : HudUnitHandleBase
 		this.RefreshUnit();
 	}
 
-	// Token: 0x0600F5DB RID: 62939 RVA: 0x003B53E1 File Offset: 0x003B35E1
+	// Token: 0x0600C9FA RID: 51706 RVA: 0x003C0ECD File Offset: 0x003BF0CD
 	private void RefreshUnit()
 	{
 	}
 
-	// Token: 0x0600F5DC RID: 62940 RVA: 0x003B53E3 File Offset: 0x003B35E3
+	// Token: 0x0600C9FB RID: 51707 RVA: 0x003C0ECF File Offset: 0x003BF0CF
 	protected override void OnDestroyed()
 	{
 		this.DestroyCameraAimUnit();
 	}
 
-	// Token: 0x0600F5DD RID: 62941 RVA: 0x003B53EB File Offset: 0x003B35EB
+	// Token: 0x0600C9FC RID: 51708 RVA: 0x003C0ED7 File Offset: 0x003BF0D7
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<bool>(EEventName.SetFollowShootAutoAimVisible, new Action<bool>(this.OnSetAimVisible));
 	}
 
-	// Token: 0x0600F5DE RID: 62942 RVA: 0x003B5409 File Offset: 0x003B3609
+	// Token: 0x0600C9FD RID: 51709 RVA: 0x003C0EF5 File Offset: 0x003BF0F5
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.RemoveAllTargetUseKey(this);
 		EventSystem.Instance.Remove<bool>(EEventName.SetFollowShootAutoAimVisible, new Action<bool>(this.OnSetAimVisible));
 	}
 
-	// Token: 0x0600F5DF RID: 62943 RVA: 0x003B5433 File Offset: 0x003B3633
+	// Token: 0x0600C9FE RID: 51710 RVA: 0x003C0F1F File Offset: 0x003BF11F
 	private void AddEntityEvents()
 	{
 		EventSystem.Instance.AddWithTargetUseHoldKey<ERemoveEntityType, EntityHandle>(this, this.EntityHandle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
 	}
 
-	// Token: 0x0600F5E0 RID: 62944 RVA: 0x003B5458 File Offset: 0x003B3658
+	// Token: 0x0600C9FF RID: 51711 RVA: 0x003C0F44 File Offset: 0x003BF144
 	private void RemoveEntityEvents()
 	{
 		if (this.EntityHandle != null)
@@ -91,14 +91,14 @@ public class FollowShootAutoAimHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F5E1 RID: 62945 RVA: 0x003B5485 File Offset: 0x003B3685
+	// Token: 0x0600CA00 RID: 51712 RVA: 0x003C0F71 File Offset: 0x003BF171
 	protected override void OnTick(float delta)
 	{
 		this.RefreshLockOnTarget(delta);
 		this.RefreshAimStatus(delta);
 	}
 
-	// Token: 0x0600F5E2 RID: 62946 RVA: 0x003B5495 File Offset: 0x003B3695
+	// Token: 0x0600CA01 RID: 51713 RVA: 0x003C0F81 File Offset: 0x003BF181
 	private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		if (this.EntityHandle == handle)
@@ -107,7 +107,7 @@ public class FollowShootAutoAimHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F5E3 RID: 62947 RVA: 0x003B54A8 File Offset: 0x003B36A8
+	// Token: 0x0600CA02 RID: 51714 RVA: 0x003C0F94 File Offset: 0x003BF194
 	private void OnSetAimVisible(bool bVisible)
 	{
 		if (bVisible)
@@ -135,7 +135,7 @@ public class FollowShootAutoAimHandle : HudUnitHandleBase
 		this.AimUnit.SetVisible(bVisible, 0);
 	}
 
-	// Token: 0x0600F5E4 RID: 62948 RVA: 0x003B5538 File Offset: 0x003B3738
+	// Token: 0x0600CA03 RID: 51715 RVA: 0x003C1024 File Offset: 0x003BF224
 	private void NewCameraAimUnit()
 	{
 		string sightResId = BattleUiModel.Instance.FormationData.GetSightResId();
@@ -190,7 +190,7 @@ public class FollowShootAutoAimHandle : HudUnitHandleBase
 		aimUnit.SetVisible(true, 0);
 	}
 
-	// Token: 0x0600F5E5 RID: 62949 RVA: 0x003B566F File Offset: 0x003B386F
+	// Token: 0x0600CA04 RID: 51716 RVA: 0x003C115B File Offset: 0x003BF35B
 	private void DestroyCameraAimUnit()
 	{
 		if (this.AimUnit == null)
@@ -201,7 +201,7 @@ public class FollowShootAutoAimHandle : HudUnitHandleBase
 		this.AimUnit = null;
 	}
 
-	// Token: 0x0600F5E6 RID: 62950 RVA: 0x003B5690 File Offset: 0x003B3890
+	// Token: 0x0600CA05 RID: 51717 RVA: 0x003C117C File Offset: 0x003BF37C
 	private void RefreshAimStatus(float deltaTime)
 	{
 		HudUnitBase aimUnit = this.AimUnit;
@@ -251,7 +251,7 @@ public class FollowShootAutoAimHandle : HudUnitHandleBase
 		followShootOnlyAutoAimUnit.SetTargetAimVisible(flag, isTargetChanged);
 	}
 
-	// Token: 0x0600F5E7 RID: 62951 RVA: 0x003B576C File Offset: 0x003B396C
+	// Token: 0x0600CA06 RID: 51718 RVA: 0x003C1258 File Offset: 0x003BF458
 	private void RefreshLockOnTarget(float delta)
 	{
 		CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow.FollowShooterComponent followShooterComponent = this.FollowShooterComponent;
@@ -314,7 +314,7 @@ public class FollowShootAutoAimHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F5E8 RID: 62952 RVA: 0x003B591C File Offset: 0x003B3B1C
+	// Token: 0x0600CA07 RID: 51719 RVA: 0x003C1408 File Offset: 0x003BF608
 	[return: Nullable(2)]
 	private UKuroHitResult AimTrace(AActor fromWhom, FVectorDouble startLocation, FVectorDouble endLocation)
 	{
@@ -335,7 +335,7 @@ public class FollowShootAutoAimHandle : HudUnitHandleBase
 		return this.AimedLineTraceElement.HitResult;
 	}
 
-	// Token: 0x0600F5E9 RID: 62953 RVA: 0x003B59C4 File Offset: 0x003B3BC4
+	// Token: 0x0600CA08 RID: 51720 RVA: 0x003C14B0 File Offset: 0x003BF6B0
 	private bool RefreshTargetPosition(WeakReference<AActor> target, float deltaTime)
 	{
 		AActor aactor;
@@ -377,7 +377,7 @@ public class FollowShootAutoAimHandle : HudUnitHandleBase
 		return true;
 	}
 
-	// Token: 0x0600F5EA RID: 62954 RVA: 0x003B5AA8 File Offset: 0x003B3CA8
+	// Token: 0x0600CA09 RID: 51721 RVA: 0x003C1594 File Offset: 0x003BF794
 	[return: Nullable(2)]
 	private AActor LockOnCircle(SLockOnFollowShooter lockOnConfig, AActor fromWhom, float distance, float distanceWeight, float radius, float screenDistanceWeight, float characterExtraWeight, float sceneItemExtraWeight, FGameplayTagContainer lockOnGameplayTagContainer, FGameplayTagContainer ignoreLockOnGameplayTagContainer, [Nullable(new byte[]
 	{
@@ -549,7 +549,7 @@ public class FollowShootAutoAimHandle : HudUnitHandleBase
 		return aactor;
 	}
 
-	// Token: 0x0600F5EB RID: 62955 RVA: 0x003B5FC4 File Offset: 0x003B41C4
+	// Token: 0x0600CA0A RID: 51722 RVA: 0x003C1AB0 File Offset: 0x003BFCB0
 	[NullableContext(2)]
 	private bool CheckEntityCategoryMatch([Nullable(new byte[]
 	{
@@ -575,36 +575,36 @@ public class FollowShootAutoAimHandle : HudUnitHandleBase
 		return false;
 	}
 
-	// Token: 0x040071C5 RID: 29125
+	// Token: 0x040072A6 RID: 29350
 	private const string PROFILE_KEY = "FollowShootAutoAimHandle_IsBlock";
 
-	// Token: 0x040071C6 RID: 29126
+	// Token: 0x040072A7 RID: 29351
 	[StaticVariableRuleIgnore]
 	private static readonly Stat TickStatsObject = Stat.Create("[BattleView]FollowShootAimHandleTick", "", "");
 
-	// Token: 0x040071C7 RID: 29127
+	// Token: 0x040072A8 RID: 29352
 	[Nullable(2)]
 	private HudUnitBase AimUnit;
 
-	// Token: 0x040071C8 RID: 29128
+	// Token: 0x040072A9 RID: 29353
 	[Nullable(2)]
 	private EntityHandle EntityHandle;
 
-	// Token: 0x040071C9 RID: 29129
+	// Token: 0x040072AA RID: 29354
 	[Nullable(2)]
 	private BaseActorComponent ActorComponent;
 
-	// Token: 0x040071CA RID: 29130
+	// Token: 0x040072AB RID: 29355
 	[Nullable(2)]
 	private CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow.FollowShooterComponent FollowShooterComponent;
 
-	// Token: 0x040071CB RID: 29131
+	// Token: 0x040072AC RID: 29356
 	private readonly Vector2D ScreenPos = new Vector2D();
 
-	// Token: 0x040071CC RID: 29132
+	// Token: 0x040072AD RID: 29357
 	private EFollowType FollowType;
 
-	// Token: 0x040071CD RID: 29133
+	// Token: 0x040072AE RID: 29358
 	[Nullable(new byte[]
 	{
 		2,
@@ -612,10 +612,10 @@ public class FollowShootAutoAimHandle : HudUnitHandleBase
 	})]
 	private WeakReference<AActor> LockOnTargetWeakRef;
 
-	// Token: 0x040071CE RID: 29134
+	// Token: 0x040072AF RID: 29359
 	[Nullable(2)]
 	private UTraceLineElement AimedLineTraceElement;
 
-	// Token: 0x040071CF RID: 29135
+	// Token: 0x040072B0 RID: 29360
 	private float TimeCount;
 }

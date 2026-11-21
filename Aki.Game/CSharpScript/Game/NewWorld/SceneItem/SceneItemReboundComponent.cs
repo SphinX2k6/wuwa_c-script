@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200718E RID: 29070
+	// Token: 0x02006242 RID: 25154
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemReboundComponent : EntityComponent
 	{
-		// Token: 0x060471A7 RID: 291239 RVA: 0x0120A858 File Offset: 0x01208A58
+		// Token: 0x0603CA62 RID: 248418 RVA: 0x01164690 File Offset: 0x01162890
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			ReboundComponent reboundComponent = args.GetP1<CreateEntityData>().GetParam<SceneItemReboundComponent>() as ReboundComponent;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060471A8 RID: 291240 RVA: 0x0120A92C File Offset: 0x01208B2C
+		// Token: 0x0603CA63 RID: 248419 RVA: 0x01164764 File Offset: 0x01162964
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060471A9 RID: 291241 RVA: 0x0120A9D8 File Offset: 0x01208BD8
+		// Token: 0x0603CA64 RID: 248420 RVA: 0x01164810 File Offset: 0x01162A10
 		protected override void OnActivate()
 		{
 			this.InitBulletTraceElement();
 		}
 
-		// Token: 0x060471AA RID: 291242 RVA: 0x0120A9E0 File Offset: 0x01208BE0
+		// Token: 0x0603CA65 RID: 248421 RVA: 0x01164818 File Offset: 0x01162A18
 		public override bool End()
 		{
 			this.ActorComp = null;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060471AB RID: 291243 RVA: 0x0120AA34 File Offset: 0x01208C34
+		// Token: 0x0603CA66 RID: 248422 RVA: 0x0116486C File Offset: 0x01162A6C
 		private void InitBulletTraceElement()
 		{
 			if (this.BulletTraceElement == null)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			bulletTraceElement.WorldContextObject = ((component != null) ? component.Owner : null);
 		}
 
-		// Token: 0x060471AC RID: 291244 RVA: 0x0120AAB0 File Offset: 0x01208CB0
+		// Token: 0x0603CA67 RID: 248423 RVA: 0x011648E8 File Offset: 0x01162AE8
 		[NullableContext(1)]
 		public bool CalculateReflectDir(Vector inVector, Vector outVector, [Nullable(2)] AActor hitActor = null, bool isForward = true)
 		{
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060471AD RID: 291245 RVA: 0x0120AB34 File Offset: 0x01208D34
+		// Token: 0x0603CA68 RID: 248424 RVA: 0x0116496C File Offset: 0x01162B6C
 		[NullableContext(1)]
 		public bool ReboundBullet(HitInformation hitData, BulletInfo bulletInfo)
 		{
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return false;
 		}
 
-		// Token: 0x060471AE RID: 291246 RVA: 0x0120AF0C File Offset: 0x0120910C
+		// Token: 0x0603CA69 RID: 248425 RVA: 0x01164D44 File Offset: 0x01162F44
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -213,206 +213,184 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemReboundComponent sceneItemReboundComponent = (SceneItemReboundComponent)componentTemplate;
-			if (base.CanResetComponentProperty("TempInVector"))
+			if (sceneItemReboundComponent.TempInVector == null)
 			{
-				if (sceneItemReboundComponent.TempInVector == null)
-				{
-					this.TempInVector = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempInVector), "TempInVector"))
-				{
-					return false;
-				}
+				this.TempInVector = null;
 			}
-			if (base.CanResetComponentProperty("TempOutVector"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempInVector), "TempInVector"))
 			{
-				if (sceneItemReboundComponent.TempOutVector == null)
-				{
-					this.TempOutVector = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempOutVector), "TempOutVector"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("StartTrackLocation"))
+			if (sceneItemReboundComponent.TempOutVector == null)
 			{
-				if (sceneItemReboundComponent.StartTrackLocation == null)
-				{
-					this.StartTrackLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.StartTrackLocation), "StartTrackLocation"))
-				{
-					return false;
-				}
+				this.TempOutVector = null;
 			}
-			if (base.CanResetComponentProperty("EndTrackLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempOutVector), "TempOutVector"))
 			{
-				if (sceneItemReboundComponent.EndTrackLocation == null)
-				{
-					this.EndTrackLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.EndTrackLocation), "EndTrackLocation"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TempNormal"))
+			if (sceneItemReboundComponent.StartTrackLocation == null)
 			{
-				if (sceneItemReboundComponent.TempNormal == null)
-				{
-					this.TempNormal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempNormal), "TempNormal"))
-				{
-					return false;
-				}
+				this.StartTrackLocation = null;
 			}
-			if (base.CanResetComponentProperty("TempVector"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StartTrackLocation), "StartTrackLocation"))
 			{
-				if (sceneItemReboundComponent.TempVector == null)
-				{
-					this.TempVector = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector), "TempVector"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TempQuat"))
+			if (sceneItemReboundComponent.EndTrackLocation == null)
 			{
-				if (sceneItemReboundComponent.TempQuat == null)
-				{
-					this.TempQuat = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TempQuat), "TempQuat"))
-				{
-					return false;
-				}
+				this.EndTrackLocation = null;
 			}
-			if (base.CanResetComponentProperty("BulletTraceElement"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndTrackLocation), "EndTrackLocation"))
 			{
-				if (sceneItemReboundComponent.BulletTraceElement == null)
-				{
-					this.BulletTraceElement = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.BulletTraceElement), "BulletTraceElement"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (sceneItemReboundComponent.TempNormal == null)
 			{
-				if (sceneItemReboundComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.TempNormal = null;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempNormal), "TempNormal"))
 			{
-				if (sceneItemReboundComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsLimitBulletId"))
+			if (sceneItemReboundComponent.TempVector == null)
 			{
-				this.IsLimitBulletId = sceneItemReboundComponent.IsLimitBulletId;
+				this.TempVector = null;
 			}
-			if (base.CanResetComponentProperty("LimitBulletId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
 			{
-				this.LimitBulletId = sceneItemReboundComponent.LimitBulletId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TempRotator"))
+			if (sceneItemReboundComponent.TempQuat == null)
 			{
-				if (sceneItemReboundComponent.TempRotator == null)
-				{
-					this.TempRotator = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TempRotator), "TempRotator"))
-				{
-					return false;
-				}
+				this.TempQuat = null;
 			}
-			if (base.CanResetComponentProperty("ReboundPositionOffset"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempQuat), "TempQuat"))
 			{
-				if (sceneItemReboundComponent.ReboundPositionOffset == null)
-				{
-					this.ReboundPositionOffset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.ReboundPositionOffset), "ReboundPositionOffset"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (sceneItemReboundComponent.BulletTraceElement == null)
+			{
+				this.BulletTraceElement = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BulletTraceElement), "BulletTraceElement"))
+			{
+				return false;
+			}
+			if (sceneItemReboundComponent.ActorComp == null)
+			{
+				this.ActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
+			{
+				return false;
+			}
+			if (sceneItemReboundComponent.TagComp == null)
+			{
+				this.TagComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+			{
+				return false;
+			}
+			this.IsLimitBulletId = sceneItemReboundComponent.IsLimitBulletId;
+			this.LimitBulletId = sceneItemReboundComponent.LimitBulletId;
+			if (sceneItemReboundComponent.TempRotator == null)
+			{
+				this.TempRotator = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempRotator), "TempRotator"))
+			{
+				return false;
+			}
+			if (sceneItemReboundComponent.ReboundPositionOffset == null)
+			{
+				this.ReboundPositionOffset = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ReboundPositionOffset), "ReboundPositionOffset"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x0402560C RID: 153100
+		// Token: 0x170072B4 RID: 29364
+		// (get) Token: 0x0603CA6A RID: 248426 RVA: 0x01164F80 File Offset: 0x01163180
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072B5 RID: 29365
+		// (get) Token: 0x0603CA6B RID: 248427 RVA: 0x01164F83 File Offset: 0x01163183
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020273 RID: 131699
 		[Nullable(1)]
 		private const string PROFILE_BULLECT_TRACK = "SceneItemReboundComponent_CalculateBulletTrackHit";
 
-		// Token: 0x0402560D RID: 153101
+		// Token: 0x04020274 RID: 131700
 		private const int REFLECT_START_OFFSET = 30;
 
-		// Token: 0x0402560E RID: 153102
+		// Token: 0x04020275 RID: 131701
 		private const int REFLECT_BULLET_EFFECT_CD = 2000;
 
-		// Token: 0x0402560F RID: 153103
+		// Token: 0x04020276 RID: 131702
 		private Vector TempInVector;
 
-		// Token: 0x04025610 RID: 153104
+		// Token: 0x04020277 RID: 131703
 		private Vector TempOutVector;
 
-		// Token: 0x04025611 RID: 153105
+		// Token: 0x04020278 RID: 131704
 		private Vector StartTrackLocation;
 
-		// Token: 0x04025612 RID: 153106
+		// Token: 0x04020279 RID: 131705
 		private Vector EndTrackLocation;
 
-		// Token: 0x04025613 RID: 153107
+		// Token: 0x0402027A RID: 131706
 		private Vector TempNormal;
 
-		// Token: 0x04025614 RID: 153108
+		// Token: 0x0402027B RID: 131707
 		private Vector TempVector;
 
-		// Token: 0x04025615 RID: 153109
+		// Token: 0x0402027C RID: 131708
 		private Quat TempQuat;
 
-		// Token: 0x04025616 RID: 153110
+		// Token: 0x0402027D RID: 131709
 		private UTraceSphereElement BulletTraceElement;
 
-		// Token: 0x04025617 RID: 153111
+		// Token: 0x0402027E RID: 131710
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025618 RID: 153112
+		// Token: 0x0402027F RID: 131711
 		private LevelTagComponent TagComp;
 
-		// Token: 0x04025619 RID: 153113
+		// Token: 0x04020280 RID: 131712
 		private bool IsLimitBulletId;
 
-		// Token: 0x0402561A RID: 153114
+		// Token: 0x04020281 RID: 131713
 		[Nullable(1)]
 		private string LimitBulletId = "";
 
-		// Token: 0x0402561B RID: 153115
+		// Token: 0x04020282 RID: 131714
 		private Rotator TempRotator;
 
-		// Token: 0x0402561C RID: 153116
+		// Token: 0x04020283 RID: 131715
 		private readonly int HitTrackLength = 150;
 
-		// Token: 0x0402561D RID: 153117
+		// Token: 0x04020284 RID: 131716
 		private readonly bool IsRegularOutput = true;
 
-		// Token: 0x0402561E RID: 153118
+		// Token: 0x04020285 RID: 131717
 		private Vector ReboundPositionOffset;
 	}
 }

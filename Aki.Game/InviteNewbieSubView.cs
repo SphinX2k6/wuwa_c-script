@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001291 RID: 4753
+// Token: 0x02000745 RID: 1861
 [NullableContext(2)]
 [Nullable(0)]
 public class InviteNewbieSubView : ActivitySubViewBase
 {
-	// Token: 0x060081F2 RID: 33266 RVA: 0x001B8E34 File Offset: 0x001B7034
+	// Token: 0x06005589 RID: 21897 RVA: 0x001C1B04 File Offset: 0x001BFD04
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -41,19 +41,19 @@ public class InviteNewbieSubView : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060081F3 RID: 33267 RVA: 0x001B8F5E File Offset: 0x001B715E
+	// Token: 0x0600558A RID: 21898 RVA: 0x001C1C2E File Offset: 0x001BFE2E
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<string>(EEventName.InviteNewbieInviteCodeChanged, new Action<string>(this.HandleInviteNewbieInviteCodeChanged));
 	}
 
-	// Token: 0x060081F4 RID: 33268 RVA: 0x001B8F7C File Offset: 0x001B717C
+	// Token: 0x0600558B RID: 21899 RVA: 0x001C1C4C File Offset: 0x001BFE4C
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.InviteNewbieInviteCodeChanged, new Action<string>(this.HandleInviteNewbieInviteCodeChanged));
 	}
 
-	// Token: 0x060081F5 RID: 33269 RVA: 0x001B8F9C File Offset: 0x001B719C
+	// Token: 0x0600558C RID: 21900 RVA: 0x001C1C6C File Offset: 0x001BFE6C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		InviteNewbieSubView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -64,13 +64,13 @@ public class InviteNewbieSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060081F6 RID: 33270 RVA: 0x001B8FDF File Offset: 0x001B71DF
+	// Token: 0x0600558D RID: 21901 RVA: 0x001C1CAF File Offset: 0x001BFEAF
 	private void OnClickCopyInviteCodeButton()
 	{
 		ActivityInviteNewbieController.Instance.HandleOnCopyInviteCodeClick();
 	}
 
-	// Token: 0x060081F7 RID: 33271 RVA: 0x001B8FEC File Offset: 0x001B71EC
+	// Token: 0x0600558E RID: 21902 RVA: 0x001C1CBC File Offset: 0x001BFEBC
 	protected override void OnRefreshView()
 	{
 		InviteNewbieModel instance = InviteNewbieModel.Instance;
@@ -83,13 +83,13 @@ public class InviteNewbieSubView : ActivitySubViewBase
 		this.RefreshCopyItemState();
 	}
 
-	// Token: 0x060081F8 RID: 33272 RVA: 0x001B9024 File Offset: 0x001B7224
+	// Token: 0x0600558F RID: 21903 RVA: 0x001C1CF4 File Offset: 0x001BFEF4
 	protected override void OnTimer(float delta)
 	{
 		this.RefreshTimeText();
 	}
 
-	// Token: 0x060081F9 RID: 33273 RVA: 0x001B902C File Offset: 0x001B722C
+	// Token: 0x06005590 RID: 21904 RVA: 0x001C1CFC File Offset: 0x001BFEFC
 	private void RefreshTimeText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -103,7 +103,7 @@ public class InviteNewbieSubView : ActivitySubViewBase
 		activityItem.RefreshTimerTextByData(item, item2);
 	}
 
-	// Token: 0x060081FA RID: 33274 RVA: 0x001B9060 File Offset: 0x001B7260
+	// Token: 0x06005591 RID: 21905 RVA: 0x001C1D30 File Offset: 0x001BFF30
 	private void RefreshCopyItemState()
 	{
 		string inviteCode = InviteNewbieModel.Instance.InviteCode;
@@ -114,7 +114,7 @@ public class InviteNewbieSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060081FB RID: 33275 RVA: 0x001B9092 File Offset: 0x001B7292
+	// Token: 0x06005592 RID: 21906 RVA: 0x001C1D62 File Offset: 0x001BFF62
 	[NullableContext(1)]
 	private void HandleInviteNewbieInviteCodeChanged(string newCode)
 	{
@@ -126,35 +126,35 @@ public class InviteNewbieSubView : ActivitySubViewBase
 		text.SetText(newCode ?? "", true);
 	}
 
-	// Token: 0x04003ACE RID: 15054
+	// Token: 0x04003B66 RID: 15206
 	private InviteNewbieActivityItem ActivityItem;
 
-	// Token: 0x04003ACF RID: 15055
+	// Token: 0x04003B67 RID: 15207
 	private InviteNewbieRewardItem RewardItem;
 
-	// Token: 0x04003AD0 RID: 15056
+	// Token: 0x04003B68 RID: 15208
 	private InviteNewbieBgItem BgItem;
 
-	// Token: 0x020078A7 RID: 30887
+	// Token: 0x02006A32 RID: 27186
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x04027BFC RID: 162812
+		// Token: 0x04022F2D RID: 143149
 		public const int ActivityRootItem = 0;
 
-		// Token: 0x04027BFD RID: 162813
+		// Token: 0x04022F2E RID: 143150
 		public const int RewardRootItem = 1;
 
-		// Token: 0x04027BFE RID: 162814
+		// Token: 0x04022F2F RID: 143151
 		public const int CopyInviteCodeButton = 2;
 
-		// Token: 0x04027BFF RID: 162815
+		// Token: 0x04022F30 RID: 143152
 		public const int InviteCodeText = 3;
 
-		// Token: 0x04027C00 RID: 162816
+		// Token: 0x04022F31 RID: 143153
 		public const int ContentRootItem = 4;
 
-		// Token: 0x04027C01 RID: 162817
+		// Token: 0x04022F32 RID: 143154
 		public const int CopyItem = 5;
 	}
 }

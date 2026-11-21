@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020018B2 RID: 6322
+// Token: 0x02000D6B RID: 3435
 [NullableContext(2)]
 [Nullable(0)]
 public class InputMultiKeyItemGroup : UiPanelBase
 {
-	// Token: 0x0600B910 RID: 47376 RVA: 0x0029FE00 File Offset: 0x0029E000
+	// Token: 0x06008CF9 RID: 36089 RVA: 0x002AA540 File Offset: 0x002A8740
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -29,7 +29,7 @@ public class InputMultiKeyItemGroup : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B911 RID: 47377 RVA: 0x0029FE8C File Offset: 0x0029E08C
+	// Token: 0x06008CFA RID: 36090 RVA: 0x002AA5CC File Offset: 0x002A87CC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		InputMultiKeyItemGroup.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -40,19 +40,19 @@ public class InputMultiKeyItemGroup : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B912 RID: 47378 RVA: 0x0029FECF File Offset: 0x0029E0CF
+	// Token: 0x06008CFB RID: 36091 RVA: 0x002AA60F File Offset: 0x002A880F
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x0600B913 RID: 47379 RVA: 0x0029FED1 File Offset: 0x0029E0D1
+	// Token: 0x06008CFC RID: 36092 RVA: 0x002AA611 File Offset: 0x002A8811
 	protected override void OnBeforeDestroy()
 	{
 		this.OneInputMultiKeyItem = null;
 		this.TwoInputMultiKeyItem = null;
 	}
 
-	// Token: 0x0600B914 RID: 47380 RVA: 0x0029FEE1 File Offset: 0x0029E0E1
+	// Token: 0x06008CFD RID: 36093 RVA: 0x002AA621 File Offset: 0x002A8821
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
@@ -62,13 +62,13 @@ public class InputMultiKeyItemGroup : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B915 RID: 47381 RVA: 0x0029FF13 File Offset: 0x0029E113
+	// Token: 0x06008CFE RID: 36094 RVA: 0x002AA653 File Offset: 0x002A8853
 	protected override void OnAfterHide()
 	{
 		EventSystem.Instance.Remove(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
 	}
 
-	// Token: 0x0600B916 RID: 47382 RVA: 0x0029FF31 File Offset: 0x0029E131
+	// Token: 0x06008CFF RID: 36095 RVA: 0x002AA671 File Offset: 0x002A8871
 	private void InputControllerChange(EInputControllerType eInputControllerType, EInputControllerType inputControllerType)
 	{
 		if (this.InputActionOrAxisKeyItemGroup == null)
@@ -78,7 +78,7 @@ public class InputMultiKeyItemGroup : UiPanelBase
 		this.RefreshInternal(this.InputActionOrAxisKeyItemGroup);
 	}
 
-	// Token: 0x0600B917 RID: 47383 RVA: 0x0029FF48 File Offset: 0x0029E148
+	// Token: 0x06008D00 RID: 36096 RVA: 0x002AA688 File Offset: 0x002A8888
 	[NullableContext(1)]
 	public void Refresh(InputActionOrAxisKeyItemGroup inputActionOrAxisKeyItemGroup)
 	{
@@ -86,10 +86,14 @@ public class InputMultiKeyItemGroup : UiPanelBase
 		this.RefreshInternal(inputActionOrAxisKeyItemGroup);
 	}
 
-	// Token: 0x0600B918 RID: 47384 RVA: 0x0029FF58 File Offset: 0x0029E158
+	// Token: 0x06008D01 RID: 36097 RVA: 0x002AA698 File Offset: 0x002A8898
 	[NullableContext(1)]
 	private void RefreshInternal(InputActionOrAxisKeyItemGroup inputActionOrAxisKeyItemGroup)
 	{
+		if (this.RootItem == null || !this.RootItem.IsValid())
+		{
+			return;
+		}
 		InputActionOrAxisKeyItem singleActionOrAxisKeyItem = inputActionOrAxisKeyItemGroup.SingleActionOrAxisKeyItem;
 		InputActionOrAxisKeyItem doubleActionOrAxisKeyItem = inputActionOrAxisKeyItemGroup.DoubleActionOrAxisKeyItem;
 		string linkString = inputActionOrAxisKeyItemGroup.LinkString;
@@ -128,7 +132,7 @@ public class InputMultiKeyItemGroup : UiPanelBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x0600B919 RID: 47385 RVA: 0x002A0001 File Offset: 0x0029E201
+	// Token: 0x06008D02 RID: 36098 RVA: 0x002AA757 File Offset: 0x002A8957
 	public void SetEnable(bool bEnable, bool bForce = false)
 	{
 		if (this.IsEnable == bEnable && !bForce)
@@ -146,29 +150,29 @@ public class InputMultiKeyItemGroup : UiPanelBase
 		this.IsEnable = bEnable;
 	}
 
-	// Token: 0x040053F9 RID: 21497
+	// Token: 0x040054A4 RID: 21668
 	private InputMultiKeyItem OneInputMultiKeyItem;
 
-	// Token: 0x040053FA RID: 21498
+	// Token: 0x040054A5 RID: 21669
 	private InputMultiKeyItem TwoInputMultiKeyItem;
 
-	// Token: 0x040053FB RID: 21499
+	// Token: 0x040054A6 RID: 21670
 	private bool IsEnable;
 
-	// Token: 0x040053FC RID: 21500
+	// Token: 0x040054A7 RID: 21671
 	private InputActionOrAxisKeyItemGroup InputActionOrAxisKeyItemGroup;
 
-	// Token: 0x02007E41 RID: 32321
+	// Token: 0x02006FC8 RID: 28616
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x04029512 RID: 169234
+		// Token: 0x0402483F RID: 149567
 		public const int AddText = 0;
 
-		// Token: 0x04029513 RID: 169235
+		// Token: 0x04024840 RID: 149568
 		public const int KeyItem1 = 1;
 
-		// Token: 0x04029514 RID: 169236
+		// Token: 0x04024841 RID: 149569
 		public const int KeyItem2 = 2;
 	}
 }

@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200236E RID: 9070
+	// Token: 0x02000766 RID: 1894
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieSceneTracks.MovieSceneEventPayloadVariable")]
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class FMovieSceneEventPayloadVariable : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060223B4 RID: 140212 RVA: 0x00329EBB File Offset: 0x003280BB
+		// Token: 0x0600A496 RID: 42134 RVA: 0x000F3161 File Offset: 0x000F1361
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMovieSceneEventPayloadVariable._ScriptStructPtr != 0) ? FMovieSceneEventPayloadVariable._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/MovieSceneTracks.MovieSceneEventPayloadVariable", ref FMovieSceneEventPayloadVariable._ScriptStructPtr);
 		}
 
-		// Token: 0x17008419 RID: 33817
-		// (get) Token: 0x060223B5 RID: 140213 RVA: 0x00329EDF File Offset: 0x003280DF
-		// (set) Token: 0x060223B6 RID: 140214 RVA: 0x00329EF3 File Offset: 0x003280F3
+		// Token: 0x17001E6C RID: 7788
+		// (get) Token: 0x0600A497 RID: 42135 RVA: 0x000F3185 File Offset: 0x000F1385
+		// (set) Token: 0x0600A498 RID: 42136 RVA: 0x000F3199 File Offset: 0x000F1399
 		public unsafe string Value
 		{
 			get
@@ -33,53 +33,47 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060223B7 RID: 140215 RVA: 0x00329F08 File Offset: 0x00328108
+		// Token: 0x0600A499 RID: 42137 RVA: 0x000F31AE File Offset: 0x000F13AE
 		public FMovieSceneEventPayloadVariable()
 		{
 		}
 
-		// Token: 0x060223B8 RID: 140216 RVA: 0x00329F10 File Offset: 0x00328110
-		public FMovieSceneEventPayloadVariable(string Value)
-		{
-			this.Value = Value;
-		}
-
-		// Token: 0x060223B9 RID: 140217 RVA: 0x00329F1F File Offset: 0x0032811F
+		// Token: 0x0600A49A RID: 42138 RVA: 0x000F31B6 File Offset: 0x000F13B6
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMovieSceneEventPayloadVariable.StaticStruct();
 		}
 
-		// Token: 0x060223BA RID: 140218 RVA: 0x00329F2B File Offset: 0x0032812B
+		// Token: 0x0600A49B RID: 42139 RVA: 0x000F31C2 File Offset: 0x000F13C2
 		[NullableContext(2)]
 		public FMovieSceneEventPayloadVariable(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060223BB RID: 140219 RVA: 0x00329F35 File Offset: 0x00328135
+		// Token: 0x0600A49C RID: 42140 RVA: 0x000F31CC File Offset: 0x000F13CC
 		public FMovieSceneEventPayloadVariable(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060223BC RID: 140220 RVA: 0x00329F40 File Offset: 0x00328140
+		// Token: 0x0600A49D RID: 42141 RVA: 0x000F31D7 File Offset: 0x000F13D7
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMovieSceneEventPayloadVariable(Pointer, false, true);
 		}
 
-		// Token: 0x060223BD RID: 140221 RVA: 0x00329F4A File Offset: 0x0032814A
+		// Token: 0x0600A49E RID: 42142 RVA: 0x000F31E1 File Offset: 0x000F13E1
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMovieSceneEventPayloadVariable(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401245B RID: 74843
+		// Token: 0x04004633 RID: 17971
 		public const string __ObjectPath = "/Script/MovieSceneTracks.MovieSceneEventPayloadVariable";
 
-		// Token: 0x0401245C RID: 74844
+		// Token: 0x04004634 RID: 17972
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401245D RID: 74845
+		// Token: 0x04004635 RID: 17973
 		internal static int __PropertyOffset_Value;
 	}
 }

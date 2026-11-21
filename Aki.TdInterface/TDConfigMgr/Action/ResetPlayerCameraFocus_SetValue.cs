@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002163 RID: 8547
+	// Token: 0x020023C4 RID: 9156
 	public class ResetPlayerCameraFocus_SetValue
 	{
-		// Token: 0x04007057 RID: 28759
-		[Nullable(1)]
+		// Token: 0x0400768C RID: 30348
 		public IResetPlayerFocusType ResetType;
 
-		// Token: 0x04007058 RID: 28760
+		// Token: 0x0400768D RID: 30349
 		public float FadeInTime;
 
-		// Token: 0x04007059 RID: 28761
+		// Token: 0x0400768E RID: 30350
 		public bool? CannotInterrupt;
 
-		// Token: 0x0400705A RID: 28762
+		// Token: 0x0400768F RID: 30351
 		public float? Duration;
 	}
 }

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E43 RID: 24131
+	// Token: 0x02004E28 RID: 20008
 	public class TopBuffItemBuLing : TopBuffItem
 	{
-		// Token: 0x0603D5BF RID: 251327 RVA: 0x00ECACE8 File Offset: 0x00EC8EE8
+		// Token: 0x0603254F RID: 206159 RVA: 0x00E1C254 File Offset: 0x00E1A454
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D5C0 RID: 251328 RVA: 0x00ECAE3C File Offset: 0x00EC903C
+		// Token: 0x06032550 RID: 206160 RVA: 0x00E1C3A8 File Offset: 0x00E1A5A8
 		protected override void OnStart()
 		{
 			base.InitTweenAnim(1);
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(7).SetUIActive(false);
 		}
 
-		// Token: 0x0603D5C1 RID: 251329 RVA: 0x00ECAE90 File Offset: 0x00EC9090
+		// Token: 0x06032551 RID: 206161 RVA: 0x00E1C3FC File Offset: 0x00E1A5FC
 		public void Refresh(int id, int state, int usedType, bool playAnim = false)
 		{
 			if (this.CurId != id)
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetIcon(resourcePath);
 		}
 
-		// Token: 0x0603D5C2 RID: 251330 RVA: 0x00ECAFE5 File Offset: 0x00EC91E5
+		// Token: 0x06032552 RID: 206162 RVA: 0x00E1C551 File Offset: 0x00E1A751
 		[NullableContext(2)]
 		public void SetIcon(string iconPath)
 		{
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, 103, "js_undefined");
 		}
 
-		// Token: 0x0603D5C3 RID: 251331 RVA: 0x00ECB021 File Offset: 0x00EC9221
+		// Token: 0x06032553 RID: 206163 RVA: 0x00E1C58D File Offset: 0x00E1A78D
 		protected override void OnBeforeDestroyImplement()
 		{
 			base.OnBeforeDestroyImplement();
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D5C4 RID: 251332 RVA: 0x00ECB049 File Offset: 0x00EC9249
+		// Token: 0x06032554 RID: 206164 RVA: 0x00E1C5B5 File Offset: 0x00E1A7B5
 		protected void PlayTweenAnimOnly(int componentType)
 		{
 			if (this.LastAni >= 0)
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.PlayTweenAnim(componentType);
 		}
 
-		// Token: 0x0603D5C5 RID: 251333 RVA: 0x00ECB06E File Offset: 0x00EC926E
+		// Token: 0x06032555 RID: 206165 RVA: 0x00E1C5DA File Offset: 0x00E1A7DA
 		public void TickHiding(float delta)
 		{
 			if (this.HideTime <= 0.0)
@@ -191,10 +191,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HideTime = 0.0;
 		}
 
-		// Token: 0x0402000F RID: 131087
+		// Token: 0x0401AAD6 RID: 109270
 		private const double HIDE_ANIM_TIME = 500.0;
 
-		// Token: 0x04020010 RID: 131088
+		// Token: 0x0401AAD7 RID: 109271
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly string[] IconList = new string[]
@@ -205,44 +205,44 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			"T_BulingBuffOrangeA"
 		};
 
-		// Token: 0x04020011 RID: 131089
+		// Token: 0x0401AAD8 RID: 109272
 		private int IconIndex;
 
-		// Token: 0x04020012 RID: 131090
+		// Token: 0x0401AAD9 RID: 109273
 		private int CurId;
 
-		// Token: 0x04020013 RID: 131091
+		// Token: 0x0401AADA RID: 109274
 		private int CurState;
 
-		// Token: 0x04020014 RID: 131092
+		// Token: 0x0401AADB RID: 109275
 		private int LastAni = -1;
 
-		// Token: 0x04020015 RID: 131093
+		// Token: 0x0401AADC RID: 109276
 		private int LoadIconId;
 
-		// Token: 0x04020016 RID: 131094
+		// Token: 0x0401AADD RID: 109277
 		private double HideTime;
 
-		// Token: 0x0200C1C2 RID: 49602
+		// Token: 0x0200ABD1 RID: 43985
 		private enum EChildType
 		{
-			// Token: 0x0403A8D5 RID: 239829
+			// Token: 0x040352C7 RID: 217799
 			IconTexture,
-			// Token: 0x0403A8D6 RID: 239830
+			// Token: 0x040352C8 RID: 217800
 			AniIn,
-			// Token: 0x0403A8D7 RID: 239831
+			// Token: 0x040352C9 RID: 217801
 			AniUsable,
-			// Token: 0x0403A8D8 RID: 239832
+			// Token: 0x040352CA RID: 217802
 			AniUsedRight,
-			// Token: 0x0403A8D9 RID: 239833
+			// Token: 0x040352CB RID: 217803
 			AniUsedLeft,
-			// Token: 0x0403A8DA RID: 239834
+			// Token: 0x040352CC RID: 217804
 			AniPunish,
-			// Token: 0x0403A8DB RID: 239835
+			// Token: 0x040352CD RID: 217805
 			AniUsableOut,
-			// Token: 0x0403A8DC RID: 239836
+			// Token: 0x040352CE RID: 217806
 			OrangeNode,
-			// Token: 0x0403A8DD RID: 239837
+			// Token: 0x040352CF RID: 217807
 			BlueNode
 		}
 	}

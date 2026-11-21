@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006963 RID: 26979
+	// Token: 0x02007016 RID: 28694
 	public struct IInputDrivenMoveDriveMode : IFlatbufferObject
 	{
-		// Token: 0x1700C815 RID: 51221
-		// (get) Token: 0x0602F1A2 RID: 192930 RVA: 0x0066B060 File Offset: 0x00669260
+		// Token: 0x1700D218 RID: 53784
+		// (get) Token: 0x06031B72 RID: 203634 RVA: 0x006BB548 File Offset: 0x006B9748
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F1A3 RID: 192931 RVA: 0x0066B06D File Offset: 0x0066926D
+		// Token: 0x06031B73 RID: 203635 RVA: 0x006BB555 File Offset: 0x006B9755
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F1A4 RID: 192932 RVA: 0x0066B074 File Offset: 0x00669274
+		// Token: 0x06031B74 RID: 203636 RVA: 0x006BB55C File Offset: 0x006B975C
 		public static IInputDrivenMoveDriveMode GetRootAsIInputDrivenMoveDriveMode(ByteBuffer _bb)
 		{
 			return IInputDrivenMoveDriveMode.GetRootAsIInputDrivenMoveDriveMode(_bb, default(IInputDrivenMoveDriveMode));
 		}
 
-		// Token: 0x0602F1A5 RID: 192933 RVA: 0x0066B090 File Offset: 0x00669290
+		// Token: 0x06031B75 RID: 203637 RVA: 0x006BB578 File Offset: 0x006B9778
 		public static IInputDrivenMoveDriveMode GetRootAsIInputDrivenMoveDriveMode(ByteBuffer _bb, IInputDrivenMoveDriveMode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F1A6 RID: 192934 RVA: 0x0066B0AD File Offset: 0x006692AD
+		// Token: 0x06031B76 RID: 203638 RVA: 0x006BB595 File Offset: 0x006B9795
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F1A7 RID: 192935 RVA: 0x0066B0BC File Offset: 0x006692BC
+		// Token: 0x06031B77 RID: 203639 RVA: 0x006BB5A4 File Offset: 0x006B97A4
 		public IInputDrivenMoveDriveMode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C816 RID: 51222
-		// (get) Token: 0x0602F1A8 RID: 192936 RVA: 0x0066B0CC File Offset: 0x006692CC
+		// Token: 0x1700D219 RID: 53785
+		// (get) Token: 0x06031B78 RID: 203640 RVA: 0x006BB5B4 File Offset: 0x006B97B4
 		public ESplineMoveDriveMode Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F1A9 RID: 192937 RVA: 0x0066B108 File Offset: 0x00669308
+		// Token: 0x06031B79 RID: 203641 RVA: 0x006BB5F0 File Offset: 0x006B97F0
 		public static Offset<IInputDrivenMoveDriveMode> CreateIInputDrivenMoveDriveMode(FlatBufferBuilder builder, ESplineMoveDriveMode Type = ESplineMoveDriveMode.InputDriven)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInputDrivenMoveDriveMode.EndIInputDrivenMoveDriveMode(builder);
 		}
 
-		// Token: 0x0602F1AA RID: 192938 RVA: 0x0066B11E File Offset: 0x0066931E
+		// Token: 0x06031B7A RID: 203642 RVA: 0x006BB606 File Offset: 0x006B9806
 		public static void StartIInputDrivenMoveDriveMode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602F1AB RID: 192939 RVA: 0x0066B127 File Offset: 0x00669327
+		// Token: 0x06031B7B RID: 203643 RVA: 0x006BB60F File Offset: 0x006B980F
 		public static void AddType(FlatBufferBuilder builder, ESplineMoveDriveMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602F1AC RID: 192940 RVA: 0x0066B132 File Offset: 0x00669332
+		// Token: 0x06031B7C RID: 203644 RVA: 0x006BB61A File Offset: 0x006B981A
 		public static Offset<IInputDrivenMoveDriveMode> EndIInputDrivenMoveDriveMode(FlatBufferBuilder builder)
 		{
 			return new Offset<IInputDrivenMoveDriveMode>(builder.EndTable());
 		}
 
-		// Token: 0x0602F1AD RID: 192941 RVA: 0x0066B140 File Offset: 0x00669340
+		// Token: 0x06031B7D RID: 203645 RVA: 0x006BB628 File Offset: 0x006B9828
 		public IInputDrivenMoveDriveModeT UnPack()
 		{
 			IInputDrivenMoveDriveModeT inputDrivenMoveDriveModeT = new IInputDrivenMoveDriveModeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return inputDrivenMoveDriveModeT;
 		}
 
-		// Token: 0x0602F1AE RID: 192942 RVA: 0x0066B15B File Offset: 0x0066935B
+		// Token: 0x06031B7E RID: 203646 RVA: 0x006BB643 File Offset: 0x006B9843
 		public void UnPackTo(IInputDrivenMoveDriveModeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602F1AF RID: 192943 RVA: 0x0066B16C File Offset: 0x0066936C
+		// Token: 0x06031B7F RID: 203647 RVA: 0x006BB654 File Offset: 0x006B9854
 		public static Offset<IInputDrivenMoveDriveMode> Pack(FlatBufferBuilder builder, IInputDrivenMoveDriveModeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInputDrivenMoveDriveMode.CreateIInputDrivenMoveDriveMode(builder, _o.Type);
 		}
 
-		// Token: 0x040110E6 RID: 69862
+		// Token: 0x04011F52 RID: 73554
 		private Table __p;
 	}
 }

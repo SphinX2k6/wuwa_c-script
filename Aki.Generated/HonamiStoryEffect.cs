@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D34 RID: 3380
+	// Token: 0x02000E19 RID: 3609
 	public struct HonamiStoryEffect : IFlatbufferObject
 	{
-		// Token: 0x1700177F RID: 6015
-		// (get) Token: 0x06007F68 RID: 32616 RVA: 0x00256570 File Offset: 0x00254770
+		// Token: 0x170017E2 RID: 6114
+		// (get) Token: 0x06008582 RID: 34178 RVA: 0x00274D88 File Offset: 0x00272F88
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007F69 RID: 32617 RVA: 0x0025657D File Offset: 0x0025477D
+		// Token: 0x06008583 RID: 34179 RVA: 0x00274D95 File Offset: 0x00272F95
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007F6A RID: 32618 RVA: 0x00256584 File Offset: 0x00254784
+		// Token: 0x06008584 RID: 34180 RVA: 0x00274D9C File Offset: 0x00272F9C
 		public static HonamiStoryEffect GetRootAsHonamiStoryEffect(ByteBuffer _bb)
 		{
 			return HonamiStoryEffect.GetRootAsHonamiStoryEffect(_bb, default(HonamiStoryEffect));
 		}
 
-		// Token: 0x06007F6B RID: 32619 RVA: 0x002565A0 File Offset: 0x002547A0
+		// Token: 0x06008585 RID: 34181 RVA: 0x00274DB8 File Offset: 0x00272FB8
 		public static HonamiStoryEffect GetRootAsHonamiStoryEffect(ByteBuffer _bb, HonamiStoryEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007F6C RID: 32620 RVA: 0x002565BD File Offset: 0x002547BD
+		// Token: 0x06008586 RID: 34182 RVA: 0x00274DD5 File Offset: 0x00272FD5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007F6D RID: 32621 RVA: 0x002565CC File Offset: 0x002547CC
+		// Token: 0x06008587 RID: 34183 RVA: 0x00274DE4 File Offset: 0x00272FE4
 		public HonamiStoryEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001780 RID: 6016
-		// (get) Token: 0x06007F6E RID: 32622 RVA: 0x002565DC File Offset: 0x002547DC
+		// Token: 0x170017E3 RID: 6115
+		// (get) Token: 0x06008588 RID: 34184 RVA: 0x00274DF4 File Offset: 0x00272FF4
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001781 RID: 6017
-		// (get) Token: 0x06007F6F RID: 32623 RVA: 0x00256618 File Offset: 0x00254818
+		// Token: 0x170017E4 RID: 6116
+		// (get) Token: 0x06008589 RID: 34185 RVA: 0x00274E30 File Offset: 0x00273030
 		public int EffectType
 		{
 			get
@@ -80,7 +80,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007F70 RID: 32624 RVA: 0x00256654 File Offset: 0x00254854
+		// Token: 0x0600858A RID: 34186 RVA: 0x00274E6C File Offset: 0x0027306C
 		public string Param(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -91,8 +91,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001782 RID: 6018
-		// (get) Token: 0x06007F71 RID: 32625 RVA: 0x00256690 File Offset: 0x00254890
+		// Token: 0x170017E5 RID: 6117
+		// (get) Token: 0x0600858B RID: 34187 RVA: 0x00274EA8 File Offset: 0x002730A8
 		public int ParamLength
 		{
 			get
@@ -106,24 +106,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007F72 RID: 32626 RVA: 0x002566BB File Offset: 0x002548BB
+		// Token: 0x0600858C RID: 34188 RVA: 0x00274ED3 File Offset: 0x002730D3
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ParamIter()或GetParamBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] Param()
+		public string[] Param()
 		{
 			return this.ParamIter().ToArray<string>();
 		}
 
-		// Token: 0x06007F73 RID: 32627 RVA: 0x002566C8 File Offset: 0x002548C8
+		// Token: 0x0600858D RID: 34189 RVA: 0x00274EE0 File Offset: 0x002730E0
 		[NullableContext(1)]
-		public readonly IEnumerable<string> ParamIter()
+		public IEnumerable<string> ParamIter()
 		{
 			HonamiStoryEffect.<ParamIter>d__16 <ParamIter>d__ = new HonamiStoryEffect.<ParamIter>d__16(-2);
 			<ParamIter>d__.<>3__<>4__this = this;
 			return <ParamIter>d__;
 		}
 
-		// Token: 0x04004DAE RID: 19886
+		// Token: 0x04005393 RID: 21395
 		private Table __p;
 	}
 }

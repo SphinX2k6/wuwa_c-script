@@ -8,10 +8,10 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001FC3 RID: 8131
+// Token: 0x02001496 RID: 5270
 public class AccessPathPcButton : UiPanelBase
 {
-	// Token: 0x0600FE55 RID: 65109 RVA: 0x003DBA33 File Offset: 0x003D9C33
+	// Token: 0x0600D2BD RID: 53949 RVA: 0x003E800F File Offset: 0x003E620F
 	[NullableContext(1)]
 	public AccessPathPcButton(UUIItem parentItem, int accessPathId)
 	{
@@ -19,7 +19,7 @@ public class AccessPathPcButton : UiPanelBase
 		base.CreateThenShowByResourceIdAsync("UiItem_PcAccessPathButton_Prefab", parentItem, false).Forget();
 	}
 
-	// Token: 0x0600FE56 RID: 65110 RVA: 0x003DBA54 File Offset: 0x003D9C54
+	// Token: 0x0600D2BE RID: 53950 RVA: 0x003E8030 File Offset: 0x003E6230
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -31,7 +31,7 @@ public class AccessPathPcButton : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600FE57 RID: 65111 RVA: 0x003DBA9C File Offset: 0x003D9C9C
+	// Token: 0x0600D2BF RID: 53951 RVA: 0x003E8078 File Offset: 0x003E6278
 	protected override void OnStart()
 	{
 		AccessPath? accessPathConfig = InventoryConfig.Instance.GetAccessPathConfig(this.AccessPathId);
@@ -44,13 +44,13 @@ public class AccessPathPcButton : UiPanelBase
 		text.ShowTextNew(description);
 	}
 
-	// Token: 0x040075AE RID: 30126
+	// Token: 0x04007697 RID: 30359
 	private readonly int AccessPathId;
 
-	// Token: 0x020085D4 RID: 34260
+	// Token: 0x0200775B RID: 30555
 	private enum EChildComponentType
 	{
-		// Token: 0x0402B8F5 RID: 178421
+		// Token: 0x04026C04 RID: 158724
 		AccessPathText
 	}
 }

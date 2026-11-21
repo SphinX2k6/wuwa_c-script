@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B9C RID: 7068
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D83 RID: 7555
 	public class ILongPressButtonActionMapping
 	{
-		// Token: 0x06009751 RID: 38737 RVA: 0x0015D050 File Offset: 0x0015B250
+		// Token: 0x0600A055 RID: 41045 RVA: 0x0016FB10 File Offset: 0x0016DD10
 		private ILongPressButtonActionMapping_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009752 RID: 38738 RVA: 0x0015D088 File Offset: 0x0015B288
+		// Token: 0x0600A056 RID: 41046 RVA: 0x0016FB48 File Offset: 0x0016DD48
 		public static ILongPressButtonActionMapping Create([Nullable(2)] ILongPressButtonActionMapping instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009753 RID: 38739 RVA: 0x0015D09B File Offset: 0x0015B29B
+		// Token: 0x0600A057 RID: 41047 RVA: 0x0016FB5B File Offset: 0x0016DD5B
 		public static ILongPressButtonActionMapping CreateFromSetValue([Nullable(2)] ILongPressButtonActionMapping_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009754 RID: 38740 RVA: 0x0015D0AE File Offset: 0x0015B2AE
+		// Token: 0x0600A058 RID: 41048 RVA: 0x0016FB6E File Offset: 0x0016DD6E
 		public ILongPressButtonActionMapping_SetValue ToSetValue()
 		{
 			return new ILongPressButtonActionMapping_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F95 RID: 12181
-		// (get) Token: 0x06009755 RID: 38741 RVA: 0x0015D0CD File Offset: 0x0015B2CD
-		// (set) Token: 0x06009756 RID: 38742 RVA: 0x0015D0F8 File Offset: 0x0015B2F8
+		// Token: 0x170031F4 RID: 12788
+		// (get) Token: 0x0600A059 RID: 41049 RVA: 0x0016FB8D File Offset: 0x0016DD8D
+		// (set) Token: 0x0600A05A RID: 41050 RVA: 0x0016FBB8 File Offset: 0x0016DDB8
 		public virtual int Id
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F96 RID: 12182
-		// (get) Token: 0x06009757 RID: 38743 RVA: 0x0015D106 File Offset: 0x0015B306
-		// (set) Token: 0x06009758 RID: 38744 RVA: 0x0015D131 File Offset: 0x0015B331
+		// Token: 0x170031F5 RID: 12789
+		// (get) Token: 0x0600A05B RID: 41051 RVA: 0x0016FBC6 File Offset: 0x0016DDC6
+		// (set) Token: 0x0600A05C RID: 41052 RVA: 0x0016FBF1 File Offset: 0x0016DDF1
 		public virtual string ActionName
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005C5C RID: 23644
+		// Token: 0x04006171 RID: 24945
 		[Nullable(2)]
 		protected ILongPressButtonActionMapping FbInstance;
 
-		// Token: 0x04005C5D RID: 23645
+		// Token: 0x04006172 RID: 24946
 		[Nullable(2)]
 		protected ILongPressButtonActionMapping_SetValue PocoInterface;
 	}

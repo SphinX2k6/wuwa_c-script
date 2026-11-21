@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A9E RID: 10910
+	// Token: 0x02002D92 RID: 11666
 	public class CloseWalkingOverlayMontage : ActionParams
 	{
-		// Token: 0x0600EF9B RID: 61339 RVA: 0x0022D3BD File Offset: 0x0022B5BD
-		[NullableContext(1)]
+		// Token: 0x0600FE51 RID: 65105 RVA: 0x0024B0C9 File Offset: 0x002492C9
 		public static CloseWalkingOverlayMontage Create(ICloseWalkingOverlayMontage? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C21 RID: 19489
-		// (get) Token: 0x0600EF9C RID: 61340 RVA: 0x0022D3DC File Offset: 0x0022B5DC
+		// Token: 0x17004FDB RID: 20443
+		// (get) Token: 0x0600FE52 RID: 65106 RVA: 0x0024B0E8 File Offset: 0x002492E8
 		public virtual int EntityId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083CC RID: 33740
+		// Token: 0x04008AD0 RID: 35536
 		private ICloseWalkingOverlayMontage Instance;
 	}
 }

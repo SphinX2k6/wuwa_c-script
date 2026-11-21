@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001182 RID: 4482
+	// Token: 0x0200028D RID: 653
 	[UnrealObjectPath("/Script/Engine.SpringArmComponent")]
 	[UnrealStructLayout(720, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 720)]
 	public class USpringArmComponent : USceneComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601078A RID: 67466 RVA: 0x00183040 File Offset: 0x00181240
+		// Token: 0x060047AB RID: 18347 RVA: 0x000645EB File Offset: 0x000627EB
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return USpringArmComponent._ClassPtr;
 		}
 
-		// Token: 0x0601078B RID: 67467 RVA: 0x0018304C File Offset: 0x0018124C
+		// Token: 0x060047AC RID: 18348 RVA: 0x000645F8 File Offset: 0x000627F8
 		public USpringArmComponent() : this(BuiltinUtils.AllocNativeUObject(USpringArmComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601078C RID: 67468 RVA: 0x00183074 File Offset: 0x00181274
+		// Token: 0x060047AD RID: 18349 RVA: 0x00064620 File Offset: 0x00062820
 		[NullableContext(1)]
 		public USpringArmComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(USpringArmComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17004039 RID: 16441
-		// (get) Token: 0x0601078D RID: 67469 RVA: 0x001830A7 File Offset: 0x001812A7
-		// (set) Token: 0x0601078E RID: 67470 RVA: 0x001830B7 File Offset: 0x001812B7
+		// Token: 0x17000D36 RID: 3382
+		// (get) Token: 0x060047AE RID: 18350 RVA: 0x00064653 File Offset: 0x00062853
+		// (set) Token: 0x060047AF RID: 18351 RVA: 0x00064663 File Offset: 0x00062863
 		public unsafe float TargetArmLength
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700403A RID: 16442
-		// (get) Token: 0x0601078F RID: 67471 RVA: 0x001830C8 File Offset: 0x001812C8
-		// (set) Token: 0x06010790 RID: 67472 RVA: 0x001830DC File Offset: 0x001812DC
+		// Token: 0x17000D37 RID: 3383
+		// (get) Token: 0x060047B0 RID: 18352 RVA: 0x00064674 File Offset: 0x00062874
+		// (set) Token: 0x060047B1 RID: 18353 RVA: 0x00064688 File Offset: 0x00062888
 		public unsafe FVector SocketOffset
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700403B RID: 16443
-		// (get) Token: 0x06010791 RID: 67473 RVA: 0x001830F1 File Offset: 0x001812F1
-		// (set) Token: 0x06010792 RID: 67474 RVA: 0x00183105 File Offset: 0x00181305
+		// Token: 0x17000D38 RID: 3384
+		// (get) Token: 0x060047B2 RID: 18354 RVA: 0x0006469D File Offset: 0x0006289D
+		// (set) Token: 0x060047B3 RID: 18355 RVA: 0x000646B1 File Offset: 0x000628B1
 		public unsafe FVector TargetOffset
 		{
 			get
@@ -73,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700403C RID: 16444
-		// (get) Token: 0x06010793 RID: 67475 RVA: 0x0018311A File Offset: 0x0018131A
-		// (set) Token: 0x06010794 RID: 67476 RVA: 0x0018312A File Offset: 0x0018132A
+		// Token: 0x17000D39 RID: 3385
+		// (get) Token: 0x060047B4 RID: 18356 RVA: 0x000646C6 File Offset: 0x000628C6
+		// (set) Token: 0x060047B5 RID: 18357 RVA: 0x000646D6 File Offset: 0x000628D6
 		public unsafe float ProbeSize
 		{
 			get
@@ -88,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700403D RID: 16445
-		// (get) Token: 0x06010795 RID: 67477 RVA: 0x0018313B File Offset: 0x0018133B
-		// (set) Token: 0x06010796 RID: 67478 RVA: 0x0018314F File Offset: 0x0018134F
+		// Token: 0x17000D3A RID: 3386
+		// (get) Token: 0x060047B6 RID: 18358 RVA: 0x000646E7 File Offset: 0x000628E7
+		// (set) Token: 0x060047B7 RID: 18359 RVA: 0x000646FB File Offset: 0x000628FB
 		public unsafe TEnumAsByte<ECollisionChannel> ProbeChannel
 		{
 			get
@@ -103,9 +103,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700403E RID: 16446
-		// (get) Token: 0x06010797 RID: 67479 RVA: 0x00183164 File Offset: 0x00181364
-		// (set) Token: 0x06010798 RID: 67480 RVA: 0x0018317D File Offset: 0x0018137D
+		// Token: 0x17000D3B RID: 3387
+		// (get) Token: 0x060047B8 RID: 18360 RVA: 0x00064710 File Offset: 0x00062910
+		// (set) Token: 0x060047B9 RID: 18361 RVA: 0x00064729 File Offset: 0x00062929
 		public unsafe bool bDoCollisionTest
 		{
 			get
@@ -118,9 +118,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700403F RID: 16447
-		// (get) Token: 0x06010799 RID: 67481 RVA: 0x001831AD File Offset: 0x001813AD
-		// (set) Token: 0x0601079A RID: 67482 RVA: 0x001831C6 File Offset: 0x001813C6
+		// Token: 0x17000D3C RID: 3388
+		// (get) Token: 0x060047BA RID: 18362 RVA: 0x00064759 File Offset: 0x00062959
+		// (set) Token: 0x060047BB RID: 18363 RVA: 0x00064772 File Offset: 0x00062972
 		public unsafe bool bUsePawnControlRotation
 		{
 			get
@@ -133,9 +133,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004040 RID: 16448
-		// (get) Token: 0x0601079B RID: 67483 RVA: 0x001831F6 File Offset: 0x001813F6
-		// (set) Token: 0x0601079C RID: 67484 RVA: 0x0018320F File Offset: 0x0018140F
+		// Token: 0x17000D3D RID: 3389
+		// (get) Token: 0x060047BC RID: 18364 RVA: 0x000647A2 File Offset: 0x000629A2
+		// (set) Token: 0x060047BD RID: 18365 RVA: 0x000647BB File Offset: 0x000629BB
 		public unsafe bool bInheritPitch
 		{
 			get
@@ -148,9 +148,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004041 RID: 16449
-		// (get) Token: 0x0601079D RID: 67485 RVA: 0x0018323F File Offset: 0x0018143F
-		// (set) Token: 0x0601079E RID: 67486 RVA: 0x00183258 File Offset: 0x00181458
+		// Token: 0x17000D3E RID: 3390
+		// (get) Token: 0x060047BE RID: 18366 RVA: 0x000647EB File Offset: 0x000629EB
+		// (set) Token: 0x060047BF RID: 18367 RVA: 0x00064804 File Offset: 0x00062A04
 		public unsafe bool bInheritYaw
 		{
 			get
@@ -163,9 +163,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004042 RID: 16450
-		// (get) Token: 0x0601079F RID: 67487 RVA: 0x00183288 File Offset: 0x00181488
-		// (set) Token: 0x060107A0 RID: 67488 RVA: 0x001832A1 File Offset: 0x001814A1
+		// Token: 0x17000D3F RID: 3391
+		// (get) Token: 0x060047C0 RID: 18368 RVA: 0x00064834 File Offset: 0x00062A34
+		// (set) Token: 0x060047C1 RID: 18369 RVA: 0x0006484D File Offset: 0x00062A4D
 		public unsafe bool bInheritRoll
 		{
 			get
@@ -178,9 +178,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004043 RID: 16451
-		// (get) Token: 0x060107A1 RID: 67489 RVA: 0x001832D1 File Offset: 0x001814D1
-		// (set) Token: 0x060107A2 RID: 67490 RVA: 0x001832EA File Offset: 0x001814EA
+		// Token: 0x17000D40 RID: 3392
+		// (get) Token: 0x060047C2 RID: 18370 RVA: 0x0006487D File Offset: 0x00062A7D
+		// (set) Token: 0x060047C3 RID: 18371 RVA: 0x00064896 File Offset: 0x00062A96
 		public unsafe bool bEnableCameraLag
 		{
 			get
@@ -193,9 +193,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004044 RID: 16452
-		// (get) Token: 0x060107A3 RID: 67491 RVA: 0x0018331A File Offset: 0x0018151A
-		// (set) Token: 0x060107A4 RID: 67492 RVA: 0x00183333 File Offset: 0x00181533
+		// Token: 0x17000D41 RID: 3393
+		// (get) Token: 0x060047C4 RID: 18372 RVA: 0x000648C6 File Offset: 0x00062AC6
+		// (set) Token: 0x060047C5 RID: 18373 RVA: 0x000648DF File Offset: 0x00062ADF
 		public unsafe bool bEnableCameraRotationLag
 		{
 			get
@@ -208,9 +208,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004045 RID: 16453
-		// (get) Token: 0x060107A5 RID: 67493 RVA: 0x00183363 File Offset: 0x00181563
-		// (set) Token: 0x060107A6 RID: 67494 RVA: 0x0018337C File Offset: 0x0018157C
+		// Token: 0x17000D42 RID: 3394
+		// (get) Token: 0x060047C6 RID: 18374 RVA: 0x0006490F File Offset: 0x00062B0F
+		// (set) Token: 0x060047C7 RID: 18375 RVA: 0x00064928 File Offset: 0x00062B28
 		public unsafe bool bUseCameraLagSubstepping
 		{
 			get
@@ -223,9 +223,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004046 RID: 16454
-		// (get) Token: 0x060107A7 RID: 67495 RVA: 0x001833AC File Offset: 0x001815AC
-		// (set) Token: 0x060107A8 RID: 67496 RVA: 0x001833C5 File Offset: 0x001815C5
+		// Token: 0x17000D43 RID: 3395
+		// (get) Token: 0x060047C8 RID: 18376 RVA: 0x00064958 File Offset: 0x00062B58
+		// (set) Token: 0x060047C9 RID: 18377 RVA: 0x00064971 File Offset: 0x00062B71
 		public unsafe bool bDrawDebugLagMarkers
 		{
 			get
@@ -238,9 +238,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004047 RID: 16455
-		// (get) Token: 0x060107A9 RID: 67497 RVA: 0x001833F5 File Offset: 0x001815F5
-		// (set) Token: 0x060107AA RID: 67498 RVA: 0x00183405 File Offset: 0x00181605
+		// Token: 0x17000D44 RID: 3396
+		// (get) Token: 0x060047CA RID: 18378 RVA: 0x000649A1 File Offset: 0x00062BA1
+		// (set) Token: 0x060047CB RID: 18379 RVA: 0x000649B1 File Offset: 0x00062BB1
 		public unsafe float CameraLagSpeed
 		{
 			get
@@ -253,9 +253,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004048 RID: 16456
-		// (get) Token: 0x060107AB RID: 67499 RVA: 0x00183416 File Offset: 0x00181616
-		// (set) Token: 0x060107AC RID: 67500 RVA: 0x00183426 File Offset: 0x00181626
+		// Token: 0x17000D45 RID: 3397
+		// (get) Token: 0x060047CC RID: 18380 RVA: 0x000649C2 File Offset: 0x00062BC2
+		// (set) Token: 0x060047CD RID: 18381 RVA: 0x000649D2 File Offset: 0x00062BD2
 		public unsafe float CameraRotationLagSpeed
 		{
 			get
@@ -268,9 +268,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004049 RID: 16457
-		// (get) Token: 0x060107AD RID: 67501 RVA: 0x00183437 File Offset: 0x00181637
-		// (set) Token: 0x060107AE RID: 67502 RVA: 0x00183447 File Offset: 0x00181647
+		// Token: 0x17000D46 RID: 3398
+		// (get) Token: 0x060047CE RID: 18382 RVA: 0x000649E3 File Offset: 0x00062BE3
+		// (set) Token: 0x060047CF RID: 18383 RVA: 0x000649F3 File Offset: 0x00062BF3
 		public unsafe float CameraRotationLagSpeedPercent
 		{
 			get
@@ -283,9 +283,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700404A RID: 16458
-		// (get) Token: 0x060107AF RID: 67503 RVA: 0x00183458 File Offset: 0x00181658
-		// (set) Token: 0x060107B0 RID: 67504 RVA: 0x00183468 File Offset: 0x00181668
+		// Token: 0x17000D47 RID: 3399
+		// (get) Token: 0x060047D0 RID: 18384 RVA: 0x00064A04 File Offset: 0x00062C04
+		// (set) Token: 0x060047D1 RID: 18385 RVA: 0x00064A14 File Offset: 0x00062C14
 		public unsafe float CameraLagMaxTimeStep
 		{
 			get
@@ -298,9 +298,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700404B RID: 16459
-		// (get) Token: 0x060107B1 RID: 67505 RVA: 0x00183479 File Offset: 0x00181679
-		// (set) Token: 0x060107B2 RID: 67506 RVA: 0x00183489 File Offset: 0x00181689
+		// Token: 0x17000D48 RID: 3400
+		// (get) Token: 0x060047D2 RID: 18386 RVA: 0x00064A25 File Offset: 0x00062C25
+		// (set) Token: 0x060047D3 RID: 18387 RVA: 0x00064A35 File Offset: 0x00062C35
 		public unsafe float CameraLagMaxDistance
 		{
 			get
@@ -313,139 +313,139 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060107B3 RID: 67507 RVA: 0x0018349A File Offset: 0x0018169A
+		// Token: 0x060047D4 RID: 18388 RVA: 0x00064A46 File Offset: 0x00062C46
 		public bool IsCollisionFixApplied()
 		{
 			return USpringArmComponent.__IsCollisionFixApplied_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060107B4 RID: 67508 RVA: 0x001834A7 File Offset: 0x001816A7
+		// Token: 0x060047D5 RID: 18389 RVA: 0x00064A53 File Offset: 0x00062C53
 		public FVector GetUnfixedCameraPosition()
 		{
 			return USpringArmComponent.__GetUnfixedCameraPosition_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060107B5 RID: 67509 RVA: 0x001834B4 File Offset: 0x001816B4
+		// Token: 0x060047D6 RID: 18390 RVA: 0x00064A60 File Offset: 0x00062C60
 		public FRotator GetTargetRotation()
 		{
 			return USpringArmComponent.__GetTargetRotation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060107B6 RID: 67510
+		// Token: 0x060047D7 RID: 18391
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsCollisionFixApplied_Internal(IntPtr @this);
 
-		// Token: 0x060107B7 RID: 67511
+		// Token: 0x060047D8 RID: 18392
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetUnfixedCameraPosition_Internal(IntPtr @this);
 
-		// Token: 0x060107B8 RID: 67512
+		// Token: 0x060047D9 RID: 18393
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __GetTargetRotation_Internal(IntPtr @this);
 
-		// Token: 0x060107B9 RID: 67513 RVA: 0x001834C1 File Offset: 0x001816C1
+		// Token: 0x060047DA RID: 18394 RVA: 0x00064A6D File Offset: 0x00062C6D
 		static USpringArmComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.SpringArmComponent");
 		}
 
-		// Token: 0x060107BA RID: 67514 RVA: 0x001834CF File Offset: 0x001816CF
+		// Token: 0x060047DB RID: 18395 RVA: 0x00064A7B File Offset: 0x00062C7B
 		protected USpringArmComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04008CF7 RID: 36087
+		// Token: 0x04001B98 RID: 7064
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.SpringArmComponent";
 
-		// Token: 0x04008CF8 RID: 36088
+		// Token: 0x04001B99 RID: 7065
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04008CF9 RID: 36089
+		// Token: 0x04001B9A RID: 7066
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04008CFA RID: 36090
+		// Token: 0x04001B9B RID: 7067
 		internal static int __PropertyOffset_TargetArmLength;
 
-		// Token: 0x04008CFB RID: 36091
+		// Token: 0x04001B9C RID: 7068
 		internal static int __PropertyOffset_SocketOffset;
 
-		// Token: 0x04008CFC RID: 36092
+		// Token: 0x04001B9D RID: 7069
 		internal static int __PropertyOffset_TargetOffset;
 
-		// Token: 0x04008CFD RID: 36093
+		// Token: 0x04001B9E RID: 7070
 		internal static int __PropertyOffset_ProbeSize;
 
-		// Token: 0x04008CFE RID: 36094
+		// Token: 0x04001B9F RID: 7071
 		internal static int __PropertyOffset_ProbeChannel;
 
-		// Token: 0x04008CFF RID: 36095
+		// Token: 0x04001BA0 RID: 7072
 		internal static int __PropertyOffset_bDoCollisionTest;
 
-		// Token: 0x04008D00 RID: 36096
+		// Token: 0x04001BA1 RID: 7073
 		internal static byte __PropertyMask_bDoCollisionTest;
 
-		// Token: 0x04008D01 RID: 36097
+		// Token: 0x04001BA2 RID: 7074
 		internal static int __PropertyOffset_bUsePawnControlRotation;
 
-		// Token: 0x04008D02 RID: 36098
+		// Token: 0x04001BA3 RID: 7075
 		internal static byte __PropertyMask_bUsePawnControlRotation;
 
-		// Token: 0x04008D03 RID: 36099
+		// Token: 0x04001BA4 RID: 7076
 		internal static int __PropertyOffset_bInheritPitch;
 
-		// Token: 0x04008D04 RID: 36100
+		// Token: 0x04001BA5 RID: 7077
 		internal static byte __PropertyMask_bInheritPitch;
 
-		// Token: 0x04008D05 RID: 36101
+		// Token: 0x04001BA6 RID: 7078
 		internal static int __PropertyOffset_bInheritYaw;
 
-		// Token: 0x04008D06 RID: 36102
+		// Token: 0x04001BA7 RID: 7079
 		internal static byte __PropertyMask_bInheritYaw;
 
-		// Token: 0x04008D07 RID: 36103
+		// Token: 0x04001BA8 RID: 7080
 		internal static int __PropertyOffset_bInheritRoll;
 
-		// Token: 0x04008D08 RID: 36104
+		// Token: 0x04001BA9 RID: 7081
 		internal static byte __PropertyMask_bInheritRoll;
 
-		// Token: 0x04008D09 RID: 36105
+		// Token: 0x04001BAA RID: 7082
 		internal static int __PropertyOffset_bEnableCameraLag;
 
-		// Token: 0x04008D0A RID: 36106
+		// Token: 0x04001BAB RID: 7083
 		internal static byte __PropertyMask_bEnableCameraLag;
 
-		// Token: 0x04008D0B RID: 36107
+		// Token: 0x04001BAC RID: 7084
 		internal static int __PropertyOffset_bEnableCameraRotationLag;
 
-		// Token: 0x04008D0C RID: 36108
+		// Token: 0x04001BAD RID: 7085
 		internal static byte __PropertyMask_bEnableCameraRotationLag;
 
-		// Token: 0x04008D0D RID: 36109
+		// Token: 0x04001BAE RID: 7086
 		internal static int __PropertyOffset_bUseCameraLagSubstepping;
 
-		// Token: 0x04008D0E RID: 36110
+		// Token: 0x04001BAF RID: 7087
 		internal static byte __PropertyMask_bUseCameraLagSubstepping;
 
-		// Token: 0x04008D0F RID: 36111
+		// Token: 0x04001BB0 RID: 7088
 		internal static int __PropertyOffset_bDrawDebugLagMarkers;
 
-		// Token: 0x04008D10 RID: 36112
+		// Token: 0x04001BB1 RID: 7089
 		internal static byte __PropertyMask_bDrawDebugLagMarkers;
 
-		// Token: 0x04008D11 RID: 36113
+		// Token: 0x04001BB2 RID: 7090
 		internal static int __PropertyOffset_CameraLagSpeed;
 
-		// Token: 0x04008D12 RID: 36114
+		// Token: 0x04001BB3 RID: 7091
 		internal static int __PropertyOffset_CameraRotationLagSpeed;
 
-		// Token: 0x04008D13 RID: 36115
+		// Token: 0x04001BB4 RID: 7092
 		internal static int __PropertyOffset_CameraRotationLagSpeedPercent;
 
-		// Token: 0x04008D14 RID: 36116
+		// Token: 0x04001BB5 RID: 7093
 		internal static int __PropertyOffset_CameraLagMaxTimeStep;
 
-		// Token: 0x04008D15 RID: 36117
+		// Token: 0x04001BB6 RID: 7094
 		internal static int __PropertyOffset_CameraLagMaxDistance;
 	}
 }

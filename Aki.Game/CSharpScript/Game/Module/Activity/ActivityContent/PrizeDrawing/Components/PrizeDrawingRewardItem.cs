@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Components
 {
-	// Token: 0x020062A5 RID: 25253
+	// Token: 0x02005223 RID: 21027
 	public class PrizeDrawingRewardItem : UiPanelBase
 	{
-		// Token: 0x0603F88C RID: 260236 RVA: 0x00F5D381 File Offset: 0x00F5B581
+		// Token: 0x0603454D RID: 214349 RVA: 0x00EA42DE File Offset: 0x00EA24DE
 		public PrizeDrawingRewardItem(int itemId, int count, int maxAmount)
 		{
 			this.ItemId = itemId;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.MaxAmount = maxAmount;
 		}
 
-		// Token: 0x0603F88D RID: 260237 RVA: 0x00F5D3AC File Offset: 0x00F5B5AC
+		// Token: 0x0603454E RID: 214350 RVA: 0x00EA4308 File Offset: 0x00EA2508
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F88E RID: 260238 RVA: 0x00F5D49C File Offset: 0x00F5B69C
+		// Token: 0x0603454F RID: 214351 RVA: 0x00EA43F8 File Offset: 0x00EA25F8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PrizeDrawingRewardItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F88F RID: 260239 RVA: 0x00F5D4E0 File Offset: 0x00F5B6E0
+		// Token: 0x06034550 RID: 214352 RVA: 0x00EA443C File Offset: 0x00EA263C
 		private UniTask Initialize(int itemId, int count, int rewardMaxAmount)
 		{
 			PrizeDrawingRewardItem.<Initialize>d__8 <Initialize>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			return <Initialize>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F890 RID: 260240 RVA: 0x00F5D53C File Offset: 0x00F5B73C
+		// Token: 0x06034551 RID: 214353 RVA: 0x00EA4498 File Offset: 0x00EA2698
 		public void Refresh(int acquiredCount, bool animBanned = false)
 		{
 			for (int i = 0; i < this.GotItemList.Count; i++)
@@ -76,33 +76,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			}
 		}
 
-		// Token: 0x04021365 RID: 136037
+		// Token: 0x0401BC94 RID: 113812
 		[Nullable(1)]
 		private readonly List<GotItem> GotItemList = new List<GotItem>();
 
-		// Token: 0x04021366 RID: 136038
+		// Token: 0x0401BC95 RID: 113813
 		private readonly int ItemId;
 
-		// Token: 0x04021367 RID: 136039
+		// Token: 0x0401BC96 RID: 113814
 		private readonly int Count;
 
-		// Token: 0x04021368 RID: 136040
+		// Token: 0x0401BC97 RID: 113815
 		private readonly int MaxAmount;
 
-		// Token: 0x0200C487 RID: 50311
+		// Token: 0x0200AE6E RID: 44654
 		private enum EPrizeItemType
 		{
-			// Token: 0x0403B4C1 RID: 242881
+			// Token: 0x04035E23 RID: 220707
 			TexIcon,
-			// Token: 0x0403B4C2 RID: 242882
+			// Token: 0x04035E24 RID: 220708
 			TxtName,
-			// Token: 0x0403B4C3 RID: 242883
+			// Token: 0x04035E25 RID: 220709
 			TxtTotal,
-			// Token: 0x0403B4C4 RID: 242884
+			// Token: 0x04035E26 RID: 220710
 			PnlGrid,
-			// Token: 0x0403B4C5 RID: 242885
+			// Token: 0x04035E27 RID: 220711
 			PrizeItem,
-			// Token: 0x0403B4C6 RID: 242886
+			// Token: 0x04035E28 RID: 220712
 			TxtCount
 		}
 	}

@@ -5,41 +5,41 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000212 RID: 530
+	// Token: 0x02000239 RID: 569
 	public class ICableWay_SetValue
 	{
-		// Token: 0x0400096C RID: 2412
+		// Token: 0x040009F6 RID: 2550
 		public EHookInteractType Type;
 
-		// Token: 0x0400096D RID: 2413
+		// Token: 0x040009F7 RID: 2551
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> HookActions;
 
-		// Token: 0x0400096E RID: 2414
+		// Token: 0x040009F8 RID: 2552
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> ExitHookActions;
 
-		// Token: 0x0400096F RID: 2415
+		// Token: 0x040009F9 RID: 2553
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> FinishActions;
 
-		// Token: 0x04000970 RID: 2416
+		// Token: 0x040009FA RID: 2554
 		[Nullable(2)]
 		public IClientHookActionConfig ClientHookActionConfig;
 
-		// Token: 0x04000971 RID: 2417
+		// Token: 0x040009FB RID: 2555
 		public int SplineEntityId;
 	}
 }

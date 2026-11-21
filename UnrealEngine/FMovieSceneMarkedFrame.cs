@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002413 RID: 9235
+	// Token: 0x02000781 RID: 1921
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieScene.MovieSceneMarkedFrame")]
 	[UnrealStructLayout(40, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 40)]
 	public class FMovieSceneMarkedFrame : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060229FA RID: 141818 RVA: 0x0033344F File Offset: 0x0033164F
+		// Token: 0x0600A5DA RID: 42458 RVA: 0x000F4F16 File Offset: 0x000F3116
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMovieSceneMarkedFrame._ScriptStructPtr != 0) ? FMovieSceneMarkedFrame._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/MovieScene.MovieSceneMarkedFrame", ref FMovieSceneMarkedFrame._ScriptStructPtr);
 		}
 
-		// Token: 0x17008543 RID: 34115
-		// (get) Token: 0x060229FB RID: 141819 RVA: 0x00333474 File Offset: 0x00331674
-		// (set) Token: 0x060229FC RID: 141820 RVA: 0x003334B7 File Offset: 0x003316B7
+		// Token: 0x17001ECA RID: 7882
+		// (get) Token: 0x0600A5DB RID: 42459 RVA: 0x000F4F3C File Offset: 0x000F313C
+		// (set) Token: 0x0600A5DC RID: 42460 RVA: 0x000F4F7F File Offset: 0x000F317F
 		public FFrameNumber FrameNumber
 		{
 			get
@@ -40,9 +40,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008544 RID: 34116
-		// (get) Token: 0x060229FD RID: 141821 RVA: 0x003334D8 File Offset: 0x003316D8
-		// (set) Token: 0x060229FE RID: 141822 RVA: 0x003334EC File Offset: 0x003316EC
+		// Token: 0x17001ECB RID: 7883
+		// (get) Token: 0x0600A5DD RID: 42461 RVA: 0x000F4FA0 File Offset: 0x000F31A0
+		// (set) Token: 0x0600A5DE RID: 42462 RVA: 0x000F4FB4 File Offset: 0x000F31B4
 		public unsafe string Label
 		{
 			get
@@ -55,61 +55,54 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060229FF RID: 141823 RVA: 0x00333501 File Offset: 0x00331701
+		// Token: 0x0600A5DF RID: 42463 RVA: 0x000F4FC9 File Offset: 0x000F31C9
 		public FMovieSceneMarkedFrame()
 		{
 		}
 
-		// Token: 0x06022A00 RID: 141824 RVA: 0x00333509 File Offset: 0x00331709
-		public FMovieSceneMarkedFrame(FFrameNumber FrameNumber, string Label, FLinearColor Color)
-		{
-			this.FrameNumber = FrameNumber;
-			this.Label = Label;
-		}
-
-		// Token: 0x06022A01 RID: 141825 RVA: 0x0033351F File Offset: 0x0033171F
+		// Token: 0x0600A5E0 RID: 42464 RVA: 0x000F4FD1 File Offset: 0x000F31D1
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMovieSceneMarkedFrame.StaticStruct();
 		}
 
-		// Token: 0x06022A02 RID: 141826 RVA: 0x0033352B File Offset: 0x0033172B
+		// Token: 0x0600A5E1 RID: 42465 RVA: 0x000F4FDD File Offset: 0x000F31DD
 		[NullableContext(2)]
 		public FMovieSceneMarkedFrame(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06022A03 RID: 141827 RVA: 0x00333535 File Offset: 0x00331735
+		// Token: 0x0600A5E2 RID: 42466 RVA: 0x000F4FE7 File Offset: 0x000F31E7
 		public FMovieSceneMarkedFrame(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06022A04 RID: 141828 RVA: 0x00333540 File Offset: 0x00331740
+		// Token: 0x0600A5E3 RID: 42467 RVA: 0x000F4FF2 File Offset: 0x000F31F2
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMovieSceneMarkedFrame(Pointer, false, true);
 		}
 
-		// Token: 0x06022A05 RID: 141829 RVA: 0x0033354A File Offset: 0x0033174A
+		// Token: 0x0600A5E4 RID: 42468 RVA: 0x000F4FFC File Offset: 0x000F31FC
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMovieSceneMarkedFrame(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04012801 RID: 75777
+		// Token: 0x04004704 RID: 18180
 		public const string __ObjectPath = "/Script/MovieScene.MovieSceneMarkedFrame";
 
-		// Token: 0x04012802 RID: 75778
+		// Token: 0x04004705 RID: 18181
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04012803 RID: 75779
+		// Token: 0x04004706 RID: 18182
 		internal static int __PropertyOffset_FrameNumber;
 
-		// Token: 0x04012804 RID: 75780
+		// Token: 0x04004707 RID: 18183
 		[Nullable(2)]
 		private FFrameNumber _FrameNumber;
 
-		// Token: 0x04012805 RID: 75781
+		// Token: 0x04004708 RID: 18184
 		internal static int __PropertyOffset_Label;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A0F RID: 10767
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CFC RID: 11516
 	public class IPlayGuestUiAnimation : IGuestOperateUiAnimationType
 	{
-		// Token: 0x0600ED74 RID: 60788 RVA: 0x00229DE2 File Offset: 0x00227FE2
+		// Token: 0x0600FC0B RID: 64523 RVA: 0x00247766 File Offset: 0x00245966
 		public static IPlayGuestUiAnimation Create(IPlayGuestUiAnimation? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B18 RID: 19224
-		// (get) Token: 0x0600ED75 RID: 60789 RVA: 0x00229E01 File Offset: 0x00228001
+		// Token: 0x17004EC1 RID: 20161
+		// (get) Token: 0x0600FC0C RID: 64524 RVA: 0x00247785 File Offset: 0x00245985
 		public override EGuestOperateUiAnimation Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B19 RID: 19225
-		// (get) Token: 0x0600ED76 RID: 60790 RVA: 0x00229E0E File Offset: 0x0022800E
+		// Token: 0x17004EC2 RID: 20162
+		// (get) Token: 0x0600FC0D RID: 64525 RVA: 0x00247792 File Offset: 0x00245992
 		public virtual IPlayGuestCartethyia PlayGuestUiAnimation
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082B3 RID: 33459
+		// Token: 0x040089A4 RID: 35236
 		private IPlayGuestUiAnimation Instance;
 
-		// Token: 0x040082B4 RID: 33460
+		// Token: 0x040089A5 RID: 35237
 		[Nullable(2)]
 		private IPlayGuestCartethyia _PlayGuestUiAnimationCache;
 
-		// Token: 0x040082B5 RID: 33461
+		// Token: 0x040089A6 RID: 35238
 		private bool _PlayGuestUiAnimationInited;
 	}
 }

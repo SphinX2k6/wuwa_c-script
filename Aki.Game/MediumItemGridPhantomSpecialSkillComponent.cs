@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x02001926 RID: 6438
+// Token: 0x02000DDF RID: 3551
 public class MediumItemGridPhantomSpecialSkillComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BC80 RID: 48256 RVA: 0x002AAB6C File Offset: 0x002A8D6C
+	// Token: 0x0600906A RID: 36970 RVA: 0x002B52C8 File Offset: 0x002B34C8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -20,14 +20,14 @@ public class MediumItemGridPhantomSpecialSkillComponent : MediumItemGridComponen
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BC81 RID: 48257 RVA: 0x002AABB4 File Offset: 0x002A8DB4
+	// Token: 0x0600906B RID: 36971 RVA: 0x002B5310 File Offset: 0x002B3510
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_VisionTag";
 	}
 
-	// Token: 0x0600BC82 RID: 48258 RVA: 0x002AABBC File Offset: 0x002A8DBC
+	// Token: 0x0600906C RID: 36972 RVA: 0x002B5318 File Offset: 0x002B3518
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -54,10 +54,10 @@ public class MediumItemGridPhantomSpecialSkillComponent : MediumItemGridComponen
 		}
 	}
 
-	// Token: 0x02007E8F RID: 32399
+	// Token: 0x02007016 RID: 28694
 	private class EComponent
 	{
-		// Token: 0x04029665 RID: 169573
+		// Token: 0x04024991 RID: 149905
 		public const int SpriteTag = 0;
 	}
 }

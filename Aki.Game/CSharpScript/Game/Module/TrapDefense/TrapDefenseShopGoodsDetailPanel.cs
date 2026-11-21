@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004ACE RID: 19150
+	// Token: 0x02003A76 RID: 14966
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseShopGoodsDetailPanel : UiPanelBase
 	{
-		// Token: 0x060319B0 RID: 203184 RVA: 0x00B814AC File Offset: 0x00B7F6AC
+		// Token: 0x06026740 RID: 157504 RVA: 0x00AC5460 File Offset: 0x00AC3660
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060319B1 RID: 203185 RVA: 0x00B815DC File Offset: 0x00B7F7DC
+		// Token: 0x06026741 RID: 157505 RVA: 0x00AC5590 File Offset: 0x00AC3790
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseShopGoodsDetailPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -51,19 +51,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060319B2 RID: 203186 RVA: 0x00B8161F File Offset: 0x00B7F81F
+		// Token: 0x06026742 RID: 157506 RVA: 0x00AC55D3 File Offset: 0x00AC37D3
 		protected override void OnStart()
 		{
 			TrapDefenseModel.Instance.ViewModelShop.AddOnSelectGoodsDelegate(new Action<ITrapDefenseShopGoods>(this.OnSelectGoods));
 		}
 
-		// Token: 0x060319B3 RID: 203187 RVA: 0x00B8163C File Offset: 0x00B7F83C
+		// Token: 0x06026743 RID: 157507 RVA: 0x00AC55F0 File Offset: 0x00AC37F0
 		protected override void OnBeforeDestroy()
 		{
 			TrapDefenseModel.Instance.ViewModelShop.RemoveOnSelectGoodsDelegate(new Action<ITrapDefenseShopGoods>(this.OnSelectGoods));
 		}
 
-		// Token: 0x060319B4 RID: 203188 RVA: 0x00B81659 File Offset: 0x00B7F859
+		// Token: 0x06026744 RID: 157508 RVA: 0x00AC560D File Offset: 0x00AC380D
 		public void RefreshPanel(ITrapDefenseShopGoods data)
 		{
 			if (data == null)
@@ -73,46 +73,46 @@ namespace CSharpScript.Game.Module.TrapDefense
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x060319B5 RID: 203189 RVA: 0x00B8167B File Offset: 0x00B7F87B
+		// Token: 0x06026745 RID: 157509 RVA: 0x00AC562F File Offset: 0x00AC382F
 		private void OnConfirmButtonClick(int _)
 		{
 		}
 
-		// Token: 0x060319B6 RID: 203190 RVA: 0x00B8167D File Offset: 0x00B7F87D
+		// Token: 0x06026746 RID: 157510 RVA: 0x00AC5631 File Offset: 0x00AC3831
 		private void OnSelectGoods(ITrapDefenseShopGoods goods)
 		{
 			this.RefreshPanel(goods);
 		}
 
-		// Token: 0x0401A807 RID: 108551
+		// Token: 0x04015159 RID: 86361
 		private ButtonItem Button;
 
-		// Token: 0x0200AC43 RID: 44099
+		// Token: 0x02009663 RID: 38499
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04034578 RID: 214392
+			// Token: 0x0402EF29 RID: 192297
 			public const int TextName = 0;
 
-			// Token: 0x04034579 RID: 214393
+			// Token: 0x0402EF2A RID: 192298
 			public const int TextHave = 1;
 
-			// Token: 0x0403457A RID: 214394
+			// Token: 0x0402EF2B RID: 192299
 			public const int ItemPurchase = 2;
 
-			// Token: 0x0403457B RID: 214395
+			// Token: 0x0402EF2C RID: 192300
 			public const int ItemConfirmBtn = 3;
 
-			// Token: 0x0403457C RID: 214396
+			// Token: 0x0402EF2D RID: 192301
 			public const int ItemDetail = 4;
 
-			// Token: 0x0403457D RID: 214397
+			// Token: 0x0402EF2E RID: 192302
 			public const int TextBtn = 5;
 
-			// Token: 0x0403457E RID: 214398
+			// Token: 0x0402EF2F RID: 192303
 			public const int ItemUnavailable = 6;
 
-			// Token: 0x0403457F RID: 214399
+			// Token: 0x0402EF30 RID: 192304
 			public const int TextUnavailable = 7;
 		}
 	}

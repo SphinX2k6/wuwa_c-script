@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FF4 RID: 4084
+	// Token: 0x02001120 RID: 4384
 	public class ILevelPlayRecallConfig_SetValue
 	{
-		// Token: 0x040036AE RID: 13998
+		// Token: 0x040039E6 RID: 14822
 		public int RecallId;
 
-		// Token: 0x040036AF RID: 13999
-		[Nullable(1)]
+		// Token: 0x040039E7 RID: 14823
 		public List<int> RecallEntityList;
 	}
 }

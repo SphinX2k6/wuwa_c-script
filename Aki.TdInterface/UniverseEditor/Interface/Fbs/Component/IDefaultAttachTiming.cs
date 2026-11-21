@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200507B RID: 20603
+	// Token: 0x020055E0 RID: 21984
 	public struct IDefaultAttachTiming : IFlatbufferObject
 	{
-		// Token: 0x17009578 RID: 38264
-		// (get) Token: 0x06021071 RID: 135281 RVA: 0x00496811 File Offset: 0x00494A11
+		// Token: 0x17009D65 RID: 40293
+		// (get) Token: 0x06022FC5 RID: 143301 RVA: 0x004D0755 File Offset: 0x004CE955
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021072 RID: 135282 RVA: 0x0049681E File Offset: 0x00494A1E
+		// Token: 0x06022FC6 RID: 143302 RVA: 0x004D0762 File Offset: 0x004CE962
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021073 RID: 135283 RVA: 0x00496828 File Offset: 0x00494A28
+		// Token: 0x06022FC7 RID: 143303 RVA: 0x004D076C File Offset: 0x004CE96C
 		public static IDefaultAttachTiming GetRootAsIDefaultAttachTiming(ByteBuffer _bb)
 		{
 			return IDefaultAttachTiming.GetRootAsIDefaultAttachTiming(_bb, default(IDefaultAttachTiming));
 		}
 
-		// Token: 0x06021074 RID: 135284 RVA: 0x00496844 File Offset: 0x00494A44
+		// Token: 0x06022FC8 RID: 143304 RVA: 0x004D0788 File Offset: 0x004CE988
 		public static IDefaultAttachTiming GetRootAsIDefaultAttachTiming(ByteBuffer _bb, IDefaultAttachTiming obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021075 RID: 135285 RVA: 0x00496861 File Offset: 0x00494A61
+		// Token: 0x06022FC9 RID: 143305 RVA: 0x004D07A5 File Offset: 0x004CE9A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021076 RID: 135286 RVA: 0x00496870 File Offset: 0x00494A70
+		// Token: 0x06022FCA RID: 143306 RVA: 0x004D07B4 File Offset: 0x004CE9B4
 		public IDefaultAttachTiming __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009579 RID: 38265
-		// (get) Token: 0x06021077 RID: 135287 RVA: 0x00496880 File Offset: 0x00494A80
+		// Token: 0x17009D66 RID: 40294
+		// (get) Token: 0x06022FCB RID: 143307 RVA: 0x004D07C4 File Offset: 0x004CE9C4
 		public EAttachTimingType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021078 RID: 135288 RVA: 0x004968BC File Offset: 0x00494ABC
+		// Token: 0x06022FCC RID: 143308 RVA: 0x004D0800 File Offset: 0x004CEA00
 		public static Offset<IDefaultAttachTiming> CreateIDefaultAttachTiming(FlatBufferBuilder builder, EAttachTimingType Type = EAttachTimingType.Default)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDefaultAttachTiming.EndIDefaultAttachTiming(builder);
 		}
 
-		// Token: 0x06021079 RID: 135289 RVA: 0x004968D2 File Offset: 0x00494AD2
+		// Token: 0x06022FCD RID: 143309 RVA: 0x004D0816 File Offset: 0x004CEA16
 		public static void StartIDefaultAttachTiming(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602107A RID: 135290 RVA: 0x004968DB File Offset: 0x00494ADB
+		// Token: 0x06022FCE RID: 143310 RVA: 0x004D081F File Offset: 0x004CEA1F
 		public static void AddType(FlatBufferBuilder builder, EAttachTimingType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602107B RID: 135291 RVA: 0x004968E6 File Offset: 0x00494AE6
+		// Token: 0x06022FCF RID: 143311 RVA: 0x004D082A File Offset: 0x004CEA2A
 		public static Offset<IDefaultAttachTiming> EndIDefaultAttachTiming(FlatBufferBuilder builder)
 		{
 			return new Offset<IDefaultAttachTiming>(builder.EndTable());
 		}
 
-		// Token: 0x0602107C RID: 135292 RVA: 0x004968F4 File Offset: 0x00494AF4
+		// Token: 0x06022FD0 RID: 143312 RVA: 0x004D0838 File Offset: 0x004CEA38
 		public IDefaultAttachTimingT UnPack()
 		{
 			IDefaultAttachTimingT defaultAttachTimingT = new IDefaultAttachTimingT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return defaultAttachTimingT;
 		}
 
-		// Token: 0x0602107D RID: 135293 RVA: 0x0049690F File Offset: 0x00494B0F
+		// Token: 0x06022FD1 RID: 143313 RVA: 0x004D0853 File Offset: 0x004CEA53
 		public void UnPackTo(IDefaultAttachTimingT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602107E RID: 135294 RVA: 0x00496920 File Offset: 0x00494B20
+		// Token: 0x06022FD2 RID: 143314 RVA: 0x004D0864 File Offset: 0x004CEA64
 		public static Offset<IDefaultAttachTiming> Pack(FlatBufferBuilder builder, IDefaultAttachTimingT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDefaultAttachTiming.CreateIDefaultAttachTiming(builder, _o.Type);
 		}
 
-		// Token: 0x0400E07E RID: 57470
+		// Token: 0x0400EC7B RID: 60539
 		private Table __p;
 	}
 }

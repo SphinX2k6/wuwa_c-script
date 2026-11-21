@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F63 RID: 12131
+// Token: 0x020024B7 RID: 9399
 [NullableContext(2)]
 [Nullable(0)]
 public abstract class PassiveEffects : BuffEffect, IBuffTrigger
 {
-	// Token: 0x06019CDF RID: 105695 RVA: 0x006BADA4 File Offset: 0x006B8FA4
+	// Token: 0x060175F1 RID: 95729 RVA: 0x006E1690 File Offset: 0x006DF890
 	public override void OnCreated()
 	{
 		BaseBuffComponent baseBuffComponent = this.OwnerBuffComponent as BaseBuffComponent;
@@ -17,7 +17,7 @@ public abstract class PassiveEffects : BuffEffect, IBuffTrigger
 		baseBuffComponent.AddTrigger(this.ActiveHandleId, this.EventType, this);
 	}
 
-	// Token: 0x06019CE0 RID: 105696 RVA: 0x006BADC8 File Offset: 0x006B8FC8
+	// Token: 0x060175F2 RID: 95730 RVA: 0x006E16B4 File Offset: 0x006DF8B4
 	public override void OnRemoved(bool bPremature)
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
@@ -28,20 +28,20 @@ public abstract class PassiveEffects : BuffEffect, IBuffTrigger
 		ownerBuffComponent.RemoveTrigger(this.ActiveHandleId, this.EventType);
 	}
 
-	// Token: 0x06019CE1 RID: 105697 RVA: 0x006BADE6 File Offset: 0x006B8FE6
+	// Token: 0x060175F3 RID: 95731 RVA: 0x006E16D2 File Offset: 0x006DF8D2
 	protected override bool CheckExecutable()
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
 		return ownerBuffComponent != null && ownerBuffComponent.HasBuffAuthority();
 	}
 
-	// Token: 0x06019CE2 RID: 105698 RVA: 0x006BADF9 File Offset: 0x006B8FF9
+	// Token: 0x060175F4 RID: 95732 RVA: 0x006E16E5 File Offset: 0x006DF8E5
 	protected IBuffComponent GetEffectTarget()
 	{
 		return this.GetTargetByType(this.TargetType);
 	}
 
-	// Token: 0x06019CE3 RID: 105699 RVA: 0x006BAE07 File Offset: 0x006B9007
+	// Token: 0x060175F5 RID: 95733 RVA: 0x006E16F3 File Offset: 0x006DF8F3
 	protected IBuffComponent GetTargetByType(EPassiveEffectTargetType targetType)
 	{
 		switch (targetType)
@@ -59,7 +59,7 @@ public abstract class PassiveEffects : BuffEffect, IBuffTrigger
 		}
 	}
 
-	// Token: 0x06019CE4 RID: 105700 RVA: 0x006BAE40 File Offset: 0x006B9040
+	// Token: 0x060175F6 RID: 95734 RVA: 0x006E172C File Offset: 0x006DF92C
 	protected IBuffComponent GetBuffHolderSkillTarget()
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
@@ -94,21 +94,21 @@ public abstract class PassiveEffects : BuffEffect, IBuffTrigger
 		return entity2.CheckGetComponent<BaseBuffComponent>();
 	}
 
-	// Token: 0x06019CE5 RID: 105701 RVA: 0x006BAE93 File Offset: 0x006B9093
+	// Token: 0x060175F7 RID: 95735 RVA: 0x006E177F File Offset: 0x006DF97F
 	[NullableContext(1)]
 	protected string GetDebugTriggerString()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x06019CE6 RID: 105702 RVA: 0x006BAE9A File Offset: 0x006B909A
+	// Token: 0x060175F8 RID: 95736 RVA: 0x006E1786 File Offset: 0x006DF986
 	[NullableContext(1)]
 	protected PassiveEffects(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x170023B0 RID: 9136
-	// (get) Token: 0x06019CE7 RID: 105703 RVA: 0x006BAEA9 File Offset: 0x006B90A9
+	// Token: 0x17002472 RID: 9330
+	// (get) Token: 0x060175F9 RID: 95737 RVA: 0x006E1795 File Offset: 0x006DF995
 	public new int ActiveHandleId
 	{
 		get
@@ -117,8 +117,8 @@ public abstract class PassiveEffects : BuffEffect, IBuffTrigger
 		}
 	}
 
-	// Token: 0x170023B1 RID: 9137
-	// (get) Token: 0x06019CE8 RID: 105704 RVA: 0x006BAEB1 File Offset: 0x006B90B1
+	// Token: 0x17002473 RID: 9331
+	// (get) Token: 0x060175FA RID: 95738 RVA: 0x006E179D File Offset: 0x006DF99D
 	public new BaseBuffComponent InstigatorBuffComponent
 	{
 		get
@@ -127,16 +127,16 @@ public abstract class PassiveEffects : BuffEffect, IBuffTrigger
 		}
 	}
 
-	// Token: 0x06019CE9 RID: 105705 RVA: 0x006BAEB9 File Offset: 0x006B90B9
+	// Token: 0x060175FB RID: 95739 RVA: 0x006E17A5 File Offset: 0x006DF9A5
 	[NullableContext(1)]
 	public bool TryExecute(Partial_RequirementPayload payload, IBuffComponent opponentBuffComp)
 	{
 		return base.TryExecute(payload, opponentBuffComp, Array.Empty<object>());
 	}
 
-	// Token: 0x0400C292 RID: 49810
+	// Token: 0x0400C63B RID: 50747
 	public EBuffTriggerType EventType;
 
-	// Token: 0x0400C293 RID: 49811
+	// Token: 0x0400C63C RID: 50748
 	public EPassiveEffectTargetType TargetType;
 }

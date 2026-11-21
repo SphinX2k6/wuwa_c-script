@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02002B98 RID: 11160
+// Token: 0x02002114 RID: 8468
 public interface ISurvivorsHandbookItemDataBase
 {
-	// Token: 0x17001F21 RID: 7969
-	// (get) Token: 0x060171F9 RID: 94713
+	// Token: 0x17001F79 RID: 8057
+	// (get) Token: 0x06014C2A RID: 85034
 	int Id { get; }
 
-	// Token: 0x17001F22 RID: 7970
-	// (get) Token: 0x060171FA RID: 94714
+	// Token: 0x17001F7A RID: 8058
+	// (get) Token: 0x06014C2B RID: 85035
 	bool? LockState { get; }
 
-	// Token: 0x17001F23 RID: 7971
-	// (get) Token: 0x060171FB RID: 94715
-	// (set) Token: 0x060171FC RID: 94716
+	// Token: 0x17001F7B RID: 8059
+	// (get) Token: 0x06014C2C RID: 85036
+	// (set) Token: 0x06014C2D RID: 85037
 	bool? IsNew { get; set; }
 }

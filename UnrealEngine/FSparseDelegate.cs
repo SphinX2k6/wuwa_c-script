@@ -6,37 +6,37 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000086 RID: 134
+	// Token: 0x0200006B RID: 107
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class FSparseDelegate : UnrealScriptDelegate
 	{
-		// Token: 0x06000F35 RID: 3893
+		// Token: 0x06000AC8 RID: 2760
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		protected unsafe static extern void BroadcastInternal(IntPtr DelegateOwnerNativePtr, FName DelegateName, void* Parameters);
 
-		// Token: 0x06000F36 RID: 3894
+		// Token: 0x06000AC9 RID: 2761
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public extern bool IsBound();
 
-		// Token: 0x06000F37 RID: 3895
+		// Token: 0x06000ACA RID: 2762
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		protected extern void AddInternal(IntPtr DelegateOwnerNativePtr, FName DelegateName, IntPtr Handle, int Callback);
 
-		// Token: 0x06000F38 RID: 3896
+		// Token: 0x06000ACB RID: 2763
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		protected extern void RemoveInternal(IntPtr DelegateOwnerNativePtr, FName DelegateName);
 
-		// Token: 0x06000F39 RID: 3897
+		// Token: 0x06000ACC RID: 2764
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		protected extern void ClearInternal(IntPtr DelegateOwnerNativePtr, FName DelegateName);
 
-		// Token: 0x06000F3A RID: 3898
+		// Token: 0x06000ACD RID: 2765
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		protected extern IntPtr GetMulticastDelegate(IntPtr DelegateOwnerNativePtr, FName DelegateName);
 
-		// Token: 0x06000F3B RID: 3899 RVA: 0x00016BC4 File Offset: 0x00014DC4
+		// Token: 0x06000ACE RID: 2766 RVA: 0x000118F8 File Offset: 0x0000FAF8
 		protected void Add(in FName DelegateName, Delegate Delegate, int Callback)
 		{
 			if (Delegate == null)
@@ -44,11 +44,16 @@ namespace UnrealEngine
 				throw new NullReferenceException("Callback is null or possibly fail to convert to acceptable type");
 			}
 			IntPtr nativePtr = this.GetOwner().NativePtr;
+			IntPtr multicastDelegate = this.GetMulticastDelegate(nativePtr, DelegateName);
+			if (multicastDelegate != 0 && FMulticastScriptDelegate.ExistDelegate(multicastDelegate, Delegate))
+			{
+				return;
+			}
 			GCHandle value = GCHandle.Alloc(Delegate);
 			this.AddInternal(nativePtr, DelegateName, GCHandle.ToIntPtr(value), Callback);
 		}
 
-		// Token: 0x06000F3C RID: 3900 RVA: 0x00016C08 File Offset: 0x00014E08
+		// Token: 0x06000ACF RID: 2767 RVA: 0x00011958 File Offset: 0x0000FB58
 		protected void Remove(in FName DelegateName, Delegate Delegate)
 		{
 			IntPtr nativePtr = this.GetOwner().NativePtr;
@@ -57,51 +62,41 @@ namespace UnrealEngine
 			{
 				return;
 			}
-			int num = 0;
-			IntPtr value;
-			int index;
-			while (FMulticastScriptDelegate.IterExistDelegate(multicastDelegate, ref num, out value, out index))
-			{
-				if (Delegate.Remove(GCHandle.FromIntPtr(value).Target as Delegate, Delegate) == null)
-				{
-					FMulticastScriptDelegate.RemoveAtIndexInternal(multicastDelegate, index);
-					return;
-				}
-			}
+			FMulticastScriptDelegate.RemoveDelegate(multicastDelegate, Delegate);
 		}
 
-		// Token: 0x06000F3D RID: 3901 RVA: 0x00016C68 File Offset: 0x00014E68
+		// Token: 0x06000AD0 RID: 2768 RVA: 0x0001198B File Offset: 0x0000FB8B
 		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Clear()
 		{
 			this.ClearInternal(this.GetOwner().NativePtr, this.DelegateName);
 		}
 
-		// Token: 0x06000F3E RID: 3902 RVA: 0x00016C81 File Offset: 0x00014E81
+		// Token: 0x06000AD1 RID: 2769 RVA: 0x000119A4 File Offset: 0x0000FBA4
 		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void ClearScript()
 		{
 			this.RemoveInternal(this.GetOwner().NativePtr, this.DelegateName);
 		}
 
-		// Token: 0x170004C2 RID: 1218
-		// (get) Token: 0x06000F3F RID: 3903
+		// Token: 0x170000CA RID: 202
+		// (get) Token: 0x06000AD2 RID: 2770
 		public abstract FName DelegateName { get; }
 
-		// Token: 0x06000F40 RID: 3904 RVA: 0x00016C9A File Offset: 0x00014E9A
+		// Token: 0x06000AD3 RID: 2771 RVA: 0x000119BD File Offset: 0x0000FBBD
 		protected override IntPtr AllocNativePtr()
 		{
 			throw new UnreachableException();
 		}
 
-		// Token: 0x06000F41 RID: 3905 RVA: 0x00016CA1 File Offset: 0x00014EA1
+		// Token: 0x06000AD4 RID: 2772 RVA: 0x000119C4 File Offset: 0x0000FBC4
 		protected override void DeallocNativePtr()
 		{
 			throw new UnreachableException();
 		}
 
-		// Token: 0x170004C3 RID: 1219
-		// (get) Token: 0x06000F42 RID: 3906 RVA: 0x00016CA8 File Offset: 0x00014EA8
+		// Token: 0x170000CB RID: 203
+		// (get) Token: 0x06000AD5 RID: 2773 RVA: 0x000119CB File Offset: 0x0000FBCB
 		public override bool AllowMoveAssign
 		{
 			get
@@ -110,8 +105,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004C4 RID: 1220
-		// (get) Token: 0x06000F43 RID: 3907 RVA: 0x00016CAB File Offset: 0x00014EAB
+		// Token: 0x170000CC RID: 204
+		// (get) Token: 0x06000AD6 RID: 2774 RVA: 0x000119CE File Offset: 0x0000FBCE
 		public override bool AllowCopyAssign
 		{
 			get
@@ -120,20 +115,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000F44 RID: 3908 RVA: 0x00016CAE File Offset: 0x00014EAE
+		// Token: 0x06000AD7 RID: 2775 RVA: 0x000119D1 File Offset: 0x0000FBD1
 		protected UObject GetOwner()
 		{
 			return (UObject)base.MemoryOwner;
 		}
 
-		// Token: 0x06000F45 RID: 3909 RVA: 0x00016CBB File Offset: 0x00014EBB
+		// Token: 0x06000AD8 RID: 2776 RVA: 0x000119DE File Offset: 0x0000FBDE
 		[NullableContext(2)]
 		protected FSparseDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 			SharpherealAssert.Assert(MemoryOwner is UObject);
 		}
 
-		// Token: 0x06000F46 RID: 3910 RVA: 0x00016CD3 File Offset: 0x00014ED3
+		// Token: 0x06000AD9 RID: 2777 RVA: 0x000119F6 File Offset: 0x0000FBF6
 		public sealed override void CopyTo(IntPtr DestPtr, UScriptStructStackOnlyPtr NativeUStructPtr = default(UScriptStructStackOnlyPtr))
 		{
 			throw new UnreachableException();

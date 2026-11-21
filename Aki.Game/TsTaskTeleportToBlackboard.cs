@@ -14,9 +14,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskTeleportToBlackboard.TsTaskTeleportToBlackboard_C")]
 public class TsTaskTeleportToBlackboard : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000218 RID: 536
-	// (get) Token: 0x06000B79 RID: 2937 RVA: 0x0003968B File Offset: 0x0003788B
-	// (set) Token: 0x06000B7A RID: 2938 RVA: 0x0003969F File Offset: 0x0003789F
+	// Token: 0x1700021B RID: 539
+	// (get) Token: 0x06000B7F RID: 2943 RVA: 0x0003A8BB File Offset: 0x00038ABB
+	// (set) Token: 0x06000B80 RID: 2944 RVA: 0x0003A8CF File Offset: 0x00038ACF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string BlackboardKey
 	{
@@ -30,9 +30,9 @@ public class TsTaskTeleportToBlackboard : TsTaskAbortImmediatelyBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x17000219 RID: 537
-	// (get) Token: 0x06000B7B RID: 2939 RVA: 0x000396B4 File Offset: 0x000378B4
-	// (set) Token: 0x06000B7C RID: 2940 RVA: 0x000396ED File Offset: 0x000378ED
+	// Token: 0x1700021C RID: 540
+	// (get) Token: 0x06000B81 RID: 2945 RVA: 0x0003A8E4 File Offset: 0x00038AE4
+	// (set) Token: 0x06000B82 RID: 2946 RVA: 0x0003A91D File Offset: 0x00038B1D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<int> TeleportEffectBuffId
 	{
@@ -52,7 +52,7 @@ public class TsTaskTeleportToBlackboard : TsTaskAbortImmediatelyBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x06000B7D RID: 2941 RVA: 0x000396FC File Offset: 0x000378FC
+	// Token: 0x06000B83 RID: 2947 RVA: 0x0003A92C File Offset: 0x00038B2C
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -70,30 +70,27 @@ public class TsTaskTeleportToBlackboard : TsTaskAbortImmediatelyBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x06000B7E RID: 2942 RVA: 0x00039770 File Offset: 0x00037970
+	// Token: 0x06000B84 RID: 2948 RVA: 0x0003A9A0 File Offset: 0x00038BA0
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskTeleportToBlackboard) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskTeleportToBlackboard.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000B7F RID: 2943 RVA: 0x0003980C File Offset: 0x00037A0C
+	// Token: 0x06000B85 RID: 2949 RVA: 0x0003AA50 File Offset: 0x00038C50
 	[NullableContext(2)]
 	protected void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -135,7 +132,7 @@ public class TsTaskTeleportToBlackboard : TsTaskAbortImmediatelyBase, IUnrealUOb
 		base.Finish(true);
 	}
 
-	// Token: 0x06000B80 RID: 2944 RVA: 0x0003993B File Offset: 0x00037B3B
+	// Token: 0x06000B86 RID: 2950 RVA: 0x0003AB7F File Offset: 0x00038D7F
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskTeleportToBlackboard._ClassPtr == IntPtr.Zero)
@@ -145,22 +142,22 @@ public class TsTaskTeleportToBlackboard : TsTaskAbortImmediatelyBase, IUnrealUOb
 		return TsTaskTeleportToBlackboard._ClassPtr;
 	}
 
-	// Token: 0x06000B81 RID: 2945 RVA: 0x00039960 File Offset: 0x00037B60
+	// Token: 0x06000B87 RID: 2951 RVA: 0x0003ABA4 File Offset: 0x00038DA4
 	public TsTaskTeleportToBlackboard() : this(BuiltinUtils.AllocNativeUObject(TsTaskTeleportToBlackboard.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000B82 RID: 2946 RVA: 0x00039988 File Offset: 0x00037B88
+	// Token: 0x06000B88 RID: 2952 RVA: 0x0003ABCC File Offset: 0x00038DCC
 	public TsTaskTeleportToBlackboard(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskTeleportToBlackboard.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000B83 RID: 2947 RVA: 0x000399BB File Offset: 0x00037BBB
+	// Token: 0x06000B89 RID: 2953 RVA: 0x0003ABFF File Offset: 0x00038DFF
 	protected TsTaskTeleportToBlackboard(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000B84 RID: 2948 RVA: 0x000399DC File Offset: 0x00037BDC
+	// Token: 0x06000B8A RID: 2954 RVA: 0x0003AC20 File Offset: 0x00038E20
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -169,35 +166,35 @@ public class TsTaskTeleportToBlackboard : TsTaskAbortImmediatelyBase, IUnrealUOb
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x04000900 RID: 2304
+	// Token: 0x04000908 RID: 2312
 	private bool IsInitTsVariables;
 
-	// Token: 0x04000901 RID: 2305
+	// Token: 0x04000909 RID: 2313
 	private string TsBlackboardKey = "";
 
-	// Token: 0x04000902 RID: 2306
+	// Token: 0x0400090A RID: 2314
 	[Nullable(2)]
 	private int[] TsTeleportEffectBuffId;
 
-	// Token: 0x04000903 RID: 2307
+	// Token: 0x0400090B RID: 2315
 	private readonly global::Vector Target = global::Vector.Create();
 
-	// Token: 0x04000904 RID: 2308
+	// Token: 0x0400090C RID: 2316
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskTeleportToBlackboard.TsTaskTeleportToBlackboard_C";
 
-	// Token: 0x04000905 RID: 2309
+	// Token: 0x0400090D RID: 2317
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000906 RID: 2310
+	// Token: 0x0400090E RID: 2318
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000907 RID: 2311
+	// Token: 0x0400090F RID: 2319
 	private static int __PropertyOffset_BlackboardKey;
 
-	// Token: 0x04000908 RID: 2312
+	// Token: 0x04000910 RID: 2320
 	private static int __PropertyOffset_TeleportEffectBuffId;
 
-	// Token: 0x04000909 RID: 2313
+	// Token: 0x04000911 RID: 2321
 	[Nullable(2)]
 	private TArray<int> _TeleportEffectBuffId;
 }

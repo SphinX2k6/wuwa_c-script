@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.SpringManor;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000FC7 RID: 4039
+// Token: 0x0200047C RID: 1148
 public class FurnitureAtmosphereLevelItem : UiPanelBase
 {
-	// Token: 0x06006784 RID: 26500 RVA: 0x00147830 File Offset: 0x00145A30
+	// Token: 0x06003B1C RID: 15132 RVA: 0x001500F4 File Offset: 0x0014E2F4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class FurnitureAtmosphereLevelItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006785 RID: 26501 RVA: 0x0014791B File Offset: 0x00145B1B
+	// Token: 0x06003B1D RID: 15133 RVA: 0x001501DF File Offset: 0x0014E3DF
 	[NullableContext(1)]
 	public void Refresh(IFurnitureAtmosphereLevelData data)
 	{
@@ -39,7 +39,7 @@ public class FurnitureAtmosphereLevelItem : UiPanelBase
 		this.RefreshBg(this.Data.Level);
 	}
 
-	// Token: 0x06006786 RID: 26502 RVA: 0x00147944 File Offset: 0x00145B44
+	// Token: 0x06003B1E RID: 15134 RVA: 0x00150208 File Offset: 0x0014E408
 	private void RefreshAtmosphereArt()
 	{
 		if (this.Data == null)
@@ -49,7 +49,7 @@ public class FurnitureAtmosphereLevelItem : UiPanelBase
 		base.GetArtText(3).SetText(this.Data.Level.ToString());
 	}
 
-	// Token: 0x06006787 RID: 26503 RVA: 0x0014797C File Offset: 0x00145B7C
+	// Token: 0x06003B1F RID: 15135 RVA: 0x00150240 File Offset: 0x0014E440
 	private void RefreshProgress()
 	{
 		if (this.Data == null)
@@ -78,7 +78,7 @@ public class FurnitureAtmosphereLevelItem : UiPanelBase
 		}));
 	}
 
-	// Token: 0x06006788 RID: 26504 RVA: 0x00147A9C File Offset: 0x00145C9C
+	// Token: 0x06003B20 RID: 15136 RVA: 0x00150360 File Offset: 0x0014E560
 	public void RefreshBg(int level)
 	{
 		int num = 1;
@@ -108,13 +108,13 @@ public class FurnitureAtmosphereLevelItem : UiPanelBase
 		item3.SetUIActive(num == 3);
 	}
 
-	// Token: 0x06006789 RID: 26505 RVA: 0x00147B34 File Offset: 0x00145D34
+	// Token: 0x06003B21 RID: 15137 RVA: 0x001503F8 File Offset: 0x0014E5F8
 	private void OnItemButtonClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SpringManorAtmosphereLevelView, null, null);
 	}
 
-	// Token: 0x04002F13 RID: 12051
+	// Token: 0x04002FAC RID: 12204
 	[Nullable(2)]
 	private IFurnitureAtmosphereLevelData Data;
 }

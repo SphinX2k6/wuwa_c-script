@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004ED3 RID: 20179
+	// Token: 0x02003E9C RID: 16028
 	public enum ERogueResBondEffectType
 	{
-		// Token: 0x0401B840 RID: 112704
+		// Token: 0x04016213 RID: 90643
 		Battle,
-		// Token: 0x0401B841 RID: 112705
+		// Token: 0x04016214 RID: 90644
 		Explore,
-		// Token: 0x0401B842 RID: 112706
+		// Token: 0x04016215 RID: 90645
 		Link
 	}
 }

@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E45 RID: 20037
+	// Token: 0x02003E0E RID: 15886
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeTalentTreeViewModel
 	{
-		// Token: 0x06033A7E RID: 211582 RVA: 0x00C17A14 File Offset: 0x00C15C14
+		// Token: 0x060288E9 RID: 166121 RVA: 0x00B60F3C File Offset: 0x00B5F13C
 		public void Init(int seasonId)
 		{
 			this.SeasonId = seasonId;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RowDataList.Sort((RoguelikeTalentTreeNodeRowData a, RoguelikeTalentTreeNodeRowData b) => a.Row - b.Row);
 		}
 
-		// Token: 0x06033A7F RID: 211583 RVA: 0x00C17BF8 File Offset: 0x00C15DF8
+		// Token: 0x060288EA RID: 166122 RVA: 0x00B61120 File Offset: 0x00B5F320
 		private List<RoguelikeTalentTreeNodeData> GetPostNodesByNodeData(RoguelikeTalentTreeNodeData node)
 		{
 			List<RoguelikeTalentTreeNodeData> list = new List<RoguelikeTalentTreeNodeData>();
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x06033A80 RID: 211584 RVA: 0x00C17C68 File Offset: 0x00C15E68
+		// Token: 0x060288EB RID: 166123 RVA: 0x00B61190 File Offset: 0x00B5F390
 		public RoguelikeTalentTreeNodeData GetDefaultSelectNode()
 		{
 			RoguelikeTalentTreeNodeData roguelikeTalentTreeNodeData = null;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return result;
 		}
 
-		// Token: 0x06033A81 RID: 211585 RVA: 0x00C17D48 File Offset: 0x00C15F48
+		// Token: 0x060288EC RID: 166124 RVA: 0x00B61270 File Offset: 0x00B5F470
 		public bool IsDotVisible(int row, int index)
 		{
 			List<RoguelikeTalentTreeNodeData> list;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return false;
 		}
 
-		// Token: 0x06033A82 RID: 211586 RVA: 0x00C17E00 File Offset: 0x00C16000
+		// Token: 0x060288ED RID: 166125 RVA: 0x00B61328 File Offset: 0x00B5F528
 		private List<Tuple<int, int>> GetPath(RoguelikeTalentTreeNodeData from, RoguelikeTalentTreeNodeData to)
 		{
 			List<Tuple<int, int>> list = new List<Tuple<int, int>>();
@@ -159,13 +159,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x06033A83 RID: 211587 RVA: 0x00C17EB4 File Offset: 0x00C160B4
+		// Token: 0x060288EE RID: 166126 RVA: 0x00B613DC File Offset: 0x00B5F5DC
 		private bool GetPathActive(RoguelikeTalentTreeNodeData from, RoguelikeTalentTreeNodeData to)
 		{
 			return from.State == ETalentTreeNodeState.Active && to.State == ETalentTreeNodeState.Active;
 		}
 
-		// Token: 0x06033A84 RID: 211588 RVA: 0x00C17ECC File Offset: 0x00C160CC
+		// Token: 0x060288EF RID: 166127 RVA: 0x00B613F4 File Offset: 0x00B5F5F4
 		public void RefreshLineTypeMap()
 		{
 			foreach (Dictionary<int, bool> dictionary in this.LineActiveMap)
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033A85 RID: 211589 RVA: 0x00C180EC File Offset: 0x00C162EC
+		// Token: 0x060288F0 RID: 166128 RVA: 0x00B61614 File Offset: 0x00B5F814
 		public void SelectNode(RoguelikeTalentTreeNodeData node)
 		{
 			if (node == null || (this.CurSelectNode != null && this.CurSelectNode.Id == node.Id))
@@ -211,32 +211,32 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.CurSelectNode = node;
 		}
 
-		// Token: 0x0401B634 RID: 112180
+		// Token: 0x04016007 RID: 90119
 		public int SeasonId;
 
-		// Token: 0x0401B635 RID: 112181
+		// Token: 0x04016008 RID: 90120
 		public int MaxRow;
 
-		// Token: 0x0401B636 RID: 112182
+		// Token: 0x04016009 RID: 90121
 		public Dictionary<int, List<RoguelikeTalentTreeNodeData>> NodeRowMap = new Dictionary<int, List<RoguelikeTalentTreeNodeData>>();
 
-		// Token: 0x0401B637 RID: 112183
+		// Token: 0x0401600A RID: 90122
 		public Dictionary<int, RoguelikeTalentTreeNodeData> NodeIdMap = new Dictionary<int, RoguelikeTalentTreeNodeData>();
 
-		// Token: 0x0401B638 RID: 112184
+		// Token: 0x0401600B RID: 90123
 		public List<RoguelikeTalentTreeNodeRowData> RowDataList = new List<RoguelikeTalentTreeNodeRowData>();
 
-		// Token: 0x0401B639 RID: 112185
+		// Token: 0x0401600C RID: 90124
 		public Dictionary<int, RoguelikeTalentTreeNodeRowData> RowDataMap = new Dictionary<int, RoguelikeTalentTreeNodeRowData>();
 
-		// Token: 0x0401B63A RID: 112186
+		// Token: 0x0401600D RID: 90125
 		public List<Dictionary<int, bool>> LineActiveMap = new List<Dictionary<int, bool>>();
 
-		// Token: 0x0401B63B RID: 112187
+		// Token: 0x0401600E RID: 90126
 		[Nullable(2)]
 		public RoguelikeTalentTreeNodeData CurSelectNode;
 
-		// Token: 0x0401B63C RID: 112188
+		// Token: 0x0401600F RID: 90127
 		public Action<bool, RoguelikeTalentTreeNodeData> OnClickNode;
 	}
 }

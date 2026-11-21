@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000291 RID: 657
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002D4 RID: 724
 	public class ICreateBulletDestroyCondition : ITeleControlDestroyCondition
 	{
-		// Token: 0x06000C43 RID: 3139 RVA: 0x0002FD88 File Offset: 0x0002DF88
+		// Token: 0x06000D5D RID: 3421 RVA: 0x00032A78 File Offset: 0x00030C78
 		private ICreateBulletDestroyCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000C44 RID: 3140 RVA: 0x0002FDC0 File Offset: 0x0002DFC0
+		// Token: 0x06000D5E RID: 3422 RVA: 0x00032AB0 File Offset: 0x00030CB0
 		public static ICreateBulletDestroyCondition Create([Nullable(2)] ICreateBulletDestroyCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C45 RID: 3141 RVA: 0x0002FDD3 File Offset: 0x0002DFD3
+		// Token: 0x06000D5F RID: 3423 RVA: 0x00032AC3 File Offset: 0x00030CC3
 		public static ICreateBulletDestroyCondition CreateFromSetValue([Nullable(2)] ICreateBulletDestroyCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C46 RID: 3142 RVA: 0x0002FDE6 File Offset: 0x0002DFE6
+		// Token: 0x06000D60 RID: 3424 RVA: 0x00032AD6 File Offset: 0x00030CD6
 		public new ICreateBulletDestroyCondition_SetValue ToSetValue()
 		{
 			return new ICreateBulletDestroyCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003A5 RID: 933
-		// (get) Token: 0x06000C47 RID: 3143 RVA: 0x0002FDF9 File Offset: 0x0002DFF9
-		// (set) Token: 0x06000C48 RID: 3144 RVA: 0x0002FE24 File Offset: 0x0002E024
+		// Token: 0x170003ED RID: 1005
+		// (get) Token: 0x06000D61 RID: 3425 RVA: 0x00032AE9 File Offset: 0x00030CE9
+		// (set) Token: 0x06000D62 RID: 3426 RVA: 0x00032B14 File Offset: 0x00030D14
 		public override ETeleControlDestroyCondition Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000B96 RID: 2966
+		// Token: 0x04000C77 RID: 3191
 		[Nullable(2)]
 		protected new ICreateBulletDestroyCondition FbInstance;
 
-		// Token: 0x04000B97 RID: 2967
+		// Token: 0x04000C78 RID: 3192
 		[Nullable(2)]
 		protected new ICreateBulletDestroyCondition_SetValue PocoInterface;
 	}

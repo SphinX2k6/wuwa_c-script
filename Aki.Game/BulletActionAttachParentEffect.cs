@@ -2,15 +2,15 @@
 using CSharpScript.Game.Effect;
 using UnrealEngine;
 
-// Token: 0x02002D80 RID: 11648
+// Token: 0x020022DA RID: 8922
 public class BulletActionAttachParentEffect : BulletActionBase
 {
-	// Token: 0x060187BA RID: 100282 RVA: 0x0063B2A0 File Offset: 0x006394A0
+	// Token: 0x0601605C RID: 90204 RVA: 0x006612B0 File Offset: 0x0065F4B0
 	public BulletActionAttachParentEffect(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x060187BB RID: 100283 RVA: 0x0063B2AC File Offset: 0x006394AC
+	// Token: 0x0601605D RID: 90205 RVA: 0x006612BC File Offset: 0x0065F4BC
 	protected override void OnTick(float delta)
 	{
 		BulletInfo bulletInfo = this.BulletInfo;

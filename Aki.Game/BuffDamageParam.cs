@@ -2,47 +2,47 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002E65 RID: 11877
+// Token: 0x020023B7 RID: 9143
 [NullableContext(1)]
 [Nullable(0)]
 public class BuffDamageParam : IBuffDamageParam
 {
-	// Token: 0x170022A9 RID: 8873
-	// (get) Token: 0x060195E9 RID: 103913 RVA: 0x0068C9C6 File Offset: 0x0068ABC6
-	// (set) Token: 0x060195EA RID: 103914 RVA: 0x0068C9CE File Offset: 0x0068ABCE
+	// Token: 0x17002328 RID: 9000
+	// (get) Token: 0x06016EB0 RID: 93872 RVA: 0x006B2DBA File Offset: 0x006B0FBA
+	// (set) Token: 0x06016EB1 RID: 93873 RVA: 0x006B2DC2 File Offset: 0x006B0FC2
 	public long? BuffId { get; set; }
 
-	// Token: 0x170022AA RID: 8874
-	// (get) Token: 0x060195EB RID: 103915 RVA: 0x0068C9D7 File Offset: 0x0068ABD7
-	// (set) Token: 0x060195EC RID: 103916 RVA: 0x0068C9DF File Offset: 0x0068ABDF
+	// Token: 0x17002329 RID: 9001
+	// (get) Token: 0x06016EB2 RID: 93874 RVA: 0x006B2DCB File Offset: 0x006B0FCB
+	// (set) Token: 0x06016EB3 RID: 93875 RVA: 0x006B2DD3 File Offset: 0x006B0FD3
 	public long? BulletId { get; set; }
 
-	// Token: 0x170022AB RID: 8875
-	// (get) Token: 0x060195ED RID: 103917 RVA: 0x0068C9E8 File Offset: 0x0068ABE8
-	// (set) Token: 0x060195EE RID: 103918 RVA: 0x0068C9F0 File Offset: 0x0068ABF0
+	// Token: 0x1700232A RID: 9002
+	// (get) Token: 0x06016EB4 RID: 93876 RVA: 0x006B2DDC File Offset: 0x006B0FDC
+	// (set) Token: 0x06016EB5 RID: 93877 RVA: 0x006B2DE4 File Offset: 0x006B0FE4
 	public long DamageDataId { get; set; }
 
-	// Token: 0x170022AC RID: 8876
-	// (get) Token: 0x060195EF RID: 103919 RVA: 0x0068C9F9 File Offset: 0x0068ABF9
-	// (set) Token: 0x060195F0 RID: 103920 RVA: 0x0068CA01 File Offset: 0x0068AC01
+	// Token: 0x1700232B RID: 9003
+	// (get) Token: 0x06016EB6 RID: 93878 RVA: 0x006B2DED File Offset: 0x006B0FED
+	// (set) Token: 0x06016EB7 RID: 93879 RVA: 0x006B2DF5 File Offset: 0x006B0FF5
 	public Entity Attacker { get; set; }
 
-	// Token: 0x170022AD RID: 8877
-	// (get) Token: 0x060195F1 RID: 103921 RVA: 0x0068CA0A File Offset: 0x0068AC0A
-	// (set) Token: 0x060195F2 RID: 103922 RVA: 0x0068CA12 File Offset: 0x0068AC12
+	// Token: 0x1700232C RID: 9004
+	// (get) Token: 0x06016EB8 RID: 93880 RVA: 0x006B2DFE File Offset: 0x006B0FFE
+	// (set) Token: 0x06016EB9 RID: 93881 RVA: 0x006B2E06 File Offset: 0x006B1006
 	public int SkillLevel { get; set; }
 
-	// Token: 0x170022AE RID: 8878
-	// (get) Token: 0x060195F3 RID: 103923 RVA: 0x0068CA1B File Offset: 0x0068AC1B
-	// (set) Token: 0x060195F4 RID: 103924 RVA: 0x0068CA23 File Offset: 0x0068AC23
+	// Token: 0x1700232D RID: 9005
+	// (get) Token: 0x06016EBA RID: 93882 RVA: 0x006B2E0F File Offset: 0x006B100F
+	// (set) Token: 0x06016EBB RID: 93883 RVA: 0x006B2E17 File Offset: 0x006B1017
 	public FVectorDouble HitPosition { get; set; }
 
-	// Token: 0x060195F5 RID: 103925 RVA: 0x0068CA2C File Offset: 0x0068AC2C
+	// Token: 0x06016EBC RID: 93884 RVA: 0x006B2E20 File Offset: 0x006B1020
 	public BuffDamageParam()
 	{
 	}
 
-	// Token: 0x060195F6 RID: 103926 RVA: 0x0068CA34 File Offset: 0x0068AC34
+	// Token: 0x06016EBD RID: 93885 RVA: 0x006B2E28 File Offset: 0x006B1028
 	public BuffDamageParam(IBuffDamageParam source)
 	{
 		this.BuffId = source.BuffId;
@@ -53,7 +53,7 @@ public class BuffDamageParam : IBuffDamageParam
 		this.HitPosition = source.HitPosition;
 	}
 
-	// Token: 0x060195F7 RID: 103927 RVA: 0x0068CA8F File Offset: 0x0068AC8F
+	// Token: 0x06016EBE RID: 93886 RVA: 0x006B2E83 File Offset: 0x006B1083
 	public BuffDamageParam(IBuffDamageParam source, FVectorDouble hitPosition) : this(source)
 	{
 		this.HitPosition = hitPosition;

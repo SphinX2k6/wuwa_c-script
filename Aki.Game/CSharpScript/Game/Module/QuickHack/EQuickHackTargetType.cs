@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F6D RID: 20333
+	// Token: 0x02003F36 RID: 16182
 	public enum EQuickHackTargetType
 	{
-		// Token: 0x0401BABF RID: 113343
+		// Token: 0x04016494 RID: 91284
 		EnemyMonster,
-		// Token: 0x0401BAC0 RID: 113344
+		// Token: 0x04016495 RID: 91285
 		SceneItem,
-		// Token: 0x0401BAC1 RID: 113345
+		// Token: 0x04016496 RID: 91286
 		OwnerSelf
 	}
 }

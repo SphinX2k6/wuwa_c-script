@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200691C RID: 26908
+	// Token: 0x02006FCF RID: 28623
 	public class IHonamiStoryCorruptedChestConfirmBoxT
 	{
-		// Token: 0x1700C7A6 RID: 51110
-		// (get) Token: 0x0602EF97 RID: 192407 RVA: 0x00667CBC File Offset: 0x00665EBC
-		// (set) Token: 0x0602EF98 RID: 192408 RVA: 0x00667CC4 File Offset: 0x00665EC4
+		// Token: 0x1700D1A9 RID: 53673
+		// (get) Token: 0x06031967 RID: 203111 RVA: 0x006B81A4 File Offset: 0x006B63A4
+		// (set) Token: 0x06031968 RID: 203112 RVA: 0x006B81AC File Offset: 0x006B63AC
 		public EInteractionConfirmBoxType Type { get; set; }
 
-		// Token: 0x1700C7A7 RID: 51111
-		// (get) Token: 0x0602EF99 RID: 192409 RVA: 0x00667CCD File Offset: 0x00665ECD
-		// (set) Token: 0x0602EF9A RID: 192410 RVA: 0x00667CD5 File Offset: 0x00665ED5
+		// Token: 0x1700D1AA RID: 53674
+		// (get) Token: 0x06031969 RID: 203113 RVA: 0x006B81B5 File Offset: 0x006B63B5
+		// (set) Token: 0x0603196A RID: 203114 RVA: 0x006B81BD File Offset: 0x006B63BD
 		public int Id { get; set; }
 
-		// Token: 0x0602EF9B RID: 192411 RVA: 0x00667CDE File Offset: 0x00665EDE
+		// Token: 0x0603196B RID: 203115 RVA: 0x006B81C6 File Offset: 0x006B63C6
 		public IHonamiStoryCorruptedChestConfirmBoxT()
 		{
 			this.Type = EInteractionConfirmBoxType.Common;

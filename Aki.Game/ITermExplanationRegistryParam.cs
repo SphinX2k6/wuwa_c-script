@@ -2,59 +2,59 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002BA4 RID: 11172
+// Token: 0x02002120 RID: 8480
 [NullableContext(2)]
 public interface ITermExplanationRegistryParam
 {
-	// Token: 0x17001F32 RID: 7986
-	// (get) Token: 0x06017241 RID: 94785
-	// (set) Token: 0x06017242 RID: 94786
+	// Token: 0x17001F8A RID: 8074
+	// (get) Token: 0x06014C72 RID: 85106
+	// (set) Token: 0x06014C73 RID: 85107
 	[Nullable(1)]
 	UUIText UiText { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17001F33 RID: 7987
-	// (get) Token: 0x06017243 RID: 94787
-	// (set) Token: 0x06017244 RID: 94788
+	// Token: 0x17001F8B RID: 8075
+	// (get) Token: 0x06014C74 RID: 85108
+	// (set) Token: 0x06014C75 RID: 85109
 	ETermExplanationViewType ViewType { get; set; }
 
-	// Token: 0x17001F34 RID: 7988
-	// (get) Token: 0x06017245 RID: 94789
-	// (set) Token: 0x06017246 RID: 94790
+	// Token: 0x17001F8C RID: 8076
+	// (get) Token: 0x06014C76 RID: 85110
+	// (set) Token: 0x06014C77 RID: 85111
 	ETermExplanationReportType ReportType { get; set; }
 
-	// Token: 0x17001F35 RID: 7989
-	// (get) Token: 0x06017247 RID: 94791
-	// (set) Token: 0x06017248 RID: 94792
+	// Token: 0x17001F8D RID: 8077
+	// (get) Token: 0x06014C78 RID: 85112
+	// (set) Token: 0x06014C79 RID: 85113
 	ETermExplanationViewAttachDirection? AttachDirection { get; set; }
 
-	// Token: 0x17001F36 RID: 7990
-	// (get) Token: 0x06017249 RID: 94793
-	// (set) Token: 0x0601724A RID: 94794
+	// Token: 0x17001F8E RID: 8078
+	// (get) Token: 0x06014C7A RID: 85114
+	// (set) Token: 0x06014C7B RID: 85115
 	UUIItem AttachItem { get; set; }
 
-	// Token: 0x17001F37 RID: 7991
-	// (get) Token: 0x0601724B RID: 94795
-	// (set) Token: 0x0601724C RID: 94796
+	// Token: 0x17001F8F RID: 8079
+	// (get) Token: 0x06014C7C RID: 85116
+	// (set) Token: 0x06014C7D RID: 85117
 	Action OnDisableClick { get; set; }
 
-	// Token: 0x17001F38 RID: 7992
-	// (get) Token: 0x0601724D RID: 94797
-	// (set) Token: 0x0601724E RID: 94798
+	// Token: 0x17001F90 RID: 8080
+	// (get) Token: 0x06014C7E RID: 85118
+	// (set) Token: 0x06014C7F RID: 85119
 	[Nullable(0)]
 	ValueTuple<float, float>? CustomOffset { [NullableContext(0)] get; [NullableContext(0)] set; }
 
-	// Token: 0x17001F39 RID: 7993
-	// (get) Token: 0x0601724F RID: 94799
-	// (set) Token: 0x06017250 RID: 94800
+	// Token: 0x17001F91 RID: 8081
+	// (get) Token: 0x06014C80 RID: 85120
+	// (set) Token: 0x06014C81 RID: 85121
 	ETermExplanationGroup? Group { get; set; }
 
-	// Token: 0x17001F3A RID: 7994
-	// (get) Token: 0x06017251 RID: 94801
-	// (set) Token: 0x06017252 RID: 94802
+	// Token: 0x17001F92 RID: 8082
+	// (get) Token: 0x06014C82 RID: 85122
+	// (set) Token: 0x06014C83 RID: 85123
 	int? Priority { get; set; }
 
-	// Token: 0x17001F3B RID: 7995
-	// (get) Token: 0x06017253 RID: 94803
-	// (set) Token: 0x06017254 RID: 94804
+	// Token: 0x17001F93 RID: 8083
+	// (get) Token: 0x06014C84 RID: 85124
+	// (set) Token: 0x06014C85 RID: 85125
 	ETermExplanationViewStyle? Style { get; set; }
 }

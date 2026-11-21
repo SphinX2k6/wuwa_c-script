@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C19 RID: 7193
+	// Token: 0x020004F3 RID: 1267
 	public sealed class FOnGlobalFootstepMaterialUpdateDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601BBE6 RID: 113638 RVA: 0x0028D3F6 File Offset: 0x0028B5F6
+		// Token: 0x06007736 RID: 30518 RVA: 0x000AE3D2 File Offset: 0x000AC5D2
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnGlobalFootstepMaterialUpdateDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601BBE7 RID: 113639 RVA: 0x0028D402 File Offset: 0x0028B602
+		// Token: 0x06007737 RID: 30519 RVA: 0x000AE3DE File Offset: 0x000AC5DE
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (AKuroGlobalGI.__OnGlobalFootstepMaterialUpdateDelegate__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return AKuroGlobalGI.__OnGlobalFootstepMaterialUpdateDelegate__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601BBE8 RID: 113640 RVA: 0x0028D425 File Offset: 0x0028B625
+		// Token: 0x06007738 RID: 30520 RVA: 0x000AE401 File Offset: 0x000AC601
 		public FOnGlobalFootstepMaterialUpdateDelegate()
 		{
 		}
 
-		// Token: 0x0601BBE9 RID: 113641 RVA: 0x0028D42D File Offset: 0x0028B62D
+		// Token: 0x06007739 RID: 30521 RVA: 0x000AE409 File Offset: 0x000AC609
 		[NullableContext(2)]
 		public FOnGlobalFootstepMaterialUpdateDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601BBEA RID: 113642 RVA: 0x0028D437 File Offset: 0x0028B637
+		// Token: 0x0600773A RID: 30522 RVA: 0x000AE413 File Offset: 0x000AC613
 		public FOnGlobalFootstepMaterialUpdateDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601BBEB RID: 113643 RVA: 0x0028D442 File Offset: 0x0028B642
+		// Token: 0x0600773B RID: 30523 RVA: 0x000AE41E File Offset: 0x000AC61E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<UPhysicalMaterial>) ?? ((Action<UPhysicalMaterial>)Delegate.CreateDelegate(typeof(Action<UPhysicalMaterial>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601BBEC RID: 113644 RVA: 0x0028D474 File Offset: 0x0028B674
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600773C RID: 30524 RVA: 0x000AE450 File Offset: 0x000AC650
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnGlobalFootstepMaterialUpdateDelegate.RegisterId);
 		}
 
-		// Token: 0x0601BBED RID: 113645 RVA: 0x0028D4B0 File Offset: 0x0028B6B0
+		// Token: 0x0600773D RID: 30525 RVA: 0x000AE48C File Offset: 0x000AC68C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(UPhysicalMaterial Material)
 		{
 			FOnGlobalFootstepMaterialUpdateDelegate.__FOnGlobalFootstepMaterialUpdateDelegate_DelegateParams* ptr = stackalloc FOnGlobalFootstepMaterialUpdateDelegate.__FOnGlobalFootstepMaterialUpdateDelegate_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnGlobalFootstepMaterialUpdateDelegate.__FOnGlobalFootstepMaterialUpdateDelegate_DelegateParams) & -16L;
@@ -80,10 +78,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601BBEE RID: 113646 RVA: 0x0028D4FC File Offset: 0x0028B6FC
+		// Token: 0x0600773E RID: 30526 RVA: 0x000AE4D8 File Offset: 0x000AC6D8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UPhysicalMaterial> action = target as Action<UPhysicalMaterial>;
@@ -95,28 +92,28 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0400EE9B RID: 61083
+		// Token: 0x04003240 RID: 12864
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroGlobalGI:OnGlobalFootstepMaterialUpdateDelegate__DelegateSignature";
 
-		// Token: 0x0400EE9C RID: 61084
+		// Token: 0x04003241 RID: 12865
 		private static int RegisterId;
 
-		// Token: 0x0200319E RID: 12702
+		// Token: 0x02000C34 RID: 3124
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnGlobalFootstepMaterialUpdateDelegate_DelegateParams
+		private ref struct __FOnGlobalFootstepMaterialUpdateDelegate_DelegateParams
 		{
-			// Token: 0x04016FDC RID: 94172
+			// Token: 0x04005E81 RID: 24193
 			[FieldOffset(0)]
 			public IntPtr Material;
 		}
 
-		// Token: 0x0200319F RID: 12703
+		// Token: 0x02000C35 RID: 3125
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016FDD RID: 94173
+			// Token: 0x04005E82 RID: 24194
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

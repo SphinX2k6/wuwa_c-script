@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065E0 RID: 26080
+	// Token: 0x0200555E RID: 21854
 	public enum EFishingEntrustState
 	{
-		// Token: 0x04022066 RID: 139366
+		// Token: 0x0401C997 RID: 117143
 		UnAcceptable,
-		// Token: 0x04022067 RID: 139367
+		// Token: 0x0401C998 RID: 117144
 		Acceptable,
-		// Token: 0x04022068 RID: 139368
+		// Token: 0x0401C999 RID: 117145
 		Deliverable,
-		// Token: 0x04022069 RID: 139369
+		// Token: 0x0401C99A RID: 117146
 		UnDeliverable
 	}
 }

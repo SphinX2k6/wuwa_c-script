@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006697 RID: 26263
+	// Token: 0x02006D11 RID: 27921
 	public class IEnableTakePhotoClipT
 	{
-		// Token: 0x1700C330 RID: 49968
-		// (get) Token: 0x0602DA65 RID: 186981 RVA: 0x0063F606 File Offset: 0x0063D806
-		// (set) Token: 0x0602DA66 RID: 186982 RVA: 0x0063F60E File Offset: 0x0063D80E
+		// Token: 0x1700CCE1 RID: 52449
+		// (get) Token: 0x06030282 RID: 197250 RVA: 0x0068C8BA File Offset: 0x0068AABA
+		// (set) Token: 0x06030283 RID: 197251 RVA: 0x0068C8C2 File Offset: 0x0068AAC2
 		public bool Enable { get; set; }
 
-		// Token: 0x0602DA67 RID: 186983 RVA: 0x0063F617 File Offset: 0x0063D817
+		// Token: 0x06030284 RID: 197252 RVA: 0x0068C8CB File Offset: 0x0068AACB
 		public IEnableTakePhotoClipT()
 		{
 			this.Enable = false;

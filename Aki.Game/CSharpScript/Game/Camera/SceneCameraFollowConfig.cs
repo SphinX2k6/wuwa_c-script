@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072D7 RID: 29399
+	// Token: 0x02006459 RID: 25689
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneCameraFollowConfig
 	{
-		// Token: 0x0604824E RID: 295502 RVA: 0x012826C9 File Offset: 0x012808C9
+		// Token: 0x0603E662 RID: 255586 RVA: 0x01224EB1 File Offset: 0x012230B1
 		public SceneCameraFollowConfig Set(ESceneCameraFollowTargetType targetType, int entityId = 0)
 		{
 			this.TargetType = targetType;
@@ -16,24 +16,24 @@ namespace CSharpScript.Game.Camera
 			return this;
 		}
 
-		// Token: 0x0604824F RID: 295503 RVA: 0x012826DA File Offset: 0x012808DA
+		// Token: 0x0603E663 RID: 255587 RVA: 0x01224EC2 File Offset: 0x012230C2
 		public void DeepCopy(SceneCameraFollowConfig source)
 		{
 			this.TargetType = source.TargetType;
 			this.EntityId = source.EntityId;
 		}
 
-		// Token: 0x06048250 RID: 295504 RVA: 0x012826F4 File Offset: 0x012808F4
+		// Token: 0x0603E664 RID: 255588 RVA: 0x01224EDC File Offset: 0x012230DC
 		public void Reset()
 		{
 			this.TargetType = ESceneCameraFollowTargetType.Player;
 			this.EntityId = 0;
 		}
 
-		// Token: 0x04026121 RID: 155937
+		// Token: 0x04021404 RID: 136196
 		public ESceneCameraFollowTargetType TargetType;
 
-		// Token: 0x04026122 RID: 155938
+		// Token: 0x04021405 RID: 136197
 		public int EntityId;
 	}
 }

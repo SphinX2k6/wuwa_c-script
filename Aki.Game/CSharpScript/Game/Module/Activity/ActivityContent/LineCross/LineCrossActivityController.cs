@@ -11,54 +11,54 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 {
-	// Token: 0x02006559 RID: 25945
+	// Token: 0x020054D7 RID: 21719
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class LineCrossActivityController : ActivityControllerBase
 	{
-		// Token: 0x06041040 RID: 266304 RVA: 0x00FC2039 File Offset: 0x00FC0239
+		// Token: 0x06035D05 RID: 220421 RVA: 0x00F09021 File Offset: 0x00F07221
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x06041041 RID: 266305 RVA: 0x00FC203B File Offset: 0x00FC023B
+		// Token: 0x06035D06 RID: 220422 RVA: 0x00F09023 File Offset: 0x00F07223
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_ActivityCrossline";
 		}
 
-		// Token: 0x06041042 RID: 266306 RVA: 0x00FC2042 File Offset: 0x00FC0242
+		// Token: 0x06035D07 RID: 220423 RVA: 0x00F0902A File Offset: 0x00F0722A
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new LineCrossSubView();
 		}
 
-		// Token: 0x06041043 RID: 266307 RVA: 0x00FC2049 File Offset: 0x00FC0249
+		// Token: 0x06035D08 RID: 220424 RVA: 0x00F09031 File Offset: 0x00F07231
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			return new LineCrossActivityData();
 		}
 
-		// Token: 0x06041044 RID: 266308 RVA: 0x00FC2050 File Offset: 0x00FC0250
+		// Token: 0x06035D09 RID: 220425 RVA: 0x00F09038 File Offset: 0x00F07238
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x06041045 RID: 266309 RVA: 0x00FC2053 File Offset: 0x00FC0253
+		// Token: 0x06035D0A RID: 220426 RVA: 0x00F0903B File Offset: 0x00F0723B
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.LineCrossActivityUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnLineCrossUpdate));
 		}
 
-		// Token: 0x06041046 RID: 266310 RVA: 0x00FC2071 File Offset: 0x00FC0271
+		// Token: 0x06035D0B RID: 220427 RVA: 0x00F09059 File Offset: 0x00F07259
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.LineCrossActivityUpdateNotify);
 		}
 
-		// Token: 0x06041047 RID: 266311 RVA: 0x00FC2083 File Offset: 0x00FC0283
+		// Token: 0x06035D0C RID: 220428 RVA: 0x00F0906B File Offset: 0x00F0726B
 		[NullableContext(2)]
 		private LineCrossActivityData GetActivityDataById(int id)
 		{
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return ActivityModel.Instance.GetActivityById(id) as LineCrossActivityData;
 		}
 
-		// Token: 0x06041048 RID: 266312 RVA: 0x00FC20A4 File Offset: 0x00FC02A4
+		// Token: 0x06035D0D RID: 220429 RVA: 0x00F0908C File Offset: 0x00F0728C
 		[NullableContext(2)]
 		private void OnLineCrossUpdate(IMessage msg, Net.CallbackStatus _)
 		{
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			}
 		}
 
-		// Token: 0x06041049 RID: 266313 RVA: 0x00FC221C File Offset: 0x00FC041C
+		// Token: 0x06035D0E RID: 220430 RVA: 0x00F09204 File Offset: 0x00F07404
 		public void RequestStartChallenge(int activityId, int challengeId)
 		{
 			LineCrossChallengeStartRequest lineCrossChallengeStartRequest = LineCrossChallengeStartRequest.Create();
@@ -115,12 +115,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 				LineCrossChallengeStartResponse lineCrossChallengeStartResponse = (LineCrossChallengeStartResponse)msg;
 				if (lineCrossChallengeStartResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(lineCrossChallengeStartResponse.ErrorCode, 19877, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(lineCrossChallengeStartResponse.ErrorCode, 21987, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x0604104A RID: 266314 RVA: 0x00FC227C File Offset: 0x00FC047C
+		// Token: 0x06035D0F RID: 220431 RVA: 0x00F09264 File Offset: 0x00F07464
 		[NullableContext(0)]
 		public UniTask<bool> OpenLineCrossActivityView()
 		{
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return <OpenLineCrossActivityView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604104B RID: 266315 RVA: 0x00FC22B8 File Offset: 0x00FC04B8
+		// Token: 0x06035D10 RID: 220432 RVA: 0x00F092A0 File Offset: 0x00F074A0
 		[NullableContext(0)]
 		protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 		{
@@ -144,8 +144,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return <OnOpenSubView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x17009541 RID: 38209
-		// (get) Token: 0x0604104C RID: 266316 RVA: 0x00FC2303 File Offset: 0x00FC0503
+		// Token: 0x170068A3 RID: 26787
+		// (get) Token: 0x06035D11 RID: 220433 RVA: 0x00F092EB File Offset: 0x00F074EB
 		public static LineCrossActivityController Instance
 		{
 			get
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			}
 		}
 
-		// Token: 0x0604104D RID: 266317 RVA: 0x00FC230A File Offset: 0x00FC050A
+		// Token: 0x06035D12 RID: 220434 RVA: 0x00F092F2 File Offset: 0x00F074F2
 		public static LineCrossActivityController GetOrCreateInstance()
 		{
 			if (LineCrossActivityController._Instance == null)
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return LineCrossActivityController._Instance;
 		}
 
-		// Token: 0x0604104E RID: 266318 RVA: 0x00FC231E File Offset: 0x00FC051E
+		// Token: 0x06035D13 RID: 220435 RVA: 0x00F09306 File Offset: 0x00F07506
 		public static bool CreateInstance()
 		{
 			if (LineCrossActivityController._Instance != null)
@@ -175,24 +175,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return true;
 		}
 
-		// Token: 0x0604104F RID: 266319 RVA: 0x00FC2334 File Offset: 0x00FC0534
+		// Token: 0x06035D14 RID: 220436 RVA: 0x00F0931C File Offset: 0x00F0751C
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06041050 RID: 266320 RVA: 0x00FC2336 File Offset: 0x00FC0536
+		// Token: 0x06035D15 RID: 220437 RVA: 0x00F0931E File Offset: 0x00F0751E
 		public static void ResetStaticDefaultValue()
 		{
 			LineCrossActivityController._Instance = null;
 		}
 
-		// Token: 0x06041051 RID: 266321 RVA: 0x00FC233E File Offset: 0x00FC053E
+		// Token: 0x06035D16 RID: 220438 RVA: 0x00F09326 File Offset: 0x00F07526
 		static LineCrossActivityController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LineCrossActivityController.CreateStaticDefaultValue), new Action(LineCrossActivityController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04021E61 RID: 138849
+		// Token: 0x0401C792 RID: 116626
 		[Nullable(2)]
 		private static LineCrossActivityController _Instance;
 	}

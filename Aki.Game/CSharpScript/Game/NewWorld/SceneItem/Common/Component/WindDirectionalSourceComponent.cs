@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x0200722B RID: 29227
+	// Token: 0x020062E0 RID: 25312
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WindDirectionalSourceComponent : EntityComponent
 	{
-		// Token: 0x17009E3C RID: 40508
-		// (get) Token: 0x06047A36 RID: 293430 RVA: 0x01253FAA File Offset: 0x012521AA
+		// Token: 0x170073EE RID: 29678
+		// (get) Token: 0x0603D392 RID: 250770 RVA: 0x011ACB75 File Offset: 0x011AAD75
 		private UnrealEngine.EWindSourceType WindType
 		{
 			get
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047A37 RID: 293431 RVA: 0x01253FCC File Offset: 0x012521CC
+		// Token: 0x0603D393 RID: 250771 RVA: 0x011ACB94 File Offset: 0x011AAD94
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			string nameByTagId = GameplayTagUtils.GetNameByTagId(stateId);
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			ueWindDirectionalSourceComponent2.SetSpeed(windDirectionalStateGrade.Speed);
 		}
 
-		// Token: 0x06047A38 RID: 293432 RVA: 0x01254090 File Offset: 0x01252290
+		// Token: 0x0603D394 RID: 250772 RVA: 0x011ACC58 File Offset: 0x011AAE58
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return this.WindSourceConfig != null;
 		}
 
-		// Token: 0x06047A39 RID: 293433 RVA: 0x01254170 File Offset: 0x01252370
+		// Token: 0x0603D395 RID: 250773 RVA: 0x011ACD38 File Offset: 0x011AAF38
 		protected override bool OnStart()
 		{
 			this.BaseActorComponent = base.Entity.GetComponent<BaseActorComponent>();
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return this.BaseActorComponent != null;
 		}
 
-		// Token: 0x06047A3A RID: 293434 RVA: 0x012542F8 File Offset: 0x012524F8
+		// Token: 0x0603D396 RID: 250774 RVA: 0x011ACEC0 File Offset: 0x011AB0C0
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.HasWithTarget(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange)))
@@ -179,13 +179,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047A3B RID: 293435 RVA: 0x0125439E File Offset: 0x0125259E
+		// Token: 0x0603D397 RID: 250775 RVA: 0x011ACF66 File Offset: 0x011AB166
 		protected override void OnActivate()
 		{
 			this.OnSceneItemStateChange(GameplayTagUtils.GetTagIdByName(this.EntityStateConfig.State), true);
 		}
 
-		// Token: 0x06047A3C RID: 293436 RVA: 0x012543B7 File Offset: 0x012525B7
+		// Token: 0x0603D398 RID: 250776 RVA: 0x011ACF7F File Offset: 0x011AB17F
 		[NullableContext(1)]
 		protected override void OnDisable(string reason)
 		{
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			ueWindDirectionalSourceComponent.Deactivate();
 		}
 
-		// Token: 0x06047A3D RID: 293437 RVA: 0x012543C9 File Offset: 0x012525C9
+		// Token: 0x0603D399 RID: 250777 RVA: 0x011ACF91 File Offset: 0x011AB191
 		protected override void OnEnable()
 		{
 			UWindDirectionalSourceComponent ueWindDirectionalSourceComponent = this.UeWindDirectionalSourceComponent;
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			ueWindDirectionalSourceComponent.Activate(false);
 		}
 
-		// Token: 0x06047A3E RID: 293438 RVA: 0x012543DC File Offset: 0x012525DC
+		// Token: 0x0603D39A RID: 250778 RVA: 0x011ACFA4 File Offset: 0x011AB1A4
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -217,77 +217,112 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			WindDirectionalSourceComponent windDirectionalSourceComponent = (WindDirectionalSourceComponent)componentTemplate;
-			if (base.CanResetComponentProperty("EntityStateConfig"))
+			if (windDirectionalSourceComponent.EntityStateConfig == null)
 			{
-				if (windDirectionalSourceComponent.EntityStateConfig == null)
-				{
-					this.EntityStateConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityStateComponent>(this.EntityStateConfig), "EntityStateConfig"))
-				{
-					return false;
-				}
+				this.EntityStateConfig = null;
 			}
-			if (base.CanResetComponentProperty("BaseActorComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EntityStateConfig), "EntityStateConfig"))
 			{
-				if (windDirectionalSourceComponent.BaseActorComponent == null)
-				{
-					this.BaseActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.BaseActorComponent), "BaseActorComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("WindSourceConfig"))
+			if (windDirectionalSourceComponent.BaseActorComponent == null)
 			{
-				if (windDirectionalSourceComponent.WindSourceConfig == null)
-				{
-					this.WindSourceConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<WindSourceComponent>(this.WindSourceConfig), "WindSourceConfig"))
-				{
-					return false;
-				}
+				this.BaseActorComponent = null;
 			}
-			if (base.CanResetComponentProperty("UeWindDirectionalSourceComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BaseActorComponent), "BaseActorComponent"))
 			{
-				if (windDirectionalSourceComponent.UeWindDirectionalSourceComponent == null)
-				{
-					this.UeWindDirectionalSourceComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UWindDirectionalSourceComponent>(this.UeWindDirectionalSourceComponent), "UeWindDirectionalSourceComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("WindSourceGrades"))
+			if (windDirectionalSourceComponent.WindSourceConfig == null)
 			{
-				if (windDirectionalSourceComponent.WindSourceGrades == null)
-				{
-					this.WindSourceGrades = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, IWindDirectionalStateGrade>>(this.WindSourceGrades), "WindSourceGrades"))
-				{
-					return false;
-				}
+				this.WindSourceConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WindSourceConfig), "WindSourceConfig"))
+			{
+				return false;
+			}
+			if (windDirectionalSourceComponent.UeWindDirectionalSourceComponent == null)
+			{
+				this.UeWindDirectionalSourceComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UeWindDirectionalSourceComponent), "UeWindDirectionalSourceComponent"))
+			{
+				return false;
+			}
+			if (windDirectionalSourceComponent.WindSourceGrades == null)
+			{
+				this.WindSourceGrades = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WindSourceGrades), "WindSourceGrades"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04025B0D RID: 154381
+		// Token: 0x170073EF RID: 29679
+		// (get) Token: 0x0603D39B RID: 250779 RVA: 0x011AD09B File Offset: 0x011AB29B
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073F0 RID: 29680
+		// (get) Token: 0x0603D39C RID: 250780 RVA: 0x011AD09E File Offset: 0x011AB29E
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073F1 RID: 29681
+		// (get) Token: 0x0603D39D RID: 250781 RVA: 0x011AD0A1 File Offset: 0x011AB2A1
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073F2 RID: 29682
+		// (get) Token: 0x0603D39E RID: 250782 RVA: 0x011AD0A4 File Offset: 0x011AB2A4
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073F3 RID: 29683
+		// (get) Token: 0x0603D39F RID: 250783 RVA: 0x011AD0A7 File Offset: 0x011AB2A7
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402077C RID: 132988
 		private EntityStateComponent EntityStateConfig;
 
-		// Token: 0x04025B0E RID: 154382
+		// Token: 0x0402077D RID: 132989
 		private BaseActorComponent BaseActorComponent;
 
-		// Token: 0x04025B0F RID: 154383
+		// Token: 0x0402077E RID: 132990
 		private WindSourceComponent WindSourceConfig;
 
-		// Token: 0x04025B10 RID: 154384
+		// Token: 0x0402077F RID: 132991
 		private UWindDirectionalSourceComponent UeWindDirectionalSourceComponent;
 
-		// Token: 0x04025B11 RID: 154385
+		// Token: 0x04020780 RID: 132992
 		[Nullable(new byte[]
 		{
 			2,

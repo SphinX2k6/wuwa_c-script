@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076DD RID: 30429
+	// Token: 0x02007EEE RID: 32494
 	public enum TGroupAiCommunicateOption : byte
 	{
-		// Token: 0x04012766 RID: 75622
+		// Token: 0x040137BE RID: 79806
 		NONE,
-		// Token: 0x04012767 RID: 75623
+		// Token: 0x040137BF RID: 79807
 		IGroupAiCommunicateAddTag,
-		// Token: 0x04012768 RID: 75624
+		// Token: 0x040137C0 RID: 79808
 		IGroupAiCommunicateRemoveTag
 	}
 }

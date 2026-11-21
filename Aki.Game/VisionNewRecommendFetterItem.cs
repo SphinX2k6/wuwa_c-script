@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020024E2 RID: 9442
+// Token: 0x020019C9 RID: 6601
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class VisionNewRecommendFetterItem : GridProxyAbstract<VisionFetterRecommendInfo>
 {
-	// Token: 0x06012FC5 RID: 77765 RVA: 0x004B3860 File Offset: 0x004B1A60
+	// Token: 0x06010484 RID: 66692 RVA: 0x004C1420 File Offset: 0x004BF620
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class VisionNewRecommendFetterItem : GridProxyAbstract<VisionFetterRecomm
 		};
 	}
 
-	// Token: 0x06012FC6 RID: 77766 RVA: 0x004B38E0 File Offset: 0x004B1AE0
+	// Token: 0x06010485 RID: 66693 RVA: 0x004C14A0 File Offset: 0x004BF6A0
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -40,20 +40,20 @@ public class VisionNewRecommendFetterItem : GridProxyAbstract<VisionFetterRecomm
 		this.ElementLayout = new GenericLayout<FetterIconItem, IVisionNewRecommendFetterItemData>(base.GetLayoutBase(1), new Func<FetterIconItem>(this.InitElementItem), null, false, true);
 	}
 
-	// Token: 0x06012FC7 RID: 77767 RVA: 0x004B392C File Offset: 0x004B1B2C
+	// Token: 0x06010486 RID: 66694 RVA: 0x004C14EC File Offset: 0x004BF6EC
 	private FetterIconItem InitElementItem()
 	{
 		return new FetterIconItem();
 	}
 
-	// Token: 0x06012FC8 RID: 77768 RVA: 0x004B3933 File Offset: 0x004B1B33
+	// Token: 0x06010487 RID: 66695 RVA: 0x004C14F3 File Offset: 0x004BF6F3
 	public override void Refresh(VisionFetterRecommendInfo data, bool isSelected, int gridIndex)
 	{
 		this.ElementLayout.RefreshByData(data.BuildFetterItemDataList(), null, false);
 		this.RefreshUsage(data.GetUsageText());
 	}
 
-	// Token: 0x06012FC9 RID: 77769 RVA: 0x004B3954 File Offset: 0x004B1B54
+	// Token: 0x06010488 RID: 66696 RVA: 0x004C1514 File Offset: 0x004BF714
 	private void RefreshUsage(string txt)
 	{
 		UUIText text = base.GetText(2);
@@ -64,7 +64,7 @@ public class VisionNewRecommendFetterItem : GridProxyAbstract<VisionFetterRecomm
 		text.SetText(txt, true);
 	}
 
-	// Token: 0x06012FCA RID: 77770 RVA: 0x004B3969 File Offset: 0x004B1B69
+	// Token: 0x06010489 RID: 66697 RVA: 0x004C1529 File Offset: 0x004BF729
 	private void OnToggleClick(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -78,19 +78,19 @@ public class VisionNewRecommendFetterItem : GridProxyAbstract<VisionFetterRecomm
 		}
 	}
 
-	// Token: 0x06012FCB RID: 77771 RVA: 0x004B3985 File Offset: 0x004B1B85
+	// Token: 0x0601048A RID: 66698 RVA: 0x004C1545 File Offset: 0x004BF745
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true, fireEvent);
 	}
 
-	// Token: 0x06012FCC RID: 77772 RVA: 0x004B398F File Offset: 0x004B1B8F
+	// Token: 0x0601048B RID: 66699 RVA: 0x004C154F File Offset: 0x004BF74F
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false, fireEvent);
 	}
 
-	// Token: 0x06012FCD RID: 77773 RVA: 0x004B3999 File Offset: 0x004B1B99
+	// Token: 0x0601048C RID: 66700 RVA: 0x004C1559 File Offset: 0x004BF759
 	private void SetToggleState(bool isSelected, bool fireEvent = false)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -101,13 +101,13 @@ public class VisionNewRecommendFetterItem : GridProxyAbstract<VisionFetterRecomm
 		extendToggle.SetToggleStateForce(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 	}
 
-	// Token: 0x06012FCE RID: 77774 RVA: 0x004B39B6 File Offset: 0x004B1BB6
+	// Token: 0x0601048D RID: 66701 RVA: 0x004C1576 File Offset: 0x004BF776
 	public override object GetKey(VisionFetterRecommendInfo data, int displayIndex)
 	{
 		return data.GetPlanId();
 	}
 
-	// Token: 0x04008EE7 RID: 36583
+	// Token: 0x04009031 RID: 36913
 	[Nullable(new byte[]
 	{
 		2,
@@ -116,19 +116,19 @@ public class VisionNewRecommendFetterItem : GridProxyAbstract<VisionFetterRecomm
 	})]
 	private GenericLayout<FetterIconItem, IVisionNewRecommendFetterItemData> ElementLayout;
 
-	// Token: 0x04008EE8 RID: 36584
+	// Token: 0x04009032 RID: 36914
 	[Nullable(2)]
 	public Action<int> OnSelectedCallback;
 
-	// Token: 0x02008A71 RID: 35441
+	// Token: 0x02007BF9 RID: 31737
 	[NullableContext(0)]
 	private enum EComp
 	{
-		// Token: 0x0402CF49 RID: 184137
+		// Token: 0x04028262 RID: 164450
 		Toggle,
-		// Token: 0x0402CF4A RID: 184138
+		// Token: 0x04028263 RID: 164451
 		ElementLayout,
-		// Token: 0x0402CF4B RID: 184139
+		// Token: 0x04028264 RID: 164452
 		UsageText
 	}
 }

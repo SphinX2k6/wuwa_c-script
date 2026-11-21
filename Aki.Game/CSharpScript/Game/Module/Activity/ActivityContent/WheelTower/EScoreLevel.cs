@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F29 RID: 24361
+	// Token: 0x02004F10 RID: 20240
 	public enum EScoreLevel
 	{
-		// Token: 0x04020516 RID: 132374
+		// Token: 0x0401AFE8 RID: 110568
 		None,
-		// Token: 0x04020517 RID: 132375
+		// Token: 0x0401AFE9 RID: 110569
 		B,
-		// Token: 0x04020518 RID: 132376
+		// Token: 0x0401AFEA RID: 110570
 		A,
-		// Token: 0x04020519 RID: 132377
+		// Token: 0x0401AFEB RID: 110571
 		S,
-		// Token: 0x0402051A RID: 132378
+		// Token: 0x0401AFEC RID: 110572
 		SS,
-		// Token: 0x0402051B RID: 132379
+		// Token: 0x0401AFED RID: 110573
 		SSS,
-		// Token: 0x0402051C RID: 132380
+		// Token: 0x0401AFEE RID: 110574
 		KingRed,
-		// Token: 0x0402051D RID: 132381
+		// Token: 0x0401AFEF RID: 110575
 		King
 	}
 }

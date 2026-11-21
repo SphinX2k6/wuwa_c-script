@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 
-// Token: 0x020032CC RID: 13004
+// Token: 0x0200283D RID: 10301
 [NullableContext(2)]
 [Nullable(0)]
 public class VehicleHitComponent : BaseHitComponent
 {
-	// Token: 0x0601C40F RID: 115727 RVA: 0x007E06C0 File Offset: 0x007DE8C0
+	// Token: 0x0601A086 RID: 106630 RVA: 0x00807380 File Offset: 0x00805580
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<VehicleActorComponent>();
@@ -24,7 +24,7 @@ public class VehicleHitComponent : BaseHitComponent
 		return true;
 	}
 
-	// Token: 0x0601C410 RID: 115728 RVA: 0x007E073F File Offset: 0x007DE93F
+	// Token: 0x0601A087 RID: 106631 RVA: 0x008073FF File Offset: 0x008055FF
 	protected override bool OnEnd()
 	{
 		if (this.OnHitMaterialAction != null)
@@ -35,7 +35,7 @@ public class VehicleHitComponent : BaseHitComponent
 		return true;
 	}
 
-	// Token: 0x0601C411 RID: 115729 RVA: 0x007E075C File Offset: 0x007DE95C
+	// Token: 0x0601A088 RID: 106632 RVA: 0x0080741C File Offset: 0x0080561C
 	[NullableContext(1)]
 	public void OnHit(HitInformation hitData, BulletInfo bulletInfo)
 	{
@@ -78,7 +78,7 @@ public class VehicleHitComponent : BaseHitComponent
 		base.HitRequest(bulletInfo.Entity, attackerCreatureDataId, hitData, 0, false, false, ECounterAttackType.None, null, false, null, null);
 	}
 
-	// Token: 0x0601C412 RID: 115730 RVA: 0x007E0898 File Offset: 0x007DEA98
+	// Token: 0x0601A089 RID: 106633 RVA: 0x00807558 File Offset: 0x00805758
 	[NullableContext(1)]
 	public void ProcessOnHitMaterial(HitInformation hitData)
 	{
@@ -107,7 +107,7 @@ public class VehicleHitComponent : BaseHitComponent
 		}
 	}
 
-	// Token: 0x0601C413 RID: 115731 RVA: 0x007E0964 File Offset: 0x007DEB64
+	// Token: 0x0601A08A RID: 106634 RVA: 0x00807624 File Offset: 0x00805824
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -116,76 +116,81 @@ public class VehicleHitComponent : BaseHitComponent
 			return false;
 		}
 		VehicleHitComponent vehicleHitComponent = (VehicleHitComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (vehicleHitComponent.ActorComp == null)
 		{
-			if (vehicleHitComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("DamageComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (vehicleHitComponent.DamageComp == null)
-			{
-				this.DamageComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseDamageComponent>(this.DamageComp), "DamageComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PerformComp"))
+		if (vehicleHitComponent.DamageComp == null)
 		{
-			if (vehicleHitComponent.PerformComp == null)
-			{
-				this.PerformComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehiclePerformComponent>(this.PerformComp), "PerformComp"))
-			{
-				return false;
-			}
+			this.DamageComp = null;
 		}
-		if (base.CanResetComponentProperty("TimeScaleComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DamageComp), "DamageComp"))
 		{
-			if (vehicleHitComponent.TimeScaleComp == null)
-			{
-				this.TimeScaleComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnTimeScaleComponent>(this.TimeScaleComp), "TimeScaleComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("OnHitMaterialAction"))
+		if (vehicleHitComponent.PerformComp == null)
 		{
-			if (vehicleHitComponent.OnHitMaterialAction == null)
-			{
-				this.OnHitMaterialAction = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<OnHitMaterialAction>(this.OnHitMaterialAction), "OnHitMaterialAction"))
-			{
-				return false;
-			}
+			this.PerformComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformComp), "PerformComp"))
+		{
+			return false;
+		}
+		if (vehicleHitComponent.TimeScaleComp == null)
+		{
+			this.TimeScaleComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimeScaleComp), "TimeScaleComp"))
+		{
+			return false;
+		}
+		if (vehicleHitComponent.OnHitMaterialAction == null)
+		{
+			this.OnHitMaterialAction = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnHitMaterialAction), "OnHitMaterialAction"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400DF99 RID: 57241
+	// Token: 0x17002A54 RID: 10836
+	// (get) Token: 0x0601A08B RID: 106635 RVA: 0x0080771B File Offset: 0x0080591B
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A55 RID: 10837
+	// (get) Token: 0x0601A08C RID: 106636 RVA: 0x0080771E File Offset: 0x0080591E
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E43C RID: 58428
 	private VehicleActorComponent ActorComp;
 
-	// Token: 0x0400DF9A RID: 57242
+	// Token: 0x0400E43D RID: 58429
 	private BaseDamageComponent DamageComp;
 
-	// Token: 0x0400DF9B RID: 57243
+	// Token: 0x0400E43E RID: 58430
 	private VehiclePerformComponent PerformComp;
 
-	// Token: 0x0400DF9C RID: 57244
+	// Token: 0x0400E43F RID: 58431
 	private PawnTimeScaleComponent TimeScaleComp;
 
-	// Token: 0x0400DF9D RID: 57245
+	// Token: 0x0400E440 RID: 58432
 	private OnHitMaterialAction OnHitMaterialAction;
 }

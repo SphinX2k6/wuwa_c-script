@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200037E RID: 894
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003C7 RID: 967
 	public class IFightMusicsSwitchType
 	{
-		// Token: 0x060011BF RID: 4543 RVA: 0x0003B7E0 File Offset: 0x000399E0
+		// Token: 0x06001303 RID: 4867 RVA: 0x0003EAC4 File Offset: 0x0003CCC4
 		private IFightMusicsSwitchType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060011C0 RID: 4544 RVA: 0x0003B818 File Offset: 0x00039A18
+		// Token: 0x06001304 RID: 4868 RVA: 0x0003EAFC File Offset: 0x0003CCFC
 		public static IFightMusicsSwitchType Create([Nullable(2)] IFightMusicsSwitchType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011C1 RID: 4545 RVA: 0x0003B82B File Offset: 0x00039A2B
+		// Token: 0x06001305 RID: 4869 RVA: 0x0003EB0F File Offset: 0x0003CD0F
 		public static IFightMusicsSwitchType CreateFromSetValue([Nullable(2)] IFightMusicsSwitchType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011C2 RID: 4546 RVA: 0x0003B83E File Offset: 0x00039A3E
+		// Token: 0x06001306 RID: 4870 RVA: 0x0003EB22 File Offset: 0x0003CD22
 		public IFightMusicsSwitchType_SetValue ToSetValue()
 		{
 			return new IFightMusicsSwitchType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000500 RID: 1280
-		// (get) Token: 0x060011C3 RID: 4547 RVA: 0x0003B851 File Offset: 0x00039A51
-		// (set) Token: 0x060011C4 RID: 4548 RVA: 0x0003B87C File Offset: 0x00039A7C
+		// Token: 0x17000554 RID: 1364
+		// (get) Token: 0x06001307 RID: 4871 RVA: 0x0003EB35 File Offset: 0x0003CD35
+		// (set) Token: 0x06001308 RID: 4872 RVA: 0x0003EB60 File Offset: 0x0003CD60
 		public virtual EFightMusicsSwitchType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E7B RID: 3707
+		// Token: 0x04000F72 RID: 3954
 		[Nullable(2)]
 		protected IFightMusicsSwitchType FbInstance;
 
-		// Token: 0x04000E7C RID: 3708
+		// Token: 0x04000F73 RID: 3955
 		[Nullable(2)]
 		protected IFightMusicsSwitchType_SetValue PocoInterface;
 	}

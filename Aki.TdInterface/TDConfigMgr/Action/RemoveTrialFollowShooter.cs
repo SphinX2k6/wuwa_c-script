@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002156 RID: 8534
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023B7 RID: 9143
 	public class RemoveTrialFollowShooter : ActionParams
 	{
-		// Token: 0x0600BBD2 RID: 48082 RVA: 0x001B16F8 File Offset: 0x001AF8F8
+		// Token: 0x0600C760 RID: 51040 RVA: 0x001C88AC File Offset: 0x001C6AAC
 		private RemoveTrialFollowShooter_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BBD3 RID: 48083 RVA: 0x001B1730 File Offset: 0x001AF930
+		// Token: 0x0600C761 RID: 51041 RVA: 0x001C88E4 File Offset: 0x001C6AE4
 		public static RemoveTrialFollowShooter Create([Nullable(2)] RemoveTrialFollowShooter instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BBD4 RID: 48084 RVA: 0x001B1743 File Offset: 0x001AF943
+		// Token: 0x0600C762 RID: 51042 RVA: 0x001C88F7 File Offset: 0x001C6AF7
 		public static RemoveTrialFollowShooter CreateFromSetValue([Nullable(2)] RemoveTrialFollowShooter_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BBD5 RID: 48085 RVA: 0x001B1756 File Offset: 0x001AF956
+		// Token: 0x0600C763 RID: 51043 RVA: 0x001C890A File Offset: 0x001C6B0A
 		public RemoveTrialFollowShooter_SetValue ToSetValue()
 		{
 			return new RemoveTrialFollowShooter_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003945 RID: 14661
-		// (get) Token: 0x0600BBD6 RID: 48086 RVA: 0x001B1769 File Offset: 0x001AF969
-		// (set) Token: 0x0600BBD7 RID: 48087 RVA: 0x001B1794 File Offset: 0x001AF994
+		// Token: 0x17003C32 RID: 15410
+		// (get) Token: 0x0600C764 RID: 51044 RVA: 0x001C891D File Offset: 0x001C6B1D
+		// (set) Token: 0x0600C765 RID: 51045 RVA: 0x001C8948 File Offset: 0x001C6B48
 		public virtual int Id
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007041 RID: 28737
+		// Token: 0x04007676 RID: 30326
 		[Nullable(2)]
 		protected new RemoveTrialFollowShooter FbInstance;
 
-		// Token: 0x04007042 RID: 28738
+		// Token: 0x04007677 RID: 30327
 		[Nullable(2)]
 		protected RemoveTrialFollowShooter_SetValue PocoInterface;
 	}

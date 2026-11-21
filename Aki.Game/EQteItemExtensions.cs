@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02003551 RID: 13649
+// Token: 0x02002AC6 RID: 10950
 public static class EQteItemExtensions
 {
-	// Token: 0x0601DF93 RID: 122771 RVA: 0x008665DC File Offset: 0x008647DC
+	// Token: 0x0601BCBB RID: 113851 RVA: 0x0088E144 File Offset: 0x0088C344
 	public static string ToEnumString(this EQteItem value)
 	{
 		string result;
@@ -32,6 +32,9 @@ public static class EQteItemExtensions
 			break;
 		case EQteItem.PullDownItem:
 			result = "UiItem_PullDown";
+			break;
+		case EQteItem.PullLeftItem:
+			result = "UiItem_PullLeft";
 			break;
 		case EQteItem.FocusSingleButtonItem:
 			result = "UiItem_FocusSingleButton";
@@ -73,7 +76,7 @@ public static class EQteItemExtensions
 		return result;
 	}
 
-	// Token: 0x0601DF94 RID: 122772 RVA: 0x008666F4 File Offset: 0x008648F4
+	// Token: 0x0601BCBC RID: 113852 RVA: 0x0088E26C File Offset: 0x0088C46C
 	public static EQteItem FromString(string name)
 	{
 		EQteItem result;
@@ -84,7 +87,7 @@ public static class EQteItemExtensions
 		return result;
 	}
 
-	// Token: 0x0601DF95 RID: 122773 RVA: 0x00866720 File Offset: 0x00864920
+	// Token: 0x0601BCBD RID: 113853 RVA: 0x0088E298 File Offset: 0x0088C498
 	public static bool TryFromString(string name, out EQteItem value)
 	{
 		if (string.IsNullOrEmpty(name))
@@ -111,12 +114,26 @@ public static class EQteItemExtensions
 				}
 				break;
 			case 15:
-				if (name == "UiItem_PullDown")
+			{
+				char c = name[11];
+				if (c != 'D')
+				{
+					if (c == 'L')
+					{
+						if (name == "UiItem_PullLeft")
+						{
+							value = EQteItem.PullLeftItem;
+							return true;
+						}
+					}
+				}
+				else if (name == "UiItem_PullDown")
 				{
 					value = EQteItem.PullDownItem;
 					return true;
 				}
 				break;
+			}
 			case 19:
 				if (name == "UiItem_QteObjectPos")
 				{
@@ -271,7 +288,7 @@ public static class EQteItemExtensions
 		return false;
 	}
 
-	// Token: 0x0601DF96 RID: 122774 RVA: 0x00866A20 File Offset: 0x00864C20
+	// Token: 0x0601BCBE RID: 113854 RVA: 0x0088E5D4 File Offset: 0x0088C7D4
 	public static string[] GetStringValues()
 	{
 		return new string[]
@@ -284,6 +301,7 @@ public static class EQteItemExtensions
 			"UiItem_QteObjectPos",
 			"UiItem_PullUp",
 			"UiItem_PullDown",
+			"UiItem_PullLeft",
 			"UiItem_FocusSingleButton",
 			"UiItem_QteBtnRingTab",
 			"UiItem_QteBtnRingMatch",
@@ -298,7 +316,7 @@ public static class EQteItemExtensions
 		};
 	}
 
-	// Token: 0x0601DF97 RID: 122775 RVA: 0x00866AD6 File Offset: 0x00864CD6
+	// Token: 0x0601BCBF RID: 113855 RVA: 0x0088E693 File Offset: 0x0088C893
 	public static EQteItem[] GetValues()
 	{
 		return new EQteItem[]
@@ -311,6 +329,7 @@ public static class EQteItemExtensions
 			EQteItem.CustomOptionItem,
 			EQteItem.PullUpItem,
 			EQteItem.PullDownItem,
+			EQteItem.PullLeftItem,
 			EQteItem.FocusSingleButtonItem,
 			EQteItem.RingTapItem,
 			EQteItem.RingMatchTapItem,
@@ -325,7 +344,7 @@ public static class EQteItemExtensions
 		};
 	}
 
-	// Token: 0x0601DF98 RID: 122776 RVA: 0x00866AEC File Offset: 0x00864CEC
+	// Token: 0x0601BCC0 RID: 113856 RVA: 0x0088E6A8 File Offset: 0x0088C8A8
 	public static string[] GetNames()
 	{
 		return new string[]
@@ -338,6 +357,7 @@ public static class EQteItemExtensions
 			"CustomOptionItem",
 			"PullUpItem",
 			"PullDownItem",
+			"PullLeftItem",
 			"FocusSingleButtonItem",
 			"RingTapItem",
 			"RingMatchTapItem",

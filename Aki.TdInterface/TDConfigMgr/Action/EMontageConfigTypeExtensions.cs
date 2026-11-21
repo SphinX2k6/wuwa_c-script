@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002389 RID: 9097
+	// Token: 0x02002612 RID: 9746
 	public static class EMontageConfigTypeExtensions
 	{
-		// Token: 0x0600C667 RID: 50791 RVA: 0x001D0F68 File Offset: 0x001CF168
+		// Token: 0x0600D2AB RID: 53931 RVA: 0x001E9F3C File Offset: 0x001E813C
 		public static string ToEnumString(this EMontageConfigType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C668 RID: 50792 RVA: 0x001D0FA0 File Offset: 0x001CF1A0
+		// Token: 0x0600D2AC RID: 53932 RVA: 0x001E9F74 File Offset: 0x001E8174
 		public static EMontageConfigType FromString(string name)
 		{
 			EMontageConfigType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C669 RID: 50793 RVA: 0x001D0FC9 File Offset: 0x001CF1C9
+		// Token: 0x0600D2AD RID: 53933 RVA: 0x001E9F9D File Offset: 0x001E819D
 		public static bool TryFromString(string name, out EMontageConfigType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C66A RID: 50794 RVA: 0x001D1002 File Offset: 0x001CF202
+		// Token: 0x0600D2AE RID: 53934 RVA: 0x001E9FD6 File Offset: 0x001E81D6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C66B RID: 50795 RVA: 0x001D101A File Offset: 0x001CF21A
+		// Token: 0x0600D2AF RID: 53935 RVA: 0x001E9FEE File Offset: 0x001E81EE
 		public static EMontageConfigType[] GetValues()
 		{
 			return new EMontageConfigType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C66C RID: 50796 RVA: 0x001D1026 File Offset: 0x001CF226
+		// Token: 0x0600D2B0 RID: 53936 RVA: 0x001E9FFA File Offset: 0x001E81FA
 		public static string[] GetNames()
 		{
 			return new string[]

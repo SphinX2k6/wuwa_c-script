@@ -5,10 +5,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x0200585A RID: 22618
+	// Token: 0x02004832 RID: 18482
 	public static class InteractionLongPressButtonDefine
 	{
-		// Token: 0x06039816 RID: 235542 RVA: 0x00DA70C4 File Offset: 0x00DA52C4
+		// Token: 0x0602E733 RID: 190259 RVA: 0x00CF5DEC File Offset: 0x00CF3FEC
 		// Note: this type is marked as 'beforefieldinit'.
 		static InteractionLongPressButtonDefine()
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Interaction
 			InteractionLongPressButtonDefine.longPressButtonStyles = dictionary;
 		}
 
-		// Token: 0x0401E109 RID: 123145
+		// Token: 0x04018BA6 RID: 101286
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<ELongPressInteractStyle, ILongPressButtonStyle> longPressButtonStyles;

@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021EA RID: 8682
+	// Token: 0x0200073F RID: 1855
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI_TexturePackerImporter.LGUITexturePackerSpriteData")]
 	[UnrealStructLayout(280, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 280)]
 	public class ULGUITexturePackerSpriteData : ULGUISpriteData_BaseObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060211D7 RID: 135639 RVA: 0x0030D536 File Offset: 0x0030B736
+		// Token: 0x0600A1D2 RID: 41426 RVA: 0x000EF064 File Offset: 0x000ED264
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ULGUITexturePackerSpriteData._ClassPtr;
 		}
 
-		// Token: 0x060211D8 RID: 135640 RVA: 0x0030D544 File Offset: 0x0030B744
+		// Token: 0x0600A1D3 RID: 41427 RVA: 0x000EF070 File Offset: 0x000ED270
 		public ULGUITexturePackerSpriteData() : this(BuiltinUtils.AllocNativeUObject(ULGUITexturePackerSpriteData.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060211D9 RID: 135641 RVA: 0x0030D56C File Offset: 0x0030B76C
+		// Token: 0x0600A1D4 RID: 41428 RVA: 0x000EF098 File Offset: 0x000ED298
 		public ULGUITexturePackerSpriteData(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ULGUITexturePackerSpriteData.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700814F RID: 33103
-		// (get) Token: 0x060211DA RID: 135642 RVA: 0x0030D59F File Offset: 0x0030B79F
-		// (set) Token: 0x060211DB RID: 135643 RVA: 0x0030D5AF File Offset: 0x0030B7AF
+		// Token: 0x17001E31 RID: 7729
+		// (get) Token: 0x0600A1D5 RID: 41429 RVA: 0x000EF0CB File Offset: 0x000ED2CB
+		// (set) Token: 0x0600A1D6 RID: 41430 RVA: 0x000EF0DB File Offset: 0x000ED2DB
 		public unsafe ushort BorderLeft
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008150 RID: 33104
-		// (get) Token: 0x060211DC RID: 135644 RVA: 0x0030D5C0 File Offset: 0x0030B7C0
-		// (set) Token: 0x060211DD RID: 135645 RVA: 0x0030D5D0 File Offset: 0x0030B7D0
+		// Token: 0x17001E32 RID: 7730
+		// (get) Token: 0x0600A1D7 RID: 41431 RVA: 0x000EF0EC File Offset: 0x000ED2EC
+		// (set) Token: 0x0600A1D8 RID: 41432 RVA: 0x000EF0FC File Offset: 0x000ED2FC
 		public unsafe ushort BorderRight
 		{
 			get
@@ -59,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008151 RID: 33105
-		// (get) Token: 0x060211DE RID: 135646 RVA: 0x0030D5E1 File Offset: 0x0030B7E1
-		// (set) Token: 0x060211DF RID: 135647 RVA: 0x0030D5F1 File Offset: 0x0030B7F1
+		// Token: 0x17001E33 RID: 7731
+		// (get) Token: 0x0600A1D9 RID: 41433 RVA: 0x000EF10D File Offset: 0x000ED30D
+		// (set) Token: 0x0600A1DA RID: 41434 RVA: 0x000EF11D File Offset: 0x000ED31D
 		public unsafe ushort BorderTop
 		{
 			get
@@ -74,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008152 RID: 33106
-		// (get) Token: 0x060211E0 RID: 135648 RVA: 0x0030D602 File Offset: 0x0030B802
-		// (set) Token: 0x060211E1 RID: 135649 RVA: 0x0030D612 File Offset: 0x0030B812
+		// Token: 0x17001E34 RID: 7732
+		// (get) Token: 0x0600A1DB RID: 41435 RVA: 0x000EF12E File Offset: 0x000ED32E
+		// (set) Token: 0x0600A1DC RID: 41436 RVA: 0x000EF13E File Offset: 0x000ED33E
 		public unsafe ushort BorderBottom
 		{
 			get
@@ -89,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008153 RID: 33107
-		// (get) Token: 0x060211E2 RID: 135650 RVA: 0x0030D623 File Offset: 0x0030B823
-		// (set) Token: 0x060211E3 RID: 135651 RVA: 0x0030D633 File Offset: 0x0030B833
+		// Token: 0x17001E35 RID: 7733
+		// (get) Token: 0x0600A1DD RID: 41437 RVA: 0x000EF14F File Offset: 0x000ED34F
+		// (set) Token: 0x0600A1DE RID: 41438 RVA: 0x000EF15F File Offset: 0x000ED35F
 		public unsafe ushort StartLeft
 		{
 			get
@@ -104,9 +104,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008154 RID: 33108
-		// (get) Token: 0x060211E4 RID: 135652 RVA: 0x0030D644 File Offset: 0x0030B844
-		// (set) Token: 0x060211E5 RID: 135653 RVA: 0x0030D654 File Offset: 0x0030B854
+		// Token: 0x17001E36 RID: 7734
+		// (get) Token: 0x0600A1DF RID: 41439 RVA: 0x000EF170 File Offset: 0x000ED370
+		// (set) Token: 0x0600A1E0 RID: 41440 RVA: 0x000EF180 File Offset: 0x000ED380
 		public unsafe ushort EndRight
 		{
 			get
@@ -119,9 +119,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008155 RID: 33109
-		// (get) Token: 0x060211E6 RID: 135654 RVA: 0x0030D665 File Offset: 0x0030B865
-		// (set) Token: 0x060211E7 RID: 135655 RVA: 0x0030D675 File Offset: 0x0030B875
+		// Token: 0x17001E37 RID: 7735
+		// (get) Token: 0x0600A1E1 RID: 41441 RVA: 0x000EF191 File Offset: 0x000ED391
+		// (set) Token: 0x0600A1E2 RID: 41442 RVA: 0x000EF1A1 File Offset: 0x000ED3A1
 		public unsafe ushort EndTop
 		{
 			get
@@ -134,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008156 RID: 33110
-		// (get) Token: 0x060211E8 RID: 135656 RVA: 0x0030D686 File Offset: 0x0030B886
-		// (set) Token: 0x060211E9 RID: 135657 RVA: 0x0030D696 File Offset: 0x0030B896
+		// Token: 0x17001E38 RID: 7736
+		// (get) Token: 0x0600A1E3 RID: 41443 RVA: 0x000EF1B2 File Offset: 0x000ED3B2
+		// (set) Token: 0x0600A1E4 RID: 41444 RVA: 0x000EF1C2 File Offset: 0x000ED3C2
 		public unsafe ushort StartBottom
 		{
 			get
@@ -149,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008157 RID: 33111
-		// (get) Token: 0x060211EA RID: 135658 RVA: 0x0030D6A8 File Offset: 0x0030B8A8
-		// (set) Token: 0x060211EB RID: 135659 RVA: 0x0030D6E1 File Offset: 0x0030B8E1
+		// Token: 0x17001E39 RID: 7737
+		// (get) Token: 0x0600A1E5 RID: 41445 RVA: 0x000EF1D4 File Offset: 0x000ED3D4
+		// (set) Token: 0x0600A1E6 RID: 41446 RVA: 0x000EF20D File Offset: 0x000ED40D
 		public TArray<ushort> BorderHorizontalArray
 		{
 			get
@@ -170,9 +170,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008158 RID: 33112
-		// (get) Token: 0x060211EC RID: 135660 RVA: 0x0030D6F0 File Offset: 0x0030B8F0
-		// (set) Token: 0x060211ED RID: 135661 RVA: 0x0030D729 File Offset: 0x0030B929
+		// Token: 0x17001E3A RID: 7738
+		// (get) Token: 0x0600A1E7 RID: 41447 RVA: 0x000EF21C File Offset: 0x000ED41C
+		// (set) Token: 0x0600A1E8 RID: 41448 RVA: 0x000EF255 File Offset: 0x000ED455
 		public TArray<ushort> BorderVerticalArray
 		{
 			get
@@ -191,9 +191,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008159 RID: 33113
-		// (get) Token: 0x060211EE RID: 135662 RVA: 0x0030D737 File Offset: 0x0030B937
-		// (set) Token: 0x060211EF RID: 135663 RVA: 0x0030D747 File Offset: 0x0030B947
+		// Token: 0x17001E3B RID: 7739
+		// (get) Token: 0x0600A1E9 RID: 41449 RVA: 0x000EF263 File Offset: 0x000ED463
+		// (set) Token: 0x0600A1EA RID: 41450 RVA: 0x000EF273 File Offset: 0x000ED473
 		public unsafe float CustomUVOffsetX
 		{
 			get
@@ -206,9 +206,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700815A RID: 33114
-		// (get) Token: 0x060211F0 RID: 135664 RVA: 0x0030D758 File Offset: 0x0030B958
-		// (set) Token: 0x060211F1 RID: 135665 RVA: 0x0030D768 File Offset: 0x0030B968
+		// Token: 0x17001E3C RID: 7740
+		// (get) Token: 0x0600A1EB RID: 41451 RVA: 0x000EF284 File Offset: 0x000ED484
+		// (set) Token: 0x0600A1EC RID: 41452 RVA: 0x000EF294 File Offset: 0x000ED494
 		public unsafe float CustomUVOffsetY
 		{
 			get
@@ -221,27 +221,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700815B RID: 33115
-		// (get) Token: 0x060211F2 RID: 135666 RVA: 0x0030D779 File Offset: 0x0030B979
-		// (set) Token: 0x060211F3 RID: 135667 RVA: 0x0030D78D File Offset: 0x0030B98D
-		[Nullable(2)]
-		public unsafe ULGUITexturePackerImporterData Importer
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<ULGUITexturePackerImporterData>(base.NativePtr / (IntPtr)sizeof(void*) + ULGUITexturePackerSpriteData.__PropertyOffset_Importer);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ULGUITexturePackerSpriteData.__PropertyOffset_Importer, value);
-			}
-		}
-
-		// Token: 0x1700815C RID: 33116
-		// (get) Token: 0x060211F4 RID: 135668 RVA: 0x0030D7A2 File Offset: 0x0030B9A2
-		// (set) Token: 0x060211F5 RID: 135669 RVA: 0x0030D7B6 File Offset: 0x0030B9B6
+		// Token: 0x17001E3D RID: 7741
+		// (get) Token: 0x0600A1ED RID: 41453 RVA: 0x000EF2A5 File Offset: 0x000ED4A5
+		// (set) Token: 0x0600A1EE RID: 41454 RVA: 0x000EF2B9 File Offset: 0x000ED4B9
 		[Nullable(2)]
 		public unsafe UTexture2D Texture2D
 		{
@@ -257,30 +239,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700815D RID: 33117
-		// (get) Token: 0x060211F6 RID: 135670 RVA: 0x0030D7CC File Offset: 0x0030B9CC
-		// (set) Token: 0x060211F7 RID: 135671 RVA: 0x0030D805 File Offset: 0x0030BA05
-		public FLGUISpriteInfo CacheSpriteInfo
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FLGUISpriteInfo result;
-				if ((result = this._CacheSpriteInfo) == null)
-				{
-					result = (this._CacheSpriteInfo = new FLGUISpriteInfo(base.NativePtr + (IntPtr)ULGUITexturePackerSpriteData.__PropertyOffset_CacheSpriteInfo, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLGUISpriteInfo.StaticStruct(), base.NativePtr + (IntPtr)ULGUITexturePackerSpriteData.__PropertyOffset_CacheSpriteInfo, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x1700815E RID: 33118
-		// (get) Token: 0x060211F8 RID: 135672 RVA: 0x0030D826 File Offset: 0x0030BA26
-		// (set) Token: 0x060211F9 RID: 135673 RVA: 0x0030D836 File Offset: 0x0030BA36
+		// Token: 0x17001E3E RID: 7742
+		// (get) Token: 0x0600A1EF RID: 41455 RVA: 0x000EF2CE File Offset: 0x000ED4CE
+		// (set) Token: 0x0600A1F0 RID: 41456 RVA: 0x000EF2DE File Offset: 0x000ED4DE
 		public unsafe short Version
 		{
 			get
@@ -293,84 +254,74 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060211FA RID: 135674 RVA: 0x0030D847 File Offset: 0x0030BA47
+		// Token: 0x0600A1F1 RID: 41457 RVA: 0x000EF2EF File Offset: 0x000ED4EF
 		static ULGUITexturePackerSpriteData()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI_TexturePackerImporter.LGUITexturePackerSpriteData");
 		}
 
-		// Token: 0x060211FB RID: 135675 RVA: 0x0030D855 File Offset: 0x0030BA55
+		// Token: 0x0600A1F2 RID: 41458 RVA: 0x000EF2FD File Offset: 0x000ED4FD
 		protected ULGUITexturePackerSpriteData(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011AAE RID: 72366
+		// Token: 0x0400454B RID: 17739
 		public new const string __ObjectPath = "/Script/LGUI_TexturePackerImporter.LGUITexturePackerSpriteData";
 
-		// Token: 0x04011AAF RID: 72367
+		// Token: 0x0400454C RID: 17740
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011AB0 RID: 72368
+		// Token: 0x0400454D RID: 17741
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04011AB1 RID: 72369
+		// Token: 0x0400454E RID: 17742
 		internal static int __PropertyOffset_BorderLeft;
 
-		// Token: 0x04011AB2 RID: 72370
+		// Token: 0x0400454F RID: 17743
 		internal static int __PropertyOffset_BorderRight;
 
-		// Token: 0x04011AB3 RID: 72371
+		// Token: 0x04004550 RID: 17744
 		internal static int __PropertyOffset_BorderTop;
 
-		// Token: 0x04011AB4 RID: 72372
+		// Token: 0x04004551 RID: 17745
 		internal static int __PropertyOffset_BorderBottom;
 
-		// Token: 0x04011AB5 RID: 72373
+		// Token: 0x04004552 RID: 17746
 		internal static int __PropertyOffset_StartLeft;
 
-		// Token: 0x04011AB6 RID: 72374
+		// Token: 0x04004553 RID: 17747
 		internal static int __PropertyOffset_EndRight;
 
-		// Token: 0x04011AB7 RID: 72375
+		// Token: 0x04004554 RID: 17748
 		internal static int __PropertyOffset_EndTop;
 
-		// Token: 0x04011AB8 RID: 72376
+		// Token: 0x04004555 RID: 17749
 		internal static int __PropertyOffset_StartBottom;
 
-		// Token: 0x04011AB9 RID: 72377
+		// Token: 0x04004556 RID: 17750
 		internal static int __PropertyOffset_BorderHorizontalArray;
 
-		// Token: 0x04011ABA RID: 72378
+		// Token: 0x04004557 RID: 17751
 		[Nullable(2)]
 		private TArray<ushort> _BorderHorizontalArray;
 
-		// Token: 0x04011ABB RID: 72379
+		// Token: 0x04004558 RID: 17752
 		internal static int __PropertyOffset_BorderVerticalArray;
 
-		// Token: 0x04011ABC RID: 72380
+		// Token: 0x04004559 RID: 17753
 		[Nullable(2)]
 		private TArray<ushort> _BorderVerticalArray;
 
-		// Token: 0x04011ABD RID: 72381
+		// Token: 0x0400455A RID: 17754
 		internal static int __PropertyOffset_CustomUVOffsetX;
 
-		// Token: 0x04011ABE RID: 72382
+		// Token: 0x0400455B RID: 17755
 		internal static int __PropertyOffset_CustomUVOffsetY;
 
-		// Token: 0x04011ABF RID: 72383
-		internal static int __PropertyOffset_Importer;
-
-		// Token: 0x04011AC0 RID: 72384
+		// Token: 0x0400455C RID: 17756
 		internal static int __PropertyOffset_Texture2D;
 
-		// Token: 0x04011AC1 RID: 72385
-		internal static int __PropertyOffset_CacheSpriteInfo;
-
-		// Token: 0x04011AC2 RID: 72386
-		[Nullable(2)]
-		private FLGUISpriteInfo _CacheSpriteInfo;
-
-		// Token: 0x04011AC3 RID: 72387
+		// Token: 0x0400455D RID: 17757
 		internal static int __PropertyOffset_Version;
 	}
 }

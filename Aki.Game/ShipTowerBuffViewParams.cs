@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200299F RID: 10655
+// Token: 0x02001F1A RID: 7962
 public class ShipTowerBuffViewParams
 {
-	// Token: 0x0400A4A5 RID: 42149
+	// Token: 0x0400A88F RID: 43151
 	public int? BuffId;
 
-	// Token: 0x0400A4A6 RID: 42150
+	// Token: 0x0400A890 RID: 43152
 	public int? StageId;
 
-	// Token: 0x0400A4A7 RID: 42151
+	// Token: 0x0400A891 RID: 43153
 	public EShipTowerBuffOperationType? OperationType;
 
-	// Token: 0x0400A4A8 RID: 42152
+	// Token: 0x0400A892 RID: 43154
 	[Nullable(2)]
 	public ShipTowerTeamData TeamData;
 
-	// Token: 0x0400A4A9 RID: 42153
+	// Token: 0x0400A893 RID: 43155
 	[Nullable(new byte[]
 	{
 		2,

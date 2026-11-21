@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F71 RID: 16241
+	// Token: 0x020043B2 RID: 17330
 	public struct IParallelSelectBtNode : IFlatbufferObject
 	{
-		// Token: 0x17007108 RID: 28936
-		// (get) Token: 0x060171E6 RID: 94694 RVA: 0x00354F4F File Offset: 0x0035314F
+		// Token: 0x17007706 RID: 30470
+		// (get) Token: 0x06018874 RID: 100468 RVA: 0x0037EAC6 File Offset: 0x0037CCC6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060171E7 RID: 94695 RVA: 0x00354F5C File Offset: 0x0035315C
+		// Token: 0x06018875 RID: 100469 RVA: 0x0037EAD3 File Offset: 0x0037CCD3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060171E8 RID: 94696 RVA: 0x00354F64 File Offset: 0x00353164
+		// Token: 0x06018876 RID: 100470 RVA: 0x0037EADC File Offset: 0x0037CCDC
 		public static IParallelSelectBtNode GetRootAsIParallelSelectBtNode(ByteBuffer _bb)
 		{
 			return IParallelSelectBtNode.GetRootAsIParallelSelectBtNode(_bb, default(IParallelSelectBtNode));
 		}
 
-		// Token: 0x060171E9 RID: 94697 RVA: 0x00354F80 File Offset: 0x00353180
+		// Token: 0x06018877 RID: 100471 RVA: 0x0037EAF8 File Offset: 0x0037CCF8
 		public static IParallelSelectBtNode GetRootAsIParallelSelectBtNode(ByteBuffer _bb, IParallelSelectBtNode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060171EA RID: 94698 RVA: 0x00354F9D File Offset: 0x0035319D
+		// Token: 0x06018878 RID: 100472 RVA: 0x0037EB15 File Offset: 0x0037CD15
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060171EB RID: 94699 RVA: 0x00354FAC File Offset: 0x003531AC
+		// Token: 0x06018879 RID: 100473 RVA: 0x0037EB24 File Offset: 0x0037CD24
 		public IParallelSelectBtNode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007109 RID: 28937
-		// (get) Token: 0x060171EC RID: 94700 RVA: 0x00354FBC File Offset: 0x003531BC
+		// Token: 0x17007707 RID: 30471
+		// (get) Token: 0x0601887A RID: 100474 RVA: 0x0037EB34 File Offset: 0x0037CD34
 		public EBtNode Type
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700710A RID: 28938
-		// (get) Token: 0x060171ED RID: 94701 RVA: 0x00354FF8 File Offset: 0x003531F8
+		// Token: 0x17007708 RID: 30472
+		// (get) Token: 0x0601887B RID: 100475 RVA: 0x0037EB70 File Offset: 0x0037CD70
 		public int Id
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700710B RID: 28939
-		// (get) Token: 0x060171EE RID: 94702 RVA: 0x00355034 File Offset: 0x00353234
+		// Token: 0x17007709 RID: 30473
+		// (get) Token: 0x0601887C RID: 100476 RVA: 0x0037EBAC File Offset: 0x0037CDAC
 		public string Desc
 		{
 			get
@@ -95,20 +95,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060171EF RID: 94703 RVA: 0x0035506B File Offset: 0x0035326B
+		// Token: 0x0601887D RID: 100477 RVA: 0x0037EBE3 File Offset: 0x0037CDE3
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060171F0 RID: 94704 RVA: 0x0035507A File Offset: 0x0035327A
+		// Token: 0x0601887E RID: 100478 RVA: 0x0037EBF2 File Offset: 0x0037CDF2
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700710C RID: 28940
-		// (get) Token: 0x060171F1 RID: 94705 RVA: 0x00355088 File Offset: 0x00353288
+		// Token: 0x1700770A RID: 30474
+		// (get) Token: 0x0601887F RID: 100479 RVA: 0x0037EC00 File Offset: 0x0037CE00
 		public IFixProcessor? FixProcessor
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700710D RID: 28941
-		// (get) Token: 0x060171F2 RID: 94706 RVA: 0x003550E8 File Offset: 0x003532E8
+		// Token: 0x1700770B RID: 30475
+		// (get) Token: 0x06018880 RID: 100480 RVA: 0x0037EC60 File Offset: 0x0037CE60
 		public bool _FoldedForTree
 		{
 			get
@@ -133,8 +133,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700710E RID: 28942
-		// (get) Token: 0x060171F3 RID: 94707 RVA: 0x00355128 File Offset: 0x00353328
+		// Token: 0x1700770C RID: 30476
+		// (get) Token: 0x06018881 RID: 100481 RVA: 0x0037ECA0 File Offset: 0x0037CEA0
 		public bool Disabled
 		{
 			get
@@ -144,8 +144,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700710F RID: 28943
-		// (get) Token: 0x060171F4 RID: 94708 RVA: 0x00355168 File Offset: 0x00353368
+		// Token: 0x1700770D RID: 30477
+		// (get) Token: 0x06018882 RID: 100482 RVA: 0x0037ECE0 File Offset: 0x0037CEE0
 		public IQuestScheduleConfig? UIConfig
 		{
 			get
@@ -159,8 +159,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007110 RID: 28944
-		// (get) Token: 0x060171F5 RID: 94709 RVA: 0x003551C8 File Offset: 0x003533C8
+		// Token: 0x1700770E RID: 30478
+		// (get) Token: 0x06018883 RID: 100483 RVA: 0x0037ED40 File Offset: 0x0037CF40
 		public IInformationViewConfig? InformationView
 		{
 			get
@@ -174,8 +174,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007111 RID: 28945
-		// (get) Token: 0x060171F6 RID: 94710 RVA: 0x00355228 File Offset: 0x00353428
+		// Token: 0x1700770F RID: 30479
+		// (get) Token: 0x06018884 RID: 100484 RVA: 0x0037EDA0 File Offset: 0x0037CFA0
 		public IInformationBoardConfig? InformationBoard
 		{
 			get
@@ -189,8 +189,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007112 RID: 28946
-		// (get) Token: 0x060171F7 RID: 94711 RVA: 0x00355288 File Offset: 0x00353488
+		// Token: 0x17007710 RID: 30480
+		// (get) Token: 0x06018885 RID: 100485 RVA: 0x0037EE00 File Offset: 0x0037D000
 		public string TidQuestAliasName
 		{
 			get
@@ -204,20 +204,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060171F8 RID: 94712 RVA: 0x003552C0 File Offset: 0x003534C0
+		// Token: 0x06018886 RID: 100486 RVA: 0x0037EE38 File Offset: 0x0037D038
 		public Span<byte> GetTidQuestAliasNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x060171F9 RID: 94713 RVA: 0x003552D0 File Offset: 0x003534D0
+		// Token: 0x06018887 RID: 100487 RVA: 0x0037EE48 File Offset: 0x0037D048
 		public byte[] GetTidQuestAliasNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(22);
 		}
 
-		// Token: 0x17007113 RID: 28947
-		// (get) Token: 0x060171FA RID: 94714 RVA: 0x003552E0 File Offset: 0x003534E0
+		// Token: 0x17007711 RID: 30481
+		// (get) Token: 0x06018888 RID: 100488 RVA: 0x0037EE58 File Offset: 0x0037D058
 		public string TidQuestAliasDesc
 		{
 			get
@@ -231,20 +231,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060171FB RID: 94715 RVA: 0x00355318 File Offset: 0x00353518
+		// Token: 0x06018889 RID: 100489 RVA: 0x0037EE90 File Offset: 0x0037D090
 		public Span<byte> GetTidQuestAliasDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(24, 1);
 		}
 
-		// Token: 0x060171FC RID: 94716 RVA: 0x00355328 File Offset: 0x00353528
+		// Token: 0x0601888A RID: 100490 RVA: 0x0037EEA0 File Offset: 0x0037D0A0
 		public byte[] GetTidQuestAliasDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(24);
 		}
 
-		// Token: 0x17007114 RID: 28948
-		// (get) Token: 0x060171FD RID: 94717 RVA: 0x00355338 File Offset: 0x00353538
+		// Token: 0x17007712 RID: 30482
+		// (get) Token: 0x0601888B RID: 100491 RVA: 0x0037EEB0 File Offset: 0x0037D0B0
 		public int DungeonId
 		{
 			get
@@ -258,8 +258,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007115 RID: 28949
-		// (get) Token: 0x060171FE RID: 94718 RVA: 0x00355378 File Offset: 0x00353578
+		// Token: 0x17007713 RID: 30483
+		// (get) Token: 0x0601888C RID: 100492 RVA: 0x0037EEF0 File Offset: 0x0037D0F0
 		public bool DisableOnline
 		{
 			get
@@ -269,8 +269,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007116 RID: 28950
-		// (get) Token: 0x060171FF RID: 94719 RVA: 0x003553B8 File Offset: 0x003535B8
+		// Token: 0x17007714 RID: 30484
+		// (get) Token: 0x0601888D RID: 100493 RVA: 0x0037EF30 File Offset: 0x0037D130
 		public ISaveConfig? SaveConfig
 		{
 			get
@@ -284,8 +284,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007117 RID: 28951
-		// (get) Token: 0x06017200 RID: 94720 RVA: 0x00355418 File Offset: 0x00353618
+		// Token: 0x17007715 RID: 30485
+		// (get) Token: 0x0601888E RID: 100494 RVA: 0x0037EF90 File Offset: 0x0037D190
 		public IForceClosedRestriction? ForceClosedRestriction
 		{
 			get
@@ -299,7 +299,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017201 RID: 94721 RVA: 0x00355478 File Offset: 0x00353678
+		// Token: 0x0601888F RID: 100495 RVA: 0x0037EFF0 File Offset: 0x0037D1F0
 		public string Occupations(int j)
 		{
 			int num = this.__p.__offset(34);
@@ -310,8 +310,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007118 RID: 28952
-		// (get) Token: 0x06017202 RID: 94722 RVA: 0x003554B4 File Offset: 0x003536B4
+		// Token: 0x17007716 RID: 30486
+		// (get) Token: 0x06018890 RID: 100496 RVA: 0x0037F02C File Offset: 0x0037D22C
 		public int OccupationsLength
 		{
 			get
@@ -325,8 +325,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007119 RID: 28953
-		// (get) Token: 0x06017203 RID: 94723 RVA: 0x003554E0 File Offset: 0x003536E0
+		// Token: 0x17007717 RID: 30487
+		// (get) Token: 0x06018891 RID: 100497 RVA: 0x0037F058 File Offset: 0x0037D258
 		public ILogicNodeOccupation? OccupationConfig
 		{
 			get
@@ -340,8 +340,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700711A RID: 28954
-		// (get) Token: 0x06017204 RID: 94724 RVA: 0x00355540 File Offset: 0x00353740
+		// Token: 0x17007718 RID: 30488
+		// (get) Token: 0x06018892 RID: 100498 RVA: 0x0037F0B8 File Offset: 0x0037D2B8
 		public bool DisableSwitchOccupation
 		{
 			get
@@ -351,8 +351,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700711B RID: 28955
-		// (get) Token: 0x06017205 RID: 94725 RVA: 0x00355580 File Offset: 0x00353780
+		// Token: 0x17007719 RID: 30489
+		// (get) Token: 0x06018893 RID: 100499 RVA: 0x0037F0F8 File Offset: 0x0037D2F8
 		public EBudgetCameraType BudgetCameraType
 		{
 			get
@@ -366,8 +366,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700711C RID: 28956
-		// (get) Token: 0x06017206 RID: 94726 RVA: 0x003555C0 File Offset: 0x003537C0
+		// Token: 0x1700771A RID: 30490
+		// (get) Token: 0x06018894 RID: 100500 RVA: 0x0037F138 File Offset: 0x0037D338
 		public IQuestStatistics? Statistics
 		{
 			get
@@ -381,8 +381,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700711D RID: 28957
-		// (get) Token: 0x06017207 RID: 94727 RVA: 0x00355620 File Offset: 0x00353820
+		// Token: 0x1700771B RID: 30491
+		// (get) Token: 0x06018895 RID: 100501 RVA: 0x0037F198 File Offset: 0x0037D398
 		public ETrackViewMode CompositeTrackViewMode
 		{
 			get
@@ -396,8 +396,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700711E RID: 28958
-		// (get) Token: 0x06017208 RID: 94728 RVA: 0x00355660 File Offset: 0x00353860
+		// Token: 0x1700771C RID: 30492
+		// (get) Token: 0x06018896 RID: 100502 RVA: 0x0037F1D8 File Offset: 0x0037D3D8
 		public IQuestRewardConfig? RewardConfig
 		{
 			get
@@ -411,8 +411,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700711F RID: 28959
-		// (get) Token: 0x06017209 RID: 94729 RVA: 0x003556C0 File Offset: 0x003538C0
+		// Token: 0x1700771D RID: 30493
+		// (get) Token: 0x06018897 RID: 100503 RVA: 0x0037F238 File Offset: 0x0037D438
 		public TSpecialGamePlayConfig SpecialGamePlayConfigType
 		{
 			get
@@ -426,7 +426,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601720A RID: 94730 RVA: 0x00355700 File Offset: 0x00353900
+		// Token: 0x06018898 RID: 100504 RVA: 0x0037F278 File Offset: 0x0037D478
 		public TTable? SpecialGamePlayConfig<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(50);
@@ -437,32 +437,32 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601720B RID: 94731 RVA: 0x00355748 File Offset: 0x00353948
+		// Token: 0x06018899 RID: 100505 RVA: 0x0037F2C0 File Offset: 0x0037D4C0
 		public IEavesdropGamePlayConfig SpecialGamePlayConfigAsIEavesdropGamePlayConfig()
 		{
 			return this.SpecialGamePlayConfig<IEavesdropGamePlayConfig>().Value;
 		}
 
-		// Token: 0x0601720C RID: 94732 RVA: 0x00355764 File Offset: 0x00353964
+		// Token: 0x0601889A RID: 100506 RVA: 0x0037F2DC File Offset: 0x0037D4DC
 		public IFirstPersonTurretGamePlayConfig SpecialGamePlayConfigAsIFirstPersonTurretGamePlayConfig()
 		{
 			return this.SpecialGamePlayConfig<IFirstPersonTurretGamePlayConfig>().Value;
 		}
 
-		// Token: 0x0601720D RID: 94733 RVA: 0x00355780 File Offset: 0x00353980
+		// Token: 0x0601889B RID: 100507 RVA: 0x0037F2F8 File Offset: 0x0037D4F8
 		public IFreezeOnSightGamePlayConfig SpecialGamePlayConfigAsIFreezeOnSightGamePlayConfig()
 		{
 			return this.SpecialGamePlayConfig<IFreezeOnSightGamePlayConfig>().Value;
 		}
 
-		// Token: 0x0601720E RID: 94734 RVA: 0x0035579C File Offset: 0x0035399C
+		// Token: 0x0601889C RID: 100508 RVA: 0x0037F314 File Offset: 0x0037D514
 		public IStalkingGamePlayConfig SpecialGamePlayConfigAsIStalkingGamePlayConfig()
 		{
 			return this.SpecialGamePlayConfig<IStalkingGamePlayConfig>().Value;
 		}
 
-		// Token: 0x17007120 RID: 28960
-		// (get) Token: 0x0601720F RID: 94735 RVA: 0x003557B8 File Offset: 0x003539B8
+		// Token: 0x1700771E RID: 30494
+		// (get) Token: 0x0601889D RID: 100509 RVA: 0x0037F330 File Offset: 0x0037D530
 		public TEnableSystemConfig EnableSystemType
 		{
 			get
@@ -476,7 +476,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017210 RID: 94736 RVA: 0x003557F8 File Offset: 0x003539F8
+		// Token: 0x0601889E RID: 100510 RVA: 0x0037F370 File Offset: 0x0037D570
 		public TTable? EnableSystem<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(54);
@@ -487,92 +487,98 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06017211 RID: 94737 RVA: 0x00355840 File Offset: 0x00353A40
+		// Token: 0x0601889F RID: 100511 RVA: 0x0037F3B8 File Offset: 0x0037D5B8
+		public IDarkTideSystemConfig EnableSystemAsIDarkTideSystemConfig()
+		{
+			return this.EnableSystem<IDarkTideSystemConfig>().Value;
+		}
+
+		// Token: 0x060188A0 RID: 100512 RVA: 0x0037F3D4 File Offset: 0x0037D5D4
 		public IFlagChallengeSystemConfig EnableSystemAsIFlagChallengeSystemConfig()
 		{
 			return this.EnableSystem<IFlagChallengeSystemConfig>().Value;
 		}
 
-		// Token: 0x06017212 RID: 94738 RVA: 0x0035585C File Offset: 0x00353A5C
+		// Token: 0x060188A1 RID: 100513 RVA: 0x0037F3F0 File Offset: 0x0037D5F0
 		public IFlipperSystemConfig EnableSystemAsIFlipperSystemConfig()
 		{
 			return this.EnableSystem<IFlipperSystemConfig>().Value;
 		}
 
-		// Token: 0x06017213 RID: 94739 RVA: 0x00355878 File Offset: 0x00353A78
+		// Token: 0x060188A2 RID: 100514 RVA: 0x0037F40C File Offset: 0x0037D60C
 		public IGameDifficultySystemConfig EnableSystemAsIGameDifficultySystemConfig()
 		{
 			return this.EnableSystem<IGameDifficultySystemConfig>().Value;
 		}
 
-		// Token: 0x06017214 RID: 94740 RVA: 0x00355894 File Offset: 0x00353A94
+		// Token: 0x060188A3 RID: 100515 RVA: 0x0037F428 File Offset: 0x0037D628
 		public IGradingSystemConfig EnableSystemAsIGradingSystemConfig()
 		{
 			return this.EnableSystem<IGradingSystemConfig>().Value;
 		}
 
-		// Token: 0x06017215 RID: 94741 RVA: 0x003558B0 File Offset: 0x00353AB0
+		// Token: 0x060188A4 RID: 100516 RVA: 0x0037F444 File Offset: 0x0037D644
 		public IKuroSimpleCombatKillMonsterSystemConfig EnableSystemAsIKuroSimpleCombatKillMonsterSystemConfig()
 		{
 			return this.EnableSystem<IKuroSimpleCombatKillMonsterSystemConfig>().Value;
 		}
 
-		// Token: 0x06017216 RID: 94742 RVA: 0x003558CC File Offset: 0x00353ACC
+		// Token: 0x060188A5 RID: 100517 RVA: 0x0037F460 File Offset: 0x0037D660
 		public IKurotatoSystemConfig EnableSystemAsIKurotatoSystemConfig()
 		{
 			return this.EnableSystem<IKurotatoSystemConfig>().Value;
 		}
 
-		// Token: 0x06017217 RID: 94743 RVA: 0x003558E8 File Offset: 0x00353AE8
+		// Token: 0x060188A6 RID: 100518 RVA: 0x0037F47C File Offset: 0x0037D67C
 		public ILinkSystemConfig EnableSystemAsILinkSystemConfig()
 		{
 			return this.EnableSystem<ILinkSystemConfig>().Value;
 		}
 
-		// Token: 0x06017218 RID: 94744 RVA: 0x00355904 File Offset: 0x00353B04
+		// Token: 0x060188A7 RID: 100519 RVA: 0x0037F498 File Offset: 0x0037D698
 		public IMotorFightSystemConfig EnableSystemAsIMotorFightSystemConfig()
 		{
 			return this.EnableSystem<IMotorFightSystemConfig>().Value;
 		}
 
-		// Token: 0x06017219 RID: 94745 RVA: 0x00355920 File Offset: 0x00353B20
+		// Token: 0x060188A8 RID: 100520 RVA: 0x0037F4B4 File Offset: 0x0037D6B4
 		public IMotorRacingSystemConfig EnableSystemAsIMotorRacingSystemConfig()
 		{
 			return this.EnableSystem<IMotorRacingSystemConfig>().Value;
 		}
 
-		// Token: 0x0601721A RID: 94746 RVA: 0x0035593C File Offset: 0x00353B3C
+		// Token: 0x060188A9 RID: 100521 RVA: 0x0037F4D0 File Offset: 0x0037D6D0
 		public INightmareSettlementSystemConfig EnableSystemAsINightmareSettlementSystemConfig()
 		{
 			return this.EnableSystem<INightmareSettlementSystemConfig>().Value;
 		}
 
-		// Token: 0x0601721B RID: 94747 RVA: 0x00355958 File Offset: 0x00353B58
+		// Token: 0x060188AA RID: 100522 RVA: 0x0037F4EC File Offset: 0x0037D6EC
 		public IRogueTowerTrialSystemConfig EnableSystemAsIRogueTowerTrialSystemConfig()
 		{
 			return this.EnableSystem<IRogueTowerTrialSystemConfig>().Value;
 		}
 
-		// Token: 0x0601721C RID: 94748 RVA: 0x00355974 File Offset: 0x00353B74
+		// Token: 0x060188AB RID: 100523 RVA: 0x0037F508 File Offset: 0x0037D708
 		public IRoleTowerSystemConfig EnableSystemAsIRoleTowerSystemConfig()
 		{
 			return this.EnableSystem<IRoleTowerSystemConfig>().Value;
 		}
 
-		// Token: 0x0601721D RID: 94749 RVA: 0x00355990 File Offset: 0x00353B90
+		// Token: 0x060188AC RID: 100524 RVA: 0x0037F524 File Offset: 0x0037D724
 		public ISurvivorsRougeSystemConfig EnableSystemAsISurvivorsRougeSystemConfig()
 		{
 			return this.EnableSystem<ISurvivorsRougeSystemConfig>().Value;
 		}
 
-		// Token: 0x0601721E RID: 94750 RVA: 0x003559AC File Offset: 0x00353BAC
+		// Token: 0x060188AD RID: 100525 RVA: 0x0037F540 File Offset: 0x0037D740
 		public ITrapDefenseSystemConfig EnableSystemAsITrapDefenseSystemConfig()
 		{
 			return this.EnableSystem<ITrapDefenseSystemConfig>().Value;
 		}
 
-		// Token: 0x17007121 RID: 28961
-		// (get) Token: 0x0601721F RID: 94751 RVA: 0x003559C8 File Offset: 0x00353BC8
+		// Token: 0x1700771F RID: 30495
+		// (get) Token: 0x060188AE RID: 100526 RVA: 0x0037F55C File Offset: 0x0037D75C
 		public IWaveConfig? StartWave
 		{
 			get
@@ -586,8 +592,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007122 RID: 28962
-		// (get) Token: 0x06017220 RID: 94752 RVA: 0x00355A28 File Offset: 0x00353C28
+		// Token: 0x17007720 RID: 30496
+		// (get) Token: 0x060188AF RID: 100527 RVA: 0x0037F5BC File Offset: 0x0037D7BC
 		public IDisableTrackAnim? DisableTrackAnim
 		{
 			get
@@ -601,8 +607,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007123 RID: 28963
-		// (get) Token: 0x06017221 RID: 94753 RVA: 0x00355A88 File Offset: 0x00353C88
+		// Token: 0x17007721 RID: 30497
+		// (get) Token: 0x060188B0 RID: 100528 RVA: 0x0037F61C File Offset: 0x0037D81C
 		public bool DisableSwitchGender
 		{
 			get
@@ -612,8 +618,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007124 RID: 28964
-		// (get) Token: 0x06017222 RID: 94754 RVA: 0x00355AC8 File Offset: 0x00353CC8
+		// Token: 0x17007722 RID: 30498
+		// (get) Token: 0x060188B1 RID: 100529 RVA: 0x0037F65C File Offset: 0x0037D85C
 		public bool DisableFocusMode
 		{
 			get
@@ -623,8 +629,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007125 RID: 28965
-		// (get) Token: 0x06017223 RID: 94755 RVA: 0x00355B08 File Offset: 0x00353D08
+		// Token: 0x17007723 RID: 30499
+		// (get) Token: 0x060188B2 RID: 100530 RVA: 0x0037F69C File Offset: 0x0037D89C
 		public bool DisableSkeletalAnimationCheck
 		{
 			get
@@ -634,8 +640,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007126 RID: 28966
-		// (get) Token: 0x06017224 RID: 94756 RVA: 0x00355B48 File Offset: 0x00353D48
+		// Token: 0x17007724 RID: 30500
+		// (get) Token: 0x060188B3 RID: 100531 RVA: 0x0037F6DC File Offset: 0x0037D8DC
 		public ILogicProgramSpecialProcess? LogicProgramSpecialProcess
 		{
 			get
@@ -649,8 +655,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007127 RID: 28967
-		// (get) Token: 0x06017225 RID: 94757 RVA: 0x00355BA8 File Offset: 0x00353DA8
+		// Token: 0x17007725 RID: 30501
+		// (get) Token: 0x060188B4 RID: 100532 RVA: 0x0037F73C File Offset: 0x0037D93C
 		public IQuestBuffActiveRange? QuestBuffActiveRange
 		{
 			get
@@ -664,8 +670,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007128 RID: 28968
-		// (get) Token: 0x06017226 RID: 94758 RVA: 0x00355C08 File Offset: 0x00353E08
+		// Token: 0x17007726 RID: 30502
+		// (get) Token: 0x060188B5 RID: 100533 RVA: 0x0037F79C File Offset: 0x0037D99C
 		public ISunSpiritProcess? SunSpiritProcess
 		{
 			get
@@ -679,8 +685,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007129 RID: 28969
-		// (get) Token: 0x06017227 RID: 94759 RVA: 0x00355C68 File Offset: 0x00353E68
+		// Token: 0x17007727 RID: 30503
+		// (get) Token: 0x060188B6 RID: 100534 RVA: 0x0037F7FC File Offset: 0x0037D9FC
 		public ITrackAreaText? ModifyTrackAreaText
 		{
 			get
@@ -694,8 +700,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700712A RID: 28970
-		// (get) Token: 0x06017228 RID: 94760 RVA: 0x00355CC8 File Offset: 0x00353EC8
+		// Token: 0x17007728 RID: 30504
+		// (get) Token: 0x060188B7 RID: 100535 RVA: 0x0037F85C File Offset: 0x0037DA5C
 		public bool DisableGlobalTraffic
 		{
 			get
@@ -705,7 +711,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017229 RID: 94761 RVA: 0x00355D08 File Offset: 0x00353F08
+		// Token: 0x060188B8 RID: 100536 RVA: 0x0037F89C File Offset: 0x0037DA9C
 		public IAreaNameSystemPrompt? DisableSystemPrompt(int j)
 		{
 			int num = this.__p.__offset(76);
@@ -716,8 +722,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new IAreaNameSystemPrompt?(default(IAreaNameSystemPrompt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700712B RID: 28971
-		// (get) Token: 0x0601722A RID: 94762 RVA: 0x00355D6C File Offset: 0x00353F6C
+		// Token: 0x17007729 RID: 30505
+		// (get) Token: 0x060188B9 RID: 100537 RVA: 0x0037F900 File Offset: 0x0037DB00
 		public int DisableSystemPromptLength
 		{
 			get
@@ -731,8 +737,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700712C RID: 28972
-		// (get) Token: 0x0601722B RID: 94763 RVA: 0x00355D98 File Offset: 0x00353F98
+		// Token: 0x1700772A RID: 30506
+		// (get) Token: 0x060188BA RID: 100538 RVA: 0x0037F92C File Offset: 0x0037DB2C
 		public ITrackCustomBoardOnBtLogicNode? TrackCustomBoard
 		{
 			get
@@ -746,7 +752,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601722C RID: 94764 RVA: 0x00355DF8 File Offset: 0x00353FF8
+		// Token: 0x060188BB RID: 100539 RVA: 0x0037F98C File Offset: 0x0037DB8C
 		public TBtNode ChildrenType(int j)
 		{
 			int num = this.__p.__offset(80);
@@ -757,8 +763,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return (TBtNode)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x1700712D RID: 28973
-		// (get) Token: 0x0601722D RID: 94765 RVA: 0x00355E38 File Offset: 0x00354038
+		// Token: 0x1700772B RID: 30507
+		// (get) Token: 0x060188BC RID: 100540 RVA: 0x0037F9CC File Offset: 0x0037DBCC
 		public int ChildrenTypeLength
 		{
 			get
@@ -772,13 +778,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601722E RID: 94766 RVA: 0x00355E64 File Offset: 0x00354064
+		// Token: 0x060188BD RID: 100541 RVA: 0x0037F9F8 File Offset: 0x0037DBF8
 		public Span<TBtNode> GetChildrenTypeBytes()
 		{
 			return this.__p.__vector_as_span<TBtNode>(80, 1);
 		}
 
-		// Token: 0x0601722F RID: 94767 RVA: 0x00355E74 File Offset: 0x00354074
+		// Token: 0x060188BE RID: 100542 RVA: 0x0037FA08 File Offset: 0x0037DC08
 		public TBtNode[] GetChildrenTypeArray()
 		{
 			int num = this.__p.__offset(80);
@@ -796,7 +802,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return array;
 		}
 
-		// Token: 0x06017230 RID: 94768 RVA: 0x00355EE0 File Offset: 0x003540E0
+		// Token: 0x060188BF RID: 100543 RVA: 0x0037FA74 File Offset: 0x0037DC74
 		public TTable? Children<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(82);
@@ -807,8 +813,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x1700712E RID: 28974
-		// (get) Token: 0x06017231 RID: 94769 RVA: 0x00355F28 File Offset: 0x00354128
+		// Token: 0x1700772C RID: 30508
+		// (get) Token: 0x060188C0 RID: 100544 RVA: 0x0037FABC File Offset: 0x0037DCBC
 		public int ChildrenLength
 		{
 			get
@@ -822,8 +828,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700712F RID: 28975
-		// (get) Token: 0x06017232 RID: 94770 RVA: 0x00355F54 File Offset: 0x00354154
+		// Token: 0x1700772D RID: 30509
+		// (get) Token: 0x060188C1 RID: 100545 RVA: 0x0037FAE8 File Offset: 0x0037DCE8
 		public EConditionCount Count
 		{
 			get
@@ -837,8 +843,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007130 RID: 28976
-		// (get) Token: 0x06017233 RID: 94771 RVA: 0x00355F94 File Offset: 0x00354194
+		// Token: 0x1700772E RID: 30510
+		// (get) Token: 0x060188C2 RID: 100546 RVA: 0x0037FB28 File Offset: 0x0037DD28
 		public IPerformanceSetting? PerformanceSetting
 		{
 			get
@@ -852,8 +858,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007131 RID: 28977
-		// (get) Token: 0x06017234 RID: 94772 RVA: 0x00355FF4 File Offset: 0x003541F4
+		// Token: 0x1700772F RID: 30511
+		// (get) Token: 0x060188C3 RID: 100547 RVA: 0x0037FB88 File Offset: 0x0037DD88
 		public ushort NullMask
 		{
 			get
@@ -867,7 +873,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017235 RID: 94773 RVA: 0x00356034 File Offset: 0x00354234
+		// Token: 0x060188C4 RID: 100548 RVA: 0x0037FBC8 File Offset: 0x0037DDC8
 		public static Offset<IParallelSelectBtNode> CreateIParallelSelectBtNode(FlatBufferBuilder builder, EBtNode Type = EBtNode.Start, int Id = 0, StringOffset DescOffset = default(StringOffset), Offset<IFixProcessor> FixProcessorOffset = default(Offset<IFixProcessor>), bool _foldedForTree = false, bool Disabled = false, Offset<IQuestScheduleConfig> UIConfigOffset = default(Offset<IQuestScheduleConfig>), Offset<IInformationViewConfig> InformationViewOffset = default(Offset<IInformationViewConfig>), Offset<IInformationBoardConfig> InformationBoardOffset = default(Offset<IInformationBoardConfig>), StringOffset TidQuestAliasNameOffset = default(StringOffset), StringOffset TidQuestAliasDescOffset = default(StringOffset), int DungeonId = 0, bool DisableOnline = false, Offset<ISaveConfig> SaveConfigOffset = default(Offset<ISaveConfig>), Offset<IForceClosedRestriction> ForceClosedRestrictionOffset = default(Offset<IForceClosedRestriction>), VectorOffset OccupationsOffset = default(VectorOffset), Offset<ILogicNodeOccupation> OccupationConfigOffset = default(Offset<ILogicNodeOccupation>), bool DisableSwitchOccupation = false, EBudgetCameraType BudgetCameraType = EBudgetCameraType.Role, Offset<IQuestStatistics> StatisticsOffset = default(Offset<IQuestStatistics>), ETrackViewMode CompositeTrackViewMode = ETrackViewMode.All, Offset<IQuestRewardConfig> RewardConfigOffset = default(Offset<IQuestRewardConfig>), TSpecialGamePlayConfig SpecialGamePlayConfig_type = TSpecialGamePlayConfig.NONE, int SpecialGamePlayConfigOffset = 0, TEnableSystemConfig EnableSystem_type = TEnableSystemConfig.NONE, int EnableSystemOffset = 0, Offset<IWaveConfig> StartWaveOffset = default(Offset<IWaveConfig>), Offset<IDisableTrackAnim> DisableTrackAnimOffset = default(Offset<IDisableTrackAnim>), bool DisableSwitchGender = false, bool DisableFocusMode = false, bool DisableSkeletalAnimationCheck = false, Offset<ILogicProgramSpecialProcess> LogicProgramSpecialProcessOffset = default(Offset<ILogicProgramSpecialProcess>), Offset<IQuestBuffActiveRange> QuestBuffActiveRangeOffset = default(Offset<IQuestBuffActiveRange>), Offset<ISunSpiritProcess> SunSpiritProcessOffset = default(Offset<ISunSpiritProcess>), Offset<ITrackAreaText> ModifyTrackAreaTextOffset = default(Offset<ITrackAreaText>), bool DisableGlobalTraffic = false, VectorOffset DisableSystemPromptOffset = default(VectorOffset), Offset<ITrackCustomBoardOnBtLogicNode> TrackCustomBoardOffset = default(Offset<ITrackCustomBoardOnBtLogicNode>), VectorOffset Children_typeOffset = default(VectorOffset), VectorOffset ChildrenOffset = default(VectorOffset), EConditionCount Count = EConditionCount.All, Offset<IPerformanceSetting> PerformanceSettingOffset = default(Offset<IPerformanceSetting>), ushort NullMask = 0)
 		{
 			builder.StartTable(43);
@@ -917,109 +923,109 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IParallelSelectBtNode.EndIParallelSelectBtNode(builder);
 		}
 
-		// Token: 0x06017236 RID: 94774 RVA: 0x003561A4 File Offset: 0x003543A4
+		// Token: 0x060188C5 RID: 100549 RVA: 0x0037FD38 File Offset: 0x0037DF38
 		public static void StartIParallelSelectBtNode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(43);
 		}
 
-		// Token: 0x06017237 RID: 94775 RVA: 0x003561AE File Offset: 0x003543AE
+		// Token: 0x060188C6 RID: 100550 RVA: 0x0037FD42 File Offset: 0x0037DF42
 		public static void AddType(FlatBufferBuilder builder, EBtNode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017238 RID: 94776 RVA: 0x003561B9 File Offset: 0x003543B9
+		// Token: 0x060188C7 RID: 100551 RVA: 0x0037FD4D File Offset: 0x0037DF4D
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x06017239 RID: 94777 RVA: 0x003561C4 File Offset: 0x003543C4
+		// Token: 0x060188C8 RID: 100552 RVA: 0x0037FD58 File Offset: 0x0037DF58
 		public static void AddDesc(FlatBufferBuilder builder, StringOffset descOffset)
 		{
 			builder.AddOffset(2, descOffset.Value, 0);
 		}
 
-		// Token: 0x0601723A RID: 94778 RVA: 0x003561D4 File Offset: 0x003543D4
+		// Token: 0x060188C9 RID: 100553 RVA: 0x0037FD68 File Offset: 0x0037DF68
 		public static void AddFixProcessor(FlatBufferBuilder builder, Offset<IFixProcessor> fixProcessorOffset)
 		{
 			builder.AddOffset(3, fixProcessorOffset.Value, 0);
 		}
 
-		// Token: 0x0601723B RID: 94779 RVA: 0x003561E4 File Offset: 0x003543E4
+		// Token: 0x060188CA RID: 100554 RVA: 0x0037FD78 File Offset: 0x0037DF78
 		public static void Add_FoldedForTree(FlatBufferBuilder builder, bool _FoldedForTree)
 		{
 			builder.AddBool(4, _FoldedForTree, false);
 		}
 
-		// Token: 0x0601723C RID: 94780 RVA: 0x003561EF File Offset: 0x003543EF
+		// Token: 0x060188CB RID: 100555 RVA: 0x0037FD83 File Offset: 0x0037DF83
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(5, disabled, false);
 		}
 
-		// Token: 0x0601723D RID: 94781 RVA: 0x003561FA File Offset: 0x003543FA
+		// Token: 0x060188CC RID: 100556 RVA: 0x0037FD8E File Offset: 0x0037DF8E
 		public static void AddUIConfig(FlatBufferBuilder builder, Offset<IQuestScheduleConfig> uIConfigOffset)
 		{
 			builder.AddOffset(6, uIConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0601723E RID: 94782 RVA: 0x0035620A File Offset: 0x0035440A
+		// Token: 0x060188CD RID: 100557 RVA: 0x0037FD9E File Offset: 0x0037DF9E
 		public static void AddInformationView(FlatBufferBuilder builder, Offset<IInformationViewConfig> informationViewOffset)
 		{
 			builder.AddOffset(7, informationViewOffset.Value, 0);
 		}
 
-		// Token: 0x0601723F RID: 94783 RVA: 0x0035621A File Offset: 0x0035441A
+		// Token: 0x060188CE RID: 100558 RVA: 0x0037FDAE File Offset: 0x0037DFAE
 		public static void AddInformationBoard(FlatBufferBuilder builder, Offset<IInformationBoardConfig> informationBoardOffset)
 		{
 			builder.AddOffset(8, informationBoardOffset.Value, 0);
 		}
 
-		// Token: 0x06017240 RID: 94784 RVA: 0x0035622A File Offset: 0x0035442A
+		// Token: 0x060188CF RID: 100559 RVA: 0x0037FDBE File Offset: 0x0037DFBE
 		public static void AddTidQuestAliasName(FlatBufferBuilder builder, StringOffset tidQuestAliasNameOffset)
 		{
 			builder.AddOffset(9, tidQuestAliasNameOffset.Value, 0);
 		}
 
-		// Token: 0x06017241 RID: 94785 RVA: 0x0035623B File Offset: 0x0035443B
+		// Token: 0x060188D0 RID: 100560 RVA: 0x0037FDCF File Offset: 0x0037DFCF
 		public static void AddTidQuestAliasDesc(FlatBufferBuilder builder, StringOffset tidQuestAliasDescOffset)
 		{
 			builder.AddOffset(10, tidQuestAliasDescOffset.Value, 0);
 		}
 
-		// Token: 0x06017242 RID: 94786 RVA: 0x0035624C File Offset: 0x0035444C
+		// Token: 0x060188D1 RID: 100561 RVA: 0x0037FDE0 File Offset: 0x0037DFE0
 		public static void AddDungeonId(FlatBufferBuilder builder, int dungeonId)
 		{
 			builder.AddInt(11, dungeonId, 0);
 		}
 
-		// Token: 0x06017243 RID: 94787 RVA: 0x00356258 File Offset: 0x00354458
+		// Token: 0x060188D2 RID: 100562 RVA: 0x0037FDEC File Offset: 0x0037DFEC
 		public static void AddDisableOnline(FlatBufferBuilder builder, bool disableOnline)
 		{
 			builder.AddBool(12, disableOnline, false);
 		}
 
-		// Token: 0x06017244 RID: 94788 RVA: 0x00356264 File Offset: 0x00354464
+		// Token: 0x060188D3 RID: 100563 RVA: 0x0037FDF8 File Offset: 0x0037DFF8
 		public static void AddSaveConfig(FlatBufferBuilder builder, Offset<ISaveConfig> saveConfigOffset)
 		{
 			builder.AddOffset(13, saveConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06017245 RID: 94789 RVA: 0x00356275 File Offset: 0x00354475
+		// Token: 0x060188D4 RID: 100564 RVA: 0x0037FE09 File Offset: 0x0037E009
 		public static void AddForceClosedRestriction(FlatBufferBuilder builder, Offset<IForceClosedRestriction> forceClosedRestrictionOffset)
 		{
 			builder.AddOffset(14, forceClosedRestrictionOffset.Value, 0);
 		}
 
-		// Token: 0x06017246 RID: 94790 RVA: 0x00356286 File Offset: 0x00354486
+		// Token: 0x060188D5 RID: 100565 RVA: 0x0037FE1A File Offset: 0x0037E01A
 		public static void AddOccupations(FlatBufferBuilder builder, VectorOffset occupationsOffset)
 		{
 			builder.AddOffset(15, occupationsOffset.Value, 0);
 		}
 
-		// Token: 0x06017247 RID: 94791 RVA: 0x00356298 File Offset: 0x00354498
+		// Token: 0x060188D6 RID: 100566 RVA: 0x0037FE2C File Offset: 0x0037E02C
 		public static VectorOffset CreateOccupationsVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1030,7 +1036,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017248 RID: 94792 RVA: 0x003562D8 File Offset: 0x003544D8
+		// Token: 0x060188D7 RID: 100567 RVA: 0x0037FE6C File Offset: 0x0037E06C
 		public static VectorOffset CreateOccupationsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1038,7 +1044,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017249 RID: 94793 RVA: 0x003562F2 File Offset: 0x003544F2
+		// Token: 0x060188D8 RID: 100568 RVA: 0x0037FE86 File Offset: 0x0037E086
 		public static VectorOffset CreateOccupationsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -1046,7 +1052,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601724A RID: 94794 RVA: 0x00356310 File Offset: 0x00354510
+		// Token: 0x060188D9 RID: 100569 RVA: 0x0037FEA4 File Offset: 0x0037E0A4
 		public static VectorOffset CreateOccupationsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1054,139 +1060,139 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601724B RID: 94795 RVA: 0x00356329 File Offset: 0x00354529
+		// Token: 0x060188DA RID: 100570 RVA: 0x0037FEBD File Offset: 0x0037E0BD
 		public static void StartOccupationsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601724C RID: 94796 RVA: 0x00356334 File Offset: 0x00354534
+		// Token: 0x060188DB RID: 100571 RVA: 0x0037FEC8 File Offset: 0x0037E0C8
 		public static void AddOccupationConfig(FlatBufferBuilder builder, Offset<ILogicNodeOccupation> occupationConfigOffset)
 		{
 			builder.AddOffset(16, occupationConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0601724D RID: 94797 RVA: 0x00356345 File Offset: 0x00354545
+		// Token: 0x060188DC RID: 100572 RVA: 0x0037FED9 File Offset: 0x0037E0D9
 		public static void AddDisableSwitchOccupation(FlatBufferBuilder builder, bool disableSwitchOccupation)
 		{
 			builder.AddBool(17, disableSwitchOccupation, false);
 		}
 
-		// Token: 0x0601724E RID: 94798 RVA: 0x00356351 File Offset: 0x00354551
+		// Token: 0x060188DD RID: 100573 RVA: 0x0037FEE5 File Offset: 0x0037E0E5
 		public static void AddBudgetCameraType(FlatBufferBuilder builder, EBudgetCameraType budgetCameraType)
 		{
 			builder.AddByte(18, (byte)budgetCameraType, 0);
 		}
 
-		// Token: 0x0601724F RID: 94799 RVA: 0x0035635D File Offset: 0x0035455D
+		// Token: 0x060188DE RID: 100574 RVA: 0x0037FEF1 File Offset: 0x0037E0F1
 		public static void AddStatistics(FlatBufferBuilder builder, Offset<IQuestStatistics> statisticsOffset)
 		{
 			builder.AddOffset(19, statisticsOffset.Value, 0);
 		}
 
-		// Token: 0x06017250 RID: 94800 RVA: 0x0035636E File Offset: 0x0035456E
+		// Token: 0x060188DF RID: 100575 RVA: 0x0037FF02 File Offset: 0x0037E102
 		public static void AddCompositeTrackViewMode(FlatBufferBuilder builder, ETrackViewMode compositeTrackViewMode)
 		{
 			builder.AddByte(20, (byte)compositeTrackViewMode, 0);
 		}
 
-		// Token: 0x06017251 RID: 94801 RVA: 0x0035637A File Offset: 0x0035457A
+		// Token: 0x060188E0 RID: 100576 RVA: 0x0037FF0E File Offset: 0x0037E10E
 		public static void AddRewardConfig(FlatBufferBuilder builder, Offset<IQuestRewardConfig> rewardConfigOffset)
 		{
 			builder.AddOffset(21, rewardConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06017252 RID: 94802 RVA: 0x0035638B File Offset: 0x0035458B
+		// Token: 0x060188E1 RID: 100577 RVA: 0x0037FF1F File Offset: 0x0037E11F
 		public static void AddSpecialGamePlayConfigType(FlatBufferBuilder builder, TSpecialGamePlayConfig specialGamePlayConfigType)
 		{
 			builder.AddByte(22, (byte)specialGamePlayConfigType, 0);
 		}
 
-		// Token: 0x06017253 RID: 94803 RVA: 0x00356397 File Offset: 0x00354597
+		// Token: 0x060188E2 RID: 100578 RVA: 0x0037FF2B File Offset: 0x0037E12B
 		public static void AddSpecialGamePlayConfig(FlatBufferBuilder builder, int specialGamePlayConfigOffset)
 		{
 			builder.AddOffset(23, specialGamePlayConfigOffset, 0);
 		}
 
-		// Token: 0x06017254 RID: 94804 RVA: 0x003563A3 File Offset: 0x003545A3
+		// Token: 0x060188E3 RID: 100579 RVA: 0x0037FF37 File Offset: 0x0037E137
 		public static void AddEnableSystemType(FlatBufferBuilder builder, TEnableSystemConfig enableSystemType)
 		{
 			builder.AddByte(24, (byte)enableSystemType, 0);
 		}
 
-		// Token: 0x06017255 RID: 94805 RVA: 0x003563AF File Offset: 0x003545AF
+		// Token: 0x060188E4 RID: 100580 RVA: 0x0037FF43 File Offset: 0x0037E143
 		public static void AddEnableSystem(FlatBufferBuilder builder, int enableSystemOffset)
 		{
 			builder.AddOffset(25, enableSystemOffset, 0);
 		}
 
-		// Token: 0x06017256 RID: 94806 RVA: 0x003563BB File Offset: 0x003545BB
+		// Token: 0x060188E5 RID: 100581 RVA: 0x0037FF4F File Offset: 0x0037E14F
 		public static void AddStartWave(FlatBufferBuilder builder, Offset<IWaveConfig> startWaveOffset)
 		{
 			builder.AddOffset(26, startWaveOffset.Value, 0);
 		}
 
-		// Token: 0x06017257 RID: 94807 RVA: 0x003563CC File Offset: 0x003545CC
+		// Token: 0x060188E6 RID: 100582 RVA: 0x0037FF60 File Offset: 0x0037E160
 		public static void AddDisableTrackAnim(FlatBufferBuilder builder, Offset<IDisableTrackAnim> disableTrackAnimOffset)
 		{
 			builder.AddOffset(27, disableTrackAnimOffset.Value, 0);
 		}
 
-		// Token: 0x06017258 RID: 94808 RVA: 0x003563DD File Offset: 0x003545DD
+		// Token: 0x060188E7 RID: 100583 RVA: 0x0037FF71 File Offset: 0x0037E171
 		public static void AddDisableSwitchGender(FlatBufferBuilder builder, bool disableSwitchGender)
 		{
 			builder.AddBool(28, disableSwitchGender, false);
 		}
 
-		// Token: 0x06017259 RID: 94809 RVA: 0x003563E9 File Offset: 0x003545E9
+		// Token: 0x060188E8 RID: 100584 RVA: 0x0037FF7D File Offset: 0x0037E17D
 		public static void AddDisableFocusMode(FlatBufferBuilder builder, bool disableFocusMode)
 		{
 			builder.AddBool(29, disableFocusMode, false);
 		}
 
-		// Token: 0x0601725A RID: 94810 RVA: 0x003563F5 File Offset: 0x003545F5
+		// Token: 0x060188E9 RID: 100585 RVA: 0x0037FF89 File Offset: 0x0037E189
 		public static void AddDisableSkeletalAnimationCheck(FlatBufferBuilder builder, bool disableSkeletalAnimationCheck)
 		{
 			builder.AddBool(30, disableSkeletalAnimationCheck, false);
 		}
 
-		// Token: 0x0601725B RID: 94811 RVA: 0x00356401 File Offset: 0x00354601
+		// Token: 0x060188EA RID: 100586 RVA: 0x0037FF95 File Offset: 0x0037E195
 		public static void AddLogicProgramSpecialProcess(FlatBufferBuilder builder, Offset<ILogicProgramSpecialProcess> logicProgramSpecialProcessOffset)
 		{
 			builder.AddOffset(31, logicProgramSpecialProcessOffset.Value, 0);
 		}
 
-		// Token: 0x0601725C RID: 94812 RVA: 0x00356412 File Offset: 0x00354612
+		// Token: 0x060188EB RID: 100587 RVA: 0x0037FFA6 File Offset: 0x0037E1A6
 		public static void AddQuestBuffActiveRange(FlatBufferBuilder builder, Offset<IQuestBuffActiveRange> questBuffActiveRangeOffset)
 		{
 			builder.AddOffset(32, questBuffActiveRangeOffset.Value, 0);
 		}
 
-		// Token: 0x0601725D RID: 94813 RVA: 0x00356423 File Offset: 0x00354623
+		// Token: 0x060188EC RID: 100588 RVA: 0x0037FFB7 File Offset: 0x0037E1B7
 		public static void AddSunSpiritProcess(FlatBufferBuilder builder, Offset<ISunSpiritProcess> sunSpiritProcessOffset)
 		{
 			builder.AddOffset(33, sunSpiritProcessOffset.Value, 0);
 		}
 
-		// Token: 0x0601725E RID: 94814 RVA: 0x00356434 File Offset: 0x00354634
+		// Token: 0x060188ED RID: 100589 RVA: 0x0037FFC8 File Offset: 0x0037E1C8
 		public static void AddModifyTrackAreaText(FlatBufferBuilder builder, Offset<ITrackAreaText> modifyTrackAreaTextOffset)
 		{
 			builder.AddOffset(34, modifyTrackAreaTextOffset.Value, 0);
 		}
 
-		// Token: 0x0601725F RID: 94815 RVA: 0x00356445 File Offset: 0x00354645
+		// Token: 0x060188EE RID: 100590 RVA: 0x0037FFD9 File Offset: 0x0037E1D9
 		public static void AddDisableGlobalTraffic(FlatBufferBuilder builder, bool disableGlobalTraffic)
 		{
 			builder.AddBool(35, disableGlobalTraffic, false);
 		}
 
-		// Token: 0x06017260 RID: 94816 RVA: 0x00356451 File Offset: 0x00354651
+		// Token: 0x060188EF RID: 100591 RVA: 0x0037FFE5 File Offset: 0x0037E1E5
 		public static void AddDisableSystemPrompt(FlatBufferBuilder builder, VectorOffset disableSystemPromptOffset)
 		{
 			builder.AddOffset(36, disableSystemPromptOffset.Value, 0);
 		}
 
-		// Token: 0x06017261 RID: 94817 RVA: 0x00356464 File Offset: 0x00354664
+		// Token: 0x060188F0 RID: 100592 RVA: 0x0037FFF8 File Offset: 0x0037E1F8
 		public static VectorOffset CreateDisableSystemPromptVector(FlatBufferBuilder builder, Offset<IAreaNameSystemPrompt>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1197,7 +1203,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017262 RID: 94818 RVA: 0x003564A4 File Offset: 0x003546A4
+		// Token: 0x060188F1 RID: 100593 RVA: 0x00380038 File Offset: 0x0037E238
 		public static VectorOffset CreateDisableSystemPromptVectorBlock(FlatBufferBuilder builder, Offset<IAreaNameSystemPrompt>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1205,7 +1211,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017263 RID: 94819 RVA: 0x003564BE File Offset: 0x003546BE
+		// Token: 0x060188F2 RID: 100594 RVA: 0x00380052 File Offset: 0x0037E252
 		public static VectorOffset CreateDisableSystemPromptVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IAreaNameSystemPrompt>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -1213,7 +1219,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017264 RID: 94820 RVA: 0x003564DC File Offset: 0x003546DC
+		// Token: 0x060188F3 RID: 100595 RVA: 0x00380070 File Offset: 0x0037E270
 		public static VectorOffset CreateDisableSystemPromptVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1221,25 +1227,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017265 RID: 94821 RVA: 0x003564F5 File Offset: 0x003546F5
+		// Token: 0x060188F4 RID: 100596 RVA: 0x00380089 File Offset: 0x0037E289
 		public static void StartDisableSystemPromptVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06017266 RID: 94822 RVA: 0x00356500 File Offset: 0x00354700
+		// Token: 0x060188F5 RID: 100597 RVA: 0x00380094 File Offset: 0x0037E294
 		public static void AddTrackCustomBoard(FlatBufferBuilder builder, Offset<ITrackCustomBoardOnBtLogicNode> trackCustomBoardOffset)
 		{
 			builder.AddOffset(37, trackCustomBoardOffset.Value, 0);
 		}
 
-		// Token: 0x06017267 RID: 94823 RVA: 0x00356511 File Offset: 0x00354711
+		// Token: 0x060188F6 RID: 100598 RVA: 0x003800A5 File Offset: 0x0037E2A5
 		public static void AddChildrenType(FlatBufferBuilder builder, VectorOffset childrenTypeOffset)
 		{
 			builder.AddOffset(38, childrenTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06017268 RID: 94824 RVA: 0x00356524 File Offset: 0x00354724
+		// Token: 0x060188F7 RID: 100599 RVA: 0x003800B8 File Offset: 0x0037E2B8
 		public static VectorOffset CreateChildrenTypeVector(FlatBufferBuilder builder, TBtNode[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -1250,7 +1256,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017269 RID: 94825 RVA: 0x0035655B File Offset: 0x0035475B
+		// Token: 0x060188F8 RID: 100600 RVA: 0x003800EF File Offset: 0x0037E2EF
 		public static VectorOffset CreateChildrenTypeVectorBlock(FlatBufferBuilder builder, TBtNode[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -1258,7 +1264,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601726A RID: 94826 RVA: 0x00356575 File Offset: 0x00354775
+		// Token: 0x060188F9 RID: 100601 RVA: 0x00380109 File Offset: 0x0037E309
 		public static VectorOffset CreateChildrenTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TBtNode> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -1266,7 +1272,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601726B RID: 94827 RVA: 0x00356593 File Offset: 0x00354793
+		// Token: 0x060188FA RID: 100602 RVA: 0x00380127 File Offset: 0x0037E327
 		public static VectorOffset CreateChildrenTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1274,19 +1280,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601726C RID: 94828 RVA: 0x003565AC File Offset: 0x003547AC
+		// Token: 0x060188FB RID: 100603 RVA: 0x00380140 File Offset: 0x0037E340
 		public static void StartChildrenTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601726D RID: 94829 RVA: 0x003565B7 File Offset: 0x003547B7
+		// Token: 0x060188FC RID: 100604 RVA: 0x0038014B File Offset: 0x0037E34B
 		public static void AddChildren(FlatBufferBuilder builder, VectorOffset childrenOffset)
 		{
 			builder.AddOffset(39, childrenOffset.Value, 0);
 		}
 
-		// Token: 0x0601726E RID: 94830 RVA: 0x003565C8 File Offset: 0x003547C8
+		// Token: 0x060188FD RID: 100605 RVA: 0x0038015C File Offset: 0x0037E35C
 		public static VectorOffset CreateChildrenVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1297,7 +1303,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601726F RID: 94831 RVA: 0x003565FF File Offset: 0x003547FF
+		// Token: 0x060188FE RID: 100606 RVA: 0x00380193 File Offset: 0x0037E393
 		public static VectorOffset CreateChildrenVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1305,7 +1311,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017270 RID: 94832 RVA: 0x00356619 File Offset: 0x00354819
+		// Token: 0x060188FF RID: 100607 RVA: 0x003801AD File Offset: 0x0037E3AD
 		public static VectorOffset CreateChildrenVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -1313,7 +1319,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017271 RID: 94833 RVA: 0x00356637 File Offset: 0x00354837
+		// Token: 0x06018900 RID: 100608 RVA: 0x003801CB File Offset: 0x0037E3CB
 		public static VectorOffset CreateChildrenVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1321,37 +1327,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017272 RID: 94834 RVA: 0x00356650 File Offset: 0x00354850
+		// Token: 0x06018901 RID: 100609 RVA: 0x003801E4 File Offset: 0x0037E3E4
 		public static void StartChildrenVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06017273 RID: 94835 RVA: 0x0035665B File Offset: 0x0035485B
+		// Token: 0x06018902 RID: 100610 RVA: 0x003801EF File Offset: 0x0037E3EF
 		public static void AddCount(FlatBufferBuilder builder, EConditionCount count)
 		{
 			builder.AddByte(40, (byte)count, 0);
 		}
 
-		// Token: 0x06017274 RID: 94836 RVA: 0x00356667 File Offset: 0x00354867
+		// Token: 0x06018903 RID: 100611 RVA: 0x003801FB File Offset: 0x0037E3FB
 		public static void AddPerformanceSetting(FlatBufferBuilder builder, Offset<IPerformanceSetting> performanceSettingOffset)
 		{
 			builder.AddOffset(41, performanceSettingOffset.Value, 0);
 		}
 
-		// Token: 0x06017275 RID: 94837 RVA: 0x00356678 File Offset: 0x00354878
+		// Token: 0x06018904 RID: 100612 RVA: 0x0038020C File Offset: 0x0037E40C
 		public static void AddNullMask(FlatBufferBuilder builder, ushort nullMask)
 		{
 			builder.AddUshort(42, nullMask, 0);
 		}
 
-		// Token: 0x06017276 RID: 94838 RVA: 0x00356684 File Offset: 0x00354884
+		// Token: 0x06018905 RID: 100613 RVA: 0x00380218 File Offset: 0x0037E418
 		public static Offset<IParallelSelectBtNode> EndIParallelSelectBtNode(FlatBufferBuilder builder)
 		{
 			return new Offset<IParallelSelectBtNode>(builder.EndTable());
 		}
 
-		// Token: 0x06017277 RID: 94839 RVA: 0x00356694 File Offset: 0x00354894
+		// Token: 0x06018906 RID: 100614 RVA: 0x00380228 File Offset: 0x0037E428
 		public IParallelSelectBtNodeT UnPack()
 		{
 			IParallelSelectBtNodeT parallelSelectBtNodeT = new IParallelSelectBtNodeT();
@@ -1359,7 +1365,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return parallelSelectBtNodeT;
 		}
 
-		// Token: 0x06017278 RID: 94840 RVA: 0x003566B0 File Offset: 0x003548B0
+		// Token: 0x06018907 RID: 100615 RVA: 0x00380244 File Offset: 0x0037E444
 		public void UnPackTo(IParallelSelectBtNodeT _o)
 		{
 			_o.Type = this.Type;
@@ -1409,6 +1415,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.EnableSystem.Type = this.EnableSystemType;
 			switch (this.EnableSystemType)
 			{
+			case TEnableSystemConfig.IDarkTideSystemConfig:
+				_o.EnableSystem.Value = ((this.EnableSystem<IDarkTideSystemConfig>() != null) ? this.EnableSystem<IDarkTideSystemConfig>().Value.UnPack() : null);
+				break;
 			case TEnableSystemConfig.IFlagChallengeSystemConfig:
 				_o.EnableSystem.Value = ((this.EnableSystem<IFlagChallengeSystemConfig>() != null) ? this.EnableSystem<IFlagChallengeSystemConfig>().Value.UnPack() : null);
 				break;
@@ -1525,7 +1534,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06017279 RID: 94841 RVA: 0x00357414 File Offset: 0x00355614
+		// Token: 0x06018908 RID: 100616 RVA: 0x00380FE8 File Offset: 0x0037F1E8
 		public static Offset<IParallelSelectBtNode> Pack(FlatBufferBuilder builder, IParallelSelectBtNodeT _o)
 		{
 			if (_o == null)
@@ -1599,7 +1608,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IParallelSelectBtNode.CreateIParallelSelectBtNode(builder, _o.Type, _o.Id, descOffset, fixProcessorOffset, _o._FoldedForTree, _o.Disabled, uiconfigOffset, informationViewOffset, informationBoardOffset, tidQuestAliasNameOffset, tidQuestAliasDescOffset, _o.DungeonId, _o.DisableOnline, saveConfigOffset, forceClosedRestrictionOffset, occupationsOffset, occupationConfigOffset, _o.DisableSwitchOccupation, _o.BudgetCameraType, statisticsOffset, _o.CompositeTrackViewMode, rewardConfigOffset, specialGamePlayConfig_type, specialGamePlayConfigOffset, enableSystem_type, enableSystemOffset, startWaveOffset, disableTrackAnimOffset, _o.DisableSwitchGender, _o.DisableFocusMode, _o.DisableSkeletalAnimationCheck, logicProgramSpecialProcessOffset, questBuffActiveRangeOffset, sunSpiritProcessOffset, modifyTrackAreaTextOffset, _o.DisableGlobalTraffic, disableSystemPromptOffset, trackCustomBoardOffset, children_typeOffset, childrenOffset, _o.Count, performanceSettingOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400B999 RID: 47513
+		// Token: 0x0400C37E RID: 50046
 		private Table __p;
 	}
 }

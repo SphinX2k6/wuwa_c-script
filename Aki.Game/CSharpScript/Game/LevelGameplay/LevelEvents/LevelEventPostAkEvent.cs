@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B59 RID: 27481
+	// Token: 0x02005CD1 RID: 23761
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventPostAkEvent : LevelEventBase
 	{
-		// Token: 0x060441D7 RID: 278999 RVA: 0x010C3810 File Offset: 0x010C1A10
+		// Token: 0x0603A329 RID: 238377 RVA: 0x0106D3C4 File Offset: 0x0106B5C4
 		public LevelEventPostAkEvent(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441D8 RID: 279000 RVA: 0x010C381C File Offset: 0x010C1A1C
+		// Token: 0x0603A32A RID: 238378 RVA: 0x0106D3D0 File Offset: 0x0106B5D0
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			LevelEventPostAkEvent.<>c__DisplayClass1_0 CS$<>8__locals1 = new LevelEventPostAkEvent.<>c__DisplayClass1_0();
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060441D9 RID: 279001 RVA: 0x010C3B44 File Offset: 0x010C1D44
+		// Token: 0x0603A32B RID: 238379 RVA: 0x0106D6F8 File Offset: 0x0106B8F8
 		private unsafe void HandleMusicBeatEvent(EAkCallbackType callbackType, [Nullable(2)] UAkCallbackInfo callbackInfo, PostAkEvent @params)
 		{
 			EMusicEventType? musicEventType = @params.MusicEventType;

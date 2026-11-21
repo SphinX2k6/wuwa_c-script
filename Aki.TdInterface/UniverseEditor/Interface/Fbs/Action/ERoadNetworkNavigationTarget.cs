@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FEA RID: 24554
+	// Token: 0x02006644 RID: 26180
 	public enum ERoadNetworkNavigationTarget : byte
 	{
-		// Token: 0x0400FFA1 RID: 65441
+		// Token: 0x04010D72 RID: 68978
 		SceneItem
 	}
 }

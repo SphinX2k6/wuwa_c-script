@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.RecallQuest.Model
 {
-	// Token: 0x02004F1F RID: 20255
+	// Token: 0x02003EE8 RID: 16104
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RecallInventoryData
 	{
-		// Token: 0x06033EF5 RID: 212725 RVA: 0x00C2C4D8 File Offset: 0x00C2A6D8
+		// Token: 0x06028D60 RID: 167264 RVA: 0x00B75B4C File Offset: 0x00B73D4C
 		public void InitFromFullSnapshot([TupleElementNames(new string[]
 		{
 			"ItemId",
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			}
 		}
 
-		// Token: 0x06033EF6 RID: 212726 RVA: 0x00C2C544 File Offset: 0x00C2A744
+		// Token: 0x06028D61 RID: 167265 RVA: 0x00B75BB8 File Offset: 0x00B73DB8
 		public void SetItem(int itemId, int count)
 		{
 			CommonItemData value = new CommonItemData(itemId, 0, count, InventoryDefine.EItemDataType.CommonItem, null);
@@ -37,21 +37,21 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			this.CountMap[itemId] = count;
 		}
 
-		// Token: 0x06033EF7 RID: 212727 RVA: 0x00C2C57E File Offset: 0x00C2A77E
+		// Token: 0x06028D62 RID: 167266 RVA: 0x00B75BF2 File Offset: 0x00B73DF2
 		public void RemoveItem(int itemId)
 		{
 			this.VirtualItemMap.Remove(itemId);
 			this.CountMap.Remove(itemId);
 		}
 
-		// Token: 0x06033EF8 RID: 212728 RVA: 0x00C2C59A File Offset: 0x00C2A79A
+		// Token: 0x06028D63 RID: 167267 RVA: 0x00B75C0E File Offset: 0x00B73E0E
 		public void Clear()
 		{
 			this.VirtualItemMap.Clear();
 			this.CountMap.Clear();
 		}
 
-		// Token: 0x06033EF9 RID: 212729 RVA: 0x00C2C5B4 File Offset: 0x00C2A7B4
+		// Token: 0x06028D64 RID: 167268 RVA: 0x00B75C28 File Offset: 0x00B73E28
 		public int GetCount(int configId)
 		{
 			int result;
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return result;
 		}
 
-		// Token: 0x06033EFA RID: 212730 RVA: 0x00C2C5D4 File Offset: 0x00C2A7D4
+		// Token: 0x06028D65 RID: 167269 RVA: 0x00B75C48 File Offset: 0x00B73E48
 		public bool IsEmpty()
 		{
 			return this.VirtualItemMap.Count == 0;
 		}
 
-		// Token: 0x06033EFB RID: 212731 RVA: 0x00C2C5E4 File Offset: 0x00C2A7E4
+		// Token: 0x06028D66 RID: 167270 RVA: 0x00B75C58 File Offset: 0x00B73E58
 		public HashSet<ItemDataBase> GetItemDataBaseSetByMainType(InventoryDefine.EItemMainTypeId mainType)
 		{
 			HashSet<ItemDataBase> hashSet = new HashSet<ItemDataBase>();
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return hashSet;
 		}
 
-		// Token: 0x06033EFC RID: 212732 RVA: 0x00C2C664 File Offset: 0x00C2A864
+		// Token: 0x06028D67 RID: 167271 RVA: 0x00B75CD8 File Offset: 0x00B73ED8
 		public HashSet<InventoryDefine.EItemMainTypeId> GetAvailableMainTypes()
 		{
 			if (this.OpenIdMainTypeConfigCache.Count > 0)
@@ -97,13 +97,13 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return this.OpenIdMainTypeConfigCache;
 		}
 
-		// Token: 0x0401B989 RID: 113033
+		// Token: 0x0401635C RID: 90972
 		private readonly Dictionary<int, CommonItemData> VirtualItemMap = new Dictionary<int, CommonItemData>();
 
-		// Token: 0x0401B98A RID: 113034
+		// Token: 0x0401635D RID: 90973
 		private readonly Dictionary<int, int> CountMap = new Dictionary<int, int>();
 
-		// Token: 0x0401B98B RID: 113035
+		// Token: 0x0401635E RID: 90974
 		private readonly HashSet<InventoryDefine.EItemMainTypeId> OpenIdMainTypeConfigCache = new HashSet<InventoryDefine.EItemMainTypeId>();
 	}
 }

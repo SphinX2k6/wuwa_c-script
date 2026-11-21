@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D09 RID: 19721
+	// Token: 0x02003CBC RID: 15548
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopCategoryData : IRoleDevelopCategoryData
 	{
-		// Token: 0x17007DE3 RID: 32227
-		// (get) Token: 0x06032FC5 RID: 208837 RVA: 0x00BE1A7C File Offset: 0x00BDFC7C
-		// (set) Token: 0x06032FC6 RID: 208838 RVA: 0x00BE1A84 File Offset: 0x00BDFC84
+		// Token: 0x1700518D RID: 20877
+		// (get) Token: 0x06027DA0 RID: 163232 RVA: 0x00B27384 File Offset: 0x00B25584
+		// (set) Token: 0x06027DA1 RID: 163233 RVA: 0x00B2738C File Offset: 0x00B2558C
 		public ERoleDevelopCategoryType CategoryType { get; set; }
 
-		// Token: 0x17007DE4 RID: 32228
-		// (get) Token: 0x06032FC7 RID: 208839 RVA: 0x00BE1A8D File Offset: 0x00BDFC8D
-		// (set) Token: 0x06032FC8 RID: 208840 RVA: 0x00BE1A95 File Offset: 0x00BDFC95
+		// Token: 0x1700518E RID: 20878
+		// (get) Token: 0x06027DA2 RID: 163234 RVA: 0x00B27395 File Offset: 0x00B25595
+		// (set) Token: 0x06027DA3 RID: 163235 RVA: 0x00B2739D File Offset: 0x00B2559D
 		public string CategoryName { get; set; }
 	}
 }

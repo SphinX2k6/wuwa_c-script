@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020000CE RID: 206
+// Token: 0x020000D0 RID: 208
 [NullableContext(1)]
 [Nullable(0)]
 public class TickProcessSystem : Singleton
 {
-	// Token: 0x0600065D RID: 1629 RVA: 0x000220BC File Offset: 0x000202BC
+	// Token: 0x0600069E RID: 1694 RVA: 0x00022594 File Offset: 0x00020794
 	private void AddToTickSystem(ETickingGroup group, bool tickEvenPaused)
 	{
 		if (this.TickerMap.ContainsKey(group))
@@ -49,7 +49,7 @@ public class TickProcessSystem : Singleton
 		}
 	}
 
-	// Token: 0x0600065E RID: 1630 RVA: 0x00022230 File Offset: 0x00020430
+	// Token: 0x0600069F RID: 1695 RVA: 0x00022708 File Offset: 0x00020908
 	private void RemoveFromTickSystem(ETickingGroup group)
 	{
 		Ticker ticker;
@@ -61,55 +61,55 @@ public class TickProcessSystem : Singleton
 		TickSystem.Instance.Remove(ticker.Id);
 	}
 
-	// Token: 0x0600065F RID: 1631 RVA: 0x0002226F File Offset: 0x0002046F
+	// Token: 0x060006A0 RID: 1696 RVA: 0x00022747 File Offset: 0x00020947
 	private void TickPrePhysics(float deltaTime)
 	{
 		this.Tick(deltaTime, ETickingGroup.TG_PrePhysics);
 	}
 
-	// Token: 0x06000660 RID: 1632 RVA: 0x00022279 File Offset: 0x00020479
+	// Token: 0x060006A1 RID: 1697 RVA: 0x00022751 File Offset: 0x00020951
 	private void TickStartPhysics(float deltaTime)
 	{
 		this.Tick(deltaTime, ETickingGroup.TG_StartPhysics);
 	}
 
-	// Token: 0x06000661 RID: 1633 RVA: 0x00022283 File Offset: 0x00020483
+	// Token: 0x060006A2 RID: 1698 RVA: 0x0002275B File Offset: 0x0002095B
 	private void TickDuringPhysics(float deltaTime)
 	{
 		this.Tick(deltaTime, ETickingGroup.TG_DuringPhysics);
 	}
 
-	// Token: 0x06000662 RID: 1634 RVA: 0x0002228D File Offset: 0x0002048D
+	// Token: 0x060006A3 RID: 1699 RVA: 0x00022765 File Offset: 0x00020965
 	private void TickEndPhysics(float deltaTime)
 	{
 		this.Tick(deltaTime, ETickingGroup.TG_EndPhysics);
 	}
 
-	// Token: 0x06000663 RID: 1635 RVA: 0x00022297 File Offset: 0x00020497
+	// Token: 0x060006A4 RID: 1700 RVA: 0x0002276F File Offset: 0x0002096F
 	private void TickPostPhysics(float deltaTime)
 	{
 		this.Tick(deltaTime, ETickingGroup.TG_PostPhysics);
 	}
 
-	// Token: 0x06000664 RID: 1636 RVA: 0x000222A1 File Offset: 0x000204A1
+	// Token: 0x060006A5 RID: 1701 RVA: 0x00022779 File Offset: 0x00020979
 	private void TickPostUpdateWork(float deltaTime)
 	{
 		this.Tick(deltaTime, ETickingGroup.TG_PostUpdateWork);
 	}
 
-	// Token: 0x06000665 RID: 1637 RVA: 0x000222AB File Offset: 0x000204AB
+	// Token: 0x060006A6 RID: 1702 RVA: 0x00022783 File Offset: 0x00020983
 	private void TickLastDemotable(float deltaTime)
 	{
 		this.Tick(deltaTime, ETickingGroup.TG_LastDemotable);
 	}
 
-	// Token: 0x06000666 RID: 1638 RVA: 0x000222B5 File Offset: 0x000204B5
+	// Token: 0x060006A7 RID: 1703 RVA: 0x0002278D File Offset: 0x0002098D
 	private void TickNewlySpawned(float deltaTime)
 	{
 		this.Tick(deltaTime, ETickingGroup.TG_NewlySpawned);
 	}
 
-	// Token: 0x06000667 RID: 1639 RVA: 0x000222C0 File Offset: 0x000204C0
+	// Token: 0x060006A8 RID: 1704 RVA: 0x00022798 File Offset: 0x00020998
 	private void Tick(float deltaTime, ETickingGroup group)
 	{
 		if (!this.TickProcessGroupMap.ContainsKey(group))
@@ -130,6 +130,19 @@ public class TickProcessSystem : Singleton
 			}
 		}
 		this.IsTicking = false;
+		if (this.AddProcessSet.Count > 0)
+		{
+			foreach (int key in this.AddProcessSet)
+			{
+				TickProcess tickProcess2;
+				HashSet<TickProcess> hashSet2;
+				if (this.TickProcessMap.TryGetValue(key, out tickProcess2) && tickProcess2 != null && this.TickProcessGroupMap.TryGetValue(tickProcess2.Group, out hashSet2))
+				{
+					hashSet2.Add(tickProcess2);
+				}
+			}
+			this.AddProcessSet.Clear();
+		}
 		if (this.RemoveProcessSet.Count > 0)
 		{
 			foreach (int processId in this.RemoveProcessSet)
@@ -140,17 +153,18 @@ public class TickProcessSystem : Singleton
 		}
 	}
 
-	// Token: 0x06000668 RID: 1640 RVA: 0x000223B4 File Offset: 0x000205B4
+	// Token: 0x060006A9 RID: 1705 RVA: 0x00022918 File Offset: 0x00020B18
 	public void Initialize()
 	{
 		this.TickerMap.Clear();
 		this.RemoveProcessSet.Clear();
+		this.AddProcessSet.Clear();
 		this.IsTicking = false;
 		this.TickProcessGroupMap.Clear();
 		this.TickProcessMap.Clear();
 	}
 
-	// Token: 0x06000669 RID: 1641 RVA: 0x000223EC File Offset: 0x000205EC
+	// Token: 0x060006AA RID: 1706 RVA: 0x00022958 File Offset: 0x00020B58
 	public int RegisterTickProcess(ETickingGroup group, bool tickEvenPaused, Action<float> callback, string reason)
 	{
 		if (!this.TickProcessGroupMap.ContainsKey(group))
@@ -161,7 +175,11 @@ public class TickProcessSystem : Singleton
 		TickProcess tickProcess = new TickProcess();
 		tickProcess.Init(callback, group, ETickProcessLifeType.Forever, 0f, reason);
 		HashSet<TickProcess> hashSet;
-		if (this.TickProcessGroupMap.TryGetValue(group, out hashSet))
+		if (this.IsTicking)
+		{
+			this.AddProcessSet.Add(tickProcess.Id);
+		}
+		else if (this.TickProcessGroupMap.TryGetValue(group, out hashSet))
 		{
 			hashSet.Add(tickProcess);
 		}
@@ -169,7 +187,7 @@ public class TickProcessSystem : Singleton
 		return tickProcess.Id;
 	}
 
-	// Token: 0x0600066A RID: 1642 RVA: 0x00022468 File Offset: 0x00020668
+	// Token: 0x060006AB RID: 1707 RVA: 0x000229F0 File Offset: 0x00020BF0
 	public int RegisterOnceTickProcess(ETickingGroup group, bool tickEvenPaused, Action<float> callback)
 	{
 		if (!this.TickProcessGroupMap.ContainsKey(group))
@@ -180,7 +198,11 @@ public class TickProcessSystem : Singleton
 		TickProcess tickProcess = new TickProcess();
 		tickProcess.Init(callback, group, ETickProcessLifeType.Once, 0f, null);
 		HashSet<TickProcess> hashSet;
-		if (this.TickProcessGroupMap.TryGetValue(group, out hashSet))
+		if (this.IsTicking)
+		{
+			this.AddProcessSet.Add(tickProcess.Id);
+		}
+		else if (this.TickProcessGroupMap.TryGetValue(group, out hashSet))
 		{
 			hashSet.Add(tickProcess);
 		}
@@ -188,7 +210,7 @@ public class TickProcessSystem : Singleton
 		return tickProcess.Id;
 	}
 
-	// Token: 0x0600066B RID: 1643 RVA: 0x000224E4 File Offset: 0x000206E4
+	// Token: 0x060006AC RID: 1708 RVA: 0x00022A88 File Offset: 0x00020C88
 	public int RegisterDelayTickProcess(ETickingGroup group, bool tickEvenPaused, Action<float> callback, float lifeTime)
 	{
 		if (!this.TickProcessGroupMap.ContainsKey(group))
@@ -199,7 +221,11 @@ public class TickProcessSystem : Singleton
 		TickProcess tickProcess = new TickProcess();
 		tickProcess.Init(callback, group, ETickProcessLifeType.Delay, lifeTime, null);
 		HashSet<TickProcess> hashSet;
-		if (this.TickProcessGroupMap.TryGetValue(group, out hashSet))
+		if (this.IsTicking)
+		{
+			this.AddProcessSet.Add(tickProcess.Id);
+		}
+		else if (this.TickProcessGroupMap.TryGetValue(group, out hashSet))
 		{
 			hashSet.Add(tickProcess);
 		}
@@ -207,7 +233,7 @@ public class TickProcessSystem : Singleton
 		return tickProcess.Id;
 	}
 
-	// Token: 0x0600066C RID: 1644 RVA: 0x0002255C File Offset: 0x0002075C
+	// Token: 0x060006AD RID: 1709 RVA: 0x00022B1C File Offset: 0x00020D1C
 	public void UnregisterTickProcess(int processId)
 	{
 		TickProcess tickProcess;
@@ -230,7 +256,7 @@ public class TickProcessSystem : Singleton
 		hashSet.Remove(tickProcess);
 	}
 
-	// Token: 0x0600066D RID: 1645 RVA: 0x000225C0 File Offset: 0x000207C0
+	// Token: 0x060006AE RID: 1710 RVA: 0x00022B80 File Offset: 0x00020D80
 	public void Clear()
 	{
 		foreach (ETickingGroup group in this.TickProcessGroupMap.Keys)
@@ -240,10 +266,11 @@ public class TickProcessSystem : Singleton
 		this.TickProcessMap.Clear();
 		this.TickProcessGroupMap.Clear();
 		this.RemoveProcessSet.Clear();
+		this.AddProcessSet.Clear();
 	}
 
-	// Token: 0x170000D5 RID: 213
-	// (get) Token: 0x0600066E RID: 1646 RVA: 0x0002263C File Offset: 0x0002083C
+	// Token: 0x170000E7 RID: 231
+	// (get) Token: 0x060006AF RID: 1711 RVA: 0x00022C04 File Offset: 0x00020E04
 	public static TickProcessSystem Instance
 	{
 		get
@@ -257,12 +284,12 @@ public class TickProcessSystem : Singleton
 		}
 	}
 
-	// Token: 0x0600066F RID: 1647 RVA: 0x0002265F File Offset: 0x0002085F
+	// Token: 0x060006B0 RID: 1712 RVA: 0x00022C27 File Offset: 0x00020E27
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06000670 RID: 1648 RVA: 0x00022661 File Offset: 0x00020861
+	// Token: 0x060006B1 RID: 1713 RVA: 0x00022C29 File Offset: 0x00020E29
 	public static void ResetStaticDefaultValue()
 	{
 		TickProcessSystem instance = TickProcessSystem._instance;
@@ -273,28 +300,31 @@ public class TickProcessSystem : Singleton
 		TickProcessSystem._instance = null;
 	}
 
-	// Token: 0x06000671 RID: 1649 RVA: 0x0002267A File Offset: 0x0002087A
+	// Token: 0x060006B2 RID: 1714 RVA: 0x00022C42 File Offset: 0x00020E42
 	static TickProcessSystem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TickProcessSystem.CreateStaticDefaultValue), new Action(TickProcessSystem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04000528 RID: 1320
+	// Token: 0x04000536 RID: 1334
 	private readonly Dictionary<ETickingGroup, Ticker> TickerMap = new Dictionary<ETickingGroup, Ticker>();
 
-	// Token: 0x04000529 RID: 1321
+	// Token: 0x04000537 RID: 1335
 	private readonly HashSet<int> RemoveProcessSet = new HashSet<int>();
 
-	// Token: 0x0400052A RID: 1322
+	// Token: 0x04000538 RID: 1336
+	private readonly HashSet<int> AddProcessSet = new HashSet<int>();
+
+	// Token: 0x04000539 RID: 1337
 	private bool IsTicking;
 
-	// Token: 0x0400052B RID: 1323
+	// Token: 0x0400053A RID: 1338
 	private readonly Dictionary<ETickingGroup, HashSet<TickProcess>> TickProcessGroupMap = new Dictionary<ETickingGroup, HashSet<TickProcess>>();
 
-	// Token: 0x0400052C RID: 1324
+	// Token: 0x0400053B RID: 1339
 	private readonly Dictionary<int, TickProcess> TickProcessMap = new Dictionary<int, TickProcess>();
 
-	// Token: 0x0400052D RID: 1325
+	// Token: 0x0400053C RID: 1340
 	[Nullable(2)]
 	private static TickProcessSystem _instance;
 }

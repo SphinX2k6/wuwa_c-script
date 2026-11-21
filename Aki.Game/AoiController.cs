@@ -5,15 +5,16 @@ using Aki.Config;
 using Aki.Protocol;
 using Aki.Protocol.Debug;
 using Aki.TDConfigMgr.Component;
+using CSharpScript.Game.World.Define;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x020034D3 RID: 13523
+// Token: 0x02002A47 RID: 10823
 [NullableContext(2)]
 [Nullable(0)]
 public class AoiController : ControllerBase
 {
-	// Token: 0x0601D8A8 RID: 121000 RVA: 0x0083D740 File Offset: 0x0083B940
+	// Token: 0x0601B5A7 RID: 112039 RVA: 0x00864C0C File Offset: 0x00862E0C
 	protected override bool OnInit()
 	{
 		Net.Instance.Register(ENotifyMessageId.LeaveAoiNotify, new Action<IMessage, Net.CallbackStatus>(this.LeaveAoiNotify));
@@ -26,7 +27,7 @@ public class AoiController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D8A9 RID: 121001 RVA: 0x0083D814 File Offset: 0x0083BA14
+	// Token: 0x0601B5A8 RID: 112040 RVA: 0x00864CE0 File Offset: 0x00862EE0
 	protected override bool OnClear()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.LeaveAoiNotify);
@@ -39,7 +40,7 @@ public class AoiController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D8AA RID: 121002 RVA: 0x0083D894 File Offset: 0x0083BA94
+	// Token: 0x0601B5A9 RID: 112041 RVA: 0x00864D60 File Offset: 0x00862F60
 	private void LeaveAoiNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		foreach (long creatureDataId in ((LeaveAoiNotify)msg).EntityIds)
@@ -48,7 +49,7 @@ public class AoiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D8AB RID: 121003 RVA: 0x0083D8F4 File Offset: 0x0083BAF4
+	// Token: 0x0601B5AA RID: 112042 RVA: 0x00864DC0 File Offset: 0x00862FC0
 	private void RemoveEntityAoiNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		foreach (EntityRemoveInfo entityRemoveInfo in ((RemoveEntityAoiNotify)msg).RemoveInfos)
@@ -58,7 +59,7 @@ public class AoiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D8AC RID: 121004 RVA: 0x0083D960 File Offset: 0x0083BB60
+	// Token: 0x0601B5AB RID: 112043 RVA: 0x00864E2C File Offset: 0x0086302C
 	private void PlayerAoiRangeNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		PlayerAoiRangeNotify playerAoiRangeNotify = (PlayerAoiRangeNotify)msg;
@@ -66,14 +67,14 @@ public class AoiController : ControllerBase
 		AoiModel.Instance.MaxCoordinate = new FVector?(new FVector((float)playerAoiRangeNotify.MaxX, (float)playerAoiRangeNotify.MaxY));
 	}
 
-	// Token: 0x0601D8AD RID: 121005 RVA: 0x0083D9B8 File Offset: 0x0083BBB8
+	// Token: 0x0601B5AC RID: 112044 RVA: 0x00864E84 File Offset: 0x00863084
 	private void EntityAddNotify(IMessage msg, Net.CallbackStatus callbackStatus)
 	{
 		EntityAddNotify entityAddNotify = (EntityAddNotify)msg;
 		AoiController.Instance.AddEntityPb(entityAddNotify.EntityPbs, entityAddNotify.IsAdd, callbackStatus);
 	}
 
-	// Token: 0x0601D8AE RID: 121006 RVA: 0x0083D9E4 File Offset: 0x0083BBE4
+	// Token: 0x0601B5AD RID: 112045 RVA: 0x00864EB0 File Offset: 0x008630B0
 	[NullableContext(1)]
 	private void AddEntityPb(IList<EntityPb> entities, bool add, Net.CallbackStatus callbackStatus)
 	{
@@ -117,6 +118,15 @@ public class AoiController : ControllerBase
 			CreatureModel.Instance.GetEntity(id).Entity.GetComponent<CreatureDataComponent>().SetPbDataByProtocol(entityPb);
 			return;
 		}
+		if (entityPb.ConfigType == EntityConfigType.Level)
+		{
+			ClientEntityInfo clientEntityInfo = CreatureModel.Instance.GetClientEntityInfo(entityPb.ConfigId);
+			if (clientEntityInfo != null && clientEntityInfo.IsClientEntity && !clientEntityInfo.IsServerEntity)
+			{
+				clientEntityInfo.UpdateFlag(EClientEntityFlag.ServerEntity, false);
+				return;
+			}
+		}
 		EntityHandle entityHandle = CreatureController.Instance.CreateEntity(entityPb, "AOI");
 		if (entityHandle == null || !entityHandle.Valid)
 		{
@@ -135,17 +145,32 @@ public class AoiController : ControllerBase
 		CreatureController.Instance.LoadEntityAsync(entityHandle, null, false);
 	}
 
-	// Token: 0x0601D8AF RID: 121007 RVA: 0x0083DB68 File Offset: 0x0083BD68
+	// Token: 0x0601B5AE RID: 112046 RVA: 0x00865070 File Offset: 0x00863270
 	private void EntityRemoveNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		foreach (EntityRemoveInfo entityRemoveInfo in ((EntityRemoveNotify)msg).RemoveInfos)
 		{
 			long entityId = entityRemoveInfo.EntityId;
+			EntityHandle entity = CreatureModel.Instance.GetEntity(entityId);
+			if (entity != null && entity.Valid)
+			{
+				CreatureDataComponent component = entity.Entity.GetComponent<CreatureDataComponent>();
+				if (component.IsClientEntity)
+				{
+					ClientEntityInfo clientEntityInfo = CreatureModel.Instance.GetClientEntityInfo(component.GetPbDataId());
+					if (clientEntityInfo != null)
+					{
+						clientEntityInfo.RemoveFlag(EClientEntityFlag.ServerEntity);
+						CreatureController.Instance.TryRemoveClientEntity(component.GetPbDataId(), "[ClientEntity] EntityRemoveNotify");
+						continue;
+					}
+				}
+			}
 			CreatureController.Instance.RemoveEntity(entityId, "EntityRemoveNotify", entityRemoveInfo.Type);
 		}
 	}
 
-	// Token: 0x0601D8B0 RID: 121008 RVA: 0x0083DBD4 File Offset: 0x0083BDD4
+	// Token: 0x0601B5AF RID: 112047 RVA: 0x00865144 File Offset: 0x00863344
 	[NullableContext(1)]
 	private void DrawDebugVoxel(VoxelSpan span, float cellSize, int interval, bool isOverlap = false)
 	{
@@ -159,7 +184,7 @@ public class AoiController : ControllerBase
 		UKismetSystemLibrary.D_DrawDebugBox(GlobalData.World, center, extent, lineColor, rotation, (float)num3, (float)num2);
 	}
 
-	// Token: 0x0601D8B1 RID: 121009 RVA: 0x0083DCB4 File Offset: 0x0083BEB4
+	// Token: 0x0601B5B0 RID: 112048 RVA: 0x00865224 File Offset: 0x00863424
 	public void StopDrawDebugVoxel()
 	{
 		if (this.BoxDurationTimer != null)
@@ -180,7 +205,7 @@ public class AoiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D8B2 RID: 121010 RVA: 0x0083DD25 File Offset: 0x0083BF25
+	// Token: 0x0601B5B1 RID: 112049 RVA: 0x00865295 File Offset: 0x00863495
 	private void VoxelBoxTimerCallback(float delta)
 	{
 		if (this.currentBox != null)
@@ -189,7 +214,7 @@ public class AoiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D8B3 RID: 121011 RVA: 0x0083DD50 File Offset: 0x0083BF50
+	// Token: 0x0601B5B2 RID: 112050 RVA: 0x008652C0 File Offset: 0x008634C0
 	private void VoxelBoxNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		GmIsOverlapNotify gmIsOverlapNotify = (GmIsOverlapNotify)msg;
@@ -209,7 +234,7 @@ public class AoiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D8B4 RID: 121012 RVA: 0x0083DDEC File Offset: 0x0083BFEC
+	// Token: 0x0601B5B3 RID: 112051 RVA: 0x0086535C File Offset: 0x0086355C
 	private void GmVoxelTimerCallback(float delta)
 	{
 		if (this.currentSpans != null)
@@ -221,7 +246,7 @@ public class AoiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D8B5 RID: 121013 RVA: 0x0083DE50 File Offset: 0x0083C050
+	// Token: 0x0601B5B4 RID: 112052 RVA: 0x008653C0 File Offset: 0x008635C0
 	private void GmVoxelInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		GmVoxelInfoNotify gmVoxelInfoNotify = (GmVoxelInfoNotify)msg;
@@ -240,7 +265,7 @@ public class AoiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D8B6 RID: 121014 RVA: 0x0083DEE0 File Offset: 0x0083C0E0
+	// Token: 0x0601B5B5 RID: 112053 RVA: 0x00865450 File Offset: 0x00863650
 	[NullableContext(1)]
 	public void AddMonsterSizeTag(Entity entity)
 	{
@@ -285,8 +310,8 @@ public class AoiController : ControllerBase
 		}
 	}
 
-	// Token: 0x170028DB RID: 10459
-	// (get) Token: 0x0601D8B7 RID: 121015 RVA: 0x0083E008 File Offset: 0x0083C208
+	// Token: 0x17002C73 RID: 11379
+	// (get) Token: 0x0601B5B6 RID: 112054 RVA: 0x00865578 File Offset: 0x00863778
 	[Nullable(1)]
 	public static AoiController Instance
 	{
@@ -297,7 +322,7 @@ public class AoiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D8B8 RID: 121016 RVA: 0x0083E00F File Offset: 0x0083C20F
+	// Token: 0x0601B5B7 RID: 112055 RVA: 0x0086557F File Offset: 0x0086377F
 	[NullableContext(1)]
 	public static AoiController GetOrCreateInstance()
 	{
@@ -308,7 +333,7 @@ public class AoiController : ControllerBase
 		return AoiController._Instance;
 	}
 
-	// Token: 0x0601D8B9 RID: 121017 RVA: 0x0083E023 File Offset: 0x0083C223
+	// Token: 0x0601B5B8 RID: 112056 RVA: 0x00865593 File Offset: 0x00863793
 	public static bool CreateInstance()
 	{
 		if (AoiController._Instance != null)
@@ -319,45 +344,45 @@ public class AoiController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D8BA RID: 121018 RVA: 0x0083E039 File Offset: 0x0083C239
+	// Token: 0x0601B5B9 RID: 112057 RVA: 0x008655A9 File Offset: 0x008637A9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601D8BB RID: 121019 RVA: 0x0083E03B File Offset: 0x0083C23B
+	// Token: 0x0601B5BA RID: 112058 RVA: 0x008655AB File Offset: 0x008637AB
 	public static void ResetStaticDefaultValue()
 	{
 		AoiController._Instance = null;
 	}
 
-	// Token: 0x0601D8BC RID: 121020 RVA: 0x0083E043 File Offset: 0x0083C243
+	// Token: 0x0601B5BB RID: 112059 RVA: 0x008655B3 File Offset: 0x008637B3
 	static AoiController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AoiController.CreateStaticDefaultValue), new Action(AoiController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E81D RID: 59421
+	// Token: 0x0400ECD1 RID: 60625
 	private TimerHandle VoxelDurationTimer;
 
-	// Token: 0x0400E81E RID: 59422
+	// Token: 0x0400ECD2 RID: 60626
 	private TimerHandle BoxDurationTimer;
 
-	// Token: 0x0400E81F RID: 59423
+	// Token: 0x0400ECD3 RID: 60627
 	private const int MILLIONSECOND_PER_SECOND = 1000;
 
-	// Token: 0x0400E820 RID: 59424
+	// Token: 0x0400ECD4 RID: 60628
 	private VoxelSpan currentBox;
 
-	// Token: 0x0400E821 RID: 59425
+	// Token: 0x0400ECD5 RID: 60629
 	private float currentBoxCellSize;
 
-	// Token: 0x0400E822 RID: 59426
+	// Token: 0x0400ECD6 RID: 60630
 	private int currentBoxInterval;
 
-	// Token: 0x0400E823 RID: 59427
+	// Token: 0x0400ECD7 RID: 60631
 	private bool currentBoxIsOverlap;
 
-	// Token: 0x0400E824 RID: 59428
+	// Token: 0x0400ECD8 RID: 60632
 	[Nullable(new byte[]
 	{
 		2,
@@ -365,12 +390,12 @@ public class AoiController : ControllerBase
 	})]
 	private IList<VoxelSpan> currentSpans;
 
-	// Token: 0x0400E825 RID: 59429
+	// Token: 0x0400ECD9 RID: 60633
 	private float currentSpansCellSize;
 
-	// Token: 0x0400E826 RID: 59430
+	// Token: 0x0400ECDA RID: 60634
 	private int currentSpansInterval;
 
-	// Token: 0x0400E827 RID: 59431
+	// Token: 0x0400ECDB RID: 60635
 	private static AoiController _Instance;
 }

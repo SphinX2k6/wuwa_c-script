@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 {
-	// Token: 0x020062B8 RID: 25272
+	// Token: 0x02005236 RID: 21046
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityPreWarmDefine
 	{
-		// Token: 0x040213CF RID: 136143
+		// Token: 0x0401BCFE RID: 113918
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<int, string> titleNumIcons = new Dictionary<int, string>
 		{
@@ -43,10 +43,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			}
 		};
 
-		// Token: 0x040213D0 RID: 136144
+		// Token: 0x0401BCFF RID: 113919
 		public const int PREWARMTASKNUM = 7;
 
-		// Token: 0x040213D1 RID: 136145
+		// Token: 0x0401BD00 RID: 113920
 		[StaticVariableRuleIgnore]
 		public static readonly List<int> leftCollectItems = new List<int>
 		{
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			3
 		};
 
-		// Token: 0x040213D2 RID: 136146
+		// Token: 0x0401BD01 RID: 113921
 		[StaticVariableRuleIgnore]
 		public static readonly List<int> rightCollectItems = new List<int>
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			7
 		};
 
-		// Token: 0x040213D3 RID: 136147
+		// Token: 0x0401BD02 RID: 113922
 		public const int SKIPTIMESPEED = 5;
 	}
 }

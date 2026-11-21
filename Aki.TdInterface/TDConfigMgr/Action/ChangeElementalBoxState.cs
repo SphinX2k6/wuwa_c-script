@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014CA RID: 5322
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001623 RID: 5667
 	public class ChangeElementalBoxState : ActionParams
 	{
-		// Token: 0x06007932 RID: 31026 RVA: 0x001223EC File Offset: 0x001205EC
+		// Token: 0x06007FFF RID: 32767 RVA: 0x00131038 File Offset: 0x0012F238
 		private ChangeElementalBoxState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007933 RID: 31027 RVA: 0x00122424 File Offset: 0x00120624
+		// Token: 0x06008000 RID: 32768 RVA: 0x00131070 File Offset: 0x0012F270
 		public static ChangeElementalBoxState Create([Nullable(2)] ChangeElementalBoxState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007934 RID: 31028 RVA: 0x00122437 File Offset: 0x00120637
+		// Token: 0x06008001 RID: 32769 RVA: 0x00131083 File Offset: 0x0012F283
 		public static ChangeElementalBoxState CreateFromSetValue([Nullable(2)] ChangeElementalBoxState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007935 RID: 31029 RVA: 0x0012244A File Offset: 0x0012064A
+		// Token: 0x06008002 RID: 32770 RVA: 0x00131096 File Offset: 0x0012F296
 		public ChangeElementalBoxState_SetValue ToSetValue()
 		{
 			return new ChangeElementalBoxState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028A0 RID: 10400
-		// (get) Token: 0x06007936 RID: 31030 RVA: 0x00122469 File Offset: 0x00120669
-		// (set) Token: 0x06007937 RID: 31031 RVA: 0x00122490 File Offset: 0x00120690
+		// Token: 0x17002A8A RID: 10890
+		// (get) Token: 0x06008003 RID: 32771 RVA: 0x001310B5 File Offset: 0x0012F2B5
+		// (set) Token: 0x06008004 RID: 32772 RVA: 0x001310DC File Offset: 0x0012F2DC
 		public virtual IChangeElementalBoxStateTarget Target
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028A1 RID: 10401
-		// (get) Token: 0x06007938 RID: 31032 RVA: 0x0012249E File Offset: 0x0012069E
-		// (set) Token: 0x06007939 RID: 31033 RVA: 0x001224C9 File Offset: 0x001206C9
+		// Token: 0x17002A8B RID: 10891
+		// (get) Token: 0x06008005 RID: 32773 RVA: 0x001310EA File Offset: 0x0012F2EA
+		// (set) Token: 0x06008006 RID: 32774 RVA: 0x00131115 File Offset: 0x0012F315
 		public virtual string State
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400465D RID: 18013
+		// Token: 0x040049F8 RID: 18936
 		[Nullable(2)]
 		protected new ChangeElementalBoxState FbInstance;
 
-		// Token: 0x0400465E RID: 18014
+		// Token: 0x040049F9 RID: 18937
 		[Nullable(2)]
 		protected ChangeElementalBoxState_SetValue PocoInterface;
 	}

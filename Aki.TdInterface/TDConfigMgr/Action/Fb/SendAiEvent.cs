@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200276A RID: 10090
+	// Token: 0x02002A3C RID: 10812
 	public class SendAiEvent : ActionParams
 	{
-		// Token: 0x0600E0BC RID: 57532 RVA: 0x0021364F File Offset: 0x0021184F
-		[NullableContext(1)]
+		// Token: 0x0600EEDA RID: 61146 RVA: 0x002303E3 File Offset: 0x0022E5E3
 		public static SendAiEvent Create(ISendAiEvent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043AA RID: 17322
-		// (get) Token: 0x0600E0BD RID: 57533 RVA: 0x00213670 File Offset: 0x00211870
+		// Token: 0x17004710 RID: 18192
+		// (get) Token: 0x0600EEDB RID: 61147 RVA: 0x00230404 File Offset: 0x0022E604
 		public virtual int? EntityId
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043AB RID: 17323
-		// (get) Token: 0x0600E0BE RID: 57534 RVA: 0x002136A6 File Offset: 0x002118A6
+		// Token: 0x17004711 RID: 18193
+		// (get) Token: 0x0600EEDC RID: 61148 RVA: 0x0023043A File Offset: 0x0022E63A
 		public virtual EAiEventType EventType
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C72 RID: 31858
+		// Token: 0x04008328 RID: 33576
 		private ISendAiEvent Instance;
 	}
 }

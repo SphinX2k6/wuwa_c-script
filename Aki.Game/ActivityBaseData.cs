@@ -9,13 +9,13 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x02001675 RID: 5749
+// Token: 0x02000B2D RID: 2861
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityBaseData
 {
-	// Token: 0x17000DA8 RID: 3496
-	// (get) Token: 0x0600A246 RID: 41542 RVA: 0x0023CCDD File Offset: 0x0023AEDD
+	// Token: 0x17000DC9 RID: 3529
+	// (get) Token: 0x06007624 RID: 30244 RVA: 0x00246B6D File Offset: 0x00244D6D
 	public int Id
 	{
 		get
@@ -24,14 +24,14 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600A247 RID: 41543 RVA: 0x0023CCE5 File Offset: 0x0023AEE5
+	// Token: 0x06007625 RID: 30245 RVA: 0x00246B75 File Offset: 0x00244D75
 	public string GetCacheKey()
 	{
 		return this.CacheKey;
 	}
 
-	// Token: 0x17000DA9 RID: 3497
-	// (get) Token: 0x0600A248 RID: 41544 RVA: 0x0023CCED File Offset: 0x0023AEED
+	// Token: 0x17000DCA RID: 3530
+	// (get) Token: 0x06007626 RID: 30246 RVA: 0x00246B7D File Offset: 0x00244D7D
 	public ActivityType Type
 	{
 		get
@@ -40,8 +40,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DAA RID: 3498
-	// (get) Token: 0x0600A249 RID: 41545 RVA: 0x0023CCF5 File Offset: 0x0023AEF5
+	// Token: 0x17000DCB RID: 3531
+	// (get) Token: 0x06007627 RID: 30247 RVA: 0x00246B85 File Offset: 0x00244D85
 	public EActivityTimeType TimeType
 	{
 		get
@@ -50,8 +50,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DAB RID: 3499
-	// (get) Token: 0x0600A24A RID: 41546 RVA: 0x0023CCFD File Offset: 0x0023AEFD
+	// Token: 0x17000DCC RID: 3532
+	// (get) Token: 0x06007628 RID: 30248 RVA: 0x00246B8D File Offset: 0x00244D8D
 	public int OpenType
 	{
 		get
@@ -60,8 +60,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DAC RID: 3500
-	// (get) Token: 0x0600A24B RID: 41547 RVA: 0x0023CD08 File Offset: 0x0023AF08
+	// Token: 0x17000DCD RID: 3533
+	// (get) Token: 0x06007629 RID: 30249 RVA: 0x00246B98 File Offset: 0x00244D98
 	public int Sort
 	{
 		get
@@ -82,8 +82,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DAD RID: 3501
-	// (get) Token: 0x0600A24C RID: 41548 RVA: 0x0023CD7E File Offset: 0x0023AF7E
+	// Token: 0x17000DCE RID: 3534
+	// (get) Token: 0x0600762A RID: 30250 RVA: 0x00246C0E File Offset: 0x00244E0E
 	public long BeginShowTime
 	{
 		get
@@ -92,8 +92,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DAE RID: 3502
-	// (get) Token: 0x0600A24D RID: 41549 RVA: 0x0023CD86 File Offset: 0x0023AF86
+	// Token: 0x17000DCF RID: 3535
+	// (get) Token: 0x0600762B RID: 30251 RVA: 0x00246C16 File Offset: 0x00244E16
 	public long EndShowTime
 	{
 		get
@@ -102,8 +102,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DAF RID: 3503
-	// (get) Token: 0x0600A24E RID: 41550 RVA: 0x0023CD8E File Offset: 0x0023AF8E
+	// Token: 0x17000DD0 RID: 3536
+	// (get) Token: 0x0600762C RID: 30252 RVA: 0x00246C1E File Offset: 0x00244E1E
 	public long BeginOpenTime
 	{
 		get
@@ -112,14 +112,14 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600A24F RID: 41551 RVA: 0x0023CD96 File Offset: 0x0023AF96
+	// Token: 0x0600762D RID: 30253 RVA: 0x00246C26 File Offset: 0x00244E26
 	public virtual long GetProtocolBeginOpenTime()
 	{
 		return this.BeginOpenTimeInternal;
 	}
 
-	// Token: 0x17000DB0 RID: 3504
-	// (get) Token: 0x0600A250 RID: 41552 RVA: 0x0023CD9E File Offset: 0x0023AF9E
+	// Token: 0x17000DD1 RID: 3537
+	// (get) Token: 0x0600762E RID: 30254 RVA: 0x00246C2E File Offset: 0x00244E2E
 	public long EndOpenTime
 	{
 		get
@@ -128,8 +128,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DB1 RID: 3505
-	// (get) Token: 0x0600A251 RID: 41553 RVA: 0x0023CDA6 File Offset: 0x0023AFA6
+	// Token: 0x17000DD2 RID: 3538
+	// (get) Token: 0x0600762F RID: 30255 RVA: 0x00246C36 File Offset: 0x00244E36
 	public long BeginLimitTime
 	{
 		get
@@ -138,8 +138,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DB2 RID: 3506
-	// (get) Token: 0x0600A252 RID: 41554 RVA: 0x0023CDAE File Offset: 0x0023AFAE
+	// Token: 0x17000DD3 RID: 3539
+	// (get) Token: 0x06007630 RID: 30256 RVA: 0x00246C3E File Offset: 0x00244E3E
 	public long EndLimitTime
 	{
 		get
@@ -148,8 +148,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DB3 RID: 3507
-	// (get) Token: 0x0600A253 RID: 41555 RVA: 0x0023CDB6 File Offset: 0x0023AFB6
+	// Token: 0x17000DD4 RID: 3540
+	// (get) Token: 0x06007631 RID: 30257 RVA: 0x00246C46 File Offset: 0x00244E46
 	public long BeginRewardTime
 	{
 		get
@@ -158,8 +158,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DB4 RID: 3508
-	// (get) Token: 0x0600A254 RID: 41556 RVA: 0x0023CDBE File Offset: 0x0023AFBE
+	// Token: 0x17000DD5 RID: 3541
+	// (get) Token: 0x06007632 RID: 30258 RVA: 0x00246C4E File Offset: 0x00244E4E
 	public long EndRewardTime
 	{
 		get
@@ -168,8 +168,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DB5 RID: 3509
-	// (get) Token: 0x0600A255 RID: 41557 RVA: 0x0023CDC8 File Offset: 0x0023AFC8
+	// Token: 0x17000DD6 RID: 3542
+	// (get) Token: 0x06007633 RID: 30259 RVA: 0x00246C58 File Offset: 0x00244E58
 	public unsafe bool FinishShowState
 	{
 		get
@@ -210,8 +210,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DB6 RID: 3510
-	// (get) Token: 0x0600A256 RID: 41558 RVA: 0x0023CEAC File Offset: 0x0023B0AC
+	// Token: 0x17000DD7 RID: 3543
+	// (get) Token: 0x06007634 RID: 30260 RVA: 0x00246D3C File Offset: 0x00244F3C
 	public bool FinishSinkState
 	{
 		get
@@ -220,19 +220,19 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DB7 RID: 3511
-	// (get) Token: 0x0600A257 RID: 41559 RVA: 0x0023CEE5 File Offset: 0x0023B0E5
-	// (set) Token: 0x0600A258 RID: 41560 RVA: 0x0023CEED File Offset: 0x0023B0ED
+	// Token: 0x17000DD8 RID: 3544
+	// (get) Token: 0x06007635 RID: 30261 RVA: 0x00246D75 File Offset: 0x00244F75
+	// (set) Token: 0x06007636 RID: 30262 RVA: 0x00246D7D File Offset: 0x00244F7D
 	public bool SortSinkStateCached { get; private set; }
 
-	// Token: 0x0600A259 RID: 41561 RVA: 0x0023CEF6 File Offset: 0x0023B0F6
+	// Token: 0x06007637 RID: 30263 RVA: 0x00246D86 File Offset: 0x00244F86
 	public void CacheSortSinkState()
 	{
 		this.SortSinkStateCached = this.FinishSinkState;
 	}
 
-	// Token: 0x17000DB8 RID: 3512
-	// (get) Token: 0x0600A25A RID: 41562 RVA: 0x0023CF04 File Offset: 0x0023B104
+	// Token: 0x17000DD9 RID: 3545
+	// (get) Token: 0x06007638 RID: 30264 RVA: 0x00246D94 File Offset: 0x00244F94
 	public unsafe virtual bool RedPointShowState
 	{
 		get
@@ -290,7 +290,7 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600A25B RID: 41563 RVA: 0x0023D034 File Offset: 0x0023B234
+	// Token: 0x06007639 RID: 30265 RVA: 0x00246EC4 File Offset: 0x002450C4
 	public EActivityOpenStatus GetActivityOpenStatus()
 	{
 		if (this.IsUnLock())
@@ -311,8 +311,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DB9 RID: 3513
-	// (get) Token: 0x0600A25C RID: 41564 RVA: 0x0023D055 File Offset: 0x0023B255
+	// Token: 0x17000DDA RID: 3546
+	// (get) Token: 0x0600763A RID: 30266 RVA: 0x00246EE5 File Offset: 0x002450E5
 	public long BubbleEndShowTime
 	{
 		get
@@ -329,8 +329,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DBA RID: 3514
-	// (get) Token: 0x0600A25D RID: 41565 RVA: 0x0023D07F File Offset: 0x0023B27F
+	// Token: 0x17000DDB RID: 3547
+	// (get) Token: 0x0600763B RID: 30267 RVA: 0x00246F0F File Offset: 0x0024510F
 	public string BubbleEndShowTimeText
 	{
 		get
@@ -339,8 +339,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DBB RID: 3515
-	// (get) Token: 0x0600A25E RID: 41566 RVA: 0x0023D087 File Offset: 0x0023B287
+	// Token: 0x17000DDC RID: 3548
+	// (get) Token: 0x0600763C RID: 30268 RVA: 0x00246F17 File Offset: 0x00245117
 	public EActivityBubbleType BubbleType
 	{
 		get
@@ -349,13 +349,13 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600A25F RID: 41567 RVA: 0x0023D090 File Offset: 0x0023B290
+	// Token: 0x0600763D RID: 30269 RVA: 0x00246F20 File Offset: 0x00245120
 	public bool IsHiddenByConfig()
 	{
 		return this.LocalConfig != null && this.LocalConfig.GetValueOrDefault().HideActivity;
 	}
 
-	// Token: 0x0600A260 RID: 41568 RVA: 0x0023D0BC File Offset: 0x0023B2BC
+	// Token: 0x0600763E RID: 30270 RVA: 0x00246F4C File Offset: 0x0024514C
 	public void UpdateImportantBubble()
 	{
 		if (this.FinishShowState)
@@ -399,8 +399,8 @@ public class ActivityBaseData
 		this.IsShowImportantBubbleInternal = true;
 	}
 
-	// Token: 0x17000DBC RID: 3516
-	// (get) Token: 0x0600A261 RID: 41569 RVA: 0x0023D1C4 File Offset: 0x0023B3C4
+	// Token: 0x17000DDD RID: 3549
+	// (get) Token: 0x0600763F RID: 30271 RVA: 0x00247054 File Offset: 0x00245254
 	public bool IsShowImportantBubble
 	{
 		get
@@ -409,26 +409,26 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600A262 RID: 41570 RVA: 0x0023D1CC File Offset: 0x0023B3CC
+	// Token: 0x06007640 RID: 30272 RVA: 0x0024705C File Offset: 0x0024525C
 	public virtual ERedDotName? GetExternalButtonRedPointName()
 	{
 		return null;
 	}
 
-	// Token: 0x0600A263 RID: 41571 RVA: 0x0023D1E2 File Offset: 0x0023B3E2
+	// Token: 0x06007641 RID: 30273 RVA: 0x00247072 File Offset: 0x00245272
 	public virtual int GetExternalButtonRedPointId()
 	{
 		return 0;
 	}
 
-	// Token: 0x0600A264 RID: 41572 RVA: 0x0023D1E5 File Offset: 0x0023B3E5
+	// Token: 0x06007642 RID: 30274 RVA: 0x00247075 File Offset: 0x00245275
 	public virtual bool GetExternalButtonRedPointState()
 	{
 		return false;
 	}
 
-	// Token: 0x17000DBD RID: 3517
-	// (get) Token: 0x0600A265 RID: 41573 RVA: 0x0023D1E8 File Offset: 0x0023B3E8
+	// Token: 0x17000DDE RID: 3550
+	// (get) Token: 0x06007643 RID: 30275 RVA: 0x00247078 File Offset: 0x00245278
 	public int ConditionGroupId
 	{
 		get
@@ -437,8 +437,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DBE RID: 3518
-	// (get) Token: 0x0600A266 RID: 41574 RVA: 0x0023D1F0 File Offset: 0x0023B3F0
+	// Token: 0x17000DDF RID: 3551
+	// (get) Token: 0x06007644 RID: 30276 RVA: 0x00247080 File Offset: 0x00245280
 	public int PreOpenConditionGroupId
 	{
 		get
@@ -447,8 +447,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DBF RID: 3519
-	// (get) Token: 0x0600A267 RID: 41575 RVA: 0x0023D1F8 File Offset: 0x0023B3F8
+	// Token: 0x17000DE0 RID: 3552
+	// (get) Token: 0x06007645 RID: 30277 RVA: 0x00247088 File Offset: 0x00245288
 	public List<int> FinishedConditionIdList
 	{
 		get
@@ -457,8 +457,8 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000DC0 RID: 3520
-	// (get) Token: 0x0600A268 RID: 41576 RVA: 0x0023D200 File Offset: 0x0023B400
+	// Token: 0x17000DE1 RID: 3553
+	// (get) Token: 0x06007646 RID: 30278 RVA: 0x00247090 File Offset: 0x00245290
 	public string BgTexturePath
 	{
 		get
@@ -467,31 +467,31 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600A269 RID: 41577 RVA: 0x0023D220 File Offset: 0x0023B420
+	// Token: 0x06007647 RID: 30279 RVA: 0x002470B0 File Offset: 0x002452B0
 	public bool IsActivityConditionFinished(int conditionId)
 	{
 		return this.IsUnLock() || this.FinishedConditionIdsInternal.Contains(conditionId);
 	}
 
-	// Token: 0x0600A26A RID: 41578 RVA: 0x0023D238 File Offset: 0x0023B438
+	// Token: 0x06007648 RID: 30280 RVA: 0x002470C8 File Offset: 0x002452C8
 	public virtual bool CheckIfInShowTime()
 	{
 		return this.CheckIfInTimeInterval(this.BeginShowTimeInternal, this.EndShowTimeInternal);
 	}
 
-	// Token: 0x0600A26B RID: 41579 RVA: 0x0023D24C File Offset: 0x0023B44C
+	// Token: 0x06007649 RID: 30281 RVA: 0x002470DC File Offset: 0x002452DC
 	public bool CheckIfClose()
 	{
 		return (this.BeginOpenTimeInternal == -1L && this.EndOpenTimeInternal == -1L) || (!this.CheckIfInOpenTime() && !this.CheckIfInShowTime());
 	}
 
-	// Token: 0x0600A26C RID: 41580 RVA: 0x0023D277 File Offset: 0x0023B477
+	// Token: 0x0600764A RID: 30282 RVA: 0x00247107 File Offset: 0x00245307
 	public virtual bool CheckIfInOpenTime()
 	{
 		return this.CheckIfInTimeInterval(this.BeginOpenTimeInternal, this.EndOpenTimeInternal);
 	}
 
-	// Token: 0x0600A26D RID: 41581 RVA: 0x0023D28B File Offset: 0x0023B48B
+	// Token: 0x0600764B RID: 30283 RVA: 0x0024711B File Offset: 0x0024531B
 	public bool CheckIfInLimitTime()
 	{
 		if (this.OpenType == 0)
@@ -501,13 +501,13 @@ public class ActivityBaseData
 		return this.OpenType == 2 && this.CheckIfInTimeInterval(this.BeginLimitTimeInternal, this.EndLimitTimeInternal);
 	}
 
-	// Token: 0x0600A26E RID: 41582 RVA: 0x0023D2B9 File Offset: 0x0023B4B9
+	// Token: 0x0600764C RID: 30284 RVA: 0x00247149 File Offset: 0x00245349
 	public bool CheckIfInRewardTime()
 	{
 		return this.CheckIfInTimeInterval(this.BeginRewardTimeInternal, this.EndRewardTimeInternal);
 	}
 
-	// Token: 0x0600A26F RID: 41583 RVA: 0x0023D2D0 File Offset: 0x0023B4D0
+	// Token: 0x0600764D RID: 30285 RVA: 0x00247160 File Offset: 0x00245360
 	public bool CheckIfInTimeInterval(long startTime, long endTime)
 	{
 		if (startTime == -1L && endTime == -1L)
@@ -533,7 +533,7 @@ public class ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600A270 RID: 41584 RVA: 0x0023D30E File Offset: 0x0023B50E
+	// Token: 0x0600764E RID: 30286 RVA: 0x0024719E File Offset: 0x0024539E
 	private void RefreshActivityTimeType(ActivityOpenType configOpenType)
 	{
 		switch (configOpenType)
@@ -553,7 +553,7 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600A271 RID: 41585 RVA: 0x0023D350 File Offset: 0x0023B550
+	// Token: 0x0600764F RID: 30287 RVA: 0x002471E0 File Offset: 0x002453E0
 	public List<TItem> GetPreviewReward(int? dropId = null)
 	{
 		List<TItem> list = new List<TItem>();
@@ -589,7 +589,7 @@ public class ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x0600A272 RID: 41586 RVA: 0x0023D444 File Offset: 0x0023B644
+	// Token: 0x06007650 RID: 30288 RVA: 0x002472D4 File Offset: 0x002454D4
 	public string GetTitle()
 	{
 		if (this.LocalConfig == null)
@@ -599,7 +599,7 @@ public class ActivityBaseData
 		return ConfigMultiTextLang.GetLocalTextNew(this.LocalConfig.Value.Title, null) ?? "";
 	}
 
-	// Token: 0x0600A273 RID: 41587 RVA: 0x0023D488 File Offset: 0x0023B688
+	// Token: 0x06007651 RID: 30289 RVA: 0x00247318 File Offset: 0x00245518
 	public string GetTitleTextId()
 	{
 		if (this.LocalConfig == null)
@@ -609,31 +609,31 @@ public class ActivityBaseData
 		return this.LocalConfig.Value.Title;
 	}
 
-	// Token: 0x0600A274 RID: 41588 RVA: 0x0023D4BC File Offset: 0x0023B6BC
+	// Token: 0x06007652 RID: 30290 RVA: 0x0024734C File Offset: 0x0024554C
 	public int GetHelpId()
 	{
 		return this.LocalConfig.Value.HelpId;
 	}
 
-	// Token: 0x0600A275 RID: 41589 RVA: 0x0023D4DC File Offset: 0x0023B6DC
+	// Token: 0x06007653 RID: 30291 RVA: 0x0024736C File Offset: 0x0024556C
 	public bool IsUnLock()
 	{
 		return this.IsUnLockInternal;
 	}
 
-	// Token: 0x0600A276 RID: 41590 RVA: 0x0023D4E9 File Offset: 0x0023B6E9
+	// Token: 0x06007654 RID: 30292 RVA: 0x00247379 File Offset: 0x00245579
 	public bool CanPreOpen()
 	{
 		return (this.IsPreOpenInternal && this.HasPreOpenCondition()) || this.IsPreOpenInternal;
 	}
 
-	// Token: 0x0600A277 RID: 41591 RVA: 0x0023D503 File Offset: 0x0023B703
+	// Token: 0x06007655 RID: 30293 RVA: 0x00247393 File Offset: 0x00245593
 	public bool HasPreOpenCondition()
 	{
 		return this.PreOpenConditionGroupIdInternal > 0;
 	}
 
-	// Token: 0x0600A278 RID: 41592 RVA: 0x0023D510 File Offset: 0x0023B710
+	// Token: 0x06007656 RID: 30294 RVA: 0x002473A0 File Offset: 0x002455A0
 	public bool GetPreGuideQuestFinishState()
 	{
 		List<int> preGuideQuestIds = this.PreGuideQuestIds;
@@ -648,7 +648,7 @@ public class ActivityBaseData
 		return this.IsUnLockInternal;
 	}
 
-	// Token: 0x0600A279 RID: 41593 RVA: 0x0023D558 File Offset: 0x0023B758
+	// Token: 0x06007657 RID: 30295 RVA: 0x002473E8 File Offset: 0x002455E8
 	public int GetUnFinishPreGuideQuestId()
 	{
 		List<int> preGuideQuestIds = this.PreGuideQuestIds;
@@ -663,7 +663,7 @@ public class ActivityBaseData
 		return 0;
 	}
 
-	// Token: 0x0600A27A RID: 41594 RVA: 0x0023D59C File Offset: 0x0023B79C
+	// Token: 0x06007658 RID: 30296 RVA: 0x0024742C File Offset: 0x0024562C
 	public string GetPreShowGuideQuestName()
 	{
 		StringBuilder stringBuilder = new StringBuilder();
@@ -690,26 +690,26 @@ public class ActivityBaseData
 		return stringBuilder.ToString();
 	}
 
-	// Token: 0x0600A27B RID: 41595 RVA: 0x0023D650 File Offset: 0x0023B850
+	// Token: 0x06007659 RID: 30297 RVA: 0x002474E0 File Offset: 0x002456E0
 	[NullableContext(2)]
 	public List<int> GetPreGuideQuestIds()
 	{
 		return this.PreGuideQuestIds;
 	}
 
-	// Token: 0x0600A27C RID: 41596 RVA: 0x0023D658 File Offset: 0x0023B858
+	// Token: 0x0600765A RID: 30298 RVA: 0x002474E8 File Offset: 0x002456E8
 	public void SetIfFirstOpen(bool isFirstOpen)
 	{
 		this.IsFirstOpen = isFirstOpen;
 	}
 
-	// Token: 0x0600A27D RID: 41597 RVA: 0x0023D661 File Offset: 0x0023B861
+	// Token: 0x0600765B RID: 30299 RVA: 0x002474F1 File Offset: 0x002456F1
 	public bool GetIfFirstOpen()
 	{
 		return this.IsFirstOpen;
 	}
 
-	// Token: 0x0600A27E RID: 41598 RVA: 0x0023D669 File Offset: 0x0023B869
+	// Token: 0x0600765C RID: 30300 RVA: 0x002474F9 File Offset: 0x002456F9
 	public void SetFirstOpenFalse()
 	{
 		if (this.IsFirstOpen)
@@ -720,30 +720,30 @@ public class ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600A27F RID: 41599 RVA: 0x0023D698 File Offset: 0x0023B898
+	// Token: 0x0600765D RID: 30301 RVA: 0x00247528 File Offset: 0x00245728
 	public bool CheckIfShowTabTime()
 	{
 		return this.OpenType != 1 && this.OpenType != 2 && this.CheckIfInOpenTime() && this.LocalConfig.Value.ShowTabTime;
 	}
 
-	// Token: 0x0600A280 RID: 41600 RVA: 0x0023D6D6 File Offset: 0x0023B8D6
+	// Token: 0x0600765E RID: 30302 RVA: 0x00247566 File Offset: 0x00245766
 	protected virtual void OnSetFirstOpenFalse()
 	{
 	}
 
-	// Token: 0x0600A281 RID: 41601 RVA: 0x0023D6D8 File Offset: 0x0023B8D8
+	// Token: 0x0600765F RID: 30303 RVA: 0x00247568 File Offset: 0x00245768
 	protected virtual bool GetExDataFinishShowState()
 	{
 		return false;
 	}
 
-	// Token: 0x0600A282 RID: 41602 RVA: 0x0023D6DB File Offset: 0x0023B8DB
+	// Token: 0x06007660 RID: 30304 RVA: 0x0024756B File Offset: 0x0024576B
 	public virtual bool GetExDataRedPointShowState()
 	{
 		return false;
 	}
 
-	// Token: 0x0600A283 RID: 41603 RVA: 0x0023D6DE File Offset: 0x0023B8DE
+	// Token: 0x06007661 RID: 30305 RVA: 0x0024756E File Offset: 0x0024576E
 	public void ForceClose()
 	{
 		this.BeginOpenTimeInternal = -1L;
@@ -753,18 +753,18 @@ public class ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.IdInternal);
 	}
 
-	// Token: 0x0600A284 RID: 41604 RVA: 0x0023D716 File Offset: 0x0023B916
+	// Token: 0x06007662 RID: 30306 RVA: 0x002475A6 File Offset: 0x002457A6
 	public void ActivityClose()
 	{
 		this.OnActivityClose();
 	}
 
-	// Token: 0x0600A285 RID: 41605 RVA: 0x0023D71E File Offset: 0x0023B91E
+	// Token: 0x06007663 RID: 30307 RVA: 0x002475AE File Offset: 0x002457AE
 	protected virtual void OnActivityClose()
 	{
 	}
 
-	// Token: 0x0600A286 RID: 41606 RVA: 0x0023D720 File Offset: 0x0023B920
+	// Token: 0x06007664 RID: 30308 RVA: 0x002475B0 File Offset: 0x002457B0
 	public void RegisterEvents()
 	{
 		if (this.IsEventRegistered)
@@ -775,7 +775,7 @@ public class ActivityBaseData
 		this.OnAddEvents();
 	}
 
-	// Token: 0x0600A287 RID: 41607 RVA: 0x0023D738 File Offset: 0x0023B938
+	// Token: 0x06007665 RID: 30309 RVA: 0x002475C8 File Offset: 0x002457C8
 	public void UnRegisterEvents()
 	{
 		if (!this.IsEventRegistered)
@@ -786,7 +786,7 @@ public class ActivityBaseData
 		this.OnRemoveEvents();
 	}
 
-	// Token: 0x0600A288 RID: 41608 RVA: 0x0023D750 File Offset: 0x0023B950
+	// Token: 0x06007666 RID: 30310 RVA: 0x002475E0 File Offset: 0x002457E0
 	public void Init(ActivityData data)
 	{
 		this.IdInternal = data.Id;
@@ -817,7 +817,7 @@ public class ActivityBaseData
 		this.RegisterEvents();
 	}
 
-	// Token: 0x0600A289 RID: 41609 RVA: 0x0023D918 File Offset: 0x0023BB18
+	// Token: 0x06007667 RID: 30311 RVA: 0x002477A8 File Offset: 0x002459A8
 	public unsafe void Phrase(ActivityData data)
 	{
 		this.BeginShowTimeInternal = MathUtils.Instance.LongToBigInt(data.BeginShowTime);
@@ -860,7 +860,7 @@ public class ActivityBaseData
 		this.TryReportFinishSinkLog();
 	}
 
-	// Token: 0x0600A28A RID: 41610 RVA: 0x0023DB98 File Offset: 0x0023BD98
+	// Token: 0x06007668 RID: 30312 RVA: 0x00247A28 File Offset: 0x00245C28
 	private void TryReportFinishSinkLog()
 	{
 		bool finishSinkState = this.FinishSinkState;
@@ -875,111 +875,111 @@ public class ActivityBaseData
 		this._finishSinkStateCache = finishSinkState;
 	}
 
-	// Token: 0x0600A28B RID: 41611 RVA: 0x0023DBCF File Offset: 0x0023BDCF
+	// Token: 0x06007669 RID: 30313 RVA: 0x00247A5F File Offset: 0x00245C5F
 	protected virtual void OnAddEvents()
 	{
 	}
 
-	// Token: 0x0600A28C RID: 41612 RVA: 0x0023DBD1 File Offset: 0x0023BDD1
+	// Token: 0x0600766A RID: 30314 RVA: 0x00247A61 File Offset: 0x00245C61
 	protected virtual void OnRemoveEvents()
 	{
 	}
 
-	// Token: 0x0600A28D RID: 41613 RVA: 0x0023DBD3 File Offset: 0x0023BDD3
+	// Token: 0x0600766B RID: 30315 RVA: 0x00247A63 File Offset: 0x00245C63
 	protected virtual void OnInit(ActivityData data)
 	{
 	}
 
-	// Token: 0x0600A28E RID: 41614 RVA: 0x0023DBD5 File Offset: 0x0023BDD5
+	// Token: 0x0600766C RID: 30316 RVA: 0x00247A65 File Offset: 0x00245C65
 	protected virtual void PhraseEx(ActivityData data)
 	{
 	}
 
-	// Token: 0x0600A28F RID: 41615 RVA: 0x0023DBD7 File Offset: 0x0023BDD7
+	// Token: 0x0600766D RID: 30317 RVA: 0x00247A67 File Offset: 0x00245C67
 	public virtual bool NeedSelfControlFirstRedPoint()
 	{
 		return false;
 	}
 
-	// Token: 0x040049D2 RID: 18898
+	// Token: 0x04004A78 RID: 19064
 	private int IdInternal;
 
-	// Token: 0x040049D3 RID: 18899
+	// Token: 0x04004A79 RID: 19065
 	private ActivityType ActivityType;
 
-	// Token: 0x040049D4 RID: 18900
+	// Token: 0x04004A7A RID: 19066
 	private EActivityTimeType ActivityTimeType;
 
-	// Token: 0x040049D5 RID: 18901
+	// Token: 0x04004A7B RID: 19067
 	private int ActivityOpenType;
 
-	// Token: 0x040049D6 RID: 18902
+	// Token: 0x04004A7C RID: 19068
 	private long BeginShowTimeInternal;
 
-	// Token: 0x040049D7 RID: 18903
+	// Token: 0x04004A7D RID: 19069
 	protected long EndShowTimeInternal;
 
-	// Token: 0x040049D8 RID: 18904
+	// Token: 0x04004A7E RID: 19070
 	private long BeginOpenTimeInternal;
 
-	// Token: 0x040049D9 RID: 18905
+	// Token: 0x04004A7F RID: 19071
 	protected long EndOpenTimeInternal;
 
-	// Token: 0x040049DA RID: 18906
+	// Token: 0x04004A80 RID: 19072
 	protected long BeginLimitTimeInternal;
 
-	// Token: 0x040049DB RID: 18907
+	// Token: 0x04004A81 RID: 19073
 	protected long EndLimitTimeInternal;
 
-	// Token: 0x040049DC RID: 18908
+	// Token: 0x04004A82 RID: 19074
 	protected long BeginRewardTimeInternal;
 
-	// Token: 0x040049DD RID: 18909
+	// Token: 0x04004A83 RID: 19075
 	protected long EndRewardTimeInternal;
 
-	// Token: 0x040049DE RID: 18910
+	// Token: 0x04004A84 RID: 19076
 	private EActivityBubbleType BubbleTypeInternal;
 
-	// Token: 0x040049DF RID: 18911
+	// Token: 0x04004A85 RID: 19077
 	private string BubbleEndShowTimeTextInternal = "";
 
-	// Token: 0x040049E0 RID: 18912
+	// Token: 0x04004A86 RID: 19078
 	private bool IsUnLockInternal;
 
-	// Token: 0x040049E1 RID: 18913
+	// Token: 0x04004A87 RID: 19079
 	private bool IsPreOpenInternal;
 
-	// Token: 0x040049E2 RID: 18914
+	// Token: 0x04004A88 RID: 19080
 	private bool IsFirstOpen;
 
-	// Token: 0x040049E3 RID: 18915
+	// Token: 0x04004A89 RID: 19081
 	[Nullable(2)]
 	private List<int> PreGuideQuestIds = new List<int>();
 
-	// Token: 0x040049E4 RID: 18916
+	// Token: 0x04004A8A RID: 19082
 	private int ConditionGroupIdInternal;
 
-	// Token: 0x040049E5 RID: 18917
+	// Token: 0x04004A8B RID: 19083
 	private int PreOpenConditionGroupIdInternal;
 
-	// Token: 0x040049E6 RID: 18918
+	// Token: 0x04004A8C RID: 19084
 	private List<int> FinishedConditionIdsInternal = new List<int>();
 
-	// Token: 0x040049E7 RID: 18919
+	// Token: 0x04004A8D RID: 19085
 	private bool IsShowImportantBubbleInternal;
 
-	// Token: 0x040049E8 RID: 18920
+	// Token: 0x04004A8E RID: 19086
 	private string CacheKey = "";
 
-	// Token: 0x040049E9 RID: 18921
+	// Token: 0x04004A8F RID: 19087
 	private long BubbleEndShowTimeInternal;
 
-	// Token: 0x040049EA RID: 18922
+	// Token: 0x04004A90 RID: 19088
 	public Activity? LocalConfig;
 
-	// Token: 0x040049EC RID: 18924
+	// Token: 0x04004A92 RID: 19090
 	private bool IsEventRegistered;
 
-	// Token: 0x040049ED RID: 18925
+	// Token: 0x04004A93 RID: 19091
 	private bool _finishSinkStateCache;
 }

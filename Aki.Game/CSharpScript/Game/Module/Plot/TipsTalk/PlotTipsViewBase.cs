@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.TipsTalk
 {
-	// Token: 0x02005010 RID: 20496
+	// Token: 0x02003FDA RID: 16346
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotTipsViewBase : UiPanelBase
 	{
-		// Token: 0x06034719 RID: 214809 RVA: 0x00C59BC4 File Offset: 0x00C57DC4
+		// Token: 0x060295BC RID: 169404 RVA: 0x00BA50C4 File Offset: 0x00BA32C4
 		[NullableContext(0)]
 		public UniTask<bool> OpenAsync([Nullable(1)] UiParam param)
 		{
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			return <OpenAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603471A RID: 214810 RVA: 0x00C59C0F File Offset: 0x00C57E0F
+		// Token: 0x060295BD RID: 169405 RVA: 0x00BA510F File Offset: 0x00BA330F
 		protected virtual UUIItem GetParentItem()
 		{
 			return UiLayer.Instance.GetLayerRootUiItem(ELayerType.HUD);
 		}
 
-		// Token: 0x0603471B RID: 214811 RVA: 0x00C59C1C File Offset: 0x00C57E1C
+		// Token: 0x060295BE RID: 169406 RVA: 0x00BA511C File Offset: 0x00BA331C
 		public UniTask CloseAsync()
 		{
 			PlotTipsViewBase.<CloseAsync>d__20 <CloseAsync>d__;
@@ -47,19 +47,19 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			return <CloseAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603471C RID: 214812 RVA: 0x00C59C5F File Offset: 0x00C57E5F
+		// Token: 0x060295BF RID: 169407 RVA: 0x00BA515F File Offset: 0x00BA335F
 		[NullableContext(1)]
 		public void RefreshSubtitle(ITalkItem talkItem)
 		{
 			this.UpdatePlotSubtitle(talkItem);
 		}
 
-		// Token: 0x0603471D RID: 214813 RVA: 0x00C59C68 File Offset: 0x00C57E68
+		// Token: 0x060295C0 RID: 169408 RVA: 0x00BA5168 File Offset: 0x00BA3368
 		protected virtual void OnInit()
 		{
 		}
 
-		// Token: 0x0603471E RID: 214814 RVA: 0x00C59C6C File Offset: 0x00C57E6C
+		// Token: 0x060295C1 RID: 169409 RVA: 0x00BA516C File Offset: 0x00BA336C
 		private void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.UpdatePlotSubtitle, new Action<ITalkItem>(this.UpdatePlotSubtitle));
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			EventSystem.Instance.Add(EEventName.ClearPlotSubtitle, new Action(this.ClearPlotSubtitle));
 		}
 
-		// Token: 0x0603471F RID: 214815 RVA: 0x00C59CEC File Offset: 0x00C57EEC
+		// Token: 0x060295C2 RID: 169410 RVA: 0x00BA51EC File Offset: 0x00BA33EC
 		private void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.UpdatePlotSubtitle, new Action<ITalkItem>(this.UpdatePlotSubtitle));
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			EventSystem.Instance.Remove(EEventName.ClearPlotSubtitle, new Action(this.ClearPlotSubtitle));
 		}
 
-		// Token: 0x06034720 RID: 214816 RVA: 0x00C59D6C File Offset: 0x00C57F6C
+		// Token: 0x060295C3 RID: 169411 RVA: 0x00BA526C File Offset: 0x00BA346C
 		protected override UniTask OnCreateAsync()
 		{
 			PlotTipsViewBase.<OnCreateAsync>d__25 <OnCreateAsync>d__;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034721 RID: 214817 RVA: 0x00C59DB0 File Offset: 0x00C57FB0
+		// Token: 0x060295C4 RID: 169412 RVA: 0x00BA52B0 File Offset: 0x00BA34B0
 		protected override void OnStart()
 		{
 			this.OnInit();
@@ -100,14 +100,14 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			this.CurLang = LanguageSystem.Instance.PackageAudio;
 		}
 
-		// Token: 0x06034722 RID: 214818 RVA: 0x00C59E00 File Offset: 0x00C58000
+		// Token: 0x060295C5 RID: 169413 RVA: 0x00BA5300 File Offset: 0x00BA3500
 		protected override void OnAfterShow()
 		{
 			this.OnAddEventListener();
 			this.OnHang(PlotModel.Instance.HangViewHud, false);
 		}
 
-		// Token: 0x06034723 RID: 214819 RVA: 0x00C59E19 File Offset: 0x00C58019
+		// Token: 0x060295C6 RID: 169414 RVA: 0x00BA5319 File Offset: 0x00BA3519
 		protected override void OnBeforeHide()
 		{
 			this.OnRemoveEventListener();
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			}
 		}
 
-		// Token: 0x06034724 RID: 214820 RVA: 0x00C59E31 File Offset: 0x00C58031
+		// Token: 0x060295C7 RID: 169415 RVA: 0x00BA5331 File Offset: 0x00BA3531
 		protected override void OnBeforeDestroy()
 		{
 			this.TextureCache.Clear();
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			FlowController.Instance.CountDownSkip(false);
 		}
 
-		// Token: 0x06034725 RID: 214821 RVA: 0x00C59E60 File Offset: 0x00C58060
+		// Token: 0x060295C8 RID: 169416 RVA: 0x00BA5360 File Offset: 0x00BA3560
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			PlotTipsViewBase.<OnShowAsyncImplementImplement>d__30 <OnShowAsyncImplementImplement>d__;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034726 RID: 214822 RVA: 0x00C59EA4 File Offset: 0x00C580A4
+		// Token: 0x060295C9 RID: 169417 RVA: 0x00BA53A4 File Offset: 0x00BA35A4
 		protected override UniTask OnHideAsyncImplementImplement()
 		{
 			PlotTipsViewBase.<OnHideAsyncImplementImplement>d__31 <OnHideAsyncImplementImplement>d__;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			return <OnHideAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034727 RID: 214823 RVA: 0x00C59EE8 File Offset: 0x00C580E8
+		// Token: 0x060295CA RID: 169418 RVA: 0x00BA53E8 File Offset: 0x00BA35E8
 		[NullableContext(1)]
 		protected UniTask PlaySequenceAsync(string sequenceName, bool blockClick = false, bool playReverse = false, float? playRate = null)
 		{
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			return <PlaySequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034728 RID: 214824 RVA: 0x00C59F4C File Offset: 0x00C5814C
+		// Token: 0x060295CB RID: 169419 RVA: 0x00BA544C File Offset: 0x00BA364C
 		[NullableContext(1)]
 		private void UpdatePlotSubtitle(ITalkItem inPlotSubtitleInfo)
 		{
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			this.SubmitSubtitle(((captionParams != null) ? captionParams.TotalTime : null) ?? PlotModel.Instance.PlotGlobalConfig.DefaultDurationPrompt, false);
 		}
 
-		// Token: 0x06034729 RID: 214825 RVA: 0x00C5A1A0 File Offset: 0x00C583A0
+		// Token: 0x060295CC RID: 169420 RVA: 0x00BA56A0 File Offset: 0x00BA38A0
 		private unsafe void SubmitSubtitle(float delay, bool needPause = false)
 		{
 			global::Log instance = global::Log.Instance;
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			}
 		}
 
-		// Token: 0x0603472A RID: 214826 RVA: 0x00C5A248 File Offset: 0x00C58448
+		// Token: 0x060295CD RID: 169421 RVA: 0x00BA5748 File Offset: 0x00BA3948
 		private void PauseSubtitle()
 		{
 			global::Log.Instance.Info(ELogModule.Plot, ELogAuthor.FZX, "[PlotTips] 暂停字幕", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -290,19 +290,19 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			}
 		}
 
-		// Token: 0x0603472B RID: 214827 RVA: 0x00C5A2D7 File Offset: 0x00C584D7
+		// Token: 0x060295CE RID: 169422 RVA: 0x00BA57D7 File Offset: 0x00BA39D7
 		private void HideAll(bool isHidden)
 		{
 			base.SetUiActive(!isHidden);
 		}
 
-		// Token: 0x0603472C RID: 214828 RVA: 0x00C5A2E3 File Offset: 0x00C584E3
+		// Token: 0x060295CF RID: 169423 RVA: 0x00BA57E3 File Offset: 0x00BA39E3
 		private void OnHangPlotViewHud(bool isHang)
 		{
 			this.OnHang(isHang, true);
 		}
 
-		// Token: 0x0603472D RID: 214829 RVA: 0x00C5A2F0 File Offset: 0x00C584F0
+		// Token: 0x060295D0 RID: 169424 RVA: 0x00BA57F0 File Offset: 0x00BA39F0
 		private void OnHang(bool isHang = false, bool bSetActive = true)
 		{
 			if (this.IsHangInternal == isHang)
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			FlowController.Instance.CountDownSkip(false);
 		}
 
-		// Token: 0x0603472E RID: 214830 RVA: 0x00C5A36C File Offset: 0x00C5856C
+		// Token: 0x060295D1 RID: 169425 RVA: 0x00BA586C File Offset: 0x00BA3A6C
 		private void ClearPlotSubtitle()
 		{
 			TimerHandle submitTimer = this.SubmitTimer;
@@ -353,7 +353,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			this.CallbackEnableId++;
 		}
 
-		// Token: 0x0603472F RID: 214831 RVA: 0x00C5A3D0 File Offset: 0x00C585D0
+		// Token: 0x060295D2 RID: 169426 RVA: 0x00BA58D0 File Offset: 0x00BA3AD0
 		private unsafe bool PlayTalkAudio()
 		{
 			ITalkItem currentConfig = this.CurrentConfig;
@@ -420,7 +420,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			return true;
 		}
 
-		// Token: 0x06034730 RID: 214832 RVA: 0x00C5A5C0 File Offset: 0x00C587C0
+		// Token: 0x060295D3 RID: 169427 RVA: 0x00BA5AC0 File Offset: 0x00BA3CC0
 		private unsafe bool PlayTone()
 		{
 			ITalkItem currentConfig = this.CurrentConfig;
@@ -491,7 +491,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			return true;
 		}
 
-		// Token: 0x06034731 RID: 214833 RVA: 0x00C5A7F4 File Offset: 0x00C589F4
+		// Token: 0x060295D4 RID: 169428 RVA: 0x00BA5CF4 File Offset: 0x00BA3EF4
 		private void PlayAkEvent()
 		{
 			IPostAkEventType talkAkEvent = this.CurrentConfig.TalkAkEvent;
@@ -546,8 +546,8 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			AudioSystem.Instance.PostEvent(text2);
 		}
 
-		// Token: 0x17007FF1 RID: 32753
-		// (get) Token: 0x06034732 RID: 214834 RVA: 0x00C5A932 File Offset: 0x00C58B32
+		// Token: 0x170053A6 RID: 21414
+		// (get) Token: 0x060295D5 RID: 169429 RVA: 0x00BA5E32 File Offset: 0x00BA4032
 		protected bool IsHang
 		{
 			get
@@ -556,7 +556,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			}
 		}
 
-		// Token: 0x06034733 RID: 214835 RVA: 0x00C5A93C File Offset: 0x00C58B3C
+		// Token: 0x060295D6 RID: 169430 RVA: 0x00BA5E3C File Offset: 0x00BA403C
 		protected EUiViewName? GetViewName()
 		{
 			UiParam uiParam = this.UiParam;
@@ -567,61 +567,61 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			return uiParam.ViewName;
 		}
 
-		// Token: 0x0401BEF0 RID: 114416
+		// Token: 0x040168D9 RID: 92377
 		private const int BREAK_TIME = 1000;
 
-		// Token: 0x0401BEF1 RID: 114417
+		// Token: 0x040168DA RID: 92378
 		private UiParam UiParam;
 
-		// Token: 0x0401BEF2 RID: 114418
+		// Token: 0x040168DB RID: 92379
 		private ITalkItem CurrentConfig;
 
-		// Token: 0x0401BEF3 RID: 114419
+		// Token: 0x040168DC RID: 92380
 		private TimerHandle SubmitTimer;
 
-		// Token: 0x0401BEF4 RID: 114420
+		// Token: 0x040168DD RID: 92381
 		private bool IsHangInternal;
 
-		// Token: 0x0401BEF5 RID: 114421
+		// Token: 0x040168DE RID: 92382
 		private int PlotPlayEventResult;
 
-		// Token: 0x0401BEF6 RID: 114422
+		// Token: 0x040168DF RID: 92383
 		private int CallbackEnableId;
 
-		// Token: 0x0401BEF7 RID: 114423
+		// Token: 0x040168E0 RID: 92384
 		[Nullable(1)]
 		private readonly Dictionary<int, UTexture> TextureCache = new Dictionary<int, UTexture>();
 
-		// Token: 0x0401BEF8 RID: 114424
+		// Token: 0x040168E1 RID: 92385
 		[Nullable(1)]
 		private string CurLang = string.Empty;
 
-		// Token: 0x0401BEF9 RID: 114425
+		// Token: 0x040168E2 RID: 92386
 		[Nullable(1)]
 		protected string ResourceId = string.Empty;
 
-		// Token: 0x0401BEFA RID: 114426
+		// Token: 0x040168E3 RID: 92387
 		protected UUITexture IconItem;
 
-		// Token: 0x0401BEFB RID: 114427
+		// Token: 0x040168E4 RID: 92388
 		protected UUIText SubtitleItem;
 
-		// Token: 0x0401BEFC RID: 114428
+		// Token: 0x040168E5 RID: 92389
 		protected UUIText NameItem;
 
-		// Token: 0x0401BEFD RID: 114429
+		// Token: 0x040168E6 RID: 92390
 		protected string OverrideAudioEventName;
 
-		// Token: 0x0401BEFE RID: 114430
+		// Token: 0x040168E7 RID: 92391
 		protected string OverrideAudioSrcName;
 
-		// Token: 0x0401BEFF RID: 114431
+		// Token: 0x040168E8 RID: 92392
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401BF00 RID: 114432
+		// Token: 0x040168E9 RID: 92393
 		public bool FirstShow;
 
-		// Token: 0x0401BF01 RID: 114433
+		// Token: 0x040168EA RID: 92394
 		public bool LastHide;
 	}
 }

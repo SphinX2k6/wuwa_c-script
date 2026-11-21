@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A3F RID: 23103
+	// Token: 0x02004A1B RID: 18971
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeDefine : Singleton
 	{
-		// Token: 0x17008BF1 RID: 35825
-		// (get) Token: 0x0603A97F RID: 239999 RVA: 0x00DF1938 File Offset: 0x00DEFB38
+		// Token: 0x17005FBF RID: 24511
+		// (get) Token: 0x0602F8C8 RID: 194760 RVA: 0x00D41EBC File Offset: 0x00D400BC
 		public static FlagChallengeDefine Instance
 		{
 			get
@@ -24,12 +24,12 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603A980 RID: 240000 RVA: 0x00DF195B File Offset: 0x00DEFB5B
+		// Token: 0x0602F8C9 RID: 194761 RVA: 0x00D41EDF File Offset: 0x00D400DF
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603A981 RID: 240001 RVA: 0x00DF195D File Offset: 0x00DEFB5D
+		// Token: 0x0602F8CA RID: 194762 RVA: 0x00D41EE1 File Offset: 0x00D400E1
 		public static void ResetStaticDefaultValue()
 		{
 			FlagChallengeDefine instance = FlagChallengeDefine._instance;
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			FlagChallengeDefine._instance = null;
 		}
 
-		// Token: 0x0603A982 RID: 240002 RVA: 0x00DF1976 File Offset: 0x00DEFB76
+		// Token: 0x0602F8CB RID: 194763 RVA: 0x00D41EFA File Offset: 0x00D400FA
 		static FlagChallengeDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FlagChallengeDefine.CreateStaticDefaultValue), new Action(FlagChallengeDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603A983 RID: 240003 RVA: 0x00DF1998 File Offset: 0x00DEFB98
+		// Token: 0x0602F8CC RID: 194764 RVA: 0x00D41F1C File Offset: 0x00D4011C
 		public FlagChallengeDefine()
 		{
 			Dictionary<EFlagChallengeUiStyleType, Dictionary<string, string>> dictionary = new Dictionary<EFlagChallengeUiStyleType, Dictionary<string, string>>();
@@ -565,37 +565,37 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			base..ctor();
 		}
 
-		// Token: 0x0401E868 RID: 125032
+		// Token: 0x0401930F RID: 103183
 		public readonly Dictionary<EFlagChallengeUiStyleType, Dictionary<string, string>> flagChallengeStyleRes;
 
-		// Token: 0x0401E869 RID: 125033
+		// Token: 0x04019310 RID: 103184
 		public readonly Dictionary<EFlagChallengeUiStyleType, string> flagChallengeStyleVideoPath;
 
-		// Token: 0x0401E86A RID: 125034
+		// Token: 0x04019311 RID: 103185
 		public const int EXTRA_TEMP_FLAG_CHALLENGE_MAX_LEVEL_BUFF_ID = 632400018;
 
-		// Token: 0x0401E86B RID: 125035
+		// Token: 0x04019312 RID: 103186
 		public const int EXTRA_TEMP_FLAG_CHALLENGE_MAX_LEVEL = 100;
 
-		// Token: 0x0401E86C RID: 125036
+		// Token: 0x04019313 RID: 103187
 		public const string FLAG_CHALLENGE_CHARACTER_BUFF_TIPS_PARAM = "0";
 
-		// Token: 0x0401E86D RID: 125037
+		// Token: 0x04019314 RID: 103188
 		public const int FLAG_CHALLENGE_EXP_ITEM_TWEEN_INTERVA = 20;
 
-		// Token: 0x0401E86E RID: 125038
+		// Token: 0x04019315 RID: 103189
 		public const int FLAG_CHALLENGE_EXP_ITEM_CROSS_LEVEL_DIFF = 3;
 
-		// Token: 0x0401E86F RID: 125039
+		// Token: 0x04019316 RID: 103190
 		public const int FLAG_CHALLENGE_EXP_ITEM_COUNT = 10;
 
-		// Token: 0x0401E870 RID: 125040
+		// Token: 0x04019317 RID: 103191
 		public const float FLAG_CHALLENGE_EXP_PROGRESS_STEP = 0.1f;
 
-		// Token: 0x0401E871 RID: 125041
+		// Token: 0x04019318 RID: 103192
 		public const int FLAG_CHALLENGE_SETTLE_AUTO_LEAVE_TIME = 30;
 
-		// Token: 0x0401E872 RID: 125042
+		// Token: 0x04019319 RID: 103193
 		[Nullable(2)]
 		private static FlagChallengeDefine _instance;
 	}

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000915 RID: 2325
+	// Token: 0x02000960 RID: 2400
 	public class ConfigSheriffCriminalByIdentityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003691 RID: 13969 RVA: 0x0018DCF4 File Offset: 0x0018BEF4
+		// Token: 0x06003853 RID: 14419 RVA: 0x0019AF14 File Offset: 0x00199114
 		static ConfigSheriffCriminalByIdentityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSheriffCriminalByIdentityId.CreateStaticDefaultValue), new Action(ConfigSheriffCriminalByIdentityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003692 RID: 13970 RVA: 0x0018DD14 File Offset: 0x0018BF14
+		// Token: 0x06003854 RID: 14420 RVA: 0x0019AF34 File Offset: 0x00199134
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSheriffCriminalByIdentityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003693 RID: 13971 RVA: 0x0018DD93 File Offset: 0x0018BF93
+		// Token: 0x06003855 RID: 14421 RVA: 0x0019AFB3 File Offset: 0x001991B3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSheriffCriminalByIdentityId.LogPair = null;
 			ConfigSheriffCriminalByIdentityId.HandleId = 0;
 		}
 
-		// Token: 0x06003694 RID: 13972 RVA: 0x0018DDA1 File Offset: 0x0018BFA1
+		// Token: 0x06003856 RID: 14422 RVA: 0x0019AFC1 File Offset: 0x001991C1
 		public static void Init()
 		{
 			ConfigSheriffCriminalByIdentityId.HandleId = ConfigCommon.InitDataStatement(ConfigSheriffCriminalByIdentityId.HandleId, "db_sheriff.db", "select BinData from `SheriffCriminal` where InitIdentityId=?");
 		}
 
-		// Token: 0x06003695 RID: 13973 RVA: 0x0018DDBC File Offset: 0x0018BFBC
+		// Token: 0x06003857 RID: 14423 RVA: 0x0019AFDC File Offset: 0x001991DC
 		[NullableContext(2)]
 		public static IReadOnlyList<SheriffCriminal> GetConfigList(int p0InitIdentityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003F79 RID: 16249
+		// Token: 0x04004186 RID: 16774
 		private const string DB = "db_sheriff.db";
 
-		// Token: 0x04003F7A RID: 16250
+		// Token: 0x04004187 RID: 16775
 		private const string FILE = "m.明慎台系统.xlsx";
 
-		// Token: 0x04003F7B RID: 16251
+		// Token: 0x04004188 RID: 16776
 		private const string TABLE = "SheriffCriminal";
 
-		// Token: 0x04003F7C RID: 16252
+		// Token: 0x04004189 RID: 16777
 		private const string COMMAND = "select BinData from `SheriffCriminal` where InitIdentityId=?";
 
-		// Token: 0x04003F7D RID: 16253
+		// Token: 0x0400418A RID: 16778
 		private const string KEY_PREFIX = "SheriffCriminalByIdentityId";
 
-		// Token: 0x04003F7E RID: 16254
+		// Token: 0x0400418B RID: 16779
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003F7F RID: 16255
+		// Token: 0x0400418C RID: 16780
 		private static int HandleId;
 	}
 }

@@ -6,52 +6,52 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Camera.CameraDebugTool
 {
-	// Token: 0x02003FB9 RID: 16313
+	// Token: 0x02003241 RID: 12865
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Camera/CameraDebugTool/SCameraDebugTool_CameraFrameInfoRegion.SCameraDebugTool_CameraFrameInfoRegion")]
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class SCameraDebugTool_CameraFrameInfoRegion : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06029C15 RID: 171029 RVA: 0x009CBD41 File Offset: 0x009C9F41
+		// Token: 0x06020240 RID: 131648 RVA: 0x0093E4A8 File Offset: 0x0093C6A8
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SCameraDebugTool_CameraFrameInfoRegion._ScriptStructPtr != 0) ? SCameraDebugTool_CameraFrameInfoRegion._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Camera/CameraDebugTool/SCameraDebugTool_CameraFrameInfoRegion.SCameraDebugTool_CameraFrameInfoRegion", ref SCameraDebugTool_CameraFrameInfoRegion._ScriptStructPtr);
 		}
 
-		// Token: 0x17006521 RID: 25889
-		// (get) Token: 0x06029C16 RID: 171030 RVA: 0x009CBD65 File Offset: 0x009C9F65
-		// (set) Token: 0x06029C17 RID: 171031 RVA: 0x009CBD75 File Offset: 0x009C9F75
+		// Token: 0x17003D88 RID: 15752
+		// (get) Token: 0x06020241 RID: 131649 RVA: 0x0093E4CC File Offset: 0x0093C6CC
+		// (set) Token: 0x06020242 RID: 131650 RVA: 0x0093E4DC File Offset: 0x0093C6DC
 		public unsafe long StartFrame
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCameraDebugTool_CameraFrameInfoRegion.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SCameraDebugTool_CameraFrameInfoRegion.__PropertyOffset_StartFrame);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCameraDebugTool_CameraFrameInfoRegion.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SCameraDebugTool_CameraFrameInfoRegion.__PropertyOffset_StartFrame) = value;
 			}
 		}
 
-		// Token: 0x17006522 RID: 25890
-		// (get) Token: 0x06029C18 RID: 171032 RVA: 0x009CBD86 File Offset: 0x009C9F86
-		// (set) Token: 0x06029C19 RID: 171033 RVA: 0x009CBD96 File Offset: 0x009C9F96
+		// Token: 0x17003D89 RID: 15753
+		// (get) Token: 0x06020243 RID: 131651 RVA: 0x0093E4ED File Offset: 0x0093C6ED
+		// (set) Token: 0x06020244 RID: 131652 RVA: 0x0093E4FD File Offset: 0x0093C6FD
 		public unsafe long EndFrame
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCameraDebugTool_CameraFrameInfoRegion.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SCameraDebugTool_CameraFrameInfoRegion.__PropertyOffset_EndFrame);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCameraDebugTool_CameraFrameInfoRegion.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SCameraDebugTool_CameraFrameInfoRegion.__PropertyOffset_EndFrame) = value;
 			}
 		}
 
-		// Token: 0x17006523 RID: 25891
-		// (get) Token: 0x06029C1A RID: 171034 RVA: 0x009CBDA8 File Offset: 0x009C9FA8
-		// (set) Token: 0x06029C1B RID: 171035 RVA: 0x009CBDEB File Offset: 0x009C9FEB
+		// Token: 0x17003D8A RID: 15754
+		// (get) Token: 0x06020245 RID: 131653 RVA: 0x0093E510 File Offset: 0x0093C710
+		// (set) Token: 0x06020246 RID: 131654 RVA: 0x0093E553 File Offset: 0x0093C753
 		public TArray<SCameraDebugTool_CameraFrameInfo> CameraFrameInfoArray
 		{
 			get
@@ -60,7 +60,7 @@ namespace AkiClient.Game.Aki.Data.Camera.CameraDebugTool
 				TArray<SCameraDebugTool_CameraFrameInfo> result;
 				if ((result = this._CameraFrameInfoArray) == null)
 				{
-					result = (this._CameraFrameInfoArray = new TArray<SCameraDebugTool_CameraFrameInfo>(base.NativePtr + (IntPtr)SCameraDebugTool_CameraFrameInfoRegion.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._CameraFrameInfoArray = new TArray<SCameraDebugTool_CameraFrameInfo>(base.NativePtr + (IntPtr)SCameraDebugTool_CameraFrameInfoRegion.__PropertyOffset_CameraFrameInfoArray, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -70,64 +70,56 @@ namespace AkiClient.Game.Aki.Data.Camera.CameraDebugTool
 			}
 		}
 
-		// Token: 0x06029C1C RID: 171036 RVA: 0x009CBDF9 File Offset: 0x009C9FF9
+		// Token: 0x06020247 RID: 131655 RVA: 0x0093E561 File Offset: 0x0093C761
 		public SCameraDebugTool_CameraFrameInfoRegion()
 		{
 		}
 
-		// Token: 0x06029C1D RID: 171037 RVA: 0x009CBE01 File Offset: 0x009CA001
-		public SCameraDebugTool_CameraFrameInfoRegion(long StartFrame, long EndFrame, TArray<SCameraDebugTool_CameraFrameInfo> CameraFrameInfoArray)
-		{
-			this.StartFrame = StartFrame;
-			this.EndFrame = EndFrame;
-			this.CameraFrameInfoArray = CameraFrameInfoArray;
-		}
-
-		// Token: 0x06029C1E RID: 171038 RVA: 0x009CBE1E File Offset: 0x009CA01E
+		// Token: 0x06020248 RID: 131656 RVA: 0x0093E569 File Offset: 0x0093C769
 		protected override IntPtr GetUStructPtr()
 		{
 			return SCameraDebugTool_CameraFrameInfoRegion.StaticStruct();
 		}
 
-		// Token: 0x06029C1F RID: 171039 RVA: 0x009CBE2A File Offset: 0x009CA02A
+		// Token: 0x06020249 RID: 131657 RVA: 0x0093E575 File Offset: 0x0093C775
 		[NullableContext(2)]
 		public SCameraDebugTool_CameraFrameInfoRegion(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06029C20 RID: 171040 RVA: 0x009CBE34 File Offset: 0x009CA034
+		// Token: 0x0602024A RID: 131658 RVA: 0x0093E57F File Offset: 0x0093C77F
 		public SCameraDebugTool_CameraFrameInfoRegion(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06029C21 RID: 171041 RVA: 0x009CBE3F File Offset: 0x009CA03F
+		// Token: 0x0602024B RID: 131659 RVA: 0x0093E58A File Offset: 0x0093C78A
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SCameraDebugTool_CameraFrameInfoRegion(Pointer, false, true);
 		}
 
-		// Token: 0x06029C22 RID: 171042 RVA: 0x009CBE49 File Offset: 0x009CA049
+		// Token: 0x0602024C RID: 131660 RVA: 0x0093E594 File Offset: 0x0093C794
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SCameraDebugTool_CameraFrameInfoRegion(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401571C RID: 87836
+		// Token: 0x040114C4 RID: 70852
 		public const string __ObjectPath = "/Game/Aki/Data/Camera/CameraDebugTool/SCameraDebugTool_CameraFrameInfoRegion.SCameraDebugTool_CameraFrameInfoRegion";
 
-		// Token: 0x0401571D RID: 87837
+		// Token: 0x040114C5 RID: 70853
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401571E RID: 87838
-		internal static int __PropertyOffset_0;
+		// Token: 0x040114C6 RID: 70854
+		internal static int __PropertyOffset_StartFrame;
 
-		// Token: 0x0401571F RID: 87839
-		internal static int __PropertyOffset_1;
+		// Token: 0x040114C7 RID: 70855
+		internal static int __PropertyOffset_EndFrame;
 
-		// Token: 0x04015720 RID: 87840
-		internal static int __PropertyOffset_2;
+		// Token: 0x040114C8 RID: 70856
+		internal static int __PropertyOffset_CameraFrameInfoArray;
 
-		// Token: 0x04015721 RID: 87841
+		// Token: 0x040114C9 RID: 70857
 		[Nullable(new byte[]
 		{
 			2,

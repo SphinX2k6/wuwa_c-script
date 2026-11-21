@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200277D RID: 10109
+// Token: 0x02001C68 RID: 7272
 public class CommonElementItem : GridProxyAbstract<int>
 {
-	// Token: 0x06014BDB RID: 84955 RVA: 0x0053FA17 File Offset: 0x0053DC17
+	// Token: 0x060120BE RID: 73918 RVA: 0x0054E8A3 File Offset: 0x0054CAA3
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,20 +17,20 @@ public class CommonElementItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06014BDC RID: 84956 RVA: 0x0053FA50 File Offset: 0x0053DC50
+	// Token: 0x060120BF RID: 73919 RVA: 0x0054E8DC File Offset: 0x0054CADC
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.Update(data);
 		this.RefreshPanel();
 	}
 
-	// Token: 0x06014BDD RID: 84957 RVA: 0x0053FA5F File Offset: 0x0053DC5F
+	// Token: 0x060120C0 RID: 73920 RVA: 0x0054E8EB File Offset: 0x0054CAEB
 	public void Update(int elementId)
 	{
 		this.ElementId = elementId;
 	}
 
-	// Token: 0x06014BDE RID: 84958 RVA: 0x0053FA68 File Offset: 0x0053DC68
+	// Token: 0x060120C1 RID: 73921 RVA: 0x0054E8F4 File Offset: 0x0054CAF4
 	public void RefreshPanel()
 	{
 		ElementInfo? elementConfig = CommonConfig.Instance.GetElementConfig(this.ElementId);
@@ -43,15 +43,15 @@ public class CommonElementItem : GridProxyAbstract<int>
 		base.SetTextureByPath(elementConfig.Value.Icon5, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x04009C03 RID: 39939
+	// Token: 0x04009D5B RID: 40283
 	private int ElementId;
 
-	// Token: 0x02008DE6 RID: 36326
+	// Token: 0x02007F6D RID: 32621
 	private enum ECommonElementCom
 	{
-		// Token: 0x0402E09E RID: 188574
+		// Token: 0x040293B2 RID: 168882
 		ElementBgSprite,
-		// Token: 0x0402E09F RID: 188575
+		// Token: 0x040293B3 RID: 168883
 		ElementIconTexture
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D40 RID: 19776
+	// Token: 0x0200523C RID: 21052
 	public class TComparedAlertValueUnion
 	{
-		// Token: 0x17008F45 RID: 36677
-		// (get) Token: 0x0601F638 RID: 128568 RVA: 0x0045FE6E File Offset: 0x0045E06E
-		// (set) Token: 0x0601F639 RID: 128569 RVA: 0x0045FE76 File Offset: 0x0045E076
+		// Token: 0x1700967E RID: 38526
+		// (get) Token: 0x06021281 RID: 135809 RVA: 0x00493E42 File Offset: 0x00492042
+		// (set) Token: 0x06021282 RID: 135810 RVA: 0x00493E4A File Offset: 0x0049204A
 		public TComparedAlertValue Type { get; set; }
 
-		// Token: 0x17008F46 RID: 36678
-		// (get) Token: 0x0601F63A RID: 128570 RVA: 0x0045FE7F File Offset: 0x0045E07F
-		// (set) Token: 0x0601F63B RID: 128571 RVA: 0x0045FE87 File Offset: 0x0045E087
+		// Token: 0x1700967F RID: 38527
+		// (get) Token: 0x06021283 RID: 135811 RVA: 0x00493E53 File Offset: 0x00492053
+		// (set) Token: 0x06021284 RID: 135812 RVA: 0x00493E5B File Offset: 0x0049205B
 		public object Value { get; set; }
 
-		// Token: 0x0601F63C RID: 128572 RVA: 0x0045FE90 File Offset: 0x0045E090
+		// Token: 0x06021285 RID: 135813 RVA: 0x00493E64 File Offset: 0x00492064
 		public TComparedAlertValueUnion()
 		{
 			this.Type = TComparedAlertValue.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F63D RID: 128573 RVA: 0x0045FEA6 File Offset: 0x0045E0A6
+		// Token: 0x06021286 RID: 135814 RVA: 0x00493E7A File Offset: 0x0049207A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F63E RID: 128574 RVA: 0x0045FEB8 File Offset: 0x0045E0B8
+		// Token: 0x06021287 RID: 135815 RVA: 0x00493E8C File Offset: 0x0049208C
 		public ICompareCustomAlertValueT AsICompareCustomAlertValue()
 		{
 			return this.As<ICompareCustomAlertValueT>();
 		}
 
-		// Token: 0x0601F63F RID: 128575 RVA: 0x0045FEC0 File Offset: 0x0045E0C0
+		// Token: 0x06021288 RID: 135816 RVA: 0x00493E94 File Offset: 0x00492094
 		public static TComparedAlertValueUnion FromICompareCustomAlertValue(ICompareCustomAlertValueT _icomparecustomalertvalue)
 		{
 			return new TComparedAlertValueUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F640 RID: 128576 RVA: 0x0045FED5 File Offset: 0x0045E0D5
+		// Token: 0x06021289 RID: 135817 RVA: 0x00493EA9 File Offset: 0x004920A9
 		public ICompareMaxAlertValueT AsICompareMaxAlertValue()
 		{
 			return this.As<ICompareMaxAlertValueT>();
 		}
 
-		// Token: 0x0601F641 RID: 128577 RVA: 0x0045FEDD File Offset: 0x0045E0DD
+		// Token: 0x0602128A RID: 135818 RVA: 0x00493EB1 File Offset: 0x004920B1
 		public static TComparedAlertValueUnion FromICompareMaxAlertValue(ICompareMaxAlertValueT _icomparemaxalertvalue)
 		{
 			return new TComparedAlertValueUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F642 RID: 128578 RVA: 0x0045FEF2 File Offset: 0x0045E0F2
+		// Token: 0x0602128B RID: 135819 RVA: 0x00493EC6 File Offset: 0x004920C6
 		public ICompareMinAlertValueT AsICompareMinAlertValue()
 		{
 			return this.As<ICompareMinAlertValueT>();
 		}
 
-		// Token: 0x0601F643 RID: 128579 RVA: 0x0045FEFA File Offset: 0x0045E0FA
+		// Token: 0x0602128C RID: 135820 RVA: 0x00493ECE File Offset: 0x004920CE
 		public static TComparedAlertValueUnion FromICompareMinAlertValue(ICompareMinAlertValueT _icompareminalertvalue)
 		{
 			return new TComparedAlertValueUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F644 RID: 128580 RVA: 0x0045FF10 File Offset: 0x0045E110
+		// Token: 0x0602128D RID: 135821 RVA: 0x00493EE4 File Offset: 0x004920E4
 		public static int Pack(FlatBufferBuilder builder, TComparedAlertValueUnion _o)
 		{
 			switch (_o.Type)

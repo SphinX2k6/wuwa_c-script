@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.GameSettings
 {
-	// Token: 0x02007240 RID: 29248
+	// Token: 0x020063BF RID: 25535
 	public enum EFFXFIApplyMode
 	{
-		// Token: 0x04025B66 RID: 154470
+		// Token: 0x04020E1E RID: 134686
 		Default,
-		// Token: 0x04025B67 RID: 154471
+		// Token: 0x04020E1F RID: 134687
 		Seq,
-		// Token: 0x04025B68 RID: 154472
+		// Token: 0x04020E20 RID: 134688
 		SeqC,
-		// Token: 0x04025B69 RID: 154473
+		// Token: 0x04020E21 RID: 134689
 		Loading,
-		// Token: 0x04025B6A RID: 154474
+		// Token: 0x04020E22 RID: 134690
 		UIView
 	}
 }

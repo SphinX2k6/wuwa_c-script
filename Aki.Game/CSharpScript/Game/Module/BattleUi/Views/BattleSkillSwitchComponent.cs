@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CF2 RID: 23794
+	// Token: 0x02004CD4 RID: 19668
 	public class BattleSkillSwitchComponent : UiPanelBase
 	{
-		// Token: 0x0603C40F RID: 246799 RVA: 0x00E6C908 File Offset: 0x00E6AB08
+		// Token: 0x06031365 RID: 201573 RVA: 0x00DBCEBC File Offset: 0x00DBB0BC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C410 RID: 246800 RVA: 0x00E6C9D4 File Offset: 0x00E6ABD4
+		// Token: 0x06031366 RID: 201574 RVA: 0x00DBCF88 File Offset: 0x00DBB188
 		protected override void OnStart()
 		{
 			foreach (Action action in this.OperationMap.Values)
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C411 RID: 246801 RVA: 0x00E6CA2C File Offset: 0x00E6AC2C
+		// Token: 0x06031367 RID: 201575 RVA: 0x00DBCFE0 File Offset: 0x00DBB1E0
 		protected override void OnBeforeDestroy()
 		{
 			this.OperationMap.Clear();
 		}
 
-		// Token: 0x0603C412 RID: 246802 RVA: 0x00E6CA3C File Offset: 0x00E6AC3C
+		// Token: 0x06031368 RID: 201576 RVA: 0x00DBCFF0 File Offset: 0x00DBB1F0
 		public void SetComponentActive(bool visibility)
 		{
 			BattleSkillSwitchComponent.<>c__DisplayClass8_0 CS$<>8__locals1 = new BattleSkillSwitchComponent.<>c__DisplayClass8_0();
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<SetComponentActive>g__Callback|0();
 		}
 
-		// Token: 0x0603C413 RID: 246803 RVA: 0x00E6CA88 File Offset: 0x00E6AC88
+		// Token: 0x06031369 RID: 201577 RVA: 0x00DBD03C File Offset: 0x00DBB23C
 		public void RefreshSwitch()
 		{
 			if (base.InAsyncLoading())
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.<RefreshSwitch>g__Callback|9_0();
 		}
 
-		// Token: 0x0603C414 RID: 246804 RVA: 0x00E6CAB8 File Offset: 0x00E6ACB8
+		// Token: 0x0603136A RID: 201578 RVA: 0x00DBD06C File Offset: 0x00DBB26C
 		public void UpdateSwitch(int index)
 		{
 			BattleSkillSwitchComponent.<>c__DisplayClass10_0 CS$<>8__locals1 = new BattleSkillSwitchComponent.<>c__DisplayClass10_0();
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<UpdateSwitch>g__Callback|0();
 		}
 
-		// Token: 0x0603C415 RID: 246805 RVA: 0x00E6CB38 File Offset: 0x00E6AD38
+		// Token: 0x0603136B RID: 201579 RVA: 0x00DBD0EC File Offset: 0x00DBB2EC
 		public void UpdateNumPanel(bool bVisible, int? num = null)
 		{
 			BattleSkillSwitchComponent.<>c__DisplayClass11_0 CS$<>8__locals1 = new BattleSkillSwitchComponent.<>c__DisplayClass11_0();
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<UpdateNumPanel>g__Callback|0();
 		}
 
-		// Token: 0x0603C416 RID: 246806 RVA: 0x00E6CB8C File Offset: 0x00E6AD8C
+		// Token: 0x0603136C RID: 201580 RVA: 0x00DBD140 File Offset: 0x00DBB340
 		public void UpdatePointPanel(bool bVisible, int? totalNum = null, int? setNum = null)
 		{
 			BattleSkillSwitchComponent.<>c__DisplayClass12_0 CS$<>8__locals1 = new BattleSkillSwitchComponent.<>c__DisplayClass12_0();
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<UpdatePointPanel>g__Callback|0();
 		}
 
-		// Token: 0x0603C419 RID: 246809 RVA: 0x00E6CC14 File Offset: 0x00E6AE14
+		// Token: 0x0603136F RID: 201583 RVA: 0x00DBD1C8 File Offset: 0x00DBB3C8
 		[CompilerGenerated]
 		private void <RefreshSwitch>g__Callback|9_0()
 		{
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateSwitch(index);
 		}
 
-		// Token: 0x0401F662 RID: 128610
+		// Token: 0x0401A11B RID: 106779
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly int[] RotatorAngles = new int[]
@@ -154,28 +154,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			-180
 		};
 
-		// Token: 0x0401F663 RID: 128611
+		// Token: 0x0401A11C RID: 106780
 		private const int ITEM_ANGLE_INDEX = 7;
 
-		// Token: 0x0401F664 RID: 128612
+		// Token: 0x0401A11D RID: 106781
 		private int? SwitchIndex;
 
-		// Token: 0x0401F665 RID: 128613
+		// Token: 0x0401A11E RID: 106782
 		[Nullable(1)]
 		private readonly Dictionary<string, Action> OperationMap = new Dictionary<string, Action>();
 
-		// Token: 0x0200BF51 RID: 48977
+		// Token: 0x0200A957 RID: 43351
 		private enum ESkillNumItem
 		{
-			// Token: 0x04039B38 RID: 236344
+			// Token: 0x040344FA RID: 214266
 			ArrowSprite,
-			// Token: 0x04039B39 RID: 236345
+			// Token: 0x040344FB RID: 214267
 			PanelNum,
-			// Token: 0x04039B3A RID: 236346
+			// Token: 0x040344FC RID: 214268
 			TextNum,
-			// Token: 0x04039B3B RID: 236347
+			// Token: 0x040344FD RID: 214269
 			ItemTimesRoot,
-			// Token: 0x04039B3C RID: 236348
+			// Token: 0x040344FE RID: 214270
 			TxtTimes
 		}
 	}

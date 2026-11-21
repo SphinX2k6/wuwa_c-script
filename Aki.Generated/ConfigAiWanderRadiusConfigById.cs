@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000091 RID: 145
+	// Token: 0x02000099 RID: 153
 	public class ConfigAiWanderRadiusConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000366 RID: 870 RVA: 0x0006CCF4 File Offset: 0x0006AEF4
+		// Token: 0x06000396 RID: 918 RVA: 0x000715A8 File Offset: 0x0006F7A8
 		static ConfigAiWanderRadiusConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAiWanderRadiusConfigById.CreateStaticDefaultValue), new Action(ConfigAiWanderRadiusConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000367 RID: 871 RVA: 0x0006CD14 File Offset: 0x0006AF14
+		// Token: 0x06000397 RID: 919 RVA: 0x000715C8 File Offset: 0x0006F7C8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAiWanderRadiusConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000368 RID: 872 RVA: 0x0006CD93 File Offset: 0x0006AF93
+		// Token: 0x06000398 RID: 920 RVA: 0x00071647 File Offset: 0x0006F847
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAiWanderRadiusConfigById.LogPair = null;
 			ConfigAiWanderRadiusConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06000369 RID: 873 RVA: 0x0006CDA1 File Offset: 0x0006AFA1
+		// Token: 0x06000399 RID: 921 RVA: 0x00071655 File Offset: 0x0006F855
 		public static void Init()
 		{
 			ConfigAiWanderRadiusConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigAiWanderRadiusConfigById.HandleId, "db_ai.db", "select BinData from `AiWanderRadiusConfig` where Id=?");
 		}
 
-		// Token: 0x0600036A RID: 874 RVA: 0x0006CDBC File Offset: 0x0006AFBC
+		// Token: 0x0600039A RID: 922 RVA: 0x00071670 File Offset: 0x0006F870
 		public static AiWanderRadiusConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAiWanderRadiusConfigById.HandleId, ConfigAiWanderRadiusConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AiWanderRadiusConfig?(rootAsAiWanderRadiusConfig);
 		}
 
-		// Token: 0x040003DB RID: 987
+		// Token: 0x04000413 RID: 1043
 		private const string DB = "db_ai.db";
 
-		// Token: 0x040003DC RID: 988
+		// Token: 0x04000414 RID: 1044
 		private const string FILE = "a.AI脱战游荡.xlsx";
 
-		// Token: 0x040003DD RID: 989
+		// Token: 0x04000415 RID: 1045
 		private const string TABLE = "AiWanderRadiusConfig";
 
-		// Token: 0x040003DE RID: 990
+		// Token: 0x04000416 RID: 1046
 		private const string COMMAND = "select BinData from `AiWanderRadiusConfig` where Id=?";
 
-		// Token: 0x040003DF RID: 991
+		// Token: 0x04000417 RID: 1047
 		private const string KEY_PREFIX = "AiWanderRadiusConfigById";
 
-		// Token: 0x040003E0 RID: 992
+		// Token: 0x04000418 RID: 1048
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040003E1 RID: 993
+		// Token: 0x04000419 RID: 1049
 		private static int HandleId;
 	}
 }

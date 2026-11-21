@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001637 RID: 5687
+	// Token: 0x020002E6 RID: 742
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroAnim.EClimbStateType")]
 	public enum EClimbStateType : byte
 	{
-		// Token: 0x0400B30F RID: 45839
+		// Token: 0x0400204A RID: 8266
 		None,
-		// Token: 0x0400B310 RID: 45840
+		// Token: 0x0400204B RID: 8267
 		EnterClimb,
-		// Token: 0x0400B311 RID: 45841
+		// Token: 0x0400204C RID: 8268
 		Climbing,
-		// Token: 0x0400B312 RID: 45842
+		// Token: 0x0400204D RID: 8269
 		ExitClimb,
-		// Token: 0x0400B313 RID: 45843
+		// Token: 0x0400204E RID: 8270
 		EClimbStateType_MAX
 	}
 }

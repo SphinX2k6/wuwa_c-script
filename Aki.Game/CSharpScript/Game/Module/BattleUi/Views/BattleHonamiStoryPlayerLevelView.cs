@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D53 RID: 23891
+	// Token: 0x02004D35 RID: 19765
 	public class BattleHonamiStoryPlayerLevelView : UiPanelBase
 	{
-		// Token: 0x0603CA80 RID: 248448 RVA: 0x00E8EF88 File Offset: 0x00E8D188
+		// Token: 0x060319D9 RID: 203225 RVA: 0x00DDF73C File Offset: 0x00DDD93C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,13 +22,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CA81 RID: 248449 RVA: 0x00E8EFD0 File Offset: 0x00E8D1D0
+		// Token: 0x060319DA RID: 203226 RVA: 0x00DDF784 File Offset: 0x00DDD984
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603CA82 RID: 248450 RVA: 0x00E8EFE3 File Offset: 0x00E8D1E3
+		// Token: 0x060319DB RID: 203227 RVA: 0x00DDF797 File Offset: 0x00DDD997
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x0603CA83 RID: 248451 RVA: 0x00E8F000 File Offset: 0x00E8D200
+		// Token: 0x060319DC RID: 203228 RVA: 0x00DDF7B4 File Offset: 0x00DDD9B4
 		public void RefreshLevel(int oldValue, int newValue, bool isInit = false)
 		{
 			base.GetText(0).SetText(newValue.ToString(), true);
@@ -51,14 +51,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SequencePlayer.PlaySequencePurely((oldValue > newValue) ? "Down" : "Upd", false, false);
 		}
 
-		// Token: 0x0401F987 RID: 129415
+		// Token: 0x0401A440 RID: 107584
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0200C001 RID: 49153
+		// Token: 0x0200AA07 RID: 43527
 		private enum EComponentType
 		{
-			// Token: 0x04039F01 RID: 237313
+			// Token: 0x040348C3 RID: 215235
 			LevelText
 		}
 	}

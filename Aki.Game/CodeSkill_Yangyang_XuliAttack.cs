@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003187 RID: 12679
+// Token: 0x020026F4 RID: 9972
 [NullableContext(1)]
 [Nullable(0)]
 public class CodeSkill_Yangyang_XuliAttack : CodeSkillBase
 {
-	// Token: 0x0601B488 RID: 111752 RVA: 0x007717E8 File Offset: 0x0076F9E8
+	// Token: 0x06018F8D RID: 102285 RVA: 0x0079914C File Offset: 0x0079734C
 	public CodeSkill_Yangyang_XuliAttack(SpecialSkillBase specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B489 RID: 111753 RVA: 0x00771808 File Offset: 0x0076FA08
+	// Token: 0x06018F8E RID: 102286 RVA: 0x0079916C File Offset: 0x0079736C
 	public override void OnBegin(Skill skill)
 	{
 		this.Lerp = 1f;
@@ -37,7 +37,7 @@ public class CodeSkill_Yangyang_XuliAttack : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B48A RID: 111754 RVA: 0x007718BC File Offset: 0x0076FABC
+	// Token: 0x06018F8F RID: 102287 RVA: 0x00799220 File Offset: 0x00797420
 	public override void OnTick(float delta, Skill skill)
 	{
 		if (!this.TickActive || this.Switch)
@@ -72,14 +72,14 @@ public class CodeSkill_Yangyang_XuliAttack : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B48B RID: 111755 RVA: 0x007719B7 File Offset: 0x0076FBB7
+	// Token: 0x06018F90 RID: 102288 RVA: 0x0079931B File Offset: 0x0079751B
 	public override void OnEnd(Skill skill)
 	{
 		this.SetRootMotionScale(1f);
 		this.ClearTimers();
 	}
 
-	// Token: 0x0601B48C RID: 111756 RVA: 0x007719CA File Offset: 0x0076FBCA
+	// Token: 0x06018F91 RID: 102289 RVA: 0x0079932E File Offset: 0x0079752E
 	private void StartRootMotionTask()
 	{
 		this.TickActive = true;
@@ -91,7 +91,7 @@ public class CodeSkill_Yangyang_XuliAttack : CodeSkillBase
 		}, 430f, null, null, true, 1f);
 	}
 
-	// Token: 0x0601B48D RID: 111757 RVA: 0x007719FC File Offset: 0x0076FBFC
+	// Token: 0x06018F92 RID: 102290 RVA: 0x00799360 File Offset: 0x00797560
 	private void SetRootMotionScale(float scale)
 	{
 		CharacterActorComponent component = base.Entity.GetComponent<CharacterActorComponent>();
@@ -107,7 +107,7 @@ public class CodeSkill_Yangyang_XuliAttack : CodeSkillBase
 		actor.SetAnimRootMotionTranslationScale(scale);
 	}
 
-	// Token: 0x0601B48E RID: 111758 RVA: 0x00771A20 File Offset: 0x0076FC20
+	// Token: 0x06018F93 RID: 102291 RVA: 0x00799384 File Offset: 0x00797584
 	private void ClearTimers()
 	{
 		if (this.PreDelayTimer != null)
@@ -122,47 +122,47 @@ public class CodeSkill_Yangyang_XuliAttack : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0400D50C RID: 54540
+	// Token: 0x0400D96F RID: 55663
 	private const int CHARGE_MONTAGE_INDEX = 0;
 
-	// Token: 0x0400D50D RID: 54541
+	// Token: 0x0400D970 RID: 55664
 	private const float PRE_DELAY_MS = 270f;
 
-	// Token: 0x0400D50E RID: 54542
+	// Token: 0x0400D971 RID: 55665
 	private const float SCALE_RESET_DELAY_MS = 430f;
 
-	// Token: 0x0400D50F RID: 54543
+	// Token: 0x0400D972 RID: 55666
 	private const float BEHIND_ANGLE_DEG = 170f;
 
-	// Token: 0x0400D510 RID: 54544
+	// Token: 0x0400D973 RID: 55667
 	private const float FAR_DISTANCE = 270f;
 
-	// Token: 0x0400D511 RID: 54545
+	// Token: 0x0400D974 RID: 55668
 	private const float LERP_STEP = 0.1f;
 
-	// Token: 0x0400D512 RID: 54546
+	// Token: 0x0400D975 RID: 55669
 	private const float ROOT_MOTION_SCALE_MAX = 1f;
 
-	// Token: 0x0400D513 RID: 54547
+	// Token: 0x0400D976 RID: 55670
 	private const float ROOT_MOTION_SCALE_MIN = 0f;
 
-	// Token: 0x0400D514 RID: 54548
+	// Token: 0x0400D977 RID: 55671
 	private float Lerp = 1f;
 
-	// Token: 0x0400D515 RID: 54549
+	// Token: 0x0400D978 RID: 55672
 	private bool Switch;
 
-	// Token: 0x0400D516 RID: 54550
+	// Token: 0x0400D979 RID: 55673
 	private bool TickActive;
 
-	// Token: 0x0400D517 RID: 54551
+	// Token: 0x0400D97A RID: 55674
 	[Nullable(2)]
 	private TimerHandle PreDelayTimer;
 
-	// Token: 0x0400D518 RID: 54552
+	// Token: 0x0400D97B RID: 55675
 	[Nullable(2)]
 	private TimerHandle ScaleResetTimer;
 
-	// Token: 0x0400D519 RID: 54553
+	// Token: 0x0400D97C RID: 55676
 	private readonly Vector TmpDir = Vector.Create();
 }

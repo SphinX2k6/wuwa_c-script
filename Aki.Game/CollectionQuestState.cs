@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x020011E6 RID: 4582
+// Token: 0x0200069A RID: 1690
 public class CollectionQuestState : ICollectionQuestState
 {
-	// Token: 0x17000A6F RID: 2671
-	// (get) Token: 0x06007A31 RID: 31281 RVA: 0x0019B5F4 File Offset: 0x001997F4
-	// (set) Token: 0x06007A32 RID: 31282 RVA: 0x0019B5FC File Offset: 0x001997FC
+	// Token: 0x17000A8F RID: 2703
+	// (get) Token: 0x06004DC8 RID: 19912 RVA: 0x001A42A0 File Offset: 0x001A24A0
+	// (set) Token: 0x06004DC9 RID: 19913 RVA: 0x001A42A8 File Offset: 0x001A24A8
 	public int QuestState { get; set; }
 
-	// Token: 0x17000A70 RID: 2672
-	// (get) Token: 0x06007A33 RID: 31283 RVA: 0x0019B605 File Offset: 0x00199805
-	// (set) Token: 0x06007A34 RID: 31284 RVA: 0x0019B60D File Offset: 0x0019980D
+	// Token: 0x17000A90 RID: 2704
+	// (get) Token: 0x06004DCA RID: 19914 RVA: 0x001A42B1 File Offset: 0x001A24B1
+	// (set) Token: 0x06004DCB RID: 19915 RVA: 0x001A42B9 File Offset: 0x001A24B9
 	public bool ClaimedReward { get; set; }
 
-	// Token: 0x17000A71 RID: 2673
-	// (get) Token: 0x06007A35 RID: 31285 RVA: 0x0019B616 File Offset: 0x00199816
-	// (set) Token: 0x06007A36 RID: 31286 RVA: 0x0019B61E File Offset: 0x0019981E
+	// Token: 0x17000A91 RID: 2705
+	// (get) Token: 0x06004DCC RID: 19916 RVA: 0x001A42C2 File Offset: 0x001A24C2
+	// (set) Token: 0x06004DCD RID: 19917 RVA: 0x001A42CA File Offset: 0x001A24CA
 	public long QuestUnlockStamp { get; set; }
 }

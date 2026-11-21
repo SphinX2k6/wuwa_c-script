@@ -5,14 +5,14 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067BE RID: 26558
+	// Token: 0x0200570E RID: 22286
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBackPackServerData
 	{
-		// Token: 0x170096B0 RID: 38576
-		// (get) Token: 0x06042264 RID: 270948 RVA: 0x0100AA5D File Offset: 0x01008C5D
-		// (set) Token: 0x06042265 RID: 270949 RVA: 0x0100AA68 File Offset: 0x01008C68
+		// Token: 0x170069F1 RID: 27121
+		// (get) Token: 0x06036DBA RID: 224698 RVA: 0x00F4BE41 File Offset: 0x00F4A041
+		// (set) Token: 0x06036DBB RID: 224699 RVA: 0x00F4BE4C File Offset: 0x00F4A04C
 		public DangoBrawlNormalBagItemInfo[] MyInfoList
 		{
 			get
@@ -32,16 +32,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042266 RID: 270950 RVA: 0x0100AAB9 File Offset: 0x01008CB9
+		// Token: 0x06036DBC RID: 224700 RVA: 0x00F4BE9D File Offset: 0x00F4A09D
 		public List<DangoBrawlBackPackItemServerData> GetItemList()
 		{
 			return new List<DangoBrawlBackPackItemServerData>(this.ItemMap.Values);
 		}
 
-		// Token: 0x0402289A RID: 141466
+		// Token: 0x0401D0F7 RID: 119031
 		private DangoBrawlNormalBagItemInfo[] InfoList = Array.Empty<DangoBrawlNormalBagItemInfo>();
 
-		// Token: 0x0402289B RID: 141467
+		// Token: 0x0401D0F8 RID: 119032
 		private readonly Dictionary<int, DangoBrawlBackPackItemServerData> ItemMap = new Dictionary<int, DangoBrawlBackPackItemServerData>();
 	}
 }

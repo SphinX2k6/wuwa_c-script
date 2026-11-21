@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02002683 RID: 9859
+// Token: 0x02001B6E RID: 7022
 public class QuestReviewNodeDestroyItem : QuestReviewNodeItemBase
 {
-	// Token: 0x06014349 RID: 82761 RVA: 0x0051A978 File Offset: 0x00518B78
+	// Token: 0x0601182B RID: 71723 RVA: 0x005296B0 File Offset: 0x005278B0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -21,7 +21,7 @@ public class QuestReviewNodeDestroyItem : QuestReviewNodeItemBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601434A RID: 82762 RVA: 0x0051A9E4 File Offset: 0x00518BE4
+	// Token: 0x0601182C RID: 71724 RVA: 0x0052971C File Offset: 0x0052791C
 	[NullableContext(1)]
 	public override void Refresh(IQuestReviewNodeParam param)
 	{
@@ -34,13 +34,13 @@ public class QuestReviewNodeDestroyItem : QuestReviewNodeItemBase
 		base.GetSprite(0).SetColor(color);
 	}
 
-	// Token: 0x02008CD4 RID: 36052
+	// Token: 0x02007E5D RID: 32349
 	private class ENodeDestroyComponentDefine
 	{
-		// Token: 0x0402DB34 RID: 187188
+		// Token: 0x04028E4B RID: 167499
 		public const int SpriteLineHorizontal = 0;
 
-		// Token: 0x0402DB35 RID: 187189
+		// Token: 0x04028E4C RID: 167500
 		public const int SpriteStartPoint = 1;
 	}
 }

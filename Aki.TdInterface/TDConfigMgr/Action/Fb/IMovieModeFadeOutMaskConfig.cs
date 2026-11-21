@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002ACE RID: 10958
+	// Token: 0x02002DC2 RID: 11714
 	public class IMovieModeFadeOutMaskConfig
 	{
-		// Token: 0x0600F05D RID: 61533 RVA: 0x0022E782 File Offset: 0x0022C982
-		[NullableContext(1)]
+		// Token: 0x0600FF13 RID: 65299 RVA: 0x0024C48E File Offset: 0x0024A68E
 		public static IMovieModeFadeOutMaskConfig Create(IMovieModeFadeOutMaskConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C83 RID: 19587
-		// (get) Token: 0x0600F05E RID: 61534 RVA: 0x0022E7A4 File Offset: 0x0022C9A4
+		// Token: 0x1700503D RID: 20541
+		// (get) Token: 0x0600FF14 RID: 65300 RVA: 0x0024C4B0 File Offset: 0x0024A6B0
 		public virtual bool? IsEnableMask
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C84 RID: 19588
-		// (get) Token: 0x0600F05F RID: 61535 RVA: 0x0022E7DC File Offset: 0x0022C9DC
+		// Token: 0x1700503E RID: 20542
+		// (get) Token: 0x0600FF15 RID: 65301 RVA: 0x0024C4E8 File Offset: 0x0024A6E8
 		public virtual float? TransitionTime
 		{
 			get
@@ -49,7 +47,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008436 RID: 33846
+		// Token: 0x04008B3A RID: 35642
 		private IMovieModeFadeOutMaskConfig Instance;
 	}
 }

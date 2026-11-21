@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F36 RID: 12086
+// Token: 0x02002489 RID: 9353
 [NullableContext(1)]
 [Nullable(0)]
 public class ExtraEffectDestroyBullet : BuffEffect
 {
-	// Token: 0x06019BCC RID: 105420 RVA: 0x006B4ACB File Offset: 0x006B2CCB
+	// Token: 0x060174D7 RID: 95447 RVA: 0x006DADF3 File Offset: 0x006D8FF3
 	public ExtraEffectDestroyBullet(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019BCD RID: 105421 RVA: 0x006B4ADA File Offset: 0x006B2CDA
+	// Token: 0x060174D8 RID: 95448 RVA: 0x006DAE02 File Offset: 0x006D9002
 	protected override bool CheckExecutable()
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
 		return ownerBuffComponent != null && ownerBuffComponent.HasBuffAuthority();
 	}
 
-	// Token: 0x06019BCE RID: 105422 RVA: 0x006B4AF0 File Offset: 0x006B2CF0
+	// Token: 0x060174D9 RID: 95449 RVA: 0x006DAE18 File Offset: 0x006D9018
 	protected unsafe override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -78,14 +78,14 @@ public class ExtraEffectDestroyBullet : BuffEffect
 		}
 	}
 
-	// Token: 0x06019BCF RID: 105423 RVA: 0x006B4C9E File Offset: 0x006B2E9E
+	// Token: 0x060174DA RID: 95450 RVA: 0x006DAFC6 File Offset: 0x006D91C6
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019BD0 RID: 105424 RVA: 0x006B4CA4 File Offset: 0x006B2EA4
+	// Token: 0x060174DB RID: 95451 RVA: 0x006DAFCC File Offset: 0x006D91CC
 	public override void OnRemoved(bool bPremature)
 	{
 		if (this.BulletOwner == EBulletOwner.None || this.BulletRowNames == null)
@@ -206,7 +206,7 @@ public class ExtraEffectDestroyBullet : BuffEffect
 		}
 	}
 
-	// Token: 0x0400C207 RID: 49671
+	// Token: 0x0400C5A9 RID: 50601
 	[Nullable(new byte[]
 	{
 		2,
@@ -214,15 +214,15 @@ public class ExtraEffectDestroyBullet : BuffEffect
 	})]
 	private string[] BulletRowNames;
 
-	// Token: 0x0400C208 RID: 49672
+	// Token: 0x0400C5AA RID: 50602
 	private EBulletOwner BulletOwner;
 
-	// Token: 0x0400C209 RID: 49673
+	// Token: 0x0400C5AB RID: 50603
 	private bool SummonChildBullet;
 
-	// Token: 0x0400C20A RID: 49674
+	// Token: 0x0400C5AC RID: 50604
 	private EDestroyRangeTargetType RangeTargetType;
 
-	// Token: 0x0400C20B RID: 49675
+	// Token: 0x0400C5AD RID: 50605
 	private float RadiusSquared;
 }

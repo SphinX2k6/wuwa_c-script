@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002FB7 RID: 12215
+// Token: 0x0200250B RID: 9483
 [NullableContext(2)]
 [Nullable(0)]
 public class GameplayCueBeam : GameplayCueBase
 {
-	// Token: 0x06019E59 RID: 106073 RVA: 0x006C51C0 File Offset: 0x006C33C0
+	// Token: 0x0601776B RID: 96107 RVA: 0x006EBA84 File Offset: 0x006E9C84
 	protected override void OnInit()
 	{
 		string[] array = this.CueConfig.Socket.Split('#', StringSplitOptions.None);
@@ -40,7 +40,7 @@ public class GameplayCueBeam : GameplayCueBase
 		this.ValidateBeamConfig();
 	}
 
-	// Token: 0x06019E5A RID: 106074 RVA: 0x006C5254 File Offset: 0x006C3454
+	// Token: 0x0601776C RID: 96108 RVA: 0x006EBB18 File Offset: 0x006E9D18
 	protected override void OnTick(float delta)
 	{
 		if (this.BeamItem == null)
@@ -56,13 +56,13 @@ public class GameplayCueBeam : GameplayCueBase
 		this.BeamItem.Tick(this.GetBeamPoints(), delta);
 	}
 
-	// Token: 0x06019E5B RID: 106075 RVA: 0x006C52A7 File Offset: 0x006C34A7
+	// Token: 0x0601776D RID: 96109 RVA: 0x006EBB6B File Offset: 0x006E9D6B
 	protected override void OnCreate()
 	{
 		this.BeamItem = GameplayCueBeamCommonItem.Spawn(this.GetBeamOwner(), this.CueConfig.Path, null);
 	}
 
-	// Token: 0x06019E5C RID: 106076 RVA: 0x006C52C6 File Offset: 0x006C34C6
+	// Token: 0x0601776E RID: 96110 RVA: 0x006EBB8A File Offset: 0x006E9D8A
 	protected override void OnDestroy()
 	{
 		if (this.BeamItem != null)
@@ -72,13 +72,13 @@ public class GameplayCueBeam : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019E5D RID: 106077 RVA: 0x006C52E2 File Offset: 0x006C34E2
+	// Token: 0x0601776F RID: 96111 RVA: 0x006EBBA6 File Offset: 0x006E9DA6
 	public new static bool IsSingleInstance()
 	{
 		return false;
 	}
 
-	// Token: 0x06019E5E RID: 106078 RVA: 0x006C52E8 File Offset: 0x006C34E8
+	// Token: 0x06017770 RID: 96112 RVA: 0x006EBBAC File Offset: 0x006E9DAC
 	protected virtual void ValidateBeamConfig()
 	{
 		if (this.Instigator == null)
@@ -91,20 +91,20 @@ public class GameplayCueBeam : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019E5F RID: 106079 RVA: 0x006C5343 File Offset: 0x006C3543
+	// Token: 0x06017771 RID: 96113 RVA: 0x006EBC07 File Offset: 0x006E9E07
 	protected virtual bool ShouldHideBeam()
 	{
 		return this.InstigatorActor.bHidden || this.ActorInternal.bHidden;
 	}
 
-	// Token: 0x06019E60 RID: 106080 RVA: 0x006C535F File Offset: 0x006C355F
+	// Token: 0x06017772 RID: 96114 RVA: 0x006EBC23 File Offset: 0x006E9E23
 	[NullableContext(1)]
 	protected virtual ABaseCharacter GetBeamOwner()
 	{
 		return this.InstigatorActor;
 	}
 
-	// Token: 0x06019E61 RID: 106081 RVA: 0x006C5367 File Offset: 0x006C3567
+	// Token: 0x06017773 RID: 96115 RVA: 0x006EBC2B File Offset: 0x006E9E2B
 	[NullableContext(1)]
 	protected virtual FVectorDouble[] GetBeamPoints()
 	{
@@ -115,7 +115,7 @@ public class GameplayCueBeam : GameplayCueBase
 		};
 	}
 
-	// Token: 0x06019E62 RID: 106082 RVA: 0x006C538C File Offset: 0x006C358C
+	// Token: 0x06017774 RID: 96116 RVA: 0x006EBC50 File Offset: 0x006E9E50
 	protected FVectorDouble GetInstigatorPoint()
 	{
 		if (!(this.Sockets[0] != null))
@@ -125,7 +125,7 @@ public class GameplayCueBeam : GameplayCueBase
 		return this.InstigatorActor.Mesh.D_GetSocketLocation(this.Sockets[0]);
 	}
 
-	// Token: 0x06019E63 RID: 106083 RVA: 0x006C53DC File Offset: 0x006C35DC
+	// Token: 0x06017775 RID: 96117 RVA: 0x006EBCA0 File Offset: 0x006E9EA0
 	protected FVectorDouble GetActorPoint()
 	{
 		if (!(this.Sockets[1] != null))
@@ -135,19 +135,19 @@ public class GameplayCueBeam : GameplayCueBase
 		return this.ActorInternal.Mesh.D_GetSocketLocation(this.Sockets[1]);
 	}
 
-	// Token: 0x06019E64 RID: 106084 RVA: 0x006C542A File Offset: 0x006C362A
+	// Token: 0x06017776 RID: 96118 RVA: 0x006EBCEE File Offset: 0x006E9EEE
 	protected bool HasExternalInstigator()
 	{
 		TsBaseCharacter instigatorActor = this.InstigatorActor;
 		return instigatorActor != null && instigatorActor.IsValid() && this.InstigatorActor != this.ActorInternal;
 	}
 
-	// Token: 0x0400C3E6 RID: 50150
+	// Token: 0x0400C78F RID: 51087
 	protected TsBaseCharacter InstigatorActor;
 
-	// Token: 0x0400C3E7 RID: 50151
+	// Token: 0x0400C790 RID: 51088
 	protected List<FName> Sockets;
 
-	// Token: 0x0400C3E8 RID: 50152
+	// Token: 0x0400C791 RID: 51089
 	protected GameplayCueBeamCommonItem BeamItem;
 }

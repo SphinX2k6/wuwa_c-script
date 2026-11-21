@@ -5,18 +5,18 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200186E RID: 6254
+// Token: 0x02000D27 RID: 3367
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballFilterItem : UiPanelBase
 {
-	// Token: 0x0600B797 RID: 46999 RVA: 0x00298815 File Offset: 0x00296A15
+	// Token: 0x06008B80 RID: 35712 RVA: 0x002A2F31 File Offset: 0x002A1131
 	public PinballFilterItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600B798 RID: 47000 RVA: 0x0029882C File Offset: 0x00296A2C
+	// Token: 0x06008B81 RID: 35713 RVA: 0x002A2F48 File Offset: 0x002A1148
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -39,7 +39,7 @@ public class PinballFilterItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B799 RID: 47001 RVA: 0x002988F3 File Offset: 0x00296AF3
+	// Token: 0x06008B82 RID: 35714 RVA: 0x002A300F File Offset: 0x002A120F
 	private void ToggleEvent(EToggleState state)
 	{
 		TFilterItemToggleEvent toggleFunction = this.ToggleFunction;
@@ -50,14 +50,14 @@ public class PinballFilterItem : UiPanelBase
 		toggleFunction(state, this.Data.FilterId, this.Data.Content);
 	}
 
-	// Token: 0x0600B79A RID: 47002 RVA: 0x0029891C File Offset: 0x00296B1C
+	// Token: 0x06008B83 RID: 35715 RVA: 0x002A3038 File Offset: 0x002A1238
 	private void SetContent()
 	{
 		string content = this.Data.Content;
 		base.GetText(0).SetText(content, true);
 	}
 
-	// Token: 0x0600B79B RID: 47003 RVA: 0x00298944 File Offset: 0x00296B44
+	// Token: 0x06008B84 RID: 35716 RVA: 0x002A3060 File Offset: 0x002A1260
 	private void SetIcon()
 	{
 		FilterItemData data = this.Data;
@@ -96,20 +96,20 @@ public class PinballFilterItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B79C RID: 47004 RVA: 0x002989FA File Offset: 0x00296BFA
+	// Token: 0x06008B85 RID: 35717 RVA: 0x002A3116 File Offset: 0x002A1316
 	public void SetToggleFunction(TFilterItemToggleEvent toggleFunction)
 	{
 		this.ToggleFunction = toggleFunction;
 	}
 
-	// Token: 0x0600B79D RID: 47005 RVA: 0x00298A04 File Offset: 0x00296C04
+	// Token: 0x06008B86 RID: 35718 RVA: 0x002A3120 File Offset: 0x002A1320
 	public void SetToggleState(bool bSelected)
 	{
 		EToggleState state = bSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(1).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0600B79E RID: 47006 RVA: 0x00298A2A File Offset: 0x00296C2A
+	// Token: 0x06008B87 RID: 35719 RVA: 0x002A3146 File Offset: 0x002A1346
 	public void ShowTemp(FilterItemData data, bool bSelected)
 	{
 		this.Data = data;
@@ -118,27 +118,27 @@ public class PinballFilterItem : UiPanelBase
 		this.SetToggleState(bSelected);
 	}
 
-	// Token: 0x040052D1 RID: 21201
+	// Token: 0x0400537C RID: 21372
 	[Nullable(2)]
 	private FilterItemData Data;
 
-	// Token: 0x040052D2 RID: 21202
+	// Token: 0x0400537D RID: 21373
 	[Nullable(2)]
 	private TFilterItemToggleEvent ToggleFunction;
 
-	// Token: 0x040052D3 RID: 21203
+	// Token: 0x0400537E RID: 21374
 	[Nullable(2)]
 	private PinballFilterIconView Icon;
 
-	// Token: 0x02007E33 RID: 32307
+	// Token: 0x02006FBA RID: 28602
 	[NullableContext(0)]
 	private enum EPinballFilterItemComponent
 	{
-		// Token: 0x040294D8 RID: 169176
+		// Token: 0x04024805 RID: 149509
 		Name,
-		// Token: 0x040294D9 RID: 169177
+		// Token: 0x04024806 RID: 149510
 		Toggle,
-		// Token: 0x040294DA RID: 169178
+		// Token: 0x04024807 RID: 149511
 		Icon
 	}
 }

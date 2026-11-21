@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B5A RID: 15194
+	// Token: 0x02003F62 RID: 16226
 	public class TTargetTypeUnion
 	{
-		// Token: 0x17006826 RID: 26662
-		// (get) Token: 0x06014C87 RID: 85127 RVA: 0x003050AF File Offset: 0x003032AF
-		// (set) Token: 0x06014C88 RID: 85128 RVA: 0x003050B7 File Offset: 0x003032B7
+		// Token: 0x17006DC5 RID: 28101
+		// (get) Token: 0x06016151 RID: 90449 RVA: 0x0032B647 File Offset: 0x00329847
+		// (set) Token: 0x06016152 RID: 90450 RVA: 0x0032B64F File Offset: 0x0032984F
 		public TTargetType Type { get; set; }
 
-		// Token: 0x17006827 RID: 26663
-		// (get) Token: 0x06014C89 RID: 85129 RVA: 0x003050C0 File Offset: 0x003032C0
-		// (set) Token: 0x06014C8A RID: 85130 RVA: 0x003050C8 File Offset: 0x003032C8
+		// Token: 0x17006DC6 RID: 28102
+		// (get) Token: 0x06016153 RID: 90451 RVA: 0x0032B658 File Offset: 0x00329858
+		// (set) Token: 0x06016154 RID: 90452 RVA: 0x0032B660 File Offset: 0x00329860
 		public object Value { get; set; }
 
-		// Token: 0x06014C8B RID: 85131 RVA: 0x003050D1 File Offset: 0x003032D1
+		// Token: 0x06016155 RID: 90453 RVA: 0x0032B669 File Offset: 0x00329869
 		public TTargetTypeUnion()
 		{
 			this.Type = TTargetType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06014C8C RID: 85132 RVA: 0x003050E7 File Offset: 0x003032E7
+		// Token: 0x06016156 RID: 90454 RVA: 0x0032B67F File Offset: 0x0032987F
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06014C8D RID: 85133 RVA: 0x003050F9 File Offset: 0x003032F9
+		// Token: 0x06016157 RID: 90455 RVA: 0x0032B691 File Offset: 0x00329891
 		public ITargetLevelEntityT AsITargetLevelEntity()
 		{
 			return this.As<ITargetLevelEntityT>();
 		}
 
-		// Token: 0x06014C8E RID: 85134 RVA: 0x00305101 File Offset: 0x00303301
+		// Token: 0x06016158 RID: 90456 RVA: 0x0032B699 File Offset: 0x00329899
 		public static TTargetTypeUnion FromITargetLevelEntity(ITargetLevelEntityT _itargetlevelentity)
 		{
 			return new TTargetTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C8F RID: 85135 RVA: 0x00305116 File Offset: 0x00303316
+		// Token: 0x06016159 RID: 90457 RVA: 0x0032B6AE File Offset: 0x003298AE
 		public ITargetPlayT AsITargetPlay()
 		{
 			return this.As<ITargetPlayT>();
 		}
 
-		// Token: 0x06014C90 RID: 85136 RVA: 0x0030511E File Offset: 0x0030331E
+		// Token: 0x0601615A RID: 90458 RVA: 0x0032B6B6 File Offset: 0x003298B6
 		public static TTargetTypeUnion FromITargetPlay(ITargetPlayT _itargetplay)
 		{
 			return new TTargetTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C91 RID: 85137 RVA: 0x00305134 File Offset: 0x00303334
+		// Token: 0x0601615B RID: 90459 RVA: 0x0032B6CC File Offset: 0x003298CC
 		public static int Pack(FlatBufferBuilder builder, TTargetTypeUnion _o)
 		{
 			TTargetType type = _o.Type;

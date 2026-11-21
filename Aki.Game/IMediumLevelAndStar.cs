@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200191F RID: 6431
+// Token: 0x02000DD8 RID: 3544
 public interface IMediumLevelAndStar
 {
-	// Token: 0x17000FBE RID: 4030
-	// (get) Token: 0x0600BC66 RID: 48230
-	// (set) Token: 0x0600BC67 RID: 48231
+	// Token: 0x17000FE1 RID: 4065
+	// (get) Token: 0x06009050 RID: 36944
+	// (set) Token: 0x06009051 RID: 36945
 	int? Level { get; set; }
 
-	// Token: 0x17000FBF RID: 4031
-	// (get) Token: 0x0600BC68 RID: 48232
-	// (set) Token: 0x0600BC69 RID: 48233
+	// Token: 0x17000FE2 RID: 4066
+	// (get) Token: 0x06009052 RID: 36946
+	// (set) Token: 0x06009053 RID: 36947
 	int? Star { get; set; }
 }

@@ -7,19 +7,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickTimeAction.Context
 {
-	// Token: 0x02004F4B RID: 20299
+	// Token: 0x02003F14 RID: 16148
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class QtaCustomizationContext : QtaContextBase
 	{
-		// Token: 0x060340DF RID: 213215 RVA: 0x00C350DD File Offset: 0x00C332DD
+		// Token: 0x06028F4D RID: 167757 RVA: 0x00B7E87D File Offset: 0x00B7CA7D
 		public QtaCustomizationContext()
 		{
 			this.Type = new EQtaContextType?(EQtaContextType.Customization);
 		}
 
-		// Token: 0x17007F4F RID: 32591
-		// (get) Token: 0x060340E0 RID: 213216 RVA: 0x00C350F1 File Offset: 0x00C332F1
+		// Token: 0x170052FF RID: 21247
+		// (get) Token: 0x06028F4E RID: 167758 RVA: 0x00B7E891 File Offset: 0x00B7CA91
 		public bool IsInited
 		{
 			get
@@ -28,8 +28,8 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			}
 		}
 
-		// Token: 0x17007F50 RID: 32592
-		// (get) Token: 0x060340E1 RID: 213217 RVA: 0x00C350F9 File Offset: 0x00C332F9
+		// Token: 0x17005300 RID: 21248
+		// (get) Token: 0x06028F4F RID: 167759 RVA: 0x00B7E899 File Offset: 0x00B7CA99
 		public QtaCustomizationBaseLogic QtaCustomizationLogic
 		{
 			get
@@ -42,14 +42,14 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			}
 		}
 
-		// Token: 0x060340E2 RID: 213218 RVA: 0x00C3510B File Offset: 0x00C3330B
+		// Token: 0x06028F50 RID: 167760 RVA: 0x00B7E8AB File Offset: 0x00B7CAAB
 		[NullableContext(1)]
 		protected override void OnSetConfig(SQta config)
 		{
 			this.QtaConfig = config;
 		}
 
-		// Token: 0x060340E3 RID: 213219 RVA: 0x00C35114 File Offset: 0x00C33314
+		// Token: 0x06028F51 RID: 167761 RVA: 0x00B7E8B4 File Offset: 0x00B7CAB4
 		public override void OnResourceReady()
 		{
 			SQta qtaConfig = this.QtaConfig;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			QtaLog.Info(this, "Qta定制型：成功初始化", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060340E4 RID: 213220 RVA: 0x00C35285 File Offset: 0x00C33485
+		// Token: 0x06028F52 RID: 167762 RVA: 0x00B7EA25 File Offset: 0x00B7CC25
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			return qtaCzLogic.OnGetActions();
 		}
 
-		// Token: 0x060340E5 RID: 213221 RVA: 0x00C35298 File Offset: 0x00C33498
+		// Token: 0x06028F53 RID: 167763 RVA: 0x00B7EA38 File Offset: 0x00B7CC38
 		protected override void OnQtaResponse(bool press)
 		{
 			QtaCustomizationBaseLogic qtaCzLogic = this.QtaCzLogic;
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			qtaCzLogic.OnQtaResponse(press);
 		}
 
-		// Token: 0x060340E6 RID: 213222 RVA: 0x00C352AB File Offset: 0x00C334AB
+		// Token: 0x06028F54 RID: 167764 RVA: 0x00B7EA4B File Offset: 0x00B7CC4B
 		protected override void OnUpdateTime(float delta)
 		{
 			QtaCustomizationBaseLogic qtaCzLogic = this.QtaCzLogic;
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			qtaCzLogic.OnUpdateTime(delta);
 		}
 
-		// Token: 0x060340E7 RID: 213223 RVA: 0x00C352BE File Offset: 0x00C334BE
+		// Token: 0x06028F55 RID: 167765 RVA: 0x00B7EA5E File Offset: 0x00B7CC5E
 		public override float GetProgress()
 		{
 			QtaCustomizationBaseLogic qtaCzLogic = this.QtaCzLogic;
@@ -150,14 +150,14 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			return qtaCzLogic.GetProgress();
 		}
 
-		// Token: 0x060340E8 RID: 213224 RVA: 0x00C352D5 File Offset: 0x00C334D5
+		// Token: 0x06028F56 RID: 167766 RVA: 0x00B7EA75 File Offset: 0x00B7CC75
 		protected override bool CheckQtaCanEnd()
 		{
 			QtaCustomizationBaseLogic qtaCzLogic = this.QtaCzLogic;
 			return qtaCzLogic != null && qtaCzLogic.CheckQtaCanEnd();
 		}
 
-		// Token: 0x060340E9 RID: 213225 RVA: 0x00C352E8 File Offset: 0x00C334E8
+		// Token: 0x06028F57 RID: 167767 RVA: 0x00B7EA88 File Offset: 0x00B7CC88
 		public override void OnPreEndQta()
 		{
 			QtaCustomizationBaseLogic qtaCzLogic = this.QtaCzLogic;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			qtaCzLogic.OnPreEndQta();
 		}
 
-		// Token: 0x060340EA RID: 213226 RVA: 0x00C352FA File Offset: 0x00C334FA
+		// Token: 0x06028F58 RID: 167768 RVA: 0x00B7EA9A File Offset: 0x00B7CC9A
 		protected override void OnQtaResult(EQtaResult qtaResult)
 		{
 			QtaCustomizationBaseLogic qtaCzLogic = this.QtaCzLogic;
@@ -179,13 +179,13 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			qtaCzLogic.OnQtaEnd(qtaResult == EQtaResult.Success);
 		}
 
-		// Token: 0x0401BA60 RID: 113248
+		// Token: 0x04016435 RID: 91189
 		private SQta QtaConfig;
 
-		// Token: 0x0401BA61 RID: 113249
+		// Token: 0x04016436 RID: 91190
 		private QtaCustomizationBaseLogic QtaCzLogic;
 
-		// Token: 0x0401BA62 RID: 113250
+		// Token: 0x04016437 RID: 91191
 		private bool Inited;
 	}
 }

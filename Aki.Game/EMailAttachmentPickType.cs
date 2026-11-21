@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020021C1 RID: 8641
+// Token: 0x020016A5 RID: 5797
 public enum EMailAttachmentPickType
 {
-	// Token: 0x04007FC0 RID: 32704
+	// Token: 0x04008107 RID: 33031
 	PickOne,
-	// Token: 0x04007FC1 RID: 32705
+	// Token: 0x04008108 RID: 33032
 	PickAll
 }

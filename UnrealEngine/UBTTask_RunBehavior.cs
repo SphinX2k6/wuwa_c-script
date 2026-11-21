@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000160 RID: 352
+	// Token: 0x020000B8 RID: 184
 	[UnrealObjectPath("/Script/AIModule.BTTask_RunBehavior")]
 	[UnrealStructLayout(144, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 144)]
 	public class UBTTask_RunBehavior : UBTTaskNode, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060017FE RID: 6142 RVA: 0x00023573 File Offset: 0x00021773
+		// Token: 0x06000DE1 RID: 3553 RVA: 0x00015CC5 File Offset: 0x00013EC5
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UBTTask_RunBehavior._ClassPtr;
 		}
 
-		// Token: 0x060017FF RID: 6143 RVA: 0x00023580 File Offset: 0x00021780
+		// Token: 0x06000DE2 RID: 3554 RVA: 0x00015CD4 File Offset: 0x00013ED4
 		public UBTTask_RunBehavior() : this(BuiltinUtils.AllocNativeUObject(UBTTask_RunBehavior.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06001800 RID: 6144 RVA: 0x000235A8 File Offset: 0x000217A8
+		// Token: 0x06000DE3 RID: 3555 RVA: 0x00015CFC File Offset: 0x00013EFC
 		[NullableContext(1)]
 		public UBTTask_RunBehavior(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UBTTask_RunBehavior.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17000625 RID: 1573
-		// (get) Token: 0x06001801 RID: 6145 RVA: 0x000235DB File Offset: 0x000217DB
-		// (set) Token: 0x06001802 RID: 6146 RVA: 0x000235EF File Offset: 0x000217EF
+		// Token: 0x17000123 RID: 291
+		// (get) Token: 0x06000DE4 RID: 3556 RVA: 0x00015D2F File Offset: 0x00013F2F
+		// (set) Token: 0x06000DE5 RID: 3557 RVA: 0x00015D43 File Offset: 0x00013F43
 		[Nullable(2)]
 		public unsafe UBehaviorTree BehaviorAsset
 		{
@@ -46,28 +46,28 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06001803 RID: 6147 RVA: 0x00023604 File Offset: 0x00021804
+		// Token: 0x06000DE6 RID: 3558 RVA: 0x00015D58 File Offset: 0x00013F58
 		static UBTTask_RunBehavior()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/AIModule.BTTask_RunBehavior");
 		}
 
-		// Token: 0x06001804 RID: 6148 RVA: 0x00023612 File Offset: 0x00021812
+		// Token: 0x06000DE7 RID: 3559 RVA: 0x00015D66 File Offset: 0x00013F66
 		protected UBTTask_RunBehavior(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040005E6 RID: 1510
+		// Token: 0x04000294 RID: 660
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/AIModule.BTTask_RunBehavior";
 
-		// Token: 0x040005E7 RID: 1511
+		// Token: 0x04000295 RID: 661
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040005E8 RID: 1512
+		// Token: 0x04000296 RID: 662
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040005E9 RID: 1513
+		// Token: 0x04000297 RID: 663
 		internal static int __PropertyOffset_BehaviorAsset;
 	}
 }

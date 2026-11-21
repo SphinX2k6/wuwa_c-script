@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.ExtraEffect
 {
-	// Token: 0x02007159 RID: 29017
+	// Token: 0x02006387 RID: 25479
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ConvertAbnormalLight : PeriodExecution
 	{
-		// Token: 0x06046D4F RID: 290127 RVA: 0x011D9BEB File Offset: 0x011D7DEB
+		// Token: 0x0603DBA9 RID: 252841 RVA: 0x011E2DC7 File Offset: 0x011E0FC7
 		public ConvertAbnormalLight(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 		{
 		}
 
-		// Token: 0x06046D50 RID: 290128 RVA: 0x011D9C00 File Offset: 0x011D7E00
+		// Token: 0x0603DBAA RID: 252842 RVA: 0x011E2DDC File Offset: 0x011E0FDC
 		protected override void InitParameters(ExtraEffectParameters parameters)
 		{
 			this._targetBuffIds = new List<ValueTuple<int, long>>();
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.ExtraE
 			this.TargetType = (EExecutionTargetType)int.Parse(s3);
 		}
 
-		// Token: 0x06046D51 RID: 290129 RVA: 0x011D9D10 File Offset: 0x011D7F10
+		// Token: 0x0603DBAB RID: 252843 RVA: 0x011E2EEC File Offset: 0x011E10EC
 		[return: Nullable(2)]
 		public override object OnExecute(params object[] args)
 		{
@@ -93,13 +93,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.ExtraE
 			return null;
 		}
 
-		// Token: 0x040252C6 RID: 152262
+		// Token: 0x04020BA9 RID: 134057
 		private const int DefaultRemoveEffectId = 1005;
 
-		// Token: 0x040252C7 RID: 152263
+		// Token: 0x04020BAA RID: 134058
 		private const string Reason = "buff额外效果1102";
 
-		// Token: 0x040252C8 RID: 152264
+		// Token: 0x04020BAB RID: 134059
 		[TupleElementNames(new string[]
 		{
 			"lowerBound",
@@ -112,10 +112,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.ExtraE
 		})]
 		private List<ValueTuple<int, long>> _targetBuffIds = new List<ValueTuple<int, long>>();
 
-		// Token: 0x040252C9 RID: 152265
+		// Token: 0x04020BAC RID: 134060
 		private int _extractEffectId;
 
-		// Token: 0x040252CA RID: 152266
+		// Token: 0x04020BAD RID: 134061
 		private int _maxStackCount;
 	}
 }

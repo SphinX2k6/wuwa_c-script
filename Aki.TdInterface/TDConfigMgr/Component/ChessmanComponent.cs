@@ -8,11 +8,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x0200003C RID: 60
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class ChessmanComponent : IComponentBase
 	{
-		// Token: 0x06000214 RID: 532 RVA: 0x00018A84 File Offset: 0x00016C84
+		// Token: 0x06000218 RID: 536 RVA: 0x000193F8 File Offset: 0x000175F8
 		private ChessmanComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000215 RID: 533 RVA: 0x00018ABC File Offset: 0x00016CBC
+		// Token: 0x06000219 RID: 537 RVA: 0x00019430 File Offset: 0x00017630
 		public static ChessmanComponent Create([Nullable(2)] ChessmanComponent instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000216 RID: 534 RVA: 0x00018ACF File Offset: 0x00016CCF
+		// Token: 0x0600021A RID: 538 RVA: 0x00019443 File Offset: 0x00017643
 		public static ChessmanComponent CreateFromSetValue([Nullable(2)] ChessmanComponent_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000217 RID: 535 RVA: 0x00018AE2 File Offset: 0x00016CE2
+		// Token: 0x0600021B RID: 539 RVA: 0x00019456 File Offset: 0x00017656
 		public new ChessmanComponent_SetValue ToSetValue()
 		{
 			return new ChessmanComponent_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170000C2 RID: 194
-		// (get) Token: 0x06000218 RID: 536 RVA: 0x00018B1C File Offset: 0x00016D1C
-		// (set) Token: 0x06000219 RID: 537 RVA: 0x00018B56 File Offset: 0x00016D56
+		// Token: 0x170000C4 RID: 196
+		// (get) Token: 0x0600021C RID: 540 RVA: 0x00019490 File Offset: 0x00017690
+		// (set) Token: 0x0600021D RID: 541 RVA: 0x000194CA File Offset: 0x000176CA
 		public override bool? Disabled
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000C3 RID: 195
-		// (get) Token: 0x0600021A RID: 538 RVA: 0x00018B64 File Offset: 0x00016D64
-		// (set) Token: 0x0600021B RID: 539 RVA: 0x00018B8E File Offset: 0x00016D8E
+		// Token: 0x170000C5 RID: 197
+		// (get) Token: 0x0600021E RID: 542 RVA: 0x000194D8 File Offset: 0x000176D8
+		// (set) Token: 0x0600021F RID: 543 RVA: 0x00019502 File Offset: 0x00017702
 		public override bool? EdIsLocked
 		{
 			get
@@ -108,20 +106,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000C4 RID: 196
-		// (get) Token: 0x0600021C RID: 540 RVA: 0x00018B9C File Offset: 0x00016D9C
-		// (set) Token: 0x0600021D RID: 541 RVA: 0x00018C2F File Offset: 0x00016E2F
+		// Token: 0x170000C6 RID: 198
+		// (get) Token: 0x06000220 RID: 544 RVA: 0x00019510 File Offset: 0x00017710
+		// (set) Token: 0x06000221 RID: 545 RVA: 0x000195A3 File Offset: 0x000177A3
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> StartMovingActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -152,7 +150,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -161,20 +159,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000C5 RID: 197
-		// (get) Token: 0x0600021E RID: 542 RVA: 0x00018C44 File Offset: 0x00016E44
-		// (set) Token: 0x0600021F RID: 543 RVA: 0x00018CD7 File Offset: 0x00016ED7
+		// Token: 0x170000C7 RID: 199
+		// (get) Token: 0x06000222 RID: 546 RVA: 0x000195B8 File Offset: 0x000177B8
+		// (set) Token: 0x06000223 RID: 547 RVA: 0x0001964B File Offset: 0x0001784B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> EndMovingActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -205,7 +203,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -214,34 +212,34 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000153 RID: 339
+		// Token: 0x04000158 RID: 344
 		[Nullable(2)]
 		protected new ChessmanComponent FbInstance;
 
-		// Token: 0x04000154 RID: 340
+		// Token: 0x04000159 RID: 345
 		[Nullable(2)]
 		protected new ChessmanComponent_SetValue PocoInterface;
 
-		// Token: 0x04000155 RID: 341
+		// Token: 0x0400015A RID: 346
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _StartMovingActionsCache;
 
-		// Token: 0x04000156 RID: 342
+		// Token: 0x0400015B RID: 347
 		private bool _StartMovingActionsInited;
 
-		// Token: 0x04000157 RID: 343
+		// Token: 0x0400015C RID: 348
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _EndMovingActionsCache;
 
-		// Token: 0x04000158 RID: 344
+		// Token: 0x0400015D RID: 349
 		private bool _EndMovingActionsInited;
 	}
 }

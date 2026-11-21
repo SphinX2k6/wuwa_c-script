@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001044 RID: 4164
+	// Token: 0x0200112C RID: 4396
 	public struct RoleDevLevelLimit : IFlatbufferObject
 	{
-		// Token: 0x17003240 RID: 12864
-		// (get) Token: 0x0600C80F RID: 51215 RVA: 0x002F9569 File Offset: 0x002F7769
+		// Token: 0x170032BB RID: 12987
+		// (get) Token: 0x0600CE59 RID: 52825 RVA: 0x003152C7 File Offset: 0x003134C7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C810 RID: 51216 RVA: 0x002F9576 File Offset: 0x002F7776
+		// Token: 0x0600CE5A RID: 52826 RVA: 0x003152D4 File Offset: 0x003134D4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C811 RID: 51217 RVA: 0x002F9580 File Offset: 0x002F7780
+		// Token: 0x0600CE5B RID: 52827 RVA: 0x003152DC File Offset: 0x003134DC
 		public static RoleDevLevelLimit GetRootAsRoleDevLevelLimit(ByteBuffer _bb)
 		{
 			return RoleDevLevelLimit.GetRootAsRoleDevLevelLimit(_bb, default(RoleDevLevelLimit));
 		}
 
-		// Token: 0x0600C812 RID: 51218 RVA: 0x002F959C File Offset: 0x002F779C
+		// Token: 0x0600CE5C RID: 52828 RVA: 0x003152F8 File Offset: 0x003134F8
 		public static RoleDevLevelLimit GetRootAsRoleDevLevelLimit(ByteBuffer _bb, RoleDevLevelLimit obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C813 RID: 51219 RVA: 0x002F95B9 File Offset: 0x002F77B9
+		// Token: 0x0600CE5D RID: 52829 RVA: 0x00315315 File Offset: 0x00313515
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C814 RID: 51220 RVA: 0x002F95C8 File Offset: 0x002F77C8
+		// Token: 0x0600CE5E RID: 52830 RVA: 0x00315324 File Offset: 0x00313524
 		public RoleDevLevelLimit __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003241 RID: 12865
-		// (get) Token: 0x0600C815 RID: 51221 RVA: 0x002F95D8 File Offset: 0x002F77D8
+		// Token: 0x170032BC RID: 12988
+		// (get) Token: 0x0600CE5F RID: 52831 RVA: 0x00315334 File Offset: 0x00313534
 		public int ProjectNum
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C816 RID: 51222 RVA: 0x002F9614 File Offset: 0x002F7814
+		// Token: 0x0600CE60 RID: 52832 RVA: 0x00315370 File Offset: 0x00313570
 		public IntPair? PlayerLevel(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.Config
 			return new IntPair?(default(IntPair).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003242 RID: 12866
-		// (get) Token: 0x0600C817 RID: 51223 RVA: 0x002F9674 File Offset: 0x002F7874
+		// Token: 0x170032BD RID: 12989
+		// (get) Token: 0x0600CE61 RID: 52833 RVA: 0x003153D0 File Offset: 0x003135D0
 		public int PlayerLevelLength
 		{
 			get
@@ -91,24 +91,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C818 RID: 51224 RVA: 0x002F969F File Offset: 0x002F789F
+		// Token: 0x0600CE62 RID: 52834 RVA: 0x003153FB File Offset: 0x003135FB
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PlayerLevelIter()或GetPlayerLevelBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly IntPair[] PlayerLevel()
+		public IntPair[] PlayerLevel()
 		{
 			return this.PlayerLevelIter().ToArray<IntPair>();
 		}
 
-		// Token: 0x0600C819 RID: 51225 RVA: 0x002F96AC File Offset: 0x002F78AC
+		// Token: 0x0600CE63 RID: 52835 RVA: 0x00315408 File Offset: 0x00313608
 		[NullableContext(1)]
-		public readonly IEnumerable<IntPair> PlayerLevelIter()
+		public IEnumerable<IntPair> PlayerLevelIter()
 		{
 			RoleDevLevelLimit.<PlayerLevelIter>d__14 <PlayerLevelIter>d__ = new RoleDevLevelLimit.<PlayerLevelIter>d__14(-2);
 			<PlayerLevelIter>d__.<>3__<>4__this = this;
 			return <PlayerLevelIter>d__;
 		}
 
-		// Token: 0x04005142 RID: 20802
+		// Token: 0x0400572A RID: 22314
 		private Table __p;
 	}
 }

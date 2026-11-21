@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006176 RID: 24950
+	// Token: 0x020050F4 RID: 20724
 	public class RoverlikeRoleSelectAssistRoleItemData
 	{
-		// Token: 0x04020E40 RID: 134720
+		// Token: 0x0401B76D RID: 112493
 		public int BlessRoleId;
 	}
 }

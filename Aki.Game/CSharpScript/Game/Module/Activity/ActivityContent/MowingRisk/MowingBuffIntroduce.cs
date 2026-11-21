@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063D9 RID: 25561
+	// Token: 0x02005357 RID: 21335
 	public class MowingBuffIntroduce : UiPanelBase
 	{
-		// Token: 0x060404A7 RID: 263335 RVA: 0x00F8C8FC File Offset: 0x00F8AAFC
+		// Token: 0x06035168 RID: 217448 RVA: 0x00ED3894 File Offset: 0x00ED1A94
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060404A8 RID: 263336 RVA: 0x00F8CACE File Offset: 0x00F8ACCE
+		// Token: 0x06035169 RID: 217449 RVA: 0x00ED3A66 File Offset: 0x00ED1C66
 		protected override void OnStart()
 		{
 			UUISprite sprite = base.GetSprite(8);
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			sprite.SetUIActive(false);
 		}
 
-		// Token: 0x060404A9 RID: 263337 RVA: 0x00F8CAE4 File Offset: 0x00F8ACE4
+		// Token: 0x0603516A RID: 217450 RVA: 0x00ED3A7C File Offset: 0x00ED1C7C
 		[NullableContext(1)]
 		public void RefreshByCustomData(IMowingBuffIntroduceData data)
 		{
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			}
 		}
 
-		// Token: 0x060404AA RID: 263338 RVA: 0x00F8CC58 File Offset: 0x00F8AE58
+		// Token: 0x0603516B RID: 217451 RVA: 0x00ED3BF0 File Offset: 0x00ED1DF0
 		[NullableContext(1)]
 		private void RefreshNiagaraByEnum(string enumValue)
 		{
@@ -138,48 +138,48 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			uiNiagara3.SetUIActive(enumValue == EMowingBuffQualityHexColor.Gold.ToString());
 		}
 
-		// Token: 0x060404AB RID: 263339 RVA: 0x00F8CCDE File Offset: 0x00F8AEDE
+		// Token: 0x0603516C RID: 217452 RVA: 0x00ED3C76 File Offset: 0x00ED1E76
 		private void OnClickToggle(EToggleState _)
 		{
 		}
 
-		// Token: 0x04021749 RID: 137033
+		// Token: 0x0401C078 RID: 114808
 		private const float GRAY_ALPHA = 0.3f;
 
-		// Token: 0x0200C5D9 RID: 50649
+		// Token: 0x0200AFC0 RID: 44992
 		private class EComponent
 		{
-			// Token: 0x0403BBC8 RID: 244680
+			// Token: 0x04036527 RID: 222503
 			public const int Toggle = 0;
 
-			// Token: 0x0403BBC9 RID: 244681
+			// Token: 0x04036528 RID: 222504
 			public const int BackgroundTexture = 1;
 
-			// Token: 0x0403BBCA RID: 244682
+			// Token: 0x04036529 RID: 222505
 			public const int LevelText = 2;
 
-			// Token: 0x0403BBCB RID: 244683
+			// Token: 0x0403652A RID: 222506
 			public const int NameText = 3;
 
-			// Token: 0x0403BBCC RID: 244684
+			// Token: 0x0403652B RID: 222507
 			public const int TipsText = 4;
 
-			// Token: 0x0403BBCD RID: 244685
+			// Token: 0x0403652C RID: 222508
 			public const int IconTexture = 5;
 
-			// Token: 0x0403BBCE RID: 244686
+			// Token: 0x0403652D RID: 222509
 			public const int QualityBlueNiagara = 6;
 
-			// Token: 0x0403BBCF RID: 244687
+			// Token: 0x0403652E RID: 222510
 			public const int LockSprite = 7;
 
-			// Token: 0x0403BBD0 RID: 244688
+			// Token: 0x0403652F RID: 222511
 			public const int QualitySprite = 8;
 
-			// Token: 0x0403BBD1 RID: 244689
+			// Token: 0x04036530 RID: 222512
 			public const int QualityPurpleNiagara = 9;
 
-			// Token: 0x0403BBD2 RID: 244690
+			// Token: 0x04036531 RID: 222513
 			public const int QualityGoldNiagara = 10;
 		}
 	}

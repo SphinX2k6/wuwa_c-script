@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 // Token: 0x02000101 RID: 257
 public abstract class StateBase<[Nullable(1)] TObject, TState> where TObject : class where TState : struct, Enum
 {
-	// Token: 0x0600099E RID: 2462 RVA: 0x00031870 File Offset: 0x0002FA70
+	// Token: 0x060009EF RID: 2543 RVA: 0x000321CC File Offset: 0x000303CC
 	public StateBase([Nullable(1)] TObject owner, TState state, [Nullable(new byte[]
 	{
 		2,
@@ -17,7 +17,7 @@ public abstract class StateBase<[Nullable(1)] TObject, TState> where TObject : c
 		this.StateMachine = stateMachine;
 	}
 
-	// Token: 0x0600099F RID: 2463 RVA: 0x0003188D File Offset: 0x0002FA8D
+	// Token: 0x060009F0 RID: 2544 RVA: 0x000321E9 File Offset: 0x000303E9
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -34,105 +34,105 @@ public abstract class StateBase<[Nullable(1)] TObject, TState> where TObject : c
 		return stateMachine.GetState(state);
 	}
 
-	// Token: 0x060009A0 RID: 2464 RVA: 0x000318A1 File Offset: 0x0002FAA1
+	// Token: 0x060009F1 RID: 2545 RVA: 0x000321FD File Offset: 0x000303FD
 	[NullableContext(2)]
 	public void Create(IEntityArgs args = null)
 	{
 		this.OnCreate(args);
 	}
 
-	// Token: 0x060009A1 RID: 2465 RVA: 0x000318AA File Offset: 0x0002FAAA
+	// Token: 0x060009F2 RID: 2546 RVA: 0x00032206 File Offset: 0x00030406
 	public void Start()
 	{
 		this.OnStart();
 	}
 
-	// Token: 0x060009A2 RID: 2466 RVA: 0x000318B2 File Offset: 0x0002FAB2
+	// Token: 0x060009F3 RID: 2547 RVA: 0x0003220E File Offset: 0x0003040E
 	public void Update(float delta)
 	{
 		this.OnUpdate(delta);
 	}
 
-	// Token: 0x060009A3 RID: 2467 RVA: 0x000318BB File Offset: 0x0002FABB
+	// Token: 0x060009F4 RID: 2548 RVA: 0x00032217 File Offset: 0x00030417
 	public void Enter(TState lastState)
 	{
 		this.OnEnter(new TState?(lastState));
 	}
 
-	// Token: 0x060009A4 RID: 2468 RVA: 0x000318C9 File Offset: 0x0002FAC9
+	// Token: 0x060009F5 RID: 2549 RVA: 0x00032225 File Offset: 0x00030425
 	public void ReEnter()
 	{
 		this.OnReEnter();
 	}
 
-	// Token: 0x060009A5 RID: 2469 RVA: 0x000318D1 File Offset: 0x0002FAD1
+	// Token: 0x060009F6 RID: 2550 RVA: 0x0003222D File Offset: 0x0003042D
 	public void Exit(TState nextState)
 	{
 		this.OnExit(nextState);
 	}
 
-	// Token: 0x060009A6 RID: 2470 RVA: 0x000318DA File Offset: 0x0002FADA
+	// Token: 0x060009F7 RID: 2551 RVA: 0x00032236 File Offset: 0x00030436
 	public void Destroy()
 	{
 		this.OnDestroy();
 	}
 
-	// Token: 0x060009A7 RID: 2471 RVA: 0x000318E2 File Offset: 0x0002FAE2
+	// Token: 0x060009F8 RID: 2552 RVA: 0x0003223E File Offset: 0x0003043E
 	public virtual bool CanReEnter()
 	{
 		return false;
 	}
 
-	// Token: 0x060009A8 RID: 2472 RVA: 0x000318E5 File Offset: 0x0002FAE5
+	// Token: 0x060009F9 RID: 2553 RVA: 0x00032241 File Offset: 0x00030441
 	public virtual bool CanChangeFrom(TState fromState)
 	{
 		return true;
 	}
 
-	// Token: 0x060009A9 RID: 2473 RVA: 0x000318E8 File Offset: 0x0002FAE8
+	// Token: 0x060009FA RID: 2554 RVA: 0x00032244 File Offset: 0x00030444
 	[NullableContext(2)]
 	protected virtual void OnCreate(IEntityArgs args = null)
 	{
 	}
 
-	// Token: 0x060009AA RID: 2474 RVA: 0x000318EA File Offset: 0x0002FAEA
+	// Token: 0x060009FB RID: 2555 RVA: 0x00032246 File Offset: 0x00030446
 	protected virtual void OnStart()
 	{
 	}
 
-	// Token: 0x060009AB RID: 2475 RVA: 0x000318EC File Offset: 0x0002FAEC
+	// Token: 0x060009FC RID: 2556 RVA: 0x00032248 File Offset: 0x00030448
 	protected virtual void OnUpdate(float delta)
 	{
 	}
 
-	// Token: 0x060009AC RID: 2476 RVA: 0x000318EE File Offset: 0x0002FAEE
+	// Token: 0x060009FD RID: 2557 RVA: 0x0003224A File Offset: 0x0003044A
 	protected virtual void OnEnter(TState? lastState)
 	{
 	}
 
-	// Token: 0x060009AD RID: 2477 RVA: 0x000318F0 File Offset: 0x0002FAF0
+	// Token: 0x060009FE RID: 2558 RVA: 0x0003224C File Offset: 0x0003044C
 	protected virtual void OnReEnter()
 	{
 	}
 
-	// Token: 0x060009AE RID: 2478 RVA: 0x000318F2 File Offset: 0x0002FAF2
+	// Token: 0x060009FF RID: 2559 RVA: 0x0003224E File Offset: 0x0003044E
 	protected virtual void OnExit(TState nextState)
 	{
 	}
 
-	// Token: 0x060009AF RID: 2479 RVA: 0x000318F4 File Offset: 0x0002FAF4
+	// Token: 0x06000A00 RID: 2560 RVA: 0x00032250 File Offset: 0x00030450
 	protected virtual void OnDestroy()
 	{
 	}
 
-	// Token: 0x04000662 RID: 1634
+	// Token: 0x0400066D RID: 1645
 	[Nullable(1)]
 	public readonly TObject Owner;
 
-	// Token: 0x04000663 RID: 1635
+	// Token: 0x0400066E RID: 1646
 	public readonly TState State;
 
-	// Token: 0x04000664 RID: 1636
+	// Token: 0x0400066F RID: 1647
 	[Nullable(new byte[]
 	{
 		2,

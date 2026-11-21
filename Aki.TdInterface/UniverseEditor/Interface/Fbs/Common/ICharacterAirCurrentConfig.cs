@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D70 RID: 23920
+	// Token: 0x020063A7 RID: 25511
 	public struct ICharacterAirCurrentConfig : IFlatbufferObject
 	{
-		// Token: 0x1700B325 RID: 45861
-		// (get) Token: 0x06028EAC RID: 167596 RVA: 0x0059ED65 File Offset: 0x0059CF65
+		// Token: 0x1700BC86 RID: 48262
+		// (get) Token: 0x0602B516 RID: 177430 RVA: 0x005E77D5 File Offset: 0x005E59D5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028EAD RID: 167597 RVA: 0x0059ED72 File Offset: 0x0059CF72
+		// Token: 0x0602B517 RID: 177431 RVA: 0x005E77E2 File Offset: 0x005E59E2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028EAE RID: 167598 RVA: 0x0059ED7C File Offset: 0x0059CF7C
+		// Token: 0x0602B518 RID: 177432 RVA: 0x005E77EC File Offset: 0x005E59EC
 		public static ICharacterAirCurrentConfig GetRootAsICharacterAirCurrentConfig(ByteBuffer _bb)
 		{
 			return ICharacterAirCurrentConfig.GetRootAsICharacterAirCurrentConfig(_bb, default(ICharacterAirCurrentConfig));
 		}
 
-		// Token: 0x06028EAF RID: 167599 RVA: 0x0059ED98 File Offset: 0x0059CF98
+		// Token: 0x0602B519 RID: 177433 RVA: 0x005E7808 File Offset: 0x005E5A08
 		public static ICharacterAirCurrentConfig GetRootAsICharacterAirCurrentConfig(ByteBuffer _bb, ICharacterAirCurrentConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028EB0 RID: 167600 RVA: 0x0059EDB5 File Offset: 0x0059CFB5
+		// Token: 0x0602B51A RID: 177434 RVA: 0x005E7825 File Offset: 0x005E5A25
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028EB1 RID: 167601 RVA: 0x0059EDC4 File Offset: 0x0059CFC4
+		// Token: 0x0602B51B RID: 177435 RVA: 0x005E7834 File Offset: 0x005E5A34
 		public ICharacterAirCurrentConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B326 RID: 45862
-		// (get) Token: 0x06028EB2 RID: 167602 RVA: 0x0059EDD4 File Offset: 0x0059CFD4
+		// Token: 0x1700BC87 RID: 48263
+		// (get) Token: 0x0602B51C RID: 177436 RVA: 0x005E7844 File Offset: 0x005E5A44
 		public long BulletId
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B327 RID: 45863
-		// (get) Token: 0x06028EB3 RID: 167603 RVA: 0x0059EE14 File Offset: 0x0059D014
+		// Token: 0x1700BC88 RID: 48264
+		// (get) Token: 0x0602B51D RID: 177437 RVA: 0x005E7884 File Offset: 0x005E5A84
 		public IVectorInfo? Range
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B328 RID: 45864
-		// (get) Token: 0x06028EB4 RID: 167604 RVA: 0x0059EE74 File Offset: 0x0059D074
+		// Token: 0x1700BC89 RID: 48265
+		// (get) Token: 0x0602B51E RID: 177438 RVA: 0x005E78E4 File Offset: 0x005E5AE4
 		public IVectorInfo? Offset
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028EB5 RID: 167605 RVA: 0x0059EED1 File Offset: 0x0059D0D1
+		// Token: 0x0602B51F RID: 177439 RVA: 0x005E7941 File Offset: 0x005E5B41
 		public static Offset<ICharacterAirCurrentConfig> CreateICharacterAirCurrentConfig(FlatBufferBuilder builder, long BulletId = 0L, Offset<IVectorInfo> RangeOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> OffsetOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return ICharacterAirCurrentConfig.EndICharacterAirCurrentConfig(builder);
 		}
 
-		// Token: 0x06028EB6 RID: 167606 RVA: 0x0059EEF5 File Offset: 0x0059D0F5
+		// Token: 0x0602B520 RID: 177440 RVA: 0x005E7965 File Offset: 0x005E5B65
 		public static void StartICharacterAirCurrentConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06028EB7 RID: 167607 RVA: 0x0059EEFE File Offset: 0x0059D0FE
+		// Token: 0x0602B521 RID: 177441 RVA: 0x005E796E File Offset: 0x005E5B6E
 		public static void AddBulletId(FlatBufferBuilder builder, long bulletId)
 		{
 			builder.AddLong(0, bulletId, 0L);
 		}
 
-		// Token: 0x06028EB8 RID: 167608 RVA: 0x0059EF0A File Offset: 0x0059D10A
+		// Token: 0x0602B522 RID: 177442 RVA: 0x005E797A File Offset: 0x005E5B7A
 		public static void AddRange(FlatBufferBuilder builder, Offset<IVectorInfo> rangeOffset)
 		{
 			builder.AddOffset(1, rangeOffset.Value, 0);
 		}
 
-		// Token: 0x06028EB9 RID: 167609 RVA: 0x0059EF1A File Offset: 0x0059D11A
+		// Token: 0x0602B523 RID: 177443 RVA: 0x005E798A File Offset: 0x005E5B8A
 		public static void AddOffset(FlatBufferBuilder builder, Offset<IVectorInfo> offsetOffset)
 		{
 			builder.AddOffset(2, offsetOffset.Value, 0);
 		}
 
-		// Token: 0x06028EBA RID: 167610 RVA: 0x0059EF2A File Offset: 0x0059D12A
+		// Token: 0x0602B524 RID: 177444 RVA: 0x005E799A File Offset: 0x005E5B9A
 		public static Offset<ICharacterAirCurrentConfig> EndICharacterAirCurrentConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ICharacterAirCurrentConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06028EBB RID: 167611 RVA: 0x0059EF38 File Offset: 0x0059D138
+		// Token: 0x0602B525 RID: 177445 RVA: 0x005E79A8 File Offset: 0x005E5BA8
 		public ICharacterAirCurrentConfigT UnPack()
 		{
 			ICharacterAirCurrentConfigT characterAirCurrentConfigT = new ICharacterAirCurrentConfigT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return characterAirCurrentConfigT;
 		}
 
-		// Token: 0x06028EBC RID: 167612 RVA: 0x0059EF54 File Offset: 0x0059D154
+		// Token: 0x0602B526 RID: 177446 RVA: 0x005E79C4 File Offset: 0x005E5BC4
 		public void UnPackTo(ICharacterAirCurrentConfigT _o)
 		{
 			_o.BulletId = this.BulletId;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			_o.Offset = ((this.Offset != null) ? this.Offset.Value.UnPack() : null);
 		}
 
-		// Token: 0x06028EBD RID: 167613 RVA: 0x0059EFCC File Offset: 0x0059D1CC
+		// Token: 0x0602B527 RID: 177447 RVA: 0x005E7A3C File Offset: 0x005E5C3C
 		public static Offset<ICharacterAirCurrentConfig> Pack(FlatBufferBuilder builder, ICharacterAirCurrentConfigT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return ICharacterAirCurrentConfig.CreateICharacterAirCurrentConfig(builder, _o.BulletId, rangeOffset, offsetOffset);
 		}
 
-		// Token: 0x0400F738 RID: 63288
+		// Token: 0x0401048A RID: 66698
 		private Table __p;
 	}
 }

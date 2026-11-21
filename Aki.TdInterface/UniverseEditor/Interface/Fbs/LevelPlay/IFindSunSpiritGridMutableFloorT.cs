@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044C2 RID: 17602
+	// Token: 0x0200492A RID: 18730
 	public class IFindSunSpiritGridMutableFloorT
 	{
-		// Token: 0x17007C38 RID: 31800
-		// (get) Token: 0x0601A4D4 RID: 107732 RVA: 0x003C18DC File Offset: 0x003BFADC
-		// (set) Token: 0x0601A4D5 RID: 107733 RVA: 0x003C18E4 File Offset: 0x003BFAE4
+		// Token: 0x17008277 RID: 33399
+		// (get) Token: 0x0601BCA5 RID: 113829 RVA: 0x003EDAE8 File Offset: 0x003EBCE8
+		// (set) Token: 0x0601BCA6 RID: 113830 RVA: 0x003EDAF0 File Offset: 0x003EBCF0
 		public EFindSunSpiritGridType Type { get; set; }
 
-		// Token: 0x17007C39 RID: 31801
-		// (get) Token: 0x0601A4D6 RID: 107734 RVA: 0x003C18ED File Offset: 0x003BFAED
-		// (set) Token: 0x0601A4D7 RID: 107735 RVA: 0x003C18F5 File Offset: 0x003BFAF5
+		// Token: 0x17008278 RID: 33400
+		// (get) Token: 0x0601BCA7 RID: 113831 RVA: 0x003EDAF9 File Offset: 0x003EBCF9
+		// (set) Token: 0x0601BCA8 RID: 113832 RVA: 0x003EDB01 File Offset: 0x003EBD01
 		public EFindSunSpiritGridState State { get; set; }
 
-		// Token: 0x17007C3A RID: 31802
-		// (get) Token: 0x0601A4D8 RID: 107736 RVA: 0x003C18FE File Offset: 0x003BFAFE
-		// (set) Token: 0x0601A4D9 RID: 107737 RVA: 0x003C1906 File Offset: 0x003BFB06
+		// Token: 0x17008279 RID: 33401
+		// (get) Token: 0x0601BCA9 RID: 113833 RVA: 0x003EDB0A File Offset: 0x003EBD0A
+		// (set) Token: 0x0601BCAA RID: 113834 RVA: 0x003EDB12 File Offset: 0x003EBD12
 		public bool SpreadDevice { get; set; }
 
-		// Token: 0x17007C3B RID: 31803
-		// (get) Token: 0x0601A4DA RID: 107738 RVA: 0x003C190F File Offset: 0x003BFB0F
-		// (set) Token: 0x0601A4DB RID: 107739 RVA: 0x003C1917 File Offset: 0x003BFB17
+		// Token: 0x1700827A RID: 33402
+		// (get) Token: 0x0601BCAB RID: 113835 RVA: 0x003EDB1B File Offset: 0x003EBD1B
+		// (set) Token: 0x0601BCAC RID: 113836 RVA: 0x003EDB23 File Offset: 0x003EBD23
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601A4DC RID: 107740 RVA: 0x003C1920 File Offset: 0x003BFB20
+		// Token: 0x0601BCAD RID: 113837 RVA: 0x003EDB2C File Offset: 0x003EBD2C
 		public IFindSunSpiritGridMutableFloorT()
 		{
 			this.Type = EFindSunSpiritGridType.Empty;

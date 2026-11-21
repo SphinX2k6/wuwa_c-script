@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050EE RID: 20718
+	// Token: 0x02005653 RID: 22099
 	public class IDynamicPortalConfigT
 	{
-		// Token: 0x170096E0 RID: 38624
-		// (get) Token: 0x060215C7 RID: 136647 RVA: 0x004A202F File Offset: 0x004A022F
-		// (set) Token: 0x060215C8 RID: 136648 RVA: 0x004A2037 File Offset: 0x004A0237
+		// Token: 0x17009ECD RID: 40653
+		// (get) Token: 0x0602351B RID: 144667 RVA: 0x004DBFBB File Offset: 0x004DA1BB
+		// (set) Token: 0x0602351C RID: 144668 RVA: 0x004DBFC3 File Offset: 0x004DA1C3
 		public EPortalModel PortalModel { get; set; }
 
-		// Token: 0x170096E1 RID: 38625
-		// (get) Token: 0x060215C9 RID: 136649 RVA: 0x004A2040 File Offset: 0x004A0240
-		// (set) Token: 0x060215CA RID: 136650 RVA: 0x004A2048 File Offset: 0x004A0248
+		// Token: 0x17009ECE RID: 40654
+		// (get) Token: 0x0602351D RID: 144669 RVA: 0x004DBFCC File Offset: 0x004DA1CC
+		// (set) Token: 0x0602351E RID: 144670 RVA: 0x004DBFD4 File Offset: 0x004DA1D4
 		public string TemplateId { get; set; }
 
-		// Token: 0x060215CB RID: 136651 RVA: 0x004A2051 File Offset: 0x004A0251
+		// Token: 0x0602351F RID: 144671 RVA: 0x004DBFDD File Offset: 0x004DA1DD
 		public IDynamicPortalConfigT()
 		{
 			this.PortalModel = EPortalModel.A;

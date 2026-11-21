@@ -16,18 +16,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.PhantomArenaPanel
 {
-	// Token: 0x020047FE RID: 18430
+	// Token: 0x0200372F RID: 14127
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaNpcPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x06030430 RID: 197680 RVA: 0x00B31883 File Offset: 0x00B2FA83
+		// Token: 0x06024C00 RID: 150528 RVA: 0x00A61823 File Offset: 0x00A5FA23
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x06030431 RID: 197681 RVA: 0x00B3188C File Offset: 0x00B2FA8C
+		// Token: 0x06024C01 RID: 150529 RVA: 0x00A6182C File Offset: 0x00A5FA2C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaNpcPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PhantomArenaPanel
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030432 RID: 197682 RVA: 0x00B318D0 File Offset: 0x00B2FAD0
+		// Token: 0x06024C02 RID: 150530 RVA: 0x00A61870 File Offset: 0x00A5FA70
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PhantomArenaPanel
 			item3.SetUIActive(false);
 		}
 
-		// Token: 0x06030433 RID: 197683 RVA: 0x00B31920 File Offset: 0x00B2FB20
+		// Token: 0x06024C03 RID: 150531 RVA: 0x00A618C0 File Offset: 0x00A5FAC0
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PhantomArenaPanel
 			}
 		}
 
-		// Token: 0x06030434 RID: 197684 RVA: 0x00B31B30 File Offset: 0x00B2FD30
+		// Token: 0x06024C04 RID: 150532 RVA: 0x00A61AD8 File Offset: 0x00A5FCD8
 		private void UpdateCondition(PhantomBattleChallenge config)
 		{
 			if (config.MapId == 1)
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PhantomArenaPanel
 			}
 		}
 
-		// Token: 0x06030435 RID: 197685 RVA: 0x00B31CF4 File Offset: 0x00B2FEF4
+		// Token: 0x06024C05 RID: 150533 RVA: 0x00A61C9C File Offset: 0x00A5FE9C
 		[return: Nullable(2)]
 		private string GetFirstUnFinishCondition(int[] conditionIdList)
 		{
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PhantomArenaPanel
 			return null;
 		}
 
-		// Token: 0x06030436 RID: 197686 RVA: 0x00B31D80 File Offset: 0x00B2FF80
+		// Token: 0x06024C06 RID: 150534 RVA: 0x00A61D28 File Offset: 0x00A5FF28
 		protected override void OnConfirmBtnClick(int index)
 		{
 			if (this.IsNeedGuideQuest)
@@ -246,13 +246,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PhantomArenaPanel
 			PhantomArenaBattleController.TryTeleportChallenge(this.ChallengeId, new TOnTelSuccessCallBack(this.OnTeleport));
 		}
 
-		// Token: 0x06030437 RID: 197687 RVA: 0x00B31DCA File Offset: 0x00B2FFCA
+		// Token: 0x06024C07 RID: 150535 RVA: 0x00A61D72 File Offset: 0x00A5FF72
 		private void OnTeleport()
 		{
 			UiManager.Instance.ResetToBattleView(null);
 		}
 
-		// Token: 0x06030438 RID: 197688 RVA: 0x00B31DD8 File Offset: 0x00B2FFD8
+		// Token: 0x06024C08 RID: 150536 RVA: 0x00A61D80 File Offset: 0x00A5FF80
 		public int GetUnFinishPreGuideQuestId()
 		{
 			PhantomArenaConfig instance = PhantomArenaConfig.Instance;
@@ -273,21 +273,21 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PhantomArenaPanel
 			return 0;
 		}
 
-		// Token: 0x04019FA5 RID: 106405
+		// Token: 0x04014659 RID: 83545
 		private int ChallengeId;
 
-		// Token: 0x04019FA6 RID: 106406
+		// Token: 0x0401465A RID: 83546
 		[Nullable(2)]
 		private RewardItemBar RewardsView;
 
-		// Token: 0x04019FA7 RID: 106407
+		// Token: 0x0401465B RID: 83547
 		private bool IsNeedGuideQuest;
 
-		// Token: 0x0200AAC7 RID: 43719
+		// Token: 0x02009478 RID: 38008
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F0F RID: 212751
+			// Token: 0x0402E692 RID: 190098
 			public const int PhantomArenaNpcPanel = 0;
 		}
 	}

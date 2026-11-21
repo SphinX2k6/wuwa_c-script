@@ -1,32 +1,32 @@
 ﻿using System;
 
-// Token: 0x02002651 RID: 9809
+// Token: 0x02001B3C RID: 6972
 public enum EQuestSpecialState
 {
-	// Token: 0x04009759 RID: 38745
+	// Token: 0x040098B1 RID: 39089
 	None,
-	// Token: 0x0400975A RID: 38746
+	// Token: 0x040098B2 RID: 39090
 	PreShow,
-	// Token: 0x0400975B RID: 38747
+	// Token: 0x040098B3 RID: 39091
 	LockByLackResource,
-	// Token: 0x0400975C RID: 38748
+	// Token: 0x040098B4 RID: 39092
 	ResourceReadyButLock,
-	// Token: 0x0400975D RID: 38749
+	// Token: 0x040098B5 RID: 39093
 	Suspend,
-	// Token: 0x0400975E RID: 38750
+	// Token: 0x040098B6 RID: 39094
 	LockQuestSuspendByOnline,
-	// Token: 0x0400975F RID: 38751
+	// Token: 0x040098B7 RID: 39095
 	HasRecommendQuest,
-	// Token: 0x04009760 RID: 38752
+	// Token: 0x040098B8 RID: 39096
 	RefOccupiedEntity,
-	// Token: 0x04009761 RID: 38753
+	// Token: 0x040098B9 RID: 39097
 	LockByFocusMode,
-	// Token: 0x04009762 RID: 38754
+	// Token: 0x040098BA RID: 39098
 	NotInFocusModeButLock,
-	// Token: 0x04009763 RID: 38755
+	// Token: 0x040098BB RID: 39099
 	FocusOtherQuest,
-	// Token: 0x04009764 RID: 38756
+	// Token: 0x040098BC RID: 39100
 	ActivityGuideQuest,
-	// Token: 0x04009765 RID: 38757
+	// Token: 0x040098BD RID: 39101
 	ActivityQuest
 }

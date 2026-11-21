@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D56 RID: 23894
+	// Token: 0x02004D38 RID: 19768
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BattleHonamiStoryRoleItem : UiPanelBase
 	{
-		// Token: 0x0603CA93 RID: 248467 RVA: 0x00E8F67C File Offset: 0x00E8D87C
+		// Token: 0x060319EC RID: 203244 RVA: 0x00DDFE30 File Offset: 0x00DDE030
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CA94 RID: 248468 RVA: 0x00E8F7AC File Offset: 0x00E8D9AC
+		// Token: 0x060319ED RID: 203245 RVA: 0x00DDFF60 File Offset: 0x00DDE160
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleHonamiStoryRoleItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CA95 RID: 248469 RVA: 0x00E8F7F0 File Offset: 0x00E8D9F0
+		// Token: 0x060319EE RID: 203246 RVA: 0x00DDFFA4 File Offset: 0x00DDE1A4
 		private UniTask CreateSuitItem(BattleHonamiStoryRoleItem.EComponentType suitType)
 		{
 			BattleHonamiStoryRoleItem.<CreateSuitItem>d__8 <CreateSuitItem>d__;
@@ -65,14 +65,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <CreateSuitItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CA96 RID: 248470 RVA: 0x00E8F83B File Offset: 0x00E8DA3B
+		// Token: 0x060319EF RID: 203247 RVA: 0x00DDFFEF File Offset: 0x00DDE1EF
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 			base.GetUiNiagara(7).SetUIActive(false);
 		}
 
-		// Token: 0x0603CA97 RID: 248471 RVA: 0x00E8F85B File Offset: 0x00E8DA5B
+		// Token: 0x060319F0 RID: 203248 RVA: 0x00DE000F File Offset: 0x00DDE20F
 		protected override void OnBeforeShow()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sequencePlayer.PlaySequencePurely("Start", false, false);
 		}
 
-		// Token: 0x0603CA98 RID: 248472 RVA: 0x00E8F874 File Offset: 0x00E8DA74
+		// Token: 0x060319F1 RID: 203249 RVA: 0x00DE0028 File Offset: 0x00DDE228
 		protected override UniTask OnHideAsyncImplementImplement()
 		{
 			BattleHonamiStoryRoleItem.<OnHideAsyncImplementImplement>d__11 <OnHideAsyncImplementImplement>d__;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnHideAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CA99 RID: 248473 RVA: 0x00E8F8B7 File Offset: 0x00E8DAB7
+		// Token: 0x060319F2 RID: 203250 RVA: 0x00DE006B File Offset: 0x00DDE26B
 		protected override void OnAfterHide()
 		{
 			Action onAfterHideCallback = this.OnAfterHideCallback;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onAfterHideCallback();
 		}
 
-		// Token: 0x0603CA9A RID: 248474 RVA: 0x00E8F8C9 File Offset: 0x00E8DAC9
+		// Token: 0x060319F3 RID: 203251 RVA: 0x00DE007D File Offset: 0x00DDE27D
 		protected override void OnBeforeDestroy()
 		{
 			this.OnAfterHideCallback = null;
@@ -123,14 +123,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HideTimerHandle = null;
 		}
 
-		// Token: 0x0603CA9B RID: 248475 RVA: 0x00E8F903 File Offset: 0x00E8DB03
+		// Token: 0x060319F4 RID: 203252 RVA: 0x00DE00B7 File Offset: 0x00DDE2B7
 		[NullableContext(1)]
 		public void RegisterOnAfterHide(Action onAfterHide)
 		{
 			this.OnAfterHideCallback = onAfterHide;
 		}
 
-		// Token: 0x0603CA9C RID: 248476 RVA: 0x00E8F90C File Offset: 0x00E8DB0C
+		// Token: 0x060319F5 RID: 203253 RVA: 0x00DE00C0 File Offset: 0x00DDE2C0
 		[NullableContext(1)]
 		public void ShowRoleItem(HonamiStoryRoleItemData data, int duration)
 		{
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA9D RID: 248477 RVA: 0x00E8FB40 File Offset: 0x00E8DD40
+		// Token: 0x060319F6 RID: 203254 RVA: 0x00DE02F4 File Offset: 0x00DDE4F4
 		private void StartAutoHide(int duration)
 		{
 			this.HideTimerHandle = TimerSystem.GameplayTimeInstance.Delay(delegate(float _)
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, (float)duration, null, null, true, 1f);
 		}
 
-		// Token: 0x0603CA9E RID: 248478 RVA: 0x00E8FB68 File Offset: 0x00E8DD68
+		// Token: 0x060319F7 RID: 203255 RVA: 0x00DE031C File Offset: 0x00DDE51C
 		public void HideRoleItem()
 		{
 			TimerHandle hideTimerHandle = this.HideTimerHandle;
@@ -246,41 +246,41 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F996 RID: 129430
+		// Token: 0x0401A44F RID: 107599
 		[Nullable(1)]
 		private readonly List<BattleHonamiStoryRoleSuitItem> SuitItems = new List<BattleHonamiStoryRoleSuitItem>();
 
-		// Token: 0x0401F997 RID: 129431
+		// Token: 0x0401A450 RID: 107600
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0401F998 RID: 129432
+		// Token: 0x0401A451 RID: 107601
 		private TimerHandle HideTimerHandle;
 
-		// Token: 0x0401F999 RID: 129433
+		// Token: 0x0401A452 RID: 107602
 		private TimerHandle BuffEffectTimerHandle;
 
-		// Token: 0x0401F99A RID: 129434
+		// Token: 0x0401A453 RID: 107603
 		private Action OnAfterHideCallback;
 
-		// Token: 0x0200C004 RID: 49156
+		// Token: 0x0200AA0A RID: 43530
 		[NullableContext(0)]
 		private enum EComponentType
 		{
-			// Token: 0x04039F0F RID: 237327
+			// Token: 0x040348D1 RID: 215249
 			RoleTexture,
-			// Token: 0x04039F10 RID: 237328
+			// Token: 0x040348D2 RID: 215250
 			SuitItemA,
-			// Token: 0x04039F11 RID: 237329
+			// Token: 0x040348D3 RID: 215251
 			SuitItemB,
-			// Token: 0x04039F12 RID: 237330
+			// Token: 0x040348D4 RID: 215252
 			SuitItemC,
-			// Token: 0x04039F13 RID: 237331
+			// Token: 0x040348D5 RID: 215253
 			EmptySprite,
-			// Token: 0x04039F14 RID: 237332
+			// Token: 0x040348D6 RID: 215254
 			SuitPanel,
-			// Token: 0x04039F15 RID: 237333
+			// Token: 0x040348D7 RID: 215255
 			LevelUpSprite,
-			// Token: 0x04039F16 RID: 237334
+			// Token: 0x040348D8 RID: 215256
 			BuffEffect
 		}
 	}

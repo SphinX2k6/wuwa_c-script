@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010EE RID: 4334
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200121C RID: 4636
 	public class IReceiveTelecomChildQuestCondition : IQuestCondition
 	{
-		// Token: 0x060061FC RID: 25084 RVA: 0x000EC400 File Offset: 0x000EA600
+		// Token: 0x060067F5 RID: 26613 RVA: 0x000F9520 File Offset: 0x000F7720
 		private IReceiveTelecomChildQuestCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060061FD RID: 25085 RVA: 0x000EC438 File Offset: 0x000EA638
+		// Token: 0x060067F6 RID: 26614 RVA: 0x000F9558 File Offset: 0x000F7758
 		public static IReceiveTelecomChildQuestCondition Create([Nullable(2)] IReceiveTelecomChildQuestCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060061FE RID: 25086 RVA: 0x000EC44B File Offset: 0x000EA64B
+		// Token: 0x060067F7 RID: 26615 RVA: 0x000F956B File Offset: 0x000F776B
 		public static IReceiveTelecomChildQuestCondition CreateFromSetValue([Nullable(2)] IReceiveTelecomChildQuestCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,20 +49,21 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060061FF RID: 25087 RVA: 0x000EC45E File Offset: 0x000EA65E
+		// Token: 0x060067F8 RID: 26616 RVA: 0x000F957E File Offset: 0x000F777E
 		public new IReceiveTelecomChildQuestCondition_SetValue ToSetValue()
 		{
 			return new IReceiveTelecomChildQuestCondition_SetValue
 			{
 				Type = this.Type,
 				PreConditions = this.PreConditions,
-				TelecomId = this.TelecomId
+				TelecomId = this.TelecomId,
+				IsAutoAnswer = this.IsAutoAnswer
 			};
 		}
 
-		// Token: 0x1700201D RID: 8221
-		// (get) Token: 0x06006200 RID: 25088 RVA: 0x000EC489 File Offset: 0x000EA689
-		// (set) Token: 0x06006201 RID: 25089 RVA: 0x000EC4B4 File Offset: 0x000EA6B4
+		// Token: 0x170021CF RID: 8655
+		// (get) Token: 0x060067F9 RID: 26617 RVA: 0x000F95B5 File Offset: 0x000F77B5
+		// (set) Token: 0x060067FA RID: 26618 RVA: 0x000F95E0 File Offset: 0x000F77E0
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700201E RID: 8222
-		// (get) Token: 0x06006202 RID: 25090 RVA: 0x000EC4C4 File Offset: 0x000EA6C4
-		// (set) Token: 0x06006203 RID: 25091 RVA: 0x000EC525 File Offset: 0x000EA725
+		// Token: 0x170021D0 RID: 8656
+		// (get) Token: 0x060067FB RID: 26619 RVA: 0x000F95F0 File Offset: 0x000F77F0
+		// (set) Token: 0x060067FC RID: 26620 RVA: 0x000F9651 File Offset: 0x000F7851
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +117,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700201F RID: 8223
-		// (get) Token: 0x06006204 RID: 25092 RVA: 0x000EC53A File Offset: 0x000EA73A
-		// (set) Token: 0x06006205 RID: 25093 RVA: 0x000EC565 File Offset: 0x000EA765
+		// Token: 0x170021D1 RID: 8657
+		// (get) Token: 0x060067FD RID: 26621 RVA: 0x000F9666 File Offset: 0x000F7866
+		// (set) Token: 0x060067FE RID: 26622 RVA: 0x000F9691 File Offset: 0x000F7891
 		public virtual int TelecomId
 		{
 			get
@@ -141,18 +140,42 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003AE6 RID: 15078
+		// Token: 0x170021D2 RID: 8658
+		// (get) Token: 0x060067FF RID: 26623 RVA: 0x000F96A0 File Offset: 0x000F78A0
+		// (set) Token: 0x06006800 RID: 26624 RVA: 0x000F96DA File Offset: 0x000F78DA
+		public virtual bool? IsAutoAnswer
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.IsAutoAnswer;
+				}
+				IReceiveTelecomChildQuestCondition_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.IsAutoAnswer;
+			}
+			set
+			{
+				this.GetOrCreatePoco().IsAutoAnswer = value;
+			}
+		}
+
+		// Token: 0x04003E33 RID: 15923
 		[Nullable(2)]
 		protected new IReceiveTelecomChildQuestCondition FbInstance;
 
-		// Token: 0x04003AE7 RID: 15079
+		// Token: 0x04003E34 RID: 15924
 		[Nullable(2)]
 		protected new IReceiveTelecomChildQuestCondition_SetValue PocoInterface;
 
-		// Token: 0x04003AE8 RID: 15080
+		// Token: 0x04003E35 RID: 15925
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003AE9 RID: 15081
+		// Token: 0x04003E36 RID: 15926
 		private bool _PreConditionsInited;
 	}
 }

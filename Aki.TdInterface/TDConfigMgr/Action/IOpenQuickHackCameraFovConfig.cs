@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CAA RID: 7338
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EB1 RID: 7857
 	public class IOpenQuickHackCameraFovConfig
 	{
-		// Token: 0x06009D7D RID: 40317 RVA: 0x00168B58 File Offset: 0x00166D58
+		// Token: 0x0600A72B RID: 42795 RVA: 0x0017C7B8 File Offset: 0x0017A9B8
 		private IOpenQuickHackCameraFovConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009D7E RID: 40318 RVA: 0x00168B90 File Offset: 0x00166D90
+		// Token: 0x0600A72C RID: 42796 RVA: 0x0017C7F0 File Offset: 0x0017A9F0
 		public static IOpenQuickHackCameraFovConfig Create([Nullable(2)] IOpenQuickHackCameraFovConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009D7F RID: 40319 RVA: 0x00168BA3 File Offset: 0x00166DA3
+		// Token: 0x0600A72D RID: 42797 RVA: 0x0017C803 File Offset: 0x0017AA03
 		public static IOpenQuickHackCameraFovConfig CreateFromSetValue([Nullable(2)] IOpenQuickHackCameraFovConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009D80 RID: 40320 RVA: 0x00168BB6 File Offset: 0x00166DB6
+		// Token: 0x0600A72E RID: 42798 RVA: 0x0017C816 File Offset: 0x0017AA16
 		public IOpenQuickHackCameraFovConfig_SetValue ToSetValue()
 		{
 			return new IOpenQuickHackCameraFovConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003116 RID: 12566
-		// (get) Token: 0x06009D81 RID: 40321 RVA: 0x00168BE1 File Offset: 0x00166DE1
-		// (set) Token: 0x06009D82 RID: 40322 RVA: 0x00168C0C File Offset: 0x00166E0C
+		// Token: 0x1700339A RID: 13210
+		// (get) Token: 0x0600A72F RID: 42799 RVA: 0x0017C841 File Offset: 0x0017AA41
+		// (set) Token: 0x0600A730 RID: 42800 RVA: 0x0017C86C File Offset: 0x0017AA6C
 		public virtual int DefaultValue
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003117 RID: 12567
-		// (get) Token: 0x06009D83 RID: 40323 RVA: 0x00168C1A File Offset: 0x00166E1A
-		// (set) Token: 0x06009D84 RID: 40324 RVA: 0x00168C45 File Offset: 0x00166E45
+		// Token: 0x1700339B RID: 13211
+		// (get) Token: 0x0600A731 RID: 42801 RVA: 0x0017C87A File Offset: 0x0017AA7A
+		// (set) Token: 0x0600A732 RID: 42802 RVA: 0x0017C8A5 File Offset: 0x0017AAA5
 		public virtual int Min
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003118 RID: 12568
-		// (get) Token: 0x06009D85 RID: 40325 RVA: 0x00168C53 File Offset: 0x00166E53
-		// (set) Token: 0x06009D86 RID: 40326 RVA: 0x00168C7E File Offset: 0x00166E7E
+		// Token: 0x1700339C RID: 13212
+		// (get) Token: 0x0600A733 RID: 42803 RVA: 0x0017C8B3 File Offset: 0x0017AAB3
+		// (set) Token: 0x0600A734 RID: 42804 RVA: 0x0017C8DE File Offset: 0x0017AADE
 		public virtual int Max
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005F59 RID: 24409
+		// Token: 0x040064B5 RID: 25781
 		[Nullable(2)]
 		protected IOpenQuickHackCameraFovConfig FbInstance;
 
-		// Token: 0x04005F5A RID: 24410
+		// Token: 0x040064B6 RID: 25782
 		[Nullable(2)]
 		protected IOpenQuickHackCameraFovConfig_SetValue PocoInterface;
 	}

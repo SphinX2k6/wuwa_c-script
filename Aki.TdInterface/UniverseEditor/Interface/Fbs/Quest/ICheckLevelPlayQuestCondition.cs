@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D4F RID: 15695
+	// Token: 0x02004166 RID: 16742
 	public struct ICheckLevelPlayQuestCondition : IFlatbufferObject
 	{
-		// Token: 0x17006BB4 RID: 27572
-		// (get) Token: 0x06015B3B RID: 88891 RVA: 0x00321932 File Offset: 0x0031FB32
+		// Token: 0x1700716E RID: 29038
+		// (get) Token: 0x06017073 RID: 94323 RVA: 0x00348BAA File Offset: 0x00346DAA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015B3C RID: 88892 RVA: 0x0032193F File Offset: 0x0031FB3F
+		// Token: 0x06017074 RID: 94324 RVA: 0x00348BB7 File Offset: 0x00346DB7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015B3D RID: 88893 RVA: 0x00321948 File Offset: 0x0031FB48
+		// Token: 0x06017075 RID: 94325 RVA: 0x00348BC0 File Offset: 0x00346DC0
 		public static ICheckLevelPlayQuestCondition GetRootAsICheckLevelPlayQuestCondition(ByteBuffer _bb)
 		{
 			return ICheckLevelPlayQuestCondition.GetRootAsICheckLevelPlayQuestCondition(_bb, default(ICheckLevelPlayQuestCondition));
 		}
 
-		// Token: 0x06015B3E RID: 88894 RVA: 0x00321964 File Offset: 0x0031FB64
+		// Token: 0x06017076 RID: 94326 RVA: 0x00348BDC File Offset: 0x00346DDC
 		public static ICheckLevelPlayQuestCondition GetRootAsICheckLevelPlayQuestCondition(ByteBuffer _bb, ICheckLevelPlayQuestCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015B3F RID: 88895 RVA: 0x00321981 File Offset: 0x0031FB81
+		// Token: 0x06017077 RID: 94327 RVA: 0x00348BF9 File Offset: 0x00346DF9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015B40 RID: 88896 RVA: 0x00321990 File Offset: 0x0031FB90
+		// Token: 0x06017078 RID: 94328 RVA: 0x00348C08 File Offset: 0x00346E08
 		public ICheckLevelPlayQuestCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006BB5 RID: 27573
-		// (get) Token: 0x06015B41 RID: 88897 RVA: 0x003219A0 File Offset: 0x0031FBA0
+		// Token: 0x1700716F RID: 29039
+		// (get) Token: 0x06017079 RID: 94329 RVA: 0x00348C18 File Offset: 0x00346E18
 		public EChildQuest Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006BB6 RID: 27574
-		// (get) Token: 0x06015B42 RID: 88898 RVA: 0x003219DC File Offset: 0x0031FBDC
+		// Token: 0x17007170 RID: 29040
+		// (get) Token: 0x0601707A RID: 94330 RVA: 0x00348C54 File Offset: 0x00346E54
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015B43 RID: 88899 RVA: 0x00321A3C File Offset: 0x0031FC3C
+		// Token: 0x0601707B RID: 94331 RVA: 0x00348CB4 File Offset: 0x00346EB4
 		public int LevelPlayIds(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17006BB7 RID: 27575
-		// (get) Token: 0x06015B44 RID: 88900 RVA: 0x00321A7C File Offset: 0x0031FC7C
+		// Token: 0x17007171 RID: 29041
+		// (get) Token: 0x0601707C RID: 94332 RVA: 0x00348CF4 File Offset: 0x00346EF4
 		public int LevelPlayIdsLength
 		{
 			get
@@ -105,20 +105,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015B45 RID: 88901 RVA: 0x00321AA7 File Offset: 0x0031FCA7
+		// Token: 0x0601707D RID: 94333 RVA: 0x00348D1F File Offset: 0x00346F1F
 		public Span<int> GetLevelPlayIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06015B46 RID: 88902 RVA: 0x00321AB6 File Offset: 0x0031FCB6
+		// Token: 0x0601707E RID: 94334 RVA: 0x00348D2E File Offset: 0x00346F2E
 		public int[] GetLevelPlayIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(8);
 		}
 
-		// Token: 0x17006BB8 RID: 27576
-		// (get) Token: 0x06015B47 RID: 88903 RVA: 0x00321AC4 File Offset: 0x0031FCC4
+		// Token: 0x17007172 RID: 29042
+		// (get) Token: 0x0601707F RID: 94335 RVA: 0x00348D3C File Offset: 0x00346F3C
 		public int CompleteNumber
 		{
 			get
@@ -132,7 +132,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015B48 RID: 88904 RVA: 0x00321B01 File Offset: 0x0031FD01
+		// Token: 0x06017080 RID: 94336 RVA: 0x00348D79 File Offset: 0x00346F79
 		public static Offset<ICheckLevelPlayQuestCondition> CreateICheckLevelPlayQuestCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), VectorOffset LevelPlayIdsOffset = default(VectorOffset), int CompleteNumber = 0)
 		{
 			builder.StartTable(4);
@@ -143,31 +143,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckLevelPlayQuestCondition.EndICheckLevelPlayQuestCondition(builder);
 		}
 
-		// Token: 0x06015B49 RID: 88905 RVA: 0x00321B2D File Offset: 0x0031FD2D
+		// Token: 0x06017081 RID: 94337 RVA: 0x00348DA5 File Offset: 0x00346FA5
 		public static void StartICheckLevelPlayQuestCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06015B4A RID: 88906 RVA: 0x00321B36 File Offset: 0x0031FD36
+		// Token: 0x06017082 RID: 94338 RVA: 0x00348DAE File Offset: 0x00346FAE
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015B4B RID: 88907 RVA: 0x00321B41 File Offset: 0x0031FD41
+		// Token: 0x06017083 RID: 94339 RVA: 0x00348DB9 File Offset: 0x00346FB9
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06015B4C RID: 88908 RVA: 0x00321B51 File Offset: 0x0031FD51
+		// Token: 0x06017084 RID: 94340 RVA: 0x00348DC9 File Offset: 0x00346FC9
 		public static void AddLevelPlayIds(FlatBufferBuilder builder, VectorOffset levelPlayIdsOffset)
 		{
 			builder.AddOffset(2, levelPlayIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06015B4D RID: 88909 RVA: 0x00321B64 File Offset: 0x0031FD64
+		// Token: 0x06017085 RID: 94341 RVA: 0x00348DDC File Offset: 0x00346FDC
 		public static VectorOffset CreateLevelPlayIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -178,7 +178,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015B4E RID: 88910 RVA: 0x00321B9B File Offset: 0x0031FD9B
+		// Token: 0x06017086 RID: 94342 RVA: 0x00348E13 File Offset: 0x00347013
 		public static VectorOffset CreateLevelPlayIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -186,7 +186,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015B4F RID: 88911 RVA: 0x00321BB5 File Offset: 0x0031FDB5
+		// Token: 0x06017087 RID: 94343 RVA: 0x00348E2D File Offset: 0x0034702D
 		public static VectorOffset CreateLevelPlayIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015B50 RID: 88912 RVA: 0x00321BD3 File Offset: 0x0031FDD3
+		// Token: 0x06017088 RID: 94344 RVA: 0x00348E4B File Offset: 0x0034704B
 		public static VectorOffset CreateLevelPlayIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -202,25 +202,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015B51 RID: 88913 RVA: 0x00321BEC File Offset: 0x0031FDEC
+		// Token: 0x06017089 RID: 94345 RVA: 0x00348E64 File Offset: 0x00347064
 		public static void StartLevelPlayIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06015B52 RID: 88914 RVA: 0x00321BF7 File Offset: 0x0031FDF7
+		// Token: 0x0601708A RID: 94346 RVA: 0x00348E6F File Offset: 0x0034706F
 		public static void AddCompleteNumber(FlatBufferBuilder builder, int completeNumber)
 		{
 			builder.AddInt(3, completeNumber, 0);
 		}
 
-		// Token: 0x06015B53 RID: 88915 RVA: 0x00321C02 File Offset: 0x0031FE02
+		// Token: 0x0601708B RID: 94347 RVA: 0x00348E7A File Offset: 0x0034707A
 		public static Offset<ICheckLevelPlayQuestCondition> EndICheckLevelPlayQuestCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckLevelPlayQuestCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06015B54 RID: 88916 RVA: 0x00321C10 File Offset: 0x0031FE10
+		// Token: 0x0601708C RID: 94348 RVA: 0x00348E88 File Offset: 0x00347088
 		public ICheckLevelPlayQuestConditionT UnPack()
 		{
 			ICheckLevelPlayQuestConditionT checkLevelPlayQuestConditionT = new ICheckLevelPlayQuestConditionT();
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return checkLevelPlayQuestConditionT;
 		}
 
-		// Token: 0x06015B55 RID: 88917 RVA: 0x00321C2C File Offset: 0x0031FE2C
+		// Token: 0x0601708D RID: 94349 RVA: 0x00348EA4 File Offset: 0x003470A4
 		public void UnPackTo(ICheckLevelPlayQuestConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -241,7 +241,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.CompleteNumber = this.CompleteNumber;
 		}
 
-		// Token: 0x06015B56 RID: 88918 RVA: 0x00321CB0 File Offset: 0x0031FEB0
+		// Token: 0x0601708E RID: 94350 RVA: 0x00348F28 File Offset: 0x00347128
 		public static Offset<ICheckLevelPlayQuestCondition> Pack(FlatBufferBuilder builder, ICheckLevelPlayQuestConditionT _o)
 		{
 			if (_o == null)
@@ -258,7 +258,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckLevelPlayQuestCondition.CreateICheckLevelPlayQuestCondition(builder, _o.Type, preConditionsOffset, levelPlayIdsOffset, _o.CompleteNumber);
 		}
 
-		// Token: 0x0400B62A RID: 46634
+		// Token: 0x0400BFD7 RID: 49111
 		private Table __p;
 	}
 }

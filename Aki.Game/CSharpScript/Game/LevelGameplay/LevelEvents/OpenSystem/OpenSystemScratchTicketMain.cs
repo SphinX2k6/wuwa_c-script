@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006C18 RID: 27672
+	// Token: 0x02005D91 RID: 23953
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenSystemScratchTicketMain : OpenSystemBase
 	{
-		// Token: 0x0604445C RID: 279644 RVA: 0x010D2797 File Offset: 0x010D0997
+		// Token: 0x0603A5B4 RID: 239028 RVA: 0x0107C6EB File Offset: 0x0107A8EB
 		public OpenSystemScratchTicketMain(LevelEventOpenSystem eventBase) : base(eventBase)
 		{
 		}
 
-		// Token: 0x0604445D RID: 279645 RVA: 0x010D27A0 File Offset: 0x010D09A0
+		// Token: 0x0603A5B5 RID: 239029 RVA: 0x0107C6F4 File Offset: 0x0107A8F4
 		[return: Nullable(0)]
 		public override UniTask<bool> ExecuteOpenView(OpenSystemBoard inParams, GeneralContext context)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			return <ExecuteOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604445E RID: 279646 RVA: 0x010D27DB File Offset: 0x010D09DB
+		// Token: 0x0603A5B6 RID: 239030 RVA: 0x0107C72F File Offset: 0x0107A92F
 		[NullableContext(2)]
 		public override EUiViewName? GetViewName(OpenSystemBoard inParams = null, GeneralContext context = null)
 		{

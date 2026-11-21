@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EC8 RID: 20168
+	// Token: 0x020053F7 RID: 21495
 	public struct IAttributeComponent : IFlatbufferObject
 	{
-		// Token: 0x170090AB RID: 37035
-		// (get) Token: 0x0601FC3F RID: 130111 RVA: 0x0046BEC8 File Offset: 0x0046A0C8
+		// Token: 0x1700981E RID: 38942
+		// (get) Token: 0x06021983 RID: 137603 RVA: 0x004A1C96 File Offset: 0x0049FE96
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FC40 RID: 130112 RVA: 0x0046BED5 File Offset: 0x0046A0D5
+		// Token: 0x06021984 RID: 137604 RVA: 0x004A1CA3 File Offset: 0x0049FEA3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601FC41 RID: 130113 RVA: 0x0046BEDC File Offset: 0x0046A0DC
+		// Token: 0x06021985 RID: 137605 RVA: 0x004A1CAC File Offset: 0x0049FEAC
 		public static IAttributeComponent GetRootAsIAttributeComponent(ByteBuffer _bb)
 		{
 			return IAttributeComponent.GetRootAsIAttributeComponent(_bb, default(IAttributeComponent));
 		}
 
-		// Token: 0x0601FC42 RID: 130114 RVA: 0x0046BEF8 File Offset: 0x0046A0F8
+		// Token: 0x06021986 RID: 137606 RVA: 0x004A1CC8 File Offset: 0x0049FEC8
 		public static IAttributeComponent GetRootAsIAttributeComponent(ByteBuffer _bb, IAttributeComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601FC43 RID: 130115 RVA: 0x0046BF15 File Offset: 0x0046A115
+		// Token: 0x06021987 RID: 137607 RVA: 0x004A1CE5 File Offset: 0x0049FEE5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601FC44 RID: 130116 RVA: 0x0046BF24 File Offset: 0x0046A124
+		// Token: 0x06021988 RID: 137608 RVA: 0x004A1CF4 File Offset: 0x0049FEF4
 		public IAttributeComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170090AC RID: 37036
-		// (get) Token: 0x0601FC45 RID: 130117 RVA: 0x0046BF34 File Offset: 0x0046A134
+		// Token: 0x1700981F RID: 38943
+		// (get) Token: 0x06021989 RID: 137609 RVA: 0x004A1D04 File Offset: 0x0049FF04
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090AD RID: 37037
-		// (get) Token: 0x0601FC46 RID: 130118 RVA: 0x0046BF74 File Offset: 0x0046A174
+		// Token: 0x17009820 RID: 38944
+		// (get) Token: 0x0602198A RID: 137610 RVA: 0x004A1D44 File Offset: 0x0049FF44
 		public int PropertyId
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090AE RID: 37038
-		// (get) Token: 0x0601FC47 RID: 130119 RVA: 0x0046BFB0 File Offset: 0x0046A1B0
+		// Token: 0x17009821 RID: 38945
+		// (get) Token: 0x0602198B RID: 137611 RVA: 0x004A1D80 File Offset: 0x0049FF80
 		public int MonsterPropExtraRateId
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090AF RID: 37039
-		// (get) Token: 0x0601FC48 RID: 130120 RVA: 0x0046BFEC File Offset: 0x0046A1EC
+		// Token: 0x17009822 RID: 38946
+		// (get) Token: 0x0602198C RID: 137612 RVA: 0x004A1DBC File Offset: 0x0049FFBC
 		public int MonsterPropGrowthId
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090B0 RID: 37040
-		// (get) Token: 0x0601FC49 RID: 130121 RVA: 0x0046C02C File Offset: 0x0046A22C
+		// Token: 0x17009823 RID: 38947
+		// (get) Token: 0x0602198D RID: 137613 RVA: 0x004A1DFC File Offset: 0x0049FFFC
 		public int Level
 		{
 			get
@@ -119,8 +119,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090B1 RID: 37041
-		// (get) Token: 0x0601FC4A RID: 130122 RVA: 0x0046C06C File Offset: 0x0046A26C
+		// Token: 0x17009824 RID: 38948
+		// (get) Token: 0x0602198E RID: 137614 RVA: 0x004A1E3C File Offset: 0x004A003C
 		public int MoraleLevel
 		{
 			get
@@ -134,8 +134,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090B2 RID: 37042
-		// (get) Token: 0x0601FC4B RID: 130123 RVA: 0x0046C0AC File Offset: 0x0046A2AC
+		// Token: 0x17009825 RID: 38949
+		// (get) Token: 0x0602198F RID: 137615 RVA: 0x004A1E7C File Offset: 0x004A007C
 		public int HonamiStoryMonsterGrowth
 		{
 			get
@@ -149,8 +149,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090B3 RID: 37043
-		// (get) Token: 0x0601FC4C RID: 130124 RVA: 0x0046C0EC File Offset: 0x0046A2EC
+		// Token: 0x17009826 RID: 38950
+		// (get) Token: 0x06021990 RID: 137616 RVA: 0x004A1EBC File Offset: 0x004A00BC
 		public int FlagChallengeMonsterLevel
 		{
 			get
@@ -164,8 +164,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090B4 RID: 37044
-		// (get) Token: 0x0601FC4D RID: 130125 RVA: 0x0046C12C File Offset: 0x0046A32C
+		// Token: 0x17009827 RID: 38951
+		// (get) Token: 0x06021991 RID: 137617 RVA: 0x004A1EFC File Offset: 0x004A00FC
 		public int RageModeId
 		{
 			get
@@ -179,8 +179,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090B5 RID: 37045
-		// (get) Token: 0x0601FC4E RID: 130126 RVA: 0x0046C16C File Offset: 0x0046A36C
+		// Token: 0x17009828 RID: 38952
+		// (get) Token: 0x06021992 RID: 137618 RVA: 0x004A1F3C File Offset: 0x004A013C
 		public int HardnessModeId
 		{
 			get
@@ -194,8 +194,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090B6 RID: 37046
-		// (get) Token: 0x0601FC4F RID: 130127 RVA: 0x0046C1AC File Offset: 0x0046A3AC
+		// Token: 0x17009829 RID: 38953
+		// (get) Token: 0x06021993 RID: 137619 RVA: 0x004A1F7C File Offset: 0x004A017C
 		public int WorldLevelBonusId
 		{
 			get
@@ -209,8 +209,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090B7 RID: 37047
-		// (get) Token: 0x0601FC50 RID: 130128 RVA: 0x0046C1EC File Offset: 0x0046A3EC
+		// Token: 0x1700982A RID: 38954
+		// (get) Token: 0x06021994 RID: 137620 RVA: 0x004A1FBC File Offset: 0x004A01BC
 		public bool IgnoreFightMusic
 		{
 			get
@@ -220,8 +220,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090B8 RID: 37048
-		// (get) Token: 0x0601FC51 RID: 130129 RVA: 0x0046C22C File Offset: 0x0046A42C
+		// Token: 0x1700982B RID: 38955
+		// (get) Token: 0x06021995 RID: 137621 RVA: 0x004A1FFC File Offset: 0x004A01FC
 		public IFightMusicsSwitchByTagList? FightMusics
 		{
 			get
@@ -235,8 +235,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090B9 RID: 37049
-		// (get) Token: 0x0601FC52 RID: 130130 RVA: 0x0046C28C File Offset: 0x0046A48C
+		// Token: 0x1700982C RID: 38956
+		// (get) Token: 0x06021996 RID: 137622 RVA: 0x004A205C File Offset: 0x004A025C
 		public string FightMusic
 		{
 			get
@@ -250,20 +250,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FC53 RID: 130131 RVA: 0x0046C2C4 File Offset: 0x0046A4C4
+		// Token: 0x06021997 RID: 137623 RVA: 0x004A2094 File Offset: 0x004A0294
 		public Span<byte> GetFightMusicBytes()
 		{
 			return this.__p.__vector_as_span<byte>(30, 1);
 		}
 
-		// Token: 0x0601FC54 RID: 130132 RVA: 0x0046C2D4 File Offset: 0x0046A4D4
+		// Token: 0x06021998 RID: 137624 RVA: 0x004A20A4 File Offset: 0x004A02A4
 		public byte[] GetFightMusicArray()
 		{
 			return this.__p.__vector_as_array<byte>(30);
 		}
 
-		// Token: 0x170090BA RID: 37050
-		// (get) Token: 0x0601FC55 RID: 130133 RVA: 0x0046C2E4 File Offset: 0x0046A4E4
+		// Token: 0x1700982D RID: 38957
+		// (get) Token: 0x06021999 RID: 137625 RVA: 0x004A20B4 File Offset: 0x004A02B4
 		public bool FightMusicBanRadioMusic
 		{
 			get
@@ -273,7 +273,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FC56 RID: 130134 RVA: 0x0046C324 File Offset: 0x0046A524
+		// Token: 0x0602199A RID: 137626 RVA: 0x004A20F4 File Offset: 0x004A02F4
 		public long AppendBuffIds(int j)
 		{
 			int num = this.__p.__offset(34);
@@ -284,8 +284,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetLong(this.__p.__vector(num) + j * 8);
 		}
 
-		// Token: 0x170090BB RID: 37051
-		// (get) Token: 0x0601FC57 RID: 130135 RVA: 0x0046C368 File Offset: 0x0046A568
+		// Token: 0x1700982E RID: 38958
+		// (get) Token: 0x0602199B RID: 137627 RVA: 0x004A2138 File Offset: 0x004A0338
 		public int AppendBuffIdsLength
 		{
 			get
@@ -299,20 +299,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FC58 RID: 130136 RVA: 0x0046C394 File Offset: 0x0046A594
+		// Token: 0x0602199C RID: 137628 RVA: 0x004A2164 File Offset: 0x004A0364
 		public Span<long> GetAppendBuffIdsBytes()
 		{
 			return this.__p.__vector_as_span<long>(34, 8);
 		}
 
-		// Token: 0x0601FC59 RID: 130137 RVA: 0x0046C3A4 File Offset: 0x0046A5A4
+		// Token: 0x0602199D RID: 137629 RVA: 0x004A2174 File Offset: 0x004A0374
 		public long[] GetAppendBuffIdsArray()
 		{
 			return this.__p.__vector_as_array<long>(34);
 		}
 
-		// Token: 0x170090BC RID: 37052
-		// (get) Token: 0x0601FC5A RID: 130138 RVA: 0x0046C3B4 File Offset: 0x0046A5B4
+		// Token: 0x1700982F RID: 38959
+		// (get) Token: 0x0602199E RID: 137630 RVA: 0x004A2184 File Offset: 0x004A0384
 		public TWorldLevelBonus WorldLevelBonusTypeType
 		{
 			get
@@ -326,7 +326,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FC5B RID: 130139 RVA: 0x0046C3F4 File Offset: 0x0046A5F4
+		// Token: 0x0602199F RID: 137631 RVA: 0x004A21C4 File Offset: 0x004A03C4
 		public TTable? WorldLevelBonusType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(38);
@@ -337,20 +337,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601FC5C RID: 130140 RVA: 0x0046C43C File Offset: 0x0046A63C
+		// Token: 0x060219A0 RID: 137632 RVA: 0x004A220C File Offset: 0x004A040C
 		public IAreaBouns WorldLevelBonusTypeAsIAreaBouns()
 		{
 			return this.WorldLevelBonusType<IAreaBouns>().Value;
 		}
 
-		// Token: 0x0601FC5D RID: 130141 RVA: 0x0046C458 File Offset: 0x0046A658
+		// Token: 0x060219A1 RID: 137633 RVA: 0x004A2228 File Offset: 0x004A0428
 		public IWorldLevelTable WorldLevelBonusTypeAsIWorldLevelTable()
 		{
 			return this.WorldLevelBonusType<IWorldLevelTable>().Value;
 		}
 
-		// Token: 0x170090BD RID: 37053
-		// (get) Token: 0x0601FC5E RID: 130142 RVA: 0x0046C474 File Offset: 0x0046A674
+		// Token: 0x17009830 RID: 38960
+		// (get) Token: 0x060219A2 RID: 137634 RVA: 0x004A2244 File Offset: 0x004A0444
 		public byte NullMask
 		{
 			get
@@ -364,7 +364,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FC5F RID: 130143 RVA: 0x0046C4B4 File Offset: 0x0046A6B4
+		// Token: 0x060219A3 RID: 137635 RVA: 0x004A2284 File Offset: 0x004A0484
 		public static Offset<IAttributeComponent> CreateIAttributeComponent(FlatBufferBuilder builder, bool Disabled = false, int PropertyId = 0, int MonsterPropExtraRateId = 0, int MonsterPropGrowthId = 0, int Level = 0, int MoraleLevel = 0, int HonamiStoryMonsterGrowth = 0, int FlagChallengeMonsterLevel = 0, int RageModeId = 0, int HardnessModeId = 0, int WorldLevelBonusId = 0, bool IgnoreFightMusic = false, Offset<IFightMusicsSwitchByTagList> FightMusicsOffset = default(Offset<IFightMusicsSwitchByTagList>), StringOffset FightMusicOffset = default(StringOffset), bool FightMusicBanRadioMusic = false, VectorOffset AppendBuffIdsOffset = default(VectorOffset), TWorldLevelBonus WorldLevelBonusType_type = TWorldLevelBonus.NONE, int WorldLevelBonusTypeOffset = 0, byte NullMask = 0)
 		{
 			builder.StartTable(19);
@@ -390,109 +390,109 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAttributeComponent.EndIAttributeComponent(builder);
 		}
 
-		// Token: 0x0601FC60 RID: 130144 RVA: 0x0046C564 File Offset: 0x0046A764
+		// Token: 0x060219A4 RID: 137636 RVA: 0x004A2334 File Offset: 0x004A0534
 		public static void StartIAttributeComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(19);
 		}
 
-		// Token: 0x0601FC61 RID: 130145 RVA: 0x0046C56E File Offset: 0x0046A76E
+		// Token: 0x060219A5 RID: 137637 RVA: 0x004A233E File Offset: 0x004A053E
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x0601FC62 RID: 130146 RVA: 0x0046C579 File Offset: 0x0046A779
+		// Token: 0x060219A6 RID: 137638 RVA: 0x004A2349 File Offset: 0x004A0549
 		public static void AddPropertyId(FlatBufferBuilder builder, int propertyId)
 		{
 			builder.AddInt(1, propertyId, 0);
 		}
 
-		// Token: 0x0601FC63 RID: 130147 RVA: 0x0046C584 File Offset: 0x0046A784
+		// Token: 0x060219A7 RID: 137639 RVA: 0x004A2354 File Offset: 0x004A0554
 		public static void AddMonsterPropExtraRateId(FlatBufferBuilder builder, int monsterPropExtraRateId)
 		{
 			builder.AddInt(2, monsterPropExtraRateId, 0);
 		}
 
-		// Token: 0x0601FC64 RID: 130148 RVA: 0x0046C58F File Offset: 0x0046A78F
+		// Token: 0x060219A8 RID: 137640 RVA: 0x004A235F File Offset: 0x004A055F
 		public static void AddMonsterPropGrowthId(FlatBufferBuilder builder, int monsterPropGrowthId)
 		{
 			builder.AddInt(3, monsterPropGrowthId, 0);
 		}
 
-		// Token: 0x0601FC65 RID: 130149 RVA: 0x0046C59A File Offset: 0x0046A79A
+		// Token: 0x060219A9 RID: 137641 RVA: 0x004A236A File Offset: 0x004A056A
 		public static void AddLevel(FlatBufferBuilder builder, int level)
 		{
 			builder.AddInt(4, level, 0);
 		}
 
-		// Token: 0x0601FC66 RID: 130150 RVA: 0x0046C5A5 File Offset: 0x0046A7A5
+		// Token: 0x060219AA RID: 137642 RVA: 0x004A2375 File Offset: 0x004A0575
 		public static void AddMoraleLevel(FlatBufferBuilder builder, int moraleLevel)
 		{
 			builder.AddInt(5, moraleLevel, 0);
 		}
 
-		// Token: 0x0601FC67 RID: 130151 RVA: 0x0046C5B0 File Offset: 0x0046A7B0
+		// Token: 0x060219AB RID: 137643 RVA: 0x004A2380 File Offset: 0x004A0580
 		public static void AddHonamiStoryMonsterGrowth(FlatBufferBuilder builder, int honamiStoryMonsterGrowth)
 		{
 			builder.AddInt(6, honamiStoryMonsterGrowth, 0);
 		}
 
-		// Token: 0x0601FC68 RID: 130152 RVA: 0x0046C5BB File Offset: 0x0046A7BB
+		// Token: 0x060219AC RID: 137644 RVA: 0x004A238B File Offset: 0x004A058B
 		public static void AddFlagChallengeMonsterLevel(FlatBufferBuilder builder, int flagChallengeMonsterLevel)
 		{
 			builder.AddInt(7, flagChallengeMonsterLevel, 0);
 		}
 
-		// Token: 0x0601FC69 RID: 130153 RVA: 0x0046C5C6 File Offset: 0x0046A7C6
+		// Token: 0x060219AD RID: 137645 RVA: 0x004A2396 File Offset: 0x004A0596
 		public static void AddRageModeId(FlatBufferBuilder builder, int rageModeId)
 		{
 			builder.AddInt(8, rageModeId, 0);
 		}
 
-		// Token: 0x0601FC6A RID: 130154 RVA: 0x0046C5D1 File Offset: 0x0046A7D1
+		// Token: 0x060219AE RID: 137646 RVA: 0x004A23A1 File Offset: 0x004A05A1
 		public static void AddHardnessModeId(FlatBufferBuilder builder, int hardnessModeId)
 		{
 			builder.AddInt(9, hardnessModeId, 0);
 		}
 
-		// Token: 0x0601FC6B RID: 130155 RVA: 0x0046C5DD File Offset: 0x0046A7DD
+		// Token: 0x060219AF RID: 137647 RVA: 0x004A23AD File Offset: 0x004A05AD
 		public static void AddWorldLevelBonusId(FlatBufferBuilder builder, int worldLevelBonusId)
 		{
 			builder.AddInt(10, worldLevelBonusId, 0);
 		}
 
-		// Token: 0x0601FC6C RID: 130156 RVA: 0x0046C5E9 File Offset: 0x0046A7E9
+		// Token: 0x060219B0 RID: 137648 RVA: 0x004A23B9 File Offset: 0x004A05B9
 		public static void AddIgnoreFightMusic(FlatBufferBuilder builder, bool ignoreFightMusic)
 		{
 			builder.AddBool(11, ignoreFightMusic, false);
 		}
 
-		// Token: 0x0601FC6D RID: 130157 RVA: 0x0046C5F5 File Offset: 0x0046A7F5
+		// Token: 0x060219B1 RID: 137649 RVA: 0x004A23C5 File Offset: 0x004A05C5
 		public static void AddFightMusics(FlatBufferBuilder builder, Offset<IFightMusicsSwitchByTagList> fightMusicsOffset)
 		{
 			builder.AddOffset(12, fightMusicsOffset.Value, 0);
 		}
 
-		// Token: 0x0601FC6E RID: 130158 RVA: 0x0046C606 File Offset: 0x0046A806
+		// Token: 0x060219B2 RID: 137650 RVA: 0x004A23D6 File Offset: 0x004A05D6
 		public static void AddFightMusic(FlatBufferBuilder builder, StringOffset fightMusicOffset)
 		{
 			builder.AddOffset(13, fightMusicOffset.Value, 0);
 		}
 
-		// Token: 0x0601FC6F RID: 130159 RVA: 0x0046C617 File Offset: 0x0046A817
+		// Token: 0x060219B3 RID: 137651 RVA: 0x004A23E7 File Offset: 0x004A05E7
 		public static void AddFightMusicBanRadioMusic(FlatBufferBuilder builder, bool fightMusicBanRadioMusic)
 		{
 			builder.AddBool(14, fightMusicBanRadioMusic, false);
 		}
 
-		// Token: 0x0601FC70 RID: 130160 RVA: 0x0046C623 File Offset: 0x0046A823
+		// Token: 0x060219B4 RID: 137652 RVA: 0x004A23F3 File Offset: 0x004A05F3
 		public static void AddAppendBuffIds(FlatBufferBuilder builder, VectorOffset appendBuffIdsOffset)
 		{
 			builder.AddOffset(15, appendBuffIdsOffset.Value, 0);
 		}
 
-		// Token: 0x0601FC71 RID: 130161 RVA: 0x0046C634 File Offset: 0x0046A834
+		// Token: 0x060219B5 RID: 137653 RVA: 0x004A2404 File Offset: 0x004A0604
 		public static VectorOffset CreateAppendBuffIdsVector(FlatBufferBuilder builder, long[] data)
 		{
 			builder.StartVector(8, data.Length, 8);
@@ -503,7 +503,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601FC72 RID: 130162 RVA: 0x0046C66B File Offset: 0x0046A86B
+		// Token: 0x060219B6 RID: 137654 RVA: 0x004A243B File Offset: 0x004A063B
 		public static VectorOffset CreateAppendBuffIdsVectorBlock(FlatBufferBuilder builder, long[] data)
 		{
 			builder.StartVector(8, data.Length, 8);
@@ -511,7 +511,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601FC73 RID: 130163 RVA: 0x0046C685 File Offset: 0x0046A885
+		// Token: 0x060219B7 RID: 137655 RVA: 0x004A2455 File Offset: 0x004A0655
 		public static VectorOffset CreateAppendBuffIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<long> data)
 		{
 			builder.StartVector(8, data.Count, 8);
@@ -519,7 +519,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601FC74 RID: 130164 RVA: 0x0046C6A3 File Offset: 0x0046A8A3
+		// Token: 0x060219B8 RID: 137656 RVA: 0x004A2473 File Offset: 0x004A0673
 		public static VectorOffset CreateAppendBuffIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -527,37 +527,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601FC75 RID: 130165 RVA: 0x0046C6BC File Offset: 0x0046A8BC
+		// Token: 0x060219B9 RID: 137657 RVA: 0x004A248C File Offset: 0x004A068C
 		public static void StartAppendBuffIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(8, numElems, 8);
 		}
 
-		// Token: 0x0601FC76 RID: 130166 RVA: 0x0046C6C7 File Offset: 0x0046A8C7
+		// Token: 0x060219BA RID: 137658 RVA: 0x004A2497 File Offset: 0x004A0697
 		public static void AddWorldLevelBonusTypeType(FlatBufferBuilder builder, TWorldLevelBonus worldLevelBonusTypeType)
 		{
 			builder.AddByte(16, (byte)worldLevelBonusTypeType, 0);
 		}
 
-		// Token: 0x0601FC77 RID: 130167 RVA: 0x0046C6D3 File Offset: 0x0046A8D3
+		// Token: 0x060219BB RID: 137659 RVA: 0x004A24A3 File Offset: 0x004A06A3
 		public static void AddWorldLevelBonusType(FlatBufferBuilder builder, int worldLevelBonusTypeOffset)
 		{
 			builder.AddOffset(17, worldLevelBonusTypeOffset, 0);
 		}
 
-		// Token: 0x0601FC78 RID: 130168 RVA: 0x0046C6DF File Offset: 0x0046A8DF
+		// Token: 0x060219BC RID: 137660 RVA: 0x004A24AF File Offset: 0x004A06AF
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(18, nullMask, 0);
 		}
 
-		// Token: 0x0601FC79 RID: 130169 RVA: 0x0046C6EB File Offset: 0x0046A8EB
+		// Token: 0x060219BD RID: 137661 RVA: 0x004A24BB File Offset: 0x004A06BB
 		public static Offset<IAttributeComponent> EndIAttributeComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IAttributeComponent>(builder.EndTable());
 		}
 
-		// Token: 0x0601FC7A RID: 130170 RVA: 0x0046C6F8 File Offset: 0x0046A8F8
+		// Token: 0x060219BE RID: 137662 RVA: 0x004A24C8 File Offset: 0x004A06C8
 		public IAttributeComponentT UnPack()
 		{
 			IAttributeComponentT attributeComponentT = new IAttributeComponentT();
@@ -565,7 +565,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return attributeComponentT;
 		}
 
-		// Token: 0x0601FC7B RID: 130171 RVA: 0x0046C714 File Offset: 0x0046A914
+		// Token: 0x060219BF RID: 137663 RVA: 0x004A24E4 File Offset: 0x004A06E4
 		public void UnPackTo(IAttributeComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -605,7 +605,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601FC7C RID: 130172 RVA: 0x0046C8D0 File Offset: 0x0046AAD0
+		// Token: 0x060219C0 RID: 137664 RVA: 0x004A26A0 File Offset: 0x004A08A0
 		public static Offset<IAttributeComponent> Pack(FlatBufferBuilder builder, IAttributeComponentT _o)
 		{
 			if (_o == null)
@@ -625,7 +625,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAttributeComponent.CreateIAttributeComponent(builder, _o.Disabled, _o.PropertyId, _o.MonsterPropExtraRateId, _o.MonsterPropGrowthId, _o.Level, _o.MoraleLevel, _o.HonamiStoryMonsterGrowth, _o.FlagChallengeMonsterLevel, _o.RageModeId, _o.HardnessModeId, _o.WorldLevelBonusId, _o.IgnoreFightMusic, fightMusicsOffset, fightMusicOffset, _o.FightMusicBanRadioMusic, appendBuffIdsOffset, worldLevelBonusType_type, worldLevelBonusTypeOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400DCBD RID: 56509
+		// Token: 0x0400E864 RID: 59492
 		private Table __p;
 	}
 }

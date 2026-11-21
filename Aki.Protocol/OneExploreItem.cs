@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000B84 RID: 2948
+	// Token: 0x02000B74 RID: 2932
 	public sealed class OneExploreItem : IMessage<OneExploreItem>, IMessage, IEquatable<OneExploreItem>, IDeepCloneable<OneExploreItem>, IBufferMessage
 	{
-		// Token: 0x0600FF7F RID: 65407 RVA: 0x00254387 File Offset: 0x00252587
+		// Token: 0x0600FE7B RID: 65147 RVA: 0x002524B7 File Offset: 0x002506B7
 		[NullableContext(1)]
 		public static OneExploreItem Create()
 		{
 			return new OneExploreItem();
 		}
 
-		// Token: 0x1700342F RID: 13359
-		// (get) Token: 0x0600FF80 RID: 65408 RVA: 0x0025438E File Offset: 0x0025258E
+		// Token: 0x170033F6 RID: 13302
+		// (get) Token: 0x0600FE7C RID: 65148 RVA: 0x002524BE File Offset: 0x002506BE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<OneExploreItem> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003430 RID: 13360
-		// (get) Token: 0x0600FF81 RID: 65409 RVA: 0x00254395 File Offset: 0x00252595
+		// Token: 0x170033F7 RID: 13303
+		// (get) Token: 0x0600FE7D RID: 65149 RVA: 0x002524C5 File Offset: 0x002506C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003431 RID: 13361
-		// (get) Token: 0x0600FF82 RID: 65410 RVA: 0x00254398 File Offset: 0x00252598
+		// Token: 0x170033F8 RID: 13304
+		// (get) Token: 0x0600FE7E RID: 65150 RVA: 0x002524C8 File Offset: 0x002506C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FF83 RID: 65411 RVA: 0x0025439F File Offset: 0x0025259F
+		// Token: 0x0600FE7F RID: 65151 RVA: 0x002524CF File Offset: 0x002506CF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OneExploreItem()
 		{
 		}
 
-		// Token: 0x0600FF84 RID: 65412 RVA: 0x002543A8 File Offset: 0x002525A8
+		// Token: 0x0600FE80 RID: 65152 RVA: 0x002524D8 File Offset: 0x002506D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OneExploreItem(OneExploreItem other) : this()
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600FF85 RID: 65413 RVA: 0x00254408 File Offset: 0x00252608
+		// Token: 0x0600FE81 RID: 65153 RVA: 0x00252538 File Offset: 0x00250738
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OneExploreItem Clone()
@@ -81,9 +81,9 @@ namespace Aki.Protocol
 			return new OneExploreItem(this);
 		}
 
-		// Token: 0x17003432 RID: 13362
-		// (get) Token: 0x0600FF86 RID: 65414 RVA: 0x00254410 File Offset: 0x00252610
-		// (set) Token: 0x0600FF87 RID: 65415 RVA: 0x00254418 File Offset: 0x00252618
+		// Token: 0x170033F9 RID: 13305
+		// (get) Token: 0x0600FE82 RID: 65154 RVA: 0x00252540 File Offset: 0x00250740
+		// (set) Token: 0x0600FE83 RID: 65155 RVA: 0x00252548 File Offset: 0x00250748
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ExploreProgressId
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003433 RID: 13363
-		// (get) Token: 0x0600FF88 RID: 65416 RVA: 0x00254421 File Offset: 0x00252621
-		// (set) Token: 0x0600FF89 RID: 65417 RVA: 0x00254429 File Offset: 0x00252629
+		// Token: 0x170033FA RID: 13306
+		// (get) Token: 0x0600FE84 RID: 65156 RVA: 0x00252551 File Offset: 0x00250751
+		// (set) Token: 0x0600FE85 RID: 65157 RVA: 0x00252559 File Offset: 0x00250759
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ExplorePercent
@@ -115,9 +115,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003434 RID: 13364
-		// (get) Token: 0x0600FF8A RID: 65418 RVA: 0x00254432 File Offset: 0x00252632
-		// (set) Token: 0x0600FF8B RID: 65419 RVA: 0x0025443A File Offset: 0x0025263A
+		// Token: 0x170033FB RID: 13307
+		// (get) Token: 0x0600FE86 RID: 65158 RVA: 0x00252562 File Offset: 0x00250762
+		// (set) Token: 0x0600FE87 RID: 65159 RVA: 0x0025256A File Offset: 0x0025076A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurCount
@@ -132,9 +132,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003435 RID: 13365
-		// (get) Token: 0x0600FF8C RID: 65420 RVA: 0x00254443 File Offset: 0x00252643
-		// (set) Token: 0x0600FF8D RID: 65421 RVA: 0x0025444B File Offset: 0x0025264B
+		// Token: 0x170033FC RID: 13308
+		// (get) Token: 0x0600FE88 RID: 65160 RVA: 0x00252573 File Offset: 0x00250773
+		// (set) Token: 0x0600FE89 RID: 65161 RVA: 0x0025257B File Offset: 0x0025077B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TotalCount
@@ -149,9 +149,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003436 RID: 13366
-		// (get) Token: 0x0600FF8E RID: 65422 RVA: 0x00254454 File Offset: 0x00252654
-		// (set) Token: 0x0600FF8F RID: 65423 RVA: 0x0025445C File Offset: 0x0025265C
+		// Token: 0x170033FD RID: 13309
+		// (get) Token: 0x0600FE8A RID: 65162 RVA: 0x00252584 File Offset: 0x00250784
+		// (set) Token: 0x0600FE8B RID: 65163 RVA: 0x0025258C File Offset: 0x0025078C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool UnLock
@@ -166,7 +166,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FF90 RID: 65424 RVA: 0x00254465 File Offset: 0x00252665
+		// Token: 0x0600FE8C RID: 65164 RVA: 0x00252595 File Offset: 0x00250795
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -174,7 +174,7 @@ namespace Aki.Protocol
 			return this.Equals(other as OneExploreItem);
 		}
 
-		// Token: 0x0600FF91 RID: 65425 RVA: 0x00254474 File Offset: 0x00252674
+		// Token: 0x0600FE8D RID: 65165 RVA: 0x002525A4 File Offset: 0x002507A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(OneExploreItem other)
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ExploreProgressId == other.ExploreProgressId && this.ExplorePercent == other.ExplorePercent && this.CurCount == other.CurCount && this.TotalCount == other.TotalCount && this.UnLock == other.UnLock && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600FF92 RID: 65426 RVA: 0x002544F0 File Offset: 0x002526F0
+		// Token: 0x0600FE8E RID: 65166 RVA: 0x00252620 File Offset: 0x00250820
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -215,7 +215,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600FF93 RID: 65427 RVA: 0x00254593 File Offset: 0x00252793
+		// Token: 0x0600FE8F RID: 65167 RVA: 0x002526C3 File Offset: 0x002508C3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -223,7 +223,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600FF94 RID: 65428 RVA: 0x002545A0 File Offset: 0x002527A0
+		// Token: 0x0600FE90 RID: 65168 RVA: 0x002526D0 File Offset: 0x002508D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -231,7 +231,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600FF95 RID: 65429 RVA: 0x002545AC File Offset: 0x002527AC
+		// Token: 0x0600FE91 RID: 65169 RVA: 0x002526DC File Offset: 0x002508DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -267,7 +267,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FF96 RID: 65430 RVA: 0x00254658 File Offset: 0x00252858
+		// Token: 0x0600FE92 RID: 65170 RVA: 0x00252788 File Offset: 0x00250988
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -300,7 +300,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600FF97 RID: 65431 RVA: 0x002546EC File Offset: 0x002528EC
+		// Token: 0x0600FE93 RID: 65171 RVA: 0x0025281C File Offset: 0x00250A1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(OneExploreItem other)
@@ -332,7 +332,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600FF98 RID: 65432 RVA: 0x00254778 File Offset: 0x00252978
+		// Token: 0x0600FE94 RID: 65172 RVA: 0x002528A8 File Offset: 0x00250AA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -340,7 +340,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600FF99 RID: 65433 RVA: 0x00254784 File Offset: 0x00252984
+		// Token: 0x0600FE95 RID: 65173 RVA: 0x002528B4 File Offset: 0x00250AB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -387,40 +387,40 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040065C7 RID: 26055
+		// Token: 0x040065D7 RID: 26071
 		private static readonly MessageParser<OneExploreItem> _parser = new MessageParser<OneExploreItem>(() => new OneExploreItem());
 
-		// Token: 0x040065C8 RID: 26056
+		// Token: 0x040065D8 RID: 26072
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040065C9 RID: 26057
+		// Token: 0x040065D9 RID: 26073
 		public const int ExploreProgressIdFieldNumber = 1;
 
-		// Token: 0x040065CA RID: 26058
+		// Token: 0x040065DA RID: 26074
 		private int exploreProgressId_;
 
-		// Token: 0x040065CB RID: 26059
+		// Token: 0x040065DB RID: 26075
 		public const int ExplorePercentFieldNumber = 2;
 
-		// Token: 0x040065CC RID: 26060
+		// Token: 0x040065DC RID: 26076
 		private int explorePercent_;
 
-		// Token: 0x040065CD RID: 26061
+		// Token: 0x040065DD RID: 26077
 		public const int CurCountFieldNumber = 3;
 
-		// Token: 0x040065CE RID: 26062
+		// Token: 0x040065DE RID: 26078
 		private int curCount_;
 
-		// Token: 0x040065CF RID: 26063
+		// Token: 0x040065DF RID: 26079
 		public const int TotalCountFieldNumber = 4;
 
-		// Token: 0x040065D0 RID: 26064
+		// Token: 0x040065E0 RID: 26080
 		private int totalCount_;
 
-		// Token: 0x040065D1 RID: 26065
+		// Token: 0x040065E1 RID: 26081
 		public const int UnLockFieldNumber = 5;
 
-		// Token: 0x040065D2 RID: 26066
+		// Token: 0x040065E2 RID: 26082
 		private bool unLock_;
 	}
 }

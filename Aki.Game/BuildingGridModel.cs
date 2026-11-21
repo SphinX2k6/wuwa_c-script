@@ -5,20 +5,20 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.TowerDefenseEvent.Model;
 using UnrealEngine;
 
-// Token: 0x0200171E RID: 5918
+// Token: 0x02000BD6 RID: 3030
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class BuildingGridModel : ModelBase
 {
-	// Token: 0x0600AAE3 RID: 43747 RVA: 0x0026676C File Offset: 0x0026496C
+	// Token: 0x06007EC5 RID: 32453 RVA: 0x00270B44 File Offset: 0x0026ED44
 	public BuildingGridModel()
 	{
 		this.CellModelPool = new Pool<BuildingGridCellModel>(100, () => new BuildingGridCellModel(), null);
 		this.TempGridCellVector = default(FKuroBuildingGridCellVector);
 	}
 
-	// Token: 0x0600AAE4 RID: 43748 RVA: 0x002667C4 File Offset: 0x002649C4
+	// Token: 0x06007EC6 RID: 32454 RVA: 0x00270B9C File Offset: 0x0026ED9C
 	public bool UpdateGridCell(GridCellUpdateNotify data)
 	{
 		LevelGridPbData levelGridData = data.LevelGridData;
@@ -97,7 +97,7 @@ public class BuildingGridModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600AAE5 RID: 43749 RVA: 0x00266958 File Offset: 0x00264B58
+	// Token: 0x06007EC7 RID: 32455 RVA: 0x00270D30 File Offset: 0x0026EF30
 	public int IsCellPolluted(string gridId, int index)
 	{
 		Dictionary<int, BuildingGridCellModel> dictionary;
@@ -120,7 +120,7 @@ public class BuildingGridModel : ModelBase
 		return -1;
 	}
 
-	// Token: 0x0600AAE6 RID: 43750 RVA: 0x002669C0 File Offset: 0x00264BC0
+	// Token: 0x06007EC8 RID: 32456 RVA: 0x00270D98 File Offset: 0x0026EF98
 	protected override bool OnLeaveLevel()
 	{
 		foreach (Dictionary<int, BuildingGridCellModel> dictionary in this.GridCellModels.Values)
@@ -136,8 +136,8 @@ public class BuildingGridModel : ModelBase
 		return base.OnLeaveLevel();
 	}
 
-	// Token: 0x17000E0B RID: 3595
-	// (get) Token: 0x0600AAE7 RID: 43751 RVA: 0x00266A7C File Offset: 0x00264C7C
+	// Token: 0x17000E2C RID: 3628
+	// (get) Token: 0x06007EC9 RID: 32457 RVA: 0x00270E54 File Offset: 0x0026F054
 	public static BuildingGridModel Instance
 	{
 		get
@@ -146,7 +146,7 @@ public class BuildingGridModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AAE8 RID: 43752 RVA: 0x00266A83 File Offset: 0x00264C83
+	// Token: 0x06007ECA RID: 32458 RVA: 0x00270E5B File Offset: 0x0026F05B
 	public static BuildingGridModel GetOrCreateInstance()
 	{
 		if (BuildingGridModel._Instance == null)
@@ -156,7 +156,7 @@ public class BuildingGridModel : ModelBase
 		return BuildingGridModel._Instance;
 	}
 
-	// Token: 0x0600AAE9 RID: 43753 RVA: 0x00266A97 File Offset: 0x00264C97
+	// Token: 0x06007ECB RID: 32459 RVA: 0x00270E6F File Offset: 0x0026F06F
 	public static bool CreateInstance()
 	{
 		if (BuildingGridModel._Instance != null)
@@ -167,33 +167,33 @@ public class BuildingGridModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600AAEA RID: 43754 RVA: 0x00266AAD File Offset: 0x00264CAD
+	// Token: 0x06007ECC RID: 32460 RVA: 0x00270E85 File Offset: 0x0026F085
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600AAEB RID: 43755 RVA: 0x00266AAF File Offset: 0x00264CAF
+	// Token: 0x06007ECD RID: 32461 RVA: 0x00270E87 File Offset: 0x0026F087
 	public static void ResetStaticDefaultValue()
 	{
 		BuildingGridModel._Instance = null;
 	}
 
-	// Token: 0x0600AAEC RID: 43756 RVA: 0x00266AB7 File Offset: 0x00264CB7
+	// Token: 0x06007ECE RID: 32462 RVA: 0x00270E8F File Offset: 0x0026F08F
 	static BuildingGridModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BuildingGridModel.CreateStaticDefaultValue), new Action(BuildingGridModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004D8A RID: 19850
+	// Token: 0x04004E31 RID: 20017
 	private Pool<BuildingGridCellModel> CellModelPool;
 
-	// Token: 0x04004D8B RID: 19851
+	// Token: 0x04004E32 RID: 20018
 	private FKuroBuildingGridCellVector TempGridCellVector;
 
-	// Token: 0x04004D8C RID: 19852
+	// Token: 0x04004E33 RID: 20019
 	private readonly Dictionary<string, Dictionary<int, BuildingGridCellModel>> GridCellModels = new Dictionary<string, Dictionary<int, BuildingGridCellModel>>();
 
-	// Token: 0x04004D8D RID: 19853
+	// Token: 0x04004E34 RID: 20020
 	[Nullable(2)]
 	private static BuildingGridModel _Instance;
 }

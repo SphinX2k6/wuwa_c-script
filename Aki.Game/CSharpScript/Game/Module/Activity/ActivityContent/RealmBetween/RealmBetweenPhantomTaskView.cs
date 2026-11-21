@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x0200627E RID: 25214
+	// Token: 0x020051FC RID: 20988
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RealmBetweenPhantomTaskView : UiViewBase
 	{
-		// Token: 0x0603F780 RID: 259968 RVA: 0x00F57FD0 File Offset: 0x00F561D0
+		// Token: 0x06034441 RID: 214081 RVA: 0x00E9EF2C File Offset: 0x00E9D12C
 		public RealmBetweenPhantomTaskView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F781 RID: 259969 RVA: 0x00F57FDC File Offset: 0x00F561DC
+		// Token: 0x06034442 RID: 214082 RVA: 0x00E9EF38 File Offset: 0x00E9D138
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x0603F782 RID: 259970 RVA: 0x00F58044 File Offset: 0x00F56244
+		// Token: 0x06034443 RID: 214083 RVA: 0x00E9EFA0 File Offset: 0x00E9D1A0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RealmBetweenPhantomTaskView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F783 RID: 259971 RVA: 0x00F58088 File Offset: 0x00F56288
+		// Token: 0x06034444 RID: 214084 RVA: 0x00E9EFE4 File Offset: 0x00E9D1E4
 		protected override void OnBeforeShow()
 		{
 			foreach (KeyValuePair<int, bool> keyValuePair in this.ActivityData.PhantomDataMap)
@@ -56,19 +56,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F784 RID: 259972 RVA: 0x00F58100 File Offset: 0x00F56300
+		// Token: 0x06034445 RID: 214085 RVA: 0x00E9F05C File Offset: 0x00E9D25C
 		private void OnClickHelpBtn()
 		{
 			HelpController.Instance.OpenHelpById(this.ActivityData.LocalConfig.Value.HelpId);
 		}
 
-		// Token: 0x0603F785 RID: 259973 RVA: 0x00F5812F File Offset: 0x00F5632F
+		// Token: 0x06034446 RID: 214086 RVA: 0x00E9F08B File Offset: 0x00E9D28B
 		private RealmBetweenPhantomCardItem OnCreateItem()
 		{
 			return new RealmBetweenPhantomCardItem(this.ActivityData);
 		}
 
-		// Token: 0x0603F786 RID: 259974 RVA: 0x00F5813C File Offset: 0x00F5633C
+		// Token: 0x06034447 RID: 214087 RVA: 0x00E9F098 File Offset: 0x00E9D298
 		protected UniTask Refresh()
 		{
 			RealmBetweenPhantomTaskView.<Refresh>d__10 <Refresh>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return <Refresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F787 RID: 259975 RVA: 0x00F58180 File Offset: 0x00F56380
+		// Token: 0x06034448 RID: 214088 RVA: 0x00E9F0DC File Offset: 0x00E9D2DC
 		private void ScrollToCenter(int index)
 		{
 			UUIItem item = this.AreaLayoutList.GetItemByIndex(Math.Max(index, 0));
@@ -108,16 +108,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x040212B2 RID: 135858
+		// Token: 0x0401BBE1 RID: 113633
 		private ActivityRealmBetweenData ActivityData;
 
-		// Token: 0x040212B3 RID: 135859
+		// Token: 0x0401BBE2 RID: 113634
 		private GenericScrollViewNew<RealmBetweenPhantomCardItem, int> AreaLayoutList;
 
-		// Token: 0x040212B4 RID: 135860
+		// Token: 0x0401BBE3 RID: 113635
 		private PopupCaptionItem CaptionComponent;
 
-		// Token: 0x040212B5 RID: 135861
+		// Token: 0x0401BBE4 RID: 113636
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 	}

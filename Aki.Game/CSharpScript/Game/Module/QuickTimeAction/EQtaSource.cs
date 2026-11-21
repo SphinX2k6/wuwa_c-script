@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.QuickTimeAction
 {
-	// Token: 0x02004F31 RID: 20273
+	// Token: 0x02003EFA RID: 16122
 	public enum EQtaSource
 	{
-		// Token: 0x0401B9EE RID: 113134
+		// Token: 0x040163C3 RID: 91075
 		Battle,
-		// Token: 0x0401B9EF RID: 113135
+		// Token: 0x040163C4 RID: 91076
 		AnimNotify,
-		// Token: 0x0401B9F0 RID: 113136
+		// Token: 0x040163C5 RID: 91077
 		AnimNotifyState
 	}
 }

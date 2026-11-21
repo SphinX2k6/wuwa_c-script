@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C5A RID: 23642
+	// Token: 0x0200627F RID: 25215
 	public enum TMechascoutDragType : byte
 	{
-		// Token: 0x0400F48E RID: 62606
+		// Token: 0x040101B8 RID: 65976
 		NONE,
-		// Token: 0x0400F48F RID: 62607
+		// Token: 0x040101B9 RID: 65977
 		IMechascoutDragInstant,
-		// Token: 0x0400F490 RID: 62608
+		// Token: 0x040101BA RID: 65978
 		IMechascoutDragLongPress
 	}
 }

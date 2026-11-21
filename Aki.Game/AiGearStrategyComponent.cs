@@ -8,12 +8,12 @@ using CSharpScript.Game.LevelGamePlay;
 using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 using CSharpScript.Game.NewWorld.SceneItem.Jigsaw;
 
-// Token: 0x020032A2 RID: 12962
+// Token: 0x02002813 RID: 10259
 [NullableContext(2)]
 [Nullable(0)]
 public class AiGearStrategyComponent : EntityComponent
 {
-	// Token: 0x0601C0E2 RID: 114914 RVA: 0x007CCE28 File Offset: 0x007CB028
+	// Token: 0x06019D16 RID: 105750 RVA: 0x007F40A0 File Offset: 0x007F22A0
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
 		Aki.TDConfigMgr.Component.AiGearStrategyComponent aiGearStrategyComponent = args.GetP1<CreateEntityData>().GetParam<global::AiGearStrategyComponent>() as Aki.TDConfigMgr.Component.AiGearStrategyComponent;
@@ -52,13 +52,13 @@ public class AiGearStrategyComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601C0E3 RID: 114915 RVA: 0x007CCF0F File Offset: 0x007CB10F
+	// Token: 0x06019D17 RID: 105751 RVA: 0x007F4187 File Offset: 0x007F2387
 	protected override bool OnStart()
 	{
 		return true;
 	}
 
-	// Token: 0x0601C0E4 RID: 114916 RVA: 0x007CCF14 File Offset: 0x007CB114
+	// Token: 0x06019D18 RID: 105752 RVA: 0x007F418C File Offset: 0x007F238C
 	protected override void OnActivate()
 	{
 		EAiGearStrategy? strategyType = this.StrategyType;
@@ -85,7 +85,7 @@ public class AiGearStrategyComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C0E5 RID: 114917 RVA: 0x007CCF74 File Offset: 0x007CB174
+	// Token: 0x06019D19 RID: 105753 RVA: 0x007F41EC File Offset: 0x007F23EC
 	[NullableContext(1)]
 	private void InitBoardInfo(EntityHandle entityHandle)
 	{
@@ -104,7 +104,7 @@ public class AiGearStrategyComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C0E6 RID: 114918 RVA: 0x007CCFC3 File Offset: 0x007CB1C3
+	// Token: 0x06019D1A RID: 105754 RVA: 0x007F423B File Offset: 0x007F243B
 	private void InitRaceInfo(int splineId)
 	{
 		this.RacingMoveComponent = base.Entity.GetComponent<SceneItemAiRacingMoveComponent>();
@@ -122,13 +122,13 @@ public class AiGearStrategyComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C0E7 RID: 114919 RVA: 0x007CD004 File Offset: 0x007CB204
+	// Token: 0x06019D1B RID: 105755 RVA: 0x007F427C File Offset: 0x007F247C
 	public bool CheckAiCondition()
 	{
 		return this.AiCondition == null || LevelGeneralController.Instance.CheckConditionNew(this.AiCondition, null, EntityContext.Create(base.Entity.Id, null), null);
 	}
 
-	// Token: 0x0601C0E8 RID: 114920 RVA: 0x007CD050 File Offset: 0x007CB250
+	// Token: 0x06019D1C RID: 105756 RVA: 0x007F42C8 File Offset: 0x007F24C8
 	protected override void OnTick(float delta)
 	{
 		EAiGearStrategy? strategyType = this.StrategyType;
@@ -174,7 +174,7 @@ public class AiGearStrategyComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C0E9 RID: 114921 RVA: 0x007CD10C File Offset: 0x007CB30C
+	// Token: 0x06019D1D RID: 105757 RVA: 0x007F4384 File Offset: 0x007F2584
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -183,77 +183,86 @@ public class AiGearStrategyComponent : EntityComponent
 			return false;
 		}
 		global::AiGearStrategyComponent aiGearStrategyComponent = (global::AiGearStrategyComponent)componentTemplate;
-		if (base.CanResetComponentProperty("AiConfigPath"))
+		this.AiConfigPath = aiGearStrategyComponent.AiConfigPath;
+		if (aiGearStrategyComponent.AiCondition == null)
 		{
-			this.AiConfigPath = aiGearStrategyComponent.AiConfigPath;
+			this.AiCondition = null;
 		}
-		if (base.CanResetComponentProperty("AiCondition"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AiCondition), "AiCondition"))
 		{
-			if (aiGearStrategyComponent.AiCondition == null)
-			{
-				this.AiCondition = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IConditionGroup>(this.AiCondition), "AiCondition"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("StrategyType"))
+		this.StrategyType = aiGearStrategyComponent.StrategyType;
+		if (aiGearStrategyComponent.BoardComponent == null)
 		{
-			this.StrategyType = aiGearStrategyComponent.StrategyType;
+			this.BoardComponent = null;
 		}
-		if (base.CanResetComponentProperty("BoardComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BoardComponent), "BoardComponent"))
 		{
-			if (aiGearStrategyComponent.BoardComponent == null)
-			{
-				this.BoardComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemJigsawBaseComponent>(this.BoardComponent), "BoardComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("BoardPbdataId"))
+		this.BoardPbdataId = aiGearStrategyComponent.BoardPbdataId;
+		if (aiGearStrategyComponent.RacingMoveComponent == null)
 		{
-			this.BoardPbdataId = aiGearStrategyComponent.BoardPbdataId;
+			this.RacingMoveComponent = null;
 		}
-		if (base.CanResetComponentProperty("RacingMoveComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RacingMoveComponent), "RacingMoveComponent"))
 		{
-			if (aiGearStrategyComponent.RacingMoveComponent == null)
-			{
-				this.RacingMoveComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemAiRacingMoveComponent>(this.RacingMoveComponent), "RacingMoveComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("SplinePbdataId"))
-		{
-			this.SplinePbdataId = aiGearStrategyComponent.SplinePbdataId;
-		}
+		this.SplinePbdataId = aiGearStrategyComponent.SplinePbdataId;
 		return true;
 	}
 
-	// Token: 0x0400DDBC RID: 56764
+	// Token: 0x170029A1 RID: 10657
+	// (get) Token: 0x06019D1E RID: 105758 RVA: 0x007F4455 File Offset: 0x007F2655
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170029A2 RID: 10658
+	// (get) Token: 0x06019D1F RID: 105759 RVA: 0x007F4458 File Offset: 0x007F2658
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170029A3 RID: 10659
+	// (get) Token: 0x06019D20 RID: 105760 RVA: 0x007F445B File Offset: 0x007F265B
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E263 RID: 57955
 	[Nullable(1)]
 	private string AiConfigPath = "";
 
-	// Token: 0x0400DDBD RID: 56765
+	// Token: 0x0400E264 RID: 57956
 	private IConditionGroup AiCondition;
 
-	// Token: 0x0400DDBE RID: 56766
+	// Token: 0x0400E265 RID: 57957
 	private EAiGearStrategy? StrategyType;
 
-	// Token: 0x0400DDBF RID: 56767
+	// Token: 0x0400E266 RID: 57958
 	private SceneItemJigsawBaseComponent BoardComponent;
 
-	// Token: 0x0400DDC0 RID: 56768
+	// Token: 0x0400E267 RID: 57959
 	private int BoardPbdataId;
 
-	// Token: 0x0400DDC1 RID: 56769
+	// Token: 0x0400E268 RID: 57960
 	private SceneItemAiRacingMoveComponent RacingMoveComponent;
 
-	// Token: 0x0400DDC2 RID: 56770
+	// Token: 0x0400E269 RID: 57961
 	private int SplinePbdataId;
 }

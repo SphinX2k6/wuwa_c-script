@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026E8 RID: 9960
+	// Token: 0x020029AC RID: 10668
 	public class ISendBattleEventsForMonsterSummonConfig
 	{
-		// Token: 0x0600DE7A RID: 56954 RVA: 0x002101A5 File Offset: 0x0020E3A5
-		[NullableContext(1)]
+		// Token: 0x0600EC56 RID: 60502 RVA: 0x0022C9E5 File Offset: 0x0022ABE5
 		public static ISendBattleEventsForMonsterSummonConfig Create(ISendBattleEventsForMonsterSummonConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700426C RID: 17004
-		// (get) Token: 0x0600DE7B RID: 56955 RVA: 0x002101C4 File Offset: 0x0020E3C4
+		// Token: 0x170045AC RID: 17836
+		// (get) Token: 0x0600EC57 RID: 60503 RVA: 0x0022CA04 File Offset: 0x0022AC04
 		public virtual int TagConfigId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700426D RID: 17005
-		// (get) Token: 0x0600DE7C RID: 56956 RVA: 0x002101D4 File Offset: 0x0020E3D4
+		// Token: 0x170045AD RID: 17837
+		// (get) Token: 0x0600EC58 RID: 60504 RVA: 0x0022CA14 File Offset: 0x0022AC14
 		public virtual int? DelayTime
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B7E RID: 31614
+		// Token: 0x0400821E RID: 33310
 		private ISendBattleEventsForMonsterSummonConfig Instance;
 	}
 }

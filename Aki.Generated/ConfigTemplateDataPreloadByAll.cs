@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009CD RID: 2509
+	// Token: 0x02000AA2 RID: 2722
 	public class ConfigTemplateDataPreloadByAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003AE2 RID: 15074 RVA: 0x001A6BC8 File Offset: 0x001A4DC8
+		// Token: 0x06003FE0 RID: 16352 RVA: 0x001C5F5C File Offset: 0x001C415C
 		static ConfigTemplateDataPreloadByAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTemplateDataPreloadByAll.CreateStaticDefaultValue), new Action(ConfigTemplateDataPreloadByAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003AE3 RID: 15075 RVA: 0x001A6BE8 File Offset: 0x001A4DE8
+		// Token: 0x06003FE1 RID: 16353 RVA: 0x001C5F7C File Offset: 0x001C417C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTemplateDataPreloadByAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003AE4 RID: 15076 RVA: 0x001A6C67 File Offset: 0x001A4E67
+		// Token: 0x06003FE2 RID: 16354 RVA: 0x001C5FFB File Offset: 0x001C41FB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTemplateDataPreloadByAll.LogPair = null;
 			ConfigTemplateDataPreloadByAll.HandleId = 0;
 		}
 
-		// Token: 0x06003AE5 RID: 15077 RVA: 0x001A6C75 File Offset: 0x001A4E75
+		// Token: 0x06003FE3 RID: 16355 RVA: 0x001C6009 File Offset: 0x001C4209
 		public static void Init()
 		{
 			ConfigTemplateDataPreloadByAll.HandleId = ConfigCommon.InitDataStatement(ConfigTemplateDataPreloadByAll.HandleId, "db_templatedata_preload.db", "select BinData from `TemplateDataPreload`");
 		}
 
-		// Token: 0x06003AE6 RID: 15078 RVA: 0x001A6C90 File Offset: 0x001A4E90
+		// Token: 0x06003FE4 RID: 16356 RVA: 0x001C6024 File Offset: 0x001C4224
 		[NullableContext(2)]
 		public static IReadOnlyList<TemplateDataPreload> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04004481 RID: 17537
+		// Token: 0x04004A54 RID: 19028
 		private const string DB = "db_templatedata_preload.db";
 
-		// Token: 0x04004482 RID: 17538
+		// Token: 0x04004A55 RID: 19029
 		private const string FILE = "Preload/TemplateDataPreload.csv";
 
-		// Token: 0x04004483 RID: 17539
+		// Token: 0x04004A56 RID: 19030
 		private const string TABLE = "TemplateDataPreload";
 
-		// Token: 0x04004484 RID: 17540
+		// Token: 0x04004A57 RID: 19031
 		private const string COMMAND = "select BinData from `TemplateDataPreload`";
 
-		// Token: 0x04004485 RID: 17541
+		// Token: 0x04004A58 RID: 19032
 		private const string KEY_PREFIX = "TemplateDataPreloadByAll";
 
-		// Token: 0x04004486 RID: 17542
+		// Token: 0x04004A59 RID: 19033
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004487 RID: 17543
+		// Token: 0x04004A5A RID: 19034
 		private static int HandleId;
 	}
 }

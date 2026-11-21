@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E29 RID: 7721
+	// Token: 0x02000584 RID: 1412
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_SceneMovement")]
 	[UnrealStructLayout(336, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 336)]
 	public class UKSC_SceneMovement : UKSC_BaseObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601D6CD RID: 120525 RVA: 0x002B7713 File Offset: 0x002B5913
+		// Token: 0x0600801E RID: 32798 RVA: 0x000BD5F7 File Offset: 0x000BB7F7
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKSC_SceneMovement._ClassPtr;
 		}
 
-		// Token: 0x0601D6CE RID: 120526 RVA: 0x002B7720 File Offset: 0x002B5920
+		// Token: 0x0600801F RID: 32799 RVA: 0x000BD604 File Offset: 0x000BB804
 		public UKSC_SceneMovement() : this(BuiltinUtils.AllocNativeUObject(UKSC_SceneMovement.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601D6CF RID: 120527 RVA: 0x002B7748 File Offset: 0x002B5948
+		// Token: 0x06008020 RID: 32800 RVA: 0x000BD62C File Offset: 0x000BB82C
 		public UKSC_SceneMovement(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKSC_SceneMovement.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700769C RID: 30364
-		// (get) Token: 0x0601D6D0 RID: 120528 RVA: 0x002B777C File Offset: 0x002B597C
-		// (set) Token: 0x0601D6D1 RID: 120529 RVA: 0x002B77B5 File Offset: 0x002B59B5
+		// Token: 0x170018EE RID: 6382
+		// (get) Token: 0x06008021 RID: 32801 RVA: 0x000BD660 File Offset: 0x000BB860
+		// (set) Token: 0x06008022 RID: 32802 RVA: 0x000BD699 File Offset: 0x000BB899
 		public TMap<UKSC_DA_SceneSegmentContainer, int> LoadedSceneSegmentDa
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700769D RID: 30365
-		// (get) Token: 0x0601D6D2 RID: 120530 RVA: 0x002B77C3 File Offset: 0x002B59C3
-		// (set) Token: 0x0601D6D3 RID: 120531 RVA: 0x002B77D7 File Offset: 0x002B59D7
+		// Token: 0x170018EF RID: 6383
+		// (get) Token: 0x06008023 RID: 32803 RVA: 0x000BD6A7 File Offset: 0x000BB8A7
+		// (set) Token: 0x06008024 RID: 32804 RVA: 0x000BD6BB File Offset: 0x000BB8BB
 		public unsafe FVector MovementDirection
 		{
 			get
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700769E RID: 30366
-		// (get) Token: 0x0601D6D4 RID: 120532 RVA: 0x002B77EC File Offset: 0x002B59EC
-		// (set) Token: 0x0601D6D5 RID: 120533 RVA: 0x002B7800 File Offset: 0x002B5A00
+		// Token: 0x170018F0 RID: 6384
+		// (get) Token: 0x06008025 RID: 32805 RVA: 0x000BD6D0 File Offset: 0x000BB8D0
+		// (set) Token: 0x06008026 RID: 32806 RVA: 0x000BD6E4 File Offset: 0x000BB8E4
 		public unsafe FVector MovementRight
 		{
 			get
@@ -80,9 +80,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700769F RID: 30367
-		// (get) Token: 0x0601D6D6 RID: 120534 RVA: 0x002B7815 File Offset: 0x002B5A15
-		// (set) Token: 0x0601D6D7 RID: 120535 RVA: 0x002B7829 File Offset: 0x002B5A29
+		// Token: 0x170018F1 RID: 6385
+		// (get) Token: 0x06008027 RID: 32807 RVA: 0x000BD6F9 File Offset: 0x000BB8F9
+		// (set) Token: 0x06008028 RID: 32808 RVA: 0x000BD70D File Offset: 0x000BB90D
 		public unsafe FVector MovementUp
 		{
 			get
@@ -95,9 +95,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076A0 RID: 30368
-		// (get) Token: 0x0601D6D8 RID: 120536 RVA: 0x002B783E File Offset: 0x002B5A3E
-		// (set) Token: 0x0601D6D9 RID: 120537 RVA: 0x002B7852 File Offset: 0x002B5A52
+		// Token: 0x170018F2 RID: 6386
+		// (get) Token: 0x06008029 RID: 32809 RVA: 0x000BD722 File Offset: 0x000BB922
+		// (set) Token: 0x0600802A RID: 32810 RVA: 0x000BD736 File Offset: 0x000BB936
 		public unsafe FVector MovementTarget
 		{
 			get
@@ -110,9 +110,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076A1 RID: 30369
-		// (get) Token: 0x0601D6DA RID: 120538 RVA: 0x002B7867 File Offset: 0x002B5A67
-		// (set) Token: 0x0601D6DB RID: 120539 RVA: 0x002B787B File Offset: 0x002B5A7B
+		// Token: 0x170018F3 RID: 6387
+		// (get) Token: 0x0600802B RID: 32811 RVA: 0x000BD74B File Offset: 0x000BB94B
+		// (set) Token: 0x0600802C RID: 32812 RVA: 0x000BD75F File Offset: 0x000BB95F
 		public unsafe FRotator SegmentRotation
 		{
 			get
@@ -125,9 +125,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076A2 RID: 30370
-		// (get) Token: 0x0601D6DC RID: 120540 RVA: 0x002B7890 File Offset: 0x002B5A90
-		// (set) Token: 0x0601D6DD RID: 120541 RVA: 0x002B78A0 File Offset: 0x002B5AA0
+		// Token: 0x170018F4 RID: 6388
+		// (get) Token: 0x0600802D RID: 32813 RVA: 0x000BD774 File Offset: 0x000BB974
+		// (set) Token: 0x0600802E RID: 32814 RVA: 0x000BD784 File Offset: 0x000BB984
 		public unsafe float SceneSegmentLength
 		{
 			get
@@ -140,9 +140,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076A3 RID: 30371
-		// (get) Token: 0x0601D6DE RID: 120542 RVA: 0x002B78B1 File Offset: 0x002B5AB1
-		// (set) Token: 0x0601D6DF RID: 120543 RVA: 0x002B78C1 File Offset: 0x002B5AC1
+		// Token: 0x170018F5 RID: 6389
+		// (get) Token: 0x0600802F RID: 32815 RVA: 0x000BD795 File Offset: 0x000BB995
+		// (set) Token: 0x06008030 RID: 32816 RVA: 0x000BD7A5 File Offset: 0x000BB9A5
 		public unsafe int SceneSegmentCount
 		{
 			get
@@ -155,9 +155,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076A4 RID: 30372
-		// (get) Token: 0x0601D6E0 RID: 120544 RVA: 0x002B78D2 File Offset: 0x002B5AD2
-		// (set) Token: 0x0601D6E1 RID: 120545 RVA: 0x002B78E2 File Offset: 0x002B5AE2
+		// Token: 0x170018F6 RID: 6390
+		// (get) Token: 0x06008031 RID: 32817 RVA: 0x000BD7B6 File Offset: 0x000BB9B6
+		// (set) Token: 0x06008032 RID: 32818 RVA: 0x000BD7C6 File Offset: 0x000BB9C6
 		public unsafe int SceneSegmentGenerateCount
 		{
 			get
@@ -170,9 +170,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076A5 RID: 30373
-		// (get) Token: 0x0601D6E2 RID: 120546 RVA: 0x002B78F3 File Offset: 0x002B5AF3
-		// (set) Token: 0x0601D6E3 RID: 120547 RVA: 0x002B7903 File Offset: 0x002B5B03
+		// Token: 0x170018F7 RID: 6391
+		// (get) Token: 0x06008033 RID: 32819 RVA: 0x000BD7D7 File Offset: 0x000BB9D7
+		// (set) Token: 0x06008034 RID: 32820 RVA: 0x000BD7E7 File Offset: 0x000BB9E7
 		public unsafe float MoveDistance
 		{
 			get
@@ -185,9 +185,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076A6 RID: 30374
-		// (get) Token: 0x0601D6E4 RID: 120548 RVA: 0x002B7914 File Offset: 0x002B5B14
-		// (set) Token: 0x0601D6E5 RID: 120549 RVA: 0x002B794D File Offset: 0x002B5B4D
+		// Token: 0x170018F8 RID: 6392
+		// (get) Token: 0x06008035 RID: 32821 RVA: 0x000BD7F8 File Offset: 0x000BB9F8
+		// (set) Token: 0x06008036 RID: 32822 RVA: 0x000BD831 File Offset: 0x000BBA31
 		public FOnSceneSegmentFinish OnSceneSegmentFinish
 		{
 			get
@@ -206,9 +206,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076A7 RID: 30375
-		// (get) Token: 0x0601D6E6 RID: 120550 RVA: 0x002B7970 File Offset: 0x002B5B70
-		// (set) Token: 0x0601D6E7 RID: 120551 RVA: 0x002B79A9 File Offset: 0x002B5BA9
+		// Token: 0x170018F9 RID: 6393
+		// (get) Token: 0x06008037 RID: 32823 RVA: 0x000BD854 File Offset: 0x000BBA54
+		// (set) Token: 0x06008038 RID: 32824 RVA: 0x000BD88D File Offset: 0x000BBA8D
 		public FOnSceneMoveThreshold OnSceneMoveThreshold
 		{
 			get
@@ -227,9 +227,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076A8 RID: 30376
-		// (get) Token: 0x0601D6E8 RID: 120552 RVA: 0x002B79CA File Offset: 0x002B5BCA
-		// (set) Token: 0x0601D6E9 RID: 120553 RVA: 0x002B79DA File Offset: 0x002B5BDA
+		// Token: 0x170018FA RID: 6394
+		// (get) Token: 0x06008039 RID: 32825 RVA: 0x000BD8AE File Offset: 0x000BBAAE
+		// (set) Token: 0x0600803A RID: 32826 RVA: 0x000BD8BE File Offset: 0x000BBABE
 		public unsafe float MoveDistanceThreshold
 		{
 			get
@@ -242,9 +242,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076A9 RID: 30377
-		// (get) Token: 0x0601D6EA RID: 120554 RVA: 0x002B79EB File Offset: 0x002B5BEB
-		// (set) Token: 0x0601D6EB RID: 120555 RVA: 0x002B79FB File Offset: 0x002B5BFB
+		// Token: 0x170018FB RID: 6395
+		// (get) Token: 0x0600803B RID: 32827 RVA: 0x000BD8CF File Offset: 0x000BBACF
+		// (set) Token: 0x0600803C RID: 32828 RVA: 0x000BD8DF File Offset: 0x000BBADF
 		public unsafe float MoveSpeed
 		{
 			get
@@ -257,9 +257,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076AA RID: 30378
-		// (get) Token: 0x0601D6EC RID: 120556 RVA: 0x002B7A0C File Offset: 0x002B5C0C
-		// (set) Token: 0x0601D6ED RID: 120557 RVA: 0x002B7A45 File Offset: 0x002B5C45
+		// Token: 0x170018FC RID: 6396
+		// (get) Token: 0x0600803D RID: 32829 RVA: 0x000BD8F0 File Offset: 0x000BBAF0
+		// (set) Token: 0x0600803E RID: 32830 RVA: 0x000BD929 File Offset: 0x000BBB29
 		public TArray<AKSC_SceneSegment> SceneSegments
 		{
 			get
@@ -278,9 +278,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076AB RID: 30379
-		// (get) Token: 0x0601D6EE RID: 120558 RVA: 0x002B7A53 File Offset: 0x002B5C53
-		// (set) Token: 0x0601D6EF RID: 120559 RVA: 0x002B7A67 File Offset: 0x002B5C67
+		// Token: 0x170018FD RID: 6397
+		// (get) Token: 0x0600803F RID: 32831 RVA: 0x000BD937 File Offset: 0x000BBB37
+		// (set) Token: 0x06008040 RID: 32832 RVA: 0x000BD94B File Offset: 0x000BBB4B
 		[Nullable(2)]
 		public unsafe UKSC_DA_SceneSegmentContainer SceneSegmentContainer
 		{
@@ -296,77 +296,77 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601D6F0 RID: 120560 RVA: 0x002B7A7C File Offset: 0x002B5C7C
+		// Token: 0x06008041 RID: 32833 RVA: 0x000BD960 File Offset: 0x000BBB60
 		public void SetSegmentRotation(in FRotator NewSegmentRotation)
 		{
 			UKSC_SceneMovement.__SetSegmentRotation_Internal(base.NativePtr, NewSegmentRotation);
 		}
 
-		// Token: 0x0601D6F1 RID: 120561 RVA: 0x002B7A8A File Offset: 0x002B5C8A
+		// Token: 0x06008042 RID: 32834 RVA: 0x000BD96E File Offset: 0x000BBB6E
 		[NullableContext(2)]
 		public void SetSceneSegment(UKSC_DA_SceneSegmentContainer NewSceneSegment, int GenerateCount = -1)
 		{
 			UKSC_SceneMovement.__SetSceneSegment_Internal(base.NativePtr, (NewSceneSegment != null) ? NewSceneSegment.NativePtr : IntPtr.Zero, GenerateCount);
 		}
 
-		// Token: 0x0601D6F2 RID: 120562 RVA: 0x002B7AA8 File Offset: 0x002B5CA8
+		// Token: 0x06008043 RID: 32835 RVA: 0x000BD98C File Offset: 0x000BBB8C
 		public void SetMovementDirection(in FVector NewMovementDirection)
 		{
 			UKSC_SceneMovement.__SetMovementDirection_Internal(base.NativePtr, NewMovementDirection);
 		}
 
-		// Token: 0x0601D6F3 RID: 120563 RVA: 0x002B7AB6 File Offset: 0x002B5CB6
+		// Token: 0x06008044 RID: 32836 RVA: 0x000BD99A File Offset: 0x000BBB9A
 		public void D_SetMovementTarget(in FVectorDouble NewMovementTarget)
 		{
 			UKSC_SceneMovement.__D_SetMovementTarget_Internal(base.NativePtr, NewMovementTarget);
 		}
 
-		// Token: 0x0601D6F4 RID: 120564
+		// Token: 0x06008045 RID: 32837
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSegmentRotation_Internal(IntPtr @this, in FRotator NewSegmentRotation);
 
-		// Token: 0x0601D6F5 RID: 120565
+		// Token: 0x06008046 RID: 32838
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSceneSegment_Internal(IntPtr @this, IntPtr NewSceneSegment, int GenerateCount);
 
-		// Token: 0x0601D6F6 RID: 120566
+		// Token: 0x06008047 RID: 32839
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMovementDirection_Internal(IntPtr @this, in FVector NewMovementDirection);
 
-		// Token: 0x0601D6F7 RID: 120567
+		// Token: 0x06008048 RID: 32840
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_SetMovementTarget_Internal(IntPtr @this, in FVectorDouble NewMovementTarget);
 
-		// Token: 0x0601D6F8 RID: 120568 RVA: 0x002B7AC4 File Offset: 0x002B5CC4
+		// Token: 0x06008049 RID: 32841 RVA: 0x000BD9A8 File Offset: 0x000BBBA8
 		static UKSC_SceneMovement()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_SceneMovement");
 		}
 
-		// Token: 0x0601D6F9 RID: 120569 RVA: 0x002B7AD2 File Offset: 0x002B5CD2
+		// Token: 0x0600804A RID: 32842 RVA: 0x000BD9B6 File Offset: 0x000BBBB6
 		protected UKSC_SceneMovement(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FF4E RID: 65358
+		// Token: 0x040037ED RID: 14317
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_SceneMovement";
 
-		// Token: 0x0400FF4F RID: 65359
+		// Token: 0x040037EE RID: 14318
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FF50 RID: 65360
+		// Token: 0x040037EF RID: 14319
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400FF51 RID: 65361
+		// Token: 0x040037F0 RID: 14320
 		public static IntPtr __OnSceneSegmentFinish__DelegateSignature_NativeFunctionPtr;
 
-		// Token: 0x0400FF52 RID: 65362
+		// Token: 0x040037F1 RID: 14321
 		public static IntPtr __OnSceneMoveThreshold__DelegateSignature_NativeFunctionPtr;
 
-		// Token: 0x0400FF53 RID: 65363
+		// Token: 0x040037F2 RID: 14322
 		internal static int __PropertyOffset_LoadedSceneSegmentDa;
 
-		// Token: 0x0400FF54 RID: 65364
+		// Token: 0x040037F3 RID: 14323
 		[Nullable(new byte[]
 		{
 			2,
@@ -374,57 +374,57 @@ namespace UnrealEngine
 		})]
 		private TMap<UKSC_DA_SceneSegmentContainer, int> _LoadedSceneSegmentDa;
 
-		// Token: 0x0400FF55 RID: 65365
+		// Token: 0x040037F4 RID: 14324
 		internal static int __PropertyOffset_MovementDirection;
 
-		// Token: 0x0400FF56 RID: 65366
+		// Token: 0x040037F5 RID: 14325
 		internal static int __PropertyOffset_MovementRight;
 
-		// Token: 0x0400FF57 RID: 65367
+		// Token: 0x040037F6 RID: 14326
 		internal static int __PropertyOffset_MovementUp;
 
-		// Token: 0x0400FF58 RID: 65368
+		// Token: 0x040037F7 RID: 14327
 		internal static int __PropertyOffset_MovementTarget;
 
-		// Token: 0x0400FF59 RID: 65369
+		// Token: 0x040037F8 RID: 14328
 		internal static int __PropertyOffset_SegmentRotation;
 
-		// Token: 0x0400FF5A RID: 65370
+		// Token: 0x040037F9 RID: 14329
 		internal static int __PropertyOffset_SceneSegmentLength;
 
-		// Token: 0x0400FF5B RID: 65371
+		// Token: 0x040037FA RID: 14330
 		internal static int __PropertyOffset_SceneSegmentCount;
 
-		// Token: 0x0400FF5C RID: 65372
+		// Token: 0x040037FB RID: 14331
 		internal static int __PropertyOffset_SceneSegmentGenerateCount;
 
-		// Token: 0x0400FF5D RID: 65373
+		// Token: 0x040037FC RID: 14332
 		internal static int __PropertyOffset_MoveDistance;
 
-		// Token: 0x0400FF5E RID: 65374
+		// Token: 0x040037FD RID: 14333
 		internal static int __PropertyOffset_OnSceneSegmentFinish;
 
-		// Token: 0x0400FF5F RID: 65375
+		// Token: 0x040037FE RID: 14334
 		[Nullable(2)]
 		private FOnSceneSegmentFinish _OnSceneSegmentFinish;
 
-		// Token: 0x0400FF60 RID: 65376
+		// Token: 0x040037FF RID: 14335
 		internal static int __PropertyOffset_OnSceneMoveThreshold;
 
-		// Token: 0x0400FF61 RID: 65377
+		// Token: 0x04003800 RID: 14336
 		[Nullable(2)]
 		private FOnSceneMoveThreshold _OnSceneMoveThreshold;
 
-		// Token: 0x0400FF62 RID: 65378
+		// Token: 0x04003801 RID: 14337
 		internal static int __PropertyOffset_MoveDistanceThreshold;
 
-		// Token: 0x0400FF63 RID: 65379
+		// Token: 0x04003802 RID: 14338
 		internal static int __PropertyOffset_MoveSpeed;
 
-		// Token: 0x0400FF64 RID: 65380
+		// Token: 0x04003803 RID: 14339
 		internal static int __PropertyOffset_SceneSegments;
 
-		// Token: 0x0400FF65 RID: 65381
+		// Token: 0x04003804 RID: 14340
 		[Nullable(new byte[]
 		{
 			2,
@@ -432,7 +432,7 @@ namespace UnrealEngine
 		})]
 		private TArray<AKSC_SceneSegment> _SceneSegments;
 
-		// Token: 0x0400FF66 RID: 65382
+		// Token: 0x04003805 RID: 14341
 		internal static int __PropertyOffset_SceneSegmentContainer;
 	}
 }

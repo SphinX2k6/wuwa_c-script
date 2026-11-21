@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010DC RID: 4316
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200120A RID: 4618
 	public class IRecallConditionByTemplate : IRecallConditionBase
 	{
-		// Token: 0x0600619E RID: 24990 RVA: 0x000EB9A8 File Offset: 0x000E9BA8
+		// Token: 0x06006797 RID: 26519 RVA: 0x000F8AC8 File Offset: 0x000F6CC8
 		private IRecallConditionByTemplate_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600619F RID: 24991 RVA: 0x000EB9E0 File Offset: 0x000E9BE0
+		// Token: 0x06006798 RID: 26520 RVA: 0x000F8B00 File Offset: 0x000F6D00
 		public static IRecallConditionByTemplate Create([Nullable(2)] IRecallConditionByTemplate instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060061A0 RID: 24992 RVA: 0x000EB9F3 File Offset: 0x000E9BF3
+		// Token: 0x06006799 RID: 26521 RVA: 0x000F8B13 File Offset: 0x000F6D13
 		public static IRecallConditionByTemplate CreateFromSetValue([Nullable(2)] IRecallConditionByTemplate_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060061A1 RID: 24993 RVA: 0x000EBA06 File Offset: 0x000E9C06
+		// Token: 0x0600679A RID: 26522 RVA: 0x000F8B26 File Offset: 0x000F6D26
 		public new IRecallConditionByTemplate_SetValue ToSetValue()
 		{
 			return new IRecallConditionByTemplate_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002009 RID: 8201
-		// (get) Token: 0x060061A2 RID: 24994 RVA: 0x000EBA3D File Offset: 0x000E9C3D
-		// (set) Token: 0x060061A3 RID: 24995 RVA: 0x000EBA68 File Offset: 0x000E9C68
+		// Token: 0x170021BB RID: 8635
+		// (get) Token: 0x0600679B RID: 26523 RVA: 0x000F8B5D File Offset: 0x000F6D5D
+		// (set) Token: 0x0600679C RID: 26524 RVA: 0x000F8B88 File Offset: 0x000F6D88
 		public override ERecallConditionType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700200A RID: 8202
-		// (get) Token: 0x060061A4 RID: 24996 RVA: 0x000EBA76 File Offset: 0x000E9C76
-		// (set) Token: 0x060061A5 RID: 24997 RVA: 0x000EBAA1 File Offset: 0x000E9CA1
+		// Token: 0x170021BC RID: 8636
+		// (get) Token: 0x0600679D RID: 26525 RVA: 0x000F8B96 File Offset: 0x000F6D96
+		// (set) Token: 0x0600679E RID: 26526 RVA: 0x000F8BC1 File Offset: 0x000F6DC1
 		public override ERecallOperation Operation
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700200B RID: 8203
-		// (get) Token: 0x060061A6 RID: 24998 RVA: 0x000EBAAF File Offset: 0x000E9CAF
-		// (set) Token: 0x060061A7 RID: 24999 RVA: 0x000EBAD6 File Offset: 0x000E9CD6
+		// Token: 0x170021BD RID: 8637
+		// (get) Token: 0x0600679F RID: 26527 RVA: 0x000F8BCF File Offset: 0x000F6DCF
+		// (set) Token: 0x060067A0 RID: 26528 RVA: 0x000F8BF6 File Offset: 0x000F6DF6
 		public virtual List<string> Templates
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700200C RID: 8204
-		// (get) Token: 0x060061A8 RID: 25000 RVA: 0x000EBAE4 File Offset: 0x000E9CE4
-		// (set) Token: 0x060061A9 RID: 25001 RVA: 0x000EBB0B File Offset: 0x000E9D0B
+		// Token: 0x170021BE RID: 8638
+		// (get) Token: 0x060067A1 RID: 26529 RVA: 0x000F8C04 File Offset: 0x000F6E04
+		// (set) Token: 0x060067A2 RID: 26530 RVA: 0x000F8C2B File Offset: 0x000F6E2B
 		public virtual List<int> AreaIds
 		{
 			get
@@ -157,11 +155,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003ABC RID: 15036
+		// Token: 0x04003E09 RID: 15881
 		[Nullable(2)]
 		protected new IRecallConditionByTemplate FbInstance;
 
-		// Token: 0x04003ABD RID: 15037
+		// Token: 0x04003E0A RID: 15882
 		[Nullable(2)]
 		protected new IRecallConditionByTemplate_SetValue PocoInterface;
 	}

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C04 RID: 27652
+	// Token: 0x02007368 RID: 29544
 	public class IOpenGravityT
 	{
-		// Token: 0x1700CDA4 RID: 52644
-		// (get) Token: 0x060309DA RID: 199130 RVA: 0x00699660 File Offset: 0x00697860
-		// (set) Token: 0x060309DB RID: 199131 RVA: 0x00699668 File Offset: 0x00697868
+		// Token: 0x1700D8B2 RID: 55474
+		// (get) Token: 0x060338FA RID: 211194 RVA: 0x006F2FF4 File Offset: 0x006F11F4
+		// (set) Token: 0x060338FB RID: 211195 RVA: 0x006F2FFC File Offset: 0x006F11FC
 		public ESetTeleControlType Type { get; set; }
 
-		// Token: 0x1700CDA5 RID: 52645
-		// (get) Token: 0x060309DC RID: 199132 RVA: 0x00699671 File Offset: 0x00697871
-		// (set) Token: 0x060309DD RID: 199133 RVA: 0x00699679 File Offset: 0x00697879
+		// Token: 0x1700D8B3 RID: 55475
+		// (get) Token: 0x060338FC RID: 211196 RVA: 0x006F3005 File Offset: 0x006F1205
+		// (set) Token: 0x060338FD RID: 211197 RVA: 0x006F300D File Offset: 0x006F120D
 		public int EntityId { get; set; }
 
-		// Token: 0x1700CDA6 RID: 52646
-		// (get) Token: 0x060309DE RID: 199134 RVA: 0x00699682 File Offset: 0x00697882
-		// (set) Token: 0x060309DF RID: 199135 RVA: 0x0069968A File Offset: 0x0069788A
+		// Token: 0x1700D8B4 RID: 55476
+		// (get) Token: 0x060338FE RID: 211198 RVA: 0x006F3016 File Offset: 0x006F1216
+		// (set) Token: 0x060338FF RID: 211199 RVA: 0x006F301E File Offset: 0x006F121E
 		public int PositionEntityId { get; set; }
 
-		// Token: 0x1700CDA7 RID: 52647
-		// (get) Token: 0x060309E0 RID: 199136 RVA: 0x00699693 File Offset: 0x00697893
-		// (set) Token: 0x060309E1 RID: 199137 RVA: 0x0069969B File Offset: 0x0069789B
+		// Token: 0x1700D8B5 RID: 55477
+		// (get) Token: 0x06033900 RID: 211200 RVA: 0x006F3027 File Offset: 0x006F1227
+		// (set) Token: 0x06033901 RID: 211201 RVA: 0x006F302F File Offset: 0x006F122F
 		public byte NullMask { get; set; }
 
-		// Token: 0x060309E2 RID: 199138 RVA: 0x006996A4 File Offset: 0x006978A4
+		// Token: 0x06033902 RID: 211202 RVA: 0x006F3038 File Offset: 0x006F1238
 		public IOpenGravityT()
 		{
 			this.Type = ESetTeleControlType.OpenGravity;

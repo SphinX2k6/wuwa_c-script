@@ -3,40 +3,40 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200254C RID: 9548
+// Token: 0x02001A37 RID: 6711
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class PhonographConfig : ConfigBase
 {
-	// Token: 0x060133A8 RID: 78760 RVA: 0x004C8537 File Offset: 0x004C6737
+	// Token: 0x06010888 RID: 67720 RVA: 0x004D70B3 File Offset: 0x004D52B3
 	[NullableContext(2)]
 	public IReadOnlyList<PhonographMusic> GetMusicList()
 	{
 		return ConfigPhonographMusicAll.GetConfigList(true);
 	}
 
-	// Token: 0x060133A9 RID: 78761 RVA: 0x004C853F File Offset: 0x004C673F
+	// Token: 0x06010889 RID: 67721 RVA: 0x004D70BB File Offset: 0x004D52BB
 	public PhonographMusic? GetMusicById(int id)
 	{
 		return ConfigPhonographMusicById.GetConfig(id, true);
 	}
 
-	// Token: 0x060133AA RID: 78762 RVA: 0x004C8548 File Offset: 0x004C6748
+	// Token: 0x0601088A RID: 67722 RVA: 0x004D70C4 File Offset: 0x004D52C4
 	[NullableContext(2)]
 	public IReadOnlyList<PhonographAlbum> GetMusicAlbumList()
 	{
 		return ConfigPhonographAlbumAll.GetConfigList(true);
 	}
 
-	// Token: 0x060133AB RID: 78763 RVA: 0x004C8550 File Offset: 0x004C6750
+	// Token: 0x0601088B RID: 67723 RVA: 0x004D70CC File Offset: 0x004D52CC
 	public PhonographAlbum? GetMusicAlbumById(int id)
 	{
 		return ConfigPhonographAlbumById.GetConfig(id, true);
 	}
 
-	// Token: 0x170018D8 RID: 6360
-	// (get) Token: 0x060133AC RID: 78764 RVA: 0x004C8559 File Offset: 0x004C6759
+	// Token: 0x17001911 RID: 6417
+	// (get) Token: 0x0601088C RID: 67724 RVA: 0x004D70D5 File Offset: 0x004D52D5
 	public static PhonographConfig Instance
 	{
 		get
@@ -45,7 +45,7 @@ public class PhonographConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060133AD RID: 78765 RVA: 0x004C8560 File Offset: 0x004C6760
+	// Token: 0x0601088D RID: 67725 RVA: 0x004D70DC File Offset: 0x004D52DC
 	public static PhonographConfig GetOrCreateInstance()
 	{
 		if (PhonographConfig._Instance == null)
@@ -55,7 +55,7 @@ public class PhonographConfig : ConfigBase
 		return PhonographConfig._Instance;
 	}
 
-	// Token: 0x060133AE RID: 78766 RVA: 0x004C8574 File Offset: 0x004C6774
+	// Token: 0x0601088E RID: 67726 RVA: 0x004D70F0 File Offset: 0x004D52F0
 	public static bool CreateInstance()
 	{
 		if (PhonographConfig._Instance != null)
@@ -66,24 +66,24 @@ public class PhonographConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060133AF RID: 78767 RVA: 0x004C858A File Offset: 0x004C678A
+	// Token: 0x0601088F RID: 67727 RVA: 0x004D7106 File Offset: 0x004D5306
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060133B0 RID: 78768 RVA: 0x004C858C File Offset: 0x004C678C
+	// Token: 0x06010890 RID: 67728 RVA: 0x004D7108 File Offset: 0x004D5308
 	public static void ResetStaticDefaultValue()
 	{
 		PhonographConfig._Instance = null;
 	}
 
-	// Token: 0x060133B1 RID: 78769 RVA: 0x004C8594 File Offset: 0x004C6794
+	// Token: 0x06010891 RID: 67729 RVA: 0x004D7110 File Offset: 0x004D5310
 	static PhonographConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhonographConfig.CreateStaticDefaultValue), new Action(PhonographConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009136 RID: 37174
+	// Token: 0x0400928F RID: 37519
 	[Nullable(2)]
 	private static PhonographConfig _Instance;
 }

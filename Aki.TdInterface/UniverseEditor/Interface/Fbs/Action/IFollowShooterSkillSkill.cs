@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006852 RID: 26706
+	// Token: 0x02006EE7 RID: 28391
 	public struct IFollowShooterSkillSkill : IFlatbufferObject
 	{
-		// Token: 0x1700C65A RID: 50778
-		// (get) Token: 0x0602E8FD RID: 190717 RVA: 0x0065A272 File Offset: 0x00658472
+		// Token: 0x1700D02E RID: 53294
+		// (get) Token: 0x060311E3 RID: 201187 RVA: 0x006A8ADD File Offset: 0x006A6CDD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E8FE RID: 190718 RVA: 0x0065A27F File Offset: 0x0065847F
+		// Token: 0x060311E4 RID: 201188 RVA: 0x006A8AEA File Offset: 0x006A6CEA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E8FF RID: 190719 RVA: 0x0065A288 File Offset: 0x00658488
+		// Token: 0x060311E5 RID: 201189 RVA: 0x006A8AF4 File Offset: 0x006A6CF4
 		public static IFollowShooterSkillSkill GetRootAsIFollowShooterSkillSkill(ByteBuffer _bb)
 		{
 			return IFollowShooterSkillSkill.GetRootAsIFollowShooterSkillSkill(_bb, default(IFollowShooterSkillSkill));
 		}
 
-		// Token: 0x0602E900 RID: 190720 RVA: 0x0065A2A4 File Offset: 0x006584A4
+		// Token: 0x060311E6 RID: 201190 RVA: 0x006A8B10 File Offset: 0x006A6D10
 		public static IFollowShooterSkillSkill GetRootAsIFollowShooterSkillSkill(ByteBuffer _bb, IFollowShooterSkillSkill obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E901 RID: 190721 RVA: 0x0065A2C1 File Offset: 0x006584C1
+		// Token: 0x060311E7 RID: 201191 RVA: 0x006A8B2D File Offset: 0x006A6D2D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E902 RID: 190722 RVA: 0x0065A2D0 File Offset: 0x006584D0
+		// Token: 0x060311E8 RID: 201192 RVA: 0x006A8B3C File Offset: 0x006A6D3C
 		public IFollowShooterSkillSkill __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C65B RID: 50779
-		// (get) Token: 0x0602E903 RID: 190723 RVA: 0x0065A2E0 File Offset: 0x006584E0
+		// Token: 0x1700D02F RID: 53295
+		// (get) Token: 0x060311E9 RID: 201193 RVA: 0x006A8B4C File Offset: 0x006A6D4C
 		public EExecClientBattleActionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C65C RID: 50780
-		// (get) Token: 0x0602E904 RID: 190724 RVA: 0x0065A31C File Offset: 0x0065851C
+		// Token: 0x1700D030 RID: 53296
+		// (get) Token: 0x060311EA RID: 201194 RVA: 0x006A8B88 File Offset: 0x006A6D88
 		public int SkillId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E905 RID: 190725 RVA: 0x0065A358 File Offset: 0x00658558
+		// Token: 0x060311EB RID: 201195 RVA: 0x006A8BC4 File Offset: 0x006A6DC4
 		public static Offset<IFollowShooterSkillSkill> CreateIFollowShooterSkillSkill(FlatBufferBuilder builder, EExecClientBattleActionType Type = EExecClientBattleActionType.SendTagEventToControlCharacter, int SkillId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFollowShooterSkillSkill.EndIFollowShooterSkillSkill(builder);
 		}
 
-		// Token: 0x0602E906 RID: 190726 RVA: 0x0065A375 File Offset: 0x00658575
+		// Token: 0x060311EC RID: 201196 RVA: 0x006A8BE1 File Offset: 0x006A6DE1
 		public static void StartIFollowShooterSkillSkill(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602E907 RID: 190727 RVA: 0x0065A37E File Offset: 0x0065857E
+		// Token: 0x060311ED RID: 201197 RVA: 0x006A8BEA File Offset: 0x006A6DEA
 		public static void AddType(FlatBufferBuilder builder, EExecClientBattleActionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E908 RID: 190728 RVA: 0x0065A389 File Offset: 0x00658589
+		// Token: 0x060311EE RID: 201198 RVA: 0x006A8BF5 File Offset: 0x006A6DF5
 		public static void AddSkillId(FlatBufferBuilder builder, int skillId)
 		{
 			builder.AddInt(1, skillId, 0);
 		}
 
-		// Token: 0x0602E909 RID: 190729 RVA: 0x0065A394 File Offset: 0x00658594
+		// Token: 0x060311EF RID: 201199 RVA: 0x006A8C00 File Offset: 0x006A6E00
 		public static Offset<IFollowShooterSkillSkill> EndIFollowShooterSkillSkill(FlatBufferBuilder builder)
 		{
 			return new Offset<IFollowShooterSkillSkill>(builder.EndTable());
 		}
 
-		// Token: 0x0602E90A RID: 190730 RVA: 0x0065A3A4 File Offset: 0x006585A4
+		// Token: 0x060311F0 RID: 201200 RVA: 0x006A8C10 File Offset: 0x006A6E10
 		public IFollowShooterSkillSkillT UnPack()
 		{
 			IFollowShooterSkillSkillT followShooterSkillSkillT = new IFollowShooterSkillSkillT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return followShooterSkillSkillT;
 		}
 
-		// Token: 0x0602E90B RID: 190731 RVA: 0x0065A3BF File Offset: 0x006585BF
+		// Token: 0x060311F1 RID: 201201 RVA: 0x006A8C2B File Offset: 0x006A6E2B
 		public void UnPackTo(IFollowShooterSkillSkillT _o)
 		{
 			_o.Type = this.Type;
 			_o.SkillId = this.SkillId;
 		}
 
-		// Token: 0x0602E90C RID: 190732 RVA: 0x0065A3DC File Offset: 0x006585DC
+		// Token: 0x060311F2 RID: 201202 RVA: 0x006A8C48 File Offset: 0x006A6E48
 		public static Offset<IFollowShooterSkillSkill> Pack(FlatBufferBuilder builder, IFollowShooterSkillSkillT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFollowShooterSkillSkill.CreateIFollowShooterSkillSkill(builder, _o.Type, _o.SkillId);
 		}
 
-		// Token: 0x04010F9D RID: 69533
+		// Token: 0x04011DE7 RID: 73191
 		private Table __p;
 	}
 }

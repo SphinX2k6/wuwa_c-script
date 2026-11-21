@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002AD6 RID: 10966
+// Token: 0x02002052 RID: 8274
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 {
-	// Token: 0x06016D1C RID: 93468 RVA: 0x005CB508 File Offset: 0x005C9708
+	// Token: 0x0601474D RID: 83789 RVA: 0x005F805C File Offset: 0x005F625C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		};
 	}
 
-	// Token: 0x06016D1D RID: 93469 RVA: 0x005CB620 File Offset: 0x005C9820
+	// Token: 0x0601474E RID: 83790 RVA: 0x005F8174 File Offset: 0x005F6374
 	private void OnClickBtnPurchase()
 	{
 		if (this.HasImportantNode())
@@ -64,7 +64,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		onPurchaseBtnClickCallback(this.Data);
 	}
 
-	// Token: 0x06016D1E RID: 93470 RVA: 0x005CB660 File Offset: 0x005C9860
+	// Token: 0x0601474F RID: 83791 RVA: 0x005F81B4 File Offset: 0x005F63B4
 	private void OnClickLock(ISurvivorsRogueCardBase data, bool bLock)
 	{
 		Action<GoodsDetail, bool> onClickLockCallback = this.OnClickLockCallback;
@@ -75,7 +75,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		onClickLockCallback(this.Data, bLock);
 	}
 
-	// Token: 0x06016D1F RID: 93471 RVA: 0x005CB679 File Offset: 0x005C9879
+	// Token: 0x06014750 RID: 83792 RVA: 0x005F81CD File Offset: 0x005F63CD
 	private void OnStateChange(ISurvivorsRogueCardBase data, EToggleState state)
 	{
 		Action<GoodsDetail, bool> onStateChangeCallback = this.OnStateChangeCallback;
@@ -86,7 +86,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		onStateChangeCallback(this.Data, state == EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x06016D20 RID: 93472 RVA: 0x005CB695 File Offset: 0x005C9895
+	// Token: 0x06014751 RID: 83793 RVA: 0x005F81E9 File Offset: 0x005F63E9
 	private void OnHover(ISurvivorsRogueCardBase data, EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -96,7 +96,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		this.RefreshSelected(true, true);
 	}
 
-	// Token: 0x06016D21 RID: 93473 RVA: 0x005CB6A4 File Offset: 0x005C98A4
+	// Token: 0x06014752 RID: 83794 RVA: 0x005F81F8 File Offset: 0x005F63F8
 	private void OnUnHover(ISurvivorsRogueCardBase data, EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -106,7 +106,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		this.RefreshSelected(false, true);
 	}
 
-	// Token: 0x06016D22 RID: 93474 RVA: 0x005CB6B4 File Offset: 0x005C98B4
+	// Token: 0x06014753 RID: 83795 RVA: 0x005F8208 File Offset: 0x005F6408
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRogueCardShopItem.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -117,26 +117,26 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016D23 RID: 93475 RVA: 0x005CB6F7 File Offset: 0x005C98F7
+	// Token: 0x06014754 RID: 83796 RVA: 0x005F824B File Offset: 0x005F644B
 	protected override void OnBeforeShow()
 	{
 		SurvivorsRogueModel.Instance.BattleData.BehaviorDelegate.AddTreeVarUpdateDelegate(ESurvivorsRougeSystemVarType.Gold.ToEnumString(), new TTreeVarUpdateDelegate(this.RefreshPrice));
 	}
 
-	// Token: 0x06016D24 RID: 93476 RVA: 0x005CB71F File Offset: 0x005C991F
+	// Token: 0x06014755 RID: 83797 RVA: 0x005F8273 File Offset: 0x005F6473
 	protected override void OnBeforeDestroy()
 	{
 		SurvivorsRogueModel.Instance.BattleData.BehaviorDelegate.RemoveTreeVarUpdateDelegate(ESurvivorsRougeSystemVarType.Gold.ToEnumString(), new TTreeVarUpdateDelegate(this.RefreshPrice));
 		this.RootActor.OnSequencePlayEvent.Unbind();
 	}
 
-	// Token: 0x06016D25 RID: 93477 RVA: 0x005CB757 File Offset: 0x005C9957
+	// Token: 0x06014756 RID: 83798 RVA: 0x005F82AB File Offset: 0x005F64AB
 	private SurvivorsRogueLvNode CreateLvNode()
 	{
 		return new SurvivorsRogueLvNode();
 	}
 
-	// Token: 0x06016D26 RID: 93478 RVA: 0x005CB760 File Offset: 0x005C9960
+	// Token: 0x06014757 RID: 83799 RVA: 0x005F82B4 File Offset: 0x005F64B4
 	public override UniTask RefreshAsync(GoodsDetail data, bool isSelected, int gridIndex)
 	{
 		SurvivorsRogueCardShopItem.<RefreshAsync>d__23 <RefreshAsync>d__;
@@ -150,7 +150,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016D27 RID: 93479 RVA: 0x005CB7BC File Offset: 0x005C99BC
+	// Token: 0x06014758 RID: 83800 RVA: 0x005F8310 File Offset: 0x005F6510
 	private void OnEventSequence(string sequenceName, string eventName)
 	{
 		if (sequenceName == "None" && eventName == "PlayStart")
@@ -172,7 +172,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		}
 	}
 
-	// Token: 0x06016D28 RID: 93480 RVA: 0x005CB81C File Offset: 0x005C9A1C
+	// Token: 0x06014759 RID: 83801 RVA: 0x005F8370 File Offset: 0x005F6570
 	private List<ISurvivorsLvNodeData> GetLvNodeDataList(int maxLevel, List<int> importantNodeLevel, int curLevel, int upLevel)
 	{
 		this.HighlightNodeLvList.Clear();
@@ -204,13 +204,13 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		return list;
 	}
 
-	// Token: 0x06016D29 RID: 93481 RVA: 0x005CB89C File Offset: 0x005C9A9C
+	// Token: 0x0601475A RID: 83802 RVA: 0x005F83F0 File Offset: 0x005F65F0
 	private void RefreshPrice(VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		this.RefreshPrice();
 	}
 
-	// Token: 0x06016D2A RID: 93482 RVA: 0x005CB8A4 File Offset: 0x005C9AA4
+	// Token: 0x0601475B RID: 83803 RVA: 0x005F83F8 File Offset: 0x005F65F8
 	private void RefreshPrice()
 	{
 		if (this.Data == null)
@@ -226,7 +226,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		base.GetButton(1).SetSelfInteractive(selfInteractive);
 	}
 
-	// Token: 0x06016D2B RID: 93483 RVA: 0x005CB918 File Offset: 0x005C9B18
+	// Token: 0x0601475C RID: 83804 RVA: 0x005F846C File Offset: 0x005F666C
 	public void RefreshPurchased(bool isPurchased)
 	{
 		base.GetItem(6).SetUIActive(isPurchased);
@@ -236,7 +236,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		base.GetItem(8).SetUIActive(!isPurchased && this.NeedLvInfo);
 	}
 
-	// Token: 0x06016D2C RID: 93484 RVA: 0x005CB98C File Offset: 0x005C9B8C
+	// Token: 0x0601475D RID: 83805 RVA: 0x005F84E0 File Offset: 0x005F66E0
 	private void RefreshSelected(bool bSelected, bool preSelect = false)
 	{
 		if (!preSelect)
@@ -275,7 +275,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		this.SetAnimOn(bSelected);
 	}
 
-	// Token: 0x06016D2D RID: 93485 RVA: 0x005CBAD4 File Offset: 0x005C9CD4
+	// Token: 0x0601475E RID: 83806 RVA: 0x005F8628 File Offset: 0x005F6828
 	private void SetAnimOn(bool bOn)
 	{
 		if (bOn == this.AnimState)
@@ -288,7 +288,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		this.ArrowSequencePlayer.PlayLevelSequenceByName(bOn ? "Start" : "Close", false, null, false);
 	}
 
-	// Token: 0x06016D2E RID: 93486 RVA: 0x005CBB34 File Offset: 0x005C9D34
+	// Token: 0x0601475F RID: 83807 RVA: 0x005F8688 File Offset: 0x005F6888
 	public bool HasImportantNode()
 	{
 		foreach (int num in this.HighlightNodeLvList)
@@ -302,7 +302,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		return false;
 	}
 
-	// Token: 0x06016D2F RID: 93487 RVA: 0x005CBBAC File Offset: 0x005C9DAC
+	// Token: 0x06014760 RID: 83808 RVA: 0x005F8700 File Offset: 0x005F6900
 	private UniTask PlayImportantNodeAnim()
 	{
 		SurvivorsRogueCardShopItem.<PlayImportantNodeAnim>d__32 <PlayImportantNodeAnim>d__;
@@ -313,25 +313,25 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		return <PlayImportantNodeAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016D30 RID: 93488 RVA: 0x005CBBEF File Offset: 0x005C9DEF
+	// Token: 0x06014761 RID: 83809 RVA: 0x005F8743 File Offset: 0x005F6943
 	public override void OnSelected(bool fireEvent)
 	{
 		this.RefreshSelected(true, false);
 	}
 
-	// Token: 0x06016D31 RID: 93489 RVA: 0x005CBBF9 File Offset: 0x005C9DF9
+	// Token: 0x06014762 RID: 83810 RVA: 0x005F874D File Offset: 0x005F694D
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.RefreshSelected(false, false);
 	}
 
-	// Token: 0x06016D32 RID: 93490 RVA: 0x005CBC03 File Offset: 0x005C9E03
+	// Token: 0x06014763 RID: 83811 RVA: 0x005F8757 File Offset: 0x005F6957
 	public override object GetKey(GoodsDetail data, int displayIndex)
 	{
 		return data.SurvivorsGainData.IncId;
 	}
 
-	// Token: 0x06016D33 RID: 93491 RVA: 0x005CBC18 File Offset: 0x005C9E18
+	// Token: 0x06014764 RID: 83812 RVA: 0x005F876C File Offset: 0x005F696C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -360,31 +360,31 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 		};
 	}
 
-	// Token: 0x0400A98B RID: 43403
+	// Token: 0x0400AD91 RID: 44433
 	private const string SEQ_LIGHT = "Start";
 
-	// Token: 0x0400A98C RID: 43404
+	// Token: 0x0400AD92 RID: 44434
 	private const string SEQ_CLOSE = "Close";
 
-	// Token: 0x0400A98D RID: 43405
+	// Token: 0x0400AD93 RID: 44435
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400A98E RID: 43406
+	// Token: 0x0400AD94 RID: 44436
 	[Nullable(2)]
 	private LevelSequencePlayer ArrowSequencePlayer;
 
-	// Token: 0x0400A98F RID: 43407
+	// Token: 0x0400AD95 RID: 44437
 	[Nullable(2)]
 	public SurvivorsRogueCardBase CardItem;
 
-	// Token: 0x0400A990 RID: 43408
+	// Token: 0x0400AD96 RID: 44438
 	private GoodsDetail Data;
 
-	// Token: 0x0400A991 RID: 43409
+	// Token: 0x0400AD97 RID: 44439
 	private bool NeedLvInfo;
 
-	// Token: 0x0400A992 RID: 43410
+	// Token: 0x0400AD98 RID: 44440
 	[Nullable(new byte[]
 	{
 		2,
@@ -393,10 +393,10 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 	})]
 	private GenericLayout<SurvivorsRogueLvNode, ISurvivorsLvNodeData> LvNodeLayout;
 
-	// Token: 0x0400A993 RID: 43411
+	// Token: 0x0400AD99 RID: 44441
 	private readonly List<int> HighlightNodeLvList = new List<int>();
 
-	// Token: 0x0400A994 RID: 43412
+	// Token: 0x0400AD9A RID: 44442
 	[Nullable(new byte[]
 	{
 		2,
@@ -404,7 +404,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 	})]
 	public Action<GoodsDetail> OnPurchaseBtnClickCallback;
 
-	// Token: 0x0400A995 RID: 43413
+	// Token: 0x0400AD9B RID: 44443
 	[Nullable(new byte[]
 	{
 		2,
@@ -412,7 +412,7 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 	})]
 	public Action<GoodsDetail, bool> OnClickLockCallback;
 
-	// Token: 0x0400A996 RID: 43414
+	// Token: 0x0400AD9C RID: 44444
 	[Nullable(new byte[]
 	{
 		2,
@@ -420,6 +420,6 @@ public class SurvivorsRogueCardShopItem : GridProxyAbstract<GoodsDetail>
 	})]
 	public Action<GoodsDetail, bool> OnStateChangeCallback;
 
-	// Token: 0x0400A997 RID: 43415
+	// Token: 0x0400AD9D RID: 44445
 	private bool AnimState;
 }

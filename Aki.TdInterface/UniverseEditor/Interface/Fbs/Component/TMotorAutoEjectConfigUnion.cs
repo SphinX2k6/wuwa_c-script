@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C67 RID: 23655
+	// Token: 0x0200628F RID: 25231
 	public class TMotorAutoEjectConfigUnion
 	{
-		// Token: 0x1700B222 RID: 45602
-		// (get) Token: 0x06028895 RID: 166037 RVA: 0x00593206 File Offset: 0x00591406
-		// (set) Token: 0x06028896 RID: 166038 RVA: 0x0059320E File Offset: 0x0059140E
+		// Token: 0x1700BB76 RID: 47990
+		// (get) Token: 0x0602AEB1 RID: 175793 RVA: 0x005DB56A File Offset: 0x005D976A
+		// (set) Token: 0x0602AEB2 RID: 175794 RVA: 0x005DB572 File Offset: 0x005D9772
 		public TMotorAutoEjectConfig Type { get; set; }
 
-		// Token: 0x1700B223 RID: 45603
-		// (get) Token: 0x06028897 RID: 166039 RVA: 0x00593217 File Offset: 0x00591417
-		// (set) Token: 0x06028898 RID: 166040 RVA: 0x0059321F File Offset: 0x0059141F
+		// Token: 0x1700BB77 RID: 47991
+		// (get) Token: 0x0602AEB3 RID: 175795 RVA: 0x005DB57B File Offset: 0x005D977B
+		// (set) Token: 0x0602AEB4 RID: 175796 RVA: 0x005DB583 File Offset: 0x005D9783
 		public object Value { get; set; }
 
-		// Token: 0x06028899 RID: 166041 RVA: 0x00593228 File Offset: 0x00591428
+		// Token: 0x0602AEB5 RID: 175797 RVA: 0x005DB58C File Offset: 0x005D978C
 		public TMotorAutoEjectConfigUnion()
 		{
 			this.Type = TMotorAutoEjectConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602889A RID: 166042 RVA: 0x0059323E File Offset: 0x0059143E
+		// Token: 0x0602AEB6 RID: 175798 RVA: 0x005DB5A2 File Offset: 0x005D97A2
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602889B RID: 166043 RVA: 0x00593250 File Offset: 0x00591450
+		// Token: 0x0602AEB7 RID: 175799 RVA: 0x005DB5B4 File Offset: 0x005D97B4
 		public IMotorAutoEjectNextHookConfigT AsIMotorAutoEjectNextHookConfig()
 		{
 			return this.As<IMotorAutoEjectNextHookConfigT>();
 		}
 
-		// Token: 0x0602889C RID: 166044 RVA: 0x00593258 File Offset: 0x00591458
+		// Token: 0x0602AEB8 RID: 175800 RVA: 0x005DB5BC File Offset: 0x005D97BC
 		public static TMotorAutoEjectConfigUnion FromIMotorAutoEjectNextHookConfig(IMotorAutoEjectNextHookConfigT _imotorautoejectnexthookconfig)
 		{
 			return new TMotorAutoEjectConfigUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602889D RID: 166045 RVA: 0x0059326D File Offset: 0x0059146D
+		// Token: 0x0602AEB9 RID: 175801 RVA: 0x005DB5D1 File Offset: 0x005D97D1
 		public IMotorAutoEjectPositionEntityConfigT AsIMotorAutoEjectPositionEntityConfig()
 		{
 			return this.As<IMotorAutoEjectPositionEntityConfigT>();
 		}
 
-		// Token: 0x0602889E RID: 166046 RVA: 0x00593275 File Offset: 0x00591475
+		// Token: 0x0602AEBA RID: 175802 RVA: 0x005DB5D9 File Offset: 0x005D97D9
 		public static TMotorAutoEjectConfigUnion FromIMotorAutoEjectPositionEntityConfig(IMotorAutoEjectPositionEntityConfigT _imotorautoejectpositionentityconfig)
 		{
 			return new TMotorAutoEjectConfigUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602889F RID: 166047 RVA: 0x0059328C File Offset: 0x0059148C
+		// Token: 0x0602AEBB RID: 175803 RVA: 0x005DB5F0 File Offset: 0x005D97F0
 		public static int Pack(FlatBufferBuilder builder, TMotorAutoEjectConfigUnion _o)
 		{
 			TMotorAutoEjectConfig type = _o.Type;

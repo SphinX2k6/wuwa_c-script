@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200188C RID: 6284
+	// Token: 0x020003B0 RID: 944
 	public sealed class FAIAsyncPerceptionCallback : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601727D RID: 94845 RVA: 0x0021BF06 File Offset: 0x0021A106
+		// Token: 0x06005D28 RID: 23848 RVA: 0x000833A6 File Offset: 0x000815A6
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FAIAsyncPerceptionCallback.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601727E RID: 94846 RVA: 0x0021BF12 File Offset: 0x0021A112
+		// Token: 0x06005D29 RID: 23849 RVA: 0x000833B2 File Offset: 0x000815B2
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FAIAsyncPerceptionCallback._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FAIAsyncPerceptionCallback._FunctionPtr;
 		}
 
-		// Token: 0x0601727F RID: 94847 RVA: 0x0021BF35 File Offset: 0x0021A135
+		// Token: 0x06005D2A RID: 23850 RVA: 0x000833D5 File Offset: 0x000815D5
 		public FAIAsyncPerceptionCallback()
 		{
 		}
 
-		// Token: 0x06017280 RID: 94848 RVA: 0x0021BF3D File Offset: 0x0021A13D
+		// Token: 0x06005D2B RID: 23851 RVA: 0x000833DD File Offset: 0x000815DD
 		[NullableContext(2)]
 		public FAIAsyncPerceptionCallback(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017281 RID: 94849 RVA: 0x0021BF47 File Offset: 0x0021A147
+		// Token: 0x06005D2C RID: 23852 RVA: 0x000833E7 File Offset: 0x000815E7
 		public FAIAsyncPerceptionCallback(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017282 RID: 94850 RVA: 0x0021BF52 File Offset: 0x0021A152
+		// Token: 0x06005D2D RID: 23853 RVA: 0x000833F2 File Offset: 0x000815F2
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06017283 RID: 94851 RVA: 0x0021BF84 File Offset: 0x0021A184
+		// Token: 0x06005D2E RID: 23854 RVA: 0x00083424 File Offset: 0x00081624
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FAIAsyncPerceptionCallback.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FAIAsyncPerceptionCallback.RegisterId);
 		}
 
-		// Token: 0x06017284 RID: 94852 RVA: 0x0021BFBE File Offset: 0x0021A1BE
+		// Token: 0x06005D2F RID: 23855 RVA: 0x0008345E File Offset: 0x0008165E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x06017285 RID: 94853 RVA: 0x0021BFCC File Offset: 0x0021A1CC
+		// Token: 0x06005D30 RID: 23856 RVA: 0x0008346C File Offset: 0x0008166C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x0400C8EC RID: 51436
+		// Token: 0x040026D5 RID: 9941
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400C8ED RID: 51437
+		// Token: 0x040026D6 RID: 9942
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.AIAsyncPerceptionCallback__DelegateSignature";
 
-		// Token: 0x0400C8EE RID: 51438
+		// Token: 0x040026D7 RID: 9943
 		private static int RegisterId;
 
-		// Token: 0x02002F89 RID: 12169
+		// Token: 0x02000AAC RID: 2732
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B4C RID: 93004
+			// Token: 0x04005B09 RID: 23305
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

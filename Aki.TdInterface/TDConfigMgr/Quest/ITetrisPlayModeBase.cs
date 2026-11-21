@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001192 RID: 4498
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012CC RID: 4812
 	public class ITetrisPlayModeBase
 	{
-		// Token: 0x06006626 RID: 26150 RVA: 0x000F4F4C File Offset: 0x000F314C
+		// Token: 0x06006C5D RID: 27741 RVA: 0x00102718 File Offset: 0x00100918
 		private ITetrisPlayModeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006627 RID: 26151 RVA: 0x000F4F84 File Offset: 0x000F3184
+		// Token: 0x06006C5E RID: 27742 RVA: 0x00102750 File Offset: 0x00100950
 		public static ITetrisPlayModeBase Create([Nullable(2)] ITetrisPlayModeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006628 RID: 26152 RVA: 0x000F4F97 File Offset: 0x000F3197
+		// Token: 0x06006C5F RID: 27743 RVA: 0x00102763 File Offset: 0x00100963
 		public static ITetrisPlayModeBase CreateFromSetValue([Nullable(2)] ITetrisPlayModeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006629 RID: 26153 RVA: 0x000F4FAA File Offset: 0x000F31AA
+		// Token: 0x06006C60 RID: 27744 RVA: 0x00102776 File Offset: 0x00100976
 		public ITetrisPlayModeBase_SetValue ToSetValue()
 		{
 			return new ITetrisPlayModeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700213D RID: 8509
-		// (get) Token: 0x0600662A RID: 26154 RVA: 0x000F4FBD File Offset: 0x000F31BD
-		// (set) Token: 0x0600662B RID: 26155 RVA: 0x000F4FE8 File Offset: 0x000F31E8
+		// Token: 0x170022FC RID: 8956
+		// (get) Token: 0x06006C61 RID: 27745 RVA: 0x00102789 File Offset: 0x00100989
+		// (set) Token: 0x06006C62 RID: 27746 RVA: 0x001027B4 File Offset: 0x001009B4
 		public virtual ETetrisPlayMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003D52 RID: 15698
+		// Token: 0x040040BA RID: 16570
 		[Nullable(2)]
 		protected ITetrisPlayModeBase FbInstance;
 
-		// Token: 0x04003D53 RID: 15699
+		// Token: 0x040040BB RID: 16571
 		[Nullable(2)]
 		protected ITetrisPlayModeBase_SetValue PocoInterface;
 	}

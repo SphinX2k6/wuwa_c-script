@@ -11,18 +11,19 @@ using AkiClient.Game.Aki.Render.RuntimeBP.Effect;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Audio;
+using CSharpScript.Game.Render;
 using CSharpScript.Game.World.Define;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.Effect
 {
-	// Token: 0x02007274 RID: 29300
+	// Token: 0x020063F3 RID: 25587
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KuroEffectSystem
 	{
-		// Token: 0x06047CCB RID: 294091 RVA: 0x0125DDC4 File Offset: 0x0125BFC4
+		// Token: 0x0603E088 RID: 254088 RVA: 0x011FE764 File Offset: 0x011FC964
 		public bool Initialize()
 		{
 			if (Info.Instance.IsGameRunning())
@@ -76,10 +77,11 @@ namespace CSharpScript.Game.Effect
 			}
 			instance5.Add<bool>(name5, handle5);
 			EventSystem.Instance.Add(EEventName.OnUpdateSceneTeam, new Action(this.OnFormationLoaded));
+			this.UltraSkillStateWatcher.Init();
 			return true;
 		}
 
-		// Token: 0x06047CCC RID: 294092 RVA: 0x0125DEF8 File Offset: 0x0125C0F8
+		// Token: 0x0603E089 RID: 254089 RVA: 0x011FE8A4 File Offset: 0x011FCAA4
 		private bool InitFEffectSystem(bool withEditor = false, bool refresh = false)
 		{
 			UKuroResourceSystemFunctionLibrary.Initialize(GlobalData.World, 1f);
@@ -101,7 +103,7 @@ namespace CSharpScript.Game.Effect
 			{
 				return false;
 			}
-			UKuroEffectSystemFunctionLibrary.InitStaticGlobalData(EffectEnvironment.Instance.UseLog, Info.Instance.IsInEditorTick(), PublicUtil.Instance.UseDbConfig());
+			UKuroEffectSystemFunctionLibrary.InitStaticGlobalData(EffectEnvironment.Instance.UseLog, Info.Instance.IsInEditorTick(), true);
 			FSkeletalMeshSpecOnBodyEffectChangeRetVal fskeletalMeshSpecOnBodyEffectChangeRetVal = new FSkeletalMeshSpecOnBodyEffectChangeRetVal();
 			FSkeletalMeshSpecOnBodyEffectChangeRetVal fskeletalMeshSpecOnBodyEffectChangeRetVal2 = fskeletalMeshSpecOnBodyEffectChangeRetVal;
 			Func<float, UActorComponent, USkeletalMeshComponent, AActor, UActorComponent> callback;
@@ -346,7 +348,7 @@ namespace CSharpScript.Game.Effect
 			return true;
 		}
 
-		// Token: 0x06047CCD RID: 294093 RVA: 0x0125E4C8 File Offset: 0x0125C6C8
+		// Token: 0x0603E08A RID: 254090 RVA: 0x011FEE6C File Offset: 0x011FD06C
 		public bool Clear()
 		{
 			this.HasInitialize = false;
@@ -391,6 +393,7 @@ namespace CSharpScript.Game.Effect
 				handle5 = (KuroEffectSystem.<>O.<0>__OnTimeScaleChange = new Action(KuroEffectSystem.OnTimeScaleChange));
 			}
 			instance5.Remove(name5, handle5);
+			this.UltraSkillStateWatcher.Clear();
 			this.PreviewInitState = false;
 			EffectEnvironment.Instance.GameTimeInSeconds = 0.0;
 			foreach (KuroEffectHandle kuroEffectHandle in this.EffectHandleMap.Values)
@@ -407,26 +410,26 @@ namespace CSharpScript.Game.Effect
 			return true;
 		}
 
-		// Token: 0x06047CCE RID: 294094 RVA: 0x0125E658 File Offset: 0x0125C858
+		// Token: 0x0603E08B RID: 254091 RVA: 0x011FF008 File Offset: 0x011FD208
 		public bool ClearPool()
 		{
 			UKuroEffectSystemFunctionLibrary.ClearPool(false);
 			return true;
 		}
 
-		// Token: 0x06047CCF RID: 294095 RVA: 0x0125E661 File Offset: 0x0125C861
+		// Token: 0x0603E08C RID: 254092 RVA: 0x011FF011 File Offset: 0x011FD211
 		private static void OnGlobalUiSceneStateChanged(EKuroUI3DState state)
 		{
 			UKuroEffectSystemFunctionLibrary.OnUiSceneStateChange(state);
 		}
 
-		// Token: 0x06047CD0 RID: 294096 RVA: 0x0125E669 File Offset: 0x0125C869
+		// Token: 0x0603E08D RID: 254093 RVA: 0x011FF019 File Offset: 0x011FD219
 		private static void OnSetGamePaused(bool paused)
 		{
 			UKuroEffectSystemFunctionLibrary.OnTickSystemPausedChange(paused);
 		}
 
-		// Token: 0x06047CD1 RID: 294097 RVA: 0x0125E674 File Offset: 0x0125C874
+		// Token: 0x0603E08E RID: 254094 RVA: 0x011FF024 File Offset: 0x011FD224
 		private void OnFormationLoaded()
 		{
 			if (this.SceneTeamItems.Num() == 0)
@@ -457,7 +460,7 @@ namespace CSharpScript.Game.Effect
 			UKuroEffectSystemFunctionLibrary.OnPlayerEffectContainerFormationLoaded(this.SceneTeamItems);
 		}
 
-		// Token: 0x06047CD2 RID: 294098 RVA: 0x0125E720 File Offset: 0x0125C920
+		// Token: 0x0603E08F RID: 254095 RVA: 0x011FF0D0 File Offset: 0x011FD2D0
 		public bool InitializeWithPreview(bool refresh)
 		{
 			if (Info.Instance.IsGameRunning())
@@ -486,13 +489,9 @@ namespace CSharpScript.Game.Effect
 			return this.InitFEffectSystem(true, true);
 		}
 
-		// Token: 0x06047CD3 RID: 294099 RVA: 0x0125E7B8 File Offset: 0x0125C9B8
+		// Token: 0x0603E090 RID: 254096 RVA: 0x011FF168 File Offset: 0x011FD368
 		private void CreateEffectSpecMappingWithDb()
 		{
-			if (!PublicUtil.Instance.UseDbConfig())
-			{
-				return;
-			}
 			this.EffectForSpecArray.Clear();
 			this.EffectForSpecDbCacheArray.Clear();
 			IReadOnlyList<EffectSpecData> configList = ConfigEffectSpecDataGetAll.GetConfigList(false);
@@ -505,62 +504,15 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047CD4 RID: 294100 RVA: 0x0125E834 File Offset: 0x0125CA34
-		private unsafe void CreateEffectSpecMappingWithJson(bool withEditor = false)
+		// Token: 0x0603E091 RID: 254097 RVA: 0x011FF1D8 File Offset: 0x011FD3D8
+		private void CreateEffectSpecMappingWithJson(bool withEditor = false)
 		{
-			if (!Info.Instance.IsPlayInEditor)
-			{
-				return;
-			}
-			if (!withEditor && PublicUtil.Instance.UseDbConfig())
-			{
-				return;
-			}
-			this.EffectForSpecArray.Clear();
-			this.EffectForSpecDbCacheArray.Clear();
-			string text = UKismetSystemLibrary.GetProjectDirectory() + "../Config/Client/EffectData/";
-			if (!UBlueprintPathsLibrary.DirectoryExists(text))
-			{
-				Log instance = Log.Instance;
-				ELogModule module = ELogModule.World;
-				ELogAuthor author = ELogAuthor.LFJW;
-				string message = "不存在EffectSpec配置文件目录";
-				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("Path", text);
-				instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-				return;
-			}
-			try
-			{
-				foreach (string text2 in UKuroStaticLibrary.LoadFilesRecursive(text, "*.json", true, false))
-				{
-					if (!string.IsNullOrEmpty(text2))
-					{
-						SpecData specData = Json.Decode<SpecData>(text2, null);
-						if (specData != null)
-						{
-							this.EffectForSpecArray.Add(specData);
-						}
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				Log instance2 = Log.Instance;
-				ELogModule module2 = ELogModule.RenderEffect;
-				ELogAuthor author2 = ELogAuthor.LFJW;
-				string message2 = "读取EffectSpec.json异常";
-				Exception error = ex;
-				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("Name", "KuroEffectSystem");
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("error", ex.Message);
-				instance2.ErrorWithStack(module2, author2, message2, error, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-			}
 		}
 
-		// Token: 0x06047CD5 RID: 294101 RVA: 0x0125E98C File Offset: 0x0125CB8C
+		// Token: 0x0603E092 RID: 254098 RVA: 0x011FF1E8 File Offset: 0x011FD3E8
 		private void UpdateFEffectSystemSpecConfig(TArray<FKuroEffectSpecData> specDataArray, TArray<FKuroEffectSpecChildData> specChildDataArray, bool withEditor = false)
 		{
-			if (withEditor || !PublicUtil.Instance.UseDbConfig())
+			if (withEditor)
 			{
 				foreach (SpecData specData in this.EffectForSpecArray)
 				{
@@ -608,7 +560,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047CD6 RID: 294102 RVA: 0x0125EB9C File Offset: 0x0125CD9C
+		// Token: 0x0603E093 RID: 254099 RVA: 0x011FF3EC File Offset: 0x011FD5EC
 		public void Tick(float delta)
 		{
 			this.CheckEffectOwnerInterval -= delta;
@@ -628,13 +580,13 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047CD7 RID: 294103 RVA: 0x0125EC5C File Offset: 0x0125CE5C
+		// Token: 0x0603E094 RID: 254100 RVA: 0x011FF4B4 File Offset: 0x011FD6B4
 		private static void OnTimeScaleChange()
 		{
 			UKuroEffectSystemFunctionLibrary.OnGlobalTimeScaleChange();
 		}
 
-		// Token: 0x06047CD8 RID: 294104 RVA: 0x0125EC64 File Offset: 0x0125CE64
+		// Token: 0x0603E095 RID: 254101 RVA: 0x011FF4BC File Offset: 0x011FD6BC
 		private static void OpenNiagaraDownSampling()
 		{
 			Log.Instance.Info(ELogModule.RenderEffect, ELogAuthor.WLJ, "Open Niagara Down Sampling", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -642,7 +594,7 @@ namespace CSharpScript.Game.Effect
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "Kuro.Niagara.SystemSimulation.SpawnAlignment 0", null);
 		}
 
-		// Token: 0x06047CD9 RID: 294105 RVA: 0x0125ECB0 File Offset: 0x0125CEB0
+		// Token: 0x0603E096 RID: 254102 RVA: 0x011FF508 File Offset: 0x011FD708
 		private static void CloseNiagaraDownSampling()
 		{
 			Log.Instance.Info(ELogModule.RenderEffect, ELogAuthor.WLJ, "Close Niagara Down Sampling", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -650,7 +602,7 @@ namespace CSharpScript.Game.Effect
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "Kuro.Niagara.SystemSimulation.SpawnAlignment 0", null);
 		}
 
-		// Token: 0x06047CDA RID: 294106 RVA: 0x0125ECFC File Offset: 0x0125CEFC
+		// Token: 0x0603E097 RID: 254103 RVA: 0x011FF554 File Offset: 0x011FD754
 		private static void OnSetNiagaraQuality()
 		{
 			int? currentValue = GameSettingsManager.Instance.GetCurrentValue(EFunction.NIAGARAQUALITY, true, true);
@@ -684,7 +636,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047CDB RID: 294107 RVA: 0x0125ED78 File Offset: 0x0125CF78
+		// Token: 0x0603E098 RID: 254104 RVA: 0x011FF5D0 File Offset: 0x011FD7D0
 		public int SpawnEffectWithActor(UObject worldContext, [Nullable(2)] AActor actor, string path, string reason, bool autoPlay = true, [Nullable(2)] EffectContext context = null, bool isExternalActor = true, EEffectType effectType = EEffectType.Scene)
 		{
 			FKuroEffectContext fkuroEffectContext = KuroEffectSystem.CreateFEffectContext(context);
@@ -711,7 +663,7 @@ namespace CSharpScript.Game.Effect
 			return num;
 		}
 
-		// Token: 0x06047CDC RID: 294108 RVA: 0x0125EE1C File Offset: 0x0125D01C
+		// Token: 0x0603E099 RID: 254105 RVA: 0x011FF674 File Offset: 0x011FD874
 		public void RemoveKuroEffectHandle(int effectId)
 		{
 			KuroEffectHandle kuroEffectHandle;
@@ -723,35 +675,35 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047CDD RID: 294109 RVA: 0x0125EE5A File Offset: 0x0125D05A
+		// Token: 0x0603E09A RID: 254106 RVA: 0x011FF6B2 File Offset: 0x011FD8B2
 		public int GetEffectLruCount(string path)
 		{
 			return UKuroEffectSystemFunctionLibrary.GetEffectLruCount(path);
 		}
 
-		// Token: 0x06047CDE RID: 294110 RVA: 0x0125EE62 File Offset: 0x0125D062
+		// Token: 0x0603E09B RID: 254107 RVA: 0x011FF6BA File Offset: 0x011FD8BA
 		public int GetEffectLruCapacity()
 		{
 			return UKuroEffectSystemFunctionLibrary.GetEffectLruCapacity();
 		}
 
-		// Token: 0x06047CDF RID: 294111 RVA: 0x0125EE69 File Offset: 0x0125D069
+		// Token: 0x0603E09C RID: 254108 RVA: 0x011FF6C1 File Offset: 0x011FD8C1
 		public void SetEffectLruCapacity(int capacity)
 		{
 			UKuroEffectSystemFunctionLibrary.SetEffectLruCapacity(capacity);
 		}
 
-		// Token: 0x06047CE0 RID: 294112 RVA: 0x0125EE71 File Offset: 0x0125D071
+		// Token: 0x0603E09D RID: 254109 RVA: 0x011FF6C9 File Offset: 0x011FD8C9
 		public int GetEffectLruSize()
 		{
 			return UKuroEffectSystemFunctionLibrary.GetEffectLruSize();
 		}
 
-		// Token: 0x06047CE1 RID: 294113 RVA: 0x0125EE78 File Offset: 0x0125D078
+		// Token: 0x0603E09E RID: 254110 RVA: 0x011FF6D0 File Offset: 0x011FD8D0
 		[NullableContext(2)]
 		public int SpawnUnloopedEffect(UObject worldContext, in FTransformDouble? transform, string path, [Nullable(1)] string reason, EffectContext context = null, EEffectType effectType = EEffectType.Scene, Action<int> beforeInitCallback = null, Action<ELoadEffectResult, int> callback = null, Action<int> beforePlayCallback = null, bool prepare = false, bool forceCreateActor = false)
 		{
-			if (!this.HasInitialize && !Info.Instance.IsPlayInEditor)
+			if (!this.HasInitialize)
 			{
 				return 0;
 			}
@@ -825,11 +777,11 @@ namespace CSharpScript.Game.Effect
 			return num2;
 		}
 
-		// Token: 0x06047CE2 RID: 294114 RVA: 0x0125F0BC File Offset: 0x0125D2BC
+		// Token: 0x0603E09F RID: 254111 RVA: 0x011FF908 File Offset: 0x011FDB08
 		[NullableContext(2)]
 		public int SpawnEffect(UObject worldContext, in FTransformDouble? transform, string path, [Nullable(1)] string reason, EffectContext context = null, EEffectType effectType = EEffectType.Scene, Action<int> beforeInitCallback = null, Action<ELoadEffectResult, int> callback = null, Action<int> beforePlayCallback = null, bool prepare = false, bool forceCreateActor = false)
 		{
-			if (!this.HasInitialize && !Info.Instance.IsPlayInEditor)
+			if (!this.HasInitialize)
 			{
 				return 0;
 			}
@@ -903,10 +855,10 @@ namespace CSharpScript.Game.Effect
 			return num2;
 		}
 
-		// Token: 0x06047CE3 RID: 294115 RVA: 0x0125F300 File Offset: 0x0125D500
+		// Token: 0x0603E0A0 RID: 254112 RVA: 0x011FFB40 File Offset: 0x011FDD40
 		public void DynamicRegisterSpawnCallback(int effectId, Action<ELoadEffectResult, int> callback)
 		{
-			if (!this.HasInitialize && !Info.Instance.IsPlayInEditor)
+			if (!this.HasInitialize)
 			{
 				return;
 			}
@@ -917,10 +869,10 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047CE4 RID: 294116 RVA: 0x0125F33C File Offset: 0x0125D53C
+		// Token: 0x0603E0A1 RID: 254113 RVA: 0x011FFB70 File Offset: 0x011FDD70
 		public void AddFinishCallback(int effectId, Action<int> callback)
 		{
-			if (!this.HasInitialize && !Info.Instance.IsPlayInEditor)
+			if (!this.HasInitialize)
 			{
 				return;
 			}
@@ -931,10 +883,10 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047CE5 RID: 294117 RVA: 0x0125F378 File Offset: 0x0125D578
+		// Token: 0x0603E0A2 RID: 254114 RVA: 0x011FFBA0 File Offset: 0x011FDDA0
 		public void RemoveFinishCallback(int effectId, Action<int> callback)
 		{
-			if (!this.HasInitialize && !Info.Instance.IsPlayInEditor)
+			if (!this.HasInitialize)
 			{
 				return;
 			}
@@ -945,32 +897,32 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047CE6 RID: 294118 RVA: 0x0125F3B2 File Offset: 0x0125D5B2
+		// Token: 0x0603E0A3 RID: 254115 RVA: 0x011FFBCE File Offset: 0x011FDDCE
 		public void ForceCheckPendingInit(int handle)
 		{
 			UKuroEffectSystemFunctionLibrary.ForceCheckPendingInit(handle);
 		}
 
-		// Token: 0x06047CE7 RID: 294119 RVA: 0x0125F3BA File Offset: 0x0125D5BA
+		// Token: 0x0603E0A4 RID: 254116 RVA: 0x011FFBD6 File Offset: 0x011FDDD6
 		[NullableContext(2)]
 		public void SetEffectHidden(int handle, bool bHidden, string reason = null, bool isLogic = false)
 		{
 			UKuroEffectSystemFunctionLibrary.SetEffectHidden(handle, bHidden, reason ?? string.Empty, isLogic);
 		}
 
-		// Token: 0x06047CE8 RID: 294120 RVA: 0x0125F3CF File Offset: 0x0125D5CF
+		// Token: 0x0603E0A5 RID: 254117 RVA: 0x011FFBEB File Offset: 0x011FDDEB
 		public bool StopEffectById(int handle, string reason, bool immediately, bool? destroyActor = null)
 		{
 			return UKuroEffectSystemFunctionLibrary.StopEffectById(handle, reason, immediately, destroyActor.GetValueOrDefault());
 		}
 
-		// Token: 0x06047CE9 RID: 294121 RVA: 0x0125F3E0 File Offset: 0x0125D5E0
+		// Token: 0x0603E0A6 RID: 254118 RVA: 0x011FFBFC File Offset: 0x011FDDFC
 		public bool IsValid(int id)
 		{
 			return UKuroEffectSystemFunctionLibrary.IsEffectValid(id);
 		}
 
-		// Token: 0x06047CEA RID: 294122 RVA: 0x0125F3E8 File Offset: 0x0125D5E8
+		// Token: 0x0603E0A7 RID: 254119 RVA: 0x011FFC04 File Offset: 0x011FDE04
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -1005,14 +957,14 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047CEB RID: 294123 RVA: 0x0125F457 File Offset: 0x0125D657
+		// Token: 0x0603E0A8 RID: 254120 RVA: 0x011FFC73 File Offset: 0x011FDE73
 		[NullableContext(2)]
 		public AActor GetSureEffectActor(int id)
 		{
 			return UKuroEffectSystemFunctionLibrary.GetSureEffectActor(id);
 		}
 
-		// Token: 0x06047CEC RID: 294124 RVA: 0x0125F460 File Offset: 0x0125D660
+		// Token: 0x0603E0A9 RID: 254121 RVA: 0x011FFC7C File Offset: 0x011FDE7C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -1044,87 +996,87 @@ namespace CSharpScript.Game.Effect
 			return result;
 		}
 
-		// Token: 0x06047CED RID: 294125 RVA: 0x0125F4D3 File Offset: 0x0125D6D3
+		// Token: 0x0603E0AA RID: 254122 RVA: 0x011FFCEF File Offset: 0x011FDEEF
 		[NullableContext(2)]
 		public UNiagaraComponent GetSureNiagaraComponent(int id)
 		{
 			return UKuroEffectSystemFunctionLibrary.GetSureNiagaraComponent(id);
 		}
 
-		// Token: 0x06047CEE RID: 294126 RVA: 0x0125F4DC File Offset: 0x0125D6DC
+		// Token: 0x0603E0AB RID: 254123 RVA: 0x011FFCF8 File Offset: 0x011FDEF8
 		public void ReplayEffect(int id, string reason, in FTransformDouble? transform)
 		{
 			FTransformDouble ftransformDouble = transform ?? new FTransformDouble();
 			UKuroEffectSystemFunctionLibrary.ReplayEffect(id, reason, ftransformDouble, transform != null);
 		}
 
-		// Token: 0x06047CEF RID: 294127 RVA: 0x0125F517 File Offset: 0x0125D717
+		// Token: 0x0603E0AC RID: 254124 RVA: 0x011FFD33 File Offset: 0x011FDF33
 		public bool IsPlaying(int id)
 		{
 			return UKuroEffectSystemFunctionLibrary.IsPlaying(id);
 		}
 
-		// Token: 0x06047CF0 RID: 294128 RVA: 0x0125F51F File Offset: 0x0125D71F
+		// Token: 0x0603E0AD RID: 254125 RVA: 0x011FFD3B File Offset: 0x011FDF3B
 		public void SetHandleLifeCycle(int id, float time)
 		{
 			UKuroEffectSystemFunctionLibrary.SetHandleLifeCycle(id, time);
 		}
 
-		// Token: 0x06047CF1 RID: 294129 RVA: 0x0125F528 File Offset: 0x0125D728
+		// Token: 0x0603E0AE RID: 254126 RVA: 0x011FFD44 File Offset: 0x011FDF44
 		public void SetTimeScale(int id, float timeScale, bool ignoreGlobalTimeScale = false)
 		{
 			UKuroEffectSystemFunctionLibrary.SetTimeScale(id, timeScale, ignoreGlobalTimeScale);
 		}
 
-		// Token: 0x06047CF2 RID: 294130 RVA: 0x0125F532 File Offset: 0x0125D732
+		// Token: 0x0603E0AF RID: 254127 RVA: 0x011FFD4E File Offset: 0x011FDF4E
 		public void SetAdditionTimeScale(int sourceType, int id, float timeScale)
 		{
 			UKuroEffectSystemFunctionLibrary.SetAdditionTimeScale(sourceType, id, timeScale);
 		}
 
-		// Token: 0x06047CF3 RID: 294131 RVA: 0x0125F53C File Offset: 0x0125D73C
+		// Token: 0x0603E0B0 RID: 254128 RVA: 0x011FFD58 File Offset: 0x011FDF58
 		public void SetAdditionTimeScaleEnable(int sourceType, bool enable)
 		{
 			UKuroEffectSystemFunctionLibrary.SetAdditionTimeScaleEnable(sourceType, enable);
 		}
 
-		// Token: 0x06047CF4 RID: 294132 RVA: 0x0125F545 File Offset: 0x0125D745
+		// Token: 0x0603E0B1 RID: 254129 RVA: 0x011FFD61 File Offset: 0x011FDF61
 		public bool GetAdditionTimeScaleEnable(int sourceType)
 		{
 			return UKuroEffectSystemFunctionLibrary.GetAdditionTimeScaleEnable(sourceType);
 		}
 
-		// Token: 0x06047CF5 RID: 294133 RVA: 0x0125F54D File Offset: 0x0125D74D
+		// Token: 0x0603E0B2 RID: 254130 RVA: 0x011FFD69 File Offset: 0x011FDF69
 		public void FreezeHandle(int id, bool freeze, bool force = false)
 		{
 			UKuroEffectSystemFunctionLibrary.FreezeHandle(id, freeze, force);
 		}
 
-		// Token: 0x06047CF6 RID: 294134 RVA: 0x0125F557 File Offset: 0x0125D757
+		// Token: 0x0603E0B3 RID: 254131 RVA: 0x011FFD73 File Offset: 0x011FDF73
 		public bool IsHandleFreeze(int id)
 		{
 			return UKuroEffectSystemFunctionLibrary.IsHandleFreeze(id);
 		}
 
-		// Token: 0x06047CF7 RID: 294135 RVA: 0x0125F55F File Offset: 0x0125D75F
+		// Token: 0x0603E0B4 RID: 254132 RVA: 0x011FFD7B File Offset: 0x011FDF7B
 		public bool HandleSeekToTime(int id, float time, bool autoLoop, bool force = false)
 		{
 			return UKuroEffectSystemFunctionLibrary.HandleSeekToTime(id, time, autoLoop, force);
 		}
 
-		// Token: 0x06047CF8 RID: 294136 RVA: 0x0125F56B File Offset: 0x0125D76B
+		// Token: 0x0603E0B5 RID: 254133 RVA: 0x011FFD87 File Offset: 0x011FDF87
 		public void HandleSeekToTimeWithProcess(int id, float time, bool seekContinue = false, float delta = -1f)
 		{
 			UKuroEffectSystemFunctionLibrary.HandleSeekToTimeWithProcess(id, time, seekContinue, delta);
 		}
 
-		// Token: 0x06047CF9 RID: 294137 RVA: 0x0125F577 File Offset: 0x0125D777
+		// Token: 0x0603E0B6 RID: 254134 RVA: 0x011FFD93 File Offset: 0x011FDF93
 		public float GetSeekToTargetTime(int id)
 		{
 			return UKuroEffectSystemFunctionLibrary.GetSeekToTargetTime(id);
 		}
 
-		// Token: 0x06047CFA RID: 294138 RVA: 0x0125F580 File Offset: 0x0125D780
+		// Token: 0x0603E0B7 RID: 254135 RVA: 0x011FFD9C File Offset: 0x011FDF9C
 		public void SetEffectNotRecord(int id, bool notRecord = true)
 		{
 			KuroEffectHandle kuroEffectHandle;
@@ -1134,13 +1086,13 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047CFB RID: 294139 RVA: 0x0125F5A4 File Offset: 0x0125D7A4
+		// Token: 0x0603E0B8 RID: 254136 RVA: 0x011FFDC0 File Offset: 0x011FDFC0
 		public string GetPath(int id)
 		{
 			return UKuroEffectSystemFunctionLibrary.GetPath(id);
 		}
 
-		// Token: 0x06047CFC RID: 294140 RVA: 0x0125F5AC File Offset: 0x0125D7AC
+		// Token: 0x0603E0B9 RID: 254137 RVA: 0x011FFDC8 File Offset: 0x011FDFC8
 		public void SetEffectDataByNiagaraParam(int id, SNiagaraParam niagaraParam, bool resetPassTime)
 		{
 			if (!this.IsValid(id))
@@ -1157,7 +1109,7 @@ namespace CSharpScript.Game.Effect
 			UKuroEffectSystemFunctionLibrary.SetThreeStageTime(id, niagaraParam.StartTime, niagaraParam.LoopTime, niagaraParam.EndTime, resetPassTime);
 		}
 
-		// Token: 0x06047CFD RID: 294141 RVA: 0x0125F610 File Offset: 0x0125D810
+		// Token: 0x0603E0BA RID: 254138 RVA: 0x011FFE2C File Offset: 0x011FE02C
 		[NullableContext(2)]
 		public void SetEffectParameterNiagara(int id, EffectParameterNiagara parameter)
 		{
@@ -1170,68 +1122,86 @@ namespace CSharpScript.Game.Effect
 			UKuroEffectSystemFunctionLibrary.SetEffectParameterNiagara(id, parameters);
 		}
 
-		// Token: 0x06047CFE RID: 294142 RVA: 0x0125F636 File Offset: 0x0125D836
+		// Token: 0x0603E0BB RID: 254139 RVA: 0x011FFE52 File Offset: 0x011FE052
 		public void SetEffectDataFloatConstParam(int id, in FName paramName, float value)
 		{
 			UKuroEffectSystemFunctionLibrary.SetEffectDataFloatConstParam(id, paramName, value);
 		}
 
-		// Token: 0x06047CFF RID: 294143 RVA: 0x0125F645 File Offset: 0x0125D845
+		// Token: 0x0603E0BC RID: 254140 RVA: 0x011FFE61 File Offset: 0x011FE061
 		public void SetEffectExtraState(int effectId, int extraState)
 		{
 			UKuroEffectSystemFunctionLibrary.SetEffectExtraState(effectId, extraState);
 		}
 
-		// Token: 0x06047D00 RID: 294144 RVA: 0x0125F64E File Offset: 0x0125D84E
+		// Token: 0x0603E0BD RID: 254141 RVA: 0x011FFE6A File Offset: 0x011FE06A
 		public void SetEffectIgnoreVisibilityOptimize(int effectId, bool ignore)
 		{
 			UKuroEffectSystemFunctionLibrary.SetEffectIgnoreVisibilityOptimize(effectId, ignore);
 		}
 
-		// Token: 0x06047D01 RID: 294145 RVA: 0x0125F657 File Offset: 0x0125D857
+		// Token: 0x0603E0BE RID: 254142 RVA: 0x011FFE73 File Offset: 0x011FE073
 		public void SetEffectStoppingTime(int effectId, bool stoppingTime, EEffectStoppingTimeSource source = EEffectStoppingTimeSource.ScenePaused)
 		{
 			UKuroEffectSystemFunctionLibrary.SetEffectStoppingTime(effectId, stoppingTime, (int)source);
 		}
 
-		// Token: 0x06047D02 RID: 294146 RVA: 0x0125F661 File Offset: 0x0125D861
+		// Token: 0x0603E0BF RID: 254143 RVA: 0x011FFE7D File Offset: 0x011FE07D
 		public void SetEffectStoppingTimeFromEntity(int entityId, bool stoppingTime, EEffectStoppingTimeSource source = EEffectStoppingTimeSource.ScenePaused)
 		{
 			UKuroEffectSystemFunctionLibrary.SetEffectStoppingTimeFromEntity(entityId, stoppingTime, (int)source);
 		}
 
-		// Token: 0x06047D03 RID: 294147 RVA: 0x0125F66B File Offset: 0x0125D86B
+		// Token: 0x0603E0C0 RID: 254144 RVA: 0x011FFE87 File Offset: 0x011FE087
+		public void SetEntityUltraSkillState(int entityId, bool inUltraSkill)
+		{
+			UKuroEffectSystemFunctionLibrary.SetEntityUltraSkillState(entityId, inUltraSkill);
+		}
+
+		// Token: 0x0603E0C1 RID: 254145 RVA: 0x011FFE90 File Offset: 0x011FE090
+		public bool IsEntityInUltraSkill(int entityId)
+		{
+			return UKuroEffectSystemFunctionLibrary.IsEntityInUltraSkill(entityId);
+		}
+
+		// Token: 0x0603E0C2 RID: 254146 RVA: 0x011FFE98 File Offset: 0x011FE098
+		public void ClearUltraSkillState()
+		{
+			UKuroEffectSystemFunctionLibrary.ClearUltraSkillState();
+		}
+
+		// Token: 0x0603E0C3 RID: 254147 RVA: 0x011FFE9F File Offset: 0x011FE09F
 		public float GlobalStoppingPlayTime(EEffectStoppingTimeSource source = EEffectStoppingTimeSource.ScenePaused)
 		{
 			return UKuroEffectSystemFunctionLibrary.GlobalStoppingPlayTime((int)source);
 		}
 
-		// Token: 0x06047D04 RID: 294148 RVA: 0x0125F673 File Offset: 0x0125D873
+		// Token: 0x0603E0C4 RID: 254148 RVA: 0x011FFEA7 File Offset: 0x011FE0A7
 		public bool GlobalStoppingTime(EEffectStoppingTimeSource source = EEffectStoppingTimeSource.ScenePaused)
 		{
 			return UKuroEffectSystemFunctionLibrary.GlobalStoppingTime((int)source);
 		}
 
-		// Token: 0x06047D05 RID: 294149 RVA: 0x0125F67B File Offset: 0x0125D87B
+		// Token: 0x0603E0C5 RID: 254149 RVA: 0x011FFEAF File Offset: 0x011FE0AF
 		public void SetGlobalStoppingTime(bool stoppingTime, float playTime, EEffectStoppingTimeSource source = EEffectStoppingTimeSource.ScenePaused)
 		{
 			UKuroEffectSystemFunctionLibrary.SetGlobalStoppingTime(stoppingTime, playTime, (int)source);
 		}
 
-		// Token: 0x06047D06 RID: 294150 RVA: 0x0125F688 File Offset: 0x0125D888
+		// Token: 0x0603E0C6 RID: 254150 RVA: 0x011FFEBC File Offset: 0x011FE0BC
 		public void AttachToEffectSkeletalMesh(int id, AActor attachActor, in FName? socketName, EAttachmentRule transformRule)
 		{
 			UKuroEffectSystemFunctionLibrary.AttachToEffectSkeletalMesh(id, attachActor, socketName ?? FName.NAME_None, transformRule);
 		}
 
-		// Token: 0x06047D07 RID: 294151 RVA: 0x0125F6BC File Offset: 0x0125D8BC
+		// Token: 0x0603E0C7 RID: 254151 RVA: 0x011FFEF0 File Offset: 0x011FE0F0
 		public void AttachSkeletalMesh(int id, SkeletalMeshEffectContext context)
 		{
 			FKuroSkeletalMeshEffectContext fkuroSkeletalMeshEffectContext = KuroEffectSystem.CreateFEffectContext(context) as FKuroSkeletalMeshEffectContext;
 			UKuroEffectSystemFunctionLibrary.AttachSkeletalMesh(id, fkuroSkeletalMeshEffectContext);
 		}
 
-		// Token: 0x06047D08 RID: 294152 RVA: 0x0125F6E0 File Offset: 0x0125D8E0
+		// Token: 0x0603E0C8 RID: 254152 RVA: 0x011FFF14 File Offset: 0x011FE114
 		private static FKuroEffectContext CreateFEffectContext([Nullable(2)] EffectContext context)
 		{
 			FKuroEffectContext fkuroEffectContext = null;
@@ -1267,51 +1237,51 @@ namespace CSharpScript.Game.Effect
 			return fkuroEffectContext;
 		}
 
-		// Token: 0x06047D09 RID: 294153 RVA: 0x0125F764 File Offset: 0x0125D964
+		// Token: 0x0603E0C9 RID: 254153 RVA: 0x011FFF98 File Offset: 0x011FE198
 		public void CollectMaterialFloatCurve(int id, in FName key, FKuroCurveFloat value)
 		{
 			UKuroEffectSystemFunctionLibrary.CollectMaterialFloatCurve(id, key, value);
 		}
 
-		// Token: 0x06047D0A RID: 294154 RVA: 0x0125F774 File Offset: 0x0125D974
+		// Token: 0x0603E0CA RID: 254154 RVA: 0x011FFFA8 File Offset: 0x011FE1A8
 		public void CollectMaterialVectorCurve(int id, in FName key, FKuroCurveVector value)
 		{
 			UKuroEffectSystemFunctionLibrary.CollectMaterialVectorCurve(id, key, value);
 		}
 
-		// Token: 0x06047D0B RID: 294155 RVA: 0x0125F784 File Offset: 0x0125D984
+		// Token: 0x0603E0CB RID: 254155 RVA: 0x011FFFB8 File Offset: 0x011FE1B8
 		public void CollectMaterialLinearColorCurve(int id, in FName key, FKuroCurveLinearColor value)
 		{
 			UKuroEffectSystemFunctionLibrary.CollectMaterialLinearColorCurve(id, key, value);
 		}
 
-		// Token: 0x06047D0C RID: 294156 RVA: 0x0125F794 File Offset: 0x0125D994
+		// Token: 0x0603E0CC RID: 254156 RVA: 0x011FFFC8 File Offset: 0x011FE1C8
 		[NullableContext(2)]
 		public UEffectModelBase GetEffectModel(int id)
 		{
 			return UKuroEffectSystemFunctionLibrary.GetEffectModel(id);
 		}
 
-		// Token: 0x06047D0D RID: 294157 RVA: 0x0125F79C File Offset: 0x0125D99C
+		// Token: 0x0603E0CD RID: 254157 RVA: 0x011FFFD0 File Offset: 0x011FE1D0
 		public float GetTotalPassTime(int id)
 		{
 			return UKuroEffectSystemFunctionLibrary.GetTotalPassTime(id);
 		}
 
-		// Token: 0x06047D0E RID: 294158 RVA: 0x0125F7A4 File Offset: 0x0125D9A4
+		// Token: 0x0603E0CE RID: 254158 RVA: 0x011FFFD8 File Offset: 0x011FE1D8
 		public float GetPassTime(int id)
 		{
 			return UKuroEffectSystemFunctionLibrary.GetPassTime(id);
 		}
 
-		// Token: 0x06047D0F RID: 294159 RVA: 0x0125F7AC File Offset: 0x0125D9AC
+		// Token: 0x0603E0CF RID: 254159 RVA: 0x011FFFE0 File Offset: 0x011FE1E0
 		public bool GetHideOnBurstSkill(int id)
 		{
 			UEffectModelBase effectModel = this.GetEffectModel(id);
 			return effectModel != null && effectModel.HideOnBurstSkill;
 		}
 
-		// Token: 0x06047D10 RID: 294160 RVA: 0x0125F7CC File Offset: 0x0125D9CC
+		// Token: 0x0603E0D0 RID: 254160 RVA: 0x01200000 File Offset: 0x011FE200
 		public void RegisterCustomCheckOwnerFunc(int id, Func<int, bool> func)
 		{
 			KuroEffectHandle kuroEffectHandle;
@@ -1321,13 +1291,13 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047D11 RID: 294161 RVA: 0x0125F7F0 File Offset: 0x0125D9F0
+		// Token: 0x0603E0D1 RID: 254161 RVA: 0x01200024 File Offset: 0x011FE224
 		public void SetEffectQualityLevel(int id, int qualityLevel)
 		{
 			UKuroEffectSystemFunctionLibrary.SetEffectQualityLevel(id, qualityLevel);
 		}
 
-		// Token: 0x06047D12 RID: 294162 RVA: 0x0125F7FC File Offset: 0x0125D9FC
+		// Token: 0x0603E0D2 RID: 254162 RVA: 0x01200030 File Offset: 0x011FE230
 		public void TickHandleInEditor(int id, float delta)
 		{
 			UKuroEffectSystemFunctionLibrary.TickHandleInEditor(id, delta);
@@ -1338,67 +1308,67 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047D13 RID: 294163 RVA: 0x0125F86B File Offset: 0x0125DA6B
+		// Token: 0x0603E0D3 RID: 254163 RVA: 0x0120009F File Offset: 0x011FE29F
 		public float GetLastPlayTime(int id)
 		{
 			return UKuroEffectSystemFunctionLibrary.GetLastPlayTime(id);
 		}
 
-		// Token: 0x06047D14 RID: 294164 RVA: 0x0125F873 File Offset: 0x0125DA73
+		// Token: 0x0603E0D4 RID: 254164 RVA: 0x012000A7 File Offset: 0x011FE2A7
 		public float GetLastStopTime(int id)
 		{
 			return UKuroEffectSystemFunctionLibrary.GetLastStopTime(id);
 		}
 
-		// Token: 0x06047D15 RID: 294165 RVA: 0x0125F87B File Offset: 0x0125DA7B
+		// Token: 0x0603E0D5 RID: 254165 RVA: 0x012000AF File Offset: 0x011FE2AF
 		public void UpdateBodyEffect(int id, float opacity, bool visible, bool castShadow)
 		{
 			UKuroEffectSystemFunctionLibrary.UpdateBodyEffect(id, opacity, visible, castShadow);
 		}
 
-		// Token: 0x06047D16 RID: 294166 RVA: 0x0125F887 File Offset: 0x0125DA87
+		// Token: 0x0603E0D6 RID: 254166 RVA: 0x012000BB File Offset: 0x011FE2BB
 		public void DebugUpdate(int id, bool dDebugUpdate)
 		{
 			UKuroEffectSystemFunctionLibrary.DebugUpdate(id, dDebugUpdate);
 		}
 
-		// Token: 0x06047D17 RID: 294167 RVA: 0x0125F890 File Offset: 0x0125DA90
+		// Token: 0x0603E0D7 RID: 254167 RVA: 0x012000C4 File Offset: 0x011FE2C4
 		public int GetEffectCount()
 		{
 			return UKuroEffectSystemFunctionLibrary.GetEffectCount();
 		}
 
-		// Token: 0x06047D18 RID: 294168 RVA: 0x0125F897 File Offset: 0x0125DA97
+		// Token: 0x0603E0D8 RID: 254168 RVA: 0x012000CB File Offset: 0x011FE2CB
 		public int GetActiveEffectCount()
 		{
 			return UKuroEffectSystemFunctionLibrary.GetActiveEffectCount();
 		}
 
-		// Token: 0x06047D19 RID: 294169 RVA: 0x0125F89E File Offset: 0x0125DA9E
+		// Token: 0x0603E0D9 RID: 254169 RVA: 0x012000D2 File Offset: 0x011FE2D2
 		public void DebugPrintAllErrorEffects()
 		{
 			UKuroEffectSystemFunctionLibrary.DebugPrintAllErrorEffects();
 		}
 
-		// Token: 0x06047D1A RID: 294170 RVA: 0x0125F8A5 File Offset: 0x0125DAA5
+		// Token: 0x0603E0DA RID: 254170 RVA: 0x012000D9 File Offset: 0x011FE2D9
 		public void DebugPrintCurrentImportanceEffects()
 		{
 			UKuroEffectSystemFunctionLibrary.DebugPrintCurrentImportanceEffects();
 		}
 
-		// Token: 0x06047D1B RID: 294171 RVA: 0x0125F8AC File Offset: 0x0125DAAC
+		// Token: 0x0603E0DB RID: 254171 RVA: 0x012000E0 File Offset: 0x011FE2E0
 		public void DebugPrintEffect()
 		{
 			UKuroEffectSystemFunctionLibrary.DebugPrintEffect();
 		}
 
-		// Token: 0x06047D1C RID: 294172 RVA: 0x0125F8B3 File Offset: 0x0125DAB3
+		// Token: 0x0603E0DC RID: 254172 RVA: 0x012000E7 File Offset: 0x011FE2E7
 		public int GetPlayerEffectLruSize(int pos)
 		{
 			return UKuroEffectSystemFunctionLibrary.GetPlayerEffectLruSize(pos);
 		}
 
-		// Token: 0x06047D1D RID: 294173 RVA: 0x0125F8BC File Offset: 0x0125DABC
+		// Token: 0x0603E0DD RID: 254173 RVA: 0x012000F0 File Offset: 0x011FE2F0
 		public void SetEffectStartRecording(global::Vector tempVector, global::Vector centerLocation, float recordDistSquared, Action<int, AActor> onEffectRecorded)
 		{
 			foreach (KuroEffectHandle kuroEffectHandle in this.EffectHandleMap.Values)
@@ -1465,7 +1435,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047D1E RID: 294174 RVA: 0x0125FA74 File Offset: 0x0125DC74
+		// Token: 0x0603E0DE RID: 254174 RVA: 0x012002A8 File Offset: 0x011FE4A8
 		public void RefreshEffectSpecData(Dictionary<string, SpecData> specDataMap)
 		{
 			TArray<FKuroEffectSpecData> tarray = new TArray<FKuroEffectSpecData>();
@@ -1494,7 +1464,7 @@ namespace CSharpScript.Game.Effect
 			UKuroEffectSystemFunctionLibrary.RefreshEffectForSpecData(tarray, tarray2, true);
 		}
 
-		// Token: 0x06047D1F RID: 294175 RVA: 0x0125FB94 File Offset: 0x0125DD94
+		// Token: 0x0603E0DF RID: 254175 RVA: 0x012003C8 File Offset: 0x011FE5C8
 		[return: Nullable(2)]
 		private static UActorComponent SkeletalMeshSpecOnBodyEffectChange(float opacity, [Nullable(2)] UActorComponent renderingComponent, USkeletalMeshComponent skeletalMeshComponent, AActor owner)
 		{
@@ -1524,7 +1494,7 @@ namespace CSharpScript.Game.Effect
 			return charRenderingComponent;
 		}
 
-		// Token: 0x06047D20 RID: 294176 RVA: 0x0125FC30 File Offset: 0x0125DE30
+		// Token: 0x0603E0E0 RID: 254176 RVA: 0x01200464 File Offset: 0x011FE664
 		private static UActorComponent SkeletalMeshSpecCreateRenderingComponent([Nullable(2)] UActorComponent renderingComponent, USkeletalMeshComponent skeletalMeshComponent, AActor owner)
 		{
 			CharRenderingComponent charRenderingComponent = renderingComponent as CharRenderingComponent;
@@ -1545,7 +1515,7 @@ namespace CSharpScript.Game.Effect
 			return charRenderingComponent;
 		}
 
-		// Token: 0x06047D21 RID: 294177 RVA: 0x0125FCAC File Offset: 0x0125DEAC
+		// Token: 0x0603E0E1 RID: 254177 RVA: 0x012004E0 File Offset: 0x011FE6E0
 		private static void SkeletalMeshSpecDestroyRenderingComponent(AActor effectActor, [Nullable(2)] UActorComponent renderingComponent)
 		{
 			CharRenderingComponent charRenderingComponent = (renderingComponent as CharRenderingComponent) ?? (effectActor.GetComponentByClass(CharRenderingComponent.StaticClass()) as CharRenderingComponent);
@@ -1556,7 +1526,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047D22 RID: 294178 RVA: 0x0125FCEC File Offset: 0x0125DEEC
+		// Token: 0x0603E0E2 RID: 254178 RVA: 0x01200520 File Offset: 0x011FE720
 		[NullableContext(2)]
 		private static AActor EffectHandleGetEntityOwnerActor(int entityId)
 		{
@@ -1577,7 +1547,7 @@ namespace CSharpScript.Game.Effect
 			return component.Owner;
 		}
 
-		// Token: 0x06047D23 RID: 294179 RVA: 0x0125FD20 File Offset: 0x0125DF20
+		// Token: 0x0603E0E3 RID: 254179 RVA: 0x01200554 File Offset: 0x011FE754
 		private static int EffectHandleGetEntityModelConfigId(int entityId)
 		{
 			if (!Info.Instance.IsGameRunning())
@@ -1604,13 +1574,13 @@ namespace CSharpScript.Game.Effect
 			return 0;
 		}
 
-		// Token: 0x06047D24 RID: 294180 RVA: 0x0125FD7E File Offset: 0x0125DF7E
+		// Token: 0x0603E0E4 RID: 254180 RVA: 0x012005B2 File Offset: 0x011FE7B2
 		private static FName EffectHandleGetOrAddEffectDynamicGroup(float effectEnableRange)
 		{
 			return GameBudgetAllocatorConfigCreator.Instance.GetEffectDynamicGroup((uint)effectEnableRange).GroupName;
 		}
 
-		// Token: 0x06047D25 RID: 294181 RVA: 0x0125FD94 File Offset: 0x0125DF94
+		// Token: 0x0603E0E5 RID: 254181 RVA: 0x012005C8 File Offset: 0x011FE7C8
 		[return: Nullable(2)]
 		private static UAkComponent AudioSystemGetAkComponent(bool fromPrimaryRole, AActor effectActor)
 		{
@@ -1620,7 +1590,7 @@ namespace CSharpScript.Game.Effect
 			});
 		}
 
-		// Token: 0x06047D26 RID: 294182 RVA: 0x0125FDD4 File Offset: 0x0125DFD4
+		// Token: 0x0603E0E6 RID: 254182 RVA: 0x01200608 File Offset: 0x011FE808
 		private static void AudioSystemExecuteActionStop(int eventHandle, float fadeOutTime)
 		{
 			AudioSystem.Instance.ExecuteAction(eventHandle, EAudioActionType.Stop, new ExecuteActionArgs?(new ExecuteActionArgs
@@ -1629,19 +1599,19 @@ namespace CSharpScript.Game.Effect
 			}));
 		}
 
-		// Token: 0x06047D27 RID: 294183 RVA: 0x0125FE0C File Offset: 0x0125E00C
+		// Token: 0x0603E0E7 RID: 254183 RVA: 0x01200640 File Offset: 0x011FE840
 		private static int AudioSystemPostEventTransform(string eventName, FTransformDouble transform)
 		{
 			return AudioSystem.Instance.PostEvent(eventName, new FTransformDouble?(transform), null);
 		}
 
-		// Token: 0x06047D28 RID: 294184 RVA: 0x0125FE34 File Offset: 0x0125E034
+		// Token: 0x0603E0E8 RID: 254184 RVA: 0x01200668 File Offset: 0x011FE868
 		private static int AudioSystemPostEventAkComponent(string eventName, [Nullable(2)] UAkComponent akComponent)
 		{
 			return AudioSystem.Instance.PostEvent(eventName, akComponent, null);
 		}
 
-		// Token: 0x06047D29 RID: 294185 RVA: 0x0125FE58 File Offset: 0x0125E058
+		// Token: 0x0603E0E9 RID: 254185 RVA: 0x0120068C File Offset: 0x011FE88C
 		private static bool NiagaraSpecIsNeedQualityBias(int entityId)
 		{
 			if (!Info.Instance.IsGameRunning())
@@ -1669,7 +1639,7 @@ namespace CSharpScript.Game.Effect
 			return creatureDataComponent != null && creatureDataComponent.GetEntityType() == EEntityType.Player && !entity.GetComponent<CharacterActorComponent>().IsAutonomousProxy;
 		}
 
-		// Token: 0x06047D2A RID: 294186 RVA: 0x0125FF18 File Offset: 0x0125E118
+		// Token: 0x0603E0EA RID: 254186 RVA: 0x0120074C File Offset: 0x011FE94C
 		private static bool PostProcessSpecIsNeedPostEffect(int entityId, bool visibleForProtoPlayer)
 		{
 			if (!Info.Instance.IsGameRunning())
@@ -1697,7 +1667,7 @@ namespace CSharpScript.Game.Effect
 			return creatureDataComponent == null || creatureDataComponent.GetEntityType() != EEntityType.Player || entity.GetComponent<CharacterActorComponent>().IsAutonomousProxy;
 		}
 
-		// Token: 0x06047D2B RID: 294187 RVA: 0x0125FFC4 File Offset: 0x0125E1C4
+		// Token: 0x0603E0EB RID: 254187 RVA: 0x012007F8 File Offset: 0x011FE9F8
 		private static bool PostProcessSpecIsDisableInUltraSkill(int entityId)
 		{
 			if (!Info.Instance.IsGameRunning())
@@ -1713,7 +1683,7 @@ namespace CSharpScript.Game.Effect
 			return entity.GetComponent<CreatureDataComponent>().GetEntityType() != EEntityType.Player || !entity.GetComponent<CharacterActorComponent>().IsAutonomousProxy;
 		}
 
-		// Token: 0x06047D2C RID: 294188 RVA: 0x01260022 File Offset: 0x0125E222
+		// Token: 0x0603E0EC RID: 254188 RVA: 0x01200856 File Offset: 0x011FEA56
 		[NullableContext(2)]
 		private static AActor ActorSystemGet([Nullable(new byte[]
 		{
@@ -1724,13 +1694,13 @@ namespace CSharpScript.Game.Effect
 			return ActorSystem.Instance.Get(ueClass, transform, null, true);
 		}
 
-		// Token: 0x06047D2D RID: 294189 RVA: 0x0126003C File Offset: 0x0125E23C
+		// Token: 0x0603E0ED RID: 254189 RVA: 0x01200870 File Offset: 0x011FEA70
 		private static bool ActorSystemPut(string reason, AActor actor)
 		{
 			return ActorSystem.Instance.Put(reason, actor, null);
 		}
 
-		// Token: 0x06047D2E RID: 294190 RVA: 0x0126004C File Offset: 0x0125E24C
+		// Token: 0x0603E0EE RID: 254190 RVA: 0x01200880 File Offset: 0x011FEA80
 		private static void EffectSystemSetEffectView(AActor effectActor, int effectId)
 		{
 			BP_EffectPreview_C bp_EffectPreview_C = effectActor as BP_EffectPreview_C;
@@ -1740,7 +1710,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047D2F RID: 294191 RVA: 0x0126006C File Offset: 0x0125E26C
+		// Token: 0x0603E0EF RID: 254191 RVA: 0x012008A0 File Offset: 0x011FEAA0
 		private static bool EffectSystemCheckIsNetPlayer(int entityId)
 		{
 			if (!Info.Instance.IsGameRunning())
@@ -1756,13 +1726,13 @@ namespace CSharpScript.Game.Effect
 			return component.GetEntityType() == EEntityType.Player && component.GetPlayerId() != CreatureModel.Instance.GetPlayerId();
 		}
 
-		// Token: 0x06047D30 RID: 294192 RVA: 0x012600D1 File Offset: 0x0125E2D1
+		// Token: 0x0603E0F0 RID: 254192 RVA: 0x01200905 File Offset: 0x011FEB05
 		private static bool EffectSystemCheckMobileBlackEffect(string path)
 		{
 			return Info.Instance.IsMobilePlatform() && KuroEffectSystem.MOBILE_EFFECT_BLACK_LIST.Contains(path);
 		}
 
-		// Token: 0x06047D31 RID: 294193 RVA: 0x012600F0 File Offset: 0x0125E2F0
+		// Token: 0x0603E0F1 RID: 254193 RVA: 0x01200924 File Offset: 0x011FEB24
 		[NullableContext(2)]
 		private static CharRenderingComponent FindRenderingComponent(AActor effectActor, USkeletalMeshComponent contextMeshComponent, UObject contextSourceObject, [Nullable(1)] UEffectModelBase effectModel)
 		{
@@ -1828,7 +1798,7 @@ namespace CSharpScript.Game.Effect
 			return charRenderingComponent;
 		}
 
-		// Token: 0x06047D32 RID: 294194 RVA: 0x01260225 File Offset: 0x0125E425
+		// Token: 0x0603E0F2 RID: 254194 RVA: 0x01200A59 File Offset: 0x011FEC59
 		[NullableContext(2)]
 		private static void EffectSpecRegisterBodyEffect(int effectId, AActor effectActor, USkeletalMeshComponent contextMeshComponent, UObject contextSourceObject, [Nullable(1)] UEffectModelBase effectModel)
 		{
@@ -1840,7 +1810,7 @@ namespace CSharpScript.Game.Effect
 			charRenderingComponent.RegisterBodyEffect(effectId);
 		}
 
-		// Token: 0x06047D33 RID: 294195 RVA: 0x0126023C File Offset: 0x0125E43C
+		// Token: 0x0603E0F3 RID: 254195 RVA: 0x01200A70 File Offset: 0x011FEC70
 		private static void EffectSpecUnregisterBodyEffect(int effectId, [Nullable(2)] AActor effectActor, USkeletalMeshComponent contextMeshComponent, UObject contextSourceObject, UEffectModelBase effectModel)
 		{
 			CharRenderingComponent charRenderingComponent = KuroEffectSystem.FindRenderingComponent(effectActor, contextMeshComponent, contextSourceObject, effectModel);
@@ -1851,7 +1821,7 @@ namespace CSharpScript.Game.Effect
 			charRenderingComponent.UnregisterBodyEffect(effectId);
 		}
 
-		// Token: 0x06047D34 RID: 294196 RVA: 0x01260254 File Offset: 0x0125E454
+		// Token: 0x0603E0F4 RID: 254196 RVA: 0x01200A88 File Offset: 0x011FEC88
 		[NullableContext(2)]
 		private static UKuroCharRenderingComponent MaterialSpecGetRenderingComponentByContext(int entityId, UObject contextSourceObject)
 		{
@@ -1882,7 +1852,7 @@ namespace CSharpScript.Game.Effect
 			return null;
 		}
 
-		// Token: 0x06047D35 RID: 294197 RVA: 0x012602AC File Offset: 0x0125E4AC
+		// Token: 0x0603E0F5 RID: 254197 RVA: 0x01200AE0 File Offset: 0x011FECE0
 		[NullableContext(2)]
 		private static UKuroCharRenderingComponent MaterialSpecGetRenderingComponentBySkeletal(USkeletalMeshComponent skeletalMeshComponent)
 		{
@@ -1904,7 +1874,7 @@ namespace CSharpScript.Game.Effect
 			return null;
 		}
 
-		// Token: 0x06047D36 RID: 294198 RVA: 0x012602F4 File Offset: 0x0125E4F4
+		// Token: 0x0603E0F6 RID: 254198 RVA: 0x01200B28 File Offset: 0x011FED28
 		[NullableContext(2)]
 		private static AActor MaterialSpecSpawnRenderActor(USkeletalMeshComponent skeletalMeshComponent)
 		{
@@ -1913,7 +1883,7 @@ namespace CSharpScript.Game.Effect
 			return UKuroRenderingRuntimeBPPluginBPLibrary.D_SpawnActorFromClass(skeletalMeshComponent, actorClass, ftransformDouble, ESpawnActorCollisionHandlingMethod.Undefined, null, null, true);
 		}
 
-		// Token: 0x06047D37 RID: 294199 RVA: 0x01260320 File Offset: 0x0125E520
+		// Token: 0x0603E0F7 RID: 254199 RVA: 0x01200B54 File Offset: 0x011FED54
 		[NullableContext(2)]
 		private static UKuroCharRenderingComponent MaterialSpecGetRenderingComponentByRenderActor(AActor actor, USkeletalMeshComponent skeletalMeshComponent)
 		{
@@ -1929,7 +1899,7 @@ namespace CSharpScript.Game.Effect
 			return charRenderingComponent;
 		}
 
-		// Token: 0x06047D38 RID: 294200 RVA: 0x0126036C File Offset: 0x0125E56C
+		// Token: 0x0603E0F8 RID: 254200 RVA: 0x01200BA0 File Offset: 0x011FEDA0
 		[NullableContext(2)]
 		private static int MaterialSpecAddMaterialControllerData(UKuroCharRenderingComponent renderComponent, UKuroMaterialControllerDataAsset dataAsset)
 		{
@@ -1944,7 +1914,7 @@ namespace CSharpScript.Game.Effect
 			return -1;
 		}
 
-		// Token: 0x06047D39 RID: 294201 RVA: 0x01260390 File Offset: 0x0125E590
+		// Token: 0x0603E0F9 RID: 254201 RVA: 0x01200BC4 File Offset: 0x011FEDC4
 		[NullableContext(2)]
 		private static void MaterialSpecRemoveMaterialControllerData(UKuroCharRenderingComponent renderComponent, int materialControllerHandle)
 		{
@@ -1956,7 +1926,7 @@ namespace CSharpScript.Game.Effect
 			charRenderingComponent.RemoveMaterialControllerData(materialControllerHandle);
 		}
 
-		// Token: 0x06047D3A RID: 294202 RVA: 0x012603B3 File Offset: 0x0125E5B3
+		// Token: 0x0603E0FA RID: 254202 RVA: 0x01200BE7 File Offset: 0x011FEDE7
 		[NullableContext(2)]
 		private static void MaterialSpecDestroyRenderingComponent(UKuroCharRenderingComponent renderComponent)
 		{
@@ -1968,7 +1938,7 @@ namespace CSharpScript.Game.Effect
 			charRenderingComponent.Destroy();
 		}
 
-		// Token: 0x06047D3B RID: 294203 RVA: 0x012603C8 File Offset: 0x0125E5C8
+		// Token: 0x0603E0FB RID: 254203 RVA: 0x01200BFC File Offset: 0x011FEDFC
 		[NullableContext(2)]
 		private static int EffectAudioControllerAddPlayEffectAudio(UEffectModelAudio effectModel, AActor effectActor, int effectType)
 		{
@@ -1979,7 +1949,7 @@ namespace CSharpScript.Game.Effect
 			return EffectAudioController.Instance.AddPlayEffectAudio(effectModel, effectActor, new EHitEffectType?((EHitEffectType)effectType), null, null, null);
 		}
 
-		// Token: 0x06047D3C RID: 294204 RVA: 0x0126040C File Offset: 0x0125E60C
+		// Token: 0x0603E0FC RID: 254204 RVA: 0x01200C40 File Offset: 0x011FEE40
 		[NullableContext(2)]
 		private static int EffectAudioControllerAddPlayEffectAudioPriority(UEffectModelAudio effectModel, AActor effectActor, int effectType, int priority)
 		{
@@ -1990,37 +1960,40 @@ namespace CSharpScript.Game.Effect
 			return EffectAudioController.Instance.AddPlayEffectAudio(effectModel, effectActor, new EHitEffectType?((EHitEffectType)effectType), new ERoleAudioPriorityType?((ERoleAudioPriorityType)priority), null, null);
 		}
 
-		// Token: 0x06047D3D RID: 294205 RVA: 0x0126044A File Offset: 0x0125E64A
+		// Token: 0x0603E0FD RID: 254205 RVA: 0x01200C7E File Offset: 0x011FEE7E
 		private static void EffectAudioControllerOnStopEffectAudio(int uid, string context)
 		{
 			EffectAudioController.Instance.OnStopEffectAudio(uid, context, true);
 		}
 
-		// Token: 0x04025BEB RID: 154603
+		// Token: 0x04020EAA RID: 134826
 		public bool PreviewInitState;
 
-		// Token: 0x04025BEC RID: 154604
+		// Token: 0x04020EAB RID: 134827
 		private bool HasInitialize;
 
-		// Token: 0x04025BED RID: 154605
+		// Token: 0x04020EAC RID: 134828
 		private readonly OrderedDictionary<int, KuroEffectHandle> EffectHandleMap = new OrderedDictionary<int, KuroEffectHandle>();
 
-		// Token: 0x04025BEE RID: 154606
+		// Token: 0x04020EAD RID: 134829
 		private readonly OrderedDictionary<int, KuroEffectActorHandle> EffectActorHandleMap = new OrderedDictionary<int, KuroEffectActorHandle>();
 
-		// Token: 0x04025BEF RID: 154607
+		// Token: 0x04020EAE RID: 134830
 		private readonly OrderedDictionary<int, KuroEffectNiagaraComponentHandle> EffectNiagaraHandleMap = new OrderedDictionary<int, KuroEffectNiagaraComponentHandle>();
 
-		// Token: 0x04025BF0 RID: 154608
+		// Token: 0x04020EAF RID: 134831
+		private readonly UltraSkillEffectStateWatcher UltraSkillStateWatcher = new UltraSkillEffectStateWatcher();
+
+		// Token: 0x04020EB0 RID: 134832
 		private const string MIN_NIAGARA_SIMULATION_TICK_TIME = "0.033";
 
-		// Token: 0x04025BF1 RID: 154609
+		// Token: 0x04020EB1 RID: 134833
 		private const int CHECK_EFFECT_OWNER_INTERVAL = 60000;
 
-		// Token: 0x04025BF2 RID: 154610
+		// Token: 0x04020EB2 RID: 134834
 		private const string EFFECT_SPEC_DATA_PATH = "../Config/Client/EffectData/";
 
-		// Token: 0x04025BF3 RID: 154611
+		// Token: 0x04020EB3 RID: 134835
 		[StaticVariableRuleIgnore]
 		public static readonly HashSet<string> MOBILE_EFFECT_BLACK_LIST = new HashSet<string>
 		{
@@ -2068,53 +2041,53 @@ namespace CSharpScript.Game.Effect
 			"/Game/Aki/Effect/DataAsset/Niagara/Scene/Comnon/Leaf/DA_Fx_SC2_Leaf05_1.DA_Fx_SC2_Leaf05_1"
 		};
 
-		// Token: 0x04025BF4 RID: 154612
+		// Token: 0x04020EB4 RID: 134836
 		private readonly TArray<FKuroSceneTeamItem> SceneTeamItems = new TArray<FKuroSceneTeamItem>();
 
-		// Token: 0x04025BF5 RID: 154613
+		// Token: 0x04020EB5 RID: 134837
 		private readonly List<SpecData> EffectForSpecArray = new List<SpecData>();
 
-		// Token: 0x04025BF6 RID: 154614
+		// Token: 0x04020EB6 RID: 134838
 		private readonly List<EffectSpecData> EffectForSpecDbCacheArray = new List<EffectSpecData>();
 
-		// Token: 0x04025BF7 RID: 154615
+		// Token: 0x04020EB7 RID: 134839
 		private float CheckEffectOwnerInterval = 60000f;
 
-		// Token: 0x0200CF8B RID: 53131
+		// Token: 0x0200BB77 RID: 47991
 		[NullableContext(0)]
 		private enum EEffectContextType : byte
 		{
-			// Token: 0x0403E5F7 RID: 255479
+			// Token: 0x04039A23 RID: 236067
 			EEffectContextType_Base,
-			// Token: 0x0403E5F8 RID: 255480
+			// Token: 0x04039A24 RID: 236068
 			EEffectContextType_Skeletal,
-			// Token: 0x0403E5F9 RID: 255481
+			// Token: 0x04039A25 RID: 236069
 			EEffectContextType_Audio,
-			// Token: 0x0403E5FA RID: 255482
+			// Token: 0x04039A26 RID: 236070
 			EEffectContextType_Ghost
 		}
 
-		// Token: 0x0200CF8C RID: 53132
+		// Token: 0x0200BB78 RID: 47992
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403E5FB RID: 255483
+			// Token: 0x04039A27 RID: 236071
 			[Nullable(0)]
 			public static Action <0>__OnTimeScaleChange;
 
-			// Token: 0x0403E5FC RID: 255484
+			// Token: 0x04039A28 RID: 236072
 			[Nullable(0)]
 			public static Action <1>__OnSetNiagaraQuality;
 
-			// Token: 0x0403E5FD RID: 255485
+			// Token: 0x04039A29 RID: 236073
 			[Nullable(0)]
 			public static Action<EKuroUI3DState> <2>__OnGlobalUiSceneStateChanged;
 
-			// Token: 0x0403E5FE RID: 255486
+			// Token: 0x04039A2A RID: 236074
 			[Nullable(0)]
 			public static Action<bool> <3>__OnSetGamePaused;
 
-			// Token: 0x0403E5FF RID: 255487
+			// Token: 0x04039A2B RID: 236075
 			[Nullable(new byte[]
 			{
 				0,
@@ -2125,7 +2098,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<float, UActorComponent, USkeletalMeshComponent, AActor, UActorComponent> <4>__SkeletalMeshSpecOnBodyEffectChange;
 
-			// Token: 0x0403E600 RID: 255488
+			// Token: 0x04039A2C RID: 236076
 			[Nullable(new byte[]
 			{
 				0,
@@ -2136,7 +2109,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<UActorComponent, USkeletalMeshComponent, AActor, UActorComponent> <5>__SkeletalMeshSpecCreateRenderingComponent;
 
-			// Token: 0x0403E601 RID: 255489
+			// Token: 0x04039A2D RID: 236077
 			[Nullable(new byte[]
 			{
 				0,
@@ -2145,7 +2118,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Action<AActor, UActorComponent> <6>__SkeletalMeshSpecDestroyRenderingComponent;
 
-			// Token: 0x0403E602 RID: 255490
+			// Token: 0x04039A2E RID: 236078
 			[Nullable(new byte[]
 			{
 				0,
@@ -2153,15 +2126,15 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<int, AActor> <7>__EffectHandleGetEntityOwnerActor;
 
-			// Token: 0x0403E603 RID: 255491
+			// Token: 0x04039A2F RID: 236079
 			[Nullable(0)]
 			public static Func<int, int> <8>__EffectHandleGetEntityModelConfigId;
 
-			// Token: 0x0403E604 RID: 255492
+			// Token: 0x04039A30 RID: 236080
 			[Nullable(0)]
 			public static Func<float, FName> <9>__EffectHandleGetOrAddEffectDynamicGroup;
 
-			// Token: 0x0403E605 RID: 255493
+			// Token: 0x04039A31 RID: 236081
 			[Nullable(new byte[]
 			{
 				0,
@@ -2170,11 +2143,11 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<bool, AActor, UAkComponent> <10>__AudioSystemGetAkComponent;
 
-			// Token: 0x0403E606 RID: 255494
+			// Token: 0x04039A32 RID: 236082
 			[Nullable(0)]
 			public static Action<int, float> <11>__AudioSystemExecuteActionStop;
 
-			// Token: 0x0403E607 RID: 255495
+			// Token: 0x04039A33 RID: 236083
 			[Nullable(new byte[]
 			{
 				0,
@@ -2182,7 +2155,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<string, FTransformDouble, int> <12>__AudioSystemPostEventTransform;
 
-			// Token: 0x0403E608 RID: 255496
+			// Token: 0x04039A34 RID: 236084
 			[Nullable(new byte[]
 			{
 				0,
@@ -2191,23 +2164,23 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<string, UAkComponent, int> <13>__AudioSystemPostEventAkComponent;
 
-			// Token: 0x0403E609 RID: 255497
+			// Token: 0x04039A35 RID: 236085
 			[Nullable(0)]
 			public static Func<int, bool> <14>__NiagaraSpecIsNeedQualityBias;
 
-			// Token: 0x0403E60A RID: 255498
+			// Token: 0x04039A36 RID: 236086
 			[Nullable(0)]
 			public static Func<int, bool, bool> <15>__PostProcessSpecIsNeedPostEffect;
 
-			// Token: 0x0403E60B RID: 255499
+			// Token: 0x04039A37 RID: 236087
 			[Nullable(0)]
 			public static Func<int, bool> <16>__PostProcessSpecIsDisableInUltraSkill;
 
-			// Token: 0x0403E60C RID: 255500
+			// Token: 0x04039A38 RID: 236088
 			[Nullable(0)]
 			public static FActorSystemGetRetVal.FActorSystemGetRetVal_ScriptDelegate <17>__ActorSystemGet;
 
-			// Token: 0x0403E60D RID: 255501
+			// Token: 0x04039A39 RID: 236089
 			[Nullable(new byte[]
 			{
 				0,
@@ -2216,7 +2189,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<string, AActor, bool> <18>__ActorSystemPut;
 
-			// Token: 0x0403E60E RID: 255502
+			// Token: 0x04039A3A RID: 236090
 			[Nullable(new byte[]
 			{
 				0,
@@ -2224,11 +2197,11 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Action<AActor, int> <19>__EffectSystemSetEffectView;
 
-			// Token: 0x0403E60F RID: 255503
+			// Token: 0x04039A3B RID: 236091
 			[Nullable(0)]
 			public static Func<int, bool> <20>__EffectSystemCheckIsNetPlayer;
 
-			// Token: 0x0403E610 RID: 255504
+			// Token: 0x04039A3C RID: 236092
 			[Nullable(new byte[]
 			{
 				0,
@@ -2236,7 +2209,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<string, bool> <21>__EffectSystemCheckMobileBlackEffect;
 
-			// Token: 0x0403E611 RID: 255505
+			// Token: 0x04039A3D RID: 236093
 			[Nullable(new byte[]
 			{
 				0,
@@ -2247,7 +2220,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Action<int, AActor, USkeletalMeshComponent, UObject, UEffectModelBase> <22>__EffectSpecRegisterBodyEffect;
 
-			// Token: 0x0403E612 RID: 255506
+			// Token: 0x04039A3E RID: 236094
 			[Nullable(new byte[]
 			{
 				0,
@@ -2258,7 +2231,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Action<int, AActor, USkeletalMeshComponent, UObject, UEffectModelBase> <23>__EffectSpecUnregisterBodyEffect;
 
-			// Token: 0x0403E613 RID: 255507
+			// Token: 0x04039A3F RID: 236095
 			[Nullable(new byte[]
 			{
 				0,
@@ -2267,7 +2240,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<int, UObject, UKuroCharRenderingComponent> <24>__MaterialSpecGetRenderingComponentByContext;
 
-			// Token: 0x0403E614 RID: 255508
+			// Token: 0x04039A40 RID: 236096
 			[Nullable(new byte[]
 			{
 				0,
@@ -2276,7 +2249,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<USkeletalMeshComponent, UKuroCharRenderingComponent> <25>__MaterialSpecGetRenderingComponentBySkeletal;
 
-			// Token: 0x0403E615 RID: 255509
+			// Token: 0x04039A41 RID: 236097
 			[Nullable(new byte[]
 			{
 				0,
@@ -2285,7 +2258,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<USkeletalMeshComponent, AActor> <26>__MaterialSpecSpawnRenderActor;
 
-			// Token: 0x0403E616 RID: 255510
+			// Token: 0x04039A42 RID: 236098
 			[Nullable(new byte[]
 			{
 				0,
@@ -2295,7 +2268,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<AActor, USkeletalMeshComponent, UKuroCharRenderingComponent> <27>__MaterialSpecGetRenderingComponentByRenderActor;
 
-			// Token: 0x0403E617 RID: 255511
+			// Token: 0x04039A43 RID: 236099
 			[Nullable(new byte[]
 			{
 				0,
@@ -2304,7 +2277,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<UKuroCharRenderingComponent, UKuroMaterialControllerDataAsset, int> <28>__MaterialSpecAddMaterialControllerData;
 
-			// Token: 0x0403E618 RID: 255512
+			// Token: 0x04039A44 RID: 236100
 			[Nullable(new byte[]
 			{
 				0,
@@ -2312,7 +2285,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Action<UKuroCharRenderingComponent, int> <29>__MaterialSpecRemoveMaterialControllerData;
 
-			// Token: 0x0403E619 RID: 255513
+			// Token: 0x04039A45 RID: 236101
 			[Nullable(new byte[]
 			{
 				0,
@@ -2320,7 +2293,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Action<UKuroCharRenderingComponent> <30>__MaterialSpecDestroyRenderingComponent;
 
-			// Token: 0x0403E61A RID: 255514
+			// Token: 0x04039A46 RID: 236102
 			[Nullable(new byte[]
 			{
 				0,
@@ -2329,7 +2302,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<UEffectModelAudio, AActor, int, int> <31>__EffectAudioControllerAddPlayEffectAudio;
 
-			// Token: 0x0403E61B RID: 255515
+			// Token: 0x04039A47 RID: 236103
 			[Nullable(new byte[]
 			{
 				0,
@@ -2338,7 +2311,7 @@ namespace CSharpScript.Game.Effect
 			})]
 			public static Func<UEffectModelAudio, AActor, int, int, int> <32>__EffectAudioControllerAddPlayEffectAudioPriority;
 
-			// Token: 0x0403E61C RID: 255516
+			// Token: 0x04039A48 RID: 236104
 			[Nullable(new byte[]
 			{
 				0,

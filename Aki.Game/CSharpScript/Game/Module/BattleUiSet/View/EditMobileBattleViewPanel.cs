@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUiSet.View
 {
-	// Token: 0x02005E66 RID: 24166
+	// Token: 0x02004E4B RID: 20043
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class EditMobileBattleViewPanel : UiPanelBase
 	{
-		// Token: 0x0603D707 RID: 251655 RVA: 0x00ED24E0 File Offset: 0x00ED06E0
+		// Token: 0x06032697 RID: 206487 RVA: 0x00E23A50 File Offset: 0x00E21C50
 		protected override UniTask OnBeforeStartAsync()
 		{
 			EditMobileBattleViewPanel.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D708 RID: 251656 RVA: 0x00ED2523 File Offset: 0x00ED0723
+		// Token: 0x06032698 RID: 206488 RVA: 0x00E23A93 File Offset: 0x00E21C93
 		protected override void OnBeforeDestroy()
 		{
 			this.LguiComponentsRegistry = null;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.PanelItemMap.Clear();
 		}
 
-		// Token: 0x0603D709 RID: 251657 RVA: 0x00ED2548 File Offset: 0x00ED0748
+		// Token: 0x06032699 RID: 206489 RVA: 0x00E23AB8 File Offset: 0x00E21CB8
 		[NullableContext(1)]
 		private UniTask InitializePanelItem([Nullable(2)] BattleUiSetPanelData panelData, AUIBaseActor battleViewBaseActor)
 		{
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			return <InitializePanelItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D70A RID: 251658 RVA: 0x00ED259C File Offset: 0x00ED079C
+		// Token: 0x0603269A RID: 206490 RVA: 0x00E23B0C File Offset: 0x00E21D0C
 		public void ResetAllPanelItem()
 		{
 			foreach (EditMobileBattleViewPanelItem editMobileBattleViewPanelItem in this.PanelItemMap.Values)
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			}
 		}
 
-		// Token: 0x0603D70B RID: 251659 RVA: 0x00ED25FC File Offset: 0x00ED07FC
+		// Token: 0x0603269B RID: 206491 RVA: 0x00E23B6C File Offset: 0x00E21D6C
 		public void SavePanelItem()
 		{
 			foreach (EditMobileBattleViewPanelItem editMobileBattleViewPanelItem in this.PanelItemMap.Values)
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			}
 		}
 
-		// Token: 0x0603D70C RID: 251660 RVA: 0x00ED2654 File Offset: 0x00ED0854
+		// Token: 0x0603269C RID: 206492 RVA: 0x00E23BC4 File Offset: 0x00E21DC4
 		public EditMobileBattleViewPanelItem GetPanelItem(int panelItemIndex)
 		{
 			return this.PanelItemMap.GetValueOrDefault(panelItemIndex);
 		}
 
-		// Token: 0x0603D70D RID: 251661 RVA: 0x00ED2664 File Offset: 0x00ED0864
+		// Token: 0x0603269D RID: 206493 RVA: 0x00E23BD4 File Offset: 0x00E21DD4
 		public void RefreshHierarchyIndex(int panelHierarchyIndex)
 		{
 			foreach (EditMobileBattleViewPanelItem editMobileBattleViewPanelItem in this.PanelItemMap.Values)
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			}
 		}
 
-		// Token: 0x0603D70E RID: 251662 RVA: 0x00ED26D4 File Offset: 0x00ED08D4
+		// Token: 0x0603269E RID: 206494 RVA: 0x00E23C44 File Offset: 0x00E21E44
 		[NullableContext(1)]
 		public bool IsAnyItemOverlap(UUIItem item)
 		{
@@ -116,17 +116,17 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			return false;
 		}
 
-		// Token: 0x040200FA RID: 131322
+		// Token: 0x0401ABC1 RID: 109505
 		private AUIBaseActor BattleViewBaseActor;
 
-		// Token: 0x040200FB RID: 131323
+		// Token: 0x0401ABC2 RID: 109506
 		public BattleUiSetPanelData PanelData;
 
-		// Token: 0x040200FC RID: 131324
+		// Token: 0x0401ABC3 RID: 109507
 		[Nullable(1)]
 		private readonly Dictionary<int, EditMobileBattleViewPanelItem> PanelItemMap = new Dictionary<int, EditMobileBattleViewPanelItem>();
 
-		// Token: 0x040200FD RID: 131325
+		// Token: 0x0401ABC4 RID: 109508
 		private ULGUIComponentsRegistry LguiComponentsRegistry;
 	}
 }

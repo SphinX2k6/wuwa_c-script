@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020069C7 RID: 27079
+	// Token: 0x02007077 RID: 28791
 	public class IItemInspectFinishEffectT
 	{
-		// Token: 0x1700C8DA RID: 51418
-		// (get) Token: 0x0602F523 RID: 193827 RVA: 0x00671C85 File Offset: 0x0066FE85
-		// (set) Token: 0x0602F524 RID: 193828 RVA: 0x00671C8D File Offset: 0x0066FE8D
+		// Token: 0x1700D2DA RID: 53978
+		// (get) Token: 0x06031EE3 RID: 204515 RVA: 0x006C1FDD File Offset: 0x006C01DD
+		// (set) Token: 0x06031EE4 RID: 204516 RVA: 0x006C1FE5 File Offset: 0x006C01E5
 		public List<TInteractEffectUnion> EffectList { get; set; }
 
-		// Token: 0x1700C8DB RID: 51419
-		// (get) Token: 0x0602F525 RID: 193829 RVA: 0x00671C96 File Offset: 0x0066FE96
-		// (set) Token: 0x0602F526 RID: 193830 RVA: 0x00671C9E File Offset: 0x0066FE9E
+		// Token: 0x1700D2DB RID: 53979
+		// (get) Token: 0x06031EE5 RID: 204517 RVA: 0x006C1FEE File Offset: 0x006C01EE
+		// (set) Token: 0x06031EE6 RID: 204518 RVA: 0x006C1FF6 File Offset: 0x006C01F6
 		public float ProtectTime { get; set; }
 
-		// Token: 0x1700C8DC RID: 51420
-		// (get) Token: 0x0602F527 RID: 193831 RVA: 0x00671CA7 File Offset: 0x0066FEA7
-		// (set) Token: 0x0602F528 RID: 193832 RVA: 0x00671CAF File Offset: 0x0066FEAF
+		// Token: 0x1700D2DC RID: 53980
+		// (get) Token: 0x06031EE7 RID: 204519 RVA: 0x006C1FFF File Offset: 0x006C01FF
+		// (set) Token: 0x06031EE8 RID: 204520 RVA: 0x006C2007 File Offset: 0x006C0207
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602F529 RID: 193833 RVA: 0x00671CB8 File Offset: 0x0066FEB8
+		// Token: 0x06031EE9 RID: 204521 RVA: 0x006C2010 File Offset: 0x006C0210
 		public IItemInspectFinishEffectT()
 		{
 			this.EffectList = null;

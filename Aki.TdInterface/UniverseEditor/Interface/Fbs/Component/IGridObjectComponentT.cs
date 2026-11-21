@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200532E RID: 21294
+	// Token: 0x020058B4 RID: 22708
 	public class IGridObjectComponentT
 	{
-		// Token: 0x17009C6C RID: 40044
-		// (get) Token: 0x06022D06 RID: 142598 RVA: 0x004D2ECD File Offset: 0x004D10CD
-		// (set) Token: 0x06022D07 RID: 142599 RVA: 0x004D2ED5 File Offset: 0x004D10D5
+		// Token: 0x1700A4A4 RID: 42148
+		// (get) Token: 0x06024DBA RID: 150970 RVA: 0x0050FDA1 File Offset: 0x0050DFA1
+		// (set) Token: 0x06024DBB RID: 150971 RVA: 0x0050FDA9 File Offset: 0x0050DFA9
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009C6D RID: 40045
-		// (get) Token: 0x06022D08 RID: 142600 RVA: 0x004D2EDE File Offset: 0x004D10DE
-		// (set) Token: 0x06022D09 RID: 142601 RVA: 0x004D2EE6 File Offset: 0x004D10E6
+		// Token: 0x1700A4A5 RID: 42149
+		// (get) Token: 0x06024DBC RID: 150972 RVA: 0x0050FDB2 File Offset: 0x0050DFB2
+		// (set) Token: 0x06024DBD RID: 150973 RVA: 0x0050FDBA File Offset: 0x0050DFBA
 		public IVector2T CellSize { get; set; }
 
-		// Token: 0x17009C6E RID: 40046
-		// (get) Token: 0x06022D0A RID: 142602 RVA: 0x004D2EEF File Offset: 0x004D10EF
-		// (set) Token: 0x06022D0B RID: 142603 RVA: 0x004D2EF7 File Offset: 0x004D10F7
+		// Token: 0x1700A4A6 RID: 42150
+		// (get) Token: 0x06024DBE RID: 150974 RVA: 0x0050FDC3 File Offset: 0x0050DFC3
+		// (set) Token: 0x06024DBF RID: 150975 RVA: 0x0050FDCB File Offset: 0x0050DFCB
 		public byte NullMask { get; set; }
 
-		// Token: 0x06022D0C RID: 142604 RVA: 0x004D2F00 File Offset: 0x004D1100
+		// Token: 0x06024DC0 RID: 150976 RVA: 0x0050FDD4 File Offset: 0x0050DFD4
 		public IGridObjectComponentT()
 		{
 			this.Disabled = false;

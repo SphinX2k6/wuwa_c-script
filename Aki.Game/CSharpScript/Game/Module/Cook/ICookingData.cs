@@ -2,62 +2,62 @@
 
 namespace CSharpScript.Game.Module.Cook
 {
-	// Token: 0x02005AFF RID: 23295
+	// Token: 0x02004AE0 RID: 19168
 	public interface ICookingData : ICookItemData
 	{
-		// Token: 0x17008C45 RID: 35909
-		// (get) Token: 0x0603AFA8 RID: 241576
-		// (set) Token: 0x0603AFA9 RID: 241577
+		// Token: 0x1700601F RID: 24607
+		// (get) Token: 0x0602FF1A RID: 196378
+		// (set) Token: 0x0602FF1B RID: 196379
 		ESubCookDataType SubType { get; set; }
 
-		// Token: 0x17008C46 RID: 35910
-		// (get) Token: 0x0603AFAA RID: 241578
-		// (set) Token: 0x0603AFAB RID: 241579
+		// Token: 0x17006020 RID: 24608
+		// (get) Token: 0x0602FF1C RID: 196380
+		// (set) Token: 0x0602FF1D RID: 196381
 		int UniqueId { get; set; }
 
-		// Token: 0x17008C47 RID: 35911
-		// (get) Token: 0x0603AFAC RID: 241580
-		// (set) Token: 0x0603AFAD RID: 241581
+		// Token: 0x17006021 RID: 24609
+		// (get) Token: 0x0602FF1E RID: 196382
+		// (set) Token: 0x0602FF1F RID: 196383
 		int CookCount { get; set; }
 
-		// Token: 0x17008C48 RID: 35912
-		// (get) Token: 0x0603AFAE RID: 241582
-		// (set) Token: 0x0603AFAF RID: 241583
+		// Token: 0x17006022 RID: 24610
+		// (get) Token: 0x0602FF20 RID: 196384
+		// (set) Token: 0x0602FF21 RID: 196385
 		int? LastRoleId { get; set; }
 
-		// Token: 0x17008C49 RID: 35913
-		// (get) Token: 0x0603AFB0 RID: 241584
-		// (set) Token: 0x0603AFB1 RID: 241585
+		// Token: 0x17006023 RID: 24611
+		// (get) Token: 0x0602FF22 RID: 196386
+		// (set) Token: 0x0602FF23 RID: 196387
 		int IsCook { get; set; }
 
-		// Token: 0x17008C4A RID: 35914
-		// (get) Token: 0x0603AFB2 RID: 241586
-		// (set) Token: 0x0603AFB3 RID: 241587
+		// Token: 0x17006024 RID: 24612
+		// (get) Token: 0x0602FF24 RID: 196388
+		// (set) Token: 0x0602FF25 RID: 196389
 		int EffectType { get; set; }
 
-		// Token: 0x17008C4B RID: 35915
-		// (get) Token: 0x0603AFB4 RID: 241588
-		// (set) Token: 0x0603AFB5 RID: 241589
+		// Token: 0x17006025 RID: 24613
+		// (get) Token: 0x0602FF26 RID: 196390
+		// (set) Token: 0x0602FF27 RID: 196391
 		int DataId { get; set; }
 
-		// Token: 0x17008C4C RID: 35916
-		// (get) Token: 0x0603AFB6 RID: 241590
-		// (set) Token: 0x0603AFB7 RID: 241591
+		// Token: 0x17006026 RID: 24614
+		// (get) Token: 0x0602FF28 RID: 196392
+		// (set) Token: 0x0602FF29 RID: 196393
 		int LimitTotalCount { get; set; }
 
-		// Token: 0x17008C4D RID: 35917
-		// (get) Token: 0x0603AFB8 RID: 241592
-		// (set) Token: 0x0603AFB9 RID: 241593
+		// Token: 0x17006027 RID: 24615
+		// (get) Token: 0x0602FF2A RID: 196394
+		// (set) Token: 0x0602FF2B RID: 196395
 		int LimitedCount { get; set; }
 
-		// Token: 0x17008C4E RID: 35918
-		// (get) Token: 0x0603AFBA RID: 241594
-		// (set) Token: 0x0603AFBB RID: 241595
+		// Token: 0x17006028 RID: 24616
+		// (get) Token: 0x0602FF2C RID: 196396
+		// (set) Token: 0x0602FF2D RID: 196397
 		double ExistStartTime { get; set; }
 
-		// Token: 0x17008C4F RID: 35919
-		// (get) Token: 0x0603AFBC RID: 241596
-		// (set) Token: 0x0603AFBD RID: 241597
+		// Token: 0x17006029 RID: 24617
+		// (get) Token: 0x0602FF2E RID: 196398
+		// (set) Token: 0x0602FF2F RID: 196399
 		double ExistEndTime { get; set; }
 	}
 }

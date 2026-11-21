@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001C67 RID: 7271
+// Token: 0x02001126 RID: 4390
 internal enum EBigRewardSlotKind
 {
-	// Token: 0x0400645E RID: 25694
+	// Token: 0x04006530 RID: 25904
 	Big,
-	// Token: 0x0400645F RID: 25695
+	// Token: 0x04006531 RID: 25905
 	Cyclic,
-	// Token: 0x04006460 RID: 25696
+	// Token: 0x04006532 RID: 25906
 	None
 }

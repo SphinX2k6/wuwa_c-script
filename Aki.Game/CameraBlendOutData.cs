@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000219 RID: 537
+// Token: 0x0200021D RID: 541
 [NullableContext(1)]
 [Nullable(0)]
 public class CameraBlendOutData
 {
-	// Token: 0x060020E5 RID: 8421 RVA: 0x000B6495 File Offset: 0x000B4695
+	// Token: 0x06002193 RID: 8595 RVA: 0x000BD7B5 File Offset: 0x000BB9B5
 	public void Reset()
 	{
 		this.IsInitializedArmRotationPitch = false;
@@ -15,7 +15,7 @@ public class CameraBlendOutData
 		this.IsInitializedCameraOffset = false;
 	}
 
-	// Token: 0x060020E6 RID: 8422 RVA: 0x000B64B3 File Offset: 0x000B46B3
+	// Token: 0x06002194 RID: 8596 RVA: 0x000BD7D3 File Offset: 0x000BB9D3
 	public void SetBlendOutArmRotationPitch(float pitch)
 	{
 		if (!this.IsInitializedArmRotationPitch)
@@ -25,7 +25,7 @@ public class CameraBlendOutData
 		}
 	}
 
-	// Token: 0x060020E7 RID: 8423 RVA: 0x000B64CB File Offset: 0x000B46CB
+	// Token: 0x06002195 RID: 8597 RVA: 0x000BD7EB File Offset: 0x000BB9EB
 	public void SetBlendOutArmRotationYaw(float yaw)
 	{
 		if (!this.IsInitializedArmRotationYaw)
@@ -35,7 +35,7 @@ public class CameraBlendOutData
 		}
 	}
 
-	// Token: 0x060020E8 RID: 8424 RVA: 0x000B64E3 File Offset: 0x000B46E3
+	// Token: 0x06002196 RID: 8598 RVA: 0x000BD803 File Offset: 0x000BBA03
 	public void SetBlendOutArmRotationRoll(float roll)
 	{
 		if (!this.IsInitializedArmRotationRoll)
@@ -45,7 +45,7 @@ public class CameraBlendOutData
 		}
 	}
 
-	// Token: 0x060020E9 RID: 8425 RVA: 0x000B64FB File Offset: 0x000B46FB
+	// Token: 0x06002197 RID: 8599 RVA: 0x000BD81B File Offset: 0x000BBA1B
 	public void SetBlendOutCameraOffset(Vector offset)
 	{
 		if (!this.IsInitializedCameraOffset)
@@ -55,27 +55,27 @@ public class CameraBlendOutData
 		}
 	}
 
-	// Token: 0x04001533 RID: 5427
+	// Token: 0x04001575 RID: 5493
 	public bool IsInitializedArmRotationPitch;
 
-	// Token: 0x04001534 RID: 5428
+	// Token: 0x04001576 RID: 5494
 	public float ArmRotationPitch;
 
-	// Token: 0x04001535 RID: 5429
+	// Token: 0x04001577 RID: 5495
 	public bool IsInitializedArmRotationYaw;
 
-	// Token: 0x04001536 RID: 5430
+	// Token: 0x04001578 RID: 5496
 	public float ArmRotationYaw;
 
-	// Token: 0x04001537 RID: 5431
+	// Token: 0x04001579 RID: 5497
 	public bool IsInitializedArmRotationRoll;
 
-	// Token: 0x04001538 RID: 5432
+	// Token: 0x0400157A RID: 5498
 	public float ArmRotationRoll;
 
-	// Token: 0x04001539 RID: 5433
+	// Token: 0x0400157B RID: 5499
 	public bool IsInitializedCameraOffset;
 
-	// Token: 0x0400153A RID: 5434
+	// Token: 0x0400157C RID: 5500
 	public Vector CameraOffset = Vector.Create();
 }

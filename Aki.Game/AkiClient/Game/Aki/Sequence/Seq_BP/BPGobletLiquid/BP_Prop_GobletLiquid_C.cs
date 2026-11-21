@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Sequence.Seq_BP.BPGobletLiquid
 {
-	// Token: 0x02003A24 RID: 14884
+	// Token: 0x02003070 RID: 12400
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Sequence/Seq_BP/BPGobletLiquid/BP_Prop_GobletLiquid.BP_Prop_GobletLiquid_C")]
 	[UnrealStructLayout(1864, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1864)]
 	public class BP_Prop_GobletLiquid_C : AKuroEditorTickActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601F48C RID: 128140 RVA: 0x008B42F1 File Offset: 0x008B24F1
+		// Token: 0x0601D823 RID: 120867 RVA: 0x008F9C94 File Offset: 0x008F7E94
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_Prop_GobletLiquid_C._ClassPtr == IntPtr.Zero)
@@ -25,823 +25,821 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP.BPGobletLiquid
 			return BP_Prop_GobletLiquid_C._ClassPtr;
 		}
 
-		// Token: 0x0601F48D RID: 128141 RVA: 0x008B4318 File Offset: 0x008B2518
+		// Token: 0x0601D824 RID: 120868 RVA: 0x008F9CB8 File Offset: 0x008F7EB8
 		public BP_Prop_GobletLiquid_C() : this(BuiltinUtils.AllocNativeUObject(BP_Prop_GobletLiquid_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601F48E RID: 128142 RVA: 0x008B4340 File Offset: 0x008B2540
+		// Token: 0x0601D825 RID: 120869 RVA: 0x008F9CE0 File Offset: 0x008F7EE0
 		[NullableContext(1)]
 		public BP_Prop_GobletLiquid_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_Prop_GobletLiquid_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17002A8D RID: 10893
-		// (get) Token: 0x0601F48F RID: 128143 RVA: 0x008B4373 File Offset: 0x008B2573
-		// (set) Token: 0x0601F490 RID: 128144 RVA: 0x008B4387 File Offset: 0x008B2587
+		// Token: 0x17002F18 RID: 12056
+		// (get) Token: 0x0601D826 RID: 120870 RVA: 0x008F9D13 File Offset: 0x008F7F13
+		// (set) Token: 0x0601D827 RID: 120871 RVA: 0x008F9D27 File Offset: 0x008F7F27
 		public unsafe UKuroCollectActorComponent KuroCollectActor
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroCollectActorComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UKuroCollectActorComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_KuroCollectActor);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_KuroCollectActor, value);
 			}
 		}
 
-		// Token: 0x17002A8E RID: 10894
-		// (get) Token: 0x0601F491 RID: 128145 RVA: 0x008B439C File Offset: 0x008B259C
-		// (set) Token: 0x0601F492 RID: 128146 RVA: 0x008B43B0 File Offset: 0x008B25B0
+		// Token: 0x17002F19 RID: 12057
+		// (get) Token: 0x0601D828 RID: 120872 RVA: 0x008F9D3C File Offset: 0x008F7F3C
+		// (set) Token: 0x0601D829 RID: 120873 RVA: 0x008F9D50 File Offset: 0x008F7F50
 		public unsafe UNiagaraComponent NS_Fx_DrinksIngredients_Fall
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_NS_Fx_DrinksIngredients_Fall);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_NS_Fx_DrinksIngredients_Fall, value);
 			}
 		}
 
-		// Token: 0x17002A8F RID: 10895
-		// (get) Token: 0x0601F493 RID: 128147 RVA: 0x008B43C5 File Offset: 0x008B25C5
-		// (set) Token: 0x0601F494 RID: 128148 RVA: 0x008B43D9 File Offset: 0x008B25D9
+		// Token: 0x17002F1A RID: 12058
+		// (get) Token: 0x0601D82A RID: 120874 RVA: 0x008F9D65 File Offset: 0x008F7F65
+		// (set) Token: 0x0601D82B RID: 120875 RVA: 0x008F9D79 File Offset: 0x008F7F79
 		public unsafe UNiagaraComponent NS_Fx_DrinkOrnament
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_NS_Fx_DrinkOrnament);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_NS_Fx_DrinkOrnament, value);
 			}
 		}
 
-		// Token: 0x17002A90 RID: 10896
-		// (get) Token: 0x0601F495 RID: 128149 RVA: 0x008B43EE File Offset: 0x008B25EE
-		// (set) Token: 0x0601F496 RID: 128150 RVA: 0x008B4402 File Offset: 0x008B2602
+		// Token: 0x17002F1B RID: 12059
+		// (get) Token: 0x0601D82C RID: 120876 RVA: 0x008F9D8E File Offset: 0x008F7F8E
+		// (set) Token: 0x0601D82D RID: 120877 RVA: 0x008F9DA2 File Offset: 0x008F7FA2
 		public unsafe UNiagaraComponent NS_Fx_DrinksBatching02
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_4);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_NS_Fx_DrinksBatching02);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_4, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_NS_Fx_DrinksBatching02, value);
 			}
 		}
 
-		// Token: 0x17002A91 RID: 10897
-		// (get) Token: 0x0601F497 RID: 128151 RVA: 0x008B4417 File Offset: 0x008B2617
-		// (set) Token: 0x0601F498 RID: 128152 RVA: 0x008B442B File Offset: 0x008B262B
+		// Token: 0x17002F1C RID: 12060
+		// (get) Token: 0x0601D82E RID: 120878 RVA: 0x008F9DB7 File Offset: 0x008F7FB7
+		// (set) Token: 0x0601D82F RID: 120879 RVA: 0x008F9DCB File Offset: 0x008F7FCB
 		public unsafe UNiagaraComponent NS_Fx_DrinksBatching01
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_NS_Fx_DrinksBatching01);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_NS_Fx_DrinksBatching01, value);
 			}
 		}
 
-		// Token: 0x17002A92 RID: 10898
-		// (get) Token: 0x0601F499 RID: 128153 RVA: 0x008B4440 File Offset: 0x008B2640
-		// (set) Token: 0x0601F49A RID: 128154 RVA: 0x008B4454 File Offset: 0x008B2654
+		// Token: 0x17002F1D RID: 12061
+		// (get) Token: 0x0601D830 RID: 120880 RVA: 0x008F9DE0 File Offset: 0x008F7FE0
+		// (set) Token: 0x0601D831 RID: 120881 RVA: 0x008F9DF4 File Offset: 0x008F7FF4
 		public unsafe UNiagaraComponent NS_Fx_Liquid
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_6);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_NS_Fx_Liquid);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_6, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_NS_Fx_Liquid, value);
 			}
 		}
 
-		// Token: 0x17002A93 RID: 10899
-		// (get) Token: 0x0601F49B RID: 128155 RVA: 0x008B4469 File Offset: 0x008B2669
-		// (set) Token: 0x0601F49C RID: 128156 RVA: 0x008B447D File Offset: 0x008B267D
+		// Token: 0x17002F1E RID: 12062
+		// (get) Token: 0x0601D832 RID: 120882 RVA: 0x008F9E09 File Offset: 0x008F8009
+		// (set) Token: 0x0601D833 RID: 120883 RVA: 0x008F9E1D File Offset: 0x008F801D
 		public unsafe USkeletalMeshComponent Liquid
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_7);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_Liquid);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_7, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_Liquid, value);
 			}
 		}
 
-		// Token: 0x17002A94 RID: 10900
-		// (get) Token: 0x0601F49D RID: 128157 RVA: 0x008B4492 File Offset: 0x008B2692
-		// (set) Token: 0x0601F49E RID: 128158 RVA: 0x008B44A6 File Offset: 0x008B26A6
+		// Token: 0x17002F1F RID: 12063
+		// (get) Token: 0x0601D834 RID: 120884 RVA: 0x008F9E32 File Offset: 0x008F8032
+		// (set) Token: 0x0601D835 RID: 120885 RVA: 0x008F9E46 File Offset: 0x008F8046
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_8);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_8, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Prop_GobletLiquid_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17002A95 RID: 10901
-		// (get) Token: 0x0601F49F RID: 128159 RVA: 0x008B44BB File Offset: 0x008B26BB
-		// (set) Token: 0x0601F4A0 RID: 128160 RVA: 0x008B44CF File Offset: 0x008B26CF
+		// Token: 0x17002F20 RID: 12064
+		// (get) Token: 0x0601D836 RID: 120886 RVA: 0x008F9E5B File Offset: 0x008F805B
+		// (set) Token: 0x0601D837 RID: 120887 RVA: 0x008F9E6F File Offset: 0x008F806F
 		public unsafe FLinearColor MainColorPalette
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_MainColorPalette);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_MainColorPalette) = value;
 			}
 		}
 
-		// Token: 0x17002A96 RID: 10902
-		// (get) Token: 0x0601F4A1 RID: 128161 RVA: 0x008B44E4 File Offset: 0x008B26E4
-		// (set) Token: 0x0601F4A2 RID: 128162 RVA: 0x008B44F8 File Offset: 0x008B26F8
+		// Token: 0x17002F21 RID: 12065
+		// (get) Token: 0x0601D838 RID: 120888 RVA: 0x008F9E84 File Offset: 0x008F8084
+		// (set) Token: 0x0601D839 RID: 120889 RVA: 0x008F9E98 File Offset: 0x008F8098
 		public unsafe FLinearColor WaterLineColor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterLineColor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterLineColor) = value;
 			}
 		}
 
-		// Token: 0x17002A97 RID: 10903
-		// (get) Token: 0x0601F4A3 RID: 128163 RVA: 0x008B450D File Offset: 0x008B270D
-		// (set) Token: 0x0601F4A4 RID: 128164 RVA: 0x008B4521 File Offset: 0x008B2721
+		// Token: 0x17002F22 RID: 12066
+		// (get) Token: 0x0601D83A RID: 120890 RVA: 0x008F9EAD File Offset: 0x008F80AD
+		// (set) Token: 0x0601D83B RID: 120891 RVA: 0x008F9EC1 File Offset: 0x008F80C1
 		public unsafe FLinearColor WaterColor_High
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterColor_High);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterColor_High) = value;
 			}
 		}
 
-		// Token: 0x17002A98 RID: 10904
-		// (get) Token: 0x0601F4A5 RID: 128165 RVA: 0x008B4536 File Offset: 0x008B2736
-		// (set) Token: 0x0601F4A6 RID: 128166 RVA: 0x008B454A File Offset: 0x008B274A
+		// Token: 0x17002F23 RID: 12067
+		// (get) Token: 0x0601D83C RID: 120892 RVA: 0x008F9ED6 File Offset: 0x008F80D6
+		// (set) Token: 0x0601D83D RID: 120893 RVA: 0x008F9EEA File Offset: 0x008F80EA
 		public unsafe FLinearColor WaterColor_Middle
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterColor_Middle);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterColor_Middle) = value;
 			}
 		}
 
-		// Token: 0x17002A99 RID: 10905
-		// (get) Token: 0x0601F4A7 RID: 128167 RVA: 0x008B455F File Offset: 0x008B275F
-		// (set) Token: 0x0601F4A8 RID: 128168 RVA: 0x008B4573 File Offset: 0x008B2773
+		// Token: 0x17002F24 RID: 12068
+		// (get) Token: 0x0601D83E RID: 120894 RVA: 0x008F9EFF File Offset: 0x008F80FF
+		// (set) Token: 0x0601D83F RID: 120895 RVA: 0x008F9F13 File Offset: 0x008F8113
 		public unsafe FLinearColor WaterColor_Down
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterColor_Down);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterColor_Down) = value;
 			}
 		}
 
-		// Token: 0x17002A9A RID: 10906
-		// (get) Token: 0x0601F4A9 RID: 128169 RVA: 0x008B4588 File Offset: 0x008B2788
-		// (set) Token: 0x0601F4AA RID: 128170 RVA: 0x008B459C File Offset: 0x008B279C
+		// Token: 0x17002F25 RID: 12069
+		// (get) Token: 0x0601D840 RID: 120896 RVA: 0x008F9F28 File Offset: 0x008F8128
+		// (set) Token: 0x0601D841 RID: 120897 RVA: 0x008F9F3C File Offset: 0x008F813C
 		public unsafe FLinearColor FresnelColorAdd
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_FresnelColorAdd);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_FresnelColorAdd) = value;
 			}
 		}
 
-		// Token: 0x17002A9B RID: 10907
-		// (get) Token: 0x0601F4AB RID: 128171 RVA: 0x008B45B1 File Offset: 0x008B27B1
-		// (set) Token: 0x0601F4AC RID: 128172 RVA: 0x008B45C1 File Offset: 0x008B27C1
+		// Token: 0x17002F26 RID: 12070
+		// (get) Token: 0x0601D842 RID: 120898 RVA: 0x008F9F51 File Offset: 0x008F8151
+		// (set) Token: 0x0601D843 RID: 120899 RVA: 0x008F9F61 File Offset: 0x008F8161
 		public unsafe float FresnelRangeWater
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_FresnelRangeWater);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_FresnelRangeWater) = value;
 			}
 		}
 
-		// Token: 0x17002A9C RID: 10908
-		// (get) Token: 0x0601F4AD RID: 128173 RVA: 0x008B45D2 File Offset: 0x008B27D2
-		// (set) Token: 0x0601F4AE RID: 128174 RVA: 0x008B45E2 File Offset: 0x008B27E2
+		// Token: 0x17002F27 RID: 12071
+		// (get) Token: 0x0601D844 RID: 120900 RVA: 0x008F9F72 File Offset: 0x008F8172
+		// (set) Token: 0x0601D845 RID: 120901 RVA: 0x008F9F82 File Offset: 0x008F8182
 		public unsafe float RefractIntensity
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_RefractIntensity);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_RefractIntensity) = value;
 			}
 		}
 
-		// Token: 0x17002A9D RID: 10909
-		// (get) Token: 0x0601F4AF RID: 128175 RVA: 0x008B45F3 File Offset: 0x008B27F3
-		// (set) Token: 0x0601F4B0 RID: 128176 RVA: 0x008B4603 File Offset: 0x008B2803
+		// Token: 0x17002F28 RID: 12072
+		// (get) Token: 0x0601D846 RID: 120902 RVA: 0x008F9F93 File Offset: 0x008F8193
+		// (set) Token: 0x0601D847 RID: 120903 RVA: 0x008F9FA3 File Offset: 0x008F81A3
 		public unsafe float WaterRoughness
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_17);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterRoughness);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_17) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterRoughness) = value;
 			}
 		}
 
-		// Token: 0x17002A9E RID: 10910
-		// (get) Token: 0x0601F4B1 RID: 128177 RVA: 0x008B4614 File Offset: 0x008B2814
-		// (set) Token: 0x0601F4B2 RID: 128178 RVA: 0x008B4624 File Offset: 0x008B2824
+		// Token: 0x17002F29 RID: 12073
+		// (get) Token: 0x0601D848 RID: 120904 RVA: 0x008F9FB4 File Offset: 0x008F81B4
+		// (set) Token: 0x0601D849 RID: 120905 RVA: 0x008F9FC4 File Offset: 0x008F81C4
 		public unsafe float WaterMetallic
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterMetallic);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterMetallic) = value;
 			}
 		}
 
-		// Token: 0x17002A9F RID: 10911
-		// (get) Token: 0x0601F4B3 RID: 128179 RVA: 0x008B4635 File Offset: 0x008B2835
-		// (set) Token: 0x0601F4B4 RID: 128180 RVA: 0x008B4649 File Offset: 0x008B2849
+		// Token: 0x17002F2A RID: 12074
+		// (get) Token: 0x0601D84A RID: 120906 RVA: 0x008F9FD5 File Offset: 0x008F81D5
+		// (set) Token: 0x0601D84B RID: 120907 RVA: 0x008F9FE9 File Offset: 0x008F81E9
 		public unsafe FLinearColor UPColor_Add
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_19);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_UPColor_Add);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_19) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_UPColor_Add) = value;
 			}
 		}
 
-		// Token: 0x17002AA0 RID: 10912
-		// (get) Token: 0x0601F4B5 RID: 128181 RVA: 0x008B465E File Offset: 0x008B285E
-		// (set) Token: 0x0601F4B6 RID: 128182 RVA: 0x008B4672 File Offset: 0x008B2872
+		// Token: 0x17002F2B RID: 12075
+		// (get) Token: 0x0601D84C RID: 120908 RVA: 0x008F9FFE File Offset: 0x008F81FE
+		// (set) Token: 0x0601D84D RID: 120909 RVA: 0x008FA012 File Offset: 0x008F8212
 		public unsafe FLinearColor UpLighColor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_20);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_UpLighColor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_20) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_UpLighColor) = value;
 			}
 		}
 
-		// Token: 0x17002AA1 RID: 10913
-		// (get) Token: 0x0601F4B7 RID: 128183 RVA: 0x008B4687 File Offset: 0x008B2887
-		// (set) Token: 0x0601F4B8 RID: 128184 RVA: 0x008B4697 File Offset: 0x008B2897
+		// Token: 0x17002F2C RID: 12076
+		// (get) Token: 0x0601D84E RID: 120910 RVA: 0x008FA027 File Offset: 0x008F8227
+		// (set) Token: 0x0601D84F RID: 120911 RVA: 0x008FA037 File Offset: 0x008F8237
 		public unsafe float Water_HighProcess
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_21);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_Water_HighProcess);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_21) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_Water_HighProcess) = value;
 			}
 		}
 
-		// Token: 0x17002AA2 RID: 10914
-		// (get) Token: 0x0601F4B9 RID: 128185 RVA: 0x008B46A8 File Offset: 0x008B28A8
-		// (set) Token: 0x0601F4BA RID: 128186 RVA: 0x008B46B8 File Offset: 0x008B28B8
+		// Token: 0x17002F2D RID: 12077
+		// (get) Token: 0x0601D850 RID: 120912 RVA: 0x008FA048 File Offset: 0x008F8248
+		// (set) Token: 0x0601D851 RID: 120913 RVA: 0x008FA058 File Offset: 0x008F8258
 		public unsafe float Water_HighProcess_Seq
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_22);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_Water_HighProcess_Seq);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_22) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_Water_HighProcess_Seq) = value;
 			}
 		}
 
-		// Token: 0x17002AA3 RID: 10915
-		// (get) Token: 0x0601F4BB RID: 128187 RVA: 0x008B46C9 File Offset: 0x008B28C9
-		// (set) Token: 0x0601F4BC RID: 128188 RVA: 0x008B46D9 File Offset: 0x008B28D9
+		// Token: 0x17002F2E RID: 12078
+		// (get) Token: 0x0601D852 RID: 120914 RVA: 0x008FA069 File Offset: 0x008F8269
+		// (set) Token: 0x0601D853 RID: 120915 RVA: 0x008FA079 File Offset: 0x008F8279
 		public unsafe float DrinkBatchPosHeighScale
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_23);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkBatchPosHeighScale);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_23) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkBatchPosHeighScale) = value;
 			}
 		}
 
-		// Token: 0x17002AA4 RID: 10916
-		// (get) Token: 0x0601F4BD RID: 128189 RVA: 0x008B46EA File Offset: 0x008B28EA
-		// (set) Token: 0x0601F4BE RID: 128190 RVA: 0x008B46FA File Offset: 0x008B28FA
+		// Token: 0x17002F2F RID: 12079
+		// (get) Token: 0x0601D854 RID: 120916 RVA: 0x008FA08A File Offset: 0x008F828A
+		// (set) Token: 0x0601D855 RID: 120917 RVA: 0x008FA09A File Offset: 0x008F829A
 		public unsafe float WaterMaskCenterOffset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_24);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterMaskCenterOffset);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_24) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterMaskCenterOffset) = value;
 			}
 		}
 
-		// Token: 0x17002AA5 RID: 10917
-		// (get) Token: 0x0601F4BF RID: 128191 RVA: 0x008B470B File Offset: 0x008B290B
-		// (set) Token: 0x0601F4C0 RID: 128192 RVA: 0x008B471B File Offset: 0x008B291B
+		// Token: 0x17002F30 RID: 12080
+		// (get) Token: 0x0601D856 RID: 120918 RVA: 0x008FA0AB File Offset: 0x008F82AB
+		// (set) Token: 0x0601D857 RID: 120919 RVA: 0x008FA0BB File Offset: 0x008F82BB
 		public unsafe float WaterMaskWidth
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_25);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterMaskWidth);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_25) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterMaskWidth) = value;
 			}
 		}
 
-		// Token: 0x17002AA6 RID: 10918
-		// (get) Token: 0x0601F4C1 RID: 128193 RVA: 0x008B472C File Offset: 0x008B292C
-		// (set) Token: 0x0601F4C2 RID: 128194 RVA: 0x008B473C File Offset: 0x008B293C
+		// Token: 0x17002F31 RID: 12081
+		// (get) Token: 0x0601D858 RID: 120920 RVA: 0x008FA0CC File Offset: 0x008F82CC
+		// (set) Token: 0x0601D859 RID: 120921 RVA: 0x008FA0DC File Offset: 0x008F82DC
 		public unsafe float WaterColor_MidHighProcess
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_26);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterColor_MidHighProcess);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_26) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterColor_MidHighProcess) = value;
 			}
 		}
 
-		// Token: 0x17002AA7 RID: 10919
-		// (get) Token: 0x0601F4C3 RID: 128195 RVA: 0x008B474D File Offset: 0x008B294D
-		// (set) Token: 0x0601F4C4 RID: 128196 RVA: 0x008B475D File Offset: 0x008B295D
+		// Token: 0x17002F32 RID: 12082
+		// (get) Token: 0x0601D85A RID: 120922 RVA: 0x008FA0ED File Offset: 0x008F82ED
+		// (set) Token: 0x0601D85B RID: 120923 RVA: 0x008FA0FD File Offset: 0x008F82FD
 		public unsafe float WaterColor_MidHighWidth
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_27);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterColor_MidHighWidth);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_27) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterColor_MidHighWidth) = value;
 			}
 		}
 
-		// Token: 0x17002AA8 RID: 10920
-		// (get) Token: 0x0601F4C5 RID: 128197 RVA: 0x008B476E File Offset: 0x008B296E
-		// (set) Token: 0x0601F4C6 RID: 128198 RVA: 0x008B477E File Offset: 0x008B297E
+		// Token: 0x17002F33 RID: 12083
+		// (get) Token: 0x0601D85C RID: 120924 RVA: 0x008FA10E File Offset: 0x008F830E
+		// (set) Token: 0x0601D85D RID: 120925 RVA: 0x008FA11E File Offset: 0x008F831E
 		public unsafe float WaterColor_DownMidProcess
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_28);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterColor_DownMidProcess);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_28) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterColor_DownMidProcess) = value;
 			}
 		}
 
-		// Token: 0x17002AA9 RID: 10921
-		// (get) Token: 0x0601F4C7 RID: 128199 RVA: 0x008B478F File Offset: 0x008B298F
-		// (set) Token: 0x0601F4C8 RID: 128200 RVA: 0x008B479F File Offset: 0x008B299F
+		// Token: 0x17002F34 RID: 12084
+		// (get) Token: 0x0601D85E RID: 120926 RVA: 0x008FA12F File Offset: 0x008F832F
+		// (set) Token: 0x0601D85F RID: 120927 RVA: 0x008FA13F File Offset: 0x008F833F
 		public unsafe float WaterColor_DownMidWidth
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_29);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterColor_DownMidWidth);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_29) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_WaterColor_DownMidWidth) = value;
 			}
 		}
 
-		// Token: 0x17002AAA RID: 10922
-		// (get) Token: 0x0601F4C9 RID: 128201 RVA: 0x008B47B0 File Offset: 0x008B29B0
-		// (set) Token: 0x0601F4CA RID: 128202 RVA: 0x008B47C0 File Offset: 0x008B29C0
+		// Token: 0x17002F35 RID: 12085
+		// (get) Token: 0x0601D860 RID: 120928 RVA: 0x008FA150 File Offset: 0x008F8350
+		// (set) Token: 0x0601D861 RID: 120929 RVA: 0x008FA160 File Offset: 0x008F8360
 		public unsafe float UpLightMask_Process
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_30);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_UpLightMask_Process);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_30) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_UpLightMask_Process) = value;
 			}
 		}
 
-		// Token: 0x17002AAB RID: 10923
-		// (get) Token: 0x0601F4CB RID: 128203 RVA: 0x008B47D1 File Offset: 0x008B29D1
-		// (set) Token: 0x0601F4CC RID: 128204 RVA: 0x008B47E1 File Offset: 0x008B29E1
+		// Token: 0x17002F36 RID: 12086
+		// (get) Token: 0x0601D862 RID: 120930 RVA: 0x008FA171 File Offset: 0x008F8371
+		// (set) Token: 0x0601D863 RID: 120931 RVA: 0x008FA181 File Offset: 0x008F8381
 		public unsafe float BubbleIntensity
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_31);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_BubbleIntensity);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_31) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_BubbleIntensity) = value;
 			}
 		}
 
-		// Token: 0x17002AAC RID: 10924
-		// (get) Token: 0x0601F4CD RID: 128205 RVA: 0x008B47F2 File Offset: 0x008B29F2
-		// (set) Token: 0x0601F4CE RID: 128206 RVA: 0x008B4802 File Offset: 0x008B2A02
+		// Token: 0x17002F37 RID: 12087
+		// (get) Token: 0x0601D864 RID: 120932 RVA: 0x008FA192 File Offset: 0x008F8392
+		// (set) Token: 0x0601D865 RID: 120933 RVA: 0x008FA1A2 File Offset: 0x008F83A2
 		public unsafe float BubbleSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_32);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_BubbleSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_32) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_BubbleSpeed) = value;
 			}
 		}
 
-		// Token: 0x17002AAD RID: 10925
-		// (get) Token: 0x0601F4CF RID: 128207 RVA: 0x008B4813 File Offset: 0x008B2A13
-		// (set) Token: 0x0601F4D0 RID: 128208 RVA: 0x008B4823 File Offset: 0x008B2A23
+		// Token: 0x17002F38 RID: 12088
+		// (get) Token: 0x0601D866 RID: 120934 RVA: 0x008FA1B3 File Offset: 0x008F83B3
+		// (set) Token: 0x0601D867 RID: 120935 RVA: 0x008FA1C3 File Offset: 0x008F83C3
 		public unsafe int DrinkOrnament_Tag
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_33);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkOrnament_Tag);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_33) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkOrnament_Tag) = value;
 			}
 		}
 
-		// Token: 0x17002AAE RID: 10926
-		// (get) Token: 0x0601F4D1 RID: 128209 RVA: 0x008B4834 File Offset: 0x008B2A34
-		// (set) Token: 0x0601F4D2 RID: 128210 RVA: 0x008B4844 File Offset: 0x008B2A44
+		// Token: 0x17002F39 RID: 12089
+		// (get) Token: 0x0601D868 RID: 120936 RVA: 0x008FA1D4 File Offset: 0x008F83D4
+		// (set) Token: 0x0601D869 RID: 120937 RVA: 0x008FA1E4 File Offset: 0x008F83E4
 		public unsafe int DrinksBatching_Tag01
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_34);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinksBatching_Tag01);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_34) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinksBatching_Tag01) = value;
 			}
 		}
 
-		// Token: 0x17002AAF RID: 10927
-		// (get) Token: 0x0601F4D3 RID: 128211 RVA: 0x008B4855 File Offset: 0x008B2A55
-		// (set) Token: 0x0601F4D4 RID: 128212 RVA: 0x008B4865 File Offset: 0x008B2A65
+		// Token: 0x17002F3A RID: 12090
+		// (get) Token: 0x0601D86A RID: 120938 RVA: 0x008FA1F5 File Offset: 0x008F83F5
+		// (set) Token: 0x0601D86B RID: 120939 RVA: 0x008FA205 File Offset: 0x008F8405
 		public unsafe int DrinksBatching_Tag02
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_35);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinksBatching_Tag02);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_35) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinksBatching_Tag02) = value;
 			}
 		}
 
-		// Token: 0x17002AB0 RID: 10928
-		// (get) Token: 0x0601F4D5 RID: 128213 RVA: 0x008B4876 File Offset: 0x008B2A76
-		// (set) Token: 0x0601F4D6 RID: 128214 RVA: 0x008B4886 File Offset: 0x008B2A86
+		// Token: 0x17002F3B RID: 12091
+		// (get) Token: 0x0601D86C RID: 120940 RVA: 0x008FA216 File Offset: 0x008F8416
+		// (set) Token: 0x0601D86D RID: 120941 RVA: 0x008FA226 File Offset: 0x008F8426
 		public unsafe int DrinksIngredientsFall_Tag01
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_36);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinksIngredientsFall_Tag01);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_36) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinksIngredientsFall_Tag01) = value;
 			}
 		}
 
-		// Token: 0x17002AB1 RID: 10929
-		// (get) Token: 0x0601F4D7 RID: 128215 RVA: 0x008B4897 File Offset: 0x008B2A97
-		// (set) Token: 0x0601F4D8 RID: 128216 RVA: 0x008B48A7 File Offset: 0x008B2AA7
+		// Token: 0x17002F3C RID: 12092
+		// (get) Token: 0x0601D86E RID: 120942 RVA: 0x008FA237 File Offset: 0x008F8437
+		// (set) Token: 0x0601D86F RID: 120943 RVA: 0x008FA247 File Offset: 0x008F8447
 		public unsafe int DrinksIngredientsFall_Tag02
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_37);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinksIngredientsFall_Tag02);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_37) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinksIngredientsFall_Tag02) = value;
 			}
 		}
 
-		// Token: 0x17002AB2 RID: 10930
-		// (get) Token: 0x0601F4D9 RID: 128217 RVA: 0x008B48B8 File Offset: 0x008B2AB8
-		// (set) Token: 0x0601F4DA RID: 128218 RVA: 0x008B48CC File Offset: 0x008B2ACC
+		// Token: 0x17002F3D RID: 12093
+		// (get) Token: 0x0601D870 RID: 120944 RVA: 0x008FA258 File Offset: 0x008F8458
+		// (set) Token: 0x0601D871 RID: 120945 RVA: 0x008FA26C File Offset: 0x008F846C
 		public unsafe FVector DrinksIngredientsFall_LocationStart
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_38);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinksIngredientsFall_LocationStart);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_38) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinksIngredientsFall_LocationStart) = value;
 			}
 		}
 
-		// Token: 0x17002AB3 RID: 10931
-		// (get) Token: 0x0601F4DB RID: 128219 RVA: 0x008B48E1 File Offset: 0x008B2AE1
-		// (set) Token: 0x0601F4DC RID: 128220 RVA: 0x008B48F1 File Offset: 0x008B2AF1
+		// Token: 0x17002F3E RID: 12094
+		// (get) Token: 0x0601D872 RID: 120946 RVA: 0x008FA281 File Offset: 0x008F8481
+		// (set) Token: 0x0601D873 RID: 120947 RVA: 0x008FA291 File Offset: 0x008F8491
 		public unsafe float Liquid_Time
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_39);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_Liquid_Time);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_39) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_Liquid_Time) = value;
 			}
 		}
 
-		// Token: 0x17002AB4 RID: 10932
-		// (get) Token: 0x0601F4DD RID: 128221 RVA: 0x008B4902 File Offset: 0x008B2B02
-		// (set) Token: 0x0601F4DE RID: 128222 RVA: 0x008B4912 File Offset: 0x008B2B12
+		// Token: 0x17002F3F RID: 12095
+		// (get) Token: 0x0601D874 RID: 120948 RVA: 0x008FA2A2 File Offset: 0x008F84A2
+		// (set) Token: 0x0601D875 RID: 120949 RVA: 0x008FA2B2 File Offset: 0x008F84B2
 		public unsafe float DrinkOrnament_Scale
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_40);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkOrnament_Scale);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_40) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkOrnament_Scale) = value;
 			}
 		}
 
-		// Token: 0x17002AB5 RID: 10933
-		// (get) Token: 0x0601F4DF RID: 128223 RVA: 0x008B4923 File Offset: 0x008B2B23
-		// (set) Token: 0x0601F4E0 RID: 128224 RVA: 0x008B4937 File Offset: 0x008B2B37
+		// Token: 0x17002F40 RID: 12096
+		// (get) Token: 0x0601D876 RID: 120950 RVA: 0x008FA2C3 File Offset: 0x008F84C3
+		// (set) Token: 0x0601D877 RID: 120951 RVA: 0x008FA2D7 File Offset: 0x008F84D7
 		public unsafe FVector DrinkOrnament_Location
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_41);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkOrnament_Location);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_41) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkOrnament_Location) = value;
 			}
 		}
 
-		// Token: 0x17002AB6 RID: 10934
-		// (get) Token: 0x0601F4E1 RID: 128225 RVA: 0x008B494C File Offset: 0x008B2B4C
-		// (set) Token: 0x0601F4E2 RID: 128226 RVA: 0x008B4960 File Offset: 0x008B2B60
+		// Token: 0x17002F41 RID: 12097
+		// (get) Token: 0x0601D878 RID: 120952 RVA: 0x008FA2EC File Offset: 0x008F84EC
+		// (set) Token: 0x0601D879 RID: 120953 RVA: 0x008FA300 File Offset: 0x008F8500
 		public unsafe FRotator DrinkOrnament_Rotation
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_42);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkOrnament_Rotation);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_42) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkOrnament_Rotation) = value;
 			}
 		}
 
-		// Token: 0x17002AB7 RID: 10935
-		// (get) Token: 0x0601F4E3 RID: 128227 RVA: 0x008B4975 File Offset: 0x008B2B75
-		// (set) Token: 0x0601F4E4 RID: 128228 RVA: 0x008B4985 File Offset: 0x008B2B85
+		// Token: 0x17002F42 RID: 12098
+		// (get) Token: 0x0601D87A RID: 120954 RVA: 0x008FA315 File Offset: 0x008F8515
+		// (set) Token: 0x0601D87B RID: 120955 RVA: 0x008FA325 File Offset: 0x008F8525
 		public unsafe float DrinksBatching_Scale01
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_43);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinksBatching_Scale01);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_43) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinksBatching_Scale01) = value;
 			}
 		}
 
-		// Token: 0x17002AB8 RID: 10936
-		// (get) Token: 0x0601F4E5 RID: 128229 RVA: 0x008B4996 File Offset: 0x008B2B96
-		// (set) Token: 0x0601F4E6 RID: 128230 RVA: 0x008B49A6 File Offset: 0x008B2BA6
+		// Token: 0x17002F43 RID: 12099
+		// (get) Token: 0x0601D87C RID: 120956 RVA: 0x008FA336 File Offset: 0x008F8536
+		// (set) Token: 0x0601D87D RID: 120957 RVA: 0x008FA346 File Offset: 0x008F8546
 		public unsafe float DrinksBatching_Scale02
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_44);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinksBatching_Scale02);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_44) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinksBatching_Scale02) = value;
 			}
 		}
 
-		// Token: 0x17002AB9 RID: 10937
-		// (get) Token: 0x0601F4E7 RID: 128231 RVA: 0x008B49B7 File Offset: 0x008B2BB7
-		// (set) Token: 0x0601F4E8 RID: 128232 RVA: 0x008B49C7 File Offset: 0x008B2BC7
+		// Token: 0x17002F44 RID: 12100
+		// (get) Token: 0x0601D87E RID: 120958 RVA: 0x008FA357 File Offset: 0x008F8557
+		// (set) Token: 0x0601D87F RID: 120959 RVA: 0x008FA367 File Offset: 0x008F8567
 		public unsafe float DrinkBatchPosScale
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_45);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkBatchPosScale);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_45) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkBatchPosScale) = value;
 			}
 		}
 
-		// Token: 0x17002ABA RID: 10938
-		// (get) Token: 0x0601F4E9 RID: 128233 RVA: 0x008B49D8 File Offset: 0x008B2BD8
-		// (set) Token: 0x0601F4EA RID: 128234 RVA: 0x008B49EC File Offset: 0x008B2BEC
+		// Token: 0x17002F45 RID: 12101
+		// (get) Token: 0x0601D880 RID: 120960 RVA: 0x008FA378 File Offset: 0x008F8578
+		// (set) Token: 0x0601D881 RID: 120961 RVA: 0x008FA38C File Offset: 0x008F858C
 		public unsafe FVector DrinkBatchPosOnLiquid01
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_46);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkBatchPosOnLiquid01);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_46) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkBatchPosOnLiquid01) = value;
 			}
 		}
 
-		// Token: 0x17002ABB RID: 10939
-		// (get) Token: 0x0601F4EB RID: 128235 RVA: 0x008B4A01 File Offset: 0x008B2C01
-		// (set) Token: 0x0601F4EC RID: 128236 RVA: 0x008B4A15 File Offset: 0x008B2C15
+		// Token: 0x17002F46 RID: 12102
+		// (get) Token: 0x0601D882 RID: 120962 RVA: 0x008FA3A1 File Offset: 0x008F85A1
+		// (set) Token: 0x0601D883 RID: 120963 RVA: 0x008FA3B5 File Offset: 0x008F85B5
 		public unsafe FVector DrinkBatchPosOnLiquid02
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_47);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkBatchPosOnLiquid02);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_47) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_DrinkBatchPosOnLiquid02) = value;
 			}
 		}
 
-		// Token: 0x17002ABC RID: 10940
-		// (get) Token: 0x0601F4ED RID: 128237 RVA: 0x008B4A2A File Offset: 0x008B2C2A
-		// (set) Token: 0x0601F4EE RID: 128238 RVA: 0x008B4A3A File Offset: 0x008B2C3A
+		// Token: 0x17002F47 RID: 12103
+		// (get) Token: 0x0601D884 RID: 120964 RVA: 0x008FA3CA File Offset: 0x008F85CA
+		// (set) Token: 0x0601D885 RID: 120965 RVA: 0x008FA3DA File Offset: 0x008F85DA
 		public unsafe bool UseLiquidSocketPosition
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_48) != 0;
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_UseLiquidSocketPosition) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_48) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_UseLiquidSocketPosition) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17002ABD RID: 10941
-		// (get) Token: 0x0601F4EF RID: 128239 RVA: 0x008B4A4B File Offset: 0x008B2C4B
-		// (set) Token: 0x0601F4F0 RID: 128240 RVA: 0x008B4A5B File Offset: 0x008B2C5B
+		// Token: 0x17002F48 RID: 12104
+		// (get) Token: 0x0601D886 RID: 120966 RVA: 0x008FA3EB File Offset: 0x008F85EB
+		// (set) Token: 0x0601D887 RID: 120967 RVA: 0x008FA3FB File Offset: 0x008F85FB
 		public unsafe bool IsUpdateMPC
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_49) != 0;
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_IsUpdateMPC) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_49) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_IsUpdateMPC) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17002ABE RID: 10942
-		// (get) Token: 0x0601F4F1 RID: 128241 RVA: 0x008B4A6C File Offset: 0x008B2C6C
-		// (set) Token: 0x0601F4F2 RID: 128242 RVA: 0x008B4A7C File Offset: 0x008B2C7C
+		// Token: 0x17002F49 RID: 12105
+		// (get) Token: 0x0601D888 RID: 120968 RVA: 0x008FA40C File Offset: 0x008F860C
+		// (set) Token: 0x0601D889 RID: 120969 RVA: 0x008FA41C File Offset: 0x008F861C
 		public unsafe bool IsTick
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_50) != 0;
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_IsTick) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_50) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_IsTick) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17002ABF RID: 10943
-		// (get) Token: 0x0601F4F3 RID: 128243 RVA: 0x008B4A8D File Offset: 0x008B2C8D
-		// (set) Token: 0x0601F4F4 RID: 128244 RVA: 0x008B4AA1 File Offset: 0x008B2CA1
+		// Token: 0x17002F4A RID: 12106
+		// (get) Token: 0x0601D88A RID: 120970 RVA: 0x008FA42D File Offset: 0x008F862D
+		// (set) Token: 0x0601D88B RID: 120971 RVA: 0x008FA441 File Offset: 0x008F8641
 		public unsafe FVectorDouble LiquidLocation
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_51);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_LiquidLocation);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_51) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_LiquidLocation) = value;
 			}
 		}
 
-		// Token: 0x17002AC0 RID: 10944
-		// (get) Token: 0x0601F4F5 RID: 128245 RVA: 0x008B4AB6 File Offset: 0x008B2CB6
-		// (set) Token: 0x0601F4F6 RID: 128246 RVA: 0x008B4ACA File Offset: 0x008B2CCA
+		// Token: 0x17002F4B RID: 12107
+		// (get) Token: 0x0601D88C RID: 120972 RVA: 0x008FA456 File Offset: 0x008F8656
+		// (set) Token: 0x0601D88D RID: 120973 RVA: 0x008FA46A File Offset: 0x008F866A
 		public unsafe FName LiquidSocketName
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_52);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_LiquidSocketName);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_52) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_LiquidSocketName) = value;
 			}
 		}
 
-		// Token: 0x17002AC1 RID: 10945
-		// (get) Token: 0x0601F4F7 RID: 128247 RVA: 0x008B4ADF File Offset: 0x008B2CDF
-		// (set) Token: 0x0601F4F8 RID: 128248 RVA: 0x008B4AF3 File Offset: 0x008B2CF3
+		// Token: 0x17002F4C RID: 12108
+		// (get) Token: 0x0601D88E RID: 120974 RVA: 0x008FA47F File Offset: 0x008F867F
+		// (set) Token: 0x0601D88F RID: 120975 RVA: 0x008FA493 File Offset: 0x008F8693
 		public unsafe FName BatchSocketName
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_53);
+				return *(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_BatchSocketName);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_53) = value;
+				*(base.NativePtr + (IntPtr)BP_Prop_GobletLiquid_C.__PropertyOffset_BatchSocketName) = value;
 			}
 		}
 
-		// Token: 0x0601F4F9 RID: 128249 RVA: 0x008B4B08 File Offset: 0x008B2D08
+		// Token: 0x0601D890 RID: 120976 RVA: 0x008FA4A8 File Offset: 0x008F86A8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void UpdateLiquidAndFallTag()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Prop_GobletLiquid_C.__UpdateLiquidAndFallTag_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F4FA RID: 128250 RVA: 0x008B4B1C File Offset: 0x008B2D1C
+		// Token: 0x0601D891 RID: 120977 RVA: 0x008FA4BC File Offset: 0x008F86BC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetBatchLiquidHeight(ref float LiquidHeight)
 		{
 			BP_Prop_GobletLiquid_C.__GetBatchLiquidHeight_FunctionParams* ptr = stackalloc BP_Prop_GobletLiquid_C.__GetBatchLiquidHeight_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(BP_Prop_GobletLiquid_C.__GetBatchLiquidHeight_FunctionParams) & -16L;
@@ -851,57 +849,50 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP.BPGobletLiquid
 			LiquidHeight = ptr->LiquidHeight;
 		}
 
-		// Token: 0x0601F4FB RID: 128251 RVA: 0x008B4B6B File Offset: 0x008B2D6B
+		// Token: 0x0601D892 RID: 120978 RVA: 0x008FA50B File Offset: 0x008F870B
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void UpdateLiquidMPC()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Prop_GobletLiquid_C.__UpdateLiquidMPC_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F4FC RID: 128252 RVA: 0x008B4B7F File Offset: 0x008B2D7F
+		// Token: 0x0601D893 RID: 120979 RVA: 0x008FA51F File Offset: 0x008F871F
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void PlayBatchingFallNiagara()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Prop_GobletLiquid_C.__PlayBatchingFallNiagara_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F4FD RID: 128253 RVA: 0x008B4B93 File Offset: 0x008B2D93
+		// Token: 0x0601D894 RID: 120980 RVA: 0x008FA533 File Offset: 0x008F8733
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void PlayLiquidNiagara()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Prop_GobletLiquid_C.__PlayLiquidNiagara_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F4FE RID: 128254 RVA: 0x008B4BA7 File Offset: 0x008B2DA7
+		// Token: 0x0601D895 RID: 120981 RVA: 0x008FA547 File Offset: 0x008F8747
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void UpdateGobletLiguid()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Prop_GobletLiquid_C.__UpdateGobletLiguid_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F4FF RID: 128255 RVA: 0x008B4BBB File Offset: 0x008B2DBB
+		// Token: 0x0601D896 RID: 120982 RVA: 0x008FA55B File Offset: 0x008F875B
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Prop_GobletLiquid_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F500 RID: 128256 RVA: 0x008B4BCF File Offset: 0x008B2DCF
+		// Token: 0x0601D897 RID: 120983 RVA: 0x008FA56F File Offset: 0x008F876F
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Prop_GobletLiquid_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Prop_GobletLiquid_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F501 RID: 128257 RVA: 0x008B4BE4 File Offset: 0x008B2DE4
+		// Token: 0x0601D898 RID: 120984 RVA: 0x008FA584 File Offset: 0x008F8784
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_Prop_GobletLiquid_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_Prop_GobletLiquid_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Prop_GobletLiquid_C.__ReceiveTick_FunctionParams) & -16L;
@@ -910,20 +901,18 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP.BPGobletLiquid
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Prop_GobletLiquid_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F502 RID: 128258 RVA: 0x008B4C2C File Offset: 0x008B2E2C
+		// Token: 0x0601D899 RID: 120985 RVA: 0x008FA5CC File Offset: 0x008F87CC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_Prop_GobletLiquid_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_Prop_GobletLiquid_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Prop_GobletLiquid_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_Prop_GobletLiquid_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Prop_GobletLiquid_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Prop_GobletLiquid_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F503 RID: 128259 RVA: 0x008B4C74 File Offset: 0x008B2E74
+		// Token: 0x0601D89A RID: 120986 RVA: 0x008FA614 File Offset: 0x008F8814
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void EditorTick(float DeltaSeconds)
 		{
 			BP_Prop_GobletLiquid_C.__EditorTick_FunctionParams* ptr = stackalloc BP_Prop_GobletLiquid_C.__EditorTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Prop_GobletLiquid_C.__EditorTick_FunctionParams) & -16L;
@@ -932,247 +921,246 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP.BPGobletLiquid
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Prop_GobletLiquid_C.__EditorTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F504 RID: 128260 RVA: 0x008B4CBC File Offset: 0x008B2EBC
+		// Token: 0x0601D89B RID: 120987 RVA: 0x008FA65C File Offset: 0x008F885C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void EditorTick_Implementation(float DeltaSeconds)
 		{
 			BP_Prop_GobletLiquid_C.__EditorTick_FunctionParams* ptr = stackalloc BP_Prop_GobletLiquid_C.__EditorTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Prop_GobletLiquid_C.__EditorTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_Prop_GobletLiquid_C.__EditorTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Prop_GobletLiquid_C.__EditorTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Prop_GobletLiquid_C.__EditorTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F505 RID: 128261 RVA: 0x008B4D03 File Offset: 0x008B2F03
+		// Token: 0x0601D89C RID: 120988 RVA: 0x008FA6A2 File Offset: 0x008F88A2
 		protected BP_Prop_GobletLiquid_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400F017 RID: 61463
+		// Token: 0x0400F8A4 RID: 63652
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Sequence/Seq_BP/BPGobletLiquid/BP_Prop_GobletLiquid.BP_Prop_GobletLiquid_C";
 
-		// Token: 0x0400F018 RID: 61464
+		// Token: 0x0400F8A5 RID: 63653
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400F019 RID: 61465
+		// Token: 0x0400F8A6 RID: 63654
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400F01A RID: 61466
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400F8A7 RID: 63655
+		internal static int __PropertyOffset_KuroCollectActor;
 
-		// Token: 0x0400F01B RID: 61467
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400F8A8 RID: 63656
+		internal static int __PropertyOffset_NS_Fx_DrinksIngredients_Fall;
 
-		// Token: 0x0400F01C RID: 61468
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400F8A9 RID: 63657
+		internal static int __PropertyOffset_NS_Fx_DrinkOrnament;
 
-		// Token: 0x0400F01D RID: 61469
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400F8AA RID: 63658
+		internal static int __PropertyOffset_NS_Fx_DrinksBatching02;
 
-		// Token: 0x0400F01E RID: 61470
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400F8AB RID: 63659
+		internal static int __PropertyOffset_NS_Fx_DrinksBatching01;
 
-		// Token: 0x0400F01F RID: 61471
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400F8AC RID: 63660
+		internal static int __PropertyOffset_NS_Fx_Liquid;
 
-		// Token: 0x0400F020 RID: 61472
-		internal static int __PropertyOffset_7;
+		// Token: 0x0400F8AD RID: 63661
+		internal static int __PropertyOffset_Liquid;
 
-		// Token: 0x0400F021 RID: 61473
-		internal static int __PropertyOffset_8;
+		// Token: 0x0400F8AE RID: 63662
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x0400F022 RID: 61474
-		internal static int __PropertyOffset_9;
+		// Token: 0x0400F8AF RID: 63663
+		internal static int __PropertyOffset_MainColorPalette;
 
-		// Token: 0x0400F023 RID: 61475
-		internal static int __PropertyOffset_10;
+		// Token: 0x0400F8B0 RID: 63664
+		internal static int __PropertyOffset_WaterLineColor;
 
-		// Token: 0x0400F024 RID: 61476
-		internal static int __PropertyOffset_11;
+		// Token: 0x0400F8B1 RID: 63665
+		internal static int __PropertyOffset_WaterColor_High;
 
-		// Token: 0x0400F025 RID: 61477
-		internal static int __PropertyOffset_12;
+		// Token: 0x0400F8B2 RID: 63666
+		internal static int __PropertyOffset_WaterColor_Middle;
 
-		// Token: 0x0400F026 RID: 61478
-		internal static int __PropertyOffset_13;
+		// Token: 0x0400F8B3 RID: 63667
+		internal static int __PropertyOffset_WaterColor_Down;
 
-		// Token: 0x0400F027 RID: 61479
-		internal static int __PropertyOffset_14;
+		// Token: 0x0400F8B4 RID: 63668
+		internal static int __PropertyOffset_FresnelColorAdd;
 
-		// Token: 0x0400F028 RID: 61480
-		internal static int __PropertyOffset_15;
+		// Token: 0x0400F8B5 RID: 63669
+		internal static int __PropertyOffset_FresnelRangeWater;
 
-		// Token: 0x0400F029 RID: 61481
-		internal static int __PropertyOffset_16;
+		// Token: 0x0400F8B6 RID: 63670
+		internal static int __PropertyOffset_RefractIntensity;
 
-		// Token: 0x0400F02A RID: 61482
-		internal static int __PropertyOffset_17;
+		// Token: 0x0400F8B7 RID: 63671
+		internal static int __PropertyOffset_WaterRoughness;
 
-		// Token: 0x0400F02B RID: 61483
-		internal static int __PropertyOffset_18;
+		// Token: 0x0400F8B8 RID: 63672
+		internal static int __PropertyOffset_WaterMetallic;
 
-		// Token: 0x0400F02C RID: 61484
-		internal static int __PropertyOffset_19;
+		// Token: 0x0400F8B9 RID: 63673
+		internal static int __PropertyOffset_UPColor_Add;
 
-		// Token: 0x0400F02D RID: 61485
-		internal static int __PropertyOffset_20;
+		// Token: 0x0400F8BA RID: 63674
+		internal static int __PropertyOffset_UpLighColor;
 
-		// Token: 0x0400F02E RID: 61486
-		internal static int __PropertyOffset_21;
+		// Token: 0x0400F8BB RID: 63675
+		internal static int __PropertyOffset_Water_HighProcess;
 
-		// Token: 0x0400F02F RID: 61487
-		internal static int __PropertyOffset_22;
+		// Token: 0x0400F8BC RID: 63676
+		internal static int __PropertyOffset_Water_HighProcess_Seq;
 
-		// Token: 0x0400F030 RID: 61488
-		internal static int __PropertyOffset_23;
+		// Token: 0x0400F8BD RID: 63677
+		internal static int __PropertyOffset_DrinkBatchPosHeighScale;
 
-		// Token: 0x0400F031 RID: 61489
-		internal static int __PropertyOffset_24;
+		// Token: 0x0400F8BE RID: 63678
+		internal static int __PropertyOffset_WaterMaskCenterOffset;
 
-		// Token: 0x0400F032 RID: 61490
-		internal static int __PropertyOffset_25;
+		// Token: 0x0400F8BF RID: 63679
+		internal static int __PropertyOffset_WaterMaskWidth;
 
-		// Token: 0x0400F033 RID: 61491
-		internal static int __PropertyOffset_26;
+		// Token: 0x0400F8C0 RID: 63680
+		internal static int __PropertyOffset_WaterColor_MidHighProcess;
 
-		// Token: 0x0400F034 RID: 61492
-		internal static int __PropertyOffset_27;
+		// Token: 0x0400F8C1 RID: 63681
+		internal static int __PropertyOffset_WaterColor_MidHighWidth;
 
-		// Token: 0x0400F035 RID: 61493
-		internal static int __PropertyOffset_28;
+		// Token: 0x0400F8C2 RID: 63682
+		internal static int __PropertyOffset_WaterColor_DownMidProcess;
 
-		// Token: 0x0400F036 RID: 61494
-		internal static int __PropertyOffset_29;
+		// Token: 0x0400F8C3 RID: 63683
+		internal static int __PropertyOffset_WaterColor_DownMidWidth;
 
-		// Token: 0x0400F037 RID: 61495
-		internal static int __PropertyOffset_30;
+		// Token: 0x0400F8C4 RID: 63684
+		internal static int __PropertyOffset_UpLightMask_Process;
 
-		// Token: 0x0400F038 RID: 61496
-		internal static int __PropertyOffset_31;
+		// Token: 0x0400F8C5 RID: 63685
+		internal static int __PropertyOffset_BubbleIntensity;
 
-		// Token: 0x0400F039 RID: 61497
-		internal static int __PropertyOffset_32;
+		// Token: 0x0400F8C6 RID: 63686
+		internal static int __PropertyOffset_BubbleSpeed;
 
-		// Token: 0x0400F03A RID: 61498
-		internal static int __PropertyOffset_33;
+		// Token: 0x0400F8C7 RID: 63687
+		internal static int __PropertyOffset_DrinkOrnament_Tag;
 
-		// Token: 0x0400F03B RID: 61499
-		internal static int __PropertyOffset_34;
+		// Token: 0x0400F8C8 RID: 63688
+		internal static int __PropertyOffset_DrinksBatching_Tag01;
 
-		// Token: 0x0400F03C RID: 61500
-		internal static int __PropertyOffset_35;
+		// Token: 0x0400F8C9 RID: 63689
+		internal static int __PropertyOffset_DrinksBatching_Tag02;
 
-		// Token: 0x0400F03D RID: 61501
-		internal static int __PropertyOffset_36;
+		// Token: 0x0400F8CA RID: 63690
+		internal static int __PropertyOffset_DrinksIngredientsFall_Tag01;
 
-		// Token: 0x0400F03E RID: 61502
-		internal static int __PropertyOffset_37;
+		// Token: 0x0400F8CB RID: 63691
+		internal static int __PropertyOffset_DrinksIngredientsFall_Tag02;
 
-		// Token: 0x0400F03F RID: 61503
-		internal static int __PropertyOffset_38;
+		// Token: 0x0400F8CC RID: 63692
+		internal static int __PropertyOffset_DrinksIngredientsFall_LocationStart;
 
-		// Token: 0x0400F040 RID: 61504
-		internal static int __PropertyOffset_39;
+		// Token: 0x0400F8CD RID: 63693
+		internal static int __PropertyOffset_Liquid_Time;
 
-		// Token: 0x0400F041 RID: 61505
-		internal static int __PropertyOffset_40;
+		// Token: 0x0400F8CE RID: 63694
+		internal static int __PropertyOffset_DrinkOrnament_Scale;
 
-		// Token: 0x0400F042 RID: 61506
-		internal static int __PropertyOffset_41;
+		// Token: 0x0400F8CF RID: 63695
+		internal static int __PropertyOffset_DrinkOrnament_Location;
 
-		// Token: 0x0400F043 RID: 61507
-		internal static int __PropertyOffset_42;
+		// Token: 0x0400F8D0 RID: 63696
+		internal static int __PropertyOffset_DrinkOrnament_Rotation;
 
-		// Token: 0x0400F044 RID: 61508
-		internal static int __PropertyOffset_43;
+		// Token: 0x0400F8D1 RID: 63697
+		internal static int __PropertyOffset_DrinksBatching_Scale01;
 
-		// Token: 0x0400F045 RID: 61509
-		internal static int __PropertyOffset_44;
+		// Token: 0x0400F8D2 RID: 63698
+		internal static int __PropertyOffset_DrinksBatching_Scale02;
 
-		// Token: 0x0400F046 RID: 61510
-		internal static int __PropertyOffset_45;
+		// Token: 0x0400F8D3 RID: 63699
+		internal static int __PropertyOffset_DrinkBatchPosScale;
 
-		// Token: 0x0400F047 RID: 61511
-		internal static int __PropertyOffset_46;
+		// Token: 0x0400F8D4 RID: 63700
+		internal static int __PropertyOffset_DrinkBatchPosOnLiquid01;
 
-		// Token: 0x0400F048 RID: 61512
-		internal static int __PropertyOffset_47;
+		// Token: 0x0400F8D5 RID: 63701
+		internal static int __PropertyOffset_DrinkBatchPosOnLiquid02;
 
-		// Token: 0x0400F049 RID: 61513
-		internal static int __PropertyOffset_48;
+		// Token: 0x0400F8D6 RID: 63702
+		internal static int __PropertyOffset_UseLiquidSocketPosition;
 
-		// Token: 0x0400F04A RID: 61514
-		internal static int __PropertyOffset_49;
+		// Token: 0x0400F8D7 RID: 63703
+		internal static int __PropertyOffset_IsUpdateMPC;
 
-		// Token: 0x0400F04B RID: 61515
-		internal static int __PropertyOffset_50;
+		// Token: 0x0400F8D8 RID: 63704
+		internal static int __PropertyOffset_IsTick;
 
-		// Token: 0x0400F04C RID: 61516
-		internal static int __PropertyOffset_51;
+		// Token: 0x0400F8D9 RID: 63705
+		internal static int __PropertyOffset_LiquidLocation;
 
-		// Token: 0x0400F04D RID: 61517
-		internal static int __PropertyOffset_52;
+		// Token: 0x0400F8DA RID: 63706
+		internal static int __PropertyOffset_LiquidSocketName;
 
-		// Token: 0x0400F04E RID: 61518
-		internal static int __PropertyOffset_53;
+		// Token: 0x0400F8DB RID: 63707
+		internal static int __PropertyOffset_BatchSocketName;
 
-		// Token: 0x0400F04F RID: 61519
+		// Token: 0x0400F8DC RID: 63708
 		private static IntPtr __UpdateLiquidAndFallTag_NativeFunctionPtr;
 
-		// Token: 0x0400F050 RID: 61520
+		// Token: 0x0400F8DD RID: 63709
 		private static IntPtr __GetBatchLiquidHeight_NativeFunctionPtr;
 
-		// Token: 0x0400F051 RID: 61521
+		// Token: 0x0400F8DE RID: 63710
 		private static IntPtr __UpdateLiquidMPC_NativeFunctionPtr;
 
-		// Token: 0x0400F052 RID: 61522
+		// Token: 0x0400F8DF RID: 63711
 		private static IntPtr __PlayBatchingFallNiagara_NativeFunctionPtr;
 
-		// Token: 0x0400F053 RID: 61523
+		// Token: 0x0400F8E0 RID: 63712
 		private static IntPtr __PlayLiquidNiagara_NativeFunctionPtr;
 
-		// Token: 0x0400F054 RID: 61524
+		// Token: 0x0400F8E1 RID: 63713
 		private static IntPtr __UpdateGobletLiguid_NativeFunctionPtr;
 
-		// Token: 0x0400F055 RID: 61525
+		// Token: 0x0400F8E2 RID: 63714
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x0400F056 RID: 61526
+		// Token: 0x0400F8E3 RID: 63715
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x0400F057 RID: 61527
+		// Token: 0x0400F8E4 RID: 63716
 		private static IntPtr __EditorTick_NativeFunctionPtr;
 
-		// Token: 0x02009AB6 RID: 39606
+		// Token: 0x02008D45 RID: 36165
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __GetBatchLiquidHeight_FunctionParams
 		{
-			// Token: 0x04031042 RID: 200770
+			// Token: 0x0402C8B5 RID: 182453
 			[FieldOffset(0)]
 			public float LiquidHeight;
 		}
 
-		// Token: 0x02009AB7 RID: 39607
+		// Token: 0x02008D46 RID: 36166
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x04031043 RID: 200771
+			// Token: 0x0402C8B6 RID: 182454
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x02009AB8 RID: 39608
+		// Token: 0x02008D47 RID: 36167
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __EditorTick_FunctionParams
 		{
-			// Token: 0x04031044 RID: 200772
+			// Token: 0x0402C8B7 RID: 182455
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

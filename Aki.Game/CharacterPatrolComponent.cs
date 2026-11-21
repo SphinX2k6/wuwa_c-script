@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Protocol;
@@ -13,12 +12,12 @@ using CSharpScript.Game.LevelGamePlay.Common;
 using CSharpScript.Game.NewWorld.Character.Npc.Controller;
 using UnrealEngine;
 
-// Token: 0x020030F5 RID: 12533
+// Token: 0x0200264D RID: 9805
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterPatrolComponent : EntityComponent
 {
-	// Token: 0x0601ADD0 RID: 110032 RVA: 0x00741074 File Offset: 0x0073F274
+	// Token: 0x060187F1 RID: 100337 RVA: 0x00766A18 File Offset: 0x00764C18
 	protected override bool OnStart()
 	{
 		this.CreatureData = base.Entity.GetComponent<CreatureDataComponent>();
@@ -31,12 +30,12 @@ public class CharacterPatrolComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601ADD1 RID: 110033 RVA: 0x007410E1 File Offset: 0x0073F2E1
+	// Token: 0x060187F2 RID: 100338 RVA: 0x00766A85 File Offset: 0x00764C85
 	protected override void OnActivate()
 	{
 	}
 
-	// Token: 0x0601ADD2 RID: 110034 RVA: 0x007410E3 File Offset: 0x0073F2E3
+	// Token: 0x060187F3 RID: 100339 RVA: 0x00766A87 File Offset: 0x00764C87
 	protected override bool OnEnd()
 	{
 		if (this.CurrentPatrol != null && this.CurrentSplineInfo != null)
@@ -46,13 +45,13 @@ public class CharacterPatrolComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601ADD3 RID: 110035 RVA: 0x00741108 File Offset: 0x0073F308
+	// Token: 0x060187F4 RID: 100340 RVA: 0x00766AAC File Offset: 0x00764CAC
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x0601ADD4 RID: 110036 RVA: 0x0074110C File Offset: 0x0073F30C
+	// Token: 0x060187F5 RID: 100341 RVA: 0x00766AB0 File Offset: 0x00764CB0
 	public unsafe void StartPatrol(int splineId, IPatrolParams config)
 	{
 		PatrolRecord currentPatrol = this.CurrentPatrol;
@@ -105,7 +104,7 @@ public class CharacterPatrolComponent : EntityComponent
 		this.SetStartPatrol(splineInfo, config);
 	}
 
-	// Token: 0x0601ADD5 RID: 110037 RVA: 0x00741284 File Offset: 0x0073F484
+	// Token: 0x060187F6 RID: 100342 RVA: 0x00766C28 File Offset: 0x00764E28
 	public unsafe void StartSplineCurvePatrol(int splineId, SplineCurve splineCurve, SplineComponent splineData, IPatrolParams config)
 	{
 		PatrolRecord currentPatrol = this.CurrentPatrol;
@@ -174,7 +173,7 @@ public class CharacterPatrolComponent : EntityComponent
 		this.SetStartPatrol(splineInfo, config);
 	}
 
-	// Token: 0x0601ADD6 RID: 110038 RVA: 0x007414CC File Offset: 0x0073F6CC
+	// Token: 0x060187F7 RID: 100343 RVA: 0x00766E70 File Offset: 0x00765070
 	private unsafe void SetStartPatrol(SplineInfo splineInfo, IPatrolParams config)
 	{
 		int splineId = splineInfo.SplineId;
@@ -263,7 +262,7 @@ public class CharacterPatrolComponent : EntityComponent
 		EventSystem.Instance.EmitWithTarget<int>(base.Entity, EEventName.OnPatrolStart, splineId);
 	}
 
-	// Token: 0x0601ADD7 RID: 110039 RVA: 0x00741764 File Offset: 0x0073F964
+	// Token: 0x060187F8 RID: 100344 RVA: 0x00767108 File Offset: 0x00765308
 	public unsafe void PausePatrol(int splineId, string key)
 	{
 		Dictionary<long, PatrolRecord> recordList = this.RecordList;
@@ -344,7 +343,7 @@ public class CharacterPatrolComponent : EntityComponent
 		EventSystem.Instance.EmitWithTarget<int>(base.Entity, EEventName.OnPatrolPause, splineId);
 	}
 
-	// Token: 0x0601ADD8 RID: 110040 RVA: 0x007419F4 File Offset: 0x0073FBF4
+	// Token: 0x060187F9 RID: 100345 RVA: 0x00767398 File Offset: 0x00765598
 	public unsafe void ResumePatrol(int splineId, string key)
 	{
 		PatrolRecord currentPatrol = this.CurrentPatrol;
@@ -420,7 +419,7 @@ public class CharacterPatrolComponent : EntityComponent
 		EventSystem.Instance.EmitWithTarget<int>(base.Entity, EEventName.OnPatrolResume, splineId);
 	}
 
-	// Token: 0x0601ADD9 RID: 110041 RVA: 0x00741C64 File Offset: 0x0073FE64
+	// Token: 0x060187FA RID: 100346 RVA: 0x00767608 File Offset: 0x00765808
 	public void StopPatrol(int splineId, bool noSync = false)
 	{
 		SplineInfo currentSplineInfo = this.CurrentSplineInfo;
@@ -469,7 +468,7 @@ public class CharacterPatrolComponent : EntityComponent
 		this.ResetState((long)splineId);
 	}
 
-	// Token: 0x0601ADDA RID: 110042 RVA: 0x00741DD8 File Offset: 0x0073FFD8
+	// Token: 0x060187FB RID: 100347 RVA: 0x0076777C File Offset: 0x0076597C
 	[NullableContext(2)]
 	public PatrolSavedData SavePatrolData()
 	{
@@ -507,7 +506,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601ADDB RID: 110043 RVA: 0x00741ED4 File Offset: 0x007400D4
+	// Token: 0x060187FC RID: 100348 RVA: 0x00767878 File Offset: 0x00765A78
 	[NullableContext(2)]
 	public void LoadPatrolData(PatrolSavedData savedData = null)
 	{
@@ -522,7 +521,7 @@ public class CharacterPatrolComponent : EntityComponent
 		BlackboardController.Instance.SetIntValueByEntity(base.Entity.Id, "PATROL_ACTION_TYPE", savedData.ActionType);
 	}
 
-	// Token: 0x0601ADDC RID: 110044 RVA: 0x00741F8B File Offset: 0x0074018B
+	// Token: 0x060187FD RID: 100349 RVA: 0x0076792F File Offset: 0x00765B2F
 	public int GetLastPointRawIndex()
 	{
 		if (this.CurrentPatrol == null)
@@ -532,7 +531,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return this.GetRawIndexInSpline(this.CurrentPatrol.LastPointIndex);
 	}
 
-	// Token: 0x0601ADDD RID: 110045 RVA: 0x00741FA8 File Offset: 0x007401A8
+	// Token: 0x060187FE RID: 100350 RVA: 0x0076794C File Offset: 0x00765B4C
 	[NullableContext(2)]
 	public global::Vector GetLastPointLocation()
 	{
@@ -543,7 +542,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return this.CurrentSplineInfo.VirtualSplinePoints[this.CurrentPatrol.LastPointIndex].Point;
 	}
 
-	// Token: 0x0601ADDE RID: 110046 RVA: 0x00741FDC File Offset: 0x007401DC
+	// Token: 0x060187FF RID: 100351 RVA: 0x00767980 File Offset: 0x00765B80
 	public int GetCurrentPatrolSplineId()
 	{
 		if (this.CurrentPatrol == null || this.CurrentSplineInfo == null)
@@ -553,7 +552,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return this.CurrentSplineInfo.SplineId;
 	}
 
-	// Token: 0x0601ADDF RID: 110047 RVA: 0x00741FFB File Offset: 0x007401FB
+	// Token: 0x06018800 RID: 100352 RVA: 0x0076799F File Offset: 0x00765B9F
 	public bool HasPatrolRecord(long? splineId = null)
 	{
 		if (splineId == null)
@@ -564,14 +563,14 @@ public class CharacterPatrolComponent : EntityComponent
 		return recordList != null && recordList.ContainsKey(splineId.Value);
 	}
 
-	// Token: 0x0601ADE0 RID: 110048 RVA: 0x00742028 File Offset: 0x00740228
+	// Token: 0x06018801 RID: 100353 RVA: 0x007679CC File Offset: 0x00765BCC
 	public bool GetIsPauseState(long splineId)
 	{
 		HashSet<string> hashSet;
 		return this.PauseKeyMap.TryGetValue(splineId, out hashSet) && hashSet.Count > 0;
 	}
 
-	// Token: 0x0601ADE1 RID: 110049 RVA: 0x00742050 File Offset: 0x00740250
+	// Token: 0x06018802 RID: 100354 RVA: 0x007679F4 File Offset: 0x00765BF4
 	[NullableContext(2)]
 	public global::Vector GetLastPatrolLocation(long splineId)
 	{
@@ -598,20 +597,20 @@ public class CharacterPatrolComponent : EntityComponent
 		return splineInfo.VirtualSplinePoints[patrolRecord.LastPointIndex].Point;
 	}
 
-	// Token: 0x0601ADE2 RID: 110050 RVA: 0x007420B4 File Offset: 0x007402B4
+	// Token: 0x06018803 RID: 100355 RVA: 0x00767A58 File Offset: 0x00765C58
 	public bool IsInPatrol()
 	{
 		PatrolRecord currentPatrol = this.CurrentPatrol;
 		return currentPatrol != null && currentPatrol.IsActive;
 	}
 
-	// Token: 0x0601ADE3 RID: 110051 RVA: 0x007420C8 File Offset: 0x007402C8
+	// Token: 0x06018804 RID: 100356 RVA: 0x00767A6C File Offset: 0x00765C6C
 	public bool IsPositiveDirection()
 	{
 		return this.CurrentSplineInfo == null || this.CurrentPatrol == null || !this.CurrentSplineInfo.IsLoop || !this.CurrentSplineInfo.IsCircle || this.CurrentPatrol.LastPointIndex < this.CurrentSplineInfo.SplineComp.PathPoint.Count - 1;
 	}
 
-	// Token: 0x0601ADE4 RID: 110052 RVA: 0x00742128 File Offset: 0x00740328
+	// Token: 0x06018805 RID: 100357 RVA: 0x00767ACC File Offset: 0x00765CCC
 	protected void SplineActionRunner(int splineId, int pointIndex, IList<ActionInfo> actions)
 	{
 		Action<ELevelEventState> finishCallback = delegate(ELevelEventState result)
@@ -621,7 +620,7 @@ public class CharacterPatrolComponent : EntityComponent
 		LevelGeneralController.Instance.ExecuteActionsNew(actions, EntityContext.Create(this.ActorComp.Entity.Id, null), finishCallback);
 	}
 
-	// Token: 0x0601ADE5 RID: 110053 RVA: 0x00742180 File Offset: 0x00740380
+	// Token: 0x06018806 RID: 100358 RVA: 0x00767B24 File Offset: 0x00765D24
 	[return: Nullable(2)]
 	protected unsafe SplineInfo InitSplineInfo(int splineId, IPatrolParams config)
 	{
@@ -654,7 +653,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return this.InitSplineInfoFromSplineComp(gameSplineComponent, config);
 	}
 
-	// Token: 0x0601ADE6 RID: 110054 RVA: 0x00742250 File Offset: 0x00740450
+	// Token: 0x06018807 RID: 100359 RVA: 0x00767BF4 File Offset: 0x00765DF4
 	[return: Nullable(2)]
 	protected SplineInfo InitSplineInfoWithCurve(int splineId, SplineCurve spline, SplineComponent splineData, IPatrolParams config, bool sampling)
 	{
@@ -663,7 +662,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return this.InitSplineInfoFromSplineComp(gameSplineComponent, config);
 	}
 
-	// Token: 0x0601ADE7 RID: 110055 RVA: 0x00742278 File Offset: 0x00740478
+	// Token: 0x06018808 RID: 100360 RVA: 0x00767C1C File Offset: 0x00765E1C
 	[return: Nullable(2)]
 	protected unsafe SplineInfo InitSplineInfoFromSplineComp(GameSplineComponent splineComp, IPatrolParams config)
 	{
@@ -729,7 +728,7 @@ public class CharacterPatrolComponent : EntityComponent
 			splineComp.PathPoint = splineComp.PathPoint.GetRange(num2, count2);
 		}
 		splineInfo.SplineComp = splineComp;
-		splineInfo.VirtualSplinePoints = splineComp.PathPoint.ToList<PatrolPoint>();
+		splineInfo.VirtualSplinePoints = new List<PatrolPoint>(splineComp.PathPoint);
 		if (splineInfo.IsCircle && splineInfo.VirtualSplinePoints.Count > 2)
 		{
 			for (int i = splineComp.PathPoint.Count - 2; i > 0; i--)
@@ -769,7 +768,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return splineInfo;
 	}
 
-	// Token: 0x0601ADE8 RID: 110056 RVA: 0x0074266C File Offset: 0x0074086C
+	// Token: 0x06018809 RID: 100361 RVA: 0x00768010 File Offset: 0x00766210
 	protected bool PartitionSplineAndCreateMoveConfig(SplineInfo info, IPatrolParams config)
 	{
 		if (info.VirtualSplinePoints.Count == 0)
@@ -798,7 +797,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601ADE9 RID: 110057 RVA: 0x0074270C File Offset: 0x0074090C
+	// Token: 0x0601880A RID: 100362 RVA: 0x007680B0 File Offset: 0x007662B0
 	protected unsafe void CreateMoveConfig(SplineInfo info, List<PatrolPoint> path, int offset, IPatrolParams config)
 	{
 		CharacterPatrolComponent.<>c__DisplayClass39_0 CS$<>8__locals1 = new CharacterPatrolComponent.<>c__DisplayClass39_0();
@@ -890,7 +889,7 @@ public class CharacterPatrolComponent : EntityComponent
 		info.SegmentsMoveConfig.Add(moveCharacterConfig2);
 	}
 
-	// Token: 0x0601ADEA RID: 110058 RVA: 0x00742A50 File Offset: 0x00740C50
+	// Token: 0x0601880B RID: 100363 RVA: 0x007683F4 File Offset: 0x007665F4
 	protected unsafe void UpdatePatrolRecord(int pointIndex)
 	{
 		PatrolRecord currentPatrol = this.CurrentPatrol;
@@ -935,7 +934,7 @@ public class CharacterPatrolComponent : EntityComponent
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 	}
 
-	// Token: 0x0601ADEB RID: 110059 RVA: 0x00742BA8 File Offset: 0x00740DA8
+	// Token: 0x0601880C RID: 100364 RVA: 0x0076854C File Offset: 0x0076674C
 	protected void OnSegmentPatrolFinished(ELevelEventState result)
 	{
 		if (result != ELevelEventState.Success)
@@ -969,7 +968,7 @@ public class CharacterPatrolComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601ADEC RID: 110060 RVA: 0x00742C26 File Offset: 0x00740E26
+	// Token: 0x0601880D RID: 100365 RVA: 0x007685CA File Offset: 0x007667CA
 	protected void OnPatrolFinished(ELevelEventState result)
 	{
 		Action<ELevelEventState> onPatrolEndHandle = this.CurrentPatrol.OnPatrolEndHandle;
@@ -981,7 +980,7 @@ public class CharacterPatrolComponent : EntityComponent
 		onPatrolEndHandle(result);
 	}
 
-	// Token: 0x0601ADED RID: 110061 RVA: 0x00742C50 File Offset: 0x00740E50
+	// Token: 0x0601880E RID: 100366 RVA: 0x007685F4 File Offset: 0x007667F4
 	protected void OnTriggerSplineActions(IList<ActionInfo> actions)
 	{
 		int splineId = this.CurrentSplineInfo.SplineId;
@@ -1008,7 +1007,7 @@ public class CharacterPatrolComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601ADEE RID: 110062 RVA: 0x00742CDC File Offset: 0x00740EDC
+	// Token: 0x0601880F RID: 100367 RVA: 0x00768680 File Offset: 0x00766880
 	protected unsafe void MoveAlongPathWithRecord()
 	{
 		PatrolRecord currentPatrol = this.CurrentPatrol;
@@ -1067,7 +1066,7 @@ public class CharacterPatrolComponent : EntityComponent
 		this.MoveComp.MoveAlongPath(moveCharacterConfig, "CharacterPatrolComponent.MoveAlongPathWithRecord");
 	}
 
-	// Token: 0x0601ADEF RID: 110063 RVA: 0x00742EB8 File Offset: 0x007410B8
+	// Token: 0x06018810 RID: 100368 RVA: 0x0076885C File Offset: 0x00766A5C
 	protected void ResetState(long splineId)
 	{
 		Dictionary<long, PatrolRecord> recordList = this.RecordList;
@@ -1086,13 +1085,13 @@ public class CharacterPatrolComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601ADF0 RID: 110064 RVA: 0x00742F49 File Offset: 0x00741149
+	// Token: 0x06018811 RID: 100369 RVA: 0x007688ED File Offset: 0x00766AED
 	protected bool RestoreState(long splineId)
 	{
 		return this.RestorePatrolState(splineId) && this.RestoreSplineState(splineId);
 	}
 
-	// Token: 0x0601ADF1 RID: 110065 RVA: 0x00742F60 File Offset: 0x00741160
+	// Token: 0x06018812 RID: 100370 RVA: 0x00768904 File Offset: 0x00766B04
 	protected bool RestorePatrolState(long splineId)
 	{
 		Dictionary<long, PatrolRecord> recordList = this.RecordList;
@@ -1106,7 +1105,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601ADF2 RID: 110066 RVA: 0x00742F98 File Offset: 0x00741198
+	// Token: 0x06018813 RID: 100371 RVA: 0x0076893C File Offset: 0x00766B3C
 	protected bool RestoreSplineState(long splineId)
 	{
 		Dictionary<long, SplineInfo> splineInfoList = this.SplineInfoList;
@@ -1120,7 +1119,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601ADF3 RID: 110067 RVA: 0x00742FD0 File Offset: 0x007411D0
+	// Token: 0x06018814 RID: 100372 RVA: 0x00768974 File Offset: 0x00766B74
 	protected void PatrolBeginRequest()
 	{
 		if (!this.CreatureData.IsMonster() || this.NoRequestServer)
@@ -1133,7 +1132,7 @@ public class CharacterPatrolComponent : EntityComponent
 		Net.Instance.Call(ERequestMessageId.EntityPatrolStartRequest, entityPatrolStartRequest, null, 0);
 	}
 
-	// Token: 0x0601ADF4 RID: 110068 RVA: 0x00743050 File Offset: 0x00741250
+	// Token: 0x06018815 RID: 100373 RVA: 0x007689F4 File Offset: 0x00766BF4
 	protected void PatrolEndRequest()
 	{
 		if (!this.CreatureData.IsMonster() || this.NoRequestServer)
@@ -1145,7 +1144,7 @@ public class CharacterPatrolComponent : EntityComponent
 		Net.Instance.Call(ERequestMessageId.EntityPatrolStopRequest, entityPatrolStopRequest, null, 0);
 	}
 
-	// Token: 0x0601ADF5 RID: 110069 RVA: 0x007430A8 File Offset: 0x007412A8
+	// Token: 0x06018816 RID: 100374 RVA: 0x00768A4C File Offset: 0x00766C4C
 	protected void DirectionChangeRequest(int pointIndex)
 	{
 		if (!this.CreatureData.IsMonster() || this.NoRequestServer)
@@ -1181,7 +1180,7 @@ public class CharacterPatrolComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601ADF6 RID: 110070 RVA: 0x007431D8 File Offset: 0x007413D8
+	// Token: 0x06018817 RID: 100375 RVA: 0x00768B7C File Offset: 0x00766D7C
 	protected void PatrolPointReachedRequest(int pointIndex)
 	{
 		if (!this.CreatureData.IsMonster() || this.NoRequestServer)
@@ -1212,7 +1211,7 @@ public class CharacterPatrolComponent : EntityComponent
 		Net.Instance.Call(ERequestMessageId.MonsterPatrolPointReachedRequest, monsterPatrolPointReachedRequest, null, 0);
 	}
 
-	// Token: 0x0601ADF7 RID: 110071 RVA: 0x007432A4 File Offset: 0x007414A4
+	// Token: 0x06018818 RID: 100376 RVA: 0x00768C48 File Offset: 0x00766E48
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -1241,7 +1240,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return new ValueTuple<int, int, bool>(-1, -1, false);
 	}
 
-	// Token: 0x0601ADF8 RID: 110072 RVA: 0x00743350 File Offset: 0x00741550
+	// Token: 0x06018819 RID: 100377 RVA: 0x00768CF4 File Offset: 0x00766EF4
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1268,7 +1267,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return this.GetPointActionsInternal(pointIndex2);
 	}
 
-	// Token: 0x0601ADF9 RID: 110073 RVA: 0x007433BC File Offset: 0x007415BC
+	// Token: 0x0601881A RID: 100378 RVA: 0x00768D60 File Offset: 0x00766F60
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1284,7 +1283,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return this.CurrentSplineInfo.VirtualSplinePoints[pointIndex].Actions;
 	}
 
-	// Token: 0x0601ADFA RID: 110074 RVA: 0x0074340C File Offset: 0x0074160C
+	// Token: 0x0601881B RID: 100379 RVA: 0x00768DB0 File Offset: 0x00766FB0
 	protected int GetNearestPatrolPointIndex()
 	{
 		SplineInfo currentSplineInfo = this.CurrentSplineInfo;
@@ -1366,7 +1365,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x0601ADFB RID: 110075 RVA: 0x0074369C File Offset: 0x0074189C
+	// Token: 0x0601881C RID: 100380 RVA: 0x00769040 File Offset: 0x00767240
 	protected int GetNearestDistancePointIndex()
 	{
 		SplineInfo currentSplineInfo = this.CurrentSplineInfo;
@@ -1408,7 +1407,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x0601ADFC RID: 110076 RVA: 0x00743788 File Offset: 0x00741988
+	// Token: 0x0601881D RID: 100381 RVA: 0x0076912C File Offset: 0x0076732C
 	protected unsafe int StartPatrolFromRandomPoint(IPatrolParams config)
 	{
 		SplineInfo currentSplineInfo = this.CurrentSplineInfo;
@@ -1519,7 +1518,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return item;
 	}
 
-	// Token: 0x0601ADFD RID: 110077 RVA: 0x00743C00 File Offset: 0x00741E00
+	// Token: 0x0601881E RID: 100382 RVA: 0x007695A4 File Offset: 0x007677A4
 	protected bool IsPointInCameraFrustum(global::Vector point)
 	{
 		TsCharacterController characterController = Global.CharacterController;
@@ -1532,7 +1531,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return UGameplayStatics.D_ProjectWorldToScreen(player, fvectorDouble, ref this.ScreenPositionRef, false);
 	}
 
-	// Token: 0x0601ADFE RID: 110078 RVA: 0x00743C30 File Offset: 0x00741E30
+	// Token: 0x0601881F RID: 100383 RVA: 0x007695D4 File Offset: 0x007677D4
 	protected int GetRawIndexInSpline(int index)
 	{
 		if (this.CurrentSplineInfo == null)
@@ -1564,7 +1563,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return this.CurrentSplineInfo.SplineComp.GetLastMainPointIndex(num);
 	}
 
-	// Token: 0x0601ADFF RID: 110079 RVA: 0x00743D4C File Offset: 0x00741F4C
+	// Token: 0x06018820 RID: 100384 RVA: 0x007696F0 File Offset: 0x007678F0
 	protected int GetNextPointIndex(int? pointIndex = null)
 	{
 		if (this.CurrentPatrol == null || this.CurrentSplineInfo == null)
@@ -1579,7 +1578,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return (num + 1) % this.CurrentSplineInfo.VirtualSplinePoints.Count;
 	}
 
-	// Token: 0x0601AE00 RID: 110080 RVA: 0x00743DC4 File Offset: 0x00741FC4
+	// Token: 0x06018821 RID: 100385 RVA: 0x00769768 File Offset: 0x00767968
 	[NullableContext(2)]
 	protected MoveCharacterConfig GetNextPointMoveConfig()
 	{
@@ -1601,7 +1600,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return this.CurrentSplineInfo.SegmentsMoveConfig[segmentInfo.Item1];
 	}
 
-	// Token: 0x0601AE01 RID: 110081 RVA: 0x00743E2C File Offset: 0x0074202C
+	// Token: 0x06018822 RID: 100386 RVA: 0x007697D0 File Offset: 0x007679D0
 	protected int GetSymmetryPointIndex(int pointIndex)
 	{
 		SplineInfo currentSplineInfo = this.CurrentSplineInfo;
@@ -1620,7 +1619,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return -1;
 	}
 
-	// Token: 0x0601AE02 RID: 110082 RVA: 0x00743E80 File Offset: 0x00742080
+	// Token: 0x06018823 RID: 100387 RVA: 0x00769824 File Offset: 0x00767A24
 	protected global::ECharPositionState GetPosStateType(ECharPositionStateType type)
 	{
 		if (type == ECharPositionStateType.Ground)
@@ -1634,7 +1633,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return global::ECharPositionState.Air;
 	}
 
-	// Token: 0x0601AE03 RID: 110083 RVA: 0x00743E90 File Offset: 0x00742090
+	// Token: 0x06018824 RID: 100388 RVA: 0x00769834 File Offset: 0x00767A34
 	protected void GetRandomVectorWithNormal(global::Vector normal, global::Vector outVector)
 	{
 		if (normal.IsNearlyZero(9.999999747378752E-05))
@@ -1666,7 +1665,7 @@ public class CharacterPatrolComponent : EntityComponent
 		outVector.Set(num5 * this.CacheVector.X + num6 * this.CacheVector2.X, num5 * this.CacheVector.Y + num6 * this.CacheVector2.Y, num5 * this.CacheVector.Z + num6 * this.CacheVector2.Z);
 	}
 
-	// Token: 0x0601AE04 RID: 110084 RVA: 0x00744030 File Offset: 0x00742230
+	// Token: 0x06018825 RID: 100389 RVA: 0x007699D4 File Offset: 0x00767BD4
 	protected bool TryInitSplineFromAiPatrol(GameSplineComponent splineComp)
 	{
 		CharacterAiComponent component = base.Entity.GetComponent<CharacterAiComponent>();
@@ -1695,7 +1694,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601AE05 RID: 110085 RVA: 0x00744124 File Offset: 0x00742324
+	// Token: 0x06018826 RID: 100390 RVA: 0x00769AC8 File Offset: 0x00767CC8
 	protected bool IsPatrolWithAiConfig()
 	{
 		CharacterAiComponent component = base.Entity.GetComponent<CharacterAiComponent>();
@@ -1703,7 +1702,7 @@ public class CharacterPatrolComponent : EntityComponent
 		return ((aiPatrolController != null) ? aiPatrolController.AllPatrolPoints : null) != null && aiPatrolController.AllPatrolPoints.Count != 0;
 	}
 
-	// Token: 0x0601AE06 RID: 110086 RVA: 0x0074416C File Offset: 0x0074236C
+	// Token: 0x06018827 RID: 100391 RVA: 0x00769B10 File Offset: 0x00767D10
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1711,154 +1710,155 @@ public class CharacterPatrolComponent : EntityComponent
 			return false;
 		}
 		CharacterPatrolComponent characterPatrolComponent = (CharacterPatrolComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterPatrolComponent.ActorComp == null)
 		{
-			if (characterPatrolComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("MoveComp"))
-		{
-			if (characterPatrolComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CreatureData"))
-		{
-			if (characterPatrolComponent.CreatureData == null)
-			{
-				this.CreatureData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureData), "CreatureData"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("RecordList"))
-		{
-			if (characterPatrolComponent.RecordList == null)
-			{
-				this.RecordList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, PatrolRecord>>(this.RecordList), "RecordList"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SplineInfoList"))
-		{
-			if (characterPatrolComponent.SplineInfoList == null)
-			{
-				this.SplineInfoList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, SplineInfo>>(this.SplineInfoList), "SplineInfoList"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CurrentPatrol"))
-		{
-			if (characterPatrolComponent.CurrentPatrol == null)
-			{
-				this.CurrentPatrol = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PatrolRecord>(this.CurrentPatrol), "CurrentPatrol"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CurrentSplineInfo"))
-		{
-			if (characterPatrolComponent.CurrentSplineInfo == null)
-			{
-				this.CurrentSplineInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SplineInfo>(this.CurrentSplineInfo), "CurrentSplineInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PauseKeyMap") && characterPatrolComponent.PauseKeyMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, HashSet<string>>>(this.PauseKeyMap), "PauseKeyMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ExternalData"))
+		if (characterPatrolComponent.MoveComp == null)
 		{
-			if (characterPatrolComponent.ExternalData == null)
-			{
-				this.ExternalData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PatrolSavedData>(this.ExternalData), "ExternalData"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("CacheVector"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			if (characterPatrolComponent.CacheVector == null)
-			{
-				this.CacheVector = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheVector), "CacheVector"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CacheVector2"))
+		if (characterPatrolComponent.CreatureData == null)
 		{
-			if (characterPatrolComponent.CacheVector2 == null)
-			{
-				this.CacheVector2 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheVector2), "CacheVector2"))
-			{
-				return false;
-			}
+			this.CreatureData = null;
 		}
-		if (base.CanResetComponentProperty("DebugMode"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureData), "CreatureData"))
 		{
-			this.DebugMode = characterPatrolComponent.DebugMode;
+			return false;
 		}
-		if (base.CanResetComponentProperty("NoRequestServer"))
+		if (characterPatrolComponent.RecordList == null)
 		{
-			this.NoRequestServer = characterPatrolComponent.NoRequestServer;
+			this.RecordList = null;
 		}
-		if (base.CanResetComponentProperty("ScreenPositionRef"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RecordList), "RecordList"))
 		{
-			this.ScreenPositionRef = characterPatrolComponent.ScreenPositionRef;
+			return false;
 		}
+		if (characterPatrolComponent.SplineInfoList == null)
+		{
+			this.SplineInfoList = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineInfoList), "SplineInfoList"))
+		{
+			return false;
+		}
+		if (characterPatrolComponent.CurrentPatrol == null)
+		{
+			this.CurrentPatrol = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentPatrol), "CurrentPatrol"))
+		{
+			return false;
+		}
+		if (characterPatrolComponent.CurrentSplineInfo == null)
+		{
+			this.CurrentSplineInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentSplineInfo), "CurrentSplineInfo"))
+		{
+			return false;
+		}
+		if (characterPatrolComponent.PauseKeyMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PauseKeyMap), "PauseKeyMap"))
+		{
+			return false;
+		}
+		if (characterPatrolComponent.ExternalData == null)
+		{
+			this.ExternalData = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ExternalData), "ExternalData"))
+		{
+			return false;
+		}
+		if (characterPatrolComponent.CacheVector == null)
+		{
+			this.CacheVector = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheVector), "CacheVector"))
+		{
+			return false;
+		}
+		if (characterPatrolComponent.CacheVector2 == null)
+		{
+			this.CacheVector2 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheVector2), "CacheVector2"))
+		{
+			return false;
+		}
+		this.DebugMode = characterPatrolComponent.DebugMode;
+		this.NoRequestServer = characterPatrolComponent.NoRequestServer;
+		this.ScreenPositionRef = characterPatrolComponent.ScreenPositionRef;
 		return true;
 	}
 
-	// Token: 0x0400CFD8 RID: 53208
+	// Token: 0x1700269F RID: 9887
+	// (get) Token: 0x06018828 RID: 100392 RVA: 0x00769D24 File Offset: 0x00767F24
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026A0 RID: 9888
+	// (get) Token: 0x06018829 RID: 100393 RVA: 0x00769D27 File Offset: 0x00767F27
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026A1 RID: 9889
+	// (get) Token: 0x0601882A RID: 100394 RVA: 0x00769D2A File Offset: 0x00767F2A
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026A2 RID: 9890
+	// (get) Token: 0x0601882B RID: 100395 RVA: 0x00769D2D File Offset: 0x00767F2D
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D3C9 RID: 54217
 	private const double DEFAULT_RANDOM_DISTANCE_MIN = 3000.0;
 
-	// Token: 0x0400CFD9 RID: 53209
+	// Token: 0x0400D3CA RID: 54218
 	private const double DEFAULT_RANDOM_DISTANCE_MAX = 7000.0;
 
-	// Token: 0x0400CFDA RID: 53210
+	// Token: 0x0400D3CB RID: 54219
 	[Nullable(2)]
 	protected BaseActorComponent ActorComp;
 
-	// Token: 0x0400CFDB RID: 53211
+	// Token: 0x0400D3CC RID: 54220
 	[Nullable(2)]
 	protected BaseMoveComponent MoveComp;
 
-	// Token: 0x0400CFDC RID: 53212
+	// Token: 0x0400D3CD RID: 54221
 	[Nullable(2)]
 	protected CreatureDataComponent CreatureData;
 
-	// Token: 0x0400CFDD RID: 53213
+	// Token: 0x0400D3CE RID: 54222
 	[Nullable(new byte[]
 	{
 		2,
@@ -1866,7 +1866,7 @@ public class CharacterPatrolComponent : EntityComponent
 	})]
 	protected Dictionary<long, PatrolRecord> RecordList;
 
-	// Token: 0x0400CFDE RID: 53214
+	// Token: 0x0400D3CF RID: 54223
 	[Nullable(new byte[]
 	{
 		2,
@@ -1874,35 +1874,35 @@ public class CharacterPatrolComponent : EntityComponent
 	})]
 	protected Dictionary<long, SplineInfo> SplineInfoList;
 
-	// Token: 0x0400CFDF RID: 53215
+	// Token: 0x0400D3D0 RID: 54224
 	[Nullable(2)]
 	protected PatrolRecord CurrentPatrol;
 
-	// Token: 0x0400CFE0 RID: 53216
+	// Token: 0x0400D3D1 RID: 54225
 	[Nullable(2)]
 	protected SplineInfo CurrentSplineInfo;
 
-	// Token: 0x0400CFE1 RID: 53217
+	// Token: 0x0400D3D2 RID: 54226
 	protected readonly Dictionary<long, HashSet<string>> PauseKeyMap = new Dictionary<long, HashSet<string>>();
 
-	// Token: 0x0400CFE2 RID: 53218
+	// Token: 0x0400D3D3 RID: 54227
 	[Nullable(2)]
 	protected PatrolSavedData ExternalData;
 
-	// Token: 0x0400CFE3 RID: 53219
+	// Token: 0x0400D3D4 RID: 54228
 	[Nullable(2)]
 	protected global::Vector CacheVector;
 
-	// Token: 0x0400CFE4 RID: 53220
+	// Token: 0x0400D3D5 RID: 54229
 	[Nullable(2)]
 	protected global::Vector CacheVector2;
 
-	// Token: 0x0400CFE5 RID: 53221
+	// Token: 0x0400D3D6 RID: 54230
 	protected bool DebugMode;
 
-	// Token: 0x0400CFE6 RID: 53222
+	// Token: 0x0400D3D7 RID: 54231
 	private bool NoRequestServer;
 
-	// Token: 0x0400CFE7 RID: 53223
+	// Token: 0x0400D3D8 RID: 54232
 	private FVector2D ScreenPositionRef = new FVector2D(0f, 0f);
 }

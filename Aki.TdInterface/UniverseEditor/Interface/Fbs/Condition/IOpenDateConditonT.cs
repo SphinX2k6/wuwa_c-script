@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C6B RID: 19563
+	// Token: 0x02005164 RID: 20836
 	public class IOpenDateConditonT
 	{
-		// Token: 0x17008E17 RID: 36375
-		// (get) Token: 0x0601F051 RID: 127057 RVA: 0x00456430 File Offset: 0x00454630
-		// (set) Token: 0x0601F052 RID: 127058 RVA: 0x00456438 File Offset: 0x00454638
+		// Token: 0x17009545 RID: 38213
+		// (get) Token: 0x06020C73 RID: 134259 RVA: 0x00489F80 File Offset: 0x00488180
+		// (set) Token: 0x06020C74 RID: 134260 RVA: 0x00489F88 File Offset: 0x00488188
 		public EAccessQuestCondition Type { get; set; }
 
-		// Token: 0x17008E18 RID: 36376
-		// (get) Token: 0x0601F053 RID: 127059 RVA: 0x00456441 File Offset: 0x00454641
-		// (set) Token: 0x0601F054 RID: 127060 RVA: 0x00456449 File Offset: 0x00454649
+		// Token: 0x17009546 RID: 38214
+		// (get) Token: 0x06020C75 RID: 134261 RVA: 0x00489F91 File Offset: 0x00488191
+		// (set) Token: 0x06020C76 RID: 134262 RVA: 0x00489F99 File Offset: 0x00488199
 		public int DateId { get; set; }
 
-		// Token: 0x17008E19 RID: 36377
-		// (get) Token: 0x0601F055 RID: 127061 RVA: 0x00456452 File Offset: 0x00454652
-		// (set) Token: 0x0601F056 RID: 127062 RVA: 0x0045645A File Offset: 0x0045465A
+		// Token: 0x17009547 RID: 38215
+		// (get) Token: 0x06020C77 RID: 134263 RVA: 0x00489FA2 File Offset: 0x004881A2
+		// (set) Token: 0x06020C78 RID: 134264 RVA: 0x00489FAA File Offset: 0x004881AA
 		public EQuestOpenDateType OpenType { get; set; }
 
-		// Token: 0x17008E1A RID: 36378
-		// (get) Token: 0x0601F057 RID: 127063 RVA: 0x00456463 File Offset: 0x00454663
-		// (set) Token: 0x0601F058 RID: 127064 RVA: 0x0045646B File Offset: 0x0045466B
+		// Token: 0x17009548 RID: 38216
+		// (get) Token: 0x06020C79 RID: 134265 RVA: 0x00489FB3 File Offset: 0x004881B3
+		// (set) Token: 0x06020C7A RID: 134266 RVA: 0x00489FBB File Offset: 0x004881BB
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601F059 RID: 127065 RVA: 0x00456474 File Offset: 0x00454674
+		// Token: 0x06020C7B RID: 134267 RVA: 0x00489FC4 File Offset: 0x004881C4
 		public IOpenDateConditonT()
 		{
 			this.Type = EAccessQuestCondition.ExploreLevel;

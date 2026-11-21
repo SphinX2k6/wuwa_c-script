@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006058 RID: 24664
+	// Token: 0x02004FD6 RID: 20438
 	public class SpringManorAlbumConfirmItem : UiPanelBase
 	{
-		// Token: 0x0603E685 RID: 255621 RVA: 0x00F13120 File Offset: 0x00F11320
+		// Token: 0x06033349 RID: 209737 RVA: 0x00E59EE4 File Offset: 0x00E580E4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E686 RID: 255622 RVA: 0x00F131BC File Offset: 0x00F113BC
+		// Token: 0x0603334A RID: 209738 RVA: 0x00E59F80 File Offset: 0x00E58180
 		public void SetState(EBrochureState state, int conditionGroupId)
 		{
 			UUIItem item = base.GetItem(2);
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.SetBtnBg(state == EBrochureState.Lock);
 		}
 
-		// Token: 0x0603E687 RID: 255623 RVA: 0x00F13248 File Offset: 0x00F11448
+		// Token: 0x0603334B RID: 209739 RVA: 0x00E5A00C File Offset: 0x00E5820C
 		public void SetBtnBg(bool isTrackBtn)
 		{
 			UUISprite sprite = base.GetSprite(3);

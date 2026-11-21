@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002131 RID: 8497
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002392 RID: 9106
 	public class RecordDungeonEvent : ActionParams
 	{
-		// Token: 0x0600BB2C RID: 47916 RVA: 0x001B05BC File Offset: 0x001AE7BC
+		// Token: 0x0600C6BA RID: 50874 RVA: 0x001C7770 File Offset: 0x001C5970
 		private RecordDungeonEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BB2D RID: 47917 RVA: 0x001B05F4 File Offset: 0x001AE7F4
+		// Token: 0x0600C6BB RID: 50875 RVA: 0x001C77A8 File Offset: 0x001C59A8
 		public static RecordDungeonEvent Create([Nullable(2)] RecordDungeonEvent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB2E RID: 47918 RVA: 0x001B0607 File Offset: 0x001AE807
+		// Token: 0x0600C6BC RID: 50876 RVA: 0x001C77BB File Offset: 0x001C59BB
 		public static RecordDungeonEvent CreateFromSetValue([Nullable(2)] RecordDungeonEvent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB2F RID: 47919 RVA: 0x001B061A File Offset: 0x001AE81A
+		// Token: 0x0600C6BD RID: 50877 RVA: 0x001C77CE File Offset: 0x001C59CE
 		public RecordDungeonEvent_SetValue ToSetValue()
 		{
 			return new RecordDungeonEvent_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003926 RID: 14630
-		// (get) Token: 0x0600BB30 RID: 47920 RVA: 0x001B0630 File Offset: 0x001AE830
-		// (set) Token: 0x0600BB31 RID: 47921 RVA: 0x001B0691 File Offset: 0x001AE891
+		// Token: 0x17003C13 RID: 15379
+		// (get) Token: 0x0600C6BE RID: 50878 RVA: 0x001C77E4 File Offset: 0x001C59E4
+		// (set) Token: 0x0600C6BF RID: 50879 RVA: 0x001C7845 File Offset: 0x001C5A45
 		public virtual IRecordTimeStampType EventConfig
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006FF7 RID: 28663
+		// Token: 0x0400762C RID: 30252
 		[Nullable(2)]
 		protected new RecordDungeonEvent FbInstance;
 
-		// Token: 0x04006FF8 RID: 28664
+		// Token: 0x0400762D RID: 30253
 		[Nullable(2)]
 		protected RecordDungeonEvent_SetValue PocoInterface;
 
-		// Token: 0x04006FF9 RID: 28665
+		// Token: 0x0400762E RID: 30254
 		private IRecordTimeStampType _EventConfigCache;
 
-		// Token: 0x04006FFA RID: 28666
+		// Token: 0x0400762F RID: 30255
 		private bool _EventConfigInited;
 	}
 }

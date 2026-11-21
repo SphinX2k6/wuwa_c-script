@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028F9 RID: 10489
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BD2 RID: 11218
 	public class IColorMapData
 	{
-		// Token: 0x0600E8F3 RID: 59635 RVA: 0x00222BCD File Offset: 0x00220DCD
+		// Token: 0x0600F737 RID: 63287 RVA: 0x0023FDB9 File Offset: 0x0023DFB9
 		public static IColorMapData Create(IColorMapData? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048C3 RID: 18627
-		// (get) Token: 0x0600E8F4 RID: 59636 RVA: 0x00222BEC File Offset: 0x00220DEC
+		// Token: 0x17004C41 RID: 19521
+		// (get) Token: 0x0600F738 RID: 63288 RVA: 0x0023FDD8 File Offset: 0x0023DFD8
 		public virtual string Key
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048C4 RID: 18628
-		// (get) Token: 0x0600E8F5 RID: 59637 RVA: 0x00222BF9 File Offset: 0x00220DF9
+		// Token: 0x17004C42 RID: 19522
+		// (get) Token: 0x0600F739 RID: 63289 RVA: 0x0023FDE5 File Offset: 0x0023DFE5
 		public virtual IColor Color
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008099 RID: 32921
+		// Token: 0x0400875E RID: 34654
 		private IColorMapData Instance;
 
-		// Token: 0x0400809A RID: 32922
+		// Token: 0x0400875F RID: 34655
 		[Nullable(2)]
 		private IColor _ColorCache;
 
-		// Token: 0x0400809B RID: 32923
+		// Token: 0x04008760 RID: 34656
 		private bool _ColorInited;
 	}
 }

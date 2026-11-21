@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023F7 RID: 9207
+	// Token: 0x0200268E RID: 9870
 	public static class ERogueSelectRoomTypeExtensions
 	{
-		// Token: 0x0600C856 RID: 51286 RVA: 0x001D5238 File Offset: 0x001D3438
+		// Token: 0x0600D4D9 RID: 54489 RVA: 0x001EE9E4 File Offset: 0x001ECBE4
 		public static string ToEnumString(this ERogueSelectRoomType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C857 RID: 51287 RVA: 0x001D5260 File Offset: 0x001D3460
+		// Token: 0x0600D4DA RID: 54490 RVA: 0x001EEA0C File Offset: 0x001ECC0C
 		public static ERogueSelectRoomType FromString(string name)
 		{
 			ERogueSelectRoomType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C858 RID: 51288 RVA: 0x001D5289 File Offset: 0x001D3489
+		// Token: 0x0600D4DB RID: 54491 RVA: 0x001EEA35 File Offset: 0x001ECC35
 		public static bool TryFromString(string name, out ERogueSelectRoomType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C859 RID: 51289 RVA: 0x001D52AE File Offset: 0x001D34AE
+		// Token: 0x0600D4DC RID: 54492 RVA: 0x001EEA5A File Offset: 0x001ECC5A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C85A RID: 51290 RVA: 0x001D52BE File Offset: 0x001D34BE
+		// Token: 0x0600D4DD RID: 54493 RVA: 0x001EEA6A File Offset: 0x001ECC6A
 		public static ERogueSelectRoomType[] GetValues()
 		{
 			return new ERogueSelectRoomType[1];
 		}
 
-		// Token: 0x0600C85B RID: 51291 RVA: 0x001D52C6 File Offset: 0x001D34C6
+		// Token: 0x0600D4DE RID: 54494 RVA: 0x001EEA72 File Offset: 0x001ECC72
 		public static string[] GetNames()
 		{
 			return new string[]

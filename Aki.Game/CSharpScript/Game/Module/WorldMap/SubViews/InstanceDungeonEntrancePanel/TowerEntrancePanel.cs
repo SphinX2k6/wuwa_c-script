@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePanel
 {
-	// Token: 0x02004813 RID: 18451
+	// Token: 0x02003744 RID: 14148
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerEntrancePanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x060304F3 RID: 197875 RVA: 0x00B35B08 File Offset: 0x00B33D08
+		// Token: 0x06024CC3 RID: 150723 RVA: 0x00A65A78 File Offset: 0x00A63C78
 		public override string GetResourceId()
 		{
 			return "UiView_Map_Tower_Tip_Prefab";
 		}
 
-		// Token: 0x060304F4 RID: 197876 RVA: 0x00B35B10 File Offset: 0x00B33D10
+		// Token: 0x06024CC4 RID: 150724 RVA: 0x00A65A80 File Offset: 0x00A63C80
 		protected override void OnStart()
 		{
 			UUIVerticalLayout verticalLayout = base.GetVerticalLayout(5);
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			base.OnStart();
 		}
 
-		// Token: 0x060304F5 RID: 197877 RVA: 0x00B35B8A File Offset: 0x00B33D8A
+		// Token: 0x06024CC5 RID: 150725 RVA: 0x00A65AFA File Offset: 0x00A63CFA
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x060304F6 RID: 197878 RVA: 0x00B35BBC File Offset: 0x00B33DBC
+		// Token: 0x06024CC6 RID: 150726 RVA: 0x00A65B2C File Offset: 0x00A63D2C
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x060304F7 RID: 197879 RVA: 0x00B35D07 File Offset: 0x00B33F07
+		// Token: 0x06024CC7 RID: 150727 RVA: 0x00A65C7B File Offset: 0x00A63E7B
 		private void OnSecondRefresh()
 		{
 			this.RefreshDifficult();
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			this.RefreshTime();
 		}
 
-		// Token: 0x060304F8 RID: 197880 RVA: 0x00B35D24 File Offset: 0x00B33F24
+		// Token: 0x06024CC8 RID: 150728 RVA: 0x00A65C98 File Offset: 0x00A63E98
 		private void RefreshReward()
 		{
 			List<TItem> dropPackagePreviewItemList = CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreviewItemList(3331);
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x060304F9 RID: 197881 RVA: 0x00B35D80 File Offset: 0x00B33F80
+		// Token: 0x06024CC9 RID: 150729 RVA: 0x00A65CF4 File Offset: 0x00A63EF4
 		private void RefreshDifficult()
 		{
 			InstanceDungeonCostTip instanceDungeonCostTip = this.InstanceCostTipView.AddItemByKey("difficult");
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			instanceDungeonCostTip.SetRightText(text ?? "");
 		}
 
-		// Token: 0x060304FA RID: 197882 RVA: 0x00B35DEC File Offset: 0x00B33FEC
+		// Token: 0x06024CCA RID: 150730 RVA: 0x00A65D60 File Offset: 0x00A63F60
 		private void RefreshTime()
 		{
 			CommonDefine.ICountDown seasonCountDownData = TowerModel.Instance.GetSeasonCountDownData();
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x060304FB RID: 197883 RVA: 0x00B35E98 File Offset: 0x00B34098
+		// Token: 0x06024CCB RID: 150731 RVA: 0x00A65E0C File Offset: 0x00A6400C
 		private void RefreshExploreContainer(int flowId)
 		{
 			if (flowId >= 4)
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x060304FC RID: 197884 RVA: 0x00B35F37 File Offset: 0x00B34137
+		// Token: 0x06024CCC RID: 150732 RVA: 0x00A65EAB File Offset: 0x00A640AB
 		protected override void OnCloseWorldMapSecondaryUi()
 		{
 			TipsListView instanceCostTipView = this.InstanceCostTipView;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			this.ClearTimer();
 		}
 
-		// Token: 0x060304FD RID: 197885 RVA: 0x00B35F50 File Offset: 0x00B34150
+		// Token: 0x06024CCD RID: 150733 RVA: 0x00A65EC4 File Offset: 0x00A640C4
 		private void ClearTimer()
 		{
 			if (this.TimerId != null && TimerSystem.Instance.Has(this.TimerId))
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x060304FE RID: 197886 RVA: 0x00B35F84 File Offset: 0x00B34184
+		// Token: 0x06024CCE RID: 150734 RVA: 0x00A65EF8 File Offset: 0x00A640F8
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearTimer();
@@ -236,41 +236,41 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x04019FED RID: 106477
+		// Token: 0x040146A1 RID: 83617
 		private const int REWARD_ID = 3331;
 
-		// Token: 0x04019FEE RID: 106478
+		// Token: 0x040146A2 RID: 83618
 		private const string TIME_KEY = "time";
 
-		// Token: 0x04019FEF RID: 106479
+		// Token: 0x040146A3 RID: 83619
 		private const string DIFFICULT_KEY = "difficult";
 
-		// Token: 0x04019FF0 RID: 106480
+		// Token: 0x040146A4 RID: 83620
 		private const string SCORE_KEY = "score";
 
-		// Token: 0x04019FF1 RID: 106481
+		// Token: 0x040146A5 RID: 83621
 		[Nullable(2)]
 		private TipsListView InstanceCostTipView;
 
-		// Token: 0x04019FF2 RID: 106482
+		// Token: 0x040146A6 RID: 83622
 		[Nullable(2)]
 		protected RewardItemBar RewardsView;
 
-		// Token: 0x04019FF3 RID: 106483
+		// Token: 0x040146A7 RID: 83623
 		[Nullable(2)]
 		private TimerHandle TimerId;
 
-		// Token: 0x04019FF4 RID: 106484
+		// Token: 0x040146A8 RID: 83624
 		private int FlowId;
 
-		// Token: 0x04019FF5 RID: 106485
+		// Token: 0x040146A9 RID: 83625
 		private double RemainingTime;
 
-		// Token: 0x0200AAE2 RID: 43746
+		// Token: 0x02009493 RID: 38035
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F64 RID: 212836
+			// Token: 0x0402E6E7 RID: 190183
 			public const int TowerEntrancePanel = 0;
 		}
 	}

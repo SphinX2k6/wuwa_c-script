@@ -4,52 +4,54 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Core.Fight
 {
-	// Token: 0x02004003 RID: 16387
+	// Token: 0x02003267 RID: 12903
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Core/Fight/ECharacterLoadType.ECharacterLoadType")]
 	public enum ECharacterLoadType : byte
 	{
-		// Token: 0x0401598C RID: 88460
+		// Token: 0x040115EC RID: 71148
 		通用,
-		// Token: 0x0401598D RID: 88461
+		// Token: 0x040115ED RID: 71149
 		肉鸽,
-		// Token: 0x0401598E RID: 88462
+		// Token: 0x040115EE RID: 71150
 		Ai角色,
-		// Token: 0x0401598F RID: 88463
+		// Token: 0x040115EF RID: 71151
 		坎特蕾拉特殊玩法,
-		// Token: 0x04015990 RID: 88464
+		// Token: 0x040115F0 RID: 71152
 		主线书页副本2_4,
-		// Token: 0x04015991 RID: 88465
+		// Token: 0x040115F1 RID: 71153
 		塔防道具2_6,
-		// Token: 0x04015992 RID: 88466
+		// Token: 0x040115F2 RID: 71154
 		拍照活动2_7,
-		// Token: 0x04015993 RID: 88467
+		// Token: 0x040115F3 RID: 71155
 		幸存者2_7,
-		// Token: 0x04015994 RID: 88468
+		// Token: 0x040115F4 RID: 71156
 		仇远主线副本2_7,
-		// Token: 0x04015995 RID: 88469
+		// Token: 0x040115F5 RID: 71157
 		主线黑潮副本2_7,
-		// Token: 0x04015996 RID: 88470
+		// Token: 0x040115F6 RID: 71158
 		主线辛吉勒姆副本3_1,
-		// Token: 0x04015997 RID: 88471
+		// Token: 0x040115F7 RID: 71159
 		巴别塔3_5,
-		// Token: 0x04015998 RID: 88472
+		// Token: 0x040115F8 RID: 71160
 		神肉鸽3_6,
-		// Token: 0x04015999 RID: 88473
+		// Token: 0x040115F9 RID: 71161
 		黑梦3_4,
-		// Token: 0x0401599A RID: 88474
+		// Token: 0x040115FA RID: 71162
 		主线重楼副本3_5,
-		// Token: 0x0401599B RID: 88475
+		// Token: 0x040115FB RID: 71163
 		御剑流程3_6,
-		// Token: 0x0401599C RID: 88476
+		// Token: 0x040115FC RID: 71164
 		无冠者战斗3_6,
-		// Token: 0x0401599D RID: 88477
-		占位1_后续功能开发后替换,
-		// Token: 0x0401599E RID: 88478
-		占位2_后续功能开发后替换,
-		// Token: 0x0401599F RID: 88479
+		// Token: 0x040115FD RID: 71165
+		占位1,
+		// Token: 0x040115FE RID: 71166
+		占位2,
+		// Token: 0x040115FF RID: 71167
 		主线溯心副本3_7,
-		// Token: 0x040159A0 RID: 88480
+		// Token: 0x04011600 RID: 71168
+		角色爬塔3_8,
+		// Token: 0x04011601 RID: 71169
 		ECharacterLoadType_MAX
 	}
 }

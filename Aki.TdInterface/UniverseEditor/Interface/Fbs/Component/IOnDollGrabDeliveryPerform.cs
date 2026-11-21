@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005698 RID: 22168
+	// Token: 0x02005C39 RID: 23609
 	public struct IOnDollGrabDeliveryPerform : IFlatbufferObject
 	{
-		// Token: 0x1700A4D7 RID: 42199
-		// (get) Token: 0x06024FDE RID: 151518 RVA: 0x0051BF2B File Offset: 0x0051A12B
+		// Token: 0x1700AD66 RID: 44390
+		// (get) Token: 0x06027217 RID: 160279 RVA: 0x0055CAC7 File Offset: 0x0055ACC7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024FDF RID: 151519 RVA: 0x0051BF38 File Offset: 0x0051A138
+		// Token: 0x06027218 RID: 160280 RVA: 0x0055CAD4 File Offset: 0x0055ACD4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06024FE0 RID: 151520 RVA: 0x0051BF40 File Offset: 0x0051A140
+		// Token: 0x06027219 RID: 160281 RVA: 0x0055CADC File Offset: 0x0055ACDC
 		public static IOnDollGrabDeliveryPerform GetRootAsIOnDollGrabDeliveryPerform(ByteBuffer _bb)
 		{
 			return IOnDollGrabDeliveryPerform.GetRootAsIOnDollGrabDeliveryPerform(_bb, default(IOnDollGrabDeliveryPerform));
 		}
 
-		// Token: 0x06024FE1 RID: 151521 RVA: 0x0051BF5C File Offset: 0x0051A15C
+		// Token: 0x0602721A RID: 160282 RVA: 0x0055CAF8 File Offset: 0x0055ACF8
 		public static IOnDollGrabDeliveryPerform GetRootAsIOnDollGrabDeliveryPerform(ByteBuffer _bb, IOnDollGrabDeliveryPerform obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06024FE2 RID: 151522 RVA: 0x0051BF79 File Offset: 0x0051A179
+		// Token: 0x0602721B RID: 160283 RVA: 0x0055CB15 File Offset: 0x0055AD15
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06024FE3 RID: 151523 RVA: 0x0051BF88 File Offset: 0x0051A188
+		// Token: 0x0602721C RID: 160284 RVA: 0x0055CB24 File Offset: 0x0055AD24
 		public IOnDollGrabDeliveryPerform __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A4D8 RID: 42200
-		// (get) Token: 0x06024FE4 RID: 151524 RVA: 0x0051BF98 File Offset: 0x0051A198
+		// Token: 0x1700AD67 RID: 44391
+		// (get) Token: 0x0602721D RID: 160285 RVA: 0x0055CB34 File Offset: 0x0055AD34
 		public string EventMontage
 		{
 			get
@@ -63,20 +63,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024FE5 RID: 151525 RVA: 0x0051BFCF File Offset: 0x0051A1CF
+		// Token: 0x0602721E RID: 160286 RVA: 0x0055CB6B File Offset: 0x0055AD6B
 		public Span<byte> GetEventMontageBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06024FE6 RID: 151526 RVA: 0x0051BFDE File Offset: 0x0051A1DE
+		// Token: 0x0602721F RID: 160287 RVA: 0x0055CB7A File Offset: 0x0055AD7A
 		public byte[] GetEventMontageArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700A4D9 RID: 42201
-		// (get) Token: 0x06024FE7 RID: 151527 RVA: 0x0051BFEC File Offset: 0x0051A1EC
+		// Token: 0x1700AD68 RID: 44392
+		// (get) Token: 0x06027220 RID: 160288 RVA: 0x0055CB88 File Offset: 0x0055AD88
 		public string StandByMontage
 		{
 			get
@@ -90,20 +90,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024FE8 RID: 151528 RVA: 0x0051C023 File Offset: 0x0051A223
+		// Token: 0x06027221 RID: 160289 RVA: 0x0055CBBF File Offset: 0x0055ADBF
 		public Span<byte> GetStandByMontageBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06024FE9 RID: 151529 RVA: 0x0051C032 File Offset: 0x0051A232
+		// Token: 0x06027222 RID: 160290 RVA: 0x0055CBCE File Offset: 0x0055ADCE
 		public byte[] GetStandByMontageArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700A4DA RID: 42202
-		// (get) Token: 0x06024FEA RID: 151530 RVA: 0x0051C040 File Offset: 0x0051A240
+		// Token: 0x1700AD69 RID: 44393
+		// (get) Token: 0x06027223 RID: 160291 RVA: 0x0055CBDC File Offset: 0x0055ADDC
 		public IPlayFlow? Flow
 		{
 			get
@@ -117,8 +117,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A4DB RID: 42203
-		// (get) Token: 0x06024FEB RID: 151531 RVA: 0x0051C0A0 File Offset: 0x0051A2A0
+		// Token: 0x1700AD6A RID: 44394
+		// (get) Token: 0x06027224 RID: 160292 RVA: 0x0055CC3C File Offset: 0x0055AE3C
 		public float PerformDuration
 		{
 			get
@@ -132,8 +132,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A4DC RID: 42204
-		// (get) Token: 0x06024FEC RID: 151532 RVA: 0x0051C0E4 File Offset: 0x0051A2E4
+		// Token: 0x1700AD6B RID: 44395
+		// (get) Token: 0x06027225 RID: 160293 RVA: 0x0055CC80 File Offset: 0x0055AE80
 		public byte NullMask
 		{
 			get
@@ -147,7 +147,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024FED RID: 151533 RVA: 0x0051C121 File Offset: 0x0051A321
+		// Token: 0x06027226 RID: 160294 RVA: 0x0055CCBD File Offset: 0x0055AEBD
 		public static Offset<IOnDollGrabDeliveryPerform> CreateIOnDollGrabDeliveryPerform(FlatBufferBuilder builder, StringOffset EventMontageOffset = default(StringOffset), StringOffset StandByMontageOffset = default(StringOffset), Offset<IPlayFlow> FlowOffset = default(Offset<IPlayFlow>), float PerformDuration = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -159,49 +159,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IOnDollGrabDeliveryPerform.EndIOnDollGrabDeliveryPerform(builder);
 		}
 
-		// Token: 0x06024FEE RID: 151534 RVA: 0x0051C155 File Offset: 0x0051A355
+		// Token: 0x06027227 RID: 160295 RVA: 0x0055CCF1 File Offset: 0x0055AEF1
 		public static void StartIOnDollGrabDeliveryPerform(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06024FEF RID: 151535 RVA: 0x0051C15E File Offset: 0x0051A35E
+		// Token: 0x06027228 RID: 160296 RVA: 0x0055CCFA File Offset: 0x0055AEFA
 		public static void AddEventMontage(FlatBufferBuilder builder, StringOffset eventMontageOffset)
 		{
 			builder.AddOffset(0, eventMontageOffset.Value, 0);
 		}
 
-		// Token: 0x06024FF0 RID: 151536 RVA: 0x0051C16E File Offset: 0x0051A36E
+		// Token: 0x06027229 RID: 160297 RVA: 0x0055CD0A File Offset: 0x0055AF0A
 		public static void AddStandByMontage(FlatBufferBuilder builder, StringOffset standByMontageOffset)
 		{
 			builder.AddOffset(1, standByMontageOffset.Value, 0);
 		}
 
-		// Token: 0x06024FF1 RID: 151537 RVA: 0x0051C17E File Offset: 0x0051A37E
+		// Token: 0x0602722A RID: 160298 RVA: 0x0055CD1A File Offset: 0x0055AF1A
 		public static void AddFlow(FlatBufferBuilder builder, Offset<IPlayFlow> flowOffset)
 		{
 			builder.AddOffset(2, flowOffset.Value, 0);
 		}
 
-		// Token: 0x06024FF2 RID: 151538 RVA: 0x0051C18E File Offset: 0x0051A38E
+		// Token: 0x0602722B RID: 160299 RVA: 0x0055CD2A File Offset: 0x0055AF2A
 		public static void AddPerformDuration(FlatBufferBuilder builder, float performDuration)
 		{
 			builder.AddFloat(3, performDuration, 0.0);
 		}
 
-		// Token: 0x06024FF3 RID: 151539 RVA: 0x0051C1A1 File Offset: 0x0051A3A1
+		// Token: 0x0602722C RID: 160300 RVA: 0x0055CD3D File Offset: 0x0055AF3D
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06024FF4 RID: 151540 RVA: 0x0051C1AC File Offset: 0x0051A3AC
+		// Token: 0x0602722D RID: 160301 RVA: 0x0055CD48 File Offset: 0x0055AF48
 		public static Offset<IOnDollGrabDeliveryPerform> EndIOnDollGrabDeliveryPerform(FlatBufferBuilder builder)
 		{
 			return new Offset<IOnDollGrabDeliveryPerform>(builder.EndTable());
 		}
 
-		// Token: 0x06024FF5 RID: 151541 RVA: 0x0051C1BC File Offset: 0x0051A3BC
+		// Token: 0x0602722E RID: 160302 RVA: 0x0055CD58 File Offset: 0x0055AF58
 		public IOnDollGrabDeliveryPerformT UnPack()
 		{
 			IOnDollGrabDeliveryPerformT onDollGrabDeliveryPerformT = new IOnDollGrabDeliveryPerformT();
@@ -209,7 +209,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return onDollGrabDeliveryPerformT;
 		}
 
-		// Token: 0x06024FF6 RID: 151542 RVA: 0x0051C1D8 File Offset: 0x0051A3D8
+		// Token: 0x0602722F RID: 160303 RVA: 0x0055CD74 File Offset: 0x0055AF74
 		public void UnPackTo(IOnDollGrabDeliveryPerformT _o)
 		{
 			_o.EventMontage = this.EventMontage;
@@ -219,7 +219,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06024FF7 RID: 151543 RVA: 0x0051C244 File Offset: 0x0051A444
+		// Token: 0x06027230 RID: 160304 RVA: 0x0055CDE0 File Offset: 0x0055AFE0
 		public static Offset<IOnDollGrabDeliveryPerform> Pack(FlatBufferBuilder builder, IOnDollGrabDeliveryPerformT _o)
 		{
 			if (_o == null)
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IOnDollGrabDeliveryPerform.CreateIOnDollGrabDeliveryPerform(builder, eventMontageOffset, standByMontageOffset, flowOffset, _o.PerformDuration, _o.NullMask);
 		}
 
-		// Token: 0x0400EAB9 RID: 60089
+		// Token: 0x0400F722 RID: 63266
 		private Table __p;
 	}
 }

@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200177B RID: 6011
+// Token: 0x02000C34 RID: 3124
 [NullableContext(1)]
 [Nullable(0)]
 public class CalabashUnlockItemView : UiTickViewBase
 {
-	// Token: 0x0600AEB0 RID: 44720 RVA: 0x002774C9 File Offset: 0x002756C9
+	// Token: 0x06008297 RID: 33431 RVA: 0x0028198D File Offset: 0x0027FB8D
 	public CalabashUnlockItemView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x17000E7E RID: 3710
-	// (get) Token: 0x0600AEB1 RID: 44721 RVA: 0x002774DD File Offset: 0x002756DD
+	// Token: 0x17000EA1 RID: 3745
+	// (get) Token: 0x06008298 RID: 33432 RVA: 0x002819A1 File Offset: 0x0027FBA1
 	protected IList<VisionUnlockQualityData> UnlockTipsList
 	{
 		get
@@ -32,7 +32,7 @@ public class CalabashUnlockItemView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600AEB2 RID: 44722 RVA: 0x00277504 File Offset: 0x00275704
+	// Token: 0x06008299 RID: 33433 RVA: 0x002819C8 File Offset: 0x0027FBC8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -53,13 +53,13 @@ public class CalabashUnlockItemView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x0600AEB3 RID: 44723 RVA: 0x00277605 File Offset: 0x00275805
+	// Token: 0x0600829A RID: 33434 RVA: 0x00281AC9 File Offset: 0x0027FCC9
 	protected override void OnBeforeCreate()
 	{
 		this.UnLockData = (VisionUnlockQualityData)this.OpenParam;
 	}
 
-	// Token: 0x0600AEB4 RID: 44724 RVA: 0x00277618 File Offset: 0x00275818
+	// Token: 0x0600829B RID: 33435 RVA: 0x00281ADC File Offset: 0x0027FCDC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CalabashUnlockItemView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -70,7 +70,7 @@ public class CalabashUnlockItemView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AEB5 RID: 44725 RVA: 0x0027765C File Offset: 0x0027585C
+	// Token: 0x0600829C RID: 33436 RVA: 0x00281B20 File Offset: 0x0027FD20
 	protected override void OnStart()
 	{
 		this.StarLayout = new SimpleGenericLayout(base.GetLayoutBase(7));
@@ -78,13 +78,13 @@ public class CalabashUnlockItemView : UiTickViewBase
 		base.GetText(5).SetUIActive(!GameModeController.Instance.IsInInstance());
 	}
 
-	// Token: 0x0600AEB6 RID: 44726 RVA: 0x002776BA File Offset: 0x002758BA
+	// Token: 0x0600829D RID: 33437 RVA: 0x00281B7E File Offset: 0x0027FD7E
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0600AEB7 RID: 44727 RVA: 0x002776C4 File Offset: 0x002758C4
+	// Token: 0x0600829E RID: 33438 RVA: 0x00281B88 File Offset: 0x0027FD88
 	protected void Refresh()
 	{
 		IList<VisionUnlockQualityData> unlockTipsList = this.UnlockTipsList;
@@ -100,7 +100,7 @@ public class CalabashUnlockItemView : UiTickViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600AEB8 RID: 44728 RVA: 0x00277704 File Offset: 0x00275904
+	// Token: 0x0600829F RID: 33439 RVA: 0x00281BC8 File Offset: 0x0027FDC8
 	private UniTask CreateItemGrid()
 	{
 		CalabashUnlockItemView.<CreateItemGrid>d__16 <CreateItemGrid>d__;
@@ -111,7 +111,7 @@ public class CalabashUnlockItemView : UiTickViewBase
 		return <CreateItemGrid>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AEB9 RID: 44729 RVA: 0x00277748 File Offset: 0x00275948
+	// Token: 0x060082A0 RID: 33440 RVA: 0x00281C0C File Offset: 0x0027FE0C
 	private UniTask Delay()
 	{
 		CalabashUnlockItemView.<Delay>d__17 <Delay>d__;
@@ -122,7 +122,7 @@ public class CalabashUnlockItemView : UiTickViewBase
 		return <Delay>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AEBA RID: 44730 RVA: 0x0027778C File Offset: 0x0027598C
+	// Token: 0x060082A1 RID: 33441 RVA: 0x00281C50 File Offset: 0x0027FE50
 	private void RefreshView()
 	{
 		PhantomItem? phantomItemById = PhantomBattleConfig.Instance.GetPhantomItemById(this.UnLockData.MonsterItemId);
@@ -137,13 +137,13 @@ public class CalabashUnlockItemView : UiTickViewBase
 		this.RefreshDesc();
 	}
 
-	// Token: 0x0600AEBB RID: 44731 RVA: 0x00277837 File Offset: 0x00275A37
+	// Token: 0x060082A2 RID: 33442 RVA: 0x00281CFB File Offset: 0x0027FEFB
 	private void RefreshGridItem()
 	{
 		this.ItemGrid.RefreshByData(this.UnLockData.MonsterItemId);
 	}
 
-	// Token: 0x0600AEBC RID: 44732 RVA: 0x00277850 File Offset: 0x00275A50
+	// Token: 0x060082A3 RID: 33443 RVA: 0x00281D14 File Offset: 0x0027FF14
 	private void RefreshStar()
 	{
 		bool flag = this.UnLockData.UnlockQuality == 0;
@@ -163,7 +163,7 @@ public class CalabashUnlockItemView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600AEBD RID: 44733 RVA: 0x0027789C File Offset: 0x00275A9C
+	// Token: 0x060082A4 RID: 33444 RVA: 0x00281D60 File Offset: 0x0027FF60
 	private void RefreshBgTexture()
 	{
 		QualityInfo? itemQualityConfig = InventoryConfig.Instance.GetItemQualityConfig(this.UnLockData.UnlockQuality);
@@ -171,7 +171,7 @@ public class CalabashUnlockItemView : UiTickViewBase
 		base.SetTextureByPath(itemQualityConfig.Value.TextureVisionQuailtyFlow, base.GetTexture(8), null, null);
 	}
 
-	// Token: 0x0600AEBE RID: 44734 RVA: 0x0027790C File Offset: 0x00275B0C
+	// Token: 0x060082A5 RID: 33445 RVA: 0x00281DD0 File Offset: 0x0027FFD0
 	private void RefreshNewTagText()
 	{
 		if (this.UnLockData.IsUnlockMonster)
@@ -183,14 +183,14 @@ public class CalabashUnlockItemView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(6), textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x0600AEBF RID: 44735 RVA: 0x00277974 File Offset: 0x00275B74
+	// Token: 0x060082A6 RID: 33446 RVA: 0x00281E38 File Offset: 0x00280038
 	private void RefreshDesc()
 	{
 		PhantomBattleInstance phantomInstanceByItemId = PhantomBattleModel.Instance.GetPhantomInstanceByItemId(this.UnLockData.MonsterItemId);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), phantomInstanceByItemId.GetPhantomSkillInfoByLevel().Value.SimplyDescription, Array.Empty<object>());
 	}
 
-	// Token: 0x0600AEC0 RID: 44736 RVA: 0x002779C4 File Offset: 0x00275BC4
+	// Token: 0x060082A7 RID: 33447 RVA: 0x00281E88 File Offset: 0x00280088
 	private void JumpToCalabashCollectTab()
 	{
 		Log instance = Log.Instance;
@@ -203,7 +203,7 @@ public class CalabashUnlockItemView : UiTickViewBase
 		CalabashController.Instance.JumpToCalabashCollectTabView(this.ConfigData.Value.MonsterId);
 	}
 
-	// Token: 0x0600AEC1 RID: 44737 RVA: 0x00277A38 File Offset: 0x00275C38
+	// Token: 0x060082A8 RID: 33448 RVA: 0x00281EFC File Offset: 0x002800FC
 	protected void CloseViewOrShowNextData()
 	{
 		if (this.UnlockTipsList.Count > 0)
@@ -215,7 +215,7 @@ public class CalabashUnlockItemView : UiTickViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600AEC2 RID: 44738 RVA: 0x00277A80 File Offset: 0x00275C80
+	// Token: 0x060082A9 RID: 33449 RVA: 0x00281F44 File Offset: 0x00280144
 	protected override void OnTick(float delta)
 	{
 		if (this.TipCountDown <= 0f)
@@ -229,56 +229,56 @@ public class CalabashUnlockItemView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x04004F4C RID: 20300
+	// Token: 0x04004FF6 RID: 20470
 	private float TipCountDown;
 
-	// Token: 0x04004F4D RID: 20301
+	// Token: 0x04004FF7 RID: 20471
 	[Nullable(2)]
 	private VisionUnlockQualityData UnLockData;
 
-	// Token: 0x04004F4E RID: 20302
+	// Token: 0x04004FF8 RID: 20472
 	private CalabashDevelopReward? ConfigData;
 
-	// Token: 0x04004F4F RID: 20303
+	// Token: 0x04004FF9 RID: 20473
 	private readonly CustomPromise<bool> DelayPromise = new CustomPromise<bool>();
 
-	// Token: 0x04004F50 RID: 20304
+	// Token: 0x04004FFA RID: 20474
 	[Nullable(2)]
 	private VisionGridItem ItemGrid;
 
-	// Token: 0x04004F51 RID: 20305
+	// Token: 0x04004FFB RID: 20475
 	[Nullable(2)]
 	private SimpleGenericLayout StarLayout;
 
-	// Token: 0x02007D81 RID: 32129
+	// Token: 0x02006F07 RID: 28423
 	[NullableContext(0)]
 	private class ECompDefine
 	{
-		// Token: 0x04029190 RID: 168336
+		// Token: 0x040244BB RID: 148667
 		public const int ItemGrid = 0;
 
-		// Token: 0x04029191 RID: 168337
+		// Token: 0x040244BC RID: 148668
 		public const int Name = 1;
 
-		// Token: 0x04029192 RID: 168338
+		// Token: 0x040244BD RID: 148669
 		public const int Desc = 2;
 
-		// Token: 0x04029193 RID: 168339
+		// Token: 0x040244BE RID: 148670
 		public const int BgTexture = 3;
 
-		// Token: 0x04029194 RID: 168340
+		// Token: 0x040244BF RID: 148671
 		public const int Button = 4;
 
-		// Token: 0x04029195 RID: 168341
+		// Token: 0x040244C0 RID: 148672
 		public const int JumpDesc = 5;
 
-		// Token: 0x04029196 RID: 168342
+		// Token: 0x040244C1 RID: 148673
 		public const int NewTagText = 6;
 
-		// Token: 0x04029197 RID: 168343
+		// Token: 0x040244C2 RID: 148674
 		public const int StarLayout = 7;
 
-		// Token: 0x04029198 RID: 168344
+		// Token: 0x040244C3 RID: 148675
 		public const int BgFlowTexture = 8;
 	}
 }

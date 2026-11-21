@@ -4,19 +4,18 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.AdventureGuide;
 using CSharpScript.Game.Module.Map.MapDefine;
-using CSharpScript.Game.Module.Map.Marks;
 using CSharpScript.Game.Module.Map.Marks.MarkItem;
 using CSharpScript.Game.Module.Map.View.BaseMap;
 using CSharpScript.Game.Module.WorldMap;
 
 namespace CSharpScript.Game.Module.Map.Mark.Misc
 {
-	// Token: 0x020054C3 RID: 21699
+	// Token: 0x020044A1 RID: 17569
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class MarkUiUtils
 	{
-		// Token: 0x0603767B RID: 226939 RVA: 0x00D28040 File Offset: 0x00D26240
+		// Token: 0x0602C5A6 RID: 181670 RVA: 0x00C779D0 File Offset: 0x00C75BD0
 		public static bool IsShowGoto(MarkItem markItem)
 		{
 			TeleportMarkItem teleportMarkItem = markItem as TeleportMarkItem;
@@ -38,9 +37,8 @@ namespace CSharpScript.Game.Module.Map.Mark.Misc
 					{
 						return true;
 					}
-					LevelPlayModel instance = LevelPlayModel.Instance;
-					SceneGameplayMarkItem sceneGameplayMarkItem2 = sceneGameplayMarkItem;
-					LevelPlayInfo levelPlayInfo = instance.GetLevelPlayInfo((sceneGameplayMarkItem2.MarkConfig != null) ? sceneGameplayMarkItem2.MarkConfig.GetValueOrDefault().RelativeId : 0);
+					MapMark? mapMark;
+					LevelPlayInfo levelPlayInfo = LevelPlayModel.Instance.GetLevelPlayInfo((sceneGameplayMarkItem.MarkConfig != null) ? mapMark.GetValueOrDefault().RelativeId : 0);
 					return levelPlayInfo == null || levelPlayInfo.IsClose;
 				}
 				else
@@ -83,7 +81,7 @@ namespace CSharpScript.Game.Module.Map.Mark.Misc
 			return WorldMapSecondaryUiDefine.MarkPanelTypeMap.GetValueOrDefault(markItem.MarkType, ESecondaryPanel.GeneralPanel) == ESecondaryPanel.GeneralPanel;
 		}
 
-		// Token: 0x0603767C RID: 226940 RVA: 0x00D281B0 File Offset: 0x00D263B0
+		// Token: 0x0602C5A7 RID: 181671 RVA: 0x00C77B44 File Offset: 0x00C75D44
 		[return: Nullable(2)]
 		public static MarkItem FindNearbyValidGotoMark(BaseMap map, MarkItem markItem)
 		{
@@ -96,28 +94,17 @@ namespace CSharpScript.Game.Module.Map.Mark.Misc
 				{
 					return false;
 				}
-				MarkItemEntity markItemEntity2 = result.MarkItemEntity;
-				if (markItemEntity2 == null || !markItemEntity2.GamePlay.InGravityLayer)
+				EMapGravityDirection gravity = result.Gravity;
+				if (!WorldMapModel.Instance.IsMarkInGravityLayer(result.MarkId, gravity))
 				{
 					return false;
 				}
-				MarkItemEntity markItemEntity3 = result.MarkItemEntity;
-				EMapGravityDirection? emapGravityDirection = (markItemEntity3 != null) ? new EMapGravityDirection?(markItemEntity3.GamePlay.Gravity) : null;
-				MarkItemEntity markItemEntity4 = markItem.MarkItemEntity;
-				EMapGravityDirection? emapGravityDirection2 = (markItemEntity4 != null) ? new EMapGravityDirection?(markItemEntity4.GamePlay.Gravity) : null;
-				EMapGravityDirection? emapGravityDirection3 = emapGravityDirection2;
-				EMapGravityDirection emapGravityDirection4 = EMapGravityDirection.All;
-				if (emapGravityDirection3.GetValueOrDefault() == emapGravityDirection4 & emapGravityDirection3 != null)
+				EMapGravityDirection gravity2 = markItem.Gravity;
+				if (gravity2 == EMapGravityDirection.All)
 				{
 					return result != markItem;
 				}
-				if (result != markItem)
-				{
-					emapGravityDirection3 = emapGravityDirection;
-					EMapGravityDirection? emapGravityDirection5 = emapGravityDirection2;
-					return emapGravityDirection3.GetValueOrDefault() == emapGravityDirection5.GetValueOrDefault() & emapGravityDirection3 != null == (emapGravityDirection5 != null);
-				}
-				return false;
+				return result != markItem && gravity == gravity2;
 			});
 			if (flag)
 			{
@@ -161,38 +148,28 @@ namespace CSharpScript.Game.Module.Map.Mark.Misc
 					if (!configMarkItem.IsLocked && !configMarkItem.IsLordGym())
 					{
 						LevelPlayModel instance = LevelPlayModel.Instance;
-						ConfigMarkItem configMarkItem2 = configMarkItem;
-						LevelPlayInfo levelPlayInfo = instance.GetLevelPlayInfo((configMarkItem2.MarkConfig != null) ? configMarkItem2.MarkConfig.GetValueOrDefault().RelativeId : 0);
+						MapMark? markConfig = configMarkItem.MarkConfig;
+						LevelPlayInfo levelPlayInfo = instance.GetLevelPlayInfo((markConfig != null) ? markConfig.GetValueOrDefault().RelativeId : 0);
 						if (levelPlayInfo != null && !levelPlayInfo.IsClose && !MapModel.Instance.IsLevelPlayOccupied(levelPlayInfo.Id).IsOccupied)
 						{
 							return item;
 						}
 					}
 				}
-				MarkItemEntity markItemEntity = item.MarkItemEntity;
-				if (markItemEntity != null && markItemEntity.IsConfigMark)
+				ConfigMarkItem configMarkItem2 = item as ConfigMarkItem;
+				if (configMarkItem2 != null)
 				{
-					ConfigMarkItem configMarkItem3 = item as ConfigMarkItem;
-					bool flag2;
-					if (configMarkItem3 == null)
+					MapMark? markConfig = configMarkItem2.MarkConfig;
+					if (markConfig != null && markConfig.GetValueOrDefault().EnableQuickTransfer == 1 && !configMarkItem2.IsLocked && configMarkItem2.CanConditionShowView())
 					{
-						flag2 = false;
-					}
-					else
-					{
-						ConfigMarkItem configMarkItem4 = configMarkItem3;
-						flag2 = (((configMarkItem4.MarkConfig != null) ? new int?(configMarkItem4.MarkConfig.GetValueOrDefault().EnableQuickTransfer) : null).GetValueOrDefault() == 1);
-					}
-					if (flag2 && configMarkItem3 != null && !configMarkItem3.IsLocked && configMarkItem3.CanConditionShowView())
-					{
-						return configMarkItem3;
+						return configMarkItem2;
 					}
 				}
 			}
 			return null;
 		}
 
-		// Token: 0x0603767D RID: 226941 RVA: 0x00D28410 File Offset: 0x00D26610
+		// Token: 0x0602C5A8 RID: 181672 RVA: 0x00C77D78 File Offset: 0x00C75F78
 		public static int? FindNearbyValidGotoMarkByPosition(BaseMap map, global::Vector position)
 		{
 			int? result = ConfigCommonParamById.GetIntConfig("QuickTransferRange");
@@ -217,29 +194,28 @@ namespace CSharpScript.Game.Module.Map.Mark.Misc
 					if (!configMarkItem.IsLocked && !configMarkItem.IsLordGym())
 					{
 						LevelPlayModel instance = LevelPlayModel.Instance;
-						ConfigMarkItem configMarkItem2 = configMarkItem;
-						LevelPlayInfo levelPlayInfo = instance.GetLevelPlayInfo((configMarkItem2.MarkConfig != null) ? configMarkItem2.MarkConfig.GetValueOrDefault().RelativeId : 0);
+						MapMark? markConfig = configMarkItem.MarkConfig;
+						LevelPlayInfo levelPlayInfo = instance.GetLevelPlayInfo((markConfig != null) ? markConfig.GetValueOrDefault().RelativeId : 0);
 						if (levelPlayInfo != null && !levelPlayInfo.IsClose && !MapModel.Instance.IsLevelPlayOccupied(levelPlayInfo.Id).IsOccupied)
 						{
 							return new int?(item.MarkId);
 						}
 					}
 				}
-				MarkItemEntity markItemEntity = item.MarkItemEntity;
-				if (markItemEntity != null && markItemEntity.IsConfigMark)
+				ConfigMarkItem configMarkItem2 = item as ConfigMarkItem;
+				if (configMarkItem2 != null)
 				{
-					ConfigMarkItem configMarkItem3 = item as ConfigMarkItem;
-					ConfigMarkItem configMarkItem4 = configMarkItem3;
-					if (configMarkItem4.MarkConfig != null && configMarkItem4.MarkConfig.GetValueOrDefault().EnableQuickTransfer == 1 && !configMarkItem3.IsLocked && configMarkItem3.CanConditionShowView())
+					MapMark? markConfig = configMarkItem2.MarkConfig;
+					if (markConfig != null && markConfig.GetValueOrDefault().EnableQuickTransfer == 1 && !configMarkItem2.IsLocked && configMarkItem2.CanConditionShowView())
 					{
-						return new int?(configMarkItem3.MarkConfigId);
+						return new int?(configMarkItem2.MarkConfigId);
 					}
 				}
 			}
 			return null;
 		}
 
-		// Token: 0x0603767E RID: 226942 RVA: 0x00D285D0 File Offset: 0x00D267D0
+		// Token: 0x0602C5A9 RID: 181673 RVA: 0x00C77F30 File Offset: 0x00C76130
 		public static void QuickGotoTeleport(MarkItem markItem, MarkItem teleportMarkItem, [Nullable(2)] TOnTelSuccessCallBack successTelAction = null)
 		{
 			MarkUiUtils.<>c__DisplayClass5_0 CS$<>8__locals1 = new MarkUiUtils.<>c__DisplayClass5_0();
@@ -283,7 +259,7 @@ namespace CSharpScript.Game.Module.Map.Mark.Misc
 			}
 		}
 
-		// Token: 0x0603767F RID: 226943 RVA: 0x00D28704 File Offset: 0x00D26904
+		// Token: 0x0602C5AA RID: 181674 RVA: 0x00C78064 File Offset: 0x00C76264
 		public static bool IsDungeonBelongDiffMap(int srcDungeonId, int dstDungeonId)
 		{
 			InstanceDungeon? dungeonConfig = WorldMapConfig.Instance.GetDungeonConfig(srcDungeonId);
@@ -293,7 +269,7 @@ namespace CSharpScript.Game.Module.Map.Mark.Misc
 			return num != num2;
 		}
 
-		// Token: 0x06037680 RID: 226944 RVA: 0x00D28766 File Offset: 0x00D26966
+		// Token: 0x0602C5AB RID: 181675 RVA: 0x00C780C6 File Offset: 0x00C762C6
 		// Note: this type is marked as 'beforefieldinit'.
 		static MarkUiUtils()
 		{
@@ -309,18 +285,18 @@ namespace CSharpScript.Game.Module.Map.Mark.Misc
 			};
 		}
 
-		// Token: 0x06037681 RID: 226945 RVA: 0x00D287A5 File Offset: 0x00D269A5
+		// Token: 0x0602C5AC RID: 181676 RVA: 0x00C78105 File Offset: 0x00C76305
 		[CompilerGenerated]
 		internal static void <QuickGotoTeleport>g__CloseFunction|5_5()
 		{
 			WorldMapModel.Instance.HideQuickTransferConfirmBox = false;
 		}
 
-		// Token: 0x0401D345 RID: 119621
+		// Token: 0x04017DD4 RID: 97748
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EDangerType, bool> DangerFullOpenGoToMap;
 
-		// Token: 0x0401D346 RID: 119622
+		// Token: 0x04017DD5 RID: 97749
 		[StaticVariableRuleIgnore]
 		private static readonly HashSet<EMarkType> ShowGotoMarkTypeSet;
 	}

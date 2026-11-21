@@ -2,88 +2,88 @@
 
 namespace CSharpScript.Game.Module.Map.Mark.Enum
 {
-	// Token: 0x020054C5 RID: 21701
+	// Token: 0x020044A3 RID: 17571
 	public enum ESecondaryPanel
 	{
-		// Token: 0x0401D34B RID: 119627
+		// Token: 0x04017DDA RID: 97754
 		CustomMarkPanel,
-		// Token: 0x0401D34C RID: 119628
+		// Token: 0x04017DDB RID: 97755
 		TeleportPanel,
-		// Token: 0x0401D34D RID: 119629
+		// Token: 0x04017DDC RID: 97756
 		GeneralPanel,
-		// Token: 0x0401D34E RID: 119630
+		// Token: 0x04017DDD RID: 97757
 		MarkMenuPanel,
-		// Token: 0x0401D34F RID: 119631
+		// Token: 0x04017DDE RID: 97758
 		QuestPanel,
-		// Token: 0x0401D350 RID: 119632
+		// Token: 0x04017DDF RID: 97759
 		SceneGameplayPanel,
-		// Token: 0x0401D351 RID: 119633
+		// Token: 0x04017DE0 RID: 97760
 		InstanceDungeonEntrancePanel,
-		// Token: 0x0401D352 RID: 119634
+		// Token: 0x04017DE1 RID: 97761
 		TowerEntrancePanel,
-		// Token: 0x0401D353 RID: 119635
+		// Token: 0x04017DE2 RID: 97762
 		ParkourPanel,
-		// Token: 0x0401D354 RID: 119636
+		// Token: 0x04017DE3 RID: 97763
 		TemporaryTeleportPanel,
-		// Token: 0x0401D355 RID: 119637
+		// Token: 0x04017DE4 RID: 97764
 		DetectorPanel,
-		// Token: 0x0401D356 RID: 119638
+		// Token: 0x04017DE5 RID: 97765
 		BoxPanel,
-		// Token: 0x0401D357 RID: 119639
+		// Token: 0x04017DE6 RID: 97766
 		LordGymPanel,
-		// Token: 0x0401D358 RID: 119640
+		// Token: 0x04017DE7 RID: 97767
 		RoguelikePanel,
-		// Token: 0x0401D359 RID: 119641
+		// Token: 0x04017DE8 RID: 97768
 		EnrichmentAreaPanel,
-		// Token: 0x0401D35A RID: 119642
+		// Token: 0x04017DE9 RID: 97769
 		PunishReportPanel,
-		// Token: 0x0401D35B RID: 119643
+		// Token: 0x04017DEA RID: 97770
 		CorniceMeetingPanel,
-		// Token: 0x0401D35C RID: 119644
+		// Token: 0x04017DEB RID: 97771
 		QuickNavigatePanel,
-		// Token: 0x0401D35D RID: 119645
+		// Token: 0x04017DEC RID: 97772
 		CaveHole,
-		// Token: 0x0401D35E RID: 119646
+		// Token: 0x04017DED RID: 97773
 		CommonGamePlayPanel,
-		// Token: 0x0401D35F RID: 119647
+		// Token: 0x04017DEE RID: 97774
 		TrackMenuPanel,
-		// Token: 0x0401D360 RID: 119648
+		// Token: 0x04017DEF RID: 97775
 		WorldMapNotePanel,
-		// Token: 0x0401D361 RID: 119649
+		// Token: 0x04017DF0 RID: 97776
 		MapMarkTogglePanel,
-		// Token: 0x0401D362 RID: 119650
+		// Token: 0x04017DF1 RID: 97777
 		MapTravelQuestPanel,
-		// Token: 0x0401D363 RID: 119651
+		// Token: 0x04017DF2 RID: 97778
 		FishingShip,
-		// Token: 0x0401D364 RID: 119652
+		// Token: 0x04017DF3 RID: 97779
 		FishingPoint,
-		// Token: 0x0401D365 RID: 119653
+		// Token: 0x04017DF4 RID: 97780
 		FishingCage,
-		// Token: 0x0401D366 RID: 119654
+		// Token: 0x04017DF5 RID: 97781
 		FishingDock,
-		// Token: 0x0401D367 RID: 119655
+		// Token: 0x04017DF6 RID: 97782
 		ShipTowerEntrancePanel,
-		// Token: 0x0401D368 RID: 119656
+		// Token: 0x04017DF7 RID: 97783
 		WeeklyRoguePanel,
-		// Token: 0x0401D369 RID: 119657
+		// Token: 0x04017DF8 RID: 97784
 		RogueResPanel,
-		// Token: 0x0401D36A RID: 119658
+		// Token: 0x04017DF9 RID: 97785
 		TraceExploreEntityPanel,
-		// Token: 0x0401D36B RID: 119659
+		// Token: 0x04017DFA RID: 97786
 		GreatSwordChallengePanel,
-		// Token: 0x0401D36C RID: 119660
+		// Token: 0x04017DFB RID: 97787
 		ActivityListPanel,
-		// Token: 0x0401D36D RID: 119661
+		// Token: 0x04017DFC RID: 97788
 		HonamiScanItemPanel,
-		// Token: 0x0401D36E RID: 119662
+		// Token: 0x04017DFD RID: 97789
 		HonamiScanMachinePanel,
-		// Token: 0x0401D36F RID: 119663
+		// Token: 0x04017DFE RID: 97790
 		InfrObservatoryPanel,
-		// Token: 0x0401D370 RID: 119664
+		// Token: 0x04017DFF RID: 97791
 		InfrRoadPanel,
-		// Token: 0x0401D371 RID: 119665
+		// Token: 0x04017E00 RID: 97792
 		PhantomArenaNpcPanel,
-		// Token: 0x0401D372 RID: 119666
+		// Token: 0x04017E01 RID: 97793
 		WheelTowerEntrancePanel
 	}
 }

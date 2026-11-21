@@ -6,28 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001110 RID: 4368
+	// Token: 0x02000284 RID: 644
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.SkinnedMeshComponent")]
 	[UnrealStructLayout(2624, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2624)]
-	public abstract class USkinnedMeshComponent : UMeshComponent, IUnrealUObject, IUnrealObject, ILODSyncInterface, IUnrealNativeInterface, IUnrealInterface
+	public abstract class USkinnedMeshComponent : UMeshComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600FD6F RID: 64879 RVA: 0x0017646D File Offset: 0x0017466D
+		// Token: 0x060044BD RID: 17597 RVA: 0x0006182F File Offset: 0x0005FA2F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return USkinnedMeshComponent._ClassPtr;
 		}
 
-		// Token: 0x0600FD70 RID: 64880 RVA: 0x00176479 File Offset: 0x00174679
-		int ILODSyncInterface.InterfaceOffset()
-		{
-			return USkinnedMeshComponent.__InterfaceOffset_ILODSyncInterface;
-		}
-
-		// Token: 0x17003DD4 RID: 15828
-		// (get) Token: 0x0600FD71 RID: 64881 RVA: 0x00176480 File Offset: 0x00174680
-		// (set) Token: 0x0600FD72 RID: 64882 RVA: 0x00176494 File Offset: 0x00174694
+		// Token: 0x17000CD0 RID: 3280
+		// (get) Token: 0x060044BE RID: 17598 RVA: 0x0006183B File Offset: 0x0005FA3B
+		// (set) Token: 0x060044BF RID: 17599 RVA: 0x0006184F File Offset: 0x0005FA4F
 		public unsafe USkeletalMesh SkeletalMesh
 		{
 			get
@@ -40,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DD5 RID: 15829
-		// (get) Token: 0x0600FD73 RID: 64883 RVA: 0x001764AC File Offset: 0x001746AC
-		// (set) Token: 0x0600FD74 RID: 64884 RVA: 0x001764E5 File Offset: 0x001746E5
+		// Token: 0x17000CD1 RID: 3281
+		// (get) Token: 0x060044C0 RID: 17600 RVA: 0x00061864 File Offset: 0x0005FA64
+		// (set) Token: 0x060044C1 RID: 17601 RVA: 0x0006189D File Offset: 0x0005FA9D
 		[Nullable(1)]
 		public TArray<FExtraMaterialInfo> ExtraMaterialInfos
 		{
@@ -64,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DD6 RID: 15830
-		// (get) Token: 0x0600FD75 RID: 64885 RVA: 0x001764F3 File Offset: 0x001746F3
-		// (set) Token: 0x0600FD76 RID: 64886 RVA: 0x00176507 File Offset: 0x00174707
+		// Token: 0x17000CD2 RID: 3282
+		// (get) Token: 0x060044C2 RID: 17602 RVA: 0x000618AB File Offset: 0x0005FAAB
+		// (set) Token: 0x060044C3 RID: 17603 RVA: 0x000618BF File Offset: 0x0005FABF
 		[Nullable(new byte[]
 		{
 			0,
@@ -94,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DD7 RID: 15831
-		// (get) Token: 0x0600FD77 RID: 64887 RVA: 0x0017651C File Offset: 0x0017471C
-		// (set) Token: 0x0600FD78 RID: 64888 RVA: 0x00176555 File Offset: 0x00174755
+		// Token: 0x17000CD3 RID: 3283
+		// (get) Token: 0x060044C4 RID: 17604 RVA: 0x000618D4 File Offset: 0x0005FAD4
+		// (set) Token: 0x060044C5 RID: 17605 RVA: 0x0006190D File Offset: 0x0005FB0D
 		[Nullable(1)]
 		public TArray<ESkinCacheUsage> SkinCacheUsage
 		{
@@ -118,9 +112,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DD8 RID: 15832
-		// (get) Token: 0x0600FD79 RID: 64889 RVA: 0x00176564 File Offset: 0x00174764
-		// (set) Token: 0x0600FD7A RID: 64890 RVA: 0x0017659D File Offset: 0x0017479D
+		// Token: 0x17000CD4 RID: 3284
+		// (get) Token: 0x060044C6 RID: 17606 RVA: 0x0006191C File Offset: 0x0005FB1C
+		// (set) Token: 0x060044C7 RID: 17607 RVA: 0x00061955 File Offset: 0x0005FB55
 		[Nullable(1)]
 		public TArray<FVertexOffsetUsage> VertexOffsetUsage
 		{
@@ -142,9 +136,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DD9 RID: 15833
-		// (get) Token: 0x0600FD7B RID: 64891 RVA: 0x001765AC File Offset: 0x001747AC
-		// (set) Token: 0x0600FD7C RID: 64892 RVA: 0x001765E5 File Offset: 0x001747E5
+		// Token: 0x17000CD5 RID: 3285
+		// (get) Token: 0x060044C8 RID: 17608 RVA: 0x00061964 File Offset: 0x0005FB64
+		// (set) Token: 0x060044C9 RID: 17609 RVA: 0x0006199D File Offset: 0x0005FB9D
 		[Nullable(1)]
 		public TArray<FMatrix> ComponentSpaceMatricesWithShears
 		{
@@ -166,9 +160,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DDA RID: 15834
-		// (get) Token: 0x0600FD7D RID: 64893 RVA: 0x001765F4 File Offset: 0x001747F4
-		// (set) Token: 0x0600FD7E RID: 64894 RVA: 0x0017662D File Offset: 0x0017482D
+		// Token: 0x17000CD6 RID: 3286
+		// (get) Token: 0x060044CA RID: 17610 RVA: 0x000619AC File Offset: 0x0005FBAC
+		// (set) Token: 0x060044CB RID: 17611 RVA: 0x000619E5 File Offset: 0x0005FBE5
 		[Nullable(1)]
 		public TArray<FMatrix> PreviousComponentSpaceMatricesWithShears
 		{
@@ -190,9 +184,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DDB RID: 15835
-		// (get) Token: 0x0600FD7F RID: 64895 RVA: 0x0017663B File Offset: 0x0017483B
-		// (set) Token: 0x0600FD80 RID: 64896 RVA: 0x0017664F File Offset: 0x0017484F
+		// Token: 0x17000CD7 RID: 3287
+		// (get) Token: 0x060044CC RID: 17612 RVA: 0x000619F3 File Offset: 0x0005FBF3
+		// (set) Token: 0x060044CD RID: 17613 RVA: 0x00061A07 File Offset: 0x0005FC07
 		public unsafe UPhysicsAsset PhysicsAssetOverride
 		{
 			get
@@ -205,9 +199,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DDC RID: 15836
-		// (get) Token: 0x0600FD81 RID: 64897 RVA: 0x00176664 File Offset: 0x00174864
-		// (set) Token: 0x0600FD82 RID: 64898 RVA: 0x00176674 File Offset: 0x00174874
+		// Token: 0x17000CD8 RID: 3288
+		// (get) Token: 0x060044CE RID: 17614 RVA: 0x00061A1C File Offset: 0x0005FC1C
+		// (set) Token: 0x060044CF RID: 17615 RVA: 0x00061A2C File Offset: 0x0005FC2C
 		public unsafe int ForcedLodModel
 		{
 			get
@@ -220,9 +214,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DDD RID: 15837
-		// (get) Token: 0x0600FD83 RID: 64899 RVA: 0x00176685 File Offset: 0x00174885
-		// (set) Token: 0x0600FD84 RID: 64900 RVA: 0x00176695 File Offset: 0x00174895
+		// Token: 0x17000CD9 RID: 3289
+		// (get) Token: 0x060044D0 RID: 17616 RVA: 0x00061A3D File Offset: 0x0005FC3D
+		// (set) Token: 0x060044D1 RID: 17617 RVA: 0x00061A4D File Offset: 0x0005FC4D
 		public unsafe int MinLodModel
 		{
 			get
@@ -235,9 +229,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DDE RID: 15838
-		// (get) Token: 0x0600FD85 RID: 64901 RVA: 0x001766A6 File Offset: 0x001748A6
-		// (set) Token: 0x0600FD86 RID: 64902 RVA: 0x001766BF File Offset: 0x001748BF
+		// Token: 0x17000CDA RID: 3290
+		// (get) Token: 0x060044D2 RID: 17618 RVA: 0x00061A5E File Offset: 0x0005FC5E
+		// (set) Token: 0x060044D3 RID: 17619 RVA: 0x00061A77 File Offset: 0x0005FC77
 		public unsafe bool bOverrideMinLod
 		{
 			get
@@ -250,9 +244,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DDF RID: 15839
-		// (get) Token: 0x0600FD87 RID: 64903 RVA: 0x001766EF File Offset: 0x001748EF
-		// (set) Token: 0x0600FD88 RID: 64904 RVA: 0x001766FF File Offset: 0x001748FF
+		// Token: 0x17000CDB RID: 3291
+		// (get) Token: 0x060044D4 RID: 17620 RVA: 0x00061AA7 File Offset: 0x0005FCA7
+		// (set) Token: 0x060044D5 RID: 17621 RVA: 0x00061AB7 File Offset: 0x0005FCB7
 		public unsafe int MaxLodModel
 		{
 			get
@@ -265,9 +259,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DE0 RID: 15840
-		// (get) Token: 0x0600FD89 RID: 64905 RVA: 0x00176710 File Offset: 0x00174910
-		// (set) Token: 0x0600FD8A RID: 64906 RVA: 0x00176729 File Offset: 0x00174929
+		// Token: 0x17000CDC RID: 3292
+		// (get) Token: 0x060044D6 RID: 17622 RVA: 0x00061AC8 File Offset: 0x0005FCC8
+		// (set) Token: 0x060044D7 RID: 17623 RVA: 0x00061AE1 File Offset: 0x0005FCE1
 		public unsafe bool bOverrideMaxLod
 		{
 			get
@@ -280,9 +274,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DE1 RID: 15841
-		// (get) Token: 0x0600FD8B RID: 64907 RVA: 0x00176759 File Offset: 0x00174959
-		// (set) Token: 0x0600FD8C RID: 64908 RVA: 0x00176772 File Offset: 0x00174972
+		// Token: 0x17000CDD RID: 3293
+		// (get) Token: 0x060044D8 RID: 17624 RVA: 0x00061B11 File Offset: 0x0005FD11
+		// (set) Token: 0x060044D9 RID: 17625 RVA: 0x00061B2A File Offset: 0x0005FD2A
 		public unsafe bool bEnableMaxLod
 		{
 			get
@@ -295,9 +289,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DE2 RID: 15842
-		// (get) Token: 0x0600FD8D RID: 64909 RVA: 0x001767A2 File Offset: 0x001749A2
-		// (set) Token: 0x0600FD8E RID: 64910 RVA: 0x001767B2 File Offset: 0x001749B2
+		// Token: 0x17000CDE RID: 3294
+		// (get) Token: 0x060044DA RID: 17626 RVA: 0x00061B5A File Offset: 0x0005FD5A
+		// (set) Token: 0x060044DB RID: 17627 RVA: 0x00061B6A File Offset: 0x0005FD6A
 		public unsafe float StreamingDistanceMultiplier
 		{
 			get
@@ -310,9 +304,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DE3 RID: 15843
-		// (get) Token: 0x0600FD8F RID: 64911 RVA: 0x001767C3 File Offset: 0x001749C3
-		// (set) Token: 0x0600FD90 RID: 64912 RVA: 0x001767D7 File Offset: 0x001749D7
+		// Token: 0x17000CDF RID: 3295
+		// (get) Token: 0x060044DC RID: 17628 RVA: 0x00061B7B File Offset: 0x0005FD7B
+		// (set) Token: 0x060044DD RID: 17629 RVA: 0x00061B8F File Offset: 0x0005FD8F
 		public unsafe UTextRenderComponent LODTextComponent
 		{
 			get
@@ -325,9 +319,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DE4 RID: 15844
-		// (get) Token: 0x0600FD91 RID: 64913 RVA: 0x001767EC File Offset: 0x001749EC
-		// (set) Token: 0x0600FD92 RID: 64914 RVA: 0x00176800 File Offset: 0x00174A00
+		// Token: 0x17000CE0 RID: 3296
+		// (get) Token: 0x060044DE RID: 17630 RVA: 0x00061BA4 File Offset: 0x0005FDA4
+		// (set) Token: 0x060044DF RID: 17631 RVA: 0x00061BB8 File Offset: 0x0005FDB8
 		public unsafe UTextRenderComponent DistanceTextComponent
 		{
 			get
@@ -340,9 +334,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DE5 RID: 15845
-		// (get) Token: 0x0600FD93 RID: 64915 RVA: 0x00176818 File Offset: 0x00174A18
-		// (set) Token: 0x0600FD94 RID: 64916 RVA: 0x00176851 File Offset: 0x00174A51
+		// Token: 0x17000CE1 RID: 3297
+		// (get) Token: 0x060044E0 RID: 17632 RVA: 0x00061BD0 File Offset: 0x0005FDD0
+		// (set) Token: 0x060044E1 RID: 17633 RVA: 0x00061C09 File Offset: 0x0005FE09
 		[Nullable(1)]
 		public TArray<FSkelMeshComponentLODInfo> LODInfo
 		{
@@ -364,9 +358,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DE6 RID: 15846
-		// (get) Token: 0x0600FD95 RID: 64917 RVA: 0x0017685F File Offset: 0x00174A5F
-		// (set) Token: 0x0600FD96 RID: 64918 RVA: 0x0017686F File Offset: 0x00174A6F
+		// Token: 0x17000CE2 RID: 3298
+		// (get) Token: 0x060044E2 RID: 17634 RVA: 0x00061C17 File Offset: 0x0005FE17
+		// (set) Token: 0x060044E3 RID: 17635 RVA: 0x00061C27 File Offset: 0x0005FE27
 		public unsafe EVisibilityBasedAnimTickOption VisibilityBasedAnimTickOption
 		{
 			get
@@ -379,9 +373,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DE7 RID: 15847
-		// (get) Token: 0x0600FD97 RID: 64919 RVA: 0x00176880 File Offset: 0x00174A80
-		// (set) Token: 0x0600FD98 RID: 64920 RVA: 0x00176890 File Offset: 0x00174A90
+		// Token: 0x17000CE3 RID: 3299
+		// (get) Token: 0x060044E4 RID: 17636 RVA: 0x00061C38 File Offset: 0x0005FE38
+		// (set) Token: 0x060044E5 RID: 17637 RVA: 0x00061C48 File Offset: 0x0005FE48
 		public unsafe bool bAllowBoneVisibilityStatesDifferentWithMaster
 		{
 			get
@@ -394,9 +388,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DE8 RID: 15848
-		// (get) Token: 0x0600FD99 RID: 64921 RVA: 0x001768A1 File Offset: 0x00174AA1
-		// (set) Token: 0x0600FD9A RID: 64922 RVA: 0x001768B1 File Offset: 0x00174AB1
+		// Token: 0x17000CE4 RID: 3300
+		// (get) Token: 0x060044E6 RID: 17638 RVA: 0x00061C59 File Offset: 0x0005FE59
+		// (set) Token: 0x060044E7 RID: 17639 RVA: 0x00061C69 File Offset: 0x0005FE69
 		public unsafe bool bRequireHiddenBonesCalculation
 		{
 			get
@@ -409,9 +403,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DE9 RID: 15849
-		// (get) Token: 0x0600FD9B RID: 64923 RVA: 0x001768C2 File Offset: 0x00174AC2
-		// (set) Token: 0x0600FD9C RID: 64924 RVA: 0x001768DB File Offset: 0x00174ADB
+		// Token: 0x17000CE5 RID: 3301
+		// (get) Token: 0x060044E8 RID: 17640 RVA: 0x00061C7A File Offset: 0x0005FE7A
+		// (set) Token: 0x060044E9 RID: 17641 RVA: 0x00061C93 File Offset: 0x0005FE93
 		public unsafe bool bUseBoundsFromMasterPoseComponent
 		{
 			get
@@ -424,9 +418,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DEA RID: 15850
-		// (get) Token: 0x0600FD9D RID: 64925 RVA: 0x0017690B File Offset: 0x00174B0B
-		// (set) Token: 0x0600FD9E RID: 64926 RVA: 0x00176924 File Offset: 0x00174B24
+		// Token: 0x17000CE6 RID: 3302
+		// (get) Token: 0x060044EA RID: 17642 RVA: 0x00061CC3 File Offset: 0x0005FEC3
+		// (set) Token: 0x060044EB RID: 17643 RVA: 0x00061CDC File Offset: 0x0005FEDC
 		public unsafe bool bForceWireframe
 		{
 			get
@@ -439,9 +433,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DEB RID: 15851
-		// (get) Token: 0x0600FD9F RID: 64927 RVA: 0x00176954 File Offset: 0x00174B54
-		// (set) Token: 0x0600FDA0 RID: 64928 RVA: 0x0017696D File Offset: 0x00174B6D
+		// Token: 0x17000CE7 RID: 3303
+		// (get) Token: 0x060044EC RID: 17644 RVA: 0x00061D0C File Offset: 0x0005FF0C
+		// (set) Token: 0x060044ED RID: 17645 RVA: 0x00061D25 File Offset: 0x0005FF25
 		public unsafe bool bDisplayBones_DEPRECATED
 		{
 			get
@@ -454,9 +448,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DEC RID: 15852
-		// (get) Token: 0x0600FDA1 RID: 64929 RVA: 0x0017699D File Offset: 0x00174B9D
-		// (set) Token: 0x0600FDA2 RID: 64930 RVA: 0x001769B6 File Offset: 0x00174BB6
+		// Token: 0x17000CE8 RID: 3304
+		// (get) Token: 0x060044EE RID: 17646 RVA: 0x00061D55 File Offset: 0x0005FF55
+		// (set) Token: 0x060044EF RID: 17647 RVA: 0x00061D6E File Offset: 0x0005FF6E
 		public unsafe bool bDisableMorphTarget
 		{
 			get
@@ -469,9 +463,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DED RID: 15853
-		// (get) Token: 0x0600FDA3 RID: 64931 RVA: 0x001769E6 File Offset: 0x00174BE6
-		// (set) Token: 0x0600FDA4 RID: 64932 RVA: 0x001769FF File Offset: 0x00174BFF
+		// Token: 0x17000CE9 RID: 3305
+		// (get) Token: 0x060044F0 RID: 17648 RVA: 0x00061D9E File Offset: 0x0005FF9E
+		// (set) Token: 0x060044F1 RID: 17649 RVA: 0x00061DB7 File Offset: 0x0005FFB7
 		public unsafe bool bHideSkin
 		{
 			get
@@ -484,9 +478,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DEE RID: 15854
-		// (get) Token: 0x0600FDA5 RID: 64933 RVA: 0x00176A2F File Offset: 0x00174C2F
-		// (set) Token: 0x0600FDA6 RID: 64934 RVA: 0x00176A48 File Offset: 0x00174C48
+		// Token: 0x17000CEA RID: 3306
+		// (get) Token: 0x060044F2 RID: 17650 RVA: 0x00061DE7 File Offset: 0x0005FFE7
+		// (set) Token: 0x060044F3 RID: 17651 RVA: 0x00061E00 File Offset: 0x00060000
 		public unsafe bool bPerBoneMotionBlur
 		{
 			get
@@ -499,9 +493,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DEF RID: 15855
-		// (get) Token: 0x0600FDA7 RID: 64935 RVA: 0x00176A78 File Offset: 0x00174C78
-		// (set) Token: 0x0600FDA8 RID: 64936 RVA: 0x00176A91 File Offset: 0x00174C91
+		// Token: 0x17000CEB RID: 3307
+		// (get) Token: 0x060044F4 RID: 17652 RVA: 0x00061E30 File Offset: 0x00060030
+		// (set) Token: 0x060044F5 RID: 17653 RVA: 0x00061E49 File Offset: 0x00060049
 		public unsafe bool bComponentUseFixedSkelBounds
 		{
 			get
@@ -514,9 +508,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DF0 RID: 15856
-		// (get) Token: 0x0600FDA9 RID: 64937 RVA: 0x00176AC1 File Offset: 0x00174CC1
-		// (set) Token: 0x0600FDAA RID: 64938 RVA: 0x00176ADA File Offset: 0x00174CDA
+		// Token: 0x17000CEC RID: 3308
+		// (get) Token: 0x060044F6 RID: 17654 RVA: 0x00061E79 File Offset: 0x00060079
+		// (set) Token: 0x060044F7 RID: 17655 RVA: 0x00061E92 File Offset: 0x00060092
 		public unsafe bool bConsiderAllBodiesForBounds
 		{
 			get
@@ -529,9 +523,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DF1 RID: 15857
-		// (get) Token: 0x0600FDAB RID: 64939 RVA: 0x00176B0A File Offset: 0x00174D0A
-		// (set) Token: 0x0600FDAC RID: 64940 RVA: 0x00176B23 File Offset: 0x00174D23
+		// Token: 0x17000CED RID: 3309
+		// (get) Token: 0x060044F8 RID: 17656 RVA: 0x00061EC2 File Offset: 0x000600C2
+		// (set) Token: 0x060044F9 RID: 17657 RVA: 0x00061EDB File Offset: 0x000600DB
 		public unsafe bool bSyncAttachParentLOD
 		{
 			get
@@ -544,9 +538,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DF2 RID: 15858
-		// (get) Token: 0x0600FDAD RID: 64941 RVA: 0x00176B53 File Offset: 0x00174D53
-		// (set) Token: 0x0600FDAE RID: 64942 RVA: 0x00176B63 File Offset: 0x00174D63
+		// Token: 0x17000CEE RID: 3310
+		// (get) Token: 0x060044FA RID: 17658 RVA: 0x00061F0B File Offset: 0x0006010B
+		// (set) Token: 0x060044FB RID: 17659 RVA: 0x00061F1B File Offset: 0x0006011B
 		public unsafe bool bResetMorphTargetsWhenSetSkeletalMesh
 		{
 			get
@@ -559,9 +553,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DF3 RID: 15859
-		// (get) Token: 0x0600FDAF RID: 64943 RVA: 0x00176B74 File Offset: 0x00174D74
-		// (set) Token: 0x0600FDB0 RID: 64944 RVA: 0x00176B8D File Offset: 0x00174D8D
+		// Token: 0x17000CEF RID: 3311
+		// (get) Token: 0x060044FC RID: 17660 RVA: 0x00061F2C File Offset: 0x0006012C
+		// (set) Token: 0x060044FD RID: 17661 RVA: 0x00061F45 File Offset: 0x00060145
 		public unsafe bool bCanHighlightSelectedSections
 		{
 			get
@@ -574,9 +568,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DF4 RID: 15860
-		// (get) Token: 0x0600FDB1 RID: 64945 RVA: 0x00176BBD File Offset: 0x00174DBD
-		// (set) Token: 0x0600FDB2 RID: 64946 RVA: 0x00176BD6 File Offset: 0x00174DD6
+		// Token: 0x17000CF0 RID: 3312
+		// (get) Token: 0x060044FE RID: 17662 RVA: 0x00061F75 File Offset: 0x00060175
+		// (set) Token: 0x060044FF RID: 17663 RVA: 0x00061F8E File Offset: 0x0006018E
 		public unsafe bool bRecentlyRendered
 		{
 			get
@@ -589,9 +583,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DF5 RID: 15861
-		// (get) Token: 0x0600FDB3 RID: 64947 RVA: 0x00176C06 File Offset: 0x00174E06
-		// (set) Token: 0x0600FDB4 RID: 64948 RVA: 0x00176C1F File Offset: 0x00174E1F
+		// Token: 0x17000CF1 RID: 3313
+		// (get) Token: 0x06004500 RID: 17664 RVA: 0x00061FBE File Offset: 0x000601BE
+		// (set) Token: 0x06004501 RID: 17665 RVA: 0x00061FD7 File Offset: 0x000601D7
 		public unsafe bool bForceTickThisFrame
 		{
 			get
@@ -604,9 +598,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DF6 RID: 15862
-		// (get) Token: 0x0600FDB5 RID: 64949 RVA: 0x00176C4F File Offset: 0x00174E4F
-		// (set) Token: 0x0600FDB6 RID: 64950 RVA: 0x00176C68 File Offset: 0x00174E68
+		// Token: 0x17000CF2 RID: 3314
+		// (get) Token: 0x06004502 RID: 17666 RVA: 0x00062007 File Offset: 0x00060207
+		// (set) Token: 0x06004503 RID: 17667 RVA: 0x00062020 File Offset: 0x00060220
 		public unsafe bool bCastCapsuleDirectShadow
 		{
 			get
@@ -619,9 +613,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DF7 RID: 15863
-		// (get) Token: 0x0600FDB7 RID: 64951 RVA: 0x00176C98 File Offset: 0x00174E98
-		// (set) Token: 0x0600FDB8 RID: 64952 RVA: 0x00176CB1 File Offset: 0x00174EB1
+		// Token: 0x17000CF3 RID: 3315
+		// (get) Token: 0x06004504 RID: 17668 RVA: 0x00062050 File Offset: 0x00060250
+		// (set) Token: 0x06004505 RID: 17669 RVA: 0x00062069 File Offset: 0x00060269
 		public unsafe bool bCastCapsuleIndirectShadow
 		{
 			get
@@ -634,9 +628,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DF8 RID: 15864
-		// (get) Token: 0x0600FDB9 RID: 64953 RVA: 0x00176CE1 File Offset: 0x00174EE1
-		// (set) Token: 0x0600FDBA RID: 64954 RVA: 0x00176CFA File Offset: 0x00174EFA
+		// Token: 0x17000CF4 RID: 3316
+		// (get) Token: 0x06004506 RID: 17670 RVA: 0x00062099 File Offset: 0x00060299
+		// (set) Token: 0x06004507 RID: 17671 RVA: 0x000620B2 File Offset: 0x000602B2
 		public unsafe bool bCPUSkinning
 		{
 			get
@@ -649,9 +643,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DF9 RID: 15865
-		// (get) Token: 0x0600FDBB RID: 64955 RVA: 0x00176D2A File Offset: 0x00174F2A
-		// (set) Token: 0x0600FDBC RID: 64956 RVA: 0x00176D43 File Offset: 0x00174F43
+		// Token: 0x17000CF5 RID: 3317
+		// (get) Token: 0x06004508 RID: 17672 RVA: 0x000620E2 File Offset: 0x000602E2
+		// (set) Token: 0x06004509 RID: 17673 RVA: 0x000620FB File Offset: 0x000602FB
 		public unsafe bool bEnableUpdateRateOptimizations
 		{
 			get
@@ -664,9 +658,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DFA RID: 15866
-		// (get) Token: 0x0600FDBD RID: 64957 RVA: 0x00176D73 File Offset: 0x00174F73
-		// (set) Token: 0x0600FDBE RID: 64958 RVA: 0x00176D8C File Offset: 0x00174F8C
+		// Token: 0x17000CF6 RID: 3318
+		// (get) Token: 0x0600450A RID: 17674 RVA: 0x0006212B File Offset: 0x0006032B
+		// (set) Token: 0x0600450B RID: 17675 RVA: 0x00062144 File Offset: 0x00060344
 		public unsafe bool bDisplayDebugUpdateRateOptimizations
 		{
 			get
@@ -679,9 +673,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DFB RID: 15867
-		// (get) Token: 0x0600FDBF RID: 64959 RVA: 0x00176DBC File Offset: 0x00174FBC
-		// (set) Token: 0x0600FDC0 RID: 64960 RVA: 0x00176DD5 File Offset: 0x00174FD5
+		// Token: 0x17000CF7 RID: 3319
+		// (get) Token: 0x0600450C RID: 17676 RVA: 0x00062174 File Offset: 0x00060374
+		// (set) Token: 0x0600450D RID: 17677 RVA: 0x0006218D File Offset: 0x0006038D
 		public unsafe bool bRenderStatic
 		{
 			get
@@ -694,9 +688,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DFC RID: 15868
-		// (get) Token: 0x0600FDC1 RID: 64961 RVA: 0x00176E05 File Offset: 0x00175005
-		// (set) Token: 0x0600FDC2 RID: 64962 RVA: 0x00176E1E File Offset: 0x0017501E
+		// Token: 0x17000CF8 RID: 3320
+		// (get) Token: 0x0600450E RID: 17678 RVA: 0x000621BD File Offset: 0x000603BD
+		// (set) Token: 0x0600450F RID: 17679 RVA: 0x000621D6 File Offset: 0x000603D6
 		public unsafe bool bIgnoreMasterPoseComponentLOD
 		{
 			get
@@ -709,9 +703,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DFD RID: 15869
-		// (get) Token: 0x0600FDC3 RID: 64963 RVA: 0x00176E4E File Offset: 0x0017504E
-		// (set) Token: 0x0600FDC4 RID: 64964 RVA: 0x00176E67 File Offset: 0x00175067
+		// Token: 0x17000CF9 RID: 3321
+		// (get) Token: 0x06004510 RID: 17680 RVA: 0x00062206 File Offset: 0x00060406
+		// (set) Token: 0x06004511 RID: 17681 RVA: 0x0006221F File Offset: 0x0006041F
 		public unsafe bool bCachedLocalBoundsUpToDate
 		{
 			get
@@ -724,9 +718,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DFE RID: 15870
-		// (get) Token: 0x0600FDC5 RID: 64965 RVA: 0x00176E97 File Offset: 0x00175097
-		// (set) Token: 0x0600FDC6 RID: 64966 RVA: 0x00176EB0 File Offset: 0x001750B0
+		// Token: 0x17000CFA RID: 3322
+		// (get) Token: 0x06004512 RID: 17682 RVA: 0x0006224F File Offset: 0x0006044F
+		// (set) Token: 0x06004513 RID: 17683 RVA: 0x00062268 File Offset: 0x00060468
 		public unsafe bool bForceMeshObjectUpdate
 		{
 			get
@@ -739,9 +733,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003DFF RID: 15871
-		// (get) Token: 0x0600FDC7 RID: 64967 RVA: 0x00176EE0 File Offset: 0x001750E0
-		// (set) Token: 0x0600FDC8 RID: 64968 RVA: 0x00176EF0 File Offset: 0x001750F0
+		// Token: 0x17000CFB RID: 3323
+		// (get) Token: 0x06004514 RID: 17684 RVA: 0x00062298 File Offset: 0x00060498
+		// (set) Token: 0x06004515 RID: 17685 RVA: 0x000622A8 File Offset: 0x000604A8
 		public unsafe float CapsuleIndirectShadowMinVisibility
 		{
 			get
@@ -754,9 +748,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003E00 RID: 15872
-		// (get) Token: 0x0600FDC9 RID: 64969 RVA: 0x00176F01 File Offset: 0x00175101
-		// (set) Token: 0x0600FDCA RID: 64970 RVA: 0x00176F11 File Offset: 0x00175111
+		// Token: 0x17000CFC RID: 3324
+		// (get) Token: 0x06004516 RID: 17686 RVA: 0x000622B9 File Offset: 0x000604B9
+		// (set) Token: 0x06004517 RID: 17687 RVA: 0x000622C9 File Offset: 0x000604C9
 		public unsafe int ComponentLODBias
 		{
 			get
@@ -769,9 +763,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003E01 RID: 15873
-		// (get) Token: 0x0600FDCB RID: 64971 RVA: 0x00176F22 File Offset: 0x00175122
-		// (set) Token: 0x0600FDCC RID: 64972 RVA: 0x00176F3B File Offset: 0x0017513B
+		// Token: 0x17000CFD RID: 3325
+		// (get) Token: 0x06004518 RID: 17688 RVA: 0x000622DA File Offset: 0x000604DA
+		// (set) Token: 0x06004519 RID: 17689 RVA: 0x000622F3 File Offset: 0x000604F3
 		public unsafe bool bEnableGlobalLODBias
 		{
 			get
@@ -784,9 +778,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003E02 RID: 15874
-		// (get) Token: 0x0600FDCD RID: 64973 RVA: 0x00176F6B File Offset: 0x0017516B
-		// (set) Token: 0x0600FDCE RID: 64974 RVA: 0x00176F7F File Offset: 0x0017517F
+		// Token: 0x17000CFE RID: 3326
+		// (get) Token: 0x0600451A RID: 17690 RVA: 0x00062323 File Offset: 0x00060523
+		// (set) Token: 0x0600451B RID: 17691 RVA: 0x00062337 File Offset: 0x00060537
 		public unsafe FBoxSphereBounds CachedWorldSpaceBounds
 		{
 			get
@@ -799,9 +793,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003E03 RID: 15875
-		// (get) Token: 0x0600FDCF RID: 64975 RVA: 0x00176F94 File Offset: 0x00175194
-		// (set) Token: 0x0600FDD0 RID: 64976 RVA: 0x00176FA8 File Offset: 0x001751A8
+		// Token: 0x17000CFF RID: 3327
+		// (get) Token: 0x0600451C RID: 17692 RVA: 0x0006234C File Offset: 0x0006054C
+		// (set) Token: 0x0600451D RID: 17693 RVA: 0x00062360 File Offset: 0x00060560
 		public unsafe FMatrix CachedWorldToLocalTransform
 		{
 			get
@@ -814,19 +808,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600FDD1 RID: 64977 RVA: 0x00176FBD File Offset: 0x001751BD
+		// Token: 0x0600451E RID: 17694 RVA: 0x00062375 File Offset: 0x00060575
 		public void UnloadSkinWeightProfile(FName InProfileName)
 		{
 			USkinnedMeshComponent.__UnloadSkinWeightProfile_Internal(base.NativePtr, InProfileName);
 		}
 
-		// Token: 0x0600FDD2 RID: 64978 RVA: 0x00176FCB File Offset: 0x001751CB
+		// Token: 0x0600451F RID: 17695 RVA: 0x00062383 File Offset: 0x00060583
 		public void UnHideBoneByName(FName BoneName)
 		{
 			USkinnedMeshComponent.__UnHideBoneByName_Internal(base.NativePtr, BoneName);
 		}
 
-		// Token: 0x0600FDD3 RID: 64979 RVA: 0x00176FDC File Offset: 0x001751DC
+		// Token: 0x06004520 RID: 17696 RVA: 0x00062394 File Offset: 0x00060594
 		public unsafe void TransformToBoneSpace(FName BoneName, FVector InPosition, FRotator InRotation, ref FVector OutPosition, ref FRotator OutRotation)
 		{
 			fixed (FVector* ptr = &OutPosition)
@@ -841,7 +835,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600FDD4 RID: 64980 RVA: 0x00177010 File Offset: 0x00175210
+		// Token: 0x06004521 RID: 17697 RVA: 0x000623C8 File Offset: 0x000605C8
 		public unsafe void TransformFromBoneSpace(FName BoneName, FVector InPosition, FRotator InRotation, ref FVector OutPosition, ref FRotator OutRotation)
 		{
 			fixed (FVector* ptr = &OutPosition)
@@ -856,37 +850,37 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600FDD5 RID: 64981 RVA: 0x00177041 File Offset: 0x00175241
+		// Token: 0x06004522 RID: 17698 RVA: 0x000623F9 File Offset: 0x000605F9
 		public void ShowMaterialSection(int MaterialID, int SectionIndex, bool bShow, int LODIndex)
 		{
 			USkinnedMeshComponent.__ShowMaterialSection_Internal(base.NativePtr, MaterialID, SectionIndex, bShow, LODIndex);
 		}
 
-		// Token: 0x0600FDD6 RID: 64982 RVA: 0x00177053 File Offset: 0x00175253
+		// Token: 0x06004523 RID: 17699 RVA: 0x0006240B File Offset: 0x0006060B
 		public void ShowAllMaterialSections(int LODIndex)
 		{
 			USkinnedMeshComponent.__ShowAllMaterialSections_Internal(base.NativePtr, LODIndex);
 		}
 
-		// Token: 0x0600FDD7 RID: 64983 RVA: 0x00177061 File Offset: 0x00175261
+		// Token: 0x06004524 RID: 17700 RVA: 0x00062419 File Offset: 0x00060619
 		public void SetVertexOffsetUsage(int LODIndex, int Usage)
 		{
 			USkinnedMeshComponent.__SetVertexOffsetUsage_Internal(base.NativePtr, LODIndex, Usage);
 		}
 
-		// Token: 0x0600FDD8 RID: 64984 RVA: 0x00177070 File Offset: 0x00175270
+		// Token: 0x06004525 RID: 17701 RVA: 0x00062428 File Offset: 0x00060628
 		public void SetVertexColorOverride_LinearColor(int LODIndex, in TArray<FLinearColor> VertexColors)
 		{
 			USkinnedMeshComponent.__SetVertexColorOverride_LinearColor_Internal(base.NativePtr, LODIndex, (VertexColors ?? new TArray<FLinearColor>()).NativePtr);
 		}
 
-		// Token: 0x0600FDD9 RID: 64985 RVA: 0x0017708E File Offset: 0x0017528E
+		// Token: 0x06004526 RID: 17702 RVA: 0x00062446 File Offset: 0x00060646
 		public bool SetSkinWeightProfile(FName InProfileName)
 		{
 			return USkinnedMeshComponent.__SetSkinWeightProfile_Internal(base.NativePtr, InProfileName);
 		}
 
-		// Token: 0x0600FDDA RID: 64986 RVA: 0x0017709C File Offset: 0x0017529C
+		// Token: 0x06004527 RID: 17703 RVA: 0x00062454 File Offset: 0x00060654
 		public void SetSkinWeightOverride(int LODIndex, [Nullable(new byte[]
 		{
 			2,
@@ -896,145 +890,145 @@ namespace UnrealEngine
 			USkinnedMeshComponent.__SetSkinWeightOverride_Internal(base.NativePtr, LODIndex, (SkinWeights ?? new TArray<FSkelMeshSkinWeightInfo>()).NativePtr);
 		}
 
-		// Token: 0x0600FDDB RID: 64987 RVA: 0x001770BA File Offset: 0x001752BA
+		// Token: 0x06004528 RID: 17704 RVA: 0x00062472 File Offset: 0x00060672
 		public void SetSkeletalMesh(USkeletalMesh NewMesh, bool bReinitPose = true)
 		{
 			USkinnedMeshComponent.__SetSkeletalMesh_Internal(base.NativePtr, (NewMesh != null) ? NewMesh.NativePtr : IntPtr.Zero, bReinitPose);
 		}
 
-		// Token: 0x0600FDDC RID: 64988 RVA: 0x001770D8 File Offset: 0x001752D8
+		// Token: 0x06004529 RID: 17705 RVA: 0x00062490 File Offset: 0x00060690
 		public void SetRenderStatic(bool bNewValue)
 		{
 			USkinnedMeshComponent.__SetRenderStatic_Internal(base.NativePtr, bNewValue);
 		}
 
-		// Token: 0x0600FDDD RID: 64989 RVA: 0x001770E6 File Offset: 0x001752E6
+		// Token: 0x0600452A RID: 17706 RVA: 0x0006249E File Offset: 0x0006069E
 		public void SetPreSkinningOffsets(int LODIndex, TArray<FVector> Offsets)
 		{
 			USkinnedMeshComponent.__SetPreSkinningOffsets_Internal(base.NativePtr, LODIndex, (Offsets ?? new TArray<FVector>()).NativePtr);
 		}
 
-		// Token: 0x0600FDDE RID: 64990 RVA: 0x00177103 File Offset: 0x00175303
+		// Token: 0x0600452B RID: 17707 RVA: 0x000624BB File Offset: 0x000606BB
 		public void SetPostSkinningOffsets(int LODIndex, TArray<FVector> Offsets)
 		{
 			USkinnedMeshComponent.__SetPostSkinningOffsets_Internal(base.NativePtr, LODIndex, (Offsets ?? new TArray<FVector>()).NativePtr);
 		}
 
-		// Token: 0x0600FDDF RID: 64991 RVA: 0x00177120 File Offset: 0x00175320
+		// Token: 0x0600452C RID: 17708 RVA: 0x000624D8 File Offset: 0x000606D8
 		public void SetPhysicsAsset(UPhysicsAsset NewPhysicsAsset, bool bForceReInit = false)
 		{
 			USkinnedMeshComponent.__SetPhysicsAsset_Internal(base.NativePtr, (NewPhysicsAsset != null) ? NewPhysicsAsset.NativePtr : IntPtr.Zero, bForceReInit);
 		}
 
-		// Token: 0x0600FDE0 RID: 64992 RVA: 0x0017713E File Offset: 0x0017533E
+		// Token: 0x0600452D RID: 17709 RVA: 0x000624F6 File Offset: 0x000606F6
 		public void SetOverrideMaxlod(bool InOverride)
 		{
 			USkinnedMeshComponent.__SetOverrideMaxlod_Internal(base.NativePtr, InOverride);
 		}
 
-		// Token: 0x0600FDE1 RID: 64993 RVA: 0x0017714C File Offset: 0x0017534C
+		// Token: 0x0600452E RID: 17710 RVA: 0x00062504 File Offset: 0x00060704
 		public void SetMinLOD(int InNewMinLOD)
 		{
 			USkinnedMeshComponent.__SetMinLOD_Internal(base.NativePtr, InNewMinLOD);
 		}
 
-		// Token: 0x0600FDE2 RID: 64994 RVA: 0x0017715A File Offset: 0x0017535A
+		// Token: 0x0600452F RID: 17711 RVA: 0x00062512 File Offset: 0x00060712
 		public void SetMaxLOD(int InNewMaxLOD)
 		{
 			USkinnedMeshComponent.__SetMaxLOD_Internal(base.NativePtr, InNewMaxLOD);
 		}
 
-		// Token: 0x0600FDE3 RID: 64995 RVA: 0x00177168 File Offset: 0x00175368
+		// Token: 0x06004530 RID: 17712 RVA: 0x00062520 File Offset: 0x00060720
 		public void SetMasterPoseComponent(USkinnedMeshComponent NewMasterBoneComponent, bool bForceUpdate = false)
 		{
 			USkinnedMeshComponent.__SetMasterPoseComponent_Internal(base.NativePtr, (NewMasterBoneComponent != null) ? NewMasterBoneComponent.NativePtr : IntPtr.Zero, bForceUpdate);
 		}
 
-		// Token: 0x0600FDE4 RID: 64996 RVA: 0x00177186 File Offset: 0x00175386
+		// Token: 0x06004531 RID: 17713 RVA: 0x0006253E File Offset: 0x0006073E
 		public void SetLODBias(int InLODBias)
 		{
 			USkinnedMeshComponent.__SetLODBias_Internal(base.NativePtr, InLODBias);
 		}
 
-		// Token: 0x0600FDE5 RID: 64997 RVA: 0x00177194 File Offset: 0x00175394
+		// Token: 0x06004532 RID: 17714 RVA: 0x0006254C File Offset: 0x0006074C
 		public void SetForcedLOD(int InNewForcedLOD)
 		{
 			USkinnedMeshComponent.__SetForcedLOD_Internal(base.NativePtr, InNewForcedLOD);
 		}
 
-		// Token: 0x0600FDE6 RID: 64998 RVA: 0x001771A2 File Offset: 0x001753A2
+		// Token: 0x06004533 RID: 17715 RVA: 0x0006255A File Offset: 0x0006075A
 		public void SetEnableMaxLod(bool InEnable)
 		{
 			USkinnedMeshComponent.__SetEnableMaxLod_Internal(base.NativePtr, InEnable);
 		}
 
-		// Token: 0x0600FDE7 RID: 64999 RVA: 0x001771B0 File Offset: 0x001753B0
+		// Token: 0x06004534 RID: 17716 RVA: 0x00062568 File Offset: 0x00060768
 		public void SetComponentLODBias(int InBias)
 		{
 			USkinnedMeshComponent.__SetComponentLODBias_Internal(base.NativePtr, InBias);
 		}
 
-		// Token: 0x0600FDE8 RID: 65000 RVA: 0x001771BE File Offset: 0x001753BE
+		// Token: 0x06004535 RID: 17717 RVA: 0x00062576 File Offset: 0x00060776
 		public void SetCastCapsuleIndirectShadow(bool bNewValue)
 		{
 			USkinnedMeshComponent.__SetCastCapsuleIndirectShadow_Internal(base.NativePtr, bNewValue);
 		}
 
-		// Token: 0x0600FDE9 RID: 65001 RVA: 0x001771CC File Offset: 0x001753CC
+		// Token: 0x06004536 RID: 17718 RVA: 0x00062584 File Offset: 0x00060784
 		public void SetCastCapsuleDirectShadow(bool bNewValue)
 		{
 			USkinnedMeshComponent.__SetCastCapsuleDirectShadow_Internal(base.NativePtr, bNewValue);
 		}
 
-		// Token: 0x0600FDEA RID: 65002 RVA: 0x001771DA File Offset: 0x001753DA
+		// Token: 0x06004537 RID: 17719 RVA: 0x00062592 File Offset: 0x00060792
 		public void SetCapsuleIndirectShadowMinVisibility(float NewValue)
 		{
 			USkinnedMeshComponent.__SetCapsuleIndirectShadowMinVisibility_Internal(base.NativePtr, NewValue);
 		}
 
-		// Token: 0x0600FDEB RID: 65003 RVA: 0x001771E8 File Offset: 0x001753E8
+		// Token: 0x06004538 RID: 17720 RVA: 0x000625A0 File Offset: 0x000607A0
 		public bool SetAnimUpdateRateParameters(ref FAnimUpdateRateParameters AnimUpdateRateParamsIn)
 		{
 			return USkinnedMeshComponent.__SetAnimUpdateRateParameters_Internal(base.NativePtr, (AnimUpdateRateParamsIn ?? new FAnimUpdateRateParameters()).NativePtr);
 		}
 
-		// Token: 0x0600FDEC RID: 65004 RVA: 0x00177205 File Offset: 0x00175405
+		// Token: 0x06004539 RID: 17721 RVA: 0x000625BD File Offset: 0x000607BD
 		public bool RenderedAndNotSkipUpdate()
 		{
 			return USkinnedMeshComponent.__RenderedAndNotSkipUpdate_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600FDED RID: 65005 RVA: 0x00177212 File Offset: 0x00175412
+		// Token: 0x0600453A RID: 17722 RVA: 0x000625CA File Offset: 0x000607CA
 		public bool IsUsingSkinWeightProfile()
 		{
 			return USkinnedMeshComponent.__IsUsingSkinWeightProfile_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600FDEE RID: 65006 RVA: 0x0017721F File Offset: 0x0017541F
+		// Token: 0x0600453B RID: 17723 RVA: 0x000625D7 File Offset: 0x000607D7
 		public bool IsMaterialSectionShown(int MaterialID, int LODIndex)
 		{
 			return USkinnedMeshComponent.__IsMaterialSectionShown_Internal(base.NativePtr, MaterialID, LODIndex);
 		}
 
-		// Token: 0x0600FDEF RID: 65007 RVA: 0x0017722E File Offset: 0x0017542E
+		// Token: 0x0600453C RID: 17724 RVA: 0x000625E6 File Offset: 0x000607E6
 		public bool IsBoneHiddenByName(FName BoneName)
 		{
 			return USkinnedMeshComponent.__IsBoneHiddenByName_Internal(base.NativePtr, BoneName);
 		}
 
-		// Token: 0x0600FDF0 RID: 65008 RVA: 0x0017723C File Offset: 0x0017543C
+		// Token: 0x0600453D RID: 17725 RVA: 0x000625F4 File Offset: 0x000607F4
 		public void HideBoneByName(FName BoneName, EPhysBodyOp PhysBodyOption)
 		{
 			USkinnedMeshComponent.__HideBoneByName_Internal(base.NativePtr, BoneName, PhysBodyOption);
 		}
 
-		// Token: 0x0600FDF1 RID: 65009 RVA: 0x00177250 File Offset: 0x00175450
+		// Token: 0x0600453E RID: 17726 RVA: 0x00062608 File Offset: 0x00060808
 		public int GetVertexOffsetUsage(int LODIndex)
 		{
 			return USkinnedMeshComponent.__GetVertexOffsetUsage_Internal(base.NativePtr, LODIndex);
 		}
 
-		// Token: 0x0600FDF2 RID: 65010 RVA: 0x00177260 File Offset: 0x00175460
+		// Token: 0x0600453F RID: 17727 RVA: 0x00062618 File Offset: 0x00060818
 		public unsafe bool GetTwistAndSwingAngleOfDeltaRotationFromRefPose(FName BoneName, ref float OutTwistAngle, ref float OutSwingAngle)
 		{
 			fixed (float* ptr = &OutTwistAngle)
@@ -1048,97 +1042,97 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600FDF3 RID: 65011 RVA: 0x00177285 File Offset: 0x00175485
+		// Token: 0x06004540 RID: 17728 RVA: 0x0006263D File Offset: 0x0006083D
 		public FName GetSocketBoneName(FName InSocketName)
 		{
 			return USkinnedMeshComponent.__GetSocketBoneName_Internal(base.NativePtr, InSocketName);
 		}
 
-		// Token: 0x0600FDF4 RID: 65012 RVA: 0x00177293 File Offset: 0x00175493
+		// Token: 0x06004541 RID: 17729 RVA: 0x0006264B File Offset: 0x0006084B
 		public FVector GetRefPosePosition(int BoneIndex)
 		{
 			return USkinnedMeshComponent.__GetRefPosePosition_Internal(base.NativePtr, BoneIndex);
 		}
 
-		// Token: 0x0600FDF5 RID: 65013 RVA: 0x001772A1 File Offset: 0x001754A1
+		// Token: 0x06004542 RID: 17730 RVA: 0x00062659 File Offset: 0x00060859
 		public int GetPredictedLODLevel()
 		{
 			return USkinnedMeshComponent.__GetPredictedLODLevel_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600FDF6 RID: 65014 RVA: 0x001772AE File Offset: 0x001754AE
+		// Token: 0x06004543 RID: 17731 RVA: 0x00062666 File Offset: 0x00060866
 		public FName GetParentBone(FName BoneName)
 		{
 			return USkinnedMeshComponent.__GetParentBone_Internal(base.NativePtr, BoneName);
 		}
 
-		// Token: 0x0600FDF7 RID: 65015 RVA: 0x001772BC File Offset: 0x001754BC
+		// Token: 0x06004544 RID: 17732 RVA: 0x00062674 File Offset: 0x00060874
 		public int GetNumSections(int LODIndex)
 		{
 			return USkinnedMeshComponent.__GetNumSections_Internal(base.NativePtr, LODIndex);
 		}
 
-		// Token: 0x0600FDF8 RID: 65016 RVA: 0x001772CA File Offset: 0x001754CA
+		// Token: 0x06004545 RID: 17733 RVA: 0x00062682 File Offset: 0x00060882
 		public int GetNumLODs()
 		{
 			return USkinnedMeshComponent.__GetNumLODs_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600FDF9 RID: 65017 RVA: 0x001772D7 File Offset: 0x001754D7
+		// Token: 0x06004546 RID: 17734 RVA: 0x0006268F File Offset: 0x0006088F
 		public int GetNumBones()
 		{
 			return USkinnedMeshComponent.__GetNumBones_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600FDFA RID: 65018 RVA: 0x001772E4 File Offset: 0x001754E4
+		// Token: 0x06004547 RID: 17735 RVA: 0x0006269C File Offset: 0x0006089C
 		public int GetMeshObjectLODLevel()
 		{
 			return USkinnedMeshComponent.__GetMeshObjectLODLevel_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600FDFB RID: 65019 RVA: 0x001772F1 File Offset: 0x001754F1
+		// Token: 0x06004548 RID: 17736 RVA: 0x000626A9 File Offset: 0x000608A9
 		public int GetForcedLOD()
 		{
 			return USkinnedMeshComponent.__GetForcedLOD_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600FDFC RID: 65020 RVA: 0x001772FE File Offset: 0x001754FE
+		// Token: 0x06004549 RID: 17737 RVA: 0x000626B6 File Offset: 0x000608B6
 		public FTransform GetDeltaTransformFromRefPose(FName BoneName, FName BaseName = default(FName))
 		{
 			return USkinnedMeshComponent.__GetDeltaTransformFromRefPose_Internal(base.NativePtr, BoneName, BaseName);
 		}
 
-		// Token: 0x0600FDFD RID: 65021 RVA: 0x0017730D File Offset: 0x0017550D
+		// Token: 0x0600454A RID: 17738 RVA: 0x000626C5 File Offset: 0x000608C5
 		public FName GetCurrentSkinWeightProfileName()
 		{
 			return USkinnedMeshComponent.__GetCurrentSkinWeightProfileName_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600FDFE RID: 65022 RVA: 0x0017731A File Offset: 0x0017551A
+		// Token: 0x0600454B RID: 17739 RVA: 0x000626D2 File Offset: 0x000608D2
 		public FTransform GetBoneTransform(int BoneIndex)
 		{
 			return USkinnedMeshComponent.__GetBoneTransform_Internal(base.NativePtr, BoneIndex);
 		}
 
-		// Token: 0x0600FDFF RID: 65023 RVA: 0x00177328 File Offset: 0x00175528
+		// Token: 0x0600454C RID: 17740 RVA: 0x000626E0 File Offset: 0x000608E0
 		public FName GetBoneName(int BoneIndex)
 		{
 			return USkinnedMeshComponent.__GetBoneName_Internal(base.NativePtr, BoneIndex);
 		}
 
-		// Token: 0x0600FE00 RID: 65024 RVA: 0x00177336 File Offset: 0x00175536
+		// Token: 0x0600454D RID: 17741 RVA: 0x000626EE File Offset: 0x000608EE
 		public int GetBoneIndex(FName BoneName)
 		{
 			return USkinnedMeshComponent.__GetBoneIndex_Internal(base.NativePtr, BoneName);
 		}
 
-		// Token: 0x0600FE01 RID: 65025 RVA: 0x00177344 File Offset: 0x00175544
+		// Token: 0x0600454E RID: 17742 RVA: 0x000626FC File Offset: 0x000608FC
 		public bool GetAnimUpdateRateParameters(ref FAnimUpdateRateParameters AnimUpdateRateParamsOut)
 		{
 			return USkinnedMeshComponent.__GetAnimUpdateRateParameters_Internal(base.NativePtr, (AnimUpdateRateParamsOut ?? new FAnimUpdateRateParameters()).NativePtr);
 		}
 
-		// Token: 0x0600FE02 RID: 65026 RVA: 0x00177364 File Offset: 0x00175564
+		// Token: 0x0600454F RID: 17743 RVA: 0x0006271C File Offset: 0x0006091C
 		public unsafe FName FindClosestBone_K2(FVector TestLocation, ref FVector BoneLocation, float IgnoreScale = 0f, bool bRequirePhysicsAsset = false)
 		{
 			fixed (FVector* ptr = &BoneLocation)
@@ -1148,7 +1142,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600FE03 RID: 65027 RVA: 0x00177388 File Offset: 0x00175588
+		// Token: 0x06004550 RID: 17744 RVA: 0x00062740 File Offset: 0x00060940
 		public unsafe void D_TransformToBoneSpace(FName BoneName, FVectorDouble InPosition, FRotator InRotation, ref FVectorDouble OutPosition, ref FRotator OutRotation)
 		{
 			fixed (FVectorDouble* ptr = &OutPosition)
@@ -1163,7 +1157,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600FE04 RID: 65028 RVA: 0x001773BC File Offset: 0x001755BC
+		// Token: 0x06004551 RID: 17745 RVA: 0x00062774 File Offset: 0x00060974
 		public unsafe void D_TransformFromBoneSpace(FName BoneName, FVectorDouble InPosition, FRotator InRotation, ref FVectorDouble OutPosition, ref FRotator OutRotation)
 		{
 			fixed (FVectorDouble* ptr = &OutPosition)
@@ -1178,291 +1172,288 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600FE05 RID: 65029 RVA: 0x001773ED File Offset: 0x001755ED
+		// Token: 0x06004552 RID: 17746 RVA: 0x000627A5 File Offset: 0x000609A5
 		public void ClearVertexColorOverride(int LODIndex)
 		{
 			USkinnedMeshComponent.__ClearVertexColorOverride_Internal(base.NativePtr, LODIndex);
 		}
 
-		// Token: 0x0600FE06 RID: 65030 RVA: 0x001773FB File Offset: 0x001755FB
+		// Token: 0x06004553 RID: 17747 RVA: 0x000627B3 File Offset: 0x000609B3
 		public void ClearSkinWeightProfile()
 		{
 			USkinnedMeshComponent.__ClearSkinWeightProfile_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600FE07 RID: 65031 RVA: 0x00177408 File Offset: 0x00175608
+		// Token: 0x06004554 RID: 17748 RVA: 0x000627C0 File Offset: 0x000609C0
 		public void ClearSkinWeightOverride(int LODIndex)
 		{
 			USkinnedMeshComponent.__ClearSkinWeightOverride_Internal(base.NativePtr, LODIndex);
 		}
 
-		// Token: 0x0600FE08 RID: 65032 RVA: 0x00177416 File Offset: 0x00175616
+		// Token: 0x06004555 RID: 17749 RVA: 0x000627CE File Offset: 0x000609CE
 		public bool BoneIsChildOf(FName BoneName, FName ParentBoneName)
 		{
 			return USkinnedMeshComponent.__BoneIsChildOf_Internal(base.NativePtr, BoneName, ParentBoneName);
 		}
 
-		// Token: 0x0600FE09 RID: 65033
+		// Token: 0x06004556 RID: 17750
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnloadSkinWeightProfile_Internal(IntPtr @this, FName InProfileName);
 
-		// Token: 0x0600FE0A RID: 65034
+		// Token: 0x06004557 RID: 17751
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnHideBoneByName_Internal(IntPtr @this, FName BoneName);
 
-		// Token: 0x0600FE0B RID: 65035
+		// Token: 0x06004558 RID: 17752
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __TransformToBoneSpace_Internal(IntPtr @this, FName BoneName, FVector InPosition, FRotator InRotation, ref FVector OutPosition, ref FRotator OutRotation);
 
-		// Token: 0x0600FE0C RID: 65036
+		// Token: 0x06004559 RID: 17753
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __TransformFromBoneSpace_Internal(IntPtr @this, FName BoneName, FVector InPosition, FRotator InRotation, ref FVector OutPosition, ref FRotator OutRotation);
 
-		// Token: 0x0600FE0D RID: 65037
+		// Token: 0x0600455A RID: 17754
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ShowMaterialSection_Internal(IntPtr @this, int MaterialID, int SectionIndex, bool bShow, int LODIndex);
 
-		// Token: 0x0600FE0E RID: 65038
+		// Token: 0x0600455B RID: 17755
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ShowAllMaterialSections_Internal(IntPtr @this, int LODIndex);
 
-		// Token: 0x0600FE0F RID: 65039
+		// Token: 0x0600455C RID: 17756
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetVertexOffsetUsage_Internal(IntPtr @this, int LODIndex, int Usage);
 
-		// Token: 0x0600FE10 RID: 65040
+		// Token: 0x0600455D RID: 17757
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetVertexColorOverride_LinearColor_Internal(IntPtr @this, int LODIndex, IntPtr VertexColors);
 
-		// Token: 0x0600FE11 RID: 65041
+		// Token: 0x0600455E RID: 17758
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetSkinWeightProfile_Internal(IntPtr @this, FName InProfileName);
 
-		// Token: 0x0600FE12 RID: 65042
+		// Token: 0x0600455F RID: 17759
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSkinWeightOverride_Internal(IntPtr @this, int LODIndex, IntPtr SkinWeights);
 
-		// Token: 0x0600FE13 RID: 65043
+		// Token: 0x06004560 RID: 17760
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSkeletalMesh_Internal(IntPtr @this, IntPtr NewMesh, bool bReinitPose);
 
-		// Token: 0x0600FE14 RID: 65044
+		// Token: 0x06004561 RID: 17761
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetRenderStatic_Internal(IntPtr @this, bool bNewValue);
 
-		// Token: 0x0600FE15 RID: 65045
+		// Token: 0x06004562 RID: 17762
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPreSkinningOffsets_Internal(IntPtr @this, int LODIndex, IntPtr Offsets);
 
-		// Token: 0x0600FE16 RID: 65046
+		// Token: 0x06004563 RID: 17763
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPostSkinningOffsets_Internal(IntPtr @this, int LODIndex, IntPtr Offsets);
 
-		// Token: 0x0600FE17 RID: 65047
+		// Token: 0x06004564 RID: 17764
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPhysicsAsset_Internal(IntPtr @this, IntPtr NewPhysicsAsset, bool bForceReInit);
 
-		// Token: 0x0600FE18 RID: 65048
+		// Token: 0x06004565 RID: 17765
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetOverrideMaxlod_Internal(IntPtr @this, bool InOverride);
 
-		// Token: 0x0600FE19 RID: 65049
+		// Token: 0x06004566 RID: 17766
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMinLOD_Internal(IntPtr @this, int InNewMinLOD);
 
-		// Token: 0x0600FE1A RID: 65050
+		// Token: 0x06004567 RID: 17767
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMaxLOD_Internal(IntPtr @this, int InNewMaxLOD);
 
-		// Token: 0x0600FE1B RID: 65051
+		// Token: 0x06004568 RID: 17768
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMasterPoseComponent_Internal(IntPtr @this, IntPtr NewMasterBoneComponent, bool bForceUpdate);
 
-		// Token: 0x0600FE1C RID: 65052
+		// Token: 0x06004569 RID: 17769
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLODBias_Internal(IntPtr @this, int InLODBias);
 
-		// Token: 0x0600FE1D RID: 65053
+		// Token: 0x0600456A RID: 17770
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetForcedLOD_Internal(IntPtr @this, int InNewForcedLOD);
 
-		// Token: 0x0600FE1E RID: 65054
+		// Token: 0x0600456B RID: 17771
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEnableMaxLod_Internal(IntPtr @this, bool InEnable);
 
-		// Token: 0x0600FE1F RID: 65055
+		// Token: 0x0600456C RID: 17772
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetComponentLODBias_Internal(IntPtr @this, int InBias);
 
-		// Token: 0x0600FE20 RID: 65056
+		// Token: 0x0600456D RID: 17773
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCastCapsuleIndirectShadow_Internal(IntPtr @this, bool bNewValue);
 
-		// Token: 0x0600FE21 RID: 65057
+		// Token: 0x0600456E RID: 17774
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCastCapsuleDirectShadow_Internal(IntPtr @this, bool bNewValue);
 
-		// Token: 0x0600FE22 RID: 65058
+		// Token: 0x0600456F RID: 17775
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCapsuleIndirectShadowMinVisibility_Internal(IntPtr @this, float NewValue);
 
-		// Token: 0x0600FE23 RID: 65059
+		// Token: 0x06004570 RID: 17776
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetAnimUpdateRateParameters_Internal(IntPtr @this, IntPtr AnimUpdateRateParamsIn);
 
-		// Token: 0x0600FE24 RID: 65060
+		// Token: 0x06004571 RID: 17777
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __RenderedAndNotSkipUpdate_Internal(IntPtr @this);
 
-		// Token: 0x0600FE25 RID: 65061
+		// Token: 0x06004572 RID: 17778
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsUsingSkinWeightProfile_Internal(IntPtr @this);
 
-		// Token: 0x0600FE26 RID: 65062
+		// Token: 0x06004573 RID: 17779
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsMaterialSectionShown_Internal(IntPtr @this, int MaterialID, int LODIndex);
 
-		// Token: 0x0600FE27 RID: 65063
+		// Token: 0x06004574 RID: 17780
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsBoneHiddenByName_Internal(IntPtr @this, FName BoneName);
 
-		// Token: 0x0600FE28 RID: 65064
+		// Token: 0x06004575 RID: 17781
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __HideBoneByName_Internal(IntPtr @this, FName BoneName, TEnumAsByte<EPhysBodyOp> PhysBodyOption);
 
-		// Token: 0x0600FE29 RID: 65065
+		// Token: 0x06004576 RID: 17782
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetVertexOffsetUsage_Internal(IntPtr @this, int LODIndex);
 
-		// Token: 0x0600FE2A RID: 65066
+		// Token: 0x06004577 RID: 17783
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetTwistAndSwingAngleOfDeltaRotationFromRefPose_Internal(IntPtr @this, FName BoneName, ref float OutTwistAngle, ref float OutSwingAngle);
 
-		// Token: 0x0600FE2B RID: 65067
+		// Token: 0x06004578 RID: 17784
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FName __GetSocketBoneName_Internal(IntPtr @this, FName InSocketName);
 
-		// Token: 0x0600FE2C RID: 65068
+		// Token: 0x06004579 RID: 17785
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetRefPosePosition_Internal(IntPtr @this, int BoneIndex);
 
-		// Token: 0x0600FE2D RID: 65069
+		// Token: 0x0600457A RID: 17786
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetPredictedLODLevel_Internal(IntPtr @this);
 
-		// Token: 0x0600FE2E RID: 65070
+		// Token: 0x0600457B RID: 17787
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FName __GetParentBone_Internal(IntPtr @this, FName BoneName);
 
-		// Token: 0x0600FE2F RID: 65071
+		// Token: 0x0600457C RID: 17788
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetNumSections_Internal(IntPtr @this, int LODIndex);
 
-		// Token: 0x0600FE30 RID: 65072
+		// Token: 0x0600457D RID: 17789
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetNumLODs_Internal(IntPtr @this);
 
-		// Token: 0x0600FE31 RID: 65073
+		// Token: 0x0600457E RID: 17790
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetNumBones_Internal(IntPtr @this);
 
-		// Token: 0x0600FE32 RID: 65074
+		// Token: 0x0600457F RID: 17791
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetMeshObjectLODLevel_Internal(IntPtr @this);
 
-		// Token: 0x0600FE33 RID: 65075
+		// Token: 0x06004580 RID: 17792
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetForcedLOD_Internal(IntPtr @this);
 
-		// Token: 0x0600FE34 RID: 65076
+		// Token: 0x06004581 RID: 17793
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __GetDeltaTransformFromRefPose_Internal(IntPtr @this, FName BoneName, FName BaseName);
 
-		// Token: 0x0600FE35 RID: 65077
+		// Token: 0x06004582 RID: 17794
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FName __GetCurrentSkinWeightProfileName_Internal(IntPtr @this);
 
-		// Token: 0x0600FE36 RID: 65078
+		// Token: 0x06004583 RID: 17795
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __GetBoneTransform_Internal(IntPtr @this, int BoneIndex);
 
-		// Token: 0x0600FE37 RID: 65079
+		// Token: 0x06004584 RID: 17796
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FName __GetBoneName_Internal(IntPtr @this, int BoneIndex);
 
-		// Token: 0x0600FE38 RID: 65080
+		// Token: 0x06004585 RID: 17797
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetBoneIndex_Internal(IntPtr @this, FName BoneName);
 
-		// Token: 0x0600FE39 RID: 65081
+		// Token: 0x06004586 RID: 17798
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetAnimUpdateRateParameters_Internal(IntPtr @this, IntPtr AnimUpdateRateParamsOut);
 
-		// Token: 0x0600FE3A RID: 65082
+		// Token: 0x06004587 RID: 17799
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FName __FindClosestBone_K2_Internal(IntPtr @this, FVector TestLocation, ref FVector BoneLocation, float IgnoreScale, bool bRequirePhysicsAsset);
 
-		// Token: 0x0600FE3B RID: 65083
+		// Token: 0x06004588 RID: 17800
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_TransformToBoneSpace_Internal(IntPtr @this, FName BoneName, FVectorDouble InPosition, FRotator InRotation, ref FVectorDouble OutPosition, ref FRotator OutRotation);
 
-		// Token: 0x0600FE3C RID: 65084
+		// Token: 0x06004589 RID: 17801
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_TransformFromBoneSpace_Internal(IntPtr @this, FName BoneName, FVectorDouble InPosition, FRotator InRotation, ref FVectorDouble OutPosition, ref FRotator OutRotation);
 
-		// Token: 0x0600FE3D RID: 65085
+		// Token: 0x0600458A RID: 17802
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearVertexColorOverride_Internal(IntPtr @this, int LODIndex);
 
-		// Token: 0x0600FE3E RID: 65086
+		// Token: 0x0600458B RID: 17803
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearSkinWeightProfile_Internal(IntPtr @this);
 
-		// Token: 0x0600FE3F RID: 65087
+		// Token: 0x0600458C RID: 17804
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearSkinWeightOverride_Internal(IntPtr @this, int LODIndex);
 
-		// Token: 0x0600FE40 RID: 65088
+		// Token: 0x0600458D RID: 17805
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __BoneIsChildOf_Internal(IntPtr @this, FName BoneName, FName ParentBoneName);
 
-		// Token: 0x0600FE41 RID: 65089 RVA: 0x00177425 File Offset: 0x00175625
+		// Token: 0x0600458E RID: 17806 RVA: 0x000627DD File Offset: 0x000609DD
 		static USkinnedMeshComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.SkinnedMeshComponent");
 		}
 
-		// Token: 0x0600FE42 RID: 65090 RVA: 0x00177434 File Offset: 0x00175634
+		// Token: 0x0600458F RID: 17807 RVA: 0x000627EC File Offset: 0x000609EC
 		protected USkinnedMeshComponent() : this(BuiltinUtils.AllocNativeUObject(USkinnedMeshComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600FE43 RID: 65091 RVA: 0x0017745C File Offset: 0x0017565C
+		// Token: 0x06004590 RID: 17808 RVA: 0x00062814 File Offset: 0x00060A14
 		protected USkinnedMeshComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040088A6 RID: 34982
-		internal static int __InterfaceOffset_ILODSyncInterface;
-
-		// Token: 0x040088A7 RID: 34983
+		// Token: 0x04001AE7 RID: 6887
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.SkinnedMeshComponent";
 
-		// Token: 0x040088A8 RID: 34984
+		// Token: 0x04001AE8 RID: 6888
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040088A9 RID: 34985
+		// Token: 0x04001AE9 RID: 6889
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040088AA RID: 34986
+		// Token: 0x04001AEA RID: 6890
 		internal static int __PropertyOffset_SkeletalMesh;
 
-		// Token: 0x040088AB RID: 34987
+		// Token: 0x04001AEB RID: 6891
 		internal static int __PropertyOffset_ExtraMaterialInfos;
 
-		// Token: 0x040088AC RID: 34988
+		// Token: 0x04001AEC RID: 6892
 		[Nullable(new byte[]
 		{
 			2,
@@ -1470,19 +1461,19 @@ namespace UnrealEngine
 		})]
 		private TArray<FExtraMaterialInfo> _ExtraMaterialInfos;
 
-		// Token: 0x040088AD RID: 34989
+		// Token: 0x04001AED RID: 6893
 		internal static int __PropertyOffset_MasterPoseComponent;
 
-		// Token: 0x040088AE RID: 34990
+		// Token: 0x04001AEE RID: 6894
 		internal static int __PropertyOffset_SkinCacheUsage;
 
-		// Token: 0x040088AF RID: 34991
+		// Token: 0x04001AEF RID: 6895
 		private TArray<ESkinCacheUsage> _SkinCacheUsage;
 
-		// Token: 0x040088B0 RID: 34992
+		// Token: 0x04001AF0 RID: 6896
 		internal static int __PropertyOffset_VertexOffsetUsage;
 
-		// Token: 0x040088B1 RID: 34993
+		// Token: 0x04001AF1 RID: 6897
 		[Nullable(new byte[]
 		{
 			2,
@@ -1490,61 +1481,61 @@ namespace UnrealEngine
 		})]
 		private TArray<FVertexOffsetUsage> _VertexOffsetUsage;
 
-		// Token: 0x040088B2 RID: 34994
+		// Token: 0x04001AF2 RID: 6898
 		internal static int __PropertyOffset_ComponentSpaceMatricesWithShears;
 
-		// Token: 0x040088B3 RID: 34995
+		// Token: 0x04001AF3 RID: 6899
 		private TArray<FMatrix> _ComponentSpaceMatricesWithShears;
 
-		// Token: 0x040088B4 RID: 34996
+		// Token: 0x04001AF4 RID: 6900
 		internal static int __PropertyOffset_PreviousComponentSpaceMatricesWithShears;
 
-		// Token: 0x040088B5 RID: 34997
+		// Token: 0x04001AF5 RID: 6901
 		private TArray<FMatrix> _PreviousComponentSpaceMatricesWithShears;
 
-		// Token: 0x040088B6 RID: 34998
+		// Token: 0x04001AF6 RID: 6902
 		internal static int __PropertyOffset_PhysicsAssetOverride;
 
-		// Token: 0x040088B7 RID: 34999
+		// Token: 0x04001AF7 RID: 6903
 		internal static int __PropertyOffset_ForcedLodModel;
 
-		// Token: 0x040088B8 RID: 35000
+		// Token: 0x04001AF8 RID: 6904
 		internal static int __PropertyOffset_MinLodModel;
 
-		// Token: 0x040088B9 RID: 35001
+		// Token: 0x04001AF9 RID: 6905
 		internal static int __PropertyOffset_bOverrideMinLod;
 
-		// Token: 0x040088BA RID: 35002
+		// Token: 0x04001AFA RID: 6906
 		internal static byte __PropertyMask_bOverrideMinLod;
 
-		// Token: 0x040088BB RID: 35003
+		// Token: 0x04001AFB RID: 6907
 		internal static int __PropertyOffset_MaxLodModel;
 
-		// Token: 0x040088BC RID: 35004
+		// Token: 0x04001AFC RID: 6908
 		internal static int __PropertyOffset_bOverrideMaxLod;
 
-		// Token: 0x040088BD RID: 35005
+		// Token: 0x04001AFD RID: 6909
 		internal static byte __PropertyMask_bOverrideMaxLod;
 
-		// Token: 0x040088BE RID: 35006
+		// Token: 0x04001AFE RID: 6910
 		internal static int __PropertyOffset_bEnableMaxLod;
 
-		// Token: 0x040088BF RID: 35007
+		// Token: 0x04001AFF RID: 6911
 		internal static byte __PropertyMask_bEnableMaxLod;
 
-		// Token: 0x040088C0 RID: 35008
+		// Token: 0x04001B00 RID: 6912
 		internal static int __PropertyOffset_StreamingDistanceMultiplier;
 
-		// Token: 0x040088C1 RID: 35009
+		// Token: 0x04001B01 RID: 6913
 		internal static int __PropertyOffset_LODTextComponent;
 
-		// Token: 0x040088C2 RID: 35010
+		// Token: 0x04001B02 RID: 6914
 		internal static int __PropertyOffset_DistanceTextComponent;
 
-		// Token: 0x040088C3 RID: 35011
+		// Token: 0x04001B03 RID: 6915
 		internal static int __PropertyOffset_LODInfo;
 
-		// Token: 0x040088C4 RID: 35012
+		// Token: 0x04001B04 RID: 6916
 		[Nullable(new byte[]
 		{
 			2,
@@ -1552,160 +1543,160 @@ namespace UnrealEngine
 		})]
 		private TArray<FSkelMeshComponentLODInfo> _LODInfo;
 
-		// Token: 0x040088C5 RID: 35013
+		// Token: 0x04001B05 RID: 6917
 		internal static int __PropertyOffset_VisibilityBasedAnimTickOption;
 
-		// Token: 0x040088C6 RID: 35014
+		// Token: 0x04001B06 RID: 6918
 		internal static int __PropertyOffset_bAllowBoneVisibilityStatesDifferentWithMaster;
 
-		// Token: 0x040088C7 RID: 35015
+		// Token: 0x04001B07 RID: 6919
 		internal static int __PropertyOffset_bRequireHiddenBonesCalculation;
 
-		// Token: 0x040088C8 RID: 35016
+		// Token: 0x04001B08 RID: 6920
 		internal static int __PropertyOffset_bUseBoundsFromMasterPoseComponent;
 
-		// Token: 0x040088C9 RID: 35017
+		// Token: 0x04001B09 RID: 6921
 		internal static byte __PropertyMask_bUseBoundsFromMasterPoseComponent;
 
-		// Token: 0x040088CA RID: 35018
+		// Token: 0x04001B0A RID: 6922
 		internal static int __PropertyOffset_bForceWireframe;
 
-		// Token: 0x040088CB RID: 35019
+		// Token: 0x04001B0B RID: 6923
 		internal static byte __PropertyMask_bForceWireframe;
 
-		// Token: 0x040088CC RID: 35020
+		// Token: 0x04001B0C RID: 6924
 		internal static int __PropertyOffset_bDisplayBones_DEPRECATED;
 
-		// Token: 0x040088CD RID: 35021
+		// Token: 0x04001B0D RID: 6925
 		internal static byte __PropertyMask_bDisplayBones_DEPRECATED;
 
-		// Token: 0x040088CE RID: 35022
+		// Token: 0x04001B0E RID: 6926
 		internal static int __PropertyOffset_bDisableMorphTarget;
 
-		// Token: 0x040088CF RID: 35023
+		// Token: 0x04001B0F RID: 6927
 		internal static byte __PropertyMask_bDisableMorphTarget;
 
-		// Token: 0x040088D0 RID: 35024
+		// Token: 0x04001B10 RID: 6928
 		internal static int __PropertyOffset_bHideSkin;
 
-		// Token: 0x040088D1 RID: 35025
+		// Token: 0x04001B11 RID: 6929
 		internal static byte __PropertyMask_bHideSkin;
 
-		// Token: 0x040088D2 RID: 35026
+		// Token: 0x04001B12 RID: 6930
 		internal static int __PropertyOffset_bPerBoneMotionBlur;
 
-		// Token: 0x040088D3 RID: 35027
+		// Token: 0x04001B13 RID: 6931
 		internal static byte __PropertyMask_bPerBoneMotionBlur;
 
-		// Token: 0x040088D4 RID: 35028
+		// Token: 0x04001B14 RID: 6932
 		internal static int __PropertyOffset_bComponentUseFixedSkelBounds;
 
-		// Token: 0x040088D5 RID: 35029
+		// Token: 0x04001B15 RID: 6933
 		internal static byte __PropertyMask_bComponentUseFixedSkelBounds;
 
-		// Token: 0x040088D6 RID: 35030
+		// Token: 0x04001B16 RID: 6934
 		internal static int __PropertyOffset_bConsiderAllBodiesForBounds;
 
-		// Token: 0x040088D7 RID: 35031
+		// Token: 0x04001B17 RID: 6935
 		internal static byte __PropertyMask_bConsiderAllBodiesForBounds;
 
-		// Token: 0x040088D8 RID: 35032
+		// Token: 0x04001B18 RID: 6936
 		internal static int __PropertyOffset_bSyncAttachParentLOD;
 
-		// Token: 0x040088D9 RID: 35033
+		// Token: 0x04001B19 RID: 6937
 		internal static byte __PropertyMask_bSyncAttachParentLOD;
 
-		// Token: 0x040088DA RID: 35034
+		// Token: 0x04001B1A RID: 6938
 		internal static int __PropertyOffset_bResetMorphTargetsWhenSetSkeletalMesh;
 
-		// Token: 0x040088DB RID: 35035
+		// Token: 0x04001B1B RID: 6939
 		internal static int __PropertyOffset_bCanHighlightSelectedSections;
 
-		// Token: 0x040088DC RID: 35036
+		// Token: 0x04001B1C RID: 6940
 		internal static byte __PropertyMask_bCanHighlightSelectedSections;
 
-		// Token: 0x040088DD RID: 35037
+		// Token: 0x04001B1D RID: 6941
 		internal static int __PropertyOffset_bRecentlyRendered;
 
-		// Token: 0x040088DE RID: 35038
+		// Token: 0x04001B1E RID: 6942
 		internal static byte __PropertyMask_bRecentlyRendered;
 
-		// Token: 0x040088DF RID: 35039
+		// Token: 0x04001B1F RID: 6943
 		internal static int __PropertyOffset_bForceTickThisFrame;
 
-		// Token: 0x040088E0 RID: 35040
+		// Token: 0x04001B20 RID: 6944
 		internal static byte __PropertyMask_bForceTickThisFrame;
 
-		// Token: 0x040088E1 RID: 35041
+		// Token: 0x04001B21 RID: 6945
 		internal static int __PropertyOffset_bCastCapsuleDirectShadow;
 
-		// Token: 0x040088E2 RID: 35042
+		// Token: 0x04001B22 RID: 6946
 		internal static byte __PropertyMask_bCastCapsuleDirectShadow;
 
-		// Token: 0x040088E3 RID: 35043
+		// Token: 0x04001B23 RID: 6947
 		internal static int __PropertyOffset_bCastCapsuleIndirectShadow;
 
-		// Token: 0x040088E4 RID: 35044
+		// Token: 0x04001B24 RID: 6948
 		internal static byte __PropertyMask_bCastCapsuleIndirectShadow;
 
-		// Token: 0x040088E5 RID: 35045
+		// Token: 0x04001B25 RID: 6949
 		internal static int __PropertyOffset_bCPUSkinning;
 
-		// Token: 0x040088E6 RID: 35046
+		// Token: 0x04001B26 RID: 6950
 		internal static byte __PropertyMask_bCPUSkinning;
 
-		// Token: 0x040088E7 RID: 35047
+		// Token: 0x04001B27 RID: 6951
 		internal static int __PropertyOffset_bEnableUpdateRateOptimizations;
 
-		// Token: 0x040088E8 RID: 35048
+		// Token: 0x04001B28 RID: 6952
 		internal static byte __PropertyMask_bEnableUpdateRateOptimizations;
 
-		// Token: 0x040088E9 RID: 35049
+		// Token: 0x04001B29 RID: 6953
 		internal static int __PropertyOffset_bDisplayDebugUpdateRateOptimizations;
 
-		// Token: 0x040088EA RID: 35050
+		// Token: 0x04001B2A RID: 6954
 		internal static byte __PropertyMask_bDisplayDebugUpdateRateOptimizations;
 
-		// Token: 0x040088EB RID: 35051
+		// Token: 0x04001B2B RID: 6955
 		internal static int __PropertyOffset_bRenderStatic;
 
-		// Token: 0x040088EC RID: 35052
+		// Token: 0x04001B2C RID: 6956
 		internal static byte __PropertyMask_bRenderStatic;
 
-		// Token: 0x040088ED RID: 35053
+		// Token: 0x04001B2D RID: 6957
 		internal static int __PropertyOffset_bIgnoreMasterPoseComponentLOD;
 
-		// Token: 0x040088EE RID: 35054
+		// Token: 0x04001B2E RID: 6958
 		internal static byte __PropertyMask_bIgnoreMasterPoseComponentLOD;
 
-		// Token: 0x040088EF RID: 35055
+		// Token: 0x04001B2F RID: 6959
 		internal static int __PropertyOffset_bCachedLocalBoundsUpToDate;
 
-		// Token: 0x040088F0 RID: 35056
+		// Token: 0x04001B30 RID: 6960
 		internal static byte __PropertyMask_bCachedLocalBoundsUpToDate;
 
-		// Token: 0x040088F1 RID: 35057
+		// Token: 0x04001B31 RID: 6961
 		internal static int __PropertyOffset_bForceMeshObjectUpdate;
 
-		// Token: 0x040088F2 RID: 35058
+		// Token: 0x04001B32 RID: 6962
 		internal static byte __PropertyMask_bForceMeshObjectUpdate;
 
-		// Token: 0x040088F3 RID: 35059
+		// Token: 0x04001B33 RID: 6963
 		internal static int __PropertyOffset_CapsuleIndirectShadowMinVisibility;
 
-		// Token: 0x040088F4 RID: 35060
+		// Token: 0x04001B34 RID: 6964
 		internal static int __PropertyOffset_ComponentLODBias;
 
-		// Token: 0x040088F5 RID: 35061
+		// Token: 0x04001B35 RID: 6965
 		internal static int __PropertyOffset_bEnableGlobalLODBias;
 
-		// Token: 0x040088F6 RID: 35062
+		// Token: 0x04001B36 RID: 6966
 		internal static byte __PropertyMask_bEnableGlobalLODBias;
 
-		// Token: 0x040088F7 RID: 35063
+		// Token: 0x04001B37 RID: 6967
 		internal static int __PropertyOffset_CachedWorldSpaceBounds;
 
-		// Token: 0x040088F8 RID: 35064
+		// Token: 0x04001B38 RID: 6968
 		internal static int __PropertyOffset_CachedWorldToLocalTransform;
 	}
 }

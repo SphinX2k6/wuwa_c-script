@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000A4 RID: 164
+	// Token: 0x020000A9 RID: 169
 	[EnumExtensions]
 	public enum EExploreSkillSearchTargetCfg
 	{
-		// Token: 0x040003E0 RID: 992
+		// Token: 0x040003FA RID: 1018
 		AngleWeight,
-		// Token: 0x040003E1 RID: 993
+		// Token: 0x040003FB RID: 1019
 		EnterScreenWeight
 	}
 }

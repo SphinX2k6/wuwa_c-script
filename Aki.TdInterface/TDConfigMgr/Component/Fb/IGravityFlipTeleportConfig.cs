@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B75 RID: 2933
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C43 RID: 3139
 	public class IGravityFlipTeleportConfig
 	{
-		// Token: 0x06004396 RID: 17302 RVA: 0x000AC3A2 File Offset: 0x000AA5A2
+		// Token: 0x060047EF RID: 18415 RVA: 0x000B6466 File Offset: 0x000B4666
 		public static IGravityFlipTeleportConfig Create(IGravityFlipTeleportConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001269 RID: 4713
-		// (get) Token: 0x06004397 RID: 17303 RVA: 0x000AC3C1 File Offset: 0x000AA5C1
+		// Token: 0x17001364 RID: 4964
+		// (get) Token: 0x060047F0 RID: 18416 RVA: 0x000B6485 File Offset: 0x000B4685
 		public virtual IGravityDirectionType GravityDirection
 		{
 			get
@@ -40,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700126A RID: 4714
-		// (get) Token: 0x06004398 RID: 17304 RVA: 0x000AC3F0 File Offset: 0x000AA5F0
+		// Token: 0x17001365 RID: 4965
+		// (get) Token: 0x060047F1 RID: 18417 RVA: 0x000B64B4 File Offset: 0x000B46B4
 		[Nullable(2)]
 		public virtual VectorInfo SafeLocation
 		{
@@ -58,20 +56,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400261E RID: 9758
+		// Token: 0x04002866 RID: 10342
 		private IGravityFlipTeleportConfig Instance;
 
-		// Token: 0x0400261F RID: 9759
+		// Token: 0x04002867 RID: 10343
 		private IGravityDirectionType _GravityDirectionCache;
 
-		// Token: 0x04002620 RID: 9760
+		// Token: 0x04002868 RID: 10344
 		private bool _GravityDirectionInited;
 
-		// Token: 0x04002621 RID: 9761
+		// Token: 0x04002869 RID: 10345
 		[Nullable(2)]
 		private VectorInfo _SafeLocationCache;
 
-		// Token: 0x04002622 RID: 9762
+		// Token: 0x0400286A RID: 10346
 		private bool _SafeLocationInited;
 	}
 }

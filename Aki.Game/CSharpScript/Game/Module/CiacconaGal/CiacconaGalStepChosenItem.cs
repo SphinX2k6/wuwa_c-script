@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BD6 RID: 23510
+	// Token: 0x02004BB6 RID: 19382
 	public class CiacconaGalStepChosenItem : UiPanelBase
 	{
-		// Token: 0x0603B6F7 RID: 243447 RVA: 0x00E2C2D0 File Offset: 0x00E2A4D0
+		// Token: 0x06030642 RID: 198210 RVA: 0x00D7C5D8 File Offset: 0x00D7A7D8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,13 +24,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B6F8 RID: 243448 RVA: 0x00E2C339 File Offset: 0x00E2A539
+		// Token: 0x06030643 RID: 198211 RVA: 0x00D7C641 File Offset: 0x00D7A841
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603B6F9 RID: 243449 RVA: 0x00E2C34C File Offset: 0x00E2A54C
+		// Token: 0x06030644 RID: 198212 RVA: 0x00D7C654 File Offset: 0x00D7A854
 		protected override void OnAfterShow()
 		{
 			LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			seqPlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x0603B6FA RID: 243450 RVA: 0x00E2C37C File Offset: 0x00E2A57C
+		// Token: 0x06030645 RID: 198213 RVA: 0x00D7C684 File Offset: 0x00D7A884
 		[NullableContext(1)]
 		public void Refresh(CiacconaGalChoiceData choiceData)
 		{
@@ -49,17 +49,17 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			base.SetTextureByPath(UiResourceConfig.Instance.GetResourcePath("T_PlotReasoningIcon03"), base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x0401EF84 RID: 126852
+		// Token: 0x04019A35 RID: 105013
 		[Nullable(2)]
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0200BDB0 RID: 48560
+		// Token: 0x0200A7B9 RID: 42937
 		private class EComponentDefine
 		{
-			// Token: 0x0403934C RID: 234316
+			// Token: 0x04033D11 RID: 212241
 			public const int TextContent = 0;
 
-			// Token: 0x0403934D RID: 234317
+			// Token: 0x04033D12 RID: 212242
 			public const int ImageIcon = 1;
 		}
 	}

@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x020043BB RID: 17339
+	// Token: 0x0200481D RID: 18461
 	public static class IOccupationType_UnionVerify
 	{
-		// Token: 0x06019D8D RID: 105869 RVA: 0x003B31B8 File Offset: 0x003B13B8
+		// Token: 0x0601B528 RID: 111912 RVA: 0x003DEE40 File Offset: 0x003DD040
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -32,6 +32,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 				break;
 			case 7:
 				result = IClosedSegmentOccupationDataVerify.Verify(verifier, tablePos);
+				break;
+			case 8:
+				result = ISeasonRotationOccupationDataVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

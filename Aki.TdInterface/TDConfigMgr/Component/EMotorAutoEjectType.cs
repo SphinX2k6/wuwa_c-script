@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000E4 RID: 228
+	// Token: 0x020000ED RID: 237
 	[EnumExtensions]
 	public enum EMotorAutoEjectType
 	{
-		// Token: 0x040004DC RID: 1244
+		// Token: 0x04000504 RID: 1284
 		NextHook,
-		// Token: 0x040004DD RID: 1245
+		// Token: 0x04000505 RID: 1285
 		PositionEntity
 	}
 }

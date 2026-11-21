@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
 
-// Token: 0x02003514 RID: 13588
+// Token: 0x02002A89 RID: 10889
 [NullableContext(1)]
 [Nullable(0)]
 public class WaitEntityTask
 {
-	// Token: 0x0601DC85 RID: 121989 RVA: 0x00858020 File Offset: 0x00856220
+	// Token: 0x0601B99F RID: 113055 RVA: 0x008805C8 File Offset: 0x0087E7C8
 	public unsafe void AddEntities(long creatureDataId, Action<bool?> callBack, int timeout = 60000, bool checkExist = true, bool waitUntil = false)
 	{
 		this.AddCustomEntity(creatureDataId);
@@ -64,7 +64,7 @@ public class WaitEntityTask
 		this.DoCallback(new bool?(true));
 	}
 
-	// Token: 0x0601DC86 RID: 121990 RVA: 0x00858124 File Offset: 0x00856324
+	// Token: 0x0601B9A0 RID: 113056 RVA: 0x008806CC File Offset: 0x0087E8CC
 	public unsafe void AddEntities(IList<long> creatureDataIds, Action<bool?> callBack, int timeout = 60000, bool checkExist = true, bool waitUntil = false)
 	{
 		foreach (long num in creatureDataIds)
@@ -126,7 +126,7 @@ public class WaitEntityTask
 		this.DoCallback(new bool?(true));
 	}
 
-	// Token: 0x0601DC87 RID: 121991 RVA: 0x00858284 File Offset: 0x00856484
+	// Token: 0x0601B9A1 RID: 113057 RVA: 0x0088082C File Offset: 0x0087EA2C
 	public unsafe void AddEntitiesWithPbDataId(int pbDataId, Action<bool?> callBack, int timeout = 60000, bool checkExist = true, bool waitUntil = false)
 	{
 		this.LoadResultSet.Add((long)pbDataId);
@@ -173,7 +173,7 @@ public class WaitEntityTask
 		this.DoCallback(new bool?(true));
 	}
 
-	// Token: 0x0601DC88 RID: 121992 RVA: 0x00858324 File Offset: 0x00856524
+	// Token: 0x0601B9A2 RID: 113058 RVA: 0x008808CC File Offset: 0x0087EACC
 	public unsafe void AddEntitiesWithPbDataId(IList<int> pbDataIds, Action<bool?> callBack, int timeout = 60000, bool checkExist = true, bool waitUntil = false)
 	{
 		foreach (int num in pbDataIds)
@@ -226,7 +226,7 @@ public class WaitEntityTask
 		this.DoCallback(new bool?(true));
 	}
 
-	// Token: 0x0601DC89 RID: 121993 RVA: 0x00858428 File Offset: 0x00856628
+	// Token: 0x0601B9A3 RID: 113059 RVA: 0x008809D0 File Offset: 0x0087EBD0
 	private void FilterEntity(long id, bool checkExist = true)
 	{
 		EntityHandle entityHandle;
@@ -258,7 +258,7 @@ public class WaitEntityTask
 		}
 	}
 
-	// Token: 0x0601DC8A RID: 121994 RVA: 0x008584AC File Offset: 0x008566AC
+	// Token: 0x0601B9A4 RID: 113060 RVA: 0x00880A54 File Offset: 0x0087EC54
 	public void OnAddEntity(long creatureDataId, int pbDataId)
 	{
 		EWaitType? waitType = this.WaitType;
@@ -278,7 +278,7 @@ public class WaitEntityTask
 		this.DoCallback(new bool?(!this.HasRemoveEntity));
 	}
 
-	// Token: 0x0601DC8B RID: 121995 RVA: 0x00858524 File Offset: 0x00856724
+	// Token: 0x0601B9A5 RID: 113061 RVA: 0x00880ACC File Offset: 0x0087ECCC
 	public void OnRemoveEntity(long creatureDataId, int pbDataId)
 	{
 		EWaitType? waitType = this.WaitType;
@@ -307,7 +307,7 @@ public class WaitEntityTask
 		this.DoCallback(new bool?(false));
 	}
 
-	// Token: 0x0601DC8C RID: 121996 RVA: 0x008585BC File Offset: 0x008567BC
+	// Token: 0x0601B9A6 RID: 113062 RVA: 0x00880B64 File Offset: 0x0087ED64
 	private void DoCallback(bool? result)
 	{
 		if (this.TimeoutId != null)
@@ -325,7 +325,7 @@ public class WaitEntityTask
 		callBack(result);
 	}
 
-	// Token: 0x0601DC8D RID: 121997 RVA: 0x00858618 File Offset: 0x00856818
+	// Token: 0x0601B9A7 RID: 113063 RVA: 0x00880BC0 File Offset: 0x0087EDC0
 	[return: Nullable(2)]
 	public unsafe static WaitEntityTask Create(string reason, long creatureDataId, Action<bool?> callBack, int timeout = 60000, bool checkExist = true, bool waitUntil = false)
 	{
@@ -354,7 +354,7 @@ public class WaitEntityTask
 		return waitEntityTask;
 	}
 
-	// Token: 0x0601DC8E RID: 121998 RVA: 0x008586E4 File Offset: 0x008568E4
+	// Token: 0x0601B9A8 RID: 113064 RVA: 0x00880C8C File Offset: 0x0087EE8C
 	[return: Nullable(2)]
 	public unsafe static WaitEntityTask Create(string reason, IList<long> creatureDataIds, Action<bool?> callBack, int timeout = 60000, bool checkExist = true, bool waitUntil = false)
 	{
@@ -383,7 +383,7 @@ public class WaitEntityTask
 		return waitEntityTask;
 	}
 
-	// Token: 0x0601DC8F RID: 121999 RVA: 0x008587B0 File Offset: 0x008569B0
+	// Token: 0x0601B9A9 RID: 113065 RVA: 0x00880D58 File Offset: 0x0087EF58
 	[return: Nullable(2)]
 	public unsafe static WaitEntityTask CreateWithPbDataId(string reason, int pbDataId, Action<bool?> callBack, int timeout = 60000, bool checkExist = true, bool waitUntil = false)
 	{
@@ -412,7 +412,7 @@ public class WaitEntityTask
 		return waitEntityTask;
 	}
 
-	// Token: 0x0601DC90 RID: 122000 RVA: 0x0085887C File Offset: 0x00856A7C
+	// Token: 0x0601B9AA RID: 113066 RVA: 0x00880E24 File Offset: 0x0087F024
 	[return: Nullable(2)]
 	public unsafe static WaitEntityTask CreateWithPbDataId(string reason, IList<int> pbDataIds, Action<bool?> callBack, int timeout = 60000, bool checkExist = true, bool waitUntil = false)
 	{
@@ -441,7 +441,7 @@ public class WaitEntityTask
 		return waitEntityTask;
 	}
 
-	// Token: 0x0601DC91 RID: 122001 RVA: 0x00858948 File Offset: 0x00856B48
+	// Token: 0x0601B9AB RID: 113067 RVA: 0x00880EF0 File Offset: 0x0087F0F0
 	public void Cancel()
 	{
 		if (this.TimeoutId != null)
@@ -453,7 +453,7 @@ public class WaitEntityTask
 		WaitEntityTaskController.Instance.RemoveTask(this.TaskId);
 	}
 
-	// Token: 0x0601DC92 RID: 122002 RVA: 0x00858988 File Offset: 0x00856B88
+	// Token: 0x0601B9AC RID: 113068 RVA: 0x00880F30 File Offset: 0x0087F130
 	private void AddCustomEntity(long entityId)
 	{
 		EntityHandle entity = CreatureModel.Instance.GetEntity(entityId);
@@ -522,37 +522,37 @@ public class WaitEntityTask
 		}
 	}
 
-	// Token: 0x0400E9BF RID: 59839
+	// Token: 0x0400EE7A RID: 61050
 	public const int REASON_LENGTH_LIMIT = 4;
 
-	// Token: 0x0400E9C0 RID: 59840
+	// Token: 0x0400EE7B RID: 61051
 	public const int WAIT_TIME = 60000;
 
-	// Token: 0x0400E9C1 RID: 59841
+	// Token: 0x0400EE7C RID: 61052
 	[Nullable(2)]
 	private HashSet<long> LoadCustomEntitySet;
 
-	// Token: 0x0400E9C2 RID: 59842
+	// Token: 0x0400EE7D RID: 61053
 	private readonly HashSet<long> LoadResultSet = new HashSet<long>();
 
-	// Token: 0x0400E9C3 RID: 59843
+	// Token: 0x0400EE7E RID: 61054
 	public EWaitType? WaitType;
 
-	// Token: 0x0400E9C4 RID: 59844
+	// Token: 0x0400EE7F RID: 61055
 	[Nullable(2)]
 	private TimerHandle TimeoutId;
 
-	// Token: 0x0400E9C5 RID: 59845
+	// Token: 0x0400EE80 RID: 61056
 	private int TaskId;
 
-	// Token: 0x0400E9C6 RID: 59846
+	// Token: 0x0400EE81 RID: 61057
 	private bool HasRemoveEntity;
 
-	// Token: 0x0400E9C7 RID: 59847
+	// Token: 0x0400EE82 RID: 61058
 	[Nullable(2)]
 	public string Reason;
 
-	// Token: 0x0400E9C8 RID: 59848
+	// Token: 0x0400EE83 RID: 61059
 	[Nullable(2)]
 	private Action<bool?> CallBack;
 }

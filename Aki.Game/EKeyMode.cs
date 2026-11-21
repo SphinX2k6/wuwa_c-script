@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020019C1 RID: 6593
+// Token: 0x02000E7F RID: 3711
 public enum EKeyMode
 {
-	// Token: 0x04005677 RID: 22135
+	// Token: 0x04005729 RID: 22313
 	Default,
-	// Token: 0x04005678 RID: 22136
+	// Token: 0x0400572A RID: 22314
 	Index
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CC6 RID: 27846
+	// Token: 0x0200743C RID: 29756
 	public struct IPhotographPlayerPerform : IFlatbufferObject
 	{
-		// Token: 0x1700CF4D RID: 53069
-		// (get) Token: 0x0603112F RID: 201007 RVA: 0x006A8EA5 File Offset: 0x006A70A5
+		// Token: 0x1700DA8A RID: 55946
+		// (get) Token: 0x06034106 RID: 213254 RVA: 0x007040D9 File Offset: 0x007022D9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031130 RID: 201008 RVA: 0x006A8EB2 File Offset: 0x006A70B2
+		// Token: 0x06034107 RID: 213255 RVA: 0x007040E6 File Offset: 0x007022E6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031131 RID: 201009 RVA: 0x006A8EBC File Offset: 0x006A70BC
+		// Token: 0x06034108 RID: 213256 RVA: 0x007040F0 File Offset: 0x007022F0
 		public static IPhotographPlayerPerform GetRootAsIPhotographPlayerPerform(ByteBuffer _bb)
 		{
 			return IPhotographPlayerPerform.GetRootAsIPhotographPlayerPerform(_bb, default(IPhotographPlayerPerform));
 		}
 
-		// Token: 0x06031132 RID: 201010 RVA: 0x006A8ED8 File Offset: 0x006A70D8
+		// Token: 0x06034109 RID: 213257 RVA: 0x0070410C File Offset: 0x0070230C
 		public static IPhotographPlayerPerform GetRootAsIPhotographPlayerPerform(ByteBuffer _bb, IPhotographPlayerPerform obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031133 RID: 201011 RVA: 0x006A8EF5 File Offset: 0x006A70F5
+		// Token: 0x0603410A RID: 213258 RVA: 0x00704129 File Offset: 0x00702329
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031134 RID: 201012 RVA: 0x006A8F04 File Offset: 0x006A7104
+		// Token: 0x0603410B RID: 213259 RVA: 0x00704138 File Offset: 0x00702338
 		public IPhotographPlayerPerform __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CF4E RID: 53070
-		// (get) Token: 0x06031135 RID: 201013 RVA: 0x006A8F14 File Offset: 0x006A7114
+		// Token: 0x1700DA8B RID: 55947
+		// (get) Token: 0x0603410C RID: 213260 RVA: 0x00704148 File Offset: 0x00702348
 		public int MontageId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF4F RID: 53071
-		// (get) Token: 0x06031136 RID: 201014 RVA: 0x006A8F50 File Offset: 0x006A7150
+		// Token: 0x1700DA8C RID: 55948
+		// (get) Token: 0x0603410D RID: 213261 RVA: 0x00704184 File Offset: 0x00702384
 		public int FaceId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF50 RID: 53072
-		// (get) Token: 0x06031137 RID: 201015 RVA: 0x006A8F8C File Offset: 0x006A718C
+		// Token: 0x1700DA8D RID: 55949
+		// (get) Token: 0x0603410E RID: 213262 RVA: 0x007041C0 File Offset: 0x007023C0
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031138 RID: 201016 RVA: 0x006A8FC8 File Offset: 0x006A71C8
+		// Token: 0x0603410F RID: 213263 RVA: 0x007041FC File Offset: 0x007023FC
 		public static Offset<IPhotographPlayerPerform> CreateIPhotographPlayerPerform(FlatBufferBuilder builder, int MontageId = 0, int FaceId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPhotographPlayerPerform.EndIPhotographPlayerPerform(builder);
 		}
 
-		// Token: 0x06031139 RID: 201017 RVA: 0x006A8FEC File Offset: 0x006A71EC
+		// Token: 0x06034110 RID: 213264 RVA: 0x00704220 File Offset: 0x00702420
 		public static void StartIPhotographPlayerPerform(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0603113A RID: 201018 RVA: 0x006A8FF5 File Offset: 0x006A71F5
+		// Token: 0x06034111 RID: 213265 RVA: 0x00704229 File Offset: 0x00702429
 		public static void AddMontageId(FlatBufferBuilder builder, int montageId)
 		{
 			builder.AddInt(0, montageId, 0);
 		}
 
-		// Token: 0x0603113B RID: 201019 RVA: 0x006A9000 File Offset: 0x006A7200
+		// Token: 0x06034112 RID: 213266 RVA: 0x00704234 File Offset: 0x00702434
 		public static void AddFaceId(FlatBufferBuilder builder, int faceId)
 		{
 			builder.AddInt(1, faceId, 0);
 		}
 
-		// Token: 0x0603113C RID: 201020 RVA: 0x006A900B File Offset: 0x006A720B
+		// Token: 0x06034113 RID: 213267 RVA: 0x0070423F File Offset: 0x0070243F
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0603113D RID: 201021 RVA: 0x006A9016 File Offset: 0x006A7216
+		// Token: 0x06034114 RID: 213268 RVA: 0x0070424A File Offset: 0x0070244A
 		public static Offset<IPhotographPlayerPerform> EndIPhotographPlayerPerform(FlatBufferBuilder builder)
 		{
 			return new Offset<IPhotographPlayerPerform>(builder.EndTable());
 		}
 
-		// Token: 0x0603113E RID: 201022 RVA: 0x006A9024 File Offset: 0x006A7224
+		// Token: 0x06034115 RID: 213269 RVA: 0x00704258 File Offset: 0x00702458
 		public IPhotographPlayerPerformT UnPack()
 		{
 			IPhotographPlayerPerformT photographPlayerPerformT = new IPhotographPlayerPerformT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return photographPlayerPerformT;
 		}
 
-		// Token: 0x0603113F RID: 201023 RVA: 0x006A903F File Offset: 0x006A723F
+		// Token: 0x06034116 RID: 213270 RVA: 0x00704273 File Offset: 0x00702473
 		public void UnPackTo(IPhotographPlayerPerformT _o)
 		{
 			_o.MontageId = this.MontageId;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06031140 RID: 201024 RVA: 0x006A9068 File Offset: 0x006A7268
+		// Token: 0x06034117 RID: 213271 RVA: 0x0070429C File Offset: 0x0070249C
 		public static Offset<IPhotographPlayerPerform> Pack(FlatBufferBuilder builder, IPhotographPlayerPerformT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPhotographPlayerPerform.CreateIPhotographPlayerPerform(builder, _o.MontageId, _o.FaceId, _o.NullMask);
 		}
 
-		// Token: 0x0401162A RID: 71210
+		// Token: 0x0401259A RID: 75162
 		private Table __p;
 	}
 }

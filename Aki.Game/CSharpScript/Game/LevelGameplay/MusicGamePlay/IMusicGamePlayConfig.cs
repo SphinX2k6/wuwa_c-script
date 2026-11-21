@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.MusicGamePlay
 {
-	// Token: 0x02006AC3 RID: 27331
+	// Token: 0x02005C3B RID: 23611
 	[NullableContext(1)]
 	public interface IMusicGamePlayConfig
 	{
-		// Token: 0x1700996F RID: 39279
-		// (get) Token: 0x06043E9C RID: 278172
-		// (set) Token: 0x06043E9D RID: 278173
+		// Token: 0x17006E72 RID: 28274
+		// (get) Token: 0x06039FE5 RID: 237541
+		// (set) Token: 0x06039FE6 RID: 237542
 		float BgmOffset { get; set; }
 
-		// Token: 0x17009970 RID: 39280
-		// (get) Token: 0x06043E9E RID: 278174
-		// (set) Token: 0x06043E9F RID: 278175
+		// Token: 0x17006E73 RID: 28275
+		// (get) Token: 0x06039FE7 RID: 237543
+		// (set) Token: 0x06039FE8 RID: 237544
 		IBeatEntity[] Entities { get; set; }
 	}
 }

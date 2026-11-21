@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002232 RID: 8754
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200249D RID: 9373
 	public class TeleportDungeon : ActionParams
 	{
-		// Token: 0x0600C016 RID: 49174 RVA: 0x001B9594 File Offset: 0x001B7794
-		[NullableContext(1)]
+		// Token: 0x0600CBD4 RID: 52180 RVA: 0x001D0C60 File Offset: 0x001CEE60
 		private TeleportDungeon_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C017 RID: 49175 RVA: 0x001B95CC File Offset: 0x001B77CC
-		[NullableContext(1)]
+		// Token: 0x0600CBD5 RID: 52181 RVA: 0x001D0C98 File Offset: 0x001CEE98
 		public static TeleportDungeon Create([Nullable(2)] TeleportDungeon instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C018 RID: 49176 RVA: 0x001B95DF File Offset: 0x001B77DF
-		[NullableContext(1)]
+		// Token: 0x0600CBD6 RID: 52182 RVA: 0x001D0CAB File Offset: 0x001CEEAB
 		public static TeleportDungeon CreateFromSetValue([Nullable(2)] TeleportDungeon_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C019 RID: 49177 RVA: 0x001B95F4 File Offset: 0x001B77F4
-		[NullableContext(1)]
+		// Token: 0x0600CBD7 RID: 52183 RVA: 0x001D0CC0 File Offset: 0x001CEEC0
 		public TeleportDungeon_SetValue ToSetValue()
 		{
 			return new TeleportDungeon_SetValue
@@ -70,9 +64,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A2A RID: 14890
-		// (get) Token: 0x0600C01A RID: 49178 RVA: 0x001B9666 File Offset: 0x001B7866
-		// (set) Token: 0x0600C01B RID: 49179 RVA: 0x001B9691 File Offset: 0x001B7891
+		// Token: 0x17003D20 RID: 15648
+		// (get) Token: 0x0600CBD8 RID: 52184 RVA: 0x001D0D32 File Offset: 0x001CEF32
+		// (set) Token: 0x0600CBD9 RID: 52185 RVA: 0x001D0D5D File Offset: 0x001CEF5D
 		public virtual int DungeonId
 		{
 			get
@@ -93,9 +87,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A2B RID: 14891
-		// (get) Token: 0x0600C01C RID: 49180 RVA: 0x001B969F File Offset: 0x001B789F
-		// (set) Token: 0x0600C01D RID: 49181 RVA: 0x001B96CA File Offset: 0x001B78CA
+		// Token: 0x17003D21 RID: 15649
+		// (get) Token: 0x0600CBDA RID: 52186 RVA: 0x001D0D6B File Offset: 0x001CEF6B
+		// (set) Token: 0x0600CBDB RID: 52187 RVA: 0x001D0D96 File Offset: 0x001CEF96
 		public virtual bool IsRegroup
 		{
 			get
@@ -112,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A2C RID: 14892
-		// (get) Token: 0x0600C01E RID: 49182 RVA: 0x001B96D8 File Offset: 0x001B78D8
-		// (set) Token: 0x0600C01F RID: 49183 RVA: 0x001B9712 File Offset: 0x001B7912
+		// Token: 0x17003D22 RID: 15650
+		// (get) Token: 0x0600CBDC RID: 52188 RVA: 0x001D0DA4 File Offset: 0x001CEFA4
+		// (set) Token: 0x0600CBDD RID: 52189 RVA: 0x001D0DDE File Offset: 0x001CEFDE
 		public virtual int? LocationEntityId
 		{
 			get
@@ -136,11 +130,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A2D RID: 14893
-		// (get) Token: 0x0600C020 RID: 49184 RVA: 0x001B9720 File Offset: 0x001B7920
-		// (set) Token: 0x0600C021 RID: 49185 RVA: 0x001B9747 File Offset: 0x001B7947
+		// Token: 0x17003D23 RID: 15651
+		// (get) Token: 0x0600CBDE RID: 52190 RVA: 0x001D0DEC File Offset: 0x001CEFEC
+		// (set) Token: 0x0600CBDF RID: 52191 RVA: 0x001D0E13 File Offset: 0x001CF013
+		[Nullable(2)]
 		public virtual ITeleportTransitionType TransitionOption
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -154,15 +150,16 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.TransitionOption;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().TransitionOption = value;
 			}
 		}
 
-		// Token: 0x17003A2E RID: 14894
-		// (get) Token: 0x0600C022 RID: 49186 RVA: 0x001B9758 File Offset: 0x001B7958
-		// (set) Token: 0x0600C023 RID: 49187 RVA: 0x001B9792 File Offset: 0x001B7992
+		// Token: 0x17003D24 RID: 15652
+		// (get) Token: 0x0600CBE0 RID: 52192 RVA: 0x001D0E24 File Offset: 0x001CF024
+		// (set) Token: 0x0600CBE1 RID: 52193 RVA: 0x001D0E5E File Offset: 0x001CF05E
 		public virtual bool? IsNeedSecondaryConfirmation
 		{
 			get
@@ -184,9 +181,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A2F RID: 14895
-		// (get) Token: 0x0600C024 RID: 49188 RVA: 0x001B97A0 File Offset: 0x001B79A0
-		// (set) Token: 0x0600C025 RID: 49189 RVA: 0x001B97DA File Offset: 0x001B79DA
+		// Token: 0x17003D25 RID: 15653
+		// (get) Token: 0x0600CBE2 RID: 52194 RVA: 0x001D0E6C File Offset: 0x001CF06C
+		// (set) Token: 0x0600CBE3 RID: 52195 RVA: 0x001D0EA6 File Offset: 0x001CF0A6
 		public virtual bool? UseLocationEntityGravity
 		{
 			get
@@ -208,9 +205,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A30 RID: 14896
-		// (get) Token: 0x0600C026 RID: 49190 RVA: 0x001B97E8 File Offset: 0x001B79E8
-		// (set) Token: 0x0600C027 RID: 49191 RVA: 0x001B9822 File Offset: 0x001B7A22
+		// Token: 0x17003D26 RID: 15654
+		// (get) Token: 0x0600CBE4 RID: 52196 RVA: 0x001D0EB4 File Offset: 0x001CF0B4
+		// (set) Token: 0x0600CBE5 RID: 52197 RVA: 0x001D0EEE File Offset: 0x001CF0EE
 		public virtual bool? ContinueSave
 		{
 			get
@@ -232,9 +229,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A31 RID: 14897
-		// (get) Token: 0x0600C028 RID: 49192 RVA: 0x001B9830 File Offset: 0x001B7A30
-		// (set) Token: 0x0600C029 RID: 49193 RVA: 0x001B986A File Offset: 0x001B7A6A
+		// Token: 0x17003D27 RID: 15655
+		// (get) Token: 0x0600CBE6 RID: 52198 RVA: 0x001D0EFC File Offset: 0x001CF0FC
+		// (set) Token: 0x0600CBE7 RID: 52199 RVA: 0x001D0F36 File Offset: 0x001CF136
 		public virtual bool? IsBanMapSound
 		{
 			get
@@ -256,10 +253,12 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400728C RID: 29324
+		// Token: 0x040078D6 RID: 30934
+		[Nullable(2)]
 		protected new TeleportDungeon FbInstance;
 
-		// Token: 0x0400728D RID: 29325
+		// Token: 0x040078D7 RID: 30935
+		[Nullable(2)]
 		protected TeleportDungeon_SetValue PocoInterface;
 	}
 }

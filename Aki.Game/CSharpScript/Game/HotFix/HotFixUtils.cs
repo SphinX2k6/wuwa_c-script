@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.HotFix
 {
-	// Token: 0x0200701F RID: 28703
+	// Token: 0x020061A0 RID: 24992
 	public class HotFixUtils
 	{
-		// Token: 0x06045DC1 RID: 286145 RVA: 0x0115E8B0 File Offset: 0x0115CAB0
+		// Token: 0x0603BF77 RID: 245623 RVA: 0x01108CAC File Offset: 0x01106EAC
 		[NullableContext(1)]
 		public static void EvalScript(string script)
 		{

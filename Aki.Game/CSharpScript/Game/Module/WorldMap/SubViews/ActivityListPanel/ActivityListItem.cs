@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 {
-	// Token: 0x02004848 RID: 18504
+	// Token: 0x02003779 RID: 14201
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 	})]
 	public class ActivityListItem : GridProxyAbstract<ActivityListPanelItemData>
 	{
-		// Token: 0x060306A5 RID: 198309 RVA: 0x00B3CDE8 File Offset: 0x00B3AFE8
+		// Token: 0x06024E75 RID: 151157 RVA: 0x00A6CFD0 File Offset: 0x00A6B1D0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060306A6 RID: 198310 RVA: 0x00B3CFE8 File Offset: 0x00B3B1E8
+		// Token: 0x06024E76 RID: 151158 RVA: 0x00A6D1D0 File Offset: 0x00A6B3D0
 		public override void Refresh(ActivityListPanelItemData data, bool isSelected, int gridIndex)
 		{
 			this.DataParam = data.Data;
@@ -66,19 +66,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 			this.RefreshInfo();
 		}
 
-		// Token: 0x060306A7 RID: 198311 RVA: 0x00B3D00E File Offset: 0x00B3B20E
+		// Token: 0x06024E77 RID: 151159 RVA: 0x00A6D1F6 File Offset: 0x00A6B3F6
 		public void RefreshReadPoint()
 		{
 			base.GetItem(ActivityListItem.EChildType.ReadPoint).SetUIActive(this.DataParam.RedPoint);
 		}
 
-		// Token: 0x060306A8 RID: 198312 RVA: 0x00B3D02B File Offset: 0x00B3B22B
+		// Token: 0x06024E78 RID: 151160 RVA: 0x00A6D213 File Offset: 0x00A6B413
 		public EMapPeriodicActivityId GetMapPeriodicActivityId()
 		{
 			return this.DataParam.Id;
 		}
 
-		// Token: 0x060306A9 RID: 198313 RVA: 0x00B3D038 File Offset: 0x00B3B238
+		// Token: 0x06024E79 RID: 151161 RVA: 0x00A6D220 File Offset: 0x00A6B420
 		public void RefreshInfo()
 		{
 			MapPeriodicActivity? mapPeriodicActivityConfig = MapConfig.Instance.GetMapPeriodicActivityConfig(this.DataParam.Id);
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 		}
 
-		// Token: 0x060306AA RID: 198314 RVA: 0x00B3D1E3 File Offset: 0x00B3B3E3
+		// Token: 0x06024E7A RID: 151162 RVA: 0x00A6D3CB File Offset: 0x00A6B5CB
 		private void OnToggleClickInternal(EToggleState toggleState)
 		{
 			Action onClickCb = this.DataParam.OnClickCb;
@@ -119,48 +119,48 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 			base.GetExtendToggle(ActivityListItem.EChildType.Toggle).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0401A05F RID: 106591
+		// Token: 0x04014713 RID: 83731
 		private IActivityListItemData DataParam;
 
-		// Token: 0x0401A060 RID: 106592
+		// Token: 0x04014714 RID: 83732
 		[Nullable(2)]
 		private Action OnClickCb;
 
-		// Token: 0x0200AB25 RID: 43813
+		// Token: 0x020094D3 RID: 38099
 		[NullableContext(0)]
 		public static class EChildType
 		{
-			// Token: 0x04034023 RID: 213027
+			// Token: 0x0402E79E RID: 190366
 			public static readonly int Toggle = 0;
 
-			// Token: 0x04034024 RID: 213028
+			// Token: 0x0402E79F RID: 190367
 			public static readonly int ReadPoint = 1;
 
-			// Token: 0x04034025 RID: 213029
+			// Token: 0x0402E7A0 RID: 190368
 			public static readonly int TextTitle = 2;
 
-			// Token: 0x04034026 RID: 213030
+			// Token: 0x0402E7A1 RID: 190369
 			public static readonly int TextTime = 3;
 
-			// Token: 0x04034027 RID: 213031
+			// Token: 0x0402E7A2 RID: 190370
 			public static readonly int TextDescription = 4;
 
-			// Token: 0x04034028 RID: 213032
+			// Token: 0x0402E7A3 RID: 190371
 			public static readonly int Icon = 5;
 
-			// Token: 0x04034029 RID: 213033
+			// Token: 0x0402E7A4 RID: 190372
 			public static readonly int TextValue = 6;
 
-			// Token: 0x0403402A RID: 213034
+			// Token: 0x0402E7A5 RID: 190373
 			public static readonly int ActivityIcon = 7;
 
-			// Token: 0x0403402B RID: 213035
+			// Token: 0x0402E7A6 RID: 190374
 			public static readonly int FinishedIcon = 8;
 
-			// Token: 0x0403402C RID: 213036
+			// Token: 0x0402E7A7 RID: 190375
 			public static readonly int UpIcon = 9;
 
-			// Token: 0x0403402D RID: 213037
+			// Token: 0x0402E7A8 RID: 190376
 			public static readonly int DoubleUpIcon = 10;
 		}
 	}

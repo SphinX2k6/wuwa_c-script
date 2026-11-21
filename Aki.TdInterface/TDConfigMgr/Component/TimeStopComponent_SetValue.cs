@@ -1,26 +1,23 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008C7 RID: 2247
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200096A RID: 2410
 	public class TimeStopComponent_SetValue
 	{
-		// Token: 0x04002131 RID: 8497
+		// Token: 0x04002343 RID: 9027
 		public bool? Disabled;
 
-		// Token: 0x04002132 RID: 8498
+		// Token: 0x04002344 RID: 9028
 		public bool? EdIsLocked;
 
-		// Token: 0x04002133 RID: 8499
+		// Token: 0x04002345 RID: 9029
 		public string ActiveState;
 
-		// Token: 0x04002134 RID: 8500
+		// Token: 0x04002346 RID: 9030
 		public int StopTime;
 
-		// Token: 0x04002135 RID: 8501
+		// Token: 0x04002347 RID: 9031
 		public ITimeStopTarget Target;
 	}
 }

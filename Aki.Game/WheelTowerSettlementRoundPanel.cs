@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015E4 RID: 5604
+// Token: 0x02000A9C RID: 2716
 public class WheelTowerSettlementRoundPanel : UiPanelBase
 {
-	// Token: 0x06009E5C RID: 40540 RVA: 0x0022883C File Offset: 0x00226A3C
+	// Token: 0x0600723A RID: 29242 RVA: 0x002325F0 File Offset: 0x002307F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,7 +22,7 @@ public class WheelTowerSettlementRoundPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009E5D RID: 40541 RVA: 0x002288A5 File Offset: 0x00226AA5
+	// Token: 0x0600723B RID: 29243 RVA: 0x00232659 File Offset: 0x00230859
 	public void RefreshRoundScore(int roundScore)
 	{
 		UUIText text = base.GetText(1);
@@ -33,7 +33,7 @@ public class WheelTowerSettlementRoundPanel : UiPanelBase
 		text.SetText(roundScore.ToString(), true);
 	}
 
-	// Token: 0x06009E5E RID: 40542 RVA: 0x002288C0 File Offset: 0x00226AC0
+	// Token: 0x0600723C RID: 29244 RVA: 0x00232674 File Offset: 0x00230874
 	[NullableContext(1)]
 	public void RefreshRoundTitle(string title)
 	{

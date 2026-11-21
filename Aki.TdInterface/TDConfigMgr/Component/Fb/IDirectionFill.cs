@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C8A RID: 3210
+	// Token: 0x02000D6C RID: 3436
 	public class IDirectionFill : IFillType
 	{
-		// Token: 0x06004972 RID: 18802 RVA: 0x000B81BE File Offset: 0x000B63BE
-		[NullableContext(1)]
+		// Token: 0x06004E20 RID: 20000 RVA: 0x000C2BCE File Offset: 0x000C0DCE
 		public static IDirectionFill Create(IDirectionFill? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700161B RID: 5659
-		// (get) Token: 0x06004973 RID: 18803 RVA: 0x000B81DD File Offset: 0x000B63DD
+		// Token: 0x17001743 RID: 5955
+		// (get) Token: 0x06004E21 RID: 20001 RVA: 0x000C2BED File Offset: 0x000C0DED
 		public override EFillType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700161C RID: 5660
-		// (get) Token: 0x06004974 RID: 18804 RVA: 0x000B81EA File Offset: 0x000B63EA
+		// Token: 0x17001744 RID: 5956
+		// (get) Token: 0x06004E22 RID: 20002 RVA: 0x000C2BFA File Offset: 0x000C0DFA
 		public virtual bool W
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700161D RID: 5661
-		// (get) Token: 0x06004975 RID: 18805 RVA: 0x000B81F7 File Offset: 0x000B63F7
+		// Token: 0x17001745 RID: 5957
+		// (get) Token: 0x06004E23 RID: 20003 RVA: 0x000C2C07 File Offset: 0x000C0E07
 		public virtual bool S
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700161E RID: 5662
-		// (get) Token: 0x06004976 RID: 18806 RVA: 0x000B8204 File Offset: 0x000B6404
+		// Token: 0x17001746 RID: 5958
+		// (get) Token: 0x06004E24 RID: 20004 RVA: 0x000C2C14 File Offset: 0x000C0E14
 		public virtual bool A
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700161F RID: 5663
-		// (get) Token: 0x06004977 RID: 18807 RVA: 0x000B8211 File Offset: 0x000B6411
+		// Token: 0x17001747 RID: 5959
+		// (get) Token: 0x06004E25 RID: 20005 RVA: 0x000C2C21 File Offset: 0x000C0E21
 		public virtual bool D
 		{
 			get
@@ -71,7 +69,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029E5 RID: 10725
+		// Token: 0x04002C5F RID: 11359
 		private IDirectionFill Instance;
 	}
 }

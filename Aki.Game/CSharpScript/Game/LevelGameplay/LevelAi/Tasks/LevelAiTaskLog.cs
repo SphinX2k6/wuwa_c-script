@@ -3,10 +3,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 {
-	// Token: 0x02006DBD RID: 28093
+	// Token: 0x02005F3C RID: 24380
 	public class LevelAiTaskLog : LevelAiTask
 	{
-		// Token: 0x060448B8 RID: 280760 RVA: 0x010E75B8 File Offset: 0x010E57B8
+		// Token: 0x0603AA1C RID: 240156 RVA: 0x010917E0 File Offset: 0x0108F9E0
 		protected override ELevelAiNodeResult ExecuteTask()
 		{
 			Aki.TDConfigMgr.Action.Log log = this.Params as Aki.TDConfigMgr.Action.Log;

@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020012E1 RID: 4833
+// Token: 0x02000795 RID: 1941
 public class MapTravelTabItemBase : UiPanelBase
 {
-	// Token: 0x0600854F RID: 34127 RVA: 0x001C5900 File Offset: 0x001C3B00
+	// Token: 0x060058EA RID: 22762 RVA: 0x001CE75C File Offset: 0x001CC95C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -37,7 +37,7 @@ public class MapTravelTabItemBase : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008550 RID: 34128 RVA: 0x001C5A2A File Offset: 0x001C3C2A
+	// Token: 0x060058EB RID: 22763 RVA: 0x001CE886 File Offset: 0x001CCA86
 	private void OnToggleSelectOn(EToggleState _)
 	{
 		if (this.Data != null)
@@ -51,18 +51,18 @@ public class MapTravelTabItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008551 RID: 34129 RVA: 0x001C5A4C File Offset: 0x001C3C4C
+	// Token: 0x060058EC RID: 22764 RVA: 0x001CE8A8 File Offset: 0x001CCAA8
 	public void SetToggleState(bool bOn, bool bFireEvent)
 	{
 		EToggleState state = bOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(0).SetToggleState(state, bFireEvent, false, false);
 	}
 
-	// Token: 0x04003BCC RID: 15308
+	// Token: 0x04003C64 RID: 15460
 	[Nullable(2)]
 	protected SoarChallengePlayData Data;
 
-	// Token: 0x04003BCD RID: 15309
+	// Token: 0x04003C65 RID: 15461
 	[Nullable(new byte[]
 	{
 		2,
@@ -70,25 +70,25 @@ public class MapTravelTabItemBase : UiPanelBase
 	})]
 	public Action<SoarChallengePlayData> SelectedCallBack;
 
-	// Token: 0x020078F6 RID: 30966
+	// Token: 0x02006A80 RID: 27264
 	private class ETabComponents
 	{
-		// Token: 0x04027D8E RID: 163214
+		// Token: 0x040230BC RID: 143548
 		public const int Toggle = 0;
 
-		// Token: 0x04027D8F RID: 163215
+		// Token: 0x040230BD RID: 143549
 		public const int Name = 1;
 
-		// Token: 0x04027D90 RID: 163216
+		// Token: 0x040230BE RID: 143550
 		public const int SpriteDone = 2;
 
-		// Token: 0x04027D91 RID: 163217
+		// Token: 0x040230BF RID: 143551
 		public const int SpriteLock = 3;
 
-		// Token: 0x04027D92 RID: 163218
+		// Token: 0x040230C0 RID: 143552
 		public const int RedDot = 4;
 
-		// Token: 0x04027D93 RID: 163219
+		// Token: 0x040230C1 RID: 143553
 		public const int ItemNew = 5;
 	}
 }

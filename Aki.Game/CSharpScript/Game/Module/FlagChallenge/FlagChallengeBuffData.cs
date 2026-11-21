@@ -3,12 +3,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A25 RID: 23077
+	// Token: 0x02004A01 RID: 18945
 	public class FlagChallengeBuffData
 	{
-		// Token: 0x17008BD6 RID: 35798
-		// (get) Token: 0x0603A896 RID: 239766 RVA: 0x00DEED1A File Offset: 0x00DECF1A
-		// (set) Token: 0x0603A897 RID: 239767 RVA: 0x00DEED22 File Offset: 0x00DECF22
+		// Token: 0x17005FA4 RID: 24484
+		// (get) Token: 0x0602F7DF RID: 194527 RVA: 0x00D3F29E File Offset: 0x00D3D49E
+		// (set) Token: 0x0602F7E0 RID: 194528 RVA: 0x00D3F2A6 File Offset: 0x00D3D4A6
 		public bool IsSelected
 		{
 			get
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603A898 RID: 239768 RVA: 0x00DEED2C File Offset: 0x00DECF2C
+		// Token: 0x0602F7E1 RID: 194529 RVA: 0x00D3F2B0 File Offset: 0x00D3D4B0
 		public FlagChallengeBuffData(int id)
 		{
 			this.Id = id;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.EndLevel = this.Config.Level;
 		}
 
-		// Token: 0x0603A899 RID: 239769 RVA: 0x00DEED70 File Offset: 0x00DECF70
+		// Token: 0x0602F7E2 RID: 194530 RVA: 0x00D3F2F4 File Offset: 0x00D3D4F4
 		public EFlagChallengeBuffStatus GetBuffStatus()
 		{
 			int activityId = this.Config.ActivityId;
@@ -47,76 +47,76 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return EFlagChallengeBuffStatus.NotActive;
 		}
 
-		// Token: 0x0603A89A RID: 239770 RVA: 0x00DEEDC4 File Offset: 0x00DECFC4
+		// Token: 0x0602F7E3 RID: 194531 RVA: 0x00D3F348 File Offset: 0x00D3D548
 		public bool IsNotActive()
 		{
 			return this.GetBuffStatus() == EFlagChallengeBuffStatus.NotActive;
 		}
 
-		// Token: 0x0603A89B RID: 239771 RVA: 0x00DEEDCF File Offset: 0x00DECFCF
+		// Token: 0x0602F7E4 RID: 194532 RVA: 0x00D3F353 File Offset: 0x00D3D553
 		public bool IsActive()
 		{
 			return this.GetBuffStatus() == EFlagChallengeBuffStatus.Active;
 		}
 
-		// Token: 0x0603A89C RID: 239772 RVA: 0x00DEEDDA File Offset: 0x00DECFDA
+		// Token: 0x0602F7E5 RID: 194533 RVA: 0x00D3F35E File Offset: 0x00D3D55E
 		public bool IsTempActive()
 		{
 			return this.GetBuffStatus() == EFlagChallengeBuffStatus.TempActive;
 		}
 
-		// Token: 0x0603A89D RID: 239773 RVA: 0x00DEEDE5 File Offset: 0x00DECFE5
+		// Token: 0x0602F7E6 RID: 194534 RVA: 0x00D3F369 File Offset: 0x00D3D569
 		public bool IsActiveOrTempActive()
 		{
 			return this.IsActive() || this.IsTempActive();
 		}
 
-		// Token: 0x0603A89E RID: 239774 RVA: 0x00DEEDF7 File Offset: 0x00DECFF7
+		// Token: 0x0602F7E7 RID: 194535 RVA: 0x00D3F37B File Offset: 0x00D3D57B
 		public void SetStartLevel(int level)
 		{
 			this.StartLevel = level;
 		}
 
-		// Token: 0x0603A89F RID: 239775 RVA: 0x00DEEE00 File Offset: 0x00DED000
+		// Token: 0x0602F7E8 RID: 194536 RVA: 0x00D3F384 File Offset: 0x00D3D584
 		public int GetStartLevel()
 		{
 			return this.StartLevel;
 		}
 
-		// Token: 0x0603A8A0 RID: 239776 RVA: 0x00DEEE08 File Offset: 0x00DED008
+		// Token: 0x0602F7E9 RID: 194537 RVA: 0x00D3F38C File Offset: 0x00D3D58C
 		public int GetEndLevel()
 		{
 			return this.EndLevel;
 		}
 
-		// Token: 0x0603A8A1 RID: 239777 RVA: 0x00DEEE10 File Offset: 0x00DED010
+		// Token: 0x0602F7EA RID: 194538 RVA: 0x00D3F394 File Offset: 0x00D3D594
 		public void SetIndex(int index)
 		{
 			this.Index = index;
 		}
 
-		// Token: 0x0603A8A2 RID: 239778 RVA: 0x00DEEE19 File Offset: 0x00DED019
+		// Token: 0x0602F7EB RID: 194539 RVA: 0x00D3F39D File Offset: 0x00D3D59D
 		public int GetIndex()
 		{
 			return this.Index;
 		}
 
-		// Token: 0x0401E7BF RID: 124863
+		// Token: 0x04019266 RID: 103014
 		public readonly int Id;
 
-		// Token: 0x0401E7C0 RID: 124864
+		// Token: 0x04019267 RID: 103015
 		public readonly FlagChallengeRoleBuff Config;
 
-		// Token: 0x0401E7C1 RID: 124865
+		// Token: 0x04019268 RID: 103016
 		private int StartLevel;
 
-		// Token: 0x0401E7C2 RID: 124866
+		// Token: 0x04019269 RID: 103017
 		private int EndLevel;
 
-		// Token: 0x0401E7C3 RID: 124867
+		// Token: 0x0401926A RID: 103018
 		private int Index;
 
-		// Token: 0x0401E7C4 RID: 124868
+		// Token: 0x0401926B RID: 103019
 		private bool IsSelectedIntl;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002784 RID: 10116
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A56 RID: 10838
 	public class ICameraPosAndRot
 	{
-		// Token: 0x0600E13A RID: 57658 RVA: 0x002147CF File Offset: 0x002129CF
+		// Token: 0x0600EF58 RID: 61272 RVA: 0x00231563 File Offset: 0x0022F763
 		public static ICameraPosAndRot Create(ICameraPosAndRot? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043F4 RID: 17396
-		// (get) Token: 0x0600E13B RID: 57659 RVA: 0x002147EE File Offset: 0x002129EE
+		// Token: 0x1700475A RID: 18266
+		// (get) Token: 0x0600EF59 RID: 61273 RVA: 0x00231582 File Offset: 0x0022F782
 		public virtual VectorInfo CameraOffset
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043F5 RID: 17397
-		// (get) Token: 0x0600E13C RID: 57660 RVA: 0x00214822 File Offset: 0x00212A22
+		// Token: 0x1700475B RID: 18267
+		// (get) Token: 0x0600EF5A RID: 61274 RVA: 0x002315B6 File Offset: 0x0022F7B6
 		public virtual VectorInfo CameraRotate
 		{
 			get
@@ -55,21 +53,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CCA RID: 31946
+		// Token: 0x04008380 RID: 33664
 		private ICameraPosAndRot Instance;
 
-		// Token: 0x04007CCB RID: 31947
+		// Token: 0x04008381 RID: 33665
 		[Nullable(2)]
 		private VectorInfo _CameraOffsetCache;
 
-		// Token: 0x04007CCC RID: 31948
+		// Token: 0x04008382 RID: 33666
 		private bool _CameraOffsetInited;
 
-		// Token: 0x04007CCD RID: 31949
+		// Token: 0x04008383 RID: 33667
 		[Nullable(2)]
 		private VectorInfo _CameraRotateCache;
 
-		// Token: 0x04007CCE RID: 31950
+		// Token: 0x04008384 RID: 33668
 		private bool _CameraRotateInited;
 	}
 }

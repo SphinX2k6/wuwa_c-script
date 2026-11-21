@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020065A9 RID: 26025
+	// Token: 0x02006C11 RID: 27665
 	public struct IDestroySummonedVehicle : IFlatbufferObject
 	{
-		// Token: 0x1700C13E RID: 49470
-		// (get) Token: 0x0602D249 RID: 184905 RVA: 0x00630DDA File Offset: 0x0062EFDA
+		// Token: 0x1700CACD RID: 51917
+		// (get) Token: 0x0602F9CD RID: 195021 RVA: 0x0067CF9E File Offset: 0x0067B19E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D24A RID: 184906 RVA: 0x00630DE7 File Offset: 0x0062EFE7
+		// Token: 0x0602F9CE RID: 195022 RVA: 0x0067CFAB File Offset: 0x0067B1AB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D24B RID: 184907 RVA: 0x00630DF0 File Offset: 0x0062EFF0
+		// Token: 0x0602F9CF RID: 195023 RVA: 0x0067CFB4 File Offset: 0x0067B1B4
 		public static IDestroySummonedVehicle GetRootAsIDestroySummonedVehicle(ByteBuffer _bb)
 		{
 			return IDestroySummonedVehicle.GetRootAsIDestroySummonedVehicle(_bb, default(IDestroySummonedVehicle));
 		}
 
-		// Token: 0x0602D24C RID: 184908 RVA: 0x00630E0C File Offset: 0x0062F00C
+		// Token: 0x0602F9D0 RID: 195024 RVA: 0x0067CFD0 File Offset: 0x0067B1D0
 		public static IDestroySummonedVehicle GetRootAsIDestroySummonedVehicle(ByteBuffer _bb, IDestroySummonedVehicle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D24D RID: 184909 RVA: 0x00630E29 File Offset: 0x0062F029
+		// Token: 0x0602F9D1 RID: 195025 RVA: 0x0067CFED File Offset: 0x0067B1ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D24E RID: 184910 RVA: 0x00630E38 File Offset: 0x0062F038
+		// Token: 0x0602F9D2 RID: 195026 RVA: 0x0067CFFC File Offset: 0x0067B1FC
 		public IDestroySummonedVehicle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C13F RID: 49471
-		// (get) Token: 0x0602D24F RID: 184911 RVA: 0x00630E48 File Offset: 0x0062F048
+		// Token: 0x1700CACE RID: 51918
+		// (get) Token: 0x0602F9D3 RID: 195027 RVA: 0x0067D00C File Offset: 0x0067B20C
 		public ESummonEntityType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C140 RID: 49472
-		// (get) Token: 0x0602D250 RID: 184912 RVA: 0x00630E84 File Offset: 0x0062F084
+		// Token: 0x1700CACF RID: 51919
+		// (get) Token: 0x0602F9D4 RID: 195028 RVA: 0x0067D048 File Offset: 0x0067B248
 		public string TemplateId
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D251 RID: 184913 RVA: 0x00630EBB File Offset: 0x0062F0BB
+		// Token: 0x0602F9D5 RID: 195029 RVA: 0x0067D07F File Offset: 0x0067B27F
 		public Span<byte> GetTemplateIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602D252 RID: 184914 RVA: 0x00630ECA File Offset: 0x0062F0CA
+		// Token: 0x0602F9D6 RID: 195030 RVA: 0x0067D08E File Offset: 0x0067B28E
 		public byte[] GetTemplateIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0602D253 RID: 184915 RVA: 0x00630ED8 File Offset: 0x0062F0D8
+		// Token: 0x0602F9D7 RID: 195031 RVA: 0x0067D09C File Offset: 0x0067B29C
 		public static Offset<IDestroySummonedVehicle> CreateIDestroySummonedVehicle(FlatBufferBuilder builder, ESummonEntityType Type = ESummonEntityType.Vehicle, StringOffset TemplateIdOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDestroySummonedVehicle.EndIDestroySummonedVehicle(builder);
 		}
 
-		// Token: 0x0602D254 RID: 184916 RVA: 0x00630EF5 File Offset: 0x0062F0F5
+		// Token: 0x0602F9D8 RID: 195032 RVA: 0x0067D0B9 File Offset: 0x0067B2B9
 		public static void StartIDestroySummonedVehicle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602D255 RID: 184917 RVA: 0x00630EFE File Offset: 0x0062F0FE
+		// Token: 0x0602F9D9 RID: 195033 RVA: 0x0067D0C2 File Offset: 0x0067B2C2
 		public static void AddType(FlatBufferBuilder builder, ESummonEntityType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D256 RID: 184918 RVA: 0x00630F09 File Offset: 0x0062F109
+		// Token: 0x0602F9DA RID: 195034 RVA: 0x0067D0CD File Offset: 0x0067B2CD
 		public static void AddTemplateId(FlatBufferBuilder builder, StringOffset templateIdOffset)
 		{
 			builder.AddOffset(1, templateIdOffset.Value, 0);
 		}
 
-		// Token: 0x0602D257 RID: 184919 RVA: 0x00630F19 File Offset: 0x0062F119
+		// Token: 0x0602F9DB RID: 195035 RVA: 0x0067D0DD File Offset: 0x0067B2DD
 		public static Offset<IDestroySummonedVehicle> EndIDestroySummonedVehicle(FlatBufferBuilder builder)
 		{
 			return new Offset<IDestroySummonedVehicle>(builder.EndTable());
 		}
 
-		// Token: 0x0602D258 RID: 184920 RVA: 0x00630F28 File Offset: 0x0062F128
+		// Token: 0x0602F9DC RID: 195036 RVA: 0x0067D0EC File Offset: 0x0067B2EC
 		public IDestroySummonedVehicleT UnPack()
 		{
 			IDestroySummonedVehicleT destroySummonedVehicleT = new IDestroySummonedVehicleT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return destroySummonedVehicleT;
 		}
 
-		// Token: 0x0602D259 RID: 184921 RVA: 0x00630F43 File Offset: 0x0062F143
+		// Token: 0x0602F9DD RID: 195037 RVA: 0x0067D107 File Offset: 0x0067B307
 		public void UnPackTo(IDestroySummonedVehicleT _o)
 		{
 			_o.Type = this.Type;
 			_o.TemplateId = this.TemplateId;
 		}
 
-		// Token: 0x0602D25A RID: 184922 RVA: 0x00630F60 File Offset: 0x0062F160
+		// Token: 0x0602F9DE RID: 195038 RVA: 0x0067D124 File Offset: 0x0067B324
 		public static Offset<IDestroySummonedVehicle> Pack(FlatBufferBuilder builder, IDestroySummonedVehicleT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDestroySummonedVehicle.CreateIDestroySummonedVehicle(builder, _o.Type, templateIdOffset);
 		}
 
-		// Token: 0x04010C05 RID: 68613
+		// Token: 0x04011A17 RID: 72215
 		private Table __p;
 	}
 }

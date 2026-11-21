@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GenericPrompt.View
 {
-	// Token: 0x020059A0 RID: 22944
+	// Token: 0x02004979 RID: 18809
 	public class ChapterDivideFloatTips : GenericPromptFloatTipsBase
 	{
-		// Token: 0x0603A362 RID: 238434 RVA: 0x00DD5812 File Offset: 0x00DD3A12
+		// Token: 0x0602F288 RID: 193160 RVA: 0x00D24CA2 File Offset: 0x00D22EA2
 		[NullableContext(1)]
 		public ChapterDivideFloatTips(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A363 RID: 238435 RVA: 0x00DD581C File Offset: 0x00DD3A1C
+		// Token: 0x0602F289 RID: 193161 RVA: 0x00D24CAC File Offset: 0x00D22EAC
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -28,14 +28,14 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			this.BtnBindInfo.Add(new ValueTuple<int, Delegate>(4, new Action(this.OnClickBtnMask)));
 		}
 
-		// Token: 0x0603A364 RID: 238436 RVA: 0x00DD589D File Offset: 0x00DD3A9D
+		// Token: 0x0602F28A RID: 193162 RVA: 0x00D24D2D File Offset: 0x00D22F2D
 		private void ResetChildrenAlpha()
 		{
 			this.RootItem.SetAlpha(1f);
 			base.MainText.GetParentAsUIItem().GetParentAsUIItem().SetAlpha(1f);
 		}
 
-		// Token: 0x0603A365 RID: 238437 RVA: 0x00DD58CC File Offset: 0x00DD3ACC
+		// Token: 0x0602F28B RID: 193163 RVA: 0x00D24D5C File Offset: 0x00D22F5C
 		protected override void OnAfterShow()
 		{
 			this.ResetChildrenAlpha();
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			uuiitem.SetRaycastTarget(true);
 		}
 
-		// Token: 0x0603A366 RID: 238438 RVA: 0x00DD5904 File Offset: 0x00DD3B04
+		// Token: 0x0602F28C RID: 193164 RVA: 0x00D24D94 File Offset: 0x00D22F94
 		private void FetchCurrentChapterConf(int chapterId)
 		{
 			this.CurrentChapterConf = ConfigQuestChapterById.GetConfig(chapterId, true);
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			}
 		}
 
-		// Token: 0x0603A367 RID: 238439 RVA: 0x00DD5958 File Offset: 0x00DD3B58
+		// Token: 0x0602F28D RID: 193165 RVA: 0x00D24DE8 File Offset: 0x00D22FE8
 		protected override void SetExtraText([ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			}
 		}
 
-		// Token: 0x0603A368 RID: 238440 RVA: 0x00DD5A18 File Offset: 0x00DD3C18
+		// Token: 0x0602F28E RID: 193166 RVA: 0x00D24EA8 File Offset: 0x00D230A8
 		protected override void OnBeforeShow()
 		{
 			UUIButtonComponent button = base.GetButton(4);
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			uiViewSequence2.SetSequenceName(uiViewData2);
 		}
 
-		// Token: 0x0603A369 RID: 238441 RVA: 0x00DD5B20 File Offset: 0x00DD3D20
+		// Token: 0x0602F28F RID: 193167 RVA: 0x00D24FB0 File Offset: 0x00D231B0
 		[NullableContext(1)]
 		public string CombineChapterExtraText(QuestChapter chapterConf)
 		{
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			return str + "·" + str2;
 		}
 
-		// Token: 0x0603A36A RID: 238442 RVA: 0x00DD5B65 File Offset: 0x00DD3D65
+		// Token: 0x0602F290 RID: 193168 RVA: 0x00D24FF5 File Offset: 0x00D231F5
 		private void OnClickBtnMask()
 		{
 			base.CloseMe(delegate(bool success)
@@ -177,19 +177,19 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			});
 		}
 
-		// Token: 0x0401E5DF RID: 124383
+		// Token: 0x0401907D RID: 102525
 		private QuestChapter? CurrentChapterConf;
 
-		// Token: 0x0200BC17 RID: 48151
+		// Token: 0x0200A622 RID: 42530
 		private class EChapterDivideFloatTips
 		{
-			// Token: 0x04038C55 RID: 232533
+			// Token: 0x04033624 RID: 210468
 			public const int PredictionText = 2;
 
-			// Token: 0x04038C56 RID: 232534
+			// Token: 0x04033625 RID: 210469
 			public const int ChapterIcon = 3;
 
-			// Token: 0x04038C57 RID: 232535
+			// Token: 0x04033626 RID: 210470
 			public const int BtnMask = 4;
 		}
 	}

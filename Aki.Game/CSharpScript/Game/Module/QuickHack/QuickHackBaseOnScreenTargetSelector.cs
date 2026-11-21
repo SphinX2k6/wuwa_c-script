@@ -5,19 +5,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F7C RID: 20348
+	// Token: 0x02003F45 RID: 16197
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class QuickHackBaseOnScreenTargetSelector : QuickHackTargetSelector
 	{
-		// Token: 0x060341C6 RID: 213446 RVA: 0x00C3AE76 File Offset: 0x00C39076
+		// Token: 0x06029034 RID: 167988 RVA: 0x00B84622 File Offset: 0x00B82822
 		public override void Init(int selectRange, int selectScreenRadius)
 		{
 			base.Init(selectRange, selectScreenRadius);
 			this.OnInit();
 		}
 
-		// Token: 0x060341C7 RID: 213447 RVA: 0x00C3AE86 File Offset: 0x00C39086
+		// Token: 0x06029035 RID: 167989 RVA: 0x00B84632 File Offset: 0x00B82832
 		public override void Clear()
 		{
 			this.EntitiesInRange.Clear();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.LockIgnoreCheckOnScreen = false;
 		}
 
-		// Token: 0x060341C8 RID: 213448 RVA: 0x00C3AEB4 File Offset: 0x00C390B4
+		// Token: 0x06029036 RID: 167990 RVA: 0x00B84660 File Offset: 0x00B82860
 		public override bool UpdateTargetInfo(float delta)
 		{
 			if (this.LockTargetInfo == null)
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return result;
 		}
 
-		// Token: 0x060341C9 RID: 213449 RVA: 0x00C3B1B8 File Offset: 0x00C393B8
+		// Token: 0x06029037 RID: 167991 RVA: 0x00B84964 File Offset: 0x00B82B64
 		public override IQuickHackLockTargetInfo GetLockTargetInfo()
 		{
 			if (this.LockTargetInfo == null)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return this.LockTargetInfo;
 		}
 
-		// Token: 0x060341CA RID: 213450 RVA: 0x00C3B1FC File Offset: 0x00C393FC
+		// Token: 0x06029038 RID: 167992 RVA: 0x00B849A8 File Offset: 0x00B82BA8
 		public override IQuickHackOnScreenTargetInfo GetOnScreenTargetInfo()
 		{
 			if (this.OnScreenTargetInfo == null)
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return this.OnScreenTargetInfo;
 		}
 
-		// Token: 0x060341CB RID: 213451 RVA: 0x00C3B24E File Offset: 0x00C3944E
+		// Token: 0x06029039 RID: 167993 RVA: 0x00B849FA File Offset: 0x00B82BFA
 		public override void OnExecuteExtraEffect(EQuickHackSkillExtraEffect type)
 		{
 			if (type == EQuickHackSkillExtraEffect.SelectTargetIgnoreCheckOnScreen)
@@ -139,48 +139,48 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x060341CC RID: 213452
+		// Token: 0x0602903A RID: 167994
 		protected abstract void OnInit();
 
-		// Token: 0x060341CD RID: 213453
+		// Token: 0x0602903B RID: 167995
 		protected abstract bool CheckEntityValid(EntityHandle entityHandle);
 
-		// Token: 0x060341CE RID: 213454
+		// Token: 0x0602903C RID: 167996
 		protected abstract bool CheckEntityRendered(EntityHandle entityHandle);
 
-		// Token: 0x060341CF RID: 213455
+		// Token: 0x0602903D RID: 167997
 		protected abstract FVectorDouble GetEntityLocation(EntityHandle entityHandle);
 
-		// Token: 0x0401BB5B RID: 113499
+		// Token: 0x04016530 RID: 91440
 		protected EEntityTypeQuery EntityTypeQuery = EEntityTypeQuery.PasserbyNPC | EEntityTypeQuery.Boss;
 
-		// Token: 0x0401BB5C RID: 113500
+		// Token: 0x04016531 RID: 91441
 		protected EQuickHackTargetType TargetHackType;
 
-		// Token: 0x0401BB5D RID: 113501
+		// Token: 0x04016532 RID: 91442
 		private readonly List<EntityHandle> EntitiesInRange = new List<EntityHandle>();
 
-		// Token: 0x0401BB5E RID: 113502
+		// Token: 0x04016533 RID: 91443
 		private readonly HashSet<EntityHandle> TargetSet = new HashSet<EntityHandle>();
 
-		// Token: 0x0401BB5F RID: 113503
+		// Token: 0x04016534 RID: 91444
 		[Nullable(2)]
 		private IQuickHackOnScreenTargetInfo OnScreenTargetInfo;
 
-		// Token: 0x0401BB60 RID: 113504
+		// Token: 0x04016535 RID: 91445
 		[Nullable(2)]
 		private IQuickHackLockTargetInfo LockTargetInfo;
 
-		// Token: 0x0401BB61 RID: 113505
+		// Token: 0x04016536 RID: 91446
 		private bool LockIgnoreCheckOnScreen;
 
-		// Token: 0x0401BB62 RID: 113506
+		// Token: 0x04016537 RID: 91447
 		private readonly Vector StartLocation = Vector.Create();
 
-		// Token: 0x0401BB63 RID: 113507
+		// Token: 0x04016538 RID: 91448
 		private readonly Vector2D ScreenPos = Vector2D.Create();
 
-		// Token: 0x0401BB64 RID: 113508
+		// Token: 0x04016539 RID: 91449
 		private readonly Vector TempVector = Vector.Create();
 	}
 }

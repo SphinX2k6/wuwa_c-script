@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x020015CF RID: 5583
+// Token: 0x02000A87 RID: 2695
 internal enum <WheelTowerLimitRewardItem>F9866BD623504F37A94EDEC7C84452A43429D023AF7E41EBB6D8DAB0F04F689A7__EWheelTowerLimitRewardItemComponent
 {
-	// Token: 0x04004641 RID: 17985
+	// Token: 0x040046E7 RID: 18151
 	Name,
-	// Token: 0x04004642 RID: 17986
+	// Token: 0x040046E8 RID: 18152
 	Num,
-	// Token: 0x04004643 RID: 17987
+	// Token: 0x040046E9 RID: 18153
 	RewardLayout,
-	// Token: 0x04004644 RID: 17988
+	// Token: 0x040046EA RID: 18154
 	RewardItem,
-	// Token: 0x04004645 RID: 17989
+	// Token: 0x040046EB RID: 18155
 	BtnReceive,
-	// Token: 0x04004646 RID: 17990
+	// Token: 0x040046EC RID: 18156
 	Active,
-	// Token: 0x04004647 RID: 17991
+	// Token: 0x040046ED RID: 18157
 	Done
 }

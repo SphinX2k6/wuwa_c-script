@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001650 RID: 5712
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017BD RID: 6077
 	public class EndFlowTemplate : ActionParams
 	{
-		// Token: 0x06007CA9 RID: 31913 RVA: 0x0012B91C File Offset: 0x00129B1C
+		// Token: 0x06008387 RID: 33671 RVA: 0x0013A9C8 File Offset: 0x00138BC8
 		private EndFlowTemplate_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007CAA RID: 31914 RVA: 0x0012B954 File Offset: 0x00129B54
+		// Token: 0x06008388 RID: 33672 RVA: 0x0013AA00 File Offset: 0x00138C00
 		public static EndFlowTemplate Create([Nullable(2)] EndFlowTemplate instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CAB RID: 31915 RVA: 0x0012B967 File Offset: 0x00129B67
+		// Token: 0x06008389 RID: 33673 RVA: 0x0013AA13 File Offset: 0x00138C13
 		public static EndFlowTemplate CreateFromSetValue([Nullable(2)] EndFlowTemplate_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CAC RID: 31916 RVA: 0x0012B97A File Offset: 0x00129B7A
+		// Token: 0x0600838A RID: 33674 RVA: 0x0013AA26 File Offset: 0x00138C26
 		public EndFlowTemplate_SetValue ToSetValue()
 		{
 			return new EndFlowTemplate_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700292F RID: 10543
-		// (get) Token: 0x06007CAD RID: 31917 RVA: 0x0012B98D File Offset: 0x00129B8D
-		// (set) Token: 0x06007CAE RID: 31918 RVA: 0x0012B9B8 File Offset: 0x00129BB8
+		// Token: 0x17002B1A RID: 11034
+		// (get) Token: 0x0600838B RID: 33675 RVA: 0x0013AA39 File Offset: 0x00138C39
+		// (set) Token: 0x0600838C RID: 33676 RVA: 0x0013AA64 File Offset: 0x00138C64
 		public virtual bool IsResetPosition
 		{
 			get
@@ -78,11 +76,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004C85 RID: 19589
+		// Token: 0x04005079 RID: 20601
 		[Nullable(2)]
 		protected new EndFlowTemplate FbInstance;
 
-		// Token: 0x04004C86 RID: 19590
+		// Token: 0x0400507A RID: 20602
 		[Nullable(2)]
 		protected EndFlowTemplate_SetValue PocoInterface;
 	}

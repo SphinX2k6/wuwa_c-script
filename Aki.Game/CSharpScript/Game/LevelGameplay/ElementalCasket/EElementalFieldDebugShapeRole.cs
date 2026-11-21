@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E62 RID: 28258
+	// Token: 0x02005FE3 RID: 24547
 	public enum EElementalFieldDebugShapeRole
 	{
-		// Token: 0x04023D86 RID: 146822
+		// Token: 0x0401F03B RID: 127035
 		Detector,
-		// Token: 0x04023D87 RID: 146823
+		// Token: 0x0401F03C RID: 127036
 		Detectable
 	}
 }

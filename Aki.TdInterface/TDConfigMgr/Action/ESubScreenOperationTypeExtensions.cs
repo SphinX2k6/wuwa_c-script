@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002437 RID: 9271
+	// Token: 0x020026D8 RID: 9944
 	public static class ESubScreenOperationTypeExtensions
 	{
-		// Token: 0x0600C976 RID: 51574 RVA: 0x001D7FC8 File Offset: 0x001D61C8
+		// Token: 0x0600D626 RID: 54822 RVA: 0x001F1E90 File Offset: 0x001F0090
 		public static string ToEnumString(this ESubScreenOperationType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C977 RID: 51575 RVA: 0x001D8010 File Offset: 0x001D6210
+		// Token: 0x0600D627 RID: 54823 RVA: 0x001F1ED8 File Offset: 0x001F00D8
 		public static ESubScreenOperationType FromString(string name)
 		{
 			ESubScreenOperationType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C978 RID: 51576 RVA: 0x001D803C File Offset: 0x001D623C
+		// Token: 0x0600D628 RID: 54824 RVA: 0x001F1F04 File Offset: 0x001F0104
 		public static bool TryFromString(string name, out ESubScreenOperationType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C979 RID: 51577 RVA: 0x001D8092 File Offset: 0x001D6292
+		// Token: 0x0600D629 RID: 54825 RVA: 0x001F1F5A File Offset: 0x001F015A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C97A RID: 51578 RVA: 0x001D80B2 File Offset: 0x001D62B2
+		// Token: 0x0600D62A RID: 54826 RVA: 0x001F1F7A File Offset: 0x001F017A
 		public static ESubScreenOperationType[] GetValues()
 		{
 			return new ESubScreenOperationType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C97B RID: 51579 RVA: 0x001D80C2 File Offset: 0x001D62C2
+		// Token: 0x0600D62B RID: 54827 RVA: 0x001F1F8A File Offset: 0x001F018A
 		public static string[] GetNames()
 		{
 			return new string[]

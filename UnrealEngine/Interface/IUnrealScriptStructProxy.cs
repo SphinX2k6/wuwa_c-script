@@ -3,14 +3,14 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine.Interface
 {
-	// Token: 0x02002B18 RID: 11032
+	// Token: 0x020008C8 RID: 2248
 	public interface IUnrealScriptStructProxy : IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060284E8 RID: 165096
+		// Token: 0x0600BEA2 RID: 48802
 		[NullableContext(1)]
 		public abstract static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer);
 
-		// Token: 0x060284E9 RID: 165097
+		// Token: 0x0600BEA3 RID: 48803
 		[NullableContext(1)]
 		public abstract static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner);
 	}

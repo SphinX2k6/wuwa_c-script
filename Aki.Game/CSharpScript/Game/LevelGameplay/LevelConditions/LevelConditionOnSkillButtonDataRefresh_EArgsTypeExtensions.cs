@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006DA1 RID: 28065
+	// Token: 0x02005F20 RID: 24352
 	public static class LevelConditionOnSkillButtonDataRefresh_EArgsTypeExtensions
 	{
-		// Token: 0x060447FE RID: 280574 RVA: 0x010E4AE8 File Offset: 0x010E2CE8
+		// Token: 0x0603A962 RID: 239970 RVA: 0x0108ED10 File Offset: 0x0108CF10
 		public static string ToEnumString(this LevelConditionOnSkillButtonDataRefresh.EArgsType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return result;
 		}
 
-		// Token: 0x060447FF RID: 280575 RVA: 0x010E4B10 File Offset: 0x010E2D10
+		// Token: 0x0603A963 RID: 239971 RVA: 0x0108ED38 File Offset: 0x0108CF38
 		public static LevelConditionOnSkillButtonDataRefresh.EArgsType FromString(string name)
 		{
 			LevelConditionOnSkillButtonDataRefresh.EArgsType result;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return result;
 		}
 
-		// Token: 0x06044800 RID: 280576 RVA: 0x010E4B39 File Offset: 0x010E2D39
+		// Token: 0x0603A964 RID: 239972 RVA: 0x0108ED61 File Offset: 0x0108CF61
 		public static bool TryFromString(string name, out LevelConditionOnSkillButtonDataRefresh.EArgsType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return false;
 		}
 
-		// Token: 0x06044801 RID: 280577 RVA: 0x010E4B5E File Offset: 0x010E2D5E
+		// Token: 0x0603A965 RID: 239973 RVA: 0x0108ED86 File Offset: 0x0108CF86
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			};
 		}
 
-		// Token: 0x06044802 RID: 280578 RVA: 0x010E4B6E File Offset: 0x010E2D6E
+		// Token: 0x0603A966 RID: 239974 RVA: 0x0108ED96 File Offset: 0x0108CF96
 		public static LevelConditionOnSkillButtonDataRefresh.EArgsType[] GetValues()
 		{
 			return new LevelConditionOnSkillButtonDataRefresh.EArgsType[1];
 		}
 
-		// Token: 0x06044803 RID: 280579 RVA: 0x010E4B76 File Offset: 0x010E2D76
+		// Token: 0x0603A967 RID: 239975 RVA: 0x0108ED9E File Offset: 0x0108CF9E
 		public static string[] GetNames()
 		{
 			return new string[]

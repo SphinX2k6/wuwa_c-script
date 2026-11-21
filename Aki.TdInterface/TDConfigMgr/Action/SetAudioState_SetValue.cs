@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200219E RID: 8606
+	// Token: 0x02002409 RID: 9225
 	public class SetAudioState_SetValue
 	{
-		// Token: 0x040070D1 RID: 28881
-		[Nullable(1)]
+		// Token: 0x04007719 RID: 30489
 		public IAudioState AudioConfig;
 	}
 }

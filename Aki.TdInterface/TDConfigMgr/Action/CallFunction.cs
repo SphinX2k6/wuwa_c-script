@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014BE RID: 5310
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001617 RID: 5655
 	public class CallFunction : ActionParams
 	{
-		// Token: 0x060078DC RID: 30940 RVA: 0x00121930 File Offset: 0x0011FB30
+		// Token: 0x06007FA9 RID: 32681 RVA: 0x0013057C File Offset: 0x0012E77C
 		private CallFunction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060078DD RID: 30941 RVA: 0x00121968 File Offset: 0x0011FB68
+		// Token: 0x06007FAA RID: 32682 RVA: 0x001305B4 File Offset: 0x0012E7B4
 		public static CallFunction Create([Nullable(2)] CallFunction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060078DE RID: 30942 RVA: 0x0012197B File Offset: 0x0011FB7B
+		// Token: 0x06007FAB RID: 32683 RVA: 0x001305C7 File Offset: 0x0012E7C7
 		public static CallFunction CreateFromSetValue([Nullable(2)] CallFunction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060078DF RID: 30943 RVA: 0x0012198E File Offset: 0x0011FB8E
+		// Token: 0x06007FAC RID: 32684 RVA: 0x001305DA File Offset: 0x0012E7DA
 		public CallFunction_SetValue ToSetValue()
 		{
 			return new CallFunction_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002887 RID: 10375
-		// (get) Token: 0x060078E0 RID: 30944 RVA: 0x001219A1 File Offset: 0x0011FBA1
-		// (set) Token: 0x060078E1 RID: 30945 RVA: 0x001219CC File Offset: 0x0011FBCC
+		// Token: 0x17002A71 RID: 10865
+		// (get) Token: 0x06007FAD RID: 32685 RVA: 0x001305ED File Offset: 0x0012E7ED
+		// (set) Token: 0x06007FAE RID: 32686 RVA: 0x00130618 File Offset: 0x0012E818
 		public virtual string Name
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004634 RID: 17972
+		// Token: 0x040049CF RID: 18895
 		[Nullable(2)]
 		protected new CallFunction FbInstance;
 
-		// Token: 0x04004635 RID: 17973
+		// Token: 0x040049D0 RID: 18896
 		[Nullable(2)]
 		protected CallFunction_SetValue PocoInterface;
 	}

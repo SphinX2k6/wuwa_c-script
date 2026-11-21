@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D86 RID: 23942
+	// Token: 0x02004D68 RID: 19816
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PendingProcessController : MissionPanelControllerBase
 	{
-		// Token: 0x0603CC42 RID: 248898 RVA: 0x00E96AF0 File Offset: 0x00E94CF0
+		// Token: 0x06031B9E RID: 203678 RVA: 0x00DE7338 File Offset: 0x00DE5538
 		public PendingProcessController(Func<bool> checkDeleteSameTreeHandle, [Nullable(new byte[]
 		{
 			1,
@@ -44,8 +44,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		{
 		}
 
-		// Token: 0x17008E5F RID: 36447
-		// (get) Token: 0x0603CC43 RID: 248899 RVA: 0x00E96B47 File Offset: 0x00E94D47
+		// Token: 0x17006231 RID: 25137
+		// (get) Token: 0x06031B9F RID: 203679 RVA: 0x00DE738F File Offset: 0x00DE558F
 		protected override EMissionPanelControllerType ControllerType
 		{
 			get
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC44 RID: 248900 RVA: 0x00E96B4A File Offset: 0x00E94D4A
+		// Token: 0x06031BA0 RID: 203680 RVA: 0x00DE7392 File Offset: 0x00DE5592
 		public override void OnDestroy()
 		{
 			this.CurProcess = null;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddToFirstProcessQueue.Clear();
 		}
 
-		// Token: 0x0603CC45 RID: 248901 RVA: 0x00E96B6C File Offset: 0x00E94D6C
+		// Token: 0x06031BA1 RID: 203681 RVA: 0x00DE73B4 File Offset: 0x00DE55B4
 		public override void AddEvents()
 		{
 			EventSystem.Instance.Add<BehaviorTreeViewShowData, ETreeTextExpressReason, bool>(EEventName.GeneralLogicTreeStartShowTrackText, new Action<BehaviorTreeViewShowData, ETreeTextExpressReason, bool>(this.BehaviorTreeStartShow));
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add<int>(EEventName.FocusQuestChange, new Action<int>(this.OnFocusQuestChange));
 		}
 
-		// Token: 0x0603CC46 RID: 248902 RVA: 0x00E96C94 File Offset: 0x00E94E94
+		// Token: 0x06031BA2 RID: 203682 RVA: 0x00DE74DC File Offset: 0x00DE56DC
 		public override void RemoveEvents()
 		{
 			EventSystem.Instance.Remove<BehaviorTreeViewShowData, ETreeTextExpressReason, bool>(EEventName.GeneralLogicTreeStartShowTrackText, new Action<BehaviorTreeViewShowData, ETreeTextExpressReason, bool>(this.BehaviorTreeStartShow));
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove<int>(EEventName.FocusQuestChange, new Action<int>(this.OnFocusQuestChange));
 		}
 
-		// Token: 0x0603CC47 RID: 248903 RVA: 0x00E96DB9 File Offset: 0x00E94FB9
+		// Token: 0x06031BA3 RID: 203683 RVA: 0x00DE7601 File Offset: 0x00DE5801
 		private void OnDriveFishingShipStateChanged(bool isDriving)
 		{
 			if (isDriving)
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.FishingEntrustEndShow(this.FishingEntrustViewShowId, ETreeTextExpressReason.DrivingStateChange);
 		}
 
-		// Token: 0x0603CC48 RID: 248904 RVA: 0x00E96DE1 File Offset: 0x00E94FE1
+		// Token: 0x06031BA4 RID: 203684 RVA: 0x00DE7629 File Offset: 0x00DE5829
 		private void OnFishingSailing(int id)
 		{
 			this.FishingEntrustEndShow(this.FishingEntrustViewShowId, ETreeTextExpressReason.OnFishingSailing);
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC49 RID: 248905 RVA: 0x00E96E00 File Offset: 0x00E95000
+		// Token: 0x06031BA5 RID: 203685 RVA: 0x00DE7648 File Offset: 0x00DE5848
 		public void FishingEntrustStartShow(FishingEntrustViewShowData showData, ETreeTextExpressReason reason)
 		{
 			if (!FishingModel.Instance.GetShipData().IsShipDriving())
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.FishingEntrustViewShowId = (int)showData.Id;
 		}
 
-		// Token: 0x0603CC4A RID: 248906 RVA: 0x00E96E80 File Offset: 0x00E95080
+		// Token: 0x06031BA6 RID: 203686 RVA: 0x00DE76C8 File Offset: 0x00DE58C8
 		private void FishingEntrustEndShow(int id, ETreeTextExpressReason reason)
 		{
 			bool isSkipAnim = AutoRunModel.Instance.GetAutoRunMode() > EAutoRunMode.Disabled;
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.FishingEntrustViewShowId = 0;
 		}
 
-		// Token: 0x0603CC4B RID: 248907 RVA: 0x00E96ED0 File Offset: 0x00E950D0
+		// Token: 0x06031BA7 RID: 203687 RVA: 0x00DE7718 File Offset: 0x00DE5918
 		public void BehaviorTreeStartShow(BehaviorTreeViewShowData showData, ETreeTextExpressReason reason, bool bSkipAnim)
 		{
 			if (this.<checkDeleteSameTreeHandle>P())
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddNewProcess(new MissionItemViewStartTrackProcess(showData, reason, bSkipAnim));
 		}
 
-		// Token: 0x0603CC4C RID: 248908 RVA: 0x00E96F3C File Offset: 0x00E9513C
+		// Token: 0x06031BA8 RID: 203688 RVA: 0x00DE7784 File Offset: 0x00DE5984
 		private void BehaviorTreeEndShow(long treeIncId, ETreeTextExpressReason reason, bool bSkipAnim)
 		{
 			if (this.<checkDeleteSameTreeHandle>P())
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddNewProcess(new MissionItemViewEndTrackProcess(treeIncId, (int)reason, bSkipAnim));
 		}
 
-		// Token: 0x0603CC4D RID: 248909 RVA: 0x00E96F98 File Offset: 0x00E95198
+		// Token: 0x06031BA9 RID: 203689 RVA: 0x00DE77E0 File Offset: 0x00DE59E0
 		private void DeleteSameTreeProcess(long id)
 		{
 			if (this.ProcessQueue.Count == 0)
@@ -233,25 +233,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC4E RID: 248910 RVA: 0x00E97087 File Offset: 0x00E95287
+		// Token: 0x06031BAA RID: 203690 RVA: 0x00DE78CF File Offset: 0x00DE5ACF
 		private void OnLogicTreeUpdateShow(BehaviorTreeViewShowData showData, bool bSkipAnim)
 		{
 			this.AddNewProcess(new MissionItemViewRefreshProcess(showData, bSkipAnim));
 		}
 
-		// Token: 0x0603CC4F RID: 248911 RVA: 0x00E97096 File Offset: 0x00E95296
+		// Token: 0x06031BAB RID: 203691 RVA: 0x00DE78DE File Offset: 0x00DE5ADE
 		private void ShowQuestUpdateTips(QuestUpdateTipsShowData info)
 		{
 			this.AddNewProcess(new ShowQuestUpdateTipsProcess(info));
 		}
 
-		// Token: 0x0603CC50 RID: 248912 RVA: 0x00E970A4 File Offset: 0x00E952A4
+		// Token: 0x06031BAC RID: 203692 RVA: 0x00DE78EC File Offset: 0x00DE5AEC
 		private void OnStepConditionIndexChange(EMissionItemView viewId, int stepId, int? curConditionTextIndex)
 		{
 			this.AddNewProcessToFirst(new StepConditionIndexChangeProcess(viewId, stepId, curConditionTextIndex));
 		}
 
-		// Token: 0x0603CC51 RID: 248913 RVA: 0x00E970B4 File Offset: 0x00E952B4
+		// Token: 0x06031BAD RID: 203693 RVA: 0x00DE78FC File Offset: 0x00DE5AFC
 		private void OnFocusQuestChange(int questId)
 		{
 			if (questId == 0 || this.ProcessQueue.Count == 0)
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC52 RID: 248914 RVA: 0x00E97124 File Offset: 0x00E95324
+		// Token: 0x06031BAE RID: 203694 RVA: 0x00DE796C File Offset: 0x00DE5B6C
 		private void AddNewProcess(TPendingProcess processInfo)
 		{
 			foreach (PendingProcessControllerRuleConfigBase pendingProcessControllerRuleConfigBase in PendingProcessControllerRuleConfigInstance.Instance.PendingProcessExCheckList)
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ProcessQueue.Add(processInfo);
 		}
 
-		// Token: 0x0603CC53 RID: 248915 RVA: 0x00E97190 File Offset: 0x00E95390
+		// Token: 0x06031BAF RID: 203695 RVA: 0x00DE79D8 File Offset: 0x00DE5BD8
 		private void AddNewProcessToFirst(TPendingProcess processInfo)
 		{
 			if (this.CurProcess != null)
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ProcessQueue.Insert(0, processInfo);
 		}
 
-		// Token: 0x0603CC54 RID: 248916 RVA: 0x00E971B4 File Offset: 0x00E953B4
+		// Token: 0x06031BB0 RID: 203696 RVA: 0x00DE79FC File Offset: 0x00DE5BFC
 		public UniTask ProcessCacheList()
 		{
 			PendingProcessController.<ProcessCacheList>d__29 <ProcessCacheList>d__;
@@ -304,18 +304,18 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <ProcessCacheList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC55 RID: 248917 RVA: 0x00E971F7 File Offset: 0x00E953F7
+		// Token: 0x06031BB1 RID: 203697 RVA: 0x00DE7A3F File Offset: 0x00DE5C3F
 		[NullableContext(2)]
 		public TPendingProcess GetCurrentProcess()
 		{
 			return this.CurProcess;
 		}
 
-		// Token: 0x0401FA7B RID: 129659
+		// Token: 0x0401A533 RID: 107827
 		[CompilerGenerated]
 		private Func<bool> <checkDeleteSameTreeHandle>P = checkDeleteSameTreeHandle;
 
-		// Token: 0x0401FA7C RID: 129660
+		// Token: 0x0401A534 RID: 107828
 		[Nullable(new byte[]
 		{
 			1,
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		[CompilerGenerated]
 		private Func<MissionItemViewStartTrackProcess, UniTask<bool>> <missionItemViewStartTrackHandle>P = missionItemViewStartTrackHandle;
 
-		// Token: 0x0401FA7D RID: 129661
+		// Token: 0x0401A535 RID: 107829
 		[Nullable(new byte[]
 		{
 			1,
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		[CompilerGenerated]
 		private Func<MissionItemViewEndTrackProcess, UniTask<bool>> <missionItemViewEndTrackHandle>P = missionItemViewEndTrackHandle;
 
-		// Token: 0x0401FA7E RID: 129662
+		// Token: 0x0401A536 RID: 107830
 		[Nullable(new byte[]
 		{
 			1,
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		[CompilerGenerated]
 		private Func<MissionItemViewRefreshProcess, UniTask<bool>> <missionItemViewRefreshHandle>P = missionItemViewRefreshHandle;
 
-		// Token: 0x0401FA7F RID: 129663
+		// Token: 0x0401A537 RID: 107831
 		[Nullable(new byte[]
 		{
 			1,
@@ -355,7 +355,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		[CompilerGenerated]
 		private Func<ShowQuestUpdateTipsProcess, UniTask<bool>> <showQuestUpdateTipsHandle>P = showQuestUpdateTipsHandle;
 
-		// Token: 0x0401FA80 RID: 129664
+		// Token: 0x0401A538 RID: 107832
 		[Nullable(new byte[]
 		{
 			1,
@@ -365,17 +365,17 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		[CompilerGenerated]
 		private Func<StepConditionIndexChangeProcess, UniTask<bool>> <stepConditionIndexChange>P = stepConditionIndexChange;
 
-		// Token: 0x0401FA81 RID: 129665
+		// Token: 0x0401A539 RID: 107833
 		private readonly List<TPendingProcess> ProcessQueue = new List<TPendingProcess>();
 
-		// Token: 0x0401FA82 RID: 129666
+		// Token: 0x0401A53A RID: 107834
 		private readonly Queue<TPendingProcess> AddToFirstProcessQueue = new Queue<TPendingProcess>(4);
 
-		// Token: 0x0401FA83 RID: 129667
+		// Token: 0x0401A53B RID: 107835
 		[Nullable(2)]
 		private TPendingProcess CurProcess;
 
-		// Token: 0x0401FA84 RID: 129668
+		// Token: 0x0401A53C RID: 107836
 		private int FishingEntrustViewShowId;
 	}
 }

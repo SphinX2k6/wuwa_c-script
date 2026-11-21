@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWalk
 {
-	// Token: 0x0200710E RID: 28942
+	// Token: 0x020063BE RID: 25534
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AssistedWalkUtils : Singleton
 	{
-		// Token: 0x06046A8D RID: 289421 RVA: 0x011C9908 File Offset: 0x011C7B08
+		// Token: 0x0603DE8C RID: 253580 RVA: 0x011F8928 File Offset: 0x011F6B28
 		public AssistedWalkUtils()
 		{
 			this.TmpVector = global::Vector.Create();
 		}
 
-		// Token: 0x06046A8E RID: 289422 RVA: 0x011C991C File Offset: 0x011C7B1C
+		// Token: 0x0603DE8D RID: 253581 RVA: 0x011F893C File Offset: 0x011F6B3C
 		public bool ArePartnerComponentsAlive(string logTag, [Nullable(2)] CharacterActorComponent actorComp, params bool[] validFlags)
 		{
 			for (int i = 0; i < validFlags.Length; i++)
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			return true;
 		}
 
-		// Token: 0x06046A8F RID: 289423 RVA: 0x011C9944 File Offset: 0x011C7B44
+		// Token: 0x0603DE8E RID: 253582 RVA: 0x011F8964 File Offset: 0x011F6B64
 		[NullableContext(2)]
 		public SightLockMode SaveAndDisableSightLockMode(CharacterActorComponent actorComp)
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			return SightLockMode.None;
 		}
 
-		// Token: 0x06046A90 RID: 289424 RVA: 0x011C999C File Offset: 0x011C7B9C
+		// Token: 0x0603DE8F RID: 253583 RVA: 0x011F89BC File Offset: 0x011F6BBC
 		[NullableContext(2)]
 		public void RestoreSightLockMode(CharacterActorComponent actorComp, SightLockMode savedMode = SightLockMode.None)
 		{
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			}
 		}
 
-		// Token: 0x06046A91 RID: 289425 RVA: 0x011C99E8 File Offset: 0x011C7BE8
+		// Token: 0x0603DE90 RID: 253584 RVA: 0x011F8A08 File Offset: 0x011F6C08
 		public unsafe void RequestStartAssistedWalk(string key, CharacterActorComponent leader, BaseActorComponent followerActor, BaseMoveComponent followerMoveComp, string daPath, bool waitAnim, string reason = "", EHandType leaderHandType = EHandType.Right)
 		{
 			Log instance = Log.Instance;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			});
 		}
 
-		// Token: 0x06046A92 RID: 289426 RVA: 0x011C9B88 File Offset: 0x011C7D88
+		// Token: 0x0603DE91 RID: 253585 RVA: 0x011F8BA8 File Offset: 0x011F6DA8
 		public void RequestStopAssistedWalk(string key, string reason = "", EHandType leaderHandType = EHandType.Right)
 		{
 			AttachMoveRelation relation = AttachMoveUtils.Instance.GetRelation(key);
@@ -154,21 +154,21 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			AttachMoveUtils.Instance.RequestStop(key, reason);
 		}
 
-		// Token: 0x06046A93 RID: 289427 RVA: 0x011C9BD7 File Offset: 0x011C7DD7
+		// Token: 0x0603DE92 RID: 253586 RVA: 0x011F8BF7 File Offset: 0x011F6DF7
 		[return: Nullable(2)]
 		public AttachMoveRelation GetRelation(string key)
 		{
 			return AttachMoveUtils.Instance.GetRelation(key);
 		}
 
-		// Token: 0x06046A94 RID: 289428 RVA: 0x011C9BE4 File Offset: 0x011C7DE4
+		// Token: 0x0603DE93 RID: 253587 RVA: 0x011F8C04 File Offset: 0x011F6E04
 		[NullableContext(2)]
 		public AttachMoveRelation GetRelationByEntityId(int entityId)
 		{
 			return AttachMoveUtils.Instance.GetRelationByEntityId(entityId);
 		}
 
-		// Token: 0x06046A95 RID: 289429 RVA: 0x011C9BF4 File Offset: 0x011C7DF4
+		// Token: 0x0603DE94 RID: 253588 RVA: 0x011F8C14 File Offset: 0x011F6E14
 		public void SendHoldHandRequest(CharacterActorComponent leader, BaseActorComponent follower, EHandType leaderHandType, bool isHold)
 		{
 			HoldHandRequest holdHandRequest = HoldHandRequest.Create();
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			}, 0);
 		}
 
-		// Token: 0x06046A96 RID: 289430 RVA: 0x011C9C80 File Offset: 0x011C7E80
+		// Token: 0x0603DE95 RID: 253589 RVA: 0x011F8CA0 File Offset: 0x011F6EA0
 		private void StartAssistedWalkWithPrePosition(CharacterActorComponent leader, BaseActorComponent followerActor, BaseMoveComponent followerMoveComp, string daPath, bool waitAnim, [Nullable(2)] Action endCallback = null)
 		{
 			AssistedWalkUtils.<>c__DisplayClass10_0 CS$<>8__locals1 = new AssistedWalkUtils.<>c__DisplayClass10_0();
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			}, null);
 		}
 
-		// Token: 0x06046A97 RID: 289431 RVA: 0x011C9F08 File Offset: 0x011C8108
+		// Token: 0x0603DE96 RID: 253590 RVA: 0x011F8F28 File Offset: 0x011F7128
 		private double CalculateFaceToFollowerTurnAngle(global::Vector localOffset)
 		{
 			if (localOffset.X == 0.0 && localOffset.Y == 0.0)
@@ -347,7 +347,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			return MathUtils.Instance.WrapAngle(Math.Atan2(localOffset.Y, -localOffset.X) * 57.295780181884766);
 		}
 
-		// Token: 0x06046A98 RID: 289432 RVA: 0x011C9F68 File Offset: 0x011C8168
+		// Token: 0x0603DE97 RID: 253591 RVA: 0x011F8F88 File Offset: 0x011F7188
 		public void StartAssistedWalkBoth(CharacterActorComponent leader, BaseMoveComponent followerMoveComp, BP_AssistedWalkConfig_C data, bool waitAnim, [Nullable(2)] Action<bool> endCallback = null)
 		{
 			BaseMoveComponent moveComp = leader.MoveComp;
@@ -364,7 +364,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			} : null, waitAnim);
 		}
 
-		// Token: 0x06046A99 RID: 289433 RVA: 0x011C9FDC File Offset: 0x011C81DC
+		// Token: 0x0603DE98 RID: 253592 RVA: 0x011F8FFC File Offset: 0x011F71FC
 		public void PushOutLeader(CharacterActorComponent leader, BaseActorComponent followerActor)
 		{
 			TsBaseCharacter actor = leader.Actor;
@@ -398,8 +398,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			leader.SetActorLocation(tmpVector.ToUeVector(false), "AssistedWalk.ExitPushOut", false);
 		}
 
-		// Token: 0x17009D0F RID: 40207
-		// (get) Token: 0x06046A9A RID: 289434 RVA: 0x011CA0FB File Offset: 0x011C82FB
+		// Token: 0x1700759E RID: 30110
+		// (get) Token: 0x0603DE99 RID: 253593 RVA: 0x011F911B File Offset: 0x011F731B
 		public static AssistedWalkUtils Instance
 		{
 			get
@@ -413,12 +413,12 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			}
 		}
 
-		// Token: 0x06046A9B RID: 289435 RVA: 0x011CA11E File Offset: 0x011C831E
+		// Token: 0x0603DE9A RID: 253594 RVA: 0x011F913E File Offset: 0x011F733E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06046A9C RID: 289436 RVA: 0x011CA120 File Offset: 0x011C8320
+		// Token: 0x0603DE9B RID: 253595 RVA: 0x011F9140 File Offset: 0x011F7340
 		public static void ResetStaticDefaultValue()
 		{
 			AssistedWalkUtils instance = AssistedWalkUtils._instance;
@@ -429,16 +429,16 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			AssistedWalkUtils._instance = null;
 		}
 
-		// Token: 0x06046A9D RID: 289437 RVA: 0x011CA139 File Offset: 0x011C8339
+		// Token: 0x0603DE9C RID: 253596 RVA: 0x011F9159 File Offset: 0x011F7359
 		static AssistedWalkUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AssistedWalkUtils.CreateStaticDefaultValue), new Action(AssistedWalkUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025186 RID: 151942
+		// Token: 0x04020E1B RID: 134683
 		private readonly global::Vector TmpVector;
 
-		// Token: 0x04025187 RID: 151943
+		// Token: 0x04020E1C RID: 134684
 		[Nullable(2)]
 		private static AssistedWalkUtils _instance;
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002295 RID: 8853
+	// Token: 0x02002502 RID: 9474
 	public static class EActorVisibilityPlayModeExtensions
 	{
-		// Token: 0x0600C21D RID: 49693 RVA: 0x001C5B64 File Offset: 0x001C3D64
+		// Token: 0x0600CDE3 RID: 52707 RVA: 0x001DD858 File Offset: 0x001DBA58
 		public static string ToEnumString(this EActorVisibilityPlayMode value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C21E RID: 49694 RVA: 0x001C5B9C File Offset: 0x001C3D9C
+		// Token: 0x0600CDE4 RID: 52708 RVA: 0x001DD890 File Offset: 0x001DBA90
 		public static EActorVisibilityPlayMode FromString(string name)
 		{
 			EActorVisibilityPlayMode result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C21F RID: 49695 RVA: 0x001C5BC5 File Offset: 0x001C3DC5
+		// Token: 0x0600CDE5 RID: 52709 RVA: 0x001DD8B9 File Offset: 0x001DBAB9
 		public static bool TryFromString(string name, out EActorVisibilityPlayMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C220 RID: 49696 RVA: 0x001C5BFE File Offset: 0x001C3DFE
+		// Token: 0x0600CDE6 RID: 52710 RVA: 0x001DD8F2 File Offset: 0x001DBAF2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C221 RID: 49697 RVA: 0x001C5C16 File Offset: 0x001C3E16
+		// Token: 0x0600CDE7 RID: 52711 RVA: 0x001DD90A File Offset: 0x001DBB0A
 		public static EActorVisibilityPlayMode[] GetValues()
 		{
 			return new EActorVisibilityPlayMode[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C222 RID: 49698 RVA: 0x001C5C22 File Offset: 0x001C3E22
+		// Token: 0x0600CDE8 RID: 52712 RVA: 0x001DD916 File Offset: 0x001DBB16
 		public static string[] GetNames()
 		{
 			return new string[]

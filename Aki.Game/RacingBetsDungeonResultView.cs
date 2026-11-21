@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002730 RID: 10032
+// Token: 0x02001C1B RID: 7195
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsDungeonResultView : UiViewBase
 {
-	// Token: 0x060148F1 RID: 84209 RVA: 0x00531AE6 File Offset: 0x0052FCE6
+	// Token: 0x06011DD3 RID: 73171 RVA: 0x005407FE File Offset: 0x0053E9FE
 	public RacingBetsDungeonResultView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060148F2 RID: 84210 RVA: 0x00531AF0 File Offset: 0x0052FCF0
+	// Token: 0x06011DD4 RID: 73172 RVA: 0x00540808 File Offset: 0x0053EA08
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -45,7 +45,7 @@ public class RacingBetsDungeonResultView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060148F3 RID: 84211 RVA: 0x00531BFC File Offset: 0x0052FDFC
+	// Token: 0x06011DD5 RID: 73173 RVA: 0x00540914 File Offset: 0x0053EB14
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RacingBetsDungeonResultView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ public class RacingBetsDungeonResultView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060148F4 RID: 84212 RVA: 0x00531C3F File Offset: 0x0052FE3F
+	// Token: 0x06011DD6 RID: 73174 RVA: 0x00540957 File Offset: 0x0053EB57
 	protected override void OnStart()
 	{
 		UUIInturnAnimController uuiinturnAnimController = base.GetVerticalLayout(1).GetOwner().GetComponentByClass(UUIInturnAnimController.StaticClass()) as UUIInturnAnimController;
@@ -67,43 +67,43 @@ public class RacingBetsDungeonResultView : UiViewBase
 		uuiinturnAnimController.Play("", -1, false);
 	}
 
-	// Token: 0x060148F5 RID: 84213 RVA: 0x00531C74 File Offset: 0x0052FE74
+	// Token: 0x06011DD7 RID: 73175 RVA: 0x0054098C File Offset: 0x0053EB8C
 	protected override void OnBeforeDestroy()
 	{
 		this.Promise.SetResult(default(UniTaskVoid));
 	}
 
-	// Token: 0x060148F6 RID: 84214 RVA: 0x00531C95 File Offset: 0x0052FE95
+	// Token: 0x06011DD8 RID: 73176 RVA: 0x005409AD File Offset: 0x0053EBAD
 	private RacingBetsLegMatchResultItem ResultItemProxyCreate()
 	{
 		return new RacingBetsLegMatchResultItem();
 	}
 
-	// Token: 0x060148F7 RID: 84215 RVA: 0x00531C9C File Offset: 0x0052FE9C
+	// Token: 0x06011DD9 RID: 73177 RVA: 0x005409B4 File Offset: 0x0053EBB4
 	private void OnClickCloseButton(EToggleState state)
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04009A8A RID: 39562
+	// Token: 0x04009BE2 RID: 39906
 	private GenericLayout<RacingBetsLegMatchResultItem, IRacingBetsLegMatchResultData> MatchResultLayout;
 
-	// Token: 0x04009A8B RID: 39563
+	// Token: 0x04009BE3 RID: 39907
 	private CustomPromise<UniTaskVoid> Promise;
 
-	// Token: 0x02008D8D RID: 36237
+	// Token: 0x02007F15 RID: 32533
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402DEF0 RID: 188144
+		// Token: 0x04029206 RID: 168454
 		LegMatchName,
-		// Token: 0x0402DEF1 RID: 188145
+		// Token: 0x04029207 RID: 168455
 		MatchResultLayout,
-		// Token: 0x0402DEF2 RID: 188146
+		// Token: 0x04029208 RID: 168456
 		ResultItem,
-		// Token: 0x0402DEF3 RID: 188147
+		// Token: 0x04029209 RID: 168457
 		TimeText,
-		// Token: 0x0402DEF4 RID: 188148
+		// Token: 0x0402920A RID: 168458
 		CloseButton
 	}
 }

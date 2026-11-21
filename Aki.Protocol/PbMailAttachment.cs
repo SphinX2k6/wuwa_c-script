@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000C07 RID: 3079
+	// Token: 0x02000BF7 RID: 3063
 	public sealed class PbMailAttachment : IMessage<PbMailAttachment>, IMessage, IEquatable<PbMailAttachment>, IDeepCloneable<PbMailAttachment>, IBufferMessage
 	{
-		// Token: 0x06010B6B RID: 68459 RVA: 0x00272752 File Offset: 0x00270952
+		// Token: 0x06010A6B RID: 68203 RVA: 0x002709EA File Offset: 0x0026EBEA
 		[NullableContext(1)]
 		public static PbMailAttachment Create()
 		{
 			return new PbMailAttachment();
 		}
 
-		// Token: 0x17003720 RID: 14112
-		// (get) Token: 0x06010B6C RID: 68460 RVA: 0x00272759 File Offset: 0x00270959
+		// Token: 0x170036E9 RID: 14057
+		// (get) Token: 0x06010A6C RID: 68204 RVA: 0x002709F1 File Offset: 0x0026EBF1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<PbMailAttachment> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003721 RID: 14113
-		// (get) Token: 0x06010B6D RID: 68461 RVA: 0x00272760 File Offset: 0x00270960
+		// Token: 0x170036EA RID: 14058
+		// (get) Token: 0x06010A6D RID: 68205 RVA: 0x002709F8 File Offset: 0x0026EBF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003722 RID: 14114
-		// (get) Token: 0x06010B6E RID: 68462 RVA: 0x00272763 File Offset: 0x00270963
+		// Token: 0x170036EB RID: 14059
+		// (get) Token: 0x06010A6E RID: 68206 RVA: 0x002709FB File Offset: 0x0026EBFB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010B6F RID: 68463 RVA: 0x0027276A File Offset: 0x0027096A
+		// Token: 0x06010A6F RID: 68207 RVA: 0x00270A02 File Offset: 0x0026EC02
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PbMailAttachment()
 		{
 		}
 
-		// Token: 0x06010B70 RID: 68464 RVA: 0x00272772 File Offset: 0x00270972
+		// Token: 0x06010A70 RID: 68208 RVA: 0x00270A0A File Offset: 0x0026EC0A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PbMailAttachment(PbMailAttachment other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06010B71 RID: 68465 RVA: 0x002727A3 File Offset: 0x002709A3
+		// Token: 0x06010A71 RID: 68209 RVA: 0x00270A3B File Offset: 0x0026EC3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PbMailAttachment Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new PbMailAttachment(this);
 		}
 
-		// Token: 0x17003723 RID: 14115
-		// (get) Token: 0x06010B72 RID: 68466 RVA: 0x002727AB File Offset: 0x002709AB
-		// (set) Token: 0x06010B73 RID: 68467 RVA: 0x002727B3 File Offset: 0x002709B3
+		// Token: 0x170036EC RID: 14060
+		// (get) Token: 0x06010A72 RID: 68210 RVA: 0x00270A43 File Offset: 0x0026EC43
+		// (set) Token: 0x06010A73 RID: 68211 RVA: 0x00270A4B File Offset: 0x0026EC4B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Id
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003724 RID: 14116
-		// (get) Token: 0x06010B74 RID: 68468 RVA: 0x002727BC File Offset: 0x002709BC
-		// (set) Token: 0x06010B75 RID: 68469 RVA: 0x002727C4 File Offset: 0x002709C4
+		// Token: 0x170036ED RID: 14061
+		// (get) Token: 0x06010A74 RID: 68212 RVA: 0x00270A54 File Offset: 0x0026EC54
+		// (set) Token: 0x06010A75 RID: 68213 RVA: 0x00270A5C File Offset: 0x0026EC5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Count
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010B76 RID: 68470 RVA: 0x002727CD File Offset: 0x002709CD
+		// Token: 0x06010A76 RID: 68214 RVA: 0x00270A65 File Offset: 0x0026EC65
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PbMailAttachment);
 		}
 
-		// Token: 0x06010B77 RID: 68471 RVA: 0x002727DB File Offset: 0x002709DB
+		// Token: 0x06010A77 RID: 68215 RVA: 0x00270A73 File Offset: 0x0026EC73
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PbMailAttachment other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Id == other.Id && this.Count == other.Count && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06010B78 RID: 68472 RVA: 0x0027281C File Offset: 0x00270A1C
+		// Token: 0x06010A78 RID: 68216 RVA: 0x00270AB4 File Offset: 0x0026ECB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010B79 RID: 68473 RVA: 0x00272874 File Offset: 0x00270A74
+		// Token: 0x06010A79 RID: 68217 RVA: 0x00270B0C File Offset: 0x0026ED0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06010B7A RID: 68474 RVA: 0x00272881 File Offset: 0x00270A81
+		// Token: 0x06010A7A RID: 68218 RVA: 0x00270B19 File Offset: 0x0026ED19
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06010B7B RID: 68475 RVA: 0x0027288C File Offset: 0x00270A8C
+		// Token: 0x06010A7B RID: 68219 RVA: 0x00270B24 File Offset: 0x0026ED24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010B7C RID: 68476 RVA: 0x002728E4 File Offset: 0x00270AE4
+		// Token: 0x06010A7C RID: 68220 RVA: 0x00270B7C File Offset: 0x0026ED7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010B7D RID: 68477 RVA: 0x0027293C File Offset: 0x00270B3C
+		// Token: 0x06010A7D RID: 68221 RVA: 0x00270BD4 File Offset: 0x0026EDD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PbMailAttachment other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06010B7E RID: 68478 RVA: 0x0027298C File Offset: 0x00270B8C
+		// Token: 0x06010A7E RID: 68222 RVA: 0x00270C24 File Offset: 0x0026EE24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06010B7F RID: 68479 RVA: 0x00272998 File Offset: 0x00270B98
+		// Token: 0x06010A7F RID: 68223 RVA: 0x00270C30 File Offset: 0x0026EE30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -265,22 +265,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006A33 RID: 27187
+		// Token: 0x04006A47 RID: 27207
 		private static readonly MessageParser<PbMailAttachment> _parser = new MessageParser<PbMailAttachment>(() => new PbMailAttachment());
 
-		// Token: 0x04006A34 RID: 27188
+		// Token: 0x04006A48 RID: 27208
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006A35 RID: 27189
+		// Token: 0x04006A49 RID: 27209
 		public const int IdFieldNumber = 1;
 
-		// Token: 0x04006A36 RID: 27190
+		// Token: 0x04006A4A RID: 27210
 		private int id_;
 
-		// Token: 0x04006A37 RID: 27191
+		// Token: 0x04006A4B RID: 27211
 		public const int CountFieldNumber = 2;
 
-		// Token: 0x04006A38 RID: 27192
+		// Token: 0x04006A4C RID: 27212
 		private int count_;
 	}
 }

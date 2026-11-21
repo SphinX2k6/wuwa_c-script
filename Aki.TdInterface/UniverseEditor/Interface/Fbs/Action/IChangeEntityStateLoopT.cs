@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062F4 RID: 25332
+	// Token: 0x02006965 RID: 26981
 	public class IChangeEntityStateLoopT
 	{
-		// Token: 0x1700BD15 RID: 48405
-		// (get) Token: 0x0602BCB9 RID: 179385 RVA: 0x006061AA File Offset: 0x006043AA
-		// (set) Token: 0x0602BCBA RID: 179386 RVA: 0x006061B2 File Offset: 0x006043B2
+		// Token: 0x1700C69F RID: 50847
+		// (get) Token: 0x0602E422 RID: 189474 RVA: 0x006511B6 File Offset: 0x0064F3B6
+		// (set) Token: 0x0602E423 RID: 189475 RVA: 0x006511BE File Offset: 0x0064F3BE
 		public EChangeEntityState Type { get; set; }
 
-		// Token: 0x1700BD16 RID: 48406
-		// (get) Token: 0x0602BCBB RID: 179387 RVA: 0x006061BB File Offset: 0x006043BB
-		// (set) Token: 0x0602BCBC RID: 179388 RVA: 0x006061C3 File Offset: 0x006043C3
+		// Token: 0x1700C6A0 RID: 50848
+		// (get) Token: 0x0602E424 RID: 189476 RVA: 0x006511C7 File Offset: 0x0064F3C7
+		// (set) Token: 0x0602E425 RID: 189477 RVA: 0x006511CF File Offset: 0x0064F3CF
 		public int EntityId { get; set; }
 
-		// Token: 0x1700BD17 RID: 48407
-		// (get) Token: 0x0602BCBD RID: 179389 RVA: 0x006061CC File Offset: 0x006043CC
-		// (set) Token: 0x0602BCBE RID: 179390 RVA: 0x006061D4 File Offset: 0x006043D4
+		// Token: 0x1700C6A1 RID: 50849
+		// (get) Token: 0x0602E426 RID: 189478 RVA: 0x006511D8 File Offset: 0x0064F3D8
+		// (set) Token: 0x0602E427 RID: 189479 RVA: 0x006511E0 File Offset: 0x0064F3E0
 		public ELoopStateType Circulation { get; set; }
 
-		// Token: 0x0602BCBF RID: 179391 RVA: 0x006061DD File Offset: 0x006043DD
+		// Token: 0x0602E428 RID: 189480 RVA: 0x006511E9 File Offset: 0x0064F3E9
 		public IChangeEntityStateLoopT()
 		{
 			this.Type = EChangeEntityState.Directly;

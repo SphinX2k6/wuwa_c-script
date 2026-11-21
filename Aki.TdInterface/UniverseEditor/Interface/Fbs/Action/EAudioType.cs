@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F19 RID: 24345
+	// Token: 0x0200655D RID: 25949
 	public enum EAudioType : byte
 	{
-		// Token: 0x0400FC0A RID: 64522
+		// Token: 0x04010980 RID: 67968
 		RoleSceneVoice
 	}
 }

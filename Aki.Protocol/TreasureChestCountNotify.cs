@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001464 RID: 5220
+	// Token: 0x020014D7 RID: 5335
 	[NetMessage(EMessageId.TreasureChestCountNotify)]
 	public sealed class TreasureChestCountNotify : IMessage<TreasureChestCountNotify>, IMessage, IEquatable<TreasureChestCountNotify>, IDeepCloneable<TreasureChestCountNotify>, IBufferMessage
 	{
-		// Token: 0x0601BA31 RID: 113201 RVA: 0x003FFEE7 File Offset: 0x003FE0E7
+		// Token: 0x0601C4BC RID: 115900 RVA: 0x0041B1B8 File Offset: 0x004193B8
 		[NullableContext(1)]
 		public static TreasureChestCountNotify Create()
 		{
 			return new TreasureChestCountNotify();
 		}
 
-		// Token: 0x17005D2F RID: 23855
-		// (get) Token: 0x0601BA32 RID: 113202 RVA: 0x003FFEEE File Offset: 0x003FE0EE
+		// Token: 0x17005FC4 RID: 24516
+		// (get) Token: 0x0601C4BD RID: 115901 RVA: 0x0041B1BF File Offset: 0x004193BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005D30 RID: 23856
-		// (get) Token: 0x0601BA33 RID: 113203 RVA: 0x003FFEF1 File Offset: 0x003FE0F1
+		// Token: 0x17005FC5 RID: 24517
+		// (get) Token: 0x0601C4BE RID: 115902 RVA: 0x0041B1C2 File Offset: 0x004193C2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601BA34 RID: 113204 RVA: 0x003FFEF8 File Offset: 0x003FE0F8
+		// Token: 0x0601C4BF RID: 115903 RVA: 0x0041B1C9 File Offset: 0x004193C9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TreasureChestCountNotify()
 		{
 		}
 
-		// Token: 0x0601BA35 RID: 113205 RVA: 0x003FFF0B File Offset: 0x003FE10B
+		// Token: 0x0601C4C0 RID: 115904 RVA: 0x0041B1DC File Offset: 0x004193DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TreasureChestCountNotify(TreasureChestCountNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601BA36 RID: 113206 RVA: 0x003FFF35 File Offset: 0x003FE135
+		// Token: 0x0601C4C1 RID: 115905 RVA: 0x0041B206 File Offset: 0x00419406
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TreasureChestCountNotify Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new TreasureChestCountNotify(this);
 		}
 
-		// Token: 0x17005D31 RID: 23857
-		// (get) Token: 0x0601BA37 RID: 113207 RVA: 0x003FFF3D File Offset: 0x003FE13D
+		// Token: 0x17005FC6 RID: 24518
+		// (get) Token: 0x0601C4C2 RID: 115906 RVA: 0x0041B20E File Offset: 0x0041940E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<TreasureChestCountData> Data
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601BA38 RID: 113208 RVA: 0x003FFF45 File Offset: 0x003FE145
+		// Token: 0x0601C4C3 RID: 115907 RVA: 0x0041B216 File Offset: 0x00419416
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TreasureChestCountNotify);
 		}
 
-		// Token: 0x0601BA39 RID: 113209 RVA: 0x003FFF53 File Offset: 0x003FE153
+		// Token: 0x0601C4C4 RID: 115908 RVA: 0x0041B224 File Offset: 0x00419424
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TreasureChestCountNotify other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.data_.Equals(other.data_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601BA3A RID: 113210 RVA: 0x003FFF88 File Offset: 0x003FE188
+		// Token: 0x0601C4C5 RID: 115909 RVA: 0x0041B258 File Offset: 0x00419458
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601BA3B RID: 113211 RVA: 0x003FFFBC File Offset: 0x003FE1BC
+		// Token: 0x0601C4C6 RID: 115910 RVA: 0x0041B28C File Offset: 0x0041948C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601BA3C RID: 113212 RVA: 0x003FFFC9 File Offset: 0x003FE1C9
+		// Token: 0x0601C4C7 RID: 115911 RVA: 0x0041B299 File Offset: 0x00419499
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601BA3D RID: 113213 RVA: 0x003FFFD2 File Offset: 0x003FE1D2
+		// Token: 0x0601C4C8 RID: 115912 RVA: 0x0041B2A2 File Offset: 0x004194A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601BA3E RID: 113214 RVA: 0x003FFFFC File Offset: 0x003FE1FC
+		// Token: 0x0601C4C9 RID: 115913 RVA: 0x0041B2CC File Offset: 0x004194CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601BA3F RID: 113215 RVA: 0x00400035 File Offset: 0x003FE235
+		// Token: 0x0601C4CA RID: 115914 RVA: 0x0041B305 File Offset: 0x00419505
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TreasureChestCountNotify other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601BA40 RID: 113216 RVA: 0x00400063 File Offset: 0x003FE263
+		// Token: 0x0601C4CB RID: 115915 RVA: 0x0041B333 File Offset: 0x00419533
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601BA41 RID: 113217 RVA: 0x0040006C File Offset: 0x003FE26C
+		// Token: 0x0601C4CC RID: 115916 RVA: 0x0041B33C File Offset: 0x0041953C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 50U)
+				if (num != 10U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009F3D RID: 40765
+		// Token: 0x0400A384 RID: 41860
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009F3E RID: 40766
-		public const int DataFieldNumber = 6;
+		// Token: 0x0400A385 RID: 41861
+		public const int DataFieldNumber = 1;
 
-		// Token: 0x04009F3F RID: 40767
-		private static readonly FieldCodec<TreasureChestCountData> _repeated_data_codec = FieldCodec.ForMessage<TreasureChestCountData>(50U, TreasureChestCountData.Parser);
+		// Token: 0x0400A386 RID: 41862
+		private static readonly FieldCodec<TreasureChestCountData> _repeated_data_codec = FieldCodec.ForMessage<TreasureChestCountData>(10U, TreasureChestCountData.Parser);
 
-		// Token: 0x04009F40 RID: 40768
+		// Token: 0x0400A387 RID: 41863
 		private readonly RepeatedField<TreasureChestCountData> data_ = new RepeatedField<TreasureChestCountData>();
 	}
 }

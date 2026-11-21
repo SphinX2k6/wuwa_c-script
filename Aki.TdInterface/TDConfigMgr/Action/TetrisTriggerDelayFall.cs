@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200223F RID: 8767
+	// Token: 0x020024AA RID: 9386
 	public class TetrisTriggerDelayFall : ActionParams
 	{
-		// Token: 0x0600C06E RID: 49262 RVA: 0x001BA124 File Offset: 0x001B8324
-		[NullableContext(1)]
+		// Token: 0x0600CC2C RID: 52268 RVA: 0x001D17F0 File Offset: 0x001CF9F0
 		public static TetrisTriggerDelayFall Create([Nullable(2)] TetrisTriggerDelayFall instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x040072BC RID: 29372
+		// Token: 0x04007906 RID: 30982
 		[Nullable(2)]
 		protected new TetrisTriggerDelayFall FbInstance;
 	}

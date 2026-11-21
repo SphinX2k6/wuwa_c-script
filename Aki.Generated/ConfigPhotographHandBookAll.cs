@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006DC RID: 1756
+	// Token: 0x020006F4 RID: 1780
 	public class ConfigPhotographHandBookAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002938 RID: 10552 RVA: 0x0014259C File Offset: 0x0014079C
+		// Token: 0x060029C8 RID: 10696 RVA: 0x00149018 File Offset: 0x00147218
 		static ConfigPhotographHandBookAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotographHandBookAll.CreateStaticDefaultValue), new Action(ConfigPhotographHandBookAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002939 RID: 10553 RVA: 0x001425BC File Offset: 0x001407BC
+		// Token: 0x060029C9 RID: 10697 RVA: 0x00149038 File Offset: 0x00147238
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotographHandBookAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600293A RID: 10554 RVA: 0x0014263B File Offset: 0x0014083B
+		// Token: 0x060029CA RID: 10698 RVA: 0x001490B7 File Offset: 0x001472B7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotographHandBookAll.LogPair = null;
 			ConfigPhotographHandBookAll.HandleId = 0;
 		}
 
-		// Token: 0x0600293B RID: 10555 RVA: 0x00142649 File Offset: 0x00140849
+		// Token: 0x060029CB RID: 10699 RVA: 0x001490C5 File Offset: 0x001472C5
 		public static void Init()
 		{
 			ConfigPhotographHandBookAll.HandleId = ConfigCommon.InitDataStatement(ConfigPhotographHandBookAll.HandleId, "db_handbook.db", "select BinData from `PhotographHandBook`");
 		}
 
-		// Token: 0x0600293C RID: 10556 RVA: 0x00142664 File Offset: 0x00140864
+		// Token: 0x060029CC RID: 10700 RVA: 0x001490E0 File Offset: 0x001472E0
 		[NullableContext(2)]
 		public static IReadOnlyList<PhotographHandBook> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002FEA RID: 12266
+		// Token: 0x04003092 RID: 12434
 		private const string DB = "db_handbook.db";
 
-		// Token: 0x04002FEB RID: 12267
+		// Token: 0x04003093 RID: 12435
 		private const string FILE = "t.图鉴系统.xlsx";
 
-		// Token: 0x04002FEC RID: 12268
+		// Token: 0x04003094 RID: 12436
 		private const string TABLE = "PhotographHandBook";
 
-		// Token: 0x04002FED RID: 12269
+		// Token: 0x04003095 RID: 12437
 		private const string COMMAND = "select BinData from `PhotographHandBook`";
 
-		// Token: 0x04002FEE RID: 12270
+		// Token: 0x04003096 RID: 12438
 		private const string KEY_PREFIX = "PhotographHandBookAll";
 
-		// Token: 0x04002FEF RID: 12271
+		// Token: 0x04003097 RID: 12439
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002FF0 RID: 12272
+		// Token: 0x04003098 RID: 12440
 		private static int HandleId;
 	}
 }

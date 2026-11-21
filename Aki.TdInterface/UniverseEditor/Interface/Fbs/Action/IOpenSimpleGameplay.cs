@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C2A RID: 27690
+	// Token: 0x02007391 RID: 29585
 	public struct IOpenSimpleGameplay : IFlatbufferObject
 	{
-		// Token: 0x1700CDF5 RID: 52725
-		// (get) Token: 0x06030B3F RID: 199487 RVA: 0x0069C7A5 File Offset: 0x0069A9A5
+		// Token: 0x1700D910 RID: 55568
+		// (get) Token: 0x06033A93 RID: 211603 RVA: 0x006F6AA1 File Offset: 0x006F4CA1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030B40 RID: 199488 RVA: 0x0069C7B2 File Offset: 0x0069A9B2
+		// Token: 0x06033A94 RID: 211604 RVA: 0x006F6AAE File Offset: 0x006F4CAE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030B41 RID: 199489 RVA: 0x0069C7BC File Offset: 0x0069A9BC
+		// Token: 0x06033A95 RID: 211605 RVA: 0x006F6AB8 File Offset: 0x006F4CB8
 		public static IOpenSimpleGameplay GetRootAsIOpenSimpleGameplay(ByteBuffer _bb)
 		{
 			return IOpenSimpleGameplay.GetRootAsIOpenSimpleGameplay(_bb, default(IOpenSimpleGameplay));
 		}
 
-		// Token: 0x06030B42 RID: 199490 RVA: 0x0069C7D8 File Offset: 0x0069A9D8
+		// Token: 0x06033A96 RID: 211606 RVA: 0x006F6AD4 File Offset: 0x006F4CD4
 		public static IOpenSimpleGameplay GetRootAsIOpenSimpleGameplay(ByteBuffer _bb, IOpenSimpleGameplay obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030B43 RID: 199491 RVA: 0x0069C7F5 File Offset: 0x0069A9F5
+		// Token: 0x06033A97 RID: 211607 RVA: 0x006F6AF1 File Offset: 0x006F4CF1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030B44 RID: 199492 RVA: 0x0069C804 File Offset: 0x0069AA04
+		// Token: 0x06033A98 RID: 211608 RVA: 0x006F6B00 File Offset: 0x006F4D00
 		public IOpenSimpleGameplay __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CDF6 RID: 52726
-		// (get) Token: 0x06030B45 RID: 199493 RVA: 0x0069C814 File Offset: 0x0069AA14
+		// Token: 0x1700D911 RID: 55569
+		// (get) Token: 0x06033A99 RID: 211609 RVA: 0x006F6B10 File Offset: 0x006F4D10
 		public TUiGame GameplayConfigType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030B46 RID: 199494 RVA: 0x0069C850 File Offset: 0x0069AA50
+		// Token: 0x06033A9A RID: 211610 RVA: 0x006F6B4C File Offset: 0x006F4D4C
 		public TTable? GameplayConfig<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,200 +73,218 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06030B47 RID: 199495 RVA: 0x0069C894 File Offset: 0x0069AA94
+		// Token: 0x06033A9B RID: 211611 RVA: 0x006F6B90 File Offset: 0x006F4D90
 		public IBrokenRock GameplayConfigAsIBrokenRock()
 		{
 			return this.GameplayConfig<IBrokenRock>().Value;
 		}
 
-		// Token: 0x06030B48 RID: 199496 RVA: 0x0069C8B0 File Offset: 0x0069AAB0
+		// Token: 0x06033A9C RID: 211612 RVA: 0x006F6BAC File Offset: 0x006F4DAC
 		public ICipherGameplay GameplayConfigAsICipherGameplay()
 		{
 			return this.GameplayConfig<ICipherGameplay>().Value;
 		}
 
-		// Token: 0x06030B49 RID: 199497 RVA: 0x0069C8CC File Offset: 0x0069AACC
+		// Token: 0x06033A9D RID: 211613 RVA: 0x006F6BC8 File Offset: 0x006F4DC8
 		public IDaemonHack GameplayConfigAsIDaemonHack()
 		{
 			return this.GameplayConfig<IDaemonHack>().Value;
 		}
 
-		// Token: 0x06030B4A RID: 199498 RVA: 0x0069C8E8 File Offset: 0x0069AAE8
+		// Token: 0x06033A9E RID: 211614 RVA: 0x006F6BE4 File Offset: 0x006F4DE4
 		public IDaolingAuthentication GameplayConfigAsIDaolingAuthentication()
 		{
 			return this.GameplayConfig<IDaolingAuthentication>().Value;
 		}
 
-		// Token: 0x06030B4B RID: 199499 RVA: 0x0069C904 File Offset: 0x0069AB04
+		// Token: 0x06033A9F RID: 211615 RVA: 0x006F6C00 File Offset: 0x006F4E00
 		public IDartGameplay GameplayConfigAsIDartGameplay()
 		{
 			return this.GameplayConfig<IDartGameplay>().Value;
 		}
 
-		// Token: 0x06030B4C RID: 199500 RVA: 0x0069C920 File Offset: 0x0069AB20
+		// Token: 0x06033AA0 RID: 211616 RVA: 0x006F6C1C File Offset: 0x006F4E1C
 		public IDollGrab GameplayConfigAsIDollGrab()
 		{
 			return this.GameplayConfig<IDollGrab>().Value;
 		}
 
-		// Token: 0x06030B4D RID: 199501 RVA: 0x0069C93C File Offset: 0x0069AB3C
+		// Token: 0x06033AA1 RID: 211617 RVA: 0x006F6C38 File Offset: 0x006F4E38
 		public IDollGrabShowcase GameplayConfigAsIDollGrabShowcase()
 		{
 			return this.GameplayConfig<IDollGrabShowcase>().Value;
 		}
 
-		// Token: 0x06030B4E RID: 199502 RVA: 0x0069C958 File Offset: 0x0069AB58
+		// Token: 0x06033AA2 RID: 211618 RVA: 0x006F6C54 File Offset: 0x006F4E54
 		public IDragActor GameplayConfigAsIDragActor()
 		{
 			return this.GameplayConfig<IDragActor>().Value;
 		}
 
-		// Token: 0x06030B4F RID: 199503 RVA: 0x0069C974 File Offset: 0x0069AB74
+		// Token: 0x06033AA3 RID: 211619 RVA: 0x006F6C70 File Offset: 0x006F4E70
 		public IFindSunSpirit GameplayConfigAsIFindSunSpirit()
 		{
 			return this.GameplayConfig<IFindSunSpirit>().Value;
 		}
 
-		// Token: 0x06030B50 RID: 199504 RVA: 0x0069C990 File Offset: 0x0069AB90
+		// Token: 0x06033AA4 RID: 211620 RVA: 0x006F6C8C File Offset: 0x006F4E8C
 		public IFishingRoulette GameplayConfigAsIFishingRoulette()
 		{
 			return this.GameplayConfig<IFishingRoulette>().Value;
 		}
 
-		// Token: 0x06030B51 RID: 199505 RVA: 0x0069C9AC File Offset: 0x0069ABAC
+		// Token: 0x06033AA5 RID: 211621 RVA: 0x006F6CA8 File Offset: 0x006F4EA8
 		public IFlowerSeaEscape GameplayConfigAsIFlowerSeaEscape()
 		{
 			return this.GameplayConfig<IFlowerSeaEscape>().Value;
 		}
 
-		// Token: 0x06030B52 RID: 199506 RVA: 0x0069C9C8 File Offset: 0x0069ABC8
+		// Token: 0x06033AA6 RID: 211622 RVA: 0x006F6CC4 File Offset: 0x006F4EC4
+		public IFrequencyDetect GameplayConfigAsIFrequencyDetect()
+		{
+			return this.GameplayConfig<IFrequencyDetect>().Value;
+		}
+
+		// Token: 0x06033AA7 RID: 211623 RVA: 0x006F6CE0 File Offset: 0x006F4EE0
+		public IFrequencyPaint GameplayConfigAsIFrequencyPaint()
+		{
+			return this.GameplayConfig<IFrequencyPaint>().Value;
+		}
+
+		// Token: 0x06033AA8 RID: 211624 RVA: 0x006F6CFC File Offset: 0x006F4EFC
 		public IInstrumentQteGameplay GameplayConfigAsIInstrumentQteGameplay()
 		{
 			return this.GameplayConfig<IInstrumentQteGameplay>().Value;
 		}
 
-		// Token: 0x06030B53 RID: 199507 RVA: 0x0069C9E4 File Offset: 0x0069ABE4
+		// Token: 0x06033AA9 RID: 211625 RVA: 0x006F6D18 File Offset: 0x006F4F18
 		public IItemInspection GameplayConfigAsIItemInspection()
 		{
 			return this.GameplayConfig<IItemInspection>().Value;
 		}
 
-		// Token: 0x06030B54 RID: 199508 RVA: 0x0069CA00 File Offset: 0x0069AC00
+		// Token: 0x06033AAA RID: 211626 RVA: 0x006F6D34 File Offset: 0x006F4F34
 		public ILifePoint GameplayConfigAsILifePoint()
 		{
 			return this.GameplayConfig<ILifePoint>().Value;
 		}
 
-		// Token: 0x06030B55 RID: 199509 RVA: 0x0069CA1C File Offset: 0x0069AC1C
+		// Token: 0x06033AAB RID: 211627 RVA: 0x006F6D50 File Offset: 0x006F4F50
 		public IMorseCode GameplayConfigAsIMorseCode()
 		{
 			return this.GameplayConfig<IMorseCode>().Value;
 		}
 
-		// Token: 0x06030B56 RID: 199510 RVA: 0x0069CA38 File Offset: 0x0069AC38
+		// Token: 0x06033AAC RID: 211628 RVA: 0x006F6D6C File Offset: 0x006F4F6C
 		public IPlayPianoGameplay GameplayConfigAsIPlayPianoGameplay()
 		{
 			return this.GameplayConfig<IPlayPianoGameplay>().Value;
 		}
 
-		// Token: 0x06030B57 RID: 199511 RVA: 0x0069CA54 File Offset: 0x0069AC54
+		// Token: 0x06033AAD RID: 211629 RVA: 0x006F6D88 File Offset: 0x006F4F88
 		public IProjectionMachine GameplayConfigAsIProjectionMachine()
 		{
 			return this.GameplayConfig<IProjectionMachine>().Value;
 		}
 
-		// Token: 0x06030B58 RID: 199512 RVA: 0x0069CA70 File Offset: 0x0069AC70
+		// Token: 0x06033AAE RID: 211630 RVA: 0x006F6DA4 File Offset: 0x006F4FA4
 		public IProjectorPuzzle GameplayConfigAsIProjectorPuzzle()
 		{
 			return this.GameplayConfig<IProjectorPuzzle>().Value;
 		}
 
-		// Token: 0x06030B59 RID: 199513 RVA: 0x0069CA8C File Offset: 0x0069AC8C
+		// Token: 0x06033AAF RID: 211631 RVA: 0x006F6DC0 File Offset: 0x006F4FC0
 		public IQteHourglass GameplayConfigAsIQteHourglass()
 		{
 			return this.GameplayConfig<IQteHourglass>().Value;
 		}
 
-		// Token: 0x06030B5A RID: 199514 RVA: 0x0069CAA8 File Offset: 0x0069ACA8
+		// Token: 0x06033AB0 RID: 211632 RVA: 0x006F6DDC File Offset: 0x006F4FDC
 		public IReigns GameplayConfigAsIReigns()
 		{
 			return this.GameplayConfig<IReigns>().Value;
 		}
 
-		// Token: 0x06030B5B RID: 199515 RVA: 0x0069CAC4 File Offset: 0x0069ACC4
+		// Token: 0x06033AB1 RID: 211633 RVA: 0x006F6DF8 File Offset: 0x006F4FF8
 		public IRenjuChess GameplayConfigAsIRenjuChess()
 		{
 			return this.GameplayConfig<IRenjuChess>().Value;
 		}
 
-		// Token: 0x06030B5C RID: 199516 RVA: 0x0069CAE0 File Offset: 0x0069ACE0
+		// Token: 0x06033AB2 RID: 211634 RVA: 0x006F6E14 File Offset: 0x006F5014
 		public IRideFlyingCar GameplayConfigAsIRideFlyingCar()
 		{
 			return this.GameplayConfig<IRideFlyingCar>().Value;
 		}
 
-		// Token: 0x06030B5D RID: 199517 RVA: 0x0069CAFC File Offset: 0x0069ACFC
+		// Token: 0x06033AB3 RID: 211635 RVA: 0x006F6E30 File Offset: 0x006F5030
 		public ISceneInspection GameplayConfigAsISceneInspection()
 		{
 			return this.GameplayConfig<ISceneInspection>().Value;
 		}
 
-		// Token: 0x06030B5E RID: 199518 RVA: 0x0069CB18 File Offset: 0x0069AD18
+		// Token: 0x06033AB4 RID: 211636 RVA: 0x006F6E4C File Offset: 0x006F504C
 		public ISheriffReasoning GameplayConfigAsISheriffReasoning()
 		{
 			return this.GameplayConfig<ISheriffReasoning>().Value;
 		}
 
-		// Token: 0x06030B5F RID: 199519 RVA: 0x0069CB34 File Offset: 0x0069AD34
+		// Token: 0x06033AB5 RID: 211637 RVA: 0x006F6E68 File Offset: 0x006F5068
 		public ISignalBreakGameplay GameplayConfigAsISignalBreakGameplay()
 		{
 			return this.GameplayConfig<ISignalBreakGameplay>().Value;
 		}
 
-		// Token: 0x06030B60 RID: 199520 RVA: 0x0069CB50 File Offset: 0x0069AD50
+		// Token: 0x06033AB6 RID: 211638 RVA: 0x006F6E84 File Offset: 0x006F5084
 		public ISignalDevice GameplayConfigAsISignalDevice()
 		{
 			return this.GameplayConfig<ISignalDevice>().Value;
 		}
 
-		// Token: 0x06030B61 RID: 199521 RVA: 0x0069CB6C File Offset: 0x0069AD6C
+		// Token: 0x06033AB7 RID: 211639 RVA: 0x006F6EA0 File Offset: 0x006F50A0
 		public ISignalDevice2 GameplayConfigAsISignalDevice2()
 		{
 			return this.GameplayConfig<ISignalDevice2>().Value;
 		}
 
-		// Token: 0x06030B62 RID: 199522 RVA: 0x0069CB88 File Offset: 0x0069AD88
+		// Token: 0x06033AB8 RID: 211640 RVA: 0x006F6EBC File Offset: 0x006F50BC
 		public ISundialPuzzleGameplay GameplayConfigAsISundialPuzzleGameplay()
 		{
 			return this.GameplayConfig<ISundialPuzzleGameplay>().Value;
 		}
 
-		// Token: 0x06030B63 RID: 199523 RVA: 0x0069CBA4 File Offset: 0x0069ADA4
+		// Token: 0x06033AB9 RID: 211641 RVA: 0x006F6ED8 File Offset: 0x006F50D8
 		public ITraceTracing GameplayConfigAsITraceTracing()
 		{
 			return this.GameplayConfig<ITraceTracing>().Value;
 		}
 
-		// Token: 0x06030B64 RID: 199524 RVA: 0x0069CBC0 File Offset: 0x0069ADC0
+		// Token: 0x06033ABA RID: 211642 RVA: 0x006F6EF4 File Offset: 0x006F50F4
 		public ITuningStand GameplayConfigAsITuningStand()
 		{
 			return this.GameplayConfig<ITuningStand>().Value;
 		}
 
-		// Token: 0x06030B65 RID: 199525 RVA: 0x0069CBDC File Offset: 0x0069ADDC
+		// Token: 0x06033ABB RID: 211643 RVA: 0x006F6F10 File Offset: 0x006F5110
+		public ITurntableConnectorUiGameplay GameplayConfigAsITurntableConnectorUiGameplay()
+		{
+			return this.GameplayConfig<ITurntableConnectorUiGameplay>().Value;
+		}
+
+		// Token: 0x06033ABC RID: 211644 RVA: 0x006F6F2C File Offset: 0x006F512C
 		public IWriteLetter GameplayConfigAsIWriteLetter()
 		{
 			return this.GameplayConfig<IWriteLetter>().Value;
 		}
 
-		// Token: 0x06030B66 RID: 199526 RVA: 0x0069CBF8 File Offset: 0x0069ADF8
+		// Token: 0x06033ABD RID: 211645 RVA: 0x006F6F48 File Offset: 0x006F5148
 		public IWuWaGoGame GameplayConfigAsIWuWaGoGame()
 		{
 			return this.GameplayConfig<IWuWaGoGame>().Value;
 		}
 
-		// Token: 0x1700CDF7 RID: 52727
-		// (get) Token: 0x06030B67 RID: 199527 RVA: 0x0069CC14 File Offset: 0x0069AE14
+		// Token: 0x1700D912 RID: 55570
+		// (get) Token: 0x06033ABE RID: 211646 RVA: 0x006F6F64 File Offset: 0x006F5164
 		public string FinishSendSelfEvent
 		{
 			get
@@ -280,20 +298,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030B68 RID: 199528 RVA: 0x0069CC4B File Offset: 0x0069AE4B
+		// Token: 0x06033ABF RID: 211647 RVA: 0x006F6F9B File Offset: 0x006F519B
 		public Span<byte> GetFinishSendSelfEventBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06030B69 RID: 199529 RVA: 0x0069CC5A File Offset: 0x0069AE5A
+		// Token: 0x06033AC0 RID: 211648 RVA: 0x006F6FAA File Offset: 0x006F51AA
 		public byte[] GetFinishSendSelfEventArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700CDF8 RID: 52728
-		// (get) Token: 0x06030B6A RID: 199530 RVA: 0x0069CC68 File Offset: 0x0069AE68
+		// Token: 0x1700D913 RID: 55571
+		// (get) Token: 0x06033AC1 RID: 211649 RVA: 0x006F6FB8 File Offset: 0x006F51B8
 		public string FailSendSelfEvent
 		{
 			get
@@ -307,19 +325,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030B6B RID: 199531 RVA: 0x0069CCA0 File Offset: 0x0069AEA0
+		// Token: 0x06033AC2 RID: 211650 RVA: 0x006F6FF0 File Offset: 0x006F51F0
 		public Span<byte> GetFailSendSelfEventBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06030B6C RID: 199532 RVA: 0x0069CCB0 File Offset: 0x0069AEB0
+		// Token: 0x06033AC3 RID: 211651 RVA: 0x006F7000 File Offset: 0x006F5200
 		public byte[] GetFailSendSelfEventArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x06030B6D RID: 199533 RVA: 0x0069CCBF File Offset: 0x0069AEBF
+		// Token: 0x06033AC4 RID: 211652 RVA: 0x006F700F File Offset: 0x006F520F
 		public static Offset<IOpenSimpleGameplay> CreateIOpenSimpleGameplay(FlatBufferBuilder builder, TUiGame GameplayConfig_type = TUiGame.NONE, int GameplayConfigOffset = 0, StringOffset FinishSendSelfEventOffset = default(StringOffset), StringOffset FailSendSelfEventOffset = default(StringOffset))
 		{
 			builder.StartTable(4);
@@ -330,43 +348,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenSimpleGameplay.EndIOpenSimpleGameplay(builder);
 		}
 
-		// Token: 0x06030B6E RID: 199534 RVA: 0x0069CCEB File Offset: 0x0069AEEB
+		// Token: 0x06033AC5 RID: 211653 RVA: 0x006F703B File Offset: 0x006F523B
 		public static void StartIOpenSimpleGameplay(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06030B6F RID: 199535 RVA: 0x0069CCF4 File Offset: 0x0069AEF4
+		// Token: 0x06033AC6 RID: 211654 RVA: 0x006F7044 File Offset: 0x006F5244
 		public static void AddGameplayConfigType(FlatBufferBuilder builder, TUiGame gameplayConfigType)
 		{
 			builder.AddByte(0, (byte)gameplayConfigType, 0);
 		}
 
-		// Token: 0x06030B70 RID: 199536 RVA: 0x0069CCFF File Offset: 0x0069AEFF
+		// Token: 0x06033AC7 RID: 211655 RVA: 0x006F704F File Offset: 0x006F524F
 		public static void AddGameplayConfig(FlatBufferBuilder builder, int gameplayConfigOffset)
 		{
 			builder.AddOffset(1, gameplayConfigOffset, 0);
 		}
 
-		// Token: 0x06030B71 RID: 199537 RVA: 0x0069CD0A File Offset: 0x0069AF0A
+		// Token: 0x06033AC8 RID: 211656 RVA: 0x006F705A File Offset: 0x006F525A
 		public static void AddFinishSendSelfEvent(FlatBufferBuilder builder, StringOffset finishSendSelfEventOffset)
 		{
 			builder.AddOffset(2, finishSendSelfEventOffset.Value, 0);
 		}
 
-		// Token: 0x06030B72 RID: 199538 RVA: 0x0069CD1A File Offset: 0x0069AF1A
+		// Token: 0x06033AC9 RID: 211657 RVA: 0x006F706A File Offset: 0x006F526A
 		public static void AddFailSendSelfEvent(FlatBufferBuilder builder, StringOffset failSendSelfEventOffset)
 		{
 			builder.AddOffset(3, failSendSelfEventOffset.Value, 0);
 		}
 
-		// Token: 0x06030B73 RID: 199539 RVA: 0x0069CD2A File Offset: 0x0069AF2A
+		// Token: 0x06033ACA RID: 211658 RVA: 0x006F707A File Offset: 0x006F527A
 		public static Offset<IOpenSimpleGameplay> EndIOpenSimpleGameplay(FlatBufferBuilder builder)
 		{
 			return new Offset<IOpenSimpleGameplay>(builder.EndTable());
 		}
 
-		// Token: 0x06030B74 RID: 199540 RVA: 0x0069CD38 File Offset: 0x0069AF38
+		// Token: 0x06033ACB RID: 211659 RVA: 0x006F7088 File Offset: 0x006F5288
 		public IOpenSimpleGameplayT UnPack()
 		{
 			IOpenSimpleGameplayT openSimpleGameplayT = new IOpenSimpleGameplayT();
@@ -374,7 +392,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return openSimpleGameplayT;
 		}
 
-		// Token: 0x06030B75 RID: 199541 RVA: 0x0069CD54 File Offset: 0x0069AF54
+		// Token: 0x06033ACC RID: 211660 RVA: 0x006F70A4 File Offset: 0x006F52A4
 		public void UnPackTo(IOpenSimpleGameplayT _o)
 		{
 			_o.GameplayConfig = new TUiGameUnion();
@@ -413,6 +431,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				break;
 			case TUiGame.IFlowerSeaEscape:
 				_o.GameplayConfig.Value = ((this.GameplayConfig<IFlowerSeaEscape>() != null) ? this.GameplayConfig<IFlowerSeaEscape>().Value.UnPack() : null);
+				break;
+			case TUiGame.IFrequencyDetect:
+				_o.GameplayConfig.Value = ((this.GameplayConfig<IFrequencyDetect>() != null) ? this.GameplayConfig<IFrequencyDetect>().Value.UnPack() : null);
+				break;
+			case TUiGame.IFrequencyPaint:
+				_o.GameplayConfig.Value = ((this.GameplayConfig<IFrequencyPaint>() != null) ? this.GameplayConfig<IFrequencyPaint>().Value.UnPack() : null);
 				break;
 			case TUiGame.IInstrumentQteGameplay:
 				_o.GameplayConfig.Value = ((this.GameplayConfig<IInstrumentQteGameplay>() != null) ? this.GameplayConfig<IInstrumentQteGameplay>().Value.UnPack() : null);
@@ -471,6 +495,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			case TUiGame.ITuningStand:
 				_o.GameplayConfig.Value = ((this.GameplayConfig<ITuningStand>() != null) ? this.GameplayConfig<ITuningStand>().Value.UnPack() : null);
 				break;
+			case TUiGame.ITurntableConnectorUiGameplay:
+				_o.GameplayConfig.Value = ((this.GameplayConfig<ITurntableConnectorUiGameplay>() != null) ? this.GameplayConfig<ITurntableConnectorUiGameplay>().Value.UnPack() : null);
+				break;
 			case TUiGame.IWriteLetter:
 				_o.GameplayConfig.Value = ((this.GameplayConfig<IWriteLetter>() != null) ? this.GameplayConfig<IWriteLetter>().Value.UnPack() : null);
 				break;
@@ -482,7 +509,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.FailSendSelfEvent = this.FailSendSelfEvent;
 		}
 
-		// Token: 0x06030B76 RID: 199542 RVA: 0x0069D59C File Offset: 0x0069B79C
+		// Token: 0x06033ACD RID: 211661 RVA: 0x006F79AC File Offset: 0x006F5BAC
 		public static Offset<IOpenSimpleGameplay> Pack(FlatBufferBuilder builder, IOpenSimpleGameplayT _o)
 		{
 			if (_o == null)
@@ -496,7 +523,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenSimpleGameplay.CreateIOpenSimpleGameplay(builder, gameplayConfig_type, gameplayConfigOffset, finishSendSelfEventOffset, failSendSelfEventOffset);
 		}
 
-		// Token: 0x04011537 RID: 70967
+		// Token: 0x0401248E RID: 74894
 		private Table __p;
 	}
 }

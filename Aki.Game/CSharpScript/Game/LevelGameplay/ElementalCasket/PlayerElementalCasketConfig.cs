@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E8D RID: 28301
+	// Token: 0x0200600E RID: 24590
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerElementalCasketConfig : IClear
 	{
-		// Token: 0x17009A55 RID: 39509
-		// (get) Token: 0x06044F8B RID: 282507 RVA: 0x0110B520 File Offset: 0x01109720
+		// Token: 0x17006F8E RID: 28558
+		// (get) Token: 0x0603B13F RID: 241983 RVA: 0x010B597C File Offset: 0x010B3B7C
 		public bool Loaded
 		{
 			get
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F8C RID: 282508 RVA: 0x0110B528 File Offset: 0x01109728
+		// Token: 0x0603B140 RID: 241984 RVA: 0x010B5984 File Offset: 0x010B3B84
 		public bool ClearObject()
 		{
 			this.FieldRadius = 0f;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044F8D RID: 282509 RVA: 0x0110B574 File Offset: 0x01109774
+		// Token: 0x0603B141 RID: 241985 RVA: 0x010B59D0 File Offset: 0x010B3BD0
 		public void EnsureLoaded(Action onReady)
 		{
 			if (this.IsLoaded)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}, "js_undefined");
 		}
 
-		// Token: 0x06044F8E RID: 282510 RVA: 0x0110B604 File Offset: 0x01109804
+		// Token: 0x0603B142 RID: 241986 RVA: 0x010B5A60 File Offset: 0x010B3C60
 		private void Apply(BP_PlayerElementalCasketConfig_C config)
 		{
 			this.FieldRadius = config.领域半径;
@@ -155,23 +155,23 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.CoreConfig = new ElementalCoreConfig(resourcePath, vector, rotator, dictionary, config.拉取时间, config.拉取延迟时间, config.牵引时间, (float)config.牵引高度, config.归还时间, config.归还延迟时间, config.下落时间, (float)config.下落高度, config.取消匹配延迟时间, config.取消匹配移动时间, config.匹配延迟时间, config.匹配移动时间, (float)config.位置插值速度, (float)config.旋转插值速度, (float)config.插值距离上限, dictionary2);
 		}
 
-		// Token: 0x04023EA5 RID: 147109
+		// Token: 0x0401F15D RID: 127325
 		private const string CONFIG_ASSET_PATH = "/Game/Aki/GamePlay/ElementalCasket/DA_DefaultPlayerElementalCasketConfig.DA_DefaultPlayerElementalCasketConfig";
 
-		// Token: 0x04023EA6 RID: 147110
+		// Token: 0x0401F15E RID: 127326
 		public float FieldRadius;
 
-		// Token: 0x04023EA7 RID: 147111
+		// Token: 0x0401F15F RID: 127327
 		public readonly Dictionary<EElementalType, PlayerFieldConfig> FieldConfigMap = new Dictionary<EElementalType, PlayerFieldConfig>();
 
-		// Token: 0x04023EA8 RID: 147112
+		// Token: 0x0401F160 RID: 127328
 		[Nullable(2)]
 		public ElementalCoreConfig CoreConfig;
 
-		// Token: 0x04023EA9 RID: 147113
+		// Token: 0x0401F161 RID: 127329
 		private bool IsLoaded;
 
-		// Token: 0x04023EAA RID: 147114
+		// Token: 0x0401F162 RID: 127330
 		[Nullable(2)]
 		private CustomPromise LoadingPromise;
 	}

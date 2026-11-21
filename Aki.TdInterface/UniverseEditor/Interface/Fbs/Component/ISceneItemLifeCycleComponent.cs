@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058C7 RID: 22727
+	// Token: 0x02005ED4 RID: 24276
 	public struct ISceneItemLifeCycleComponent : IFlatbufferObject
 	{
-		// Token: 0x1700AA29 RID: 43561
-		// (get) Token: 0x060265A2 RID: 157090 RVA: 0x005490F9 File Offset: 0x005472F9
+		// Token: 0x1700B359 RID: 45913
+		// (get) Token: 0x06028B04 RID: 166660 RVA: 0x0058FC45 File Offset: 0x0058DE45
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060265A3 RID: 157091 RVA: 0x00549106 File Offset: 0x00547306
+		// Token: 0x06028B05 RID: 166661 RVA: 0x0058FC52 File Offset: 0x0058DE52
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060265A4 RID: 157092 RVA: 0x00549110 File Offset: 0x00547310
+		// Token: 0x06028B06 RID: 166662 RVA: 0x0058FC5C File Offset: 0x0058DE5C
 		public static ISceneItemLifeCycleComponent GetRootAsISceneItemLifeCycleComponent(ByteBuffer _bb)
 		{
 			return ISceneItemLifeCycleComponent.GetRootAsISceneItemLifeCycleComponent(_bb, default(ISceneItemLifeCycleComponent));
 		}
 
-		// Token: 0x060265A5 RID: 157093 RVA: 0x0054912C File Offset: 0x0054732C
+		// Token: 0x06028B07 RID: 166663 RVA: 0x0058FC78 File Offset: 0x0058DE78
 		public static ISceneItemLifeCycleComponent GetRootAsISceneItemLifeCycleComponent(ByteBuffer _bb, ISceneItemLifeCycleComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060265A6 RID: 157094 RVA: 0x00549149 File Offset: 0x00547349
+		// Token: 0x06028B08 RID: 166664 RVA: 0x0058FC95 File Offset: 0x0058DE95
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060265A7 RID: 157095 RVA: 0x00549158 File Offset: 0x00547358
+		// Token: 0x06028B09 RID: 166665 RVA: 0x0058FCA4 File Offset: 0x0058DEA4
 		public ISceneItemLifeCycleComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AA2A RID: 43562
-		// (get) Token: 0x060265A8 RID: 157096 RVA: 0x00549168 File Offset: 0x00547368
+		// Token: 0x1700B35A RID: 45914
+		// (get) Token: 0x06028B0A RID: 166666 RVA: 0x0058FCB4 File Offset: 0x0058DEB4
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AA2B RID: 43563
-		// (get) Token: 0x060265A9 RID: 157097 RVA: 0x005491A8 File Offset: 0x005473A8
+		// Token: 0x1700B35B RID: 45915
+		// (get) Token: 0x06028B0B RID: 166667 RVA: 0x0058FCF4 File Offset: 0x0058DEF4
 		public ICreateStageConfig? CreateStageConfig
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AA2C RID: 43564
-		// (get) Token: 0x060265AA RID: 157098 RVA: 0x00549208 File Offset: 0x00547408
+		// Token: 0x1700B35C RID: 45916
+		// (get) Token: 0x06028B0C RID: 166668 RVA: 0x0058FD54 File Offset: 0x0058DF54
 		public IDestroyStageConfig? DestroyStageConfig
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AA2D RID: 43565
-		// (get) Token: 0x060265AB RID: 157099 RVA: 0x00549268 File Offset: 0x00547468
+		// Token: 0x1700B35D RID: 45917
+		// (get) Token: 0x06028B0D RID: 166669 RVA: 0x0058FDB4 File Offset: 0x0058DFB4
 		public byte NullMask
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060265AC RID: 157100 RVA: 0x005492A5 File Offset: 0x005474A5
+		// Token: 0x06028B0E RID: 166670 RVA: 0x0058FDF1 File Offset: 0x0058DFF1
 		public static Offset<ISceneItemLifeCycleComponent> CreateISceneItemLifeCycleComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<ICreateStageConfig> CreateStageConfigOffset = default(Offset<ICreateStageConfig>), Offset<IDestroyStageConfig> DestroyStageConfigOffset = default(Offset<IDestroyStageConfig>), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -114,43 +114,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISceneItemLifeCycleComponent.EndISceneItemLifeCycleComponent(builder);
 		}
 
-		// Token: 0x060265AD RID: 157101 RVA: 0x005492D1 File Offset: 0x005474D1
+		// Token: 0x06028B0F RID: 166671 RVA: 0x0058FE1D File Offset: 0x0058E01D
 		public static void StartISceneItemLifeCycleComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060265AE RID: 157102 RVA: 0x005492DA File Offset: 0x005474DA
+		// Token: 0x06028B10 RID: 166672 RVA: 0x0058FE26 File Offset: 0x0058E026
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x060265AF RID: 157103 RVA: 0x005492E5 File Offset: 0x005474E5
+		// Token: 0x06028B11 RID: 166673 RVA: 0x0058FE31 File Offset: 0x0058E031
 		public static void AddCreateStageConfig(FlatBufferBuilder builder, Offset<ICreateStageConfig> createStageConfigOffset)
 		{
 			builder.AddOffset(1, createStageConfigOffset.Value, 0);
 		}
 
-		// Token: 0x060265B0 RID: 157104 RVA: 0x005492F5 File Offset: 0x005474F5
+		// Token: 0x06028B12 RID: 166674 RVA: 0x0058FE41 File Offset: 0x0058E041
 		public static void AddDestroyStageConfig(FlatBufferBuilder builder, Offset<IDestroyStageConfig> destroyStageConfigOffset)
 		{
 			builder.AddOffset(2, destroyStageConfigOffset.Value, 0);
 		}
 
-		// Token: 0x060265B1 RID: 157105 RVA: 0x00549305 File Offset: 0x00547505
+		// Token: 0x06028B13 RID: 166675 RVA: 0x0058FE51 File Offset: 0x0058E051
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x060265B2 RID: 157106 RVA: 0x00549310 File Offset: 0x00547510
+		// Token: 0x06028B14 RID: 166676 RVA: 0x0058FE5C File Offset: 0x0058E05C
 		public static Offset<ISceneItemLifeCycleComponent> EndISceneItemLifeCycleComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ISceneItemLifeCycleComponent>(builder.EndTable());
 		}
 
-		// Token: 0x060265B3 RID: 157107 RVA: 0x00549320 File Offset: 0x00547520
+		// Token: 0x06028B15 RID: 166677 RVA: 0x0058FE6C File Offset: 0x0058E06C
 		public ISceneItemLifeCycleComponentT UnPack()
 		{
 			ISceneItemLifeCycleComponentT sceneItemLifeCycleComponentT = new ISceneItemLifeCycleComponentT();
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return sceneItemLifeCycleComponentT;
 		}
 
-		// Token: 0x060265B4 RID: 157108 RVA: 0x0054933C File Offset: 0x0054753C
+		// Token: 0x06028B16 RID: 166678 RVA: 0x0058FE88 File Offset: 0x0058E088
 		public void UnPackTo(ISceneItemLifeCycleComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060265B5 RID: 157109 RVA: 0x005493C0 File Offset: 0x005475C0
+		// Token: 0x06028B17 RID: 166679 RVA: 0x0058FF0C File Offset: 0x0058E10C
 		public static Offset<ISceneItemLifeCycleComponent> Pack(FlatBufferBuilder builder, ISceneItemLifeCycleComponentT _o)
 		{
 			if (_o == null)
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISceneItemLifeCycleComponent.CreateISceneItemLifeCycleComponent(builder, _o.Disabled, createStageConfigOffset, destroyStageConfigOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400EE3D RID: 60989
+		// Token: 0x0400FB30 RID: 64304
 		private Table __p;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FC4 RID: 8132
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002209 RID: 8713
 	public class ITimeLimitOptionGroupDefault : ITimeLimitOptionGroupBaseStyle
 	{
-		// Token: 0x0600B2E2 RID: 45794 RVA: 0x001A0B90 File Offset: 0x0019ED90
+		// Token: 0x0600BDF0 RID: 48624 RVA: 0x001B7040 File Offset: 0x001B5240
 		private ITimeLimitOptionGroupDefault_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B2E3 RID: 45795 RVA: 0x001A0BC8 File Offset: 0x0019EDC8
+		// Token: 0x0600BDF1 RID: 48625 RVA: 0x001B7078 File Offset: 0x001B5278
 		public static ITimeLimitOptionGroupDefault Create([Nullable(2)] ITimeLimitOptionGroupDefault instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B2E4 RID: 45796 RVA: 0x001A0BDB File Offset: 0x0019EDDB
+		// Token: 0x0600BDF2 RID: 48626 RVA: 0x001B708B File Offset: 0x001B528B
 		public static ITimeLimitOptionGroupDefault CreateFromSetValue([Nullable(2)] ITimeLimitOptionGroupDefault_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B2E5 RID: 45797 RVA: 0x001A0BEE File Offset: 0x0019EDEE
+		// Token: 0x0600BDF3 RID: 48627 RVA: 0x001B709E File Offset: 0x001B529E
 		public new ITimeLimitOptionGroupDefault_SetValue ToSetValue()
 		{
 			return new ITimeLimitOptionGroupDefault_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003723 RID: 14115
-		// (get) Token: 0x0600B2E6 RID: 45798 RVA: 0x001A0C19 File Offset: 0x0019EE19
-		// (set) Token: 0x0600B2E7 RID: 45799 RVA: 0x001A0C44 File Offset: 0x0019EE44
+		// Token: 0x170039FA RID: 14842
+		// (get) Token: 0x0600BDF4 RID: 48628 RVA: 0x001B70C9 File Offset: 0x001B52C9
+		// (set) Token: 0x0600BDF5 RID: 48629 RVA: 0x001B70F4 File Offset: 0x001B52F4
 		public override ETimeLimitOptionGroupStyle Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003724 RID: 14116
-		// (get) Token: 0x0600B2E8 RID: 45800 RVA: 0x001A0C52 File Offset: 0x0019EE52
-		// (set) Token: 0x0600B2E9 RID: 45801 RVA: 0x001A0C7D File Offset: 0x0019EE7D
+		// Token: 0x170039FB RID: 14843
+		// (get) Token: 0x0600BDF6 RID: 48630 RVA: 0x001B7102 File Offset: 0x001B5302
+		// (set) Token: 0x0600BDF7 RID: 48631 RVA: 0x001B712D File Offset: 0x001B532D
 		public virtual int TimeoutOptionIndex
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003725 RID: 14117
-		// (get) Token: 0x0600B2EA RID: 45802 RVA: 0x001A0C8B File Offset: 0x0019EE8B
-		// (set) Token: 0x0600B2EB RID: 45803 RVA: 0x001A0CBA File Offset: 0x0019EEBA
+		// Token: 0x170039FC RID: 14844
+		// (get) Token: 0x0600BDF8 RID: 48632 RVA: 0x001B713B File Offset: 0x001B533B
+		// (set) Token: 0x0600BDF9 RID: 48633 RVA: 0x001B716A File Offset: 0x001B536A
 		public virtual float TimeLimit
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006BFE RID: 27646
+		// Token: 0x040071FD RID: 29181
 		[Nullable(2)]
 		protected new ITimeLimitOptionGroupDefault FbInstance;
 
-		// Token: 0x04006BFF RID: 27647
+		// Token: 0x040071FE RID: 29182
 		[Nullable(2)]
 		protected new ITimeLimitOptionGroupDefault_SetValue PocoInterface;
 	}

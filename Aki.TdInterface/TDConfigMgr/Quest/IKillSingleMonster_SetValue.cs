@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FD4 RID: 4052
+	// Token: 0x02001100 RID: 4352
 	public class IKillSingleMonster_SetValue
 	{
-		// Token: 0x0400366F RID: 13935
+		// Token: 0x040039A7 RID: 14759
 		public int EntityId;
 
-		// Token: 0x04003670 RID: 13936
+		// Token: 0x040039A8 RID: 14760
 		public int AddTime;
 	}
 }

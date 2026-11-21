@@ -2,26 +2,26 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200442E RID: 17454
+	// Token: 0x02004896 RID: 18582
 	public enum ERollBlockGridType : byte
 	{
-		// Token: 0x0400C3E3 RID: 50147
+		// Token: 0x0400CE11 RID: 52753
 		Empty,
-		// Token: 0x0400C3E4 RID: 50148
+		// Token: 0x0400CE12 RID: 52754
 		Floor,
-		// Token: 0x0400C3E5 RID: 50149
+		// Token: 0x0400CE13 RID: 52755
 		Goal,
-		// Token: 0x0400C3E6 RID: 50150
+		// Token: 0x0400CE14 RID: 52756
 		LinkGoal,
-		// Token: 0x0400C3E7 RID: 50151
+		// Token: 0x0400CE15 RID: 52757
 		JumpFloor,
-		// Token: 0x0400C3E8 RID: 50152
+		// Token: 0x0400CE16 RID: 52758
 		FallFloor,
-		// Token: 0x0400C3E9 RID: 50153
+		// Token: 0x0400CE17 RID: 52759
 		BreakTrigger,
-		// Token: 0x0400C3EA RID: 50154
+		// Token: 0x0400CE18 RID: 52760
 		Quantum,
-		// Token: 0x0400C3EB RID: 50155
+		// Token: 0x0400CE19 RID: 52761
 		Laser
 	}
 }

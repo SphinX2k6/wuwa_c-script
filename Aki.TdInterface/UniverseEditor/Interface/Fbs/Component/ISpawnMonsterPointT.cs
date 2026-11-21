@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005957 RID: 22871
+	// Token: 0x02005F64 RID: 24420
 	public class ISpawnMonsterPointT
 	{
-		// Token: 0x1700ABB3 RID: 43955
-		// (get) Token: 0x06026B75 RID: 158581 RVA: 0x00554DFB File Offset: 0x00552FFB
-		// (set) Token: 0x06026B76 RID: 158582 RVA: 0x00554E03 File Offset: 0x00553003
+		// Token: 0x1700B4E7 RID: 46311
+		// (get) Token: 0x060290DF RID: 168159 RVA: 0x0059BA67 File Offset: 0x00599C67
+		// (set) Token: 0x060290E0 RID: 168160 RVA: 0x0059BA6F File Offset: 0x00599C6F
 		public EPointChooseType Type { get; set; }
 
-		// Token: 0x1700ABB4 RID: 43956
-		// (get) Token: 0x06026B77 RID: 158583 RVA: 0x00554E0C File Offset: 0x0055300C
-		// (set) Token: 0x06026B78 RID: 158584 RVA: 0x00554E14 File Offset: 0x00553014
+		// Token: 0x1700B4E8 RID: 46312
+		// (get) Token: 0x060290E1 RID: 168161 RVA: 0x0059BA78 File Offset: 0x00599C78
+		// (set) Token: 0x060290E2 RID: 168162 RVA: 0x0059BA80 File Offset: 0x00599C80
 		public ISearchSpawnMonsterPointT RangeConstraint { get; set; }
 
-		// Token: 0x06026B79 RID: 158585 RVA: 0x00554E1D File Offset: 0x0055301D
+		// Token: 0x060290E3 RID: 168163 RVA: 0x0059BA89 File Offset: 0x00599C89
 		public ISpawnMonsterPointT()
 		{
 			this.Type = EPointChooseType.SpawnMonsterPoint;

@@ -5,13 +5,13 @@ using AkiClient.Game.Aki.UI.Manager;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x020034D5 RID: 13525
+// Token: 0x02002A49 RID: 10825
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class BattleLogicController : ControllerBase
 {
-	// Token: 0x0601D8D2 RID: 121042 RVA: 0x0083F0C8 File Offset: 0x0083D2C8
+	// Token: 0x0601B5D1 RID: 112081 RVA: 0x00866638 File Offset: 0x00864838
 	[CombatListen(ENotifyMessageId.EntityLivingStatusNotify, true, false)]
 	public static void ExecuteEntityLivingStatus(Entity entity, EntityLivingStatusNotify notify, [Nullable(2)] CombatCommon combatCommon = null)
 	{
@@ -32,7 +32,7 @@ public class BattleLogicController : ControllerBase
 		{
 		case LivingStatus.Alive:
 			BattleLogicController.ExecuteReviveLogic(entityById);
-			break;
+			return;
 		case LivingStatus.Dead:
 		{
 			BattleLogicController.BroadcastDead(entityById);
@@ -72,12 +72,22 @@ public class BattleLogicController : ControllerBase
 		}
 		case LivingStatus.Init:
 			break;
+		case LivingStatus.Dying:
+		{
+			BaseDeathComponent component3 = entity.GetComponent<BaseDeathComponent>();
+			if (component3 == null)
+			{
+				return;
+			}
+			component3.ExecuteDying(new long?(value));
+			break;
+		}
 		default:
 			return;
 		}
 	}
 
-	// Token: 0x0601D8D3 RID: 121043 RVA: 0x0083F244 File Offset: 0x0083D444
+	// Token: 0x0601B5D2 RID: 112082 RVA: 0x008667D0 File Offset: 0x008649D0
 	public static void OnEntityLivingStatusNotify(EntityLivingStatusNotify notify)
 	{
 		EntityHandle entity = CreatureModel.Instance.GetEntity(MathUtils.Instance.LongToNumber(notify.Id));
@@ -94,7 +104,7 @@ public class BattleLogicController : ControllerBase
 		BattleLogicController.ExecuteEntityLivingStatus(entity.Entity, notify, null);
 	}
 
-	// Token: 0x0601D8D4 RID: 121044 RVA: 0x0083F2C0 File Offset: 0x0083D4C0
+	// Token: 0x0601B5D3 RID: 112083 RVA: 0x0086684C File Offset: 0x00864A4C
 	private static void ExecuteReviveLogic(EntityHandle handle)
 	{
 		if (!handle.Valid)
@@ -129,7 +139,7 @@ public class BattleLogicController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D8D5 RID: 121045 RVA: 0x0083F318 File Offset: 0x0083D518
+	// Token: 0x0601B5D4 RID: 112084 RVA: 0x008668A4 File Offset: 0x00864AA4
 	private static void BroadcastDead(EntityHandle handle)
 	{
 		BaseActorComponent component = handle.Entity.GetComponent<BaseActorComponent>();
@@ -147,8 +157,8 @@ public class BattleLogicController : ControllerBase
 		当有角色死亡时.Broadcast(aactor as TsBaseCharacter);
 	}
 
-	// Token: 0x170028DD RID: 10461
-	// (get) Token: 0x0601D8D6 RID: 121046 RVA: 0x0083F35C File Offset: 0x0083D55C
+	// Token: 0x17002C75 RID: 11381
+	// (get) Token: 0x0601B5D5 RID: 112085 RVA: 0x008668E8 File Offset: 0x00864AE8
 	public static BattleLogicController Instance
 	{
 		get
@@ -157,7 +167,7 @@ public class BattleLogicController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D8D7 RID: 121047 RVA: 0x0083F363 File Offset: 0x0083D563
+	// Token: 0x0601B5D6 RID: 112086 RVA: 0x008668EF File Offset: 0x00864AEF
 	public static BattleLogicController GetOrCreateInstance()
 	{
 		if (BattleLogicController._Instance == null)
@@ -167,7 +177,7 @@ public class BattleLogicController : ControllerBase
 		return BattleLogicController._Instance;
 	}
 
-	// Token: 0x0601D8D8 RID: 121048 RVA: 0x0083F377 File Offset: 0x0083D577
+	// Token: 0x0601B5D7 RID: 112087 RVA: 0x00866903 File Offset: 0x00864B03
 	public static bool CreateInstance()
 	{
 		if (BattleLogicController._Instance != null)
@@ -178,40 +188,44 @@ public class BattleLogicController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D8D9 RID: 121049 RVA: 0x0083F38D File Offset: 0x0083D58D
+	// Token: 0x0601B5D8 RID: 112088 RVA: 0x00866919 File Offset: 0x00864B19
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601D8DA RID: 121050 RVA: 0x0083F38F File Offset: 0x0083D58F
+	// Token: 0x0601B5D9 RID: 112089 RVA: 0x0086691B File Offset: 0x00864B1B
 	public static void ResetStaticDefaultValue()
 	{
 		BattleLogicController._Instance = null;
 	}
 
-	// Token: 0x0601D8DB RID: 121051 RVA: 0x0083F398 File Offset: 0x0083D598
+	// Token: 0x0601B5DA RID: 112090 RVA: 0x00866924 File Offset: 0x00864B24
 	static BattleLogicController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BattleLogicController.CreateStaticDefaultValue), new Action(BattleLogicController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E82A RID: 59434
+	// Token: 0x0400ECDE RID: 60638
 	[StaticVariableRuleIgnore]
 	private static readonly Stat BroadcastDeadStat = Stat.Create("BattleLogicController.BroadcastDeadStat", "", "STATGROUP_KuroBattle");
 
-	// Token: 0x0400E82B RID: 59435
+	// Token: 0x0400ECDF RID: 60639
 	[StaticVariableRuleIgnore]
 	private static readonly Stat DisableEntityStat = Stat.Create("BattleLogicController.DisableEntityStat", "", "STATGROUP_KuroBattle");
 
-	// Token: 0x0400E82C RID: 59436
+	// Token: 0x0400ECE0 RID: 60640
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ExecuteDeadLogicStat = Stat.Create("BattleLogicController.ExecuteDeadLogicStat", "", "STATGROUP_KuroBattle");
 
-	// Token: 0x0400E82D RID: 59437
+	// Token: 0x0400ECE1 RID: 60641
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ExecuteReviveLogicStat = Stat.Create("BattleLogicController.ExecuteReviveLogicStat", "", "STATGROUP_KuroBattle");
 
-	// Token: 0x0400E82E RID: 59438
+	// Token: 0x0400ECE2 RID: 60642
+	[StaticVariableRuleIgnore]
+	private static readonly Stat ExecuteDyingStat = Stat.Create("BattleLogicController.ExecuteDyingStat", "", "STATGROUP_KuroBattle");
+
+	// Token: 0x0400ECE3 RID: 60643
 	[Nullable(2)]
 	private static BattleLogicController _Instance;
 }

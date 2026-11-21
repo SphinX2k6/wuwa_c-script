@@ -4,12 +4,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001687 RID: 5767
+// Token: 0x02000B3F RID: 2879
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class ActivitySubViewBase : UiPanelBase
 {
-	// Token: 0x0600A364 RID: 41828 RVA: 0x0024288C File Offset: 0x00240A8C
+	// Token: 0x06007741 RID: 30529 RVA: 0x0024C8F4 File Offset: 0x0024AAF4
 	protected sealed override void OnBeforeShowImplement()
 	{
 		this.ClearTimer();
@@ -24,66 +24,66 @@ public abstract class ActivitySubViewBase : UiPanelBase
 		this.OnAddEventListener();
 	}
 
-	// Token: 0x0600A365 RID: 41829 RVA: 0x00242914 File Offset: 0x00240B14
+	// Token: 0x06007742 RID: 30530 RVA: 0x0024C97C File Offset: 0x0024AB7C
 	private void OnSequenceStartPrivate(string sequenceName)
 	{
 		this.OnSequenceStart(sequenceName);
 	}
 
-	// Token: 0x0600A366 RID: 41830 RVA: 0x0024291D File Offset: 0x00240B1D
+	// Token: 0x06007743 RID: 30531 RVA: 0x0024C985 File Offset: 0x0024AB85
 	protected virtual void OnSequenceStart(string sequenceName)
 	{
 	}
 
-	// Token: 0x0600A367 RID: 41831 RVA: 0x0024291F File Offset: 0x00240B1F
+	// Token: 0x06007744 RID: 30532 RVA: 0x0024C987 File Offset: 0x0024AB87
 	private void OnSequenceClosePrivate(string sequenceName)
 	{
 		this.OnSequenceClose(sequenceName);
 	}
 
-	// Token: 0x0600A368 RID: 41832 RVA: 0x00242928 File Offset: 0x00240B28
+	// Token: 0x06007745 RID: 30533 RVA: 0x0024C990 File Offset: 0x0024AB90
 	protected virtual void OnSequenceClose(string sequenceName)
 	{
 	}
 
-	// Token: 0x0600A369 RID: 41833 RVA: 0x0024292A File Offset: 0x00240B2A
+	// Token: 0x06007746 RID: 30534 RVA: 0x0024C992 File Offset: 0x0024AB92
 	protected override void OnAfterHideImplement()
 	{
 		this.ClearTimer();
 		this.OnRemoveEventListener();
 	}
 
-	// Token: 0x0600A36A RID: 41834 RVA: 0x00242938 File Offset: 0x00240B38
+	// Token: 0x06007747 RID: 30535 RVA: 0x0024C9A0 File Offset: 0x0024ABA0
 	private void OnTimerRefresh(float delta)
 	{
 		this.OnTimer((float)TimeUtil.Instance.InverseMillisecond);
 	}
 
-	// Token: 0x0600A36B RID: 41835 RVA: 0x0024294B File Offset: 0x00240B4B
+	// Token: 0x06007748 RID: 30536 RVA: 0x0024C9B3 File Offset: 0x0024ABB3
 	private void ClearTimer()
 	{
 		ActivityController.Instance.UnregisterRefreshTimerDelegate(new Action<float>(this.OnTimerRefresh));
 	}
 
-	// Token: 0x0600A36C RID: 41836 RVA: 0x00242963 File Offset: 0x00240B63
+	// Token: 0x06007749 RID: 30537 RVA: 0x0024C9CB File Offset: 0x0024ABCB
 	public void SetData(ActivityBaseData data)
 	{
 		this.ActivityBaseData = data;
 		this.OnSetData();
 	}
 
-	// Token: 0x0600A36D RID: 41837 RVA: 0x00242972 File Offset: 0x00240B72
+	// Token: 0x0600774A RID: 30538 RVA: 0x0024C9DA File Offset: 0x0024ABDA
 	public void SetOpenParam(object param)
 	{
 		this.OpenParam = param;
 	}
 
-	// Token: 0x0600A36E RID: 41838 RVA: 0x0024297B File Offset: 0x00240B7B
+	// Token: 0x0600774B RID: 30539 RVA: 0x0024C9E3 File Offset: 0x0024ABE3
 	protected virtual void OnSetData()
 	{
 	}
 
-	// Token: 0x0600A36F RID: 41839 RVA: 0x0024297D File Offset: 0x00240B7D
+	// Token: 0x0600774C RID: 30540 RVA: 0x0024C9E5 File Offset: 0x0024ABE5
 	public void RefreshView()
 	{
 		if (this.ActivityBaseData != null)
@@ -93,7 +93,7 @@ public abstract class ActivitySubViewBase : UiPanelBase
 		this.OnRefreshView();
 	}
 
-	// Token: 0x0600A370 RID: 41840 RVA: 0x002429A0 File Offset: 0x00240BA0
+	// Token: 0x0600774D RID: 30541 RVA: 0x0024CA08 File Offset: 0x0024AC08
 	public UniTask BeforeShowSelfAsync()
 	{
 		ActivitySubViewBase.<BeforeShowSelfAsync>d__16 <BeforeShowSelfAsync>d__;
@@ -104,7 +104,7 @@ public abstract class ActivitySubViewBase : UiPanelBase
 		return <BeforeShowSelfAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A371 RID: 41841 RVA: 0x002429E4 File Offset: 0x00240BE4
+	// Token: 0x0600774E RID: 30542 RVA: 0x0024CA4C File Offset: 0x0024AC4C
 	public UniTask BeforeHideSelfAsync()
 	{
 		ActivitySubViewBase.<BeforeHideSelfAsync>d__17 <BeforeHideSelfAsync>d__;
@@ -115,39 +115,46 @@ public abstract class ActivitySubViewBase : UiPanelBase
 		return <BeforeHideSelfAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A372 RID: 41842 RVA: 0x00242A27 File Offset: 0x00240C27
+	// Token: 0x0600774F RID: 30543 RVA: 0x0024CA8F File Offset: 0x0024AC8F
 	public virtual void OnCommonViewStateChange(bool show)
 	{
 	}
 
-	// Token: 0x0600A373 RID: 41843 RVA: 0x00242A29 File Offset: 0x00240C29
+	// Token: 0x06007750 RID: 30544 RVA: 0x0024CA91 File Offset: 0x0024AC91
 	protected virtual void OnAddEventListener()
 	{
 	}
 
-	// Token: 0x0600A374 RID: 41844 RVA: 0x00242A2B File Offset: 0x00240C2B
+	// Token: 0x06007751 RID: 30545 RVA: 0x0024CA93 File Offset: 0x0024AC93
 	protected virtual void OnRemoveEventListener()
 	{
 	}
 
-	// Token: 0x0600A375 RID: 41845 RVA: 0x00242A2D File Offset: 0x00240C2D
+	// Token: 0x06007752 RID: 30546 RVA: 0x0024CA95 File Offset: 0x0024AC95
 	protected virtual void OnRefreshView()
 	{
 	}
 
-	// Token: 0x0600A376 RID: 41846 RVA: 0x00242A2F File Offset: 0x00240C2F
+	// Token: 0x06007753 RID: 30547 RVA: 0x0024CA97 File Offset: 0x0024AC97
 	protected virtual UniTask OnBeforeShowSelfAsync()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600A377 RID: 41847 RVA: 0x00242A36 File Offset: 0x00240C36
+	// Token: 0x06007754 RID: 30548 RVA: 0x0024CA9E File Offset: 0x0024AC9E
 	protected virtual UniTask OnBeforeHideSelfAsync()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600A378 RID: 41848 RVA: 0x00242A40 File Offset: 0x00240C40
+	// Token: 0x06007755 RID: 30549 RVA: 0x0024CAA5 File Offset: 0x0024ACA5
+	[NullableContext(2)]
+	public virtual string GetBgm()
+	{
+		return null;
+	}
+
+	// Token: 0x06007756 RID: 30550 RVA: 0x0024CAA8 File Offset: 0x0024ACA8
 	public virtual void PlaySubViewSequence(string name, bool blockClick = false)
 	{
 		if (this.LevelSequencePlayer.CheckSeqActorIsSeqPlaying(name))
@@ -158,7 +165,7 @@ public abstract class ActivitySubViewBase : UiPanelBase
 		this.LevelSequencePlayer.PlayLevelSequenceByName(name, blockClick, null, false);
 	}
 
-	// Token: 0x0600A379 RID: 41849 RVA: 0x00242A7F File Offset: 0x00240C7F
+	// Token: 0x06007757 RID: 30551 RVA: 0x0024CAE7 File Offset: 0x0024ACE7
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -169,7 +176,7 @@ public abstract class ActivitySubViewBase : UiPanelBase
 		return ActivityModel.Instance.GetTimeVisibleAndRemainTime(this.ActivityBaseData, null);
 	}
 
-	// Token: 0x0600A37A RID: 41850 RVA: 0x00242A92 File Offset: 0x00240C92
+	// Token: 0x06007758 RID: 30552 RVA: 0x0024CAFA File Offset: 0x0024ACFA
 	protected virtual string GetCurrentLockConditionText()
 	{
 		if (this.ActivityBaseData.IsUnLock())
@@ -179,12 +186,12 @@ public abstract class ActivitySubViewBase : UiPanelBase
 		return LevelGeneralCommons.GetConditionGroupHintText(this.ActivityBaseData.ConditionGroupId) ?? "";
 	}
 
-	// Token: 0x0600A37B RID: 41851 RVA: 0x00242AC0 File Offset: 0x00240CC0
+	// Token: 0x06007759 RID: 30553 RVA: 0x0024CB28 File Offset: 0x0024AD28
 	protected virtual void OnTimer(float gap)
 	{
 	}
 
-	// Token: 0x0600A37C RID: 41852 RVA: 0x00242AC2 File Offset: 0x00240CC2
+	// Token: 0x0600775A RID: 30554 RVA: 0x0024CB2A File Offset: 0x0024AD2A
 	protected sealed override void OnBeforeDestroyImplement()
 	{
 		this.ClearTimer();
@@ -196,18 +203,18 @@ public abstract class ActivitySubViewBase : UiPanelBase
 		levelSequencePlayer.Clear();
 	}
 
-	// Token: 0x04004A3F RID: 19007
+	// Token: 0x04004AE6 RID: 19174
 	protected string ActivityRemainTimeText = "";
 
-	// Token: 0x04004A40 RID: 19008
+	// Token: 0x04004AE7 RID: 19175
 	[Nullable(2)]
 	protected ActivityBaseData ActivityBaseData;
 
-	// Token: 0x04004A41 RID: 19009
+	// Token: 0x04004AE8 RID: 19176
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04004A42 RID: 19010
+	// Token: 0x04004AE9 RID: 19177
 	[Nullable(2)]
 	protected object SubViewOpenParam;
 }

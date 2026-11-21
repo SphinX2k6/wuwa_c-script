@@ -2,28 +2,28 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060D7 RID: 24791
+	// Token: 0x02006739 RID: 26425
 	public enum IActorLookAtData_Union : byte
 	{
-		// Token: 0x04010487 RID: 66695
+		// Token: 0x0401128B RID: 70283
 		NONE,
-		// Token: 0x04010488 RID: 66696
+		// Token: 0x0401128C RID: 70284
 		IActorLookAtData,
-		// Token: 0x04010489 RID: 66697
+		// Token: 0x0401128D RID: 70285
 		IActorLookAtLockable,
-		// Token: 0x0401048A RID: 66698
+		// Token: 0x0401128E RID: 70286
 		IActorLookAtTalkerData,
-		// Token: 0x0401048B RID: 66699
+		// Token: 0x0401128F RID: 70287
 		IActorLookAtEmptyData,
-		// Token: 0x0401048C RID: 66700
+		// Token: 0x04011290 RID: 70288
 		IActorLookAtEntityData,
-		// Token: 0x0401048D RID: 66701
+		// Token: 0x04011291 RID: 70289
 		IActorLookAtPositionData,
-		// Token: 0x0401048E RID: 66702
+		// Token: 0x04011292 RID: 70290
 		IActorLookAtPlayerData,
-		// Token: 0x0401048F RID: 66703
+		// Token: 0x04011293 RID: 70291
 		IActorLookAtOtherActor,
-		// Token: 0x04010490 RID: 66704
+		// Token: 0x04011294 RID: 70292
 		IActorLookAtUnLock
 	}
 }

@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200013F RID: 319
+	// Token: 0x02000142 RID: 322
 	public sealed class BabelActivityDeTermInfo : IMessage<BabelActivityDeTermInfo>, IMessage, IEquatable<BabelActivityDeTermInfo>, IDeepCloneable<BabelActivityDeTermInfo>, IBufferMessage
 	{
-		// Token: 0x06002961 RID: 10593 RVA: 0x0006C805 File Offset: 0x0006AA05
+		// Token: 0x060029D8 RID: 10712 RVA: 0x0006DC39 File Offset: 0x0006BE39
 		[NullableContext(1)]
 		public static BabelActivityDeTermInfo Create()
 		{
 			return new BabelActivityDeTermInfo();
 		}
 
-		// Token: 0x17000601 RID: 1537
-		// (get) Token: 0x06002962 RID: 10594 RVA: 0x0006C80C File Offset: 0x0006AA0C
+		// Token: 0x17000615 RID: 1557
+		// (get) Token: 0x060029D9 RID: 10713 RVA: 0x0006DC40 File Offset: 0x0006BE40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<BabelActivityDeTermInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000602 RID: 1538
-		// (get) Token: 0x06002963 RID: 10595 RVA: 0x0006C813 File Offset: 0x0006AA13
+		// Token: 0x17000616 RID: 1558
+		// (get) Token: 0x060029DA RID: 10714 RVA: 0x0006DC47 File Offset: 0x0006BE47
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000603 RID: 1539
-		// (get) Token: 0x06002964 RID: 10596 RVA: 0x0006C816 File Offset: 0x0006AA16
+		// Token: 0x17000617 RID: 1559
+		// (get) Token: 0x060029DB RID: 10715 RVA: 0x0006DC4A File Offset: 0x0006BE4A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002965 RID: 10597 RVA: 0x0006C81D File Offset: 0x0006AA1D
+		// Token: 0x060029DC RID: 10716 RVA: 0x0006DC51 File Offset: 0x0006BE51
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelActivityDeTermInfo()
 		{
 		}
 
-		// Token: 0x06002966 RID: 10598 RVA: 0x0006C825 File Offset: 0x0006AA25
+		// Token: 0x060029DD RID: 10717 RVA: 0x0006DC59 File Offset: 0x0006BE59
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelActivityDeTermInfo(BabelActivityDeTermInfo other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06002967 RID: 10599 RVA: 0x0006C856 File Offset: 0x0006AA56
+		// Token: 0x060029DE RID: 10718 RVA: 0x0006DC8A File Offset: 0x0006BE8A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelActivityDeTermInfo Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new BabelActivityDeTermInfo(this);
 		}
 
-		// Token: 0x17000604 RID: 1540
-		// (get) Token: 0x06002968 RID: 10600 RVA: 0x0006C85E File Offset: 0x0006AA5E
-		// (set) Token: 0x06002969 RID: 10601 RVA: 0x0006C866 File Offset: 0x0006AA66
+		// Token: 0x17000618 RID: 1560
+		// (get) Token: 0x060029DF RID: 10719 RVA: 0x0006DC92 File Offset: 0x0006BE92
+		// (set) Token: 0x060029E0 RID: 10720 RVA: 0x0006DC9A File Offset: 0x0006BE9A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int DeTermId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000605 RID: 1541
-		// (get) Token: 0x0600296A RID: 10602 RVA: 0x0006C86F File Offset: 0x0006AA6F
-		// (set) Token: 0x0600296B RID: 10603 RVA: 0x0006C877 File Offset: 0x0006AA77
+		// Token: 0x17000619 RID: 1561
+		// (get) Token: 0x060029E1 RID: 10721 RVA: 0x0006DCA3 File Offset: 0x0006BEA3
+		// (set) Token: 0x060029E2 RID: 10722 RVA: 0x0006DCAB File Offset: 0x0006BEAB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool DifficultUnlock
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600296C RID: 10604 RVA: 0x0006C880 File Offset: 0x0006AA80
+		// Token: 0x060029E3 RID: 10723 RVA: 0x0006DCB4 File Offset: 0x0006BEB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BabelActivityDeTermInfo);
 		}
 
-		// Token: 0x0600296D RID: 10605 RVA: 0x0006C88E File Offset: 0x0006AA8E
+		// Token: 0x060029E4 RID: 10724 RVA: 0x0006DCC2 File Offset: 0x0006BEC2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BabelActivityDeTermInfo other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.DeTermId == other.DeTermId && this.DifficultUnlock == other.DifficultUnlock && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600296E RID: 10606 RVA: 0x0006C8CC File Offset: 0x0006AACC
+		// Token: 0x060029E5 RID: 10725 RVA: 0x0006DD00 File Offset: 0x0006BF00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600296F RID: 10607 RVA: 0x0006C924 File Offset: 0x0006AB24
+		// Token: 0x060029E6 RID: 10726 RVA: 0x0006DD58 File Offset: 0x0006BF58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002970 RID: 10608 RVA: 0x0006C931 File Offset: 0x0006AB31
+		// Token: 0x060029E7 RID: 10727 RVA: 0x0006DD65 File Offset: 0x0006BF65
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06002971 RID: 10609 RVA: 0x0006C93C File Offset: 0x0006AB3C
+		// Token: 0x060029E8 RID: 10728 RVA: 0x0006DD70 File Offset: 0x0006BF70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002972 RID: 10610 RVA: 0x0006C994 File Offset: 0x0006AB94
+		// Token: 0x060029E9 RID: 10729 RVA: 0x0006DDC8 File Offset: 0x0006BFC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002973 RID: 10611 RVA: 0x0006C9E0 File Offset: 0x0006ABE0
+		// Token: 0x060029EA RID: 10730 RVA: 0x0006DE14 File Offset: 0x0006C014
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BabelActivityDeTermInfo other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06002974 RID: 10612 RVA: 0x0006CA30 File Offset: 0x0006AC30
+		// Token: 0x060029EB RID: 10731 RVA: 0x0006DE64 File Offset: 0x0006C064
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06002975 RID: 10613 RVA: 0x0006CA3C File Offset: 0x0006AC3C
+		// Token: 0x060029EC RID: 10732 RVA: 0x0006DE70 File Offset: 0x0006C070
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -265,22 +265,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040026EA RID: 9962
+		// Token: 0x0400275E RID: 10078
 		private static readonly MessageParser<BabelActivityDeTermInfo> _parser = new MessageParser<BabelActivityDeTermInfo>(() => new BabelActivityDeTermInfo());
 
-		// Token: 0x040026EB RID: 9963
+		// Token: 0x0400275F RID: 10079
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040026EC RID: 9964
+		// Token: 0x04002760 RID: 10080
 		public const int DeTermIdFieldNumber = 1;
 
-		// Token: 0x040026ED RID: 9965
+		// Token: 0x04002761 RID: 10081
 		private int deTermId_;
 
-		// Token: 0x040026EE RID: 9966
+		// Token: 0x04002762 RID: 10082
 		public const int DifficultUnlockFieldNumber = 2;
 
-		// Token: 0x040026EF RID: 9967
+		// Token: 0x04002763 RID: 10083
 		private bool difficultUnlock_;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006735 RID: 26421
+	// Token: 0x02006DB5 RID: 28085
 	public struct IExitVehicleTeleport : IFlatbufferObject
 	{
-		// Token: 0x1700C432 RID: 50226
-		// (get) Token: 0x0602DF51 RID: 188241 RVA: 0x006482C9 File Offset: 0x006464C9
+		// Token: 0x1700CDE8 RID: 52712
+		// (get) Token: 0x06030797 RID: 198551 RVA: 0x00695A0D File Offset: 0x00693C0D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DF52 RID: 188242 RVA: 0x006482D6 File Offset: 0x006464D6
+		// Token: 0x06030798 RID: 198552 RVA: 0x00695A1A File Offset: 0x00693C1A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DF53 RID: 188243 RVA: 0x006482E0 File Offset: 0x006464E0
+		// Token: 0x06030799 RID: 198553 RVA: 0x00695A24 File Offset: 0x00693C24
 		public static IExitVehicleTeleport GetRootAsIExitVehicleTeleport(ByteBuffer _bb)
 		{
 			return IExitVehicleTeleport.GetRootAsIExitVehicleTeleport(_bb, default(IExitVehicleTeleport));
 		}
 
-		// Token: 0x0602DF54 RID: 188244 RVA: 0x006482FC File Offset: 0x006464FC
+		// Token: 0x0603079A RID: 198554 RVA: 0x00695A40 File Offset: 0x00693C40
 		public static IExitVehicleTeleport GetRootAsIExitVehicleTeleport(ByteBuffer _bb, IExitVehicleTeleport obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DF55 RID: 188245 RVA: 0x00648319 File Offset: 0x00646519
+		// Token: 0x0603079B RID: 198555 RVA: 0x00695A5D File Offset: 0x00693C5D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DF56 RID: 188246 RVA: 0x00648328 File Offset: 0x00646528
+		// Token: 0x0603079C RID: 198556 RVA: 0x00695A6C File Offset: 0x00693C6C
 		public IExitVehicleTeleport __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C433 RID: 50227
-		// (get) Token: 0x0602DF57 RID: 188247 RVA: 0x00648338 File Offset: 0x00646538
+		// Token: 0x1700CDE9 RID: 52713
+		// (get) Token: 0x0603079D RID: 198557 RVA: 0x00695A7C File Offset: 0x00693C7C
 		public EExitVehicleType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C434 RID: 50228
-		// (get) Token: 0x0602DF58 RID: 188248 RVA: 0x00648374 File Offset: 0x00646574
+		// Token: 0x1700CDEA RID: 52714
+		// (get) Token: 0x0603079E RID: 198558 RVA: 0x00695AB8 File Offset: 0x00693CB8
 		public IVectorInfo? Pos
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C435 RID: 50229
-		// (get) Token: 0x0602DF59 RID: 188249 RVA: 0x006483D4 File Offset: 0x006465D4
+		// Token: 0x1700CDEB RID: 52715
+		// (get) Token: 0x0603079F RID: 198559 RVA: 0x00695B18 File Offset: 0x00693D18
 		public IVectorInfo? Rot
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DF5A RID: 188250 RVA: 0x00648431 File Offset: 0x00646631
+		// Token: 0x060307A0 RID: 198560 RVA: 0x00695B75 File Offset: 0x00693D75
 		public static Offset<IExitVehicleTeleport> CreateIExitVehicleTeleport(FlatBufferBuilder builder, EExitVehicleType Type = EExitVehicleType.Launch, Offset<IVectorInfo> PosOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> RotOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IExitVehicleTeleport.EndIExitVehicleTeleport(builder);
 		}
 
-		// Token: 0x0602DF5B RID: 188251 RVA: 0x00648455 File Offset: 0x00646655
+		// Token: 0x060307A1 RID: 198561 RVA: 0x00695B99 File Offset: 0x00693D99
 		public static void StartIExitVehicleTeleport(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602DF5C RID: 188252 RVA: 0x0064845E File Offset: 0x0064665E
+		// Token: 0x060307A2 RID: 198562 RVA: 0x00695BA2 File Offset: 0x00693DA2
 		public static void AddType(FlatBufferBuilder builder, EExitVehicleType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602DF5D RID: 188253 RVA: 0x00648469 File Offset: 0x00646669
+		// Token: 0x060307A3 RID: 198563 RVA: 0x00695BAD File Offset: 0x00693DAD
 		public static void AddPos(FlatBufferBuilder builder, Offset<IVectorInfo> posOffset)
 		{
 			builder.AddOffset(1, posOffset.Value, 0);
 		}
 
-		// Token: 0x0602DF5E RID: 188254 RVA: 0x00648479 File Offset: 0x00646679
+		// Token: 0x060307A4 RID: 198564 RVA: 0x00695BBD File Offset: 0x00693DBD
 		public static void AddRot(FlatBufferBuilder builder, Offset<IVectorInfo> rotOffset)
 		{
 			builder.AddOffset(2, rotOffset.Value, 0);
 		}
 
-		// Token: 0x0602DF5F RID: 188255 RVA: 0x00648489 File Offset: 0x00646689
+		// Token: 0x060307A5 RID: 198565 RVA: 0x00695BCD File Offset: 0x00693DCD
 		public static Offset<IExitVehicleTeleport> EndIExitVehicleTeleport(FlatBufferBuilder builder)
 		{
 			return new Offset<IExitVehicleTeleport>(builder.EndTable());
 		}
 
-		// Token: 0x0602DF60 RID: 188256 RVA: 0x00648498 File Offset: 0x00646698
+		// Token: 0x060307A6 RID: 198566 RVA: 0x00695BDC File Offset: 0x00693DDC
 		public IExitVehicleTeleportT UnPack()
 		{
 			IExitVehicleTeleportT exitVehicleTeleportT = new IExitVehicleTeleportT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return exitVehicleTeleportT;
 		}
 
-		// Token: 0x0602DF61 RID: 188257 RVA: 0x006484B4 File Offset: 0x006466B4
+		// Token: 0x060307A7 RID: 198567 RVA: 0x00695BF8 File Offset: 0x00693DF8
 		public void UnPackTo(IExitVehicleTeleportT _o)
 		{
 			_o.Type = this.Type;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.Rot = ((this.Rot != null) ? this.Rot.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602DF62 RID: 188258 RVA: 0x0064852C File Offset: 0x0064672C
+		// Token: 0x060307A8 RID: 198568 RVA: 0x00695C70 File Offset: 0x00693E70
 		public static Offset<IExitVehicleTeleport> Pack(FlatBufferBuilder builder, IExitVehicleTeleportT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IExitVehicleTeleport.CreateIExitVehicleTeleport(builder, _o.Type, posOffset, rotOffset);
 		}
 
-		// Token: 0x04010E17 RID: 69143
+		// Token: 0x04011C49 RID: 72777
 		private Table __p;
 	}
 }

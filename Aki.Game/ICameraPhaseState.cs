@@ -2,67 +2,67 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200107F RID: 4223
+// Token: 0x02000533 RID: 1331
 [NullableContext(1)]
 internal interface ICameraPhaseState
 {
-	// Token: 0x170008F2 RID: 2290
-	// (get) Token: 0x06006D44 RID: 27972
-	// (set) Token: 0x06006D45 RID: 27973
+	// Token: 0x17000912 RID: 2322
+	// (get) Token: 0x060040D9 RID: 16601
+	// (set) Token: 0x060040DA RID: 16602
 	ECameraPhaseType PhaseType { get; set; }
 
-	// Token: 0x170008F3 RID: 2291
-	// (get) Token: 0x06006D46 RID: 27974
-	// (set) Token: 0x06006D47 RID: 27975
+	// Token: 0x17000913 RID: 2323
+	// (get) Token: 0x060040DB RID: 16603
+	// (set) Token: 0x060040DC RID: 16604
 	Vector StartPos { get; set; }
 
-	// Token: 0x170008F4 RID: 2292
-	// (get) Token: 0x06006D48 RID: 27976
-	// (set) Token: 0x06006D49 RID: 27977
+	// Token: 0x17000914 RID: 2324
+	// (get) Token: 0x060040DD RID: 16605
+	// (set) Token: 0x060040DE RID: 16606
 	Rotator StartRot { get; set; }
 
-	// Token: 0x170008F5 RID: 2293
-	// (get) Token: 0x06006D4A RID: 27978
-	// (set) Token: 0x06006D4B RID: 27979
+	// Token: 0x17000915 RID: 2325
+	// (get) Token: 0x060040DF RID: 16607
+	// (set) Token: 0x060040E0 RID: 16608
 	float StartFov { get; set; }
 
-	// Token: 0x170008F6 RID: 2294
-	// (get) Token: 0x06006D4C RID: 27980
-	// (set) Token: 0x06006D4D RID: 27981
+	// Token: 0x17000916 RID: 2326
+	// (get) Token: 0x060040E1 RID: 16609
+	// (set) Token: 0x060040E2 RID: 16610
 	Vector TargetPos { get; set; }
 
-	// Token: 0x170008F7 RID: 2295
-	// (get) Token: 0x06006D4E RID: 27982
-	// (set) Token: 0x06006D4F RID: 27983
+	// Token: 0x17000917 RID: 2327
+	// (get) Token: 0x060040E3 RID: 16611
+	// (set) Token: 0x060040E4 RID: 16612
 	Rotator TargetRot { get; set; }
 
-	// Token: 0x170008F8 RID: 2296
-	// (get) Token: 0x06006D50 RID: 27984
-	// (set) Token: 0x06006D51 RID: 27985
+	// Token: 0x17000918 RID: 2328
+	// (get) Token: 0x060040E5 RID: 16613
+	// (set) Token: 0x060040E6 RID: 16614
 	float TargetFov { get; set; }
 
-	// Token: 0x170008F9 RID: 2297
-	// (get) Token: 0x06006D52 RID: 27986
-	// (set) Token: 0x06006D53 RID: 27987
+	// Token: 0x17000919 RID: 2329
+	// (get) Token: 0x060040E7 RID: 16615
+	// (set) Token: 0x060040E8 RID: 16616
 	float Duration { get; set; }
 
-	// Token: 0x170008FA RID: 2298
-	// (get) Token: 0x06006D54 RID: 27988
-	// (set) Token: 0x06006D55 RID: 27989
+	// Token: 0x1700091A RID: 2330
+	// (get) Token: 0x060040E9 RID: 16617
+	// (set) Token: 0x060040EA RID: 16618
 	float ElapsedTime { get; set; }
 
-	// Token: 0x170008FB RID: 2299
-	// (get) Token: 0x06006D56 RID: 27990
-	// (set) Token: 0x06006D57 RID: 27991
+	// Token: 0x1700091B RID: 2331
+	// (get) Token: 0x060040EB RID: 16619
+	// (set) Token: 0x060040EC RID: 16620
 	FVectorDouble PerformancePos { get; set; }
 
-	// Token: 0x170008FC RID: 2300
-	// (get) Token: 0x06006D58 RID: 27992
-	// (set) Token: 0x06006D59 RID: 27993
+	// Token: 0x1700091C RID: 2332
+	// (get) Token: 0x060040ED RID: 16621
+	// (set) Token: 0x060040EE RID: 16622
 	FRotator PerformanceRot { get; set; }
 
-	// Token: 0x170008FD RID: 2301
-	// (get) Token: 0x06006D5A RID: 27994
-	// (set) Token: 0x06006D5B RID: 27995
+	// Token: 0x1700091D RID: 2333
+	// (get) Token: 0x060040EF RID: 16623
+	// (set) Token: 0x060040F0 RID: 16624
 	float PerformanceFov { get; set; }
 }

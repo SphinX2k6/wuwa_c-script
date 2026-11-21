@@ -4,22 +4,22 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200699B RID: 27035
+	// Token: 0x02005AF7 RID: 23287
 	public class QuestContext : GeneralContext
 	{
-		// Token: 0x0604343F RID: 275519 RVA: 0x01065D84 File Offset: 0x01063F84
+		// Token: 0x06039477 RID: 234615 RVA: 0x01009FEC File Offset: 0x010081EC
 		public QuestContext()
 		{
 			this.Type = new EGeneralContextType?(EGeneralContextType.Quest);
 		}
 
-		// Token: 0x06043440 RID: 275520 RVA: 0x01065D98 File Offset: 0x01063F98
+		// Token: 0x06039478 RID: 234616 RVA: 0x0100A000 File Offset: 0x01008200
 		public override void Reset()
 		{
 			this.QuestId = 0;
 		}
 
-		// Token: 0x06043441 RID: 275521 RVA: 0x01065DA1 File Offset: 0x01063FA1
+		// Token: 0x06039479 RID: 234617 RVA: 0x0100A009 File Offset: 0x01008209
 		[NullableContext(1)]
 		public static QuestContext Create(int questId = 0, GameCtxType? subType = null)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return questContext;
 		}
 
-		// Token: 0x040230A7 RID: 143527
+		// Token: 0x0401E291 RID: 123537
 		public int QuestId;
 	}
 }

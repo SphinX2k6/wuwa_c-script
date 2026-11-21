@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C6B RID: 23659
+	// Token: 0x02004C4B RID: 19531
 	public enum EBattleUiCommonChildVisibleReason
 	{
-		// Token: 0x0401F280 RID: 127616
+		// Token: 0x04019D32 RID: 105778
 		BattleView,
-		// Token: 0x0401F281 RID: 127617
+		// Token: 0x04019D33 RID: 105779
 		PhantomArena,
-		// Token: 0x0401F282 RID: 127618
+		// Token: 0x04019D34 RID: 105780
 		TrapDefense,
-		// Token: 0x0401F283 RID: 127619
+		// Token: 0x04019D35 RID: 105781
 		SurvivorsRogue,
-		// Token: 0x0401F284 RID: 127620
+		// Token: 0x04019D36 RID: 105782
 		MotorcycleArrowBattle,
-		// Token: 0x0401F285 RID: 127621
+		// Token: 0x04019D37 RID: 105783
 		PinballBattle,
-		// Token: 0x0401F286 RID: 127622
+		// Token: 0x04019D38 RID: 105784
 		Kurotato
 	}
 }

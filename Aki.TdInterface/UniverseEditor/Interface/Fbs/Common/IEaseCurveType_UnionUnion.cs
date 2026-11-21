@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D9E RID: 23966
+	// Token: 0x020063DB RID: 25563
 	public class IEaseCurveType_UnionUnion
 	{
-		// Token: 0x1700B379 RID: 45945
-		// (get) Token: 0x06029034 RID: 167988 RVA: 0x005A1EA1 File Offset: 0x005A00A1
-		// (set) Token: 0x06029035 RID: 167989 RVA: 0x005A1EA9 File Offset: 0x005A00A9
+		// Token: 0x1700BCDF RID: 48351
+		// (get) Token: 0x0602B6BE RID: 177854 RVA: 0x005EABD1 File Offset: 0x005E8DD1
+		// (set) Token: 0x0602B6BF RID: 177855 RVA: 0x005EABD9 File Offset: 0x005E8DD9
 		public IEaseCurveType_Union Type { get; set; }
 
-		// Token: 0x1700B37A RID: 45946
-		// (get) Token: 0x06029036 RID: 167990 RVA: 0x005A1EB2 File Offset: 0x005A00B2
-		// (set) Token: 0x06029037 RID: 167991 RVA: 0x005A1EBA File Offset: 0x005A00BA
+		// Token: 0x1700BCE0 RID: 48352
+		// (get) Token: 0x0602B6C0 RID: 177856 RVA: 0x005EABE2 File Offset: 0x005E8DE2
+		// (set) Token: 0x0602B6C1 RID: 177857 RVA: 0x005EABEA File Offset: 0x005E8DEA
 		public object Value { get; set; }
 
-		// Token: 0x06029038 RID: 167992 RVA: 0x005A1EC3 File Offset: 0x005A00C3
+		// Token: 0x0602B6C2 RID: 177858 RVA: 0x005EABF3 File Offset: 0x005E8DF3
 		public IEaseCurveType_UnionUnion()
 		{
 			this.Type = IEaseCurveType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06029039 RID: 167993 RVA: 0x005A1ED9 File Offset: 0x005A00D9
+		// Token: 0x0602B6C3 RID: 177859 RVA: 0x005EAC09 File Offset: 0x005E8E09
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602903A RID: 167994 RVA: 0x005A1EEB File Offset: 0x005A00EB
+		// Token: 0x0602B6C4 RID: 177860 RVA: 0x005EAC1B File Offset: 0x005E8E1B
 		public IEaseCurveTypeT AsIEaseCurveType()
 		{
 			return this.As<IEaseCurveTypeT>();
 		}
 
-		// Token: 0x0602903B RID: 167995 RVA: 0x005A1EF3 File Offset: 0x005A00F3
+		// Token: 0x0602B6C5 RID: 177861 RVA: 0x005EAC23 File Offset: 0x005E8E23
 		public static IEaseCurveType_UnionUnion FromIEaseCurveType(IEaseCurveTypeT _ieasecurvetype)
 		{
 			return new IEaseCurveType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x0602903C RID: 167996 RVA: 0x005A1F08 File Offset: 0x005A0108
+		// Token: 0x0602B6C6 RID: 177862 RVA: 0x005EAC38 File Offset: 0x005E8E38
 		public IEaseCurvePresetT AsIEaseCurvePreset()
 		{
 			return this.As<IEaseCurvePresetT>();
 		}
 
-		// Token: 0x0602903D RID: 167997 RVA: 0x005A1F10 File Offset: 0x005A0110
+		// Token: 0x0602B6C7 RID: 177863 RVA: 0x005EAC40 File Offset: 0x005E8E40
 		public static IEaseCurveType_UnionUnion FromIEaseCurvePreset(IEaseCurvePresetT _ieasecurvepreset)
 		{
 			return new IEaseCurveType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x0602903E RID: 167998 RVA: 0x005A1F25 File Offset: 0x005A0125
+		// Token: 0x0602B6C8 RID: 177864 RVA: 0x005EAC55 File Offset: 0x005E8E55
 		public IEaseCurveCustomT AsIEaseCurveCustom()
 		{
 			return this.As<IEaseCurveCustomT>();
 		}
 
-		// Token: 0x0602903F RID: 167999 RVA: 0x005A1F2D File Offset: 0x005A012D
+		// Token: 0x0602B6C9 RID: 177865 RVA: 0x005EAC5D File Offset: 0x005E8E5D
 		public static IEaseCurveType_UnionUnion FromIEaseCurveCustom(IEaseCurveCustomT _ieasecurvecustom)
 		{
 			return new IEaseCurveType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029040 RID: 168000 RVA: 0x005A1F44 File Offset: 0x005A0144
+		// Token: 0x0602B6CA RID: 177866 RVA: 0x005EAC74 File Offset: 0x005E8E74
 		public static int Pack(FlatBufferBuilder builder, IEaseCurveType_UnionUnion _o)
 		{
 			switch (_o.Type)

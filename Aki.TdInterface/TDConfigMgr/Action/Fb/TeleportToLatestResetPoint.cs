@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002899 RID: 10393
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B6E RID: 11118
 	public class TeleportToLatestResetPoint : ActionParams
 	{
-		// Token: 0x0600E620 RID: 58912 RVA: 0x0021D1A1 File Offset: 0x0021B3A1
+		// Token: 0x0600F44F RID: 62543 RVA: 0x0023A121 File Offset: 0x00238321
 		public static TeleportToLatestResetPoint Create(ITeleportToLatestResetPoint? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170046B0 RID: 18096
-		// (get) Token: 0x0600E621 RID: 58913 RVA: 0x0021D1C0 File Offset: 0x0021B3C0
+		// Token: 0x17004A21 RID: 18977
+		// (get) Token: 0x0600F450 RID: 62544 RVA: 0x0023A140 File Offset: 0x00238340
 		public virtual ITeleportToLatestResetPointDirectly Option
 		{
 			get
@@ -38,14 +36,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F39 RID: 32569
+		// Token: 0x040085F8 RID: 34296
 		private ITeleportToLatestResetPoint Instance;
 
-		// Token: 0x04007F3A RID: 32570
+		// Token: 0x040085F9 RID: 34297
 		[Nullable(2)]
 		private ITeleportToLatestResetPointDirectly _OptionCache;
 
-		// Token: 0x04007F3B RID: 32571
+		// Token: 0x040085FA RID: 34298
 		private bool _OptionInited;
 	}
 }

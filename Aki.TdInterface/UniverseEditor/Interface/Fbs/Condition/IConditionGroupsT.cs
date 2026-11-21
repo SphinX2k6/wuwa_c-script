@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BEA RID: 19434
+	// Token: 0x020050D7 RID: 20695
 	public class IConditionGroupsT
 	{
-		// Token: 0x17008D28 RID: 36136
-		// (get) Token: 0x0601EC33 RID: 126003 RVA: 0x0044F543 File Offset: 0x0044D743
-		// (set) Token: 0x0601EC34 RID: 126004 RVA: 0x0044F54B File Offset: 0x0044D74B
+		// Token: 0x1700944C RID: 37964
+		// (get) Token: 0x06020819 RID: 133145 RVA: 0x00482BAB File Offset: 0x00480DAB
+		// (set) Token: 0x0602081A RID: 133146 RVA: 0x00482BB3 File Offset: 0x00480DB3
 		public EConditionCount Type { get; set; }
 
-		// Token: 0x17008D29 RID: 36137
-		// (get) Token: 0x0601EC35 RID: 126005 RVA: 0x0044F554 File Offset: 0x0044D754
-		// (set) Token: 0x0601EC36 RID: 126006 RVA: 0x0044F55C File Offset: 0x0044D75C
+		// Token: 0x1700944D RID: 37965
+		// (get) Token: 0x0602081B RID: 133147 RVA: 0x00482BBC File Offset: 0x00480DBC
+		// (set) Token: 0x0602081C RID: 133148 RVA: 0x00482BC4 File Offset: 0x00480DC4
 		public List<IConditionGroupT> Conditions { get; set; }
 
-		// Token: 0x0601EC37 RID: 126007 RVA: 0x0044F565 File Offset: 0x0044D765
+		// Token: 0x0602081D RID: 133149 RVA: 0x00482BCD File Offset: 0x00480DCD
 		public IConditionGroupsT()
 		{
 			this.Type = EConditionCount.All;

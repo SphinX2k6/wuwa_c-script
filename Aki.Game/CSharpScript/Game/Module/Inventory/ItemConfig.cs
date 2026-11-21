@@ -8,12 +8,12 @@ using Google.FlatBuffers;
 
 namespace CSharpScript.Game.Module.Inventory
 {
-	// Token: 0x02005833 RID: 22579
+	// Token: 0x0200480A RID: 18442
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ItemConfig
 	{
-		// Token: 0x060395D8 RID: 234968 RVA: 0x00D9B854 File Offset: 0x00D99A54
+		// Token: 0x0602E4EC RID: 189676 RVA: 0x00CEA708 File Offset: 0x00CE8908
 		public void Refresh(IFlatbufferObject config, InventoryDefine.EItemDataType type, int itemId)
 		{
 			this.Id = itemId;
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x060395D9 RID: 234969 RVA: 0x00D9C180 File Offset: 0x00D9A380
+		// Token: 0x0602E4ED RID: 189677 RVA: 0x00CEB034 File Offset: 0x00CE9234
 		private unsafe void RefreshItemConfig(ItemInfo config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.CommonItem;
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x060395DA RID: 234970 RVA: 0x00D9C350 File Offset: 0x00D9A550
+		// Token: 0x0602E4EE RID: 189678 RVA: 0x00CEB204 File Offset: 0x00CE9404
 		private void RefreshPhantomConfig(PhantomItem config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.PhantomItem;
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.IconBig = config.IconBig;
 		}
 
-		// Token: 0x060395DB RID: 234971 RVA: 0x00D9C41C File Offset: 0x00D9A61C
+		// Token: 0x0602E4EF RID: 189679 RVA: 0x00CEB2D0 File Offset: 0x00CE94D0
 		private void RefreshRogueCurrency(RogueCurrency config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.RogueCurrency;
@@ -409,7 +409,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ObtainedShowDescription = config.ObtainedShowDescription;
 		}
 
-		// Token: 0x060395DC RID: 234972 RVA: 0x00D9C4E8 File Offset: 0x00D9A6E8
+		// Token: 0x0602E4F0 RID: 189680 RVA: 0x00CEB39C File Offset: 0x00CE959C
 		private void RefreshRogueResCurrency(RogueResCurrency config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.RogueResCurrency;
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ObtainedShowDescription = config.ObtainedShowDescription;
 		}
 
-		// Token: 0x060395DD RID: 234973 RVA: 0x00D9C5B4 File Offset: 0x00D9A7B4
+		// Token: 0x0602E4F1 RID: 189681 RVA: 0x00CEB468 File Offset: 0x00CE9668
 		private void RefreshWeaponConfig(WeaponConf config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.WeaponItem;
@@ -452,7 +452,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.IconBig = config.IconBig;
 		}
 
-		// Token: 0x060395DE RID: 234974 RVA: 0x00D9C68C File Offset: 0x00D9A88C
+		// Token: 0x0602E4F2 RID: 189682 RVA: 0x00CEB540 File Offset: 0x00CE9740
 		private void RefreshFlySkinConfig(FlySkinConfig config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.FlySkinItem;
@@ -473,7 +473,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ObtainedShowDescription = config.ObtainedShowDescription;
 		}
 
-		// Token: 0x060395DF RID: 234975 RVA: 0x00D9C75C File Offset: 0x00D9A95C
+		// Token: 0x0602E4F3 RID: 189683 RVA: 0x00CEB610 File Offset: 0x00CE9810
 		private void RefreshWeaponSkinConfig(WeaponSkin config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.WeaponSkinItem;
@@ -482,6 +482,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.Name = config.Name;
 			this.TypeDescription = config.TypeDescription;
 			this.BgDescription = config.BgDescription;
+			this.IconBig = config.IconBig;
 			this.IconMiddle = config.IconMiddle;
 			this.IconSmall = config.IconSmall;
 			this.Mesh = config.Mesh;
@@ -493,7 +494,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ObtainedShowDescription = config.ObtainedShowDescription;
 		}
 
-		// Token: 0x060395E0 RID: 234976 RVA: 0x00D9C820 File Offset: 0x00D9AA20
+		// Token: 0x0602E4F4 RID: 189684 RVA: 0x00CEB6E0 File Offset: 0x00CE98E0
 		private void RefreshPlayerHeadConfig(PlayerHeadRe config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.PlayerHeadItem;
@@ -512,7 +513,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ObtainedShowDescription = config.ObtainedShowDescription;
 		}
 
-		// Token: 0x060395E1 RID: 234977 RVA: 0x00D9C8D8 File Offset: 0x00D9AAD8
+		// Token: 0x0602E4F5 RID: 189685 RVA: 0x00CEB798 File Offset: 0x00CE9998
 		private void RefreshRoleSkinConfig(RoleSkin config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.RoleSkinItem;
@@ -531,7 +532,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ObtainedShowDescription = config.ObtainedShowDescription;
 		}
 
-		// Token: 0x060395E2 RID: 234978 RVA: 0x00D9C990 File Offset: 0x00D9AB90
+		// Token: 0x0602E4F6 RID: 189686 RVA: 0x00CEB850 File Offset: 0x00CE9A50
 		private void RefreshAbyssItemConfig(AbyssItem config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.DangoAbyssItem;
@@ -553,7 +554,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.Mesh = (((abyssQualityById != null) ? abyssQualityById.GetValueOrDefault().Mesh : null) ?? "");
 		}
 
-		// Token: 0x060395E3 RID: 234979 RVA: 0x00D9CA78 File Offset: 0x00D9AC78
+		// Token: 0x0602E4F7 RID: 189687 RVA: 0x00CEB938 File Offset: 0x00CE9B38
 		private void RefreshRoleConfig(RoleInfo config)
 		{
 			SModelConfig modelConfig = ModelUtil.GetModelConfig(config.MeshId);
@@ -576,7 +577,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ObtainedShowDescription = config.ObtainedShowDescription;
 		}
 
-		// Token: 0x060395E4 RID: 234980 RVA: 0x00D9CB4C File Offset: 0x00D9AD4C
+		// Token: 0x0602E4F8 RID: 189688 RVA: 0x00CEBA0C File Offset: 0x00CE9C0C
 		private void RefreshCardConfig(BackgroundCard config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.CardItem;
@@ -597,7 +598,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ObtainedShowDescription = config.ObtainedShowDescription;
 		}
 
-		// Token: 0x060395E5 RID: 234981 RVA: 0x00D9CC0C File Offset: 0x00D9AE0C
+		// Token: 0x0602E4F9 RID: 189689 RVA: 0x00CEBACC File Offset: 0x00CE9CCC
 		private void RefreshPreviewItem(PreviewItem config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.PreviewItem;
@@ -630,7 +631,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.IconBig = config.IconBig;
 		}
 
-		// Token: 0x060395E6 RID: 234982 RVA: 0x00D9CCF8 File Offset: 0x00D9AEF8
+		// Token: 0x0602E4FA RID: 189690 RVA: 0x00CEBBB8 File Offset: 0x00CE9DB8
 		private void RefreshPhantomArenaCardConfig(PhantomBattleCard config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.PhantomArenaCard;
@@ -650,7 +651,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.AttributesDescription = config.AttributesDescription;
 		}
 
-		// Token: 0x060395E7 RID: 234983 RVA: 0x00D9CDAC File Offset: 0x00D9AFAC
+		// Token: 0x0602E4FB RID: 189691 RVA: 0x00CEBC6C File Offset: 0x00CE9E6C
 		private void RefreshPhantomArenaBadgeConfig(PhantomBattleBadge config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.PhantomArenaBadge;
@@ -670,7 +671,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.AttributesDescription = config.AttributesDescription;
 		}
 
-		// Token: 0x060395E8 RID: 234984 RVA: 0x00D9CE60 File Offset: 0x00D9B060
+		// Token: 0x0602E4FC RID: 189692 RVA: 0x00CEBD20 File Offset: 0x00CE9F20
 		private void RefreshHonamiStoryItemConfig(HonamiStoryItem config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.HonamiStoryItem;
@@ -691,7 +692,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.Mesh = config.Mesh;
 		}
 
-		// Token: 0x060395E9 RID: 234985 RVA: 0x00D9CF18 File Offset: 0x00D9B118
+		// Token: 0x0602E4FD RID: 189693 RVA: 0x00CEBDD8 File Offset: 0x00CE9FD8
 		private void RefreshHonamiStoryWeaponConfig(HonamiStoryWeapon config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.HonamiStoryWeapon;
@@ -708,7 +709,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.TypeDescription = config.TypeDescription;
 		}
 
-		// Token: 0x060395EA RID: 234986 RVA: 0x00D9CF88 File Offset: 0x00D9B188
+		// Token: 0x0602E4FE RID: 189694 RVA: 0x00CEBE48 File Offset: 0x00CEA048
 		private void RefreshCalabashSkinConfig(CalabashSkin config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.CalabashSkinItem;
@@ -728,7 +729,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ObtainedShowDescription = config.ObtainedShowDescription;
 		}
 
-		// Token: 0x060395EB RID: 234987 RVA: 0x00D9D048 File Offset: 0x00D9B248
+		// Token: 0x0602E4FF RID: 189695 RVA: 0x00CEBF08 File Offset: 0x00CEA108
 		private unsafe void RefreshInfrastructureItemConfig(ItemInfo config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.InfrastructureItem;
@@ -754,7 +755,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.Mesh = null;
 		}
 
-		// Token: 0x060395EC RID: 234988 RVA: 0x00D9D0F8 File Offset: 0x00D9B2F8
+		// Token: 0x0602E500 RID: 189696 RVA: 0x00CEBFB8 File Offset: 0x00CEA1B8
 		private void RefreshMotorFrameConfig(MotorFrame config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.MotorFrameItem;
@@ -772,7 +773,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.IconBig = config.IconBig;
 		}
 
-		// Token: 0x060395ED RID: 234989 RVA: 0x00D9D1A0 File Offset: 0x00D9B3A0
+		// Token: 0x0602E501 RID: 189697 RVA: 0x00CEC060 File Offset: 0x00CEA260
 		private void RefreshMotorStickerConfig(MotorSticker config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.MotorStickerItem;
@@ -789,7 +790,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.Mesh = null;
 		}
 
-		// Token: 0x060395EE RID: 234990 RVA: 0x00D9D238 File Offset: 0x00D9B438
+		// Token: 0x0602E502 RID: 189698 RVA: 0x00CEC0F8 File Offset: 0x00CEA2F8
 		private void RefreshMotorDecorationConfig(MotorDecorations config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.MotorDecorationItem;
@@ -806,7 +807,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.Mesh = null;
 		}
 
-		// Token: 0x060395EF RID: 234991 RVA: 0x00D9D2D0 File Offset: 0x00D9B4D0
+		// Token: 0x0602E503 RID: 189699 RVA: 0x00CEC190 File Offset: 0x00CEA390
 		private void RefreshMotorSkinConfig(MotorSkin config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.MotorSkinItem;
@@ -824,7 +825,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.Mesh = null;
 		}
 
-		// Token: 0x060395F0 RID: 234992 RVA: 0x00D9D378 File Offset: 0x00D9B578
+		// Token: 0x0602E504 RID: 189700 RVA: 0x00CEC238 File Offset: 0x00CEA438
 		private void RefreshPhoneChatDialogShowConfig(ChatDialog config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.PhoneChatDialog;
@@ -847,7 +848,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ShowPreview = true;
 		}
 
-		// Token: 0x060395F1 RID: 234993 RVA: 0x00D9D448 File Offset: 0x00D9B648
+		// Token: 0x0602E505 RID: 189701 RVA: 0x00CEC308 File Offset: 0x00CEA508
 		private void RefreshPhoneChatBackGroundConfig(ChatBg config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.PhoneChatBackGround;
@@ -870,7 +871,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ShowPreview = true;
 		}
 
-		// Token: 0x060395F2 RID: 234994 RVA: 0x00D9D518 File Offset: 0x00D9B718
+		// Token: 0x0602E506 RID: 189702 RVA: 0x00CEC3D8 File Offset: 0x00CEA5D8
 		private void RefreshPhoneChatThemeConfig(ChatTheme config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.PhoneChatTheme;
@@ -893,7 +894,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ShowPreview = true;
 		}
 
-		// Token: 0x060395F3 RID: 234995 RVA: 0x00D9D5E8 File Offset: 0x00D9B7E8
+		// Token: 0x0602E507 RID: 189703 RVA: 0x00CEC4A8 File Offset: 0x00CEA6A8
 		private void RefreshPhoneChatCharmConfig(ChatCharm config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.PhoneChatCharm;
@@ -916,7 +917,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ShowPreview = true;
 		}
 
-		// Token: 0x060395F4 RID: 234996 RVA: 0x00D9D6B8 File Offset: 0x00D9B8B8
+		// Token: 0x0602E508 RID: 189704 RVA: 0x00CEC578 File Offset: 0x00CEA778
 		private void RefreshFurnitureConfig(Furniture config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.FurnitureItem;
@@ -933,7 +934,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ShowInBag = false;
 		}
 
-		// Token: 0x060395F5 RID: 234997 RVA: 0x00D9D740 File Offset: 0x00D9B940
+		// Token: 0x0602E509 RID: 189705 RVA: 0x00CEC600 File Offset: 0x00CEA800
 		private void RefreshPinballRoleConfig(PinballRoleConfig config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.PinballRoleItem;
@@ -943,7 +944,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.Name = (((RoleConfig.Instance.GetRoleConfig(config.RoleId) != null) ? roleInfo.GetValueOrDefault().Name : null) ?? "");
 		}
 
-		// Token: 0x060395F6 RID: 234998 RVA: 0x00D9D7A5 File Offset: 0x00D9B9A5
+		// Token: 0x0602E50A RID: 189706 RVA: 0x00CEC665 File Offset: 0x00CEA865
 		private void RefreshPinballWeaponConfig(PinballWeaponConfig config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.PinballWeaponItem;
@@ -953,7 +954,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.QualityId = config.QualityId;
 		}
 
-		// Token: 0x060395F7 RID: 234999 RVA: 0x00D9D7DD File Offset: 0x00D9B9DD
+		// Token: 0x0602E50B RID: 189707 RVA: 0x00CEC69D File Offset: 0x00CEA89D
 		private void RefreshDangoBrawlRoleConfig(DangoBrawlRole config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.DangoBrawlRoleItem;
@@ -963,7 +964,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.QualityId = config.QualityId;
 		}
 
-		// Token: 0x060395F8 RID: 235000 RVA: 0x00D9D818 File Offset: 0x00D9BA18
+		// Token: 0x0602E50C RID: 189708 RVA: 0x00CEC6D8 File Offset: 0x00CEA8D8
 		private void RefreshOrnamentConfig(Ornament config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.OrnamentItem;
@@ -984,7 +985,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ShowPreview = true;
 		}
 
-		// Token: 0x060395F9 RID: 235001 RVA: 0x00D9D8D8 File Offset: 0x00D9BAD8
+		// Token: 0x0602E50D RID: 189709 RVA: 0x00CEC798 File Offset: 0x00CEA998
 		private void RefreshRoverRogueCurrency(RoverRogueCurrency config)
 		{
 			this.ItemDataType = InventoryDefine.EItemDataType.RoverRogueCurrency;
@@ -1005,89 +1006,89 @@ namespace CSharpScript.Game.Module.Inventory
 			this.ObtainedShowDescription = config.ObtainedShowDescription;
 		}
 
-		// Token: 0x0401E022 RID: 122914
+		// Token: 0x04018ABB RID: 101051
 		public int Id;
 
-		// Token: 0x0401E023 RID: 122915
+		// Token: 0x04018ABC RID: 101052
 		public InventoryDefine.EItemDataType ItemDataType;
 
-		// Token: 0x0401E024 RID: 122916
+		// Token: 0x04018ABD RID: 101053
 		public InventoryDefine.EItemType? ItemType;
 
-		// Token: 0x0401E025 RID: 122917
+		// Token: 0x04018ABE RID: 101054
 		public InventoryDefine.EItemMainTypeId MainTypeId = InventoryDefine.EItemMainTypeId.Common;
 
-		// Token: 0x0401E026 RID: 122918
+		// Token: 0x04018ABF RID: 101055
 		public string Name = "";
 
-		// Token: 0x0401E027 RID: 122919
+		// Token: 0x04018AC0 RID: 101056
 		[Nullable(2)]
 		public string TypeDescription;
 
-		// Token: 0x0401E028 RID: 122920
+		// Token: 0x04018AC1 RID: 101057
 		public string AttributesDescription = "";
 
-		// Token: 0x0401E029 RID: 122921
+		// Token: 0x04018AC2 RID: 101058
 		public string[] AttributesDescriptionArgs = Array.Empty<string>();
 
-		// Token: 0x0401E02A RID: 122922
+		// Token: 0x04018AC3 RID: 101059
 		public string ObtainedShowDescription = "";
 
-		// Token: 0x0401E02B RID: 122923
+		// Token: 0x04018AC4 RID: 101060
 		[Nullable(2)]
 		public string BgDescription;
 
-		// Token: 0x0401E02C RID: 122924
+		// Token: 0x04018AC5 RID: 101061
 		public bool ShowInBag;
 
-		// Token: 0x0401E02D RID: 122925
+		// Token: 0x04018AC6 RID: 101062
 		public string Icon = "";
 
-		// Token: 0x0401E02E RID: 122926
+		// Token: 0x04018AC7 RID: 101063
 		[Nullable(2)]
 		public string IconBig;
 
-		// Token: 0x0401E02F RID: 122927
+		// Token: 0x04018AC8 RID: 101064
 		[Nullable(2)]
 		public string IconMiddle;
 
-		// Token: 0x0401E030 RID: 122928
+		// Token: 0x04018AC9 RID: 101065
 		[Nullable(2)]
 		public string IconSmall;
 
-		// Token: 0x0401E031 RID: 122929
+		// Token: 0x04018ACA RID: 101066
 		[Nullable(2)]
 		public string Mesh;
 
-		// Token: 0x0401E032 RID: 122930
+		// Token: 0x04018ACB RID: 101067
 		public int QualityId;
 
-		// Token: 0x0401E033 RID: 122931
+		// Token: 0x04018ACC RID: 101068
 		[Nullable(2)]
 		public int[] ItemAccess = Array.Empty<int>();
 
-		// Token: 0x0401E034 RID: 122932
+		// Token: 0x04018ACD RID: 101069
 		public int SortIndex;
 
-		// Token: 0x0401E035 RID: 122933
+		// Token: 0x04018ACE RID: 101070
 		public InventoryDefine.ERedDotDisableRule RedDotDisableRule;
 
-		// Token: 0x0401E036 RID: 122934
+		// Token: 0x04018ACF RID: 101071
 		public Dictionary<int, int> Parameters = new Dictionary<int, int>();
 
-		// Token: 0x0401E037 RID: 122935
+		// Token: 0x04018AD0 RID: 101072
 		public Dictionary<int, int> ExpiredConvertItemMap = new Dictionary<int, int>();
 
-		// Token: 0x0401E038 RID: 122936
+		// Token: 0x04018AD1 RID: 101073
 		public int ItemBuffType;
 
-		// Token: 0x0401E039 RID: 122937
+		// Token: 0x04018AD2 RID: 101074
 		public int[] ShowTypes = Array.Empty<int>();
 
-		// Token: 0x0401E03A RID: 122938
+		// Token: 0x04018AD3 RID: 101075
 		public ESkipName PreviewType = ESkipName.NoSkip;
 
-		// Token: 0x0401E03B RID: 122939
+		// Token: 0x04018AD4 RID: 101076
 		public bool ShowPreview;
 	}
 }

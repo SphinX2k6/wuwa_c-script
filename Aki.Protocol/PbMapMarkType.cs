@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000C09 RID: 3081
+	// Token: 0x02000BF9 RID: 3065
 	public sealed class PbMapMarkType : IMessage<PbMapMarkType>, IMessage, IEquatable<PbMapMarkType>, IDeepCloneable<PbMapMarkType>, IBufferMessage
 	{
-		// Token: 0x06010BAE RID: 68526 RVA: 0x0027357B File Offset: 0x0027177B
+		// Token: 0x06010AAE RID: 68270 RVA: 0x00271813 File Offset: 0x0026FA13
 		[NullableContext(1)]
 		public static PbMapMarkType Create()
 		{
 			return new PbMapMarkType();
 		}
 
-		// Token: 0x17003736 RID: 14134
-		// (get) Token: 0x06010BAF RID: 68527 RVA: 0x00273582 File Offset: 0x00271782
+		// Token: 0x170036FF RID: 14079
+		// (get) Token: 0x06010AAF RID: 68271 RVA: 0x0027181A File Offset: 0x0026FA1A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003737 RID: 14135
-		// (get) Token: 0x06010BB0 RID: 68528 RVA: 0x00273585 File Offset: 0x00271785
+		// Token: 0x17003700 RID: 14080
+		// (get) Token: 0x06010AB0 RID: 68272 RVA: 0x0027181D File Offset: 0x0026FA1D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010BB1 RID: 68529 RVA: 0x0027358C File Offset: 0x0027178C
+		// Token: 0x06010AB1 RID: 68273 RVA: 0x00271824 File Offset: 0x0026FA24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PbMapMarkType()
 		{
 		}
 
-		// Token: 0x06010BB2 RID: 68530 RVA: 0x00273594 File Offset: 0x00271794
+		// Token: 0x06010AB2 RID: 68274 RVA: 0x0027182C File Offset: 0x0026FA2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PbMapMarkType(PbMapMarkType other) : this()
@@ -56,7 +56,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06010BB3 RID: 68531 RVA: 0x002735AD File Offset: 0x002717AD
+		// Token: 0x06010AB3 RID: 68275 RVA: 0x00271845 File Offset: 0x0026FA45
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PbMapMarkType Clone()
@@ -64,7 +64,7 @@ namespace Aki.Protocol
 			return new PbMapMarkType(this);
 		}
 
-		// Token: 0x06010BB4 RID: 68532 RVA: 0x002735B5 File Offset: 0x002717B5
+		// Token: 0x06010AB4 RID: 68276 RVA: 0x0027184D File Offset: 0x0026FA4D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PbMapMarkType);
 		}
 
-		// Token: 0x06010BB5 RID: 68533 RVA: 0x002735C3 File Offset: 0x002717C3
+		// Token: 0x06010AB5 RID: 68277 RVA: 0x0027185B File Offset: 0x0026FA5B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PbMapMarkType other)
@@ -80,7 +80,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x06010BB6 RID: 68534 RVA: 0x002735E4 File Offset: 0x002717E4
+		// Token: 0x06010AB6 RID: 68278 RVA: 0x0027187C File Offset: 0x0026FA7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -93,7 +93,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010BB7 RID: 68535 RVA: 0x0027360A File Offset: 0x0027180A
+		// Token: 0x06010AB7 RID: 68279 RVA: 0x002718A2 File Offset: 0x0026FAA2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06010BB8 RID: 68536 RVA: 0x00273617 File Offset: 0x00271817
+		// Token: 0x06010AB8 RID: 68280 RVA: 0x002718AF File Offset: 0x0026FAAF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06010BB9 RID: 68537 RVA: 0x00273620 File Offset: 0x00271820
+		// Token: 0x06010AB9 RID: 68281 RVA: 0x002718B8 File Offset: 0x0026FAB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010BBA RID: 68538 RVA: 0x00273638 File Offset: 0x00271838
+		// Token: 0x06010ABA RID: 68282 RVA: 0x002718D0 File Offset: 0x0026FAD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -133,7 +133,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010BBB RID: 68539 RVA: 0x0027365E File Offset: 0x0027185E
+		// Token: 0x06010ABB RID: 68283 RVA: 0x002718F6 File Offset: 0x0026FAF6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PbMapMarkType other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06010BBC RID: 68540 RVA: 0x0027367B File Offset: 0x0027187B
+		// Token: 0x06010ABC RID: 68284 RVA: 0x00271913 File Offset: 0x0026FB13
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06010BBD RID: 68541 RVA: 0x00273684 File Offset: 0x00271884
+		// Token: 0x06010ABD RID: 68285 RVA: 0x0027191C File Offset: 0x0026FB1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -169,63 +169,63 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006A58 RID: 27224
+		// Token: 0x04006A6C RID: 27244
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0200189E RID: 6302
+		// Token: 0x02001916 RID: 6422
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static class Types
 		{
-			// Token: 0x02001A0E RID: 6670
+			// Token: 0x02001AB0 RID: 6832
 			public enum ENUMS
 			{
-				// Token: 0x0400CC20 RID: 52256
+				// Token: 0x0400D18A RID: 53642
 				[OriginalName("None")]
 				None,
-				// Token: 0x0400CC21 RID: 52257
+				// Token: 0x0400D18B RID: 53643
 				[OriginalName("Custom")]
 				Custom,
-				// Token: 0x0400CC22 RID: 52258
+				// Token: 0x0400D18C RID: 53644
 				[OriginalName("Quest")]
 				Quest,
-				// Token: 0x0400CC23 RID: 52259
+				// Token: 0x0400D18D RID: 53645
 				[OriginalName("Building")]
 				Building,
-				// Token: 0x0400CC24 RID: 52260
+				// Token: 0x0400D18E RID: 53646
 				[OriginalName("TemporaryTeleport")]
 				TemporaryTeleport,
-				// Token: 0x0400CC25 RID: 52261
+				// Token: 0x0400D18F RID: 53647
 				[OriginalName("SoundBox")]
 				SoundBox,
-				// Token: 0x0400CC26 RID: 52262
+				// Token: 0x0400D190 RID: 53648
 				[OriginalName("TreasureBox")]
 				TreasureBox,
-				// Token: 0x0400CC27 RID: 52263
+				// Token: 0x0400D191 RID: 53649
 				[OriginalName("TreasureBoxPoint")]
 				TreasureBoxPoint,
-				// Token: 0x0400CC28 RID: 52264
+				// Token: 0x0400D192 RID: 53650
 				[OriginalName("CalmingWindBell")]
 				CalmingWindBell,
-				// Token: 0x0400CC29 RID: 52265
+				// Token: 0x0400D193 RID: 53651
 				[OriginalName("EnrichmentArea")]
 				EnrichmentArea,
-				// Token: 0x0400CC2A RID: 52266
+				// Token: 0x0400D194 RID: 53652
 				[OriginalName("EnrichmentAreaChild")]
 				EnrichmentAreaChild,
-				// Token: 0x0400CC2B RID: 52267
+				// Token: 0x0400D195 RID: 53653
 				[OriginalName("HookLockSoundBox")]
 				HookLockSoundBox,
-				// Token: 0x0400CC2C RID: 52268
+				// Token: 0x0400D196 RID: 53654
 				[OriginalName("HonamiStory")]
 				HonamiStory,
-				// Token: 0x0400CC2D RID: 52269
+				// Token: 0x0400D197 RID: 53655
 				[OriginalName("HonamiStoryChild")]
 				HonamiStoryChild,
-				// Token: 0x0400CC2E RID: 52270
+				// Token: 0x0400D198 RID: 53656
 				[OriginalName("LahairoHookLock")]
 				LahairoHookLock,
-				// Token: 0x0400CC2F RID: 52271
+				// Token: 0x0400D199 RID: 53657
 				[OriginalName("LiangYuanSoundBox")]
 				LiangYuanSoundBox
 			}

@@ -11,49 +11,49 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 {
-	// Token: 0x0200656B RID: 25963
+	// Token: 0x020054E9 RID: 21737
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ActivityFunPlayController : ActivityControllerBase
 	{
-		// Token: 0x0604110E RID: 266510 RVA: 0x00FC4DCD File Offset: 0x00FC2FCD
+		// Token: 0x06035DD3 RID: 220627 RVA: 0x00F0BDB1 File Offset: 0x00F09FB1
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x0604110F RID: 266511 RVA: 0x00FC4DD0 File Offset: 0x00FC2FD0
+		// Token: 0x06035DD4 RID: 220628 RVA: 0x00F0BDB4 File Offset: 0x00F09FB4
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x06041110 RID: 266512 RVA: 0x00FC4DD2 File Offset: 0x00FC2FD2
+		// Token: 0x06035DD5 RID: 220629 RVA: 0x00F0BDB6 File Offset: 0x00F09FB6
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_ActivityInterestMain";
 		}
 
-		// Token: 0x06041111 RID: 266513 RVA: 0x00FC4DD9 File Offset: 0x00FC2FD9
+		// Token: 0x06035DD6 RID: 220630 RVA: 0x00F0BDBD File Offset: 0x00F09FBD
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new ActivitySubViewFunPlay();
 		}
 
-		// Token: 0x06041112 RID: 266514 RVA: 0x00FC4DE0 File Offset: 0x00FC2FE0
+		// Token: 0x06035DD7 RID: 220631 RVA: 0x00F0BDC4 File Offset: 0x00F09FC4
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			this.Data = new ActivityFunPlayData();
 			return this.Data;
 		}
 
-		// Token: 0x06041113 RID: 266515 RVA: 0x00FC4DF3 File Offset: 0x00FC2FF3
+		// Token: 0x06035DD8 RID: 220632 RVA: 0x00F0BDD7 File Offset: 0x00F09FD7
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.FunPlayChallengeInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnFunPlayChallengeInfoUpdateNotify));
 		}
 
-		// Token: 0x06041114 RID: 266516 RVA: 0x00FC4E14 File Offset: 0x00FC3014
+		// Token: 0x06035DD9 RID: 220633 RVA: 0x00F0BDF8 File Offset: 0x00F09FF8
 		[NullableContext(2)]
 		private void OnFunPlayChallengeInfoUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			EventSystem.Instance.Emit(EEventName.ActivityFunPlayInfoRefresh);
 		}
 
-		// Token: 0x06041115 RID: 266517 RVA: 0x00FC4E84 File Offset: 0x00FC3084
+		// Token: 0x06035DDA RID: 220634 RVA: 0x00F0BE68 File Offset: 0x00F0A068
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.FunPlayChallengeInfoUpdateNotify);
 		}
 
-		// Token: 0x06041116 RID: 266518 RVA: 0x00FC4E98 File Offset: 0x00FC3098
+		// Token: 0x06035DDB RID: 220635 RVA: 0x00F0BE7C File Offset: 0x00F0A07C
 		public void ChallengeAwardRequest(int challengeId)
 		{
 			FunPlayChallengeAwardRequest funPlayChallengeAwardRequest = FunPlayChallengeAwardRequest.Create();
@@ -89,12 +89,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 				}
 				if (funPlayChallengeAwardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(funPlayChallengeAwardResponse.ErrorCode, 24156, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(funPlayChallengeAwardResponse.ErrorCode, 25841, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x06041117 RID: 266519 RVA: 0x00FC4EE4 File Offset: 0x00FC30E4
+		// Token: 0x06035DDC RID: 220636 RVA: 0x00F0BEC8 File Offset: 0x00F0A0C8
 		public UniTask RequestEnterChallengeAsync(int challengeId)
 		{
 			ActivityFunPlayController.<RequestEnterChallengeAsync>d__10 <RequestEnterChallengeAsync>d__;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			return <RequestEnterChallengeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041118 RID: 266520 RVA: 0x00FC4F30 File Offset: 0x00FC3130
+		// Token: 0x06035DDD RID: 220637 RVA: 0x00F0BF14 File Offset: 0x00F0A114
 		private List<int> GetEnterChallengeRoleIds(int instId)
 		{
 			InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(instId);
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			return ((currentFormationData2 != null) ? currentFormationData2.RoleIdList : null) ?? new List<int>();
 		}
 
-		// Token: 0x06041119 RID: 266521 RVA: 0x00FC507C File Offset: 0x00FC327C
+		// Token: 0x06035DDE RID: 220638 RVA: 0x00F0C060 File Offset: 0x00F0A260
 		[NullableContext(0)]
 		public UniTask<bool> OpenActivityFunPlayView()
 		{
@@ -154,8 +154,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			return <OpenActivityFunPlayView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x17009547 RID: 38215
-		// (get) Token: 0x0604111A RID: 266522 RVA: 0x00FC50B7 File Offset: 0x00FC32B7
+		// Token: 0x170068A9 RID: 26793
+		// (get) Token: 0x06035DDF RID: 220639 RVA: 0x00F0C09B File Offset: 0x00F0A29B
 		public static ActivityFunPlayController Instance
 		{
 			get
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			}
 		}
 
-		// Token: 0x0604111B RID: 266523 RVA: 0x00FC50BE File Offset: 0x00FC32BE
+		// Token: 0x06035DE0 RID: 220640 RVA: 0x00F0C0A2 File Offset: 0x00F0A2A2
 		public static ActivityFunPlayController GetOrCreateInstance()
 		{
 			if (ActivityFunPlayController._Instance == null)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			return ActivityFunPlayController._Instance;
 		}
 
-		// Token: 0x0604111C RID: 266524 RVA: 0x00FC50D2 File Offset: 0x00FC32D2
+		// Token: 0x06035DE1 RID: 220641 RVA: 0x00F0C0B6 File Offset: 0x00F0A2B6
 		public static bool CreateInstance()
 		{
 			if (ActivityFunPlayController._Instance != null)
@@ -185,28 +185,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			return true;
 		}
 
-		// Token: 0x0604111D RID: 266525 RVA: 0x00FC50E8 File Offset: 0x00FC32E8
+		// Token: 0x06035DE2 RID: 220642 RVA: 0x00F0C0CC File Offset: 0x00F0A2CC
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604111E RID: 266526 RVA: 0x00FC50EA File Offset: 0x00FC32EA
+		// Token: 0x06035DE3 RID: 220643 RVA: 0x00F0C0CE File Offset: 0x00F0A2CE
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityFunPlayController._Instance = null;
 		}
 
-		// Token: 0x0604111F RID: 266527 RVA: 0x00FC50F2 File Offset: 0x00FC32F2
+		// Token: 0x06035DE4 RID: 220644 RVA: 0x00F0C0D6 File Offset: 0x00F0A2D6
 		static ActivityFunPlayController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityFunPlayController.CreateStaticDefaultValue), new Action(ActivityFunPlayController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04021E8F RID: 138895
+		// Token: 0x0401C7C0 RID: 116672
 		[Nullable(2)]
 		public ActivityFunPlayData Data;
 
-		// Token: 0x04021E90 RID: 138896
+		// Token: 0x0401C7C1 RID: 116673
 		[Nullable(2)]
 		private static ActivityFunPlayController _Instance;
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000825 RID: 2085
+	// Token: 0x02000841 RID: 2113
 	public class ConfigRogueHotEntryGroupByGroupId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060030F0 RID: 12528 RVA: 0x0016E038 File Offset: 0x0016C238
+		// Token: 0x06003198 RID: 12696 RVA: 0x00175320 File Offset: 0x00173520
 		static ConfigRogueHotEntryGroupByGroupId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueHotEntryGroupByGroupId.CreateStaticDefaultValue), new Action(ConfigRogueHotEntryGroupByGroupId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060030F1 RID: 12529 RVA: 0x0016E058 File Offset: 0x0016C258
+		// Token: 0x06003199 RID: 12697 RVA: 0x00175340 File Offset: 0x00173540
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueHotEntryGroupByGroupId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060030F2 RID: 12530 RVA: 0x0016E0D7 File Offset: 0x0016C2D7
+		// Token: 0x0600319A RID: 12698 RVA: 0x001753BF File Offset: 0x001735BF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueHotEntryGroupByGroupId.LogPair = null;
 			ConfigRogueHotEntryGroupByGroupId.HandleId = 0;
 		}
 
-		// Token: 0x060030F3 RID: 12531 RVA: 0x0016E0E5 File Offset: 0x0016C2E5
+		// Token: 0x0600319B RID: 12699 RVA: 0x001753CD File Offset: 0x001735CD
 		public static void Init()
 		{
 			ConfigRogueHotEntryGroupByGroupId.HandleId = ConfigCommon.InitDataStatement(ConfigRogueHotEntryGroupByGroupId.HandleId, "db_rogue.db", "select BinData from `RogueHotEntryGroup` where GroupId=?");
 		}
 
-		// Token: 0x060030F4 RID: 12532 RVA: 0x0016E100 File Offset: 0x0016C300
+		// Token: 0x0600319C RID: 12700 RVA: 0x001753E8 File Offset: 0x001735E8
 		public static RogueHotEntryGroup? GetConfig(int p0GroupId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRogueHotEntryGroupByGroupId.HandleId, ConfigRogueHotEntryGroupByGroupId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RogueHotEntryGroup?(rootAsRogueHotEntryGroup);
 		}
 
-		// Token: 0x040038E9 RID: 14569
+		// Token: 0x040039AD RID: 14765
 		private const string DB = "db_rogue.db";
 
-		// Token: 0x040038EA RID: 14570
+		// Token: 0x040039AE RID: 14766
 		private const string FILE = "r.肉鸽经典复开.xlsx";
 
-		// Token: 0x040038EB RID: 14571
+		// Token: 0x040039AF RID: 14767
 		private const string TABLE = "RogueHotEntryGroup";
 
-		// Token: 0x040038EC RID: 14572
+		// Token: 0x040039B0 RID: 14768
 		private const string COMMAND = "select BinData from `RogueHotEntryGroup` where GroupId=?";
 
-		// Token: 0x040038ED RID: 14573
+		// Token: 0x040039B1 RID: 14769
 		private const string KEY_PREFIX = "RogueHotEntryGroupByGroupId";
 
-		// Token: 0x040038EE RID: 14574
+		// Token: 0x040039B2 RID: 14770
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040038EF RID: 14575
+		// Token: 0x040039B3 RID: 14771
 		private static int HandleId;
 	}
 }

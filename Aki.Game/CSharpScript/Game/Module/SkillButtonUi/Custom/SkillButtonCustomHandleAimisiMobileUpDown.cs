@@ -3,10 +3,10 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 {
-	// Token: 0x02004C22 RID: 19490
+	// Token: 0x02003BD3 RID: 15315
 	public class SkillButtonCustomHandleAimisiMobileUpDown : SkillButtonCustomHandleBase
 	{
-		// Token: 0x0603271B RID: 206619 RVA: 0x00BC1320 File Offset: 0x00BBF520
+		// Token: 0x060274CE RID: 160974 RVA: 0x00B05F38 File Offset: 0x00B04138
 		public override void Refresh()
 		{
 			if (this.SkillButtonData == null)
@@ -47,13 +47,13 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			this.CustomSkillIconNameModifyMark = (customSkillIconName != this.SkillButtonData.CustomSkillIconName);
 		}
 
-		// Token: 0x0603271C RID: 206620 RVA: 0x00BC149F File Offset: 0x00BBF69F
+		// Token: 0x060274CF RID: 160975 RVA: 0x00B060B7 File Offset: 0x00B042B7
 		public override void RefreshByTagChanged()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0603271D RID: 206621 RVA: 0x00BC14A7 File Offset: 0x00BBF6A7
+		// Token: 0x060274D0 RID: 160976 RVA: 0x00B060BF File Offset: 0x00B042BF
 		public override bool RefreshOnInputControllerChange()
 		{
 			this.Refresh();

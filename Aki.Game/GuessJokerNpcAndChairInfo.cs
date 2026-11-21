@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001056 RID: 4182
+// Token: 0x0200050A RID: 1290
 public class GuessJokerNpcAndChairInfo : IGuessJokerNpcAndChairInfo
 {
-	// Token: 0x170008A7 RID: 2215
-	// (get) Token: 0x06006B25 RID: 27429 RVA: 0x00158FA4 File Offset: 0x001571A4
-	// (set) Token: 0x06006B26 RID: 27430 RVA: 0x00158FAC File Offset: 0x001571AC
+	// Token: 0x170008C7 RID: 2247
+	// (get) Token: 0x06003EBA RID: 16058 RVA: 0x001618CC File Offset: 0x0015FACC
+	// (set) Token: 0x06003EBB RID: 16059 RVA: 0x001618D4 File Offset: 0x0015FAD4
 	public int NpcId { get; set; }
 
-	// Token: 0x170008A8 RID: 2216
-	// (get) Token: 0x06006B27 RID: 27431 RVA: 0x00158FB5 File Offset: 0x001571B5
-	// (set) Token: 0x06006B28 RID: 27432 RVA: 0x00158FBD File Offset: 0x001571BD
+	// Token: 0x170008C8 RID: 2248
+	// (get) Token: 0x06003EBC RID: 16060 RVA: 0x001618DD File Offset: 0x0015FADD
+	// (set) Token: 0x06003EBD RID: 16061 RVA: 0x001618E5 File Offset: 0x0015FAE5
 	public int ChairId { get; set; }
 }

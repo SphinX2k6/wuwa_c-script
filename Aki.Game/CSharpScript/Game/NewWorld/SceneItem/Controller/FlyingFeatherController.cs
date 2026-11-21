@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 {
-	// Token: 0x02007239 RID: 29241
+	// Token: 0x020062EE RID: 25326
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class FlyingFeatherController : ControllerBase
 	{
-		// Token: 0x06047A97 RID: 293527 RVA: 0x012569DC File Offset: 0x01254BDC
+		// Token: 0x0603D3F9 RID: 250873 RVA: 0x011AF67C File Offset: 0x011AD87C
 		protected override void OnTick(float delta)
 		{
 			if (this.FlyingFeatherScanEffectMap.Count == 0)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047A98 RID: 293528 RVA: 0x01256A9C File Offset: 0x01254C9C
+		// Token: 0x0603D3FA RID: 250874 RVA: 0x011AF73C File Offset: 0x011AD93C
 		public int StartFlyingFeatherScanEffect(FTransformDouble transform)
 		{
 			global::Log.Instance.Info(ELogModule.LevelEvent, ELogAuthor.CH, "[FlyingFeatherController] StartChargeSlashScanEffect", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return this.Uid;
 		}
 
-		// Token: 0x06047A99 RID: 293529 RVA: 0x01256B10 File Offset: 0x01254D10
+		// Token: 0x0603D3FB RID: 250875 RVA: 0x011AF7B0 File Offset: 0x011AD9B0
 		public void StopFlyingFeatherScanEffect(int id)
 		{
 			SpecificScanEffectData valueOrDefault = this.FlyingFeatherScanEffectMap.GetValueOrDefault(id);
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.FlyingFeatherScanEffectMap.Remove(id);
 		}
 
-		// Token: 0x06047A9A RID: 293530 RVA: 0x01256B98 File Offset: 0x01254D98
+		// Token: 0x0603D3FC RID: 250876 RVA: 0x011AF838 File Offset: 0x011ADA38
 		public void StopAllFlyingFeatherScanEffect()
 		{
 			foreach (KeyValuePair<int, SpecificScanEffectData> keyValuePair in this.FlyingFeatherScanEffectMap)
@@ -106,8 +106,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.FlyingFeatherScanEffectMap.Clear();
 		}
 
-		// Token: 0x17009E40 RID: 40512
-		// (get) Token: 0x06047A9B RID: 293531 RVA: 0x01256C30 File Offset: 0x01254E30
+		// Token: 0x170073F7 RID: 29687
+		// (get) Token: 0x0603D3FD RID: 250877 RVA: 0x011AF8D0 File Offset: 0x011ADAD0
 		public static FlyingFeatherController Instance
 		{
 			get
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047A9C RID: 293532 RVA: 0x01256C37 File Offset: 0x01254E37
+		// Token: 0x0603D3FE RID: 250878 RVA: 0x011AF8D7 File Offset: 0x011ADAD7
 		public static FlyingFeatherController GetOrCreateInstance()
 		{
 			if (FlyingFeatherController._Instance == null)
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return FlyingFeatherController._Instance;
 		}
 
-		// Token: 0x06047A9D RID: 293533 RVA: 0x01256C4B File Offset: 0x01254E4B
+		// Token: 0x0603D3FF RID: 250879 RVA: 0x011AF8EB File Offset: 0x011ADAEB
 		public static bool CreateInstance()
 		{
 			if (FlyingFeatherController._Instance != null)
@@ -137,33 +137,33 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return true;
 		}
 
-		// Token: 0x06047A9E RID: 293534 RVA: 0x01256C61 File Offset: 0x01254E61
+		// Token: 0x0603D400 RID: 250880 RVA: 0x011AF901 File Offset: 0x011ADB01
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047A9F RID: 293535 RVA: 0x01256C63 File Offset: 0x01254E63
+		// Token: 0x0603D401 RID: 250881 RVA: 0x011AF903 File Offset: 0x011ADB03
 		public static void ResetStaticDefaultValue()
 		{
 			FlyingFeatherController._Instance = null;
 		}
 
-		// Token: 0x06047AA0 RID: 293536 RVA: 0x01256C6B File Offset: 0x01254E6B
+		// Token: 0x0603D402 RID: 250882 RVA: 0x011AF90B File Offset: 0x011ADB0B
 		static FlyingFeatherController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FlyingFeatherController.CreateStaticDefaultValue), new Action(FlyingFeatherController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025B50 RID: 154448
+		// Token: 0x040207BF RID: 133055
 		private const string SCAN_EFFECT_CLASS_PATH = "/Game/Aki/Effect/BluePrint/BP_FX_Common/BP_Fx_Scanning_2_7.BP_Fx_Scanning_2_7_C";
 
-		// Token: 0x04025B51 RID: 154449
+		// Token: 0x040207C0 RID: 133056
 		private int Uid = -1;
 
-		// Token: 0x04025B52 RID: 154450
+		// Token: 0x040207C1 RID: 133057
 		private readonly Dictionary<int, SpecificScanEffectData> FlyingFeatherScanEffectMap = new Dictionary<int, SpecificScanEffectData>();
 
-		// Token: 0x04025B53 RID: 154451
+		// Token: 0x040207C2 RID: 133058
 		[Nullable(2)]
 		private static FlyingFeatherController _Instance;
 	}

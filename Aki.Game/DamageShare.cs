@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02002F30 RID: 12080
+// Token: 0x02002483 RID: 9347
 [NullableContext(1)]
 [Nullable(0)]
 public class DamageShare : BuffEffect
 {
-	// Token: 0x06019BBD RID: 105405 RVA: 0x006B3A33 File Offset: 0x006B1C33
+	// Token: 0x060174C8 RID: 95432 RVA: 0x006D9D4B File Offset: 0x006D7F4B
 	public DamageShare(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019BBE RID: 105406 RVA: 0x006B3A44 File Offset: 0x006B1C44
+	// Token: 0x060174C9 RID: 95433 RVA: 0x006D9D5C File Offset: 0x006D7F5C
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -30,7 +30,7 @@ public class DamageShare : BuffEffect
 		this.ShareRate = AbilityUtils.GetLevelValue<float>(extraEffectGrowParameters, this.Level, 0f) * 0.0001f;
 	}
 
-	// Token: 0x06019BBF RID: 105407 RVA: 0x006B3A9C File Offset: 0x006B1C9C
+	// Token: 0x060174CA RID: 95434 RVA: 0x006D9DB4 File Offset: 0x006D7FB4
 	public static void ApplyBuffShare(Entity victim, Damage damageData, IBuffDamageParam damageParam, Partial_RequirementPayload payload, long contextId)
 	{
 		foreach (KeyValuePair<int, float> keyValuePair in DamageShare.GetShareRateMap(victim, damageData))
@@ -61,7 +61,7 @@ public class DamageShare : BuffEffect
 		}
 	}
 
-	// Token: 0x06019BC0 RID: 105408 RVA: 0x006B3B74 File Offset: 0x006B1D74
+	// Token: 0x060174CB RID: 95435 RVA: 0x006D9E8C File Offset: 0x006D808C
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
@@ -91,7 +91,7 @@ public class DamageShare : BuffEffect
 		return new ValueTuple<int?, float>(null, 0f);
 	}
 
-	// Token: 0x06019BC1 RID: 105409 RVA: 0x006B3C38 File Offset: 0x006B1E38
+	// Token: 0x060174CC RID: 95436 RVA: 0x006D9F50 File Offset: 0x006D8150
 	protected bool IsShareable(ECalculationType calculateType)
 	{
 		EDamageShareType shareType = this.ShareType;
@@ -102,7 +102,7 @@ public class DamageShare : BuffEffect
 		return calculateType == ECalculationType.Hurt;
 	}
 
-	// Token: 0x06019BC2 RID: 105410 RVA: 0x006B3C60 File Offset: 0x006B1E60
+	// Token: 0x060174CD RID: 95437 RVA: 0x006D9F78 File Offset: 0x006D8178
 	protected static Dictionary<int, float> GetShareRateMap(Entity victim, Damage damageData)
 	{
 		BaseBuffComponent component = victim.GetComponent<BaseBuffComponent>();
@@ -160,9 +160,9 @@ public class DamageShare : BuffEffect
 		return dictionary;
 	}
 
-	// Token: 0x0400C1F9 RID: 49657
+	// Token: 0x0400C59B RID: 50587
 	public EDamageShareType ShareType;
 
-	// Token: 0x0400C1FA RID: 49658
+	// Token: 0x0400C59C RID: 50588
 	public float ShareRate;
 }

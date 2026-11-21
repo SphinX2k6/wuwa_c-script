@@ -4,18 +4,18 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001AEC RID: 6892
+// Token: 0x02000FAB RID: 4011
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchWageSettleAction : FloroRanchAsyncActionBase
 {
-	// Token: 0x0600CC32 RID: 52274 RVA: 0x002E98AF File Offset: 0x002E7AAF
+	// Token: 0x0600A043 RID: 41027 RVA: 0x002F4A43 File Offset: 0x002F2C43
 	public FloroRanchWageSettleAction(FloroRanchWageSettleTask wageSettleData)
 	{
 		this.WageSettleData = wageSettleData;
 	}
 
-	// Token: 0x0600CC33 RID: 52275 RVA: 0x002E98C0 File Offset: 0x002E7AC0
+	// Token: 0x0600A044 RID: 41028 RVA: 0x002F4A54 File Offset: 0x002F2C54
 	public override UniTask OnExecute()
 	{
 		FloroRanchWageSettleAction.<OnExecute>d__2 <OnExecute>d__;
@@ -26,7 +26,7 @@ public class FloroRanchWageSettleAction : FloroRanchAsyncActionBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CC34 RID: 52276 RVA: 0x002E9904 File Offset: 0x002E7B04
+	// Token: 0x0600A045 RID: 41029 RVA: 0x002F4A98 File Offset: 0x002F2C98
 	private UniTask ExecuteWageSettle(FRUnitResourcesChangeAction changeData)
 	{
 		FloroRanchWageSettleAction.<ExecuteWageSettle>d__3 <ExecuteWageSettle>d__;
@@ -38,6 +38,6 @@ public class FloroRanchWageSettleAction : FloroRanchAsyncActionBase
 		return <ExecuteWageSettle>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005DDD RID: 24029
+	// Token: 0x04005EAC RID: 24236
 	private readonly FloroRanchWageSettleTask WageSettleData;
 }

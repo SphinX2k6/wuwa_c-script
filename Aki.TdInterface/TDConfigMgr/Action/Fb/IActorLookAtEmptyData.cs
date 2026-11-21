@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200259E RID: 9630
+	// Token: 0x0200284D RID: 10317
 	public class IActorLookAtEmptyData : IActorLookAtLockable
 	{
-		// Token: 0x0600D8BD RID: 55485 RVA: 0x00205A9E File Offset: 0x00203C9E
-		[NullableContext(1)]
+		// Token: 0x0600E637 RID: 58935 RVA: 0x00221772 File Offset: 0x0021F972
 		public static IActorLookAtEmptyData Create(IActorLookAtEmptyData? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F43 RID: 16195
-		// (get) Token: 0x0600D8BE RID: 55486 RVA: 0x00205ABD File Offset: 0x00203CBD
+		// Token: 0x1700424B RID: 16971
+		// (get) Token: 0x0600E638 RID: 58936 RVA: 0x00221791 File Offset: 0x0021F991
 		public override EActorLookAtMode Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F44 RID: 16196
-		// (get) Token: 0x0600D8BF RID: 55487 RVA: 0x00205ACC File Offset: 0x00203CCC
+		// Token: 0x1700424C RID: 16972
+		// (get) Token: 0x0600E639 RID: 58937 RVA: 0x002217A0 File Offset: 0x0021F9A0
 		public override bool? Lock
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007874 RID: 30836
+		// Token: 0x04007EDB RID: 32475
 		private IActorLookAtEmptyData Instance;
 	}
 }

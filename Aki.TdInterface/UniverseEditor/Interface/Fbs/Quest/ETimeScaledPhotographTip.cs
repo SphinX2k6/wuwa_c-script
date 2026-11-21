@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CDD RID: 15581
+	// Token: 0x020040F4 RID: 16628
 	public enum ETimeScaledPhotographTip : byte
 	{
-		// Token: 0x0400B544 RID: 46404
+		// Token: 0x0400BEF1 RID: 48881
 		NoTip,
-		// Token: 0x0400B545 RID: 46405
+		// Token: 0x0400BEF2 RID: 48882
 		ViewFinder,
-		// Token: 0x0400B546 RID: 46406
+		// Token: 0x0400BEF3 RID: 48883
 		AutoViewFinder
 	}
 }

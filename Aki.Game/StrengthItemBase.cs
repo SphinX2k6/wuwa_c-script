@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F64 RID: 8036
+// Token: 0x02001426 RID: 5158
 [NullableContext(1)]
 [Nullable(0)]
 public class StrengthItemBase : UiPanelBase
 {
-	// Token: 0x0600F943 RID: 63811 RVA: 0x003C65EC File Offset: 0x003C47EC
+	// Token: 0x0600CD62 RID: 52578 RVA: 0x003D20D8 File Offset: 0x003D02D8
 	public void Init(UUIItem parentItem, [Nullable(2)] BattleUiRoleData roleData, Action<bool> uiVisibleChanged)
 	{
 		this.RoleData = roleData;
@@ -25,7 +25,7 @@ public class StrengthItemBase : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600F944 RID: 63812 RVA: 0x003C663C File Offset: 0x003C483C
+	// Token: 0x0600CD63 RID: 52579 RVA: 0x003D2128 File Offset: 0x003D0328
 	protected virtual UniTask InitAsync(UUIItem parentItem)
 	{
 		StrengthItemBase.<InitAsync>d__9 <InitAsync>d__;
@@ -37,13 +37,13 @@ public class StrengthItemBase : UiPanelBase
 		return <InitAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F945 RID: 63813 RVA: 0x003C6687 File Offset: 0x003C4887
+	// Token: 0x0600CD64 RID: 52580 RVA: 0x003D2173 File Offset: 0x003D0373
 	protected virtual string GetResourceId()
 	{
 		return "UiItem_Endurance";
 	}
 
-	// Token: 0x0600F946 RID: 63814 RVA: 0x003C668E File Offset: 0x003C488E
+	// Token: 0x0600CD65 RID: 52581 RVA: 0x003D217A File Offset: 0x003D037A
 	protected override void OnStart()
 	{
 		this.IsAfterStart = true;
@@ -56,7 +56,7 @@ public class StrengthItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F947 RID: 63815 RVA: 0x003C66B9 File Offset: 0x003C48B9
+	// Token: 0x0600CD66 RID: 52582 RVA: 0x003D21A5 File Offset: 0x003D03A5
 	protected override void OnBeforeShow()
 	{
 		Action<bool> uiVisibleChanged = this.UiVisibleChanged;
@@ -67,7 +67,7 @@ public class StrengthItemBase : UiPanelBase
 		uiVisibleChanged(true);
 	}
 
-	// Token: 0x0600F948 RID: 63816 RVA: 0x003C66CC File Offset: 0x003C48CC
+	// Token: 0x0600CD67 RID: 52583 RVA: 0x003D21B8 File Offset: 0x003D03B8
 	protected override void OnAfterHide()
 	{
 		Action<bool> uiVisibleChanged = this.UiVisibleChanged;
@@ -78,7 +78,7 @@ public class StrengthItemBase : UiPanelBase
 		uiVisibleChanged(false);
 	}
 
-	// Token: 0x0600F949 RID: 63817 RVA: 0x003C66DF File Offset: 0x003C48DF
+	// Token: 0x0600CD68 RID: 52584 RVA: 0x003D21CB File Offset: 0x003D03CB
 	protected override void OnBeforeDestroy()
 	{
 		this.OnRemoveEvents();
@@ -87,7 +87,7 @@ public class StrengthItemBase : UiPanelBase
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600F94A RID: 63818 RVA: 0x003C66FB File Offset: 0x003C48FB
+	// Token: 0x0600CD69 RID: 52585 RVA: 0x003D21E7 File Offset: 0x003D03E7
 	public override void SetActive(bool visibility)
 	{
 		if (this.TargetActive == visibility)
@@ -98,7 +98,7 @@ public class StrengthItemBase : UiPanelBase
 		base.SetActive(visibility);
 	}
 
-	// Token: 0x0600F94B RID: 63819 RVA: 0x003C6715 File Offset: 0x003C4915
+	// Token: 0x0600CD6A RID: 52586 RVA: 0x003D2201 File Offset: 0x003D0401
 	[NullableContext(2)]
 	public void RefreshRoleData(BattleUiRoleData roleData)
 	{
@@ -118,28 +118,28 @@ public class StrengthItemBase : UiPanelBase
 		this.OnRefreshRoleData();
 	}
 
-	// Token: 0x0600F94C RID: 63820 RVA: 0x003C674F File Offset: 0x003C494F
+	// Token: 0x0600CD6B RID: 52587 RVA: 0x003D223B File Offset: 0x003D043B
 	public virtual void Tick(float delta)
 	{
 	}
 
-	// Token: 0x0600F94D RID: 63821 RVA: 0x003C6751 File Offset: 0x003C4951
+	// Token: 0x0600CD6C RID: 52588 RVA: 0x003D223D File Offset: 0x003D043D
 	public bool GetUiVisible()
 	{
 		return base.IsShowing || base.IsShow;
 	}
 
-	// Token: 0x0600F94E RID: 63822 RVA: 0x003C6763 File Offset: 0x003C4963
+	// Token: 0x0600CD6D RID: 52589 RVA: 0x003D224F File Offset: 0x003D044F
 	protected virtual void OnAddEvents()
 	{
 	}
 
-	// Token: 0x0600F94F RID: 63823 RVA: 0x003C6765 File Offset: 0x003C4965
+	// Token: 0x0600CD6E RID: 52590 RVA: 0x003D2251 File Offset: 0x003D0451
 	protected virtual void OnRemoveEvents()
 	{
 	}
 
-	// Token: 0x0600F950 RID: 63824 RVA: 0x003C6768 File Offset: 0x003C4968
+	// Token: 0x0600CD6F RID: 52591 RVA: 0x003D2254 File Offset: 0x003D0454
 	public unsafe void SetEnableByHighPriority(bool b, bool force = false)
 	{
 		if (this.EnableByHighPriority == b && !force)
@@ -162,27 +162,27 @@ public class StrengthItemBase : UiPanelBase
 		this.OnEnableByHighPriority(b);
 	}
 
-	// Token: 0x0600F951 RID: 63825 RVA: 0x003C67FE File Offset: 0x003C49FE
+	// Token: 0x0600CD70 RID: 52592 RVA: 0x003D22EA File Offset: 0x003D04EA
 	protected virtual void OnEnableByHighPriority(bool b)
 	{
 	}
 
-	// Token: 0x0600F952 RID: 63826 RVA: 0x003C6800 File Offset: 0x003C4A00
+	// Token: 0x0600CD71 RID: 52593 RVA: 0x003D22EC File Offset: 0x003D04EC
 	protected virtual void OnAddEntityEvents()
 	{
 	}
 
-	// Token: 0x0600F953 RID: 63827 RVA: 0x003C6802 File Offset: 0x003C4A02
+	// Token: 0x0600CD72 RID: 52594 RVA: 0x003D22EE File Offset: 0x003D04EE
 	protected virtual void OnRemoveEntityEvents()
 	{
 	}
 
-	// Token: 0x0600F954 RID: 63828 RVA: 0x003C6804 File Offset: 0x003C4A04
+	// Token: 0x0600CD73 RID: 52595 RVA: 0x003D22F0 File Offset: 0x003D04F0
 	protected virtual void OnRefreshRoleData()
 	{
 	}
 
-	// Token: 0x0600F955 RID: 63829 RVA: 0x003C6808 File Offset: 0x003C4A08
+	// Token: 0x0600CD74 RID: 52596 RVA: 0x003D22F4 File Offset: 0x003D04F4
 	protected void ListenForTagAddOrRemove(BaseTagComponent tagComponent, int? tagId, Action<int, bool> callback)
 	{
 		ITagTask tagTask = tagComponent.ListenForTagAddOrRemove(tagId, new BaseTagComponent.TTagSwitchedCallback(callback.Invoke), StrengthItemBase.ListenTagStat);
@@ -192,7 +192,7 @@ public class StrengthItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F956 RID: 63830 RVA: 0x003C6840 File Offset: 0x003C4A40
+	// Token: 0x0600CD75 RID: 52597 RVA: 0x003D232C File Offset: 0x003D052C
 	protected void ClearTagTask()
 	{
 		foreach (ITagTask tagTask in this.TagTaskList)
@@ -202,7 +202,7 @@ public class StrengthItemBase : UiPanelBase
 		this.TagTaskList.Clear();
 	}
 
-	// Token: 0x0600F957 RID: 63831 RVA: 0x003C689C File Offset: 0x003C4A9C
+	// Token: 0x0600CD76 RID: 52598 RVA: 0x003D2388 File Offset: 0x003D0588
 	protected void ListenForAttributeChanged(EAttributeType attributeId, Action<EAttributeType, float, float> onAttributeChanged)
 	{
 		if (attributeId <= EAttributeType.None)
@@ -219,7 +219,7 @@ public class StrengthItemBase : UiPanelBase
 		this.AttributeChangedCallbackMap[attributeId] = onAttributeChanged;
 	}
 
-	// Token: 0x0600F958 RID: 63832 RVA: 0x003C68DC File Offset: 0x003C4ADC
+	// Token: 0x0600CD77 RID: 52599 RVA: 0x003D23C8 File Offset: 0x003D05C8
 	protected void RemoveListenAttributeChanged(EAttributeType attributeId, Action<EAttributeType, float, float> onAttributeChanged)
 	{
 		if (attributeId <= EAttributeType.None)
@@ -236,7 +236,7 @@ public class StrengthItemBase : UiPanelBase
 		this.AttributeChangedCallbackMap.Remove(attributeId);
 	}
 
-	// Token: 0x0600F959 RID: 63833 RVA: 0x003C691C File Offset: 0x003C4B1C
+	// Token: 0x0600CD78 RID: 52600 RVA: 0x003D2408 File Offset: 0x003D0608
 	private void ClearAllAttributeChangedCallback()
 	{
 		BattleUiRoleData roleData = this.RoleData;
@@ -257,51 +257,51 @@ public class StrengthItemBase : UiPanelBase
 		this.AttributeChangedCallbackMap.Clear();
 	}
 
-	// Token: 0x0600F95A RID: 63834 RVA: 0x003C69A8 File Offset: 0x003C4BA8
+	// Token: 0x0600CD79 RID: 52601 RVA: 0x003D2494 File Offset: 0x003D0694
 	protected void InitTweenAnim(int componentType)
 	{
 		this.TweenAnimPlayer.InitTweenAnim(componentType, base.GetItem(componentType), false);
 	}
 
-	// Token: 0x0600F95B RID: 63835 RVA: 0x003C69BE File Offset: 0x003C4BBE
+	// Token: 0x0600CD7A RID: 52602 RVA: 0x003D24AA File Offset: 0x003D06AA
 	protected void PlayTweenAnim(int componentType)
 	{
 		this.TweenAnimPlayer.PlayTweenAnim(componentType);
 	}
 
-	// Token: 0x0600F95C RID: 63836 RVA: 0x003C69CC File Offset: 0x003C4BCC
+	// Token: 0x0600CD7B RID: 52603 RVA: 0x003D24B8 File Offset: 0x003D06B8
 	protected void StopTweenAnim(int componentType)
 	{
 		this.TweenAnimPlayer.StopTweenAnim(componentType);
 	}
 
-	// Token: 0x04007428 RID: 29736
+	// Token: 0x04007509 RID: 29961
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ListenTagStat = Stat.Create("[StrengthItem]ListenTag", "", "");
 
-	// Token: 0x04007429 RID: 29737
+	// Token: 0x0400750A RID: 29962
 	protected bool IsAfterStart;
 
-	// Token: 0x0400742A RID: 29738
+	// Token: 0x0400750B RID: 29963
 	[Nullable(2)]
 	protected BattleUiRoleData RoleData;
 
-	// Token: 0x0400742B RID: 29739
+	// Token: 0x0400750C RID: 29964
 	[Nullable(2)]
 	protected Action<bool> UiVisibleChanged;
 
-	// Token: 0x0400742C RID: 29740
+	// Token: 0x0400750D RID: 29965
 	protected readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 
-	// Token: 0x0400742D RID: 29741
+	// Token: 0x0400750E RID: 29966
 	protected readonly Dictionary<EAttributeType, Action<EAttributeType, float, float>> AttributeChangedCallbackMap = new Dictionary<EAttributeType, Action<EAttributeType, float, float>>();
 
-	// Token: 0x0400742E RID: 29742
+	// Token: 0x0400750F RID: 29967
 	protected bool TargetActive;
 
-	// Token: 0x0400742F RID: 29743
+	// Token: 0x04007510 RID: 29968
 	protected bool EnableByHighPriority = true;
 
-	// Token: 0x04007430 RID: 29744
+	// Token: 0x04007511 RID: 29969
 	protected BattleUiTweenAnimPlayer TweenAnimPlayer = new BattleUiTweenAnimPlayer();
 }

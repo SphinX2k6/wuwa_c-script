@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FBE RID: 8126
+	// Token: 0x02002201 RID: 8705
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITextUiConfig
 	{
-		// Token: 0x0600B2BC RID: 45756 RVA: 0x001A0734 File Offset: 0x0019E934
-		[NullableContext(1)]
+		// Token: 0x0600BDC0 RID: 48576 RVA: 0x001B6AE4 File Offset: 0x001B4CE4
+		[NullableContext(0)]
 		private ITextUiConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B2BD RID: 45757 RVA: 0x001A076C File Offset: 0x0019E96C
-		[NullableContext(1)]
+		// Token: 0x0600BDC1 RID: 48577 RVA: 0x001B6B1C File Offset: 0x001B4D1C
+		[NullableContext(0)]
 		public static ITextUiConfig Create([Nullable(2)] ITextUiConfig instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B2BE RID: 45758 RVA: 0x001A077F File Offset: 0x0019E97F
-		[NullableContext(1)]
+		// Token: 0x0600BDC2 RID: 48578 RVA: 0x001B6B2F File Offset: 0x001B4D2F
+		[NullableContext(0)]
 		public static ITextUiConfig CreateFromSetValue([Nullable(2)] ITextUiConfig_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B2BF RID: 45759 RVA: 0x001A0794 File Offset: 0x0019E994
-		[NullableContext(1)]
+		// Token: 0x0600BDC3 RID: 48579 RVA: 0x001B6B44 File Offset: 0x001B4D44
+		[NullableContext(0)]
 		public ITextUiConfig_SetValue ToSetValue()
 		{
 			return new ITextUiConfig_SetValue
@@ -71,9 +71,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003719 RID: 14105
-		// (get) Token: 0x0600B2C0 RID: 45760 RVA: 0x001A0806 File Offset: 0x0019EA06
-		// (set) Token: 0x0600B2C1 RID: 45761 RVA: 0x001A0831 File Offset: 0x0019EA31
+		// Token: 0x170039EE RID: 14830
+		// (get) Token: 0x0600BDC4 RID: 48580 RVA: 0x001B6BB6 File Offset: 0x001B4DB6
+		// (set) Token: 0x0600BDC5 RID: 48581 RVA: 0x001B6BE1 File Offset: 0x001B4DE1
 		public virtual ETextUiType Type
 		{
 			get
@@ -94,9 +94,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700371A RID: 14106
-		// (get) Token: 0x0600B2C2 RID: 45762 RVA: 0x001A083F File Offset: 0x0019EA3F
-		// (set) Token: 0x0600B2C3 RID: 45763 RVA: 0x001A0866 File Offset: 0x0019EA66
+		// Token: 0x170039EF RID: 14831
+		// (get) Token: 0x0600BDC6 RID: 48582 RVA: 0x001B6BEF File Offset: 0x001B4DEF
+		// (set) Token: 0x0600BDC7 RID: 48583 RVA: 0x001B6C16 File Offset: 0x001B4E16
 		public virtual string InitTipText
 		{
 			get
@@ -118,9 +118,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700371B RID: 14107
-		// (get) Token: 0x0600B2C4 RID: 45764 RVA: 0x001A0874 File Offset: 0x0019EA74
-		// (set) Token: 0x0600B2C5 RID: 45765 RVA: 0x001A089B File Offset: 0x0019EA9B
+		// Token: 0x170039F0 RID: 14832
+		// (get) Token: 0x0600BDC8 RID: 48584 RVA: 0x001B6C24 File Offset: 0x001B4E24
+		// (set) Token: 0x0600BDC9 RID: 48585 RVA: 0x001B6C4B File Offset: 0x001B4E4B
 		public virtual string ProgressTipText
 		{
 			get
@@ -142,9 +142,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700371C RID: 14108
-		// (get) Token: 0x0600B2C6 RID: 45766 RVA: 0x001A08A9 File Offset: 0x0019EAA9
-		// (set) Token: 0x0600B2C7 RID: 45767 RVA: 0x001A08D0 File Offset: 0x0019EAD0
+		// Token: 0x170039F1 RID: 14833
+		// (get) Token: 0x0600BDCA RID: 48586 RVA: 0x001B6C59 File Offset: 0x001B4E59
+		// (set) Token: 0x0600BDCB RID: 48587 RVA: 0x001B6C80 File Offset: 0x001B4E80
 		public virtual string SkipText
 		{
 			get
@@ -166,9 +166,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700371D RID: 14109
-		// (get) Token: 0x0600B2C8 RID: 45768 RVA: 0x001A08DE File Offset: 0x0019EADE
-		// (set) Token: 0x0600B2C9 RID: 45769 RVA: 0x001A0905 File Offset: 0x0019EB05
+		// Token: 0x170039F2 RID: 14834
+		// (get) Token: 0x0600BDCC RID: 48588 RVA: 0x001B6C8E File Offset: 0x001B4E8E
+		// (set) Token: 0x0600BDCD RID: 48589 RVA: 0x001B6CB5 File Offset: 0x001B4EB5
 		public virtual string FinishText
 		{
 			get
@@ -190,20 +190,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700371E RID: 14110
-		// (get) Token: 0x0600B2CA RID: 45770 RVA: 0x001A0913 File Offset: 0x0019EB13
-		// (set) Token: 0x0600B2CB RID: 45771 RVA: 0x001A093A File Offset: 0x0019EB3A
+		// Token: 0x170039F3 RID: 14835
+		// (get) Token: 0x0600BDCE RID: 48590 RVA: 0x001B6CC3 File Offset: 0x001B4EC3
+		// (set) Token: 0x0600BDCF RID: 48591 RVA: 0x001B6CEA File Offset: 0x001B4EEA
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> InitDialogues
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -221,7 +221,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -229,9 +229,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700371F RID: 14111
-		// (get) Token: 0x0600B2CC RID: 45772 RVA: 0x001A0948 File Offset: 0x0019EB48
-		// (set) Token: 0x0600B2CD RID: 45773 RVA: 0x001A0982 File Offset: 0x0019EB82
+		// Token: 0x170039F4 RID: 14836
+		// (get) Token: 0x0600BDD0 RID: 48592 RVA: 0x001B6CF8 File Offset: 0x001B4EF8
+		// (set) Token: 0x0600BDD1 RID: 48593 RVA: 0x001B6D32 File Offset: 0x001B4F32
 		public virtual int? SkipConfirmBoxId
 		{
 			get
@@ -253,9 +253,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003720 RID: 14112
-		// (get) Token: 0x0600B2CE RID: 45774 RVA: 0x001A0990 File Offset: 0x0019EB90
-		// (set) Token: 0x0600B2CF RID: 45775 RVA: 0x001A09B7 File Offset: 0x0019EBB7
+		// Token: 0x170039F5 RID: 14837
+		// (get) Token: 0x0600BDD2 RID: 48594 RVA: 0x001B6D40 File Offset: 0x001B4F40
+		// (set) Token: 0x0600BDD3 RID: 48595 RVA: 0x001B6D67 File Offset: 0x001B4F67
 		public virtual string LoopAudioEvent
 		{
 			get
@@ -277,10 +277,10 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006BEC RID: 27628
+		// Token: 0x040071E7 RID: 29159
 		protected ITextUiConfig FbInstance;
 
-		// Token: 0x04006BED RID: 27629
+		// Token: 0x040071E8 RID: 29160
 		protected ITextUiConfig_SetValue PocoInterface;
 	}
 }

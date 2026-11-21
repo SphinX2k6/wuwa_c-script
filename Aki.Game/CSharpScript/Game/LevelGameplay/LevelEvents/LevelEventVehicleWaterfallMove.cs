@@ -7,17 +7,17 @@ using CSharpScript.Game.LevelGamePlay.Common;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006BB6 RID: 27574
+	// Token: 0x02005D2F RID: 23855
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelEventVehicleWaterfallMove : LevelEventBase
 	{
-		// Token: 0x06044332 RID: 279346 RVA: 0x010CF805 File Offset: 0x010CDA05
+		// Token: 0x0603A48A RID: 238730 RVA: 0x01079759 File Offset: 0x01077959
 		public LevelEventVehicleWaterfallMove(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044333 RID: 279347 RVA: 0x010CF80E File Offset: 0x010CDA0E
+		// Token: 0x0603A48B RID: 238731 RVA: 0x01079762 File Offset: 0x01077962
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.EnterWaterfallMove(this.Params, this.Context);
 		}
 
-		// Token: 0x06044334 RID: 279348 RVA: 0x010CF848 File Offset: 0x010CDA48
+		// Token: 0x0603A48C RID: 238732 RVA: 0x0107979C File Offset: 0x0107799C
 		[NullableContext(1)]
 		private unsafe void EnterWaterfallMove(VehicleWaterfallClimbing config, GeneralContext context)
 		{
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			EventSystem.Instance.AddWithTarget(this.VehicleEntity, EEventName.OnWaterfallMoveEnd, new Action(this.OnWaterfallMoveEnd));
 		}
 
-		// Token: 0x06044335 RID: 279349 RVA: 0x010CFB5F File Offset: 0x010CDD5F
+		// Token: 0x0603A48D RID: 238733 RVA: 0x01079AB3 File Offset: 0x01077CB3
 		private void OnWaterfallMoveEnd()
 		{
 			EventSystem.Instance.RemoveWithTarget(this.VehicleEntity, EEventName.OnWaterfallMoveEnd, new Action(this.OnWaterfallMoveEnd));
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.VehicleEntity = null;
 		}
 
-		// Token: 0x06044336 RID: 279350 RVA: 0x010CFB94 File Offset: 0x010CDD94
+		// Token: 0x0603A48E RID: 238734 RVA: 0x01079AE8 File Offset: 0x01077CE8
 		private Vector GetGravityFromConfig(EWorldAxisType? type)
 		{
 			Vector vector = Vector.Create();
@@ -164,13 +164,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return null;
 		}
 
-		// Token: 0x0402397C RID: 145788
+		// Token: 0x0401EC1E RID: 125982
 		private VehicleWaterfallClimbing Params;
 
-		// Token: 0x0402397D RID: 145789
+		// Token: 0x0401EC1F RID: 125983
 		private GeneralContext Context;
 
-		// Token: 0x0402397E RID: 145790
+		// Token: 0x0401EC20 RID: 125984
 		private Entity VehicleEntity;
 	}
 }

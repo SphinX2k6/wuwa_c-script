@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000425 RID: 1061
+	// Token: 0x0200040E RID: 1038
 	public sealed class EdgeRunnerLordGymPassRecord : IMessage<EdgeRunnerLordGymPassRecord>, IMessage, IEquatable<EdgeRunnerLordGymPassRecord>, IDeepCloneable<EdgeRunnerLordGymPassRecord>, IBufferMessage
 	{
-		// Token: 0x060065FB RID: 26107 RVA: 0x000F5782 File Offset: 0x000F3982
+		// Token: 0x0600646B RID: 25707 RVA: 0x000F2611 File Offset: 0x000F0811
 		[NullableContext(1)]
 		public static EdgeRunnerLordGymPassRecord Create()
 		{
 			return new EdgeRunnerLordGymPassRecord();
 		}
 
-		// Token: 0x17001326 RID: 4902
-		// (get) Token: 0x060065FC RID: 26108 RVA: 0x000F5789 File Offset: 0x000F3989
+		// Token: 0x170012D1 RID: 4817
+		// (get) Token: 0x0600646C RID: 25708 RVA: 0x000F2618 File Offset: 0x000F0818
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<EdgeRunnerLordGymPassRecord> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001327 RID: 4903
-		// (get) Token: 0x060065FD RID: 26109 RVA: 0x000F5790 File Offset: 0x000F3990
+		// Token: 0x170012D2 RID: 4818
+		// (get) Token: 0x0600646D RID: 25709 RVA: 0x000F261F File Offset: 0x000F081F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001328 RID: 4904
-		// (get) Token: 0x060065FE RID: 26110 RVA: 0x000F5793 File Offset: 0x000F3993
+		// Token: 0x170012D3 RID: 4819
+		// (get) Token: 0x0600646E RID: 25710 RVA: 0x000F2622 File Offset: 0x000F0822
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060065FF RID: 26111 RVA: 0x000F579A File Offset: 0x000F399A
+		// Token: 0x0600646F RID: 25711 RVA: 0x000F2629 File Offset: 0x000F0829
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EdgeRunnerLordGymPassRecord()
 		{
 		}
 
-		// Token: 0x06006600 RID: 26112 RVA: 0x000F57A2 File Offset: 0x000F39A2
+		// Token: 0x06006470 RID: 25712 RVA: 0x000F2631 File Offset: 0x000F0831
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EdgeRunnerLordGymPassRecord(EdgeRunnerLordGymPassRecord other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06006601 RID: 26113 RVA: 0x000F57D3 File Offset: 0x000F39D3
+		// Token: 0x06006471 RID: 25713 RVA: 0x000F2662 File Offset: 0x000F0862
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EdgeRunnerLordGymPassRecord Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new EdgeRunnerLordGymPassRecord(this);
 		}
 
-		// Token: 0x17001329 RID: 4905
-		// (get) Token: 0x06006602 RID: 26114 RVA: 0x000F57DB File Offset: 0x000F39DB
-		// (set) Token: 0x06006603 RID: 26115 RVA: 0x000F57E3 File Offset: 0x000F39E3
+		// Token: 0x170012D4 RID: 4820
+		// (get) Token: 0x06006472 RID: 25714 RVA: 0x000F266A File Offset: 0x000F086A
+		// (set) Token: 0x06006473 RID: 25715 RVA: 0x000F2672 File Offset: 0x000F0872
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LoadGymId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700132A RID: 4906
-		// (get) Token: 0x06006604 RID: 26116 RVA: 0x000F57EC File Offset: 0x000F39EC
-		// (set) Token: 0x06006605 RID: 26117 RVA: 0x000F57F4 File Offset: 0x000F39F4
+		// Token: 0x170012D5 RID: 4821
+		// (get) Token: 0x06006474 RID: 25716 RVA: 0x000F267B File Offset: 0x000F087B
+		// (set) Token: 0x06006475 RID: 25717 RVA: 0x000F2683 File Offset: 0x000F0883
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PassTime
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006606 RID: 26118 RVA: 0x000F57FD File Offset: 0x000F39FD
+		// Token: 0x06006476 RID: 25718 RVA: 0x000F268C File Offset: 0x000F088C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as EdgeRunnerLordGymPassRecord);
 		}
 
-		// Token: 0x06006607 RID: 26119 RVA: 0x000F580B File Offset: 0x000F3A0B
+		// Token: 0x06006477 RID: 25719 RVA: 0x000F269A File Offset: 0x000F089A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(EdgeRunnerLordGymPassRecord other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LoadGymId == other.LoadGymId && this.PassTime == other.PassTime && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06006608 RID: 26120 RVA: 0x000F584C File Offset: 0x000F3A4C
+		// Token: 0x06006478 RID: 25720 RVA: 0x000F26D8 File Offset: 0x000F08D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06006609 RID: 26121 RVA: 0x000F58A4 File Offset: 0x000F3AA4
+		// Token: 0x06006479 RID: 25721 RVA: 0x000F2730 File Offset: 0x000F0930
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600660A RID: 26122 RVA: 0x000F58B1 File Offset: 0x000F3AB1
+		// Token: 0x0600647A RID: 25722 RVA: 0x000F273D File Offset: 0x000F093D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600660B RID: 26123 RVA: 0x000F58BC File Offset: 0x000F3ABC
+		// Token: 0x0600647B RID: 25723 RVA: 0x000F2748 File Offset: 0x000F0948
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600660C RID: 26124 RVA: 0x000F5914 File Offset: 0x000F3B14
+		// Token: 0x0600647C RID: 25724 RVA: 0x000F27A0 File Offset: 0x000F09A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600660D RID: 26125 RVA: 0x000F596C File Offset: 0x000F3B6C
+		// Token: 0x0600647D RID: 25725 RVA: 0x000F27F8 File Offset: 0x000F09F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(EdgeRunnerLordGymPassRecord other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600660E RID: 26126 RVA: 0x000F59BC File Offset: 0x000F3BBC
+		// Token: 0x0600647E RID: 25726 RVA: 0x000F2848 File Offset: 0x000F0A48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600660F RID: 26127 RVA: 0x000F59C8 File Offset: 0x000F3BC8
+		// Token: 0x0600647F RID: 25727 RVA: 0x000F2854 File Offset: 0x000F0A54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -265,22 +265,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003909 RID: 14601
+		// Token: 0x040038F6 RID: 14582
 		private static readonly MessageParser<EdgeRunnerLordGymPassRecord> _parser = new MessageParser<EdgeRunnerLordGymPassRecord>(() => new EdgeRunnerLordGymPassRecord());
 
-		// Token: 0x0400390A RID: 14602
+		// Token: 0x040038F7 RID: 14583
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400390B RID: 14603
+		// Token: 0x040038F8 RID: 14584
 		public const int LoadGymIdFieldNumber = 1;
 
-		// Token: 0x0400390C RID: 14604
+		// Token: 0x040038F9 RID: 14585
 		private int loadGymId_;
 
-		// Token: 0x0400390D RID: 14605
+		// Token: 0x040038FA RID: 14586
 		public const int PassTimeFieldNumber = 2;
 
-		// Token: 0x0400390E RID: 14606
+		// Token: 0x040038FB RID: 14587
 		private int passTime_;
 	}
 }

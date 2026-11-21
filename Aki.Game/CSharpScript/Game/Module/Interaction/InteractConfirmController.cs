@@ -6,12 +6,12 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005851 RID: 22609
+	// Token: 0x02004829 RID: 18473
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InteractConfirmController : Singleton
 	{
-		// Token: 0x06039780 RID: 235392 RVA: 0x00DA4640 File Offset: 0x00DA2840
+		// Token: 0x0602E69C RID: 190108 RVA: 0x00CF3300 File Offset: 0x00CF1500
 		public void RegisterActions()
 		{
 			this.SetupAction<CommonConfirmBoxAction>(EInteractionConfirmBoxType.Common, () => new CommonConfirmBoxAction());
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.SetupAction<HonamiStoryLeaveTipAction>(EInteractionConfirmBoxType.HonamiStoryEvacuateConfirm, () => new HonamiStoryLeaveTipAction());
 		}
 
-		// Token: 0x06039781 RID: 235393 RVA: 0x00DA46C0 File Offset: 0x00DA28C0
+		// Token: 0x0602E69D RID: 190109 RVA: 0x00CF3380 File Offset: 0x00CF1580
 		private void SetupAction<[Nullable(0)] T>(EInteractionConfirmBoxType type, Func<T> ctor) where T : InteractConfirmActionBase
 		{
 			if (this.ActionMap.ContainsKey(type))
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.ActionMap[type] = t;
 		}
 
-		// Token: 0x06039782 RID: 235394 RVA: 0x00DA46F8 File Offset: 0x00DA28F8
+		// Token: 0x0602E69E RID: 190110 RVA: 0x00CF33B8 File Offset: 0x00CF15B8
 		public int HandleAction(CommonInteractOption option, Action<int, bool, CommonInteractOption> confirmCallback)
 		{
 			if (option2 == null || option2.ConfirmBox == null)
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return num;
 		}
 
-		// Token: 0x06039783 RID: 235395 RVA: 0x00DA47E8 File Offset: 0x00DA29E8
+		// Token: 0x0602E69F RID: 190111 RVA: 0x00CF34A8 File Offset: 0x00CF16A8
 		public void CancelAction(int handle)
 		{
 			if (this.ExecutingAction != null && this.ExecutingAction.GetValueOrDefault().Item1 == handle)
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039784 RID: 235396 RVA: 0x00DA4838 File Offset: 0x00DA2A38
+		// Token: 0x0602E6A0 RID: 190112 RVA: 0x00CF34F8 File Offset: 0x00CF16F8
 		[NullableContext(2)]
 		public InteractConfirmActionBase GetAction(EInteractionConfirmBoxType type)
 		{
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return null;
 		}
 
-		// Token: 0x06039785 RID: 235397 RVA: 0x00DA4858 File Offset: 0x00DA2A58
+		// Token: 0x0602E6A1 RID: 190113 RVA: 0x00CF3518 File Offset: 0x00CF1718
 		public void ReleaseAction(EInteractionConfirmBoxType type)
 		{
 			if (!this.ActionMap.ContainsKey(type))
@@ -104,13 +104,13 @@ namespace CSharpScript.Game.Module.Interaction
 			this.ActionMap.Remove(type);
 		}
 
-		// Token: 0x06039786 RID: 235398 RVA: 0x00DA4876 File Offset: 0x00DA2A76
+		// Token: 0x0602E6A2 RID: 190114 RVA: 0x00CF3536 File Offset: 0x00CF1736
 		public bool CheckHandleValid(int handle)
 		{
 			return this.ExecutingAction != null && this.ExecutingAction.GetValueOrDefault().Item1 == handle;
 		}
 
-		// Token: 0x06039787 RID: 235399 RVA: 0x00DA4896 File Offset: 0x00DA2A96
+		// Token: 0x0602E6A3 RID: 190115 RVA: 0x00CF3556 File Offset: 0x00CF1756
 		public void Clear()
 		{
 			if (this.ExecutingAction != null)
@@ -121,8 +121,8 @@ namespace CSharpScript.Game.Module.Interaction
 			this.ActionMap.Clear();
 		}
 
-		// Token: 0x17008A4B RID: 35403
-		// (get) Token: 0x06039788 RID: 235400 RVA: 0x00DA48D1 File Offset: 0x00DA2AD1
+		// Token: 0x17005E17 RID: 24087
+		// (get) Token: 0x0602E6A4 RID: 190116 RVA: 0x00CF3591 File Offset: 0x00CF1791
 		public static InteractConfirmController Instance
 		{
 			get
@@ -136,12 +136,12 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039789 RID: 235401 RVA: 0x00DA48F4 File Offset: 0x00DA2AF4
+		// Token: 0x0602E6A5 RID: 190117 RVA: 0x00CF35B4 File Offset: 0x00CF17B4
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603978A RID: 235402 RVA: 0x00DA48F6 File Offset: 0x00DA2AF6
+		// Token: 0x0602E6A6 RID: 190118 RVA: 0x00CF35B6 File Offset: 0x00CF17B6
 		public static void ResetStaticDefaultValue()
 		{
 			InteractConfirmController instance = InteractConfirmController._instance;
@@ -152,19 +152,19 @@ namespace CSharpScript.Game.Module.Interaction
 			InteractConfirmController._instance = null;
 		}
 
-		// Token: 0x0603978B RID: 235403 RVA: 0x00DA490F File Offset: 0x00DA2B0F
+		// Token: 0x0602E6A7 RID: 190119 RVA: 0x00CF35CF File Offset: 0x00CF17CF
 		static InteractConfirmController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InteractConfirmController.CreateStaticDefaultValue), new Action(InteractConfirmController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E0DA RID: 123098
+		// Token: 0x04018B77 RID: 101239
 		private readonly Dictionary<EInteractionConfirmBoxType, InteractConfirmActionBase> ActionMap = new Dictionary<EInteractionConfirmBoxType, InteractConfirmActionBase>();
 
-		// Token: 0x0401E0DB RID: 123099
+		// Token: 0x04018B78 RID: 101240
 		private int HandleId = 1;
 
-		// Token: 0x0401E0DC RID: 123100
+		// Token: 0x04018B79 RID: 101241
 		[Nullable(new byte[]
 		{
 			0,
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Interaction
 		})]
 		private ValueTuple<int, InteractConfirmActionBase>? ExecutingAction;
 
-		// Token: 0x0401E0DD RID: 123101
+		// Token: 0x04018B7A RID: 101242
 		[Nullable(2)]
 		private static InteractConfirmController _instance;
 	}

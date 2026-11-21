@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028B1 RID: 10417
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B86 RID: 11142
 	public class IAdjustFixedCameraOrthogonalConfig
 	{
-		// Token: 0x0600E6FC RID: 59132 RVA: 0x0021ECF8 File Offset: 0x0021CEF8
+		// Token: 0x0600F52B RID: 62763 RVA: 0x0023BC78 File Offset: 0x00239E78
 		public static IAdjustFixedCameraOrthogonalConfig Create(IAdjustFixedCameraOrthogonalConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700475C RID: 18268
-		// (get) Token: 0x0600E6FD RID: 59133 RVA: 0x0021ED17 File Offset: 0x0021CF17
+		// Token: 0x17004ACD RID: 19149
+		// (get) Token: 0x0600F52C RID: 62764 RVA: 0x0023BC97 File Offset: 0x00239E97
 		public virtual VectorInfo BasePoint
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700475D RID: 18269
-		// (get) Token: 0x0600E6FE RID: 59134 RVA: 0x0021ED4C File Offset: 0x0021CF4C
+		// Token: 0x17004ACE RID: 19150
+		// (get) Token: 0x0600F52D RID: 62765 RVA: 0x0023BCCC File Offset: 0x00239ECC
 		public virtual float? FadeInTime
 		{
 			get
@@ -53,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700475E RID: 18270
-		// (get) Token: 0x0600E6FF RID: 59135 RVA: 0x0021ED84 File Offset: 0x0021CF84
+		// Token: 0x17004ACF RID: 19151
+		// (get) Token: 0x0600F52E RID: 62766 RVA: 0x0023BD04 File Offset: 0x00239F04
 		public virtual float? FadeOutTime
 		{
 			get
@@ -67,14 +65,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007FA7 RID: 32679
+		// Token: 0x04008666 RID: 34406
 		private IAdjustFixedCameraOrthogonalConfig Instance;
 
-		// Token: 0x04007FA8 RID: 32680
+		// Token: 0x04008667 RID: 34407
 		[Nullable(2)]
 		private VectorInfo _BasePointCache;
 
-		// Token: 0x04007FA9 RID: 32681
+		// Token: 0x04008668 RID: 34408
 		private bool _BasePointInited;
 	}
 }

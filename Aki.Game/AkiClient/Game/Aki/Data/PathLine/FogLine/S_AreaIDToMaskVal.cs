@@ -8,7 +8,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.PathLine.FogLine
 {
-	// Token: 0x02003EE9 RID: 16105
+	// Token: 0x020031AB RID: 12715
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(4, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 4)]
@@ -16,31 +16,31 @@ namespace AkiClient.Game.Aki.Data.PathLine.FogLine
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 4)]
 	public struct S_AreaIDToMaskVal : IEqualityOperators<S_AreaIDToMaskVal, S_AreaIDToMaskVal, bool>, IEquatable<S_AreaIDToMaskVal>, IUnrealScriptStruct
 	{
-		// Token: 0x06028C7C RID: 167036 RVA: 0x009B475D File Offset: 0x009B295D
+		// Token: 0x0601F659 RID: 128601 RVA: 0x0092CE59 File Offset: 0x0092B059
 		public S_AreaIDToMaskVal(int Mask)
 		{
 			this.Mask = Mask;
 		}
 
-		// Token: 0x06028C7D RID: 167037 RVA: 0x009B4766 File Offset: 0x009B2966
+		// Token: 0x0601F65A RID: 128602 RVA: 0x0092CE62 File Offset: 0x0092B062
 		public static bool operator ==(S_AreaIDToMaskVal left, S_AreaIDToMaskVal right)
 		{
 			return left.Mask == right.Mask;
 		}
 
-		// Token: 0x06028C7E RID: 167038 RVA: 0x009B4776 File Offset: 0x009B2976
+		// Token: 0x0601F65B RID: 128603 RVA: 0x0092CE72 File Offset: 0x0092B072
 		public static bool operator !=(S_AreaIDToMaskVal left, S_AreaIDToMaskVal right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x06028C7F RID: 167039 RVA: 0x009B4782 File Offset: 0x009B2982
+		// Token: 0x0601F65C RID: 128604 RVA: 0x0092CE7E File Offset: 0x0092B07E
 		public bool Equals(S_AreaIDToMaskVal other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06028C80 RID: 167040 RVA: 0x009B4790 File Offset: 0x009B2990
+		// Token: 0x0601F65D RID: 128605 RVA: 0x0092CE8C File Offset: 0x0092B08C
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -52,26 +52,26 @@ namespace AkiClient.Game.Aki.Data.PathLine.FogLine
 			return false;
 		}
 
-		// Token: 0x06028C81 RID: 167041 RVA: 0x009B47B5 File Offset: 0x009B29B5
+		// Token: 0x0601F65E RID: 128606 RVA: 0x0092CEB1 File Offset: 0x0092B0B1
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<int>(this.Mask);
 		}
 
-		// Token: 0x06028C82 RID: 167042 RVA: 0x009B47C2 File Offset: 0x009B29C2
+		// Token: 0x0601F65F RID: 128607 RVA: 0x0092CEBE File Offset: 0x0092B0BE
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (S_AreaIDToMaskVal._ScriptStructPtr != 0) ? S_AreaIDToMaskVal._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/PathLine/FogLine/S_AreaIDToMaskVal.S_AreaIDToMaskVal", ref S_AreaIDToMaskVal._ScriptStructPtr);
 		}
 
-		// Token: 0x04014D88 RID: 85384
+		// Token: 0x04010D49 RID: 68937
 		[FieldOffset(0)]
 		public int Mask;
 
-		// Token: 0x04014D89 RID: 85385
+		// Token: 0x04010D4A RID: 68938
 		public const string __ObjectPath = "/Game/Aki/Data/PathLine/FogLine/S_AreaIDToMaskVal.S_AreaIDToMaskVal";
 
-		// Token: 0x04014D8A RID: 85386
+		// Token: 0x04010D4B RID: 68939
 		private static IntPtr _ScriptStructPtr;
 	}
 }

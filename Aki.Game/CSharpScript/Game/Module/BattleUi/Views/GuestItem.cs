@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D32 RID: 23858
+	// Token: 0x02004D14 RID: 19732
 	public class GuestItem : BattleChildView
 	{
-		// Token: 0x0603C81B RID: 247835 RVA: 0x00E84104 File Offset: 0x00E82304
+		// Token: 0x06031774 RID: 202612 RVA: 0x00DD48A4 File Offset: 0x00DD2AA4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C81C RID: 247836 RVA: 0x00E841F4 File Offset: 0x00E823F4
+		// Token: 0x06031775 RID: 202613 RVA: 0x00DD4994 File Offset: 0x00DD2B94
 		protected override void OnShowBattleChildView()
 		{
 			EventSystem.Instance.Add(EEventName.PlotShowTalk, new Action<ITalkItem, bool>(this.OnShowTalk));
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.ShowGuestEffect, new Action<bool>(this.OnGuestEffect));
 		}
 
-		// Token: 0x0603C81D RID: 247837 RVA: 0x00E84258 File Offset: 0x00E82458
+		// Token: 0x06031776 RID: 202614 RVA: 0x00DD49F8 File Offset: 0x00DD2BF8
 		protected override void OnHideBattleChildView()
 		{
 			EventSystem.Instance.Remove(EEventName.PlotShowTalk, new Action<ITalkItem, bool>(this.OnShowTalk));
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.ShowGuestEffect, new Action<bool>(this.OnGuestEffect));
 		}
 
-		// Token: 0x0603C81E RID: 247838 RVA: 0x00E842BC File Offset: 0x00E824BC
+		// Token: 0x06031777 RID: 202615 RVA: 0x00DD4A5C File Offset: 0x00DD2C5C
 		[NullableContext(1)]
 		private void OnShowTalk(ITalkItem talkItem, bool bShow)
 		{
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnShowTalkEnd();
 		}
 
-		// Token: 0x0603C81F RID: 247839 RVA: 0x00E84354 File Offset: 0x00E82554
+		// Token: 0x06031778 RID: 202616 RVA: 0x00DD4AF4 File Offset: 0x00DD2CF4
 		private void OnShowTalkEnd()
 		{
 			if (!this.IsSpeaking)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C820 RID: 247840 RVA: 0x00E843B0 File Offset: 0x00E825B0
+		// Token: 0x06031779 RID: 202617 RVA: 0x00DD4B50 File Offset: 0x00DD2D50
 		private void OnGuestEffect(bool bShow)
 		{
 			GuestItem.EChildType name = bShow ? GuestItem.EChildType.BuffInAnim : GuestItem.EChildType.BuffOutAnim;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C821 RID: 247841 RVA: 0x00E84404 File Offset: 0x00E82604
+		// Token: 0x0603177A RID: 202618 RVA: 0x00DD4BA4 File Offset: 0x00DD2DA4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			GuestItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C822 RID: 247842 RVA: 0x00E84447 File Offset: 0x00E82647
+		// Token: 0x0603177B RID: 202619 RVA: 0x00DD4BE7 File Offset: 0x00DD2DE7
 		protected override void OnAfterShow()
 		{
 			if (BattleUiModel.Instance.GuestEffect)
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C823 RID: 247843 RVA: 0x00E8445C File Offset: 0x00E8265C
+		// Token: 0x0603177C RID: 202620 RVA: 0x00DD4BFC File Offset: 0x00DD2DFC
 		public UniTask SetGuest(int id)
 		{
 			GuestItem.<SetGuest>d__11 <SetGuest>d__;
@@ -138,27 +138,27 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <SetGuest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401F866 RID: 129126
+		// Token: 0x0401A31F RID: 107295
 		[Nullable(2)]
 		private HashSet<int> SpeakerSet;
 
-		// Token: 0x0401F867 RID: 129127
+		// Token: 0x0401A320 RID: 107296
 		private bool IsSpeaking;
 
-		// Token: 0x0200BFC9 RID: 49097
+		// Token: 0x0200A9CF RID: 43471
 		private enum EChildType
 		{
-			// Token: 0x04039DBA RID: 236986
+			// Token: 0x0403477C RID: 214908
 			HeadIcon,
-			// Token: 0x04039DBB RID: 236987
+			// Token: 0x0403477D RID: 214909
 			TalkInAnim,
-			// Token: 0x04039DBC RID: 236988
+			// Token: 0x0403477E RID: 214910
 			TalkOutAnim,
-			// Token: 0x04039DBD RID: 236989
+			// Token: 0x0403477F RID: 214911
 			BuffInAnim,
-			// Token: 0x04039DBE RID: 236990
+			// Token: 0x04034780 RID: 214912
 			BuffOutAnim,
-			// Token: 0x04039DBF RID: 236991
+			// Token: 0x04034781 RID: 214913
 			BuffNiagara
 		}
 	}

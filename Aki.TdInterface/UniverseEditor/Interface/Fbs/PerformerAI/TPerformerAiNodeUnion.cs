@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 {
-	// Token: 0x02004385 RID: 17285
+	// Token: 0x020047E7 RID: 18407
 	public class TPerformerAiNodeUnion
 	{
-		// Token: 0x17007A31 RID: 31281
-		// (get) Token: 0x06019B61 RID: 105313 RVA: 0x003AEBF4 File Offset: 0x003ACDF4
-		// (set) Token: 0x06019B62 RID: 105314 RVA: 0x003AEBFC File Offset: 0x003ACDFC
+		// Token: 0x17008066 RID: 32870
+		// (get) Token: 0x0601B2EF RID: 111343 RVA: 0x003DA61C File Offset: 0x003D881C
+		// (set) Token: 0x0601B2F0 RID: 111344 RVA: 0x003DA624 File Offset: 0x003D8824
 		public TPerformerAiNode Type { get; set; }
 
-		// Token: 0x17007A32 RID: 31282
-		// (get) Token: 0x06019B63 RID: 105315 RVA: 0x003AEC05 File Offset: 0x003ACE05
-		// (set) Token: 0x06019B64 RID: 105316 RVA: 0x003AEC0D File Offset: 0x003ACE0D
+		// Token: 0x17008067 RID: 32871
+		// (get) Token: 0x0601B2F1 RID: 111345 RVA: 0x003DA62D File Offset: 0x003D882D
+		// (set) Token: 0x0601B2F2 RID: 111346 RVA: 0x003DA635 File Offset: 0x003D8835
 		public object Value { get; set; }
 
-		// Token: 0x06019B65 RID: 105317 RVA: 0x003AEC16 File Offset: 0x003ACE16
+		// Token: 0x0601B2F3 RID: 111347 RVA: 0x003DA63E File Offset: 0x003D883E
 		public TPerformerAiNodeUnion()
 		{
 			this.Type = TPerformerAiNode.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06019B66 RID: 105318 RVA: 0x003AEC2C File Offset: 0x003ACE2C
+		// Token: 0x0601B2F4 RID: 111348 RVA: 0x003DA654 File Offset: 0x003D8854
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06019B67 RID: 105319 RVA: 0x003AEC3E File Offset: 0x003ACE3E
+		// Token: 0x0601B2F5 RID: 111349 RVA: 0x003DA666 File Offset: 0x003D8866
 		public IPerformerAiProbabilityT AsIPerformerAiProbability()
 		{
 			return this.As<IPerformerAiProbabilityT>();
 		}
 
-		// Token: 0x06019B68 RID: 105320 RVA: 0x003AEC46 File Offset: 0x003ACE46
+		// Token: 0x0601B2F6 RID: 111350 RVA: 0x003DA66E File Offset: 0x003D886E
 		public static TPerformerAiNodeUnion FromIPerformerAiProbability(IPerformerAiProbabilityT _iperformeraiprobability)
 		{
 			return new TPerformerAiNodeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			};
 		}
 
-		// Token: 0x06019B69 RID: 105321 RVA: 0x003AEC5B File Offset: 0x003ACE5B
+		// Token: 0x0601B2F7 RID: 111351 RVA: 0x003DA683 File Offset: 0x003D8883
 		public IPerformerAiSelectorT AsIPerformerAiSelector()
 		{
 			return this.As<IPerformerAiSelectorT>();
 		}
 
-		// Token: 0x06019B6A RID: 105322 RVA: 0x003AEC63 File Offset: 0x003ACE63
+		// Token: 0x0601B2F8 RID: 111352 RVA: 0x003DA68B File Offset: 0x003D888B
 		public static TPerformerAiNodeUnion FromIPerformerAiSelector(IPerformerAiSelectorT _iperformeraiselector)
 		{
 			return new TPerformerAiNodeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			};
 		}
 
-		// Token: 0x06019B6B RID: 105323 RVA: 0x003AEC78 File Offset: 0x003ACE78
+		// Token: 0x0601B2F9 RID: 111353 RVA: 0x003DA6A0 File Offset: 0x003D88A0
 		public IPerformerAiSequenceT AsIPerformerAiSequence()
 		{
 			return this.As<IPerformerAiSequenceT>();
 		}
 
-		// Token: 0x06019B6C RID: 105324 RVA: 0x003AEC80 File Offset: 0x003ACE80
+		// Token: 0x0601B2FA RID: 111354 RVA: 0x003DA6A8 File Offset: 0x003D88A8
 		public static TPerformerAiNodeUnion FromIPerformerAiSequence(IPerformerAiSequenceT _iperformeraisequence)
 		{
 			return new TPerformerAiNodeUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			};
 		}
 
-		// Token: 0x06019B6D RID: 105325 RVA: 0x003AEC95 File Offset: 0x003ACE95
+		// Token: 0x0601B2FB RID: 111355 RVA: 0x003DA6BD File Offset: 0x003D88BD
 		public IPerformerAiStartT AsIPerformerAiStart()
 		{
 			return this.As<IPerformerAiStartT>();
 		}
 
-		// Token: 0x06019B6E RID: 105326 RVA: 0x003AEC9D File Offset: 0x003ACE9D
+		// Token: 0x0601B2FC RID: 111356 RVA: 0x003DA6C5 File Offset: 0x003D88C5
 		public static TPerformerAiNodeUnion FromIPerformerAiStart(IPerformerAiStartT _iperformeraistart)
 		{
 			return new TPerformerAiNodeUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			};
 		}
 
-		// Token: 0x06019B6F RID: 105327 RVA: 0x003AECB2 File Offset: 0x003ACEB2
+		// Token: 0x0601B2FD RID: 111357 RVA: 0x003DA6DA File Offset: 0x003D88DA
 		public IPerformerAiTaskT AsIPerformerAiTask()
 		{
 			return this.As<IPerformerAiTaskT>();
 		}
 
-		// Token: 0x06019B70 RID: 105328 RVA: 0x003AECBA File Offset: 0x003ACEBA
+		// Token: 0x0601B2FE RID: 111358 RVA: 0x003DA6E2 File Offset: 0x003D88E2
 		public static TPerformerAiNodeUnion FromIPerformerAiTask(IPerformerAiTaskT _iperformeraitask)
 		{
 			return new TPerformerAiNodeUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			};
 		}
 
-		// Token: 0x06019B71 RID: 105329 RVA: 0x003AECD0 File Offset: 0x003ACED0
+		// Token: 0x0601B2FF RID: 111359 RVA: 0x003DA6F8 File Offset: 0x003D88F8
 		public static int Pack(FlatBufferBuilder builder, TPerformerAiNodeUnion _o)
 		{
 			switch (_o.Type)

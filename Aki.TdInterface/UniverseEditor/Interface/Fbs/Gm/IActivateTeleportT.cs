@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x0200462B RID: 17963
+	// Token: 0x02004A93 RID: 19091
 	public class IActivateTeleportT
 	{
-		// Token: 0x17007F7F RID: 32639
-		// (get) Token: 0x0601B34B RID: 111435 RVA: 0x003DFB9C File Offset: 0x003DDD9C
-		// (set) Token: 0x0601B34C RID: 111436 RVA: 0x003DFBA4 File Offset: 0x003DDDA4
+		// Token: 0x170085C0 RID: 34240
+		// (get) Token: 0x0601CB20 RID: 117536 RVA: 0x0040BE38 File Offset: 0x0040A038
+		// (set) Token: 0x0601CB21 RID: 117537 RVA: 0x0040BE40 File Offset: 0x0040A040
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x17007F80 RID: 32640
-		// (get) Token: 0x0601B34D RID: 111437 RVA: 0x003DFBAD File Offset: 0x003DDDAD
-		// (set) Token: 0x0601B34E RID: 111438 RVA: 0x003DFBB5 File Offset: 0x003DDDB5
+		// Token: 0x170085C1 RID: 34241
+		// (get) Token: 0x0601CB22 RID: 117538 RVA: 0x0040BE49 File Offset: 0x0040A049
+		// (set) Token: 0x0601CB23 RID: 117539 RVA: 0x0040BE51 File Offset: 0x0040A051
 		public int TeleportId { get; set; }
 
-		// Token: 0x0601B34F RID: 111439 RVA: 0x003DFBBE File Offset: 0x003DDDBE
+		// Token: 0x0601CB24 RID: 117540 RVA: 0x0040BE5A File Offset: 0x0040A05A
 		public IActivateTeleportT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

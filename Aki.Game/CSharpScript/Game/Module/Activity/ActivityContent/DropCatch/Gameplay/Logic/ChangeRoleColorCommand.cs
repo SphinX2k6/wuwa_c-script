@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006728 RID: 26408
+	// Token: 0x02005678 RID: 22136
 	public class ChangeRoleColorCommand : IDropCatchCommand
 	{
-		// Token: 0x06041EAE RID: 269998 RVA: 0x00FFCFDC File Offset: 0x00FFB1DC
+		// Token: 0x060369FA RID: 223738 RVA: 0x00F3E3A8 File Offset: 0x00F3C5A8
 		[NullableContext(1)]
 		public void Execute(ICommandContext context, [Nullable(2)] object @params)
 		{

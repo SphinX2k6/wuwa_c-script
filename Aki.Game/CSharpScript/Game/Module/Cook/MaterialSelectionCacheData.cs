@@ -4,46 +4,46 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Cook
 {
-	// Token: 0x02005AF8 RID: 23288
+	// Token: 0x02004AD9 RID: 19161
 	public class MaterialSelectionCacheData : IStaticVariableResetter
 	{
-		// Token: 0x0603AF32 RID: 241458 RVA: 0x00E0E27A File Offset: 0x00E0C47A
+		// Token: 0x0602FEA4 RID: 196260 RVA: 0x00D5EF6E File Offset: 0x00D5D16E
 		public static void SetMaterialSelectIndex(int index)
 		{
 			MaterialSelectionCacheData.TmpIndex = index;
 		}
 
-		// Token: 0x0603AF33 RID: 241459 RVA: 0x00E0E282 File Offset: 0x00E0C482
+		// Token: 0x0602FEA5 RID: 196261 RVA: 0x00D5EF76 File Offset: 0x00D5D176
 		public static int GetMaterialSelectIndex()
 		{
 			return MaterialSelectionCacheData.TmpIndex;
 		}
 
-		// Token: 0x0603AF34 RID: 241460 RVA: 0x00E0E289 File Offset: 0x00E0C489
+		// Token: 0x0602FEA6 RID: 196262 RVA: 0x00D5EF7D File Offset: 0x00D5D17D
 		public static void SetMaterialUseNum(int num)
 		{
 			MaterialSelectionCacheData.TmpNum = num;
 		}
 
-		// Token: 0x0603AF35 RID: 241461 RVA: 0x00E0E291 File Offset: 0x00E0C491
+		// Token: 0x0602FEA7 RID: 196263 RVA: 0x00D5EF85 File Offset: 0x00D5D185
 		public static int GetMaterialUseNum()
 		{
 			return MaterialSelectionCacheData.TmpNum;
 		}
 
-		// Token: 0x0603AF36 RID: 241462 RVA: 0x00E0E298 File Offset: 0x00E0C498
+		// Token: 0x0602FEA8 RID: 196264 RVA: 0x00D5EF8C File Offset: 0x00D5D18C
 		public static bool CheckCanSelected(int itemId)
 		{
 			return InventoryModel.Instance.GetCommonItemCount(itemId, 0) >= MaterialSelectionCacheData.GetMaterialUseNum();
 		}
 
-		// Token: 0x0603AF37 RID: 241463 RVA: 0x00E0E2B0 File Offset: 0x00E0C4B0
+		// Token: 0x0602FEA9 RID: 196265 RVA: 0x00D5EFA4 File Offset: 0x00D5D1A4
 		static MaterialSelectionCacheData()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MaterialSelectionCacheData.CreateStaticDefaultValue), new Action(MaterialSelectionCacheData.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603AF38 RID: 241464 RVA: 0x00E0E2CF File Offset: 0x00E0C4CF
+		// Token: 0x0602FEAA RID: 196266 RVA: 0x00D5EFC3 File Offset: 0x00D5D1C3
 		public static void CreateStaticDefaultValue()
 		{
 			MaterialSelectionCacheData.TmpSelectedMaterialData = null;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Cook
 			MaterialSelectionCacheData.TmpNum = 0;
 		}
 
-		// Token: 0x0603AF39 RID: 241465 RVA: 0x00E0E2E9 File Offset: 0x00E0C4E9
+		// Token: 0x0602FEAB RID: 196267 RVA: 0x00D5EFDD File Offset: 0x00D5D1DD
 		public static void ResetStaticDefaultValue()
 		{
 			MaterialSelectionCacheData.TmpSelectedMaterialData = null;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Cook
 			MaterialSelectionCacheData.TmpNum = 0;
 		}
 
-		// Token: 0x0401EC4C RID: 126028
+		// Token: 0x04019708 RID: 104200
 		[Nullable(new byte[]
 		{
 			2,
@@ -69,13 +69,13 @@ namespace CSharpScript.Game.Module.Cook
 		})]
 		public static List<ISelectedData> TmpSelectedMaterialData;
 
-		// Token: 0x0401EC4D RID: 126029
+		// Token: 0x04019709 RID: 104201
 		public static int MaterialTypeNum;
 
-		// Token: 0x0401EC4E RID: 126030
+		// Token: 0x0401970A RID: 104202
 		private static int TmpIndex;
 
-		// Token: 0x0401EC4F RID: 126031
+		// Token: 0x0401970B RID: 104203
 		private static int TmpNum;
 	}
 }

@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001302 RID: 4866
+// Token: 0x020007B6 RID: 1974
 [NullableContext(1)]
 [Nullable(0)]
 internal class ViewStateManager
 {
-	// Token: 0x060086CF RID: 34511 RVA: 0x001CC661 File Offset: 0x001CA861
+	// Token: 0x06005A6A RID: 23146 RVA: 0x001D54CD File Offset: 0x001D36CD
 	public ViewStateManager()
 	{
 		this.CurrentStateInternal = EBusinessSkipDefine.MainView;
 		this.PushStateStack.Push(this.CurrentStateInternal);
 	}
 
-	// Token: 0x060086D0 RID: 34512 RVA: 0x001CC698 File Offset: 0x001CA898
+	// Token: 0x06005A6B RID: 23147 RVA: 0x001D5504 File Offset: 0x001D3704
 	[NullableContext(2)]
 	public void RegisterViewState(EBusinessSkipDefine state, Action exitFunc, Delegate enterFunc)
 	{
@@ -22,7 +22,7 @@ internal class ViewStateManager
 		this.StateMap[state] = value;
 	}
 
-	// Token: 0x060086D1 RID: 34513 RVA: 0x001CC6BC File Offset: 0x001CA8BC
+	// Token: 0x06005A6C RID: 23148 RVA: 0x001D5528 File Offset: 0x001D3728
 	public void SwitchToState(EBusinessSkipDefine state, params object[] params_)
 	{
 		this.PushStateStack.Push(state);
@@ -54,7 +54,7 @@ internal class ViewStateManager
 		}
 	}
 
-	// Token: 0x060086D2 RID: 34514 RVA: 0x001CC74C File Offset: 0x001CA94C
+	// Token: 0x06005A6D RID: 23149 RVA: 0x001D55B8 File Offset: 0x001D37B8
 	public void BackToState(EBusinessSkipDefine state)
 	{
 		if (this.CurrentStateInternal == state)
@@ -92,7 +92,7 @@ internal class ViewStateManager
 		}
 	}
 
-	// Token: 0x060086D3 RID: 34515 RVA: 0x001CC7F0 File Offset: 0x001CA9F0
+	// Token: 0x06005A6E RID: 23150 RVA: 0x001D565C File Offset: 0x001D385C
 	public void BackToLastState()
 	{
 		EBusinessSkipDefine key = this.PushStateStack.Pop();
@@ -123,8 +123,8 @@ internal class ViewStateManager
 		}
 	}
 
-	// Token: 0x17000B89 RID: 2953
-	// (get) Token: 0x060086D4 RID: 34516 RVA: 0x001CC884 File Offset: 0x001CAA84
+	// Token: 0x17000BA9 RID: 2985
+	// (get) Token: 0x06005A6F RID: 23151 RVA: 0x001D56F0 File Offset: 0x001D38F0
 	public EBusinessSkipDefine CurrentState
 	{
 		get
@@ -133,12 +133,12 @@ internal class ViewStateManager
 		}
 	}
 
-	// Token: 0x04003C44 RID: 15428
+	// Token: 0x04003CDC RID: 15580
 	private readonly global::Stack<EBusinessSkipDefine> PushStateStack = new global::Stack<EBusinessSkipDefine>();
 
-	// Token: 0x04003C45 RID: 15429
+	// Token: 0x04003CDD RID: 15581
 	private EBusinessSkipDefine CurrentStateInternal;
 
-	// Token: 0x04003C46 RID: 15430
+	// Token: 0x04003CDE RID: 15582
 	private readonly Dictionary<EBusinessSkipDefine, ViewStateData> StateMap = new Dictionary<EBusinessSkipDefine, ViewStateData>();
 }

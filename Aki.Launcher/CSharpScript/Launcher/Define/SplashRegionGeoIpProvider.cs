@@ -4,12 +4,12 @@ using System.Text.RegularExpressions;
 
 namespace CSharpScript.Launcher.Define
 {
-	// Token: 0x02000244 RID: 580
+	// Token: 0x02000249 RID: 585
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SplashRegionGeoIpProvider
 	{
-		// Token: 0x06000EA2 RID: 3746 RVA: 0x00056683 File Offset: 0x00054883
+		// Token: 0x06000EE3 RID: 3811 RVA: 0x000591C7 File Offset: 0x000573C7
 		public SplashRegionGeoIpProvider(string name, string url, Regex countryRegex)
 		{
 			this.Name = name;
@@ -17,13 +17,13 @@ namespace CSharpScript.Launcher.Define
 			this.CountryRegex = countryRegex;
 		}
 
-		// Token: 0x04000971 RID: 2417
+		// Token: 0x040009B9 RID: 2489
 		public readonly string Name;
 
-		// Token: 0x04000972 RID: 2418
+		// Token: 0x040009BA RID: 2490
 		public readonly string Url;
 
-		// Token: 0x04000973 RID: 2419
+		// Token: 0x040009BB RID: 2491
 		public readonly Regex CountryRegex;
 	}
 }

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DD5 RID: 24021
+	// Token: 0x02004DB9 RID: 19897
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarDengDeng : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D0CB RID: 250059 RVA: 0x00EAF5C8 File Offset: 0x00EAD7C8
+		// Token: 0x06032042 RID: 204866 RVA: 0x00E004BC File Offset: 0x00DFE6BC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D0CC RID: 250060 RVA: 0x00EAF6D6 File Offset: 0x00EAD8D6
+		// Token: 0x06032043 RID: 204867 RVA: 0x00E005CA File Offset: 0x00DFE7CA
 		protected override void OnInitData()
 		{
 			base.OnInitData();
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SecondPercentMachine.Init(this.GetSecondTargetAttributePercent());
 		}
 
-		// Token: 0x0603D0CD RID: 250061 RVA: 0x00EAF708 File Offset: 0x00EAD908
+		// Token: 0x06032044 RID: 204868 RVA: 0x00E005FC File Offset: 0x00DFE7FC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarDengDeng.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D0CE RID: 250062 RVA: 0x00EAF74C File Offset: 0x00EAD94C
+		// Token: 0x06032045 RID: 204869 RVA: 0x00E00640 File Offset: 0x00DFE840
 		private UniTask InitPointLeftItem(UUIItem pointItem)
 		{
 			SpecialEnergyBarDengDeng.<InitPointLeftItem>d__15 <InitPointLeftItem>d__;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitPointLeftItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D0CF RID: 250063 RVA: 0x00EAF798 File Offset: 0x00EAD998
+		// Token: 0x06032046 RID: 204870 RVA: 0x00E0068C File Offset: 0x00DFE88C
 		private UniTask InitPointRightItem(UUIItem pointItem)
 		{
 			SpecialEnergyBarDengDeng.<InitPointRightItem>d__16 <InitPointRightItem>d__;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitPointRightItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D0D0 RID: 250064 RVA: 0x00EAF7E4 File Offset: 0x00EAD9E4
+		// Token: 0x06032047 RID: 204871 RVA: 0x00E006D8 File Offset: 0x00DFE8D8
 		protected override void AddEvents()
 		{
 			base.AddEvents();
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.ListenForTagAddOrRemoveChanged(SpecialEnergyBarDengDeng.TagRed, new BaseTagComponent.TTagSwitchedCallback(this.OnTagRedChange));
 		}
 
-		// Token: 0x0603D0D1 RID: 250065 RVA: 0x00EAF83E File Offset: 0x00EADA3E
+		// Token: 0x06032048 RID: 204872 RVA: 0x00E00732 File Offset: 0x00DFE932
 		protected override void RemoveEvents()
 		{
 			base.RemoveEvents();
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.RemoveListenAttributeChanged(this.SecondMaxAttributeId, new Action<EAttributeType, float, float>(this.SecondMaxAttributeChanged));
 		}
 
-		// Token: 0x0603D0D2 RID: 250066 RVA: 0x00EAF878 File Offset: 0x00EADA78
+		// Token: 0x06032049 RID: 204873 RVA: 0x00E0076C File Offset: 0x00DFE96C
 		protected override void OnStart()
 		{
 			if (this.Config == null)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshKeyEnable(true);
 		}
 
-		// Token: 0x0603D0D3 RID: 250067 RVA: 0x00EAF960 File Offset: 0x00EADB60
+		// Token: 0x0603204A RID: 204874 RVA: 0x00E00854 File Offset: 0x00DFEA54
 		private void InitColor(SpecialEnergyBarSlotItem slotItem, string pointBgColorStr, string pointColorStr, string effectColorStr)
 		{
 			FColor fcolor = FColor.FromHex(pointBgColorStr);
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			slotItem.SetBgAndUseEffectColor(flinearColor);
 		}
 
-		// Token: 0x0603D0D4 RID: 250068 RVA: 0x00EAF9AB File Offset: 0x00EADBAB
+		// Token: 0x0603204B RID: 204875 RVA: 0x00E0089F File Offset: 0x00DFEA9F
 		private void UpdateRedState(bool isStart = false)
 		{
 			UUIItem item = base.GetItem(3);
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D0D5 RID: 250069 RVA: 0x00EAF9EC File Offset: 0x00EADBEC
+		// Token: 0x0603204C RID: 204876 RVA: 0x00E008E0 File Offset: 0x00DFEAE0
 		private void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D0D6 RID: 250070 RVA: 0x00EAFA80 File Offset: 0x00EADC80
+		// Token: 0x0603204D RID: 204877 RVA: 0x00E00974 File Offset: 0x00DFEB74
 		private void RefreshSecondBarPercent(bool isStart = false)
 		{
 			float curPercent = this.SecondPercentMachine.GetCurPercent();
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D0D7 RID: 250071 RVA: 0x00EAFB10 File Offset: 0x00EADD10
+		// Token: 0x0603204E RID: 204878 RVA: 0x00E00A04 File Offset: 0x00DFEC04
 		private void RefreshKeyEnable(bool isStart = false)
 		{
 			SpecialEnergyBarKeyItem keyItem = this.KeyItem;
@@ -214,25 +214,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(this.GetKeyEnable(), isStart);
 		}
 
-		// Token: 0x0603D0D8 RID: 250072 RVA: 0x00EAFB29 File Offset: 0x00EADD29
+		// Token: 0x0603204F RID: 204879 RVA: 0x00E00A1D File Offset: 0x00DFEC1D
 		protected override bool GetKeyEnable()
 		{
 			return (this.IsRedState ? this.SecondPercentMachine.GetCurPercent() : this.PercentMachine.GetCurPercent()) >= this.Config.DisableKeyOnPercent;
 		}
 
-		// Token: 0x0603D0D9 RID: 250073 RVA: 0x00EAFB5B File Offset: 0x00EADD5B
+		// Token: 0x06032050 RID: 204880 RVA: 0x00E00A4F File Offset: 0x00DFEC4F
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D0DA RID: 250074 RVA: 0x00EAFB64 File Offset: 0x00EADD64
+		// Token: 0x06032051 RID: 204881 RVA: 0x00E00A58 File Offset: 0x00DFEC58
 		private void OnSecondBarPercentChanged()
 		{
 			this.RefreshSecondBarPercent(false);
 		}
 
-		// Token: 0x0603D0DB RID: 250075 RVA: 0x00EAFB6D File Offset: 0x00EADD6D
+		// Token: 0x06032052 RID: 204882 RVA: 0x00E00A61 File Offset: 0x00DFEC61
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -253,21 +253,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			slotRightItem.Tick(delta);
 		}
 
-		// Token: 0x0603D0DC RID: 250076 RVA: 0x00EAFBAD File Offset: 0x00EADDAD
+		// Token: 0x06032053 RID: 204883 RVA: 0x00E00AA1 File Offset: 0x00DFECA1
 		private void SecondAttributeChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.SecondPercentMachine.SetTargetPercent(this.GetSecondTargetAttributePercent());
 			this.OnSecondBarPercentChanged();
 		}
 
-		// Token: 0x0603D0DD RID: 250077 RVA: 0x00EAFBC6 File Offset: 0x00EADDC6
+		// Token: 0x06032054 RID: 204884 RVA: 0x00E00ABA File Offset: 0x00DFECBA
 		private void SecondMaxAttributeChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.SecondPercentMachine.SetTargetPercent(this.GetSecondTargetAttributePercent());
 			this.OnSecondBarPercentChanged();
 		}
 
-		// Token: 0x0603D0DE RID: 250078 RVA: 0x00EAFBE0 File Offset: 0x00EADDE0
+		// Token: 0x06032055 RID: 204885 RVA: 0x00E00AD4 File Offset: 0x00DFECD4
 		private float GetSecondTargetAttributePercent()
 		{
 			float currentValue = this.AttributeComponent.GetCurrentValue(this.SecondAttributeId);
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return result;
 		}
 
-		// Token: 0x0603D0DF RID: 250079 RVA: 0x00EAFC24 File Offset: 0x00EADE24
+		// Token: 0x06032056 RID: 204886 RVA: 0x00E00B18 File Offset: 0x00DFED18
 		private void OnTagRedChange(int tagId, bool tagExist)
 		{
 			if (tagExist == this.IsRedState)
@@ -291,59 +291,59 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateRedState(false);
 		}
 
-		// Token: 0x0401FCEF RID: 130287
+		// Token: 0x0401A7AC RID: 108460
 		private const float WIDTH = 190f;
 
-		// Token: 0x0401FCF0 RID: 130288
+		// Token: 0x0401A7AD RID: 108461
 		private const float EFFECT_BASE_PERCENT = 0.4878049f;
 
-		// Token: 0x0401FCF1 RID: 130289
+		// Token: 0x0401A7AE RID: 108462
 		[StaticVariableRuleIgnore]
 		private static readonly int TagRed = GameplayTagDefine.EGameplayTagId["角色.R2T1DengDengMd10011.状态标识.红剑"];
 
-		// Token: 0x0401FCF2 RID: 130290
+		// Token: 0x0401A7AF RID: 108463
 		[Nullable(2)]
 		private SpecialEnergyBarSlotItem SlotLeftItem;
 
-		// Token: 0x0401FCF3 RID: 130291
+		// Token: 0x0401A7B0 RID: 108464
 		[Nullable(2)]
 		private SpecialEnergyBarSlotItem SlotRightItem;
 
-		// Token: 0x0401FCF4 RID: 130292
+		// Token: 0x0401A7B1 RID: 108465
 		private readonly SpecialEnergyBarPercentMachine SecondPercentMachine = new SpecialEnergyBarPercentMachine();
 
-		// Token: 0x0401FCF5 RID: 130293
+		// Token: 0x0401A7B2 RID: 108466
 		private readonly EAttributeType SecondAttributeId = EAttributeType.SpecialEnergy2;
 
-		// Token: 0x0401FCF6 RID: 130294
+		// Token: 0x0401A7B3 RID: 108467
 		private readonly EAttributeType SecondMaxAttributeId = EAttributeType.SpecialEnergy2Max;
 
-		// Token: 0x0401FCF7 RID: 130295
+		// Token: 0x0401A7B4 RID: 108468
 		private bool IsRedState;
 
-		// Token: 0x0401FCF8 RID: 130296
+		// Token: 0x0401A7B5 RID: 108469
 		private bool IsLeftGraduateEffectVisible;
 
-		// Token: 0x0401FCF9 RID: 130297
+		// Token: 0x0401A7B6 RID: 108470
 		private bool IsRightGraduateEffectVisible;
 
-		// Token: 0x0200C0ED RID: 49389
+		// Token: 0x0200AAF6 RID: 43766
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A39D RID: 238493
+			// Token: 0x04034D6F RID: 216431
 			SlotLeftItem,
-			// Token: 0x0403A39E RID: 238494
+			// Token: 0x04034D70 RID: 216432
 			SlotRightItem,
-			// Token: 0x0403A39F RID: 238495
+			// Token: 0x04034D71 RID: 216433
 			KeyContainerItem,
-			// Token: 0x0403A3A0 RID: 238496
+			// Token: 0x04034D72 RID: 216434
 			LeftGraduateItem,
-			// Token: 0x0403A3A1 RID: 238497
+			// Token: 0x04034D73 RID: 216435
 			RightGraduateItem,
-			// Token: 0x0403A3A2 RID: 238498
+			// Token: 0x04034D74 RID: 216436
 			LeftGraduateEffect,
-			// Token: 0x0403A3A3 RID: 238499
+			// Token: 0x04034D75 RID: 216437
 			RightGraduateEffect
 		}
 	}

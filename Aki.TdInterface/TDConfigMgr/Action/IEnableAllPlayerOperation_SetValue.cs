@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019E1 RID: 6625
+	// Token: 0x02001B6E RID: 7022
 	public class IEnableAllPlayerOperation_SetValue
 	{
-		// Token: 0x04005810 RID: 22544
+		// Token: 0x04005C65 RID: 23653
 		public EPlayerOperationType Type;
 
-		// Token: 0x04005811 RID: 22545
+		// Token: 0x04005C66 RID: 23654
 		public bool? IsUiFadeEffect;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A75 RID: 6773
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C0A RID: 7178
 	public class IFlipperTip : ICommonTipType
 	{
-		// Token: 0x06009106 RID: 37126 RVA: 0x00151CB4 File Offset: 0x0014FEB4
+		// Token: 0x06009870 RID: 39024 RVA: 0x00161BE0 File Offset: 0x0015FDE0
 		private IFlipperTip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009107 RID: 37127 RVA: 0x00151CEC File Offset: 0x0014FEEC
+		// Token: 0x06009871 RID: 39025 RVA: 0x00161C18 File Offset: 0x0015FE18
 		public static IFlipperTip Create([Nullable(2)] IFlipperTip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009108 RID: 37128 RVA: 0x00151CFF File Offset: 0x0014FEFF
+		// Token: 0x06009872 RID: 39026 RVA: 0x00161C2B File Offset: 0x0015FE2B
 		public static IFlipperTip CreateFromSetValue([Nullable(2)] IFlipperTip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009109 RID: 37129 RVA: 0x00151D14 File Offset: 0x0014FF14
+		// Token: 0x06009873 RID: 39027 RVA: 0x00161C40 File Offset: 0x0015FE40
 		public new IFlipperTip_SetValue ToSetValue()
 		{
 			return new IFlipperTip_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E29 RID: 11817
-		// (get) Token: 0x0600910A RID: 37130 RVA: 0x00151D62 File Offset: 0x0014FF62
-		// (set) Token: 0x0600910B RID: 37131 RVA: 0x00151D8D File Offset: 0x0014FF8D
+		// Token: 0x17003036 RID: 12342
+		// (get) Token: 0x06009874 RID: 39028 RVA: 0x00161C8E File Offset: 0x0015FE8E
+		// (set) Token: 0x06009875 RID: 39029 RVA: 0x00161CB9 File Offset: 0x0015FEB9
 		public override ECommonTipType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E2A RID: 11818
-		// (get) Token: 0x0600910C RID: 37132 RVA: 0x00151D9B File Offset: 0x0014FF9B
-		// (set) Token: 0x0600910D RID: 37133 RVA: 0x00151DC6 File Offset: 0x0014FFC6
+		// Token: 0x17003037 RID: 12343
+		// (get) Token: 0x06009876 RID: 39030 RVA: 0x00161CC7 File Offset: 0x0015FEC7
+		// (set) Token: 0x06009877 RID: 39031 RVA: 0x00161CF2 File Offset: 0x0015FEF2
 		public virtual string TidMainText
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E2B RID: 11819
-		// (get) Token: 0x0600910E RID: 37134 RVA: 0x00151DD4 File Offset: 0x0014FFD4
-		// (set) Token: 0x0600910F RID: 37135 RVA: 0x00151DFF File Offset: 0x0014FFFF
+		// Token: 0x17003038 RID: 12344
+		// (get) Token: 0x06009878 RID: 39032 RVA: 0x00161D00 File Offset: 0x0015FF00
+		// (set) Token: 0x06009879 RID: 39033 RVA: 0x00161D2B File Offset: 0x0015FF2B
 		public virtual string TidSubText
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E2C RID: 11820
-		// (get) Token: 0x06009110 RID: 37136 RVA: 0x00151E0D File Offset: 0x0015000D
-		// (set) Token: 0x06009111 RID: 37137 RVA: 0x00151E24 File Offset: 0x00150024
+		// Token: 0x17003039 RID: 12345
+		// (get) Token: 0x0600987A RID: 39034 RVA: 0x00161D39 File Offset: 0x0015FF39
+		// (set) Token: 0x0600987B RID: 39035 RVA: 0x00161D50 File Offset: 0x0015FF50
 		[Nullable(2)]
 		public virtual string EdTidMainText
 		{
@@ -154,9 +152,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E2D RID: 11821
-		// (get) Token: 0x06009112 RID: 37138 RVA: 0x00151E32 File Offset: 0x00150032
-		// (set) Token: 0x06009113 RID: 37139 RVA: 0x00151E49 File Offset: 0x00150049
+		// Token: 0x1700303A RID: 12346
+		// (get) Token: 0x0600987C RID: 39036 RVA: 0x00161D5E File Offset: 0x0015FF5E
+		// (set) Token: 0x0600987D RID: 39037 RVA: 0x00161D75 File Offset: 0x0015FF75
 		[Nullable(2)]
 		public virtual string EdTidSubText
 		{
@@ -176,11 +174,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400597E RID: 22910
+		// Token: 0x04005DE3 RID: 24035
 		[Nullable(2)]
 		protected new IFlipperTip FbInstance;
 
-		// Token: 0x0400597F RID: 22911
+		// Token: 0x04005DE4 RID: 24036
 		[Nullable(2)]
 		protected new IFlipperTip_SetValue PocoInterface;
 	}

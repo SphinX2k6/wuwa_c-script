@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item;
 
-// Token: 0x0200140B RID: 5131
+// Token: 0x020008BF RID: 2239
 [NullableContext(1)]
 public interface IPinballItemButtonCallback
 {
-	// Token: 0x17000C5B RID: 3163
-	// (get) Token: 0x060090F6 RID: 37110
-	// (set) Token: 0x060090F7 RID: 37111
+	// Token: 0x17000C7B RID: 3195
+	// (get) Token: 0x0600648B RID: 25739
+	// (set) Token: 0x0600648C RID: 25740
 	PinballItemView View { get; set; }
 
-	// Token: 0x17000C5C RID: 3164
-	// (get) Token: 0x060090F8 RID: 37112
-	// (set) Token: 0x060090F9 RID: 37113
+	// Token: 0x17000C7C RID: 3196
+	// (get) Token: 0x0600648D RID: 25741
+	// (set) Token: 0x0600648E RID: 25742
 	[Nullable(2)]
 	object Data { [NullableContext(2)] get; [NullableContext(2)] set; }
 }

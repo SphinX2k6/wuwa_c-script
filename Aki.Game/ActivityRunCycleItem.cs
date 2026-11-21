@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020014D3 RID: 5331
+// Token: 0x0200098B RID: 2443
 public class ActivityRunCycleItem : UiPanelBase, IGridProxy<int>
 {
-	// Token: 0x17000D12 RID: 3346
-	// (get) Token: 0x06009781 RID: 38785 RVA: 0x0020BA73 File Offset: 0x00209C73
-	// (set) Token: 0x06009782 RID: 38786 RVA: 0x0020BA7B File Offset: 0x00209C7B
+	// Token: 0x17000D33 RID: 3379
+	// (get) Token: 0x06006B5B RID: 27483 RVA: 0x002157B3 File Offset: 0x002139B3
+	// (set) Token: 0x06006B5C RID: 27484 RVA: 0x002157BB File Offset: 0x002139BB
 	[Nullable(new byte[]
 	{
 		2,
@@ -28,17 +28,17 @@ public class ActivityRunCycleItem : UiPanelBase, IGridProxy<int>
 		1
 	})] set; }
 
-	// Token: 0x17000D13 RID: 3347
-	// (get) Token: 0x06009783 RID: 38787 RVA: 0x0020BA84 File Offset: 0x00209C84
-	// (set) Token: 0x06009784 RID: 38788 RVA: 0x0020BA8C File Offset: 0x00209C8C
+	// Token: 0x17000D34 RID: 3380
+	// (get) Token: 0x06006B5D RID: 27485 RVA: 0x002157C4 File Offset: 0x002139C4
+	// (set) Token: 0x06006B5E RID: 27486 RVA: 0x002157CC File Offset: 0x002139CC
 	public int GridIndex { get; set; }
 
-	// Token: 0x17000D14 RID: 3348
-	// (get) Token: 0x06009785 RID: 38789 RVA: 0x0020BA95 File Offset: 0x00209C95
-	// (set) Token: 0x06009786 RID: 38790 RVA: 0x0020BA9D File Offset: 0x00209C9D
+	// Token: 0x17000D35 RID: 3381
+	// (get) Token: 0x06006B5F RID: 27487 RVA: 0x002157D5 File Offset: 0x002139D5
+	// (set) Token: 0x06006B60 RID: 27488 RVA: 0x002157DD File Offset: 0x002139DD
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x06009787 RID: 38791 RVA: 0x0020BAA8 File Offset: 0x00209CA8
+	// Token: 0x06006B61 RID: 27489 RVA: 0x002157E8 File Offset: 0x002139E8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -79,7 +79,7 @@ public class ActivityRunCycleItem : UiPanelBase, IGridProxy<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009788 RID: 38792 RVA: 0x0020BC9C File Offset: 0x00209E9C
+	// Token: 0x06006B62 RID: 27490 RVA: 0x002159DC File Offset: 0x00213BDC
 	public void TryBindRedDot()
 	{
 		if (this.IsRedDotBind)
@@ -91,7 +91,7 @@ public class ActivityRunCycleItem : UiPanelBase, IGridProxy<int>
 		RedDotController.Instance.BindRedDot(ERedDotName.ActivityRun, base.GetItem(6), null, this.CurrentChallengeId);
 	}
 
-	// Token: 0x06009789 RID: 38793 RVA: 0x0020BCEE File Offset: 0x00209EEE
+	// Token: 0x06006B63 RID: 27491 RVA: 0x00215A2E File Offset: 0x00213C2E
 	private void OnClickItem(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -105,7 +105,7 @@ public class ActivityRunCycleItem : UiPanelBase, IGridProxy<int>
 		EventSystem.Instance.Emit<ActivityRunCycleItem>(EEventName.OnClickActivityRunChallenge, this);
 	}
 
-	// Token: 0x0600978A RID: 38794 RVA: 0x0020BD23 File Offset: 0x00209F23
+	// Token: 0x06006B64 RID: 27492 RVA: 0x00215A63 File Offset: 0x00213C63
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -116,7 +116,7 @@ public class ActivityRunCycleItem : UiPanelBase, IGridProxy<int>
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600978B RID: 38795 RVA: 0x0020BD3C File Offset: 0x00209F3C
+	// Token: 0x06006B65 RID: 27493 RVA: 0x00215A7C File Offset: 0x00213C7C
 	protected override void OnBeforeDestroy()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.ActivityRun, base.GetItem(10), this.CurrentChallengeId);
@@ -129,7 +129,7 @@ public class ActivityRunCycleItem : UiPanelBase, IGridProxy<int>
 		sprite.SetSprite(null, true);
 	}
 
-	// Token: 0x0600978C RID: 38796 RVA: 0x0020BD90 File Offset: 0x00209F90
+	// Token: 0x06006B66 RID: 27494 RVA: 0x00215AD0 File Offset: 0x00213CD0
 	private void RefreshView()
 	{
 		this.CurrentChallengeData = ActivityRunModel.Instance.GetActivityRunData(this.CurrentChallengeId);
@@ -139,7 +139,7 @@ public class ActivityRunCycleItem : UiPanelBase, IGridProxy<int>
 		this.RefreshLockItem();
 	}
 
-	// Token: 0x0600978D RID: 38797 RVA: 0x0020BDE8 File Offset: 0x00209FE8
+	// Token: 0x06006B67 RID: 27495 RVA: 0x00215B28 File Offset: 0x00213D28
 	private void RefreshTitle()
 	{
 		UUIText text = base.GetText(1);
@@ -150,7 +150,7 @@ public class ActivityRunCycleItem : UiPanelBase, IGridProxy<int>
 		text.SetText(this.CurrentChallengeData.GetTitle(), true);
 	}
 
-	// Token: 0x0600978E RID: 38798 RVA: 0x0020BE08 File Offset: 0x0020A008
+	// Token: 0x06006B68 RID: 27496 RVA: 0x00215B48 File Offset: 0x00213D48
 	private void RefreshFinishedItem()
 	{
 		UUISprite sprite = base.GetSprite(3);
@@ -176,7 +176,7 @@ public class ActivityRunCycleItem : UiPanelBase, IGridProxy<int>
 		}), base.GetSprite(7), false, null, null);
 	}
 
-	// Token: 0x0600978F RID: 38799 RVA: 0x0020BEA4 File Offset: 0x0020A0A4
+	// Token: 0x06006B69 RID: 27497 RVA: 0x00215BE4 File Offset: 0x00213DE4
 	private void RefreshLockItem()
 	{
 		UUIItem item = base.GetItem(9);
@@ -197,7 +197,7 @@ public class ActivityRunCycleItem : UiPanelBase, IGridProxy<int>
 		item3.SetUIActive(!this.CurrentChallengeData.GetIsShow());
 	}
 
-	// Token: 0x06009790 RID: 38800 RVA: 0x0020BF11 File Offset: 0x0020A111
+	// Token: 0x06006B6A RID: 27498 RVA: 0x00215C51 File Offset: 0x00213E51
 	public void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.CurrentChallengeId = data;
@@ -205,12 +205,12 @@ public class ActivityRunCycleItem : UiPanelBase, IGridProxy<int>
 		this.RefreshView();
 	}
 
-	// Token: 0x06009791 RID: 38801 RVA: 0x0020BF26 File Offset: 0x0020A126
+	// Token: 0x06006B6B RID: 27499 RVA: 0x00215C66 File Offset: 0x00213E66
 	public void Clear()
 	{
 	}
 
-	// Token: 0x06009792 RID: 38802 RVA: 0x0020BF28 File Offset: 0x0020A128
+	// Token: 0x06006B6C RID: 27500 RVA: 0x00215C68 File Offset: 0x00213E68
 	public void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -232,7 +232,7 @@ public class ActivityRunCycleItem : UiPanelBase, IGridProxy<int>
 		EventSystem.Instance.Emit(EEventName.OnSelectActivityRunChallengeItem);
 	}
 
-	// Token: 0x06009793 RID: 38803 RVA: 0x0020BFBD File Offset: 0x0020A1BD
+	// Token: 0x06006B6D RID: 27501 RVA: 0x00215CFD File Offset: 0x00213EFD
 	public void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -243,64 +243,64 @@ public class ActivityRunCycleItem : UiPanelBase, IGridProxy<int>
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 	}
 
-	// Token: 0x06009794 RID: 38804 RVA: 0x0020BFD5 File Offset: 0x0020A1D5
+	// Token: 0x06006B6E RID: 27502 RVA: 0x00215D15 File Offset: 0x00213F15
 	[NullableContext(1)]
 	public object GetKey(int data, int gridIndex)
 	{
 		return this.GridIndex;
 	}
 
-	// Token: 0x040042B0 RID: 17072
+	// Token: 0x04004355 RID: 17237
 	private int CurrentChallengeId;
 
-	// Token: 0x040042B1 RID: 17073
+	// Token: 0x04004356 RID: 17238
 	[Nullable(2)]
 	private ActivityRunData CurrentChallengeData;
 
-	// Token: 0x040042B2 RID: 17074
+	// Token: 0x04004357 RID: 17239
 	private bool IsRedDotBind;
 
-	// Token: 0x040042B3 RID: 17075
+	// Token: 0x04004358 RID: 17240
 	[Nullable(1)]
 	private const string ROME_ICON_PATH = "/Game/Aki/UI/UIResources/Common/Atlas/SP_ComRomeText_0{0}.SP_ComRomeText_0{1}";
 
-	// Token: 0x02007B0D RID: 31501
+	// Token: 0x02006C99 RID: 27801
 	private class EComponents
 	{
-		// Token: 0x04028780 RID: 165760
+		// Token: 0x04023ABE RID: 146110
 		public const int Toggle = 0;
 
-		// Token: 0x04028781 RID: 165761
+		// Token: 0x04023ABF RID: 146111
 		public const int Title = 1;
 
-		// Token: 0x04028782 RID: 165762
+		// Token: 0x04023AC0 RID: 146112
 		public const int SprRome = 2;
 
-		// Token: 0x04028783 RID: 165763
+		// Token: 0x04023AC1 RID: 146113
 		public const int SprDone = 3;
 
-		// Token: 0x04028784 RID: 165764
+		// Token: 0x04023AC2 RID: 146114
 		public const int LockItemSelected = 4;
 
-		// Token: 0x04028785 RID: 165765
+		// Token: 0x04023AC3 RID: 146115
 		public const int LockMask = 5;
 
-		// Token: 0x04028786 RID: 165766
+		// Token: 0x04023AC4 RID: 146116
 		public const int RedPointSelected = 6;
 
-		// Token: 0x04028787 RID: 165767
+		// Token: 0x04023AC5 RID: 146117
 		public const int SprRomeIcon = 7;
 
-		// Token: 0x04028788 RID: 165768
+		// Token: 0x04023AC6 RID: 146118
 		public const int SprDoneSelected = 8;
 
-		// Token: 0x04028789 RID: 165769
+		// Token: 0x04023AC7 RID: 146119
 		public const int LockItem = 9;
 
-		// Token: 0x0402878A RID: 165770
+		// Token: 0x04023AC8 RID: 146120
 		public const int RedPoint = 10;
 
-		// Token: 0x0402878B RID: 165771
+		// Token: 0x04023AC9 RID: 146121
 		public const int TexBg = 11;
 	}
 }

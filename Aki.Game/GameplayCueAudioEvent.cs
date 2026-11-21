@@ -1,10 +1,10 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02002FB2 RID: 12210
+// Token: 0x02002506 RID: 9478
 public class GameplayCueAudioEvent : GameplayCueBase
 {
-	// Token: 0x06019E34 RID: 106036 RVA: 0x006C4E54 File Offset: 0x006C3054
+	// Token: 0x06017745 RID: 96069 RVA: 0x006EB700 File Offset: 0x006E9900
 	protected override void OnCreate()
 	{
 		WorldEntity entity = this.EntityHandle.Entity;
@@ -16,7 +16,7 @@ public class GameplayCueAudioEvent : GameplayCueBase
 		this.EventHandle = AudioSystem.Instance.PostEvent(this.CueConfig.Parameters(0), characterAudioComponent.GetAkComponent(null), null);
 	}
 
-	// Token: 0x06019E35 RID: 106037 RVA: 0x006C4EC0 File Offset: 0x006C30C0
+	// Token: 0x06017746 RID: 96070 RVA: 0x006EB76C File Offset: 0x006E996C
 	protected override void OnDestroy()
 	{
 		if (this.EventHandle != 0)
@@ -25,6 +25,6 @@ public class GameplayCueAudioEvent : GameplayCueBase
 		}
 	}
 
-	// Token: 0x0400C3D0 RID: 50128
+	// Token: 0x0400C779 RID: 51065
 	private int EventHandle;
 }

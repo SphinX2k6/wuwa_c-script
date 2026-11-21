@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007708 RID: 30472
+	// Token: 0x02007F1C RID: 32540
 	public class TLiftMoveTypeUnion
 	{
-		// Token: 0x1700E649 RID: 58953
-		// (get) Token: 0x0603766E RID: 226926 RVA: 0x00780BF6 File Offset: 0x0077EDF6
-		// (set) Token: 0x0603766F RID: 226927 RVA: 0x00780BFE File Offset: 0x0077EDFE
+		// Token: 0x1700F28B RID: 62091
+		// (get) Token: 0x0603AB3B RID: 240443 RVA: 0x007E5102 File Offset: 0x007E3302
+		// (set) Token: 0x0603AB3C RID: 240444 RVA: 0x007E510A File Offset: 0x007E330A
 		public TLiftMoveType Type { get; set; }
 
-		// Token: 0x1700E64A RID: 58954
-		// (get) Token: 0x06037670 RID: 226928 RVA: 0x00780C07 File Offset: 0x0077EE07
-		// (set) Token: 0x06037671 RID: 226929 RVA: 0x00780C0F File Offset: 0x0077EE0F
+		// Token: 0x1700F28C RID: 62092
+		// (get) Token: 0x0603AB3D RID: 240445 RVA: 0x007E5113 File Offset: 0x007E3313
+		// (set) Token: 0x0603AB3E RID: 240446 RVA: 0x007E511B File Offset: 0x007E331B
 		public object Value { get; set; }
 
-		// Token: 0x06037672 RID: 226930 RVA: 0x00780C18 File Offset: 0x0077EE18
+		// Token: 0x0603AB3F RID: 240447 RVA: 0x007E5124 File Offset: 0x007E3324
 		public TLiftMoveTypeUnion()
 		{
 			this.Type = TLiftMoveType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037673 RID: 226931 RVA: 0x00780C2E File Offset: 0x0077EE2E
+		// Token: 0x0603AB40 RID: 240448 RVA: 0x007E513A File Offset: 0x007E333A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037674 RID: 226932 RVA: 0x00780C40 File Offset: 0x0077EE40
+		// Token: 0x0603AB41 RID: 240449 RVA: 0x007E514C File Offset: 0x007E334C
 		public ILiftMoveTypeCircularT AsILiftMoveTypeCircular()
 		{
 			return this.As<ILiftMoveTypeCircularT>();
 		}
 
-		// Token: 0x06037675 RID: 226933 RVA: 0x00780C48 File Offset: 0x0077EE48
+		// Token: 0x0603AB42 RID: 240450 RVA: 0x007E5154 File Offset: 0x007E3354
 		public static TLiftMoveTypeUnion FromILiftMoveTypeCircular(ILiftMoveTypeCircularT _iliftmovetypecircular)
 		{
 			return new TLiftMoveTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037676 RID: 226934 RVA: 0x00780C5D File Offset: 0x0077EE5D
+		// Token: 0x0603AB43 RID: 240451 RVA: 0x007E5169 File Offset: 0x007E3369
 		public ILiftMoveTypeCustomSpeedT AsILiftMoveTypeCustomSpeed()
 		{
 			return this.As<ILiftMoveTypeCustomSpeedT>();
 		}
 
-		// Token: 0x06037677 RID: 226935 RVA: 0x00780C65 File Offset: 0x0077EE65
+		// Token: 0x0603AB44 RID: 240452 RVA: 0x007E5171 File Offset: 0x007E3371
 		public static TLiftMoveTypeUnion FromILiftMoveTypeCustomSpeed(ILiftMoveTypeCustomSpeedT _iliftmovetypecustomspeed)
 		{
 			return new TLiftMoveTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037678 RID: 226936 RVA: 0x00780C7A File Offset: 0x0077EE7A
+		// Token: 0x0603AB45 RID: 240453 RVA: 0x007E5186 File Offset: 0x007E3386
 		public ILiftMoveTypeDefaultT AsILiftMoveTypeDefault()
 		{
 			return this.As<ILiftMoveTypeDefaultT>();
 		}
 
-		// Token: 0x06037679 RID: 226937 RVA: 0x00780C82 File Offset: 0x0077EE82
+		// Token: 0x0603AB46 RID: 240454 RVA: 0x007E518E File Offset: 0x007E338E
 		public static TLiftMoveTypeUnion FromILiftMoveTypeDefault(ILiftMoveTypeDefaultT _iliftmovetypedefault)
 		{
 			return new TLiftMoveTypeUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603767A RID: 226938 RVA: 0x00780C97 File Offset: 0x0077EE97
+		// Token: 0x0603AB47 RID: 240455 RVA: 0x007E51A3 File Offset: 0x007E33A3
 		public ILiftMoveTypeTeleportT AsILiftMoveTypeTeleport()
 		{
 			return this.As<ILiftMoveTypeTeleportT>();
 		}
 
-		// Token: 0x0603767B RID: 226939 RVA: 0x00780C9F File Offset: 0x0077EE9F
+		// Token: 0x0603AB48 RID: 240456 RVA: 0x007E51AB File Offset: 0x007E33AB
 		public static TLiftMoveTypeUnion FromILiftMoveTypeTeleport(ILiftMoveTypeTeleportT _iliftmovetypeteleport)
 		{
 			return new TLiftMoveTypeUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603767C RID: 226940 RVA: 0x00780CB4 File Offset: 0x0077EEB4
+		// Token: 0x0603AB49 RID: 240457 RVA: 0x007E51C0 File Offset: 0x007E33C0
 		public static int Pack(FlatBufferBuilder builder, TLiftMoveTypeUnion _o)
 		{
 			switch (_o.Type)

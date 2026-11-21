@@ -8,12 +8,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Camera
 {
-	// Token: 0x02003FAF RID: 16303
+	// Token: 0x02003237 RID: 12855
 	[UnrealObjectPath("/Game/Aki/Data/Camera/BP_PhotographCameraConfig.BP_PhotographCameraConfig_C")]
 	[UnrealStructLayout(160, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 160)]
 	public class BP_PhotographCameraConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06029B66 RID: 170854 RVA: 0x009CACBE File Offset: 0x009C8EBE
+		// Token: 0x06020196 RID: 131478 RVA: 0x0093D5E2 File Offset: 0x0093B7E2
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_PhotographCameraConfig_C._ClassPtr == IntPtr.Zero)
@@ -23,20 +23,20 @@ namespace AkiClient.Game.Aki.Data.Camera
 			return BP_PhotographCameraConfig_C._ClassPtr;
 		}
 
-		// Token: 0x06029B67 RID: 170855 RVA: 0x009CACE4 File Offset: 0x009C8EE4
+		// Token: 0x06020197 RID: 131479 RVA: 0x0093D608 File Offset: 0x0093B808
 		public BP_PhotographCameraConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_PhotographCameraConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06029B68 RID: 170856 RVA: 0x009CAD0C File Offset: 0x009C8F0C
+		// Token: 0x06020198 RID: 131480 RVA: 0x0093D630 File Offset: 0x0093B830
 		[NullableContext(1)]
 		public BP_PhotographCameraConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_PhotographCameraConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170064E5 RID: 25829
-		// (get) Token: 0x06029B69 RID: 170857 RVA: 0x009CAD40 File Offset: 0x009C8F40
-		// (set) Token: 0x06029B6A RID: 170858 RVA: 0x009CAD79 File Offset: 0x009C8F79
+		// Token: 0x17003D4C RID: 15692
+		// (get) Token: 0x06020199 RID: 131481 RVA: 0x0093D664 File Offset: 0x0093B864
+		// (set) Token: 0x0602019A RID: 131482 RVA: 0x0093D69D File Offset: 0x0093B89D
 		[Nullable(new byte[]
 		{
 			1,
@@ -55,7 +55,7 @@ namespace AkiClient.Game.Aki.Data.Camera
 				TMap<TEnumAsByte<EPhotographCamera>, float> result;
 				if ((result = this._基础) == null)
 				{
-					result = (this._基础 = new TMap<TEnumAsByte<EPhotographCamera>, float>(base.NativePtr + (IntPtr)BP_PhotographCameraConfig_C.__PropertyOffset_0, this));
+					result = (this._基础 = new TMap<TEnumAsByte<EPhotographCamera>, float>(base.NativePtr + (IntPtr)BP_PhotographCameraConfig_C.__PropertyOffset_基础, this));
 				}
 				return result;
 			}
@@ -70,25 +70,25 @@ namespace AkiClient.Game.Aki.Data.Camera
 			}
 		}
 
-		// Token: 0x06029B6B RID: 170859 RVA: 0x009CAD87 File Offset: 0x009C8F87
+		// Token: 0x0602019B RID: 131483 RVA: 0x0093D6AB File Offset: 0x0093B8AB
 		protected BP_PhotographCameraConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040156AA RID: 87722
+		// Token: 0x04011452 RID: 70738
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Data/Camera/BP_PhotographCameraConfig.BP_PhotographCameraConfig_C";
 
-		// Token: 0x040156AB RID: 87723
+		// Token: 0x04011453 RID: 70739
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040156AC RID: 87724
+		// Token: 0x04011454 RID: 70740
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040156AD RID: 87725
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011455 RID: 70741
+		internal static int __PropertyOffset_基础;
 
-		// Token: 0x040156AE RID: 87726
+		// Token: 0x04011456 RID: 70742
 		[Nullable(new byte[]
 		{
 			2,

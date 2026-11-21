@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A85 RID: 6789
+// Token: 0x02000F44 RID: 3908
 [Controller(0)]
 public class DrinksController : UiControllerBase
 {
-	// Token: 0x0600C841 RID: 51265 RVA: 0x002DAF7A File Offset: 0x002D917A
+	// Token: 0x06009C52 RID: 40018 RVA: 0x002E6122 File Offset: 0x002E4322
 	public void OpenMainView(EDrinksGameplayOpenWay openWay)
 	{
 		UiManager.Instance.OpenView(EUiViewName.DrinksSelectRoleView, openWay, null);
 	}
 
-	// Token: 0x0600C842 RID: 51266 RVA: 0x002DAF94 File Offset: 0x002D9194
+	// Token: 0x06009C53 RID: 40019 RVA: 0x002E613C File Offset: 0x002E433C
 	public UniTask<bool> SelectRoleAndPlaySeq(int roleId, EDrinksGameplayOpenWay openWay, int? requireId = null)
 	{
 		DrinksController.<SelectRoleAndPlaySeq>d__1 <SelectRoleAndPlaySeq>d__;
@@ -33,13 +33,13 @@ public class DrinksController : UiControllerBase
 		return <SelectRoleAndPlaySeq>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C843 RID: 51267 RVA: 0x002DAFEF File Offset: 0x002D91EF
+	// Token: 0x06009C54 RID: 40020 RVA: 0x002E6197 File Offset: 0x002E4397
 	public void OpenPlayView()
 	{
 		UiManager.Instance.OpenView(EUiViewName.DrinksGameplayView, null, null);
 	}
 
-	// Token: 0x0600C844 RID: 51268 RVA: 0x002DB004 File Offset: 0x002D9204
+	// Token: 0x06009C55 RID: 40021 RVA: 0x002E61AC File Offset: 0x002E43AC
 	public UniTask<bool> RequestMixDrinkSettle()
 	{
 		DrinksController.<RequestMixDrinkSettle>d__3 <RequestMixDrinkSettle>d__;
@@ -50,7 +50,7 @@ public class DrinksController : UiControllerBase
 		return <RequestMixDrinkSettle>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C845 RID: 51269 RVA: 0x002DB048 File Offset: 0x002D9248
+	// Token: 0x06009C56 RID: 40022 RVA: 0x002E61F0 File Offset: 0x002E43F0
 	public UniTask<bool> RequestMixDrinkRoleInvite(int roleId)
 	{
 		DrinksController.<RequestMixDrinkRoleInvite>d__4 <RequestMixDrinkRoleInvite>d__;
@@ -62,7 +62,7 @@ public class DrinksController : UiControllerBase
 		return <RequestMixDrinkRoleInvite>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C846 RID: 51270 RVA: 0x002DB094 File Offset: 0x002D9294
+	// Token: 0x06009C57 RID: 40023 RVA: 0x002E623C File Offset: 0x002E443C
 	public UniTask<bool> RequestMixDrinkRoleReward(int configId, int roleId)
 	{
 		DrinksController.<RequestMixDrinkRoleReward>d__5 <RequestMixDrinkRoleReward>d__;
@@ -74,7 +74,7 @@ public class DrinksController : UiControllerBase
 		return <RequestMixDrinkRoleReward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C847 RID: 51271 RVA: 0x002DB0E0 File Offset: 0x002D92E0
+	// Token: 0x06009C58 RID: 40024 RVA: 0x002E6288 File Offset: 0x002E4488
 	public UniTask GmTestScoreCheck()
 	{
 		DrinksController.<GmTestScoreCheck>d__6 <GmTestScoreCheck>d__;
@@ -85,7 +85,7 @@ public class DrinksController : UiControllerBase
 		return <GmTestScoreCheck>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C848 RID: 51272 RVA: 0x002DB124 File Offset: 0x002D9324
+	// Token: 0x06009C59 RID: 40025 RVA: 0x002E62CC File Offset: 0x002E44CC
 	public void GmTestCupActor(int id)
 	{
 		BP_Prop_GobletLiquid_C bp_Prop_GobletLiquid_C = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("Cups").Value, ECollectActorType.Default) as BP_Prop_GobletLiquid_C;
@@ -96,7 +96,7 @@ public class DrinksController : UiControllerBase
 		DrinksModel.Instance.GetSceneController().UpdateWaterById(bp_Prop_GobletLiquid_C, id, Array.Empty<int>(), 1207, false, true);
 	}
 
-	// Token: 0x0600C849 RID: 51273 RVA: 0x002DB170 File Offset: 0x002D9370
+	// Token: 0x06009C5A RID: 40026 RVA: 0x002E6318 File Offset: 0x002E4518
 	public void ReportDrinksGameplayInvite()
 	{
 		DrinksGameplayInviteLogEvent drinksGameplayInviteLogEvent = new DrinksGameplayInviteLogEvent();
@@ -130,7 +130,7 @@ public class DrinksController : UiControllerBase
 		LogReportController.Instance.LogReport(drinksGameplayInviteLogEvent);
 	}
 
-	// Token: 0x0600C84A RID: 51274 RVA: 0x002DB230 File Offset: 0x002D9430
+	// Token: 0x06009C5B RID: 40027 RVA: 0x002E63D8 File Offset: 0x002E45D8
 	public void ReportDrinksGameplayResult()
 	{
 		DrinksGameplayResultLogEvent drinksGameplayResultLogEvent = new DrinksGameplayResultLogEvent();
@@ -188,8 +188,8 @@ public class DrinksController : UiControllerBase
 		LogReportController.Instance.LogReport(drinksGameplayResultLogEvent);
 	}
 
-	// Token: 0x1700106F RID: 4207
-	// (get) Token: 0x0600C84B RID: 51275 RVA: 0x002DB4AC File Offset: 0x002D96AC
+	// Token: 0x17001094 RID: 4244
+	// (get) Token: 0x06009C5C RID: 40028 RVA: 0x002E6654 File Offset: 0x002E4854
 	[Nullable(1)]
 	public static DrinksController Instance
 	{
@@ -200,7 +200,7 @@ public class DrinksController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C84C RID: 51276 RVA: 0x002DB4B3 File Offset: 0x002D96B3
+	// Token: 0x06009C5D RID: 40029 RVA: 0x002E665B File Offset: 0x002E485B
 	[NullableContext(1)]
 	public static DrinksController GetOrCreateInstance()
 	{
@@ -211,7 +211,7 @@ public class DrinksController : UiControllerBase
 		return DrinksController._Instance;
 	}
 
-	// Token: 0x0600C84D RID: 51277 RVA: 0x002DB4C7 File Offset: 0x002D96C7
+	// Token: 0x06009C5E RID: 40030 RVA: 0x002E666F File Offset: 0x002E486F
 	public static bool CreateInstance()
 	{
 		if (DrinksController._Instance != null)
@@ -222,24 +222,24 @@ public class DrinksController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C84E RID: 51278 RVA: 0x002DB4DD File Offset: 0x002D96DD
+	// Token: 0x06009C5F RID: 40031 RVA: 0x002E6685 File Offset: 0x002E4885
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C84F RID: 51279 RVA: 0x002DB4DF File Offset: 0x002D96DF
+	// Token: 0x06009C60 RID: 40032 RVA: 0x002E6687 File Offset: 0x002E4887
 	public static void ResetStaticDefaultValue()
 	{
 		DrinksController._Instance = null;
 	}
 
-	// Token: 0x0600C850 RID: 51280 RVA: 0x002DB4E7 File Offset: 0x002D96E7
+	// Token: 0x06009C61 RID: 40033 RVA: 0x002E668F File Offset: 0x002E488F
 	static DrinksController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DrinksController.CreateStaticDefaultValue), new Action(DrinksController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005C62 RID: 23650
+	// Token: 0x04005D31 RID: 23857
 	[Nullable(2)]
 	private static DrinksController _Instance;
 }

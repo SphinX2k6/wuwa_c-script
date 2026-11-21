@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Dango
 {
-	// Token: 0x02005ADD RID: 23261
+	// Token: 0x02004ABE RID: 19134
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DangoAbyssSelectDangoView : UiViewBase
 	{
-		// Token: 0x0603AE79 RID: 241273 RVA: 0x00E0B557 File Offset: 0x00E09757
+		// Token: 0x0602FDEB RID: 196075 RVA: 0x00D5C23F File Offset: 0x00D5A43F
 		[NullableContext(1)]
 		public DangoAbyssSelectDangoView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603AE7A RID: 241274 RVA: 0x00E0B560 File Offset: 0x00E09760
+		// Token: 0x0602FDEC RID: 196076 RVA: 0x00D5C248 File Offset: 0x00D5A448
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Dango
 			};
 		}
 
-		// Token: 0x0603AE7B RID: 241275 RVA: 0x00E0B690 File Offset: 0x00E09890
+		// Token: 0x0602FDED RID: 196077 RVA: 0x00D5C378 File Offset: 0x00D5A578
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoAbyssSelectDangoView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Dango
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AE7C RID: 241276 RVA: 0x00E0B6D4 File Offset: 0x00E098D4
+		// Token: 0x0602FDEE RID: 196078 RVA: 0x00D5C3BC File Offset: 0x00D5A5BC
 		protected override void OnStart()
 		{
 			DangoSelectViewData dangoSelectViewData = this.OpenParam as DangoSelectViewData;
@@ -68,27 +68,27 @@ namespace CSharpScript.Game.Module.Dango
 			}
 		}
 
-		// Token: 0x0603AE7D RID: 241277 RVA: 0x00E0B735 File Offset: 0x00E09935
+		// Token: 0x0602FDEF RID: 196079 RVA: 0x00D5C41D File Offset: 0x00D5A61D
 		[NullableContext(1)]
 		private AbyssDangoItem InitItem()
 		{
 			return new AbyssDangoItem();
 		}
 
-		// Token: 0x0603AE7E RID: 241278 RVA: 0x00E0B73C File Offset: 0x00E0993C
+		// Token: 0x0602FDF0 RID: 196080 RVA: 0x00D5C424 File Offset: 0x00D5A624
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603AE7F RID: 241279 RVA: 0x00E0B745 File Offset: 0x00E09945
+		// Token: 0x0602FDF1 RID: 196081 RVA: 0x00D5C42D File Offset: 0x00D5A62D
 		protected override void OnBeforeShow()
 		{
 			this.RefreshDangoList();
 			this.RefreshInfo();
 		}
 
-		// Token: 0x0603AE80 RID: 241280 RVA: 0x00E0B754 File Offset: 0x00E09954
+		// Token: 0x0602FDF2 RID: 196082 RVA: 0x00D5C43C File Offset: 0x00D5A63C
 		private void RefreshLevelUpBtn(AbyssDangoRoleData data)
 		{
 			bool dangoUpAvailable = DangoAbyssModel.Instance.GetDangoUpAvailable();
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Dango
 			levelUpBtnItem.SetActive(data != null && dangoUpAvailable && !GameModeModel.Instance.IsMulti);
 		}
 
-		// Token: 0x0603AE81 RID: 241281 RVA: 0x00E0B794 File Offset: 0x00E09994
+		// Token: 0x0602FDF3 RID: 196083 RVA: 0x00D5C47C File Offset: 0x00D5A67C
 		private void RefreshConfirmBtn(AbyssDangoRoleData data)
 		{
 			ButtonItem confirmBtnItem = this.ConfirmBtnItem;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Dango
 			confirmBtnItem.SetActive(data != null);
 		}
 
-		// Token: 0x0603AE82 RID: 241282 RVA: 0x00E0B7AC File Offset: 0x00E099AC
+		// Token: 0x0602FDF4 RID: 196084 RVA: 0x00D5C494 File Offset: 0x00D5A694
 		private void RefreshRightDownText(AbyssDangoRoleData data)
 		{
 			if (data == null)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Dango
 			}
 		}
 
-		// Token: 0x0603AE83 RID: 241283 RVA: 0x00E0B7E8 File Offset: 0x00E099E8
+		// Token: 0x0602FDF5 RID: 196085 RVA: 0x00D5C4D0 File Offset: 0x00D5A6D0
 		private void RefreshDangoList()
 		{
 			AbyssDangoRoleData[] allDangoList = DangoAbyssModel.Instance.GetAllDangoList();
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Dango
 			this.LoopScrollView.RefreshByData(list, false, null, false);
 		}
 
-		// Token: 0x0603AE84 RID: 241284 RVA: 0x00E0B8B8 File Offset: 0x00E09AB8
+		// Token: 0x0602FDF6 RID: 196086 RVA: 0x00D5C5A0 File Offset: 0x00D5A7A0
 		[NullableContext(1)]
 		private void OnSelectDango(AbyssDangoItemData data)
 		{
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.Dango
 			this.RefreshInfo();
 		}
 
-		// Token: 0x0603AE85 RID: 241285 RVA: 0x00E0B910 File Offset: 0x00E09B10
+		// Token: 0x0602FDF7 RID: 196087 RVA: 0x00D5C5F8 File Offset: 0x00D5A7F8
 		private void RefreshInfo()
 		{
 			AbyssDangoRoleData dangoAbyssRoleData = DangoAbyssModel.Instance.GetDangoAbyssRoleData(this.CurrentSelectDangoId);
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Dango
 			this.RefreshConfirmBtn(dangoAbyssRoleData);
 		}
 
-		// Token: 0x0603AE86 RID: 241286 RVA: 0x00E0B95F File Offset: 0x00E09B5F
+		// Token: 0x0602FDF8 RID: 196088 RVA: 0x00D5C647 File Offset: 0x00D5A847
 		private void RefreshRoleInfo(AbyssDangoRoleData data)
 		{
 			if (data == null)
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Dango
 			}
 		}
 
-		// Token: 0x0603AE87 RID: 241287 RVA: 0x00E0B99C File Offset: 0x00E09B9C
+		// Token: 0x0602FDF9 RID: 196089 RVA: 0x00D5C684 File Offset: 0x00D5A884
 		private void RefreshBuff(AbyssDangoRoleData data)
 		{
 			if (data == null)
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.Dango
 			}
 		}
 
-		// Token: 0x0603AE88 RID: 241288 RVA: 0x00E0B9F9 File Offset: 0x00E09BF9
+		// Token: 0x0602FDFA RID: 196090 RVA: 0x00D5C6E1 File Offset: 0x00D5A8E1
 		private void RefreshSkill(AbyssDangoRoleData data)
 		{
 			if (data == null)
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.Dango
 			}
 		}
 
-		// Token: 0x0603AE89 RID: 241289 RVA: 0x00E0BA33 File Offset: 0x00E09C33
+		// Token: 0x0602FDFB RID: 196091 RVA: 0x00D5C71B File Offset: 0x00D5A91B
 		private void RefreshPassiveSkill(AbyssDangoRoleData data)
 		{
 			if (data == null)
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Module.Dango
 			}
 		}
 
-		// Token: 0x0603AE8A RID: 241290 RVA: 0x00E0BA5C File Offset: 0x00E09C5C
+		// Token: 0x0602FDFC RID: 196092 RVA: 0x00D5C744 File Offset: 0x00D5A944
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -331,13 +331,13 @@ namespace CSharpScript.Game.Module.Dango
 			};
 		}
 
-		// Token: 0x0401EBE6 RID: 125926
+		// Token: 0x040196A2 RID: 104098
 		private int CurrentRoleConfigId;
 
-		// Token: 0x0401EBE7 RID: 125927
+		// Token: 0x040196A3 RID: 104099
 		private int CurrentSelectDangoId;
 
-		// Token: 0x0401EBE8 RID: 125928
+		// Token: 0x040196A4 RID: 104100
 		[Nullable(new byte[]
 		{
 			2,
@@ -346,49 +346,49 @@ namespace CSharpScript.Game.Module.Dango
 		})]
 		private LoopScrollView<AbyssDangoItem, AbyssDangoItemData> LoopScrollView;
 
-		// Token: 0x0401EBE9 RID: 125929
+		// Token: 0x040196A5 RID: 104101
 		private RoleInfoPanel RolePanel;
 
-		// Token: 0x0401EBEA RID: 125930
+		// Token: 0x040196A6 RID: 104102
 		private BuffPanel BuffPanel;
 
-		// Token: 0x0401EBEB RID: 125931
+		// Token: 0x040196A7 RID: 104103
 		private SkillPanel SkillPanel;
 
-		// Token: 0x0401EBEC RID: 125932
+		// Token: 0x040196A8 RID: 104104
 		private SkillPanel PassiveSkillPanel;
 
-		// Token: 0x0401EBED RID: 125933
+		// Token: 0x040196A9 RID: 104105
 		private ButtonItem LevelUpBtnItem;
 
-		// Token: 0x0401EBEE RID: 125934
+		// Token: 0x040196AA RID: 104106
 		private ButtonItem ConfirmBtnItem;
 
-		// Token: 0x0200BD38 RID: 48440
+		// Token: 0x0200A740 RID: 42816
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x04039112 RID: 233746
+			// Token: 0x04033ADC RID: 211676
 			CloseBtn,
-			// Token: 0x04039113 RID: 233747
+			// Token: 0x04033ADD RID: 211677
 			LoopScrollView,
-			// Token: 0x04039114 RID: 233748
+			// Token: 0x04033ADE RID: 211678
 			ScrollItem,
-			// Token: 0x04039115 RID: 233749
+			// Token: 0x04033ADF RID: 211679
 			LeftDownText,
-			// Token: 0x04039116 RID: 233750
+			// Token: 0x04033AE0 RID: 211680
 			RolePanel,
-			// Token: 0x04039117 RID: 233751
+			// Token: 0x04033AE1 RID: 211681
 			BuffPanel,
-			// Token: 0x04039118 RID: 233752
+			// Token: 0x04033AE2 RID: 211682
 			SkillPanel,
-			// Token: 0x04039119 RID: 233753
+			// Token: 0x04033AE3 RID: 211683
 			PassiveSkillPanel,
-			// Token: 0x0403911A RID: 233754
+			// Token: 0x04033AE4 RID: 211684
 			RightDownRedTips,
-			// Token: 0x0403911B RID: 233755
+			// Token: 0x04033AE5 RID: 211685
 			LevelUpBtn,
-			// Token: 0x0403911C RID: 233756
+			// Token: 0x04033AE6 RID: 211686
 			ConfirmBtn
 		}
 	}

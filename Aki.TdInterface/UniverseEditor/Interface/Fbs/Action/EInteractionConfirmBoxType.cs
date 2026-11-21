@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F8C RID: 24460
+	// Token: 0x020065D3 RID: 26067
 	public enum EInteractionConfirmBoxType : byte
 	{
-		// Token: 0x0400FE12 RID: 65042
+		// Token: 0x04010B9C RID: 68508
 		Common,
-		// Token: 0x0400FE13 RID: 65043
+		// Token: 0x04010B9D RID: 68509
 		HonamiStoryCorruptedChest,
-		// Token: 0x0400FE14 RID: 65044
+		// Token: 0x04010B9E RID: 68510
 		HonamiStoryEvacuateConfirm
 	}
 }

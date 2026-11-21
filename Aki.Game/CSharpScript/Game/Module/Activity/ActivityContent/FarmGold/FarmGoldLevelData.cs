@@ -7,24 +7,24 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 {
-	// Token: 0x0200664C RID: 26188
+	// Token: 0x020055CA RID: 21962
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FarmGoldLevelData
 	{
-		// Token: 0x06041A0A RID: 268810 RVA: 0x00FEB427 File Offset: 0x00FE9627
+		// Token: 0x060366CF RID: 222927 RVA: 0x00F324DF File Offset: 0x00F306DF
 		public int GetInstId()
 		{
 			return this.InstId;
 		}
 
-		// Token: 0x06041A0B RID: 268811 RVA: 0x00FEB42F File Offset: 0x00FE962F
+		// Token: 0x060366D0 RID: 222928 RVA: 0x00F324E7 File Offset: 0x00F306E7
 		public int GetStartTime()
 		{
 			return this.StartTime;
 		}
 
-		// Token: 0x06041A0C RID: 268812 RVA: 0x00FEB438 File Offset: 0x00FE9638
+		// Token: 0x060366D1 RID: 222929 RVA: 0x00F324F0 File Offset: 0x00F306F0
 		public bool GetIsOpen()
 		{
 			int preLevel = this.GetConfig().PreLevel;
@@ -41,55 +41,55 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			return TimeUtil.Instance.GetServerTime() >= (double)this.StartTime && flag;
 		}
 
-		// Token: 0x06041A0D RID: 268813 RVA: 0x00FEB4A0 File Offset: 0x00FE96A0
+		// Token: 0x060366D2 RID: 222930 RVA: 0x00F32558 File Offset: 0x00F30758
 		public bool GetIfPassLevel()
 		{
 			return this.Point >= this.GetConfig().PassScore;
 		}
 
-		// Token: 0x06041A0E RID: 268814 RVA: 0x00FEB4C6 File Offset: 0x00FE96C6
+		// Token: 0x060366D3 RID: 222931 RVA: 0x00F3257E File Offset: 0x00F3077E
 		public int GetPoint()
 		{
 			return this.Point;
 		}
 
-		// Token: 0x06041A0F RID: 268815 RVA: 0x00FEB4CE File Offset: 0x00FE96CE
+		// Token: 0x060366D4 RID: 222932 RVA: 0x00F32586 File Offset: 0x00F30786
 		public int GetIndex()
 		{
 			return this.Index;
 		}
 
-		// Token: 0x06041A10 RID: 268816 RVA: 0x00FEB4D6 File Offset: 0x00FE96D6
+		// Token: 0x060366D5 RID: 222933 RVA: 0x00F3258E File Offset: 0x00F3078E
 		public bool GetHasGetLevelReward()
 		{
 			return this.HasGetLevelReward;
 		}
 
-		// Token: 0x06041A11 RID: 268817 RVA: 0x00FEB4DE File Offset: 0x00FE96DE
+		// Token: 0x060366D6 RID: 222934 RVA: 0x00F32596 File Offset: 0x00F30796
 		public FarmGoldActivity GetConfig()
 		{
 			return FarmGoldConfig.Instance.GetFarmGoldConfigByActivityIdAndInstId(this.ActivityId, this.InstId);
 		}
 
-		// Token: 0x06041A12 RID: 268818 RVA: 0x00FEB4F8 File Offset: 0x00FE96F8
+		// Token: 0x060366D7 RID: 222935 RVA: 0x00F325B0 File Offset: 0x00F307B0
 		public int GetRecommendLevel()
 		{
 			return this.GetDifficultConfig().RecommendedLevel;
 		}
 
-		// Token: 0x06041A13 RID: 268819 RVA: 0x00FEB513 File Offset: 0x00FE9713
+		// Token: 0x060366D8 RID: 222936 RVA: 0x00F325CB File Offset: 0x00F307CB
 		public bool GetFinishState()
 		{
 			return this.GetIfPassLevel();
 		}
 
-		// Token: 0x06041A14 RID: 268820 RVA: 0x00FEB51B File Offset: 0x00FE971B
+		// Token: 0x060366D9 RID: 222937 RVA: 0x00F325D3 File Offset: 0x00F307D3
 		public bool GetRedDotState()
 		{
 			return this.GetNewOpenState();
 		}
 
-		// Token: 0x06041A15 RID: 268821 RVA: 0x00FEB524 File Offset: 0x00FE9724
+		// Token: 0x060366DA RID: 222938 RVA: 0x00F325DC File Offset: 0x00F307DC
 		public int GetSelectDifficultIndex()
 		{
 			if (this.CurrentSelectDifficult != null)
@@ -116,13 +116,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			return 0;
 		}
 
-		// Token: 0x06041A16 RID: 268822 RVA: 0x00FEB5C4 File Offset: 0x00FE97C4
+		// Token: 0x060366DB RID: 222939 RVA: 0x00F3267C File Offset: 0x00F3087C
 		public void SaveDifficultyState()
 		{
 			ActivityModel.Instance.SaveActivityData(this.ActivityId, this.InstId, 1, 0, this.CurrentSelectDifficult.GetValueOrDefault(1));
 		}
 
-		// Token: 0x06041A17 RID: 268823 RVA: 0x00FEB5EC File Offset: 0x00FE97EC
+		// Token: 0x060366DC RID: 222940 RVA: 0x00F326A4 File Offset: 0x00F308A4
 		private void LoadDifficultyState()
 		{
 			int defualDifficultyId = this.GetDefualDifficultyId();
@@ -133,20 +133,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			}
 		}
 
-		// Token: 0x06041A18 RID: 268824 RVA: 0x00FEB62C File Offset: 0x00FE982C
+		// Token: 0x060366DD RID: 222941 RVA: 0x00F326E4 File Offset: 0x00F308E4
 		private int GetDefualDifficultyId()
 		{
 			return FarmGoldConfig.Instance.GetFarmGoldConfigByActivityIdAndInstId(this.ActivityId, this.InstId).GetDifficultyOptionsArray()[0];
 		}
 
-		// Token: 0x06041A19 RID: 268825 RVA: 0x00FEB65C File Offset: 0x00FE985C
+		// Token: 0x060366DE RID: 222942 RVA: 0x00F32714 File Offset: 0x00F30914
 		public string GetInstanceBg()
 		{
 			return this.GetInstanceConfig().BannerPath;
 		}
 
-		// Token: 0x17009617 RID: 38423
-		// (get) Token: 0x06041A1A RID: 268826 RVA: 0x00FEB677 File Offset: 0x00FE9877
+		// Token: 0x17006979 RID: 27001
+		// (get) Token: 0x060366DF RID: 222943 RVA: 0x00F3272F File Offset: 0x00F3092F
 		public bool HasSelectDifficult
 		{
 			get
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			}
 		}
 
-		// Token: 0x06041A1B RID: 268827 RVA: 0x00FEB684 File Offset: 0x00FE9884
+		// Token: 0x060366E0 RID: 222944 RVA: 0x00F3273C File Offset: 0x00F3093C
 		public int GetSelectDifficult()
 		{
 			if (this.CurrentSelectDifficult != null)
@@ -174,26 +174,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			return 1;
 		}
 
-		// Token: 0x06041A1C RID: 268828 RVA: 0x00FEB6E8 File Offset: 0x00FE98E8
+		// Token: 0x060366E1 RID: 222945 RVA: 0x00F327A0 File Offset: 0x00F309A0
 		public FarmGoldDifficulty GetDifficultConfig()
 		{
 			return FarmGoldConfig.Instance.GetFarmGoldDifficultById(this.GetSelectDifficult());
 		}
 
-		// Token: 0x06041A1D RID: 268829 RVA: 0x00FEB6FA File Offset: 0x00FE98FA
+		// Token: 0x060366E2 RID: 222946 RVA: 0x00F327B2 File Offset: 0x00F309B2
 		public void SetDifficult(int difficult)
 		{
 			this.CurrentSelectDifficult = new int?(difficult);
 			this.SaveDifficultyState();
 		}
 
-		// Token: 0x06041A1E RID: 268830 RVA: 0x00FEB70E File Offset: 0x00FE990E
+		// Token: 0x060366E3 RID: 222947 RVA: 0x00F327C6 File Offset: 0x00F309C6
 		public bool GetNewOpenState()
 		{
 			return ActivityModel.Instance.GetActivityCacheData(this.ActivityId, 0, this.InstId, 0, 0) == 0 && this.GetIsOpen();
 		}
 
-		// Token: 0x06041A1F RID: 268831 RVA: 0x00FEB734 File Offset: 0x00FE9934
+		// Token: 0x060366E4 RID: 222948 RVA: 0x00F327EC File Offset: 0x00F309EC
 		public string GetUnlockTimeText()
 		{
 			if (TimeUtil.Instance.GetServerTime() < (double)this.StartTime)
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			return ConfigMultiTextLang.GetLocalTextNew("FarmGoldUnlockCondition", null);
 		}
 
-		// Token: 0x06041A20 RID: 268832 RVA: 0x00FEB79C File Offset: 0x00FE999C
+		// Token: 0x060366E5 RID: 222949 RVA: 0x00F32854 File Offset: 0x00F30A54
 		public void SaveOpenState()
 		{
 			if (this.GetIsOpen())
@@ -217,25 +217,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			}
 		}
 
-		// Token: 0x06041A21 RID: 268833 RVA: 0x00FEB7D8 File Offset: 0x00FE99D8
+		// Token: 0x060366E6 RID: 222950 RVA: 0x00F32890 File Offset: 0x00F30A90
 		public string GetNameText()
 		{
 			return ConfigMultiTextLang.GetLocalTextNew(this.GetInstanceConfig().MapName, null);
 		}
 
-		// Token: 0x06041A22 RID: 268834 RVA: 0x00FEB7FC File Offset: 0x00FE99FC
+		// Token: 0x060366E7 RID: 222951 RVA: 0x00F328B4 File Offset: 0x00F30AB4
 		public string GetDescText()
 		{
 			return ConfigMultiTextLang.GetLocalTextNew(this.GetInstanceConfig().DungeonDesc, null);
 		}
 
-		// Token: 0x06041A23 RID: 268835 RVA: 0x00FEB81D File Offset: 0x00FE9A1D
+		// Token: 0x060366E8 RID: 222952 RVA: 0x00F328D5 File Offset: 0x00F30AD5
 		public string GetSubTitleText()
 		{
 			return ConfigMultiTextLang.GetLocalTextNew("Activity_103300004_DungeonGrade", null);
 		}
 
-		// Token: 0x06041A24 RID: 268836 RVA: 0x00FEB82C File Offset: 0x00FE9A2C
+		// Token: 0x060366E9 RID: 222953 RVA: 0x00F328E4 File Offset: 0x00F30AE4
 		public string GetSubTitleValueText(bool isSelected)
 		{
 			string text = this.Point.ToString();
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			return text;
 		}
 
-		// Token: 0x06041A25 RID: 268837 RVA: 0x00FEB870 File Offset: 0x00FE9A70
+		// Token: 0x060366EA RID: 222954 RVA: 0x00F32928 File Offset: 0x00F30B28
 		public List<int> GetRecommendElement()
 		{
 			InstanceDungeon instanceConfig = this.GetInstanceConfig();
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			return list;
 		}
 
-		// Token: 0x06041A26 RID: 268838 RVA: 0x00FEB8AC File Offset: 0x00FE9AAC
+		// Token: 0x060366EB RID: 222955 RVA: 0x00F32964 File Offset: 0x00F30B64
 		public List<FarmGoldRecommendTag> GetRecommendTagConfigList()
 		{
 			FarmGoldActivity config = this.GetConfig();
@@ -274,37 +274,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			return list;
 		}
 
-		// Token: 0x06041A27 RID: 268839 RVA: 0x00FEB8F8 File Offset: 0x00FE9AF8
+		// Token: 0x060366EC RID: 222956 RVA: 0x00F329B0 File Offset: 0x00F30BB0
 		public InstanceDungeon GetInstanceConfig()
 		{
 			return ConfigInstanceDungeonById.GetConfig(this.InstId, true).Value;
 		}
 
-		// Token: 0x06041A28 RID: 268840 RVA: 0x00FEB91C File Offset: 0x00FE9B1C
+		// Token: 0x060366ED RID: 222957 RVA: 0x00F329D4 File Offset: 0x00F30BD4
 		public int GetInstanceEntranceId()
 		{
 			return this.GetConfig().EntranceId;
 		}
 
-		// Token: 0x06041A29 RID: 268841 RVA: 0x00FEB937 File Offset: 0x00FE9B37
+		// Token: 0x060366EE RID: 222958 RVA: 0x00F329EF File Offset: 0x00F30BEF
 		public void FinishLevelReward()
 		{
 			this.HasGetLevelReward = true;
 		}
 
-		// Token: 0x06041A2A RID: 268842 RVA: 0x00FEB940 File Offset: 0x00FE9B40
+		// Token: 0x060366EF RID: 222959 RVA: 0x00F329F8 File Offset: 0x00F30BF8
 		public string GetMonsterTips()
 		{
 			return ConfigMultiTextLang.GetLocalTextNew(this.GetInstanceConfig().MonsterTips, null);
 		}
 
-		// Token: 0x06041A2B RID: 268843 RVA: 0x00FEB964 File Offset: 0x00FE9B64
+		// Token: 0x060366F0 RID: 222960 RVA: 0x00F32A1C File Offset: 0x00F30C1C
 		public bool GetMonsterPreviewState()
 		{
 			return this.GetInstanceConfig().MonsterPreviewLength > 0;
 		}
 
-		// Token: 0x06041A2C RID: 268844 RVA: 0x00FEB984 File Offset: 0x00FE9B84
+		// Token: 0x060366F1 RID: 222961 RVA: 0x00F32A3C File Offset: 0x00F30C3C
 		public void Phrase(int activityId, FarmGoldLevelPlayInfo data, int index)
 		{
 			this.Index = index;
@@ -317,28 +317,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			this.LoadDifficultyState();
 		}
 
-		// Token: 0x0402227D RID: 139901
+		// Token: 0x0401CBAE RID: 117678
 		private int ActivityId;
 
-		// Token: 0x0402227E RID: 139902
+		// Token: 0x0401CBAF RID: 117679
 		private int InstId;
 
-		// Token: 0x0402227F RID: 139903
+		// Token: 0x0401CBB0 RID: 117680
 		private int StartTime;
 
-		// Token: 0x04022280 RID: 139904
+		// Token: 0x0401CBB1 RID: 117681
 		protected bool IsOpen;
 
-		// Token: 0x04022281 RID: 139905
+		// Token: 0x0401CBB2 RID: 117682
 		private int Point;
 
-		// Token: 0x04022282 RID: 139906
+		// Token: 0x0401CBB3 RID: 117683
 		private bool HasGetLevelReward;
 
-		// Token: 0x04022283 RID: 139907
+		// Token: 0x0401CBB4 RID: 117684
 		private int? CurrentSelectDifficult;
 
-		// Token: 0x04022284 RID: 139908
+		// Token: 0x0401CBB5 RID: 117685
 		private int Index;
 	}
 }

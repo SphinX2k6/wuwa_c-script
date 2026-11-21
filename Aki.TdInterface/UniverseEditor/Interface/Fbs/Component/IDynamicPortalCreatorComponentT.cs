@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050F7 RID: 20727
+	// Token: 0x0200565C RID: 22108
 	public class IDynamicPortalCreatorComponentT
 	{
-		// Token: 0x170096F5 RID: 38645
-		// (get) Token: 0x06021611 RID: 136721 RVA: 0x004A29B5 File Offset: 0x004A0BB5
-		// (set) Token: 0x06021612 RID: 136722 RVA: 0x004A29BD File Offset: 0x004A0BBD
+		// Token: 0x17009EE2 RID: 40674
+		// (get) Token: 0x06023565 RID: 144741 RVA: 0x004DC941 File Offset: 0x004DAB41
+		// (set) Token: 0x06023566 RID: 144742 RVA: 0x004DC949 File Offset: 0x004DAB49
 		public bool Disabled { get; set; }
 
-		// Token: 0x170096F6 RID: 38646
-		// (get) Token: 0x06021613 RID: 136723 RVA: 0x004A29C6 File Offset: 0x004A0BC6
-		// (set) Token: 0x06021614 RID: 136724 RVA: 0x004A29CE File Offset: 0x004A0BCE
+		// Token: 0x17009EE3 RID: 40675
+		// (get) Token: 0x06023567 RID: 144743 RVA: 0x004DC952 File Offset: 0x004DAB52
+		// (set) Token: 0x06023568 RID: 144744 RVA: 0x004DC95A File Offset: 0x004DAB5A
 		public IDynamicPortalByBulletT Model { get; set; }
 
-		// Token: 0x170096F7 RID: 38647
-		// (get) Token: 0x06021615 RID: 136725 RVA: 0x004A29D7 File Offset: 0x004A0BD7
-		// (set) Token: 0x06021616 RID: 136726 RVA: 0x004A29DF File Offset: 0x004A0BDF
+		// Token: 0x17009EE4 RID: 40676
+		// (get) Token: 0x06023569 RID: 144745 RVA: 0x004DC963 File Offset: 0x004DAB63
+		// (set) Token: 0x0602356A RID: 144746 RVA: 0x004DC96B File Offset: 0x004DAB6B
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021617 RID: 136727 RVA: 0x004A29E8 File Offset: 0x004A0BE8
+		// Token: 0x0602356B RID: 144747 RVA: 0x004DC974 File Offset: 0x004DAB74
 		public IDynamicPortalCreatorComponentT()
 		{
 			this.Disabled = false;

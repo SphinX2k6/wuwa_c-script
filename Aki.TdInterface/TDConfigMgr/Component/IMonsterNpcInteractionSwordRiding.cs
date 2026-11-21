@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000510 RID: 1296
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000577 RID: 1399
 	public class IMonsterNpcInteractionSwordRiding : IMonsterNpcInteractionConfig
 	{
-		// Token: 0x06001A4A RID: 6730 RVA: 0x0004CC4C File Offset: 0x0004AE4C
+		// Token: 0x06001C46 RID: 7238 RVA: 0x00051A08 File Offset: 0x0004FC08
 		private IMonsterNpcInteractionSwordRiding_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001A4B RID: 6731 RVA: 0x0004CC84 File Offset: 0x0004AE84
+		// Token: 0x06001C47 RID: 7239 RVA: 0x00051A40 File Offset: 0x0004FC40
 		public static IMonsterNpcInteractionSwordRiding Create([Nullable(2)] IMonsterNpcInteractionSwordRiding instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A4C RID: 6732 RVA: 0x0004CC97 File Offset: 0x0004AE97
+		// Token: 0x06001C48 RID: 7240 RVA: 0x00051A53 File Offset: 0x0004FC53
 		public static IMonsterNpcInteractionSwordRiding CreateFromSetValue([Nullable(2)] IMonsterNpcInteractionSwordRiding_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A4D RID: 6733 RVA: 0x0004CCAA File Offset: 0x0004AEAA
+		// Token: 0x06001C49 RID: 7241 RVA: 0x00051A66 File Offset: 0x0004FC66
 		public new IMonsterNpcInteractionSwordRiding_SetValue ToSetValue()
 		{
 			return new IMonsterNpcInteractionSwordRiding_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006EC RID: 1772
-		// (get) Token: 0x06001A4E RID: 6734 RVA: 0x0004CCBD File Offset: 0x0004AEBD
-		// (set) Token: 0x06001A4F RID: 6735 RVA: 0x0004CCE8 File Offset: 0x0004AEE8
+		// Token: 0x1700076F RID: 1903
+		// (get) Token: 0x06001C4A RID: 7242 RVA: 0x00051A79 File Offset: 0x0004FC79
+		// (set) Token: 0x06001C4B RID: 7243 RVA: 0x00051AA4 File Offset: 0x0004FCA4
 		public override EMonsterNpcInteractionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001314 RID: 4884
+		// Token: 0x0400147E RID: 5246
 		[Nullable(2)]
 		protected new IMonsterNpcInteractionSwordRiding FbInstance;
 
-		// Token: 0x04001315 RID: 4885
+		// Token: 0x0400147F RID: 5247
 		[Nullable(2)]
 		protected new IMonsterNpcInteractionSwordRiding_SetValue PocoInterface;
 	}

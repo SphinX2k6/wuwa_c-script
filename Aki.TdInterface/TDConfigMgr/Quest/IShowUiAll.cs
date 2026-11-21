@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001136 RID: 4406
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001264 RID: 4708
 	public class IShowUiAll : IShowUi
 	{
-		// Token: 0x0600640C RID: 25612 RVA: 0x000F0CAC File Offset: 0x000EEEAC
+		// Token: 0x06006A07 RID: 27143 RVA: 0x000FDE20 File Offset: 0x000FC020
 		private IShowUiAll_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600640D RID: 25613 RVA: 0x000F0CE4 File Offset: 0x000EEEE4
+		// Token: 0x06006A08 RID: 27144 RVA: 0x000FDE58 File Offset: 0x000FC058
 		public static IShowUiAll Create([Nullable(2)] IShowUiAll instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600640E RID: 25614 RVA: 0x000F0CF7 File Offset: 0x000EEEF7
+		// Token: 0x06006A09 RID: 27145 RVA: 0x000FDE6B File Offset: 0x000FC06B
 		public static IShowUiAll CreateFromSetValue([Nullable(2)] IShowUiAll_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600640F RID: 25615 RVA: 0x000F0D0A File Offset: 0x000EEF0A
+		// Token: 0x06006A0A RID: 27146 RVA: 0x000FDE7E File Offset: 0x000FC07E
 		public new IShowUiAll_SetValue ToSetValue()
 		{
 			return new IShowUiAll_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170020BA RID: 8378
-		// (get) Token: 0x06006410 RID: 25616 RVA: 0x000F0D1D File Offset: 0x000EEF1D
-		// (set) Token: 0x06006411 RID: 25617 RVA: 0x000F0D48 File Offset: 0x000EEF48
+		// Token: 0x1700226D RID: 8813
+		// (get) Token: 0x06006A0B RID: 27147 RVA: 0x000FDE91 File Offset: 0x000FC091
+		// (set) Token: 0x06006A0C RID: 27148 RVA: 0x000FDEBC File Offset: 0x000FC0BC
 		public override EShowUiType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003C2B RID: 15403
+		// Token: 0x04003F79 RID: 16249
 		[Nullable(2)]
 		protected new IShowUiAll FbInstance;
 
-		// Token: 0x04003C2C RID: 15404
+		// Token: 0x04003F7A RID: 16250
 		[Nullable(2)]
 		protected new IShowUiAll_SetValue PocoInterface;
 	}

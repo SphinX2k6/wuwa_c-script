@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -20,18 +19,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Forging.View
 {
-	// Token: 0x02005650 RID: 22096
+	// Token: 0x02004626 RID: 17958
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ForgingIngredientsVerticalView : UiPanelBase
 	{
-		// Token: 0x060382CA RID: 230090 RVA: 0x00D4E7CF File Offset: 0x00D4C9CF
+		// Token: 0x0602D1C8 RID: 184776 RVA: 0x00C9C51F File Offset: 0x00C9A71F
 		public int GetManufactureCount()
 		{
 			return this.Count;
 		}
 
-		// Token: 0x060382CB RID: 230091 RVA: 0x00D4E7D8 File Offset: 0x00D4C9D8
+		// Token: 0x0602D1C9 RID: 184777 RVA: 0x00C9C528 File Offset: 0x00C9A728
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 21;
@@ -84,7 +83,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x060382CC RID: 230092 RVA: 0x00D4EAD0 File Offset: 0x00D4CCD0
+		// Token: 0x0602D1CA RID: 184778 RVA: 0x00C9C820 File Offset: 0x00C9AA20
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ForgingIngredientsVerticalView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -95,7 +94,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060382CD RID: 230093 RVA: 0x00D4EB14 File Offset: 0x00D4CD14
+		// Token: 0x0602D1CB RID: 184779 RVA: 0x00C9C864 File Offset: 0x00C9AA64
 		protected override void OnStart()
 		{
 			base.GetItem(1).SetUIActive(false);
@@ -107,7 +106,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			this.UnlockMaterialComponent.BindOnExtendToggleClicked(delegate(MediumItemGridExtendCallback callbackParameter)
 			{
 				int itemId = (int)callbackParameter.Data;
-				ItemController.Instance.OpenItemTipsByItemId(itemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(itemId, true, null, false);
 			});
 			UUIItem item = base.GetItem(8);
 			this.NumberSelect = new NumberSelectComponent(item);
@@ -124,19 +123,19 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			base.GetText(12).SetUIActive(false);
 		}
 
-		// Token: 0x060382CE RID: 230094 RVA: 0x00D4EC51 File Offset: 0x00D4CE51
+		// Token: 0x0602D1CC RID: 184780 RVA: 0x00C9C9A1 File Offset: 0x00C9ABA1
 		protected override void OnBeforeDestroy()
 		{
 			this.SvInfoView.Destroy(null);
 		}
 
-		// Token: 0x060382CF RID: 230095 RVA: 0x00D4EC5F File Offset: 0x00D4CE5F
+		// Token: 0x0602D1CD RID: 184781 RVA: 0x00C9C9AF File Offset: 0x00C9ABAF
 		public void BindChangeClickCall(Action func)
 		{
 			this.ChangeRoleClickCall = func;
 		}
 
-		// Token: 0x060382D0 RID: 230096 RVA: 0x00D4EC68 File Offset: 0x00D4CE68
+		// Token: 0x0602D1CE RID: 184782 RVA: 0x00C9C9B8 File Offset: 0x00C9ABB8
 		private void OnClickChangeRole()
 		{
 			if (this.ChangeRoleClickCall != null)
@@ -145,7 +144,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			}
 		}
 
-		// Token: 0x060382D1 RID: 230097 RVA: 0x00D4EC80 File Offset: 0x00D4CE80
+		// Token: 0x0602D1CF RID: 184783 RVA: 0x00C9C9D0 File Offset: 0x00C9ABD0
 		private ManufactureMaterialItem OnMaterialItemCreate()
 		{
 			ManufactureMaterialItem manufactureMaterialItem = new ManufactureMaterialItem();
@@ -153,12 +152,12 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			manufactureMaterialItem.BindOnExtendToggleClicked(delegate(MediumItemGridExtendCallback callbackParameter)
 			{
 				ISingleItemInfo singleItemInfo = (ISingleItemInfo)callbackParameter.Data;
-				ItemController.Instance.OpenItemTipsByItemId(singleItemInfo.Proto_ItemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(singleItemInfo.Proto_ItemId, true, null, false);
 			});
 			return manufactureMaterialItem;
 		}
 
-		// Token: 0x060382D2 RID: 230098 RVA: 0x00D4ECDC File Offset: 0x00D4CEDC
+		// Token: 0x0602D1D0 RID: 184784 RVA: 0x00C9CA2C File Offset: 0x00C9AC2C
 		private void SetSum(int sum)
 		{
 			this.Count = sum;
@@ -172,7 +171,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(10), "Text_ItemSelectForgeQuantityTip_text", new <>z__ReadOnlySingleElementList<object>(this.Count));
 		}
 
-		// Token: 0x060382D3 RID: 230099 RVA: 0x00D4ED5C File Offset: 0x00D4CF5C
+		// Token: 0x0602D1D1 RID: 184785 RVA: 0x00C9CAAC File Offset: 0x00C9ACAC
 		private void RefreshMaterialNeedNum()
 		{
 			this.RefreshCost(this.HasCoin, this.SingleNeedCoinCount * this.Count);
@@ -188,7 +187,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			}
 		}
 
-		// Token: 0x060382D4 RID: 230100 RVA: 0x00D4EDE0 File Offset: 0x00D4CFE0
+		// Token: 0x0602D1D2 RID: 184786 RVA: 0x00C9CB30 File Offset: 0x00C9AD30
 		private void RefreshCommon(IWeaponForgingData data)
 		{
 			this.ItemData = data;
@@ -209,7 +208,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			this.ProficiencyViewComponent.SetExpNumVisible(false);
 		}
 
-		// Token: 0x060382D5 RID: 230101 RVA: 0x00D4EF0C File Offset: 0x00D4D10C
+		// Token: 0x0602D1D3 RID: 184787 RVA: 0x00C9CC5C File Offset: 0x00C9AE5C
 		[return: TupleElementNames(new string[]
 		{
 			"hasCoin",
@@ -224,22 +223,25 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 		})]
 		private ValueTuple<bool, int, List<ISingleItemInfo>> FilterMaterialList(List<ISingleItemInfo> list)
 		{
-			bool hasCoin = false;
-			int coinCount = 0;
-			List<ISingleItemInfo> item = list.Where(delegate(ISingleItemInfo value)
+			bool item = false;
+			int item2 = 0;
+			List<ISingleItemInfo> list2 = new List<ISingleItemInfo>(list.Count);
+			foreach (ISingleItemInfo singleItemInfo in list)
 			{
-				if (value.Proto_ItemId != ComposeController.Instance.ComposeCoinId)
+				if (singleItemInfo.Proto_ItemId != ComposeController.Instance.ComposeCoinId)
 				{
-					return true;
+					list2.Add(singleItemInfo);
 				}
-				hasCoin = true;
-				coinCount = value.Proto_ItemNum;
-				return false;
-			}).ToList<ISingleItemInfo>();
-			return new ValueTuple<bool, int, List<ISingleItemInfo>>(hasCoin, coinCount, item);
+				else
+				{
+					item = true;
+					item2 = singleItemInfo.Proto_ItemNum;
+				}
+			}
+			return new ValueTuple<bool, int, List<ISingleItemInfo>>(item, item2, list2);
 		}
 
-		// Token: 0x060382D6 RID: 230102 RVA: 0x00D4EF58 File Offset: 0x00D4D158
+		// Token: 0x0602D1D4 RID: 184788 RVA: 0x00C9CCE4 File Offset: 0x00C9AEE4
 		private void RefreshMaterial()
 		{
 			if (this.ItemData.IsUnlock > 0)
@@ -272,7 +274,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			this.UnlockMaterialComponent.Apply<PropMediumItemGrid>(parameters);
 		}
 
-		// Token: 0x060382D7 RID: 230103 RVA: 0x00D4F0B4 File Offset: 0x00D4D2B4
+		// Token: 0x0602D1D5 RID: 184789 RVA: 0x00C9CE40 File Offset: 0x00C9B040
 		private bool CheckDataValid(IWeaponForgingData itemData)
 		{
 			if (itemData == null)
@@ -283,7 +285,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			return true;
 		}
 
-		// Token: 0x060382D8 RID: 230104 RVA: 0x00D4F0E8 File Offset: 0x00D4D2E8
+		// Token: 0x0602D1D6 RID: 184790 RVA: 0x00C9CE74 File Offset: 0x00C9B074
 		private void SetSelectedRoleTexture()
 		{
 			int value = CommonManager.Instance.GetCurrentRoleId().Value;
@@ -294,7 +296,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			this.ProficiencyViewComponent.SetRoleTexture(value);
 		}
 
-		// Token: 0x060382D9 RID: 230105 RVA: 0x00D4F118 File Offset: 0x00D4D318
+		// Token: 0x0602D1D7 RID: 184791 RVA: 0x00C9CEA4 File Offset: 0x00C9B0A4
 		private void SetRecommendedRoleTexture(IWeaponForgingData itemData)
 		{
 			if (!this.CheckDataValid(itemData))
@@ -314,13 +316,13 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			this.ProficiencyViewComponent.SetRoleTexture(num);
 		}
 
-		// Token: 0x060382DA RID: 230106 RVA: 0x00D4F16B File Offset: 0x00D4D36B
+		// Token: 0x0602D1D8 RID: 184792 RVA: 0x00C9CEF7 File Offset: 0x00C9B0F7
 		public void RefreshHelpRole()
 		{
 			this.SetSelectedRoleTexture();
 		}
 
-		// Token: 0x060382DB RID: 230107 RVA: 0x00D4F173 File Offset: 0x00D4D373
+		// Token: 0x0602D1D9 RID: 184793 RVA: 0x00C9CEFF File Offset: 0x00C9B0FF
 		public void OnSecondTimerRefresh()
 		{
 			if (this.ItemData == null)
@@ -330,7 +332,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			this.RefreshLimitTime(this.ItemData);
 		}
 
-		// Token: 0x060382DC RID: 230108 RVA: 0x00D4F18C File Offset: 0x00D4D38C
+		// Token: 0x0602D1DA RID: 184794 RVA: 0x00C9CF18 File Offset: 0x00C9B118
 		private void RefreshLimitTime(IWeaponForgingData itemData)
 		{
 			if (itemData.ExistEndTime <= 0.0)
@@ -344,7 +346,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			base.GetText(25).SetText(remainTimeDataFormat.CountDownText, true);
 		}
 
-		// Token: 0x060382DD RID: 230109 RVA: 0x00D4F204 File Offset: 0x00D4D404
+		// Token: 0x0602D1DB RID: 184795 RVA: 0x00C9CF90 File Offset: 0x00C9B190
 		private void RefreshLimitCount(IWeaponForgingData itemData)
 		{
 			if (itemData.TotalMakeCountInLimitTime <= 0)
@@ -371,7 +373,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			}));
 		}
 
-		// Token: 0x060382DE RID: 230110 RVA: 0x00D4F2BC File Offset: 0x00D4D4BC
+		// Token: 0x0602D1DC RID: 184796 RVA: 0x00C9D048 File Offset: 0x00C9B248
 		private void RefreshCost(bool hasCoin, int count)
 		{
 			base.GetText(12).GetParentAsUIItem().SetUIActive(hasCoin);
@@ -394,7 +396,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			}
 		}
 
-		// Token: 0x060382DF RID: 230111 RVA: 0x00D4F378 File Offset: 0x00D4D578
+		// Token: 0x0602D1DD RID: 184797 RVA: 0x00C9D104 File Offset: 0x00C9B304
 		public void RefreshForging(IWeaponForgingData data)
 		{
 			this.RefreshLimitTime(data);
@@ -419,30 +421,30 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			base.GetItem(9).SetUIActive(false);
 		}
 
-		// Token: 0x0401D8CC RID: 121036
+		// Token: 0x04018357 RID: 99159
 		private int Count = 1;
 
-		// Token: 0x0401D8CD RID: 121037
+		// Token: 0x04018358 RID: 99160
 		[Nullable(2)]
 		private SvInfo SvInfoView;
 
-		// Token: 0x0401D8CE RID: 121038
+		// Token: 0x04018359 RID: 99161
 		[Nullable(2)]
 		private NumberSelectComponent NumberSelect;
 
-		// Token: 0x0401D8CF RID: 121039
+		// Token: 0x0401835A RID: 99162
 		[Nullable(2)]
 		private IWeaponForgingData ItemData;
 
-		// Token: 0x0401D8D0 RID: 121040
+		// Token: 0x0401835B RID: 99163
 		[Nullable(2)]
 		private MediumItemGrid UnlockMaterialComponent;
 
-		// Token: 0x0401D8D1 RID: 121041
+		// Token: 0x0401835C RID: 99164
 		[Nullable(2)]
 		private Action ChangeRoleClickCall;
 
-		// Token: 0x0401D8D2 RID: 121042
+		// Token: 0x0401835D RID: 99165
 		[Nullable(new byte[]
 		{
 			2,
@@ -451,84 +453,84 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 		})]
 		private GenericScrollViewNew<ManufactureMaterialItem, ISingleItemInfo> MaterialScrollView;
 
-		// Token: 0x0401D8D3 RID: 121043
+		// Token: 0x0401835E RID: 99166
 		[Nullable(2)]
 		private ProficiencyView ProficiencyViewComponent;
 
-		// Token: 0x0401D8D4 RID: 121044
+		// Token: 0x0401835F RID: 99167
 		private bool HasCoin;
 
-		// Token: 0x0401D8D5 RID: 121045
+		// Token: 0x04018360 RID: 99168
 		private int SingleNeedCoinCount;
 
-		// Token: 0x0200B805 RID: 47109
+		// Token: 0x0200A230 RID: 41520
 		[NullableContext(0)]
 		private class EVerticalGroupComponents
 		{
-			// Token: 0x04037ABA RID: 228026
+			// Token: 0x040324E4 RID: 206052
 			public const int SvInfo = 0;
 
-			// Token: 0x04037ABB RID: 228027
+			// Token: 0x040324E5 RID: 206053
 			public const int PnlLimit = 1;
 
-			// Token: 0x04037ABC RID: 228028
+			// Token: 0x040324E6 RID: 206054
 			public const int TxtLimitNum = 2;
 
-			// Token: 0x04037ABD RID: 228029
+			// Token: 0x040324E7 RID: 206055
 			public const int PnlQuota = 3;
 
-			// Token: 0x04037ABE RID: 228030
+			// Token: 0x040324E8 RID: 206056
 			public const int TxtQuotaNum = 4;
 
-			// Token: 0x04037ABF RID: 228031
+			// Token: 0x040324E9 RID: 206057
 			public const int AmountItem = 8;
 
-			// Token: 0x04037AC0 RID: 228032
+			// Token: 0x040324EA RID: 206058
 			public const int PnlCost = 9;
 
-			// Token: 0x04037AC1 RID: 228033
+			// Token: 0x040324EB RID: 206059
 			public const int MakeCount = 10;
 
-			// Token: 0x04037AC2 RID: 228034
+			// Token: 0x040324EC RID: 206060
 			public const int TxtCost = 11;
 
-			// Token: 0x04037AC3 RID: 228035
+			// Token: 0x040324ED RID: 206061
 			public const int TxtPlace = 12;
 
-			// Token: 0x04037AC4 RID: 228036
+			// Token: 0x040324EE RID: 206062
 			public const int ImgCostIcon = 13;
 
-			// Token: 0x04037AC5 RID: 228037
+			// Token: 0x040324EF RID: 206063
 			public const int PnlTitle = 16;
 
-			// Token: 0x04037AC6 RID: 228038
+			// Token: 0x040324F0 RID: 206064
 			public const int TxtMaterialBarTitle = 17;
 
-			// Token: 0x04037AC7 RID: 228039
+			// Token: 0x040324F1 RID: 206065
 			public const int PnlLeftItem = 18;
 
-			// Token: 0x04037AC8 RID: 228040
+			// Token: 0x040324F2 RID: 206066
 			public const int MaterialScrollView = 19;
 
-			// Token: 0x04037AC9 RID: 228041
+			// Token: 0x040324F3 RID: 206067
 			public const int PnlCenterItem = 20;
 
-			// Token: 0x04037ACA RID: 228042
+			// Token: 0x040324F4 RID: 206068
 			public const int LockGrid = 21;
 
-			// Token: 0x04037ACB RID: 228043
+			// Token: 0x040324F5 RID: 206069
 			public const int PnlLock = 22;
 
-			// Token: 0x04037ACC RID: 228044
+			// Token: 0x040324F6 RID: 206070
 			public const int TxtLock = 23;
 
-			// Token: 0x04037ACD RID: 228045
+			// Token: 0x040324F7 RID: 206071
 			public const int PnlLimitedTime = 24;
 
-			// Token: 0x04037ACE RID: 228046
+			// Token: 0x040324F8 RID: 206072
 			public const int TxtTime = 25;
 
-			// Token: 0x04037ACF RID: 228047
+			// Token: 0x040324F9 RID: 206073
 			public const int ProficiencyView = 26;
 		}
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000471 RID: 1137
+	// Token: 0x02000487 RID: 1159
 	public class ConfigKillMonstersScoresByInstanceID : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001AB0 RID: 6832 RVA: 0x000F0444 File Offset: 0x000EE644
+		// Token: 0x06001B34 RID: 6964 RVA: 0x000F6B98 File Offset: 0x000F4D98
 		static ConfigKillMonstersScoresByInstanceID()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigKillMonstersScoresByInstanceID.CreateStaticDefaultValue), new Action(ConfigKillMonstersScoresByInstanceID.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001AB1 RID: 6833 RVA: 0x000F0464 File Offset: 0x000EE664
+		// Token: 0x06001B35 RID: 6965 RVA: 0x000F6BB8 File Offset: 0x000F4DB8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigKillMonstersScoresByInstanceID.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001AB2 RID: 6834 RVA: 0x000F04E3 File Offset: 0x000EE6E3
+		// Token: 0x06001B36 RID: 6966 RVA: 0x000F6C37 File Offset: 0x000F4E37
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigKillMonstersScoresByInstanceID.LogPair = null;
 			ConfigKillMonstersScoresByInstanceID.HandleId = 0;
 		}
 
-		// Token: 0x06001AB3 RID: 6835 RVA: 0x000F04F1 File Offset: 0x000EE6F1
+		// Token: 0x06001B37 RID: 6967 RVA: 0x000F6C45 File Offset: 0x000F4E45
 		public static void Init()
 		{
 			ConfigKillMonstersScoresByInstanceID.HandleId = ConfigCommon.InitDataStatement(ConfigKillMonstersScoresByInstanceID.HandleId, "db_takeweeds.db", "select BinData from `KillMonstersScores` where InstanceID=?");
 		}
 
-		// Token: 0x06001AB4 RID: 6836 RVA: 0x000F050C File Offset: 0x000EE70C
+		// Token: 0x06001B38 RID: 6968 RVA: 0x000F6C60 File Offset: 0x000F4E60
 		public static KillMonstersScores? GetConfig(int p0InstanceID, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigKillMonstersScoresByInstanceID.HandleId, ConfigKillMonstersScoresByInstanceID.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new KillMonstersScores?(rootAsKillMonstersScores);
 		}
 
-		// Token: 0x04001EFB RID: 7931
+		// Token: 0x04001F95 RID: 8085
 		private const string DB = "db_takeweeds.db";
 
-		// Token: 0x04001EFC RID: 7932
+		// Token: 0x04001F96 RID: 8086
 		private const string FILE = "g.割草活动.xlsx";
 
-		// Token: 0x04001EFD RID: 7933
+		// Token: 0x04001F97 RID: 8087
 		private const string TABLE = "KillMonstersScores";
 
-		// Token: 0x04001EFE RID: 7934
+		// Token: 0x04001F98 RID: 8088
 		private const string COMMAND = "select BinData from `KillMonstersScores` where InstanceID=?";
 
-		// Token: 0x04001EFF RID: 7935
+		// Token: 0x04001F99 RID: 8089
 		private const string KEY_PREFIX = "KillMonstersScoresByInstanceID";
 
-		// Token: 0x04001F00 RID: 7936
+		// Token: 0x04001F9A RID: 8090
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001F01 RID: 7937
+		// Token: 0x04001F9B RID: 8091
 		private static int HandleId;
 	}
 }

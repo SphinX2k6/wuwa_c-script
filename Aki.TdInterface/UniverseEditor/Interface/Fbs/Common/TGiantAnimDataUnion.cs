@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E7F RID: 24191
+	// Token: 0x020064C2 RID: 25794
 	public class TGiantAnimDataUnion
 	{
-		// Token: 0x1700B4D1 RID: 46289
-		// (get) Token: 0x06029700 RID: 169728 RVA: 0x005ADC8E File Offset: 0x005ABE8E
-		// (set) Token: 0x06029701 RID: 169729 RVA: 0x005ADC96 File Offset: 0x005ABE96
+		// Token: 0x1700BE3C RID: 48700
+		// (get) Token: 0x0602BDA8 RID: 179624 RVA: 0x005F6C32 File Offset: 0x005F4E32
+		// (set) Token: 0x0602BDA9 RID: 179625 RVA: 0x005F6C3A File Offset: 0x005F4E3A
 		public TGiantAnimData Type { get; set; }
 
-		// Token: 0x1700B4D2 RID: 46290
-		// (get) Token: 0x06029702 RID: 169730 RVA: 0x005ADC9F File Offset: 0x005ABE9F
-		// (set) Token: 0x06029703 RID: 169731 RVA: 0x005ADCA7 File Offset: 0x005ABEA7
+		// Token: 0x1700BE3D RID: 48701
+		// (get) Token: 0x0602BDAA RID: 179626 RVA: 0x005F6C43 File Offset: 0x005F4E43
+		// (set) Token: 0x0602BDAB RID: 179627 RVA: 0x005F6C4B File Offset: 0x005F4E4B
 		public object Value { get; set; }
 
-		// Token: 0x06029704 RID: 169732 RVA: 0x005ADCB0 File Offset: 0x005ABEB0
+		// Token: 0x0602BDAC RID: 179628 RVA: 0x005F6C54 File Offset: 0x005F4E54
 		public TGiantAnimDataUnion()
 		{
 			this.Type = TGiantAnimData.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06029705 RID: 169733 RVA: 0x005ADCC6 File Offset: 0x005ABEC6
+		// Token: 0x0602BDAD RID: 179629 RVA: 0x005F6C6A File Offset: 0x005F4E6A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06029706 RID: 169734 RVA: 0x005ADCD8 File Offset: 0x005ABED8
+		// Token: 0x0602BDAE RID: 179630 RVA: 0x005F6C7C File Offset: 0x005F4E7C
 		public IGiantIdleAnimDataT AsIGiantIdleAnimData()
 		{
 			return this.As<IGiantIdleAnimDataT>();
 		}
 
-		// Token: 0x06029707 RID: 169735 RVA: 0x005ADCE0 File Offset: 0x005ABEE0
+		// Token: 0x0602BDAF RID: 179631 RVA: 0x005F6C84 File Offset: 0x005F4E84
 		public static TGiantAnimDataUnion FromIGiantIdleAnimData(IGiantIdleAnimDataT _igiantidleanimdata)
 		{
 			return new TGiantAnimDataUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029708 RID: 169736 RVA: 0x005ADCF5 File Offset: 0x005ABEF5
+		// Token: 0x0602BDB0 RID: 179632 RVA: 0x005F6C99 File Offset: 0x005F4E99
 		public IGiantSpecialAnimDataT AsIGiantSpecialAnimData()
 		{
 			return this.As<IGiantSpecialAnimDataT>();
 		}
 
-		// Token: 0x06029709 RID: 169737 RVA: 0x005ADCFD File Offset: 0x005ABEFD
+		// Token: 0x0602BDB1 RID: 179633 RVA: 0x005F6CA1 File Offset: 0x005F4EA1
 		public static TGiantAnimDataUnion FromIGiantSpecialAnimData(IGiantSpecialAnimDataT _igiantspecialanimdata)
 		{
 			return new TGiantAnimDataUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x0602970A RID: 169738 RVA: 0x005ADD14 File Offset: 0x005ABF14
+		// Token: 0x0602BDB2 RID: 179634 RVA: 0x005F6CB8 File Offset: 0x005F4EB8
 		public static int Pack(FlatBufferBuilder builder, TGiantAnimDataUnion _o)
 		{
 			TGiantAnimData type = _o.Type;

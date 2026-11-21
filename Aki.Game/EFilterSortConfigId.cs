@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200182C RID: 6188
+// Token: 0x02000CE5 RID: 3301
 public enum EFilterSortConfigId
 {
-	// Token: 0x04005247 RID: 21063
+	// Token: 0x040052F2 RID: 21234
 	InventoryView = 1,
-	// Token: 0x04005248 RID: 21064
+	// Token: 0x040052F3 RID: 21235
 	InventoryDestroy,
-	// Token: 0x04005249 RID: 21065
+	// Token: 0x040052F4 RID: 21236
 	VisionEquipment,
-	// Token: 0x0400524A RID: 21066
+	// Token: 0x040052F5 RID: 21237
 	PhantomManage
 }

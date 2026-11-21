@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 {
-	// Token: 0x020047D3 RID: 18387
+	// Token: 0x02003704 RID: 14084
 	public class QuickNavigateItemPanelA : UiPanelBase
 	{
-		// Token: 0x060302DB RID: 197339 RVA: 0x00B29F2C File Offset: 0x00B2812C
+		// Token: 0x06024AAB RID: 150187 RVA: 0x00A59DC8 File Offset: 0x00A57FC8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060302DC RID: 197340 RVA: 0x00B2A014 File Offset: 0x00B28214
+		// Token: 0x06024AAC RID: 150188 RVA: 0x00A59EB0 File Offset: 0x00A580B0
 		[NullableContext(1)]
 		public void RefreshByData(QuickNavigateDynamicData data)
 		{
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			item.SetUIActive(hasState);
 		}
 
-		// Token: 0x060302DD RID: 197341 RVA: 0x00B2A0B5 File Offset: 0x00B282B5
+		// Token: 0x06024AAD RID: 150189 RVA: 0x00A59F51 File Offset: 0x00A58151
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			this.UpdateToggleSetState();
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}
 		}
 
-		// Token: 0x060302DE RID: 197342 RVA: 0x00B2A0E0 File Offset: 0x00B282E0
+		// Token: 0x06024AAE RID: 150190 RVA: 0x00A59F7C File Offset: 0x00A5817C
 		private void UpdateToggleSetState()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -92,23 +92,23 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			extendToggle.SetToggleState(this.NavigateDynamicData.IsSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x04019F21 RID: 106273
+		// Token: 0x040145D5 RID: 83413
 		[Nullable(2)]
 		private QuickNavigateDynamicData NavigateDynamicData;
 
-		// Token: 0x0200AA92 RID: 43666
+		// Token: 0x02009444 RID: 37956
 		public static class EComponent
 		{
-			// Token: 0x04033E50 RID: 212560
+			// Token: 0x0402E5D8 RID: 189912
 			public const int UiItemStripF2 = 0;
 
-			// Token: 0x04033E51 RID: 212561
+			// Token: 0x0402E5D9 RID: 189913
 			public const int TxtName = 1;
 
-			// Token: 0x04033E52 RID: 212562
+			// Token: 0x0402E5DA RID: 189914
 			public const int TexIcon = 2;
 
-			// Token: 0x04033E53 RID: 212563
+			// Token: 0x0402E5DB RID: 189915
 			public const int SprArrow = 3;
 		}
 	}

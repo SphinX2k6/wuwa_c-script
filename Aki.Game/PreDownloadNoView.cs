@@ -4,12 +4,12 @@ using CSharpScript.Launcher.PreDownload;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02002218 RID: 8728
+// Token: 0x020016FC RID: 5884
 [NullableContext(1)]
 [Nullable(0)]
 public class PreDownloadNoView : IPreDownloadUiEvent
 {
-	// Token: 0x06011012 RID: 69650 RVA: 0x00425374 File Offset: 0x00423574
+	// Token: 0x0600E4A8 RID: 58536 RVA: 0x00431F10 File Offset: 0x00430110
 	public UniTask UpdatePatchDownProgress(bool bNeedWait, float rate, string fileName, string speedText, string sizeCurrent, string sizeTotal)
 	{
 		PreDownloadNoView.<UpdatePatchDownProgress>d__0 <UpdatePatchDownProgress>d__;
@@ -25,7 +25,7 @@ public class PreDownloadNoView : IPreDownloadUiEvent
 		return <UpdatePatchDownProgress>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011013 RID: 69651 RVA: 0x004253E4 File Offset: 0x004235E4
+	// Token: 0x0600E4A9 RID: 58537 RVA: 0x00431F80 File Offset: 0x00430180
 	public UniTask BinPatchProgress(bool bNeedWait, float rate, string textId, params string[] args)
 	{
 		PreDownloadNoView.<BinPatchProgress>d__1 <BinPatchProgress>d__;
@@ -39,7 +39,7 @@ public class PreDownloadNoView : IPreDownloadUiEvent
 		return <BinPatchProgress>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011014 RID: 69652 RVA: 0x00425440 File Offset: 0x00423640
+	// Token: 0x0600E4AA RID: 58538 RVA: 0x00431FDC File Offset: 0x004301DC
 	[return: Nullable(0)]
 	public UniTask<bool> ShowDialog(bool bSelect, string titleId, string contentId, string leftId, string rightId, string middleId, params string[] contentArgs)
 	{

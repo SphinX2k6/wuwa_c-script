@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DCA RID: 3530
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EC6 RID: 3782
 	public class IObstacleDetectionConfig
 	{
-		// Token: 0x06005019 RID: 20505 RVA: 0x000C5F70 File Offset: 0x000C4170
+		// Token: 0x0600553E RID: 21822 RVA: 0x000D17C0 File Offset: 0x000CF9C0
 		public static IObstacleDetectionConfig Create(IObstacleDetectionConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A42 RID: 6722
-		// (get) Token: 0x0600501A RID: 20506 RVA: 0x000C5F8F File Offset: 0x000C418F
+		// Token: 0x17001BAD RID: 7085
+		// (get) Token: 0x0600553F RID: 21823 RVA: 0x000D17DF File Offset: 0x000CF9DF
 		public virtual ITrafficMatchTarget ObstacleDetectionType
 		{
 			get
@@ -40,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A43 RID: 6723
-		// (get) Token: 0x0600501B RID: 20507 RVA: 0x000C5FC3 File Offset: 0x000C41C3
+		// Token: 0x17001BAE RID: 7086
+		// (get) Token: 0x06005540 RID: 21824 RVA: 0x000D1813 File Offset: 0x000CFA13
 		public virtual ITriggerShape ExtraObstacleDetectionRange
 		{
 			get
@@ -56,20 +54,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DEB RID: 11755
+		// Token: 0x040030B1 RID: 12465
 		private IObstacleDetectionConfig Instance;
 
-		// Token: 0x04002DEC RID: 11756
+		// Token: 0x040030B2 RID: 12466
 		[Nullable(2)]
 		private ITrafficMatchTarget _ObstacleDetectionTypeCache;
 
-		// Token: 0x04002DED RID: 11757
+		// Token: 0x040030B3 RID: 12467
 		private bool _ObstacleDetectionTypeInited;
 
-		// Token: 0x04002DEE RID: 11758
+		// Token: 0x040030B4 RID: 12468
 		private ITriggerShape _ExtraObstacleDetectionRangeCache;
 
-		// Token: 0x04002DEF RID: 11759
+		// Token: 0x040030B5 RID: 12469
 		private bool _ExtraObstacleDetectionRangeInited;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001553 RID: 5459
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020016AF RID: 5807
 	public class CustomJson : ActionParams
 	{
-		// Token: 0x06007B6D RID: 31597 RVA: 0x00129780 File Offset: 0x00127980
+		// Token: 0x06008241 RID: 33345 RVA: 0x0013872C File Offset: 0x0013692C
 		private CustomJson_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007B6E RID: 31598 RVA: 0x001297B8 File Offset: 0x001279B8
+		// Token: 0x06008242 RID: 33346 RVA: 0x00138764 File Offset: 0x00136964
 		public static CustomJson Create([Nullable(2)] CustomJson instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007B6F RID: 31599 RVA: 0x001297CB File Offset: 0x001279CB
+		// Token: 0x06008243 RID: 33347 RVA: 0x00138777 File Offset: 0x00136977
 		public static CustomJson CreateFromSetValue([Nullable(2)] CustomJson_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007B70 RID: 31600 RVA: 0x001297DE File Offset: 0x001279DE
+		// Token: 0x06008244 RID: 33348 RVA: 0x0013878A File Offset: 0x0013698A
 		public CustomJson_SetValue ToSetValue()
 		{
 			return new CustomJson_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028F2 RID: 10482
-		// (get) Token: 0x06007B71 RID: 31601 RVA: 0x001297FD File Offset: 0x001279FD
-		// (set) Token: 0x06007B72 RID: 31602 RVA: 0x00129828 File Offset: 0x00127A28
+		// Token: 0x17002ADB RID: 10971
+		// (get) Token: 0x06008245 RID: 33349 RVA: 0x001387A9 File Offset: 0x001369A9
+		// (set) Token: 0x06008246 RID: 33350 RVA: 0x001387D4 File Offset: 0x001369D4
 		public virtual string Name
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028F3 RID: 10483
-		// (get) Token: 0x06007B73 RID: 31603 RVA: 0x00129836 File Offset: 0x00127A36
-		// (set) Token: 0x06007B74 RID: 31604 RVA: 0x00129861 File Offset: 0x00127A61
+		// Token: 0x17002ADC RID: 10972
+		// (get) Token: 0x06008247 RID: 33351 RVA: 0x001387E2 File Offset: 0x001369E2
+		// (set) Token: 0x06008248 RID: 33352 RVA: 0x0013880D File Offset: 0x00136A0D
 		public virtual string JsonString
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004719 RID: 18201
+		// Token: 0x04004AB5 RID: 19125
 		[Nullable(2)]
 		protected new CustomJson FbInstance;
 
-		// Token: 0x0400471A RID: 18202
+		// Token: 0x04004AB6 RID: 19126
 		[Nullable(2)]
 		protected CustomJson_SetValue PocoInterface;
 	}

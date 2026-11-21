@@ -11,13 +11,13 @@ using CSharpScript.Game.Module.Personal;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060A9 RID: 24745
+	// Token: 0x02005027 RID: 20519
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class SolarSpeedModel : ModelBase
 	{
-		// Token: 0x0603E8EC RID: 256236 RVA: 0x00F1EAEF File Offset: 0x00F1CCEF
+		// Token: 0x060335B0 RID: 210352 RVA: 0x00E658B3 File Offset: 0x00E63AB3
 		protected override bool OnInit()
 		{
 			this.ConfigContext = new SolarSpeedConfigContext(this);
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return true;
 		}
 
-		// Token: 0x0603E8ED RID: 256237 RVA: 0x00F1EB15 File Offset: 0x00F1CD15
+		// Token: 0x060335B1 RID: 210353 RVA: 0x00E658D9 File Offset: 0x00E63AD9
 		protected override bool OnClear()
 		{
 			this.ConfigContext.Dispose();
@@ -35,8 +35,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return true;
 		}
 
-		// Token: 0x170090A1 RID: 37025
-		// (get) Token: 0x0603E8EE RID: 256238 RVA: 0x00F1EB39 File Offset: 0x00F1CD39
+		// Token: 0x17006403 RID: 25603
+		// (get) Token: 0x060335B2 RID: 210354 RVA: 0x00E658FD File Offset: 0x00E63AFD
 		public int CurrentActivityId
 		{
 			get
@@ -45,8 +45,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x170090A2 RID: 37026
-		// (get) Token: 0x0603E8EF RID: 256239 RVA: 0x00F1EB46 File Offset: 0x00F1CD46
+		// Token: 0x17006404 RID: 25604
+		// (get) Token: 0x060335B3 RID: 210355 RVA: 0x00E6590A File Offset: 0x00E63B0A
 		public ActivityBaseData ActivityData
 		{
 			get
@@ -55,8 +55,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x170090A3 RID: 37027
-		// (get) Token: 0x0603E8F0 RID: 256240 RVA: 0x00F1EB50 File Offset: 0x00F1CD50
+		// Token: 0x17006405 RID: 25605
+		// (get) Token: 0x060335B4 RID: 210356 RVA: 0x00E65914 File Offset: 0x00E63B14
 		public string ActivityTitleTextId
 		{
 			get
@@ -66,8 +66,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x170090A4 RID: 37028
-		// (get) Token: 0x0603E8F1 RID: 256241 RVA: 0x00F1EB8C File Offset: 0x00F1CD8C
+		// Token: 0x17006406 RID: 25606
+		// (get) Token: 0x060335B5 RID: 210357 RVA: 0x00E65950 File Offset: 0x00E63B50
 		public string ActivityIconPath
 		{
 			get
@@ -77,8 +77,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x170090A5 RID: 37029
-		// (get) Token: 0x0603E8F2 RID: 256242 RVA: 0x00F1EBC8 File Offset: 0x00F1CDC8
+		// Token: 0x17006407 RID: 25607
+		// (get) Token: 0x060335B6 RID: 210358 RVA: 0x00E6598C File Offset: 0x00E63B8C
 		public string InstanceEntranceIconPath
 		{
 			get
@@ -88,8 +88,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x170090A6 RID: 37030
-		// (get) Token: 0x0603E8F3 RID: 256243 RVA: 0x00F1EC09 File Offset: 0x00F1CE09
+		// Token: 0x17006408 RID: 25608
+		// (get) Token: 0x060335B7 RID: 210359 RVA: 0x00E659CD File Offset: 0x00E63BCD
 		public int? CurrentChosenTabInRewardView
 		{
 			get
@@ -98,8 +98,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x170090A7 RID: 37031
-		// (get) Token: 0x0603E8F4 RID: 256244 RVA: 0x00F1EC18 File Offset: 0x00F1CE18
+		// Token: 0x17006409 RID: 25609
+		// (get) Token: 0x060335B8 RID: 210360 RVA: 0x00E659DC File Offset: 0x00E63BDC
 		public bool HasLevelRedDot
 		{
 			get
@@ -119,8 +119,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x170090A8 RID: 37032
-		// (get) Token: 0x0603E8F5 RID: 256245 RVA: 0x00F1EC88 File Offset: 0x00F1CE88
+		// Token: 0x1700640A RID: 25610
+		// (get) Token: 0x060335B9 RID: 210361 RVA: 0x00E65A4C File Offset: 0x00E63C4C
 		public bool HasRewardRedDot
 		{
 			get
@@ -140,8 +140,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x170090A9 RID: 37033
-		// (get) Token: 0x0603E8F6 RID: 256246 RVA: 0x00F1ED08 File Offset: 0x00F1CF08
+		// Token: 0x1700640B RID: 25611
+		// (get) Token: 0x060335BA RID: 210362 RVA: 0x00E65ACC File Offset: 0x00E63CCC
 		public int TotalRewardCount
 		{
 			get
@@ -150,8 +150,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x170090AA RID: 37034
-		// (get) Token: 0x0603E8F7 RID: 256247 RVA: 0x00F1ED1C File Offset: 0x00F1CF1C
+		// Token: 0x1700640C RID: 25612
+		// (get) Token: 0x060335BB RID: 210363 RVA: 0x00E65AE0 File Offset: 0x00E63CE0
 		public int CurrentCompletedCount
 		{
 			get
@@ -178,8 +178,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x170090AB RID: 37035
-		// (get) Token: 0x0603E8F8 RID: 256248 RVA: 0x00F1EDB8 File Offset: 0x00F1CFB8
+		// Token: 0x1700640D RID: 25613
+		// (get) Token: 0x060335BC RID: 210364 RVA: 0x00E65B7C File Offset: 0x00E63D7C
 		public int DefaultLevelIdInRewardView
 		{
 			get
@@ -189,14 +189,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x0603E8F9 RID: 256249 RVA: 0x00F1EDDB File Offset: 0x00F1CFDB
+		// Token: 0x060335BD RID: 210365 RVA: 0x00E65B9F File Offset: 0x00E63D9F
 		[NullableContext(2)]
 		public string GetInfoPicturePathByInstanceId(int instanceId)
 		{
 			return this.ConfigContext.GetInfoPicturePathByInstanceId(instanceId);
 		}
 
-		// Token: 0x0603E8FA RID: 256250 RVA: 0x00F1EDEC File Offset: 0x00F1CFEC
+		// Token: 0x060335BE RID: 210366 RVA: 0x00E65BB0 File Offset: 0x00E63DB0
 		[NullableContext(2)]
 		public string GetIconPathInInstanceSeriesItemByInstanceId(int instanceId)
 		{
@@ -209,14 +209,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return this.GetMedalPathByRank(rankingById);
 		}
 
-		// Token: 0x0603E8FB RID: 256251 RVA: 0x00F1EE2C File Offset: 0x00F1D02C
+		// Token: 0x060335BF RID: 210367 RVA: 0x00E65BF0 File Offset: 0x00E63DF0
 		public int GetHistoryHighScoreInSettleView()
 		{
 			int instanceId = CreatureModel.Instance.GetInstanceId();
 			return this.GetHistoryHighScoreByInstanceId(instanceId).GetValueOrDefault();
 		}
 
-		// Token: 0x0603E8FC RID: 256252 RVA: 0x00F1EE54 File Offset: 0x00F1D054
+		// Token: 0x060335C0 RID: 210368 RVA: 0x00E65C18 File Offset: 0x00E63E18
 		public int? GetHistoryRankByInstanceId(int instanceId)
 		{
 			int? levelIdByInstanceId = this.ConfigContext.GetLevelIdByInstanceId(instanceId);
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return new int?(this.ProtocolContext.GetRankingById(levelIdByInstanceId.Value));
 		}
 
-		// Token: 0x0603E8FD RID: 256253 RVA: 0x00F1EEC8 File Offset: 0x00F1D0C8
+		// Token: 0x060335C1 RID: 210369 RVA: 0x00E65C8C File Offset: 0x00E63E8C
 		public int? GetHistoryHighScoreByInstanceId(int instanceId)
 		{
 			int? levelIdByInstanceId = this.ConfigContext.GetLevelIdByInstanceId(instanceId);
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return new int?(this.ProtocolContext.GetScoreById(levelIdByInstanceId.Value));
 		}
 
-		// Token: 0x0603E8FE RID: 256254 RVA: 0x00F1EF3C File Offset: 0x00F1D13C
+		// Token: 0x060335C2 RID: 210370 RVA: 0x00E65D00 File Offset: 0x00E63F00
 		public int? GetHistoryLapRecordByInstanceId(int instanceId)
 		{
 			int? levelIdByInstanceId = this.ConfigContext.GetLevelIdByInstanceId(instanceId);
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return new int?(this.ProtocolContext.GetLapRecord(levelIdByInstanceId.Value));
 		}
 
-		// Token: 0x0603E8FF RID: 256255 RVA: 0x00F1EFB0 File Offset: 0x00F1D1B0
+		// Token: 0x060335C3 RID: 210371 RVA: 0x00E65D74 File Offset: 0x00E63F74
 		[NullableContext(2)]
 		public string GetMedalPathByRank(int rank)
 		{
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return SolarSpeedDefine.medalTexPathMap[rank - 1];
 		}
 
-		// Token: 0x0603E900 RID: 256256 RVA: 0x00F1F00C File Offset: 0x00F1D20C
+		// Token: 0x060335C4 RID: 210372 RVA: 0x00E65DD0 File Offset: 0x00E63FD0
 		[NullableContext(2)]
 		public string GetInstanceSubtitleTextIdByInstanceId(int instanceId)
 		{
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return "LianjiPaokuReward_Level_TopScore";
 		}
 
-		// Token: 0x0603E901 RID: 256257 RVA: 0x00F1F068 File Offset: 0x00F1D268
+		// Token: 0x060335C5 RID: 210373 RVA: 0x00E65E2C File Offset: 0x00E6402C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x0603E902 RID: 256258 RVA: 0x00F1F114 File Offset: 0x00F1D314
+		// Token: 0x060335C6 RID: 210374 RVA: 0x00E65ED8 File Offset: 0x00E640D8
 		[NullableContext(2)]
 		public string GetInstanceUnlockTextIdByInstanceId(int instanceId)
 		{
@@ -358,7 +358,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return "LianjiPaokuReward_Level_UnLock";
 		}
 
-		// Token: 0x0603E903 RID: 256259 RVA: 0x00F1F15C File Offset: 0x00F1D35C
+		// Token: 0x060335C7 RID: 210375 RVA: 0x00E65F20 File Offset: 0x00E64120
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -386,14 +386,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return null;
 		}
 
-		// Token: 0x0603E904 RID: 256260 RVA: 0x00F1F1D0 File Offset: 0x00F1D3D0
+		// Token: 0x060335C8 RID: 210376 RVA: 0x00E65F94 File Offset: 0x00E64194
 		public bool IsUnlockByInstanceId(int instanceId)
 		{
 			int? levelIdByInstanceId = this.ConfigContext.GetLevelIdByInstanceId(instanceId);
 			return levelIdByInstanceId != null && this.IsUnlockById(levelIdByInstanceId.Value);
 		}
 
-		// Token: 0x0603E905 RID: 256261 RVA: 0x00F1F204 File Offset: 0x00F1D404
+		// Token: 0x060335C9 RID: 210377 RVA: 0x00E65FC8 File Offset: 0x00E641C8
 		public bool IsClickedById(int instanceId)
 		{
 			Dictionary<int, bool> player = LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.SolarSpeedInstanceClicked, null);
@@ -401,44 +401,44 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return player != null && (player.TryGetValue(instanceId, out flag) && flag);
 		}
 
-		// Token: 0x0603E906 RID: 256262 RVA: 0x00F1F22A File Offset: 0x00F1D42A
+		// Token: 0x060335CA RID: 210378 RVA: 0x00E65FEE File Offset: 0x00E641EE
 		public bool IsUnlockById(int id)
 		{
 			return (double)this.ProtocolContext.GetStartTime(id) < TimeUtil.Instance.GetServerTime();
 		}
 
-		// Token: 0x0603E907 RID: 256263 RVA: 0x00F1F245 File Offset: 0x00F1D445
+		// Token: 0x060335CB RID: 210379 RVA: 0x00E66009 File Offset: 0x00E64209
 		public bool HasRedDotById(int id)
 		{
 			return !this.IsClickedById(id) && this.IsUnlockById(id);
 		}
 
-		// Token: 0x0603E908 RID: 256264 RVA: 0x00F1F25C File Offset: 0x00F1D45C
+		// Token: 0x060335CC RID: 210380 RVA: 0x00E66020 File Offset: 0x00E64220
 		public bool HasRedDotByInstanceId(int instanceId)
 		{
 			int? levelIdByInstanceId = this.ConfigContext.GetLevelIdByInstanceId(instanceId);
 			return levelIdByInstanceId != null && this.HasRedDotById(levelIdByInstanceId.Value);
 		}
 
-		// Token: 0x0603E909 RID: 256265 RVA: 0x00F1F28E File Offset: 0x00F1D48E
+		// Token: 0x060335CD RID: 210381 RVA: 0x00E66052 File Offset: 0x00E64252
 		public void SetCurrentChosenTabInRewardView(int id)
 		{
 			this.UiContext.CurrentChosenTabInRewardView = new int?(id);
 		}
 
-		// Token: 0x0603E90A RID: 256266 RVA: 0x00F1F2A1 File Offset: 0x00F1D4A1
+		// Token: 0x060335CE RID: 210382 RVA: 0x00E66065 File Offset: 0x00E64265
 		public void SyncTeamParkourTaskNotify(TeamParkourTaskNotify msg)
 		{
 			this.ProtocolContext.ParseTeamParkourTaskNotify(msg);
 		}
 
-		// Token: 0x0603E90B RID: 256267 RVA: 0x00F1F2AF File Offset: 0x00F1D4AF
+		// Token: 0x060335CF RID: 210383 RVA: 0x00E66073 File Offset: 0x00E64273
 		public void SyncTeamParkourSettleNotify(TeamParkourSettleNotify msg)
 		{
 			this.ProtocolContext.ParseTeamParkourSettleNotify(msg);
 		}
 
-		// Token: 0x0603E90C RID: 256268 RVA: 0x00F1F2C0 File Offset: 0x00F1D4C0
+		// Token: 0x060335D0 RID: 210384 RVA: 0x00E66084 File Offset: 0x00E64284
 		public void SyncInstanceClicked(int instanceId)
 		{
 			int? levelIdByInstanceId = this.ConfigContext.GetLevelIdByInstanceId(instanceId);
@@ -462,13 +462,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x0603E90D RID: 256269 RVA: 0x00F1F32C File Offset: 0x00F1D52C
+		// Token: 0x060335D1 RID: 210385 RVA: 0x00E660F0 File Offset: 0x00E642F0
 		public void SyncAfterRewardedById(int id)
 		{
 			this.ProtocolContext.SetTaskStateRewardedById(id);
 		}
 
-		// Token: 0x0603E90E RID: 256270 RVA: 0x00F1F33C File Offset: 0x00F1D53C
+		// Token: 0x060335D2 RID: 210386 RVA: 0x00E66100 File Offset: 0x00E64300
 		public ISolarSpeedRewardViewData BuildSolarSpeedRewardViewDataById(int id)
 		{
 			return new SolarSpeedRewardViewData
@@ -484,7 +484,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			};
 		}
 
-		// Token: 0x0603E90F RID: 256271 RVA: 0x00F1F3A8 File Offset: 0x00F1D5A8
+		// Token: 0x060335D3 RID: 210387 RVA: 0x00E6616C File Offset: 0x00E6436C
 		private SettleFlag? GetSettleFlagCfgByPlayerSettleInfo(PlayerSettleInfo msg)
 		{
 			foreach (SettleFlag value in this.ConfigContext.SortedSettleCfgCache)
@@ -522,7 +522,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return null;
 		}
 
-		// Token: 0x0603E910 RID: 256272 RVA: 0x00F1F4B8 File Offset: 0x00F1D6B8
+		// Token: 0x060335D4 RID: 210388 RVA: 0x00E6627C File Offset: 0x00E6447C
 		private bool GetRedDotStateInRewardViewById(int id)
 		{
 			TeamParKOurCfg teamParKOurCfg;
@@ -541,7 +541,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return false;
 		}
 
-		// Token: 0x0603E911 RID: 256273 RVA: 0x00F1F51C File Offset: 0x00F1D71C
+		// Token: 0x060335D5 RID: 210389 RVA: 0x00E662E0 File Offset: 0x00E644E0
 		private bool GetRedDotStateInRewardViewBonus()
 		{
 			foreach (int id in SolarSpeedDefine.bonusRewardList)
@@ -554,7 +554,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return false;
 		}
 
-		// Token: 0x0603E912 RID: 256274 RVA: 0x00F1F580 File Offset: 0x00F1D780
+		// Token: 0x060335D6 RID: 210390 RVA: 0x00E66344 File Offset: 0x00E64544
 		public ISolarSpeedResultViewData BuildSolarSpeedResultViewData()
 		{
 			Dictionary<int, PlayerSettleInfo> playerSettleMsgCache = this.ProtocolContext.PlayerSettleMsgCache;
@@ -610,7 +610,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return solarSpeedResultViewData;
 		}
 
-		// Token: 0x0603E913 RID: 256275 RVA: 0x00F1F840 File Offset: 0x00F1DA40
+		// Token: 0x060335D7 RID: 210391 RVA: 0x00E66604 File Offset: 0x00E64804
 		private List<ISolarSpeedTabCellPanelData> BuildTabCellPanelDataListInRewardView(int chosenLevelId)
 		{
 			List<ISolarSpeedTabCellPanelData> list = new List<ISolarSpeedTabCellPanelData>();
@@ -643,7 +643,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return list;
 		}
 
-		// Token: 0x0603E914 RID: 256276 RVA: 0x00F1F948 File Offset: 0x00F1DB48
+		// Token: 0x060335D8 RID: 210392 RVA: 0x00E6670C File Offset: 0x00E6490C
 		private List<ISolarSpeedRewardCellPanelData> BuildRewardCellPanelDataListInRewardViewById(int id)
 		{
 			List<ISolarSpeedRewardCellPanelData> list = new List<ISolarSpeedRewardCellPanelData>();
@@ -674,7 +674,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return list;
 		}
 
-		// Token: 0x0603E915 RID: 256277 RVA: 0x00F1FAD8 File Offset: 0x00F1DCD8
+		// Token: 0x060335D9 RID: 210393 RVA: 0x00E6689C File Offset: 0x00E64A9C
 		public ISolarSpeedActivitySubViewData BuildActivitySubViewData()
 		{
 			return new SolarSpeedActivitySubViewData
@@ -689,7 +689,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			};
 		}
 
-		// Token: 0x0603E916 RID: 256278 RVA: 0x00F1FB58 File Offset: 0x00F1DD58
+		// Token: 0x060335DA RID: 210394 RVA: 0x00E6691C File Offset: 0x00E64B1C
 		public unsafe ReachTargetData BuildSettleReachTargetData()
 		{
 			int currentRankPointsCache = this.ProtocolContext.CurrentRankPointsCache;
@@ -733,8 +733,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return reachTargetData;
 		}
 
-		// Token: 0x170090AC RID: 37036
-		// (get) Token: 0x0603E917 RID: 256279 RVA: 0x00F1FC77 File Offset: 0x00F1DE77
+		// Token: 0x1700640E RID: 25614
+		// (get) Token: 0x060335DB RID: 210395 RVA: 0x00E66A3B File Offset: 0x00E64C3B
 		public static SolarSpeedModel Instance
 		{
 			get
@@ -743,7 +743,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x0603E918 RID: 256280 RVA: 0x00F1FC7E File Offset: 0x00F1DE7E
+		// Token: 0x060335DC RID: 210396 RVA: 0x00E66A42 File Offset: 0x00E64C42
 		public static SolarSpeedModel GetOrCreateInstance()
 		{
 			if (SolarSpeedModel._Instance == null)
@@ -753,7 +753,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return SolarSpeedModel._Instance;
 		}
 
-		// Token: 0x0603E919 RID: 256281 RVA: 0x00F1FC92 File Offset: 0x00F1DE92
+		// Token: 0x060335DD RID: 210397 RVA: 0x00E66A56 File Offset: 0x00E64C56
 		public static bool CreateInstance()
 		{
 			if (SolarSpeedModel._Instance != null)
@@ -764,33 +764,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return true;
 		}
 
-		// Token: 0x0603E91A RID: 256282 RVA: 0x00F1FCA8 File Offset: 0x00F1DEA8
+		// Token: 0x060335DE RID: 210398 RVA: 0x00E66A6C File Offset: 0x00E64C6C
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603E91B RID: 256283 RVA: 0x00F1FCAA File Offset: 0x00F1DEAA
+		// Token: 0x060335DF RID: 210399 RVA: 0x00E66A6E File Offset: 0x00E64C6E
 		public static void ResetStaticDefaultValue()
 		{
 			SolarSpeedModel._Instance = null;
 		}
 
-		// Token: 0x0603E91C RID: 256284 RVA: 0x00F1FCB2 File Offset: 0x00F1DEB2
+		// Token: 0x060335E0 RID: 210400 RVA: 0x00E66A76 File Offset: 0x00E64C76
 		static SolarSpeedModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SolarSpeedModel.CreateStaticDefaultValue), new Action(SolarSpeedModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04020B8C RID: 134028
+		// Token: 0x0401B4B9 RID: 111801
 		private SolarSpeedConfigContext ConfigContext;
 
-		// Token: 0x04020B8D RID: 134029
+		// Token: 0x0401B4BA RID: 111802
 		private SolarSpeedProtocolContext ProtocolContext;
 
-		// Token: 0x04020B8E RID: 134030
+		// Token: 0x0401B4BB RID: 111803
 		private SolarSpeedUiContext UiContext;
 
-		// Token: 0x04020B8F RID: 134031
+		// Token: 0x0401B4BC RID: 111804
 		[Nullable(2)]
 		private static SolarSpeedModel _Instance;
 	}

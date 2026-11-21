@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200262B RID: 9771
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028EB RID: 10475
 	public class ICharacterLookAtPositionData : ICharacterLookAtData
 	{
-		// Token: 0x0600DB4C RID: 56140 RVA: 0x0020A6A7 File Offset: 0x002088A7
+		// Token: 0x0600E91A RID: 59674 RVA: 0x00226E73 File Offset: 0x00225073
 		public static ICharacterLookAtPositionData Create(ICharacterLookAtPositionData? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170040B8 RID: 16568
-		// (get) Token: 0x0600DB4D RID: 56141 RVA: 0x0020A6C6 File Offset: 0x002088C6
+		// Token: 0x170043F2 RID: 17394
+		// (get) Token: 0x0600E91B RID: 59675 RVA: 0x00226E92 File Offset: 0x00225092
 		public override ECharacterLookAt Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040B9 RID: 16569
-		// (get) Token: 0x0600DB4E RID: 56142 RVA: 0x0020A6D3 File Offset: 0x002088D3
+		// Token: 0x170043F3 RID: 17395
+		// (get) Token: 0x0600E91C RID: 59676 RVA: 0x00226E9F File Offset: 0x0022509F
 		public virtual VectorInfo Pos
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040079D1 RID: 31185
+		// Token: 0x0400806D RID: 32877
 		private ICharacterLookAtPositionData Instance;
 
-		// Token: 0x040079D2 RID: 31186
+		// Token: 0x0400806E RID: 32878
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x040079D3 RID: 31187
+		// Token: 0x0400806F RID: 32879
 		private bool _PosInited;
 	}
 }

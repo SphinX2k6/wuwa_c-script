@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001020 RID: 4128
+// Token: 0x020004D4 RID: 1236
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerGroupAction : GuessJokerActionBase
 {
-	// Token: 0x06006A0C RID: 27148 RVA: 0x001542DF File Offset: 0x001524DF
+	// Token: 0x06003DA1 RID: 15777 RVA: 0x0015CC07 File Offset: 0x0015AE07
 	public GuessJokerGroupAction(GuessJokerActionBase[] actions)
 	{
 		this.Actions.AddRange(actions);
 	}
 
-	// Token: 0x06006A0D RID: 27149 RVA: 0x00154300 File Offset: 0x00152500
+	// Token: 0x06003DA2 RID: 15778 RVA: 0x0015CC28 File Offset: 0x0015AE28
 	protected override void OnStart()
 	{
 		if (this.Actions.Count == 0)
@@ -27,7 +27,7 @@ public class GuessJokerGroupAction : GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x06006A0E RID: 27150 RVA: 0x0015434C File Offset: 0x0015254C
+	// Token: 0x06003DA3 RID: 15779 RVA: 0x0015CC74 File Offset: 0x0015AE74
 	protected override void OnTick(float delta)
 	{
 		for (int i = 0; i < this.Actions.Count; i++)
@@ -49,7 +49,7 @@ public class GuessJokerGroupAction : GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x06006A0F RID: 27151 RVA: 0x001543BC File Offset: 0x001525BC
+	// Token: 0x06003DA4 RID: 15780 RVA: 0x0015CCE4 File Offset: 0x0015AEE4
 	protected override void OnFinish()
 	{
 		for (int i = 0; i < this.Actions.Count; i++)
@@ -58,6 +58,6 @@ public class GuessJokerGroupAction : GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x040030DF RID: 12511
+	// Token: 0x04003178 RID: 12664
 	private readonly List<GuessJokerActionBase> Actions = new List<GuessJokerActionBase>();
 }

@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A33 RID: 23091
+	// Token: 0x02004A0F RID: 18959
 	public class FlagChallengeRoleLevelInfo : IFlagChallengeRoleLevelInfo
 	{
-		// Token: 0x17008BDE RID: 35806
-		// (get) Token: 0x0603A951 RID: 239953 RVA: 0x00DF128D File Offset: 0x00DEF48D
-		// (set) Token: 0x0603A952 RID: 239954 RVA: 0x00DF1295 File Offset: 0x00DEF495
+		// Token: 0x17005FAC RID: 24492
+		// (get) Token: 0x0602F89A RID: 194714 RVA: 0x00D41811 File Offset: 0x00D3FA11
+		// (set) Token: 0x0602F89B RID: 194715 RVA: 0x00D41819 File Offset: 0x00D3FA19
 		public int Level { get; set; }
 
-		// Token: 0x17008BDF RID: 35807
-		// (get) Token: 0x0603A953 RID: 239955 RVA: 0x00DF129E File Offset: 0x00DEF49E
-		// (set) Token: 0x0603A954 RID: 239956 RVA: 0x00DF12A6 File Offset: 0x00DEF4A6
+		// Token: 0x17005FAD RID: 24493
+		// (get) Token: 0x0602F89C RID: 194716 RVA: 0x00D41822 File Offset: 0x00D3FA22
+		// (set) Token: 0x0602F89D RID: 194717 RVA: 0x00D4182A File Offset: 0x00D3FA2A
 		public int Exp { get; set; }
 	}
 }

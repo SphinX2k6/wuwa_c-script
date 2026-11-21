@@ -7,18 +7,18 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.SwordControl
 {
-	// Token: 0x020069EB RID: 27115
+	// Token: 0x02005B48 RID: 23368
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SwordControlGroundController : IStaticVariableResetter
 	{
-		// Token: 0x06043738 RID: 276280 RVA: 0x0107BE70 File Offset: 0x0107A070
+		// Token: 0x06039781 RID: 235393 RVA: 0x01020548 File Offset: 0x0101E748
 		static SwordControlGroundController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SwordControlGroundController.CreateStaticDefaultValue), new Action(SwordControlGroundController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06043739 RID: 276281 RVA: 0x0107BF98 File Offset: 0x0107A198
+		// Token: 0x06039782 RID: 235394 RVA: 0x01020670 File Offset: 0x0101E870
 		public static void CreateStaticDefaultValue()
 		{
 			SwordControlGroundController.Owner = SwordControlGroundController.ESwordControlGroundOwner.None;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			SwordControlGroundController.CloseEventListening = false;
 		}
 
-		// Token: 0x0604373A RID: 276282 RVA: 0x0107BFEC File Offset: 0x0107A1EC
+		// Token: 0x06039783 RID: 235395 RVA: 0x010206C4 File Offset: 0x0101E8C4
 		public static void ResetStaticDefaultValue()
 		{
 			SwordControlGroundController.Owner = SwordControlGroundController.ESwordControlGroundOwner.None;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			SwordControlGroundController.CloseEventListening = false;
 		}
 
-		// Token: 0x0604373B RID: 276283 RVA: 0x0107C040 File Offset: 0x0107A240
+		// Token: 0x06039784 RID: 235396 RVA: 0x01020718 File Offset: 0x0101E918
 		public static void OpenTemporary(float duration = 3000f)
 		{
 			if (SwordControlGroundController.Owner == SwordControlGroundController.ESwordControlGroundOwner.Gameplay)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			instance.OpenView(swordControlGroundView, param, finishCallback);
 		}
 
-		// Token: 0x0604373C RID: 276284 RVA: 0x0107C120 File Offset: 0x0107A320
+		// Token: 0x06039785 RID: 235397 RVA: 0x010207F8 File Offset: 0x0101E9F8
 		public static void OpenByGameplay()
 		{
 			SwordControlGroundController.RemoveTemporaryTimer();
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			instance.OpenView(swordControlGroundView, param, finishCallback);
 		}
 
-		// Token: 0x0604373D RID: 276285 RVA: 0x0107C1F0 File Offset: 0x0107A3F0
+		// Token: 0x06039786 RID: 235398 RVA: 0x010208C8 File Offset: 0x0101EAC8
 		public static void CloseByGameplay()
 		{
 			if (SwordControlGroundController.Owner != SwordControlGroundController.ESwordControlGroundOwner.Gameplay)
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			SwordControlGroundController.CloseCurrentView();
 		}
 
-		// Token: 0x0604373E RID: 276286 RVA: 0x0107C258 File Offset: 0x0107A458
+		// Token: 0x06039787 RID: 235399 RVA: 0x01020930 File Offset: 0x0101EB30
 		private static void OnOpenViewFinished(bool success, int viewId)
 		{
 			SwordControlGroundController.IsOpening = false;
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			}
 		}
 
-		// Token: 0x0604373F RID: 276287 RVA: 0x0107C2D8 File Offset: 0x0107A4D8
+		// Token: 0x06039788 RID: 235400 RVA: 0x010209B0 File Offset: 0x0101EBB0
 		private static void StartTemporaryTimer(float duration)
 		{
 			SwordControlGroundController.RemoveTemporaryTimer();
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			}, duration, null, "SwordControlGroundController.OpenTemporary", true, 1f);
 		}
 
-		// Token: 0x06043740 RID: 276288 RVA: 0x0107C325 File Offset: 0x0107A525
+		// Token: 0x06039789 RID: 235401 RVA: 0x010209FD File Offset: 0x0101EBFD
 		private static void OnTemporaryTimerFinished()
 		{
 			SwordControlGroundController.TemporaryTimer = null;
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			SwordControlGroundController.CloseCurrentView();
 		}
 
-		// Token: 0x06043741 RID: 276289 RVA: 0x0107C354 File Offset: 0x0107A554
+		// Token: 0x0603978A RID: 235402 RVA: 0x01020A2C File Offset: 0x0101EC2C
 		private static void CloseCurrentView()
 		{
 			if (SwordControlGroundController.ViewId == null)
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			});
 		}
 
-		// Token: 0x06043742 RID: 276290 RVA: 0x0107C3BB File Offset: 0x0107A5BB
+		// Token: 0x0603978B RID: 235403 RVA: 0x01020A93 File Offset: 0x0101EC93
 		private static void AddCloseEventListener()
 		{
 			if (SwordControlGroundController.CloseEventListening)
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			SwordControlGroundController.CloseEventListening = true;
 		}
 
-		// Token: 0x06043743 RID: 276291 RVA: 0x0107C3F3 File Offset: 0x0107A5F3
+		// Token: 0x0603978C RID: 235404 RVA: 0x01020ACB File Offset: 0x0101ECCB
 		private static void RemoveCloseEventListener()
 		{
 			if (!SwordControlGroundController.CloseEventListening)
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			SwordControlGroundController.CloseEventListening = false;
 		}
 
-		// Token: 0x06043744 RID: 276292 RVA: 0x0107C42C File Offset: 0x0107A62C
+		// Token: 0x0603978D RID: 235405 RVA: 0x01020B04 File Offset: 0x0101ED04
 		private static void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			if (!(viewName != EUiViewName.SwordControlGroundView))
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			}
 		}
 
-		// Token: 0x06043745 RID: 276293 RVA: 0x0107C474 File Offset: 0x0107A674
+		// Token: 0x0603978E RID: 235406 RVA: 0x01020B4C File Offset: 0x0101ED4C
 		private static void ResetState()
 		{
 			SwordControlGroundController.RemoveTemporaryTimer();
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			SwordControlGroundController.SetInputRestricted(false);
 		}
 
-		// Token: 0x06043746 RID: 276294 RVA: 0x0107C4C4 File Offset: 0x0107A6C4
+		// Token: 0x0603978F RID: 235407 RVA: 0x01020B9C File Offset: 0x0101ED9C
 		private static void RemoveTemporaryTimer()
 		{
 			TimerHandle temporaryTimer = SwordControlGroundController.TemporaryTimer;
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			SwordControlGroundController.TemporaryTimer = null;
 		}
 
-		// Token: 0x06043747 RID: 276295 RVA: 0x0107C4DD File Offset: 0x0107A6DD
+		// Token: 0x06039790 RID: 235408 RVA: 0x01020BB5 File Offset: 0x0101EDB5
 		private static float NormalizeDuration(float duration)
 		{
 			if (duration <= 0f)
@@ -321,7 +321,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			return duration;
 		}
 
-		// Token: 0x06043748 RID: 276296 RVA: 0x0107C4EE File Offset: 0x0107A6EE
+		// Token: 0x06039791 RID: 235409 RVA: 0x01020BC6 File Offset: 0x0101EDC6
 		private static void SetInputRestricted(bool restricted)
 		{
 			if (SwordControlGroundController.InputRestricted == restricted)
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			OperationRestrictUtils.Instance.SetOperationRestrictByOption(restricted ? SwordControlGroundController.restrictOperationOption : SwordControlGroundController.enableOperationOption);
 		}
 
-		// Token: 0x06043749 RID: 276297 RVA: 0x0107C518 File Offset: 0x0107A718
+		// Token: 0x06039792 RID: 235410 RVA: 0x01020BF0 File Offset: 0x0101EDF0
 		private unsafe static void LogReturn(string method, string reason, int viewId = 0)
 		{
 			if (viewId == 0)
@@ -355,7 +355,7 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray8<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 8));
 		}
 
-		// Token: 0x0604374A RID: 276298 RVA: 0x0107C644 File Offset: 0x0107A844
+		// Token: 0x06039793 RID: 235411 RVA: 0x01020D1C File Offset: 0x0101EF1C
 		private static string GetOwnerName()
 		{
 			SwordControlGroundController.ESwordControlGroundOwner owner = SwordControlGroundController.Owner;
@@ -370,10 +370,10 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			return "Gameplay";
 		}
 
-		// Token: 0x04023332 RID: 144178
+		// Token: 0x0401E524 RID: 124196
 		private const float DEFAULT_TEMPORARY_DURATION = 3000f;
 
-		// Token: 0x04023333 RID: 144179
+		// Token: 0x0401E525 RID: 124197
 		[StaticVariableRuleIgnore]
 		private static readonly IDisableModulePlayerOperation restrictOperationOption = new IDisableModulePlayerOperation
 		{
@@ -405,65 +405,65 @@ namespace CSharpScript.Game.LevelGamePlay.SwordControl
 			}
 		};
 
-		// Token: 0x04023334 RID: 144180
+		// Token: 0x0401E526 RID: 124198
 		[StaticVariableRuleIgnore]
 		private static readonly IEnableAllPlayerOperation enableOperationOption = new IEnableAllPlayerOperation
 		{
 			Type = EPlayerOperationType.EnableAll
 		};
 
-		// Token: 0x04023335 RID: 144181
+		// Token: 0x0401E527 RID: 124199
 		private static SwordControlGroundController.ESwordControlGroundOwner Owner;
 
-		// Token: 0x04023336 RID: 144182
+		// Token: 0x0401E528 RID: 124200
 		private static int? ViewId;
 
-		// Token: 0x04023337 RID: 144183
+		// Token: 0x0401E529 RID: 124201
 		[Nullable(2)]
 		private static TimerHandle TemporaryTimer;
 
-		// Token: 0x04023338 RID: 144184
+		// Token: 0x0401E52A RID: 124202
 		private static bool IsOpening;
 
-		// Token: 0x04023339 RID: 144185
+		// Token: 0x0401E52B RID: 124203
 		private static bool IsClosing;
 
-		// Token: 0x0402333A RID: 144186
+		// Token: 0x0401E52C RID: 124204
 		private static bool InputRestricted;
 
-		// Token: 0x0402333B RID: 144187
+		// Token: 0x0401E52D RID: 124205
 		private static bool CloseAfterOpen;
 
-		// Token: 0x0402333C RID: 144188
+		// Token: 0x0401E52E RID: 124206
 		private static bool PendingGameplayOpenAfterClose;
 
-		// Token: 0x0402333D RID: 144189
+		// Token: 0x0401E52F RID: 124207
 		private static float PendingTemporaryDuration;
 
-		// Token: 0x0402333E RID: 144190
+		// Token: 0x0401E530 RID: 124208
 		private static bool CloseEventListening;
 
-		// Token: 0x0200CB51 RID: 52049
+		// Token: 0x0200B730 RID: 46896
 		[NullableContext(0)]
 		private enum ESwordControlGroundOwner
 		{
-			// Token: 0x0403D650 RID: 251472
+			// Token: 0x04038A32 RID: 231986
 			None,
-			// Token: 0x0403D651 RID: 251473
+			// Token: 0x04038A33 RID: 231987
 			Temporary,
-			// Token: 0x0403D652 RID: 251474
+			// Token: 0x04038A34 RID: 231988
 			Gameplay
 		}
 
-		// Token: 0x0200CB52 RID: 52050
+		// Token: 0x0200B731 RID: 46897
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403D653 RID: 251475
+			// Token: 0x04038A35 RID: 231989
 			[Nullable(0)]
 			public static TOpenViewCallBack <0>__OnOpenViewFinished;
 
-			// Token: 0x0403D654 RID: 251476
+			// Token: 0x04038A36 RID: 231990
 			[Nullable(0)]
 			public static Action<EUiViewName, int> <1>__OnCloseView;
 		}

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CCD RID: 23757
+	// Token: 0x02006301 RID: 25345
 	public class TTurntableControllerUnion
 	{
-		// Token: 0x1700B266 RID: 45670
-		// (get) Token: 0x06028A87 RID: 166535 RVA: 0x00595FC6 File Offset: 0x005941C6
-		// (set) Token: 0x06028A88 RID: 166536 RVA: 0x00595FCE File Offset: 0x005941CE
+		// Token: 0x1700BBC2 RID: 48066
+		// (get) Token: 0x0602B0DB RID: 176347 RVA: 0x005DE836 File Offset: 0x005DCA36
+		// (set) Token: 0x0602B0DC RID: 176348 RVA: 0x005DE83E File Offset: 0x005DCA3E
 		public TTurntableController Type { get; set; }
 
-		// Token: 0x1700B267 RID: 45671
-		// (get) Token: 0x06028A89 RID: 166537 RVA: 0x00595FD7 File Offset: 0x005941D7
-		// (set) Token: 0x06028A8A RID: 166538 RVA: 0x00595FDF File Offset: 0x005941DF
+		// Token: 0x1700BBC3 RID: 48067
+		// (get) Token: 0x0602B0DD RID: 176349 RVA: 0x005DE847 File Offset: 0x005DCA47
+		// (set) Token: 0x0602B0DE RID: 176350 RVA: 0x005DE84F File Offset: 0x005DCA4F
 		public object Value { get; set; }
 
-		// Token: 0x06028A8B RID: 166539 RVA: 0x00595FE8 File Offset: 0x005941E8
+		// Token: 0x0602B0DF RID: 176351 RVA: 0x005DE858 File Offset: 0x005DCA58
 		public TTurntableControllerUnion()
 		{
 			this.Type = TTurntableController.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028A8C RID: 166540 RVA: 0x00595FFE File Offset: 0x005941FE
+		// Token: 0x0602B0E0 RID: 176352 RVA: 0x005DE86E File Offset: 0x005DCA6E
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028A8D RID: 166541 RVA: 0x00596010 File Offset: 0x00594210
+		// Token: 0x0602B0E1 RID: 176353 RVA: 0x005DE880 File Offset: 0x005DCA80
 		public IFixedAngleTurntableT AsIFixedAngleTurntable()
 		{
 			return this.As<IFixedAngleTurntableT>();
 		}
 
-		// Token: 0x06028A8E RID: 166542 RVA: 0x00596018 File Offset: 0x00594218
+		// Token: 0x0602B0E2 RID: 176354 RVA: 0x005DE888 File Offset: 0x005DCA88
 		public static TTurntableControllerUnion FromIFixedAngleTurntable(IFixedAngleTurntableT _ifixedangleturntable)
 		{
 			return new TTurntableControllerUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028A8F RID: 166543 RVA: 0x0059602D File Offset: 0x0059422D
+		// Token: 0x0602B0E3 RID: 176355 RVA: 0x005DE89D File Offset: 0x005DCA9D
 		public IFreeAngleTurntableT AsIFreeAngleTurntable()
 		{
 			return this.As<IFreeAngleTurntableT>();
 		}
 
-		// Token: 0x06028A90 RID: 166544 RVA: 0x00596035 File Offset: 0x00594235
+		// Token: 0x0602B0E4 RID: 176356 RVA: 0x005DE8A5 File Offset: 0x005DCAA5
 		public static TTurntableControllerUnion FromIFreeAngleTurntable(IFreeAngleTurntableT _ifreeangleturntable)
 		{
 			return new TTurntableControllerUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028A91 RID: 166545 RVA: 0x0059604C File Offset: 0x0059424C
+		// Token: 0x0602B0E5 RID: 176357 RVA: 0x005DE8BC File Offset: 0x005DCABC
 		public static int Pack(FlatBufferBuilder builder, TTurntableControllerUnion _o)
 		{
 			TTurntableController type = _o.Type;

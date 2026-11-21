@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008C9 RID: 2249
+	// Token: 0x020008E5 RID: 2277
 	public class ConfigRoleSkinByRoleIdAndGroupId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060034C9 RID: 13513 RVA: 0x00183A7B File Offset: 0x00181C7B
+		// Token: 0x06003571 RID: 13681 RVA: 0x0018AD63 File Offset: 0x00188F63
 		static ConfigRoleSkinByRoleIdAndGroupId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleSkinByRoleIdAndGroupId.CreateStaticDefaultValue), new Action(ConfigRoleSkinByRoleIdAndGroupId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060034CA RID: 13514 RVA: 0x00183A9C File Offset: 0x00181C9C
+		// Token: 0x06003572 RID: 13682 RVA: 0x0018AD84 File Offset: 0x00188F84
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleSkinByRoleIdAndGroupId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060034CB RID: 13515 RVA: 0x00183B1B File Offset: 0x00181D1B
+		// Token: 0x06003573 RID: 13683 RVA: 0x0018AE03 File Offset: 0x00189003
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleSkinByRoleIdAndGroupId.LogPair = null;
 			ConfigRoleSkinByRoleIdAndGroupId.HandleId = 0;
 		}
 
-		// Token: 0x060034CC RID: 13516 RVA: 0x00183B29 File Offset: 0x00181D29
+		// Token: 0x06003574 RID: 13684 RVA: 0x0018AE11 File Offset: 0x00189011
 		public static void Init()
 		{
 			ConfigRoleSkinByRoleIdAndGroupId.HandleId = ConfigCommon.InitDataStatement(ConfigRoleSkinByRoleIdAndGroupId.HandleId, "db_role.db", "select BinData from `RoleSkin` where RoleId=? AND GroupId=?");
 		}
 
-		// Token: 0x060034CD RID: 13517 RVA: 0x00183B44 File Offset: 0x00181D44
+		// Token: 0x06003575 RID: 13685 RVA: 0x0018AE2C File Offset: 0x0018902C
 		public static RoleSkin? GetConfig(int p0RoleId, int p1GroupId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleSkinByRoleIdAndGroupId.HandleId, ConfigRoleSkinByRoleIdAndGroupId.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new RoleSkin?(rootAsRoleSkin);
 		}
 
-		// Token: 0x04003D65 RID: 15717
+		// Token: 0x04003E29 RID: 15913
 		private const string DB = "db_role.db";
 
-		// Token: 0x04003D66 RID: 15718
+		// Token: 0x04003E2A RID: 15914
 		private const string FILE = "j.角色.xlsx";
 
-		// Token: 0x04003D67 RID: 15719
+		// Token: 0x04003E2B RID: 15915
 		private const string TABLE = "RoleSkin";
 
-		// Token: 0x04003D68 RID: 15720
+		// Token: 0x04003E2C RID: 15916
 		private const string COMMAND = "select BinData from `RoleSkin` where RoleId=? AND GroupId=?";
 
-		// Token: 0x04003D69 RID: 15721
+		// Token: 0x04003E2D RID: 15917
 		private const string KEY_PREFIX = "RoleSkinByRoleIdAndGroupId";
 
-		// Token: 0x04003D6A RID: 15722
+		// Token: 0x04003E2E RID: 15918
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003D6B RID: 15723
+		// Token: 0x04003E2F RID: 15919
 		private static int HandleId;
 	}
 }

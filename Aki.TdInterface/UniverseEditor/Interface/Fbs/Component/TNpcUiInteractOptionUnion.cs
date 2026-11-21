@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C7C RID: 23676
+	// Token: 0x020062A4 RID: 25252
 	public class TNpcUiInteractOptionUnion
 	{
-		// Token: 0x1700B230 RID: 45616
-		// (get) Token: 0x060288F3 RID: 166131 RVA: 0x00593A58 File Offset: 0x00591C58
-		// (set) Token: 0x060288F4 RID: 166132 RVA: 0x00593A60 File Offset: 0x00591C60
+		// Token: 0x1700BB84 RID: 48004
+		// (get) Token: 0x0602AF15 RID: 175893 RVA: 0x005DBE9C File Offset: 0x005DA09C
+		// (set) Token: 0x0602AF16 RID: 175894 RVA: 0x005DBEA4 File Offset: 0x005DA0A4
 		public TNpcUiInteractOption Type { get; set; }
 
-		// Token: 0x1700B231 RID: 45617
-		// (get) Token: 0x060288F5 RID: 166133 RVA: 0x00593A69 File Offset: 0x00591C69
-		// (set) Token: 0x060288F6 RID: 166134 RVA: 0x00593A71 File Offset: 0x00591C71
+		// Token: 0x1700BB85 RID: 48005
+		// (get) Token: 0x0602AF17 RID: 175895 RVA: 0x005DBEAD File Offset: 0x005DA0AD
+		// (set) Token: 0x0602AF18 RID: 175896 RVA: 0x005DBEB5 File Offset: 0x005DA0B5
 		public object Value { get; set; }
 
-		// Token: 0x060288F7 RID: 166135 RVA: 0x00593A7A File Offset: 0x00591C7A
+		// Token: 0x0602AF19 RID: 175897 RVA: 0x005DBEBE File Offset: 0x005DA0BE
 		public TNpcUiInteractOptionUnion()
 		{
 			this.Type = TNpcUiInteractOption.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060288F8 RID: 166136 RVA: 0x00593A90 File Offset: 0x00591C90
+		// Token: 0x0602AF1A RID: 175898 RVA: 0x005DBED4 File Offset: 0x005DA0D4
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060288F9 RID: 166137 RVA: 0x00593AA2 File Offset: 0x00591CA2
+		// Token: 0x0602AF1B RID: 175899 RVA: 0x005DBEE6 File Offset: 0x005DA0E6
 		public INpcUiInteractOnAntiqueShopT AsINpcUiInteractOnAntiqueShop()
 		{
 			return this.As<INpcUiInteractOnAntiqueShopT>();
 		}
 
-		// Token: 0x060288FA RID: 166138 RVA: 0x00593AAA File Offset: 0x00591CAA
+		// Token: 0x0602AF1C RID: 175900 RVA: 0x005DBEEE File Offset: 0x005DA0EE
 		public static TNpcUiInteractOptionUnion FromINpcUiInteractOnAntiqueShop(INpcUiInteractOnAntiqueShopT _inpcuiinteractonantiqueshop)
 		{
 			return new TNpcUiInteractOptionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060288FB RID: 166139 RVA: 0x00593ABF File Offset: 0x00591CBF
+		// Token: 0x0602AF1D RID: 175901 RVA: 0x005DBF03 File Offset: 0x005DA103
 		public INpcUiInteractOnChengXiaoShanShopT AsINpcUiInteractOnChengXiaoShanShop()
 		{
 			return this.As<INpcUiInteractOnChengXiaoShanShopT>();
 		}
 
-		// Token: 0x060288FC RID: 166140 RVA: 0x00593AC7 File Offset: 0x00591CC7
+		// Token: 0x0602AF1E RID: 175902 RVA: 0x005DBF0B File Offset: 0x005DA10B
 		public static TNpcUiInteractOptionUnion FromINpcUiInteractOnChengXiaoShanShop(INpcUiInteractOnChengXiaoShanShopT _inpcuiinteractonchengxiaoshanshop)
 		{
 			return new TNpcUiInteractOptionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060288FD RID: 166141 RVA: 0x00593ADC File Offset: 0x00591CDC
+		// Token: 0x0602AF1F RID: 175903 RVA: 0x005DBF20 File Offset: 0x005DA120
 		public INpcUiInteractOnDollGrabDeliveryT AsINpcUiInteractOnDollGrabDelivery()
 		{
 			return this.As<INpcUiInteractOnDollGrabDeliveryT>();
 		}
 
-		// Token: 0x060288FE RID: 166142 RVA: 0x00593AE4 File Offset: 0x00591CE4
+		// Token: 0x0602AF20 RID: 175904 RVA: 0x005DBF28 File Offset: 0x005DA128
 		public static TNpcUiInteractOptionUnion FromINpcUiInteractOnDollGrabDelivery(INpcUiInteractOnDollGrabDeliveryT _inpcuiinteractondollgrabdelivery)
 		{
 			return new TNpcUiInteractOptionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060288FF RID: 166143 RVA: 0x00593AF9 File Offset: 0x00591CF9
+		// Token: 0x0602AF21 RID: 175905 RVA: 0x005DBF3D File Offset: 0x005DA13D
 		public INpcUiInteractOnGramophoneT AsINpcUiInteractOnGramophone()
 		{
 			return this.As<INpcUiInteractOnGramophoneT>();
 		}
 
-		// Token: 0x06028900 RID: 166144 RVA: 0x00593B01 File Offset: 0x00591D01
+		// Token: 0x0602AF22 RID: 175906 RVA: 0x005DBF45 File Offset: 0x005DA145
 		public static TNpcUiInteractOptionUnion FromINpcUiInteractOnGramophone(INpcUiInteractOnGramophoneT _inpcuiinteractongramophone)
 		{
 			return new TNpcUiInteractOptionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028901 RID: 166145 RVA: 0x00593B16 File Offset: 0x00591D16
+		// Token: 0x0602AF23 RID: 175907 RVA: 0x005DBF5A File Offset: 0x005DA15A
 		public INpcUiInteractOnHandInItemT AsINpcUiInteractOnHandInItem()
 		{
 			return this.As<INpcUiInteractOnHandInItemT>();
 		}
 
-		// Token: 0x06028902 RID: 166146 RVA: 0x00593B1E File Offset: 0x00591D1E
+		// Token: 0x0602AF24 RID: 175908 RVA: 0x005DBF62 File Offset: 0x005DA162
 		public static TNpcUiInteractOptionUnion FromINpcUiInteractOnHandInItem(INpcUiInteractOnHandInItemT _inpcuiinteractonhandinitem)
 		{
 			return new TNpcUiInteractOptionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028903 RID: 166147 RVA: 0x00593B33 File Offset: 0x00591D33
+		// Token: 0x0602AF25 RID: 175909 RVA: 0x005DBF77 File Offset: 0x005DA177
 		public INpcUiInteractOnShopT AsINpcUiInteractOnShop()
 		{
 			return this.As<INpcUiInteractOnShopT>();
 		}
 
-		// Token: 0x06028904 RID: 166148 RVA: 0x00593B3B File Offset: 0x00591D3B
+		// Token: 0x0602AF26 RID: 175910 RVA: 0x005DBF7F File Offset: 0x005DA17F
 		public static TNpcUiInteractOptionUnion FromINpcUiInteractOnShop(INpcUiInteractOnShopT _inpcuiinteractonshop)
 		{
 			return new TNpcUiInteractOptionUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028905 RID: 166149 RVA: 0x00593B50 File Offset: 0x00591D50
+		// Token: 0x0602AF27 RID: 175911 RVA: 0x005DBF94 File Offset: 0x005DA194
 		public INpcUiInteractOnShopNewT AsINpcUiInteractOnShopNew()
 		{
 			return this.As<INpcUiInteractOnShopNewT>();
 		}
 
-		// Token: 0x06028906 RID: 166150 RVA: 0x00593B58 File Offset: 0x00591D58
+		// Token: 0x0602AF28 RID: 175912 RVA: 0x005DBF9C File Offset: 0x005DA19C
 		public static TNpcUiInteractOptionUnion FromINpcUiInteractOnShopNew(INpcUiInteractOnShopNewT _inpcuiinteractonshopnew)
 		{
 			return new TNpcUiInteractOptionUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028907 RID: 166151 RVA: 0x00593B6D File Offset: 0x00591D6D
+		// Token: 0x0602AF29 RID: 175913 RVA: 0x005DBFB1 File Offset: 0x005DA1B1
 		public INpcUiInteractOnSoundBox3T AsINpcUiInteractOnSoundBox3()
 		{
 			return this.As<INpcUiInteractOnSoundBox3T>();
 		}
 
-		// Token: 0x06028908 RID: 166152 RVA: 0x00593B75 File Offset: 0x00591D75
+		// Token: 0x0602AF2A RID: 175914 RVA: 0x005DBFB9 File Offset: 0x005DA1B9
 		public static TNpcUiInteractOptionUnion FromINpcUiInteractOnSoundBox3(INpcUiInteractOnSoundBox3T _inpcuiinteractonsoundbox3)
 		{
 			return new TNpcUiInteractOptionUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028909 RID: 166153 RVA: 0x00593B8A File Offset: 0x00591D8A
+		// Token: 0x0602AF2B RID: 175915 RVA: 0x005DBFCE File Offset: 0x005DA1CE
 		public INpcUiInteractOnSoundBox35T AsINpcUiInteractOnSoundBox35()
 		{
 			return this.As<INpcUiInteractOnSoundBox35T>();
 		}
 
-		// Token: 0x0602890A RID: 166154 RVA: 0x00593B92 File Offset: 0x00591D92
+		// Token: 0x0602AF2C RID: 175916 RVA: 0x005DBFD6 File Offset: 0x005DA1D6
 		public static TNpcUiInteractOptionUnion FromINpcUiInteractOnSoundBox35(INpcUiInteractOnSoundBox35T _inpcuiinteractonsoundbox35)
 		{
 			return new TNpcUiInteractOptionUnion
@@ -173,13 +173,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602890B RID: 166155 RVA: 0x00593BA8 File Offset: 0x00591DA8
+		// Token: 0x0602AF2D RID: 175917 RVA: 0x005DBFEC File Offset: 0x005DA1EC
 		public INpcUiInteractOnSunSpiritT AsINpcUiInteractOnSunSpirit()
 		{
 			return this.As<INpcUiInteractOnSunSpiritT>();
 		}
 
-		// Token: 0x0602890C RID: 166156 RVA: 0x00593BB0 File Offset: 0x00591DB0
+		// Token: 0x0602AF2E RID: 175918 RVA: 0x005DBFF4 File Offset: 0x005DA1F4
 		public static TNpcUiInteractOptionUnion FromINpcUiInteractOnSunSpirit(INpcUiInteractOnSunSpiritT _inpcuiinteractonsunspirit)
 		{
 			return new TNpcUiInteractOptionUnion
@@ -189,13 +189,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602890D RID: 166157 RVA: 0x00593BC6 File Offset: 0x00591DC6
+		// Token: 0x0602AF2F RID: 175919 RVA: 0x005DC00A File Offset: 0x005DA20A
 		public INpcUiInteractOnVillageInfrT AsINpcUiInteractOnVillageInfr()
 		{
 			return this.As<INpcUiInteractOnVillageInfrT>();
 		}
 
-		// Token: 0x0602890E RID: 166158 RVA: 0x00593BCE File Offset: 0x00591DCE
+		// Token: 0x0602AF30 RID: 175920 RVA: 0x005DC012 File Offset: 0x005DA212
 		public static TNpcUiInteractOptionUnion FromINpcUiInteractOnVillageInfr(INpcUiInteractOnVillageInfrT _inpcuiinteractonvillageinfr)
 		{
 			return new TNpcUiInteractOptionUnion
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602890F RID: 166159 RVA: 0x00593BE4 File Offset: 0x00591DE4
+		// Token: 0x0602AF31 RID: 175921 RVA: 0x005DC028 File Offset: 0x005DA228
 		public static int Pack(FlatBufferBuilder builder, TNpcUiInteractOptionUnion _o)
 		{
 			switch (_o.Type)

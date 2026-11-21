@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002179 RID: 8569
+	// Token: 0x0200070B RID: 1803
 	[UnrealObjectPath("/Script/LGUI.UIInteractionGroup")]
 	[UnrealStructLayout(216, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 216)]
 	public class UUIInteractionGroup : UActorComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602060A RID: 132618 RVA: 0x00300CF0 File Offset: 0x002FEEF0
+		// Token: 0x060099BC RID: 39356 RVA: 0x000E71BB File Offset: 0x000E53BB
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIInteractionGroup._ClassPtr;
 		}
 
-		// Token: 0x0602060B RID: 132619 RVA: 0x00300CFC File Offset: 0x002FEEFC
+		// Token: 0x060099BD RID: 39357 RVA: 0x000E71C8 File Offset: 0x000E53C8
 		public UUIInteractionGroup() : this(BuiltinUtils.AllocNativeUObject(UUIInteractionGroup.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602060C RID: 132620 RVA: 0x00300D24 File Offset: 0x002FEF24
+		// Token: 0x060099BE RID: 39358 RVA: 0x000E71F0 File Offset: 0x000E53F0
 		[NullableContext(1)]
 		public UUIInteractionGroup(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIInteractionGroup.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007EE0 RID: 32480
-		// (get) Token: 0x0602060D RID: 132621 RVA: 0x00300D57 File Offset: 0x002FEF57
-		// (set) Token: 0x0602060E RID: 132622 RVA: 0x00300D67 File Offset: 0x002FEF67
+		// Token: 0x17001C92 RID: 7314
+		// (get) Token: 0x060099BF RID: 39359 RVA: 0x000E7223 File Offset: 0x000E5423
+		// (set) Token: 0x060099C0 RID: 39360 RVA: 0x000E7233 File Offset: 0x000E5433
 		public unsafe bool bInteractable
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007EE1 RID: 32481
-		// (get) Token: 0x0602060F RID: 132623 RVA: 0x00300D78 File Offset: 0x002FEF78
-		// (set) Token: 0x06020610 RID: 132624 RVA: 0x00300D88 File Offset: 0x002FEF88
+		// Token: 0x17001C93 RID: 7315
+		// (get) Token: 0x060099C1 RID: 39361 RVA: 0x000E7244 File Offset: 0x000E5444
+		// (set) Token: 0x060099C2 RID: 39362 RVA: 0x000E7254 File Offset: 0x000E5454
 		public unsafe bool bIgnoreParentGroup
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007EE2 RID: 32482
-		// (get) Token: 0x06020611 RID: 132625 RVA: 0x00300D99 File Offset: 0x002FEF99
-		// (set) Token: 0x06020612 RID: 132626 RVA: 0x00300DA9 File Offset: 0x002FEFA9
+		// Token: 0x17001C94 RID: 7316
+		// (get) Token: 0x060099C3 RID: 39363 RVA: 0x000E7265 File Offset: 0x000E5465
+		// (set) Token: 0x060099C4 RID: 39364 RVA: 0x000E7275 File Offset: 0x000E5475
 		public unsafe bool bGroupEnabled
 		{
 			get
@@ -73,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007EE3 RID: 32483
-		// (get) Token: 0x06020613 RID: 132627 RVA: 0x00300DBA File Offset: 0x002FEFBA
-		// (set) Token: 0x06020614 RID: 132628 RVA: 0x00300DCE File Offset: 0x002FEFCE
+		// Token: 0x17001C95 RID: 7317
+		// (get) Token: 0x060099C5 RID: 39365 RVA: 0x000E7286 File Offset: 0x000E5486
+		// (set) Token: 0x060099C6 RID: 39366 RVA: 0x000E729A File Offset: 0x000E549A
 		[Nullable(2)]
 		public unsafe UUIItem CacheUIItem
 		{
@@ -91,87 +91,87 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020615 RID: 132629 RVA: 0x00300DE3 File Offset: 0x002FEFE3
+		// Token: 0x060099C7 RID: 39367 RVA: 0x000E72AF File Offset: 0x000E54AF
 		public void SetInteractable(bool value)
 		{
 			UUIInteractionGroup.__SetInteractable_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020616 RID: 132630 RVA: 0x00300DF1 File Offset: 0x002FEFF1
+		// Token: 0x060099C8 RID: 39368 RVA: 0x000E72BD File Offset: 0x000E54BD
 		public void SetIgnoreParentGroup(bool value)
 		{
 			UUIInteractionGroup.__SetIgnoreParentGroup_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020617 RID: 132631 RVA: 0x00300DFF File Offset: 0x002FEFFF
+		// Token: 0x060099C9 RID: 39369 RVA: 0x000E72CB File Offset: 0x000E54CB
 		public bool IsGroupEnabled()
 		{
 			return UUIInteractionGroup.__IsGroupEnabled_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020618 RID: 132632 RVA: 0x00300E0C File Offset: 0x002FF00C
+		// Token: 0x060099CA RID: 39370 RVA: 0x000E72D8 File Offset: 0x000E54D8
 		public bool GetInteractable()
 		{
 			return UUIInteractionGroup.__GetInteractable_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020619 RID: 132633 RVA: 0x00300E19 File Offset: 0x002FF019
+		// Token: 0x060099CB RID: 39371 RVA: 0x000E72E5 File Offset: 0x000E54E5
 		public bool GetIgnoreParentGroup()
 		{
 			return UUIInteractionGroup.__GetIgnoreParentGroup_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0602061A RID: 132634
+		// Token: 0x060099CC RID: 39372
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetInteractable_Internal(IntPtr @this, bool value);
 
-		// Token: 0x0602061B RID: 132635
+		// Token: 0x060099CD RID: 39373
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetIgnoreParentGroup_Internal(IntPtr @this, bool value);
 
-		// Token: 0x0602061C RID: 132636
+		// Token: 0x060099CE RID: 39374
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsGroupEnabled_Internal(IntPtr @this);
 
-		// Token: 0x0602061D RID: 132637
+		// Token: 0x060099CF RID: 39375
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetInteractable_Internal(IntPtr @this);
 
-		// Token: 0x0602061E RID: 132638
+		// Token: 0x060099D0 RID: 39376
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetIgnoreParentGroup_Internal(IntPtr @this);
 
-		// Token: 0x0602061F RID: 132639 RVA: 0x00300E26 File Offset: 0x002FF026
+		// Token: 0x060099D1 RID: 39377 RVA: 0x000E72F2 File Offset: 0x000E54F2
 		static UUIInteractionGroup()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIInteractionGroup");
 		}
 
-		// Token: 0x06020620 RID: 132640 RVA: 0x00300E34 File Offset: 0x002FF034
+		// Token: 0x060099D2 RID: 39378 RVA: 0x000E7300 File Offset: 0x000E5500
 		protected UUIInteractionGroup(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401161B RID: 71195
+		// Token: 0x040042BC RID: 17084
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UIInteractionGroup";
 
-		// Token: 0x0401161C RID: 71196
+		// Token: 0x040042BD RID: 17085
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401161D RID: 71197
+		// Token: 0x040042BE RID: 17086
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401161E RID: 71198
+		// Token: 0x040042BF RID: 17087
 		internal static int __PropertyOffset_bInteractable;
 
-		// Token: 0x0401161F RID: 71199
+		// Token: 0x040042C0 RID: 17088
 		internal static int __PropertyOffset_bIgnoreParentGroup;
 
-		// Token: 0x04011620 RID: 71200
+		// Token: 0x040042C1 RID: 17089
 		internal static int __PropertyOffset_bGroupEnabled;
 
-		// Token: 0x04011621 RID: 71201
+		// Token: 0x040042C2 RID: 17090
 		internal static int __PropertyOffset_CacheUIItem;
 	}
 }

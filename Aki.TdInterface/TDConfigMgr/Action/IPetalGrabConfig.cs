@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CDA RID: 7386
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EE3 RID: 7907
 	public class IPetalGrabConfig : ISportConfig
 	{
-		// Token: 0x06009E93 RID: 40595 RVA: 0x0016AA40 File Offset: 0x00168C40
+		// Token: 0x0600A849 RID: 43081 RVA: 0x0017E75C File Offset: 0x0017C95C
 		private IPetalGrabConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009E94 RID: 40596 RVA: 0x0016AA78 File Offset: 0x00168C78
+		// Token: 0x0600A84A RID: 43082 RVA: 0x0017E794 File Offset: 0x0017C994
 		public static IPetalGrabConfig Create([Nullable(2)] IPetalGrabConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E95 RID: 40597 RVA: 0x0016AA8B File Offset: 0x00168C8B
+		// Token: 0x0600A84B RID: 43083 RVA: 0x0017E7A7 File Offset: 0x0017C9A7
 		public static IPetalGrabConfig CreateFromSetValue([Nullable(2)] IPetalGrabConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E96 RID: 40598 RVA: 0x0016AA9E File Offset: 0x00168C9E
+		// Token: 0x0600A84C RID: 43084 RVA: 0x0017E7BA File Offset: 0x0017C9BA
 		public new IPetalGrabConfig_SetValue ToSetValue()
 		{
 			return new IPetalGrabConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003159 RID: 12633
-		// (get) Token: 0x06009E97 RID: 40599 RVA: 0x0016AABD File Offset: 0x00168CBD
-		// (set) Token: 0x06009E98 RID: 40600 RVA: 0x0016AAE8 File Offset: 0x00168CE8
+		// Token: 0x170033DE RID: 13278
+		// (get) Token: 0x0600A84D RID: 43085 RVA: 0x0017E7D9 File Offset: 0x0017C9D9
+		// (set) Token: 0x0600A84E RID: 43086 RVA: 0x0017E804 File Offset: 0x0017CA04
 		public override ESportStateType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700315A RID: 12634
-		// (get) Token: 0x06009E99 RID: 40601 RVA: 0x0016AAF6 File Offset: 0x00168CF6
-		// (set) Token: 0x06009E9A RID: 40602 RVA: 0x0016AB21 File Offset: 0x00168D21
+		// Token: 0x170033DF RID: 13279
+		// (get) Token: 0x0600A84F RID: 43087 RVA: 0x0017E812 File Offset: 0x0017CA12
+		// (set) Token: 0x0600A850 RID: 43088 RVA: 0x0017E83D File Offset: 0x0017CA3D
 		public virtual int FirstGrabEntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005FD2 RID: 24530
+		// Token: 0x04006531 RID: 25905
 		[Nullable(2)]
 		protected new IPetalGrabConfig FbInstance;
 
-		// Token: 0x04005FD3 RID: 24531
+		// Token: 0x04006532 RID: 25906
 		[Nullable(2)]
 		protected new IPetalGrabConfig_SetValue PocoInterface;
 	}

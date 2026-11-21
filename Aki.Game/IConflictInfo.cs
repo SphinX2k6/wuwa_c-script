@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02001658 RID: 5720
+// Token: 0x02000B10 RID: 2832
 public interface IConflictInfo
 {
-	// Token: 0x17000D8F RID: 3471
-	// (get) Token: 0x0600A0D2 RID: 41170
-	// (set) Token: 0x0600A0D3 RID: 41171
+	// Token: 0x17000DB0 RID: 3504
+	// (get) Token: 0x060074B0 RID: 29872
+	// (set) Token: 0x060074B1 RID: 29873
 	int RoleId { get; set; }
 
-	// Token: 0x17000D90 RID: 3472
-	// (get) Token: 0x0600A0D4 RID: 41172
-	// (set) Token: 0x0600A0D5 RID: 41173
+	// Token: 0x17000DB1 RID: 3505
+	// (get) Token: 0x060074B2 RID: 29874
+	// (set) Token: 0x060074B3 RID: 29875
 	bool WeaponConflict { get; set; }
 
-	// Token: 0x17000D91 RID: 3473
-	// (get) Token: 0x0600A0D6 RID: 41174
-	// (set) Token: 0x0600A0D7 RID: 41175
+	// Token: 0x17000DB2 RID: 3506
+	// (get) Token: 0x060074B4 RID: 29876
+	// (set) Token: 0x060074B5 RID: 29877
 	bool PhantomConflict { get; set; }
 }

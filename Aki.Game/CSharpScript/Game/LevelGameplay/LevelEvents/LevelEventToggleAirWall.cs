@@ -6,15 +6,15 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006BA7 RID: 27559
+	// Token: 0x02005D1F RID: 23839
 	public class LevelEventToggleAirWall : LevelEventBase
 	{
-		// Token: 0x06044304 RID: 279300 RVA: 0x010CE4B8 File Offset: 0x010CC6B8
+		// Token: 0x0603A45A RID: 238682 RVA: 0x01078344 File Offset: 0x01076544
 		public LevelEventToggleAirWall(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044305 RID: 279301 RVA: 0x010CE4C4 File Offset: 0x010CC6C4
+		// Token: 0x0603A45B RID: 238683 RVA: 0x01078350 File Offset: 0x01076550
 		[NullableContext(1)]
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

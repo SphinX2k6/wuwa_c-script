@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004974 RID: 18804
+	// Token: 0x02004E2B RID: 20011
 	public class IBaseAccessQuestDebugDataT
 	{
-		// Token: 0x170087D3 RID: 34771
-		// (get) Token: 0x0601D4FC RID: 120060 RVA: 0x00422627 File Offset: 0x00420827
-		// (set) Token: 0x0601D4FD RID: 120061 RVA: 0x0042262F File Offset: 0x0042082F
+		// Token: 0x17008E8E RID: 36494
+		// (get) Token: 0x0601EF21 RID: 126753 RVA: 0x00452ADB File Offset: 0x00450CDB
+		// (set) Token: 0x0601EF22 RID: 126754 RVA: 0x00452AE3 File Offset: 0x00450CE3
 		public EConditionLogicType Type { get; set; }
 
-		// Token: 0x170087D4 RID: 34772
-		// (get) Token: 0x0601D4FE RID: 120062 RVA: 0x00422638 File Offset: 0x00420838
-		// (set) Token: 0x0601D4FF RID: 120063 RVA: 0x00422640 File Offset: 0x00420840
+		// Token: 0x17008E8F RID: 36495
+		// (get) Token: 0x0601EF23 RID: 126755 RVA: 0x00452AEC File Offset: 0x00450CEC
+		// (set) Token: 0x0601EF24 RID: 126756 RVA: 0x00452AF4 File Offset: 0x00450CF4
 		public IAccessQuestConditionT BaseAccessQuestConditionGroup { get; set; }
 
-		// Token: 0x0601D500 RID: 120064 RVA: 0x00422649 File Offset: 0x00420849
+		// Token: 0x0601EF25 RID: 126757 RVA: 0x00452AFD File Offset: 0x00450CFD
 		public IBaseAccessQuestDebugDataT()
 		{
 			this.Type = EConditionLogicType.BaseAccessQuest;

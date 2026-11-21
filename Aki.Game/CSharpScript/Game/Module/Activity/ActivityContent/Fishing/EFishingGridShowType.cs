@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065D7 RID: 26071
+	// Token: 0x02005555 RID: 21845
 	public enum EFishingGridShowType
 	{
-		// Token: 0x04022038 RID: 139320
+		// Token: 0x0401C969 RID: 117097
 		None,
-		// Token: 0x04022039 RID: 139321
+		// Token: 0x0401C96A RID: 117098
 		Disable,
-		// Token: 0x0402203A RID: 139322
+		// Token: 0x0401C96B RID: 117099
 		Empty,
-		// Token: 0x0402203B RID: 139323
+		// Token: 0x0401C96C RID: 117100
 		Preview,
-		// Token: 0x0402203C RID: 139324
+		// Token: 0x0401C96D RID: 117101
 		SingleOccupancy,
-		// Token: 0x0402203D RID: 139325
+		// Token: 0x0401C96E RID: 117102
 		MultiOccupancy,
-		// Token: 0x0402203E RID: 139326
+		// Token: 0x0401C96F RID: 117103
 		Prohibit,
-		// Token: 0x0402203F RID: 139327
+		// Token: 0x0401C970 RID: 117104
 		Finish
 	}
 }

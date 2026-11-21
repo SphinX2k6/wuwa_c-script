@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001834 RID: 6196
+	// Token: 0x02000380 RID: 896
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FKuroFastCollisionOverlapSignature : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06016D66 RID: 93542 RVA: 0x00215746 File Offset: 0x00213946
+		// Token: 0x06005A14 RID: 23060 RVA: 0x0007F4F6 File Offset: 0x0007D6F6
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroFastCollisionOverlapSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x06016D67 RID: 93543 RVA: 0x00215752 File Offset: 0x00213952
+		// Token: 0x06005A15 RID: 23061 RVA: 0x0007F502 File Offset: 0x0007D702
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroFastCollisionOverlapSignature._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FKuroFastCollisionOverlapSignature._FunctionPtr;
 		}
 
-		// Token: 0x06016D68 RID: 93544 RVA: 0x00215775 File Offset: 0x00213975
+		// Token: 0x06005A16 RID: 23062 RVA: 0x0007F525 File Offset: 0x0007D725
 		public FKuroFastCollisionOverlapSignature()
 		{
 		}
 
-		// Token: 0x06016D69 RID: 93545 RVA: 0x0021577D File Offset: 0x0021397D
+		// Token: 0x06005A17 RID: 23063 RVA: 0x0007F52D File Offset: 0x0007D72D
 		[NullableContext(2)]
 		public FKuroFastCollisionOverlapSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06016D6A RID: 93546 RVA: 0x00215787 File Offset: 0x00213987
+		// Token: 0x06005A18 RID: 23064 RVA: 0x0007F537 File Offset: 0x0007D737
 		public FKuroFastCollisionOverlapSignature(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06016D6B RID: 93547 RVA: 0x00215792 File Offset: 0x00213992
+		// Token: 0x06005A19 RID: 23065 RVA: 0x0007F542 File Offset: 0x0007D742
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as FKuroFastCollisionOverlapSignature.FKuroFastCollisionOverlapSignature_ScriptDelegate) ?? ((FKuroFastCollisionOverlapSignature.FKuroFastCollisionOverlapSignature_ScriptDelegate)Delegate.CreateDelegate(typeof(FKuroFastCollisionOverlapSignature.FKuroFastCollisionOverlapSignature_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06016D6C RID: 93548 RVA: 0x002157C4 File Offset: 0x002139C4
+		// Token: 0x06005A1A RID: 23066 RVA: 0x0007F574 File Offset: 0x0007D774
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(FKuroFastCollisionOverlapSignature.FKuroFastCollisionOverlapSignature_ScriptDelegate Callback)
 		{
 			if (FKuroFastCollisionOverlapSignature.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FKuroFastCollisionOverlapSignature.RegisterId);
 		}
 
-		// Token: 0x06016D6D RID: 93549 RVA: 0x002157FE File Offset: 0x002139FE
+		// Token: 0x06005A1B RID: 23067 RVA: 0x0007F5AE File Offset: 0x0007D7AE
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(FKuroFastCollisionOverlapSignature.FKuroFastCollisionOverlapSignature_ScriptDelegate Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06016D6E RID: 93550 RVA: 0x00215808 File Offset: 0x00213A08
+		// Token: 0x06005A1C RID: 23068 RVA: 0x0007F5B8 File Offset: 0x0007D7B8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(UKuroFastCollisionShapeComponent OverlappedComponent, [Nullable(new byte[]
 		{
 			2,
@@ -102,10 +99,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FKuroFastCollisionOverlapSignature._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06016D6F RID: 93551 RVA: 0x0021588C File Offset: 0x00213A8C
+		// Token: 0x06005A1D RID: 23069 RVA: 0x0007F63C File Offset: 0x0007D83C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			FKuroFastCollisionOverlapSignature.FKuroFastCollisionOverlapSignature_ScriptDelegate fkuroFastCollisionOverlapSignature_ScriptDelegate = target as FKuroFastCollisionOverlapSignature.FKuroFastCollisionOverlapSignature_ScriptDelegate;
@@ -122,43 +118,43 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0400C6A6 RID: 50854
+		// Token: 0x04002569 RID: 9577
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400C6A7 RID: 50855
+		// Token: 0x0400256A RID: 9578
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroFastCollision.KuroFastCollisionOverlapSignature__DelegateSignature";
 
-		// Token: 0x0400C6A8 RID: 50856
+		// Token: 0x0400256B RID: 9579
 		private static int RegisterId;
 
-		// Token: 0x02002F66 RID: 12134
-		// (Invoke) Token: 0x0602857E RID: 165246
+		// Token: 0x02000A8F RID: 2703
+		// (Invoke) Token: 0x0600BEEF RID: 48879
 		public delegate void FKuroFastCollisionOverlapSignature_ScriptDelegate(UKuroFastCollisionShapeComponent OverlappedComponent, [Nullable(new byte[]
 		{
 			2,
 			1
 		})] in TArray<UObject> OtherObjects);
 
-		// Token: 0x02002F67 RID: 12135
+		// Token: 0x02000A90 RID: 2704
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FKuroFastCollisionOverlapSignature_DelegateParams
+		private ref struct __FKuroFastCollisionOverlapSignature_DelegateParams
 		{
-			// Token: 0x04016B1D RID: 92957
+			// Token: 0x04005ADF RID: 23263
 			[FieldOffset(0)]
 			public IntPtr OverlappedComponent;
 
-			// Token: 0x04016B1E RID: 92958
+			// Token: 0x04005AE0 RID: 23264
 			[FieldOffset(8)]
 			public byte OtherObjects;
 		}
 
-		// Token: 0x02002F68 RID: 12136
+		// Token: 0x02000A91 RID: 2705
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B1F RID: 92959
+			// Token: 0x04005AE1 RID: 23265
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

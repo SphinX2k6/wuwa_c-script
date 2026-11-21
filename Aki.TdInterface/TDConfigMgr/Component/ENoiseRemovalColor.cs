@@ -3,21 +3,21 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000EC RID: 236
+	// Token: 0x020000F5 RID: 245
 	[EnumExtensions]
 	public enum ENoiseRemovalColor
 	{
-		// Token: 0x040004FD RID: 1277
+		// Token: 0x04000526 RID: 1318
 		Red,
-		// Token: 0x040004FE RID: 1278
+		// Token: 0x04000527 RID: 1319
 		Blue,
-		// Token: 0x040004FF RID: 1279
+		// Token: 0x04000528 RID: 1320
 		Green,
-		// Token: 0x04000500 RID: 1280
+		// Token: 0x04000529 RID: 1321
 		Black,
-		// Token: 0x04000501 RID: 1281
+		// Token: 0x0400052A RID: 1322
 		Purple,
-		// Token: 0x04000502 RID: 1282
+		// Token: 0x0400052B RID: 1323
 		Core
 	}
 }

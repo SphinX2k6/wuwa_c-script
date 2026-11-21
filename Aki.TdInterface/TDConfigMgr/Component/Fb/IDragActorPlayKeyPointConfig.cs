@@ -8,13 +8,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E15 RID: 3605
+	// Token: 0x02000F11 RID: 3857
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IDragActorPlayKeyPointConfig
 	{
-		// Token: 0x06005189 RID: 20873 RVA: 0x000C916D File Offset: 0x000C736D
-		[NullableContext(1)]
+		// Token: 0x060056B0 RID: 22192 RVA: 0x000D4A35 File Offset: 0x000D2C35
+		[NullableContext(0)]
 		public static IDragActorPlayKeyPointConfig Create(IDragActorPlayKeyPointConfig? instance)
 		{
 			if (instance == null)
@@ -27,12 +27,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B1C RID: 6940
-		// (get) Token: 0x0600518A RID: 20874 RVA: 0x000C918C File Offset: 0x000C738C
-		[Nullable(1)]
+		// Token: 0x17001C89 RID: 7305
+		// (get) Token: 0x060056B1 RID: 22193 RVA: 0x000D4A54 File Offset: 0x000D2C54
+		[Nullable(0)]
 		public virtual VectorInfo Position
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._PositionInited)
@@ -45,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B1D RID: 6941
-		// (get) Token: 0x0600518B RID: 20875 RVA: 0x000C91C0 File Offset: 0x000C73C0
+		// Token: 0x17001C8A RID: 7306
+		// (get) Token: 0x060056B2 RID: 22194 RVA: 0x000D4A88 File Offset: 0x000D2C88
 		public virtual float Radius
 		{
 			get
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B1E RID: 6942
-		// (get) Token: 0x0600518C RID: 20876 RVA: 0x000C91D0 File Offset: 0x000C73D0
+		// Token: 0x17001C8B RID: 7307
+		// (get) Token: 0x060056B3 RID: 22195 RVA: 0x000D4A98 File Offset: 0x000D2C98
 		public virtual bool? IsSnapping
 		{
 			get
@@ -69,8 +69,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B1F RID: 6943
-		// (get) Token: 0x0600518D RID: 20877 RVA: 0x000C9208 File Offset: 0x000C7408
+		// Token: 0x17001C8C RID: 7308
+		// (get) Token: 0x060056B4 RID: 22196 RVA: 0x000D4AD0 File Offset: 0x000D2CD0
 		public virtual float? SnapTime
 		{
 			get
@@ -83,8 +83,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B20 RID: 6944
-		// (get) Token: 0x0600518E RID: 20878 RVA: 0x000C923E File Offset: 0x000C743E
+		// Token: 0x17001C8D RID: 7309
+		// (get) Token: 0x060056B5 RID: 22197 RVA: 0x000D4B06 File Offset: 0x000D2D06
 		public virtual string EnterSendSelfEvent
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B21 RID: 6945
-		// (get) Token: 0x0600518F RID: 20879 RVA: 0x000C924B File Offset: 0x000C744B
+		// Token: 0x17001C8E RID: 7310
+		// (get) Token: 0x060056B6 RID: 22198 RVA: 0x000D4B13 File Offset: 0x000D2D13
 		public virtual string ExitSendSelfEvent
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B22 RID: 6946
-		// (get) Token: 0x06005190 RID: 20880 RVA: 0x000C9258 File Offset: 0x000C7458
+		// Token: 0x17001C8F RID: 7311
+		// (get) Token: 0x060056B7 RID: 22199 RVA: 0x000D4B20 File Offset: 0x000D2D20
 		public virtual string ReleaseSendSelfEvent
 		{
 			get
@@ -113,19 +113,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B23 RID: 6947
-		// (get) Token: 0x06005191 RID: 20881 RVA: 0x000C9268 File Offset: 0x000C7468
+		// Token: 0x17001C90 RID: 7312
+		// (get) Token: 0x060056B8 RID: 22200 RVA: 0x000D4B30 File Offset: 0x000D2D30
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> ReleaseClientActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -148,8 +148,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B24 RID: 6948
-		// (get) Token: 0x06005192 RID: 20882 RVA: 0x000C92E2 File Offset: 0x000C74E2
+		// Token: 0x17001C91 RID: 7313
+		// (get) Token: 0x060056B9 RID: 22201 RVA: 0x000D4BAA File Offset: 0x000D2DAA
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -164,30 +164,30 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EFA RID: 12026
+		// Token: 0x040031C2 RID: 12738
 		private IDragActorPlayKeyPointConfig Instance;
 
-		// Token: 0x04002EFB RID: 12027
+		// Token: 0x040031C3 RID: 12739
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04002EFC RID: 12028
+		// Token: 0x040031C4 RID: 12740
 		private bool _PositionInited;
 
-		// Token: 0x04002EFD RID: 12029
+		// Token: 0x040031C5 RID: 12741
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ReleaseClientActionsCache;
 
-		// Token: 0x04002EFE RID: 12030
+		// Token: 0x040031C6 RID: 12742
 		private bool _ReleaseClientActionsInited;
 
-		// Token: 0x04002EFF RID: 12031
+		// Token: 0x040031C7 RID: 12743
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002F00 RID: 12032
+		// Token: 0x040031C8 RID: 12744
 		private bool _ConditionInited;
 	}
 }

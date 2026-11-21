@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011C2 RID: 4546
+	// Token: 0x020012FE RID: 4862
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITrackReturnDungeon
 	{
-		// Token: 0x06006754 RID: 26452 RVA: 0x000F7778 File Offset: 0x000F5978
-		[NullableContext(1)]
+		// Token: 0x06006D95 RID: 28053 RVA: 0x00105084 File Offset: 0x00103284
+		[NullableContext(0)]
 		private ITrackReturnDungeon_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006755 RID: 26453 RVA: 0x000F77B0 File Offset: 0x000F59B0
-		[NullableContext(1)]
+		// Token: 0x06006D96 RID: 28054 RVA: 0x001050BC File Offset: 0x001032BC
+		[NullableContext(0)]
 		public static ITrackReturnDungeon Create([Nullable(2)] ITrackReturnDungeon instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006756 RID: 26454 RVA: 0x000F77C3 File Offset: 0x000F59C3
-		[NullableContext(1)]
+		// Token: 0x06006D97 RID: 28055 RVA: 0x001050CF File Offset: 0x001032CF
+		[NullableContext(0)]
 		public static ITrackReturnDungeon CreateFromSetValue([Nullable(2)] ITrackReturnDungeon_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006757 RID: 26455 RVA: 0x000F77D8 File Offset: 0x000F59D8
-		[NullableContext(1)]
+		// Token: 0x06006D98 RID: 28056 RVA: 0x001050E4 File Offset: 0x001032E4
+		[NullableContext(0)]
 		public ITrackReturnDungeon_SetValue ToSetValue()
 		{
 			return new ITrackReturnDungeon_SetValue
@@ -68,9 +68,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700218C RID: 8588
-		// (get) Token: 0x06006758 RID: 26456 RVA: 0x000F7826 File Offset: 0x000F5A26
-		// (set) Token: 0x06006759 RID: 26457 RVA: 0x000F7851 File Offset: 0x000F5A51
+		// Token: 0x1700234D RID: 9037
+		// (get) Token: 0x06006D99 RID: 28057 RVA: 0x00105132 File Offset: 0x00103332
+		// (set) Token: 0x06006D9A RID: 28058 RVA: 0x0010515D File Offset: 0x0010335D
 		public virtual int DungeonId
 		{
 			get
@@ -91,9 +91,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700218D RID: 8589
-		// (get) Token: 0x0600675A RID: 26458 RVA: 0x000F7860 File Offset: 0x000F5A60
-		// (set) Token: 0x0600675B RID: 26459 RVA: 0x000F789A File Offset: 0x000F5A9A
+		// Token: 0x1700234E RID: 9038
+		// (get) Token: 0x06006D9B RID: 28059 RVA: 0x0010516C File Offset: 0x0010336C
+		// (set) Token: 0x06006D9C RID: 28060 RVA: 0x001051A6 File Offset: 0x001033A6
 		public virtual bool? IsRegroup
 		{
 			get
@@ -115,9 +115,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700218E RID: 8590
-		// (get) Token: 0x0600675C RID: 26460 RVA: 0x000F78A8 File Offset: 0x000F5AA8
-		// (set) Token: 0x0600675D RID: 26461 RVA: 0x000F78CF File Offset: 0x000F5ACF
+		// Token: 0x1700234F RID: 9039
+		// (get) Token: 0x06006D9D RID: 28061 RVA: 0x001051B4 File Offset: 0x001033B4
+		// (set) Token: 0x06006D9E RID: 28062 RVA: 0x001051DB File Offset: 0x001033DB
 		public virtual ITeleportTransitionType TransitionOption
 		{
 			get
@@ -139,9 +139,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700218F RID: 8591
-		// (get) Token: 0x0600675E RID: 26462 RVA: 0x000F78DD File Offset: 0x000F5ADD
-		// (set) Token: 0x0600675F RID: 26463 RVA: 0x000F7904 File Offset: 0x000F5B04
+		// Token: 0x17002350 RID: 9040
+		// (get) Token: 0x06006D9F RID: 28063 RVA: 0x001051E9 File Offset: 0x001033E9
+		// (set) Token: 0x06006DA0 RID: 28064 RVA: 0x00105210 File Offset: 0x00103410
 		public virtual string TidTip
 		{
 			get
@@ -163,9 +163,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002190 RID: 8592
-		// (get) Token: 0x06006760 RID: 26464 RVA: 0x000F7912 File Offset: 0x000F5B12
-		// (set) Token: 0x06006761 RID: 26465 RVA: 0x000F7929 File Offset: 0x000F5B29
+		// Token: 0x17002351 RID: 9041
+		// (get) Token: 0x06006DA1 RID: 28065 RVA: 0x0010521E File Offset: 0x0010341E
+		// (set) Token: 0x06006DA2 RID: 28066 RVA: 0x00105235 File Offset: 0x00103435
 		public virtual string EdTidTip
 		{
 			get
@@ -182,10 +182,10 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E0B RID: 15883
+		// Token: 0x04004179 RID: 16761
 		protected ITrackReturnDungeon FbInstance;
 
-		// Token: 0x04003E0C RID: 15884
+		// Token: 0x0400417A RID: 16762
 		protected ITrackReturnDungeon_SetValue PocoInterface;
 	}
 }

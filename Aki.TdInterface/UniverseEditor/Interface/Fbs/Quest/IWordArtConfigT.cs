@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200429F RID: 17055
+	// Token: 0x020046FB RID: 18171
 	public class IWordArtConfigT
 	{
-		// Token: 0x17007913 RID: 30995
-		// (get) Token: 0x06019457 RID: 103511 RVA: 0x003A11FB File Offset: 0x0039F3FB
-		// (set) Token: 0x06019458 RID: 103512 RVA: 0x003A1203 File Offset: 0x0039F403
+		// Token: 0x17007F44 RID: 32580
+		// (get) Token: 0x0601ABC3 RID: 109507 RVA: 0x003CC8D3 File Offset: 0x003CAAD3
+		// (set) Token: 0x0601ABC4 RID: 109508 RVA: 0x003CC8DB File Offset: 0x003CAADB
 		public INumberWordArtEffectiveTargetTypeT EffectiveTarget { get; set; }
 
-		// Token: 0x17007914 RID: 30996
-		// (get) Token: 0x06019459 RID: 103513 RVA: 0x003A120C File Offset: 0x0039F40C
-		// (set) Token: 0x0601945A RID: 103514 RVA: 0x003A1214 File Offset: 0x0039F414
+		// Token: 0x17007F45 RID: 32581
+		// (get) Token: 0x0601ABC5 RID: 109509 RVA: 0x003CC8E4 File Offset: 0x003CAAE4
+		// (set) Token: 0x0601ABC6 RID: 109510 RVA: 0x003CC8EC File Offset: 0x003CAAEC
 		public IWordArtDefaultResourceTypeT Resource { get; set; }
 
-		// Token: 0x0601945B RID: 103515 RVA: 0x003A121D File Offset: 0x0039F41D
+		// Token: 0x0601ABC7 RID: 109511 RVA: 0x003CC8F5 File Offset: 0x003CAAF5
 		public IWordArtConfigT()
 		{
 			this.EffectiveTarget = null;

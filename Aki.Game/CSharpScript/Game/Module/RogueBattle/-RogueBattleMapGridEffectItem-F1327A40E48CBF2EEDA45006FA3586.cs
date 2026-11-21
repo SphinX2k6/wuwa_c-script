@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E68 RID: 20072
+	// Token: 0x02003E31 RID: 15921
 	internal enum <RogueBattleMapGridEffectItem>F1327A40E48CBF2EEDA45006FA35863F523985F2091DDD7B8FFAA168490789B7C__EComponentDefine
 	{
-		// Token: 0x0401B6BE RID: 112318
+		// Token: 0x04016091 RID: 90257
 		TexIcon,
-		// Token: 0x0401B6BF RID: 112319
+		// Token: 0x04016092 RID: 90258
 		SpriteIcon,
-		// Token: 0x0401B6C0 RID: 112320
+		// Token: 0x04016093 RID: 90259
 		TxtValue,
-		// Token: 0x0401B6C1 RID: 112321
+		// Token: 0x04016094 RID: 90260
 		TxtName
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002ABD RID: 10941
+	// Token: 0x02002DB1 RID: 11697
 	public class TriggerSystemRandomPlot : ActionParams
 	{
-		// Token: 0x0600F021 RID: 61473 RVA: 0x0022E168 File Offset: 0x0022C368
-		[NullableContext(1)]
+		// Token: 0x0600FED7 RID: 65239 RVA: 0x0024BE74 File Offset: 0x0024A074
 		public static TriggerSystemRandomPlot Create(ITriggerSystemRandomPlot? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C69 RID: 19561
-		// (get) Token: 0x0600F022 RID: 61474 RVA: 0x0022E187 File Offset: 0x0022C387
+		// Token: 0x17005023 RID: 20515
+		// (get) Token: 0x0600FED8 RID: 65240 RVA: 0x0024BE93 File Offset: 0x0024A093
 		public virtual int Id
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008417 RID: 33815
+		// Token: 0x04008B1B RID: 35611
 		private ITriggerSystemRandomPlot Instance;
 	}
 }

@@ -2,43 +2,43 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019AB RID: 6571
+	// Token: 0x02001B32 RID: 6962
 	public class IDisableCharacterSectionalSkillOption_SetValue
 	{
-		// Token: 0x0400577C RID: 22396
+		// Token: 0x04005BC5 RID: 23493
 		public bool? DisableJump;
 
-		// Token: 0x0400577D RID: 22397
+		// Token: 0x04005BC6 RID: 23494
 		public bool? DisableShowClimb;
 
-		// Token: 0x0400577E RID: 22398
+		// Token: 0x04005BC7 RID: 23495
 		public bool? DisableAttack;
 
-		// Token: 0x0400577F RID: 22399
+		// Token: 0x04005BC8 RID: 23496
 		public bool? DisableDodge;
 
-		// Token: 0x04005780 RID: 22400
+		// Token: 0x04005BC9 RID: 23497
 		public bool? DisableSkill1;
 
-		// Token: 0x04005781 RID: 22401
+		// Token: 0x04005BCA RID: 23498
 		public bool? DisableUltimateSkill;
 
-		// Token: 0x04005782 RID: 22402
+		// Token: 0x04005BCB RID: 23499
 		public bool? DisableExploreInput;
 
-		// Token: 0x04005783 RID: 22403
+		// Token: 0x04005BCC RID: 23500
 		public bool? DisableSwitchRole1;
 
-		// Token: 0x04005784 RID: 22404
+		// Token: 0x04005BCD RID: 23501
 		public bool? DisableSwitchRole2;
 
-		// Token: 0x04005785 RID: 22405
+		// Token: 0x04005BCE RID: 23502
 		public bool? DisableSwitchRole3;
 
-		// Token: 0x04005786 RID: 22406
+		// Token: 0x04005BCF RID: 23503
 		public bool? DisableLock;
 
-		// Token: 0x04005787 RID: 22407
+		// Token: 0x04005BD0 RID: 23504
 		public bool? DisableAim;
 	}
 }

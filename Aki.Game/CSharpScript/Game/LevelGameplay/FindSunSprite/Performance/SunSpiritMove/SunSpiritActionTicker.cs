@@ -4,10 +4,10 @@ using CSharpScript.Game.LevelGamePlay.Common.GameplayAction;
 
 namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.SunSpiritMove
 {
-	// Token: 0x02006E59 RID: 28249
+	// Token: 0x02005FDA RID: 24538
 	public class SunSpiritActionTicker : GameplayActionTicker
 	{
-		// Token: 0x06044D98 RID: 282008 RVA: 0x010FE170 File Offset: 0x010FC370
+		// Token: 0x0603AF25 RID: 241445 RVA: 0x010A86D0 File Offset: 0x010A68D0
 		[NullableContext(1)]
 		public override void PushAction(GameplayAction action)
 		{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.SunSpiritMov
 			}
 		}
 
-		// Token: 0x06044D99 RID: 282009 RVA: 0x010FE1C4 File Offset: 0x010FC3C4
+		// Token: 0x0603AF26 RID: 241446 RVA: 0x010A8724 File Offset: 0x010A6924
 		public override void TickAction(float delta)
 		{
 			base.TickAction(delta);
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.SunSpiritMov
 			}
 		}
 
-		// Token: 0x06044D9A RID: 282010 RVA: 0x010FE1F4 File Offset: 0x010FC3F4
+		// Token: 0x0603AF27 RID: 241447 RVA: 0x010A8754 File Offset: 0x010A6954
 		public override void Clear()
 		{
 			base.Clear();
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.SunSpiritMov
 			this.MoveTimer = null;
 		}
 
-		// Token: 0x04023D2E RID: 146734
+		// Token: 0x0401EFE3 RID: 126947
 		[Nullable(2)]
 		private TimerHandle MoveTimer;
 	}

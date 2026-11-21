@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002342 RID: 9026
+	// Token: 0x020025B5 RID: 9653
 	public class EFontSizeJsonConverter : JsonConverter<EFontSize>
 	{
-		// Token: 0x0600C529 RID: 50473 RVA: 0x001CC734 File Offset: 0x001CA934
+		// Token: 0x0600D10A RID: 53514 RVA: 0x001E4900 File Offset: 0x001E2B00
 		public override EFontSize Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EFontSizeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C52A RID: 50474 RVA: 0x001CC758 File Offset: 0x001CA958
+		// Token: 0x0600D10B RID: 53515 RVA: 0x001E4924 File Offset: 0x001E2B24
 		public override void Write(Utf8JsonWriter writer, EFontSize value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

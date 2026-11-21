@@ -2,25 +2,25 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.InstanceDungeon.Define;
 
-// Token: 0x02001BEE RID: 7150
+// Token: 0x020010AD RID: 4269
 [NullableContext(2)]
 [Nullable(0)]
 public class BattleRoleSlotData
 {
-	// Token: 0x0600D51D RID: 54557 RVA: 0x003114BA File Offset: 0x0030F6BA
+	// Token: 0x0600A930 RID: 43312 RVA: 0x0031C6FE File Offset: 0x0031A8FE
 	public BattleRoleSlotData(int position)
 	{
 		this.PositionInternal = position;
 	}
 
-	// Token: 0x0600D51E RID: 54558 RVA: 0x003114C9 File Offset: 0x0030F6C9
+	// Token: 0x0600A931 RID: 43313 RVA: 0x0031C70D File Offset: 0x0031A90D
 	[NullableContext(1)]
 	public void SetRoleData(BattleRoleData battleRoleData)
 	{
 		this.RoleDataInternal = battleRoleData;
 	}
 
-	// Token: 0x0600D51F RID: 54559 RVA: 0x003114D4 File Offset: 0x0030F6D4
+	// Token: 0x0600A932 RID: 43314 RVA: 0x0031C718 File Offset: 0x0031A918
 	[NullableContext(1)]
 	public void SetRoleDataByPrewarInfo(PrewarFormationData prewarFormationData)
 	{
@@ -32,14 +32,14 @@ public class BattleRoleSlotData
 		this.RoleDataInternal.ThirdPartyOnlineId = prewarFormationData.GetPlayerOnlineId();
 	}
 
-	// Token: 0x0600D520 RID: 54560 RVA: 0x00311545 File Offset: 0x0030F745
+	// Token: 0x0600A933 RID: 43315 RVA: 0x0031C789 File Offset: 0x0031A989
 	public void ResetRoleData()
 	{
 		this.RoleDataInternal = null;
 	}
 
-	// Token: 0x1700118F RID: 4495
-	// (get) Token: 0x0600D521 RID: 54561 RVA: 0x0031154E File Offset: 0x0030F74E
+	// Token: 0x170011B4 RID: 4532
+	// (get) Token: 0x0600A934 RID: 43316 RVA: 0x0031C792 File Offset: 0x0031A992
 	public BattleRoleData RoleData
 	{
 		get
@@ -48,8 +48,8 @@ public class BattleRoleSlotData
 		}
 	}
 
-	// Token: 0x17001190 RID: 4496
-	// (get) Token: 0x0600D522 RID: 54562 RVA: 0x00311558 File Offset: 0x0030F758
+	// Token: 0x170011B5 RID: 4533
+	// (get) Token: 0x0600A935 RID: 43317 RVA: 0x0031C79C File Offset: 0x0031A99C
 	public int? RoleConfigId
 	{
 		get
@@ -63,8 +63,8 @@ public class BattleRoleSlotData
 		}
 	}
 
-	// Token: 0x17001191 RID: 4497
-	// (get) Token: 0x0600D523 RID: 54563 RVA: 0x00311583 File Offset: 0x0030F783
+	// Token: 0x170011B6 RID: 4534
+	// (get) Token: 0x0600A936 RID: 43318 RVA: 0x0031C7C7 File Offset: 0x0031A9C7
 	public bool HasRole
 	{
 		get
@@ -73,8 +73,8 @@ public class BattleRoleSlotData
 		}
 	}
 
-	// Token: 0x17001192 RID: 4498
-	// (get) Token: 0x0600D524 RID: 54564 RVA: 0x0031158E File Offset: 0x0030F78E
+	// Token: 0x170011B7 RID: 4535
+	// (get) Token: 0x0600A937 RID: 43319 RVA: 0x0031C7D2 File Offset: 0x0031A9D2
 	public int Position
 	{
 		get
@@ -83,8 +83,8 @@ public class BattleRoleSlotData
 		}
 	}
 
-	// Token: 0x17001193 RID: 4499
-	// (get) Token: 0x0600D525 RID: 54565 RVA: 0x00311598 File Offset: 0x0030F798
+	// Token: 0x170011B8 RID: 4536
+	// (get) Token: 0x0600A938 RID: 43320 RVA: 0x0031C7DC File Offset: 0x0031A9DC
 	public bool IsProhibit
 	{
 		get
@@ -103,8 +103,8 @@ public class BattleRoleSlotData
 		}
 	}
 
-	// Token: 0x17001194 RID: 4500
-	// (get) Token: 0x0600D526 RID: 54566 RVA: 0x003115F5 File Offset: 0x0030F7F5
+	// Token: 0x170011B9 RID: 4537
+	// (get) Token: 0x0600A939 RID: 43321 RVA: 0x0031C839 File Offset: 0x0031AA39
 	public bool CanEditRoleSlot
 	{
 		get
@@ -121,9 +121,9 @@ public class BattleRoleSlotData
 		}
 	}
 
-	// Token: 0x04006199 RID: 24985
+	// Token: 0x04006268 RID: 25192
 	private readonly int PositionInternal;
 
-	// Token: 0x0400619A RID: 24986
+	// Token: 0x04006269 RID: 25193
 	private BattleRoleData RoleDataInternal;
 }

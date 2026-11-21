@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AD6 RID: 10966
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DCA RID: 11722
 	public class StartRoadNetworkNavigation : ActionParams
 	{
-		// Token: 0x0600F07E RID: 61566 RVA: 0x0022EB2A File Offset: 0x0022CD2A
+		// Token: 0x0600FF34 RID: 65332 RVA: 0x0024C836 File Offset: 0x0024AA36
 		public static StartRoadNetworkNavigation Create(IStartRoadNetworkNavigation? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C94 RID: 19604
-		// (get) Token: 0x0600F07F RID: 61567 RVA: 0x0022EB49 File Offset: 0x0022CD49
+		// Token: 0x1700504E RID: 20558
+		// (get) Token: 0x0600FF35 RID: 65333 RVA: 0x0024C855 File Offset: 0x0024AA55
 		public virtual ISceneItemRoadNetworkNavigation Target
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C95 RID: 19605
-		// (get) Token: 0x0600F080 RID: 61568 RVA: 0x0022EB7D File Offset: 0x0022CD7D
+		// Token: 0x1700504F RID: 20559
+		// (get) Token: 0x0600FF36 RID: 65334 RVA: 0x0024C889 File Offset: 0x0024AA89
 		public virtual ISplineWayPoint Start
 		{
 			get
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C96 RID: 19606
-		// (get) Token: 0x0600F081 RID: 61569 RVA: 0x0022EBB1 File Offset: 0x0022CDB1
+		// Token: 0x17005050 RID: 20560
+		// (get) Token: 0x0600FF37 RID: 65335 RVA: 0x0024C8BD File Offset: 0x0024AABD
 		public virtual ISplineWayPoint End
 		{
 			get
@@ -70,28 +68,28 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008448 RID: 33864
+		// Token: 0x04008B4C RID: 35660
 		private IStartRoadNetworkNavigation Instance;
 
-		// Token: 0x04008449 RID: 33865
+		// Token: 0x04008B4D RID: 35661
 		[Nullable(2)]
 		private ISceneItemRoadNetworkNavigation _TargetCache;
 
-		// Token: 0x0400844A RID: 33866
+		// Token: 0x04008B4E RID: 35662
 		private bool _TargetInited;
 
-		// Token: 0x0400844B RID: 33867
+		// Token: 0x04008B4F RID: 35663
 		[Nullable(2)]
 		private ISplineWayPoint _StartCache;
 
-		// Token: 0x0400844C RID: 33868
+		// Token: 0x04008B50 RID: 35664
 		private bool _StartInited;
 
-		// Token: 0x0400844D RID: 33869
+		// Token: 0x04008B51 RID: 35665
 		[Nullable(2)]
 		private ISplineWayPoint _EndCache;
 
-		// Token: 0x0400844E RID: 33870
+		// Token: 0x04008B52 RID: 35666
 		private bool _EndInited;
 	}
 }

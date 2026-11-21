@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B12 RID: 19218
+	// Token: 0x02004FF9 RID: 20473
 	public class ICheckRogueMiracleCreationT
 	{
-		// Token: 0x17008B6C RID: 35692
-		// (get) Token: 0x0601E3A6 RID: 123814 RVA: 0x0043CEBC File Offset: 0x0043B0BC
-		// (set) Token: 0x0601E3A7 RID: 123815 RVA: 0x0043CEC4 File Offset: 0x0043B0C4
+		// Token: 0x1700927C RID: 37500
+		// (get) Token: 0x0601FF31 RID: 130865 RVA: 0x0046F668 File Offset: 0x0046D868
+		// (set) Token: 0x0601FF32 RID: 130866 RVA: 0x0046F670 File Offset: 0x0046D870
 		public ERogueStateType Type { get; set; }
 
-		// Token: 0x17008B6D RID: 35693
-		// (get) Token: 0x0601E3A8 RID: 123816 RVA: 0x0043CECD File Offset: 0x0043B0CD
-		// (set) Token: 0x0601E3A9 RID: 123817 RVA: 0x0043CED5 File Offset: 0x0043B0D5
+		// Token: 0x1700927D RID: 37501
+		// (get) Token: 0x0601FF33 RID: 130867 RVA: 0x0046F679 File Offset: 0x0046D879
+		// (set) Token: 0x0601FF34 RID: 130868 RVA: 0x0046F681 File Offset: 0x0046D881
 		public int Id { get; set; }
 
-		// Token: 0x0601E3AA RID: 123818 RVA: 0x0043CEDE File Offset: 0x0043B0DE
+		// Token: 0x0601FF35 RID: 130869 RVA: 0x0046F68A File Offset: 0x0046D88A
 		public ICheckRogueMiracleCreationT()
 		{
 			this.Type = ERogueStateType.Talent;

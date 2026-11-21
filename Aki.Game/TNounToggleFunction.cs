@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x02001E38 RID: 7736
-// (Invoke) Token: 0x0600EB2F RID: 60207
+// Token: 0x020012FA RID: 4858
+// (Invoke) Token: 0x0600BF4E RID: 48974
 public delegate void TNounToggleFunction(int selectId);

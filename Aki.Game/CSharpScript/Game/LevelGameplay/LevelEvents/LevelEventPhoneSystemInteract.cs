@@ -7,17 +7,17 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B49 RID: 27465
+	// Token: 0x02005CC1 RID: 23745
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventPhoneSystemInteract : LevelEventBase
 	{
-		// Token: 0x0604419A RID: 278938 RVA: 0x010C1754 File Offset: 0x010BF954
+		// Token: 0x0603A2EC RID: 238316 RVA: 0x0106B2F0 File Offset: 0x010694F0
 		public LevelEventPhoneSystemInteract(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604419B RID: 278939 RVA: 0x010C1760 File Offset: 0x010BF960
+		// Token: 0x0603A2ED RID: 238317 RVA: 0x0106B2FC File Offset: 0x010694FC
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			PhoneSystemInteract phoneSystemInteract = inParams as PhoneSystemInteract;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604419C RID: 278940 RVA: 0x010C1880 File Offset: 0x010BFA80
+		// Token: 0x0603A2EE RID: 238318 RVA: 0x0106B41C File Offset: 0x0106961C
 		private ShortMessage? GetShortMessageConfig(PhoneSystemInteract param)
 		{
 			IPhoneSystemInteractBase interactType = param.InteractType;

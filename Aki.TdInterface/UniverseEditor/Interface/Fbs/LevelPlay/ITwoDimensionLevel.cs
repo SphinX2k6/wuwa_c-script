@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045E1 RID: 17889
+	// Token: 0x02004A49 RID: 19017
 	public struct ITwoDimensionLevel : IFlatbufferObject
 	{
-		// Token: 0x17007F2C RID: 32556
-		// (get) Token: 0x0601B141 RID: 110913 RVA: 0x003DBD38 File Offset: 0x003D9F38
+		// Token: 0x1700856D RID: 34157
+		// (get) Token: 0x0601C916 RID: 117014 RVA: 0x00407FD4 File Offset: 0x004061D4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B142 RID: 110914 RVA: 0x003DBD45 File Offset: 0x003D9F45
+		// Token: 0x0601C917 RID: 117015 RVA: 0x00407FE1 File Offset: 0x004061E1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B143 RID: 110915 RVA: 0x003DBD4C File Offset: 0x003D9F4C
+		// Token: 0x0601C918 RID: 117016 RVA: 0x00407FE8 File Offset: 0x004061E8
 		public static ITwoDimensionLevel GetRootAsITwoDimensionLevel(ByteBuffer _bb)
 		{
 			return ITwoDimensionLevel.GetRootAsITwoDimensionLevel(_bb, default(ITwoDimensionLevel));
 		}
 
-		// Token: 0x0601B144 RID: 110916 RVA: 0x003DBD68 File Offset: 0x003D9F68
+		// Token: 0x0601C919 RID: 117017 RVA: 0x00408004 File Offset: 0x00406204
 		public static ITwoDimensionLevel GetRootAsITwoDimensionLevel(ByteBuffer _bb, ITwoDimensionLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B145 RID: 110917 RVA: 0x003DBD85 File Offset: 0x003D9F85
+		// Token: 0x0601C91A RID: 117018 RVA: 0x00408021 File Offset: 0x00406221
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B146 RID: 110918 RVA: 0x003DBD94 File Offset: 0x003D9F94
+		// Token: 0x0601C91B RID: 117019 RVA: 0x00408030 File Offset: 0x00406230
 		public ITwoDimensionLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007F2D RID: 32557
-		// (get) Token: 0x0601B147 RID: 110919 RVA: 0x003DBDA4 File Offset: 0x003D9FA4
+		// Token: 0x1700856E RID: 34158
+		// (get) Token: 0x0601C91C RID: 117020 RVA: 0x00408040 File Offset: 0x00406240
 		public int Id
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007F2E RID: 32558
-		// (get) Token: 0x0601B148 RID: 110920 RVA: 0x003DBDE0 File Offset: 0x003D9FE0
+		// Token: 0x1700856F RID: 34159
+		// (get) Token: 0x0601C91D RID: 117021 RVA: 0x0040807C File Offset: 0x0040627C
 		public ETwoDimensionLevelType Type
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B149 RID: 110921 RVA: 0x003DBE1C File Offset: 0x003DA01C
+		// Token: 0x0601C91E RID: 117022 RVA: 0x004080B8 File Offset: 0x004062B8
 		public TTwoDimensionItem ItemListType(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return (TTwoDimensionItem)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x17007F2F RID: 32559
-		// (get) Token: 0x0601B14A RID: 110922 RVA: 0x003DBE5C File Offset: 0x003DA05C
+		// Token: 0x17008570 RID: 34160
+		// (get) Token: 0x0601C91F RID: 117023 RVA: 0x004080F8 File Offset: 0x004062F8
 		public int ItemListTypeLength
 		{
 			get
@@ -104,13 +104,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B14B RID: 110923 RVA: 0x003DBE87 File Offset: 0x003DA087
+		// Token: 0x0601C920 RID: 117024 RVA: 0x00408123 File Offset: 0x00406323
 		public Span<TTwoDimensionItem> GetItemListTypeBytes()
 		{
 			return this.__p.__vector_as_span<TTwoDimensionItem>(8, 1);
 		}
 
-		// Token: 0x0601B14C RID: 110924 RVA: 0x003DBE98 File Offset: 0x003DA098
+		// Token: 0x0601C921 RID: 117025 RVA: 0x00408134 File Offset: 0x00406334
 		public TTwoDimensionItem[] GetItemListTypeArray()
 		{
 			int num = this.__p.__offset(8);
@@ -128,7 +128,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return array;
 		}
 
-		// Token: 0x0601B14D RID: 110925 RVA: 0x003DBF04 File Offset: 0x003DA104
+		// Token: 0x0601C922 RID: 117026 RVA: 0x004081A0 File Offset: 0x004063A0
 		public TTable? ItemList<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -139,8 +139,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x17007F30 RID: 32560
-		// (get) Token: 0x0601B14E RID: 110926 RVA: 0x003DBF4C File Offset: 0x003DA14C
+		// Token: 0x17008571 RID: 34161
+		// (get) Token: 0x0601C923 RID: 117027 RVA: 0x004081E8 File Offset: 0x004063E8
 		public int ItemListLength
 		{
 			get
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B14F RID: 110927 RVA: 0x003DBF78 File Offset: 0x003DA178
+		// Token: 0x0601C924 RID: 117028 RVA: 0x00408214 File Offset: 0x00406414
 		public static Offset<ITwoDimensionLevel> CreateITwoDimensionLevel(FlatBufferBuilder builder, int Id = 0, ETwoDimensionLevelType Type = ETwoDimensionLevelType.Marble, VectorOffset ItemList_typeOffset = default(VectorOffset), VectorOffset ItemListOffset = default(VectorOffset))
 		{
 			builder.StartTable(4);
@@ -165,31 +165,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ITwoDimensionLevel.EndITwoDimensionLevel(builder);
 		}
 
-		// Token: 0x0601B150 RID: 110928 RVA: 0x003DBFA4 File Offset: 0x003DA1A4
+		// Token: 0x0601C925 RID: 117029 RVA: 0x00408240 File Offset: 0x00406440
 		public static void StartITwoDimensionLevel(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601B151 RID: 110929 RVA: 0x003DBFAD File Offset: 0x003DA1AD
+		// Token: 0x0601C926 RID: 117030 RVA: 0x00408249 File Offset: 0x00406449
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0601B152 RID: 110930 RVA: 0x003DBFB8 File Offset: 0x003DA1B8
+		// Token: 0x0601C927 RID: 117031 RVA: 0x00408254 File Offset: 0x00406454
 		public static void AddType(FlatBufferBuilder builder, ETwoDimensionLevelType type)
 		{
 			builder.AddByte(1, (byte)type, 0);
 		}
 
-		// Token: 0x0601B153 RID: 110931 RVA: 0x003DBFC3 File Offset: 0x003DA1C3
+		// Token: 0x0601C928 RID: 117032 RVA: 0x0040825F File Offset: 0x0040645F
 		public static void AddItemListType(FlatBufferBuilder builder, VectorOffset itemListTypeOffset)
 		{
 			builder.AddOffset(2, itemListTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601B154 RID: 110932 RVA: 0x003DBFD4 File Offset: 0x003DA1D4
+		// Token: 0x0601C929 RID: 117033 RVA: 0x00408270 File Offset: 0x00406470
 		public static VectorOffset CreateItemListTypeVector(FlatBufferBuilder builder, TTwoDimensionItem[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -200,7 +200,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B155 RID: 110933 RVA: 0x003DC00B File Offset: 0x003DA20B
+		// Token: 0x0601C92A RID: 117034 RVA: 0x004082A7 File Offset: 0x004064A7
 		public static VectorOffset CreateItemListTypeVectorBlock(FlatBufferBuilder builder, TTwoDimensionItem[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -208,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B156 RID: 110934 RVA: 0x003DC025 File Offset: 0x003DA225
+		// Token: 0x0601C92B RID: 117035 RVA: 0x004082C1 File Offset: 0x004064C1
 		public static VectorOffset CreateItemListTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TTwoDimensionItem> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B157 RID: 110935 RVA: 0x003DC043 File Offset: 0x003DA243
+		// Token: 0x0601C92C RID: 117036 RVA: 0x004082DF File Offset: 0x004064DF
 		public static VectorOffset CreateItemListTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -224,19 +224,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B158 RID: 110936 RVA: 0x003DC05C File Offset: 0x003DA25C
+		// Token: 0x0601C92D RID: 117037 RVA: 0x004082F8 File Offset: 0x004064F8
 		public static void StartItemListTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601B159 RID: 110937 RVA: 0x003DC067 File Offset: 0x003DA267
+		// Token: 0x0601C92E RID: 117038 RVA: 0x00408303 File Offset: 0x00406503
 		public static void AddItemList(FlatBufferBuilder builder, VectorOffset itemListOffset)
 		{
 			builder.AddOffset(3, itemListOffset.Value, 0);
 		}
 
-		// Token: 0x0601B15A RID: 110938 RVA: 0x003DC078 File Offset: 0x003DA278
+		// Token: 0x0601C92F RID: 117039 RVA: 0x00408314 File Offset: 0x00406514
 		public static VectorOffset CreateItemListVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -247,7 +247,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B15B RID: 110939 RVA: 0x003DC0AF File Offset: 0x003DA2AF
+		// Token: 0x0601C930 RID: 117040 RVA: 0x0040834B File Offset: 0x0040654B
 		public static VectorOffset CreateItemListVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -255,7 +255,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B15C RID: 110940 RVA: 0x003DC0C9 File Offset: 0x003DA2C9
+		// Token: 0x0601C931 RID: 117041 RVA: 0x00408365 File Offset: 0x00406565
 		public static VectorOffset CreateItemListVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B15D RID: 110941 RVA: 0x003DC0E7 File Offset: 0x003DA2E7
+		// Token: 0x0601C932 RID: 117042 RVA: 0x00408383 File Offset: 0x00406583
 		public static VectorOffset CreateItemListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -271,19 +271,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B15E RID: 110942 RVA: 0x003DC100 File Offset: 0x003DA300
+		// Token: 0x0601C933 RID: 117043 RVA: 0x0040839C File Offset: 0x0040659C
 		public static void StartItemListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601B15F RID: 110943 RVA: 0x003DC10B File Offset: 0x003DA30B
+		// Token: 0x0601C934 RID: 117044 RVA: 0x004083A7 File Offset: 0x004065A7
 		public static Offset<ITwoDimensionLevel> EndITwoDimensionLevel(FlatBufferBuilder builder)
 		{
 			return new Offset<ITwoDimensionLevel>(builder.EndTable());
 		}
 
-		// Token: 0x0601B160 RID: 110944 RVA: 0x003DC118 File Offset: 0x003DA318
+		// Token: 0x0601C935 RID: 117045 RVA: 0x004083B4 File Offset: 0x004065B4
 		public ITwoDimensionLevelT UnPack()
 		{
 			ITwoDimensionLevelT twoDimensionLevelT = new ITwoDimensionLevelT();
@@ -291,7 +291,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return twoDimensionLevelT;
 		}
 
-		// Token: 0x0601B161 RID: 110945 RVA: 0x003DC134 File Offset: 0x003DA334
+		// Token: 0x0601C936 RID: 117046 RVA: 0x004083D0 File Offset: 0x004065D0
 		public void UnPackTo(ITwoDimensionLevelT _o)
 		{
 			_o.Id = this.Id;
@@ -320,7 +320,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B162 RID: 110946 RVA: 0x003DC298 File Offset: 0x003DA498
+		// Token: 0x0601C937 RID: 117047 RVA: 0x00408534 File Offset: 0x00406734
 		public static Offset<ITwoDimensionLevel> Pack(FlatBufferBuilder builder, ITwoDimensionLevelT _o)
 		{
 			if (_o == null)
@@ -350,7 +350,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ITwoDimensionLevel.CreateITwoDimensionLevel(builder, _o.Id, _o.Type, itemList_typeOffset, itemListOffset);
 		}
 
-		// Token: 0x0400C6C0 RID: 50880
+		// Token: 0x0400D0EF RID: 53487
 		private Table __p;
 	}
 }

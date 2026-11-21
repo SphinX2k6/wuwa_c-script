@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020061A4 RID: 24996
+	// Token: 0x02005122 RID: 20770
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoverlikeTalentTreeLineGroupItem : UiPanelBase
 	{
-		// Token: 0x0603F20F RID: 258575 RVA: 0x00F3FC7C File Offset: 0x00F3DE7C
+		// Token: 0x06033ECF RID: 212687 RVA: 0x00E86B44 File Offset: 0x00E84D44
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 22;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F210 RID: 258576 RVA: 0x00F3FF88 File Offset: 0x00F3E188
+		// Token: 0x06033ED0 RID: 212688 RVA: 0x00E86E50 File Offset: 0x00E85050
 		protected override void OnStart()
 		{
 			base.GetItem(12).SetUIActive(false);
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.GetItem(11).SetUIActive(false);
 		}
 
-		// Token: 0x0603F211 RID: 258577 RVA: 0x00F4002C File Offset: 0x00F3E22C
+		// Token: 0x06033ED1 RID: 212689 RVA: 0x00E86EF4 File Offset: 0x00E850F4
 		public UUIItem GetLockDotByIndex(int nodeIndex)
 		{
 			if (nodeIndex < 0 || nodeIndex >= 6)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return base.GetItem(nodeIndex);
 		}
 
-		// Token: 0x0603F212 RID: 258578 RVA: 0x00F4003F File Offset: 0x00F3E23F
+		// Token: 0x06033ED2 RID: 212690 RVA: 0x00E86F07 File Offset: 0x00E85107
 		public UUIItem GetUnlockDotByIndex(int nodeIndex)
 		{
 			if (nodeIndex < 0 || nodeIndex >= 6)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return base.GetItem(6 + nodeIndex);
 		}
 
-		// Token: 0x0603F213 RID: 258579 RVA: 0x00F40054 File Offset: 0x00F3E254
+		// Token: 0x06033ED3 RID: 212691 RVA: 0x00E86F1C File Offset: 0x00E8511C
 		public UUIItem GetSolidLineByIndexInLineId(int index)
 		{
 			int num = index - 18;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return base.GetItem(17 + num);
 		}
 
-		// Token: 0x0603F214 RID: 258580 RVA: 0x00F4007C File Offset: 0x00F3E27C
+		// Token: 0x06033ED4 RID: 212692 RVA: 0x00E86F44 File Offset: 0x00E85144
 		public UUIItem GetDashedLineByIndexInLineId(int index)
 		{
 			int num = index - 18;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return base.GetItem(12 + num);
 		}
 
-		// Token: 0x0603F215 RID: 258581 RVA: 0x00F400A4 File Offset: 0x00F3E2A4
+		// Token: 0x06033ED5 RID: 212693 RVA: 0x00E86F6C File Offset: 0x00E8516C
 		[NullableContext(1)]
 		public List<UUIItem> GetAllLines()
 		{
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list;
 		}
 
-		// Token: 0x0603F216 RID: 258582 RVA: 0x00F400E4 File Offset: 0x00F3E2E4
+		// Token: 0x06033ED6 RID: 212694 RVA: 0x00E86FAC File Offset: 0x00E851AC
 		[NullableContext(1)]
 		public List<UUIItem> GetAllDots()
 		{
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list;
 		}
 
-		// Token: 0x0603F217 RID: 258583 RVA: 0x00F40120 File Offset: 0x00F3E320
+		// Token: 0x06033ED7 RID: 212695 RVA: 0x00E86FE8 File Offset: 0x00E851E8
 		[NullableContext(1)]
 		public List<int> GetDotNodeIndicesByLineId(int index)
 		{
@@ -168,74 +168,74 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list;
 		}
 
-		// Token: 0x0200C3F0 RID: 50160
+		// Token: 0x0200ADD7 RID: 44503
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403B20B RID: 242187
+			// Token: 0x04035B6C RID: 220012
 			public const int ItemDotLock1 = 0;
 
-			// Token: 0x0403B20C RID: 242188
+			// Token: 0x04035B6D RID: 220013
 			public const int ItemDotLock2 = 1;
 
-			// Token: 0x0403B20D RID: 242189
+			// Token: 0x04035B6E RID: 220014
 			public const int ItemDotLock3 = 2;
 
-			// Token: 0x0403B20E RID: 242190
+			// Token: 0x04035B6F RID: 220015
 			public const int ItemDotLock4 = 3;
 
-			// Token: 0x0403B20F RID: 242191
+			// Token: 0x04035B70 RID: 220016
 			public const int ItemDotLock5 = 4;
 
-			// Token: 0x0403B210 RID: 242192
+			// Token: 0x04035B71 RID: 220017
 			public const int ItemDotLock6 = 5;
 
-			// Token: 0x0403B211 RID: 242193
+			// Token: 0x04035B72 RID: 220018
 			public const int ItemDotUnlock1 = 6;
 
-			// Token: 0x0403B212 RID: 242194
+			// Token: 0x04035B73 RID: 220019
 			public const int ItemDotUnlock2 = 7;
 
-			// Token: 0x0403B213 RID: 242195
+			// Token: 0x04035B74 RID: 220020
 			public const int ItemDotUnlock3 = 8;
 
-			// Token: 0x0403B214 RID: 242196
+			// Token: 0x04035B75 RID: 220021
 			public const int ItemDotUnlock4 = 9;
 
-			// Token: 0x0403B215 RID: 242197
+			// Token: 0x04035B76 RID: 220022
 			public const int ItemDotUnlock5 = 10;
 
-			// Token: 0x0403B216 RID: 242198
+			// Token: 0x04035B77 RID: 220023
 			public const int ItemDotUnlock6 = 11;
 
-			// Token: 0x0403B217 RID: 242199
+			// Token: 0x04035B78 RID: 220024
 			public const int ItemDashedLine1 = 12;
 
-			// Token: 0x0403B218 RID: 242200
+			// Token: 0x04035B79 RID: 220025
 			public const int ItemDashedLine2 = 13;
 
-			// Token: 0x0403B219 RID: 242201
+			// Token: 0x04035B7A RID: 220026
 			public const int ItemDashedLine3 = 14;
 
-			// Token: 0x0403B21A RID: 242202
+			// Token: 0x04035B7B RID: 220027
 			public const int ItemDashedLine4 = 15;
 
-			// Token: 0x0403B21B RID: 242203
+			// Token: 0x04035B7C RID: 220028
 			public const int ItemDashedLine5 = 16;
 
-			// Token: 0x0403B21C RID: 242204
+			// Token: 0x04035B7D RID: 220029
 			public const int ItemSolidLine1 = 17;
 
-			// Token: 0x0403B21D RID: 242205
+			// Token: 0x04035B7E RID: 220030
 			public const int ItemSolidLine2 = 18;
 
-			// Token: 0x0403B21E RID: 242206
+			// Token: 0x04035B7F RID: 220031
 			public const int ItemSolidLine3 = 19;
 
-			// Token: 0x0403B21F RID: 242207
+			// Token: 0x04035B80 RID: 220032
 			public const int ItemSolidLine4 = 20;
 
-			// Token: 0x0403B220 RID: 242208
+			// Token: 0x04035B81 RID: 220033
 			public const int ItemSolidLine5 = 21;
 		}
 	}

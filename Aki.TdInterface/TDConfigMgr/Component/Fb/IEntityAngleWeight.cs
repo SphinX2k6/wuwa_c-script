@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B35 RID: 2869
+	// Token: 0x02000C03 RID: 3075
 	public class IEntityAngleWeight
 	{
-		// Token: 0x0600423C RID: 16956 RVA: 0x000A9A2E File Offset: 0x000A7C2E
-		[NullableContext(1)]
+		// Token: 0x06004695 RID: 18069 RVA: 0x000B3AF2 File Offset: 0x000B1CF2
 		public static IEntityAngleWeight Create(IEntityAngleWeight? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700118F RID: 4495
-		// (get) Token: 0x0600423D RID: 16957 RVA: 0x000A9A4D File Offset: 0x000A7C4D
+		// Token: 0x1700128A RID: 4746
+		// (get) Token: 0x06004696 RID: 18070 RVA: 0x000B3B11 File Offset: 0x000B1D11
 		public virtual int Angle
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001190 RID: 4496
-		// (get) Token: 0x0600423E RID: 16958 RVA: 0x000A9A5A File Offset: 0x000A7C5A
+		// Token: 0x1700128B RID: 4747
+		// (get) Token: 0x06004697 RID: 18071 RVA: 0x000B3B1E File Offset: 0x000B1D1E
 		public virtual int Weight
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002558 RID: 9560
+		// Token: 0x040027A0 RID: 10144
 		private IEntityAngleWeight Instance;
 	}
 }

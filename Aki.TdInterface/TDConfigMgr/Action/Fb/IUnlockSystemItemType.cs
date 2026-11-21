@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200270B RID: 9995
+	// Token: 0x020029D2 RID: 10706
 	public class IUnlockSystemItemType
 	{
-		// Token: 0x0600DF07 RID: 57095 RVA: 0x00210FE0 File Offset: 0x0020F1E0
-		[NullableContext(1)]
+		// Token: 0x0600ECF3 RID: 60659 RVA: 0x0022D988 File Offset: 0x0022BB88
 		public static IUnlockSystemItemType Create(IUnlockSystemItemType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042B3 RID: 17075
-		// (get) Token: 0x0600DF08 RID: 57096 RVA: 0x00210FFF File Offset: 0x0020F1FF
+		// Token: 0x170045FD RID: 17917
+		// (get) Token: 0x0600ECF4 RID: 60660 RVA: 0x0022D9A7 File Offset: 0x0022BBA7
 		public virtual EUnlockSystemItemType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BC7 RID: 31687
+		// Token: 0x0400826C RID: 33388
 		private IUnlockSystemItemType Instance;
 	}
 }

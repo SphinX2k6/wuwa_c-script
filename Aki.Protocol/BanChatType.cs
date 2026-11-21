@@ -3,22 +3,22 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001553 RID: 5459
+	// Token: 0x020015C9 RID: 5577
 	public enum BanChatType
 	{
-		// Token: 0x0400A59E RID: 42398
+		// Token: 0x0400A9FC RID: 43516
 		[OriginalName("None")]
 		None,
-		// Token: 0x0400A59F RID: 42399
+		// Token: 0x0400A9FD RID: 43517
 		[OriginalName("All")]
 		All,
-		// Token: 0x0400A5A0 RID: 42400
+		// Token: 0x0400A9FE RID: 43518
 		[OriginalName("Friend")]
 		Friend,
-		// Token: 0x0400A5A1 RID: 42401
+		// Token: 0x0400A9FF RID: 43519
 		[OriginalName("Foreign")]
 		Foreign,
-		// Token: 0x0400A5A2 RID: 42402
+		// Token: 0x0400AA00 RID: 43520
 		[OriginalName("Team")]
 		Team
 	}

@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053BB RID: 21435
+	// Token: 0x0200439E RID: 17310
 	public class MoraleSumAreaTitleItem : UiPanelBase
 	{
-		// Token: 0x06036C52 RID: 224338 RVA: 0x00CF6830 File Offset: 0x00CF4A30
+		// Token: 0x0602BB98 RID: 179096 RVA: 0x00C458D8 File Offset: 0x00C43AD8
 		[NullableContext(1)]
 		public UniTask Init(UUIItem item, MoraleAreaData areaData)
 		{
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C53 RID: 224339 RVA: 0x00CF6884 File Offset: 0x00CF4A84
+		// Token: 0x0602BB99 RID: 179097 RVA: 0x00C4592C File Offset: 0x00C43B2C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,17 +43,17 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036C54 RID: 224340 RVA: 0x00CF6979 File Offset: 0x00CF4B79
+		// Token: 0x0602BB9A RID: 179098 RVA: 0x00C45A21 File Offset: 0x00C43C21
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06036C55 RID: 224341 RVA: 0x00CF697B File Offset: 0x00CF4B7B
+		// Token: 0x0602BB9B RID: 179099 RVA: 0x00C45A23 File Offset: 0x00C43C23
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x06036C56 RID: 224342 RVA: 0x00CF6980 File Offset: 0x00CF4B80
+		// Token: 0x0602BB9C RID: 179100 RVA: 0x00C45A28 File Offset: 0x00C43C28
 		public void UpdateData()
 		{
 			UUIText text = base.GetText(4);
@@ -101,13 +101,13 @@ namespace CSharpScript.Game.Module.Morale
 			this.CheckHighFlagNewActiveBefore();
 		}
 
-		// Token: 0x06036C57 RID: 224343 RVA: 0x00CF6ACC File Offset: 0x00CF4CCC
+		// Token: 0x0602BB9D RID: 179101 RVA: 0x00C45B74 File Offset: 0x00C43D74
 		public bool IsShowBoxProgress()
 		{
 			return this.AreaData.IsExistBox() && this.AreaData.HighDifficultyFlagSomeActive();
 		}
 
-		// Token: 0x06036C58 RID: 224344 RVA: 0x00CF6AE8 File Offset: 0x00CF4CE8
+		// Token: 0x0602BB9E RID: 179102 RVA: 0x00C45B90 File Offset: 0x00C43D90
 		public UniTask CheckPlayHighMonsterKillEffect()
 		{
 			MoraleSumAreaTitleItem.<CheckPlayHighMonsterKillEffect>d__9 <CheckPlayHighMonsterKillEffect>d__;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <CheckPlayHighMonsterKillEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C59 RID: 224345 RVA: 0x00CF6B2B File Offset: 0x00CF4D2B
+		// Token: 0x0602BB9F RID: 179103 RVA: 0x00C45BD3 File Offset: 0x00C43DD3
 		public void SetAreaActiveState(bool active)
 		{
 			UUISprite sprite = base.GetSprite(1);
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Morale
 			sprite2.SetUIActive(active);
 		}
 
-		// Token: 0x06036C5A RID: 224346 RVA: 0x00CF6B52 File Offset: 0x00CF4D52
+		// Token: 0x0602BBA0 RID: 179104 RVA: 0x00C45BFA File Offset: 0x00C43DFA
 		public void SetBoxProgressActive(bool active)
 		{
 			UUIItem item = base.GetItem(6);
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Morale
 			item.SetUIActive(active);
 		}
 
-		// Token: 0x06036C5B RID: 224347 RVA: 0x00CF6B66 File Offset: 0x00CF4D66
+		// Token: 0x0602BBA1 RID: 179105 RVA: 0x00C45C0E File Offset: 0x00C43E0E
 		public void CheckHighFlagNewActiveBefore()
 		{
 			if (!this.AreaData.HighDifficultyFlagSomeNewActive())
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.SetBoxProgressActive(false);
 		}
 
-		// Token: 0x06036C5C RID: 224348 RVA: 0x00CF6B84 File Offset: 0x00CF4D84
+		// Token: 0x0602BBA2 RID: 179106 RVA: 0x00C45C2C File Offset: 0x00C43E2C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -188,45 +188,45 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x0401CE7D RID: 118397
+		// Token: 0x04017915 RID: 96533
 		[Nullable(1)]
 		public MoraleAreaData AreaData;
 
-		// Token: 0x0401CE7E RID: 118398
+		// Token: 0x04017916 RID: 96534
 		[Nullable(2)]
 		public LevelSequencePlayer Sequence;
 
-		// Token: 0x0200B662 RID: 46690
+		// Token: 0x0200A09A RID: 41114
 		private class EChildType
 		{
-			// Token: 0x0403740C RID: 226316
+			// Token: 0x04031E61 RID: 204385
 			public const int ItemSelf = 0;
 
-			// Token: 0x0403740D RID: 226317
+			// Token: 0x04031E62 RID: 204386
 			public const int SpriteFinish = 1;
 
-			// Token: 0x0403740E RID: 226318
+			// Token: 0x04031E63 RID: 204387
 			public const int SpriteAreaIndex = 2;
 
-			// Token: 0x0403740F RID: 226319
+			// Token: 0x04031E64 RID: 204388
 			public const int TextAreaProgress = 3;
 
-			// Token: 0x04037410 RID: 226320
+			// Token: 0x04031E65 RID: 204389
 			public const int TextAreaName = 4;
 
-			// Token: 0x04037411 RID: 226321
+			// Token: 0x04031E66 RID: 204390
 			public const int SpriteActive = 5;
 
-			// Token: 0x04037412 RID: 226322
+			// Token: 0x04031E67 RID: 204391
 			public const int ItemBoxProgressRoot = 6;
 
-			// Token: 0x04037413 RID: 226323
+			// Token: 0x04031E68 RID: 204392
 			public const int SpritePlayerPos = 7;
 
-			// Token: 0x04037414 RID: 226324
+			// Token: 0x04031E69 RID: 204393
 			public const int TextBoxProgress = 8;
 
-			// Token: 0x04037415 RID: 226325
+			// Token: 0x04031E6A RID: 204394
 			public const int ItemBoxCanGetTips = 9;
 		}
 	}

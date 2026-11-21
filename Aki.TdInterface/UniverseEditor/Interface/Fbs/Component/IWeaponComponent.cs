@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B68 RID: 23400
+	// Token: 0x0200617E RID: 24958
 	public struct IWeaponComponent : IFlatbufferObject
 	{
-		// Token: 0x1700B0C7 RID: 45255
-		// (get) Token: 0x060280A3 RID: 164003 RVA: 0x0058142C File Offset: 0x0057F62C
+		// Token: 0x1700BA0F RID: 47631
+		// (get) Token: 0x0602A667 RID: 173671 RVA: 0x005C8EBC File Offset: 0x005C70BC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060280A4 RID: 164004 RVA: 0x00581439 File Offset: 0x0057F639
+		// Token: 0x0602A668 RID: 173672 RVA: 0x005C8EC9 File Offset: 0x005C70C9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060280A5 RID: 164005 RVA: 0x00581440 File Offset: 0x0057F640
+		// Token: 0x0602A669 RID: 173673 RVA: 0x005C8ED0 File Offset: 0x005C70D0
 		public static IWeaponComponent GetRootAsIWeaponComponent(ByteBuffer _bb)
 		{
 			return IWeaponComponent.GetRootAsIWeaponComponent(_bb, default(IWeaponComponent));
 		}
 
-		// Token: 0x060280A6 RID: 164006 RVA: 0x0058145C File Offset: 0x0057F65C
+		// Token: 0x0602A66A RID: 173674 RVA: 0x005C8EEC File Offset: 0x005C70EC
 		public static IWeaponComponent GetRootAsIWeaponComponent(ByteBuffer _bb, IWeaponComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060280A7 RID: 164007 RVA: 0x00581479 File Offset: 0x0057F679
+		// Token: 0x0602A66B RID: 173675 RVA: 0x005C8F09 File Offset: 0x005C7109
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060280A8 RID: 164008 RVA: 0x00581488 File Offset: 0x0057F688
+		// Token: 0x0602A66C RID: 173676 RVA: 0x005C8F18 File Offset: 0x005C7118
 		public IWeaponComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B0C8 RID: 45256
-		// (get) Token: 0x060280A9 RID: 164009 RVA: 0x00581498 File Offset: 0x0057F698
+		// Token: 0x1700BA10 RID: 47632
+		// (get) Token: 0x0602A66D RID: 173677 RVA: 0x005C8F28 File Offset: 0x005C7128
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B0C9 RID: 45257
-		// (get) Token: 0x060280AA RID: 164010 RVA: 0x005814D8 File Offset: 0x0057F6D8
+		// Token: 0x1700BA11 RID: 47633
+		// (get) Token: 0x0602A66E RID: 173678 RVA: 0x005C8F68 File Offset: 0x005C7168
 		public int WeaponId
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B0CA RID: 45258
-		// (get) Token: 0x060280AB RID: 164011 RVA: 0x00581514 File Offset: 0x0057F714
+		// Token: 0x1700BA12 RID: 47634
+		// (get) Token: 0x0602A66F RID: 173679 RVA: 0x005C8FA4 File Offset: 0x005C71A4
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060280AC RID: 164012 RVA: 0x00581550 File Offset: 0x0057F750
+		// Token: 0x0602A670 RID: 173680 RVA: 0x005C8FE0 File Offset: 0x005C71E0
 		public static Offset<IWeaponComponent> CreateIWeaponComponent(FlatBufferBuilder builder, bool Disabled = false, int WeaponId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWeaponComponent.EndIWeaponComponent(builder);
 		}
 
-		// Token: 0x060280AD RID: 164013 RVA: 0x00581574 File Offset: 0x0057F774
+		// Token: 0x0602A671 RID: 173681 RVA: 0x005C9004 File Offset: 0x005C7204
 		public static void StartIWeaponComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060280AE RID: 164014 RVA: 0x0058157D File Offset: 0x0057F77D
+		// Token: 0x0602A672 RID: 173682 RVA: 0x005C900D File Offset: 0x005C720D
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x060280AF RID: 164015 RVA: 0x00581588 File Offset: 0x0057F788
+		// Token: 0x0602A673 RID: 173683 RVA: 0x005C9018 File Offset: 0x005C7218
 		public static void AddWeaponId(FlatBufferBuilder builder, int weaponId)
 		{
 			builder.AddInt(1, weaponId, 0);
 		}
 
-		// Token: 0x060280B0 RID: 164016 RVA: 0x00581593 File Offset: 0x0057F793
+		// Token: 0x0602A674 RID: 173684 RVA: 0x005C9023 File Offset: 0x005C7223
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x060280B1 RID: 164017 RVA: 0x0058159E File Offset: 0x0057F79E
+		// Token: 0x0602A675 RID: 173685 RVA: 0x005C902E File Offset: 0x005C722E
 		public static Offset<IWeaponComponent> EndIWeaponComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IWeaponComponent>(builder.EndTable());
 		}
 
-		// Token: 0x060280B2 RID: 164018 RVA: 0x005815AC File Offset: 0x0057F7AC
+		// Token: 0x0602A676 RID: 173686 RVA: 0x005C903C File Offset: 0x005C723C
 		public IWeaponComponentT UnPack()
 		{
 			IWeaponComponentT weaponComponentT = new IWeaponComponentT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return weaponComponentT;
 		}
 
-		// Token: 0x060280B3 RID: 164019 RVA: 0x005815C7 File Offset: 0x0057F7C7
+		// Token: 0x0602A677 RID: 173687 RVA: 0x005C9057 File Offset: 0x005C7257
 		public void UnPackTo(IWeaponComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060280B4 RID: 164020 RVA: 0x005815F0 File Offset: 0x0057F7F0
+		// Token: 0x0602A678 RID: 173688 RVA: 0x005C9080 File Offset: 0x005C7280
 		public static Offset<IWeaponComponent> Pack(FlatBufferBuilder builder, IWeaponComponentT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWeaponComponent.CreateIWeaponComponent(builder, _o.Disabled, _o.WeaponId, _o.NullMask);
 		}
 
-		// Token: 0x0400F2B6 RID: 62134
+		// Token: 0x0400FFBC RID: 65468
 		private Table __p;
 	}
 }

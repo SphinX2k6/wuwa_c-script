@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064D5 RID: 25813
+	// Token: 0x02005453 RID: 21587
 	public class MatchThreeChargerPieceItemView : MatchThreePieceItemView
 	{
-		// Token: 0x06040C4E RID: 265294 RVA: 0x00FAF32C File Offset: 0x00FAD52C
+		// Token: 0x06035912 RID: 219410 RVA: 0x00EF6374 File Offset: 0x00EF4574
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040C4F RID: 265295 RVA: 0x00FAF395 File Offset: 0x00FAD595
+		// Token: 0x06035913 RID: 219411 RVA: 0x00EF63DD File Offset: 0x00EF45DD
 		protected override void RefreshAppearance()
 		{
 			if (this.Piece == null)
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.RefreshLives(MatchThreeChargerPieceItemView.GetLives(this.Piece));
 		}
 
-		// Token: 0x06040C50 RID: 265296 RVA: 0x00FAF3B4 File Offset: 0x00FAD5B4
+		// Token: 0x06035914 RID: 219412 RVA: 0x00EF63FC File Offset: 0x00EF45FC
 		public override void RefreshLives(int lives)
 		{
 			UUILayoutBase layoutBase = base.GetLayoutBase(0);
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.LivesLayout.RebuildLayout(lives);
 		}
 
-		// Token: 0x06040C51 RID: 265297 RVA: 0x00FAF3F0 File Offset: 0x00FAD5F0
+		// Token: 0x06035915 RID: 219413 RVA: 0x00EF6438 File Offset: 0x00EF4638
 		[NullableContext(1)]
 		private static int GetLives(Piece piece)
 		{
@@ -65,16 +65,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return 0;
 		}
 
-		// Token: 0x04021BE2 RID: 138210
+		// Token: 0x0401C513 RID: 115987
 		[Nullable(2)]
 		private SimpleGenericLayout LivesLayout;
 
-		// Token: 0x0200C6D7 RID: 50903
+		// Token: 0x0200B0BD RID: 45245
 		private enum EComponent
 		{
-			// Token: 0x0403C0AE RID: 245934
+			// Token: 0x04036A09 RID: 223753
 			Layout,
-			// Token: 0x0403C0AF RID: 245935
+			// Token: 0x04036A0A RID: 223754
 			LayoutItem
 		}
 	}

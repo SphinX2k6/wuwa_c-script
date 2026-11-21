@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011E5 RID: 4581
+	// Token: 0x02001321 RID: 4897
 	public class IUseSkillCheckByFollowShooterSkillId_SetValue
 	{
-		// Token: 0x04003E5B RID: 15963
+		// Token: 0x040041C9 RID: 16841
 		public EUseSkillCheckType Type;
 
-		// Token: 0x04003E5C RID: 15964
+		// Token: 0x040041CA RID: 16842
 		public int SkillId;
 	}
 }

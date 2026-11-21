@@ -5,12 +5,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelEntityAbility
 {
-	// Token: 0x02006FB2 RID: 28594
+	// Token: 0x02006133 RID: 24883
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEntityAbilityContainer
 	{
-		// Token: 0x060457DB RID: 284635 RVA: 0x0113D2FC File Offset: 0x0113B4FC
+		// Token: 0x0603B98B RID: 244107 RVA: 0x010E7128 File Offset: 0x010E5328
 		public LevelEntityAbilityContainer(Entity Entity)
 		{
 			this.Entity = Entity;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			}
 		}
 
-		// Token: 0x060457DC RID: 284636 RVA: 0x0113D374 File Offset: 0x0113B574
+		// Token: 0x0603B98C RID: 244108 RVA: 0x010E71A0 File Offset: 0x010E53A0
 		public void Destroy()
 		{
 			foreach (ELevelEntityAbilityType elevelEntityAbilityType in this.ActivatedAbilities)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			}
 		}
 
-		// Token: 0x060457DD RID: 284637 RVA: 0x0113D4D4 File Offset: 0x0113B6D4
+		// Token: 0x0603B98D RID: 244109 RVA: 0x010E7300 File Offset: 0x010E5500
 		public bool AddAbilities(List<ELevelEntityAbilityType> types)
 		{
 			foreach (ELevelEntityAbilityType type in types)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			return true;
 		}
 
-		// Token: 0x060457DE RID: 284638 RVA: 0x0113D52C File Offset: 0x0113B72C
+		// Token: 0x0603B98E RID: 244110 RVA: 0x010E7358 File Offset: 0x010E5558
 		public bool AddAbility(ELevelEntityAbilityType type)
 		{
 			if (this.Abilities.ContainsKey(type))
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			return true;
 		}
 
-		// Token: 0x060457DF RID: 284639 RVA: 0x0113D5D4 File Offset: 0x0113B7D4
+		// Token: 0x0603B98F RID: 244111 RVA: 0x010E7400 File Offset: 0x010E5600
 		public void RemoveAbilities(List<ELevelEntityAbilityType> types)
 		{
 			foreach (ELevelEntityAbilityType type in types)
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			}
 		}
 
-		// Token: 0x060457E0 RID: 284640 RVA: 0x0113D624 File Offset: 0x0113B824
+		// Token: 0x0603B990 RID: 244112 RVA: 0x010E7450 File Offset: 0x010E5650
 		public void RemoveAbility(ELevelEntityAbilityType type)
 		{
 			if (!this.Abilities.ContainsKey(type))
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			this.SortedDirty = true;
 		}
 
-		// Token: 0x060457E1 RID: 284641 RVA: 0x0113D6C4 File Offset: 0x0113B8C4
+		// Token: 0x0603B991 RID: 244113 RVA: 0x010E74F0 File Offset: 0x010E56F0
 		public void BlockAbilities(int tag, ELevelEntityAbilityBlockKey key)
 		{
 			HashSet<ELevelEntityAbilityBlockKey> hashSet = this.BlockedTagMap.GetValueOrDefault(tag);
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			this.RefreshBlockAbilities(tag);
 		}
 
-		// Token: 0x060457E2 RID: 284642 RVA: 0x0113D71C File Offset: 0x0113B91C
+		// Token: 0x0603B992 RID: 244114 RVA: 0x010E7548 File Offset: 0x010E5748
 		public void UnblockAbilities(int tag, ELevelEntityAbilityBlockKey key)
 		{
 			HashSet<ELevelEntityAbilityBlockKey> valueOrDefault = this.BlockedTagMap.GetValueOrDefault(tag);
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			}
 		}
 
-		// Token: 0x060457E3 RID: 284643 RVA: 0x0113D768 File Offset: 0x0113B968
+		// Token: 0x0603B993 RID: 244115 RVA: 0x010E7594 File Offset: 0x010E5794
 		private void RefreshBlockAbilities(int tag)
 		{
 			IReadOnlySet<ELevelEntityAbilityType> abilitiesByBlockTag = LevelEntityAbilityCenter.Instance.GetAbilitiesByBlockTag(tag);
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			}
 		}
 
-		// Token: 0x060457E4 RID: 284644 RVA: 0x0113D82C File Offset: 0x0113BA2C
+		// Token: 0x0603B994 RID: 244116 RVA: 0x010E7658 File Offset: 0x010E5858
 		private bool IsAbilityBlocked(ELevelEntityAbilityType type)
 		{
 			ILevelAbilityConfig config = LevelEntityAbilityCenter.Instance.GetConfig(type);
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			return false;
 		}
 
-		// Token: 0x060457E5 RID: 284645 RVA: 0x0113D8A8 File Offset: 0x0113BAA8
+		// Token: 0x0603B995 RID: 244117 RVA: 0x010E76D4 File Offset: 0x010E58D4
 		private void UpdateAbilityActivate(LevelEntityAbilityBase abilityBase, bool activate)
 		{
 			ELevelEntityAbilityType type = abilityBase.Type;
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			}
 		}
 
-		// Token: 0x060457E6 RID: 284646 RVA: 0x0113D910 File Offset: 0x0113BB10
+		// Token: 0x0603B996 RID: 244118 RVA: 0x010E773C File Offset: 0x010E593C
 		private void EvaluateAbility(LevelEntityAbilityBase abilityBase)
 		{
 			ELevelEntityAbilityType type = abilityBase.Type;
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			}
 		}
 
-		// Token: 0x060457E7 RID: 284647 RVA: 0x0113D960 File Offset: 0x0113BB60
+		// Token: 0x0603B997 RID: 244119 RVA: 0x010E778C File Offset: 0x010E598C
 		private void SafeEvaluateAbility(LevelEntityAbilityBase abilityBase)
 		{
 			try
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			}
 		}
 
-		// Token: 0x060457E8 RID: 284648 RVA: 0x0113D99C File Offset: 0x0113BB9C
+		// Token: 0x0603B998 RID: 244120 RVA: 0x010E77C8 File Offset: 0x010E59C8
 		private void RegisterEvents(ELevelEntityAbilityType type)
 		{
 			ILevelAbilityConfig config = LevelEntityAbilityCenter.Instance.GetConfig(type);
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			}
 		}
 
-		// Token: 0x060457E9 RID: 284649 RVA: 0x0113DA54 File Offset: 0x0113BC54
+		// Token: 0x0603B999 RID: 244121 RVA: 0x010E7880 File Offset: 0x010E5A80
 		private void UnregisterEvents(ELevelEntityAbilityType type)
 		{
 			Delegate valueOrDefault = this.AbilityEventHandlers.GetValueOrDefault(type);
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			this.AbilityEventHandlers.Remove(type);
 		}
 
-		// Token: 0x060457EA RID: 284650 RVA: 0x0113DAF0 File Offset: 0x0113BCF0
+		// Token: 0x0603B99A RID: 244122 RVA: 0x010E791C File Offset: 0x010E5B1C
 		private void RequestEvaluate(ELevelEntityAbilityType type)
 		{
 			if (this.BlockedAbilities.Contains(type))
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			this.SafeEvaluateAbility(valueOrDefault);
 		}
 
-		// Token: 0x060457EB RID: 284651 RVA: 0x0113DB24 File Offset: 0x0113BD24
+		// Token: 0x0603B99B RID: 244123 RVA: 0x010E7950 File Offset: 0x010E5B50
 		private unsafe void LogAbilityError(string message, ELevelEntityAbilityType type, [Nullable(2)] object err)
 		{
 			Exception ex = err as Exception;
@@ -374,19 +374,19 @@ namespace CSharpScript.Game.LevelEntityAbility
 			instance2.Error(module2, author2, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
 		}
 
-		// Token: 0x060457EC RID: 284652 RVA: 0x0113DC74 File Offset: 0x0113BE74
+		// Token: 0x0603B99C RID: 244124 RVA: 0x010E7AA0 File Offset: 0x010E5CA0
 		public void Tick(float deltaMilliseconds)
 		{
 			this.RunPhase(EAbilityTickPhase.Tick, deltaMilliseconds);
 		}
 
-		// Token: 0x060457ED RID: 284653 RVA: 0x0113DC7E File Offset: 0x0113BE7E
+		// Token: 0x0603B99D RID: 244125 RVA: 0x010E7AAA File Offset: 0x010E5CAA
 		public void AfterTick(float deltaMilliseconds)
 		{
 			this.RunPhase(EAbilityTickPhase.AfterTick, deltaMilliseconds);
 		}
 
-		// Token: 0x060457EE RID: 284654 RVA: 0x0113DC88 File Offset: 0x0113BE88
+		// Token: 0x0603B99E RID: 244126 RVA: 0x010E7AB4 File Offset: 0x010E5CB4
 		private void RunPhase(EAbilityTickPhase phase, float deltaMilliseconds)
 		{
 			if (this.Abilities.Count == 0)
@@ -422,7 +422,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			}
 		}
 
-		// Token: 0x060457EF RID: 284655 RVA: 0x0113DD5C File Offset: 0x0113BF5C
+		// Token: 0x0603B99F RID: 244127 RVA: 0x010E7B88 File Offset: 0x010E5D88
 		private List<LevelEntityAbilityBase> GetPhaseList(EAbilityTickPhase phase)
 		{
 			if (this.SortedDirty)
@@ -433,7 +433,7 @@ namespace CSharpScript.Game.LevelEntityAbility
 			return this.PhaseBuckets[(int)phase];
 		}
 
-		// Token: 0x060457F0 RID: 284656 RVA: 0x0113DD80 File Offset: 0x0113BF80
+		// Token: 0x0603B9A0 RID: 244128 RVA: 0x010E7BAC File Offset: 0x010E5DAC
 		private void RebuildPhaseBuckets()
 		{
 			foreach (List<LevelEntityAbilityBase> list in this.PhaseBuckets)
@@ -456,28 +456,28 @@ namespace CSharpScript.Game.LevelEntityAbility
 			}
 		}
 
-		// Token: 0x0402441C RID: 148508
+		// Token: 0x0401F6D1 RID: 128721
 		private readonly Dictionary<ELevelEntityAbilityType, LevelEntityAbilityBase> Abilities = new Dictionary<ELevelEntityAbilityType, LevelEntityAbilityBase>();
 
-		// Token: 0x0402441D RID: 148509
+		// Token: 0x0401F6D2 RID: 128722
 		private readonly List<List<LevelEntityAbilityBase>> PhaseBuckets = new List<List<LevelEntityAbilityBase>>();
 
-		// Token: 0x0402441E RID: 148510
+		// Token: 0x0401F6D3 RID: 128723
 		private bool SortedDirty;
 
-		// Token: 0x0402441F RID: 148511
+		// Token: 0x0401F6D4 RID: 128724
 		private readonly Dictionary<int, HashSet<ELevelEntityAbilityBlockKey>> BlockedTagMap = new Dictionary<int, HashSet<ELevelEntityAbilityBlockKey>>();
 
-		// Token: 0x04024420 RID: 148512
+		// Token: 0x0401F6D5 RID: 128725
 		private readonly HashSet<ELevelEntityAbilityType> ActivatedAbilities = new HashSet<ELevelEntityAbilityType>();
 
-		// Token: 0x04024421 RID: 148513
+		// Token: 0x0401F6D6 RID: 128726
 		private readonly HashSet<ELevelEntityAbilityType> BlockedAbilities = new HashSet<ELevelEntityAbilityType>();
 
-		// Token: 0x04024422 RID: 148514
+		// Token: 0x0401F6D7 RID: 128727
 		private readonly Dictionary<ELevelEntityAbilityType, Delegate> AbilityEventHandlers = new Dictionary<ELevelEntityAbilityType, Delegate>();
 
-		// Token: 0x04024423 RID: 148515
+		// Token: 0x0401F6D8 RID: 128728
 		private readonly Entity Entity;
 	}
 }

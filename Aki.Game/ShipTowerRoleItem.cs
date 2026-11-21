@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029CC RID: 10700
+// Token: 0x02001F47 RID: 8007
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class ShipTowerRoleItem : GridProxyAbstract<ShipTowerRoleData>
 {
-	// Token: 0x060162D2 RID: 90834 RVA: 0x0059BD98 File Offset: 0x00599F98
+	// Token: 0x06013CD8 RID: 81112 RVA: 0x005C6D50 File Offset: 0x005C4F50
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class ShipTowerRoleItem : GridProxyAbstract<ShipTowerRoleData>
 		};
 	}
 
-	// Token: 0x060162D3 RID: 90835 RVA: 0x0059BE08 File Offset: 0x0059A008
+	// Token: 0x06013CD9 RID: 81113 RVA: 0x005C6DC0 File Offset: 0x005C4FC0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerRoleItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -40,7 +40,7 @@ public class ShipTowerRoleItem : GridProxyAbstract<ShipTowerRoleData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060162D4 RID: 90836 RVA: 0x0059BE4C File Offset: 0x0059A04C
+	// Token: 0x06013CDA RID: 81114 RVA: 0x005C6E04 File Offset: 0x005C5004
 	public override void Refresh(ShipTowerRoleData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -66,14 +66,14 @@ public class ShipTowerRoleItem : GridProxyAbstract<ShipTowerRoleData>
 		}
 	}
 
-	// Token: 0x060162D5 RID: 90837 RVA: 0x0059BF2A File Offset: 0x0059A12A
+	// Token: 0x06013CDB RID: 81115 RVA: 0x005C6EE2 File Offset: 0x005C50E2
 	private void SetShowRole(bool isShow)
 	{
 		base.GetTexture(2).SetUIActive(isShow);
 		base.GetSprite(1).SetUIActive(!isShow);
 	}
 
-	// Token: 0x060162D6 RID: 90838 RVA: 0x0059BF4C File Offset: 0x0059A14C
+	// Token: 0x06013CDC RID: 81116 RVA: 0x005C6F04 File Offset: 0x005C5104
 	private void SetSkillBranchIndex(int skillBranchIndex)
 	{
 		FVector fvector = new FVector(0f, (float)(skillBranchIndex * 180), 0f);
@@ -81,10 +81,10 @@ public class ShipTowerRoleItem : GridProxyAbstract<ShipTowerRoleData>
 		base.GetItem(3).SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x0400A523 RID: 42275
+	// Token: 0x0400A90D RID: 43277
 	private ShipTowerRoleData ItemData;
 
-	// Token: 0x0400A524 RID: 42276
+	// Token: 0x0400A90E RID: 43278
 	[Nullable(new byte[]
 	{
 		2,
@@ -92,20 +92,20 @@ public class ShipTowerRoleItem : GridProxyAbstract<ShipTowerRoleData>
 	})]
 	public Action<ShipTowerRoleData> ClickCallBack;
 
-	// Token: 0x02008FEF RID: 36847
+	// Token: 0x02008236 RID: 33334
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E9BE RID: 190910
+		// Token: 0x0402A0B6 RID: 172214
 		public const int BtnRole = 0;
 
-		// Token: 0x0402E9BF RID: 190911
+		// Token: 0x0402A0B7 RID: 172215
 		public const int SpriteEmpty = 1;
 
-		// Token: 0x0402E9C0 RID: 190912
+		// Token: 0x0402A0B8 RID: 172216
 		public const int TextureRole = 2;
 
-		// Token: 0x0402E9C1 RID: 190913
+		// Token: 0x0402A0B9 RID: 172217
 		public const int ItemSkillBranch = 3;
 	}
 }

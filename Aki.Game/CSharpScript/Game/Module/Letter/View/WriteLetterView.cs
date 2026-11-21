@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.TDConfigMgr.Action;
@@ -13,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Letter.View
 {
-	// Token: 0x020056D0 RID: 22224
+	// Token: 0x020046A7 RID: 18087
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WriteLetterView : UiViewBase
 	{
-		// Token: 0x0603887F RID: 231551 RVA: 0x00D6DEB7 File Offset: 0x00D6C0B7
+		// Token: 0x0602D78F RID: 186255 RVA: 0x00CBC47F File Offset: 0x00CBA67F
 		public WriteLetterView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06038880 RID: 231552 RVA: 0x00D6DECC File Offset: 0x00D6C0CC
+		// Token: 0x0602D790 RID: 186256 RVA: 0x00CBC494 File Offset: 0x00CBA694
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -70,7 +69,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038881 RID: 231553 RVA: 0x00D6E12C File Offset: 0x00D6C32C
+		// Token: 0x0602D791 RID: 186257 RVA: 0x00CBC6F4 File Offset: 0x00CBA8F4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			WriteLetterView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -81,7 +80,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038882 RID: 231554 RVA: 0x00D6E170 File Offset: 0x00D6C370
+		// Token: 0x0602D792 RID: 186258 RVA: 0x00CBC738 File Offset: 0x00CBA938
 		protected override void OnBeforeDestroy()
 		{
 			this.BlackScreenSuppressor.Restore().Forget();
@@ -104,7 +103,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			WriteLetterController.Instance.RequestWriteLetterComplete(text);
 		}
 
-		// Token: 0x06038883 RID: 231555 RVA: 0x00D6E1FC File Offset: 0x00D6C3FC
+		// Token: 0x0602D793 RID: 186259 RVA: 0x00CBC7C4 File Offset: 0x00CBA9C4
 		private UniTask CloseWithBlackScreen()
 		{
 			WriteLetterView.<CloseWithBlackScreen>d__12 <CloseWithBlackScreen>d__;
@@ -115,7 +114,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			return <CloseWithBlackScreen>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038884 RID: 231556 RVA: 0x00D6E240 File Offset: 0x00D6C440
+		// Token: 0x0602D794 RID: 186260 RVA: 0x00CBC808 File Offset: 0x00CBAA08
 		private void ApplyStyle(ELetterStyle letterStyle)
 		{
 			bool flag = letterStyle == ELetterStyle.A;
@@ -142,7 +141,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			item4.SetUIActive(!flag);
 		}
 
-		// Token: 0x06038885 RID: 231557 RVA: 0x00D6E2A4 File Offset: 0x00D6C4A4
+		// Token: 0x0602D795 RID: 186261 RVA: 0x00CBC86C File Offset: 0x00CBAA6C
 		[NullableContext(2)]
 		private void RefreshOptions(ITalkItem talkItem)
 		{
@@ -195,7 +194,7 @@ namespace CSharpScript.Game.Module.Letter.View
 				{
 					item.SetUIActive(true);
 				}
-				this.OptionList.RefreshByData(list.ToList<ITalkOption>(), null, false);
+				this.OptionList.RefreshByData(list, null, false);
 				return;
 			}
 			UUIItem item2 = base.GetItem(5);
@@ -206,7 +205,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x06038886 RID: 231558 RVA: 0x00D6E3D8 File Offset: 0x00D6C5D8
+		// Token: 0x0602D796 RID: 186262 RVA: 0x00CBC99C File Offset: 0x00CBAB9C
 		private UniTask PlaySwitchSequence()
 		{
 			WriteLetterView.<PlaySwitchSequence>d__15 <PlaySwitchSequence>d__;
@@ -217,7 +216,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			return <PlaySwitchSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038887 RID: 231559 RVA: 0x00D6E41B File Offset: 0x00D6C61B
+		// Token: 0x0602D797 RID: 186263 RVA: 0x00CBC9DF File Offset: 0x00CBABDF
 		private LetterOptionItem CreateOptionItem()
 		{
 			LetterOptionItem letterOptionItem = new LetterOptionItem();
@@ -225,7 +224,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			return letterOptionItem;
 		}
 
-		// Token: 0x06038888 RID: 231560 RVA: 0x00D6E434 File Offset: 0x00D6C634
+		// Token: 0x0602D798 RID: 186264 RVA: 0x00CBC9F8 File Offset: 0x00CBABF8
 		[NullableContext(2)]
 		private void OnCurrentTalkChanged(ITalkItem talkItem)
 		{
@@ -260,7 +259,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			WriteLetterController.Instance.RecordWriteLetterContent(num.Value, talkItem);
 		}
 
-		// Token: 0x06038889 RID: 231561 RVA: 0x00D6E4CC File Offset: 0x00D6C6CC
+		// Token: 0x0602D799 RID: 186265 RVA: 0x00CBCA90 File Offset: 0x00CBAC90
 		private void OnClickOption(ITalkOption option)
 		{
 			List<ActionInfo> actions = option.Actions;
@@ -293,7 +292,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			innerLetterPanel.RevealTalkById(jumpTalk.TalkId);
 		}
 
-		// Token: 0x0603888A RID: 231562 RVA: 0x00D6E55D File Offset: 0x00D6C75D
+		// Token: 0x0602D79A RID: 186266 RVA: 0x00CBCB21 File Offset: 0x00CBAD21
 		private void OnClickSkip()
 		{
 			LetterPanel innerLetterPanel = this.InnerLetterPanel;
@@ -304,7 +303,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.CloseWithBlackScreen().Forget();
 		}
 
-		// Token: 0x0603888B RID: 231563 RVA: 0x00D6E57C File Offset: 0x00D6C77C
+		// Token: 0x0602D79B RID: 186267 RVA: 0x00CBCB40 File Offset: 0x00CBAD40
 		private void OnLastShowTalkFinished()
 		{
 			global::Log instance = global::Log.Instance;
@@ -322,12 +321,12 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.RefreshOptions((innerLetterPanel != null) ? innerLetterPanel.GetCurrentTalkItem() : null);
 		}
 
-		// Token: 0x0603888C RID: 231564 RVA: 0x00D6E5E1 File Offset: 0x00D6C7E1
+		// Token: 0x0602D79C RID: 186268 RVA: 0x00CBCBA5 File Offset: 0x00CBADA5
 		private void OnClickHelp()
 		{
 		}
 
-		// Token: 0x0603888D RID: 231565 RVA: 0x00D6E5E3 File Offset: 0x00D6C7E3
+		// Token: 0x0602D79D RID: 186269 RVA: 0x00CBCBA7 File Offset: 0x00CBADA7
 		private void OnClickBlankClose()
 		{
 			if (!this.SwitchSeqCompleted)
@@ -337,7 +336,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.CloseWithBlackScreen().Forget();
 		}
 
-		// Token: 0x0603888E RID: 231566 RVA: 0x00D6E5F9 File Offset: 0x00D6C7F9
+		// Token: 0x0602D79E RID: 186270 RVA: 0x00CBCBBD File Offset: 0x00CBADBD
 		private void OnClickNextFull()
 		{
 			LetterPanel innerLetterPanel = this.InnerLetterPanel;
@@ -348,11 +347,11 @@ namespace CSharpScript.Game.Module.Letter.View
 			innerLetterPanel.Advance();
 		}
 
-		// Token: 0x0401DB18 RID: 121624
+		// Token: 0x040185AE RID: 99758
 		[Nullable(2)]
 		private LetterPanel InnerLetterPanel;
 
-		// Token: 0x0401DB19 RID: 121625
+		// Token: 0x040185AF RID: 99759
 		[Nullable(new byte[]
 		{
 			2,
@@ -361,59 +360,59 @@ namespace CSharpScript.Game.Module.Letter.View
 		})]
 		private GenericLayout<LetterOptionItem, ITalkOption> OptionList;
 
-		// Token: 0x0401DB1A RID: 121626
+		// Token: 0x040185B0 RID: 99760
 		private bool SentFinishRequest;
 
-		// Token: 0x0401DB1B RID: 121627
+		// Token: 0x040185B1 RID: 99761
 		private bool SwitchSeqStarted;
 
-		// Token: 0x0401DB1C RID: 121628
+		// Token: 0x040185B2 RID: 99762
 		private bool SwitchSeqCompleted;
 
-		// Token: 0x0401DB1D RID: 121629
+		// Token: 0x040185B3 RID: 99763
 		private bool LastShowTalkFinishReached;
 
-		// Token: 0x0401DB1E RID: 121630
+		// Token: 0x040185B4 RID: 99764
 		private readonly LetterBlackScreenSuppressor BlackScreenSuppressor = new LetterBlackScreenSuppressor();
 
-		// Token: 0x0200B8AF RID: 47279
+		// Token: 0x0200A2D6 RID: 41686
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04037E16 RID: 228886
+			// Token: 0x0403282F RID: 206895
 			public const int ItemBgA = 0;
 
-			// Token: 0x04037E17 RID: 228887
+			// Token: 0x04032830 RID: 206896
 			public const int ItemFgA = 1;
 
-			// Token: 0x04037E18 RID: 228888
+			// Token: 0x04032831 RID: 206897
 			public const int ItemBgB = 2;
 
-			// Token: 0x04037E19 RID: 228889
+			// Token: 0x04032832 RID: 206898
 			public const int ItemFgB = 3;
 
-			// Token: 0x04037E1A RID: 228890
+			// Token: 0x04032833 RID: 206899
 			public const int ItemLetterPanel = 4;
 
-			// Token: 0x04037E1B RID: 228891
+			// Token: 0x04032834 RID: 206900
 			public const int ItemOptionPanel = 5;
 
-			// Token: 0x04037E1C RID: 228892
+			// Token: 0x04032835 RID: 206901
 			public const int OptionLayout = 6;
 
-			// Token: 0x04037E1D RID: 228893
+			// Token: 0x04032836 RID: 206902
 			public const int OptionToggle = 7;
 
-			// Token: 0x04037E1E RID: 228894
+			// Token: 0x04032837 RID: 206903
 			public const int BtnSkip = 8;
 
-			// Token: 0x04037E1F RID: 228895
+			// Token: 0x04032838 RID: 206904
 			public const int BtnHelp = 9;
 
-			// Token: 0x04037E20 RID: 228896
+			// Token: 0x04032839 RID: 206905
 			public const int BtnBlankClose = 10;
 
-			// Token: 0x04037E21 RID: 228897
+			// Token: 0x0403283A RID: 206906
 			public const int BtnNextFull = 11;
 		}
 	}

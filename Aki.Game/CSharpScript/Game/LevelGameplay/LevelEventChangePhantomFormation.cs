@@ -5,23 +5,23 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006953 RID: 26963
+	// Token: 0x02005AAE RID: 23214
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventChangePhantomFormation : LevelEventBase
 	{
-		// Token: 0x060432E7 RID: 275175 RVA: 0x01061A64 File Offset: 0x0105FC64
+		// Token: 0x0603931E RID: 234270 RVA: 0x01005CC4 File Offset: 0x01003EC4
 		public LevelEventChangePhantomFormation(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060432E8 RID: 275176 RVA: 0x01061A6D File Offset: 0x0105FC6D
+		// Token: 0x0603931F RID: 234271 RVA: 0x01005CCD File Offset: 0x01003ECD
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060432E9 RID: 275177 RVA: 0x01061A78 File Offset: 0x0105FC78
+		// Token: 0x06039320 RID: 234272 RVA: 0x01005CD8 File Offset: 0x01003ED8
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			if (inParams == null)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			EventSystem.Instance.Add(EEventName.OnUpdateSceneTeam, new Action(this.OnUpdateSceneTeam));
 		}
 
-		// Token: 0x060432EA RID: 275178 RVA: 0x01061B08 File Offset: 0x0105FD08
+		// Token: 0x06039321 RID: 234273 RVA: 0x01005D68 File Offset: 0x01003F68
 		private void OnUpdateSceneTeam()
 		{
 			bool isPhantomTeam = SceneTeamModel.Instance.IsPhantomTeam;

@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002BE RID: 702
+	// Token: 0x02000305 RID: 773
 	public class IDollComboCameraConfig_SetValue
 	{
-		// Token: 0x04000C07 RID: 3079
+		// Token: 0x04000CF1 RID: 3313
 		public int ComboId;
 
-		// Token: 0x04000C08 RID: 3080
-		[Nullable(1)]
+		// Token: 0x04000CF2 RID: 3314
 		public PosAndRot PosAndRot;
 	}
 }

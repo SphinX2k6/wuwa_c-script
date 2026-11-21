@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 
-// Token: 0x020031CD RID: 12749
+// Token: 0x0200273C RID: 10044
 public class MonsterFrozenComponent : BaseFrozenComponent
 {
-	// Token: 0x0601B7BC RID: 112572 RVA: 0x007878A0 File Offset: 0x00785AA0
+	// Token: 0x06019302 RID: 103170 RVA: 0x007AF90C File Offset: 0x007ADB0C
 	public override bool IsFrozen()
 	{
 		return this.IsFrozenInternal;
 	}
 
-	// Token: 0x0601B7BD RID: 112573 RVA: 0x007878A8 File Offset: 0x00785AA8
+	// Token: 0x06019303 RID: 103171 RVA: 0x007AF914 File Offset: 0x007ADB14
 	protected override void SetFrozen(bool bFrozen)
 	{
 		if (this.IsFrozenInternal == bFrozen)
@@ -75,7 +75,7 @@ public class MonsterFrozenComponent : BaseFrozenComponent
 		}
 	}
 
-	// Token: 0x0601B7BE RID: 112574 RVA: 0x00787A6C File Offset: 0x00785C6C
+	// Token: 0x06019304 RID: 103172 RVA: 0x007AFAD8 File Offset: 0x007ADCD8
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -84,27 +84,48 @@ public class MonsterFrozenComponent : BaseFrozenComponent
 			return false;
 		}
 		MonsterFrozenComponent monsterFrozenComponent = (MonsterFrozenComponent)componentTemplate;
-		if (base.CanResetComponentProperty("FrozenHandle"))
-		{
-			this.FrozenHandle = monsterFrozenComponent.FrozenHandle;
-		}
-		if (base.CanResetComponentProperty("FrozenCueHandle"))
-		{
-			this.FrozenCueHandle = monsterFrozenComponent.FrozenCueHandle;
-		}
-		if (base.CanResetComponentProperty("IsFrozenInternal"))
-		{
-			this.IsFrozenInternal = monsterFrozenComponent.IsFrozenInternal;
-		}
+		this.FrozenHandle = monsterFrozenComponent.FrozenHandle;
+		this.FrozenCueHandle = monsterFrozenComponent.FrozenCueHandle;
+		this.IsFrozenInternal = monsterFrozenComponent.IsFrozenInternal;
 		return true;
 	}
 
-	// Token: 0x0400D7AC RID: 55212
+	// Token: 0x17002816 RID: 10262
+	// (get) Token: 0x06019305 RID: 103173 RVA: 0x007AFB1C File Offset: 0x007ADD1C
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002817 RID: 10263
+	// (get) Token: 0x06019306 RID: 103174 RVA: 0x007AFB1F File Offset: 0x007ADD1F
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002818 RID: 10264
+	// (get) Token: 0x06019307 RID: 103175 RVA: 0x007AFB22 File Offset: 0x007ADD22
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DC33 RID: 56371
 	protected int? FrozenHandle;
 
-	// Token: 0x0400D7AD RID: 55213
+	// Token: 0x0400DC34 RID: 56372
 	protected int FrozenCueHandle;
 
-	// Token: 0x0400D7AE RID: 55214
+	// Token: 0x0400DC35 RID: 56373
 	protected bool IsFrozenInternal;
 }

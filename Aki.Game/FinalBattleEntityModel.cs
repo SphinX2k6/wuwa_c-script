@@ -4,114 +4,114 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x02000E6F RID: 3695
+// Token: 0x02000324 RID: 804
 [NullableContext(2)]
 [Nullable(0)]
 public class FinalBattleEntityModel : IFinalBattleActivityEntityInfo, IFinalBattleCombatInfo, IStaticVariableResetter
 {
-	// Token: 0x1700066F RID: 1647
-	// (get) Token: 0x060059D4 RID: 22996 RVA: 0x00105B6C File Offset: 0x00103D6C
-	// (set) Token: 0x060059D5 RID: 22997 RVA: 0x00105B74 File Offset: 0x00103D74
+	// Token: 0x17000693 RID: 1683
+	// (get) Token: 0x06002D6B RID: 11627 RVA: 0x0010D81C File Offset: 0x0010BA1C
+	// (set) Token: 0x06002D6C RID: 11628 RVA: 0x0010D824 File Offset: 0x0010BA24
 	public EFinalBattleEntityType EntityType { get; set; } = EFinalBattleEntityType.Monster;
 
-	// Token: 0x17000670 RID: 1648
-	// (get) Token: 0x060059D6 RID: 22998 RVA: 0x00105B7D File Offset: 0x00103D7D
-	// (set) Token: 0x060059D7 RID: 22999 RVA: 0x00105B85 File Offset: 0x00103D85
+	// Token: 0x17000694 RID: 1684
+	// (get) Token: 0x06002D6D RID: 11629 RVA: 0x0010D82D File Offset: 0x0010BA2D
+	// (set) Token: 0x06002D6E RID: 11630 RVA: 0x0010D835 File Offset: 0x0010BA35
 	public int Uid { get; set; }
 
-	// Token: 0x17000671 RID: 1649
-	// (get) Token: 0x060059D8 RID: 23000 RVA: 0x00105B8E File Offset: 0x00103D8E
-	// (set) Token: 0x060059D9 RID: 23001 RVA: 0x00105B96 File Offset: 0x00103D96
+	// Token: 0x17000695 RID: 1685
+	// (get) Token: 0x06002D6F RID: 11631 RVA: 0x0010D83E File Offset: 0x0010BA3E
+	// (set) Token: 0x06002D70 RID: 11632 RVA: 0x0010D846 File Offset: 0x0010BA46
 	public int OwnerId { get; set; }
 
-	// Token: 0x17000672 RID: 1650
-	// (get) Token: 0x060059DA RID: 23002 RVA: 0x00105B9F File Offset: 0x00103D9F
-	// (set) Token: 0x060059DB RID: 23003 RVA: 0x00105BA7 File Offset: 0x00103DA7
+	// Token: 0x17000696 RID: 1686
+	// (get) Token: 0x06002D71 RID: 11633 RVA: 0x0010D84F File Offset: 0x0010BA4F
+	// (set) Token: 0x06002D72 RID: 11634 RVA: 0x0010D857 File Offset: 0x0010BA57
 	public int TemplateId { get; set; }
 
-	// Token: 0x17000673 RID: 1651
-	// (get) Token: 0x060059DC RID: 23004 RVA: 0x00105BB0 File Offset: 0x00103DB0
-	// (set) Token: 0x060059DD RID: 23005 RVA: 0x00105BB8 File Offset: 0x00103DB8
+	// Token: 0x17000697 RID: 1687
+	// (get) Token: 0x06002D73 RID: 11635 RVA: 0x0010D860 File Offset: 0x0010BA60
+	// (set) Token: 0x06002D74 RID: 11636 RVA: 0x0010D868 File Offset: 0x0010BA68
 	public int CombatId { get; set; }
 
-	// Token: 0x17000674 RID: 1652
-	// (get) Token: 0x060059DE RID: 23006 RVA: 0x00105BC1 File Offset: 0x00103DC1
-	// (set) Token: 0x060059DF RID: 23007 RVA: 0x00105BC9 File Offset: 0x00103DC9
+	// Token: 0x17000698 RID: 1688
+	// (get) Token: 0x06002D75 RID: 11637 RVA: 0x0010D871 File Offset: 0x0010BA71
+	// (set) Token: 0x06002D76 RID: 11638 RVA: 0x0010D879 File Offset: 0x0010BA79
 	public int SubTypeId { get; set; }
 
-	// Token: 0x17000675 RID: 1653
-	// (get) Token: 0x060059E0 RID: 23008 RVA: 0x00105BD2 File Offset: 0x00103DD2
-	// (set) Token: 0x060059E1 RID: 23009 RVA: 0x00105BDA File Offset: 0x00103DDA
+	// Token: 0x17000699 RID: 1689
+	// (get) Token: 0x06002D77 RID: 11639 RVA: 0x0010D882 File Offset: 0x0010BA82
+	// (set) Token: 0x06002D78 RID: 11640 RVA: 0x0010D88A File Offset: 0x0010BA8A
 	public string PrefabPath { get; set; }
 
-	// Token: 0x17000676 RID: 1654
-	// (get) Token: 0x060059E2 RID: 23010 RVA: 0x00105BE3 File Offset: 0x00103DE3
-	// (set) Token: 0x060059E3 RID: 23011 RVA: 0x00105BEB File Offset: 0x00103DEB
+	// Token: 0x1700069A RID: 1690
+	// (get) Token: 0x06002D79 RID: 11641 RVA: 0x0010D893 File Offset: 0x0010BA93
+	// (set) Token: 0x06002D7A RID: 11642 RVA: 0x0010D89B File Offset: 0x0010BA9B
 	public string AssetPath { get; set; }
 
-	// Token: 0x17000677 RID: 1655
-	// (get) Token: 0x060059E4 RID: 23012 RVA: 0x00105BF4 File Offset: 0x00103DF4
-	// (set) Token: 0x060059E5 RID: 23013 RVA: 0x00105BFC File Offset: 0x00103DFC
+	// Token: 0x1700069B RID: 1691
+	// (get) Token: 0x06002D7B RID: 11643 RVA: 0x0010D8A4 File Offset: 0x0010BAA4
+	// (set) Token: 0x06002D7C RID: 11644 RVA: 0x0010D8AC File Offset: 0x0010BAAC
 	public int PropertyId { get; set; }
 
-	// Token: 0x17000678 RID: 1656
-	// (get) Token: 0x060059E6 RID: 23014 RVA: 0x00105C05 File Offset: 0x00103E05
-	// (set) Token: 0x060059E7 RID: 23015 RVA: 0x00105C0D File Offset: 0x00103E0D
+	// Token: 0x1700069C RID: 1692
+	// (get) Token: 0x06002D7D RID: 11645 RVA: 0x0010D8B5 File Offset: 0x0010BAB5
+	// (set) Token: 0x06002D7E RID: 11646 RVA: 0x0010D8BD File Offset: 0x0010BABD
 	public int? SplineId { get; set; }
 
-	// Token: 0x17000679 RID: 1657
-	// (get) Token: 0x060059E8 RID: 23016 RVA: 0x00105C16 File Offset: 0x00103E16
-	// (set) Token: 0x060059E9 RID: 23017 RVA: 0x00105C1E File Offset: 0x00103E1E
+	// Token: 0x1700069D RID: 1693
+	// (get) Token: 0x06002D7F RID: 11647 RVA: 0x0010D8C6 File Offset: 0x0010BAC6
+	// (set) Token: 0x06002D80 RID: 11648 RVA: 0x0010D8CE File Offset: 0x0010BACE
 	public Dictionary<int, int> BuffIdLayers { get; set; }
 
-	// Token: 0x1700067A RID: 1658
-	// (get) Token: 0x060059EA RID: 23018 RVA: 0x00105C27 File Offset: 0x00103E27
-	// (set) Token: 0x060059EB RID: 23019 RVA: 0x00105C2F File Offset: 0x00103E2F
+	// Token: 0x1700069E RID: 1694
+	// (get) Token: 0x06002D81 RID: 11649 RVA: 0x0010D8D7 File Offset: 0x0010BAD7
+	// (set) Token: 0x06002D82 RID: 11650 RVA: 0x0010D8DF File Offset: 0x0010BADF
 	public Dictionary<int, int> AttributeMap { get; set; }
 
-	// Token: 0x1700067B RID: 1659
-	// (get) Token: 0x060059EC RID: 23020 RVA: 0x00105C38 File Offset: 0x00103E38
-	// (set) Token: 0x060059ED RID: 23021 RVA: 0x00105C40 File Offset: 0x00103E40
+	// Token: 0x1700069F RID: 1695
+	// (get) Token: 0x06002D83 RID: 11651 RVA: 0x0010D8E8 File Offset: 0x0010BAE8
+	// (set) Token: 0x06002D84 RID: 11652 RVA: 0x0010D8F0 File Offset: 0x0010BAF0
 	[Nullable(1)]
 	public global::Vector Position { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x1700067C RID: 1660
-	// (get) Token: 0x060059EE RID: 23022 RVA: 0x00105C49 File Offset: 0x00103E49
-	// (set) Token: 0x060059EF RID: 23023 RVA: 0x00105C51 File Offset: 0x00103E51
+	// Token: 0x170006A0 RID: 1696
+	// (get) Token: 0x06002D85 RID: 11653 RVA: 0x0010D8F9 File Offset: 0x0010BAF9
+	// (set) Token: 0x06002D86 RID: 11654 RVA: 0x0010D901 File Offset: 0x0010BB01
 	[Nullable(1)]
 	public global::Rotator Rotation { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x1700067D RID: 1661
-	// (get) Token: 0x060059F0 RID: 23024 RVA: 0x00105C5A File Offset: 0x00103E5A
-	// (set) Token: 0x060059F1 RID: 23025 RVA: 0x00105C62 File Offset: 0x00103E62
+	// Token: 0x170006A1 RID: 1697
+	// (get) Token: 0x06002D87 RID: 11655 RVA: 0x0010D90A File Offset: 0x0010BB0A
+	// (set) Token: 0x06002D88 RID: 11656 RVA: 0x0010D912 File Offset: 0x0010BB12
 	public int ConfigId { get; set; }
 
-	// Token: 0x060059F2 RID: 23026 RVA: 0x00105C6C File Offset: 0x00103E6C
+	// Token: 0x06002D89 RID: 11657 RVA: 0x0010D91C File Offset: 0x0010BB1C
 	public FinalBattleEntityModel()
 	{
 		this.Position = global::Vector.Create(0.0, 0.0, 0.0);
 		this.Rotation = global::Rotator.Create(0f, 0f, 0f);
 	}
 
-	// Token: 0x060059F3 RID: 23027 RVA: 0x00105CC6 File Offset: 0x00103EC6
+	// Token: 0x06002D8A RID: 11658 RVA: 0x0010D976 File Offset: 0x0010BB76
 	static FinalBattleEntityModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FinalBattleEntityModel.CreateStaticDefaultValue), new Action(FinalBattleEntityModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060059F4 RID: 23028 RVA: 0x00105CE5 File Offset: 0x00103EE5
+	// Token: 0x06002D8B RID: 11659 RVA: 0x0010D995 File Offset: 0x0010BB95
 	public static void CreateStaticDefaultValue()
 	{
 		FinalBattleEntityModel.EntityPool = new Pool<FinalBattleEntityModel>(100, () => new FinalBattleEntityModel(), null);
 	}
 
-	// Token: 0x060059F5 RID: 23029 RVA: 0x00105D13 File Offset: 0x00103F13
+	// Token: 0x06002D8C RID: 11660 RVA: 0x0010D9C3 File Offset: 0x0010BBC3
 	public static void ResetStaticDefaultValue()
 	{
 		FinalBattleEntityModel.EntityPool = null;
 	}
 
-	// Token: 0x060059F6 RID: 23030 RVA: 0x00105D1C File Offset: 0x00103F1C
+	// Token: 0x06002D8D RID: 11661 RVA: 0x0010D9CC File Offset: 0x0010BBCC
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public static IFinalBattleCombatInfo BuildModel(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
@@ -129,13 +129,13 @@ public class FinalBattleEntityModel : IFinalBattleActivityEntityInfo, IFinalBatt
 		return finalBattleEntityModel;
 	}
 
-	// Token: 0x060059F7 RID: 23031 RVA: 0x00105D5A File Offset: 0x00103F5A
+	// Token: 0x06002D8E RID: 11662 RVA: 0x0010DA0A File Offset: 0x0010BC0A
 	public static void Clear()
 	{
 		FinalBattleEntityModel.EntityPool.Clear();
 	}
 
-	// Token: 0x060059F8 RID: 23032 RVA: 0x00105D68 File Offset: 0x00103F68
+	// Token: 0x06002D8F RID: 11663 RVA: 0x0010DA18 File Offset: 0x0010BC18
 	[NullableContext(1)]
 	protected void InitFromProto(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 	{
@@ -179,7 +179,7 @@ public class FinalBattleEntityModel : IFinalBattleActivityEntityInfo, IFinalBatt
 		}
 	}
 
-	// Token: 0x060059F9 RID: 23033 RVA: 0x00105F5C File Offset: 0x0010415C
+	// Token: 0x06002D90 RID: 11664 RVA: 0x0010DC0C File Offset: 0x0010BE0C
 	[NullableContext(1)]
 	public void Update(IFinalBattleCombatInfo other)
 	{
@@ -200,13 +200,13 @@ public class FinalBattleEntityModel : IFinalBattleActivityEntityInfo, IFinalBatt
 		this.ConfigId = ((IFinalBattleActivityEntityInfo)other).ConfigId;
 	}
 
-	// Token: 0x060059FA RID: 23034 RVA: 0x00106062 File Offset: 0x00104262
+	// Token: 0x06002D91 RID: 11665 RVA: 0x0010DD12 File Offset: 0x0010BF12
 	public bool IsValid()
 	{
 		return this.Uid > 0;
 	}
 
-	// Token: 0x060059FB RID: 23035 RVA: 0x00106070 File Offset: 0x00104270
+	// Token: 0x06002D92 RID: 11666 RVA: 0x0010DD20 File Offset: 0x0010BF20
 	public void Reset()
 	{
 		this.EntityType = EFinalBattleEntityType.Monster;
@@ -226,14 +226,14 @@ public class FinalBattleEntityModel : IFinalBattleActivityEntityInfo, IFinalBatt
 		this.ConfigId = 0;
 	}
 
-	// Token: 0x060059FC RID: 23036 RVA: 0x00106120 File Offset: 0x00104320
+	// Token: 0x06002D93 RID: 11667 RVA: 0x0010DDD0 File Offset: 0x0010BFD0
 	public void Release()
 	{
 		this.Reset();
 		FinalBattleEntityModel.EntityPool.Put(this);
 	}
 
-	// Token: 0x060059FD RID: 23037 RVA: 0x00106134 File Offset: 0x00104334
+	// Token: 0x06002D94 RID: 11668 RVA: 0x0010DDE4 File Offset: 0x0010BFE4
 	[NullableContext(1)]
 	public IFinalBattleCombatInfo Clone()
 	{
@@ -246,7 +246,7 @@ public class FinalBattleEntityModel : IFinalBattleActivityEntityInfo, IFinalBatt
 		return finalBattleEntityModel;
 	}
 
-	// Token: 0x0400291A RID: 10522
+	// Token: 0x040029B5 RID: 10677
 	[Nullable(new byte[]
 	{
 		2,

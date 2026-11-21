@@ -3,31 +3,31 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200155B RID: 5467
+	// Token: 0x020015D1 RID: 5585
 	public enum NodeStatus
 	{
-		// Token: 0x0400A5FD RID: 42493
+		// Token: 0x0400AA8A RID: 43658
 		[OriginalName("NotActive")]
 		NotActive,
-		// Token: 0x0400A5FE RID: 42494
+		// Token: 0x0400AA8B RID: 43659
 		[OriginalName("BeforeActivate")]
 		BeforeActivate,
-		// Token: 0x0400A5FF RID: 42495
+		// Token: 0x0400AA8C RID: 43660
 		[OriginalName("Activated")]
 		Activated,
-		// Token: 0x0400A600 RID: 42496
+		// Token: 0x0400AA8D RID: 43661
 		[OriginalName("Completing")]
 		Completing,
-		// Token: 0x0400A601 RID: 42497
+		// Token: 0x0400AA8E RID: 43662
 		[OriginalName("CompletedSuccess")]
 		CompletedSuccess,
-		// Token: 0x0400A602 RID: 42498
+		// Token: 0x0400AA8F RID: 43663
 		[OriginalName("CompletedFailed")]
 		CompletedFailed,
-		// Token: 0x0400A603 RID: 42499
+		// Token: 0x0400AA90 RID: 43664
 		[OriginalName("Suspend")]
 		Suspend,
-		// Token: 0x0400A604 RID: 42500
+		// Token: 0x0400AA91 RID: 43665
 		[OriginalName("Destroy")]
 		Destroy
 	}

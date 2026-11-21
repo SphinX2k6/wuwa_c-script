@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002385 RID: 9093
+	// Token: 0x0200260E RID: 9742
 	public static class EModifyActorMediaTypeExtensions
 	{
-		// Token: 0x0600C655 RID: 50773 RVA: 0x001D0DB0 File Offset: 0x001CEFB0
+		// Token: 0x0600D299 RID: 53913 RVA: 0x001E9D84 File Offset: 0x001E7F84
 		public static string ToEnumString(this EModifyActorMediaType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C656 RID: 50774 RVA: 0x001D0DD8 File Offset: 0x001CEFD8
+		// Token: 0x0600D29A RID: 53914 RVA: 0x001E9DAC File Offset: 0x001E7FAC
 		public static EModifyActorMediaType FromString(string name)
 		{
 			EModifyActorMediaType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C657 RID: 50775 RVA: 0x001D0E01 File Offset: 0x001CF001
+		// Token: 0x0600D29B RID: 53915 RVA: 0x001E9DD5 File Offset: 0x001E7FD5
 		public static bool TryFromString(string name, out EModifyActorMediaType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C658 RID: 50776 RVA: 0x001D0E26 File Offset: 0x001CF026
+		// Token: 0x0600D29C RID: 53916 RVA: 0x001E9DFA File Offset: 0x001E7FFA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C659 RID: 50777 RVA: 0x001D0E36 File Offset: 0x001CF036
+		// Token: 0x0600D29D RID: 53917 RVA: 0x001E9E0A File Offset: 0x001E800A
 		public static EModifyActorMediaType[] GetValues()
 		{
 			return new EModifyActorMediaType[1];
 		}
 
-		// Token: 0x0600C65A RID: 50778 RVA: 0x001D0E3E File Offset: 0x001CF03E
+		// Token: 0x0600D29E RID: 53918 RVA: 0x001E9E12 File Offset: 0x001E8012
 		public static string[] GetNames()
 		{
 			return new string[]

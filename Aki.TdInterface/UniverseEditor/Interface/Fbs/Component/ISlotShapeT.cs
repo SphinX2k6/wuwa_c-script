@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200593C RID: 22844
+	// Token: 0x02005F49 RID: 24393
 	public class ISlotShapeT
 	{
-		// Token: 0x1700AB7B RID: 43899
-		// (get) Token: 0x06026A86 RID: 158342 RVA: 0x00553052 File Offset: 0x00551252
-		// (set) Token: 0x06026A87 RID: 158343 RVA: 0x0055305A File Offset: 0x0055125A
+		// Token: 0x1700B4AF RID: 46255
+		// (get) Token: 0x06028FF0 RID: 167920 RVA: 0x00599CBE File Offset: 0x00597EBE
+		// (set) Token: 0x06028FF1 RID: 167921 RVA: 0x00599CC6 File Offset: 0x00597EC6
 		public IVectorInfoT Center { get; set; }
 
-		// Token: 0x1700AB7C RID: 43900
-		// (get) Token: 0x06026A88 RID: 158344 RVA: 0x00553063 File Offset: 0x00551263
-		// (set) Token: 0x06026A89 RID: 158345 RVA: 0x0055306B File Offset: 0x0055126B
+		// Token: 0x1700B4B0 RID: 46256
+		// (get) Token: 0x06028FF2 RID: 167922 RVA: 0x00599CCF File Offset: 0x00597ECF
+		// (set) Token: 0x06028FF3 RID: 167923 RVA: 0x00599CD7 File Offset: 0x00597ED7
 		public IVectorInfoT Size { get; set; }
 
-		// Token: 0x1700AB7D RID: 43901
-		// (get) Token: 0x06026A8A RID: 158346 RVA: 0x00553074 File Offset: 0x00551274
-		// (set) Token: 0x06026A8B RID: 158347 RVA: 0x0055307C File Offset: 0x0055127C
+		// Token: 0x1700B4B1 RID: 46257
+		// (get) Token: 0x06028FF4 RID: 167924 RVA: 0x00599CE0 File Offset: 0x00597EE0
+		// (set) Token: 0x06028FF5 RID: 167925 RVA: 0x00599CE8 File Offset: 0x00597EE8
 		public IVectorInfoT Rotator { get; set; }
 
-		// Token: 0x06026A8C RID: 158348 RVA: 0x00553085 File Offset: 0x00551285
+		// Token: 0x06028FF6 RID: 167926 RVA: 0x00599CF1 File Offset: 0x00597EF1
 		public ISlotShapeT()
 		{
 			this.Center = null;

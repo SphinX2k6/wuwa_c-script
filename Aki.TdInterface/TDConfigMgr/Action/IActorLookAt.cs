@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200177C RID: 6012
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018FD RID: 6397
 	public class IActorLookAt : ActionParams
 	{
-		// Token: 0x06007F47 RID: 32583 RVA: 0x001305CC File Offset: 0x0012E7CC
+		// Token: 0x06008637 RID: 34359 RVA: 0x0013F82C File Offset: 0x0013DA2C
 		private IActorLookAt_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007F48 RID: 32584 RVA: 0x00130604 File Offset: 0x0012E804
+		// Token: 0x06008638 RID: 34360 RVA: 0x0013F864 File Offset: 0x0013DA64
 		public static IActorLookAt Create([Nullable(2)] IActorLookAt instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F49 RID: 32585 RVA: 0x00130617 File Offset: 0x0012E817
+		// Token: 0x06008639 RID: 34361 RVA: 0x0013F877 File Offset: 0x0013DA77
 		public static IActorLookAt CreateFromSetValue([Nullable(2)] IActorLookAt_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F4A RID: 32586 RVA: 0x0013062A File Offset: 0x0012E82A
+		// Token: 0x0600863A RID: 34362 RVA: 0x0013F88A File Offset: 0x0013DA8A
 		public IActorLookAt_SetValue ToSetValue()
 		{
 			return new IActorLookAt_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029BE RID: 10686
-		// (get) Token: 0x06007F4B RID: 32587 RVA: 0x00130661 File Offset: 0x0012E861
-		// (set) Token: 0x06007F4C RID: 32588 RVA: 0x0013068C File Offset: 0x0012E88C
+		// Token: 0x17002BAC RID: 11180
+		// (get) Token: 0x0600863B RID: 34363 RVA: 0x0013F8C1 File Offset: 0x0013DAC1
+		// (set) Token: 0x0600863C RID: 34364 RVA: 0x0013F8EC File Offset: 0x0013DAEC
 		public virtual int ActorIndex
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029BF RID: 10687
-		// (get) Token: 0x06007F4D RID: 32589 RVA: 0x0013069A File Offset: 0x0012E89A
-		// (set) Token: 0x06007F4E RID: 32590 RVA: 0x001306C1 File Offset: 0x0012E8C1
+		// Token: 0x17002BAD RID: 11181
+		// (get) Token: 0x0600863D RID: 34365 RVA: 0x0013F8FA File Offset: 0x0013DAFA
+		// (set) Token: 0x0600863E RID: 34366 RVA: 0x0013F921 File Offset: 0x0013DB21
 		public virtual IActorLookAtData Target
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029C0 RID: 10688
-		// (get) Token: 0x06007F4F RID: 32591 RVA: 0x001306D0 File Offset: 0x0012E8D0
-		// (set) Token: 0x06007F50 RID: 32592 RVA: 0x0013070A File Offset: 0x0012E90A
+		// Token: 0x17002BAE RID: 11182
+		// (get) Token: 0x0600863F RID: 34367 RVA: 0x0013F930 File Offset: 0x0013DB30
+		// (set) Token: 0x06008640 RID: 34368 RVA: 0x0013F96A File Offset: 0x0013DB6A
 		public virtual float? DelayTime
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029C1 RID: 10689
-		// (get) Token: 0x06007F51 RID: 32593 RVA: 0x00130718 File Offset: 0x0012E918
-		// (set) Token: 0x06007F52 RID: 32594 RVA: 0x00130752 File Offset: 0x0012E952
+		// Token: 0x17002BAF RID: 11183
+		// (get) Token: 0x06008641 RID: 34369 RVA: 0x0013F978 File Offset: 0x0013DB78
+		// (set) Token: 0x06008642 RID: 34370 RVA: 0x0013F9B2 File Offset: 0x0013DBB2
 		public virtual float? LookAtSpeedRate
 		{
 			get
@@ -157,11 +155,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040050F1 RID: 20721
+		// Token: 0x04005527 RID: 21799
 		[Nullable(2)]
 		protected new IActorLookAt FbInstance;
 
-		// Token: 0x040050F2 RID: 20722
+		// Token: 0x04005528 RID: 21800
 		[Nullable(2)]
 		protected IActorLookAt_SetValue PocoInterface;
 	}

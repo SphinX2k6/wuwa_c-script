@@ -2,22 +2,22 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02000F06 RID: 3846
+// Token: 0x020003BB RID: 955
 [NullableContext(1)]
 public interface IFormationAttributeConfig
 {
-	// Token: 0x17000787 RID: 1927
-	// (get) Token: 0x060060AD RID: 24749
-	// (set) Token: 0x060060AE RID: 24750
+	// Token: 0x170007A9 RID: 1961
+	// (get) Token: 0x06003445 RID: 13381
+	// (set) Token: 0x06003446 RID: 13382
 	FormationProperty? RawConfig { get; set; }
 
-	// Token: 0x17000788 RID: 1928
-	// (get) Token: 0x060060AF RID: 24751
-	// (set) Token: 0x060060B0 RID: 24752
+	// Token: 0x170007AA RID: 1962
+	// (get) Token: 0x06003447 RID: 13383
+	// (set) Token: 0x06003448 RID: 13384
 	int?[] ForbidIncreaseTags { get; set; }
 
-	// Token: 0x17000789 RID: 1929
-	// (get) Token: 0x060060B1 RID: 24753
-	// (set) Token: 0x060060B2 RID: 24754
+	// Token: 0x170007AB RID: 1963
+	// (get) Token: 0x06003449 RID: 13385
+	// (set) Token: 0x0600344A RID: 13386
 	int?[] ForbidDecreaseTags { get; set; }
 }

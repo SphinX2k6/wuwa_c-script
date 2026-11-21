@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CF6 RID: 23798
+	// Token: 0x02004CD8 RID: 19672
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiNiagaraItem
 	{
-		// Token: 0x0603C439 RID: 246841 RVA: 0x00E6D47E File Offset: 0x00E6B67E
+		// Token: 0x0603138F RID: 201615 RVA: 0x00DBDA32 File Offset: 0x00DBBC32
 		public BattleUiNiagaraItem(UUINiagara item)
 		{
 			this.Item = item;
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Item.bIsAlphaZeroClip = false;
 		}
 
-		// Token: 0x0603C43A RID: 246842 RVA: 0x00E6D4A4 File Offset: 0x00E6B6A4
+		// Token: 0x06031390 RID: 201616 RVA: 0x00DBDA58 File Offset: 0x00DBBC58
 		public void Play()
 		{
 			this.Item.SetUIActive(true);
@@ -26,14 +26,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddTimer();
 		}
 
-		// Token: 0x0603C43B RID: 246843 RVA: 0x00E6D4CA File Offset: 0x00E6B6CA
+		// Token: 0x06031391 RID: 201617 RVA: 0x00DBDA7E File Offset: 0x00DBBC7E
 		private void OnTimer(float _)
 		{
 			this.TimerId = null;
 			this.StopInternal();
 		}
 
-		// Token: 0x0603C43C RID: 246844 RVA: 0x00E6D4D9 File Offset: 0x00E6B6D9
+		// Token: 0x06031392 RID: 201618 RVA: 0x00DBDA8D File Offset: 0x00DBBC8D
 		public void Stop()
 		{
 			if (this.TimerId == null)
@@ -44,19 +44,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StopInternal();
 		}
 
-		// Token: 0x0603C43D RID: 246845 RVA: 0x00E6D4F0 File Offset: 0x00E6B6F0
+		// Token: 0x06031393 RID: 201619 RVA: 0x00DBDAA4 File Offset: 0x00DBBCA4
 		private void StopInternal()
 		{
 			this.Item.SetUIActive(false);
 		}
 
-		// Token: 0x0603C43E RID: 246846 RVA: 0x00E6D4FE File Offset: 0x00E6B6FE
+		// Token: 0x06031394 RID: 201620 RVA: 0x00DBDAB2 File Offset: 0x00DBBCB2
 		private void AddTimer()
 		{
 			this.TimerId = TimerSystem.Instance.Delay(new TTimerAction(this.OnTimer), this.Duration, null, null, true, 1f);
 		}
 
-		// Token: 0x0603C43F RID: 246847 RVA: 0x00E6D52A File Offset: 0x00E6B72A
+		// Token: 0x06031395 RID: 201621 RVA: 0x00DBDADE File Offset: 0x00DBBCDE
 		private void RemoveTimer()
 		{
 			if (this.TimerId != null)
@@ -66,16 +66,16 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F674 RID: 128628
+		// Token: 0x0401A12D RID: 106797
 		private const int DEFAULT_DURATION = 1000;
 
-		// Token: 0x0401F675 RID: 128629
+		// Token: 0x0401A12E RID: 106798
 		public UUINiagara Item;
 
-		// Token: 0x0401F676 RID: 128630
+		// Token: 0x0401A12F RID: 106799
 		public float Duration;
 
-		// Token: 0x0401F677 RID: 128631
+		// Token: 0x0401A130 RID: 106800
 		[Nullable(2)]
 		private TimerHandle TimerId;
 	}

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x020058AA RID: 22698
+	// Token: 0x02004882 RID: 18562
 	public class IInstanceDungeonSolarSpeedPanelItem
 	{
-		// Token: 0x17008A9A RID: 35482
-		// (get) Token: 0x06039BC5 RID: 236485 RVA: 0x00DB8B0D File Offset: 0x00DB6D0D
-		// (set) Token: 0x06039BC6 RID: 236486 RVA: 0x00DB8B15 File Offset: 0x00DB6D15
+		// Token: 0x17005E66 RID: 24166
+		// (get) Token: 0x0602EAE8 RID: 191208 RVA: 0x00D07A25 File Offset: 0x00D05C25
+		// (set) Token: 0x0602EAE9 RID: 191209 RVA: 0x00D07A2D File Offset: 0x00D05C2D
 		public bool HaveRefresh { get; set; }
 	}
 }

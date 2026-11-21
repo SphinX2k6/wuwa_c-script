@@ -7,7 +7,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200002B RID: 43
+	// Token: 0x02000010 RID: 16
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(12, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 12)]
@@ -15,7 +15,7 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 12)]
 	public struct FIntVector : IEquatable<FIntVector>, IEqualityOperators<FIntVector, FIntVector, bool>, IUnrealScriptStruct
 	{
-		// Token: 0x060001E8 RID: 488 RVA: 0x00007AF2 File Offset: 0x00005CF2
+		// Token: 0x0600016D RID: 365 RVA: 0x0000435E File Offset: 0x0000255E
 		public FIntVector()
 		{
 			this.X = 0;
@@ -23,7 +23,7 @@ namespace UnrealEngine
 			this.Z = 0;
 		}
 
-		// Token: 0x060001E9 RID: 489 RVA: 0x00007B09 File Offset: 0x00005D09
+		// Token: 0x0600016E RID: 366 RVA: 0x00004375 File Offset: 0x00002575
 		public FIntVector(int x, int y, int z)
 		{
 			this.X = x;
@@ -31,7 +31,7 @@ namespace UnrealEngine
 			this.Z = z;
 		}
 
-		// Token: 0x060001EA RID: 490 RVA: 0x00007B20 File Offset: 0x00005D20
+		// Token: 0x0600016F RID: 367 RVA: 0x0000438C File Offset: 0x0000258C
 		public FIntVector(int value)
 		{
 			this.X = value;
@@ -39,7 +39,7 @@ namespace UnrealEngine
 			this.Z = value;
 		}
 
-		// Token: 0x060001EB RID: 491 RVA: 0x00007B37 File Offset: 0x00005D37
+		// Token: 0x06000170 RID: 368 RVA: 0x000043A3 File Offset: 0x000025A3
 		public FIntVector(in FVector v)
 		{
 			this.X = (int)v.X;
@@ -47,7 +47,7 @@ namespace UnrealEngine
 			this.Z = (int)v.Z;
 		}
 
-		// Token: 0x17000005 RID: 5
+		// Token: 0x17000004 RID: 4
 		public int this[int index]
 		{
 			readonly get
@@ -88,25 +88,25 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060001EE RID: 494 RVA: 0x00007BD6 File Offset: 0x00005DD6
+		// Token: 0x06000173 RID: 371 RVA: 0x00004442 File Offset: 0x00002642
 		public static bool operator ==(FIntVector a, FIntVector b)
 		{
 			return a.X == b.X && a.Y == b.Y && a.Z == b.Z;
 		}
 
-		// Token: 0x060001EF RID: 495 RVA: 0x00007C04 File Offset: 0x00005E04
+		// Token: 0x06000174 RID: 372 RVA: 0x00004470 File Offset: 0x00002670
 		public static bool operator !=(FIntVector a, FIntVector b)
 		{
 			return a.X != b.X || a.Y != b.Y || a.Z != b.Z;
 		}
 
-		// Token: 0x060001F0 RID: 496 RVA: 0x00007C35 File Offset: 0x00005E35
+		// Token: 0x06000175 RID: 373 RVA: 0x000044A1 File Offset: 0x000026A1
 		public readonly bool Equals(FIntVector other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x060001F1 RID: 497 RVA: 0x00007C44 File Offset: 0x00005E44
+		// Token: 0x06000176 RID: 374 RVA: 0x000044B0 File Offset: 0x000026B0
 		[NullableContext(2)]
 		public override readonly bool Equals(object obj)
 		{
@@ -118,13 +118,13 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x060001F2 RID: 498 RVA: 0x00007C6E File Offset: 0x00005E6E
+		// Token: 0x06000177 RID: 375 RVA: 0x000044DA File Offset: 0x000026DA
 		public override readonly int GetHashCode()
 		{
 			return HashCode.Combine<int, int, int>(this.X, this.Y, this.Z);
 		}
 
-		// Token: 0x060001F3 RID: 499 RVA: 0x00007C88 File Offset: 0x00005E88
+		// Token: 0x06000178 RID: 376 RVA: 0x000044F4 File Offset: 0x000026F4
 		[NullableContext(1)]
 		public override readonly string ToString()
 		{
@@ -138,73 +138,73 @@ namespace UnrealEngine
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x060001F4 RID: 500 RVA: 0x00007CF0 File Offset: 0x00005EF0
+		// Token: 0x06000179 RID: 377 RVA: 0x0000455C File Offset: 0x0000275C
 		public static int Num()
 		{
 			return 3;
 		}
 
-		// Token: 0x060001F5 RID: 501
+		// Token: 0x0600017A RID: 378
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FIntVector Internal_Add(in FIntVector a, in FIntVector b);
 
-		// Token: 0x060001F6 RID: 502
+		// Token: 0x0600017B RID: 379
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FIntVector Internal_Sub(in FIntVector a, in FIntVector b);
 
-		// Token: 0x060001F7 RID: 503
+		// Token: 0x0600017C RID: 380
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FIntVector Internal_Mul(in FIntVector a, int b);
 
-		// Token: 0x060001F8 RID: 504
+		// Token: 0x0600017D RID: 381
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FIntVector Internal_Div(in FIntVector a, int b);
 
-		// Token: 0x060001F9 RID: 505
+		// Token: 0x0600017E RID: 382
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FIntVector Internal_LShift(in FIntVector a, int b);
 
-		// Token: 0x060001FA RID: 506
+		// Token: 0x0600017F RID: 383
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FIntVector Internal_RShift(in FIntVector a, int b);
 
-		// Token: 0x060001FB RID: 507
+		// Token: 0x06000180 RID: 384
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FIntVector Internal_And(in FIntVector a, int b);
 
-		// Token: 0x060001FC RID: 508
+		// Token: 0x06000181 RID: 385
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FIntVector Internal_Or(in FIntVector a, int b);
 
-		// Token: 0x060001FD RID: 509
+		// Token: 0x06000182 RID: 386
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FIntVector Internal_Xor(in FIntVector a, int b);
 
-		// Token: 0x060001FE RID: 510
+		// Token: 0x06000183 RID: 387
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_IsZero(in FIntVector a);
 
-		// Token: 0x060001FF RID: 511
+		// Token: 0x06000184 RID: 388
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int Internal_GetMax(in FIntVector a);
 
-		// Token: 0x06000200 RID: 512
+		// Token: 0x06000185 RID: 389
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int Internal_GetMin(in FIntVector a);
 
-		// Token: 0x06000201 RID: 513
+		// Token: 0x06000186 RID: 390
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int Internal_Size(in FIntVector a);
 
-		// Token: 0x06000202 RID: 514
+		// Token: 0x06000187 RID: 391
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FIntVector Internal_DivideAndRoundUp_Int(in FIntVector a, int b);
 
-		// Token: 0x06000203 RID: 515
+		// Token: 0x06000188 RID: 392
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FIntVector Internal_DivideAndRoundUp(in FIntVector a, in FIntVector b);
 
-		// Token: 0x06000204 RID: 516 RVA: 0x00007CF4 File Offset: 0x00005EF4
+		// Token: 0x06000189 RID: 393 RVA: 0x00004560 File Offset: 0x00002760
 		public unsafe static FIntVector operator +(in FIntVector a, in FIntVector b)
 		{
 			fixed (FIntVector* ptr = &a)
@@ -216,7 +216,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000205 RID: 517 RVA: 0x00007D10 File Offset: 0x00005F10
+		// Token: 0x0600018A RID: 394 RVA: 0x0000457C File Offset: 0x0000277C
 		public unsafe static FIntVector operator -(in FIntVector a, in FIntVector b)
 		{
 			fixed (FIntVector* ptr = &a)
@@ -228,7 +228,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000206 RID: 518 RVA: 0x00007D2C File Offset: 0x00005F2C
+		// Token: 0x0600018B RID: 395 RVA: 0x00004598 File Offset: 0x00002798
 		public unsafe static FIntVector operator *(in FIntVector a, int b)
 		{
 			fixed (FIntVector* ptr = &a)
@@ -237,7 +237,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000207 RID: 519 RVA: 0x00007D44 File Offset: 0x00005F44
+		// Token: 0x0600018C RID: 396 RVA: 0x000045B0 File Offset: 0x000027B0
 		public unsafe static FIntVector operator /(in FIntVector a, int b)
 		{
 			fixed (FIntVector* ptr = &a)
@@ -246,7 +246,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000208 RID: 520 RVA: 0x00007D5C File Offset: 0x00005F5C
+		// Token: 0x0600018D RID: 397 RVA: 0x000045C8 File Offset: 0x000027C8
 		public unsafe static FIntVector operator <<(in FIntVector a, int b)
 		{
 			fixed (FIntVector* ptr = &a)
@@ -255,7 +255,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000209 RID: 521 RVA: 0x00007D74 File Offset: 0x00005F74
+		// Token: 0x0600018E RID: 398 RVA: 0x000045E0 File Offset: 0x000027E0
 		public unsafe static FIntVector operator >>(in FIntVector a, int b)
 		{
 			fixed (FIntVector* ptr = &a)
@@ -264,7 +264,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600020A RID: 522 RVA: 0x00007D8C File Offset: 0x00005F8C
+		// Token: 0x0600018F RID: 399 RVA: 0x000045F8 File Offset: 0x000027F8
 		public unsafe static FIntVector operator &(in FIntVector a, int b)
 		{
 			fixed (FIntVector* ptr = &a)
@@ -273,7 +273,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600020B RID: 523 RVA: 0x00007DA4 File Offset: 0x00005FA4
+		// Token: 0x06000190 RID: 400 RVA: 0x00004610 File Offset: 0x00002810
 		public unsafe static FIntVector operator |(in FIntVector a, int b)
 		{
 			fixed (FIntVector* ptr = &a)
@@ -282,7 +282,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600020C RID: 524 RVA: 0x00007DBC File Offset: 0x00005FBC
+		// Token: 0x06000191 RID: 401 RVA: 0x00004628 File Offset: 0x00002828
 		public unsafe static FIntVector operator ^(in FIntVector a, int b)
 		{
 			fixed (FIntVector* ptr = &a)
@@ -291,7 +291,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600020D RID: 525 RVA: 0x00007DD4 File Offset: 0x00005FD4
+		// Token: 0x06000192 RID: 402 RVA: 0x00004640 File Offset: 0x00002840
 		public unsafe readonly bool IsZero()
 		{
 			fixed (FIntVector* ptr = &this)
@@ -300,7 +300,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600020E RID: 526 RVA: 0x00007DEC File Offset: 0x00005FEC
+		// Token: 0x06000193 RID: 403 RVA: 0x00004658 File Offset: 0x00002858
 		public unsafe readonly int GetMax()
 		{
 			fixed (FIntVector* ptr = &this)
@@ -309,7 +309,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600020F RID: 527 RVA: 0x00007E04 File Offset: 0x00006004
+		// Token: 0x06000194 RID: 404 RVA: 0x00004670 File Offset: 0x00002870
 		public unsafe readonly int GetMin()
 		{
 			fixed (FIntVector* ptr = &this)
@@ -318,7 +318,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000210 RID: 528 RVA: 0x00007E1C File Offset: 0x0000601C
+		// Token: 0x06000195 RID: 405 RVA: 0x00004688 File Offset: 0x00002888
 		public unsafe readonly int Size()
 		{
 			fixed (FIntVector* ptr = &this)
@@ -327,7 +327,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000211 RID: 529 RVA: 0x00007E34 File Offset: 0x00006034
+		// Token: 0x06000196 RID: 406 RVA: 0x000046A0 File Offset: 0x000028A0
 		public unsafe static FIntVector DivideAndRoundUp(in FIntVector a, int b)
 		{
 			fixed (FIntVector* ptr = &a)
@@ -336,7 +336,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000212 RID: 530 RVA: 0x00007E4C File Offset: 0x0000604C
+		// Token: 0x06000197 RID: 407 RVA: 0x000046B8 File Offset: 0x000028B8
 		public unsafe static FIntVector DivideAndRoundUp(in FIntVector a, in FIntVector b)
 		{
 			fixed (FIntVector* ptr = &a)
@@ -348,34 +348,34 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000213 RID: 531 RVA: 0x00007E68 File Offset: 0x00006068
+		// Token: 0x06000198 RID: 408 RVA: 0x000046D4 File Offset: 0x000028D4
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FIntVector._ScriptStructPtr != 0) ? FIntVector._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.IntVector", ref FIntVector._ScriptStructPtr);
 		}
 
-		// Token: 0x040000A2 RID: 162
+		// Token: 0x0400005B RID: 91
 		public static readonly FIntVector ZeroValue = new FIntVector(0, 0, 0);
 
-		// Token: 0x040000A3 RID: 163
+		// Token: 0x0400005C RID: 92
 		public static readonly FIntVector NoneValue = new FIntVector(-1, -1, -1);
 
-		// Token: 0x040000A4 RID: 164
+		// Token: 0x0400005D RID: 93
 		[FieldOffset(0)]
 		public int X;
 
-		// Token: 0x040000A5 RID: 165
+		// Token: 0x0400005E RID: 94
 		[FieldOffset(4)]
 		public int Y;
 
-		// Token: 0x040000A6 RID: 166
+		// Token: 0x0400005F RID: 95
 		[FieldOffset(8)]
 		public int Z;
 
-		// Token: 0x040000A7 RID: 167
+		// Token: 0x04000060 RID: 96
 		public const string __ObjectPath = "/Script/CoreUObject.IntVector";
 
-		// Token: 0x040000A8 RID: 168
+		// Token: 0x04000061 RID: 97
 		private static IntPtr _ScriptStructPtr;
 	}
 }

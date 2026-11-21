@@ -3,45 +3,45 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200568A RID: 22154
+	// Token: 0x02005C2B RID: 23595
 	public class INpcUiInteractOnVillageInfrT
 	{
-		// Token: 0x1700A4BF RID: 42175
-		// (get) Token: 0x06024F5F RID: 151391 RVA: 0x0051ADCE File Offset: 0x00518FCE
-		// (set) Token: 0x06024F60 RID: 151392 RVA: 0x0051ADD6 File Offset: 0x00518FD6
+		// Token: 0x1700AD4E RID: 44366
+		// (get) Token: 0x06027198 RID: 160152 RVA: 0x0055B96A File Offset: 0x00559B6A
+		// (set) Token: 0x06027199 RID: 160153 RVA: 0x0055B972 File Offset: 0x00559B72
 		public ENpcUiInteractType Type { get; set; }
 
-		// Token: 0x1700A4C0 RID: 42176
-		// (get) Token: 0x06024F61 RID: 151393 RVA: 0x0051ADDF File Offset: 0x00518FDF
-		// (set) Token: 0x06024F62 RID: 151394 RVA: 0x0051ADE7 File Offset: 0x00518FE7
+		// Token: 0x1700AD4F RID: 44367
+		// (get) Token: 0x0602719A RID: 160154 RVA: 0x0055B97B File Offset: 0x00559B7B
+		// (set) Token: 0x0602719B RID: 160155 RVA: 0x0055B983 File Offset: 0x00559B83
 		public TMontageConfigUnion EnterMontage { get; set; }
 
-		// Token: 0x1700A4C1 RID: 42177
-		// (get) Token: 0x06024F63 RID: 151395 RVA: 0x0051ADF0 File Offset: 0x00518FF0
-		// (set) Token: 0x06024F64 RID: 151396 RVA: 0x0051ADF8 File Offset: 0x00518FF8
+		// Token: 0x1700AD50 RID: 44368
+		// (get) Token: 0x0602719C RID: 160156 RVA: 0x0055B98C File Offset: 0x00559B8C
+		// (set) Token: 0x0602719D RID: 160157 RVA: 0x0055B994 File Offset: 0x00559B94
 		public TMontageConfigUnion DeliverSuccessMontage { get; set; }
 
-		// Token: 0x1700A4C2 RID: 42178
-		// (get) Token: 0x06024F65 RID: 151397 RVA: 0x0051AE01 File Offset: 0x00519001
-		// (set) Token: 0x06024F66 RID: 151398 RVA: 0x0051AE09 File Offset: 0x00519009
+		// Token: 0x1700AD51 RID: 44369
+		// (get) Token: 0x0602719E RID: 160158 RVA: 0x0055B99D File Offset: 0x00559B9D
+		// (set) Token: 0x0602719F RID: 160159 RVA: 0x0055B9A5 File Offset: 0x00559BA5
 		public TMontageConfigUnion CompleteMontage { get; set; }
 
-		// Token: 0x1700A4C3 RID: 42179
-		// (get) Token: 0x06024F67 RID: 151399 RVA: 0x0051AE12 File Offset: 0x00519012
-		// (set) Token: 0x06024F68 RID: 151400 RVA: 0x0051AE1A File Offset: 0x0051901A
+		// Token: 0x1700AD52 RID: 44370
+		// (get) Token: 0x060271A0 RID: 160160 RVA: 0x0055B9AE File Offset: 0x00559BAE
+		// (set) Token: 0x060271A1 RID: 160161 RVA: 0x0055B9B6 File Offset: 0x00559BB6
 		public IPlayFlowT EnterFlow { get; set; }
 
-		// Token: 0x1700A4C4 RID: 42180
-		// (get) Token: 0x06024F69 RID: 151401 RVA: 0x0051AE23 File Offset: 0x00519023
-		// (set) Token: 0x06024F6A RID: 151402 RVA: 0x0051AE2B File Offset: 0x0051902B
+		// Token: 0x1700AD53 RID: 44371
+		// (get) Token: 0x060271A2 RID: 160162 RVA: 0x0055B9BF File Offset: 0x00559BBF
+		// (set) Token: 0x060271A3 RID: 160163 RVA: 0x0055B9C7 File Offset: 0x00559BC7
 		public IPlayFlowT DeliverSuccessFlow { get; set; }
 
-		// Token: 0x1700A4C5 RID: 42181
-		// (get) Token: 0x06024F6B RID: 151403 RVA: 0x0051AE34 File Offset: 0x00519034
-		// (set) Token: 0x06024F6C RID: 151404 RVA: 0x0051AE3C File Offset: 0x0051903C
+		// Token: 0x1700AD54 RID: 44372
+		// (get) Token: 0x060271A4 RID: 160164 RVA: 0x0055B9D0 File Offset: 0x00559BD0
+		// (set) Token: 0x060271A5 RID: 160165 RVA: 0x0055B9D8 File Offset: 0x00559BD8
 		public IPlayFlowT CompleteFlow { get; set; }
 
-		// Token: 0x06024F6D RID: 151405 RVA: 0x0051AE45 File Offset: 0x00519045
+		// Token: 0x060271A6 RID: 160166 RVA: 0x0055B9E1 File Offset: 0x00559BE1
 		public INpcUiInteractOnVillageInfrT()
 		{
 			this.Type = ENpcUiInteractType.HandInItem;

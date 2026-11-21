@@ -3,32 +3,32 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine.Extension;
 
-// Token: 0x02002CF4 RID: 11508
+// Token: 0x0200224E RID: 8782
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class WaitEntityTaskModel : ModelBase
 {
-	// Token: 0x060182A7 RID: 98983 RVA: 0x0062579F File Offset: 0x0062399F
+	// Token: 0x06015B48 RID: 88904 RVA: 0x0064B763 File Offset: 0x00649963
 	public void OnAddEntity(long creatureDataId, int pbDataId)
 	{
 		this.EntityEventHandler(creatureDataId, pbDataId, true);
 	}
 
-	// Token: 0x060182A8 RID: 98984 RVA: 0x006257AA File Offset: 0x006239AA
+	// Token: 0x06015B49 RID: 88905 RVA: 0x0064B76E File Offset: 0x0064996E
 	public void OnRemoveEntity(long creatureDataId, int pbDataId)
 	{
 		this.EntityEventHandler(creatureDataId, pbDataId, false);
 	}
 
-	// Token: 0x060182A9 RID: 98985 RVA: 0x006257B5 File Offset: 0x006239B5
+	// Token: 0x06015B4A RID: 88906 RVA: 0x0064B779 File Offset: 0x00649979
 	protected override bool OnInit()
 	{
 		this.TaskMap = new Dictionary<int, WaitEntityTask>();
 		return true;
 	}
 
-	// Token: 0x060182AA RID: 98986 RVA: 0x006257C3 File Offset: 0x006239C3
+	// Token: 0x06015B4B RID: 88907 RVA: 0x0064B787 File Offset: 0x00649987
 	protected override bool OnClear()
 	{
 		Dictionary<int, WaitEntityTask> taskMap = this.TaskMap;
@@ -39,7 +39,7 @@ public class WaitEntityTaskModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060182AB RID: 98987 RVA: 0x006257D8 File Offset: 0x006239D8
+	// Token: 0x06015B4C RID: 88908 RVA: 0x0064B79C File Offset: 0x0064999C
 	public unsafe void AddTask(int taskId, WaitEntityTask task)
 	{
 		Dictionary<int, WaitEntityTask> taskMap = this.TaskMap;
@@ -57,7 +57,7 @@ public class WaitEntityTaskModel : ModelBase
 		}
 	}
 
-	// Token: 0x060182AC RID: 98988 RVA: 0x00625873 File Offset: 0x00623A73
+	// Token: 0x06015B4D RID: 88909 RVA: 0x0064B837 File Offset: 0x00649A37
 	public void RemoveTask(int taskId)
 	{
 		Dictionary<int, WaitEntityTask> taskMap = this.TaskMap;
@@ -68,7 +68,7 @@ public class WaitEntityTaskModel : ModelBase
 		taskMap.Remove(taskId);
 	}
 
-	// Token: 0x060182AD RID: 98989 RVA: 0x00625888 File Offset: 0x00623A88
+	// Token: 0x06015B4E RID: 88910 RVA: 0x0064B84C File Offset: 0x00649A4C
 	private unsafe void EntityEventHandler(long creatureDataId, int pbDataId, bool isAdd)
 	{
 		if (this.TaskMap == null)
@@ -105,8 +105,8 @@ public class WaitEntityTaskModel : ModelBase
 		}
 	}
 
-	// Token: 0x170020A8 RID: 8360
-	// (get) Token: 0x060182AE RID: 98990 RVA: 0x006259B4 File Offset: 0x00623BB4
+	// Token: 0x17002103 RID: 8451
+	// (get) Token: 0x06015B4F RID: 88911 RVA: 0x0064B980 File Offset: 0x00649B80
 	public static WaitEntityTaskModel Instance
 	{
 		get
@@ -115,7 +115,7 @@ public class WaitEntityTaskModel : ModelBase
 		}
 	}
 
-	// Token: 0x060182AF RID: 98991 RVA: 0x006259BB File Offset: 0x00623BBB
+	// Token: 0x06015B50 RID: 88912 RVA: 0x0064B987 File Offset: 0x00649B87
 	public static WaitEntityTaskModel GetOrCreateInstance()
 	{
 		if (WaitEntityTaskModel._Instance == null)
@@ -125,7 +125,7 @@ public class WaitEntityTaskModel : ModelBase
 		return WaitEntityTaskModel._Instance;
 	}
 
-	// Token: 0x060182B0 RID: 98992 RVA: 0x006259CF File Offset: 0x00623BCF
+	// Token: 0x06015B51 RID: 88913 RVA: 0x0064B99B File Offset: 0x00649B9B
 	public static bool CreateInstance()
 	{
 		if (WaitEntityTaskModel._Instance != null)
@@ -136,24 +136,24 @@ public class WaitEntityTaskModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060182B1 RID: 98993 RVA: 0x006259E5 File Offset: 0x00623BE5
+	// Token: 0x06015B52 RID: 88914 RVA: 0x0064B9B1 File Offset: 0x00649BB1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060182B2 RID: 98994 RVA: 0x006259E7 File Offset: 0x00623BE7
+	// Token: 0x06015B53 RID: 88915 RVA: 0x0064B9B3 File Offset: 0x00649BB3
 	public static void ResetStaticDefaultValue()
 	{
 		WaitEntityTaskModel._Instance = null;
 	}
 
-	// Token: 0x060182B3 RID: 98995 RVA: 0x006259EF File Offset: 0x00623BEF
+	// Token: 0x06015B54 RID: 88916 RVA: 0x0064B9BB File Offset: 0x00649BBB
 	static WaitEntityTaskModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WaitEntityTaskModel.CreateStaticDefaultValue), new Action(WaitEntityTaskModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B3C2 RID: 46018
+	// Token: 0x0400B737 RID: 46903
 	[Nullable(new byte[]
 	{
 		2,
@@ -161,10 +161,10 @@ public class WaitEntityTaskModel : ModelBase
 	})]
 	private Dictionary<int, WaitEntityTask> TaskMap;
 
-	// Token: 0x0400B3C3 RID: 46019
+	// Token: 0x0400B738 RID: 46904
 	private const int MaxTraversingMapScale = 10000;
 
-	// Token: 0x0400B3C4 RID: 46020
+	// Token: 0x0400B739 RID: 46905
 	[Nullable(2)]
 	private static WaitEntityTaskModel _Instance;
 }

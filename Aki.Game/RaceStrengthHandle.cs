@@ -5,12 +5,12 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.BattleUi;
 
-// Token: 0x02001F37 RID: 7991
+// Token: 0x020013F9 RID: 5113
 [NullableContext(1)]
 [Nullable(0)]
 public class RaceStrengthHandle : HudUnitHandleBase
 {
-	// Token: 0x0600F6B2 RID: 63154 RVA: 0x003B9938 File Offset: 0x003B7B38
+	// Token: 0x0600CAD1 RID: 51921 RVA: 0x003C5424 File Offset: 0x003C3624
 	protected override void OnInitialize()
 	{
 		base.OnInitialize();
@@ -23,7 +23,7 @@ public class RaceStrengthHandle : HudUnitHandleBase
 		this.RefreshRole(curRoleData);
 	}
 
-	// Token: 0x0600F6B3 RID: 63155 RVA: 0x003B9967 File Offset: 0x003B7B67
+	// Token: 0x0600CAD2 RID: 51922 RVA: 0x003C5453 File Offset: 0x003C3653
 	protected virtual void InitTagAndAttributeId()
 	{
 		this.FormationAttributeId = EFormationAttributeId.MigrationStrength;
@@ -31,7 +31,7 @@ public class RaceStrengthHandle : HudUnitHandleBase
 		this.SpeedUpTagId = GameplayTagDefine.EGameplayTagId["关卡.滑水.能量值不衰减"];
 	}
 
-	// Token: 0x0600F6B4 RID: 63156 RVA: 0x003B999C File Offset: 0x003B7B9C
+	// Token: 0x0600CAD3 RID: 51923 RVA: 0x003C5488 File Offset: 0x003C3688
 	[NullableContext(2)]
 	private void RefreshRole(BattleUiRoleData roleData)
 	{
@@ -68,7 +68,7 @@ public class RaceStrengthHandle : HudUnitHandleBase
 		strengthUnit3.SetVisible(false, 0);
 	}
 
-	// Token: 0x0600F6B5 RID: 63157 RVA: 0x003B9A52 File Offset: 0x003B7C52
+	// Token: 0x0600CAD4 RID: 51924 RVA: 0x003C553E File Offset: 0x003C373E
 	private void RefreshUnit()
 	{
 		if (this.IsVisible)
@@ -84,7 +84,7 @@ public class RaceStrengthHandle : HudUnitHandleBase
 		strengthUnit.SetVisible(false, 0);
 	}
 
-	// Token: 0x0600F6B6 RID: 63158 RVA: 0x003B9A78 File Offset: 0x003B7C78
+	// Token: 0x0600CAD5 RID: 51925 RVA: 0x003C5564 File Offset: 0x003C3764
 	private void TryCreateUnit()
 	{
 		if (this.StrengthUnit != null)
@@ -104,7 +104,7 @@ public class RaceStrengthHandle : HudUnitHandleBase
 		this.StrengthUnit.SetVisible(true, 0);
 	}
 
-	// Token: 0x0600F6B7 RID: 63159 RVA: 0x003B9AD1 File Offset: 0x003B7CD1
+	// Token: 0x0600CAD6 RID: 51926 RVA: 0x003C55BD File Offset: 0x003C37BD
 	protected override void OnDestroyed()
 	{
 		base.OnDestroyed();
@@ -112,20 +112,20 @@ public class RaceStrengthHandle : HudUnitHandleBase
 		this.RefreshRole(null);
 	}
 
-	// Token: 0x0600F6B8 RID: 63160 RVA: 0x003B9AE7 File Offset: 0x003B7CE7
+	// Token: 0x0600CAD7 RID: 51927 RVA: 0x003C55D3 File Offset: 0x003C37D3
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.BattleUiCurRoleDataChangedNextTick, new Action<int, int>(this.OnChangeRole));
 	}
 
-	// Token: 0x0600F6B9 RID: 63161 RVA: 0x003B9B05 File Offset: 0x003B7D05
+	// Token: 0x0600CAD8 RID: 51928 RVA: 0x003C55F1 File Offset: 0x003C37F1
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<int, int>(EEventName.BattleUiCurRoleDataChangedNextTick, new Action<int, int>(this.OnChangeRole));
 		EventSystem.Instance.RemoveAllTargetUseKey(this);
 	}
 
-	// Token: 0x0600F6BA RID: 63162 RVA: 0x003B9B30 File Offset: 0x003B7D30
+	// Token: 0x0600CAD9 RID: 51929 RVA: 0x003C561C File Offset: 0x003C381C
 	private void AddEntityEvents()
 	{
 		this.ListenForTagAddOrRemove(this.VisibleTagId, new Action<int, bool>(this.OnVisibleTagChanged));
@@ -137,7 +137,7 @@ public class RaceStrengthHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F6BB RID: 63163 RVA: 0x003B9BAC File Offset: 0x003B7DAC
+	// Token: 0x0600CADA RID: 51930 RVA: 0x003C5698 File Offset: 0x003C3898
 	private void RemoveEntityEvents()
 	{
 		foreach (ITagTask tagTask in this.TagTaskList)
@@ -157,13 +157,13 @@ public class RaceStrengthHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F6BC RID: 63164 RVA: 0x003B9C50 File Offset: 0x003B7E50
+	// Token: 0x0600CADB RID: 51931 RVA: 0x003C573C File Offset: 0x003C393C
 	private void OnChangeRole(int newEntityId, int oldEntityId)
 	{
 		this.RefreshRole(BattleUiModel.Instance.GetCurRoleData());
 	}
 
-	// Token: 0x0600F6BD RID: 63165 RVA: 0x003B9C62 File Offset: 0x003B7E62
+	// Token: 0x0600CADC RID: 51932 RVA: 0x003C574E File Offset: 0x003C394E
 	private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		BattleUiRoleData roleData = this.RoleData;
@@ -173,20 +173,20 @@ public class RaceStrengthHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F6BE RID: 63166 RVA: 0x003B9C7F File Offset: 0x003B7E7F
+	// Token: 0x0600CADD RID: 51933 RVA: 0x003C576B File Offset: 0x003C396B
 	private void OnVisibleTagChanged(int tagId, bool tagExist)
 	{
 		this.IsVisible = tagExist;
 		this.RefreshUnit();
 	}
 
-	// Token: 0x0600F6BF RID: 63167 RVA: 0x003B9C8E File Offset: 0x003B7E8E
+	// Token: 0x0600CADE RID: 51934 RVA: 0x003C577A File Offset: 0x003C397A
 	private void OnSpeedUpTagChanged(int tagId, bool tagExist)
 	{
 		this.IsSpeedUp = tagExist;
 	}
 
-	// Token: 0x0600F6C0 RID: 63168 RVA: 0x003B9C98 File Offset: 0x003B7E98
+	// Token: 0x0600CADF RID: 51935 RVA: 0x003C5784 File Offset: 0x003C3984
 	private void ListenForTagAddOrRemove(int tagId, Action<int, bool> callback)
 	{
 		ITagTask tagTask = this.RoleData.GameplayTagComponent.ListenForTagAddOrRemove(new int?(tagId), new BaseTagComponent.TTagSwitchedCallback(callback.Invoke), null);
@@ -197,7 +197,7 @@ public class RaceStrengthHandle : HudUnitHandleBase
 		this.TagTaskList.Add(tagTask);
 	}
 
-	// Token: 0x0600F6C1 RID: 63169 RVA: 0x003B9CDC File Offset: 0x003B7EDC
+	// Token: 0x0600CAE0 RID: 51936 RVA: 0x003C57C8 File Offset: 0x003C39C8
 	private void RefreshStrengthPercent()
 	{
 		float value = FormationAttributeController.Instance.GetValue(this.FormationAttributeId);
@@ -205,7 +205,7 @@ public class RaceStrengthHandle : HudUnitHandleBase
 		this.StrengthUnit.SetStrengthPercent(value, max);
 	}
 
-	// Token: 0x0600F6C2 RID: 63170 RVA: 0x003B9D18 File Offset: 0x003B7F18
+	// Token: 0x0600CAE1 RID: 51937 RVA: 0x003C5804 File Offset: 0x003C3A04
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -219,29 +219,29 @@ public class RaceStrengthHandle : HudUnitHandleBase
 		this.StrengthUnit.TickRecoverAnim(delta);
 	}
 
-	// Token: 0x0400723B RID: 29243
+	// Token: 0x0400731C RID: 29468
 	protected int VisibleTagId;
 
-	// Token: 0x0400723C RID: 29244
+	// Token: 0x0400731D RID: 29469
 	protected int SpeedUpTagId;
 
-	// Token: 0x0400723D RID: 29245
+	// Token: 0x0400731E RID: 29470
 	protected EFormationAttributeId FormationAttributeId = EFormationAttributeId.MigrationStrength;
 
-	// Token: 0x0400723E RID: 29246
+	// Token: 0x0400731F RID: 29471
 	[Nullable(2)]
 	protected MigrationStrengthUnit StrengthUnit;
 
-	// Token: 0x0400723F RID: 29247
+	// Token: 0x04007320 RID: 29472
 	[Nullable(2)]
 	protected BattleUiRoleData RoleData;
 
-	// Token: 0x04007240 RID: 29248
+	// Token: 0x04007321 RID: 29473
 	protected readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 
-	// Token: 0x04007241 RID: 29249
+	// Token: 0x04007322 RID: 29474
 	protected bool IsVisible;
 
-	// Token: 0x04007242 RID: 29250
+	// Token: 0x04007323 RID: 29475
 	protected bool IsSpeedUp;
 }

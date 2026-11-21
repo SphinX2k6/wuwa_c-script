@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006588 RID: 25992
+	// Token: 0x02006BF0 RID: 27632
 	public enum IDestroyDynamicEntitiesType_Union : byte
 	{
-		// Token: 0x04010BDF RID: 68575
+		// Token: 0x040119F1 RID: 72177
 		NONE,
-		// Token: 0x04010BE0 RID: 68576
+		// Token: 0x040119F2 RID: 72178
 		IDestroyDynamicEntitiesType,
-		// Token: 0x04010BE1 RID: 68577
+		// Token: 0x040119F3 RID: 72179
 		IDestroyVisionDisplay
 	}
 }

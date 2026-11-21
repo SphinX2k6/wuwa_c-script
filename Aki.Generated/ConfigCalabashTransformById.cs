@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200013C RID: 316
+	// Token: 0x0200014B RID: 331
 	public class ConfigCalabashTransformById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000769 RID: 1897 RVA: 0x000838A0 File Offset: 0x00081AA0
+		// Token: 0x060007C3 RID: 1987 RVA: 0x00089204 File Offset: 0x00087404
 		static ConfigCalabashTransformById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCalabashTransformById.CreateStaticDefaultValue), new Action(ConfigCalabashTransformById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600076A RID: 1898 RVA: 0x000838C0 File Offset: 0x00081AC0
+		// Token: 0x060007C4 RID: 1988 RVA: 0x00089224 File Offset: 0x00087424
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCalabashTransformById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600076B RID: 1899 RVA: 0x0008393F File Offset: 0x00081B3F
+		// Token: 0x060007C5 RID: 1989 RVA: 0x000892A3 File Offset: 0x000874A3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCalabashTransformById.LogPair = null;
 			ConfigCalabashTransformById.HandleId = 0;
 		}
 
-		// Token: 0x0600076C RID: 1900 RVA: 0x0008394D File Offset: 0x00081B4D
+		// Token: 0x060007C6 RID: 1990 RVA: 0x000892B1 File Offset: 0x000874B1
 		public static void Init()
 		{
 			ConfigCalabashTransformById.HandleId = ConfigCommon.InitDataStatement(ConfigCalabashTransformById.HandleId, "db_calabash.db", "select BinData from `CalabashTransform` where Id=?");
 		}
 
-		// Token: 0x0600076D RID: 1901 RVA: 0x00083968 File Offset: 0x00081B68
+		// Token: 0x060007C7 RID: 1991 RVA: 0x000892CC File Offset: 0x000874CC
 		public static CalabashTransform? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCalabashTransformById.HandleId, ConfigCalabashTransformById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CalabashTransform?(rootAsCalabashTransform);
 		}
 
-		// Token: 0x04000888 RID: 2184
+		// Token: 0x040008F1 RID: 2289
 		private const string DB = "db_calabash.db";
 
-		// Token: 0x04000889 RID: 2185
+		// Token: 0x040008F2 RID: 2290
 		private const string FILE = "h.葫芦.xlsx";
 
-		// Token: 0x0400088A RID: 2186
+		// Token: 0x040008F3 RID: 2291
 		private const string TABLE = "CalabashTransform";
 
-		// Token: 0x0400088B RID: 2187
+		// Token: 0x040008F4 RID: 2292
 		private const string COMMAND = "select BinData from `CalabashTransform` where Id=?";
 
-		// Token: 0x0400088C RID: 2188
+		// Token: 0x040008F5 RID: 2293
 		private const string KEY_PREFIX = "CalabashTransformById";
 
-		// Token: 0x0400088D RID: 2189
+		// Token: 0x040008F6 RID: 2294
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400088E RID: 2190
+		// Token: 0x040008F7 RID: 2295
 		private static int HandleId;
 	}
 }

@@ -4,45 +4,43 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000595 RID: 1429
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005FE RID: 1534
 	public class INpcUiInteractOnSoundBox35_SetValue
 	{
-		// Token: 0x0400153D RID: 5437
+		// Token: 0x040016AB RID: 5803
 		public ENpcUiInteractType Type;
 
-		// Token: 0x0400153E RID: 5438
+		// Token: 0x040016AC RID: 5804
 		public string EnterMontage;
 
-		// Token: 0x0400153F RID: 5439
+		// Token: 0x040016AD RID: 5805
 		public string StandByMontage;
 
-		// Token: 0x04001540 RID: 5440
+		// Token: 0x040016AE RID: 5806
 		public string ShopSuccessMontage;
 
-		// Token: 0x04001541 RID: 5441
+		// Token: 0x040016AF RID: 5807
 		public PlayFlow EnterFlow;
 
-		// Token: 0x04001542 RID: 5442
+		// Token: 0x040016B0 RID: 5808
 		public PlayFlow ShopSuccessFlow;
 
-		// Token: 0x04001543 RID: 5443
+		// Token: 0x040016B1 RID: 5809
 		public PlayFlow ShopFailedFlow;
 
-		// Token: 0x04001544 RID: 5444
+		// Token: 0x040016B2 RID: 5810
 		[Nullable(2)]
 		public string UpgradeSequence;
 
-		// Token: 0x04001545 RID: 5445
+		// Token: 0x040016B3 RID: 5811
 		[Nullable(2)]
 		public PlayFlow UpgradeFlow;
 
-		// Token: 0x04001546 RID: 5446
+		// Token: 0x040016B4 RID: 5812
 		[Nullable(2)]
 		public IMontageConfig ExitMontage;
 
-		// Token: 0x04001547 RID: 5447
+		// Token: 0x040016B5 RID: 5813
 		[Nullable(2)]
 		public PlayFlow ExitFlow;
 	}

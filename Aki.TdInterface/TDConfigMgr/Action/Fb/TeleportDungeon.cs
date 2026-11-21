@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026A6 RID: 9894
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002969 RID: 10601
 	public class TeleportDungeon : ActionParams
 	{
-		// Token: 0x0600DD72 RID: 56690 RVA: 0x0020E547 File Offset: 0x0020C747
+		// Token: 0x0600EB49 RID: 60233 RVA: 0x0022ACE7 File Offset: 0x00228EE7
 		public static TeleportDungeon Create(ITeleportDungeon? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041E8 RID: 16872
-		// (get) Token: 0x0600DD73 RID: 56691 RVA: 0x0020E566 File Offset: 0x0020C766
+		// Token: 0x17004525 RID: 17701
+		// (get) Token: 0x0600EB4A RID: 60234 RVA: 0x0022AD06 File Offset: 0x00228F06
 		public virtual int DungeonId
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041E9 RID: 16873
-		// (get) Token: 0x0600DD74 RID: 56692 RVA: 0x0020E573 File Offset: 0x0020C773
+		// Token: 0x17004526 RID: 17702
+		// (get) Token: 0x0600EB4B RID: 60235 RVA: 0x0022AD13 File Offset: 0x00228F13
 		public virtual bool IsRegroup
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041EA RID: 16874
-		// (get) Token: 0x0600DD75 RID: 56693 RVA: 0x0020E580 File Offset: 0x0020C780
+		// Token: 0x17004527 RID: 17703
+		// (get) Token: 0x0600EB4C RID: 60236 RVA: 0x0022AD20 File Offset: 0x00228F20
 		public virtual int? LocationEntityId
 		{
 			get
@@ -56,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041EB RID: 16875
-		// (get) Token: 0x0600DD76 RID: 56694 RVA: 0x0020E5B6 File Offset: 0x0020C7B6
+		// Token: 0x17004528 RID: 17704
+		// (get) Token: 0x0600EB4D RID: 60237 RVA: 0x0022AD56 File Offset: 0x00228F56
 		public virtual ITeleportTransitionType TransitionOption
 		{
 			get
@@ -72,8 +69,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041EC RID: 16876
-		// (get) Token: 0x0600DD77 RID: 56695 RVA: 0x0020E5E8 File Offset: 0x0020C7E8
+		// Token: 0x17004529 RID: 17705
+		// (get) Token: 0x0600EB4E RID: 60238 RVA: 0x0022AD88 File Offset: 0x00228F88
 		public virtual bool? IsNeedSecondaryConfirmation
 		{
 			get
@@ -86,8 +83,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041ED RID: 16877
-		// (get) Token: 0x0600DD78 RID: 56696 RVA: 0x0020E620 File Offset: 0x0020C820
+		// Token: 0x1700452A RID: 17706
+		// (get) Token: 0x0600EB4F RID: 60239 RVA: 0x0022ADC0 File Offset: 0x00228FC0
 		public virtual bool? UseLocationEntityGravity
 		{
 			get
@@ -100,8 +97,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041EE RID: 16878
-		// (get) Token: 0x0600DD79 RID: 56697 RVA: 0x0020E658 File Offset: 0x0020C858
+		// Token: 0x1700452B RID: 17707
+		// (get) Token: 0x0600EB50 RID: 60240 RVA: 0x0022ADF8 File Offset: 0x00228FF8
 		public virtual bool? ContinueSave
 		{
 			get
@@ -114,8 +111,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041EF RID: 16879
-		// (get) Token: 0x0600DD7A RID: 56698 RVA: 0x0020E690 File Offset: 0x0020C890
+		// Token: 0x1700452C RID: 17708
+		// (get) Token: 0x0600EB51 RID: 60241 RVA: 0x0022AE30 File Offset: 0x00229030
 		public virtual bool? IsBanMapSound
 		{
 			get
@@ -128,13 +125,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AFC RID: 31484
+		// Token: 0x04008199 RID: 33177
 		private ITeleportDungeon Instance;
 
-		// Token: 0x04007AFD RID: 31485
+		// Token: 0x0400819A RID: 33178
 		private ITeleportTransitionType _TransitionOptionCache;
 
-		// Token: 0x04007AFE RID: 31486
+		// Token: 0x0400819B RID: 33179
 		private bool _TransitionOptionInited;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001319 RID: 4889
+	// Token: 0x02001469 RID: 5225
 	public class IQuestScheduleType
 	{
-		// Token: 0x06007042 RID: 28738 RVA: 0x0010F3D6 File Offset: 0x0010D5D6
-		[NullableContext(1)]
+		// Token: 0x060076E2 RID: 30434 RVA: 0x0011D942 File Offset: 0x0011BB42
 		public static IQuestScheduleType Create(IQuestScheduleType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170023E3 RID: 9187
-		// (get) Token: 0x06007043 RID: 28739 RVA: 0x0010F3F5 File Offset: 0x0010D5F5
+		// Token: 0x170025B2 RID: 9650
+		// (get) Token: 0x060076E3 RID: 30435 RVA: 0x0011D961 File Offset: 0x0011BB61
 		public virtual EQuestScheduleType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040C5 RID: 16581
+		// Token: 0x04004441 RID: 17473
 		private IQuestScheduleType Instance;
 	}
 }

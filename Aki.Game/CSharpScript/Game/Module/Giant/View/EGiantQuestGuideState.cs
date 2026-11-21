@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Giant.View
 {
-	// Token: 0x02005986 RID: 22918
+	// Token: 0x0200495F RID: 18783
 	public enum EGiantQuestGuideState
 	{
-		// Token: 0x0401E57A RID: 124282
+		// Token: 0x04019018 RID: 102424
 		Locked,
-		// Token: 0x0401E57B RID: 124283
+		// Token: 0x04019019 RID: 102425
 		CanGoto,
-		// Token: 0x0401E57C RID: 124284
+		// Token: 0x0401901A RID: 102426
 		Done
 	}
 }

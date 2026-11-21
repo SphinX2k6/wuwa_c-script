@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002719 RID: 10009
+// Token: 0x02001C04 RID: 7172
 public class RacingBetsLegMatchTabItem : UiPanelBase
 {
-	// Token: 0x06014833 RID: 84019 RVA: 0x0052E379 File Offset: 0x0052C579
+	// Token: 0x06011D15 RID: 72981 RVA: 0x0053D095 File Offset: 0x0053B295
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ public class RacingBetsLegMatchTabItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06014834 RID: 84020 RVA: 0x0052E3B4 File Offset: 0x0052C5B4
+	// Token: 0x06011D16 RID: 72982 RVA: 0x0053D0D0 File Offset: 0x0053B2D0
 	[NullableContext(2)]
 	public void RefreshUi(RacingBetsLegMatchData legMatchData)
 	{
@@ -40,12 +40,12 @@ public class RacingBetsLegMatchTabItem : UiPanelBase
 		text2.SetText(TimeUtil.Instance.DateFormat3(dateTime), true);
 	}
 
-	// Token: 0x02008D6E RID: 36206
+	// Token: 0x02007EF7 RID: 32503
 	private enum EComponent
 	{
-		// Token: 0x0402DE40 RID: 187968
+		// Token: 0x04029157 RID: 168279
 		MatchNameText,
-		// Token: 0x0402DE41 RID: 187969
+		// Token: 0x04029158 RID: 168280
 		TimeIntervalText
 	}
 }

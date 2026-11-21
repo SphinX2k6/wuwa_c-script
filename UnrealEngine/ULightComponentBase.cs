@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000D46 RID: 3398
+	// Token: 0x02000237 RID: 567
 	[UnrealObjectPath("/Script/Engine.LightComponentBase")]
 	[UnrealStructLayout(656, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 656)]
 	public abstract class ULightComponentBase : USceneComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600B744 RID: 46916 RVA: 0x00104BFD File Offset: 0x00102DFD
+		// Token: 0x06002EF8 RID: 12024 RVA: 0x00041CA5 File Offset: 0x0003FEA5
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ULightComponentBase._ClassPtr;
 		}
 
-		// Token: 0x170029E6 RID: 10726
-		// (get) Token: 0x0600B745 RID: 46917 RVA: 0x00104C09 File Offset: 0x00102E09
-		// (set) Token: 0x0600B746 RID: 46918 RVA: 0x00104C1D File Offset: 0x00102E1D
+		// Token: 0x170005BF RID: 1471
+		// (get) Token: 0x06002EF9 RID: 12025 RVA: 0x00041CB1 File Offset: 0x0003FEB1
+		// (set) Token: 0x06002EFA RID: 12026 RVA: 0x00041CC5 File Offset: 0x0003FEC5
 		public unsafe FGuid LightGuid
 		{
 			get
@@ -32,9 +32,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029E7 RID: 10727
-		// (get) Token: 0x0600B747 RID: 46919 RVA: 0x00104C32 File Offset: 0x00102E32
-		// (set) Token: 0x0600B748 RID: 46920 RVA: 0x00104C42 File Offset: 0x00102E42
+		// Token: 0x170005C0 RID: 1472
+		// (get) Token: 0x06002EFB RID: 12027 RVA: 0x00041CDA File Offset: 0x0003FEDA
+		// (set) Token: 0x06002EFC RID: 12028 RVA: 0x00041CEA File Offset: 0x0003FEEA
 		public unsafe float Brightness_DEPRECATED
 		{
 			get
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029E8 RID: 10728
-		// (get) Token: 0x0600B749 RID: 46921 RVA: 0x00104C53 File Offset: 0x00102E53
-		// (set) Token: 0x0600B74A RID: 46922 RVA: 0x00104C63 File Offset: 0x00102E63
+		// Token: 0x170005C1 RID: 1473
+		// (get) Token: 0x06002EFD RID: 12029 RVA: 0x00041CFB File Offset: 0x0003FEFB
+		// (set) Token: 0x06002EFE RID: 12030 RVA: 0x00041D0B File Offset: 0x0003FF0B
 		public unsafe float Intensity
 		{
 			get
@@ -62,9 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029E9 RID: 10729
-		// (get) Token: 0x0600B74B RID: 46923 RVA: 0x00104C74 File Offset: 0x00102E74
-		// (set) Token: 0x0600B74C RID: 46924 RVA: 0x00104C88 File Offset: 0x00102E88
+		// Token: 0x170005C2 RID: 1474
+		// (get) Token: 0x06002EFF RID: 12031 RVA: 0x00041D1C File Offset: 0x0003FF1C
+		// (set) Token: 0x06002F00 RID: 12032 RVA: 0x00041D30 File Offset: 0x0003FF30
 		public unsafe FColor LightColor
 		{
 			get
@@ -77,9 +77,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029EA RID: 10730
-		// (get) Token: 0x0600B74D RID: 46925 RVA: 0x00104C9D File Offset: 0x00102E9D
-		// (set) Token: 0x0600B74E RID: 46926 RVA: 0x00104CB6 File Offset: 0x00102EB6
+		// Token: 0x170005C3 RID: 1475
+		// (get) Token: 0x06002F01 RID: 12033 RVA: 0x00041D45 File Offset: 0x0003FF45
+		// (set) Token: 0x06002F02 RID: 12034 RVA: 0x00041D5E File Offset: 0x0003FF5E
 		public unsafe bool bAffectsWorld
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029EB RID: 10731
-		// (get) Token: 0x0600B74F RID: 46927 RVA: 0x00104CE6 File Offset: 0x00102EE6
-		// (set) Token: 0x0600B750 RID: 46928 RVA: 0x00104CFF File Offset: 0x00102EFF
+		// Token: 0x170005C4 RID: 1476
+		// (get) Token: 0x06002F03 RID: 12035 RVA: 0x00041D8E File Offset: 0x0003FF8E
+		// (set) Token: 0x06002F04 RID: 12036 RVA: 0x00041DA7 File Offset: 0x0003FFA7
 		public unsafe bool CastShadows
 		{
 			get
@@ -107,9 +107,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029EC RID: 10732
-		// (get) Token: 0x0600B751 RID: 46929 RVA: 0x00104D2F File Offset: 0x00102F2F
-		// (set) Token: 0x0600B752 RID: 46930 RVA: 0x00104D48 File Offset: 0x00102F48
+		// Token: 0x170005C5 RID: 1477
+		// (get) Token: 0x06002F05 RID: 12037 RVA: 0x00041DD7 File Offset: 0x0003FFD7
+		// (set) Token: 0x06002F06 RID: 12038 RVA: 0x00041DF0 File Offset: 0x0003FFF0
 		public unsafe bool CastStaticShadows
 		{
 			get
@@ -122,9 +122,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029ED RID: 10733
-		// (get) Token: 0x0600B753 RID: 46931 RVA: 0x00104D78 File Offset: 0x00102F78
-		// (set) Token: 0x0600B754 RID: 46932 RVA: 0x00104D91 File Offset: 0x00102F91
+		// Token: 0x170005C6 RID: 1478
+		// (get) Token: 0x06002F07 RID: 12039 RVA: 0x00041E20 File Offset: 0x00040020
+		// (set) Token: 0x06002F08 RID: 12040 RVA: 0x00041E39 File Offset: 0x00040039
 		public unsafe bool CastDynamicShadows
 		{
 			get
@@ -137,9 +137,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029EE RID: 10734
-		// (get) Token: 0x0600B755 RID: 46933 RVA: 0x00104DC1 File Offset: 0x00102FC1
-		// (set) Token: 0x0600B756 RID: 46934 RVA: 0x00104DDA File Offset: 0x00102FDA
+		// Token: 0x170005C7 RID: 1479
+		// (get) Token: 0x06002F09 RID: 12041 RVA: 0x00041E69 File Offset: 0x00040069
+		// (set) Token: 0x06002F0A RID: 12042 RVA: 0x00041E82 File Offset: 0x00040082
 		public unsafe bool bAffectTranslucentLighting
 		{
 			get
@@ -152,9 +152,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029EF RID: 10735
-		// (get) Token: 0x0600B757 RID: 46935 RVA: 0x00104E0A File Offset: 0x0010300A
-		// (set) Token: 0x0600B758 RID: 46936 RVA: 0x00104E23 File Offset: 0x00103023
+		// Token: 0x170005C8 RID: 1480
+		// (get) Token: 0x06002F0B RID: 12043 RVA: 0x00041EB2 File Offset: 0x000400B2
+		// (set) Token: 0x06002F0C RID: 12044 RVA: 0x00041ECB File Offset: 0x000400CB
 		public unsafe bool bTransmission
 		{
 			get
@@ -167,9 +167,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029F0 RID: 10736
-		// (get) Token: 0x0600B759 RID: 46937 RVA: 0x00104E53 File Offset: 0x00103053
-		// (set) Token: 0x0600B75A RID: 46938 RVA: 0x00104E6C File Offset: 0x0010306C
+		// Token: 0x170005C9 RID: 1481
+		// (get) Token: 0x06002F0D RID: 12045 RVA: 0x00041EFB File Offset: 0x000400FB
+		// (set) Token: 0x06002F0E RID: 12046 RVA: 0x00041F14 File Offset: 0x00040114
 		public unsafe bool bCastVolumetricShadow
 		{
 			get
@@ -182,9 +182,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029F1 RID: 10737
-		// (get) Token: 0x0600B75B RID: 46939 RVA: 0x00104E9C File Offset: 0x0010309C
-		// (set) Token: 0x0600B75C RID: 46940 RVA: 0x00104EB5 File Offset: 0x001030B5
+		// Token: 0x170005CA RID: 1482
+		// (get) Token: 0x06002F0F RID: 12047 RVA: 0x00041F44 File Offset: 0x00040144
+		// (set) Token: 0x06002F10 RID: 12048 RVA: 0x00041F5D File Offset: 0x0004015D
 		public unsafe bool bCastDeepShadow
 		{
 			get
@@ -197,9 +197,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029F2 RID: 10738
-		// (get) Token: 0x0600B75D RID: 46941 RVA: 0x00104EE5 File Offset: 0x001030E5
-		// (set) Token: 0x0600B75E RID: 46942 RVA: 0x00104EFE File Offset: 0x001030FE
+		// Token: 0x170005CB RID: 1483
+		// (get) Token: 0x06002F11 RID: 12049 RVA: 0x00041F8D File Offset: 0x0004018D
+		// (set) Token: 0x06002F12 RID: 12050 RVA: 0x00041FA6 File Offset: 0x000401A6
 		public unsafe bool bCastRaytracedShadow
 		{
 			get
@@ -212,9 +212,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029F3 RID: 10739
-		// (get) Token: 0x0600B75F RID: 46943 RVA: 0x00104F2E File Offset: 0x0010312E
-		// (set) Token: 0x0600B760 RID: 46944 RVA: 0x00104F47 File Offset: 0x00103147
+		// Token: 0x170005CC RID: 1484
+		// (get) Token: 0x06002F13 RID: 12051 RVA: 0x00041FD6 File Offset: 0x000401D6
+		// (set) Token: 0x06002F14 RID: 12052 RVA: 0x00041FEF File Offset: 0x000401EF
 		public unsafe bool bAffectReflection
 		{
 			get
@@ -227,9 +227,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029F4 RID: 10740
-		// (get) Token: 0x0600B761 RID: 46945 RVA: 0x00104F77 File Offset: 0x00103177
-		// (set) Token: 0x0600B762 RID: 46946 RVA: 0x00104F90 File Offset: 0x00103190
+		// Token: 0x170005CD RID: 1485
+		// (get) Token: 0x06002F15 RID: 12053 RVA: 0x0004201F File Offset: 0x0004021F
+		// (set) Token: 0x06002F16 RID: 12054 RVA: 0x00042038 File Offset: 0x00040238
 		public unsafe bool bAffectGlobalIllumination
 		{
 			get
@@ -242,9 +242,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029F5 RID: 10741
-		// (get) Token: 0x0600B763 RID: 46947 RVA: 0x00104FC0 File Offset: 0x001031C0
-		// (set) Token: 0x0600B764 RID: 46948 RVA: 0x00104FD0 File Offset: 0x001031D0
+		// Token: 0x170005CE RID: 1486
+		// (get) Token: 0x06002F17 RID: 12055 RVA: 0x00042068 File Offset: 0x00040268
+		// (set) Token: 0x06002F18 RID: 12056 RVA: 0x00042078 File Offset: 0x00040278
 		public unsafe float DeepShadowLayerDistribution
 		{
 			get
@@ -257,9 +257,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029F6 RID: 10742
-		// (get) Token: 0x0600B765 RID: 46949 RVA: 0x00104FE1 File Offset: 0x001031E1
-		// (set) Token: 0x0600B766 RID: 46950 RVA: 0x00104FF1 File Offset: 0x001031F1
+		// Token: 0x170005CF RID: 1487
+		// (get) Token: 0x06002F19 RID: 12057 RVA: 0x00042089 File Offset: 0x00040289
+		// (set) Token: 0x06002F1A RID: 12058 RVA: 0x00042099 File Offset: 0x00040299
 		public unsafe float IndirectLightingIntensity
 		{
 			get
@@ -272,9 +272,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029F7 RID: 10743
-		// (get) Token: 0x0600B767 RID: 46951 RVA: 0x00105002 File Offset: 0x00103202
-		// (set) Token: 0x0600B768 RID: 46952 RVA: 0x00105012 File Offset: 0x00103212
+		// Token: 0x170005D0 RID: 1488
+		// (get) Token: 0x06002F1B RID: 12059 RVA: 0x000420AA File Offset: 0x000402AA
+		// (set) Token: 0x06002F1C RID: 12060 RVA: 0x000420BA File Offset: 0x000402BA
 		public unsafe float VolumetricScatteringIntensity
 		{
 			get
@@ -287,9 +287,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029F8 RID: 10744
-		// (get) Token: 0x0600B769 RID: 46953 RVA: 0x00105023 File Offset: 0x00103223
-		// (set) Token: 0x0600B76A RID: 46954 RVA: 0x00105033 File Offset: 0x00103233
+		// Token: 0x170005D1 RID: 1489
+		// (get) Token: 0x06002F1D RID: 12061 RVA: 0x000420CB File Offset: 0x000402CB
+		// (set) Token: 0x06002F1E RID: 12062 RVA: 0x000420DB File Offset: 0x000402DB
 		public unsafe float VolumetricFogScatteringIntensity
 		{
 			get
@@ -302,9 +302,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170029F9 RID: 10745
-		// (get) Token: 0x0600B76B RID: 46955 RVA: 0x00105044 File Offset: 0x00103244
-		// (set) Token: 0x0600B76C RID: 46956 RVA: 0x00105054 File Offset: 0x00103254
+		// Token: 0x170005D2 RID: 1490
+		// (get) Token: 0x06002F1F RID: 12063 RVA: 0x000420EC File Offset: 0x000402EC
+		// (set) Token: 0x06002F20 RID: 12064 RVA: 0x000420FC File Offset: 0x000402FC
 		public unsafe int SamplesPerPixel
 		{
 			get
@@ -317,213 +317,213 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600B76D RID: 46957 RVA: 0x00105065 File Offset: 0x00103265
+		// Token: 0x06002F21 RID: 12065 RVA: 0x0004210D File Offset: 0x0004030D
 		public void SetSamplesPerPixel(int NewValue)
 		{
 			ULightComponentBase.__SetSamplesPerPixel_Internal(base.NativePtr, NewValue);
 		}
 
-		// Token: 0x0600B76E RID: 46958 RVA: 0x00105073 File Offset: 0x00103273
+		// Token: 0x06002F22 RID: 12066 RVA: 0x0004211B File Offset: 0x0004031B
 		public void SetCastVolumetricShadow(bool bNewValue)
 		{
 			ULightComponentBase.__SetCastVolumetricShadow_Internal(base.NativePtr, bNewValue);
 		}
 
-		// Token: 0x0600B76F RID: 46959 RVA: 0x00105081 File Offset: 0x00103281
+		// Token: 0x06002F23 RID: 12067 RVA: 0x00042129 File Offset: 0x00040329
 		public void SetCastShadows(bool bNewValue)
 		{
 			ULightComponentBase.__SetCastShadows_Internal(base.NativePtr, bNewValue);
 		}
 
-		// Token: 0x0600B770 RID: 46960 RVA: 0x0010508F File Offset: 0x0010328F
+		// Token: 0x06002F24 RID: 12068 RVA: 0x00042137 File Offset: 0x00040337
 		public void SetCastRaytracedShadow(bool bNewValue)
 		{
 			ULightComponentBase.__SetCastRaytracedShadow_Internal(base.NativePtr, bNewValue);
 		}
 
-		// Token: 0x0600B771 RID: 46961 RVA: 0x0010509D File Offset: 0x0010329D
+		// Token: 0x06002F25 RID: 12069 RVA: 0x00042145 File Offset: 0x00040345
 		public void SetCastDeepShadow(bool bNewValue)
 		{
 			ULightComponentBase.__SetCastDeepShadow_Internal(base.NativePtr, bNewValue);
 		}
 
-		// Token: 0x0600B772 RID: 46962 RVA: 0x001050AB File Offset: 0x001032AB
+		// Token: 0x06002F26 RID: 12070 RVA: 0x00042153 File Offset: 0x00040353
 		public void SetAffectReflection(bool bNewValue)
 		{
 			ULightComponentBase.__SetAffectReflection_Internal(base.NativePtr, bNewValue);
 		}
 
-		// Token: 0x0600B773 RID: 46963 RVA: 0x001050B9 File Offset: 0x001032B9
+		// Token: 0x06002F27 RID: 12071 RVA: 0x00042161 File Offset: 0x00040361
 		public void SetAffectGlobalIllumination(bool bNewValue)
 		{
 			ULightComponentBase.__SetAffectGlobalIllumination_Internal(base.NativePtr, bNewValue);
 		}
 
-		// Token: 0x0600B774 RID: 46964 RVA: 0x001050C7 File Offset: 0x001032C7
+		// Token: 0x06002F28 RID: 12072 RVA: 0x0004216F File Offset: 0x0004036F
 		public FLinearColor GetLightColor()
 		{
 			return ULightComponentBase.__GetLightColor_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600B775 RID: 46965 RVA: 0x001050D4 File Offset: 0x001032D4
+		// Token: 0x06002F29 RID: 12073 RVA: 0x0004217C File Offset: 0x0004037C
 		public bool GetCastShadows()
 		{
 			return ULightComponentBase.__GetCastShadows_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600B776 RID: 46966
+		// Token: 0x06002F2A RID: 12074
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSamplesPerPixel_Internal(IntPtr @this, int NewValue);
 
-		// Token: 0x0600B777 RID: 46967
+		// Token: 0x06002F2B RID: 12075
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCastVolumetricShadow_Internal(IntPtr @this, bool bNewValue);
 
-		// Token: 0x0600B778 RID: 46968
+		// Token: 0x06002F2C RID: 12076
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCastShadows_Internal(IntPtr @this, bool bNewValue);
 
-		// Token: 0x0600B779 RID: 46969
+		// Token: 0x06002F2D RID: 12077
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCastRaytracedShadow_Internal(IntPtr @this, bool bNewValue);
 
-		// Token: 0x0600B77A RID: 46970
+		// Token: 0x06002F2E RID: 12078
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCastDeepShadow_Internal(IntPtr @this, bool bNewValue);
 
-		// Token: 0x0600B77B RID: 46971
+		// Token: 0x06002F2F RID: 12079
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAffectReflection_Internal(IntPtr @this, bool bNewValue);
 
-		// Token: 0x0600B77C RID: 46972
+		// Token: 0x06002F30 RID: 12080
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAffectGlobalIllumination_Internal(IntPtr @this, bool bNewValue);
 
-		// Token: 0x0600B77D RID: 46973
+		// Token: 0x06002F31 RID: 12081
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FLinearColor __GetLightColor_Internal(IntPtr @this);
 
-		// Token: 0x0600B77E RID: 46974
+		// Token: 0x06002F32 RID: 12082
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetCastShadows_Internal(IntPtr @this);
 
-		// Token: 0x0600B77F RID: 46975 RVA: 0x001050E1 File Offset: 0x001032E1
+		// Token: 0x06002F33 RID: 12083 RVA: 0x00042189 File Offset: 0x00040389
 		static ULightComponentBase()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.LightComponentBase");
 		}
 
-		// Token: 0x0600B780 RID: 46976 RVA: 0x001050F0 File Offset: 0x001032F0
+		// Token: 0x06002F34 RID: 12084 RVA: 0x00042198 File Offset: 0x00040398
 		protected ULightComponentBase() : this(BuiltinUtils.AllocNativeUObject(ULightComponentBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600B781 RID: 46977 RVA: 0x00105118 File Offset: 0x00103318
+		// Token: 0x06002F35 RID: 12085 RVA: 0x000421C0 File Offset: 0x000403C0
 		protected ULightComponentBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04005FFE RID: 24574
+		// Token: 0x04000F02 RID: 3842
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.LightComponentBase";
 
-		// Token: 0x04005FFF RID: 24575
+		// Token: 0x04000F03 RID: 3843
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04006000 RID: 24576
+		// Token: 0x04000F04 RID: 3844
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04006001 RID: 24577
+		// Token: 0x04000F05 RID: 3845
 		internal static int __PropertyOffset_LightGuid;
 
-		// Token: 0x04006002 RID: 24578
+		// Token: 0x04000F06 RID: 3846
 		internal static int __PropertyOffset_Brightness_DEPRECATED;
 
-		// Token: 0x04006003 RID: 24579
+		// Token: 0x04000F07 RID: 3847
 		internal static int __PropertyOffset_Intensity;
 
-		// Token: 0x04006004 RID: 24580
+		// Token: 0x04000F08 RID: 3848
 		internal static int __PropertyOffset_LightColor;
 
-		// Token: 0x04006005 RID: 24581
+		// Token: 0x04000F09 RID: 3849
 		internal static int __PropertyOffset_bAffectsWorld;
 
-		// Token: 0x04006006 RID: 24582
+		// Token: 0x04000F0A RID: 3850
 		internal static byte __PropertyMask_bAffectsWorld;
 
-		// Token: 0x04006007 RID: 24583
+		// Token: 0x04000F0B RID: 3851
 		internal static int __PropertyOffset_CastShadows;
 
-		// Token: 0x04006008 RID: 24584
+		// Token: 0x04000F0C RID: 3852
 		internal static byte __PropertyMask_CastShadows;
 
-		// Token: 0x04006009 RID: 24585
+		// Token: 0x04000F0D RID: 3853
 		internal static int __PropertyOffset_CastStaticShadows;
 
-		// Token: 0x0400600A RID: 24586
+		// Token: 0x04000F0E RID: 3854
 		internal static byte __PropertyMask_CastStaticShadows;
 
-		// Token: 0x0400600B RID: 24587
+		// Token: 0x04000F0F RID: 3855
 		internal static int __PropertyOffset_CastDynamicShadows;
 
-		// Token: 0x0400600C RID: 24588
+		// Token: 0x04000F10 RID: 3856
 		internal static byte __PropertyMask_CastDynamicShadows;
 
-		// Token: 0x0400600D RID: 24589
+		// Token: 0x04000F11 RID: 3857
 		internal static int __PropertyOffset_bAffectTranslucentLighting;
 
-		// Token: 0x0400600E RID: 24590
+		// Token: 0x04000F12 RID: 3858
 		internal static byte __PropertyMask_bAffectTranslucentLighting;
 
-		// Token: 0x0400600F RID: 24591
+		// Token: 0x04000F13 RID: 3859
 		internal static int __PropertyOffset_bTransmission;
 
-		// Token: 0x04006010 RID: 24592
+		// Token: 0x04000F14 RID: 3860
 		internal static byte __PropertyMask_bTransmission;
 
-		// Token: 0x04006011 RID: 24593
+		// Token: 0x04000F15 RID: 3861
 		internal static int __PropertyOffset_bCastVolumetricShadow;
 
-		// Token: 0x04006012 RID: 24594
+		// Token: 0x04000F16 RID: 3862
 		internal static byte __PropertyMask_bCastVolumetricShadow;
 
-		// Token: 0x04006013 RID: 24595
+		// Token: 0x04000F17 RID: 3863
 		internal static int __PropertyOffset_bCastDeepShadow;
 
-		// Token: 0x04006014 RID: 24596
+		// Token: 0x04000F18 RID: 3864
 		internal static byte __PropertyMask_bCastDeepShadow;
 
-		// Token: 0x04006015 RID: 24597
+		// Token: 0x04000F19 RID: 3865
 		internal static int __PropertyOffset_bCastRaytracedShadow;
 
-		// Token: 0x04006016 RID: 24598
+		// Token: 0x04000F1A RID: 3866
 		internal static byte __PropertyMask_bCastRaytracedShadow;
 
-		// Token: 0x04006017 RID: 24599
+		// Token: 0x04000F1B RID: 3867
 		internal static int __PropertyOffset_bAffectReflection;
 
-		// Token: 0x04006018 RID: 24600
+		// Token: 0x04000F1C RID: 3868
 		internal static byte __PropertyMask_bAffectReflection;
 
-		// Token: 0x04006019 RID: 24601
+		// Token: 0x04000F1D RID: 3869
 		internal static int __PropertyOffset_bAffectGlobalIllumination;
 
-		// Token: 0x0400601A RID: 24602
+		// Token: 0x04000F1E RID: 3870
 		internal static byte __PropertyMask_bAffectGlobalIllumination;
 
-		// Token: 0x0400601B RID: 24603
+		// Token: 0x04000F1F RID: 3871
 		internal static int __PropertyOffset_DeepShadowLayerDistribution;
 
-		// Token: 0x0400601C RID: 24604
+		// Token: 0x04000F20 RID: 3872
 		internal static int __PropertyOffset_IndirectLightingIntensity;
 
-		// Token: 0x0400601D RID: 24605
+		// Token: 0x04000F21 RID: 3873
 		internal static int __PropertyOffset_VolumetricScatteringIntensity;
 
-		// Token: 0x0400601E RID: 24606
+		// Token: 0x04000F22 RID: 3874
 		internal static int __PropertyOffset_VolumetricFogScatteringIntensity;
 
-		// Token: 0x0400601F RID: 24607
+		// Token: 0x04000F23 RID: 3875
 		internal static int __PropertyOffset_SamplesPerPixel;
 	}
 }

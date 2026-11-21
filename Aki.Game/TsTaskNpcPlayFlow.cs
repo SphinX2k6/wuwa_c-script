@@ -17,9 +17,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/TsTaskNpcPlayFlow.TsTaskNpcPlayFlow_C")]
 public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170000F3 RID: 243
-	// (get) Token: 0x060005F1 RID: 1521 RVA: 0x0001D971 File Offset: 0x0001BB71
-	// (set) Token: 0x060005F2 RID: 1522 RVA: 0x0001D985 File Offset: 0x0001BB85
+	// Token: 0x170000F5 RID: 245
+	// (get) Token: 0x060005F5 RID: 1525 RVA: 0x0001E531 File Offset: 0x0001C731
+	// (set) Token: 0x060005F6 RID: 1526 RVA: 0x0001E545 File Offset: 0x0001C745
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string FlowListName
 	{
@@ -33,9 +33,9 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170000F4 RID: 244
-	// (get) Token: 0x060005F3 RID: 1523 RVA: 0x0001D99A File Offset: 0x0001BB9A
-	// (set) Token: 0x060005F4 RID: 1524 RVA: 0x0001D9AE File Offset: 0x0001BBAE
+	// Token: 0x170000F6 RID: 246
+	// (get) Token: 0x060005F7 RID: 1527 RVA: 0x0001E55A File Offset: 0x0001C75A
+	// (set) Token: 0x060005F8 RID: 1528 RVA: 0x0001E56E File Offset: 0x0001C76E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string FlowSubTitle
 	{
@@ -49,7 +49,7 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x060005F5 RID: 1525 RVA: 0x0001D9C3 File Offset: 0x0001BBC3
+	// Token: 0x060005F9 RID: 1529 RVA: 0x0001E583 File Offset: 0x0001C783
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -60,30 +60,27 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x060005F6 RID: 1526 RVA: 0x0001D9F4 File Offset: 0x0001BBF4
+	// Token: 0x060005FA RID: 1530 RVA: 0x0001E5B4 File Offset: 0x0001C7B4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskNpcPlayFlow) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskNpcPlayFlow.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060005F7 RID: 1527 RVA: 0x0001DA90 File Offset: 0x0001BC90
+	// Token: 0x060005FB RID: 1531 RVA: 0x0001E664 File Offset: 0x0001C864
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -116,31 +113,28 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		this.HandleFlowAction(0);
 	}
 
-	// Token: 0x060005F8 RID: 1528 RVA: 0x0001DB44 File Offset: 0x0001BD44
+	// Token: 0x060005FC RID: 1532 RVA: 0x0001E718 File Offset: 0x0001C918
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskNpcPlayFlow) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskNpcPlayFlow.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060005F9 RID: 1529 RVA: 0x0001DBE4 File Offset: 0x0001BDE4
+	// Token: 0x060005FD RID: 1533 RVA: 0x0001E7D0 File Offset: 0x0001C9D0
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -159,7 +153,7 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x060005FA RID: 1530 RVA: 0x0001DC38 File Offset: 0x0001BE38
+	// Token: 0x060005FE RID: 1534 RVA: 0x0001E824 File Offset: 0x0001CA24
 	private bool HandlePlayFlow()
 	{
 		int flowId;
@@ -176,7 +170,7 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		return false;
 	}
 
-	// Token: 0x060005FB RID: 1531 RVA: 0x0001DC84 File Offset: 0x0001BE84
+	// Token: 0x060005FF RID: 1535 RVA: 0x0001E870 File Offset: 0x0001CA70
 	private void HandleFlowAction(int index)
 	{
 		this.TempFlowIndex = index;
@@ -196,7 +190,7 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		this.HandleFlowAction(index + 1);
 	}
 
-	// Token: 0x060005FC RID: 1532 RVA: 0x0001DD14 File Offset: 0x0001BF14
+	// Token: 0x06000600 RID: 1536 RVA: 0x0001E900 File Offset: 0x0001CB00
 	private bool ExecuteNpcFlow(ITalkItem config)
 	{
 		bool result = false;
@@ -242,7 +236,7 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		return result;
 	}
 
-	// Token: 0x060005FD RID: 1533 RVA: 0x0001DDD2 File Offset: 0x0001BFD2
+	// Token: 0x06000601 RID: 1537 RVA: 0x0001E9BE File Offset: 0x0001CBBE
 	[NullableContext(2)]
 	private string GetFlowText(string textId)
 	{
@@ -253,7 +247,7 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		return null;
 	}
 
-	// Token: 0x060005FE RID: 1534 RVA: 0x0001DDED File Offset: 0x0001BFED
+	// Token: 0x06000602 RID: 1538 RVA: 0x0001E9D9 File Offset: 0x0001CBD9
 	private void Reset()
 	{
 		this.TempTalkItems = null;
@@ -262,7 +256,7 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		this.FlowEnd = true;
 	}
 
-	// Token: 0x060005FF RID: 1535 RVA: 0x0001DE10 File Offset: 0x0001C010
+	// Token: 0x06000603 RID: 1539 RVA: 0x0001E9FC File Offset: 0x0001CBFC
 	protected override void OnClear()
 	{
 		this.Reset();
@@ -281,7 +275,7 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x06000600 RID: 1536 RVA: 0x0001DE75 File Offset: 0x0001C075
+	// Token: 0x06000604 RID: 1540 RVA: 0x0001EA61 File Offset: 0x0001CC61
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskNpcPlayFlow._ClassPtr == IntPtr.Zero)
@@ -291,22 +285,22 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		return TsTaskNpcPlayFlow._ClassPtr;
 	}
 
-	// Token: 0x06000601 RID: 1537 RVA: 0x0001DE9C File Offset: 0x0001C09C
+	// Token: 0x06000605 RID: 1541 RVA: 0x0001EA88 File Offset: 0x0001CC88
 	public TsTaskNpcPlayFlow() : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcPlayFlow.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000602 RID: 1538 RVA: 0x0001DEC4 File Offset: 0x0001C0C4
+	// Token: 0x06000606 RID: 1542 RVA: 0x0001EAB0 File Offset: 0x0001CCB0
 	public TsTaskNpcPlayFlow(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcPlayFlow.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000603 RID: 1539 RVA: 0x0001DEF7 File Offset: 0x0001C0F7
+	// Token: 0x06000607 RID: 1543 RVA: 0x0001EAE3 File Offset: 0x0001CCE3
 	protected TsTaskNpcPlayFlow(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000604 RID: 1540 RVA: 0x0001DF20 File Offset: 0x0001C120
+	// Token: 0x06000608 RID: 1544 RVA: 0x0001EB0C File Offset: 0x0001CD0C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -315,7 +309,7 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06000605 RID: 1541 RVA: 0x0001DF50 File Offset: 0x0001C150
+	// Token: 0x06000609 RID: 1545 RVA: 0x0001EB3C File Offset: 0x0001CD3C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -324,22 +318,22 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		this.ReceiveTickAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x0400045B RID: 1115
+	// Token: 0x0400045F RID: 1119
 	private const float DEFAULT_WAIT_TIME = 3f;
 
-	// Token: 0x0400045C RID: 1116
+	// Token: 0x04000460 RID: 1120
 	private const float STOP_MONTAGE_BLEND_OUT_TIME = 0.1f;
 
-	// Token: 0x0400045D RID: 1117
+	// Token: 0x04000461 RID: 1121
 	private bool IsInitTsVariables;
 
-	// Token: 0x0400045E RID: 1118
+	// Token: 0x04000462 RID: 1122
 	private string TsFlowListName = "";
 
-	// Token: 0x0400045F RID: 1119
+	// Token: 0x04000463 RID: 1123
 	private string TsFlowSubTitle = "";
 
-	// Token: 0x04000460 RID: 1120
+	// Token: 0x04000464 RID: 1124
 	[Nullable(new byte[]
 	{
 		2,
@@ -347,39 +341,39 @@ public class TsTaskNpcPlayFlow : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 	})]
 	private List<ITalkItem> TempTalkItems;
 
-	// Token: 0x04000461 RID: 1121
+	// Token: 0x04000465 RID: 1125
 	private int TempFlowIndex;
 
-	// Token: 0x04000462 RID: 1122
+	// Token: 0x04000466 RID: 1126
 	private float TimeRemain;
 
-	// Token: 0x04000463 RID: 1123
+	// Token: 0x04000467 RID: 1127
 	private bool FlowEnd = true;
 
-	// Token: 0x04000464 RID: 1124
+	// Token: 0x04000468 RID: 1128
 	[Nullable(2)]
 	private PawnHeadInfoComponent HeadInfoComp;
 
-	// Token: 0x04000465 RID: 1125
+	// Token: 0x04000469 RID: 1129
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x04000466 RID: 1126
+	// Token: 0x0400046A RID: 1130
 	[Nullable(2)]
 	private BasePerformComponent PerformComp;
 
-	// Token: 0x04000467 RID: 1127
+	// Token: 0x0400046B RID: 1131
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/TsTaskNpcPlayFlow.TsTaskNpcPlayFlow_C";
 
-	// Token: 0x04000468 RID: 1128
+	// Token: 0x0400046C RID: 1132
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000469 RID: 1129
+	// Token: 0x0400046D RID: 1133
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400046A RID: 1130
+	// Token: 0x0400046E RID: 1134
 	private static int __PropertyOffset_FlowListName;
 
-	// Token: 0x0400046B RID: 1131
+	// Token: 0x0400046F RID: 1135
 	private static int __PropertyOffset_FlowSubTitle;
 }

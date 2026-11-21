@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076A7 RID: 30375
+	// Token: 0x02007EB2 RID: 32434
 	public enum TDisableAlertCondition : byte
 	{
-		// Token: 0x040126DF RID: 75487
+		// Token: 0x04013728 RID: 79656
 		NONE,
-		// Token: 0x040126E0 RID: 75488
+		// Token: 0x04013729 RID: 79657
 		IDisableAlertAreaDungeonCondition,
-		// Token: 0x040126E1 RID: 75489
+		// Token: 0x0401372A RID: 79658
 		IDisableAlertAreaQuestCondition
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F1C RID: 7964
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002155 RID: 8533
 	public class ITalkBackgroundImage : ITalkBackground
 	{
-		// Token: 0x0600AA44 RID: 43588 RVA: 0x0017F744 File Offset: 0x0017D944
+		// Token: 0x0600B516 RID: 46358 RVA: 0x0019573C File Offset: 0x0019393C
 		private ITalkBackgroundImage_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AA45 RID: 43589 RVA: 0x0017F77C File Offset: 0x0017D97C
+		// Token: 0x0600B517 RID: 46359 RVA: 0x00195774 File Offset: 0x00193974
 		public static ITalkBackgroundImage Create([Nullable(2)] ITalkBackgroundImage instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AA46 RID: 43590 RVA: 0x0017F78F File Offset: 0x0017D98F
+		// Token: 0x0600B518 RID: 46360 RVA: 0x00195787 File Offset: 0x00193987
 		public static ITalkBackgroundImage CreateFromSetValue([Nullable(2)] ITalkBackgroundImage_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AA47 RID: 43591 RVA: 0x0017F7A2 File Offset: 0x0017D9A2
+		// Token: 0x0600B519 RID: 46361 RVA: 0x0019579A File Offset: 0x0019399A
 		public new ITalkBackgroundImage_SetValue ToSetValue()
 		{
 			return new ITalkBackgroundImage_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033D0 RID: 13264
-		// (get) Token: 0x0600AA48 RID: 43592 RVA: 0x0017F7C1 File Offset: 0x0017D9C1
-		// (set) Token: 0x0600AA49 RID: 43593 RVA: 0x0017F7EC File Offset: 0x0017D9EC
+		// Token: 0x1700369B RID: 13979
+		// (get) Token: 0x0600B51A RID: 46362 RVA: 0x001957B9 File Offset: 0x001939B9
+		// (set) Token: 0x0600B51B RID: 46363 RVA: 0x001957E4 File Offset: 0x001939E4
 		public override ETalkBackgroundType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033D1 RID: 13265
-		// (get) Token: 0x0600AA4A RID: 43594 RVA: 0x0017F7FA File Offset: 0x0017D9FA
-		// (set) Token: 0x0600AA4B RID: 43595 RVA: 0x0017F825 File Offset: 0x0017DA25
+		// Token: 0x1700369C RID: 13980
+		// (get) Token: 0x0600B51C RID: 46364 RVA: 0x001957F2 File Offset: 0x001939F2
+		// (set) Token: 0x0600B51D RID: 46365 RVA: 0x0019581D File Offset: 0x00193A1D
 		public virtual string ImageAsset
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006528 RID: 25896
+		// Token: 0x04006B17 RID: 27415
 		[Nullable(2)]
 		protected new ITalkBackgroundImage FbInstance;
 
-		// Token: 0x04006529 RID: 25897
+		// Token: 0x04006B18 RID: 27416
 		[Nullable(2)]
 		protected new ITalkBackgroundImage_SetValue PocoInterface;
 	}

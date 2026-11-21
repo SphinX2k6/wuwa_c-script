@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001C9E RID: 7326
+// Token: 0x0200115D RID: 4445
 public enum EGachaScanEvent
 {
-	// Token: 0x04006569 RID: 25961
+	// Token: 0x0400663B RID: 26171
 	Flash1,
-	// Token: 0x0400656A RID: 25962
+	// Token: 0x0400663C RID: 26172
 	Flash2,
-	// Token: 0x0400656B RID: 25963
+	// Token: 0x0400663D RID: 26173
 	WeaponDA,
-	// Token: 0x0400656C RID: 25964
+	// Token: 0x0400663E RID: 26174
 	WeaponEffect,
-	// Token: 0x0400656D RID: 25965
+	// Token: 0x0400663F RID: 26175
 	RemoveWeaponDA
 }

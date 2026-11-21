@@ -3,22 +3,22 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DAA RID: 19882
+	// Token: 0x02003D73 RID: 15731
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoguelikeAchieveSlotData
 	{
-		// Token: 0x0603357B RID: 210299 RVA: 0x00BFCD00 File Offset: 0x00BFAF00
+		// Token: 0x060283E8 RID: 164840 RVA: 0x00B46232 File Offset: 0x00B44432
 		public RoguelikeAchieveSlotData(int slotIndex, RogueArchiveInfoData archiveInfoData)
 		{
 			this.SlotIndex = slotIndex;
 			this.ArchiveInfoData = archiveInfoData;
 		}
 
-		// Token: 0x0401B463 RID: 111715
+		// Token: 0x04015E36 RID: 89654
 		public int SlotIndex;
 
-		// Token: 0x0401B464 RID: 111716
+		// Token: 0x04015E37 RID: 89655
 		public RogueArchiveInfoData ArchiveInfoData;
 	}
 }

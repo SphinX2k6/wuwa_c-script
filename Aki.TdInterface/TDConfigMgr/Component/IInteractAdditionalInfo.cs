@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000472 RID: 1138
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004CB RID: 1227
 	public class IInteractAdditionalInfo
 	{
-		// Token: 0x060016F1 RID: 5873 RVA: 0x00046198 File Offset: 0x00044398
+		// Token: 0x0600188B RID: 6283 RVA: 0x00049EE0 File Offset: 0x000480E0
 		private IInteractAdditionalInfo_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060016F2 RID: 5874 RVA: 0x000461D0 File Offset: 0x000443D0
+		// Token: 0x0600188C RID: 6284 RVA: 0x00049F18 File Offset: 0x00048118
 		public static IInteractAdditionalInfo Create([Nullable(2)] IInteractAdditionalInfo instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016F3 RID: 5875 RVA: 0x000461E3 File Offset: 0x000443E3
+		// Token: 0x0600188D RID: 6285 RVA: 0x00049F2B File Offset: 0x0004812B
 		public static IInteractAdditionalInfo CreateFromSetValue([Nullable(2)] IInteractAdditionalInfo_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016F4 RID: 5876 RVA: 0x000461F6 File Offset: 0x000443F6
+		// Token: 0x0600188E RID: 6286 RVA: 0x00049F3E File Offset: 0x0004813E
 		public IInteractAdditionalInfo_SetValue ToSetValue()
 		{
 			return new IInteractAdditionalInfo_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700062B RID: 1579
-		// (get) Token: 0x060016F5 RID: 5877 RVA: 0x00046209 File Offset: 0x00044409
-		// (set) Token: 0x060016F6 RID: 5878 RVA: 0x00046234 File Offset: 0x00044434
+		// Token: 0x17000692 RID: 1682
+		// (get) Token: 0x0600188F RID: 6287 RVA: 0x00049F51 File Offset: 0x00048151
+		// (set) Token: 0x06001890 RID: 6288 RVA: 0x00049F7C File Offset: 0x0004817C
 		public virtual EInteractAdditionalInfoType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001156 RID: 4438
+		// Token: 0x04001278 RID: 4728
 		[Nullable(2)]
 		protected IInteractAdditionalInfo FbInstance;
 
-		// Token: 0x04001157 RID: 4439
+		// Token: 0x04001279 RID: 4729
 		[Nullable(2)]
 		protected IInteractAdditionalInfo_SetValue PocoInterface;
 	}

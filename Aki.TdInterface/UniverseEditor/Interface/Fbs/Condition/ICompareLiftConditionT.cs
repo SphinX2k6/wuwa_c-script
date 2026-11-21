@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BB1 RID: 19377
+	// Token: 0x0200509B RID: 20635
 	public class ICompareLiftConditionT
 	{
-		// Token: 0x17008CB0 RID: 36016
-		// (get) Token: 0x0601E906 RID: 125190 RVA: 0x004468A8 File Offset: 0x00444AA8
-		// (set) Token: 0x0601E907 RID: 125191 RVA: 0x004468B0 File Offset: 0x00444AB0
+		// Token: 0x170093C9 RID: 37833
+		// (get) Token: 0x060204B2 RID: 132274 RVA: 0x0047940C File Offset: 0x0047760C
+		// (set) Token: 0x060204B3 RID: 132275 RVA: 0x00479414 File Offset: 0x00477614
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008CB1 RID: 36017
-		// (get) Token: 0x0601E908 RID: 125192 RVA: 0x004468B9 File Offset: 0x00444AB9
-		// (set) Token: 0x0601E909 RID: 125193 RVA: 0x004468C1 File Offset: 0x00444AC1
+		// Token: 0x170093CA RID: 37834
+		// (get) Token: 0x060204B4 RID: 132276 RVA: 0x0047941D File Offset: 0x0047761D
+		// (set) Token: 0x060204B5 RID: 132277 RVA: 0x00479425 File Offset: 0x00477625
 		public bool IsSelf { get; set; }
 
-		// Token: 0x17008CB2 RID: 36018
-		// (get) Token: 0x0601E90A RID: 125194 RVA: 0x004468CA File Offset: 0x00444ACA
-		// (set) Token: 0x0601E90B RID: 125195 RVA: 0x004468D2 File Offset: 0x00444AD2
+		// Token: 0x170093CB RID: 37835
+		// (get) Token: 0x060204B6 RID: 132278 RVA: 0x0047942E File Offset: 0x0047762E
+		// (set) Token: 0x060204B7 RID: 132279 RVA: 0x00479436 File Offset: 0x00477636
 		public int EntityId { get; set; }
 
-		// Token: 0x17008CB3 RID: 36019
-		// (get) Token: 0x0601E90C RID: 125196 RVA: 0x004468DB File Offset: 0x00444ADB
-		// (set) Token: 0x0601E90D RID: 125197 RVA: 0x004468E3 File Offset: 0x00444AE3
+		// Token: 0x170093CC RID: 37836
+		// (get) Token: 0x060204B8 RID: 132280 RVA: 0x0047943F File Offset: 0x0047763F
+		// (set) Token: 0x060204B9 RID: 132281 RVA: 0x00479447 File Offset: 0x00477647
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008CB4 RID: 36020
-		// (get) Token: 0x0601E90E RID: 125198 RVA: 0x004468EC File Offset: 0x00444AEC
-		// (set) Token: 0x0601E90F RID: 125199 RVA: 0x004468F4 File Offset: 0x00444AF4
+		// Token: 0x170093CD RID: 37837
+		// (get) Token: 0x060204BA RID: 132282 RVA: 0x00479450 File Offset: 0x00477650
+		// (set) Token: 0x060204BB RID: 132283 RVA: 0x00479458 File Offset: 0x00477658
 		public int Location { get; set; }
 
-		// Token: 0x17008CB5 RID: 36021
-		// (get) Token: 0x0601E910 RID: 125200 RVA: 0x004468FD File Offset: 0x00444AFD
-		// (set) Token: 0x0601E911 RID: 125201 RVA: 0x00446905 File Offset: 0x00444B05
+		// Token: 0x170093CE RID: 37838
+		// (get) Token: 0x060204BC RID: 132284 RVA: 0x00479461 File Offset: 0x00477661
+		// (set) Token: 0x060204BD RID: 132285 RVA: 0x00479469 File Offset: 0x00477669
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601E912 RID: 125202 RVA: 0x0044690E File Offset: 0x00444B0E
+		// Token: 0x060204BE RID: 132286 RVA: 0x00479472 File Offset: 0x00477672
 		public ICompareLiftConditionT()
 		{
 			this.Type = ECondition.CompareVar;

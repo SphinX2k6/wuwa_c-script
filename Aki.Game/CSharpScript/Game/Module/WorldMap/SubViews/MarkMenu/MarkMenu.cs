@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 {
-	// Token: 0x020047FF RID: 18431
+	// Token: 0x02003730 RID: 14128
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MarkMenu : WorldMapSecondaryUi
 	{
-		// Token: 0x0603043B RID: 197691 RVA: 0x00B31E6B File Offset: 0x00B3006B
+		// Token: 0x06024C0B RID: 150539 RVA: 0x00A61E13 File Offset: 0x00A60013
 		public override string GetResourceId()
 		{
 			return "UiItem_MarkList_Prefab";
 		}
 
-		// Token: 0x0603043C RID: 197692 RVA: 0x00B31E74 File Offset: 0x00B30074
+		// Token: 0x06024C0C RID: 150540 RVA: 0x00A61E1C File Offset: 0x00A6001C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603043D RID: 197693 RVA: 0x00B31F5C File Offset: 0x00B3015C
+		// Token: 0x06024C0D RID: 150541 RVA: 0x00A61F04 File Offset: 0x00A60104
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(3);
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0603043E RID: 197694 RVA: 0x00B31F70 File Offset: 0x00B30170
+		// Token: 0x06024C0E RID: 150542 RVA: 0x00A61F18 File Offset: 0x00A60118
 		private List<UUIItem> GetOrAddUsedItems(int count)
 		{
 			this.UsedUiItems.Clear();
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			return this.UsedUiItems;
 		}
 
-		// Token: 0x0603043F RID: 197695 RVA: 0x00B32018 File Offset: 0x00B30218
+		// Token: 0x06024C0F RID: 150543 RVA: 0x00A61FC0 File Offset: 0x00A601C0
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			}
 		}
 
-		// Token: 0x06030440 RID: 197696 RVA: 0x00B32100 File Offset: 0x00B30300
+		// Token: 0x06024C10 RID: 150544 RVA: 0x00A620A8 File Offset: 0x00A602A8
 		protected override void OnCloseWorldMapSecondaryUi()
 		{
 			if (this.MarkMenuItems == null || this.MarkMenuItems.Count == 0)
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			}
 		}
 
-		// Token: 0x06030441 RID: 197697 RVA: 0x00B32180 File Offset: 0x00B30380
+		// Token: 0x06024C11 RID: 150545 RVA: 0x00A62128 File Offset: 0x00A60328
 		protected override void OnBeforeDestroy()
 		{
 			this.MarkMenuItems = null;
@@ -130,13 +130,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			this.UsedUiItems.Clear();
 		}
 
-		// Token: 0x06030442 RID: 197698 RVA: 0x00B3219F File Offset: 0x00B3039F
+		// Token: 0x06024C12 RID: 150546 RVA: 0x00A62147 File Offset: 0x00A60347
 		protected override bool GetNeedBgItem()
 		{
 			return false;
 		}
 
-		// Token: 0x04019FA8 RID: 106408
+		// Token: 0x0401465C RID: 83548
 		[Nullable(new byte[]
 		{
 			2,
@@ -144,26 +144,26 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 		})]
 		private List<MarkMenuItem> MarkMenuItems;
 
-		// Token: 0x04019FA9 RID: 106409
+		// Token: 0x0401465D RID: 83549
 		private List<UUIItem> MenuUiItems = new List<UUIItem>();
 
-		// Token: 0x04019FAA RID: 106410
+		// Token: 0x0401465E RID: 83550
 		private List<UUIItem> UsedUiItems = new List<UUIItem>();
 
-		// Token: 0x0200AAC9 RID: 43721
+		// Token: 0x0200947A RID: 38010
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F14 RID: 212756
+			// Token: 0x0402E697 RID: 190103
 			public const int Modal = 0;
 
-			// Token: 0x04033F15 RID: 212757
+			// Token: 0x0402E698 RID: 190104
 			public const int ScrollView = 1;
 
-			// Token: 0x04033F16 RID: 212758
+			// Token: 0x0402E699 RID: 190105
 			public const int MenuItemRoot = 2;
 
-			// Token: 0x04033F17 RID: 212759
+			// Token: 0x0402E69A RID: 190106
 			public const int MenuItem = 3;
 		}
 	}

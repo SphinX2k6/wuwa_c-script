@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D0F RID: 19727
+	// Token: 0x0200520B RID: 21003
 	public enum IVehicleCondition_Union : byte
 	{
-		// Token: 0x0400D6EB RID: 55019
+		// Token: 0x0400E218 RID: 57880
 		NONE,
-		// Token: 0x0400D6EC RID: 55020
+		// Token: 0x0400E219 RID: 57881
 		IVehicleCondition,
-		// Token: 0x0400D6ED RID: 55021
+		// Token: 0x0400E21A RID: 57882
 		ICheckIsUsingVehicle,
-		// Token: 0x0400D6EE RID: 55022
+		// Token: 0x0400E21B RID: 57883
 		ICheckIsPlayerUsingVehicle,
-		// Token: 0x0400D6EF RID: 55023
+		// Token: 0x0400E21C RID: 57884
 		ICheckVehicleSpeedCondition,
-		// Token: 0x0400D6F0 RID: 55024
+		// Token: 0x0400E21D RID: 57885
 		ICheckVehicleTriggerAngleCondition
 	}
 }

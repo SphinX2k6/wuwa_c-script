@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001796 RID: 6038
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001917 RID: 6423
 	public class IActorTurnToData
 	{
-		// Token: 0x06007FD5 RID: 32725 RVA: 0x00131630 File Offset: 0x0012F830
+		// Token: 0x060086C5 RID: 34501 RVA: 0x00140890 File Offset: 0x0013EA90
 		private IActorTurnToData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007FD6 RID: 32726 RVA: 0x00131668 File Offset: 0x0012F868
+		// Token: 0x060086C6 RID: 34502 RVA: 0x001408C8 File Offset: 0x0013EAC8
 		public static IActorTurnToData Create([Nullable(2)] IActorTurnToData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007FD7 RID: 32727 RVA: 0x0013167B File Offset: 0x0012F87B
+		// Token: 0x060086C7 RID: 34503 RVA: 0x001408DB File Offset: 0x0013EADB
 		public static IActorTurnToData CreateFromSetValue([Nullable(2)] IActorTurnToData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007FD8 RID: 32728 RVA: 0x0013168E File Offset: 0x0012F88E
+		// Token: 0x060086C8 RID: 34504 RVA: 0x001408EE File Offset: 0x0013EAEE
 		public IActorTurnToData_SetValue ToSetValue()
 		{
 			return new IActorTurnToData_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029DE RID: 10718
-		// (get) Token: 0x06007FD9 RID: 32729 RVA: 0x001316A1 File Offset: 0x0012F8A1
-		// (set) Token: 0x06007FDA RID: 32730 RVA: 0x001316CC File Offset: 0x0012F8CC
+		// Token: 0x17002BCC RID: 11212
+		// (get) Token: 0x060086C9 RID: 34505 RVA: 0x00140901 File Offset: 0x0013EB01
+		// (set) Token: 0x060086CA RID: 34506 RVA: 0x0014092C File Offset: 0x0013EB2C
 		public virtual EActorTurnToMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005133 RID: 20787
+		// Token: 0x04005569 RID: 21865
 		[Nullable(2)]
 		protected IActorTurnToData FbInstance;
 
-		// Token: 0x04005134 RID: 20788
+		// Token: 0x0400556A RID: 21866
 		[Nullable(2)]
 		protected IActorTurnToData_SetValue PocoInterface;
 	}

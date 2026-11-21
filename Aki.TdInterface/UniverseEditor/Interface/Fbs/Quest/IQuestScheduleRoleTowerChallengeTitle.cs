@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004034 RID: 16436
+	// Token: 0x02004475 RID: 17525
 	public struct IQuestScheduleRoleTowerChallengeTitle : IFlatbufferObject
 	{
-		// Token: 0x170073A2 RID: 29602
-		// (get) Token: 0x06017C62 RID: 97378 RVA: 0x0036DFEA File Offset: 0x0036C1EA
+		// Token: 0x170079A4 RID: 31140
+		// (get) Token: 0x060192FB RID: 103163 RVA: 0x00397DDE File Offset: 0x00395FDE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017C63 RID: 97379 RVA: 0x0036DFF7 File Offset: 0x0036C1F7
+		// Token: 0x060192FC RID: 103164 RVA: 0x00397DEB File Offset: 0x00395FEB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017C64 RID: 97380 RVA: 0x0036E000 File Offset: 0x0036C200
+		// Token: 0x060192FD RID: 103165 RVA: 0x00397DF4 File Offset: 0x00395FF4
 		public static IQuestScheduleRoleTowerChallengeTitle GetRootAsIQuestScheduleRoleTowerChallengeTitle(ByteBuffer _bb)
 		{
 			return IQuestScheduleRoleTowerChallengeTitle.GetRootAsIQuestScheduleRoleTowerChallengeTitle(_bb, default(IQuestScheduleRoleTowerChallengeTitle));
 		}
 
-		// Token: 0x06017C65 RID: 97381 RVA: 0x0036E01C File Offset: 0x0036C21C
+		// Token: 0x060192FE RID: 103166 RVA: 0x00397E10 File Offset: 0x00396010
 		public static IQuestScheduleRoleTowerChallengeTitle GetRootAsIQuestScheduleRoleTowerChallengeTitle(ByteBuffer _bb, IQuestScheduleRoleTowerChallengeTitle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017C66 RID: 97382 RVA: 0x0036E039 File Offset: 0x0036C239
+		// Token: 0x060192FF RID: 103167 RVA: 0x00397E2D File Offset: 0x0039602D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017C67 RID: 97383 RVA: 0x0036E048 File Offset: 0x0036C248
+		// Token: 0x06019300 RID: 103168 RVA: 0x00397E3C File Offset: 0x0039603C
 		public IQuestScheduleRoleTowerChallengeTitle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170073A3 RID: 29603
-		// (get) Token: 0x06017C68 RID: 97384 RVA: 0x0036E058 File Offset: 0x0036C258
+		// Token: 0x170079A5 RID: 31141
+		// (get) Token: 0x06019301 RID: 103169 RVA: 0x00397E4C File Offset: 0x0039604C
 		public EQuestScheduleType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170073A4 RID: 29604
-		// (get) Token: 0x06017C69 RID: 97385 RVA: 0x0036E094 File Offset: 0x0036C294
+		// Token: 0x170079A6 RID: 31142
+		// (get) Token: 0x06019302 RID: 103170 RVA: 0x00397E88 File Offset: 0x00396088
 		public TRoleTowerChallengeTitleType TitleTypeType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017C6A RID: 97386 RVA: 0x0036E0D0 File Offset: 0x0036C2D0
+		// Token: 0x06019303 RID: 103171 RVA: 0x00397EC4 File Offset: 0x003960C4
 		public TTable? TitleType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,25 +88,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06017C6B RID: 97387 RVA: 0x0036E114 File Offset: 0x0036C314
+		// Token: 0x06019304 RID: 103172 RVA: 0x00397F08 File Offset: 0x00396108
 		public IRoleTowerChallengeTitleCurrentFloor TitleTypeAsIRoleTowerChallengeTitleCurrentFloor()
 		{
 			return this.TitleType<IRoleTowerChallengeTitleCurrentFloor>().Value;
 		}
 
-		// Token: 0x06017C6C RID: 97388 RVA: 0x0036E130 File Offset: 0x0036C330
+		// Token: 0x06019305 RID: 103173 RVA: 0x00397F24 File Offset: 0x00396124
 		public IRoleTowerChallengeTitleKillProgress TitleTypeAsIRoleTowerChallengeTitleKillProgress()
 		{
 			return this.TitleType<IRoleTowerChallengeTitleKillProgress>().Value;
 		}
 
-		// Token: 0x06017C6D RID: 97389 RVA: 0x0036E14C File Offset: 0x0036C34C
+		// Token: 0x06019306 RID: 103174 RVA: 0x00397F40 File Offset: 0x00396140
 		public IRoleTowerChallengeTitlePhantomExp TitleTypeAsIRoleTowerChallengeTitlePhantomExp()
 		{
 			return this.TitleType<IRoleTowerChallengeTitlePhantomExp>().Value;
 		}
 
-		// Token: 0x06017C6E RID: 97390 RVA: 0x0036E167 File Offset: 0x0036C367
+		// Token: 0x06019307 RID: 103175 RVA: 0x00397F5B File Offset: 0x0039615B
 		public static Offset<IQuestScheduleRoleTowerChallengeTitle> CreateIQuestScheduleRoleTowerChallengeTitle(FlatBufferBuilder builder, EQuestScheduleType Type = EQuestScheduleType.None, TRoleTowerChallengeTitleType TitleType_type = TRoleTowerChallengeTitleType.NONE, int TitleTypeOffset = 0)
 		{
 			builder.StartTable(3);
@@ -116,37 +116,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestScheduleRoleTowerChallengeTitle.EndIQuestScheduleRoleTowerChallengeTitle(builder);
 		}
 
-		// Token: 0x06017C6F RID: 97391 RVA: 0x0036E18B File Offset: 0x0036C38B
+		// Token: 0x06019308 RID: 103176 RVA: 0x00397F7F File Offset: 0x0039617F
 		public static void StartIQuestScheduleRoleTowerChallengeTitle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06017C70 RID: 97392 RVA: 0x0036E194 File Offset: 0x0036C394
+		// Token: 0x06019309 RID: 103177 RVA: 0x00397F88 File Offset: 0x00396188
 		public static void AddType(FlatBufferBuilder builder, EQuestScheduleType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017C71 RID: 97393 RVA: 0x0036E19F File Offset: 0x0036C39F
+		// Token: 0x0601930A RID: 103178 RVA: 0x00397F93 File Offset: 0x00396193
 		public static void AddTitleTypeType(FlatBufferBuilder builder, TRoleTowerChallengeTitleType titleTypeType)
 		{
 			builder.AddByte(1, (byte)titleTypeType, 0);
 		}
 
-		// Token: 0x06017C72 RID: 97394 RVA: 0x0036E1AA File Offset: 0x0036C3AA
+		// Token: 0x0601930B RID: 103179 RVA: 0x00397F9E File Offset: 0x0039619E
 		public static void AddTitleType(FlatBufferBuilder builder, int titleTypeOffset)
 		{
 			builder.AddOffset(2, titleTypeOffset, 0);
 		}
 
-		// Token: 0x06017C73 RID: 97395 RVA: 0x0036E1B5 File Offset: 0x0036C3B5
+		// Token: 0x0601930C RID: 103180 RVA: 0x00397FA9 File Offset: 0x003961A9
 		public static Offset<IQuestScheduleRoleTowerChallengeTitle> EndIQuestScheduleRoleTowerChallengeTitle(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuestScheduleRoleTowerChallengeTitle>(builder.EndTable());
 		}
 
-		// Token: 0x06017C74 RID: 97396 RVA: 0x0036E1C4 File Offset: 0x0036C3C4
+		// Token: 0x0601930D RID: 103181 RVA: 0x00397FB8 File Offset: 0x003961B8
 		public IQuestScheduleRoleTowerChallengeTitleT UnPack()
 		{
 			IQuestScheduleRoleTowerChallengeTitleT questScheduleRoleTowerChallengeTitleT = new IQuestScheduleRoleTowerChallengeTitleT();
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return questScheduleRoleTowerChallengeTitleT;
 		}
 
-		// Token: 0x06017C75 RID: 97397 RVA: 0x0036E1E0 File Offset: 0x0036C3E0
+		// Token: 0x0601930E RID: 103182 RVA: 0x00397FD4 File Offset: 0x003961D4
 		public void UnPackTo(IQuestScheduleRoleTowerChallengeTitleT _o)
 		{
 			_o.Type = this.Type;
@@ -176,7 +176,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017C76 RID: 97398 RVA: 0x0036E2D4 File Offset: 0x0036C4D4
+		// Token: 0x0601930F RID: 103183 RVA: 0x003980C8 File Offset: 0x003962C8
 		public static Offset<IQuestScheduleRoleTowerChallengeTitle> Pack(FlatBufferBuilder builder, IQuestScheduleRoleTowerChallengeTitleT _o)
 		{
 			if (_o == null)
@@ -188,7 +188,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestScheduleRoleTowerChallengeTitle.CreateIQuestScheduleRoleTowerChallengeTitle(builder, _o.Type, titleType_type, titleTypeOffset);
 		}
 
-		// Token: 0x0400BB62 RID: 47970
+		// Token: 0x0400C549 RID: 50505
 		private Table __p;
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005EC8 RID: 24264
+	// Token: 0x02004EAD RID: 20141
 	public enum EMatType
 	{
-		// Token: 0x0402034E RID: 131918
+		// Token: 0x0401AE15 RID: 110101
 		All,
-		// Token: 0x0402034F RID: 131919
+		// Token: 0x0401AE16 RID: 110102
 		Weapon,
-		// Token: 0x04020350 RID: 131920
+		// Token: 0x0401AE17 RID: 110103
 		Character,
-		// Token: 0x04020351 RID: 131921
+		// Token: 0x0401AE18 RID: 110104
 		Experience
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A2B RID: 10795
+	// Token: 0x02002D18 RID: 11544
 	public class IBvbEndTurn : IBvbPlayerOperationType
 	{
-		// Token: 0x0600EDDF RID: 60895 RVA: 0x0022A9E1 File Offset: 0x00228BE1
-		[NullableContext(1)]
+		// Token: 0x0600FC77 RID: 64631 RVA: 0x00248395 File Offset: 0x00246595
 		public static IBvbEndTurn Create(IBvbEndTurn? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B4B RID: 19275
-		// (get) Token: 0x0600EDE0 RID: 60896 RVA: 0x0022AA00 File Offset: 0x00228C00
+		// Token: 0x17004EF5 RID: 20213
+		// (get) Token: 0x0600FC78 RID: 64632 RVA: 0x002483B4 File Offset: 0x002465B4
 		public override EBvbPlayerOperationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082ED RID: 33517
+		// Token: 0x040089E0 RID: 35296
 		private IBvbEndTurn Instance;
 	}
 }

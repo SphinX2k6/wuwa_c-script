@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DE0 RID: 3552
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000ED8 RID: 3800
 	public class ITimeScheduleEntityTemplateNpcSource : ITimeScheduleNpcSource
 	{
-		// Token: 0x06005085 RID: 20613 RVA: 0x000C6D81 File Offset: 0x000C4F81
+		// Token: 0x0600559E RID: 21918 RVA: 0x000D2501 File Offset: 0x000D0701
 		public static ITimeScheduleEntityTemplateNpcSource Create(ITimeScheduleEntityTemplateNpcSource? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A82 RID: 6786
-		// (get) Token: 0x06005086 RID: 20614 RVA: 0x000C6DA0 File Offset: 0x000C4FA0
+		// Token: 0x17001BE9 RID: 7145
+		// (get) Token: 0x0600559F RID: 21919 RVA: 0x000D2520 File Offset: 0x000D0720
 		public override ETimeScheduleNpcSourceType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A83 RID: 6787
-		// (get) Token: 0x06005087 RID: 20615 RVA: 0x000C6DB0 File Offset: 0x000C4FB0
+		// Token: 0x17001BEA RID: 7146
+		// (get) Token: 0x060055A0 RID: 21920 RVA: 0x000D2530 File Offset: 0x000D0730
 		public virtual List<string> TemplateIds
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E39 RID: 11833
+		// Token: 0x040030FB RID: 12539
 		private ITimeScheduleEntityTemplateNpcSource Instance;
 
-		// Token: 0x04002E3A RID: 11834
+		// Token: 0x040030FC RID: 12540
 		private List<string> _TemplateIdsCache;
 
-		// Token: 0x04002E3B RID: 11835
+		// Token: 0x040030FD RID: 12541
 		private bool _TemplateIdsInited;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002AF RID: 687
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002F6 RID: 758
 	public class IDefaultAttachTiming : IAttachTiming
 	{
-		// Token: 0x06000CD9 RID: 3289 RVA: 0x00030E34 File Offset: 0x0002F034
+		// Token: 0x06000E09 RID: 3593 RVA: 0x00033D68 File Offset: 0x00031F68
 		private IDefaultAttachTiming_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000CDA RID: 3290 RVA: 0x00030E6C File Offset: 0x0002F06C
+		// Token: 0x06000E0A RID: 3594 RVA: 0x00033DA0 File Offset: 0x00031FA0
 		public static IDefaultAttachTiming Create([Nullable(2)] IDefaultAttachTiming instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000CDB RID: 3291 RVA: 0x00030E7F File Offset: 0x0002F07F
+		// Token: 0x06000E0B RID: 3595 RVA: 0x00033DB3 File Offset: 0x00031FB3
 		public static IDefaultAttachTiming CreateFromSetValue([Nullable(2)] IDefaultAttachTiming_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000CDC RID: 3292 RVA: 0x00030E92 File Offset: 0x0002F092
+		// Token: 0x06000E0C RID: 3596 RVA: 0x00033DC6 File Offset: 0x00031FC6
 		public new IDefaultAttachTiming_SetValue ToSetValue()
 		{
 			return new IDefaultAttachTiming_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003C3 RID: 963
-		// (get) Token: 0x06000CDD RID: 3293 RVA: 0x00030EA5 File Offset: 0x0002F0A5
-		// (set) Token: 0x06000CDE RID: 3294 RVA: 0x00030ED0 File Offset: 0x0002F0D0
+		// Token: 0x17000410 RID: 1040
+		// (get) Token: 0x06000E0D RID: 3597 RVA: 0x00033DD9 File Offset: 0x00031FD9
+		// (set) Token: 0x06000E0E RID: 3598 RVA: 0x00033E04 File Offset: 0x00032004
 		public override EAttachTimingType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BDA RID: 3034
+		// Token: 0x04000CC4 RID: 3268
 		[Nullable(2)]
 		protected new IDefaultAttachTiming FbInstance;
 
-		// Token: 0x04000BDB RID: 3035
+		// Token: 0x04000CC5 RID: 3269
 		[Nullable(2)]
 		protected new IDefaultAttachTiming_SetValue PocoInterface;
 	}

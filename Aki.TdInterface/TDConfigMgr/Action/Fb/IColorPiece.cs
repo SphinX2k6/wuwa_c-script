@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200285B RID: 10331
+	// Token: 0x02002B2E RID: 11054
 	public class IColorPiece
 	{
-		// Token: 0x0600E502 RID: 58626 RVA: 0x0021B0C0 File Offset: 0x002192C0
-		[NullableContext(1)]
+		// Token: 0x0600F327 RID: 62247 RVA: 0x00237F24 File Offset: 0x00236124
 		public static IColorPiece Create(IColorPiece? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700460E RID: 17934
-		// (get) Token: 0x0600E503 RID: 58627 RVA: 0x0021B0DF File Offset: 0x002192DF
+		// Token: 0x17004979 RID: 18809
+		// (get) Token: 0x0600F328 RID: 62248 RVA: 0x00237F43 File Offset: 0x00236143
 		public virtual EPieceColorType Color
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EAF RID: 32431
+		// Token: 0x0400856C RID: 34156
 		private IColorPiece Instance;
 	}
 }

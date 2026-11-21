@@ -6,18 +6,18 @@ using CSharpScript.Game.Module.FilterSort.Sort.BaseSortGroup;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020018AA RID: 6314
+// Token: 0x02000D63 RID: 3427
 [NullableContext(2)]
 [Nullable(0)]
 public class SortView : UiViewBase
 {
-	// Token: 0x0600B8CD RID: 47309 RVA: 0x0029EC08 File Offset: 0x0029CE08
+	// Token: 0x06008CB6 RID: 36022 RVA: 0x002A9328 File Offset: 0x002A7528
 	[NullableContext(1)]
 	public SortView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600B8CE RID: 47310 RVA: 0x0029EC14 File Offset: 0x0029CE14
+	// Token: 0x06008CB7 RID: 36023 RVA: 0x002A9334 File Offset: 0x002A7534
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,14 +34,14 @@ public class SortView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600B8CF RID: 47311 RVA: 0x0029ECBF File Offset: 0x0029CEBF
+	// Token: 0x06008CB8 RID: 36024 RVA: 0x002A93DF File Offset: 0x002A75DF
 	private void ResetView()
 	{
 		this.BaseSortGroup.Reset();
 		this.AttributeSortGroup.Reset();
 	}
 
-	// Token: 0x0600B8D0 RID: 47312 RVA: 0x0029ECD8 File Offset: 0x0029CED8
+	// Token: 0x06008CB9 RID: 36025 RVA: 0x002A93F8 File Offset: 0x002A75F8
 	private void SaveDataAndCloseView()
 	{
 		SortResultData sortResultData = SortModel.Instance.GetSortResultData(this.ViewData.UniqueId);
@@ -56,7 +56,7 @@ public class SortView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600B8D1 RID: 47313 RVA: 0x0029ED56 File Offset: 0x0029CF56
+	// Token: 0x06008CBA RID: 36026 RVA: 0x002A9476 File Offset: 0x002A7676
 	protected override void OnStart()
 	{
 		this.BaseSortGroup = new BaseSortGroup(base.GetItem(2));
@@ -65,43 +65,43 @@ public class SortView : UiViewBase
 		this.InitSort();
 	}
 
-	// Token: 0x0600B8D2 RID: 47314 RVA: 0x0029ED93 File Offset: 0x0029CF93
+	// Token: 0x06008CBB RID: 36027 RVA: 0x002A94B3 File Offset: 0x002A76B3
 	protected override void OnBeforeDestroy()
 	{
 		this.BaseSortGroup.Destroy(null);
 		this.AttributeSortGroup.Destroy(null);
 	}
 
-	// Token: 0x0600B8D3 RID: 47315 RVA: 0x0029EDAD File Offset: 0x0029CFAD
+	// Token: 0x06008CBC RID: 36028 RVA: 0x002A94CD File Offset: 0x002A76CD
 	private void InitSort()
 	{
 		this.BaseSortGroup.Init(this.ViewData.UniqueId);
 		this.AttributeSortGroup.Init(this.ViewData.UniqueId);
 	}
 
-	// Token: 0x040053BB RID: 21435
+	// Token: 0x04005466 RID: 21606
 	private BaseSortGroup BaseSortGroup;
 
-	// Token: 0x040053BC RID: 21436
+	// Token: 0x04005467 RID: 21607
 	private AttributeSortGroup AttributeSortGroup;
 
-	// Token: 0x040053BD RID: 21437
+	// Token: 0x04005468 RID: 21608
 	private SortViewData ViewData;
 
-	// Token: 0x02007E39 RID: 32313
+	// Token: 0x02006FC0 RID: 28608
 	[NullableContext(0)]
 	private static class ECompDefine
 	{
-		// Token: 0x040294F4 RID: 169204
+		// Token: 0x04024821 RID: 149537
 		public const int ClearButton = 0;
 
-		// Token: 0x040294F5 RID: 169205
+		// Token: 0x04024822 RID: 149538
 		public const int ConfirmButton = 1;
 
-		// Token: 0x040294F6 RID: 169206
+		// Token: 0x04024823 RID: 149539
 		public const int BaseLayoutItem = 2;
 
-		// Token: 0x040294F7 RID: 169207
+		// Token: 0x04024824 RID: 149540
 		public const int AttributeLayoutItem = 3;
 	}
 }

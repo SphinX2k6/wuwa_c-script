@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001B88 RID: 7048
+// Token: 0x02001047 RID: 4167
 public class ProgressItem : IProgressItem
 {
-	// Token: 0x17001160 RID: 4448
-	// (get) Token: 0x0600D1CD RID: 53709 RVA: 0x00301EDD File Offset: 0x003000DD
-	// (set) Token: 0x0600D1CE RID: 53710 RVA: 0x00301EE5 File Offset: 0x003000E5
+	// Token: 0x17001185 RID: 4485
+	// (get) Token: 0x0600A5DE RID: 42462 RVA: 0x0030CFB5 File Offset: 0x0030B1B5
+	// (set) Token: 0x0600A5DF RID: 42463 RVA: 0x0030CFBD File Offset: 0x0030B1BD
 	public int DayIndex { get; set; }
 
-	// Token: 0x17001161 RID: 4449
-	// (get) Token: 0x0600D1CF RID: 53711 RVA: 0x00301EEE File Offset: 0x003000EE
-	// (set) Token: 0x0600D1D0 RID: 53712 RVA: 0x00301EF6 File Offset: 0x003000F6
+	// Token: 0x17001186 RID: 4486
+	// (get) Token: 0x0600A5E0 RID: 42464 RVA: 0x0030CFC6 File Offset: 0x0030B1C6
+	// (set) Token: 0x0600A5E1 RID: 42465 RVA: 0x0030CFCE File Offset: 0x0030B1CE
 	public bool IsPassed { get; set; }
 }

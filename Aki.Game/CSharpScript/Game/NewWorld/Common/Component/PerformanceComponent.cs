@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x02007089 RID: 28809
+	// Token: 0x0200620A RID: 25098
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PerformanceComponent : EntityComponent
 	{
-		// Token: 0x060462C5 RID: 287429 RVA: 0x011889E8 File Offset: 0x01186BE8
+		// Token: 0x0603C4ED RID: 247021 RVA: 0x01131E42 File Offset: 0x01130042
 		public void SetIsSceneInteractionJumpToEnd(bool value)
 		{
 			this.IsSceneInteractionJumpToEnd = value;
 		}
 
-		// Token: 0x060462C6 RID: 287430 RVA: 0x011889F4 File Offset: 0x01186BF4
+		// Token: 0x0603C4EE RID: 247022 RVA: 0x01131E4C File Offset: 0x0113004C
 		protected override bool OnStart()
 		{
 			this.CommonEffectTimerId = null;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x060462C7 RID: 287431 RVA: 0x01188A48 File Offset: 0x01186C48
+		// Token: 0x0603C4EF RID: 247023 RVA: 0x01131EA0 File Offset: 0x011300A0
 		protected override void OnActivate()
 		{
 			if (this.ActorComponent.SkeletalMesh == null)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			EventSystem.Instance.AddWithTarget<IReadOnlyList<int>, IReadOnlyList<int>>(base.Entity, EEventName.OnLevelTagChanged, new Action<IReadOnlyList<int>, IReadOnlyList<int>>(this.CheckGameplayTagChange2));
 		}
 
-		// Token: 0x060462C8 RID: 287432 RVA: 0x01188AFC File Offset: 0x01186CFC
+		// Token: 0x0603C4F0 RID: 247024 RVA: 0x01131F54 File Offset: 0x01130154
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.HasWithTarget<IReadOnlyList<int>, IReadOnlyList<int>>(base.Entity, EEventName.OnLevelTagChanged, new Action<IReadOnlyList<int>, IReadOnlyList<int>>(this.CheckGameplayTagChange2)))
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x060462C9 RID: 287433 RVA: 0x01188BA4 File Offset: 0x01186DA4
+		// Token: 0x0603C4F1 RID: 247025 RVA: 0x01131FFC File Offset: 0x011301FC
 		protected override bool OnClear()
 		{
 			if (this.SceneInteractionEffectMap != null)
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x060462CA RID: 287434 RVA: 0x01188CDC File Offset: 0x01186EDC
+		// Token: 0x0603C4F2 RID: 247026 RVA: 0x01132134 File Offset: 0x01130334
 		protected override void OnEnable()
 		{
 			Entity entity = base.Entity;
@@ -117,13 +117,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462CB RID: 287435 RVA: 0x01188D08 File Offset: 0x01186F08
+		// Token: 0x0603C4F3 RID: 247027 RVA: 0x01132160 File Offset: 0x01130360
 		protected override void OnDisable(string reason)
 		{
 			this.SetPerformanceVisible(false);
 		}
 
-		// Token: 0x060462CC RID: 287436 RVA: 0x01188D14 File Offset: 0x01186F14
+		// Token: 0x0603C4F4 RID: 247028 RVA: 0x0113216C File Offset: 0x0113036C
 		protected override void OnChangeTimeDilation(float timeDilation)
 		{
 			PawnTimeScaleComponent component = base.Entity.GetComponent<PawnTimeScaleComponent>();
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462CD RID: 287437 RVA: 0x01188E00 File Offset: 0x01187000
+		// Token: 0x0603C4F5 RID: 247029 RVA: 0x01132258 File Offset: 0x01130458
 		private void CheckGameplayTagChange2(IReadOnlyList<int> added, IReadOnlyList<int> removed)
 		{
 			if (this.ActorComponent.SkeletalMesh == null)
@@ -172,19 +172,19 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462CE RID: 287438 RVA: 0x01188E61 File Offset: 0x01187061
+		// Token: 0x0603C4F6 RID: 247030 RVA: 0x011322B9 File Offset: 0x011304B9
 		private void InitSceneInteractionLevel()
 		{
 			this.UpdateSceneInteractionLevel(true);
 		}
 
-		// Token: 0x060462CF RID: 287439 RVA: 0x01188E6A File Offset: 0x0118706A
+		// Token: 0x0603C4F7 RID: 247031 RVA: 0x011322C2 File Offset: 0x011304C2
 		private void ChangeSceneInteractionLevel()
 		{
 			this.UpdateSceneInteractionLevel(false);
 		}
 
-		// Token: 0x060462D0 RID: 287440 RVA: 0x01188E74 File Offset: 0x01187074
+		// Token: 0x0603C4F8 RID: 247032 RVA: 0x011322CC File Offset: 0x011304CC
 		private void UpdateSceneInteractionLevel(bool needInit)
 		{
 			SceneItemStateComponent component = base.Entity.GetComponent<SceneItemStateComponent>();
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462D1 RID: 287441 RVA: 0x0118900C File Offset: 0x0118720C
+		// Token: 0x0603C4F9 RID: 247033 RVA: 0x01132464 File Offset: 0x01130664
 		private void InitSceneInteractionEffects()
 		{
 			if (this.LevelTagComponent == null)
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462D2 RID: 287442 RVA: 0x011890F8 File Offset: 0x011872F8
+		// Token: 0x0603C4FA RID: 247034 RVA: 0x01132550 File Offset: 0x01130750
 		private void InitSceneInteractionExtraEffects()
 		{
 			if (this.LevelTagComponent == null)
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462D3 RID: 287443 RVA: 0x01189178 File Offset: 0x01187378
+		// Token: 0x0603C4FB RID: 247035 RVA: 0x011325D0 File Offset: 0x011307D0
 		private bool CheckAndAddSceneInteractionByTag(int tagId)
 		{
 			if (this.SceneInteractionEffectMap.ContainsKey(tagId))
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x060462D4 RID: 287444 RVA: 0x011891EC File Offset: 0x011873EC
+		// Token: 0x0603C4FC RID: 247036 RVA: 0x01132644 File Offset: 0x01130844
 		private void ChangeSceneInteractionEffects(IReadOnlyList<int> added, IReadOnlyList<int> removed)
 		{
 			foreach (int key in removed)
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462D5 RID: 287445 RVA: 0x011892AC File Offset: 0x011874AC
+		// Token: 0x0603C4FD RID: 247037 RVA: 0x01132704 File Offset: 0x01130904
 		private void ChangeSceneInteractionExtraEffects(IReadOnlyList<int> added, IReadOnlyList<int> removed)
 		{
 			foreach (int tagId in removed)
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462D6 RID: 287446 RVA: 0x01189378 File Offset: 0x01187578
+		// Token: 0x0603C4FE RID: 247038 RVA: 0x011327D0 File Offset: 0x011309D0
 		public void LoadAndChangeStaticMesh()
 		{
 			if (this.ActorComponent.SkeletalMesh != null)
@@ -404,7 +404,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462D7 RID: 287447 RVA: 0x0118946C File Offset: 0x0118766C
+		// Token: 0x0603C4FF RID: 247039 RVA: 0x011328C4 File Offset: 0x01130AC4
 		private void InitCommonEffect()
 		{
 			FGameplayTag? gameplayTagById = GameplayTagUtils.GetGameplayTagById(GameplayTagDefine.EGameplayTagId["物体.表现.常驻特效"]);
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.SetEffectVisibleById(this.CommonEffect, visible);
 		}
 
-		// Token: 0x060462D8 RID: 287448 RVA: 0x01189544 File Offset: 0x01187744
+		// Token: 0x0603C500 RID: 247040 RVA: 0x0113299C File Offset: 0x01130B9C
 		private bool CheckAndUpdateCommonEffectTag()
 		{
 			if (this.CommonEffect == 0)
@@ -448,7 +448,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return this.CurCommonEffectTagId != 0;
 		}
 
-		// Token: 0x060462D9 RID: 287449 RVA: 0x011895A4 File Offset: 0x011877A4
+		// Token: 0x0603C501 RID: 247041 RVA: 0x011329FC File Offset: 0x01130BFC
 		private void SetCommonEffectParam()
 		{
 			if (this.CommonEffect == 0)
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.SetCommonEffectByNiagaraParam(sniagaraParam);
 		}
 
-		// Token: 0x060462DA RID: 287450 RVA: 0x011895F4 File Offset: 0x011877F4
+		// Token: 0x0603C502 RID: 247042 RVA: 0x01132A4C File Offset: 0x01130C4C
 		private void ChangeCommonEffectParam()
 		{
 			FGameplayTag? gameplayTagById = GameplayTagUtils.GetGameplayTagById(this.CurCommonEffectTagId);
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.SetCommonEffectByNiagaraParam(sniagaraParam);
 		}
 
-		// Token: 0x060462DB RID: 287451 RVA: 0x011896A0 File Offset: 0x011878A0
+		// Token: 0x0603C503 RID: 247043 RVA: 0x01132AF8 File Offset: 0x01130CF8
 		private void InitOwnEffects()
 		{
 			if (this.LevelTagComponent == null)
@@ -510,7 +510,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462DC RID: 287452 RVA: 0x011896FC File Offset: 0x011878FC
+		// Token: 0x0603C504 RID: 247044 RVA: 0x01132B54 File Offset: 0x01130D54
 		private void CheckAndAddOwnEffectByTag(int tagId)
 		{
 			if (this.OwnEffectMap.ContainsKey(tagId))
@@ -536,7 +536,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462DD RID: 287453 RVA: 0x01189794 File Offset: 0x01187994
+		// Token: 0x0603C505 RID: 247045 RVA: 0x01132BEC File Offset: 0x01130DEC
 		private void ChangeOwnEffects(IReadOnlyList<int> added, IReadOnlyList<int> removed)
 		{
 			foreach (int key in removed)
@@ -584,7 +584,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462DE RID: 287454 RVA: 0x01189904 File Offset: 0x01187B04
+		// Token: 0x0603C506 RID: 247046 RVA: 0x01132D5C File Offset: 0x01130F5C
 		private int? GetResTag<[Nullable(2)] T>(TMap<FGameplayTag, T> map)
 		{
 			if (this.LevelTagComponent.HasTag(PerformanceComponent.ConcealedGameplayTagId))
@@ -607,7 +607,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return this.ResTagId;
 		}
 
-		// Token: 0x060462DF RID: 287455 RVA: 0x011899BC File Offset: 0x01187BBC
+		// Token: 0x0603C507 RID: 247047 RVA: 0x01132E14 File Offset: 0x01131014
 		[NullableContext(2)]
 		private int SpawnEffectByPath(string effectDataPath, [Nullable(1)] string reason, Action<ELoadEffectResult, int> callback)
 		{
@@ -625,13 +625,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return instance.SpawnEffect(world, ftransformDouble, effectDataPath, reason, new EffectContext(new int?(base.Entity.Id), null, false), EEffectType.Scene, null, callback, null, false, false);
 		}
 
-		// Token: 0x060462E0 RID: 287456 RVA: 0x01189A1E File Offset: 0x01187C1E
+		// Token: 0x0603C508 RID: 247048 RVA: 0x01132E76 File Offset: 0x01131076
 		private void SetCommonEffectByNiagaraParam(SNiagaraParam niagaraParam)
 		{
 			EffectSystem.Instance.SetEffectDataByNiagaraParam(this.CommonEffect, niagaraParam, true);
 		}
 
-		// Token: 0x060462E1 RID: 287457 RVA: 0x01189A32 File Offset: 0x01187C32
+		// Token: 0x0603C509 RID: 247049 RVA: 0x01132E8A File Offset: 0x0113108A
 		public bool ApplyNiagaraParameters(string key, FVector value)
 		{
 			if (this.CommonEffect == 0 || this.CommonEffectNiagaraComp == null)
@@ -642,7 +642,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x060462E2 RID: 287458 RVA: 0x01189A5F File Offset: 0x01187C5F
+		// Token: 0x0603C50A RID: 247050 RVA: 0x01132EB7 File Offset: 0x011310B7
 		public bool ApplyNiagaraParameters(string key, float value)
 		{
 			if (this.CommonEffect == 0 || this.CommonEffectNiagaraComp == null)
@@ -653,7 +653,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x060462E3 RID: 287459 RVA: 0x01189A8B File Offset: 0x01187C8B
+		// Token: 0x0603C50B RID: 247051 RVA: 0x01132EE3 File Offset: 0x011310E3
 		private void DisposeCommonEffectTimer()
 		{
 			if (TimerSystem.Instance.Has(this.CommonEffectTimerId))
@@ -662,14 +662,14 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462E4 RID: 287460 RVA: 0x01189AB0 File Offset: 0x01187CB0
+		// Token: 0x0603C50C RID: 247052 RVA: 0x01132F08 File Offset: 0x01131108
 		private void OnSceneInteractionLoadCompleted()
 		{
 			this.InitSceneInteractionEffects();
 			this.InitSceneInteractionExtraEffects();
 		}
 
-		// Token: 0x060462E5 RID: 287461 RVA: 0x01189AC0 File Offset: 0x01187CC0
+		// Token: 0x0603C50D RID: 247053 RVA: 0x01132F18 File Offset: 0x01131118
 		private void OnSpawnEffectByPathCompleted(ELoadEffectResult result, int handle)
 		{
 			if (result != ELoadEffectResult.Success)
@@ -688,7 +688,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462E6 RID: 287462 RVA: 0x01189B30 File Offset: 0x01187D30
+		// Token: 0x0603C50E RID: 247054 RVA: 0x01132F88 File Offset: 0x01131188
 		public void SetPerformanceVisible(bool visible)
 		{
 			this.SetEffectVisibleById(this.CommonEffect, visible);
@@ -701,7 +701,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462E7 RID: 287463 RVA: 0x01189BA0 File Offset: 0x01187DA0
+		// Token: 0x0603C50F RID: 247055 RVA: 0x01132FF8 File Offset: 0x011311F8
 		private void SetEffectVisibleById(int handleId, bool visible)
 		{
 			if (EffectSystem.Instance.IsValid(handleId))
@@ -711,7 +711,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462E8 RID: 287464 RVA: 0x01189BD8 File Offset: 0x01187DD8
+		// Token: 0x0603C510 RID: 247056 RVA: 0x01133030 File Offset: 0x01131230
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -719,154 +719,176 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return false;
 			}
 			PerformanceComponent performanceComponent = (PerformanceComponent)componentTemplate;
-			if (base.CanResetComponentProperty("LevelTagComponent"))
+			if (performanceComponent.LevelTagComponent == null)
 			{
-				if (performanceComponent.LevelTagComponent == null)
-				{
-					this.LevelTagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.LevelTagComponent), "LevelTagComponent"))
-				{
-					return false;
-				}
+				this.LevelTagComponent = null;
 			}
-			if (base.CanResetComponentProperty("ActorComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LevelTagComponent), "LevelTagComponent"))
 			{
-				if (performanceComponent.ActorComponent == null)
-				{
-					this.ActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComponent), "ActorComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SceneInteractionEffectMap"))
+			if (performanceComponent.ActorComponent == null)
 			{
-				if (performanceComponent.SceneInteractionEffectMap == null)
-				{
-					this.SceneInteractionEffectMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, ESceneInteractionEffect>>(this.SceneInteractionEffectMap), "SceneInteractionEffectMap"))
-				{
-					return false;
-				}
+				this.ActorComponent = null;
 			}
-			if (base.CanResetComponentProperty("CurSceneInteractionLevelTagId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
 			{
-				this.CurSceneInteractionLevelTagId = performanceComponent.CurSceneInteractionLevelTagId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurStaticMeshTagId"))
+			if (performanceComponent.SceneInteractionEffectMap == null)
 			{
-				this.CurStaticMeshTagId = performanceComponent.CurStaticMeshTagId;
+				this.SceneInteractionEffectMap = null;
 			}
-			if (base.CanResetComponentProperty("CurCommonEffectTagId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SceneInteractionEffectMap), "SceneInteractionEffectMap"))
 			{
-				this.CurCommonEffectTagId = performanceComponent.CurCommonEffectTagId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CommonEffect"))
+			this.CurSceneInteractionLevelTagId = performanceComponent.CurSceneInteractionLevelTagId;
+			this.CurStaticMeshTagId = performanceComponent.CurStaticMeshTagId;
+			this.CurCommonEffectTagId = performanceComponent.CurCommonEffectTagId;
+			this.CommonEffect = performanceComponent.CommonEffect;
+			this.CommonEffectNiagaraComp = performanceComponent.CommonEffectNiagaraComp;
+			if (performanceComponent.OwnEffectMap == null)
 			{
-				this.CommonEffect = performanceComponent.CommonEffect;
+				this.OwnEffectMap = null;
 			}
-			if (base.CanResetComponentProperty("CommonEffectNiagaraComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OwnEffectMap), "OwnEffectMap"))
 			{
-				this.CommonEffectNiagaraComp = performanceComponent.CommonEffectNiagaraComp;
+				return false;
 			}
-			if (base.CanResetComponentProperty("OwnEffectMap"))
+			this.LastChangeEffect = performanceComponent.LastChangeEffect;
+			if (performanceComponent.OnChangeEffectFinished == null)
 			{
-				if (performanceComponent.OwnEffectMap == null)
-				{
-					this.OwnEffectMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, int>>(this.OwnEffectMap), "OwnEffectMap"))
-				{
-					return false;
-				}
+				this.OnChangeEffectFinished = null;
 			}
-			if (base.CanResetComponentProperty("LastChangeEffect"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnChangeEffectFinished), "OnChangeEffectFinished"))
 			{
-				this.LastChangeEffect = performanceComponent.LastChangeEffect;
+				return false;
 			}
-			if (base.CanResetComponentProperty("OnChangeEffectFinished"))
+			if (performanceComponent.OnChangeCommonEffectFinished == null)
 			{
-				if (performanceComponent.OnChangeEffectFinished == null)
-				{
-					this.OnChangeEffectFinished = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<int>>(this.OnChangeEffectFinished), "OnChangeEffectFinished"))
-				{
-					return false;
-				}
+				this.OnChangeCommonEffectFinished = null;
 			}
-			if (base.CanResetComponentProperty("OnChangeCommonEffectFinished"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnChangeCommonEffectFinished), "OnChangeCommonEffectFinished"))
 			{
-				if (performanceComponent.OnChangeCommonEffectFinished == null)
-				{
-					this.OnChangeCommonEffectFinished = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TTimerAction>(this.OnChangeCommonEffectFinished), "OnChangeCommonEffectFinished"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CommonEffectTimerId"))
+			if (performanceComponent.CommonEffectTimerId == null)
 			{
-				if (performanceComponent.CommonEffectTimerId == null)
-				{
-					this.CommonEffectTimerId = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.CommonEffectTimerId), "CommonEffectTimerId"))
-				{
-					return false;
-				}
+				this.CommonEffectTimerId = null;
 			}
-			if (base.CanResetComponentProperty("ModelConfig"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CommonEffectTimerId), "CommonEffectTimerId"))
 			{
-				if (performanceComponent.ModelConfig == null)
-				{
-					this.ModelConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SModelConfig>(this.ModelConfig), "ModelConfig"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsSceneInteractionJumpToEnd"))
+			if (performanceComponent.ModelConfig == null)
 			{
-				this.IsSceneInteractionJumpToEnd = performanceComponent.IsSceneInteractionJumpToEnd;
+				this.ModelConfig = null;
 			}
-			if (base.CanResetComponentProperty("ResTagId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ModelConfig), "ModelConfig"))
 			{
-				this.ResTagId = performanceComponent.ResTagId;
+				return false;
 			}
+			this.IsSceneInteractionJumpToEnd = performanceComponent.IsSceneInteractionJumpToEnd;
+			this.ResTagId = performanceComponent.ResTagId;
 			return true;
 		}
 
-		// Token: 0x04024C1F RID: 150559
+		// Token: 0x170071D3 RID: 29139
+		// (get) Token: 0x0603C511 RID: 247057 RVA: 0x0113320E File Offset: 0x0113140E
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071D4 RID: 29140
+		// (get) Token: 0x0603C512 RID: 247058 RVA: 0x01133211 File Offset: 0x01131411
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071D5 RID: 29141
+		// (get) Token: 0x0603C513 RID: 247059 RVA: 0x01133214 File Offset: 0x01131414
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071D6 RID: 29142
+		// (get) Token: 0x0603C514 RID: 247060 RVA: 0x01133217 File Offset: 0x01131417
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071D7 RID: 29143
+		// (get) Token: 0x0603C515 RID: 247061 RVA: 0x0113321A File Offset: 0x0113141A
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071D8 RID: 29144
+		// (get) Token: 0x0603C516 RID: 247062 RVA: 0x0113321D File Offset: 0x0113141D
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071D9 RID: 29145
+		// (get) Token: 0x0603C517 RID: 247063 RVA: 0x01133220 File Offset: 0x01131420
+		public override bool NeedChangeTimeDilationInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FEDA RID: 130778
 		[Nullable(2)]
 		private LevelTagComponent LevelTagComponent;
 
-		// Token: 0x04024C20 RID: 150560
+		// Token: 0x0401FEDB RID: 130779
 		[Nullable(2)]
 		private BaseActorComponent ActorComponent;
 
-		// Token: 0x04024C21 RID: 150561
+		// Token: 0x0401FEDC RID: 130780
 		[Nullable(2)]
 		private Dictionary<int, ESceneInteractionEffect> SceneInteractionEffectMap;
 
-		// Token: 0x04024C22 RID: 150562
+		// Token: 0x0401FEDD RID: 130781
 		private int CurSceneInteractionLevelTagId;
 
-		// Token: 0x04024C23 RID: 150563
+		// Token: 0x0401FEDE RID: 130782
 		private int CurStaticMeshTagId;
 
-		// Token: 0x04024C24 RID: 150564
+		// Token: 0x0401FEDF RID: 130783
 		private int CurCommonEffectTagId;
 
-		// Token: 0x04024C25 RID: 150565
+		// Token: 0x0401FEE0 RID: 130784
 		private int CommonEffect;
 
-		// Token: 0x04024C26 RID: 150566
+		// Token: 0x0401FEE1 RID: 130785
 		[Nullable(new byte[]
 		{
 			0,
@@ -875,36 +897,36 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 		})]
 		private OneOf<KuroEffectNiagaraComponentHandle, UNiagaraComponent>? CommonEffectNiagaraComp;
 
-		// Token: 0x04024C27 RID: 150567
+		// Token: 0x0401FEE2 RID: 130786
 		[Nullable(2)]
 		private Dictionary<int, int> OwnEffectMap;
 
-		// Token: 0x04024C28 RID: 150568
+		// Token: 0x0401FEE3 RID: 130787
 		private int LastChangeEffect;
 
-		// Token: 0x04024C29 RID: 150569
+		// Token: 0x0401FEE4 RID: 130788
 		[Nullable(2)]
 		private Action<int> OnChangeEffectFinished;
 
-		// Token: 0x04024C2A RID: 150570
+		// Token: 0x0401FEE5 RID: 130789
 		[Nullable(2)]
 		private TTimerAction OnChangeCommonEffectFinished;
 
-		// Token: 0x04024C2B RID: 150571
+		// Token: 0x0401FEE6 RID: 130790
 		[Nullable(2)]
 		private TimerHandle CommonEffectTimerId;
 
-		// Token: 0x04024C2C RID: 150572
+		// Token: 0x0401FEE7 RID: 130791
 		[Nullable(2)]
 		private SModelConfig ModelConfig;
 
-		// Token: 0x04024C2D RID: 150573
+		// Token: 0x0401FEE8 RID: 130792
 		private bool IsSceneInteractionJumpToEnd;
 
-		// Token: 0x04024C2E RID: 150574
+		// Token: 0x0401FEE9 RID: 130793
 		private int? ResTagId;
 
-		// Token: 0x04024C2F RID: 150575
+		// Token: 0x0401FEEA RID: 130794
 		private static readonly int ConcealedGameplayTagId = GameplayTagDefine.EGameplayTagId["物体.表现.隐匿"];
 	}
 }

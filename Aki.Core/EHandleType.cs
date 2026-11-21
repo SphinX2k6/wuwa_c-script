@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200008B RID: 139
+// Token: 0x0200008D RID: 141
 public enum EHandleType
 {
-	// Token: 0x040003E7 RID: 999
+	// Token: 0x040003F5 RID: 1013
 	Forever,
-	// Token: 0x040003E8 RID: 1000
+	// Token: 0x040003F6 RID: 1014
 	Once
 }

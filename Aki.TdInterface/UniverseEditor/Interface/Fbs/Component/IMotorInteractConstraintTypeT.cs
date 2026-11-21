@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055C1 RID: 21953
+	// Token: 0x02005B5F RID: 23391
 	public class IMotorInteractConstraintTypeT
 	{
-		// Token: 0x1700A23F RID: 41535
-		// (get) Token: 0x060245EB RID: 148971 RVA: 0x005053DE File Offset: 0x005035DE
-		// (set) Token: 0x060245EC RID: 148972 RVA: 0x005053E6 File Offset: 0x005035E6
+		// Token: 0x1700AAC7 RID: 43719
+		// (get) Token: 0x060267F8 RID: 157688 RVA: 0x00545956 File Offset: 0x00543B56
+		// (set) Token: 0x060267F9 RID: 157689 RVA: 0x0054595E File Offset: 0x00543B5E
 		public EMotorInteractConstraintType Type { get; set; }
 
-		// Token: 0x060245ED RID: 148973 RVA: 0x005053EF File Offset: 0x005035EF
+		// Token: 0x060267FA RID: 157690 RVA: 0x00545967 File Offset: 0x00543B67
 		public IMotorInteractConstraintTypeT()
 		{
 			this.Type = EMotorInteractConstraintType.FaceToTarget;

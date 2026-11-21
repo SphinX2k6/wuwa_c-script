@@ -11,13 +11,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 {
-	// Token: 0x0200723B RID: 29243
+	// Token: 0x020062F0 RID: 25328
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class PortalController : ControllerBase
 	{
-		// Token: 0x06047AAE RID: 293550 RVA: 0x012572A8 File Offset: 0x012554A8
+		// Token: 0x0603D410 RID: 250896 RVA: 0x011AFF58 File Offset: 0x011AE158
 		public unsafe void RegisterPair(long entityId, PortalController.PortalPairParams paramsObj, bool isDynamic = false, bool isAddToCache = true)
 		{
 			if (PortalModel.Instance.GetPortal(entityId) != null)
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047AAF RID: 293551 RVA: 0x0125760C File Offset: 0x0125580C
+		// Token: 0x0603D411 RID: 250897 RVA: 0x011B02BC File Offset: 0x011AE4BC
 		public void UnRegisterPair(long entityId, bool isDynamic = false, bool isRemoveFromCache = true, bool registerNewFromCache = false)
 		{
 			BP_Portal_C portal = PortalModel.Instance.GetPortal(entityId);
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047AB0 RID: 293552 RVA: 0x01257770 File Offset: 0x01255970
+		// Token: 0x0603D412 RID: 250898 RVA: 0x011B0420 File Offset: 0x011AE620
 		public void RegisterDynamicPortals()
 		{
 			if (this.DynamicCreatureDataIds.Count >= 2)
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047AB1 RID: 293553 RVA: 0x012579F4 File Offset: 0x01255BF4
+		// Token: 0x0603D413 RID: 250899 RVA: 0x011B06A4 File Offset: 0x011AE8A4
 		public void UnRegisterDynamicPortals(bool registerNewFromCache = false)
 		{
 			if (this.HasDynamicPortal)
@@ -329,7 +329,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047AB2 RID: 293554 RVA: 0x01257AAC File Offset: 0x01255CAC
+		// Token: 0x0603D414 RID: 250900 RVA: 0x011B075C File Offset: 0x011AE95C
 		[return: Nullable(2)]
 		public SceneItemPortalComponent GetPairDynamicPortal(SceneItemPortalComponent portal)
 		{
@@ -409,7 +409,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return null;
 		}
 
-		// Token: 0x06047AB3 RID: 293555 RVA: 0x01257C14 File Offset: 0x01255E14
+		// Token: 0x0603D415 RID: 250901 RVA: 0x011B08C4 File Offset: 0x011AEAC4
 		public void AfterGenerateDynamicPortal(SceneItemPortalComponent portal)
 		{
 			long creatureDataId = portal.GetCreatureDataId();
@@ -456,7 +456,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047AB4 RID: 293556 RVA: 0x01257D04 File Offset: 0x01255F04
+		// Token: 0x0603D416 RID: 250902 RVA: 0x011B09B4 File Offset: 0x011AEBB4
 		public void AfterDeleteDynamicPortal(SceneItemPortalComponent portal)
 		{
 			long creatureDataId = portal.GetCreatureDataId();
@@ -481,14 +481,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047AB5 RID: 293557 RVA: 0x01257DA5 File Offset: 0x01255FA5
+		// Token: 0x0603D417 RID: 250903 RVA: 0x011B0A55 File Offset: 0x011AEC55
 		protected override bool OnInit()
 		{
 			EventSystem.Instance.Add<string, int>(EEventName.OnChangeModuleDebugLevel, new Action<string, int>(this.OnChangeModuleDebugLevel));
 			return true;
 		}
 
-		// Token: 0x06047AB6 RID: 293558 RVA: 0x01257DC4 File Offset: 0x01255FC4
+		// Token: 0x0603D418 RID: 250904 RVA: 0x011B0A74 File Offset: 0x011AEC74
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove<string, int>(EEventName.OnChangeModuleDebugLevel, new Action<string, int>(this.OnChangeModuleDebugLevel));
@@ -500,7 +500,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return true;
 		}
 
-		// Token: 0x06047AB7 RID: 293559 RVA: 0x01257E24 File Offset: 0x01256024
+		// Token: 0x0603D419 RID: 250905 RVA: 0x011B0AD4 File Offset: 0x011AECD4
 		public void OnChangeModuleDebugLevel(string key, int level)
 		{
 			if (key != "Portal")
@@ -514,8 +514,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x17009E42 RID: 40514
-		// (get) Token: 0x06047AB8 RID: 293560 RVA: 0x01257E94 File Offset: 0x01256094
+		// Token: 0x170073F9 RID: 29689
+		// (get) Token: 0x0603D41A RID: 250906 RVA: 0x011B0B44 File Offset: 0x011AED44
 		public static PortalController Instance
 		{
 			get
@@ -524,7 +524,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047AB9 RID: 293561 RVA: 0x01257E9B File Offset: 0x0125609B
+		// Token: 0x0603D41B RID: 250907 RVA: 0x011B0B4B File Offset: 0x011AED4B
 		public static PortalController GetOrCreateInstance()
 		{
 			if (PortalController._Instance == null)
@@ -534,7 +534,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return PortalController._Instance;
 		}
 
-		// Token: 0x06047ABA RID: 293562 RVA: 0x01257EAF File Offset: 0x012560AF
+		// Token: 0x0603D41C RID: 250908 RVA: 0x011B0B5F File Offset: 0x011AED5F
 		public static bool CreateInstance()
 		{
 			if (PortalController._Instance != null)
@@ -545,78 +545,78 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return true;
 		}
 
-		// Token: 0x06047ABB RID: 293563 RVA: 0x01257EC5 File Offset: 0x012560C5
+		// Token: 0x0603D41D RID: 250909 RVA: 0x011B0B75 File Offset: 0x011AED75
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047ABC RID: 293564 RVA: 0x01257EC7 File Offset: 0x012560C7
+		// Token: 0x0603D41E RID: 250910 RVA: 0x011B0B77 File Offset: 0x011AED77
 		public static void ResetStaticDefaultValue()
 		{
 			PortalController._Instance = null;
 		}
 
-		// Token: 0x06047ABD RID: 293565 RVA: 0x01257ECF File Offset: 0x012560CF
+		// Token: 0x0603D41F RID: 250911 RVA: 0x011B0B7F File Offset: 0x011AED7F
 		static PortalController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PortalController.CreateStaticDefaultValue), new Action(PortalController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025B55 RID: 154453
+		// Token: 0x040207C4 RID: 133060
 		private const string PORTAL_DEBUG_KEY = "Portal";
 
-		// Token: 0x04025B56 RID: 154454
+		// Token: 0x040207C5 RID: 133061
 		private readonly List<long?> DynamicCreatureDataIds = new List<long?>();
 
-		// Token: 0x04025B57 RID: 154455
+		// Token: 0x040207C6 RID: 133062
 		private readonly Dictionary<long, PortalController.PortalPairParams> StaticPortalPairsCache = new Dictionary<long, PortalController.PortalPairParams>();
 
-		// Token: 0x04025B58 RID: 154456
+		// Token: 0x040207C7 RID: 133063
 		private readonly global::Stack<long> StaticPortalPairsStack = new global::Stack<long>();
 
-		// Token: 0x04025B59 RID: 154457
+		// Token: 0x040207C8 RID: 133064
 		private long? CurrentActivatedPortalId;
 
-		// Token: 0x04025B5A RID: 154458
+		// Token: 0x040207C9 RID: 133065
 		private bool HasDynamicPortal;
 
-		// Token: 0x04025B5B RID: 154459
+		// Token: 0x040207CA RID: 133066
 		[Nullable(2)]
 		private static PortalController _Instance;
 
-		// Token: 0x0200CF88 RID: 53128
+		// Token: 0x0200BB1E RID: 47902
 		[Nullable(0)]
 		public class PortalPairParams
 		{
-			// Token: 0x06052104 RID: 336132 RVA: 0x0164CED7 File Offset: 0x0164B0D7
+			// Token: 0x060488B3 RID: 297139 RVA: 0x0161F013 File Offset: 0x0161D213
 			public PortalPairParams(FTransformDouble trans, FTransformDouble pairTrans, AActor owner, AActor pairOwner, Vector portalBounds, Vector pairPortalBounds)
 			{
 			}
 
-			// Token: 0x0403E5E7 RID: 255463
+			// Token: 0x04039910 RID: 235792
 			[Nullable(2)]
 			public BP_KuroPortalCapture_C ACapture;
 
-			// Token: 0x0403E5E8 RID: 255464
+			// Token: 0x04039911 RID: 235793
 			[Nullable(2)]
 			public BP_KuroPortalCapture_C BCapture;
 
-			// Token: 0x0403E5E9 RID: 255465
+			// Token: 0x04039912 RID: 235794
 			public readonly FTransformDouble Trans = trans;
 
-			// Token: 0x0403E5EA RID: 255466
+			// Token: 0x04039913 RID: 235795
 			public FTransformDouble PairTrans = pairTrans;
 
-			// Token: 0x0403E5EB RID: 255467
+			// Token: 0x04039914 RID: 235796
 			public AActor Owner = owner;
 
-			// Token: 0x0403E5EC RID: 255468
+			// Token: 0x04039915 RID: 235797
 			public AActor PairOwner = pairOwner;
 
-			// Token: 0x0403E5ED RID: 255469
+			// Token: 0x04039916 RID: 235798
 			public Vector PortalBounds = portalBounds;
 
-			// Token: 0x0403E5EE RID: 255470
+			// Token: 0x04039917 RID: 235799
 			public Vector PairPortalBounds = pairPortalBounds;
 		}
 	}

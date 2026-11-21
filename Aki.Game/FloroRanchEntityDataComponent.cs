@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.FloroRanch;
 
-// Token: 0x02001B16 RID: 6934
+// Token: 0x02000FD5 RID: 4053
 [NullableContext(1)]
 [Nullable(0)]
 [FloroRanchEntityComponent(EFloroRanchEntityComponent.FloroRanchEntityDataComponent)]
 public class FloroRanchEntityDataComponent : FloroRanchEntityDataBaseComponent
 {
-	// Token: 0x0600CDB9 RID: 52665 RVA: 0x002ED76C File Offset: 0x002EB96C
+	// Token: 0x0600A1CA RID: 41418 RVA: 0x002F8858 File Offset: 0x002F6A58
 	public override void RefreshEntityData(FloroRanchPlayUnit entityData)
 	{
 		this.EntityId = entityData.PlayIncId;
@@ -28,13 +27,13 @@ public class FloroRanchEntityDataComponent : FloroRanchEntityDataBaseComponent
 		{
 			this.TagData.SetDynamicParams((int)MathUtils.Instance.LongToBigInt(selfDefineValue.N), (int)MathUtils.Instance.LongToBigInt(selfDefineValue.M), (int)MathUtils.Instance.LongToBigInt(selfDefineValue.P));
 		}
-		this.InitBuffList(entityData.BuffList.ToList<FloroRanchPlayBuff>());
+		this.InitBuffList(entityData.BuffList);
 		this.Count = entityData.Num;
 		this.DailySaleData.SetAmount(entityData.Salary);
 	}
 
-	// Token: 0x0600CDBA RID: 52666 RVA: 0x002ED860 File Offset: 0x002EBA60
-	private void InitBuffList(List<FloroRanchPlayBuff> buffList)
+	// Token: 0x0600A1CB RID: 41419 RVA: 0x002F8948 File Offset: 0x002F6B48
+	private void InitBuffList(IEnumerable<FloroRanchPlayBuff> buffList)
 	{
 		this.BuffMap.Clear();
 		this.TipShowBuffList.Clear();
@@ -48,7 +47,7 @@ public class FloroRanchEntityDataComponent : FloroRanchEntityDataBaseComponent
 		}
 	}
 
-	// Token: 0x0600CDBB RID: 52667 RVA: 0x002ED8F0 File Offset: 0x002EBAF0
+	// Token: 0x0600A1CC RID: 41420 RVA: 0x002F89D0 File Offset: 0x002F6BD0
 	public void UpdateBuff(FRUnitOperateBuffAction buffAction)
 	{
 		if (buffAction.Type == FRBuffOperate.BuffOpAdd)
@@ -64,7 +63,7 @@ public class FloroRanchEntityDataComponent : FloroRanchEntityDataBaseComponent
 		this.RefreshBuff(buffAction.Buff);
 	}
 
-	// Token: 0x0600CDBC RID: 52668 RVA: 0x002ED92C File Offset: 0x002EBB2C
+	// Token: 0x0600A1CD RID: 41421 RVA: 0x002F8A0C File Offset: 0x002F6C0C
 	public unsafe void AddBuff(FloroRanchPlayBuff buff)
 	{
 		FloroRanchBuffData floroRanchBuffData;
@@ -88,7 +87,7 @@ public class FloroRanchEntityDataComponent : FloroRanchEntityDataBaseComponent
 		this.AddBuffDataToShowList(floroRanchBuffData2);
 	}
 
-	// Token: 0x0600CDBD RID: 52669 RVA: 0x002EDA24 File Offset: 0x002EBC24
+	// Token: 0x0600A1CE RID: 41422 RVA: 0x002F8B04 File Offset: 0x002F6D04
 	public unsafe void RemoveBuff(FloroRanchPlayBuff buff)
 	{
 		FloroRanchBuffData floroRanchBuffData;
@@ -116,7 +115,7 @@ public class FloroRanchEntityDataComponent : FloroRanchEntityDataBaseComponent
 		}
 	}
 
-	// Token: 0x0600CDBE RID: 52670 RVA: 0x002EDB24 File Offset: 0x002EBD24
+	// Token: 0x0600A1CF RID: 41423 RVA: 0x002F8C04 File Offset: 0x002F6E04
 	public unsafe void RefreshBuff(FloroRanchPlayBuff buff)
 	{
 		FloroRanchBuffData floroRanchBuffData;
@@ -136,7 +135,7 @@ public class FloroRanchEntityDataComponent : FloroRanchEntityDataBaseComponent
 		floroRanchBuffData.RefreshBuffData(buff);
 	}
 
-	// Token: 0x0600CDBF RID: 52671 RVA: 0x002EDBD8 File Offset: 0x002EBDD8
+	// Token: 0x0600A1D0 RID: 41424 RVA: 0x002F8CB8 File Offset: 0x002F6EB8
 	public void AddBuffDataToShowList(FloroRanchBuffData buffData)
 	{
 		if (buffData.IsShowOnTip)
@@ -149,7 +148,7 @@ public class FloroRanchEntityDataComponent : FloroRanchEntityDataBaseComponent
 		}
 	}
 
-	// Token: 0x0600CDC0 RID: 52672 RVA: 0x002EDC04 File Offset: 0x002EBE04
+	// Token: 0x0600A1D1 RID: 41425 RVA: 0x002F8CE4 File Offset: 0x002F6EE4
 	[NullableContext(2)]
 	public FloroRanchBuffData GetMinRemindDayBuff()
 	{
@@ -168,7 +167,7 @@ public class FloroRanchEntityDataComponent : FloroRanchEntityDataBaseComponent
 		return floroRanchBuffData;
 	}
 
-	// Token: 0x0600CDC1 RID: 52673 RVA: 0x002EDC80 File Offset: 0x002EBE80
+	// Token: 0x0600A1D2 RID: 41426 RVA: 0x002F8D60 File Offset: 0x002F6F60
 	public override string Info()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(42, 4);
@@ -183,7 +182,7 @@ public class FloroRanchEntityDataComponent : FloroRanchEntityDataBaseComponent
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600CDC2 RID: 52674 RVA: 0x002EDD04 File Offset: 0x002EBF04
+	// Token: 0x0600A1D3 RID: 41427 RVA: 0x002F8DE4 File Offset: 0x002F6FE4
 	public override string DebugInfo()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(10, 1);
@@ -192,14 +191,14 @@ public class FloroRanchEntityDataComponent : FloroRanchEntityDataBaseComponent
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600CDC3 RID: 52675 RVA: 0x002EDD3B File Offset: 0x002EBF3B
+	// Token: 0x0600A1D4 RID: 41428 RVA: 0x002F8E1B File Offset: 0x002F701B
 	public void Remove()
 	{
 		this.IsRemoveInternal = true;
 	}
 
-	// Token: 0x17001135 RID: 4405
-	// (get) Token: 0x0600CDC4 RID: 52676 RVA: 0x002EDD44 File Offset: 0x002EBF44
+	// Token: 0x1700115A RID: 4442
+	// (get) Token: 0x0600A1D5 RID: 41429 RVA: 0x002F8E24 File Offset: 0x002F7024
 	public bool IsValid
 	{
 		get
@@ -208,51 +207,51 @@ public class FloroRanchEntityDataComponent : FloroRanchEntityDataBaseComponent
 		}
 	}
 
-	// Token: 0x04005E52 RID: 24146
+	// Token: 0x04005F21 RID: 24353
 	public int EntityId;
 
-	// Token: 0x04005E53 RID: 24147
+	// Token: 0x04005F22 RID: 24354
 	public EFloroRanchEntityType EntityType = EFloroRanchEntityType.Card;
 
-	// Token: 0x04005E54 RID: 24148
+	// Token: 0x04005F23 RID: 24355
 	public int ConfigId;
 
-	// Token: 0x04005E55 RID: 24149
+	// Token: 0x04005F24 RID: 24356
 	public int Point;
 
-	// Token: 0x04005E56 RID: 24150
+	// Token: 0x04005F25 RID: 24357
 	public int LastPoint;
 
-	// Token: 0x04005E57 RID: 24151
+	// Token: 0x04005F26 RID: 24358
 	public int StartStage;
 
-	// Token: 0x04005E58 RID: 24152
+	// Token: 0x04005F27 RID: 24359
 	public int StartDay;
 
-	// Token: 0x04005E59 RID: 24153
+	// Token: 0x04005F28 RID: 24360
 	public int TagId;
 
-	// Token: 0x04005E5A RID: 24154
+	// Token: 0x04005F29 RID: 24361
 	public int Count = 1;
 
-	// Token: 0x04005E5B RID: 24155
+	// Token: 0x04005F2A RID: 24362
 	public long Income;
 
-	// Token: 0x04005E5C RID: 24156
+	// Token: 0x04005F2B RID: 24363
 	public FloroRanchCurrencyData DailySaleData = new FloroRanchCurrencyData(ECurrencyType.Salary);
 
-	// Token: 0x04005E5D RID: 24157
+	// Token: 0x04005F2C RID: 24364
 	public readonly List<FloroRanchBuffData> TipShowBuffList = new List<FloroRanchBuffData>();
 
-	// Token: 0x04005E5E RID: 24158
+	// Token: 0x04005F2D RID: 24365
 	private readonly List<FloroRanchBuffData> EffectShowBuffList = new List<FloroRanchBuffData>();
 
-	// Token: 0x04005E5F RID: 24159
+	// Token: 0x04005F2E RID: 24366
 	public readonly Dictionary<int, FloroRanchBuffData> BuffMap = new Dictionary<int, FloroRanchBuffData>();
 
-	// Token: 0x04005E60 RID: 24160
+	// Token: 0x04005F2F RID: 24367
 	public readonly FloroRanchTagData TagData = new FloroRanchTagData();
 
-	// Token: 0x04005E61 RID: 24161
+	// Token: 0x04005F30 RID: 24368
 	private bool IsRemoveInternal;
 }

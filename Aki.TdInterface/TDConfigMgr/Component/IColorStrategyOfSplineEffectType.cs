@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200024F RID: 591
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000290 RID: 656
 	public class IColorStrategyOfSplineEffectType
 	{
-		// Token: 0x06000AA8 RID: 2728 RVA: 0x0002BEF0 File Offset: 0x0002A0F0
+		// Token: 0x06000BB6 RID: 2998 RVA: 0x0002EAA0 File Offset: 0x0002CCA0
 		private IColorStrategyOfSplineEffectType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000AA9 RID: 2729 RVA: 0x0002BF28 File Offset: 0x0002A128
+		// Token: 0x06000BB7 RID: 2999 RVA: 0x0002EAD8 File Offset: 0x0002CCD8
 		public static IColorStrategyOfSplineEffectType Create([Nullable(2)] IColorStrategyOfSplineEffectType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000AAA RID: 2730 RVA: 0x0002BF3B File Offset: 0x0002A13B
+		// Token: 0x06000BB8 RID: 3000 RVA: 0x0002EAEB File Offset: 0x0002CCEB
 		public static IColorStrategyOfSplineEffectType CreateFromSetValue([Nullable(2)] IColorStrategyOfSplineEffectType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000AAB RID: 2731 RVA: 0x0002BF4E File Offset: 0x0002A14E
+		// Token: 0x06000BB9 RID: 3001 RVA: 0x0002EAFE File Offset: 0x0002CCFE
 		public IColorStrategyOfSplineEffectType_SetValue ToSetValue()
 		{
 			return new IColorStrategyOfSplineEffectType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700033B RID: 827
-		// (get) Token: 0x06000AAC RID: 2732 RVA: 0x0002BF61 File Offset: 0x0002A161
-		// (set) Token: 0x06000AAD RID: 2733 RVA: 0x0002BF8C File Offset: 0x0002A18C
+		// Token: 0x17000380 RID: 896
+		// (get) Token: 0x06000BBA RID: 3002 RVA: 0x0002EB11 File Offset: 0x0002CD11
+		// (set) Token: 0x06000BBB RID: 3003 RVA: 0x0002EB3C File Offset: 0x0002CD3C
 		public virtual EColorChangeStrategyOfSplineEffect Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000A89 RID: 2697
+		// Token: 0x04000B65 RID: 2917
 		[Nullable(2)]
 		protected IColorStrategyOfSplineEffectType FbInstance;
 
-		// Token: 0x04000A8A RID: 2698
+		// Token: 0x04000B66 RID: 2918
 		[Nullable(2)]
 		protected IColorStrategyOfSplineEffectType_SetValue PocoInterface;
 	}

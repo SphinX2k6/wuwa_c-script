@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020000C9 RID: 201
+// Token: 0x020000CB RID: 203
 public enum ERandomReason
 {
-	// Token: 0x040004FF RID: 1279
+	// Token: 0x0400050D RID: 1293
 	StartDamage,
-	// Token: 0x04000500 RID: 1280
+	// Token: 0x0400050E RID: 1294
 	DamageFluctuation,
-	// Token: 0x04000501 RID: 1281
+	// Token: 0x0400050F RID: 1295
 	CalculateCritical
 }

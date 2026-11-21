@@ -2,31 +2,31 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001C50 RID: 7248
+// Token: 0x0200110F RID: 4367
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class GachaAccumulateConfig : ConfigBase
 {
-	// Token: 0x0600DA9D RID: 55965 RVA: 0x0032C67C File Offset: 0x0032A87C
+	// Token: 0x0600AEB3 RID: 44723 RVA: 0x00337A84 File Offset: 0x00335C84
 	public GachaAccumulate? GetGachaAccumulateConfig(int accumulateId)
 	{
 		return ConfigGachaAccumulateById.GetConfig(accumulateId, true);
 	}
 
-	// Token: 0x0600DA9E RID: 55966 RVA: 0x0032C688 File Offset: 0x0032A888
+	// Token: 0x0600AEB4 RID: 44724 RVA: 0x00337A90 File Offset: 0x00335C90
 	public string GetGachaAccumulateTipsPrefabPath(int accumulateId)
 	{
 		return ConfigGachaAccumulateById.GetConfig(accumulateId, true).Value.TipsPrefabPath;
 	}
 
-	// Token: 0x0600DA9F RID: 55967 RVA: 0x0032C6AC File Offset: 0x0032A8AC
+	// Token: 0x0600AEB5 RID: 44725 RVA: 0x00337AB4 File Offset: 0x00335CB4
 	public string GetGachaAccumulatePrefabPath(int accumulateId)
 	{
 		return ConfigGachaAccumulateById.GetConfig(accumulateId, true).Value.GachaAccumulatePrefabPath;
 	}
 
-	// Token: 0x0600DAA0 RID: 55968 RVA: 0x0032C6D0 File Offset: 0x0032A8D0
+	// Token: 0x0600AEB6 RID: 44726 RVA: 0x00337AD8 File Offset: 0x00335CD8
 	public EGachaAccumulateShowType GetShowType(int accumulateId)
 	{
 		GachaAccumulate? config = ConfigGachaAccumulateById.GetConfig(accumulateId, true);
@@ -37,7 +37,7 @@ public class GachaAccumulateConfig : ConfigBase
 		return (EGachaAccumulateShowType)config.GetValueOrDefault().ShowType;
 	}
 
-	// Token: 0x0600DAA1 RID: 55969 RVA: 0x0032C700 File Offset: 0x0032A900
+	// Token: 0x0600AEB7 RID: 44727 RVA: 0x00337B08 File Offset: 0x00335D08
 	public int GetHelpId(int accumulateId)
 	{
 		if (ConfigGachaAccumulateById.GetConfig(accumulateId, true) == null)
@@ -48,20 +48,20 @@ public class GachaAccumulateConfig : ConfigBase
 		return gachaAccumulate.GetValueOrDefault().HelpId;
 	}
 
-	// Token: 0x0600DAA2 RID: 55970 RVA: 0x0032C72F File Offset: 0x0032A92F
+	// Token: 0x0600AEB8 RID: 44728 RVA: 0x00337B37 File Offset: 0x00335D37
 	public SelectRolePerformance? GetSelectRolePerformanceConfig(int itemId)
 	{
 		return ConfigSelectRolePerformanceById.GetConfig(itemId, true);
 	}
 
-	// Token: 0x0600DAA3 RID: 55971 RVA: 0x0032C738 File Offset: 0x0032A938
+	// Token: 0x0600AEB9 RID: 44729 RVA: 0x00337B40 File Offset: 0x00335D40
 	public SelectRoleItemPerformance? GetSelectRoleItemPerformance(int itemId)
 	{
 		return ConfigSelectRoleItemPerformanceById.GetConfig(itemId, true);
 	}
 
-	// Token: 0x170011DB RID: 4571
-	// (get) Token: 0x0600DAA4 RID: 55972 RVA: 0x0032C741 File Offset: 0x0032A941
+	// Token: 0x17001201 RID: 4609
+	// (get) Token: 0x0600AEBA RID: 44730 RVA: 0x00337B49 File Offset: 0x00335D49
 	public static GachaAccumulateConfig Instance
 	{
 		get
@@ -70,7 +70,7 @@ public class GachaAccumulateConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600DAA5 RID: 55973 RVA: 0x0032C748 File Offset: 0x0032A948
+	// Token: 0x0600AEBB RID: 44731 RVA: 0x00337B50 File Offset: 0x00335D50
 	public static GachaAccumulateConfig GetOrCreateInstance()
 	{
 		if (GachaAccumulateConfig._Instance == null)
@@ -80,7 +80,7 @@ public class GachaAccumulateConfig : ConfigBase
 		return GachaAccumulateConfig._Instance;
 	}
 
-	// Token: 0x0600DAA6 RID: 55974 RVA: 0x0032C75C File Offset: 0x0032A95C
+	// Token: 0x0600AEBC RID: 44732 RVA: 0x00337B64 File Offset: 0x00335D64
 	public static bool CreateInstance()
 	{
 		if (GachaAccumulateConfig._Instance != null)
@@ -91,24 +91,24 @@ public class GachaAccumulateConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600DAA7 RID: 55975 RVA: 0x0032C772 File Offset: 0x0032A972
+	// Token: 0x0600AEBD RID: 44733 RVA: 0x00337B7A File Offset: 0x00335D7A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600DAA8 RID: 55976 RVA: 0x0032C774 File Offset: 0x0032A974
+	// Token: 0x0600AEBE RID: 44734 RVA: 0x00337B7C File Offset: 0x00335D7C
 	public static void ResetStaticDefaultValue()
 	{
 		GachaAccumulateConfig._Instance = null;
 	}
 
-	// Token: 0x0600DAA9 RID: 55977 RVA: 0x0032C77C File Offset: 0x0032A97C
+	// Token: 0x0600AEBF RID: 44735 RVA: 0x00337B84 File Offset: 0x00335D84
 	static GachaAccumulateConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GachaAccumulateConfig.CreateStaticDefaultValue), new Action(GachaAccumulateConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006405 RID: 25605
+	// Token: 0x040064D7 RID: 25815
 	[Nullable(2)]
 	private static GachaAccumulateConfig _Instance;
 }

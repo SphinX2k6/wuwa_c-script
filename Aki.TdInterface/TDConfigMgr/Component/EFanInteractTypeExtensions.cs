@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000946 RID: 2374
+	// Token: 0x020009F5 RID: 2549
 	public static class EFanInteractTypeExtensions
 	{
-		// Token: 0x0600356C RID: 13676 RVA: 0x0008B848 File Offset: 0x00089A48
+		// Token: 0x060038E1 RID: 14561 RVA: 0x00093500 File Offset: 0x00091700
 		public static string ToEnumString(this EFanInteractType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600356D RID: 13677 RVA: 0x0008B880 File Offset: 0x00089A80
+		// Token: 0x060038E2 RID: 14562 RVA: 0x00093538 File Offset: 0x00091738
 		public static EFanInteractType FromString(string name)
 		{
 			EFanInteractType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600356E RID: 13678 RVA: 0x0008B8A9 File Offset: 0x00089AA9
+		// Token: 0x060038E3 RID: 14563 RVA: 0x00093561 File Offset: 0x00091761
 		public static bool TryFromString(string name, out EFanInteractType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600356F RID: 13679 RVA: 0x0008B8E2 File Offset: 0x00089AE2
+		// Token: 0x060038E4 RID: 14564 RVA: 0x0009359A File Offset: 0x0009179A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003570 RID: 13680 RVA: 0x0008B8FA File Offset: 0x00089AFA
+		// Token: 0x060038E5 RID: 14565 RVA: 0x000935B2 File Offset: 0x000917B2
 		public static EFanInteractType[] GetValues()
 		{
 			return new EFanInteractType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003571 RID: 13681 RVA: 0x0008B906 File Offset: 0x00089B06
+		// Token: 0x060038E6 RID: 14566 RVA: 0x000935BE File Offset: 0x000917BE
 		public static string[] GetNames()
 		{
 			return new string[]

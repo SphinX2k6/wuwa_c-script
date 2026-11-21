@@ -7,18 +7,18 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200675B RID: 26459
+	// Token: 0x020056AB RID: 22187
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlDataController
 	{
-		// Token: 0x0604217E RID: 270718 RVA: 0x01009CBD File Offset: 0x01007EBD
+		// Token: 0x06036CD4 RID: 224468 RVA: 0x00F4B0A1 File Offset: 0x00F492A1
 		public DangoBrawlDataController(ActivityDangoBrawlData data)
 		{
 			this.ActivityData = data;
 		}
 
-		// Token: 0x0604217F RID: 270719 RVA: 0x01009CD4 File Offset: 0x01007ED4
+		// Token: 0x06036CD5 RID: 224469 RVA: 0x00F4B0B8 File Offset: 0x00F492B8
 		public void Start()
 		{
 			EventSystem.Instance.Add(EEventName.OnDangoBrawlBagOperated, new Action<EBagOpKind, int>(this.OnBagOperated));
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.UpdateViewCost();
 		}
 
-		// Token: 0x06042180 RID: 270720 RVA: 0x01009DC8 File Offset: 0x01007FC8
+		// Token: 0x06036CD6 RID: 224470 RVA: 0x00F4B1AC File Offset: 0x00F493AC
 		public void Stop()
 		{
 			EventSystem.Instance.Remove(EEventName.OnDangoBrawlBagOperated, new Action<EBagOpKind, int>(this.OnBagOperated));
@@ -45,49 +45,49 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			EventSystem.Instance.Remove(EEventName.OnDangoBrawlInteractionStateChanged, new Action<EInteractionState>(this.OnInteractionStateChanged));
 		}
 
-		// Token: 0x06042181 RID: 270721 RVA: 0x01009EB5 File Offset: 0x010080B5
+		// Token: 0x06036CD7 RID: 224471 RVA: 0x00F4B299 File Offset: 0x00F49499
 		public void SetViewIsInThreeChoose(bool value)
 		{
 			this.ViewIsInThreeChoose = value;
 		}
 
-		// Token: 0x06042182 RID: 270722 RVA: 0x01009EBE File Offset: 0x010080BE
+		// Token: 0x06036CD8 RID: 224472 RVA: 0x00F4B2A2 File Offset: 0x00F494A2
 		public bool GetViewIsInThreeChoose()
 		{
 			return this.ViewIsInThreeChoose;
 		}
 
-		// Token: 0x06042183 RID: 270723 RVA: 0x01009EC6 File Offset: 0x010080C6
+		// Token: 0x06036CD9 RID: 224473 RVA: 0x00F4B2AA File Offset: 0x00F494AA
 		public void SetViewLayerMode(bool value)
 		{
 			this.ViewLayerMode = value;
 		}
 
-		// Token: 0x06042184 RID: 270724 RVA: 0x01009ECF File Offset: 0x010080CF
+		// Token: 0x06036CDA RID: 224474 RVA: 0x00F4B2B3 File Offset: 0x00F494B3
 		public bool GetViewLayerMode()
 		{
 			return this.ViewLayerMode;
 		}
 
-		// Token: 0x06042185 RID: 270725 RVA: 0x01009ED7 File Offset: 0x010080D7
+		// Token: 0x06036CDB RID: 224475 RVA: 0x00F4B2BB File Offset: 0x00F494BB
 		public void SetLastEventSelectIndex(int index)
 		{
 			this.LastEventSelectIndex = index;
 		}
 
-		// Token: 0x06042186 RID: 270726 RVA: 0x01009EE0 File Offset: 0x010080E0
+		// Token: 0x06036CDC RID: 224476 RVA: 0x00F4B2C4 File Offset: 0x00F494C4
 		public int GetLastEventSelectIndex()
 		{
 			return this.LastEventSelectIndex;
 		}
 
-		// Token: 0x06042187 RID: 270727 RVA: 0x01009EE8 File Offset: 0x010080E8
+		// Token: 0x06036CDD RID: 224477 RVA: 0x00F4B2CC File Offset: 0x00F494CC
 		public int GetViewCost()
 		{
 			return this.ViewCost;
 		}
 
-		// Token: 0x06042188 RID: 270728 RVA: 0x01009EF0 File Offset: 0x010080F0
+		// Token: 0x06036CDE RID: 224478 RVA: 0x00F4B2D4 File Offset: 0x00F494D4
 		public void UpdateViewCost()
 		{
 			ActivityDangoBrawlData activityData = this.ActivityData;
@@ -95,13 +95,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			EventSystem.Instance.Emit(EEventName.OnDangoBrawlCostChanged);
 		}
 
-		// Token: 0x06042189 RID: 270729 RVA: 0x01009F1A File Offset: 0x0100811A
+		// Token: 0x06036CDF RID: 224479 RVA: 0x00F4B2FE File Offset: 0x00F494FE
 		public int GetDisplayCost()
 		{
 			return this.ViewCost + this.GetPreviewCost();
 		}
 
-		// Token: 0x0604218A RID: 270730 RVA: 0x01009F2C File Offset: 0x0100812C
+		// Token: 0x06036CE0 RID: 224480 RVA: 0x00F4B310 File Offset: 0x00F49510
 		private int GetPreviewCost()
 		{
 			DangoBrawlModel instance = DangoBrawlModel.Instance;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return dangoBrawlItem.GetValueOrDefault().Cost;
 		}
 
-		// Token: 0x0604218B RID: 270731 RVA: 0x01009FBA File Offset: 0x010081BA
+		// Token: 0x06036CE1 RID: 224481 RVA: 0x00F4B39E File Offset: 0x00F4959E
 		private void OnBagOperated(EBagOpKind kind, int uid)
 		{
 			if (kind == EBagOpKind.BagToBench || kind == EBagOpKind.BenchToBag)
@@ -146,62 +146,62 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x0604218C RID: 270732 RVA: 0x01009FCA File Offset: 0x010081CA
+		// Token: 0x06036CE2 RID: 224482 RVA: 0x00F4B3AE File Offset: 0x00F495AE
 		private void OnDragBegin(EDragSourceKind source, int configId)
 		{
 			EventSystem.Instance.Emit(EEventName.OnDangoBrawlCostChanged);
 		}
 
-		// Token: 0x0604218D RID: 270733 RVA: 0x01009FDC File Offset: 0x010081DC
+		// Token: 0x06036CE3 RID: 224483 RVA: 0x00F4B3C0 File Offset: 0x00F495C0
 		private void OnDragEnd()
 		{
 			this.UpdateViewCost();
 		}
 
-		// Token: 0x0604218E RID: 270734 RVA: 0x01009FE4 File Offset: 0x010081E4
+		// Token: 0x06036CE4 RID: 224484 RVA: 0x00F4B3C8 File Offset: 0x00F495C8
 		private void OnInteractionStateChanged(EInteractionState state)
 		{
 			EventSystem.Instance.Emit(EEventName.OnDangoBrawlCostChanged);
 		}
 
-		// Token: 0x0604218F RID: 270735 RVA: 0x01009FF6 File Offset: 0x010081F6
+		// Token: 0x06036CE5 RID: 224485 RVA: 0x00F4B3DA File Offset: 0x00F495DA
 		private void OnDangoBrawlBagUpdated()
 		{
 			this.UpdateViewCost();
 		}
 
-		// Token: 0x06042190 RID: 270736 RVA: 0x01009FFE File Offset: 0x010081FE
+		// Token: 0x06036CE6 RID: 224486 RVA: 0x00F4B3E2 File Offset: 0x00F495E2
 		private void OnDangoBrawlShopBought(int slotIndex, int uid, int configId, bool toBench)
 		{
 			this.UpdateViewCost();
 		}
 
-		// Token: 0x06042191 RID: 270737 RVA: 0x0100A006 File Offset: 0x01008206
+		// Token: 0x06036CE7 RID: 224487 RVA: 0x00F4B3EA File Offset: 0x00F495EA
 		private void OnShopSold(int itemUid)
 		{
 			this.UpdateViewCost();
 		}
 
-		// Token: 0x06042192 RID: 270738 RVA: 0x0100A00E File Offset: 0x0100820E
+		// Token: 0x06036CE8 RID: 224488 RVA: 0x00F4B3F2 File Offset: 0x00F495F2
 		private void OnShopBench(int mainUid, int uid, int configId, bool toBench, int[] sourceUids, EDragSourceKind[] sourceKinds)
 		{
 			this.UpdateViewCost();
 		}
 
-		// Token: 0x0402268B RID: 140939
+		// Token: 0x0401CEE8 RID: 118504
 		[Nullable(2)]
 		private readonly ActivityDangoBrawlData ActivityData;
 
-		// Token: 0x0402268C RID: 140940
+		// Token: 0x0401CEE9 RID: 118505
 		private bool ViewIsInThreeChoose;
 
-		// Token: 0x0402268D RID: 140941
+		// Token: 0x0401CEEA RID: 118506
 		private bool ViewLayerMode;
 
-		// Token: 0x0402268E RID: 140942
+		// Token: 0x0401CEEB RID: 118507
 		private int LastEventSelectIndex = -1;
 
-		// Token: 0x0402268F RID: 140943
+		// Token: 0x0401CEEC RID: 118508
 		private int ViewCost;
 	}
 }

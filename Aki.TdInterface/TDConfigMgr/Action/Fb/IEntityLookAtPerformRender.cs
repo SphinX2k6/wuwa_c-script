@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A66 RID: 10854
+	// Token: 0x02002D5A RID: 11610
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IEntityLookAtPerformRender
 	{
-		// Token: 0x0600EEBB RID: 61115 RVA: 0x0022BC3A File Offset: 0x00229E3A
-		[NullableContext(1)]
+		// Token: 0x0600FD71 RID: 64881 RVA: 0x00249946 File Offset: 0x00247B46
+		[NullableContext(0)]
 		public static IEntityLookAtPerformRender Create(IEntityLookAtPerformRender? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BB1 RID: 19377
-		// (get) Token: 0x0600EEBC RID: 61116 RVA: 0x0022BC59 File Offset: 0x00229E59
+		// Token: 0x17004F6B RID: 20331
+		// (get) Token: 0x0600FD72 RID: 64882 RVA: 0x00249965 File Offset: 0x00247B65
 		public virtual int EntityId
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BB2 RID: 19378
-		// (get) Token: 0x0600EEBD RID: 61117 RVA: 0x0022BC68 File Offset: 0x00229E68
+		// Token: 0x17004F6C RID: 20332
+		// (get) Token: 0x0600FD73 RID: 64883 RVA: 0x00249974 File Offset: 0x00247B74
 		public virtual int? FaceExpressionId
 		{
 			get
@@ -47,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BB3 RID: 19379
-		// (get) Token: 0x0600EEBE RID: 61118 RVA: 0x0022BC9E File Offset: 0x00229E9E
+		// Token: 0x17004F6D RID: 20333
+		// (get) Token: 0x0600FD74 RID: 64884 RVA: 0x002499AA File Offset: 0x00247BAA
 		public virtual IMontageId OverlapMontageId
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BB4 RID: 19380
-		// (get) Token: 0x0600EEBF RID: 61119 RVA: 0x0022BCD2 File Offset: 0x00229ED2
+		// Token: 0x17004F6E RID: 20334
+		// (get) Token: 0x0600FD75 RID: 64885 RVA: 0x002499DE File Offset: 0x00247BDE
 		public virtual ILookAtPerformOverlapMontageConfig OverlapMontageConfig
 		{
 			get
@@ -79,19 +79,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008352 RID: 33618
+		// Token: 0x04008A56 RID: 35414
 		private IEntityLookAtPerformRender Instance;
 
-		// Token: 0x04008353 RID: 33619
+		// Token: 0x04008A57 RID: 35415
 		private IMontageId _OverlapMontageIdCache;
 
-		// Token: 0x04008354 RID: 33620
+		// Token: 0x04008A58 RID: 35416
 		private bool _OverlapMontageIdInited;
 
-		// Token: 0x04008355 RID: 33621
+		// Token: 0x04008A59 RID: 35417
 		private ILookAtPerformOverlapMontageConfig _OverlapMontageConfigCache;
 
-		// Token: 0x04008356 RID: 33622
+		// Token: 0x04008A5A RID: 35418
 		private bool _OverlapMontageConfigInited;
 	}
 }

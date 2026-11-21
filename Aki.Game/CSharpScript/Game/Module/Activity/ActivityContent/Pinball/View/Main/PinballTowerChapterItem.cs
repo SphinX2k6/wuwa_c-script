@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 {
-	// Token: 0x0200633A RID: 25402
+	// Token: 0x020052B8 RID: 21176
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PinballTowerChapterItem : UiPanelBase, IPinballChapterItem
 	{
-		// Token: 0x0603FEC4 RID: 261828 RVA: 0x00F7707C File Offset: 0x00F7527C
+		// Token: 0x06034B85 RID: 215941 RVA: 0x00EBDFD8 File Offset: 0x00EBC1D8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FEC5 RID: 261829 RVA: 0x00F771E8 File Offset: 0x00F753E8
+		// Token: 0x06034B86 RID: 215942 RVA: 0x00EBE144 File Offset: 0x00EBC344
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			base.GetButton(0).OnPointEnterCallBack.Bind(new Action(this.OnPointerEnter));
 		}
 
-		// Token: 0x0603FEC6 RID: 261830 RVA: 0x00F7724B File Offset: 0x00F7544B
+		// Token: 0x06034B87 RID: 215943 RVA: 0x00EBE1A7 File Offset: 0x00EBC3A7
 		protected override void OnBeforeDestroy()
 		{
 			base.GetButton(0).OnPointEnterCallBack.Unbind();
 		}
 
-		// Token: 0x0603FEC7 RID: 261831 RVA: 0x00F77260 File Offset: 0x00F75460
+		// Token: 0x06034B88 RID: 215944 RVA: 0x00EBE1BC File Offset: 0x00EBC3BC
 		public UUIItem GetChapterButtonUiItem()
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -79,20 +79,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return auibaseActor.GetUIItem();
 		}
 
-		// Token: 0x0603FEC8 RID: 261832 RVA: 0x00F77290 File Offset: 0x00F75490
+		// Token: 0x06034B89 RID: 215945 RVA: 0x00EBE1EC File Offset: 0x00EBC3EC
 		private EPinballChapterLevelLockStatus GetChapterLockStatus(int chapterId)
 		{
 			return PinballModel.Instance.ActivityData.GetChapterLockStatus(chapterId);
 		}
 
-		// Token: 0x0603FEC9 RID: 261833 RVA: 0x00F772A2 File Offset: 0x00F754A2
+		// Token: 0x06034B8A RID: 215946 RVA: 0x00EBE1FE File Offset: 0x00EBC3FE
 		[NullableContext(1)]
 		void IPinballChapterItem.Refresh(PinballChapterData data)
 		{
 			this.Refresh(data, false);
 		}
 
-		// Token: 0x0603FECA RID: 261834 RVA: 0x00F772AC File Offset: 0x00F754AC
+		// Token: 0x06034B8B RID: 215947 RVA: 0x00EBE208 File Offset: 0x00EBC408
 		[NullableContext(1)]
 		public void Refresh(PinballChapterData data, bool defaultGray = false)
 		{
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.LevelDataList = list;
 		}
 
-		// Token: 0x0603FECB RID: 261835 RVA: 0x00F77410 File Offset: 0x00F75610
+		// Token: 0x06034B8C RID: 215948 RVA: 0x00EBE36C File Offset: 0x00EBC56C
 		public void SetGray(bool isSetGray)
 		{
 			UUITexture texture = base.GetTexture(2);
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FECC RID: 261836 RVA: 0x00F77442 File Offset: 0x00F75642
+		// Token: 0x06034B8D RID: 215949 RVA: 0x00EBE39E File Offset: 0x00EBC59E
 		public void SetRedDotVisible(bool isVisible)
 		{
 			UUIItem item = base.GetItem(7);
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			item.SetUIActive(isVisible);
 		}
 
-		// Token: 0x0603FECD RID: 261837 RVA: 0x00F77458 File Offset: 0x00F75658
+		// Token: 0x06034B8E RID: 215950 RVA: 0x00EBE3B4 File Offset: 0x00EBC5B4
 		public UniTask PlayUnlockTweenAsync()
 		{
 			PinballTowerChapterItem.<PlayUnlockTweenAsync>d__16 <PlayUnlockTweenAsync>d__;
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <PlayUnlockTweenAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FECE RID: 261838 RVA: 0x00F7749C File Offset: 0x00F7569C
+		// Token: 0x06034B8F RID: 215951 RVA: 0x00EBE3F8 File Offset: 0x00EBC5F8
 		private void OnBtnChapterClick()
 		{
 			if (this.ChapterData == null || this.LevelDataList.Count == 0)
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			onClickTowerBack(this.ChapterData, this.LevelDataList);
 		}
 
-		// Token: 0x0603FECF RID: 261839 RVA: 0x00F77574 File Offset: 0x00F75774
+		// Token: 0x06034B90 RID: 215952 RVA: 0x00EBE4D0 File Offset: 0x00EBC6D0
 		private void OnPointerEnter()
 		{
 			if (this.ChapterData == null)
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			onPointerEnterChapterBack(pinballChapterConfigById.Value.PlanetBg, pinballChapterConfigById.Value.PlanetMaskBg, chapterId);
 		}
 
-		// Token: 0x0402157F RID: 136575
+		// Token: 0x0401BEAE RID: 114350
 		[Nullable(new byte[]
 		{
 			2,
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 		})]
 		public Action<PinballChapterData, List<PinballLevelRecordData>> OnClickTowerBack;
 
-		// Token: 0x04021580 RID: 136576
+		// Token: 0x0401BEAF RID: 114351
 		[Nullable(new byte[]
 		{
 			2,
@@ -245,38 +245,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 		})]
 		public Action<string, string, int> OnPointerEnterChapterBack;
 
-		// Token: 0x04021581 RID: 136577
+		// Token: 0x0401BEB0 RID: 114352
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x04021582 RID: 136578
+		// Token: 0x0401BEB1 RID: 114353
 		private UUIEffectOutline ExtraEffectOutline;
 
-		// Token: 0x04021583 RID: 136579
+		// Token: 0x0401BEB2 RID: 114354
 		private PinballChapterData ChapterData;
 
-		// Token: 0x04021584 RID: 136580
+		// Token: 0x0401BEB3 RID: 114355
 		[Nullable(1)]
 		private List<PinballLevelRecordData> LevelDataList = new List<PinballLevelRecordData>();
 
-		// Token: 0x0200C54A RID: 50506
+		// Token: 0x0200AF31 RID: 44849
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B8B1 RID: 243889
+			// Token: 0x04036213 RID: 221715
 			BtnChapter,
-			// Token: 0x0403B8B2 RID: 243890
+			// Token: 0x04036214 RID: 221716
 			NormalItem,
-			// Token: 0x0403B8B3 RID: 243891
+			// Token: 0x04036215 RID: 221717
 			TexTowerBg,
-			// Token: 0x0403B8B4 RID: 243892
+			// Token: 0x04036216 RID: 221718
 			TexDecoration,
-			// Token: 0x0403B8B5 RID: 243893
+			// Token: 0x04036217 RID: 221719
 			LockItem,
-			// Token: 0x0403B8B6 RID: 243894
+			// Token: 0x04036218 RID: 221720
 			ArtTxtLevelNum,
-			// Token: 0x0403B8B7 RID: 243895
+			// Token: 0x04036219 RID: 221721
 			TxtChapterName,
-			// Token: 0x0403B8B8 RID: 243896
+			// Token: 0x0403621A RID: 221722
 			RedDotItem
 		}
 	}

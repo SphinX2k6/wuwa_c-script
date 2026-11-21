@@ -5,70 +5,70 @@ using CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare
 {
-	// Token: 0x0200514C RID: 20812
+	// Token: 0x0200411C RID: 16668
 	[NullableContext(1)]
 	public interface IPhantomArenaDeckBuilderTabViewModel : IPhantomArenaTabViewModelBase
 	{
-		// Token: 0x170080CF RID: 32975
-		// (get) Token: 0x06035308 RID: 217864
-		// (set) Token: 0x06035309 RID: 217865
+		// Token: 0x1700548F RID: 21647
+		// (get) Token: 0x0602A204 RID: 172548
+		// (set) Token: 0x0602A205 RID: 172549
 		Dictionary<int, int> QuicklyBuildDeckUseTimes { get; set; }
 
-		// Token: 0x170080D0 RID: 32976
-		// (get) Token: 0x0603530A RID: 217866
-		// (set) Token: 0x0603530B RID: 217867
+		// Token: 0x17005490 RID: 21648
+		// (get) Token: 0x0602A206 RID: 172550
+		// (set) Token: 0x0602A207 RID: 172551
 		int LastQuicklyBuildId { get; set; }
 
-		// Token: 0x0603530C RID: 217868
+		// Token: 0x0602A208 RID: 172552
 		[NullableContext(2)]
 		DeckInfo GetCurEditDeck();
 
-		// Token: 0x0603530D RID: 217869
+		// Token: 0x0602A209 RID: 172553
 		bool CheckCurEditDeckHasChange();
 
-		// Token: 0x0603530E RID: 217870
+		// Token: 0x0602A20A RID: 172554
 		[NullableContext(2)]
 		PhantomArenaMainViewSwitchItem GetSwitchItem();
 
-		// Token: 0x0603530F RID: 217871
+		// Token: 0x0602A20B RID: 172555
 		void UpdateEditableDeckList();
 
-		// Token: 0x06035310 RID: 217872
+		// Token: 0x0602A20C RID: 172556
 		void SetOverrideCloseFunc(Action func);
 
-		// Token: 0x06035311 RID: 217873
+		// Token: 0x0602A20D RID: 172557
 		void ResetOverrideCloseFunc();
 
-		// Token: 0x170080D1 RID: 32977
-		// (get) Token: 0x06035312 RID: 217874
-		// (set) Token: 0x06035313 RID: 217875
+		// Token: 0x17005491 RID: 21649
+		// (get) Token: 0x0602A20E RID: 172558
+		// (set) Token: 0x0602A20F RID: 172559
 		Action<string> SetViewTitle { get; set; }
 
-		// Token: 0x170080D2 RID: 32978
-		// (get) Token: 0x06035314 RID: 217876
-		// (set) Token: 0x06035315 RID: 217877
+		// Token: 0x17005492 RID: 21650
+		// (get) Token: 0x0602A210 RID: 172560
+		// (set) Token: 0x0602A211 RID: 172561
 		Action<string> SetViewIcon { get; set; }
 
-		// Token: 0x170080D3 RID: 32979
-		// (get) Token: 0x06035316 RID: 217878
-		// (set) Token: 0x06035317 RID: 217879
+		// Token: 0x17005493 RID: 21651
+		// (get) Token: 0x0602A212 RID: 172562
+		// (set) Token: 0x0602A213 RID: 172563
 		Action<int> SetViewHelpId { get; set; }
 
-		// Token: 0x170080D4 RID: 32980
-		// (get) Token: 0x06035318 RID: 217880
-		// (set) Token: 0x06035319 RID: 217881
+		// Token: 0x17005494 RID: 21652
+		// (get) Token: 0x0602A214 RID: 172564
+		// (set) Token: 0x0602A215 RID: 172565
 		Action<bool> SetViewHelpBtnActive { get; set; }
 
-		// Token: 0x0603531A RID: 217882
+		// Token: 0x0602A216 RID: 172566
 		void EndEditDeck();
 
-		// Token: 0x0603531B RID: 217883
+		// Token: 0x0602A217 RID: 172567
 		void RecordQuicklyBuildClick(int quicklyBuildId);
 
-		// Token: 0x0603531C RID: 217884
+		// Token: 0x0602A218 RID: 172568
 		void ReportDeckCreate(DeckInfo deckInfo);
 
-		// Token: 0x0603531D RID: 217885
+		// Token: 0x0602A219 RID: 172569
 		void ReportDeckCover(DeckInfo deckInfo);
 	}
 }

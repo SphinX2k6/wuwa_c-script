@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AD2 RID: 19154
+	// Token: 0x02004FA4 RID: 20388
 	public struct ICheckOnlinePlayer : IFlatbufferObject
 	{
-		// Token: 0x17008ADF RID: 35551
-		// (get) Token: 0x0601E144 RID: 123204 RVA: 0x004383DC File Offset: 0x004365DC
+		// Token: 0x170091D1 RID: 37329
+		// (get) Token: 0x0601FC43 RID: 130115 RVA: 0x00469E88 File Offset: 0x00468088
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E145 RID: 123205 RVA: 0x004383E9 File Offset: 0x004365E9
+		// Token: 0x0601FC44 RID: 130116 RVA: 0x00469E95 File Offset: 0x00468095
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E146 RID: 123206 RVA: 0x004383F0 File Offset: 0x004365F0
+		// Token: 0x0601FC45 RID: 130117 RVA: 0x00469E9C File Offset: 0x0046809C
 		public static ICheckOnlinePlayer GetRootAsICheckOnlinePlayer(ByteBuffer _bb)
 		{
 			return ICheckOnlinePlayer.GetRootAsICheckOnlinePlayer(_bb, default(ICheckOnlinePlayer));
 		}
 
-		// Token: 0x0601E147 RID: 123207 RVA: 0x0043840C File Offset: 0x0043660C
+		// Token: 0x0601FC46 RID: 130118 RVA: 0x00469EB8 File Offset: 0x004680B8
 		public static ICheckOnlinePlayer GetRootAsICheckOnlinePlayer(ByteBuffer _bb, ICheckOnlinePlayer obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E148 RID: 123208 RVA: 0x00438429 File Offset: 0x00436629
+		// Token: 0x0601FC47 RID: 130119 RVA: 0x00469ED5 File Offset: 0x004680D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E149 RID: 123209 RVA: 0x00438438 File Offset: 0x00436638
+		// Token: 0x0601FC48 RID: 130120 RVA: 0x00469EE4 File Offset: 0x004680E4
 		public ICheckOnlinePlayer __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008AE0 RID: 35552
-		// (get) Token: 0x0601E14A RID: 123210 RVA: 0x00438448 File Offset: 0x00436648
+		// Token: 0x170091D2 RID: 37330
+		// (get) Token: 0x0601FC49 RID: 130121 RVA: 0x00469EF4 File Offset: 0x004680F4
 		public ECheckEntity Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008AE1 RID: 35553
-		// (get) Token: 0x0601E14B RID: 123211 RVA: 0x00438484 File Offset: 0x00436684
+		// Token: 0x170091D3 RID: 37331
+		// (get) Token: 0x0601FC4A RID: 130122 RVA: 0x00469F30 File Offset: 0x00468130
 		public TOnlinePlayerConditionTarget OnlinePlayerConditionTargetOptionType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E14C RID: 123212 RVA: 0x004384C0 File Offset: 0x004366C0
+		// Token: 0x0601FC4B RID: 130123 RVA: 0x00469F6C File Offset: 0x0046816C
 		public TTable? OnlinePlayerConditionTargetOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,19 +88,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601E14D RID: 123213 RVA: 0x00438504 File Offset: 0x00436704
+		// Token: 0x0601FC4C RID: 130124 RVA: 0x00469FB0 File Offset: 0x004681B0
 		public IOnlinePlayerConditionTargetHost OnlinePlayerConditionTargetOptionAsIOnlinePlayerConditionTargetHost()
 		{
 			return this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetHost>().Value;
 		}
 
-		// Token: 0x0601E14E RID: 123214 RVA: 0x00438520 File Offset: 0x00436720
+		// Token: 0x0601FC4D RID: 130125 RVA: 0x00469FCC File Offset: 0x004681CC
 		public IOnlinePlayerConditionTargetParticipator OnlinePlayerConditionTargetOptionAsIOnlinePlayerConditionTargetParticipator()
 		{
 			return this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>().Value;
 		}
 
-		// Token: 0x0601E14F RID: 123215 RVA: 0x0043853B File Offset: 0x0043673B
+		// Token: 0x0601FC4E RID: 130126 RVA: 0x00469FE7 File Offset: 0x004681E7
 		public static Offset<ICheckOnlinePlayer> CreateICheckOnlinePlayer(FlatBufferBuilder builder, ECheckEntity Type = ECheckEntity.OnlinePlayer, TOnlinePlayerConditionTarget OnlinePlayerConditionTargetOption_type = TOnlinePlayerConditionTarget.NONE, int OnlinePlayerConditionTargetOptionOffset = 0)
 		{
 			builder.StartTable(3);
@@ -110,37 +110,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckOnlinePlayer.EndICheckOnlinePlayer(builder);
 		}
 
-		// Token: 0x0601E150 RID: 123216 RVA: 0x0043855F File Offset: 0x0043675F
+		// Token: 0x0601FC4F RID: 130127 RVA: 0x0046A00B File Offset: 0x0046820B
 		public static void StartICheckOnlinePlayer(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E151 RID: 123217 RVA: 0x00438568 File Offset: 0x00436768
+		// Token: 0x0601FC50 RID: 130128 RVA: 0x0046A014 File Offset: 0x00468214
 		public static void AddType(FlatBufferBuilder builder, ECheckEntity type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E152 RID: 123218 RVA: 0x00438573 File Offset: 0x00436773
+		// Token: 0x0601FC51 RID: 130129 RVA: 0x0046A01F File Offset: 0x0046821F
 		public static void AddOnlinePlayerConditionTargetOptionType(FlatBufferBuilder builder, TOnlinePlayerConditionTarget onlinePlayerConditionTargetOptionType)
 		{
 			builder.AddByte(1, (byte)onlinePlayerConditionTargetOptionType, 0);
 		}
 
-		// Token: 0x0601E153 RID: 123219 RVA: 0x0043857E File Offset: 0x0043677E
+		// Token: 0x0601FC52 RID: 130130 RVA: 0x0046A02A File Offset: 0x0046822A
 		public static void AddOnlinePlayerConditionTargetOption(FlatBufferBuilder builder, int onlinePlayerConditionTargetOptionOffset)
 		{
 			builder.AddOffset(2, onlinePlayerConditionTargetOptionOffset, 0);
 		}
 
-		// Token: 0x0601E154 RID: 123220 RVA: 0x00438589 File Offset: 0x00436789
+		// Token: 0x0601FC53 RID: 130131 RVA: 0x0046A035 File Offset: 0x00468235
 		public static Offset<ICheckOnlinePlayer> EndICheckOnlinePlayer(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckOnlinePlayer>(builder.EndTable());
 		}
 
-		// Token: 0x0601E155 RID: 123221 RVA: 0x00438598 File Offset: 0x00436798
+		// Token: 0x0601FC54 RID: 130132 RVA: 0x0046A044 File Offset: 0x00468244
 		public ICheckOnlinePlayerT UnPack()
 		{
 			ICheckOnlinePlayerT checkOnlinePlayerT = new ICheckOnlinePlayerT();
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkOnlinePlayerT;
 		}
 
-		// Token: 0x0601E156 RID: 123222 RVA: 0x004385B4 File Offset: 0x004367B4
+		// Token: 0x0601FC55 RID: 130133 RVA: 0x0046A060 File Offset: 0x00468260
 		public void UnPackTo(ICheckOnlinePlayerT _o)
 		{
 			_o.Type = this.Type;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.OnlinePlayerConditionTargetOption.Value = ((this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>() != null) ? this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0601E157 RID: 123223 RVA: 0x00438664 File Offset: 0x00436864
+		// Token: 0x0601FC56 RID: 130134 RVA: 0x0046A110 File Offset: 0x00468310
 		public static Offset<ICheckOnlinePlayer> Pack(FlatBufferBuilder builder, ICheckOnlinePlayerT _o)
 		{
 			if (_o == null)
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckOnlinePlayer.CreateICheckOnlinePlayer(builder, _o.Type, onlinePlayerConditionTargetOption_type, onlinePlayerConditionTargetOptionOffset);
 		}
 
-		// Token: 0x0400D35B RID: 54107
+		// Token: 0x0400DE43 RID: 56899
 		private Table __p;
 	}
 }

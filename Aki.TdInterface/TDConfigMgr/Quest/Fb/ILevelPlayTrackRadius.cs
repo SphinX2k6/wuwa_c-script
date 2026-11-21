@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200133C RID: 4924
+	// Token: 0x0200148C RID: 5260
 	public class ILevelPlayTrackRadius
 	{
-		// Token: 0x060070DC RID: 28892 RVA: 0x001103DD File Offset: 0x0010E5DD
-		[NullableContext(1)]
+		// Token: 0x0600777C RID: 30588 RVA: 0x0011E949 File Offset: 0x0011CB49
 		public static ILevelPlayTrackRadius Create(ILevelPlayTrackRadius? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002437 RID: 9271
-		// (get) Token: 0x060070DD RID: 28893 RVA: 0x001103FC File Offset: 0x0010E5FC
+		// Token: 0x17002606 RID: 9734
+		// (get) Token: 0x0600777D RID: 30589 RVA: 0x0011E968 File Offset: 0x0011CB68
 		public virtual int TrackRadius
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004120 RID: 16672
+		// Token: 0x0400449C RID: 17564
 		private ILevelPlayTrackRadius Instance;
 	}
 }

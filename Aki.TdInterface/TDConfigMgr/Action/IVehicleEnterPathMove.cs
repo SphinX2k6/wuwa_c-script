@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200203B RID: 8251
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002284 RID: 8836
 	public class IVehicleEnterPathMove : IVehicleControlType
 	{
-		// Token: 0x0600B556 RID: 46422 RVA: 0x001A5214 File Offset: 0x001A3414
+		// Token: 0x0600C07C RID: 49276 RVA: 0x001BB980 File Offset: 0x001B9B80
 		private IVehicleEnterPathMove_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B557 RID: 46423 RVA: 0x001A524C File Offset: 0x001A344C
+		// Token: 0x0600C07D RID: 49277 RVA: 0x001BB9B8 File Offset: 0x001B9BB8
 		public static IVehicleEnterPathMove Create([Nullable(2)] IVehicleEnterPathMove instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B558 RID: 46424 RVA: 0x001A525F File Offset: 0x001A345F
+		// Token: 0x0600C07E RID: 49278 RVA: 0x001BB9CB File Offset: 0x001B9BCB
 		public static IVehicleEnterPathMove CreateFromSetValue([Nullable(2)] IVehicleEnterPathMove_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B559 RID: 46425 RVA: 0x001A5272 File Offset: 0x001A3472
+		// Token: 0x0600C07F RID: 49279 RVA: 0x001BB9DE File Offset: 0x001B9BDE
 		public new IVehicleEnterPathMove_SetValue ToSetValue()
 		{
 			return new IVehicleEnterPathMove_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037AB RID: 14251
-		// (get) Token: 0x0600B55A RID: 46426 RVA: 0x001A529D File Offset: 0x001A349D
-		// (set) Token: 0x0600B55B RID: 46427 RVA: 0x001A52C8 File Offset: 0x001A34C8
+		// Token: 0x17003A88 RID: 14984
+		// (get) Token: 0x0600C080 RID: 49280 RVA: 0x001BBA09 File Offset: 0x001B9C09
+		// (set) Token: 0x0600C081 RID: 49281 RVA: 0x001BBA34 File Offset: 0x001B9C34
 		public override EVehicleControlType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037AC RID: 14252
-		// (get) Token: 0x0600B55C RID: 46428 RVA: 0x001A52D8 File Offset: 0x001A34D8
-		// (set) Token: 0x0600B55D RID: 46429 RVA: 0x001A5339 File Offset: 0x001A3539
+		// Token: 0x17003A89 RID: 14985
+		// (get) Token: 0x0600C082 RID: 49282 RVA: 0x001BBA44 File Offset: 0x001B9C44
+		// (set) Token: 0x0600C083 RID: 49283 RVA: 0x001BBAA5 File Offset: 0x001B9CA5
 		public virtual IVehicleCruisingParams ControlParams
 		{
 			get
@@ -114,9 +112,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037AD RID: 14253
-		// (get) Token: 0x0600B55E RID: 46430 RVA: 0x001A534E File Offset: 0x001A354E
-		// (set) Token: 0x0600B55F RID: 46431 RVA: 0x001A5375 File Offset: 0x001A3575
+		// Token: 0x17003A8A RID: 14986
+		// (get) Token: 0x0600C084 RID: 49284 RVA: 0x001BBABA File Offset: 0x001B9CBA
+		// (set) Token: 0x0600C085 RID: 49285 RVA: 0x001BBAE1 File Offset: 0x001B9CE1
 		public virtual ISplineMovePattern Pattern
 		{
 			get
@@ -138,18 +136,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D20 RID: 27936
+		// Token: 0x04007329 RID: 29481
 		[Nullable(2)]
 		protected new IVehicleEnterPathMove FbInstance;
 
-		// Token: 0x04006D21 RID: 27937
+		// Token: 0x0400732A RID: 29482
 		[Nullable(2)]
 		protected new IVehicleEnterPathMove_SetValue PocoInterface;
 
-		// Token: 0x04006D22 RID: 27938
+		// Token: 0x0400732B RID: 29483
 		private IVehicleCruisingParams _ControlParamsCache;
 
-		// Token: 0x04006D23 RID: 27939
+		// Token: 0x0400732C RID: 29484
 		private bool _ControlParamsInited;
 	}
 }

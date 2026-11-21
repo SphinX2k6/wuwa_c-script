@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049F5 RID: 18933
+	// Token: 0x02004EB5 RID: 20149
 	public class ICheckEnterTriggerDirType_UnionUnion
 	{
-		// Token: 0x170088EB RID: 35051
-		// (get) Token: 0x0601D94A RID: 121162 RVA: 0x00429C6C File Offset: 0x00427E6C
-		// (set) Token: 0x0601D94B RID: 121163 RVA: 0x00429C74 File Offset: 0x00427E74
+		// Token: 0x17008FBB RID: 36795
+		// (get) Token: 0x0601F3BD RID: 127933 RVA: 0x0045A8D8 File Offset: 0x00458AD8
+		// (set) Token: 0x0601F3BE RID: 127934 RVA: 0x0045A8E0 File Offset: 0x00458AE0
 		public ICheckEnterTriggerDirType_Union Type { get; set; }
 
-		// Token: 0x170088EC RID: 35052
-		// (get) Token: 0x0601D94C RID: 121164 RVA: 0x00429C7D File Offset: 0x00427E7D
-		// (set) Token: 0x0601D94D RID: 121165 RVA: 0x00429C85 File Offset: 0x00427E85
+		// Token: 0x17008FBC RID: 36796
+		// (get) Token: 0x0601F3BF RID: 127935 RVA: 0x0045A8E9 File Offset: 0x00458AE9
+		// (set) Token: 0x0601F3C0 RID: 127936 RVA: 0x0045A8F1 File Offset: 0x00458AF1
 		public object Value { get; set; }
 
-		// Token: 0x0601D94E RID: 121166 RVA: 0x00429C8E File Offset: 0x00427E8E
+		// Token: 0x0601F3C1 RID: 127937 RVA: 0x0045A8FA File Offset: 0x00458AFA
 		public ICheckEnterTriggerDirType_UnionUnion()
 		{
 			this.Type = ICheckEnterTriggerDirType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601D94F RID: 121167 RVA: 0x00429CA4 File Offset: 0x00427EA4
+		// Token: 0x0601F3C2 RID: 127938 RVA: 0x0045A910 File Offset: 0x00458B10
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601D950 RID: 121168 RVA: 0x00429CB6 File Offset: 0x00427EB6
+		// Token: 0x0601F3C3 RID: 127939 RVA: 0x0045A922 File Offset: 0x00458B22
 		public ICheckEnterTriggerDirTypeT AsICheckEnterTriggerDirType()
 		{
 			return this.As<ICheckEnterTriggerDirTypeT>();
 		}
 
-		// Token: 0x0601D951 RID: 121169 RVA: 0x00429CBE File Offset: 0x00427EBE
+		// Token: 0x0601F3C4 RID: 127940 RVA: 0x0045A92A File Offset: 0x00458B2A
 		public static ICheckEnterTriggerDirType_UnionUnion FromICheckEnterTriggerDirType(ICheckEnterTriggerDirTypeT _icheckentertriggerdirtype)
 		{
 			return new ICheckEnterTriggerDirType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D952 RID: 121170 RVA: 0x00429CD3 File Offset: 0x00427ED3
+		// Token: 0x0601F3C5 RID: 127941 RVA: 0x0045A93F File Offset: 0x00458B3F
 		public ICheckEnterTriggerDirTypeForwardAngleT AsICheckEnterTriggerDirTypeForwardAngle()
 		{
 			return this.As<ICheckEnterTriggerDirTypeForwardAngleT>();
 		}
 
-		// Token: 0x0601D953 RID: 121171 RVA: 0x00429CDB File Offset: 0x00427EDB
+		// Token: 0x0601F3C6 RID: 127942 RVA: 0x0045A947 File Offset: 0x00458B47
 		public static ICheckEnterTriggerDirType_UnionUnion FromICheckEnterTriggerDirTypeForwardAngle(ICheckEnterTriggerDirTypeForwardAngleT _icheckentertriggerdirtypeforwardangle)
 		{
 			return new ICheckEnterTriggerDirType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D954 RID: 121172 RVA: 0x00429CF0 File Offset: 0x00427EF0
+		// Token: 0x0601F3C7 RID: 127943 RVA: 0x0045A95C File Offset: 0x00458B5C
 		public ICheckEnterTriggerDirTypeVelocityDirAngleT AsICheckEnterTriggerDirTypeVelocityDirAngle()
 		{
 			return this.As<ICheckEnterTriggerDirTypeVelocityDirAngleT>();
 		}
 
-		// Token: 0x0601D955 RID: 121173 RVA: 0x00429CF8 File Offset: 0x00427EF8
+		// Token: 0x0601F3C8 RID: 127944 RVA: 0x0045A964 File Offset: 0x00458B64
 		public static ICheckEnterTriggerDirType_UnionUnion FromICheckEnterTriggerDirTypeVelocityDirAngle(ICheckEnterTriggerDirTypeVelocityDirAngleT _icheckentertriggerdirtypevelocitydirangle)
 		{
 			return new ICheckEnterTriggerDirType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D956 RID: 121174 RVA: 0x00429D10 File Offset: 0x00427F10
+		// Token: 0x0601F3C9 RID: 127945 RVA: 0x0045A97C File Offset: 0x00458B7C
 		public static int Pack(FlatBufferBuilder builder, ICheckEnterTriggerDirType_UnionUnion _o)
 		{
 			switch (_o.Type)

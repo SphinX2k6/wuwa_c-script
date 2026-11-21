@@ -4,20 +4,20 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.Misc.PreemptiveFrameQueue
 {
-	// Token: 0x020054AD RID: 21677
+	// Token: 0x02004490 RID: 17552
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SimplePreemptiveFrameQueue
 	{
-		// Token: 0x170084C4 RID: 33988
-		// (get) Token: 0x06037627 RID: 226855 RVA: 0x00D27892 File Offset: 0x00D25A92
+		// Token: 0x17005890 RID: 22672
+		// (get) Token: 0x0602C57D RID: 181629 RVA: 0x00C7760E File Offset: 0x00C7580E
 		public int PerFrameTaskLimit { get; }
 
-		// Token: 0x170084C5 RID: 33989
-		// (get) Token: 0x06037628 RID: 226856 RVA: 0x00D2789A File Offset: 0x00D25A9A
+		// Token: 0x17005891 RID: 22673
+		// (get) Token: 0x0602C57E RID: 181630 RVA: 0x00C77616 File Offset: 0x00C75816
 		public int ExecuteFrameInterval { get; }
 
-		// Token: 0x06037629 RID: 226857 RVA: 0x00D278A2 File Offset: 0x00D25AA2
+		// Token: 0x0602C57F RID: 181631 RVA: 0x00C7761E File Offset: 0x00C7581E
 		public SimplePreemptiveFrameQueue(int perFrameTaskLimit, int executeFrameInterval = 0)
 		{
 			this.PerFrameTaskLimit = perFrameTaskLimit;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Map.Misc.PreemptiveFrameQueue
 			this.FrameCounter = this.ExecuteFrameInterval;
 		}
 
-		// Token: 0x0603762A RID: 226858 RVA: 0x00D278D0 File Offset: 0x00D25AD0
+		// Token: 0x0602C580 RID: 181632 RVA: 0x00C7764C File Offset: 0x00C7584C
 		public virtual void AddTask(IPreemptiveFrameTask task)
 		{
 			int num = 0;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Map.Misc.PreemptiveFrameQueue
 			}
 		}
 
-		// Token: 0x0603762B RID: 226859 RVA: 0x00D27938 File Offset: 0x00D25B38
+		// Token: 0x0602C581 RID: 181633 RVA: 0x00C776B4 File Offset: 0x00C758B4
 		public void CancelTask(IPreemptiveFrameTask task)
 		{
 			int num = this.Tasks.IndexOf(task);
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Map.Misc.PreemptiveFrameQueue
 			}
 		}
 
-		// Token: 0x0603762C RID: 226860 RVA: 0x00D27974 File Offset: 0x00D25B74
+		// Token: 0x0602C582 RID: 181634 RVA: 0x00C776F0 File Offset: 0x00C758F0
 		public void Process()
 		{
 			if (this.OnExecutionInterval)
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Map.Misc.PreemptiveFrameQueue
 			frameExecute();
 		}
 
-		// Token: 0x0603762D RID: 226861 RVA: 0x00D27A60 File Offset: 0x00D25C60
+		// Token: 0x0602C583 RID: 181635 RVA: 0x00C777DC File Offset: 0x00C759DC
 		[NullableContext(2)]
 		protected virtual IPreemptiveFrameTask ShiftNextTask()
 		{
@@ -118,17 +118,17 @@ namespace CSharpScript.Game.Module.Map.Misc.PreemptiveFrameQueue
 			return null;
 		}
 
-		// Token: 0x0603762E RID: 226862 RVA: 0x00D27A8A File Offset: 0x00D25C8A
+		// Token: 0x0602C584 RID: 181636 RVA: 0x00C77806 File Offset: 0x00C75A06
 		protected virtual void OnTaskComplete(IPreemptiveFrameTask task)
 		{
 		}
 
-		// Token: 0x0603762F RID: 226863 RVA: 0x00D27A8C File Offset: 0x00D25C8C
+		// Token: 0x0602C585 RID: 181637 RVA: 0x00C77808 File Offset: 0x00C75A08
 		protected virtual void OnLateExecuteTasksFrame()
 		{
 		}
 
-		// Token: 0x06037630 RID: 226864 RVA: 0x00D27A8E File Offset: 0x00D25C8E
+		// Token: 0x0602C586 RID: 181638 RVA: 0x00C7780A File Offset: 0x00C75A0A
 		protected bool IsTaskComplete()
 		{
 			if (this.CurrentTask != null)
@@ -139,8 +139,8 @@ namespace CSharpScript.Game.Module.Map.Misc.PreemptiveFrameQueue
 			return true;
 		}
 
-		// Token: 0x170084C6 RID: 33990
-		// (get) Token: 0x06037631 RID: 226865 RVA: 0x00D27AB0 File Offset: 0x00D25CB0
+		// Token: 0x17005892 RID: 22674
+		// (get) Token: 0x0602C587 RID: 181639 RVA: 0x00C7782C File Offset: 0x00C75A2C
 		protected bool OnExecutionInterval
 		{
 			get
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Map.Misc.PreemptiveFrameQueue
 			}
 		}
 
-		// Token: 0x06037632 RID: 226866 RVA: 0x00D27AC0 File Offset: 0x00D25CC0
+		// Token: 0x0602C588 RID: 181640 RVA: 0x00C7783C File Offset: 0x00C75A3C
 		public virtual void Dispose()
 		{
 			IPreemptiveFrameTask currentTask = this.CurrentTask;
@@ -165,20 +165,20 @@ namespace CSharpScript.Game.Module.Map.Misc.PreemptiveFrameQueue
 			this.Tasks.Clear();
 		}
 
-		// Token: 0x0401D2C8 RID: 119496
+		// Token: 0x04017D64 RID: 97636
 		protected readonly List<IPreemptiveFrameTask> Tasks = new List<IPreemptiveFrameTask>();
 
-		// Token: 0x0401D2C9 RID: 119497
+		// Token: 0x04017D65 RID: 97637
 		[Nullable(2)]
 		private IPreemptiveFrameTask CurrentTask;
 
-		// Token: 0x0401D2CA RID: 119498
+		// Token: 0x04017D66 RID: 97638
 		private int FrameExecuteTaskCounter;
 
-		// Token: 0x0401D2CB RID: 119499
+		// Token: 0x04017D67 RID: 97639
 		protected bool EnableFlush;
 
-		// Token: 0x0401D2CC RID: 119500
+		// Token: 0x04017D68 RID: 97640
 		private int FrameCounter;
 	}
 }

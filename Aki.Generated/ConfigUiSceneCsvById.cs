@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A6D RID: 2669
+	// Token: 0x02000B42 RID: 2882
 	public class ConfigUiSceneCsvById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003EA2 RID: 16034 RVA: 0x001BC2D9 File Offset: 0x001BA4D9
+		// Token: 0x060043A0 RID: 17312 RVA: 0x001DB66D File Offset: 0x001D986D
 		static ConfigUiSceneCsvById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigUiSceneCsvById.CreateStaticDefaultValue), new Action(ConfigUiSceneCsvById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003EA3 RID: 16035 RVA: 0x001BC2F8 File Offset: 0x001BA4F8
+		// Token: 0x060043A1 RID: 17313 RVA: 0x001DB68C File Offset: 0x001D988C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigUiSceneCsvById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003EA4 RID: 16036 RVA: 0x001BC377 File Offset: 0x001BA577
+		// Token: 0x060043A2 RID: 17314 RVA: 0x001DB70B File Offset: 0x001D990B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigUiSceneCsvById.LogPair = null;
 			ConfigUiSceneCsvById.HandleId = 0;
 		}
 
-		// Token: 0x06003EA5 RID: 16037 RVA: 0x001BC385 File Offset: 0x001BA585
+		// Token: 0x060043A3 RID: 17315 RVA: 0x001DB719 File Offset: 0x001D9919
 		public static void Init()
 		{
 			ConfigUiSceneCsvById.HandleId = ConfigCommon.InitDataStatement(ConfigUiSceneCsvById.HandleId, "db_uiscene.db", "select BinData from `UiSceneCsv` where Id=?");
 		}
 
-		// Token: 0x06003EA6 RID: 16038 RVA: 0x001BC3A0 File Offset: 0x001BA5A0
+		// Token: 0x060043A4 RID: 17316 RVA: 0x001DB734 File Offset: 0x001D9934
 		public static UiSceneCsv? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigUiSceneCsvById.HandleId, ConfigUiSceneCsvById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new UiSceneCsv?(rootAsUiSceneCsv);
 		}
 
-		// Token: 0x040048E1 RID: 18657
+		// Token: 0x04004EB4 RID: 20148
 		private const string DB = "db_uiscene.db";
 
-		// Token: 0x040048E2 RID: 18658
+		// Token: 0x04004EB5 RID: 20149
 		private const string FILE = "u.UI场景.csv";
 
-		// Token: 0x040048E3 RID: 18659
+		// Token: 0x04004EB6 RID: 20150
 		private const string TABLE = "UiSceneCsv";
 
-		// Token: 0x040048E4 RID: 18660
+		// Token: 0x04004EB7 RID: 20151
 		private const string COMMAND = "select BinData from `UiSceneCsv` where Id=?";
 
-		// Token: 0x040048E5 RID: 18661
+		// Token: 0x04004EB8 RID: 20152
 		private const string KEY_PREFIX = "UiSceneCsvById";
 
-		// Token: 0x040048E6 RID: 18662
+		// Token: 0x04004EB9 RID: 20153
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040048E7 RID: 18663
+		// Token: 0x04004EBA RID: 20154
 		private static int HandleId;
 	}
 }

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C56 RID: 15446
+	// Token: 0x02004065 RID: 16485
 	public class ITargetPointTipsActorT
 	{
-		// Token: 0x17006A8A RID: 27274
-		// (get) Token: 0x060155D7 RID: 87511 RVA: 0x003171D7 File Offset: 0x003153D7
-		// (set) Token: 0x060155D8 RID: 87512 RVA: 0x003171DF File Offset: 0x003153DF
+		// Token: 0x1700703B RID: 28731
+		// (get) Token: 0x06016AEB RID: 92907 RVA: 0x0033E077 File Offset: 0x0033C277
+		// (set) Token: 0x06016AEC RID: 92908 RVA: 0x0033E07F File Offset: 0x0033C27F
 		public ETipsActorType Type { get; set; }
 
-		// Token: 0x17006A8B RID: 27275
-		// (get) Token: 0x060155D9 RID: 87513 RVA: 0x003171E8 File Offset: 0x003153E8
-		// (set) Token: 0x060155DA RID: 87514 RVA: 0x003171F0 File Offset: 0x003153F0
+		// Token: 0x1700703C RID: 28732
+		// (get) Token: 0x06016AED RID: 92909 RVA: 0x0033E088 File Offset: 0x0033C288
+		// (set) Token: 0x06016AEE RID: 92910 RVA: 0x0033E090 File Offset: 0x0033C290
 		public ETipsActorColorType ColorType { get; set; }
 
-		// Token: 0x17006A8C RID: 27276
-		// (get) Token: 0x060155DB RID: 87515 RVA: 0x003171F9 File Offset: 0x003153F9
-		// (set) Token: 0x060155DC RID: 87516 RVA: 0x00317201 File Offset: 0x00315401
+		// Token: 0x1700703D RID: 28733
+		// (get) Token: 0x06016AEF RID: 92911 RVA: 0x0033E099 File Offset: 0x0033C299
+		// (set) Token: 0x06016AF0 RID: 92912 RVA: 0x0033E0A1 File Offset: 0x0033C2A1
 		public string Label { get; set; }
 
-		// Token: 0x17006A8D RID: 27277
-		// (get) Token: 0x060155DD RID: 87517 RVA: 0x0031720A File Offset: 0x0031540A
-		// (set) Token: 0x060155DE RID: 87518 RVA: 0x00317212 File Offset: 0x00315412
+		// Token: 0x1700703E RID: 28734
+		// (get) Token: 0x06016AF1 RID: 92913 RVA: 0x0033E0AA File Offset: 0x0033C2AA
+		// (set) Token: 0x06016AF2 RID: 92914 RVA: 0x0033E0B2 File Offset: 0x0033C2B2
 		public byte NullMask { get; set; }
 
-		// Token: 0x060155DF RID: 87519 RVA: 0x0031721B File Offset: 0x0031541B
+		// Token: 0x06016AF3 RID: 92915 RVA: 0x0033E0BB File Offset: 0x0033C2BB
 		public ITargetPointTipsActorT()
 		{
 			this.Type = ETipsActorType.Sphere;

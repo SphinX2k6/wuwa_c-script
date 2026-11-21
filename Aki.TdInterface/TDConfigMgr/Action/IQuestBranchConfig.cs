@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D80 RID: 7552
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F91 RID: 8081
 	public class IQuestBranchConfig
 	{
-		// Token: 0x0600A1DD RID: 41437 RVA: 0x00170704 File Offset: 0x0016E904
+		// Token: 0x0600ABC9 RID: 43977 RVA: 0x00184B28 File Offset: 0x00182D28
 		private IQuestBranchConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A1DE RID: 41438 RVA: 0x0017073C File Offset: 0x0016E93C
+		// Token: 0x0600ABCA RID: 43978 RVA: 0x00184B60 File Offset: 0x00182D60
 		public static IQuestBranchConfig Create([Nullable(2)] IQuestBranchConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A1DF RID: 41439 RVA: 0x0017074F File Offset: 0x0016E94F
+		// Token: 0x0600ABCB RID: 43979 RVA: 0x00184B73 File Offset: 0x00182D73
 		public static IQuestBranchConfig CreateFromSetValue([Nullable(2)] IQuestBranchConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A1E0 RID: 41440 RVA: 0x00170762 File Offset: 0x0016E962
+		// Token: 0x0600ABCC RID: 43980 RVA: 0x00184B86 File Offset: 0x00182D86
 		public IQuestBranchConfig_SetValue ToSetValue()
 		{
 			return new IQuestBranchConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003205 RID: 12805
-		// (get) Token: 0x0600A1E1 RID: 41441 RVA: 0x00170778 File Offset: 0x0016E978
-		// (set) Token: 0x0600A1E2 RID: 41442 RVA: 0x001707B2 File Offset: 0x0016E9B2
+		// Token: 0x17003499 RID: 13465
+		// (get) Token: 0x0600ABCD RID: 43981 RVA: 0x00184B9C File Offset: 0x00182D9C
+		// (set) Token: 0x0600ABCE RID: 43982 RVA: 0x00184BD6 File Offset: 0x00182DD6
 		public virtual bool? EnableAnimation
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006150 RID: 24912
+		// Token: 0x040066CC RID: 26316
 		[Nullable(2)]
 		protected IQuestBranchConfig FbInstance;
 
-		// Token: 0x04006151 RID: 24913
+		// Token: 0x040066CD RID: 26317
 		[Nullable(2)]
 		protected IQuestBranchConfig_SetValue PocoInterface;
 	}

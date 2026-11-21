@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C4A RID: 7242
+	// Token: 0x02001E41 RID: 7745
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IMp4GamepadShake : IGamepadShakeConfig
 	{
-		// Token: 0x06009B5B RID: 39771 RVA: 0x00164DE8 File Offset: 0x00162FE8
-		[NullableContext(1)]
+		// Token: 0x0600A4B3 RID: 42163 RVA: 0x00178128 File Offset: 0x00176328
+		[NullableContext(0)]
 		private IMp4GamepadShake_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009B5C RID: 39772 RVA: 0x00164E20 File Offset: 0x00163020
-		[NullableContext(1)]
+		// Token: 0x0600A4B4 RID: 42164 RVA: 0x00178160 File Offset: 0x00176360
+		[NullableContext(0)]
 		public static IMp4GamepadShake Create([Nullable(2)] IMp4GamepadShake instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009B5D RID: 39773 RVA: 0x00164E33 File Offset: 0x00163033
-		[NullableContext(1)]
+		// Token: 0x0600A4B5 RID: 42165 RVA: 0x00178173 File Offset: 0x00176373
+		[NullableContext(0)]
 		public static IMp4GamepadShake CreateFromSetValue([Nullable(2)] IMp4GamepadShake_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009B5E RID: 39774 RVA: 0x00164E46 File Offset: 0x00163046
-		[NullableContext(1)]
+		// Token: 0x0600A4B6 RID: 42166 RVA: 0x00178186 File Offset: 0x00176386
+		[NullableContext(0)]
 		public new IMp4GamepadShake_SetValue ToSetValue()
 		{
 			return new IMp4GamepadShake_SetValue
@@ -66,9 +66,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003095 RID: 12437
-		// (get) Token: 0x06009B5F RID: 39775 RVA: 0x00164E7D File Offset: 0x0016307D
-		// (set) Token: 0x06009B60 RID: 39776 RVA: 0x00164EA8 File Offset: 0x001630A8
+		// Token: 0x17003306 RID: 13062
+		// (get) Token: 0x0600A4B7 RID: 42167 RVA: 0x001781BD File Offset: 0x001763BD
+		// (set) Token: 0x0600A4B8 RID: 42168 RVA: 0x001781E8 File Offset: 0x001763E8
 		public override EGamepadShakeType Type
 		{
 			get
@@ -89,9 +89,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003096 RID: 12438
-		// (get) Token: 0x06009B61 RID: 39777 RVA: 0x00164EB8 File Offset: 0x001630B8
-		// (set) Token: 0x06009B62 RID: 39778 RVA: 0x00164F19 File Offset: 0x00163119
+		// Token: 0x17003307 RID: 13063
+		// (get) Token: 0x0600A4B9 RID: 42169 RVA: 0x001781F8 File Offset: 0x001763F8
+		// (set) Token: 0x0600A4BA RID: 42170 RVA: 0x00178259 File Offset: 0x00176459
 		public virtual IMp4GamepadShakeFadeInConfig FadeInConfig
 		{
 			get
@@ -119,9 +119,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003097 RID: 12439
-		// (get) Token: 0x06009B63 RID: 39779 RVA: 0x00164F30 File Offset: 0x00163130
-		// (set) Token: 0x06009B64 RID: 39780 RVA: 0x00164F91 File Offset: 0x00163191
+		// Token: 0x17003308 RID: 13064
+		// (get) Token: 0x0600A4BB RID: 42171 RVA: 0x00178270 File Offset: 0x00176470
+		// (set) Token: 0x0600A4BC RID: 42172 RVA: 0x001782D1 File Offset: 0x001764D1
 		public virtual IMp4GamepadShakeFadeOutConfig FadeOutConfig
 		{
 			get
@@ -149,9 +149,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003098 RID: 12440
-		// (get) Token: 0x06009B65 RID: 39781 RVA: 0x00164FA8 File Offset: 0x001631A8
-		// (set) Token: 0x06009B66 RID: 39782 RVA: 0x00164FE2 File Offset: 0x001631E2
+		// Token: 0x17003309 RID: 13065
+		// (get) Token: 0x0600A4BD RID: 42173 RVA: 0x001782E8 File Offset: 0x001764E8
+		// (set) Token: 0x0600A4BE RID: 42174 RVA: 0x00178322 File Offset: 0x00176522
 		public virtual float? ShakeScale
 		{
 			get
@@ -173,24 +173,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E5E RID: 24158
+		// Token: 0x04006395 RID: 25493
 		protected new IMp4GamepadShake FbInstance;
 
-		// Token: 0x04005E5F RID: 24159
+		// Token: 0x04006396 RID: 25494
 		protected new IMp4GamepadShake_SetValue PocoInterface;
 
-		// Token: 0x04005E60 RID: 24160
-		[Nullable(1)]
+		// Token: 0x04006397 RID: 25495
+		[Nullable(0)]
 		private IMp4GamepadShakeFadeInConfig _FadeInConfigCache;
 
-		// Token: 0x04005E61 RID: 24161
+		// Token: 0x04006398 RID: 25496
 		private bool _FadeInConfigInited;
 
-		// Token: 0x04005E62 RID: 24162
-		[Nullable(1)]
+		// Token: 0x04006399 RID: 25497
+		[Nullable(0)]
 		private IMp4GamepadShakeFadeOutConfig _FadeOutConfigCache;
 
-		// Token: 0x04005E63 RID: 24163
+		// Token: 0x0400639A RID: 25498
 		private bool _FadeOutConfigInited;
 	}
 }

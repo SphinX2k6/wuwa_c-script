@@ -5,49 +5,49 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 {
-	// Token: 0x02004852 RID: 18514
+	// Token: 0x02003783 RID: 14211
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RegionalTerminalConfig : ConfigBase
 	{
-		// Token: 0x0603070E RID: 198414 RVA: 0x00B3F3CC File Offset: 0x00B3D5CC
+		// Token: 0x06024EDD RID: 151261 RVA: 0x00A6F610 File Offset: 0x00A6D810
 		public AreaTerminal? GetAreaTerminalByGameplayId(int gameplayId)
 		{
 			return ConfigAreaTerminalById.GetConfig(gameplayId, true);
 		}
 
-		// Token: 0x0603070F RID: 198415 RVA: 0x00B3F3D5 File Offset: 0x00B3D5D5
+		// Token: 0x06024EDE RID: 151262 RVA: 0x00A6F619 File Offset: 0x00A6D819
 		public IReadOnlyList<AreaTerminal> GetAreaTerminalByCountryId(int countryId)
 		{
 			return ConfigAreaTerminalByCountry.GetConfigList(countryId, true) ?? new List<AreaTerminal>();
 		}
 
-		// Token: 0x06030710 RID: 198416 RVA: 0x00B3F3E7 File Offset: 0x00B3D5E7
+		// Token: 0x06024EDF RID: 151263 RVA: 0x00A6F62B File Offset: 0x00A6D82B
 		public IReadOnlyList<AreaTerminal> GetAllAreaTerminal()
 		{
 			return ConfigAreaTerminalAll.GetConfigList(true) ?? new List<AreaTerminal>();
 		}
 
-		// Token: 0x06030711 RID: 198417 RVA: 0x00B3F3F8 File Offset: 0x00B3D5F8
+		// Token: 0x06024EE0 RID: 151264 RVA: 0x00A6F63C File Offset: 0x00A6D83C
 		public AreaTerminalGroup? GetAreaTerminalGroup(int groupId)
 		{
 			return ConfigAreaTerminalGroupById.GetConfig(groupId, true);
 		}
 
-		// Token: 0x06030712 RID: 198418 RVA: 0x00B3F401 File Offset: 0x00B3D601
+		// Token: 0x06024EE1 RID: 151265 RVA: 0x00A6F645 File Offset: 0x00A6D845
 		public IReadOnlyList<AreaMapGroup> GetAllAreaMapGroup()
 		{
 			return ConfigAreaMapGroupAll.GetConfigList(true) ?? new List<AreaMapGroup>();
 		}
 
-		// Token: 0x06030713 RID: 198419 RVA: 0x00B3F412 File Offset: 0x00B3D612
+		// Token: 0x06024EE2 RID: 151266 RVA: 0x00A6F656 File Offset: 0x00A6D856
 		public AreaMapGroup? GetAreaMapGroup(int groupId)
 		{
 			return ConfigAreaMapGroupById.GetConfig(groupId, true);
 		}
 
-		// Token: 0x1700790F RID: 30991
-		// (get) Token: 0x06030714 RID: 198420 RVA: 0x00B3F41B File Offset: 0x00B3D61B
+		// Token: 0x17004BCC RID: 19404
+		// (get) Token: 0x06024EE3 RID: 151267 RVA: 0x00A6F65F File Offset: 0x00A6D85F
 		public static RegionalTerminalConfig Instance
 		{
 			get
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			}
 		}
 
-		// Token: 0x06030715 RID: 198421 RVA: 0x00B3F422 File Offset: 0x00B3D622
+		// Token: 0x06024EE4 RID: 151268 RVA: 0x00A6F666 File Offset: 0x00A6D866
 		public static RegionalTerminalConfig GetOrCreateInstance()
 		{
 			if (RegionalTerminalConfig._Instance == null)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			return RegionalTerminalConfig._Instance;
 		}
 
-		// Token: 0x06030716 RID: 198422 RVA: 0x00B3F436 File Offset: 0x00B3D636
+		// Token: 0x06024EE5 RID: 151269 RVA: 0x00A6F67A File Offset: 0x00A6D87A
 		public static bool CreateInstance()
 		{
 			if (RegionalTerminalConfig._Instance != null)
@@ -77,24 +77,24 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			return true;
 		}
 
-		// Token: 0x06030717 RID: 198423 RVA: 0x00B3F44C File Offset: 0x00B3D64C
+		// Token: 0x06024EE6 RID: 151270 RVA: 0x00A6F690 File Offset: 0x00A6D890
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06030718 RID: 198424 RVA: 0x00B3F44E File Offset: 0x00B3D64E
+		// Token: 0x06024EE7 RID: 151271 RVA: 0x00A6F692 File Offset: 0x00A6D892
 		public static void ResetStaticDefaultValue()
 		{
 			RegionalTerminalConfig._Instance = null;
 		}
 
-		// Token: 0x06030719 RID: 198425 RVA: 0x00B3F456 File Offset: 0x00B3D656
+		// Token: 0x06024EE8 RID: 151272 RVA: 0x00A6F69A File Offset: 0x00A6D89A
 		static RegionalTerminalConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RegionalTerminalConfig.CreateStaticDefaultValue), new Action(RegionalTerminalConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A080 RID: 106624
+		// Token: 0x04014734 RID: 83764
 		[Nullable(2)]
 		private static RegionalTerminalConfig _Instance;
 	}

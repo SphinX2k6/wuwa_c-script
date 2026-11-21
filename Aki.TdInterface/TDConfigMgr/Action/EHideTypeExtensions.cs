@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002353 RID: 9043
+	// Token: 0x020025C8 RID: 9672
 	public static class EHideTypeExtensions
 	{
-		// Token: 0x0600C574 RID: 50548 RVA: 0x001CD12C File Offset: 0x001CB32C
+		// Token: 0x0600D15E RID: 53598 RVA: 0x001E540C File Offset: 0x001E360C
 		public static string ToEnumString(this EHideType value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C575 RID: 50549 RVA: 0x001CD18C File Offset: 0x001CB38C
+		// Token: 0x0600D15F RID: 53599 RVA: 0x001E546C File Offset: 0x001E366C
 		public static EHideType FromString(string name)
 		{
 			EHideType result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C576 RID: 50550 RVA: 0x001CD1B8 File Offset: 0x001CB3B8
+		// Token: 0x0600D160 RID: 53600 RVA: 0x001E5498 File Offset: 0x001E3698
 		public static bool TryFromString(string name, out EHideType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C577 RID: 50551 RVA: 0x001CD232 File Offset: 0x001CB432
+		// Token: 0x0600D161 RID: 53601 RVA: 0x001E5512 File Offset: 0x001E3712
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C578 RID: 50552 RVA: 0x001CD262 File Offset: 0x001CB462
+		// Token: 0x0600D162 RID: 53602 RVA: 0x001E5542 File Offset: 0x001E3742
 		public static EHideType[] GetValues()
 		{
 			return new EHideType[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C579 RID: 50553 RVA: 0x001CD275 File Offset: 0x001CB475
+		// Token: 0x0600D163 RID: 53603 RVA: 0x001E5555 File Offset: 0x001E3755
 		public static string[] GetNames()
 		{
 			return new string[]

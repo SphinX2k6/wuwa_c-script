@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -10,23 +9,23 @@ using CSharpScript.Game.Module.RoleLangCustomModel;
 using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Module.InstanceDungeon;
 
-// Token: 0x020028FB RID: 10491
+// Token: 0x02001E76 RID: 7798
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleInstance : RoleDataBase
 {
-	// Token: 0x06015A7E RID: 88702 RVA: 0x00577973 File Offset: 0x00575B73
+	// Token: 0x06013482 RID: 78978 RVA: 0x005A283F File Offset: 0x005A0A3F
 	public RoleInstance(int id) : base(id)
 	{
 	}
 
-	// Token: 0x06015A7F RID: 88703 RVA: 0x0057797C File Offset: 0x00575B7C
+	// Token: 0x06013483 RID: 78979 RVA: 0x005A2848 File Offset: 0x005A0A48
 	public override bool IsTrialRole()
 	{
 		return false;
 	}
 
-	// Token: 0x06015A80 RID: 88704 RVA: 0x00577980 File Offset: 0x00575B80
+	// Token: 0x06013484 RID: 78980 RVA: 0x005A284C File Offset: 0x005A0A4C
 	public void SetRoleName(string name)
 	{
 		if (!StringUtils.IsEmpty(name))
@@ -38,7 +37,7 @@ public class RoleInstance : RoleDataBase
 		this.Name = RoleConfig.Instance.GetRoleName(roleConfig.Name);
 	}
 
-	// Token: 0x06015A81 RID: 88705 RVA: 0x005779BB File Offset: 0x00575BBB
+	// Token: 0x06013485 RID: 78981 RVA: 0x005A2887 File Offset: 0x005A0A87
 	public override string GetName(int? playerId = null)
 	{
 		if (PlayerInfoModel.Instance.IsPlayerId(this.Id, playerId))
@@ -48,32 +47,32 @@ public class RoleInstance : RoleDataBase
 		return this.GetRoleRealName();
 	}
 
-	// Token: 0x06015A82 RID: 88706 RVA: 0x005779E4 File Offset: 0x00575BE4
+	// Token: 0x06013486 RID: 78982 RVA: 0x005A28B0 File Offset: 0x005A0AB0
 	public string GetRoleRealName()
 	{
 		RoleSkinData roleSkinData = RoleSkinModel.Instance.GetRoleSkinData(this.GetRoleSkinId());
 		return RoleConfig.Instance.GetRoleName(roleSkinData.GetName());
 	}
 
-	// Token: 0x06015A83 RID: 88707 RVA: 0x00577A12 File Offset: 0x00575C12
+	// Token: 0x06013487 RID: 78983 RVA: 0x005A28DE File Offset: 0x005A0ADE
 	public int GetSkillInfoLevel(long infoId)
 	{
 		return base.GetSkillData().GetReferencedSkillLevel(infoId, ERoleSkillReferenceType.SkillInfo, null);
 	}
 
-	// Token: 0x06015A84 RID: 88708 RVA: 0x00577A22 File Offset: 0x00575C22
+	// Token: 0x06013488 RID: 78984 RVA: 0x005A28EE File Offset: 0x005A0AEE
 	public override int GetRoleId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x06015A85 RID: 88709 RVA: 0x00577A2A File Offset: 0x00575C2A
+	// Token: 0x06013489 RID: 78985 RVA: 0x005A28F6 File Offset: 0x005A0AF6
 	public override int GetRoleCreateTime()
 	{
 		return this.CreateTime;
 	}
 
-	// Token: 0x06015A86 RID: 88710 RVA: 0x00577A34 File Offset: 0x00575C34
+	// Token: 0x0601348A RID: 78986 RVA: 0x005A2900 File Offset: 0x005A0B00
 	public void RefreshSkillInfo(int skillId, int skillLevel)
 	{
 		RoleSkillData skillData = base.GetSkillData();
@@ -85,8 +84,8 @@ public class RoleInstance : RoleDataBase
 		EventSystem.Instance.EmitWithTarget<int, ArrayIntInt>(this, EEventName.RoleSkillLevelUp, this.GetRoleId(), arrayIntInt);
 	}
 
-	// Token: 0x06015A87 RID: 88711 RVA: 0x00577A84 File Offset: 0x00575C84
-	public void RefreshRoleAttr(ArrayIntInt[] baseAttr, ArrayIntInt[] addAttr)
+	// Token: 0x0601348B RID: 78987 RVA: 0x005A2950 File Offset: 0x005A0B50
+	public void RefreshRoleAttr(IReadOnlyList<ArrayIntInt> baseAttr, IReadOnlyList<ArrayIntInt> addAttr)
 	{
 		RoleAttributeData attributeData = base.GetAttributeData();
 		Dictionary<int, int> oldRoleBaseAttr = attributeData.GetOldRoleBaseAttr();
@@ -113,7 +112,7 @@ public class RoleInstance : RoleDataBase
 		EventSystem.Instance.Emit<IReadOnlyDictionary<int, int>, IReadOnlyDictionary<int, int>>(EEventName.RoleRefreshAttribute, oldRoleBaseAttr, oldRoleAddAttr);
 	}
 
-	// Token: 0x06015A88 RID: 88712 RVA: 0x00577BA0 File Offset: 0x00575DA0
+	// Token: 0x0601348C RID: 78988 RVA: 0x005A2AA0 File Offset: 0x005A0CA0
 	public void RefreshRoleInfo(roleInfo roleInfo)
 	{
 		this.SetRoleName(roleInfo.Name);
@@ -143,7 +142,7 @@ public class RoleInstance : RoleDataBase
 			dictionary.Add(skillNodeId, value);
 		}
 		skillData.SetSkillNodeStateData(dictionary);
-		this.RefreshRoleAttr(roleInfo.BaseProp.ToArray<ArrayIntInt>(), roleInfo.AddProp.ToArray<ArrayIntInt>());
+		this.RefreshRoleAttr(roleInfo.BaseProp, roleInfo.AddProp);
 		foreach (ResonInfo resonance in roleInfo.Reson)
 		{
 			this.RefreshResonance(resonance);
@@ -157,7 +156,7 @@ public class RoleInstance : RoleDataBase
 		}
 	}
 
-	// Token: 0x06015A89 RID: 88713 RVA: 0x00577DB4 File Offset: 0x00575FB4
+	// Token: 0x0601348D RID: 78989 RVA: 0x005A2CA8 File Offset: 0x005A0EA8
 	public void RefreshResonance(ResonInfo resonance)
 	{
 		RoleResonanceData resonanceData = base.GetResonanceData();
@@ -165,25 +164,25 @@ public class RoleInstance : RoleDataBase
 		resonanceData.SetResonance(resonance2);
 	}
 
-	// Token: 0x06015A8A RID: 88714 RVA: 0x00577DE8 File Offset: 0x00575FE8
+	// Token: 0x0601348E RID: 78990 RVA: 0x005A2CDC File Offset: 0x005A0EDC
 	public override bool CanChangeName()
 	{
 		return !PlayerInfoModel.Instance.IsPlayerId(this.Id, null) || !PlayerInfoConfig.Instance.GetIsUseAccountName();
 	}
 
-	// Token: 0x06015A8B RID: 88715 RVA: 0x00577E1F File Offset: 0x0057601F
+	// Token: 0x0601348F RID: 78991 RVA: 0x005A2D13 File Offset: 0x005A0F13
 	public override bool IsOnlineRole()
 	{
 		return false;
 	}
 
-	// Token: 0x06015A8C RID: 88716 RVA: 0x00577E22 File Offset: 0x00576022
+	// Token: 0x06013490 RID: 78992 RVA: 0x005A2D16 File Offset: 0x005A0F16
 	public override bool GetIsNew()
 	{
 		return NewFlagModel.Instance.HasNewFlag(ELocalStoragePlayerKey.RoleDataItem, this.Id);
 	}
 
-	// Token: 0x06015A8D RID: 88717 RVA: 0x00577E36 File Offset: 0x00576036
+	// Token: 0x06013491 RID: 78993 RVA: 0x005A2D2A File Offset: 0x005A0F2A
 	public override bool TryRemoveNewFlag()
 	{
 		if (NewFlagModel.Instance.HasNewFlag(ELocalStoragePlayerKey.RoleDataItem, this.Id))
@@ -194,6 +193,6 @@ public class RoleInstance : RoleDataBase
 		return false;
 	}
 
-	// Token: 0x0400A118 RID: 41240
+	// Token: 0x0400A503 RID: 42243
 	protected int CreateTime;
 }

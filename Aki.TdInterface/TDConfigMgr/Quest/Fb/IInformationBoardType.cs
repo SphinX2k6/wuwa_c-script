@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012D2 RID: 4818
+	// Token: 0x02001418 RID: 5144
 	public class IInformationBoardType
 	{
-		// Token: 0x06006E2E RID: 28206 RVA: 0x0010A813 File Offset: 0x00108A13
-		[NullableContext(1)]
+		// Token: 0x060074AC RID: 29868 RVA: 0x00118AA3 File Offset: 0x00116CA3
 		public static IInformationBoardType Create(IInformationBoardType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700225D RID: 8797
-		// (get) Token: 0x06006E2F RID: 28207 RVA: 0x0010A832 File Offset: 0x00108A32
+		// Token: 0x1700241E RID: 9246
+		// (get) Token: 0x060074AD RID: 29869 RVA: 0x00118AC2 File Offset: 0x00116CC2
 		public virtual EInformationBoardType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F26 RID: 16166
+		// Token: 0x04004294 RID: 17044
 		private IInformationBoardType Instance;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A6C RID: 2668
+	// Token: 0x02000B41 RID: 2881
 	public class ConfigUiResourceById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003E9C RID: 16028 RVA: 0x001BC0E0 File Offset: 0x001BA2E0
+		// Token: 0x0600439A RID: 17306 RVA: 0x001DB474 File Offset: 0x001D9674
 		static ConfigUiResourceById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigUiResourceById.CreateStaticDefaultValue), new Action(ConfigUiResourceById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003E9D RID: 16029 RVA: 0x001BC100 File Offset: 0x001BA300
+		// Token: 0x0600439B RID: 17307 RVA: 0x001DB494 File Offset: 0x001D9694
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigUiResourceById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003E9E RID: 16030 RVA: 0x001BC17F File Offset: 0x001BA37F
+		// Token: 0x0600439C RID: 17308 RVA: 0x001DB513 File Offset: 0x001D9713
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigUiResourceById.LogPair = null;
 			ConfigUiResourceById.HandleId = 0;
 		}
 
-		// Token: 0x06003E9F RID: 16031 RVA: 0x001BC18D File Offset: 0x001BA38D
+		// Token: 0x0600439D RID: 17309 RVA: 0x001DB521 File Offset: 0x001D9721
 		public static void Init()
 		{
 			ConfigUiResourceById.HandleId = ConfigCommon.InitDataStatement(ConfigUiResourceById.HandleId, "db_ui_resource.db", "select BinData from `UiResource` where Id=?");
 		}
 
-		// Token: 0x06003EA0 RID: 16032 RVA: 0x001BC1A8 File Offset: 0x001BA3A8
+		// Token: 0x0600439E RID: 17310 RVA: 0x001DB53C File Offset: 0x001D973C
 		public static UiResource? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigUiResourceById.HandleId, ConfigUiResourceById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new UiResource?(rootAsUiResource);
 		}
 
-		// Token: 0x040048DA RID: 18650
+		// Token: 0x04004EAD RID: 20141
 		private const string DB = "db_ui_resource.db";
 
-		// Token: 0x040048DB RID: 18651
+		// Token: 0x04004EAE RID: 20142
 		private const string FILE = "u.UI资源.csv";
 
-		// Token: 0x040048DC RID: 18652
+		// Token: 0x04004EAF RID: 20143
 		private const string TABLE = "UiResource";
 
-		// Token: 0x040048DD RID: 18653
+		// Token: 0x04004EB0 RID: 20144
 		private const string COMMAND = "select BinData from `UiResource` where Id=?";
 
-		// Token: 0x040048DE RID: 18654
+		// Token: 0x04004EB1 RID: 20145
 		private const string KEY_PREFIX = "UiResourceById";
 
-		// Token: 0x040048DF RID: 18655
+		// Token: 0x04004EB2 RID: 20146
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040048E0 RID: 18656
+		// Token: 0x04004EB3 RID: 20147
 		private static int HandleId;
 	}
 }

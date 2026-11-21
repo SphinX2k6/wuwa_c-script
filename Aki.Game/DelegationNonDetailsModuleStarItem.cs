@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 
-// Token: 0x02001314 RID: 4884
+// Token: 0x020007C8 RID: 1992
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -11,7 +11,7 @@ using CSharpScript.Game.Module.Util;
 })]
 public class DelegationNonDetailsModuleStarItem : GridProxyAbstract<object>
 {
-	// Token: 0x0600876F RID: 34671 RVA: 0x001CE75E File Offset: 0x001CC95E
+	// Token: 0x06005B0A RID: 23306 RVA: 0x001D75CA File Offset: 0x001D57CA
 	public override void Refresh(object data, bool isSelected, int gridIndex)
 	{
 	}

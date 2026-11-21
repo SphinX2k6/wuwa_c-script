@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001BB5 RID: 7093
+// Token: 0x02001074 RID: 4212
 internal static class FormationLimitResult
 {
-	// Token: 0x0600D395 RID: 54165 RVA: 0x0030A69C File Offset: 0x0030889C
+	// Token: 0x0600A7A7 RID: 42919 RVA: 0x00315790 File Offset: 0x00313990
 	[NullableContext(1)]
 	public static IValidationResult<ELimitReason> Ok()
 	{

@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Utils;
 
-// Token: 0x02002FF9 RID: 12281
+// Token: 0x0200254E RID: 9550
 [NullableContext(1)]
 [Nullable(0)]
 public class ClearShowTargetTrigger : Trigger
 {
-	// Token: 0x0601A055 RID: 106581 RVA: 0x006D06EE File Offset: 0x006CE8EE
+	// Token: 0x06017989 RID: 96649 RVA: 0x006F858A File Offset: 0x006F678A
 	[NullableContext(2)]
 	public ClearShowTargetTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A056 RID: 106582 RVA: 0x006D06FF File Offset: 0x006CE8FF
+	// Token: 0x0601798A RID: 96650 RVA: 0x006F859B File Offset: 0x006F679B
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.TargetType = (ETriggerTargetType)Convert.ToInt32((triggerParams.Length != 0) ? triggerParams[0] : "0");
 	}
 
-	// Token: 0x0601A057 RID: 106583 RVA: 0x006D071C File Offset: 0x006CE91C
+	// Token: 0x0601798B RID: 96651 RVA: 0x006F85B8 File Offset: 0x006F67B8
 	protected override void OnActive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -32,7 +32,7 @@ public class ClearShowTargetTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A058 RID: 106584 RVA: 0x006D0764 File Offset: 0x006CE964
+	// Token: 0x0601798C RID: 96652 RVA: 0x006F8600 File Offset: 0x006F6800
 	protected override void OnInactive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -43,7 +43,7 @@ public class ClearShowTargetTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A059 RID: 106585 RVA: 0x006D07AC File Offset: 0x006CE9AC
+	// Token: 0x0601798D RID: 96653 RVA: 0x006F8648 File Offset: 0x006F6848
 	private void OnEvent(int targetId, string targetSocket, bool isHardLock)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -57,12 +57,12 @@ public class ClearShowTargetTrigger : Trigger
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x0601A05A RID: 106586 RVA: 0x006D0817 File Offset: 0x006CEA17
+	// Token: 0x0601798E RID: 96654 RVA: 0x006F86B3 File Offset: 0x006F68B3
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4EC RID: 50412
+	// Token: 0x0400C8B4 RID: 51380
 	protected ETriggerTargetType TargetType;
 }

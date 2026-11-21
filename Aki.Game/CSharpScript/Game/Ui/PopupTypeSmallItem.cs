@@ -6,24 +6,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004655 RID: 18005
+	// Token: 0x02003586 RID: 13702
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PopupTypeSmallItem : CommonPopViewBase, ICommonPopView
 	{
-		// Token: 0x0602E7AC RID: 190380 RVA: 0x00ABCB4F File Offset: 0x00ABAD4F
+		// Token: 0x06022EF6 RID: 143094 RVA: 0x009EA17F File Offset: 0x009E837F
 		public override UUIItem GetAttachParent()
 		{
 			return base.GetItem(1);
 		}
 
-		// Token: 0x0602E7AD RID: 190381 RVA: 0x00ABCB58 File Offset: 0x00ABAD58
+		// Token: 0x06022EF7 RID: 143095 RVA: 0x009EA188 File Offset: 0x009E8388
 		public override UUIItem GetCostParent()
 		{
 			return base.GetItem(3);
 		}
 
-		// Token: 0x0602E7AE RID: 190382 RVA: 0x00ABCB64 File Offset: 0x00ABAD64
+		// Token: 0x06022EF8 RID: 143096 RVA: 0x009EA194 File Offset: 0x009E8394
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Ui
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0602E7AF RID: 190383 RVA: 0x00ABCC6F File Offset: 0x00ABAE6F
+		// Token: 0x06022EF9 RID: 143097 RVA: 0x009EA29F File Offset: 0x009E849F
 		public override void OnSetCloseBtnInteractive(bool state)
 		{
 			base.GetButton(2).SetSelfInteractive(state);
 		}
 
-		// Token: 0x0602E7B0 RID: 190384 RVA: 0x00ABCC80 File Offset: 0x00ABAE80
+		// Token: 0x06022EFA RID: 143098 RVA: 0x009EA2B0 File Offset: 0x009E84B0
 		public override void OnSetBackBtnShowState(bool state)
 		{
 			UUIItem uuiitem = base.GetButton(2).RootUIComp.Get();
@@ -67,17 +67,17 @@ namespace CSharpScript.Game.Ui
 			uuiitem.SetUIActive(state);
 		}
 
-		// Token: 0x0602E7B1 RID: 190385 RVA: 0x00ABCCAC File Offset: 0x00ABAEAC
+		// Token: 0x06022EFB RID: 143099 RVA: 0x009EA2DC File Offset: 0x009E84DC
 		public override void OnSetHelpButtonActive(bool state)
 		{
 		}
 
-		// Token: 0x0602E7B2 RID: 190386 RVA: 0x00ABCCAE File Offset: 0x00ABAEAE
+		// Token: 0x06022EFC RID: 143100 RVA: 0x009EA2DE File Offset: 0x009E84DE
 		public override void OnSetTitleByTextIdAndArg(string textId, params object[] args)
 		{
 		}
 
-		// Token: 0x0602E7B3 RID: 190387 RVA: 0x00ABCCB0 File Offset: 0x00ABAEB0
+		// Token: 0x06022EFD RID: 143101 RVA: 0x009EA2E0 File Offset: 0x009E84E0
 		public override void OnRefreshCost(CommonCurrencyItem[] commonCurrencyItemList)
 		{
 			for (int i = 0; i < commonCurrencyItemList.Length; i++)
@@ -86,20 +86,20 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0200A8BA RID: 43194
+		// Token: 0x02009276 RID: 37494
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x040335CE RID: 210382
+			// Token: 0x0402DD64 RID: 187748
 			public const int Mask = 0;
 
-			// Token: 0x040335CF RID: 210383
+			// Token: 0x0402DD65 RID: 187749
 			public const int Content = 1;
 
-			// Token: 0x040335D0 RID: 210384
+			// Token: 0x0402DD66 RID: 187750
 			public const int BackBtn = 2;
 
-			// Token: 0x040335D1 RID: 210385
+			// Token: 0x0402DD67 RID: 187751
 			public const int CostContent = 3;
 		}
 	}

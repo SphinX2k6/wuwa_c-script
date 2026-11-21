@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Data.Entity.Struct;
 using UnrealEngine;
 
-// Token: 0x02002C8B RID: 11403
+// Token: 0x020021E4 RID: 8676
 [NullableContext(1)]
 [Nullable(0)]
 public class UiModelLoadComponent : UiModelComponentBase
 {
-	// Token: 0x06017D2F RID: 97583 RVA: 0x0060F938 File Offset: 0x0060DB38
+	// Token: 0x060155A2 RID: 87458 RVA: 0x00635408 File Offset: 0x00633608
 	protected override void OnInit()
 	{
 		this.UiModelActorComponent = base.Owner.CheckGetComponent<UiModelActorComponent>();
@@ -18,7 +18,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		this.UiModelMorphComponent = base.Owner.GetComponentByCtor<UiModelMorphComponent>();
 	}
 
-	// Token: 0x06017D30 RID: 97584 RVA: 0x0060F96D File Offset: 0x0060DB6D
+	// Token: 0x060155A3 RID: 87459 RVA: 0x0063543D File Offset: 0x0063363D
 	protected override void OnEnd()
 	{
 		this.CancelLoad();
@@ -26,13 +26,13 @@ public class UiModelLoadComponent : UiModelComponentBase
 		this.ReplaceEffectMap = null;
 	}
 
-	// Token: 0x06017D31 RID: 97585 RVA: 0x0060F982 File Offset: 0x0060DB82
+	// Token: 0x060155A4 RID: 87460 RVA: 0x00635452 File Offset: 0x00633652
 	protected string GetMainMeshPath()
 	{
 		return ModelUtil.GetModelConfig(this.UiModelDataComponent.ModelConfigId).网格体.ToAssetPathName();
 	}
 
-	// Token: 0x06017D32 RID: 97586 RVA: 0x0060F9A0 File Offset: 0x0060DBA0
+	// Token: 0x060155A5 RID: 87461 RVA: 0x00635470 File Offset: 0x00633670
 	[NullableContext(2)]
 	protected string GetLevelMaterialDaPath()
 	{
@@ -45,13 +45,13 @@ public class UiModelLoadComponent : UiModelComponentBase
 		return null;
 	}
 
-	// Token: 0x06017D33 RID: 97587 RVA: 0x0060F9DA File Offset: 0x0060DBDA
+	// Token: 0x060155A6 RID: 87462 RVA: 0x006354AA File Offset: 0x006336AA
 	protected virtual string GetAnimClassPath()
 	{
 		return ModelUtil.GetModelConfig(this.UiModelDataComponent.ModelConfigId).动画蓝图.ToAssetPathName();
 	}
 
-	// Token: 0x06017D34 RID: 97588 RVA: 0x0060F9F8 File Offset: 0x0060DBF8
+	// Token: 0x060155A7 RID: 87463 RVA: 0x006354C8 File Offset: 0x006336C8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -76,7 +76,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		return null;
 	}
 
-	// Token: 0x06017D35 RID: 97589 RVA: 0x0060FA56 File Offset: 0x0060DC56
+	// Token: 0x060155A8 RID: 87464 RVA: 0x00635526 File Offset: 0x00633726
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -92,7 +92,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		return uiModelMorphComponent.GetAllMorphPathList();
 	}
 
-	// Token: 0x06017D36 RID: 97590 RVA: 0x0060FA69 File Offset: 0x0060DC69
+	// Token: 0x060155A9 RID: 87465 RVA: 0x00635539 File Offset: 0x00633739
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -108,13 +108,13 @@ public class UiModelLoadComponent : UiModelComponentBase
 		return uiModelMorphComponent.GetSpecialMorphIdList();
 	}
 
-	// Token: 0x06017D37 RID: 97591 RVA: 0x0060FA7C File Offset: 0x0060DC7C
+	// Token: 0x060155AA RID: 87466 RVA: 0x0063554C File Offset: 0x0063374C
 	protected TArray<SModelDecorationConfig> GetModelDecorationArray()
 	{
 		return ModelUtil.GetModelConfig(this.UiModelDataComponent.ModelConfigId).UiModelDecorationArray;
 	}
 
-	// Token: 0x06017D38 RID: 97592 RVA: 0x0060FA94 File Offset: 0x0060DC94
+	// Token: 0x060155AB RID: 87467 RVA: 0x00635564 File Offset: 0x00633764
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -140,7 +140,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		return list;
 	}
 
-	// Token: 0x06017D39 RID: 97593 RVA: 0x0060FAE5 File Offset: 0x0060DCE5
+	// Token: 0x060155AC RID: 87468 RVA: 0x006355B5 File Offset: 0x006337B5
 	[NullableContext(2)]
 	public void LoadModelByModelId(int modelId, bool waitMeshStreaming = false, Action loadFinishCallBack = null, [Nullable(new byte[]
 	{
@@ -154,7 +154,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		this.LoadModel(waitMeshStreaming, extraResourceList, 0);
 	}
 
-	// Token: 0x06017D3A RID: 97594 RVA: 0x0060FB14 File Offset: 0x0060DD14
+	// Token: 0x060155AD RID: 87469 RVA: 0x006355E4 File Offset: 0x006337E4
 	protected void LoadModel(bool waitMeshStreaming, [Nullable(new byte[]
 	{
 		2,
@@ -204,7 +204,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		this.OnPostLoadAnimClass(null, animClassPath, waitMeshStreaming, extraResourceList, levelOfDetail);
 	}
 
-	// Token: 0x06017D3B RID: 97595 RVA: 0x0060FC20 File Offset: 0x0060DE20
+	// Token: 0x060155AE RID: 87470 RVA: 0x006356F0 File Offset: 0x006338F0
 	protected void OnPostLoadAnimClass([Nullable(2)] UClass asset, string path, bool waitMeshStreaming, [Nullable(new byte[]
 	{
 		2,
@@ -359,7 +359,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		});
 	}
 
-	// Token: 0x06017D3C RID: 97596 RVA: 0x0060FD24 File Offset: 0x0060DF24
+	// Token: 0x060155AF RID: 87471 RVA: 0x006357F4 File Offset: 0x006339F4
 	[NullableContext(2)]
 	[return: Nullable(new byte[]
 	{
@@ -400,13 +400,15 @@ public class UiModelLoadComponent : UiModelComponentBase
 							AnimNotifyStateEffect animNotifyStateEffect = fanimNotifyEvent.NotifyStateClass as AnimNotifyStateEffect;
 							if (animNotifyStateEffect != null && !FNameUtil.IsNothing(animNotifyStateEffect.EffectSlotName))
 							{
-								string text = animNotifyStateEffect.EffectDataAssetRef.ToAssetPathName();
-								if (!string.IsNullOrEmpty(text) && !(text == "None"))
+								AnimNotifyStateEffect ans = animNotifyStateEffect;
+								UiModelActorComponent uiModelActorComponent = this.UiModelActorComponent;
+								string animationNotifyEffectPath = UiModelLoadComponent.GetAnimationNotifyEffectPath(ans, (uiModelActorComponent != null) ? uiModelActorComponent.Actor : null);
+								if (!string.IsNullOrEmpty(animationNotifyEffectPath) && !(animationNotifyEffectPath == "None"))
 								{
-									string text3;
-									string text2 = (this.ReplaceEffectMap != null && this.ReplaceEffectMap.TryGetValue(text, out text3)) ? text3 : text;
-									text2 != text;
-									list.Add(text2);
+									string text2;
+									string text = (this.ReplaceEffectMap != null && this.ReplaceEffectMap.TryGetValue(animationNotifyEffectPath, out text2)) ? text2 : animationNotifyEffectPath;
+									text != animationNotifyEffectPath;
+									list.Add(text);
 								}
 							}
 						}
@@ -417,7 +419,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		return list;
 	}
 
-	// Token: 0x06017D3D RID: 97597 RVA: 0x0060FE84 File Offset: 0x0060E084
+	// Token: 0x060155B0 RID: 87472 RVA: 0x00635964 File Offset: 0x00633B64
 	protected virtual void FinishLoad()
 	{
 		UiModelDataComponent uiModelDataComponent = this.UiModelDataComponent;
@@ -451,7 +453,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		loadFinishCallBack();
 	}
 
-	// Token: 0x06017D3E RID: 97598 RVA: 0x0060FF28 File Offset: 0x0060E128
+	// Token: 0x060155B1 RID: 87473 RVA: 0x00635A08 File Offset: 0x00633C08
 	public void CancelLoad()
 	{
 		UiModelDataComponent uiModelDataComponent = this.UiModelDataComponent;
@@ -480,7 +482,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		uiModelMorphComponent.ClearData();
 	}
 
-	// Token: 0x06017D3F RID: 97599 RVA: 0x0060FFBC File Offset: 0x0060E1BC
+	// Token: 0x060155B2 RID: 87474 RVA: 0x00635A9C File Offset: 0x00633C9C
 	[return: Nullable(2)]
 	public UObject GetLoadedResource(string path)
 	{
@@ -492,7 +494,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		return null;
 	}
 
-	// Token: 0x06017D40 RID: 97600 RVA: 0x0060FFE4 File Offset: 0x0060E1E4
+	// Token: 0x060155B3 RID: 87475 RVA: 0x00635AC4 File Offset: 0x00633CC4
 	public List<UiModelDecorationParam> GetModelMeshDecorationList(TArray<SModelDecorationConfig> configArray)
 	{
 		int num = configArray.Num();
@@ -516,7 +518,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		return list;
 	}
 
-	// Token: 0x06017D41 RID: 97601 RVA: 0x00610064 File Offset: 0x0060E264
+	// Token: 0x060155B4 RID: 87476 RVA: 0x00635B44 File Offset: 0x00633D44
 	public TArray<USkeletalMesh> GetModelAllMesh()
 	{
 		TArray<USkeletalMesh> tarray = new TArray<USkeletalMesh>();
@@ -541,7 +543,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		return tarray;
 	}
 
-	// Token: 0x06017D42 RID: 97602 RVA: 0x0061010C File Offset: 0x0060E30C
+	// Token: 0x060155B5 RID: 87477 RVA: 0x00635BEC File Offset: 0x00633DEC
 	protected void DestroyLoadMesh()
 	{
 		if (this.StreamingHandleId != 0)
@@ -551,7 +553,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017D43 RID: 97603 RVA: 0x0061012D File Offset: 0x0060E32D
+	// Token: 0x060155B6 RID: 87478 RVA: 0x00635C0D File Offset: 0x00633E0D
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -563,7 +565,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		return this.ReplaceEffectMap;
 	}
 
-	// Token: 0x06017D44 RID: 97604 RVA: 0x00610138 File Offset: 0x0060E338
+	// Token: 0x060155B7 RID: 87479 RVA: 0x00635C18 File Offset: 0x00633E18
 	protected void SetupReplaceEffectFromModelConfig()
 	{
 		this.ReplaceEffectMap = null;
@@ -585,7 +587,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017D45 RID: 97605 RVA: 0x00610194 File Offset: 0x0060E394
+	// Token: 0x060155B8 RID: 87480 RVA: 0x00635C74 File Offset: 0x00633E74
 	protected void SetupReplaceEffect(string replaceTablePath)
 	{
 		UDataTable udataTable = ResourceSystem.Instance.Load<UDataTable>(replaceTablePath, "js_undefined");
@@ -621,22 +623,48 @@ public class UiModelLoadComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x0400B1AD RID: 45485
+	// Token: 0x060155B9 RID: 87481 RVA: 0x00635D80 File Offset: 0x00633F80
+	private static string GetAnimationNotifyEffectPath(AnimNotifyStateEffect ans, [Nullable(2)] UObject worldContext)
+	{
+		TSoftObjectPtr<UEffectModelBase> effectDataAssetRef = ans.EffectDataAssetRef;
+		string result = effectDataAssetRef.ToAssetPathName();
+		UObject uobject = (worldContext != null && worldContext.IsValid()) ? worldContext : GlobalData.World;
+		if (uobject == null || !uobject.IsValid() || UKuroRenderingRuntimeBPPluginBPLibrary.GetWorldFeatureLevel(uobject) != KuroFeatureLevel.ES3_1)
+		{
+			return result;
+		}
+		TSoftObjectPtr<UEffectModelBase> mobileEffectDataAssetRef = ans.MobileEffectDataAssetRef;
+		string text = (mobileEffectDataAssetRef != null) ? mobileEffectDataAssetRef.ToAssetPathName() : null;
+		if (!string.IsNullOrEmpty(text) && text != "None")
+		{
+			return text;
+		}
+		TMap<TSoftObjectPtr<UEffectModelBase>, TSoftObjectPtr<UEffectModelBase>> mobileEffectDataAssetOverrides = ans.MobileEffectDataAssetOverrides;
+		TSoftObjectPtr<UEffectModelBase> tsoftObjectPtr;
+		string text2 = (effectDataAssetRef != null && mobileEffectDataAssetOverrides != null && mobileEffectDataAssetOverrides.TryGetValue(effectDataAssetRef, out tsoftObjectPtr)) ? ((tsoftObjectPtr != null) ? tsoftObjectPtr.ToAssetPathName() : null) : null;
+		if (string.IsNullOrEmpty(text2) || !(text2 != "None"))
+		{
+			return result;
+		}
+		return text2;
+	}
+
+	// Token: 0x0400B518 RID: 46360
 	[Nullable(2)]
 	protected UiModelActorComponent UiModelActorComponent;
 
-	// Token: 0x0400B1AE RID: 45486
+	// Token: 0x0400B519 RID: 46361
 	[Nullable(2)]
 	protected UiModelDataComponent UiModelDataComponent;
 
-	// Token: 0x0400B1AF RID: 45487
+	// Token: 0x0400B51A RID: 46362
 	[Nullable(2)]
 	protected UiModelMorphComponent UiModelMorphComponent;
 
-	// Token: 0x0400B1B0 RID: 45488
+	// Token: 0x0400B51B RID: 46363
 	protected int LoadHandleId = UiModelResourcesManager.Instance.InvalidValue;
 
-	// Token: 0x0400B1B1 RID: 45489
+	// Token: 0x0400B51C RID: 46364
 	[Nullable(new byte[]
 	{
 		2,
@@ -645,7 +673,7 @@ public class UiModelLoadComponent : UiModelComponentBase
 	})]
 	private Dictionary<string, string> ReplaceEffectMap;
 
-	// Token: 0x0400B1B2 RID: 45490
+	// Token: 0x0400B51D RID: 46365
 	[Nullable(new byte[]
 	{
 		2,
@@ -654,22 +682,22 @@ public class UiModelLoadComponent : UiModelComponentBase
 	})]
 	protected Dictionary<string, UObject> ResourceLoadCache;
 
-	// Token: 0x0400B1B3 RID: 45491
+	// Token: 0x0400B51E RID: 46366
 	protected TArray<USkeletalMesh> MeshArray = new TArray<USkeletalMesh>();
 
-	// Token: 0x0400B1B4 RID: 45492
+	// Token: 0x0400B51F RID: 46367
 	protected int StreamingHandleId;
 
-	// Token: 0x0400B1B5 RID: 45493
+	// Token: 0x0400B520 RID: 46368
 	[Nullable(2)]
 	protected Action LoadFinishCallBack;
 
-	// Token: 0x0400B1B6 RID: 45494
+	// Token: 0x0400B521 RID: 46369
 	private int LoadAnimClassHandle = -1;
 
-	// Token: 0x0400B1B7 RID: 45495
+	// Token: 0x0400B522 RID: 46370
 	private TSet<UAnimationAsset> AnimationAssetSet = new TSet<UAnimationAsset>();
 
-	// Token: 0x0400B1B8 RID: 45496
+	// Token: 0x0400B523 RID: 46371
 	private TArray<FAnimNotifyEvent> AnimNotifyEvents = new TArray<FAnimNotifyEvent>();
 }

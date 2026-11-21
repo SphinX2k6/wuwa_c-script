@@ -4,23 +4,23 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200494D RID: 18765
+	// Token: 0x020038C4 RID: 14532
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ClickBtnComponent : HotKeyComponent
 	{
-		// Token: 0x06030FD6 RID: 200662 RVA: 0x00B607AC File Offset: 0x00B5E9AC
+		// Token: 0x06025B02 RID: 154370 RVA: 0x00A9B5F0 File Offset: 0x00A997F0
 		public ClickBtnComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06030FD7 RID: 200663 RVA: 0x00B607B5 File Offset: 0x00B5E9B5
+		// Token: 0x06025B03 RID: 154371 RVA: 0x00A9B5F9 File Offset: 0x00A997F9
 		protected override void OnPress(HotKeyMap config)
 		{
 			this.ClickButton(config.BindButtonTag);
 		}
 
-		// Token: 0x06030FD8 RID: 200664 RVA: 0x00B607C4 File Offset: 0x00B5E9C4
+		// Token: 0x06025B04 RID: 154372 RVA: 0x00A9B608 File Offset: 0x00A99808
 		private void ClickButton(string tag)
 		{
 			if (tag == "tag1")
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationNewController.Instance.ClickButton(tag);
 		}
 
-		// Token: 0x06030FD9 RID: 200665 RVA: 0x00B607EC File Offset: 0x00B5E9EC
+		// Token: 0x06025B05 RID: 154373 RVA: 0x00A9B630 File Offset: 0x00A99830
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
 			string bindButtonTag = base.GetBindButtonTag();

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200126E RID: 4718
+	// Token: 0x020013AE RID: 5038
 	public static class EQuestOnlineTypeExtensions
 	{
-		// Token: 0x06006A96 RID: 27286 RVA: 0x000FF808 File Offset: 0x000FDA08
+		// Token: 0x060070E9 RID: 28905 RVA: 0x0010D434 File Offset: 0x0010B634
 		public static string ToEnumString(this EQuestOnlineType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A97 RID: 27287 RVA: 0x000FF840 File Offset: 0x000FDA40
+		// Token: 0x060070EA RID: 28906 RVA: 0x0010D46C File Offset: 0x0010B66C
 		public static EQuestOnlineType FromString(string name)
 		{
 			EQuestOnlineType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A98 RID: 27288 RVA: 0x000FF869 File Offset: 0x000FDA69
+		// Token: 0x060070EB RID: 28907 RVA: 0x0010D495 File Offset: 0x0010B695
 		public static bool TryFromString(string name, out EQuestOnlineType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006A99 RID: 27289 RVA: 0x000FF8A2 File Offset: 0x000FDAA2
+		// Token: 0x060070EC RID: 28908 RVA: 0x0010D4CE File Offset: 0x0010B6CE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A9A RID: 27290 RVA: 0x000FF8BA File Offset: 0x000FDABA
+		// Token: 0x060070ED RID: 28909 RVA: 0x0010D4E6 File Offset: 0x0010B6E6
 		public static EQuestOnlineType[] GetValues()
 		{
 			return new EQuestOnlineType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A9B RID: 27291 RVA: 0x000FF8C6 File Offset: 0x000FDAC6
+		// Token: 0x060070EE RID: 28910 RVA: 0x0010D4F2 File Offset: 0x0010B6F2
 		public static string[] GetNames()
 		{
 			return new string[]

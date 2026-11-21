@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005612 RID: 22034
+	// Token: 0x020045E8 RID: 17896
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueGridDecoration : UiPanelBase
 	{
-		// Token: 0x0603811E RID: 229662 RVA: 0x00D47C2F File Offset: 0x00D45E2F
+		// Token: 0x0602D01C RID: 184348 RVA: 0x00C95977 File Offset: 0x00C93B77
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0603811F RID: 229663 RVA: 0x00D47C54 File Offset: 0x00D45E54
+		// Token: 0x0602D01D RID: 184349 RVA: 0x00C9599C File Offset: 0x00C93B9C
 		private void SetSprite(string path)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			});
 		}
 
-		// Token: 0x06038120 RID: 229664 RVA: 0x00D47C98 File Offset: 0x00D45E98
+		// Token: 0x0602D01E RID: 184350 RVA: 0x00C959E0 File Offset: 0x00C93BE0
 		public void Refresh(MapGridData data)
 		{
 			bool flag = data.ExtraPathIndex >= 0;
@@ -55,13 +55,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038121 RID: 229665 RVA: 0x00D47D24 File Offset: 0x00D45F24
+		// Token: 0x0602D01F RID: 184351 RVA: 0x00C95A6C File Offset: 0x00C93C6C
 		public void SetVision(bool bHasVision)
 		{
 			this.SetActive(bHasVision);
 		}
 
-		// Token: 0x0401D79F RID: 120735
+		// Token: 0x0401822A RID: 98858
 		private const string GRID_TAKE_SPRITE = "/Game/Aki/UI/UIResources/UiRogue/Atlas/RogueMap/SP_PieceFlag.SP_PieceFlag";
 	}
 }

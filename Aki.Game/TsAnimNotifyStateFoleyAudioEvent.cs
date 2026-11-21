@@ -13,9 +13,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateFoleyAudioEvent.TsAnimNotifyStateFoleyAudioEvent_C")]
 public class TsAnimNotifyStateFoleyAudioEvent : TsAnimNotifyStateBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700031E RID: 798
-	// (get) Token: 0x060012FA RID: 4858 RVA: 0x0006AFE8 File Offset: 0x000691E8
-	// (set) Token: 0x060012FB RID: 4859 RVA: 0x0006AFF8 File Offset: 0x000691F8
+	// Token: 0x17000321 RID: 801
+	// (get) Token: 0x06001300 RID: 4864 RVA: 0x0006C9F4 File Offset: 0x0006ABF4
+	// (set) Token: 0x06001301 RID: 4865 RVA: 0x0006CA04 File Offset: 0x0006AC04
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe E_FoleyVariant Variant
 	{
@@ -29,9 +29,9 @@ public class TsAnimNotifyStateFoleyAudioEvent : TsAnimNotifyStateBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x1700031F RID: 799
-	// (get) Token: 0x060012FC RID: 4860 RVA: 0x0006B009 File Offset: 0x00069209
-	// (set) Token: 0x060012FD RID: 4861 RVA: 0x0006B019 File Offset: 0x00069219
+	// Token: 0x17000322 RID: 802
+	// (get) Token: 0x06001302 RID: 4866 RVA: 0x0006CA15 File Offset: 0x0006AC15
+	// (set) Token: 0x06001303 RID: 4867 RVA: 0x0006CA25 File Offset: 0x0006AC25
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int FadeDuration
 	{
@@ -45,9 +45,9 @@ public class TsAnimNotifyStateFoleyAudioEvent : TsAnimNotifyStateBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x17000320 RID: 800
-	// (get) Token: 0x060012FE RID: 4862 RVA: 0x0006B02A File Offset: 0x0006922A
-	// (set) Token: 0x060012FF RID: 4863 RVA: 0x0006B03A File Offset: 0x0006923A
+	// Token: 0x17000323 RID: 803
+	// (get) Token: 0x06001304 RID: 4868 RVA: 0x0006CA36 File Offset: 0x0006AC36
+	// (set) Token: 0x06001305 RID: 4869 RVA: 0x0006CA46 File Offset: 0x0006AC46
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EAudioFadeCurve FadeCurve
 	{
@@ -61,33 +61,29 @@ public class TsAnimNotifyStateFoleyAudioEvent : TsAnimNotifyStateBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x06001300 RID: 4864 RVA: 0x0006B04C File Offset: 0x0006924C
+	// Token: 0x06001306 RID: 4870 RVA: 0x0006CA58 File Offset: 0x0006AC58
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyBegin(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyBegin"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateFoleyAudioEvent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyBegin"), TsAnimNotifyStateFoleyAudioEvent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
-			ptr2->TotalDuration = totalDuration;
+			return this.K2_NotifyBegin_Implementation(meshComp, animation, totalDuration);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		ptr->TotalDuration = totalDuration;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001301 RID: 4865 RVA: 0x0006B0F4 File Offset: 0x000692F4
+	// Token: 0x06001307 RID: 4871 RVA: 0x0006CB18 File Offset: 0x0006AD18
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyBegin_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
@@ -125,32 +121,28 @@ public class TsAnimNotifyStateFoleyAudioEvent : TsAnimNotifyStateBase, IUnrealUO
 		return true;
 	}
 
-	// Token: 0x06001302 RID: 4866 RVA: 0x0006B1FC File Offset: 0x000693FC
+	// Token: 0x06001308 RID: 4872 RVA: 0x0006CC20 File Offset: 0x0006AE20
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyEnd(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyEnd"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateFoleyAudioEvent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyEnd"), TsAnimNotifyStateFoleyAudioEvent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_NotifyEnd_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001303 RID: 4867 RVA: 0x0006B29C File Offset: 0x0006949C
+	// Token: 0x06001309 RID: 4873 RVA: 0x0006CCD8 File Offset: 0x0006AED8
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyEnd_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -178,7 +170,7 @@ public class TsAnimNotifyStateFoleyAudioEvent : TsAnimNotifyStateBase, IUnrealUO
 		return true;
 	}
 
-	// Token: 0x06001304 RID: 4868 RVA: 0x0006B347 File Offset: 0x00069547
+	// Token: 0x0600130A RID: 4874 RVA: 0x0006CD83 File Offset: 0x0006AF83
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyStateFoleyAudioEvent._ClassPtr == IntPtr.Zero)
@@ -188,23 +180,23 @@ public class TsAnimNotifyStateFoleyAudioEvent : TsAnimNotifyStateBase, IUnrealUO
 		return TsAnimNotifyStateFoleyAudioEvent._ClassPtr;
 	}
 
-	// Token: 0x06001305 RID: 4869 RVA: 0x0006B36C File Offset: 0x0006956C
+	// Token: 0x0600130B RID: 4875 RVA: 0x0006CDA8 File Offset: 0x0006AFA8
 	public TsAnimNotifyStateFoleyAudioEvent() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateFoleyAudioEvent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001306 RID: 4870 RVA: 0x0006B394 File Offset: 0x00069594
+	// Token: 0x0600130C RID: 4876 RVA: 0x0006CDD0 File Offset: 0x0006AFD0
 	[NullableContext(1)]
 	public TsAnimNotifyStateFoleyAudioEvent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateFoleyAudioEvent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001307 RID: 4871 RVA: 0x0006B3C7 File Offset: 0x000695C7
+	// Token: 0x0600130D RID: 4877 RVA: 0x0006CE03 File Offset: 0x0006B003
 	protected TsAnimNotifyStateFoleyAudioEvent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001308 RID: 4872 RVA: 0x0006B3D0 File Offset: 0x000695D0
+	// Token: 0x0600130E RID: 4878 RVA: 0x0006CE0C File Offset: 0x0006B00C
 	protected unsafe virtual void __CPPCALL_K2_NotifyBegin_Implementation(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -212,7 +204,7 @@ public class TsAnimNotifyStateFoleyAudioEvent : TsAnimNotifyStateBase, IUnrealUO
 		__Params->__Result = this.K2_NotifyBegin_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->TotalDuration);
 	}
 
-	// Token: 0x06001309 RID: 4873 RVA: 0x0006B40C File Offset: 0x0006960C
+	// Token: 0x0600130F RID: 4879 RVA: 0x0006CE48 File Offset: 0x0006B048
 	protected unsafe virtual void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -220,13 +212,13 @@ public class TsAnimNotifyStateFoleyAudioEvent : TsAnimNotifyStateBase, IUnrealUO
 		__Params->__Result = this.K2_NotifyEnd_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x04000E01 RID: 3585
+	// Token: 0x04000E09 RID: 3593
 	private const int DEFAULT_FADE_DURATION = 500;
 
-	// Token: 0x04000E02 RID: 3586
+	// Token: 0x04000E0A RID: 3594
 	private bool InitVariables;
 
-	// Token: 0x04000E03 RID: 3587
+	// Token: 0x04000E0B RID: 3595
 	[Nullable(new byte[]
 	{
 		2,
@@ -234,22 +226,22 @@ public class TsAnimNotifyStateFoleyAudioEvent : TsAnimNotifyStateBase, IUnrealUO
 	})]
 	private Dictionary<int, FoleyEventHandle> HandleMap;
 
-	// Token: 0x04000E04 RID: 3588
+	// Token: 0x04000E0C RID: 3596
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateFoleyAudioEvent.TsAnimNotifyStateFoleyAudioEvent_C";
 
-	// Token: 0x04000E05 RID: 3589
+	// Token: 0x04000E0D RID: 3597
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000E06 RID: 3590
+	// Token: 0x04000E0E RID: 3598
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000E07 RID: 3591
+	// Token: 0x04000E0F RID: 3599
 	private static int __PropertyOffset_Variant;
 
-	// Token: 0x04000E08 RID: 3592
+	// Token: 0x04000E10 RID: 3600
 	private static int __PropertyOffset_FadeDuration;
 
-	// Token: 0x04000E09 RID: 3593
+	// Token: 0x04000E11 RID: 3601
 	private static int __PropertyOffset_FadeCurve;
 }

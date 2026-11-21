@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001E89 RID: 7817
+// Token: 0x0200134B RID: 4939
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class HonamiStoryConfig : ConfigBase
 {
-	// Token: 0x0600EE4C RID: 61004 RVA: 0x0038CF04 File Offset: 0x0038B104
+	// Token: 0x0600C26B RID: 49771 RVA: 0x00398AF4 File Offset: 0x00396CF4
 	public HonamiStoryBackPack? GetHonamiStoryBackPack(int id)
 	{
 		HonamiStoryBackPack? config = ConfigHonamiStoryBackPackById.GetConfig(id, true);
@@ -26,7 +26,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryBackPack?(config.Value);
 	}
 
-	// Token: 0x0600EE4D RID: 61005 RVA: 0x0038CF68 File Offset: 0x0038B168
+	// Token: 0x0600C26C RID: 49772 RVA: 0x00398B58 File Offset: 0x00396D58
 	public HonamiStoryItem? GetHonamiStoryItem(int itemId)
 	{
 		HonamiStoryItem? config = ConfigHonamiStoryItemById.GetConfig(itemId, true);
@@ -43,7 +43,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryItem?(config.Value);
 	}
 
-	// Token: 0x0600EE4E RID: 61006 RVA: 0x0038CFCC File Offset: 0x0038B1CC
+	// Token: 0x0600C26D RID: 49773 RVA: 0x00398BBC File Offset: 0x00396DBC
 	public HonamiStoryEquip? GetHonamiStoryEquip(int itemId)
 	{
 		HonamiStoryEquip? config = ConfigHonamiStoryEquipById.GetConfig(itemId, true);
@@ -60,7 +60,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryEquip?(config.Value);
 	}
 
-	// Token: 0x0600EE4F RID: 61007 RVA: 0x0038D030 File Offset: 0x0038B230
+	// Token: 0x0600C26E RID: 49774 RVA: 0x00398C20 File Offset: 0x00396E20
 	public int[] GetHonamiStoryPropLibrary(int id)
 	{
 		HonamiStoryPropLibrary? config = ConfigHonamiStoryPropLibraryById.GetConfig(id, true);
@@ -83,7 +83,7 @@ public class HonamiStoryConfig : ConfigBase
 		return array;
 	}
 
-	// Token: 0x0600EE50 RID: 61008 RVA: 0x0038D0C4 File Offset: 0x0038B2C4
+	// Token: 0x0600C26F RID: 49775 RVA: 0x00398CB4 File Offset: 0x00396EB4
 	public HonamiStoryProp? GetHonamiStoryProp(int id)
 	{
 		HonamiStoryProp? config = ConfigHonamiStoryPropById.GetConfig(id, true);
@@ -100,7 +100,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryProp?(config.Value);
 	}
 
-	// Token: 0x0600EE51 RID: 61009 RVA: 0x0038D128 File Offset: 0x0038B328
+	// Token: 0x0600C270 RID: 49776 RVA: 0x00398D18 File Offset: 0x00396F18
 	public int? GetHonamiStoryBuffTempLibrary(int id)
 	{
 		HonamiStoryBuffTempLibrary? config = ConfigHonamiStoryBuffTempLibraryById.GetConfig(id, true);
@@ -117,7 +117,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new int?(config.Value.BuffTermpId);
 	}
 
-	// Token: 0x0600EE52 RID: 61010 RVA: 0x0038D194 File Offset: 0x0038B394
+	// Token: 0x0600C271 RID: 49777 RVA: 0x00398D84 File Offset: 0x00396F84
 	[NullableContext(2)]
 	public string GetHonamiStoryBuffTempDescFromLibrary(int libraryId)
 	{
@@ -140,7 +140,7 @@ public class HonamiStoryConfig : ConfigBase
 		return config.Value.Desc;
 	}
 
-	// Token: 0x0600EE53 RID: 61011 RVA: 0x0038D20C File Offset: 0x0038B40C
+	// Token: 0x0600C272 RID: 49778 RVA: 0x00398DFC File Offset: 0x00396FFC
 	public HonamiStoryBuffTemp? GetHonamiStoryBuffTemp(int id)
 	{
 		HonamiStoryBuffTemp? config = ConfigHonamiStoryBuffTempById.GetConfig(id, true);
@@ -157,7 +157,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryBuffTemp?(config.Value);
 	}
 
-	// Token: 0x0600EE54 RID: 61012 RVA: 0x0038D270 File Offset: 0x0038B470
+	// Token: 0x0600C273 RID: 49779 RVA: 0x00398E60 File Offset: 0x00397060
 	public HonamiStoryItemQuality? GetHonamiStoryQuality(int quality)
 	{
 		HonamiStoryItemQuality? config = ConfigHonamiStoryItemQualityById.GetConfig(quality, true);
@@ -174,7 +174,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryItemQuality?(config.Value);
 	}
 
-	// Token: 0x0600EE55 RID: 61013 RVA: 0x0038D2D4 File Offset: 0x0038B4D4
+	// Token: 0x0600C274 RID: 49780 RVA: 0x00398EC4 File Offset: 0x003970C4
 	public HonamiStoryActivity? GetHonamiStoryActivityConfig(int activityId)
 	{
 		HonamiStoryActivity? config = ConfigHonamiStoryActivityByActivityId.GetConfig(activityId, true);
@@ -191,7 +191,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryActivity?(config.Value);
 	}
 
-	// Token: 0x0600EE56 RID: 61014 RVA: 0x0038D338 File Offset: 0x0038B538
+	// Token: 0x0600C275 RID: 49781 RVA: 0x00398F28 File Offset: 0x00397128
 	public IReadOnlyList<HonamiStoryActivity> GetAllActivityConfig()
 	{
 		IReadOnlyList<HonamiStoryActivity> configList = ConfigHonamiStoryActivityAll.GetConfigList(true);
@@ -203,7 +203,7 @@ public class HonamiStoryConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600EE57 RID: 61015 RVA: 0x0038D378 File Offset: 0x0038B578
+	// Token: 0x0600C276 RID: 49782 RVA: 0x00398F68 File Offset: 0x00397168
 	public HonamiStoryMascot? GetHonamiStoryMascotConfig(int id)
 	{
 		HonamiStoryMascot? config = ConfigHonamiStoryMascotById.GetConfig(id, true);
@@ -220,7 +220,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryMascot?(config.Value);
 	}
 
-	// Token: 0x0600EE58 RID: 61016 RVA: 0x0038D3DC File Offset: 0x0038B5DC
+	// Token: 0x0600C277 RID: 49783 RVA: 0x00398FCC File Offset: 0x003971CC
 	public IReadOnlyList<HonamiStoryMascot> GetHonamiStoryMascotConfigList(int activityId)
 	{
 		IReadOnlyList<HonamiStoryMascot> configList = ConfigHonamiStoryMascotByActivityId.GetConfigList(activityId, true);
@@ -237,7 +237,7 @@ public class HonamiStoryConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600EE59 RID: 61017 RVA: 0x0038D42C File Offset: 0x0038B62C
+	// Token: 0x0600C278 RID: 49784 RVA: 0x0039901C File Offset: 0x0039721C
 	public HonamiStoryArea? GetHonamiStoryAreaConfig(int areaId)
 	{
 		if (areaId == 0)
@@ -258,7 +258,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryArea?(config.Value);
 	}
 
-	// Token: 0x0600EE5A RID: 61018 RVA: 0x0038D49C File Offset: 0x0038B69C
+	// Token: 0x0600C279 RID: 49785 RVA: 0x0039908C File Offset: 0x0039728C
 	public IReadOnlyList<HonamiStoryArea> GetHonamiStoryAreaConfigList(int activityId)
 	{
 		IReadOnlyList<HonamiStoryArea> configList = ConfigHonamiStoryAreaByActivityId.GetConfigList(activityId, true);
@@ -275,7 +275,7 @@ public class HonamiStoryConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600EE5B RID: 61019 RVA: 0x0038D4EC File Offset: 0x0038B6EC
+	// Token: 0x0600C27A RID: 49786 RVA: 0x003990DC File Offset: 0x003972DC
 	public IReadOnlyList<HonamiStoryLimitTask> GetHonamiStoryLimitTaskConfigList(int activityId)
 	{
 		IReadOnlyList<HonamiStoryLimitTask> configList = ConfigHonamiStoryLimitTaskByActivityId.GetConfigList(activityId, true);
@@ -292,7 +292,7 @@ public class HonamiStoryConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600EE5C RID: 61020 RVA: 0x0038D53C File Offset: 0x0038B73C
+	// Token: 0x0600C27B RID: 49787 RVA: 0x0039912C File Offset: 0x0039732C
 	public IReadOnlyList<HonamiStoryResidentTask> GetHonamiStoryPermanentTaskConfigList(int activityId)
 	{
 		IReadOnlyList<HonamiStoryResidentTask> configList = ConfigHonamiStoryResidentTaskByActivityId.GetConfigList(activityId, true);
@@ -309,7 +309,7 @@ public class HonamiStoryConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600EE5D RID: 61021 RVA: 0x0038D58C File Offset: 0x0038B78C
+	// Token: 0x0600C27C RID: 49788 RVA: 0x0039917C File Offset: 0x0039737C
 	public IReadOnlyList<HonamiStoryScoreReward> GetHonamiStoryScoreRewardConfigList(int activityId)
 	{
 		IReadOnlyList<HonamiStoryScoreReward> configList = ConfigHonamiStoryScoreRewardByActivityId.GetConfigList(activityId, true);
@@ -326,7 +326,7 @@ public class HonamiStoryConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600EE5E RID: 61022 RVA: 0x0038D5DC File Offset: 0x0038B7DC
+	// Token: 0x0600C27D RID: 49789 RVA: 0x003991CC File Offset: 0x003973CC
 	public IReadOnlyList<HonamiStoryTalent> GetHonamiStoryTalentConfigList(int activityId)
 	{
 		IReadOnlyList<HonamiStoryTalent> configList = ConfigHonamiStoryTalentByActivityId.GetConfigList(activityId, true);
@@ -343,7 +343,7 @@ public class HonamiStoryConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600EE5F RID: 61023 RVA: 0x0038D62C File Offset: 0x0038B82C
+	// Token: 0x0600C27E RID: 49790 RVA: 0x0039921C File Offset: 0x0039741C
 	public IReadOnlyList<HonamiStoryItemCollection> GetHonamiStoryItemCollectionConfigList(int activityId)
 	{
 		IReadOnlyList<HonamiStoryItemCollection> configList = ConfigHonamiStoryItemCollectionByActivityId.GetConfigList(activityId, true);
@@ -360,7 +360,7 @@ public class HonamiStoryConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600EE60 RID: 61024 RVA: 0x0038D67C File Offset: 0x0038B87C
+	// Token: 0x0600C27F RID: 49791 RVA: 0x0039926C File Offset: 0x0039746C
 	public HonamiStoryAreaTask? GetHonamiStoryAreaTaskById(int id)
 	{
 		HonamiStoryAreaTask? config = ConfigHonamiStoryAreaTaskById.GetConfig(id, true);
@@ -377,7 +377,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryAreaTask?(config.Value);
 	}
 
-	// Token: 0x0600EE61 RID: 61025 RVA: 0x0038D6E0 File Offset: 0x0038B8E0
+	// Token: 0x0600C280 RID: 49792 RVA: 0x003992D0 File Offset: 0x003974D0
 	public HonamiStoryLimitTask? GetHonamiStoryLimitTaskConfig(int configId)
 	{
 		HonamiStoryLimitTask? config = ConfigHonamiStoryLimitTaskById.GetConfig(configId, true);
@@ -394,7 +394,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryLimitTask?(config.Value);
 	}
 
-	// Token: 0x0600EE62 RID: 61026 RVA: 0x0038D744 File Offset: 0x0038B944
+	// Token: 0x0600C281 RID: 49793 RVA: 0x00399334 File Offset: 0x00397534
 	public HonamiStoryResidentTask? GetHonamiStoryPermanentTaskConfig(int configId)
 	{
 		HonamiStoryResidentTask? config = ConfigHonamiStoryResidentTaskById.GetConfig(configId, true);
@@ -411,7 +411,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryResidentTask?(config.Value);
 	}
 
-	// Token: 0x0600EE63 RID: 61027 RVA: 0x0038D7A8 File Offset: 0x0038B9A8
+	// Token: 0x0600C282 RID: 49794 RVA: 0x00399398 File Offset: 0x00397598
 	public HonamiStoryScoreReward? GetHonamiStoryScoreRewardConfig(int configId)
 	{
 		HonamiStoryScoreReward? config = ConfigHonamiStoryScoreRewardById.GetConfig(configId, true);
@@ -428,7 +428,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryScoreReward?(config.Value);
 	}
 
-	// Token: 0x0600EE64 RID: 61028 RVA: 0x0038D80C File Offset: 0x0038BA0C
+	// Token: 0x0600C283 RID: 49795 RVA: 0x003993FC File Offset: 0x003975FC
 	public HonamiStoryWeaponSuit? GetWeaponSuit(int id)
 	{
 		HonamiStoryWeaponSuit? config = ConfigHonamiStoryWeaponSuitById.GetConfig(id, true);
@@ -445,7 +445,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryWeaponSuit?(config.Value);
 	}
 
-	// Token: 0x0600EE65 RID: 61029 RVA: 0x0038D870 File Offset: 0x0038BA70
+	// Token: 0x0600C284 RID: 49796 RVA: 0x00399460 File Offset: 0x00397660
 	public HonamiStoryPluginSubType? GetPluginSubType(int id)
 	{
 		HonamiStoryPluginSubType? config = ConfigHonamiStoryPluginSubTypeById.GetConfig(id, true);
@@ -462,7 +462,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryPluginSubType?(config.Value);
 	}
 
-	// Token: 0x0600EE66 RID: 61030 RVA: 0x0038D8D4 File Offset: 0x0038BAD4
+	// Token: 0x0600C285 RID: 49797 RVA: 0x003994C4 File Offset: 0x003976C4
 	public HonamiStoryPluginTag? GetPluginTag(int id)
 	{
 		HonamiStoryPluginTag? config = ConfigHonamiStoryPluginTagById.GetConfig(id, true);
@@ -479,7 +479,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryPluginTag?(config.Value);
 	}
 
-	// Token: 0x0600EE67 RID: 61031 RVA: 0x0038D938 File Offset: 0x0038BB38
+	// Token: 0x0600C286 RID: 49798 RVA: 0x00399528 File Offset: 0x00397728
 	public HonamiStoryLifeSupport? GetLifeSupport(int id)
 	{
 		HonamiStoryLifeSupport? config = ConfigHonamiStoryLifeSupportById.GetConfig(id, true);
@@ -496,7 +496,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryLifeSupport?(config.Value);
 	}
 
-	// Token: 0x0600EE68 RID: 61032 RVA: 0x0038D99C File Offset: 0x0038BB9C
+	// Token: 0x0600C287 RID: 49799 RVA: 0x0039958C File Offset: 0x0039778C
 	public IReadOnlyList<HonamiStoryLifeSupport> GetLifeSupportList(int activityId)
 	{
 		IReadOnlyList<HonamiStoryLifeSupport> configList = ConfigHonamiStoryLifeSupportByActivityId.GetConfigList(activityId, true);
@@ -513,7 +513,7 @@ public class HonamiStoryConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600EE69 RID: 61033 RVA: 0x0038D9EC File Offset: 0x0038BBEC
+	// Token: 0x0600C288 RID: 49800 RVA: 0x003995DC File Offset: 0x003977DC
 	public HonamiStoryWeapon? GetWeaponConfig(int id)
 	{
 		if (id == 0)
@@ -532,7 +532,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryWeapon?(config.Value);
 	}
 
-	// Token: 0x0600EE6A RID: 61034 RVA: 0x0038DA44 File Offset: 0x0038BC44
+	// Token: 0x0600C289 RID: 49801 RVA: 0x00399634 File Offset: 0x00397834
 	public IReadOnlyList<HonamiStoryWeapon> GetHonamiStoryWeaponConfigList(int activityId)
 	{
 		IReadOnlyList<HonamiStoryWeapon> configList = ConfigHonamiStoryWeaponByActivityId.GetConfigList(activityId, true);
@@ -549,7 +549,7 @@ public class HonamiStoryConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600EE6B RID: 61035 RVA: 0x0038DA94 File Offset: 0x0038BC94
+	// Token: 0x0600C28A RID: 49802 RVA: 0x00399684 File Offset: 0x00397884
 	public IReadOnlyList<HonamiStoryOutDialog> GetHonamiStoryOutDialogList(int activityId)
 	{
 		IReadOnlyList<HonamiStoryOutDialog> configList = ConfigHonamiStoryOutDialogByActivityId.GetConfigList(activityId, true);
@@ -566,7 +566,7 @@ public class HonamiStoryConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600EE6C RID: 61036 RVA: 0x0038DAE4 File Offset: 0x0038BCE4
+	// Token: 0x0600C28B RID: 49803 RVA: 0x003996D4 File Offset: 0x003978D4
 	public HonamiStoryEffect? GetEffectConfig(int id)
 	{
 		HonamiStoryEffect? config = ConfigHonamiStoryEffectById.GetConfig(id, true);
@@ -587,13 +587,13 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryEffect?(config.Value);
 	}
 
-	// Token: 0x0600EE6D RID: 61037 RVA: 0x0038DB60 File Offset: 0x0038BD60
+	// Token: 0x0600C28C RID: 49804 RVA: 0x00399750 File Offset: 0x00397950
 	public int GetDoubleClickDelay()
 	{
 		return ConfigCommonParamById.GetIntConfig("HonamiStoryBackpackClickInterval").GetValueOrDefault(300);
 	}
 
-	// Token: 0x0600EE6E RID: 61038 RVA: 0x0038DB84 File Offset: 0x0038BD84
+	// Token: 0x0600C28D RID: 49805 RVA: 0x00399774 File Offset: 0x00397974
 	public HonamiStoryPluginSlot? GetSlotUnlockConfig(int id)
 	{
 		HonamiStoryPluginSlot? config = ConfigHonamiStoryPluginSlotById.GetConfig(id, true);
@@ -614,7 +614,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryPluginSlot?(config.Value);
 	}
 
-	// Token: 0x0600EE6F RID: 61039 RVA: 0x0038DC00 File Offset: 0x0038BE00
+	// Token: 0x0600C28E RID: 49806 RVA: 0x003997F0 File Offset: 0x003979F0
 	public HonamiStoryDangerLevel? GetDangerLevelConfig(int id)
 	{
 		HonamiStoryDangerLevel? config = ConfigHonamiStoryDangerLevelById.GetConfig(id, true);
@@ -635,7 +635,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryDangerLevel?(config.Value);
 	}
 
-	// Token: 0x0600EE70 RID: 61040 RVA: 0x0038DC7C File Offset: 0x0038BE7C
+	// Token: 0x0600C28F RID: 49807 RVA: 0x0039986C File Offset: 0x00397A6C
 	public HonamiStoryLoadingPerform? GetLoadingPerformConfigById(int id)
 	{
 		HonamiStoryLoadingPerform? config = ConfigHonamiStoryLoadingPerformById.GetConfig(id, true);
@@ -652,7 +652,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryLoadingPerform?(config.Value);
 	}
 
-	// Token: 0x0600EE71 RID: 61041 RVA: 0x0038DCE0 File Offset: 0x0038BEE0
+	// Token: 0x0600C290 RID: 49808 RVA: 0x003998D0 File Offset: 0x00397AD0
 	public unsafe HonamiStoryLoadingPerform? GetLoadingPerformConfigByBtAndTime(int mainBtId, int timing)
 	{
 		HonamiStoryLoadingPerform? config = ConfigHonamiStoryLoadingPerformByBTIdAndTiming.GetConfig(mainBtId, timing, true);
@@ -671,7 +671,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryLoadingPerform?(config.Value);
 	}
 
-	// Token: 0x0600EE72 RID: 61042 RVA: 0x0038DD78 File Offset: 0x0038BF78
+	// Token: 0x0600C291 RID: 49809 RVA: 0x00399968 File Offset: 0x00397B68
 	public IReadOnlyList<HonamiStoryLoadingPerform> GetLoadingPerformConfigListByTiming(int timing)
 	{
 		IReadOnlyList<HonamiStoryLoadingPerform> configList = ConfigHonamiStoryLoadingPerformByTiming.GetConfigList(timing, true);
@@ -688,7 +688,7 @@ public class HonamiStoryConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600EE73 RID: 61043 RVA: 0x0038DDC8 File Offset: 0x0038BFC8
+	// Token: 0x0600C292 RID: 49810 RVA: 0x003999B8 File Offset: 0x00397BB8
 	public IReadOnlyList<HonamiStoryMapMark> GetHonamiMapMarkList()
 	{
 		IReadOnlyList<HonamiStoryMapMark> configList = ConfigHonamiStoryMapMarkAll.GetConfigList(true);
@@ -700,7 +700,7 @@ public class HonamiStoryConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600EE74 RID: 61044 RVA: 0x0038DE08 File Offset: 0x0038C008
+	// Token: 0x0600C293 RID: 49811 RVA: 0x003999F8 File Offset: 0x00397BF8
 	public HonamiStoryMapMark? GetHonamiMapMarkById(int id)
 	{
 		HonamiStoryMapMark? config = ConfigHonamiStoryMapMarkById.GetConfig(id, true);
@@ -721,7 +721,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryMapMark?(config.Value);
 	}
 
-	// Token: 0x0600EE75 RID: 61045 RVA: 0x0038DE84 File Offset: 0x0038C084
+	// Token: 0x0600C294 RID: 49812 RVA: 0x00399A74 File Offset: 0x00397C74
 	public HonamiStoryMarkWhiteList? GetHonamiScanItemWhiteListConfigByEntityConfigId(int entityConfigId)
 	{
 		HonamiStoryMarkWhiteList? config = ConfigHonamiStoryMarkWhiteListById.GetConfig(entityConfigId, true);
@@ -732,7 +732,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryMarkWhiteList?(config.Value);
 	}
 
-	// Token: 0x0600EE76 RID: 61046 RVA: 0x0038DEB8 File Offset: 0x0038C0B8
+	// Token: 0x0600C295 RID: 49813 RVA: 0x00399AA8 File Offset: 0x00397CA8
 	public IReadOnlyList<int> GetHonamiScanItemWhileListIds()
 	{
 		IReadOnlyList<HonamiStoryMarkWhiteList> configList = ConfigHonamiStoryMarkWhiteListAll.GetConfigList(true);
@@ -748,7 +748,7 @@ public class HonamiStoryConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x0600EE77 RID: 61047 RVA: 0x0038DF20 File Offset: 0x0038C120
+	// Token: 0x0600C296 RID: 49814 RVA: 0x00399B10 File Offset: 0x00397D10
 	public HonamiStoryPluginBoxItem? GetHonamiStoryPluginBoxItemById(int id)
 	{
 		HonamiStoryPluginBoxItem? config = ConfigHonamiStoryPluginBoxItemById.GetConfig(id, true);
@@ -765,7 +765,7 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryPluginBoxItem?(config.Value);
 	}
 
-	// Token: 0x0600EE78 RID: 61048 RVA: 0x0038DF84 File Offset: 0x0038C184
+	// Token: 0x0600C297 RID: 49815 RVA: 0x00399B74 File Offset: 0x00397D74
 	public IReadOnlyList<HonamiStoryPluginBoxItem> GetHonamiStoryPluginBoxItemList(int activityId)
 	{
 		IReadOnlyList<HonamiStoryPluginBoxItem> configList = ConfigHonamiStoryPluginBoxItemByActivityId.GetConfigList(activityId, true);
@@ -782,19 +782,19 @@ public class HonamiStoryConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600EE79 RID: 61049 RVA: 0x0038DFD4 File Offset: 0x0038C1D4
+	// Token: 0x0600C298 RID: 49816 RVA: 0x00399BC4 File Offset: 0x00397DC4
 	public int GetScrollingSpeed()
 	{
 		return ConfigCommonParamById.GetIntConfig("HonamiStoryScrollMoveSpeed").GetValueOrDefault(10);
 	}
 
-	// Token: 0x0600EE7A RID: 61050 RVA: 0x0038DFF8 File Offset: 0x0038C1F8
+	// Token: 0x0600C299 RID: 49817 RVA: 0x00399BE8 File Offset: 0x00397DE8
 	public int GetDragThresholdSpeed()
 	{
 		return ConfigCommonParamById.GetIntConfig("HonamiStoryDragBeginDistanceThreshold").GetValueOrDefault(9);
 	}
 
-	// Token: 0x0600EE7B RID: 61051 RVA: 0x0038E01C File Offset: 0x0038C21C
+	// Token: 0x0600C29A RID: 49818 RVA: 0x00399C0C File Offset: 0x00397E0C
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetDragOffset()
 	{
@@ -807,13 +807,13 @@ public class HonamiStoryConfig : ConfigBase
 		return new ValueTuple<int, int>(valueOrDefault, valueOrDefault2);
 	}
 
-	// Token: 0x0600EE7C RID: 61052 RVA: 0x0038E068 File Offset: 0x0038C268
+	// Token: 0x0600C29B RID: 49819 RVA: 0x00399C58 File Offset: 0x00397E58
 	public int GetPickUpRange()
 	{
 		return ConfigCommonParamById.GetIntConfig("HonamiStoryMobilePickUpRange").GetValueOrDefault(1000);
 	}
 
-	// Token: 0x0600EE7D RID: 61053 RVA: 0x0038E08C File Offset: 0x0038C28C
+	// Token: 0x0600C29C RID: 49820 RVA: 0x00399C7C File Offset: 0x00397E7C
 	public HonamiStoryScanMachine? GetScanMachineById(int id)
 	{
 		HonamiStoryScanMachine? config = ConfigHonamiStoryScanMachineById.GetConfig(id, true);
@@ -830,8 +830,8 @@ public class HonamiStoryConfig : ConfigBase
 		return new HonamiStoryScanMachine?(config.Value);
 	}
 
-	// Token: 0x170012D2 RID: 4818
-	// (get) Token: 0x0600EE7E RID: 61054 RVA: 0x0038E0EF File Offset: 0x0038C2EF
+	// Token: 0x170012FC RID: 4860
+	// (get) Token: 0x0600C29D RID: 49821 RVA: 0x00399CDF File Offset: 0x00397EDF
 	public static HonamiStoryConfig Instance
 	{
 		get
@@ -840,7 +840,7 @@ public class HonamiStoryConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600EE7F RID: 61055 RVA: 0x0038E0F6 File Offset: 0x0038C2F6
+	// Token: 0x0600C29E RID: 49822 RVA: 0x00399CE6 File Offset: 0x00397EE6
 	public static HonamiStoryConfig GetOrCreateInstance()
 	{
 		if (HonamiStoryConfig._Instance == null)
@@ -850,7 +850,7 @@ public class HonamiStoryConfig : ConfigBase
 		return HonamiStoryConfig._Instance;
 	}
 
-	// Token: 0x0600EE80 RID: 61056 RVA: 0x0038E10A File Offset: 0x0038C30A
+	// Token: 0x0600C29F RID: 49823 RVA: 0x00399CFA File Offset: 0x00397EFA
 	public static bool CreateInstance()
 	{
 		if (HonamiStoryConfig._Instance != null)
@@ -861,24 +861,24 @@ public class HonamiStoryConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600EE81 RID: 61057 RVA: 0x0038E120 File Offset: 0x0038C320
+	// Token: 0x0600C2A0 RID: 49824 RVA: 0x00399D10 File Offset: 0x00397F10
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600EE82 RID: 61058 RVA: 0x0038E122 File Offset: 0x0038C322
+	// Token: 0x0600C2A1 RID: 49825 RVA: 0x00399D12 File Offset: 0x00397F12
 	public static void ResetStaticDefaultValue()
 	{
 		HonamiStoryConfig._Instance = null;
 	}
 
-	// Token: 0x0600EE83 RID: 61059 RVA: 0x0038E12A File Offset: 0x0038C32A
+	// Token: 0x0600C2A2 RID: 49826 RVA: 0x00399D1A File Offset: 0x00397F1A
 	static HonamiStoryConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(HonamiStoryConfig.CreateStaticDefaultValue), new Action(HonamiStoryConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006E8E RID: 28302
+	// Token: 0x04006F6F RID: 28527
 	[Nullable(2)]
 	private static HonamiStoryConfig _Instance;
 }

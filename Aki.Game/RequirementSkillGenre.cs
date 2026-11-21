@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F08 RID: 12040
+// Token: 0x0200245B RID: 9307
 [RequiredMember]
 public class RequirementSkillGenre : IRequirement
 {
-	// Token: 0x17002398 RID: 9112
-	// (get) Token: 0x06019B42 RID: 105282 RVA: 0x006B1ACE File Offset: 0x006AFCCE
+	// Token: 0x1700245A RID: 9306
+	// (get) Token: 0x0601744D RID: 95309 RVA: 0x006D7DE6 File Offset: 0x006D5FE6
 	public EExtraEffectRequire Type
 	{
 		get
@@ -15,14 +15,14 @@ public class RequirementSkillGenre : IRequirement
 		}
 	}
 
-	// Token: 0x06019B43 RID: 105283 RVA: 0x006B1AD1 File Offset: 0x006AFCD1
+	// Token: 0x0601744E RID: 95310 RVA: 0x006D7DE9 File Offset: 0x006D5FE9
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public RequirementSkillGenre()
 	{
 	}
 
-	// Token: 0x0400C16D RID: 49517
+	// Token: 0x0400C50F RID: 50447
 	[Nullable(1)]
 	[RequiredMember]
 	public int[] SkillGenres;

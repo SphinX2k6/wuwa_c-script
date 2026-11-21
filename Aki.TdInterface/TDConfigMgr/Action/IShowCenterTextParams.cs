@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E58 RID: 7768
+	// Token: 0x0200208D RID: 8333
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IShowCenterTextParams
 	{
-		// Token: 0x0600A635 RID: 42549 RVA: 0x00178278 File Offset: 0x00176478
-		[NullableContext(1)]
+		// Token: 0x0600B0ED RID: 45293 RVA: 0x0018DF78 File Offset: 0x0018C178
+		[NullableContext(0)]
 		private IShowCenterTextParams_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A636 RID: 42550 RVA: 0x001782B0 File Offset: 0x001764B0
-		[NullableContext(1)]
+		// Token: 0x0600B0EE RID: 45294 RVA: 0x0018DFB0 File Offset: 0x0018C1B0
+		[NullableContext(0)]
 		public static IShowCenterTextParams Create([Nullable(2)] IShowCenterTextParams instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A637 RID: 42551 RVA: 0x001782C3 File Offset: 0x001764C3
-		[NullableContext(1)]
+		// Token: 0x0600B0EF RID: 45295 RVA: 0x0018DFC3 File Offset: 0x0018C1C3
+		[NullableContext(0)]
 		public static IShowCenterTextParams CreateFromSetValue([Nullable(2)] IShowCenterTextParams_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A638 RID: 42552 RVA: 0x001782D8 File Offset: 0x001764D8
-		[NullableContext(1)]
+		// Token: 0x0600B0F0 RID: 45296 RVA: 0x0018DFD8 File Offset: 0x0018C1D8
+		[NullableContext(0)]
 		public IShowCenterTextParams_SetValue ToSetValue()
 		{
 			return new IShowCenterTextParams_SetValue
@@ -68,9 +68,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032ED RID: 13037
-		// (get) Token: 0x0600A639 RID: 42553 RVA: 0x00178334 File Offset: 0x00176534
-		// (set) Token: 0x0600A63A RID: 42554 RVA: 0x0017836E File Offset: 0x0017656E
+		// Token: 0x170035B1 RID: 13745
+		// (get) Token: 0x0600B0F1 RID: 45297 RVA: 0x0018E034 File Offset: 0x0018C234
+		// (set) Token: 0x0600B0F2 RID: 45298 RVA: 0x0018E06E File Offset: 0x0018C26E
 		public virtual float? TotalTime
 		{
 			get
@@ -92,9 +92,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032EE RID: 13038
-		// (get) Token: 0x0600A63B RID: 42555 RVA: 0x0017837C File Offset: 0x0017657C
-		// (set) Token: 0x0600A63C RID: 42556 RVA: 0x001783DD File Offset: 0x001765DD
+		// Token: 0x170035B2 RID: 13746
+		// (get) Token: 0x0600B0F3 RID: 45299 RVA: 0x0018E07C File Offset: 0x0018C27C
+		// (set) Token: 0x0600B0F4 RID: 45300 RVA: 0x0018E0DD File Offset: 0x0018C2DD
 		public virtual ITextStyle TextStyle
 		{
 			get
@@ -122,9 +122,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032EF RID: 13039
-		// (get) Token: 0x0600A63D RID: 42557 RVA: 0x001783F2 File Offset: 0x001765F2
-		// (set) Token: 0x0600A63E RID: 42558 RVA: 0x00178419 File Offset: 0x00176619
+		// Token: 0x170035B3 RID: 13747
+		// (get) Token: 0x0600B0F5 RID: 45301 RVA: 0x0018E0F2 File Offset: 0x0018C2F2
+		// (set) Token: 0x0600B0F6 RID: 45302 RVA: 0x0018E119 File Offset: 0x0018C319
 		public virtual string BgImageId
 		{
 			get
@@ -146,9 +146,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032F0 RID: 13040
-		// (get) Token: 0x0600A63F RID: 42559 RVA: 0x00178428 File Offset: 0x00176628
-		// (set) Token: 0x0600A640 RID: 42560 RVA: 0x00178462 File Offset: 0x00176662
+		// Token: 0x170035B4 RID: 13748
+		// (get) Token: 0x0600B0F7 RID: 45303 RVA: 0x0018E128 File Offset: 0x0018C328
+		// (set) Token: 0x0600B0F8 RID: 45304 RVA: 0x0018E162 File Offset: 0x0018C362
 		public virtual bool? IsMulLine
 		{
 			get
@@ -170,9 +170,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032F1 RID: 13041
-		// (get) Token: 0x0600A641 RID: 42561 RVA: 0x00178470 File Offset: 0x00176670
-		// (set) Token: 0x0600A642 RID: 42562 RVA: 0x001784AA File Offset: 0x001766AA
+		// Token: 0x170035B5 RID: 13749
+		// (get) Token: 0x0600B0F9 RID: 45305 RVA: 0x0018E170 File Offset: 0x0018C370
+		// (set) Token: 0x0600B0FA RID: 45306 RVA: 0x0018E1AA File Offset: 0x0018C3AA
 		public virtual bool? IsManualNext
 		{
 			get
@@ -194,9 +194,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032F2 RID: 13042
-		// (get) Token: 0x0600A643 RID: 42563 RVA: 0x001784B8 File Offset: 0x001766B8
-		// (set) Token: 0x0600A644 RID: 42564 RVA: 0x001784F2 File Offset: 0x001766F2
+		// Token: 0x170035B6 RID: 13750
+		// (get) Token: 0x0600B0FB RID: 45307 RVA: 0x0018E1B8 File Offset: 0x0018C3B8
+		// (set) Token: 0x0600B0FC RID: 45308 RVA: 0x0018E1F2 File Offset: 0x0018C3F2
 		public virtual bool? IsCancelAutoLine
 		{
 			get
@@ -218,17 +218,17 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400634A RID: 25418
+		// Token: 0x0400692E RID: 26926
 		protected IShowCenterTextParams FbInstance;
 
-		// Token: 0x0400634B RID: 25419
+		// Token: 0x0400692F RID: 26927
 		protected IShowCenterTextParams_SetValue PocoInterface;
 
-		// Token: 0x0400634C RID: 25420
-		[Nullable(1)]
+		// Token: 0x04006930 RID: 26928
+		[Nullable(0)]
 		private ITextStyle _TextStyleCache;
 
-		// Token: 0x0400634D RID: 25421
+		// Token: 0x04006931 RID: 26929
 		private bool _TextStyleInited;
 	}
 }

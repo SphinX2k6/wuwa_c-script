@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E44 RID: 7748
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002079 RID: 8313
 	public class ISetStateMachineBlendAnimType : IBlendAnimTypeBase
 	{
-		// Token: 0x0600A5C7 RID: 42439 RVA: 0x001776B8 File Offset: 0x001758B8
+		// Token: 0x0600B07F RID: 45183 RVA: 0x0018D3B8 File Offset: 0x0018B5B8
 		private ISetStateMachineBlendAnimType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A5C8 RID: 42440 RVA: 0x001776F0 File Offset: 0x001758F0
+		// Token: 0x0600B080 RID: 45184 RVA: 0x0018D3F0 File Offset: 0x0018B5F0
 		public static ISetStateMachineBlendAnimType Create([Nullable(2)] ISetStateMachineBlendAnimType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A5C9 RID: 42441 RVA: 0x00177703 File Offset: 0x00175903
+		// Token: 0x0600B081 RID: 45185 RVA: 0x0018D403 File Offset: 0x0018B603
 		public static ISetStateMachineBlendAnimType CreateFromSetValue([Nullable(2)] ISetStateMachineBlendAnimType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A5CA RID: 42442 RVA: 0x00177716 File Offset: 0x00175916
+		// Token: 0x0600B082 RID: 45186 RVA: 0x0018D416 File Offset: 0x0018B616
 		public new ISetStateMachineBlendAnimType_SetValue ToSetValue()
 		{
 			return new ISetStateMachineBlendAnimType_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032D4 RID: 13012
-		// (get) Token: 0x0600A5CB RID: 42443 RVA: 0x00177735 File Offset: 0x00175935
-		// (set) Token: 0x0600A5CC RID: 42444 RVA: 0x00177760 File Offset: 0x00175960
+		// Token: 0x17003598 RID: 13720
+		// (get) Token: 0x0600B083 RID: 45187 RVA: 0x0018D435 File Offset: 0x0018B635
+		// (set) Token: 0x0600B084 RID: 45188 RVA: 0x0018D460 File Offset: 0x0018B660
 		public override EBlendAnimType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032D5 RID: 13013
-		// (get) Token: 0x0600A5CD RID: 42445 RVA: 0x0017776E File Offset: 0x0017596E
-		// (set) Token: 0x0600A5CE RID: 42446 RVA: 0x00177799 File Offset: 0x00175999
+		// Token: 0x17003599 RID: 13721
+		// (get) Token: 0x0600B085 RID: 45189 RVA: 0x0018D46E File Offset: 0x0018B66E
+		// (set) Token: 0x0600B086 RID: 45190 RVA: 0x0018D499 File Offset: 0x0018B699
 		public virtual EBlendAnimState State
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006319 RID: 25369
+		// Token: 0x040068FD RID: 26877
 		[Nullable(2)]
 		protected new ISetStateMachineBlendAnimType FbInstance;
 
-		// Token: 0x0400631A RID: 25370
+		// Token: 0x040068FE RID: 26878
 		[Nullable(2)]
 		protected new ISetStateMachineBlendAnimType_SetValue PocoInterface;
 	}

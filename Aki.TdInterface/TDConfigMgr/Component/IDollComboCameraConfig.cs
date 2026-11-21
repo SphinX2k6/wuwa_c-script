@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002BD RID: 701
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000304 RID: 772
 	public class IDollComboCameraConfig
 	{
-		// Token: 0x06000D29 RID: 3369 RVA: 0x0003183C File Offset: 0x0002FA3C
+		// Token: 0x06000E59 RID: 3673 RVA: 0x00034770 File Offset: 0x00032970
 		private IDollComboCameraConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000D2A RID: 3370 RVA: 0x00031874 File Offset: 0x0002FA74
+		// Token: 0x06000E5A RID: 3674 RVA: 0x000347A8 File Offset: 0x000329A8
 		public static IDollComboCameraConfig Create([Nullable(2)] IDollComboCameraConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D2B RID: 3371 RVA: 0x00031887 File Offset: 0x0002FA87
+		// Token: 0x06000E5B RID: 3675 RVA: 0x000347BB File Offset: 0x000329BB
 		public static IDollComboCameraConfig CreateFromSetValue([Nullable(2)] IDollComboCameraConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D2C RID: 3372 RVA: 0x0003189A File Offset: 0x0002FA9A
+		// Token: 0x06000E5C RID: 3676 RVA: 0x000347CE File Offset: 0x000329CE
 		public IDollComboCameraConfig_SetValue ToSetValue()
 		{
 			return new IDollComboCameraConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003D6 RID: 982
-		// (get) Token: 0x06000D2D RID: 3373 RVA: 0x000318B9 File Offset: 0x0002FAB9
-		// (set) Token: 0x06000D2E RID: 3374 RVA: 0x000318E4 File Offset: 0x0002FAE4
+		// Token: 0x17000423 RID: 1059
+		// (get) Token: 0x06000E5D RID: 3677 RVA: 0x000347ED File Offset: 0x000329ED
+		// (set) Token: 0x06000E5E RID: 3678 RVA: 0x00034818 File Offset: 0x00032A18
 		public virtual int ComboId
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003D7 RID: 983
-		// (get) Token: 0x06000D2F RID: 3375 RVA: 0x000318F4 File Offset: 0x0002FAF4
-		// (set) Token: 0x06000D30 RID: 3376 RVA: 0x00031955 File Offset: 0x0002FB55
+		// Token: 0x17000424 RID: 1060
+		// (get) Token: 0x06000E5F RID: 3679 RVA: 0x00034828 File Offset: 0x00032A28
+		// (set) Token: 0x06000E60 RID: 3680 RVA: 0x00034889 File Offset: 0x00032A89
 		public virtual PosAndRot PosAndRot
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000C03 RID: 3075
+		// Token: 0x04000CED RID: 3309
 		[Nullable(2)]
 		protected IDollComboCameraConfig FbInstance;
 
-		// Token: 0x04000C04 RID: 3076
+		// Token: 0x04000CEE RID: 3310
 		[Nullable(2)]
 		protected IDollComboCameraConfig_SetValue PocoInterface;
 
-		// Token: 0x04000C05 RID: 3077
+		// Token: 0x04000CEF RID: 3311
 		private PosAndRot _PosAndRotCache;
 
-		// Token: 0x04000C06 RID: 3078
+		// Token: 0x04000CF0 RID: 3312
 		private bool _PosAndRotInited;
 	}
 }

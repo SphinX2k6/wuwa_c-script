@@ -8,12 +8,12 @@ using CSharpScript.Game.NewWorld.SceneItem.Manipulate;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007191 RID: 29073
+	// Token: 0x02006245 RID: 25157
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemResetSelfPositionComponent : EntityComponent
 	{
-		// Token: 0x060471F9 RID: 291321 RVA: 0x0120DBA0 File Offset: 0x0120BDA0
+		// Token: 0x0603CABF RID: 248511 RVA: 0x011677B0 File Offset: 0x011659B0
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			ResetSelfPosComponent config = args.GetP1<CreateEntityData>().GetParam<SceneItemResetSelfPositionComponent>() as ResetSelfPosComponent;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060471FA RID: 291322 RVA: 0x0120DBFC File Offset: 0x0120BDFC
+		// Token: 0x0603CAC0 RID: 248512 RVA: 0x0116780C File Offset: 0x01165A0C
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.CheckGetComponent<SceneItemActorComponent>();
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060471FB RID: 291323 RVA: 0x0120DCA3 File Offset: 0x0120BEA3
+		// Token: 0x0603CAC1 RID: 248513 RVA: 0x011678B3 File Offset: 0x01165AB3
 		protected override void OnActivate()
 		{
 			if (this.ResetRadiusSquared != -1.0)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471FC RID: 291324 RVA: 0x0120DCE0 File Offset: 0x0120BEE0
+		// Token: 0x0603CAC2 RID: 248514 RVA: 0x011678F0 File Offset: 0x01165AF0
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.HasWithTarget<SceneItemManipulatableComponent.EManipulatableState, SceneItemManipulatableComponent.EManipulatableState, Entity, SceneItemManipulableBaseState, SceneItemManipulableBaseState>(base.Entity, EEventName.OnManipulatableItemStateModified, new Action<SceneItemManipulatableComponent.EManipulatableState, SceneItemManipulatableComponent.EManipulatableState, Entity, SceneItemManipulableBaseState, SceneItemManipulableBaseState>(this.OnManipulatableItemStateModified)))
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060471FD RID: 291325 RVA: 0x0120DD54 File Offset: 0x0120BF54
+		// Token: 0x0603CAC3 RID: 248515 RVA: 0x01167964 File Offset: 0x01165B64
 		private void OnManipulatableItemStateModified(SceneItemManipulatableComponent.EManipulatableState oldStateEnum, SceneItemManipulatableComponent.EManipulatableState newStateEnum, [Nullable(1)] Entity entity, SceneItemManipulableBaseState oldState, SceneItemManipulableBaseState newState)
 		{
 			SceneItemMovementSyncComponent moveSyncComp = this.MoveSyncComp;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471FE RID: 291326 RVA: 0x0120DF48 File Offset: 0x0120C148
+		// Token: 0x0603CAC4 RID: 248516 RVA: 0x01167B58 File Offset: 0x01165D58
 		private void EnableTickChecking()
 		{
 			if (!this.GetTickCheckingEnabled())
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471FF RID: 291327 RVA: 0x0120DF63 File Offset: 0x0120C163
+		// Token: 0x0603CAC5 RID: 248517 RVA: 0x01167B73 File Offset: 0x01165D73
 		[NullableContext(1)]
 		private void DisableTickChecking(string reason)
 		{
@@ -162,14 +162,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047200 RID: 291328 RVA: 0x0120DF7E File Offset: 0x0120C17E
+		// Token: 0x0603CAC6 RID: 248518 RVA: 0x01167B8E File Offset: 0x01165D8E
 		private bool GetTickCheckingEnabled()
 		{
 			TimerHandle tickHandle = this.TickHandle;
 			return tickHandle == null || !tickHandle.IsPause();
 		}
 
-		// Token: 0x06047201 RID: 291329 RVA: 0x0120DF98 File Offset: 0x0120C198
+		// Token: 0x0603CAC7 RID: 248519 RVA: 0x01167BA8 File Offset: 0x01165DA8
 		private void CheckAndResetSelfPos()
 		{
 			bool selfPosInRangeCache = this.SelfPosInRangeCache;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047202 RID: 291330 RVA: 0x0120DFC0 File Offset: 0x0120C1C0
+		// Token: 0x0603CAC8 RID: 248520 RVA: 0x01167BD0 File Offset: 0x01165DD0
 		private bool CheckSelfPosInRange()
 		{
 			global::Vector actorLocationProxy = this.ActorComp.ActorLocationProxy;
@@ -198,19 +198,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.SelfPosInRangeCache;
 		}
 
-		// Token: 0x06047203 RID: 291331 RVA: 0x0120E035 File Offset: 0x0120C235
+		// Token: 0x0603CAC9 RID: 248521 RVA: 0x01167C45 File Offset: 0x01165E45
 		private void ResetSelfPos(string promptId)
 		{
 			LevelGamePlayController.Instance.OnManipulatableItemExitAreaInternal(base.Entity, promptId, 0L);
 		}
 
-		// Token: 0x06047204 RID: 291332 RVA: 0x0120E04A File Offset: 0x0120C24A
+		// Token: 0x0603CACA RID: 248522 RVA: 0x01167C5A File Offset: 0x01165E5A
 		private bool IsCastState(SceneItemManipulatableComponent.EManipulatableState state)
 		{
 			return state == SceneItemManipulatableComponent.EManipulatableState.BeCastingToTarget || state == SceneItemManipulatableComponent.EManipulatableState.BeCastingToOutlet || state == SceneItemManipulatableComponent.EManipulatableState.BeCastingFree || state == SceneItemManipulatableComponent.EManipulatableState.BeCastingProjectile;
 		}
 
-		// Token: 0x06047205 RID: 291333 RVA: 0x0120E05F File Offset: 0x0120C25F
+		// Token: 0x0603CACB RID: 248523 RVA: 0x01167C6F File Offset: 0x01165E6F
 		public void StopTimerOnResetPos()
 		{
 			if (this.TimerHandle != null)
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047206 RID: 291334 RVA: 0x0120E084 File Offset: 0x0120C284
+		// Token: 0x0603CACC RID: 248524 RVA: 0x01167C94 File Offset: 0x01165E94
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -229,125 +229,125 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemResetSelfPositionComponent sceneItemResetSelfPositionComponent = (SceneItemResetSelfPositionComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemResetSelfPositionComponent.Config == null)
 			{
-				if (sceneItemResetSelfPositionComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ResetSelfPosComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (sceneItemResetSelfPositionComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("MoveSyncComp"))
+			if (sceneItemResetSelfPositionComponent.ActorComp == null)
 			{
-				if (sceneItemResetSelfPositionComponent.MoveSyncComp == null)
-				{
-					this.MoveSyncComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMovementSyncComponent>(this.MoveSyncComp), "MoveSyncComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("ResetRadiusSquared"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.ResetRadiusSquared = sceneItemResetSelfPositionComponent.ResetRadiusSquared;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CheckInterval"))
+			if (sceneItemResetSelfPositionComponent.MoveSyncComp == null)
 			{
-				this.CheckInterval = sceneItemResetSelfPositionComponent.CheckInterval;
+				this.MoveSyncComp = null;
 			}
-			if (base.CanResetComponentProperty("SelfPosInRangeCache"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveSyncComp), "MoveSyncComp"))
 			{
-				this.SelfPosInRangeCache = sceneItemResetSelfPositionComponent.SelfPosInRangeCache;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ActorLocationCache"))
+			this.ResetRadiusSquared = sceneItemResetSelfPositionComponent.ResetRadiusSquared;
+			this.CheckInterval = sceneItemResetSelfPositionComponent.CheckInterval;
+			this.SelfPosInRangeCache = sceneItemResetSelfPositionComponent.SelfPosInRangeCache;
+			if (sceneItemResetSelfPositionComponent.ActorLocationCache == null)
 			{
-				if (sceneItemResetSelfPositionComponent.ActorLocationCache == null)
-				{
-					this.ActorLocationCache = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.ActorLocationCache), "ActorLocationCache"))
-				{
-					return false;
-				}
+				this.ActorLocationCache = null;
 			}
-			if (base.CanResetComponentProperty("IsStopCheckOnCast"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorLocationCache), "ActorLocationCache"))
 			{
-				this.IsStopCheckOnCast = sceneItemResetSelfPositionComponent.IsStopCheckOnCast;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TimerHandle"))
+			this.IsStopCheckOnCast = sceneItemResetSelfPositionComponent.IsStopCheckOnCast;
+			if (sceneItemResetSelfPositionComponent.TimerHandle == null)
 			{
-				if (sceneItemResetSelfPositionComponent.TimerHandle == null)
-				{
-					this.TimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.TimerHandle), "TimerHandle"))
-				{
-					return false;
-				}
+				this.TimerHandle = null;
 			}
-			if (base.CanResetComponentProperty("TickHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimerHandle), "TimerHandle"))
 			{
-				if (sceneItemResetSelfPositionComponent.TickHandle == null)
-				{
-					this.TickHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.TickHandle), "TickHandle"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (sceneItemResetSelfPositionComponent.TickHandle == null)
+			{
+				this.TickHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TickHandle), "TickHandle"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04025640 RID: 153152
+		// Token: 0x170072C1 RID: 29377
+		// (get) Token: 0x0603CACD RID: 248525 RVA: 0x01167DE6 File Offset: 0x01165FE6
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072C2 RID: 29378
+		// (get) Token: 0x0603CACE RID: 248526 RVA: 0x01167DE9 File Offset: 0x01165FE9
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072C3 RID: 29379
+		// (get) Token: 0x0603CACF RID: 248527 RVA: 0x01167DEC File Offset: 0x01165FEC
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040202A7 RID: 131751
 		private const float TICK_CHECK_INTERVAL = 500f;
 
-		// Token: 0x04025641 RID: 153153
+		// Token: 0x040202A8 RID: 131752
 		private const float FIX_DELAY = 0.35f;
 
-		// Token: 0x04025642 RID: 153154
+		// Token: 0x040202A9 RID: 131753
 		private ResetSelfPosComponent Config;
 
-		// Token: 0x04025643 RID: 153155
+		// Token: 0x040202AA RID: 131754
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025644 RID: 153156
+		// Token: 0x040202AB RID: 131755
 		private SceneItemMovementSyncComponent MoveSyncComp;
 
-		// Token: 0x04025645 RID: 153157
+		// Token: 0x040202AC RID: 131756
 		private double ResetRadiusSquared = -1.0;
 
-		// Token: 0x04025646 RID: 153158
+		// Token: 0x040202AD RID: 131757
 		private float CheckInterval;
 
-		// Token: 0x04025647 RID: 153159
+		// Token: 0x040202AE RID: 131758
 		private bool SelfPosInRangeCache = true;
 
-		// Token: 0x04025648 RID: 153160
+		// Token: 0x040202AF RID: 131759
 		private global::Vector ActorLocationCache;
 
-		// Token: 0x04025649 RID: 153161
+		// Token: 0x040202B0 RID: 131760
 		private bool IsStopCheckOnCast;
 
-		// Token: 0x0402564A RID: 153162
+		// Token: 0x040202B1 RID: 131761
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0402564B RID: 153163
+		// Token: 0x040202B2 RID: 131762
 		private TimerHandle TickHandle;
 	}
 }

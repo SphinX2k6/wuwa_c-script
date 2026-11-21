@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012B2 RID: 4786
+	// Token: 0x020013F8 RID: 5112
 	public static class ETrapDefenseSystemVarTypeExtensions
 	{
-		// Token: 0x06006BC8 RID: 27592 RVA: 0x00103540 File Offset: 0x00101740
+		// Token: 0x06007236 RID: 29238 RVA: 0x00111508 File Offset: 0x0010F708
 		public static string ToEnumString(this ETrapDefenseSystemVarType value)
 		{
 			string result;
@@ -45,7 +45,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BC9 RID: 27593 RVA: 0x001035D0 File Offset: 0x001017D0
+		// Token: 0x06007237 RID: 29239 RVA: 0x00111598 File Offset: 0x0010F798
 		public static ETrapDefenseSystemVarType FromString(string name)
 		{
 			ETrapDefenseSystemVarType result;
@@ -56,7 +56,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BCA RID: 27594 RVA: 0x001035FC File Offset: 0x001017FC
+		// Token: 0x06007238 RID: 29240 RVA: 0x001115C4 File Offset: 0x0010F7C4
 		public static bool TryFromString(string name, out ETrapDefenseSystemVarType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -145,7 +145,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006BCB RID: 27595 RVA: 0x00103728 File Offset: 0x00101928
+		// Token: 0x06007239 RID: 29241 RVA: 0x001116F0 File Offset: 0x0010F8F0
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -162,7 +162,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006BCC RID: 27596 RVA: 0x00103784 File Offset: 0x00101984
+		// Token: 0x0600723A RID: 29242 RVA: 0x0011174C File Offset: 0x0010F94C
 		public static ETrapDefenseSystemVarType[] GetValues()
 		{
 			return new ETrapDefenseSystemVarType[]
@@ -179,7 +179,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006BCD RID: 27597 RVA: 0x00103798 File Offset: 0x00101998
+		// Token: 0x0600723B RID: 29243 RVA: 0x00111760 File Offset: 0x0010F960
 		public static string[] GetNames()
 		{
 			return new string[]

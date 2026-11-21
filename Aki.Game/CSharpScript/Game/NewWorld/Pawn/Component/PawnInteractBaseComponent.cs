@@ -5,53 +5,41 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Pawn.Component
 {
-	// Token: 0x0200706B RID: 28779
+	// Token: 0x020061EC RID: 25068
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PawnInteractBaseComponent : EntityComponent
 	{
-		// Token: 0x060460E3 RID: 286947 RVA: 0x01179250 File Offset: 0x01177450
+		// Token: 0x0603C2E1 RID: 246497 RVA: 0x01122DBA File Offset: 0x01120FBA
 		public virtual bool InteractPawn(int optionInstanceId = -1, CommonInteractOption autoOption = null)
 		{
 			return true;
 		}
 
-		// Token: 0x060460E4 RID: 286948 RVA: 0x01179253 File Offset: 0x01177453
+		// Token: 0x0603C2E2 RID: 246498 RVA: 0x01122DBD File Offset: 0x01120FBD
 		public virtual void CloseInteract(string reason = null)
 		{
 		}
 
-		// Token: 0x060460E5 RID: 286949 RVA: 0x01179255 File Offset: 0x01177455
+		// Token: 0x0603C2E3 RID: 246499 RVA: 0x01122DBF File Offset: 0x01120FBF
 		public virtual void ForceUpdate()
 		{
 		}
 
-		// Token: 0x060460E6 RID: 286950 RVA: 0x01179257 File Offset: 0x01177457
+		// Token: 0x0603C2E4 RID: 246500 RVA: 0x01122DC1 File Offset: 0x01120FC1
 		public virtual bool IsPawnInteractive()
 		{
 			return false;
 		}
 
-		// Token: 0x17009C07 RID: 39943
-		// (get) Token: 0x060460E7 RID: 286951 RVA: 0x0117925A File Offset: 0x0117745A
+		// Token: 0x17007190 RID: 29072
+		// (get) Token: 0x0603C2E5 RID: 246501 RVA: 0x01122DC4 File Offset: 0x01120FC4
 		public virtual AActor OwnerActor
 		{
 			get
 			{
 				return null;
 			}
-		}
-
-		// Token: 0x060460E8 RID: 286952 RVA: 0x0117925D File Offset: 0x0117745D
-		[NullableContext(1)]
-		public override bool ClearComponent(EntityComponent componentTemplate)
-		{
-			if (!base.ClearComponent(componentTemplate))
-			{
-				return false;
-			}
-			PawnInteractBaseComponent pawnInteractBaseComponent = (PawnInteractBaseComponent)componentTemplate;
-			return true;
 		}
 	}
 }

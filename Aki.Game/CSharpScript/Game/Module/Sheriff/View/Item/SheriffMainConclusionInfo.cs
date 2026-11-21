@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Item
 {
-	// Token: 0x02004C6C RID: 19564
+	// Token: 0x02003C1D RID: 15389
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffMainConclusionInfo : GridProxyAbstract<int>
 	{
-		// Token: 0x06032929 RID: 207145 RVA: 0x00BC97A0 File Offset: 0x00BC79A0
+		// Token: 0x060276DC RID: 161500 RVA: 0x00B0E404 File Offset: 0x00B0C604
 		public SheriffMainConclusionInfo(SheriffMainProxy proxy)
 		{
 			this.Proxy = proxy;
 		}
 
-		// Token: 0x0603292A RID: 207146 RVA: 0x00BC97B0 File Offset: 0x00BC79B0
+		// Token: 0x060276DD RID: 161501 RVA: 0x00B0E414 File Offset: 0x00B0C614
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603292B RID: 207147 RVA: 0x00BC985B File Offset: 0x00BC7A5B
+		// Token: 0x060276DE RID: 161502 RVA: 0x00B0E4BF File Offset: 0x00B0C6BF
 		protected override void OnStart()
 		{
 			this.ClueLayout = new GenericLayout<SheriffConclusionClueInfo, int>(base.GetHorizontalLayout(2), new Func<SheriffConclusionClueInfo>(this.CreateClueInfoItem), null, false, true);
 		}
 
-		// Token: 0x0603292C RID: 207148 RVA: 0x00BC9880 File Offset: 0x00BC7A80
+		// Token: 0x060276DF RID: 161503 RVA: 0x00B0E4E4 File Offset: 0x00B0C6E4
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			SheriffQuestionCsv value = SheriffConfig.Instance.GetQuestionById(data).Value;
@@ -66,16 +66,16 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.ClueLayout.RefreshByData(clueRecords, null, true);
 		}
 
-		// Token: 0x0603292D RID: 207149 RVA: 0x00BC9976 File Offset: 0x00BC7B76
+		// Token: 0x060276E0 RID: 161504 RVA: 0x00B0E5DA File Offset: 0x00B0C7DA
 		private SheriffConclusionClueInfo CreateClueInfoItem()
 		{
 			return new SheriffConclusionClueInfo();
 		}
 
-		// Token: 0x0401AE96 RID: 110230
+		// Token: 0x040157F3 RID: 88051
 		protected SheriffMainProxy Proxy;
 
-		// Token: 0x0401AE97 RID: 110231
+		// Token: 0x040157F4 RID: 88052
 		[Nullable(new byte[]
 		{
 			2,
@@ -83,20 +83,20 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 		})]
 		private GenericLayout<SheriffConclusionClueInfo, int> ClueLayout;
 
-		// Token: 0x0200AE1F RID: 44575
+		// Token: 0x0200983D RID: 38973
 		[NullableContext(0)]
 		private static class EDefine
 		{
-			// Token: 0x04034E1E RID: 216606
+			// Token: 0x0402F7C3 RID: 194499
 			public const int TxtTitle = 0;
 
-			// Token: 0x04034E1F RID: 216607
+			// Token: 0x0402F7C4 RID: 194500
 			public const int TxtInfo = 1;
 
-			// Token: 0x04034E20 RID: 216608
+			// Token: 0x0402F7C5 RID: 194501
 			public const int PanelHorizontal = 2;
 
-			// Token: 0x04034E21 RID: 216609
+			// Token: 0x0402F7C6 RID: 194502
 			public const int ClueItem = 3;
 		}
 	}

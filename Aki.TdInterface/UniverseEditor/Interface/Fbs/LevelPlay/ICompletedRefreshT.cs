@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200444A RID: 17482
+	// Token: 0x020048B2 RID: 18610
 	public class ICompletedRefreshT
 	{
-		// Token: 0x17007B2F RID: 31535
-		// (get) Token: 0x0601A03A RID: 106554 RVA: 0x003B7D4E File Offset: 0x003B5F4E
-		// (set) Token: 0x0601A03B RID: 106555 RVA: 0x003B7D56 File Offset: 0x003B5F56
+		// Token: 0x1700816E RID: 33134
+		// (get) Token: 0x0601B80B RID: 112651 RVA: 0x003E3F5A File Offset: 0x003E215A
+		// (set) Token: 0x0601B80C RID: 112652 RVA: 0x003E3F62 File Offset: 0x003E2162
 		public ELevelPlayRefreshType Type { get; set; }
 
-		// Token: 0x17007B30 RID: 31536
-		// (get) Token: 0x0601A03C RID: 106556 RVA: 0x003B7D5F File Offset: 0x003B5F5F
-		// (set) Token: 0x0601A03D RID: 106557 RVA: 0x003B7D67 File Offset: 0x003B5F67
+		// Token: 0x1700816F RID: 33135
+		// (get) Token: 0x0601B80D RID: 112653 RVA: 0x003E3F6B File Offset: 0x003E216B
+		// (set) Token: 0x0601B80E RID: 112654 RVA: 0x003E3F73 File Offset: 0x003E2173
 		public int MinRefreshCd { get; set; }
 
-		// Token: 0x17007B31 RID: 31537
-		// (get) Token: 0x0601A03E RID: 106558 RVA: 0x003B7D70 File Offset: 0x003B5F70
-		// (set) Token: 0x0601A03F RID: 106559 RVA: 0x003B7D78 File Offset: 0x003B5F78
+		// Token: 0x17008170 RID: 33136
+		// (get) Token: 0x0601B80F RID: 112655 RVA: 0x003E3F7C File Offset: 0x003E217C
+		// (set) Token: 0x0601B810 RID: 112656 RVA: 0x003E3F84 File Offset: 0x003E2184
 		public int MaxRefreshCd { get; set; }
 
-		// Token: 0x0601A040 RID: 106560 RVA: 0x003B7D81 File Offset: 0x003B5F81
+		// Token: 0x0601B811 RID: 112657 RVA: 0x003E3F8D File Offset: 0x003E218D
 		public ICompletedRefreshT()
 		{
 			this.Type = ELevelPlayRefreshType.None;

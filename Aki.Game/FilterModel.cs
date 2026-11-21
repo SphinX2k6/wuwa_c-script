@@ -5,19 +5,19 @@ using Aki.Config;
 using CSharpScript.Game.Common;
 using FilterDefine;
 
-// Token: 0x0200184F RID: 6223
+// Token: 0x02000D08 RID: 3336
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class FilterModel : ModelBase
 {
-	// Token: 0x0600B644 RID: 46660 RVA: 0x00293565 File Offset: 0x00291765
+	// Token: 0x06008A2D RID: 35373 RVA: 0x0029DC75 File Offset: 0x0029BE75
 	public void SetFilterResultData(FilterResultData viewData)
 	{
 		this.FilterResultDataMap[viewData.UniqueId] = viewData;
 	}
 
-	// Token: 0x0600B645 RID: 46661 RVA: 0x00293579 File Offset: 0x00291779
+	// Token: 0x06008A2E RID: 35374 RVA: 0x0029DC89 File Offset: 0x0029BE89
 	public void DeleteFilterResultData(int uniqueId)
 	{
 		if (uniqueId == -1)
@@ -27,7 +27,7 @@ public class FilterModel : ModelBase
 		this.FilterResultDataMap.Remove(uniqueId);
 	}
 
-	// Token: 0x0600B646 RID: 46662 RVA: 0x00293590 File Offset: 0x00291790
+	// Token: 0x06008A2F RID: 35375 RVA: 0x0029DCA0 File Offset: 0x0029BEA0
 	[NullableContext(2)]
 	public FilterResultData GetFilterResultData(int uniqueId)
 	{
@@ -40,7 +40,7 @@ public class FilterModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600B647 RID: 46663 RVA: 0x002935B4 File Offset: 0x002917B4
+	// Token: 0x06008A30 RID: 35376 RVA: 0x0029DCC4 File Offset: 0x0029BEC4
 	public void ClearData(int uniqueId)
 	{
 		if (uniqueId == -1)
@@ -54,7 +54,7 @@ public class FilterModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600B648 RID: 46664 RVA: 0x002935E0 File Offset: 0x002917E0
+	// Token: 0x06008A31 RID: 35377 RVA: 0x0029DCF0 File Offset: 0x0029BEF0
 	public List<T> GetFilterList<[Nullable(2)] T>(List<T> dataList, int filterId, Dictionary<FilterDefine.EFilterType, Dictionary<int, string>> ruleData)
 	{
 		Filter? filterConfig = FilterConfig.Instance.GetFilterConfig(filterId);
@@ -64,13 +64,13 @@ public class FilterModel : ModelBase
 		return this.FilterLogic.GetFilterList<T>(dataList, dataType, isSupportSelectAll, isSelectAllUnion, ruleData);
 	}
 
-	// Token: 0x0600B649 RID: 46665 RVA: 0x0029363C File Offset: 0x0029183C
+	// Token: 0x06008A32 RID: 35378 RVA: 0x0029DD4C File Offset: 0x0029BF4C
 	public Func<int[], FilterItemData[]> GetFilterDataFuncByFilterType(FilterDefine.EFilterType filterType)
 	{
 		return this.FilterLogic.GetDataFuncByType(filterType);
 	}
 
-	// Token: 0x0600B64A RID: 46666 RVA: 0x0029364A File Offset: 0x0029184A
+	// Token: 0x06008A33 RID: 35379 RVA: 0x0029DD5A File Offset: 0x0029BF5A
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -81,7 +81,7 @@ public class FilterModel : ModelBase
 		return this.FilterLogic.GetFilterItemDataList(ruleId, configId);
 	}
 
-	// Token: 0x0600B64B RID: 46667 RVA: 0x0029365C File Offset: 0x0029185C
+	// Token: 0x06008A34 RID: 35380 RVA: 0x0029DD6C File Offset: 0x0029BF6C
 	[return: Nullable(2)]
 	public FilterStorageData GetFilterConfigData(EFilterSortConfigId saveConfigId, int groupId, string extraParam)
 	{
@@ -99,7 +99,7 @@ public class FilterModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600B64C RID: 46668 RVA: 0x002936A4 File Offset: 0x002918A4
+	// Token: 0x06008A35 RID: 35381 RVA: 0x0029DDB4 File Offset: 0x0029BFB4
 	public void SetFilterConfigData(EFilterSortConfigId saveConfigId, int groupId, FilterStorageData data, string extraParam)
 	{
 		if (!SortConfig.Instance.IsConfigSortSave(saveConfigId, groupId))
@@ -116,7 +116,7 @@ public class FilterModel : ModelBase
 		LocalStorage.SetPlayer<Dictionary<string, FilterStorageData>>(ELocalStoragePlayerKey.FilterConfig, dictionary);
 	}
 
-	// Token: 0x0600B64D RID: 46669 RVA: 0x002936F4 File Offset: 0x002918F4
+	// Token: 0x06008A36 RID: 35382 RVA: 0x0029DE04 File Offset: 0x0029C004
 	public void ClearFilterConfigData(EFilterSortConfigId saveConfigId, int groupId, string extraParam)
 	{
 		if (!SortConfig.Instance.IsConfigSortSave(saveConfigId, groupId))
@@ -132,8 +132,8 @@ public class FilterModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000F2D RID: 3885
-	// (get) Token: 0x0600B64E RID: 46670 RVA: 0x0029373B File Offset: 0x0029193B
+	// Token: 0x17000F50 RID: 3920
+	// (get) Token: 0x06008A37 RID: 35383 RVA: 0x0029DE4B File Offset: 0x0029C04B
 	public static FilterModel Instance
 	{
 		get
@@ -142,7 +142,7 @@ public class FilterModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600B64F RID: 46671 RVA: 0x00293742 File Offset: 0x00291942
+	// Token: 0x06008A38 RID: 35384 RVA: 0x0029DE52 File Offset: 0x0029C052
 	public static FilterModel GetOrCreateInstance()
 	{
 		if (FilterModel._Instance == null)
@@ -152,7 +152,7 @@ public class FilterModel : ModelBase
 		return FilterModel._Instance;
 	}
 
-	// Token: 0x0600B650 RID: 46672 RVA: 0x00293756 File Offset: 0x00291956
+	// Token: 0x06008A39 RID: 35385 RVA: 0x0029DE66 File Offset: 0x0029C066
 	public static bool CreateInstance()
 	{
 		if (FilterModel._Instance != null)
@@ -163,30 +163,30 @@ public class FilterModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600B651 RID: 46673 RVA: 0x0029376C File Offset: 0x0029196C
+	// Token: 0x06008A3A RID: 35386 RVA: 0x0029DE7C File Offset: 0x0029C07C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600B652 RID: 46674 RVA: 0x0029376E File Offset: 0x0029196E
+	// Token: 0x06008A3B RID: 35387 RVA: 0x0029DE7E File Offset: 0x0029C07E
 	public static void ResetStaticDefaultValue()
 	{
 		FilterModel._Instance = null;
 	}
 
-	// Token: 0x0600B653 RID: 46675 RVA: 0x00293776 File Offset: 0x00291976
+	// Token: 0x06008A3C RID: 35388 RVA: 0x0029DE86 File Offset: 0x0029C086
 	static FilterModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FilterModel.CreateStaticDefaultValue), new Action(FilterModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005267 RID: 21095
+	// Token: 0x04005312 RID: 21266
 	private readonly Dictionary<int, FilterResultData> FilterResultDataMap = new Dictionary<int, FilterResultData>();
 
-	// Token: 0x04005268 RID: 21096
+	// Token: 0x04005313 RID: 21267
 	private readonly FilterLogic FilterLogic = new FilterLogic();
 
-	// Token: 0x04005269 RID: 21097
+	// Token: 0x04005314 RID: 21268
 	[Nullable(2)]
 	private static FilterModel _Instance;
 }

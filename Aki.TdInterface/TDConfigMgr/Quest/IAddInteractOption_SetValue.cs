@@ -4,23 +4,22 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EB9 RID: 3769
+	// Token: 0x02000FCF RID: 4047
 	public class IAddInteractOption_SetValue
 	{
-		// Token: 0x04003260 RID: 12896
-		[Nullable(1)]
+		// Token: 0x0400356D RID: 13677
 		public IInteractOption Option;
 
-		// Token: 0x04003261 RID: 12897
+		// Token: 0x0400356E RID: 13678
 		public int EntityId;
 
-		// Token: 0x04003262 RID: 12898
+		// Token: 0x0400356F RID: 13679
 		public bool? IsManualFinish;
 
-		// Token: 0x04003263 RID: 12899
+		// Token: 0x04003570 RID: 13680
 		public bool? IsManualDelete;
 
-		// Token: 0x04003264 RID: 12900
+		// Token: 0x04003571 RID: 13681
 		[Nullable(2)]
 		public string InteractToken;
 	}

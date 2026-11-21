@@ -2,400 +2,408 @@
 
 namespace CSharpScript.Game.Common
 {
-	// Token: 0x02007289 RID: 29321
+	// Token: 0x02006408 RID: 25608
 	public enum ELocalStorageGlobalKey
 	{
-		// Token: 0x04025C91 RID: 154769
+		// Token: 0x04020F51 RID: 134993
 		GameQualitySetting,
-		// Token: 0x04025C92 RID: 154770
+		// Token: 0x04020F52 RID: 134994
 		LoginFailCount,
-		// Token: 0x04025C93 RID: 154771
+		// Token: 0x04020F53 RID: 134995
 		NextLoginTime,
-		// Token: 0x04025C94 RID: 154772
+		// Token: 0x04020F54 RID: 134996
 		ResetLoginFailCountTime,
-		// Token: 0x04025C95 RID: 154773
+		// Token: 0x04020F55 RID: 134997
 		SingleMapId,
-		// Token: 0x04025C96 RID: 154774
+		// Token: 0x04020F56 RID: 134998
 		MultiMapId,
-		// Token: 0x04025C97 RID: 154775
+		// Token: 0x04020F57 RID: 134999
 		LoginSex,
-		// Token: 0x04025C98 RID: 154776
+		// Token: 0x04020F58 RID: 135000
 		SelectBoxActive,
-		// Token: 0x04025C99 RID: 154777
+		// Token: 0x04020F59 RID: 135001
 		SkipPlot,
-		// Token: 0x04025C9A RID: 154778
+		// Token: 0x04020F5A RID: 135002
 		FirstOpenShop,
-		// Token: 0x04025C9B RID: 154779
+		// Token: 0x04020F5B RID: 135003
 		LoginDebugServerIp,
-		// Token: 0x04025C9C RID: 154780
+		// Token: 0x04020F5C RID: 135004
 		PlayMenuInfo,
-		// Token: 0x04025C9D RID: 154781
+		// Token: 0x04020F5D RID: 135005
 		MenuData,
-		// Token: 0x04025C9E RID: 154782
+		// Token: 0x04020F5E RID: 135006
 		Account,
-		// Token: 0x04025C9F RID: 154783
+		// Token: 0x04020F5F RID: 135007
 		GmHistory,
-		// Token: 0x04025CA0 RID: 154784
+		// Token: 0x04020F60 RID: 135008
 		LocalGameTimeData,
-		// Token: 0x04025CA1 RID: 154785
+		// Token: 0x04020F61 RID: 135009
 		PackageAudio,
-		// Token: 0x04025CA2 RID: 154786
+		// Token: 0x04020F62 RID: 135010
 		RecentlyAccountList,
-		// Token: 0x04025CA3 RID: 154787
+		// Token: 0x04020F63 RID: 135011
 		RecentlyLoginUID,
-		// Token: 0x04025CA4 RID: 154788
+		// Token: 0x04020F64 RID: 135012
 		SubDownLoadClearLastWorldDoneUid,
-		// Token: 0x04025CA5 RID: 154789
+		// Token: 0x04020F65 RID: 135013
 		LastTimeUploadStamp,
-		// Token: 0x04025CA6 RID: 154790
+		// Token: 0x04020F66 RID: 135014
 		SdkLastTimeLoginData,
-		// Token: 0x04025CA7 RID: 154791
+		// Token: 0x04020F67 RID: 135015
 		SdkLevelData,
-		// Token: 0x04025CA8 RID: 154792
+		// Token: 0x04020F68 RID: 135016
 		RequestPhotoPermissionMinTime,
-		// Token: 0x04025CA9 RID: 154793
+		// Token: 0x04020F69 RID: 135017
 		PhotoAndShareShowPlayerName,
-		// Token: 0x04025CAA RID: 154794
+		// Token: 0x04020F6A RID: 135018
 		CombineAction,
-		// Token: 0x04025CAB RID: 154795
+		// Token: 0x04020F6B RID: 135019
 		GameQualityLevel,
-		// Token: 0x04025CAC RID: 154796
+		// Token: 0x04020F6C RID: 135020
 		CustomFrameRate,
-		// Token: 0x04025CAD RID: 154797
+		// Token: 0x04020F6D RID: 135021
 		ShadowQuality,
-		// Token: 0x04025CAE RID: 154798
+		// Token: 0x04020F6E RID: 135022
 		NiagaraQuality,
-		// Token: 0x04025CAF RID: 154799
+		// Token: 0x04020F6F RID: 135023
 		ImageDetail,
-		// Token: 0x04025CB0 RID: 154800
+		// Token: 0x04020F70 RID: 135024
 		Brightness,
-		// Token: 0x04025CB1 RID: 154801
+		// Token: 0x04020F71 RID: 135025
 		AntiAliasing,
-		// Token: 0x04025CB2 RID: 154802
+		// Token: 0x04020F72 RID: 135026
 		SceneAo,
-		// Token: 0x04025CB3 RID: 154803
+		// Token: 0x04020F73 RID: 135027
 		VolumeFog,
-		// Token: 0x04025CB4 RID: 154804
+		// Token: 0x04020F74 RID: 135028
 		VolumeLight,
-		// Token: 0x04025CB5 RID: 154805
+		// Token: 0x04020F75 RID: 135029
 		MotionBlur,
-		// Token: 0x04025CB6 RID: 154806
+		// Token: 0x04020F76 RID: 135030
 		StreamLevel,
-		// Token: 0x04025CB7 RID: 154807
+		// Token: 0x04020F77 RID: 135031
 		PcVsync,
-		// Token: 0x04025CB8 RID: 154808
+		// Token: 0x04020F78 RID: 135032
 		MobileResolution,
-		// Token: 0x04025CB9 RID: 154809
+		// Token: 0x04020F79 RID: 135033
 		SuperResolution,
-		// Token: 0x04025CBA RID: 154810
+		// Token: 0x04020F7A RID: 135034
 		PcResolutionWidth,
-		// Token: 0x04025CBB RID: 154811
+		// Token: 0x04020F7B RID: 135035
 		PcResolutionHeight,
-		// Token: 0x04025CBC RID: 154812
+		// Token: 0x04020F7C RID: 135036
 		PcWindowMode,
-		// Token: 0x04025CBD RID: 154813
+		// Token: 0x04020F7D RID: 135037
 		NvidiaSuperSamplingEnable,
-		// Token: 0x04025CBE RID: 154814
+		// Token: 0x04020F7E RID: 135038
 		NvidiaSuperSamplingFrameGenerate,
-		// Token: 0x04025CBF RID: 154815
+		// Token: 0x04020F7F RID: 135039
 		NvidiaSuperSamplingMode,
-		// Token: 0x04025CC0 RID: 154816
+		// Token: 0x04020F80 RID: 135040
 		NvidiaSuperSamplingQuality,
-		// Token: 0x04025CC1 RID: 154817
+		// Token: 0x04020F81 RID: 135041
 		NvidiaSuperSamplingSharpness,
-		// Token: 0x04025CC2 RID: 154818
+		// Token: 0x04020F82 RID: 135042
 		NvidiaReflex,
-		// Token: 0x04025CC3 RID: 154819
+		// Token: 0x04020F83 RID: 135043
 		Hdr,
-		// Token: 0x04025CC4 RID: 154820
+		// Token: 0x04020F84 RID: 135044
 		FsrEnable,
-		// Token: 0x04025CC5 RID: 154821
+		// Token: 0x04020F85 RID: 135045
 		HorizontalViewSensitivity,
-		// Token: 0x04025CC6 RID: 154822
+		// Token: 0x04020F86 RID: 135046
 		VerticalViewSensitivity,
-		// Token: 0x04025CC7 RID: 154823
+		// Token: 0x04020F87 RID: 135047
 		AimHorizontalViewSensitivity,
-		// Token: 0x04025CC8 RID: 154824
+		// Token: 0x04020F88 RID: 135048
 		AimVerticalViewSensitivity,
-		// Token: 0x04025CC9 RID: 154825
+		// Token: 0x04020F89 RID: 135049
 		CameraShakeStrength,
-		// Token: 0x04025CCA RID: 154826
+		// Token: 0x04020F8A RID: 135050
 		MobileHorizontalViewSensitivity,
-		// Token: 0x04025CCB RID: 154827
+		// Token: 0x04020F8B RID: 135051
 		MobileVerticalViewSensitivity,
-		// Token: 0x04025CCC RID: 154828
+		// Token: 0x04020F8C RID: 135052
 		MobileAimHorizontalViewSensitivity,
-		// Token: 0x04025CCD RID: 154829
+		// Token: 0x04020F8D RID: 135053
 		MobileAimVerticalViewSensitivity,
-		// Token: 0x04025CCE RID: 154830
+		// Token: 0x04020F8E RID: 135054
 		MobileCameraShakeStrength,
-		// Token: 0x04025CCF RID: 154831
+		// Token: 0x04020F8F RID: 135055
 		CommonSpringArmLength,
-		// Token: 0x04025CD0 RID: 154832
+		// Token: 0x04020F90 RID: 135056
 		FightSpringArmLength,
-		// Token: 0x04025CD1 RID: 154833
+		// Token: 0x04020F91 RID: 135057
 		IsResetFocusEnable,
-		// Token: 0x04025CD2 RID: 154834
+		// Token: 0x04020F92 RID: 135058
 		IsSidestepCameraEnable,
-		// Token: 0x04025CD3 RID: 154835
+		// Token: 0x04020F93 RID: 135059
 		IsSoftLockCameraEnable,
-		// Token: 0x04025CD4 RID: 154836
+		// Token: 0x04020F94 RID: 135060
 		JoystickShakeStrength,
-		// Token: 0x04025CD5 RID: 154837
+		// Token: 0x04020F95 RID: 135061
 		JoystickShakeType,
-		// Token: 0x04025CD6 RID: 154838
+		// Token: 0x04020F96 RID: 135062
 		WalkOrRunRate,
-		// Token: 0x04025CD7 RID: 154839
+		// Token: 0x04020F97 RID: 135063
 		JoystickMode,
-		// Token: 0x04025CD8 RID: 154840
+		// Token: 0x04020F98 RID: 135064
 		IsAutoSwitchSkillButtonMode,
-		// Token: 0x04025CD9 RID: 154841
+		// Token: 0x04020F99 RID: 135065
 		AimAssistEnable,
-		// Token: 0x04025CDA RID: 154842
+		// Token: 0x04020F9A RID: 135066
 		XessEnable,
-		// Token: 0x04025CDB RID: 154843
+		// Token: 0x04020F9B RID: 135067
 		XessQuality,
-		// Token: 0x04025CDC RID: 154844
+		// Token: 0x04020F9C RID: 135068
 		Xess2Enable,
-		// Token: 0x04025CDD RID: 154845
+		// Token: 0x04020F9D RID: 135069
 		Xess2Fg,
-		// Token: 0x04025CDE RID: 154846
+		// Token: 0x04020F9E RID: 135070
 		Xess2Quality,
-		// Token: 0x04025CDF RID: 154847
+		// Token: 0x04020F9F RID: 135071
 		Fsr3Enable,
-		// Token: 0x04025CE0 RID: 154848
+		// Token: 0x04020FA0 RID: 135072
 		Fsr3Fg,
-		// Token: 0x04025CE1 RID: 154849
+		// Token: 0x04020FA1 RID: 135073
 		Fsr3Quality,
-		// Token: 0x04025CE2 RID: 154850
+		// Token: 0x04020FA2 RID: 135074
 		MetalFxEnable,
-		// Token: 0x04025CE3 RID: 154851
+		// Token: 0x04020FA3 RID: 135075
 		IrxEnable,
-		// Token: 0x04025CE4 RID: 154852
+		// Token: 0x04020FA4 RID: 135076
 		BloomEnable,
-		// Token: 0x04025CE5 RID: 154853
+		// Token: 0x04020FA5 RID: 135077
 		NpcDensity,
-		// Token: 0x04025CE6 RID: 154854
+		// Token: 0x04020FA6 RID: 135078
 		KeyboardLockEnemyMode,
-		// Token: 0x04025CE7 RID: 154855
+		// Token: 0x04020FA7 RID: 135079
 		HorizontalViewRevert,
-		// Token: 0x04025CE8 RID: 154856
+		// Token: 0x04020FA8 RID: 135080
 		VerticalViewRevert,
-		// Token: 0x04025CE9 RID: 154857
+		// Token: 0x04020FA9 RID: 135081
 		SkillLockEnemyMode,
-		// Token: 0x04025CEA RID: 154858
+		// Token: 0x04020FAA RID: 135082
 		GamepadLockEnemyMode,
-		// Token: 0x04025CEB RID: 154859
+		// Token: 0x04020FAB RID: 135083
 		EnemyHitDisplayMode,
-		// Token: 0x04025CEC RID: 154860
+		// Token: 0x04020FAC RID: 135084
 		RepairEnemyHitDisplayMode,
-		// Token: 0x04025CED RID: 154861
+		// Token: 0x04020FAD RID: 135085
 		GamepadRouletteSelectConfig,
-		// Token: 0x04025CEE RID: 154862
+		// Token: 0x04020FAE RID: 135086
 		IsConvertViewSensitivity,
-		// Token: 0x04025CEF RID: 154863
+		// Token: 0x04020FAF RID: 135087
 		IsConvertAllViewSensitivity,
-		// Token: 0x04025CF0 RID: 154864
+		// Token: 0x04020FB0 RID: 135088
 		MasterVolume,
-		// Token: 0x04025CF1 RID: 154865
+		// Token: 0x04020FB1 RID: 135089
 		VoiceVolume,
-		// Token: 0x04025CF2 RID: 154866
+		// Token: 0x04020FB2 RID: 135090
 		MusicVolume,
-		// Token: 0x04025CF3 RID: 154867
+		// Token: 0x04020FB3 RID: 135091
 		SFXVolume,
-		// Token: 0x04025CF4 RID: 154868
+		// Token: 0x04020FB4 RID: 135092
 		AMBVolume,
-		// Token: 0x04025CF5 RID: 154869
+		// Token: 0x04020FB5 RID: 135093
 		UIVolume,
-		// Token: 0x04025CF6 RID: 154870
+		// Token: 0x04020FB6 RID: 135094
 		PcResolutionIndex,
-		// Token: 0x04025CF7 RID: 154871
+		// Token: 0x04020FB7 RID: 135095
 		TextLanguage,
-		// Token: 0x04025CF8 RID: 154872
+		// Token: 0x04020FB8 RID: 135096
 		VoiceLanguage,
-		// Token: 0x04025CF9 RID: 154873
+		// Token: 0x04020FB9 RID: 135097
 		AdviceSetting,
-		// Token: 0x04025CFA RID: 154874
+		// Token: 0x04020FBA RID: 135098
 		GenderSetting,
-		// Token: 0x04025CFB RID: 154875
+		// Token: 0x04020FBB RID: 135099
 		ImageQuality,
-		// Token: 0x04025CFC RID: 154876
+		// Token: 0x04020FBC RID: 135100
 		HasLocalGameSettings,
-		// Token: 0x04025CFD RID: 154877
+		// Token: 0x04020FBD RID: 135101
 		IsConvertOldMenuData,
-		// Token: 0x04025CFE RID: 154878
+		// Token: 0x04020FBE RID: 135102
 		LastReviewTime,
-		// Token: 0x04025CFF RID: 154879
+		// Token: 0x04020FBF RID: 135103
 		IsConvertInputActionSort,
-		// Token: 0x04025D00 RID: 154880
+		// Token: 0x04020FC0 RID: 135104
 		OpenReviewTimeList,
-		// Token: 0x04025D01 RID: 154881
+		// Token: 0x04020FC1 RID: 135105
 		AutoAdjustImageQuality,
-		// Token: 0x04025D02 RID: 154882
+		// Token: 0x04020FC2 RID: 135106
 		IsConvertInput,
-		// Token: 0x04025D03 RID: 154883
+		// Token: 0x04020FC3 RID: 135107
 		IsSavedKeyMappings,
-		// Token: 0x04025D04 RID: 154884
+		// Token: 0x04020FC4 RID: 135108
 		GamepadOperationPreferences,
-		// Token: 0x04025D05 RID: 154885
+		// Token: 0x04020FC5 RID: 135109
 		ShowDamage,
-		// Token: 0x04025D06 RID: 154886
+		// Token: 0x04020FC6 RID: 135110
 		DynamicBones,
-		// Token: 0x04025D07 RID: 154887
+		// Token: 0x04020FC7 RID: 135111
 		IsCustomImageQuality,
-		// Token: 0x04025D08 RID: 154888
+		// Token: 0x04020FC8 RID: 135112
 		DolbyAtmos,
-		// Token: 0x04025D09 RID: 154889
+		// Token: 0x04020FC9 RID: 135113
 		IsFinishRecommendQuality,
-		// Token: 0x04025D0A RID: 154890
+		// Token: 0x04020FCA RID: 135114
 		FlowAdaptation,
-		// Token: 0x04025D0B RID: 154891
+		// Token: 0x04020FCB RID: 135115
 		FlyControlMode,
-		// Token: 0x04025D0C RID: 154892
+		// Token: 0x04020FCC RID: 135116
 		IsShowFinishedPlayPointMark,
-		// Token: 0x04025D0D RID: 154893
+		// Token: 0x04020FCD RID: 135117
 		IsShowCustomMark,
-		// Token: 0x04025D0E RID: 154894
+		// Token: 0x04020FCE RID: 135118
 		JoystickClickMultiplier,
-		// Token: 0x04025D0F RID: 154895
+		// Token: 0x04020FCF RID: 135119
 		AreaStoryProgress,
-		// Token: 0x04025D10 RID: 154896
+		// Token: 0x04020FD0 RID: 135120
 		RayTracing,
-		// Token: 0x04025D11 RID: 154897
+		// Token: 0x04020FD1 RID: 135121
 		RayTracedReflection,
-		// Token: 0x04025D12 RID: 154898
+		// Token: 0x04020FD2 RID: 135122
 		RayTracedGI,
-		// Token: 0x04025D13 RID: 154899
+		// Token: 0x04020FD3 RID: 135123
 		RayTracedShadow,
-		// Token: 0x04025D14 RID: 154900
+		// Token: 0x04020FD4 RID: 135124
 		TeammateFx,
-		// Token: 0x04025D15 RID: 154901
+		// Token: 0x04020FD5 RID: 135125
 		Saturation,
-		// Token: 0x04025D16 RID: 154902
+		// Token: 0x04020FD6 RID: 135126
 		Contrast,
-		// Token: 0x04025D17 RID: 154903
+		// Token: 0x04020FD7 RID: 135127
 		SaturationNew,
-		// Token: 0x04025D18 RID: 154904
+		// Token: 0x04020FD8 RID: 135128
 		ContrastNew,
-		// Token: 0x04025D19 RID: 154905
+		// Token: 0x04020FD9 RID: 135129
 		IconPercentAreaStory,
-		// Token: 0x04025D1A RID: 154906
+		// Token: 0x04020FDA RID: 135130
 		IconPercentAreaShow,
-		// Token: 0x04025D1B RID: 154907
+		// Token: 0x04020FDB RID: 135131
 		AreaExplorePlayState,
-		// Token: 0x04025D1C RID: 154908
+		// Token: 0x04020FDC RID: 135132
 		ShowNoteIdMap,
-		// Token: 0x04025D1D RID: 154909
+		// Token: 0x04020FDD RID: 135133
 		SkinDamageMode,
-		// Token: 0x04025D1E RID: 154910
+		// Token: 0x04020FDE RID: 135134
 		HasRefreshNvidiaDlssQuality,
-		// Token: 0x04025D1F RID: 154911
+		// Token: 0x04020FDF RID: 135135
 		HasRefreshNvidiaDlssFrameGenerate,
-		// Token: 0x04025D20 RID: 154912
+		// Token: 0x04020FE0 RID: 135136
 		AfmeSince2Dot3,
-		// Token: 0x04025D21 RID: 154913
+		// Token: 0x04020FE1 RID: 135137
 		AutoRun,
-		// Token: 0x04025D22 RID: 154914
+		// Token: 0x04020FE2 RID: 135138
 		AutoSprint,
-		// Token: 0x04025D23 RID: 154915
+		// Token: 0x04020FE3 RID: 135139
 		Vulkan,
-		// Token: 0x04025D24 RID: 154916
+		// Token: 0x04020FE4 RID: 135140
 		VulkanChangeFlag,
-		// Token: 0x04025D25 RID: 154917
+		// Token: 0x04020FE5 RID: 135141
 		PreDownloadVersionRecord,
-		// Token: 0x04025D26 RID: 154918
+		// Token: 0x04020FE6 RID: 135142
 		IsLastGamePadPlayStation,
-		// Token: 0x04025D27 RID: 154919
+		// Token: 0x04020FE7 RID: 135143
 		LastGamepadEnum,
-		// Token: 0x04025D28 RID: 154920
+		// Token: 0x04020FE8 RID: 135144
 		HasResetBrightness,
-		// Token: 0x04025D29 RID: 154921
+		// Token: 0x04020FE9 RID: 135145
 		ShowOtherName,
-		// Token: 0x04025D2A RID: 154922
+		// Token: 0x04020FEA RID: 135146
 		WaterInteract,
-		// Token: 0x04025D2B RID: 154923
+		// Token: 0x04020FEB RID: 135147
 		ImageDisplayMode,
-		// Token: 0x04025D2C RID: 154924
+		// Token: 0x04020FEC RID: 135148
 		EyeProtection,
-		// Token: 0x04025D2D RID: 154925
+		// Token: 0x04020FED RID: 135149
 		EyeProtectionMode,
-		// Token: 0x04025D2E RID: 154926
+		// Token: 0x04020FEE RID: 135150
 		EyeProtectionTemp,
-		// Token: 0x04025D2F RID: 154927
+		// Token: 0x04020FEF RID: 135151
 		EyeProtectionStrength,
-		// Token: 0x04025D30 RID: 154928
+		// Token: 0x04020FF0 RID: 135152
 		EyeProtectionBrightness,
-		// Token: 0x04025D31 RID: 154929
+		// Token: 0x04020FF1 RID: 135153
 		EyeProtectionTexture,
-		// Token: 0x04025D32 RID: 154930
+		// Token: 0x04020FF2 RID: 135154
 		FilterSettingId,
-		// Token: 0x04025D33 RID: 154931
+		// Token: 0x04020FF3 RID: 135155
 		FilterSettingValues,
-		// Token: 0x04025D34 RID: 154932
+		// Token: 0x04020FF4 RID: 135156
 		VegetationDensity,
-		// Token: 0x04025D35 RID: 154933
+		// Token: 0x04020FF5 RID: 135157
 		VegetationDither,
-		// Token: 0x04025D36 RID: 154934
+		// Token: 0x04020FF6 RID: 135158
 		AutoExposure,
-		// Token: 0x04025D37 RID: 154935
+		// Token: 0x04020FF7 RID: 135159
 		HarmonyRayTracingBoost,
-		// Token: 0x04025D38 RID: 154936
+		// Token: 0x04020FF8 RID: 135160
 		HarmonyRayTracingBoostAdvanced,
-		// Token: 0x04025D39 RID: 154937
+		// Token: 0x04020FF9 RID: 135161
 		HarmonySuperResolution,
-		// Token: 0x04025D3A RID: 154938
+		// Token: 0x04020FFA RID: 135162
 		ParallelPackageVersion,
-		// Token: 0x04025D3B RID: 154939
+		// Token: 0x04020FFB RID: 135163
 		AdjustiveGamePadTrigger,
-		// Token: 0x04025D3C RID: 154940
+		// Token: 0x04020FFC RID: 135164
 		BackendVolume,
-		// Token: 0x04025D3D RID: 154941
+		// Token: 0x04020FFD RID: 135165
 		NewPlayerSupportForbidStartView,
-		// Token: 0x04025D3E RID: 154942
+		// Token: 0x04020FFE RID: 135166
 		MotorAutoAcceleratorSettingEnable,
-		// Token: 0x04025D3F RID: 154943
+		// Token: 0x04020FFF RID: 135167
 		MotorAutoLongPressSpeedUp,
-		// Token: 0x04025D40 RID: 154944
+		// Token: 0x04021000 RID: 135168
 		MotorIsDynamicJoystick,
-		// Token: 0x04025D41 RID: 154945
+		// Token: 0x04021001 RID: 135169
 		MotorMobileButtonLayout,
-		// Token: 0x04025D42 RID: 154946
+		// Token: 0x04021002 RID: 135170
 		MotorDriftAcceleratorSettingEnable,
-		// Token: 0x04025D43 RID: 154947
+		// Token: 0x04021003 RID: 135171
 		MotorHudVisible,
-		// Token: 0x04025D44 RID: 154948
+		// Token: 0x04021004 RID: 135172
 		MotorDriftModel,
-		// Token: 0x04025D45 RID: 154949
+		// Token: 0x04021005 RID: 135173
 		SubTitleOption,
-		// Token: 0x04025D46 RID: 154950
+		// Token: 0x04021006 RID: 135174
 		ShowPlotDebugInfo,
-		// Token: 0x04025D47 RID: 154951
+		// Token: 0x04021007 RID: 135175
 		UiBrightness,
-		// Token: 0x04025D48 RID: 154952
+		// Token: 0x04021008 RID: 135176
 		PeakBrightness,
-		// Token: 0x04025D49 RID: 154953
+		// Token: 0x04021009 RID: 135177
 		LoadingRangeScaleLevel,
-		// Token: 0x04025D4A RID: 154954
+		// Token: 0x0402100A RID: 135178
 		HasResetMobileShadowQuality,
-		// Token: 0x04025D4B RID: 154955
+		// Token: 0x0402100B RID: 135179
 		MotorFlyControlMode,
-		// Token: 0x04025D4C RID: 154956
+		// Token: 0x0402100C RID: 135180
 		IsUsingQualityPreset,
-		// Token: 0x04025D4D RID: 154957
+		// Token: 0x0402100D RID: 135181
 		AnisoLevel,
-		// Token: 0x04025D4E RID: 154958
+		// Token: 0x0402100E RID: 135182
 		PhotographSetupOption,
-		// Token: 0x04025D4F RID: 154959
+		// Token: 0x0402100F RID: 135183
 		FightPhotographSetupOption,
-		// Token: 0x04025D50 RID: 154960
+		// Token: 0x04021010 RID: 135184
 		GamepadLeftStickDeadZone,
-		// Token: 0x04025D51 RID: 154961
+		// Token: 0x04021011 RID: 135185
 		GamepadRightStickDeadZone,
-		// Token: 0x04025D52 RID: 154962
+		// Token: 0x04021012 RID: 135186
 		GamepadLeftTriggerDeadZone,
-		// Token: 0x04025D53 RID: 154963
+		// Token: 0x04021013 RID: 135187
 		GamepadRightTriggerDeadZone,
-		// Token: 0x04025D54 RID: 154964
-		RoleLangCustomNeedCover
+		// Token: 0x04021014 RID: 135188
+		RoleLangCustomNeedCover,
+		// Token: 0x04021015 RID: 135189
+		RenderDistanceSliderLevel,
+		// Token: 0x04021016 RID: 135190
+		LoginDebugAccountLoginMode,
+		// Token: 0x04021017 RID: 135191
+		PssrEnable,
+		// Token: 0x04021018 RID: 135192
+		VulkanRefreshRevision
 	}
 }

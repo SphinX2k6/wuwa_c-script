@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002252 RID: 8786
+// Token: 0x02001736 RID: 5942
 public enum EMotorTechTreeNodeStatus
 {
-	// Token: 0x0400827B RID: 33403
+	// Token: 0x040083B9 RID: 33721
 	Lock = -1,
-	// Token: 0x0400827C RID: 33404
+	// Token: 0x040083BA RID: 33722
 	CanUnlock,
-	// Token: 0x0400827D RID: 33405
+	// Token: 0x040083BB RID: 33723
 	Activated
 }

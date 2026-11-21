@@ -12,7 +12,7 @@ namespace Aki.Protocol
 	[NetMessage(EMessageId.AbyssChallengeSubLevelNotify)]
 	public sealed class AbyssChallengeSubLevelNotify : IMessage<AbyssChallengeSubLevelNotify>, IMessage, IEquatable<AbyssChallengeSubLevelNotify>, IDeepCloneable<AbyssChallengeSubLevelNotify>, IBufferMessage
 	{
-		// Token: 0x06001108 RID: 4360 RVA: 0x0002F96E File Offset: 0x0002DB6E
+		// Token: 0x06001133 RID: 4403 RVA: 0x0002FF22 File Offset: 0x0002E122
 		[NullableContext(1)]
 		public static AbyssChallengeSubLevelNotify Create()
 		{
@@ -20,7 +20,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000075 RID: 117
-		// (get) Token: 0x06001109 RID: 4361 RVA: 0x0002F975 File Offset: 0x0002DB75
+		// (get) Token: 0x06001134 RID: 4404 RVA: 0x0002FF29 File Offset: 0x0002E129
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -32,7 +32,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000076 RID: 118
-		// (get) Token: 0x0600110A RID: 4362 RVA: 0x0002F978 File Offset: 0x0002DB78
+		// (get) Token: 0x06001135 RID: 4405 RVA: 0x0002FF2C File Offset: 0x0002E12C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600110B RID: 4363 RVA: 0x0002F97F File Offset: 0x0002DB7F
+		// Token: 0x06001136 RID: 4406 RVA: 0x0002FF33 File Offset: 0x0002E133
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssChallengeSubLevelNotify()
 		{
 		}
 
-		// Token: 0x0600110C RID: 4364 RVA: 0x0002F9A0 File Offset: 0x0002DBA0
+		// Token: 0x06001137 RID: 4407 RVA: 0x0002FF54 File Offset: 0x0002E154
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssChallengeSubLevelNotify(AbyssChallengeSubLevelNotify other) : this()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600110D RID: 4365 RVA: 0x0002FA22 File Offset: 0x0002DC22
+		// Token: 0x06001138 RID: 4408 RVA: 0x0002FFD6 File Offset: 0x0002E1D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssChallengeSubLevelNotify Clone()
@@ -74,8 +74,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000077 RID: 119
-		// (get) Token: 0x0600110E RID: 4366 RVA: 0x0002FA2A File Offset: 0x0002DC2A
-		// (set) Token: 0x0600110F RID: 4367 RVA: 0x0002FA32 File Offset: 0x0002DC32
+		// (get) Token: 0x06001139 RID: 4409 RVA: 0x0002FFDE File Offset: 0x0002E1DE
+		// (set) Token: 0x0600113A RID: 4410 RVA: 0x0002FFE6 File Offset: 0x0002E1E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float X
@@ -91,8 +91,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000078 RID: 120
-		// (get) Token: 0x06001110 RID: 4368 RVA: 0x0002FA3B File Offset: 0x0002DC3B
-		// (set) Token: 0x06001111 RID: 4369 RVA: 0x0002FA43 File Offset: 0x0002DC43
+		// (get) Token: 0x0600113B RID: 4411 RVA: 0x0002FFEF File Offset: 0x0002E1EF
+		// (set) Token: 0x0600113C RID: 4412 RVA: 0x0002FFF7 File Offset: 0x0002E1F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float Y
@@ -108,8 +108,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000079 RID: 121
-		// (get) Token: 0x06001112 RID: 4370 RVA: 0x0002FA4C File Offset: 0x0002DC4C
-		// (set) Token: 0x06001113 RID: 4371 RVA: 0x0002FA54 File Offset: 0x0002DC54
+		// (get) Token: 0x0600113D RID: 4413 RVA: 0x00030000 File Offset: 0x0002E200
+		// (set) Token: 0x0600113E RID: 4414 RVA: 0x00030008 File Offset: 0x0002E208
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float Z
@@ -125,8 +125,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700007A RID: 122
-		// (get) Token: 0x06001114 RID: 4372 RVA: 0x0002FA5D File Offset: 0x0002DC5D
-		// (set) Token: 0x06001115 RID: 4373 RVA: 0x0002FA65 File Offset: 0x0002DC65
+		// (get) Token: 0x0600113F RID: 4415 RVA: 0x00030011 File Offset: 0x0002E211
+		// (set) Token: 0x06001140 RID: 4416 RVA: 0x00030019 File Offset: 0x0002E219
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float A
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700007B RID: 123
-		// (get) Token: 0x06001116 RID: 4374 RVA: 0x0002FA6E File Offset: 0x0002DC6E
+		// (get) Token: 0x06001141 RID: 4417 RVA: 0x00030022 File Offset: 0x0002E222
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<string> LoadSubLevels
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700007C RID: 124
-		// (get) Token: 0x06001117 RID: 4375 RVA: 0x0002FA76 File Offset: 0x0002DC76
+		// (get) Token: 0x06001142 RID: 4418 RVA: 0x0003002A File Offset: 0x0002E22A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<string> UnLoadSubLevels
@@ -166,8 +166,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700007D RID: 125
-		// (get) Token: 0x06001118 RID: 4376 RVA: 0x0002FA7E File Offset: 0x0002DC7E
-		// (set) Token: 0x06001119 RID: 4377 RVA: 0x0002FA86 File Offset: 0x0002DC86
+		// (get) Token: 0x06001143 RID: 4419 RVA: 0x00030032 File Offset: 0x0002E232
+		// (set) Token: 0x06001144 RID: 4420 RVA: 0x0003003A File Offset: 0x0002E23A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoomId
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600111A RID: 4378 RVA: 0x0002FA8F File Offset: 0x0002DC8F
+		// Token: 0x06001145 RID: 4421 RVA: 0x00030043 File Offset: 0x0002E243
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AbyssChallengeSubLevelNotify);
 		}
 
-		// Token: 0x0600111B RID: 4379 RVA: 0x0002FAA0 File Offset: 0x0002DCA0
+		// Token: 0x06001146 RID: 4422 RVA: 0x00030054 File Offset: 0x0002E254
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AbyssChallengeSubLevelNotify other)
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.X, other.X) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.Y, other.Y) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.Z, other.Z) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.A, other.A) && this.loadSubLevels_.Equals(other.loadSubLevels_) && this.unLoadSubLevels_.Equals(other.unLoadSubLevels_) && this.RoomId == other.RoomId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600111C RID: 4380 RVA: 0x0002FB6C File Offset: 0x0002DD6C
+		// Token: 0x06001147 RID: 4423 RVA: 0x00030120 File Offset: 0x0002E320
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -233,7 +233,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600111D RID: 4381 RVA: 0x0002FC47 File Offset: 0x0002DE47
+		// Token: 0x06001148 RID: 4424 RVA: 0x000301FB File Offset: 0x0002E3FB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -241,7 +241,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600111E RID: 4382 RVA: 0x0002FC54 File Offset: 0x0002DE54
+		// Token: 0x06001149 RID: 4425 RVA: 0x00030208 File Offset: 0x0002E408
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -249,35 +249,35 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600111F RID: 4383 RVA: 0x0002FC60 File Offset: 0x0002DE60
+		// Token: 0x0600114A RID: 4426 RVA: 0x00030214 File Offset: 0x0002E414
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.Z != 0f)
-			{
-				output.WriteRawTag(13);
-				output.WriteFloat(this.Z);
-			}
-			this.unLoadSubLevels_.WriteTo(ref output, AbyssChallengeSubLevelNotify._repeated_unLoadSubLevels_codec);
-			if (this.A != 0f)
-			{
-				output.WriteRawTag(45);
-				output.WriteFloat(this.A);
-			}
 			if (this.X != 0f)
 			{
-				output.WriteRawTag(61);
+				output.WriteRawTag(13);
 				output.WriteFloat(this.X);
+			}
+			if (this.A != 0f)
+			{
+				output.WriteRawTag(21);
+				output.WriteFloat(this.A);
+			}
+			this.unLoadSubLevels_.WriteTo(ref output, AbyssChallengeSubLevelNotify._repeated_unLoadSubLevels_codec);
+			if (this.Z != 0f)
+			{
+				output.WriteRawTag(61);
+				output.WriteFloat(this.Z);
 			}
 			if (this.RoomId != 0)
 			{
-				output.WriteRawTag(72);
+				output.WriteRawTag(80);
 				output.WriteInt32(this.RoomId);
 			}
 			if (this.Y != 0f)
 			{
-				output.WriteRawTag(109);
+				output.WriteRawTag(93);
 				output.WriteFloat(this.Y);
 			}
 			this.loadSubLevels_.WriteTo(ref output, AbyssChallengeSubLevelNotify._repeated_loadSubLevels_codec);
@@ -287,7 +287,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001120 RID: 4384 RVA: 0x0002FD44 File Offset: 0x0002DF44
+		// Token: 0x0600114B RID: 4427 RVA: 0x000302F8 File Offset: 0x0002E4F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -322,7 +322,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001121 RID: 4385 RVA: 0x0002FDEC File Offset: 0x0002DFEC
+		// Token: 0x0600114C RID: 4428 RVA: 0x000303A0 File Offset: 0x0002E5A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AbyssChallengeSubLevelNotify other)
@@ -356,7 +356,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06001122 RID: 4386 RVA: 0x0002FEAE File Offset: 0x0002E0AE
+		// Token: 0x0600114D RID: 4429 RVA: 0x00030462 File Offset: 0x0002E662
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -364,7 +364,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06001123 RID: 4387 RVA: 0x0002FEB8 File Offset: 0x0002E0B8
+		// Token: 0x0600114E RID: 4430 RVA: 0x0003046C File Offset: 0x0002E66C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -376,32 +376,32 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 45U)
+				if (num <= 26U)
 				{
 					if (num == 13U)
-					{
-						this.Z = input.ReadFloat();
-						continue;
-					}
-					if (num == 18U)
-					{
-						this.unLoadSubLevels_.AddEntriesFrom(ref input, AbyssChallengeSubLevelNotify._repeated_unLoadSubLevels_codec);
-						continue;
-					}
-					if (num == 45U)
-					{
-						this.A = input.ReadFloat();
-						continue;
-					}
-				}
-				else if (num <= 72U)
-				{
-					if (num == 61U)
 					{
 						this.X = input.ReadFloat();
 						continue;
 					}
-					if (num == 72U)
+					if (num == 21U)
+					{
+						this.A = input.ReadFloat();
+						continue;
+					}
+					if (num == 26U)
+					{
+						this.unLoadSubLevels_.AddEntriesFrom(ref input, AbyssChallengeSubLevelNotify._repeated_unLoadSubLevels_codec);
+						continue;
+					}
+				}
+				else if (num <= 80U)
+				{
+					if (num == 61U)
+					{
+						this.Z = input.ReadFloat();
+						continue;
+					}
+					if (num == 80U)
 					{
 						this.RoomId = input.ReadInt32();
 						continue;
@@ -409,7 +409,7 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 109U)
+					if (num == 93U)
 					{
 						this.Y = input.ReadFloat();
 						continue;
@@ -424,55 +424,55 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04001F54 RID: 8020
+		// Token: 0x04001FAA RID: 8106
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04001F55 RID: 8021
-		public const int XFieldNumber = 7;
+		// Token: 0x04001FAB RID: 8107
+		public const int XFieldNumber = 1;
 
-		// Token: 0x04001F56 RID: 8022
+		// Token: 0x04001FAC RID: 8108
 		private float x_;
 
-		// Token: 0x04001F57 RID: 8023
-		public const int YFieldNumber = 13;
+		// Token: 0x04001FAD RID: 8109
+		public const int YFieldNumber = 11;
 
-		// Token: 0x04001F58 RID: 8024
+		// Token: 0x04001FAE RID: 8110
 		private float y_;
 
-		// Token: 0x04001F59 RID: 8025
-		public const int ZFieldNumber = 1;
+		// Token: 0x04001FAF RID: 8111
+		public const int ZFieldNumber = 7;
 
-		// Token: 0x04001F5A RID: 8026
+		// Token: 0x04001FB0 RID: 8112
 		private float z_;
 
-		// Token: 0x04001F5B RID: 8027
-		public const int AFieldNumber = 5;
+		// Token: 0x04001FB1 RID: 8113
+		public const int AFieldNumber = 2;
 
-		// Token: 0x04001F5C RID: 8028
+		// Token: 0x04001FB2 RID: 8114
 		private float a_;
 
-		// Token: 0x04001F5D RID: 8029
+		// Token: 0x04001FB3 RID: 8115
 		public const int LoadSubLevelsFieldNumber = 14;
 
-		// Token: 0x04001F5E RID: 8030
+		// Token: 0x04001FB4 RID: 8116
 		private static readonly FieldCodec<string> _repeated_loadSubLevels_codec = FieldCodec.ForString(114U);
 
-		// Token: 0x04001F5F RID: 8031
+		// Token: 0x04001FB5 RID: 8117
 		private readonly RepeatedField<string> loadSubLevels_ = new RepeatedField<string>();
 
-		// Token: 0x04001F60 RID: 8032
-		public const int UnLoadSubLevelsFieldNumber = 2;
+		// Token: 0x04001FB6 RID: 8118
+		public const int UnLoadSubLevelsFieldNumber = 3;
 
-		// Token: 0x04001F61 RID: 8033
-		private static readonly FieldCodec<string> _repeated_unLoadSubLevels_codec = FieldCodec.ForString(18U);
+		// Token: 0x04001FB7 RID: 8119
+		private static readonly FieldCodec<string> _repeated_unLoadSubLevels_codec = FieldCodec.ForString(26U);
 
-		// Token: 0x04001F62 RID: 8034
+		// Token: 0x04001FB8 RID: 8120
 		private readonly RepeatedField<string> unLoadSubLevels_ = new RepeatedField<string>();
 
-		// Token: 0x04001F63 RID: 8035
-		public const int RoomIdFieldNumber = 9;
+		// Token: 0x04001FB9 RID: 8121
+		public const int RoomIdFieldNumber = 10;
 
-		// Token: 0x04001F64 RID: 8036
+		// Token: 0x04001FBA RID: 8122
 		private int roomId_;
 	}
 }

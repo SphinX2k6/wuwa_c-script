@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 {
-	// Token: 0x0200567E RID: 22142
+	// Token: 0x02004654 RID: 18004
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class IComposePopupGridItemData
 	{
-		// Token: 0x1700876D RID: 34669
-		// (get) Token: 0x06038571 RID: 230769 RVA: 0x00D5EEC0 File Offset: 0x00D5D0C0
-		// (set) Token: 0x06038572 RID: 230770 RVA: 0x00D5EEC8 File Offset: 0x00D5D0C8
+		// Token: 0x17005B34 RID: 23348
+		// (get) Token: 0x0602D46E RID: 185454 RVA: 0x00CAD010 File Offset: 0x00CAB210
+		// (set) Token: 0x0602D46F RID: 185455 RVA: 0x00CAD018 File Offset: 0x00CAB218
 		public ISelectedData Item { get; set; }
 
-		// Token: 0x1700876E RID: 34670
-		// (get) Token: 0x06038573 RID: 230771 RVA: 0x00D5EED1 File Offset: 0x00D5D0D1
-		// (set) Token: 0x06038574 RID: 230772 RVA: 0x00D5EED9 File Offset: 0x00D5D0D9
+		// Token: 0x17005B35 RID: 23349
+		// (get) Token: 0x0602D470 RID: 185456 RVA: 0x00CAD021 File Offset: 0x00CAB221
+		// (set) Token: 0x0602D471 RID: 185457 RVA: 0x00CAD029 File Offset: 0x00CAB229
 		public EGridState State { get; set; }
 
-		// Token: 0x1700876F RID: 34671
-		// (get) Token: 0x06038575 RID: 230773 RVA: 0x00D5EEE2 File Offset: 0x00D5D0E2
-		// (set) Token: 0x06038576 RID: 230774 RVA: 0x00D5EEEA File Offset: 0x00D5D0EA
+		// Token: 0x17005B36 RID: 23350
+		// (get) Token: 0x0602D472 RID: 185458 RVA: 0x00CAD032 File Offset: 0x00CAB232
+		// (set) Token: 0x0602D473 RID: 185459 RVA: 0x00CAD03A File Offset: 0x00CAB23A
 		[Nullable(new byte[]
 		{
 			2,
@@ -37,9 +37,9 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			1
 		})] set; }
 
-		// Token: 0x17008770 RID: 34672
-		// (get) Token: 0x06038577 RID: 230775 RVA: 0x00D5EEF3 File Offset: 0x00D5D0F3
-		// (set) Token: 0x06038578 RID: 230776 RVA: 0x00D5EEFB File Offset: 0x00D5D0FB
+		// Token: 0x17005B37 RID: 23351
+		// (get) Token: 0x0602D474 RID: 185460 RVA: 0x00CAD043 File Offset: 0x00CAB243
+		// (set) Token: 0x0602D475 RID: 185461 RVA: 0x00CAD04B File Offset: 0x00CAB24B
 		public int? UsedCount { get; set; }
 	}
 }

@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialContainer
 {
-	// Token: 0x02003E21 RID: 15905
+	// Token: 0x02003138 RID: 12600
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Character/MaterialContainer/ECharacterBodyType.ECharacterBodyType")]
 	public enum ECharacterBodyType : byte
 	{
-		// Token: 0x0401436C RID: 82796
+		// Token: 0x04010811 RID: 67601
 		Body,
-		// Token: 0x0401436D RID: 82797
+		// Token: 0x04010812 RID: 67602
 		Weapon,
-		// Token: 0x0401436E RID: 82798
+		// Token: 0x04010813 RID: 67603
 		Hulu,
-		// Token: 0x0401436F RID: 82799
+		// Token: 0x04010814 RID: 67604
 		Other,
-		// Token: 0x04014370 RID: 82800
+		// Token: 0x04010815 RID: 67605
 		ECharacterBodyType_MAX
 	}
 }

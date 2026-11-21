@@ -4,12 +4,12 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006FA6 RID: 28582
+	// Token: 0x02006127 RID: 24871
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelFlowVehicleForceStopPathLineMove : LevelFlowActionBase
 	{
-		// Token: 0x0604578F RID: 284559 RVA: 0x0113BD23 File Offset: 0x01139F23
+		// Token: 0x0603B93D RID: 244029 RVA: 0x010E5B27 File Offset: 0x010E3D27
 		[NullableContext(1)]
 		public LevelFlowVehicleForceStopPathLineMove Init(ETargetVehicle type, int? entityId = null)
 		{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045790 RID: 284560 RVA: 0x0113BD3C File Offset: 0x01139F3C
+		// Token: 0x0603B93E RID: 244030 RVA: 0x010E5B40 File Offset: 0x010E3D40
 		protected unsafe override void OnExecute()
 		{
 			Entity targetVehicleEntity = this.GetTargetVehicleEntity(this.Type.Value, this.EntityId);
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x06045791 RID: 284561 RVA: 0x0113BDF0 File Offset: 0x01139FF0
+		// Token: 0x0603B93F RID: 244031 RVA: 0x010E5BF4 File Offset: 0x010E3DF4
 		private Entity GetTargetVehicleEntity(ETargetVehicle type, int? entityId)
 		{
 			if (type == ETargetVehicle.Current)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return entityByPbDataId.Entity;
 		}
 
-		// Token: 0x06045792 RID: 284562 RVA: 0x0113BE80 File Offset: 0x0113A080
+		// Token: 0x0603B940 RID: 244032 RVA: 0x010E5C84 File Offset: 0x010E3E84
 		private Entity GetVehicleEntityFromPlayerRole()
 		{
 			if (Global.BaseCharacter == null)
@@ -90,10 +90,10 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return characterDriveVehicleComponent.VehicleEntity;
 		}
 
-		// Token: 0x04024400 RID: 148480
+		// Token: 0x0401F6B5 RID: 128693
 		private ETargetVehicle? Type;
 
-		// Token: 0x04024401 RID: 148481
+		// Token: 0x0401F6B6 RID: 128694
 		private int? EntityId;
 	}
 }

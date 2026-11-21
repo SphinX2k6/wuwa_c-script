@@ -2,19 +2,19 @@
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Quest;
 
-// Token: 0x02001D86 RID: 7558
+// Token: 0x02001248 RID: 4680
 [NullableContext(1)]
 [Nullable(0)]
 public class SilentAreaShowInfo
 {
-	// Token: 0x0600E558 RID: 58712 RVA: 0x003604B3 File Offset: 0x0035E6B3
+	// Token: 0x0600B976 RID: 47478 RVA: 0x0036C107 File Offset: 0x0036A307
 	public SilentAreaShowInfo(int sourceOfAdd, IInformationViewType showInfo)
 	{
 	}
 
-	// Token: 0x04006A17 RID: 27159
+	// Token: 0x04006AF8 RID: 27384
 	public int SourceOfAdd = sourceOfAdd;
 
-	// Token: 0x04006A18 RID: 27160
+	// Token: 0x04006AF9 RID: 27385
 	public IInformationViewType ShowInfo = showInfo;
 }

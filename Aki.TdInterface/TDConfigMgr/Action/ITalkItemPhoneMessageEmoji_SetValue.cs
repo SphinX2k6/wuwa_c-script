@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F4F RID: 8015
+	// Token: 0x02002188 RID: 8584
 	public class ITalkItemPhoneMessageEmoji_SetValue
 	{
-		// Token: 0x040068D0 RID: 26832
+		// Token: 0x04006EBF RID: 28351
 		public EPhoneMessageType Type;
 
-		// Token: 0x040068D1 RID: 26833
+		// Token: 0x04006EC0 RID: 28352
 		public int EmojiId;
 	}
 }

@@ -6,25 +6,25 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200106D RID: 4205
+// Token: 0x02000521 RID: 1313
 [NullableContext(2)]
 [Nullable(0)]
 public class GuessJokerCardItem : UiPanelBase
 {
-	// Token: 0x06006C6C RID: 27756 RVA: 0x0015E35C File Offset: 0x0015C55C
+	// Token: 0x06004001 RID: 16385 RVA: 0x00166C90 File Offset: 0x00164E90
 	[NullableContext(1)]
 	public GuessJokerCardItem(GuessJokerCardData cardData)
 	{
 		this.CardData = cardData;
 	}
 
-	// Token: 0x06006C6D RID: 27757 RVA: 0x0015E3FC File Offset: 0x0015C5FC
+	// Token: 0x06004002 RID: 16386 RVA: 0x00166D30 File Offset: 0x00164F30
 	public GuessJokerCardItem()
 	{
 	}
 
-	// Token: 0x170008C8 RID: 2248
-	// (get) Token: 0x06006C6E RID: 27758 RVA: 0x0015E494 File Offset: 0x0015C694
+	// Token: 0x170008E8 RID: 2280
+	// (get) Token: 0x06004003 RID: 16387 RVA: 0x00166DC8 File Offset: 0x00164FC8
 	public GuessJokerCardData Data
 	{
 		get
@@ -38,7 +38,7 @@ public class GuessJokerCardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006C6F RID: 27759 RVA: 0x0015E4D0 File Offset: 0x0015C6D0
+	// Token: 0x06004004 RID: 16388 RVA: 0x00166E04 File Offset: 0x00165004
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -65,7 +65,7 @@ public class GuessJokerCardItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006C70 RID: 27760 RVA: 0x0015E65C File Offset: 0x0015C85C
+	// Token: 0x06004005 RID: 16389 RVA: 0x00166F90 File Offset: 0x00165190
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GuessJokerCardItem.<OnBeforeStartAsync>d__34 <OnBeforeStartAsync>d__;
@@ -76,7 +76,7 @@ public class GuessJokerCardItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006C71 RID: 27761 RVA: 0x0015E6A0 File Offset: 0x0015C8A0
+	// Token: 0x06004006 RID: 16390 RVA: 0x00166FD4 File Offset: 0x001651D4
 	protected override void OnStart()
 	{
 		this.Delegate = DelegateUtils.ToManualReleaseDelegate<FLTweenFloatSetterDynamic>(new Action<float>(this.UpdateMoveProgress));
@@ -90,7 +90,7 @@ public class GuessJokerCardItem : UiPanelBase
 		extendToggle.SetSelfInteractive(false);
 	}
 
-	// Token: 0x06006C72 RID: 27762 RVA: 0x0015E6F4 File Offset: 0x0015C8F4
+	// Token: 0x06004007 RID: 16391 RVA: 0x00167028 File Offset: 0x00165228
 	protected override void OnBeforeShow()
 	{
 		if (this.CardData == null)
@@ -101,7 +101,7 @@ public class GuessJokerCardItem : UiPanelBase
 		this.CardFlip(this.CardData.GetBelongPlayerType().GetValueOrDefault() != EGuessJokerPlayerType.Ai, false);
 	}
 
-	// Token: 0x06006C73 RID: 27763 RVA: 0x0015E730 File Offset: 0x0015C930
+	// Token: 0x06004008 RID: 16392 RVA: 0x00167064 File Offset: 0x00165264
 	protected override void OnBeforeDestroy()
 	{
 		this.CardData = null;
@@ -124,7 +124,7 @@ public class GuessJokerCardItem : UiPanelBase
 		this.SequencePlayer = null;
 	}
 
-	// Token: 0x06006C74 RID: 27764 RVA: 0x0015E7B3 File Offset: 0x0015C9B3
+	// Token: 0x06004009 RID: 16393 RVA: 0x001670E7 File Offset: 0x001652E7
 	[NullableContext(1)]
 	private void OnEventSequence(string sequenceName, string eventName)
 	{
@@ -134,7 +134,7 @@ public class GuessJokerCardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006C75 RID: 27765 RVA: 0x0015E7D8 File Offset: 0x0015C9D8
+	// Token: 0x0600400A RID: 16394 RVA: 0x0016710C File Offset: 0x0016530C
 	[NullableContext(1)]
 	private void SequenceFinishEvent(string sequenceName)
 	{
@@ -146,7 +146,7 @@ public class GuessJokerCardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006C76 RID: 27766 RVA: 0x0015E810 File Offset: 0x0015CA10
+	// Token: 0x0600400B RID: 16395 RVA: 0x00167144 File Offset: 0x00165344
 	public void RefreshCardItem()
 	{
 		if (this.CardData == null)
@@ -181,7 +181,7 @@ public class GuessJokerCardItem : UiPanelBase
 		base.GetItem(7).SetUIActive(this.CardData.IsBlank());
 	}
 
-	// Token: 0x06006C77 RID: 27767 RVA: 0x0015E900 File Offset: 0x0015CB00
+	// Token: 0x0600400C RID: 16396 RVA: 0x00167234 File Offset: 0x00165434
 	private void RefreshBlankCard()
 	{
 		if (this.CardData == null)
@@ -213,7 +213,7 @@ public class GuessJokerCardItem : UiPanelBase
 		base.SetTextureByPath(this.CardData.TexturePath, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x06006C78 RID: 27768 RVA: 0x0015E9F0 File Offset: 0x0015CBF0
+	// Token: 0x0600400D RID: 16397 RVA: 0x00167324 File Offset: 0x00165524
 	public void RefreshCardChangeTexture()
 	{
 		if (this.CardData == null)
@@ -227,7 +227,7 @@ public class GuessJokerCardItem : UiPanelBase
 		base.SetTextureByPath(this.CardData.TexturePath, base.GetTexture(13), null, null);
 	}
 
-	// Token: 0x06006C79 RID: 27769 RVA: 0x0015EA38 File Offset: 0x0015CC38
+	// Token: 0x0600400E RID: 16398 RVA: 0x0016736C File Offset: 0x0016556C
 	private void SetCardShow(bool isCardShow)
 	{
 		this.IsCardShow = isCardShow;
@@ -235,14 +235,14 @@ public class GuessJokerCardItem : UiPanelBase
 		base.GetItem(4).SetUIActive(this.IsCardShow || GuessJokerGamePlayModel.Instance.IsShowAiCards);
 	}
 
-	// Token: 0x06006C7A RID: 27770 RVA: 0x0015EA91 File Offset: 0x0015CC91
+	// Token: 0x0600400F RID: 16399 RVA: 0x001673C5 File Offset: 0x001655C5
 	[NullableContext(1)]
 	public void BindClickCallback(Action<GuessJokerCardItem> callback)
 	{
 		this.ClickCallback = callback;
 	}
 
-	// Token: 0x06006C7B RID: 27771 RVA: 0x0015EA9A File Offset: 0x0015CC9A
+	// Token: 0x06004010 RID: 16400 RVA: 0x001673CE File Offset: 0x001655CE
 	protected void OnToggle(EToggleState state)
 	{
 		if (!this.IsClickEnable)
@@ -257,7 +257,7 @@ public class GuessJokerCardItem : UiPanelBase
 		clickCallback(this);
 	}
 
-	// Token: 0x06006C7C RID: 27772 RVA: 0x0015EAB6 File Offset: 0x0015CCB6
+	// Token: 0x06004011 RID: 16401 RVA: 0x001673EA File Offset: 0x001655EA
 	public void ToggleStateChange(bool isSelect)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -273,7 +273,7 @@ public class GuessJokerCardItem : UiPanelBase
 		extendToggle2.SetSelfInteractive(!isSelect);
 	}
 
-	// Token: 0x06006C7D RID: 27773 RVA: 0x0015EAEA File Offset: 0x0015CCEA
+	// Token: 0x06004012 RID: 16402 RVA: 0x0016741E File Offset: 0x0016561E
 	public void SetToggleState(bool isSelect)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -284,7 +284,7 @@ public class GuessJokerCardItem : UiPanelBase
 		extendToggle.SetToggleState(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06006C7E RID: 27774 RVA: 0x0015EB08 File Offset: 0x0015CD08
+	// Token: 0x06004013 RID: 16403 RVA: 0x0016743C File Offset: 0x0016563C
 	public void CardFlip(bool isCardShow, bool isNeedAim = true)
 	{
 		if (isNeedAim && isCardShow != this.IsCardShow)
@@ -299,7 +299,7 @@ public class GuessJokerCardItem : UiPanelBase
 		this.SetCardShow(isCardShow);
 	}
 
-	// Token: 0x06006C7F RID: 27775 RVA: 0x0015EB78 File Offset: 0x0015CD78
+	// Token: 0x06004014 RID: 16404 RVA: 0x001674AC File Offset: 0x001656AC
 	public void CardUp(bool isUp, Action onComplete = null)
 	{
 		ICardPositionConfig cardPositionConfig = GuessJokerDefine.GetCardPositionConfig(this.PositionType);
@@ -313,7 +313,7 @@ public class GuessJokerCardItem : UiPanelBase
 		this.SmoothMoveTo(targetPosition, onComplete, null, null, (float)jokerParamConfig);
 	}
 
-	// Token: 0x06006C80 RID: 27776 RVA: 0x0015EC33 File Offset: 0x0015CE33
+	// Token: 0x06004015 RID: 16405 RVA: 0x00167567 File Offset: 0x00165767
 	public void SetDark(bool isDark)
 	{
 		if (isDark)
@@ -324,7 +324,7 @@ public class GuessJokerCardItem : UiPanelBase
 		this.PlayCardSequence("CardBright", null);
 	}
 
-	// Token: 0x06006C81 RID: 27777 RVA: 0x0015EC54 File Offset: 0x0015CE54
+	// Token: 0x06004016 RID: 16406 RVA: 0x00167588 File Offset: 0x00165788
 	public void SetClickEnable(bool enable)
 	{
 		this.IsClickEnable = enable;
@@ -341,7 +341,7 @@ public class GuessJokerCardItem : UiPanelBase
 		extendToggle2.SetSelfInteractive(enable);
 	}
 
-	// Token: 0x06006C82 RID: 27778 RVA: 0x0015ECA2 File Offset: 0x0015CEA2
+	// Token: 0x06004017 RID: 16407 RVA: 0x001675D6 File Offset: 0x001657D6
 	public void SetChooseCardItem(bool isChoose)
 	{
 		if (isChoose)
@@ -352,13 +352,13 @@ public class GuessJokerCardItem : UiPanelBase
 		this.PlayCardSequence("Unsle", null);
 	}
 
-	// Token: 0x06006C83 RID: 27779 RVA: 0x0015ECC0 File Offset: 0x0015CEC0
+	// Token: 0x06004018 RID: 16408 RVA: 0x001675F4 File Offset: 0x001657F4
 	public void SetSelectCardItem(Action finishCallback = null)
 	{
 		this.PlayCardSequence("Press", finishCallback);
 	}
 
-	// Token: 0x06006C84 RID: 27780 RVA: 0x0015ECD0 File Offset: 0x0015CED0
+	// Token: 0x06004019 RID: 16409 RVA: 0x00167604 File Offset: 0x00165804
 	public void SetCheckCardItem(bool isCheck)
 	{
 		if (this.IsCardShow)
@@ -369,7 +369,7 @@ public class GuessJokerCardItem : UiPanelBase
 		Log.Instance.Error(ELogModule.GuessJokerCard, ELogAuthor.LRC, "只有ai能使用SetCheckCardItem", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06006C85 RID: 27781 RVA: 0x0015ED14 File Offset: 0x0015CF14
+	// Token: 0x0600401A RID: 16410 RVA: 0x00167648 File Offset: 0x00165848
 	[NullableContext(1)]
 	public void PlayCardSequence(string sequenceName, [Nullable(2)] Action finishCallback = null)
 	{
@@ -384,21 +384,21 @@ public class GuessJokerCardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006C86 RID: 27782 RVA: 0x0015ED50 File Offset: 0x0015CF50
+	// Token: 0x0600401B RID: 16411 RVA: 0x00167684 File Offset: 0x00165884
 	public void SetBlankCardDisable()
 	{
 		base.GetTexture(14).SetUIActive(true);
 		this.SetAlpha(0.3f);
 	}
 
-	// Token: 0x06006C87 RID: 27783 RVA: 0x0015ED6B File Offset: 0x0015CF6B
+	// Token: 0x0600401C RID: 16412 RVA: 0x0016769F File Offset: 0x0016589F
 	[NullableContext(1)]
 	public void UpdateCardData(GuessJokerCardData newCardData)
 	{
 		this.CardData = newCardData;
 	}
 
-	// Token: 0x06006C88 RID: 27784 RVA: 0x0015ED74 File Offset: 0x0015CF74
+	// Token: 0x0600401D RID: 16413 RVA: 0x001676A8 File Offset: 0x001658A8
 	[NullableContext(1)]
 	public void SetUiParent(UUIItem parentItem)
 	{
@@ -414,7 +414,7 @@ public class GuessJokerCardItem : UiPanelBase
 		this.RootItem.SetUIRelativeLocation(this.TempWorldPos.ToUeVectorOld());
 	}
 
-	// Token: 0x06006C89 RID: 27785 RVA: 0x0015EDEF File Offset: 0x0015CFEF
+	// Token: 0x0600401E RID: 16414 RVA: 0x00167723 File Offset: 0x00165923
 	[NullableContext(1)]
 	public void SetPosition(Vector2D position)
 	{
@@ -424,7 +424,7 @@ public class GuessJokerCardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006C8A RID: 27786 RVA: 0x0015EE0C File Offset: 0x0015D00C
+	// Token: 0x0600401F RID: 16415 RVA: 0x00167740 File Offset: 0x00165940
 	public void SetSize(float size)
 	{
 		if (this.RootItem != null)
@@ -436,7 +436,7 @@ public class GuessJokerCardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006C8B RID: 27787 RVA: 0x0015EE44 File Offset: 0x0015D044
+	// Token: 0x06004020 RID: 16416 RVA: 0x00167778 File Offset: 0x00165978
 	public void SetRotation(float angle)
 	{
 		if (this.RootItem != null)
@@ -447,7 +447,7 @@ public class GuessJokerCardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006C8C RID: 27788 RVA: 0x0015EE7F File Offset: 0x0015D07F
+	// Token: 0x06004021 RID: 16417 RVA: 0x001677B3 File Offset: 0x001659B3
 	public void SetAlpha(float alpha)
 	{
 		if (this.RootItem != null)
@@ -456,7 +456,7 @@ public class GuessJokerCardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006C8D RID: 27789 RVA: 0x0015EE98 File Offset: 0x0015D098
+	// Token: 0x06004022 RID: 16418 RVA: 0x001677CC File Offset: 0x001659CC
 	[NullableContext(1)]
 	public void SmoothMoveTo(Vector2D targetPosition, [Nullable(2)] Action onComplete = null, float? targetSize = null, float? targetRotation = null, float duration = -1f)
 	{
@@ -499,7 +499,7 @@ public class GuessJokerCardItem : UiPanelBase
 		this.OnMoveComplete();
 	}
 
-	// Token: 0x06006C8E RID: 27790 RVA: 0x0015F048 File Offset: 0x0015D248
+	// Token: 0x06004023 RID: 16419 RVA: 0x0016797C File Offset: 0x00165B7C
 	public void StopMove()
 	{
 		if (this.MoveTween != null)
@@ -517,7 +517,7 @@ public class GuessJokerCardItem : UiPanelBase
 		this.MoveCompleteCallback = null;
 	}
 
-	// Token: 0x06006C8F RID: 27791 RVA: 0x0015F09F File Offset: 0x0015D29F
+	// Token: 0x06004024 RID: 16420 RVA: 0x001679D3 File Offset: 0x00165BD3
 	public FVector2D GetCurrentPosition()
 	{
 		if (this.RootItem != null)
@@ -527,7 +527,7 @@ public class GuessJokerCardItem : UiPanelBase
 		return new FVector2D(0f, 0f);
 	}
 
-	// Token: 0x06006C90 RID: 27792 RVA: 0x0015F0C4 File Offset: 0x0015D2C4
+	// Token: 0x06004025 RID: 16421 RVA: 0x001679F8 File Offset: 0x00165BF8
 	private void UpdateMoveProgress(float progress)
 	{
 		if (this.RootItem != null)
@@ -550,7 +550,7 @@ public class GuessJokerCardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006C91 RID: 27793 RVA: 0x0015F201 File Offset: 0x0015D401
+	// Token: 0x06004026 RID: 16422 RVA: 0x00167B35 File Offset: 0x00165D35
 	private void OnMoveComplete()
 	{
 		this.IsMoving = false;
@@ -562,7 +562,7 @@ public class GuessJokerCardItem : UiPanelBase
 		moveCompleteCallback();
 	}
 
-	// Token: 0x06006C92 RID: 27794 RVA: 0x0015F21C File Offset: 0x0015D41C
+	// Token: 0x06004027 RID: 16423 RVA: 0x00167B50 File Offset: 0x00165D50
 	private UniTask InitXCurve()
 	{
 		GuessJokerCardItem.<InitXCurve>d__68 <InitXCurve>d__;
@@ -573,7 +573,7 @@ public class GuessJokerCardItem : UiPanelBase
 		return <InitXCurve>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006C93 RID: 27795 RVA: 0x0015F260 File Offset: 0x0015D460
+	// Token: 0x06004028 RID: 16424 RVA: 0x00167B94 File Offset: 0x00165D94
 	private UniTask InitYCurve()
 	{
 		GuessJokerCardItem.<InitYCurve>d__69 <InitYCurve>d__;
@@ -584,7 +584,7 @@ public class GuessJokerCardItem : UiPanelBase
 		return <InitYCurve>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006C94 RID: 27796 RVA: 0x0015F2A4 File Offset: 0x0015D4A4
+	// Token: 0x06004029 RID: 16425 RVA: 0x00167BD8 File Offset: 0x00165DD8
 	private UniTask InitScaleCurve()
 	{
 		GuessJokerCardItem.<InitScaleCurve>d__70 <InitScaleCurve>d__;
@@ -595,7 +595,7 @@ public class GuessJokerCardItem : UiPanelBase
 		return <InitScaleCurve>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006C95 RID: 27797 RVA: 0x0015F2E7 File Offset: 0x0015D4E7
+	// Token: 0x0600402A RID: 16426 RVA: 0x00167C1B File Offset: 0x00165E1B
 	public void SetChoose(bool isChoose, bool isPlayAnim)
 	{
 		if (this.IsChoose == isChoose)
@@ -615,31 +615,31 @@ public class GuessJokerCardItem : UiPanelBase
 		this.ToggleStateChange(false);
 	}
 
-	// Token: 0x06006C96 RID: 27798 RVA: 0x0015F316 File Offset: 0x0015D516
+	// Token: 0x0600402B RID: 16427 RVA: 0x00167C4A File Offset: 0x00165E4A
 	public bool GetChoose()
 	{
 		return this.IsChoose;
 	}
 
-	// Token: 0x06006C97 RID: 27799 RVA: 0x0015F31E File Offset: 0x0015D51E
+	// Token: 0x0600402C RID: 16428 RVA: 0x00167C52 File Offset: 0x00165E52
 	public ECardPositionType GetPositionType()
 	{
 		return this.PositionType;
 	}
 
-	// Token: 0x06006C98 RID: 27800 RVA: 0x0015F326 File Offset: 0x0015D526
+	// Token: 0x0600402D RID: 16429 RVA: 0x00167C5A File Offset: 0x00165E5A
 	public void SetPositionType(ECardPositionType position)
 	{
 		this.PositionType = position;
 	}
 
-	// Token: 0x06006C99 RID: 27801 RVA: 0x0015F32F File Offset: 0x0015D52F
+	// Token: 0x0600402E RID: 16430 RVA: 0x00167C63 File Offset: 0x00165E63
 	public void SetIndexInPanel(int index)
 	{
 		this.IndexInPanel = (int)(this.PositionType * (ECardPositionType)100 + index);
 	}
 
-	// Token: 0x06006C9A RID: 27802 RVA: 0x0015F344 File Offset: 0x0015D544
+	// Token: 0x0600402F RID: 16431 RVA: 0x00167C78 File Offset: 0x00165E78
 	public void SetHierarchyIndex(int index)
 	{
 		UUIItem uuiitem = this.GetOriginalItem() ?? this.RootItem;
@@ -649,19 +649,19 @@ public class GuessJokerCardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006C9B RID: 27803 RVA: 0x0015F36C File Offset: 0x0015D56C
+	// Token: 0x06004030 RID: 16432 RVA: 0x00167CA0 File Offset: 0x00165EA0
 	public int GetGlobalIndex()
 	{
 		return this.IndexInPanel;
 	}
 
-	// Token: 0x06006C9C RID: 27804 RVA: 0x0015F374 File Offset: 0x0015D574
+	// Token: 0x06004031 RID: 16433 RVA: 0x00167CA8 File Offset: 0x00165EA8
 	public void SetChecking()
 	{
 		this.IsChecking = true;
 	}
 
-	// Token: 0x06006C9D RID: 27805 RVA: 0x0015F37D File Offset: 0x0015D57D
+	// Token: 0x06004032 RID: 16434 RVA: 0x00167CB1 File Offset: 0x00165EB1
 	public void ClearCheckingSign()
 	{
 		if (this.IsChecking)
@@ -671,93 +671,93 @@ public class GuessJokerCardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400322E RID: 12846
+	// Token: 0x040032C7 RID: 12999
 	private GuessJokerCardData CardData;
 
-	// Token: 0x0400322F RID: 12847
+	// Token: 0x040032C8 RID: 13000
 	private bool IsCardShow;
 
-	// Token: 0x04003230 RID: 12848
+	// Token: 0x040032C9 RID: 13001
 	private bool IsChoose;
 
-	// Token: 0x04003231 RID: 12849
+	// Token: 0x040032CA RID: 13002
 	private bool IsClickEnable;
 
-	// Token: 0x04003232 RID: 12850
+	// Token: 0x040032CB RID: 13003
 	private bool IsChecking;
 
-	// Token: 0x04003233 RID: 12851
+	// Token: 0x040032CC RID: 13004
 	[Nullable(1)]
 	private Action<GuessJokerCardItem> ClickCallback = delegate(GuessJokerCardItem _)
 	{
 	};
 
-	// Token: 0x04003234 RID: 12852
+	// Token: 0x040032CD RID: 13005
 	private int IndexInPanel;
 
-	// Token: 0x04003235 RID: 12853
+	// Token: 0x040032CE RID: 13006
 	private ECardPositionType PositionType = ECardPositionType.Middle;
 
-	// Token: 0x04003236 RID: 12854
+	// Token: 0x040032CF RID: 13007
 	private float Size = 1f;
 
-	// Token: 0x04003237 RID: 12855
+	// Token: 0x040032D0 RID: 13008
 	private float Rotation;
 
-	// Token: 0x04003238 RID: 12856
+	// Token: 0x040032D1 RID: 13009
 	[Nullable(1)]
 	protected readonly Transform ItemWorldTrans = Transform.Create();
 
-	// Token: 0x04003239 RID: 12857
+	// Token: 0x040032D2 RID: 13010
 	[Nullable(1)]
 	protected readonly Vector TempWorldPos = Vector.Create();
 
-	// Token: 0x0400323A RID: 12858
+	// Token: 0x040032D3 RID: 13011
 	private Action MoveCompleteCallback;
 
-	// Token: 0x0400323B RID: 12859
+	// Token: 0x040032D4 RID: 13012
 	protected FLTweenFloatSetterDynamic Delegate;
 
-	// Token: 0x0400323C RID: 12860
+	// Token: 0x040032D5 RID: 13013
 	private ULTweener MoveTween;
 
-	// Token: 0x0400323D RID: 12861
+	// Token: 0x040032D6 RID: 13014
 	private bool IsMoving;
 
-	// Token: 0x0400323E RID: 12862
+	// Token: 0x040032D7 RID: 13015
 	private UCurveFloat XCurve;
 
-	// Token: 0x0400323F RID: 12863
+	// Token: 0x040032D8 RID: 13016
 	private UCurveFloat YCurve;
 
-	// Token: 0x04003240 RID: 12864
+	// Token: 0x040032D9 RID: 13017
 	private UCurveFloat ScaleCurve;
 
-	// Token: 0x04003241 RID: 12865
+	// Token: 0x040032DA RID: 13018
 	private FVector2D StartPosition = new FVector2D();
 
-	// Token: 0x04003242 RID: 12866
+	// Token: 0x040032DB RID: 13019
 	private FVector2D TargetPosition = new FVector2D();
 
-	// Token: 0x04003243 RID: 12867
+	// Token: 0x040032DC RID: 13020
 	private float StartSize = 1f;
 
-	// Token: 0x04003244 RID: 12868
+	// Token: 0x040032DD RID: 13021
 	private float TargetSize = 1f;
 
-	// Token: 0x04003245 RID: 12869
+	// Token: 0x040032DE RID: 13022
 	private float StartRotation;
 
-	// Token: 0x04003246 RID: 12870
+	// Token: 0x040032DF RID: 13023
 	private float TargetRotation;
 
-	// Token: 0x04003247 RID: 12871
+	// Token: 0x040032E0 RID: 13024
 	private GuessJokerCardBackItem BackItem;
 
-	// Token: 0x04003248 RID: 12872
+	// Token: 0x040032E1 RID: 13025
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04003249 RID: 12873
+	// Token: 0x040032E2 RID: 13026
 	[Nullable(new byte[]
 	{
 		1,
@@ -766,53 +766,53 @@ public class GuessJokerCardItem : UiPanelBase
 	})]
 	private readonly Dictionary<string, Action> SequenceFinishCallbackMap = new Dictionary<string, Action>();
 
-	// Token: 0x0200765A RID: 30298
+	// Token: 0x020067EE RID: 26606
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x04027118 RID: 160024
+		// Token: 0x04022463 RID: 140387
 		public const int Toggle = 0;
 
-		// Token: 0x04027119 RID: 160025
+		// Token: 0x04022464 RID: 140388
 		public const int Texture = 1;
 
-		// Token: 0x0402711A RID: 160026
+		// Token: 0x04022465 RID: 140389
 		public const int NumberText = 2;
 
-		// Token: 0x0402711B RID: 160027
+		// Token: 0x04022466 RID: 140390
 		public const int BackItem = 3;
 
-		// Token: 0x0402711C RID: 160028
+		// Token: 0x04022467 RID: 140391
 		public const int FrontPanel = 4;
 
-		// Token: 0x0402711D RID: 160029
+		// Token: 0x04022468 RID: 140392
 		public const int NumberText2 = 5;
 
-		// Token: 0x0402711E RID: 160030
+		// Token: 0x04022469 RID: 140393
 		public const int GhostTipItem = 6;
 
-		// Token: 0x0402711F RID: 160031
+		// Token: 0x0402246A RID: 140394
 		public const int BlankTipItem = 7;
 
-		// Token: 0x04027120 RID: 160032
+		// Token: 0x0402246B RID: 140395
 		public const int BlankTipSprite = 8;
 
-		// Token: 0x04027121 RID: 160033
+		// Token: 0x0402246C RID: 140396
 		public const int BlankNumberText = 9;
 
-		// Token: 0x04027122 RID: 160034
+		// Token: 0x0402246D RID: 140397
 		public const int ChooseItem = 10;
 
-		// Token: 0x04027123 RID: 160035
+		// Token: 0x0402246E RID: 140398
 		public const int SelectItem = 11;
 
-		// Token: 0x04027124 RID: 160036
+		// Token: 0x0402246F RID: 140399
 		public const int CheckItem = 12;
 
-		// Token: 0x04027125 RID: 160037
+		// Token: 0x04022470 RID: 140400
 		public const int ChangeTexture = 13;
 
-		// Token: 0x04027126 RID: 160038
+		// Token: 0x04022471 RID: 140401
 		public const int DisableTexture = 14;
 	}
 }

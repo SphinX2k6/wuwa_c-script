@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007080 RID: 28800
+	// Token: 0x0200784C RID: 30796
 	public class ISetSubScreenDataT
 	{
-		// Token: 0x1700D606 RID: 54790
-		// (get) Token: 0x06032FE7 RID: 208871 RVA: 0x006E0E6A File Offset: 0x006DF06A
-		// (set) Token: 0x06032FE8 RID: 208872 RVA: 0x006E0E72 File Offset: 0x006DF072
+		// Token: 0x1700E1E9 RID: 57833
+		// (get) Token: 0x06036289 RID: 221833 RVA: 0x00741476 File Offset: 0x0073F676
+		// (set) Token: 0x0603628A RID: 221834 RVA: 0x0074147E File Offset: 0x0073F67E
 		public TScreenUnion TargetScreen { get; set; }
 
-		// Token: 0x1700D607 RID: 54791
-		// (get) Token: 0x06032FE9 RID: 208873 RVA: 0x006E0E7B File Offset: 0x006DF07B
-		// (set) Token: 0x06032FEA RID: 208874 RVA: 0x006E0E83 File Offset: 0x006DF083
+		// Token: 0x1700E1EA RID: 57834
+		// (get) Token: 0x0603628B RID: 221835 RVA: 0x00741487 File Offset: 0x0073F687
+		// (set) Token: 0x0603628C RID: 221836 RVA: 0x0074148F File Offset: 0x0073F68F
 		public ISubScreenConfigT TargetSubScreenConfig { get; set; }
 
-		// Token: 0x1700D608 RID: 54792
-		// (get) Token: 0x06032FEB RID: 208875 RVA: 0x006E0E8C File Offset: 0x006DF08C
-		// (set) Token: 0x06032FEC RID: 208876 RVA: 0x006E0E94 File Offset: 0x006DF094
+		// Token: 0x1700E1EB RID: 57835
+		// (get) Token: 0x0603628D RID: 221837 RVA: 0x00741498 File Offset: 0x0073F698
+		// (set) Token: 0x0603628E RID: 221838 RVA: 0x007414A0 File Offset: 0x0073F6A0
 		public ISubScreenTransitionT Transition { get; set; }
 
-		// Token: 0x06032FED RID: 208877 RVA: 0x006E0E9D File Offset: 0x006DF09D
+		// Token: 0x0603628F RID: 221839 RVA: 0x007414A9 File Offset: 0x0073F6A9
 		public ISetSubScreenDataT()
 		{
 			this.TargetScreen = null;

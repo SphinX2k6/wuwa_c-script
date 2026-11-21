@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005226 RID: 21030
+	// Token: 0x0200578E RID: 22414
 	public class IFailureConditionSequentialStateT
 	{
-		// Token: 0x17009A06 RID: 39430
-		// (get) Token: 0x060222F7 RID: 140023 RVA: 0x004BE073 File Offset: 0x004BC273
-		// (set) Token: 0x060222F8 RID: 140024 RVA: 0x004BE07B File Offset: 0x004BC27B
+		// Token: 0x1700A202 RID: 41474
+		// (get) Token: 0x0602428D RID: 148109 RVA: 0x004F8B37 File Offset: 0x004F6D37
+		// (set) Token: 0x0602428E RID: 148110 RVA: 0x004F8B3F File Offset: 0x004F6D3F
 		public ETargetGearGroupFailureCondition Type { get; set; }
 
-		// Token: 0x17009A07 RID: 39431
-		// (get) Token: 0x060222F9 RID: 140025 RVA: 0x004BE084 File Offset: 0x004BC284
-		// (set) Token: 0x060222FA RID: 140026 RVA: 0x004BE08C File Offset: 0x004BC28C
+		// Token: 0x1700A203 RID: 41475
+		// (get) Token: 0x0602428F RID: 148111 RVA: 0x004F8B48 File Offset: 0x004F6D48
+		// (set) Token: 0x06024290 RID: 148112 RVA: 0x004F8B50 File Offset: 0x004F6D50
 		public List<int> Order { get; set; }
 
-		// Token: 0x060222FB RID: 140027 RVA: 0x004BE095 File Offset: 0x004BC295
+		// Token: 0x06024291 RID: 148113 RVA: 0x004F8B59 File Offset: 0x004F6D59
 		public IFailureConditionSequentialStateT()
 		{
 			this.Type = ETargetGearGroupFailureCondition.ArbitraryState;

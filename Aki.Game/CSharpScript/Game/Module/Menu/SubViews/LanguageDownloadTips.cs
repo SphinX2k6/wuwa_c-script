@@ -5,19 +5,19 @@ using CSharpScript.Launcher.Update;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005436 RID: 21558
+	// Token: 0x02004419 RID: 17433
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LanguageDownloadTips : ResourceUpdateViewBase
 	{
-		// Token: 0x060370EF RID: 225519 RVA: 0x00D0C456 File Offset: 0x00D0A656
+		// Token: 0x0602C038 RID: 180280 RVA: 0x00C5B876 File Offset: 0x00C59A76
 		public LanguageDownloadTips(LanguageUpdater updater, string languageTest)
 		{
 			this.Updater = updater;
 			this.LanguageText = languageTest;
 		}
 
-		// Token: 0x060370F0 RID: 225520 RVA: 0x00D0C478 File Offset: 0x00D0A678
+		// Token: 0x0602C039 RID: 180281 RVA: 0x00C5B898 File Offset: 0x00C59A98
 		public override void UpdatePatchProgress(long receiveSize, long curProgress, long totalProgress, long downloadSpeed)
 		{
 			if (this.Updater == null)
@@ -38,11 +38,11 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			}
 		}
 
-		// Token: 0x0401D0CE RID: 118990
+		// Token: 0x04017B67 RID: 97127
 		[Nullable(2)]
 		private readonly LanguageUpdater Updater;
 
-		// Token: 0x0401D0CF RID: 118991
+		// Token: 0x04017B68 RID: 97128
 		private readonly string LanguageText = "";
 	}
 }

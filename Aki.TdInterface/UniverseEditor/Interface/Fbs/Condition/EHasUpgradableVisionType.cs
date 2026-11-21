@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x0200493C RID: 18748
+	// Token: 0x02004DF2 RID: 19954
 	public enum EHasUpgradableVisionType : byte
 	{
-		// Token: 0x0400D0B9 RID: 53433
+		// Token: 0x0400DB7D RID: 56189
 		AnyRole
 	}
 }

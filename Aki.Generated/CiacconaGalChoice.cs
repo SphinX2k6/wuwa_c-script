@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B78 RID: 2936
+	// Token: 0x02000C59 RID: 3161
 	public struct CiacconaGalChoice : IFlatbufferObject
 	{
-		// Token: 0x17000802 RID: 2050
-		// (get) Token: 0x06005547 RID: 21831 RVA: 0x001F57B1 File Offset: 0x001F39B1
+		// Token: 0x17000845 RID: 2117
+		// (get) Token: 0x06005B15 RID: 23317 RVA: 0x002155A2 File Offset: 0x002137A2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005548 RID: 21832 RVA: 0x001F57BE File Offset: 0x001F39BE
+		// Token: 0x06005B16 RID: 23318 RVA: 0x002155AF File Offset: 0x002137AF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005549 RID: 21833 RVA: 0x001F57C8 File Offset: 0x001F39C8
+		// Token: 0x06005B17 RID: 23319 RVA: 0x002155B8 File Offset: 0x002137B8
 		public static CiacconaGalChoice GetRootAsCiacconaGalChoice(ByteBuffer _bb)
 		{
 			return CiacconaGalChoice.GetRootAsCiacconaGalChoice(_bb, default(CiacconaGalChoice));
 		}
 
-		// Token: 0x0600554A RID: 21834 RVA: 0x001F57E4 File Offset: 0x001F39E4
+		// Token: 0x06005B18 RID: 23320 RVA: 0x002155D4 File Offset: 0x002137D4
 		public static CiacconaGalChoice GetRootAsCiacconaGalChoice(ByteBuffer _bb, CiacconaGalChoice obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600554B RID: 21835 RVA: 0x001F5801 File Offset: 0x001F3A01
+		// Token: 0x06005B19 RID: 23321 RVA: 0x002155F1 File Offset: 0x002137F1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600554C RID: 21836 RVA: 0x001F5810 File Offset: 0x001F3A10
+		// Token: 0x06005B1A RID: 23322 RVA: 0x00215600 File Offset: 0x00213800
 		public CiacconaGalChoice __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000803 RID: 2051
-		// (get) Token: 0x0600554D RID: 21837 RVA: 0x001F5820 File Offset: 0x001F3A20
+		// Token: 0x17000846 RID: 2118
+		// (get) Token: 0x06005B1B RID: 23323 RVA: 0x00215610 File Offset: 0x00213810
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000804 RID: 2052
-		// (get) Token: 0x0600554E RID: 21838 RVA: 0x001F585C File Offset: 0x001F3A5C
+		// Token: 0x17000847 RID: 2119
+		// (get) Token: 0x06005B1C RID: 23324 RVA: 0x0021564C File Offset: 0x0021384C
 		public string Content
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600554F RID: 21839 RVA: 0x001F5893 File Offset: 0x001F3A93
+		// Token: 0x06005B1D RID: 23325 RVA: 0x00215683 File Offset: 0x00213883
 		public Span<byte> GetContentBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06005550 RID: 21840 RVA: 0x001F58A2 File Offset: 0x001F3AA2
+		// Token: 0x06005B1E RID: 23326 RVA: 0x00215692 File Offset: 0x00213892
 		public byte[] GetContentArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000805 RID: 2053
-		// (get) Token: 0x06005551 RID: 21841 RVA: 0x001F58BC File Offset: 0x001F3ABC
+		// Token: 0x17000848 RID: 2120
+		// (get) Token: 0x06005B1F RID: 23327 RVA: 0x002156AC File Offset: 0x002138AC
 		public int RequiredInspiration
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000806 RID: 2054
-		// (get) Token: 0x06005552 RID: 21842 RVA: 0x001F58F8 File Offset: 0x001F3AF8
+		// Token: 0x17000849 RID: 2121
+		// (get) Token: 0x06005B20 RID: 23328 RVA: 0x002156E8 File Offset: 0x002138E8
 		public int UnlockCondition
 		{
 			get
@@ -119,8 +119,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000807 RID: 2055
-		// (get) Token: 0x06005553 RID: 21843 RVA: 0x001F5938 File Offset: 0x001F3B38
+		// Token: 0x1700084A RID: 2122
+		// (get) Token: 0x06005B21 RID: 23329 RVA: 0x00215728 File Offset: 0x00213928
 		public int ToStep
 		{
 			get
@@ -134,8 +134,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000808 RID: 2056
-		// (get) Token: 0x06005554 RID: 21844 RVA: 0x001F5978 File Offset: 0x001F3B78
+		// Token: 0x1700084B RID: 2123
+		// (get) Token: 0x06005B22 RID: 23330 RVA: 0x00215768 File Offset: 0x00213968
 		public int CorrSubEnding
 		{
 			get
@@ -149,7 +149,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004B7C RID: 19324
+		// Token: 0x0400515D RID: 20829
 		private Table __p;
 	}
 }

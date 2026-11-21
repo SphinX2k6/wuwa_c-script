@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BD0 RID: 3024
+	// Token: 0x02000CB2 RID: 3250
 	public struct DangoBrawlRound : IFlatbufferObject
 	{
-		// Token: 0x17000BAB RID: 2987
-		// (get) Token: 0x06005FB9 RID: 24505 RVA: 0x0020DEC5 File Offset: 0x0020C0C5
+		// Token: 0x17000BF1 RID: 3057
+		// (get) Token: 0x06006592 RID: 26002 RVA: 0x0022D589 File Offset: 0x0022B789
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005FBA RID: 24506 RVA: 0x0020DED2 File Offset: 0x0020C0D2
+		// Token: 0x06006593 RID: 26003 RVA: 0x0022D596 File Offset: 0x0022B796
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005FBB RID: 24507 RVA: 0x0020DEDC File Offset: 0x0020C0DC
+		// Token: 0x06006594 RID: 26004 RVA: 0x0022D5A0 File Offset: 0x0022B7A0
 		public static DangoBrawlRound GetRootAsDangoBrawlRound(ByteBuffer _bb)
 		{
 			return DangoBrawlRound.GetRootAsDangoBrawlRound(_bb, default(DangoBrawlRound));
 		}
 
-		// Token: 0x06005FBC RID: 24508 RVA: 0x0020DEF8 File Offset: 0x0020C0F8
+		// Token: 0x06006595 RID: 26005 RVA: 0x0022D5BC File Offset: 0x0022B7BC
 		public static DangoBrawlRound GetRootAsDangoBrawlRound(ByteBuffer _bb, DangoBrawlRound obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005FBD RID: 24509 RVA: 0x0020DF15 File Offset: 0x0020C115
+		// Token: 0x06006596 RID: 26006 RVA: 0x0022D5D9 File Offset: 0x0022B7D9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005FBE RID: 24510 RVA: 0x0020DF24 File Offset: 0x0020C124
+		// Token: 0x06006597 RID: 26007 RVA: 0x0022D5E8 File Offset: 0x0022B7E8
 		public DangoBrawlRound __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000BAC RID: 2988
-		// (get) Token: 0x06005FBF RID: 24511 RVA: 0x0020DF34 File Offset: 0x0020C134
+		// Token: 0x17000BF2 RID: 3058
+		// (get) Token: 0x06006598 RID: 26008 RVA: 0x0022D5F8 File Offset: 0x0022B7F8
 		public int Id
 		{
 			get
@@ -66,7 +66,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005FC0 RID: 24512 RVA: 0x0020DF70 File Offset: 0x0020C170
+		// Token: 0x06006599 RID: 26009 RVA: 0x0022D634 File Offset: 0x0022B834
 		public IntArray? Opponents(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -77,8 +77,8 @@ namespace Aki.Config
 			return new IntArray?(default(IntArray).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000BAD RID: 2989
-		// (get) Token: 0x06005FC1 RID: 24513 RVA: 0x0020DFD0 File Offset: 0x0020C1D0
+		// Token: 0x17000BF3 RID: 3059
+		// (get) Token: 0x0600659A RID: 26010 RVA: 0x0022D694 File Offset: 0x0022B894
 		public int OpponentsLength
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000BAE RID: 2990
-		// (get) Token: 0x06005FC2 RID: 24514 RVA: 0x0020DFFC File Offset: 0x0020C1FC
+		// Token: 0x17000BF4 RID: 3060
+		// (get) Token: 0x0600659B RID: 26011 RVA: 0x0022D6C0 File Offset: 0x0022B8C0
 		public int RewardCoin
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005FC3 RID: 24515 RVA: 0x0020E038 File Offset: 0x0020C238
+		// Token: 0x0600659C RID: 26012 RVA: 0x0022D6FC File Offset: 0x0022B8FC
 		public DicIntInt? ShopPoolWeight(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -118,8 +118,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000BAF RID: 2991
-		// (get) Token: 0x06005FC4 RID: 24516 RVA: 0x0020E09C File Offset: 0x0020C29C
+		// Token: 0x17000BF5 RID: 3061
+		// (get) Token: 0x0600659D RID: 26013 RVA: 0x0022D760 File Offset: 0x0022B960
 		public int ShopPoolWeightLength
 		{
 			get
@@ -133,7 +133,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005FC5 RID: 24517 RVA: 0x0020E0C8 File Offset: 0x0020C2C8
+		// Token: 0x0600659E RID: 26014 RVA: 0x0022D78C File Offset: 0x0022B98C
 		public IntArray? PointShopItem(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -144,8 +144,8 @@ namespace Aki.Config
 			return new IntArray?(default(IntArray).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000BB0 RID: 2992
-		// (get) Token: 0x06005FC6 RID: 24518 RVA: 0x0020E12C File Offset: 0x0020C32C
+		// Token: 0x17000BF6 RID: 3062
+		// (get) Token: 0x0600659F RID: 26015 RVA: 0x0022D7F0 File Offset: 0x0022B9F0
 		public int PointShopItemLength
 		{
 			get
@@ -159,8 +159,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000BB1 RID: 2993
-		// (get) Token: 0x06005FC7 RID: 24519 RVA: 0x0020E158 File Offset: 0x0020C358
+		// Token: 0x17000BF7 RID: 3063
+		// (get) Token: 0x060065A0 RID: 26016 RVA: 0x0022D81C File Offset: 0x0022BA1C
 		public int ShopGridCount
 		{
 			get
@@ -174,8 +174,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000BB2 RID: 2994
-		// (get) Token: 0x06005FC8 RID: 24520 RVA: 0x0020E198 File Offset: 0x0020C398
+		// Token: 0x17000BF8 RID: 3064
+		// (get) Token: 0x060065A1 RID: 26017 RVA: 0x0022D85C File Offset: 0x0022BA5C
 		public int ShopEvtGridCount
 		{
 			get
@@ -189,7 +189,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005FC9 RID: 24521 RVA: 0x0020E1D8 File Offset: 0x0020C3D8
+		// Token: 0x060065A2 RID: 26018 RVA: 0x0022D89C File Offset: 0x0022BA9C
 		public float ShopRateList(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -200,8 +200,8 @@ namespace Aki.Config
 			return this.__p.bb.GetFloat(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000BB3 RID: 2995
-		// (get) Token: 0x06005FCA RID: 24522 RVA: 0x0020E21C File Offset: 0x0020C41C
+		// Token: 0x17000BF9 RID: 3065
+		// (get) Token: 0x060065A3 RID: 26019 RVA: 0x0022D8E0 File Offset: 0x0022BAE0
 		public int ShopRateListLength
 		{
 			get
@@ -215,20 +215,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005FCB RID: 24523 RVA: 0x0020E248 File Offset: 0x0020C448
+		// Token: 0x060065A4 RID: 26020 RVA: 0x0022D90C File Offset: 0x0022BB0C
 		public Span<float> GetShopRateListBytes()
 		{
 			return this.__p.__vector_as_span<float>(18, 4);
 		}
 
-		// Token: 0x06005FCC RID: 24524 RVA: 0x0020E258 File Offset: 0x0020C458
+		// Token: 0x060065A5 RID: 26021 RVA: 0x0022D91C File Offset: 0x0022BB1C
 		public float[] GetShopRateListArray()
 		{
 			return this.__p.__vector_as_array<float>(18) ?? Array.Empty<float>();
 		}
 
-		// Token: 0x17000BB4 RID: 2996
-		// (get) Token: 0x06005FCD RID: 24525 RVA: 0x0020E270 File Offset: 0x0020C470
+		// Token: 0x17000BFA RID: 3066
+		// (get) Token: 0x060065A6 RID: 26022 RVA: 0x0022D934 File Offset: 0x0022BB34
 		public string ShopRateDesc
 		{
 			get
@@ -242,88 +242,83 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005FCE RID: 24526 RVA: 0x0020E2A8 File Offset: 0x0020C4A8
+		// Token: 0x060065A7 RID: 26023 RVA: 0x0022D96C File Offset: 0x0022BB6C
 		public Span<byte> GetShopRateDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(20, 1);
 		}
 
-		// Token: 0x06005FCF RID: 24527 RVA: 0x0020E2B8 File Offset: 0x0020C4B8
+		// Token: 0x060065A8 RID: 26024 RVA: 0x0022D97C File Offset: 0x0022BB7C
 		public byte[] GetShopRateDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(20) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06005FD0 RID: 24528 RVA: 0x0020E2D0 File Offset: 0x0020C4D0
+		// Token: 0x060065A9 RID: 26025 RVA: 0x0022D994 File Offset: 0x0022BB94
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用OpponentsIter()或GetOpponentsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly IntArray[] Opponents()
+		public IntArray[] Opponents()
 		{
 			return this.OpponentsIter().ToArray<IntArray>();
 		}
 
-		// Token: 0x06005FD1 RID: 24529 RVA: 0x0020E2DD File Offset: 0x0020C4DD
+		// Token: 0x060065AA RID: 26026 RVA: 0x0022D9A1 File Offset: 0x0022BBA1
 		[NullableContext(1)]
-		public readonly IEnumerable<IntArray> OpponentsIter()
+		public IEnumerable<IntArray> OpponentsIter()
 		{
 			DangoBrawlRound.<OpponentsIter>d__35 <OpponentsIter>d__ = new DangoBrawlRound.<OpponentsIter>d__35(-2);
 			<OpponentsIter>d__.<>3__<>4__this = this;
 			return <OpponentsIter>d__;
 		}
 
-		// Token: 0x06005FD2 RID: 24530 RVA: 0x0020E2F2 File Offset: 0x0020C4F2
+		// Token: 0x060065AB RID: 26027 RVA: 0x0022D9B6 File Offset: 0x0022BBB6
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PointShopItemIter()或GetPointShopItemBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly IntArray[] PointShopItem()
+		public IntArray[] PointShopItem()
 		{
 			return this.PointShopItemIter().ToArray<IntArray>();
 		}
 
-		// Token: 0x06005FD3 RID: 24531 RVA: 0x0020E2FF File Offset: 0x0020C4FF
+		// Token: 0x060065AC RID: 26028 RVA: 0x0022D9C3 File Offset: 0x0022BBC3
 		[NullableContext(1)]
-		public readonly IEnumerable<IntArray> PointShopItemIter()
+		public IEnumerable<IntArray> PointShopItemIter()
 		{
 			DangoBrawlRound.<PointShopItemIter>d__37 <PointShopItemIter>d__ = new DangoBrawlRound.<PointShopItemIter>d__37(-2);
 			<PointShopItemIter>d__.<>3__<>4__this = this;
 			return <PointShopItemIter>d__;
 		}
 
-		// Token: 0x06005FD4 RID: 24532 RVA: 0x0020E314 File Offset: 0x0020C514
+		// Token: 0x060065AD RID: 26029 RVA: 0x0022D9D8 File Offset: 0x0022BBD8
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用ShopPoolWeightFrozenDict()缓存字典，遍历请使用ShopPoolWeightIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> ShopPoolWeight()
+		public Dictionary<int, int> ShopPoolWeight()
 		{
 			return this.ShopPoolWeightIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06005FD5 RID: 24533 RVA: 0x0020E36A File Offset: 0x0020C56A
+		// Token: 0x060065AE RID: 26030 RVA: 0x0022DA2E File Offset: 0x0022BC2E
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> ShopPoolWeightIter()
+		public IEnumerable<DicIntInt> ShopPoolWeightIter()
 		{
 			DangoBrawlRound.<ShopPoolWeightIter>d__39 <ShopPoolWeightIter>d__ = new DangoBrawlRound.<ShopPoolWeightIter>d__39(-2);
 			<ShopPoolWeightIter>d__.<>3__<>4__this = this;
 			return <ShopPoolWeightIter>d__;
 		}
 
-		// Token: 0x06005FD6 RID: 24534 RVA: 0x0020E380 File Offset: 0x0020C580
+		// Token: 0x060065AF RID: 26031 RVA: 0x0022DA43 File Offset: 0x0022BC43
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ShopRateListIter()或GetShopRateListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly float[] ShopRateList()
+		public float[] ShopRateList()
 		{
-			DangoBrawlRound dangoBrawlRound = this;
-			return dangoBrawlRound.GetShopRateListArray() ?? Array.Empty<float>();
+			return this.GetShopRateListArray();
 		}
 
-		// Token: 0x06005FD7 RID: 24535 RVA: 0x0020E3A4 File Offset: 0x0020C5A4
+		// Token: 0x060065B0 RID: 26032 RVA: 0x0022DA4B File Offset: 0x0022BC4B
 		[NullableContext(1)]
-		public readonly IEnumerable<float> ShopRateListIter()
+		public IEnumerable<float> ShopRateListIter()
 		{
 			DangoBrawlRound.<ShopRateListIter>d__41 <ShopRateListIter>d__ = new DangoBrawlRound.<ShopRateListIter>d__41(-2);
 			<ShopRateListIter>d__.<>3__<>4__this = this;
 			return <ShopRateListIter>d__;
 		}
 
-		// Token: 0x06005FD8 RID: 24536 RVA: 0x0020E3BC File Offset: 0x0020C5BC
+		// Token: 0x060065B1 RID: 26033 RVA: 0x0022DA60 File Offset: 0x0022BC60
 		public int? GetShopPoolWeight(int key)
 		{
 			this.EnsureShopPoolWeightCacheIfNeeded();
@@ -335,7 +330,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06005FD9 RID: 24537 RVA: 0x0020E3F0 File Offset: 0x0020C5F0
+		// Token: 0x060065B2 RID: 26034 RVA: 0x0022DA94 File Offset: 0x0022BC94
 		private void EnsureShopPoolWeightCacheIfNeeded()
 		{
 			if (this.ShopPoolWeightCache != null)
@@ -345,18 +340,18 @@ namespace Aki.Config
 			this.ShopPoolWeightCache = this.ShopPoolWeightIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06005FDA RID: 24538 RVA: 0x0020E456 File Offset: 0x0020C656
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetShopPoolWeightFrozenDict(int key)
+		// Token: 0x060065B3 RID: 26035 RVA: 0x0022DAFA File Offset: 0x0022BCFA
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetShopPoolWeightFrozenDict()
 		{
 			this.EnsureShopPoolWeightCacheIfNeeded();
 			return this.ShopPoolWeightCache;
 		}
 
-		// Token: 0x04004BFA RID: 19450
+		// Token: 0x040051DC RID: 20956
 		private Table __p;
 
-		// Token: 0x04004BFB RID: 19451
+		// Token: 0x040051DD RID: 20957
 		[Nullable(2)]
 		private FrozenDictionary<int, int> ShopPoolWeightCache;
 	}

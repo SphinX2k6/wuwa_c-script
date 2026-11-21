@@ -7,23 +7,23 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B31 RID: 27441
+	// Token: 0x02005CA9 RID: 23721
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventGuideTrigger : LevelEventBase
 	{
-		// Token: 0x06044121 RID: 278817 RVA: 0x010BCCD9 File Offset: 0x010BAED9
+		// Token: 0x0603A273 RID: 238195 RVA: 0x01066565 File Offset: 0x01064765
 		public LevelEventGuideTrigger(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044122 RID: 278818 RVA: 0x010BCCE2 File Offset: 0x010BAEE2
+		// Token: 0x0603A274 RID: 238196 RVA: 0x0106656E File Offset: 0x0106476E
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044123 RID: 278819 RVA: 0x010BCCF0 File Offset: 0x010BAEF0
+		// Token: 0x0603A275 RID: 238197 RVA: 0x0106657C File Offset: 0x0106477C
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			GuideTrigger guideTrigger = inParams as GuideTrigger;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.TickHandle(0f);
 		}
 
-		// Token: 0x06044124 RID: 278820 RVA: 0x010BCD7C File Offset: 0x010BAF7C
+		// Token: 0x0603A276 RID: 238198 RVA: 0x01066608 File Offset: 0x01064808
 		private void TickHandle(float _)
 		{
 			if (!LevelGeneralController.Instance.CheckConditionNew(this.ConditionGroup, null, null, null))
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044125 RID: 278821 RVA: 0x010BCEA8 File Offset: 0x010BB0A8
+		// Token: 0x0603A277 RID: 238199 RVA: 0x01066734 File Offset: 0x01064934
 		private void OnGuideGroupFinishByComboTeaching()
 		{
 			EventSystem.Instance.Remove(EEventName.ComboTeachingCloseGuide, new Action(this.OnGuideGroupFinishByComboTeaching));
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044126 RID: 278822 RVA: 0x010BCEF8 File Offset: 0x010BB0F8
+		// Token: 0x0603A278 RID: 238200 RVA: 0x01066784 File Offset: 0x01064984
 		private void OnGuideFinish(int groupId)
 		{
 			if (groupId != this.GuideGroupId)
@@ -114,17 +114,17 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x040238FD RID: 145661
+		// Token: 0x0401EB9F RID: 125855
 		private int GuideGroupId;
 
-		// Token: 0x040238FE RID: 145662
+		// Token: 0x0401EBA0 RID: 125856
 		[Nullable(2)]
 		private IConditionGroup ConditionGroup;
 
-		// Token: 0x040238FF RID: 145663
+		// Token: 0x0401EBA1 RID: 125857
 		private EGuideTriggerType GuideTriggerType;
 
-		// Token: 0x04023900 RID: 145664
+		// Token: 0x0401EBA2 RID: 125858
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 	}

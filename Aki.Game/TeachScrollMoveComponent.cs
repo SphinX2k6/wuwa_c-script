@@ -4,31 +4,31 @@ using CSharpScript.Game.Module.UiNavigation;
 using CSharpScript.Game.Ui;
 using CSharpScript.Module.InstanceDungeon;
 
-// Token: 0x02002CD0 RID: 11472
+// Token: 0x02002229 RID: 8745
 [NullableContext(1)]
 [Nullable(0)]
 public class TeachScrollMoveComponent : HotKeyComponent
 {
-	// Token: 0x06018100 RID: 98560 RVA: 0x0061E77E File Offset: 0x0061C97E
+	// Token: 0x0601597D RID: 88445 RVA: 0x00644322 File Offset: 0x00642522
 	public TeachScrollMoveComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 	{
 		InputDistributeController.Instance.BindAction("组合主键", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputCombineButton));
 	}
 
-	// Token: 0x06018101 RID: 98561 RVA: 0x0061E7A2 File Offset: 0x0061C9A2
+	// Token: 0x0601597E RID: 88446 RVA: 0x00644346 File Offset: 0x00642546
 	protected override void OnClear()
 	{
 		InputDistributeController.Instance.UnBindAction("组合主键", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputCombineButton));
 	}
 
-	// Token: 0x06018102 RID: 98562 RVA: 0x0061E7BF File Offset: 0x0061C9BF
+	// Token: 0x0601597F RID: 88447 RVA: 0x00644363 File Offset: 0x00642563
 	private void OnInputCombineButton(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
 		this.IsMainKeyPress = (actionType == InputDistributeDefine.EActionType.Press);
 		this.RefreshActiveState();
 	}
 
-	// Token: 0x06018103 RID: 98563 RVA: 0x0061E7D4 File Offset: 0x0061C9D4
+	// Token: 0x06015980 RID: 88448 RVA: 0x00644378 File Offset: 0x00642578
 	protected override void OnInputAxis(string axisName, float value)
 	{
 		if (value == 0f)
@@ -51,7 +51,7 @@ public class TeachScrollMoveComponent : HotKeyComponent
 		}
 	}
 
-	// Token: 0x06018104 RID: 98564 RVA: 0x0061E84C File Offset: 0x0061CA4C
+	// Token: 0x06015981 RID: 88449 RVA: 0x006443F0 File Offset: 0x006425F0
 	protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 	{
 		string bindButtonTag = base.GetBindButtonTag();
@@ -63,7 +63,7 @@ public class TeachScrollMoveComponent : HotKeyComponent
 		this.RefreshActiveState();
 	}
 
-	// Token: 0x06018105 RID: 98565 RVA: 0x0061E87C File Offset: 0x0061CA7C
+	// Token: 0x06015982 RID: 88450 RVA: 0x00644420 File Offset: 0x00642620
 	protected void RefreshActiveState()
 	{
 		if (!this.IsMainKeyPress || !this.CheckInTeachDungeon() || this.Listener == null || !this.Listener.IsListenerActive())
@@ -74,23 +74,23 @@ public class TeachScrollMoveComponent : HotKeyComponent
 		base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, true, false);
 	}
 
-	// Token: 0x06018106 RID: 98566 RVA: 0x0061E8B8 File Offset: 0x0061CAB8
+	// Token: 0x06015983 RID: 88451 RVA: 0x0064445C File Offset: 0x0064265C
 	private bool CheckInTeachDungeon()
 	{
 		int instanceId = InstanceDungeonEntranceModel.Instance.InstanceId;
 		return instanceId != 0 && InstanceDungeonConfig.Instance.GetConfig(instanceId).Value.InstSubType == 7;
 	}
 
-	// Token: 0x0400B309 RID: 45833
+	// Token: 0x0400B675 RID: 46709
 	private const double THRESHOLD = 0.1;
 
-	// Token: 0x0400B30A RID: 45834
+	// Token: 0x0400B676 RID: 46710
 	private float TempValue;
 
-	// Token: 0x0400B30B RID: 45835
+	// Token: 0x0400B677 RID: 46711
 	private bool IsMainKeyPress;
 
-	// Token: 0x0400B30C RID: 45836
+	// Token: 0x0400B678 RID: 46712
 	[Nullable(2)]
 	private TsUiNavigationBehaviorListener Listener;
 }

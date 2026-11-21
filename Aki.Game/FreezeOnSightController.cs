@@ -5,13 +5,13 @@ using Aki.Config;
 using CSharpScript.Core.Framework;
 using UnrealEngine;
 
-// Token: 0x02001C28 RID: 7208
+// Token: 0x020010E7 RID: 4327
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class FreezeOnSightController : ControllerBase
 {
-	// Token: 0x0600D8A4 RID: 55460 RVA: 0x00323064 File Offset: 0x00321264
+	// Token: 0x0600ACBA RID: 44218 RVA: 0x0032E43C File Offset: 0x0032C63C
 	protected override bool OnInit()
 	{
 		base.InitTickOptimize(-1, 1);
@@ -31,7 +31,7 @@ public class FreezeOnSightController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600D8A5 RID: 55461 RVA: 0x003230F4 File Offset: 0x003212F4
+	// Token: 0x0600ACBB RID: 44219 RVA: 0x0032E4CC File Offset: 0x0032C6CC
 	protected override void OnTick(float delta)
 	{
 		if (this.SearchRange == null)
@@ -97,13 +97,13 @@ public class FreezeOnSightController : ControllerBase
 		this.LastDistance = num;
 	}
 
-	// Token: 0x0600D8A6 RID: 55462 RVA: 0x003232C4 File Offset: 0x003214C4
+	// Token: 0x0600ACBC RID: 44220 RVA: 0x0032E69C File Offset: 0x0032C89C
 	private bool HasTarget(double dist)
 	{
 		return dist != 3.402823466E+38;
 	}
 
-	// Token: 0x0600D8A7 RID: 55463 RVA: 0x003232D8 File Offset: 0x003214D8
+	// Token: 0x0600ACBD RID: 44221 RVA: 0x0032E6B0 File Offset: 0x0032C8B0
 	private void ProcessAudioEvent(bool hasTarget, bool lastHasTarget, bool isBlock, double distance, float viewAngleDeg)
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -148,7 +148,7 @@ public class FreezeOnSightController : ControllerBase
 		AudioSystem.Instance.SetRtpcValue("woodman_azimuth", 0f, null);
 	}
 
-	// Token: 0x0600D8A8 RID: 55464 RVA: 0x003234A0 File Offset: 0x003216A0
+	// Token: 0x0600ACBE RID: 44222 RVA: 0x0032E878 File Offset: 0x0032CA78
 	private float GetPlayerToMonsterViewAngleDeg(CharacterActorComponent playerActorComponent, CharacterActorComponent monsterActorComponent)
 	{
 		global::Vector inB = global::Vector.Create(playerActorComponent.ActorLocationProxy);
@@ -164,7 +164,7 @@ public class FreezeOnSightController : ControllerBase
 		return MathUtils.Instance.WrapAngle(num - yaw);
 	}
 
-	// Token: 0x0600D8A9 RID: 55465 RVA: 0x00323544 File Offset: 0x00321744
+	// Token: 0x0600ACBF RID: 44223 RVA: 0x0032E91C File Offset: 0x0032CB1C
 	public void OpenFreezeOnSightGameplay()
 	{
 		base.ResumeTick();
@@ -172,7 +172,7 @@ public class FreezeOnSightController : ControllerBase
 		Log.Instance.Info(ELogModule.World, ELogAuthor.CH, "开启木头人玩法", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600D8AA RID: 55466 RVA: 0x00323584 File Offset: 0x00321784
+	// Token: 0x0600ACC0 RID: 44224 RVA: 0x0032E95C File Offset: 0x0032CB5C
 	public void CloseFreezeOnSightGameplay()
 	{
 		base.PauseTick();
@@ -180,7 +180,7 @@ public class FreezeOnSightController : ControllerBase
 		Log.Instance.Info(ELogModule.World, ELogAuthor.CH, "关闭木头人玩法", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600D8AB RID: 55467 RVA: 0x003235C4 File Offset: 0x003217C4
+	// Token: 0x0600ACC1 RID: 44225 RVA: 0x0032E99C File Offset: 0x0032CB9C
 	public bool IsBlock(CharacterActorComponent monsterActorComponent, CharacterActorComponent playerActorComponent)
 	{
 		global::Vector vector = global::Vector.Create(monsterActorComponent.ActorLocationProxy);
@@ -198,7 +198,7 @@ public class FreezeOnSightController : ControllerBase
 		return TraceElementCommon.Instance.LineTrace(traceElement, "FreezeOnSightController.IsBlock");
 	}
 
-	// Token: 0x0600D8AC RID: 55468 RVA: 0x0032367C File Offset: 0x0032187C
+	// Token: 0x0600ACC2 RID: 44226 RVA: 0x0032EA54 File Offset: 0x0032CC54
 	private UTraceLineElement GetTraceElement()
 	{
 		if (this.TraceElement != null)
@@ -213,8 +213,8 @@ public class FreezeOnSightController : ControllerBase
 		return this.TraceElement;
 	}
 
-	// Token: 0x170011B7 RID: 4535
-	// (get) Token: 0x0600D8AD RID: 55469 RVA: 0x003236E1 File Offset: 0x003218E1
+	// Token: 0x170011DD RID: 4573
+	// (get) Token: 0x0600ACC3 RID: 44227 RVA: 0x0032EAB9 File Offset: 0x0032CCB9
 	public static FreezeOnSightController Instance
 	{
 		get
@@ -223,7 +223,7 @@ public class FreezeOnSightController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600D8AE RID: 55470 RVA: 0x003236E8 File Offset: 0x003218E8
+	// Token: 0x0600ACC4 RID: 44228 RVA: 0x0032EAC0 File Offset: 0x0032CCC0
 	public static FreezeOnSightController GetOrCreateInstance()
 	{
 		if (FreezeOnSightController._Instance == null)
@@ -233,7 +233,7 @@ public class FreezeOnSightController : ControllerBase
 		return FreezeOnSightController._Instance;
 	}
 
-	// Token: 0x0600D8AF RID: 55471 RVA: 0x003236FC File Offset: 0x003218FC
+	// Token: 0x0600ACC5 RID: 44229 RVA: 0x0032EAD4 File Offset: 0x0032CCD4
 	public static bool CreateInstance()
 	{
 		if (FreezeOnSightController._Instance != null)
@@ -244,70 +244,70 @@ public class FreezeOnSightController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600D8B0 RID: 55472 RVA: 0x00323712 File Offset: 0x00321912
+	// Token: 0x0600ACC6 RID: 44230 RVA: 0x0032EAEA File Offset: 0x0032CCEA
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600D8B1 RID: 55473 RVA: 0x00323714 File Offset: 0x00321914
+	// Token: 0x0600ACC7 RID: 44231 RVA: 0x0032EAEC File Offset: 0x0032CCEC
 	public static void ResetStaticDefaultValue()
 	{
 		FreezeOnSightController._Instance = null;
 	}
 
-	// Token: 0x0600D8B2 RID: 55474 RVA: 0x0032371C File Offset: 0x0032191C
+	// Token: 0x0600ACC8 RID: 44232 RVA: 0x0032EAF4 File Offset: 0x0032CCF4
 	static FreezeOnSightController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FreezeOnSightController.CreateStaticDefaultValue), new Action(FreezeOnSightController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040062B7 RID: 25271
+	// Token: 0x04006389 RID: 25481
 	private const int FREEZE_ON_SIGHT_MONSTER_TEMPLATE_ID = 947850000;
 
-	// Token: 0x040062B8 RID: 25272
+	// Token: 0x0400638A RID: 25482
 	private const int SCENE_EFFECT_BUFF_ID = 640031030;
 
-	// Token: 0x040062B9 RID: 25273
+	// Token: 0x0400638B RID: 25483
 	private const string START_HEART_BEAT_AUDIO_EVENT = "play_gp_woodman_heartbeat_loop";
 
-	// Token: 0x040062BA RID: 25274
+	// Token: 0x0400638C RID: 25484
 	private const string STOP_HEART_BEAT_AUDIO_EVENT = "stop_gp_woodman_heartbeat_loop";
 
-	// Token: 0x040062BB RID: 25275
+	// Token: 0x0400638D RID: 25485
 	private const string HERAT_BEAT_DISTANCE_RTPC_EVENT = "woodman_heartbeat";
 
-	// Token: 0x040062BC RID: 25276
+	// Token: 0x0400638E RID: 25486
 	private const string HERAT_BEAT_BLOCK_RTPC_EVENT = "woodman_block";
 
-	// Token: 0x040062BD RID: 25277
+	// Token: 0x0400638F RID: 25487
 	private const string HERAT_BEAT_AZIMUTH_RTPC_EVENT = "woodman_azimuth";
 
-	// Token: 0x040062BE RID: 25278
+	// Token: 0x04006390 RID: 25488
 	private const float MAX_DISTANCE_RTPC_VALUE = 1500f;
 
-	// Token: 0x040062BF RID: 25279
+	// Token: 0x04006391 RID: 25489
 	private const float MAX_DISTANCE_ADD_BUFF = 500f;
 
-	// Token: 0x040062C0 RID: 25280
+	// Token: 0x04006392 RID: 25490
 	private float? SearchRange;
 
-	// Token: 0x040062C1 RID: 25281
+	// Token: 0x04006393 RID: 25491
 	private float? AddBuffDist;
 
-	// Token: 0x040062C2 RID: 25282
+	// Token: 0x04006394 RID: 25492
 	private readonly List<EntityHandle> QueryMonsterResultCache = new List<EntityHandle>();
 
-	// Token: 0x040062C3 RID: 25283
+	// Token: 0x04006395 RID: 25493
 	private double LastDistance = 3.402823466E+38;
 
-	// Token: 0x040062C4 RID: 25284
+	// Token: 0x04006396 RID: 25494
 	[Nullable(2)]
 	private UTraceLineElement TraceElement;
 
-	// Token: 0x040062C5 RID: 25285
+	// Token: 0x04006397 RID: 25495
 	private global::Vector TmpToMonsterDir = global::Vector.Create();
 
-	// Token: 0x040062C6 RID: 25286
+	// Token: 0x04006398 RID: 25496
 	[Nullable(2)]
 	private static FreezeOnSightController _Instance;
 }

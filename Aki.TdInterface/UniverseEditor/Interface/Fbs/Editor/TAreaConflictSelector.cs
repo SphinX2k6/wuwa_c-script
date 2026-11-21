@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048E3 RID: 18659
+	// Token: 0x02004D48 RID: 19784
 	public enum TAreaConflictSelector : byte
 	{
-		// Token: 0x0400CEF2 RID: 52978
+		// Token: 0x0400D92B RID: 55595
 		NONE,
-		// Token: 0x0400CEF3 RID: 52979
+		// Token: 0x0400D92C RID: 55596
 		ICustomShapeAreaConflictSelector,
-		// Token: 0x0400CEF4 RID: 52980
+		// Token: 0x0400D92D RID: 55597
 		ILevelPlayAreaConflictSelector,
-		// Token: 0x0400CEF5 RID: 52981
+		// Token: 0x0400D92E RID: 55598
 		IQuestAreaConflictSelector
 	}
 }

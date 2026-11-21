@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000E3D RID: 3645
+	// Token: 0x02000E2D RID: 3629
 	[NetMessage(EMessageId.RacingBetMatchActionResponse)]
 	public sealed class RacingBetMatchActionResponse : IMessage<RacingBetMatchActionResponse>, IMessage, IEquatable<RacingBetMatchActionResponse>, IDeepCloneable<RacingBetMatchActionResponse>, IBufferMessage
 	{
-		// Token: 0x0601390D RID: 80141 RVA: 0x002D7BD0 File Offset: 0x002D5DD0
+		// Token: 0x06013828 RID: 79912 RVA: 0x002D6510 File Offset: 0x002D4710
 		[NullableContext(1)]
 		public static RacingBetMatchActionResponse Create()
 		{
 			return new RacingBetMatchActionResponse();
 		}
 
-		// Token: 0x170040DF RID: 16607
-		// (get) Token: 0x0601390E RID: 80142 RVA: 0x002D7BD7 File Offset: 0x002D5DD7
+		// Token: 0x170040B5 RID: 16565
+		// (get) Token: 0x06013829 RID: 79913 RVA: 0x002D6517 File Offset: 0x002D4717
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170040E0 RID: 16608
-		// (get) Token: 0x0601390F RID: 80143 RVA: 0x002D7BDA File Offset: 0x002D5DDA
+		// Token: 0x170040B6 RID: 16566
+		// (get) Token: 0x0601382A RID: 79914 RVA: 0x002D651A File Offset: 0x002D471A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013910 RID: 80144 RVA: 0x002D7BE1 File Offset: 0x002D5DE1
+		// Token: 0x0601382B RID: 79915 RVA: 0x002D6521 File Offset: 0x002D4721
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RacingBetMatchActionResponse()
 		{
 		}
 
-		// Token: 0x06013911 RID: 80145 RVA: 0x002D7C00 File Offset: 0x002D5E00
+		// Token: 0x0601382C RID: 79916 RVA: 0x002D6540 File Offset: 0x002D4740
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RacingBetMatchActionResponse(RacingBetMatchActionResponse other) : this()
@@ -64,7 +64,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06013912 RID: 80146 RVA: 0x002D7C76 File Offset: 0x002D5E76
+		// Token: 0x0601382D RID: 79917 RVA: 0x002D65B6 File Offset: 0x002D47B6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RacingBetMatchActionResponse Clone()
@@ -72,9 +72,9 @@ namespace Aki.Protocol
 			return new RacingBetMatchActionResponse(this);
 		}
 
-		// Token: 0x170040E1 RID: 16609
-		// (get) Token: 0x06013913 RID: 80147 RVA: 0x002D7C7E File Offset: 0x002D5E7E
-		// (set) Token: 0x06013914 RID: 80148 RVA: 0x002D7C86 File Offset: 0x002D5E86
+		// Token: 0x170040B7 RID: 16567
+		// (get) Token: 0x0601382E RID: 79918 RVA: 0x002D65BE File Offset: 0x002D47BE
+		// (set) Token: 0x0601382F RID: 79919 RVA: 0x002D65C6 File Offset: 0x002D47C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -89,9 +89,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170040E2 RID: 16610
-		// (get) Token: 0x06013915 RID: 80149 RVA: 0x002D7C8F File Offset: 0x002D5E8F
-		// (set) Token: 0x06013916 RID: 80150 RVA: 0x002D7C97 File Offset: 0x002D5E97
+		// Token: 0x170040B8 RID: 16568
+		// (get) Token: 0x06013830 RID: 79920 RVA: 0x002D65CF File Offset: 0x002D47CF
+		// (set) Token: 0x06013831 RID: 79921 RVA: 0x002D65D7 File Offset: 0x002D47D7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActivityId
@@ -106,9 +106,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170040E3 RID: 16611
-		// (get) Token: 0x06013917 RID: 80151 RVA: 0x002D7CA0 File Offset: 0x002D5EA0
-		// (set) Token: 0x06013918 RID: 80152 RVA: 0x002D7CA8 File Offset: 0x002D5EA8
+		// Token: 0x170040B9 RID: 16569
+		// (get) Token: 0x06013832 RID: 79922 RVA: 0x002D65E0 File Offset: 0x002D47E0
+		// (set) Token: 0x06013833 RID: 79923 RVA: 0x002D65E8 File Offset: 0x002D47E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LegMatchId
@@ -123,8 +123,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170040E4 RID: 16612
-		// (get) Token: 0x06013919 RID: 80153 RVA: 0x002D7CB1 File Offset: 0x002D5EB1
+		// Token: 0x170040BA RID: 16570
+		// (get) Token: 0x06013834 RID: 79924 RVA: 0x002D65F1 File Offset: 0x002D47F1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RacingBetsInstanceDangoInfo> DangoInfo
@@ -135,8 +135,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170040E5 RID: 16613
-		// (get) Token: 0x0601391A RID: 80154 RVA: 0x002D7CB9 File Offset: 0x002D5EB9
+		// Token: 0x170040BB RID: 16571
+		// (get) Token: 0x06013835 RID: 79925 RVA: 0x002D65F9 File Offset: 0x002D47F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RacingBetsMatchRoundInfo> Rounds
@@ -147,9 +147,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170040E6 RID: 16614
-		// (get) Token: 0x0601391B RID: 80155 RVA: 0x002D7CC1 File Offset: 0x002D5EC1
-		// (set) Token: 0x0601391C RID: 80156 RVA: 0x002D7CC9 File Offset: 0x002D5EC9
+		// Token: 0x170040BC RID: 16572
+		// (get) Token: 0x06013836 RID: 79926 RVA: 0x002D6601 File Offset: 0x002D4801
+		// (set) Token: 0x06013837 RID: 79927 RVA: 0x002D6609 File Offset: 0x002D4809
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Replay
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601391D RID: 80157 RVA: 0x002D7CD2 File Offset: 0x002D5ED2
+		// Token: 0x06013838 RID: 79928 RVA: 0x002D6612 File Offset: 0x002D4812
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RacingBetMatchActionResponse);
 		}
 
-		// Token: 0x0601391E RID: 80158 RVA: 0x002D7CE0 File Offset: 0x002D5EE0
+		// Token: 0x06013839 RID: 79929 RVA: 0x002D6620 File Offset: 0x002D4820
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RacingBetMatchActionResponse other)
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.ActivityId == other.ActivityId && this.LegMatchId == other.LegMatchId && this.dangoInfo_.Equals(other.dangoInfo_) && this.rounds_.Equals(other.rounds_) && this.Replay == other.Replay && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601391F RID: 80159 RVA: 0x002D7D74 File Offset: 0x002D5F74
+		// Token: 0x0601383A RID: 79930 RVA: 0x002D66B4 File Offset: 0x002D48B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -211,7 +211,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013920 RID: 80160 RVA: 0x002D7E20 File Offset: 0x002D6020
+		// Token: 0x0601383B RID: 79931 RVA: 0x002D6760 File Offset: 0x002D4960
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -219,7 +219,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06013921 RID: 80161 RVA: 0x002D7E2D File Offset: 0x002D602D
+		// Token: 0x0601383C RID: 79932 RVA: 0x002D676D File Offset: 0x002D496D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -227,31 +227,31 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06013922 RID: 80162 RVA: 0x002D7E38 File Offset: 0x002D6038
+		// Token: 0x0601383D RID: 79933 RVA: 0x002D6778 File Offset: 0x002D4978
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.Replay)
+			if (this.LegMatchId != 0)
 			{
 				output.WriteRawTag(16);
-				output.WriteBool(this.Replay);
-			}
-			this.rounds_.WriteTo(ref output, RacingBetMatchActionResponse._repeated_rounds_codec);
-			if (this.ErrorCode != ErrorCode.Success)
-			{
-				output.WriteRawTag(56);
-				output.WriteEnum((int)this.ErrorCode);
+				output.WriteInt32(this.LegMatchId);
 			}
 			if (this.ActivityId != 0)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(24);
 				output.WriteInt32(this.ActivityId);
 			}
-			if (this.LegMatchId != 0)
+			this.rounds_.WriteTo(ref output, RacingBetMatchActionResponse._repeated_rounds_codec);
+			if (this.Replay)
+			{
+				output.WriteRawTag(88);
+				output.WriteBool(this.Replay);
+			}
+			if (this.ErrorCode != ErrorCode.Success)
 			{
 				output.WriteRawTag(96);
-				output.WriteInt32(this.LegMatchId);
+				output.WriteEnum((int)this.ErrorCode);
 			}
 			this.dangoInfo_.WriteTo(ref output, RacingBetMatchActionResponse._repeated_dangoInfo_codec);
 			if (this._unknownFields != null)
@@ -260,7 +260,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013923 RID: 80163 RVA: 0x002D7EEC File Offset: 0x002D60EC
+		// Token: 0x0601383E RID: 79934 RVA: 0x002D682C File Offset: 0x002D4A2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -291,7 +291,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013924 RID: 80164 RVA: 0x002D7F8C File Offset: 0x002D618C
+		// Token: 0x0601383F RID: 79935 RVA: 0x002D68CC File Offset: 0x002D4ACC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RacingBetMatchActionResponse other)
@@ -321,7 +321,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06013925 RID: 80165 RVA: 0x002D8026 File Offset: 0x002D6226
+		// Token: 0x06013840 RID: 79936 RVA: 0x002D6966 File Offset: 0x002D4B66
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -329,7 +329,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06013926 RID: 80166 RVA: 0x002D8030 File Offset: 0x002D6230
+		// Token: 0x06013841 RID: 79937 RVA: 0x002D6970 File Offset: 0x002D4B70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -341,21 +341,21 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 56U)
+				if (num <= 34U)
 				{
 					if (num == 16U)
 					{
-						this.Replay = input.ReadBool();
+						this.LegMatchId = input.ReadInt32();
 						continue;
 					}
-					if (num == 42U)
+					if (num == 24U)
+					{
+						this.ActivityId = input.ReadInt32();
+						continue;
+					}
+					if (num == 34U)
 					{
 						this.rounds_.AddEntriesFrom(ref input, RacingBetMatchActionResponse._repeated_rounds_codec);
-						continue;
-					}
-					if (num == 56U)
-					{
-						this.ErrorCode = (ErrorCode)input.ReadEnum();
 						continue;
 					}
 				}
@@ -363,15 +363,15 @@ namespace Aki.Protocol
 				{
 					if (num == 88U)
 					{
-						this.ActivityId = input.ReadInt32();
+						this.Replay = input.ReadBool();
 						continue;
 					}
 					if (num == 96U)
 					{
-						this.LegMatchId = input.ReadInt32();
+						this.ErrorCode = (ErrorCode)input.ReadEnum();
 						continue;
 					}
-					if (num == 114U)
+					if (num == 122U)
 					{
 						this.dangoInfo_.AddEntriesFrom(ref input, RacingBetMatchActionResponse._repeated_dangoInfo_codec);
 						continue;
@@ -381,49 +381,49 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040077BA RID: 30650
+		// Token: 0x040077E4 RID: 30692
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040077BB RID: 30651
-		public const int ErrorCodeFieldNumber = 7;
+		// Token: 0x040077E5 RID: 30693
+		public const int ErrorCodeFieldNumber = 12;
 
-		// Token: 0x040077BC RID: 30652
+		// Token: 0x040077E6 RID: 30694
 		private ErrorCode errorCode_;
 
-		// Token: 0x040077BD RID: 30653
-		public const int ActivityIdFieldNumber = 11;
+		// Token: 0x040077E7 RID: 30695
+		public const int ActivityIdFieldNumber = 3;
 
-		// Token: 0x040077BE RID: 30654
+		// Token: 0x040077E8 RID: 30696
 		private int activityId_;
 
-		// Token: 0x040077BF RID: 30655
-		public const int LegMatchIdFieldNumber = 12;
+		// Token: 0x040077E9 RID: 30697
+		public const int LegMatchIdFieldNumber = 2;
 
-		// Token: 0x040077C0 RID: 30656
+		// Token: 0x040077EA RID: 30698
 		private int legMatchId_;
 
-		// Token: 0x040077C1 RID: 30657
-		public const int DangoInfoFieldNumber = 14;
+		// Token: 0x040077EB RID: 30699
+		public const int DangoInfoFieldNumber = 15;
 
-		// Token: 0x040077C2 RID: 30658
-		private static readonly FieldCodec<RacingBetsInstanceDangoInfo> _repeated_dangoInfo_codec = FieldCodec.ForMessage<RacingBetsInstanceDangoInfo>(114U, RacingBetsInstanceDangoInfo.Parser);
+		// Token: 0x040077EC RID: 30700
+		private static readonly FieldCodec<RacingBetsInstanceDangoInfo> _repeated_dangoInfo_codec = FieldCodec.ForMessage<RacingBetsInstanceDangoInfo>(122U, RacingBetsInstanceDangoInfo.Parser);
 
-		// Token: 0x040077C3 RID: 30659
+		// Token: 0x040077ED RID: 30701
 		private readonly RepeatedField<RacingBetsInstanceDangoInfo> dangoInfo_ = new RepeatedField<RacingBetsInstanceDangoInfo>();
 
-		// Token: 0x040077C4 RID: 30660
-		public const int RoundsFieldNumber = 5;
+		// Token: 0x040077EE RID: 30702
+		public const int RoundsFieldNumber = 4;
 
-		// Token: 0x040077C5 RID: 30661
-		private static readonly FieldCodec<RacingBetsMatchRoundInfo> _repeated_rounds_codec = FieldCodec.ForMessage<RacingBetsMatchRoundInfo>(42U, RacingBetsMatchRoundInfo.Parser);
+		// Token: 0x040077EF RID: 30703
+		private static readonly FieldCodec<RacingBetsMatchRoundInfo> _repeated_rounds_codec = FieldCodec.ForMessage<RacingBetsMatchRoundInfo>(34U, RacingBetsMatchRoundInfo.Parser);
 
-		// Token: 0x040077C6 RID: 30662
+		// Token: 0x040077F0 RID: 30704
 		private readonly RepeatedField<RacingBetsMatchRoundInfo> rounds_ = new RepeatedField<RacingBetsMatchRoundInfo>();
 
-		// Token: 0x040077C7 RID: 30663
-		public const int ReplayFieldNumber = 2;
+		// Token: 0x040077F1 RID: 30705
+		public const int ReplayFieldNumber = 11;
 
-		// Token: 0x040077C8 RID: 30664
+		// Token: 0x040077F2 RID: 30706
 		private bool replay_;
 	}
 }

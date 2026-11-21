@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
 using Aki.Config;
@@ -10,12 +9,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Common.Component;
 using UnrealEngine;
 
-// Token: 0x020032FB RID: 13051
+// Token: 0x0200286D RID: 10349
 [NullableContext(2)]
 [Nullable(0)]
 public class MotorcycleOutlookComponent : BaseOutlookComponent
 {
-	// Token: 0x0601C6D0 RID: 116432 RVA: 0x007F845C File Offset: 0x007F665C
+	// Token: 0x0601A3B0 RID: 107440 RVA: 0x0081E664 File Offset: 0x0081C864
 	private void OnSoarTagChanged(int tagId, bool tagExist)
 	{
 		if (tagExist)
@@ -78,7 +77,7 @@ public class MotorcycleOutlookComponent : BaseOutlookComponent
 		}, 1200f, null, null, true, 1f);
 	}
 
-	// Token: 0x0601C6D1 RID: 116433 RVA: 0x007F8558 File Offset: 0x007F6758
+	// Token: 0x0601A3B1 RID: 107441 RVA: 0x0081E760 File Offset: 0x0081C960
 	[NullableContext(1)]
 	private void OnVehicleEntered(VehiclePassengerInfo info, bool byChangeRole)
 	{
@@ -121,7 +120,7 @@ public class MotorcycleOutlookComponent : BaseOutlookComponent
 		}
 	}
 
-	// Token: 0x0601C6D2 RID: 116434 RVA: 0x007F85D0 File Offset: 0x007F67D0
+	// Token: 0x0601A3B2 RID: 107442 RVA: 0x0081E7D8 File Offset: 0x0081C9D8
 	protected override bool OnStart()
 	{
 		VehicleActorComponent component = base.Entity.GetComponent<VehicleActorComponent>();
@@ -138,7 +137,7 @@ public class MotorcycleOutlookComponent : BaseOutlookComponent
 		return true;
 	}
 
-	// Token: 0x0601C6D3 RID: 116435 RVA: 0x007F8678 File Offset: 0x007F6878
+	// Token: 0x0601A3B3 RID: 107443 RVA: 0x0081E880 File Offset: 0x0081CA80
 	private void InitMotorWingId()
 	{
 		VehicleActorComponent component = base.Entity.GetComponent<VehicleActorComponent>();
@@ -171,7 +170,7 @@ public class MotorcycleOutlookComponent : BaseOutlookComponent
 		instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0601C6D4 RID: 116436 RVA: 0x007F8748 File Offset: 0x007F6948
+	// Token: 0x0601A3B4 RID: 107444 RVA: 0x0081E950 File Offset: 0x0081CB50
 	protected override bool OnEnd()
 	{
 		if (this.SkelMeshComp != null)
@@ -197,7 +196,7 @@ public class MotorcycleOutlookComponent : BaseOutlookComponent
 		return true;
 	}
 
-	// Token: 0x0601C6D5 RID: 116437 RVA: 0x007F8804 File Offset: 0x007F6A04
+	// Token: 0x0601A3B5 RID: 107445 RVA: 0x0081EA0C File Offset: 0x0081CC0C
 	protected override void OnActivate()
 	{
 		this.SoarWingVisibleTags.Clear();
@@ -243,14 +242,14 @@ public class MotorcycleOutlookComponent : BaseOutlookComponent
 		}
 	}
 
-	// Token: 0x0601C6D6 RID: 116438 RVA: 0x007F898B File Offset: 0x007F6B8B
+	// Token: 0x0601A3B6 RID: 107446 RVA: 0x0081EB93 File Offset: 0x0081CD93
 	public bool EquipMotor(MotorOutlookEquippedPb equippedPd)
 	{
-		base.EquipDecoration((equippedPd != null) ? equippedPd.DecorationsEquipped.ToList<int>() : null);
-		return this.EquipMotorSticker((equippedPd != null) ? equippedPd.StickerEquipped.ToList<int>() : null);
+		base.EquipDecoration((equippedPd != null) ? new List<int>(equippedPd.DecorationsEquipped) : null);
+		return this.EquipMotorSticker((equippedPd != null) ? new List<int>(equippedPd.StickerEquipped) : null);
 	}
 
-	// Token: 0x0601C6D7 RID: 116439 RVA: 0x007F89BC File Offset: 0x007F6BBC
+	// Token: 0x0601A3B7 RID: 107447 RVA: 0x0081EBC4 File Offset: 0x0081CDC4
 	[NullableContext(1)]
 	protected override void AddRenderMesh(DecorationItem item)
 	{
@@ -266,7 +265,7 @@ public class MotorcycleOutlookComponent : BaseOutlookComponent
 		}
 	}
 
-	// Token: 0x0601C6D8 RID: 116440 RVA: 0x007F8A3C File Offset: 0x007F6C3C
+	// Token: 0x0601A3B8 RID: 107448 RVA: 0x0081EC44 File Offset: 0x0081CE44
 	protected override int? GetDecorationModelId(int decorationId)
 	{
 		MotorDecorations? config = ConfigMotorDecorationsById.GetConfig(decorationId, true);
@@ -277,7 +276,7 @@ public class MotorcycleOutlookComponent : BaseOutlookComponent
 		return new int?(config.GetValueOrDefault().ModelId);
 	}
 
-	// Token: 0x0601C6D9 RID: 116441 RVA: 0x007F8A78 File Offset: 0x007F6C78
+	// Token: 0x0601A3B9 RID: 107449 RVA: 0x0081EC80 File Offset: 0x0081CE80
 	public override int GetSkinId()
 	{
 		VehicleActorComponent component = base.Entity.GetComponent<VehicleActorComponent>();
@@ -288,7 +287,7 @@ public class MotorcycleOutlookComponent : BaseOutlookComponent
 		return component.CreatureData.GetSkinId();
 	}
 
-	// Token: 0x0601C6DA RID: 116442 RVA: 0x007F8A98 File Offset: 0x007F6C98
+	// Token: 0x0601A3BA RID: 107450 RVA: 0x0081ECA0 File Offset: 0x0081CEA0
 	public unsafe bool EquipMotorSticker(List<int> stickerIds)
 	{
 		List<int> list = stickerIds ?? new List<int>();
@@ -384,7 +383,7 @@ public class MotorcycleOutlookComponent : BaseOutlookComponent
 		return true;
 	}
 
-	// Token: 0x0601C6DB RID: 116443 RVA: 0x007F8D78 File Offset: 0x007F6F78
+	// Token: 0x0601A3BB RID: 107451 RVA: 0x0081EF80 File Offset: 0x0081D180
 	public void DisableSoarWing()
 	{
 		if (this.SoarWingVisibleTags.Count > 0)
@@ -410,7 +409,7 @@ public class MotorcycleOutlookComponent : BaseOutlookComponent
 		soarWingDecoration.SetVisible(false, "Motorcycle.DisableSoarWing");
 	}
 
-	// Token: 0x0601C6DC RID: 116444 RVA: 0x007F8DFC File Offset: 0x007F6FFC
+	// Token: 0x0601A3BC RID: 107452 RVA: 0x0081F004 File Offset: 0x0081D204
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -419,115 +418,157 @@ public class MotorcycleOutlookComponent : BaseOutlookComponent
 			return false;
 		}
 		MotorcycleOutlookComponent motorcycleOutlookComponent = (MotorcycleOutlookComponent)componentTemplate;
-		if (base.CanResetComponentProperty("MotorWingId"))
+		this.MotorWingId = motorcycleOutlookComponent.MotorWingId;
+		if (motorcycleOutlookComponent.TagComp == null)
 		{
-			this.MotorWingId = motorcycleOutlookComponent.MotorWingId;
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("TagComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
-			if (motorcycleOutlookComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CharRenderComp"))
+		if (motorcycleOutlookComponent.CharRenderComp == null)
 		{
-			if (motorcycleOutlookComponent.CharRenderComp == null)
-			{
-				this.CharRenderComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharRenderingComponent>(this.CharRenderComp), "CharRenderComp"))
-			{
-				return false;
-			}
+			this.CharRenderComp = null;
 		}
-		if (base.CanResetComponentProperty("CurrentStickers"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharRenderComp), "CharRenderComp"))
 		{
-			if (motorcycleOutlookComponent.CurrentStickers == null)
-			{
-				this.CurrentStickers = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<MotorcycleOutlookComponent.StickerParams>>(this.CurrentStickers), "CurrentStickers"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("SoarWingDecoration"))
+		if (motorcycleOutlookComponent.CurrentStickers == null)
 		{
-			if (motorcycleOutlookComponent.SoarWingDecoration == null)
-			{
-				this.SoarWingDecoration = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DecorationItem>(this.SoarWingDecoration), "SoarWingDecoration"))
-			{
-				return false;
-			}
+			this.CurrentStickers = null;
 		}
-		if (base.CanResetComponentProperty("DisableSoarWingTimer"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentStickers), "CurrentStickers"))
 		{
-			if (motorcycleOutlookComponent.DisableSoarWingTimer == null)
-			{
-				this.DisableSoarWingTimer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DisableSoarWingTimer), "DisableSoarWingTimer"))
-			{
-				return false;
-			}
+			return false;
 		}
-		return !base.CanResetComponentProperty("SoarWingVisibleTags") || motorcycleOutlookComponent.SoarWingVisibleTags == null || base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.SoarWingVisibleTags), "SoarWingVisibleTags");
+		if (motorcycleOutlookComponent.SoarWingDecoration == null)
+		{
+			this.SoarWingDecoration = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SoarWingDecoration), "SoarWingDecoration"))
+		{
+			return false;
+		}
+		if (motorcycleOutlookComponent.DisableSoarWingTimer == null)
+		{
+			this.DisableSoarWingTimer = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisableSoarWingTimer), "DisableSoarWingTimer"))
+		{
+			return false;
+		}
+		return motorcycleOutlookComponent.SoarWingVisibleTags == null || base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.SoarWingVisibleTags), "SoarWingVisibleTags");
 	}
 
-	// Token: 0x0400E1A3 RID: 57763
+	// Token: 0x17002AE5 RID: 10981
+	// (get) Token: 0x0601A3BD RID: 107453 RVA: 0x0081F129 File Offset: 0x0081D329
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AE6 RID: 10982
+	// (get) Token: 0x0601A3BE RID: 107454 RVA: 0x0081F12C File Offset: 0x0081D32C
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AE7 RID: 10983
+	// (get) Token: 0x0601A3BF RID: 107455 RVA: 0x0081F12F File Offset: 0x0081D32F
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AE8 RID: 10984
+	// (get) Token: 0x0601A3C0 RID: 107456 RVA: 0x0081F132 File Offset: 0x0081D332
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AE9 RID: 10985
+	// (get) Token: 0x0601A3C1 RID: 107457 RVA: 0x0081F135 File Offset: 0x0081D335
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AEA RID: 10986
+	// (get) Token: 0x0601A3C2 RID: 107458 RVA: 0x0081F138 File Offset: 0x0081D338
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E64E RID: 58958
 	private const int SOAR_WING_INDEX = 101;
 
-	// Token: 0x0400E1A4 RID: 57764
+	// Token: 0x0400E64F RID: 58959
 	private const int SOAR_WING_ID = 800001;
 
-	// Token: 0x0400E1A5 RID: 57765
+	// Token: 0x0400E650 RID: 58960
 	private const long SOAR_WING_HIDE_DELAY = 1200L;
 
-	// Token: 0x0400E1A6 RID: 57766
+	// Token: 0x0400E651 RID: 58961
 	private int MotorWingId = 800001;
 
-	// Token: 0x0400E1A7 RID: 57767
+	// Token: 0x0400E652 RID: 58962
 	protected BaseTagComponent TagComp;
 
-	// Token: 0x0400E1A8 RID: 57768
+	// Token: 0x0400E653 RID: 58963
 	protected CharRenderingComponent CharRenderComp;
 
-	// Token: 0x0400E1A9 RID: 57769
+	// Token: 0x0400E654 RID: 58964
 	[Nullable(1)]
 	protected List<MotorcycleOutlookComponent.StickerParams> CurrentStickers = new List<MotorcycleOutlookComponent.StickerParams>();
 
-	// Token: 0x0400E1AA RID: 57770
+	// Token: 0x0400E655 RID: 58965
 	protected DecorationItem SoarWingDecoration;
 
-	// Token: 0x0400E1AB RID: 57771
+	// Token: 0x0400E656 RID: 58966
 	private TimerHandle DisableSoarWingTimer;
 
-	// Token: 0x0400E1AC RID: 57772
+	// Token: 0x0400E657 RID: 58967
 	[Nullable(1)]
 	private readonly HashSet<int> SoarWingVisibleTags = new HashSet<int>();
 
-	// Token: 0x02009789 RID: 38793
+	// Token: 0x020089AC RID: 35244
 	[NullableContext(0)]
 	protected class StickerParams
 	{
-		// Token: 0x0604C591 RID: 312721 RVA: 0x0141E05F File Offset: 0x0141C25F
+		// Token: 0x06042A17 RID: 272919 RVA: 0x013C8C13 File Offset: 0x013C6E13
 		public StickerParams(int inStickerId, int inPdHandle = 0)
 		{
 			this.StickerId = inStickerId;
 			this.PdHandle = inPdHandle;
 		}
 
-		// Token: 0x0403070F RID: 198415
+		// Token: 0x0402BD9C RID: 179612
 		public int StickerId;
 
-		// Token: 0x04030710 RID: 198416
+		// Token: 0x0402BD9D RID: 179613
 		public int PdHandle;
 	}
 }

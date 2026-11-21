@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DEB RID: 19947
+	// Token: 0x02003DB4 RID: 15796
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomInfoPanel : UiPanelBase
 	{
-		// Token: 0x0603379A RID: 210842 RVA: 0x00C070B8 File Offset: 0x00C052B8
+		// Token: 0x06028605 RID: 165381 RVA: 0x00B505C8 File Offset: 0x00B4E7C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -45,38 +45,38 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603379B RID: 210843 RVA: 0x00C07203 File Offset: 0x00C05403
+		// Token: 0x06028606 RID: 165382 RVA: 0x00B50713 File Offset: 0x00B4E913
 		private void DetailBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RoguePhantomSelectResultView, new RogueSelectResult(this.RogueGainEntry, null, null, false), null);
 		}
 
-		// Token: 0x0603379C RID: 210844 RVA: 0x00C07223 File Offset: 0x00C05423
+		// Token: 0x06028607 RID: 165383 RVA: 0x00B50733 File Offset: 0x00B4E933
 		protected override void OnStart()
 		{
 			this.PhantomEntryItemLayout = new GenericLayout<PhantomEntryItem, AffixEntry>(base.GetVerticalLayout(3), new Func<PhantomEntryItem>(this.CreatePhantomEntryItem), null, false, true);
 		}
 
-		// Token: 0x0603379D RID: 210845 RVA: 0x00C07246 File Offset: 0x00C05446
+		// Token: 0x06028608 RID: 165384 RVA: 0x00B50756 File Offset: 0x00B4E956
 		protected PhantomEntryItem CreatePhantomEntryItem()
 		{
 			return new PhantomEntryItem();
 		}
 
-		// Token: 0x0603379E RID: 210846 RVA: 0x00C0724D File Offset: 0x00C0544D
+		// Token: 0x06028609 RID: 165385 RVA: 0x00B5075D File Offset: 0x00B4E95D
 		public void Update(RogueGainEntry rogueGainEntry)
 		{
 			this.RogueGainEntry = rogueGainEntry;
 		}
 
-		// Token: 0x0603379F RID: 210847 RVA: 0x00C07256 File Offset: 0x00C05456
+		// Token: 0x0602860A RID: 165386 RVA: 0x00B50766 File Offset: 0x00B4E966
 		public void Refresh()
 		{
 			this.RefreshPhantom();
 			this.RefreshPhantomEntryItemLayout();
 		}
 
-		// Token: 0x060337A0 RID: 210848 RVA: 0x00C07264 File Offset: 0x00C05464
+		// Token: 0x0602860B RID: 165387 RVA: 0x00B50774 File Offset: 0x00B4E974
 		[NullableContext(2)]
 		public UUIItem GetAttributeItem(int index)
 		{
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return phantomEntryItemLayout.GetItemByIndex(index);
 		}
 
-		// Token: 0x060337A1 RID: 210849 RVA: 0x00C07278 File Offset: 0x00C05478
+		// Token: 0x0602860C RID: 165388 RVA: 0x00B50788 File Offset: 0x00B4E988
 		private void RefreshPhantom()
 		{
 			RoguePokemon? roguePhantomConfig = RoguelikeConfig.Instance.GetRoguePhantomConfig(this.RogueGainEntry.ConfigId);
@@ -106,13 +106,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060337A2 RID: 210850 RVA: 0x00C07357 File Offset: 0x00C05557
+		// Token: 0x0602860D RID: 165389 RVA: 0x00B50867 File Offset: 0x00B4EA67
 		private void RefreshPhantomEntryItemLayout()
 		{
 			this.PhantomEntryItemLayout.RefreshByData(this.RogueGainEntry.AffixEntryList ?? new List<AffixEntry>(), null, false);
 		}
 
-		// Token: 0x060337A3 RID: 210851 RVA: 0x00C0737C File Offset: 0x00C0557C
+		// Token: 0x0602860E RID: 165390 RVA: 0x00B5088C File Offset: 0x00B4EA8C
 		[NullableContext(2)]
 		public void RefreshPhantomEntryItemRefreshPreview(Dictionary<int, int> elementDict = null)
 		{
@@ -122,35 +122,35 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0401B527 RID: 111911
+		// Token: 0x04015EFA RID: 89850
 		private RogueGainEntry RogueGainEntry;
 
-		// Token: 0x0401B528 RID: 111912
+		// Token: 0x04015EFB RID: 89851
 		private GenericLayout<PhantomEntryItem, AffixEntry> PhantomEntryItemLayout;
 
-		// Token: 0x0200AF71 RID: 44913
+		// Token: 0x020099A6 RID: 39334
 		[NullableContext(0)]
 		private class EPhantomInfoPanelCom
 		{
-			// Token: 0x04035456 RID: 218198
+			// Token: 0x0402FE89 RID: 196233
 			public const int QualityHeadTexture = 0;
 
-			// Token: 0x04035457 RID: 218199
+			// Token: 0x0402FE8A RID: 196234
 			public const int HeadIconTexture = 1;
 
-			// Token: 0x04035458 RID: 218200
+			// Token: 0x0402FE8B RID: 196235
 			public const int PhantomNameText = 2;
 
-			// Token: 0x04035459 RID: 218201
+			// Token: 0x0402FE8C RID: 196236
 			public const int PhantomAttrItemLayout = 3;
 
-			// Token: 0x0403545A RID: 218202
+			// Token: 0x0402FE8D RID: 196237
 			public const int PhantomAttrItem = 4;
 
-			// Token: 0x0403545B RID: 218203
+			// Token: 0x0402FE8E RID: 196238
 			public const int DetailBtn = 5;
 
-			// Token: 0x0403545C RID: 218204
+			// Token: 0x0402FE8F RID: 196239
 			public const int QualityHeadTextureB = 6;
 		}
 	}

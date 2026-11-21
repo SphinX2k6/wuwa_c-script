@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F69 RID: 8041
+// Token: 0x0200142B RID: 5163
 [NullableContext(1)]
 [Nullable(0)]
 public class TreasureCompassUnit : HudUnitBase
 {
-	// Token: 0x0600F969 RID: 63849 RVA: 0x003C6C34 File Offset: 0x003C4E34
+	// Token: 0x0600CD88 RID: 52616 RVA: 0x003D2720 File Offset: 0x003D0920
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -26,7 +26,7 @@ public class TreasureCompassUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F96A RID: 63850 RVA: 0x003C6C7C File Offset: 0x003C4E7C
+	// Token: 0x0600CD89 RID: 52617 RVA: 0x003D2768 File Offset: 0x003D0968
 	protected override UniTask OnCreateAsync()
 	{
 		TreasureCompassUnit.<OnCreateAsync>d__9 <OnCreateAsync>d__;
@@ -37,7 +37,7 @@ public class TreasureCompassUnit : HudUnitBase
 		return <OnCreateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F96B RID: 63851 RVA: 0x003C6CC0 File Offset: 0x003C4EC0
+	// Token: 0x0600CD8A RID: 52618 RVA: 0x003D27AC File Offset: 0x003D09AC
 	protected override void OnBeforeDestroy()
 	{
 		foreach (TreasureCompassArrow treasureCompassArrow in this.ArrowItems)
@@ -54,7 +54,7 @@ public class TreasureCompassUnit : HudUnitBase
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x0600F96C RID: 63852 RVA: 0x003C6D3C File Offset: 0x003C4F3C
+	// Token: 0x0600CD8B RID: 52619 RVA: 0x003D2828 File Offset: 0x003D0A28
 	private UniTask AddArrowItem()
 	{
 		TreasureCompassUnit.<AddArrowItem>d__11 <AddArrowItem>d__;
@@ -65,7 +65,7 @@ public class TreasureCompassUnit : HudUnitBase
 		return <AddArrowItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F96D RID: 63853 RVA: 0x003C6D80 File Offset: 0x003C4F80
+	// Token: 0x0600CD8C RID: 52620 RVA: 0x003D286C File Offset: 0x003D0A6C
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -78,7 +78,7 @@ public class TreasureCompassUnit : HudUnitBase
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600F96E RID: 63854 RVA: 0x003C6E08 File Offset: 0x003C5008
+	// Token: 0x0600CD8D RID: 52621 RVA: 0x003D28F4 File Offset: 0x003D0AF4
 	public override void SetActive(bool visibility)
 	{
 		if (visibility == this.IsVisible)
@@ -112,7 +112,7 @@ public class TreasureCompassUnit : HudUnitBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnTreasureCompassUnitVisibleChange, visibility);
 	}
 
-	// Token: 0x0600F96F RID: 63855 RVA: 0x003C6E98 File Offset: 0x003C5098
+	// Token: 0x0600CD8E RID: 52622 RVA: 0x003D2984 File Offset: 0x003D0B84
 	private UniTask PlayCloseAsync()
 	{
 		TreasureCompassUnit.<PlayCloseAsync>d__14 <PlayCloseAsync>d__;
@@ -123,14 +123,14 @@ public class TreasureCompassUnit : HudUnitBase
 		return <PlayCloseAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F970 RID: 63856 RVA: 0x003C6EDB File Offset: 0x003C50DB
+	// Token: 0x0600CD8F RID: 52623 RVA: 0x003D29C7 File Offset: 0x003D0BC7
 	public void InitHide()
 	{
 		base.SetActive(false);
 		this.IsVisible = false;
 	}
 
-	// Token: 0x0600F971 RID: 63857 RVA: 0x003C6EEC File Offset: 0x003C50EC
+	// Token: 0x0600CD90 RID: 52624 RVA: 0x003D29D8 File Offset: 0x003D0BD8
 	public void RefreshCompass(List<ITreasureData> treasureList, Vector actorLocation)
 	{
 		int count = treasureList.Count;
@@ -196,30 +196,30 @@ public class TreasureCompassUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x04007437 RID: 29751
+	// Token: 0x04007518 RID: 29976
 	private const int MAX_ARROW_COUNT = 5;
 
-	// Token: 0x04007438 RID: 29752
+	// Token: 0x04007519 RID: 29977
 	[StaticVariableRuleIgnore]
 	private static readonly Stat RefreshStatsObject = Stat.Create("TreasureCompassUnitRefresh", "", "");
 
-	// Token: 0x04007439 RID: 29753
+	// Token: 0x0400751A RID: 29978
 	[Nullable(2)]
 	private UUIItem RingItem;
 
-	// Token: 0x0400743A RID: 29754
+	// Token: 0x0400751B RID: 29979
 	private readonly Vector TempLocation = Vector.Create();
 
-	// Token: 0x0400743B RID: 29755
+	// Token: 0x0400751C RID: 29980
 	private readonly Rotator TempRotator = Rotator.Create();
 
-	// Token: 0x0400743C RID: 29756
+	// Token: 0x0400751D RID: 29981
 	private readonly List<TreasureCompassArrow> ArrowItems = new List<TreasureCompassArrow>();
 
-	// Token: 0x0400743D RID: 29757
+	// Token: 0x0400751E RID: 29982
 	private bool IsVisible = true;
 
-	// Token: 0x0400743E RID: 29758
+	// Token: 0x0400751F RID: 29983
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 }

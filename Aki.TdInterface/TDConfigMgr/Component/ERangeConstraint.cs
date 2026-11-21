@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000123 RID: 291
+	// Token: 0x02000134 RID: 308
 	[EnumExtensions]
 	public enum ERangeConstraint
 	{
-		// Token: 0x040005D7 RID: 1495
+		// Token: 0x04000614 RID: 1556
 		SearchSpawnMonsterPoint
 	}
 }

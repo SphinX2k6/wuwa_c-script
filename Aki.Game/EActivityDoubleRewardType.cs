@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200125F RID: 4703
+// Token: 0x02000713 RID: 1811
 public enum EActivityDoubleRewardType
 {
-	// Token: 0x04003A20 RID: 14880
+	// Token: 0x04003AB8 RID: 15032
 	Exp = 1,
-	// Token: 0x04003A21 RID: 14881
+	// Token: 0x04003AB9 RID: 15033
 	Growth,
-	// Token: 0x04003A22 RID: 14882
+	// Token: 0x04003ABA RID: 15034
 	Sound
 }

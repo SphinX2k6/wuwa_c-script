@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000570 RID: 1392
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005D7 RID: 1495
 	public class INpcRideInGongduolaPerform : INpcRideInVehiclePerformType
 	{
-		// Token: 0x06001C86 RID: 7302 RVA: 0x000517CC File Offset: 0x0004F9CC
+		// Token: 0x06001E82 RID: 7810 RVA: 0x00056588 File Offset: 0x00054788
 		private INpcRideInGongduolaPerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001C87 RID: 7303 RVA: 0x00051804 File Offset: 0x0004FA04
+		// Token: 0x06001E83 RID: 7811 RVA: 0x000565C0 File Offset: 0x000547C0
 		public static INpcRideInGongduolaPerform Create([Nullable(2)] INpcRideInGongduolaPerform instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C88 RID: 7304 RVA: 0x00051817 File Offset: 0x0004FA17
+		// Token: 0x06001E84 RID: 7812 RVA: 0x000565D3 File Offset: 0x000547D3
 		public static INpcRideInGongduolaPerform CreateFromSetValue([Nullable(2)] INpcRideInGongduolaPerform_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C89 RID: 7305 RVA: 0x0005182A File Offset: 0x0004FA2A
+		// Token: 0x06001E85 RID: 7813 RVA: 0x000565E6 File Offset: 0x000547E6
 		public new INpcRideInGongduolaPerform_SetValue ToSetValue()
 		{
 			return new INpcRideInGongduolaPerform_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700077A RID: 1914
-		// (get) Token: 0x06001C8A RID: 7306 RVA: 0x00051849 File Offset: 0x0004FA49
-		// (set) Token: 0x06001C8B RID: 7307 RVA: 0x00051874 File Offset: 0x0004FA74
+		// Token: 0x170007FD RID: 2045
+		// (get) Token: 0x06001E86 RID: 7814 RVA: 0x00056605 File Offset: 0x00054805
+		// (set) Token: 0x06001E87 RID: 7815 RVA: 0x00056630 File Offset: 0x00054830
 		public override EVehicleType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700077B RID: 1915
-		// (get) Token: 0x06001C8C RID: 7308 RVA: 0x00051882 File Offset: 0x0004FA82
-		// (set) Token: 0x06001C8D RID: 7309 RVA: 0x000518AD File Offset: 0x0004FAAD
+		// Token: 0x170007FE RID: 2046
+		// (get) Token: 0x06001E88 RID: 7816 RVA: 0x0005663E File Offset: 0x0005483E
+		// (set) Token: 0x06001E89 RID: 7817 RVA: 0x00056669 File Offset: 0x00054869
 		public override string Montage
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001456 RID: 5206
+		// Token: 0x040015C0 RID: 5568
 		[Nullable(2)]
 		protected new INpcRideInGongduolaPerform FbInstance;
 
-		// Token: 0x04001457 RID: 5207
+		// Token: 0x040015C1 RID: 5569
 		[Nullable(2)]
 		protected new INpcRideInGongduolaPerform_SetValue PocoInterface;
 	}

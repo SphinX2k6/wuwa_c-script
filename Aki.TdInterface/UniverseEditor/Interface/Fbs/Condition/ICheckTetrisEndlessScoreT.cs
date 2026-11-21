@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B5D RID: 19293
+	// Token: 0x02005044 RID: 20548
 	public class ICheckTetrisEndlessScoreT
 	{
-		// Token: 0x17008BFC RID: 35836
-		// (get) Token: 0x0601E63D RID: 124477 RVA: 0x00441D00 File Offset: 0x0043FF00
-		// (set) Token: 0x0601E63E RID: 124478 RVA: 0x00441D08 File Offset: 0x0043FF08
+		// Token: 0x1700930C RID: 37644
+		// (get) Token: 0x060201CB RID: 131531 RVA: 0x0047454C File Offset: 0x0047274C
+		// (set) Token: 0x060201CC RID: 131532 RVA: 0x00474554 File Offset: 0x00472754
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008BFD RID: 35837
-		// (get) Token: 0x0601E63F RID: 124479 RVA: 0x00441D11 File Offset: 0x0043FF11
-		// (set) Token: 0x0601E640 RID: 124480 RVA: 0x00441D19 File Offset: 0x0043FF19
+		// Token: 0x1700930D RID: 37645
+		// (get) Token: 0x060201CD RID: 131533 RVA: 0x0047455D File Offset: 0x0047275D
+		// (set) Token: 0x060201CE RID: 131534 RVA: 0x00474565 File Offset: 0x00472765
 		public int DungeonId { get; set; }
 
-		// Token: 0x17008BFE RID: 35838
-		// (get) Token: 0x0601E641 RID: 124481 RVA: 0x00441D22 File Offset: 0x0043FF22
-		// (set) Token: 0x0601E642 RID: 124482 RVA: 0x00441D2A File Offset: 0x0043FF2A
+		// Token: 0x1700930E RID: 37646
+		// (get) Token: 0x060201CF RID: 131535 RVA: 0x0047456E File Offset: 0x0047276E
+		// (set) Token: 0x060201D0 RID: 131536 RVA: 0x00474576 File Offset: 0x00472776
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008BFF RID: 35839
-		// (get) Token: 0x0601E643 RID: 124483 RVA: 0x00441D33 File Offset: 0x0043FF33
-		// (set) Token: 0x0601E644 RID: 124484 RVA: 0x00441D3B File Offset: 0x0043FF3B
+		// Token: 0x1700930F RID: 37647
+		// (get) Token: 0x060201D1 RID: 131537 RVA: 0x0047457F File Offset: 0x0047277F
+		// (set) Token: 0x060201D2 RID: 131538 RVA: 0x00474587 File Offset: 0x00472787
 		public int TargetScore { get; set; }
 
-		// Token: 0x0601E645 RID: 124485 RVA: 0x00441D44 File Offset: 0x0043FF44
+		// Token: 0x060201D3 RID: 131539 RVA: 0x00474590 File Offset: 0x00472790
 		public ICheckTetrisEndlessScoreT()
 		{
 			this.Type = ECondition.CompareVar;

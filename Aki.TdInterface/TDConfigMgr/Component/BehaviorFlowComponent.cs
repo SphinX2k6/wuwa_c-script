@@ -6,11 +6,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000030 RID: 48
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class BehaviorFlowComponent : IComponentBase
 	{
-		// Token: 0x060001AE RID: 430 RVA: 0x00017BCC File Offset: 0x00015DCC
+		// Token: 0x060001B2 RID: 434 RVA: 0x00018540 File Offset: 0x00016740
 		private BehaviorFlowComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060001AF RID: 431 RVA: 0x00017C04 File Offset: 0x00015E04
+		// Token: 0x060001B3 RID: 435 RVA: 0x00018578 File Offset: 0x00016778
 		public static BehaviorFlowComponent Create([Nullable(2)] BehaviorFlowComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060001B0 RID: 432 RVA: 0x00017C17 File Offset: 0x00015E17
+		// Token: 0x060001B4 RID: 436 RVA: 0x0001858B File Offset: 0x0001678B
 		public static BehaviorFlowComponent CreateFromSetValue([Nullable(2)] BehaviorFlowComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060001B1 RID: 433 RVA: 0x00017C2C File Offset: 0x00015E2C
+		// Token: 0x060001B5 RID: 437 RVA: 0x000185A0 File Offset: 0x000167A0
 		public new BehaviorFlowComponent_SetValue ToSetValue()
 		{
 			return new BehaviorFlowComponent_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170000A1 RID: 161
-		// (get) Token: 0x060001B2 RID: 434 RVA: 0x00017C7C File Offset: 0x00015E7C
-		// (set) Token: 0x060001B3 RID: 435 RVA: 0x00017CB6 File Offset: 0x00015EB6
+		// Token: 0x170000A3 RID: 163
+		// (get) Token: 0x060001B6 RID: 438 RVA: 0x000185F0 File Offset: 0x000167F0
+		// (set) Token: 0x060001B7 RID: 439 RVA: 0x0001862A File Offset: 0x0001682A
 		public override bool? Disabled
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000A2 RID: 162
-		// (get) Token: 0x060001B4 RID: 436 RVA: 0x00017CC4 File Offset: 0x00015EC4
-		// (set) Token: 0x060001B5 RID: 437 RVA: 0x00017CEE File Offset: 0x00015EEE
+		// Token: 0x170000A4 RID: 164
+		// (get) Token: 0x060001B8 RID: 440 RVA: 0x00018638 File Offset: 0x00016838
+		// (set) Token: 0x060001B9 RID: 441 RVA: 0x00018662 File Offset: 0x00016862
 		public override bool? EdIsLocked
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000A3 RID: 163
-		// (get) Token: 0x060001B6 RID: 438 RVA: 0x00017CFC File Offset: 0x00015EFC
-		// (set) Token: 0x060001B7 RID: 439 RVA: 0x00017D36 File Offset: 0x00015F36
+		// Token: 0x170000A5 RID: 165
+		// (get) Token: 0x060001BA RID: 442 RVA: 0x00018670 File Offset: 0x00016870
+		// (set) Token: 0x060001BB RID: 443 RVA: 0x000186AA File Offset: 0x000168AA
 		public virtual bool? _Folded
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000A4 RID: 164
-		// (get) Token: 0x060001B8 RID: 440 RVA: 0x00017D44 File Offset: 0x00015F44
-		// (set) Token: 0x060001B9 RID: 441 RVA: 0x00017D6F File Offset: 0x00015F6F
+		// Token: 0x170000A6 RID: 166
+		// (get) Token: 0x060001BC RID: 444 RVA: 0x000186B8 File Offset: 0x000168B8
+		// (set) Token: 0x060001BD RID: 445 RVA: 0x000186E3 File Offset: 0x000168E3
 		public virtual int InitStateId
 		{
 			get
@@ -154,9 +152,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000A5 RID: 165
-		// (get) Token: 0x060001BA RID: 442 RVA: 0x00017D80 File Offset: 0x00015F80
-		// (set) Token: 0x060001BB RID: 443 RVA: 0x00017DE1 File Offset: 0x00015FE1
+		// Token: 0x170000A7 RID: 167
+		// (get) Token: 0x060001BE RID: 446 RVA: 0x000186F4 File Offset: 0x000168F4
+		// (set) Token: 0x060001BF RID: 447 RVA: 0x00018755 File Offset: 0x00016955
 		public virtual IFlowInfo FlowInfo
 		{
 			get
@@ -184,18 +182,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400011A RID: 282
+		// Token: 0x0400011F RID: 287
 		[Nullable(2)]
 		protected new BehaviorFlowComponent FbInstance;
 
-		// Token: 0x0400011B RID: 283
+		// Token: 0x04000120 RID: 288
 		[Nullable(2)]
 		protected new BehaviorFlowComponent_SetValue PocoInterface;
 
-		// Token: 0x0400011C RID: 284
+		// Token: 0x04000121 RID: 289
 		private IFlowInfo _FlowInfoCache;
 
-		// Token: 0x0400011D RID: 285
+		// Token: 0x04000122 RID: 290
 		private bool _FlowInfoInited;
 	}
 }

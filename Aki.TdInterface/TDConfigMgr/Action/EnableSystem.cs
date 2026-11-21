@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001648 RID: 5704
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017B5 RID: 6069
 	public class EnableSystem : ActionParams
 	{
-		// Token: 0x06007C85 RID: 31877 RVA: 0x0012B5A4 File Offset: 0x001297A4
+		// Token: 0x06008363 RID: 33635 RVA: 0x0013A650 File Offset: 0x00138850
 		private EnableSystem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007C86 RID: 31878 RVA: 0x0012B5DC File Offset: 0x001297DC
+		// Token: 0x06008364 RID: 33636 RVA: 0x0013A688 File Offset: 0x00138888
 		public static EnableSystem Create([Nullable(2)] EnableSystem instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C87 RID: 31879 RVA: 0x0012B5EF File Offset: 0x001297EF
+		// Token: 0x06008365 RID: 33637 RVA: 0x0013A69B File Offset: 0x0013889B
 		public static EnableSystem CreateFromSetValue([Nullable(2)] EnableSystem_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C88 RID: 31880 RVA: 0x0012B602 File Offset: 0x00129802
+		// Token: 0x06008366 RID: 33638 RVA: 0x0013A6AE File Offset: 0x001388AE
 		public EnableSystem_SetValue ToSetValue()
 		{
 			return new EnableSystem_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002929 RID: 10537
-		// (get) Token: 0x06007C89 RID: 31881 RVA: 0x0012B621 File Offset: 0x00129821
-		// (set) Token: 0x06007C8A RID: 31882 RVA: 0x0012B64C File Offset: 0x0012984C
+		// Token: 0x17002B14 RID: 11028
+		// (get) Token: 0x06008367 RID: 33639 RVA: 0x0013A6CD File Offset: 0x001388CD
+		// (set) Token: 0x06008368 RID: 33640 RVA: 0x0013A6F8 File Offset: 0x001388F8
 		public virtual ESystem SystemType
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700292A RID: 10538
-		// (get) Token: 0x06007C8B RID: 31883 RVA: 0x0012B65A File Offset: 0x0012985A
-		// (set) Token: 0x06007C8C RID: 31884 RVA: 0x0012B685 File Offset: 0x00129885
+		// Token: 0x17002B15 RID: 11029
+		// (get) Token: 0x06008369 RID: 33641 RVA: 0x0013A706 File Offset: 0x00138906
+		// (set) Token: 0x0600836A RID: 33642 RVA: 0x0013A731 File Offset: 0x00138931
 		public virtual bool IsEnable
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004C77 RID: 19575
+		// Token: 0x0400506B RID: 20587
 		[Nullable(2)]
 		protected new EnableSystem FbInstance;
 
-		// Token: 0x04004C78 RID: 19576
+		// Token: 0x0400506C RID: 20588
 		[Nullable(2)]
 		protected EnableSystem_SetValue PocoInterface;
 	}

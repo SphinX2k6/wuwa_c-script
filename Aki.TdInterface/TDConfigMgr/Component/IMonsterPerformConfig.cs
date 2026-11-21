@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000514 RID: 1300
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200057B RID: 1403
 	public class IMonsterPerformConfig
 	{
-		// Token: 0x06001A5A RID: 6746 RVA: 0x0004CDC4 File Offset: 0x0004AFC4
+		// Token: 0x06001C56 RID: 7254 RVA: 0x00051B80 File Offset: 0x0004FD80
 		private IMonsterPerformConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001A5B RID: 6747 RVA: 0x0004CDFC File Offset: 0x0004AFFC
+		// Token: 0x06001C57 RID: 7255 RVA: 0x00051BB8 File Offset: 0x0004FDB8
 		public static IMonsterPerformConfig Create([Nullable(2)] IMonsterPerformConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A5C RID: 6748 RVA: 0x0004CE0F File Offset: 0x0004B00F
+		// Token: 0x06001C58 RID: 7256 RVA: 0x00051BCB File Offset: 0x0004FDCB
 		public static IMonsterPerformConfig CreateFromSetValue([Nullable(2)] IMonsterPerformConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A5D RID: 6749 RVA: 0x0004CE22 File Offset: 0x0004B022
+		// Token: 0x06001C59 RID: 7257 RVA: 0x00051BDE File Offset: 0x0004FDDE
 		public IMonsterPerformConfig_SetValue ToSetValue()
 		{
 			return new IMonsterPerformConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006EE RID: 1774
-		// (get) Token: 0x06001A5E RID: 6750 RVA: 0x0004CE38 File Offset: 0x0004B038
-		// (set) Token: 0x06001A5F RID: 6751 RVA: 0x0004CE99 File Offset: 0x0004B099
+		// Token: 0x17000771 RID: 1905
+		// (get) Token: 0x06001C5A RID: 7258 RVA: 0x00051BF4 File Offset: 0x0004FDF4
+		// (set) Token: 0x06001C5B RID: 7259 RVA: 0x00051C55 File Offset: 0x0004FE55
 		[Nullable(2)]
 		public virtual IMonsterShowOnDeathEffect ShowOnDeath
 		{
@@ -92,18 +90,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400131A RID: 4890
+		// Token: 0x04001484 RID: 5252
 		[Nullable(2)]
 		protected IMonsterPerformConfig FbInstance;
 
-		// Token: 0x0400131B RID: 4891
+		// Token: 0x04001485 RID: 5253
 		[Nullable(2)]
 		protected IMonsterPerformConfig_SetValue PocoInterface;
 
-		// Token: 0x0400131C RID: 4892
+		// Token: 0x04001486 RID: 5254
 		private IMonsterShowOnDeathEffect _ShowOnDeathCache;
 
-		// Token: 0x0400131D RID: 4893
+		// Token: 0x04001487 RID: 5255
 		private bool _ShowOnDeathInited;
 	}
 }

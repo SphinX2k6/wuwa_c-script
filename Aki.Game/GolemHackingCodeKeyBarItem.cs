@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001011 RID: 4113
+// Token: 0x020004C5 RID: 1221
 public class GolemHackingCodeKeyBarItem : GridProxyAbstract<EGolemHackingBarState>
 {
-	// Token: 0x06006981 RID: 27009 RVA: 0x00150EE4 File Offset: 0x0014F0E4
+	// Token: 0x06003D16 RID: 15638 RVA: 0x0015980C File Offset: 0x00157A0C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,14 +22,14 @@ public class GolemHackingCodeKeyBarItem : GridProxyAbstract<EGolemHackingBarStat
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06006982 RID: 27010 RVA: 0x00150F4D File Offset: 0x0014F14D
+	// Token: 0x06003D17 RID: 15639 RVA: 0x00159875 File Offset: 0x00157A75
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		this.SequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 	}
 
-	// Token: 0x06006983 RID: 27011 RVA: 0x00150F78 File Offset: 0x0014F178
+	// Token: 0x06003D18 RID: 15640 RVA: 0x001598A0 File Offset: 0x00157AA0
 	public override void Refresh(EGolemHackingBarState data, bool isSelected, int gridIndex)
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -76,7 +76,7 @@ public class GolemHackingCodeKeyBarItem : GridProxyAbstract<EGolemHackingBarStat
 		this.CurState = data;
 	}
 
-	// Token: 0x06006984 RID: 27012 RVA: 0x00151068 File Offset: 0x0014F268
+	// Token: 0x06003D19 RID: 15641 RVA: 0x00159990 File Offset: 0x00157B90
 	[NullableContext(1)]
 	private void OnSequenceClose(string _)
 	{
@@ -88,23 +88,23 @@ public class GolemHackingCodeKeyBarItem : GridProxyAbstract<EGolemHackingBarStat
 		onAnimEndCallback();
 	}
 
-	// Token: 0x040030A3 RID: 12451
+	// Token: 0x0400313C RID: 12604
 	[Nullable(2)]
 	public Action OnAnimEndCallback;
 
-	// Token: 0x040030A4 RID: 12452
+	// Token: 0x0400313D RID: 12605
 	[Nullable(2)]
 	protected LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x040030A5 RID: 12453
+	// Token: 0x0400313E RID: 12606
 	protected EGolemHackingBarState CurState;
 
-	// Token: 0x0200760B RID: 30219
+	// Token: 0x0200679F RID: 26527
 	private enum EDefine
 	{
-		// Token: 0x04026FF3 RID: 159731
+		// Token: 0x0402233E RID: 140094
 		Success,
-		// Token: 0x04026FF4 RID: 159732
+		// Token: 0x0402233F RID: 140095
 		Fail
 	}
 }

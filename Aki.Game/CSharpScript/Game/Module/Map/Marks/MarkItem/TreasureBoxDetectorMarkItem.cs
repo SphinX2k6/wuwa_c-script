@@ -3,19 +3,23 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Map.MapDefine;
 using CSharpScript.Game.Module.Map.Mark;
-using CSharpScript.Game.Module.Map.Mark.Component;
 using CSharpScript.Game.Module.Map.Marks.MarkItemView;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054FE RID: 21758
+	// Token: 0x020044D1 RID: 17617
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TreasureBoxDetectorMarkItem : ServerMarkItem
 	{
-		// Token: 0x17008598 RID: 34200
-		// (get) Token: 0x06037969 RID: 227689 RVA: 0x00D32C51 File Offset: 0x00D30E51
+		// Token: 0x0602C838 RID: 182328 RVA: 0x00C80C19 File Offset: 0x00C7EE19
+		public TreasureBoxDetectorMarkItem(DynamicMarkCreateInfo markPointInfo, UUIItem parent, EMapType mapType, float markScale) : base(markPointInfo, parent, mapType, markScale)
+		{
+		}
+
+		// Token: 0x17005933 RID: 22835
+		// (get) Token: 0x0602C839 RID: 182329 RVA: 0x00C80C26 File Offset: 0x00C7EE26
 		public override EMarkType MarkType
 		{
 			get
@@ -24,57 +28,56 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x17008599 RID: 34201
-		// (get) Token: 0x0603796A RID: 227690 RVA: 0x00D32C55 File Offset: 0x00D30E55
-		public bool IsNewCustomMarkItem
+		// Token: 0x17005934 RID: 22836
+		// (get) Token: 0x0602C83A RID: 182330 RVA: 0x00C80C2A File Offset: 0x00C7EE2A
+		// (set) Token: 0x0602C83B RID: 182331 RVA: 0x00C80C32 File Offset: 0x00C7EE32
+		public bool IsNewCustomMarkItem { get; private set; }
+
+		// Token: 0x17005935 RID: 22837
+		// (get) Token: 0x0602C83C RID: 182332 RVA: 0x00C80C3B File Offset: 0x00C7EE3B
+		public override bool EnableVerticalPointer
 		{
 			get
 			{
-				return this.IsNew;
+				return false;
 			}
 		}
 
-		// Token: 0x0603796B RID: 227691 RVA: 0x00D32C5D File Offset: 0x00D30E5D
-		public TreasureBoxDetectorMarkItem(DynamicMarkCreateInfo markPointInfo, UUIItem parent, EMapType mapType, float markScale) : base(markPointInfo, parent, mapType, markScale)
-		{
-		}
-
-		// Token: 0x0603796C RID: 227692 RVA: 0x00D32C6C File Offset: 0x00D30E6C
+		// Token: 0x0602C83D RID: 182333 RVA: 0x00C80C40 File Offset: 0x00C7EE40
 		protected override void OnInitialize()
 		{
 			base.OnInitialize();
 			DynamicMarkCreateInfo serverMarkInfo = this.ServerMarkInfo;
 			base.SetTrackData(serverMarkInfo.TrackTarget);
 			this.SetConfigId(base.ConfigId);
-			base.MarkItemEntity.ViewLifeCircle.EnableVerticalPointer = false;
 			this.UpdateVisibleRelativeState();
 		}
 
-		// Token: 0x0603796D RID: 227693 RVA: 0x00D32CB5 File Offset: 0x00D30EB5
+		// Token: 0x0602C83E RID: 182334 RVA: 0x00C80C78 File Offset: 0x00C7EE78
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.TreasureBoxDetectorMarkItemView;
 		}
 
-		// Token: 0x0603796E RID: 227694 RVA: 0x00D32CB9 File Offset: 0x00D30EB9
+		// Token: 0x0602C83F RID: 182335 RVA: 0x00C80C7C File Offset: 0x00C7EE7C
 		[PreserveBaseOverrides]
 		protected new virtual TreasureBoxDetectorMarkItemView CreateView()
 		{
 			return new TreasureBoxDetectorMarkItemView(this);
 		}
 
-		// Token: 0x0603796F RID: 227695 RVA: 0x00D32CC1 File Offset: 0x00D30EC1
+		// Token: 0x0602C840 RID: 182336 RVA: 0x00C80C84 File Offset: 0x00C7EE84
 		public void SetConfigId(int configId)
 		{
 			this.ServerMarkInfo.MarkConfigId = configId;
 			this.OnSetConfigId(configId);
 		}
 
-		// Token: 0x06037970 RID: 227696 RVA: 0x00D32CD8 File Offset: 0x00D30ED8
+		// Token: 0x0602C841 RID: 182337 RVA: 0x00C80C9C File Offset: 0x00C7EE9C
 		public void OnSetConfigId(int configId)
 		{
 			TreasureBoxDetectorMark value = MapConfig.Instance.GetTreasureBoxDetectorMarkConfig(configId).Value;
-			base.MarkItemEntity.GetOrAddComponent<MarkConfigComponent>(EMapComponent.MarkConfig).Config = value;
+			this.Config = new TreasureBoxDetectorMarkConfig(value);
 			this.OnAfterSetConfigId(new MarkItemData
 			{
 				MarkPic = value.MarkPic,
@@ -84,30 +87,27 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			});
 		}
 
-		// Token: 0x06037971 RID: 227697 RVA: 0x00D32D5A File Offset: 0x00D30F5A
+		// Token: 0x0602C842 RID: 182338 RVA: 0x00C80D12 File Offset: 0x00C7EF12
 		public void SetIsNew(bool isNew)
 		{
-			this.IsNew = isNew;
+			this.IsNewCustomMarkItem = isNew;
 		}
 
-		// Token: 0x06037972 RID: 227698 RVA: 0x00D32D64 File Offset: 0x00D30F64
+		// Token: 0x0602C843 RID: 182339 RVA: 0x00C80D1C File Offset: 0x00C7EF1C
 		[NullableContext(2)]
 		public override string GetTitleText()
 		{
 			return ConfigMultiTextLang.GetLocalTextNew(MapConfig.Instance.GetTreasureBoxDetectorMarkConfig(base.ConfigId).Value.MarkTitle, null);
 		}
 
-		// Token: 0x06037973 RID: 227699 RVA: 0x00D32D98 File Offset: 0x00D30F98
+		// Token: 0x0602C844 RID: 182340 RVA: 0x00C80D50 File Offset: 0x00C7EF50
 		[NullableContext(2)]
 		public string GetDescText()
 		{
 			return ConfigMultiTextLang.GetLocalTextNew(MapConfig.Instance.GetTreasureBoxDetectorMarkConfig(base.ConfigId).Value.MarkDesc, null);
 		}
 
-		// Token: 0x0401D400 RID: 119808
+		// Token: 0x04017E86 RID: 97926
 		public int TeleportId;
-
-		// Token: 0x0401D401 RID: 119809
-		private bool IsNew;
 	}
 }

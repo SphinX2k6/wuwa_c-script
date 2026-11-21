@@ -15,38 +15,38 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02000E9D RID: 3741
+// Token: 0x02000352 RID: 850
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleArrowSubController : KscSubControllerBase
 {
-	// Token: 0x06005BDC RID: 23516 RVA: 0x0010D0C9 File Offset: 0x0010B2C9
+	// Token: 0x06002F73 RID: 12147 RVA: 0x00114D61 File Offset: 0x00112F61
 	protected override void CreateModel()
 	{
 		this.EffectManager = MotorcycleArrowEffectManager.Create(this);
 		this.SubModel = new MotorcycleArrowSubModel();
 	}
 
-	// Token: 0x06005BDD RID: 23517 RVA: 0x0010D0E2 File Offset: 0x0010B2E2
+	// Token: 0x06002F74 RID: 12148 RVA: 0x00114D7A File Offset: 0x00112F7A
 	public MotorcycleArrowSubModel GetModel()
 	{
 		return (MotorcycleArrowSubModel)this.SubModel;
 	}
 
-	// Token: 0x06005BDE RID: 23518 RVA: 0x0010D0EF File Offset: 0x0010B2EF
+	// Token: 0x06002F75 RID: 12149 RVA: 0x00114D87 File Offset: 0x00112F87
 	public override bool IsTargetMap(int instSubType)
 	{
 		return instSubType == 44;
 	}
 
-	// Token: 0x06005BDF RID: 23519 RVA: 0x0010D0F6 File Offset: 0x0010B2F6
+	// Token: 0x06002F76 RID: 12150 RVA: 0x00114D8E File Offset: 0x00112F8E
 	protected override void InitEntityAndSkillDt()
 	{
 		base.InitEntityAndSkillDt();
 		KscUtil.LoadDt<FKSCSceneSegmentTableRow>(KscEnv.Instance.KscWorld, this.GetModel().SceneSegmentDtPathMethod(), this.GetModel().SceneSegmentDataDt);
 	}
 
-	// Token: 0x06005BE0 RID: 23520 RVA: 0x0010D124 File Offset: 0x0010B324
+	// Token: 0x06002F77 RID: 12151 RVA: 0x00114DBC File Offset: 0x00112FBC
 	protected override void OnInit()
 	{
 		Net.Instance.Register(ENotifyMessageId.MotorFightRefreshSubLevelNotify, new Action<IMessage, Net.CallbackStatus>(this.MotorFightRefreshSubLevelNotify));
@@ -61,7 +61,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.TemptTransformDouble.SetScale3D(global::Vector.OneVectorDouble);
 	}
 
-	// Token: 0x06005BE1 RID: 23521 RVA: 0x0010D240 File Offset: 0x0010B440
+	// Token: 0x06002F78 RID: 12152 RVA: 0x00114ED8 File Offset: 0x001130D8
 	protected override void OnClear()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.MotorFightRefreshSubLevelNotify);
@@ -75,7 +75,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.MotorFightRefreshCollectionTimesChangeNotify);
 	}
 
-	// Token: 0x06005BE2 RID: 23522 RVA: 0x0010D2E0 File Offset: 0x0010B4E0
+	// Token: 0x06002F79 RID: 12153 RVA: 0x00114F78 File Offset: 0x00113178
 	protected override void OnInitMap()
 	{
 		this.InitPropertyConfigs();
@@ -132,7 +132,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		PreloadModelNew.Instance.PreCreateEffect.SetForceLruCapacity(new int?(600));
 	}
 
-	// Token: 0x06005BE3 RID: 23523 RVA: 0x0010D4F4 File Offset: 0x0010B6F4
+	// Token: 0x06002F7A RID: 12154 RVA: 0x0011518C File Offset: 0x0011338C
 	protected override void OnWorldDone()
 	{
 		base.OnWorldDone();
@@ -162,7 +162,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.PlayMusic(model.LevelConfig.Value.NormalMusic);
 	}
 
-	// Token: 0x06005BE4 RID: 23524 RVA: 0x0010D610 File Offset: 0x0010B810
+	// Token: 0x06002F7B RID: 12155 RVA: 0x001152A8 File Offset: 0x001134A8
 	protected override void OnMapLoaded()
 	{
 		base.OnMapLoaded();
@@ -174,7 +174,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.PreloadBuffDa();
 	}
 
-	// Token: 0x06005BE5 RID: 23525 RVA: 0x0010D648 File Offset: 0x0010B848
+	// Token: 0x06002F7C RID: 12156 RVA: 0x001152E0 File Offset: 0x001134E0
 	public override void OnEntityRemoved(KscRemoveContext context, Dictionary<long, SimpleCombatEntityDieContext> protoContexts)
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -188,7 +188,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005BE6 RID: 23526 RVA: 0x0010D698 File Offset: 0x0010B898
+	// Token: 0x06002F7D RID: 12157 RVA: 0x00115330 File Offset: 0x00113530
 	protected override void OnWorldReset()
 	{
 		this.ClearBulletWorld();
@@ -222,7 +222,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005BE7 RID: 23527 RVA: 0x0010D760 File Offset: 0x0010B960
+	// Token: 0x06002F7E RID: 12158 RVA: 0x001153F8 File Offset: 0x001135F8
 	protected override void OnTick(float delta)
 	{
 		this.TickBossFight();
@@ -242,7 +242,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		kscEntityHandle.SyncEntityLocation();
 	}
 
-	// Token: 0x06005BE8 RID: 23528 RVA: 0x0010D7C0 File Offset: 0x0010B9C0
+	// Token: 0x06002F7F RID: 12159 RVA: 0x00115458 File Offset: 0x00113658
 	protected override void InitBulletWorld()
 	{
 		base.InitBulletWorld();
@@ -262,7 +262,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005BE9 RID: 23529 RVA: 0x0010D83C File Offset: 0x0010BA3C
+	// Token: 0x06002F80 RID: 12160 RVA: 0x001154D4 File Offset: 0x001136D4
 	private void InitBulletWorldGround()
 	{
 		KscLog.Info(KscLog.EModule.Common, ELogAuthor.TZQ, KscEnv.Instance.KscWorld, "[摩托战斗]InitBulletWorldGround", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -284,7 +284,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005BEA RID: 23530 RVA: 0x0010D8D0 File Offset: 0x0010BAD0
+	// Token: 0x06002F81 RID: 12161 RVA: 0x00115568 File Offset: 0x00113768
 	private void InitAttribute()
 	{
 		KscEnv.Instance.KscWorld.AttributeIdsWithMax.Add(EKSC_AttrType.SpecialChange1, EKSC_AttrType.SpecialChange0);
@@ -300,7 +300,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}));
 	}
 
-	// Token: 0x06005BEB RID: 23531 RVA: 0x0010D93C File Offset: 0x0010BB3C
+	// Token: 0x06002F82 RID: 12162 RVA: 0x001155D4 File Offset: 0x001137D4
 	private int GenerateMask(EKSC_CalculateType[] type)
 	{
 		int num = 0;
@@ -314,7 +314,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		return num;
 	}
 
-	// Token: 0x06005BEC RID: 23532 RVA: 0x0010D970 File Offset: 0x0010BB70
+	// Token: 0x06002F83 RID: 12163 RVA: 0x00115608 File Offset: 0x00113808
 	[NullableContext(2)]
 	private void MotorFightRoundInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -333,7 +333,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.EnterFirstSubLevel();
 	}
 
-	// Token: 0x06005BED RID: 23533 RVA: 0x0010DA24 File Offset: 0x0010BC24
+	// Token: 0x06002F84 RID: 12164 RVA: 0x001156BC File Offset: 0x001138BC
 	private unsafe void UpdateBossIconPath()
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -370,7 +370,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005BEE RID: 23534 RVA: 0x0010DB70 File Offset: 0x0010BD70
+	// Token: 0x06002F85 RID: 12165 RVA: 0x00115808 File Offset: 0x00113A08
 	public override void OnPlayerEntityCreated()
 	{
 		base.OnPlayerEntityCreated();
@@ -386,14 +386,14 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.TryAddPlayerAndMotorBuff();
 	}
 
-	// Token: 0x06005BEF RID: 23535 RVA: 0x0010DBBC File Offset: 0x0010BDBC
+	// Token: 0x06002F86 RID: 12166 RVA: 0x00115854 File Offset: 0x00113A54
 	public bool IsPlayerInitFinish()
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
 		return model.KscPlayerEntityId != 0 && model.MotorcycleKscEntityId != 0 && model.IsMapLoadOrWorldDone();
 	}
 
-	// Token: 0x06005BF0 RID: 23536 RVA: 0x0010DBE8 File Offset: 0x0010BDE8
+	// Token: 0x06002F87 RID: 12167 RVA: 0x00115880 File Offset: 0x00113A80
 	public void TryAddPlayerAndMotorBuff()
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -406,7 +406,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		model.PendingPlayerBuff.Clear();
 	}
 
-	// Token: 0x06005BF1 RID: 23537 RVA: 0x0010DC38 File Offset: 0x0010BE38
+	// Token: 0x06002F88 RID: 12168 RVA: 0x001158D0 File Offset: 0x00113AD0
 	public void EnterFirstSubLevel()
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -419,7 +419,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.EnterSubLevel(num + 1);
 	}
 
-	// Token: 0x06005BF2 RID: 23538 RVA: 0x0010DC7C File Offset: 0x0010BE7C
+	// Token: 0x06002F89 RID: 12169 RVA: 0x00115914 File Offset: 0x00113B14
 	public void EnterNextSubLevel()
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -431,7 +431,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.EnterSubLevel(num);
 	}
 
-	// Token: 0x06005BF3 RID: 23539 RVA: 0x0010DCBC File Offset: 0x0010BEBC
+	// Token: 0x06002F8A RID: 12170 RVA: 0x00115954 File Offset: 0x00113B54
 	public unsafe void EnterSubLevel(int levelIndex)
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -503,7 +503,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06005BF4 RID: 23540 RVA: 0x0010DF54 File Offset: 0x0010C154
+	// Token: 0x06002F8B RID: 12171 RVA: 0x00115BEC File Offset: 0x00113DEC
 	public void InitSceneMovement()
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -541,7 +541,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		onSceneSegmentFinish.Bind(new Action(this.OnSceneSegmentFinish));
 	}
 
-	// Token: 0x06005BF5 RID: 23541 RVA: 0x0010E158 File Offset: 0x0010C358
+	// Token: 0x06002F8C RID: 12172 RVA: 0x00115DF0 File Offset: 0x00113FF0
 	public void OnSceneSegmentFinish()
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -553,7 +553,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.SetSceneSegmentId(model.SubLevelConfig.Value.SegmentId, -1);
 	}
 
-	// Token: 0x06005BF6 RID: 23542 RVA: 0x0010E198 File Offset: 0x0010C398
+	// Token: 0x06002F8D RID: 12173 RVA: 0x00115E30 File Offset: 0x00114030
 	public unsafe void SetSceneSegmentId(int segmentId, int generateCount)
 	{
 		ValueTuple<FKSCSceneSegmentTableRow, string> valueTuple;
@@ -624,7 +624,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		});
 	}
 
-	// Token: 0x06005BF7 RID: 23543 RVA: 0x0010E30C File Offset: 0x0010C50C
+	// Token: 0x06002F8E RID: 12174 RVA: 0x00115FA4 File Offset: 0x001141A4
 	private void AddGenerate(GenerateGroup generateGroup, int waveId, int configId, EGenerateType generateType)
 	{
 		MotorFightWave? motorFightWaveById = MotorcycleArrowConfig.Instance.GetMotorFightWaveById(waveId);
@@ -654,7 +654,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		});
 	}
 
-	// Token: 0x06005BF8 RID: 23544 RVA: 0x0010E42C File Offset: 0x0010C62C
+	// Token: 0x06002F8F RID: 12175 RVA: 0x001160C4 File Offset: 0x001142C4
 	private unsafe void MotorFightAddWaveGroup(MotorFightWaveGroupPb data, int index)
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -708,7 +708,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		generateGroup.GenerateList.Sort((IGenerate a, IGenerate b) => a.BornDistance.CompareTo(b.BornDistance));
 	}
 
-	// Token: 0x06005BF9 RID: 23545 RVA: 0x0010E6DC File Offset: 0x0010C8DC
+	// Token: 0x06002F90 RID: 12176 RVA: 0x00116374 File Offset: 0x00114574
 	[NullableContext(2)]
 	private void MotorFightRefreshSubLevelNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -727,7 +727,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.ProcessPendingMotorFightRefreshNotify(motorFightRefreshSubLevelNotify, null);
 	}
 
-	// Token: 0x06005BFA RID: 23546 RVA: 0x0010E73C File Offset: 0x0010C93C
+	// Token: 0x06002F91 RID: 12177 RVA: 0x001163D4 File Offset: 0x001145D4
 	private unsafe void ProcessPendingMotorFightRefreshNotify(MotorFightRefreshSubLevelNotify data, [Nullable(2)] Net.CallbackStatus status = null)
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -760,7 +760,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		model.Generate.StartGenerate();
 	}
 
-	// Token: 0x06005BFB RID: 23547 RVA: 0x0010E86C File Offset: 0x0010CA6C
+	// Token: 0x06002F92 RID: 12178 RVA: 0x00116504 File Offset: 0x00114704
 	private void TryStartGenerate()
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -772,7 +772,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		model.PendingMotorFightRefreshNotify = null;
 	}
 
-	// Token: 0x06005BFC RID: 23548 RVA: 0x0010E8A0 File Offset: 0x0010CAA0
+	// Token: 0x06002F93 RID: 12179 RVA: 0x00116538 File Offset: 0x00114738
 	public override void InitPropertyConfigs()
 	{
 		if (this.GetModel() == null)
@@ -789,7 +789,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005BFD RID: 23549 RVA: 0x0010E90C File Offset: 0x0010CB0C
+	// Token: 0x06002F94 RID: 12180 RVA: 0x001165A4 File Offset: 0x001147A4
 	public override Dictionary<EKSC_AttrType, float> GetAttrsDefault(int propertyId)
 	{
 		MotorFightAttr motorFightAttr;
@@ -818,7 +818,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		return dictionary;
 	}
 
-	// Token: 0x06005BFE RID: 23550 RVA: 0x0010EA78 File Offset: 0x0010CC78
+	// Token: 0x06002F95 RID: 12181 RVA: 0x00116710 File Offset: 0x00114910
 	public Dictionary<int, int> GetOverrideAttrs(GenerateGroup group, int propertyId)
 	{
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -841,7 +841,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		return dictionary;
 	}
 
-	// Token: 0x06005BFF RID: 23551 RVA: 0x0010EBB8 File Offset: 0x0010CDB8
+	// Token: 0x06002F96 RID: 12182 RVA: 0x00116850 File Offset: 0x00114A50
 	public void AddListenEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnVehicleActivate, new Action<Entity>(this.OnVehicleActivate));
@@ -851,7 +851,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		EventSystem.Instance.Add(EEventName.TriggerUiTimeDilation, new Action(this.OnChangedTimeScale));
 	}
 
-	// Token: 0x06005C00 RID: 23552 RVA: 0x0010EC50 File Offset: 0x0010CE50
+	// Token: 0x06002F97 RID: 12183 RVA: 0x001168E8 File Offset: 0x00114AE8
 	public void RemoveListenEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnVehicleActivate, new Action<Entity>(this.OnVehicleActivate));
@@ -861,14 +861,14 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		EventSystem.Instance.Remove(EEventName.TriggerUiTimeDilation, new Action(this.OnChangedTimeScale));
 	}
 
-	// Token: 0x06005C01 RID: 23553 RVA: 0x0010ECE6 File Offset: 0x0010CEE6
+	// Token: 0x06002F98 RID: 12184 RVA: 0x0011697E File Offset: 0x00114B7E
 	private void OnCountDownEnd()
 	{
 		this.GetModel().IsCountDownEnd = true;
 		this.TryStartGenerate();
 	}
 
-	// Token: 0x06005C02 RID: 23554 RVA: 0x0010ECFC File Offset: 0x0010CEFC
+	// Token: 0x06002F99 RID: 12185 RVA: 0x00116994 File Offset: 0x00114B94
 	private void OnVehicleActivate(Entity vehicle)
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -899,14 +899,14 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.TryAutoDriver();
 	}
 
-	// Token: 0x06005C03 RID: 23555 RVA: 0x0010EDDC File Offset: 0x0010CFDC
+	// Token: 0x06002F9A RID: 12186 RVA: 0x00116A74 File Offset: 0x00114C74
 	private void OnCharacterActivate()
 	{
 		KscLog.Info(KscLog.EModule.Common, ELogAuthor.TZQ, KscEnv.Instance.KscWorld, "[摩托战斗]玩家编队创建完毕", default(ReadOnlySpan<ValueTuple<string, object>>));
 		this.TryAutoDriver();
 	}
 
-	// Token: 0x06005C04 RID: 23556 RVA: 0x0010EE10 File Offset: 0x0010D010
+	// Token: 0x06002F9B RID: 12187 RVA: 0x00116AA8 File Offset: 0x00114CA8
 	public unsafe void CreateVehicleKscEntity()
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -958,7 +958,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		});
 	}
 
-	// Token: 0x06005C05 RID: 23557 RVA: 0x0010EFA8 File Offset: 0x0010D1A8
+	// Token: 0x06002F9C RID: 12188 RVA: 0x00116C40 File Offset: 0x00114E40
 	public void TryAutoDriver()
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -1015,7 +1015,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		{
 			component2.IsSpecialMove = true;
 			component2.DisableUeMovementTick("摩托箭箭箭");
-			component2.SetMotorSubState(EMotorSubState.TwoWheelMoving);
+			component2.SetMotorSubState(EMotorSubState.TwoWheelMoving, ESetMotorSubStateSource.MotorArrowCombat);
 			component2.VehicleMovement.MoveMotorcycle(global::Vector.ZeroVectorProxy.ToUeVectorOld(), FQuat.Identity, false);
 		}
 		string stringConfig = ConfigCommonParamById.GetStringConfig("MotorArrowEngineAudioEvent");
@@ -1030,7 +1030,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.AddInputHandler();
 	}
 
-	// Token: 0x06005C06 RID: 23558 RVA: 0x0010F1BC File Offset: 0x0010D3BC
+	// Token: 0x06002F9D RID: 12189 RVA: 0x00116E58 File Offset: 0x00115058
 	protected bool AddInputHandler()
 	{
 		if (this.InputHandler == null)
@@ -1047,7 +1047,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		return false;
 	}
 
-	// Token: 0x06005C07 RID: 23559 RVA: 0x0010F230 File Offset: 0x0010D430
+	// Token: 0x06002F9E RID: 12190 RVA: 0x00116ECC File Offset: 0x001150CC
 	protected void RemoveInputHandler()
 	{
 		if (this.InputHandler != null)
@@ -1063,7 +1063,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		KscLog.Info(KscLog.EModule.Input, ELogAuthor.TZQ, KscEnv.Instance.KscWorld, "[摩托战斗]移除输入处理", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06005C08 RID: 23560 RVA: 0x0010F29C File Offset: 0x0010D49C
+	// Token: 0x06002F9F RID: 12191 RVA: 0x00116F38 File Offset: 0x00115138
 	private void UpdateRollAngle(float deltaTime, float rightInput)
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -1080,7 +1080,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005C09 RID: 23561 RVA: 0x0010F314 File Offset: 0x0010D514
+	// Token: 0x06002FA0 RID: 12192 RVA: 0x00116FB0 File Offset: 0x001151B0
 	private void UpdateCurrentSpeed(float rightInput, float deltaTime, float moveSpeed)
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -1112,7 +1112,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		model.MotorArrowCurSpeed = (int)num2;
 	}
 
-	// Token: 0x06005C0A RID: 23562 RVA: 0x0010F3EC File Offset: 0x0010D5EC
+	// Token: 0x06002FA1 RID: 12193 RVA: 0x00117088 File Offset: 0x00115288
 	public void MoveRight(float rightInput, float deltaTime)
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -1197,7 +1197,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		component.SetActorTransform(this.TemptTransformDouble, "MotorcycleArrow", false, null);
 	}
 
-	// Token: 0x06005C0B RID: 23563 RVA: 0x0010F6DC File Offset: 0x0010D8DC
+	// Token: 0x06002FA2 RID: 12194 RVA: 0x00117378 File Offset: 0x00115578
 	public void ExecSkillAction()
 	{
 		MotorcycleArrowBattleSkillData motorcycleArrowBattleSkillData = this.GetModel().GetMotorcycleArrowBattleSkillData();
@@ -1224,7 +1224,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		kscPlayerEntity.TryActiveSKill(0);
 	}
 
-	// Token: 0x06005C0C RID: 23564 RVA: 0x0010F760 File Offset: 0x0010D960
+	// Token: 0x06002FA3 RID: 12195 RVA: 0x001173FC File Offset: 0x001155FC
 	public void RequestPlayerDead()
 	{
 		MotorFightPlayerDeadRequest message = MotorFightPlayerDeadRequest.Create();
@@ -1249,7 +1249,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06005C0D RID: 23565 RVA: 0x0010F7CC File Offset: 0x0010D9CC
+	// Token: 0x06002FA4 RID: 12196 RVA: 0x00117468 File Offset: 0x00115668
 	[NullableContext(2)]
 	private void MotorFightScoreNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -1259,7 +1259,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.MotorArrowScoreUpdate, model.Score);
 	}
 
-	// Token: 0x06005C0E RID: 23566 RVA: 0x0010F80C File Offset: 0x0010DA0C
+	// Token: 0x06002FA5 RID: 12197 RVA: 0x001174A8 File Offset: 0x001156A8
 	public static void RequestEnterInst(int levelId, bool isContinue, int roleId)
 	{
 		MotorFightCtx motorFightCtx = MotorFightCtx.Create();
@@ -1295,7 +1295,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}, 0, 0, null, null).Forget<bool>();
 	}
 
-	// Token: 0x06005C0F RID: 23567 RVA: 0x0010F910 File Offset: 0x0010DB10
+	// Token: 0x06002FA6 RID: 12198 RVA: 0x001175AC File Offset: 0x001157AC
 	public void OnBossCreate(int creatureId, int bossFightTime, string bossName)
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -1327,7 +1327,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		component.AddTag(new int?(GameplayTagUtils.GetTagIdByName("系统.活动.箭箭剑.boss战斗")));
 	}
 
-	// Token: 0x06005C10 RID: 23568 RVA: 0x0010F9A4 File Offset: 0x0010DBA4
+	// Token: 0x06002FA7 RID: 12199 RVA: 0x00117640 File Offset: 0x00115840
 	public void OnBossFightStart(int bossFightTime)
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -1338,7 +1338,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		EventSystem.Instance.Emit<int, EBossState>(EEventName.MotorArrowBossStateChange, model.SubLevelIndex, EBossState.Battle);
 	}
 
-	// Token: 0x06005C11 RID: 23569 RVA: 0x0010FA08 File Offset: 0x0010DC08
+	// Token: 0x06002FA8 RID: 12200 RVA: 0x001176A4 File Offset: 0x001158A4
 	public void TickBossFight()
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -1359,7 +1359,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005C12 RID: 23570 RVA: 0x0010FA64 File Offset: 0x0010DC64
+	// Token: 0x06002FA9 RID: 12201 RVA: 0x00117700 File Offset: 0x00115900
 	public void OnBossRemove()
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -1388,7 +1388,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005C13 RID: 23571 RVA: 0x0010FB10 File Offset: 0x0010DD10
+	// Token: 0x06002FAA RID: 12202 RVA: 0x001177AC File Offset: 0x001159AC
 	[NullableContext(2)]
 	public void MotorFightBossDropNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -1403,7 +1403,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.TryOpenCollectionSelectView();
 	}
 
-	// Token: 0x06005C14 RID: 23572 RVA: 0x0010FB54 File Offset: 0x0010DD54
+	// Token: 0x06002FAB RID: 12203 RVA: 0x001177F0 File Offset: 0x001159F0
 	private void TryOpenCollectionSelectView()
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -1426,7 +1426,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		UiManager.Instance.OpenView(EUiViewName.MotorcycleArrowCollectionSelectView, model.ViewModeCollectionSelect, null);
 	}
 
-	// Token: 0x06005C15 RID: 23573 RVA: 0x0010FC14 File Offset: 0x0010DE14
+	// Token: 0x06002FAC RID: 12204 RVA: 0x001178B0 File Offset: 0x00115AB0
 	[return: Nullable(0)]
 	public UniTask<bool> RequestCollectionSelect(MotorcycleArrowCollectionSelectViewModel viewModel, MotorcycleArrowCollectionItemData itemData)
 	{
@@ -1440,7 +1440,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		return <RequestCollectionSelect>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005C16 RID: 23574 RVA: 0x0010FC68 File Offset: 0x0010DE68
+	// Token: 0x06002FAD RID: 12205 RVA: 0x00117904 File Offset: 0x00115B04
 	[NullableContext(0)]
 	public UniTask<bool> RequestCollectionRefresh([Nullable(1)] MotorcycleArrowCollectionSelectViewModel viewModel)
 	{
@@ -1453,7 +1453,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		return <RequestCollectionRefresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005C17 RID: 23575 RVA: 0x0010FCB4 File Offset: 0x0010DEB4
+	// Token: 0x06002FAE RID: 12206 RVA: 0x00117950 File Offset: 0x00115B50
 	[NullableContext(2)]
 	public void MotorFightAddCollectionNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -1465,7 +1465,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005C18 RID: 23576 RVA: 0x0010FD18 File Offset: 0x0010DF18
+	// Token: 0x06002FAF RID: 12207 RVA: 0x001179B4 File Offset: 0x00115BB4
 	[NullableContext(2)]
 	public void MotorFightRefreshCollectionTimesChangeNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -1473,7 +1473,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.GetModel().ViewModeCollectionSelect.SetMaxRefreshCount(motorFightRefreshCollectionTimesChangeNotify.RefreshCollectionTimes);
 	}
 
-	// Token: 0x06005C19 RID: 23577 RVA: 0x0010FD44 File Offset: 0x0010DF44
+	// Token: 0x06002FB0 RID: 12208 RVA: 0x001179E0 File Offset: 0x00115BE0
 	[NullableContext(2)]
 	private void MotorFightMonsterDropNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -1481,7 +1481,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.GetModel().Generate.CreateBuffDropGate(motorFightMonsterDropNotify.SubLevelIndex, motorFightMonsterDropNotify.WaveGroupIndex, motorFightMonsterDropNotify.MonsterId, motorFightMonsterDropNotify.BuffGateId);
 	}
 
-	// Token: 0x06005C1A RID: 23578 RVA: 0x0010FD80 File Offset: 0x0010DF80
+	// Token: 0x06002FB1 RID: 12209 RVA: 0x00117A1C File Offset: 0x00115C1C
 	[NullableContext(2)]
 	private void MotorFightAddBuffNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -1494,7 +1494,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.EffectManager.AddPlayerBornEffect(motorFightAddBuffNotify.Buffs);
 	}
 
-	// Token: 0x06005C1B RID: 23579 RVA: 0x0010FDC4 File Offset: 0x0010DFC4
+	// Token: 0x06002FB2 RID: 12210 RVA: 0x00117A60 File Offset: 0x00115C60
 	protected void OnChangedTimeScale()
 	{
 		if (Time.Instance.TimeDilation > 0f)
@@ -1519,7 +1519,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005C1C RID: 23580 RVA: 0x0010FE04 File Offset: 0x0010E004
+	// Token: 0x06002FB3 RID: 12211 RVA: 0x00117AA0 File Offset: 0x00115CA0
 	protected override void OnHandleHeadHpInfo(FKSC_HeadHpContext headInfo)
 	{
 		MotorcycleArrowSubModel model = this.GetModel();
@@ -1553,14 +1553,14 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005C1D RID: 23581 RVA: 0x0010FF02 File Offset: 0x0010E102
+	// Token: 0x06002FB4 RID: 12212 RVA: 0x00117B9E File Offset: 0x00115D9E
 	protected override void OnHandlePlayerHeadHpInfo(KscHeadStateData kscPlayerHeadStateData, FKSC_HeadHpContext headInfo)
 	{
 		base.OnHandlePlayerHeadHpInfo(kscPlayerHeadStateData, headInfo);
 		this.PlayerHpHandle.OnPlayerHpChange(kscPlayerHeadStateData);
 	}
 
-	// Token: 0x06005C1E RID: 23582 RVA: 0x0010FF18 File Offset: 0x0010E118
+	// Token: 0x06002FB5 RID: 12213 RVA: 0x00117BB4 File Offset: 0x00115DB4
 	private void OnKscEntitySpawn(FTransformDouble ueOwnerTransform, in TArray<FKSC_SpawnEntity> contexts)
 	{
 		MotorcycleArrowGenerate generate = this.GetModel().Generate;
@@ -1581,7 +1581,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005C1F RID: 23583 RVA: 0x0010FFB8 File Offset: 0x0010E1B8
+	// Token: 0x06002FB6 RID: 12214 RVA: 0x00117C54 File Offset: 0x00115E54
 	[NullableContext(2)]
 	private void MotorFightAddEnemyBuffNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -1589,19 +1589,19 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.EffectManager.AddMonsterBornEffect(motorFightAddEnemyBuffNotify.EnemyBuffs);
 	}
 
-	// Token: 0x06005C20 RID: 23584 RVA: 0x0010FFDD File Offset: 0x0010E1DD
+	// Token: 0x06002FB7 RID: 12215 RVA: 0x00117C79 File Offset: 0x00115E79
 	public HashSet<int> GetMonsterExtraBuffs()
 	{
 		return this.EffectManager.MonsterBuff;
 	}
 
-	// Token: 0x06005C21 RID: 23585 RVA: 0x0010FFEA File Offset: 0x0010E1EA
+	// Token: 0x06002FB8 RID: 12216 RVA: 0x00117C86 File Offset: 0x00115E86
 	private void EventOnMotorArrowGameOver()
 	{
 		this.OnMotorArrowGameOver(false);
 	}
 
-	// Token: 0x06005C22 RID: 23586 RVA: 0x0010FFF4 File Offset: 0x0010E1F4
+	// Token: 0x06002FB9 RID: 12217 RVA: 0x00117C90 File Offset: 0x00115E90
 	private void OnMotorArrowGameOver(bool delayRemove = false)
 	{
 		MotorcycleArrowSubController.<>c__DisplayClass75_0 CS$<>8__locals1 = new MotorcycleArrowSubController.<>c__DisplayClass75_0();
@@ -1650,7 +1650,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		CS$<>8__locals1.<OnMotorArrowGameOver>g__CallBack|0();
 	}
 
-	// Token: 0x06005C23 RID: 23587 RVA: 0x0011013B File Offset: 0x0010E33B
+	// Token: 0x06002FBA RID: 12218 RVA: 0x00117DD7 File Offset: 0x00115FD7
 	public void PlayMusic(string eventName)
 	{
 		if (string.IsNullOrEmpty(eventName))
@@ -1660,7 +1660,7 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		this.GetModel().AudioEventHandle = AudioSystem.Instance.PostEvent(eventName);
 	}
 
-	// Token: 0x06005C24 RID: 23588 RVA: 0x0011015C File Offset: 0x0010E35C
+	// Token: 0x06002FBB RID: 12219 RVA: 0x00117DF8 File Offset: 0x00115FF8
 	public void PreloadBuffDa()
 	{
 		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("MotorArrowPreloadBuff");
@@ -1709,20 +1709,20 @@ public class MotorcycleArrowSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x040029F1 RID: 10737
+	// Token: 0x04002A8C RID: 10892
 	public MotorcycleArrowEffectManager EffectManager;
 
-	// Token: 0x040029F2 RID: 10738
+	// Token: 0x04002A8D RID: 10893
 	private readonly ActivityPlayerHpHandle PlayerHpHandle = new ActivityPlayerHpHandle();
 
-	// Token: 0x040029F3 RID: 10739
+	// Token: 0x04002A8E RID: 10894
 	public FTransformDouble TemptTransformDouble = new FTransformDouble();
 
-	// Token: 0x040029F4 RID: 10740
+	// Token: 0x04002A8F RID: 10895
 	[Nullable(2)]
 	protected MotorcycleArrowInputHandler InputHandler;
 
-	// Token: 0x040029F5 RID: 10741
+	// Token: 0x04002A90 RID: 10896
 	[Nullable(2)]
 	protected MotorcycleArrowBlockHandler BlockHandler;
 }

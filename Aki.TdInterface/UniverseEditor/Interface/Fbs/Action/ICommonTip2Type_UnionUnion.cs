@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200648A RID: 25738
+	// Token: 0x02006AF5 RID: 27381
 	public class ICommonTip2Type_UnionUnion
 	{
-		// Token: 0x1700BF8B RID: 49035
-		// (get) Token: 0x0602C9A4 RID: 182692 RVA: 0x00620195 File Offset: 0x0061E395
-		// (set) Token: 0x0602C9A5 RID: 182693 RVA: 0x0062019D File Offset: 0x0061E39D
+		// Token: 0x1700C918 RID: 51480
+		// (get) Token: 0x0602F11E RID: 192798 RVA: 0x0066BD69 File Offset: 0x00669F69
+		// (set) Token: 0x0602F11F RID: 192799 RVA: 0x0066BD71 File Offset: 0x00669F71
 		public ICommonTip2Type_Union Type { get; set; }
 
-		// Token: 0x1700BF8C RID: 49036
-		// (get) Token: 0x0602C9A6 RID: 182694 RVA: 0x006201A6 File Offset: 0x0061E3A6
-		// (set) Token: 0x0602C9A7 RID: 182695 RVA: 0x006201AE File Offset: 0x0061E3AE
+		// Token: 0x1700C919 RID: 51481
+		// (get) Token: 0x0602F120 RID: 192800 RVA: 0x0066BD7A File Offset: 0x00669F7A
+		// (set) Token: 0x0602F121 RID: 192801 RVA: 0x0066BD82 File Offset: 0x00669F82
 		public object Value { get; set; }
 
-		// Token: 0x0602C9A8 RID: 182696 RVA: 0x006201B7 File Offset: 0x0061E3B7
+		// Token: 0x0602F122 RID: 192802 RVA: 0x0066BD8B File Offset: 0x00669F8B
 		public ICommonTip2Type_UnionUnion()
 		{
 			this.Type = ICommonTip2Type_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602C9A9 RID: 182697 RVA: 0x006201CD File Offset: 0x0061E3CD
+		// Token: 0x0602F123 RID: 192803 RVA: 0x0066BDA1 File Offset: 0x00669FA1
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602C9AA RID: 182698 RVA: 0x006201DF File Offset: 0x0061E3DF
+		// Token: 0x0602F124 RID: 192804 RVA: 0x0066BDB3 File Offset: 0x00669FB3
 		public ICommonTip2TypeT AsICommonTip2Type()
 		{
 			return this.As<ICommonTip2TypeT>();
 		}
 
-		// Token: 0x0602C9AB RID: 182699 RVA: 0x006201E7 File Offset: 0x0061E3E7
+		// Token: 0x0602F125 RID: 192805 RVA: 0x0066BDBB File Offset: 0x00669FBB
 		public static ICommonTip2Type_UnionUnion FromICommonTip2Type(ICommonTip2TypeT _icommontip2type)
 		{
 			return new ICommonTip2Type_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C9AC RID: 182700 RVA: 0x006201FC File Offset: 0x0061E3FC
+		// Token: 0x0602F126 RID: 192806 RVA: 0x0066BDD0 File Offset: 0x00669FD0
 		public ICommonTip2PrepareCountdownT AsICommonTip2PrepareCountdown()
 		{
 			return this.As<ICommonTip2PrepareCountdownT>();
 		}
 
-		// Token: 0x0602C9AD RID: 182701 RVA: 0x00620204 File Offset: 0x0061E404
+		// Token: 0x0602F127 RID: 192807 RVA: 0x0066BDD8 File Offset: 0x00669FD8
 		public static ICommonTip2Type_UnionUnion FromICommonTip2PrepareCountdown(ICommonTip2PrepareCountdownT _icommontip2preparecountdown)
 		{
 			return new ICommonTip2Type_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C9AE RID: 182702 RVA: 0x0062021C File Offset: 0x0061E41C
+		// Token: 0x0602F128 RID: 192808 RVA: 0x0066BDF0 File Offset: 0x00669FF0
 		public static int Pack(FlatBufferBuilder builder, ICommonTip2Type_UnionUnion _o)
 		{
 			ICommonTip2Type_Union type = _o.Type;

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200660F RID: 26127
+	// Token: 0x02006C80 RID: 27776
 	public struct IDrinksRollRoleRequirement : IFlatbufferObject
 	{
-		// Token: 0x1700C21F RID: 49695
-		// (get) Token: 0x0602D5D7 RID: 185815 RVA: 0x00637741 File Offset: 0x00635941
+		// Token: 0x1700CBBD RID: 52157
+		// (get) Token: 0x0602FDA8 RID: 196008 RVA: 0x006842A9 File Offset: 0x006824A9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D5D8 RID: 185816 RVA: 0x0063774E File Offset: 0x0063594E
+		// Token: 0x0602FDA9 RID: 196009 RVA: 0x006842B6 File Offset: 0x006824B6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D5D9 RID: 185817 RVA: 0x00637758 File Offset: 0x00635958
+		// Token: 0x0602FDAA RID: 196010 RVA: 0x006842C0 File Offset: 0x006824C0
 		public static IDrinksRollRoleRequirement GetRootAsIDrinksRollRoleRequirement(ByteBuffer _bb)
 		{
 			return IDrinksRollRoleRequirement.GetRootAsIDrinksRollRoleRequirement(_bb, default(IDrinksRollRoleRequirement));
 		}
 
-		// Token: 0x0602D5DA RID: 185818 RVA: 0x00637774 File Offset: 0x00635974
+		// Token: 0x0602FDAB RID: 196011 RVA: 0x006842DC File Offset: 0x006824DC
 		public static IDrinksRollRoleRequirement GetRootAsIDrinksRollRoleRequirement(ByteBuffer _bb, IDrinksRollRoleRequirement obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D5DB RID: 185819 RVA: 0x00637791 File Offset: 0x00635991
+		// Token: 0x0602FDAC RID: 196012 RVA: 0x006842F9 File Offset: 0x006824F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D5DC RID: 185820 RVA: 0x006377A0 File Offset: 0x006359A0
+		// Token: 0x0602FDAD RID: 196013 RVA: 0x00684308 File Offset: 0x00682508
 		public IDrinksRollRoleRequirement __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C220 RID: 49696
-		// (get) Token: 0x0602D5DD RID: 185821 RVA: 0x006377B0 File Offset: 0x006359B0
+		// Token: 0x1700CBBE RID: 52158
+		// (get) Token: 0x0602FDAE RID: 196014 RVA: 0x00684318 File Offset: 0x00682518
 		public int RoleId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C221 RID: 49697
-		// (get) Token: 0x0602D5DE RID: 185822 RVA: 0x006377EC File Offset: 0x006359EC
+		// Token: 0x1700CBBF RID: 52159
+		// (get) Token: 0x0602FDAF RID: 196015 RVA: 0x00684354 File Offset: 0x00682554
 		public int RequirementId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C222 RID: 49698
-		// (get) Token: 0x0602D5DF RID: 185823 RVA: 0x00637828 File Offset: 0x00635A28
+		// Token: 0x1700CBC0 RID: 52160
+		// (get) Token: 0x0602FDB0 RID: 196016 RVA: 0x00684390 File Offset: 0x00682590
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D5E0 RID: 185824 RVA: 0x00637864 File Offset: 0x00635A64
+		// Token: 0x0602FDB1 RID: 196017 RVA: 0x006843CC File Offset: 0x006825CC
 		public static Offset<IDrinksRollRoleRequirement> CreateIDrinksRollRoleRequirement(FlatBufferBuilder builder, int RoleId = 0, int RequirementId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDrinksRollRoleRequirement.EndIDrinksRollRoleRequirement(builder);
 		}
 
-		// Token: 0x0602D5E1 RID: 185825 RVA: 0x00637888 File Offset: 0x00635A88
+		// Token: 0x0602FDB2 RID: 196018 RVA: 0x006843F0 File Offset: 0x006825F0
 		public static void StartIDrinksRollRoleRequirement(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602D5E2 RID: 185826 RVA: 0x00637891 File Offset: 0x00635A91
+		// Token: 0x0602FDB3 RID: 196019 RVA: 0x006843F9 File Offset: 0x006825F9
 		public static void AddRoleId(FlatBufferBuilder builder, int roleId)
 		{
 			builder.AddInt(0, roleId, 0);
 		}
 
-		// Token: 0x0602D5E3 RID: 185827 RVA: 0x0063789C File Offset: 0x00635A9C
+		// Token: 0x0602FDB4 RID: 196020 RVA: 0x00684404 File Offset: 0x00682604
 		public static void AddRequirementId(FlatBufferBuilder builder, int requirementId)
 		{
 			builder.AddInt(1, requirementId, 0);
 		}
 
-		// Token: 0x0602D5E4 RID: 185828 RVA: 0x006378A7 File Offset: 0x00635AA7
+		// Token: 0x0602FDB5 RID: 196021 RVA: 0x0068440F File Offset: 0x0068260F
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602D5E5 RID: 185829 RVA: 0x006378B2 File Offset: 0x00635AB2
+		// Token: 0x0602FDB6 RID: 196022 RVA: 0x0068441A File Offset: 0x0068261A
 		public static Offset<IDrinksRollRoleRequirement> EndIDrinksRollRoleRequirement(FlatBufferBuilder builder)
 		{
 			return new Offset<IDrinksRollRoleRequirement>(builder.EndTable());
 		}
 
-		// Token: 0x0602D5E6 RID: 185830 RVA: 0x006378C0 File Offset: 0x00635AC0
+		// Token: 0x0602FDB7 RID: 196023 RVA: 0x00684428 File Offset: 0x00682628
 		public IDrinksRollRoleRequirementT UnPack()
 		{
 			IDrinksRollRoleRequirementT drinksRollRoleRequirementT = new IDrinksRollRoleRequirementT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return drinksRollRoleRequirementT;
 		}
 
-		// Token: 0x0602D5E7 RID: 185831 RVA: 0x006378DB File Offset: 0x00635ADB
+		// Token: 0x0602FDB8 RID: 196024 RVA: 0x00684443 File Offset: 0x00682643
 		public void UnPackTo(IDrinksRollRoleRequirementT _o)
 		{
 			_o.RoleId = this.RoleId;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602D5E8 RID: 185832 RVA: 0x00637904 File Offset: 0x00635B04
+		// Token: 0x0602FDB9 RID: 196025 RVA: 0x0068446C File Offset: 0x0068266C
 		public static Offset<IDrinksRollRoleRequirement> Pack(FlatBufferBuilder builder, IDrinksRollRoleRequirementT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDrinksRollRoleRequirement.CreateIDrinksRollRoleRequirement(builder, _o.RoleId, _o.RequirementId, _o.NullMask);
 		}
 
-		// Token: 0x04010C95 RID: 68757
+		// Token: 0x04011AB0 RID: 72368
 		private Table __p;
 	}
 }

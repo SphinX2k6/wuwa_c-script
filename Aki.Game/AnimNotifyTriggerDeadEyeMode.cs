@@ -7,37 +7,33 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02001A74 RID: 6772
+// Token: 0x02000F33 RID: 3891
 [UClass("/Game/Aki/TypeScript/Game/Module/DeadEyeMode/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/DeadEyeMode/AnimNotifyTriggerDeadEyeMode.AnimNotifyTriggerDeadEyeMode_C")]
 public class AnimNotifyTriggerDeadEyeMode : UKuroAnimNotify, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0600C76B RID: 51051 RVA: 0x002D68F0 File Offset: 0x002D4AF0
+	// Token: 0x06009B7B RID: 39803 RVA: 0x002E19F8 File Offset: 0x002DFBF8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(AnimNotifyTriggerDeadEyeMode) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), AnimNotifyTriggerDeadEyeMode.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0600C76C RID: 51052 RVA: 0x002D6990 File Offset: 0x002D4B90
+	// Token: 0x06009B7C RID: 39804 RVA: 0x002E1AB0 File Offset: 0x002DFCB0
 	[NullableContext(1)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -53,7 +49,7 @@ public class AnimNotifyTriggerDeadEyeMode : UKuroAnimNotify, IUnrealUObject, IUn
 		return true;
 	}
 
-	// Token: 0x0600C76D RID: 51053 RVA: 0x002D69CD File Offset: 0x002D4BCD
+	// Token: 0x06009B7D RID: 39805 RVA: 0x002E1AED File Offset: 0x002DFCED
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (AnimNotifyTriggerDeadEyeMode._ClassPtr == IntPtr.Zero)
@@ -63,23 +59,23 @@ public class AnimNotifyTriggerDeadEyeMode : UKuroAnimNotify, IUnrealUObject, IUn
 		return AnimNotifyTriggerDeadEyeMode._ClassPtr;
 	}
 
-	// Token: 0x0600C76E RID: 51054 RVA: 0x002D69F4 File Offset: 0x002D4BF4
+	// Token: 0x06009B7E RID: 39806 RVA: 0x002E1B14 File Offset: 0x002DFD14
 	public AnimNotifyTriggerDeadEyeMode() : this(BuiltinUtils.AllocNativeUObject(AnimNotifyTriggerDeadEyeMode.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600C76F RID: 51055 RVA: 0x002D6A1C File Offset: 0x002D4C1C
+	// Token: 0x06009B7F RID: 39807 RVA: 0x002E1B3C File Offset: 0x002DFD3C
 	[NullableContext(1)]
 	public AnimNotifyTriggerDeadEyeMode(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AnimNotifyTriggerDeadEyeMode.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600C770 RID: 51056 RVA: 0x002D6A4F File Offset: 0x002D4C4F
+	// Token: 0x06009B80 RID: 39808 RVA: 0x002E1B6F File Offset: 0x002DFD6F
 	protected AnimNotifyTriggerDeadEyeMode(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600C771 RID: 51057 RVA: 0x002D6A58 File Offset: 0x002D4C58
+	// Token: 0x06009B81 RID: 39809 RVA: 0x002E1B78 File Offset: 0x002DFD78
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -87,13 +83,13 @@ public class AnimNotifyTriggerDeadEyeMode : UKuroAnimNotify, IUnrealUObject, IUn
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x04005BFC RID: 23548
+	// Token: 0x04005CCB RID: 23755
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/DeadEyeMode/AnimNotifyTriggerDeadEyeMode.AnimNotifyTriggerDeadEyeMode_C";
 
-	// Token: 0x04005BFD RID: 23549
+	// Token: 0x04005CCC RID: 23756
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04005BFE RID: 23550
+	// Token: 0x04005CCD RID: 23757
 	private static IntPtr _ClassDefaultObjectPtr;
 }

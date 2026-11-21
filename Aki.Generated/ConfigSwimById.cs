@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009B8 RID: 2488
+	// Token: 0x02000A8D RID: 2701
 	public class ConfigSwimById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003A64 RID: 14948 RVA: 0x001A4024 File Offset: 0x001A2224
+		// Token: 0x06003F62 RID: 16226 RVA: 0x001C33B8 File Offset: 0x001C15B8
 		static ConfigSwimById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSwimById.CreateStaticDefaultValue), new Action(ConfigSwimById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003A65 RID: 14949 RVA: 0x001A4044 File Offset: 0x001A2244
+		// Token: 0x06003F63 RID: 16227 RVA: 0x001C33D8 File Offset: 0x001C15D8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSwimById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003A66 RID: 14950 RVA: 0x001A40C3 File Offset: 0x001A22C3
+		// Token: 0x06003F64 RID: 16228 RVA: 0x001C3457 File Offset: 0x001C1657
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSwimById.LogPair = null;
 			ConfigSwimById.HandleId = 0;
 		}
 
-		// Token: 0x06003A67 RID: 14951 RVA: 0x001A40D1 File Offset: 0x001A22D1
+		// Token: 0x06003F65 RID: 16229 RVA: 0x001C3465 File Offset: 0x001C1665
 		public static void Init()
 		{
 			ConfigSwimById.HandleId = ConfigCommon.InitDataStatement(ConfigSwimById.HandleId, "db_swim.db", "select BinData from `Swim` where Id=?");
 		}
 
-		// Token: 0x06003A68 RID: 14952 RVA: 0x001A40EC File Offset: 0x001A22EC
+		// Token: 0x06003F66 RID: 16230 RVA: 0x001C3480 File Offset: 0x001C1680
 		public static Swim? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSwimById.HandleId, ConfigSwimById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new Swim?(rootAsSwim);
 		}
 
-		// Token: 0x040043EE RID: 17390
+		// Token: 0x040049C1 RID: 18881
 		private const string DB = "db_swim.db";
 
-		// Token: 0x040043EF RID: 17391
+		// Token: 0x040049C2 RID: 18882
 		private const string FILE = "y.游泳.xlsx";
 
-		// Token: 0x040043F0 RID: 17392
+		// Token: 0x040049C3 RID: 18883
 		private const string TABLE = "Swim";
 
-		// Token: 0x040043F1 RID: 17393
+		// Token: 0x040049C4 RID: 18884
 		private const string COMMAND = "select BinData from `Swim` where Id=?";
 
-		// Token: 0x040043F2 RID: 17394
+		// Token: 0x040049C5 RID: 18885
 		private const string KEY_PREFIX = "SwimById";
 
-		// Token: 0x040043F3 RID: 17395
+		// Token: 0x040049C6 RID: 18886
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040043F4 RID: 17396
+		// Token: 0x040049C7 RID: 18887
 		private static int HandleId;
 	}
 }

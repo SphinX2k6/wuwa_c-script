@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006888 RID: 26760
+	// Token: 0x02006F29 RID: 28457
 	public struct IGetRewardByInteract : IFlatbufferObject
 	{
-		// Token: 0x1700C6B9 RID: 50873
-		// (get) Token: 0x0602EAB9 RID: 191161 RVA: 0x0065D259 File Offset: 0x0065B459
+		// Token: 0x1700D09F RID: 53407
+		// (get) Token: 0x060313F3 RID: 201715 RVA: 0x006AC2D9 File Offset: 0x006AA4D9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,50 +16,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EABA RID: 191162 RVA: 0x0065D266 File Offset: 0x0065B466
+		// Token: 0x060313F4 RID: 201716 RVA: 0x006AC2E6 File Offset: 0x006AA4E6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602EABB RID: 191163 RVA: 0x0065D270 File Offset: 0x0065B470
+		// Token: 0x060313F5 RID: 201717 RVA: 0x006AC2F0 File Offset: 0x006AA4F0
 		public static IGetRewardByInteract GetRootAsIGetRewardByInteract(ByteBuffer _bb)
 		{
 			return IGetRewardByInteract.GetRootAsIGetRewardByInteract(_bb, default(IGetRewardByInteract));
 		}
 
-		// Token: 0x0602EABC RID: 191164 RVA: 0x0065D28C File Offset: 0x0065B48C
+		// Token: 0x060313F6 RID: 201718 RVA: 0x006AC30C File Offset: 0x006AA50C
 		public static IGetRewardByInteract GetRootAsIGetRewardByInteract(ByteBuffer _bb, IGetRewardByInteract obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602EABD RID: 191165 RVA: 0x0065D2A9 File Offset: 0x0065B4A9
+		// Token: 0x060313F7 RID: 201719 RVA: 0x006AC329 File Offset: 0x006AA529
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602EABE RID: 191166 RVA: 0x0065D2B8 File Offset: 0x0065B4B8
+		// Token: 0x060313F8 RID: 201720 RVA: 0x006AC338 File Offset: 0x006AA538
 		public IGetRewardByInteract __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0602EABF RID: 191167 RVA: 0x0065D2C8 File Offset: 0x0065B4C8
+		// Token: 0x060313F9 RID: 201721 RVA: 0x006AC348 File Offset: 0x006AA548
 		public static void StartIGetRewardByInteract(FlatBufferBuilder builder)
 		{
 			builder.StartTable(0);
 		}
 
-		// Token: 0x0602EAC0 RID: 191168 RVA: 0x0065D2D1 File Offset: 0x0065B4D1
+		// Token: 0x060313FA RID: 201722 RVA: 0x006AC351 File Offset: 0x006AA551
 		public static Offset<IGetRewardByInteract> EndIGetRewardByInteract(FlatBufferBuilder builder)
 		{
 			return new Offset<IGetRewardByInteract>(builder.EndTable());
 		}
 
-		// Token: 0x0602EAC1 RID: 191169 RVA: 0x0065D2E0 File Offset: 0x0065B4E0
+		// Token: 0x060313FB RID: 201723 RVA: 0x006AC360 File Offset: 0x006AA560
 		public IGetRewardByInteractT UnPack()
 		{
 			IGetRewardByInteractT getRewardByInteractT = new IGetRewardByInteractT();
@@ -67,12 +67,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return getRewardByInteractT;
 		}
 
-		// Token: 0x0602EAC2 RID: 191170 RVA: 0x0065D2FB File Offset: 0x0065B4FB
+		// Token: 0x060313FC RID: 201724 RVA: 0x006AC37B File Offset: 0x006AA57B
 		public void UnPackTo(IGetRewardByInteractT _o)
 		{
 		}
 
-		// Token: 0x0602EAC3 RID: 191171 RVA: 0x0065D300 File Offset: 0x0065B500
+		// Token: 0x060313FD RID: 201725 RVA: 0x006AC380 File Offset: 0x006AA580
 		public static Offset<IGetRewardByInteract> Pack(FlatBufferBuilder builder, IGetRewardByInteractT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGetRewardByInteract.EndIGetRewardByInteract(builder);
 		}
 
-		// Token: 0x04010FDD RID: 69597
+		// Token: 0x04011E32 RID: 73266
 		private Table __p;
 	}
 }

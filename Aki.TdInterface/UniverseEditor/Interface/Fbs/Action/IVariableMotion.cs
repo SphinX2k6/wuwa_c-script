@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074F6 RID: 29942
+	// Token: 0x02007CEC RID: 31980
 	public struct IVariableMotion : IFlatbufferObject
 	{
-		// Token: 0x1700E32F RID: 58159
-		// (get) Token: 0x0603671D RID: 223005 RVA: 0x007658E4 File Offset: 0x00763AE4
+		// Token: 0x1700EF59 RID: 61273
+		// (get) Token: 0x06039B32 RID: 236338 RVA: 0x007C8B34 File Offset: 0x007C6D34
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603671E RID: 223006 RVA: 0x007658F1 File Offset: 0x00763AF1
+		// Token: 0x06039B33 RID: 236339 RVA: 0x007C8B41 File Offset: 0x007C6D41
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603671F RID: 223007 RVA: 0x007658F8 File Offset: 0x00763AF8
+		// Token: 0x06039B34 RID: 236340 RVA: 0x007C8B48 File Offset: 0x007C6D48
 		public static IVariableMotion GetRootAsIVariableMotion(ByteBuffer _bb)
 		{
 			return IVariableMotion.GetRootAsIVariableMotion(_bb, default(IVariableMotion));
 		}
 
-		// Token: 0x06036720 RID: 223008 RVA: 0x00765914 File Offset: 0x00763B14
+		// Token: 0x06039B35 RID: 236341 RVA: 0x007C8B64 File Offset: 0x007C6D64
 		public static IVariableMotion GetRootAsIVariableMotion(ByteBuffer _bb, IVariableMotion obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036721 RID: 223009 RVA: 0x00765931 File Offset: 0x00763B31
+		// Token: 0x06039B36 RID: 236342 RVA: 0x007C8B81 File Offset: 0x007C6D81
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036722 RID: 223010 RVA: 0x00765940 File Offset: 0x00763B40
+		// Token: 0x06039B37 RID: 236343 RVA: 0x007C8B90 File Offset: 0x007C6D90
 		public IVariableMotion __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E330 RID: 58160
-		// (get) Token: 0x06036723 RID: 223011 RVA: 0x00765950 File Offset: 0x00763B50
+		// Token: 0x1700EF5A RID: 61274
+		// (get) Token: 0x06039B38 RID: 236344 RVA: 0x007C8BA0 File Offset: 0x007C6DA0
 		public EMoveMotion Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E331 RID: 58161
-		// (get) Token: 0x06036724 RID: 223012 RVA: 0x0076598C File Offset: 0x00763B8C
+		// Token: 0x1700EF5B RID: 61275
+		// (get) Token: 0x06039B39 RID: 236345 RVA: 0x007C8BDC File Offset: 0x007C6DDC
 		public float Acceleration
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E332 RID: 58162
-		// (get) Token: 0x06036725 RID: 223013 RVA: 0x007659CC File Offset: 0x00763BCC
+		// Token: 0x1700EF5C RID: 61276
+		// (get) Token: 0x06039B3A RID: 236346 RVA: 0x007C8C1C File Offset: 0x007C6E1C
 		public float MaxSpeed
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036726 RID: 223014 RVA: 0x00765A0C File Offset: 0x00763C0C
+		// Token: 0x06039B3B RID: 236347 RVA: 0x007C8C5C File Offset: 0x007C6E5C
 		public static Offset<IVariableMotion> CreateIVariableMotion(FlatBufferBuilder builder, EMoveMotion Type = EMoveMotion.UniformMotion, float Acceleration = 0f, float MaxSpeed = 0f)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVariableMotion.EndIVariableMotion(builder);
 		}
 
-		// Token: 0x06036727 RID: 223015 RVA: 0x00765A30 File Offset: 0x00763C30
+		// Token: 0x06039B3C RID: 236348 RVA: 0x007C8C80 File Offset: 0x007C6E80
 		public static void StartIVariableMotion(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06036728 RID: 223016 RVA: 0x00765A39 File Offset: 0x00763C39
+		// Token: 0x06039B3D RID: 236349 RVA: 0x007C8C89 File Offset: 0x007C6E89
 		public static void AddType(FlatBufferBuilder builder, EMoveMotion type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036729 RID: 223017 RVA: 0x00765A44 File Offset: 0x00763C44
+		// Token: 0x06039B3E RID: 236350 RVA: 0x007C8C94 File Offset: 0x007C6E94
 		public static void AddAcceleration(FlatBufferBuilder builder, float acceleration)
 		{
 			builder.AddFloat(1, acceleration, 0.0);
 		}
 
-		// Token: 0x0603672A RID: 223018 RVA: 0x00765A57 File Offset: 0x00763C57
+		// Token: 0x06039B3F RID: 236351 RVA: 0x007C8CA7 File Offset: 0x007C6EA7
 		public static void AddMaxSpeed(FlatBufferBuilder builder, float maxSpeed)
 		{
 			builder.AddFloat(2, maxSpeed, 0.0);
 		}
 
-		// Token: 0x0603672B RID: 223019 RVA: 0x00765A6A File Offset: 0x00763C6A
+		// Token: 0x06039B40 RID: 236352 RVA: 0x007C8CBA File Offset: 0x007C6EBA
 		public static Offset<IVariableMotion> EndIVariableMotion(FlatBufferBuilder builder)
 		{
 			return new Offset<IVariableMotion>(builder.EndTable());
 		}
 
-		// Token: 0x0603672C RID: 223020 RVA: 0x00765A78 File Offset: 0x00763C78
+		// Token: 0x06039B41 RID: 236353 RVA: 0x007C8CC8 File Offset: 0x007C6EC8
 		public IVariableMotionT UnPack()
 		{
 			IVariableMotionT variableMotionT = new IVariableMotionT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return variableMotionT;
 		}
 
-		// Token: 0x0603672D RID: 223021 RVA: 0x00765A93 File Offset: 0x00763C93
+		// Token: 0x06039B42 RID: 236354 RVA: 0x007C8CE3 File Offset: 0x007C6EE3
 		public void UnPackTo(IVariableMotionT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.MaxSpeed = this.MaxSpeed;
 		}
 
-		// Token: 0x0603672E RID: 223022 RVA: 0x00765ABC File Offset: 0x00763CBC
+		// Token: 0x06039B43 RID: 236355 RVA: 0x007C8D0C File Offset: 0x007C6F0C
 		public static Offset<IVariableMotion> Pack(FlatBufferBuilder builder, IVariableMotionT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVariableMotion.CreateIVariableMotion(builder, _o.Type, _o.Acceleration, _o.MaxSpeed);
 		}
 
-		// Token: 0x040123D2 RID: 74706
+		// Token: 0x04013403 RID: 78851
 		private Table __p;
 	}
 }

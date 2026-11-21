@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200275F RID: 10079
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A2B RID: 10795
 	public class ISheriffCashSettlement : ICommonTipType
 	{
-		// Token: 0x0600E08D RID: 57485 RVA: 0x00213217 File Offset: 0x00211417
+		// Token: 0x0600EE8D RID: 61069 RVA: 0x0022FD4F File Offset: 0x0022DF4F
 		public static ISheriffCashSettlement Create(ISheriffCashSettlement? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004391 RID: 17297
-		// (get) Token: 0x0600E08E RID: 57486 RVA: 0x00213236 File Offset: 0x00211436
+		// Token: 0x170046E5 RID: 18149
+		// (get) Token: 0x0600EE8E RID: 61070 RVA: 0x0022FD6E File Offset: 0x0022DF6E
 		public override ECommonTipType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004392 RID: 17298
-		// (get) Token: 0x0600E08F RID: 57487 RVA: 0x00213243 File Offset: 0x00211443
+		// Token: 0x170046E6 RID: 18150
+		// (get) Token: 0x0600EE8F RID: 61071 RVA: 0x0022FD7B File Offset: 0x0022DF7B
 		public virtual string TidMainText
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004393 RID: 17299
-		// (get) Token: 0x0600E090 RID: 57488 RVA: 0x00213250 File Offset: 0x00211450
+		// Token: 0x170046E7 RID: 18151
+		// (get) Token: 0x0600EE90 RID: 61072 RVA: 0x0022FD88 File Offset: 0x0022DF88
 		public virtual string TidSubText
 		{
 			get
@@ -53,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004394 RID: 17300
-		// (get) Token: 0x0600E091 RID: 57489 RVA: 0x0021325D File Offset: 0x0021145D
+		// Token: 0x170046E8 RID: 18152
+		// (get) Token: 0x0600EE91 RID: 61073 RVA: 0x0022FD95 File Offset: 0x0022DF95
 		public virtual VarRef VarRef
 		{
 			get
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004395 RID: 17301
-		// (get) Token: 0x0600E092 RID: 57490 RVA: 0x0021328C File Offset: 0x0021148C
+		// Token: 0x170046E9 RID: 18153
+		// (get) Token: 0x0600EE92 RID: 61074 RVA: 0x0022FDC4 File Offset: 0x0022DFC4
 		[Nullable(2)]
 		public virtual string EdTidMainText
 		{
@@ -81,8 +79,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004396 RID: 17302
-		// (get) Token: 0x0600E093 RID: 57491 RVA: 0x0021328F File Offset: 0x0021148F
+		// Token: 0x170046EA RID: 18154
+		// (get) Token: 0x0600EE93 RID: 61075 RVA: 0x0022FDC7 File Offset: 0x0022DFC7
 		[Nullable(2)]
 		public virtual string EdTidSubText
 		{
@@ -93,13 +91,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C5D RID: 31837
+		// Token: 0x0400830B RID: 33547
 		private ISheriffCashSettlement Instance;
 
-		// Token: 0x04007C5E RID: 31838
+		// Token: 0x0400830C RID: 33548
 		private VarRef _VarRefCache;
 
-		// Token: 0x04007C5F RID: 31839
+		// Token: 0x0400830D RID: 33549
 		private bool _VarRefInited;
 	}
 }

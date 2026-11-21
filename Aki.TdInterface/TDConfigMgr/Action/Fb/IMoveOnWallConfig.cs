@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002724 RID: 10020
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029EE RID: 10734
 	public class IMoveOnWallConfig
 	{
-		// Token: 0x0600DF71 RID: 57201 RVA: 0x00211C38 File Offset: 0x0020FE38
+		// Token: 0x0600ED69 RID: 60777 RVA: 0x0022E6C8 File Offset: 0x0022C8C8
 		public static IMoveOnWallConfig Create(IMoveOnWallConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042EB RID: 17131
-		// (get) Token: 0x0600DF72 RID: 57202 RVA: 0x00211C57 File Offset: 0x0020FE57
+		// Token: 0x1700463B RID: 17979
+		// (get) Token: 0x0600ED6A RID: 60778 RVA: 0x0022E6E7 File Offset: 0x0022C8E7
 		public virtual VectorInfo WallDetectDir
 		{
 			get
@@ -39,14 +37,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C02 RID: 31746
+		// Token: 0x040082AC RID: 33452
 		private IMoveOnWallConfig Instance;
 
-		// Token: 0x04007C03 RID: 31747
+		// Token: 0x040082AD RID: 33453
 		[Nullable(2)]
 		private VectorInfo _WallDetectDirCache;
 
-		// Token: 0x04007C04 RID: 31748
+		// Token: 0x040082AE RID: 33454
 		private bool _WallDetectDirInited;
 	}
 }

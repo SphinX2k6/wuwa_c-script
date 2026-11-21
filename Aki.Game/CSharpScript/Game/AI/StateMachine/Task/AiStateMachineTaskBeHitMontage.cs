@@ -7,28 +7,28 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Task
 {
-	// Token: 0x02007318 RID: 29464
+	// Token: 0x0200649B RID: 25755
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineTaskBeHitMontage : AiStateMachineTask, IAiTaskMontage
 	{
-		// Token: 0x17009F83 RID: 40835
-		// (get) Token: 0x06048522 RID: 296226 RVA: 0x012991D0 File Offset: 0x012973D0
-		// (set) Token: 0x06048523 RID: 296227 RVA: 0x012991D8 File Offset: 0x012973D8
+		// Token: 0x17007721 RID: 30497
+		// (get) Token: 0x0603E96F RID: 256367 RVA: 0x0123BC50 File Offset: 0x01239E50
+		// (set) Token: 0x0603E970 RID: 256368 RVA: 0x0123BC58 File Offset: 0x01239E58
 		public bool Playing { get; set; }
 
-		// Token: 0x17009F84 RID: 40836
-		// (get) Token: 0x06048524 RID: 296228 RVA: 0x012991E1 File Offset: 0x012973E1
-		// (set) Token: 0x06048525 RID: 296229 RVA: 0x012991E9 File Offset: 0x012973E9
+		// Token: 0x17007722 RID: 30498
+		// (get) Token: 0x0603E971 RID: 256369 RVA: 0x0123BC61 File Offset: 0x01239E61
+		// (set) Token: 0x0603E972 RID: 256370 RVA: 0x0123BC69 File Offset: 0x01239E69
 		public float RemainedTrigger { get; set; } = -1f;
 
-		// Token: 0x06048526 RID: 296230 RVA: 0x012991F2 File Offset: 0x012973F2
+		// Token: 0x0603E973 RID: 256371 RVA: 0x0123BC72 File Offset: 0x01239E72
 		public AiStateMachineTaskBeHitMontage(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.Task state) : base(stateMachineNode, state)
 		{
 		}
 
-		// Token: 0x17009F85 RID: 40837
-		// (get) Token: 0x06048527 RID: 296231 RVA: 0x01299228 File Offset: 0x01297428
+		// Token: 0x17007723 RID: 30499
+		// (get) Token: 0x0603E974 RID: 256372 RVA: 0x0123BCA8 File Offset: 0x01239EA8
 		public bool HasResource
 		{
 			get
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x06048528 RID: 296232 RVA: 0x01299238 File Offset: 0x01297438
+		// Token: 0x0603E975 RID: 256373 RVA: 0x0123BCB8 File Offset: 0x01239EB8
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Task task)
 		{
 			this.DefaultMontageName = task.TaskBeHitMontage.DefaultMontageName;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			return true;
 		}
 
-		// Token: 0x06048529 RID: 296233 RVA: 0x012992CC File Offset: 0x012974CC
+		// Token: 0x0603E976 RID: 256374 RVA: 0x0123BD4C File Offset: 0x01239F4C
 		private void ActivateHitStateByHitAnim(EHitAnim beHitAnim)
 		{
 			if (this.Node.UnifiedStateComponent.PositionState == ECharPositionState.Air)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x0604852A RID: 296234 RVA: 0x01299398 File Offset: 0x01297598
+		// Token: 0x0603E977 RID: 256375 RVA: 0x0123BE18 File Offset: 0x0123A018
 		public unsafe override void OnEnter(long? contextId = null)
 		{
 			if (this.Node.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.濒死"]))
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.Node.TaskFinished = true;
 		}
 
-		// Token: 0x0604852B RID: 296235 RVA: 0x01299680 File Offset: 0x01297880
+		// Token: 0x0603E978 RID: 256376 RVA: 0x0123C100 File Offset: 0x0123A300
 		public override void OnExit(long? contextId = null)
 		{
 			if (this.MontageHandle != null)
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.Playing = false;
 		}
 
-		// Token: 0x0604852C RID: 296236 RVA: 0x012996D4 File Offset: 0x012978D4
+		// Token: 0x0603E979 RID: 256377 RVA: 0x0123C154 File Offset: 0x0123A354
 		protected override void OnTick(float deltaSeconds, long? contextId = null)
 		{
 			if (this.MontageHandle != null)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x0604852D RID: 296237 RVA: 0x012996FF File Offset: 0x012978FF
+		// Token: 0x0603E97A RID: 256378 RVA: 0x0123C17F File Offset: 0x0123A37F
 		protected override void OnClear()
 		{
 			if (this.MontageHandle != null)
@@ -190,44 +190,44 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.MontageHandle = null;
 		}
 
-		// Token: 0x0604852E RID: 296238 RVA: 0x01299735 File Offset: 0x01297935
+		// Token: 0x0603E97B RID: 256379 RVA: 0x0123C1B5 File Offset: 0x0123A3B5
 		private void OnMontageEnd(bool isInterrupted)
 		{
 			this.Node.TaskFinished = true;
 		}
 
-		// Token: 0x0604852F RID: 296239 RVA: 0x01299743 File Offset: 0x01297943
+		// Token: 0x0603E97C RID: 256380 RVA: 0x0123C1C3 File Offset: 0x0123A3C3
 		public double GetTimeRemaining()
 		{
 			return (double)((this.MontageHandle != null) ? this.Node.MontageComponent.GetMontageTimeRemaining(this.MontageHandle.Value) : -1f);
 		}
 
-		// Token: 0x06048530 RID: 296240 RVA: 0x01299775 File Offset: 0x01297975
+		// Token: 0x0603E97D RID: 256381 RVA: 0x0123C1F5 File Offset: 0x0123A3F5
 		public double GetTimeElapsing()
 		{
 			return (double)((this.MontageHandle != null) ? this.Node.MontageComponent.GetMontageTimeElapsing(this.MontageHandle.Value) : -1f);
 		}
 
-		// Token: 0x06048531 RID: 296241 RVA: 0x012997A7 File Offset: 0x012979A7
+		// Token: 0x0603E97E RID: 256382 RVA: 0x0123C227 File Offset: 0x0123A427
 		public double GetTimeLength()
 		{
 			return (double)((this.MontageHandle != null) ? this.Node.MontageComponent.GetMontageTimeLength(this.MontageHandle.Value) : -1f);
 		}
 
-		// Token: 0x06048532 RID: 296242 RVA: 0x012997D9 File Offset: 0x012979D9
+		// Token: 0x0603E97F RID: 256383 RVA: 0x0123C259 File Offset: 0x0123A459
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x06048533 RID: 296243 RVA: 0x012997E2 File Offset: 0x012979E2
+		// Token: 0x0603E980 RID: 256384 RVA: 0x0123C262 File Offset: 0x0123A462
 		[NullableContext(2)]
 		private string GetNameByHandle(int handle)
 		{
 			return this.Node.MontageComponent.GetMontageTaskNameByHandle(handle);
 		}
 
-		// Token: 0x06048534 RID: 296244 RVA: 0x012997F5 File Offset: 0x012979F5
+		// Token: 0x0603E981 RID: 256385 RVA: 0x0123C275 File Offset: 0x0123A475
 		[NullableContext(2)]
 		public string GetNameByCurrentHandle()
 		{
@@ -238,19 +238,19 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			return null;
 		}
 
-		// Token: 0x040263BF RID: 156607
+		// Token: 0x040216AC RID: 136876
 		private float BlendInTime;
 
-		// Token: 0x040263C0 RID: 156608
+		// Token: 0x040216AD RID: 136877
 		private int? MontageHandle;
 
-		// Token: 0x040263C2 RID: 156610
+		// Token: 0x040216AF RID: 136879
 		private string DefaultMontageName = "";
 
-		// Token: 0x040263C3 RID: 156611
+		// Token: 0x040216B0 RID: 136880
 		private readonly Dictionary<EHitAnim, string> MontageMap = new Dictionary<EHitAnim, string>();
 
-		// Token: 0x040263C4 RID: 156612
+		// Token: 0x040216B1 RID: 136881
 		[Nullable(2)]
 		private string MontageName = "";
 	}

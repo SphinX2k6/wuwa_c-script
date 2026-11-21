@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BA8 RID: 19368
+	// Token: 0x02005092 RID: 20626
 	public class ICompareFishingTechLevelT
 	{
-		// Token: 0x17008C99 RID: 35993
-		// (get) Token: 0x0601E8B4 RID: 125108 RVA: 0x00446024 File Offset: 0x00444224
-		// (set) Token: 0x0601E8B5 RID: 125109 RVA: 0x0044602C File Offset: 0x0044422C
+		// Token: 0x170093B2 RID: 37810
+		// (get) Token: 0x06020460 RID: 132192 RVA: 0x00478B88 File Offset: 0x00476D88
+		// (set) Token: 0x06020461 RID: 132193 RVA: 0x00478B90 File Offset: 0x00476D90
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008C9A RID: 35994
-		// (get) Token: 0x0601E8B6 RID: 125110 RVA: 0x00446035 File Offset: 0x00444235
-		// (set) Token: 0x0601E8B7 RID: 125111 RVA: 0x0044603D File Offset: 0x0044423D
+		// Token: 0x170093B3 RID: 37811
+		// (get) Token: 0x06020462 RID: 132194 RVA: 0x00478B99 File Offset: 0x00476D99
+		// (set) Token: 0x06020463 RID: 132195 RVA: 0x00478BA1 File Offset: 0x00476DA1
 		public int TechId { get; set; }
 
-		// Token: 0x17008C9B RID: 35995
-		// (get) Token: 0x0601E8B8 RID: 125112 RVA: 0x00446046 File Offset: 0x00444246
-		// (set) Token: 0x0601E8B9 RID: 125113 RVA: 0x0044604E File Offset: 0x0044424E
+		// Token: 0x170093B4 RID: 37812
+		// (get) Token: 0x06020464 RID: 132196 RVA: 0x00478BAA File Offset: 0x00476DAA
+		// (set) Token: 0x06020465 RID: 132197 RVA: 0x00478BB2 File Offset: 0x00476DB2
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008C9C RID: 35996
-		// (get) Token: 0x0601E8BA RID: 125114 RVA: 0x00446057 File Offset: 0x00444257
-		// (set) Token: 0x0601E8BB RID: 125115 RVA: 0x0044605F File Offset: 0x0044425F
+		// Token: 0x170093B5 RID: 37813
+		// (get) Token: 0x06020466 RID: 132198 RVA: 0x00478BBB File Offset: 0x00476DBB
+		// (set) Token: 0x06020467 RID: 132199 RVA: 0x00478BC3 File Offset: 0x00476DC3
 		public int TechLevel { get; set; }
 
-		// Token: 0x0601E8BC RID: 125116 RVA: 0x00446068 File Offset: 0x00444268
+		// Token: 0x06020468 RID: 132200 RVA: 0x00478BCC File Offset: 0x00476DCC
 		public ICompareFishingTechLevelT()
 		{
 			this.Type = ECondition.CompareVar;

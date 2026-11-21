@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E56 RID: 28246
+	// Token: 0x020075D7 RID: 30167
 	public class IRemovePreloadFlowsT
 	{
-		// Token: 0x1700D26C RID: 53868
-		// (get) Token: 0x06031E9E RID: 204446 RVA: 0x006C0E07 File Offset: 0x006BF007
-		// (set) Token: 0x06031E9F RID: 204447 RVA: 0x006C0E0F File Offset: 0x006BF00F
+		// Token: 0x1700DDBE RID: 56766
+		// (get) Token: 0x06034EC6 RID: 216774 RVA: 0x0071C907 File Offset: 0x0071AB07
+		// (set) Token: 0x06034EC7 RID: 216775 RVA: 0x0071C90F File Offset: 0x0071AB0F
 		public ERemovePreloadResourceObjectType Type { get; set; }
 
-		// Token: 0x1700D26D RID: 53869
-		// (get) Token: 0x06031EA0 RID: 204448 RVA: 0x006C0E18 File Offset: 0x006BF018
-		// (set) Token: 0x06031EA1 RID: 204449 RVA: 0x006C0E20 File Offset: 0x006BF020
+		// Token: 0x1700DDBF RID: 56767
+		// (get) Token: 0x06034EC8 RID: 216776 RVA: 0x0071C918 File Offset: 0x0071AB18
+		// (set) Token: 0x06034EC9 RID: 216777 RVA: 0x0071C920 File Offset: 0x0071AB20
 		public IPlayFlowT FlowId { get; set; }
 
-		// Token: 0x06031EA2 RID: 204450 RVA: 0x006C0E29 File Offset: 0x006BF029
+		// Token: 0x06034ECA RID: 216778 RVA: 0x0071C929 File Offset: 0x0071AB29
 		public IRemovePreloadFlowsT()
 		{
 			this.Type = ERemovePreloadResourceObjectType.RemovePreloadResourceTrialCharacter;

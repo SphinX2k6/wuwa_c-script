@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015DA RID: 5594
+// Token: 0x02000A92 RID: 2706
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerSeasonScoreProgressItem : UiPanelBase
 {
-	// Token: 0x06009E43 RID: 40515 RVA: 0x00227BB4 File Offset: 0x00225DB4
+	// Token: 0x06007221 RID: 29217 RVA: 0x00231968 File Offset: 0x0022FB68
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -30,13 +30,13 @@ public class WheelTowerSeasonScoreProgressItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009E44 RID: 40516 RVA: 0x00227C5F File Offset: 0x00225E5F
+	// Token: 0x06007222 RID: 29218 RVA: 0x00231A13 File Offset: 0x0022FC13
 	protected override void OnStart()
 	{
 		this.ScoreRewardLayout = new GenericLayout<WheelTowerSeasonScoreItem, IWheelTowerSeasonScoreData>(base.GetHorizontalLayout(2), new Func<WheelTowerSeasonScoreItem>(this.InitScoreItem), base.GetItem(3).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x06009E45 RID: 40517 RVA: 0x00227C92 File Offset: 0x00225E92
+	// Token: 0x06007223 RID: 29219 RVA: 0x00231A46 File Offset: 0x0022FC46
 	private WheelTowerSeasonScoreItem InitScoreItem()
 	{
 		return new WheelTowerSeasonScoreItem
@@ -45,7 +45,7 @@ public class WheelTowerSeasonScoreProgressItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06009E46 RID: 40518 RVA: 0x00227CA8 File Offset: 0x00225EA8
+	// Token: 0x06007224 RID: 29220 RVA: 0x00231A5C File Offset: 0x0022FC5C
 	public void Refresh(int curScore, List<IWheelTowerSeasonScoreData> rewardList)
 	{
 		if (rewardList.Count == 0)
@@ -65,7 +65,7 @@ public class WheelTowerSeasonScoreProgressItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "WheelTower_SeasonScore_TotalScore", Array.Empty<object>());
 	}
 
-	// Token: 0x04004670 RID: 18032
+	// Token: 0x04004716 RID: 18198
 	[Nullable(new byte[]
 	{
 		2,
@@ -74,7 +74,7 @@ public class WheelTowerSeasonScoreProgressItem : UiPanelBase
 	})]
 	private GenericLayout<WheelTowerSeasonScoreItem, IWheelTowerSeasonScoreData> ScoreRewardLayout;
 
-	// Token: 0x04004671 RID: 18033
+	// Token: 0x04004717 RID: 18199
 	[Nullable(2)]
 	public Action OnClickToGet;
 }

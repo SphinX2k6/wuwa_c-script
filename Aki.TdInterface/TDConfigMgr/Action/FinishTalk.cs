@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001724 RID: 5924
+	// Token: 0x020018A1 RID: 6305
 	public class FinishTalk : ActionParams
 	{
-		// Token: 0x06007D73 RID: 32115 RVA: 0x0012CF91 File Offset: 0x0012B191
-		[NullableContext(1)]
+		// Token: 0x06008451 RID: 33873 RVA: 0x0013C03D File Offset: 0x0013A23D
 		public static FinishTalk Create([Nullable(2)] FinishTalk instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x04005010 RID: 20496
+		// Token: 0x0400543F RID: 21567
 		[Nullable(2)]
 		protected new FinishTalk FbInstance;
 	}

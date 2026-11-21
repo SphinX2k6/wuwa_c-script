@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 {
-	// Token: 0x02004355 RID: 17237
+	// Token: 0x02003376 RID: 13174
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_ActionActivateSkillGroup.BP_SM_ActionActivateSkillGroup_C")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 53)]
 	public class BP_SM_ActionActivateSkillGroup_C : UASMAction, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CB20 RID: 183072 RVA: 0x00A260FA File Offset: 0x00A242FA
+		// Token: 0x0602173E RID: 137022 RVA: 0x00960F4E File Offset: 0x0095F14E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SM_ActionActivateSkillGroup_C._ClassPtr == IntPtr.Zero)
@@ -22,66 +22,66 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			return BP_SM_ActionActivateSkillGroup_C._ClassPtr;
 		}
 
-		// Token: 0x0602CB21 RID: 183073 RVA: 0x00A26120 File Offset: 0x00A24320
+		// Token: 0x0602173F RID: 137023 RVA: 0x00960F74 File Offset: 0x0095F174
 		public BP_SM_ActionActivateSkillGroup_C() : this(BuiltinUtils.AllocNativeUObject(BP_SM_ActionActivateSkillGroup_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CB22 RID: 183074 RVA: 0x00A26148 File Offset: 0x00A24348
+		// Token: 0x06021740 RID: 137024 RVA: 0x00960F9C File Offset: 0x0095F19C
 		[NullableContext(1)]
 		public BP_SM_ActionActivateSkillGroup_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SM_ActionActivateSkillGroup_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700707E RID: 28798
-		// (get) Token: 0x0602CB23 RID: 183075 RVA: 0x00A2617B File Offset: 0x00A2437B
-		// (set) Token: 0x0602CB24 RID: 183076 RVA: 0x00A2618B File Offset: 0x00A2438B
+		// Token: 0x17004480 RID: 17536
+		// (get) Token: 0x06021741 RID: 137025 RVA: 0x00960FCF File Offset: 0x0095F1CF
+		// (set) Token: 0x06021742 RID: 137026 RVA: 0x00960FDF File Offset: 0x0095F1DF
 		public unsafe int ConfigId
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_ActionActivateSkillGroup_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_SM_ActionActivateSkillGroup_C.__PropertyOffset_ConfigId);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_ActionActivateSkillGroup_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_ActionActivateSkillGroup_C.__PropertyOffset_ConfigId) = value;
 			}
 		}
 
-		// Token: 0x1700707F RID: 28799
-		// (get) Token: 0x0602CB25 RID: 183077 RVA: 0x00A2619C File Offset: 0x00A2439C
-		// (set) Token: 0x0602CB26 RID: 183078 RVA: 0x00A261AC File Offset: 0x00A243AC
+		// Token: 0x17004481 RID: 17537
+		// (get) Token: 0x06021743 RID: 137027 RVA: 0x00960FF0 File Offset: 0x0095F1F0
+		// (set) Token: 0x06021744 RID: 137028 RVA: 0x00961000 File Offset: 0x0095F200
 		public unsafe bool 激活
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_ActionActivateSkillGroup_C.__PropertyOffset_1) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SM_ActionActivateSkillGroup_C.__PropertyOffset_激活) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_ActionActivateSkillGroup_C.__PropertyOffset_1) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SM_ActionActivateSkillGroup_C.__PropertyOffset_激活) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602CB27 RID: 183079 RVA: 0x00A261BD File Offset: 0x00A243BD
+		// Token: 0x06021745 RID: 137029 RVA: 0x00961011 File Offset: 0x0095F211
 		protected BP_SM_ActionActivateSkillGroup_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401790A RID: 96522
+		// Token: 0x0401248B RID: 74891
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_ActionActivateSkillGroup.BP_SM_ActionActivateSkillGroup_C";
 
-		// Token: 0x0401790B RID: 96523
+		// Token: 0x0401248C RID: 74892
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401790C RID: 96524
+		// Token: 0x0401248D RID: 74893
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401790D RID: 96525
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401248E RID: 74894
+		internal static int __PropertyOffset_ConfigId;
 
-		// Token: 0x0401790E RID: 96526
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401248F RID: 74895
+		internal static int __PropertyOffset_激活;
 	}
 }

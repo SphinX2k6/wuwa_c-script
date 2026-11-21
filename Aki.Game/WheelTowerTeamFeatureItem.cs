@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020015C8 RID: 5576
+// Token: 0x02000A80 RID: 2688
 public class WheelTowerTeamFeatureItem : GridProxyAbstract<int>
 {
-	// Token: 0x06009E05 RID: 40453 RVA: 0x00226220 File Offset: 0x00224420
+	// Token: 0x060071E3 RID: 29155 RVA: 0x0022FFD0 File Offset: 0x0022E1D0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,7 +22,7 @@ public class WheelTowerTeamFeatureItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009E06 RID: 40454 RVA: 0x0022628C File Offset: 0x0022448C
+	// Token: 0x060071E4 RID: 29156 RVA: 0x0023003C File Offset: 0x0022E23C
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		NewTowerTeamFeature? teamFeatureConfig = WheelTowerConfig.Instance.GetTeamFeatureConfig(data);

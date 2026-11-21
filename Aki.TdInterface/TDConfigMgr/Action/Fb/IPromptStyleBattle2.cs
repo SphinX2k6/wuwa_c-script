@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025C3 RID: 9667
+	// Token: 0x02002872 RID: 10354
 	public class IPromptStyleBattle2 : IPromptStyleBase
 	{
-		// Token: 0x0600D95F RID: 55647 RVA: 0x00206C38 File Offset: 0x00204E38
-		[NullableContext(1)]
+		// Token: 0x0600E6D9 RID: 59097 RVA: 0x0022290C File Offset: 0x00220B0C
 		public static IPromptStyleBattle2 Create(IPromptStyleBattle2? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F9B RID: 16283
-		// (get) Token: 0x0600D960 RID: 55648 RVA: 0x00206C57 File Offset: 0x00204E57
+		// Token: 0x170042A3 RID: 17059
+		// (get) Token: 0x0600E6DA RID: 59098 RVA: 0x0022292B File Offset: 0x00220B2B
 		public override EPromptStyle Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078BB RID: 30907
+		// Token: 0x04007F22 RID: 32546
 		private IPromptStyleBattle2 Instance;
 	}
 }

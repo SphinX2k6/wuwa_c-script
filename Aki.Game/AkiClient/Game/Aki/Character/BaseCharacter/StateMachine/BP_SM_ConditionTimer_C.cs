@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 {
-	// Token: 0x0200438B RID: 17291
+	// Token: 0x020033AC RID: 13228
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_ConditionTimer.BP_SM_ConditionTimer_C")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 65)]
 	public class BP_SM_ConditionTimer_C : UASMConditionBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CCA6 RID: 183462 RVA: 0x00A28B2C File Offset: 0x00A26D2C
+		// Token: 0x060218C4 RID: 137412 RVA: 0x00963980 File Offset: 0x00961B80
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SM_ConditionTimer_C._ClassPtr == IntPtr.Zero)
@@ -22,84 +22,84 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			return BP_SM_ConditionTimer_C._ClassPtr;
 		}
 
-		// Token: 0x0602CCA7 RID: 183463 RVA: 0x00A28B50 File Offset: 0x00A26D50
+		// Token: 0x060218C5 RID: 137413 RVA: 0x009639A4 File Offset: 0x00961BA4
 		public BP_SM_ConditionTimer_C() : this(BuiltinUtils.AllocNativeUObject(BP_SM_ConditionTimer_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CCA8 RID: 183464 RVA: 0x00A28B78 File Offset: 0x00A26D78
+		// Token: 0x060218C6 RID: 137414 RVA: 0x009639CC File Offset: 0x00961BCC
 		[NullableContext(1)]
 		public BP_SM_ConditionTimer_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SM_ConditionTimer_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170070D5 RID: 28885
-		// (get) Token: 0x0602CCA9 RID: 183465 RVA: 0x00A28BAB File Offset: 0x00A26DAB
-		// (set) Token: 0x0602CCAA RID: 183466 RVA: 0x00A28BBB File Offset: 0x00A26DBB
+		// Token: 0x170044D7 RID: 17623
+		// (get) Token: 0x060218C7 RID: 137415 RVA: 0x009639FF File Offset: 0x00961BFF
+		// (set) Token: 0x060218C8 RID: 137416 RVA: 0x00963A0F File Offset: 0x00961C0F
 		public unsafe int MinTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_ConditionTimer_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_SM_ConditionTimer_C.__PropertyOffset_MinTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_ConditionTimer_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_ConditionTimer_C.__PropertyOffset_MinTime) = value;
 			}
 		}
 
-		// Token: 0x170070D6 RID: 28886
-		// (get) Token: 0x0602CCAB RID: 183467 RVA: 0x00A28BCC File Offset: 0x00A26DCC
-		// (set) Token: 0x0602CCAC RID: 183468 RVA: 0x00A28BDC File Offset: 0x00A26DDC
+		// Token: 0x170044D8 RID: 17624
+		// (get) Token: 0x060218C9 RID: 137417 RVA: 0x00963A20 File Offset: 0x00961C20
+		// (set) Token: 0x060218CA RID: 137418 RVA: 0x00963A30 File Offset: 0x00961C30
 		public unsafe int MaxTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_ConditionTimer_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_SM_ConditionTimer_C.__PropertyOffset_MaxTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_ConditionTimer_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_ConditionTimer_C.__PropertyOffset_MaxTime) = value;
 			}
 		}
 
-		// Token: 0x170070D7 RID: 28887
-		// (get) Token: 0x0602CCAD RID: 183469 RVA: 0x00A28BED File Offset: 0x00A26DED
-		// (set) Token: 0x0602CCAE RID: 183470 RVA: 0x00A28BFD File Offset: 0x00A26DFD
+		// Token: 0x170044D9 RID: 17625
+		// (get) Token: 0x060218CB RID: 137419 RVA: 0x00963A41 File Offset: 0x00961C41
+		// (set) Token: 0x060218CC RID: 137420 RVA: 0x00963A51 File Offset: 0x00961C51
 		public unsafe bool IsClient
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_ConditionTimer_C.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SM_ConditionTimer_C.__PropertyOffset_IsClient) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_ConditionTimer_C.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SM_ConditionTimer_C.__PropertyOffset_IsClient) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602CCAF RID: 183471 RVA: 0x00A28C0E File Offset: 0x00A26E0E
+		// Token: 0x060218CD RID: 137421 RVA: 0x00963A62 File Offset: 0x00961C62
 		protected BP_SM_ConditionTimer_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04017A09 RID: 96777
+		// Token: 0x0401258A RID: 75146
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_ConditionTimer.BP_SM_ConditionTimer_C";
 
-		// Token: 0x04017A0A RID: 96778
+		// Token: 0x0401258B RID: 75147
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04017A0B RID: 96779
+		// Token: 0x0401258C RID: 75148
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04017A0C RID: 96780
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401258D RID: 75149
+		internal static int __PropertyOffset_MinTime;
 
-		// Token: 0x04017A0D RID: 96781
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401258E RID: 75150
+		internal static int __PropertyOffset_MaxTime;
 
-		// Token: 0x04017A0E RID: 96782
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401258F RID: 75151
+		internal static int __PropertyOffset_IsClient;
 	}
 }

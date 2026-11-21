@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200297D RID: 10621
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C63 RID: 11363
 	public class IFaceExpressionConfigData
 	{
-		// Token: 0x0600EB50 RID: 60240 RVA: 0x00226C47 File Offset: 0x00224E47
+		// Token: 0x0600F9CB RID: 63947 RVA: 0x0024439F File Offset: 0x0024259F
 		public static IFaceExpressionConfigData Create(IFaceExpressionConfigData? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A18 RID: 18968
-		// (get) Token: 0x0600EB51 RID: 60241 RVA: 0x00226C66 File Offset: 0x00224E66
+		// Token: 0x17004DB3 RID: 19891
+		// (get) Token: 0x0600F9CC RID: 63948 RVA: 0x002443BE File Offset: 0x002425BE
 		public virtual int Id
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A19 RID: 18969
-		// (get) Token: 0x0600EB52 RID: 60242 RVA: 0x00226C73 File Offset: 0x00224E73
+		// Token: 0x17004DB4 RID: 19892
+		// (get) Token: 0x0600F9CD RID: 63949 RVA: 0x002443CB File Offset: 0x002425CB
 		public virtual IFaceExpressionConfig FaceExpression
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A1A RID: 18970
-		// (get) Token: 0x0600EB53 RID: 60243 RVA: 0x00226CA2 File Offset: 0x00224EA2
+		// Token: 0x17004DB5 RID: 19893
+		// (get) Token: 0x0600F9CE RID: 63950 RVA: 0x002443FA File Offset: 0x002425FA
 		public virtual IFaceExpressionConfig MaleVariant
 		{
 			get
@@ -64,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A1B RID: 18971
-		// (get) Token: 0x0600EB54 RID: 60244 RVA: 0x00226CD4 File Offset: 0x00224ED4
+		// Token: 0x17004DB6 RID: 19894
+		// (get) Token: 0x0600F9CF RID: 63951 RVA: 0x0024442C File Offset: 0x0024262C
 		public virtual bool? CloseAutoBlink
 		{
 			get
@@ -78,19 +75,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008195 RID: 33173
+		// Token: 0x04008879 RID: 34937
 		private IFaceExpressionConfigData Instance;
 
-		// Token: 0x04008196 RID: 33174
+		// Token: 0x0400887A RID: 34938
 		private IFaceExpressionConfig _FaceExpressionCache;
 
-		// Token: 0x04008197 RID: 33175
+		// Token: 0x0400887B RID: 34939
 		private bool _FaceExpressionInited;
 
-		// Token: 0x04008198 RID: 33176
+		// Token: 0x0400887C RID: 34940
 		private IFaceExpressionConfig _MaleVariantCache;
 
-		// Token: 0x04008199 RID: 33177
+		// Token: 0x0400887D RID: 34941
 		private bool _MaleVariantInited;
 	}
 }

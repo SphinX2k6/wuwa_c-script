@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200033E RID: 830
+	// Token: 0x02000353 RID: 851
 	public class ConfigFogBlockAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001379 RID: 4985 RVA: 0x000C776F File Offset: 0x000C596F
+		// Token: 0x060013F7 RID: 5111 RVA: 0x000CDC7B File Offset: 0x000CBE7B
 		static ConfigFogBlockAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFogBlockAll.CreateStaticDefaultValue), new Action(ConfigFogBlockAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600137A RID: 4986 RVA: 0x000C7790 File Offset: 0x000C5990
+		// Token: 0x060013F8 RID: 5112 RVA: 0x000CDC9C File Offset: 0x000CBE9C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFogBlockAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600137B RID: 4987 RVA: 0x000C780F File Offset: 0x000C5A0F
+		// Token: 0x060013F9 RID: 5113 RVA: 0x000CDD1B File Offset: 0x000CBF1B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFogBlockAll.LogPair = null;
 			ConfigFogBlockAll.HandleId = 0;
 		}
 
-		// Token: 0x0600137C RID: 4988 RVA: 0x000C781D File Offset: 0x000C5A1D
+		// Token: 0x060013FA RID: 5114 RVA: 0x000CDD29 File Offset: 0x000CBF29
 		public static void Init()
 		{
 			ConfigFogBlockAll.HandleId = ConfigCommon.InitDataStatement(ConfigFogBlockAll.HandleId, "db_mapfog.db", "select BinData from `FogBlock`");
 		}
 
-		// Token: 0x0600137D RID: 4989 RVA: 0x000C7838 File Offset: 0x000C5A38
+		// Token: 0x060013FB RID: 5115 RVA: 0x000CDD44 File Offset: 0x000CBF44
 		[NullableContext(2)]
 		public static IReadOnlyList<FogBlock> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001696 RID: 5782
+		// Token: 0x04001729 RID: 5929
 		private const string DB = "db_mapfog.db";
 
-		// Token: 0x04001697 RID: 5783
+		// Token: 0x0400172A RID: 5930
 		private const string FILE = "d.地图迷雾.xlsx";
 
-		// Token: 0x04001698 RID: 5784
+		// Token: 0x0400172B RID: 5931
 		private const string TABLE = "FogBlock";
 
-		// Token: 0x04001699 RID: 5785
+		// Token: 0x0400172C RID: 5932
 		private const string COMMAND = "select BinData from `FogBlock`";
 
-		// Token: 0x0400169A RID: 5786
+		// Token: 0x0400172D RID: 5933
 		private const string KEY_PREFIX = "FogBlockAll";
 
-		// Token: 0x0400169B RID: 5787
+		// Token: 0x0400172E RID: 5934
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400169C RID: 5788
+		// Token: 0x0400172F RID: 5935
 		private static int HandleId;
 	}
 }

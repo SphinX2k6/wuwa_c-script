@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DDE RID: 24030
+	// Token: 0x02004DC2 RID: 19906
 	public class SpecialEnergyBarJingRan : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D145 RID: 250181 RVA: 0x00EB21B0 File Offset: 0x00EB03B0
+		// Token: 0x060320BC RID: 204988 RVA: 0x00E030A4 File Offset: 0x00E012A4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 23;
@@ -69,14 +69,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D146 RID: 250182 RVA: 0x00EB24DD File Offset: 0x00EB06DD
+		// Token: 0x060320BD RID: 204989 RVA: 0x00E033D1 File Offset: 0x00E015D1
 		protected override void OnInitData()
 		{
 			this.YangConfig = BattleUiModel.Instance.SpecialEnergyBarData.GetSpecialEnergyBarInfo(SpecialEnergyBarJingRan.YANG_CONFIG_ID);
 			this.YinConfig = BattleUiModel.Instance.SpecialEnergyBarData.GetSpecialEnergyBarInfo(SpecialEnergyBarJingRan.YIN_CONFIG_ID);
 		}
 
-		// Token: 0x0603D147 RID: 250183 RVA: 0x00EB2514 File Offset: 0x00EB0714
+		// Token: 0x060320BE RID: 204990 RVA: 0x00E03408 File Offset: 0x00E01608
 		protected override void AddEvents()
 		{
 			base.AddEvents();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.ListenForTagAddOrRemoveChanged(SpecialEnergyBarJingRan.StateStrengthTagId, new BaseTagComponent.TTagSwitchedCallback(this.OnStrengthTagChange));
 		}
 
-		// Token: 0x0603D148 RID: 250184 RVA: 0x00EB259C File Offset: 0x00EB079C
+		// Token: 0x060320BF RID: 204991 RVA: 0x00E03490 File Offset: 0x00E01690
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarJingRan.<OnBeforeStartAsync>d__33 <OnBeforeStartAsync>d__;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D149 RID: 250185 RVA: 0x00EB25E0 File Offset: 0x00EB07E0
+		// Token: 0x060320C0 RID: 204992 RVA: 0x00E034D4 File Offset: 0x00E016D4
 		protected UniTask InitBarItem()
 		{
 			SpecialEnergyBarJingRan.<InitBarItem>d__34 <InitBarItem>d__;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D14A RID: 250186 RVA: 0x00EB2624 File Offset: 0x00EB0824
+		// Token: 0x060320C1 RID: 204993 RVA: 0x00E03518 File Offset: 0x00E01718
 		[NullableContext(1)]
 		protected UniTask InitFishItem(int index, UUIItem slotItem)
 		{
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitFishItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D14B RID: 250187 RVA: 0x00EB2678 File Offset: 0x00EB0878
+		// Token: 0x060320C2 RID: 204994 RVA: 0x00E0356C File Offset: 0x00E0176C
 		protected override void OnStart()
 		{
 			base.InitTweenAnim(22);
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnStrengthTagChange(SpecialEnergyBarJingRan.StateStrengthTagId, tagExist);
 		}
 
-		// Token: 0x0603D14C RID: 250188 RVA: 0x00EB26F4 File Offset: 0x00EB08F4
+		// Token: 0x060320C3 RID: 204995 RVA: 0x00E035E8 File Offset: 0x00E017E8
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayWarnAnim(false);
 		}
 
-		// Token: 0x0603D14D RID: 250189 RVA: 0x00EB2793 File Offset: 0x00EB0993
+		// Token: 0x060320C4 RID: 204996 RVA: 0x00E03687 File Offset: 0x00E01887
 		private void OnStateTagChange(int tagId, bool tagExist)
 		{
 			this.IsStateDirty = true;
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barItemB.MarkStateChange();
 		}
 
-		// Token: 0x0603D14E RID: 250190 RVA: 0x00EB27BD File Offset: 0x00EB09BD
+		// Token: 0x060320C5 RID: 204997 RVA: 0x00E036B1 File Offset: 0x00E018B1
 		private void OnStrengthTagChange(int tagId, bool tagExist)
 		{
 			this.IsInStrengthState = tagExist;
@@ -213,25 +213,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barItemB.SetStrengthState(tagExist);
 		}
 
-		// Token: 0x0603D14F RID: 250191 RVA: 0x00EB27E9 File Offset: 0x00EB09E9
+		// Token: 0x060320C6 RID: 204998 RVA: 0x00E036DD File Offset: 0x00E018DD
 		private void OnFishEnergyChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.UpdateFishEnergy();
 		}
 
-		// Token: 0x0603D150 RID: 250192 RVA: 0x00EB27F1 File Offset: 0x00EB09F1
+		// Token: 0x060320C7 RID: 204999 RVA: 0x00E036E5 File Offset: 0x00E018E5
 		protected override void OnAttributeChanged()
 		{
 			this.UpdateBarBgStyle();
 		}
 
-		// Token: 0x0603D151 RID: 250193 RVA: 0x00EB27F9 File Offset: 0x00EB09F9
+		// Token: 0x060320C8 RID: 205000 RVA: 0x00E036ED File Offset: 0x00E018ED
 		protected override void OnMaxAttributeChanged()
 		{
 			this.UpdateBarBgStyle();
 		}
 
-		// Token: 0x0603D152 RID: 250194 RVA: 0x00EB2804 File Offset: 0x00EB0A04
+		// Token: 0x060320C9 RID: 205001 RVA: 0x00E036F8 File Offset: 0x00E018F8
 		private void UpdateBarBgStyle()
 		{
 			bool flag = this.AttributeComponent.GetCurrentValue(this.AttributeId) > 0f;
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshFireState(false);
 		}
 
-		// Token: 0x0603D153 RID: 250195 RVA: 0x00EB286C File Offset: 0x00EB0A6C
+		// Token: 0x060320CA RID: 205002 RVA: 0x00E03760 File Offset: 0x00E01960
 		private bool IsCurItemPlayingAnim()
 		{
 			SpecialEnergyBarJingRan.EState curState = this.CurState;
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603D154 RID: 250196 RVA: 0x00EB28AC File Offset: 0x00EB0AAC
+		// Token: 0x060320CB RID: 205003 RVA: 0x00E037A0 File Offset: 0x00E019A0
 		private void RefreshState()
 		{
 			if (this.IsCurItemPlayingAnim())
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsWaitingSlotAnim = false;
 		}
 
-		// Token: 0x0603D155 RID: 250197 RVA: 0x00EB2900 File Offset: 0x00EB0B00
+		// Token: 0x060320CC RID: 205004 RVA: 0x00E037F4 File Offset: 0x00E019F4
 		private void SetState(SpecialEnergyBarJingRan.EState state)
 		{
 			if (state == this.CurState)
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateFishEnergy();
 		}
 
-		// Token: 0x0603D156 RID: 250198 RVA: 0x00EB29AC File Offset: 0x00EB0BAC
+		// Token: 0x060320CD RID: 205005 RVA: 0x00E038A0 File Offset: 0x00E01AA0
 		private void UpdateFishEnergy()
 		{
 			BaseAttributeComponent attributeComponent = this.AttributeComponent;
@@ -383,7 +383,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshFireState(false);
 		}
 
-		// Token: 0x0603D157 RID: 250199 RVA: 0x00EB2B80 File Offset: 0x00EB0D80
+		// Token: 0x060320CE RID: 205006 RVA: 0x00E03A74 File Offset: 0x00E01C74
 		private void RefreshFireState(bool isStart = false)
 		{
 			bool isLightState = this.IsLightState;
@@ -404,7 +404,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsFireState = isLightState;
 		}
 
-		// Token: 0x0603D158 RID: 250200 RVA: 0x00EB2BD0 File Offset: 0x00EB0DD0
+		// Token: 0x060320CF RID: 205007 RVA: 0x00E03AC4 File Offset: 0x00E01CC4
 		private void PlayFillFishAnim(bool isNewFish, bool isZeroEnergy, bool isFullEnergy)
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(8);
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			uiNiagara4.SetUIActive(this.CurState == SpecialEnergyBarJingRan.EState.Yang && !isZeroEnergy && isFullEnergy);
 		}
 
-		// Token: 0x0603D159 RID: 250201 RVA: 0x00EB2C60 File Offset: 0x00EB0E60
+		// Token: 0x060320D0 RID: 205008 RVA: 0x00E03B54 File Offset: 0x00E01D54
 		private void UpdateTargetRot(float newFishNum, float oldFishNum)
 		{
 			if (newFishNum > oldFishNum)
@@ -446,7 +446,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D15A RID: 250202 RVA: 0x00EB2CEE File Offset: 0x00EB0EEE
+		// Token: 0x060320D1 RID: 205009 RVA: 0x00E03BE2 File Offset: 0x00E01DE2
 		private void SetFishState(int fishIndex, SpecialEnergyBarJingRan.EFishState fishState)
 		{
 			if (fishIndex < 0 || fishIndex >= SpecialEnergyBarJingRan.MAX_FISH_NUM)
@@ -456,7 +456,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.FishPanelList[fishIndex].SetFishState(this.CurState, fishState);
 		}
 
-		// Token: 0x0603D15B RID: 250203 RVA: 0x00EB2D18 File Offset: 0x00EB0F18
+		// Token: 0x060320D2 RID: 205010 RVA: 0x00E03C0C File Offset: 0x00E01E0C
 		private void TryRotFishPanel(float delta)
 		{
 			if (this.RemainingRotDegree <= 0f)
@@ -473,7 +473,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(10).SetUIRelativeRotation(this.TmpRotation);
 		}
 
-		// Token: 0x0603D15C RID: 250204 RVA: 0x00EB2D98 File Offset: 0x00EB0F98
+		// Token: 0x060320D3 RID: 205011 RVA: 0x00E03C8C File Offset: 0x00E01E8C
 		private void RefreshBuff()
 		{
 			if (this.Buff != null)
@@ -507,7 +507,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffHandle = 0;
 		}
 
-		// Token: 0x0603D15D RID: 250205 RVA: 0x00EB2E38 File Offset: 0x00EB1038
+		// Token: 0x060320D4 RID: 205012 RVA: 0x00E03D2C File Offset: 0x00E01F2C
 		private void PlayWarnAnim(bool bPlay)
 		{
 			if (this.IsPlayWarnAnim == bPlay)
@@ -527,175 +527,175 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(3).SetAlpha(1f);
 		}
 
-		// Token: 0x0603D15E RID: 250206 RVA: 0x00EB2EAE File Offset: 0x00EB10AE
+		// Token: 0x060320D5 RID: 205013 RVA: 0x00E03DA2 File Offset: 0x00E01FA2
 		protected override void ClearAllTweenAnim()
 		{
 			base.StopTweenAnim(22);
 			base.ClearAllTweenAnim();
 		}
 
-		// Token: 0x0401FD35 RID: 130357
+		// Token: 0x0401A7F2 RID: 108530
 		[StaticVariableRuleIgnore]
 		private static readonly int YANG_CONFIG_ID = 121201;
 
-		// Token: 0x0401FD36 RID: 130358
+		// Token: 0x0401A7F3 RID: 108531
 		private static readonly int YIN_CONFIG_ID = 121202;
 
-		// Token: 0x0401FD37 RID: 130359
+		// Token: 0x0401A7F4 RID: 108532
 		private static readonly int StateYinTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1JingranMd1001.形态标识.阴"];
 
-		// Token: 0x0401FD38 RID: 130360
+		// Token: 0x0401A7F5 RID: 108533
 		private static readonly int StateYangTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1JingranMd1001.形态标识.阳"];
 
-		// Token: 0x0401FD39 RID: 130361
+		// Token: 0x0401A7F6 RID: 108534
 		private static readonly int StateStrengthTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1JingranMd10011.标识.大招状态"];
 
-		// Token: 0x0401FD3A RID: 130362
+		// Token: 0x0401A7F7 RID: 108535
 		private static readonly EAttributeType FishEnergyAttrId = EAttributeType.SpecialEnergy1;
 
-		// Token: 0x0401FD3B RID: 130363
+		// Token: 0x0401A7F8 RID: 108536
 		private static readonly EAttributeType FishEnergyMaxAttrId = EAttributeType.SpecialEnergy1Max;
 
-		// Token: 0x0401FD3C RID: 130364
+		// Token: 0x0401A7F9 RID: 108537
 		private static readonly int MAX_FISH_NUM = 3;
 
-		// Token: 0x0401FD3D RID: 130365
+		// Token: 0x0401A7FA RID: 108538
 		private static readonly int FISH_ROT_SPEED = 360;
 
-		// Token: 0x0401FD3E RID: 130366
+		// Token: 0x0401A7FB RID: 108539
 		[Nullable(2)]
 		private SpecialEnergyBarInfo YangConfig;
 
-		// Token: 0x0401FD3F RID: 130367
+		// Token: 0x0401A7FC RID: 108540
 		[Nullable(2)]
 		private SpecialEnergyBarInfo YinConfig;
 
-		// Token: 0x0401FD40 RID: 130368
+		// Token: 0x0401A7FD RID: 108541
 		private SpecialEnergyBarJingRan.EState CurState = SpecialEnergyBarJingRan.EState.Max;
 
-		// Token: 0x0401FD41 RID: 130369
+		// Token: 0x0401A7FE RID: 108542
 		[Nullable(2)]
 		private SpecialEnergyBarJingRanSlot BarItemA;
 
-		// Token: 0x0401FD42 RID: 130370
+		// Token: 0x0401A7FF RID: 108543
 		[Nullable(2)]
 		private SpecialEnergyBarJingRanSlot BarItemB;
 
-		// Token: 0x0401FD43 RID: 130371
+		// Token: 0x0401A800 RID: 108544
 		[Nullable(1)]
 		private List<SpecialEnergyBarJingRan.SpecialEnergyBarJingRanFishPanel> FishPanelList = new List<SpecialEnergyBarJingRan.SpecialEnergyBarJingRanFishPanel>(SpecialEnergyBarJingRan.MAX_FISH_NUM);
 
-		// Token: 0x0401FD44 RID: 130372
+		// Token: 0x0401A801 RID: 108545
 		private FRotator TmpRotation;
 
-		// Token: 0x0401FD45 RID: 130373
+		// Token: 0x0401A802 RID: 108546
 		private float CurFishNum;
 
-		// Token: 0x0401FD46 RID: 130374
+		// Token: 0x0401A803 RID: 108547
 		private float RemainingRotDegree;
 
-		// Token: 0x0401FD47 RID: 130375
+		// Token: 0x0401A804 RID: 108548
 		private bool IsLightState;
 
-		// Token: 0x0401FD48 RID: 130376
+		// Token: 0x0401A805 RID: 108549
 		private bool IsFireState;
 
-		// Token: 0x0401FD49 RID: 130377
+		// Token: 0x0401A806 RID: 108550
 		private bool IsWaitingSlotAnim;
 
-		// Token: 0x0401FD4A RID: 130378
+		// Token: 0x0401A807 RID: 108551
 		private bool IsStateDirty;
 
-		// Token: 0x0401FD4B RID: 130379
+		// Token: 0x0401A808 RID: 108552
 		[Nullable(2)]
 		private IActiveBuff Buff;
 
-		// Token: 0x0401FD4C RID: 130380
+		// Token: 0x0401A809 RID: 108553
 		private int BuffHandle;
 
-		// Token: 0x0401FD4D RID: 130381
+		// Token: 0x0401A80A RID: 108554
 		private bool IsPlayWarnAnim;
 
-		// Token: 0x0401FD4E RID: 130382
+		// Token: 0x0401A80B RID: 108555
 		private bool IsInStrengthState;
 
-		// Token: 0x0200C0FE RID: 49406
+		// Token: 0x0200AB07 RID: 43783
 		private enum EChildType
 		{
-			// Token: 0x0403A414 RID: 238612
+			// Token: 0x04034DE6 RID: 216550
 			PnlStateA,
-			// Token: 0x0403A415 RID: 238613
+			// Token: 0x04034DE7 RID: 216551
 			BarSlotA,
-			// Token: 0x0403A416 RID: 238614
+			// Token: 0x04034DE8 RID: 216552
 			PnlStateB,
-			// Token: 0x0403A417 RID: 238615
+			// Token: 0x04034DE9 RID: 216553
 			BarSlotB,
-			// Token: 0x0403A418 RID: 238616
+			// Token: 0x04034DEA RID: 216554
 			PnlFish1,
-			// Token: 0x0403A419 RID: 238617
+			// Token: 0x04034DEB RID: 216555
 			PnlFish2,
-			// Token: 0x0403A41A RID: 238618
+			// Token: 0x04034DEC RID: 216556
 			PnlFish3,
-			// Token: 0x0403A41B RID: 238619
+			// Token: 0x04034DED RID: 216557
 			AniNsLoop,
-			// Token: 0x0403A41C RID: 238620
+			// Token: 0x04034DEE RID: 216558
 			AniNsSingle,
-			// Token: 0x0403A41D RID: 238621
+			// Token: 0x04034DEF RID: 216559
 			AniNsFull,
-			// Token: 0x0403A41E RID: 238622
+			// Token: 0x04034DF0 RID: 216560
 			PnlRot,
-			// Token: 0x0403A41F RID: 238623
+			// Token: 0x04034DF1 RID: 216561
 			FishBgYin,
-			// Token: 0x0403A420 RID: 238624
+			// Token: 0x04034DF2 RID: 216562
 			FishBgYang,
-			// Token: 0x0403A421 RID: 238625
+			// Token: 0x04034DF3 RID: 216563
 			AniNsLoopYang,
-			// Token: 0x0403A422 RID: 238626
+			// Token: 0x04034DF4 RID: 216564
 			AniNsFullYang,
-			// Token: 0x0403A423 RID: 238627
+			// Token: 0x04034DF5 RID: 216565
 			AniNsSingleYang,
-			// Token: 0x0403A424 RID: 238628
+			// Token: 0x04034DF6 RID: 216566
 			PnlDarkYang,
-			// Token: 0x0403A425 RID: 238629
+			// Token: 0x04034DF7 RID: 216567
 			PnlLightYang,
-			// Token: 0x0403A426 RID: 238630
+			// Token: 0x04034DF8 RID: 216568
 			PnlDarkYin,
-			// Token: 0x0403A427 RID: 238631
+			// Token: 0x04034DF9 RID: 216569
 			PnlLightYin,
-			// Token: 0x0403A428 RID: 238632
+			// Token: 0x04034DFA RID: 216570
 			AniNsFireYang,
-			// Token: 0x0403A429 RID: 238633
+			// Token: 0x04034DFB RID: 216571
 			AniNsFireYin,
-			// Token: 0x0403A42A RID: 238634
+			// Token: 0x04034DFC RID: 216572
 			AnimWarning
 		}
 
-		// Token: 0x0200C0FF RID: 49407
+		// Token: 0x0200AB08 RID: 43784
 		public enum EState
 		{
-			// Token: 0x0403A42C RID: 238636
+			// Token: 0x04034DFE RID: 216574
 			Yin,
-			// Token: 0x0403A42D RID: 238637
+			// Token: 0x04034DFF RID: 216575
 			Yang,
-			// Token: 0x0403A42E RID: 238638
+			// Token: 0x04034E00 RID: 216576
 			Max
 		}
 
-		// Token: 0x0200C100 RID: 49408
+		// Token: 0x0200AB09 RID: 43785
 		public enum EFishState
 		{
-			// Token: 0x0403A430 RID: 238640
+			// Token: 0x04034E02 RID: 216578
 			Empty,
-			// Token: 0x0403A431 RID: 238641
+			// Token: 0x04034E03 RID: 216579
 			Half,
-			// Token: 0x0403A432 RID: 238642
+			// Token: 0x04034E04 RID: 216580
 			Full
 		}
 
-		// Token: 0x0200C101 RID: 49409
+		// Token: 0x0200AB0A RID: 43786
 		private class SpecialEnergyBarJingRanFishPanel : UiPanelBase
 		{
-			// Token: 0x060503E6 RID: 328678 RVA: 0x0158F548 File Offset: 0x0158D748
+			// Token: 0x0604692D RID: 289069 RVA: 0x01548B5C File Offset: 0x01546D5C
 			protected unsafe override void OnRegisterComponent()
 			{
 				int num = 6;
@@ -717,7 +717,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				this.ComponentRegisterInfos = list;
 			}
 
-			// Token: 0x060503E7 RID: 328679 RVA: 0x0158F638 File Offset: 0x0158D838
+			// Token: 0x0604692E RID: 289070 RVA: 0x01548C4C File Offset: 0x01546E4C
 			public void SetFishState(SpecialEnergyBarJingRan.EState roleState, SpecialEnergyBarJingRan.EFishState fishState)
 			{
 				UUIItem item = base.GetItem(0);
@@ -753,20 +753,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				item6.SetUIActive(fishState == SpecialEnergyBarJingRan.EFishState.Full && roleState == SpecialEnergyBarJingRan.EState.Yang);
 			}
 
-			// Token: 0x0200D190 RID: 53648
+			// Token: 0x0200BD6E RID: 48494
 			private enum EFishChildType
 			{
-				// Token: 0x0403EE29 RID: 257577
+				// Token: 0x0403A271 RID: 238193
 				EmptyYellow,
-				// Token: 0x0403EE2A RID: 257578
+				// Token: 0x0403A272 RID: 238194
 				EmptyBlue,
-				// Token: 0x0403EE2B RID: 257579
+				// Token: 0x0403A273 RID: 238195
 				FishHalfYin,
-				// Token: 0x0403EE2C RID: 257580
+				// Token: 0x0403A274 RID: 238196
 				FishFullYin,
-				// Token: 0x0403EE2D RID: 257581
+				// Token: 0x0403A275 RID: 238197
 				FishFullYang,
-				// Token: 0x0403EE2E RID: 257582
+				// Token: 0x0403A276 RID: 238198
 				FishHalfYang
 			}
 		}

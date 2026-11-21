@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D85 RID: 15749
+	// Token: 0x0200419C RID: 16796
 	public struct ICheckUiGameQuestCondition : IFlatbufferObject
 	{
-		// Token: 0x17006C12 RID: 27666
-		// (get) Token: 0x06015CED RID: 89325 RVA: 0x00324B6E File Offset: 0x00322D6E
+		// Token: 0x170071CC RID: 29132
+		// (get) Token: 0x06017225 RID: 94757 RVA: 0x0034BDE6 File Offset: 0x00349FE6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015CEE RID: 89326 RVA: 0x00324B7B File Offset: 0x00322D7B
+		// Token: 0x06017226 RID: 94758 RVA: 0x0034BDF3 File Offset: 0x00349FF3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015CEF RID: 89327 RVA: 0x00324B84 File Offset: 0x00322D84
+		// Token: 0x06017227 RID: 94759 RVA: 0x0034BDFC File Offset: 0x00349FFC
 		public static ICheckUiGameQuestCondition GetRootAsICheckUiGameQuestCondition(ByteBuffer _bb)
 		{
 			return ICheckUiGameQuestCondition.GetRootAsICheckUiGameQuestCondition(_bb, default(ICheckUiGameQuestCondition));
 		}
 
-		// Token: 0x06015CF0 RID: 89328 RVA: 0x00324BA0 File Offset: 0x00322DA0
+		// Token: 0x06017228 RID: 94760 RVA: 0x0034BE18 File Offset: 0x0034A018
 		public static ICheckUiGameQuestCondition GetRootAsICheckUiGameQuestCondition(ByteBuffer _bb, ICheckUiGameQuestCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015CF1 RID: 89329 RVA: 0x00324BBD File Offset: 0x00322DBD
+		// Token: 0x06017229 RID: 94761 RVA: 0x0034BE35 File Offset: 0x0034A035
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015CF2 RID: 89330 RVA: 0x00324BCC File Offset: 0x00322DCC
+		// Token: 0x0601722A RID: 94762 RVA: 0x0034BE44 File Offset: 0x0034A044
 		public ICheckUiGameQuestCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006C13 RID: 27667
-		// (get) Token: 0x06015CF3 RID: 89331 RVA: 0x00324BDC File Offset: 0x00322DDC
+		// Token: 0x170071CD RID: 29133
+		// (get) Token: 0x0601722B RID: 94763 RVA: 0x0034BE54 File Offset: 0x0034A054
 		public EChildQuest Type
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006C14 RID: 27668
-		// (get) Token: 0x06015CF4 RID: 89332 RVA: 0x00324C18 File Offset: 0x00322E18
+		// Token: 0x170071CE RID: 29134
+		// (get) Token: 0x0601722C RID: 94764 RVA: 0x0034BE90 File Offset: 0x0034A090
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -80,7 +80,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015CF5 RID: 89333 RVA: 0x00324C78 File Offset: 0x00322E78
+		// Token: 0x0601722D RID: 94765 RVA: 0x0034BEF0 File Offset: 0x0034A0F0
 		public TUiGame GameplayConfigsType(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -91,8 +91,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return (TUiGame)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x17006C15 RID: 27669
-		// (get) Token: 0x06015CF6 RID: 89334 RVA: 0x00324CB8 File Offset: 0x00322EB8
+		// Token: 0x170071CF RID: 29135
+		// (get) Token: 0x0601722E RID: 94766 RVA: 0x0034BF30 File Offset: 0x0034A130
 		public int GameplayConfigsTypeLength
 		{
 			get
@@ -106,13 +106,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015CF7 RID: 89335 RVA: 0x00324CE3 File Offset: 0x00322EE3
+		// Token: 0x0601722F RID: 94767 RVA: 0x0034BF5B File Offset: 0x0034A15B
 		public Span<TUiGame> GetGameplayConfigsTypeBytes()
 		{
 			return this.__p.__vector_as_span<TUiGame>(8, 1);
 		}
 
-		// Token: 0x06015CF8 RID: 89336 RVA: 0x00324CF4 File Offset: 0x00322EF4
+		// Token: 0x06017230 RID: 94768 RVA: 0x0034BF6C File Offset: 0x0034A16C
 		public TUiGame[] GetGameplayConfigsTypeArray()
 		{
 			int num = this.__p.__offset(8);
@@ -130,7 +130,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return array;
 		}
 
-		// Token: 0x06015CF9 RID: 89337 RVA: 0x00324D60 File Offset: 0x00322F60
+		// Token: 0x06017231 RID: 94769 RVA: 0x0034BFD8 File Offset: 0x0034A1D8
 		public TTable? GameplayConfigs<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -141,8 +141,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x17006C16 RID: 27670
-		// (get) Token: 0x06015CFA RID: 89338 RVA: 0x00324DA8 File Offset: 0x00322FA8
+		// Token: 0x170071D0 RID: 29136
+		// (get) Token: 0x06017232 RID: 94770 RVA: 0x0034C020 File Offset: 0x0034A220
 		public int GameplayConfigsLength
 		{
 			get
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015CFB RID: 89339 RVA: 0x00324DD4 File Offset: 0x00322FD4
+		// Token: 0x06017233 RID: 94771 RVA: 0x0034C04C File Offset: 0x0034A24C
 		public static Offset<ICheckUiGameQuestCondition> CreateICheckUiGameQuestCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), VectorOffset GameplayConfigs_typeOffset = default(VectorOffset), VectorOffset GameplayConfigsOffset = default(VectorOffset))
 		{
 			builder.StartTable(4);
@@ -167,31 +167,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckUiGameQuestCondition.EndICheckUiGameQuestCondition(builder);
 		}
 
-		// Token: 0x06015CFC RID: 89340 RVA: 0x00324E00 File Offset: 0x00323000
+		// Token: 0x06017234 RID: 94772 RVA: 0x0034C078 File Offset: 0x0034A278
 		public static void StartICheckUiGameQuestCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06015CFD RID: 89341 RVA: 0x00324E09 File Offset: 0x00323009
+		// Token: 0x06017235 RID: 94773 RVA: 0x0034C081 File Offset: 0x0034A281
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015CFE RID: 89342 RVA: 0x00324E14 File Offset: 0x00323014
+		// Token: 0x06017236 RID: 94774 RVA: 0x0034C08C File Offset: 0x0034A28C
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06015CFF RID: 89343 RVA: 0x00324E24 File Offset: 0x00323024
+		// Token: 0x06017237 RID: 94775 RVA: 0x0034C09C File Offset: 0x0034A29C
 		public static void AddGameplayConfigsType(FlatBufferBuilder builder, VectorOffset gameplayConfigsTypeOffset)
 		{
 			builder.AddOffset(2, gameplayConfigsTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06015D00 RID: 89344 RVA: 0x00324E34 File Offset: 0x00323034
+		// Token: 0x06017238 RID: 94776 RVA: 0x0034C0AC File Offset: 0x0034A2AC
 		public static VectorOffset CreateGameplayConfigsTypeVector(FlatBufferBuilder builder, TUiGame[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015D01 RID: 89345 RVA: 0x00324E6B File Offset: 0x0032306B
+		// Token: 0x06017239 RID: 94777 RVA: 0x0034C0E3 File Offset: 0x0034A2E3
 		public static VectorOffset CreateGameplayConfigsTypeVectorBlock(FlatBufferBuilder builder, TUiGame[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015D02 RID: 89346 RVA: 0x00324E85 File Offset: 0x00323085
+		// Token: 0x0601723A RID: 94778 RVA: 0x0034C0FD File Offset: 0x0034A2FD
 		public static VectorOffset CreateGameplayConfigsTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TUiGame> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -218,7 +218,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015D03 RID: 89347 RVA: 0x00324EA3 File Offset: 0x003230A3
+		// Token: 0x0601723B RID: 94779 RVA: 0x0034C11B File Offset: 0x0034A31B
 		public static VectorOffset CreateGameplayConfigsTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -226,19 +226,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015D04 RID: 89348 RVA: 0x00324EBC File Offset: 0x003230BC
+		// Token: 0x0601723C RID: 94780 RVA: 0x0034C134 File Offset: 0x0034A334
 		public static void StartGameplayConfigsTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x06015D05 RID: 89349 RVA: 0x00324EC7 File Offset: 0x003230C7
+		// Token: 0x0601723D RID: 94781 RVA: 0x0034C13F File Offset: 0x0034A33F
 		public static void AddGameplayConfigs(FlatBufferBuilder builder, VectorOffset gameplayConfigsOffset)
 		{
 			builder.AddOffset(3, gameplayConfigsOffset.Value, 0);
 		}
 
-		// Token: 0x06015D06 RID: 89350 RVA: 0x00324ED8 File Offset: 0x003230D8
+		// Token: 0x0601723E RID: 94782 RVA: 0x0034C150 File Offset: 0x0034A350
 		public static VectorOffset CreateGameplayConfigsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -249,7 +249,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015D07 RID: 89351 RVA: 0x00324F0F File Offset: 0x0032310F
+		// Token: 0x0601723F RID: 94783 RVA: 0x0034C187 File Offset: 0x0034A387
 		public static VectorOffset CreateGameplayConfigsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -257,7 +257,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015D08 RID: 89352 RVA: 0x00324F29 File Offset: 0x00323129
+		// Token: 0x06017240 RID: 94784 RVA: 0x0034C1A1 File Offset: 0x0034A3A1
 		public static VectorOffset CreateGameplayConfigsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -265,7 +265,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015D09 RID: 89353 RVA: 0x00324F47 File Offset: 0x00323147
+		// Token: 0x06017241 RID: 94785 RVA: 0x0034C1BF File Offset: 0x0034A3BF
 		public static VectorOffset CreateGameplayConfigsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -273,19 +273,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015D0A RID: 89354 RVA: 0x00324F60 File Offset: 0x00323160
+		// Token: 0x06017242 RID: 94786 RVA: 0x0034C1D8 File Offset: 0x0034A3D8
 		public static void StartGameplayConfigsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06015D0B RID: 89355 RVA: 0x00324F6B File Offset: 0x0032316B
+		// Token: 0x06017243 RID: 94787 RVA: 0x0034C1E3 File Offset: 0x0034A3E3
 		public static Offset<ICheckUiGameQuestCondition> EndICheckUiGameQuestCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckUiGameQuestCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06015D0C RID: 89356 RVA: 0x00324F78 File Offset: 0x00323178
+		// Token: 0x06017244 RID: 94788 RVA: 0x0034C1F0 File Offset: 0x0034A3F0
 		public ICheckUiGameQuestConditionT UnPack()
 		{
 			ICheckUiGameQuestConditionT checkUiGameQuestConditionT = new ICheckUiGameQuestConditionT();
@@ -293,7 +293,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return checkUiGameQuestConditionT;
 		}
 
-		// Token: 0x06015D0D RID: 89357 RVA: 0x00324F94 File Offset: 0x00323194
+		// Token: 0x06017245 RID: 94789 RVA: 0x0034C20C File Offset: 0x0034A40C
 		public void UnPackTo(ICheckUiGameQuestConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -337,6 +337,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 					break;
 				case TUiGame.IFlowerSeaEscape:
 					tuiGameUnion.Value = ((this.GameplayConfigs<IFlowerSeaEscape>(i) != null) ? this.GameplayConfigs<IFlowerSeaEscape>(i).Value.UnPack() : null);
+					break;
+				case TUiGame.IFrequencyDetect:
+					tuiGameUnion.Value = ((this.GameplayConfigs<IFrequencyDetect>(i) != null) ? this.GameplayConfigs<IFrequencyDetect>(i).Value.UnPack() : null);
+					break;
+				case TUiGame.IFrequencyPaint:
+					tuiGameUnion.Value = ((this.GameplayConfigs<IFrequencyPaint>(i) != null) ? this.GameplayConfigs<IFrequencyPaint>(i).Value.UnPack() : null);
 					break;
 				case TUiGame.IInstrumentQteGameplay:
 					tuiGameUnion.Value = ((this.GameplayConfigs<IInstrumentQteGameplay>(i) != null) ? this.GameplayConfigs<IInstrumentQteGameplay>(i).Value.UnPack() : null);
@@ -395,6 +401,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 				case TUiGame.ITuningStand:
 					tuiGameUnion.Value = ((this.GameplayConfigs<ITuningStand>(i) != null) ? this.GameplayConfigs<ITuningStand>(i).Value.UnPack() : null);
 					break;
+				case TUiGame.ITurntableConnectorUiGameplay:
+					tuiGameUnion.Value = ((this.GameplayConfigs<ITurntableConnectorUiGameplay>(i) != null) ? this.GameplayConfigs<ITurntableConnectorUiGameplay>(i).Value.UnPack() : null);
+					break;
 				case TUiGame.IWriteLetter:
 					tuiGameUnion.Value = ((this.GameplayConfigs<IWriteLetter>(i) != null) ? this.GameplayConfigs<IWriteLetter>(i).Value.UnPack() : null);
 					break;
@@ -406,7 +415,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015D0E RID: 89358 RVA: 0x003257CC File Offset: 0x003239CC
+		// Token: 0x06017246 RID: 94790 RVA: 0x0034CAF8 File Offset: 0x0034ACF8
 		public static Offset<ICheckUiGameQuestCondition> Pack(FlatBufferBuilder builder, ICheckUiGameQuestConditionT _o)
 		{
 			if (_o == null)
@@ -437,7 +446,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckUiGameQuestCondition.CreateICheckUiGameQuestCondition(builder, _o.Type, preConditionsOffset, gameplayConfigs_typeOffset, gameplayConfigsOffset);
 		}
 
-		// Token: 0x0400B671 RID: 46705
+		// Token: 0x0400C01E RID: 49182
 		private Table __p;
 	}
 }

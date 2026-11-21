@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities;
 
-// Token: 0x02002F0F RID: 12047
+// Token: 0x02002462 RID: 9314
 [RequiredMember]
 public class RequirementElementType : IRequirement
 {
-	// Token: 0x1700239F RID: 9119
-	// (get) Token: 0x06019B4F RID: 105295 RVA: 0x006B1B11 File Offset: 0x006AFD11
+	// Token: 0x17002461 RID: 9313
+	// (get) Token: 0x0601745A RID: 95322 RVA: 0x006D7E29 File Offset: 0x006D6029
 	public EExtraEffectRequire Type
 	{
 		get
@@ -16,14 +16,14 @@ public class RequirementElementType : IRequirement
 		}
 	}
 
-	// Token: 0x06019B50 RID: 105296 RVA: 0x006B1B14 File Offset: 0x006AFD14
+	// Token: 0x0601745B RID: 95323 RVA: 0x006D7E2C File Offset: 0x006D602C
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public RequirementElementType()
 	{
 	}
 
-	// Token: 0x0400C174 RID: 49524
+	// Token: 0x0400C516 RID: 50454
 	[Nullable(1)]
 	[RequiredMember]
 	public EElementType[] ElementTypes;

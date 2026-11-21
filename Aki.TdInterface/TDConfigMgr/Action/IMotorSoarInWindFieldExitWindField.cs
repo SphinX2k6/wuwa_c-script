@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C2A RID: 7210
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E21 RID: 7713
 	public class IMotorSoarInWindFieldExitWindField : IMotorSoarInWindFieldControlType
 	{
-		// Token: 0x06009AB5 RID: 39605 RVA: 0x00163B80 File Offset: 0x00161D80
+		// Token: 0x0600A40D RID: 41997 RVA: 0x00176EC0 File Offset: 0x001750C0
 		private IMotorSoarInWindFieldExitWindField_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009AB6 RID: 39606 RVA: 0x00163BB8 File Offset: 0x00161DB8
+		// Token: 0x0600A40E RID: 41998 RVA: 0x00176EF8 File Offset: 0x001750F8
 		public static IMotorSoarInWindFieldExitWindField Create([Nullable(2)] IMotorSoarInWindFieldExitWindField instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009AB7 RID: 39607 RVA: 0x00163BCB File Offset: 0x00161DCB
+		// Token: 0x0600A40F RID: 41999 RVA: 0x00176F0B File Offset: 0x0017510B
 		public static IMotorSoarInWindFieldExitWindField CreateFromSetValue([Nullable(2)] IMotorSoarInWindFieldExitWindField_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009AB8 RID: 39608 RVA: 0x00163BDE File Offset: 0x00161DDE
+		// Token: 0x0600A410 RID: 42000 RVA: 0x00176F1E File Offset: 0x0017511E
 		public new IMotorSoarInWindFieldExitWindField_SetValue ToSetValue()
 		{
 			return new IMotorSoarInWindFieldExitWindField_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003072 RID: 12402
-		// (get) Token: 0x06009AB9 RID: 39609 RVA: 0x00163BF1 File Offset: 0x00161DF1
-		// (set) Token: 0x06009ABA RID: 39610 RVA: 0x00163C1C File Offset: 0x00161E1C
+		// Token: 0x170032E3 RID: 13027
+		// (get) Token: 0x0600A411 RID: 42001 RVA: 0x00176F31 File Offset: 0x00175131
+		// (set) Token: 0x0600A412 RID: 42002 RVA: 0x00176F5C File Offset: 0x0017515C
 		public override EMotorSoarInWindFieldControlType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E11 RID: 24081
+		// Token: 0x04006348 RID: 25416
 		[Nullable(2)]
 		protected new IMotorSoarInWindFieldExitWindField FbInstance;
 
-		// Token: 0x04005E12 RID: 24082
+		// Token: 0x04006349 RID: 25417
 		[Nullable(2)]
 		protected new IMotorSoarInWindFieldExitWindField_SetValue PocoInterface;
 	}

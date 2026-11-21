@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleDev;
 
-// Token: 0x02002838 RID: 10296
+// Token: 0x02001DB3 RID: 7603
 public class RoleDevWeaponViewItemDataFactory
 {
-	// Token: 0x060153A8 RID: 86952 RVA: 0x0055D1EC File Offset: 0x0055B3EC
+	// Token: 0x06012DA6 RID: 77222 RVA: 0x00587F48 File Offset: 0x00586148
 	[NullableContext(1)]
 	public static RoleDevWeaponViewItemDataBase Create(int roleId, RoleDevViewModel roleDevViewModel)
 	{

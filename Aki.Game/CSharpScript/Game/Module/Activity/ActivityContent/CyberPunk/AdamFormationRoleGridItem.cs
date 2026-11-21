@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068A6 RID: 26790
+	// Token: 0x020057F6 RID: 22518
 	public class AdamFormationRoleGridItem : WeeklyRogueRoleGridItem
 	{
-		// Token: 0x06042DA4 RID: 273828 RVA: 0x01046780 File Offset: 0x01044980
+		// Token: 0x060378FC RID: 227580 RVA: 0x00F87D90 File Offset: 0x00F85F90
 		[NullableContext(1)]
 		protected override void OnRefresh(RoleDataBase data, bool isSelected, int gridIndex)
 		{
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.SetSelected(bSelected, true);
 		}
 
-		// Token: 0x04022CA1 RID: 142497
+		// Token: 0x0401D4FD RID: 120061
 		[Nullable(2)]
 		public IReadOnlySet<int> RecommendedRoleIdSet;
 	}

@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020013CC RID: 5068
+// Token: 0x02000880 RID: 2176
 [NullableContext(1)]
 [Nullable(0)]
 public class NewPlayerAdventureV2View : UiViewBase
 {
-	// Token: 0x06008F07 RID: 36615 RVA: 0x001EE0AB File Offset: 0x001EC2AB
+	// Token: 0x0600629C RID: 25244 RVA: 0x001F6BCB File Offset: 0x001F4DCB
 	public NewPlayerAdventureV2View(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06008F08 RID: 36616 RVA: 0x001EE0D0 File Offset: 0x001EC2D0
+	// Token: 0x0600629D RID: 25245 RVA: 0x001F6BF0 File Offset: 0x001F4DF0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class NewPlayerAdventureV2View : UiViewBase
 		};
 	}
 
-	// Token: 0x06008F09 RID: 36617 RVA: 0x001EE1C8 File Offset: 0x001EC3C8
+	// Token: 0x0600629E RID: 25246 RVA: 0x001F6CE8 File Offset: 0x001F4EE8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		NewPlayerAdventureV2View.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ public class NewPlayerAdventureV2View : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008F0A RID: 36618 RVA: 0x001EE204 File Offset: 0x001EC404
+	// Token: 0x0600629F RID: 25247 RVA: 0x001F6D24 File Offset: 0x001F4F24
 	protected override void OnStart()
 	{
 		this.RoleLayout = new GenericLayout<NewPlayerAdventureV2RoleItem, int>(base.GetHorizontalLayout(0), new Func<NewPlayerAdventureV2RoleItem>(this.InitRoleItem), null, false, true);
@@ -60,7 +60,7 @@ public class NewPlayerAdventureV2View : UiViewBase
 		this.RefreshRolePanelState();
 	}
 
-	// Token: 0x06008F0B RID: 36619 RVA: 0x001EE2F7 File Offset: 0x001EC4F7
+	// Token: 0x060062A0 RID: 25248 RVA: 0x001F6E17 File Offset: 0x001F5017
 	protected override void OnBeforeDestroy()
 	{
 		if (this.RefreshTimer != null)
@@ -70,13 +70,13 @@ public class NewPlayerAdventureV2View : UiViewBase
 		}
 	}
 
-	// Token: 0x06008F0C RID: 36620 RVA: 0x001EE319 File Offset: 0x001EC519
+	// Token: 0x060062A1 RID: 25249 RVA: 0x001F6E39 File Offset: 0x001F5039
 	private void RefreshTime(float delta)
 	{
 		base.GetText(8).SetText(this.GetRemainTimeText(), true);
 	}
 
-	// Token: 0x06008F0D RID: 36621 RVA: 0x001EE330 File Offset: 0x001EC530
+	// Token: 0x060062A2 RID: 25250 RVA: 0x001F6E50 File Offset: 0x001F5050
 	private string GetRemainTimeText()
 	{
 		ActivityNewPlayerSupportActivityV2Controller activityController = this.GetActivityController();
@@ -93,27 +93,27 @@ public class NewPlayerAdventureV2View : UiViewBase
 		return ActivityModel.Instance.GetRemainTimeText(displayRemainEndTime, this.RemainTimeFormat) ?? "";
 	}
 
-	// Token: 0x06008F0E RID: 36622 RVA: 0x001EE38D File Offset: 0x001EC58D
+	// Token: 0x060062A3 RID: 25251 RVA: 0x001F6EAD File Offset: 0x001F50AD
 	[NullableContext(2)]
 	private ActivityNewPlayerSupportActivityV2Controller GetActivityController()
 	{
 		return ActivityManager.GetActivityController(ActivityType.NewPlayerSupportActivityV2) as ActivityNewPlayerSupportActivityV2Controller;
 	}
 
-	// Token: 0x06008F0F RID: 36623 RVA: 0x001EE39B File Offset: 0x001EC59B
+	// Token: 0x060062A4 RID: 25252 RVA: 0x001F6EBB File Offset: 0x001F50BB
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06008F10 RID: 36624 RVA: 0x001EE3A4 File Offset: 0x001EC5A4
+	// Token: 0x060062A5 RID: 25253 RVA: 0x001F6EC4 File Offset: 0x001F50C4
 	private List<int> GetRoleIdList()
 	{
 		INewPlayerAdventureV2ViewOpenData newPlayerAdventureV2ViewOpenData = this.OpenParam as INewPlayerAdventureV2ViewOpenData;
 		return ((newPlayerAdventureV2ViewOpenData != null) ? newPlayerAdventureV2ViewOpenData.RoleIdList : null) ?? new List<int>();
 	}
 
-	// Token: 0x06008F11 RID: 36625 RVA: 0x001EE3C8 File Offset: 0x001EC5C8
+	// Token: 0x060062A6 RID: 25254 RVA: 0x001F6EE8 File Offset: 0x001F50E8
 	private void RefreshRolePanelState()
 	{
 		List<int> roleList = this.GetRoleIdList();
@@ -163,7 +163,7 @@ public class NewPlayerAdventureV2View : UiViewBase
 		}
 	}
 
-	// Token: 0x06008F12 RID: 36626 RVA: 0x001EE47E File Offset: 0x001EC67E
+	// Token: 0x060062A7 RID: 25255 RVA: 0x001F6F9E File Offset: 0x001F519E
 	private NewPlayerAdventureV2RoleItem InitRoleItem()
 	{
 		return new NewPlayerAdventureV2RoleItem
@@ -172,7 +172,7 @@ public class NewPlayerAdventureV2View : UiViewBase
 		};
 	}
 
-	// Token: 0x06008F13 RID: 36627 RVA: 0x001EE497 File Offset: 0x001EC697
+	// Token: 0x060062A8 RID: 25256 RVA: 0x001F6FB7 File Offset: 0x001F51B7
 	private NewPlayerAdventureV2AdventureItem InitAdventureItem()
 	{
 		return new NewPlayerAdventureV2AdventureItem
@@ -181,7 +181,7 @@ public class NewPlayerAdventureV2View : UiViewBase
 		};
 	}
 
-	// Token: 0x06008F14 RID: 36628 RVA: 0x001EE4B0 File Offset: 0x001EC6B0
+	// Token: 0x060062A9 RID: 25257 RVA: 0x001F6FD0 File Offset: 0x001F51D0
 	private void OnClickRoleToggleCallBack(int roleId, UUIExtendToggle toggle)
 	{
 		this.RefreshRolePanelState();
@@ -228,17 +228,17 @@ public class NewPlayerAdventureV2View : UiViewBase
 		adventureLayout2.RefreshByData(list2, null, true);
 	}
 
-	// Token: 0x04003F48 RID: 16200
+	// Token: 0x04003FE0 RID: 16352
 	private const int TimerIntervalMs = 1000;
 
-	// Token: 0x04003F49 RID: 16201
+	// Token: 0x04003FE1 RID: 16353
 	private int CurrentSelectRoleId;
 
-	// Token: 0x04003F4A RID: 16202
+	// Token: 0x04003FE2 RID: 16354
 	[Nullable(2)]
 	private UUIExtendToggle CurrentSelectToggle;
 
-	// Token: 0x04003F4B RID: 16203
+	// Token: 0x04003FE3 RID: 16355
 	[Nullable(new byte[]
 	{
 		2,
@@ -246,7 +246,7 @@ public class NewPlayerAdventureV2View : UiViewBase
 	})]
 	private GenericLayout<NewPlayerAdventureV2RoleItem, int> RoleLayout;
 
-	// Token: 0x04003F4C RID: 16204
+	// Token: 0x04003FE4 RID: 16356
 	[Nullable(new byte[]
 	{
 		2,
@@ -254,7 +254,7 @@ public class NewPlayerAdventureV2View : UiViewBase
 	})]
 	private GenericLayout<NewPlayerAdventureV2AdventureItem, int> AdventureLayout;
 
-	// Token: 0x04003F4D RID: 16205
+	// Token: 0x04003FE5 RID: 16357
 	[Nullable(new byte[]
 	{
 		2,
@@ -262,14 +262,14 @@ public class NewPlayerAdventureV2View : UiViewBase
 	})]
 	private GenericLayout<NewPlayerAdventureV2AdventureItem, int> AdventureLayout2;
 
-	// Token: 0x04003F4E RID: 16206
+	// Token: 0x04003FE6 RID: 16358
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003F4F RID: 16207
+	// Token: 0x04003FE7 RID: 16359
 	[Nullable(2)]
 	private TimerHandle RefreshTimer;
 
-	// Token: 0x04003F50 RID: 16208
+	// Token: 0x04003FE8 RID: 16360
 	private readonly string RemainTimeFormat = ConfigMultiTextLang.GetLocalTextNew("ActivityRemainingTime", null) ?? "";
 }

@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200270A RID: 9994
+	// Token: 0x020007E0 RID: 2016
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/SequenceDialogue.QteSpineInfo")]
 	[UnrealStructLayout(120, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 120)]
 	public class FQteSpineInfo : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060250DB RID: 151771 RVA: 0x0036D770 File Offset: 0x0036B970
+		// Token: 0x0600AD49 RID: 44361 RVA: 0x001003D7 File Offset: 0x000FE5D7
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FQteSpineInfo._ScriptStructPtr != 0) ? FQteSpineInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/SequenceDialogue.QteSpineInfo", ref FQteSpineInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x17008EF6 RID: 36598
-		// (get) Token: 0x060250DC RID: 151772 RVA: 0x0036D794 File Offset: 0x0036B994
-		// (set) Token: 0x060250DD RID: 151773 RVA: 0x0036D7D7 File Offset: 0x0036B9D7
+		// Token: 0x17002046 RID: 8262
+		// (get) Token: 0x0600AD4A RID: 44362 RVA: 0x001003FC File Offset: 0x000FE5FC
+		// (set) Token: 0x0600AD4B RID: 44363 RVA: 0x0010043F File Offset: 0x000FE63F
 		public TArray<FSpineData> StartLoopSpines
 		{
 			get
@@ -39,9 +39,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008EF7 RID: 36599
-		// (get) Token: 0x060250DE RID: 151774 RVA: 0x0036D7E8 File Offset: 0x0036B9E8
-		// (set) Token: 0x060250DF RID: 151775 RVA: 0x0036D82B File Offset: 0x0036BA2B
+		// Token: 0x17002047 RID: 8263
+		// (get) Token: 0x0600AD4C RID: 44364 RVA: 0x00100450 File Offset: 0x000FE650
+		// (set) Token: 0x0600AD4D RID: 44365 RVA: 0x00100493 File Offset: 0x000FE693
 		public TArray<FSpineData> ProgressSpine
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008EF8 RID: 36600
-		// (get) Token: 0x060250E0 RID: 151776 RVA: 0x0036D83C File Offset: 0x0036BA3C
-		// (set) Token: 0x060250E1 RID: 151777 RVA: 0x0036D87F File Offset: 0x0036BA7F
+		// Token: 0x17002048 RID: 8264
+		// (get) Token: 0x0600AD4E RID: 44366 RVA: 0x001004A4 File Offset: 0x000FE6A4
+		// (set) Token: 0x0600AD4F RID: 44367 RVA: 0x001004E7 File Offset: 0x000FE6E7
 		public TArray<FQteProgressSpineSegment> ProgressSpineSegments
 		{
 			get
@@ -81,9 +81,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008EF9 RID: 36601
-		// (get) Token: 0x060250E2 RID: 151778 RVA: 0x0036D890 File Offset: 0x0036BA90
-		// (set) Token: 0x060250E3 RID: 151779 RVA: 0x0036D8D3 File Offset: 0x0036BAD3
+		// Token: 0x17002049 RID: 8265
+		// (get) Token: 0x0600AD50 RID: 44368 RVA: 0x001004F8 File Offset: 0x000FE6F8
+		// (set) Token: 0x0600AD51 RID: 44369 RVA: 0x0010053B File Offset: 0x000FE73B
 		public TArray<FSpineData> EndSpine
 		{
 			get
@@ -102,9 +102,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008EFA RID: 36602
-		// (get) Token: 0x060250E4 RID: 151780 RVA: 0x0036D8E4 File Offset: 0x0036BAE4
-		// (set) Token: 0x060250E5 RID: 151781 RVA: 0x0036D927 File Offset: 0x0036BB27
+		// Token: 0x1700204A RID: 8266
+		// (get) Token: 0x0600AD52 RID: 44370 RVA: 0x0010054C File Offset: 0x000FE74C
+		// (set) Token: 0x0600AD53 RID: 44371 RVA: 0x0010058F File Offset: 0x000FE78F
 		public TArray<FSpineData> SuccessSpine
 		{
 			get
@@ -123,9 +123,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008EFB RID: 36603
-		// (get) Token: 0x060250E6 RID: 151782 RVA: 0x0036D938 File Offset: 0x0036BB38
-		// (set) Token: 0x060250E7 RID: 151783 RVA: 0x0036D97B File Offset: 0x0036BB7B
+		// Token: 0x1700204B RID: 8267
+		// (get) Token: 0x0600AD54 RID: 44372 RVA: 0x001005A0 File Offset: 0x000FE7A0
+		// (set) Token: 0x0600AD55 RID: 44373 RVA: 0x001005E3 File Offset: 0x000FE7E3
 		public TArray<FSpineData> FailSpine
 		{
 			get
@@ -144,9 +144,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008EFC RID: 36604
-		// (get) Token: 0x060250E8 RID: 151784 RVA: 0x0036D989 File Offset: 0x0036BB89
-		// (set) Token: 0x060250E9 RID: 151785 RVA: 0x0036D999 File Offset: 0x0036BB99
+		// Token: 0x1700204C RID: 8268
+		// (get) Token: 0x0600AD56 RID: 44374 RVA: 0x001005F1 File Offset: 0x000FE7F1
+		// (set) Token: 0x0600AD57 RID: 44375 RVA: 0x00100601 File Offset: 0x000FE801
 		public unsafe bool WaitEndSpineFinish
 		{
 			get
@@ -159,9 +159,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008EFD RID: 36605
-		// (get) Token: 0x060250EA RID: 151786 RVA: 0x0036D9AC File Offset: 0x0036BBAC
-		// (set) Token: 0x060250EB RID: 151787 RVA: 0x0036D9EF File Offset: 0x0036BBEF
+		// Token: 0x1700204D RID: 8269
+		// (get) Token: 0x0600AD58 RID: 44376 RVA: 0x00100614 File Offset: 0x000FE814
+		// (set) Token: 0x0600AD59 RID: 44377 RVA: 0x00100657 File Offset: 0x000FE857
 		public TArray<string> NiagaraParamNames
 		{
 			get
@@ -180,63 +180,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060250EC RID: 151788 RVA: 0x0036D9FD File Offset: 0x0036BBFD
+		// Token: 0x0600AD5A RID: 44378 RVA: 0x00100665 File Offset: 0x000FE865
 		public FQteSpineInfo()
 		{
 		}
 
-		// Token: 0x060250ED RID: 151789 RVA: 0x0036DA08 File Offset: 0x0036BC08
-		public FQteSpineInfo(TArray<FSpineData> StartLoopSpines, TArray<FSpineData> ProgressSpine, TArray<FQteProgressSpineSegment> ProgressSpineSegments, TArray<FSpineData> EndSpine, TArray<FSpineData> SuccessSpine, TArray<FSpineData> FailSpine, bool WaitEndSpineFinish, TArray<string> NiagaraParamNames)
-		{
-			this.StartLoopSpines = StartLoopSpines;
-			this.ProgressSpine = ProgressSpine;
-			this.ProgressSpineSegments = ProgressSpineSegments;
-			this.EndSpine = EndSpine;
-			this.SuccessSpine = SuccessSpine;
-			this.FailSpine = FailSpine;
-			this.WaitEndSpineFinish = WaitEndSpineFinish;
-			this.NiagaraParamNames = NiagaraParamNames;
-		}
-
-		// Token: 0x060250EE RID: 151790 RVA: 0x0036DA58 File Offset: 0x0036BC58
+		// Token: 0x0600AD5B RID: 44379 RVA: 0x0010066D File Offset: 0x000FE86D
 		protected override IntPtr GetUStructPtr()
 		{
 			return FQteSpineInfo.StaticStruct();
 		}
 
-		// Token: 0x060250EF RID: 151791 RVA: 0x0036DA64 File Offset: 0x0036BC64
+		// Token: 0x0600AD5C RID: 44380 RVA: 0x00100679 File Offset: 0x000FE879
 		[NullableContext(2)]
 		public FQteSpineInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060250F0 RID: 151792 RVA: 0x0036DA6E File Offset: 0x0036BC6E
+		// Token: 0x0600AD5D RID: 44381 RVA: 0x00100683 File Offset: 0x000FE883
 		public FQteSpineInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060250F1 RID: 151793 RVA: 0x0036DA79 File Offset: 0x0036BC79
+		// Token: 0x0600AD5E RID: 44382 RVA: 0x0010068E File Offset: 0x000FE88E
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FQteSpineInfo(Pointer, false, true);
 		}
 
-		// Token: 0x060250F2 RID: 151794 RVA: 0x0036DA83 File Offset: 0x0036BC83
+		// Token: 0x0600AD5F RID: 44383 RVA: 0x00100698 File Offset: 0x000FE898
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FQteSpineInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04013F5D RID: 81757
+		// Token: 0x04004AB0 RID: 19120
 		public const string __ObjectPath = "/Script/SequenceDialogue.QteSpineInfo";
 
-		// Token: 0x04013F5E RID: 81758
+		// Token: 0x04004AB1 RID: 19121
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04013F5F RID: 81759
+		// Token: 0x04004AB2 RID: 19122
 		internal static int __PropertyOffset_StartLoopSpines;
 
-		// Token: 0x04013F60 RID: 81760
+		// Token: 0x04004AB3 RID: 19123
 		[Nullable(new byte[]
 		{
 			2,
@@ -244,10 +231,10 @@ namespace UnrealEngine
 		})]
 		private TArray<FSpineData> _StartLoopSpines;
 
-		// Token: 0x04013F61 RID: 81761
+		// Token: 0x04004AB4 RID: 19124
 		internal static int __PropertyOffset_ProgressSpine;
 
-		// Token: 0x04013F62 RID: 81762
+		// Token: 0x04004AB5 RID: 19125
 		[Nullable(new byte[]
 		{
 			2,
@@ -255,10 +242,10 @@ namespace UnrealEngine
 		})]
 		private TArray<FSpineData> _ProgressSpine;
 
-		// Token: 0x04013F63 RID: 81763
+		// Token: 0x04004AB6 RID: 19126
 		internal static int __PropertyOffset_ProgressSpineSegments;
 
-		// Token: 0x04013F64 RID: 81764
+		// Token: 0x04004AB7 RID: 19127
 		[Nullable(new byte[]
 		{
 			2,
@@ -266,10 +253,10 @@ namespace UnrealEngine
 		})]
 		private TArray<FQteProgressSpineSegment> _ProgressSpineSegments;
 
-		// Token: 0x04013F65 RID: 81765
+		// Token: 0x04004AB8 RID: 19128
 		internal static int __PropertyOffset_EndSpine;
 
-		// Token: 0x04013F66 RID: 81766
+		// Token: 0x04004AB9 RID: 19129
 		[Nullable(new byte[]
 		{
 			2,
@@ -277,10 +264,10 @@ namespace UnrealEngine
 		})]
 		private TArray<FSpineData> _EndSpine;
 
-		// Token: 0x04013F67 RID: 81767
+		// Token: 0x04004ABA RID: 19130
 		internal static int __PropertyOffset_SuccessSpine;
 
-		// Token: 0x04013F68 RID: 81768
+		// Token: 0x04004ABB RID: 19131
 		[Nullable(new byte[]
 		{
 			2,
@@ -288,10 +275,10 @@ namespace UnrealEngine
 		})]
 		private TArray<FSpineData> _SuccessSpine;
 
-		// Token: 0x04013F69 RID: 81769
+		// Token: 0x04004ABC RID: 19132
 		internal static int __PropertyOffset_FailSpine;
 
-		// Token: 0x04013F6A RID: 81770
+		// Token: 0x04004ABD RID: 19133
 		[Nullable(new byte[]
 		{
 			2,
@@ -299,13 +286,13 @@ namespace UnrealEngine
 		})]
 		private TArray<FSpineData> _FailSpine;
 
-		// Token: 0x04013F6B RID: 81771
+		// Token: 0x04004ABE RID: 19134
 		internal static int __PropertyOffset_WaitEndSpineFinish;
 
-		// Token: 0x04013F6C RID: 81772
+		// Token: 0x04004ABF RID: 19135
 		internal static int __PropertyOffset_NiagaraParamNames;
 
-		// Token: 0x04013F6D RID: 81773
+		// Token: 0x04004AC0 RID: 19136
 		[Nullable(new byte[]
 		{
 			2,

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005276 RID: 21110
+	// Token: 0x020057DE RID: 22494
 	public struct IFixedStreamingSource : IFlatbufferObject
 	{
-		// Token: 0x17009AB4 RID: 39604
-		// (get) Token: 0x060225CD RID: 140749 RVA: 0x004C3815 File Offset: 0x004C1A15
+		// Token: 0x1700A2B2 RID: 41650
+		// (get) Token: 0x06024567 RID: 148839 RVA: 0x004FE385 File Offset: 0x004FC585
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060225CE RID: 140750 RVA: 0x004C3822 File Offset: 0x004C1A22
+		// Token: 0x06024568 RID: 148840 RVA: 0x004FE392 File Offset: 0x004FC592
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060225CF RID: 140751 RVA: 0x004C382C File Offset: 0x004C1A2C
+		// Token: 0x06024569 RID: 148841 RVA: 0x004FE39C File Offset: 0x004FC59C
 		public static IFixedStreamingSource GetRootAsIFixedStreamingSource(ByteBuffer _bb)
 		{
 			return IFixedStreamingSource.GetRootAsIFixedStreamingSource(_bb, default(IFixedStreamingSource));
 		}
 
-		// Token: 0x060225D0 RID: 140752 RVA: 0x004C3848 File Offset: 0x004C1A48
+		// Token: 0x0602456A RID: 148842 RVA: 0x004FE3B8 File Offset: 0x004FC5B8
 		public static IFixedStreamingSource GetRootAsIFixedStreamingSource(ByteBuffer _bb, IFixedStreamingSource obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060225D1 RID: 140753 RVA: 0x004C3865 File Offset: 0x004C1A65
+		// Token: 0x0602456B RID: 148843 RVA: 0x004FE3D5 File Offset: 0x004FC5D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060225D2 RID: 140754 RVA: 0x004C3874 File Offset: 0x004C1A74
+		// Token: 0x0602456C RID: 148844 RVA: 0x004FE3E4 File Offset: 0x004FC5E4
 		public IFixedStreamingSource __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009AB5 RID: 39605
-		// (get) Token: 0x060225D3 RID: 140755 RVA: 0x004C3884 File Offset: 0x004C1A84
+		// Token: 0x1700A2B3 RID: 41651
+		// (get) Token: 0x0602456D RID: 148845 RVA: 0x004FE3F4 File Offset: 0x004FC5F4
 		public EStreamingSourceMode Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009AB6 RID: 39606
-		// (get) Token: 0x060225D4 RID: 140756 RVA: 0x004C38C0 File Offset: 0x004C1AC0
+		// Token: 0x1700A2B4 RID: 41652
+		// (get) Token: 0x0602456E RID: 148846 RVA: 0x004FE430 File Offset: 0x004FC630
 		public IStreamingSourceConfig? StreamingSourceConfig
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060225D5 RID: 140757 RVA: 0x004C391D File Offset: 0x004C1B1D
+		// Token: 0x0602456F RID: 148847 RVA: 0x004FE48D File Offset: 0x004FC68D
 		public static Offset<IFixedStreamingSource> CreateIFixedStreamingSource(FlatBufferBuilder builder, EStreamingSourceMode Type = EStreamingSourceMode.Fixed, Offset<IStreamingSourceConfig> StreamingSourceConfigOffset = default(Offset<IStreamingSourceConfig>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFixedStreamingSource.EndIFixedStreamingSource(builder);
 		}
 
-		// Token: 0x060225D6 RID: 140758 RVA: 0x004C393A File Offset: 0x004C1B3A
+		// Token: 0x06024570 RID: 148848 RVA: 0x004FE4AA File Offset: 0x004FC6AA
 		public static void StartIFixedStreamingSource(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060225D7 RID: 140759 RVA: 0x004C3943 File Offset: 0x004C1B43
+		// Token: 0x06024571 RID: 148849 RVA: 0x004FE4B3 File Offset: 0x004FC6B3
 		public static void AddType(FlatBufferBuilder builder, EStreamingSourceMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060225D8 RID: 140760 RVA: 0x004C394E File Offset: 0x004C1B4E
+		// Token: 0x06024572 RID: 148850 RVA: 0x004FE4BE File Offset: 0x004FC6BE
 		public static void AddStreamingSourceConfig(FlatBufferBuilder builder, Offset<IStreamingSourceConfig> streamingSourceConfigOffset)
 		{
 			builder.AddOffset(1, streamingSourceConfigOffset.Value, 0);
 		}
 
-		// Token: 0x060225D9 RID: 140761 RVA: 0x004C395E File Offset: 0x004C1B5E
+		// Token: 0x06024573 RID: 148851 RVA: 0x004FE4CE File Offset: 0x004FC6CE
 		public static Offset<IFixedStreamingSource> EndIFixedStreamingSource(FlatBufferBuilder builder)
 		{
 			return new Offset<IFixedStreamingSource>(builder.EndTable());
 		}
 
-		// Token: 0x060225DA RID: 140762 RVA: 0x004C396C File Offset: 0x004C1B6C
+		// Token: 0x06024574 RID: 148852 RVA: 0x004FE4DC File Offset: 0x004FC6DC
 		public IFixedStreamingSourceT UnPack()
 		{
 			IFixedStreamingSourceT fixedStreamingSourceT = new IFixedStreamingSourceT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return fixedStreamingSourceT;
 		}
 
-		// Token: 0x060225DB RID: 140763 RVA: 0x004C3988 File Offset: 0x004C1B88
+		// Token: 0x06024575 RID: 148853 RVA: 0x004FE4F8 File Offset: 0x004FC6F8
 		public void UnPackTo(IFixedStreamingSourceT _o)
 		{
 			_o.Type = this.Type;
 			_o.StreamingSourceConfig = ((this.StreamingSourceConfig != null) ? this.StreamingSourceConfig.Value.UnPack() : null);
 		}
 
-		// Token: 0x060225DC RID: 140764 RVA: 0x004C39D0 File Offset: 0x004C1BD0
+		// Token: 0x06024576 RID: 148854 RVA: 0x004FE540 File Offset: 0x004FC740
 		public static Offset<IFixedStreamingSource> Pack(FlatBufferBuilder builder, IFixedStreamingSourceT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFixedStreamingSource.CreateIFixedStreamingSource(builder, _o.Type, streamingSourceConfigOffset);
 		}
 
-		// Token: 0x0400E3D5 RID: 58325
+		// Token: 0x0400EFDC RID: 61404
 		private Table __p;
 	}
 }

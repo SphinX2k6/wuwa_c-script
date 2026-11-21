@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025A9 RID: 9641
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002858 RID: 10328
 	public class IActorTurnToPositionData : IActorTurnToData
 	{
-		// Token: 0x0600D8EA RID: 55530 RVA: 0x00205EEB File Offset: 0x002040EB
+		// Token: 0x0600E664 RID: 58980 RVA: 0x00221BBF File Offset: 0x0021FDBF
 		public static IActorTurnToPositionData Create(IActorTurnToPositionData? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F5A RID: 16218
-		// (get) Token: 0x0600D8EB RID: 55531 RVA: 0x00205F0A File Offset: 0x0020410A
+		// Token: 0x17004262 RID: 16994
+		// (get) Token: 0x0600E665 RID: 58981 RVA: 0x00221BDE File Offset: 0x0021FDDE
 		public override EActorTurnToMode Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F5B RID: 16219
-		// (get) Token: 0x0600D8EC RID: 55532 RVA: 0x00205F17 File Offset: 0x00204117
+		// Token: 0x17004263 RID: 16995
+		// (get) Token: 0x0600E666 RID: 58982 RVA: 0x00221BEB File Offset: 0x0021FDEB
 		public virtual VectorInfo Pos
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007883 RID: 30851
+		// Token: 0x04007EEA RID: 32490
 		private IActorTurnToPositionData Instance;
 
-		// Token: 0x04007884 RID: 30852
+		// Token: 0x04007EEB RID: 32491
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x04007885 RID: 30853
+		// Token: 0x04007EEC RID: 32492
 		private bool _PosInited;
 	}
 }

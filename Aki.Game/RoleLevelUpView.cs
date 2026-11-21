@@ -17,17 +17,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002894 RID: 10388
+// Token: 0x02001E0F RID: 7695
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleLevelUpView : UiViewBase
 {
-	// Token: 0x06015618 RID: 87576 RVA: 0x00563A7D File Offset: 0x00561C7D
+	// Token: 0x06013016 RID: 77846 RVA: 0x0058E7D9 File Offset: 0x0058C9D9
 	public RoleLevelUpView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06015619 RID: 87577 RVA: 0x00563A94 File Offset: 0x00561C94
+	// Token: 0x06013017 RID: 77847 RVA: 0x0058E7F0 File Offset: 0x0058C9F0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,13 +39,13 @@ public class RoleLevelUpView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601561A RID: 87578 RVA: 0x00563B04 File Offset: 0x00561D04
+	// Token: 0x06013018 RID: 77848 RVA: 0x0058E860 File Offset: 0x0058CA60
 	protected void CloseClick()
 	{
 		UiManager.Instance.CloseView(EUiViewName.RoleLevelUpView, null);
 	}
 
-	// Token: 0x0601561B RID: 87579 RVA: 0x00563B18 File Offset: 0x00561D18
+	// Token: 0x06013019 RID: 77849 RVA: 0x0058E874 File Offset: 0x0058CA74
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleLevelUpView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ public class RoleLevelUpView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601561C RID: 87580 RVA: 0x00563B5C File Offset: 0x00561D5C
+	// Token: 0x0601301A RID: 77850 RVA: 0x0058E8B8 File Offset: 0x0058CAB8
 	protected override UniTask OnPlayingStartSequenceAsync()
 	{
 		RoleLevelUpView.<OnPlayingStartSequenceAsync>d__14 <OnPlayingStartSequenceAsync>d__;
@@ -67,7 +67,7 @@ public class RoleLevelUpView : UiViewBase
 		return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601561D RID: 87581 RVA: 0x00563BA0 File Offset: 0x00561DA0
+	// Token: 0x0601301B RID: 77851 RVA: 0x0058E8FC File Offset: 0x0058CAFC
 	protected override UniTask OnPlayingCloseSequenceAsync()
 	{
 		RoleLevelUpView.<OnPlayingCloseSequenceAsync>d__15 <OnPlayingCloseSequenceAsync>d__;
@@ -78,7 +78,7 @@ public class RoleLevelUpView : UiViewBase
 		return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601561E RID: 87582 RVA: 0x00563BE3 File Offset: 0x00561DE3
+	// Token: 0x0601301C RID: 77852 RVA: 0x0058E93F File Offset: 0x0058CB3F
 	protected override void OnHandleLoadScene()
 	{
 		this.ViewModel.HandleLoadScene(delegate
@@ -87,13 +87,13 @@ public class RoleLevelUpView : UiViewBase
 		});
 	}
 
-	// Token: 0x0601561F RID: 87583 RVA: 0x00563C0F File Offset: 0x00561E0F
+	// Token: 0x0601301D RID: 77853 RVA: 0x0058E96B File Offset: 0x0058CB6B
 	protected override void OnHandleReleaseScene()
 	{
 		this.ViewModel.HandleReleaseScene();
 	}
 
-	// Token: 0x06015620 RID: 87584 RVA: 0x00563C1C File Offset: 0x00561E1C
+	// Token: 0x0601301E RID: 77854 RVA: 0x0058E978 File Offset: 0x0058CB78
 	private void InitDataList()
 	{
 		this.DataList = new List<ISelectedData>().ToArray();
@@ -114,7 +114,7 @@ public class RoleLevelUpView : UiViewBase
 		this.RoleExpItemGridComponent.Update(RoleLevelUpView.ArrayToList<ISelectedData>(this.DataList), 2, 0);
 	}
 
-	// Token: 0x06015621 RID: 87585 RVA: 0x00563CC8 File Offset: 0x00561EC8
+	// Token: 0x0601301F RID: 77855 RVA: 0x0058EA24 File Offset: 0x0058CC24
 	protected void OnClickItemAdd(int configId)
 	{
 		ISelectedData[] dataList = this.DataList;
@@ -126,7 +126,7 @@ public class RoleLevelUpView : UiViewBase
 			{
 				if (selectedData.Count == 0)
 				{
-					ItemController.Instance.OpenItemTipsByItemId(configId, true, null);
+					ItemController.Instance.OpenItemTipsByItemId(configId, true, null, false);
 					return;
 				}
 				if (this.CheckIsMaxLevel())
@@ -151,7 +151,7 @@ public class RoleLevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015622 RID: 87586 RVA: 0x00563D54 File Offset: 0x00561F54
+	// Token: 0x06013020 RID: 77856 RVA: 0x0058EAB0 File Offset: 0x0058CCB0
 	protected void OnClickItemReduce(int configId)
 	{
 		ISelectedData[] dataList = this.DataList;
@@ -178,7 +178,7 @@ public class RoleLevelUpView : UiViewBase
 		this.RefreshItemAndExp();
 	}
 
-	// Token: 0x06015623 RID: 87587 RVA: 0x00563DA8 File Offset: 0x00561FA8
+	// Token: 0x06013021 RID: 77857 RVA: 0x0058EB04 File Offset: 0x0058CD04
 	private void OnClickAutoFunction()
 	{
 		EAutoButtonState autoButtonState = this.RoleExpItemGridComponent.GetAutoButtonState();
@@ -215,7 +215,7 @@ public class RoleLevelUpView : UiViewBase
 		this.RefreshItemAndExp();
 	}
 
-	// Token: 0x06015624 RID: 87588 RVA: 0x00563E64 File Offset: 0x00562064
+	// Token: 0x06013022 RID: 77858 RVA: 0x0058EBC0 File Offset: 0x0058CDC0
 	private bool CanItemLongPress(int configId)
 	{
 		ISelectedData[] dataList = this.DataList;
@@ -230,7 +230,7 @@ public class RoleLevelUpView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x06015625 RID: 87589 RVA: 0x00563EB8 File Offset: 0x005620B8
+	// Token: 0x06013023 RID: 77859 RVA: 0x0058EC14 File Offset: 0x0058CE14
 	private bool CanItemReduceLongPress(int configId)
 	{
 		ISelectedData[] dataList = this.DataList;
@@ -245,7 +245,7 @@ public class RoleLevelUpView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x06015626 RID: 87590 RVA: 0x00563EF8 File Offset: 0x005620F8
+	// Token: 0x06013024 RID: 77860 RVA: 0x0058EC54 File Offset: 0x0058CE54
 	private void RefreshItemAndExp()
 	{
 		int num = 0;
@@ -275,19 +275,19 @@ public class RoleLevelUpView : UiViewBase
 		this.UpdateAttribute();
 	}
 
-	// Token: 0x06015627 RID: 87591 RVA: 0x00563FFC File Offset: 0x005621FC
+	// Token: 0x06013025 RID: 77861 RVA: 0x0058ED58 File Offset: 0x0058CF58
 	private int GetItemExp(ISelectedData data)
 	{
 		return RoleModel.Instance.GetRoleExpItemExp(data.ItemId).Value;
 	}
 
-	// Token: 0x06015628 RID: 87592 RVA: 0x00564021 File Offset: 0x00562221
+	// Token: 0x06013026 RID: 77862 RVA: 0x0058ED7D File Offset: 0x0058CF7D
 	private AttributeItem InitAttributeItem()
 	{
 		return new AttributeItem();
 	}
 
-	// Token: 0x06015629 RID: 87593 RVA: 0x00564028 File Offset: 0x00562228
+	// Token: 0x06013027 RID: 77863 RVA: 0x0058ED84 File Offset: 0x0058CF84
 	private void OnExpTweenComplete(bool _)
 	{
 		this.InitExp();
@@ -295,7 +295,7 @@ public class RoleLevelUpView : UiViewBase
 		this.RefreshItemAndExp();
 	}
 
-	// Token: 0x0601562A RID: 87594 RVA: 0x0056403C File Offset: 0x0056223C
+	// Token: 0x06013028 RID: 77864 RVA: 0x0058ED98 File Offset: 0x0058CF98
 	private IAttributeInfo[] GetLevelUpAttributeDataList(int currentLevel, int arrivedLevel)
 	{
 		List<AttributeItem> layoutItemList = this.AttributeLayout.GetLayoutItemList();
@@ -318,7 +318,7 @@ public class RoleLevelUpView : UiViewBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0601562B RID: 87595 RVA: 0x0056412C File Offset: 0x0056232C
+	// Token: 0x06013029 RID: 77865 RVA: 0x0058EE88 File Offset: 0x0058D088
 	private void ShowReturnRootReward()
 	{
 		UiInteractLogReport.ReportSpaceKeyInteract(EUiInteractSpaceKeyType.RoleLevelUp);
@@ -333,7 +333,7 @@ public class RoleLevelUpView : UiViewBase
 		ItemRewardController.Instance.OpenCommonRewardView(1010, list, new Action(this.ReturnRootViewFromReward));
 	}
 
-	// Token: 0x0601562C RID: 87596 RVA: 0x005641B0 File Offset: 0x005623B0
+	// Token: 0x0601302A RID: 77866 RVA: 0x0058EF0C File Offset: 0x0058D10C
 	private void ShowToBreachReward()
 	{
 		UiInteractLogReport.ReportSpaceKeyInteract(EUiInteractSpaceKeyType.RoleBreach);
@@ -348,26 +348,26 @@ public class RoleLevelUpView : UiViewBase
 		ItemRewardController.Instance.OpenCommonRewardView(1010, list, new Action(this.TurnToBreachViewFromReward));
 	}
 
-	// Token: 0x0601562D RID: 87597 RVA: 0x00564232 File Offset: 0x00562432
+	// Token: 0x0601302B RID: 77867 RVA: 0x0058EF8E File Offset: 0x0058D18E
 	private int MaxExpFunction(int level)
 	{
 		return RoleModel.Instance.GetRoleLevelUpExp(this.RoleInstance.GetRoleId(), level + 1);
 	}
 
-	// Token: 0x0601562E RID: 87598 RVA: 0x0056424C File Offset: 0x0056244C
+	// Token: 0x0601302C RID: 77868 RVA: 0x0058EFA8 File Offset: 0x0058D1A8
 	private void ReturnRootViewFromReward()
 	{
 		UiManager.Instance.CloseView(EUiViewName.RoleLevelUpView, null);
 	}
 
-	// Token: 0x0601562F RID: 87599 RVA: 0x0056425E File Offset: 0x0056245E
+	// Token: 0x0601302D RID: 77869 RVA: 0x0058EFBA File Offset: 0x0058D1BA
 	private void ReturnRootView()
 	{
 		UiInteractLogReport.ReportSpaceKeyInteract(EUiInteractSpaceKeyType.RoleLevelUp);
 		UiManager.Instance.CloseView(EUiViewName.RoleLevelUpView, null);
 	}
 
-	// Token: 0x06015630 RID: 87600 RVA: 0x00564278 File Offset: 0x00562478
+	// Token: 0x0601302E RID: 77870 RVA: 0x0058EFD4 File Offset: 0x0058D1D4
 	private void TurnToBreachViewFromReward()
 	{
 		RoleViewViewModel roleViewViewModel = new RoleViewViewModel(this.RoleInstance.GetRoleId(), false, ERoleViewSource.Normal);
@@ -377,7 +377,7 @@ public class RoleLevelUpView : UiViewBase
 		RoleController.Instance.CloseAndOpenRoleViewByViewModel(EUiViewName.RoleLevelUpView, EUiViewName.RoleBreachView, roleViewViewModel);
 	}
 
-	// Token: 0x06015631 RID: 87601 RVA: 0x005642DC File Offset: 0x005624DC
+	// Token: 0x0601302F RID: 77871 RVA: 0x0058F038 File Offset: 0x0058D238
 	private void TurnToBreachView()
 	{
 		UiInteractLogReport.ReportSpaceKeyInteract(EUiInteractSpaceKeyType.RoleBreach);
@@ -388,7 +388,7 @@ public class RoleLevelUpView : UiViewBase
 		RoleController.Instance.CloseAndOpenRoleViewByViewModel(EUiViewName.RoleLevelUpView, EUiViewName.RoleBreachView, roleViewViewModel);
 	}
 
-	// Token: 0x06015632 RID: 87602 RVA: 0x00564348 File Offset: 0x00562548
+	// Token: 0x06013030 RID: 77872 RVA: 0x0058F0A4 File Offset: 0x0058D2A4
 	private UniTask Init()
 	{
 		RoleLevelUpView.<Init>d__36 <Init>d__;
@@ -399,7 +399,7 @@ public class RoleLevelUpView : UiViewBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015633 RID: 87603 RVA: 0x0056438C File Offset: 0x0056258C
+	// Token: 0x06013031 RID: 77873 RVA: 0x0058F0E8 File Offset: 0x0058D2E8
 	private UniTask InitAttribute()
 	{
 		RoleLevelUpView.<InitAttribute>d__37 <InitAttribute>d__;
@@ -410,14 +410,14 @@ public class RoleLevelUpView : UiViewBase
 		return <InitAttribute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015634 RID: 87604 RVA: 0x005643CF File Offset: 0x005625CF
+	// Token: 0x06013032 RID: 77874 RVA: 0x0058F12B File Offset: 0x0058D32B
 	public void InitExp()
 	{
 		this.UpdateExpData();
 		this.ExpComponent.UpdateInitState(this.CurrentExpData);
 	}
 
-	// Token: 0x06015635 RID: 87605 RVA: 0x005643E8 File Offset: 0x005625E8
+	// Token: 0x06013033 RID: 77875 RVA: 0x0058F144 File Offset: 0x0058D344
 	private void Update()
 	{
 		this.UpdateAttribute();
@@ -425,7 +425,7 @@ public class RoleLevelUpView : UiViewBase
 		this.RefreshItemAndExp();
 	}
 
-	// Token: 0x06015636 RID: 87606 RVA: 0x005643FC File Offset: 0x005625FC
+	// Token: 0x06013034 RID: 77876 RVA: 0x0058F158 File Offset: 0x0058D358
 	public void ResetDataList()
 	{
 		foreach (ISelectedData selectedData in this.DataList)
@@ -435,7 +435,7 @@ public class RoleLevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015637 RID: 87607 RVA: 0x00564440 File Offset: 0x00562640
+	// Token: 0x06013035 RID: 77877 RVA: 0x0058F19C File Offset: 0x0058D39C
 	private void UpdateAttribute()
 	{
 		foreach (AttributeItem attributeItem in this.AttributeLayout.GetLayoutItemList())
@@ -444,7 +444,7 @@ public class RoleLevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015638 RID: 87608 RVA: 0x00564498 File Offset: 0x00562698
+	// Token: 0x06013036 RID: 77878 RVA: 0x0058F1F4 File Offset: 0x0058D3F4
 	protected void UpdateExpData()
 	{
 		RoleLevelData levelData = this.RoleInstance.GetLevelData();
@@ -455,30 +455,30 @@ public class RoleLevelUpView : UiViewBase
 		this.CurrentExpData.UpdateComponent(level, currentMaxLevel, exp, new int?(roleMaxLevel), false);
 	}
 
-	// Token: 0x06015639 RID: 87609 RVA: 0x005644E0 File Offset: 0x005626E0
+	// Token: 0x06013037 RID: 77879 RVA: 0x0058F23C File Offset: 0x0058D43C
 	protected override void OnAddEventListener()
 	{
-		EventSystem.Instance.Add(EEventName.RoleInfoUpdate, new Action(this.RoleInfoUpdate));
+		EventSystem.Instance.Add<int>(EEventName.RoleInfoUpdate, new Action<int>(this.RoleInfoUpdate));
 		EventSystem.Instance.Add<IReadOnlyList<TItem>>(EEventName.RoleLevelUpReceiveItem, new Action<IReadOnlyList<TItem>>(this.RoleLevelUpReceiveItem));
 		EventSystem.Instance.Add<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 	}
 
-	// Token: 0x0601563A RID: 87610 RVA: 0x00564544 File Offset: 0x00562744
+	// Token: 0x06013038 RID: 77880 RVA: 0x0058F2A0 File Offset: 0x0058D4A0
 	protected override void OnRemoveEventListener()
 	{
-		EventSystem.Instance.Remove(EEventName.RoleInfoUpdate, new Action(this.RoleInfoUpdate));
+		EventSystem.Instance.Remove(EEventName.RoleInfoUpdate, new Action<int>(this.RoleInfoUpdate));
 		EventSystem.Instance.Remove(EEventName.RoleLevelUpReceiveItem, new Action<IReadOnlyList<TItem>>(this.RoleLevelUpReceiveItem));
 		EventSystem.Instance.Remove(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 	}
 
-	// Token: 0x0601563B RID: 87611 RVA: 0x005645A5 File Offset: 0x005627A5
-	private void RoleInfoUpdate()
+	// Token: 0x06013039 RID: 77881 RVA: 0x0058F301 File Offset: 0x0058D501
+	private void RoleInfoUpdate(int roleId)
 	{
 		this.OnLevelUpSuccess();
 		this.ExpComponent.PlayExpTween(this.CurrentExpData);
 	}
 
-	// Token: 0x0601563C RID: 87612 RVA: 0x005645C0 File Offset: 0x005627C0
+	// Token: 0x0601303A RID: 77882 RVA: 0x0058F31C File Offset: 0x0058D51C
 	private void OnLevelUpSuccess()
 	{
 		int currentLevel = this.CurrentExpData.GetCurrentLevel();
@@ -563,19 +563,19 @@ public class RoleLevelUpView : UiViewBase
 		}, (float)roleLevelUpSuccessDelayTime.Value, null, null, true, 1f);
 	}
 
-	// Token: 0x0601563D RID: 87613 RVA: 0x005647D0 File Offset: 0x005629D0
+	// Token: 0x0601303B RID: 77883 RVA: 0x0058F52C File Offset: 0x0058D72C
 	private void RoleLevelUpReceiveItem(IReadOnlyList<TItem> itemList)
 	{
 		this.ReceiveItemList = itemList.ToArray<TItem>();
 	}
 
-	// Token: 0x0601563E RID: 87614 RVA: 0x005647DE File Offset: 0x005629DE
+	// Token: 0x0601303C RID: 77884 RVA: 0x0058F53A File Offset: 0x0058D73A
 	private void OnCommonItemCountAnyChange(int i, int i1)
 	{
 		this.Update();
 	}
 
-	// Token: 0x0601563F RID: 87615 RVA: 0x005647E8 File Offset: 0x005629E8
+	// Token: 0x0601303D RID: 77885 RVA: 0x0058F544 File Offset: 0x0058D744
 	private static List<T> ArrayToList<[Nullable(2)] T>(T[] source)
 	{
 		List<T> list = new List<T>(source.Length);
@@ -586,7 +586,7 @@ public class RoleLevelUpView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06015640 RID: 87616 RVA: 0x0056481C File Offset: 0x00562A1C
+	// Token: 0x0601303E RID: 77886 RVA: 0x0058F578 File Offset: 0x0058D778
 	private bool CheckIsMaxLevel()
 	{
 		int arrivedLevel = this.CurrentExpData.GetArrivedLevel();
@@ -594,7 +594,7 @@ public class RoleLevelUpView : UiViewBase
 		return arrivedLevel >= currentMaxLevel;
 	}
 
-	// Token: 0x06015641 RID: 87617 RVA: 0x0056484C File Offset: 0x00562A4C
+	// Token: 0x0601303F RID: 77887 RVA: 0x0058F5A8 File Offset: 0x0058D7A8
 	private void LevelUpClick()
 	{
 		ISelectedData[] dataList = this.DataList;
@@ -669,7 +669,7 @@ public class RoleLevelUpView : UiViewBase
 		});
 	}
 
-	// Token: 0x06015642 RID: 87618 RVA: 0x005649F4 File Offset: 0x00562BF4
+	// Token: 0x06013040 RID: 77888 RVA: 0x0058F750 File Offset: 0x0058D950
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -710,13 +710,13 @@ public class RoleLevelUpView : UiViewBase
 		};
 	}
 
-	// Token: 0x06015643 RID: 87619 RVA: 0x00564A53 File Offset: 0x00562C53
+	// Token: 0x06013041 RID: 77889 RVA: 0x0058F7AF File Offset: 0x0058D9AF
 	protected void OnAttributeChangeSequenceFinished(AttributeItem attributeItem)
 	{
 		this.UpdateAttributeItemValue(attributeItem);
 	}
 
-	// Token: 0x06015644 RID: 87620 RVA: 0x00564A5C File Offset: 0x00562C5C
+	// Token: 0x06013042 RID: 77890 RVA: 0x0058F7B8 File Offset: 0x0058D9B8
 	protected void UpdateAttributeItemValue(AttributeItem attributeItem)
 	{
 		int attributeId = attributeItem.GetAttributeId();
@@ -747,7 +747,7 @@ public class RoleLevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015645 RID: 87621 RVA: 0x00564B0C File Offset: 0x00562D0C
+	// Token: 0x06013043 RID: 77891 RVA: 0x0058F868 File Offset: 0x0058DA68
 	protected void UpdateButtonState()
 	{
 		bool roleIsMaxLevel = this.RoleInstance.GetLevelData().GetRoleIsMaxLevel();
@@ -755,7 +755,7 @@ public class RoleLevelUpView : UiViewBase
 		this.RoleExpItemGridComponent.SetButtonItemActive(!roleIsMaxLevel);
 	}
 
-	// Token: 0x04009FBC RID: 40892
+	// Token: 0x0400A3A5 RID: 41893
 	[Nullable(new byte[]
 	{
 		2,
@@ -764,15 +764,15 @@ public class RoleLevelUpView : UiViewBase
 	})]
 	protected GenericLayout<AttributeItem, CSharpScript.Game.Module.Common.AttributeData> AttributeLayout;
 
-	// Token: 0x04009FBD RID: 40893
+	// Token: 0x0400A3A6 RID: 41894
 	[Nullable(2)]
 	protected RoleDataBase RoleInstance;
 
-	// Token: 0x04009FBE RID: 40894
+	// Token: 0x0400A3A7 RID: 41895
 	[Nullable(2)]
 	private RoleExpItemGridComponent RoleExpItemGridComponent;
 
-	// Token: 0x04009FBF RID: 40895
+	// Token: 0x0400A3A8 RID: 41896
 	[Nullable(new byte[]
 	{
 		2,
@@ -780,38 +780,38 @@ public class RoleLevelUpView : UiViewBase
 	})]
 	private ISelectedData[] DataList;
 
-	// Token: 0x04009FC0 RID: 40896
+	// Token: 0x0400A3A9 RID: 41897
 	private readonly SelectableExpData CurrentExpData = new SelectableExpData();
 
-	// Token: 0x04009FC1 RID: 40897
+	// Token: 0x0400A3AA RID: 41898
 	[Nullable(2)]
 	private ExpComponent ExpComponent;
 
-	// Token: 0x04009FC2 RID: 40898
+	// Token: 0x0400A3AB RID: 41899
 	[Nullable(2)]
 	private TItem[] ReceiveItemList;
 
-	// Token: 0x04009FC3 RID: 40899
+	// Token: 0x0400A3AC RID: 41900
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04009FC4 RID: 40900
+	// Token: 0x0400A3AD RID: 41901
 	[Nullable(2)]
 	private RoleViewViewModel ViewModel;
 
-	// Token: 0x02008E92 RID: 36498
+	// Token: 0x020080D8 RID: 32984
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E3CE RID: 189390
+		// Token: 0x04029AC8 RID: 170696
 		ExpItem,
-		// Token: 0x0402E3CF RID: 189391
+		// Token: 0x04029AC9 RID: 170697
 		ConsumeItem,
-		// Token: 0x0402E3D0 RID: 189392
+		// Token: 0x04029ACA RID: 170698
 		AttributeItem,
-		// Token: 0x0402E3D1 RID: 189393
+		// Token: 0x04029ACB RID: 170699
 		MaskItem,
-		// Token: 0x0402E3D2 RID: 189394
+		// Token: 0x04029ACC RID: 170700
 		CaptionItem
 	}
 }

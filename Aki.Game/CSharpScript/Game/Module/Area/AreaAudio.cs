@@ -12,44 +12,44 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Area
 {
-	// Token: 0x02005E9E RID: 24222
+	// Token: 0x02004E83 RID: 20099
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AreaAudio
 	{
-		// Token: 0x0603DA02 RID: 252418 RVA: 0x00EE0FC0 File Offset: 0x00EDF1C0
+		// Token: 0x06032992 RID: 207250 RVA: 0x00E32574 File Offset: 0x00E30774
 		public void Init()
 		{
 			this.AddEventListener();
 		}
 
-		// Token: 0x0603DA03 RID: 252419 RVA: 0x00EE0FC8 File Offset: 0x00EDF1C8
+		// Token: 0x06032993 RID: 207251 RVA: 0x00E3257C File Offset: 0x00E3077C
 		public void Destroy()
 		{
 			GameAudioController.Instance.OnExitBattleState();
 			this.RemoveEventListener();
 		}
 
-		// Token: 0x0603DA04 RID: 252420 RVA: 0x00EE0FDA File Offset: 0x00EDF1DA
+		// Token: 0x06032994 RID: 207252 RVA: 0x00E3258E File Offset: 0x00E3078E
 		private void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnUpdateSceneTeam, new Action(this.OnFormationLoadCompleted));
 		}
 
-		// Token: 0x0603DA05 RID: 252421 RVA: 0x00EE0FF8 File Offset: 0x00EDF1F8
+		// Token: 0x06032995 RID: 207253 RVA: 0x00E325AC File Offset: 0x00E307AC
 		private void RemoveEventListener()
 		{
 			EventSystem.Instance.RemoveAllTargetUseKey(this);
 			EventSystem.Instance.Remove(EEventName.OnUpdateSceneTeam, new Action(this.OnFormationLoadCompleted));
 		}
 
-		// Token: 0x0603DA06 RID: 252422 RVA: 0x00EE1022 File Offset: 0x00EDF222
+		// Token: 0x06032996 RID: 207254 RVA: 0x00E325D6 File Offset: 0x00E307D6
 		private void OnFormationLoadCompleted()
 		{
 			this.RefreshEvents();
 		}
 
-		// Token: 0x0603DA07 RID: 252423 RVA: 0x00EE102A File Offset: 0x00EDF22A
+		// Token: 0x06032997 RID: 207255 RVA: 0x00E325DE File Offset: 0x00E307DE
 		private void RefreshEvents()
 		{
 			this.UnBindEvents();
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Area
 			this.BindEvents();
 		}
 
-		// Token: 0x0603DA08 RID: 252424 RVA: 0x00EE1044 File Offset: 0x00EDF244
+		// Token: 0x06032998 RID: 207256 RVA: 0x00E325F8 File Offset: 0x00E307F8
 		private void BindEvents()
 		{
 			foreach (EntityHandle entityHandle in SceneTeamModel.Instance.GetTeamEntities(true))
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA09 RID: 252425 RVA: 0x00EE10E4 File Offset: 0x00EDF2E4
+		// Token: 0x06032999 RID: 207257 RVA: 0x00E32698 File Offset: 0x00E30898
 		private void UnBindEvents()
 		{
 			if (this.MyTeamEntity.Count > 0)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA0A RID: 252426 RVA: 0x00EE11A8 File Offset: 0x00EDF3A8
+		// Token: 0x0603299A RID: 207258 RVA: 0x00E3275C File Offset: 0x00E3095C
 		public void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (!this.MyTeamEntity.Contains(handle.Id))
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Area
 			EventSystem.Instance.RemoveWithTarget(handle.Entity, EEventName.CharDamage, new Action<Entity, Entity, RequirementPayload, DamageResult, FVectorDouble>(this.OnCharHurtOthers));
 		}
 
-		// Token: 0x0603DA0B RID: 252427 RVA: 0x00EE1218 File Offset: 0x00EDF418
+		// Token: 0x0603299B RID: 207259 RVA: 0x00E327CC File Offset: 0x00E309CC
 		private bool CheckEntity(int entityId)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Area
 			return baseInfoComponent != null && baseInfoComponent.Category.MainType.GetValueOrDefault() == EEntityMainType.Monster;
 		}
 
-		// Token: 0x0603DA0C RID: 252428 RVA: 0x00EE12B4 File Offset: 0x00EDF4B4
+		// Token: 0x0603299C RID: 207260 RVA: 0x00E32868 File Offset: 0x00E30A68
 		private void OnCharHurtOthers(Entity attacker, Entity victim, RequirementPayload requirements, DamageResult damageResult, FVectorDouble damagePosition)
 		{
 			Damage damageData = damageResult.DamageData;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0402027F RID: 131711
+		// Token: 0x0401AD46 RID: 109894
 		private readonly HashSet<int> MyTeamEntity = new HashSet<int>();
 	}
 }

@@ -7,13 +7,13 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020020A9 RID: 8361
+// Token: 0x02001580 RID: 5504
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class GamepadLogReportController : UiControllerBase
 {
-	// Token: 0x06010823 RID: 67619 RVA: 0x00409514 File Offset: 0x00407714
+	// Token: 0x0600DC93 RID: 56467 RVA: 0x00415C1C File Offset: 0x00413E1C
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.LocalStorageInitPlayerId, new Action(this.StartGamepadReportLog));
@@ -21,7 +21,7 @@ public class GamepadLogReportController : UiControllerBase
 		EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerTypeChange));
 	}
 
-	// Token: 0x06010824 RID: 67620 RVA: 0x00409578 File Offset: 0x00407778
+	// Token: 0x0600DC94 RID: 56468 RVA: 0x00415C80 File Offset: 0x00413E80
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.LocalStorageInitPlayerId, new Action(this.StartGamepadReportLog));
@@ -29,7 +29,7 @@ public class GamepadLogReportController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerTypeChange));
 	}
 
-	// Token: 0x06010825 RID: 67621 RVA: 0x004095DC File Offset: 0x004077DC
+	// Token: 0x0600DC95 RID: 56469 RVA: 0x00415CE4 File Offset: 0x00413EE4
 	protected override bool OnClear()
 	{
 		if (Info.Instance.IsInGamepad() && this.IsStart)
@@ -44,7 +44,7 @@ public class GamepadLogReportController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010826 RID: 67622 RVA: 0x00409636 File Offset: 0x00407836
+	// Token: 0x0600DC96 RID: 56470 RVA: 0x00415D3E File Offset: 0x00413F3E
 	private void OnInputControllerMainTypeChange(EInputControllerMainType last, EInputControllerMainType now)
 	{
 		if (!this.IsStart)
@@ -66,7 +66,7 @@ public class GamepadLogReportController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010827 RID: 67623 RVA: 0x00409660 File Offset: 0x00407860
+	// Token: 0x0600DC97 RID: 56471 RVA: 0x00415D68 File Offset: 0x00413F68
 	private void OnInputControllerTypeChange(EInputControllerType last, EInputControllerType now)
 	{
 		if (!this.IsStart)
@@ -83,14 +83,14 @@ public class GamepadLogReportController : UiControllerBase
 		this.EnterGamepadModeLog();
 	}
 
-	// Token: 0x06010828 RID: 67624 RVA: 0x004096A9 File Offset: 0x004078A9
+	// Token: 0x0600DC98 RID: 56472 RVA: 0x00415DB1 File Offset: 0x00413FB1
 	private void StartGamepadReportLog()
 	{
 		this.TryReportLog();
 		this.InitGamepadLogReport();
 	}
 
-	// Token: 0x06010829 RID: 67625 RVA: 0x004096B8 File Offset: 0x004078B8
+	// Token: 0x0600DC99 RID: 56473 RVA: 0x00415DC0 File Offset: 0x00413FC0
 	private void TryReportLog()
 	{
 		Dictionary<string, GamepadTypeUsage> player = LocalStorage.GetPlayer<Dictionary<string, GamepadTypeUsage>>(ELocalStoragePlayerKey.GamepadUsageRecord, null);
@@ -115,7 +115,7 @@ public class GamepadLogReportController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601082A RID: 67626 RVA: 0x00409784 File Offset: 0x00407984
+	// Token: 0x0600DC9A RID: 56474 RVA: 0x00415E8C File Offset: 0x0041408C
 	private void InitGamepadLogReport()
 	{
 		this.IsStart = true;
@@ -128,7 +128,7 @@ public class GamepadLogReportController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601082B RID: 67627 RVA: 0x004097BC File Offset: 0x004079BC
+	// Token: 0x0600DC9B RID: 56475 RVA: 0x00415EC4 File Offset: 0x004140C4
 	private void EnterGamepadModeLog()
 	{
 		string currentSuitName = this.GetCurrentSuitName();
@@ -139,7 +139,7 @@ public class GamepadLogReportController : UiControllerBase
 		this.StartHeartbeat();
 	}
 
-	// Token: 0x0601082C RID: 67628 RVA: 0x00409807 File Offset: 0x00407A07
+	// Token: 0x0600DC9C RID: 56476 RVA: 0x00415F0F File Offset: 0x0041410F
 	private void ExitGamepadModeLog()
 	{
 		this.SettleActiveTime();
@@ -147,7 +147,7 @@ public class GamepadLogReportController : UiControllerBase
 		this.StopHeartbeat();
 	}
 
-	// Token: 0x0601082D RID: 67629 RVA: 0x00409820 File Offset: 0x00407A20
+	// Token: 0x0600DC9D RID: 56477 RVA: 0x00415F28 File Offset: 0x00414128
 	private void SettleActiveTime()
 	{
 		if (string.IsNullOrEmpty(this.ActiveSuitName))
@@ -160,7 +160,7 @@ public class GamepadLogReportController : UiControllerBase
 		this.SaveUsage();
 	}
 
-	// Token: 0x0601082E RID: 67630 RVA: 0x0040987F File Offset: 0x00407A7F
+	// Token: 0x0600DC9E RID: 56478 RVA: 0x00415F87 File Offset: 0x00414187
 	private void StartHeartbeat()
 	{
 		if (this.HeartbeatHandle != null)
@@ -173,7 +173,7 @@ public class GamepadLogReportController : UiControllerBase
 		}, 60000f, 1f, null, "GamepadUsageHeartbeat", true);
 	}
 
-	// Token: 0x0601082F RID: 67631 RVA: 0x004098B7 File Offset: 0x00407AB7
+	// Token: 0x0600DC9F RID: 56479 RVA: 0x00415FBF File Offset: 0x004141BF
 	private void StopHeartbeat()
 	{
 		if (this.HeartbeatHandle == null)
@@ -184,7 +184,7 @@ public class GamepadLogReportController : UiControllerBase
 		this.HeartbeatHandle = null;
 	}
 
-	// Token: 0x06010830 RID: 67632 RVA: 0x004098DC File Offset: 0x00407ADC
+	// Token: 0x0600DCA0 RID: 56480 RVA: 0x00415FE4 File Offset: 0x004141E4
 	private GamepadTypeUsage GetOrCreateUsage(string suitName)
 	{
 		GamepadTypeUsage gamepadTypeUsage;
@@ -196,7 +196,7 @@ public class GamepadLogReportController : UiControllerBase
 		return gamepadTypeUsage;
 	}
 
-	// Token: 0x06010831 RID: 67633 RVA: 0x00409910 File Offset: 0x00407B10
+	// Token: 0x0600DCA1 RID: 56481 RVA: 0x00416018 File Offset: 0x00414218
 	private void SaveUsage()
 	{
 		LocalStorage.SetPlayer<Dictionary<string, GamepadTypeUsage>>(ELocalStoragePlayerKey.GamepadUsageRecord, this.UsageMap);
@@ -208,7 +208,7 @@ public class GamepadLogReportController : UiControllerBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06010832 RID: 67634 RVA: 0x0040995C File Offset: 0x00407B5C
+	// Token: 0x0600DCA2 RID: 56482 RVA: 0x00416064 File Offset: 0x00414264
 	private string GetCurrentSuitName()
 	{
 		string currentActiveGamepadName = UKismetSystemLibrary.GetCurrentActiveGamepadName();
@@ -219,8 +219,8 @@ public class GamepadLogReportController : UiControllerBase
 		return currentActiveGamepadName;
 	}
 
-	// Token: 0x1700145A RID: 5210
-	// (get) Token: 0x06010833 RID: 67635 RVA: 0x0040998B File Offset: 0x00407B8B
+	// Token: 0x17001487 RID: 5255
+	// (get) Token: 0x0600DCA3 RID: 56483 RVA: 0x00416093 File Offset: 0x00414293
 	public static GamepadLogReportController Instance
 	{
 		get
@@ -229,7 +229,7 @@ public class GamepadLogReportController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010834 RID: 67636 RVA: 0x00409992 File Offset: 0x00407B92
+	// Token: 0x0600DCA4 RID: 56484 RVA: 0x0041609A File Offset: 0x0041429A
 	public static GamepadLogReportController GetOrCreateInstance()
 	{
 		if (GamepadLogReportController._Instance == null)
@@ -239,7 +239,7 @@ public class GamepadLogReportController : UiControllerBase
 		return GamepadLogReportController._Instance;
 	}
 
-	// Token: 0x06010835 RID: 67637 RVA: 0x004099A6 File Offset: 0x00407BA6
+	// Token: 0x0600DCA5 RID: 56485 RVA: 0x004160AE File Offset: 0x004142AE
 	public static bool CreateInstance()
 	{
 		if (GamepadLogReportController._Instance != null)
@@ -250,43 +250,43 @@ public class GamepadLogReportController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010836 RID: 67638 RVA: 0x004099BC File Offset: 0x00407BBC
+	// Token: 0x0600DCA6 RID: 56486 RVA: 0x004160C4 File Offset: 0x004142C4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010837 RID: 67639 RVA: 0x004099BE File Offset: 0x00407BBE
+	// Token: 0x0600DCA7 RID: 56487 RVA: 0x004160C6 File Offset: 0x004142C6
 	public static void ResetStaticDefaultValue()
 	{
 		GamepadLogReportController._Instance = null;
 	}
 
-	// Token: 0x06010838 RID: 67640 RVA: 0x004099C6 File Offset: 0x00407BC6
+	// Token: 0x0600DCA8 RID: 56488 RVA: 0x004160CE File Offset: 0x004142CE
 	static GamepadLogReportController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GamepadLogReportController.CreateStaticDefaultValue), new Action(GamepadLogReportController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007A11 RID: 31249
+	// Token: 0x04007B0F RID: 31503
 	private const float HEARTBEAT_INTERVAL = 60000f;
 
-	// Token: 0x04007A12 RID: 31250
+	// Token: 0x04007B10 RID: 31504
 	private bool IsStart;
 
-	// Token: 0x04007A13 RID: 31251
+	// Token: 0x04007B11 RID: 31505
 	private string ActiveSuitName = "";
 
-	// Token: 0x04007A14 RID: 31252
+	// Token: 0x04007B12 RID: 31506
 	private double LastOperateTime;
 
-	// Token: 0x04007A15 RID: 31253
+	// Token: 0x04007B13 RID: 31507
 	private Dictionary<string, GamepadTypeUsage> UsageMap = new Dictionary<string, GamepadTypeUsage>();
 
-	// Token: 0x04007A16 RID: 31254
+	// Token: 0x04007B14 RID: 31508
 	[Nullable(2)]
 	private TimerHandle HeartbeatHandle;
 
-	// Token: 0x04007A17 RID: 31255
+	// Token: 0x04007B15 RID: 31509
 	[Nullable(2)]
 	private static GamepadLogReportController _Instance;
 }

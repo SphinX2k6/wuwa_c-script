@@ -4,10 +4,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006107 RID: 24839
+	// Token: 0x02005085 RID: 20613
 	public class RoverlikeActionSubViewFactory
 	{
-		// Token: 0x0603ECB8 RID: 257208 RVA: 0x00F2A002 File Offset: 0x00F28202
+		// Token: 0x0603397A RID: 211322 RVA: 0x00E70E16 File Offset: 0x00E6F016
 		public static ERoverActionSubViewType ServerTypeToSubViewType(RoverRogueGainOperateType serverType)
 		{
 			switch (serverType)
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603ECB9 RID: 257209 RVA: 0x00F2A020 File Offset: 0x00F28220
+		// Token: 0x0603397B RID: 211323 RVA: 0x00E70E34 File Offset: 0x00E6F034
 		[NullableContext(2)]
 		public static RoverlikeActionSubViewBase CreateSubView(ERoverActionSubViewType type)
 		{

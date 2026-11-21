@@ -1,19 +1,18 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using Google.Protobuf;
 
-// Token: 0x02001FE8 RID: 8168
+// Token: 0x020014BB RID: 5307
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ItemExchangeController : UiControllerBase
 {
-	// Token: 0x17001364 RID: 4964
-	// (get) Token: 0x0601000A RID: 65546 RVA: 0x003E643C File Offset: 0x003E463C
+	// Token: 0x17001391 RID: 5009
+	// (get) Token: 0x0600D472 RID: 54386 RVA: 0x003F2A3C File Offset: 0x003F0C3C
 	public bool NeedPop
 	{
 		get
@@ -22,21 +21,21 @@ public class ItemExchangeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601000B RID: 65547 RVA: 0x003E6444 File Offset: 0x003E4644
+	// Token: 0x0600D473 RID: 54387 RVA: 0x003F2A44 File Offset: 0x003F0C44
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnLoadingNetDataDone, new Action(this.ItemExchangeInfoRequest));
 		EventSystem.Instance.Add(EEventName.CrossDay, new Action(this.ItemExchange));
 	}
 
-	// Token: 0x0601000C RID: 65548 RVA: 0x003E647E File Offset: 0x003E467E
+	// Token: 0x0600D474 RID: 54388 RVA: 0x003F2A7E File Offset: 0x003F0C7E
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.ItemExchangeInfoRequest));
 		EventSystem.Instance.Remove(EEventName.CrossDay, new Action(this.ItemExchange));
 	}
 
-	// Token: 0x0601000D RID: 65549 RVA: 0x003E64B8 File Offset: 0x003E46B8
+	// Token: 0x0600D475 RID: 54389 RVA: 0x003F2AB8 File Offset: 0x003F0CB8
 	private void ItemExchange()
 	{
 		LoginDefine.ELoginStatus loginStatus = LoginModel.Instance.GetLoginStatus();
@@ -53,24 +52,24 @@ public class ItemExchangeController : UiControllerBase
 		this.ItemExchangeInfoRequest();
 	}
 
-	// Token: 0x0601000E RID: 65550 RVA: 0x003E650C File Offset: 0x003E470C
+	// Token: 0x0600D476 RID: 54390 RVA: 0x003F2B0C File Offset: 0x003F0D0C
 	private void ItemExchangeInfoRequest()
 	{
 		ItemExchangeInfoRequest message = Aki.Protocol.ItemExchangeInfoRequest.Create();
 		Net.Instance.Call(ERequestMessageId.ItemExchangeInfoRequest, message, delegate(IMessage msg, Net.CallbackStatus _)
 		{
 			ItemExchangeInfoResponse itemExchangeInfoResponse = (ItemExchangeInfoResponse)msg;
-			ItemExchangeModel.Instance.InitItemExchangeTimeInfo(itemExchangeInfoResponse.ItemExchangeInfos.ToList<ItemExchangeInfo>());
+			ItemExchangeModel.Instance.InitItemExchangeTimeInfo(itemExchangeInfoResponse.ItemExchangeInfos);
 		}, 0);
 	}
 
-	// Token: 0x0601000F RID: 65551 RVA: 0x003E654F File Offset: 0x003E474F
+	// Token: 0x0600D477 RID: 54391 RVA: 0x003F2B4F File Offset: 0x003F0D4F
 	private void ItemExchangeRequest(int itemId, int exchangeTimes)
 	{
 		this.ItemExchangeRequest(itemId, exchangeTimes, true, null);
 	}
 
-	// Token: 0x06010010 RID: 65552 RVA: 0x003E655C File Offset: 0x003E475C
+	// Token: 0x0600D478 RID: 54392 RVA: 0x003F2B5C File Offset: 0x003F0D5C
 	[NullableContext(2)]
 	public void ItemExchangeRequest(int itemId, int exchangeTimes, bool needPop = true, Action<int, int> callback = null)
 	{
@@ -92,7 +91,7 @@ public class ItemExchangeController : UiControllerBase
 			}
 			if (itemExchangeResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(itemExchangeResponse.ErrorCode, 23286, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(itemExchangeResponse.ErrorCode, 24645, null, true, true);
 				return;
 			}
 			ItemExchangeModel.Instance.AddExchangeTime(itemId, exchangeTimes);
@@ -104,7 +103,7 @@ public class ItemExchangeController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06010011 RID: 65553 RVA: 0x003E65D8 File Offset: 0x003E47D8
+	// Token: 0x0600D479 RID: 54393 RVA: 0x003F2BD8 File Offset: 0x003F0DD8
 	[NullableContext(2)]
 	public void OpenExchangeViewByItemId(int itemId, Action<int, int> confirmCallBack = null, bool confirmNoClose = false)
 	{
@@ -119,7 +118,7 @@ public class ItemExchangeController : UiControllerBase
 		this.OpenExchangeViewByData(commonExchangeData);
 	}
 
-	// Token: 0x06010012 RID: 65554 RVA: 0x003E6624 File Offset: 0x003E4824
+	// Token: 0x0600D47A RID: 54394 RVA: 0x003F2C24 File Offset: 0x003F0E24
 	public void OpenExchangeViewByData(CommonExchangeData data)
 	{
 		CommonExchangeViewData commonExchangeViewData = new CommonExchangeViewData();
@@ -132,8 +131,8 @@ public class ItemExchangeController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.CommonExchangeView, commonExchangeViewData, null);
 	}
 
-	// Token: 0x17001365 RID: 4965
-	// (get) Token: 0x06010013 RID: 65555 RVA: 0x003E66E3 File Offset: 0x003E48E3
+	// Token: 0x17001392 RID: 5010
+	// (get) Token: 0x0600D47B RID: 54395 RVA: 0x003F2CE3 File Offset: 0x003F0EE3
 	public static ItemExchangeController Instance
 	{
 		get
@@ -142,7 +141,7 @@ public class ItemExchangeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010014 RID: 65556 RVA: 0x003E66EA File Offset: 0x003E48EA
+	// Token: 0x0600D47C RID: 54396 RVA: 0x003F2CEA File Offset: 0x003F0EEA
 	public static ItemExchangeController GetOrCreateInstance()
 	{
 		if (ItemExchangeController._Instance == null)
@@ -152,7 +151,7 @@ public class ItemExchangeController : UiControllerBase
 		return ItemExchangeController._Instance;
 	}
 
-	// Token: 0x06010015 RID: 65557 RVA: 0x003E66FE File Offset: 0x003E48FE
+	// Token: 0x0600D47D RID: 54397 RVA: 0x003F2CFE File Offset: 0x003F0EFE
 	public static bool CreateInstance()
 	{
 		if (ItemExchangeController._Instance != null)
@@ -163,27 +162,27 @@ public class ItemExchangeController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010016 RID: 65558 RVA: 0x003E6714 File Offset: 0x003E4914
+	// Token: 0x0600D47E RID: 54398 RVA: 0x003F2D14 File Offset: 0x003F0F14
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010017 RID: 65559 RVA: 0x003E6716 File Offset: 0x003E4916
+	// Token: 0x0600D47F RID: 54399 RVA: 0x003F2D16 File Offset: 0x003F0F16
 	public static void ResetStaticDefaultValue()
 	{
 		ItemExchangeController._Instance = null;
 	}
 
-	// Token: 0x06010018 RID: 65560 RVA: 0x003E671E File Offset: 0x003E491E
+	// Token: 0x0600D480 RID: 54400 RVA: 0x003F2D1E File Offset: 0x003F0F1E
 	static ItemExchangeController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ItemExchangeController.CreateStaticDefaultValue), new Action(ItemExchangeController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007678 RID: 30328
+	// Token: 0x04007761 RID: 30561
 	private bool NeedPopInternal = true;
 
-	// Token: 0x04007679 RID: 30329
+	// Token: 0x04007762 RID: 30562
 	[Nullable(2)]
 	private static ItemExchangeController _Instance;
 }

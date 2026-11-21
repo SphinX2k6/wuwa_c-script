@@ -2,26 +2,26 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A21 RID: 14881
+	// Token: 0x02003DFC RID: 15868
 	public enum IBlackBoard_Union : byte
 	{
-		// Token: 0x0400AE91 RID: 44689
+		// Token: 0x0400B7B3 RID: 47027
 		NONE,
-		// Token: 0x0400AE92 RID: 44690
+		// Token: 0x0400B7B4 RID: 47028
 		IBlackBoard,
-		// Token: 0x0400AE93 RID: 44691
+		// Token: 0x0400B7B5 RID: 47029
 		IBlackBoardBoolean,
-		// Token: 0x0400AE94 RID: 44692
+		// Token: 0x0400B7B6 RID: 47030
 		IBlackBoardInt,
-		// Token: 0x0400AE95 RID: 44693
+		// Token: 0x0400B7B7 RID: 47031
 		IBlackBoardEntityId,
-		// Token: 0x0400AE96 RID: 44694
+		// Token: 0x0400B7B8 RID: 47032
 		IBlackBoardFloat,
-		// Token: 0x0400AE97 RID: 44695
+		// Token: 0x0400B7B9 RID: 47033
 		IBlackBoardString,
-		// Token: 0x0400AE98 RID: 44696
+		// Token: 0x0400B7BA RID: 47034
 		IBlackBoardVector,
-		// Token: 0x0400AE99 RID: 44697
+		// Token: 0x0400B7BB RID: 47035
 		IBlackBoardEntityPos
 	}
 }

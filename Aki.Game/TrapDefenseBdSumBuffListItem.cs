@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C1E RID: 11294
+// Token: 0x02002199 RID: 8601
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class TrapDefenseBdSumBuffListItem : GridProxyAbstract<TrapDefenseBdData>
 {
-	// Token: 0x0601786B RID: 96363 RVA: 0x005FB8AC File Offset: 0x005F9AAC
+	// Token: 0x0601529D RID: 86685 RVA: 0x006282D0 File Offset: 0x006264D0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -36,7 +36,7 @@ public class TrapDefenseBdSumBuffListItem : GridProxyAbstract<TrapDefenseBdData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601786C RID: 96364 RVA: 0x005FB958 File Offset: 0x005F9B58
+	// Token: 0x0601529E RID: 86686 RVA: 0x0062837C File Offset: 0x0062657C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TrapDefenseBdSumBuffListItem.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ public class TrapDefenseBdSumBuffListItem : GridProxyAbstract<TrapDefenseBdData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601786D RID: 96365 RVA: 0x005FB99C File Offset: 0x005F9B9C
+	// Token: 0x0601529F RID: 86687 RVA: 0x006283C0 File Offset: 0x006265C0
 	public override UniTask RefreshAsync(TrapDefenseBdData data, bool isSelected, int gridIndex)
 	{
 		TrapDefenseBdSumBuffListItem.<RefreshAsync>d__11 <RefreshAsync>d__;
@@ -59,7 +59,7 @@ public class TrapDefenseBdSumBuffListItem : GridProxyAbstract<TrapDefenseBdData>
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601786E RID: 96366 RVA: 0x005FB9E7 File Offset: 0x005F9BE7
+	// Token: 0x060152A0 RID: 86688 RVA: 0x0062840B File Offset: 0x0062660B
 	private TrapDefenseBdBuffItem CreateItemBdBuff()
 	{
 		return new TrapDefenseBdBuffItem
@@ -71,7 +71,7 @@ public class TrapDefenseBdSumBuffListItem : GridProxyAbstract<TrapDefenseBdData>
 		};
 	}
 
-	// Token: 0x0601786F RID: 96367 RVA: 0x005FBA24 File Offset: 0x005F9C24
+	// Token: 0x060152A1 RID: 86689 RVA: 0x00628448 File Offset: 0x00626648
 	public override void OnSelected(bool isSelected)
 	{
 		if (!this.IsFireForBuffClick)
@@ -80,13 +80,13 @@ public class TrapDefenseBdSumBuffListItem : GridProxyAbstract<TrapDefenseBdData>
 		}
 	}
 
-	// Token: 0x06017870 RID: 96368 RVA: 0x005FBA46 File Offset: 0x005F9C46
+	// Token: 0x060152A2 RID: 86690 RVA: 0x0062846A File Offset: 0x0062666A
 	public override void OnDeselected(bool isSelected)
 	{
 		this.LayoutBdBuff.DeselectCurrentGridProxy();
 	}
 
-	// Token: 0x06017871 RID: 96369 RVA: 0x005FBA54 File Offset: 0x005F9C54
+	// Token: 0x060152A3 RID: 86691 RVA: 0x00628478 File Offset: 0x00626678
 	private void OnSelectBdBuffItem(TrapDefenseBdBuffData data, TrapDefenseBdBuffItem item)
 	{
 		this.IsFireForBuffClick = true;
@@ -103,44 +103,44 @@ public class TrapDefenseBdSumBuffListItem : GridProxyAbstract<TrapDefenseBdData>
 		this.IsFireForBuffClick = false;
 	}
 
-	// Token: 0x0400AF8F RID: 44943
+	// Token: 0x0400B394 RID: 45972
 	public TrapDefenseBdData ItemData;
 
-	// Token: 0x0400AF90 RID: 44944
+	// Token: 0x0400B395 RID: 45973
 	public GenericLayout<TrapDefenseBdBuffItem, TrapDefenseBdBuffData> LayoutBdBuff;
 
-	// Token: 0x0400AF91 RID: 44945
+	// Token: 0x0400B396 RID: 45974
 	public Action<TrapDefenseBdBuffData, TrapDefenseBdBuffItem> OnSelectBdBuffItemCallBack;
 
-	// Token: 0x0400AF92 RID: 44946
+	// Token: 0x0400B397 RID: 45975
 	public int LastSelectBuffIndex = -1;
 
-	// Token: 0x0400AF93 RID: 44947
+	// Token: 0x0400B398 RID: 45976
 	public bool IsFireForBuffClick;
 
-	// Token: 0x0400AF94 RID: 44948
+	// Token: 0x0400B399 RID: 45977
 	public Func<TrapDefenseBdBuffData, bool> OnIsShowBdBuffLockStateCallback;
 
-	// Token: 0x0400AF95 RID: 44949
+	// Token: 0x0400B39A RID: 45978
 	public Func<TrapDefenseBdBuffData, bool> OnIsNewTagStateCallback;
 
-	// Token: 0x0400AF96 RID: 44950
+	// Token: 0x0400B39B RID: 45979
 	public Func<TrapDefenseBdBuffData, TrapDefenseBdBuff> OnGetBdBuffConfig;
 
-	// Token: 0x0200920A RID: 37386
+	// Token: 0x0200844D RID: 33869
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402F3E3 RID: 193507
+		// Token: 0x0402AAE4 RID: 174820
 		public const int TextureBdIcon = 0;
 
-		// Token: 0x0402F3E4 RID: 193508
+		// Token: 0x0402AAE5 RID: 174821
 		public const int TextTitle = 1;
 
-		// Token: 0x0402F3E5 RID: 193509
+		// Token: 0x0402AAE6 RID: 174822
 		public const int LayoutBdBuff = 2;
 
-		// Token: 0x0402F3E6 RID: 193510
+		// Token: 0x0402AAE7 RID: 174823
 		public const int ItemBdBuff = 3;
 	}
 }

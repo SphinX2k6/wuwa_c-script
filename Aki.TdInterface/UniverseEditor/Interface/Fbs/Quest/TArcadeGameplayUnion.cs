@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042B4 RID: 17076
+	// Token: 0x02004710 RID: 18192
 	public class TArcadeGameplayUnion
 	{
-		// Token: 0x1700792D RID: 31021
-		// (get) Token: 0x060194CD RID: 103629 RVA: 0x003A1CB8 File Offset: 0x0039FEB8
-		// (set) Token: 0x060194CE RID: 103630 RVA: 0x003A1CC0 File Offset: 0x0039FEC0
+		// Token: 0x17007F5E RID: 32606
+		// (get) Token: 0x0601AC39 RID: 109625 RVA: 0x003CD390 File Offset: 0x003CB590
+		// (set) Token: 0x0601AC3A RID: 109626 RVA: 0x003CD398 File Offset: 0x003CB598
 		public TArcadeGameplay Type { get; set; }
 
-		// Token: 0x1700792E RID: 31022
-		// (get) Token: 0x060194CF RID: 103631 RVA: 0x003A1CC9 File Offset: 0x0039FEC9
-		// (set) Token: 0x060194D0 RID: 103632 RVA: 0x003A1CD1 File Offset: 0x0039FED1
+		// Token: 0x17007F5F RID: 32607
+		// (get) Token: 0x0601AC3B RID: 109627 RVA: 0x003CD3A1 File Offset: 0x003CB5A1
+		// (set) Token: 0x0601AC3C RID: 109628 RVA: 0x003CD3A9 File Offset: 0x003CB5A9
 		public object Value { get; set; }
 
-		// Token: 0x060194D1 RID: 103633 RVA: 0x003A1CDA File Offset: 0x0039FEDA
+		// Token: 0x0601AC3D RID: 109629 RVA: 0x003CD3B2 File Offset: 0x003CB5B2
 		public TArcadeGameplayUnion()
 		{
 			this.Type = TArcadeGameplay.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060194D2 RID: 103634 RVA: 0x003A1CF0 File Offset: 0x0039FEF0
+		// Token: 0x0601AC3E RID: 109630 RVA: 0x003CD3C8 File Offset: 0x003CB5C8
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060194D3 RID: 103635 RVA: 0x003A1D02 File Offset: 0x0039FF02
+		// Token: 0x0601AC3F RID: 109631 RVA: 0x003CD3DA File Offset: 0x003CB5DA
 		public IArcadeGameplayDropCatchT AsIArcadeGameplayDropCatch()
 		{
 			return this.As<IArcadeGameplayDropCatchT>();
 		}
 
-		// Token: 0x060194D4 RID: 103636 RVA: 0x003A1D0A File Offset: 0x0039FF0A
+		// Token: 0x0601AC40 RID: 109632 RVA: 0x003CD3E2 File Offset: 0x003CB5E2
 		public static TArcadeGameplayUnion FromIArcadeGameplayDropCatch(IArcadeGameplayDropCatchT _iarcadegameplaydropcatch)
 		{
 			return new TArcadeGameplayUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060194D5 RID: 103637 RVA: 0x003A1D1F File Offset: 0x0039FF1F
+		// Token: 0x0601AC41 RID: 109633 RVA: 0x003CD3F7 File Offset: 0x003CB5F7
 		public IArcadeGameplayTetrisBoardGameT AsIArcadeGameplayTetrisBoardGame()
 		{
 			return this.As<IArcadeGameplayTetrisBoardGameT>();
 		}
 
-		// Token: 0x060194D6 RID: 103638 RVA: 0x003A1D27 File Offset: 0x0039FF27
+		// Token: 0x0601AC42 RID: 109634 RVA: 0x003CD3FF File Offset: 0x003CB5FF
 		public static TArcadeGameplayUnion FromIArcadeGameplayTetrisBoardGame(IArcadeGameplayTetrisBoardGameT _iarcadegameplaytetrisboardgame)
 		{
 			return new TArcadeGameplayUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060194D7 RID: 103639 RVA: 0x003A1D3C File Offset: 0x0039FF3C
+		// Token: 0x0601AC43 RID: 109635 RVA: 0x003CD414 File Offset: 0x003CB614
 		public static int Pack(FlatBufferBuilder builder, TArcadeGameplayUnion _o)
 		{
 			TArcadeGameplay type = _o.Type;

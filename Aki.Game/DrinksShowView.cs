@@ -7,22 +7,23 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.ActivityGamePlay.Drinks;
 using CSharpScript.Game.Module.Plot.Flow;
 using CSharpScript.Game.Module.RoleUi;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02000F50 RID: 3920
+// Token: 0x02000405 RID: 1029
 [NullableContext(1)]
 [Nullable(0)]
-public class DrinksShowView : UiViewBase, IUiCameraBehavior
+public class DrinksShowView : UiViewBase, IUiViewCameraBehavior
 {
-	// Token: 0x0600644F RID: 25679 RVA: 0x0013D086 File Offset: 0x0013B286
+	// Token: 0x060037E7 RID: 14311 RVA: 0x00145926 File Offset: 0x00143B26
 	public DrinksShowView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06006450 RID: 25680 RVA: 0x0013D098 File Offset: 0x0013B298
+	// Token: 0x060037E8 RID: 14312 RVA: 0x00145938 File Offset: 0x00143B38
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,14 +47,14 @@ public class DrinksShowView : UiViewBase, IUiCameraBehavior
 		};
 	}
 
-	// Token: 0x06006451 RID: 25681 RVA: 0x0013D1DE File Offset: 0x0013B3DE
+	// Token: 0x060037E9 RID: 14313 RVA: 0x00145A7E File Offset: 0x00143C7E
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.PlotViewChange, new Action<EUiViewName, bool>(this.OnPlotStart));
 		this.NeedRemove = true;
 	}
 
-	// Token: 0x06006452 RID: 25682 RVA: 0x0013D203 File Offset: 0x0013B403
+	// Token: 0x060037EA RID: 14314 RVA: 0x00145AA3 File Offset: 0x00143CA3
 	protected override void OnRemoveEventListener()
 	{
 		if (this.NeedRemove)
@@ -62,7 +63,7 @@ public class DrinksShowView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006453 RID: 25683 RVA: 0x0013D22C File Offset: 0x0013B42C
+	// Token: 0x060037EB RID: 14315 RVA: 0x00145ACC File Offset: 0x00143CCC
 	protected override void OnStart()
 	{
 		DrinksShowInfo drinksShowInfo = this.OpenParam as DrinksShowInfo;
@@ -83,27 +84,27 @@ public class DrinksShowView : UiViewBase, IUiCameraBehavior
 		this.Refresh();
 	}
 
-	// Token: 0x06006454 RID: 25684 RVA: 0x0013D2DC File Offset: 0x0013B4DC
+	// Token: 0x060037EC RID: 14316 RVA: 0x00145B7C File Offset: 0x00143D7C
 	protected override void OnBeforeShow()
 	{
-		UiCameraAnimationManager.Instance.DisablePlayerActor();
+		UiCameraModel.Instance.DisablePlayerActor();
 	}
 
-	// Token: 0x06006455 RID: 25685 RVA: 0x0013D2E8 File Offset: 0x0013B4E8
+	// Token: 0x060037ED RID: 14317 RVA: 0x00145B88 File Offset: 0x00143D88
 	protected override void OnBeforeHide()
 	{
 		if (!this.CurData.IsGamePlay)
 		{
-			UiCameraAnimationManager.Instance.EnablePlayerActor();
+			UiCameraModel.Instance.EnablePlayerActor();
 			return;
 		}
 		TimerSystem.Instance.Delay(delegate(float _)
 		{
-			UiCameraAnimationManager.Instance.EnablePlayerActor();
+			UiCameraModel.Instance.EnablePlayerActor();
 		}, 1000f, null, null, true, 1f);
 	}
 
-	// Token: 0x06006456 RID: 25686 RVA: 0x0013D344 File Offset: 0x0013B544
+	// Token: 0x060037EE RID: 14318 RVA: 0x00145BE4 File Offset: 0x00143DE4
 	protected override void OnBeforeDestroy()
 	{
 		if (!this.CurData.IsGamePlay)
@@ -112,20 +113,19 @@ public class DrinksShowView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006457 RID: 25687 RVA: 0x0013D362 File Offset: 0x0013B562
-	public void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+	// Token: 0x060037EF RID: 14319 RVA: 0x00145C02 File Offset: 0x00143E02
+	public void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 	{
-		UiCameraAnimationController.Instance.PushCameraHandle(viewName, new int?(viewId), isBlend);
+		UiCameraController.Instance.PushCameraHandleByOpenView(viewName, viewId, operationType);
 	}
 
-	// Token: 0x06006458 RID: 25688 RVA: 0x0013D376 File Offset: 0x0013B576
-	[NullableContext(2)]
-	public void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+	// Token: 0x060037F0 RID: 14320 RVA: 0x00145C11 File Offset: 0x00143E11
+	public void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 	{
-		UiCameraAnimationController.Instance.PopCameraHandle(viewName, stackTopInfo, closeViewId, true);
+		UiCameraController.Instance.PopCameraHandleByCloseView(viewName, nextViewName, closeViewId, operationType);
 	}
 
-	// Token: 0x06006459 RID: 25689 RVA: 0x0013D388 File Offset: 0x0013B588
+	// Token: 0x060037F1 RID: 14321 RVA: 0x00145C24 File Offset: 0x00143E24
 	protected void Refresh()
 	{
 		if (this.CurData.IsGamePlay)
@@ -187,7 +187,7 @@ public class DrinksShowView : UiViewBase, IUiCameraBehavior
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), mixConfig.Value.Desc, Array.Empty<object>());
 	}
 
-	// Token: 0x0600645A RID: 25690 RVA: 0x0013D57B File Offset: 0x0013B77B
+	// Token: 0x060037F2 RID: 14322 RVA: 0x00145E17 File Offset: 0x00144017
 	private void OnClicked()
 	{
 		UiLayer.Instance.SetShowMaskLayer(EUiViewName.DrinksShowView, true);
@@ -222,7 +222,7 @@ public class DrinksShowView : UiViewBase, IUiCameraBehavior
 		});
 	}
 
-	// Token: 0x0600645B RID: 25691 RVA: 0x0013D5B0 File Offset: 0x0013B7B0
+	// Token: 0x060037F3 RID: 14323 RVA: 0x00145E4C File Offset: 0x0014404C
 	private void OnPlotStart(EUiViewName _, bool __)
 	{
 		if (this.CurData.IsGamePlay)
@@ -237,22 +237,22 @@ public class DrinksShowView : UiViewBase, IUiCameraBehavior
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600645C RID: 25692 RVA: 0x0013D638 File Offset: 0x0013B838
+	// Token: 0x060037F4 RID: 14324 RVA: 0x00145ED4 File Offset: 0x001440D4
 	private DrinksShowTasteItem CreateTaste()
 	{
 		return new DrinksShowTasteItem();
 	}
 
-	// Token: 0x0600645D RID: 25693 RVA: 0x0013D63F File Offset: 0x0013B83F
+	// Token: 0x060037F5 RID: 14325 RVA: 0x00145EDB File Offset: 0x001440DB
 	private void OnClickCloseButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04002D90 RID: 11664
+	// Token: 0x04002E29 RID: 11817
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04002D91 RID: 11665
+	// Token: 0x04002E2A RID: 11818
 	[Nullable(new byte[]
 	{
 		2,
@@ -261,9 +261,9 @@ public class DrinksShowView : UiViewBase, IUiCameraBehavior
 	})]
 	private GenericLayout<DrinksShowTasteItem, IDrinkTasteInfo> Layout;
 
-	// Token: 0x04002D92 RID: 11666
+	// Token: 0x04002E2B RID: 11819
 	private DrinksShowInfo CurData;
 
-	// Token: 0x04002D93 RID: 11667
+	// Token: 0x04002E2C RID: 11820
 	protected bool NeedRemove = true;
 }

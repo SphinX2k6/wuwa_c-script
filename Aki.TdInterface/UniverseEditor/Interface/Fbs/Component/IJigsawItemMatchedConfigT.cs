@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054B0 RID: 21680
+	// Token: 0x02005A36 RID: 23094
 	public class IJigsawItemMatchedConfigT
 	{
-		// Token: 0x17009FB2 RID: 40882
-		// (get) Token: 0x06023B58 RID: 146264 RVA: 0x004F0073 File Offset: 0x004EE273
-		// (set) Token: 0x06023B59 RID: 146265 RVA: 0x004F007B File Offset: 0x004EE27B
+		// Token: 0x1700A7EC RID: 42988
+		// (get) Token: 0x06025C10 RID: 154640 RVA: 0x0052D0E7 File Offset: 0x0052B2E7
+		// (set) Token: 0x06025C11 RID: 154641 RVA: 0x0052D0EF File Offset: 0x0052B2EF
 		public IPieceIndexT TargetIndex { get; set; }
 
-		// Token: 0x17009FB3 RID: 40883
-		// (get) Token: 0x06023B5A RID: 146266 RVA: 0x004F0084 File Offset: 0x004EE284
-		// (set) Token: 0x06023B5B RID: 146267 RVA: 0x004F008C File Offset: 0x004EE28C
+		// Token: 0x1700A7ED RID: 42989
+		// (get) Token: 0x06025C12 RID: 154642 RVA: 0x0052D0F8 File Offset: 0x0052B2F8
+		// (set) Token: 0x06025C13 RID: 154643 RVA: 0x0052D100 File Offset: 0x0052B300
 		public List<int> JigsawItemIds { get; set; }
 
-		// Token: 0x17009FB4 RID: 40884
-		// (get) Token: 0x06023B5C RID: 146268 RVA: 0x004F0095 File Offset: 0x004EE295
-		// (set) Token: 0x06023B5D RID: 146269 RVA: 0x004F009D File Offset: 0x004EE29D
+		// Token: 0x1700A7EE RID: 42990
+		// (get) Token: 0x06025C14 RID: 154644 RVA: 0x0052D109 File Offset: 0x0052B309
+		// (set) Token: 0x06025C15 RID: 154645 RVA: 0x0052D111 File Offset: 0x0052B311
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x17009FB5 RID: 40885
-		// (get) Token: 0x06023B5E RID: 146270 RVA: 0x004F00A6 File Offset: 0x004EE2A6
-		// (set) Token: 0x06023B5F RID: 146271 RVA: 0x004F00AE File Offset: 0x004EE2AE
+		// Token: 0x1700A7EF RID: 42991
+		// (get) Token: 0x06025C16 RID: 154646 RVA: 0x0052D11A File Offset: 0x0052B31A
+		// (set) Token: 0x06025C17 RID: 154647 RVA: 0x0052D122 File Offset: 0x0052B322
 		public List<IConditionActionT> ConditionActions { get; set; }
 
-		// Token: 0x17009FB6 RID: 40886
-		// (get) Token: 0x06023B60 RID: 146272 RVA: 0x004F00B7 File Offset: 0x004EE2B7
-		// (set) Token: 0x06023B61 RID: 146273 RVA: 0x004F00BF File Offset: 0x004EE2BF
+		// Token: 0x1700A7F0 RID: 42992
+		// (get) Token: 0x06025C18 RID: 154648 RVA: 0x0052D12B File Offset: 0x0052B32B
+		// (set) Token: 0x06025C19 RID: 154649 RVA: 0x0052D133 File Offset: 0x0052B333
 		public List<IActionInfoT> UnmatchedActions { get; set; }
 
-		// Token: 0x17009FB7 RID: 40887
-		// (get) Token: 0x06023B62 RID: 146274 RVA: 0x004F00C8 File Offset: 0x004EE2C8
-		// (set) Token: 0x06023B63 RID: 146275 RVA: 0x004F00D0 File Offset: 0x004EE2D0
+		// Token: 0x1700A7F1 RID: 42993
+		// (get) Token: 0x06025C1A RID: 154650 RVA: 0x0052D13C File Offset: 0x0052B33C
+		// (set) Token: 0x06025C1B RID: 154651 RVA: 0x0052D144 File Offset: 0x0052B344
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023B64 RID: 146276 RVA: 0x004F00D9 File Offset: 0x004EE2D9
+		// Token: 0x06025C1C RID: 154652 RVA: 0x0052D14D File Offset: 0x0052B34D
 		public IJigsawItemMatchedConfigT()
 		{
 			this.TargetIndex = null;

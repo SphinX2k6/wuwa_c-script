@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001690 RID: 5776
+// Token: 0x02000B48 RID: 2888
 public class AdventureGuideRedDotView : UiPanelBase
 {
-	// Token: 0x0600A4BF RID: 42175 RVA: 0x0024B026 File Offset: 0x00249226
+	// Token: 0x0600789F RID: 30879 RVA: 0x0025538A File Offset: 0x0025358A
 	[NullableContext(1)]
 	public AdventureGuideRedDotView(AActor rootActor)
 	{
 		base.CreateThenShowByActor(rootActor, null);
 	}
 
-	// Token: 0x0600A4C0 RID: 42176 RVA: 0x0024B038 File Offset: 0x00249238
+	// Token: 0x060078A0 RID: 30880 RVA: 0x0025539C File Offset: 0x0025359C
 	public void EnableRedDot(ERedDotName type)
 	{
 		UUIItem rootItem = base.GetRootItem();
@@ -21,18 +21,18 @@ public class AdventureGuideRedDotView : UiPanelBase
 		this.Type = type;
 	}
 
-	// Token: 0x0600A4C1 RID: 42177 RVA: 0x0024B061 File Offset: 0x00249261
+	// Token: 0x060078A1 RID: 30881 RVA: 0x002553C5 File Offset: 0x002535C5
 	protected override void OnBeforeDestroy()
 	{
 		this.DisableRedDot(this.Type);
 	}
 
-	// Token: 0x0600A4C2 RID: 42178 RVA: 0x0024B06F File Offset: 0x0024926F
+	// Token: 0x060078A2 RID: 30882 RVA: 0x002553D3 File Offset: 0x002535D3
 	public void DisableRedDot(ERedDotName type)
 	{
 		RedDotController.Instance.UnBindRedDot(type);
 	}
 
-	// Token: 0x04004A8C RID: 19084
+	// Token: 0x04004B33 RID: 19251
 	private ERedDotName Type;
 }

@@ -4,46 +4,46 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 {
-	// Token: 0x0200685D RID: 26717
+	// Token: 0x020057AD RID: 22445
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RealVisual : IDragVisual
 	{
-		// Token: 0x1700977B RID: 38779
-		// (get) Token: 0x06042B68 RID: 273256 RVA: 0x01039DE9 File Offset: 0x01037FE9
+		// Token: 0x17006ABC RID: 27324
+		// (get) Token: 0x060376BD RID: 227005 RVA: 0x00F7B335 File Offset: 0x00F79535
 		public int SourceUid { get; }
 
-		// Token: 0x1700977C RID: 38780
-		// (get) Token: 0x06042B69 RID: 273257 RVA: 0x01039DF1 File Offset: 0x01037FF1
+		// Token: 0x17006ABD RID: 27325
+		// (get) Token: 0x060376BE RID: 227006 RVA: 0x00F7B33D File Offset: 0x00F7953D
 		public int ConfigId { get; }
 
-		// Token: 0x1700977D RID: 38781
-		// (get) Token: 0x06042B6A RID: 273258 RVA: 0x01039DF9 File Offset: 0x01037FF9
+		// Token: 0x17006ABE RID: 27326
+		// (get) Token: 0x060376BF RID: 227007 RVA: 0x00F7B345 File Offset: 0x00F79545
 		public EDragSourceKind Source { get; }
 
-		// Token: 0x1700977E RID: 38782
-		// (get) Token: 0x06042B6B RID: 273259 RVA: 0x01039E01 File Offset: 0x01038001
+		// Token: 0x17006ABF RID: 27327
+		// (get) Token: 0x060376C0 RID: 227008 RVA: 0x00F7B34D File Offset: 0x00F7954D
 		public EDangoBrawlTemplateType TemplateType { get; }
 
-		// Token: 0x1700977F RID: 38783
-		// (get) Token: 0x06042B6C RID: 273260 RVA: 0x01039E09 File Offset: 0x01038009
-		// (set) Token: 0x06042B6D RID: 273261 RVA: 0x01039E11 File Offset: 0x01038011
+		// Token: 0x17006AC0 RID: 27328
+		// (get) Token: 0x060376C1 RID: 227009 RVA: 0x00F7B355 File Offset: 0x00F79555
+		// (set) Token: 0x060376C2 RID: 227010 RVA: 0x00F7B35D File Offset: 0x00F7955D
 		public EDangoBrawlRotate Rotate { get; set; }
 
-		// Token: 0x17009780 RID: 38784
-		// (get) Token: 0x06042B6E RID: 273262 RVA: 0x01039E1A File Offset: 0x0103801A
+		// Token: 0x17006AC1 RID: 27329
+		// (get) Token: 0x060376C3 RID: 227011 RVA: 0x00F7B366 File Offset: 0x00F79566
 		public IDangoBrawlDraggableView DraggableItem { get; }
 
-		// Token: 0x17009781 RID: 38785
-		// (get) Token: 0x06042B6F RID: 273263 RVA: 0x01039E22 File Offset: 0x01038022
+		// Token: 0x17006AC2 RID: 27330
+		// (get) Token: 0x060376C4 RID: 227012 RVA: 0x00F7B36E File Offset: 0x00F7956E
 		public DragPayloadFollower[] Followers { get; }
 
-		// Token: 0x17009782 RID: 38786
-		// (get) Token: 0x06042B70 RID: 273264 RVA: 0x01039E2A File Offset: 0x0103802A
-		// (set) Token: 0x06042B71 RID: 273265 RVA: 0x01039E32 File Offset: 0x01038032
+		// Token: 0x17006AC3 RID: 27331
+		// (get) Token: 0x060376C5 RID: 227013 RVA: 0x00F7B376 File Offset: 0x00F79576
+		// (set) Token: 0x060376C6 RID: 227014 RVA: 0x00F7B37E File Offset: 0x00F7957E
 		public FVector2D DragAnchorOffset { get; set; } = new FVector2D(0f, 0f);
 
-		// Token: 0x06042B72 RID: 273266 RVA: 0x01039E3C File Offset: 0x0103803C
+		// Token: 0x060376C7 RID: 227015 RVA: 0x00F7B388 File Offset: 0x00F79588
 		public RealVisual(EDragSourceKind source, int sourceUid, int configId, EDangoBrawlTemplateType type, EDangoBrawlRotate rotate, IDangoBrawlDraggableView draggable, DragPayloadFollower[] followers)
 		{
 			this.Source = source;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			this.Followers = followers;
 		}
 
-		// Token: 0x06042B73 RID: 273267 RVA: 0x01039E9C File Offset: 0x0103809C
+		// Token: 0x060376C8 RID: 227016 RVA: 0x00F7B3E8 File Offset: 0x00F795E8
 		public FVector2D GetLguiTopLeft()
 		{
 			UUIItem draggableRootItem = this.DraggableItem.GetDraggableRootItem();
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return itemTopLeft.GetValueOrDefault();
 		}
 
-		// Token: 0x06042B74 RID: 273268 RVA: 0x01039EF4 File Offset: 0x010380F4
+		// Token: 0x060376C9 RID: 227017 RVA: 0x00F7B440 File Offset: 0x00F79640
 		public void MoveTo(FVector2D pointerLguiPos)
 		{
 			UUIItem draggableRootItem = this.DraggableItem.GetDraggableRootItem();
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			}
 		}
 
-		// Token: 0x06042B75 RID: 273269 RVA: 0x0103A04F File Offset: 0x0103824F
+		// Token: 0x060376CA RID: 227018 RVA: 0x00F7B59B File Offset: 0x00F7979B
 		public void Destroy()
 		{
 		}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CF9 RID: 27897
+	// Token: 0x02007474 RID: 29812
 	public struct IPlayerInput : IFlatbufferObject
 	{
-		// Token: 0x1700CFC1 RID: 53185
-		// (get) Token: 0x0603130B RID: 201483 RVA: 0x006AC5E1 File Offset: 0x006AA7E1
+		// Token: 0x1700DB05 RID: 56069
+		// (get) Token: 0x060342FF RID: 213759 RVA: 0x00707B11 File Offset: 0x00705D11
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603130C RID: 201484 RVA: 0x006AC5EE File Offset: 0x006AA7EE
+		// Token: 0x06034300 RID: 213760 RVA: 0x00707B1E File Offset: 0x00705D1E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603130D RID: 201485 RVA: 0x006AC5F8 File Offset: 0x006AA7F8
+		// Token: 0x06034301 RID: 213761 RVA: 0x00707B28 File Offset: 0x00705D28
 		public static IPlayerInput GetRootAsIPlayerInput(ByteBuffer _bb)
 		{
 			return IPlayerInput.GetRootAsIPlayerInput(_bb, default(IPlayerInput));
 		}
 
-		// Token: 0x0603130E RID: 201486 RVA: 0x006AC614 File Offset: 0x006AA814
+		// Token: 0x06034302 RID: 213762 RVA: 0x00707B44 File Offset: 0x00705D44
 		public static IPlayerInput GetRootAsIPlayerInput(ByteBuffer _bb, IPlayerInput obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603130F RID: 201487 RVA: 0x006AC631 File Offset: 0x006AA831
+		// Token: 0x06034303 RID: 213763 RVA: 0x00707B61 File Offset: 0x00705D61
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031310 RID: 201488 RVA: 0x006AC640 File Offset: 0x006AA840
+		// Token: 0x06034304 RID: 213764 RVA: 0x00707B70 File Offset: 0x00705D70
 		public IPlayerInput __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CFC2 RID: 53186
-		// (get) Token: 0x06031311 RID: 201489 RVA: 0x006AC650 File Offset: 0x006AA850
+		// Token: 0x1700DB06 RID: 56070
+		// (get) Token: 0x06034305 RID: 213765 RVA: 0x00707B80 File Offset: 0x00705D80
 		public EPlayerInputType Input
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031312 RID: 201490 RVA: 0x006AC68C File Offset: 0x006AA88C
+		// Token: 0x06034306 RID: 213766 RVA: 0x00707BBC File Offset: 0x00705DBC
 		public static Offset<IPlayerInput> CreateIPlayerInput(FlatBufferBuilder builder, EPlayerInputType Input = EPlayerInputType.None)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlayerInput.EndIPlayerInput(builder);
 		}
 
-		// Token: 0x06031313 RID: 201491 RVA: 0x006AC6A2 File Offset: 0x006AA8A2
+		// Token: 0x06034307 RID: 213767 RVA: 0x00707BD2 File Offset: 0x00705DD2
 		public static void StartIPlayerInput(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06031314 RID: 201492 RVA: 0x006AC6AB File Offset: 0x006AA8AB
+		// Token: 0x06034308 RID: 213768 RVA: 0x00707BDB File Offset: 0x00705DDB
 		public static void AddInput(FlatBufferBuilder builder, EPlayerInputType input)
 		{
 			builder.AddByte(0, (byte)input, 0);
 		}
 
-		// Token: 0x06031315 RID: 201493 RVA: 0x006AC6B6 File Offset: 0x006AA8B6
+		// Token: 0x06034309 RID: 213769 RVA: 0x00707BE6 File Offset: 0x00705DE6
 		public static Offset<IPlayerInput> EndIPlayerInput(FlatBufferBuilder builder)
 		{
 			return new Offset<IPlayerInput>(builder.EndTable());
 		}
 
-		// Token: 0x06031316 RID: 201494 RVA: 0x006AC6C4 File Offset: 0x006AA8C4
+		// Token: 0x0603430A RID: 213770 RVA: 0x00707BF4 File Offset: 0x00705DF4
 		public IPlayerInputT UnPack()
 		{
 			IPlayerInputT playerInputT = new IPlayerInputT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return playerInputT;
 		}
 
-		// Token: 0x06031317 RID: 201495 RVA: 0x006AC6DF File Offset: 0x006AA8DF
+		// Token: 0x0603430B RID: 213771 RVA: 0x00707C0F File Offset: 0x00705E0F
 		public void UnPackTo(IPlayerInputT _o)
 		{
 			_o.Input = this.Input;
 		}
 
-		// Token: 0x06031318 RID: 201496 RVA: 0x006AC6F0 File Offset: 0x006AA8F0
+		// Token: 0x0603430C RID: 213772 RVA: 0x00707C20 File Offset: 0x00705E20
 		public static Offset<IPlayerInput> Pack(FlatBufferBuilder builder, IPlayerInputT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlayerInput.CreateIPlayerInput(builder, _o.Input);
 		}
 
-		// Token: 0x04011675 RID: 71285
+		// Token: 0x040125EF RID: 75247
 		private Table __p;
 	}
 }

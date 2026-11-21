@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001AE1 RID: 6881
+	// Token: 0x020004BF RID: 1215
 	public sealed class FKuroDestructibleActorPlayEffectDelegateSignature : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06019A4D RID: 105037 RVA: 0x0025E596 File Offset: 0x0025C796
+		// Token: 0x06006FED RID: 28653 RVA: 0x000A56B6 File Offset: 0x000A38B6
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroDestructibleActorPlayEffectDelegateSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x06019A4E RID: 105038 RVA: 0x0025E5A2 File Offset: 0x0025C7A2
+		// Token: 0x06006FEE RID: 28654 RVA: 0x000A56C2 File Offset: 0x000A38C2
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroDestructibleActorPlayEffectDelegateSignature._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FKuroDestructibleActorPlayEffectDelegateSignature._FunctionPtr;
 		}
 
-		// Token: 0x06019A4F RID: 105039 RVA: 0x0025E5C5 File Offset: 0x0025C7C5
+		// Token: 0x06006FEF RID: 28655 RVA: 0x000A56E5 File Offset: 0x000A38E5
 		public FKuroDestructibleActorPlayEffectDelegateSignature()
 		{
 		}
 
-		// Token: 0x06019A50 RID: 105040 RVA: 0x0025E5CD File Offset: 0x0025C7CD
+		// Token: 0x06006FF0 RID: 28656 RVA: 0x000A56ED File Offset: 0x000A38ED
 		[NullableContext(2)]
 		public FKuroDestructibleActorPlayEffectDelegateSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06019A51 RID: 105041 RVA: 0x0025E5D7 File Offset: 0x0025C7D7
+		// Token: 0x06006FF1 RID: 28657 RVA: 0x000A56F7 File Offset: 0x000A38F7
 		public FKuroDestructibleActorPlayEffectDelegateSignature(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06019A52 RID: 105042 RVA: 0x0025E5E2 File Offset: 0x0025C7E2
+		// Token: 0x06006FF2 RID: 28658 RVA: 0x000A5702 File Offset: 0x000A3902
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FKuroDestructibleEffect>) ?? ((Action<FKuroDestructibleEffect>)Delegate.CreateDelegate(typeof(Action<FKuroDestructibleEffect>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06019A53 RID: 105043 RVA: 0x0025E614 File Offset: 0x0025C814
+		// Token: 0x06006FF3 RID: 28659 RVA: 0x000A5734 File Offset: 0x000A3934
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FKuroDestructibleEffect> Callback)
 		{
 			if (FKuroDestructibleActorPlayEffectDelegateSignature.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FKuroDestructibleActorPlayEffectDelegateSignature.RegisterId);
 		}
 
-		// Token: 0x06019A54 RID: 105044 RVA: 0x0025E650 File Offset: 0x0025C850
+		// Token: 0x06006FF4 RID: 28660 RVA: 0x000A5770 File Offset: 0x000A3970
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(FKuroDestructibleEffect EffectData)
 		{
 			FKuroDestructibleActorPlayEffectDelegateSignature.__FKuroDestructibleActorPlayEffectDelegateSignature_DelegateParams* ptr = stackalloc FKuroDestructibleActorPlayEffectDelegateSignature.__FKuroDestructibleActorPlayEffectDelegateSignature_DelegateParams[(UIntPtr)95] + 15L / (long)sizeof(FKuroDestructibleActorPlayEffectDelegateSignature.__FKuroDestructibleActorPlayEffectDelegateSignature_DelegateParams) & -16L;
@@ -80,10 +78,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06019A55 RID: 105045 RVA: 0x0025E6A8 File Offset: 0x0025C8A8
+		// Token: 0x06006FF5 RID: 28661 RVA: 0x000A57C8 File Offset: 0x000A39C8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FKuroDestructibleEffect> action = target as Action<FKuroDestructibleEffect>;
@@ -95,31 +92,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x0400DF38 RID: 57144
+		// Token: 0x04003052 RID: 12370
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400DF39 RID: 57145
+		// Token: 0x04003053 RID: 12371
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroDestructibleActorPlayEffectDelegateSignature__DelegateSignature";
 
-		// Token: 0x0400DF3A RID: 57146
+		// Token: 0x04003054 RID: 12372
 		private static int RegisterId;
 
-		// Token: 0x02003139 RID: 12601
+		// Token: 0x02000C07 RID: 3079
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
-		protected ref struct __FKuroDestructibleActorPlayEffectDelegateSignature_DelegateParams
+		private ref struct __FKuroDestructibleActorPlayEffectDelegateSignature_DelegateParams
 		{
-			// Token: 0x04016F49 RID: 94025
+			// Token: 0x04005E3C RID: 24124
 			[FieldOffset(0)]
 			public byte EffectData;
 		}
 
-		// Token: 0x0200313A RID: 12602
+		// Token: 0x02000C08 RID: 3080
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016F4A RID: 94026
+			// Token: 0x04005E3D RID: 24125
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

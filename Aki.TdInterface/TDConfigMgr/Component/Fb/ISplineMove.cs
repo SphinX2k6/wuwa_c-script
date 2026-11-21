@@ -6,11 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B91 RID: 2961
+	// Token: 0x02000C5F RID: 3167
 	public class ISplineMove
 	{
-		// Token: 0x0600440E RID: 17422 RVA: 0x000AD1B1 File Offset: 0x000AB3B1
-		[NullableContext(1)]
+		// Token: 0x06004867 RID: 18535 RVA: 0x000B7275 File Offset: 0x000B5475
 		public static ISplineMove Create(ISplineMove? instance)
 		{
 			if (instance == null)
@@ -23,19 +22,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012A9 RID: 4777
-		// (get) Token: 0x0600440F RID: 17423 RVA: 0x000AD1D0 File Offset: 0x000AB3D0
+		// Token: 0x170013A4 RID: 5028
+		// (get) Token: 0x06004868 RID: 18536 RVA: 0x000B7294 File Offset: 0x000B5494
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IEntityStateCondition> StateConditions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -58,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012AA RID: 4778
-		// (get) Token: 0x06004410 RID: 17424 RVA: 0x000AD24A File Offset: 0x000AB44A
+		// Token: 0x170013A5 RID: 5029
+		// (get) Token: 0x06004869 RID: 18537 RVA: 0x000B730E File Offset: 0x000B550E
 		public virtual int Speed
 		{
 			get
@@ -68,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012AB RID: 4779
-		// (get) Token: 0x06004411 RID: 17425 RVA: 0x000AD257 File Offset: 0x000AB457
+		// Token: 0x170013A6 RID: 5030
+		// (get) Token: 0x0600486A RID: 18538 RVA: 0x000B731B File Offset: 0x000B551B
 		public virtual int SplineEntityId
 		{
 			get
@@ -78,8 +77,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012AC RID: 4780
-		// (get) Token: 0x06004412 RID: 17426 RVA: 0x000AD264 File Offset: 0x000AB464
+		// Token: 0x170013A7 RID: 5031
+		// (get) Token: 0x0600486B RID: 18539 RVA: 0x000B7328 File Offset: 0x000B5528
 		public virtual bool IsCircle
 		{
 			get
@@ -88,8 +87,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012AD RID: 4781
-		// (get) Token: 0x06004413 RID: 17427 RVA: 0x000AD274 File Offset: 0x000AB474
+		// Token: 0x170013A8 RID: 5032
+		// (get) Token: 0x0600486C RID: 18540 RVA: 0x000B7338 File Offset: 0x000B5538
 		public virtual bool? IsLookDir
 		{
 			get
@@ -102,18 +101,18 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400266A RID: 9834
+		// Token: 0x040028B2 RID: 10418
 		private ISplineMove Instance;
 
-		// Token: 0x0400266B RID: 9835
+		// Token: 0x040028B3 RID: 10419
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IEntityStateCondition> _StateConditionsCache;
 
-		// Token: 0x0400266C RID: 9836
+		// Token: 0x040028B4 RID: 10420
 		private bool _StateConditionsInited;
 	}
 }

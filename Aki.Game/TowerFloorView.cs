@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -10,17 +9,17 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002BF2 RID: 11250
+// Token: 0x0200216D RID: 8557
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerFloorView : UiViewBase
 {
-	// Token: 0x060175D2 RID: 95698 RVA: 0x005F15CC File Offset: 0x005EF7CC
+	// Token: 0x06015003 RID: 86019 RVA: 0x0061E120 File Offset: 0x0061C320
 	public TowerFloorView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060175D3 RID: 95699 RVA: 0x005F15E8 File Offset: 0x005EF7E8
+	// Token: 0x06015004 RID: 86020 RVA: 0x0061E13C File Offset: 0x0061C33C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 15;
@@ -69,19 +68,19 @@ public class TowerFloorView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060175D4 RID: 95700 RVA: 0x005F1865 File Offset: 0x005EFA65
+	// Token: 0x06015005 RID: 86021 RVA: 0x0061E3B9 File Offset: 0x0061C5B9
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnTowerRefresh, new Action(this.RefreshTower));
 	}
 
-	// Token: 0x060175D5 RID: 95701 RVA: 0x005F1883 File Offset: 0x005EFA83
+	// Token: 0x06015006 RID: 86022 RVA: 0x0061E3D7 File Offset: 0x0061C5D7
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnTowerRefresh, new Action(this.RefreshTower));
 	}
 
-	// Token: 0x060175D6 RID: 95702 RVA: 0x005F18A4 File Offset: 0x005EFAA4
+	// Token: 0x06015007 RID: 86023 RVA: 0x0061E3F8 File Offset: 0x0061C5F8
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
@@ -108,7 +107,7 @@ public class TowerFloorView : UiViewBase
 				TowerModel.Instance.DefaultFloor = difficultyAreaAllFloor[0];
 			}
 		}
-		this.TowerFloorLayout.RefreshByData(difficultyAreaAllFloor.ToList<int>(), null, false);
+		this.TowerFloorLayout.RefreshByData(difficultyAreaAllFloor, null, false);
 		this.BuffShowLayout = new GenericLayout<TowerBuffShowItem, long>(base.GetVerticalLayout(2), new Func<TowerBuffShowItem>(this.InitBuffItem), null, false, true);
 		this.TargetStarLayout = new GenericLayout<TowerStarsComplexItem, ValueTuple<bool, TowerTarget>>(base.GetVerticalLayout(3), new Func<TowerStarsComplexItem>(this.InitTargetStarItem), null, false, true);
 		this.MonsterLayout = new GenericLayout<TowerMonsterItem, int>(base.GetGridLayout(4), new Func<TowerMonsterItem>(this.InitMonsterItem), null, false, true);
@@ -162,7 +161,7 @@ public class TowerFloorView : UiViewBase
 		this.AddHomeBtnExtraCallback();
 	}
 
-	// Token: 0x060175D7 RID: 95703 RVA: 0x005F1AD7 File Offset: 0x005EFCD7
+	// Token: 0x06015008 RID: 86024 RVA: 0x0061E626 File Offset: 0x0061C826
 	private void AddHomeBtnExtraCallback()
 	{
 		UiBehaviourHomeBtn uiBehaviourHomeBtn = this.UiBehaviourHomeBtn;
@@ -180,16 +179,16 @@ public class TowerFloorView : UiViewBase
 		});
 	}
 
-	// Token: 0x060175D8 RID: 95704 RVA: 0x005F1B08 File Offset: 0x005EFD08
+	// Token: 0x06015009 RID: 86025 RVA: 0x0061E658 File Offset: 0x0061C858
 	private void RefreshTower()
 	{
 		this.RefreshView(this.TowerId, !TowerModel.Instance.GetFloorIsUnlock(this.TowerId));
 		int[] difficultyAreaAllFloor = TowerModel.Instance.GetDifficultyAreaAllFloor(TowerModel.Instance.CurrentSelectDifficulties, (int)this.OpenParam);
 		TowerModel.Instance.DefaultFloor = this.TowerId;
-		this.TowerFloorLayout.RefreshByData(difficultyAreaAllFloor.ToList<int>(), null, false);
+		this.TowerFloorLayout.RefreshByData(difficultyAreaAllFloor, null, false);
 	}
 
-	// Token: 0x060175D9 RID: 95705 RVA: 0x005F1B78 File Offset: 0x005EFD78
+	// Token: 0x0601500A RID: 86026 RVA: 0x0061E6C4 File Offset: 0x0061C8C4
 	protected override void OnBeforeDestroy()
 	{
 		this.TowerFloorLayout = null;
@@ -210,7 +209,7 @@ public class TowerFloorView : UiViewBase
 		TowerModel.Instance.CurrentSelectFloor = -1;
 	}
 
-	// Token: 0x060175DA RID: 95706 RVA: 0x005F1BD6 File Offset: 0x005EFDD6
+	// Token: 0x0601500B RID: 86027 RVA: 0x0061E722 File Offset: 0x0061C922
 	private TowerFloorItem InitFloorItem()
 	{
 		TowerFloorItem towerFloorItem = new TowerFloorItem();
@@ -218,38 +217,38 @@ public class TowerFloorView : UiViewBase
 		return towerFloorItem;
 	}
 
-	// Token: 0x060175DB RID: 95707 RVA: 0x005F1BEF File Offset: 0x005EFDEF
+	// Token: 0x0601500C RID: 86028 RVA: 0x0061E73B File Offset: 0x0061C93B
 	private TowerBuffShowItem InitBuffItem()
 	{
 		return new TowerBuffShowItem();
 	}
 
-	// Token: 0x060175DC RID: 95708 RVA: 0x005F1BF6 File Offset: 0x005EFDF6
+	// Token: 0x0601500D RID: 86029 RVA: 0x0061E742 File Offset: 0x0061C942
 	private TowerStarsComplexItem InitTargetStarItem()
 	{
 		return new TowerStarsComplexItem();
 	}
 
-	// Token: 0x060175DD RID: 95709 RVA: 0x005F1BFD File Offset: 0x005EFDFD
+	// Token: 0x0601500E RID: 86030 RVA: 0x0061E749 File Offset: 0x0061C949
 	private TowerMonsterItem InitMonsterItem()
 	{
 		return new TowerMonsterItem();
 	}
 
-	// Token: 0x060175DE RID: 95710 RVA: 0x005F1C04 File Offset: 0x005EFE04
+	// Token: 0x0601500F RID: 86031 RVA: 0x0061E750 File Offset: 0x0061C950
 	private TowerElementItem InitElementItem()
 	{
 		return new TowerElementItem();
 	}
 
-	// Token: 0x060175DF RID: 95711 RVA: 0x005F1C0C File Offset: 0x005EFE0C
+	// Token: 0x06015010 RID: 86032 RVA: 0x0061E758 File Offset: 0x0061C958
 	private void RefreshView(int towerId, bool isLock)
 	{
 		this.TowerId = towerId;
 		TowerModel.Instance.CurrentSelectFloor = towerId;
 		TowerConfig value = TowerClimbConfig.Instance.GetTowerInfo(towerId).Value;
-		this.BuffShowLayout.RefreshByData(value.ShowBuffs().ToList<long>(), null, false);
-		this.MonsterLayout.RefreshByData(value.ShowMonsters().ToList<int>(), delegate
+		this.BuffShowLayout.RefreshByData(value.ShowBuffs(), null, false);
+		this.MonsterLayout.RefreshByData(value.ShowMonsters(), delegate
 		{
 			base.GetItem(14).SetAnchorOffsetY(0f);
 		}, false);
@@ -260,7 +259,7 @@ public class TowerFloorView : UiViewBase
 			{
 				item.SetUIActive(true);
 			}
-			this.ElementLayout.RefreshByData(value.RecommendElement().ToList<int>(), null, false);
+			this.ElementLayout.RefreshByData(value.RecommendElement(), null, false);
 		}
 		else
 		{
@@ -319,22 +318,22 @@ public class TowerFloorView : UiViewBase
 		base.GetItem(15).SetUIActive(floorData != null && floorData.IsQuickPass);
 	}
 
-	// Token: 0x060175E0 RID: 95712 RVA: 0x005F1EB0 File Offset: 0x005F00B0
+	// Token: 0x06015011 RID: 86033 RVA: 0x0061E9ED File Offset: 0x0061CBED
 	private void OnClickResetBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.TowerResetView, this.TowerId, null);
 	}
 
-	// Token: 0x060175E1 RID: 95713 RVA: 0x005F1ECD File Offset: 0x005F00CD
+	// Token: 0x06015012 RID: 86034 RVA: 0x0061EA0A File Offset: 0x0061CC0A
 	private void OnClickChallengeBtn()
 	{
 		TowerModel.Instance.OpenTowerFormationView(this.TowerId);
 	}
 
-	// Token: 0x0400AED8 RID: 44760
+	// Token: 0x0400B2DD RID: 45789
 	private int TowerId = -1;
 
-	// Token: 0x0400AED9 RID: 44761
+	// Token: 0x0400B2DE RID: 45790
 	[Nullable(new byte[]
 	{
 		2,
@@ -342,7 +341,7 @@ public class TowerFloorView : UiViewBase
 	})]
 	private GenericLayout<TowerFloorItem, int> TowerFloorLayout;
 
-	// Token: 0x0400AEDA RID: 44762
+	// Token: 0x0400B2DF RID: 45791
 	[Nullable(new byte[]
 	{
 		2,
@@ -350,7 +349,7 @@ public class TowerFloorView : UiViewBase
 	})]
 	private GenericLayout<TowerBuffShowItem, long> BuffShowLayout;
 
-	// Token: 0x0400AEDB RID: 44763
+	// Token: 0x0400B2E0 RID: 45792
 	[Nullable(new byte[]
 	{
 		2,
@@ -359,7 +358,7 @@ public class TowerFloorView : UiViewBase
 	})]
 	private GenericLayout<TowerStarsComplexItem, ValueTuple<bool, TowerTarget>> TargetStarLayout;
 
-	// Token: 0x0400AEDC RID: 44764
+	// Token: 0x0400B2E1 RID: 45793
 	[Nullable(new byte[]
 	{
 		2,
@@ -367,7 +366,7 @@ public class TowerFloorView : UiViewBase
 	})]
 	private GenericLayout<TowerMonsterItem, int> MonsterLayout;
 
-	// Token: 0x0400AEDD RID: 44765
+	// Token: 0x0400B2E2 RID: 45794
 	[Nullable(new byte[]
 	{
 		2,
@@ -375,50 +374,50 @@ public class TowerFloorView : UiViewBase
 	})]
 	private GenericLayout<TowerElementItem, int> ElementLayout;
 
-	// Token: 0x0400AEDE RID: 44766
+	// Token: 0x0400B2E3 RID: 45795
 	[Nullable(2)]
 	private TowerTitleItem TitleItem;
 
-	// Token: 0x0400AEDF RID: 44767
+	// Token: 0x0400B2E4 RID: 45796
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400AEE0 RID: 44768
+	// Token: 0x0400B2E5 RID: 45797
 	private readonly List<int> HavePlaySwitchSequence = new List<int>();
 
-	// Token: 0x020091B0 RID: 37296
+	// Token: 0x020083F3 RID: 33779
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402F22E RID: 193070
+		// Token: 0x0402A92F RID: 174383
 		TitleItem,
-		// Token: 0x0402F22F RID: 193071
+		// Token: 0x0402A930 RID: 174384
 		TowerFloorLayout,
-		// Token: 0x0402F230 RID: 193072
+		// Token: 0x0402A931 RID: 174385
 		ShowBuffLayout,
-		// Token: 0x0402F231 RID: 193073
+		// Token: 0x0402A932 RID: 174386
 		TargetStarLayout,
-		// Token: 0x0402F232 RID: 193074
+		// Token: 0x0402A933 RID: 174387
 		MonsterLayout,
-		// Token: 0x0402F233 RID: 193075
+		// Token: 0x0402A934 RID: 174388
 		CostText,
-		// Token: 0x0402F234 RID: 193076
+		// Token: 0x0402A935 RID: 174389
 		ResetBtn,
-		// Token: 0x0402F235 RID: 193077
+		// Token: 0x0402A936 RID: 174390
 		ChallengeBtn,
-		// Token: 0x0402F236 RID: 193078
+		// Token: 0x0402A937 RID: 174391
 		BgTexture,
-		// Token: 0x0402F237 RID: 193079
+		// Token: 0x0402A938 RID: 174392
 		BtnPanelItem,
-		// Token: 0x0402F238 RID: 193080
+		// Token: 0x0402A939 RID: 174393
 		LockItem,
-		// Token: 0x0402F239 RID: 193081
+		// Token: 0x0402A93A RID: 174394
 		ElementItem = 12,
-		// Token: 0x0402F23A RID: 193082
+		// Token: 0x0402A93B RID: 174395
 		ElementLayout,
-		// Token: 0x0402F23B RID: 193083
+		// Token: 0x0402A93C RID: 174396
 		FloorContentItem,
-		// Token: 0x0402F23C RID: 193084
+		// Token: 0x0402A93D RID: 174397
 		QuickPassItem
 	}
 }

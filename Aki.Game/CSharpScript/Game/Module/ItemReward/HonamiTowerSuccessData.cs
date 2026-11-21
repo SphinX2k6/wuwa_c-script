@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057E3 RID: 22499
+	// Token: 0x020047BA RID: 18362
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HonamiTowerSuccessData : IHonamiTowerSuccessData
 	{
-		// Token: 0x170089F2 RID: 35314
-		// (get) Token: 0x060392F9 RID: 234233 RVA: 0x00D903B7 File Offset: 0x00D8E5B7
-		// (set) Token: 0x060392FA RID: 234234 RVA: 0x00D903BF File Offset: 0x00D8E5BF
+		// Token: 0x17005DBC RID: 23996
+		// (get) Token: 0x0602E20D RID: 188941 RVA: 0x00CDF200 File Offset: 0x00CDD400
+		// (set) Token: 0x0602E20E RID: 188942 RVA: 0x00CDF208 File Offset: 0x00CDD408
 		public IHonamiTowerRecordData[] RecordItemList { get; set; }
 
-		// Token: 0x170089F3 RID: 35315
-		// (get) Token: 0x060392FB RID: 234235 RVA: 0x00D903C8 File Offset: 0x00D8E5C8
-		// (set) Token: 0x060392FC RID: 234236 RVA: 0x00D903D0 File Offset: 0x00D8E5D0
+		// Token: 0x17005DBD RID: 23997
+		// (get) Token: 0x0602E20F RID: 188943 RVA: 0x00CDF211 File Offset: 0x00CDD411
+		// (set) Token: 0x0602E210 RID: 188944 RVA: 0x00CDF219 File Offset: 0x00CDD419
 		public RewardItemData[] RewardItemList { get; set; }
 	}
 }

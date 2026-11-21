@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020020B1 RID: 8369
+// Token: 0x02001588 RID: 5512
 [NullableContext(1)]
 public interface IUnitLogData
 {
-	// Token: 0x17001460 RID: 5216
-	// (get) Token: 0x0601085E RID: 67678
-	// (set) Token: 0x0601085F RID: 67679
+	// Token: 0x1700148D RID: 5261
+	// (get) Token: 0x0600DCCE RID: 56526
+	// (set) Token: 0x0600DCCF RID: 56527
 	string event_id { get; set; }
 }

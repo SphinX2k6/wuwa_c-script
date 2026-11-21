@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B94 RID: 7060
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D41 RID: 7489
 	public class ILimitPlayerMoveNew : ILimitPlayerOption
 	{
-		// Token: 0x06009723 RID: 38691 RVA: 0x0015CB70 File Offset: 0x0015AD70
+		// Token: 0x06009F05 RID: 40709 RVA: 0x0016D71C File Offset: 0x0016B91C
 		private ILimitPlayerMoveNew_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009724 RID: 38692 RVA: 0x0015CBA8 File Offset: 0x0015ADA8
+		// Token: 0x06009F06 RID: 40710 RVA: 0x0016D754 File Offset: 0x0016B954
 		public static ILimitPlayerMoveNew Create([Nullable(2)] ILimitPlayerMoveNew instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009725 RID: 38693 RVA: 0x0015CBBB File Offset: 0x0015ADBB
+		// Token: 0x06009F07 RID: 40711 RVA: 0x0016D767 File Offset: 0x0016B967
 		public static ILimitPlayerMoveNew CreateFromSetValue([Nullable(2)] ILimitPlayerMoveNew_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009726 RID: 38694 RVA: 0x0015CBD0 File Offset: 0x0015ADD0
+		// Token: 0x06009F08 RID: 40712 RVA: 0x0016D77C File Offset: 0x0016B97C
 		public new ILimitPlayerMoveNew_SetValue ToSetValue()
 		{
 			return new ILimitPlayerMoveNew_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F8A RID: 12170
-		// (get) Token: 0x06009727 RID: 38695 RVA: 0x0015CC1E File Offset: 0x0015AE1E
-		// (set) Token: 0x06009728 RID: 38696 RVA: 0x0015CC49 File Offset: 0x0015AE49
+		// Token: 0x170031AF RID: 12719
+		// (get) Token: 0x06009F09 RID: 40713 RVA: 0x0016D7CA File Offset: 0x0016B9CA
+		// (set) Token: 0x06009F0A RID: 40714 RVA: 0x0016D7F5 File Offset: 0x0016B9F5
 		public override ELimitPlayOperation Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F8B RID: 12171
-		// (get) Token: 0x06009729 RID: 38697 RVA: 0x0015CC57 File Offset: 0x0015AE57
-		// (set) Token: 0x0600972A RID: 38698 RVA: 0x0015CC82 File Offset: 0x0015AE82
+		// Token: 0x170031B0 RID: 12720
+		// (get) Token: 0x06009F0B RID: 40715 RVA: 0x0016D803 File Offset: 0x0016BA03
+		// (set) Token: 0x06009F0C RID: 40716 RVA: 0x0016D82E File Offset: 0x0016BA2E
 		public virtual bool Forward
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F8C RID: 12172
-		// (get) Token: 0x0600972B RID: 38699 RVA: 0x0015CC90 File Offset: 0x0015AE90
-		// (set) Token: 0x0600972C RID: 38700 RVA: 0x0015CCBB File Offset: 0x0015AEBB
+		// Token: 0x170031B1 RID: 12721
+		// (get) Token: 0x06009F0D RID: 40717 RVA: 0x0016D83C File Offset: 0x0016BA3C
+		// (set) Token: 0x06009F0E RID: 40718 RVA: 0x0016D867 File Offset: 0x0016BA67
 		public virtual bool Back
 		{
 			get
@@ -124,9 +122,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F8D RID: 12173
-		// (get) Token: 0x0600972D RID: 38701 RVA: 0x0015CCC9 File Offset: 0x0015AEC9
-		// (set) Token: 0x0600972E RID: 38702 RVA: 0x0015CCF4 File Offset: 0x0015AEF4
+		// Token: 0x170031B2 RID: 12722
+		// (get) Token: 0x06009F0F RID: 40719 RVA: 0x0016D875 File Offset: 0x0016BA75
+		// (set) Token: 0x06009F10 RID: 40720 RVA: 0x0016D8A0 File Offset: 0x0016BAA0
 		public virtual bool Left
 		{
 			get
@@ -143,9 +141,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F8E RID: 12174
-		// (get) Token: 0x0600972F RID: 38703 RVA: 0x0015CD02 File Offset: 0x0015AF02
-		// (set) Token: 0x06009730 RID: 38704 RVA: 0x0015CD2D File Offset: 0x0015AF2D
+		// Token: 0x170031B3 RID: 12723
+		// (get) Token: 0x06009F11 RID: 40721 RVA: 0x0016D8AE File Offset: 0x0016BAAE
+		// (set) Token: 0x06009F12 RID: 40722 RVA: 0x0016D8D9 File Offset: 0x0016BAD9
 		public virtual bool Right
 		{
 			get
@@ -162,11 +160,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005C49 RID: 23625
+		// Token: 0x040060E2 RID: 24802
 		[Nullable(2)]
 		protected new ILimitPlayerMoveNew FbInstance;
 
-		// Token: 0x04005C4A RID: 23626
+		// Token: 0x040060E3 RID: 24803
 		[Nullable(2)]
 		protected new ILimitPlayerMoveNew_SetValue PocoInterface;
 	}

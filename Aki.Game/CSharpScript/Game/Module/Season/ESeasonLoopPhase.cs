@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Season
 {
-	// Token: 0x02004C7C RID: 19580
+	// Token: 0x02003C2D RID: 15405
 	public enum ESeasonLoopPhase
 	{
-		// Token: 0x0401AECB RID: 110283
+		// Token: 0x04015828 RID: 88104
 		Hold,
-		// Token: 0x0401AECC RID: 110284
+		// Token: 0x04015829 RID: 88105
 		Transition
 	}
 }

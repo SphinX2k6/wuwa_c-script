@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x020062FF RID: 25343
+	// Token: 0x0200527D RID: 21117
 	[Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 	})]
 	public class PinballAttributeDetailItem : GridProxyAbstract<IPinballAttributeDetailItemData>
 	{
-		// Token: 0x0603FC61 RID: 261217 RVA: 0x00F6E140 File Offset: 0x00F6C340
+		// Token: 0x06034922 RID: 215330 RVA: 0x00EB509C File Offset: 0x00EB329C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FC62 RID: 261218 RVA: 0x00F6E2D0 File Offset: 0x00F6C4D0
+		// Token: 0x06034923 RID: 215331 RVA: 0x00EB522C File Offset: 0x00EB342C
 		[NullableContext(1)]
 		public override void Refresh(IPinballAttributeDetailItemData data, bool isSelected, int gridIndex)
 		{
@@ -73,13 +73,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.RefreshExpanded();
 		}
 
-		// Token: 0x0603FC63 RID: 261219 RVA: 0x00F6E3D4 File Offset: 0x00F6C5D4
+		// Token: 0x06034924 RID: 215332 RVA: 0x00EB5330 File Offset: 0x00EB3530
 		public void RefreshExpanded()
 		{
 			base.GetLayoutBase(7).RootUIComp.Get().SetUIActive(this.HasDesc && this.Data.IsExpanded);
 		}
 
-		// Token: 0x0603FC64 RID: 261220 RVA: 0x00F6E410 File Offset: 0x00F6C610
+		// Token: 0x06034925 RID: 215333 RVA: 0x00EB536C File Offset: 0x00EB356C
 		private void OnItemToggleClick(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -93,33 +93,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.RefreshExpanded();
 		}
 
-		// Token: 0x0402149C RID: 136348
+		// Token: 0x0401BDCB RID: 114123
 		[Nullable(2)]
 		protected IPinballAttributeDetailItemData Data;
 
-		// Token: 0x0402149D RID: 136349
+		// Token: 0x0401BDCC RID: 114124
 		protected bool HasDesc;
 
-		// Token: 0x0200C4F7 RID: 50423
+		// Token: 0x0200AEDE RID: 44766
 		private enum EComponent
 		{
-			// Token: 0x0403B70C RID: 243468
+			// Token: 0x0403606E RID: 221294
 			ItemToggle,
-			// Token: 0x0403B70D RID: 243469
+			// Token: 0x0403606F RID: 221295
 			BgSprite,
-			// Token: 0x0403B70E RID: 243470
+			// Token: 0x04036070 RID: 221296
 			AttrIconTexture,
-			// Token: 0x0403B70F RID: 243471
+			// Token: 0x04036071 RID: 221297
 			AttrNameText,
-			// Token: 0x0403B710 RID: 243472
+			// Token: 0x04036072 RID: 221298
 			AttrValueText,
-			// Token: 0x0403B711 RID: 243473
+			// Token: 0x04036073 RID: 221299
 			AttrAdditionValueText,
-			// Token: 0x0403B712 RID: 243474
+			// Token: 0x04036074 RID: 221300
 			ArrowSprite,
-			// Token: 0x0403B713 RID: 243475
+			// Token: 0x04036075 RID: 221301
 			DescLayout,
-			// Token: 0x0403B714 RID: 243476
+			// Token: 0x04036076 RID: 221302
 			DescText
 		}
 	}

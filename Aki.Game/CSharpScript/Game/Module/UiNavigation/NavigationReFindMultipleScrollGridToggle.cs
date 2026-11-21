@@ -5,22 +5,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200490B RID: 18699
+	// Token: 0x02003882 RID: 14466
 	public class NavigationReFindMultipleScrollGridToggle : NavigationToggle
 	{
-		// Token: 0x06030E22 RID: 200226 RVA: 0x00B5A10A File Offset: 0x00B5830A
+		// Token: 0x0602594F RID: 153935 RVA: 0x00A94F7A File Offset: 0x00A9317A
 		[NullableContext(1)]
 		public NavigationReFindMultipleScrollGridToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030E23 RID: 200227 RVA: 0x00B5A115 File Offset: 0x00B58315
+		// Token: 0x06025950 RID: 153936 RVA: 0x00A94F85 File Offset: 0x00A93185
 		protected override bool OnCanFocusInScrollOrLayout()
 		{
 			return false;
 		}
 
-		// Token: 0x06030E24 RID: 200228 RVA: 0x00B5A118 File Offset: 0x00B58318
+		// Token: 0x06025951 RID: 153937 RVA: 0x00A94F88 File Offset: 0x00A93188
 		protected override void OnToggleClick(EToggleState state)
 		{
 			if (this.Listener == null)

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007B6 RID: 1974
+	// Token: 0x020007D0 RID: 2000
 	public class ConfigRealmBetweenLevelExpById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002E56 RID: 11862 RVA: 0x0015F417 File Offset: 0x0015D617
+		// Token: 0x06002EF2 RID: 12018 RVA: 0x00166323 File Offset: 0x00164523
 		static ConfigRealmBetweenLevelExpById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRealmBetweenLevelExpById.CreateStaticDefaultValue), new Action(ConfigRealmBetweenLevelExpById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002E57 RID: 11863 RVA: 0x0015F438 File Offset: 0x0015D638
+		// Token: 0x06002EF3 RID: 12019 RVA: 0x00166344 File Offset: 0x00164544
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRealmBetweenLevelExpById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002E58 RID: 11864 RVA: 0x0015F4B7 File Offset: 0x0015D6B7
+		// Token: 0x06002EF4 RID: 12020 RVA: 0x001663C3 File Offset: 0x001645C3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRealmBetweenLevelExpById.LogPair = null;
 			ConfigRealmBetweenLevelExpById.HandleId = 0;
 		}
 
-		// Token: 0x06002E59 RID: 11865 RVA: 0x0015F4C5 File Offset: 0x0015D6C5
+		// Token: 0x06002EF5 RID: 12021 RVA: 0x001663D1 File Offset: 0x001645D1
 		public static void Init()
 		{
 			ConfigRealmBetweenLevelExpById.HandleId = ConfigCommon.InitDataStatement(ConfigRealmBetweenLevelExpById.HandleId, "db_realmbetween.db", "select BinData from `RealmBetweenLevelExp` where Id=?");
 		}
 
-		// Token: 0x06002E5A RID: 11866 RVA: 0x0015F4E0 File Offset: 0x0015D6E0
+		// Token: 0x06002EF6 RID: 12022 RVA: 0x001663EC File Offset: 0x001645EC
 		public static RealmBetweenLevelExp? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRealmBetweenLevelExpById.HandleId, ConfigRealmBetweenLevelExpById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RealmBetweenLevelExp?(rootAsRealmBetweenLevelExp);
 		}
 
-		// Token: 0x040035E0 RID: 13792
+		// Token: 0x04003696 RID: 13974
 		private const string DB = "db_realmbetween.db";
 
-		// Token: 0x040035E1 RID: 13793
+		// Token: 0x04003697 RID: 13975
 		private const string FILE = "q.千岛路书3.5.xlsx";
 
-		// Token: 0x040035E2 RID: 13794
+		// Token: 0x04003698 RID: 13976
 		private const string TABLE = "RealmBetweenLevelExp";
 
-		// Token: 0x040035E3 RID: 13795
+		// Token: 0x04003699 RID: 13977
 		private const string COMMAND = "select BinData from `RealmBetweenLevelExp` where Id=?";
 
-		// Token: 0x040035E4 RID: 13796
+		// Token: 0x0400369A RID: 13978
 		private const string KEY_PREFIX = "RealmBetweenLevelExpById";
 
-		// Token: 0x040035E5 RID: 13797
+		// Token: 0x0400369B RID: 13979
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040035E6 RID: 13798
+		// Token: 0x0400369C RID: 13980
 		private static int HandleId;
 	}
 }

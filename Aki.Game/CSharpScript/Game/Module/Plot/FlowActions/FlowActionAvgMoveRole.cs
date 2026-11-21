@@ -5,10 +5,10 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050A5 RID: 20645
+	// Token: 0x02004075 RID: 16501
 	public class FlowActionAvgMoveRole : FlowActionBase
 	{
-		// Token: 0x06034E8B RID: 216715 RVA: 0x00C87F6C File Offset: 0x00C8616C
+		// Token: 0x06029D84 RID: 171396 RVA: 0x00BD51EC File Offset: 0x00BD33EC
 		protected override void OnExecute()
 		{
 			AvgMoveRole avgMoveRole = this.ActionInfo.Params as AvgMoveRole;

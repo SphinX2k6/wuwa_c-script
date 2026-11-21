@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formation
 {
-	// Token: 0x02006368 RID: 25448
+	// Token: 0x020052E6 RID: 21222
 	public class RoleSkillItemData : IRoleSkillItemData
 	{
-		// Token: 0x1700933C RID: 37692
-		// (get) Token: 0x06040043 RID: 262211 RVA: 0x00F7C553 File Offset: 0x00F7A753
-		// (set) Token: 0x06040044 RID: 262212 RVA: 0x00F7C55B File Offset: 0x00F7A75B
+		// Token: 0x1700669E RID: 26270
+		// (get) Token: 0x06034D04 RID: 216324 RVA: 0x00EC34B3 File Offset: 0x00EC16B3
+		// (set) Token: 0x06034D05 RID: 216325 RVA: 0x00EC34BB File Offset: 0x00EC16BB
 		public bool IsLeader { get; set; }
 
-		// Token: 0x1700933D RID: 37693
-		// (get) Token: 0x06040045 RID: 262213 RVA: 0x00F7C564 File Offset: 0x00F7A764
-		// (set) Token: 0x06040046 RID: 262214 RVA: 0x00F7C56C File Offset: 0x00F7A76C
+		// Token: 0x1700669F RID: 26271
+		// (get) Token: 0x06034D06 RID: 216326 RVA: 0x00EC34C4 File Offset: 0x00EC16C4
+		// (set) Token: 0x06034D07 RID: 216327 RVA: 0x00EC34CC File Offset: 0x00EC16CC
 		public int ConfigId { get; set; }
 	}
 }

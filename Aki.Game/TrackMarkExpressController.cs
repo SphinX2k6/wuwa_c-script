@@ -5,23 +5,23 @@ using Aki.Protocol;
 using Aki.TDConfigMgr.Quest;
 using CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode;
 
-// Token: 0x02001D61 RID: 7521
+// Token: 0x02001223 RID: 4643
 [NullableContext(1)]
 [Nullable(0)]
 public class TrackMarkExpressController
 {
-	// Token: 0x0600E48F RID: 58511 RVA: 0x0035B507 File Offset: 0x00359707
+	// Token: 0x0600B8AC RID: 47276 RVA: 0x003670B7 File Offset: 0x003652B7
 	public TrackMarkExpressController(Blackboard Blackboard)
 	{
 	}
 
-	// Token: 0x0600E490 RID: 58512 RVA: 0x0035B521 File Offset: 0x00359721
+	// Token: 0x0600B8AD RID: 47277 RVA: 0x003670D1 File Offset: 0x003652D1
 	internal static bool IsLogicBtNodeType(EBtNode type)
 	{
 		return type == EBtNode.ConditionSelector || type == EBtNode.ParallelSelect || type == EBtNode.Sequence || type == EBtNode.Select;
 	}
 
-	// Token: 0x0600E491 RID: 58513 RVA: 0x0035B538 File Offset: 0x00359738
+	// Token: 0x0600B8AE RID: 47278 RVA: 0x003670E8 File Offset: 0x003652E8
 	internal unsafe static bool SanitizeOverrideChild(bool requested, Blackboard blackBoard, int nodeId, int treeConfigId)
 	{
 		if (!requested)
@@ -45,7 +45,7 @@ public class TrackMarkExpressController
 		return false;
 	}
 
-	// Token: 0x0600E492 RID: 58514 RVA: 0x0035B5FC File Offset: 0x003597FC
+	// Token: 0x0600B8AF RID: 47279 RVA: 0x003671AC File Offset: 0x003653AC
 	internal static IOutOfRangeRuntime BuildOutOfRangeRuntimeFromLocations(IOutOfRangeTrackTarget cfg, Blackboard blackBoard, int nodeId, int treeConfigId)
 	{
 		global::Vector value = global::Vector.Create((double)cfg.TrackPos.X.GetValueOrDefault(), (double)cfg.TrackPos.Y.GetValueOrDefault(), (double)cfg.TrackPos.Z.GetValueOrDefault());
@@ -63,7 +63,7 @@ public class TrackMarkExpressController
 		};
 	}
 
-	// Token: 0x0600E493 RID: 58515 RVA: 0x0035B6E4 File Offset: 0x003598E4
+	// Token: 0x0600B8B0 RID: 47280 RVA: 0x00367294 File Offset: 0x00365494
 	internal static IOutOfRangeRuntime BuildOutOfRangeRuntimeFromEntities(IOutOfRangeTrackEntity cfg, Blackboard blackBoard, int nodeId, int treeConfigId)
 	{
 		global::Vector center = global::Vector.Create((double)cfg.Center.X.GetValueOrDefault(), (double)cfg.Center.Y.GetValueOrDefault(), (double)cfg.Center.Z.GetValueOrDefault());
@@ -80,7 +80,7 @@ public class TrackMarkExpressController
 		};
 	}
 
-	// Token: 0x0600E494 RID: 58516 RVA: 0x0035B790 File Offset: 0x00359990
+	// Token: 0x0600B8B1 RID: 47281 RVA: 0x00367340 File Offset: 0x00365540
 	public void Clear()
 	{
 		foreach (NodeTrackMark nodeTrackMark in this.TrackMarks.Values)
@@ -90,20 +90,20 @@ public class TrackMarkExpressController
 		this.TrackMarks.Clear();
 	}
 
-	// Token: 0x0600E495 RID: 58517 RVA: 0x0035B7F0 File Offset: 0x003599F0
+	// Token: 0x0600B8B2 RID: 47282 RVA: 0x003673A0 File Offset: 0x003655A0
 	[NullableContext(2)]
 	public NodeTrackMark GetNodeTrackMarkCreator(int nodeId)
 	{
 		return this.TrackMarks.GetValueOrDefault(nodeId);
 	}
 
-	// Token: 0x0600E496 RID: 58518 RVA: 0x0035B7FE File Offset: 0x003599FE
+	// Token: 0x0600B8B3 RID: 47283 RVA: 0x003673AE File Offset: 0x003655AE
 	public Dictionary<int, NodeTrackMark> GetAllTrackMarkCreator()
 	{
 		return this.TrackMarks;
 	}
 
-	// Token: 0x0600E497 RID: 58519 RVA: 0x0035B808 File Offset: 0x00359A08
+	// Token: 0x0600B8B4 RID: 47284 RVA: 0x003673B8 File Offset: 0x003655B8
 	public bool IsSuppressedByAncestor(int nodeId)
 	{
 		IBtNode nodeConfig = this.<Blackboard>P.GetNodeConfig(nodeId);
@@ -126,7 +126,7 @@ public class TrackMarkExpressController
 		return false;
 	}
 
-	// Token: 0x0600E498 RID: 58520 RVA: 0x0035B8AC File Offset: 0x00359AAC
+	// Token: 0x0600B8B5 RID: 47285 RVA: 0x0036745C File Offset: 0x0036565C
 	public void NotifyDescendantsRefreshSuppression(int ancestorNodeId)
 	{
 		foreach (KeyValuePair<int, NodeTrackMark> keyValuePair in this.TrackMarks)
@@ -144,7 +144,7 @@ public class TrackMarkExpressController
 		}
 	}
 
-	// Token: 0x0600E499 RID: 58521 RVA: 0x0035B928 File Offset: 0x00359B28
+	// Token: 0x0600B8B6 RID: 47286 RVA: 0x003674D8 File Offset: 0x003656D8
 	private bool IsDescendantOf(int nodeId, int ancestorNodeId)
 	{
 		IBtNode nodeConfig = this.<Blackboard>P.GetNodeConfig(nodeId);
@@ -167,7 +167,7 @@ public class TrackMarkExpressController
 		return false;
 	}
 
-	// Token: 0x0600E49A RID: 58522 RVA: 0x0035B9BC File Offset: 0x00359BBC
+	// Token: 0x0600B8B7 RID: 47287 RVA: 0x0036756C File Offset: 0x0036576C
 	public void EnableTrack(bool value)
 	{
 		foreach (NodeTrackMark nodeTrackMark in this.TrackMarks.Values)
@@ -176,7 +176,7 @@ public class TrackMarkExpressController
 		}
 	}
 
-	// Token: 0x0600E49B RID: 58523 RVA: 0x0035BA14 File Offset: 0x00359C14
+	// Token: 0x0600B8B8 RID: 47288 RVA: 0x003675C4 File Offset: 0x003657C4
 	public void CreateMapMarks()
 	{
 		foreach (NodeTrackMark nodeTrackMark in this.TrackMarks.Values)
@@ -185,7 +185,7 @@ public class TrackMarkExpressController
 		}
 	}
 
-	// Token: 0x0600E49C RID: 58524 RVA: 0x0035BA6C File Offset: 0x00359C6C
+	// Token: 0x0600B8B9 RID: 47289 RVA: 0x0036761C File Offset: 0x0036581C
 	public void UpdateLevelPlayConditionalMarks()
 	{
 		foreach (NodeTrackMark nodeTrackMark in this.TrackMarks.Values)
@@ -194,7 +194,7 @@ public class TrackMarkExpressController
 		}
 	}
 
-	// Token: 0x0600E49D RID: 58525 RVA: 0x0035BAC4 File Offset: 0x00359CC4
+	// Token: 0x0600B8BA RID: 47290 RVA: 0x00367674 File Offset: 0x00365874
 	public void UpdateOnNodeStatusChange(Blackboard blackBoard, BehaviorNodeBase node, NodeStatus newStatus)
 	{
 		ITrackTarget trackTarget = node.TrackTarget;
@@ -226,7 +226,7 @@ public class TrackMarkExpressController
 		}
 	}
 
-	// Token: 0x0600E49E RID: 58526 RVA: 0x0035BB40 File Offset: 0x00359D40
+	// Token: 0x0600B8BB RID: 47291 RVA: 0x003676F0 File Offset: 0x003658F0
 	public void UpdateOnChildQuestNodeStatusChange(ChildQuestNodeBase node, bool bStart, bool bEnd)
 	{
 		ITrackTarget trackTarget = node.TrackTarget;
@@ -245,7 +245,7 @@ public class TrackMarkExpressController
 		}
 	}
 
-	// Token: 0x0600E49F RID: 58527 RVA: 0x0035BB8C File Offset: 0x00359D8C
+	// Token: 0x0600B8BC RID: 47292 RVA: 0x0036773C File Offset: 0x0036593C
 	public void OnBtApplyExpressionOccupation(bool bSelf)
 	{
 		if (bSelf)
@@ -258,7 +258,7 @@ public class TrackMarkExpressController
 		}
 	}
 
-	// Token: 0x0600E4A0 RID: 58528 RVA: 0x0035BBE8 File Offset: 0x00359DE8
+	// Token: 0x0600B8BD RID: 47293 RVA: 0x00367798 File Offset: 0x00365998
 	public void OnBtReleaseExpressionOccupation(bool bSelf)
 	{
 		if (bSelf)
@@ -271,13 +271,13 @@ public class TrackMarkExpressController
 		}
 	}
 
-	// Token: 0x0600E4A1 RID: 58529 RVA: 0x0035BC44 File Offset: 0x00359E44
+	// Token: 0x0600B8BE RID: 47294 RVA: 0x003677F4 File Offset: 0x003659F4
 	public void OnSuspend(EBehaviorTreeSuspendType suspendType)
 	{
 		this.OnBtApplyExpressionOccupation(false);
 	}
 
-	// Token: 0x0600E4A2 RID: 58530 RVA: 0x0035BC4D File Offset: 0x00359E4D
+	// Token: 0x0600B8BF RID: 47295 RVA: 0x003677FD File Offset: 0x003659FD
 	public void OnCancelSuspend()
 	{
 		if (!this.<Blackboard>P.IsOccupied)
@@ -286,13 +286,13 @@ public class TrackMarkExpressController
 		}
 	}
 
-	// Token: 0x0600E4A3 RID: 58531 RVA: 0x0035BC63 File Offset: 0x00359E63
+	// Token: 0x0600B8C0 RID: 47296 RVA: 0x00367813 File Offset: 0x00365A13
 	private void NodeTrackMarkStart(int nodeId, Blackboard blackBoard, ITrackTarget trackTarget, bool bOccupied)
 	{
 		this.TryAddNodeTrackMarkCreator(nodeId, blackBoard, trackTarget).OnNodeStart(bOccupied);
 	}
 
-	// Token: 0x0600E4A4 RID: 58532 RVA: 0x0035BC75 File Offset: 0x00359E75
+	// Token: 0x0600B8C1 RID: 47297 RVA: 0x00367825 File Offset: 0x00365A25
 	private void NodeTrackMarkEnd(int nodeId)
 	{
 		NodeTrackMark nodeTrackMarkCreator = this.GetNodeTrackMarkCreator(nodeId);
@@ -303,7 +303,7 @@ public class TrackMarkExpressController
 		this.RemoveNodeTrackMarkCreator(nodeId);
 	}
 
-	// Token: 0x0600E4A5 RID: 58533 RVA: 0x0035BC90 File Offset: 0x00359E90
+	// Token: 0x0600B8C2 RID: 47298 RVA: 0x00367840 File Offset: 0x00365A40
 	private NodeTrackMark TryAddNodeTrackMarkCreator(int nodeId, Blackboard blackBoard, ITrackTarget trackTarget)
 	{
 		NodeTrackMark nodeTrackMarkCreator = this.GetNodeTrackMarkCreator(nodeId);
@@ -322,7 +322,7 @@ public class TrackMarkExpressController
 		return nodeTrackMark;
 	}
 
-	// Token: 0x0600E4A6 RID: 58534 RVA: 0x0035BCF5 File Offset: 0x00359EF5
+	// Token: 0x0600B8C3 RID: 47299 RVA: 0x003678A5 File Offset: 0x00365AA5
 	private void RemoveNodeTrackMarkCreator(int nodeId)
 	{
 		NodeTrackMark nodeTrackMarkCreator = this.GetNodeTrackMarkCreator(nodeId);
@@ -333,10 +333,10 @@ public class TrackMarkExpressController
 		this.TrackMarks.Remove(nodeId);
 	}
 
-	// Token: 0x04006969 RID: 26985
+	// Token: 0x04006A49 RID: 27209
 	[CompilerGenerated]
 	private Blackboard <Blackboard>P = Blackboard;
 
-	// Token: 0x0400696A RID: 26986
+	// Token: 0x04006A4A RID: 27210
 	private readonly Dictionary<int, NodeTrackMark> TrackMarks = new Dictionary<int, NodeTrackMark>();
 }

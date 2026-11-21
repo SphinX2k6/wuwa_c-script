@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B85 RID: 27525
+	// Token: 0x020072CB RID: 29387
 	public struct IMp4GamepadShakeFadeOutConfig : IFlatbufferObject
 	{
-		// Token: 0x1700CC9D RID: 52381
-		// (get) Token: 0x0603056F RID: 197999 RVA: 0x006914C0 File Offset: 0x0068F6C0
+		// Token: 0x1700D782 RID: 55170
+		// (get) Token: 0x060333C7 RID: 209863 RVA: 0x006E9AE0 File Offset: 0x006E7CE0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030570 RID: 198000 RVA: 0x006914CD File Offset: 0x0068F6CD
+		// Token: 0x060333C8 RID: 209864 RVA: 0x006E9AED File Offset: 0x006E7CED
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030571 RID: 198001 RVA: 0x006914D4 File Offset: 0x0068F6D4
+		// Token: 0x060333C9 RID: 209865 RVA: 0x006E9AF4 File Offset: 0x006E7CF4
 		public static IMp4GamepadShakeFadeOutConfig GetRootAsIMp4GamepadShakeFadeOutConfig(ByteBuffer _bb)
 		{
 			return IMp4GamepadShakeFadeOutConfig.GetRootAsIMp4GamepadShakeFadeOutConfig(_bb, default(IMp4GamepadShakeFadeOutConfig));
 		}
 
-		// Token: 0x06030572 RID: 198002 RVA: 0x006914F0 File Offset: 0x0068F6F0
+		// Token: 0x060333CA RID: 209866 RVA: 0x006E9B10 File Offset: 0x006E7D10
 		public static IMp4GamepadShakeFadeOutConfig GetRootAsIMp4GamepadShakeFadeOutConfig(ByteBuffer _bb, IMp4GamepadShakeFadeOutConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030573 RID: 198003 RVA: 0x0069150D File Offset: 0x0068F70D
+		// Token: 0x060333CB RID: 209867 RVA: 0x006E9B2D File Offset: 0x006E7D2D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030574 RID: 198004 RVA: 0x0069151C File Offset: 0x0068F71C
+		// Token: 0x060333CC RID: 209868 RVA: 0x006E9B3C File Offset: 0x006E7D3C
 		public IMp4GamepadShakeFadeOutConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CC9E RID: 52382
-		// (get) Token: 0x06030575 RID: 198005 RVA: 0x0069152C File Offset: 0x0068F72C
+		// Token: 0x1700D783 RID: 55171
+		// (get) Token: 0x060333CD RID: 209869 RVA: 0x006E9B4C File Offset: 0x006E7D4C
 		public float FadeOutTime
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC9F RID: 52383
-		// (get) Token: 0x06030576 RID: 198006 RVA: 0x0069156C File Offset: 0x0068F76C
+		// Token: 0x1700D784 RID: 55172
+		// (get) Token: 0x060333CE RID: 209870 RVA: 0x006E9B8C File Offset: 0x006E7D8C
 		public EMp4GamepadShakeCurve FadeOutCurve
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CCA0 RID: 52384
-		// (get) Token: 0x06030577 RID: 198007 RVA: 0x006915A8 File Offset: 0x0068F7A8
+		// Token: 0x1700D785 RID: 55173
+		// (get) Token: 0x060333CF RID: 209871 RVA: 0x006E9BC8 File Offset: 0x006E7DC8
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030578 RID: 198008 RVA: 0x006915E4 File Offset: 0x0068F7E4
+		// Token: 0x060333D0 RID: 209872 RVA: 0x006E9C04 File Offset: 0x006E7E04
 		public static Offset<IMp4GamepadShakeFadeOutConfig> CreateIMp4GamepadShakeFadeOutConfig(FlatBufferBuilder builder, float FadeOutTime = 0f, EMp4GamepadShakeCurve FadeOutCurve = EMp4GamepadShakeCurve.Linear, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMp4GamepadShakeFadeOutConfig.EndIMp4GamepadShakeFadeOutConfig(builder);
 		}
 
-		// Token: 0x06030579 RID: 198009 RVA: 0x00691608 File Offset: 0x0068F808
+		// Token: 0x060333D1 RID: 209873 RVA: 0x006E9C28 File Offset: 0x006E7E28
 		public static void StartIMp4GamepadShakeFadeOutConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0603057A RID: 198010 RVA: 0x00691611 File Offset: 0x0068F811
+		// Token: 0x060333D2 RID: 209874 RVA: 0x006E9C31 File Offset: 0x006E7E31
 		public static void AddFadeOutTime(FlatBufferBuilder builder, float fadeOutTime)
 		{
 			builder.AddFloat(0, fadeOutTime, 0.0);
 		}
 
-		// Token: 0x0603057B RID: 198011 RVA: 0x00691624 File Offset: 0x0068F824
+		// Token: 0x060333D3 RID: 209875 RVA: 0x006E9C44 File Offset: 0x006E7E44
 		public static void AddFadeOutCurve(FlatBufferBuilder builder, EMp4GamepadShakeCurve fadeOutCurve)
 		{
 			builder.AddByte(1, (byte)fadeOutCurve, 0);
 		}
 
-		// Token: 0x0603057C RID: 198012 RVA: 0x0069162F File Offset: 0x0068F82F
+		// Token: 0x060333D4 RID: 209876 RVA: 0x006E9C4F File Offset: 0x006E7E4F
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0603057D RID: 198013 RVA: 0x0069163A File Offset: 0x0068F83A
+		// Token: 0x060333D5 RID: 209877 RVA: 0x006E9C5A File Offset: 0x006E7E5A
 		public static Offset<IMp4GamepadShakeFadeOutConfig> EndIMp4GamepadShakeFadeOutConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IMp4GamepadShakeFadeOutConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0603057E RID: 198014 RVA: 0x00691648 File Offset: 0x0068F848
+		// Token: 0x060333D6 RID: 209878 RVA: 0x006E9C68 File Offset: 0x006E7E68
 		public IMp4GamepadShakeFadeOutConfigT UnPack()
 		{
 			IMp4GamepadShakeFadeOutConfigT mp4GamepadShakeFadeOutConfigT = new IMp4GamepadShakeFadeOutConfigT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return mp4GamepadShakeFadeOutConfigT;
 		}
 
-		// Token: 0x0603057F RID: 198015 RVA: 0x00691663 File Offset: 0x0068F863
+		// Token: 0x060333D7 RID: 209879 RVA: 0x006E9C83 File Offset: 0x006E7E83
 		public void UnPackTo(IMp4GamepadShakeFadeOutConfigT _o)
 		{
 			_o.FadeOutTime = this.FadeOutTime;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06030580 RID: 198016 RVA: 0x0069168C File Offset: 0x0068F88C
+		// Token: 0x060333D8 RID: 209880 RVA: 0x006E9CAC File Offset: 0x006E7EAC
 		public static Offset<IMp4GamepadShakeFadeOutConfig> Pack(FlatBufferBuilder builder, IMp4GamepadShakeFadeOutConfigT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMp4GamepadShakeFadeOutConfig.CreateIMp4GamepadShakeFadeOutConfig(builder, _o.FadeOutTime, _o.FadeOutCurve, _o.NullMask);
 		}
 
-		// Token: 0x04011444 RID: 70724
+		// Token: 0x0401236D RID: 74605
 		private Table __p;
 	}
 }

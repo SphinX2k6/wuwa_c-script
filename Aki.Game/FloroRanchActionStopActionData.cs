@@ -4,18 +4,18 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001ADA RID: 6874
+// Token: 0x02000F99 RID: 3993
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchActionStopActionData : FloroRanchActionDataBase
 {
-	// Token: 0x0600CBF3 RID: 52211 RVA: 0x002E8C4D File Offset: 0x002E6E4D
+	// Token: 0x0600A004 RID: 40964 RVA: 0x002F3DE1 File Offset: 0x002F1FE1
 	public FloroRanchActionStopActionData(FloroRanchUnitActionMsg actionData) : base(actionData)
 	{
 		this.ActionData = actionData.ActionStop;
 	}
 
-	// Token: 0x0600CBF4 RID: 52212 RVA: 0x002E8C64 File Offset: 0x002E6E64
+	// Token: 0x0600A005 RID: 40965 RVA: 0x002F3DF8 File Offset: 0x002F1FF8
 	public override UniTask OnExecute()
 	{
 		FloroRanchActionStopActionData.<OnExecute>d__2 <OnExecute>d__;
@@ -26,6 +26,6 @@ public class FloroRanchActionStopActionData : FloroRanchActionDataBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005DC3 RID: 24003
+	// Token: 0x04005E92 RID: 24210
 	private readonly FRActionStop ActionData;
 }

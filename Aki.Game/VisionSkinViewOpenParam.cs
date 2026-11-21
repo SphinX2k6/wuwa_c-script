@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020024F4 RID: 9460
+// Token: 0x020019DB RID: 6619
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionSkinViewOpenParam : IVisionSkinViewOpenParam
 {
-	// Token: 0x170018C4 RID: 6340
-	// (get) Token: 0x06013064 RID: 77924 RVA: 0x004B5ED0 File Offset: 0x004B40D0
-	// (set) Token: 0x06013065 RID: 77925 RVA: 0x004B5ED8 File Offset: 0x004B40D8
+	// Token: 0x170018FE RID: 6398
+	// (get) Token: 0x06010523 RID: 66851 RVA: 0x004C3B78 File Offset: 0x004C1D78
+	// (set) Token: 0x06010524 RID: 66852 RVA: 0x004C3B80 File Offset: 0x004C1D80
 	public int? UniqueId { get; set; }
 
-	// Token: 0x170018C5 RID: 6341
-	// (get) Token: 0x06013066 RID: 77926 RVA: 0x004B5EE1 File Offset: 0x004B40E1
-	// (set) Token: 0x06013067 RID: 77927 RVA: 0x004B5EE9 File Offset: 0x004B40E9
+	// Token: 0x170018FF RID: 6399
+	// (get) Token: 0x06010525 RID: 66853 RVA: 0x004C3B89 File Offset: 0x004C1D89
+	// (set) Token: 0x06010526 RID: 66854 RVA: 0x004C3B91 File Offset: 0x004C1D91
 	public int[] ShowItemIdList { get; set; }
 }

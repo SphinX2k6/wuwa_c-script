@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006800 RID: 26624
+	// Token: 0x02005750 RID: 22352
 	public class DangoBrawlHandBookFilterItem : UiPanelBase
 	{
-		// Token: 0x06042680 RID: 272000 RVA: 0x010201B8 File Offset: 0x0101E3B8
+		// Token: 0x060371D5 RID: 225749 RVA: 0x00F616FC File Offset: 0x00F5F8FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -38,13 +38,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042681 RID: 272001 RVA: 0x010202C3 File Offset: 0x0101E4C3
+		// Token: 0x060371D6 RID: 225750 RVA: 0x00F61807 File Offset: 0x00F5FA07
 		protected override void OnStart()
 		{
 			base.GetItem(1).SetUIActive(false);
 		}
 
-		// Token: 0x06042682 RID: 272002 RVA: 0x010202D4 File Offset: 0x0101E4D4
+		// Token: 0x060371D7 RID: 225751 RVA: 0x00F61818 File Offset: 0x00F5FA18
 		[NullableContext(1)]
 		public void RefreshFilterInfo(IReadOnlyList<int> ids)
 		{
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042683 RID: 272003 RVA: 0x010203A0 File Offset: 0x0101E5A0
+		// Token: 0x060371D8 RID: 225752 RVA: 0x00F618E4 File Offset: 0x00F5FAE4
 		private void OnClickBtnFilter()
 		{
 			Action onClickFilter = this.OnClickFilter;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onClickFilter();
 		}
 
-		// Token: 0x06042684 RID: 272004 RVA: 0x010203B2 File Offset: 0x0101E5B2
+		// Token: 0x060371D9 RID: 225753 RVA: 0x00F618F6 File Offset: 0x00F5FAF6
 		private void OnClickBtnDelete()
 		{
 			Action onClickDelete = this.OnClickDelete;
@@ -100,24 +100,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onClickDelete();
 		}
 
-		// Token: 0x040229C8 RID: 141768
+		// Token: 0x0401D225 RID: 119333
 		[Nullable(2)]
 		public Action OnClickFilter;
 
-		// Token: 0x040229C9 RID: 141769
+		// Token: 0x0401D226 RID: 119334
 		[Nullable(2)]
 		public Action OnClickDelete;
 
-		// Token: 0x0200C971 RID: 51569
+		// Token: 0x0200B33E RID: 45886
 		private enum EFilterItemComponent
 		{
-			// Token: 0x0403CD42 RID: 249154
+			// Token: 0x0403762F RID: 226863
 			BtnFilter,
-			// Token: 0x0403CD43 RID: 249155
+			// Token: 0x04037630 RID: 226864
 			FilterTipsItem,
-			// Token: 0x0403CD44 RID: 249156
+			// Token: 0x04037631 RID: 226865
 			TxtFilterInfo,
-			// Token: 0x0403CD45 RID: 249157
+			// Token: 0x04037632 RID: 226866
 			BtnDelete
 		}
 	}

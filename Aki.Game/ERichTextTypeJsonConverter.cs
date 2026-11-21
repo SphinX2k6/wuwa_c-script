@@ -2,10 +2,10 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-// Token: 0x02003558 RID: 13656
+// Token: 0x02002ACD RID: 10957
 public class ERichTextTypeJsonConverter : JsonConverter<ERichTextType>
 {
-	// Token: 0x0601DFB4 RID: 122804 RVA: 0x0086CE2C File Offset: 0x0086B02C
+	// Token: 0x0601BCDC RID: 113884 RVA: 0x00894A8C File Offset: 0x00892C8C
 	public override ERichTextType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 	{
 		string @string = reader.GetString();
@@ -16,7 +16,7 @@ public class ERichTextTypeJsonConverter : JsonConverter<ERichTextType>
 		return ERichTextTypeExtensions.FromString(@string);
 	}
 
-	// Token: 0x0601DFB5 RID: 122805 RVA: 0x0086CE50 File Offset: 0x0086B050
+	// Token: 0x0601BCDD RID: 113885 RVA: 0x00894AB0 File Offset: 0x00892CB0
 	public override void Write(Utf8JsonWriter writer, ERichTextType value, JsonSerializerOptions options)
 	{
 		writer.WriteStringValue(value.ToEnumString());

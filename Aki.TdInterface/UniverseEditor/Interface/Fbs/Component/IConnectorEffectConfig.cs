@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005003 RID: 20483
+	// Token: 0x02005562 RID: 21858
 	public struct IConnectorEffectConfig : IFlatbufferObject
 	{
-		// Token: 0x17009471 RID: 38001
-		// (get) Token: 0x06020C1B RID: 134171 RVA: 0x0048E1B4 File Offset: 0x0048C3B4
+		// Token: 0x17009C52 RID: 40018
+		// (get) Token: 0x06022B3B RID: 142139 RVA: 0x004C7C04 File Offset: 0x004C5E04
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020C1C RID: 134172 RVA: 0x0048E1C1 File Offset: 0x0048C3C1
+		// Token: 0x06022B3C RID: 142140 RVA: 0x004C7C11 File Offset: 0x004C5E11
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06020C1D RID: 134173 RVA: 0x0048E1C8 File Offset: 0x0048C3C8
+		// Token: 0x06022B3D RID: 142141 RVA: 0x004C7C18 File Offset: 0x004C5E18
 		public static IConnectorEffectConfig GetRootAsIConnectorEffectConfig(ByteBuffer _bb)
 		{
 			return IConnectorEffectConfig.GetRootAsIConnectorEffectConfig(_bb, default(IConnectorEffectConfig));
 		}
 
-		// Token: 0x06020C1E RID: 134174 RVA: 0x0048E1E4 File Offset: 0x0048C3E4
+		// Token: 0x06022B3E RID: 142142 RVA: 0x004C7C34 File Offset: 0x004C5E34
 		public static IConnectorEffectConfig GetRootAsIConnectorEffectConfig(ByteBuffer _bb, IConnectorEffectConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020C1F RID: 134175 RVA: 0x0048E201 File Offset: 0x0048C401
+		// Token: 0x06022B3F RID: 142143 RVA: 0x004C7C51 File Offset: 0x004C5E51
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06020C20 RID: 134176 RVA: 0x0048E210 File Offset: 0x0048C410
+		// Token: 0x06022B40 RID: 142144 RVA: 0x004C7C60 File Offset: 0x004C5E60
 		public IConnectorEffectConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009472 RID: 38002
-		// (get) Token: 0x06020C21 RID: 134177 RVA: 0x0048E220 File Offset: 0x0048C420
+		// Token: 0x17009C53 RID: 40019
+		// (get) Token: 0x06022B41 RID: 142145 RVA: 0x004C7C70 File Offset: 0x004C5E70
 		public string EffectPath
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020C22 RID: 134178 RVA: 0x0048E257 File Offset: 0x0048C457
+		// Token: 0x06022B42 RID: 142146 RVA: 0x004C7CA7 File Offset: 0x004C5EA7
 		public Span<byte> GetEffectPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06020C23 RID: 134179 RVA: 0x0048E266 File Offset: 0x0048C466
+		// Token: 0x06022B43 RID: 142147 RVA: 0x004C7CB6 File Offset: 0x004C5EB6
 		public byte[] GetEffectPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x17009473 RID: 38003
-		// (get) Token: 0x06020C24 RID: 134180 RVA: 0x0048E274 File Offset: 0x0048C474
+		// Token: 0x17009C54 RID: 40020
+		// (get) Token: 0x06022B44 RID: 142148 RVA: 0x004C7CC4 File Offset: 0x004C5EC4
 		public string StartPoint
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020C25 RID: 134181 RVA: 0x0048E2AB File Offset: 0x0048C4AB
+		// Token: 0x06022B45 RID: 142149 RVA: 0x004C7CFB File Offset: 0x004C5EFB
 		public Span<byte> GetStartPointBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06020C26 RID: 134182 RVA: 0x0048E2BA File Offset: 0x0048C4BA
+		// Token: 0x06022B46 RID: 142150 RVA: 0x004C7D0A File Offset: 0x004C5F0A
 		public byte[] GetStartPointArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x17009474 RID: 38004
-		// (get) Token: 0x06020C27 RID: 134183 RVA: 0x0048E2C8 File Offset: 0x0048C4C8
+		// Token: 0x17009C55 RID: 40021
+		// (get) Token: 0x06022B47 RID: 142151 RVA: 0x004C7D18 File Offset: 0x004C5F18
 		public string EndPoint
 		{
 			get
@@ -116,19 +116,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020C28 RID: 134184 RVA: 0x0048E2FF File Offset: 0x0048C4FF
+		// Token: 0x06022B48 RID: 142152 RVA: 0x004C7D4F File Offset: 0x004C5F4F
 		public Span<byte> GetEndPointBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06020C29 RID: 134185 RVA: 0x0048E30E File Offset: 0x0048C50E
+		// Token: 0x06022B49 RID: 142153 RVA: 0x004C7D5E File Offset: 0x004C5F5E
 		public byte[] GetEndPointArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x06020C2A RID: 134186 RVA: 0x0048E31C File Offset: 0x0048C51C
+		// Token: 0x06022B4A RID: 142154 RVA: 0x004C7D6C File Offset: 0x004C5F6C
 		public static Offset<IConnectorEffectConfig> CreateIConnectorEffectConfig(FlatBufferBuilder builder, StringOffset EffectPathOffset = default(StringOffset), StringOffset StartPointOffset = default(StringOffset), StringOffset EndPointOffset = default(StringOffset))
 		{
 			builder.StartTable(3);
@@ -138,37 +138,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IConnectorEffectConfig.EndIConnectorEffectConfig(builder);
 		}
 
-		// Token: 0x06020C2B RID: 134187 RVA: 0x0048E340 File Offset: 0x0048C540
+		// Token: 0x06022B4B RID: 142155 RVA: 0x004C7D90 File Offset: 0x004C5F90
 		public static void StartIConnectorEffectConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06020C2C RID: 134188 RVA: 0x0048E349 File Offset: 0x0048C549
+		// Token: 0x06022B4C RID: 142156 RVA: 0x004C7D99 File Offset: 0x004C5F99
 		public static void AddEffectPath(FlatBufferBuilder builder, StringOffset effectPathOffset)
 		{
 			builder.AddOffset(0, effectPathOffset.Value, 0);
 		}
 
-		// Token: 0x06020C2D RID: 134189 RVA: 0x0048E359 File Offset: 0x0048C559
+		// Token: 0x06022B4D RID: 142157 RVA: 0x004C7DA9 File Offset: 0x004C5FA9
 		public static void AddStartPoint(FlatBufferBuilder builder, StringOffset startPointOffset)
 		{
 			builder.AddOffset(1, startPointOffset.Value, 0);
 		}
 
-		// Token: 0x06020C2E RID: 134190 RVA: 0x0048E369 File Offset: 0x0048C569
+		// Token: 0x06022B4E RID: 142158 RVA: 0x004C7DB9 File Offset: 0x004C5FB9
 		public static void AddEndPoint(FlatBufferBuilder builder, StringOffset endPointOffset)
 		{
 			builder.AddOffset(2, endPointOffset.Value, 0);
 		}
 
-		// Token: 0x06020C2F RID: 134191 RVA: 0x0048E379 File Offset: 0x0048C579
+		// Token: 0x06022B4F RID: 142159 RVA: 0x004C7DC9 File Offset: 0x004C5FC9
 		public static Offset<IConnectorEffectConfig> EndIConnectorEffectConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IConnectorEffectConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06020C30 RID: 134192 RVA: 0x0048E388 File Offset: 0x0048C588
+		// Token: 0x06022B50 RID: 142160 RVA: 0x004C7DD8 File Offset: 0x004C5FD8
 		public IConnectorEffectConfigT UnPack()
 		{
 			IConnectorEffectConfigT connectorEffectConfigT = new IConnectorEffectConfigT();
@@ -176,7 +176,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return connectorEffectConfigT;
 		}
 
-		// Token: 0x06020C31 RID: 134193 RVA: 0x0048E3A3 File Offset: 0x0048C5A3
+		// Token: 0x06022B51 RID: 142161 RVA: 0x004C7DF3 File Offset: 0x004C5FF3
 		public void UnPackTo(IConnectorEffectConfigT _o)
 		{
 			_o.EffectPath = this.EffectPath;
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.EndPoint = this.EndPoint;
 		}
 
-		// Token: 0x06020C32 RID: 134194 RVA: 0x0048E3CC File Offset: 0x0048C5CC
+		// Token: 0x06022B52 RID: 142162 RVA: 0x004C7E1C File Offset: 0x004C601C
 		public static Offset<IConnectorEffectConfig> Pack(FlatBufferBuilder builder, IConnectorEffectConfigT _o)
 		{
 			if (_o == null)
@@ -197,7 +197,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IConnectorEffectConfig.CreateIConnectorEffectConfig(builder, effectPathOffset, startPointOffset, endPointOffset);
 		}
 
-		// Token: 0x0400DFC4 RID: 57284
+		// Token: 0x0400EBBA RID: 60346
 		private Table __p;
 	}
 }

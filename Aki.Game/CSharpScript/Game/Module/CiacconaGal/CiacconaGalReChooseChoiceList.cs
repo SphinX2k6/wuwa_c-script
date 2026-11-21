@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BDE RID: 23518
+	// Token: 0x02004BBE RID: 19390
 	public class CiacconaGalReChooseChoiceList : UiPanelBase
 	{
-		// Token: 0x0603B73B RID: 243515 RVA: 0x00E2CFE8 File Offset: 0x00E2B1E8
+		// Token: 0x06030686 RID: 198278 RVA: 0x00D7D2F0 File Offset: 0x00D7B4F0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,13 +25,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B73C RID: 243516 RVA: 0x00E2D051 File Offset: 0x00E2B251
+		// Token: 0x06030687 RID: 198279 RVA: 0x00D7D359 File Offset: 0x00D7B559
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayout<CiacconaGalReChooseChoiceItem, ICiacconaGalReChooseChoiceParam>(base.GetVerticalLayout(0), new Func<CiacconaGalReChooseChoiceItem>(this.GetChoiceItem), null, false, true);
 		}
 
-		// Token: 0x0603B73D RID: 243517 RVA: 0x00E2D074 File Offset: 0x00E2B274
+		// Token: 0x06030688 RID: 198280 RVA: 0x00D7D37C File Offset: 0x00D7B57C
 		[NullableContext(1)]
 		public void Refresh(Action onRestart, Action onReturn)
 		{
@@ -54,14 +54,14 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}), null, false);
 		}
 
-		// Token: 0x0603B73E RID: 243518 RVA: 0x00E2D0F1 File Offset: 0x00E2B2F1
+		// Token: 0x06030689 RID: 198281 RVA: 0x00D7D3F9 File Offset: 0x00D7B5F9
 		[NullableContext(1)]
 		private CiacconaGalReChooseChoiceItem GetChoiceItem()
 		{
 			return new CiacconaGalReChooseChoiceItem();
 		}
 
-		// Token: 0x0401EF99 RID: 126873
+		// Token: 0x04019A4A RID: 105034
 		[Nullable(new byte[]
 		{
 			2,
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 		})]
 		private GenericLayout<CiacconaGalReChooseChoiceItem, ICiacconaGalReChooseChoiceParam> Layout;
 
-		// Token: 0x0200BDBD RID: 48573
+		// Token: 0x0200A7C6 RID: 42950
 		public class EChoiceListComponentDefine
 		{
-			// Token: 0x04039378 RID: 234360
+			// Token: 0x04033D3D RID: 212285
 			public const int LayoutList = 0;
 
-			// Token: 0x04039379 RID: 234361
+			// Token: 0x04033D3E RID: 212286
 			public const int ItemChoice = 1;
 		}
 	}

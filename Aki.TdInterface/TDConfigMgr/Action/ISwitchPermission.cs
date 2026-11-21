@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F03 RID: 7939
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200213C RID: 8508
 	public class ISwitchPermission : SwitchSubLevels
 	{
-		// Token: 0x0600A9C4 RID: 43460 RVA: 0x0017E938 File Offset: 0x0017CB38
+		// Token: 0x0600B496 RID: 46230 RVA: 0x00194930 File Offset: 0x00192B30
 		private ISwitchPermission_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A9C5 RID: 43461 RVA: 0x0017E970 File Offset: 0x0017CB70
+		// Token: 0x0600B497 RID: 46231 RVA: 0x00194968 File Offset: 0x00192B68
 		public static ISwitchPermission Create([Nullable(2)] ISwitchPermission instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A9C6 RID: 43462 RVA: 0x0017E983 File Offset: 0x0017CB83
+		// Token: 0x0600B498 RID: 46232 RVA: 0x0019497B File Offset: 0x00192B7B
 		public static ISwitchPermission CreateFromSetValue([Nullable(2)] ISwitchPermission_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A9C7 RID: 43463 RVA: 0x0017E996 File Offset: 0x0017CB96
+		// Token: 0x0600B499 RID: 46233 RVA: 0x0019498E File Offset: 0x00192B8E
 		public new ISwitchPermission_SetValue ToSetValue()
 		{
 			return new ISwitchPermission_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033B5 RID: 13237
-		// (get) Token: 0x0600A9C8 RID: 43464 RVA: 0x0017E9C1 File Offset: 0x0017CBC1
-		// (set) Token: 0x0600A9C9 RID: 43465 RVA: 0x0017E9EC File Offset: 0x0017CBEC
+		// Token: 0x17003680 RID: 13952
+		// (get) Token: 0x0600B49A RID: 46234 RVA: 0x001949B9 File Offset: 0x00192BB9
+		// (set) Token: 0x0600B49B RID: 46235 RVA: 0x001949E4 File Offset: 0x00192BE4
 		public override ESwitchSubLevelsType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033B6 RID: 13238
-		// (get) Token: 0x0600A9CA RID: 43466 RVA: 0x0017E9FA File Offset: 0x0017CBFA
-		// (set) Token: 0x0600A9CB RID: 43467 RVA: 0x0017EA25 File Offset: 0x0017CC25
+		// Token: 0x17003681 RID: 13953
+		// (get) Token: 0x0600B49C RID: 46236 RVA: 0x001949F2 File Offset: 0x00192BF2
+		// (set) Token: 0x0600B49D RID: 46237 RVA: 0x00194A1D File Offset: 0x00192C1D
 		public virtual bool IsAllowClientSwitch
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033B7 RID: 13239
-		// (get) Token: 0x0600A9CC RID: 43468 RVA: 0x0017EA33 File Offset: 0x0017CC33
-		// (set) Token: 0x0600A9CD RID: 43469 RVA: 0x0017EA5A File Offset: 0x0017CC5A
+		// Token: 0x17003682 RID: 13954
+		// (get) Token: 0x0600B49E RID: 46238 RVA: 0x00194A2B File Offset: 0x00192C2B
+		// (set) Token: 0x0600B49F RID: 46239 RVA: 0x00194A52 File Offset: 0x00192C52
 		public virtual List<string> Levels
 		{
 			get
@@ -128,11 +126,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064F0 RID: 25840
+		// Token: 0x04006ADF RID: 27359
 		[Nullable(2)]
 		protected new ISwitchPermission FbInstance;
 
-		// Token: 0x040064F1 RID: 25841
+		// Token: 0x04006AE0 RID: 27360
 		[Nullable(2)]
 		protected new ISwitchPermission_SetValue PocoInterface;
 	}

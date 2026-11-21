@@ -5,13 +5,13 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Core.Fight;
 using UnrealEngine;
 
-// Token: 0x02002DAB RID: 11691
+// Token: 0x02002305 RID: 8965
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletDataExecution
 {
-	// Token: 0x1700215C RID: 8540
-	// (get) Token: 0x06018938 RID: 100664 RVA: 0x00647B81 File Offset: 0x00645D81
+	// Token: 0x170021B8 RID: 8632
+	// (get) Token: 0x060161E0 RID: 90592 RVA: 0x0066DA61 File Offset: 0x0066BC61
 	[Nullable(new byte[]
 	{
 		2,
@@ -31,8 +31,8 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x1700215D RID: 8541
-	// (get) Token: 0x06018939 RID: 100665 RVA: 0x00647B8F File Offset: 0x00645D8F
+	// Token: 0x170021B9 RID: 8633
+	// (get) Token: 0x060161E1 RID: 90593 RVA: 0x0066DA6F File Offset: 0x0066BC6F
 	public bool HasRebound
 	{
 		get
@@ -41,8 +41,8 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x1700215E RID: 8542
-	// (get) Token: 0x0601893A RID: 100666 RVA: 0x00647B97 File Offset: 0x00645D97
+	// Token: 0x170021BA RID: 8634
+	// (get) Token: 0x060161E2 RID: 90594 RVA: 0x0066DA77 File Offset: 0x0066BC77
 	public bool HasCollision
 	{
 		get
@@ -51,7 +51,7 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x0601893B RID: 100667 RVA: 0x00647BA0 File Offset: 0x00645DA0
+	// Token: 0x060161E3 RID: 90595 RVA: 0x0066DA80 File Offset: 0x0066BC80
 	public void InitGbGroup()
 	{
 		if (this.GbGroupInternalInit)
@@ -88,8 +88,8 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x1700215F RID: 8543
-	// (get) Token: 0x0601893C RID: 100668 RVA: 0x00647C98 File Offset: 0x00645E98
+	// Token: 0x170021BB RID: 8635
+	// (get) Token: 0x060161E4 RID: 90596 RVA: 0x0066DB78 File Offset: 0x0066BD78
 	[Nullable(2)]
 	public int[] TagIdOnVictimEnter
 	{
@@ -116,8 +116,8 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x17002160 RID: 8544
-	// (get) Token: 0x0601893D RID: 100669 RVA: 0x00647D14 File Offset: 0x00645F14
+	// Token: 0x170021BC RID: 8636
+	// (get) Token: 0x060161E5 RID: 90597 RVA: 0x0066DBF4 File Offset: 0x0066BDF4
 	public long[] GeIdApplyToVictim
 	{
 		get
@@ -132,8 +132,8 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x17002161 RID: 8545
-	// (get) Token: 0x0601893E RID: 100670 RVA: 0x00647D65 File Offset: 0x00645F65
+	// Token: 0x170021BD RID: 8637
+	// (get) Token: 0x060161E6 RID: 90598 RVA: 0x0066DC45 File Offset: 0x0066BE45
 	public bool WaitEnterGeReply
 	{
 		get
@@ -146,8 +146,8 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x17002162 RID: 8546
-	// (get) Token: 0x0601893F RID: 100671 RVA: 0x00647D95 File Offset: 0x00645F95
+	// Token: 0x170021BE RID: 8638
+	// (get) Token: 0x060161E7 RID: 90599 RVA: 0x0066DC75 File Offset: 0x0066BE75
 	public FGameplayTag SendGameplayEventTagToVictim
 	{
 		get
@@ -160,8 +160,8 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x17002163 RID: 8547
-	// (get) Token: 0x06018940 RID: 100672 RVA: 0x00647DC8 File Offset: 0x00645FC8
+	// Token: 0x170021BF RID: 8639
+	// (get) Token: 0x060161E8 RID: 90600 RVA: 0x0066DCA8 File Offset: 0x0066BEA8
 	public long[] SendGeIdToVictim
 	{
 		get
@@ -176,8 +176,8 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x17002164 RID: 8548
-	// (get) Token: 0x06018941 RID: 100673 RVA: 0x00647E1C File Offset: 0x0064601C
+	// Token: 0x170021C0 RID: 8640
+	// (get) Token: 0x060161E9 RID: 90601 RVA: 0x0066DCFC File Offset: 0x0066BEFC
 	public long[] SendGeIdToRoleInGame
 	{
 		get
@@ -192,8 +192,8 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x17002165 RID: 8549
-	// (get) Token: 0x06018942 RID: 100674 RVA: 0x00647E6D File Offset: 0x0064606D
+	// Token: 0x170021C1 RID: 8641
+	// (get) Token: 0x060161EA RID: 90602 RVA: 0x0066DD4D File Offset: 0x0066BF4D
 	public FGameplayTag SendGameplayEventTagToAttacker
 	{
 		get
@@ -206,8 +206,8 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x17002166 RID: 8550
-	// (get) Token: 0x06018943 RID: 100675 RVA: 0x00647EA0 File Offset: 0x006460A0
+	// Token: 0x170021C2 RID: 8642
+	// (get) Token: 0x060161EB RID: 90603 RVA: 0x0066DD80 File Offset: 0x0066BF80
 	public long[] SendGeIdToAttacker
 	{
 		get
@@ -222,8 +222,8 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x17002167 RID: 8551
-	// (get) Token: 0x06018944 RID: 100676 RVA: 0x00647EF1 File Offset: 0x006460F1
+	// Token: 0x170021C3 RID: 8643
+	// (get) Token: 0x060161EC RID: 90604 RVA: 0x0066DDD1 File Offset: 0x0066BFD1
 	public FGameplayTag SendGameplayEventTagToAttackerOnEnd
 	{
 		get
@@ -236,8 +236,8 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x17002168 RID: 8552
-	// (get) Token: 0x06018945 RID: 100677 RVA: 0x00647F24 File Offset: 0x00646124
+	// Token: 0x170021C4 RID: 8644
+	// (get) Token: 0x060161ED RID: 90605 RVA: 0x0066DE04 File Offset: 0x0066C004
 	public long[] EnergyRecoverGeIds
 	{
 		get
@@ -252,8 +252,8 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x17002169 RID: 8553
-	// (get) Token: 0x06018946 RID: 100678 RVA: 0x00647F75 File Offset: 0x00646175
+	// Token: 0x170021C5 RID: 8645
+	// (get) Token: 0x060161EE RID: 90606 RVA: 0x0066DE55 File Offset: 0x0066C055
 	public FGameplayTag SendGameplayEventTagToAttackerOnStart
 	{
 		get
@@ -266,27 +266,27 @@ public class BulletDataExecution
 		}
 	}
 
-	// Token: 0x06018947 RID: 100679 RVA: 0x00647FA5 File Offset: 0x006461A5
+	// Token: 0x060161EF RID: 90607 RVA: 0x0066DE85 File Offset: 0x0066C085
 	public BulletDataExecution(SReBulletDataExe data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x06018948 RID: 100680 RVA: 0x00647FB4 File Offset: 0x006461B4
+	// Token: 0x060161F0 RID: 90608 RVA: 0x0066DE94 File Offset: 0x0066C094
 	public bool Preload()
 	{
 		this.InitGbGroup();
 		return true;
 	}
 
-	// Token: 0x0400B652 RID: 46674
+	// Token: 0x0400B9CC RID: 47564
 	[Nullable(2)]
 	private readonly SReBulletDataExe Data;
 
-	// Token: 0x0400B653 RID: 46675
+	// Token: 0x0400B9CD RID: 47565
 	private bool GbGroupInternalInit;
 
-	// Token: 0x0400B654 RID: 46676
+	// Token: 0x0400B9CE RID: 47566
 	[Nullable(new byte[]
 	{
 		2,
@@ -294,65 +294,65 @@ public class BulletDataExecution
 	})]
 	private List<LogicDataBase> GbDataListInternal;
 
-	// Token: 0x0400B655 RID: 46677
+	// Token: 0x0400B9CF RID: 47567
 	public bool MovementReplaced;
 
-	// Token: 0x0400B656 RID: 46678
+	// Token: 0x0400B9D0 RID: 47568
 	public int ReboundBitMask;
 
-	// Token: 0x0400B657 RID: 46679
+	// Token: 0x0400B9D1 RID: 47569
 	[Nullable(2)]
 	public List<ECamp> SupportCamp;
 
-	// Token: 0x0400B658 RID: 46680
+	// Token: 0x0400B9D2 RID: 47570
 	private bool HasReboundInternal;
 
-	// Token: 0x0400B659 RID: 46681
+	// Token: 0x0400B9D3 RID: 47571
 	private bool HasCollisionInternal;
 
-	// Token: 0x0400B65A RID: 46682
+	// Token: 0x0400B9D4 RID: 47572
 	[Nullable(2)]
 	private UKuroBpDataAssetGroup ActionGroup;
 
-	// Token: 0x0400B65B RID: 46683
+	// Token: 0x0400B9D5 RID: 47573
 	private bool TagIdOnVictimEnterInit;
 
-	// Token: 0x0400B65C RID: 46684
+	// Token: 0x0400B9D6 RID: 47574
 	[Nullable(2)]
 	private int[] TagIdOnVictimEnterInternal;
 
-	// Token: 0x0400B65D RID: 46685
+	// Token: 0x0400B9D7 RID: 47575
 	[Nullable(2)]
 	private long[] GeIdApplyToVictimInternal;
 
-	// Token: 0x0400B65E RID: 46686
+	// Token: 0x0400B9D8 RID: 47576
 	private bool? WaitEnterGeReplyInternal;
 
-	// Token: 0x0400B65F RID: 46687
+	// Token: 0x0400B9D9 RID: 47577
 	private FGameplayTag? SendGameplayEventTagToVictimInternal;
 
-	// Token: 0x0400B660 RID: 46688
+	// Token: 0x0400B9DA RID: 47578
 	[Nullable(2)]
 	private long[] SendGeIdToVictimInternal;
 
-	// Token: 0x0400B661 RID: 46689
+	// Token: 0x0400B9DB RID: 47579
 	[Nullable(2)]
 	private long[] SendGeIdToRoleInGameInternal;
 
-	// Token: 0x0400B662 RID: 46690
+	// Token: 0x0400B9DC RID: 47580
 	private FGameplayTag? SendGameplayEventTagToAttackerInternal;
 
-	// Token: 0x0400B663 RID: 46691
+	// Token: 0x0400B9DD RID: 47581
 	[Nullable(2)]
 	private long[] SendGeIdToAttackerInternal;
 
-	// Token: 0x0400B664 RID: 46692
+	// Token: 0x0400B9DE RID: 47582
 	private FGameplayTag? SendGameplayEventTagToAttackerOnEndInternal;
 
-	// Token: 0x0400B665 RID: 46693
+	// Token: 0x0400B9DF RID: 47583
 	[Nullable(2)]
 	private long[] EnergyRecoverGeIdsInternal;
 
-	// Token: 0x0400B666 RID: 46694
+	// Token: 0x0400B9E0 RID: 47584
 	private FGameplayTag? SendGameplayEventTagToAttackerOnStartInternal;
 }

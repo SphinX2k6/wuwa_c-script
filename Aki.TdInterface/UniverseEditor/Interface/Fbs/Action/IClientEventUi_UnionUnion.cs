@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063BC RID: 25532
+	// Token: 0x02006A2D RID: 27181
 	public class IClientEventUi_UnionUnion
 	{
-		// Token: 0x1700BE44 RID: 48708
-		// (get) Token: 0x0602C2A1 RID: 180897 RVA: 0x00610778 File Offset: 0x0060E978
-		// (set) Token: 0x0602C2A2 RID: 180898 RVA: 0x00610780 File Offset: 0x0060E980
+		// Token: 0x1700C7C8 RID: 51144
+		// (get) Token: 0x0602EA03 RID: 190979 RVA: 0x0065B7B0 File Offset: 0x006599B0
+		// (set) Token: 0x0602EA04 RID: 190980 RVA: 0x0065B7B8 File Offset: 0x006599B8
 		public IClientEventUi_Union Type { get; set; }
 
-		// Token: 0x1700BE45 RID: 48709
-		// (get) Token: 0x0602C2A3 RID: 180899 RVA: 0x00610789 File Offset: 0x0060E989
-		// (set) Token: 0x0602C2A4 RID: 180900 RVA: 0x00610791 File Offset: 0x0060E991
+		// Token: 0x1700C7C9 RID: 51145
+		// (get) Token: 0x0602EA05 RID: 190981 RVA: 0x0065B7C1 File Offset: 0x006599C1
+		// (set) Token: 0x0602EA06 RID: 190982 RVA: 0x0065B7C9 File Offset: 0x006599C9
 		public object Value { get; set; }
 
-		// Token: 0x0602C2A5 RID: 180901 RVA: 0x0061079A File Offset: 0x0060E99A
+		// Token: 0x0602EA07 RID: 190983 RVA: 0x0065B7D2 File Offset: 0x006599D2
 		public IClientEventUi_UnionUnion()
 		{
 			this.Type = IClientEventUi_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602C2A6 RID: 180902 RVA: 0x006107B0 File Offset: 0x0060E9B0
+		// Token: 0x0602EA08 RID: 190984 RVA: 0x0065B7E8 File Offset: 0x006599E8
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602C2A7 RID: 180903 RVA: 0x006107C2 File Offset: 0x0060E9C2
+		// Token: 0x0602EA09 RID: 190985 RVA: 0x0065B7FA File Offset: 0x006599FA
 		public IClientEventUiT AsIClientEventUi()
 		{
 			return this.As<IClientEventUiT>();
 		}
 
-		// Token: 0x0602C2A8 RID: 180904 RVA: 0x006107CA File Offset: 0x0060E9CA
+		// Token: 0x0602EA0A RID: 190986 RVA: 0x0065B802 File Offset: 0x00659A02
 		public static IClientEventUi_UnionUnion FromIClientEventUi(IClientEventUiT _iclienteventui)
 		{
 			return new IClientEventUi_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C2A9 RID: 180905 RVA: 0x006107DF File Offset: 0x0060E9DF
+		// Token: 0x0602EA0B RID: 190987 RVA: 0x0065B817 File Offset: 0x00659A17
 		public IClientEventUiPlayPianoT AsIClientEventUiPlayPiano()
 		{
 			return this.As<IClientEventUiPlayPianoT>();
 		}
 
-		// Token: 0x0602C2AA RID: 180906 RVA: 0x006107E7 File Offset: 0x0060E9E7
+		// Token: 0x0602EA0C RID: 190988 RVA: 0x0065B81F File Offset: 0x00659A1F
 		public static IClientEventUi_UnionUnion FromIClientEventUiPlayPiano(IClientEventUiPlayPianoT _iclienteventuiplaypiano)
 		{
 			return new IClientEventUi_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C2AB RID: 180907 RVA: 0x006107FC File Offset: 0x0060E9FC
+		// Token: 0x0602EA0D RID: 190989 RVA: 0x0065B834 File Offset: 0x00659A34
 		public IClientEventUiFlyingFlowerT AsIClientEventUiFlyingFlower()
 		{
 			return this.As<IClientEventUiFlyingFlowerT>();
 		}
 
-		// Token: 0x0602C2AC RID: 180908 RVA: 0x00610804 File Offset: 0x0060EA04
+		// Token: 0x0602EA0E RID: 190990 RVA: 0x0065B83C File Offset: 0x00659A3C
 		public static IClientEventUi_UnionUnion FromIClientEventUiFlyingFlower(IClientEventUiFlyingFlowerT _iclienteventuiflyingflower)
 		{
 			return new IClientEventUi_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C2AD RID: 180909 RVA: 0x0061081C File Offset: 0x0060EA1C
+		// Token: 0x0602EA0F RID: 190991 RVA: 0x0065B854 File Offset: 0x00659A54
 		public static int Pack(FlatBufferBuilder builder, IClientEventUi_UnionUnion _o)
 		{
 			switch (_o.Type)

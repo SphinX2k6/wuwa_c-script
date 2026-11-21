@@ -1,30 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200066D RID: 1645
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200070A RID: 1802
 	public class IRefreshGroup_SetValue
 	{
-		// Token: 0x04001859 RID: 6233
+		// Token: 0x04001A4B RID: 6731
 		public bool? Disabled;
 
-		// Token: 0x0400185A RID: 6234
+		// Token: 0x04001A4C RID: 6732
 		public bool? EdIsLocked;
 
-		// Token: 0x0400185B RID: 6235
+		// Token: 0x04001A4D RID: 6733
 		public int RefreshInterval;
 
-		// Token: 0x0400185C RID: 6236
+		// Token: 0x04001A4E RID: 6734
 		public bool DelayRefresh;
 
-		// Token: 0x0400185D RID: 6237
+		// Token: 0x04001A4F RID: 6735
 		public List<int> EntityIdList;
 
-		// Token: 0x0400185E RID: 6238
+		// Token: 0x04001A50 RID: 6736
 		public ICylinder IsUesCylinder;
 	}
 }

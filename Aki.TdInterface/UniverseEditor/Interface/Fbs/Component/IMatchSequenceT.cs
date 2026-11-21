@@ -4,25 +4,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005525 RID: 21797
+	// Token: 0x02005AAB RID: 23211
 	public class IMatchSequenceT
 	{
-		// Token: 0x1700A0E9 RID: 41193
-		// (get) Token: 0x06024023 RID: 147491 RVA: 0x004F9CED File Offset: 0x004F7EED
-		// (set) Token: 0x06024024 RID: 147492 RVA: 0x004F9CF5 File Offset: 0x004F7EF5
+		// Token: 0x1700A923 RID: 43299
+		// (get) Token: 0x060260DD RID: 155869 RVA: 0x00536E11 File Offset: 0x00535011
+		// (set) Token: 0x060260DE RID: 155870 RVA: 0x00536E19 File Offset: 0x00535019
 		public EItemFoundationMatchType FoundationType { get; set; }
 
-		// Token: 0x1700A0EA RID: 41194
-		// (get) Token: 0x06024025 RID: 147493 RVA: 0x004F9CFE File Offset: 0x004F7EFE
-		// (set) Token: 0x06024026 RID: 147494 RVA: 0x004F9D06 File Offset: 0x004F7F06
+		// Token: 0x1700A924 RID: 43300
+		// (get) Token: 0x060260DF RID: 155871 RVA: 0x00536E22 File Offset: 0x00535022
+		// (set) Token: 0x060260E0 RID: 155872 RVA: 0x00536E2A File Offset: 0x0053502A
 		public IVectorInfoT MatchPoint { get; set; }
 
-		// Token: 0x1700A0EB RID: 41195
-		// (get) Token: 0x06024027 RID: 147495 RVA: 0x004F9D0F File Offset: 0x004F7F0F
-		// (set) Token: 0x06024028 RID: 147496 RVA: 0x004F9D17 File Offset: 0x004F7F17
+		// Token: 0x1700A925 RID: 43301
+		// (get) Token: 0x060260E1 RID: 155873 RVA: 0x00536E33 File Offset: 0x00535033
+		// (set) Token: 0x060260E2 RID: 155874 RVA: 0x00536E3B File Offset: 0x0053503B
 		public string MatchSequence { get; set; }
 
-		// Token: 0x06024029 RID: 147497 RVA: 0x004F9D20 File Offset: 0x004F7F20
+		// Token: 0x060260E3 RID: 155875 RVA: 0x00536E44 File Offset: 0x00535044
 		public IMatchSequenceT()
 		{
 			this.FoundationType = EItemFoundationMatchType.Branch;

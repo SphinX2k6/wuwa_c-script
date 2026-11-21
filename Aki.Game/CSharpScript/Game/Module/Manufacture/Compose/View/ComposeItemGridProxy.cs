@@ -4,7 +4,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.View
 {
-	// Token: 0x0200566A RID: 22122
+	// Token: 0x02004640 RID: 17984
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,7 +13,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 	})]
 	public class ComposeItemGridProxy : SyncGridProxyAbstract<ComposeItemGridData>
 	{
-		// Token: 0x06038454 RID: 230484 RVA: 0x00D56150 File Offset: 0x00D54350
+		// Token: 0x0602D352 RID: 185170 RVA: 0x00CA40DC File Offset: 0x00CA22DC
 		protected override void OnStart()
 		{
 			this.InnerGrid.SetUseFixedAsync(true);
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.InnerGrid.BindOnExtendToggleStateChanged(new Action<MediumItemGridExtendCallback>(this.OnToggleStateChanged));
 		}
 
-		// Token: 0x06038455 RID: 230485 RVA: 0x00D5619D File Offset: 0x00D5439D
+		// Token: 0x0602D353 RID: 185171 RVA: 0x00CA4129 File Offset: 0x00CA2329
 		private void OnToggleStateChanged(MediumItemGridExtendCallback callbackParameter)
 		{
 			ComposeItemGridData currentData = this.CurrentData;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			onToggleStateChanged(callbackParameter);
 		}
 
-		// Token: 0x06038456 RID: 230486 RVA: 0x00D561BC File Offset: 0x00D543BC
+		// Token: 0x0602D354 RID: 185172 RVA: 0x00CA4148 File Offset: 0x00CA2348
 		public override void Refresh(ComposeItemGridData data)
 		{
 			this.CurrentData = data;
@@ -47,22 +47,22 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.InnerGrid.RefreshByBaseItemData(data.ItemData, isSelected);
 		}
 
-		// Token: 0x06038457 RID: 230487 RVA: 0x00D561FB File Offset: 0x00D543FB
+		// Token: 0x0602D355 RID: 185173 RVA: 0x00CA4187 File Offset: 0x00CA2387
 		public void SetSelected(bool selected)
 		{
 			this.InnerGrid.SetSelected(selected, false);
 		}
 
-		// Token: 0x06038458 RID: 230488 RVA: 0x00D5620A File Offset: 0x00D5440A
+		// Token: 0x0602D356 RID: 185174 RVA: 0x00CA4196 File Offset: 0x00CA2396
 		public ComposeMediumItemGridInner GetInnerGrid()
 		{
 			return this.InnerGrid;
 		}
 
-		// Token: 0x0401D965 RID: 121189
+		// Token: 0x040183F0 RID: 99312
 		private readonly ComposeMediumItemGridInner InnerGrid = new ComposeMediumItemGridInner();
 
-		// Token: 0x0401D966 RID: 121190
+		// Token: 0x040183F1 RID: 99313
 		[Nullable(2)]
 		public ComposeItemGridData CurrentData;
 	}

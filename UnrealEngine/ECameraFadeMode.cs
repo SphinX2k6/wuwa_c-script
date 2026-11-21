@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A1E RID: 2590
+	// Token: 0x020001CF RID: 463
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.ECameraFadeMode")]
 	public enum ECameraFadeMode
 	{
-		// Token: 0x0400454D RID: 17741
+		// Token: 0x04000B4C RID: 2892
 		CFM_Linear,
-		// Token: 0x0400454E RID: 17742
+		// Token: 0x04000B4D RID: 2893
 		CFM_Transient,
-		// Token: 0x0400454F RID: 17743
+		// Token: 0x04000B4E RID: 2894
 		CFM_InOutCubic,
-		// Token: 0x04004550 RID: 17744
+		// Token: 0x04000B4F RID: 2895
 		CFM_OutSine,
-		// Token: 0x04004551 RID: 17745
+		// Token: 0x04000B50 RID: 2896
 		CFM_OutQuart,
-		// Token: 0x04004552 RID: 17746
+		// Token: 0x04000B51 RID: 2897
 		CFM_MAX
 	}
 }

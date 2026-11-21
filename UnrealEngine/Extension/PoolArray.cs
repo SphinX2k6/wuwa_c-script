@@ -6,19 +6,19 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine.Extension
 {
-	// Token: 0x02002AE0 RID: 10976
+	// Token: 0x0200088F RID: 2191
 	[NullableContext(1)]
 	[Nullable(0)]
 	public readonly struct PoolArray<[Nullable(2)] T> : IList<T>, ICollection<!0>, IEnumerable<!0>, IEnumerable, IDisposable
 	{
-		// Token: 0x060283E3 RID: 164835 RVA: 0x003D34FC File Offset: 0x003D16FC
+		// Token: 0x0600BD97 RID: 48535 RVA: 0x0012E7F4 File Offset: 0x0012C9F4
 		public PoolArray()
 		{
 			this._length = 0;
 			this._array = Array.Empty<T>();
 		}
 
-		// Token: 0x060283E4 RID: 164836 RVA: 0x003D3510 File Offset: 0x003D1710
+		// Token: 0x0600BD98 RID: 48536 RVA: 0x0012E808 File Offset: 0x0012CA08
 		public PoolArray(int inLength, bool clear)
 		{
 			this._length = inLength;
@@ -29,14 +29,14 @@ namespace UnrealEngine.Extension
 			}
 		}
 
-		// Token: 0x060283E5 RID: 164837 RVA: 0x003D353F File Offset: 0x003D173F
+		// Token: 0x0600BD99 RID: 48537 RVA: 0x0012E837 File Offset: 0x0012CA37
 		internal PoolArray(T[] inSharedArray, int inLength)
 		{
 			this._length = inLength;
 			this._array = inSharedArray;
 		}
 
-		// Token: 0x060283E6 RID: 164838 RVA: 0x003D354F File Offset: 0x003D174F
+		// Token: 0x0600BD9A RID: 48538 RVA: 0x0012E847 File Offset: 0x0012CA47
 		public void Dispose()
 		{
 			if (this._array.Length != 0)
@@ -45,62 +45,73 @@ namespace UnrealEngine.Extension
 			}
 		}
 
-		// Token: 0x060283E7 RID: 164839 RVA: 0x003D356F File Offset: 0x003D176F
-		public IEnumerator<T> GetEnumerator()
+		// Token: 0x0600BD9B RID: 48539 RVA: 0x0012E867 File Offset: 0x0012CA67
+		[return: Nullable(new byte[]
+		{
+			0,
+			1
+		})]
+		public PoolArrayEnumerator<T> GetEnumerator()
 		{
 			return new PoolArrayEnumerator<T>(this._array, this._length);
 		}
 
-		// Token: 0x060283E8 RID: 164840 RVA: 0x003D3587 File Offset: 0x003D1787
+		// Token: 0x0600BD9C RID: 48540 RVA: 0x0012E87A File Offset: 0x0012CA7A
+		IEnumerator<T> IEnumerable<!0>.GetEnumerator()
+		{
+			return new PoolArrayEnumerator<T>(this._array, this._length);
+		}
+
+		// Token: 0x0600BD9D RID: 48541 RVA: 0x0012E892 File Offset: 0x0012CA92
 		IEnumerator IEnumerable.GetEnumerator()
 		{
 			return this.GetEnumerator();
 		}
 
-		// Token: 0x060283E9 RID: 164841 RVA: 0x003D358F File Offset: 0x003D178F
+		// Token: 0x0600BD9E RID: 48542 RVA: 0x0012E89F File Offset: 0x0012CA9F
 		public void Add(T item)
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x060283EA RID: 164842 RVA: 0x003D3596 File Offset: 0x003D1796
+		// Token: 0x0600BD9F RID: 48543 RVA: 0x0012E8A6 File Offset: 0x0012CAA6
 		public bool Remove(T item)
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x060283EB RID: 164843 RVA: 0x003D359D File Offset: 0x003D179D
+		// Token: 0x0600BDA0 RID: 48544 RVA: 0x0012E8AD File Offset: 0x0012CAAD
 		public void Insert(int index, T item)
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x060283EC RID: 164844 RVA: 0x003D35A4 File Offset: 0x003D17A4
+		// Token: 0x0600BDA1 RID: 48545 RVA: 0x0012E8B4 File Offset: 0x0012CAB4
 		public void RemoveAt(int index)
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x060283ED RID: 164845 RVA: 0x003D35AB File Offset: 0x003D17AB
+		// Token: 0x0600BDA2 RID: 48546 RVA: 0x0012E8BB File Offset: 0x0012CABB
 		public void Clear()
 		{
 			Array.Clear(this._array, 0, this._length);
 		}
 
-		// Token: 0x060283EE RID: 164846 RVA: 0x003D35BF File Offset: 0x003D17BF
+		// Token: 0x0600BDA3 RID: 48547 RVA: 0x0012E8CF File Offset: 0x0012CACF
 		public bool Contains(T item)
 		{
 			return Array.IndexOf<T>(this._array, item, 0, this._length) != -1;
 		}
 
-		// Token: 0x060283EF RID: 164847 RVA: 0x003D35DC File Offset: 0x003D17DC
+		// Token: 0x0600BDA4 RID: 48548 RVA: 0x0012E8EC File Offset: 0x0012CAEC
 		public void CopyTo(T[] array, int arrayIndex)
 		{
 			this._array.AsSpan(0, this._length).CopyTo(array.AsSpan(arrayIndex));
 		}
 
-		// Token: 0x1700999A RID: 39322
-		// (get) Token: 0x060283F0 RID: 164848 RVA: 0x003D360A File Offset: 0x003D180A
+		// Token: 0x17002323 RID: 8995
+		// (get) Token: 0x0600BDA5 RID: 48549 RVA: 0x0012E91A File Offset: 0x0012CB1A
 		public int Count
 		{
 			get
@@ -109,8 +120,8 @@ namespace UnrealEngine.Extension
 			}
 		}
 
-		// Token: 0x1700999B RID: 39323
-		// (get) Token: 0x060283F1 RID: 164849 RVA: 0x003D3612 File Offset: 0x003D1812
+		// Token: 0x17002324 RID: 8996
+		// (get) Token: 0x0600BDA6 RID: 48550 RVA: 0x0012E922 File Offset: 0x0012CB22
 		public bool IsReadOnly
 		{
 			get
@@ -119,13 +130,13 @@ namespace UnrealEngine.Extension
 			}
 		}
 
-		// Token: 0x060283F2 RID: 164850 RVA: 0x003D3615 File Offset: 0x003D1815
+		// Token: 0x0600BDA7 RID: 48551 RVA: 0x0012E925 File Offset: 0x0012CB25
 		public int IndexOf(T item)
 		{
 			return Array.IndexOf<T>(this._array, item, 0, this._length);
 		}
 
-		// Token: 0x1700999C RID: 39324
+		// Token: 0x17002325 RID: 8997
 		public T this[int index]
 		{
 			get
@@ -146,7 +157,7 @@ namespace UnrealEngine.Extension
 			}
 		}
 
-		// Token: 0x060283F5 RID: 164853 RVA: 0x003D3665 File Offset: 0x003D1865
+		// Token: 0x0600BDAA RID: 48554 RVA: 0x0012E975 File Offset: 0x0012CB75
 		public ref T Ref(int index)
 		{
 			if (index >= this._length)
@@ -156,7 +167,7 @@ namespace UnrealEngine.Extension
 			return ref this._array[index];
 		}
 
-		// Token: 0x060283F6 RID: 164854 RVA: 0x003D3682 File Offset: 0x003D1882
+		// Token: 0x0600BDAB RID: 48555 RVA: 0x0012E992 File Offset: 0x0012CB92
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -167,16 +178,16 @@ namespace UnrealEngine.Extension
 			return this._array.AsSpan(0, this._length);
 		}
 
-		// Token: 0x060283F7 RID: 164855 RVA: 0x003D3696 File Offset: 0x003D1896
+		// Token: 0x0600BDAC RID: 48556 RVA: 0x0012E9A6 File Offset: 0x0012CBA6
 		public T[] UnsafeAsArray()
 		{
 			return this._array;
 		}
 
-		// Token: 0x04016286 RID: 90758
+		// Token: 0x0400569D RID: 22173
 		private readonly int _length;
 
-		// Token: 0x04016287 RID: 90759
+		// Token: 0x0400569E RID: 22174
 		private readonly T[] _array;
 	}
 }

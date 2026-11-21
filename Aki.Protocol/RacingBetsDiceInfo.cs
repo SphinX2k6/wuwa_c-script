@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000E59 RID: 3673
+	// Token: 0x02000E49 RID: 3657
 	public sealed class RacingBetsDiceInfo : IMessage<RacingBetsDiceInfo>, IMessage, IEquatable<RacingBetsDiceInfo>, IDeepCloneable<RacingBetsDiceInfo>, IBufferMessage
 	{
-		// Token: 0x06013B74 RID: 80756 RVA: 0x002DD874 File Offset: 0x002DBA74
+		// Token: 0x06013A8F RID: 80527 RVA: 0x002DC1B8 File Offset: 0x002DA3B8
 		[NullableContext(1)]
 		public static RacingBetsDiceInfo Create()
 		{
 			return new RacingBetsDiceInfo();
 		}
 
-		// Token: 0x1700416D RID: 16749
-		// (get) Token: 0x06013B75 RID: 80757 RVA: 0x002DD87B File Offset: 0x002DBA7B
+		// Token: 0x17004143 RID: 16707
+		// (get) Token: 0x06013A90 RID: 80528 RVA: 0x002DC1BF File Offset: 0x002DA3BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700416E RID: 16750
-		// (get) Token: 0x06013B76 RID: 80758 RVA: 0x002DD87E File Offset: 0x002DBA7E
+		// Token: 0x17004144 RID: 16708
+		// (get) Token: 0x06013A91 RID: 80529 RVA: 0x002DC1C2 File Offset: 0x002DA3C2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013B77 RID: 80759 RVA: 0x002DD885 File Offset: 0x002DBA85
+		// Token: 0x06013A92 RID: 80530 RVA: 0x002DC1C9 File Offset: 0x002DA3C9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RacingBetsDiceInfo()
 		{
 		}
 
-		// Token: 0x06013B78 RID: 80760 RVA: 0x002DD898 File Offset: 0x002DBA98
+		// Token: 0x06013A93 RID: 80531 RVA: 0x002DC1DC File Offset: 0x002DA3DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RacingBetsDiceInfo(RacingBetsDiceInfo other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06013B79 RID: 80761 RVA: 0x002DD8C2 File Offset: 0x002DBAC2
+		// Token: 0x06013A94 RID: 80532 RVA: 0x002DC206 File Offset: 0x002DA406
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RacingBetsDiceInfo Clone()
@@ -66,8 +66,8 @@ namespace Aki.Protocol
 			return new RacingBetsDiceInfo(this);
 		}
 
-		// Token: 0x1700416F RID: 16751
-		// (get) Token: 0x06013B7A RID: 80762 RVA: 0x002DD8CA File Offset: 0x002DBACA
+		// Token: 0x17004145 RID: 16709
+		// (get) Token: 0x06013A95 RID: 80533 RVA: 0x002DC20E File Offset: 0x002DA40E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<DangoIdToDiceNum> DiceInfo
@@ -78,7 +78,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013B7B RID: 80763 RVA: 0x002DD8D2 File Offset: 0x002DBAD2
+		// Token: 0x06013A96 RID: 80534 RVA: 0x002DC216 File Offset: 0x002DA416
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -86,7 +86,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RacingBetsDiceInfo);
 		}
 
-		// Token: 0x06013B7C RID: 80764 RVA: 0x002DD8E0 File Offset: 0x002DBAE0
+		// Token: 0x06013A97 RID: 80535 RVA: 0x002DC224 File Offset: 0x002DA424
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RacingBetsDiceInfo other)
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.diceInfo_.Equals(other.diceInfo_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06013B7D RID: 80765 RVA: 0x002DD914 File Offset: 0x002DBB14
+		// Token: 0x06013A98 RID: 80536 RVA: 0x002DC258 File Offset: 0x002DA458
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013B7E RID: 80766 RVA: 0x002DD948 File Offset: 0x002DBB48
+		// Token: 0x06013A99 RID: 80537 RVA: 0x002DC28C File Offset: 0x002DA48C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06013B7F RID: 80767 RVA: 0x002DD955 File Offset: 0x002DBB55
+		// Token: 0x06013A9A RID: 80538 RVA: 0x002DC299 File Offset: 0x002DA499
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06013B80 RID: 80768 RVA: 0x002DD95E File Offset: 0x002DBB5E
+		// Token: 0x06013A9B RID: 80539 RVA: 0x002DC2A2 File Offset: 0x002DA4A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013B81 RID: 80769 RVA: 0x002DD988 File Offset: 0x002DBB88
+		// Token: 0x06013A9C RID: 80540 RVA: 0x002DC2CC File Offset: 0x002DA4CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013B82 RID: 80770 RVA: 0x002DD9C1 File Offset: 0x002DBBC1
+		// Token: 0x06013A9D RID: 80541 RVA: 0x002DC305 File Offset: 0x002DA505
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RacingBetsDiceInfo other)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06013B83 RID: 80771 RVA: 0x002DD9EF File Offset: 0x002DBBEF
+		// Token: 0x06013A9E RID: 80542 RVA: 0x002DC333 File Offset: 0x002DA533
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06013B84 RID: 80772 RVA: 0x002DD9F8 File Offset: 0x002DBBF8
+		// Token: 0x06013A9F RID: 80543 RVA: 0x002DC33C File Offset: 0x002DA53C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -194,16 +194,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007890 RID: 30864
+		// Token: 0x040078BA RID: 30906
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007891 RID: 30865
+		// Token: 0x040078BB RID: 30907
 		public const int DiceInfoFieldNumber = 1;
 
-		// Token: 0x04007892 RID: 30866
+		// Token: 0x040078BC RID: 30908
 		private static readonly FieldCodec<DangoIdToDiceNum> _repeated_diceInfo_codec = FieldCodec.ForMessage<DangoIdToDiceNum>(10U, DangoIdToDiceNum.Parser);
 
-		// Token: 0x04007893 RID: 30867
+		// Token: 0x040078BD RID: 30909
 		private readonly RepeatedField<DangoIdToDiceNum> diceInfo_ = new RepeatedField<DangoIdToDiceNum>();
 	}
 }

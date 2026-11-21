@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x0200479A RID: 18330
+	// Token: 0x020036CB RID: 14027
 	public enum EDeepSeaMapId
 	{
-		// Token: 0x04019DF3 RID: 105971
+		// Token: 0x040144A3 RID: 83107
 		None,
-		// Token: 0x04019DF4 RID: 105972
+		// Token: 0x040144A4 RID: 83108
 		Graveyard,
-		// Token: 0x04019DF5 RID: 105973
+		// Token: 0x040144A5 RID: 83109
 		CultivationField,
-		// Token: 0x04019DF6 RID: 105974
+		// Token: 0x040144A6 RID: 83110
 		EnergyField,
-		// Token: 0x04019DF7 RID: 105975
+		// Token: 0x040144A7 RID: 83111
 		Sanctuary,
-		// Token: 0x04019DF8 RID: 105976
+		// Token: 0x040144A8 RID: 83112
 		MainTower
 	}
 }

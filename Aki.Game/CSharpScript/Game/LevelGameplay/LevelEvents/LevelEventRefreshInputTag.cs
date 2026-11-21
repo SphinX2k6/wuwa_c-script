@@ -8,15 +8,15 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B5D RID: 27485
+	// Token: 0x02005CD5 RID: 23765
 	public class LevelEventRefreshInputTag : LevelEventBase
 	{
-		// Token: 0x060441E4 RID: 279012 RVA: 0x010C48C4 File Offset: 0x010C2AC4
+		// Token: 0x0603A336 RID: 238390 RVA: 0x0106E494 File Offset: 0x0106C694
 		public LevelEventRefreshInputTag(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441E5 RID: 279013 RVA: 0x010C48D0 File Offset: 0x010C2AD0
+		// Token: 0x0603A337 RID: 238391 RVA: 0x0106E4A0 File Offset: 0x0106C6A0
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060441E6 RID: 279014 RVA: 0x010C4958 File Offset: 0x010C2B58
+		// Token: 0x0603A338 RID: 238392 RVA: 0x0106E528 File Offset: 0x0106C728
 		protected override void OnUpdateGuarantee()
 		{
 			GuaranteeActionInfo p = new GuaranteeActionInfo

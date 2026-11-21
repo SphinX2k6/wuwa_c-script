@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DAF RID: 7599
+	// Token: 0x02001FC6 RID: 8134
 	public class IResetPosByPosEntity_SetValue
 	{
-		// Token: 0x040061BC RID: 25020
+		// Token: 0x04006744 RID: 26436
 		public EResetPosType Type;
 
-		// Token: 0x040061BD RID: 25021
+		// Token: 0x04006745 RID: 26437
 		public int Entity;
 	}
 }

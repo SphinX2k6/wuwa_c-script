@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002077 RID: 8311
+	// Token: 0x02000699 RID: 1689
 	public sealed class FLGUIFindDefaultNavigationDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F59E RID: 128414 RVA: 0x002E9127 File Offset: 0x002E7327
+		// Token: 0x0600919B RID: 37275 RVA: 0x000DB24F File Offset: 0x000D944F
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIFindDefaultNavigationDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F59F RID: 128415 RVA: 0x002E9133 File Offset: 0x002E7333
+		// Token: 0x0600919C RID: 37276 RVA: 0x000DB25B File Offset: 0x000D945B
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIFindDefaultNavigationDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FLGUIFindDefaultNavigationDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F5A0 RID: 128416 RVA: 0x002E9156 File Offset: 0x002E7356
+		// Token: 0x0600919D RID: 37277 RVA: 0x000DB27E File Offset: 0x000D947E
 		public FLGUIFindDefaultNavigationDelegate()
 		{
 		}
 
-		// Token: 0x0601F5A1 RID: 128417 RVA: 0x002E915E File Offset: 0x002E735E
+		// Token: 0x0600919E RID: 37278 RVA: 0x000DB286 File Offset: 0x000D9486
 		[NullableContext(2)]
 		public FLGUIFindDefaultNavigationDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F5A2 RID: 128418 RVA: 0x002E9168 File Offset: 0x002E7368
+		// Token: 0x0600919F RID: 37279 RVA: 0x000DB290 File Offset: 0x000D9490
 		public FLGUIFindDefaultNavigationDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F5A3 RID: 128419 RVA: 0x002E9173 File Offset: 0x002E7373
+		// Token: 0x060091A0 RID: 37280 RVA: 0x000DB29B File Offset: 0x000D949B
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<ELGUINavigationDirection, USceneComponent>) ?? ((Func<ELGUINavigationDirection, USceneComponent>)Delegate.CreateDelegate(typeof(Func<ELGUINavigationDirection, USceneComponent>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F5A4 RID: 128420 RVA: 0x002E91A5 File Offset: 0x002E73A5
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060091A1 RID: 37281 RVA: 0x000DB2CD File Offset: 0x000D94CD
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIFindDefaultNavigationDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F5A5 RID: 128421 RVA: 0x002E91E0 File Offset: 0x002E73E0
+		// Token: 0x060091A2 RID: 37282 RVA: 0x000DB308 File Offset: 0x000D9508
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe USceneComponent Execute(ELGUINavigationDirection direction)
 		{
 			FLGUIFindDefaultNavigationDelegate.__FLGUIFindDefaultNavigationDelegate_DelegateParams* ptr = stackalloc FLGUIFindDefaultNavigationDelegate.__FLGUIFindDefaultNavigationDelegate_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FLGUIFindDefaultNavigationDelegate.__FLGUIFindDefaultNavigationDelegate_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USceneComponent>(ptr->__Result);
 		}
 
-		// Token: 0x0601F5A6 RID: 128422 RVA: 0x002E9228 File Offset: 0x002E7428
+		// Token: 0x060091A3 RID: 37283 RVA: 0x000DB350 File Offset: 0x000D9550
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<ELGUINavigationDirection, USceneComponent> func = target as Func<ELGUINavigationDirection, USceneComponent>;
@@ -96,35 +93,35 @@ namespace UnrealEngine
 			((FLGUIFindDefaultNavigationDelegate.__FLGUIFindDefaultNavigationDelegate_DelegateParams*)__Parameters)->__Result = ((usceneComponent != null) ? usceneComponent.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x04010F0B RID: 69387
+		// Token: 0x04003F78 RID: 16248
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010F0C RID: 69388
+		// Token: 0x04003F79 RID: 16249
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIFindDefaultNavigationDelegate__DelegateSignature";
 
-		// Token: 0x04010F0D RID: 69389
+		// Token: 0x04003F7A RID: 16250
 		private static int RegisterId;
 
-		// Token: 0x0200347E RID: 13438
+		// Token: 0x02000EC1 RID: 3777
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FLGUIFindDefaultNavigationDelegate_DelegateParams
+		private ref struct __FLGUIFindDefaultNavigationDelegate_DelegateParams
 		{
-			// Token: 0x04017469 RID: 95337
+			// Token: 0x04006278 RID: 25208
 			[FieldOffset(0)]
 			public ELGUINavigationDirection direction;
 
-			// Token: 0x0401746A RID: 95338
+			// Token: 0x04006279 RID: 25209
 			[FieldOffset(8)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x0200347F RID: 13439
+		// Token: 0x02000EC2 RID: 3778
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401746B RID: 95339
+			// Token: 0x0400627A RID: 25210
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

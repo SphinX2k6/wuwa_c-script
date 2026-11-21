@@ -3,20 +3,20 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Utils
 {
-	// Token: 0x02004552 RID: 17746
+	// Token: 0x0200347A RID: 13434
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PortalCapturePerformanceConfig
 	{
-		// Token: 0x0602DD8D RID: 187789 RVA: 0x00A8A757 File Offset: 0x00A88957
+		// Token: 0x0602246F RID: 140399 RVA: 0x009B5C87 File Offset: 0x009B3E87
 		public PortalCapturePerformanceConfig(PortalPlatformCaptureConfig pc, PortalPlatformCaptureConfig mobile)
 		{
 		}
 
-		// Token: 0x040187B5 RID: 100277
+		// Token: 0x04012DEF RID: 77295
 		public PortalPlatformCaptureConfig Pc = pc;
 
-		// Token: 0x040187B6 RID: 100278
+		// Token: 0x04012DF0 RID: 77296
 		public PortalPlatformCaptureConfig Mobile = mobile;
 	}
 }

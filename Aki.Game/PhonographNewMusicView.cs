@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002550 RID: 9552
+// Token: 0x02001A3B RID: 6715
 public class PhonographNewMusicView : UiViewBase
 {
-	// Token: 0x060133E4 RID: 78820 RVA: 0x004C9209 File Offset: 0x004C7409
+	// Token: 0x060108C4 RID: 67780 RVA: 0x004D7D89 File Offset: 0x004D5F89
 	[NullableContext(1)]
 	public PhonographNewMusicView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060133E5 RID: 78821 RVA: 0x004C9214 File Offset: 0x004C7414
+	// Token: 0x060108C5 RID: 67781 RVA: 0x004D7D94 File Offset: 0x004D5F94
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class PhonographNewMusicView : UiViewBase
 		};
 	}
 
-	// Token: 0x060133E6 RID: 78822 RVA: 0x004C9294 File Offset: 0x004C7494
+	// Token: 0x060108C6 RID: 67782 RVA: 0x004D7E14 File Offset: 0x004D6014
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhonographNewMusicView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ public class PhonographNewMusicView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060133E7 RID: 78823 RVA: 0x004C92D7 File Offset: 0x004C74D7
+	// Token: 0x060108C7 RID: 67783 RVA: 0x004D7E57 File Offset: 0x004D6057
 	protected override void OnBeforeDestroy()
 	{
 		PhonographNewMusicViewOpenParam openData = this.OpenData;
@@ -58,20 +58,20 @@ public class PhonographNewMusicView : UiViewBase
 		closeCallback();
 	}
 
-	// Token: 0x060133E8 RID: 78824 RVA: 0x004C92F3 File Offset: 0x004C74F3
+	// Token: 0x060108C8 RID: 67784 RVA: 0x004D7E73 File Offset: 0x004D6073
 	[NullableContext(1)]
 	protected PhonographNewMusicItem OnCreateItem()
 	{
 		return new PhonographNewMusicItem();
 	}
 
-	// Token: 0x060133E9 RID: 78825 RVA: 0x004C92FA File Offset: 0x004C74FA
+	// Token: 0x060108C9 RID: 67785 RVA: 0x004D7E7A File Offset: 0x004D607A
 	protected void OnBtnMask()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04009148 RID: 37192
+	// Token: 0x040092A1 RID: 37537
 	[Nullable(new byte[]
 	{
 		2,
@@ -79,20 +79,20 @@ public class PhonographNewMusicView : UiViewBase
 	})]
 	protected GenericLayout<PhonographNewMusicItem, int> GenericLayout;
 
-	// Token: 0x04009149 RID: 37193
+	// Token: 0x040092A2 RID: 37538
 	[Nullable(2)]
 	private PhonographNewMusicViewOpenParam OpenData;
 
-	// Token: 0x02008B0E RID: 35598
+	// Token: 0x02007C94 RID: 31892
 	private static class EPhonographNewMusicViewDefine
 	{
-		// Token: 0x0402D262 RID: 184930
+		// Token: 0x04028571 RID: 165233
 		public const int BtnMask = 0;
 
-		// Token: 0x0402D263 RID: 184931
+		// Token: 0x04028572 RID: 165234
 		public const int VerticalLayout = 1;
 
-		// Token: 0x0402D264 RID: 184932
+		// Token: 0x04028573 RID: 165235
 		public const int VerticalLayoutItem = 2;
 	}
 }

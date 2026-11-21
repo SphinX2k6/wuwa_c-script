@@ -4,28 +4,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F2B RID: 24363
+	// Token: 0x02004F12 RID: 20242
 	[NullableContext(1)]
 	public interface IWheelTowerBossAttrData
 	{
-		// Token: 0x17008F18 RID: 36632
-		// (get) Token: 0x0603DE4F RID: 253519
-		// (set) Token: 0x0603DE50 RID: 253520
+		// Token: 0x170062EA RID: 25322
+		// (get) Token: 0x06032DEA RID: 208362
+		// (set) Token: 0x06032DEB RID: 208363
 		string AttrName { get; set; }
 
-		// Token: 0x17008F19 RID: 36633
-		// (get) Token: 0x0603DE51 RID: 253521
-		// (set) Token: 0x0603DE52 RID: 253522
+		// Token: 0x170062EB RID: 25323
+		// (get) Token: 0x06032DEC RID: 208364
+		// (set) Token: 0x06032DED RID: 208365
 		int AttrLevel { get; set; }
 
-		// Token: 0x17008F1A RID: 36634
-		// (get) Token: 0x0603DE53 RID: 253523
-		// (set) Token: 0x0603DE54 RID: 253524
+		// Token: 0x170062EC RID: 25324
+		// (get) Token: 0x06032DEE RID: 208366
+		// (set) Token: 0x06032DEF RID: 208367
 		int ElementId { get; set; }
 
-		// Token: 0x17008F1B RID: 36635
-		// (get) Token: 0x0603DE55 RID: 253525
-		// (set) Token: 0x0603DE56 RID: 253526
+		// Token: 0x170062ED RID: 25325
+		// (get) Token: 0x06032DF0 RID: 208368
+		// (set) Token: 0x06032DF1 RID: 208369
 		List<int> TagIdList { get; set; }
 	}
 }

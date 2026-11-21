@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045AE RID: 17838
+	// Token: 0x02004A16 RID: 18966
 	public struct ISingleOnlineRefresh : IFlatbufferObject
 	{
-		// Token: 0x17007EC7 RID: 32455
-		// (get) Token: 0x0601AF7B RID: 110459 RVA: 0x003D899A File Offset: 0x003D6B9A
+		// Token: 0x17008508 RID: 34056
+		// (get) Token: 0x0601C750 RID: 116560 RVA: 0x00404C36 File Offset: 0x00402E36
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AF7C RID: 110460 RVA: 0x003D89A7 File Offset: 0x003D6BA7
+		// Token: 0x0601C751 RID: 116561 RVA: 0x00404C43 File Offset: 0x00402E43
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601AF7D RID: 110461 RVA: 0x003D89B0 File Offset: 0x003D6BB0
+		// Token: 0x0601C752 RID: 116562 RVA: 0x00404C4C File Offset: 0x00402E4C
 		public static ISingleOnlineRefresh GetRootAsISingleOnlineRefresh(ByteBuffer _bb)
 		{
 			return ISingleOnlineRefresh.GetRootAsISingleOnlineRefresh(_bb, default(ISingleOnlineRefresh));
 		}
 
-		// Token: 0x0601AF7E RID: 110462 RVA: 0x003D89CC File Offset: 0x003D6BCC
+		// Token: 0x0601C753 RID: 116563 RVA: 0x00404C68 File Offset: 0x00402E68
 		public static ISingleOnlineRefresh GetRootAsISingleOnlineRefresh(ByteBuffer _bb, ISingleOnlineRefresh obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601AF7F RID: 110463 RVA: 0x003D89E9 File Offset: 0x003D6BE9
+		// Token: 0x0601C754 RID: 116564 RVA: 0x00404C85 File Offset: 0x00402E85
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601AF80 RID: 110464 RVA: 0x003D89F8 File Offset: 0x003D6BF8
+		// Token: 0x0601C755 RID: 116565 RVA: 0x00404C94 File Offset: 0x00402E94
 		public ISingleOnlineRefresh __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007EC8 RID: 32456
-		// (get) Token: 0x0601AF81 RID: 110465 RVA: 0x003D8A08 File Offset: 0x003D6C08
+		// Token: 0x17008509 RID: 34057
+		// (get) Token: 0x0601C756 RID: 116566 RVA: 0x00404CA4 File Offset: 0x00402EA4
 		public int CompletedRefreshTime
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007EC9 RID: 32457
-		// (get) Token: 0x0601AF82 RID: 110466 RVA: 0x003D8A44 File Offset: 0x003D6C44
+		// Token: 0x1700850A RID: 34058
+		// (get) Token: 0x0601C757 RID: 116567 RVA: 0x00404CE0 File Offset: 0x00402EE0
 		public int AwardedRefreshTime
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007ECA RID: 32458
-		// (get) Token: 0x0601AF83 RID: 110467 RVA: 0x003D8A80 File Offset: 0x003D6C80
+		// Token: 0x1700850B RID: 34059
+		// (get) Token: 0x0601C758 RID: 116568 RVA: 0x00404D1C File Offset: 0x00402F1C
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AF84 RID: 110468 RVA: 0x003D8ABC File Offset: 0x003D6CBC
+		// Token: 0x0601C759 RID: 116569 RVA: 0x00404D58 File Offset: 0x00402F58
 		public static Offset<ISingleOnlineRefresh> CreateISingleOnlineRefresh(FlatBufferBuilder builder, int CompletedRefreshTime = 0, int AwardedRefreshTime = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ISingleOnlineRefresh.EndISingleOnlineRefresh(builder);
 		}
 
-		// Token: 0x0601AF85 RID: 110469 RVA: 0x003D8AE0 File Offset: 0x003D6CE0
+		// Token: 0x0601C75A RID: 116570 RVA: 0x00404D7C File Offset: 0x00402F7C
 		public static void StartISingleOnlineRefresh(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601AF86 RID: 110470 RVA: 0x003D8AE9 File Offset: 0x003D6CE9
+		// Token: 0x0601C75B RID: 116571 RVA: 0x00404D85 File Offset: 0x00402F85
 		public static void AddCompletedRefreshTime(FlatBufferBuilder builder, int completedRefreshTime)
 		{
 			builder.AddInt(0, completedRefreshTime, 0);
 		}
 
-		// Token: 0x0601AF87 RID: 110471 RVA: 0x003D8AF4 File Offset: 0x003D6CF4
+		// Token: 0x0601C75C RID: 116572 RVA: 0x00404D90 File Offset: 0x00402F90
 		public static void AddAwardedRefreshTime(FlatBufferBuilder builder, int awardedRefreshTime)
 		{
 			builder.AddInt(1, awardedRefreshTime, 0);
 		}
 
-		// Token: 0x0601AF88 RID: 110472 RVA: 0x003D8AFF File Offset: 0x003D6CFF
+		// Token: 0x0601C75D RID: 116573 RVA: 0x00404D9B File Offset: 0x00402F9B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0601AF89 RID: 110473 RVA: 0x003D8B0A File Offset: 0x003D6D0A
+		// Token: 0x0601C75E RID: 116574 RVA: 0x00404DA6 File Offset: 0x00402FA6
 		public static Offset<ISingleOnlineRefresh> EndISingleOnlineRefresh(FlatBufferBuilder builder)
 		{
 			return new Offset<ISingleOnlineRefresh>(builder.EndTable());
 		}
 
-		// Token: 0x0601AF8A RID: 110474 RVA: 0x003D8B18 File Offset: 0x003D6D18
+		// Token: 0x0601C75F RID: 116575 RVA: 0x00404DB4 File Offset: 0x00402FB4
 		public ISingleOnlineRefreshT UnPack()
 		{
 			ISingleOnlineRefreshT singleOnlineRefreshT = new ISingleOnlineRefreshT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return singleOnlineRefreshT;
 		}
 
-		// Token: 0x0601AF8B RID: 110475 RVA: 0x003D8B33 File Offset: 0x003D6D33
+		// Token: 0x0601C760 RID: 116576 RVA: 0x00404DCF File Offset: 0x00402FCF
 		public void UnPackTo(ISingleOnlineRefreshT _o)
 		{
 			_o.CompletedRefreshTime = this.CompletedRefreshTime;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601AF8C RID: 110476 RVA: 0x003D8B5C File Offset: 0x003D6D5C
+		// Token: 0x0601C761 RID: 116577 RVA: 0x00404DF8 File Offset: 0x00402FF8
 		public static Offset<ISingleOnlineRefresh> Pack(FlatBufferBuilder builder, ISingleOnlineRefreshT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ISingleOnlineRefresh.CreateISingleOnlineRefresh(builder, _o.CompletedRefreshTime, _o.AwardedRefreshTime, _o.NullMask);
 		}
 
-		// Token: 0x0400C676 RID: 50806
+		// Token: 0x0400D0A5 RID: 53413
 		private Table __p;
 	}
 }

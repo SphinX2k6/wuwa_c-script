@@ -4,12 +4,12 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D1F RID: 23839
+	// Token: 0x02004D01 RID: 19713
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ExecutionItem : BattleSkillItem
 	{
-		// Token: 0x0603C6F6 RID: 247542 RVA: 0x00E7E01B File Offset: 0x00E7C21B
+		// Token: 0x0603164F RID: 202319 RVA: 0x00DCE7B3 File Offset: 0x00DCC9B3
 		public void Init(Action callback)
 		{
 			this.Callback = callback;
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C6F7 RID: 247543 RVA: 0x00E7E034 File Offset: 0x00E7C234
+		// Token: 0x06031650 RID: 202320 RVA: 0x00DCE7CC File Offset: 0x00DCC9CC
 		public void RefreshKeyByActionName(string actionName)
 		{
 			EOperationType operationType = Info.Instance.OperationType;
@@ -49,14 +49,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.KeyActionName = actionName;
 		}
 
-		// Token: 0x0603C6F8 RID: 247544 RVA: 0x00E7E0C0 File Offset: 0x00E7C2C0
+		// Token: 0x06031651 RID: 202321 RVA: 0x00DCE858 File Offset: 0x00DCCA58
 		public void RefreshSkillIconByResId(string resourceId)
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath(resourceId);
 			base.SetSkillIcon(resourcePath);
 		}
 
-		// Token: 0x0603C6F9 RID: 247545 RVA: 0x00E7E0E0 File Offset: 0x00E7C2E0
+		// Token: 0x06031652 RID: 202322 RVA: 0x00DCE878 File Offset: 0x00DCCA78
 		protected override void OnSkillButtonPressed()
 		{
 			Action callback = this.Callback;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			callback();
 		}
 
-		// Token: 0x0603C6FA RID: 247546 RVA: 0x00E7E0F2 File Offset: 0x00E7C2F2
+		// Token: 0x06031653 RID: 202323 RVA: 0x00DCE88A File Offset: 0x00DCCA8A
 		public override void OnInputAction(bool bForcePlayClickEffect = false)
 		{
 			BattleUiNiagaraItem clickEffect = this.ClickEffect;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			clickEffect.Play();
 		}
 
-		// Token: 0x0401F7EB RID: 129003
+		// Token: 0x0401A2A4 RID: 107172
 		[Nullable(2)]
 		private Action Callback;
 	}

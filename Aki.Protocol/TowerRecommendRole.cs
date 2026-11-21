@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020013C4 RID: 5060
+	// Token: 0x02001437 RID: 5175
 	public sealed class TowerRecommendRole : IMessage<TowerRecommendRole>, IMessage, IEquatable<TowerRecommendRole>, IDeepCloneable<TowerRecommendRole>, IBufferMessage
 	{
-		// Token: 0x0601AD71 RID: 109937 RVA: 0x003E430A File Offset: 0x003E250A
+		// Token: 0x0601B7FC RID: 112636 RVA: 0x003FF5CE File Offset: 0x003FD7CE
 		[NullableContext(1)]
 		public static TowerRecommendRole Create()
 		{
 			return new TowerRecommendRole();
 		}
 
-		// Token: 0x17005A85 RID: 23173
-		// (get) Token: 0x0601AD72 RID: 109938 RVA: 0x003E4311 File Offset: 0x003E2511
+		// Token: 0x17005D1A RID: 23834
+		// (get) Token: 0x0601B7FD RID: 112637 RVA: 0x003FF5D5 File Offset: 0x003FD7D5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<TowerRecommendRole> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005A86 RID: 23174
-		// (get) Token: 0x0601AD73 RID: 109939 RVA: 0x003E4318 File Offset: 0x003E2518
+		// Token: 0x17005D1B RID: 23835
+		// (get) Token: 0x0601B7FE RID: 112638 RVA: 0x003FF5DC File Offset: 0x003FD7DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005A87 RID: 23175
-		// (get) Token: 0x0601AD74 RID: 109940 RVA: 0x003E431B File Offset: 0x003E251B
+		// Token: 0x17005D1C RID: 23836
+		// (get) Token: 0x0601B7FF RID: 112639 RVA: 0x003FF5DF File Offset: 0x003FD7DF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601AD75 RID: 109941 RVA: 0x003E4322 File Offset: 0x003E2522
+		// Token: 0x0601B800 RID: 112640 RVA: 0x003FF5E6 File Offset: 0x003FD7E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TowerRecommendRole()
 		{
 		}
 
-		// Token: 0x0601AD76 RID: 109942 RVA: 0x003E432C File Offset: 0x003E252C
+		// Token: 0x0601B801 RID: 112641 RVA: 0x003FF5F0 File Offset: 0x003FD7F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TowerRecommendRole(TowerRecommendRole other) : this()
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601AD77 RID: 109943 RVA: 0x003E4380 File Offset: 0x003E2580
+		// Token: 0x0601B802 RID: 112642 RVA: 0x003FF644 File Offset: 0x003FD844
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TowerRecommendRole Clone()
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			return new TowerRecommendRole(this);
 		}
 
-		// Token: 0x17005A88 RID: 23176
-		// (get) Token: 0x0601AD78 RID: 109944 RVA: 0x003E4388 File Offset: 0x003E2588
-		// (set) Token: 0x0601AD79 RID: 109945 RVA: 0x003E4390 File Offset: 0x003E2590
+		// Token: 0x17005D1D RID: 23837
+		// (get) Token: 0x0601B803 RID: 112643 RVA: 0x003FF64C File Offset: 0x003FD84C
+		// (set) Token: 0x0601B804 RID: 112644 RVA: 0x003FF654 File Offset: 0x003FD854
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleId
@@ -97,9 +97,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005A89 RID: 23177
-		// (get) Token: 0x0601AD7A RID: 109946 RVA: 0x003E4399 File Offset: 0x003E2599
-		// (set) Token: 0x0601AD7B RID: 109947 RVA: 0x003E43A1 File Offset: 0x003E25A1
+		// Token: 0x17005D1E RID: 23838
+		// (get) Token: 0x0601B805 RID: 112645 RVA: 0x003FF65D File Offset: 0x003FD85D
+		// (set) Token: 0x0601B806 RID: 112646 RVA: 0x003FF665 File Offset: 0x003FD865
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LeaveSkillId
@@ -114,9 +114,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005A8A RID: 23178
-		// (get) Token: 0x0601AD7C RID: 109948 RVA: 0x003E43AA File Offset: 0x003E25AA
-		// (set) Token: 0x0601AD7D RID: 109949 RVA: 0x003E43B2 File Offset: 0x003E25B2
+		// Token: 0x17005D1F RID: 23839
+		// (get) Token: 0x0601B807 RID: 112647 RVA: 0x003FF66E File Offset: 0x003FD86E
+		// (set) Token: 0x0601B808 RID: 112648 RVA: 0x003FF676 File Offset: 0x003FD876
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Level
@@ -131,9 +131,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005A8B RID: 23179
-		// (get) Token: 0x0601AD7E RID: 109950 RVA: 0x003E43BB File Offset: 0x003E25BB
-		// (set) Token: 0x0601AD7F RID: 109951 RVA: 0x003E43C3 File Offset: 0x003E25C3
+		// Token: 0x17005D20 RID: 23840
+		// (get) Token: 0x0601B809 RID: 112649 RVA: 0x003FF67F File Offset: 0x003FD87F
+		// (set) Token: 0x0601B80A RID: 112650 RVA: 0x003FF687 File Offset: 0x003FD887
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SkillBranchId
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601AD80 RID: 109952 RVA: 0x003E43CC File Offset: 0x003E25CC
+		// Token: 0x0601B80B RID: 112651 RVA: 0x003FF690 File Offset: 0x003FD890
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -156,7 +156,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TowerRecommendRole);
 		}
 
-		// Token: 0x0601AD81 RID: 109953 RVA: 0x003E43DC File Offset: 0x003E25DC
+		// Token: 0x0601B80C RID: 112652 RVA: 0x003FF6A0 File Offset: 0x003FD8A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TowerRecommendRole other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.RoleId == other.RoleId && this.LeaveSkillId == other.LeaveSkillId && this.Level == other.Level && this.SkillBranchId == other.SkillBranchId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601AD82 RID: 109954 RVA: 0x003E4448 File Offset: 0x003E2648
+		// Token: 0x0601B80D RID: 112653 RVA: 0x003FF70C File Offset: 0x003FD90C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601AD83 RID: 109955 RVA: 0x003E44D2 File Offset: 0x003E26D2
+		// Token: 0x0601B80E RID: 112654 RVA: 0x003FF796 File Offset: 0x003FD996
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601AD84 RID: 109956 RVA: 0x003E44DF File Offset: 0x003E26DF
+		// Token: 0x0601B80F RID: 112655 RVA: 0x003FF7A3 File Offset: 0x003FD9A3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -209,7 +209,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601AD85 RID: 109957 RVA: 0x003E44E8 File Offset: 0x003E26E8
+		// Token: 0x0601B810 RID: 112656 RVA: 0x003FF7AC File Offset: 0x003FD9AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -240,7 +240,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601AD86 RID: 109958 RVA: 0x003E4578 File Offset: 0x003E2778
+		// Token: 0x0601B811 RID: 112657 RVA: 0x003FF83C File Offset: 0x003FDA3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -269,7 +269,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601AD87 RID: 109959 RVA: 0x003E4600 File Offset: 0x003E2800
+		// Token: 0x0601B812 RID: 112658 RVA: 0x003FF8C4 File Offset: 0x003FDAC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TowerRecommendRole other)
@@ -297,7 +297,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601AD88 RID: 109960 RVA: 0x003E4678 File Offset: 0x003E2878
+		// Token: 0x0601B813 RID: 112659 RVA: 0x003FF93C File Offset: 0x003FDB3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -305,7 +305,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601AD89 RID: 109961 RVA: 0x003E4684 File Offset: 0x003E2884
+		// Token: 0x0601B814 RID: 112660 RVA: 0x003FF948 File Offset: 0x003FDB48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -347,34 +347,34 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009BC2 RID: 39874
+		// Token: 0x0400A009 RID: 40969
 		private static readonly MessageParser<TowerRecommendRole> _parser = new MessageParser<TowerRecommendRole>(() => new TowerRecommendRole());
 
-		// Token: 0x04009BC3 RID: 39875
+		// Token: 0x0400A00A RID: 40970
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009BC4 RID: 39876
+		// Token: 0x0400A00B RID: 40971
 		public const int RoleIdFieldNumber = 1;
 
-		// Token: 0x04009BC5 RID: 39877
+		// Token: 0x0400A00C RID: 40972
 		private int roleId_;
 
-		// Token: 0x04009BC6 RID: 39878
+		// Token: 0x0400A00D RID: 40973
 		public const int LeaveSkillIdFieldNumber = 2;
 
-		// Token: 0x04009BC7 RID: 39879
+		// Token: 0x0400A00E RID: 40974
 		private int leaveSkillId_;
 
-		// Token: 0x04009BC8 RID: 39880
+		// Token: 0x0400A00F RID: 40975
 		public const int LevelFieldNumber = 3;
 
-		// Token: 0x04009BC9 RID: 39881
+		// Token: 0x0400A010 RID: 40976
 		private int level_;
 
-		// Token: 0x04009BCA RID: 39882
+		// Token: 0x0400A011 RID: 40977
 		public const int SkillBranchIdFieldNumber = 4;
 
-		// Token: 0x04009BCB RID: 39883
+		// Token: 0x0400A012 RID: 40978
 		private int skillBranchId_;
 	}
 }

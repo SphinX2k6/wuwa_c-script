@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053B9 RID: 21433
+	// Token: 0x0200593F RID: 22847
 	public enum IHookFetchMoveModeBase_Union : byte
 	{
-		// Token: 0x0400E5B9 RID: 58809
+		// Token: 0x0400F1E9 RID: 61929
 		NONE,
-		// Token: 0x0400E5BA RID: 58810
+		// Token: 0x0400F1EA RID: 61930
 		IHookFetchMoveModeBase,
-		// Token: 0x0400E5BB RID: 58811
+		// Token: 0x0400F1EB RID: 61931
 		IHookFetchMoveUniform
 	}
 }

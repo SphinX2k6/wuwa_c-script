@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009EB RID: 2539
+	// Token: 0x02000AC0 RID: 2752
 	public class ConfigTotalTopUpRotationByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003B96 RID: 15254 RVA: 0x001AAB83 File Offset: 0x001A8D83
+		// Token: 0x06004094 RID: 16532 RVA: 0x001C9F17 File Offset: 0x001C8117
 		static ConfigTotalTopUpRotationByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTotalTopUpRotationByActivityId.CreateStaticDefaultValue), new Action(ConfigTotalTopUpRotationByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003B97 RID: 15255 RVA: 0x001AABA4 File Offset: 0x001A8DA4
+		// Token: 0x06004095 RID: 16533 RVA: 0x001C9F38 File Offset: 0x001C8138
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTotalTopUpRotationByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003B98 RID: 15256 RVA: 0x001AAC23 File Offset: 0x001A8E23
+		// Token: 0x06004096 RID: 16534 RVA: 0x001C9FB7 File Offset: 0x001C81B7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTotalTopUpRotationByActivityId.LogPair = null;
 			ConfigTotalTopUpRotationByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06003B99 RID: 15257 RVA: 0x001AAC31 File Offset: 0x001A8E31
+		// Token: 0x06004097 RID: 16535 RVA: 0x001C9FC5 File Offset: 0x001C81C5
 		public static void Init()
 		{
 			ConfigTotalTopUpRotationByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigTotalTopUpRotationByActivityId.HandleId, "db_totaltopup.db", "select BinData from `TotalTopUpRotation` where ActivityId=?");
 		}
 
-		// Token: 0x06003B9A RID: 15258 RVA: 0x001AAC4C File Offset: 0x001A8E4C
+		// Token: 0x06004098 RID: 16536 RVA: 0x001C9FE0 File Offset: 0x001C81E0
 		[NullableContext(2)]
 		public static IReadOnlyList<TotalTopUpRotation> GetConfigList(int p0ActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04004553 RID: 17747
+		// Token: 0x04004B26 RID: 19238
 		private const string DB = "db_totaltopup.db";
 
-		// Token: 0x04004554 RID: 17748
+		// Token: 0x04004B27 RID: 19239
 		private const string FILE = "l.累充活动.xlsx";
 
-		// Token: 0x04004555 RID: 17749
+		// Token: 0x04004B28 RID: 19240
 		private const string TABLE = "TotalTopUpRotation";
 
-		// Token: 0x04004556 RID: 17750
+		// Token: 0x04004B29 RID: 19241
 		private const string COMMAND = "select BinData from `TotalTopUpRotation` where ActivityId=?";
 
-		// Token: 0x04004557 RID: 17751
+		// Token: 0x04004B2A RID: 19242
 		private const string KEY_PREFIX = "TotalTopUpRotationByActivityId";
 
-		// Token: 0x04004558 RID: 17752
+		// Token: 0x04004B2B RID: 19243
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004559 RID: 17753
+		// Token: 0x04004B2C RID: 19244
 		private static int HandleId;
 	}
 }

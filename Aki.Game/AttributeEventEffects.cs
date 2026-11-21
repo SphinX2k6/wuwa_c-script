@@ -5,17 +5,17 @@ using Aki.Protocol;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities;
 using UnrealEngine;
 
-// Token: 0x02002EF9 RID: 12025
+// Token: 0x0200244C RID: 9292
 [NullableContext(1)]
 [Nullable(0)]
 public class AttributeEventEffects : BuffEffect
 {
-	// Token: 0x06019AFC RID: 105212 RVA: 0x006AFA30 File Offset: 0x006ADC30
+	// Token: 0x06017407 RID: 95239 RVA: 0x006D5D24 File Offset: 0x006D3F24
 	public AttributeEventEffects(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019AFD RID: 105213 RVA: 0x006AFA60 File Offset: 0x006ADC60
+	// Token: 0x06017408 RID: 95240 RVA: 0x006D5D54 File Offset: 0x006D3F54
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -63,7 +63,7 @@ public class AttributeEventEffects : BuffEffect
 		this.TargetType = EPassiveEffectTargetType.ForSelf;
 	}
 
-	// Token: 0x06019AFE RID: 105214 RVA: 0x006AFB6C File Offset: 0x006ADD6C
+	// Token: 0x06017409 RID: 95241 RVA: 0x006D5E60 File Offset: 0x006D4060
 	public unsafe override void OnCreated()
 	{
 		Entity listenTarget = this.GetListenTarget();
@@ -135,7 +135,7 @@ public class AttributeEventEffects : BuffEffect
 		this.ListenAttributeComponent.AddListener(listenAttributeId, new Action<EAttributeType, float, float>(this.OnAttributeChanged), "ExtraEffectAttributeEvent");
 	}
 
-	// Token: 0x06019AFF RID: 105215 RVA: 0x006AFDA0 File Offset: 0x006ADFA0
+	// Token: 0x0601740A RID: 95242 RVA: 0x006D6094 File Offset: 0x006D4294
 	public override void OnRemoved(bool bPremature)
 	{
 		if (this.ListenAttributeComponent != null)
@@ -157,14 +157,14 @@ public class AttributeEventEffects : BuffEffect
 		}
 	}
 
-	// Token: 0x06019B00 RID: 105216 RVA: 0x006AFE6C File Offset: 0x006AE06C
+	// Token: 0x0601740B RID: 95243 RVA: 0x006D6160 File Offset: 0x006D4360
 	protected override bool CheckExecutable()
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
 		return ownerBuffComponent != null && ownerBuffComponent.HasBuffAuthority();
 	}
 
-	// Token: 0x06019B01 RID: 105217 RVA: 0x006AFE80 File Offset: 0x006AE080
+	// Token: 0x0601740C RID: 95244 RVA: 0x006D6174 File Offset: 0x006D4374
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
@@ -187,7 +187,7 @@ public class AttributeEventEffects : BuffEffect
 		return null;
 	}
 
-	// Token: 0x06019B02 RID: 105218 RVA: 0x006AFED0 File Offset: 0x006AE0D0
+	// Token: 0x0601740D RID: 95245 RVA: 0x006D61C4 File Offset: 0x006D43C4
 	[NullableContext(2)]
 	private Entity GetListenTarget()
 	{
@@ -204,7 +204,7 @@ public class AttributeEventEffects : BuffEffect
 		return instigatorEntity.Entity;
 	}
 
-	// Token: 0x06019B03 RID: 105219 RVA: 0x006AFF04 File Offset: 0x006AE104
+	// Token: 0x0601740E RID: 95246 RVA: 0x006D61F8 File Offset: 0x006D43F8
 	[NullableContext(2)]
 	protected IBuffComponent GetEffectTarget()
 	{
@@ -216,7 +216,7 @@ public class AttributeEventEffects : BuffEffect
 		return this.OwnerBuffComponent;
 	}
 
-	// Token: 0x06019B04 RID: 105220 RVA: 0x006AFF2C File Offset: 0x006AE12C
+	// Token: 0x0601740F RID: 95247 RVA: 0x006D6220 File Offset: 0x006D4420
 	private void ExecuteInactive()
 	{
 		switch (this.GoalType)
@@ -257,7 +257,7 @@ public class AttributeEventEffects : BuffEffect
 		}
 	}
 
-	// Token: 0x06019B05 RID: 105221 RVA: 0x006B0044 File Offset: 0x006AE244
+	// Token: 0x06017410 RID: 95248 RVA: 0x006D6338 File Offset: 0x006D4538
 	protected void ExecuteAddBuffs()
 	{
 		IBuffComponent effectTarget = this.GetEffectTarget();
@@ -292,7 +292,7 @@ public class AttributeEventEffects : BuffEffect
 		}
 	}
 
-	// Token: 0x06019B06 RID: 105222 RVA: 0x006B0170 File Offset: 0x006AE370
+	// Token: 0x06017411 RID: 95249 RVA: 0x006D6464 File Offset: 0x006D4664
 	protected void ExecuteAddBullet()
 	{
 		IBuffComponent effectTarget = this.GetEffectTarget();
@@ -320,7 +320,7 @@ public class AttributeEventEffects : BuffEffect
 		}
 	}
 
-	// Token: 0x06019B07 RID: 105223 RVA: 0x006B024C File Offset: 0x006AE44C
+	// Token: 0x06017412 RID: 95250 RVA: 0x006D6540 File Offset: 0x006D4740
 	protected void ExecuteAddOrRemoveTags(bool isAdd)
 	{
 		IBuffComponent effectTarget = this.GetEffectTarget();
@@ -351,7 +351,7 @@ public class AttributeEventEffects : BuffEffect
 		}
 	}
 
-	// Token: 0x06019B08 RID: 105224 RVA: 0x006B02F8 File Offset: 0x006AE4F8
+	// Token: 0x06017413 RID: 95251 RVA: 0x006D65EC File Offset: 0x006D47EC
 	private void OnAttributeChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		bool isActivated = this.IsActivated;
@@ -367,45 +367,45 @@ public class AttributeEventEffects : BuffEffect
 		}
 	}
 
-	// Token: 0x06019B09 RID: 105225 RVA: 0x006B0351 File Offset: 0x006AE551
+	// Token: 0x06017414 RID: 95252 RVA: 0x006D6645 File Offset: 0x006D4845
 	public override string GetDebugEffectString()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C0B9 RID: 49337
+	// Token: 0x0400C45A RID: 50266
 	public EPassiveEffectTargetType TargetType;
 
-	// Token: 0x0400C0BA RID: 49338
+	// Token: 0x0400C45B RID: 50267
 	public EPassiveEffectGoalType GoalType;
 
-	// Token: 0x0400C0BB RID: 49339
+	// Token: 0x0400C45C RID: 50268
 	public string[] Ids = Array.Empty<string>();
 
-	// Token: 0x0400C0BC RID: 49340
+	// Token: 0x0400C45D RID: 50269
 	[Nullable(2)]
 	public double[] Times;
 
-	// Token: 0x0400C0BD RID: 49341
+	// Token: 0x0400C45E RID: 50270
 	[Nullable(2)]
 	private AttributeIntervalCheck IntervalTrigger;
 
-	// Token: 0x0400C0BE RID: 49342
+	// Token: 0x0400C45F RID: 50271
 	[Nullable(2)]
 	private BaseAttributeComponent ListenAttributeComponent;
 
-	// Token: 0x0400C0BF RID: 49343
+	// Token: 0x0400C460 RID: 50272
 	private bool RemoveBuffAndTagIfOutOfBound;
 
-	// Token: 0x0400C0C0 RID: 49344
+	// Token: 0x0400C461 RID: 50273
 	private bool IsActivated;
 
-	// Token: 0x0400C0C1 RID: 49345
+	// Token: 0x0400C462 RID: 50274
 	private readonly Dictionary<int, int> AddedTagCounts = new Dictionary<int, int>();
 
-	// Token: 0x0400C0C2 RID: 49346
+	// Token: 0x0400C463 RID: 50275
 	private readonly List<int> TriggeredActiveHandles = new List<int>();
 
-	// Token: 0x0400C0C3 RID: 49347
+	// Token: 0x0400C464 RID: 50276
 	private EPassiveEffectTargetType ListenTargetType;
 }

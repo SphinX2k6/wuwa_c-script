@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AE5 RID: 10981
+	// Token: 0x02002DD9 RID: 11737
 	public class IResetPosType
 	{
-		// Token: 0x0600F0B2 RID: 61618 RVA: 0x0022F098 File Offset: 0x0022D298
-		[NullableContext(1)]
+		// Token: 0x0600FF68 RID: 65384 RVA: 0x0024CDA4 File Offset: 0x0024AFA4
 		public static IResetPosType Create(IResetPosType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CAA RID: 19626
-		// (get) Token: 0x0600F0B3 RID: 61619 RVA: 0x0022F0B7 File Offset: 0x0022D2B7
+		// Token: 0x17005064 RID: 20580
+		// (get) Token: 0x0600FF69 RID: 65385 RVA: 0x0024CDC3 File Offset: 0x0024AFC3
 		public virtual EResetPosType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400846D RID: 33901
+		// Token: 0x04008B71 RID: 35697
 		private IResetPosType Instance;
 	}
 }

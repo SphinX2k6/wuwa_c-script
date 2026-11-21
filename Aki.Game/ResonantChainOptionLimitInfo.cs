@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001C57 RID: 7255
+// Token: 0x02001116 RID: 4374
 [NullableContext(1)]
 [Nullable(0)]
 public class ResonantChainOptionLimitInfo
 {
-	// Token: 0x0600DAD4 RID: 56020 RVA: 0x0032D438 File Offset: 0x0032B638
+	// Token: 0x0600AEEA RID: 44778 RVA: 0x00338864 File Offset: 0x00336A64
 	public ResonantChainOptionLimitInfo(int limitNum, ResonantChainOptionalLimitResponse response)
 	{
 		this.LimitNum = limitNum;
@@ -18,9 +18,9 @@ public class ResonantChainOptionLimitInfo
 		}
 	}
 
-	// Token: 0x0400641C RID: 25628
+	// Token: 0x040064EE RID: 25838
 	public int LimitNum;
 
-	// Token: 0x0400641D RID: 25629
+	// Token: 0x040064EF RID: 25839
 	public List<ResonantChainOptionLimitItemInfo> ItemInfos = new List<ResonantChainOptionLimitItemInfo>();
 }

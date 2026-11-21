@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CC2 RID: 23746
+	// Token: 0x020062F3 RID: 25331
 	public static class TTeleCtrlTriggerConfigVerify
 	{
-		// Token: 0x06028A5C RID: 166492 RVA: 0x00595BD0 File Offset: 0x00593DD0
+		// Token: 0x0602B0A4 RID: 176292 RVA: 0x005DE344 File Offset: 0x005DC544
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

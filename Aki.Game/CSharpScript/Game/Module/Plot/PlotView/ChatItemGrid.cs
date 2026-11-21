@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005042 RID: 20546
+	// Token: 0x02004011 RID: 16401
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 	})]
 	internal class ChatItemGrid : GridProxyAbstract<ChatItemData>
 	{
-		// Token: 0x06034954 RID: 215380 RVA: 0x00C6AE28 File Offset: 0x00C69028
+		// Token: 0x06029830 RID: 170032 RVA: 0x00BB7EC8 File Offset: 0x00BB60C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034955 RID: 215381 RVA: 0x00C6AF15 File Offset: 0x00C69115
+		// Token: 0x06029831 RID: 170033 RVA: 0x00BB7FB5 File Offset: 0x00BB61B5
 		protected override void OnStart()
 		{
 			this.ViewSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06034956 RID: 215382 RVA: 0x00C6AF28 File Offset: 0x00C69128
+		// Token: 0x06029832 RID: 170034 RVA: 0x00BB7FC8 File Offset: 0x00BB61C8
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer viewSequencePlayer = this.ViewSequencePlayer;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ViewSequencePlayer = null;
 		}
 
-		// Token: 0x06034957 RID: 215383 RVA: 0x00C6AF44 File Offset: 0x00C69144
+		// Token: 0x06029833 RID: 170035 RVA: 0x00BB7FE4 File Offset: 0x00BB61E4
 		[NullableContext(1)]
 		public override void Refresh(ChatItemData data, bool isSelected, int gridIndex)
 		{
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.RefreshItemModes(data.DisplayMode);
 		}
 
-		// Token: 0x06034958 RID: 215384 RVA: 0x00C6AFF4 File Offset: 0x00C691F4
+		// Token: 0x06029834 RID: 170036 RVA: 0x00BB8094 File Offset: 0x00BB6294
 		private void RefreshItemModes(ChatItemDisplayMode? mode)
 		{
 			ChatItemDisplayMode? chatItemDisplayMode = mode;
@@ -142,29 +142,29 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x0401C060 RID: 114784
+		// Token: 0x04016A83 RID: 92803
 		[Nullable(2)]
 		private LevelSequencePlayer ViewSequencePlayer;
 
-		// Token: 0x0200B194 RID: 45460
+		// Token: 0x02009BCE RID: 39886
 		private static class EChatComponents
 		{
-			// Token: 0x04035DBA RID: 220602
+			// Token: 0x0403080F RID: 198671
 			public const int ChatItem = 0;
 
-			// Token: 0x04035DBB RID: 220603
+			// Token: 0x04030810 RID: 198672
 			public const int RoleTexture = 1;
 
-			// Token: 0x04035DBC RID: 220604
+			// Token: 0x04030811 RID: 198673
 			public const int NameText = 2;
 
-			// Token: 0x04035DBD RID: 220605
+			// Token: 0x04030812 RID: 198674
 			public const int ContentText = 3;
 
-			// Token: 0x04035DBE RID: 220606
+			// Token: 0x04030813 RID: 198675
 			public const int HeadGreyItem = 4;
 
-			// Token: 0x04035DBF RID: 220607
+			// Token: 0x04030814 RID: 198676
 			public const int ContentGreyItem = 5;
 		}
 	}

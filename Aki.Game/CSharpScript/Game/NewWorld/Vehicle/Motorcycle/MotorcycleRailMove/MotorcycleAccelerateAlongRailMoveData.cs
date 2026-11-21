@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 {
-	// Token: 0x02007031 RID: 28721
+	// Token: 0x020061B2 RID: 25010
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleAccelerateAlongRailMoveData : MotorcycleRailMoveDataBase
 	{
-		// Token: 0x06045EC0 RID: 286400 RVA: 0x01167BAC File Offset: 0x01165DAC
+		// Token: 0x0603C0A2 RID: 245922 RVA: 0x011119F8 File Offset: 0x0110FBF8
 		public MotorcycleAccelerateAlongRailMoveData(Entity owner, [Nullable(2)] MotorcycleRailComponent relatedRail) : base(EMotorcycleRailMoveDataType.AccelerateAlongRail, owner, relatedRail)
 		{
 		}
 
-		// Token: 0x17009BD7 RID: 39895
-		// (get) Token: 0x06045EC1 RID: 286401 RVA: 0x01167C3E File Offset: 0x01165E3E
+		// Token: 0x17007144 RID: 28996
+		// (get) Token: 0x0603C0A3 RID: 245923 RVA: 0x01111A8A File Offset: 0x0110FC8A
 		private LinearMoveConfig LinearMoveConfig
 		{
 			get
@@ -27,8 +27,8 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x17009BD8 RID: 39896
-		// (get) Token: 0x06045EC2 RID: 286402 RVA: 0x01167C50 File Offset: 0x01165E50
+		// Token: 0x17007145 RID: 28997
+		// (get) Token: 0x0603C0A4 RID: 245924 RVA: 0x01111A9C File Offset: 0x0110FC9C
 		private CommonConfig CommonConfig
 		{
 			get
@@ -37,8 +37,8 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x17009BD9 RID: 39897
-		// (get) Token: 0x06045EC3 RID: 286403 RVA: 0x01167C62 File Offset: 0x01165E62
+		// Token: 0x17007146 RID: 28998
+		// (get) Token: 0x0603C0A5 RID: 245925 RVA: 0x01111AAE File Offset: 0x0110FCAE
 		private BasicRailMoveConfig BasicRailMoveConfig
 		{
 			get
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045EC4 RID: 286404 RVA: 0x01167C6F File Offset: 0x01165E6F
+		// Token: 0x0603C0A6 RID: 245926 RVA: 0x01111ABB File Offset: 0x0110FCBB
 		public override void OnTick(float deltaSeconds)
 		{
 			this.TickUpdateMove(deltaSeconds);
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.UpdateIsFinishMove();
 		}
 
-		// Token: 0x06045EC5 RID: 286405 RVA: 0x01167C8C File Offset: 0x01165E8C
+		// Token: 0x0603C0A7 RID: 245927 RVA: 0x01111AD8 File Offset: 0x0110FCD8
 		[NullableContext(2)]
 		public unsafe override bool OnEnter(MotorcycleRailMoveDataBase lastRailMoveData)
 		{
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return true;
 		}
 
-		// Token: 0x06045EC6 RID: 286406 RVA: 0x0116813C File Offset: 0x0116633C
+		// Token: 0x0603C0A8 RID: 245928 RVA: 0x01111F88 File Offset: 0x01110188
 		public override void OnExit()
 		{
 			BaseTagComponent component = this.OwnerEntity.GetComponent<BaseTagComponent>();
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045EC7 RID: 286407 RVA: 0x011681E4 File Offset: 0x011663E4
+		// Token: 0x0603C0A9 RID: 245929 RVA: 0x01112030 File Offset: 0x01110230
 		public override bool GetVelocity(Vector outVelocity)
 		{
 			if (this.Spline != null)
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return base.GetVelocity(outVelocity);
 		}
 
-		// Token: 0x06045EC8 RID: 286408 RVA: 0x01168268 File Offset: 0x01166468
+		// Token: 0x0603C0AA RID: 245930 RVA: 0x011120B4 File Offset: 0x011102B4
 		public void TickUpdateMove(float deltaSeconds)
 		{
 			if (this.Spline == null)
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.UpdateCurrentSegmentPointIndex();
 		}
 
-		// Token: 0x06045EC9 RID: 286409 RVA: 0x011685D0 File Offset: 0x011667D0
+		// Token: 0x0603C0AB RID: 245931 RVA: 0x0111241C File Offset: 0x0111061C
 		private void ApplyMove()
 		{
 			if (this.CommonConfig.EnableBlockingCheck && this.IsBlocked)
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			moveUpdater(this.CurrentLocation, this.CurrentRotator, velocity ? tmpVector : null, this.CommonConfig.EnableBlockingCheck);
 		}
 
-		// Token: 0x06045ECA RID: 286410 RVA: 0x01168630 File Offset: 0x01166830
+		// Token: 0x0603C0AC RID: 245932 RVA: 0x0111247C File Offset: 0x0111067C
 		private unsafe void UpdateIsFinishMove()
 		{
 			if (this.CommonConfig.EnableBlockingCheck && this.IsBlocked && this.BlockingTime > this.CommonConfig.MaxBlockingTimeOut)
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.IsFinishMove = (this.CurrentDistAlongSpline <= 0f);
 		}
 
-		// Token: 0x06045ECB RID: 286411 RVA: 0x01168724 File Offset: 0x01166924
+		// Token: 0x0603C0AD RID: 245933 RVA: 0x01112570 File Offset: 0x01110770
 		private void UpdateIsBlocked(float deltaSeconds)
 		{
 			if (!this.CommonConfig.EnableBlockingCheck)
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.BlockingTime = 0f;
 		}
 
-		// Token: 0x06045ECC RID: 286412 RVA: 0x011687F8 File Offset: 0x011669F8
+		// Token: 0x0603C0AE RID: 245934 RVA: 0x01112644 File Offset: 0x01110844
 		private void UpdateCurrentSegmentPointIndex()
 		{
 			int? num = this.IsFinishMove ? this.GetCurrentSegmentPointIndex() : new int?(-1);
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045ECD RID: 286413 RVA: 0x01168918 File Offset: 0x01166B18
+		// Token: 0x0603C0AF RID: 245935 RVA: 0x01112764 File Offset: 0x01110964
 		private void OnEnterSegment(int pointIndex)
 		{
 			if (pointIndex == -1)
@@ -455,7 +455,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045ECE RID: 286414 RVA: 0x01168974 File Offset: 0x01166B74
+		// Token: 0x0603C0B0 RID: 245936 RVA: 0x011127C0 File Offset: 0x011109C0
 		private void OnLeaveSegment(int pointIndex)
 		{
 			if (pointIndex == -1)
@@ -480,7 +480,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045ECF RID: 286415 RVA: 0x011689D0 File Offset: 0x01166BD0
+		// Token: 0x0603C0B1 RID: 245937 RVA: 0x0111281C File Offset: 0x01110A1C
 		[NullableContext(2)]
 		public IMotorSlideSplinePoint GetCurrentSegmentPointOption()
 		{
@@ -493,7 +493,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return this.SplinePointOptions[nearestPositionIndexAtInputKey];
 		}
 
-		// Token: 0x06045ED0 RID: 286416 RVA: 0x01168A14 File Offset: 0x01166C14
+		// Token: 0x0603C0B2 RID: 245938 RVA: 0x01112860 File Offset: 0x01110A60
 		public int? GetCurrentSegmentPointIndex()
 		{
 			if (this.Spline == null)
@@ -504,76 +504,76 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return new int?(this.Spline.GetNearestPositionIndexAtInputKey(inputKeyAtDistanceAlongSpline));
 		}
 
-		// Token: 0x06045ED1 RID: 286417 RVA: 0x01168A56 File Offset: 0x01166C56
+		// Token: 0x0603C0B3 RID: 245939 RVA: 0x011128A2 File Offset: 0x01110AA2
 		public bool GetIsMoveAlongSplineForward()
 		{
 			return this.IsMoveAlongSplineForward;
 		}
 
-		// Token: 0x04024908 RID: 149768
+		// Token: 0x0401FBBE RID: 129982
 		public readonly MotorcycleRailMoveConfig MoveConfig = new MotorcycleRailMoveConfig();
 
-		// Token: 0x04024909 RID: 149769
+		// Token: 0x0401FBBF RID: 129983
 		[Nullable(2)]
 		public SplineCurve Spline;
 
-		// Token: 0x0402490A RID: 149770
+		// Token: 0x0401FBC0 RID: 129984
 		public List<IMotorSlideSplinePoint> SplinePointOptions = new List<IMotorSlideSplinePoint>();
 
-		// Token: 0x0402490B RID: 149771
+		// Token: 0x0401FBC1 RID: 129985
 		[Nullable(2)]
 		public TRailMoveUpdater MoveUpdater;
 
-		// Token: 0x0402490C RID: 149772
+		// Token: 0x0401FBC2 RID: 129986
 		[Nullable(2)]
 		public TRailMoveGetter MoveGetter;
 
-		// Token: 0x0402490D RID: 149773
+		// Token: 0x0401FBC3 RID: 129987
 		private float CurrentSpeed;
 
-		// Token: 0x0402490E RID: 149774
+		// Token: 0x0401FBC4 RID: 129988
 		private float TargetSpeed;
 
-		// Token: 0x0402490F RID: 149775
+		// Token: 0x0401FBC5 RID: 129989
 		private float Acceleration;
 
-		// Token: 0x04024910 RID: 149776
+		// Token: 0x0401FBC6 RID: 129990
 		private float CurrentDistAlongSpline;
 
-		// Token: 0x04024911 RID: 149777
+		// Token: 0x0401FBC7 RID: 129991
 		private bool IsMoveAlongSplineForward = true;
 
-		// Token: 0x04024912 RID: 149778
+		// Token: 0x0401FBC8 RID: 129992
 		private readonly Vector CurrentLocation = Vector.Create();
 
-		// Token: 0x04024913 RID: 149779
+		// Token: 0x0401FBC9 RID: 129993
 		private readonly Rotator CurrentRotator = Rotator.Create();
 
-		// Token: 0x04024914 RID: 149780
+		// Token: 0x0401FBCA RID: 129994
 		private readonly Vector TmpVector1 = Vector.Create();
 
-		// Token: 0x04024915 RID: 149781
+		// Token: 0x0401FBCB RID: 129995
 		private readonly Vector TmpVector2 = Vector.Create();
 
-		// Token: 0x04024916 RID: 149782
+		// Token: 0x0401FBCC RID: 129996
 		private readonly Vector TmpVector3 = Vector.Create();
 
-		// Token: 0x04024917 RID: 149783
+		// Token: 0x0401FBCD RID: 129997
 		private readonly Vector TmpVector4 = Vector.Create();
 
-		// Token: 0x04024918 RID: 149784
+		// Token: 0x0401FBCE RID: 129998
 		private readonly Vector TmpVector5 = Vector.Create();
 
-		// Token: 0x04024919 RID: 149785
+		// Token: 0x0401FBCF RID: 129999
 		private readonly Transform TmpTransform1 = Transform.Create();
 
-		// Token: 0x0402491A RID: 149786
+		// Token: 0x0401FBD0 RID: 130000
 		private bool IsBlocked;
 
-		// Token: 0x0402491B RID: 149787
+		// Token: 0x0401FBD1 RID: 130001
 		private float BlockingTime;
 
-		// Token: 0x0402491C RID: 149788
+		// Token: 0x0401FBD2 RID: 130002
 		private int CurrentSegmentPointIndex = -1;
 	}
 }

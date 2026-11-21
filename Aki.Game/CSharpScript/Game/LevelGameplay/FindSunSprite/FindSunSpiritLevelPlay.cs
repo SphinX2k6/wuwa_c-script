@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.FindSunSprite
 {
-	// Token: 0x02006E4C RID: 28236
+	// Token: 0x02005FCD RID: 24525
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FindSunSpiritLevelPlay
 	{
-		// Token: 0x04023CDF RID: 146655
+		// Token: 0x0401EF94 RID: 126868
 		public int CurrentStep;
 
-		// Token: 0x04023CE0 RID: 146656
+		// Token: 0x0401EF95 RID: 126869
 		public int SelectedModifierIndex;
 
-		// Token: 0x04023CE1 RID: 146657
+		// Token: 0x0401EF96 RID: 126870
 		public List<FindSunSpiritGrid> GridList = new List<FindSunSpiritGrid>();
 
-		// Token: 0x04023CE2 RID: 146658
+		// Token: 0x0401EF97 RID: 126871
 		public HashSet<int> SunSpiritIndexSet = new HashSet<int>();
 
-		// Token: 0x04023CE3 RID: 146659
+		// Token: 0x0401EF98 RID: 126872
 		public int SunSpiritNum;
 	}
 }

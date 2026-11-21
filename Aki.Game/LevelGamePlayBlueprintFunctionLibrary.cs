@@ -11,12 +11,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02000EE1 RID: 3809
+// Token: 0x02000396 RID: 918
 [UClass("/Game/Aki/TypeScript/Game/LevelGamePlay/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/LevelGamePlay/LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C")]
 public class LevelGamePlayBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06005F16 RID: 24342 RVA: 0x0011CB42 File Offset: 0x0011AD42
+	// Token: 0x060032AC RID: 12972 RVA: 0x00124892 File Offset: 0x00122A92
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool ApplyScanEffect(AActor inActor, int type)
@@ -24,14 +24,14 @@ public class LevelGamePlayBlueprintFunctionLibrary : UBlueprintFunctionLibrary, 
 		return LevelGamePlayController.Instance.HandleScanResponse(inActor, type);
 	}
 
-	// Token: 0x06005F17 RID: 24343 RVA: 0x0011CB50 File Offset: 0x0011AD50
+	// Token: 0x060032AD RID: 12973 RVA: 0x001248A0 File Offset: 0x00122AA0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ClearAllScanEffects()
 	{
 		LevelGamePlayController.Instance.HandleClearAllScanEffect();
 	}
 
-	// Token: 0x06005F18 RID: 24344 RVA: 0x0011CB5C File Offset: 0x0011AD5C
+	// Token: 0x060032AE RID: 12974 RVA: 0x001248AC File Offset: 0x00122AAC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SceneInteractionBind(AActor actor, string seqName, string eventName)
@@ -39,7 +39,7 @@ public class LevelGamePlayBlueprintFunctionLibrary : UBlueprintFunctionLibrary, 
 		SceneInteractionManager.Get().EmitActor(actor, seqName, eventName);
 	}
 
-	// Token: 0x06005F19 RID: 24345 RVA: 0x0011CB6B File Offset: 0x0011AD6B
+	// Token: 0x060032AF RID: 12975 RVA: 0x001248BB File Offset: 0x00122ABB
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetScanMaxDistance()
 	{
@@ -51,7 +51,7 @@ public class LevelGamePlayBlueprintFunctionLibrary : UBlueprintFunctionLibrary, 
 		return instance.ScanMaxDistance;
 	}
 
-	// Token: 0x06005F1A RID: 24346 RVA: 0x0011CB7D File Offset: 0x0011AD7D
+	// Token: 0x060032B0 RID: 12976 RVA: 0x001248CD File Offset: 0x00122ACD
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetScanInteractionEffectMaxDistance()
 	{
@@ -63,7 +63,7 @@ public class LevelGamePlayBlueprintFunctionLibrary : UBlueprintFunctionLibrary, 
 		return instance.ScanShowInteractionEffectMaxDistance;
 	}
 
-	// Token: 0x06005F1B RID: 24347 RVA: 0x0011CB90 File Offset: 0x0011AD90
+	// Token: 0x060032B1 RID: 12977 RVA: 0x001248E0 File Offset: 0x00122AE0
 	[NullableContext(1)]
 	private static FKuroGeometryGeneralPolygonList GetPolygonListFromSplines(TArray<USplineComponent> splines)
 	{
@@ -84,7 +84,7 @@ public class LevelGamePlayBlueprintFunctionLibrary : UBlueprintFunctionLibrary, 
 		return UKuroPolygonListLibrary.CreatePolygonListFromSimplePolygons(tarray);
 	}
 
-	// Token: 0x06005F1C RID: 24348 RVA: 0x0011CBF4 File Offset: 0x0011ADF4
+	// Token: 0x060032B2 RID: 12978 RVA: 0x00124944 File Offset: 0x00122B44
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static FKuroGeometryGeneralPolygonList PolygonsOpenPathsDifferenceViaSplines(ref TArray<USplineComponent> subjects, ref TArray<USplineComponent> openPaths, float strokeWidth, EJoinType joinType, EEndType endType)
@@ -94,7 +94,7 @@ public class LevelGamePlayBlueprintFunctionLibrary : UBlueprintFunctionLibrary, 
 		return UKuroPolygonListLibrary.PolygonsOpenPathsDifference(polygonListFromSplines, polygonListFromSplines2, (double)strokeWidth, joinType, endType);
 	}
 
-	// Token: 0x06005F1D RID: 24349 RVA: 0x0011CC1B File Offset: 0x0011AE1B
+	// Token: 0x060032B3 RID: 12979 RVA: 0x0012496B File Offset: 0x00122B6B
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static FKuroGeometryGeneralPolygonList DifferenceSelectedActorsSplines()
@@ -102,21 +102,21 @@ public class LevelGamePlayBlueprintFunctionLibrary : UBlueprintFunctionLibrary, 
 		return new FKuroGeometryGeneralPolygonList();
 	}
 
-	// Token: 0x06005F1E RID: 24350 RVA: 0x0011CC22 File Offset: 0x0011AE22
+	// Token: 0x060032B4 RID: 12980 RVA: 0x00124972 File Offset: 0x00122B72
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool UseNewScanSystem()
 	{
 		return LevelGamePlayController.Instance.UseNewScanSystem;
 	}
 
-	// Token: 0x06005F1F RID: 24351 RVA: 0x0011CC2E File Offset: 0x0011AE2E
+	// Token: 0x060032B5 RID: 12981 RVA: 0x0012497E File Offset: 0x00122B7E
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void StartScan()
 	{
 		ScanController.Instance.StartScan();
 	}
 
-	// Token: 0x06005F20 RID: 24352 RVA: 0x0011CC3A File Offset: 0x0011AE3A
+	// Token: 0x060032B6 RID: 12982 RVA: 0x0012498A File Offset: 0x00122B8A
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LevelGamePlayBlueprintFunctionLibrary._ClassPtr == IntPtr.Zero)
@@ -126,36 +126,36 @@ public class LevelGamePlayBlueprintFunctionLibrary : UBlueprintFunctionLibrary, 
 		return LevelGamePlayBlueprintFunctionLibrary._ClassPtr;
 	}
 
-	// Token: 0x06005F21 RID: 24353 RVA: 0x0011CC60 File Offset: 0x0011AE60
+	// Token: 0x060032B7 RID: 12983 RVA: 0x001249B0 File Offset: 0x00122BB0
 	public LevelGamePlayBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(LevelGamePlayBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06005F22 RID: 24354 RVA: 0x0011CC88 File Offset: 0x0011AE88
+	// Token: 0x060032B8 RID: 12984 RVA: 0x001249D8 File Offset: 0x00122BD8
 	[NullableContext(1)]
 	public LevelGamePlayBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LevelGamePlayBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06005F23 RID: 24355 RVA: 0x0011CCBB File Offset: 0x0011AEBB
+	// Token: 0x060032B9 RID: 12985 RVA: 0x00124A0B File Offset: 0x00122C0B
 	protected LevelGamePlayBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06005F24 RID: 24356 RVA: 0x0011CCC4 File Offset: 0x0011AEC4
+	// Token: 0x060032BA RID: 12986 RVA: 0x00124A14 File Offset: 0x00122C14
 	protected unsafe static void __CPPCALL_ApplyScanEffect_Implementation(LevelGamePlayBlueprintFunctionLibrary.__ApplyScanEffect_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->inActor);
 		__Params->__Result = LevelGamePlayBlueprintFunctionLibrary.ApplyScanEffect(orCreateUObjectByNativePointer, __Params->type);
 	}
 
-	// Token: 0x06005F25 RID: 24357 RVA: 0x0011CCEF File Offset: 0x0011AEEF
+	// Token: 0x060032BB RID: 12987 RVA: 0x00124A3F File Offset: 0x00122C3F
 	protected unsafe static void __CPPCALL_ClearAllScanEffects_Implementation(LevelGamePlayBlueprintFunctionLibrary.__ClearAllScanEffects_FunctionParams* __Params)
 	{
 		LevelGamePlayBlueprintFunctionLibrary.ClearAllScanEffects();
 	}
 
-	// Token: 0x06005F26 RID: 24358 RVA: 0x0011CCF8 File Offset: 0x0011AEF8
+	// Token: 0x060032BC RID: 12988 RVA: 0x00124A48 File Offset: 0x00122C48
 	protected unsafe static void __CPPCALL_SceneInteractionBind_Implementation(LevelGamePlayBlueprintFunctionLibrary.__SceneInteractionBind_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->actor);
@@ -164,19 +164,19 @@ public class LevelGamePlayBlueprintFunctionLibrary : UBlueprintFunctionLibrary, 
 		LevelGamePlayBlueprintFunctionLibrary.SceneInteractionBind(orCreateUObjectByNativePointer, seqName, eventName);
 	}
 
-	// Token: 0x06005F27 RID: 24359 RVA: 0x0011CD31 File Offset: 0x0011AF31
+	// Token: 0x060032BD RID: 12989 RVA: 0x00124A81 File Offset: 0x00122C81
 	protected unsafe static void __CPPCALL_GetScanMaxDistance_Implementation(LevelGamePlayBlueprintFunctionLibrary.__GetScanMaxDistance_FunctionParams* __Params)
 	{
 		__Params->__Result = LevelGamePlayBlueprintFunctionLibrary.GetScanMaxDistance();
 	}
 
-	// Token: 0x06005F28 RID: 24360 RVA: 0x0011CD3E File Offset: 0x0011AF3E
+	// Token: 0x060032BE RID: 12990 RVA: 0x00124A8E File Offset: 0x00122C8E
 	protected unsafe static void __CPPCALL_GetScanInteractionEffectMaxDistance_Implementation(LevelGamePlayBlueprintFunctionLibrary.__GetScanInteractionEffectMaxDistance_FunctionParams* __Params)
 	{
 		__Params->__Result = LevelGamePlayBlueprintFunctionLibrary.GetScanInteractionEffectMaxDistance();
 	}
 
-	// Token: 0x06005F29 RID: 24361 RVA: 0x0011CD4C File Offset: 0x0011AF4C
+	// Token: 0x060032BF RID: 12991 RVA: 0x00124A9C File Offset: 0x00122C9C
 	protected unsafe static void __CPPCALL_PolygonsOpenPathsDifferenceViaSplines_Implementation(LevelGamePlayBlueprintFunctionLibrary.__PolygonsOpenPathsDifferenceViaSplines_FunctionParams* __Params)
 	{
 		TArray<USplineComponent> tarray = new TArray<USplineComponent>(&__Params->subjects, true, true);
@@ -197,7 +197,7 @@ public class LevelGamePlayBlueprintFunctionLibrary : UBlueprintFunctionLibrary, 
 		}
 	}
 
-	// Token: 0x06005F2A RID: 24362 RVA: 0x0011CDEA File Offset: 0x0011AFEA
+	// Token: 0x060032C0 RID: 12992 RVA: 0x00124B3A File Offset: 0x00122D3A
 	protected unsafe static void __CPPCALL_DifferenceSelectedActorsSplines_Implementation(LevelGamePlayBlueprintFunctionLibrary.__DifferenceSelectedActorsSplines_FunctionParams* __Params)
 	{
 		UScriptStructStackOnlyPtr nativeUStructPtr = FKuroGeometryGeneralPolygonList.StaticStruct();
@@ -206,178 +206,178 @@ public class LevelGamePlayBlueprintFunctionLibrary : UBlueprintFunctionLibrary, 
 		UnrealReflectionUtils.CopyNativeStruct(nativeUStructPtr, dest, (fkuroGeometryGeneralPolygonList != null) ? fkuroGeometryGeneralPolygonList.NativePtr : ((IntPtr)0), 1, false);
 	}
 
-	// Token: 0x06005F2B RID: 24363 RVA: 0x0011CE11 File Offset: 0x0011B011
+	// Token: 0x060032C1 RID: 12993 RVA: 0x00124B61 File Offset: 0x00122D61
 	protected unsafe static void __CPPCALL_UseNewScanSystem_Implementation(LevelGamePlayBlueprintFunctionLibrary.__UseNewScanSystem_FunctionParams* __Params)
 	{
 		__Params->__Result = LevelGamePlayBlueprintFunctionLibrary.UseNewScanSystem();
 	}
 
-	// Token: 0x06005F2C RID: 24364 RVA: 0x0011CE1E File Offset: 0x0011B01E
+	// Token: 0x060032C2 RID: 12994 RVA: 0x00124B6E File Offset: 0x00122D6E
 	protected unsafe static void __CPPCALL_StartScan_Implementation(LevelGamePlayBlueprintFunctionLibrary.__StartScan_FunctionParams* __Params)
 	{
 		LevelGamePlayBlueprintFunctionLibrary.StartScan();
 	}
 
-	// Token: 0x04002B32 RID: 11058
+	// Token: 0x04002BCC RID: 11212
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/LevelGamePlay/LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C";
 
-	// Token: 0x04002B33 RID: 11059
+	// Token: 0x04002BCD RID: 11213
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04002B34 RID: 11060
+	// Token: 0x04002BCE RID: 11214
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x02007530 RID: 30000
+	// Token: 0x020066C4 RID: 26308
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __ApplyScanEffect_FunctionParams
 	{
-		// Token: 0x04026C45 RID: 158789
+		// Token: 0x04021F90 RID: 139152
 		[FieldOffset(0)]
 		public IntPtr inActor;
 
-		// Token: 0x04026C46 RID: 158790
+		// Token: 0x04021F91 RID: 139153
 		[FieldOffset(8)]
 		public int type;
 
-		// Token: 0x04026C47 RID: 158791
+		// Token: 0x04021F92 RID: 139154
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04026C48 RID: 158792
+		// Token: 0x04021F93 RID: 139155
 		[FieldOffset(24)]
 		public bool __Result;
 	}
 
-	// Token: 0x02007531 RID: 30001
+	// Token: 0x020066C5 RID: 26309
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __ClearAllScanEffects_FunctionParams
 	{
-		// Token: 0x04026C49 RID: 158793
+		// Token: 0x04021F94 RID: 139156
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007532 RID: 30002
+	// Token: 0x020066C6 RID: 26310
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SceneInteractionBind_FunctionParams
 	{
-		// Token: 0x04026C4A RID: 158794
+		// Token: 0x04021F95 RID: 139157
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x04026C4B RID: 158795
+		// Token: 0x04021F96 RID: 139158
 		[FieldOffset(8)]
 		public FString seqName;
 
-		// Token: 0x04026C4C RID: 158796
+		// Token: 0x04021F97 RID: 139159
 		[FieldOffset(24)]
 		public FString eventName;
 
-		// Token: 0x04026C4D RID: 158797
+		// Token: 0x04021F98 RID: 139160
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007533 RID: 30003
+	// Token: 0x020066C7 RID: 26311
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetScanMaxDistance_FunctionParams
 	{
-		// Token: 0x04026C4E RID: 158798
+		// Token: 0x04021F99 RID: 139161
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04026C4F RID: 158799
+		// Token: 0x04021F9A RID: 139162
 		[FieldOffset(8)]
 		public int __Result;
 	}
 
-	// Token: 0x02007534 RID: 30004
+	// Token: 0x020066C8 RID: 26312
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetScanInteractionEffectMaxDistance_FunctionParams
 	{
-		// Token: 0x04026C50 RID: 158800
+		// Token: 0x04021F9B RID: 139163
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04026C51 RID: 158801
+		// Token: 0x04021F9C RID: 139164
 		[FieldOffset(8)]
 		public int __Result;
 	}
 
-	// Token: 0x02007535 RID: 30005
+	// Token: 0x020066C9 RID: 26313
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 64)]
 	protected ref struct __PolygonsOpenPathsDifferenceViaSplines_FunctionParams
 	{
-		// Token: 0x04026C52 RID: 158802
+		// Token: 0x04021F9D RID: 139165
 		[FieldOffset(0)]
 		public byte subjects;
 
-		// Token: 0x04026C53 RID: 158803
+		// Token: 0x04021F9E RID: 139166
 		[FieldOffset(16)]
 		public byte openPaths;
 
-		// Token: 0x04026C54 RID: 158804
+		// Token: 0x04021F9F RID: 139167
 		[FieldOffset(32)]
 		public float strokeWidth;
 
-		// Token: 0x04026C55 RID: 158805
+		// Token: 0x04021FA0 RID: 139168
 		[FieldOffset(36)]
 		public byte joinType;
 
-		// Token: 0x04026C56 RID: 158806
+		// Token: 0x04021FA1 RID: 139169
 		[FieldOffset(37)]
 		public byte endType;
 
-		// Token: 0x04026C57 RID: 158807
+		// Token: 0x04021FA2 RID: 139170
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04026C58 RID: 158808
+		// Token: 0x04021FA3 RID: 139171
 		[FieldOffset(48)]
 		public byte __Result;
 	}
 
-	// Token: 0x02007536 RID: 30006
+	// Token: 0x020066CA RID: 26314
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __DifferenceSelectedActorsSplines_FunctionParams
 	{
-		// Token: 0x04026C59 RID: 158809
+		// Token: 0x04021FA4 RID: 139172
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04026C5A RID: 158810
+		// Token: 0x04021FA5 RID: 139173
 		[FieldOffset(8)]
 		public byte __Result;
 	}
 
-	// Token: 0x02007537 RID: 30007
+	// Token: 0x020066CB RID: 26315
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __UseNewScanSystem_FunctionParams
 	{
-		// Token: 0x04026C5B RID: 158811
+		// Token: 0x04021FA6 RID: 139174
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04026C5C RID: 158812
+		// Token: 0x04021FA7 RID: 139175
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02007538 RID: 30008
+	// Token: 0x020066CC RID: 26316
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __StartScan_FunctionParams
 	{
-		// Token: 0x04026C5D RID: 158813
+		// Token: 0x04021FA8 RID: 139176
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}

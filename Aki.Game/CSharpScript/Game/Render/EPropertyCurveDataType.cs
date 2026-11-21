@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045A7 RID: 17831
+	// Token: 0x020034CF RID: 13519
 	public enum EPropertyCurveDataType
 	{
-		// Token: 0x040188BA RID: 100538
+		// Token: 0x04012EF5 RID: 77557
 		Float,
-		// Token: 0x040188BB RID: 100539
+		// Token: 0x04012EF6 RID: 77558
 		Color
 	}
 }

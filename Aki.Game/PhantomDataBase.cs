@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,48 +7,48 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 using Google.Protobuf.Collections;
 
-// Token: 0x020023F7 RID: 9207
+// Token: 0x020018DC RID: 6364
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class PhantomDataBase
 {
-	// Token: 0x06012647 RID: 75335 RVA: 0x00488B6A File Offset: 0x00486D6A
+	// Token: 0x0600FAF9 RID: 64249 RVA: 0x00496072 File Offset: 0x00494272
 	public void SetPhantomLevel(int level)
 	{
 		this.PhantomLevel = level;
 	}
 
-	// Token: 0x06012648 RID: 75336 RVA: 0x00488B73 File Offset: 0x00486D73
+	// Token: 0x0600FAFA RID: 64250 RVA: 0x0049607B File Offset: 0x0049427B
 	public static int GenerateLocalUniqueId(int roleId, int slotIndex)
 	{
 		return -1 * (roleId * 10) - slotIndex;
 	}
 
-	// Token: 0x06012649 RID: 75337 RVA: 0x00488B7D File Offset: 0x00486D7D
+	// Token: 0x0600FAFB RID: 64251 RVA: 0x00496085 File Offset: 0x00494285
 	public void SetIncId(int id)
 	{
 		this.IncrId = id;
 	}
 
-	// Token: 0x0601264A RID: 75338 RVA: 0x00488B86 File Offset: 0x00486D86
+	// Token: 0x0600FAFC RID: 64252 RVA: 0x0049608E File Offset: 0x0049428E
 	public int GetPhantomLevel()
 	{
 		return this.PhantomLevel;
 	}
 
-	// Token: 0x0601264B RID: 75339 RVA: 0x00488B8E File Offset: 0x00486D8E
+	// Token: 0x0600FAFD RID: 64253 RVA: 0x00496096 File Offset: 0x00494296
 	public bool GetVisionNoCultivated()
 	{
 		return this.GetPhantomLevel() == 0 && this.GetExp() == 0;
 	}
 
-	// Token: 0x0601264C RID: 75340 RVA: 0x00488BA3 File Offset: 0x00486DA3
+	// Token: 0x0600FAFE RID: 64254 RVA: 0x004960AB File Offset: 0x004942AB
 	public bool GetVisionIfCanRecovery(bool onlyGold)
 	{
 		return (!onlyGold || this.GetQuality() >= 5) && this.GetVisionNoCultivated() && !this.GetIsLock();
 	}
 
-	// Token: 0x0601264D RID: 75341 RVA: 0x00488BC6 File Offset: 0x00486DC6
+	// Token: 0x0600FAFF RID: 64255 RVA: 0x004960CE File Offset: 0x004942CE
 	public bool GetVisionIfCanRefine(EVisionRefineRefineType refineType)
 	{
 		if (this.GetQuality() < 5)
@@ -63,45 +62,45 @@ public abstract class PhantomDataBase
 		return refineType == EVisionRefineRefineType.Sub && this.GetMaxSubPropCount() == this.PhantomSubProp.Count;
 	}
 
-	// Token: 0x0601264E RID: 75342 RVA: 0x00488BF6 File Offset: 0x00486DF6
+	// Token: 0x0600FB00 RID: 64256 RVA: 0x004960FE File Offset: 0x004942FE
 	public bool IsMax()
 	{
 		return this.PhantomLevel >= PhantomBattleController.Instance.GetMaxLevel(this.IncrId);
 	}
 
-	// Token: 0x0601264F RID: 75343 RVA: 0x00488C13 File Offset: 0x00486E13
+	// Token: 0x0600FB01 RID: 64257 RVA: 0x0049611B File Offset: 0x0049431B
 	public void SetPhantomExp(int exp)
 	{
 		this.PhantomExp = exp;
 	}
 
-	// Token: 0x06012650 RID: 75344 RVA: 0x00488C1C File Offset: 0x00486E1C
+	// Token: 0x0600FB02 RID: 64258 RVA: 0x00496124 File Offset: 0x00494324
 	public PhantomBattleInstance CurrentPhantomInstance()
 	{
 		return this.GetPhantomInstanceWithSkinId();
 	}
 
-	// Token: 0x06012651 RID: 75345 RVA: 0x00488C24 File Offset: 0x00486E24
+	// Token: 0x0600FB03 RID: 64259 RVA: 0x0049612C File Offset: 0x0049432C
 	[NullableContext(2)]
 	public PhantomPropSlot GetCurrentSuspendSlotData()
 	{
 		return this.SuspendSlot;
 	}
 
-	// Token: 0x06012652 RID: 75346 RVA: 0x00488C2C File Offset: 0x00486E2C
+	// Token: 0x0600FB04 RID: 64260 RVA: 0x00496134 File Offset: 0x00494334
 	public virtual int GetFetterGroupId()
 	{
 		return this.FetterGroupId;
 	}
 
-	// Token: 0x06012653 RID: 75347 RVA: 0x00488C34 File Offset: 0x00486E34
+	// Token: 0x0600FB05 RID: 64261 RVA: 0x0049613C File Offset: 0x0049433C
 	public int GetEatFullExp()
 	{
 		int value = ConfigCommonParamById.GetIntConfig("PhantomExpReturnRatio").Value;
 		return (int)Math.Floor((double)(this.GetFullExp() * value) / 1000.0);
 	}
 
-	// Token: 0x06012654 RID: 75348 RVA: 0x00488C70 File Offset: 0x00486E70
+	// Token: 0x0600FB06 RID: 64262 RVA: 0x00496178 File Offset: 0x00494378
 	public int GetFullExp()
 	{
 		if (this.GetPhantomLevel() == 0)
@@ -116,52 +115,52 @@ public abstract class PhantomDataBase
 		return num + this.PhantomExp;
 	}
 
-	// Token: 0x06012655 RID: 75349 RVA: 0x00488CD0 File Offset: 0x00486ED0
+	// Token: 0x0600FB07 RID: 64263 RVA: 0x004961D8 File Offset: 0x004943D8
 	public int GetExp()
 	{
 		return this.PhantomExp;
 	}
 
-	// Token: 0x06012656 RID: 75350 RVA: 0x00488CD8 File Offset: 0x00486ED8
+	// Token: 0x0600FB08 RID: 64264 RVA: 0x004961E0 File Offset: 0x004943E0
 	public void UpdateData(Aki.Protocol.PhantomItem data)
 	{
 		this.IncrId = data.IncrId;
 		this.FuncValue = data.FuncValue;
 		this.PhantomLevel = data.PhantomLevel;
 		this.PhantomExp = data.PhantomExp;
-		this.PhantomMainProp = data.PhantomMainProp.ToList<Aki.Protocol.PhantomPropInfo>();
-		this.PhantomSubProp = data.PhantomSubProp.ToList<Aki.Protocol.PhantomPropInfo>();
+		this.PhantomMainProp = new List<Aki.Protocol.PhantomPropInfo>(data.PhantomMainProp);
+		this.PhantomSubProp = new List<Aki.Protocol.PhantomPropInfo>(data.PhantomSubProp);
 		this.FetterGroupId = data.FetterGroupId;
 		this.SkinIdInternal = data.SkinId;
-		this.UnAckSubProp = data.UnAckSubProp.ToList<Aki.Protocol.PhantomPropInfo>();
-		this.LockSubPropIndices = data.LockPropIndex.ToList<int>();
+		this.UnAckSubProp = new List<Aki.Protocol.PhantomPropInfo>(data.UnAckSubProp);
+		this.LockSubPropIndices = new List<int>(data.LockPropIndex);
 	}
 
-	// Token: 0x06012657 RID: 75351 RVA: 0x00488D71 File Offset: 0x00486F71
+	// Token: 0x0600FB09 RID: 64265 RVA: 0x00496279 File Offset: 0x00494479
 	public void SetMainProp(List<Aki.Protocol.PhantomPropInfo> data)
 	{
 		this.PhantomMainProp = data;
 	}
 
-	// Token: 0x06012658 RID: 75352 RVA: 0x00488D7A File Offset: 0x00486F7A
+	// Token: 0x0600FB0A RID: 64266 RVA: 0x00496282 File Offset: 0x00494482
 	public void SetSubProp(List<Aki.Protocol.PhantomPropInfo> data)
 	{
 		this.PhantomSubProp = data;
 	}
 
-	// Token: 0x06012659 RID: 75353 RVA: 0x00488D83 File Offset: 0x00486F83
+	// Token: 0x0600FB0B RID: 64267 RVA: 0x0049628B File Offset: 0x0049448B
 	public int GetIncrId()
 	{
 		return this.IncrId;
 	}
 
-	// Token: 0x0601265A RID: 75354 RVA: 0x00488D8B File Offset: 0x00486F8B
+	// Token: 0x0600FB0C RID: 64268 RVA: 0x00496293 File Offset: 0x00494493
 	public void OnFunctionValueChange(int value)
 	{
 		this.FuncValue = value;
 	}
 
-	// Token: 0x0601265B RID: 75355 RVA: 0x00488D94 File Offset: 0x00486F94
+	// Token: 0x0600FB0D RID: 64269 RVA: 0x0049629C File Offset: 0x0049449C
 	public List<AttrListScrollData> GetSuspendAttributeData()
 	{
 		RepeatedField<Aki.Protocol.PhantomPropInfo> phantomProp = this.SuspendSlot.PhantomProp;
@@ -177,7 +176,7 @@ public abstract class PhantomDataBase
 		return list;
 	}
 
-	// Token: 0x0601265C RID: 75356 RVA: 0x00488E58 File Offset: 0x00487058
+	// Token: 0x0600FB0E RID: 64270 RVA: 0x00496360 File Offset: 0x00494560
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -199,31 +198,31 @@ public abstract class PhantomDataBase
 		return null;
 	}
 
-	// Token: 0x0601265D RID: 75357 RVA: 0x00488EE8 File Offset: 0x004870E8
+	// Token: 0x0600FB0F RID: 64271 RVA: 0x004963F0 File Offset: 0x004945F0
 	public bool IsFunctionValue(InventoryDefine.EItemDataFunctionType functionType)
 	{
 		return (this.FuncValue & 1 << (int)functionType) > 0;
 	}
 
-	// Token: 0x0601265E RID: 75358 RVA: 0x00488EFA File Offset: 0x004870FA
+	// Token: 0x0600FB10 RID: 64272 RVA: 0x00496402 File Offset: 0x00494602
 	public bool GetIsLock()
 	{
 		return this.IsFunctionValue(InventoryDefine.EItemDataFunctionType.Lock);
 	}
 
-	// Token: 0x0601265F RID: 75359 RVA: 0x00488F03 File Offset: 0x00487103
+	// Token: 0x0600FB11 RID: 64273 RVA: 0x0049640B File Offset: 0x0049460B
 	public bool GetIsDeprecated()
 	{
 		return this.IsFunctionValue(InventoryDefine.EItemDataFunctionType.Deprecate);
 	}
 
-	// Token: 0x06012660 RID: 75360 RVA: 0x00488F0C File Offset: 0x0048710C
+	// Token: 0x0600FB12 RID: 64274 RVA: 0x00496414 File Offset: 0x00494614
 	public int GetEquipRoleId()
 	{
 		return PhantomBattleModel.Instance.GetPhantomEquipOnRoleId(this.GetIncrId()).GetValueOrDefault();
 	}
 
-	// Token: 0x06012661 RID: 75361 RVA: 0x00488F34 File Offset: 0x00487134
+	// Token: 0x0600FB13 RID: 64275 RVA: 0x0049643C File Offset: 0x0049463C
 	public int GetEquipRoleIndex()
 	{
 		int equipRoleId = this.GetEquipRoleId();
@@ -238,13 +237,13 @@ public abstract class PhantomDataBase
 		return -1;
 	}
 
-	// Token: 0x06012662 RID: 75362 RVA: 0x00488F7C File Offset: 0x0048717C
+	// Token: 0x0600FB14 RID: 64276 RVA: 0x00496484 File Offset: 0x00494684
 	public string GetNameColor()
 	{
 		return CSharpScript.Game.Module.Item.ItemConfig.Instance.GetQualityConfig(this.GetQuality()).Value.DropColor;
 	}
 
-	// Token: 0x06012663 RID: 75363 RVA: 0x00488FAC File Offset: 0x004871AC
+	// Token: 0x0600FB15 RID: 64277 RVA: 0x004964B4 File Offset: 0x004946B4
 	private IReadOnlyList<int> CalculateFinalIncList(int index, int roleId)
 	{
 		List<int> incrIdList = PhantomBattleModel.Instance.GetBattleDataById(roleId).GetIncrIdList();
@@ -288,7 +287,7 @@ public abstract class PhantomDataBase
 		return list;
 	}
 
-	// Token: 0x06012664 RID: 75364 RVA: 0x00489070 File Offset: 0x00487270
+	// Token: 0x0600FB16 RID: 64278 RVA: 0x00496578 File Offset: 0x00494778
 	[return: Nullable(2)]
 	public static Dictionary<int, int> CalculateFetterByPhantomBattleData(List<PhantomDataBase> phantomBattleData)
 	{
@@ -323,7 +322,7 @@ public abstract class PhantomDataBase
 		return dictionary;
 	}
 
-	// Token: 0x06012665 RID: 75365 RVA: 0x00489110 File Offset: 0x00487310
+	// Token: 0x0600FB17 RID: 64279 RVA: 0x00496618 File Offset: 0x00494818
 	public bool IfEquipSameNameMonsterOnRole(int index, int roleId)
 	{
 		List<int> list = new List<int>();
@@ -339,7 +338,7 @@ public abstract class PhantomDataBase
 		return list.Count != hashSet.Count;
 	}
 
-	// Token: 0x06012666 RID: 75366 RVA: 0x00489198 File Offset: 0x00487398
+	// Token: 0x0600FB18 RID: 64280 RVA: 0x004966A0 File Offset: 0x004948A0
 	public bool IfEquipOverNeedOnRole(List<VisionFetterData> fetterData)
 	{
 		if (fetterData.Count <= 0)
@@ -357,7 +356,7 @@ public abstract class PhantomDataBase
 		return visionFetterData.ActiveFetterGroupNum > visionFetterData.NeedActiveNum;
 	}
 
-	// Token: 0x06012667 RID: 75367 RVA: 0x004891F4 File Offset: 0x004873F4
+	// Token: 0x0600FB19 RID: 64281 RVA: 0x004966FC File Offset: 0x004948FC
 	public List<VisionFetterData> GetPreviewShowFetterList(int index, int roleId)
 	{
 		List<VisionFetterData> list = new List<VisionFetterData>();
@@ -414,13 +413,13 @@ public abstract class PhantomDataBase
 		return list;
 	}
 
-	// Token: 0x06012668 RID: 75368 RVA: 0x0048938C File Offset: 0x0048758C
+	// Token: 0x0600FB1A RID: 64282 RVA: 0x00496894 File Offset: 0x00494A94
 	public List<VisionAttributeVariantTwoData> GetPreviewCurrentShowFetterList()
 	{
 		return new List<VisionAttributeVariantTwoData>();
 	}
 
-	// Token: 0x06012669 RID: 75369 RVA: 0x00489394 File Offset: 0x00487594
+	// Token: 0x0600FB1B RID: 64283 RVA: 0x0049689C File Offset: 0x00494A9C
 	public List<VisionAttributeVariantTwoData> GetShowFetterList(int index, int roleId)
 	{
 		List<VisionAttributeVariantTwoData> list = new List<VisionAttributeVariantTwoData>();
@@ -457,7 +456,7 @@ public abstract class PhantomDataBase
 		return list;
 	}
 
-	// Token: 0x0601266A RID: 75370 RVA: 0x00489468 File Offset: 0x00487668
+	// Token: 0x0600FB1C RID: 64284 RVA: 0x00496970 File Offset: 0x00494B70
 	private bool CheckFetterInList(List<VisionAttributeVariantTwoData> data, int fetterId)
 	{
 		for (int i = data.Count - 1; i >= 0; i--)
@@ -470,51 +469,51 @@ public abstract class PhantomDataBase
 		return false;
 	}
 
-	// Token: 0x0601266B RID: 75371 RVA: 0x0048949A File Offset: 0x0048769A
+	// Token: 0x0600FB1D RID: 64285 RVA: 0x004969A2 File Offset: 0x00494BA2
 	public int[] GetCanActiveFetterList()
 	{
 		return PhantomBattleModel.Instance.GetTargetCanActiveFettersList(this.GetIncrId());
 	}
 
-	// Token: 0x0601266C RID: 75372 RVA: 0x004894AC File Offset: 0x004876AC
+	// Token: 0x0600FB1E RID: 64286 RVA: 0x004969B4 File Offset: 0x00494BB4
 	public int[] GetDelFetterList(int index, int roleId)
 	{
 		return PhantomBattleModel.Instance.GetPreviewFettersDel(this, index, roleId);
 	}
 
-	// Token: 0x0601266D RID: 75373 RVA: 0x004894BB File Offset: 0x004876BB
+	// Token: 0x0600FB1F RID: 64287 RVA: 0x004969C3 File Offset: 0x00494BC3
 	public int[] GetAddFetterList(int index, int roleId)
 	{
 		return PhantomBattleModel.Instance.GetPreviewFetterAdd(this, index, roleId);
 	}
 
-	// Token: 0x0601266E RID: 75374 RVA: 0x004894CA File Offset: 0x004876CA
+	// Token: 0x0600FB20 RID: 64288 RVA: 0x004969D2 File Offset: 0x00494BD2
 	public PhantomFetterGroup GetFetterGroupConfig()
 	{
 		return PhantomBattleConfig.Instance.GetFetterGroupById(this.GetFetterGroupId());
 	}
 
-	// Token: 0x0601266F RID: 75375 RVA: 0x004894DC File Offset: 0x004876DC
+	// Token: 0x0600FB21 RID: 64289 RVA: 0x004969E4 File Offset: 0x00494BE4
 	public bool GetIsFetterGroupSpecial()
 	{
 		return this.GetFetterGroupConfig().FetterType == 1;
 	}
 
-	// Token: 0x06012670 RID: 75376 RVA: 0x004894FC File Offset: 0x004876FC
+	// Token: 0x0600FB22 RID: 64290 RVA: 0x00496A04 File Offset: 0x00494C04
 	public int GetCost()
 	{
 		int rarity = this.GetConfig().Rarity;
 		return PhantomBattleConfig.Instance.GetPhantomRareConfig(rarity).Value.Cost;
 	}
 
-	// Token: 0x06012671 RID: 75377 RVA: 0x00489534 File Offset: 0x00487734
+	// Token: 0x0600FB23 RID: 64291 RVA: 0x00496A3C File Offset: 0x00494C3C
 	public PhantomRarity? GetRareConfig()
 	{
 		int rarity = this.GetConfig().Rarity;
 		return PhantomBattleConfig.Instance.GetPhantomRareConfig(rarity);
 	}
 
-	// Token: 0x06012672 RID: 75378 RVA: 0x0048955C File Offset: 0x0048775C
+	// Token: 0x0600FB24 RID: 64292 RVA: 0x00496A64 File Offset: 0x00494C64
 	public ILevelUpSuccessAttributeData GetNewSubPropSuccessData(List<Aki.Protocol.PhantomPropInfo> pastSubProp)
 	{
 		int count = pastSubProp.Count;
@@ -544,7 +543,7 @@ public abstract class PhantomDataBase
 		};
 	}
 
-	// Token: 0x06012673 RID: 75379 RVA: 0x0048966C File Offset: 0x0048786C
+	// Token: 0x0600FB25 RID: 64293 RVA: 0x00496B74 File Offset: 0x00494D74
 	[NullableContext(2)]
 	public Aki.Protocol.PhantomPropInfo GetSlotIndexDataEx(int index)
 	{
@@ -556,14 +555,14 @@ public abstract class PhantomDataBase
 		return null;
 	}
 
-	// Token: 0x06012674 RID: 75380 RVA: 0x00489694 File Offset: 0x00487894
+	// Token: 0x0600FB26 RID: 64294 RVA: 0x00496B9C File Offset: 0x00494D9C
 	public int GetMaxSubPropCount()
 	{
 		int quality = this.GetQuality();
 		return PhantomBattleConfig.Instance.GetPhantomSlotUnlockLevel(quality).Length;
 	}
 
-	// Token: 0x06012675 RID: 75381 RVA: 0x004896B8 File Offset: 0x004878B8
+	// Token: 0x0600FB27 RID: 64295 RVA: 0x00496BC0 File Offset: 0x00494DC0
 	public List<VisionSubPropData> GetSubPropIdentifyPreviewData(int currentLevel, int identifyNum)
 	{
 		List<VisionSubPropData> levelSubPropData = this.GetLevelSubPropData(currentLevel);
@@ -580,7 +579,7 @@ public abstract class PhantomDataBase
 		return levelSubPropData;
 	}
 
-	// Token: 0x06012676 RID: 75382 RVA: 0x0048970C File Offset: 0x0048790C
+	// Token: 0x0600FB28 RID: 64296 RVA: 0x00496C14 File Offset: 0x00494E14
 	public List<VisionSubPropData> GetLevelSubPropPreviewData(int currentLevel, int targetLevel)
 	{
 		List<VisionSubPropData> levelSubPropData = this.GetLevelSubPropData(currentLevel);
@@ -596,7 +595,7 @@ public abstract class PhantomDataBase
 		return levelSubPropData2;
 	}
 
-	// Token: 0x06012677 RID: 75383 RVA: 0x00489768 File Offset: 0x00487968
+	// Token: 0x0600FB29 RID: 64297 RVA: 0x00496C70 File Offset: 0x00494E70
 	public List<VisionSubPropData> GetEquipmentViewPreviewData()
 	{
 		List<VisionSubPropData> levelSubPropData = this.GetLevelSubPropData(this.GetPhantomLevel());
@@ -618,19 +617,19 @@ public abstract class PhantomDataBase
 		return list;
 	}
 
-	// Token: 0x06012678 RID: 75384 RVA: 0x004897E5 File Offset: 0x004879E5
+	// Token: 0x0600FB2A RID: 64298 RVA: 0x00496CED File Offset: 0x00494EED
 	public int GetIdentifyCostItemId()
 	{
 		return 2;
 	}
 
-	// Token: 0x06012679 RID: 75385 RVA: 0x004897E8 File Offset: 0x004879E8
+	// Token: 0x0600FB2B RID: 64299 RVA: 0x00496CF0 File Offset: 0x00494EF0
 	public int GetIdentifyCostItemValue()
 	{
 		return PhantomBattleConfig.Instance.GetQualityIdentifyCost(this.GetQuality());
 	}
 
-	// Token: 0x0601267A RID: 75386 RVA: 0x004897FC File Offset: 0x004879FC
+	// Token: 0x0600FB2C RID: 64300 RVA: 0x00496D04 File Offset: 0x00494F04
 	public Dictionary<int, int> GetCurrentIdentifyCost()
 	{
 		int quality = this.GetQuality();
@@ -644,7 +643,7 @@ public abstract class PhantomDataBase
 		return dictionary;
 	}
 
-	// Token: 0x0601267B RID: 75387 RVA: 0x00489878 File Offset: 0x00487A78
+	// Token: 0x0600FB2D RID: 64301 RVA: 0x00496D80 File Offset: 0x00494F80
 	public int GetCurrentSubPropLockCount()
 	{
 		List<VisionSubPropData> levelSubPropData = this.GetLevelSubPropData(this.GetPhantomLevel());
@@ -662,7 +661,7 @@ public abstract class PhantomDataBase
 		return num;
 	}
 
-	// Token: 0x0601267C RID: 75388 RVA: 0x004898D8 File Offset: 0x00487AD8
+	// Token: 0x0600FB2E RID: 64302 RVA: 0x00496DE0 File Offset: 0x00494FE0
 	public bool GetIfHaveEnoughIdentifyGold(int identifyNum)
 	{
 		int num = this.GetIdentifyCostItemValue() * identifyNum;
@@ -675,7 +674,7 @@ public abstract class PhantomDataBase
 		return num2 - num >= 0;
 	}
 
-	// Token: 0x0601267D RID: 75389 RVA: 0x00489920 File Offset: 0x00487B20
+	// Token: 0x0600FB2F RID: 64303 RVA: 0x00496E28 File Offset: 0x00495028
 	public bool GetIfHaveEnoughIdentifyConsumeItem(int identifyNum)
 	{
 		int num = this.GetCurrentIdentifyCostValue() * identifyNum;
@@ -688,7 +687,7 @@ public abstract class PhantomDataBase
 		return num2 - num >= 0;
 	}
 
-	// Token: 0x0601267E RID: 75390 RVA: 0x00489968 File Offset: 0x00487B68
+	// Token: 0x0600FB30 RID: 64304 RVA: 0x00496E70 File Offset: 0x00495070
 	public int GetNextIdentifyLevel()
 	{
 		List<VisionSubPropData> levelSubPropData = this.GetLevelSubPropData(this.GetPhantomLevel());
@@ -704,7 +703,7 @@ public abstract class PhantomDataBase
 		return result;
 	}
 
-	// Token: 0x0601267F RID: 75391 RVA: 0x004899D0 File Offset: 0x00487BD0
+	// Token: 0x0600FB31 RID: 64305 RVA: 0x00496ED8 File Offset: 0x004950D8
 	public int GetCurrentIdentifyCostId()
 	{
 		Dictionary<int, int> currentIdentifyCost = this.GetCurrentIdentifyCost();
@@ -716,7 +715,7 @@ public abstract class PhantomDataBase
 		return result;
 	}
 
-	// Token: 0x06012680 RID: 75392 RVA: 0x00489A28 File Offset: 0x00487C28
+	// Token: 0x0600FB32 RID: 64306 RVA: 0x00496F30 File Offset: 0x00495130
 	public int GetCurrentIdentifyCostValue()
 	{
 		Dictionary<int, int> currentIdentifyCost = this.GetCurrentIdentifyCost();
@@ -728,7 +727,7 @@ public abstract class PhantomDataBase
 		return result;
 	}
 
-	// Token: 0x06012681 RID: 75393 RVA: 0x00489A80 File Offset: 0x00487C80
+	// Token: 0x0600FB33 RID: 64307 RVA: 0x00496F88 File Offset: 0x00495188
 	public int GetCurrentCanIdentifyCount()
 	{
 		List<VisionSubPropData> levelSubPropData = this.GetLevelSubPropData(this.GetPhantomLevel());
@@ -762,7 +761,7 @@ public abstract class PhantomDataBase
 		return num2;
 	}
 
-	// Token: 0x06012682 RID: 75394 RVA: 0x00489B70 File Offset: 0x00487D70
+	// Token: 0x0600FB34 RID: 64308 RVA: 0x00497078 File Offset: 0x00495278
 	public int GetLevelUnlockSubPropSlotCount(int level)
 	{
 		int maxSubPropCount = this.GetMaxSubPropCount();
@@ -777,7 +776,7 @@ public abstract class PhantomDataBase
 		return num;
 	}
 
-	// Token: 0x06012683 RID: 75395 RVA: 0x00489BA4 File Offset: 0x00487DA4
+	// Token: 0x0600FB35 RID: 64309 RVA: 0x004970AC File Offset: 0x004952AC
 	public List<VisionSubPropData> GetLevelSubPropData(int level)
 	{
 		int maxSubPropCount = this.GetMaxSubPropCount();
@@ -807,7 +806,7 @@ public abstract class PhantomDataBase
 		return list;
 	}
 
-	// Token: 0x06012684 RID: 75396 RVA: 0x00489C14 File Offset: 0x00487E14
+	// Token: 0x0600FB36 RID: 64310 RVA: 0x0049711C File Offset: 0x0049531C
 	public bool GetIfHaveLockSubProp()
 	{
 		List<VisionSubPropData> levelSubPropData = this.GetLevelSubPropData(this.GetPhantomLevel());
@@ -826,7 +825,7 @@ public abstract class PhantomDataBase
 		return result;
 	}
 
-	// Token: 0x06012685 RID: 75397 RVA: 0x00489C74 File Offset: 0x00487E74
+	// Token: 0x0600FB37 RID: 64311 RVA: 0x0049717C File Offset: 0x0049537C
 	public bool GetIfHaveUnIdentifySubProp()
 	{
 		List<VisionSubPropData> levelSubPropData = this.GetLevelSubPropData(this.GetPhantomLevel());
@@ -845,7 +844,7 @@ public abstract class PhantomDataBase
 		return result;
 	}
 
-	// Token: 0x06012686 RID: 75398 RVA: 0x00489CD4 File Offset: 0x00487ED4
+	// Token: 0x0600FB38 RID: 64312 RVA: 0x004971DC File Offset: 0x004953DC
 	public int GetSubPropUnlockLevel(int index)
 	{
 		int quality = this.GetQuality();
@@ -857,7 +856,7 @@ public abstract class PhantomDataBase
 		return phantomSlotUnlockLevel[index];
 	}
 
-	// Token: 0x06012687 RID: 75399 RVA: 0x00489D04 File Offset: 0x00487F04
+	// Token: 0x0600FB39 RID: 64313 RVA: 0x0049720C File Offset: 0x0049540C
 	public int GetMaxSlotCount()
 	{
 		int levelLimit = this.GetLevelLimit();
@@ -873,7 +872,7 @@ public abstract class PhantomDataBase
 		return num;
 	}
 
-	// Token: 0x06012688 RID: 75400 RVA: 0x00489D60 File Offset: 0x00487F60
+	// Token: 0x0600FB3A RID: 64314 RVA: 0x00497268 File Offset: 0x00495468
 	public int GetSlotUnlockLevel(int index)
 	{
 		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("PhantomSlotUnlockLevel");
@@ -884,25 +883,25 @@ public abstract class PhantomDataBase
 		return intArrayConfig[index];
 	}
 
-	// Token: 0x06012689 RID: 75401 RVA: 0x00489D8E File Offset: 0x00487F8E
+	// Token: 0x0600FB3B RID: 64315 RVA: 0x00497296 File Offset: 0x00495496
 	public bool GetSlotLockState(int index)
 	{
 		return this.GetPhantomLevel() < this.GetSlotUnlockLevel(index);
 	}
 
-	// Token: 0x0601268A RID: 75402 RVA: 0x00489DA4 File Offset: 0x00487FA4
+	// Token: 0x0600FB3C RID: 64316 RVA: 0x004972AC File Offset: 0x004954AC
 	public float GetIdentifyBackRadio()
 	{
 		return (float)ConfigCommonParamById.GetIntConfig("PhantomIdentifyReturnRatio").Value / 1000f;
 	}
 
-	// Token: 0x0601268B RID: 75403 RVA: 0x00489DCA File Offset: 0x00487FCA
+	// Token: 0x0600FB3D RID: 64317 RVA: 0x004972D2 File Offset: 0x004954D2
 	public int GetCurrentIdentifyNum()
 	{
 		return this.PhantomSubProp.Count;
 	}
 
-	// Token: 0x0601268C RID: 75404 RVA: 0x00489DD8 File Offset: 0x00487FD8
+	// Token: 0x0600FB3E RID: 64318 RVA: 0x004972E0 File Offset: 0x004954E0
 	public Dictionary<int, int> GetIdentifyBackItem()
 	{
 		float currentIdentifyCostValue = (float)this.GetCurrentIdentifyCostValue();
@@ -917,7 +916,7 @@ public abstract class PhantomDataBase
 		return dictionary;
 	}
 
-	// Token: 0x0601268D RID: 75405 RVA: 0x00489E20 File Offset: 0x00488020
+	// Token: 0x0600FB3F RID: 64319 RVA: 0x00497328 File Offset: 0x00495528
 	public List<VisionSlotData> GetLevelSlotData(int level)
 	{
 		int maxSlotCount = this.GetMaxSlotCount();
@@ -949,13 +948,13 @@ public abstract class PhantomDataBase
 		return list;
 	}
 
-	// Token: 0x0601268E RID: 75406 RVA: 0x00489E90 File Offset: 0x00488090
+	// Token: 0x0600FB40 RID: 64320 RVA: 0x00497398 File Offset: 0x00495598
 	public List<VisionSlotData> GetCurrentSlotData()
 	{
 		return this.GetLevelSlotData(this.GetPhantomLevel());
 	}
 
-	// Token: 0x0601268F RID: 75407 RVA: 0x00489EA0 File Offset: 0x004880A0
+	// Token: 0x0600FB41 RID: 64321 RVA: 0x004973A8 File Offset: 0x004955A8
 	public List<VisionSlotData> GetPreviewSlotData(int previewLevel)
 	{
 		List<VisionSlotData> currentSlotData = this.GetCurrentSlotData();
@@ -983,13 +982,13 @@ public abstract class PhantomDataBase
 		return levelSlotData;
 	}
 
-	// Token: 0x06012690 RID: 75408 RVA: 0x00489F34 File Offset: 0x00488134
+	// Token: 0x0600FB42 RID: 64322 RVA: 0x0049743C File Offset: 0x0049563C
 	public int GetCurrentSkillId()
 	{
 		return this.GetPhantomInstanceWithSkinId().PhantomItem.Value.SkillId;
 	}
 
-	// Token: 0x06012691 RID: 75409 RVA: 0x00489F5C File Offset: 0x0048815C
+	// Token: 0x0600FB43 RID: 64323 RVA: 0x00497464 File Offset: 0x00495664
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1000,7 +999,7 @@ public abstract class PhantomDataBase
 		return PhantomBattleConfig.Instance.GetPhantomSkillDescExBySkillIdAndQuality(skillId, this.GetQuality());
 	}
 
-	// Token: 0x06012692 RID: 75410 RVA: 0x00489F70 File Offset: 0x00488170
+	// Token: 0x0600FB44 RID: 64324 RVA: 0x00497478 File Offset: 0x00495678
 	[NullableContext(2)]
 	public IMainSkillInfoData GetNormalSkillDesc()
 	{
@@ -1018,26 +1017,26 @@ public abstract class PhantomDataBase
 		};
 	}
 
-	// Token: 0x06012693 RID: 75411 RVA: 0x0048A000 File Offset: 0x00488200
+	// Token: 0x0600FB45 RID: 64325 RVA: 0x00497508 File Offset: 0x00495708
 	public PhantomSkill? GetNormalSkillConfig()
 	{
 		PhantomBattleInstance phantomInstanceWithSkinId = this.GetPhantomInstanceWithSkinId();
 		return PhantomBattleConfig.Instance.GetPhantomSkillBySkillId(phantomInstanceWithSkinId.PhantomItem.Value.SkillId);
 	}
 
-	// Token: 0x06012694 RID: 75412 RVA: 0x0048A034 File Offset: 0x00488234
+	// Token: 0x0600FB46 RID: 64326 RVA: 0x0049753C File Offset: 0x0049573C
 	public int GetNormalSkillId()
 	{
 		return this.GetPhantomInstanceWithSkinId().PhantomItem.Value.SkillId;
 	}
 
-	// Token: 0x06012695 RID: 75413 RVA: 0x0048A05C File Offset: 0x0048825C
+	// Token: 0x0600FB47 RID: 64327 RVA: 0x00497564 File Offset: 0x00495764
 	public int GetPersonalSkillId()
 	{
 		return 0;
 	}
 
-	// Token: 0x06012696 RID: 75414 RVA: 0x0048A060 File Offset: 0x00488260
+	// Token: 0x0600FB48 RID: 64328 RVA: 0x00497568 File Offset: 0x00495768
 	public PhantomBattleInstance GetPhantomInstanceWithSkinId()
 	{
 		int skinId = this.SkinId;
@@ -1048,13 +1047,13 @@ public abstract class PhantomDataBase
 		return this.GetPhantomInstance();
 	}
 
-	// Token: 0x06012697 RID: 75415 RVA: 0x0048A089 File Offset: 0x00488289
+	// Token: 0x0600FB49 RID: 64329 RVA: 0x00497591 File Offset: 0x00495791
 	private PhantomBattleInstance GetPhantomInstance()
 	{
 		return PhantomBattleModel.Instance.GetPhantomInstanceByItemId(this.GetConfigId(false));
 	}
 
-	// Token: 0x06012698 RID: 75416 RVA: 0x0048A09C File Offset: 0x0048829C
+	// Token: 0x0600FB4A RID: 64330 RVA: 0x004975A4 File Offset: 0x004957A4
 	public List<AttrListScrollData> GetLevelUpPreviewData(int targetLevel)
 	{
 		List<AttrListScrollData> list = new List<AttrListScrollData>();
@@ -1083,19 +1082,19 @@ public abstract class PhantomDataBase
 		return list;
 	}
 
-	// Token: 0x06012699 RID: 75417 RVA: 0x0048A1DC File Offset: 0x004883DC
+	// Token: 0x0600FB4B RID: 64331 RVA: 0x004976E4 File Offset: 0x004958E4
 	public List<Aki.Protocol.PhantomPropInfo> GetPhantomMainProp()
 	{
 		return this.PhantomMainProp;
 	}
 
-	// Token: 0x0601269A RID: 75418 RVA: 0x0048A1E4 File Offset: 0x004883E4
+	// Token: 0x0600FB4C RID: 64332 RVA: 0x004976EC File Offset: 0x004958EC
 	public Aki.Protocol.PhantomPropInfo GetPhantomFirstMainProp()
 	{
 		return this.PhantomMainProp[0];
 	}
 
-	// Token: 0x0601269B RID: 75419 RVA: 0x0048A1F4 File Offset: 0x004883F4
+	// Token: 0x0600FB4D RID: 64333 RVA: 0x004976FC File Offset: 0x004958FC
 	public Dictionary<int, int> GetMainPropValueMapInTargetLevel(int level)
 	{
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -1109,38 +1108,38 @@ public abstract class PhantomDataBase
 		return dictionary;
 	}
 
-	// Token: 0x0601269C RID: 75420 RVA: 0x0048A294 File Offset: 0x00488494
+	// Token: 0x0600FB4E RID: 64334 RVA: 0x0049779C File Offset: 0x0049599C
 	public List<Aki.Protocol.PhantomPropInfo> GetPhantomSubProp()
 	{
 		return this.PhantomSubProp;
 	}
 
-	// Token: 0x0601269D RID: 75421 RVA: 0x0048A29C File Offset: 0x0048849C
+	// Token: 0x0600FB4F RID: 64335 RVA: 0x004977A4 File Offset: 0x004959A4
 	public List<Aki.Protocol.PhantomPropInfo> GetUnAckSubProp()
 	{
 		return this.UnAckSubProp;
 	}
 
-	// Token: 0x0601269E RID: 75422 RVA: 0x0048A2A4 File Offset: 0x004884A4
+	// Token: 0x0600FB50 RID: 64336 RVA: 0x004977AC File Offset: 0x004959AC
 	public List<int> GetLockSubPropIndices()
 	{
 		return this.LockSubPropIndices;
 	}
 
-	// Token: 0x0601269F RID: 75423 RVA: 0x0048A2AC File Offset: 0x004884AC
+	// Token: 0x0600FB51 RID: 64337 RVA: 0x004977B4 File Offset: 0x004959B4
 	public void SetConfigId(int itemId)
 	{
 		this.ItemId = itemId;
 	}
 
-	// Token: 0x060126A0 RID: 75424 RVA: 0x0048A2B5 File Offset: 0x004884B5
+	// Token: 0x0600FB52 RID: 64338 RVA: 0x004977BD File Offset: 0x004959BD
 	public void SetSkinId(int skinId)
 	{
 		this.SkinIdInternal = skinId;
 	}
 
-	// Token: 0x170017D3 RID: 6099
-	// (get) Token: 0x060126A1 RID: 75425 RVA: 0x0048A2BE File Offset: 0x004884BE
+	// Token: 0x1700180D RID: 6157
+	// (get) Token: 0x0600FB53 RID: 64339 RVA: 0x004977C6 File Offset: 0x004959C6
 	public int SkinId
 	{
 		get
@@ -1149,7 +1148,7 @@ public abstract class PhantomDataBase
 		}
 	}
 
-	// Token: 0x060126A2 RID: 75426 RVA: 0x0048A2C8 File Offset: 0x004884C8
+	// Token: 0x0600FB54 RID: 64340 RVA: 0x004977D0 File Offset: 0x004959D0
 	public int GetConfigId(bool useSkin = false)
 	{
 		int skinId = this.SkinId;
@@ -1160,7 +1159,7 @@ public abstract class PhantomDataBase
 		return this.ItemId;
 	}
 
-	// Token: 0x060126A3 RID: 75427 RVA: 0x0048A2EA File Offset: 0x004884EA
+	// Token: 0x0600FB55 RID: 64341 RVA: 0x004977F2 File Offset: 0x004959F2
 	public Aki.Config.PhantomItem GetConfig()
 	{
 		if (this.ConfigCache == null)
@@ -1170,7 +1169,7 @@ public abstract class PhantomDataBase
 		return this.ConfigCache.Value;
 	}
 
-	// Token: 0x060126A4 RID: 75428 RVA: 0x0048A31C File Offset: 0x0048851C
+	// Token: 0x0600FB56 RID: 64342 RVA: 0x00497824 File Offset: 0x00495A24
 	public Aki.Config.PhantomItem GetSkinConfig()
 	{
 		int skinId = this.SkinId;
@@ -1181,7 +1180,7 @@ public abstract class PhantomDataBase
 		return this.GetConfig();
 	}
 
-	// Token: 0x060126A5 RID: 75429 RVA: 0x0048A350 File Offset: 0x00488550
+	// Token: 0x0600FB57 RID: 64343 RVA: 0x00497858 File Offset: 0x00495A58
 	public Aki.Config.MonsterInfo? GetMonsterConfig()
 	{
 		Aki.Config.MonsterInfo? monsterInfoConfig = MonsterInfoConfig.Instance.GetMonsterInfoConfig(this.GetMonsterId(false));
@@ -1192,19 +1191,19 @@ public abstract class PhantomDataBase
 		return monsterInfoConfig;
 	}
 
-	// Token: 0x060126A6 RID: 75430 RVA: 0x0048A384 File Offset: 0x00488584
+	// Token: 0x0600FB58 RID: 64344 RVA: 0x0049788C File Offset: 0x00495A8C
 	public int GetLevelLimit()
 	{
 		return PhantomBattleConfig.Instance.GetPhantomQualityByItemQuality(this.GetQuality()).Value.LevelLimit;
 	}
 
-	// Token: 0x060126A7 RID: 75431 RVA: 0x0048A3B4 File Offset: 0x004885B4
+	// Token: 0x0600FB59 RID: 64345 RVA: 0x004978BC File Offset: 0x00495ABC
 	public int GetQuality()
 	{
 		return this.GetConfig().QualityId;
 	}
 
-	// Token: 0x060126A8 RID: 75432 RVA: 0x0048A3D0 File Offset: 0x004885D0
+	// Token: 0x0600FB5A RID: 64346 RVA: 0x004978D8 File Offset: 0x00495AD8
 	public int GetMonsterId(bool useSkin = false)
 	{
 		if (useSkin && this.SkinId != 0)
@@ -1214,7 +1213,7 @@ public abstract class PhantomDataBase
 		return this.GetConfig().MonsterId;
 	}
 
-	// Token: 0x060126A9 RID: 75433 RVA: 0x0048A408 File Offset: 0x00488608
+	// Token: 0x0600FB5B RID: 64347 RVA: 0x00497910 File Offset: 0x00495B10
 	public string GetMonsterName()
 	{
 		if (this.SkinId != 0)
@@ -1224,7 +1223,7 @@ public abstract class PhantomDataBase
 		return this.GetConfig().MonsterName;
 	}
 
-	// Token: 0x060126AA RID: 75434 RVA: 0x0048A43C File Offset: 0x0048863C
+	// Token: 0x0600FB5C RID: 64348 RVA: 0x00497944 File Offset: 0x00495B44
 	public AttrListScrollData GetFirstMainPropAttribute(CommonComponentDefine.EAttributeType attributeType, bool needAddType = false)
 	{
 		int phantomPropId = this.PhantomMainProp[0].PhantomPropId;
@@ -1235,7 +1234,7 @@ public abstract class PhantomDataBase
 		return new AttrListScrollData(phantomMainPropertyItemId.PropId, propRatioValue, (double)((!needAddType) ? 0 : phantomMainPropertyItemId.AddType), propertyIndexInfo.Value.Priority, phantomMainPropertyItemId.AddType == 2, attributeType);
 	}
 
-	// Token: 0x060126AB RID: 75435 RVA: 0x0048A4D4 File Offset: 0x004886D4
+	// Token: 0x0600FB5D RID: 64349 RVA: 0x004979DC File Offset: 0x00495BDC
 	public List<AttrListScrollData> GetMainPropShowAttributeList(CommonComponentDefine.EAttributeType attributeType, bool needAddType = false)
 	{
 		List<AttrListScrollData> list = new List<AttrListScrollData>();
@@ -1256,7 +1255,7 @@ public abstract class PhantomDataBase
 		return list;
 	}
 
-	// Token: 0x060126AC RID: 75436 RVA: 0x0048A5F0 File Offset: 0x004887F0
+	// Token: 0x0600FB5E RID: 64350 RVA: 0x00497AF8 File Offset: 0x00495CF8
 	public List<AttrListScrollData> GetSubPropShowAttributeList(CommonComponentDefine.EAttributeType attributeType)
 	{
 		List<AttrListScrollData> list = new List<AttrListScrollData>();
@@ -1271,7 +1270,7 @@ public abstract class PhantomDataBase
 		return list;
 	}
 
-	// Token: 0x060126AD RID: 75437 RVA: 0x0048A6C0 File Offset: 0x004888C0
+	// Token: 0x0600FB5F RID: 64351 RVA: 0x00497BC8 File Offset: 0x00495DC8
 	public bool CheckIfHaveSelectRecommendMainAttr()
 	{
 		List<VisionSelectRecommendData> currentSelectMainAttrArray = VisionRecommendModel.Instance.CurrentSelectMainAttrArray;
@@ -1293,7 +1292,7 @@ public abstract class PhantomDataBase
 		return false;
 	}
 
-	// Token: 0x060126AE RID: 75438 RVA: 0x0048A794 File Offset: 0x00488994
+	// Token: 0x0600FB60 RID: 64352 RVA: 0x00497C9C File Offset: 0x00495E9C
 	public bool CheckIfHaveSelectRecommendSubAttr()
 	{
 		foreach (VisionSelectRecommendData visionSelectRecommendData in VisionRecommendModel.Instance.CurrentSelectSubAttrArray)
@@ -1316,14 +1315,14 @@ public abstract class PhantomDataBase
 		return true;
 	}
 
-	// Token: 0x060126AF RID: 75439 RVA: 0x0048A864 File Offset: 0x00488A64
+	// Token: 0x0600FB61 RID: 64353 RVA: 0x00497D6C File Offset: 0x00495F6C
 	public bool CheckIfHaveSelectMainPhantomType()
 	{
 		VisionMainSelectPhantomData currentMainPhantom = VisionRecommendModel.Instance.CurrentMainPhantom;
 		return currentMainPhantom == null || (this.FetterGroupId == currentMainPhantom.FetterGroupId && this.GetMonsterId(false) == currentMainPhantom.MonsterId);
 	}
 
-	// Token: 0x060126B0 RID: 75440 RVA: 0x0048A8A0 File Offset: 0x00488AA0
+	// Token: 0x0600FB62 RID: 64354 RVA: 0x00497DA8 File Offset: 0x00495FA8
 	public List<AttrListScrollData> GetPropShowAttributeList(CommonComponentDefine.EAttributeType attributeType)
 	{
 		List<AttrListScrollData> list = new List<AttrListScrollData>();
@@ -1356,52 +1355,52 @@ public abstract class PhantomDataBase
 		return list;
 	}
 
-	// Token: 0x060126B1 RID: 75441 RVA: 0x0048AA08 File Offset: 0x00488C08
+	// Token: 0x0600FB63 RID: 64355 RVA: 0x00497F10 File Offset: 0x00496110
 	protected static int? GetPropValue(IPhantomPropInfo prop, bool ifSub)
 	{
 		return prop.Value;
 	}
 
-	// Token: 0x060126B2 RID: 75442
+	// Token: 0x0600FB64 RID: 64356
 	public abstract bool IsBreach();
 
-	// Token: 0x04008B36 RID: 35638
+	// Token: 0x04008C7D RID: 35965
 	protected List<Aki.Protocol.PhantomPropInfo> PhantomMainProp = new List<Aki.Protocol.PhantomPropInfo>();
 
-	// Token: 0x04008B37 RID: 35639
+	// Token: 0x04008C7E RID: 35966
 	protected List<Aki.Protocol.PhantomPropInfo> PhantomSubProp = new List<Aki.Protocol.PhantomPropInfo>();
 
-	// Token: 0x04008B38 RID: 35640
+	// Token: 0x04008C7F RID: 35967
 	protected List<Aki.Protocol.PhantomPropInfo> UnAckSubProp = new List<Aki.Protocol.PhantomPropInfo>();
 
-	// Token: 0x04008B39 RID: 35641
+	// Token: 0x04008C80 RID: 35968
 	protected List<int> LockSubPropIndices = new List<int>();
 
-	// Token: 0x04008B3A RID: 35642
+	// Token: 0x04008C81 RID: 35969
 	protected int PhantomLevel;
 
-	// Token: 0x04008B3B RID: 35643
+	// Token: 0x04008C82 RID: 35970
 	protected int PhantomExp;
 
-	// Token: 0x04008B3C RID: 35644
+	// Token: 0x04008C83 RID: 35971
 	protected int ItemId;
 
-	// Token: 0x04008B3D RID: 35645
+	// Token: 0x04008C84 RID: 35972
 	protected int FuncValue;
 
-	// Token: 0x04008B3E RID: 35646
+	// Token: 0x04008C85 RID: 35973
 	[Nullable(2)]
 	protected PhantomPropSlot SuspendSlot;
 
-	// Token: 0x04008B3F RID: 35647
+	// Token: 0x04008C86 RID: 35974
 	private int IncrId;
 
-	// Token: 0x04008B40 RID: 35648
+	// Token: 0x04008C87 RID: 35975
 	protected int FetterGroupId;
 
-	// Token: 0x04008B41 RID: 35649
+	// Token: 0x04008C88 RID: 35976
 	private int SkinIdInternal;
 
-	// Token: 0x04008B42 RID: 35650
+	// Token: 0x04008C89 RID: 35977
 	private Aki.Config.PhantomItem? ConfigCache;
 }

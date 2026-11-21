@@ -5,16 +5,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200154B RID: 5451
-	[NullableContext(1)]
-	[Nullable(new byte[]
-	{
-		0,
-		1
-	})]
+	// Token: 0x020016A7 RID: 5799
 	public class ISkillOperationTypeConverter : JsonConverter<ISkillOperationType>
 	{
-		// Token: 0x06007B4F RID: 31567 RVA: 0x00129220 File Offset: 0x00127420
+		// Token: 0x06008223 RID: 33315 RVA: 0x001381CC File Offset: 0x001363CC
 		[return: Nullable(2)]
 		public override ISkillOperationType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
@@ -61,7 +55,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007B50 RID: 31568 RVA: 0x001292DC File Offset: 0x001274DC
+		// Token: 0x06008224 RID: 33316 RVA: 0x00138288 File Offset: 0x00136488
 		public override void Write(Utf8JsonWriter writer, ISkillOperationType value, JsonSerializerOptions options)
 		{
 			IEnableSkillOperation enableSkillOperation = value as IEnableSkillOperation;

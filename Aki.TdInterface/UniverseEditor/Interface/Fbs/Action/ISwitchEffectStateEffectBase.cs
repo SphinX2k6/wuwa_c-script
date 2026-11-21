@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200725C RID: 29276
+	// Token: 0x02007A31 RID: 31281
 	public struct ISwitchEffectStateEffectBase : IFlatbufferObject
 	{
-		// Token: 0x1700D93B RID: 55611
-		// (get) Token: 0x06033EF4 RID: 212724 RVA: 0x006FC3C0 File Offset: 0x006FA5C0
+		// Token: 0x1700E534 RID: 58676
+		// (get) Token: 0x060371F6 RID: 225782 RVA: 0x0075D720 File Offset: 0x0075B920
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033EF5 RID: 212725 RVA: 0x006FC3CD File Offset: 0x006FA5CD
+		// Token: 0x060371F7 RID: 225783 RVA: 0x0075D72D File Offset: 0x0075B92D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033EF6 RID: 212726 RVA: 0x006FC3D4 File Offset: 0x006FA5D4
+		// Token: 0x060371F8 RID: 225784 RVA: 0x0075D734 File Offset: 0x0075B934
 		public static ISwitchEffectStateEffectBase GetRootAsISwitchEffectStateEffectBase(ByteBuffer _bb)
 		{
 			return ISwitchEffectStateEffectBase.GetRootAsISwitchEffectStateEffectBase(_bb, default(ISwitchEffectStateEffectBase));
 		}
 
-		// Token: 0x06033EF7 RID: 212727 RVA: 0x006FC3F0 File Offset: 0x006FA5F0
+		// Token: 0x060371F9 RID: 225785 RVA: 0x0075D750 File Offset: 0x0075B950
 		public static ISwitchEffectStateEffectBase GetRootAsISwitchEffectStateEffectBase(ByteBuffer _bb, ISwitchEffectStateEffectBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033EF8 RID: 212728 RVA: 0x006FC40D File Offset: 0x006FA60D
+		// Token: 0x060371FA RID: 225786 RVA: 0x0075D76D File Offset: 0x0075B96D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033EF9 RID: 212729 RVA: 0x006FC41C File Offset: 0x006FA61C
+		// Token: 0x060371FB RID: 225787 RVA: 0x0075D77C File Offset: 0x0075B97C
 		public ISwitchEffectStateEffectBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D93C RID: 55612
-		// (get) Token: 0x06033EFA RID: 212730 RVA: 0x006FC42C File Offset: 0x006FA62C
+		// Token: 0x1700E535 RID: 58677
+		// (get) Token: 0x060371FC RID: 225788 RVA: 0x0075D78C File Offset: 0x0075B98C
 		public ESwitchEffectStateEffectType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033EFB RID: 212731 RVA: 0x006FC468 File Offset: 0x006FA668
+		// Token: 0x060371FD RID: 225789 RVA: 0x0075D7C8 File Offset: 0x0075B9C8
 		public static Offset<ISwitchEffectStateEffectBase> CreateISwitchEffectStateEffectBase(FlatBufferBuilder builder, ESwitchEffectStateEffectType Type = ESwitchEffectStateEffectType.ScreenEffect)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISwitchEffectStateEffectBase.EndISwitchEffectStateEffectBase(builder);
 		}
 
-		// Token: 0x06033EFC RID: 212732 RVA: 0x006FC47E File Offset: 0x006FA67E
+		// Token: 0x060371FE RID: 225790 RVA: 0x0075D7DE File Offset: 0x0075B9DE
 		public static void StartISwitchEffectStateEffectBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06033EFD RID: 212733 RVA: 0x006FC487 File Offset: 0x006FA687
+		// Token: 0x060371FF RID: 225791 RVA: 0x0075D7E7 File Offset: 0x0075B9E7
 		public static void AddType(FlatBufferBuilder builder, ESwitchEffectStateEffectType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033EFE RID: 212734 RVA: 0x006FC492 File Offset: 0x006FA692
+		// Token: 0x06037200 RID: 225792 RVA: 0x0075D7F2 File Offset: 0x0075B9F2
 		public static Offset<ISwitchEffectStateEffectBase> EndISwitchEffectStateEffectBase(FlatBufferBuilder builder)
 		{
 			return new Offset<ISwitchEffectStateEffectBase>(builder.EndTable());
 		}
 
-		// Token: 0x06033EFF RID: 212735 RVA: 0x006FC4A0 File Offset: 0x006FA6A0
+		// Token: 0x06037201 RID: 225793 RVA: 0x0075D800 File Offset: 0x0075BA00
 		public ISwitchEffectStateEffectBaseT UnPack()
 		{
 			ISwitchEffectStateEffectBaseT switchEffectStateEffectBaseT = new ISwitchEffectStateEffectBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return switchEffectStateEffectBaseT;
 		}
 
-		// Token: 0x06033F00 RID: 212736 RVA: 0x006FC4BB File Offset: 0x006FA6BB
+		// Token: 0x06037202 RID: 225794 RVA: 0x0075D81B File Offset: 0x0075BA1B
 		public void UnPackTo(ISwitchEffectStateEffectBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06033F01 RID: 212737 RVA: 0x006FC4CC File Offset: 0x006FA6CC
+		// Token: 0x06037203 RID: 225795 RVA: 0x0075D82C File Offset: 0x0075BA2C
 		public static Offset<ISwitchEffectStateEffectBase> Pack(FlatBufferBuilder builder, ISwitchEffectStateEffectBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISwitchEffectStateEffectBase.CreateISwitchEffectStateEffectBase(builder, _o.Type);
 		}
 
-		// Token: 0x04011D55 RID: 73045
+		// Token: 0x04012D57 RID: 77143
 		private Table __p;
 	}
 }

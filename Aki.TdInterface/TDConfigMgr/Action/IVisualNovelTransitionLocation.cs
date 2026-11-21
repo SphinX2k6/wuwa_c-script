@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020A9 RID: 8361
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022FE RID: 8958
 	public class IVisualNovelTransitionLocation : IVisualNovelTransitionConfigBase
 	{
-		// Token: 0x0600B7E4 RID: 47076 RVA: 0x001A9E70 File Offset: 0x001A8070
+		// Token: 0x0600C33C RID: 49980 RVA: 0x001C0AB8 File Offset: 0x001BECB8
 		private IVisualNovelTransitionLocation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B7E5 RID: 47077 RVA: 0x001A9EA8 File Offset: 0x001A80A8
+		// Token: 0x0600C33D RID: 49981 RVA: 0x001C0AF0 File Offset: 0x001BECF0
 		public static IVisualNovelTransitionLocation Create([Nullable(2)] IVisualNovelTransitionLocation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B7E6 RID: 47078 RVA: 0x001A9EBB File Offset: 0x001A80BB
+		// Token: 0x0600C33E RID: 49982 RVA: 0x001C0B03 File Offset: 0x001BED03
 		public static IVisualNovelTransitionLocation CreateFromSetValue([Nullable(2)] IVisualNovelTransitionLocation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B7E7 RID: 47079 RVA: 0x001A9ECE File Offset: 0x001A80CE
+		// Token: 0x0600C33F RID: 49983 RVA: 0x001C0B16 File Offset: 0x001BED16
 		public new IVisualNovelTransitionLocation_SetValue ToSetValue()
 		{
 			return new IVisualNovelTransitionLocation_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700384D RID: 14413
-		// (get) Token: 0x0600B7E8 RID: 47080 RVA: 0x001A9EF9 File Offset: 0x001A80F9
-		// (set) Token: 0x0600B7E9 RID: 47081 RVA: 0x001A9F24 File Offset: 0x001A8124
+		// Token: 0x17003B31 RID: 15153
+		// (get) Token: 0x0600C340 RID: 49984 RVA: 0x001C0B41 File Offset: 0x001BED41
+		// (set) Token: 0x0600C341 RID: 49985 RVA: 0x001C0B6C File Offset: 0x001BED6C
 		public override EVisualNovelTransitionType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700384E RID: 14414
-		// (get) Token: 0x0600B7EA RID: 47082 RVA: 0x001A9F32 File Offset: 0x001A8132
-		// (set) Token: 0x0600B7EB RID: 47083 RVA: 0x001A9F5D File Offset: 0x001A815D
+		// Token: 0x17003B32 RID: 15154
+		// (get) Token: 0x0600C342 RID: 49986 RVA: 0x001C0B7A File Offset: 0x001BED7A
+		// (set) Token: 0x0600C343 RID: 49987 RVA: 0x001C0BA5 File Offset: 0x001BEDA5
 		public virtual int LocationId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700384F RID: 14415
-		// (get) Token: 0x0600B7EC RID: 47084 RVA: 0x001A9F6C File Offset: 0x001A816C
-		// (set) Token: 0x0600B7ED RID: 47085 RVA: 0x001A9FA6 File Offset: 0x001A81A6
+		// Token: 0x17003B33 RID: 15155
+		// (get) Token: 0x0600C344 RID: 49988 RVA: 0x001C0BB4 File Offset: 0x001BEDB4
+		// (set) Token: 0x0600C345 RID: 49989 RVA: 0x001C0BEE File Offset: 0x001BEDEE
 		public virtual int? TransitionBackgroundId
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E52 RID: 28242
+		// Token: 0x04007470 RID: 29808
 		[Nullable(2)]
 		protected new IVisualNovelTransitionLocation FbInstance;
 
-		// Token: 0x04006E53 RID: 28243
+		// Token: 0x04007471 RID: 29809
 		[Nullable(2)]
 		protected new IVisualNovelTransitionLocation_SetValue PocoInterface;
 	}

@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E48 RID: 7752
+// Token: 0x0200130A RID: 4874
 internal class WeaponHandBookTitleItem : UiPanelBase
 {
-	// Token: 0x0600EBC1 RID: 60353 RVA: 0x0037F262 File Offset: 0x0037D462
+	// Token: 0x0600BFE0 RID: 49120 RVA: 0x0038AEF2 File Offset: 0x003890F2
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,7 +16,7 @@ internal class WeaponHandBookTitleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600EBC2 RID: 60354 RVA: 0x0037F285 File Offset: 0x0037D485
+	// Token: 0x0600BFE1 RID: 49121 RVA: 0x0038AF15 File Offset: 0x00389115
 	[NullableContext(1)]
 	public void Update(string titleText)
 	{
@@ -28,10 +28,10 @@ internal class WeaponHandBookTitleItem : UiPanelBase
 		text.SetText(titleText, true);
 	}
 
-	// Token: 0x020083FA RID: 33786
+	// Token: 0x0200757F RID: 30079
 	private class EWeaponHandBookTitleItemDefine
 	{
-		// Token: 0x0402AF61 RID: 175969
+		// Token: 0x04026285 RID: 156293
 		public const int TitleText = 0;
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000203 RID: 515
+	// Token: 0x02000215 RID: 533
 	public class ConfigDeviceInfoAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000C15 RID: 3093 RVA: 0x0009DF98 File Offset: 0x0009C198
+		// Token: 0x06000C81 RID: 3201 RVA: 0x000A3ED0 File Offset: 0x000A20D0
 		static ConfigDeviceInfoAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDeviceInfoAll.CreateStaticDefaultValue), new Action(ConfigDeviceInfoAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C16 RID: 3094 RVA: 0x0009DFB8 File Offset: 0x0009C1B8
+		// Token: 0x06000C82 RID: 3202 RVA: 0x000A3EF0 File Offset: 0x000A20F0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDeviceInfoAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000C17 RID: 3095 RVA: 0x0009E037 File Offset: 0x0009C237
+		// Token: 0x06000C83 RID: 3203 RVA: 0x000A3F6F File Offset: 0x000A216F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDeviceInfoAll.LogPair = null;
 			ConfigDeviceInfoAll.HandleId = 0;
 		}
 
-		// Token: 0x06000C18 RID: 3096 RVA: 0x0009E045 File Offset: 0x0009C245
+		// Token: 0x06000C84 RID: 3204 RVA: 0x000A3F7D File Offset: 0x000A217D
 		public static void Init()
 		{
 			ConfigDeviceInfoAll.HandleId = ConfigCommon.InitDataStatement(ConfigDeviceInfoAll.HandleId, "db_menu.db", "select BinData from `DeviceInfo`");
 		}
 
-		// Token: 0x06000C19 RID: 3097 RVA: 0x0009E060 File Offset: 0x0009C260
+		// Token: 0x06000C85 RID: 3205 RVA: 0x000A3F98 File Offset: 0x000A2198
 		[NullableContext(2)]
 		public static IReadOnlyList<DeviceInfo> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000DF9 RID: 3577
+		// Token: 0x04000E77 RID: 3703
 		private const string DB = "db_menu.db";
 
-		// Token: 0x04000DFA RID: 3578
+		// Token: 0x04000E78 RID: 3704
 		private const string FILE = "s.设置系统.xlsx";
 
-		// Token: 0x04000DFB RID: 3579
+		// Token: 0x04000E79 RID: 3705
 		private const string TABLE = "DeviceInfo";
 
-		// Token: 0x04000DFC RID: 3580
+		// Token: 0x04000E7A RID: 3706
 		private const string COMMAND = "select BinData from `DeviceInfo`";
 
-		// Token: 0x04000DFD RID: 3581
+		// Token: 0x04000E7B RID: 3707
 		private const string KEY_PREFIX = "DeviceInfoAll";
 
-		// Token: 0x04000DFE RID: 3582
+		// Token: 0x04000E7C RID: 3708
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000DFF RID: 3583
+		// Token: 0x04000E7D RID: 3709
 		private static int HandleId;
 	}
 }

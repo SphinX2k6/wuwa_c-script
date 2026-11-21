@@ -4,12 +4,12 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x0200319F RID: 12703
+// Token: 0x0200270D RID: 9997
 [NullableContext(1)]
 [Nullable(0)]
 public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 {
-	// Token: 0x0601B5D1 RID: 112081 RVA: 0x0077A7C8 File Offset: 0x007789C8
+	// Token: 0x060190F1 RID: 102641 RVA: 0x007A2A54 File Offset: 0x007A0C54
 	public override void OnStart()
 	{
 		base.OnStart();
@@ -32,7 +32,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x0601B5D2 RID: 112082 RVA: 0x0077A8B1 File Offset: 0x00778AB1
+	// Token: 0x060190F2 RID: 102642 RVA: 0x007A2B3D File Offset: 0x007A0D3D
 	public override void OnActivate()
 	{
 		base.OnActivate();
@@ -42,7 +42,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x0601B5D3 RID: 112083 RVA: 0x0077A8C7 File Offset: 0x00778AC7
+	// Token: 0x060190F3 RID: 102643 RVA: 0x007A2B53 File Offset: 0x007A0D53
 	public override void OnEnable()
 	{
 		base.OnEnable();
@@ -53,7 +53,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x0601B5D4 RID: 112084 RVA: 0x0077A8E4 File Offset: 0x00778AE4
+	// Token: 0x060190F4 RID: 102644 RVA: 0x007A2B70 File Offset: 0x007A0D70
 	public override void OnDisable()
 	{
 		this.MoveInputEnabled = false;
@@ -68,7 +68,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		base.OnDisable();
 	}
 
-	// Token: 0x0601B5D5 RID: 112085 RVA: 0x0077A910 File Offset: 0x00778B10
+	// Token: 0x060190F5 RID: 102645 RVA: 0x007A2B9C File Offset: 0x007A0D9C
 	public override void OnEnd()
 	{
 		this.MoveInputEnabled = false;
@@ -91,7 +91,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		base.OnEnd();
 	}
 
-	// Token: 0x0601B5D6 RID: 112086 RVA: 0x0077A9BD File Offset: 0x00778BBD
+	// Token: 0x060190F6 RID: 102646 RVA: 0x007A2C49 File Offset: 0x007A0E49
 	public override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -101,7 +101,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x0601B5D7 RID: 112087 RVA: 0x0077A9D4 File Offset: 0x00778BD4
+	// Token: 0x060190F7 RID: 102647 RVA: 0x007A2C60 File Offset: 0x007A0E60
 	protected override void OnBeforeResetMorph()
 	{
 		CharacterMorphComponent morphComp = this.MorphComp;
@@ -116,8 +116,8 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x170025D3 RID: 9683
-	// (get) Token: 0x0601B5D8 RID: 112088 RVA: 0x0077AA20 File Offset: 0x00778C20
+	// Token: 0x170027C4 RID: 10180
+	// (get) Token: 0x060190F8 RID: 102648 RVA: 0x007A2CAC File Offset: 0x007A0EAC
 	protected override string MorphBuffsConfigKey
 	{
 		get
@@ -126,8 +126,8 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x170025D4 RID: 9684
-	// (get) Token: 0x0601B5D9 RID: 112089 RVA: 0x0077AA27 File Offset: 0x00778C27
+	// Token: 0x170027C5 RID: 10181
+	// (get) Token: 0x060190F9 RID: 102649 RVA: 0x007A2CB3 File Offset: 0x007A0EB3
 	protected override string MorphCueIdConfigKey
 	{
 		get
@@ -136,8 +136,8 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x170025D5 RID: 9685
-	// (get) Token: 0x0601B5DA RID: 112090 RVA: 0x0077AA2E File Offset: 0x00778C2E
+	// Token: 0x170027C6 RID: 10182
+	// (get) Token: 0x060190FA RID: 102650 RVA: 0x007A2CBA File Offset: 0x007A0EBA
 	protected override string ResetMorphSkillsConfigKey
 	{
 		get
@@ -146,8 +146,8 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x170025D6 RID: 9686
-	// (get) Token: 0x0601B5DB RID: 112091 RVA: 0x0077AA35 File Offset: 0x00778C35
+	// Token: 0x170027C7 RID: 10183
+	// (get) Token: 0x060190FB RID: 102651 RVA: 0x007A2CC1 File Offset: 0x007A0EC1
 	protected override string NotResetMorphSkillsConfigKey
 	{
 		get
@@ -156,8 +156,8 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x170025D7 RID: 9687
-	// (get) Token: 0x0601B5DC RID: 112092 RVA: 0x0077AA3C File Offset: 0x00778C3C
+	// Token: 0x170027C8 RID: 10184
+	// (get) Token: 0x060190FC RID: 102652 RVA: 0x007A2CC8 File Offset: 0x007A0EC8
 	protected override string ChangeRoleResetMorphTagsConfigKey
 	{
 		get
@@ -166,7 +166,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x0601B5DD RID: 112093 RVA: 0x0077AA43 File Offset: 0x00778C43
+	// Token: 0x060190FD RID: 102653 RVA: 0x007A2CCF File Offset: 0x007A0ECF
 	protected override string GetSubMeshConfigKey(EMorphType morphType)
 	{
 		if (morphType == EMorphType.默认形态)
@@ -180,7 +180,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		return "XinyuehuMorph1SubMeshList";
 	}
 
-	// Token: 0x0601B5DE RID: 112094 RVA: 0x0077AA5F File Offset: 0x00778C5F
+	// Token: 0x060190FE RID: 102654 RVA: 0x007A2CEB File Offset: 0x007A0EEB
 	private void OnBeforeBeCaught(int catcherId)
 	{
 		CharacterMorphComponent morphComp = this.MorphComp;
@@ -190,7 +190,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x0601B5DF RID: 112095 RVA: 0x0077AA7F File Offset: 0x00778C7F
+	// Token: 0x060190FF RID: 102655 RVA: 0x007A2D0B File Offset: 0x007A0F0B
 	private void OnMorphFoxTagChanged(int tagId, bool tagExist)
 	{
 		if (tagExist)
@@ -201,7 +201,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		this.ExitFoxMovement();
 	}
 
-	// Token: 0x0601B5E0 RID: 112096 RVA: 0x0077AA91 File Offset: 0x00778C91
+	// Token: 0x06019100 RID: 102656 RVA: 0x007A2D1D File Offset: 0x007A0F1D
 	private void EnterFoxMovement()
 	{
 		if (this.FoxMoveActive)
@@ -214,7 +214,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		this.RefreshMovementState();
 	}
 
-	// Token: 0x0601B5E1 RID: 112097 RVA: 0x0077AACC File Offset: 0x00778CCC
+	// Token: 0x06019101 RID: 102657 RVA: 0x007A2D58 File Offset: 0x007A0F58
 	private void ExitFoxMovement()
 	{
 		if (!this.FoxMoveActive)
@@ -242,7 +242,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		this.ResetSpeedReduction();
 	}
 
-	// Token: 0x0601B5E2 RID: 112098 RVA: 0x0077AB70 File Offset: 0x00778D70
+	// Token: 0x06019102 RID: 102658 RVA: 0x007A2DFC File Offset: 0x007A0FFC
 	private void TickSpeedReduceByAngle()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -306,7 +306,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		this.ResetSpeedReduction();
 	}
 
-	// Token: 0x0601B5E3 RID: 112099 RVA: 0x0077AD1C File Offset: 0x00778F1C
+	// Token: 0x06019103 RID: 102659 RVA: 0x007A2FA8 File Offset: 0x007A11A8
 	private void ResetSpeedReduction()
 	{
 		this.SpeedRatioByAngle = 1f;
@@ -324,7 +324,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		baseMoveComponent2.ResetMaxSpeed((stateComp != null) ? new ECharMoveState?(stateComp.MoveState) : null);
 	}
 
-	// Token: 0x0601B5E4 RID: 112100 RVA: 0x0077AD8C File Offset: 0x00778F8C
+	// Token: 0x06019104 RID: 102660 RVA: 0x007A3018 File Offset: 0x007A1218
 	private float? GetBaseSpeed()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -355,7 +355,7 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		return new float?(smovementSetting2.SprintSpeed);
 	}
 
-	// Token: 0x0601B5E5 RID: 112101 RVA: 0x0077AE0C File Offset: 0x0077900C
+	// Token: 0x06019105 RID: 102661 RVA: 0x007A3098 File Offset: 0x007A1298
 	private void RefreshMovementState()
 	{
 		if (!this.FoxMoveActive)
@@ -446,26 +446,26 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x0601B5E6 RID: 112102 RVA: 0x0077B070 File Offset: 0x00779270
+	// Token: 0x06019106 RID: 102662 RVA: 0x007A32FC File Offset: 0x007A14FC
 	private void RefreshMovementStateTagCallback(int tagId, bool tagExist)
 	{
 		this.RefreshMovementState();
 	}
 
-	// Token: 0x0601B5E7 RID: 112103 RVA: 0x0077B078 File Offset: 0x00779278
+	// Token: 0x06019107 RID: 102663 RVA: 0x007A3304 File Offset: 0x007A1504
 	private void OnWalkRunChanged(bool lastIsWalk, bool isWalk, bool showUi)
 	{
 		this.RefreshMovementState();
 	}
 
-	// Token: 0x0601B5E8 RID: 112104 RVA: 0x0077B080 File Offset: 0x00779280
+	// Token: 0x06019108 RID: 102664 RVA: 0x007A330C File Offset: 0x007A150C
 	private void RegisterFoxMovementTagListeners()
 	{
 		BaseTagComponent tagComp = this.TagComp;
 		this.TurnTagListener = ((tagComp != null) ? tagComp.ListenForTagAddOrRemove(new int?(GameplayTagDefine.EGameplayTagId["幻象.声骸角色.小狐狸.状态.转身中"]), new BaseTagComponent.TTagSwitchedCallback(this.RefreshMovementStateTagCallback), null) : null);
 	}
 
-	// Token: 0x0601B5E9 RID: 112105 RVA: 0x0077B0BC File Offset: 0x007792BC
+	// Token: 0x06019109 RID: 102665 RVA: 0x007A3348 File Offset: 0x007A1548
 	private void UnregisterFoxMovementTagListeners()
 	{
 		BaseTagComponent tagComp = this.TagComp;
@@ -481,52 +481,52 @@ public class SpecialSkillXinyuehu : SpecialSkillMorphBase
 		this.TurnTagListener = null;
 	}
 
-	// Token: 0x0601B5EA RID: 112106 RVA: 0x0077B10D File Offset: 0x0077930D
+	// Token: 0x0601910A RID: 102666 RVA: 0x007A3399 File Offset: 0x007A1599
 	public SpecialSkillXinyuehu(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0400D64A RID: 54858
+	// Token: 0x0400DACD RID: 56013
 	private const float SPEED_REDUCE_ANGLE_THRESHOLD = 60f;
 
-	// Token: 0x0400D64B RID: 54859
+	// Token: 0x0400DACE RID: 56014
 	private const float SPEED_REDUCE_MIN_RATIO = 0.3f;
 
-	// Token: 0x0400D64C RID: 54860
+	// Token: 0x0400DACF RID: 56015
 	private const float SPEED_REDUCE_INTERP_SPEED = 5f;
 
-	// Token: 0x0400D64D RID: 54861
+	// Token: 0x0400DAD0 RID: 56016
 	private const long MORPH_RING_CUE_ID = 1311200001L;
 
-	// Token: 0x0400D64E RID: 54862
+	// Token: 0x0400DAD1 RID: 56017
 	[Nullable(2)]
 	private CharacterInputComponent InputComp;
 
-	// Token: 0x0400D64F RID: 54863
+	// Token: 0x0400DAD2 RID: 56018
 	private bool MoveInputEnabled = true;
 
-	// Token: 0x0400D650 RID: 54864
+	// Token: 0x0400DAD3 RID: 56019
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent StateComp;
 
-	// Token: 0x0400D651 RID: 54865
+	// Token: 0x0400DAD4 RID: 56020
 	[Nullable(2)]
 	private CharacterAnimationComponent CharAnimComp;
 
-	// Token: 0x0400D652 RID: 54866
+	// Token: 0x0400DAD5 RID: 56021
 	private bool FoxMoveActive;
 
-	// Token: 0x0400D653 RID: 54867
+	// Token: 0x0400DAD6 RID: 56022
 	private float SpeedRatioByAngle = 1f;
 
-	// Token: 0x0400D654 RID: 54868
+	// Token: 0x0400DAD7 RID: 56023
 	private bool HasSpeedReductionOverride;
 
-	// Token: 0x0400D655 RID: 54869
+	// Token: 0x0400DAD8 RID: 56024
 	[Nullable(2)]
 	private ITagTask MorphFoxTagListener;
 
-	// Token: 0x0400D656 RID: 54870
+	// Token: 0x0400DAD9 RID: 56025
 	[Nullable(2)]
 	private ITagTask TurnTagListener;
 }

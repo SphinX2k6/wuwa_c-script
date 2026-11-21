@@ -3,52 +3,52 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.HonamiStory;
 using UnrealEngine;
 
-// Token: 0x02001ED5 RID: 7893
+// Token: 0x02001397 RID: 5015
 [NullableContext(2)]
 public interface IHonamiStoryMainButtonConfig
 {
-	// Token: 0x170012EF RID: 4847
-	// (get) Token: 0x0600F2A8 RID: 62120
-	// (set) Token: 0x0600F2A9 RID: 62121
+	// Token: 0x17001319 RID: 4889
+	// (get) Token: 0x0600C6C7 RID: 50887
+	// (set) Token: 0x0600C6C8 RID: 50888
 	EHonamiStoryMainButtonFunctionType Type { get; set; }
 
-	// Token: 0x170012F0 RID: 4848
-	// (get) Token: 0x0600F2AA RID: 62122
-	// (set) Token: 0x0600F2AB RID: 62123
+	// Token: 0x1700131A RID: 4890
+	// (get) Token: 0x0600C6C9 RID: 50889
+	// (set) Token: 0x0600C6CA RID: 50890
 	EHonamiStoryMainComponent ComponentId { get; set; }
 
-	// Token: 0x170012F1 RID: 4849
-	// (get) Token: 0x0600F2AC RID: 62124
-	// (set) Token: 0x0600F2AD RID: 62125
+	// Token: 0x1700131B RID: 4891
+	// (get) Token: 0x0600C6CB RID: 50891
+	// (set) Token: 0x0600C6CC RID: 50892
 	EFunctionType? FunctionId { get; set; }
 
-	// Token: 0x170012F2 RID: 4850
-	// (get) Token: 0x0600F2AE RID: 62126
-	// (set) Token: 0x0600F2AF RID: 62127
+	// Token: 0x1700131C RID: 4892
+	// (get) Token: 0x0600C6CD RID: 50893
+	// (set) Token: 0x0600C6CE RID: 50894
 	Func<bool> ShowRedDot { get; set; }
 
-	// Token: 0x170012F3 RID: 4851
-	// (get) Token: 0x0600F2B0 RID: 62128
-	// (set) Token: 0x0600F2B1 RID: 62129
+	// Token: 0x1700131D RID: 4893
+	// (get) Token: 0x0600C6CF RID: 50895
+	// (set) Token: 0x0600C6D0 RID: 50896
 	Action<UUIText> SetTextCallback { get; set; }
 
-	// Token: 0x170012F4 RID: 4852
-	// (get) Token: 0x0600F2B2 RID: 62130
-	// (set) Token: 0x0600F2B3 RID: 62131
+	// Token: 0x1700131E RID: 4894
+	// (get) Token: 0x0600C6D1 RID: 50897
+	// (set) Token: 0x0600C6D2 RID: 50898
 	Action OnClickCallback { get; set; }
 
-	// Token: 0x170012F5 RID: 4853
-	// (get) Token: 0x0600F2B4 RID: 62132
-	// (set) Token: 0x0600F2B5 RID: 62133
+	// Token: 0x1700131F RID: 4895
+	// (get) Token: 0x0600C6D3 RID: 50899
+	// (set) Token: 0x0600C6D4 RID: 50900
 	Func<bool> ShowCallback { get; set; }
 
-	// Token: 0x170012F6 RID: 4854
-	// (get) Token: 0x0600F2B6 RID: 62134
-	// (set) Token: 0x0600F2B7 RID: 62135
+	// Token: 0x17001320 RID: 4896
+	// (get) Token: 0x0600C6D5 RID: 50901
+	// (set) Token: 0x0600C6D6 RID: 50902
 	string SpecialSequenceName { get; set; }
 
-	// Token: 0x170012F7 RID: 4855
-	// (get) Token: 0x0600F2B8 RID: 62136
-	// (set) Token: 0x0600F2B9 RID: 62137
+	// Token: 0x17001321 RID: 4897
+	// (get) Token: 0x0600C6D7 RID: 50903
+	// (set) Token: 0x0600C6D8 RID: 50904
 	string SpecialParamName { get; set; }
 }

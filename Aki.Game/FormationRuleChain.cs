@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001BBC RID: 7100
+// Token: 0x0200107B RID: 4219
 [NullableContext(1)]
 [Nullable(0)]
 public class FormationRuleChain
 {
-	// Token: 0x0600D3A4 RID: 54180 RVA: 0x0030A962 File Offset: 0x00308B62
+	// Token: 0x0600A7B6 RID: 42934 RVA: 0x00315A56 File Offset: 0x00313C56
 	public FormationRuleChain(IReadOnlyList<Func<TRuleResult>> rules)
 	{
 		this.Rules = rules;
 	}
 
-	// Token: 0x0600D3A5 RID: 54181 RVA: 0x0030A97C File Offset: 0x00308B7C
+	// Token: 0x0600A7B7 RID: 42935 RVA: 0x00315A70 File Offset: 0x00313C70
 	public EOpenViewBlockReason Run()
 	{
 		foreach (Func<TRuleResult> func in this.Rules)
@@ -27,6 +27,6 @@ public class FormationRuleChain
 		return EOpenViewBlockReason.None;
 	}
 
-	// Token: 0x040060CC RID: 24780
+	// Token: 0x0400619B RID: 24987
 	private readonly IReadOnlyList<Func<TRuleResult>> Rules = new List<Func<TRuleResult>>();
 }

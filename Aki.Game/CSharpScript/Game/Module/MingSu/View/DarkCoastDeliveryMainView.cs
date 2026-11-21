@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MingSu.View
 {
-	// Token: 0x020053DB RID: 21467
+	// Token: 0x020043BE RID: 17342
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DarkCoastDeliveryMainView : UiViewBase
 	{
-		// Token: 0x06036DDF RID: 224735 RVA: 0x00CFE6B7 File Offset: 0x00CFC8B7
+		// Token: 0x0602BD26 RID: 179494 RVA: 0x00C4D787 File Offset: 0x00C4B987
 		public DarkCoastDeliveryMainView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036DE0 RID: 224736 RVA: 0x00CFE6E4 File Offset: 0x00CFC8E4
+		// Token: 0x0602BD27 RID: 179495 RVA: 0x00C4D7B4 File Offset: 0x00C4B9B4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			};
 		}
 
-		// Token: 0x06036DE1 RID: 224737 RVA: 0x00CFE9FC File Offset: 0x00CFCBFC
+		// Token: 0x0602BD28 RID: 179496 RVA: 0x00C4DACC File Offset: 0x00C4BCCC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DarkCoastDeliveryMainView.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036DE2 RID: 224738 RVA: 0x00CFEA40 File Offset: 0x00CFCC40
+		// Token: 0x0602BD29 RID: 179497 RVA: 0x00C4DB10 File Offset: 0x00C4BD10
 		private void InitLineItemList()
 		{
 			this.GrayLineItemList = new List<UUIItem>();
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			}
 		}
 
-		// Token: 0x06036DE3 RID: 224739 RVA: 0x00CFEA9C File Offset: 0x00CFCC9C
+		// Token: 0x0602BD2A RID: 179498 RVA: 0x00C4DB6C File Offset: 0x00C4BD6C
 		private UniTask InitLevelItemList()
 		{
 			DarkCoastDeliveryMainView.<InitLevelItemList>d__19 <InitLevelItemList>d__;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			return <InitLevelItemList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036DE4 RID: 224740 RVA: 0x00CFEAE0 File Offset: 0x00CFCCE0
+		// Token: 0x0602BD2B RID: 179499 RVA: 0x00C4DBB0 File Offset: 0x00C4BDB0
 		private UniTask InitLevelItem(DarkCoastDeliveryLevelItem levelItem, UUIItem item)
 		{
 			DarkCoastDeliveryMainView.<InitLevelItem>d__20 <InitLevelItem>d__;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			return <InitLevelItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036DE5 RID: 224741 RVA: 0x00CFEB2C File Offset: 0x00CFCD2C
+		// Token: 0x0602BD2C RID: 179500 RVA: 0x00C4DBFC File Offset: 0x00C4BDFC
 		protected override void OnBeforeShow()
 		{
 			MingSuModel.Instance.CurrentInteractCreatureDataLongId = InteractionModel.Instance.InteractCreatureDataLongId;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			this.RefreshLevelUpItemList();
 		}
 
-		// Token: 0x06036DE6 RID: 224742 RVA: 0x00CFEB78 File Offset: 0x00CFCD78
+		// Token: 0x0602BD2D RID: 179501 RVA: 0x00C4DC48 File Offset: 0x00C4BE48
 		private void RefreshUi()
 		{
 			string curLevelTexturePath = this.Data.GetCurLevelTexturePath();
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			item.SetUIActive(rewardRedDotState);
 		}
 
-		// Token: 0x06036DE7 RID: 224743 RVA: 0x00CFED48 File Offset: 0x00CFCF48
+		// Token: 0x0602BD2E RID: 179502 RVA: 0x00C4DE18 File Offset: 0x00C4C018
 		private void RefreshLevelUpItemList()
 		{
 			int dragonPoolLevel = this.Data.GetDragonPoolLevel();
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			this.PreLevel = dragonPoolLevel;
 		}
 
-		// Token: 0x06036DE8 RID: 224744 RVA: 0x00CFEDEC File Offset: 0x00CFCFEC
+		// Token: 0x0602BD2F RID: 179503 RVA: 0x00C4DEBC File Offset: 0x00C4C0BC
 		private void RefreshLevelItem(int level)
 		{
 			DarkCoastDeliveryLevelItem selectItemByLevel = this.GetSelectItemByLevel(level);
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			selectItemByLevel.PlaySequence(false);
 		}
 
-		// Token: 0x06036DE9 RID: 224745 RVA: 0x00CFEE14 File Offset: 0x00CFD014
+		// Token: 0x0602BD30 RID: 179504 RVA: 0x00C4DEE4 File Offset: 0x00C4C0E4
 		[NullableContext(2)]
 		private DarkCoastDeliveryLevelItem GetSelectItemByLevel(int level)
 		{
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			return null;
 		}
 
-		// Token: 0x06036DEA RID: 224746 RVA: 0x00CFEE58 File Offset: 0x00CFD058
+		// Token: 0x0602BD31 RID: 179505 RVA: 0x00C4DF28 File Offset: 0x00C4C128
 		private void RefreshLineItemList()
 		{
 			int dragonPoolLevel = this.Data.GetDragonPoolLevel();
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			}
 		}
 
-		// Token: 0x06036DEB RID: 224747 RVA: 0x00CFEEB4 File Offset: 0x00CFD0B4
+		// Token: 0x0602BD32 RID: 179506 RVA: 0x00C4DF84 File Offset: 0x00C4C184
 		private void SelectLevelItem(DarkCoastDeliveryLevelData data, DarkCoastDeliveryLevelItem item)
 		{
 			if (this.CurSelectLevelData == data)
@@ -263,39 +263,39 @@ namespace CSharpScript.Game.Module.MingSu.View
 			this.UiViewSequence.PlaySequence("Switch", false, null);
 		}
 
-		// Token: 0x06036DEC RID: 224748 RVA: 0x00CFEF38 File Offset: 0x00CFD138
+		// Token: 0x0602BD33 RID: 179507 RVA: 0x00C4E008 File Offset: 0x00C4C208
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.UpdateDragonPoolView, new Action(this.OnRefreshDragonPoolData));
 			EventSystem.Instance.Add<IActivityRewardViewData>(EEventName.RefreshCommonActivityRewardPopUpView, new Action<IActivityRewardViewData>(this.OnRefreshReward));
 		}
 
-		// Token: 0x06036DED RID: 224749 RVA: 0x00CFEF72 File Offset: 0x00CFD172
+		// Token: 0x0602BD34 RID: 179508 RVA: 0x00C4E042 File Offset: 0x00C4C242
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.UpdateDragonPoolView, new Action(this.OnRefreshDragonPoolData));
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRewardPopUpView, new Action<IActivityRewardViewData>(this.OnRefreshReward));
 		}
 
-		// Token: 0x06036DEE RID: 224750 RVA: 0x00CFEFAC File Offset: 0x00CFD1AC
+		// Token: 0x0602BD35 RID: 179509 RVA: 0x00C4E07C File Offset: 0x00C4C27C
 		private void OnClickCloseBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06036DEF RID: 224751 RVA: 0x00CFEFB5 File Offset: 0x00CFD1B5
+		// Token: 0x0602BD36 RID: 179510 RVA: 0x00C4E085 File Offset: 0x00C4C285
 		private void OnClickHelpBtn()
 		{
 			HelpController.Instance.OpenHelpById(113);
 		}
 
-		// Token: 0x06036DF0 RID: 224752 RVA: 0x00CFEFC3 File Offset: 0x00CFD1C3
+		// Token: 0x0602BD37 RID: 179511 RVA: 0x00C4E093 File Offset: 0x00C4C293
 		private void OnClickLevelItem(DarkCoastDeliveryLevelData data, DarkCoastDeliveryLevelItem item)
 		{
 			this.SelectLevelItem(data, item);
 		}
 
-		// Token: 0x06036DF1 RID: 224753 RVA: 0x00CFEFD0 File Offset: 0x00CFD1D0
+		// Token: 0x0602BD38 RID: 179512 RVA: 0x00C4E0A0 File Offset: 0x00C4C2A0
 		private void OnClickRewardBtn()
 		{
 			IActivityRewardViewData activityRewardViewData = this.Data.GetActivityRewardViewData();
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			});
 		}
 
-		// Token: 0x06036DF2 RID: 224754 RVA: 0x00CFF008 File Offset: 0x00CFD208
+		// Token: 0x0602BD39 RID: 179513 RVA: 0x00C4E0D8 File Offset: 0x00C4C2D8
 		private void OnClickSubmitBtn()
 		{
 			if (InventoryModel.Instance.GetItemCountByConfigId(this.Data.GetCoreId(), 0) <= 0)
@@ -321,13 +321,13 @@ namespace CSharpScript.Game.Module.MingSu.View
 			MingSuController.SendHandInMingSuRequest(this.Data.DragonPoolId);
 		}
 
-		// Token: 0x06036DF3 RID: 224755 RVA: 0x00CFF064 File Offset: 0x00CFD264
+		// Token: 0x0602BD3A RID: 179514 RVA: 0x00C4E134 File Offset: 0x00C4C334
 		private void OnClickSubmitIconBtn()
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.Data.GetCoreId(), true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.Data.GetCoreId(), true, null, false);
 		}
 
-		// Token: 0x06036DF4 RID: 224756 RVA: 0x00CFF080 File Offset: 0x00CFD280
+		// Token: 0x0602BD3B RID: 179515 RVA: 0x00C4E150 File Offset: 0x00C4C350
 		private void OnRefreshDragonPoolData()
 		{
 			int curLevel = this.Data.GetDragonPoolLevel();
@@ -349,151 +349,151 @@ namespace CSharpScript.Game.Module.MingSu.View
 			this.RefreshUi();
 		}
 
-		// Token: 0x06036DF5 RID: 224757 RVA: 0x00CFF108 File Offset: 0x00CFD308
+		// Token: 0x0602BD3C RID: 179516 RVA: 0x00C4E1D8 File Offset: 0x00C4C3D8
 		private void OnRefreshReward(IActivityRewardViewData data)
 		{
 			this.RefreshUi();
 		}
 
-		// Token: 0x0401CF3B RID: 118587
+		// Token: 0x040179D3 RID: 96723
 		private const int LINE_START_INDEX = 1;
 
-		// Token: 0x0401CF3C RID: 118588
+		// Token: 0x040179D4 RID: 96724
 		private const int LINE_COUNT = 6;
 
-		// Token: 0x0401CF3D RID: 118589
+		// Token: 0x040179D5 RID: 96725
 		private const int ITEM_START_INDEX = 13;
 
-		// Token: 0x0401CF3E RID: 118590
+		// Token: 0x040179D6 RID: 96726
 		private const int ITEM_COUNT = 5;
 
-		// Token: 0x0401CF3F RID: 118591
+		// Token: 0x040179D7 RID: 96727
 		private const int LEVEL_ITEM_SHOW_DELAY = 300;
 
-		// Token: 0x0401CF40 RID: 118592
+		// Token: 0x040179D8 RID: 96728
 		[Nullable(2)]
 		private DarkCoastDeliveryData Data;
 
-		// Token: 0x0401CF41 RID: 118593
+		// Token: 0x040179D9 RID: 96729
 		[Nullable(2)]
 		private DarkCoastDeliveryLevelData CurSelectLevelData;
 
-		// Token: 0x0401CF42 RID: 118594
+		// Token: 0x040179DA RID: 96730
 		[Nullable(2)]
 		private DarkCoastDeliveryLevelItem CurSelectLevelItem;
 
-		// Token: 0x0401CF43 RID: 118595
+		// Token: 0x040179DB RID: 96731
 		private List<UUIItem> GrayLineItemList = new List<UUIItem>();
 
-		// Token: 0x0401CF44 RID: 118596
+		// Token: 0x040179DC RID: 96732
 		private List<UUIItem> LightLineItemList = new List<UUIItem>();
 
-		// Token: 0x0401CF45 RID: 118597
+		// Token: 0x040179DD RID: 96733
 		private readonly List<DarkCoastDeliveryLevelItem> LevelItemList = new List<DarkCoastDeliveryLevelItem>();
 
-		// Token: 0x0401CF46 RID: 118598
+		// Token: 0x040179DE RID: 96734
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401CF47 RID: 118599
+		// Token: 0x040179DF RID: 96735
 		[Nullable(2)]
 		private DarkCoastDeliveryTipPanel TipPanel;
 
-		// Token: 0x0401CF48 RID: 118600
+		// Token: 0x040179E0 RID: 96736
 		private int PreLevel;
 
-		// Token: 0x0200B680 RID: 46720
+		// Token: 0x0200A0B8 RID: 41144
 		[NullableContext(0)]
 		private static class EComponent
 		{
-			// Token: 0x0403747F RID: 226431
+			// Token: 0x04031ED4 RID: 204500
 			public const int LevelTexture = 0;
 
-			// Token: 0x04037480 RID: 226432
+			// Token: 0x04031ED5 RID: 204501
 			public const int GrayLine1 = 1;
 
-			// Token: 0x04037481 RID: 226433
+			// Token: 0x04031ED6 RID: 204502
 			public const int LightLine1 = 2;
 
-			// Token: 0x04037482 RID: 226434
+			// Token: 0x04031ED7 RID: 204503
 			public const int GrayLine2 = 3;
 
-			// Token: 0x04037483 RID: 226435
+			// Token: 0x04031ED8 RID: 204504
 			public const int LightLine2 = 4;
 
-			// Token: 0x04037484 RID: 226436
+			// Token: 0x04031ED9 RID: 204505
 			public const int GrayLine3 = 5;
 
-			// Token: 0x04037485 RID: 226437
+			// Token: 0x04031EDA RID: 204506
 			public const int LightLine3 = 6;
 
-			// Token: 0x04037486 RID: 226438
+			// Token: 0x04031EDB RID: 204507
 			public const int GrayLine4 = 7;
 
-			// Token: 0x04037487 RID: 226439
+			// Token: 0x04031EDC RID: 204508
 			public const int LightLine4 = 8;
 
-			// Token: 0x04037488 RID: 226440
+			// Token: 0x04031EDD RID: 204509
 			public const int GrayLine5 = 9;
 
-			// Token: 0x04037489 RID: 226441
+			// Token: 0x04031EDE RID: 204510
 			public const int LightLine5 = 10;
 
-			// Token: 0x0403748A RID: 226442
+			// Token: 0x04031EDF RID: 204511
 			public const int GrayLine6 = 11;
 
-			// Token: 0x0403748B RID: 226443
+			// Token: 0x04031EE0 RID: 204512
 			public const int LightLine6 = 12;
 
-			// Token: 0x0403748C RID: 226444
+			// Token: 0x04031EE1 RID: 204513
 			public const int DarkCoastDeliveryItem1 = 13;
 
-			// Token: 0x0403748D RID: 226445
+			// Token: 0x04031EE2 RID: 204514
 			public const int DarkCoastDeliveryItem2 = 14;
 
-			// Token: 0x0403748E RID: 226446
+			// Token: 0x04031EE3 RID: 204515
 			public const int DarkCoastDeliveryItem3 = 15;
 
-			// Token: 0x0403748F RID: 226447
+			// Token: 0x04031EE4 RID: 204516
 			public const int DarkCoastDeliveryItem4 = 16;
 
-			// Token: 0x04037490 RID: 226448
+			// Token: 0x04031EE5 RID: 204517
 			public const int DarkCoastDeliveryItem5 = 17;
 
-			// Token: 0x04037491 RID: 226449
+			// Token: 0x04031EE6 RID: 204518
 			public const int TipPanelItem = 18;
 
-			// Token: 0x04037492 RID: 226450
+			// Token: 0x04031EE7 RID: 204519
 			public const int RewardBtn = 19;
 
-			// Token: 0x04037493 RID: 226451
+			// Token: 0x04031EE8 RID: 204520
 			public const int RewardProgressText = 20;
 
-			// Token: 0x04037494 RID: 226452
+			// Token: 0x04031EE9 RID: 204521
 			public const int OwnCountText = 21;
 
-			// Token: 0x04037495 RID: 226453
+			// Token: 0x04031EEA RID: 204522
 			public const int SubmitBtn = 22;
 
-			// Token: 0x04037496 RID: 226454
+			// Token: 0x04031EEB RID: 204523
 			public const int CaptionItem = 23;
 
-			// Token: 0x04037497 RID: 226455
+			// Token: 0x04031EEC RID: 204524
 			public const int SubmitIconBtn = 24;
 
-			// Token: 0x04037498 RID: 226456
+			// Token: 0x04031EED RID: 204525
 			public const int LevelUpRedDot = 25;
 
-			// Token: 0x04037499 RID: 226457
+			// Token: 0x04031EEE RID: 204526
 			public const int RewardRedDot = 26;
 
-			// Token: 0x0403749A RID: 226458
+			// Token: 0x04031EEF RID: 204527
 			public const int SubmitRootItem = 27;
 
-			// Token: 0x0403749B RID: 226459
+			// Token: 0x04031EF0 RID: 204528
 			public const int SubmitDoneItem = 28;
 
-			// Token: 0x0403749C RID: 226460
+			// Token: 0x04031EF1 RID: 204529
 			public const int SubLevelTexture = 29;
 		}
 	}

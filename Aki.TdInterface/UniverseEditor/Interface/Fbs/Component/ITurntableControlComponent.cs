@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AF3 RID: 23283
+	// Token: 0x02006109 RID: 24841
 	public struct ITurntableControlComponent : IFlatbufferObject
 	{
-		// Token: 0x1700AFA5 RID: 44965
-		// (get) Token: 0x06027BEC RID: 162796 RVA: 0x0057798B File Offset: 0x00575B8B
+		// Token: 0x1700B8ED RID: 47341
+		// (get) Token: 0x0602A1B0 RID: 172464 RVA: 0x005BF3DE File Offset: 0x005BD5DE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027BED RID: 162797 RVA: 0x00577998 File Offset: 0x00575B98
+		// Token: 0x0602A1B1 RID: 172465 RVA: 0x005BF3EB File Offset: 0x005BD5EB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027BEE RID: 162798 RVA: 0x005779A0 File Offset: 0x00575BA0
+		// Token: 0x0602A1B2 RID: 172466 RVA: 0x005BF3F4 File Offset: 0x005BD5F4
 		public static ITurntableControlComponent GetRootAsITurntableControlComponent(ByteBuffer _bb)
 		{
 			return ITurntableControlComponent.GetRootAsITurntableControlComponent(_bb, default(ITurntableControlComponent));
 		}
 
-		// Token: 0x06027BEF RID: 162799 RVA: 0x005779BC File Offset: 0x00575BBC
+		// Token: 0x0602A1B3 RID: 172467 RVA: 0x005BF410 File Offset: 0x005BD610
 		public static ITurntableControlComponent GetRootAsITurntableControlComponent(ByteBuffer _bb, ITurntableControlComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027BF0 RID: 162800 RVA: 0x005779D9 File Offset: 0x00575BD9
+		// Token: 0x0602A1B4 RID: 172468 RVA: 0x005BF42D File Offset: 0x005BD62D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027BF1 RID: 162801 RVA: 0x005779E8 File Offset: 0x00575BE8
+		// Token: 0x0602A1B5 RID: 172469 RVA: 0x005BF43C File Offset: 0x005BD63C
 		public ITurntableControlComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AFA6 RID: 44966
-		// (get) Token: 0x06027BF2 RID: 162802 RVA: 0x005779F8 File Offset: 0x00575BF8
+		// Token: 0x1700B8EE RID: 47342
+		// (get) Token: 0x0602A1B6 RID: 172470 RVA: 0x005BF44C File Offset: 0x005BD64C
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AFA7 RID: 44967
-		// (get) Token: 0x06027BF3 RID: 162803 RVA: 0x00577A38 File Offset: 0x00575C38
+		// Token: 0x1700B8EF RID: 47343
+		// (get) Token: 0x0602A1B7 RID: 172471 RVA: 0x005BF48C File Offset: 0x005BD68C
 		public TTurntableController ConfigType
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027BF4 RID: 162804 RVA: 0x00577A74 File Offset: 0x00575C74
+		// Token: 0x0602A1B8 RID: 172472 RVA: 0x005BF4C8 File Offset: 0x005BD6C8
 		public TTable? Config<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -84,20 +84,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06027BF5 RID: 162805 RVA: 0x00577AB8 File Offset: 0x00575CB8
+		// Token: 0x0602A1B9 RID: 172473 RVA: 0x005BF50C File Offset: 0x005BD70C
 		public IFixedAngleTurntable ConfigAsIFixedAngleTurntable()
 		{
 			return this.Config<IFixedAngleTurntable>().Value;
 		}
 
-		// Token: 0x06027BF6 RID: 162806 RVA: 0x00577AD4 File Offset: 0x00575CD4
+		// Token: 0x0602A1BA RID: 172474 RVA: 0x005BF528 File Offset: 0x005BD728
 		public IFreeAngleTurntable ConfigAsIFreeAngleTurntable()
 		{
 			return this.Config<IFreeAngleTurntable>().Value;
 		}
 
-		// Token: 0x1700AFA8 RID: 44968
-		// (get) Token: 0x06027BF7 RID: 162807 RVA: 0x00577AF0 File Offset: 0x00575CF0
+		// Token: 0x1700B8F0 RID: 47344
+		// (get) Token: 0x0602A1BB RID: 172475 RVA: 0x005BF544 File Offset: 0x005BD744
 		public byte NullMask
 		{
 			get
@@ -111,7 +111,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027BF8 RID: 162808 RVA: 0x00577B2D File Offset: 0x00575D2D
+		// Token: 0x0602A1BC RID: 172476 RVA: 0x005BF581 File Offset: 0x005BD781
 		public static Offset<ITurntableControlComponent> CreateITurntableControlComponent(FlatBufferBuilder builder, bool Disabled = false, TTurntableController Config_type = TTurntableController.NONE, int ConfigOffset = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -122,43 +122,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITurntableControlComponent.EndITurntableControlComponent(builder);
 		}
 
-		// Token: 0x06027BF9 RID: 162809 RVA: 0x00577B59 File Offset: 0x00575D59
+		// Token: 0x0602A1BD RID: 172477 RVA: 0x005BF5AD File Offset: 0x005BD7AD
 		public static void StartITurntableControlComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06027BFA RID: 162810 RVA: 0x00577B62 File Offset: 0x00575D62
+		// Token: 0x0602A1BE RID: 172478 RVA: 0x005BF5B6 File Offset: 0x005BD7B6
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06027BFB RID: 162811 RVA: 0x00577B6D File Offset: 0x00575D6D
+		// Token: 0x0602A1BF RID: 172479 RVA: 0x005BF5C1 File Offset: 0x005BD7C1
 		public static void AddConfigType(FlatBufferBuilder builder, TTurntableController configType)
 		{
 			builder.AddByte(1, (byte)configType, 0);
 		}
 
-		// Token: 0x06027BFC RID: 162812 RVA: 0x00577B78 File Offset: 0x00575D78
+		// Token: 0x0602A1C0 RID: 172480 RVA: 0x005BF5CC File Offset: 0x005BD7CC
 		public static void AddConfig(FlatBufferBuilder builder, int configOffset)
 		{
 			builder.AddOffset(2, configOffset, 0);
 		}
 
-		// Token: 0x06027BFD RID: 162813 RVA: 0x00577B83 File Offset: 0x00575D83
+		// Token: 0x0602A1C1 RID: 172481 RVA: 0x005BF5D7 File Offset: 0x005BD7D7
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06027BFE RID: 162814 RVA: 0x00577B8E File Offset: 0x00575D8E
+		// Token: 0x0602A1C2 RID: 172482 RVA: 0x005BF5E2 File Offset: 0x005BD7E2
 		public static Offset<ITurntableControlComponent> EndITurntableControlComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ITurntableControlComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06027BFF RID: 162815 RVA: 0x00577B9C File Offset: 0x00575D9C
+		// Token: 0x0602A1C3 RID: 172483 RVA: 0x005BF5F0 File Offset: 0x005BD7F0
 		public ITurntableControlComponentT UnPack()
 		{
 			ITurntableControlComponentT turntableControlComponentT = new ITurntableControlComponentT();
@@ -166,7 +166,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return turntableControlComponentT;
 		}
 
-		// Token: 0x06027C00 RID: 162816 RVA: 0x00577BB8 File Offset: 0x00575DB8
+		// Token: 0x0602A1C4 RID: 172484 RVA: 0x005BF60C File Offset: 0x005BD80C
 		public void UnPackTo(ITurntableControlComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06027C01 RID: 162817 RVA: 0x00577C78 File Offset: 0x00575E78
+		// Token: 0x0602A1C5 RID: 172485 RVA: 0x005BF6CC File Offset: 0x005BD8CC
 		public static Offset<ITurntableControlComponent> Pack(FlatBufferBuilder builder, ITurntableControlComponentT _o)
 		{
 			if (_o == null)
@@ -199,7 +199,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITurntableControlComponent.CreateITurntableControlComponent(builder, _o.Disabled, config_type, configOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400F1ED RID: 61933
+		// Token: 0x0400FEF3 RID: 65267
 		private Table __p;
 	}
 }

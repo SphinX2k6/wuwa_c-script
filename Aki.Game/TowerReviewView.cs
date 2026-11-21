@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,16 +10,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C03 RID: 11267
+// Token: 0x0200217E RID: 8574
 public class TowerReviewView : UiViewBase
 {
-	// Token: 0x0601766A RID: 95850 RVA: 0x005F53F0 File Offset: 0x005F35F0
+	// Token: 0x0601509B RID: 86171 RVA: 0x00621F18 File Offset: 0x00620118
 	[NullableContext(1)]
 	public TowerReviewView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601766B RID: 95851 RVA: 0x005F53FC File Offset: 0x005F35FC
+	// Token: 0x0601509C RID: 86172 RVA: 0x00621F24 File Offset: 0x00620124
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -38,7 +37,7 @@ public class TowerReviewView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601766C RID: 95852 RVA: 0x005F54A8 File Offset: 0x005F36A8
+	// Token: 0x0601509D RID: 86173 RVA: 0x00621FD0 File Offset: 0x006201D0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TowerReviewView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -49,14 +48,14 @@ public class TowerReviewView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601766D RID: 95853 RVA: 0x005F54EB File Offset: 0x005F36EB
+	// Token: 0x0601509E RID: 86174 RVA: 0x00622013 File Offset: 0x00620213
 	protected override void OnStart()
 	{
 		this.AreaLayout = new GenericLayout<TowerReviewItem, int>(base.GetVerticalLayout(1), new Func<TowerReviewItem>(this.RefreshItem), null, false, true);
 		this.RefreshView();
 	}
 
-	// Token: 0x0601766E RID: 95854 RVA: 0x005F5514 File Offset: 0x005F3714
+	// Token: 0x0601509F RID: 86175 RVA: 0x0062203C File Offset: 0x0062023C
 	protected override void OnBeforeDestroy()
 	{
 		this.AreaLayout = null;
@@ -66,7 +65,7 @@ public class TowerReviewView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601766F RID: 95855 RVA: 0x005F5538 File Offset: 0x005F3738
+	// Token: 0x060150A0 RID: 86176 RVA: 0x00622060 File Offset: 0x00620260
 	private void RefreshView()
 	{
 		int difficulty = 3;
@@ -75,7 +74,7 @@ public class TowerReviewView : UiViewBase
 		{
 			return;
 		}
-		this.AreaLayout.RefreshByData(difficultyAllAreaFirstFloor.ToList<int>(), null, false);
+		this.AreaLayout.RefreshByData(difficultyAllAreaFirstFloor, null, false);
 		base.GetText(2).SetText(TowerModel.Instance.GetDifficultyMaxStars(difficulty, true).ToString() + "/" + TowerModel.Instance.GetDifficultyAllStars(difficulty, true).ToString(), true);
 		this.HasQuickPass = false;
 		foreach (int floorId in TowerModel.Instance.GetDifficultyAllFloor(difficulty))
@@ -110,25 +109,25 @@ public class TowerReviewView : UiViewBase
 		this.ConfirmBtnItem.SetLocalTextNew(textId, Array.Empty<object>());
 	}
 
-	// Token: 0x06017670 RID: 95856 RVA: 0x005F56B5 File Offset: 0x005F38B5
+	// Token: 0x060150A1 RID: 86177 RVA: 0x006221D8 File Offset: 0x006203D8
 	[NullableContext(1)]
 	private TowerReviewItem RefreshItem()
 	{
 		return new TowerReviewItem();
 	}
 
-	// Token: 0x06017671 RID: 95857 RVA: 0x005F56BC File Offset: 0x005F38BC
+	// Token: 0x060150A2 RID: 86178 RVA: 0x006221DF File Offset: 0x006203DF
 	private void OnClickConfirmBtn(int _)
 	{
 		TowerModel.Instance.ClearHandleData();
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400AF0C RID: 44812
+	// Token: 0x0400B311 RID: 45841
 	[Nullable(2)]
 	private ButtonItem ConfirmBtnItem;
 
-	// Token: 0x0400AF0D RID: 44813
+	// Token: 0x0400B312 RID: 45842
 	[Nullable(new byte[]
 	{
 		2,
@@ -136,19 +135,19 @@ public class TowerReviewView : UiViewBase
 	})]
 	private GenericLayout<TowerReviewItem, int> AreaLayout;
 
-	// Token: 0x0400AF0E RID: 44814
+	// Token: 0x0400B313 RID: 45843
 	private bool HasQuickPass;
 
-	// Token: 0x020091CA RID: 37322
+	// Token: 0x0200840D RID: 33805
 	private enum EChildType
 	{
-		// Token: 0x0402F2C0 RID: 193216
+		// Token: 0x0402A9C1 RID: 174529
 		ConfirmBtnItem,
-		// Token: 0x0402F2C1 RID: 193217
+		// Token: 0x0402A9C2 RID: 174530
 		ScrollView,
-		// Token: 0x0402F2C2 RID: 193218
+		// Token: 0x0402A9C3 RID: 174531
 		ReceivedStarText,
-		// Token: 0x0402F2C3 RID: 193219
+		// Token: 0x0402A9C4 RID: 174532
 		QuickPassTipText
 	}
 }

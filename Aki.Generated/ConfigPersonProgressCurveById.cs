@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000653 RID: 1619
+	// Token: 0x0200066B RID: 1643
 	public class ConfigPersonProgressCurveById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002602 RID: 9730 RVA: 0x001308F7 File Offset: 0x0012EAF7
+		// Token: 0x06002692 RID: 9874 RVA: 0x00137373 File Offset: 0x00135573
 		static ConfigPersonProgressCurveById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPersonProgressCurveById.CreateStaticDefaultValue), new Action(ConfigPersonProgressCurveById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002603 RID: 9731 RVA: 0x00130918 File Offset: 0x0012EB18
+		// Token: 0x06002693 RID: 9875 RVA: 0x00137394 File Offset: 0x00135594
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPersonProgressCurveById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002604 RID: 9732 RVA: 0x00130997 File Offset: 0x0012EB97
+		// Token: 0x06002694 RID: 9876 RVA: 0x00137413 File Offset: 0x00135613
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPersonProgressCurveById.LogPair = null;
 			ConfigPersonProgressCurveById.HandleId = 0;
 		}
 
-		// Token: 0x06002605 RID: 9733 RVA: 0x001309A5 File Offset: 0x0012EBA5
+		// Token: 0x06002695 RID: 9877 RVA: 0x00137421 File Offset: 0x00135621
 		public static void Init()
 		{
 			ConfigPersonProgressCurveById.HandleId = ConfigCommon.InitDataStatement(ConfigPersonProgressCurveById.HandleId, "db_anniversaryt.db", "select BinData from `PersonProgressCurve` where Id=?");
 		}
 
-		// Token: 0x06002606 RID: 9734 RVA: 0x001309C0 File Offset: 0x0012EBC0
+		// Token: 0x06002696 RID: 9878 RVA: 0x0013743C File Offset: 0x0013563C
 		public static PersonProgressCurve? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPersonProgressCurveById.HandleId, ConfigPersonProgressCurveById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PersonProgressCurve?(rootAsPersonProgressCurve);
 		}
 
-		// Token: 0x04002C2B RID: 11307
+		// Token: 0x04002CD3 RID: 11475
 		private const string DB = "db_anniversaryt.db";
 
-		// Token: 0x04002C2C RID: 11308
+		// Token: 0x04002CD4 RID: 11476
 		private const string FILE = "z.周年庆主题活动.xlsx";
 
-		// Token: 0x04002C2D RID: 11309
+		// Token: 0x04002CD5 RID: 11477
 		private const string TABLE = "PersonProgressCurve";
 
-		// Token: 0x04002C2E RID: 11310
+		// Token: 0x04002CD6 RID: 11478
 		private const string COMMAND = "select BinData from `PersonProgressCurve` where Id=?";
 
-		// Token: 0x04002C2F RID: 11311
+		// Token: 0x04002CD7 RID: 11479
 		private const string KEY_PREFIX = "PersonProgressCurveById";
 
-		// Token: 0x04002C30 RID: 11312
+		// Token: 0x04002CD8 RID: 11480
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002C31 RID: 11313
+		// Token: 0x04002CD9 RID: 11481
 		private static int HandleId;
 	}
 }

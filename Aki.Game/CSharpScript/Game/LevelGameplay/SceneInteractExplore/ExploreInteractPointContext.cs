@@ -6,12 +6,12 @@ using CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 {
-	// Token: 0x02006A92 RID: 27282
+	// Token: 0x02005BEF RID: 23535
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ExploreInteractPointContext : ExploreSkillInteractPointContextBase
 	{
-		// Token: 0x06043C97 RID: 277655 RVA: 0x01097A04 File Offset: 0x01095C04
+		// Token: 0x06039CE5 RID: 236773 RVA: 0x0103C258 File Offset: 0x0103A458
 		[NullableContext(1)]
 		public ExploreInteractPointContext(IExploreSkillInteract config, EntityHandle entityHandle) : base(config, entityHandle)
 		{
@@ -27,19 +27,19 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 			}
 		}
 
-		// Token: 0x06043C98 RID: 277656 RVA: 0x01097AB8 File Offset: 0x01095CB8
+		// Token: 0x06039CE6 RID: 236774 RVA: 0x0103C30C File Offset: 0x0103A50C
 		public override ESceneInteractPointType GetInteractPointType()
 		{
 			return ESceneInteractPointType.ExploreInteractPoint;
 		}
 
-		// Token: 0x06043C99 RID: 277657 RVA: 0x01097ABB File Offset: 0x01095CBB
+		// Token: 0x06039CE7 RID: 236775 RVA: 0x0103C30F File Offset: 0x0103A50F
 		public IIgnoresCollisionCfg GetIgnoresCollisionCfg()
 		{
 			return this.Config.IgnoresCollisionCfg;
 		}
 
-		// Token: 0x06043C9A RID: 277658 RVA: 0x01097AC8 File Offset: 0x01095CC8
+		// Token: 0x06039CE8 RID: 236776 RVA: 0x0103C31C File Offset: 0x0103A51C
 		public Vector GetRaycastDestOffset()
 		{
 			IExploreSkillInteractType option = this.Config.Option;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 			return this.TempRaycastOffset;
 		}
 
-		// Token: 0x040236B1 RID: 145073
+		// Token: 0x0401E8A3 RID: 125091
 		private Vector TempRaycastOffset;
 	}
 }

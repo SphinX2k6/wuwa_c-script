@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002DE1 RID: 11745
+// Token: 0x0200233C RID: 9020
 [NullableContext(1)]
 [Nullable(0)]
 public static class BulletHitCountUtil
 {
-	// Token: 0x06018A78 RID: 100984 RVA: 0x00651D3C File Offset: 0x0064FF3C
+	// Token: 0x06016325 RID: 90917 RVA: 0x00677E78 File Offset: 0x00676078
 	public static bool HitCountCondition(BulletInfo bulletInfo, Entity victimEntity)
 	{
 		if (bulletInfo.CountByParent && bulletInfo.ParentBulletInfo != null)
@@ -48,7 +48,7 @@ public static class BulletHitCountUtil
 		return true;
 	}
 
-	// Token: 0x06018A79 RID: 100985 RVA: 0x00651E94 File Offset: 0x00650094
+	// Token: 0x06016326 RID: 90918 RVA: 0x00677FD0 File Offset: 0x006761D0
 	public static void AddHitCount(BulletInfo bulletInfo, Entity victim)
 	{
 		if (bulletInfo.CountByParent && bulletInfo.ParentBulletInfo != null)
@@ -62,7 +62,7 @@ public static class BulletHitCountUtil
 		bulletInfo.HitNumberAll++;
 	}
 
-	// Token: 0x06018A7A RID: 100986 RVA: 0x00651F08 File Offset: 0x00650108
+	// Token: 0x06016327 RID: 90919 RVA: 0x00678044 File Offset: 0x00676244
 	public static bool CheckHitCountPerVictim(BulletInfo bulletInfo, Entity victim)
 	{
 		if (bulletInfo.CountByParent && bulletInfo.ParentBulletInfo != null)
@@ -80,7 +80,7 @@ public static class BulletHitCountUtil
 		return (bulletDataMain.Base.HitCountPerVictim < 0 || valueOrDefault < bulletDataMain.Base.HitCountPerVictim) && (bulletDataMain.Base.HitCountMax <= 0 || bulletInfo.HitNumberAll < bulletDataMain.Base.HitCountMax);
 	}
 
-	// Token: 0x06018A7B RID: 100987 RVA: 0x00651FD8 File Offset: 0x006501D8
+	// Token: 0x06016328 RID: 90920 RVA: 0x00678114 File Offset: 0x00676314
 	public static bool CheckHitCountTotal(BulletInfo bulletInfo)
 	{
 		if (bulletInfo.CountByParent && bulletInfo.ParentBulletInfo != null)
@@ -91,7 +91,7 @@ public static class BulletHitCountUtil
 		return bulletDataMain.Logic.DestroyOnCountZero && bulletDataMain.Base.HitCountMax > 0 && bulletInfo.HitNumberAll >= bulletDataMain.Base.HitCountMax;
 	}
 
-	// Token: 0x06018A7C RID: 100988 RVA: 0x0065203B File Offset: 0x0065023B
+	// Token: 0x06016329 RID: 90921 RVA: 0x00678177 File Offset: 0x00676377
 	public static int GetHitCountByVictim(BulletInfo bulletInfo, int victimId)
 	{
 		if (bulletInfo.CountByParent && bulletInfo.ParentBulletInfo != null)

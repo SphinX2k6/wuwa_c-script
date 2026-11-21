@@ -7,18 +7,18 @@ using CSharpScript.Game.NewWorld.Common.Component;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059C8 RID: 22984
+	// Token: 0x020049A1 RID: 18849
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CheckCombatStateBehaviorNode : TickBehaviorNode
 	{
-		// Token: 0x0603A43E RID: 238654 RVA: 0x00DDADB4 File Offset: 0x00DD8FB4
+		// Token: 0x0602F365 RID: 193381 RVA: 0x00D2A63C File Offset: 0x00D2883C
 		public CheckCombatStateBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x17008B90 RID: 35728
-		// (get) Token: 0x0603A43F RID: 238655 RVA: 0x00DDADCF File Offset: 0x00DD8FCF
+		// Token: 0x17005F5D RID: 24413
+		// (get) Token: 0x0602F366 RID: 193382 RVA: 0x00D2A657 File Offset: 0x00D28857
 		protected override List<int> CorrelativeEntities
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A440 RID: 238656 RVA: 0x00DDADD8 File Offset: 0x00DD8FD8
+		// Token: 0x0602F367 RID: 193383 RVA: 0x00D2A660 File Offset: 0x00D28860
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
 			IChildQuestBtNode childQuestBtNode = nodeConfig as IChildQuestBtNode;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A441 RID: 238657 RVA: 0x00DDAEC4 File Offset: 0x00DD90C4
+		// Token: 0x0602F368 RID: 193384 RVA: 0x00D2A74C File Offset: 0x00D2894C
 		protected override void OnTick(float _)
 		{
 			if (this.Submitting)
@@ -106,16 +106,16 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0401E612 RID: 124434
+		// Token: 0x040190B1 RID: 102577
 		private int CheckGameplayTag;
 
-		// Token: 0x0401E613 RID: 124435
+		// Token: 0x040190B2 RID: 102578
 		private int EntityDataId;
 
-		// Token: 0x0401E614 RID: 124436
+		// Token: 0x040190B3 RID: 102579
 		private readonly List<int> InnerCorrelativeEntities = new List<int>();
 
-		// Token: 0x0401E615 RID: 124437
+		// Token: 0x040190B4 RID: 102580
 		private bool IsEquip = true;
 	}
 }

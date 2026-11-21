@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003199 RID: 12697
+// Token: 0x02002707 RID: 9991
 [NullableContext(1)]
 [Nullable(0)]
 public class SpecialSkillQingXiao : SpecialSkillBase
 {
-	// Token: 0x0601B585 RID: 112005 RVA: 0x0077827B File Offset: 0x0077647B
+	// Token: 0x060190A5 RID: 102565 RVA: 0x007A0507 File Offset: 0x0079E707
 	public SpecialSkillQingXiao(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B586 RID: 112006 RVA: 0x007782B0 File Offset: 0x007764B0
+	// Token: 0x060190A6 RID: 102566 RVA: 0x007A053C File Offset: 0x0079E73C
 	public override void OnStart()
 	{
 		Entity entity = this.SpecialSkillComponent.Entity;
@@ -23,7 +23,7 @@ public class SpecialSkillQingXiao : SpecialSkillBase
 		this.SpecialTagListener = ((tagComp != null) ? tagComp.ListenForTagAddOrRemove(new int?(GameplayTagDefine.EGameplayTagId["角色.R2T1QingxiaoMd10011.状态标识.御剑飞行状态"]), new BaseTagComponent.TTagSwitchedCallback(this.OnSpecialTagChanged), null) : null);
 	}
 
-	// Token: 0x0601B587 RID: 112007 RVA: 0x00778326 File Offset: 0x00776526
+	// Token: 0x060190A7 RID: 102567 RVA: 0x007A05B2 File Offset: 0x0079E7B2
 	public override void OnTick(float delta)
 	{
 		if (!this.InSwordRidingState)
@@ -33,7 +33,7 @@ public class SpecialSkillQingXiao : SpecialSkillBase
 		this.UpdateSwordRidingMix();
 	}
 
-	// Token: 0x0601B588 RID: 112008 RVA: 0x00778338 File Offset: 0x00776538
+	// Token: 0x060190A8 RID: 102568 RVA: 0x007A05C4 File Offset: 0x0079E7C4
 	private void UpdateSwordRidingMix()
 	{
 		this.TmpVector4.DeepCopy(this.ActorComp.ActorForwardProxy);
@@ -75,7 +75,7 @@ public class SpecialSkillQingXiao : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B589 RID: 112009 RVA: 0x00778508 File Offset: 0x00776708
+	// Token: 0x060190A9 RID: 102569 RVA: 0x007A0794 File Offset: 0x0079E994
 	[return: Nullable(2)]
 	private UKuroHitResult DetectFloor(Vector loc)
 	{
@@ -104,7 +104,7 @@ public class SpecialSkillQingXiao : SpecialSkillBase
 		return actorTrace.HitResult;
 	}
 
-	// Token: 0x0601B58A RID: 112010 RVA: 0x00778670 File Offset: 0x00776870
+	// Token: 0x060190AA RID: 102570 RVA: 0x007A08FC File Offset: 0x0079EAFC
 	public override void OnEnd()
 	{
 		BaseTagComponent tagComp = this.TagComp;
@@ -120,46 +120,46 @@ public class SpecialSkillQingXiao : SpecialSkillBase
 		this.SpecialTagListener = null;
 	}
 
-	// Token: 0x0601B58B RID: 112011 RVA: 0x007786C1 File Offset: 0x007768C1
+	// Token: 0x060190AB RID: 102571 RVA: 0x007A094D File Offset: 0x0079EB4D
 	private void OnSpecialTagChanged(int tagId, bool bTagExists)
 	{
 		this.InSwordRidingState = bTagExists;
 	}
 
-	// Token: 0x0400D5EA RID: 54762
+	// Token: 0x0400DA6D RID: 55917
 	private const string PROFILE_KEY = "SpecialSkillQingXiao";
 
-	// Token: 0x0400D5EB RID: 54763
+	// Token: 0x0400DA6E RID: 55918
 	private const int DETECT_FLOOR_HEIGHT = 60;
 
-	// Token: 0x0400D5EC RID: 54764
+	// Token: 0x0400DA6F RID: 55919
 	private bool InSwordRidingState;
 
-	// Token: 0x0400D5ED RID: 54765
+	// Token: 0x0400DA70 RID: 55920
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D5EE RID: 54766
+	// Token: 0x0400DA71 RID: 55921
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400D5EF RID: 54767
+	// Token: 0x0400DA72 RID: 55922
 	[Nullable(2)]
 	private BaseAnimationComponent AnimComp;
 
-	// Token: 0x0400D5F0 RID: 54768
+	// Token: 0x0400DA73 RID: 55923
 	[Nullable(2)]
 	private ITagTask SpecialTagListener;
 
-	// Token: 0x0400D5F1 RID: 54769
+	// Token: 0x0400DA74 RID: 55924
 	private readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x0400D5F2 RID: 54770
+	// Token: 0x0400DA75 RID: 55925
 	private readonly Vector TmpVector2 = Vector.Create();
 
-	// Token: 0x0400D5F3 RID: 54771
+	// Token: 0x0400DA76 RID: 55926
 	private readonly Vector TmpVector3 = Vector.Create();
 
-	// Token: 0x0400D5F4 RID: 54772
+	// Token: 0x0400DA77 RID: 55927
 	private readonly Vector TmpVector4 = Vector.Create();
 }

@@ -10,31 +10,31 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 {
-	// Token: 0x02007023 RID: 28707
+	// Token: 0x020061A4 RID: 24996
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleAudioComponent : VehicleAudioComponent, IStaticVariableResetter
 	{
-		// Token: 0x06045DDB RID: 286171 RVA: 0x0115F483 File Offset: 0x0115D683
+		// Token: 0x0603BF9B RID: 245659 RVA: 0x01109833 File Offset: 0x01107A33
 		static MotorcycleAudioComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MotorcycleAudioComponent.CreateStaticDefaultValue), new Action(MotorcycleAudioComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06045DDC RID: 286172 RVA: 0x0115F4A2 File Offset: 0x0115D6A2
+		// Token: 0x0603BF9C RID: 245660 RVA: 0x01109852 File Offset: 0x01107A52
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06045DDD RID: 286173 RVA: 0x0115F4A4 File Offset: 0x0115D6A4
+		// Token: 0x0603BF9D RID: 245661 RVA: 0x01109854 File Offset: 0x01107A54
 		public static void ResetStaticDefaultValue()
 		{
 			MotorcycleAudioComponent.StackStatInternal = null;
 		}
 
-		// Token: 0x17009BBE RID: 39870
-		// (get) Token: 0x06045DDE RID: 286174 RVA: 0x0115F4AC File Offset: 0x0115D6AC
-		// (set) Token: 0x06045DDF RID: 286175 RVA: 0x0115F4CD File Offset: 0x0115D6CD
+		// Token: 0x17007109 RID: 28937
+		// (get) Token: 0x0603BF9E RID: 245662 RVA: 0x0110985C File Offset: 0x01107A5C
+		// (set) Token: 0x0603BF9F RID: 245663 RVA: 0x0110987D File Offset: 0x01107A7D
 		private FHitResult CacheHitResult
 		{
 			get
@@ -51,8 +51,8 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x17009BBF RID: 39871
-		// (get) Token: 0x06045DE0 RID: 286176 RVA: 0x0115F4D6 File Offset: 0x0115D6D6
+		// Token: 0x1700710A RID: 28938
+		// (get) Token: 0x0603BFA0 RID: 245664 RVA: 0x01109886 File Offset: 0x01107A86
 		private static Stat StackStat
 		{
 			get
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045DE1 RID: 286177 RVA: 0x0115F500 File Offset: 0x0115D700
+		// Token: 0x0603BFA1 RID: 245665 RVA: 0x011098B0 File Offset: 0x01107AB0
 		protected override bool OnStart()
 		{
 			this.MoveComp = base.Entity.GetComponent<MotorcycleMoveComponent>();
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045DE2 RID: 286178 RVA: 0x0115F5D8 File Offset: 0x0115D7D8
+		// Token: 0x0603BFA2 RID: 245666 RVA: 0x01109988 File Offset: 0x01107B88
 		protected override void OnTick(float delta)
 		{
 			if (this.MoveComp == null || !this.IsPlayerDriving)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.SetMotorInAirDurationRtpc(delta);
 		}
 
-		// Token: 0x06045DE3 RID: 286179 RVA: 0x0115F655 File Offset: 0x0115D855
+		// Token: 0x0603BFA3 RID: 245667 RVA: 0x01109A05 File Offset: 0x01107C05
 		protected override bool OnEnd()
 		{
 			this.ChangeEventListener(true);
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return base.OnEnd();
 		}
 
-		// Token: 0x06045DE4 RID: 286180 RVA: 0x0115F674 File Offset: 0x0115D874
+		// Token: 0x0603BFA4 RID: 245668 RVA: 0x01109A24 File Offset: 0x01107C24
 		protected override void OnVehicleBeenEntered(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (info.IsNpcPassenger())
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.SetMotorStrengthRtpc(this.MotorStrength, this.MaxMotorStrength);
 		}
 
-		// Token: 0x06045DE5 RID: 286181 RVA: 0x0115F708 File Offset: 0x0115D908
+		// Token: 0x0603BFA5 RID: 245669 RVA: 0x01109AB8 File Offset: 0x01107CB8
 		protected override void OnVehicleBeenLeaved(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!info.IsRolePassenger(true))
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.LeaveMotorClearAudio();
 		}
 
-		// Token: 0x06045DE6 RID: 286182 RVA: 0x0115F728 File Offset: 0x0115D928
+		// Token: 0x0603BFA6 RID: 245670 RVA: 0x01109AD8 File Offset: 0x01107CD8
 		private void ChangeEventListener(bool remove = false)
 		{
 			if (!remove && !this.HasEventListener)
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045DE7 RID: 286183 RVA: 0x0115F9B4 File Offset: 0x0115DBB4
+		// Token: 0x0603BFA7 RID: 245671 RVA: 0x01109D64 File Offset: 0x01107F64
 		private void LeaveMotorClearAudio()
 		{
 			if (base.ActorComp == null)
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.ChangeMoveAudioEvent(EMotorMoveAudioEvent.GlideSprint, true);
 		}
 
-		// Token: 0x06045DE8 RID: 286184 RVA: 0x0115FBBC File Offset: 0x0115DDBC
+		// Token: 0x0603BFA8 RID: 245672 RVA: 0x01109F6C File Offset: 0x0110816C
 		private void OnStrengthChanged(EFormationAttributeId attributeId, float newValue, float oldValue)
 		{
 			if ((double)Math.Abs(newValue - this.MotorStrength) < 5.0 && newValue != 0f)
@@ -290,13 +290,13 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.SetMotorStrengthRtpc(this.MotorStrength, this.MaxMotorStrength);
 		}
 
-		// Token: 0x06045DE9 RID: 286185 RVA: 0x0115FC1E File Offset: 0x0115DE1E
+		// Token: 0x0603BFA9 RID: 245673 RVA: 0x01109FCE File Offset: 0x011081CE
 		private void OnStrengthMaxChanged(EFormationAttributeId attributeId, float newValue, float oldValue)
 		{
 			this.MaxMotorStrength = newValue;
 		}
 
-		// Token: 0x06045DEA RID: 286186 RVA: 0x0115FC28 File Offset: 0x0115DE28
+		// Token: 0x0603BFAA RID: 245674 RVA: 0x01109FD8 File Offset: 0x011081D8
 		private void SetMotorStrengthRtpc(float value, float maxValue)
 		{
 			if (base.ActorComp == null || value > maxValue)
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}));
 		}
 
-		// Token: 0x06045DEB RID: 286187 RVA: 0x0115FCA8 File Offset: 0x0115DEA8
+		// Token: 0x0603BFAB RID: 245675 RVA: 0x0110A058 File Offset: 0x01108258
 		private void MotorOnHit(EMotorPart part, FHitResult hitResult)
 		{
 			if (base.ActorComp == null || (double)Math.Abs(this.LastMotorOnHitSpeed - this.LastMotorSpeed) < 20.0)
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			AudioSystem.Instance.PostEvent("play_sfx_motor_crash", base.ActorComp.Owner, null);
 		}
 
-		// Token: 0x06045DEC RID: 286188 RVA: 0x0115FD74 File Offset: 0x0115DF74
+		// Token: 0x0603BFAC RID: 245676 RVA: 0x0110A124 File Offset: 0x01108324
 		private void MotorDriftingStateChange(int tagId, bool tagExist)
 		{
 			if (tagExist)
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.ChangeMoveAudioEvent(EMotorMoveAudioEvent.DriftingState, true);
 		}
 
-		// Token: 0x06045DED RID: 286189 RVA: 0x0115FD94 File Offset: 0x0115DF94
+		// Token: 0x0603BFAD RID: 245677 RVA: 0x0110A144 File Offset: 0x01108344
 		private void MotorGlideStateChange(int tagId, bool tagExist)
 		{
 			if (base.ActorComp == null)
@@ -363,13 +363,13 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			AudioSystem.Instance.PostEvent("play_sfx_motor_gliding_nos_end", base.ActorComp.Owner, null);
 		}
 
-		// Token: 0x06045DEE RID: 286190 RVA: 0x0115FE27 File Offset: 0x0115E027
+		// Token: 0x0603BFAE RID: 245678 RVA: 0x0110A1D7 File Offset: 0x011083D7
 		private void MotorNitroStateChange(int tagId, bool tagExist)
 		{
 			this.MotorNitroAcceleration(tagExist);
 		}
 
-		// Token: 0x06045DEF RID: 286191 RVA: 0x0115FE30 File Offset: 0x0115E030
+		// Token: 0x0603BFAF RID: 245679 RVA: 0x0110A1E0 File Offset: 0x011083E0
 		private void MotorSubStateModeChange(EMotorSubState newValue, EMotorSubState oldValue)
 		{
 			if (base.ActorComp == null)
@@ -399,7 +399,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.LastMotorSubState = newValue;
 		}
 
-		// Token: 0x06045DF0 RID: 286192 RVA: 0x0115FEE8 File Offset: 0x0115E0E8
+		// Token: 0x0603BFB0 RID: 245680 RVA: 0x0110A298 File Offset: 0x01108498
 		private void SetMotorInAirDurationRtpc(float delta)
 		{
 			if (base.ActorComp == null)
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}));
 		}
 
-		// Token: 0x06045DF1 RID: 286193 RVA: 0x0115FF8C File Offset: 0x0115E18C
+		// Token: 0x0603BFB1 RID: 245681 RVA: 0x0110A33C File Offset: 0x0110853C
 		private void SetMotorSpeed(float delta, float speed)
 		{
 			VehicleActorComponent actorComp = base.ActorComp;
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.ChangeMoveAudioEvent(EMotorMoveAudioEvent.WheelRoll, false);
 		}
 
-		// Token: 0x06045DF2 RID: 286194 RVA: 0x01160080 File Offset: 0x0115E280
+		// Token: 0x0603BFB2 RID: 245682 RVA: 0x0110A430 File Offset: 0x01108630
 		private void SetMotorAcceleration(float delta, float speed)
 		{
 			MotorcycleMoveComponent moveComp = this.MoveComp;
@@ -470,7 +470,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}));
 		}
 
-		// Token: 0x06045DF3 RID: 286195 RVA: 0x011601D8 File Offset: 0x0115E3D8
+		// Token: 0x0603BFB3 RID: 245683 RVA: 0x0110A588 File Offset: 0x01108788
 		private void MotorNitroAcceleration(bool change)
 		{
 			VehicleActorComponent actorComp = base.ActorComp;
@@ -491,7 +491,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045DF4 RID: 286196 RVA: 0x0116026C File Offset: 0x0115E46C
+		// Token: 0x0603BFB4 RID: 245684 RVA: 0x0110A61C File Offset: 0x0110881C
 		public void MotorNitroAccelerationFailure(bool banned, bool sprint, bool input)
 		{
 			VehicleActorComponent actorComp = base.ActorComp;
@@ -507,7 +507,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.LastNitroSprint = sprint;
 		}
 
-		// Token: 0x06045DF5 RID: 286197 RVA: 0x011602DC File Offset: 0x0115E4DC
+		// Token: 0x0603BFB5 RID: 245685 RVA: 0x0110A68C File Offset: 0x0110888C
 		private void UpdateMotorHangsAudio(double delta)
 		{
 			if (base.ActorComp != null)
@@ -535,7 +535,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045DF6 RID: 286198 RVA: 0x01160420 File Offset: 0x0115E620
+		// Token: 0x0603BFB6 RID: 245686 RVA: 0x0110A7D0 File Offset: 0x011089D0
 		private void ChangeMoveAudioEvent(EMotorMoveAudioEvent eventType, bool stop = false)
 		{
 			if (base.ActorComp == null)
@@ -559,7 +559,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045DF7 RID: 286199 RVA: 0x011604CC File Offset: 0x0115E6CC
+		// Token: 0x0603BFB7 RID: 245687 RVA: 0x0110A87C File Offset: 0x01108A7C
 		private string GetMoveAudioEventName(EMotorMoveAudioEvent eventType)
 		{
 			if (eventType == EMotorMoveAudioEvent.WheelRoll)
@@ -593,7 +593,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return "未知音效";
 		}
 
-		// Token: 0x06045DF8 RID: 286200 RVA: 0x01160564 File Offset: 0x0115E764
+		// Token: 0x0603BFB8 RID: 245688 RVA: 0x0110A914 File Offset: 0x01108B14
 		private void UpdateMotorWheelTexture()
 		{
 			VehicleActorComponent actorComp = base.ActorComp;
@@ -609,7 +609,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045DF9 RID: 286201 RVA: 0x011605C0 File Offset: 0x0115E7C0
+		// Token: 0x0603BFB9 RID: 245689 RVA: 0x0110A970 File Offset: 0x01108B70
 		private CharacterFootEffectComponent.EFootstepTexture GetMotorWheelTexture()
 		{
 			VehicleActorComponent actorComp = base.ActorComp;
@@ -642,7 +642,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return this.GetMaterialTexture(physMaterial);
 		}
 
-		// Token: 0x06045DFA RID: 286202 RVA: 0x011606A8 File Offset: 0x0115E8A8
+		// Token: 0x0603BFBA RID: 245690 RVA: 0x0110AA58 File Offset: 0x01108C58
 		private void CacheMotorHitResult(bool forward)
 		{
 			FHitResult cacheHitResult = this.CacheHitResult;
@@ -673,7 +673,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.CacheHitResult = cacheHitResult;
 		}
 
-		// Token: 0x06045DFB RID: 286203 RVA: 0x01160708 File Offset: 0x0115E908
+		// Token: 0x0603BFBB RID: 245691 RVA: 0x0110AAB8 File Offset: 0x01108CB8
 		private bool GetHitResult()
 		{
 			bool flag = base.ActorComp.ActorVelocityProxy.DotProduct(base.ActorComp.ActorForwardProxy) > 0.0;
@@ -685,7 +685,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return this.CacheHitResult.bBlockingHit;
 		}
 
-		// Token: 0x06045DFC RID: 286204 RVA: 0x01160768 File Offset: 0x0115E968
+		// Token: 0x0603BFBC RID: 245692 RVA: 0x0110AB18 File Offset: 0x01108D18
 		[NullableContext(2)]
 		private CharacterFootEffectComponent.EFootstepTexture GetMaterialTexture(UPhysicalMaterial material)
 		{
@@ -705,7 +705,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return CharacterFootEffectComponent.EFootstepTexture.DirtSurface;
 		}
 
-		// Token: 0x06045DFD RID: 286205 RVA: 0x011607E0 File Offset: 0x0115E9E0
+		// Token: 0x0603BFBD RID: 245693 RVA: 0x0110AB90 File Offset: 0x01108D90
 		private CharacterFootEffectComponent.EFootstepTexture CheckWaterSurfaceType()
 		{
 			if (base.ActorComp == null)
@@ -729,13 +729,13 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return CharacterFootEffectComponent.EFootstepTexture.WaterSurface;
 		}
 
-		// Token: 0x06045DFE RID: 286206 RVA: 0x0116086C File Offset: 0x0115EA6C
+		// Token: 0x0603BFBE RID: 245694 RVA: 0x0110AC1C File Offset: 0x01108E1C
 		private bool CheckMotorAirState(EMotorSubState state)
 		{
 			return state == EMotorSubState.AirMoving || state == EMotorSubState.Soaring;
 		}
 
-		// Token: 0x06045DFF RID: 286207 RVA: 0x01160878 File Offset: 0x0115EA78
+		// Token: 0x0603BFBF RID: 245695 RVA: 0x0110AC28 File Offset: 0x01108E28
 		[NullableContext(2)]
 		public void SetAudioEventOverride(EMotorMoveAudioEvent eventType, string eventName = null)
 		{
@@ -760,13 +760,13 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.AudioEventHandleMap[eventType] = value;
 		}
 
-		// Token: 0x06045E00 RID: 286208 RVA: 0x0116092D File Offset: 0x0115EB2D
+		// Token: 0x0603BFC0 RID: 245696 RVA: 0x0110ACDD File Offset: 0x01108EDD
 		public void ClearAudioEventOverrides()
 		{
 			this.AudioEventOverrideMap.Clear();
 		}
 
-		// Token: 0x06045E01 RID: 286209 RVA: 0x0116093C File Offset: 0x0115EB3C
+		// Token: 0x0603BFC1 RID: 245697 RVA: 0x0110ACEC File Offset: 0x01108EEC
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -774,255 +774,245 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				return false;
 			}
 			MotorcycleAudioComponent motorcycleAudioComponent = (MotorcycleAudioComponent)componentTemplate;
-			if (base.CanResetComponentProperty("TempVector") && motorcycleAudioComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector), "TempVector"))
+			if (motorcycleAudioComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("MotorSpeedDirection") && motorcycleAudioComponent.MotorSpeedDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.MotorSpeedDirection), "MotorSpeedDirection"))
+			if (motorcycleAudioComponent.MotorSpeedDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MotorSpeedDirection), "MotorSpeedDirection"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("FrontWheelHangG"))
-			{
-				this.FrontWheelHangG = motorcycleAudioComponent.FrontWheelHangG;
-			}
-			if (base.CanResetComponentProperty("FrontWheelPulling") && motorcycleAudioComponent.FrontWheelPulling != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.FrontWheelPulling), "FrontWheelPulling"))
+			this.FrontWheelHangG = motorcycleAudioComponent.FrontWheelHangG;
+			if (motorcycleAudioComponent.FrontWheelPulling != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.FrontWheelPulling), "FrontWheelPulling"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("RearWheelHangG"))
-			{
-				this.RearWheelHangG = motorcycleAudioComponent.RearWheelHangG;
-			}
-			if (base.CanResetComponentProperty("RearWheelPulling") && motorcycleAudioComponent.RearWheelPulling != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.RearWheelPulling), "RearWheelPulling"))
+			this.RearWheelHangG = motorcycleAudioComponent.RearWheelHangG;
+			if (motorcycleAudioComponent.RearWheelPulling != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.RearWheelPulling), "RearWheelPulling"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("MoveComp"))
+			if (motorcycleAudioComponent.MoveComp == null)
 			{
-				if (motorcycleAudioComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcycleMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
+				this.MoveComp = null;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (motorcycleAudioComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("WaterComp"))
-			{
-				if (motorcycleAudioComponent.WaterComp == null)
-				{
-					this.WaterComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcycleWaterComponent>(this.WaterComp), "WaterComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("AudioEventHandleMap") && motorcycleAudioComponent.AudioEventHandleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EMotorMoveAudioEvent, int>>(this.AudioEventHandleMap), "AudioEventHandleMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CacheHitResultInternal"))
+			if (motorcycleAudioComponent.TagComp == null)
 			{
-				if (motorcycleAudioComponent.CacheHitResultInternal == null)
-				{
-					this.CacheHitResultInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FHitResult>(this.CacheHitResultInternal), "CacheHitResultInternal"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("LastTexture"))
-			{
-				this.LastTexture = motorcycleAudioComponent.LastTexture;
-			}
-			if (base.CanResetComponentProperty("AudioEventOverrideMap") && motorcycleAudioComponent.AudioEventOverrideMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EMotorMoveAudioEvent, string>>(this.AudioEventOverrideMap), "AudioEventOverrideMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("IsPlayerDriving"))
+			if (motorcycleAudioComponent.WaterComp == null)
 			{
-				this.IsPlayerDriving = motorcycleAudioComponent.IsPlayerDriving;
+				this.WaterComp = null;
 			}
-			if (base.CanResetComponentProperty("HasEventListener"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaterComp), "WaterComp"))
 			{
-				this.HasEventListener = motorcycleAudioComponent.HasEventListener;
+				return false;
 			}
-			if (base.CanResetComponentProperty("MotorStrength"))
+			if (motorcycleAudioComponent.AudioEventHandleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.AudioEventHandleMap), "AudioEventHandleMap"))
 			{
-				this.MotorStrength = motorcycleAudioComponent.MotorStrength;
+				return false;
 			}
-			if (base.CanResetComponentProperty("MaxMotorStrength"))
+			if (motorcycleAudioComponent.CacheHitResultInternal == null)
 			{
-				this.MaxMotorStrength = motorcycleAudioComponent.MaxMotorStrength;
+				this.CacheHitResultInternal = null;
 			}
-			if (base.CanResetComponentProperty("LastMotorOnHitSpeed"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheHitResultInternal), "CacheHitResultInternal"))
 			{
-				this.LastMotorOnHitSpeed = motorcycleAudioComponent.LastMotorOnHitSpeed;
+				return false;
 			}
-			if (base.CanResetComponentProperty("LastMotorOnHitStrength"))
+			this.LastTexture = motorcycleAudioComponent.LastTexture;
+			if (motorcycleAudioComponent.AudioEventOverrideMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.AudioEventOverrideMap), "AudioEventOverrideMap"))
 			{
-				this.LastMotorOnHitStrength = motorcycleAudioComponent.LastMotorOnHitStrength;
+				return false;
 			}
-			if (base.CanResetComponentProperty("InAirDuration"))
-			{
-				this.InAirDuration = motorcycleAudioComponent.InAirDuration;
-			}
-			if (base.CanResetComponentProperty("LastMotorSubState"))
-			{
-				this.LastMotorSubState = motorcycleAudioComponent.LastMotorSubState;
-			}
-			if (base.CanResetComponentProperty("LastMotorSpeed"))
-			{
-				this.LastMotorSpeed = motorcycleAudioComponent.LastMotorSpeed;
-			}
-			if (base.CanResetComponentProperty("LastEngineSpeed"))
-			{
-				this.LastEngineSpeed = motorcycleAudioComponent.LastEngineSpeed;
-			}
-			if (base.CanResetComponentProperty("LastNitroInput"))
-			{
-				this.LastNitroInput = motorcycleAudioComponent.LastNitroInput;
-			}
-			if (base.CanResetComponentProperty("LastNitroSprint"))
-			{
-				this.LastNitroSprint = motorcycleAudioComponent.LastNitroSprint;
-			}
-			if (base.CanResetComponentProperty("HangsAudioLastTime"))
-			{
-				this.HangsAudioLastTime = motorcycleAudioComponent.HangsAudioLastTime;
-			}
+			this.IsPlayerDriving = motorcycleAudioComponent.IsPlayerDriving;
+			this.HasEventListener = motorcycleAudioComponent.HasEventListener;
+			this.MotorStrength = motorcycleAudioComponent.MotorStrength;
+			this.MaxMotorStrength = motorcycleAudioComponent.MaxMotorStrength;
+			this.LastMotorOnHitSpeed = motorcycleAudioComponent.LastMotorOnHitSpeed;
+			this.LastMotorOnHitStrength = motorcycleAudioComponent.LastMotorOnHitStrength;
+			this.InAirDuration = motorcycleAudioComponent.InAirDuration;
+			this.LastMotorSubState = motorcycleAudioComponent.LastMotorSubState;
+			this.LastMotorSpeed = motorcycleAudioComponent.LastMotorSpeed;
+			this.LastEngineSpeed = motorcycleAudioComponent.LastEngineSpeed;
+			this.LastNitroInput = motorcycleAudioComponent.LastNitroInput;
+			this.LastNitroSprint = motorcycleAudioComponent.LastNitroSprint;
+			this.HangsAudioLastTime = motorcycleAudioComponent.HangsAudioLastTime;
 			return true;
 		}
 
-		// Token: 0x04024856 RID: 149590
+		// Token: 0x1700710B RID: 28939
+		// (get) Token: 0x0603BFC2 RID: 245698 RVA: 0x0110AF4A File Offset: 0x0110914A
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700710C RID: 28940
+		// (get) Token: 0x0603BFC3 RID: 245699 RVA: 0x0110AF4D File Offset: 0x0110914D
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700710D RID: 28941
+		// (get) Token: 0x0603BFC4 RID: 245700 RVA: 0x0110AF50 File Offset: 0x01109150
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700710E RID: 28942
+		// (get) Token: 0x0603BFC5 RID: 245701 RVA: 0x0110AF53 File Offset: 0x01109153
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700710F RID: 28943
+		// (get) Token: 0x0603BFC6 RID: 245702 RVA: 0x0110AF56 File Offset: 0x01109156
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FB0C RID: 129804
 		private const int MATERIAL_ID_WAT = 6;
 
-		// Token: 0x04024857 RID: 149591
+		// Token: 0x0401FB0D RID: 129805
 		private const int MATERIAL_ID_SHR = 14;
 
-		// Token: 0x04024858 RID: 149592
+		// Token: 0x0401FB0E RID: 129806
 		private const double SPEED_TOLERANCE = 20.0;
 
-		// Token: 0x04024859 RID: 149593
+		// Token: 0x0401FB0F RID: 129807
 		private const double ACC_CHANGE_TOLERANCE = 10.0;
 
-		// Token: 0x0402485A RID: 149594
+		// Token: 0x0401FB10 RID: 129808
 		private const double STRENGTH_TOLERANCE = 5.0;
 
-		// Token: 0x0402485B RID: 149595
+		// Token: 0x0401FB11 RID: 129809
 		private const float MS_TO_SECOND = 0.001f;
 
-		// Token: 0x0402485C RID: 149596
+		// Token: 0x0401FB12 RID: 129810
 		private const float IN_AIR_MAX_DURATION = 10f;
 
-		// Token: 0x0402485D RID: 149597
+		// Token: 0x0401FB13 RID: 129811
 		private const int LEAVE_MOTOR_TIME = 200;
 
-		// Token: 0x0402485E RID: 149598
+		// Token: 0x0401FB14 RID: 129812
 		private const double HANG_CHANGE_SPEED_TOLERANCE = 25.0;
 
-		// Token: 0x0402485F RID: 149599
+		// Token: 0x0401FB15 RID: 129813
 		private const int HANG_AUDIO_INTERVAL_TIME = 100;
 
-		// Token: 0x04024860 RID: 149600
+		// Token: 0x0401FB16 RID: 129814
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x04024861 RID: 149601
+		// Token: 0x0401FB17 RID: 129815
 		private readonly Vector MotorSpeedDirection = Vector.Create();
 
-		// Token: 0x04024862 RID: 149602
+		// Token: 0x0401FB18 RID: 129816
 		private float FrontWheelHangG;
 
-		// Token: 0x04024863 RID: 149603
+		// Token: 0x0401FB19 RID: 129817
 		private readonly Vector FrontWheelPulling = Vector.Create();
 
-		// Token: 0x04024864 RID: 149604
+		// Token: 0x0401FB1A RID: 129818
 		private float RearWheelHangG;
 
-		// Token: 0x04024865 RID: 149605
+		// Token: 0x0401FB1B RID: 129819
 		private readonly Vector RearWheelPulling = Vector.Create();
 
-		// Token: 0x04024866 RID: 149606
+		// Token: 0x0401FB1C RID: 129820
 		[Nullable(2)]
 		private MotorcycleMoveComponent MoveComp;
 
-		// Token: 0x04024867 RID: 149607
+		// Token: 0x0401FB1D RID: 129821
 		[Nullable(2)]
 		private BaseTagComponent TagComp;
 
-		// Token: 0x04024868 RID: 149608
+		// Token: 0x0401FB1E RID: 129822
 		[Nullable(2)]
 		private MotorcycleWaterComponent WaterComp;
 
-		// Token: 0x04024869 RID: 149609
+		// Token: 0x0401FB1F RID: 129823
 		private readonly Dictionary<EMotorMoveAudioEvent, int> AudioEventHandleMap = new Dictionary<EMotorMoveAudioEvent, int>();
 
-		// Token: 0x0402486A RID: 149610
+		// Token: 0x0401FB20 RID: 129824
 		[Nullable(2)]
 		private FHitResult CacheHitResultInternal;
 
-		// Token: 0x0402486B RID: 149611
+		// Token: 0x0401FB21 RID: 129825
 		private CharacterFootEffectComponent.EFootstepTexture LastTexture;
 
-		// Token: 0x0402486C RID: 149612
+		// Token: 0x0401FB22 RID: 129826
 		private readonly Dictionary<EMotorMoveAudioEvent, string> AudioEventOverrideMap = new Dictionary<EMotorMoveAudioEvent, string>();
 
-		// Token: 0x0402486D RID: 149613
+		// Token: 0x0401FB23 RID: 129827
 		[Nullable(2)]
 		private static Stat StackStatInternal;
 
-		// Token: 0x0402486E RID: 149614
+		// Token: 0x0401FB24 RID: 129828
 		private bool IsPlayerDriving;
 
-		// Token: 0x0402486F RID: 149615
+		// Token: 0x0401FB25 RID: 129829
 		private bool HasEventListener;
 
-		// Token: 0x04024870 RID: 149616
+		// Token: 0x0401FB26 RID: 129830
 		private float MotorStrength;
 
-		// Token: 0x04024871 RID: 149617
+		// Token: 0x0401FB27 RID: 129831
 		private float MaxMotorStrength;
 
-		// Token: 0x04024872 RID: 149618
+		// Token: 0x0401FB28 RID: 129832
 		private float LastMotorOnHitSpeed;
 
-		// Token: 0x04024873 RID: 149619
+		// Token: 0x0401FB29 RID: 129833
 		private float LastMotorOnHitStrength;
 
-		// Token: 0x04024874 RID: 149620
+		// Token: 0x0401FB2A RID: 129834
 		private float InAirDuration;
 
-		// Token: 0x04024875 RID: 149621
+		// Token: 0x0401FB2B RID: 129835
 		private EMotorSubState LastMotorSubState = EMotorSubState.EMotorSubState_MAX;
 
-		// Token: 0x04024876 RID: 149622
+		// Token: 0x0401FB2C RID: 129836
 		private float LastMotorSpeed;
 
-		// Token: 0x04024877 RID: 149623
+		// Token: 0x0401FB2D RID: 129837
 		private float LastEngineSpeed;
 
-		// Token: 0x04024878 RID: 149624
+		// Token: 0x0401FB2E RID: 129838
 		private bool LastNitroInput;
 
-		// Token: 0x04024879 RID: 149625
+		// Token: 0x0401FB2F RID: 129839
 		private bool LastNitroSprint;
 
-		// Token: 0x0402487A RID: 149626
+		// Token: 0x0401FB30 RID: 129840
 		private double HangsAudioLastTime;
 	}
 }

@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065B8 RID: 26040
+	// Token: 0x02005536 RID: 21814
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardViewModel : DockyardViewModelBase
 	{
-		// Token: 0x1700958B RID: 38283
-		// (get) Token: 0x0604151E RID: 267550 RVA: 0x00FD47BA File Offset: 0x00FD29BA
+		// Token: 0x170068ED RID: 26861
+		// (get) Token: 0x060361E3 RID: 221667 RVA: 0x00F1B7F6 File Offset: 0x00F199F6
 		public virtual DockyardTrawlBackpackPanelModel BackpackPanelModel { [PreserveBaseOverrides] get; } = new DockyardTrawlBackpackPanelModel();
 
-		// Token: 0x1700958C RID: 38284
-		// (get) Token: 0x0604151F RID: 267551 RVA: 0x00FD47C2 File Offset: 0x00FD29C2
+		// Token: 0x170068EE RID: 26862
+		// (get) Token: 0x060361E4 RID: 221668 RVA: 0x00F1B7FE File Offset: 0x00F199FE
 		public virtual DockyardTrawlListPanelModel ListPanelModel { [PreserveBaseOverrides] get; } = new DockyardTrawlListPanelModel();
 	}
 }

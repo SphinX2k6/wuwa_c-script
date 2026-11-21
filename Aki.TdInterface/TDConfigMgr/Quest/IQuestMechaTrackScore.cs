@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001083 RID: 4227
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011B1 RID: 4529
 	public class IQuestMechaTrackScore : IQuestStatisticsType
 	{
-		// Token: 0x06005F3C RID: 24380 RVA: 0x000E6B44 File Offset: 0x000E4D44
+		// Token: 0x06006535 RID: 25909 RVA: 0x000F3C64 File Offset: 0x000F1E64
 		private IQuestMechaTrackScore_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005F3D RID: 24381 RVA: 0x000E6B7C File Offset: 0x000E4D7C
+		// Token: 0x06006536 RID: 25910 RVA: 0x000F3C9C File Offset: 0x000F1E9C
 		public static IQuestMechaTrackScore Create([Nullable(2)] IQuestMechaTrackScore instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005F3E RID: 24382 RVA: 0x000E6B8F File Offset: 0x000E4D8F
+		// Token: 0x06006537 RID: 25911 RVA: 0x000F3CAF File Offset: 0x000F1EAF
 		public static IQuestMechaTrackScore CreateFromSetValue([Nullable(2)] IQuestMechaTrackScore_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005F3F RID: 24383 RVA: 0x000E6BA2 File Offset: 0x000E4DA2
+		// Token: 0x06006538 RID: 25912 RVA: 0x000F3CC2 File Offset: 0x000F1EC2
 		public new IQuestMechaTrackScore_SetValue ToSetValue()
 		{
 			return new IQuestMechaTrackScore_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F5D RID: 8029
-		// (get) Token: 0x06005F40 RID: 24384 RVA: 0x000E6BD9 File Offset: 0x000E4DD9
-		// (set) Token: 0x06005F41 RID: 24385 RVA: 0x000E6C04 File Offset: 0x000E4E04
+		// Token: 0x1700210F RID: 8463
+		// (get) Token: 0x06006539 RID: 25913 RVA: 0x000F3CF9 File Offset: 0x000F1EF9
+		// (set) Token: 0x0600653A RID: 25914 RVA: 0x000F3D24 File Offset: 0x000F1F24
 		public override EStatisticsEventType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F5E RID: 8030
-		// (get) Token: 0x06005F42 RID: 24386 RVA: 0x000E6C12 File Offset: 0x000E4E12
-		// (set) Token: 0x06005F43 RID: 24387 RVA: 0x000E6C39 File Offset: 0x000E4E39
+		// Token: 0x17002110 RID: 8464
+		// (get) Token: 0x0600653B RID: 25915 RVA: 0x000F3D32 File Offset: 0x000F1F32
+		// (set) Token: 0x0600653C RID: 25916 RVA: 0x000F3D59 File Offset: 0x000F1F59
 		public override VarRef Var
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F5F RID: 8031
-		// (get) Token: 0x06005F44 RID: 24388 RVA: 0x000E6C47 File Offset: 0x000E4E47
-		// (set) Token: 0x06005F45 RID: 24389 RVA: 0x000E6C72 File Offset: 0x000E4E72
+		// Token: 0x17002111 RID: 8465
+		// (get) Token: 0x0600653D RID: 25917 RVA: 0x000F3D67 File Offset: 0x000F1F67
+		// (set) Token: 0x0600653E RID: 25918 RVA: 0x000F3D92 File Offset: 0x000F1F92
 		public virtual int ScoreGroupId
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F60 RID: 8032
-		// (get) Token: 0x06005F46 RID: 24390 RVA: 0x000E6C80 File Offset: 0x000E4E80
-		// (set) Token: 0x06005F47 RID: 24391 RVA: 0x000E6CA7 File Offset: 0x000E4EA7
+		// Token: 0x17002112 RID: 8466
+		// (get) Token: 0x0600653F RID: 25919 RVA: 0x000F3DA0 File Offset: 0x000F1FA0
+		// (set) Token: 0x06006540 RID: 25920 RVA: 0x000F3DC7 File Offset: 0x000F1FC7
 		public virtual List<IMechaTrackScoreDetectionType> DetectionTypes
 		{
 			get
@@ -158,11 +156,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003978 RID: 14712
+		// Token: 0x04003CC5 RID: 15557
 		[Nullable(2)]
 		protected new IQuestMechaTrackScore FbInstance;
 
-		// Token: 0x04003979 RID: 14713
+		// Token: 0x04003CC6 RID: 15558
 		[Nullable(2)]
 		protected new IQuestMechaTrackScore_SetValue PocoInterface;
 	}

@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AA8 RID: 19112
+	// Token: 0x02003A50 RID: 14928
 	internal class EUnlockOrgan
 	{
-		// Token: 0x0401A788 RID: 108424
+		// Token: 0x040150DA RID: 86234
 		public const int Btn = 0;
 
-		// Token: 0x0401A789 RID: 108425
+		// Token: 0x040150DB RID: 86235
 		public const int Icon = 1;
 
-		// Token: 0x0401A78A RID: 108426
+		// Token: 0x040150DC RID: 86236
 		public const int ItemFinish = 2;
 
-		// Token: 0x0401A78B RID: 108427
+		// Token: 0x040150DD RID: 86237
 		public const int UnlockItem = 3;
 	}
 }

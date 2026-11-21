@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002480 RID: 9344
+// Token: 0x02001965 RID: 6501
 public class PhantomInteractListItemSkillTagPanel : UiPanelBase
 {
-	// Token: 0x06012C05 RID: 76805 RVA: 0x004A01E6 File Offset: 0x0049E3E6
+	// Token: 0x060100BC RID: 65724 RVA: 0x004AD93E File Offset: 0x004ABB3E
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,7 +16,7 @@ public class PhantomInteractListItemSkillTagPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012C06 RID: 76806 RVA: 0x004A020C File Offset: 0x0049E40C
+	// Token: 0x060100BD RID: 65725 RVA: 0x004AD964 File Offset: 0x004ABB64
 	public void Refresh(EMediumItemGridPhantomSpecialSkill specialSkill)
 	{
 		bool flag = specialSkill > EMediumItemGridPhantomSpecialSkill.Hide;
@@ -41,10 +41,10 @@ public class PhantomInteractListItemSkillTagPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x020089F6 RID: 35318
+	// Token: 0x02007B7D RID: 31613
 	private enum EComponent
 	{
-		// Token: 0x0402CCDF RID: 183519
+		// Token: 0x04027FF5 RID: 163829
 		SpriteTag
 	}
 }

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000553 RID: 1363
+	// Token: 0x020005BA RID: 1466
 	public class INoiseRemovalSphereBoarder_SetValue
 	{
-		// Token: 0x04001402 RID: 5122
+		// Token: 0x0400156C RID: 5484
 		public ENoiseRemovalBoarderShape Type;
 
-		// Token: 0x04001403 RID: 5123
+		// Token: 0x0400156D RID: 5485
 		public float Radius;
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022B8 RID: 8888
+	// Token: 0x02002527 RID: 9511
 	public class EBattleSettlementBgmTypeJsonConverter : JsonConverter<EBattleSettlementBgmType>
 	{
-		// Token: 0x0600C2BC RID: 49852 RVA: 0x001C7444 File Offset: 0x001C5644
+		// Token: 0x0600CE8B RID: 52875 RVA: 0x001DF24C File Offset: 0x001DD44C
 		public override EBattleSettlementBgmType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EBattleSettlementBgmTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C2BD RID: 49853 RVA: 0x001C7468 File Offset: 0x001C5668
+		// Token: 0x0600CE8C RID: 52876 RVA: 0x001DF270 File Offset: 0x001DD470
 		public override void Write(Utf8JsonWriter writer, EBattleSettlementBgmType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

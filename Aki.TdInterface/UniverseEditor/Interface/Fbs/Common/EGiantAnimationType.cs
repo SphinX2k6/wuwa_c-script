@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005CF1 RID: 23793
+	// Token: 0x02006325 RID: 25381
 	public enum EGiantAnimationType : byte
 	{
-		// Token: 0x0400F62E RID: 63022
+		// Token: 0x0401037D RID: 66429
 		Idle,
-		// Token: 0x0400F62F RID: 63023
+		// Token: 0x0401037E RID: 66430
 		Special
 	}
 }

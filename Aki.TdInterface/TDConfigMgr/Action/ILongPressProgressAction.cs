@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BAC RID: 7084
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D93 RID: 7571
 	public class ILongPressProgressAction
 	{
-		// Token: 0x060097B1 RID: 38833 RVA: 0x0015DD04 File Offset: 0x0015BF04
+		// Token: 0x0600A0B5 RID: 41141 RVA: 0x001707C4 File Offset: 0x0016E9C4
 		private ILongPressProgressAction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060097B2 RID: 38834 RVA: 0x0015DD3C File Offset: 0x0015BF3C
+		// Token: 0x0600A0B6 RID: 41142 RVA: 0x001707FC File Offset: 0x0016E9FC
 		public static ILongPressProgressAction Create([Nullable(2)] ILongPressProgressAction instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060097B3 RID: 38835 RVA: 0x0015DD4F File Offset: 0x0015BF4F
+		// Token: 0x0600A0B7 RID: 41143 RVA: 0x0017080F File Offset: 0x0016EA0F
 		public static ILongPressProgressAction CreateFromSetValue([Nullable(2)] ILongPressProgressAction_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060097B4 RID: 38836 RVA: 0x0015DD62 File Offset: 0x0015BF62
+		// Token: 0x0600A0B8 RID: 41144 RVA: 0x00170822 File Offset: 0x0016EA22
 		public ILongPressProgressAction_SetValue ToSetValue()
 		{
 			return new ILongPressProgressAction_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002FAD RID: 12205
-		// (get) Token: 0x060097B5 RID: 38837 RVA: 0x0015DD81 File Offset: 0x0015BF81
-		// (set) Token: 0x060097B6 RID: 38838 RVA: 0x0015DDB0 File Offset: 0x0015BFB0
+		// Token: 0x1700320C RID: 12812
+		// (get) Token: 0x0600A0B9 RID: 41145 RVA: 0x00170841 File Offset: 0x0016EA41
+		// (set) Token: 0x0600A0BA RID: 41146 RVA: 0x00170870 File Offset: 0x0016EA70
 		public virtual float Percentage
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002FAE RID: 12206
-		// (get) Token: 0x060097B7 RID: 38839 RVA: 0x0015DDC0 File Offset: 0x0015BFC0
-		// (set) Token: 0x060097B8 RID: 38840 RVA: 0x0015DE53 File Offset: 0x0015C053
+		// Token: 0x1700320D RID: 12813
+		// (get) Token: 0x0600A0BB RID: 41147 RVA: 0x00170880 File Offset: 0x0016EA80
+		// (set) Token: 0x0600A0BC RID: 41148 RVA: 0x00170913 File Offset: 0x0016EB13
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005C92 RID: 23698
+		// Token: 0x040061A7 RID: 24999
 		[Nullable(2)]
 		protected ILongPressProgressAction FbInstance;
 
-		// Token: 0x04005C93 RID: 23699
+		// Token: 0x040061A8 RID: 25000
 		[Nullable(2)]
 		protected ILongPressProgressAction_SetValue PocoInterface;
 
-		// Token: 0x04005C94 RID: 23700
+		// Token: 0x040061A9 RID: 25001
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04005C95 RID: 23701
+		// Token: 0x040061AA RID: 25002
 		private bool _ActionsInited;
 	}
 }

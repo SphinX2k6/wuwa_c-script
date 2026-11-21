@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Utils;
 using UnrealEngine;
 
-// Token: 0x02002FEE RID: 12270
+// Token: 0x02002543 RID: 9539
 [NullableContext(1)]
 [Nullable(0)]
 public class GameplayEventTrigger : Trigger
 {
-	// Token: 0x0601A011 RID: 106513 RVA: 0x006CED10 File Offset: 0x006CCF10
+	// Token: 0x06017945 RID: 96581 RVA: 0x006F6BAC File Offset: 0x006F4DAC
 	[NullableContext(2)]
 	public GameplayEventTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A012 RID: 106514 RVA: 0x006CED24 File Offset: 0x006CCF24
+	// Token: 0x06017946 RID: 96582 RVA: 0x006F6BC0 File Offset: 0x006F4DC0
 	public override void OnInitParams(string[] triggerParams)
 	{
 		string tagName = (triggerParams.Length != 0) ? triggerParams[0].Trim() : string.Empty;
 		this.TagId = GameplayTagUtils.GetTagIdByName(tagName);
 	}
 
-	// Token: 0x0601A013 RID: 106515 RVA: 0x006CED51 File Offset: 0x006CCF51
+	// Token: 0x06017947 RID: 96583 RVA: 0x006F6BED File Offset: 0x006F4DED
 	protected override void OnActive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -44,7 +44,7 @@ public class GameplayEventTrigger : Trigger
 		obj2.AddGameplayEventListener(this.TagId, new TGameplayEventCallback(this.OnEvent));
 	}
 
-	// Token: 0x0601A014 RID: 106516 RVA: 0x006CED8D File Offset: 0x006CCF8D
+	// Token: 0x06017948 RID: 96584 RVA: 0x006F6C29 File Offset: 0x006F4E29
 	protected override void OnInactive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -66,7 +66,7 @@ public class GameplayEventTrigger : Trigger
 		obj2.RemoveGameplayEventListener(this.TagId, new TGameplayEventCallback(this.OnEvent));
 	}
 
-	// Token: 0x0601A015 RID: 106517 RVA: 0x006CEDCC File Offset: 0x006CCFCC
+	// Token: 0x06017949 RID: 96585 RVA: 0x006F6C68 File Offset: 0x006F4E68
 	private void OnEvent(int _, FGameplayEventData payload)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -89,12 +89,12 @@ public class GameplayEventTrigger : Trigger
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x0601A016 RID: 106518 RVA: 0x006CEE2F File Offset: 0x006CD02F
+	// Token: 0x0601794A RID: 96586 RVA: 0x006F6CCB File Offset: 0x006F4ECB
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4D0 RID: 50384
+	// Token: 0x0400C898 RID: 51352
 	protected int TagId;
 }

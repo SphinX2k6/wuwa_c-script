@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using Aki.Config;
 using Aki.TDConfigMgr.Action;
 using Aki.TDConfigMgr.Action.Fb;
-using Aki.TDConfigMgr.Wrapper.Out;
 using Aki.UniverseEditor.Interface.Fbs.Action;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Module.SeamlessTravel;
 using Google.FlatBuffers;
@@ -14,14 +11,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Teleport
 {
-	// Token: 0x02004B70 RID: 19312
+	// Token: 0x02003B1A RID: 15130
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Model(0)]
 	public class TeleportModel : ModelBase
 	{
-		// Token: 0x17007C1C RID: 31772
-		// (get) Token: 0x06032065 RID: 204901 RVA: 0x00B9C654 File Offset: 0x00B9A854
+		// Token: 0x17004FC6 RID: 20422
+		// (get) Token: 0x06026DF6 RID: 159222 RVA: 0x00AE0960 File Offset: 0x00ADEB60
 		[Nullable(1)]
 		private CacheLru<int, Aki.TDConfigMgr.Action.ITeleportTransitionType> TeleportTransitionFbLru
 		{
@@ -37,7 +34,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06032066 RID: 204902 RVA: 0x00B9C688 File Offset: 0x00B9A888
+		// Token: 0x06026DF7 RID: 159223 RVA: 0x00AE0994 File Offset: 0x00ADEB94
 		private Aki.TDConfigMgr.Action.ITeleportTransitionType LoadTeleportTransitionFromFb(int id)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(6, 2);
@@ -52,8 +49,8 @@ namespace CSharpScript.Game.Module.Teleport
 			return ActionReadHelper.ReadTCsvTeleportTransitionData_Data(Aki.UniverseEditor.Interface.Fbs.Action.TCsvTeleportTransitionData.GetRootAsTCsvTeleportTransitionData(byteBuffer));
 		}
 
-		// Token: 0x17007C1D RID: 31773
-		// (get) Token: 0x06032067 RID: 204903 RVA: 0x00B9C6DC File Offset: 0x00B9A8DC
+		// Token: 0x17004FC7 RID: 20423
+		// (get) Token: 0x06026DF8 RID: 159224 RVA: 0x00AE09E8 File Offset: 0x00ADEBE8
 		public TeleportContext TeleportContext
 		{
 			get
@@ -66,8 +63,8 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x17007C1E RID: 31774
-		// (get) Token: 0x06032068 RID: 204904 RVA: 0x00B9C705 File Offset: 0x00B9A905
+		// Token: 0x17004FC8 RID: 20424
+		// (get) Token: 0x06026DF9 RID: 159225 RVA: 0x00AE0A11 File Offset: 0x00ADEC11
 		public bool IsTeleport
 		{
 			get
@@ -76,9 +73,9 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x17007C1F RID: 31775
-		// (get) Token: 0x06032069 RID: 204905 RVA: 0x00B9C715 File Offset: 0x00B9A915
-		public global::Vector StartPosition
+		// Token: 0x17004FC9 RID: 20425
+		// (get) Token: 0x06026DFA RID: 159226 RVA: 0x00AE0A21 File Offset: 0x00ADEC21
+		public Vector StartPosition
 		{
 			get
 			{
@@ -86,8 +83,8 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x17007C20 RID: 31776
-		// (get) Token: 0x0603206A RID: 204906 RVA: 0x00B9C71D File Offset: 0x00B9A91D
+		// Token: 0x17004FCA RID: 20426
+		// (get) Token: 0x06026DFB RID: 159227 RVA: 0x00AE0A29 File Offset: 0x00ADEC29
 		public Rotator StartRotation
 		{
 			get
@@ -96,9 +93,9 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x17007C21 RID: 31777
-		// (get) Token: 0x0603206B RID: 204907 RVA: 0x00B9C725 File Offset: 0x00B9A925
-		public global::Vector StartGravityDirect
+		// Token: 0x17004FCB RID: 20427
+		// (get) Token: 0x06026DFC RID: 159228 RVA: 0x00AE0A31 File Offset: 0x00ADEC31
+		public Vector StartGravityDirect
 		{
 			get
 			{
@@ -106,9 +103,9 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x17007C22 RID: 31778
-		// (get) Token: 0x0603206C RID: 204908 RVA: 0x00B9C72D File Offset: 0x00B9A92D
-		public global::Vector TargetPosition
+		// Token: 0x17004FCC RID: 20428
+		// (get) Token: 0x06026DFD RID: 159229 RVA: 0x00AE0A39 File Offset: 0x00ADEC39
+		public Vector TargetPosition
 		{
 			get
 			{
@@ -116,8 +113,8 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x17007C23 RID: 31779
-		// (get) Token: 0x0603206D RID: 204909 RVA: 0x00B9C735 File Offset: 0x00B9A935
+		// Token: 0x17004FCD RID: 20429
+		// (get) Token: 0x06026DFE RID: 159230 RVA: 0x00AE0A41 File Offset: 0x00ADEC41
 		public Rotator TargetRotation
 		{
 			get
@@ -126,9 +123,9 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x17007C24 RID: 31780
-		// (get) Token: 0x0603206E RID: 204910 RVA: 0x00B9C73D File Offset: 0x00B9A93D
-		public global::Vector TargetGravityDirect
+		// Token: 0x17004FCE RID: 20430
+		// (get) Token: 0x06026DFF RID: 159231 RVA: 0x00AE0A49 File Offset: 0x00ADEC49
+		public Vector TargetGravityDirect
 		{
 			get
 			{
@@ -136,8 +133,8 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x17007C25 RID: 31781
-		// (get) Token: 0x0603206F RID: 204911 RVA: 0x00B9C745 File Offset: 0x00B9A945
+		// Token: 0x17004FCF RID: 20431
+		// (get) Token: 0x06026E00 RID: 159232 RVA: 0x00AE0A51 File Offset: 0x00ADEC51
 		public Rotator CameraStartRotation
 		{
 			get
@@ -146,9 +143,9 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x17007C26 RID: 31782
-		// (get) Token: 0x06032070 RID: 204912 RVA: 0x00B9C74D File Offset: 0x00B9A94D
-		// (set) Token: 0x06032071 RID: 204913 RVA: 0x00B9C758 File Offset: 0x00B9A958
+		// Token: 0x17004FD0 RID: 20432
+		// (get) Token: 0x06026E01 RID: 159233 RVA: 0x00AE0A59 File Offset: 0x00ADEC59
+		// (set) Token: 0x06026E02 RID: 159234 RVA: 0x00AE0A64 File Offset: 0x00ADEC64
 		public bool IsSkillBlocked
 		{
 			get
@@ -167,7 +164,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06032072 RID: 204914 RVA: 0x00B9C79C File Offset: 0x00B9A99C
+		// Token: 0x06026E03 RID: 159235 RVA: 0x00AE0AA8 File Offset: 0x00ADECA8
 		[NullableContext(1)]
 		public unsafe void SetAllowTeleportByUi(bool allowTeleport, string reason)
 		{
@@ -182,8 +179,8 @@ namespace CSharpScript.Game.Module.Teleport
 			this.AllowTeleportInternal = allowTeleport;
 		}
 
-		// Token: 0x17007C27 RID: 31783
-		// (get) Token: 0x06032073 RID: 204915 RVA: 0x00B9C80B File Offset: 0x00B9AA0B
+		// Token: 0x17004FD1 RID: 20433
+		// (get) Token: 0x06026E04 RID: 159236 RVA: 0x00AE0B17 File Offset: 0x00ADED17
 		public bool AllowTeleportByUi
 		{
 			get
@@ -192,20 +189,20 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06032074 RID: 204916 RVA: 0x00B9C814 File Offset: 0x00B9AA14
+		// Token: 0x06026E05 RID: 159237 RVA: 0x00AE0B20 File Offset: 0x00ADED20
 		protected override bool OnInit()
 		{
-			this.StartPositionInternal = global::Vector.Create();
-			this.TargetPositionInternal = global::Vector.Create();
+			this.StartPositionInternal = Vector.Create();
+			this.TargetPositionInternal = Vector.Create();
 			this.StartRotationInternal = Rotator.Create();
 			this.CameraStartRotationInternal = Rotator.Create();
 			this.TargetRotationInternal = Rotator.Create();
-			this.StartGravityDirectInternal = global::Vector.Create();
-			this.TargetGravityDirectInternal = global::Vector.Create();
+			this.StartGravityDirectInternal = Vector.Create();
+			this.TargetGravityDirectInternal = Vector.Create();
 			return true;
 		}
 
-		// Token: 0x06032075 RID: 204917 RVA: 0x00B9C86F File Offset: 0x00B9AA6F
+		// Token: 0x06026E06 RID: 159238 RVA: 0x00AE0B7B File Offset: 0x00ADED7B
 		protected override bool OnClear()
 		{
 			this.StartPositionInternal = null;
@@ -219,14 +216,14 @@ namespace CSharpScript.Game.Module.Teleport
 			return true;
 		}
 
-		// Token: 0x06032076 RID: 204918 RVA: 0x00B9C8AE File Offset: 0x00B9AAAE
+		// Token: 0x06026E07 RID: 159239 RVA: 0x00AE0BBA File Offset: 0x00ADEDBA
 		protected override bool OnLeaveLevel()
 		{
 			this.SetAllowTeleportByUi(true, "OnLeaveLevel");
 			return true;
 		}
 
-		// Token: 0x06032077 RID: 204919 RVA: 0x00B9C8C0 File Offset: 0x00B9AAC0
+		// Token: 0x06026E08 RID: 159240 RVA: 0x00AE0BCC File Offset: 0x00ADEDCC
 		public bool GetIsKeepingCurrentMovementMode()
 		{
 			if (this.TeleportContext != null && this.TeleportContext.IsInSeamlessTeleport)
@@ -275,7 +272,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return false;
 		}
 
-		// Token: 0x06032078 RID: 204920 RVA: 0x00B9CA60 File Offset: 0x00B9AC60
+		// Token: 0x06026E09 RID: 159241 RVA: 0x00AE0D6C File Offset: 0x00ADEF6C
 		[NullableContext(1)]
 		public unsafe TeleportContext CreateContext(ITeleportContext contextParams)
 		{
@@ -297,7 +294,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return teleportContext;
 		}
 
-		// Token: 0x06032079 RID: 204921 RVA: 0x00B9CB38 File Offset: 0x00B9AD38
+		// Token: 0x06026E0A RID: 159242 RVA: 0x00AE0E44 File Offset: 0x00ADF044
 		[NullableContext(1)]
 		public void RemoveContext(TeleportContext context)
 		{
@@ -323,8 +320,8 @@ namespace CSharpScript.Game.Module.Teleport
 			instance2.Error(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 		}
 
-		// Token: 0x0603207A RID: 204922 RVA: 0x00B9CBE0 File Offset: 0x00B9ADE0
-		public unsafe Aki.TDConfigMgr.Action.ITeleportTransitionType ParseTransitionConfig(int id)
+		// Token: 0x06026E0B RID: 159243 RVA: 0x00AE0EEC File Offset: 0x00ADF0EC
+		public Aki.TDConfigMgr.Action.ITeleportTransitionType ParseTransitionConfig(int id)
 		{
 			Aki.TDConfigMgr.Action.ITeleportTransitionType result;
 			if (this.Cache.TryGetValue(id, out result))
@@ -337,77 +334,25 @@ namespace CSharpScript.Game.Module.Teleport
 				instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 				return result;
 			}
-			if (WrapperSetting.UseFb)
+			Aki.TDConfigMgr.Action.ITeleportTransitionType teleportTransitionType = this.TeleportTransitionFbLru.Get(id);
+			if (teleportTransitionType != null)
 			{
-				Aki.TDConfigMgr.Action.ITeleportTransitionType teleportTransitionType = this.TeleportTransitionFbLru.Get(id);
-				if (teleportTransitionType != null)
-				{
-					this.Cache[id] = teleportTransitionType;
-				}
-				else
-				{
-					global::Log instance2 = global::Log.Instance;
-					ELogModule module2 = ELogModule.TeleportMisc;
-					ELogAuthor author2 = ELogAuthor.CK;
-					string message2 = "传送过渡配置FB读取失败: 未找到或解析为空";
-					ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("ConfigId", id);
-					instance2.Warn(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
-				}
-				return teleportTransitionType;
+				this.Cache[id] = teleportTransitionType;
 			}
-			global::Log instance3 = global::Log.Instance;
-			ELogModule module3 = ELogModule.TeleportMisc;
-			ELogAuthor author3 = ELogAuthor.CK;
-			string message3 = "传送过渡配置JSON解析";
-			ValueTuple<string, object> valueTuple3 = new ValueTuple<string, object>("ConfigId", id);
-			instance3.Info(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
-			TeleportTransitionConfig? config = ConfigTeleportTransitionConfigById.GetConfig(id, true);
-			if (config == null)
+			else
 			{
-				global::Log instance4 = global::Log.Instance;
-				ELogModule module4 = ELogModule.TeleportMisc;
-				ELogAuthor author4 = ELogAuthor.CK;
-				string message4 = "传送过渡配置查询失败: 未找到配置";
-				ValueTuple<string, object> valueTuple4 = new ValueTuple<string, object>("ConfigId", id);
-				instance4.Warn(module4, author4, message4, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple4));
-				return null;
+				global::Log instance2 = global::Log.Instance;
+				ELogModule module2 = ELogModule.TeleportMisc;
+				ELogAuthor author2 = ELogAuthor.CK;
+				string message2 = "传送过渡配置FB读取失败: 未找到或解析为空";
+				ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("ConfigId", id);
+				instance2.Warn(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 			}
-			string data = config.Value.Data;
-			if (data == null)
-			{
-				global::Log instance5 = global::Log.Instance;
-				ELogModule module5 = ELogModule.TeleportMisc;
-				ELogAuthor author5 = ELogAuthor.CK;
-				string message5 = "传送过渡配置查询失败: Data为空";
-				ValueTuple<string, object> valueTuple5 = new ValueTuple<string, object>("ConfigId", id);
-				instance5.Warn(module5, author5, message5, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple5));
-				return null;
-			}
-			Aki.TDConfigMgr.Action.ITeleportTransitionType result2;
-			try
-			{
-				Aki.TDConfigMgr.Action.ITeleportTransitionType teleportTransitionType2 = Json.Parse<Aki.TDConfigMgr.Action.ITeleportTransitionType>(data, null);
-				this.Cache[id] = teleportTransitionType2;
-				result2 = teleportTransitionType2;
-			}
-			catch (Exception ex)
-			{
-				global::Log instance6 = global::Log.Instance;
-				ELogModule module6 = ELogModule.TeleportMisc;
-				ELogAuthor author6 = ELogAuthor.CK;
-				string message6 = "传送过渡配置JSON解析失败";
-				Exception error = ex;
-				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("Error", ex.Message);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("ConfigId", id);
-				instance6.ErrorWithStack(module6, author6, message6, error, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-				result2 = null;
-			}
-			return result2;
+			return teleportTransitionType;
 		}
 
-		// Token: 0x17007C28 RID: 31784
-		// (get) Token: 0x0603207B RID: 204923 RVA: 0x00B9CDDC File Offset: 0x00B9AFDC
+		// Token: 0x17004FD2 RID: 20434
+		// (get) Token: 0x06026E0C RID: 159244 RVA: 0x00AE0F8D File Offset: 0x00ADF18D
 		[Nullable(1)]
 		public static TeleportModel Instance
 		{
@@ -418,7 +363,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x0603207C RID: 204924 RVA: 0x00B9CDE3 File Offset: 0x00B9AFE3
+		// Token: 0x06026E0D RID: 159245 RVA: 0x00AE0F94 File Offset: 0x00ADF194
 		[NullableContext(1)]
 		public static TeleportModel GetOrCreateInstance()
 		{
@@ -429,7 +374,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return TeleportModel._Instance;
 		}
 
-		// Token: 0x0603207D RID: 204925 RVA: 0x00B9CDF7 File Offset: 0x00B9AFF7
+		// Token: 0x06026E0E RID: 159246 RVA: 0x00AE0FA8 File Offset: 0x00ADF1A8
 		public static bool CreateInstance()
 		{
 			if (TeleportModel._Instance != null)
@@ -440,39 +385,39 @@ namespace CSharpScript.Game.Module.Teleport
 			return true;
 		}
 
-		// Token: 0x0603207E RID: 204926 RVA: 0x00B9CE0D File Offset: 0x00B9B00D
+		// Token: 0x06026E0F RID: 159247 RVA: 0x00AE0FBE File Offset: 0x00ADF1BE
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603207F RID: 204927 RVA: 0x00B9CE0F File Offset: 0x00B9B00F
+		// Token: 0x06026E10 RID: 159248 RVA: 0x00AE0FC0 File Offset: 0x00ADF1C0
 		public static void ResetStaticDefaultValue()
 		{
 			TeleportModel._Instance = null;
 		}
 
-		// Token: 0x06032080 RID: 204928 RVA: 0x00B9CE17 File Offset: 0x00B9B017
+		// Token: 0x06026E11 RID: 159249 RVA: 0x00AE0FC8 File Offset: 0x00ADF1C8
 		static TeleportModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TeleportModel.CreateStaticDefaultValue), new Action(TeleportModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401AA9F RID: 109215
+		// Token: 0x040153F3 RID: 87027
 		[Nullable(1)]
 		private readonly List<TeleportContext> TeleportContextQueue = new List<TeleportContext>();
 
-		// Token: 0x0401AAA0 RID: 109216
+		// Token: 0x040153F4 RID: 87028
 		[Nullable(1)]
 		private readonly Dictionary<int, Aki.TDConfigMgr.Action.ITeleportTransitionType> Cache = new Dictionary<int, Aki.TDConfigMgr.Action.ITeleportTransitionType>();
 
-		// Token: 0x0401AAA1 RID: 109217
+		// Token: 0x040153F5 RID: 87029
 		[Nullable(1)]
 		private string TeleportTransitionFbPath = UBlueprintPathsLibrary.ProjectContentDir() + "Aki/Config/UniverseEditorConfig/TeleportTransitions/";
 
-		// Token: 0x0401AAA2 RID: 109218
+		// Token: 0x040153F6 RID: 87030
 		private const int TELEPORT_TRANSITION_FB_LRU_CAPACITY = 50;
 
-		// Token: 0x0401AAA3 RID: 109219
+		// Token: 0x040153F7 RID: 87031
 		[Nullable(new byte[]
 		{
 			2,
@@ -480,34 +425,34 @@ namespace CSharpScript.Game.Module.Teleport
 		})]
 		private CacheLru<int, Aki.TDConfigMgr.Action.ITeleportTransitionType> TeleportTransitionFbLruInternal;
 
-		// Token: 0x0401AAA4 RID: 109220
-		private global::Vector StartPositionInternal;
+		// Token: 0x040153F8 RID: 87032
+		private Vector StartPositionInternal;
 
-		// Token: 0x0401AAA5 RID: 109221
+		// Token: 0x040153F9 RID: 87033
 		private Rotator StartRotationInternal;
 
-		// Token: 0x0401AAA6 RID: 109222
-		private global::Vector StartGravityDirectInternal;
+		// Token: 0x040153FA RID: 87034
+		private Vector StartGravityDirectInternal;
 
-		// Token: 0x0401AAA7 RID: 109223
-		private global::Vector TargetPositionInternal;
+		// Token: 0x040153FB RID: 87035
+		private Vector TargetPositionInternal;
 
-		// Token: 0x0401AAA8 RID: 109224
+		// Token: 0x040153FC RID: 87036
 		private Rotator TargetRotationInternal;
 
-		// Token: 0x0401AAA9 RID: 109225
-		private global::Vector TargetGravityDirectInternal;
+		// Token: 0x040153FD RID: 87037
+		private Vector TargetGravityDirectInternal;
 
-		// Token: 0x0401AAAA RID: 109226
+		// Token: 0x040153FE RID: 87038
 		private Rotator CameraStartRotationInternal;
 
-		// Token: 0x0401AAAB RID: 109227
+		// Token: 0x040153FF RID: 87039
 		private bool IsSkillBlockedInternal;
 
-		// Token: 0x0401AAAC RID: 109228
+		// Token: 0x04015400 RID: 87040
 		private bool AllowTeleportInternal = true;
 
-		// Token: 0x0401AAAD RID: 109229
+		// Token: 0x04015401 RID: 87041
 		private static TeleportModel _Instance;
 	}
 }

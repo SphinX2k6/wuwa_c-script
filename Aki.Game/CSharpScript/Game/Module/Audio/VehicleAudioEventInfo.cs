@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.TDConfigMgr.Action;
@@ -13,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Audio
 {
-	// Token: 0x02005E9B RID: 24219
+	// Token: 0x02004E80 RID: 20096
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VehicleAudioEventInfo
 	{
-		// Token: 0x0603D9B1 RID: 252337 RVA: 0x00EDF200 File Offset: 0x00EDD400
+		// Token: 0x06032941 RID: 207169 RVA: 0x00E30790 File Offset: 0x00E2E990
 		public bool Init()
 		{
 			this.PlotEventCoolDown = ConfigCommonParamById.GetIntConfig("GondolaRideSharingAudioCoolDown").GetValueOrDefault();
@@ -26,7 +25,7 @@ namespace CSharpScript.Game.Module.Audio
 			return true;
 		}
 
-		// Token: 0x0603D9B2 RID: 252338 RVA: 0x00EDF23E File Offset: 0x00EDD43E
+		// Token: 0x06032942 RID: 207170 RVA: 0x00E307CE File Offset: 0x00E2E9CE
 		public void AddAllGondolaMusic(Entity entity)
 		{
 			this.KeepDriveInfoHandle = this.AddGondolaKeepDriveMusic();
@@ -34,7 +33,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.SlowToFastSoundHandle = this.AddGondolaSlowToFastSound(entity);
 		}
 
-		// Token: 0x0603D9B3 RID: 252339 RVA: 0x00EDF265 File Offset: 0x00EDD465
+		// Token: 0x06032943 RID: 207171 RVA: 0x00E307F5 File Offset: 0x00E2E9F5
 		public void StopAllGondolaMusic()
 		{
 			this.StopDriveMusic();
@@ -43,7 +42,7 @@ namespace CSharpScript.Game.Module.Audio
 			VehicleModel.Instance.RemoveKeepDrivingInfo(this.SlowToFastSoundHandle);
 		}
 
-		// Token: 0x0603D9B4 RID: 252340 RVA: 0x00EDF2A0 File Offset: 0x00EDD4A0
+		// Token: 0x06032944 RID: 207172 RVA: 0x00E30830 File Offset: 0x00E2EA30
 		private int AddGondolaKeepDriveMusic()
 		{
 			string keepAudio = ConfigCommonParamById.GetStringConfig("GondolaKeepDriveAudio") ?? string.Empty;
@@ -75,7 +74,7 @@ namespace CSharpScript.Game.Module.Audio
 			return instance.AddKeepDrivingInfo(info);
 		}
 
-		// Token: 0x0603D9B5 RID: 252341 RVA: 0x00EDF350 File Offset: 0x00EDD550
+		// Token: 0x06032945 RID: 207173 RVA: 0x00E308E0 File Offset: 0x00E2EAE0
 		private int AddGondolaStopDriveMusic()
 		{
 			int valueOrDefault = ConfigCommonParamById.GetIntConfig("GondolaStopDriveSpeed").GetValueOrDefault();
@@ -100,7 +99,7 @@ namespace CSharpScript.Game.Module.Audio
 			return instance.AddKeepDrivingInfo(info);
 		}
 
-		// Token: 0x0603D9B6 RID: 252342 RVA: 0x00EDF3CC File Offset: 0x00EDD5CC
+		// Token: 0x06032946 RID: 207174 RVA: 0x00E3095C File Offset: 0x00E2EB5C
 		private void StopDriveMusic()
 		{
 			this.KeepDrivingSuccessfully = false;
@@ -116,7 +115,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.StopEventHandle = AudioSystem.Instance.PostEvent(@event);
 		}
 
-		// Token: 0x0603D9B7 RID: 252343 RVA: 0x00EDF444 File Offset: 0x00EDD644
+		// Token: 0x06032947 RID: 207175 RVA: 0x00E309D4 File Offset: 0x00E2EBD4
 		public int AddGondolaSlowToFastSound(Entity entity)
 		{
 			string sound = ConfigCommonParamById.GetStringConfig("GondolaSlowToFastSoundEvent") ?? string.Empty;
@@ -141,7 +140,7 @@ namespace CSharpScript.Game.Module.Audio
 			return VehicleModel.Instance.AddKeepDrivingInfo(info);
 		}
 
-		// Token: 0x0603D9B8 RID: 252344 RVA: 0x00EDF4D8 File Offset: 0x00EDD6D8
+		// Token: 0x06032948 RID: 207176 RVA: 0x00E30A68 File Offset: 0x00E2EC68
 		public void GondolaGetOnAudioEvent(Entity entity)
 		{
 			string stringConfig = ConfigCommonParamById.GetStringConfig("GondolaGetOnAudioEvent");
@@ -156,7 +155,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D9B9 RID: 252345 RVA: 0x00EDF524 File Offset: 0x00EDD724
+		// Token: 0x06032949 RID: 207177 RVA: 0x00E30AB4 File Offset: 0x00E2ECB4
 		public void RegisterDriveAudioEvent(int roleId, int roleCreatureId)
 		{
 			if (this.RideSharingConfig != null)
@@ -177,7 +176,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.RideSharingStopMovingHandle = this.AddRideSharingStopMovingAudio();
 		}
 
-		// Token: 0x0603D9BA RID: 252346 RVA: 0x00EDF5B4 File Offset: 0x00EDD7B4
+		// Token: 0x0603294A RID: 207178 RVA: 0x00E30B44 File Offset: 0x00E2ED44
 		public void RemoveDriveAudioEvent()
 		{
 			if (this.RideSharingConfig == null)
@@ -193,7 +192,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.RideSharingConfig = null;
 		}
 
-		// Token: 0x0603D9BB RID: 252347 RVA: 0x00EDF640 File Offset: 0x00EDD840
+		// Token: 0x0603294B RID: 207179 RVA: 0x00E30BD0 File Offset: 0x00E2EDD0
 		public bool PlayRideSharingPlotAudio(EGondolaVoiceTriggeredType type)
 		{
 			VehicleModel instance = VehicleModel.Instance;
@@ -225,7 +224,7 @@ namespace CSharpScript.Game.Module.Audio
 			return this.PlayConfigPlotAudio(type, this.RideSharingConfig, EVehicleType.Gongduola);
 		}
 
-		// Token: 0x0603D9BC RID: 252348 RVA: 0x00EDF6B4 File Offset: 0x00EDD8B4
+		// Token: 0x0603294C RID: 207180 RVA: 0x00E30C44 File Offset: 0x00E2EE44
 		private void OnPlotEnd(PlotResultInfo plotResult)
 		{
 			long? flowIncId = plotResult.FlowIncId;
@@ -247,7 +246,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D9BD RID: 252349 RVA: 0x00EDF734 File Offset: 0x00EDD934
+		// Token: 0x0603294D RID: 207181 RVA: 0x00E30CC4 File Offset: 0x00E2EEC4
 		private unsafe void UpdateRideSharingConfig()
 		{
 			if (this.RideSharingConfig == null)
@@ -284,7 +283,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.RideSharingConfig.PassengerId = entityHandle.Entity.Id;
 		}
 
-		// Token: 0x0603D9BE RID: 252350 RVA: 0x00EDF830 File Offset: 0x00EDDA30
+		// Token: 0x0603294E RID: 207182 RVA: 0x00E30DC0 File Offset: 0x00E2EFC0
 		public bool CheckRideSharingState()
 		{
 			if (!VehicleModel.Instance.IsReadyRiderSharing)
@@ -307,7 +306,7 @@ namespace CSharpScript.Game.Module.Audio
 			return true;
 		}
 
-		// Token: 0x0603D9BF RID: 252351 RVA: 0x00EDF890 File Offset: 0x00EDDA90
+		// Token: 0x0603294F RID: 207183 RVA: 0x00E30E20 File Offset: 0x00E2F020
 		private int AddRideSharingKeepMoveAudio()
 		{
 			int valueOrDefault = ConfigCommonParamById.GetIntConfig("GondolaRoleAudioKeepMove").GetValueOrDefault();
@@ -327,7 +326,7 @@ namespace CSharpScript.Game.Module.Audio
 			return instance.AddKeepDrivingInfo(info);
 		}
 
-		// Token: 0x0603D9C0 RID: 252352 RVA: 0x00EDF914 File Offset: 0x00EDDB14
+		// Token: 0x06032950 RID: 207184 RVA: 0x00E30EA4 File Offset: 0x00E2F0A4
 		private int AddRideSharingKeepIdleAudio()
 		{
 			int valueOrDefault = ConfigCommonParamById.GetIntConfig("GondolaRoleAudioIdle").GetValueOrDefault();
@@ -347,7 +346,7 @@ namespace CSharpScript.Game.Module.Audio
 			return instance.AddKeepDrivingInfo(info);
 		}
 
-		// Token: 0x0603D9C1 RID: 252353 RVA: 0x00EDF98C File Offset: 0x00EDDB8C
+		// Token: 0x06032951 RID: 207185 RVA: 0x00E30F1C File Offset: 0x00E2F11C
 		private int AddRideSharingMovingInfo()
 		{
 			int valueOrDefault = ConfigCommonParamById.GetIntConfig("GondolaRoleAudioStopMove").GetValueOrDefault();
@@ -371,7 +370,7 @@ namespace CSharpScript.Game.Module.Audio
 			return instance.AddKeepDrivingInfo(info);
 		}
 
-		// Token: 0x0603D9C2 RID: 252354 RVA: 0x00EDFA04 File Offset: 0x00EDDC04
+		// Token: 0x06032952 RID: 207186 RVA: 0x00E30F94 File Offset: 0x00E2F194
 		private int AddRideSharingStopMovingAudio()
 		{
 			KeepDrivingDurationAtSpeed info = new KeepDrivingDurationAtSpeed(new double[2], 0f, () => this.KeepRideSharingSuccessfully, delegate()
@@ -391,7 +390,7 @@ namespace CSharpScript.Game.Module.Audio
 			return instance.AddKeepDrivingInfo(info);
 		}
 
-		// Token: 0x0603D9C3 RID: 252355 RVA: 0x00EDFA54 File Offset: 0x00EDDC54
+		// Token: 0x06032953 RID: 207187 RVA: 0x00E30FE4 File Offset: 0x00E2F1E4
 		public void RegisterFishingAudioEvent()
 		{
 			GondolaPlotAudioHandle gondolaPlotAudioHandle = new GondolaPlotAudioHandle();
@@ -408,7 +407,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.FishingStopMovingHandle = this.AddFishingStopMovingAudio();
 		}
 
-		// Token: 0x0603D9C4 RID: 252356 RVA: 0x00EDFAE4 File Offset: 0x00EDDCE4
+		// Token: 0x06032954 RID: 207188 RVA: 0x00E31074 File Offset: 0x00E2F274
 		public void RemoveFishingAudioEvent()
 		{
 			VehicleModel.Instance.RemoveKeepDrivingInfo(this.FishingKeepMoveHandle);
@@ -419,7 +418,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.FishingConfig = null;
 		}
 
-		// Token: 0x0603D9C5 RID: 252357 RVA: 0x00EDFB4A File Offset: 0x00EDDD4A
+		// Token: 0x06032955 RID: 207189 RVA: 0x00E310DA File Offset: 0x00E2F2DA
 		public bool PlayFishingAudio(EGondolaVoiceTriggeredType type)
 		{
 			if (this.FishingConfig != null)
@@ -433,7 +432,7 @@ namespace CSharpScript.Game.Module.Audio
 			return false;
 		}
 
-		// Token: 0x0603D9C6 RID: 252358 RVA: 0x00EDFB80 File Offset: 0x00EDDD80
+		// Token: 0x06032956 RID: 207190 RVA: 0x00E31110 File Offset: 0x00E2F310
 		private int AddFishingKeepMoveAudio()
 		{
 			int valueOrDefault = ConfigCommonParamById.GetIntConfig("GondolaFishingAudioKeepMove").GetValueOrDefault();
@@ -453,7 +452,7 @@ namespace CSharpScript.Game.Module.Audio
 			return instance.AddKeepDrivingInfo(info);
 		}
 
-		// Token: 0x0603D9C7 RID: 252359 RVA: 0x00EDFC04 File Offset: 0x00EDDE04
+		// Token: 0x06032957 RID: 207191 RVA: 0x00E31194 File Offset: 0x00E2F394
 		private int AddFishingKeepIdleAudio()
 		{
 			int valueOrDefault = ConfigCommonParamById.GetIntConfig("GondolaFishingAudioIdle").GetValueOrDefault();
@@ -473,7 +472,7 @@ namespace CSharpScript.Game.Module.Audio
 			return instance.AddKeepDrivingInfo(info);
 		}
 
-		// Token: 0x0603D9C8 RID: 252360 RVA: 0x00EDFC7C File Offset: 0x00EDDE7C
+		// Token: 0x06032958 RID: 207192 RVA: 0x00E3120C File Offset: 0x00E2F40C
 		private int AddFishingMovingInfo()
 		{
 			int valueOrDefault = ConfigCommonParamById.GetIntConfig("GondolaFishingAudioStopMove").GetValueOrDefault();
@@ -497,7 +496,7 @@ namespace CSharpScript.Game.Module.Audio
 			return instance.AddKeepDrivingInfo(info);
 		}
 
-		// Token: 0x0603D9C9 RID: 252361 RVA: 0x00EDFCF4 File Offset: 0x00EDDEF4
+		// Token: 0x06032959 RID: 207193 RVA: 0x00E31284 File Offset: 0x00E2F484
 		private int AddFishingStopMovingAudio()
 		{
 			KeepDrivingDurationAtSpeed info = new KeepDrivingDurationAtSpeed(new double[2], 0f, () => this.KeepFishingSuccessfully && this.FishingVoiceCondition, delegate()
@@ -517,14 +516,14 @@ namespace CSharpScript.Game.Module.Audio
 			return instance.AddKeepDrivingInfo(info);
 		}
 
-		// Token: 0x0603D9CA RID: 252362 RVA: 0x00EDFD44 File Offset: 0x00EDDF44
+		// Token: 0x0603295A RID: 207194 RVA: 0x00E312D4 File Offset: 0x00E2F4D4
 		private bool CheckFishingVoiceCondition()
 		{
 			int valueOrDefault = ConfigCommonParamById.GetIntConfig("FishingVoiceCondition").GetValueOrDefault();
 			return LevelGeneralController.Instance.CheckCondition(valueOrDefault.ToString(), null, false, Array.Empty<object>());
 		}
 
-		// Token: 0x0603D9CB RID: 252363 RVA: 0x00EDFD7C File Offset: 0x00EDDF7C
+		// Token: 0x0603295B RID: 207195 RVA: 0x00E3130C File Offset: 0x00E2F50C
 		public void RegisterMotorDriveAudioEvent(int roleId, int roleCreatureId)
 		{
 			if (this.MotorConfig != null)
@@ -542,7 +541,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.MotorKeepMoveHandle = this.AddMotorKeepMoveAudio(roleId);
 		}
 
-		// Token: 0x0603D9CC RID: 252364 RVA: 0x00EDFDE8 File Offset: 0x00EDDFE8
+		// Token: 0x0603295C RID: 207196 RVA: 0x00E31378 File Offset: 0x00E2F578
 		public void RemoveMotorDriveAudioEvent()
 		{
 			if (this.MotorConfig == null)
@@ -555,7 +554,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.MotorConfig = null;
 		}
 
-		// Token: 0x0603D9CD RID: 252365 RVA: 0x00EDFE44 File Offset: 0x00EDE044
+		// Token: 0x0603295D RID: 207197 RVA: 0x00E313D4 File Offset: 0x00E2F5D4
 		public bool PlayMotorPlotAudioDefault(EGondolaVoiceTriggeredType type)
 		{
 			VehicleModel instance = VehicleModel.Instance;
@@ -587,7 +586,7 @@ namespace CSharpScript.Game.Module.Audio
 			return this.PlayConfigPlotAudio(type, this.MotorConfig, EVehicleType.Motorcycle);
 		}
 
-		// Token: 0x0603D9CE RID: 252366 RVA: 0x00EDFEBC File Offset: 0x00EDE0BC
+		// Token: 0x0603295E RID: 207198 RVA: 0x00E3144C File Offset: 0x00E2F64C
 		public bool PlayMotorPlotAudio(int id, EGondolaVoiceTriggeredType type)
 		{
 			if (VehicleModel.Instance.RideSharingInfoMap.Count != 0)
@@ -618,7 +617,7 @@ namespace CSharpScript.Game.Module.Audio
 			return this.PlayConfigPlotAudioById(id, type, this.MotorConfig);
 		}
 
-		// Token: 0x0603D9CF RID: 252367 RVA: 0x00EDFF2C File Offset: 0x00EDE12C
+		// Token: 0x0603295F RID: 207199 RVA: 0x00E314BC File Offset: 0x00E2F6BC
 		private void OnMotorPlotEnd(PlotResultInfo plotResult)
 		{
 			long? flowIncId = plotResult.FlowIncId;
@@ -640,7 +639,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D9D0 RID: 252368 RVA: 0x00EDFFA4 File Offset: 0x00EDE1A4
+		// Token: 0x06032960 RID: 207200 RVA: 0x00E31534 File Offset: 0x00E2F734
 		private unsafe void UpdateMotorConfig()
 		{
 			if (this.MotorConfig == null)
@@ -676,7 +675,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.MotorConfig.PassengerId = entity.Entity.Id;
 		}
 
-		// Token: 0x0603D9D1 RID: 252369 RVA: 0x00EE00A0 File Offset: 0x00EDE2A0
+		// Token: 0x06032961 RID: 207201 RVA: 0x00E31630 File Offset: 0x00E2F830
 		public bool CheckMotorState()
 		{
 			if (!VehicleModel.Instance.IsReadyRiderSharing)
@@ -699,7 +698,7 @@ namespace CSharpScript.Game.Module.Audio
 			return true;
 		}
 
-		// Token: 0x0603D9D2 RID: 252370 RVA: 0x00EE010C File Offset: 0x00EDE30C
+		// Token: 0x06032962 RID: 207202 RVA: 0x00E3169C File Offset: 0x00E2F89C
 		private int AddMotorKeepMoveAudio(int roleId)
 		{
 			KeepDrivingAtSpeedCondition info = null;
@@ -738,7 +737,7 @@ namespace CSharpScript.Game.Module.Audio
 			return VehicleModel.Instance.AddKeepDrivingInfo(info);
 		}
 
-		// Token: 0x0603D9D3 RID: 252371 RVA: 0x00EE0244 File Offset: 0x00EDE444
+		// Token: 0x06032963 RID: 207203 RVA: 0x00E317D4 File Offset: 0x00E2F9D4
 		private bool PlayConfigPlotAudio(EGondolaVoiceTriggeredType type, IGondolaPlotAudioHandle handle, EVehicleType vehicle)
 		{
 			BaseActorComponent passengerActor = handle.PassengerActor;
@@ -755,7 +754,7 @@ namespace CSharpScript.Game.Module.Audio
 			return this.PlayConfigPlotAudioByConfig(config, type, handle);
 		}
 
-		// Token: 0x0603D9D4 RID: 252372 RVA: 0x00EE0294 File Offset: 0x00EDE494
+		// Token: 0x06032964 RID: 207204 RVA: 0x00E31824 File Offset: 0x00E2FA24
 		private bool PlayConfigPlotAudioById(int id, EGondolaVoiceTriggeredType type, IGondolaPlotAudioHandle handle)
 		{
 			BaseActorComponent passengerActor = handle.PassengerActor;
@@ -767,7 +766,7 @@ namespace CSharpScript.Game.Module.Audio
 			return passengerPlotAudioConfigById != null && this.PlayConfigPlotAudioByConfig(passengerPlotAudioConfigById.Value, type, handle);
 		}
 
-		// Token: 0x0603D9D5 RID: 252373 RVA: 0x00EE02DC File Offset: 0x00EDE4DC
+		// Token: 0x06032965 RID: 207205 RVA: 0x00E3186C File Offset: 0x00E2FA6C
 		private unsafe bool PlayConfigPlotAudioByConfig(GongduolaPassengerVoiceConfig config, EGondolaVoiceTriggeredType type, IGondolaPlotAudioHandle handle)
 		{
 			bool flag = config.PlotFlowLength == 3;
@@ -814,7 +813,7 @@ namespace CSharpScript.Game.Module.Audio
 			return true;
 		}
 
-		// Token: 0x0603D9D6 RID: 252374 RVA: 0x00EE0440 File Offset: 0x00EDE640
+		// Token: 0x06032966 RID: 207206 RVA: 0x00E319D0 File Offset: 0x00E2FBD0
 		[NullableContext(2)]
 		private bool TryInterruptPlotAudioEvent(int priority, IGondolaPlotAudioHandle config)
 		{
@@ -846,7 +845,7 @@ namespace CSharpScript.Game.Module.Audio
 			return result;
 		}
 
-		// Token: 0x0603D9D7 RID: 252375 RVA: 0x00EE04E4 File Offset: 0x00EDE6E4
+		// Token: 0x06032967 RID: 207207 RVA: 0x00E31A74 File Offset: 0x00E2FC74
 		public GongduolaPassengerVoiceConfig? GetPassengerPlotAudioConfigById(int id)
 		{
 			GongduolaPassengerVoiceConfig? config = ConfigGongduolaPassengerVoiceConfigById.GetConfig(id, true);
@@ -857,7 +856,7 @@ namespace CSharpScript.Game.Module.Audio
 			return config;
 		}
 
-		// Token: 0x0603D9D8 RID: 252376 RVA: 0x00EE0510 File Offset: 0x00EDE710
+		// Token: 0x06032968 RID: 207208 RVA: 0x00E31AA0 File Offset: 0x00E2FCA0
 		[NullableContext(2)]
 		public GongduolaPassengerVoiceConfig[] GetPassengerPlotAudioConfigList(int roleId, EGondolaVoiceTriggeredType type, EVehicleType vehicle)
 		{
@@ -866,10 +865,15 @@ namespace CSharpScript.Game.Module.Audio
 			{
 				return null;
 			}
-			return configList.ToArray<GongduolaPassengerVoiceConfig>();
+			GongduolaPassengerVoiceConfig[] array = new GongduolaPassengerVoiceConfig[configList.Count];
+			for (int i = 0; i < array.Length; i++)
+			{
+				array[i] = configList[i];
+			}
+			return array;
 		}
 
-		// Token: 0x0603D9D9 RID: 252377 RVA: 0x00EE0540 File Offset: 0x00EDE740
+		// Token: 0x06032969 RID: 207209 RVA: 0x00E31AF4 File Offset: 0x00E2FCF4
 		private GongduolaPassengerVoiceConfig? GetPassengerPlotAudioConfig(int roleId, EGondolaVoiceTriggeredType type)
 		{
 			IReadOnlyList<GongduolaPassengerVoiceConfig> configList = ConfigGongduolaPassengerVoiceConfigByRoleIdAndTriggerType.GetConfigList(roleId, (int)type, true);
@@ -880,7 +884,7 @@ namespace CSharpScript.Game.Module.Audio
 			return new GongduolaPassengerVoiceConfig?(configList[0]);
 		}
 
-		// Token: 0x0603D9DA RID: 252378 RVA: 0x00EE0578 File Offset: 0x00EDE778
+		// Token: 0x0603296A RID: 207210 RVA: 0x00E31B2C File Offset: 0x00E2FD2C
 		private string GenerateRideSharingEventName(bool plot, GongduolaPassengerVoiceConfig config)
 		{
 			string text = "";
@@ -899,7 +903,7 @@ namespace CSharpScript.Game.Module.Audio
 			return text;
 		}
 
-		// Token: 0x0603D9DB RID: 252379 RVA: 0x00EE05CC File Offset: 0x00EDE7CC
+		// Token: 0x0603296B RID: 207211 RVA: 0x00E31B80 File Offset: 0x00E2FD80
 		private void PlayRideSharingPlot(GongduolaPassengerVoiceConfig config, IGondolaPlotAudioHandle handle)
 		{
 			handle.PlotHandle = new PlotHandleInfo
@@ -913,7 +917,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D9DC RID: 252380 RVA: 0x00EE0644 File Offset: 0x00EDE844
+		// Token: 0x0603296C RID: 207212 RVA: 0x00E31BF8 File Offset: 0x00E2FDF8
 		private void PlayRideSharingAudio(GongduolaPassengerVoiceConfig config, IGondolaPlotAudioHandle handle)
 		{
 			handle.AudioHandle = new AudioHandleInfo
@@ -934,7 +938,7 @@ namespace CSharpScript.Game.Module.Audio
 			}));
 		}
 
-		// Token: 0x0603D9DD RID: 252381 RVA: 0x00EE06E4 File Offset: 0x00EDE8E4
+		// Token: 0x0603296D RID: 207213 RVA: 0x00E31C98 File Offset: 0x00E2FE98
 		private string GetGondolaVoiceTriggeredString(EGondolaVoiceTriggeredType type)
 		{
 			switch (type)
@@ -957,75 +961,75 @@ namespace CSharpScript.Game.Module.Audio
 			return "到特定区域/未知";
 		}
 
-		// Token: 0x0402025F RID: 131679
+		// Token: 0x0401AD26 RID: 109862
 		private int PlotEventCoolDown;
 
-		// Token: 0x04020260 RID: 131680
+		// Token: 0x0401AD27 RID: 109863
 		private int AudioEventCoolDown;
 
-		// Token: 0x04020261 RID: 131681
+		// Token: 0x0401AD28 RID: 109864
 		private int KeepDriveInfoHandle;
 
-		// Token: 0x04020262 RID: 131682
+		// Token: 0x0401AD29 RID: 109865
 		private int StopDriveInfoHandle;
 
-		// Token: 0x04020263 RID: 131683
+		// Token: 0x0401AD2A RID: 109866
 		private int SlowToFastSoundHandle;
 
-		// Token: 0x04020264 RID: 131684
+		// Token: 0x0401AD2B RID: 109867
 		private int KeepEventHandle;
 
-		// Token: 0x04020265 RID: 131685
+		// Token: 0x0401AD2C RID: 109868
 		private int StopEventHandle;
 
-		// Token: 0x04020266 RID: 131686
+		// Token: 0x0401AD2D RID: 109869
 		private bool KeepDrivingSuccessfully;
 
-		// Token: 0x04020267 RID: 131687
+		// Token: 0x0401AD2E RID: 109870
 		private int RideSharingKeepMoveHandle;
 
-		// Token: 0x04020268 RID: 131688
+		// Token: 0x0401AD2F RID: 109871
 		private int RideSharingKeepIdleHandle;
 
-		// Token: 0x04020269 RID: 131689
+		// Token: 0x0401AD30 RID: 109872
 		private int RideSharingMovingHandle;
 
-		// Token: 0x0402026A RID: 131690
+		// Token: 0x0401AD31 RID: 109873
 		private int RideSharingStopMovingHandle;
 
-		// Token: 0x0402026B RID: 131691
+		// Token: 0x0401AD32 RID: 109874
 		[Nullable(2)]
 		private IGondolaRideSharingHandle RideSharingConfig;
 
-		// Token: 0x0402026C RID: 131692
+		// Token: 0x0401AD33 RID: 109875
 		private bool KeepRideSharingSuccessfully;
 
-		// Token: 0x0402026D RID: 131693
+		// Token: 0x0401AD34 RID: 109876
 		private int FishingKeepMoveHandle;
 
-		// Token: 0x0402026E RID: 131694
+		// Token: 0x0401AD35 RID: 109877
 		private int FishingKeepIdleHandle;
 
-		// Token: 0x0402026F RID: 131695
+		// Token: 0x0401AD36 RID: 109878
 		private int FishingMovingHandle;
 
-		// Token: 0x04020270 RID: 131696
+		// Token: 0x0401AD37 RID: 109879
 		private int FishingStopMovingHandle;
 
-		// Token: 0x04020271 RID: 131697
+		// Token: 0x0401AD38 RID: 109880
 		private bool FishingVoiceCondition;
 
-		// Token: 0x04020272 RID: 131698
+		// Token: 0x0401AD39 RID: 109881
 		[Nullable(2)]
 		private IGondolaPlotAudioHandle FishingConfig;
 
-		// Token: 0x04020273 RID: 131699
+		// Token: 0x0401AD3A RID: 109882
 		private bool KeepFishingSuccessfully;
 
-		// Token: 0x04020274 RID: 131700
+		// Token: 0x0401AD3B RID: 109883
 		private int MotorKeepMoveHandle;
 
-		// Token: 0x04020275 RID: 131701
+		// Token: 0x0401AD3C RID: 109884
 		[Nullable(2)]
 		private IGondolaRideSharingHandle MotorConfig;
 	}

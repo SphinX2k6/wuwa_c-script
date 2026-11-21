@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000074 RID: 116
+// Token: 0x02000075 RID: 117
 [NullableContext(1)]
 [Nullable(0)]
 public class TickComponentManager
 {
-	// Token: 0x06000327 RID: 807 RVA: 0x00013247 File Offset: 0x00011447
+	// Token: 0x06000360 RID: 864 RVA: 0x00013FA3 File Offset: 0x000121A3
 	public int GetCurrentTickIntervalCount()
 	{
 		return this.TickIntervalCount;
 	}
 
-	// Token: 0x17000073 RID: 115
-	// (get) Token: 0x06000328 RID: 808 RVA: 0x0001324F File Offset: 0x0001144F
+	// Token: 0x1700007A RID: 122
+	// (get) Token: 0x06000361 RID: 865 RVA: 0x00013FAB File Offset: 0x000121AB
 	public bool NeedTick
 	{
 		get
@@ -23,8 +23,8 @@ public class TickComponentManager
 		}
 	}
 
-	// Token: 0x17000074 RID: 116
-	// (get) Token: 0x06000329 RID: 809 RVA: 0x00013257 File Offset: 0x00011457
+	// Token: 0x1700007B RID: 123
+	// (get) Token: 0x06000362 RID: 866 RVA: 0x00013FB3 File Offset: 0x000121B3
 	public bool NeedAfterTick
 	{
 		get
@@ -33,7 +33,7 @@ public class TickComponentManager
 		}
 	}
 
-	// Token: 0x0600032A RID: 810 RVA: 0x0001325F File Offset: 0x0001145F
+	// Token: 0x06000363 RID: 867 RVA: 0x00013FBB File Offset: 0x000121BB
 	private static int Compare(TickComponentInfo a, TickComponentInfo b)
 	{
 		if (a.Priority == b.Priority)
@@ -43,7 +43,7 @@ public class TickComponentManager
 		return b.Priority - a.Priority;
 	}
 
-	// Token: 0x0600032B RID: 811 RVA: 0x0001328A File Offset: 0x0001148A
+	// Token: 0x06000364 RID: 868 RVA: 0x00013FE6 File Offset: 0x000121E6
 	public void Clear()
 	{
 		this.DeltaTotal = 0f;
@@ -52,13 +52,13 @@ public class TickComponentManager
 		this.TickIntervalCountAfter = 0;
 	}
 
-	// Token: 0x0600032C RID: 812 RVA: 0x000132B0 File Offset: 0x000114B0
+	// Token: 0x06000365 RID: 869 RVA: 0x0001400C File Offset: 0x0001220C
 	public void ClearDelta()
 	{
 		this.DeltaTotal = 0f;
 	}
 
-	// Token: 0x0600032D RID: 813 RVA: 0x000132C0 File Offset: 0x000114C0
+	// Token: 0x06000366 RID: 870 RVA: 0x0001401C File Offset: 0x0001221C
 	public void Add(EntityComponent entityComponent, int? priority)
 	{
 		if (!entityComponent.NeedTick && !entityComponent.NeedForceTick && !entityComponent.NeedAfterTick && !entityComponent.NeedForceAfterTick)
@@ -85,7 +85,7 @@ public class TickComponentManager
 		this.ComponentCount++;
 	}
 
-	// Token: 0x0600032E RID: 814 RVA: 0x00013370 File Offset: 0x00011570
+	// Token: 0x06000367 RID: 871 RVA: 0x000140CC File Offset: 0x000122CC
 	public void Sort()
 	{
 		this.NeedTickInternal = (this.TickComponents.Count > 0 || this.ForceTickComponents.Count > 0);
@@ -120,7 +120,7 @@ public class TickComponentManager
 		forceAfterTickComponents.Sort(comparison4);
 	}
 
-	// Token: 0x0600032F RID: 815 RVA: 0x00013460 File Offset: 0x00011660
+	// Token: 0x06000368 RID: 872 RVA: 0x000141BC File Offset: 0x000123BC
 	public void ForceTick(float delta)
 	{
 		foreach (TickComponentInfo tickComponentInfo in this.ForceTickComponents)
@@ -129,7 +129,7 @@ public class TickComponentManager
 		}
 	}
 
-	// Token: 0x06000330 RID: 816 RVA: 0x000134B8 File Offset: 0x000116B8
+	// Token: 0x06000369 RID: 873 RVA: 0x00014214 File Offset: 0x00012414
 	public void Tick(int intervalTime, float delta)
 	{
 		this.DeltaTotal += delta;
@@ -149,7 +149,7 @@ public class TickComponentManager
 		this.TickIntervalCount = 0;
 	}
 
-	// Token: 0x06000331 RID: 817 RVA: 0x00013564 File Offset: 0x00011764
+	// Token: 0x0600036A RID: 874 RVA: 0x000142C0 File Offset: 0x000124C0
 	public void ForceAfterTick(float delta)
 	{
 		foreach (TickComponentInfo tickComponentInfo in this.ForceAfterTickComponents)
@@ -158,7 +158,7 @@ public class TickComponentManager
 		}
 	}
 
-	// Token: 0x06000332 RID: 818 RVA: 0x000135BC File Offset: 0x000117BC
+	// Token: 0x0600036B RID: 875 RVA: 0x00014318 File Offset: 0x00012518
 	public void AfterTick(int intervalTime, float delta)
 	{
 		this.DeltaTotalAfter += delta;
@@ -178,44 +178,44 @@ public class TickComponentManager
 		this.TickIntervalCountAfter = 0;
 	}
 
-	// Token: 0x0400034A RID: 842
+	// Token: 0x04000362 RID: 866
 	private float DeltaTotal;
 
-	// Token: 0x0400034B RID: 843
+	// Token: 0x04000363 RID: 867
 	private int TickIntervalCount;
 
-	// Token: 0x0400034C RID: 844
+	// Token: 0x04000364 RID: 868
 	private float DeltaTotalAfter;
 
-	// Token: 0x0400034D RID: 845
+	// Token: 0x04000365 RID: 869
 	private int TickIntervalCountAfter;
 
-	// Token: 0x0400034E RID: 846
+	// Token: 0x04000366 RID: 870
 	private bool NeedTickInternal;
 
-	// Token: 0x0400034F RID: 847
+	// Token: 0x04000367 RID: 871
 	private bool NeedAfterTickInternal;
 
-	// Token: 0x04000350 RID: 848
+	// Token: 0x04000368 RID: 872
 	private readonly List<TickComponentInfo> TickComponents = new List<TickComponentInfo>();
 
-	// Token: 0x04000351 RID: 849
+	// Token: 0x04000369 RID: 873
 	private readonly List<TickComponentInfo> ForceTickComponents = new List<TickComponentInfo>();
 
-	// Token: 0x04000352 RID: 850
+	// Token: 0x0400036A RID: 874
 	private readonly List<TickComponentInfo> AfterTickComponents = new List<TickComponentInfo>();
 
-	// Token: 0x04000353 RID: 851
+	// Token: 0x0400036B RID: 875
 	private readonly List<TickComponentInfo> ForceAfterTickComponents = new List<TickComponentInfo>();
 
-	// Token: 0x04000354 RID: 852
+	// Token: 0x0400036C RID: 876
 	private int ComponentCount;
 
-	// Token: 0x0200019D RID: 413
+	// Token: 0x020001A7 RID: 423
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x040007D1 RID: 2001
+		// Token: 0x040007F1 RID: 2033
 		[Nullable(new byte[]
 		{
 			0,

@@ -3,40 +3,40 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005606 RID: 22022
+	// Token: 0x02005BA4 RID: 23460
 	public class INoiseRemovalComponentT
 	{
-		// Token: 0x1700A2F5 RID: 41717
-		// (get) Token: 0x060248BD RID: 149693 RVA: 0x0050B2CD File Offset: 0x005094CD
-		// (set) Token: 0x060248BE RID: 149694 RVA: 0x0050B2D5 File Offset: 0x005094D5
+		// Token: 0x1700AB7D RID: 43901
+		// (get) Token: 0x06026ACD RID: 158413 RVA: 0x0054B8E5 File Offset: 0x00549AE5
+		// (set) Token: 0x06026ACE RID: 158414 RVA: 0x0054B8ED File Offset: 0x00549AED
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A2F6 RID: 41718
-		// (get) Token: 0x060248BF RID: 149695 RVA: 0x0050B2DE File Offset: 0x005094DE
-		// (set) Token: 0x060248C0 RID: 149696 RVA: 0x0050B2E6 File Offset: 0x005094E6
+		// Token: 0x1700AB7E RID: 43902
+		// (get) Token: 0x06026ACF RID: 158415 RVA: 0x0054B8F6 File Offset: 0x00549AF6
+		// (set) Token: 0x06026AD0 RID: 158416 RVA: 0x0054B8FE File Offset: 0x00549AFE
 		public List<INoiseRemovalNodeT> Nodes { get; set; }
 
-		// Token: 0x1700A2F7 RID: 41719
-		// (get) Token: 0x060248C1 RID: 149697 RVA: 0x0050B2EF File Offset: 0x005094EF
-		// (set) Token: 0x060248C2 RID: 149698 RVA: 0x0050B2F7 File Offset: 0x005094F7
+		// Token: 0x1700AB7F RID: 43903
+		// (get) Token: 0x06026AD1 RID: 158417 RVA: 0x0054B907 File Offset: 0x00549B07
+		// (set) Token: 0x06026AD2 RID: 158418 RVA: 0x0054B90F File Offset: 0x00549B0F
 		public string CompleteState { get; set; }
 
-		// Token: 0x1700A2F8 RID: 41720
-		// (get) Token: 0x060248C3 RID: 149699 RVA: 0x0050B300 File Offset: 0x00509500
-		// (set) Token: 0x060248C4 RID: 149700 RVA: 0x0050B308 File Offset: 0x00509508
+		// Token: 0x1700AB80 RID: 43904
+		// (get) Token: 0x06026AD3 RID: 158419 RVA: 0x0054B918 File Offset: 0x00549B18
+		// (set) Token: 0x06026AD4 RID: 158420 RVA: 0x0054B920 File Offset: 0x00549B20
 		public TNoiseRemovalBoarderUnion NoiseRemovalBoarder { get; set; }
 
-		// Token: 0x1700A2F9 RID: 41721
-		// (get) Token: 0x060248C5 RID: 149701 RVA: 0x0050B311 File Offset: 0x00509511
-		// (set) Token: 0x060248C6 RID: 149702 RVA: 0x0050B319 File Offset: 0x00509519
+		// Token: 0x1700AB81 RID: 43905
+		// (get) Token: 0x06026AD5 RID: 158421 RVA: 0x0054B929 File Offset: 0x00549B29
+		// (set) Token: 0x06026AD6 RID: 158422 RVA: 0x0054B931 File Offset: 0x00549B31
 		public int RotationAngle { get; set; }
 
-		// Token: 0x1700A2FA RID: 41722
-		// (get) Token: 0x060248C7 RID: 149703 RVA: 0x0050B322 File Offset: 0x00509522
-		// (set) Token: 0x060248C8 RID: 149704 RVA: 0x0050B32A File Offset: 0x0050952A
+		// Token: 0x1700AB82 RID: 43906
+		// (get) Token: 0x06026AD7 RID: 158423 RVA: 0x0054B93A File Offset: 0x00549B3A
+		// (set) Token: 0x06026AD8 RID: 158424 RVA: 0x0054B942 File Offset: 0x00549B42
 		public byte NullMask { get; set; }
 
-		// Token: 0x060248C9 RID: 149705 RVA: 0x0050B333 File Offset: 0x00509533
+		// Token: 0x06026AD9 RID: 158425 RVA: 0x0054B94B File Offset: 0x00549B4B
 		public INoiseRemovalComponentT()
 		{
 			this.Disabled = false;

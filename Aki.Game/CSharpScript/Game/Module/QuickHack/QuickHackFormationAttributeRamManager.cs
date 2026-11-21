@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F79 RID: 20345
+	// Token: 0x02003F42 RID: 16194
 	public class QuickHackFormationAttributeRamManager : QuickHackRamManager
 	{
-		// Token: 0x060341AA RID: 213418 RVA: 0x00C3A2B4 File Offset: 0x00C384B4
+		// Token: 0x06029018 RID: 167960 RVA: 0x00B83A60 File Offset: 0x00B81C60
 		[NullableContext(2)]
 		public override void Init(int param, Action<float> onCurrentRamChange = null, Action<float> onMaxRamChange = null)
 		{
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x060341AB RID: 213419 RVA: 0x00C3A311 File Offset: 0x00C38511
+		// Token: 0x06029019 RID: 167961 RVA: 0x00B83ABD File Offset: 0x00B81CBD
 		private void OnAttributeValueChange(EFormationAttributeId attrId, float newValue, float oldValue)
 		{
 			Action<float> onCurrentRamChange = this.OnCurrentRamChange;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			onCurrentRamChange(newValue);
 		}
 
-		// Token: 0x060341AC RID: 213420 RVA: 0x00C3A324 File Offset: 0x00C38524
+		// Token: 0x0602901A RID: 167962 RVA: 0x00B83AD0 File Offset: 0x00B81CD0
 		private void OnAttributeMaxChange(EFormationAttributeId attrId, float newValue, float oldValue)
 		{
 			Action<float> onMaxRamChange = this.OnMaxRamChange;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			onMaxRamChange(newValue);
 		}
 
-		// Token: 0x060341AD RID: 213421 RVA: 0x00C3A338 File Offset: 0x00C38538
+		// Token: 0x0602901B RID: 167963 RVA: 0x00B83AE4 File Offset: 0x00B81CE4
 		public override void Clear()
 		{
 			if (this.OnCurrentRamChange != null)
@@ -59,25 +59,25 @@ namespace CSharpScript.Game.Module.QuickHack
 			base.Clear();
 		}
 
-		// Token: 0x060341AE RID: 213422 RVA: 0x00C3A39A File Offset: 0x00C3859A
+		// Token: 0x0602901C RID: 167964 RVA: 0x00B83B46 File Offset: 0x00B81D46
 		public override float GetCurrentRam()
 		{
 			return FormationAttributeController.Instance.GetValue(this.AttributeId);
 		}
 
-		// Token: 0x060341AF RID: 213423 RVA: 0x00C3A3AC File Offset: 0x00C385AC
+		// Token: 0x0602901D RID: 167965 RVA: 0x00B83B58 File Offset: 0x00B81D58
 		public override float GetMaxRam()
 		{
 			return FormationAttributeController.Instance.GetMax(this.AttributeId);
 		}
 
-		// Token: 0x060341B0 RID: 213424 RVA: 0x00C3A3BE File Offset: 0x00C385BE
+		// Token: 0x0602901E RID: 167966 RVA: 0x00B83B6A File Offset: 0x00B81D6A
 		public override void ChangeRam(float addValue)
 		{
 			FormationAttributeController.Instance.AddValue(this.AttributeId, addValue);
 		}
 
-		// Token: 0x0401BB44 RID: 113476
+		// Token: 0x04016519 RID: 91417
 		private EFormationAttributeId AttributeId;
 	}
 }

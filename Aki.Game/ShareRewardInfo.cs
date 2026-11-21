@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020025DF RID: 9695
+// Token: 0x02001ACA RID: 6858
 public class ShareRewardInfo : UiPanelBase
 {
-	// Token: 0x06013B51 RID: 80721 RVA: 0x004F0470 File Offset: 0x004EE670
+	// Token: 0x06011033 RID: 69683 RVA: 0x004FF1A0 File Offset: 0x004FD3A0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,7 +18,7 @@ public class ShareRewardInfo : UiPanelBase
 		};
 	}
 
-	// Token: 0x06013B52 RID: 80722 RVA: 0x004F04CC File Offset: 0x004EE6CC
+	// Token: 0x06011034 RID: 69684 RVA: 0x004FF1FC File Offset: 0x004FD3FC
 	public void SetItemInfo(int id, int count)
 	{
 		base.GetText(1).SetText(count.ToString(), true);
@@ -35,14 +35,14 @@ public class ShareRewardInfo : UiPanelBase
 		});
 	}
 
-	// Token: 0x02008C17 RID: 35863
+	// Token: 0x02007DA0 RID: 32160
 	private enum EChildType
 	{
-		// Token: 0x0402D7B5 RID: 186293
+		// Token: 0x04028ACD RID: 166605
 		TxtTip,
-		// Token: 0x0402D7B6 RID: 186294
+		// Token: 0x04028ACE RID: 166606
 		TxtCount,
-		// Token: 0x0402D7B7 RID: 186295
+		// Token: 0x04028ACF RID: 166607
 		Icon
 	}
 }

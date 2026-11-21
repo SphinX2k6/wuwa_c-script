@@ -5,17 +5,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.State
 {
-	// Token: 0x02007326 RID: 29478
+	// Token: 0x020064A9 RID: 25769
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineStateBoneCollision : AiStateMachineState
 	{
-		// Token: 0x060485AE RID: 296366 RVA: 0x0129C81C File Offset: 0x0129AA1C
+		// Token: 0x0603E9FB RID: 256507 RVA: 0x0123F29C File Offset: 0x0123D49C
 		public AiStateMachineStateBoneCollision(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.State state) : base(stateMachineNode, state)
 		{
 		}
 
-		// Token: 0x060485AF RID: 296367 RVA: 0x0129C834 File Offset: 0x0129AA34
+		// Token: 0x0603E9FC RID: 256508 RVA: 0x0123F2B4 File Offset: 0x0123D4B4
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.State state)
 		{
 			this.BoneName = state.BindBoneCollision.BoneName;
@@ -30,51 +30,51 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			return true;
 		}
 
-		// Token: 0x060485B0 RID: 296368 RVA: 0x0129C8DB File Offset: 0x0129AADB
+		// Token: 0x0603E9FD RID: 256509 RVA: 0x0123F35B File Offset: 0x0123D55B
 		[NullableContext(2)]
 		public override void OnActivate(AiStateMachineBase lastState = null, long? contextId = null)
 		{
 			this.Node.ActorComponent.SetPartCollisionSwitch(this.BoneName, this.IsBlockPawn, this.IsBulletDetect, this.IsBlockCamera, this.IsActiveOcclusionDither, false);
 		}
 
-		// Token: 0x060485B1 RID: 296369 RVA: 0x0129C90C File Offset: 0x0129AB0C
+		// Token: 0x0603E9FE RID: 256510 RVA: 0x0123F38C File Offset: 0x0123D58C
 		[NullableContext(2)]
 		public override void OnDeactivate(AiStateMachineBase nextState = null, long? contextId = null)
 		{
 			this.Node.ActorComponent.SetPartCollisionSwitch(this.BoneName, this.IsBlockPawnOnExit, this.IsBulletDetectOnExit, this.IsBlockCameraOnExit, this.IsActiveOcclusionDitherOnExit, false);
 		}
 
-		// Token: 0x060485B2 RID: 296370 RVA: 0x0129C93D File Offset: 0x0129AB3D
+		// Token: 0x0603E9FF RID: 256511 RVA: 0x0123F3BD File Offset: 0x0123D5BD
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x04026417 RID: 156695
+		// Token: 0x04021704 RID: 136964
 		public string BoneName = "";
 
-		// Token: 0x04026418 RID: 156696
+		// Token: 0x04021705 RID: 136965
 		public bool IsBlockPawn;
 
-		// Token: 0x04026419 RID: 156697
+		// Token: 0x04021706 RID: 136966
 		public bool IsBulletDetect;
 
-		// Token: 0x0402641A RID: 156698
+		// Token: 0x04021707 RID: 136967
 		public bool IsBlockCamera;
 
-		// Token: 0x0402641B RID: 156699
+		// Token: 0x04021708 RID: 136968
 		public bool IsBlockPawnOnExit;
 
-		// Token: 0x0402641C RID: 156700
+		// Token: 0x04021709 RID: 136969
 		public bool IsBulletDetectOnExit;
 
-		// Token: 0x0402641D RID: 156701
+		// Token: 0x0402170A RID: 136970
 		public bool IsBlockCameraOnExit;
 
-		// Token: 0x0402641E RID: 156702
+		// Token: 0x0402170B RID: 136971
 		public bool IsActiveOcclusionDither;
 
-		// Token: 0x0402641F RID: 156703
+		// Token: 0x0402170C RID: 136972
 		public bool IsActiveOcclusionDitherOnExit;
 	}
 }

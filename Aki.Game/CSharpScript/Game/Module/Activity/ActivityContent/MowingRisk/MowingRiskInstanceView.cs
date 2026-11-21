@@ -11,13 +11,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063E5 RID: 25573
+	// Token: 0x02005363 RID: 21347
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MowingRiskInstanceView : IInstanceDungeonEntranceAbility
 	{
-		// Token: 0x1700940B RID: 37899
-		// (get) Token: 0x0604051E RID: 263454 RVA: 0x00F8EB06 File Offset: 0x00F8CD06
+		// Token: 0x1700676D RID: 26477
+		// (get) Token: 0x060351DF RID: 217567 RVA: 0x00ED5A9E File Offset: 0x00ED3C9E
 		public override string ResourceId
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			}
 		}
 
-		// Token: 0x0604051F RID: 263455 RVA: 0x00F8EB14 File Offset: 0x00F8CD14
+		// Token: 0x060351E0 RID: 217568 RVA: 0x00ED5AAC File Offset: 0x00ED3CAC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040520 RID: 263456 RVA: 0x00F8ECC8 File Offset: 0x00F8CEC8
+		// Token: 0x060351E1 RID: 217569 RVA: 0x00ED5C60 File Offset: 0x00ED3E60
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MowingRiskInstanceView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -74,21 +74,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040521 RID: 263457 RVA: 0x00F8ED0B File Offset: 0x00F8CF0B
+		// Token: 0x060351E2 RID: 217570 RVA: 0x00ED5CA3 File Offset: 0x00ED3EA3
 		protected override void OnBeforeDestroy()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RedDotMowingRiskBuffAll, base.GetItem(5), 0);
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RedDotMowingRiskReward, base.GetItem(7), 0);
 		}
 
-		// Token: 0x06040522 RID: 263458 RVA: 0x00F8ED3B File Offset: 0x00F8CF3B
+		// Token: 0x060351E3 RID: 217571 RVA: 0x00ED5CD3 File Offset: 0x00ED3ED3
 		protected override void OnStart()
 		{
 			this.InitVerticalPanels();
 			EventSystem.Instance.Emit(EEventName.MowingRiskOnRefreshRewardRedDot);
 		}
 
-		// Token: 0x06040523 RID: 263459 RVA: 0x00F8ED54 File Offset: 0x00F8CF54
+		// Token: 0x060351E4 RID: 217572 RVA: 0x00ED5CEC File Offset: 0x00ED3EEC
 		public override UniTask RefreshExternalAsync()
 		{
 			MowingRiskInstanceView.<RefreshExternalAsync>d__8 <RefreshExternalAsync>d__;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <RefreshExternalAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040524 RID: 263460 RVA: 0x00F8ED98 File Offset: 0x00F8CF98
+		// Token: 0x060351E5 RID: 217573 RVA: 0x00ED5D30 File Offset: 0x00ED3F30
 		public override void RefreshOnTick()
 		{
 			MowingRiskModel instance = MowingRiskModel.Instance;
@@ -107,19 +107,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.Detail.RefreshLockItemExternalByData(data);
 		}
 
-		// Token: 0x06040525 RID: 263461 RVA: 0x00F8EDC2 File Offset: 0x00F8CFC2
+		// Token: 0x060351E6 RID: 217574 RVA: 0x00ED5D5A File Offset: 0x00ED3F5A
 		private void OnLeftClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MowingBuffView, EMowingBuffViewUsage.BeforeBattle, null);
 		}
 
-		// Token: 0x06040526 RID: 263462 RVA: 0x00F8EDDA File Offset: 0x00F8CFDA
+		// Token: 0x060351E7 RID: 217575 RVA: 0x00ED5D72 File Offset: 0x00ED3F72
 		private void OnRightClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.ActivityRewardPopUpView, MowingRiskModel.Instance.BuildActivityRewardViewData(), null);
 		}
 
-		// Token: 0x06040527 RID: 263463 RVA: 0x00F8EDF8 File Offset: 0x00F8CFF8
+		// Token: 0x060351E8 RID: 217576 RVA: 0x00ED5D90 File Offset: 0x00ED3F90
 		private UniTask CreateDetailAsync()
 		{
 			MowingRiskInstanceView.<CreateDetailAsync>d__12 <CreateDetailAsync>d__;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <CreateDetailAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040528 RID: 263464 RVA: 0x00F8EE3B File Offset: 0x00F8D03B
+		// Token: 0x060351E9 RID: 217577 RVA: 0x00ED5DD3 File Offset: 0x00ED3FD3
 		private void InitVerticalPanels()
 		{
 			UUIItem item = base.GetItem(1);
@@ -146,38 +146,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			item2.SetUIActive(true);
 		}
 
-		// Token: 0x04021767 RID: 137063
+		// Token: 0x0401C096 RID: 114838
 		private MowingRiskInstanceDetailView Detail;
 
-		// Token: 0x0200C600 RID: 50688
+		// Token: 0x0200AFE7 RID: 45031
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403BC7E RID: 244862
+			// Token: 0x040365DD RID: 222685
 			public const int DetailItem = 0;
 
-			// Token: 0x0403BC7F RID: 244863
+			// Token: 0x040365DE RID: 222686
 			public const int DropDownItem = 1;
 
-			// Token: 0x0403BC80 RID: 244864
+			// Token: 0x040365DF RID: 222687
 			public const int RecommendLevelItem = 2;
 
-			// Token: 0x0403BC81 RID: 244865
+			// Token: 0x040365E0 RID: 222688
 			public const int RecommendLevelText = 3;
 
-			// Token: 0x0403BC82 RID: 244866
+			// Token: 0x040365E1 RID: 222689
 			public const int LeftButton = 4;
 
-			// Token: 0x0403BC83 RID: 244867
+			// Token: 0x040365E2 RID: 222690
 			public const int LeftRedDotItem = 5;
 
-			// Token: 0x0403BC84 RID: 244868
+			// Token: 0x040365E3 RID: 222691
 			public const int RightButton = 6;
 
-			// Token: 0x0403BC85 RID: 244869
+			// Token: 0x040365E4 RID: 222692
 			public const int RightRedDotItem = 7;
 
-			// Token: 0x0403BC86 RID: 244870
+			// Token: 0x040365E5 RID: 222693
 			public const int ProgressText = 8;
 		}
 	}

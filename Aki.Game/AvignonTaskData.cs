@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200110E RID: 4366
+// Token: 0x020005C2 RID: 1474
 [NullableContext(1)]
 [Nullable(0)]
 public class AvignonTaskData
 {
-	// Token: 0x06007221 RID: 29217 RVA: 0x0017589B File Offset: 0x00173A9B
+	// Token: 0x060045B7 RID: 17847 RVA: 0x0017E257 File Offset: 0x0017C457
 	public AvignonTaskData(int taskId)
 	{
 		this.TaskId = taskId;
 	}
 
-	// Token: 0x170009A2 RID: 2466
-	// (get) Token: 0x06007222 RID: 29218 RVA: 0x001758C7 File Offset: 0x00173AC7
-	// (set) Token: 0x06007223 RID: 29219 RVA: 0x001758CF File Offset: 0x00173ACF
+	// Token: 0x170009C2 RID: 2498
+	// (get) Token: 0x060045B8 RID: 17848 RVA: 0x0017E283 File Offset: 0x0017C483
+	// (set) Token: 0x060045B9 RID: 17849 RVA: 0x0017E28B File Offset: 0x0017C48B
 	public int TaskId { get; set; }
 
-	// Token: 0x170009A3 RID: 2467
-	// (get) Token: 0x06007224 RID: 29220 RVA: 0x001758D8 File Offset: 0x00173AD8
-	// (set) Token: 0x06007225 RID: 29221 RVA: 0x001758E0 File Offset: 0x00173AE0
+	// Token: 0x170009C3 RID: 2499
+	// (get) Token: 0x060045BA RID: 17850 RVA: 0x0017E294 File Offset: 0x0017C494
+	// (set) Token: 0x060045BB RID: 17851 RVA: 0x0017E29C File Offset: 0x0017C49C
 	public EActivityTaskState Status { get; set; } = EActivityTaskState.Active;
 
-	// Token: 0x170009A4 RID: 2468
-	// (get) Token: 0x06007226 RID: 29222 RVA: 0x001758E9 File Offset: 0x00173AE9
+	// Token: 0x170009C4 RID: 2500
+	// (get) Token: 0x060045BC RID: 17852 RVA: 0x0017E2A5 File Offset: 0x0017C4A5
 	public bool IsFinished
 	{
 		get
@@ -33,8 +33,8 @@ public class AvignonTaskData
 		}
 	}
 
-	// Token: 0x170009A5 RID: 2469
-	// (get) Token: 0x06007227 RID: 29223 RVA: 0x001758F7 File Offset: 0x00173AF7
+	// Token: 0x170009C5 RID: 2501
+	// (get) Token: 0x060045BD RID: 17853 RVA: 0x0017E2B3 File Offset: 0x0017C4B3
 	public bool IsTaken
 	{
 		get
@@ -43,32 +43,32 @@ public class AvignonTaskData
 		}
 	}
 
-	// Token: 0x170009A6 RID: 2470
-	// (get) Token: 0x06007228 RID: 29224 RVA: 0x00175902 File Offset: 0x00173B02
-	// (set) Token: 0x06007229 RID: 29225 RVA: 0x0017590A File Offset: 0x00173B0A
+	// Token: 0x170009C6 RID: 2502
+	// (get) Token: 0x060045BE RID: 17854 RVA: 0x0017E2BE File Offset: 0x0017C4BE
+	// (set) Token: 0x060045BF RID: 17855 RVA: 0x0017E2C6 File Offset: 0x0017C4C6
 	public int Current { get; set; }
 
-	// Token: 0x170009A7 RID: 2471
-	// (get) Token: 0x0600722A RID: 29226 RVA: 0x00175913 File Offset: 0x00173B13
-	// (set) Token: 0x0600722B RID: 29227 RVA: 0x0017591B File Offset: 0x00173B1B
+	// Token: 0x170009C7 RID: 2503
+	// (get) Token: 0x060045C0 RID: 17856 RVA: 0x0017E2CF File Offset: 0x0017C4CF
+	// (set) Token: 0x060045C1 RID: 17857 RVA: 0x0017E2D7 File Offset: 0x0017C4D7
 	public int Target { get; set; }
 
-	// Token: 0x170009A8 RID: 2472
-	// (get) Token: 0x0600722C RID: 29228 RVA: 0x00175924 File Offset: 0x00173B24
-	// (set) Token: 0x0600722D RID: 29229 RVA: 0x0017592C File Offset: 0x00173B2C
+	// Token: 0x170009C8 RID: 2504
+	// (get) Token: 0x060045C2 RID: 17858 RVA: 0x0017E2E0 File Offset: 0x0017C4E0
+	// (set) Token: 0x060045C3 RID: 17859 RVA: 0x0017E2E8 File Offset: 0x0017C4E8
 	public int JumpId { get; set; }
 
-	// Token: 0x170009A9 RID: 2473
-	// (get) Token: 0x0600722E RID: 29230 RVA: 0x00175935 File Offset: 0x00173B35
-	// (set) Token: 0x0600722F RID: 29231 RVA: 0x0017593D File Offset: 0x00173B3D
+	// Token: 0x170009C9 RID: 2505
+	// (get) Token: 0x060045C4 RID: 17860 RVA: 0x0017E2F1 File Offset: 0x0017C4F1
+	// (set) Token: 0x060045C5 RID: 17861 RVA: 0x0017E2F9 File Offset: 0x0017C4F9
 	public string TitleTextId { get; set; } = "";
 
-	// Token: 0x170009AA RID: 2474
-	// (get) Token: 0x06007230 RID: 29232 RVA: 0x00175946 File Offset: 0x00173B46
-	// (set) Token: 0x06007231 RID: 29233 RVA: 0x0017594E File Offset: 0x00173B4E
+	// Token: 0x170009CA RID: 2506
+	// (get) Token: 0x060045C6 RID: 17862 RVA: 0x0017E302 File Offset: 0x0017C502
+	// (set) Token: 0x060045C7 RID: 17863 RVA: 0x0017E30A File Offset: 0x0017C50A
 	public List<TItem> RewardList { get; set; } = new List<TItem>();
 
-	// Token: 0x040034E6 RID: 13542
+	// Token: 0x0400357F RID: 13695
 	[Nullable(2)]
 	public Action<int> ReceiveDelegate;
 }

@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020025C9 RID: 9673
+// Token: 0x02001AB4 RID: 6836
 [NullableContext(1)]
 [Nullable(0)]
 public class InfoData : IInfoData
 {
-	// Token: 0x17001931 RID: 6449
-	// (get) Token: 0x060139F7 RID: 80375 RVA: 0x004E8732 File Offset: 0x004E6932
-	// (set) Token: 0x060139F8 RID: 80376 RVA: 0x004E873A File Offset: 0x004E693A
+	// Token: 0x17001969 RID: 6505
+	// (get) Token: 0x06010ED7 RID: 69335 RVA: 0x004F7332 File Offset: 0x004F5532
+	// (set) Token: 0x06010ED8 RID: 69336 RVA: 0x004F733A File Offset: 0x004F553A
 	public string Text { get; set; } = "";
 
-	// Token: 0x17001932 RID: 6450
-	// (get) Token: 0x060139F9 RID: 80377 RVA: 0x004E8743 File Offset: 0x004E6943
-	// (set) Token: 0x060139FA RID: 80378 RVA: 0x004E874B File Offset: 0x004E694B
+	// Token: 0x1700196A RID: 6506
+	// (get) Token: 0x06010ED9 RID: 69337 RVA: 0x004F7343 File Offset: 0x004F5543
+	// (set) Token: 0x06010EDA RID: 69338 RVA: 0x004F734B File Offset: 0x004F554B
 	public bool IsFinish { get; set; }
 
-	// Token: 0x17001933 RID: 6451
-	// (get) Token: 0x060139FB RID: 80379 RVA: 0x004E8754 File Offset: 0x004E6954
-	// (set) Token: 0x060139FC RID: 80380 RVA: 0x004E875C File Offset: 0x004E695C
+	// Token: 0x1700196B RID: 6507
+	// (get) Token: 0x06010EDB RID: 69339 RVA: 0x004F7354 File Offset: 0x004F5554
+	// (set) Token: 0x06010EDC RID: 69340 RVA: 0x004F735C File Offset: 0x004F555C
 	public bool IsOptionFinished { get; set; }
 }

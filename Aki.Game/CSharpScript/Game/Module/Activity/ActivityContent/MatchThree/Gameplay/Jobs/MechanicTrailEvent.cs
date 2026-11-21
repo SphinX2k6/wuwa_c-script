@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Jobs
 {
-	// Token: 0x02006513 RID: 25875
+	// Token: 0x02005491 RID: 21649
 	public struct MechanicTrailEvent
 	{
-		// Token: 0x06040EA5 RID: 265893 RVA: 0x00FBB72B File Offset: 0x00FB992B
+		// Token: 0x06035B69 RID: 220009 RVA: 0x00F0275B File Offset: 0x00F0095B
 		public MechanicTrailEvent(int envId, GridPosition target, EPieceType mechanicType)
 		{
 			this.EnvId = envId;
@@ -13,13 +13,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.MechanicType = mechanicType;
 		}
 
-		// Token: 0x04021DB1 RID: 138673
+		// Token: 0x0401C6E2 RID: 116450
 		public int EnvId;
 
-		// Token: 0x04021DB2 RID: 138674
+		// Token: 0x0401C6E3 RID: 116451
 		public GridPosition Target;
 
-		// Token: 0x04021DB3 RID: 138675
+		// Token: 0x0401C6E4 RID: 116452
 		public EPieceType MechanicType;
 	}
 }

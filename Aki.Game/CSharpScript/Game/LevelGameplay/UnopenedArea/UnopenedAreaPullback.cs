@@ -16,13 +16,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 {
-	// Token: 0x020069BA RID: 27066
+	// Token: 0x02005B16 RID: 23318
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UnopenedAreaPullback : IUnopenedAreaHandler
 	{
-		// Token: 0x1700985E RID: 39006
-		// (get) Token: 0x0604358A RID: 275850 RVA: 0x01074A8A File Offset: 0x01072C8A
+		// Token: 0x17006D3E RID: 27966
+		// (get) Token: 0x060395C6 RID: 234950 RVA: 0x01018F21 File Offset: 0x01017121
 		public bool ForbidVehicleOnEnter
 		{
 			get
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x0604358B RID: 275851 RVA: 0x01074A90 File Offset: 0x01072C90
+		// Token: 0x060395C7 RID: 234951 RVA: 0x01018F24 File Offset: 0x01017124
 		public void Tick(float delta)
 		{
 			EntityHandle playerEntity = this.PlayerEntity;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x0604358C RID: 275852 RVA: 0x01074B70 File Offset: 0x01072D70
+		// Token: 0x060395C8 RID: 234952 RVA: 0x01019004 File Offset: 0x01017204
 		private bool CheckStopBehaviourTree()
 		{
 			if (MapModel.Instance.IsInMapPolygon(this.ActorComp.ActorLocationProxy))
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			return this.CacheVector2.DotProduct(this.CacheVector) < 0.0;
 		}
 
-		// Token: 0x0604358D RID: 275853 RVA: 0x01074C1C File Offset: 0x01072E1C
+		// Token: 0x060395C9 RID: 234953 RVA: 0x010190B0 File Offset: 0x010172B0
 		private void OpenGenericPrompt()
 		{
 			EUiViewName? viewNameByPromptId = GenericPromptController.Instance.GetViewNameByPromptId("NotOpenArea");
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x0604358E RID: 275854 RVA: 0x01074C6C File Offset: 0x01072E6C
+		// Token: 0x060395CA RID: 234954 RVA: 0x01019100 File Offset: 0x01017300
 		private void OnRunPullback()
 		{
 			this.IsRunningPullback = true;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			this.MoveToEnterLocation(this.PlayerEntity);
 		}
 
-		// Token: 0x0604358F RID: 275855 RVA: 0x01074D14 File Offset: 0x01072F14
+		// Token: 0x060395CB RID: 234955 RVA: 0x010191A8 File Offset: 0x010173A8
 		private void OnFinishPullback()
 		{
 			this.IsRunningPullback = false;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			this.RegainActivity(this.PlayerEntity);
 		}
 
-		// Token: 0x06043590 RID: 275856 RVA: 0x01074D5F File Offset: 0x01072F5F
+		// Token: 0x060395CC RID: 234956 RVA: 0x010191F3 File Offset: 0x010173F3
 		public void Clear()
 		{
 			if (this.IsRunningPullback)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			this.SetTeleportTimer(false, false);
 		}
 
-		// Token: 0x06043591 RID: 275857 RVA: 0x01074D80 File Offset: 0x01072F80
+		// Token: 0x060395CD RID: 234957 RVA: 0x01019214 File Offset: 0x01017414
 		public bool OnEnter()
 		{
 			this.EnterLocation.DeepCopy(MapModel.Instance.GetLastSafeLocation());
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			return true;
 		}
 
-		// Token: 0x06043592 RID: 275858 RVA: 0x01074DFC File Offset: 0x01072FFC
+		// Token: 0x060395CE RID: 234958 RVA: 0x01019290 File Offset: 0x01017490
 		public void OnExit()
 		{
 			Log.Instance.Info(ELogModule.Map, ELogAuthor.CWZ, "- - - - 离开了未开放区域- - - - ", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x06043593 RID: 275859 RVA: 0x01074E3C File Offset: 0x0107303C
+		// Token: 0x060395CF RID: 234959 RVA: 0x010192D0 File Offset: 0x010174D0
 		public void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 		{
 			this.UpdateEntityInfo(newEntityHandle);
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x06043594 RID: 275860 RVA: 0x01074E90 File Offset: 0x01073090
+		// Token: 0x060395D0 RID: 234960 RVA: 0x01019324 File Offset: 0x01017524
 		private void MoveToEnterLocation(EntityHandle handle)
 		{
 			this.CheckTryExitClimbState(handle);
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			component.MoveAlongPath(config, "UnopenedAreaPullback.MoveToEnterLocation");
 		}
 
-		// Token: 0x06043595 RID: 275861 RVA: 0x01074F2C File Offset: 0x0107312C
+		// Token: 0x060395D1 RID: 234961 RVA: 0x010193C0 File Offset: 0x010175C0
 		private void CheckTryExitClimbState(EntityHandle handle)
 		{
 			WorldEntity entity = handle.Entity;
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x06043596 RID: 275862 RVA: 0x01074F7C File Offset: 0x0107317C
+		// Token: 0x060395D2 RID: 234962 RVA: 0x01019410 File Offset: 0x01017610
 		private void TeleportToEnterLocation()
 		{
 			if (SceneTeamModel.Instance.IsAllDid())
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			this.RequestUnOpenedAreaPullback();
 		}
 
-		// Token: 0x06043597 RID: 275863 RVA: 0x01074FC6 File Offset: 0x010731C6
+		// Token: 0x060395D3 RID: 234963 RVA: 0x0101945A File Offset: 0x0101765A
 		private void RequestUnOpenedAreaPullback()
 		{
 			Net.Instance.Call(ERequestMessageId.UnOpenedAreaPullbackRequest, UnOpenedAreaPullbackRequest.Create(), delegate(IMessage msg, Net.CallbackStatus _)
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}, 0);
 		}
 
-		// Token: 0x06043598 RID: 275864 RVA: 0x01074FFC File Offset: 0x010731FC
+		// Token: 0x060395D4 RID: 234964 RVA: 0x01019490 File Offset: 0x01017690
 		private void RegainActivity(EntityHandle entityHandle)
 		{
 			CharacterMoveComponent component = entityHandle.Entity.GetComponent<CharacterMoveComponent>();
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			InputDistributeController.Instance.RefreshInputTag();
 		}
 
-		// Token: 0x06043599 RID: 275865 RVA: 0x01075054 File Offset: 0x01073254
+		// Token: 0x060395D5 RID: 234965 RVA: 0x010194E8 File Offset: 0x010176E8
 		private void StopActivity()
 		{
 			EventSystem.Instance.Emit<string>(EEventName.ForceReleaseInput, this.Reason);
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			InputDistributeController.Instance.RefreshInputTag();
 		}
 
-		// Token: 0x0604359A RID: 275866 RVA: 0x01075110 File Offset: 0x01073310
+		// Token: 0x060395D6 RID: 234966 RVA: 0x010195A4 File Offset: 0x010177A4
 		[NullableContext(2)]
 		private void UpdateEntityInfo(EntityHandle entityHandle = null)
 		{
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			this.StateComp = this.PlayerEntity.Entity.GetComponent<CharacterUnifiedStateComponent>();
 		}
 
-		// Token: 0x0604359B RID: 275867 RVA: 0x01075190 File Offset: 0x01073390
+		// Token: 0x060395D7 RID: 234967 RVA: 0x01019624 File Offset: 0x01017824
 		private void ResetCharacterState(int lastMode, byte lastState)
 		{
 			BaseTagComponent component = this.ActorComp.Entity.GetComponent<BaseTagComponent>();
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			});
 		}
 
-		// Token: 0x0604359C RID: 275868 RVA: 0x01075228 File Offset: 0x01073428
+		// Token: 0x060395D8 RID: 234968 RVA: 0x010196BC File Offset: 0x010178BC
 		private void SetBattleViewVisibility(bool visible)
 		{
 			if (visible && this.BattleViewHide)
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x0604359D RID: 275869 RVA: 0x01075288 File Offset: 0x01073488
+		// Token: 0x060395D9 RID: 234969 RVA: 0x0101971C File Offset: 0x0101791C
 		private void ToggleNotOpenFadeEffect(bool enable)
 		{
 			this.EnablePostProcess = enable;
@@ -377,7 +377,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x0604359E RID: 275870 RVA: 0x010752A4 File Offset: 0x010734A4
+		// Token: 0x060395DA RID: 234970 RVA: 0x01019738 File Offset: 0x01017938
 		private void SetTeleportTimer(bool start, bool onVehicle = false)
 		{
 			if (!start)
@@ -406,7 +406,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x0604359F RID: 275871 RVA: 0x01075374 File Offset: 0x01073574
+		// Token: 0x060395DB RID: 234971 RVA: 0x01019808 File Offset: 0x01017A08
 		private void SetTeleportTimerPause(bool bPause)
 		{
 			if (this.TeleportTimer == null || !TimerSystem.Instance.Has(this.TeleportTimer))
@@ -429,7 +429,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x060435A0 RID: 275872 RVA: 0x0107540C File Offset: 0x0107360C
+		// Token: 0x060395DC RID: 234972 RVA: 0x010198A0 File Offset: 0x01017AA0
 		private void SetPlayerTag(EntityHandle handle, bool addTag)
 		{
 			if (handle == null || !handle.Valid)
@@ -471,8 +471,8 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x1700985F RID: 39007
-		// (get) Token: 0x060435A1 RID: 275873 RVA: 0x01075501 File Offset: 0x01073701
+		// Token: 0x17006D3F RID: 27967
+		// (get) Token: 0x060395DD RID: 234973 RVA: 0x01019995 File Offset: 0x01017B95
 		public bool GetInPullback
 		{
 			get
@@ -481,68 +481,68 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x04023213 RID: 143891
+		// Token: 0x0401E403 RID: 123907
 		private const int DISTANCE_FACOR = 100;
 
-		// Token: 0x04023214 RID: 143892
+		// Token: 0x0401E404 RID: 123908
 		private const double TOLERANCE_DISTANCE = 5.0;
 
-		// Token: 0x04023215 RID: 143893
+		// Token: 0x0401E405 RID: 123909
 		private const long TELEPORT_DELAY_TIME = 20000L;
 
-		// Token: 0x04023216 RID: 143894
+		// Token: 0x0401E406 RID: 123910
 		private const long TELEPORT_DELAY_TIME_GONDOLA = 5000L;
 
-		// Token: 0x04023217 RID: 143895
+		// Token: 0x0401E407 RID: 123911
 		private const double END_DISTANCE = 250.0;
 
-		// Token: 0x04023218 RID: 143896
+		// Token: 0x0401E408 RID: 123912
 		private const string TIPS_NAME = "NotOpenArea";
 
-		// Token: 0x04023219 RID: 143897
+		// Token: 0x0401E409 RID: 123913
 		private readonly string Reason = "Input Limited Action";
 
-		// Token: 0x0402321A RID: 143898
+		// Token: 0x0401E40A RID: 123914
 		private readonly double ToleranceDistance = 500.0;
 
-		// Token: 0x0402321B RID: 143899
+		// Token: 0x0401E40B RID: 123915
 		private bool BattleViewHide;
 
-		// Token: 0x0402321C RID: 143900
+		// Token: 0x0401E40C RID: 123916
 		private bool IsRunningPullback;
 
-		// Token: 0x0402321D RID: 143901
+		// Token: 0x0401E40D RID: 123917
 		private bool EnablePostProcess;
 
-		// Token: 0x0402321E RID: 143902
+		// Token: 0x0401E40E RID: 123918
 		[Nullable(2)]
 		private TimerHandle TeleportTimer;
 
-		// Token: 0x0402321F RID: 143903
+		// Token: 0x0401E40F RID: 123919
 		private readonly global::Vector EnterLocation = global::Vector.Create();
 
-		// Token: 0x04023220 RID: 143904
+		// Token: 0x0401E410 RID: 123920
 		private readonly global::Vector PullbackDirect = global::Vector.Create();
 
-		// Token: 0x04023221 RID: 143905
+		// Token: 0x0401E411 RID: 123921
 		private readonly global::Vector CacheVector = global::Vector.Create();
 
-		// Token: 0x04023222 RID: 143906
+		// Token: 0x0401E412 RID: 123922
 		private readonly global::Vector CacheVector2 = global::Vector.Create();
 
-		// Token: 0x04023223 RID: 143907
+		// Token: 0x0401E413 RID: 123923
 		[Nullable(2)]
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x04023224 RID: 143908
+		// Token: 0x0401E414 RID: 123924
 		[Nullable(2)]
 		private CharacterSkillComponent SkillComp;
 
-		// Token: 0x04023225 RID: 143909
+		// Token: 0x0401E415 RID: 123925
 		[Nullable(2)]
 		private CharacterUnifiedStateComponent StateComp;
 
-		// Token: 0x04023226 RID: 143910
+		// Token: 0x0401E416 RID: 123926
 		[Nullable(2)]
 		private EntityHandle PlayerEntity;
 	}

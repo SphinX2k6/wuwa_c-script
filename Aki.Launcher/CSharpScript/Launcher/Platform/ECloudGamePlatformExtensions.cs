@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.Platform
 {
-	// Token: 0x02000129 RID: 297
+	// Token: 0x0200012D RID: 301
 	public static class ECloudGamePlatformExtensions
 	{
-		// Token: 0x06000990 RID: 2448 RVA: 0x00043210 File Offset: 0x00041410
+		// Token: 0x060009C4 RID: 2500 RVA: 0x00045624 File Offset: 0x00043824
 		public static string ToEnumString(this ECloudGamePlatform value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace CSharpScript.Launcher.Platform
 			return result;
 		}
 
-		// Token: 0x06000991 RID: 2449 RVA: 0x00043264 File Offset: 0x00041464
+		// Token: 0x060009C5 RID: 2501 RVA: 0x00045678 File Offset: 0x00043878
 		public static ECloudGamePlatform FromString(string name)
 		{
 			ECloudGamePlatform result;
@@ -41,7 +41,7 @@ namespace CSharpScript.Launcher.Platform
 			return result;
 		}
 
-		// Token: 0x06000992 RID: 2450 RVA: 0x00043290 File Offset: 0x00041490
+		// Token: 0x060009C6 RID: 2502 RVA: 0x000456A4 File Offset: 0x000438A4
 		public static bool TryFromString(string name, out ECloudGamePlatform value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace CSharpScript.Launcher.Platform
 			return true;
 		}
 
-		// Token: 0x06000993 RID: 2451 RVA: 0x000432F8 File Offset: 0x000414F8
+		// Token: 0x060009C7 RID: 2503 RVA: 0x0004570C File Offset: 0x0004390C
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace CSharpScript.Launcher.Platform
 			};
 		}
 
-		// Token: 0x06000994 RID: 2452 RVA: 0x00043320 File Offset: 0x00041520
+		// Token: 0x060009C8 RID: 2504 RVA: 0x00045734 File Offset: 0x00043934
 		public static ECloudGamePlatform[] GetValues()
 		{
 			return new ECloudGamePlatform[]
@@ -97,7 +97,7 @@ namespace CSharpScript.Launcher.Platform
 			};
 		}
 
-		// Token: 0x06000995 RID: 2453 RVA: 0x00043333 File Offset: 0x00041533
+		// Token: 0x060009C9 RID: 2505 RVA: 0x00045747 File Offset: 0x00043947
 		public static string[] GetNames()
 		{
 			return new string[]

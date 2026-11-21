@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D24 RID: 3364
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E1E RID: 3614
 	public class ISceneTextGuideUi : ISceneTextTypeBase
 	{
-		// Token: 0x06004CC7 RID: 19655 RVA: 0x000BF1E3 File Offset: 0x000BD3E3
+		// Token: 0x060051E3 RID: 20963 RVA: 0x000CA927 File Offset: 0x000C8B27
 		public static ISceneTextGuideUi Create(ISceneTextGuideUi? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700183C RID: 6204
-		// (get) Token: 0x06004CC8 RID: 19656 RVA: 0x000BF202 File Offset: 0x000BD402
+		// Token: 0x170019A2 RID: 6562
+		// (get) Token: 0x060051E4 RID: 20964 RVA: 0x000CA946 File Offset: 0x000C8B46
 		public override ESceneTextType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700183D RID: 6205
-		// (get) Token: 0x06004CC9 RID: 19657 RVA: 0x000BF20F File Offset: 0x000BD40F
+		// Token: 0x170019A3 RID: 6563
+		// (get) Token: 0x060051E5 RID: 20965 RVA: 0x000CA953 File Offset: 0x000C8B53
 		public virtual ISceneTextGuideUiScaleConfig ScaleConfig
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700183E RID: 6206
-		// (get) Token: 0x06004CCA RID: 19658 RVA: 0x000BF243 File Offset: 0x000BD443
+		// Token: 0x170019A4 RID: 6564
+		// (get) Token: 0x060051E6 RID: 20966 RVA: 0x000CA987 File Offset: 0x000C8B87
 		public virtual ISceneTextGuideUiContent Content
 		{
 			get
@@ -64,21 +62,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BEF RID: 11247
+		// Token: 0x04002EAF RID: 11951
 		private ISceneTextGuideUi Instance;
 
-		// Token: 0x04002BF0 RID: 11248
+		// Token: 0x04002EB0 RID: 11952
 		[Nullable(2)]
 		private ISceneTextGuideUiScaleConfig _ScaleConfigCache;
 
-		// Token: 0x04002BF1 RID: 11249
+		// Token: 0x04002EB1 RID: 11953
 		private bool _ScaleConfigInited;
 
-		// Token: 0x04002BF2 RID: 11250
+		// Token: 0x04002EB2 RID: 11954
 		[Nullable(2)]
 		private ISceneTextGuideUiContent _ContentCache;
 
-		// Token: 0x04002BF3 RID: 11251
+		// Token: 0x04002EB3 RID: 11955
 		private bool _ContentInited;
 	}
 }

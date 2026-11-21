@@ -7,44 +7,44 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 {
-	// Token: 0x02006445 RID: 25669
+	// Token: 0x020053C3 RID: 21443
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ActivityMotorLinkageController : ActivityControllerBase
 	{
-		// Token: 0x06040851 RID: 264273 RVA: 0x00F9E153 File Offset: 0x00F9C353
+		// Token: 0x06035512 RID: 218386 RVA: 0x00EE50CF File Offset: 0x00EE32CF
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x06040852 RID: 264274 RVA: 0x00F9E156 File Offset: 0x00F9C356
+		// Token: 0x06035513 RID: 218387 RVA: 0x00EE50D2 File Offset: 0x00EE32D2
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x06040853 RID: 264275 RVA: 0x00F9E158 File Offset: 0x00F9C358
+		// Token: 0x06035514 RID: 218388 RVA: 0x00EE50D4 File Offset: 0x00EE32D4
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_ActivityMotoLinkage";
 		}
 
-		// Token: 0x06040854 RID: 264276 RVA: 0x00F9E15F File Offset: 0x00F9C35F
+		// Token: 0x06035515 RID: 218389 RVA: 0x00EE50DB File Offset: 0x00EE32DB
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new ActivityMotorLinkageSubView();
 		}
 
-		// Token: 0x06040855 RID: 264277 RVA: 0x00F9E166 File Offset: 0x00F9C366
+		// Token: 0x06035516 RID: 218390 RVA: 0x00EE50E2 File Offset: 0x00EE32E2
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			this.Id = data.Id;
 			return new ActivityMotorLinkageData();
 		}
 
-		// Token: 0x17009480 RID: 38016
-		// (get) Token: 0x06040856 RID: 264278 RVA: 0x00F9E179 File Offset: 0x00F9C379
+		// Token: 0x170067E2 RID: 26594
+		// (get) Token: 0x06035517 RID: 218391 RVA: 0x00EE50F5 File Offset: 0x00EE32F5
 		public int ActivityId
 		{
 			get
@@ -53,8 +53,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}
 		}
 
-		// Token: 0x17009481 RID: 38017
-		// (get) Token: 0x06040857 RID: 264279 RVA: 0x00F9E181 File Offset: 0x00F9C381
+		// Token: 0x170067E3 RID: 26595
+		// (get) Token: 0x06035518 RID: 218392 RVA: 0x00EE50FD File Offset: 0x00EE32FD
 		[Nullable(2)]
 		public ActivityMotorLinkageData ActivityData
 		{
@@ -66,19 +66,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}
 		}
 
-		// Token: 0x06040858 RID: 264280 RVA: 0x00F9E19F File Offset: 0x00F9C39F
+		// Token: 0x06035519 RID: 218393 RVA: 0x00EE511B File Offset: 0x00EE331B
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.MotorcycleTaskUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.HandleActivityDataNotify));
 		}
 
-		// Token: 0x06040859 RID: 264281 RVA: 0x00F9E1BD File Offset: 0x00F9C3BD
+		// Token: 0x0603551A RID: 218394 RVA: 0x00EE5139 File Offset: 0x00EE3339
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.MotorcycleTaskUpdateNotify);
 		}
 
-		// Token: 0x0604085A RID: 264282 RVA: 0x00F9E1D0 File Offset: 0x00F9C3D0
+		// Token: 0x0603551B RID: 218395 RVA: 0x00EE514C File Offset: 0x00EE334C
 		[NullableContext(2)]
 		private void HandleActivityDataNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			this.ActivityData.OnQuestUpdateNotify(notify);
 		}
 
-		// Token: 0x0604085B RID: 264283 RVA: 0x00F9E1F0 File Offset: 0x00F9C3F0
+		// Token: 0x0603551C RID: 218396 RVA: 0x00EE516C File Offset: 0x00EE336C
 		public UniTask ReceiveAllRewardRequest(int ipId)
 		{
 			ActivityMotorLinkageController.<ReceiveAllRewardRequest>d__13 <ReceiveAllRewardRequest>d__;
@@ -98,8 +98,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return <ReceiveAllRewardRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x17009482 RID: 38018
-		// (get) Token: 0x0604085C RID: 264284 RVA: 0x00F9E23B File Offset: 0x00F9C43B
+		// Token: 0x170067E4 RID: 26596
+		// (get) Token: 0x0603551D RID: 218397 RVA: 0x00EE51B7 File Offset: 0x00EE33B7
 		public static ActivityMotorLinkageController Instance
 		{
 			get
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}
 		}
 
-		// Token: 0x0604085D RID: 264285 RVA: 0x00F9E242 File Offset: 0x00F9C442
+		// Token: 0x0603551E RID: 218398 RVA: 0x00EE51BE File Offset: 0x00EE33BE
 		public static ActivityMotorLinkageController GetOrCreateInstance()
 		{
 			if (ActivityMotorLinkageController._Instance == null)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return ActivityMotorLinkageController._Instance;
 		}
 
-		// Token: 0x0604085E RID: 264286 RVA: 0x00F9E256 File Offset: 0x00F9C456
+		// Token: 0x0603551F RID: 218399 RVA: 0x00EE51D2 File Offset: 0x00EE33D2
 		public static bool CreateInstance()
 		{
 			if (ActivityMotorLinkageController._Instance != null)
@@ -129,27 +129,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return true;
 		}
 
-		// Token: 0x0604085F RID: 264287 RVA: 0x00F9E26C File Offset: 0x00F9C46C
+		// Token: 0x06035520 RID: 218400 RVA: 0x00EE51E8 File Offset: 0x00EE33E8
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06040860 RID: 264288 RVA: 0x00F9E26E File Offset: 0x00F9C46E
+		// Token: 0x06035521 RID: 218401 RVA: 0x00EE51EA File Offset: 0x00EE33EA
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityMotorLinkageController._Instance = null;
 		}
 
-		// Token: 0x06040861 RID: 264289 RVA: 0x00F9E276 File Offset: 0x00F9C476
+		// Token: 0x06035522 RID: 218402 RVA: 0x00EE51F2 File Offset: 0x00EE33F2
 		static ActivityMotorLinkageController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityMotorLinkageController.CreateStaticDefaultValue), new Action(ActivityMotorLinkageController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040218D4 RID: 137428
+		// Token: 0x0401C203 RID: 115203
 		private int Id;
 
-		// Token: 0x040218D5 RID: 137429
+		// Token: 0x0401C204 RID: 115204
 		[Nullable(2)]
 		private static ActivityMotorLinkageController _Instance;
 	}

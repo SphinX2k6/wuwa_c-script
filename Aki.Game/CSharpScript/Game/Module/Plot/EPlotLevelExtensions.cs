@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x0200500A RID: 20490
+	// Token: 0x02003FD4 RID: 16340
 	public static class EPlotLevelExtensions
 	{
-		// Token: 0x060346FD RID: 214781 RVA: 0x00C59428 File Offset: 0x00C57628
+		// Token: 0x060295A0 RID: 169376 RVA: 0x00BA4928 File Offset: 0x00BA2B28
 		public static string ToEnumString(this EPlotLevel value)
 		{
 			string result;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Plot
 			return result;
 		}
 
-		// Token: 0x060346FE RID: 214782 RVA: 0x00C594A0 File Offset: 0x00C576A0
+		// Token: 0x060295A1 RID: 169377 RVA: 0x00BA49A0 File Offset: 0x00BA2BA0
 		public static EPlotLevel FromString(string name)
 		{
 			EPlotLevel result;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Plot
 			return result;
 		}
 
-		// Token: 0x060346FF RID: 214783 RVA: 0x00C594CC File Offset: 0x00C576CC
+		// Token: 0x060295A2 RID: 169378 RVA: 0x00BA49CC File Offset: 0x00BA2BCC
 		public static bool TryFromString(string name, out EPlotLevel value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Plot
 			return false;
 		}
 
-		// Token: 0x06034700 RID: 214784 RVA: 0x00C595C3 File Offset: 0x00C577C3
+		// Token: 0x060295A3 RID: 169379 RVA: 0x00BA4AC3 File Offset: 0x00BA2CC3
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Plot
 			};
 		}
 
-		// Token: 0x06034701 RID: 214785 RVA: 0x00C59603 File Offset: 0x00C57803
+		// Token: 0x060295A4 RID: 169380 RVA: 0x00BA4B03 File Offset: 0x00BA2D03
 		public static EPlotLevel[] GetValues()
 		{
 			return new EPlotLevel[]
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Plot
 			};
 		}
 
-		// Token: 0x06034702 RID: 214786 RVA: 0x00C59616 File Offset: 0x00C57816
+		// Token: 0x060295A5 RID: 169381 RVA: 0x00BA4B16 File Offset: 0x00BA2D16
 		public static string[] GetNames()
 		{
 			return new string[]

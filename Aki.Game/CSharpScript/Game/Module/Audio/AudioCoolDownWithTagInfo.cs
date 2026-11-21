@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Audio
 {
-	// Token: 0x02005E86 RID: 24198
+	// Token: 0x02004E6B RID: 20075
 	public class AudioCoolDownWithTagInfo : AudioCoolDownInfo, IAudioCoolDownWithTagInfo, IAudioCoolDownInfo
 	{
-		// Token: 0x17008E8B RID: 36491
-		// (get) Token: 0x0603D8EE RID: 252142 RVA: 0x00EDB1E4 File Offset: 0x00ED93E4
-		// (set) Token: 0x0603D8EF RID: 252143 RVA: 0x00EDB1EC File Offset: 0x00ED93EC
+		// Token: 0x1700625D RID: 25181
+		// (get) Token: 0x0603287E RID: 206974 RVA: 0x00E2C770 File Offset: 0x00E2A970
+		// (set) Token: 0x0603287F RID: 206975 RVA: 0x00E2C778 File Offset: 0x00E2A978
 		[Nullable(new byte[]
 		{
 			2,

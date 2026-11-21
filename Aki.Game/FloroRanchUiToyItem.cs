@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BAD RID: 7085
+// Token: 0x0200106C RID: 4204
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchUiToyItem : FloroRanchUiItemBase
 {
-	// Token: 0x0600D328 RID: 54056 RVA: 0x00308C28 File Offset: 0x00306E28
+	// Token: 0x0600A739 RID: 42809 RVA: 0x00313D08 File Offset: 0x00311F08
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 17;
@@ -63,14 +63,14 @@ public class FloroRanchUiToyItem : FloroRanchUiItemBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D329 RID: 54057 RVA: 0x00308EC6 File Offset: 0x003070C6
+	// Token: 0x0600A73A RID: 42810 RVA: 0x00313FA6 File Offset: 0x003121A6
 	protected override void OnBeforeCreate()
 	{
 		this.UiLevelSequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.UiLevelSequence);
 	}
 
-	// Token: 0x0600D32A RID: 54058 RVA: 0x00308EE0 File Offset: 0x003070E0
+	// Token: 0x0600A73B RID: 42811 RVA: 0x00313FC0 File Offset: 0x003121C0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchUiToyItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -81,7 +81,7 @@ public class FloroRanchUiToyItem : FloroRanchUiItemBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D32B RID: 54059 RVA: 0x00308F24 File Offset: 0x00307124
+	// Token: 0x0600A73C RID: 42812 RVA: 0x00314004 File Offset: 0x00312204
 	public override UniTask RefreshItem()
 	{
 		FloroRanchUiToyItem.<RefreshItem>d__8 <RefreshItem>d__;
@@ -92,13 +92,13 @@ public class FloroRanchUiToyItem : FloroRanchUiItemBase
 		return <RefreshItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D32C RID: 54060 RVA: 0x00308F67 File Offset: 0x00307167
+	// Token: 0x0600A73D RID: 42813 RVA: 0x00314047 File Offset: 0x00312247
 	public override FTransform? GetRewardPopTransform()
 	{
 		return new FTransform?(base.GetRootActor().GetTransform());
 	}
 
-	// Token: 0x0600D32D RID: 54061 RVA: 0x00308F7C File Offset: 0x0030717C
+	// Token: 0x0600A73E RID: 42814 RVA: 0x0031405C File Offset: 0x0031225C
 	public override UniTask PlayShowAnim()
 	{
 		FloroRanchUiToyItem.<PlayShowAnim>d__10 <PlayShowAnim>d__;
@@ -109,7 +109,7 @@ public class FloroRanchUiToyItem : FloroRanchUiItemBase
 		return <PlayShowAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D32E RID: 54062 RVA: 0x00308FC0 File Offset: 0x003071C0
+	// Token: 0x0600A73F RID: 42815 RVA: 0x003140A0 File Offset: 0x003122A0
 	public override UniTask PlayHideAnim()
 	{
 		FloroRanchUiToyItem.<PlayHideAnim>d__11 <PlayHideAnim>d__;
@@ -120,7 +120,7 @@ public class FloroRanchUiToyItem : FloroRanchUiItemBase
 		return <PlayHideAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D32F RID: 54063 RVA: 0x00309004 File Offset: 0x00307204
+	// Token: 0x0600A740 RID: 42816 RVA: 0x003140E4 File Offset: 0x003122E4
 	public override UniTask PlayNormalAnim()
 	{
 		FloroRanchUiToyItem.<PlayNormalAnim>d__12 <PlayNormalAnim>d__;
@@ -131,7 +131,7 @@ public class FloroRanchUiToyItem : FloroRanchUiItemBase
 		return <PlayNormalAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D330 RID: 54064 RVA: 0x00309048 File Offset: 0x00307248
+	// Token: 0x0600A741 RID: 42817 RVA: 0x00314128 File Offset: 0x00312328
 	public UniTask PlayToyLevelUpAnim()
 	{
 		FloroRanchUiToyItem.<PlayToyLevelUpAnim>d__13 <PlayToyLevelUpAnim>d__;
@@ -142,13 +142,13 @@ public class FloroRanchUiToyItem : FloroRanchUiItemBase
 		return <PlayToyLevelUpAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D331 RID: 54065 RVA: 0x0030908B File Offset: 0x0030728B
+	// Token: 0x0600A742 RID: 42818 RVA: 0x0031416B File Offset: 0x0031236B
 	public void SetSelectState(bool isSelect)
 	{
 		base.GetExtendToggle(0).SetToggleState(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600D332 RID: 54066 RVA: 0x003090A4 File Offset: 0x003072A4
+	// Token: 0x0600A743 RID: 42819 RVA: 0x00314184 File Offset: 0x00312384
 	private void OnToggleClick(EToggleState toggleState)
 	{
 		Action onClickCallback = this.OnClickCallback;
@@ -159,79 +159,79 @@ public class FloroRanchUiToyItem : FloroRanchUiItemBase
 		onClickCallback();
 	}
 
-	// Token: 0x0600D333 RID: 54067 RVA: 0x003090B6 File Offset: 0x003072B6
+	// Token: 0x0600A744 RID: 42820 RVA: 0x00314196 File Offset: 0x00312396
 	public void BindClickCallback(Action callback)
 	{
 		this.OnClickCallback = callback;
 	}
 
-	// Token: 0x040060B5 RID: 24757
+	// Token: 0x04006184 RID: 24964
 	private FloroRanchEntityDebugInfoItem DebugInfoItem;
 
-	// Token: 0x040060B6 RID: 24758
+	// Token: 0x04006185 RID: 24965
 	public UiBehaviorLevelSequence UiLevelSequence;
 
-	// Token: 0x040060B7 RID: 24759
+	// Token: 0x04006186 RID: 24966
 	public FloroRanchToyLevelItem ToyLevelItem;
 
-	// Token: 0x040060B8 RID: 24760
+	// Token: 0x04006187 RID: 24967
 	private Action OnClickCallback = delegate()
 	{
 	};
 
-	// Token: 0x02008169 RID: 33129
+	// Token: 0x020072F7 RID: 29431
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402A3B0 RID: 172976
+		// Token: 0x040256E4 RID: 153316
 		public const int Toggle = 0;
 
-		// Token: 0x0402A3B1 RID: 172977
+		// Token: 0x040256E5 RID: 153317
 		public const int QualitySprite = 1;
 
-		// Token: 0x0402A3B2 RID: 172978
+		// Token: 0x040256E6 RID: 153318
 		public const int IconTexture = 2;
 
-		// Token: 0x0402A3B3 RID: 172979
+		// Token: 0x040256E7 RID: 153319
 		public const int CountDownPanel = 3;
 
-		// Token: 0x0402A3B4 RID: 172980
+		// Token: 0x040256E8 RID: 153320
 		public const int CountdownText = 4;
 
-		// Token: 0x0402A3B5 RID: 172981
+		// Token: 0x040256E9 RID: 153321
 		public const int NumPanel = 5;
 
-		// Token: 0x0402A3B6 RID: 172982
+		// Token: 0x040256EA RID: 153322
 		public const int NumText = 6;
 
-		// Token: 0x0402A3B7 RID: 172983
+		// Token: 0x040256EB RID: 153323
 		public const int LockSprite = 7;
 
-		// Token: 0x0402A3B8 RID: 172984
+		// Token: 0x040256EC RID: 153324
 		public const int InfoPanel = 8;
 
-		// Token: 0x0402A3B9 RID: 172985
+		// Token: 0x040256ED RID: 153325
 		public const int BgSprite = 9;
 
-		// Token: 0x0402A3BA RID: 172986
+		// Token: 0x040256EE RID: 153326
 		public const int IconMaskTexture = 10;
 
-		// Token: 0x0402A3BB RID: 172987
+		// Token: 0x040256EF RID: 153327
 		public const int UnknownPanel = 11;
 
-		// Token: 0x0402A3BC RID: 172988
+		// Token: 0x040256F0 RID: 153328
 		public const int ItemPhantomIcon = 12;
 
-		// Token: 0x0402A3BD RID: 172989
+		// Token: 0x040256F1 RID: 153329
 		public const int ItemNew = 13;
 
-		// Token: 0x0402A3BE RID: 172990
+		// Token: 0x040256F2 RID: 153330
 		public const int ToyRaceItem = 14;
 
-		// Token: 0x0402A3BF RID: 172991
+		// Token: 0x040256F3 RID: 153331
 		public const int ToyRaceIcon = 15;
 
-		// Token: 0x0402A3C0 RID: 172992
+		// Token: 0x040256F4 RID: 153332
 		public const int ToyLevelItem = 16;
 	}
 }

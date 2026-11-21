@@ -5,23 +5,23 @@ using System.Runtime.InteropServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Character.Role.Common.Data.Enum;
 using CSharpScript.Game.Common.Event;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D1C RID: 11548
+// Token: 0x02002276 RID: 8822
 [NullableContext(1)]
 [Nullable(0)]
 public class WeaponRootView : UiViewBase
 {
-	// Token: 0x0601847E RID: 99454 RVA: 0x0062DBE3 File Offset: 0x0062BDE3
+	// Token: 0x06015D1F RID: 89375 RVA: 0x00653BD7 File Offset: 0x00651DD7
 	public WeaponRootView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601847F RID: 99455 RVA: 0x0062DC08 File Offset: 0x0062BE08
+	// Token: 0x06015D20 RID: 89376 RVA: 0x00653BFC File Offset: 0x00651DFC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -35,7 +35,7 @@ public class WeaponRootView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06018480 RID: 99456 RVA: 0x0062DC74 File Offset: 0x0062BE74
+	// Token: 0x06015D21 RID: 89377 RVA: 0x00653C68 File Offset: 0x00651E68
 	protected override void OnBeforeCreate()
 	{
 		IWeaponRootViewParam weaponRootViewParam = this.OpenParam as IWeaponRootViewParam;
@@ -54,7 +54,7 @@ public class WeaponRootView : UiViewBase
 		this.WeaponScabbardObserver = UiSceneManager.Instance.InitWeaponScabbardObserver();
 	}
 
-	// Token: 0x06018481 RID: 99457 RVA: 0x0062DCFC File Offset: 0x0062BEFC
+	// Token: 0x06015D22 RID: 89378 RVA: 0x00653CF0 File Offset: 0x00651EF0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeaponRootView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -65,7 +65,7 @@ public class WeaponRootView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018482 RID: 99458 RVA: 0x0062DD3F File Offset: 0x0062BF3F
+	// Token: 0x06015D23 RID: 89379 RVA: 0x00653D33 File Offset: 0x00651F33
 	protected override void OnHandleLoadScene()
 	{
 		if (this.WeaponObserver == null)
@@ -78,12 +78,12 @@ public class WeaponRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06018483 RID: 99459 RVA: 0x0062DD74 File Offset: 0x0062BF74
+	// Token: 0x06015D24 RID: 89380 RVA: 0x00653D68 File Offset: 0x00651F68
 	protected override void OnBeforeShow()
 	{
 		UiLayer.Instance.SetShowMaskLayer(EUiViewName.WeaponRootView, true);
 		this.UpdateDynamicTabComponent();
-		if (!UiCameraAnimationManager.Instance.IsPlayingAnimation())
+		if (!UiCameraModel.Instance.IsPlayingAnimation())
 		{
 			if (this.IsFirstShowWeapon)
 			{
@@ -94,19 +94,19 @@ public class WeaponRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06018484 RID: 99460 RVA: 0x0062DDF9 File Offset: 0x0062BFF9
+	// Token: 0x06015D25 RID: 89381 RVA: 0x00653DED File Offset: 0x00651FED
 	protected override void OnAfterShow()
 	{
 		WeaponModel.Instance.SetCurSelectViewName(EWeaponViewName.WeaponLevelUpView);
 	}
 
-	// Token: 0x06018485 RID: 99461 RVA: 0x0062DE06 File Offset: 0x0062C006
+	// Token: 0x06015D26 RID: 89382 RVA: 0x00653DFA File Offset: 0x00651FFA
 	private WeaponTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? _)
 	{
 		return new WeaponTabItem();
 	}
 
-	// Token: 0x06018486 RID: 99462 RVA: 0x0062DE10 File Offset: 0x0062C010
+	// Token: 0x06015D27 RID: 89383 RVA: 0x00653E04 File Offset: 0x00652004
 	private void ToggleCallBack(int index)
 	{
 		UiDynamicTab data = this.TabDataList[index];
@@ -115,37 +115,37 @@ public class WeaponRootView : UiViewBase
 		this.TabViewComponent.ToggleCallBack(data, viewName, tabItemByIndex, this.WeaponIncId, null);
 	}
 
-	// Token: 0x06018487 RID: 99463 RVA: 0x0062DE68 File Offset: 0x0062C068
+	// Token: 0x06015D28 RID: 89384 RVA: 0x00653E5C File Offset: 0x0065205C
 	private CommonTabData GetCommonData(int index)
 	{
 		UiDynamicTab uiDynamicTab = this.TabDataList[index];
 		return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x06018488 RID: 99464 RVA: 0x0062DEA0 File Offset: 0x0062C0A0
+	// Token: 0x06015D29 RID: 89385 RVA: 0x00653E94 File Offset: 0x00652094
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.WeaponCanGoBreach, new Action(this.WeaponCanGoBreachEvent));
 		EventSystem.Instance.Add<UiCameraHandleData>(EEventName.OnActivateUiCameraAnimationHandle, new Action<UiCameraHandleData>(this.OnCameraFinish));
 	}
 
-	// Token: 0x06018489 RID: 99465 RVA: 0x0062DEDA File Offset: 0x0062C0DA
+	// Token: 0x06015D2A RID: 89386 RVA: 0x00653ECE File Offset: 0x006520CE
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.WeaponCanGoBreach, new Action(this.WeaponCanGoBreachEvent));
 		EventSystem.Instance.Remove<UiCameraHandleData>(EEventName.OnActivateUiCameraAnimationHandle, new Action<UiCameraHandleData>(this.OnCameraFinish));
 	}
 
-	// Token: 0x0601848A RID: 99466 RVA: 0x0062DF14 File Offset: 0x0062C114
+	// Token: 0x06015D2B RID: 89387 RVA: 0x00653F08 File Offset: 0x00652108
 	private void WeaponCanGoBreachEvent()
 	{
 		this.UpdateDynamicTabComponent();
 	}
 
-	// Token: 0x0601848B RID: 99467 RVA: 0x0062DF1C File Offset: 0x0062C11C
+	// Token: 0x06015D2C RID: 89388 RVA: 0x00653F10 File Offset: 0x00652110
 	private void OnCameraFinish(UiCameraHandleData handleData)
 	{
-		if (handleData.ViewName != EUiViewName.WeaponRootView)
+		if (handleData.GetViewName() != EUiViewName.WeaponRootView)
 		{
 			return;
 		}
@@ -157,19 +157,19 @@ public class WeaponRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601848C RID: 99468 RVA: 0x0062DFA2 File Offset: 0x0062C1A2
+	// Token: 0x06015D2D RID: 89389 RVA: 0x00653F96 File Offset: 0x00652196
 	protected override void OnBeforePlayCloseSequence()
 	{
 		this.ReleaseWeaponObserver();
 	}
 
-	// Token: 0x0601848D RID: 99469 RVA: 0x0062DFAA File Offset: 0x0062C1AA
+	// Token: 0x06015D2E RID: 89390 RVA: 0x00653F9E File Offset: 0x0065219E
 	protected override void OnHandleReleaseScene()
 	{
 		this.ReleaseWeaponObserver();
 	}
 
-	// Token: 0x0601848E RID: 99470 RVA: 0x0062DFB4 File Offset: 0x0062C1B4
+	// Token: 0x06015D2F RID: 89391 RVA: 0x00653FA8 File Offset: 0x006521A8
 	private void ReleaseWeaponObserver()
 	{
 		if (this.WeaponObserver != null)
@@ -187,7 +187,7 @@ public class WeaponRootView : UiViewBase
 		this.IsFirstShowWeapon = true;
 	}
 
-	// Token: 0x0601848F RID: 99471 RVA: 0x0062E030 File Offset: 0x0062C230
+	// Token: 0x06015D30 RID: 89392 RVA: 0x00654024 File Offset: 0x00652224
 	protected override void OnBeforeDestroy()
 	{
 		this.ReleaseWeaponObserver();
@@ -210,13 +210,13 @@ public class WeaponRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06018490 RID: 99472 RVA: 0x0062E0C5 File Offset: 0x0062C2C5
+	// Token: 0x06015D31 RID: 89393 RVA: 0x006540B9 File Offset: 0x006522B9
 	private void BackClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06018491 RID: 99473 RVA: 0x0062E0D0 File Offset: 0x0062C2D0
+	// Token: 0x06015D32 RID: 89394 RVA: 0x006540C4 File Offset: 0x006522C4
 	protected void UpdateDynamicTabComponent()
 	{
 		this.TabDataList = this.GetWeaponTabList();
@@ -229,7 +229,7 @@ public class WeaponRootView : UiViewBase
 		});
 	}
 
-	// Token: 0x06018492 RID: 99474 RVA: 0x0062E12C File Offset: 0x0062C32C
+	// Token: 0x06015D33 RID: 89395 RVA: 0x00654120 File Offset: 0x00652320
 	public List<UiDynamicTab> GetWeaponTabList()
 	{
 		List<UiDynamicTab> list = new List<UiDynamicTab>();
@@ -245,7 +245,7 @@ public class WeaponRootView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06018493 RID: 99475 RVA: 0x0062E1E0 File Offset: 0x0062C3E0
+	// Token: 0x06015D34 RID: 89396 RVA: 0x006541D4 File Offset: 0x006523D4
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -283,7 +283,7 @@ public class WeaponRootView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x06018494 RID: 99476 RVA: 0x0062E28C File Offset: 0x0062C48C
+	// Token: 0x06015D35 RID: 89397 RVA: 0x00654280 File Offset: 0x00652480
 	private void BindRedDot()
 	{
 		int num = this.TabDataList.FindIndex((UiDynamicTab config) => config.ChildViewName == EUiTabViewName.WeaponResonanceView);
@@ -297,7 +297,7 @@ public class WeaponRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06018495 RID: 99477 RVA: 0x0062E2F0 File Offset: 0x0062C4F0
+	// Token: 0x06015D36 RID: 89398 RVA: 0x006542E4 File Offset: 0x006524E4
 	private void UnBindRedDot()
 	{
 		int num = this.TabDataList.FindIndex((UiDynamicTab config) => config.ChildViewName == EUiTabViewName.WeaponResonanceView);
@@ -312,11 +312,11 @@ public class WeaponRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400B443 RID: 46147
+	// Token: 0x0400B7B8 RID: 47032
 	[Nullable(2)]
 	protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-	// Token: 0x0400B444 RID: 46148
+	// Token: 0x0400B7B9 RID: 47033
 	[Nullable(new byte[]
 	{
 		2,
@@ -324,33 +324,33 @@ public class WeaponRootView : UiViewBase
 	})]
 	protected TabComponentWithCaptionItem<WeaponTabItem> TabComponent;
 
-	// Token: 0x0400B445 RID: 46149
+	// Token: 0x0400B7BA RID: 47034
 	protected List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-	// Token: 0x0400B446 RID: 46150
+	// Token: 0x0400B7BB RID: 47035
 	private bool IsFirstShowWeapon = true;
 
-	// Token: 0x0400B447 RID: 46151
+	// Token: 0x0400B7BC RID: 47036
 	private int WeaponIncId;
 
-	// Token: 0x0400B448 RID: 46152
+	// Token: 0x0400B7BD RID: 47037
 	private int WeaponSkinId = -1;
 
-	// Token: 0x0400B449 RID: 46153
+	// Token: 0x0400B7BE RID: 47038
 	[Nullable(2)]
 	private SkeletalObserverHandle WeaponObserver;
 
-	// Token: 0x0400B44A RID: 46154
+	// Token: 0x0400B7BF RID: 47039
 	[Nullable(2)]
 	private SkeletalObserverHandle WeaponScabbardObserver;
 
-	// Token: 0x020092AC RID: 37548
+	// Token: 0x020084D4 RID: 34004
 	[NullableContext(0)]
 	private enum EWeaponRootViewDefine
 	{
-		// Token: 0x0402F6B1 RID: 194225
+		// Token: 0x0402AD3B RID: 175419
 		CaptionList,
-		// Token: 0x0402F6B2 RID: 194226
+		// Token: 0x0402AD3C RID: 175420
 		ViewItem
 	}
 }

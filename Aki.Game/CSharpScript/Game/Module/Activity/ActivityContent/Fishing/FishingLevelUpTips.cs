@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006631 RID: 26161
+	// Token: 0x020055AF RID: 21935
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingLevelUpTips : UiTickViewBase
 	{
-		// Token: 0x06041949 RID: 268617 RVA: 0x00FE7D43 File Offset: 0x00FE5F43
+		// Token: 0x0603660E RID: 222734 RVA: 0x00F2EDFB File Offset: 0x00F2CFFB
 		public FishingLevelUpTips(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0604194A RID: 268618 RVA: 0x00FE7D54 File Offset: 0x00FE5F54
+		// Token: 0x0603660F RID: 222735 RVA: 0x00F2EE0C File Offset: 0x00F2D00C
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.ExpData = (this.OpenParam as FishingLevelUpData);
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604194B RID: 268619 RVA: 0x00FE7E34 File Offset: 0x00FE6034
+		// Token: 0x06036610 RID: 222736 RVA: 0x00F2EEEC File Offset: 0x00F2D0EC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FishingLevelUpTips.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604194C RID: 268620 RVA: 0x00FE7E78 File Offset: 0x00FE6078
+		// Token: 0x06036611 RID: 222737 RVA: 0x00F2EF30 File Offset: 0x00F2D130
 		protected override void OnStart()
 		{
 			this.AddText = base.GetText(1);
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetText(0).SetText(this.Level.ToString(), true);
 		}
 
-		// Token: 0x0604194D RID: 268621 RVA: 0x00FE7F38 File Offset: 0x00FE6138
+		// Token: 0x06036612 RID: 222738 RVA: 0x00F2EFF0 File Offset: 0x00F2D1F0
 		protected override void OnTick(float delta)
 		{
 			if (!this.IsTick)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshExp((float)this.ExpData.AddExp * 1f / 2000f * delta);
 		}
 
-		// Token: 0x0604194E RID: 268622 RVA: 0x00FE7F94 File Offset: 0x00FE6194
+		// Token: 0x06036613 RID: 222739 RVA: 0x00F2F04C File Offset: 0x00F2D24C
 		private void RefreshExp(float addExp)
 		{
 			this.DeltaAddExp += addExp;
@@ -95,50 +95,50 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x040221DB RID: 139739
+		// Token: 0x0401CB0C RID: 117516
 		private const int TICK_TIME = 2000;
 
-		// Token: 0x040221DC RID: 139740
+		// Token: 0x0401CB0D RID: 117517
 		protected FishingLevelUpData ExpData;
 
-		// Token: 0x040221DD RID: 139741
+		// Token: 0x0401CB0E RID: 117518
 		protected int Level;
 
-		// Token: 0x040221DE RID: 139742
+		// Token: 0x0401CB0F RID: 117519
 		protected float CurrentExp;
 
-		// Token: 0x040221DF RID: 139743
+		// Token: 0x0401CB10 RID: 117520
 		protected float DeltaAddExp;
 
-		// Token: 0x040221E0 RID: 139744
+		// Token: 0x0401CB11 RID: 117521
 		protected int CurrentMaxExp;
 
-		// Token: 0x040221E1 RID: 139745
+		// Token: 0x0401CB12 RID: 117522
 		protected bool IsTick = true;
 
-		// Token: 0x040221E2 RID: 139746
+		// Token: 0x0401CB13 RID: 117523
 		protected UUIText AddText;
 
-		// Token: 0x040221E3 RID: 139747
+		// Token: 0x0401CB14 RID: 117524
 		protected UUISprite SpriteBar;
 
-		// Token: 0x0200C84D RID: 51277
+		// Token: 0x0200B22F RID: 45615
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C817 RID: 247831
+			// Token: 0x0403715C RID: 225628
 			public const int LevelNum = 0;
 
-			// Token: 0x0403C818 RID: 247832
+			// Token: 0x0403715D RID: 225629
 			public const int AddText = 1;
 
-			// Token: 0x0403C819 RID: 247833
+			// Token: 0x0403715E RID: 225630
 			public const int SpriteBar = 2;
 
-			// Token: 0x0403C81A RID: 247834
+			// Token: 0x0403715F RID: 225631
 			public const int Title = 3;
 
-			// Token: 0x0403C81B RID: 247835
+			// Token: 0x04037160 RID: 225632
 			public const int Texture = 4;
 		}
 	}

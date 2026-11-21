@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004D8 RID: 1240
+	// Token: 0x020004EE RID: 1262
 	public class ConfigLineCrossChallengeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001D1B RID: 7451 RVA: 0x000FDB00 File Offset: 0x000FBD00
+		// Token: 0x06001D9F RID: 7583 RVA: 0x00104254 File Offset: 0x00102454
 		static ConfigLineCrossChallengeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLineCrossChallengeById.CreateStaticDefaultValue), new Action(ConfigLineCrossChallengeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001D1C RID: 7452 RVA: 0x000FDB20 File Offset: 0x000FBD20
+		// Token: 0x06001DA0 RID: 7584 RVA: 0x00104274 File Offset: 0x00102474
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLineCrossChallengeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001D1D RID: 7453 RVA: 0x000FDB9F File Offset: 0x000FBD9F
+		// Token: 0x06001DA1 RID: 7585 RVA: 0x001042F3 File Offset: 0x001024F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLineCrossChallengeById.LogPair = null;
 			ConfigLineCrossChallengeById.HandleId = 0;
 		}
 
-		// Token: 0x06001D1E RID: 7454 RVA: 0x000FDBAD File Offset: 0x000FBDAD
+		// Token: 0x06001DA2 RID: 7586 RVA: 0x00104301 File Offset: 0x00102501
 		public static void Init()
 		{
 			ConfigLineCrossChallengeById.HandleId = ConfigCommon.InitDataStatement(ConfigLineCrossChallengeById.HandleId, "db_linecross.db", "select BinData from `LineCrossChallenge` where Id=?");
 		}
 
-		// Token: 0x06001D1F RID: 7455 RVA: 0x000FDBC8 File Offset: 0x000FBDC8
+		// Token: 0x06001DA3 RID: 7587 RVA: 0x0010431C File Offset: 0x0010251C
 		public static LineCrossChallenge? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLineCrossChallengeById.HandleId, ConfigLineCrossChallengeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new LineCrossChallenge?(rootAsLineCrossChallenge);
 		}
 
-		// Token: 0x040021CC RID: 8652
+		// Token: 0x04002266 RID: 8806
 		private const string DB = "db_linecross.db";
 
-		// Token: 0x040021CD RID: 8653
+		// Token: 0x04002267 RID: 8807
 		private const string FILE = "s.十字连线.xlsx";
 
-		// Token: 0x040021CE RID: 8654
+		// Token: 0x04002268 RID: 8808
 		private const string TABLE = "LineCrossChallenge";
 
-		// Token: 0x040021CF RID: 8655
+		// Token: 0x04002269 RID: 8809
 		private const string COMMAND = "select BinData from `LineCrossChallenge` where Id=?";
 
-		// Token: 0x040021D0 RID: 8656
+		// Token: 0x0400226A RID: 8810
 		private const string KEY_PREFIX = "LineCrossChallengeById";
 
-		// Token: 0x040021D1 RID: 8657
+		// Token: 0x0400226B RID: 8811
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040021D2 RID: 8658
+		// Token: 0x0400226C RID: 8812
 		private static int HandleId;
 	}
 }

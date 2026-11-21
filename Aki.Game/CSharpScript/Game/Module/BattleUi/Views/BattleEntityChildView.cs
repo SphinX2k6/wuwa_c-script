@@ -6,19 +6,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CD1 RID: 23761
+	// Token: 0x02004CB3 RID: 19635
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleEntityChildView : BattleChildView
 	{
-		// Token: 0x0603C1F8 RID: 246264 RVA: 0x00E642C8 File Offset: 0x00E624C8
+		// Token: 0x0603114E RID: 201038 RVA: 0x00DB48A4 File Offset: 0x00DB2AA4
 		public override void Reset()
 		{
 			this.Deactivate(this.Entity);
 			base.Reset();
 		}
 
-		// Token: 0x0603C1F9 RID: 246265 RVA: 0x00E642DC File Offset: 0x00E624DC
+		// Token: 0x0603114F RID: 201039 RVA: 0x00DB48B8 File Offset: 0x00DB2AB8
 		public void Reactivate(Entity entity)
 		{
 			if (!ObjectSystem.Instance.IsValid(entity))
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C1FA RID: 246266 RVA: 0x00E6433C File Offset: 0x00E6253C
+		// Token: 0x06031150 RID: 201040 RVA: 0x00DB4918 File Offset: 0x00DB2B18
 		public void Activate(Entity entity)
 		{
 			if (!ObjectSystem.Instance.IsValid(entity))
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEntityEvents(entity);
 		}
 
-		// Token: 0x0603C1FB RID: 246267 RVA: 0x00E64360 File Offset: 0x00E62560
+		// Token: 0x06031151 RID: 201041 RVA: 0x00DB493C File Offset: 0x00DB2B3C
 		[NullableContext(2)]
 		public void Deactivate(Entity entity)
 		{
@@ -79,22 +79,22 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Entity = null;
 		}
 
-		// Token: 0x0603C1FC RID: 246268 RVA: 0x00E643FD File Offset: 0x00E625FD
+		// Token: 0x06031152 RID: 201042 RVA: 0x00DB49D9 File Offset: 0x00DB2BD9
 		protected virtual void OnActivate()
 		{
 		}
 
-		// Token: 0x0603C1FD RID: 246269 RVA: 0x00E643FF File Offset: 0x00E625FF
+		// Token: 0x06031153 RID: 201043 RVA: 0x00DB49DB File Offset: 0x00DB2BDB
 		protected virtual void OnDeactivate()
 		{
 		}
 
-		// Token: 0x0603C1FE RID: 246270 RVA: 0x00E64401 File Offset: 0x00E62601
+		// Token: 0x06031154 RID: 201044 RVA: 0x00DB49DD File Offset: 0x00DB2BDD
 		protected virtual void AddEntityEvents(Entity entity)
 		{
 		}
 
-		// Token: 0x0603C1FF RID: 246271 RVA: 0x00E64403 File Offset: 0x00E62603
+		// Token: 0x06031155 RID: 201045 RVA: 0x00DB49DF File Offset: 0x00DB2BDF
 		protected virtual void RemoveEntityEvents(Entity entity)
 		{
 			this.ClearAllAttributeChangedCallback(entity);
@@ -103,14 +103,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ClearAllGameplayEffectAppliedCallback();
 		}
 
-		// Token: 0x0603C200 RID: 246272 RVA: 0x00E6441E File Offset: 0x00E6261E
+		// Token: 0x06031156 RID: 201046 RVA: 0x00DB49FA File Offset: 0x00DB2BFA
 		[NullableContext(2)]
 		public Entity GetEntity()
 		{
 			return this.Entity;
 		}
 
-		// Token: 0x0603C201 RID: 246273 RVA: 0x00E64428 File Offset: 0x00E62628
+		// Token: 0x06031157 RID: 201047 RVA: 0x00DB4A04 File Offset: 0x00DB2C04
 		public int? GetEntityId()
 		{
 			Entity entity = this.Entity;
@@ -121,13 +121,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new int?(entity.Id);
 		}
 
-		// Token: 0x0603C202 RID: 246274 RVA: 0x00E64453 File Offset: 0x00E62653
+		// Token: 0x06031158 RID: 201048 RVA: 0x00DB4A2F File Offset: 0x00DB2C2F
 		public virtual bool IsValid()
 		{
 			return ObjectSystem.Instance.IsValid(this.Entity);
 		}
 
-		// Token: 0x0603C203 RID: 246275 RVA: 0x00E64468 File Offset: 0x00E62668
+		// Token: 0x06031159 RID: 201049 RVA: 0x00DB4A44 File Offset: 0x00DB2C44
 		protected void ListenForAttributeChanged(Entity entity, EAttributeType attributeId, Action<EAttributeType, float, float> onAttributeChanged)
 		{
 			BaseAttributeComponent component = entity.GetComponent<BaseAttributeComponent>();
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AttributeChangedCallbackMap[attributeId] = onAttributeChanged;
 		}
 
-		// Token: 0x0603C204 RID: 246276 RVA: 0x00E64498 File Offset: 0x00E62698
+		// Token: 0x0603115A RID: 201050 RVA: 0x00DB4A74 File Offset: 0x00DB2C74
 		protected void RemoveListenAttributeChanged(Entity entity, EAttributeType attributeId, Action<EAttributeType, float, float> onAttributeChanged)
 		{
 			BaseAttributeComponent component = entity.GetComponent<BaseAttributeComponent>();
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AttributeChangedCallbackMap.Remove(attributeId);
 		}
 
-		// Token: 0x0603C205 RID: 246277 RVA: 0x00E644C8 File Offset: 0x00E626C8
+		// Token: 0x0603115B RID: 201051 RVA: 0x00DB4AA4 File Offset: 0x00DB2CA4
 		private void ClearAllAttributeChangedCallback(Entity entity)
 		{
 			BaseAttributeComponent component = entity.GetComponent<BaseAttributeComponent>();
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C206 RID: 246278 RVA: 0x00E6453C File Offset: 0x00E6273C
+		// Token: 0x0603115C RID: 201052 RVA: 0x00DB4B18 File Offset: 0x00DB2D18
 		protected void ListenForTagCountChanged(Entity entity, [Nullable(new byte[]
 		{
 			0,
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TagCountChangeTaskList.Add(item);
 		}
 
-		// Token: 0x0603C207 RID: 246279 RVA: 0x00E64594 File Offset: 0x00E62794
+		// Token: 0x0603115D RID: 201053 RVA: 0x00DB4B70 File Offset: 0x00DB2D70
 		private void ClearAllTagCountChangedCallback()
 		{
 			foreach (ITagTask tagTask in this.TagCountChangeTaskList)
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TagCountChangeTaskList.Clear();
 		}
 
-		// Token: 0x0603C208 RID: 246280 RVA: 0x00E645F0 File Offset: 0x00E627F0
+		// Token: 0x0603115E RID: 201054 RVA: 0x00DB4BCC File Offset: 0x00DB2DCC
 		protected void ListenForTagSignificantChanged(Entity entity, int gameplayTagId, BaseTagComponent.TTagSwitchedCallback callback)
 		{
 			BaseTagComponent component = entity.GetComponent<BaseTagComponent>();
@@ -217,14 +217,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TagSignificantChangedTaskList.Add(item);
 		}
 
-		// Token: 0x0603C209 RID: 246281 RVA: 0x00E64624 File Offset: 0x00E62824
+		// Token: 0x0603115F RID: 201055 RVA: 0x00DB4C00 File Offset: 0x00DB2E00
 		protected void ListenForTagAddNewOrRemovedWithTag(BaseTagComponent tagComponent, int gameplayTagId, BaseTagComponent.TTagSwitchedCallback callback, [Nullable(2)] Stat callbackStat = null)
 		{
 			ITagTask item = tagComponent.ListenForTagAddOrRemove(new int?(gameplayTagId), callback, callbackStat);
 			this.TagSignificantChangedTaskList.Add(item);
 		}
 
-		// Token: 0x0603C20A RID: 246282 RVA: 0x00E64650 File Offset: 0x00E62850
+		// Token: 0x06031160 RID: 201056 RVA: 0x00DB4C2C File Offset: 0x00DB2E2C
 		private void ClearAllTagSignificantChangedCallback()
 		{
 			foreach (ITagTask tagTask in this.TagSignificantChangedTaskList)
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TagSignificantChangedTaskList.Clear();
 		}
 
-		// Token: 0x0603C20B RID: 246283 RVA: 0x00E646AC File Offset: 0x00E628AC
+		// Token: 0x06031161 RID: 201057 RVA: 0x00DB4C88 File Offset: 0x00DB2E88
 		private void ClearAllGameplayEffectAppliedCallback()
 		{
 			foreach (UAsyncTaskEffectApplied uasyncTaskEffectApplied in this.GameplayEffectAppliedTaskList)
@@ -244,20 +244,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.GameplayEffectAppliedTaskList.Clear();
 		}
 
-		// Token: 0x0401F58A RID: 128394
+		// Token: 0x0401A043 RID: 106563
 		[Nullable(2)]
 		private Entity Entity;
 
-		// Token: 0x0401F58B RID: 128395
+		// Token: 0x0401A044 RID: 106564
 		private readonly Dictionary<EAttributeType, Action<EAttributeType, float, float>> AttributeChangedCallbackMap = new Dictionary<EAttributeType, Action<EAttributeType, float, float>>();
 
-		// Token: 0x0401F58C RID: 128396
+		// Token: 0x0401A045 RID: 106565
 		private readonly List<ITagTask> TagCountChangeTaskList = new List<ITagTask>();
 
-		// Token: 0x0401F58D RID: 128397
+		// Token: 0x0401A046 RID: 106566
 		private readonly List<ITagTask> TagSignificantChangedTaskList = new List<ITagTask>();
 
-		// Token: 0x0401F58E RID: 128398
+		// Token: 0x0401A047 RID: 106567
 		private readonly List<UAsyncTaskEffectApplied> GameplayEffectAppliedTaskList = new List<UAsyncTaskEffectApplied>();
 	}
 }

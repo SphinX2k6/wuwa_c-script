@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007664 RID: 30308
+	// Token: 0x02007E72 RID: 32370
 	public static class TChangeEntityStateVerify
 	{
-		// Token: 0x060372BD RID: 225981 RVA: 0x0077AB5C File Offset: 0x00778D5C
+		// Token: 0x0603A762 RID: 239458 RVA: 0x007DEC58 File Offset: 0x007DCE58
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

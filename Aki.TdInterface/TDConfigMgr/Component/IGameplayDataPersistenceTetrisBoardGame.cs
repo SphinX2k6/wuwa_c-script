@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003D0 RID: 976
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000427 RID: 1063
 	public class IGameplayDataPersistenceTetrisBoardGame : IGameplayDataPersistence
 	{
-		// Token: 0x0600139B RID: 5019 RVA: 0x0003F8E8 File Offset: 0x0003DAE8
+		// Token: 0x06001529 RID: 5417 RVA: 0x00043468 File Offset: 0x00041668
 		private IGameplayDataPersistenceTetrisBoardGame_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600139C RID: 5020 RVA: 0x0003F920 File Offset: 0x0003DB20
+		// Token: 0x0600152A RID: 5418 RVA: 0x000434A0 File Offset: 0x000416A0
 		public static IGameplayDataPersistenceTetrisBoardGame Create([Nullable(2)] IGameplayDataPersistenceTetrisBoardGame instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600139D RID: 5021 RVA: 0x0003F933 File Offset: 0x0003DB33
+		// Token: 0x0600152B RID: 5419 RVA: 0x000434B3 File Offset: 0x000416B3
 		public static IGameplayDataPersistenceTetrisBoardGame CreateFromSetValue([Nullable(2)] IGameplayDataPersistenceTetrisBoardGame_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600139E RID: 5022 RVA: 0x0003F946 File Offset: 0x0003DB46
+		// Token: 0x0600152C RID: 5420 RVA: 0x000434C6 File Offset: 0x000416C6
 		public new IGameplayDataPersistenceTetrisBoardGame_SetValue ToSetValue()
 		{
 			return new IGameplayDataPersistenceTetrisBoardGame_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000573 RID: 1395
-		// (get) Token: 0x0600139F RID: 5023 RVA: 0x0003F965 File Offset: 0x0003DB65
-		// (set) Token: 0x060013A0 RID: 5024 RVA: 0x0003F990 File Offset: 0x0003DB90
+		// Token: 0x170005D7 RID: 1495
+		// (get) Token: 0x0600152D RID: 5421 RVA: 0x000434E5 File Offset: 0x000416E5
+		// (set) Token: 0x0600152E RID: 5422 RVA: 0x00043510 File Offset: 0x00041710
 		public override EDataPersistenceGameplayType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000574 RID: 1396
-		// (get) Token: 0x060013A1 RID: 5025 RVA: 0x0003F99E File Offset: 0x0003DB9E
-		// (set) Token: 0x060013A2 RID: 5026 RVA: 0x0003F9C5 File Offset: 0x0003DBC5
+		// Token: 0x170005D8 RID: 1496
+		// (get) Token: 0x0600152F RID: 5423 RVA: 0x0004351E File Offset: 0x0004171E
+		// (set) Token: 0x06001530 RID: 5424 RVA: 0x00043545 File Offset: 0x00041745
 		public virtual VarRef HighestScoreSyncVar
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F9A RID: 3994
+		// Token: 0x040010B3 RID: 4275
 		[Nullable(2)]
 		protected new IGameplayDataPersistenceTetrisBoardGame FbInstance;
 
-		// Token: 0x04000F9B RID: 3995
+		// Token: 0x040010B4 RID: 4276
 		[Nullable(2)]
 		protected new IGameplayDataPersistenceTetrisBoardGame_SetValue PocoInterface;
 	}

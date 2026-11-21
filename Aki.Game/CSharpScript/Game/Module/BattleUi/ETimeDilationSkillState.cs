@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C96 RID: 23702
+	// Token: 0x02004C78 RID: 19576
 	public enum ETimeDilationSkillState
 	{
-		// Token: 0x0401F369 RID: 127849
+		// Token: 0x04019E22 RID: 106018
 		Ready,
-		// Token: 0x0401F36A RID: 127850
+		// Token: 0x04019E23 RID: 106019
 		InUse,
-		// Token: 0x0401F36B RID: 127851
+		// Token: 0x04019E24 RID: 106020
 		CD
 	}
 }

@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067EA RID: 26602
+	// Token: 0x02006E6A RID: 28266
 	public class IFloorSettingsT
 	{
-		// Token: 0x1700C570 RID: 50544
-		// (get) Token: 0x0602E509 RID: 189705 RVA: 0x00652B2E File Offset: 0x00650D2E
-		// (set) Token: 0x0602E50A RID: 189706 RVA: 0x00652B36 File Offset: 0x00650D36
+		// Token: 0x1700CF26 RID: 53030
+		// (get) Token: 0x06030D4F RID: 200015 RVA: 0x006A0272 File Offset: 0x0069E472
+		// (set) Token: 0x06030D50 RID: 200016 RVA: 0x006A027A File Offset: 0x0069E47A
 		public string MeshPath { get; set; }
 
-		// Token: 0x1700C571 RID: 50545
-		// (get) Token: 0x0602E50B RID: 189707 RVA: 0x00652B3F File Offset: 0x00650D3F
-		// (set) Token: 0x0602E50C RID: 189708 RVA: 0x00652B47 File Offset: 0x00650D47
+		// Token: 0x1700CF27 RID: 53031
+		// (get) Token: 0x06030D51 RID: 200017 RVA: 0x006A0283 File Offset: 0x0069E483
+		// (set) Token: 0x06030D52 RID: 200018 RVA: 0x006A028B File Offset: 0x0069E48B
 		public string MaterialPath { get; set; }
 
-		// Token: 0x1700C572 RID: 50546
-		// (get) Token: 0x0602E50D RID: 189709 RVA: 0x00652B50 File Offset: 0x00650D50
-		// (set) Token: 0x0602E50E RID: 189710 RVA: 0x00652B58 File Offset: 0x00650D58
+		// Token: 0x1700CF28 RID: 53032
+		// (get) Token: 0x06030D53 RID: 200019 RVA: 0x006A0294 File Offset: 0x0069E494
+		// (set) Token: 0x06030D54 RID: 200020 RVA: 0x006A029C File Offset: 0x0069E49C
 		public IVector2T Scale { get; set; }
 
-		// Token: 0x1700C573 RID: 50547
-		// (get) Token: 0x0602E50F RID: 189711 RVA: 0x00652B61 File Offset: 0x00650D61
-		// (set) Token: 0x0602E510 RID: 189712 RVA: 0x00652B69 File Offset: 0x00650D69
+		// Token: 0x1700CF29 RID: 53033
+		// (get) Token: 0x06030D55 RID: 200021 RVA: 0x006A02A5 File Offset: 0x0069E4A5
+		// (set) Token: 0x06030D56 RID: 200022 RVA: 0x006A02AD File Offset: 0x0069E4AD
 		public float ShowTime { get; set; }
 
-		// Token: 0x1700C574 RID: 50548
-		// (get) Token: 0x0602E511 RID: 189713 RVA: 0x00652B72 File Offset: 0x00650D72
-		// (set) Token: 0x0602E512 RID: 189714 RVA: 0x00652B7A File Offset: 0x00650D7A
+		// Token: 0x1700CF2A RID: 53034
+		// (get) Token: 0x06030D57 RID: 200023 RVA: 0x006A02B6 File Offset: 0x0069E4B6
+		// (set) Token: 0x06030D58 RID: 200024 RVA: 0x006A02BE File Offset: 0x0069E4BE
 		public float DisappearTime { get; set; }
 
-		// Token: 0x0602E513 RID: 189715 RVA: 0x00652B83 File Offset: 0x00650D83
+		// Token: 0x06030D59 RID: 200025 RVA: 0x006A02C7 File Offset: 0x0069E4C7
 		public IFloorSettingsT()
 		{
 			this.MeshPath = null;

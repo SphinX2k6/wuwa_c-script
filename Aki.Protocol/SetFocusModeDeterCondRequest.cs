@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020011D3 RID: 4563
+	// Token: 0x0200120D RID: 4621
 	[NetMessage(EMessageId.SetFocusModeDeterCondRequest)]
 	public sealed class SetFocusModeDeterCondRequest : IMessage<SetFocusModeDeterCondRequest>, IMessage, IEquatable<SetFocusModeDeterCondRequest>, IDeepCloneable<SetFocusModeDeterCondRequest>, IBufferMessage
 	{
-		// Token: 0x0601855C RID: 99676 RVA: 0x0038A601 File Offset: 0x00388801
+		// Token: 0x06018AFD RID: 101117 RVA: 0x00399931 File Offset: 0x00397B31
 		[NullableContext(1)]
 		public static SetFocusModeDeterCondRequest Create()
 		{
 			return new SetFocusModeDeterCondRequest();
 		}
 
-		// Token: 0x170051F3 RID: 20979
-		// (get) Token: 0x0601855D RID: 99677 RVA: 0x0038A608 File Offset: 0x00388808
+		// Token: 0x1700535F RID: 21343
+		// (get) Token: 0x06018AFE RID: 101118 RVA: 0x00399938 File Offset: 0x00397B38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170051F4 RID: 20980
-		// (get) Token: 0x0601855E RID: 99678 RVA: 0x0038A60B File Offset: 0x0038880B
+		// Token: 0x17005360 RID: 21344
+		// (get) Token: 0x06018AFF RID: 101119 RVA: 0x0039993B File Offset: 0x00397B3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601855F RID: 99679 RVA: 0x0038A612 File Offset: 0x00388812
+		// Token: 0x06018B00 RID: 101120 RVA: 0x00399942 File Offset: 0x00397B42
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SetFocusModeDeterCondRequest()
 		{
 		}
 
-		// Token: 0x06018560 RID: 99680 RVA: 0x0038A61A File Offset: 0x0038881A
+		// Token: 0x06018B01 RID: 101121 RVA: 0x0039994A File Offset: 0x00397B4A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SetFocusModeDeterCondRequest(SetFocusModeDeterCondRequest other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06018561 RID: 99681 RVA: 0x0038A63F File Offset: 0x0038883F
+		// Token: 0x06018B02 RID: 101122 RVA: 0x0039996F File Offset: 0x00397B6F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SetFocusModeDeterCondRequest Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new SetFocusModeDeterCondRequest(this);
 		}
 
-		// Token: 0x170051F5 RID: 20981
-		// (get) Token: 0x06018562 RID: 99682 RVA: 0x0038A647 File Offset: 0x00388847
-		// (set) Token: 0x06018563 RID: 99683 RVA: 0x0038A64F File Offset: 0x0038884F
+		// Token: 0x17005361 RID: 21345
+		// (get) Token: 0x06018B03 RID: 101123 RVA: 0x00399977 File Offset: 0x00397B77
+		// (set) Token: 0x06018B04 RID: 101124 RVA: 0x0039997F File Offset: 0x00397B7F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool DeterCond
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018564 RID: 99684 RVA: 0x0038A658 File Offset: 0x00388858
+		// Token: 0x06018B05 RID: 101125 RVA: 0x00399988 File Offset: 0x00397B88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SetFocusModeDeterCondRequest);
 		}
 
-		// Token: 0x06018565 RID: 99685 RVA: 0x0038A666 File Offset: 0x00388866
+		// Token: 0x06018B06 RID: 101126 RVA: 0x00399996 File Offset: 0x00397B96
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SetFocusModeDeterCondRequest other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.DeterCond == other.DeterCond && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06018566 RID: 99686 RVA: 0x0038A694 File Offset: 0x00388894
+		// Token: 0x06018B07 RID: 101127 RVA: 0x003999C4 File Offset: 0x00397BC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018567 RID: 99687 RVA: 0x0038A6D3 File Offset: 0x003888D3
+		// Token: 0x06018B08 RID: 101128 RVA: 0x00399A03 File Offset: 0x00397C03
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06018568 RID: 99688 RVA: 0x0038A6E0 File Offset: 0x003888E0
+		// Token: 0x06018B09 RID: 101129 RVA: 0x00399A10 File Offset: 0x00397C10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,14 +132,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06018569 RID: 99689 RVA: 0x0038A6E9 File Offset: 0x003888E9
+		// Token: 0x06018B0A RID: 101130 RVA: 0x00399A19 File Offset: 0x00397C19
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.DeterCond)
 			{
-				output.WriteRawTag(40);
+				output.WriteRawTag(32);
 				output.WriteBool(this.DeterCond);
 			}
 			if (this._unknownFields != null)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601856A RID: 99690 RVA: 0x0038A71C File Offset: 0x0038891C
+		// Token: 0x06018B0B RID: 101131 RVA: 0x00399A4C File Offset: 0x00397C4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601856B RID: 99691 RVA: 0x0038A74E File Offset: 0x0038894E
+		// Token: 0x06018B0C RID: 101132 RVA: 0x00399A7E File Offset: 0x00397C7E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SetFocusModeDeterCondRequest other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601856C RID: 99692 RVA: 0x0038A77F File Offset: 0x0038897F
+		// Token: 0x06018B0D RID: 101133 RVA: 0x00399AAF File Offset: 0x00397CAF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601856D RID: 99693 RVA: 0x0038A788 File Offset: 0x00388988
+		// Token: 0x06018B0E RID: 101134 RVA: 0x00399AB8 File Offset: 0x00397CB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 40U)
+				if (num != 32U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -212,13 +212,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400900F RID: 36879
+		// Token: 0x040092A2 RID: 37538
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009010 RID: 36880
-		public const int DeterCondFieldNumber = 5;
+		// Token: 0x040092A3 RID: 37539
+		public const int DeterCondFieldNumber = 4;
 
-		// Token: 0x04009011 RID: 36881
+		// Token: 0x040092A4 RID: 37540
 		private bool deterCond_;
 	}
 }

@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057D3 RID: 22483
+	// Token: 0x02005DDA RID: 24026
 	public class IQuickHackSkillContentT
 	{
-		// Token: 0x1700A7DA RID: 42970
-		// (get) Token: 0x06025C06 RID: 154630 RVA: 0x00534C88 File Offset: 0x00532E88
-		// (set) Token: 0x06025C07 RID: 154631 RVA: 0x00534C90 File Offset: 0x00532E90
+		// Token: 0x1700B0FE RID: 45310
+		// (get) Token: 0x06028126 RID: 164134 RVA: 0x0057AE14 File Offset: 0x00579014
+		// (set) Token: 0x06028127 RID: 164135 RVA: 0x0057AE1C File Offset: 0x0057901C
 		public string EntityState { get; set; }
 
-		// Token: 0x1700A7DB RID: 42971
-		// (get) Token: 0x06025C08 RID: 154632 RVA: 0x00534C99 File Offset: 0x00532E99
-		// (set) Token: 0x06025C09 RID: 154633 RVA: 0x00534CA1 File Offset: 0x00532EA1
+		// Token: 0x1700B0FF RID: 45311
+		// (get) Token: 0x06028128 RID: 164136 RVA: 0x0057AE25 File Offset: 0x00579025
+		// (set) Token: 0x06028129 RID: 164137 RVA: 0x0057AE2D File Offset: 0x0057902D
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x06025C0A RID: 154634 RVA: 0x00534CAA File Offset: 0x00532EAA
+		// Token: 0x0602812A RID: 164138 RVA: 0x0057AE36 File Offset: 0x00579036
 		public IQuickHackSkillContentT()
 		{
 			this.EntityState = null;

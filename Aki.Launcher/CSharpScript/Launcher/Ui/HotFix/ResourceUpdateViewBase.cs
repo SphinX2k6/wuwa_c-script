@@ -4,10 +4,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.Ui.HotFix
 {
-	// Token: 0x020000EB RID: 235
+	// Token: 0x020000EF RID: 239
 	public class ResourceUpdateViewBase : IResourceUpdateView
 	{
-		// Token: 0x060007D9 RID: 2009 RVA: 0x0003CA84 File Offset: 0x0003AC84
+		// Token: 0x0600080D RID: 2061 RVA: 0x0003EE24 File Offset: 0x0003D024
 		public UniTask<bool> ShowNotEnoughSpaceConfirmation(long totalSize)
 		{
 			ResourceUpdateViewBase.<ShowNotEnoughSpaceConfirmation>d__0 <ShowNotEnoughSpaceConfirmation>d__;
@@ -17,7 +17,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return <ShowNotEnoughSpaceConfirmation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060007DA RID: 2010 RVA: 0x0003CABF File Offset: 0x0003ACBF
+		// Token: 0x0600080E RID: 2062 RVA: 0x0003EE5F File Offset: 0x0003D05F
 		public virtual void UpdatePatchProgress(long receiveSize, long curProgress, long totalProgress, long downloadSpeed)
 		{
 		}

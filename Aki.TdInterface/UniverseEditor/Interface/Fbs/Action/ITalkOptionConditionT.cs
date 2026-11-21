@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007323 RID: 29475
+	// Token: 0x02007AFB RID: 31483
 	public class ITalkOptionConditionT
 	{
-		// Token: 0x1700DFEF RID: 57327
-		// (get) Token: 0x060357F2 RID: 219122 RVA: 0x00749F37 File Offset: 0x00748137
-		// (set) Token: 0x060357F3 RID: 219123 RVA: 0x00749F3F File Offset: 0x0074813F
+		// Token: 0x1700EBEB RID: 60395
+		// (get) Token: 0x06038B25 RID: 232229 RVA: 0x007ABABF File Offset: 0x007A9CBF
+		// (set) Token: 0x06038B26 RID: 232230 RVA: 0x007ABAC7 File Offset: 0x007A9CC7
 		public ETalkOptionPreConditionType Type { get; set; }
 
-		// Token: 0x1700DFF0 RID: 57328
-		// (get) Token: 0x060357F4 RID: 219124 RVA: 0x00749F48 File Offset: 0x00748148
-		// (set) Token: 0x060357F5 RID: 219125 RVA: 0x00749F50 File Offset: 0x00748150
+		// Token: 0x1700EBEC RID: 60396
+		// (get) Token: 0x06038B27 RID: 232231 RVA: 0x007ABAD0 File Offset: 0x007A9CD0
+		// (set) Token: 0x06038B28 RID: 232232 RVA: 0x007ABAD8 File Offset: 0x007A9CD8
 		public IConditionGroupT Conditions { get; set; }
 
-		// Token: 0x060357F6 RID: 219126 RVA: 0x00749F59 File Offset: 0x00748159
+		// Token: 0x06038B29 RID: 232233 RVA: 0x007ABAE1 File Offset: 0x007A9CE1
 		public ITalkOptionConditionT()
 		{
 			this.Type = ETalkOptionPreConditionType.PreOption;

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F73 RID: 3955
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200109D RID: 4253
 	public class IFinishBvbChallenge : IQuestCondition
 	{
-		// Token: 0x060057EA RID: 22506 RVA: 0x000D6B30 File Offset: 0x000D4D30
+		// Token: 0x06005DBE RID: 23998 RVA: 0x000E359C File Offset: 0x000E179C
 		private IFinishBvbChallenge_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060057EB RID: 22507 RVA: 0x000D6B68 File Offset: 0x000D4D68
+		// Token: 0x06005DBF RID: 23999 RVA: 0x000E35D4 File Offset: 0x000E17D4
 		public static IFinishBvbChallenge Create([Nullable(2)] IFinishBvbChallenge instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060057EC RID: 22508 RVA: 0x000D6B7B File Offset: 0x000D4D7B
+		// Token: 0x06005DC0 RID: 24000 RVA: 0x000E35E7 File Offset: 0x000E17E7
 		public static IFinishBvbChallenge CreateFromSetValue([Nullable(2)] IFinishBvbChallenge_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060057ED RID: 22509 RVA: 0x000D6B8E File Offset: 0x000D4D8E
+		// Token: 0x06005DC1 RID: 24001 RVA: 0x000E35FA File Offset: 0x000E17FA
 		public new IFinishBvbChallenge_SetValue ToSetValue()
 		{
 			return new IFinishBvbChallenge_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D4A RID: 7498
-		// (get) Token: 0x060057EE RID: 22510 RVA: 0x000D6BB9 File Offset: 0x000D4DB9
-		// (set) Token: 0x060057EF RID: 22511 RVA: 0x000D6BE4 File Offset: 0x000D4DE4
+		// Token: 0x17001EF0 RID: 7920
+		// (get) Token: 0x06005DC2 RID: 24002 RVA: 0x000E3625 File Offset: 0x000E1825
+		// (set) Token: 0x06005DC3 RID: 24003 RVA: 0x000E3650 File Offset: 0x000E1850
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D4B RID: 7499
-		// (get) Token: 0x060057F0 RID: 22512 RVA: 0x000D6BF4 File Offset: 0x000D4DF4
-		// (set) Token: 0x060057F1 RID: 22513 RVA: 0x000D6C55 File Offset: 0x000D4E55
+		// Token: 0x17001EF1 RID: 7921
+		// (get) Token: 0x06005DC4 RID: 24004 RVA: 0x000E3660 File Offset: 0x000E1860
+		// (set) Token: 0x06005DC5 RID: 24005 RVA: 0x000E36C1 File Offset: 0x000E18C1
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D4C RID: 7500
-		// (get) Token: 0x060057F2 RID: 22514 RVA: 0x000D6C6A File Offset: 0x000D4E6A
-		// (set) Token: 0x060057F3 RID: 22515 RVA: 0x000D6C95 File Offset: 0x000D4E95
+		// Token: 0x17001EF2 RID: 7922
+		// (get) Token: 0x06005DC6 RID: 24006 RVA: 0x000E36D6 File Offset: 0x000E18D6
+		// (set) Token: 0x06005DC7 RID: 24007 RVA: 0x000E3701 File Offset: 0x000E1901
 		public virtual int BvbChallengeId
 		{
 			get
@@ -141,18 +139,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400351D RID: 13597
+		// Token: 0x0400384E RID: 14414
 		[Nullable(2)]
 		protected new IFinishBvbChallenge FbInstance;
 
-		// Token: 0x0400351E RID: 13598
+		// Token: 0x0400384F RID: 14415
 		[Nullable(2)]
 		protected new IFinishBvbChallenge_SetValue PocoInterface;
 
-		// Token: 0x0400351F RID: 13599
+		// Token: 0x04003850 RID: 14416
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003520 RID: 13600
+		// Token: 0x04003851 RID: 14417
 		private bool _PreConditionsInited;
 	}
 }

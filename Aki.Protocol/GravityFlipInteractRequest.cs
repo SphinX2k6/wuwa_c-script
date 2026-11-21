@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200070F RID: 1807
+	// Token: 0x020006FB RID: 1787
 	[NetMessage(EMessageId.GravityFlipInteractRequest)]
 	public sealed class GravityFlipInteractRequest : IMessage<GravityFlipInteractRequest>, IMessage, IEquatable<GravityFlipInteractRequest>, IDeepCloneable<GravityFlipInteractRequest>, IBufferMessage
 	{
-		// Token: 0x0600A45C RID: 42076 RVA: 0x0018CCD8 File Offset: 0x0018AED8
+		// Token: 0x0600A306 RID: 41734 RVA: 0x0018A2A4 File Offset: 0x001884A4
 		[NullableContext(1)]
 		public static GravityFlipInteractRequest Create()
 		{
 			return new GravityFlipInteractRequest();
 		}
 
-		// Token: 0x1700210C RID: 8460
-		// (get) Token: 0x0600A45D RID: 42077 RVA: 0x0018CCDF File Offset: 0x0018AEDF
+		// Token: 0x170020C2 RID: 8386
+		// (get) Token: 0x0600A307 RID: 41735 RVA: 0x0018A2AB File Offset: 0x001884AB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700210D RID: 8461
-		// (get) Token: 0x0600A45E RID: 42078 RVA: 0x0018CCE2 File Offset: 0x0018AEE2
+		// Token: 0x170020C3 RID: 8387
+		// (get) Token: 0x0600A308 RID: 41736 RVA: 0x0018A2AE File Offset: 0x001884AE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A45F RID: 42079 RVA: 0x0018CCE9 File Offset: 0x0018AEE9
+		// Token: 0x0600A309 RID: 41737 RVA: 0x0018A2B5 File Offset: 0x001884B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GravityFlipInteractRequest()
 		{
 		}
 
-		// Token: 0x0600A460 RID: 42080 RVA: 0x0018CCF1 File Offset: 0x0018AEF1
+		// Token: 0x0600A30A RID: 41738 RVA: 0x0018A2BD File Offset: 0x001884BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GravityFlipInteractRequest(GravityFlipInteractRequest other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600A461 RID: 42081 RVA: 0x0018CD22 File Offset: 0x0018AF22
+		// Token: 0x0600A30B RID: 41739 RVA: 0x0018A2EE File Offset: 0x001884EE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GravityFlipInteractRequest Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new GravityFlipInteractRequest(this);
 		}
 
-		// Token: 0x1700210E RID: 8462
-		// (get) Token: 0x0600A462 RID: 42082 RVA: 0x0018CD2A File Offset: 0x0018AF2A
-		// (set) Token: 0x0600A463 RID: 42083 RVA: 0x0018CD32 File Offset: 0x0018AF32
+		// Token: 0x170020C4 RID: 8388
+		// (get) Token: 0x0600A30C RID: 41740 RVA: 0x0018A2F6 File Offset: 0x001884F6
+		// (set) Token: 0x0600A30D RID: 41741 RVA: 0x0018A2FE File Offset: 0x001884FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long GravityFlipEntityId
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700210F RID: 8463
-		// (get) Token: 0x0600A464 RID: 42084 RVA: 0x0018CD3B File Offset: 0x0018AF3B
-		// (set) Token: 0x0600A465 RID: 42085 RVA: 0x0018CD43 File Offset: 0x0018AF43
+		// Token: 0x170020C5 RID: 8389
+		// (get) Token: 0x0600A30E RID: 41742 RVA: 0x0018A307 File Offset: 0x00188507
+		// (set) Token: 0x0600A30F RID: 41743 RVA: 0x0018A30F File Offset: 0x0018850F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GravityFlipType TargetGravityFlipType
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A466 RID: 42086 RVA: 0x0018CD4C File Offset: 0x0018AF4C
+		// Token: 0x0600A310 RID: 41744 RVA: 0x0018A318 File Offset: 0x00188518
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as GravityFlipInteractRequest);
 		}
 
-		// Token: 0x0600A467 RID: 42087 RVA: 0x0018CD5A File Offset: 0x0018AF5A
+		// Token: 0x0600A311 RID: 41745 RVA: 0x0018A326 File Offset: 0x00188526
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(GravityFlipInteractRequest other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.GravityFlipEntityId == other.GravityFlipEntityId && this.TargetGravityFlipType == other.TargetGravityFlipType && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600A468 RID: 42088 RVA: 0x0018CD98 File Offset: 0x0018AF98
+		// Token: 0x0600A312 RID: 41746 RVA: 0x0018A364 File Offset: 0x00188564
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600A469 RID: 42089 RVA: 0x0018CDF6 File Offset: 0x0018AFF6
+		// Token: 0x0600A313 RID: 41747 RVA: 0x0018A3C2 File Offset: 0x001885C2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600A46A RID: 42090 RVA: 0x0018CE03 File Offset: 0x0018B003
+		// Token: 0x0600A314 RID: 41748 RVA: 0x0018A3CF File Offset: 0x001885CF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,19 +154,19 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600A46B RID: 42091 RVA: 0x0018CE0C File Offset: 0x0018B00C
+		// Token: 0x0600A315 RID: 41749 RVA: 0x0018A3D8 File Offset: 0x001885D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.GravityFlipEntityId != 0L)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(72);
 				output.WriteInt64(this.GravityFlipEntityId);
 			}
 			if (this.TargetGravityFlipType != GravityFlipType.GravityUp)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(104);
 				output.WriteEnum((int)this.TargetGravityFlipType);
 			}
 			if (this._unknownFields != null)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A46C RID: 42092 RVA: 0x0018CE68 File Offset: 0x0018B068
+		// Token: 0x0600A316 RID: 41750 RVA: 0x0018A434 File Offset: 0x00188634
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600A46D RID: 42093 RVA: 0x0018CEC0 File Offset: 0x0018B0C0
+		// Token: 0x0600A317 RID: 41751 RVA: 0x0018A48C File Offset: 0x0018868C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(GravityFlipInteractRequest other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600A46E RID: 42094 RVA: 0x0018CF10 File Offset: 0x0018B110
+		// Token: 0x0600A318 RID: 41752 RVA: 0x0018A4DC File Offset: 0x001886DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600A46F RID: 42095 RVA: 0x0018CF1C File Offset: 0x0018B11C
+		// Token: 0x0600A319 RID: 41753 RVA: 0x0018A4E8 File Offset: 0x001886E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,9 +236,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 88U)
+				if (num != 72U)
 				{
-					if (num != 120U)
+					if (num != 104U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -254,19 +254,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04004BC7 RID: 19399
+		// Token: 0x04004BC0 RID: 19392
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004BC8 RID: 19400
-		public const int GravityFlipEntityIdFieldNumber = 11;
+		// Token: 0x04004BC1 RID: 19393
+		public const int GravityFlipEntityIdFieldNumber = 9;
 
-		// Token: 0x04004BC9 RID: 19401
+		// Token: 0x04004BC2 RID: 19394
 		private long gravityFlipEntityId_;
 
-		// Token: 0x04004BCA RID: 19402
-		public const int TargetGravityFlipTypeFieldNumber = 15;
+		// Token: 0x04004BC3 RID: 19395
+		public const int TargetGravityFlipTypeFieldNumber = 13;
 
-		// Token: 0x04004BCB RID: 19403
+		// Token: 0x04004BC4 RID: 19396
 		private GravityFlipType targetGravityFlipType_;
 	}
 }

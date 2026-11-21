@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F1B RID: 7963
+	// Token: 0x02000625 RID: 1573
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.XboxTokenAndSignatureResult")]
 	[UnrealStructLayout(40, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 40)]
 	public class FXboxTokenAndSignatureResult : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601E374 RID: 123764 RVA: 0x002CEA68 File Offset: 0x002CCC68
+		// Token: 0x0600897F RID: 35199 RVA: 0x000CF49C File Offset: 0x000CD69C
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FXboxTokenAndSignatureResult._ScriptStructPtr != 0) ? FXboxTokenAndSignatureResult._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroUtility.XboxTokenAndSignatureResult", ref FXboxTokenAndSignatureResult._ScriptStructPtr);
 		}
 
-		// Token: 0x17007801 RID: 30721
-		// (get) Token: 0x0601E375 RID: 123765 RVA: 0x002CEA8C File Offset: 0x002CCC8C
-		// (set) Token: 0x0601E376 RID: 123766 RVA: 0x002CEA9C File Offset: 0x002CCC9C
+		// Token: 0x170019AB RID: 6571
+		// (get) Token: 0x06008980 RID: 35200 RVA: 0x000CF4C0 File Offset: 0x000CD6C0
+		// (set) Token: 0x06008981 RID: 35201 RVA: 0x000CF4D0 File Offset: 0x000CD6D0
 		public unsafe bool bSuccess
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007802 RID: 30722
-		// (get) Token: 0x0601E377 RID: 123767 RVA: 0x002CEAAD File Offset: 0x002CCCAD
-		// (set) Token: 0x0601E378 RID: 123768 RVA: 0x002CEAC1 File Offset: 0x002CCCC1
+		// Token: 0x170019AC RID: 6572
+		// (get) Token: 0x06008982 RID: 35202 RVA: 0x000CF4E1 File Offset: 0x000CD6E1
+		// (set) Token: 0x06008983 RID: 35203 RVA: 0x000CF4F5 File Offset: 0x000CD6F5
 		public unsafe string Token
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007803 RID: 30723
-		// (get) Token: 0x0601E379 RID: 123769 RVA: 0x002CEAD6 File Offset: 0x002CCCD6
-		// (set) Token: 0x0601E37A RID: 123770 RVA: 0x002CEAEA File Offset: 0x002CCCEA
+		// Token: 0x170019AD RID: 6573
+		// (get) Token: 0x06008984 RID: 35204 RVA: 0x000CF50A File Offset: 0x000CD70A
+		// (set) Token: 0x06008985 RID: 35205 RVA: 0x000CF51E File Offset: 0x000CD71E
 		public unsafe string Signature
 		{
 			get
@@ -63,61 +63,53 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E37B RID: 123771 RVA: 0x002CEAFF File Offset: 0x002CCCFF
+		// Token: 0x06008986 RID: 35206 RVA: 0x000CF533 File Offset: 0x000CD733
 		public FXboxTokenAndSignatureResult()
 		{
 		}
 
-		// Token: 0x0601E37C RID: 123772 RVA: 0x002CEB07 File Offset: 0x002CCD07
-		public FXboxTokenAndSignatureResult(bool bSuccess, string Token, string Signature)
-		{
-			this.bSuccess = bSuccess;
-			this.Token = Token;
-			this.Signature = Signature;
-		}
-
-		// Token: 0x0601E37D RID: 123773 RVA: 0x002CEB24 File Offset: 0x002CCD24
+		// Token: 0x06008987 RID: 35207 RVA: 0x000CF53B File Offset: 0x000CD73B
 		protected override IntPtr GetUStructPtr()
 		{
 			return FXboxTokenAndSignatureResult.StaticStruct();
 		}
 
-		// Token: 0x0601E37E RID: 123774 RVA: 0x002CEB30 File Offset: 0x002CCD30
+		// Token: 0x06008988 RID: 35208 RVA: 0x000CF547 File Offset: 0x000CD747
 		[NullableContext(2)]
 		public FXboxTokenAndSignatureResult(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E37F RID: 123775 RVA: 0x002CEB3A File Offset: 0x002CCD3A
+		// Token: 0x06008989 RID: 35209 RVA: 0x000CF551 File Offset: 0x000CD751
 		public FXboxTokenAndSignatureResult(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E380 RID: 123776 RVA: 0x002CEB45 File Offset: 0x002CCD45
+		// Token: 0x0600898A RID: 35210 RVA: 0x000CF55C File Offset: 0x000CD75C
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FXboxTokenAndSignatureResult(Pointer, false, true);
 		}
 
-		// Token: 0x0601E381 RID: 123777 RVA: 0x002CEB4F File Offset: 0x002CCD4F
+		// Token: 0x0600898B RID: 35211 RVA: 0x000CF566 File Offset: 0x000CD766
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FXboxTokenAndSignatureResult(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040104E8 RID: 66792
+		// Token: 0x04003BAB RID: 15275
 		public const string __ObjectPath = "/Script/KuroUtility.XboxTokenAndSignatureResult";
 
-		// Token: 0x040104E9 RID: 66793
+		// Token: 0x04003BAC RID: 15276
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040104EA RID: 66794
+		// Token: 0x04003BAD RID: 15277
 		internal static int __PropertyOffset_bSuccess;
 
-		// Token: 0x040104EB RID: 66795
+		// Token: 0x04003BAE RID: 15278
 		internal static int __PropertyOffset_Token;
 
-		// Token: 0x040104EC RID: 66796
+		// Token: 0x04003BAF RID: 15279
 		internal static int __PropertyOffset_Signature;
 	}
 }

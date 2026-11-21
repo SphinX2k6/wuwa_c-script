@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F1C RID: 24348
+	// Token: 0x02006560 RID: 25952
 	public enum EAvgRolePosition : byte
 	{
-		// Token: 0x0400FC18 RID: 64536
+		// Token: 0x0401098E RID: 67982
 		Center,
-		// Token: 0x0400FC19 RID: 64537
+		// Token: 0x0401098F RID: 67983
 		Left1,
-		// Token: 0x0400FC1A RID: 64538
+		// Token: 0x04010990 RID: 67984
 		Left2,
-		// Token: 0x0400FC1B RID: 64539
+		// Token: 0x04010991 RID: 67985
 		Right1,
-		// Token: 0x0400FC1C RID: 64540
+		// Token: 0x04010992 RID: 67986
 		Right2
 	}
 }

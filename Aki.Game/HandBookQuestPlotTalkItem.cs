@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Plot;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E1C RID: 7708
+// Token: 0x020012DE RID: 4830
 [NullableContext(2)]
 [Nullable(0)]
 public class HandBookQuestPlotTalkItem : UiPanelBase
 {
-	// Token: 0x0600EA56 RID: 59990 RVA: 0x00377424 File Offset: 0x00375624
+	// Token: 0x0600BE75 RID: 48757 RVA: 0x0038312C File Offset: 0x0038132C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class HandBookQuestPlotTalkItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600EA57 RID: 59991 RVA: 0x003774B8 File Offset: 0x003756B8
+	// Token: 0x0600BE76 RID: 48758 RVA: 0x003831C0 File Offset: 0x003813C0
 	private void OnPlayToggleClick(EToggleState state)
 	{
 		if (this.PlotAudio == null)
@@ -45,7 +45,7 @@ public class HandBookQuestPlotTalkItem : UiPanelBase
 		this.IsPlayingAudio = !this.IsPlayingAudio;
 	}
 
-	// Token: 0x0600EA58 RID: 59992 RVA: 0x00377510 File Offset: 0x00375710
+	// Token: 0x0600BE77 RID: 48759 RVA: 0x00383218 File Offset: 0x00381418
 	public void Refresh(string nameText, string constantText, PlotAudio? audio)
 	{
 		this.PlotAudio = audio;
@@ -83,7 +83,7 @@ public class HandBookQuestPlotTalkItem : UiPanelBase
 		extendToggle.SetToggleStateForce(this.IsPlayingAudio ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600EA59 RID: 59993 RVA: 0x00377630 File Offset: 0x00375830
+	// Token: 0x0600BE78 RID: 48760 RVA: 0x00383338 File Offset: 0x00381538
 	private void OnAudioPlayEnd(string nextPlayingAudio = null)
 	{
 		if (nextPlayingAudio != null && nextPlayingAudio == ((this.PlotAudio != null) ? this.PlotAudio.GetValueOrDefault().Id : null))
@@ -98,9 +98,9 @@ public class HandBookQuestPlotTalkItem : UiPanelBase
 		this.IsPlayingAudio = false;
 	}
 
-	// Token: 0x04006CC3 RID: 27843
+	// Token: 0x04006DA4 RID: 28068
 	private bool IsPlayingAudio;
 
-	// Token: 0x04006CC4 RID: 27844
+	// Token: 0x04006DA5 RID: 28069
 	private PlotAudio? PlotAudio;
 }

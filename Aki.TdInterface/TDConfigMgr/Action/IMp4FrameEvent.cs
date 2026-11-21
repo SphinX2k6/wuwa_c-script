@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C48 RID: 7240
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E3F RID: 7743
 	public class IMp4FrameEvent
 	{
-		// Token: 0x06009B51 RID: 39761 RVA: 0x00164C74 File Offset: 0x00162E74
+		// Token: 0x0600A4A9 RID: 42153 RVA: 0x00177FB4 File Offset: 0x001761B4
 		private IMp4FrameEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009B52 RID: 39762 RVA: 0x00164CAC File Offset: 0x00162EAC
+		// Token: 0x0600A4AA RID: 42154 RVA: 0x00177FEC File Offset: 0x001761EC
 		public static IMp4FrameEvent Create([Nullable(2)] IMp4FrameEvent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009B53 RID: 39763 RVA: 0x00164CBF File Offset: 0x00162EBF
+		// Token: 0x0600A4AB RID: 42155 RVA: 0x00177FFF File Offset: 0x001761FF
 		public static IMp4FrameEvent CreateFromSetValue([Nullable(2)] IMp4FrameEvent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009B54 RID: 39764 RVA: 0x00164CD2 File Offset: 0x00162ED2
+		// Token: 0x0600A4AC RID: 42156 RVA: 0x00178012 File Offset: 0x00176212
 		public IMp4FrameEvent_SetValue ToSetValue()
 		{
 			return new IMp4FrameEvent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003093 RID: 12435
-		// (get) Token: 0x06009B55 RID: 39765 RVA: 0x00164CF1 File Offset: 0x00162EF1
-		// (set) Token: 0x06009B56 RID: 39766 RVA: 0x00164D20 File Offset: 0x00162F20
+		// Token: 0x17003304 RID: 13060
+		// (get) Token: 0x0600A4AD RID: 42157 RVA: 0x00178031 File Offset: 0x00176231
+		// (set) Token: 0x0600A4AE RID: 42158 RVA: 0x00178060 File Offset: 0x00176260
 		public virtual float Second
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003094 RID: 12436
-		// (get) Token: 0x06009B57 RID: 39767 RVA: 0x00164D30 File Offset: 0x00162F30
-		// (set) Token: 0x06009B58 RID: 39768 RVA: 0x00164DC3 File Offset: 0x00162FC3
+		// Token: 0x17003305 RID: 13061
+		// (get) Token: 0x0600A4AF RID: 42159 RVA: 0x00178070 File Offset: 0x00176270
+		// (set) Token: 0x0600A4B0 RID: 42160 RVA: 0x00178103 File Offset: 0x00176303
 		public virtual List<ActionInfo> EventActions
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E58 RID: 24152
+		// Token: 0x0400638F RID: 25487
 		[Nullable(2)]
 		protected IMp4FrameEvent FbInstance;
 
-		// Token: 0x04005E59 RID: 24153
+		// Token: 0x04006390 RID: 25488
 		[Nullable(2)]
 		protected IMp4FrameEvent_SetValue PocoInterface;
 
-		// Token: 0x04005E5A RID: 24154
+		// Token: 0x04006391 RID: 25489
 		private List<ActionInfo> _EventActionsCache;
 
-		// Token: 0x04005E5B RID: 24155
+		// Token: 0x04006392 RID: 25490
 		private bool _EventActionsInited;
 	}
 }

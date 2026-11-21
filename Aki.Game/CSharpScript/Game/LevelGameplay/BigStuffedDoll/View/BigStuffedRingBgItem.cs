@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 {
-	// Token: 0x02006F57 RID: 28503
+	// Token: 0x020060D8 RID: 24792
 	public class BigStuffedRingBgItem : BigStuffedRingSubItem<ESubItemType>
 	{
-		// Token: 0x06045579 RID: 284025 RVA: 0x0112895F File Offset: 0x01126B5F
+		// Token: 0x0603B727 RID: 243495 RVA: 0x010D273F File Offset: 0x010D093F
 		[NullableContext(1)]
 		public BigStuffedRingBgItem(int ringId, [Nullable(new byte[]
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.RingInfo = ringInfo;
 		}
 
-		// Token: 0x0604557A RID: 284026 RVA: 0x01128977 File Offset: 0x01126B77
+		// Token: 0x0603B728 RID: 243496 RVA: 0x010D2757 File Offset: 0x010D0957
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(3, typeof(UUITexture)));
 		}
 
-		// Token: 0x0604557B RID: 284027 RVA: 0x011289B8 File Offset: 0x01126BB8
+		// Token: 0x0603B729 RID: 243497 RVA: 0x010D2798 File Offset: 0x010D0998
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.SpawnBgByHideArea(this.TextureRing);
 		}
 
-		// Token: 0x0604557C RID: 284028 RVA: 0x01128A14 File Offset: 0x01126C14
+		// Token: 0x0603B72A RID: 243498 RVA: 0x010D27F4 File Offset: 0x010D09F4
 		[NullableContext(1)]
 		private void SpawnBgByHideArea(UUITexture texture)
 		{
@@ -153,17 +153,17 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			}
 		}
 
-		// Token: 0x040242B0 RID: 148144
+		// Token: 0x0401F565 RID: 128357
 		[Nullable(2)]
 		private readonly BigStuffedRingInfo RingInfo;
 
-		// Token: 0x0200CD8E RID: 52622
+		// Token: 0x0200B980 RID: 47488
 		private class ERingBgItemComponent
 		{
-			// Token: 0x0403DEFF RID: 253695
+			// Token: 0x0403932E RID: 234286
 			public const int TextureRingLine = 2;
 
-			// Token: 0x0403DF00 RID: 253696
+			// Token: 0x0403932F RID: 234287
 			public const int TextureRedBg = 3;
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002DB RID: 731
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000322 RID: 802
 	public class IDurationCondition : ISpawnMonsterCompleteCondition
 	{
-		// Token: 0x06000DF5 RID: 3573 RVA: 0x00033484 File Offset: 0x00031684
+		// Token: 0x06000F25 RID: 3877 RVA: 0x000363B8 File Offset: 0x000345B8
 		private IDurationCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000DF6 RID: 3574 RVA: 0x000334BC File Offset: 0x000316BC
+		// Token: 0x06000F26 RID: 3878 RVA: 0x000363F0 File Offset: 0x000345F0
 		public static IDurationCondition Create([Nullable(2)] IDurationCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000DF7 RID: 3575 RVA: 0x000334CF File Offset: 0x000316CF
+		// Token: 0x06000F27 RID: 3879 RVA: 0x00036403 File Offset: 0x00034603
 		public static IDurationCondition CreateFromSetValue([Nullable(2)] IDurationCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000DF8 RID: 3576 RVA: 0x000334E2 File Offset: 0x000316E2
+		// Token: 0x06000F28 RID: 3880 RVA: 0x00036416 File Offset: 0x00034616
 		public new IDurationCondition_SetValue ToSetValue()
 		{
 			return new IDurationCondition_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700040F RID: 1039
-		// (get) Token: 0x06000DF9 RID: 3577 RVA: 0x0003350D File Offset: 0x0003170D
-		// (set) Token: 0x06000DFA RID: 3578 RVA: 0x00033538 File Offset: 0x00031738
+		// Token: 0x1700045C RID: 1116
+		// (get) Token: 0x06000F29 RID: 3881 RVA: 0x00036441 File Offset: 0x00034641
+		// (set) Token: 0x06000F2A RID: 3882 RVA: 0x0003646C File Offset: 0x0003466C
 		public override ESpawnMonsterCompleteCondition Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000410 RID: 1040
-		// (get) Token: 0x06000DFB RID: 3579 RVA: 0x00033546 File Offset: 0x00031746
-		// (set) Token: 0x06000DFC RID: 3580 RVA: 0x00033575 File Offset: 0x00031775
+		// Token: 0x1700045D RID: 1117
+		// (get) Token: 0x06000F2B RID: 3883 RVA: 0x0003647A File Offset: 0x0003467A
+		// (set) Token: 0x06000F2C RID: 3884 RVA: 0x000364A9 File Offset: 0x000346A9
 		public virtual float Duration
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000411 RID: 1041
-		// (get) Token: 0x06000DFD RID: 3581 RVA: 0x00033584 File Offset: 0x00031784
-		// (set) Token: 0x06000DFE RID: 3582 RVA: 0x000335BE File Offset: 0x000317BE
+		// Token: 0x1700045E RID: 1118
+		// (get) Token: 0x06000F2D RID: 3885 RVA: 0x000364B8 File Offset: 0x000346B8
+		// (set) Token: 0x06000F2E RID: 3886 RVA: 0x000364F2 File Offset: 0x000346F2
 		public virtual bool? Refill
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000C7A RID: 3194
+		// Token: 0x04000D64 RID: 3428
 		[Nullable(2)]
 		protected new IDurationCondition FbInstance;
 
-		// Token: 0x04000C7B RID: 3195
+		// Token: 0x04000D65 RID: 3429
 		[Nullable(2)]
 		protected new IDurationCondition_SetValue PocoInterface;
 	}

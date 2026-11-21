@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.QuickTimeAction
 {
-	// Token: 0x02004F30 RID: 20272
+	// Token: 0x02003EF9 RID: 16121
 	public enum EQtaExternalReason
 	{
-		// Token: 0x0401B9EB RID: 113131
+		// Token: 0x040163C0 RID: 91072
 		Default,
-		// Token: 0x0401B9EC RID: 113132
+		// Token: 0x040163C1 RID: 91073
 		AnsEnd
 	}
 }

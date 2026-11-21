@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
@@ -7,20 +6,19 @@ namespace Aki.TDConfigMgr.Component
 	// Token: 0x02000031 RID: 49
 	public class BehaviorFlowComponent_SetValue
 	{
-		// Token: 0x0400011E RID: 286
+		// Token: 0x04000123 RID: 291
 		public bool? Disabled;
 
-		// Token: 0x0400011F RID: 287
+		// Token: 0x04000124 RID: 292
 		public bool? EdIsLocked;
 
-		// Token: 0x04000120 RID: 288
+		// Token: 0x04000125 RID: 293
 		public bool? _folded;
 
-		// Token: 0x04000121 RID: 289
+		// Token: 0x04000126 RID: 294
 		public int InitStateId;
 
-		// Token: 0x04000122 RID: 290
-		[Nullable(1)]
+		// Token: 0x04000127 RID: 295
 		public IFlowInfo FlowInfo;
 	}
 }

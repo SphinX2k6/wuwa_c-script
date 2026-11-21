@@ -4,25 +4,25 @@ using Aki.UniverseEditor.Interface.Fbs.FixProcessor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DB6 RID: 15798
+	// Token: 0x020041CD RID: 16845
 	public class IConditionSelectorBtNodeSlotT
 	{
-		// Token: 0x17006D09 RID: 27913
-		// (get) Token: 0x06016086 RID: 90246 RVA: 0x0032F8CE File Offset: 0x0032DACE
-		// (set) Token: 0x06016087 RID: 90247 RVA: 0x0032F8D6 File Offset: 0x0032DAD6
+		// Token: 0x170072C3 RID: 29379
+		// (get) Token: 0x060175BF RID: 95679 RVA: 0x00356C56 File Offset: 0x00354E56
+		// (set) Token: 0x060175C0 RID: 95680 RVA: 0x00356C5E File Offset: 0x00354E5E
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17006D0A RID: 27914
-		// (get) Token: 0x06016088 RID: 90248 RVA: 0x0032F8DF File Offset: 0x0032DADF
-		// (set) Token: 0x06016089 RID: 90249 RVA: 0x0032F8E7 File Offset: 0x0032DAE7
+		// Token: 0x170072C4 RID: 29380
+		// (get) Token: 0x060175C1 RID: 95681 RVA: 0x00356C67 File Offset: 0x00354E67
+		// (set) Token: 0x060175C2 RID: 95682 RVA: 0x00356C6F File Offset: 0x00354E6F
 		public TBtNodeUnion Node { get; set; }
 
-		// Token: 0x17006D0B RID: 27915
-		// (get) Token: 0x0601608A RID: 90250 RVA: 0x0032F8F0 File Offset: 0x0032DAF0
-		// (set) Token: 0x0601608B RID: 90251 RVA: 0x0032F8F8 File Offset: 0x0032DAF8
+		// Token: 0x170072C5 RID: 29381
+		// (get) Token: 0x060175C3 RID: 95683 RVA: 0x00356C78 File Offset: 0x00354E78
+		// (set) Token: 0x060175C4 RID: 95684 RVA: 0x00356C80 File Offset: 0x00354E80
 		public IPerformanceSettingT PerformanceSetting { get; set; }
 
-		// Token: 0x0601608C RID: 90252 RVA: 0x0032F901 File Offset: 0x0032DB01
+		// Token: 0x060175C5 RID: 95685 RVA: 0x00356C89 File Offset: 0x00354E89
 		public IConditionSelectorBtNodeSlotT()
 		{
 			this.Condition = null;

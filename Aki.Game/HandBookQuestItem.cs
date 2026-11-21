@@ -5,19 +5,19 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001E12 RID: 7698
+// Token: 0x020012D4 RID: 4820
 [NullableContext(1)]
 [Nullable(0)]
 public class HandBookQuestItem : GridProxyAbstract<PlotType>
 {
-	// Token: 0x0600EA20 RID: 59936 RVA: 0x00376B70 File Offset: 0x00374D70
+	// Token: 0x0600BE3F RID: 48703 RVA: 0x00382878 File Offset: 0x00380A78
 	public HandBookQuestItem()
 	{
 		this.QuestHandBookList = new List<PhotographHandBook>();
 		this.HandBookCommonItemDataList = new List<HandBookCommonItemData>();
 	}
 
-	// Token: 0x0600EA21 RID: 59937 RVA: 0x00376B8E File Offset: 0x00374D8E
+	// Token: 0x0600BE40 RID: 48704 RVA: 0x00382896 File Offset: 0x00380A96
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,13 +27,13 @@ public class HandBookQuestItem : GridProxyAbstract<PlotType>
 		};
 	}
 
-	// Token: 0x0600EA22 RID: 59938 RVA: 0x00376BC7 File Offset: 0x00374DC7
+	// Token: 0x0600BE41 RID: 48705 RVA: 0x003828CF File Offset: 0x00380ACF
 	protected override void OnStart()
 	{
 		this.ContentGenericLayout = new GenericLayout<HandBookQuestChildItem, HandBookCommonItemData>(base.GetGridLayout(1), new Func<HandBookQuestChildItem>(this.InitChildItem), null, false, true);
 	}
 
-	// Token: 0x0600EA23 RID: 59939 RVA: 0x00376BEC File Offset: 0x00374DEC
+	// Token: 0x0600BE42 RID: 48706 RVA: 0x003828F4 File Offset: 0x00380AF4
 	public override void Refresh(PlotType data, bool isSelected, int gridIndex)
 	{
 		PlotType plotType = data;
@@ -80,19 +80,19 @@ public class HandBookQuestItem : GridProxyAbstract<PlotType>
 		contentGenericLayout2.RefreshByData(this.HandBookCommonItemDataList, null, false);
 	}
 
-	// Token: 0x0600EA24 RID: 59940 RVA: 0x00376D55 File Offset: 0x00374F55
+	// Token: 0x0600BE43 RID: 48707 RVA: 0x00382A5D File Offset: 0x00380C5D
 	private HandBookQuestChildItem InitChildItem()
 	{
 		return new HandBookQuestChildItem();
 	}
 
-	// Token: 0x0600EA25 RID: 59941 RVA: 0x00376D5C File Offset: 0x00374F5C
+	// Token: 0x0600BE44 RID: 48708 RVA: 0x00382A64 File Offset: 0x00380C64
 	public List<HandBookQuestChildItem> GetChildItemList()
 	{
 		return this.ContentGenericLayout.GetLayoutItemList();
 	}
 
-	// Token: 0x0600EA26 RID: 59942 RVA: 0x00376D69 File Offset: 0x00374F69
+	// Token: 0x0600BE45 RID: 48709 RVA: 0x00382A71 File Offset: 0x00380C71
 	protected override void OnBeforeDestroy()
 	{
 		if (this.ContentGenericLayout != null)
@@ -104,7 +104,7 @@ public class HandBookQuestItem : GridProxyAbstract<PlotType>
 		this.HandBookCommonItemDataList = new List<HandBookCommonItemData>();
 	}
 
-	// Token: 0x04006CA6 RID: 27814
+	// Token: 0x04006D87 RID: 28039
 	[Nullable(new byte[]
 	{
 		2,
@@ -113,9 +113,9 @@ public class HandBookQuestItem : GridProxyAbstract<PlotType>
 	})]
 	private GenericLayout<HandBookQuestChildItem, HandBookCommonItemData> ContentGenericLayout;
 
-	// Token: 0x04006CA7 RID: 27815
+	// Token: 0x04006D88 RID: 28040
 	private List<PhotographHandBook> QuestHandBookList;
 
-	// Token: 0x04006CA8 RID: 27816
+	// Token: 0x04006D89 RID: 28041
 	private List<HandBookCommonItemData> HandBookCommonItemDataList;
 }

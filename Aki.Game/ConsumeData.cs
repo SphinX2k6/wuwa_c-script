@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02002D06 RID: 11526
+// Token: 0x02002260 RID: 8800
 public class ConsumeData
 {
-	// Token: 0x0400B413 RID: 46099
+	// Token: 0x0400B788 RID: 46984
 	public int Exp;
 
-	// Token: 0x0400B414 RID: 46100
+	// Token: 0x0400B789 RID: 46985
 	public int Coin;
 }

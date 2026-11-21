@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028A7 RID: 10407
+// Token: 0x02001E22 RID: 7714
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleSkillChainItem : UiPanelBase
 {
-	// Token: 0x0601579E RID: 87966 RVA: 0x0056A938 File Offset: 0x00568B38
+	// Token: 0x0601319E RID: 78238 RVA: 0x00595780 File Offset: 0x00593980
 	public void Update(int roleId, int startSkillNodeId)
 	{
 		this.SkillNodeItemList[0].Update(roleId, startSkillNodeId);
@@ -36,7 +36,7 @@ public class RoleSkillChainItem : UiPanelBase
 		this.RefreshLine();
 	}
 
-	// Token: 0x0601579F RID: 87967 RVA: 0x0056AA2C File Offset: 0x00568C2C
+	// Token: 0x0601319F RID: 78239 RVA: 0x00595874 File Offset: 0x00593A74
 	public void RefreshLine()
 	{
 		for (int i = 0; i < this.LineItemList.Count; i++)
@@ -58,7 +58,7 @@ public class RoleSkillChainItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060157A0 RID: 87968 RVA: 0x0056AAB4 File Offset: 0x00568CB4
+	// Token: 0x060131A0 RID: 78240 RVA: 0x005958FC File Offset: 0x00593AFC
 	public void OnNodeLevelChange(int nodeId)
 	{
 		foreach (RoleSkillTreeSkillItemBase roleSkillTreeSkillItemBase in this.SkillNodeItemList)
@@ -68,19 +68,19 @@ public class RoleSkillChainItem : UiPanelBase
 		this.RefreshLine();
 	}
 
-	// Token: 0x060157A1 RID: 87969 RVA: 0x0056AB0C File Offset: 0x00568D0C
+	// Token: 0x060131A1 RID: 78241 RVA: 0x00595954 File Offset: 0x00593B54
 	public IReadOnlyList<RoleSkillTreeSkillItemBase> GetSkillNodeItems()
 	{
 		return this.SkillNodeItemList;
 	}
 
-	// Token: 0x060157A2 RID: 87970 RVA: 0x0056AB14 File Offset: 0x00568D14
+	// Token: 0x060131A2 RID: 78242 RVA: 0x0059595C File Offset: 0x00593B5C
 	public void SetSkillBranchEnable(bool isEnable)
 	{
 		this.IsSkillBranchEnable = isEnable;
 	}
 
-	// Token: 0x060157A3 RID: 87971 RVA: 0x0056AB20 File Offset: 0x00568D20
+	// Token: 0x060131A3 RID: 78243 RVA: 0x00595968 File Offset: 0x00593B68
 	public void OnSkillBranchChanged()
 	{
 		foreach (RoleSkillTreeSkillItemBase roleSkillTreeSkillItemBase in this.SkillNodeItemList)
@@ -89,7 +89,7 @@ public class RoleSkillChainItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060157A4 RID: 87972 RVA: 0x0056AB70 File Offset: 0x00568D70
+	// Token: 0x060131A4 RID: 78244 RVA: 0x005959B8 File Offset: 0x00593BB8
 	[NullableContext(2)]
 	public UUIItem FindDoubleTagSkillTog()
 	{
@@ -103,12 +103,12 @@ public class RoleSkillChainItem : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x0400A00E RID: 40974
+	// Token: 0x0400A3F7 RID: 41975
 	protected readonly List<RoleSkillTreeSkillItemBase> SkillNodeItemList = new List<RoleSkillTreeSkillItemBase>();
 
-	// Token: 0x0400A00F RID: 40975
+	// Token: 0x0400A3F8 RID: 41976
 	protected readonly List<UUIItem> LineItemList = new List<UUIItem>();
 
-	// Token: 0x0400A010 RID: 40976
+	// Token: 0x0400A3F9 RID: 41977
 	protected bool IsSkillBranchEnable;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200247B RID: 9339
+	// Token: 0x0200271E RID: 10014
 	public static class ETraceSplineOptionTypeExtensions
 	{
-		// Token: 0x0600CAA8 RID: 51880 RVA: 0x001DD498 File Offset: 0x001DB698
+		// Token: 0x0600D761 RID: 55137 RVA: 0x001F7660 File Offset: 0x001F5860
 		public static string ToEnumString(this ETraceSplineOptionType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAA9 RID: 51881 RVA: 0x001DD4D0 File Offset: 0x001DB6D0
+		// Token: 0x0600D762 RID: 55138 RVA: 0x001F7698 File Offset: 0x001F5898
 		public static ETraceSplineOptionType FromString(string name)
 		{
 			ETraceSplineOptionType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAAA RID: 51882 RVA: 0x001DD4F9 File Offset: 0x001DB6F9
+		// Token: 0x0600D763 RID: 55139 RVA: 0x001F76C1 File Offset: 0x001F58C1
 		public static bool TryFromString(string name, out ETraceSplineOptionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CAAB RID: 51883 RVA: 0x001DD532 File Offset: 0x001DB732
+		// Token: 0x0600D764 RID: 55140 RVA: 0x001F76FA File Offset: 0x001F58FA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAAC RID: 51884 RVA: 0x001DD54A File Offset: 0x001DB74A
+		// Token: 0x0600D765 RID: 55141 RVA: 0x001F7712 File Offset: 0x001F5912
 		public static ETraceSplineOptionType[] GetValues()
 		{
 			return new ETraceSplineOptionType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAAD RID: 51885 RVA: 0x001DD556 File Offset: 0x001DB756
+		// Token: 0x0600D766 RID: 55142 RVA: 0x001F771E File Offset: 0x001F591E
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -1,22 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.ExtraEffect
 {
-	// Token: 0x02007154 RID: 29012
+	// Token: 0x02006382 RID: 25474
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AbnormalIce : BuffEffect
 	{
-		// Token: 0x06046D3C RID: 290108 RVA: 0x011D9A2D File Offset: 0x011D7C2D
+		// Token: 0x0603DB96 RID: 252822 RVA: 0x011E2C05 File Offset: 0x011E0E05
 		public AbnormalIce(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 		{
 		}
 
-		// Token: 0x06046D3D RID: 290109 RVA: 0x011D9A48 File Offset: 0x011D7C48
+		// Token: 0x0603DB97 RID: 252823 RVA: 0x011E2C20 File Offset: 0x011E0E20
 		protected override void InitParameters(ExtraEffectParameters parameters)
 		{
 			this._modifierValue.Clear();
@@ -24,7 +23,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.ExtraE
 			{
 				return;
 			}
-			string[] array = (parameters.ExtraEffectParameters_.ElementAtOrDefault(0) ?? "").Split('|', StringSplitOptions.None);
+			string[] array = ((parameters.ExtraEffectParameters_.Length != 0) ? parameters.ExtraEffectParameters_[0] : "").Split('|', StringSplitOptions.None);
 			for (int i = 0; i < array.Length; i++)
 			{
 				string[] array2 = array[i].Trim().Split('#', StringSplitOptions.None);
@@ -32,34 +31,34 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.ExtraE
 			}
 		}
 
-		// Token: 0x06046D3E RID: 290110 RVA: 0x011D9AD0 File Offset: 0x011D7CD0
+		// Token: 0x0603DB98 RID: 252824 RVA: 0x011E2CAB File Offset: 0x011E0EAB
 		public override void OnCreated()
 		{
 		}
 
-		// Token: 0x06046D3F RID: 290111 RVA: 0x011D9AD2 File Offset: 0x011D7CD2
+		// Token: 0x0603DB99 RID: 252825 RVA: 0x011E2CAD File Offset: 0x011E0EAD
 		[return: Nullable(2)]
 		public override object OnExecute(params object[] args)
 		{
 			return null;
 		}
 
-		// Token: 0x06046D40 RID: 290112 RVA: 0x011D9AD5 File Offset: 0x011D7CD5
+		// Token: 0x0603DB9A RID: 252826 RVA: 0x011E2CB0 File Offset: 0x011E0EB0
 		public override void OnRemoved(bool bPremature)
 		{
 		}
 
-		// Token: 0x06046D41 RID: 290113 RVA: 0x011D9AD7 File Offset: 0x011D7CD7
+		// Token: 0x0603DB9B RID: 252827 RVA: 0x011E2CB2 File Offset: 0x011E0EB2
 		public override void OnStackIncreased(int newCount, int oldCount, long? instigatorId)
 		{
 		}
 
-		// Token: 0x06046D42 RID: 290114 RVA: 0x011D9AD9 File Offset: 0x011D7CD9
+		// Token: 0x0603DB9C RID: 252828 RVA: 0x011E2CB4 File Offset: 0x011E0EB4
 		public override void OnStackDecreased(int newCount, int oldCount, bool bPremature)
 		{
 		}
 
-		// Token: 0x06046D43 RID: 290115 RVA: 0x011D9ADC File Offset: 0x011D7CDC
+		// Token: 0x0603DB9D RID: 252829 RVA: 0x011E2CB8 File Offset: 0x011E0EB8
 		public void ClearModifier()
 		{
 			Entity exactOwnerEntity = base.ExactOwnerEntity;
@@ -74,7 +73,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.ExtraE
 			}
 		}
 
-		// Token: 0x06046D44 RID: 290116 RVA: 0x011D9B1C File Offset: 0x011D7D1C
+		// Token: 0x0603DB9E RID: 252830 RVA: 0x011E2CF8 File Offset: 0x011E0EF8
 		public void RefreshModifier(int stackCount)
 		{
 			this.ClearModifier();
@@ -103,10 +102,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.ExtraE
 			});
 		}
 
-		// Token: 0x040252C4 RID: 152260
+		// Token: 0x04020BA7 RID: 134055
 		private int _modifierHandle;
 
-		// Token: 0x040252C5 RID: 152261
+		// Token: 0x04020BA8 RID: 134056
 		[Nullable(new byte[]
 		{
 			1,

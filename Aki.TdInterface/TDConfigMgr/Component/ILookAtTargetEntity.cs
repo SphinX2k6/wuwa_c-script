@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004D2 RID: 1234
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200052B RID: 1323
 	public class ILookAtTargetEntity : ILookAtTargetBase
 	{
-		// Token: 0x0600190C RID: 6412 RVA: 0x0004A688 File Offset: 0x00048888
+		// Token: 0x06001AA6 RID: 6822 RVA: 0x0004E3D0 File Offset: 0x0004C5D0
 		private ILookAtTargetEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600190D RID: 6413 RVA: 0x0004A6C0 File Offset: 0x000488C0
+		// Token: 0x06001AA7 RID: 6823 RVA: 0x0004E408 File Offset: 0x0004C608
 		public static ILookAtTargetEntity Create([Nullable(2)] ILookAtTargetEntity instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600190E RID: 6414 RVA: 0x0004A6D3 File Offset: 0x000488D3
+		// Token: 0x06001AA8 RID: 6824 RVA: 0x0004E41B File Offset: 0x0004C61B
 		public static ILookAtTargetEntity CreateFromSetValue([Nullable(2)] ILookAtTargetEntity_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600190F RID: 6415 RVA: 0x0004A6E6 File Offset: 0x000488E6
+		// Token: 0x06001AA9 RID: 6825 RVA: 0x0004E42E File Offset: 0x0004C62E
 		public new ILookAtTargetEntity_SetValue ToSetValue()
 		{
 			return new ILookAtTargetEntity_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006AA RID: 1706
-		// (get) Token: 0x06001910 RID: 6416 RVA: 0x0004A705 File Offset: 0x00048905
-		// (set) Token: 0x06001911 RID: 6417 RVA: 0x0004A730 File Offset: 0x00048930
+		// Token: 0x17000711 RID: 1809
+		// (get) Token: 0x06001AAA RID: 6826 RVA: 0x0004E44D File Offset: 0x0004C64D
+		// (set) Token: 0x06001AAB RID: 6827 RVA: 0x0004E478 File Offset: 0x0004C678
 		public override ELookAtTargetType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006AB RID: 1707
-		// (get) Token: 0x06001912 RID: 6418 RVA: 0x0004A73E File Offset: 0x0004893E
-		// (set) Token: 0x06001913 RID: 6419 RVA: 0x0004A769 File Offset: 0x00048969
+		// Token: 0x17000712 RID: 1810
+		// (get) Token: 0x06001AAC RID: 6828 RVA: 0x0004E486 File Offset: 0x0004C686
+		// (set) Token: 0x06001AAD RID: 6829 RVA: 0x0004E4B1 File Offset: 0x0004C6B1
 		public virtual int EntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001276 RID: 4726
+		// Token: 0x04001398 RID: 5016
 		[Nullable(2)]
 		protected new ILookAtTargetEntity FbInstance;
 
-		// Token: 0x04001277 RID: 4727
+		// Token: 0x04001399 RID: 5017
 		[Nullable(2)]
 		protected new ILookAtTargetEntity_SetValue PocoInterface;
 	}

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044CE RID: 17614
+	// Token: 0x02004936 RID: 18742
 	public class IFixedDateTimeRefreshT
 	{
-		// Token: 0x17007C54 RID: 31828
-		// (get) Token: 0x0601A53C RID: 107836 RVA: 0x003C2368 File Offset: 0x003C0568
-		// (set) Token: 0x0601A53D RID: 107837 RVA: 0x003C2370 File Offset: 0x003C0570
+		// Token: 0x17008293 RID: 33427
+		// (get) Token: 0x0601BD0D RID: 113933 RVA: 0x003EE574 File Offset: 0x003EC774
+		// (set) Token: 0x0601BD0E RID: 113934 RVA: 0x003EE57C File Offset: 0x003EC77C
 		public ELevelPlayRefreshType Type { get; set; }
 
-		// Token: 0x17007C55 RID: 31829
-		// (get) Token: 0x0601A53E RID: 107838 RVA: 0x003C2379 File Offset: 0x003C0579
-		// (set) Token: 0x0601A53F RID: 107839 RVA: 0x003C2381 File Offset: 0x003C0581
+		// Token: 0x17008294 RID: 33428
+		// (get) Token: 0x0601BD0F RID: 113935 RVA: 0x003EE585 File Offset: 0x003EC785
+		// (set) Token: 0x0601BD10 RID: 113936 RVA: 0x003EE58D File Offset: 0x003EC78D
 		public ELevelPlayInteractResetTime UpdateType { get; set; }
 
-		// Token: 0x0601A540 RID: 107840 RVA: 0x003C238A File Offset: 0x003C058A
+		// Token: 0x0601BD11 RID: 113937 RVA: 0x003EE596 File Offset: 0x003EC796
 		public IFixedDateTimeRefreshT()
 		{
 			this.Type = ELevelPlayRefreshType.None;

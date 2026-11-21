@@ -5,32 +5,32 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004D85 RID: 19845
+	// Token: 0x02003D4E RID: 15694
 	public class RoguelikeEntryData
 	{
-		// Token: 0x060334D5 RID: 210133 RVA: 0x00BF96FC File Offset: 0x00BF78FC
+		// Token: 0x06028342 RID: 164674 RVA: 0x00B42CF8 File Offset: 0x00B40EF8
 		public RogueHotEntry GetConfig()
 		{
 			return RoguelikeConfig.Instance.GetRogueHotEntryConfig(this.Id).Value;
 		}
 
-		// Token: 0x0401B3A3 RID: 111523
+		// Token: 0x04015D76 RID: 89462
 		public int Id;
 
-		// Token: 0x0401B3A4 RID: 111524
+		// Token: 0x04015D77 RID: 89463
 		public int GroupId;
 
-		// Token: 0x0401B3A5 RID: 111525
+		// Token: 0x04015D78 RID: 89464
 		public ERoguelikeEntryType Type = ERoguelikeEntryType.Type1;
 
-		// Token: 0x0401B3A6 RID: 111526
+		// Token: 0x04015D79 RID: 89465
 		public int OverviewId;
 
-		// Token: 0x0401B3A7 RID: 111527
+		// Token: 0x04015D7A RID: 89466
 		[Nullable(1)]
 		public List<int> OverviewParam = new List<int>();
 
-		// Token: 0x0401B3A8 RID: 111528
+		// Token: 0x04015D7B RID: 89467
 		[Nullable(2)]
 		public Action<bool, bool> SetEntryToggleState;
 	}

@@ -7,13 +7,13 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x0200489F RID: 18591
+	// Token: 0x02003816 RID: 14358
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class VillageInfrModel : ModelBase
 	{
-		// Token: 0x060309BC RID: 199100 RVA: 0x00B49147 File Offset: 0x00B47347
+		// Token: 0x060254E8 RID: 152808 RVA: 0x00A83F4F File Offset: 0x00A8214F
 		public void SetData(InfrV2Pb data)
 		{
 			this.SetAllTreeData(data.TreeInfo);
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.SetAllTreeFinishConditionData(data.TreeFinishCond);
 		}
 
-		// Token: 0x060309BD RID: 199101 RVA: 0x00B49188 File Offset: 0x00B47388
+		// Token: 0x060254E9 RID: 152809 RVA: 0x00A83F90 File Offset: 0x00A82190
 		[NullableContext(2)]
 		public IVillageInfrTreeData GetTreeData(int treeId)
 		{
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return null;
 		}
 
-		// Token: 0x060309BE RID: 199102 RVA: 0x00B491A8 File Offset: 0x00B473A8
+		// Token: 0x060254EA RID: 152810 RVA: 0x00A83FB0 File Offset: 0x00A821B0
 		public List<IVillageInfrTreeData> GetAllTreeData()
 		{
 			return new List<IVillageInfrTreeData>(this.TreeDataMap.Values);
 		}
 
-		// Token: 0x060309BF RID: 199103 RVA: 0x00B491BC File Offset: 0x00B473BC
+		// Token: 0x060254EB RID: 152811 RVA: 0x00A83FC4 File Offset: 0x00A821C4
 		public void SetAllTreeData(InfrV2TreePb data)
 		{
 			this.TreeDataMap.Clear();
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			EventSystem.Instance.Emit(EEventName.VillageInfrTreeDataUpdate);
 		}
 
-		// Token: 0x060309C0 RID: 199104 RVA: 0x00B49264 File Offset: 0x00B47464
+		// Token: 0x060254EC RID: 152812 RVA: 0x00A8406C File Offset: 0x00A8226C
 		public void SetTreeData(InfrV2OneTree treeData)
 		{
 			this.TreeDataMap[treeData.TreeId] = new VillageInfrTreeData
@@ -70,44 +70,44 @@ namespace CSharpScript.Game.Module.VillageInfr
 			EventSystem.Instance.Emit(EEventName.VillageInfrTreeDataUpdate);
 		}
 
-		// Token: 0x060309C1 RID: 199105 RVA: 0x00B492BB File Offset: 0x00B474BB
+		// Token: 0x060254ED RID: 152813 RVA: 0x00A840C3 File Offset: 0x00A822C3
 		public void SetTraceTreeId(int treeId)
 		{
 			this.TraceTreeId = treeId;
 			EventSystem.Instance.Emit(EEventName.VillageInfrTreeDataUpdate);
 		}
 
-		// Token: 0x060309C2 RID: 199106 RVA: 0x00B492D4 File Offset: 0x00B474D4
+		// Token: 0x060254EE RID: 152814 RVA: 0x00A840DC File Offset: 0x00A822DC
 		public int GetTraceTreeId()
 		{
 			return this.TraceTreeId;
 		}
 
-		// Token: 0x060309C3 RID: 199107 RVA: 0x00B492DC File Offset: 0x00B474DC
+		// Token: 0x060254EF RID: 152815 RVA: 0x00A840E4 File Offset: 0x00A822E4
 		public long GetVillageExp()
 		{
 			return this.VillageExpInner;
 		}
 
-		// Token: 0x060309C4 RID: 199108 RVA: 0x00B492E4 File Offset: 0x00B474E4
+		// Token: 0x060254F0 RID: 152816 RVA: 0x00A840EC File Offset: 0x00A822EC
 		public int GetVillageLevel()
 		{
 			return this.VillageLevelInner;
 		}
 
-		// Token: 0x060309C5 RID: 199109 RVA: 0x00B492EC File Offset: 0x00B474EC
+		// Token: 0x060254F1 RID: 152817 RVA: 0x00A840F4 File Offset: 0x00A822F4
 		public long GetVillageLevelReachTime()
 		{
 			return this.VillageLevelReachTimeInner;
 		}
 
-		// Token: 0x060309C6 RID: 199110 RVA: 0x00B492F4 File Offset: 0x00B474F4
+		// Token: 0x060254F2 RID: 152818 RVA: 0x00A840FC File Offset: 0x00A822FC
 		public InfrV2StatusPb GetVillageStatus()
 		{
 			return this.VillageStatusInner;
 		}
 
-		// Token: 0x060309C7 RID: 199111 RVA: 0x00B492FC File Offset: 0x00B474FC
+		// Token: 0x060254F3 RID: 152819 RVA: 0x00A84104 File Offset: 0x00A82304
 		public void SetVillageData(InfrV2FirePb data)
 		{
 			this.VillageExpInner = data.FireExp;
@@ -117,13 +117,13 @@ namespace CSharpScript.Game.Module.VillageInfr
 			EventSystem.Instance.Emit(EEventName.VillageInfrVillageDataUpdate);
 		}
 
-		// Token: 0x060309C8 RID: 199112 RVA: 0x00B49349 File Offset: 0x00B47549
+		// Token: 0x060254F4 RID: 152820 RVA: 0x00A84151 File Offset: 0x00A82351
 		public void SetActivityData(VillageInfrActivityData activityData)
 		{
 			this.ActivityData = activityData;
 		}
 
-		// Token: 0x060309C9 RID: 199113 RVA: 0x00B49354 File Offset: 0x00B47554
+		// Token: 0x060254F5 RID: 152821 RVA: 0x00A8415C File Offset: 0x00A8235C
 		[NullableContext(2)]
 		public VillageInfrActivityData GetActivityData()
 		{
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return this.ActivityData;
 		}
 
-		// Token: 0x060309CA RID: 199114 RVA: 0x00B49390 File Offset: 0x00B47590
+		// Token: 0x060254F6 RID: 152822 RVA: 0x00A84198 File Offset: 0x00A82398
 		public void SetTaskData(IList<ConditionTask> activityTasks)
 		{
 			this.TaskDataMap.Clear();
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			EventSystem.Instance.Emit(EEventName.VillageInfrActivityTaskDataUpdate);
 		}
 
-		// Token: 0x060309CB RID: 199115 RVA: 0x00B49414 File Offset: 0x00B47614
+		// Token: 0x060254F7 RID: 152823 RVA: 0x00A8421C File Offset: 0x00A8241C
 		public void SetTaskReceive(List<int> taskIdList)
 		{
 			foreach (int key in taskIdList)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			EventSystem.Instance.Emit(EEventName.VillageInfrActivityTaskDataUpdate);
 		}
 
-		// Token: 0x060309CC RID: 199116 RVA: 0x00B49484 File Offset: 0x00B47684
+		// Token: 0x060254F8 RID: 152824 RVA: 0x00A8428C File Offset: 0x00A8248C
 		public void SetScoreRewardData(IList<int> scoreRewardIds)
 		{
 			this.ReceivedScoreRewardId.Clear();
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			EventSystem.Instance.Emit(EEventName.VillageInfrScoreRewardDataUpdate);
 		}
 
-		// Token: 0x060309CD RID: 199117 RVA: 0x00B494F0 File Offset: 0x00B476F0
+		// Token: 0x060254F9 RID: 152825 RVA: 0x00A842F8 File Offset: 0x00A824F8
 		public void AddScoreRewardData(List<int> scoreRewardIds)
 		{
 			foreach (int item in scoreRewardIds)
@@ -183,20 +183,20 @@ namespace CSharpScript.Game.Module.VillageInfr
 			EventSystem.Instance.Emit(EEventName.VillageInfrScoreRewardDataUpdate);
 		}
 
-		// Token: 0x060309CE RID: 199118 RVA: 0x00B49554 File Offset: 0x00B47754
+		// Token: 0x060254FA RID: 152826 RVA: 0x00A8435C File Offset: 0x00A8255C
 		public void SetAllTreeFinishConditionData(IList<int> data)
 		{
 			this.TreeFinishConditions = new List<int>(data);
 			EventSystem.Instance.Emit(EEventName.VillageInfrTreeFinishCondDataUpdate);
 		}
 
-		// Token: 0x060309CF RID: 199119 RVA: 0x00B49572 File Offset: 0x00B47772
+		// Token: 0x060254FB RID: 152827 RVA: 0x00A8437A File Offset: 0x00A8257A
 		public bool IsScoreRewardReceived(int id)
 		{
 			return this.ReceivedScoreRewardId.Contains(id);
 		}
 
-		// Token: 0x060309D0 RID: 199120 RVA: 0x00B49580 File Offset: 0x00B47780
+		// Token: 0x060254FC RID: 152828 RVA: 0x00A84388 File Offset: 0x00A82588
 		public void UpdateActivityTask(ConditionTask data)
 		{
 			VillageInfrLimitTaskData villageInfrLimitTaskData;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			EventSystem.Instance.Emit(EEventName.VillageInfrActivityTaskDataUpdate);
 		}
 
-		// Token: 0x060309D1 RID: 199121 RVA: 0x00B495D8 File Offset: 0x00B477D8
+		// Token: 0x060254FD RID: 152829 RVA: 0x00A843E0 File Offset: 0x00A825E0
 		public List<VillageInfrLimitTaskData> GetActivityTaskDataList()
 		{
 			List<VillageInfrLimitTaskData> list = new List<VillageInfrLimitTaskData>(this.TaskDataMap.Values);
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return list;
 		}
 
-		// Token: 0x060309D2 RID: 199122 RVA: 0x00B49629 File Offset: 0x00B47829
+		// Token: 0x060254FE RID: 152830 RVA: 0x00A84431 File Offset: 0x00A82631
 		private int GetStatusPriority(ConditionTaskState status)
 		{
 			switch (status)
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			}
 		}
 
-		// Token: 0x060309D3 RID: 199123 RVA: 0x00B49648 File Offset: 0x00B47848
+		// Token: 0x060254FF RID: 152831 RVA: 0x00A84450 File Offset: 0x00A82650
 		public bool GetTaskRedDot()
 		{
 			using (Dictionary<int, VillageInfrLimitTaskData>.ValueCollection.Enumerator enumerator = this.TaskDataMap.Values.GetEnumerator())
@@ -260,21 +260,21 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return false;
 		}
 
-		// Token: 0x060309D4 RID: 199124 RVA: 0x00B496A8 File Offset: 0x00B478A8
+		// Token: 0x06025500 RID: 152832 RVA: 0x00A844B0 File Offset: 0x00A826B0
 		public bool GetTreeIsUnlock(int treeId)
 		{
 			IVillageInfrTreeData villageInfrTreeData;
 			return this.TreeDataMap.TryGetValue(treeId, out villageInfrTreeData) && villageInfrTreeData.Status > InfrV2StatusPb.InfrV2StatusLock;
 		}
 
-		// Token: 0x060309D5 RID: 199125 RVA: 0x00B496D0 File Offset: 0x00B478D0
+		// Token: 0x06025501 RID: 152833 RVA: 0x00A844D8 File Offset: 0x00A826D8
 		public bool GetTreeIsComplete(int treeId)
 		{
 			IVillageInfrTreeData villageInfrTreeData;
 			return this.TreeDataMap.TryGetValue(treeId, out villageInfrTreeData) && villageInfrTreeData.Status == InfrV2StatusPb.InfrV2StatusComplete;
 		}
 
-		// Token: 0x060309D6 RID: 199126 RVA: 0x00B496F8 File Offset: 0x00B478F8
+		// Token: 0x06025502 RID: 152834 RVA: 0x00A84500 File Offset: 0x00A82700
 		public bool GetCanVillageLevelUp()
 		{
 			int infrMaxLevel = VillageInfrConfig.Instance.GetInfrMaxLevel();
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return InventoryModel.Instance.GetItemCountByConfigId(key, 0) >= value;
 		}
 
-		// Token: 0x060309D7 RID: 199127 RVA: 0x00B49780 File Offset: 0x00B47980
+		// Token: 0x06025503 RID: 152835 RVA: 0x00A84588 File Offset: 0x00A82788
 		public bool HasTreeCanLevelUp()
 		{
 			foreach (IVillageInfrTreeData villageInfrTreeData in this.TreeDataMap.Values)
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return false;
 		}
 
-		// Token: 0x060309D8 RID: 199128 RVA: 0x00B497E8 File Offset: 0x00B479E8
+		// Token: 0x06025504 RID: 152836 RVA: 0x00A845F0 File Offset: 0x00A827F0
 		public bool GetCanTreeLevelUp(int treeId)
 		{
 			IVillageInfrTreeData villageInfrTreeData;
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return InventoryModel.Instance.GetItemCountByConfigId(key, 0) >= value;
 		}
 
-		// Token: 0x060309D9 RID: 199129 RVA: 0x00B49868 File Offset: 0x00B47A68
+		// Token: 0x06025505 RID: 152837 RVA: 0x00A84670 File Offset: 0x00A82870
 		public List<int> GetCanReceiveScoreRewardIds()
 		{
 			int rewardScore = this.GetRewardScore();
@@ -334,19 +334,19 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return list;
 		}
 
-		// Token: 0x060309DA RID: 199130 RVA: 0x00B498E8 File Offset: 0x00B47AE8
+		// Token: 0x06025506 RID: 152838 RVA: 0x00A846F0 File Offset: 0x00A828F0
 		public bool HasScoreReward()
 		{
 			return this.GetCanReceiveScoreRewardIds().Count > 0;
 		}
 
-		// Token: 0x060309DB RID: 199131 RVA: 0x00B498F8 File Offset: 0x00B47AF8
+		// Token: 0x06025507 RID: 152839 RVA: 0x00A84700 File Offset: 0x00A82900
 		public int GetRewardScore()
 		{
 			return InventoryModel.Instance.GetItemCountByConfigId(ConfigCommonParamById.GetIntConfig("InfrV2ScoreItem").Value, 0);
 		}
 
-		// Token: 0x060309DC RID: 199132 RVA: 0x00B49924 File Offset: 0x00B47B24
+		// Token: 0x06025508 RID: 152840 RVA: 0x00A8472C File Offset: 0x00A8292C
 		public bool CanShowNewTip(int itemId, int count)
 		{
 			int? treeIdByItemId = VillageInfrConfig.Instance.GetTreeIdByItemId(itemId);
@@ -363,14 +363,14 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return itemCountByConfigId >= value && itemCountByConfigId - count < value;
 		}
 
-		// Token: 0x060309DD RID: 199133 RVA: 0x00B499B0 File Offset: 0x00B47BB0
+		// Token: 0x06025509 RID: 152841 RVA: 0x00A847B8 File Offset: 0x00A829B8
 		public List<int> GetTreeFinishConditions()
 		{
 			return this.TreeFinishConditions;
 		}
 
-		// Token: 0x17007952 RID: 31058
-		// (get) Token: 0x060309DE RID: 199134 RVA: 0x00B499B8 File Offset: 0x00B47BB8
+		// Token: 0x17004CBA RID: 19642
+		// (get) Token: 0x0602550A RID: 152842 RVA: 0x00A847C0 File Offset: 0x00A829C0
 		public static VillageInfrModel Instance
 		{
 			get
@@ -379,7 +379,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			}
 		}
 
-		// Token: 0x060309DF RID: 199135 RVA: 0x00B499BF File Offset: 0x00B47BBF
+		// Token: 0x0602550B RID: 152843 RVA: 0x00A847C7 File Offset: 0x00A829C7
 		public static VillageInfrModel GetOrCreateInstance()
 		{
 			if (VillageInfrModel._Instance == null)
@@ -389,7 +389,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return VillageInfrModel._Instance;
 		}
 
-		// Token: 0x060309E0 RID: 199136 RVA: 0x00B499D3 File Offset: 0x00B47BD3
+		// Token: 0x0602550C RID: 152844 RVA: 0x00A847DB File Offset: 0x00A829DB
 		public static bool CreateInstance()
 		{
 			if (VillageInfrModel._Instance != null)
@@ -400,55 +400,55 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return true;
 		}
 
-		// Token: 0x060309E1 RID: 199137 RVA: 0x00B499E9 File Offset: 0x00B47BE9
+		// Token: 0x0602550D RID: 152845 RVA: 0x00A847F1 File Offset: 0x00A829F1
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060309E2 RID: 199138 RVA: 0x00B499EB File Offset: 0x00B47BEB
+		// Token: 0x0602550E RID: 152846 RVA: 0x00A847F3 File Offset: 0x00A829F3
 		public static void ResetStaticDefaultValue()
 		{
 			VillageInfrModel._Instance = null;
 		}
 
-		// Token: 0x060309E3 RID: 199139 RVA: 0x00B499F3 File Offset: 0x00B47BF3
+		// Token: 0x0602550F RID: 152847 RVA: 0x00A847FB File Offset: 0x00A829FB
 		static VillageInfrModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(VillageInfrModel.CreateStaticDefaultValue), new Action(VillageInfrModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A1D1 RID: 106961
+		// Token: 0x04014A44 RID: 84548
 		private readonly Dictionary<int, IVillageInfrTreeData> TreeDataMap = new Dictionary<int, IVillageInfrTreeData>();
 
-		// Token: 0x0401A1D2 RID: 106962
+		// Token: 0x04014A45 RID: 84549
 		private readonly Dictionary<int, VillageInfrLimitTaskData> TaskDataMap = new Dictionary<int, VillageInfrLimitTaskData>();
 
-		// Token: 0x0401A1D3 RID: 106963
+		// Token: 0x04014A46 RID: 84550
 		private int TraceTreeId;
 
-		// Token: 0x0401A1D4 RID: 106964
+		// Token: 0x04014A47 RID: 84551
 		private readonly HashSet<int> ReceivedScoreRewardId = new HashSet<int>();
 
-		// Token: 0x0401A1D5 RID: 106965
+		// Token: 0x04014A48 RID: 84552
 		private long VillageExpInner;
 
-		// Token: 0x0401A1D6 RID: 106966
+		// Token: 0x04014A49 RID: 84553
 		private int VillageLevelInner;
 
-		// Token: 0x0401A1D7 RID: 106967
+		// Token: 0x04014A4A RID: 84554
 		private long VillageLevelReachTimeInner;
 
-		// Token: 0x0401A1D8 RID: 106968
+		// Token: 0x04014A4B RID: 84555
 		private InfrV2StatusPb VillageStatusInner;
 
-		// Token: 0x0401A1D9 RID: 106969
+		// Token: 0x04014A4C RID: 84556
 		[Nullable(2)]
 		private VillageInfrActivityData ActivityData;
 
-		// Token: 0x0401A1DA RID: 106970
+		// Token: 0x04014A4D RID: 84557
 		private List<int> TreeFinishConditions = new List<int>();
 
-		// Token: 0x0401A1DB RID: 106971
+		// Token: 0x04014A4E RID: 84558
 		[Nullable(2)]
 		private static VillageInfrModel _Instance;
 	}

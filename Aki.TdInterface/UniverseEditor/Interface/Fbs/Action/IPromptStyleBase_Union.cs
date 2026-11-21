@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DC8 RID: 28104
+	// Token: 0x02007543 RID: 30019
 	public enum IPromptStyleBase_Union : byte
 	{
-		// Token: 0x040117A6 RID: 71590
+		// Token: 0x04012722 RID: 75554
 		NONE,
-		// Token: 0x040117A7 RID: 71591
+		// Token: 0x04012723 RID: 75555
 		IPromptStyleBase,
-		// Token: 0x040117A8 RID: 71592
+		// Token: 0x04012724 RID: 75556
 		IPromptStyleDefault,
-		// Token: 0x040117A9 RID: 71593
+		// Token: 0x04012725 RID: 75557
 		IPromptStylePhoto,
-		// Token: 0x040117AA RID: 71594
+		// Token: 0x04012726 RID: 75558
 		IPromptStyleBattle,
-		// Token: 0x040117AB RID: 71595
+		// Token: 0x04012727 RID: 75559
 		IPromptStyleBattle2
 	}
 }

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02001119 RID: 4377
+// Token: 0x020005CD RID: 1485
 public class BabelTowerBuffSelectViewLevelItemData : IBabelTowerBuffSelectViewLevelItemData
 {
-	// Token: 0x170009AE RID: 2478
-	// (get) Token: 0x0600728A RID: 29322 RVA: 0x001779C4 File Offset: 0x00175BC4
-	// (set) Token: 0x0600728B RID: 29323 RVA: 0x001779CC File Offset: 0x00175BCC
+	// Token: 0x170009CE RID: 2510
+	// (get) Token: 0x06004620 RID: 17952 RVA: 0x00180380 File Offset: 0x0017E580
+	// (set) Token: 0x06004621 RID: 17953 RVA: 0x00180388 File Offset: 0x0017E588
 	public int LevelId { get; set; }
 
-	// Token: 0x170009AF RID: 2479
-	// (get) Token: 0x0600728C RID: 29324 RVA: 0x001779D5 File Offset: 0x00175BD5
-	// (set) Token: 0x0600728D RID: 29325 RVA: 0x001779DD File Offset: 0x00175BDD
+	// Token: 0x170009CF RID: 2511
+	// (get) Token: 0x06004622 RID: 17954 RVA: 0x00180391 File Offset: 0x0017E591
+	// (set) Token: 0x06004623 RID: 17955 RVA: 0x00180399 File Offset: 0x0017E599
 	public int BuffId { get; set; }
 
-	// Token: 0x170009B0 RID: 2480
-	// (get) Token: 0x0600728E RID: 29326 RVA: 0x001779E6 File Offset: 0x00175BE6
-	// (set) Token: 0x0600728F RID: 29327 RVA: 0x001779EE File Offset: 0x00175BEE
+	// Token: 0x170009D0 RID: 2512
+	// (get) Token: 0x06004624 RID: 17956 RVA: 0x001803A2 File Offset: 0x0017E5A2
+	// (set) Token: 0x06004625 RID: 17957 RVA: 0x001803AA File Offset: 0x0017E5AA
 	public EBabelTowerBuffState State { get; set; }
 }

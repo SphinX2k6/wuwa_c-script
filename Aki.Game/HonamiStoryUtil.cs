@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -10,12 +9,12 @@ using CSharpScript.Game.Module.HonamiStory;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 
-// Token: 0x02001E8B RID: 7819
+// Token: 0x0200134D RID: 4941
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryUtil
 {
-	// Token: 0x0600EEFB RID: 61179 RVA: 0x00391128 File Offset: 0x0038F328
+	// Token: 0x0600C31A RID: 49946 RVA: 0x0039CCE4 File Offset: 0x0039AEE4
 	public static bool CheckEventDataInItemViewport(ULGUIPointerEventData eventData, UUIItem item, bool needOffset = false)
 	{
 		FVector fvector = needOffset ? HonamiStoryUtil.GetOffsetVector(eventData.GetWorldPointInPlane()) : eventData.GetWorldPointInPlane();
@@ -29,13 +28,13 @@ public class HonamiStoryUtil
 		return fvector.X >= num && fvector.X <= num2 && fvector.Z >= num3 && fvector.Z <= num4;
 	}
 
-	// Token: 0x0600EEFC RID: 61180 RVA: 0x003911B3 File Offset: 0x0038F3B3
+	// Token: 0x0600C31B RID: 49947 RVA: 0x0039CD6F File Offset: 0x0039AF6F
 	public static bool IsMobileView()
 	{
 		return Info.Instance.IsMobileInputModel() && !Info.Instance.IsInGamepad();
 	}
 
-	// Token: 0x0600EEFD RID: 61181 RVA: 0x003911D0 File Offset: 0x0038F3D0
+	// Token: 0x0600C31C RID: 49948 RVA: 0x0039CD8C File Offset: 0x0039AF8C
 	public static FVector GetOffsetVector(FVector origin)
 	{
 		ValueTuple<int, int> dragOffset = HonamiStoryConfig.Instance.GetDragOffset();
@@ -44,13 +43,13 @@ public class HonamiStoryUtil
 		return origin;
 	}
 
-	// Token: 0x0600EEFE RID: 61182 RVA: 0x0039120D File Offset: 0x0038F40D
+	// Token: 0x0600C31D RID: 49949 RVA: 0x0039CDC9 File Offset: 0x0039AFC9
 	public static IHonamiStoryAvailablePosInfo FindFirstAvailablePosition(HashSet<int> emptyGridSet, HonamiStoryItemDataBase itemData, int backpackWidth, [Nullable(2)] HashSet<int> ignorePos = null)
 	{
 		return HonamiStoryUtil.FindAvailablePosition(emptyGridSet, itemData, backpackWidth, true, ignorePos ?? new HashSet<int>());
 	}
 
-	// Token: 0x0600EEFF RID: 61183 RVA: 0x00391224 File Offset: 0x0038F424
+	// Token: 0x0600C31E RID: 49950 RVA: 0x0039CDE0 File Offset: 0x0039AFE0
 	public static IHonamiStoryAvailablePosInfo FindAvailablePosition(HashSet<int> emptyGridSet, HonamiStoryItemDataBase itemData, int backpackWidth, bool needSort, [Nullable(2)] HashSet<int> ignorePos = null)
 	{
 		List<int> list = new List<int>();
@@ -106,13 +105,13 @@ public class HonamiStoryUtil
 		};
 	}
 
-	// Token: 0x0600EF00 RID: 61184 RVA: 0x003913C8 File Offset: 0x0038F5C8
+	// Token: 0x0600C31F RID: 49951 RVA: 0x0039CF84 File Offset: 0x0039B184
 	public static bool CheckGridPositionValid(int position, int itemWidth, int backpackWidth)
 	{
 		return position % backpackWidth + itemWidth <= backpackWidth;
 	}
 
-	// Token: 0x0600EF01 RID: 61185 RVA: 0x003913D8 File Offset: 0x0038F5D8
+	// Token: 0x0600C320 RID: 49952 RVA: 0x0039CF94 File Offset: 0x0039B194
 	public static bool CheckEmptyGridContainPos(HashSet<int> emptyGridSet, List<int> positionList, [Nullable(2)] HashSet<int> ignorePos)
 	{
 		foreach (int item in positionList)
@@ -125,7 +124,7 @@ public class HonamiStoryUtil
 		return true;
 	}
 
-	// Token: 0x0600EF02 RID: 61186 RVA: 0x0039143C File Offset: 0x0038F63C
+	// Token: 0x0600C321 RID: 49953 RVA: 0x0039CFF8 File Offset: 0x0039B1F8
 	public static void RemoveEmptyGridPosition(HashSet<int> emptyGridSet, int[] positionList)
 	{
 		foreach (int item in positionList)
@@ -134,7 +133,7 @@ public class HonamiStoryUtil
 		}
 	}
 
-	// Token: 0x0600EF03 RID: 61187 RVA: 0x00391468 File Offset: 0x0038F668
+	// Token: 0x0600C322 RID: 49954 RVA: 0x0039D024 File Offset: 0x0039B224
 	public static HonamiStoryBagUpdateInfo GetHonamiStoryItemSwapInfo(HonamiStoryItemDataBase itemData, int position)
 	{
 		HonamiStoryBagUpdateInfo honamiStoryBagUpdateInfo = HonamiStoryBagUpdateInfo.Create();
@@ -150,7 +149,7 @@ public class HonamiStoryUtil
 		return honamiStoryBagUpdateInfo;
 	}
 
-	// Token: 0x0600EF04 RID: 61188 RVA: 0x003914F0 File Offset: 0x0038F6F0
+	// Token: 0x0600C323 RID: 49955 RVA: 0x0039D0AC File Offset: 0x0039B2AC
 	public static HonamiStoryBagUpdateInfo GetHonamiStoryItemAddInfo(HonamiStoryItemDataBase itemData, int position)
 	{
 		HonamiStoryBagUpdateInfo honamiStoryBagUpdateInfo = HonamiStoryBagUpdateInfo.Create();
@@ -163,7 +162,7 @@ public class HonamiStoryUtil
 		return honamiStoryBagUpdateInfo;
 	}
 
-	// Token: 0x0600EF05 RID: 61189 RVA: 0x0039154C File Offset: 0x0038F74C
+	// Token: 0x0600C324 RID: 49956 RVA: 0x0039D108 File Offset: 0x0039B308
 	public static HonamiStoryBagUpdateInfo GetHonamiStoryItemRemoveInfo(HonamiStoryItemDataBase itemData)
 	{
 		HonamiStoryBagUpdateInfo honamiStoryBagUpdateInfo = HonamiStoryBagUpdateInfo.Create();
@@ -176,7 +175,7 @@ public class HonamiStoryUtil
 		return honamiStoryBagUpdateInfo;
 	}
 
-	// Token: 0x0600EF06 RID: 61190 RVA: 0x003915AC File Offset: 0x0038F7AC
+	// Token: 0x0600C325 RID: 49957 RVA: 0x0039D168 File Offset: 0x0039B368
 	public static HonamiStoryItemDataBase[] GetHonamiStoryItemDataInRange(float range)
 	{
 		List<EntityHandle> list = new List<EntityHandle>();
@@ -203,7 +202,7 @@ public class HonamiStoryUtil
 		return list2.ToArray();
 	}
 
-	// Token: 0x0600EF07 RID: 61191 RVA: 0x003916BC File Offset: 0x0038F8BC
+	// Token: 0x0600C326 RID: 49958 RVA: 0x0039D278 File Offset: 0x0039B478
 	public static bool CheckIsPluginBoxItem(int itemId)
 	{
 		HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(false);
@@ -221,7 +220,7 @@ public class HonamiStoryUtil
 		return false;
 	}
 
-	// Token: 0x0600EF08 RID: 61192 RVA: 0x00391730 File Offset: 0x0038F930
+	// Token: 0x0600C327 RID: 49959 RVA: 0x0039D2EC File Offset: 0x0039B4EC
 	public static bool CheckActivityQuestFinished()
 	{
 		foreach (HonamiStoryActivity honamiStoryActivity in HonamiStoryConfig.Instance.GetAllActivityConfig())
@@ -235,7 +234,7 @@ public class HonamiStoryUtil
 		return true;
 	}
 
-	// Token: 0x0600EF09 RID: 61193 RVA: 0x00391798 File Offset: 0x0038F998
+	// Token: 0x0600C328 RID: 49960 RVA: 0x0039D354 File Offset: 0x0039B554
 	public static bool CheckInActivityQuest()
 	{
 		foreach (HonamiStoryActivity honamiStoryActivity in HonamiStoryConfig.Instance.GetAllActivityConfig())
@@ -249,13 +248,13 @@ public class HonamiStoryUtil
 		return false;
 	}
 
-	// Token: 0x0600EF0A RID: 61194 RVA: 0x00391800 File Offset: 0x0038FA00
+	// Token: 0x0600C329 RID: 49961 RVA: 0x0039D3BC File Offset: 0x0039B5BC
 	public static bool CheckInHonamiStoryDungeon()
 	{
 		return HonamiStoryUtil.CheckInHonamiStoryMainDungeon() || HonamiStoryUtil.CheckInHonamiStoryAreaDungeon();
 	}
 
-	// Token: 0x0600EF0B RID: 61195 RVA: 0x00391810 File Offset: 0x0038FA10
+	// Token: 0x0600C32A RID: 49962 RVA: 0x0039D3CC File Offset: 0x0039B5CC
 	public static bool CheckInHonamiStoryAreaDungeon()
 	{
 		GameModeModel instance = GameModeModel.Instance;
@@ -279,7 +278,7 @@ public class HonamiStoryUtil
 		return false;
 	}
 
-	// Token: 0x0600EF0C RID: 61196 RVA: 0x003918C8 File Offset: 0x0038FAC8
+	// Token: 0x0600C32B RID: 49963 RVA: 0x0039D484 File Offset: 0x0039B684
 	public static bool CheckInHonamiStoryTopTower()
 	{
 		GameModeModel instance = GameModeModel.Instance;
@@ -303,7 +302,7 @@ public class HonamiStoryUtil
 		return false;
 	}
 
-	// Token: 0x0600EF0D RID: 61197 RVA: 0x00391978 File Offset: 0x0038FB78
+	// Token: 0x0600C32C RID: 49964 RVA: 0x0039D534 File Offset: 0x0039B734
 	public static int GetMainLineInstId()
 	{
 		IEnumerable<HonamiStoryActivity> allActivityConfig = HonamiStoryConfig.Instance.GetAllActivityConfig();
@@ -323,7 +322,7 @@ public class HonamiStoryUtil
 		return result;
 	}
 
-	// Token: 0x0600EF0E RID: 61198 RVA: 0x00391A24 File Offset: 0x0038FC24
+	// Token: 0x0600C32D RID: 49965 RVA: 0x0039D5E0 File Offset: 0x0039B7E0
 	public static bool CheckInHonamiStoryMainDungeon()
 	{
 		GameModeModel instance = GameModeModel.Instance;
@@ -335,7 +334,7 @@ public class HonamiStoryUtil
 		int id = instanceDungeon.Value.Id;
 		foreach (HonamiStoryActivity honamiStoryActivity in HonamiStoryConfig.Instance.GetAllActivityConfig())
 		{
-			if (honamiStoryActivity.MainLineInstId().Contains(id))
+			if (Array.IndexOf<int>(honamiStoryActivity.MainLineInstId(), id) >= 0)
 			{
 				return true;
 			}
@@ -343,14 +342,14 @@ public class HonamiStoryUtil
 		return false;
 	}
 
-	// Token: 0x0600EF0F RID: 61199 RVA: 0x00391AC4 File Offset: 0x0038FCC4
+	// Token: 0x0600C32E RID: 49966 RVA: 0x0039D680 File Offset: 0x0039B880
 	public static bool CheckEnterOrExitHonamiStoryDungeon(int dungeonId)
 	{
 		IEnumerable<HonamiStoryActivity> allActivityConfig = HonamiStoryConfig.Instance.GetAllActivityConfig();
 		InstanceDungeon? config = ConfigInstanceDungeonById.GetConfig(dungeonId, true);
 		foreach (HonamiStoryActivity honamiStoryActivity in allActivityConfig)
 		{
-			if (honamiStoryActivity.MainLineInstId().Contains(dungeonId))
+			if (Array.IndexOf<int>(honamiStoryActivity.MainLineInstId(), dungeonId) >= 0)
 			{
 				return true;
 			}
@@ -362,13 +361,13 @@ public class HonamiStoryUtil
 		return false;
 	}
 
-	// Token: 0x0600EF10 RID: 61200 RVA: 0x00391B50 File Offset: 0x0038FD50
+	// Token: 0x0600C32F RID: 49967 RVA: 0x0039D70C File Offset: 0x0039B90C
 	public static bool CheckHonamiQuestOpen()
 	{
 		return HonamiStoryModel.Instance.GetActivityData(false) != null && HonamiStoryUtil.CheckInHonamiStoryAreaDungeon();
 	}
 
-	// Token: 0x0600EF11 RID: 61201 RVA: 0x00391B68 File Offset: 0x0038FD68
+	// Token: 0x0600C330 RID: 49968 RVA: 0x0039D724 File Offset: 0x0039B924
 	public unsafe static int GetSteadyConsumeByCostGroup(int costGroup)
 	{
 		IReadOnlyList<HonamiSteadyConsume> configList = ConfigHonamiSteadyConsumeByCostGroup.GetConfigList(costGroup, true);
@@ -401,7 +400,7 @@ public class HonamiStoryUtil
 		return 0;
 	}
 
-	// Token: 0x0600EF12 RID: 61202 RVA: 0x00391C78 File Offset: 0x0038FE78
+	// Token: 0x0600C331 RID: 49969 RVA: 0x0039D834 File Offset: 0x0039BA34
 	public static int GetDropQualityInMainQuest()
 	{
 		int result = -1;
@@ -412,14 +411,14 @@ public class HonamiStoryUtil
 		return result;
 	}
 
-	// Token: 0x0600EF13 RID: 61203 RVA: 0x00391CD0 File Offset: 0x0038FED0
+	// Token: 0x0600C332 RID: 49970 RVA: 0x0039D88C File Offset: 0x0039BA8C
 	public static bool CheckInMainQuest()
 	{
 		int questId = 880000044;
 		return QuestNewModel.Instance.GetQuestState(questId) == EQuestState.Progress;
 	}
 
-	// Token: 0x0600EF14 RID: 61204 RVA: 0x00391CF4 File Offset: 0x0038FEF4
+	// Token: 0x0600C333 RID: 49971 RVA: 0x0039D8B0 File Offset: 0x0039BAB0
 	public static string GetPriceNumFormat(int price)
 	{
 		string str = "";
@@ -453,7 +452,7 @@ public class HonamiStoryUtil
 		return (Math.Floor((double)price / (double)num * 10.0) / 10.0).ToString() + str;
 	}
 
-	// Token: 0x0600EF15 RID: 61205 RVA: 0x00391DD8 File Offset: 0x0038FFD8
+	// Token: 0x0600C334 RID: 49972 RVA: 0x0039D994 File Offset: 0x0039BB94
 	public static bool CheckRolePowerValid(int roleA, int roleB)
 	{
 		if (roleA == 0 || roleB == 0)

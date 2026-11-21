@@ -5,39 +5,39 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 {
-	// Token: 0x02006DC5 RID: 28101
+	// Token: 0x02005F44 RID: 24388
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class TurnAndPlayMontageParam : ActionParams
 	{
-		// Token: 0x170099BC RID: 39356
-		// (get) Token: 0x060448DA RID: 280794 RVA: 0x010E86B9 File Offset: 0x010E68B9
-		// (set) Token: 0x060448DB RID: 280795 RVA: 0x010E86C1 File Offset: 0x010E68C1
+		// Token: 0x17006EBF RID: 28351
+		// (get) Token: 0x0603AA3E RID: 240190 RVA: 0x01092909 File Offset: 0x01090B09
+		// (set) Token: 0x0603AA3F RID: 240191 RVA: 0x01092911 File Offset: 0x01090B11
 		public int EntityId { get; set; }
 
-		// Token: 0x170099BD RID: 39357
-		// (get) Token: 0x060448DC RID: 280796 RVA: 0x010E86CA File Offset: 0x010E68CA
-		// (set) Token: 0x060448DD RID: 280797 RVA: 0x010E86D2 File Offset: 0x010E68D2
+		// Token: 0x17006EC0 RID: 28352
+		// (get) Token: 0x0603AA40 RID: 240192 RVA: 0x0109291A File Offset: 0x01090B1A
+		// (set) Token: 0x0603AA41 RID: 240193 RVA: 0x01092922 File Offset: 0x01090B22
 		public IVector Pos { get; set; }
 
-		// Token: 0x170099BE RID: 39358
-		// (get) Token: 0x060448DE RID: 280798 RVA: 0x010E86DB File Offset: 0x010E68DB
-		// (set) Token: 0x060448DF RID: 280799 RVA: 0x010E86E3 File Offset: 0x010E68E3
+		// Token: 0x17006EC1 RID: 28353
+		// (get) Token: 0x0603AA42 RID: 240194 RVA: 0x0109292B File Offset: 0x01090B2B
+		// (set) Token: 0x0603AA43 RID: 240195 RVA: 0x01092933 File Offset: 0x01090B33
 		public int MontageId { get; set; }
 
-		// Token: 0x170099BF RID: 39359
-		// (get) Token: 0x060448E0 RID: 280800 RVA: 0x010E86EC File Offset: 0x010E68EC
-		// (set) Token: 0x060448E1 RID: 280801 RVA: 0x010E86F4 File Offset: 0x010E68F4
+		// Token: 0x17006EC2 RID: 28354
+		// (get) Token: 0x0603AA44 RID: 240196 RVA: 0x0109293C File Offset: 0x01090B3C
+		// (set) Token: 0x0603AA45 RID: 240197 RVA: 0x01092944 File Offset: 0x01090B44
 		public bool? IsAbpMontage { get; set; }
 
-		// Token: 0x170099C0 RID: 39360
-		// (get) Token: 0x060448E2 RID: 280802 RVA: 0x010E86FD File Offset: 0x010E68FD
-		// (set) Token: 0x060448E3 RID: 280803 RVA: 0x010E8705 File Offset: 0x010E6905
+		// Token: 0x17006EC3 RID: 28355
+		// (get) Token: 0x0603AA46 RID: 240198 RVA: 0x0109294D File Offset: 0x01090B4D
+		// (set) Token: 0x0603AA47 RID: 240199 RVA: 0x01092955 File Offset: 0x01090B55
 		public float LoopDuration { get; set; }
 
-		// Token: 0x170099C1 RID: 39361
-		// (get) Token: 0x060448E4 RID: 280804 RVA: 0x010E870E File Offset: 0x010E690E
-		// (set) Token: 0x060448E5 RID: 280805 RVA: 0x010E8716 File Offset: 0x010E6916
+		// Token: 0x17006EC4 RID: 28356
+		// (get) Token: 0x0603AA48 RID: 240200 RVA: 0x0109295E File Offset: 0x01090B5E
+		// (set) Token: 0x0603AA49 RID: 240201 RVA: 0x01092966 File Offset: 0x01090B66
 		public int RepeatTimes { get; set; }
 	}
 }

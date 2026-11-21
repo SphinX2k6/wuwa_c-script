@@ -1,25 +1,23 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C7D RID: 7293
+	// Token: 0x02001E82 RID: 7810
 	public class INpcSitDown_SetValue
 	{
-		// Token: 0x04005ED5 RID: 24277
+		// Token: 0x04006428 RID: 25640
 		public ENpcLeisureInteract Type;
 
-		// Token: 0x04005ED6 RID: 24278
+		// Token: 0x04006429 RID: 25641
 		public bool? KeepState;
 
-		// Token: 0x04005ED7 RID: 24279
-		[Nullable(1)]
+		// Token: 0x0400642A RID: 25642
 		public IMontageId MontageId;
 
-		// Token: 0x04005ED8 RID: 24280
+		// Token: 0x0400642B RID: 25643
 		public int PosEntityId;
 
-		// Token: 0x04005ED9 RID: 24281
+		// Token: 0x0400642C RID: 25644
 		public float Duration;
 	}
 }

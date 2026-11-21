@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FB4 RID: 4020
+	// Token: 0x0200109C RID: 4252
 	public struct RegressSignReward : IFlatbufferObject
 	{
-		// Token: 0x17002DCD RID: 11725
-		// (get) Token: 0x0600BB45 RID: 47941 RVA: 0x002DC990 File Offset: 0x002DAB90
+		// Token: 0x17002E48 RID: 11848
+		// (get) Token: 0x0600C18F RID: 49551 RVA: 0x002F9120 File Offset: 0x002F7320
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BB46 RID: 47942 RVA: 0x002DC99D File Offset: 0x002DAB9D
+		// Token: 0x0600C190 RID: 49552 RVA: 0x002F912D File Offset: 0x002F732D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BB47 RID: 47943 RVA: 0x002DC9A4 File Offset: 0x002DABA4
+		// Token: 0x0600C191 RID: 49553 RVA: 0x002F9134 File Offset: 0x002F7334
 		public static RegressSignReward GetRootAsRegressSignReward(ByteBuffer _bb)
 		{
 			return RegressSignReward.GetRootAsRegressSignReward(_bb, default(RegressSignReward));
 		}
 
-		// Token: 0x0600BB48 RID: 47944 RVA: 0x002DC9C0 File Offset: 0x002DABC0
+		// Token: 0x0600C192 RID: 49554 RVA: 0x002F9150 File Offset: 0x002F7350
 		public static RegressSignReward GetRootAsRegressSignReward(ByteBuffer _bb, RegressSignReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BB49 RID: 47945 RVA: 0x002DC9DD File Offset: 0x002DABDD
+		// Token: 0x0600C193 RID: 49555 RVA: 0x002F916D File Offset: 0x002F736D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BB4A RID: 47946 RVA: 0x002DC9EC File Offset: 0x002DABEC
+		// Token: 0x0600C194 RID: 49556 RVA: 0x002F917C File Offset: 0x002F737C
 		public RegressSignReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002DCE RID: 11726
-		// (get) Token: 0x0600BB4B RID: 47947 RVA: 0x002DC9FC File Offset: 0x002DABFC
+		// Token: 0x17002E49 RID: 11849
+		// (get) Token: 0x0600C195 RID: 49557 RVA: 0x002F918C File Offset: 0x002F738C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002DCF RID: 11727
-		// (get) Token: 0x0600BB4C RID: 47948 RVA: 0x002DCA38 File Offset: 0x002DAC38
+		// Token: 0x17002E4A RID: 11850
+		// (get) Token: 0x0600C196 RID: 49558 RVA: 0x002F91C8 File Offset: 0x002F73C8
 		public int ActivityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002DD0 RID: 11728
-		// (get) Token: 0x0600BB4D RID: 47949 RVA: 0x002DCA74 File Offset: 0x002DAC74
+		// Token: 0x17002E4B RID: 11851
+		// (get) Token: 0x0600C197 RID: 49559 RVA: 0x002F9204 File Offset: 0x002F7404
 		public int Grade
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002DD1 RID: 11729
-		// (get) Token: 0x0600BB4E RID: 47950 RVA: 0x002DCAB0 File Offset: 0x002DACB0
+		// Token: 0x17002E4C RID: 11852
+		// (get) Token: 0x0600C198 RID: 49560 RVA: 0x002F9240 File Offset: 0x002F7440
 		public int SignDayNum
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002DD2 RID: 11730
-		// (get) Token: 0x0600BB4F RID: 47951 RVA: 0x002DCAF0 File Offset: 0x002DACF0
+		// Token: 0x17002E4D RID: 11853
+		// (get) Token: 0x0600C199 RID: 49561 RVA: 0x002F9280 File Offset: 0x002F7480
 		public int SignReward
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002DD3 RID: 11731
-		// (get) Token: 0x0600BB50 RID: 47952 RVA: 0x002DCB30 File Offset: 0x002DAD30
+		// Token: 0x17002E4E RID: 11854
+		// (get) Token: 0x0600C19A RID: 49562 RVA: 0x002F92C0 File Offset: 0x002F74C0
 		public int Version
 		{
 			get
@@ -137,7 +137,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0400508D RID: 20621
+		// Token: 0x04005675 RID: 22133
 		private Table __p;
 	}
 }

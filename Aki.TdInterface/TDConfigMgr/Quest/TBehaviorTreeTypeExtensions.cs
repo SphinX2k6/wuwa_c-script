@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012C0 RID: 4800
+	// Token: 0x02001406 RID: 5126
 	public static class TBehaviorTreeTypeExtensions
 	{
-		// Token: 0x06006C07 RID: 27655 RVA: 0x00103F20 File Offset: 0x00102120
+		// Token: 0x06007275 RID: 29301 RVA: 0x00111EE8 File Offset: 0x001100E8
 		public static string ToEnumString(this TBehaviorTreeType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006C08 RID: 27656 RVA: 0x00103F68 File Offset: 0x00102168
+		// Token: 0x06007276 RID: 29302 RVA: 0x00111F30 File Offset: 0x00110130
 		public static TBehaviorTreeType FromString(string name)
 		{
 			TBehaviorTreeType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006C09 RID: 27657 RVA: 0x00103F94 File Offset: 0x00102194
+		// Token: 0x06007277 RID: 29303 RVA: 0x00111F5C File Offset: 0x0011015C
 		public static bool TryFromString(string name, out TBehaviorTreeType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006C0A RID: 27658 RVA: 0x00103FEA File Offset: 0x001021EA
+		// Token: 0x06007278 RID: 29304 RVA: 0x00111FB2 File Offset: 0x001101B2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006C0B RID: 27659 RVA: 0x0010400A File Offset: 0x0010220A
+		// Token: 0x06007279 RID: 29305 RVA: 0x00111FD2 File Offset: 0x001101D2
 		public static TBehaviorTreeType[] GetValues()
 		{
 			return new TBehaviorTreeType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006C0C RID: 27660 RVA: 0x0010401A File Offset: 0x0010221A
+		// Token: 0x0600727A RID: 29306 RVA: 0x00111FE2 File Offset: 0x001101E2
 		public static string[] GetNames()
 		{
 			return new string[]

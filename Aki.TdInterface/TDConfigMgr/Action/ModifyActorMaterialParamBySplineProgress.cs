@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020D5 RID: 8405
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002332 RID: 9010
 	public class ModifyActorMaterialParamBySplineProgress : ActionParams
 	{
-		// Token: 0x0600B8B0 RID: 47280 RVA: 0x001AB320 File Offset: 0x001A9520
+		// Token: 0x0600C428 RID: 50216 RVA: 0x001C2248 File Offset: 0x001C0448
 		private ModifyActorMaterialParamBySplineProgress_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B8B1 RID: 47281 RVA: 0x001AB358 File Offset: 0x001A9558
+		// Token: 0x0600C429 RID: 50217 RVA: 0x001C2280 File Offset: 0x001C0480
 		public static ModifyActorMaterialParamBySplineProgress Create([Nullable(2)] ModifyActorMaterialParamBySplineProgress instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B8B2 RID: 47282 RVA: 0x001AB36B File Offset: 0x001A956B
+		// Token: 0x0600C42A RID: 50218 RVA: 0x001C2293 File Offset: 0x001C0493
 		public static ModifyActorMaterialParamBySplineProgress CreateFromSetValue([Nullable(2)] ModifyActorMaterialParamBySplineProgress_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B8B3 RID: 47283 RVA: 0x001AB37E File Offset: 0x001A957E
+		// Token: 0x0600C42B RID: 50219 RVA: 0x001C22A6 File Offset: 0x001C04A6
 		public ModifyActorMaterialParamBySplineProgress_SetValue ToSetValue()
 		{
 			return new ModifyActorMaterialParamBySplineProgress_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003871 RID: 14449
-		// (get) Token: 0x0600B8B4 RID: 47284 RVA: 0x001AB391 File Offset: 0x001A9591
-		// (set) Token: 0x0600B8B5 RID: 47285 RVA: 0x001AB3B8 File Offset: 0x001A95B8
+		// Token: 0x17003B59 RID: 15193
+		// (get) Token: 0x0600C42C RID: 50220 RVA: 0x001C22B9 File Offset: 0x001C04B9
+		// (set) Token: 0x0600C42D RID: 50221 RVA: 0x001C22E0 File Offset: 0x001C04E0
 		public virtual IModifyActorMaterialParamBySplineProgressConfig Config
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006EA6 RID: 28326
+		// Token: 0x040074D0 RID: 29904
 		[Nullable(2)]
 		protected new ModifyActorMaterialParamBySplineProgress FbInstance;
 
-		// Token: 0x04006EA7 RID: 28327
+		// Token: 0x040074D1 RID: 29905
 		[Nullable(2)]
 		protected ModifyActorMaterialParamBySplineProgress_SetValue PocoInterface;
 	}

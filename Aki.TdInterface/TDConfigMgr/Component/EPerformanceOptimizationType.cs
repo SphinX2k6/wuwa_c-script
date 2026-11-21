@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000112 RID: 274
+	// Token: 0x02000123 RID: 291
 	public enum EPerformanceOptimizationType
 	{
-		// Token: 0x040005A4 RID: 1444
+		// Token: 0x040005E1 RID: 1505
 		PlaneMovementOptimization,
-		// Token: 0x040005A5 RID: 1445
+		// Token: 0x040005E2 RID: 1506
 		DamageTextOptimization
 	}
 }

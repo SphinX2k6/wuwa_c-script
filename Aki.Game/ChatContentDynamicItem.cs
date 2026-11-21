@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020017A1 RID: 6049
+// Token: 0x02000C5A RID: 3162
 [NullableContext(1)]
 [Nullable(0)]
 public class ChatContentDynamicItem : UiPanelBase, IDynamicScrollBaseItem<IChatContentDynamicData>
 {
-	// Token: 0x0600B047 RID: 45127 RVA: 0x0027D160 File Offset: 0x0027B360
+	// Token: 0x0600842F RID: 33839 RVA: 0x002876F8 File Offset: 0x002858F8
 	public UniTask Init(UUIItem actor)
 	{
 		ChatContentDynamicItem.<Init>d__3 <Init>d__;
@@ -26,7 +26,7 @@ public class ChatContentDynamicItem : UiPanelBase, IDynamicScrollBaseItem<IChatC
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B048 RID: 45128 RVA: 0x0027D1AC File Offset: 0x0027B3AC
+	// Token: 0x06008430 RID: 33840 RVA: 0x00287744 File Offset: 0x00285944
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -52,7 +52,7 @@ public class ChatContentDynamicItem : UiPanelBase, IDynamicScrollBaseItem<IChatC
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B049 RID: 45129 RVA: 0x0027D2DC File Offset: 0x0027B4DC
+	// Token: 0x06008431 RID: 33841 RVA: 0x00287874 File Offset: 0x00285A74
 	public FVector2D GetItemSize(IChatContentDynamicData data)
 	{
 		EChatContentType type = data.Type;
@@ -92,14 +92,14 @@ public class ChatContentDynamicItem : UiPanelBase, IDynamicScrollBaseItem<IChatC
 		}
 	}
 
-	// Token: 0x0600B04A RID: 45130 RVA: 0x0027D432 File Offset: 0x0027B632
+	// Token: 0x06008432 RID: 33842 RVA: 0x002879CA File Offset: 0x00285BCA
 	public void ClearItem()
 	{
 	}
 
-	// Token: 0x04005017 RID: 20503
+	// Token: 0x040050C1 RID: 20673
 	private const int SPACING = 60;
 
-	// Token: 0x04005018 RID: 20504
+	// Token: 0x040050C2 RID: 20674
 	private const int NOTIME_SPACING = 40;
 }

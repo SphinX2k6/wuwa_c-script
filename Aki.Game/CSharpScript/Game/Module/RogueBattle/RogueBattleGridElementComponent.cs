@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Util;
@@ -8,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EA3 RID: 20131
+	// Token: 0x02003E6C RID: 15980
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleGridElementComponent : MediumItemGridComponent
 	{
-		// Token: 0x06033BAD RID: 211885 RVA: 0x00C1E6C1 File Offset: 0x00C1C8C1
+		// Token: 0x06028A18 RID: 166424 RVA: 0x00B67BDD File Offset: 0x00B65DDD
 		protected override string GetResourceId()
 		{
 			return "UiItem_ItemRogueElement";
 		}
 
-		// Token: 0x06033BAE RID: 211886 RVA: 0x00C1E6C8 File Offset: 0x00C1C8C8
+		// Token: 0x06028A19 RID: 166425 RVA: 0x00B67BE4 File Offset: 0x00B65DE4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,19 +27,19 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033BAF RID: 211887 RVA: 0x00C1E6EB File Offset: 0x00C1C8EB
+		// Token: 0x06028A1A RID: 166426 RVA: 0x00B67C07 File Offset: 0x00B65E07
 		protected override void OnActivate()
 		{
 			this.GenericLayout = new GenericLayout<RogueBattleTokenElement, int>(base.GetVerticalLayout(0), new Func<RogueBattleTokenElement>(this.CreateElement), null, false, true);
 		}
 
-		// Token: 0x06033BB0 RID: 211888 RVA: 0x00C1E70E File Offset: 0x00C1C90E
+		// Token: 0x06028A1B RID: 166427 RVA: 0x00B67C2A File Offset: 0x00B65E2A
 		private RogueBattleTokenElement CreateElement()
 		{
 			return new RogueBattleTokenElement();
 		}
 
-		// Token: 0x06033BB1 RID: 211889 RVA: 0x00C1E718 File Offset: 0x00C1C918
+		// Token: 0x06028A1C RID: 166428 RVA: 0x00B67C34 File Offset: 0x00B65E34
 		protected override void OnRefresh(object data)
 		{
 			int[] tokenSortElementInfoByCount = RogueBattleUtils.GetTokenSortElementInfoByCount((RogueResGainData)data);
@@ -49,10 +48,10 @@ namespace CSharpScript.Game.Module.RogueBattle
 			{
 				return;
 			}
-			genericLayout.RefreshByData(tokenSortElementInfoByCount.ToList<int>(), null, false);
+			genericLayout.RefreshByData(tokenSortElementInfoByCount, null, false);
 		}
 
-		// Token: 0x0401B7AC RID: 112556
+		// Token: 0x0401617F RID: 90495
 		[Nullable(new byte[]
 		{
 			2,

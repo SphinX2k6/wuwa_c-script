@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Reward;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020015DC RID: 5596
+// Token: 0x02000A94 RID: 2708
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class WheelTowerSeasonTaskItem : SyncGridProxyAbstract<ActivityTaskData>
 {
-	// Token: 0x06009E48 RID: 40520 RVA: 0x00227D10 File Offset: 0x00225F10
+	// Token: 0x06007226 RID: 29222 RVA: 0x00231AC4 File Offset: 0x0022FCC4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -57,19 +57,19 @@ public class WheelTowerSeasonTaskItem : SyncGridProxyAbstract<ActivityTaskData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009E49 RID: 40521 RVA: 0x00227F04 File Offset: 0x00226104
+	// Token: 0x06007227 RID: 29223 RVA: 0x00231CB8 File Offset: 0x0022FEB8
 	protected override void OnStart()
 	{
 		this.RewardLayout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(6), new Func<CommonItemSmallItemGrid>(this.CreateRewardItem), null, false, true);
 	}
 
-	// Token: 0x06009E4A RID: 40522 RVA: 0x00227F27 File Offset: 0x00226127
+	// Token: 0x06007228 RID: 29224 RVA: 0x00231CDB File Offset: 0x0022FEDB
 	private CommonItemSmallItemGrid CreateRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06009E4B RID: 40523 RVA: 0x00227F30 File Offset: 0x00226130
+	// Token: 0x06007229 RID: 29225 RVA: 0x00231CE4 File Offset: 0x0022FEE4
 	public override void Refresh(ActivityTaskData data)
 	{
 		NewTowerSeasonAward? seasonTaskRewardConfig = WheelTowerConfig.Instance.GetSeasonTaskRewardConfig(data.Id);
@@ -143,7 +143,7 @@ public class WheelTowerSeasonTaskItem : SyncGridProxyAbstract<ActivityTaskData>
 		}
 	}
 
-	// Token: 0x06009E4C RID: 40524 RVA: 0x0022815C File Offset: 0x0022635C
+	// Token: 0x0600722A RID: 29226 RVA: 0x00231F10 File Offset: 0x00230110
 	public void OnTick()
 	{
 		if (this.CycleId <= 0)
@@ -159,7 +159,7 @@ public class WheelTowerSeasonTaskItem : SyncGridProxyAbstract<ActivityTaskData>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(9), "WheelTower_SeasonTask_ResetTime", new <>z__ReadOnlySingleElementList<object>(cycleEndRemainTime));
 	}
 
-	// Token: 0x06009E4D RID: 40525 RVA: 0x002281C0 File Offset: 0x002263C0
+	// Token: 0x0600722B RID: 29227 RVA: 0x00231F74 File Offset: 0x00230174
 	private void OnGetBtnClick()
 	{
 		Action onClickToGet = this.OnClickToGet;
@@ -170,7 +170,7 @@ public class WheelTowerSeasonTaskItem : SyncGridProxyAbstract<ActivityTaskData>
 		onClickToGet();
 	}
 
-	// Token: 0x0400467F RID: 18047
+	// Token: 0x04004725 RID: 18213
 	[Nullable(new byte[]
 	{
 		2,
@@ -178,10 +178,10 @@ public class WheelTowerSeasonTaskItem : SyncGridProxyAbstract<ActivityTaskData>
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x04004680 RID: 18048
+	// Token: 0x04004726 RID: 18214
 	private int CycleId;
 
-	// Token: 0x04004681 RID: 18049
+	// Token: 0x04004727 RID: 18215
 	[Nullable(2)]
 	public Action OnClickToGet;
 }

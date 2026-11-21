@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation.New.Vision
 {
-	// Token: 0x02004A06 RID: 18950
+	// Token: 0x02003982 RID: 14722
 	public class NavigationVisionReplaceSortTabToggle : NavigationToggle
 	{
-		// Token: 0x060312E5 RID: 201445 RVA: 0x00B682FB File Offset: 0x00B664FB
+		// Token: 0x06025E33 RID: 155187 RVA: 0x00AA3A63 File Offset: 0x00AA1C63
 		[NullableContext(1)]
 		public NavigationVisionReplaceSortTabToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x060312E6 RID: 201446 RVA: 0x00B68308 File Offset: 0x00B66508
+		// Token: 0x06025E34 RID: 155188 RVA: 0x00AA3A70 File Offset: 0x00AA1C70
 		protected override void OnToggleClick(EToggleState _)
 		{
 			VisionChooseMainPanelHandle visionChooseMainPanelHandle = this.PanelHandle as VisionChooseMainPanelHandle;

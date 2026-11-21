@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001081 RID: 4225
+	// Token: 0x0200117C RID: 4476
 	public struct RoverRogueRefresh : IFlatbufferObject
 	{
-		// Token: 0x1700348E RID: 13454
-		// (get) Token: 0x0600CE94 RID: 52884 RVA: 0x00307BB4 File Offset: 0x00305DB4
+		// Token: 0x1700359B RID: 13723
+		// (get) Token: 0x0600D667 RID: 54887 RVA: 0x00327224 File Offset: 0x00325424
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CE95 RID: 52885 RVA: 0x00307BC1 File Offset: 0x00305DC1
+		// Token: 0x0600D668 RID: 54888 RVA: 0x00327231 File Offset: 0x00325431
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600CE96 RID: 52886 RVA: 0x00307BC8 File Offset: 0x00305DC8
+		// Token: 0x0600D669 RID: 54889 RVA: 0x00327238 File Offset: 0x00325438
 		public static RoverRogueRefresh GetRootAsRoverRogueRefresh(ByteBuffer _bb)
 		{
 			return RoverRogueRefresh.GetRootAsRoverRogueRefresh(_bb, default(RoverRogueRefresh));
 		}
 
-		// Token: 0x0600CE97 RID: 52887 RVA: 0x00307BE4 File Offset: 0x00305DE4
+		// Token: 0x0600D66A RID: 54890 RVA: 0x00327254 File Offset: 0x00325454
 		public static RoverRogueRefresh GetRootAsRoverRogueRefresh(ByteBuffer _bb, RoverRogueRefresh obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600CE98 RID: 52888 RVA: 0x00307C01 File Offset: 0x00305E01
+		// Token: 0x0600D66B RID: 54891 RVA: 0x00327271 File Offset: 0x00325471
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600CE99 RID: 52889 RVA: 0x00307C10 File Offset: 0x00305E10
+		// Token: 0x0600D66C RID: 54892 RVA: 0x00327280 File Offset: 0x00325480
 		public RoverRogueRefresh __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700348F RID: 13455
-		// (get) Token: 0x0600CE9A RID: 52890 RVA: 0x00307C20 File Offset: 0x00305E20
+		// Token: 0x1700359C RID: 13724
+		// (get) Token: 0x0600D66D RID: 54893 RVA: 0x00327290 File Offset: 0x00325490
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003490 RID: 13456
-		// (get) Token: 0x0600CE9B RID: 52891 RVA: 0x00307C5C File Offset: 0x00305E5C
+		// Token: 0x1700359D RID: 13725
+		// (get) Token: 0x0600D66E RID: 54894 RVA: 0x003272CC File Offset: 0x003254CC
 		public int Cost
 		{
 			get
@@ -81,7 +81,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CE9C RID: 52892 RVA: 0x00307C98 File Offset: 0x00305E98
+		// Token: 0x0600D66F RID: 54895 RVA: 0x00327308 File Offset: 0x00325508
 		public DicIntInt? CostGrow(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -92,8 +92,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003491 RID: 13457
-		// (get) Token: 0x0600CE9D RID: 52893 RVA: 0x00307CF8 File Offset: 0x00305EF8
+		// Token: 0x1700359E RID: 13726
+		// (get) Token: 0x0600D670 RID: 54896 RVA: 0x00327368 File Offset: 0x00325568
 		public int CostGrowLength
 		{
 			get
@@ -107,24 +107,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CE9E RID: 52894 RVA: 0x00307D24 File Offset: 0x00305F24
+		// Token: 0x0600D671 RID: 54897 RVA: 0x00327394 File Offset: 0x00325594
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用CostGrowFrozenDict()缓存字典，遍历请使用CostGrowIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> CostGrow()
+		public Dictionary<int, int> CostGrow()
 		{
 			return this.CostGrowIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600CE9F RID: 52895 RVA: 0x00307D7A File Offset: 0x00305F7A
+		// Token: 0x0600D672 RID: 54898 RVA: 0x003273EA File Offset: 0x003255EA
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> CostGrowIter()
+		public IEnumerable<DicIntInt> CostGrowIter()
 		{
 			RoverRogueRefresh.<CostGrowIter>d__16 <CostGrowIter>d__ = new RoverRogueRefresh.<CostGrowIter>d__16(-2);
 			<CostGrowIter>d__.<>3__<>4__this = this;
 			return <CostGrowIter>d__;
 		}
 
-		// Token: 0x0600CEA0 RID: 52896 RVA: 0x00307D90 File Offset: 0x00305F90
+		// Token: 0x0600D673 RID: 54899 RVA: 0x00327400 File Offset: 0x00325600
 		public int? GetCostGrow(int key)
 		{
 			this.EnsureCostGrowCacheIfNeeded();
@@ -136,7 +135,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600CEA1 RID: 52897 RVA: 0x00307DC4 File Offset: 0x00305FC4
+		// Token: 0x0600D674 RID: 54900 RVA: 0x00327434 File Offset: 0x00325634
 		private void EnsureCostGrowCacheIfNeeded()
 		{
 			if (this.CostGrowCache != null)
@@ -146,18 +145,18 @@ namespace Aki.Config
 			this.CostGrowCache = this.CostGrowIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600CEA2 RID: 52898 RVA: 0x00307E2A File Offset: 0x0030602A
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetCostGrowFrozenDict(int key)
+		// Token: 0x0600D675 RID: 54901 RVA: 0x0032749A File Offset: 0x0032569A
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetCostGrowFrozenDict()
 		{
 			this.EnsureCostGrowCacheIfNeeded();
 			return this.CostGrowCache;
 		}
 
-		// Token: 0x0400518B RID: 20875
+		// Token: 0x0400578A RID: 22410
 		private Table __p;
 
-		// Token: 0x0400518C RID: 20876
+		// Token: 0x0400578B RID: 22411
 		[Nullable(2)]
 		private FrozenDictionary<int, int> CostGrowCache;
 	}

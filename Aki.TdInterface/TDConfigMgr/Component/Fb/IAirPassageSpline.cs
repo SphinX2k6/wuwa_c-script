@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C51 RID: 3153
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D2A RID: 3370
 	public class IAirPassageSpline : ISplineType
 	{
-		// Token: 0x06004832 RID: 18482 RVA: 0x000B58B1 File Offset: 0x000B3AB1
+		// Token: 0x06004CB7 RID: 19639 RVA: 0x000BFEA5 File Offset: 0x000BE0A5
 		public static IAirPassageSpline Create(IAirPassageSpline? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700154D RID: 5453
-		// (get) Token: 0x06004833 RID: 18483 RVA: 0x000B58D0 File Offset: 0x000B3AD0
+		// Token: 0x1700165E RID: 5726
+		// (get) Token: 0x06004CB8 RID: 19640 RVA: 0x000BFEC4 File Offset: 0x000BE0C4
 		public override ESplineType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700154E RID: 5454
-		// (get) Token: 0x06004834 RID: 18484 RVA: 0x000B58DD File Offset: 0x000B3ADD
+		// Token: 0x1700165F RID: 5727
+		// (get) Token: 0x06004CB9 RID: 19641 RVA: 0x000BFED1 File Offset: 0x000BE0D1
 		public virtual string MiddleLineEffect
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700154F RID: 5455
-		// (get) Token: 0x06004835 RID: 18485 RVA: 0x000B58EA File Offset: 0x000B3AEA
+		// Token: 0x17001660 RID: 5728
+		// (get) Token: 0x06004CBA RID: 19642 RVA: 0x000BFEDE File Offset: 0x000BE0DE
 		public virtual string TailCircleEffect
 		{
 			get
@@ -53,8 +50,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001550 RID: 5456
-		// (get) Token: 0x06004836 RID: 18486 RVA: 0x000B58F7 File Offset: 0x000B3AF7
+		// Token: 0x17001661 RID: 5729
+		// (get) Token: 0x06004CBB RID: 19643 RVA: 0x000BFEEB File Offset: 0x000BE0EB
 		public virtual string MiddleCircleEffect
 		{
 			get
@@ -63,8 +60,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001551 RID: 5457
-		// (get) Token: 0x06004837 RID: 18487 RVA: 0x000B5904 File Offset: 0x000B3B04
+		// Token: 0x17001662 RID: 5730
+		// (get) Token: 0x06004CBC RID: 19644 RVA: 0x000BFEF8 File Offset: 0x000BE0F8
 		public virtual string MiddleCircleOverlyingEffect
 		{
 			get
@@ -73,8 +70,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001552 RID: 5458
-		// (get) Token: 0x06004838 RID: 18488 RVA: 0x000B5911 File Offset: 0x000B3B11
+		// Token: 0x17001663 RID: 5731
+		// (get) Token: 0x06004CBD RID: 19645 RVA: 0x000BFF05 File Offset: 0x000BE105
 		public virtual float MiddleCircleSpace
 		{
 			get
@@ -83,8 +80,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001553 RID: 5459
-		// (get) Token: 0x06004839 RID: 18489 RVA: 0x000B591E File Offset: 0x000B3B1E
+		// Token: 0x17001664 RID: 5732
+		// (get) Token: 0x06004CBE RID: 19646 RVA: 0x000BFF12 File Offset: 0x000BE112
 		public virtual float MiddleCircleRadius
 		{
 			get
@@ -93,8 +90,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001554 RID: 5460
-		// (get) Token: 0x0600483A RID: 18490 RVA: 0x000B592B File Offset: 0x000B3B2B
+		// Token: 0x17001665 RID: 5733
+		// (get) Token: 0x06004CBF RID: 19647 RVA: 0x000BFF1F File Offset: 0x000BE11F
 		public virtual float MovableRadius
 		{
 			get
@@ -103,8 +100,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001555 RID: 5461
-		// (get) Token: 0x0600483B RID: 18491 RVA: 0x000B5938 File Offset: 0x000B3B38
+		// Token: 0x17001666 RID: 5734
+		// (get) Token: 0x06004CC0 RID: 19648 RVA: 0x000BFF2C File Offset: 0x000BE12C
 		public virtual float Resistance
 		{
 			get
@@ -113,8 +110,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001556 RID: 5462
-		// (get) Token: 0x0600483C RID: 18492 RVA: 0x000B5945 File Offset: 0x000B3B45
+		// Token: 0x17001667 RID: 5735
+		// (get) Token: 0x06004CC1 RID: 19649 RVA: 0x000BFF39 File Offset: 0x000BE139
 		public virtual float SpeedLimit
 		{
 			get
@@ -123,8 +120,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001557 RID: 5463
-		// (get) Token: 0x0600483D RID: 18493 RVA: 0x000B5952 File Offset: 0x000B3B52
+		// Token: 0x17001668 RID: 5736
+		// (get) Token: 0x06004CC2 RID: 19650 RVA: 0x000BFF46 File Offset: 0x000BE146
 		public virtual float SprintSpeedLimit
 		{
 			get
@@ -133,8 +130,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001558 RID: 5464
-		// (get) Token: 0x0600483E RID: 18494 RVA: 0x000B5960 File Offset: 0x000B3B60
+		// Token: 0x17001669 RID: 5737
+		// (get) Token: 0x06004CC3 RID: 19651 RVA: 0x000BFF54 File Offset: 0x000BE154
 		public virtual List<ICommonSplinePoint> Points
 		{
 			get
@@ -154,13 +151,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400291E RID: 10526
+		// Token: 0x04002B7F RID: 11135
 		private IAirPassageSpline Instance;
 
-		// Token: 0x0400291F RID: 10527
+		// Token: 0x04002B80 RID: 11136
 		private List<ICommonSplinePoint> _PointsCache;
 
-		// Token: 0x04002920 RID: 10528
+		// Token: 0x04002B81 RID: 11137
 		private bool _PointsInited;
 	}
 }

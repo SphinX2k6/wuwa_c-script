@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -9,12 +8,12 @@ using CSharpScript.Game.LevelGamePlay.Common;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02000E9B RID: 3739
+// Token: 0x02000350 RID: 848
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleArrowGenerate
 {
-	// Token: 0x06005BBB RID: 23483 RVA: 0x0010B980 File Offset: 0x00109B80
+	// Token: 0x06002F52 RID: 12114 RVA: 0x00113618 File Offset: 0x00111818
 	public void SetBornRotation(float pitch, float yaw, float roll)
 	{
 		this.BornRotation.Set(pitch, yaw, roll);
@@ -22,14 +21,14 @@ public class MotorcycleArrowGenerate
 		this.BornRotation.Quaternion(null).RotateVector(global::Vector.RightVectorProxy, this.RightDirection);
 	}
 
-	// Token: 0x06005BBC RID: 23484 RVA: 0x0010B9D3 File Offset: 0x00109BD3
+	// Token: 0x06002F53 RID: 12115 RVA: 0x0011366B File Offset: 0x0011186B
 	public int GetSpawnUid()
 	{
 		this.Uid += 2;
 		return this.Uid;
 	}
 
-	// Token: 0x06005BBD RID: 23485 RVA: 0x0010B9EC File Offset: 0x00109BEC
+	// Token: 0x06002F54 RID: 12116 RVA: 0x00113684 File Offset: 0x00111884
 	public void Clear()
 	{
 		this.GenerateGroupList.Clear();
@@ -53,19 +52,19 @@ public class MotorcycleArrowGenerate
 		this.StopGenerate();
 	}
 
-	// Token: 0x06005BBE RID: 23486 RVA: 0x0010BA7F File Offset: 0x00109C7F
+	// Token: 0x06002F55 RID: 12117 RVA: 0x00113717 File Offset: 0x00111917
 	public bool IsGenerateFinish()
 	{
 		return this.CurGenerateGroupIndex >= this.GenerateGroupList.Count;
 	}
 
-	// Token: 0x06005BBF RID: 23487 RVA: 0x0010BA97 File Offset: 0x00109C97
+	// Token: 0x06002F56 RID: 12118 RVA: 0x0011372F File Offset: 0x0011192F
 	public bool IsFinish()
 	{
 		return this.IsGenerateFinish() && this.EntityMap.Count == 0;
 	}
 
-	// Token: 0x06005BC0 RID: 23488 RVA: 0x0010BAB1 File Offset: 0x00109CB1
+	// Token: 0x06002F57 RID: 12119 RVA: 0x00113749 File Offset: 0x00111949
 	[NullableContext(2)]
 	public GenerateGroup GetLastGenerateGroup()
 	{
@@ -76,7 +75,7 @@ public class MotorcycleArrowGenerate
 		return this.GenerateGroupList[this.GenerateGroupList.Count - 1];
 	}
 
-	// Token: 0x06005BC1 RID: 23489 RVA: 0x0010BADC File Offset: 0x00109CDC
+	// Token: 0x06002F58 RID: 12120 RVA: 0x00113774 File Offset: 0x00111974
 	public float? GetStartDistance()
 	{
 		if (this.GenerateGroupList.Count <= 0)
@@ -86,7 +85,7 @@ public class MotorcycleArrowGenerate
 		return new float?(this.GenerateGroupList[0].GroupStartDistance);
 	}
 
-	// Token: 0x06005BC2 RID: 23490 RVA: 0x0010BB18 File Offset: 0x00109D18
+	// Token: 0x06002F59 RID: 12121 RVA: 0x001137B0 File Offset: 0x001119B0
 	public GenerateGroup CreateGenerateGroup()
 	{
 		GenerateGroup generateGroup = new GenerateGroup();
@@ -94,8 +93,8 @@ public class MotorcycleArrowGenerate
 		return generateGroup;
 	}
 
-	// Token: 0x170006C2 RID: 1730
-	// (get) Token: 0x06005BC3 RID: 23491 RVA: 0x0010BB38 File Offset: 0x00109D38
+	// Token: 0x170006E6 RID: 1766
+	// (get) Token: 0x06002F5A RID: 12122 RVA: 0x001137D0 File Offset: 0x001119D0
 	public MotorcycleArrowSubController SubController
 	{
 		get
@@ -104,8 +103,8 @@ public class MotorcycleArrowGenerate
 		}
 	}
 
-	// Token: 0x170006C3 RID: 1731
-	// (get) Token: 0x06005BC4 RID: 23492 RVA: 0x0010BB49 File Offset: 0x00109D49
+	// Token: 0x170006E7 RID: 1767
+	// (get) Token: 0x06002F5B RID: 12123 RVA: 0x001137E1 File Offset: 0x001119E1
 	public MotorcycleArrowSubModel SubModel
 	{
 		get
@@ -114,7 +113,7 @@ public class MotorcycleArrowGenerate
 		}
 	}
 
-	// Token: 0x06005BC5 RID: 23493 RVA: 0x0010BB58 File Offset: 0x00109D58
+	// Token: 0x06002F5C RID: 12124 RVA: 0x001137F0 File Offset: 0x001119F0
 	private void UpdateNextGenerateDistance(UKSC_SceneMovement sceneMovement)
 	{
 		GenerateGroup generateGroup = this.GenerateGroupList[this.CurGenerateGroupIndex];
@@ -122,7 +121,7 @@ public class MotorcycleArrowGenerate
 		sceneMovement.MoveDistanceThreshold = moveDistanceThreshold;
 	}
 
-	// Token: 0x06005BC6 RID: 23494 RVA: 0x0010BB9C File Offset: 0x00109D9C
+	// Token: 0x06002F5D RID: 12125 RVA: 0x00113834 File Offset: 0x00111A34
 	public void StartGenerate()
 	{
 		if (this.IsStartGenerate || this.IsGenerateFinish())
@@ -142,7 +141,7 @@ public class MotorcycleArrowGenerate
 		this.NotifyFightRefreshNextWaveGroup();
 	}
 
-	// Token: 0x06005BC7 RID: 23495 RVA: 0x0010BC20 File Offset: 0x00109E20
+	// Token: 0x06002F5E RID: 12126 RVA: 0x001138B8 File Offset: 0x00111AB8
 	public void StopGenerate()
 	{
 		if (!this.IsStartGenerate)
@@ -163,7 +162,7 @@ public class MotorcycleArrowGenerate
 		sceneMovement.OnSceneMoveThreshold.Unbind();
 	}
 
-	// Token: 0x06005BC8 RID: 23496 RVA: 0x0010BC58 File Offset: 0x00109E58
+	// Token: 0x06002F5F RID: 12127 RVA: 0x001138F0 File Offset: 0x00111AF0
 	public void OnSceneMoveThreshold()
 	{
 		UKSC_SceneMovement sceneMovement = KscEnv.Instance.KscWorld.SceneMovement;
@@ -177,7 +176,7 @@ public class MotorcycleArrowGenerate
 		this.UpdateNextGenerateDistance(sceneMovement);
 	}
 
-	// Token: 0x06005BC9 RID: 23497 RVA: 0x0010BC9C File Offset: 0x00109E9C
+	// Token: 0x06002F60 RID: 12128 RVA: 0x00113934 File Offset: 0x00111B34
 	public void GenerateByDistance(float distance)
 	{
 		if (this.IsGenerateFinish())
@@ -242,7 +241,7 @@ public class MotorcycleArrowGenerate
 		}
 	}
 
-	// Token: 0x06005BCA RID: 23498 RVA: 0x0010BF08 File Offset: 0x0010A108
+	// Token: 0x06002F61 RID: 12129 RVA: 0x00113BA0 File Offset: 0x00111DA0
 	public unsafe int SpawnMonster(IGenerate curGenerate, FTransformDouble transform, GenerateGroup curGroup, bool isElite = false)
 	{
 		int spawnUid = this.GetSpawnUid();
@@ -288,7 +287,7 @@ public class MotorcycleArrowGenerate
 		return spawnUid;
 	}
 
-	// Token: 0x06005BCB RID: 23499 RVA: 0x0010C078 File Offset: 0x0010A278
+	// Token: 0x06002F62 RID: 12130 RVA: 0x00113D10 File Offset: 0x00111F10
 	public bool SpawnMonsterByMonsterId(int creatureId, int monsterId, FTransformDouble transform, GenerateGroup curGroup)
 	{
 		MotorMonster? monsterConfigById = MotorcycleArrowConfig.Instance.GetMonsterConfigById(monsterId);
@@ -334,7 +333,7 @@ public class MotorcycleArrowGenerate
 		return true;
 	}
 
-	// Token: 0x06005BCC RID: 23500 RVA: 0x0010C1D8 File Offset: 0x0010A3D8
+	// Token: 0x06002F63 RID: 12131 RVA: 0x00113E70 File Offset: 0x00112070
 	public int SpawnMonsterBoss(IGenerate curGenerate, FTransformDouble transform, GenerateGroup curGroup)
 	{
 		int spawnUid = this.GetSpawnUid();
@@ -420,7 +419,7 @@ public class MotorcycleArrowGenerate
 		return spawnUid;
 	}
 
-	// Token: 0x06005BCD RID: 23501 RVA: 0x0010C428 File Offset: 0x0010A628
+	// Token: 0x06002F64 RID: 12132 RVA: 0x001140C0 File Offset: 0x001122C0
 	public int SpawnBuffGate(int buffGateRefreshId, FTransformDouble transform, int? waveGroupId = null)
 	{
 		MotorcycleArrowGenerate.<>c__DisplayClass39_0 CS$<>8__locals1 = new MotorcycleArrowGenerate.<>c__DisplayClass39_0();
@@ -507,7 +506,7 @@ public class MotorcycleArrowGenerate
 		if (value.AffectedByRate != 0 && waveGroupId != null)
 		{
 			MotorFightWaveGroup? motorFightWaveGroupById = MotorcycleArrowConfig.Instance.GetMotorFightWaveGroupById(waveGroupId.Value);
-			List<string> item = this.MultiplyStringValues(value.DescArgs().ToList<string>(), (motorFightWaveGroupById != null) ? motorFightWaveGroupById.GetValueOrDefault().Amplify : 0);
+			List<string> item = this.MultiplyStringValues(new List<string>(value.DescArgs()), (motorFightWaveGroupById != null) ? motorFightWaveGroupById.GetValueOrDefault().Amplify : 0);
 			this.BuffGateDescInfoMap[(long)spawnUid] = new BuffGateDesc
 			{
 				Desc = new ValueTuple<string, List<string>>(value.Desc, item),
@@ -519,7 +518,7 @@ public class MotorcycleArrowGenerate
 		{
 			this.BuffGateDescInfoMap[(long)spawnUid] = new BuffGateDesc
 			{
-				Desc = new ValueTuple<string, List<string>>(value.Desc, value.DescArgs().ToList<string>()),
+				Desc = new ValueTuple<string, List<string>>(value.Desc, new List<string>(value.DescArgs())),
 				BuffGateId = value.Id,
 				IsDropBuffGate = (waveGroupId == null)
 			};
@@ -527,7 +526,7 @@ public class MotorcycleArrowGenerate
 		return spawnUid;
 	}
 
-	// Token: 0x06005BCE RID: 23502 RVA: 0x0010C710 File Offset: 0x0010A910
+	// Token: 0x06002F65 RID: 12133 RVA: 0x001143A8 File Offset: 0x001125A8
 	public void SendBossBornNotify(IGenerate curGenerate)
 	{
 		if (curGenerate.GenerateType == EGenerateType.Boss || curGenerate.GenerateType == EGenerateType.Elite)
@@ -540,7 +539,7 @@ public class MotorcycleArrowGenerate
 		}
 	}
 
-	// Token: 0x06005BCF RID: 23503 RVA: 0x0010C774 File Offset: 0x0010A974
+	// Token: 0x06002F66 RID: 12134 RVA: 0x0011440C File Offset: 0x0011260C
 	public List<string> MultiplyStringValues(List<string> strings, int multiplier)
 	{
 		float num = (float)multiplier * 0.0001f;
@@ -571,7 +570,7 @@ public class MotorcycleArrowGenerate
 		return list;
 	}
 
-	// Token: 0x06005BD0 RID: 23504 RVA: 0x0010C850 File Offset: 0x0010AA50
+	// Token: 0x06002F67 RID: 12135 RVA: 0x001144E8 File Offset: 0x001126E8
 	public unsafe void NotifyFightRefreshNextWaveGroup()
 	{
 		if (this.IsGenerateFinish())
@@ -601,7 +600,7 @@ public class MotorcycleArrowGenerate
 		}, 0);
 	}
 
-	// Token: 0x06005BD1 RID: 23505 RVA: 0x0010C8AC File Offset: 0x0010AAAC
+	// Token: 0x06002F68 RID: 12136 RVA: 0x00114544 File Offset: 0x00112744
 	public void OnEntityRemove(long creatureId, FName reasonName, global::Vector location)
 	{
 		this.OnBuffDropGateRemove(creatureId);
@@ -654,7 +653,7 @@ public class MotorcycleArrowGenerate
 		}
 	}
 
-	// Token: 0x06005BD2 RID: 23506 RVA: 0x0010CA40 File Offset: 0x0010AC40
+	// Token: 0x06002F69 RID: 12137 RVA: 0x001146D8 File Offset: 0x001128D8
 	public void RequestMotorFightKill(GenerateGroup group, int refreshId, bool isBoss, bool isKill, global::Vector location)
 	{
 		MotorFightKillRequest motorFightKillRequest = MotorFightKillRequest.Create();
@@ -688,7 +687,7 @@ public class MotorcycleArrowGenerate
 		}, 0);
 	}
 
-	// Token: 0x06005BD3 RID: 23507 RVA: 0x0010CAFC File Offset: 0x0010ACFC
+	// Token: 0x06002F6A RID: 12138 RVA: 0x00114794 File Offset: 0x00112994
 	public unsafe void AddBuffByBuffGate(IBuffGateDesc descInfo, int waveGroupIndex, int buffGateId, FName reasonName, int subLevelIndex, int buffGateBornGroup = 0)
 	{
 		if (reasonName != KscEntityRemoveReason.Dead)
@@ -762,7 +761,7 @@ public class MotorcycleArrowGenerate
 		}, 0);
 	}
 
-	// Token: 0x06005BD4 RID: 23508 RVA: 0x0010CC51 File Offset: 0x0010AE51
+	// Token: 0x06002F6B RID: 12139 RVA: 0x001148E9 File Offset: 0x00112AE9
 	public void UpdateCurrentGroupWaveIndex(GenerateGroup group)
 	{
 		if (!group.IsFinish())
@@ -777,7 +776,7 @@ public class MotorcycleArrowGenerate
 		this.SubController.EffectManager.OnEnterNextWaveGroup();
 	}
 
-	// Token: 0x06005BD5 RID: 23509 RVA: 0x0010CC90 File Offset: 0x0010AE90
+	// Token: 0x06002F6C RID: 12140 RVA: 0x00114928 File Offset: 0x00112B28
 	public void OnSceneMoveEnd()
 	{
 		UKSC_World kscWorld = KscEnv.Instance.KscWorld;
@@ -803,13 +802,13 @@ public class MotorcycleArrowGenerate
 		this.SubController.EnterNextSubLevel();
 	}
 
-	// Token: 0x06005BD6 RID: 23510 RVA: 0x0010CD12 File Offset: 0x0010AF12
+	// Token: 0x06002F6D RID: 12141 RVA: 0x001149AA File Offset: 0x00112BAA
 	public int GenerateUniqueId(int subLevelIndex, int waveGroupIndex, int monsterId)
 	{
 		return monsterId * 1000000 + subLevelIndex * 1000 + waveGroupIndex;
 	}
 
-	// Token: 0x06005BD7 RID: 23511 RVA: 0x0010CD28 File Offset: 0x0010AF28
+	// Token: 0x06002F6E RID: 12142 RVA: 0x001149C0 File Offset: 0x00112BC0
 	public void CreateBuffDropGate(int subLevelIndex, int waveGroupIndex, int monsterId, int buffGateIdRefreshId)
 	{
 		int num = this.GenerateUniqueId(subLevelIndex, waveGroupIndex, monsterId);
@@ -856,7 +855,7 @@ public class MotorcycleArrowGenerate
 		};
 	}
 
-	// Token: 0x06005BD8 RID: 23512 RVA: 0x0010CECC File Offset: 0x0010B0CC
+	// Token: 0x06002F6F RID: 12143 RVA: 0x00114B64 File Offset: 0x00112D64
 	public void OnBuffDropGateRemove(long creatureId)
 	{
 		IDropData dropData;
@@ -868,7 +867,7 @@ public class MotorcycleArrowGenerate
 		this.DropBuffGateMap.Remove(creatureId);
 	}
 
-	// Token: 0x06005BD9 RID: 23513 RVA: 0x0010CF21 File Offset: 0x0010B121
+	// Token: 0x06002F70 RID: 12144 RVA: 0x00114BB9 File Offset: 0x00112DB9
 	[NullableContext(2)]
 	public GenerateGroup GetCurGenerateGroup()
 	{
@@ -879,69 +878,69 @@ public class MotorcycleArrowGenerate
 		return this.GenerateGroupList[this.CurGenerateGroupIndex];
 	}
 
-	// Token: 0x040029D8 RID: 10712
+	// Token: 0x04002A73 RID: 10867
 	private const float DIVIDED_TEN_THOUSAND = 0.0001f;
 
-	// Token: 0x040029D9 RID: 10713
+	// Token: 0x04002A74 RID: 10868
 	public List<GenerateGroup> GenerateGroupList = new List<GenerateGroup>();
 
-	// Token: 0x040029DA RID: 10714
+	// Token: 0x04002A75 RID: 10869
 	public int CurGenerateGroupIndex;
 
-	// Token: 0x040029DB RID: 10715
+	// Token: 0x04002A76 RID: 10870
 	public global::Vector BornPos = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x040029DC RID: 10716
+	// Token: 0x04002A77 RID: 10871
 	public global::Rotator BornRotation = global::Rotator.Create(0f, 0f, 0f);
 
-	// Token: 0x040029DD RID: 10717
+	// Token: 0x04002A78 RID: 10872
 	public global::Vector RightDirection = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x040029DE RID: 10718
+	// Token: 0x04002A79 RID: 10873
 	public global::Vector ForwardDirection = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x040029DF RID: 10719
+	// Token: 0x04002A7A RID: 10874
 	public Dictionary<long, GenerateGroup> EntityMap = new Dictionary<long, GenerateGroup>();
 
-	// Token: 0x040029E0 RID: 10720
+	// Token: 0x04002A7B RID: 10875
 	public bool IsStartGenerate;
 
-	// Token: 0x040029E1 RID: 10721
+	// Token: 0x04002A7C RID: 10876
 	public float EndDistance;
 
-	// Token: 0x040029E2 RID: 10722
+	// Token: 0x04002A7D RID: 10877
 	public Dictionary<int, global::Vector> EntityDeadLocationMap = new Dictionary<int, global::Vector>();
 
-	// Token: 0x040029E3 RID: 10723
+	// Token: 0x04002A7E RID: 10878
 	public Dictionary<long, IDropData> DropBuffGateMap = new Dictionary<long, IDropData>();
 
-	// Token: 0x040029E4 RID: 10724
+	// Token: 0x04002A7F RID: 10879
 	public readonly Dictionary<long, int> CreatureIdToSplineId = new Dictionary<long, int>();
 
-	// Token: 0x040029E5 RID: 10725
+	// Token: 0x04002A80 RID: 10880
 	public Dictionary<long, IBuffGateDesc> BuffGateDescInfoMap = new Dictionary<long, IBuffGateDesc>();
 
-	// Token: 0x040029E6 RID: 10726
+	// Token: 0x04002A81 RID: 10881
 	public HashSet<int> WaitCollectionSelect = new HashSet<int>();
 
-	// Token: 0x040029E7 RID: 10727
+	// Token: 0x04002A82 RID: 10882
 	public bool WaitToNextSubLevel;
 
-	// Token: 0x040029E8 RID: 10728
+	// Token: 0x04002A83 RID: 10883
 	public HashSet<int> BuffGateBornGroup = new HashSet<int>();
 
-	// Token: 0x040029E9 RID: 10729
+	// Token: 0x04002A84 RID: 10884
 	private int Uid = 1;
 
-	// Token: 0x0200750B RID: 29963
+	// Token: 0x0200669F RID: 26271
 	[NullableContext(0)]
 	private enum EBornTrack
 	{
-		// Token: 0x04026BD8 RID: 158680
+		// Token: 0x04021F23 RID: 139043
 		Left,
-		// Token: 0x04026BD9 RID: 158681
+		// Token: 0x04021F24 RID: 139044
 		Right,
-		// Token: 0x04026BDA RID: 158682
+		// Token: 0x04021F25 RID: 139045
 		Middle
 	}
 }

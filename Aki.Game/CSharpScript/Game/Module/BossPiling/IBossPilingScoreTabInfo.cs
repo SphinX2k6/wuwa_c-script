@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.BossPiling
 {
-	// Token: 0x02005BFF RID: 23551
+	// Token: 0x02004BDF RID: 19423
 	public interface IBossPilingScoreTabInfo
 	{
-		// Token: 0x17008D85 RID: 36229
-		// (get) Token: 0x0603B868 RID: 243816
-		// (set) Token: 0x0603B869 RID: 243817
+		// Token: 0x17006157 RID: 24919
+		// (get) Token: 0x060307B3 RID: 198579
+		// (set) Token: 0x060307B4 RID: 198580
 		int BossHp { get; set; }
 
-		// Token: 0x17008D86 RID: 36230
-		// (get) Token: 0x0603B86A RID: 243818
-		// (set) Token: 0x0603B86B RID: 243819
+		// Token: 0x17006158 RID: 24920
+		// (get) Token: 0x060307B5 RID: 198581
+		// (set) Token: 0x060307B6 RID: 198582
 		int Quality { get; set; }
 
-		// Token: 0x17008D87 RID: 36231
-		// (get) Token: 0x0603B86C RID: 243820
-		// (set) Token: 0x0603B86D RID: 243821
+		// Token: 0x17006159 RID: 24921
+		// (get) Token: 0x060307B7 RID: 198583
+		// (set) Token: 0x060307B8 RID: 198584
 		bool IsAchieve { get; set; }
 	}
 }

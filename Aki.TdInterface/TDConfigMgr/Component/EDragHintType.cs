@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000095 RID: 149
+	// Token: 0x0200009A RID: 154
 	[EnumExtensions]
 	public enum EDragHintType
 	{
-		// Token: 0x040003A3 RID: 931
+		// Token: 0x040003BC RID: 956
 		Horizontal,
-		// Token: 0x040003A4 RID: 932
+		// Token: 0x040003BD RID: 957
 		Vertical,
-		// Token: 0x040003A5 RID: 933
+		// Token: 0x040003BE RID: 958
 		FourWay
 	}
 }

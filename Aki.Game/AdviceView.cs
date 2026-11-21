@@ -8,17 +8,17 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016DD RID: 5853
+// Token: 0x02000B95 RID: 2965
 [NullableContext(1)]
 [Nullable(0)]
 public class AdviceView : UiViewBase
 {
-	// Token: 0x0600A7AF RID: 42927 RVA: 0x0025A485 File Offset: 0x00258685
+	// Token: 0x06007B8F RID: 31631 RVA: 0x0026488D File Offset: 0x00262A8D
 	public AdviceView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600A7B0 RID: 42928 RVA: 0x0025A490 File Offset: 0x00258690
+	// Token: 0x06007B90 RID: 31632 RVA: 0x00264898 File Offset: 0x00262A98
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,27 +30,27 @@ public class AdviceView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600A7B1 RID: 42929 RVA: 0x0025A500 File Offset: 0x00258700
+	// Token: 0x06007B91 RID: 31633 RVA: 0x00264908 File Offset: 0x00262B08
 	protected override void OnStart()
 	{
 		this.ScrollView = new GenericScrollView<AdviceItem>(base.GetScrollViewWithScrollbar(1), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<AdviceItem>(this.InitItem), null);
 	}
 
-	// Token: 0x0600A7B2 RID: 42930 RVA: 0x0025A521 File Offset: 0x00258721
+	// Token: 0x06007B92 RID: 31634 RVA: 0x00264929 File Offset: 0x00262B29
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnDeleteAdviceSuccess, new Action(this.RefreshScrollerView));
 		EventSystem.Instance.Add(EEventName.OnCreateAdviceSuccess, new Action(this.RefreshScrollerView));
 	}
 
-	// Token: 0x0600A7B3 RID: 42931 RVA: 0x0025A55B File Offset: 0x0025875B
+	// Token: 0x06007B93 RID: 31635 RVA: 0x00264963 File Offset: 0x00262B63
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnDeleteAdviceSuccess, new Action(this.RefreshScrollerView));
 		EventSystem.Instance.Remove(EEventName.OnCreateAdviceSuccess, new Action(this.RefreshScrollerView));
 	}
 
-	// Token: 0x0600A7B4 RID: 42932 RVA: 0x0025A595 File Offset: 0x00258795
+	// Token: 0x06007B94 RID: 31636 RVA: 0x0026499D File Offset: 0x00262B9D
 	private void RefreshScrollerView()
 	{
 		this.RefreshScorller();
@@ -58,7 +58,7 @@ public class AdviceView : UiViewBase
 		this.RefreshProgressText();
 	}
 
-	// Token: 0x0600A7B5 RID: 42933 RVA: 0x0025A5AC File Offset: 0x002587AC
+	// Token: 0x06007B95 RID: 31637 RVA: 0x002649B4 File Offset: 0x00262BB4
 	private ILayoutItem<AdviceItem> InitItem(object data, UUIItem uiItem, int index)
 	{
 		AdviceItem adviceItem = new AdviceItem(uiItem);
@@ -70,7 +70,7 @@ public class AdviceView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600A7B6 RID: 42934 RVA: 0x0025A5E4 File Offset: 0x002587E4
+	// Token: 0x06007B96 RID: 31638 RVA: 0x002649EC File Offset: 0x00262BEC
 	protected override void OnAfterShow()
 	{
 		this.RefreshScorller();
@@ -78,7 +78,7 @@ public class AdviceView : UiViewBase
 		this.RefreshProgressText();
 	}
 
-	// Token: 0x0600A7B7 RID: 42935 RVA: 0x0025A5F8 File Offset: 0x002587F8
+	// Token: 0x06007B97 RID: 31639 RVA: 0x00264A00 File Offset: 0x00262C00
 	private void RefreshScorller()
 	{
 		AdviceData[] adviceArray = AdviceModel.Instance.GetAdviceArray();
@@ -99,7 +99,7 @@ public class AdviceView : UiViewBase
 		this.ScrollView.BindLateUpdate(new Action<float>(this.LateUpdate));
 	}
 
-	// Token: 0x0600A7B8 RID: 42936 RVA: 0x0025A690 File Offset: 0x00258890
+	// Token: 0x06007B98 RID: 31640 RVA: 0x00264A98 File Offset: 0x00262C98
 	private void RefreshProgressText()
 	{
 		AdviceData[] adviceArray = AdviceModel.Instance.GetAdviceArray();
@@ -111,7 +111,7 @@ public class AdviceView : UiViewBase
 		}));
 	}
 
-	// Token: 0x0600A7B9 RID: 42937 RVA: 0x0025A6F8 File Offset: 0x002588F8
+	// Token: 0x06007B99 RID: 31641 RVA: 0x00264B00 File Offset: 0x00262D00
 	private void LateUpdate(float deltaTime)
 	{
 		if (this.ScrollToDirty && this.WaitingLateUpdateFlag >= 1)
@@ -124,7 +124,7 @@ public class AdviceView : UiViewBase
 		this.WaitingLateUpdateFlag++;
 	}
 
-	// Token: 0x0600A7BA RID: 42938 RVA: 0x0025A758 File Offset: 0x00258958
+	// Token: 0x06007B9A RID: 31642 RVA: 0x00264B60 File Offset: 0x00262D60
 	private float GetProgress(AdviceData[] dataArray)
 	{
 		int num = 0;
@@ -149,7 +149,7 @@ public class AdviceView : UiViewBase
 		return 0f;
 	}
 
-	// Token: 0x0600A7BB RID: 42939 RVA: 0x0025A7D4 File Offset: 0x002589D4
+	// Token: 0x06007B9B RID: 31643 RVA: 0x00264BDC File Offset: 0x00262DDC
 	private void RefreshShowItem()
 	{
 		AdviceData[] adviceArray = AdviceModel.Instance.GetAdviceArray();
@@ -172,7 +172,7 @@ public class AdviceView : UiViewBase
 		rootComponent.SetUIActive(!flag);
 	}
 
-	// Token: 0x0600A7BC RID: 42940 RVA: 0x0025A82A File Offset: 0x00258A2A
+	// Token: 0x06007B9C RID: 31644 RVA: 0x00264C32 File Offset: 0x00262E32
 	protected override void OnBeforeDestroy()
 	{
 		GenericScrollView<AdviceItem> scrollView = this.ScrollView;
@@ -183,10 +183,10 @@ public class AdviceView : UiViewBase
 		scrollView.ClearChildren();
 	}
 
-	// Token: 0x04004B98 RID: 19352
+	// Token: 0x04004C3F RID: 19519
 	private const int WAITUPDATECOUNT = 1;
 
-	// Token: 0x04004B99 RID: 19353
+	// Token: 0x04004C40 RID: 19520
 	[Nullable(new byte[]
 	{
 		2,
@@ -194,7 +194,7 @@ public class AdviceView : UiViewBase
 	})]
 	private GenericScrollView<AdviceItem> ScrollView;
 
-	// Token: 0x04004B9A RID: 19354
+	// Token: 0x04004C41 RID: 19521
 	[Nullable(new byte[]
 	{
 		2,
@@ -202,26 +202,26 @@ public class AdviceView : UiViewBase
 	})]
 	private List<AdviceData> AdviceDataArray;
 
-	// Token: 0x04004B9B RID: 19355
+	// Token: 0x04004C42 RID: 19522
 	private bool ScrollToDirty;
 
-	// Token: 0x04004B9C RID: 19356
+	// Token: 0x04004C43 RID: 19523
 	private int WaitingLateUpdateFlag;
 
-	// Token: 0x02007CB1 RID: 31921
+	// Token: 0x02006E36 RID: 28214
 	[NullableContext(0)]
 	private static class EComponents
 	{
-		// Token: 0x04028E6B RID: 167531
+		// Token: 0x04024194 RID: 147860
 		public const int ScorllerItem = 0;
 
-		// Token: 0x04028E6C RID: 167532
+		// Token: 0x04024195 RID: 147861
 		public const int Scroller = 1;
 
-		// Token: 0x04028E6D RID: 167533
+		// Token: 0x04024196 RID: 147862
 		public const int NullObject = 2;
 
-		// Token: 0x04028E6E RID: 167534
+		// Token: 0x04024197 RID: 147863
 		public const int ProgressText = 3;
 	}
 }

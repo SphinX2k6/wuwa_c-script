@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005E0 RID: 1504
+	// Token: 0x020005F8 RID: 1528
 	public class ConfigMusicSubTitleBySubtitleGroupTag : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600234F RID: 9039 RVA: 0x00121308 File Offset: 0x0011F508
+		// Token: 0x060023DF RID: 9183 RVA: 0x00127D84 File Offset: 0x00125F84
 		static ConfigMusicSubTitleBySubtitleGroupTag()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMusicSubTitleBySubtitleGroupTag.CreateStaticDefaultValue), new Action(ConfigMusicSubTitleBySubtitleGroupTag.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002350 RID: 9040 RVA: 0x00121328 File Offset: 0x0011F528
+		// Token: 0x060023E0 RID: 9184 RVA: 0x00127DA4 File Offset: 0x00125FA4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMusicSubTitleBySubtitleGroupTag.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002351 RID: 9041 RVA: 0x001213A7 File Offset: 0x0011F5A7
+		// Token: 0x060023E1 RID: 9185 RVA: 0x00127E23 File Offset: 0x00126023
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMusicSubTitleBySubtitleGroupTag.LogPair = null;
 			ConfigMusicSubTitleBySubtitleGroupTag.HandleId = 0;
 		}
 
-		// Token: 0x06002352 RID: 9042 RVA: 0x001213B5 File Offset: 0x0011F5B5
+		// Token: 0x060023E2 RID: 9186 RVA: 0x00127E31 File Offset: 0x00126031
 		public static void Init()
 		{
 			ConfigMusicSubTitleBySubtitleGroupTag.HandleId = ConfigCommon.InitDataStatement(ConfigMusicSubTitleBySubtitleGroupTag.HandleId, "db_musicsubtitle.db", "select BinData from `MusicSubTitle` where SubtitleGroupTag=?");
 		}
 
-		// Token: 0x06002353 RID: 9043 RVA: 0x001213D0 File Offset: 0x0011F5D0
+		// Token: 0x060023E3 RID: 9187 RVA: 0x00127E4C File Offset: 0x0012604C
 		[return: Nullable(2)]
 		public static IReadOnlyList<MusicSubTitle> GetConfigList(string p0SubtitleGroupTag, bool useCache = true)
 		{
@@ -86,22 +86,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002906 RID: 10502
+		// Token: 0x040029AE RID: 10670
 		private const string DB = "db_musicsubtitle.db";
 
-		// Token: 0x04002907 RID: 10503
+		// Token: 0x040029AF RID: 10671
 		private const string FILE = "k.可视化编辑/c.Csv/y.音乐字幕/*.csv*";
 
-		// Token: 0x04002908 RID: 10504
+		// Token: 0x040029B0 RID: 10672
 		private const string TABLE = "MusicSubTitle";
 
-		// Token: 0x04002909 RID: 10505
+		// Token: 0x040029B1 RID: 10673
 		private const string COMMAND = "select BinData from `MusicSubTitle` where SubtitleGroupTag=?";
 
-		// Token: 0x0400290A RID: 10506
+		// Token: 0x040029B2 RID: 10674
 		private const string KEY_PREFIX = "MusicSubTitleBySubtitleGroupTag";
 
-		// Token: 0x0400290B RID: 10507
+		// Token: 0x040029B3 RID: 10675
 		[Nullable(new byte[]
 		{
 			2,
@@ -111,7 +111,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400290C RID: 10508
+		// Token: 0x040029B4 RID: 10676
 		private static int HandleId;
 	}
 }

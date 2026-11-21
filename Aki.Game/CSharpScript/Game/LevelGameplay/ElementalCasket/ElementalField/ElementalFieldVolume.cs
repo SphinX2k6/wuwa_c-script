@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006E95 RID: 28309
+	// Token: 0x02006015 RID: 24597
 	public static class ElementalFieldVolume
 	{
-		// Token: 0x06044FDE RID: 282590 RVA: 0x0110D448 File Offset: 0x0110B648
+		// Token: 0x0603B17F RID: 242047 RVA: 0x010B7524 File Offset: 0x010B5724
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public static IElementalFieldVolume createElementalFieldVolumeFromSnapshot(ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType> snapshot)
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x06044FDF RID: 282591 RVA: 0x0110D508 File Offset: 0x0110B708
+		// Token: 0x0603B180 RID: 242048 RVA: 0x010B75E4 File Offset: 0x010B57E4
 		[NullableContext(2)]
 		public static IElementalFieldVolume createElementalFieldVolumeFromShapeComp(UKuroFastCollisionShapeComponent shape)
 		{

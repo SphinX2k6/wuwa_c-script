@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062A9 RID: 25257
+	// Token: 0x0200691A RID: 26906
 	public class ICameraTransitionT
 	{
-		// Token: 0x1700BC87 RID: 48263
-		// (get) Token: 0x0602BA41 RID: 178753 RVA: 0x00601D5A File Offset: 0x005FFF5A
-		// (set) Token: 0x0602BA42 RID: 178754 RVA: 0x00601D62 File Offset: 0x005FFF62
+		// Token: 0x1700C60F RID: 50703
+		// (get) Token: 0x0602E1A2 RID: 188834 RVA: 0x0064CB62 File Offset: 0x0064AD62
+		// (set) Token: 0x0602E1A3 RID: 188835 RVA: 0x0064CB6A File Offset: 0x0064AD6A
 		public ELevelSequenceTransition Type { get; set; }
 
-		// Token: 0x1700BC88 RID: 48264
-		// (get) Token: 0x0602BA43 RID: 178755 RVA: 0x00601D6B File Offset: 0x005FFF6B
-		// (set) Token: 0x0602BA44 RID: 178756 RVA: 0x00601D73 File Offset: 0x005FFF73
+		// Token: 0x1700C610 RID: 50704
+		// (get) Token: 0x0602E1A4 RID: 188836 RVA: 0x0064CB73 File Offset: 0x0064AD73
+		// (set) Token: 0x0602E1A5 RID: 188837 RVA: 0x0064CB7B File Offset: 0x0064AD7B
 		public float Duration { get; set; }
 
-		// Token: 0x1700BC89 RID: 48265
-		// (get) Token: 0x0602BA45 RID: 178757 RVA: 0x00601D7C File Offset: 0x005FFF7C
-		// (set) Token: 0x0602BA46 RID: 178758 RVA: 0x00601D84 File Offset: 0x005FFF84
+		// Token: 0x1700C611 RID: 50705
+		// (get) Token: 0x0602E1A6 RID: 188838 RVA: 0x0064CB84 File Offset: 0x0064AD84
+		// (set) Token: 0x0602E1A7 RID: 188839 RVA: 0x0064CB8C File Offset: 0x0064AD8C
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602BA47 RID: 178759 RVA: 0x00601D8D File Offset: 0x005FFF8D
+		// Token: 0x0602E1A8 RID: 188840 RVA: 0x0064CB95 File Offset: 0x0064AD95
 		public ICameraTransitionT()
 		{
 			this.Type = ELevelSequenceTransition.Camera;

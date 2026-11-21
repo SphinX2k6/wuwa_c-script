@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F2A RID: 16170
+	// Token: 0x02004368 RID: 17256
 	public class IMechaTrackScoreMechanismStateTypeT
 	{
-		// Token: 0x1700706E RID: 28782
-		// (get) Token: 0x06016F70 RID: 94064 RVA: 0x003503C5 File Offset: 0x0034E5C5
-		// (set) Token: 0x06016F71 RID: 94065 RVA: 0x003503CD File Offset: 0x0034E5CD
+		// Token: 0x1700765D RID: 30301
+		// (get) Token: 0x060185C8 RID: 99784 RVA: 0x003795ED File Offset: 0x003777ED
+		// (set) Token: 0x060185C9 RID: 99785 RVA: 0x003795F5 File Offset: 0x003777F5
 		public IStaticEntitiyMatchT EntitiyMatch { get; set; }
 
-		// Token: 0x1700706F RID: 28783
-		// (get) Token: 0x06016F72 RID: 94066 RVA: 0x003503D6 File Offset: 0x0034E5D6
-		// (set) Token: 0x06016F73 RID: 94067 RVA: 0x003503DE File Offset: 0x0034E5DE
+		// Token: 0x1700765E RID: 30302
+		// (get) Token: 0x060185CA RID: 99786 RVA: 0x003795FE File Offset: 0x003777FE
+		// (set) Token: 0x060185CB RID: 99787 RVA: 0x00379606 File Offset: 0x00377806
 		public string State { get; set; }
 
-		// Token: 0x17007070 RID: 28784
-		// (get) Token: 0x06016F74 RID: 94068 RVA: 0x003503E7 File Offset: 0x0034E5E7
-		// (set) Token: 0x06016F75 RID: 94069 RVA: 0x003503EF File Offset: 0x0034E5EF
+		// Token: 0x1700765F RID: 30303
+		// (get) Token: 0x060185CC RID: 99788 RVA: 0x0037960F File Offset: 0x0037780F
+		// (set) Token: 0x060185CD RID: 99789 RVA: 0x00379617 File Offset: 0x00377817
 		public int ScoreId { get; set; }
 
-		// Token: 0x06016F76 RID: 94070 RVA: 0x003503F8 File Offset: 0x0034E5F8
+		// Token: 0x060185CE RID: 99790 RVA: 0x00379620 File Offset: 0x00377820
 		public IMechaTrackScoreMechanismStateTypeT()
 		{
 			this.EntitiyMatch = null;

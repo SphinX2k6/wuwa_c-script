@@ -8,12 +8,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.AI.AIMoveSplineCount
 {
-	// Token: 0x0200443B RID: 17467
+	// Token: 0x02003402 RID: 13314
 	[UnrealObjectPath("/Game/Aki/AI/AIMoveSplineCount/MoveSplineAI.MoveSplineAI_C")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class MoveSplineAI_C : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602D37A RID: 185210 RVA: 0x00A36681 File Offset: 0x00A34881
+		// Token: 0x06021CBE RID: 138430 RVA: 0x0096B4C1 File Offset: 0x009696C1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (MoveSplineAI_C._ClassPtr == IntPtr.Zero)
@@ -23,21 +23,20 @@ namespace AkiClient.Game.Aki.AI.AIMoveSplineCount
 			return MoveSplineAI_C._ClassPtr;
 		}
 
-		// Token: 0x0602D37B RID: 185211 RVA: 0x00A366A8 File Offset: 0x00A348A8
+		// Token: 0x06021CBF RID: 138431 RVA: 0x0096B4E8 File Offset: 0x009696E8
 		public MoveSplineAI_C() : this(BuiltinUtils.AllocNativeUObject(MoveSplineAI_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602D37C RID: 185212 RVA: 0x00A366D0 File Offset: 0x00A348D0
+		// Token: 0x06021CC0 RID: 138432 RVA: 0x0096B510 File Offset: 0x00969710
 		[NullableContext(1)]
 		public MoveSplineAI_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(MoveSplineAI_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0602D37D RID: 185213 RVA: 0x00A36704 File Offset: 0x00A34904
+		// Token: 0x06021CC1 RID: 138433 RVA: 0x0096B544 File Offset: 0x00969744
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void DCS_Demo(float DeltaSeconds, TsBaseCharacter 跟随角色, USplineComponent 移动样条, float 当前样条位置, float 样条速度, int 飞行模式, float 操作上下偏移, float 操作左右偏移, float 转向速度, FVector 追踪坐标, UObject __WorldContext, ref float 样条位置, ref float 旋转速度累加值)
 		{
 			MoveSplineAI_C.StaticClass();
@@ -61,10 +60,9 @@ namespace AkiClient.Game.Aki.AI.AIMoveSplineCount
 			旋转速度累加值 = ptr->旋转速度累加值;
 		}
 
-		// Token: 0x0602D37E RID: 185214 RVA: 0x00A367F4 File Offset: 0x00A349F4
+		// Token: 0x06021CC2 RID: 138434 RVA: 0x0096B634 File Offset: 0x00969834
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void 元素球跟随(float DeltaSeconds, AActor 特效对象, TsBaseCharacter 跟随角色, UKuroMoveSplineComponent 移动样条, float 当前样条位置, float 样条速度, float 旋转速度, float 旋转速度累加, bool 王府开关, UObject __WorldContext, ref float 样条位置, ref float 旋转速度累加值, ref bool 上行下行)
 		{
 			MoveSplineAI_C.StaticClass();
@@ -89,139 +87,139 @@ namespace AkiClient.Game.Aki.AI.AIMoveSplineCount
 			上行下行 = ptr->上行下行;
 		}
 
-		// Token: 0x0602D37F RID: 185215 RVA: 0x00A368FA File Offset: 0x00A34AFA
+		// Token: 0x06021CC3 RID: 138435 RVA: 0x0096B73A File Offset: 0x0096993A
 		protected MoveSplineAI_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04018099 RID: 98457
+		// Token: 0x04012A28 RID: 76328
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/AI/AIMoveSplineCount/MoveSplineAI.MoveSplineAI_C";
 
-		// Token: 0x0401809A RID: 98458
+		// Token: 0x04012A29 RID: 76329
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401809B RID: 98459
+		// Token: 0x04012A2A RID: 76330
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401809C RID: 98460
+		// Token: 0x04012A2B RID: 76331
 		private static IntPtr __DCS_Demo_NativeFunctionPtr;
 
-		// Token: 0x0401809D RID: 98461
+		// Token: 0x04012A2C RID: 76332
 		private static IntPtr __元素球跟随_NativeFunctionPtr;
 
-		// Token: 0x0200A6EF RID: 42735
+		// Token: 0x020090E7 RID: 37095
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1192)]
 		protected ref struct __DCS_Demo_FunctionParams
 		{
-			// Token: 0x040326E3 RID: 206563
+			// Token: 0x0402CF97 RID: 184215
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 
-			// Token: 0x040326E4 RID: 206564
+			// Token: 0x0402CF98 RID: 184216
 			[FieldOffset(8)]
 			public IntPtr 跟随角色;
 
-			// Token: 0x040326E5 RID: 206565
+			// Token: 0x0402CF99 RID: 184217
 			[FieldOffset(16)]
 			public IntPtr 移动样条;
 
-			// Token: 0x040326E6 RID: 206566
+			// Token: 0x0402CF9A RID: 184218
 			[FieldOffset(24)]
 			public float 当前样条位置;
 
-			// Token: 0x040326E7 RID: 206567
+			// Token: 0x0402CF9B RID: 184219
 			[FieldOffset(28)]
 			public float 样条速度;
 
-			// Token: 0x040326E8 RID: 206568
+			// Token: 0x0402CF9C RID: 184220
 			[FieldOffset(32)]
 			public int 飞行模式;
 
-			// Token: 0x040326E9 RID: 206569
+			// Token: 0x0402CF9D RID: 184221
 			[FieldOffset(36)]
 			public float 操作上下偏移;
 
-			// Token: 0x040326EA RID: 206570
+			// Token: 0x0402CF9E RID: 184222
 			[FieldOffset(40)]
 			public float 操作左右偏移;
 
-			// Token: 0x040326EB RID: 206571
+			// Token: 0x0402CF9F RID: 184223
 			[FieldOffset(44)]
 			public float 转向速度;
 
-			// Token: 0x040326EC RID: 206572
+			// Token: 0x0402CFA0 RID: 184224
 			[FieldOffset(48)]
 			public FVector 追踪坐标;
 
-			// Token: 0x040326ED RID: 206573
+			// Token: 0x0402CFA1 RID: 184225
 			[FieldOffset(64)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x040326EE RID: 206574
+			// Token: 0x0402CFA2 RID: 184226
 			[FieldOffset(72)]
 			public float 样条位置;
 
-			// Token: 0x040326EF RID: 206575
+			// Token: 0x0402CFA3 RID: 184227
 			[FieldOffset(76)]
 			public float 旋转速度累加值;
 		}
 
-		// Token: 0x0200A6F0 RID: 42736
+		// Token: 0x020090E8 RID: 37096
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 944)]
 		protected ref struct __元素球跟随_FunctionParams
 		{
-			// Token: 0x040326F0 RID: 206576
+			// Token: 0x0402CFA4 RID: 184228
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 
-			// Token: 0x040326F1 RID: 206577
+			// Token: 0x0402CFA5 RID: 184229
 			[FieldOffset(8)]
 			public IntPtr 特效对象;
 
-			// Token: 0x040326F2 RID: 206578
+			// Token: 0x0402CFA6 RID: 184230
 			[FieldOffset(16)]
 			public IntPtr 跟随角色;
 
-			// Token: 0x040326F3 RID: 206579
+			// Token: 0x0402CFA7 RID: 184231
 			[FieldOffset(24)]
 			public IntPtr 移动样条;
 
-			// Token: 0x040326F4 RID: 206580
+			// Token: 0x0402CFA8 RID: 184232
 			[FieldOffset(32)]
 			public float 当前样条位置;
 
-			// Token: 0x040326F5 RID: 206581
+			// Token: 0x0402CFA9 RID: 184233
 			[FieldOffset(36)]
 			public float 样条速度;
 
-			// Token: 0x040326F6 RID: 206582
+			// Token: 0x0402CFAA RID: 184234
 			[FieldOffset(40)]
 			public float 旋转速度;
 
-			// Token: 0x040326F7 RID: 206583
+			// Token: 0x0402CFAB RID: 184235
 			[FieldOffset(44)]
 			public float 旋转速度累加;
 
-			// Token: 0x040326F8 RID: 206584
+			// Token: 0x0402CFAC RID: 184236
 			[FieldOffset(48)]
 			public bool 王府开关;
 
-			// Token: 0x040326F9 RID: 206585
+			// Token: 0x0402CFAD RID: 184237
 			[FieldOffset(56)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x040326FA RID: 206586
+			// Token: 0x0402CFAE RID: 184238
 			[FieldOffset(64)]
 			public float 样条位置;
 
-			// Token: 0x040326FB RID: 206587
+			// Token: 0x0402CFAF RID: 184239
 			[FieldOffset(68)]
 			public float 旋转速度累加值;
 
-			// Token: 0x040326FC RID: 206588
+			// Token: 0x0402CFB0 RID: 184240
 			[FieldOffset(72)]
 			public bool 上行下行;
 		}

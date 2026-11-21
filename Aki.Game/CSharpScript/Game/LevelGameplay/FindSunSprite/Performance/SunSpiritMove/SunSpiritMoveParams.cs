@@ -3,34 +3,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.SunSpiritMove
 {
-	// Token: 0x02006E57 RID: 28247
+	// Token: 0x02005FD8 RID: 24536
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SunSpiritMoveParams : ISunSpiritMoveParams
 	{
-		// Token: 0x17009A43 RID: 39491
-		// (get) Token: 0x06044D86 RID: 281990 RVA: 0x010FDD28 File Offset: 0x010FBF28
-		// (set) Token: 0x06044D87 RID: 281991 RVA: 0x010FDD30 File Offset: 0x010FBF30
+		// Token: 0x17006F58 RID: 28504
+		// (get) Token: 0x0603AF13 RID: 241427 RVA: 0x010A8288 File Offset: 0x010A6488
+		// (set) Token: 0x0603AF14 RID: 241428 RVA: 0x010A8290 File Offset: 0x010A6490
 		public EntityHandle MoveTarget { get; set; }
 
-		// Token: 0x17009A44 RID: 39492
-		// (get) Token: 0x06044D88 RID: 281992 RVA: 0x010FDD39 File Offset: 0x010FBF39
-		// (set) Token: 0x06044D89 RID: 281993 RVA: 0x010FDD41 File Offset: 0x010FBF41
+		// Token: 0x17006F59 RID: 28505
+		// (get) Token: 0x0603AF15 RID: 241429 RVA: 0x010A8299 File Offset: 0x010A6499
+		// (set) Token: 0x0603AF16 RID: 241430 RVA: 0x010A82A1 File Offset: 0x010A64A1
 		public ESunSpiritMovePerformType PerformType { get; set; }
 
-		// Token: 0x17009A45 RID: 39493
-		// (get) Token: 0x06044D8A RID: 281994 RVA: 0x010FDD4A File Offset: 0x010FBF4A
-		// (set) Token: 0x06044D8B RID: 281995 RVA: 0x010FDD52 File Offset: 0x010FBF52
+		// Token: 0x17006F5A RID: 28506
+		// (get) Token: 0x0603AF17 RID: 241431 RVA: 0x010A82AA File Offset: 0x010A64AA
+		// (set) Token: 0x0603AF18 RID: 241432 RVA: 0x010A82B2 File Offset: 0x010A64B2
 		public Vector TargetLocation { get; set; }
 
-		// Token: 0x17009A46 RID: 39494
-		// (get) Token: 0x06044D8C RID: 281996 RVA: 0x010FDD5B File Offset: 0x010FBF5B
-		// (set) Token: 0x06044D8D RID: 281997 RVA: 0x010FDD63 File Offset: 0x010FBF63
+		// Token: 0x17006F5B RID: 28507
+		// (get) Token: 0x0603AF19 RID: 241433 RVA: 0x010A82BB File Offset: 0x010A64BB
+		// (set) Token: 0x0603AF1A RID: 241434 RVA: 0x010A82C3 File Offset: 0x010A64C3
 		public Rotator TargetRotator { get; set; }
 
-		// Token: 0x17009A47 RID: 39495
-		// (get) Token: 0x06044D8E RID: 281998 RVA: 0x010FDD6C File Offset: 0x010FBF6C
-		// (set) Token: 0x06044D8F RID: 281999 RVA: 0x010FDD74 File Offset: 0x010FBF74
+		// Token: 0x17006F5C RID: 28508
+		// (get) Token: 0x0603AF1B RID: 241435 RVA: 0x010A82CC File Offset: 0x010A64CC
+		// (set) Token: 0x0603AF1C RID: 241436 RVA: 0x010A82D4 File Offset: 0x010A64D4
 		public bool? SuccessPerform { get; set; }
 	}
 }

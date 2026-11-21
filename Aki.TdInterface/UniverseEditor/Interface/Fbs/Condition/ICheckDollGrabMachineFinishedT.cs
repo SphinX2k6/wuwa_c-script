@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049CE RID: 18894
+	// Token: 0x02004E8E RID: 20110
 	public class ICheckDollGrabMachineFinishedT
 	{
-		// Token: 0x1700889D RID: 34973
-		// (get) Token: 0x0601D812 RID: 120850 RVA: 0x00427B9B File Offset: 0x00425D9B
-		// (set) Token: 0x0601D813 RID: 120851 RVA: 0x00427BA3 File Offset: 0x00425DA3
+		// Token: 0x17008F6D RID: 36717
+		// (get) Token: 0x0601F285 RID: 127621 RVA: 0x00458807 File Offset: 0x00456A07
+		// (set) Token: 0x0601F286 RID: 127622 RVA: 0x0045880F File Offset: 0x00456A0F
 		public ECondition Type { get; set; }
 
-		// Token: 0x1700889E RID: 34974
-		// (get) Token: 0x0601D814 RID: 120852 RVA: 0x00427BAC File Offset: 0x00425DAC
-		// (set) Token: 0x0601D815 RID: 120853 RVA: 0x00427BB4 File Offset: 0x00425DB4
+		// Token: 0x17008F6E RID: 36718
+		// (get) Token: 0x0601F287 RID: 127623 RVA: 0x00458818 File Offset: 0x00456A18
+		// (set) Token: 0x0601F288 RID: 127624 RVA: 0x00458820 File Offset: 0x00456A20
 		public TTargetEntityUnion Target { get; set; }
 
-		// Token: 0x0601D816 RID: 120854 RVA: 0x00427BBD File Offset: 0x00425DBD
+		// Token: 0x0601F289 RID: 127625 RVA: 0x00458829 File Offset: 0x00456A29
 		public ICheckDollGrabMachineFinishedT()
 		{
 			this.Type = ECondition.CompareVar;

@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
 using UnrealEngine;
 
-// Token: 0x02001998 RID: 6552
+// Token: 0x02000E55 RID: 3669
 public class SmallItemGridVisionRoleHeadComponent : SmallItemGridComponent
 {
-	// Token: 0x0600BF5B RID: 48987 RVA: 0x002B3CAC File Offset: 0x002B1EAC
+	// Token: 0x06009363 RID: 37731 RVA: 0x002BEC30 File Offset: 0x002BCE30
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -25,14 +25,14 @@ public class SmallItemGridVisionRoleHeadComponent : SmallItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BF5C RID: 48988 RVA: 0x002B3D36 File Offset: 0x002B1F36
+	// Token: 0x06009364 RID: 37732 RVA: 0x002BECBA File Offset: 0x002BCEBA
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemRoleS";
 	}
 
-	// Token: 0x0600BF5D RID: 48989 RVA: 0x002B3D40 File Offset: 0x002B1F40
+	// Token: 0x06009365 RID: 37733 RVA: 0x002BECC4 File Offset: 0x002BCEC4
 	[NullableContext(2)]
 	protected override void OnRefresh(object roleHeadInfo)
 	{
@@ -65,28 +65,28 @@ public class SmallItemGridVisionRoleHeadComponent : SmallItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x0600BF5E RID: 48990 RVA: 0x002B3DFB File Offset: 0x002B1FFB
+	// Token: 0x06009366 RID: 37734 RVA: 0x002BED7F File Offset: 0x002BCF7F
 	private void RefreshSpriteBg(int roleHeadInfo)
 	{
 		base.GetSprite(2).SetUIActive(false);
 	}
 
-	// Token: 0x0600BF5F RID: 48991 RVA: 0x002B3E0A File Offset: 0x002B200A
+	// Token: 0x06009367 RID: 37735 RVA: 0x002BED8E File Offset: 0x002BCF8E
 	private void RefreshLightBg(int roleHeadInfo)
 	{
 		base.GetSprite(1).SetUIActive(true);
 	}
 
-	// Token: 0x02007ED1 RID: 32465
+	// Token: 0x02007060 RID: 28768
 	private class EChildType
 	{
-		// Token: 0x0402971F RID: 169759
+		// Token: 0x04024A5C RID: 150108
 		public const int RoleHeadTexture = 0;
 
-		// Token: 0x04029720 RID: 169760
+		// Token: 0x04024A5D RID: 150109
 		public const int LightSprite = 1;
 
-		// Token: 0x04029721 RID: 169761
+		// Token: 0x04024A5E RID: 150110
 		public const int SpriteBg = 2;
 	}
 }

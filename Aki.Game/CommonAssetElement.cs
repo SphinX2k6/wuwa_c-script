@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003310 RID: 13072
+// Token: 0x02002882 RID: 10370
 public class CommonAssetElement : AssetElement
 {
-	// Token: 0x0601C7A9 RID: 116649 RVA: 0x007FD42F File Offset: 0x007FB62F
+	// Token: 0x0601A4A2 RID: 107682 RVA: 0x0082399B File Offset: 0x00821B9B
 	[NullableContext(2)]
 	public CommonAssetElement(EntityAssetElement entityAssetElement) : base(entityAssetElement)
 	{
 	}
 
-	// Token: 0x0601C7AA RID: 116650 RVA: 0x007FD438 File Offset: 0x007FB638
+	// Token: 0x0601A4A3 RID: 107683 RVA: 0x008239A4 File Offset: 0x00821BA4
 	[NullableContext(1)]
 	public override bool AddObject(string path, UObject @object)
 	{
@@ -25,7 +25,7 @@ public class CommonAssetElement : AssetElement
 		return true;
 	}
 
-	// Token: 0x0601C7AB RID: 116651 RVA: 0x007FD478 File Offset: 0x007FB678
+	// Token: 0x0601A4A4 RID: 107684 RVA: 0x008239E4 File Offset: 0x00821BE4
 	public override void PrintDebugInfo()
 	{
 		TArray<UObject> commonAssets = PreloadModelNew.Instance.HoldPreloadObject.CommonAssets;
@@ -58,7 +58,7 @@ public class CommonAssetElement : AssetElement
 		}
 	}
 
-	// Token: 0x0601C7AC RID: 116652 RVA: 0x007FD600 File Offset: 0x007FB800
+	// Token: 0x0601A4A5 RID: 107685 RVA: 0x00823B6C File Offset: 0x00821D6C
 	public override void Clear()
 	{
 		PreloadModelNew.Instance.HoldPreloadObject.ClearCommonAsset();

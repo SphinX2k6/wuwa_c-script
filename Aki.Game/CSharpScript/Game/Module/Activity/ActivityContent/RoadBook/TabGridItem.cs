@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061FB RID: 25083
+	// Token: 0x02005179 RID: 20857
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 	})]
 	public class TabGridItem : GridProxyAbstract<MotorChallengePlayData>
 	{
-		// Token: 0x0603F49B RID: 259227 RVA: 0x00F4B241 File Offset: 0x00F49441
+		// Token: 0x0603415C RID: 213340 RVA: 0x00E92199 File Offset: 0x00E90399
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F49C RID: 259228 RVA: 0x00F4B27C File Offset: 0x00F4947C
+		// Token: 0x0603415D RID: 213341 RVA: 0x00E921D4 File Offset: 0x00E903D4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TabGridItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F49D RID: 259229 RVA: 0x00F4B2BF File Offset: 0x00F494BF
+		// Token: 0x0603415E RID: 213342 RVA: 0x00E92217 File Offset: 0x00E90417
 		public void SetItemNewVisible(bool bVisible)
 		{
 			if (!this.Data.IsUnlock)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.NormalToggle.SetItemNewVisible(bVisible);
 		}
 
-		// Token: 0x0603F49E RID: 259230 RVA: 0x00F4B2DC File Offset: 0x00F494DC
+		// Token: 0x0603415F RID: 213343 RVA: 0x00E92234 File Offset: 0x00E90434
 		public override void Refresh(MotorChallengePlayData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			item2.SetUIActive(!data.IsUnlock);
 		}
 
-		// Token: 0x0603F49F RID: 259231 RVA: 0x00F4B36D File Offset: 0x00F4956D
+		// Token: 0x06034160 RID: 213344 RVA: 0x00E922C5 File Offset: 0x00E904C5
 		public override void OnSelected(bool fireEvent)
 		{
 			if (this.Data.IsUnlock)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.LockToggle.SetIsSelect(true, fireEvent);
 		}
 
-		// Token: 0x04021035 RID: 135221
+		// Token: 0x0401B964 RID: 112996
 		[Nullable(new byte[]
 		{
 			2,
@@ -101,13 +101,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 		})]
 		public Action<MotorChallengePlayData, MenuTabToggleItem> OnChildToggleCallback;
 
-		// Token: 0x04021036 RID: 135222
+		// Token: 0x0401B965 RID: 112997
 		private MenuTabToggleItem NormalToggle;
 
-		// Token: 0x04021037 RID: 135223
+		// Token: 0x0401B966 RID: 112998
 		private MenuTabToggleItem LockToggle;
 
-		// Token: 0x04021038 RID: 135224
+		// Token: 0x0401B967 RID: 112999
 		[Nullable(2)]
 		private MotorChallengePlayData Data;
 	}

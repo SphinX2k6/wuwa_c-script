@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005076 RID: 20598
+	// Token: 0x020055D8 RID: 21976
 	public class IDarkTideIndependentSystemRewardT
 	{
-		// Token: 0x17009571 RID: 38257
-		// (get) Token: 0x06021055 RID: 135253 RVA: 0x004965D7 File Offset: 0x004947D7
-		// (set) Token: 0x06021056 RID: 135254 RVA: 0x004965DF File Offset: 0x004947DF
+		// Token: 0x17009D57 RID: 40279
+		// (get) Token: 0x06022F8F RID: 143247 RVA: 0x004D028B File Offset: 0x004CE48B
+		// (set) Token: 0x06022F90 RID: 143248 RVA: 0x004D0293 File Offset: 0x004CE493
 		public EIndependentSystemRewardType Type { get; set; }
 
-		// Token: 0x17009572 RID: 38258
-		// (get) Token: 0x06021057 RID: 135255 RVA: 0x004965E8 File Offset: 0x004947E8
-		// (set) Token: 0x06021058 RID: 135256 RVA: 0x004965F0 File Offset: 0x004947F0
+		// Token: 0x17009D58 RID: 40280
+		// (get) Token: 0x06022F91 RID: 143249 RVA: 0x004D029C File Offset: 0x004CE49C
+		// (set) Token: 0x06022F92 RID: 143250 RVA: 0x004D02A4 File Offset: 0x004CE4A4
 		public int RewardId { get; set; }
 
-		// Token: 0x17009573 RID: 38259
-		// (get) Token: 0x06021059 RID: 135257 RVA: 0x004965F9 File Offset: 0x004947F9
-		// (set) Token: 0x0602105A RID: 135258 RVA: 0x00496601 File Offset: 0x00494801
+		// Token: 0x17009D59 RID: 40281
+		// (get) Token: 0x06022F93 RID: 143251 RVA: 0x004D02AD File Offset: 0x004CE4AD
+		// (set) Token: 0x06022F94 RID: 143252 RVA: 0x004D02B5 File Offset: 0x004CE4B5
 		public List<int> RewardIdList { get; set; }
 
-		// Token: 0x17009574 RID: 38260
-		// (get) Token: 0x0602105B RID: 135259 RVA: 0x0049660A File Offset: 0x0049480A
-		// (set) Token: 0x0602105C RID: 135260 RVA: 0x00496612 File Offset: 0x00494812
+		// Token: 0x17009D5A RID: 40282
+		// (get) Token: 0x06022F95 RID: 143253 RVA: 0x004D02BE File Offset: 0x004CE4BE
+		// (set) Token: 0x06022F96 RID: 143254 RVA: 0x004D02C6 File Offset: 0x004CE4C6
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602105D RID: 135261 RVA: 0x0049661B File Offset: 0x0049481B
+		// Token: 0x06022F97 RID: 143255 RVA: 0x004D02CF File Offset: 0x004CE4CF
 		public IDarkTideIndependentSystemRewardT()
 		{
 			this.Type = EIndependentSystemRewardType.DarkTide;

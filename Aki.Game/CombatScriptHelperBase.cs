@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020034B0 RID: 13488
+// Token: 0x02002A24 RID: 10788
 [NullableContext(1)]
 [Nullable(0)]
 public class CombatScriptHelperBase
 {
-	// Token: 0x0601D60D RID: 120333 RVA: 0x00831E54 File Offset: 0x00830054
+	// Token: 0x0601B30C RID: 111372 RVA: 0x00859274 File Offset: 0x00857474
 	public void Init()
 	{
 		if (this.IsInit)
@@ -28,7 +28,7 @@ public class CombatScriptHelperBase
 		this.IsInit = true;
 	}
 
-	// Token: 0x0601D60E RID: 120334 RVA: 0x00831F18 File Offset: 0x00830118
+	// Token: 0x0601B30D RID: 111373 RVA: 0x00859338 File Offset: 0x00857538
 	private void Clear()
 	{
 		this.CombatScripts.Clear();
@@ -36,12 +36,12 @@ public class CombatScriptHelperBase
 		this.UeCombatScriptNames.Empty(true);
 	}
 
-	// Token: 0x0601D60F RID: 120335 RVA: 0x00831F3C File Offset: 0x0083013C
+	// Token: 0x0601B30E RID: 111374 RVA: 0x0085935C File Offset: 0x0085755C
 	public virtual void OnInit()
 	{
 	}
 
-	// Token: 0x0601D610 RID: 120336 RVA: 0x00831F40 File Offset: 0x00830140
+	// Token: 0x0601B30F RID: 111375 RVA: 0x00859360 File Offset: 0x00857560
 	public string FilterCmd(string cmd)
 	{
 		string text = cmd;
@@ -63,8 +63,8 @@ public class CombatScriptHelperBase
 		return text;
 	}
 
-	// Token: 0x170028BC RID: 10428
-	// (get) Token: 0x0601D611 RID: 120337 RVA: 0x0083202C File Offset: 0x0083022C
+	// Token: 0x17002C54 RID: 11348
+	// (get) Token: 0x0601B310 RID: 111376 RVA: 0x0085944C File Offset: 0x0085764C
 	public TArray<string> CombatScriptIndexes
 	{
 		get
@@ -74,7 +74,7 @@ public class CombatScriptHelperBase
 		}
 	}
 
-	// Token: 0x0601D612 RID: 120338 RVA: 0x0083203C File Offset: 0x0083023C
+	// Token: 0x0601B311 RID: 111377 RVA: 0x0085945C File Offset: 0x0085765C
 	[return: Nullable(2)]
 	public CombatScriptSet GetCombatScriptBaseByName(string name)
 	{
@@ -88,15 +88,15 @@ public class CombatScriptHelperBase
 		return null;
 	}
 
-	// Token: 0x0400E769 RID: 59241
+	// Token: 0x0400EC1D RID: 60445
 	protected readonly List<CombatScriptSet> CombatScripts = new List<CombatScriptSet>();
 
-	// Token: 0x0400E76A RID: 59242
+	// Token: 0x0400EC1E RID: 60446
 	protected readonly List<string> CombatScriptNames = new List<string>();
 
-	// Token: 0x0400E76B RID: 59243
+	// Token: 0x0400EC1F RID: 60447
 	protected readonly TArray<string> UeCombatScriptNames = new TArray<string>();
 
-	// Token: 0x0400E76C RID: 59244
+	// Token: 0x0400EC20 RID: 60448
 	protected bool IsInit;
 }

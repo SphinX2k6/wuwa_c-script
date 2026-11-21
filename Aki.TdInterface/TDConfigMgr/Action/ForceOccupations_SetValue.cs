@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001734 RID: 5940
+	// Token: 0x020018B3 RID: 6323
 	public class ForceOccupations_SetValue
 	{
-		// Token: 0x0400502F RID: 20527
+		// Token: 0x04005462 RID: 21602
 		public EOccupationActionType OccupationType;
 
-		// Token: 0x04005030 RID: 20528
-		[Nullable(1)]
+		// Token: 0x04005463 RID: 21603
 		public List<string> Occupations;
 	}
 }

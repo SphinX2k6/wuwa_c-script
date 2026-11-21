@@ -14,30 +14,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000DC1 RID: 3521
+// Token: 0x02000273 RID: 627
 [NullableContext(1)]
 [Nullable(0)]
 public static class GameProcedure
 {
-	// Token: 0x06005363 RID: 21347 RVA: 0x000E4B7C File Offset: 0x000E2D7C
+	// Token: 0x060026D7 RID: 9943 RVA: 0x000EB178 File Offset: 0x000E9378
 	private static void LogLoadPhase(string name, double? time = null)
 	{
-		if (Info.Instance.IsPlayInEditor)
-		{
-			double num = time ?? ((double)UKuroStaticLibrary.GetPlatformTimeInSeconds());
-			Log instance = Log.Instance;
-			ELogModule module = ELogModule.Game;
-			ELogAuthor author = ELogAuthor.BLZ;
-			string message = "[LoadPhase] " + name;
-			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("time", num);
-			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-		}
 	}
 
-	// Token: 0x06005364 RID: 21348 RVA: 0x000E4BE4 File Offset: 0x000E2DE4
+	// Token: 0x060026D8 RID: 9944 RVA: 0x000EB188 File Offset: 0x000E9388
 	public static void Start(UGameInstance gameInstance)
 	{
-		DllUtils.Initialize();
 		GeneratedUtils.Init();
 		Info.IsCloudGameHook = (() => Platform.Instance.IsCloudGame());
 		Info.CloudGamePlatformHook = (() => Platform.Instance.CloudGamePlatform);
@@ -104,7 +93,7 @@ public static class GameProcedure
 		GameProcedure.OnStart(gameInstance).Forget();
 	}
 
-	// Token: 0x06005365 RID: 21349 RVA: 0x000E4E1C File Offset: 0x000E301C
+	// Token: 0x060026D9 RID: 9945 RVA: 0x000EB3BC File Offset: 0x000E95BC
 	private static UniTask OnStart(UGameInstance instance)
 	{
 		GameProcedure.<OnStart>d__4 <OnStart>d__;
@@ -115,7 +104,7 @@ public static class GameProcedure
 		return <OnStart>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005366 RID: 21350 RVA: 0x000E4E60 File Offset: 0x000E3060
+	// Token: 0x060026DA RID: 9946 RVA: 0x000EB400 File Offset: 0x000E9600
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -136,7 +125,7 @@ public static class GameProcedure
 		return <FrameImport>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005367 RID: 21351 RVA: 0x000E4EAC File Offset: 0x000E30AC
+	// Token: 0x060026DB RID: 9947 RVA: 0x000EB44C File Offset: 0x000E964C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -157,7 +146,7 @@ public static class GameProcedure
 		return <MonitorImport>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005368 RID: 21352 RVA: 0x000E4EF8 File Offset: 0x000E30F8
+	// Token: 0x060026DC RID: 9948 RVA: 0x000EB498 File Offset: 0x000E9698
 	private static UniTask FrameCallAsyncGenerator(string callName, bool bMonitorTime, Delegate func, [Nullable(2)] UGameInstance instance = null)
 	{
 		GameProcedure.<FrameCallAsyncGenerator>d__7 <FrameCallAsyncGenerator>d__;
@@ -171,7 +160,7 @@ public static class GameProcedure
 		return <FrameCallAsyncGenerator>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005369 RID: 21353 RVA: 0x000E4F53 File Offset: 0x000E3153
+	// Token: 0x060026DD RID: 9949 RVA: 0x000EB4F3 File Offset: 0x000E96F3
 	private static void Tick(float delta)
 	{
 		Action advance = GameProcedure.GameProcedureDefine.Advance;
@@ -182,7 +171,7 @@ public static class GameProcedure
 		GameProcedure.GameProcedureDefine.Advance = null;
 	}
 
-	// Token: 0x0600536A RID: 21354 RVA: 0x000E4F6C File Offset: 0x000E316C
+	// Token: 0x060026DE RID: 9950 RVA: 0x000EB50C File Offset: 0x000E970C
 	private static UniTask WaitFrame()
 	{
 		GameProcedure.<WaitFrame>d__9 <WaitFrame>d__;
@@ -192,7 +181,7 @@ public static class GameProcedure
 		return <WaitFrame>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600536B RID: 21355 RVA: 0x000E4FA8 File Offset: 0x000E31A8
+	// Token: 0x060026DF RID: 9951 RVA: 0x000EB548 File Offset: 0x000E9748
 	[return: Dynamic(new bool[]
 	{
 		false,
@@ -212,46 +201,46 @@ public static class GameProcedure
 		return <ImportAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04002488 RID: 9352
+	// Token: 0x04002508 RID: 9480
 	private const int MaxFrameTime = 200;
 
-	// Token: 0x0200746B RID: 29803
+	// Token: 0x020065FC RID: 26108
 	[NullableContext(0)]
 	public class GameProcedureDefine : IStaticVariableResetter
 	{
-		// Token: 0x06048868 RID: 297064 RVA: 0x012B0697 File Offset: 0x012AE897
+		// Token: 0x0603ECC5 RID: 257221 RVA: 0x0125397C File Offset: 0x01251B7C
 		static GameProcedureDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GameProcedure.GameProcedureDefine.CreateStaticDefaultValue), new Action(GameProcedure.GameProcedureDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x17009FD1 RID: 40913
-		// (get) Token: 0x06048869 RID: 297065 RVA: 0x012B06B6 File Offset: 0x012AE8B6
-		// (set) Token: 0x0604886A RID: 297066 RVA: 0x012B06BD File Offset: 0x012AE8BD
+		// Token: 0x1700776F RID: 30575
+		// (get) Token: 0x0603ECC6 RID: 257222 RVA: 0x0125399B File Offset: 0x01251B9B
+		// (set) Token: 0x0603ECC7 RID: 257223 RVA: 0x012539A2 File Offset: 0x01251BA2
 		public static bool Inited { get; set; }
 
-		// Token: 0x0604886B RID: 297067 RVA: 0x012B06C5 File Offset: 0x012AE8C5
+		// Token: 0x0603ECC8 RID: 257224 RVA: 0x012539AA File Offset: 0x01251BAA
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604886C RID: 297068 RVA: 0x012B06C7 File Offset: 0x012AE8C7
+		// Token: 0x0603ECC9 RID: 257225 RVA: 0x012539AC File Offset: 0x01251BAC
 		public static void ResetStaticDefaultValue()
 		{
 			GameProcedure.GameProcedureDefine.Inited = false;
 			GameProcedure.GameProcedureDefine.Advance = null;
 		}
 
-		// Token: 0x040268C0 RID: 157888
+		// Token: 0x04021BFE RID: 138238
 		[Nullable(1)]
 		public static Action Advance;
 	}
 
-	// Token: 0x0200746C RID: 29804
+	// Token: 0x020065FD RID: 26109
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x040268C1 RID: 157889
+		// Token: 0x04021BFF RID: 138239
 		[Nullable(0)]
 		public static Action<float> <0>__Tick;
 	}

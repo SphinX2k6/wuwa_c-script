@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200217A RID: 8570
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023DB RID: 9179
 	public class RoverRogueActivate : ActionParams
 	{
-		// Token: 0x0600BC64 RID: 48228 RVA: 0x001B2600 File Offset: 0x001B0800
+		// Token: 0x0600C7F2 RID: 51186 RVA: 0x001C97B4 File Offset: 0x001C79B4
 		private RoverRogueActivate_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BC65 RID: 48229 RVA: 0x001B2638 File Offset: 0x001B0838
+		// Token: 0x0600C7F3 RID: 51187 RVA: 0x001C97EC File Offset: 0x001C79EC
 		public static RoverRogueActivate Create([Nullable(2)] RoverRogueActivate instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC66 RID: 48230 RVA: 0x001B264B File Offset: 0x001B084B
+		// Token: 0x0600C7F4 RID: 51188 RVA: 0x001C97FF File Offset: 0x001C79FF
 		public static RoverRogueActivate CreateFromSetValue([Nullable(2)] RoverRogueActivate_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC67 RID: 48231 RVA: 0x001B265E File Offset: 0x001B085E
+		// Token: 0x0600C7F5 RID: 51189 RVA: 0x001C9812 File Offset: 0x001C7A12
 		public RoverRogueActivate_SetValue ToSetValue()
 		{
 			return new RoverRogueActivate_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700395B RID: 14683
-		// (get) Token: 0x0600BC68 RID: 48232 RVA: 0x001B2671 File Offset: 0x001B0871
-		// (set) Token: 0x0600BC69 RID: 48233 RVA: 0x001B269C File Offset: 0x001B089C
+		// Token: 0x17003C48 RID: 15432
+		// (get) Token: 0x0600C7F6 RID: 51190 RVA: 0x001C9825 File Offset: 0x001C7A25
+		// (set) Token: 0x0600C7F7 RID: 51191 RVA: 0x001C9850 File Offset: 0x001C7A50
 		public virtual ERoverRogueActivateType InteractType
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007085 RID: 28805
+		// Token: 0x040076BA RID: 30394
 		[Nullable(2)]
 		protected new RoverRogueActivate FbInstance;
 
-		// Token: 0x04007086 RID: 28806
+		// Token: 0x040076BB RID: 30395
 		[Nullable(2)]
 		protected RoverRogueActivate_SetValue PocoInterface;
 	}

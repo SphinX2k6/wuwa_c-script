@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002758 RID: 10072
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A24 RID: 10788
 	public class ITrapDefenseTip : ICommonTipType
 	{
-		// Token: 0x0600E067 RID: 57447 RVA: 0x0021300A File Offset: 0x0021120A
+		// Token: 0x0600EE67 RID: 61031 RVA: 0x0022FB42 File Offset: 0x0022DD42
 		public static ITrapDefenseTip Create(ITrapDefenseTip? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004379 RID: 17273
-		// (get) Token: 0x0600E068 RID: 57448 RVA: 0x00213029 File Offset: 0x00211229
+		// Token: 0x170046CD RID: 18125
+		// (get) Token: 0x0600EE68 RID: 61032 RVA: 0x0022FB61 File Offset: 0x0022DD61
 		public override ECommonTipType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700437A RID: 17274
-		// (get) Token: 0x0600E069 RID: 57449 RVA: 0x00213036 File Offset: 0x00211236
+		// Token: 0x170046CE RID: 18126
+		// (get) Token: 0x0600EE69 RID: 61033 RVA: 0x0022FB6E File Offset: 0x0022DD6E
 		public virtual string MainText
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700437B RID: 17275
-		// (get) Token: 0x0600E06A RID: 57450 RVA: 0x00213043 File Offset: 0x00211243
+		// Token: 0x170046CF RID: 18127
+		// (get) Token: 0x0600EE6A RID: 61034 RVA: 0x0022FB7B File Offset: 0x0022DD7B
 		public virtual ETrapDefenseTipType TipType
 		{
 			get
@@ -52,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C56 RID: 31830
+		// Token: 0x04008304 RID: 33540
 		private ITrapDefenseTip Instance;
 	}
 }

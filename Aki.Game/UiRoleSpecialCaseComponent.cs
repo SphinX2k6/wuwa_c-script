@@ -4,26 +4,26 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002CB7 RID: 11447
-[NullableContext(2)]
+// Token: 0x02002210 RID: 8720
+[NullableContext(1)]
 [Nullable(0)]
 public class UiRoleSpecialCaseComponent : UiModelComponentBase
 {
-	// Token: 0x06017ECA RID: 97994 RVA: 0x006156D8 File Offset: 0x006138D8
+	// Token: 0x06015741 RID: 87873 RVA: 0x0063B2F4 File Offset: 0x006394F4
 	protected override void OnInit()
 	{
 		this.RoleDataComponent = base.Owner.CheckGetComponent<UiRoleDataComponent>();
 		this.TagComponent = base.Owner.CheckGetComponent<UiModelTagComponent>();
 	}
 
-	// Token: 0x06017ECB RID: 97995 RVA: 0x006156FC File Offset: 0x006138FC
+	// Token: 0x06015742 RID: 87874 RVA: 0x0063B318 File Offset: 0x00639518
 	protected override void OnStart()
 	{
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.OnUiModelRoleConfigIdChange, new Action(this.OnRoleConfigIdChange));
 		this.Refresh();
 	}
 
-	// Token: 0x06017ECC RID: 97996 RVA: 0x00615726 File Offset: 0x00613926
+	// Token: 0x06015743 RID: 87875 RVA: 0x0063B342 File Offset: 0x00639542
 	protected override void OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Owner, EEventName.OnUiModelRoleConfigIdChange, new Action(this.OnRoleConfigIdChange));
@@ -31,13 +31,13 @@ public class UiRoleSpecialCaseComponent : UiModelComponentBase
 		this.LastSkinTagIds = new List<int>();
 	}
 
-	// Token: 0x06017ECD RID: 97997 RVA: 0x0061575C File Offset: 0x0061395C
+	// Token: 0x06015744 RID: 87876 RVA: 0x0063B378 File Offset: 0x00639578
 	private void OnRoleConfigIdChange()
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x06017ECE RID: 97998 RVA: 0x00615764 File Offset: 0x00613964
+	// Token: 0x06015745 RID: 87877 RVA: 0x0063B380 File Offset: 0x00639580
 	private void Refresh()
 	{
 		UiRoleDataComponent roleDataComponent = this.RoleDataComponent;
@@ -53,7 +53,7 @@ public class UiRoleSpecialCaseComponent : UiModelComponentBase
 		this.RefreshSkinTags();
 	}
 
-	// Token: 0x06017ECF RID: 97999 RVA: 0x006157BC File Offset: 0x006139BC
+	// Token: 0x06015746 RID: 87878 RVA: 0x0063B3D8 File Offset: 0x006395D8
 	private void RefreshSkinTags()
 	{
 		if (this.TagComponent == null)
@@ -76,8 +76,19 @@ public class UiRoleSpecialCaseComponent : UiModelComponentBase
 		this.LastSkinTagIds = list;
 	}
 
-	// Token: 0x06017ED0 RID: 98000 RVA: 0x00615888 File Offset: 0x00613A88
-	[NullableContext(1)]
+	// Token: 0x06015747 RID: 87879 RVA: 0x0063B4A4 File Offset: 0x006396A4
+	private static string[] ToTagNames(ICollection<int> tagIds)
+	{
+		string[] array = new string[tagIds.Count];
+		int num = 0;
+		foreach (int tagId in tagIds)
+		{
+			array[num++] = GameplayTagUtils.GetNameByTagId(tagId);
+		}
+		return array;
+	}
+
+	// Token: 0x06015748 RID: 87880 RVA: 0x0063B504 File Offset: 0x00639704
 	private List<int> ResolveSkinTagIds()
 	{
 		List<int> list = new List<int>();
@@ -104,8 +115,7 @@ public class UiRoleSpecialCaseComponent : UiModelComponentBase
 		return list;
 	}
 
-	// Token: 0x06017ED1 RID: 98001 RVA: 0x0061590C File Offset: 0x00613B0C
-	[NullableContext(1)]
+	// Token: 0x06015749 RID: 87881 RVA: 0x0063B588 File Offset: 0x00639788
 	private bool IsSameTagIds(List<int> a, List<int> b)
 	{
 		if (a.Count != b.Count)
@@ -122,7 +132,8 @@ public class UiRoleSpecialCaseComponent : UiModelComponentBase
 		return true;
 	}
 
-	// Token: 0x06017ED2 RID: 98002 RVA: 0x00615950 File Offset: 0x00613B50
+	// Token: 0x0601574A RID: 87882 RVA: 0x0063B5CC File Offset: 0x006397CC
+	[NullableContext(2)]
 	private void Apply(RoleSpecialCaseData data)
 	{
 		if (data == null || this.TagComponent == null)
@@ -142,7 +153,8 @@ public class UiRoleSpecialCaseComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017ED3 RID: 98003 RVA: 0x006159D4 File Offset: 0x00613BD4
+	// Token: 0x0601574B RID: 87883 RVA: 0x0063B650 File Offset: 0x00639850
+	[NullableContext(2)]
 	private void Revert(RoleSpecialCaseData data)
 	{
 		if (data == null || this.TagComponent == null)
@@ -162,8 +174,7 @@ public class UiRoleSpecialCaseComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017ED4 RID: 98004 RVA: 0x00615A58 File Offset: 0x00613C58
-	[NullableContext(1)]
+	// Token: 0x0601574C RID: 87884 RVA: 0x0063B6D4 File Offset: 0x006398D4
 	private unsafe int? ResolveTagId(string tagName)
 	{
 		int tagIdByName = GameplayTagUtils.GetTagIdByName(tagName);
@@ -185,16 +196,18 @@ public class UiRoleSpecialCaseComponent : UiModelComponentBase
 		return new int?(tagIdByName);
 	}
 
-	// Token: 0x0400B257 RID: 45655
+	// Token: 0x0400B5C2 RID: 46530
+	[Nullable(2)]
 	private UiRoleDataComponent RoleDataComponent;
 
-	// Token: 0x0400B258 RID: 45656
+	// Token: 0x0400B5C3 RID: 46531
+	[Nullable(2)]
 	private UiModelTagComponent TagComponent;
 
-	// Token: 0x0400B259 RID: 45657
+	// Token: 0x0400B5C4 RID: 46532
+	[Nullable(2)]
 	private RoleSpecialCaseData LastApplied;
 
-	// Token: 0x0400B25A RID: 45658
-	[Nullable(1)]
+	// Token: 0x0400B5C5 RID: 46533
 	private List<int> LastSkinTagIds = new List<int>();
 }

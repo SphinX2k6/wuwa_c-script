@@ -7,32 +7,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001BD5 RID: 7125
+	// Token: 0x020004E7 RID: 1255
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.KuroUiSceneInfo")]
 	[UnrealStructLayout(128, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 128)]
 	public class UKuroUiSceneInfo : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601B594 RID: 112020 RVA: 0x00284A6A File Offset: 0x00282C6A
+		// Token: 0x0600767A RID: 30330 RVA: 0x000ACF3B File Offset: 0x000AB13B
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroUiSceneInfo._ClassPtr;
 		}
 
-		// Token: 0x0601B595 RID: 112021 RVA: 0x00284A78 File Offset: 0x00282C78
+		// Token: 0x0600767B RID: 30331 RVA: 0x000ACF48 File Offset: 0x000AB148
 		public UKuroUiSceneInfo() : this(BuiltinUtils.AllocNativeUObject(UKuroUiSceneInfo.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601B596 RID: 112022 RVA: 0x00284AA0 File Offset: 0x00282CA0
+		// Token: 0x0600767C RID: 30332 RVA: 0x000ACF70 File Offset: 0x000AB170
 		public UKuroUiSceneInfo(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroUiSceneInfo.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006DE9 RID: 28137
-		// (get) Token: 0x0601B597 RID: 112023 RVA: 0x00284AD3 File Offset: 0x00282CD3
-		// (set) Token: 0x0601B598 RID: 112024 RVA: 0x00284AE7 File Offset: 0x00282CE7
+		// Token: 0x170016DA RID: 5850
+		// (get) Token: 0x0600767D RID: 30333 RVA: 0x000ACFA3 File Offset: 0x000AB1A3
+		// (set) Token: 0x0600767E RID: 30334 RVA: 0x000ACFB7 File Offset: 0x000AB1B7
 		public unsafe FVector Location
 		{
 			get
@@ -45,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DEA RID: 28138
-		// (get) Token: 0x0601B599 RID: 112025 RVA: 0x00284AFC File Offset: 0x00282CFC
-		// (set) Token: 0x0601B59A RID: 112026 RVA: 0x00284B10 File Offset: 0x00282D10
+		// Token: 0x170016DB RID: 5851
+		// (get) Token: 0x0600767F RID: 30335 RVA: 0x000ACFCC File Offset: 0x000AB1CC
+		// (set) Token: 0x06007680 RID: 30336 RVA: 0x000ACFE0 File Offset: 0x000AB1E0
 		public unsafe string LevelName
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DEB RID: 28139
-		// (get) Token: 0x0601B59B RID: 112027 RVA: 0x00284B25 File Offset: 0x00282D25
-		// (set) Token: 0x0601B59C RID: 112028 RVA: 0x00284B39 File Offset: 0x00282D39
+		// Token: 0x170016DC RID: 5852
+		// (get) Token: 0x06007681 RID: 30337 RVA: 0x000ACFF5 File Offset: 0x000AB1F5
+		// (set) Token: 0x06007682 RID: 30338 RVA: 0x000AD009 File Offset: 0x000AB209
 		public unsafe string OptionalLevelName
 		{
 			get
@@ -75,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DEC RID: 28140
-		// (get) Token: 0x0601B59D RID: 112029 RVA: 0x00284B4E File Offset: 0x00282D4E
-		// (set) Token: 0x0601B59E RID: 112030 RVA: 0x00284B5E File Offset: 0x00282D5E
+		// Token: 0x170016DD RID: 5853
+		// (get) Token: 0x06007683 RID: 30339 RVA: 0x000AD01E File Offset: 0x000AB21E
+		// (set) Token: 0x06007684 RID: 30340 RVA: 0x000AD02E File Offset: 0x000AB22E
 		public unsafe bool IsLoaded
 		{
 			get
@@ -90,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DED RID: 28141
-		// (get) Token: 0x0601B59F RID: 112031 RVA: 0x00284B6F File Offset: 0x00282D6F
-		// (set) Token: 0x0601B5A0 RID: 112032 RVA: 0x00284B7F File Offset: 0x00282D7F
+		// Token: 0x170016DE RID: 5854
+		// (get) Token: 0x06007685 RID: 30341 RVA: 0x000AD03F File Offset: 0x000AB23F
+		// (set) Token: 0x06007686 RID: 30342 RVA: 0x000AD04F File Offset: 0x000AB24F
 		public unsafe bool IsVisible
 		{
 			get
@@ -105,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DEE RID: 28142
-		// (get) Token: 0x0601B5A1 RID: 112033 RVA: 0x00284B90 File Offset: 0x00282D90
-		// (set) Token: 0x0601B5A2 RID: 112034 RVA: 0x00284BA0 File Offset: 0x00282DA0
+		// Token: 0x170016DF RID: 5855
+		// (get) Token: 0x06007687 RID: 30343 RVA: 0x000AD060 File Offset: 0x000AB260
+		// (set) Token: 0x06007688 RID: 30344 RVA: 0x000AD070 File Offset: 0x000AB270
 		public unsafe EKuroUiSceneLoadingState CurrentState
 		{
 			get
@@ -120,27 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DEF RID: 28143
-		// (get) Token: 0x0601B5A3 RID: 112035 RVA: 0x00284BB1 File Offset: 0x00282DB1
-		// (set) Token: 0x0601B5A4 RID: 112036 RVA: 0x00284BC5 File Offset: 0x00282DC5
-		[Nullable(2)]
-		public unsafe AKuroUiSceneRootActor RootActor
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<AKuroUiSceneRootActor>(base.NativePtr / (IntPtr)sizeof(void*) + UKuroUiSceneInfo.__PropertyOffset_RootActor);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UKuroUiSceneInfo.__PropertyOffset_RootActor, value);
-			}
-		}
-
-		// Token: 0x17006DF0 RID: 28144
-		// (get) Token: 0x0601B5A5 RID: 112037 RVA: 0x00284BDA File Offset: 0x00282DDA
-		// (set) Token: 0x0601B5A6 RID: 112038 RVA: 0x00284BEE File Offset: 0x00282DEE
+		// Token: 0x170016E0 RID: 5856
+		// (get) Token: 0x06007689 RID: 30345 RVA: 0x000AD081 File Offset: 0x000AB281
+		// (set) Token: 0x0600768A RID: 30346 RVA: 0x000AD095 File Offset: 0x000AB295
 		[Nullable(2)]
 		public unsafe ULevelStreamingDynamic LevelStreaming
 		{
@@ -156,9 +138,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DF1 RID: 28145
-		// (get) Token: 0x0601B5A7 RID: 112039 RVA: 0x00284C03 File Offset: 0x00282E03
-		// (set) Token: 0x0601B5A8 RID: 112040 RVA: 0x00284C17 File Offset: 0x00282E17
+		// Token: 0x170016E1 RID: 5857
+		// (get) Token: 0x0600768B RID: 30347 RVA: 0x000AD0AA File Offset: 0x000AB2AA
+		// (set) Token: 0x0600768C RID: 30348 RVA: 0x000AD0BE File Offset: 0x000AB2BE
 		[Nullable(2)]
 		public unsafe UWorld World
 		{
@@ -174,44 +156,39 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601B5A9 RID: 112041 RVA: 0x00284C2C File Offset: 0x00282E2C
+		// Token: 0x0600768D RID: 30349 RVA: 0x000AD0D4 File Offset: 0x000AB2D4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetLevelVisible(bool InIsVisible)
 		{
 			UKuroUiSceneInfo.__SetLevelVisible_FunctionParams* ptr = stackalloc UKuroUiSceneInfo.__SetLevelVisible_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroUiSceneInfo.__SetLevelVisible_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroUiSceneInfo.__SetLevelVisible_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InIsVisible = InIsVisible;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroUiSceneInfo.__SetLevelVisible_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroUiSceneInfo.__SetLevelVisible_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601B5AA RID: 112042 RVA: 0x00284C73 File Offset: 0x00282E73
+		// Token: 0x0600768E RID: 30350 RVA: 0x000AD11A File Offset: 0x000AB31A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void OnLevelVisible()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroUiSceneInfo.__OnLevelVisible_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroUiSceneInfo.__OnLevelVisible_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601B5AB RID: 112043 RVA: 0x00284C88 File Offset: 0x00282E88
+		// Token: 0x0600768F RID: 30351 RVA: 0x000AD12E File Offset: 0x000AB32E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void OnLevelLoad()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroUiSceneInfo.__OnLevelLoad_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroUiSceneInfo.__OnLevelLoad_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601B5AC RID: 112044 RVA: 0x00284C9D File Offset: 0x00282E9D
+		// Token: 0x06007690 RID: 30352 RVA: 0x000AD142 File Offset: 0x000AB342
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void OnLevelInVisible()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroUiSceneInfo.__OnLevelInVisible_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroUiSceneInfo.__OnLevelInVisible_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601B5AD RID: 112045 RVA: 0x00284CB4 File Offset: 0x00282EB4
+		// Token: 0x06007691 RID: 30353 RVA: 0x000AD158 File Offset: 0x000AB358
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Init([Nullable(2)] ULevelStreamingDynamic InLevelStreaming, ref string InLevelName, ref string OptionalName, ref FVector InLocation, [Nullable(2)] UWorld InWorld)
 		{
 			UKuroUiSceneInfo.__Init_FunctionParams* ptr = stackalloc UKuroUiSceneInfo.__Init_FunctionParams[(UIntPtr)79] + 15L / (long)sizeof(UKuroUiSceneInfo.__Init_FunctionParams) & -16L;
@@ -221,120 +198,116 @@ namespace UnrealEngine
 			FString.CopyFrom((void*)(&ptr->OptionalName), OptionalName);
 			ptr->InLocation = InLocation;
 			ptr->InWorld = ((InWorld != null) ? InWorld.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroUiSceneInfo.__Init_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroUiSceneInfo.__Init_NativeFunctionPtr, (void*)ptr);
 			InLevelName = FString.ToString((void*)(&ptr->InLevelName));
 			OptionalName = FString.ToString((void*)(&ptr->OptionalName));
 			InLocation = ptr->InLocation;
 			UnrealReflectionUtils.DestroyStruct(UKuroUiSceneInfo.__Init_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601B5AE RID: 112046 RVA: 0x00284D85 File Offset: 0x00282F85
+		// Token: 0x06007692 RID: 30354 RVA: 0x000AD228 File Offset: 0x000AB428
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Destroy()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroUiSceneInfo.__Destroy_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroUiSceneInfo.__Destroy_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601B5AF RID: 112047 RVA: 0x00284D9A File Offset: 0x00282F9A
+		// Token: 0x06007693 RID: 30355 RVA: 0x000AD23C File Offset: 0x000AB43C
 		static UKuroUiSceneInfo()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.KuroUiSceneInfo");
 		}
 
-		// Token: 0x0601B5B0 RID: 112048 RVA: 0x00284DA8 File Offset: 0x00282FA8
+		// Token: 0x06007694 RID: 30356 RVA: 0x000AD24A File Offset: 0x000AB44A
 		protected UKuroUiSceneInfo(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400EB9B RID: 60315
+		// Token: 0x040031F1 RID: 12785
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroUiSceneInfo";
 
-		// Token: 0x0400EB9C RID: 60316
+		// Token: 0x040031F2 RID: 12786
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400EB9D RID: 60317
+		// Token: 0x040031F3 RID: 12787
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400EB9E RID: 60318
+		// Token: 0x040031F4 RID: 12788
 		internal static int __PropertyOffset_Location;
 
-		// Token: 0x0400EB9F RID: 60319
+		// Token: 0x040031F5 RID: 12789
 		internal static int __PropertyOffset_LevelName;
 
-		// Token: 0x0400EBA0 RID: 60320
+		// Token: 0x040031F6 RID: 12790
 		internal static int __PropertyOffset_OptionalLevelName;
 
-		// Token: 0x0400EBA1 RID: 60321
+		// Token: 0x040031F7 RID: 12791
 		internal static int __PropertyOffset_IsLoaded;
 
-		// Token: 0x0400EBA2 RID: 60322
+		// Token: 0x040031F8 RID: 12792
 		internal static int __PropertyOffset_IsVisible;
 
-		// Token: 0x0400EBA3 RID: 60323
+		// Token: 0x040031F9 RID: 12793
 		internal static int __PropertyOffset_CurrentState;
 
-		// Token: 0x0400EBA4 RID: 60324
-		internal static int __PropertyOffset_RootActor;
-
-		// Token: 0x0400EBA5 RID: 60325
+		// Token: 0x040031FA RID: 12794
 		internal static int __PropertyOffset_LevelStreaming;
 
-		// Token: 0x0400EBA6 RID: 60326
+		// Token: 0x040031FB RID: 12795
 		internal static int __PropertyOffset_World;
 
-		// Token: 0x0400EBA7 RID: 60327
+		// Token: 0x040031FC RID: 12796
 		private static IntPtr __SetLevelVisible_NativeFunctionPtr;
 
-		// Token: 0x0400EBA8 RID: 60328
+		// Token: 0x040031FD RID: 12797
 		private static IntPtr __OnLevelVisible_NativeFunctionPtr;
 
-		// Token: 0x0400EBA9 RID: 60329
+		// Token: 0x040031FE RID: 12798
 		private static IntPtr __OnLevelLoad_NativeFunctionPtr;
 
-		// Token: 0x0400EBAA RID: 60330
+		// Token: 0x040031FF RID: 12799
 		private static IntPtr __OnLevelInVisible_NativeFunctionPtr;
 
-		// Token: 0x0400EBAB RID: 60331
+		// Token: 0x04003200 RID: 12800
 		private static IntPtr __Init_NativeFunctionPtr;
 
-		// Token: 0x0400EBAC RID: 60332
+		// Token: 0x04003201 RID: 12801
 		private static IntPtr __Destroy_NativeFunctionPtr;
 
-		// Token: 0x0200317E RID: 12670
+		// Token: 0x02000C23 RID: 3107
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetLevelVisible_FunctionParams
 		{
-			// Token: 0x04016FB8 RID: 94136
+			// Token: 0x04005E6C RID: 24172
 			[FieldOffset(0)]
 			public bool InIsVisible;
 		}
 
-		// Token: 0x0200317F RID: 12671
+		// Token: 0x02000C24 RID: 3108
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 64)]
 		protected ref struct __Init_FunctionParams
 		{
-			// Token: 0x04016FB9 RID: 94137
+			// Token: 0x04005E6D RID: 24173
 			[FieldOffset(0)]
 			public IntPtr InLevelStreaming;
 
-			// Token: 0x04016FBA RID: 94138
+			// Token: 0x04005E6E RID: 24174
 			[FieldOffset(8)]
 			public FString InLevelName;
 
-			// Token: 0x04016FBB RID: 94139
+			// Token: 0x04005E6F RID: 24175
 			[FieldOffset(24)]
 			public FString OptionalName;
 
-			// Token: 0x04016FBC RID: 94140
+			// Token: 0x04005E70 RID: 24176
 			[FieldOffset(40)]
 			public FVector InLocation;
 
-			// Token: 0x04016FBD RID: 94141
+			// Token: 0x04005E71 RID: 24177
 			[FieldOffset(56)]
 			public IntPtr InWorld;
 		}

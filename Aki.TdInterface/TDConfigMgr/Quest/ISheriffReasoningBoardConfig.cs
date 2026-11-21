@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001132 RID: 4402
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001260 RID: 4704
 	public class ISheriffReasoningBoardConfig
 	{
-		// Token: 0x060063FC RID: 25596 RVA: 0x000F0B34 File Offset: 0x000EED34
+		// Token: 0x060069F7 RID: 27127 RVA: 0x000FDCA8 File Offset: 0x000FBEA8
 		private ISheriffReasoningBoardConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060063FD RID: 25597 RVA: 0x000F0B6C File Offset: 0x000EED6C
+		// Token: 0x060069F8 RID: 27128 RVA: 0x000FDCE0 File Offset: 0x000FBEE0
 		public static ISheriffReasoningBoardConfig Create([Nullable(2)] ISheriffReasoningBoardConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060063FE RID: 25598 RVA: 0x000F0B7F File Offset: 0x000EED7F
+		// Token: 0x060069F9 RID: 27129 RVA: 0x000FDCF3 File Offset: 0x000FBEF3
 		public static ISheriffReasoningBoardConfig CreateFromSetValue([Nullable(2)] ISheriffReasoningBoardConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060063FF RID: 25599 RVA: 0x000F0B92 File Offset: 0x000EED92
+		// Token: 0x060069FA RID: 27130 RVA: 0x000FDD06 File Offset: 0x000FBF06
 		public ISheriffReasoningBoardConfig_SetValue ToSetValue()
 		{
 			return new ISheriffReasoningBoardConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170020B8 RID: 8376
-		// (get) Token: 0x06006400 RID: 25600 RVA: 0x000F0BA5 File Offset: 0x000EEDA5
-		// (set) Token: 0x06006401 RID: 25601 RVA: 0x000F0BD0 File Offset: 0x000EEDD0
+		// Token: 0x1700226B RID: 8811
+		// (get) Token: 0x060069FB RID: 27131 RVA: 0x000FDD19 File Offset: 0x000FBF19
+		// (set) Token: 0x060069FC RID: 27132 RVA: 0x000FDD44 File Offset: 0x000FBF44
 		public virtual int Id
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003C25 RID: 15397
+		// Token: 0x04003F73 RID: 16243
 		[Nullable(2)]
 		protected ISheriffReasoningBoardConfig FbInstance;
 
-		// Token: 0x04003C26 RID: 15398
+		// Token: 0x04003F74 RID: 16244
 		[Nullable(2)]
 		protected ISheriffReasoningBoardConfig_SetValue PocoInterface;
 	}

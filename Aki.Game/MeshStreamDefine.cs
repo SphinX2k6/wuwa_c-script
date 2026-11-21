@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x0200220C RID: 8716
+// Token: 0x020016F0 RID: 5872
 public static class MeshStreamDefine
 {
-	// Token: 0x04008159 RID: 33113
+	// Token: 0x04008297 RID: 33431
 	public const int INVALID_MESH_STREAM_TASK_ID = -1;
 }

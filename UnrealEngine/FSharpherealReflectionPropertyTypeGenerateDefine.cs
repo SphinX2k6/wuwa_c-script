@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002770 RID: 10096
+	// Token: 0x02000816 RID: 2070
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Sharphereal.SharpherealReflectionPropertyTypeGenerateDefine")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FSharpherealReflectionPropertyTypeGenerateDefine : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06025BF0 RID: 154608 RVA: 0x003937D7 File Offset: 0x003919D7
+		// Token: 0x0600B59D RID: 46493 RVA: 0x00120FE1 File Offset: 0x0011F1E1
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSharpherealReflectionPropertyTypeGenerateDefine._ScriptStructPtr != 0) ? FSharpherealReflectionPropertyTypeGenerateDefine._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Sharphereal.SharpherealReflectionPropertyTypeGenerateDefine", ref FSharpherealReflectionPropertyTypeGenerateDefine._ScriptStructPtr);
 		}
 
-		// Token: 0x1700914F RID: 37199
-		// (get) Token: 0x06025BF1 RID: 154609 RVA: 0x003937FB File Offset: 0x003919FB
-		// (set) Token: 0x06025BF2 RID: 154610 RVA: 0x0039380B File Offset: 0x00391A0B
+		// Token: 0x17002201 RID: 8705
+		// (get) Token: 0x0600B59E RID: 46494 RVA: 0x00121005 File Offset: 0x0011F205
+		// (set) Token: 0x0600B59F RID: 46495 RVA: 0x00121015 File Offset: 0x0011F215
 		public unsafe ESharpherealReflectionTypeCode TypeCode
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009150 RID: 37200
-		// (get) Token: 0x06025BF3 RID: 154611 RVA: 0x0039381C File Offset: 0x00391A1C
-		// (set) Token: 0x06025BF4 RID: 154612 RVA: 0x00393830 File Offset: 0x00391A30
+		// Token: 0x17002202 RID: 8706
+		// (get) Token: 0x0600B5A0 RID: 46496 RVA: 0x00121026 File Offset: 0x0011F226
+		// (set) Token: 0x0600B5A1 RID: 46497 RVA: 0x0012103A File Offset: 0x0011F23A
 		public unsafe string MetaType
 		{
 			get
@@ -48,57 +48,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06025BF5 RID: 154613 RVA: 0x00393845 File Offset: 0x00391A45
+		// Token: 0x0600B5A2 RID: 46498 RVA: 0x0012104F File Offset: 0x0011F24F
 		public FSharpherealReflectionPropertyTypeGenerateDefine()
 		{
 		}
 
-		// Token: 0x06025BF6 RID: 154614 RVA: 0x0039384D File Offset: 0x00391A4D
-		public FSharpherealReflectionPropertyTypeGenerateDefine(ESharpherealReflectionTypeCode TypeCode, string MetaType)
-		{
-			this.TypeCode = TypeCode;
-			this.MetaType = MetaType;
-		}
-
-		// Token: 0x06025BF7 RID: 154615 RVA: 0x00393863 File Offset: 0x00391A63
+		// Token: 0x0600B5A3 RID: 46499 RVA: 0x00121057 File Offset: 0x0011F257
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSharpherealReflectionPropertyTypeGenerateDefine.StaticStruct();
 		}
 
-		// Token: 0x06025BF8 RID: 154616 RVA: 0x0039386F File Offset: 0x00391A6F
+		// Token: 0x0600B5A4 RID: 46500 RVA: 0x00121063 File Offset: 0x0011F263
 		[NullableContext(2)]
 		public FSharpherealReflectionPropertyTypeGenerateDefine(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06025BF9 RID: 154617 RVA: 0x00393879 File Offset: 0x00391A79
+		// Token: 0x0600B5A5 RID: 46501 RVA: 0x0012106D File Offset: 0x0011F26D
 		public FSharpherealReflectionPropertyTypeGenerateDefine(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06025BFA RID: 154618 RVA: 0x00393884 File Offset: 0x00391A84
+		// Token: 0x0600B5A6 RID: 46502 RVA: 0x00121078 File Offset: 0x0011F278
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSharpherealReflectionPropertyTypeGenerateDefine(Pointer, false, true);
 		}
 
-		// Token: 0x06025BFB RID: 154619 RVA: 0x0039388E File Offset: 0x00391A8E
+		// Token: 0x0600B5A7 RID: 46503 RVA: 0x00121082 File Offset: 0x0011F282
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSharpherealReflectionPropertyTypeGenerateDefine(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040148BC RID: 84156
+		// Token: 0x040051F9 RID: 20985
 		public const string __ObjectPath = "/Script/Sharphereal.SharpherealReflectionPropertyTypeGenerateDefine";
 
-		// Token: 0x040148BD RID: 84157
+		// Token: 0x040051FA RID: 20986
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040148BE RID: 84158
+		// Token: 0x040051FB RID: 20987
 		internal static int __PropertyOffset_TypeCode;
 
-		// Token: 0x040148BF RID: 84159
+		// Token: 0x040051FC RID: 20988
 		internal static int __PropertyOffset_MetaType;
 	}
 }

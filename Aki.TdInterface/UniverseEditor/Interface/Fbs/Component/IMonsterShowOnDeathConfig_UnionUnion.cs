@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200559D RID: 21917
+	// Token: 0x02005B3B RID: 23355
 	public class IMonsterShowOnDeathConfig_UnionUnion
 	{
-		// Token: 0x1700A1E1 RID: 41441
-		// (get) Token: 0x06024477 RID: 148599 RVA: 0x005023D1 File Offset: 0x005005D1
-		// (set) Token: 0x06024478 RID: 148600 RVA: 0x005023D9 File Offset: 0x005005D9
+		// Token: 0x1700AA69 RID: 43625
+		// (get) Token: 0x06026684 RID: 157316 RVA: 0x00542949 File Offset: 0x00540B49
+		// (set) Token: 0x06026685 RID: 157317 RVA: 0x00542951 File Offset: 0x00540B51
 		public IMonsterShowOnDeathConfig_Union Type { get; set; }
 
-		// Token: 0x1700A1E2 RID: 41442
-		// (get) Token: 0x06024479 RID: 148601 RVA: 0x005023E2 File Offset: 0x005005E2
-		// (set) Token: 0x0602447A RID: 148602 RVA: 0x005023EA File Offset: 0x005005EA
+		// Token: 0x1700AA6A RID: 43626
+		// (get) Token: 0x06026686 RID: 157318 RVA: 0x0054295A File Offset: 0x00540B5A
+		// (set) Token: 0x06026687 RID: 157319 RVA: 0x00542962 File Offset: 0x00540B62
 		public object Value { get; set; }
 
-		// Token: 0x0602447B RID: 148603 RVA: 0x005023F3 File Offset: 0x005005F3
+		// Token: 0x06026688 RID: 157320 RVA: 0x0054296B File Offset: 0x00540B6B
 		public IMonsterShowOnDeathConfig_UnionUnion()
 		{
 			this.Type = IMonsterShowOnDeathConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602447C RID: 148604 RVA: 0x00502409 File Offset: 0x00500609
+		// Token: 0x06026689 RID: 157321 RVA: 0x00542981 File Offset: 0x00540B81
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602447D RID: 148605 RVA: 0x0050241B File Offset: 0x0050061B
+		// Token: 0x0602668A RID: 157322 RVA: 0x00542993 File Offset: 0x00540B93
 		public IMonsterShowOnDeathConfigT AsIMonsterShowOnDeathConfig()
 		{
 			return this.As<IMonsterShowOnDeathConfigT>();
 		}
 
-		// Token: 0x0602447E RID: 148606 RVA: 0x00502423 File Offset: 0x00500623
+		// Token: 0x0602668B RID: 157323 RVA: 0x0054299B File Offset: 0x00540B9B
 		public static IMonsterShowOnDeathConfig_UnionUnion FromIMonsterShowOnDeathConfig(IMonsterShowOnDeathConfigT _imonstershowondeathconfig)
 		{
 			return new IMonsterShowOnDeathConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602447F RID: 148607 RVA: 0x00502438 File Offset: 0x00500638
+		// Token: 0x0602668C RID: 157324 RVA: 0x005429B0 File Offset: 0x00540BB0
 		public IMonsterShowOnDeathEffectT AsIMonsterShowOnDeathEffect()
 		{
 			return this.As<IMonsterShowOnDeathEffectT>();
 		}
 
-		// Token: 0x06024480 RID: 148608 RVA: 0x00502440 File Offset: 0x00500640
+		// Token: 0x0602668D RID: 157325 RVA: 0x005429B8 File Offset: 0x00540BB8
 		public static IMonsterShowOnDeathConfig_UnionUnion FromIMonsterShowOnDeathEffect(IMonsterShowOnDeathEffectT _imonstershowondeatheffect)
 		{
 			return new IMonsterShowOnDeathConfig_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06024481 RID: 148609 RVA: 0x00502458 File Offset: 0x00500658
+		// Token: 0x0602668E RID: 157326 RVA: 0x005429D0 File Offset: 0x00540BD0
 		public static int Pack(FlatBufferBuilder builder, IMonsterShowOnDeathConfig_UnionUnion _o)
 		{
 			IMonsterShowOnDeathConfig_Union type = _o.Type;

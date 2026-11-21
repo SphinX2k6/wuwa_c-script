@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x020043BC RID: 17340
+	// Token: 0x020033D8 RID: 13272
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/EFreeCameraInputMode.EFreeCameraInputMode")]
 	public enum EFreeCameraInputMode : byte
 	{
-		// Token: 0x04017C6C RID: 97388
+		// Token: 0x040127D9 RID: 75737
 		禁止,
-		// Token: 0x04017C6D RID: 97389
+		// Token: 0x040127DA RID: 75738
 		拖动,
-		// Token: 0x04017C6E RID: 97390
+		// Token: 0x040127DB RID: 75739
 		EFreeCameraInputMode_MAX
 	}
 }

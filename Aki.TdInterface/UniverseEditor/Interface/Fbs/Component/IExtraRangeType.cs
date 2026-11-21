@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005216 RID: 21014
+	// Token: 0x0200577E RID: 22398
 	public struct IExtraRangeType : IFlatbufferObject
 	{
-		// Token: 0x170099ED RID: 39405
-		// (get) Token: 0x0602226A RID: 139882 RVA: 0x004BD0A3 File Offset: 0x004BB2A3
+		// Token: 0x1700A1E9 RID: 41449
+		// (get) Token: 0x06024200 RID: 147968 RVA: 0x004F7B67 File Offset: 0x004F5D67
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602226B RID: 139883 RVA: 0x004BD0B0 File Offset: 0x004BB2B0
+		// Token: 0x06024201 RID: 147969 RVA: 0x004F7B74 File Offset: 0x004F5D74
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602226C RID: 139884 RVA: 0x004BD0B8 File Offset: 0x004BB2B8
+		// Token: 0x06024202 RID: 147970 RVA: 0x004F7B7C File Offset: 0x004F5D7C
 		public static IExtraRangeType GetRootAsIExtraRangeType(ByteBuffer _bb)
 		{
 			return IExtraRangeType.GetRootAsIExtraRangeType(_bb, default(IExtraRangeType));
 		}
 
-		// Token: 0x0602226D RID: 139885 RVA: 0x004BD0D4 File Offset: 0x004BB2D4
+		// Token: 0x06024203 RID: 147971 RVA: 0x004F7B98 File Offset: 0x004F5D98
 		public static IExtraRangeType GetRootAsIExtraRangeType(ByteBuffer _bb, IExtraRangeType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602226E RID: 139886 RVA: 0x004BD0F1 File Offset: 0x004BB2F1
+		// Token: 0x06024204 RID: 147972 RVA: 0x004F7BB5 File Offset: 0x004F5DB5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602226F RID: 139887 RVA: 0x004BD100 File Offset: 0x004BB300
+		// Token: 0x06024205 RID: 147973 RVA: 0x004F7BC4 File Offset: 0x004F5DC4
 		public IExtraRangeType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170099EE RID: 39406
-		// (get) Token: 0x06022270 RID: 139888 RVA: 0x004BD110 File Offset: 0x004BB310
+		// Token: 0x1700A1EA RID: 41450
+		// (get) Token: 0x06024206 RID: 147974 RVA: 0x004F7BD4 File Offset: 0x004F5DD4
 		public EExtraRangeType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022271 RID: 139889 RVA: 0x004BD14C File Offset: 0x004BB34C
+		// Token: 0x06024207 RID: 147975 RVA: 0x004F7C10 File Offset: 0x004F5E10
 		public static Offset<IExtraRangeType> CreateIExtraRangeType(FlatBufferBuilder builder, EExtraRangeType Type = EExtraRangeType.SunSpiritBlock)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IExtraRangeType.EndIExtraRangeType(builder);
 		}
 
-		// Token: 0x06022272 RID: 139890 RVA: 0x004BD162 File Offset: 0x004BB362
+		// Token: 0x06024208 RID: 147976 RVA: 0x004F7C26 File Offset: 0x004F5E26
 		public static void StartIExtraRangeType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06022273 RID: 139891 RVA: 0x004BD16B File Offset: 0x004BB36B
+		// Token: 0x06024209 RID: 147977 RVA: 0x004F7C2F File Offset: 0x004F5E2F
 		public static void AddType(FlatBufferBuilder builder, EExtraRangeType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06022274 RID: 139892 RVA: 0x004BD176 File Offset: 0x004BB376
+		// Token: 0x0602420A RID: 147978 RVA: 0x004F7C3A File Offset: 0x004F5E3A
 		public static Offset<IExtraRangeType> EndIExtraRangeType(FlatBufferBuilder builder)
 		{
 			return new Offset<IExtraRangeType>(builder.EndTable());
 		}
 
-		// Token: 0x06022275 RID: 139893 RVA: 0x004BD184 File Offset: 0x004BB384
+		// Token: 0x0602420B RID: 147979 RVA: 0x004F7C48 File Offset: 0x004F5E48
 		public IExtraRangeTypeT UnPack()
 		{
 			IExtraRangeTypeT extraRangeTypeT = new IExtraRangeTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return extraRangeTypeT;
 		}
 
-		// Token: 0x06022276 RID: 139894 RVA: 0x004BD19F File Offset: 0x004BB39F
+		// Token: 0x0602420C RID: 147980 RVA: 0x004F7C63 File Offset: 0x004F5E63
 		public void UnPackTo(IExtraRangeTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06022277 RID: 139895 RVA: 0x004BD1B0 File Offset: 0x004BB3B0
+		// Token: 0x0602420D RID: 147981 RVA: 0x004F7C74 File Offset: 0x004F5E74
 		public static Offset<IExtraRangeType> Pack(FlatBufferBuilder builder, IExtraRangeTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IExtraRangeType.CreateIExtraRangeType(builder, _o.Type);
 		}
 
-		// Token: 0x0400E34E RID: 58190
+		// Token: 0x0400EF54 RID: 61268
 		private Table __p;
 	}
 }

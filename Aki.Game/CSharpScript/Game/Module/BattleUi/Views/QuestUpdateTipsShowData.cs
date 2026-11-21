@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D7D RID: 23933
+	// Token: 0x02004D5F RID: 19807
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestUpdateTipsShowData
 	{
-		// Token: 0x17008E4C RID: 36428
-		// (get) Token: 0x0603CBF5 RID: 248821 RVA: 0x00E95710 File Offset: 0x00E93910
+		// Token: 0x1700621E RID: 25118
+		// (get) Token: 0x06031B51 RID: 203601 RVA: 0x00DE5F58 File Offset: 0x00DE4158
 		public IMissionItemViewShowData MissionViewShowData { get; }
 
-		// Token: 0x17008E4D RID: 36429
-		// (get) Token: 0x0603CBF6 RID: 248822 RVA: 0x00E95718 File Offset: 0x00E93918
+		// Token: 0x1700621F RID: 25119
+		// (get) Token: 0x06031B52 RID: 203602 RVA: 0x00DE5F60 File Offset: 0x00DE4160
 		public bool IsSkipAnim { get; }
 
-		// Token: 0x17008E4E RID: 36430
-		// (get) Token: 0x0603CBF7 RID: 248823 RVA: 0x00E95720 File Offset: 0x00E93920
+		// Token: 0x17006220 RID: 25120
+		// (get) Token: 0x06031B53 RID: 203603 RVA: 0x00DE5F68 File Offset: 0x00DE4168
 		public bool IsNewQuest { get; }
 
-		// Token: 0x17008E4F RID: 36431
-		// (get) Token: 0x0603CBF8 RID: 248824 RVA: 0x00E95728 File Offset: 0x00E93928
+		// Token: 0x17006221 RID: 25121
+		// (get) Token: 0x06031B54 RID: 203604 RVA: 0x00DE5F70 File Offset: 0x00DE4170
 		public int NodeId { get; }
 
-		// Token: 0x0603CBF9 RID: 248825 RVA: 0x00E95730 File Offset: 0x00E93930
+		// Token: 0x06031B55 RID: 203605 RVA: 0x00DE5F78 File Offset: 0x00DE4178
 		public QuestUpdateTipsShowData(IMissionItemViewShowData missionViewShowData, bool isSkipAnim, bool isNewQuest, int nodeId)
 		{
 			this.MissionViewShowData = missionViewShowData;
@@ -33,8 +33,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.NodeId = nodeId;
 		}
 
-		// Token: 0x17008E50 RID: 36432
-		// (get) Token: 0x0603CBFA RID: 248826 RVA: 0x00E95758 File Offset: 0x00E93958
+		// Token: 0x17006222 RID: 25122
+		// (get) Token: 0x06031B56 RID: 203606 RVA: 0x00DE5FA0 File Offset: 0x00DE41A0
 		public int QuestId
 		{
 			get

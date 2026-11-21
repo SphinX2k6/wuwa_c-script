@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.SimpleGameplay
 {
-	// Token: 0x02006BBA RID: 27578
+	// Token: 0x02005D33 RID: 23859
 	[NullableContext(1)]
 	public interface ISimpleGameplayOpenHost
 	{
-		// Token: 0x1700999C RID: 39324
-		// (get) Token: 0x06044343 RID: 279363
+		// Token: 0x17006E9F RID: 28319
+		// (get) Token: 0x0603A49B RID: 238747
 		GeneralContext Context { get; }
 
-		// Token: 0x1700999D RID: 39325
-		// (get) Token: 0x06044344 RID: 279364
+		// Token: 0x17006EA0 RID: 28320
+		// (get) Token: 0x0603A49C RID: 238748
 		[Nullable(new byte[]
 		{
 			1,
@@ -24,8 +24,8 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.SimpleGameplay
 			2
 		})] get; }
 
-		// Token: 0x1700999E RID: 39326
-		// (get) Token: 0x06044345 RID: 279365
+		// Token: 0x17006EA1 RID: 28321
+		// (get) Token: 0x0603A49D RID: 238749
 		[Nullable(new byte[]
 		{
 			1,
@@ -37,16 +37,16 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.SimpleGameplay
 			2
 		})] get; }
 
-		// Token: 0x1700999F RID: 39327
-		// (get) Token: 0x06044346 RID: 279366
+		// Token: 0x17006EA2 RID: 28322
+		// (get) Token: 0x0603A49E RID: 238750
 		Action<long> SetCreatureDataId { get; }
 
-		// Token: 0x170099A0 RID: 39328
-		// (get) Token: 0x06044347 RID: 279367
+		// Token: 0x17006EA3 RID: 28323
+		// (get) Token: 0x0603A49F RID: 238751
 		Action FinishCallback { get; }
 
-		// Token: 0x170099A1 RID: 39329
-		// (get) Token: 0x06044348 RID: 279368
+		// Token: 0x17006EA4 RID: 28324
+		// (get) Token: 0x0603A4A0 RID: 238752
 		Action<bool> FinishWithResultCallback { get; }
 	}
 }

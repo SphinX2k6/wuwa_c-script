@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200022B RID: 555
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000252 RID: 594
 	public class IChangeTemplateInstanceStateConfig
 	{
-		// Token: 0x060009AC RID: 2476 RVA: 0x00029AC8 File Offset: 0x00027CC8
+		// Token: 0x06000A20 RID: 2592 RVA: 0x0002B288 File Offset: 0x00029488
 		private IChangeTemplateInstanceStateConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060009AD RID: 2477 RVA: 0x00029B00 File Offset: 0x00027D00
+		// Token: 0x06000A21 RID: 2593 RVA: 0x0002B2C0 File Offset: 0x000294C0
 		public static IChangeTemplateInstanceStateConfig Create([Nullable(2)] IChangeTemplateInstanceStateConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060009AE RID: 2478 RVA: 0x00029B13 File Offset: 0x00027D13
+		// Token: 0x06000A22 RID: 2594 RVA: 0x0002B2D3 File Offset: 0x000294D3
 		public static IChangeTemplateInstanceStateConfig CreateFromSetValue([Nullable(2)] IChangeTemplateInstanceStateConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060009AF RID: 2479 RVA: 0x00029B26 File Offset: 0x00027D26
+		// Token: 0x06000A23 RID: 2595 RVA: 0x0002B2E6 File Offset: 0x000294E6
 		public IChangeTemplateInstanceStateConfig_SetValue ToSetValue()
 		{
 			return new IChangeTemplateInstanceStateConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170002F3 RID: 755
-		// (get) Token: 0x060009B0 RID: 2480 RVA: 0x00029B48 File Offset: 0x00027D48
-		// (set) Token: 0x060009B1 RID: 2481 RVA: 0x00029BA9 File Offset: 0x00027DA9
+		// Token: 0x17000312 RID: 786
+		// (get) Token: 0x06000A24 RID: 2596 RVA: 0x0002B308 File Offset: 0x00029508
+		// (set) Token: 0x06000A25 RID: 2597 RVA: 0x0002B369 File Offset: 0x00029569
 		[Nullable(2)]
 		public virtual IConditionGroup Condition
 		{
@@ -94,9 +92,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002F4 RID: 756
-		// (get) Token: 0x060009B2 RID: 2482 RVA: 0x00029BBE File Offset: 0x00027DBE
-		// (set) Token: 0x060009B3 RID: 2483 RVA: 0x00029BE9 File Offset: 0x00027DE9
+		// Token: 0x17000313 RID: 787
+		// (get) Token: 0x06000A26 RID: 2598 RVA: 0x0002B37E File Offset: 0x0002957E
+		// (set) Token: 0x06000A27 RID: 2599 RVA: 0x0002B3A9 File Offset: 0x000295A9
 		public virtual string State
 		{
 			get
@@ -117,18 +115,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040009F1 RID: 2545
+		// Token: 0x04000A7B RID: 2683
 		[Nullable(2)]
 		protected IChangeTemplateInstanceStateConfig FbInstance;
 
-		// Token: 0x040009F2 RID: 2546
+		// Token: 0x04000A7C RID: 2684
 		[Nullable(2)]
 		protected IChangeTemplateInstanceStateConfig_SetValue PocoInterface;
 
-		// Token: 0x040009F3 RID: 2547
+		// Token: 0x04000A7D RID: 2685
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x040009F4 RID: 2548
+		// Token: 0x04000A7E RID: 2686
 		private bool _ConditionInited;
 	}
 }

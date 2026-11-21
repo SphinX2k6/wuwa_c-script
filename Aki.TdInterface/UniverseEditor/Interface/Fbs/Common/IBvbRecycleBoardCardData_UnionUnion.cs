@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D5F RID: 23903
+	// Token: 0x02006396 RID: 25494
 	public class IBvbRecycleBoardCardData_UnionUnion
 	{
-		// Token: 0x1700B314 RID: 45844
-		// (get) Token: 0x06028E44 RID: 167492 RVA: 0x0059E4C5 File Offset: 0x0059C6C5
-		// (set) Token: 0x06028E45 RID: 167493 RVA: 0x0059E4CD File Offset: 0x0059C6CD
+		// Token: 0x1700BC75 RID: 48245
+		// (get) Token: 0x0602B4AE RID: 177326 RVA: 0x005E6F35 File Offset: 0x005E5135
+		// (set) Token: 0x0602B4AF RID: 177327 RVA: 0x005E6F3D File Offset: 0x005E513D
 		public IBvbRecycleBoardCardData_Union Type { get; set; }
 
-		// Token: 0x1700B315 RID: 45845
-		// (get) Token: 0x06028E46 RID: 167494 RVA: 0x0059E4D6 File Offset: 0x0059C6D6
-		// (set) Token: 0x06028E47 RID: 167495 RVA: 0x0059E4DE File Offset: 0x0059C6DE
+		// Token: 0x1700BC76 RID: 48246
+		// (get) Token: 0x0602B4B0 RID: 177328 RVA: 0x005E6F46 File Offset: 0x005E5146
+		// (set) Token: 0x0602B4B1 RID: 177329 RVA: 0x005E6F4E File Offset: 0x005E514E
 		public object Value { get; set; }
 
-		// Token: 0x06028E48 RID: 167496 RVA: 0x0059E4E7 File Offset: 0x0059C6E7
+		// Token: 0x0602B4B2 RID: 177330 RVA: 0x005E6F57 File Offset: 0x005E5157
 		public IBvbRecycleBoardCardData_UnionUnion()
 		{
 			this.Type = IBvbRecycleBoardCardData_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028E49 RID: 167497 RVA: 0x0059E4FD File Offset: 0x0059C6FD
+		// Token: 0x0602B4B3 RID: 177331 RVA: 0x005E6F6D File Offset: 0x005E516D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028E4A RID: 167498 RVA: 0x0059E50F File Offset: 0x0059C70F
+		// Token: 0x0602B4B4 RID: 177332 RVA: 0x005E6F7F File Offset: 0x005E517F
 		public IBvbRecycleBoardCardDataT AsIBvbRecycleBoardCardData()
 		{
 			return this.As<IBvbRecycleBoardCardDataT>();
 		}
 
-		// Token: 0x06028E4B RID: 167499 RVA: 0x0059E517 File Offset: 0x0059C717
+		// Token: 0x0602B4B5 RID: 177333 RVA: 0x005E6F87 File Offset: 0x005E5187
 		public static IBvbRecycleBoardCardData_UnionUnion FromIBvbRecycleBoardCardData(IBvbRecycleBoardCardDataT _ibvbrecycleboardcarddata)
 		{
 			return new IBvbRecycleBoardCardData_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06028E4C RID: 167500 RVA: 0x0059E52C File Offset: 0x0059C72C
+		// Token: 0x0602B4B6 RID: 177334 RVA: 0x005E6F9C File Offset: 0x005E519C
 		public IDiscardForEnergyToDeployTypeT AsIDiscardForEnergyToDeployType()
 		{
 			return this.As<IDiscardForEnergyToDeployTypeT>();
 		}
 
-		// Token: 0x06028E4D RID: 167501 RVA: 0x0059E534 File Offset: 0x0059C734
+		// Token: 0x0602B4B7 RID: 177335 RVA: 0x005E6FA4 File Offset: 0x005E51A4
 		public static IBvbRecycleBoardCardData_UnionUnion FromIDiscardForEnergyToDeployType(IDiscardForEnergyToDeployTypeT _idiscardforenergytodeploytype)
 		{
 			return new IBvbRecycleBoardCardData_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06028E4E RID: 167502 RVA: 0x0059E549 File Offset: 0x0059C749
+		// Token: 0x0602B4B8 RID: 177336 RVA: 0x005E6FB9 File Offset: 0x005E51B9
 		public IDiscardForEnergyToEvolutionTypeT AsIDiscardForEnergyToEvolutionType()
 		{
 			return this.As<IDiscardForEnergyToEvolutionTypeT>();
 		}
 
-		// Token: 0x06028E4F RID: 167503 RVA: 0x0059E551 File Offset: 0x0059C751
+		// Token: 0x0602B4B9 RID: 177337 RVA: 0x005E6FC1 File Offset: 0x005E51C1
 		public static IBvbRecycleBoardCardData_UnionUnion FromIDiscardForEnergyToEvolutionType(IDiscardForEnergyToEvolutionTypeT _idiscardforenergytoevolutiontype)
 		{
 			return new IBvbRecycleBoardCardData_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06028E50 RID: 167504 RVA: 0x0059E568 File Offset: 0x0059C768
+		// Token: 0x0602B4BA RID: 177338 RVA: 0x005E6FD8 File Offset: 0x005E51D8
 		public static int Pack(FlatBufferBuilder builder, IBvbRecycleBoardCardData_UnionUnion _o)
 		{
 			switch (_o.Type)

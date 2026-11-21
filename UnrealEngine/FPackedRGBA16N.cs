@@ -7,39 +7,39 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200075A RID: 1882
+	// Token: 0x02000140 RID: 320
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(8, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 8)]
 	[UnrealObjectPath("/Script/CoreUObject.PackedRGBA16N")]
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 8)]
 	public struct FPackedRGBA16N : IEqualityOperators<FPackedRGBA16N, FPackedRGBA16N, bool>, IEquatable<FPackedRGBA16N>, IUnrealScriptStruct
 	{
-		// Token: 0x06006341 RID: 25409 RVA: 0x0008E7F6 File Offset: 0x0008C9F6
+		// Token: 0x0600129D RID: 4765 RVA: 0x0001D776 File Offset: 0x0001B976
 		public FPackedRGBA16N(int XY, int ZW)
 		{
 			this.XY = XY;
 			this.ZW = ZW;
 		}
 
-		// Token: 0x06006342 RID: 25410 RVA: 0x0008E806 File Offset: 0x0008CA06
+		// Token: 0x0600129E RID: 4766 RVA: 0x0001D786 File Offset: 0x0001B986
 		public static bool operator ==(FPackedRGBA16N left, FPackedRGBA16N right)
 		{
 			return left.XY == right.XY && left.ZW == right.ZW;
 		}
 
-		// Token: 0x06006343 RID: 25411 RVA: 0x0008E826 File Offset: 0x0008CA26
+		// Token: 0x0600129F RID: 4767 RVA: 0x0001D7A6 File Offset: 0x0001B9A6
 		public static bool operator !=(FPackedRGBA16N left, FPackedRGBA16N right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x06006344 RID: 25412 RVA: 0x0008E832 File Offset: 0x0008CA32
+		// Token: 0x060012A0 RID: 4768 RVA: 0x0001D7B2 File Offset: 0x0001B9B2
 		public bool Equals(FPackedRGBA16N other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06006345 RID: 25413 RVA: 0x0008E840 File Offset: 0x0008CA40
+		// Token: 0x060012A1 RID: 4769 RVA: 0x0001D7C0 File Offset: 0x0001B9C0
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -51,30 +51,30 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06006346 RID: 25414 RVA: 0x0008E865 File Offset: 0x0008CA65
+		// Token: 0x060012A2 RID: 4770 RVA: 0x0001D7E5 File Offset: 0x0001B9E5
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<int, int>(this.XY, this.ZW);
 		}
 
-		// Token: 0x06006347 RID: 25415 RVA: 0x0008E878 File Offset: 0x0008CA78
+		// Token: 0x060012A3 RID: 4771 RVA: 0x0001D7F8 File Offset: 0x0001B9F8
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FPackedRGBA16N._ScriptStructPtr != 0) ? FPackedRGBA16N._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.PackedRGBA16N", ref FPackedRGBA16N._ScriptStructPtr);
 		}
 
-		// Token: 0x04002F90 RID: 12176
+		// Token: 0x040005C6 RID: 1478
 		[FieldOffset(0)]
 		public int XY;
 
-		// Token: 0x04002F91 RID: 12177
+		// Token: 0x040005C7 RID: 1479
 		[FieldOffset(4)]
 		public int ZW;
 
-		// Token: 0x04002F92 RID: 12178
+		// Token: 0x040005C8 RID: 1480
 		public const string __ObjectPath = "/Script/CoreUObject.PackedRGBA16N";
 
-		// Token: 0x04002F93 RID: 12179
+		// Token: 0x040005C9 RID: 1481
 		private static IntPtr _ScriptStructPtr;
 	}
 }

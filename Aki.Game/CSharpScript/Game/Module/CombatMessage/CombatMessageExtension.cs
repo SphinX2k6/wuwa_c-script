@@ -7,10 +7,10 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.CombatMessage
 {
-	// Token: 0x02005BAC RID: 23468
+	// Token: 0x02004B8C RID: 19340
 	public static class CombatMessageExtension
 	{
-		// Token: 0x0603B59B RID: 243099 RVA: 0x00E25BF8 File Offset: 0x00E23DF8
+		// Token: 0x060304E8 RID: 197864 RVA: 0x00D75F70 File Offset: 0x00D74170
 		[return: Nullable(2)]
 		public static CombatExactNotifyDataPack GetExactNotifyDataPack(this CombatNotifyData notifyData)
 		{
@@ -161,14 +161,14 @@ namespace CSharpScript.Game.Module.CombatMessage
 				return new CombatExactNotifyDataPack(notifyData.BulletPatternNotify, messageCase);
 			case CombatNotifyData.MessageOneofCase.FsmMontageDurationNotify:
 				return new CombatExactNotifyDataPack(notifyData.FsmMontageDurationNotify, messageCase);
-			case CombatNotifyData.MessageOneofCase.SwitchDarkTideWeaponSlotNotify:
-				return new CombatExactNotifyDataPack(notifyData.SwitchDarkTideWeaponSlotNotify, messageCase);
 			case CombatNotifyData.MessageOneofCase.CombatValNotify:
 				return new CombatExactNotifyDataPack(notifyData.CombatValNotify, messageCase);
 			case CombatNotifyData.MessageOneofCase.CombatValDecayBeginNotify:
 				return new CombatExactNotifyDataPack(notifyData.CombatValDecayBeginNotify, messageCase);
 			case CombatNotifyData.MessageOneofCase.SquadPropChangedNotify:
 				return new CombatExactNotifyDataPack(notifyData.SquadPropChangedNotify, messageCase);
+			case CombatNotifyData.MessageOneofCase.DamageShowNotify:
+				return new CombatExactNotifyDataPack(notifyData.DamageShowNotify, messageCase);
 			case CombatNotifyData.MessageOneofCase.CombatDataMaxNotify:
 				return new CombatExactNotifyDataPack(notifyData.CombatDataMaxNotify, messageCase);
 			}
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return null;
 		}
 
-		// Token: 0x0603B59C RID: 243100 RVA: 0x00E261BC File Offset: 0x00E243BC
+		// Token: 0x060304E9 RID: 197865 RVA: 0x00D76534 File Offset: 0x00D74734
 		[return: Nullable(2)]
 		public static CombatExactRequestDataPack GetExactRequestDataPack(this CombatRequestData requestData)
 		{
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return null;
 		}
 
-		// Token: 0x0603B59D RID: 243101 RVA: 0x00E26704 File Offset: 0x00E24904
+		// Token: 0x060304EA RID: 197866 RVA: 0x00D76A7C File Offset: 0x00D74C7C
 		[return: Nullable(2)]
 		public static CombatExactResponseDataPack GetExactResponseDataPack(this CombatResponseData responseData)
 		{
@@ -487,267 +487,83 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return null;
 		}
 
-		// Token: 0x0603B59E RID: 243102 RVA: 0x00E26C50 File Offset: 0x00E24E50
+		// Token: 0x060304EB RID: 197867 RVA: 0x00D76FC8 File Offset: 0x00D751C8
 		public static void SetPushDataMessage(CombatPushData pushData, ECombatPushDataMessage messageType, IMessage data)
 		{
-			if (messageType <= ECombatPushDataMessage.RoleGoDownPush)
+			if (messageType <= ECombatPushDataMessage.RTimeStopPush)
 			{
-				if (messageType <= ECombatPushDataMessage.ExitViewDirectionPush)
+				if (messageType <= ECombatPushDataMessage.SwitchCharacterStatePush)
 				{
-					if (messageType <= ECombatPushDataMessage.ApplyBuffS2cResponsePush)
+					if (messageType <= ECombatPushDataMessage.RoleGoDownPush)
 					{
-						if (messageType <= ECombatPushDataMessage.PassiveSkillRemovePush)
+						if (messageType <= ECombatPushDataMessage.HitEndPush)
 						{
-							if (messageType <= ECombatPushDataMessage.EndSkillPush)
+							if (messageType <= ECombatPushDataMessage.UseSkillFailPush)
 							{
-								if (messageType == ECombatPushDataMessage.RoleTrialSceneRollbackPush)
+								if (messageType == ECombatPushDataMessage.AnimationGameplayTagPush)
 								{
-									pushData.RoleTrialSceneRollbackPush = (data as RoleTrialSceneRollbackPush);
+									pushData.AnimationGameplayTagPush = (data as AnimationGameplayTagPush);
 									return;
 								}
-								if (messageType == ECombatPushDataMessage.EndSkillPush)
+								if (messageType == ECombatPushDataMessage.UseSkillFailPush)
 								{
-									pushData.EndSkillPush = (data as EndSkillPush);
+									pushData.UseSkillFailPush = (data as UseSkillFailPush);
 									return;
 								}
 							}
 							else
 							{
-								if (messageType == ECombatPushDataMessage.CreateBulletPush)
+								if (messageType == ECombatPushDataMessage.BulletPatternPush)
 								{
-									pushData.CreateBulletPush = (data as CreateBulletPush);
+									pushData.BulletPatternPush = (data as BulletPatternPush);
 									return;
 								}
-								if (messageType == ECombatPushDataMessage.PassiveSkillRemovePush)
+								if (messageType == ECombatPushDataMessage.HitEndPush)
 								{
-									pushData.PassiveSkillRemovePush = (data as PassiveSkillRemovePush);
+									pushData.HitEndPush = (data as HitEndPush);
 									return;
 								}
 							}
 						}
-						else if (messageType <= ECombatPushDataMessage.ChangeStateConfirmPush)
+						else if (messageType <= ECombatPushDataMessage.ActivateBuffPush)
 						{
-							if (messageType == ECombatPushDataMessage.SwitchDarkTideWeaponPush)
+							if (messageType == ECombatPushDataMessage.RemoveBuffByIdS2cResponsePush)
 							{
-								pushData.SwitchDarkTideWeaponPush = (data as SwitchDarkTideWeaponPush);
+								pushData.RemoveBuffByIdS2CResponsePush = (data as RemoveBuffByIdS2cResponsePush);
 								return;
 							}
-							if (messageType == ECombatPushDataMessage.ChangeStateConfirmPush)
+							if (messageType == ECombatPushDataMessage.ActivateBuffPush)
 							{
-								pushData.ChangeStateConfirmPush = (data as ChangeStateConfirmPush);
-								return;
-							}
-						}
-						else
-						{
-							if (messageType == ECombatPushDataMessage.QuickHackOpenPush)
-							{
-								pushData.QuickHackOpenPush = (data as QuickHackOpenPush);
-								return;
-							}
-							if (messageType == ECombatPushDataMessage.ApplyBuffS2cResponsePush)
-							{
-								pushData.ApplyBuffS2CResponsePush = (data as ApplyBuffS2cResponsePush);
-								return;
-							}
-						}
-					}
-					else if (messageType <= ECombatPushDataMessage.SwitchCharacterStatePush)
-					{
-						if (messageType <= ECombatPushDataMessage.DrownPush)
-						{
-							if (messageType == ECombatPushDataMessage.BuffEffectExecutePush)
-							{
-								pushData.BuffEffectExecutePush = (data as BuffEffectExecutePush);
-								return;
-							}
-							if (messageType == ECombatPushDataMessage.DrownPush)
-							{
-								pushData.DrownPush = (data as DrownPush);
+								pushData.ActivateBuffPush = (data as ActivateBuffPush);
 								return;
 							}
 						}
 						else
 						{
-							if (messageType == ECombatPushDataMessage.FsmConditionPassPush)
+							if (messageType == ECombatPushDataMessage.RemoveBuffS2cResponsePush)
 							{
-								pushData.FsmConditionPassPush = (data as FsmConditionPassPush);
+								pushData.RemoveBuffS2CResponsePush = (data as RemoveBuffS2cResponsePush);
 								return;
 							}
-							if (messageType == ECombatPushDataMessage.SwitchCharacterStatePush)
+							if (messageType == ECombatPushDataMessage.RoleGoDownPush)
 							{
-								pushData.SwitchCharacterStatePush = (data as SwitchCharacterStatePush);
-								return;
-							}
-						}
-					}
-					else if (messageType <= ECombatPushDataMessage.GameplayCuePush)
-					{
-						if (messageType == ECombatPushDataMessage.RemoveBuffByIdS2cResponsePush)
-						{
-							pushData.RemoveBuffByIdS2CResponsePush = (data as RemoveBuffByIdS2cResponsePush);
-							return;
-						}
-						if (messageType == ECombatPushDataMessage.GameplayCuePush)
-						{
-							pushData.GameplayCuePush = (data as GameplayCuePush);
-							return;
-						}
-					}
-					else
-					{
-						if (messageType == ECombatPushDataMessage.BoneVisibleChangePush)
-						{
-							pushData.BoneVisibleChangePush = (data as BoneVisibleChangePush);
-							return;
-						}
-						if (messageType == ECombatPushDataMessage.VisionTriggerPush)
-						{
-							pushData.VisionTriggerPush = (data as VisionTriggerPush);
-							return;
-						}
-						if (messageType == ECombatPushDataMessage.ExitViewDirectionPush)
-						{
-							pushData.ExitViewDirectionPush = (data as ExitViewDirectionPush);
-							return;
-						}
-					}
-				}
-				else if (messageType <= ECombatPushDataMessage.GameplayTagPush)
-				{
-					if (messageType <= ECombatPushDataMessage.ClientCurrentRoleReportPush)
-					{
-						if (messageType <= ECombatPushDataMessage.RTimeStopPush)
-						{
-							if (messageType == ECombatPushDataMessage.CaughtPush)
-							{
-								pushData.CaughtPush = (data as CaughtPush);
-								return;
-							}
-							if (messageType == ECombatPushDataMessage.RTimeStopPush)
-							{
-								pushData.RTimeStopPush = (data as RTimeStopPush);
-								return;
-							}
-						}
-						else
-						{
-							if (messageType == ECombatPushDataMessage.DrownEndTeleportPush)
-							{
-								pushData.DrownEndTeleportPush = (data as DrownEndTeleportPush);
-								return;
-							}
-							if (messageType == ECombatPushDataMessage.ClientCurrentRoleReportPush)
-							{
-								pushData.ClientCurrentRoleReportPush = (data as ClientCurrentRoleReportPush);
+								pushData.RoleGoDownPush = (data as RoleGoDownPush);
 								return;
 							}
 						}
 					}
-					else if (messageType <= ECombatPushDataMessage.RemoveGameplayEffectPush)
+					else if (messageType <= ECombatPushDataMessage.MotorIsEnablePush)
 					{
-						if (messageType == ECombatPushDataMessage.AnimationGameplayTagPush)
+						if (messageType <= ECombatPushDataMessage.ExitViewDirectionPush)
 						{
-							pushData.AnimationGameplayTagPush = (data as AnimationGameplayTagPush);
-							return;
-						}
-						if (messageType == ECombatPushDataMessage.RemoveGameplayEffectPush)
-						{
-							pushData.RemoveGameplayEffectPush = (data as RemoveGameplayEffectPush);
-							return;
-						}
-					}
-					else
-					{
-						if (messageType == ECombatPushDataMessage.TriggerExitSkillPush)
-						{
-							pushData.TriggerExitSkillPush = (data as TriggerExitSkillPush);
-							return;
-						}
-						if (messageType == ECombatPushDataMessage.GameplayTagPush)
-						{
-							pushData.GameplayTagPush = (data as GameplayTagPush);
-							return;
-						}
-					}
-				}
-				else if (messageType <= ECombatPushDataMessage.BuffEffectPush)
-				{
-					if (messageType <= ECombatPushDataMessage.LogicStateInitPush)
-					{
-						if (messageType == ECombatPushDataMessage.AnimationStateChangedPush)
-						{
-							pushData.AnimationStateChangedPush = (data as AnimationStateChangedPush);
-							return;
-						}
-						if (messageType == ECombatPushDataMessage.LogicStateInitPush)
-						{
-							pushData.LogicStateInitPush = (data as LogicStateInitPush);
-							return;
-						}
-					}
-					else
-					{
-						if (messageType == ECombatPushDataMessage.RTimeStopInstPush)
-						{
-							pushData.RTimeStopInstPush = (data as RTimeStopInstPush);
-							return;
-						}
-						if (messageType == ECombatPushDataMessage.BuffEffectPush)
-						{
-							pushData.BuffEffectPush = (data as BuffEffectPush);
-							return;
-						}
-					}
-				}
-				else if (messageType <= ECombatPushDataMessage.ActivateBuffPush)
-				{
-					if (messageType == ECombatPushDataMessage.AiInformationPush)
-					{
-						pushData.AiInformationPush = (data as AiInformationPush);
-						return;
-					}
-					if (messageType == ECombatPushDataMessage.ActivateBuffPush)
-					{
-						pushData.ActivateBuffPush = (data as ActivateBuffPush);
-						return;
-					}
-				}
-				else
-				{
-					if (messageType == ECombatPushDataMessage.BeforeHitPush)
-					{
-						pushData.BeforeHitPush = (data as BeforeHitPush);
-						return;
-					}
-					if (messageType == ECombatPushDataMessage.HitEndPush)
-					{
-						pushData.HitEndPush = (data as HitEndPush);
-						return;
-					}
-					if (messageType == ECombatPushDataMessage.RoleGoDownPush)
-					{
-						pushData.RoleGoDownPush = (data as RoleGoDownPush);
-						return;
-					}
-				}
-			}
-			else if (messageType <= ECombatPushDataMessage.ExecuteQtePush)
-			{
-				if (messageType <= ECombatPushDataMessage.ANStartPush)
-				{
-					if (messageType <= ECombatPushDataMessage.ModifyBulletParamsPush)
-					{
-						if (messageType <= ECombatPushDataMessage.PassiveSkillAddPush)
-						{
-							if (messageType == ECombatPushDataMessage.BuffStackCountPush)
+							if (messageType == ECombatPushDataMessage.LogicStateInitPush)
 							{
-								pushData.BuffStackCountPush = (data as BuffStackCountPush);
+								pushData.LogicStateInitPush = (data as LogicStateInitPush);
 								return;
 							}
-							if (messageType == ECombatPushDataMessage.PassiveSkillAddPush)
+							if (messageType == ECombatPushDataMessage.ExitViewDirectionPush)
 							{
-								pushData.PassiveSkillAddPush = (data as PassiveSkillAddPush);
+								pushData.ExitViewDirectionPush = (data as ExitViewDirectionPush);
 								return;
 							}
 						}
@@ -758,23 +574,23 @@ namespace CSharpScript.Game.Module.CombatMessage
 								pushData.AiBlackboardsPush = (data as AiBlackboardsPush);
 								return;
 							}
-							if (messageType == ECombatPushDataMessage.ModifyBulletParamsPush)
+							if (messageType == ECombatPushDataMessage.MotorIsEnablePush)
 							{
-								pushData.ModifyBulletParamsPush = (data as ModifyBulletParamsPush);
+								pushData.MotorIsEnablePush = (data as MotorIsEnablePush);
 								return;
 							}
 						}
 					}
-					else if (messageType <= ECombatPushDataMessage.UseSkillFailPush)
+					else if (messageType <= ECombatPushDataMessage.CaughtPush)
 					{
-						if (messageType == ECombatPushDataMessage.PlayEntityMontagePush)
+						if (messageType == ECombatPushDataMessage.ModifyBulletParamsPush)
 						{
-							pushData.PlayEntityMontagePush = (data as PlayEntityMontagePush);
+							pushData.ModifyBulletParamsPush = (data as ModifyBulletParamsPush);
 							return;
 						}
-						if (messageType == ECombatPushDataMessage.UseSkillFailPush)
+						if (messageType == ECombatPushDataMessage.CaughtPush)
 						{
-							pushData.UseSkillFailPush = (data as UseSkillFailPush);
+							pushData.CaughtPush = (data as CaughtPush);
 							return;
 						}
 					}
@@ -785,6 +601,98 @@ namespace CSharpScript.Game.Module.CombatMessage
 							pushData.ActorVisiblePush = (data as ActorVisiblePush);
 							return;
 						}
+						if (messageType == ECombatPushDataMessage.ExecuteQtePush)
+						{
+							pushData.ExecuteQtePush = (data as ExecuteQtePush);
+							return;
+						}
+						if (messageType == ECombatPushDataMessage.SwitchCharacterStatePush)
+						{
+							pushData.SwitchCharacterStatePush = (data as SwitchCharacterStatePush);
+							return;
+						}
+					}
+				}
+				else if (messageType <= ECombatPushDataMessage.AiBlackboardCdPush)
+				{
+					if (messageType <= ECombatPushDataMessage.BuffStackCountPush)
+					{
+						if (messageType <= ECombatPushDataMessage.ApplyBuffS2cResponsePush)
+						{
+							if (messageType == ECombatPushDataMessage.DodgeInfoPush)
+							{
+								pushData.DodgeInfoPush = (data as DodgeInfoPush);
+								return;
+							}
+							if (messageType == ECombatPushDataMessage.ApplyBuffS2cResponsePush)
+							{
+								pushData.ApplyBuffS2CResponsePush = (data as ApplyBuffS2cResponsePush);
+								return;
+							}
+						}
+						else
+						{
+							if (messageType == ECombatPushDataMessage.ApplyGameplayEffectPush)
+							{
+								pushData.ApplyGameplayEffectPush = (data as ApplyGameplayEffectPush);
+								return;
+							}
+							if (messageType == ECombatPushDataMessage.BuffStackCountPush)
+							{
+								pushData.BuffStackCountPush = (data as BuffStackCountPush);
+								return;
+							}
+						}
+					}
+					else if (messageType <= ECombatPushDataMessage.SwitchLogicStatePush)
+					{
+						if (messageType == ECombatPushDataMessage.EndSkillPush)
+						{
+							pushData.EndSkillPush = (data as EndSkillPush);
+							return;
+						}
+						if (messageType == ECombatPushDataMessage.SwitchLogicStatePush)
+						{
+							pushData.SwitchLogicStatePush = (data as SwitchLogicStatePush);
+							return;
+						}
+					}
+					else
+					{
+						if (messageType == ECombatPushDataMessage.BuffEffectExecutePush)
+						{
+							pushData.BuffEffectExecutePush = (data as BuffEffectExecutePush);
+							return;
+						}
+						if (messageType == ECombatPushDataMessage.AiBlackboardCdPush)
+						{
+							pushData.AiBlackboardCdPush = (data as AiBlackboardCdPush);
+							return;
+						}
+					}
+				}
+				else if (messageType <= ECombatPushDataMessage.ANStartPush)
+				{
+					if (messageType <= ECombatPushDataMessage.BattleStateChangePush)
+					{
+						if (messageType == ECombatPushDataMessage.MotorSummonAndRidePush)
+						{
+							pushData.MotorSummonAndRidePush = (data as MotorSummonAndRidePush);
+							return;
+						}
+						if (messageType == ECombatPushDataMessage.BattleStateChangePush)
+						{
+							pushData.BattleStateChangePush = (data as BattleStateChangePush);
+							return;
+						}
+					}
+					else
+					{
+						if (messageType == ECombatPushDataMessage.PassiveSkillAddPush)
+						{
+							pushData.PassiveSkillAddPush = (data as PassiveSkillAddPush);
+							return;
+						}
 						if (messageType == ECombatPushDataMessage.ANStartPush)
 						{
 							pushData.ANStartPush = (data as ANStartPush);
@@ -792,121 +700,11 @@ namespace CSharpScript.Game.Module.CombatMessage
 						}
 					}
 				}
-				else if (messageType <= ECombatPushDataMessage.EntityIsVisiblePush)
+				else if (messageType <= ECombatPushDataMessage.EntityStaticHookMovePush)
 				{
-					if (messageType <= ECombatPushDataMessage.NewLinkBurstPush)
+					if (messageType == ECombatPushDataMessage.EnterViewDirectionPush)
 					{
-						if (messageType == ECombatPushDataMessage.DestroyBulletPush)
-						{
-							pushData.DestroyBulletPush = (data as DestroyBulletPush);
-							return;
-						}
-						if (messageType == ECombatPushDataMessage.NewLinkBurstPush)
-						{
-							pushData.NewLinkBurstPush = (data as NewLinkBurstPush);
-							return;
-						}
-					}
-					else
-					{
-						if (messageType == ECombatPushDataMessage.MotorSummonAndRidePush)
-						{
-							pushData.MotorSummonAndRidePush = (data as MotorSummonAndRidePush);
-							return;
-						}
-						if (messageType == ECombatPushDataMessage.EntityIsVisiblePush)
-						{
-							pushData.EntityIsVisiblePush = (data as EntityIsVisiblePush);
-							return;
-						}
-					}
-				}
-				else if (messageType <= ECombatPushDataMessage.RTimeStopAnimPush)
-				{
-					if (messageType == ECombatPushDataMessage.FsmPlayMontagePush)
-					{
-						pushData.FsmPlayMontagePush = (data as FsmPlayMontagePush);
-						return;
-					}
-					if (messageType == ECombatPushDataMessage.RTimeStopAnimPush)
-					{
-						pushData.RTimeStopAnimPush = (data as RTimeStopAnimPush);
-						return;
-					}
-				}
-				else
-				{
-					if (messageType == ECombatPushDataMessage.RemoveBuffS2cResponsePush)
-					{
-						pushData.RemoveBuffS2CResponsePush = (data as RemoveBuffS2cResponsePush);
-						return;
-					}
-					if (messageType == ECombatPushDataMessage.MonsterDrownPush)
-					{
-						pushData.MonsterDrownPush = (data as MonsterDrownPush);
-						return;
-					}
-					if (messageType == ECombatPushDataMessage.ExecuteQtePush)
-					{
-						pushData.ExecuteQtePush = (data as ExecuteQtePush);
-						return;
-					}
-				}
-			}
-			else if (messageType <= ECombatPushDataMessage.EntityStaticHookMovePush)
-			{
-				if (messageType <= ECombatPushDataMessage.QuickHackRamVerifyPush)
-				{
-					if (messageType <= ECombatPushDataMessage.MaterialPush)
-					{
-						if (messageType == ECombatPushDataMessage.ToughCalcExtraRatioChangePush)
-						{
-							pushData.ToughCalcExtraRatioChangePush = (data as ToughCalcExtraRatioChangePush);
-							return;
-						}
-						if (messageType == ECombatPushDataMessage.MaterialPush)
-						{
-							pushData.MaterialPush = (data as MaterialPush);
-							return;
-						}
-					}
-					else
-					{
-						if (messageType == ECombatPushDataMessage.InterruptSkillInDelayPush)
-						{
-							pushData.InterruptSkillInDelayPush = (data as InterruptSkillInDelayPush);
-							return;
-						}
-						if (messageType == ECombatPushDataMessage.QuickHackRamVerifyPush)
-						{
-							pushData.QuickHackRamVerifyPush = (data as QuickHackRamVerifyPush);
-							return;
-						}
-					}
-				}
-				else if (messageType <= ECombatPushDataMessage.AiBlackboardCdPush)
-				{
-					if (messageType == ECombatPushDataMessage.AiHatePush)
-					{
-						pushData.AiHatePush = (data as AiHatePush);
-						return;
-					}
-					if (messageType == ECombatPushDataMessage.AiBlackboardCdPush)
-					{
-						pushData.AiBlackboardCdPush = (data as AiBlackboardCdPush);
-						return;
-					}
-				}
-				else
-				{
-					if (messageType == ECombatPushDataMessage.MonsterBoomPush)
-					{
-						pushData.MonsterBoomPush = (data as MonsterBoomPush);
-						return;
-					}
-					if (messageType == ECombatPushDataMessage.RefreshBuffDurationPush)
-					{
-						pushData.RefreshBuffDurationPush = (data as RefreshBuffDurationPush);
+						pushData.EnterViewDirectionPush = (data as EnterViewDirectionPush);
 						return;
 					}
 					if (messageType == ECombatPushDataMessage.EntityStaticHookMovePush)
@@ -915,64 +713,261 @@ namespace CSharpScript.Game.Module.CombatMessage
 						return;
 					}
 				}
-			}
-			else if (messageType <= ECombatPushDataMessage.MotorIsEnablePush)
-			{
-				if (messageType <= ECombatPushDataMessage.BulletPatternPush)
+				else
 				{
-					if (messageType == ECombatPushDataMessage.SwitchLogicStatePush)
+					if (messageType == ECombatPushDataMessage.BoneVisibleChangePush)
 					{
-						pushData.SwitchLogicStatePush = (data as SwitchLogicStatePush);
+						pushData.BoneVisibleChangePush = (data as BoneVisibleChangePush);
 						return;
 					}
-					if (messageType == ECombatPushDataMessage.BulletPatternPush)
+					if (messageType == ECombatPushDataMessage.RTimeStopInstPush)
 					{
-						pushData.BulletPatternPush = (data as BulletPatternPush);
+						pushData.RTimeStopInstPush = (data as RTimeStopInstPush);
+						return;
+					}
+					if (messageType == ECombatPushDataMessage.RTimeStopPush)
+					{
+						pushData.RTimeStopPush = (data as RTimeStopPush);
+						return;
+					}
+				}
+			}
+			else if (messageType <= ECombatPushDataMessage.RefreshBuffDurationPush)
+			{
+				if (messageType <= ECombatPushDataMessage.RoleTrialSceneRollbackPush)
+				{
+					if (messageType <= ECombatPushDataMessage.AiInformationPush)
+					{
+						if (messageType <= ECombatPushDataMessage.GameplayCuePush)
+						{
+							if (messageType == ECombatPushDataMessage.BeforeHitPush)
+							{
+								pushData.BeforeHitPush = (data as BeforeHitPush);
+								return;
+							}
+							if (messageType == ECombatPushDataMessage.GameplayCuePush)
+							{
+								pushData.GameplayCuePush = (data as GameplayCuePush);
+								return;
+							}
+						}
+						else
+						{
+							if (messageType == ECombatPushDataMessage.PassiveSkillRemovePush)
+							{
+								pushData.PassiveSkillRemovePush = (data as PassiveSkillRemovePush);
+								return;
+							}
+							if (messageType == ECombatPushDataMessage.AiInformationPush)
+							{
+								pushData.AiInformationPush = (data as AiInformationPush);
+								return;
+							}
+						}
+					}
+					else if (messageType <= ECombatPushDataMessage.QuickHackRamVerifyPush)
+					{
+						if (messageType == ECombatPushDataMessage.AnimationStateInitPush)
+						{
+							pushData.AnimationStateInitPush = (data as AnimationStateInitPush);
+							return;
+						}
+						if (messageType == ECombatPushDataMessage.QuickHackRamVerifyPush)
+						{
+							pushData.QuickHackRamVerifyPush = (data as QuickHackRamVerifyPush);
+							return;
+						}
+					}
+					else
+					{
+						if (messageType == ECombatPushDataMessage.AiHatePush)
+						{
+							pushData.AiHatePush = (data as AiHatePush);
+							return;
+						}
+						if (messageType == ECombatPushDataMessage.RoleTrialSceneRollbackPush)
+						{
+							pushData.RoleTrialSceneRollbackPush = (data as RoleTrialSceneRollbackPush);
+							return;
+						}
+					}
+				}
+				else if (messageType <= ECombatPushDataMessage.PlayEntityMontagePush)
+				{
+					if (messageType <= ECombatPushDataMessage.ChangeStateConfirmPush)
+					{
+						if (messageType == ECombatPushDataMessage.DrownEndTeleportPush)
+						{
+							pushData.DrownEndTeleportPush = (data as DrownEndTeleportPush);
+							return;
+						}
+						if (messageType == ECombatPushDataMessage.ChangeStateConfirmPush)
+						{
+							pushData.ChangeStateConfirmPush = (data as ChangeStateConfirmPush);
+							return;
+						}
+					}
+					else
+					{
+						if (messageType == ECombatPushDataMessage.FsmConditionPassPush)
+						{
+							pushData.FsmConditionPassPush = (data as FsmConditionPassPush);
+							return;
+						}
+						if (messageType == ECombatPushDataMessage.PlayEntityMontagePush)
+						{
+							pushData.PlayEntityMontagePush = (data as PlayEntityMontagePush);
+							return;
+						}
+					}
+				}
+				else if (messageType <= ECombatPushDataMessage.GameplayTagPush)
+				{
+					if (messageType == ECombatPushDataMessage.ToughCalcExtraRatioChangePush)
+					{
+						pushData.ToughCalcExtraRatioChangePush = (data as ToughCalcExtraRatioChangePush);
+						return;
+					}
+					if (messageType == ECombatPushDataMessage.GameplayTagPush)
+					{
+						pushData.GameplayTagPush = (data as GameplayTagPush);
 						return;
 					}
 				}
 				else
 				{
-					if (messageType == ECombatPushDataMessage.EnterViewDirectionPush)
+					if (messageType == ECombatPushDataMessage.TriggerExitSkillPush)
 					{
-						pushData.EnterViewDirectionPush = (data as EnterViewDirectionPush);
+						pushData.TriggerExitSkillPush = (data as TriggerExitSkillPush);
 						return;
 					}
-					if (messageType == ECombatPushDataMessage.MotorIsEnablePush)
+					if (messageType == ECombatPushDataMessage.AnimationStateChangedPush)
 					{
-						pushData.MotorIsEnablePush = (data as MotorIsEnablePush);
+						pushData.AnimationStateChangedPush = (data as AnimationStateChangedPush);
+						return;
+					}
+					if (messageType == ECombatPushDataMessage.RefreshBuffDurationPush)
+					{
+						pushData.RefreshBuffDurationPush = (data as RefreshBuffDurationPush);
 						return;
 					}
 				}
 			}
-			else if (messageType <= ECombatPushDataMessage.BattleStateChangePush)
+			else if (messageType <= ECombatPushDataMessage.MaterialPush)
 			{
-				if (messageType == ECombatPushDataMessage.PartUpdatePush)
+				if (messageType <= ECombatPushDataMessage.QuickHackOpenPush)
 				{
-					pushData.PartUpdatePush = (data as PartUpdatePush);
+					if (messageType <= ECombatPushDataMessage.InterruptSkillInDelayPush)
+					{
+						if (messageType == ECombatPushDataMessage.MonsterBoomPush)
+						{
+							pushData.MonsterBoomPush = (data as MonsterBoomPush);
+							return;
+						}
+						if (messageType == ECombatPushDataMessage.InterruptSkillInDelayPush)
+						{
+							pushData.InterruptSkillInDelayPush = (data as InterruptSkillInDelayPush);
+							return;
+						}
+					}
+					else
+					{
+						if (messageType == ECombatPushDataMessage.PartUpdatePush)
+						{
+							pushData.PartUpdatePush = (data as PartUpdatePush);
+							return;
+						}
+						if (messageType == ECombatPushDataMessage.QuickHackOpenPush)
+						{
+							pushData.QuickHackOpenPush = (data as QuickHackOpenPush);
+							return;
+						}
+					}
+				}
+				else if (messageType <= ECombatPushDataMessage.MonsterDrownPush)
+				{
+					if (messageType == ECombatPushDataMessage.BuffEffectPush)
+					{
+						pushData.BuffEffectPush = (data as BuffEffectPush);
+						return;
+					}
+					if (messageType == ECombatPushDataMessage.MonsterDrownPush)
+					{
+						pushData.MonsterDrownPush = (data as MonsterDrownPush);
+						return;
+					}
+				}
+				else
+				{
+					if (messageType == ECombatPushDataMessage.CreateBulletPush)
+					{
+						pushData.CreateBulletPush = (data as CreateBulletPush);
+						return;
+					}
+					if (messageType == ECombatPushDataMessage.MaterialPush)
+					{
+						pushData.MaterialPush = (data as MaterialPush);
+						return;
+					}
+				}
+			}
+			else if (messageType <= ECombatPushDataMessage.RTimeStopAnimPush)
+			{
+				if (messageType <= ECombatPushDataMessage.NewLinkBurstPush)
+				{
+					if (messageType == ECombatPushDataMessage.VisionTriggerPush)
+					{
+						pushData.VisionTriggerPush = (data as VisionTriggerPush);
+						return;
+					}
+					if (messageType == ECombatPushDataMessage.NewLinkBurstPush)
+					{
+						pushData.NewLinkBurstPush = (data as NewLinkBurstPush);
+						return;
+					}
+				}
+				else
+				{
+					if (messageType == ECombatPushDataMessage.DestroyBulletPush)
+					{
+						pushData.DestroyBulletPush = (data as DestroyBulletPush);
+						return;
+					}
+					if (messageType == ECombatPushDataMessage.RTimeStopAnimPush)
+					{
+						pushData.RTimeStopAnimPush = (data as RTimeStopAnimPush);
+						return;
+					}
+				}
+			}
+			else if (messageType <= ECombatPushDataMessage.DrownPush)
+			{
+				if (messageType == ECombatPushDataMessage.FsmPlayMontagePush)
+				{
+					pushData.FsmPlayMontagePush = (data as FsmPlayMontagePush);
 					return;
 				}
-				if (messageType == ECombatPushDataMessage.BattleStateChangePush)
+				if (messageType == ECombatPushDataMessage.DrownPush)
 				{
-					pushData.BattleStateChangePush = (data as BattleStateChangePush);
+					pushData.DrownPush = (data as DrownPush);
 					return;
 				}
 			}
 			else
 			{
-				if (messageType == ECombatPushDataMessage.ApplyGameplayEffectPush)
+				if (messageType == ECombatPushDataMessage.EntityIsVisiblePush)
 				{
-					pushData.ApplyGameplayEffectPush = (data as ApplyGameplayEffectPush);
+					pushData.EntityIsVisiblePush = (data as EntityIsVisiblePush);
 					return;
 				}
-				if (messageType == ECombatPushDataMessage.DodgeInfoPush)
+				if (messageType == ECombatPushDataMessage.ClientCurrentRoleReportPush)
 				{
-					pushData.DodgeInfoPush = (data as DodgeInfoPush);
+					pushData.ClientCurrentRoleReportPush = (data as ClientCurrentRoleReportPush);
 					return;
 				}
-				if (messageType == ECombatPushDataMessage.AnimationStateInitPush)
+				if (messageType == ECombatPushDataMessage.RemoveGameplayEffectPush)
 				{
-					pushData.AnimationStateInitPush = (data as AnimationStateInitPush);
+					pushData.RemoveGameplayEffectPush = (data as RemoveGameplayEffectPush);
 					return;
 				}
 			}
@@ -984,205 +979,118 @@ namespace CSharpScript.Game.Module.CombatMessage
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0603B59F RID: 243103 RVA: 0x00E274B0 File Offset: 0x00E256B0
+		// Token: 0x060304EC RID: 197868 RVA: 0x00D77810 File Offset: 0x00D75A10
 		public static void SetRequestDataMessage(CombatRequestData reqData, ECombatRequestDataMessage messageType, IMessage data)
 		{
-			if (messageType <= ECombatRequestDataMessage.UseSkillFailRequest)
+			if (messageType <= ECombatRequestDataMessage.PassiveSkillRemoveRequest)
 			{
-				if (messageType <= ECombatRequestDataMessage.CombineEntitiesRequest)
+				if (messageType <= ECombatRequestDataMessage.CaughtRequest)
 				{
-					if (messageType <= ECombatRequestDataMessage.InterruptSkillInDelayRequest)
+					if (messageType <= ECombatRequestDataMessage.SwitchLogicStateRequest)
 					{
-						if (messageType <= ECombatRequestDataMessage.ModifyBulletParamsRequest)
+						if (messageType <= ECombatRequestDataMessage.RemoveGameplayEffectRequest)
 						{
-							if (messageType <= ECombatRequestDataMessage.FsmStateBehaviorRequest)
+							if (messageType <= ECombatRequestDataMessage.UseSkillFailRequest)
 							{
-								if (messageType == ECombatRequestDataMessage.HitRequest)
+								if (messageType == ECombatRequestDataMessage.AiBlackboardCdRequest)
 								{
-									reqData.HitRequest = (data as HitRequest);
+									reqData.AiBlackboardCdRequest = (data as AiBlackboardCdRequest);
 									return;
 								}
-								if (messageType == ECombatRequestDataMessage.FsmStateBehaviorRequest)
+								if (messageType == ECombatRequestDataMessage.UseSkillFailRequest)
 								{
-									reqData.FsmStateBehaviorRequest = (data as FsmStateBehaviorRequest);
+									reqData.UseSkillFailRequest = (data as UseSkillFailRequest);
 									return;
 								}
 							}
 							else
 							{
-								if (messageType == ECombatRequestDataMessage.AnimationStateInitRequest)
+								if (messageType == ECombatRequestDataMessage.UseSkillRequest)
 								{
-									reqData.AnimationStateInitRequest = (data as AnimationStateInitRequest);
+									reqData.UseSkillRequest = (data as UseSkillRequest);
 									return;
 								}
-								if (messageType == ECombatRequestDataMessage.ModifyBulletParamsRequest)
+								if (messageType == ECombatRequestDataMessage.RemoveGameplayEffectRequest)
 								{
-									reqData.ModifyBulletParamsRequest = (data as ModifyBulletParamsRequest);
+									reqData.RemoveGameplayEffectRequest = (data as RemoveGameplayEffectRequest);
 									return;
 								}
 							}
 						}
-						else if (messageType <= ECombatRequestDataMessage.ActivateBuffRequest)
+						else if (messageType <= ECombatRequestDataMessage.RTimeStopRequest)
 						{
-							if (messageType == ECombatRequestDataMessage.CreateBulletRequest)
+							if (messageType == ECombatRequestDataMessage.ExitViewDirectionRequest)
 							{
-								reqData.CreateBulletRequest = (data as CreateBulletRequest);
+								reqData.ExitViewDirectionRequest = (data as ExitViewDirectionRequest);
 								return;
 							}
-							if (messageType == ECombatRequestDataMessage.ActivateBuffRequest)
-							{
-								reqData.ActivateBuffRequest = (data as ActivateBuffRequest);
-								return;
-							}
-						}
-						else
-						{
-							if (messageType == ECombatRequestDataMessage.AiBlackboardsRequest)
-							{
-								reqData.AiBlackboardsRequest = (data as AiBlackboardsRequest);
-								return;
-							}
-							if (messageType == ECombatRequestDataMessage.InterruptSkillInDelayRequest)
-							{
-								reqData.InterruptSkillInDelayRequest = (data as InterruptSkillInDelayRequest);
-								return;
-							}
-						}
-					}
-					else if (messageType <= ECombatRequestDataMessage.EntityStaticHookMoveRequest)
-					{
-						if (messageType <= ECombatRequestDataMessage.GaSwitchCommonEnemyProCampRequest)
-						{
 							if (messageType == ECombatRequestDataMessage.RTimeStopRequest)
 							{
 								reqData.RTimeStopRequest = (data as RTimeStopRequest);
 								return;
 							}
-							if (messageType == ECombatRequestDataMessage.GaSwitchCommonEnemyProCampRequest)
+						}
+						else
+						{
+							if (messageType == ECombatRequestDataMessage.AnimationStateChangedRequest)
 							{
-								reqData.GaSwitchCommonEnemyProCampRequest = (data as GaSwitchCommonEnemyProCampRequest);
+								reqData.AnimationStateChangedRequest = (data as AnimationStateChangedRequest);
+								return;
+							}
+							if (messageType == ECombatRequestDataMessage.SwitchLogicStateRequest)
+							{
+								reqData.SwitchLogicStateRequest = (data as SwitchLogicStateRequest);
+								return;
+							}
+						}
+					}
+					else if (messageType <= ECombatRequestDataMessage.HitRequest)
+					{
+						if (messageType <= ECombatRequestDataMessage.ChangeStateConfirmRequest)
+						{
+							if (messageType == ECombatRequestDataMessage.MonsterBoomRequest)
+							{
+								reqData.MonsterBoomRequest = (data as MonsterBoomRequest);
+								return;
+							}
+							if (messageType == ECombatRequestDataMessage.ChangeStateConfirmRequest)
+							{
+								reqData.ChangeStateConfirmRequest = (data as ChangeStateConfirmRequest);
 								return;
 							}
 						}
 						else
 						{
-							if (messageType == ECombatRequestDataMessage.DrownRequest)
+							if (messageType == ECombatRequestDataMessage.PassiveSkillAddRequest)
 							{
-								reqData.DrownRequest = (data as DrownRequest);
+								reqData.PassiveSkillAddRequest = (data as PassiveSkillAddRequest);
 								return;
 							}
-							if (messageType == ECombatRequestDataMessage.EntityStaticHookMoveRequest)
+							if (messageType == ECombatRequestDataMessage.HitRequest)
 							{
-								reqData.EntityStaticHookMoveRequest = (data as EntityStaticHookMoveRequest);
+								reqData.HitRequest = (data as HitRequest);
 								return;
 							}
 						}
 					}
-					else if (messageType <= ECombatRequestDataMessage.EnterViewDirectionRequest)
+					else if (messageType <= ECombatRequestDataMessage.MaterialRequest)
 					{
-						if (messageType == ECombatRequestDataMessage.SwitchLogicStateRequest)
+						if (messageType == ECombatRequestDataMessage.GameplayTagRequest)
 						{
-							reqData.SwitchLogicStateRequest = (data as SwitchLogicStateRequest);
+							reqData.GameplayTagRequest = (data as GameplayTagRequest);
 							return;
 						}
-						if (messageType == ECombatRequestDataMessage.EnterViewDirectionRequest)
-						{
-							reqData.EnterViewDirectionRequest = (data as EnterViewDirectionRequest);
-							return;
-						}
-					}
-					else
-					{
 						if (messageType == ECombatRequestDataMessage.MaterialRequest)
 						{
 							reqData.MaterialRequest = (data as MaterialRequest);
 							return;
 						}
-						if (messageType == ECombatRequestDataMessage.CombineEntitiesRequest)
-						{
-							reqData.CombineEntitiesRequest = (data as CombineEntitiesRequest);
-							return;
-						}
 					}
-				}
-				else if (messageType <= ECombatRequestDataMessage.SwitchRoleRequest)
-				{
-					if (messageType <= ECombatRequestDataMessage.GameplayCueRequest)
+					else
 					{
-						if (messageType <= ECombatRequestDataMessage.BuffStackCountRequest)
-						{
-							if (messageType == ECombatRequestDataMessage.BattleStateChangeRequest)
-							{
-								reqData.BattleStateChangeRequest = (data as BattleStateChangeRequest);
-								return;
-							}
-							if (messageType == ECombatRequestDataMessage.BuffStackCountRequest)
-							{
-								reqData.BuffStackCountRequest = (data as BuffStackCountRequest);
-								return;
-							}
-						}
-						else
-						{
-							if (messageType == ECombatRequestDataMessage.RemoveGameplayEffectRequest)
-							{
-								reqData.RemoveGameplayEffectRequest = (data as RemoveGameplayEffectRequest);
-								return;
-							}
-							if (messageType == ECombatRequestDataMessage.GameplayCueRequest)
-							{
-								reqData.GameplayCueRequest = (data as GameplayCueRequest);
-								return;
-							}
-						}
-					}
-					else if (messageType <= ECombatRequestDataMessage.ActorVisibleRequest)
-					{
-						if (messageType == ECombatRequestDataMessage.BoneVisibleChangeRequest)
-						{
-							reqData.BoneVisibleChangeRequest = (data as BoneVisibleChangeRequest);
-							return;
-						}
 						if (messageType == ECombatRequestDataMessage.ActorVisibleRequest)
 						{
 							reqData.ActorVisibleRequest = (data as ActorVisibleRequest);
-							return;
-						}
-					}
-					else
-					{
-						if (messageType == ECombatRequestDataMessage.DrownEndTeleportRequest)
-						{
-							reqData.DrownEndTeleportRequest = (data as DrownEndTeleportRequest);
-							return;
-						}
-						if (messageType == ECombatRequestDataMessage.SwitchRoleRequest)
-						{
-							reqData.SwitchRoleRequest = (data as SwitchRoleRequest);
-							return;
-						}
-					}
-				}
-				else if (messageType <= ECombatRequestDataMessage.CaughtRequest)
-				{
-					if (messageType <= ECombatRequestDataMessage.MonsterDrownRequest)
-					{
-						if (messageType == ECombatRequestDataMessage.UseSkillRequest)
-						{
-							reqData.UseSkillRequest = (data as UseSkillRequest);
-							return;
-						}
-						if (messageType == ECombatRequestDataMessage.MonsterDrownRequest)
-						{
-							reqData.MonsterDrownRequest = (data as MonsterDrownRequest);
-							return;
-						}
-					}
-					else
-					{
-						if (messageType == ECombatRequestDataMessage.DissolveCombineRelationRequest)
-						{
-							reqData.DissolveCombineRelationRequest = (data as DissolveCombineRelationRequest);
 							return;
 						}
 						if (messageType == ECombatRequestDataMessage.CaughtRequest)
@@ -1192,118 +1100,255 @@ namespace CSharpScript.Game.Module.CombatMessage
 						}
 					}
 				}
-				else if (messageType <= ECombatRequestDataMessage.OrderApplyBuffRequest)
+				else if (messageType <= ECombatRequestDataMessage.ClientCurrentRoleReportRequest)
 				{
-					if (messageType == ECombatRequestDataMessage.RTimeStopInstRequest)
+					if (messageType <= ECombatRequestDataMessage.GaSwitchCommonEnemyProCampRequest)
 					{
-						reqData.RTimeStopInstRequest = (data as RTimeStopInstRequest);
-						return;
-					}
-					if (messageType == ECombatRequestDataMessage.OrderApplyBuffRequest)
-					{
-						reqData.OrderApplyBuffRequest = (data as OrderApplyBuffRequest);
-						return;
-					}
-				}
-				else
-				{
-					if (messageType == ECombatRequestDataMessage.PassiveSkillRemoveRequest)
-					{
-						reqData.PassiveSkillRemoveRequest = (data as PassiveSkillRemoveRequest);
-						return;
-					}
-					if (messageType == ECombatRequestDataMessage.DamageExecuteRequest)
-					{
-						reqData.DamageExecuteRequest = (data as DamageExecuteRequest);
-						return;
-					}
-					if (messageType == ECombatRequestDataMessage.UseSkillFailRequest)
-					{
-						reqData.UseSkillFailRequest = (data as UseSkillFailRequest);
-						return;
-					}
-				}
-			}
-			else if (messageType <= ECombatRequestDataMessage.AnimationGameplayTagRequest)
-			{
-				if (messageType <= ECombatRequestDataMessage.PassiveSkillAddRequest)
-				{
-					if (messageType <= ECombatRequestDataMessage.FsmConditionPassRequest)
-					{
-						if (messageType <= ECombatRequestDataMessage.BuffEffectRequest)
+						if (messageType <= ECombatRequestDataMessage.CreateBulletRequest)
 						{
-							if (messageType == ECombatRequestDataMessage.CombatMaxCaseMessageRequest)
+							if (messageType == ECombatRequestDataMessage.RTimeStopInstRequest)
 							{
-								reqData.CombatMaxCaseMessageRequest = (data as CombatMaxCaseMessageRequest);
+								reqData.RTimeStopInstRequest = (data as RTimeStopInstRequest);
 								return;
 							}
-							if (messageType == ECombatRequestDataMessage.BuffEffectRequest)
+							if (messageType == ECombatRequestDataMessage.CreateBulletRequest)
 							{
-								reqData.BuffEffectRequest = (data as BuffEffectRequest);
+								reqData.CreateBulletRequest = (data as CreateBulletRequest);
 								return;
 							}
 						}
 						else
 						{
-							if (messageType == ECombatRequestDataMessage.OrderRemoveBuffByTagsRequest)
+							if (messageType == ECombatRequestDataMessage.LogicStateInitRequest)
 							{
-								reqData.OrderRemoveBuffByTagsRequest = (data as OrderRemoveBuffByTagsRequest);
+								reqData.LogicStateInitRequest = (data as LogicStateInitRequest);
 								return;
 							}
+							if (messageType == ECombatRequestDataMessage.GaSwitchCommonEnemyProCampRequest)
+							{
+								reqData.GaSwitchCommonEnemyProCampRequest = (data as GaSwitchCommonEnemyProCampRequest);
+								return;
+							}
+						}
+					}
+					else if (messageType <= ECombatRequestDataMessage.DamageExecuteRequest)
+					{
+						if (messageType == ECombatRequestDataMessage.BoneVisibleChangeRequest)
+						{
+							reqData.BoneVisibleChangeRequest = (data as BoneVisibleChangeRequest);
+							return;
+						}
+						if (messageType == ECombatRequestDataMessage.DamageExecuteRequest)
+						{
+							reqData.DamageExecuteRequest = (data as DamageExecuteRequest);
+							return;
+						}
+					}
+					else
+					{
+						if (messageType == ECombatRequestDataMessage.AiInformationRequest)
+						{
+							reqData.AiInformationRequest = (data as AiInformationRequest);
+							return;
+						}
+						if (messageType == ECombatRequestDataMessage.ClientCurrentRoleReportRequest)
+						{
+							reqData.ClientCurrentRoleReportRequest = (data as ClientCurrentRoleReportRequest);
+							return;
+						}
+					}
+				}
+				else if (messageType <= ECombatRequestDataMessage.ChangeStateRequest)
+				{
+					if (messageType <= ECombatRequestDataMessage.BattleStateChangeRequest)
+					{
+						if (messageType == ECombatRequestDataMessage.HitEndRequest)
+						{
+							reqData.HitEndRequest = (data as HitEndRequest);
+							return;
+						}
+						if (messageType == ECombatRequestDataMessage.BattleStateChangeRequest)
+						{
+							reqData.BattleStateChangeRequest = (data as BattleStateChangeRequest);
+							return;
+						}
+					}
+					else
+					{
+						if (messageType == ECombatRequestDataMessage.OrderRemoveBuffByTagsRequest)
+						{
+							reqData.OrderRemoveBuffByTagsRequest = (data as OrderRemoveBuffByTagsRequest);
+							return;
+						}
+						if (messageType == ECombatRequestDataMessage.ChangeStateRequest)
+						{
+							reqData.ChangeStateRequest = (data as ChangeStateRequest);
+							return;
+						}
+					}
+				}
+				else if (messageType <= ECombatRequestDataMessage.MonsterDrownRequest)
+				{
+					if (messageType == ECombatRequestDataMessage.DissolveCombineRelationRequest)
+					{
+						reqData.DissolveCombineRelationRequest = (data as DissolveCombineRelationRequest);
+						return;
+					}
+					if (messageType == ECombatRequestDataMessage.MonsterDrownRequest)
+					{
+						reqData.MonsterDrownRequest = (data as MonsterDrownRequest);
+						return;
+					}
+				}
+				else
+				{
+					if (messageType == ECombatRequestDataMessage.AnimationGameplayTagRequest)
+					{
+						reqData.AnimationGameplayTagRequest = (data as AnimationGameplayTagRequest);
+						return;
+					}
+					if (messageType == ECombatRequestDataMessage.GameplayCueRequest)
+					{
+						reqData.GameplayCueRequest = (data as GameplayCueRequest);
+						return;
+					}
+					if (messageType == ECombatRequestDataMessage.PassiveSkillRemoveRequest)
+					{
+						reqData.PassiveSkillRemoveRequest = (data as PassiveSkillRemoveRequest);
+						return;
+					}
+				}
+			}
+			else if (messageType <= ECombatRequestDataMessage.ANStartRequest)
+			{
+				if (messageType <= ECombatRequestDataMessage.FsmStateBehaviorRequest)
+				{
+					if (messageType <= ECombatRequestDataMessage.PartUpdateRequest)
+					{
+						if (messageType <= ECombatRequestDataMessage.OrderApplyBuffRequest)
+						{
+							if (messageType == ECombatRequestDataMessage.DrownEndTeleportRequest)
+							{
+								reqData.DrownEndTeleportRequest = (data as DrownEndTeleportRequest);
+								return;
+							}
+							if (messageType == ECombatRequestDataMessage.OrderApplyBuffRequest)
+							{
+								reqData.OrderApplyBuffRequest = (data as OrderApplyBuffRequest);
+								return;
+							}
+						}
+						else
+						{
 							if (messageType == ECombatRequestDataMessage.FsmConditionPassRequest)
 							{
 								reqData.FsmConditionPassRequest = (data as FsmConditionPassRequest);
 								return;
 							}
+							if (messageType == ECombatRequestDataMessage.PartUpdateRequest)
+							{
+								reqData.PartUpdateRequest = (data as PartUpdateRequest);
+								return;
+							}
 						}
 					}
-					else if (messageType <= ECombatRequestDataMessage.ANStartRequest)
+					else if (messageType <= ECombatRequestDataMessage.AiBlackboardsRequest)
 					{
-						if (messageType == ECombatRequestDataMessage.ApplyGameplayEffectRequest)
+						if (messageType == ECombatRequestDataMessage.BuffEffectRequest)
 						{
-							reqData.ApplyGameplayEffectRequest = (data as ApplyGameplayEffectRequest);
+							reqData.BuffEffectRequest = (data as BuffEffectRequest);
 							return;
 						}
-						if (messageType == ECombatRequestDataMessage.ANStartRequest)
+						if (messageType == ECombatRequestDataMessage.AiBlackboardsRequest)
 						{
-							reqData.ANStartRequest = (data as ANStartRequest);
+							reqData.AiBlackboardsRequest = (data as AiBlackboardsRequest);
 							return;
 						}
 					}
 					else
 					{
-						if (messageType == ECombatRequestDataMessage.PartUpdateRequest)
+						if (messageType == ECombatRequestDataMessage.FragileChangeRequest)
 						{
-							reqData.PartUpdateRequest = (data as PartUpdateRequest);
+							reqData.FragileChangeRequest = (data as FragileChangeRequest);
 							return;
 						}
-						if (messageType == ECombatRequestDataMessage.PassiveSkillAddRequest)
+						if (messageType == ECombatRequestDataMessage.FsmStateBehaviorRequest)
 						{
-							reqData.PassiveSkillAddRequest = (data as PassiveSkillAddRequest);
+							reqData.FsmStateBehaviorRequest = (data as FsmStateBehaviorRequest);
 							return;
 						}
 					}
 				}
-				else if (messageType <= ECombatRequestDataMessage.FsmPlayMontageRequest)
+				else if (messageType <= ECombatRequestDataMessage.InterruptSkillInDelayRequest)
 				{
-					if (messageType <= ECombatRequestDataMessage.EntityIsVisibleRequest)
+					if (messageType <= ECombatRequestDataMessage.ChangeSummonEntityStateRequest)
 					{
-						if (messageType == ECombatRequestDataMessage.ToughCalcExtraRatioChangeRequest)
+						if (messageType == ECombatRequestDataMessage.TriggerExitSkillRequest)
 						{
-							reqData.ToughCalcExtraRatioChangeRequest = (data as ToughCalcExtraRatioChangeRequest);
+							reqData.TriggerExitSkillRequest = (data as TriggerExitSkillRequest);
 							return;
 						}
-						if (messageType == ECombatRequestDataMessage.EntityIsVisibleRequest)
+						if (messageType == ECombatRequestDataMessage.ChangeSummonEntityStateRequest)
 						{
-							reqData.EntityIsVisibleRequest = (data as EntityIsVisibleRequest);
+							reqData.ChangeSummonEntityStateRequest = (data as ChangeSummonEntityStateRequest);
 							return;
 						}
 					}
 					else
 					{
-						if (messageType == ECombatRequestDataMessage.EndSkillRequest)
+						if (messageType == ECombatRequestDataMessage.EntityStaticHookMoveRequest)
 						{
-							reqData.EndSkillRequest = (data as EndSkillRequest);
+							reqData.EntityStaticHookMoveRequest = (data as EntityStaticHookMoveRequest);
+							return;
+						}
+						if (messageType == ECombatRequestDataMessage.InterruptSkillInDelayRequest)
+						{
+							reqData.InterruptSkillInDelayRequest = (data as InterruptSkillInDelayRequest);
+							return;
+						}
+					}
+				}
+				else if (messageType <= ECombatRequestDataMessage.EnterViewDirectionRequest)
+				{
+					if (messageType == ECombatRequestDataMessage.BuffStackCountRequest)
+					{
+						reqData.BuffStackCountRequest = (data as BuffStackCountRequest);
+						return;
+					}
+					if (messageType == ECombatRequestDataMessage.EnterViewDirectionRequest)
+					{
+						reqData.EnterViewDirectionRequest = (data as EnterViewDirectionRequest);
+						return;
+					}
+				}
+				else
+				{
+					if (messageType == ECombatRequestDataMessage.ExecuteQteRequest)
+					{
+						reqData.ExecuteQteRequest = (data as ExecuteQteRequest);
+						return;
+					}
+					if (messageType == ECombatRequestDataMessage.ToughCalcExtraRatioChangeRequest)
+					{
+						reqData.ToughCalcExtraRatioChangeRequest = (data as ToughCalcExtraRatioChangeRequest);
+						return;
+					}
+					if (messageType == ECombatRequestDataMessage.ANStartRequest)
+					{
+						reqData.ANStartRequest = (data as ANStartRequest);
+						return;
+					}
+				}
+			}
+			else if (messageType <= ECombatRequestDataMessage.DestroyBulletRequest)
+			{
+				if (messageType <= ECombatRequestDataMessage.EntityIsVisibleRequest)
+				{
+					if (messageType <= ECombatRequestDataMessage.FsmPlayMontageRequest)
+					{
+						if (messageType == ECombatRequestDataMessage.DrownRequest)
+						{
+							reqData.DrownRequest = (data as DrownRequest);
 							return;
 						}
 						if (messageType == ECombatRequestDataMessage.FsmPlayMontageRequest)
@@ -1312,154 +1357,104 @@ namespace CSharpScript.Game.Module.CombatMessage
 							return;
 						}
 					}
-				}
-				else if (messageType <= ECombatRequestDataMessage.HitEndRequest)
-				{
-					if (messageType == ECombatRequestDataMessage.ExitViewDirectionRequest)
-					{
-						reqData.ExitViewDirectionRequest = (data as ExitViewDirectionRequest);
-						return;
-					}
-					if (messageType == ECombatRequestDataMessage.HitEndRequest)
-					{
-						reqData.HitEndRequest = (data as HitEndRequest);
-						return;
-					}
-				}
-				else
-				{
-					if (messageType == ECombatRequestDataMessage.ChangeStateRequest)
-					{
-						reqData.ChangeStateRequest = (data as ChangeStateRequest);
-						return;
-					}
-					if (messageType == ECombatRequestDataMessage.GameplayTagRequest)
-					{
-						reqData.GameplayTagRequest = (data as GameplayTagRequest);
-						return;
-					}
-					if (messageType == ECombatRequestDataMessage.AnimationGameplayTagRequest)
-					{
-						reqData.AnimationGameplayTagRequest = (data as AnimationGameplayTagRequest);
-						return;
-					}
-				}
-			}
-			else if (messageType <= ECombatRequestDataMessage.SwitchCharacterStateRequest)
-			{
-				if (messageType <= ECombatRequestDataMessage.AnimationStateChangedRequest)
-				{
-					if (messageType <= ECombatRequestDataMessage.DestroyBulletRequest)
-					{
-						if (messageType == ECombatRequestDataMessage.LogicStateInitRequest)
-						{
-							reqData.LogicStateInitRequest = (data as LogicStateInitRequest);
-							return;
-						}
-						if (messageType == ECombatRequestDataMessage.DestroyBulletRequest)
-						{
-							reqData.DestroyBulletRequest = (data as DestroyBulletRequest);
-							return;
-						}
-					}
 					else
 					{
-						if (messageType == ECombatRequestDataMessage.ChangeSummonEntityStateRequest)
+						if (messageType == ECombatRequestDataMessage.SwitchCharacterStateRequest)
 						{
-							reqData.ChangeSummonEntityStateRequest = (data as ChangeSummonEntityStateRequest);
+							reqData.SwitchCharacterStateRequest = (data as SwitchCharacterStateRequest);
 							return;
 						}
-						if (messageType == ECombatRequestDataMessage.AnimationStateChangedRequest)
+						if (messageType == ECombatRequestDataMessage.EntityIsVisibleRequest)
 						{
-							reqData.AnimationStateChangedRequest = (data as AnimationStateChangedRequest);
+							reqData.EntityIsVisibleRequest = (data as EntityIsVisibleRequest);
 							return;
 						}
 					}
 				}
-				else if (messageType <= ECombatRequestDataMessage.AiInformationRequest)
+				else if (messageType <= ECombatRequestDataMessage.OrderRemoveBuffRequest)
 				{
-					if (messageType == ECombatRequestDataMessage.ChangeStateConfirmRequest)
+					if (messageType == ECombatRequestDataMessage.EndSkillRequest)
 					{
-						reqData.ChangeStateConfirmRequest = (data as ChangeStateConfirmRequest);
+						reqData.EndSkillRequest = (data as EndSkillRequest);
 						return;
 					}
-					if (messageType == ECombatRequestDataMessage.AiInformationRequest)
+					if (messageType == ECombatRequestDataMessage.OrderRemoveBuffRequest)
 					{
-						reqData.AiInformationRequest = (data as AiInformationRequest);
+						reqData.OrderRemoveBuffRequest = (data as OrderRemoveBuffRequest);
 						return;
 					}
 				}
 				else
 				{
-					if (messageType == ECombatRequestDataMessage.ClientCurrentRoleReportRequest)
+					if (messageType == ECombatRequestDataMessage.ApplyGameplayEffectRequest)
 					{
-						reqData.ClientCurrentRoleReportRequest = (data as ClientCurrentRoleReportRequest);
+						reqData.ApplyGameplayEffectRequest = (data as ApplyGameplayEffectRequest);
 						return;
 					}
-					if (messageType == ECombatRequestDataMessage.SwitchCharacterStateRequest)
+					if (messageType == ECombatRequestDataMessage.DestroyBulletRequest)
 					{
-						reqData.SwitchCharacterStateRequest = (data as SwitchCharacterStateRequest);
+						reqData.DestroyBulletRequest = (data as DestroyBulletRequest);
 						return;
 					}
 				}
 			}
-			else if (messageType <= ECombatRequestDataMessage.AiBlackboardCdRequest)
+			else if (messageType <= ECombatRequestDataMessage.CombatMaxCaseMessageRequest)
 			{
-				if (messageType <= ECombatRequestDataMessage.AiHateRequest)
+				if (messageType <= ECombatRequestDataMessage.SwitchRoleRequest)
 				{
-					if (messageType == ECombatRequestDataMessage.MonsterBoomRequest)
+					if (messageType == ECombatRequestDataMessage.ActivateBuffRequest)
 					{
-						reqData.MonsterBoomRequest = (data as MonsterBoomRequest);
+						reqData.ActivateBuffRequest = (data as ActivateBuffRequest);
 						return;
 					}
+					if (messageType == ECombatRequestDataMessage.SwitchRoleRequest)
+					{
+						reqData.SwitchRoleRequest = (data as SwitchRoleRequest);
+						return;
+					}
+				}
+				else
+				{
 					if (messageType == ECombatRequestDataMessage.AiHateRequest)
 					{
 						reqData.AiHateRequest = (data as AiHateRequest);
 						return;
 					}
-				}
-				else
-				{
-					if (messageType == ECombatRequestDataMessage.RTimeStopAnimRequest)
+					if (messageType == ECombatRequestDataMessage.CombatMaxCaseMessageRequest)
 					{
-						reqData.RTimeStopAnimRequest = (data as RTimeStopAnimRequest);
-						return;
-					}
-					if (messageType == ECombatRequestDataMessage.AiBlackboardCdRequest)
-					{
-						reqData.AiBlackboardCdRequest = (data as AiBlackboardCdRequest);
+						reqData.CombatMaxCaseMessageRequest = (data as CombatMaxCaseMessageRequest);
 						return;
 					}
 				}
 			}
-			else if (messageType <= ECombatRequestDataMessage.ExecuteQteRequest)
+			else if (messageType <= ECombatRequestDataMessage.SkillRequest)
 			{
-				if (messageType == ECombatRequestDataMessage.OrderRemoveBuffRequest)
+				if (messageType == ECombatRequestDataMessage.RTimeStopAnimRequest)
 				{
-					reqData.OrderRemoveBuffRequest = (data as OrderRemoveBuffRequest);
+					reqData.RTimeStopAnimRequest = (data as RTimeStopAnimRequest);
 					return;
 				}
-				if (messageType == ECombatRequestDataMessage.ExecuteQteRequest)
-				{
-					reqData.ExecuteQteRequest = (data as ExecuteQteRequest);
-					return;
-				}
-			}
-			else
-			{
 				if (messageType == ECombatRequestDataMessage.SkillRequest)
 				{
 					reqData.SkillRequest = (data as SkillRequest);
 					return;
 				}
-				if (messageType == ECombatRequestDataMessage.FragileChangeRequest)
+			}
+			else
+			{
+				if (messageType == ECombatRequestDataMessage.CombineEntitiesRequest)
 				{
-					reqData.FragileChangeRequest = (data as FragileChangeRequest);
+					reqData.CombineEntitiesRequest = (data as CombineEntitiesRequest);
 					return;
 				}
-				if (messageType == ECombatRequestDataMessage.TriggerExitSkillRequest)
+				if (messageType == ECombatRequestDataMessage.ModifyBulletParamsRequest)
 				{
-					reqData.TriggerExitSkillRequest = (data as TriggerExitSkillRequest);
+					reqData.ModifyBulletParamsRequest = (data as ModifyBulletParamsRequest);
+					return;
+				}
+				if (messageType == ECombatRequestDataMessage.AnimationStateInitRequest)
+				{
+					reqData.AnimationStateInitRequest = (data as AnimationStateInitRequest);
 					return;
 				}
 			}

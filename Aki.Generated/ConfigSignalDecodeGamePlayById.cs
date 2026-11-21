@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000929 RID: 2345
+	// Token: 0x02000974 RID: 2420
 	public class ConfigSignalDecodeGamePlayById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003709 RID: 14089 RVA: 0x0019088C File Offset: 0x0018EA8C
+		// Token: 0x060038CB RID: 14539 RVA: 0x0019DAAC File Offset: 0x0019BCAC
 		static ConfigSignalDecodeGamePlayById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSignalDecodeGamePlayById.CreateStaticDefaultValue), new Action(ConfigSignalDecodeGamePlayById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600370A RID: 14090 RVA: 0x001908AC File Offset: 0x0018EAAC
+		// Token: 0x060038CC RID: 14540 RVA: 0x0019DACC File Offset: 0x0019BCCC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSignalDecodeGamePlayById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600370B RID: 14091 RVA: 0x0019092B File Offset: 0x0018EB2B
+		// Token: 0x060038CD RID: 14541 RVA: 0x0019DB4B File Offset: 0x0019BD4B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSignalDecodeGamePlayById.LogPair = null;
 			ConfigSignalDecodeGamePlayById.HandleId = 0;
 		}
 
-		// Token: 0x0600370C RID: 14092 RVA: 0x00190939 File Offset: 0x0018EB39
+		// Token: 0x060038CE RID: 14542 RVA: 0x0019DB59 File Offset: 0x0019BD59
 		public static void Init()
 		{
 			ConfigSignalDecodeGamePlayById.HandleId = ConfigCommon.InitDataStatement(ConfigSignalDecodeGamePlayById.HandleId, "db_signaldecodegameplay.db", "select BinData from `SignalDecodeGamePlay` where Id=?");
 		}
 
-		// Token: 0x0600370D RID: 14093 RVA: 0x00190954 File Offset: 0x0018EB54
+		// Token: 0x060038CF RID: 14543 RVA: 0x0019DB74 File Offset: 0x0019BD74
 		public static SignalDecodeGamePlay? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSignalDecodeGamePlayById.HandleId, ConfigSignalDecodeGamePlayById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new SignalDecodeGamePlay?(rootAsSignalDecodeGamePlay);
 		}
 
-		// Token: 0x04004005 RID: 16389
+		// Token: 0x04004212 RID: 16914
 		private const string DB = "db_signaldecodegameplay.db";
 
-		// Token: 0x04004006 RID: 16390
+		// Token: 0x04004213 RID: 16915
 		private const string FILE = "k.可视化编辑/c.Csv/x.信号破译玩法配置/*.csv*";
 
-		// Token: 0x04004007 RID: 16391
+		// Token: 0x04004214 RID: 16916
 		private const string TABLE = "SignalDecodeGamePlay";
 
-		// Token: 0x04004008 RID: 16392
+		// Token: 0x04004215 RID: 16917
 		private const string COMMAND = "select BinData from `SignalDecodeGamePlay` where Id=?";
 
-		// Token: 0x04004009 RID: 16393
+		// Token: 0x04004216 RID: 16918
 		private const string KEY_PREFIX = "SignalDecodeGamePlayById";
 
-		// Token: 0x0400400A RID: 16394
+		// Token: 0x04004217 RID: 16919
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400400B RID: 16395
+		// Token: 0x04004218 RID: 16920
 		private static int HandleId;
 	}
 }

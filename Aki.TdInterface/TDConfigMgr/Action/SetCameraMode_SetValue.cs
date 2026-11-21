@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021A8 RID: 8616
+	// Token: 0x02002413 RID: 9235
 	public class SetCameraMode_SetValue
 	{
-		// Token: 0x040070E5 RID: 28901
-		[Nullable(1)]
+		// Token: 0x0400772D RID: 30509
 		public string Mode;
 	}
 }

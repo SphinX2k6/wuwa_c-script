@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Aki.Protocol.Ai;
 using Aki.Protocol.CombatMessage;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController;
-using CSharpScript.Core.Common;
 using CSharpScript.Core.Framework;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Character.Common.Component;
@@ -22,14 +20,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CombatMessage
 {
-	// Token: 0x02005BA8 RID: 23464
+	// Token: 0x02004B88 RID: 19336
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class CombatMessageController : ControllerBase
 	{
-		// Token: 0x17008CEC RID: 36076
-		// (get) Token: 0x0603B55E RID: 243038 RVA: 0x00E238C6 File Offset: 0x00E21AC6
+		// Token: 0x170060BE RID: 24766
+		// (get) Token: 0x060304AB RID: 197803 RVA: 0x00D73E16 File Offset: 0x00D72016
 		protected override bool IsTickEvenPausedInternal
 		{
 			get
@@ -38,8 +36,8 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x17008CED RID: 36077
-		// (get) Token: 0x0603B55F RID: 243039 RVA: 0x00E238C9 File Offset: 0x00E21AC9
+		// Token: 0x170060BF RID: 24767
+		// (get) Token: 0x060304AC RID: 197804 RVA: 0x00D73E19 File Offset: 0x00D72019
 		public CombatMessageModel Model
 		{
 			get
@@ -48,7 +46,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B560 RID: 243040 RVA: 0x00E238D0 File Offset: 0x00E21AD0
+		// Token: 0x060304AD RID: 197805 RVA: 0x00D73E20 File Offset: 0x00D72020
 		protected override bool OnInit()
 		{
 			Net.Instance.Register(ENotifyMessageId.ResetLocationForZRangeNotify, new Action<IMessage, Net.CallbackStatus>(this.ResetLocationForZRangeNotify));
@@ -64,7 +62,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return true;
 		}
 
-		// Token: 0x0603B561 RID: 243041 RVA: 0x00E239F8 File Offset: 0x00E21BF8
+		// Token: 0x060304AE RID: 197806 RVA: 0x00D73F48 File Offset: 0x00D72148
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.ResetLocationForZRangeNotify);
@@ -80,7 +78,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return true;
 		}
 
-		// Token: 0x0603B562 RID: 243042 RVA: 0x00E23AB0 File Offset: 0x00E21CB0
+		// Token: 0x060304AF RID: 197807 RVA: 0x00D74000 File Offset: 0x00D72200
 		[return: Nullable(2)]
 		private Stat GetCombatStat(string name)
 		{
@@ -93,7 +91,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return stat;
 		}
 
-		// Token: 0x0603B563 RID: 243043 RVA: 0x00E23AEC File Offset: 0x00E21CEC
+		// Token: 0x060304B0 RID: 197808 RVA: 0x00D7403C File Offset: 0x00D7223C
 		[NullableContext(2)]
 		private void OnPackNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -114,7 +112,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B564 RID: 243044 RVA: 0x00E23BB0 File Offset: 0x00E21DB0
+		// Token: 0x060304B1 RID: 197809 RVA: 0x00D74100 File Offset: 0x00D72300
 		private unsafe void OnCombatNotify(CombatCommon combatCommon, CombatNotifyData notify)
 		{
 			CombatExactNotifyDataPack exactNotifyDataPack = notify.GetExactNotifyDataPack();
@@ -214,7 +212,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B565 RID: 243045 RVA: 0x00E23ECC File Offset: 0x00E220CC
+		// Token: 0x060304B2 RID: 197810 RVA: 0x00D7441C File Offset: 0x00D7261C
 		[Conditional("DEBUG")]
 		[Conditional("DEBUG_EDITOR")]
 		[Conditional("DEVELOPMENT")]
@@ -223,7 +221,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 		{
 		}
 
-		// Token: 0x0603B566 RID: 243046 RVA: 0x00E23ED0 File Offset: 0x00E220D0
+		// Token: 0x060304B3 RID: 197811 RVA: 0x00D74420 File Offset: 0x00D72620
 		private unsafe void OnCombatResponse(CombatCommon combatCommon, CombatResponseData response)
 		{
 			Dictionary<int, Action<IMessage>> requestMap = CombatNet.Instance.RequestMap;
@@ -272,7 +270,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B567 RID: 243047 RVA: 0x00E24000 File Offset: 0x00E22200
+		// Token: 0x060304B4 RID: 197812 RVA: 0x00D74550 File Offset: 0x00D72750
 		public void Process(ENotifyMessageId id, Entity entity, IMessage message, CombatCommon combatCommon)
 		{
 			IHandler handler;
@@ -297,7 +295,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B568 RID: 243048 RVA: 0x00E24058 File Offset: 0x00E22258
+		// Token: 0x060304B5 RID: 197813 RVA: 0x00D745A8 File Offset: 0x00D727A8
 		public void RegisterAiHateEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
 			if (handle.EntityType != 2 && handle.EntityType != 7)
@@ -312,7 +310,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			EventSystem.Instance.AddWithTargetUseHoldKey<ERemoveEntityType, EntityHandle>(this, handle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.UnregisterMonster));
 		}
 
-		// Token: 0x0603B569 RID: 243049 RVA: 0x00E240C4 File Offset: 0x00E222C4
+		// Token: 0x060304B6 RID: 197814 RVA: 0x00D74614 File Offset: 0x00D72814
 		public void UnregisterMonster(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (handle.EntityType != 2 && handle.EntityType != 7)
@@ -327,7 +325,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			EventSystem.Instance.RemoveWithTargetUseKey<ERemoveEntityType, EntityHandle>(this, handle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.UnregisterMonster));
 		}
 
-		// Token: 0x0603B56A RID: 243050 RVA: 0x00E24130 File Offset: 0x00E22330
+		// Token: 0x060304B7 RID: 197815 RVA: 0x00D74680 File Offset: 0x00D72880
 		public void RegisterPreTick(EntityComponent comp, Action<float> func)
 		{
 			if (!this.PreTickFunctions.TryAdd(comp, func))
@@ -341,7 +339,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B56B RID: 243051 RVA: 0x00E2417C File Offset: 0x00E2237C
+		// Token: 0x060304B8 RID: 197816 RVA: 0x00D746CC File Offset: 0x00D728CC
 		public void UnregisterPreTick(EntityComponent comp)
 		{
 			if (!this.PreTickFunctions.Remove(comp))
@@ -355,7 +353,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B56C RID: 243052 RVA: 0x00E241C8 File Offset: 0x00E223C8
+		// Token: 0x060304B9 RID: 197817 RVA: 0x00D74718 File Offset: 0x00D72918
 		public void RegisterAfterTick(EntityComponent comp, Action<float> func)
 		{
 			if (!this.AfterTickFunctions.TryAdd(comp, func))
@@ -369,7 +367,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B56D RID: 243053 RVA: 0x00E24214 File Offset: 0x00E22414
+		// Token: 0x060304BA RID: 197818 RVA: 0x00D74764 File Offset: 0x00D72964
 		public void UnregisterAfterTick(EntityComponent comp)
 		{
 			if (!this.AfterTickFunctions.Remove(comp))
@@ -383,7 +381,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B56E RID: 243054 RVA: 0x00E24260 File Offset: 0x00E22460
+		// Token: 0x060304BB RID: 197819 RVA: 0x00D747B0 File Offset: 0x00D729B0
 		public unsafe void TickPriority1(float delta)
 		{
 			if (!Net.Instance.IsServerConnected() || !GameModeModel.Instance.MapDone)
@@ -422,7 +420,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B56F RID: 243055 RVA: 0x00E243C4 File Offset: 0x00E225C4
+		// Token: 0x060304BC RID: 197820 RVA: 0x00D74914 File Offset: 0x00D72B14
 		protected unsafe override void OnAfterTick(float delta)
 		{
 			if (!Net.Instance.IsServerConnected() || !GameModeModel.Instance.MapDone)
@@ -472,7 +470,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			if (Time.Instance.NowSeconds > this.LastPushAiInformationTime + 1.0 || this.Model.AnyHateChange)
 			{
 				bool flag = false;
-				foreach (EntityHandle entityHandle in this.AiHateEntities.ToList<EntityHandle>())
+				foreach (EntityHandle entityHandle in this.AiHateEntities)
 				{
 					if (entityHandle.IsInit)
 					{
@@ -521,7 +519,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			this.Model.AnyHateChange = false;
 			if (GameModeModel.Instance.IsMulti && BlackboardController.Instance.PendingBlackboardParams.Count > 0)
 			{
-				foreach (EntityHandle entityHandle2 in this.AiHateEntities.ToList<EntityHandle>())
+				foreach (EntityHandle entityHandle2 in this.AiHateEntities)
 				{
 					if (entityHandle2.IsInit)
 					{
@@ -563,47 +561,12 @@ namespace CSharpScript.Game.Module.CombatMessage
 				{
 					Net.Instance.Send(EPushMessageId.MovePackagePush, movePackagePush);
 				}
-				if (Info.Instance.IsBuildDevelopmentOrDebug)
-				{
-					string data = Json.Encode(new Dictionary<string, object>
-					{
-						{
-							"scene_id",
-							CreatureModel.Instance.GetSceneId()
-						},
-						{
-							"instance_id",
-							CreatureModel.Instance.GetInstanceId()
-						},
-						{
-							"msg_id",
-							24756
-						},
-						{
-							"sub_count",
-							movePackagePush.MovingEntities.Count
-						},
-						{
-							"is_multi",
-							GameModeModel.Instance.IsMulti
-						},
-						{
-							"ed",
-							this.IS_WITH_EDITOR
-						},
-						{
-							"br",
-							LogAnalyzer.Instance.GetBranch()
-						}
-					}, null);
-					CombatDebugController.Instance.DataReport("COMBAT_MESSAGE_COUNT", data);
-				}
 				CombatMessageModel.Instance.NeedPushMove = false;
 			}
 			this.FlushMessagePack();
 			if (CombatMessageModel.Instance.SkillDirtySet.Count > 0)
 			{
-				foreach (long num in CombatMessageModel.Instance.SkillDirtySet.ToList<long>())
+				foreach (long num in CombatMessageModel.Instance.SkillDirtySet)
 				{
 					int num2 = (int)num;
 					CombatMessageModel instance4 = CombatMessageModel.Instance;
@@ -616,7 +579,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B570 RID: 243056 RVA: 0x00E24B90 File Offset: 0x00E22D90
+		// Token: 0x060304BD RID: 197821 RVA: 0x00D75000 File Offset: 0x00D73200
 		public void FlushMessagePack()
 		{
 			List<string> list = new List<string>();
@@ -644,55 +607,12 @@ namespace CSharpScript.Game.Module.CombatMessage
 						this.OnPackNotify(combatSendPackResponse.ReceivePackNotify, _);
 					}
 				}, 0);
-				if (Info.Instance.IsBuildDevelopmentOrDebug)
-				{
-					string data = Json.Encode(new Dictionary<string, object>
-					{
-						{
-							"scene_id",
-							CreatureModel.Instance.GetSceneId()
-						},
-						{
-							"instance_id",
-							CreatureModel.Instance.GetInstanceId()
-						},
-						{
-							"msg_id",
-							19470
-						},
-						{
-							"sub_count",
-							messagePack.Data.Count
-						},
-						{
-							"is_multi",
-							GameModeModel.Instance.IsMulti
-						},
-						{
-							"sub_msg",
-							list
-						},
-						{
-							"frame",
-							Time.Instance.Frame
-						},
-						{
-							"ed",
-							this.IS_WITH_EDITOR
-						},
-						{
-							"br",
-							LogAnalyzer.Instance.GetBranch()
-						}
-					}, null);
-					CombatDebugController.Instance.DataReport("COMBAT_MESSAGE_COUNT", data);
-				}
 				this.Model.MessagePack = new CombatSendPackRequest();
 				CombatMessageModel.Instance.CombatMessageSendLastTime = Time.Instance.SystemNowSeconds;
 			}
 		}
 
-		// Token: 0x0603B571 RID: 243057 RVA: 0x00E24DA8 File Offset: 0x00E22FA8
+		// Token: 0x060304BE RID: 197822 RVA: 0x00D75120 File Offset: 0x00D73320
 		[NullableContext(2)]
 		private void ResetLocationForZRangeNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -712,7 +632,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			this.ResetLocationForZRangeInternal(entity, resetLocationForZRangeNotify);
 		}
 
-		// Token: 0x0603B572 RID: 243058 RVA: 0x00E24E18 File Offset: 0x00E23018
+		// Token: 0x060304BF RID: 197823 RVA: 0x00D75190 File Offset: 0x00D73390
 		private unsafe void ResetLocationForZRangeInternal(EntityHandle handle, ResetLocationForZRangeNotify data)
 		{
 			global::Vector vector = global::Vector.Create(data.ResetLocation);
@@ -824,7 +744,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 7));
 		}
 
-		// Token: 0x0603B573 RID: 243059 RVA: 0x00E2511C File Offset: 0x00E2331C
+		// Token: 0x060304C0 RID: 197824 RVA: 0x00D75494 File Offset: 0x00D73694
 		private void MoveInfoHandle(MovingEntityData data)
 		{
 			long entityId = data.EntityId;
@@ -902,7 +822,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B574 RID: 243060 RVA: 0x00E25304 File Offset: 0x00E23504
+		// Token: 0x060304C1 RID: 197825 RVA: 0x00D7567C File Offset: 0x00D7387C
 		private void MotorAnimInfoHandle(MotorAnimEntity data)
 		{
 			long entityId = data.EntityId;
@@ -928,7 +848,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B575 RID: 243061 RVA: 0x00E25390 File Offset: 0x00E23590
+		// Token: 0x060304C2 RID: 197826 RVA: 0x00D75708 File Offset: 0x00D73908
 		[NullableContext(2)]
 		private void MovePackageNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -938,7 +858,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B576 RID: 243062 RVA: 0x00E253E4 File Offset: 0x00E235E4
+		// Token: 0x060304C3 RID: 197827 RVA: 0x00D7575C File Offset: 0x00D7395C
 		[NullableContext(2)]
 		private void UDPMovePackageNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -948,7 +868,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B577 RID: 243063 RVA: 0x00E25438 File Offset: 0x00E23638
+		// Token: 0x060304C4 RID: 197828 RVA: 0x00D757B0 File Offset: 0x00D739B0
 		[NullableContext(2)]
 		private void UDPMotorAnimNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -958,7 +878,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B578 RID: 243064 RVA: 0x00E2548C File Offset: 0x00E2368C
+		// Token: 0x060304C5 RID: 197829 RVA: 0x00D75804 File Offset: 0x00D73A04
 		[NullableContext(2)]
 		private void SceneItemMoveTargetNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -977,7 +897,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B579 RID: 243065 RVA: 0x00E254DC File Offset: 0x00E236DC
+		// Token: 0x060304C6 RID: 197830 RVA: 0x00D75854 File Offset: 0x00D73A54
 		[CombatListen(ENotifyMessageId.EntityIsVisibleNotify, true, true)]
 		public static void EntityIsVisibleNotify(Entity entity, EntityIsVisibleNotify data, [Nullable(2)] CombatCommon combatCommon = null)
 		{
@@ -999,7 +919,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			component.SetVisible(data.IsVisible);
 		}
 
-		// Token: 0x0603B57A RID: 243066 RVA: 0x00E25550 File Offset: 0x00E23750
+		// Token: 0x060304C7 RID: 197831 RVA: 0x00D758C8 File Offset: 0x00D73AC8
 		[CombatListen(ENotifyMessageId.ActorVisibleNotify, true, true)]
 		public static void ActorIsVisibleNotify(Entity entity, ActorVisibleNotify data, [Nullable(2)] CombatCommon combatCommon = null)
 		{
@@ -1020,7 +940,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			CreatureController.Instance.SetActorVisible(entity, data.IsActorVisible, data.IsActorVisible, data.IsActorVisible, "ActorIsVisibleNotify", false);
 		}
 
-		// Token: 0x0603B57B RID: 243067 RVA: 0x00E255D0 File Offset: 0x00E237D0
+		// Token: 0x060304C8 RID: 197832 RVA: 0x00D75948 File Offset: 0x00D73B48
 		private void OnSyncAiInformation(AiControlSwitch switchInfo)
 		{
 			long entityId = switchInfo.EntityId;
@@ -1040,7 +960,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			characterAiComponent.OnSyncAiInformation(switchInfo);
 		}
 
-		// Token: 0x0603B57C RID: 243068 RVA: 0x00E25648 File Offset: 0x00E23848
+		// Token: 0x060304C9 RID: 197833 RVA: 0x00D759C0 File Offset: 0x00D73BC0
 		[NullableContext(2)]
 		private void AiControlSwitchNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -1050,7 +970,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B57D RID: 243069 RVA: 0x00E2569C File Offset: 0x00E2389C
+		// Token: 0x060304CA RID: 197834 RVA: 0x00D75A14 File Offset: 0x00D73C14
 		[NullableContext(2)]
 		protected void PreAiControlSwitchNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -1078,7 +998,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B57E RID: 243070 RVA: 0x00E25748 File Offset: 0x00E23948
+		// Token: 0x060304CB RID: 197835 RVA: 0x00D75AC0 File Offset: 0x00D73CC0
 		[CombatListen(ENotifyMessageId.EntityLoadCompleteNotify, false, false)]
 		public static void EntityLoadCompleteNotify(Entity entity, EntityLoadCompleteNotify data, [Nullable(2)] CombatCommon combatCommon = null)
 		{
@@ -1098,7 +1018,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B57F RID: 243071 RVA: 0x00E257C4 File Offset: 0x00E239C4
+		// Token: 0x060304CC RID: 197836 RVA: 0x00D75B3C File Offset: 0x00D73D3C
 		[CombatListen(ENotifyMessageId.PlayerRebackSceneNotify, false, false)]
 		public static void PlayerRebackSceneNotify(Entity entity, PlayerRebackSceneNotify data, [Nullable(2)] CombatCommon combatCommon = null)
 		{
@@ -1111,7 +1031,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			entity2.Entity.GetComponent<CharacterMovementSyncComponent>().ClearReplaySamples();
 		}
 
-		// Token: 0x0603B580 RID: 243072 RVA: 0x00E257F8 File Offset: 0x00E239F8
+		// Token: 0x060304CD RID: 197837 RVA: 0x00D75B70 File Offset: 0x00D73D70
 		[CombatListen(ENotifyMessageId.MaterialNotify, true, true)]
 		public static void MaterialNotify(Entity entity, MaterialNotify data, [Nullable(2)] CombatCommon combatCommon = null)
 		{
@@ -1161,7 +1081,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x0603B581 RID: 243073 RVA: 0x00E25914 File Offset: 0x00E23B14
+		// Token: 0x060304CE RID: 197838 RVA: 0x00D75C8C File Offset: 0x00D73E8C
 		[NullableContext(2)]
 		private void SplineMoveNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -1185,7 +1105,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B582 RID: 243074 RVA: 0x00E259A2 File Offset: 0x00E23BA2
+		// Token: 0x060304CF RID: 197839 RVA: 0x00D75D1A File Offset: 0x00D73F1A
 		private void CopyToUeVector(Aki.Protocol.Vector inV, ref FVectorDouble outV)
 		{
 			outV.X = (double)inV.X;
@@ -1193,7 +1113,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			outV.Z = (double)inV.Z;
 		}
 
-		// Token: 0x0603B583 RID: 243075 RVA: 0x00E259CB File Offset: 0x00E23BCB
+		// Token: 0x060304D0 RID: 197840 RVA: 0x00D75D43 File Offset: 0x00D73F43
 		private void CopyToUeRotator(Aki.Protocol.Rotator inV, ref FRotator outV)
 		{
 			outV.Pitch = inV.Pitch;
@@ -1201,8 +1121,8 @@ namespace CSharpScript.Game.Module.CombatMessage
 			outV.Yaw = inV.Yaw;
 		}
 
-		// Token: 0x17008CEE RID: 36078
-		// (get) Token: 0x0603B584 RID: 243076 RVA: 0x00E259F1 File Offset: 0x00E23BF1
+		// Token: 0x170060C0 RID: 24768
+		// (get) Token: 0x060304D1 RID: 197841 RVA: 0x00D75D69 File Offset: 0x00D73F69
 		public static CombatMessageController Instance
 		{
 			get
@@ -1211,7 +1131,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B585 RID: 243077 RVA: 0x00E259F8 File Offset: 0x00E23BF8
+		// Token: 0x060304D2 RID: 197842 RVA: 0x00D75D70 File Offset: 0x00D73F70
 		public static CombatMessageController GetOrCreateInstance()
 		{
 			if (CombatMessageController._Instance == null)
@@ -1221,7 +1141,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return CombatMessageController._Instance;
 		}
 
-		// Token: 0x0603B586 RID: 243078 RVA: 0x00E25A0C File Offset: 0x00E23C0C
+		// Token: 0x060304D3 RID: 197843 RVA: 0x00D75D84 File Offset: 0x00D73F84
 		public static bool CreateInstance()
 		{
 			if (CombatMessageController._Instance != null)
@@ -1232,90 +1152,90 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return true;
 		}
 
-		// Token: 0x0603B587 RID: 243079 RVA: 0x00E25A22 File Offset: 0x00E23C22
+		// Token: 0x060304D4 RID: 197844 RVA: 0x00D75D9A File Offset: 0x00D73F9A
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603B588 RID: 243080 RVA: 0x00E25A24 File Offset: 0x00E23C24
+		// Token: 0x060304D5 RID: 197845 RVA: 0x00D75D9C File Offset: 0x00D73F9C
 		public static void ResetStaticDefaultValue()
 		{
 			CombatMessageController._Instance = null;
 		}
 
-		// Token: 0x0603B589 RID: 243081 RVA: 0x00E25A2C File Offset: 0x00E23C2C
+		// Token: 0x060304D6 RID: 197846 RVA: 0x00D75DA4 File Offset: 0x00D73FA4
 		static CombatMessageController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CombatMessageController.CreateStaticDefaultValue), new Action(CombatMessageController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EEB5 RID: 126645
+		// Token: 0x04019966 RID: 104806
 		public bool IsDebugMessageLog;
 
-		// Token: 0x0401EEB6 RID: 126646
+		// Token: 0x04019967 RID: 104807
 		public bool IsDebugMoveMessage;
 
-		// Token: 0x0401EEB7 RID: 126647
+		// Token: 0x04019968 RID: 104808
 		public float StartTime;
 
-		// Token: 0x0401EEB8 RID: 126648
+		// Token: 0x04019969 RID: 104809
 		public int MoveData;
 
-		// Token: 0x0401EEB9 RID: 126649
+		// Token: 0x0401996A RID: 104810
 		public int MoveDataCount;
 
-		// Token: 0x0401EEBA RID: 126650
+		// Token: 0x0401996B RID: 104811
 		public int StateData;
 
-		// Token: 0x0401EEBB RID: 126651
+		// Token: 0x0401996C RID: 104812
 		public int StateDataCount;
 
-		// Token: 0x0401EEBC RID: 126652
+		// Token: 0x0401996D RID: 104813
 		private readonly Dictionary<int, Action<Entity, object>> NotifyHandles = new Dictionary<int, Action<Entity, object>>();
 
-		// Token: 0x0401EEBD RID: 126653
+		// Token: 0x0401996E RID: 104814
 		private readonly Dictionary<EntityComponent, Action<float>> PreTickFunctions = new Dictionary<EntityComponent, Action<float>>();
 
-		// Token: 0x0401EEBE RID: 126654
+		// Token: 0x0401996F RID: 104815
 		private readonly Dictionary<EntityComponent, Action<float>> AfterTickFunctions = new Dictionary<EntityComponent, Action<float>>();
 
-		// Token: 0x0401EEBF RID: 126655
+		// Token: 0x04019970 RID: 104816
 		private readonly HashSet<EntityHandle> AiHateEntities = new HashSet<EntityHandle>();
 
-		// Token: 0x0401EEC0 RID: 126656
+		// Token: 0x04019971 RID: 104817
 		private readonly HashSet<Entity> LastEntityActive = new HashSet<Entity>();
 
-		// Token: 0x0401EEC1 RID: 126657
+		// Token: 0x04019972 RID: 104818
 		private readonly Dictionary<string, Stat> CombatStatMap = new Dictionary<string, Stat>();
 
-		// Token: 0x0401EEC2 RID: 126658
+		// Token: 0x04019973 RID: 104819
 		private FVectorDouble LocationCatch = new FVectorDouble();
 
-		// Token: 0x0401EEC3 RID: 126659
+		// Token: 0x04019974 RID: 104820
 		private FRotator RotationCatch = new FRotator();
 
-		// Token: 0x0401EEC4 RID: 126660
+		// Token: 0x04019975 RID: 104821
 		private double LastPushAiInformationTime;
 
-		// Token: 0x0401EEC5 RID: 126661
+		// Token: 0x04019976 RID: 104822
 		private const float SendAiInformationInterval = 1f;
 
-		// Token: 0x0401EEC6 RID: 126662
+		// Token: 0x04019977 RID: 104823
 		private const int MAX_AI_INFO_COUNT = 100;
 
-		// Token: 0x0401EEC7 RID: 126663
+		// Token: 0x04019978 RID: 104824
 		private readonly int? IS_WITH_EDITOR = KuroApplication.IsWithEditor() ? new int?(1) : null;
 
-		// Token: 0x0401EEC8 RID: 126664
+		// Token: 0x04019979 RID: 104825
 		private readonly Stat CombatReceivePackNotifyStat = Stat.Create("CombatPackNotify.CombatReceivePackNotifyStat", "", "STATGROUP_KuroBattle");
 
-		// Token: 0x0401EEC9 RID: 126665
+		// Token: 0x0401997A RID: 104826
 		private readonly Stat CombatMessageBufferStat = Stat.Create("CombatMessageBuffer", "", "");
 
-		// Token: 0x0401EECA RID: 126666
+		// Token: 0x0401997B RID: 104827
 		private readonly Stat CombatMessageHatredStat = Stat.Create("CombatMessageHatred", "", "");
 
-		// Token: 0x0401EECB RID: 126667
+		// Token: 0x0401997C RID: 104828
 		[Nullable(2)]
 		private static CombatMessageController _Instance;
 	}

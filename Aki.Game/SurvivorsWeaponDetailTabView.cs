@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -10,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B13 RID: 11027
+// Token: 0x0200208F RID: 8335
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsWeaponDetailTabView : UiPanelBase
 {
-	// Token: 0x06016EA3 RID: 93859 RVA: 0x005D08F8 File Offset: 0x005CEAF8
+	// Token: 0x060148D4 RID: 84180 RVA: 0x005FD478 File Offset: 0x005FB678
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +36,7 @@ public class SurvivorsWeaponDetailTabView : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016EA4 RID: 93860 RVA: 0x005D0A14 File Offset: 0x005CEC14
+	// Token: 0x060148D5 RID: 84181 RVA: 0x005FD594 File Offset: 0x005FB794
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsWeaponDetailTabView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -48,7 +47,7 @@ public class SurvivorsWeaponDetailTabView : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016EA5 RID: 93861 RVA: 0x005D0A58 File Offset: 0x005CEC58
+	// Token: 0x060148D6 RID: 84182 RVA: 0x005FD5D8 File Offset: 0x005FB7D8
 	private UniTask InitializeWeaponTotalItemList()
 	{
 		SurvivorsWeaponDetailTabView.<InitializeWeaponTotalItemList>d__10 <InitializeWeaponTotalItemList>d__;
@@ -59,13 +58,13 @@ public class SurvivorsWeaponDetailTabView : UiPanelBase
 		return <InitializeWeaponTotalItemList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016EA6 RID: 93862 RVA: 0x005D0A9B File Offset: 0x005CEC9B
+	// Token: 0x060148D7 RID: 84183 RVA: 0x005FD61B File Offset: 0x005FB81B
 	private SurvivorsAttributeItem CreateAttributeItemProxy()
 	{
 		return new SurvivorsAttributeItem();
 	}
 
-	// Token: 0x06016EA7 RID: 93863 RVA: 0x005D0AA4 File Offset: 0x005CECA4
+	// Token: 0x060148D8 RID: 84184 RVA: 0x005FD624 File Offset: 0x005FB824
 	protected override void OnStart()
 	{
 		this.WeaponEvolveScroll = new GenericScrollViewNew<SurvivorsWeaponDetailItem, int>(base.GetScrollViewWithScrollbar(1), new Func<SurvivorsWeaponDetailItem>(this.CreateWeaponGrid), null, false, null);
@@ -73,25 +72,25 @@ public class SurvivorsWeaponDetailTabView : UiPanelBase
 		EventSystem.Instance.Emit<bool>(EEventName.SurvivorsRogueWeaponDetailTabViewShow, true);
 	}
 
-	// Token: 0x06016EA8 RID: 93864 RVA: 0x005D0B04 File Offset: 0x005CED04
+	// Token: 0x060148D9 RID: 84185 RVA: 0x005FD684 File Offset: 0x005FB884
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Emit<bool>(EEventName.SurvivorsRogueWeaponDetailTabViewShow, false);
 	}
 
-	// Token: 0x06016EA9 RID: 93865 RVA: 0x005D0B17 File Offset: 0x005CED17
+	// Token: 0x060148DA RID: 84186 RVA: 0x005FD697 File Offset: 0x005FB897
 	private SurvivorsWeaponDetailItem CreateWeaponGrid()
 	{
 		return new SurvivorsWeaponDetailItem();
 	}
 
-	// Token: 0x06016EAA RID: 93866 RVA: 0x005D0B1E File Offset: 0x005CED1E
+	// Token: 0x060148DB RID: 84187 RVA: 0x005FD69E File Offset: 0x005FB89E
 	private SurvivorsWeaponAttributeIconItem CreateWeaponAttributeIcon()
 	{
 		return new SurvivorsWeaponAttributeIconItem();
 	}
 
-	// Token: 0x06016EAB RID: 93867 RVA: 0x005D0B28 File Offset: 0x005CED28
+	// Token: 0x060148DC RID: 84188 RVA: 0x005FD6A8 File Offset: 0x005FB8A8
 	public void RefreshByData(SurvivorsWeaponGainData weaponData)
 	{
 		this.WeaponData = weaponData;
@@ -99,12 +98,12 @@ public class SurvivorsWeaponDetailTabView : UiPanelBase
 		int currentEvolveId = weaponData.GetCurrentEvolveId();
 		this.RefreshWeaponCard(configId);
 		this.RefreshEvolveInfo(configId, currentEvolveId);
-		this.RefreshAttributeList(configId, weaponData.Data.Affixs.ToList<int>());
+		this.RefreshAttributeList(configId, weaponData.Data.Affixs);
 		this.RefreshWeaponTotalList(weaponData.Data.KillMonsterCount);
 		this.RefreshAttributeIcon();
 	}
 
-	// Token: 0x06016EAC RID: 93868 RVA: 0x005D0B88 File Offset: 0x005CED88
+	// Token: 0x060148DD RID: 84189 RVA: 0x005FD704 File Offset: 0x005FB904
 	public void RefreshWeaponCard(int weaponId)
 	{
 		SurvivorsRogueWeaponCard survivorsRogueWeaponCard = SurvivorsRogueCardDataFactory.CreateGeneralWeapon(weaponId);
@@ -117,7 +116,7 @@ public class SurvivorsWeaponDetailTabView : UiPanelBase
 		cardItem.Apply(survivorsRogueWeaponCard);
 	}
 
-	// Token: 0x06016EAD RID: 93869 RVA: 0x005D0BBC File Offset: 0x005CEDBC
+	// Token: 0x060148DE RID: 84190 RVA: 0x005FD738 File Offset: 0x005FB938
 	public void RefreshEvolveInfo(int weaponId, int weaponEvolveId)
 	{
 		SurvivorsWeapon? survivorsWeapon = SurvivorsRogueConfig.Instance.GetSurvivorsWeapon(weaponId);
@@ -141,7 +140,7 @@ public class SurvivorsWeaponDetailTabView : UiPanelBase
 		});
 	}
 
-	// Token: 0x06016EAE RID: 93870 RVA: 0x005D0C70 File Offset: 0x005CEE70
+	// Token: 0x060148DF RID: 84191 RVA: 0x005FD7EC File Offset: 0x005FB9EC
 	public void RefreshCurrentEvolve(List<int> weaponEvolveIdList, List<int> unlockEvolveIdList, int currentEvolveId)
 	{
 		UUIItem uiitem = null;
@@ -170,7 +169,7 @@ public class SurvivorsWeaponDetailTabView : UiPanelBase
 		scrollViewWithScrollbar.ScrollTo(uiitem, true);
 	}
 
-	// Token: 0x06016EAF RID: 93871 RVA: 0x005D0CF8 File Offset: 0x005CEEF8
+	// Token: 0x060148E0 RID: 84192 RVA: 0x005FD874 File Offset: 0x005FBA74
 	public void RefreshWeaponTotalList(int totalKillCount)
 	{
 		SurvivorsAttributeItem totalKillItem = this.TotalKillItem;
@@ -181,8 +180,8 @@ public class SurvivorsWeaponDetailTabView : UiPanelBase
 		totalKillItem.SetValue((double)totalKillCount, false, false);
 	}
 
-	// Token: 0x06016EB0 RID: 93872 RVA: 0x005D0D10 File Offset: 0x005CEF10
-	private void RefreshAttributeList(int weaponId, List<int> weaponAffixs)
+	// Token: 0x060148E1 RID: 84193 RVA: 0x005FD88C File Offset: 0x005FBA8C
+	private void RefreshAttributeList(int weaponId, IEnumerable<int> weaponAffixs)
 	{
 		Dictionary<int, double> dictionary = new Dictionary<int, double>();
 		foreach (int lvId in weaponAffixs)
@@ -238,7 +237,7 @@ public class SurvivorsWeaponDetailTabView : UiPanelBase
 		this.AttributeScrollView.RefreshByData(list, false, null, false);
 	}
 
-	// Token: 0x06016EB1 RID: 93873 RVA: 0x005D0FA4 File Offset: 0x005CF1A4
+	// Token: 0x060148E2 RID: 84194 RVA: 0x005FDB20 File Offset: 0x005FBD20
 	private void RefreshAttributeIcon()
 	{
 		List<int> list = new List<int>();
@@ -259,27 +258,27 @@ public class SurvivorsWeaponDetailTabView : UiPanelBase
 		base.GetItem(6).SetUIActive(list.Count > 0);
 	}
 
-	// Token: 0x06016EB2 RID: 93874 RVA: 0x005D1070 File Offset: 0x005CF270
+	// Token: 0x060148E3 RID: 84195 RVA: 0x005FDBEC File Offset: 0x005FBDEC
 	private void OnClickIconMore()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SurvivorsWeaponAttributeView, this.WeaponData, null);
 	}
 
-	// Token: 0x0400AA56 RID: 43606
+	// Token: 0x0400AE5C RID: 44636
 	private const int ATTRIBUTE_TOTAL_KILL_COUNT_ID = 267;
 
-	// Token: 0x0400AA57 RID: 43607
+	// Token: 0x0400AE5D RID: 44637
 	private const int SPECIAL_ATTRIBUTE_COUNT = 5;
 
-	// Token: 0x0400AA58 RID: 43608
+	// Token: 0x0400AE5E RID: 44638
 	[Nullable(2)]
 	private SurvivorsWeaponGainData WeaponData;
 
-	// Token: 0x0400AA59 RID: 43609
+	// Token: 0x0400AE5F RID: 44639
 	[Nullable(2)]
 	private SurvivorsRogueCardBase CardItem;
 
-	// Token: 0x0400AA5A RID: 43610
+	// Token: 0x0400AE60 RID: 44640
 	[Nullable(new byte[]
 	{
 		2,
@@ -287,11 +286,11 @@ public class SurvivorsWeaponDetailTabView : UiPanelBase
 	})]
 	private GenericScrollViewNew<SurvivorsWeaponDetailItem, int> WeaponEvolveScroll;
 
-	// Token: 0x0400AA5B RID: 43611
+	// Token: 0x0400AE61 RID: 44641
 	[Nullable(2)]
 	private SurvivorsAttributeItem TotalKillItem;
 
-	// Token: 0x0400AA5C RID: 43612
+	// Token: 0x0400AE62 RID: 44642
 	[Nullable(new byte[]
 	{
 		2,
@@ -300,7 +299,7 @@ public class SurvivorsWeaponDetailTabView : UiPanelBase
 	})]
 	private LoopScrollView<SurvivorsAttributeItem, ISurvivorsAttributeUiData> AttributeScrollView;
 
-	// Token: 0x0400AA5D RID: 43613
+	// Token: 0x0400AE63 RID: 44643
 	[Nullable(new byte[]
 	{
 		2,

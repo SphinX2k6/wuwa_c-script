@@ -7,13 +7,13 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000076 RID: 118
+	// Token: 0x0200005B RID: 91
 	[NullableContext(1)]
 	[Nullable(0)]
 	public sealed class TSet<T> : UnrealProxyObject, ISet<T>, ICollection<!0>, IEnumerable<!0>, IEnumerable, IReadOnlySet<T>, IReadOnlyCollection<T>
 	{
-		// Token: 0x170004B2 RID: 1202
-		// (get) Token: 0x06000E52 RID: 3666 RVA: 0x000153B2 File Offset: 0x000135B2
+		// Token: 0x170000BA RID: 186
+		// (get) Token: 0x060009E4 RID: 2532 RVA: 0x000100BA File Offset: 0x0000E2BA
 		public IntPtr NativeSetPtr
 		{
 			get
@@ -22,13 +22,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E53 RID: 3667 RVA: 0x000153BF File Offset: 0x000135BF
+		// Token: 0x060009E5 RID: 2533 RVA: 0x000100C7 File Offset: 0x0000E2C7
 		public TSet()
 		{
 			FCScriptSetHelperWrapper.AllocNativeScriptSet(base.NativePtr);
 		}
 
-		// Token: 0x06000E54 RID: 3668 RVA: 0x000153D4 File Offset: 0x000135D4
+		// Token: 0x060009E6 RID: 2534 RVA: 0x000100DC File Offset: 0x0000E2DC
 		[NullableContext(2)]
 		public TSet(IntPtr NativeScriptSetPtr, UnrealObject MemoryOwner)
 		{
@@ -50,12 +50,12 @@ namespace UnrealEngine
 			FCScriptSetHelperWrapper.SetNativeScriptSet(base.NativePtr, NativeScriptSetPtr, base.IsNativePtrAllocated);
 		}
 
-		// Token: 0x06000E55 RID: 3669 RVA: 0x00015439 File Offset: 0x00013639
+		// Token: 0x060009E7 RID: 2535 RVA: 0x00010141 File Offset: 0x0000E341
 		public TSet(IntPtr NativeScriptSetPtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativeScriptSetPtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06000E56 RID: 3670 RVA: 0x00015444 File Offset: 0x00013644
+		// Token: 0x060009E8 RID: 2536 RVA: 0x0001014C File Offset: 0x0000E34C
 		protected override IntPtr AllocNativePtr()
 		{
 			NativeArrayProcessorFactory.AddRef(TSet<T>.Processor);
@@ -63,7 +63,7 @@ namespace UnrealEngine
 			return FCScriptSetHelperWrapper.AllocNativeMemory(TSet<T>.InnerPropertyTypeCode, innerUStructPtr, TSet<T>.Processor.Size, TSet<T>.Processor.MinAlignment);
 		}
 
-		// Token: 0x06000E57 RID: 3671 RVA: 0x000154A2 File Offset: 0x000136A2
+		// Token: 0x060009E9 RID: 2537 RVA: 0x000101AA File Offset: 0x0000E3AA
 		protected override void DeallocNativePtr()
 		{
 			this.Empty(0);
@@ -71,8 +71,8 @@ namespace UnrealEngine
 			NativeArrayProcessorFactory.DecRef(TSet<T>.Processor);
 		}
 
-		// Token: 0x170004B3 RID: 1203
-		// (get) Token: 0x06000E58 RID: 3672 RVA: 0x000154C0 File Offset: 0x000136C0
+		// Token: 0x170000BB RID: 187
+		// (get) Token: 0x060009EA RID: 2538 RVA: 0x000101C8 File Offset: 0x0000E3C8
 		public override bool AllowMoveAssign
 		{
 			get
@@ -81,14 +81,14 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E59 RID: 3673 RVA: 0x000154C3 File Offset: 0x000136C3
+		// Token: 0x060009EB RID: 2539 RVA: 0x000101CB File Offset: 0x0000E3CB
 		public override void MoveAssign(IntPtr Src)
 		{
 			FCScriptSetHelperWrapper.MoveAssign(this._NativePtr, Src);
 		}
 
-		// Token: 0x170004B4 RID: 1204
-		// (get) Token: 0x06000E5A RID: 3674 RVA: 0x000154D1 File Offset: 0x000136D1
+		// Token: 0x170000BC RID: 188
+		// (get) Token: 0x060009EC RID: 2540 RVA: 0x000101D9 File Offset: 0x0000E3D9
 		public override bool AllowCopyAssign
 		{
 			get
@@ -97,13 +97,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E5B RID: 3675 RVA: 0x000154D4 File Offset: 0x000136D4
+		// Token: 0x060009ED RID: 2541 RVA: 0x000101DC File Offset: 0x0000E3DC
 		public override void CopyAssign(IntPtr Src)
 		{
 			FCScriptSetHelperWrapper.CopyAssign(this._NativePtr, Src);
 		}
 
-		// Token: 0x06000E5C RID: 3676 RVA: 0x000154E4 File Offset: 0x000136E4
+		// Token: 0x060009EE RID: 2542 RVA: 0x000101EC File Offset: 0x0000E3EC
 		public unsafe bool Add(T Value)
 		{
 			bool flag = false;
@@ -121,7 +121,7 @@ namespace UnrealEngine
 			return num != this.Num();
 		}
 
-		// Token: 0x06000E5D RID: 3677 RVA: 0x00015538 File Offset: 0x00013738
+		// Token: 0x060009EF RID: 2543 RVA: 0x00010240 File Offset: 0x0000E440
 		public unsafe bool Remove(T Value)
 		{
 			bool flag = false;
@@ -138,7 +138,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06000E5E RID: 3678 RVA: 0x0001557C File Offset: 0x0001377C
+		// Token: 0x060009F0 RID: 2544 RVA: 0x00010284 File Offset: 0x0000E484
 		public unsafe bool Contains(T Value)
 		{
 			bool flag = false;
@@ -155,31 +155,31 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06000E5F RID: 3679 RVA: 0x000155C3 File Offset: 0x000137C3
+		// Token: 0x060009F1 RID: 2545 RVA: 0x000102CB File Offset: 0x0000E4CB
 		public int Num()
 		{
 			return FCScriptSetHelperWrapper.Num(this._NativePtr);
 		}
 
-		// Token: 0x06000E60 RID: 3680 RVA: 0x000155D0 File Offset: 0x000137D0
+		// Token: 0x060009F2 RID: 2546 RVA: 0x000102D8 File Offset: 0x0000E4D8
 		public void Empty(int Slack = 0)
 		{
 			FCScriptSetHelperWrapper.Empty(this._NativePtr, Slack);
 		}
 
-		// Token: 0x06000E61 RID: 3681 RVA: 0x000155DF File Offset: 0x000137DF
+		// Token: 0x060009F3 RID: 2547 RVA: 0x000102E7 File Offset: 0x0000E4E7
 		public bool IsValidIndex(int Index)
 		{
 			return FCScriptSetHelperWrapper.IsValidIndex(this._NativePtr, Index);
 		}
 
-		// Token: 0x06000E62 RID: 3682 RVA: 0x000155ED File Offset: 0x000137ED
+		// Token: 0x060009F4 RID: 2548 RVA: 0x000102F5 File Offset: 0x0000E4F5
 		public int GetMaxIndex()
 		{
 			return FCScriptSetHelperWrapper.GetMaxIndex(this._NativePtr);
 		}
 
-		// Token: 0x06000E63 RID: 3683 RVA: 0x000155FC File Offset: 0x000137FC
+		// Token: 0x060009F5 RID: 2549 RVA: 0x00010304 File Offset: 0x0000E504
 		[NullableContext(2)]
 		public unsafe T GetElement(int Index)
 		{
@@ -191,25 +191,32 @@ namespace UnrealEngine
 			return TSet<T>.Processor.Get(elementPtr, 0);
 		}
 
-		// Token: 0x06000E64 RID: 3684 RVA: 0x00015631 File Offset: 0x00013831
+		// Token: 0x060009F6 RID: 2550 RVA: 0x00010339 File Offset: 0x0000E539
 		public override void CopyTo(IntPtr DestScriptSetPtr, UScriptStructStackOnlyPtr NativeUStructPtr = default(UScriptStructStackOnlyPtr))
 		{
 			FCScriptSetHelperWrapper.CopyTo(DestScriptSetPtr, base.NativePtr);
 		}
 
-		// Token: 0x06000E65 RID: 3685 RVA: 0x0001563F File Offset: 0x0001383F
-		public IEnumerator<T> GetEnumerator()
+		// Token: 0x060009F7 RID: 2551 RVA: 0x00010347 File Offset: 0x0000E547
+		[NullableContext(0)]
+		public TSet<T>.Enumerator GetEnumerator()
 		{
 			return new TSet<T>.Enumerator(this);
 		}
 
-		// Token: 0x06000E66 RID: 3686 RVA: 0x0001564C File Offset: 0x0001384C
+		// Token: 0x060009F8 RID: 2552 RVA: 0x0001034F File Offset: 0x0000E54F
+		IEnumerator<T> IEnumerable<!0>.GetEnumerator()
+		{
+			return new TSet<T>.Enumerator(this);
+		}
+
+		// Token: 0x060009F9 RID: 2553 RVA: 0x0001035C File Offset: 0x0000E55C
 		IEnumerator IEnumerable.GetEnumerator()
 		{
 			return new TSet<T>.Enumerator(this);
 		}
 
-		// Token: 0x06000E67 RID: 3687 RVA: 0x0001565C File Offset: 0x0001385C
+		// Token: 0x060009FA RID: 2554 RVA: 0x0001036C File Offset: 0x0000E56C
 		public void ExceptWith(IEnumerable<T> Other)
 		{
 			ArgumentNullException.ThrowIfNull(Other, "Other");
@@ -228,7 +235,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E68 RID: 3688 RVA: 0x000156C4 File Offset: 0x000138C4
+		// Token: 0x060009FB RID: 2555 RVA: 0x000103D4 File Offset: 0x0000E5D4
 		public void IntersectWith(IEnumerable<T> Other)
 		{
 			ArgumentNullException.ThrowIfNull(Other, "Other");
@@ -257,7 +264,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E69 RID: 3689 RVA: 0x00015798 File Offset: 0x00013998
+		// Token: 0x060009FC RID: 2556 RVA: 0x000104A8 File Offset: 0x0000E6A8
 		public bool IsProperSubsetOf(IEnumerable<T> Other)
 		{
 			ArgumentNullException.ThrowIfNull(Other, "Other");
@@ -288,7 +295,7 @@ namespace UnrealEngine
 			return true;
 		}
 
-		// Token: 0x06000E6A RID: 3690 RVA: 0x00015834 File Offset: 0x00013A34
+		// Token: 0x060009FD RID: 2557 RVA: 0x00010548 File Offset: 0x0000E748
 		public bool IsProperSupersetOf(IEnumerable<T> Other)
 		{
 			ArgumentNullException.ThrowIfNull(Other, "Other");
@@ -316,7 +323,7 @@ namespace UnrealEngine
 			return true;
 		}
 
-		// Token: 0x06000E6B RID: 3691 RVA: 0x000158D8 File Offset: 0x00013AD8
+		// Token: 0x060009FE RID: 2558 RVA: 0x000105EC File Offset: 0x0000E7EC
 		public bool IsSubsetOf(IEnumerable<T> Other)
 		{
 			ArgumentNullException.ThrowIfNull(Other, "Other");
@@ -340,7 +347,7 @@ namespace UnrealEngine
 			return true;
 		}
 
-		// Token: 0x06000E6C RID: 3692 RVA: 0x00015970 File Offset: 0x00013B70
+		// Token: 0x060009FF RID: 2559 RVA: 0x0001068C File Offset: 0x0000E88C
 		public bool IsSupersetOf(IEnumerable<T> Other)
 		{
 			ArgumentNullException.ThrowIfNull(Other, "Other");
@@ -371,7 +378,7 @@ namespace UnrealEngine
 			return true;
 		}
 
-		// Token: 0x06000E6D RID: 3693 RVA: 0x00015A04 File Offset: 0x00013C04
+		// Token: 0x06000A00 RID: 2560 RVA: 0x00010720 File Offset: 0x0000E920
 		public bool Overlaps(IEnumerable<T> Other)
 		{
 			ArgumentNullException.ThrowIfNull(Other, "Other");
@@ -393,7 +400,7 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06000E6E RID: 3694 RVA: 0x00015A70 File Offset: 0x00013C70
+		// Token: 0x06000A01 RID: 2561 RVA: 0x0001078C File Offset: 0x0000E98C
 		public bool SetEquals(IEnumerable<T> Other)
 		{
 			ArgumentNullException.ThrowIfNull(Other, "Other");
@@ -428,7 +435,7 @@ namespace UnrealEngine
 			return true;
 		}
 
-		// Token: 0x06000E6F RID: 3695 RVA: 0x00015B1C File Offset: 0x00013D1C
+		// Token: 0x06000A02 RID: 2562 RVA: 0x00010838 File Offset: 0x0000EA38
 		public void SymmetricExceptWith(IEnumerable<T> Other)
 		{
 			ArgumentNullException.ThrowIfNull(Other, "Other");
@@ -465,7 +472,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E70 RID: 3696 RVA: 0x00015C30 File Offset: 0x00013E30
+		// Token: 0x06000A03 RID: 2563 RVA: 0x0001094C File Offset: 0x0000EB4C
 		public void UnionWith(IEnumerable<T> Other)
 		{
 			ArgumentNullException.ThrowIfNull(Other, "Other");
@@ -475,19 +482,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E71 RID: 3697 RVA: 0x00015C84 File Offset: 0x00013E84
+		// Token: 0x06000A04 RID: 2564 RVA: 0x000109A0 File Offset: 0x0000EBA0
 		void ICollection<!0>.Add(T Item)
 		{
 			this.Add(Item);
 		}
 
-		// Token: 0x06000E72 RID: 3698 RVA: 0x00015C8E File Offset: 0x00013E8E
+		// Token: 0x06000A05 RID: 2565 RVA: 0x000109AA File Offset: 0x0000EBAA
 		public void Clear()
 		{
 			this.Empty(0);
 		}
 
-		// Token: 0x06000E73 RID: 3699 RVA: 0x00015C98 File Offset: 0x00013E98
+		// Token: 0x06000A06 RID: 2566 RVA: 0x000109B4 File Offset: 0x0000EBB4
 		public void CopyTo(T[] Array, int ArrayIndex)
 		{
 			ArgumentNullException.ThrowIfNull(Array, "Array");
@@ -506,8 +513,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004B5 RID: 1205
-		// (get) Token: 0x06000E74 RID: 3700 RVA: 0x00015D20 File Offset: 0x00013F20
+		// Token: 0x170000BD RID: 189
+		// (get) Token: 0x06000A07 RID: 2567 RVA: 0x00010A40 File Offset: 0x0000EC40
 		public int Count
 		{
 			get
@@ -516,8 +523,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004B6 RID: 1206
-		// (get) Token: 0x06000E75 RID: 3701 RVA: 0x00015D28 File Offset: 0x00013F28
+		// Token: 0x170000BE RID: 190
+		// (get) Token: 0x06000A08 RID: 2568 RVA: 0x00010A48 File Offset: 0x0000EC48
 		public bool IsReadOnly
 		{
 			get
@@ -526,17 +533,17 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0400018D RID: 397
+		// Token: 0x04000146 RID: 326
 		private static readonly NativeArrayProcessorBase<T> Processor = NativeArrayProcessorFactory<T>.HashProcessor;
 
-		// Token: 0x0400018E RID: 398
+		// Token: 0x04000147 RID: 327
 		private static readonly UnrealReflectionPropertyTypeCode InnerPropertyTypeCode = UnrealReflectionPropertyType.GetTypeCode(typeof(T));
 
-		// Token: 0x02002B24 RID: 11044
+		// Token: 0x020008D2 RID: 2258
 		[Nullable(0)]
 		public struct Enumerator : IEnumerator<!0>, IEnumerator, IDisposable
 		{
-			// Token: 0x06028517 RID: 165143 RVA: 0x003D5811 File Offset: 0x003D3A11
+			// Token: 0x0600BED3 RID: 48851 RVA: 0x00130B75 File Offset: 0x0012ED75
 			public Enumerator(TSet<T> Set)
 			{
 				this.<Set>P = Set;
@@ -545,7 +552,7 @@ namespace UnrealEngine
 				this._MaxIndex = this.<Set>P.GetMaxIndex();
 			}
 
-			// Token: 0x06028518 RID: 165144 RVA: 0x003D5840 File Offset: 0x003D3A40
+			// Token: 0x0600BED4 RID: 48852 RVA: 0x00130BA4 File Offset: 0x0012EDA4
 			public unsafe bool MoveNext()
 			{
 				while (this._Index < this._MaxIndex && !this.<Set>P.IsValidIndex(this._Index))
@@ -564,15 +571,25 @@ namespace UnrealEngine
 				return false;
 			}
 
-			// Token: 0x06028519 RID: 165145 RVA: 0x003D58D0 File Offset: 0x003D3AD0
+			// Token: 0x0600BED5 RID: 48853 RVA: 0x00130C34 File Offset: 0x0012EE34
 			public void Reset()
 			{
 				this._Index = 0;
 				this._Current = default(T);
 			}
 
-			// Token: 0x170099B4 RID: 39348
-			// (get) Token: 0x0602851A RID: 165146 RVA: 0x003D58E5 File Offset: 0x003D3AE5
+			// Token: 0x17002340 RID: 9024
+			// (get) Token: 0x0600BED6 RID: 48854 RVA: 0x00130C49 File Offset: 0x0012EE49
+			public T Current
+			{
+				get
+				{
+					return this._Current;
+				}
+			}
+
+			// Token: 0x17002341 RID: 9025
+			// (get) Token: 0x0600BED7 RID: 48855 RVA: 0x00130C51 File Offset: 0x0012EE51
 			T IEnumerator<!0>.Current
 			{
 				get
@@ -581,8 +598,8 @@ namespace UnrealEngine
 				}
 			}
 
-			// Token: 0x170099B5 RID: 39349
-			// (get) Token: 0x0602851B RID: 165147 RVA: 0x003D58ED File Offset: 0x003D3AED
+			// Token: 0x17002342 RID: 9026
+			// (get) Token: 0x0600BED8 RID: 48856 RVA: 0x00130C59 File Offset: 0x0012EE59
 			[Nullable(2)]
 			object IEnumerator.Current
 			{
@@ -593,22 +610,22 @@ namespace UnrealEngine
 				}
 			}
 
-			// Token: 0x0602851C RID: 165148 RVA: 0x003D58FA File Offset: 0x003D3AFA
+			// Token: 0x0600BED9 RID: 48857 RVA: 0x00130C66 File Offset: 0x0012EE66
 			public void Dispose()
 			{
 			}
 
-			// Token: 0x04016374 RID: 90996
+			// Token: 0x0400578A RID: 22410
 			[CompilerGenerated]
 			private TSet<T> <Set>P;
 
-			// Token: 0x04016375 RID: 90997
+			// Token: 0x0400578B RID: 22411
 			private int _Index;
 
-			// Token: 0x04016376 RID: 90998
+			// Token: 0x0400578C RID: 22412
 			private T _Current;
 
-			// Token: 0x04016377 RID: 90999
+			// Token: 0x0400578D RID: 22413
 			private int _MaxIndex;
 		}
 	}

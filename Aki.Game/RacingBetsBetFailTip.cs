@@ -10,16 +10,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002725 RID: 10021
+// Token: 0x02001C10 RID: 7184
 public class RacingBetsBetFailTip : UiViewBase
 {
-	// Token: 0x060148A1 RID: 84129 RVA: 0x0053014F File Offset: 0x0052E34F
+	// Token: 0x06011D83 RID: 73091 RVA: 0x0053EE6B File Offset: 0x0053D06B
 	[NullableContext(1)]
 	public RacingBetsBetFailTip(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060148A2 RID: 84130 RVA: 0x00530158 File Offset: 0x0052E358
+	// Token: 0x06011D84 RID: 73092 RVA: 0x0053EE74 File Offset: 0x0053D074
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +42,7 @@ public class RacingBetsBetFailTip : UiViewBase
 		};
 	}
 
-	// Token: 0x060148A3 RID: 84131 RVA: 0x00530288 File Offset: 0x0052E488
+	// Token: 0x06011D85 RID: 73093 RVA: 0x0053EFA4 File Offset: 0x0053D1A4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RacingBetsBetFailTip.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -53,7 +53,7 @@ public class RacingBetsBetFailTip : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060148A4 RID: 84132 RVA: 0x005302CC File Offset: 0x0052E4CC
+	// Token: 0x06011D86 RID: 73094 RVA: 0x0053EFE8 File Offset: 0x0053D1E8
 	protected override void OnBeforeShow()
 	{
 		RacingBetLegMatchResultNotify racingBetLegMatchResultNotify = this.OpenParam as RacingBetLegMatchResultNotify;
@@ -108,13 +108,13 @@ public class RacingBetsBetFailTip : UiViewBase
 		text2.ShowTextNew(((legMatchData != null) ? legMatchData.Name : null) ?? "");
 	}
 
-	// Token: 0x060148A5 RID: 84133 RVA: 0x0053046E File Offset: 0x0052E66E
+	// Token: 0x06011D87 RID: 73095 RVA: 0x0053F18A File Offset: 0x0053D38A
 	private void OnClickConfirmButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060148A6 RID: 84134 RVA: 0x00530478 File Offset: 0x0052E678
+	// Token: 0x06011D88 RID: 73096 RVA: 0x0053F194 File Offset: 0x0053D394
 	private void OnClickReplayButton()
 	{
 		RacingBetsSeasonData racingBetsSeasonData = RacingBetsModel.Instance.GetRacingBetsSeasonData();
@@ -130,35 +130,35 @@ public class RacingBetsBetFailTip : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04009A72 RID: 39538
+	// Token: 0x04009BCA RID: 39882
 	private int LegMatchId;
 
-	// Token: 0x04009A73 RID: 39539
+	// Token: 0x04009BCB RID: 39883
 	[Nullable(2)]
 	private RacingBetsCostItem BetRewardItem;
 
-	// Token: 0x02008D7D RID: 36221
+	// Token: 0x02007F06 RID: 32518
 	private enum EComponent
 	{
-		// Token: 0x0402DE94 RID: 188052
+		// Token: 0x040291AB RID: 168363
 		RankText,
-		// Token: 0x0402DE95 RID: 188053
+		// Token: 0x040291AC RID: 168364
 		DangoIcon,
-		// Token: 0x0402DE96 RID: 188054
+		// Token: 0x040291AD RID: 168365
 		CostResultText,
-		// Token: 0x0402DE97 RID: 188055
+		// Token: 0x040291AE RID: 168366
 		CurrencyIcon,
-		// Token: 0x0402DE98 RID: 188056
+		// Token: 0x040291AF RID: 168367
 		BetRewardItem,
-		// Token: 0x0402DE99 RID: 188057
+		// Token: 0x040291B0 RID: 168368
 		ConfirmButton,
-		// Token: 0x0402DE9A RID: 188058
+		// Token: 0x040291B1 RID: 168369
 		ReplayButton,
-		// Token: 0x0402DE9B RID: 188059
+		// Token: 0x040291B2 RID: 168370
 		WinnerDangoIcon,
-		// Token: 0x0402DE9C RID: 188060
+		// Token: 0x040291B3 RID: 168371
 		WinnerDangoText,
-		// Token: 0x0402DE9D RID: 188061
+		// Token: 0x040291B4 RID: 168372
 		MatchNameText
 	}
 }

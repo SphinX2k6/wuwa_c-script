@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A36 RID: 6710
+	// Token: 0x02001BCB RID: 7115
 	public class IFaceExpressionConfig_SetValue
 	{
-		// Token: 0x040058D7 RID: 22743
+		// Token: 0x04005D3C RID: 23868
 		public EFaceExpressionConfigType Type;
 	}
 }

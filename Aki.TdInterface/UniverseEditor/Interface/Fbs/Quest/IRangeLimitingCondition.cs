@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004067 RID: 16487
+	// Token: 0x020044A8 RID: 17576
 	public struct IRangeLimitingCondition : IFlatbufferObject
 	{
-		// Token: 0x1700742A RID: 29738
-		// (get) Token: 0x06017ED3 RID: 98003 RVA: 0x00373F3C File Offset: 0x0037213C
+		// Token: 0x17007A2C RID: 31276
+		// (get) Token: 0x0601956C RID: 103788 RVA: 0x0039DD30 File Offset: 0x0039BF30
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017ED4 RID: 98004 RVA: 0x00373F49 File Offset: 0x00372149
+		// Token: 0x0601956D RID: 103789 RVA: 0x0039DD3D File Offset: 0x0039BF3D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017ED5 RID: 98005 RVA: 0x00373F50 File Offset: 0x00372150
+		// Token: 0x0601956E RID: 103790 RVA: 0x0039DD44 File Offset: 0x0039BF44
 		public static IRangeLimitingCondition GetRootAsIRangeLimitingCondition(ByteBuffer _bb)
 		{
 			return IRangeLimitingCondition.GetRootAsIRangeLimitingCondition(_bb, default(IRangeLimitingCondition));
 		}
 
-		// Token: 0x06017ED6 RID: 98006 RVA: 0x00373F6C File Offset: 0x0037216C
+		// Token: 0x0601956F RID: 103791 RVA: 0x0039DD60 File Offset: 0x0039BF60
 		public static IRangeLimitingCondition GetRootAsIRangeLimitingCondition(ByteBuffer _bb, IRangeLimitingCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017ED7 RID: 98007 RVA: 0x00373F89 File Offset: 0x00372189
+		// Token: 0x06019570 RID: 103792 RVA: 0x0039DD7D File Offset: 0x0039BF7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017ED8 RID: 98008 RVA: 0x00373F98 File Offset: 0x00372198
+		// Token: 0x06019571 RID: 103793 RVA: 0x0039DD8C File Offset: 0x0039BF8C
 		public IRangeLimitingCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700742B RID: 29739
-		// (get) Token: 0x06017ED9 RID: 98009 RVA: 0x00373FA8 File Offset: 0x003721A8
+		// Token: 0x17007A2D RID: 31277
+		// (get) Token: 0x06019572 RID: 103794 RVA: 0x0039DD9C File Offset: 0x0039BF9C
 		public ERangeLimitingPriority Priority
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700742C RID: 29740
-		// (get) Token: 0x06017EDA RID: 98010 RVA: 0x00373FE4 File Offset: 0x003721E4
+		// Token: 0x17007A2E RID: 31278
+		// (get) Token: 0x06019573 RID: 103795 RVA: 0x0039DDD8 File Offset: 0x0039BFD8
 		public IVectorInfo? Point
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700742D RID: 29741
-		// (get) Token: 0x06017EDB RID: 98011 RVA: 0x00374044 File Offset: 0x00372244
+		// Token: 0x17007A2F RID: 31279
+		// (get) Token: 0x06019574 RID: 103796 RVA: 0x0039DE38 File Offset: 0x0039C038
 		public int Range
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700742E RID: 29742
-		// (get) Token: 0x06017EDC RID: 98012 RVA: 0x00374080 File Offset: 0x00372280
+		// Token: 0x17007A30 RID: 31280
+		// (get) Token: 0x06019575 RID: 103797 RVA: 0x0039DE74 File Offset: 0x0039C074
 		public string RangeEffectPath
 		{
 			get
@@ -109,20 +109,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017EDD RID: 98013 RVA: 0x003740B8 File Offset: 0x003722B8
+		// Token: 0x06019576 RID: 103798 RVA: 0x0039DEAC File Offset: 0x0039C0AC
 		public Span<byte> GetRangeEffectPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06017EDE RID: 98014 RVA: 0x003740C8 File Offset: 0x003722C8
+		// Token: 0x06019577 RID: 103799 RVA: 0x0039DEBC File Offset: 0x0039C0BC
 		public byte[] GetRangeEffectPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x1700742F RID: 29743
-		// (get) Token: 0x06017EDF RID: 98015 RVA: 0x003740D8 File Offset: 0x003722D8
+		// Token: 0x17007A31 RID: 31281
+		// (get) Token: 0x06019578 RID: 103800 RVA: 0x0039DECC File Offset: 0x0039C0CC
 		public float OverRangeCountdown
 		{
 			get
@@ -136,8 +136,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007430 RID: 29744
-		// (get) Token: 0x06017EE0 RID: 98016 RVA: 0x0037411C File Offset: 0x0037231C
+		// Token: 0x17007A32 RID: 31282
+		// (get) Token: 0x06019579 RID: 103801 RVA: 0x0039DF10 File Offset: 0x0039C110
 		public int WarningRange
 		{
 			get
@@ -151,8 +151,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007431 RID: 29745
-		// (get) Token: 0x06017EE1 RID: 98017 RVA: 0x0037415C File Offset: 0x0037235C
+		// Token: 0x17007A33 RID: 31283
+		// (get) Token: 0x0601957A RID: 103802 RVA: 0x0039DF50 File Offset: 0x0039C150
 		public bool RequiresSecondConfirmation
 		{
 			get
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017EE2 RID: 98018 RVA: 0x0037419C File Offset: 0x0037239C
+		// Token: 0x0601957B RID: 103803 RVA: 0x0039DF90 File Offset: 0x0039C190
 		public int RangeEntities(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -173,8 +173,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007432 RID: 29746
-		// (get) Token: 0x06017EE3 RID: 98019 RVA: 0x003741DC File Offset: 0x003723DC
+		// Token: 0x17007A34 RID: 31284
+		// (get) Token: 0x0601957C RID: 103804 RVA: 0x0039DFD0 File Offset: 0x0039C1D0
 		public int RangeEntitiesLength
 		{
 			get
@@ -188,19 +188,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017EE4 RID: 98020 RVA: 0x00374208 File Offset: 0x00372408
+		// Token: 0x0601957D RID: 103805 RVA: 0x0039DFFC File Offset: 0x0039C1FC
 		public Span<int> GetRangeEntitiesBytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x06017EE5 RID: 98021 RVA: 0x00374218 File Offset: 0x00372418
+		// Token: 0x0601957E RID: 103806 RVA: 0x0039E00C File Offset: 0x0039C20C
 		public int[] GetRangeEntitiesArray()
 		{
 			return this.__p.__vector_as_array<int>(18);
 		}
 
-		// Token: 0x06017EE6 RID: 98022 RVA: 0x00374228 File Offset: 0x00372428
+		// Token: 0x0601957F RID: 103807 RVA: 0x0039E01C File Offset: 0x0039C21C
 		public int WarningRangeEntities(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -211,8 +211,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007433 RID: 29747
-		// (get) Token: 0x06017EE7 RID: 98023 RVA: 0x00374268 File Offset: 0x00372468
+		// Token: 0x17007A35 RID: 31285
+		// (get) Token: 0x06019580 RID: 103808 RVA: 0x0039E05C File Offset: 0x0039C25C
 		public int WarningRangeEntitiesLength
 		{
 			get
@@ -226,20 +226,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017EE8 RID: 98024 RVA: 0x00374294 File Offset: 0x00372494
+		// Token: 0x06019581 RID: 103809 RVA: 0x0039E088 File Offset: 0x0039C288
 		public Span<int> GetWarningRangeEntitiesBytes()
 		{
 			return this.__p.__vector_as_span<int>(20, 4);
 		}
 
-		// Token: 0x06017EE9 RID: 98025 RVA: 0x003742A4 File Offset: 0x003724A4
+		// Token: 0x06019582 RID: 103810 RVA: 0x0039E098 File Offset: 0x0039C298
 		public int[] GetWarningRangeEntitiesArray()
 		{
 			return this.__p.__vector_as_array<int>(20);
 		}
 
-		// Token: 0x17007434 RID: 29748
-		// (get) Token: 0x06017EEA RID: 98026 RVA: 0x003742B4 File Offset: 0x003724B4
+		// Token: 0x17007A36 RID: 31286
+		// (get) Token: 0x06019583 RID: 103811 RVA: 0x0039E0A8 File Offset: 0x0039C2A8
 		public IWarningPreform? WarningPreform
 		{
 			get
@@ -253,7 +253,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017EEB RID: 98027 RVA: 0x00374314 File Offset: 0x00372514
+		// Token: 0x06019584 RID: 103812 RVA: 0x0039E108 File Offset: 0x0039C308
 		public int AcceptableDungeonIds(int j)
 		{
 			int num = this.__p.__offset(24);
@@ -264,8 +264,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007435 RID: 29749
-		// (get) Token: 0x06017EEC RID: 98028 RVA: 0x00374354 File Offset: 0x00372554
+		// Token: 0x17007A37 RID: 31287
+		// (get) Token: 0x06019585 RID: 103813 RVA: 0x0039E148 File Offset: 0x0039C348
 		public int AcceptableDungeonIdsLength
 		{
 			get
@@ -279,20 +279,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017EED RID: 98029 RVA: 0x00374380 File Offset: 0x00372580
+		// Token: 0x06019586 RID: 103814 RVA: 0x0039E174 File Offset: 0x0039C374
 		public Span<int> GetAcceptableDungeonIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(24, 4);
 		}
 
-		// Token: 0x06017EEE RID: 98030 RVA: 0x00374390 File Offset: 0x00372590
+		// Token: 0x06019587 RID: 103815 RVA: 0x0039E184 File Offset: 0x0039C384
 		public int[] GetAcceptableDungeonIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(24);
 		}
 
-		// Token: 0x17007436 RID: 29750
-		// (get) Token: 0x06017EEF RID: 98031 RVA: 0x003743A0 File Offset: 0x003725A0
+		// Token: 0x17007A38 RID: 31288
+		// (get) Token: 0x06019588 RID: 103816 RVA: 0x0039E194 File Offset: 0x0039C394
 		public bool OnlyFailOnceOutsideDungeon
 		{
 			get
@@ -302,8 +302,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007437 RID: 29751
-		// (get) Token: 0x06017EF0 RID: 98032 RVA: 0x003743E0 File Offset: 0x003725E0
+		// Token: 0x17007A39 RID: 31289
+		// (get) Token: 0x06019589 RID: 103817 RVA: 0x0039E1D4 File Offset: 0x0039C3D4
 		public byte NullMask
 		{
 			get
@@ -317,7 +317,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017EF1 RID: 98033 RVA: 0x00374420 File Offset: 0x00372620
+		// Token: 0x0601958A RID: 103818 RVA: 0x0039E214 File Offset: 0x0039C414
 		public static Offset<IRangeLimitingCondition> CreateIRangeLimitingCondition(FlatBufferBuilder builder, ERangeLimitingPriority Priority = ERangeLimitingPriority.Low, Offset<IVectorInfo> PointOffset = default(Offset<IVectorInfo>), int Range = 0, StringOffset RangeEffectPathOffset = default(StringOffset), float OverRangeCountdown = 0f, int WarningRange = 0, bool RequiresSecondConfirmation = false, VectorOffset RangeEntitiesOffset = default(VectorOffset), VectorOffset WarningRangeEntitiesOffset = default(VectorOffset), Offset<IWarningPreform> WarningPreformOffset = default(Offset<IWarningPreform>), VectorOffset AcceptableDungeonIdsOffset = default(VectorOffset), bool OnlyFailOnceOutsideDungeon = false, byte NullMask = 0)
 		{
 			builder.StartTable(13);
@@ -337,61 +337,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IRangeLimitingCondition.EndIRangeLimitingCondition(builder);
 		}
 
-		// Token: 0x06017EF2 RID: 98034 RVA: 0x003744A0 File Offset: 0x003726A0
+		// Token: 0x0601958B RID: 103819 RVA: 0x0039E294 File Offset: 0x0039C494
 		public static void StartIRangeLimitingCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(13);
 		}
 
-		// Token: 0x06017EF3 RID: 98035 RVA: 0x003744AA File Offset: 0x003726AA
+		// Token: 0x0601958C RID: 103820 RVA: 0x0039E29E File Offset: 0x0039C49E
 		public static void AddPriority(FlatBufferBuilder builder, ERangeLimitingPriority priority)
 		{
 			builder.AddByte(0, (byte)priority, 0);
 		}
 
-		// Token: 0x06017EF4 RID: 98036 RVA: 0x003744B5 File Offset: 0x003726B5
+		// Token: 0x0601958D RID: 103821 RVA: 0x0039E2A9 File Offset: 0x0039C4A9
 		public static void AddPoint(FlatBufferBuilder builder, Offset<IVectorInfo> pointOffset)
 		{
 			builder.AddOffset(1, pointOffset.Value, 0);
 		}
 
-		// Token: 0x06017EF5 RID: 98037 RVA: 0x003744C5 File Offset: 0x003726C5
+		// Token: 0x0601958E RID: 103822 RVA: 0x0039E2B9 File Offset: 0x0039C4B9
 		public static void AddRange(FlatBufferBuilder builder, int range)
 		{
 			builder.AddInt(2, range, 0);
 		}
 
-		// Token: 0x06017EF6 RID: 98038 RVA: 0x003744D0 File Offset: 0x003726D0
+		// Token: 0x0601958F RID: 103823 RVA: 0x0039E2C4 File Offset: 0x0039C4C4
 		public static void AddRangeEffectPath(FlatBufferBuilder builder, StringOffset rangeEffectPathOffset)
 		{
 			builder.AddOffset(3, rangeEffectPathOffset.Value, 0);
 		}
 
-		// Token: 0x06017EF7 RID: 98039 RVA: 0x003744E0 File Offset: 0x003726E0
+		// Token: 0x06019590 RID: 103824 RVA: 0x0039E2D4 File Offset: 0x0039C4D4
 		public static void AddOverRangeCountdown(FlatBufferBuilder builder, float overRangeCountdown)
 		{
 			builder.AddFloat(4, overRangeCountdown, 0.0);
 		}
 
-		// Token: 0x06017EF8 RID: 98040 RVA: 0x003744F3 File Offset: 0x003726F3
+		// Token: 0x06019591 RID: 103825 RVA: 0x0039E2E7 File Offset: 0x0039C4E7
 		public static void AddWarningRange(FlatBufferBuilder builder, int warningRange)
 		{
 			builder.AddInt(5, warningRange, 0);
 		}
 
-		// Token: 0x06017EF9 RID: 98041 RVA: 0x003744FE File Offset: 0x003726FE
+		// Token: 0x06019592 RID: 103826 RVA: 0x0039E2F2 File Offset: 0x0039C4F2
 		public static void AddRequiresSecondConfirmation(FlatBufferBuilder builder, bool requiresSecondConfirmation)
 		{
 			builder.AddBool(6, requiresSecondConfirmation, false);
 		}
 
-		// Token: 0x06017EFA RID: 98042 RVA: 0x00374509 File Offset: 0x00372709
+		// Token: 0x06019593 RID: 103827 RVA: 0x0039E2FD File Offset: 0x0039C4FD
 		public static void AddRangeEntities(FlatBufferBuilder builder, VectorOffset rangeEntitiesOffset)
 		{
 			builder.AddOffset(7, rangeEntitiesOffset.Value, 0);
 		}
 
-		// Token: 0x06017EFB RID: 98043 RVA: 0x0037451C File Offset: 0x0037271C
+		// Token: 0x06019594 RID: 103828 RVA: 0x0039E310 File Offset: 0x0039C510
 		public static VectorOffset CreateRangeEntitiesVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -402,7 +402,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017EFC RID: 98044 RVA: 0x00374553 File Offset: 0x00372753
+		// Token: 0x06019595 RID: 103829 RVA: 0x0039E347 File Offset: 0x0039C547
 		public static VectorOffset CreateRangeEntitiesVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -410,7 +410,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017EFD RID: 98045 RVA: 0x0037456D File Offset: 0x0037276D
+		// Token: 0x06019596 RID: 103830 RVA: 0x0039E361 File Offset: 0x0039C561
 		public static VectorOffset CreateRangeEntitiesVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -418,7 +418,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017EFE RID: 98046 RVA: 0x0037458B File Offset: 0x0037278B
+		// Token: 0x06019597 RID: 103831 RVA: 0x0039E37F File Offset: 0x0039C57F
 		public static VectorOffset CreateRangeEntitiesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -426,19 +426,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017EFF RID: 98047 RVA: 0x003745A4 File Offset: 0x003727A4
+		// Token: 0x06019598 RID: 103832 RVA: 0x0039E398 File Offset: 0x0039C598
 		public static void StartRangeEntitiesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06017F00 RID: 98048 RVA: 0x003745AF File Offset: 0x003727AF
+		// Token: 0x06019599 RID: 103833 RVA: 0x0039E3A3 File Offset: 0x0039C5A3
 		public static void AddWarningRangeEntities(FlatBufferBuilder builder, VectorOffset warningRangeEntitiesOffset)
 		{
 			builder.AddOffset(8, warningRangeEntitiesOffset.Value, 0);
 		}
 
-		// Token: 0x06017F01 RID: 98049 RVA: 0x003745C0 File Offset: 0x003727C0
+		// Token: 0x0601959A RID: 103834 RVA: 0x0039E3B4 File Offset: 0x0039C5B4
 		public static VectorOffset CreateWarningRangeEntitiesVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -449,7 +449,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F02 RID: 98050 RVA: 0x003745F7 File Offset: 0x003727F7
+		// Token: 0x0601959B RID: 103835 RVA: 0x0039E3EB File Offset: 0x0039C5EB
 		public static VectorOffset CreateWarningRangeEntitiesVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -457,7 +457,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F03 RID: 98051 RVA: 0x00374611 File Offset: 0x00372811
+		// Token: 0x0601959C RID: 103836 RVA: 0x0039E405 File Offset: 0x0039C605
 		public static VectorOffset CreateWarningRangeEntitiesVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -465,7 +465,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F04 RID: 98052 RVA: 0x0037462F File Offset: 0x0037282F
+		// Token: 0x0601959D RID: 103837 RVA: 0x0039E423 File Offset: 0x0039C623
 		public static VectorOffset CreateWarningRangeEntitiesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -473,25 +473,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F05 RID: 98053 RVA: 0x00374648 File Offset: 0x00372848
+		// Token: 0x0601959E RID: 103838 RVA: 0x0039E43C File Offset: 0x0039C63C
 		public static void StartWarningRangeEntitiesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06017F06 RID: 98054 RVA: 0x00374653 File Offset: 0x00372853
+		// Token: 0x0601959F RID: 103839 RVA: 0x0039E447 File Offset: 0x0039C647
 		public static void AddWarningPreform(FlatBufferBuilder builder, Offset<IWarningPreform> warningPreformOffset)
 		{
 			builder.AddOffset(9, warningPreformOffset.Value, 0);
 		}
 
-		// Token: 0x06017F07 RID: 98055 RVA: 0x00374664 File Offset: 0x00372864
+		// Token: 0x060195A0 RID: 103840 RVA: 0x0039E458 File Offset: 0x0039C658
 		public static void AddAcceptableDungeonIds(FlatBufferBuilder builder, VectorOffset acceptableDungeonIdsOffset)
 		{
 			builder.AddOffset(10, acceptableDungeonIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06017F08 RID: 98056 RVA: 0x00374678 File Offset: 0x00372878
+		// Token: 0x060195A1 RID: 103841 RVA: 0x0039E46C File Offset: 0x0039C66C
 		public static VectorOffset CreateAcceptableDungeonIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -502,7 +502,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F09 RID: 98057 RVA: 0x003746AF File Offset: 0x003728AF
+		// Token: 0x060195A2 RID: 103842 RVA: 0x0039E4A3 File Offset: 0x0039C6A3
 		public static VectorOffset CreateAcceptableDungeonIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -510,7 +510,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F0A RID: 98058 RVA: 0x003746C9 File Offset: 0x003728C9
+		// Token: 0x060195A3 RID: 103843 RVA: 0x0039E4BD File Offset: 0x0039C6BD
 		public static VectorOffset CreateAcceptableDungeonIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -518,7 +518,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F0B RID: 98059 RVA: 0x003746E7 File Offset: 0x003728E7
+		// Token: 0x060195A4 RID: 103844 RVA: 0x0039E4DB File Offset: 0x0039C6DB
 		public static VectorOffset CreateAcceptableDungeonIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -526,31 +526,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F0C RID: 98060 RVA: 0x00374700 File Offset: 0x00372900
+		// Token: 0x060195A5 RID: 103845 RVA: 0x0039E4F4 File Offset: 0x0039C6F4
 		public static void StartAcceptableDungeonIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06017F0D RID: 98061 RVA: 0x0037470B File Offset: 0x0037290B
+		// Token: 0x060195A6 RID: 103846 RVA: 0x0039E4FF File Offset: 0x0039C6FF
 		public static void AddOnlyFailOnceOutsideDungeon(FlatBufferBuilder builder, bool onlyFailOnceOutsideDungeon)
 		{
 			builder.AddBool(11, onlyFailOnceOutsideDungeon, false);
 		}
 
-		// Token: 0x06017F0E RID: 98062 RVA: 0x00374717 File Offset: 0x00372917
+		// Token: 0x060195A7 RID: 103847 RVA: 0x0039E50B File Offset: 0x0039C70B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(12, nullMask, 0);
 		}
 
-		// Token: 0x06017F0F RID: 98063 RVA: 0x00374723 File Offset: 0x00372923
+		// Token: 0x060195A8 RID: 103848 RVA: 0x0039E517 File Offset: 0x0039C717
 		public static Offset<IRangeLimitingCondition> EndIRangeLimitingCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IRangeLimitingCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06017F10 RID: 98064 RVA: 0x00374730 File Offset: 0x00372930
+		// Token: 0x060195A9 RID: 103849 RVA: 0x0039E524 File Offset: 0x0039C724
 		public IRangeLimitingConditionT UnPack()
 		{
 			IRangeLimitingConditionT rangeLimitingConditionT = new IRangeLimitingConditionT();
@@ -558,7 +558,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return rangeLimitingConditionT;
 		}
 
-		// Token: 0x06017F11 RID: 98065 RVA: 0x0037474C File Offset: 0x0037294C
+		// Token: 0x060195AA RID: 103850 RVA: 0x0039E540 File Offset: 0x0039C740
 		public void UnPackTo(IRangeLimitingConditionT _o)
 		{
 			_o.Priority = this.Priority;
@@ -588,7 +588,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06017F12 RID: 98066 RVA: 0x003748AC File Offset: 0x00372AAC
+		// Token: 0x060195AB RID: 103851 RVA: 0x0039E6A0 File Offset: 0x0039C8A0
 		public static Offset<IRangeLimitingCondition> Pack(FlatBufferBuilder builder, IRangeLimitingConditionT _o)
 		{
 			if (_o == null)
@@ -619,7 +619,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IRangeLimitingCondition.CreateIRangeLimitingCondition(builder, _o.Priority, pointOffset, _o.Range, rangeEffectPathOffset, _o.OverRangeCountdown, _o.WarningRange, _o.RequiresSecondConfirmation, rangeEntitiesOffset, warningRangeEntitiesOffset, warningPreformOffset, acceptableDungeonIdsOffset, _o.OnlyFailOnceOutsideDungeon, _o.NullMask);
 		}
 
-		// Token: 0x0400BBCC RID: 48076
+		// Token: 0x0400C5B3 RID: 50611
 		private Table __p;
 	}
 }

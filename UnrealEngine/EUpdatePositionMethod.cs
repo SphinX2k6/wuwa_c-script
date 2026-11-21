@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020023D1 RID: 9169
+	// Token: 0x02000778 RID: 1912
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/MovieScene.EUpdatePositionMethod")]
 	public enum EUpdatePositionMethod : byte
 	{
-		// Token: 0x0401268A RID: 75402
+		// Token: 0x040046BB RID: 18107
 		Play,
-		// Token: 0x0401268B RID: 75403
+		// Token: 0x040046BC RID: 18108
 		Jump,
-		// Token: 0x0401268C RID: 75404
+		// Token: 0x040046BD RID: 18109
 		Scrub,
-		// Token: 0x0401268D RID: 75405
+		// Token: 0x040046BE RID: 18110
 		EUpdatePositionMethod_MAX
 	}
 }

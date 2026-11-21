@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200173A RID: 5946
+// Token: 0x02000BF3 RID: 3059
 [NullableContext(1)]
 [Nullable(0)]
 public class CalabashDevelopRewardInfoData : ICalabashDevelopRewardInfoData
 {
-	// Token: 0x17000E56 RID: 3670
-	// (get) Token: 0x0600ABCD RID: 43981 RVA: 0x002682A5 File Offset: 0x002664A5
-	// (set) Token: 0x0600ABCE RID: 43982 RVA: 0x002682AD File Offset: 0x002664AD
+	// Token: 0x17000E79 RID: 3705
+	// (get) Token: 0x06007FB4 RID: 32692 RVA: 0x002726B9 File Offset: 0x002708B9
+	// (set) Token: 0x06007FB5 RID: 32693 RVA: 0x002726C1 File Offset: 0x002708C1
 	public bool IsUnlock { get; set; }
 
-	// Token: 0x17000E57 RID: 3671
-	// (get) Token: 0x0600ABCF RID: 43983 RVA: 0x002682B6 File Offset: 0x002664B6
-	// (set) Token: 0x0600ABD0 RID: 43984 RVA: 0x002682BE File Offset: 0x002664BE
+	// Token: 0x17000E7A RID: 3706
+	// (get) Token: 0x06007FB6 RID: 32694 RVA: 0x002726CA File Offset: 0x002708CA
+	// (set) Token: 0x06007FB7 RID: 32695 RVA: 0x002726D2 File Offset: 0x002708D2
 	public string Info { get; set; }
 
-	// Token: 0x17000E58 RID: 3672
-	// (get) Token: 0x0600ABD1 RID: 43985 RVA: 0x002682C7 File Offset: 0x002664C7
-	// (set) Token: 0x0600ABD2 RID: 43986 RVA: 0x002682CF File Offset: 0x002664CF
+	// Token: 0x17000E7B RID: 3707
+	// (get) Token: 0x06007FB8 RID: 32696 RVA: 0x002726DB File Offset: 0x002708DB
+	// (set) Token: 0x06007FB9 RID: 32697 RVA: 0x002726E3 File Offset: 0x002708E3
 	public int Num { get; set; }
 }

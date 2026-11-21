@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006817 RID: 26647
+	// Token: 0x02005767 RID: 22375
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 	})]
 	public class DangoBrawlItemTipsAttrItem : GridProxyAbstract<DangoBrawlItemTipsAttrData>
 	{
-		// Token: 0x060427AB RID: 272299 RVA: 0x01026744 File Offset: 0x01024944
+		// Token: 0x06037300 RID: 226048 RVA: 0x00F67C88 File Offset: 0x00F65E88
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060427AC RID: 272300 RVA: 0x010267D0 File Offset: 0x010249D0
+		// Token: 0x06037301 RID: 226049 RVA: 0x00F67D14 File Offset: 0x00F65F14
 		[NullableContext(1)]
 		public override void Refresh(DangoBrawlItemTipsAttrData data, bool isSelected, int gridIndex)
 		{
@@ -45,14 +45,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			text.SetText(data.AttrValue, true);
 		}
 
-		// Token: 0x0200C9A6 RID: 51622
+		// Token: 0x0200B373 RID: 45939
 		private enum EAttrComponent
 		{
-			// Token: 0x0403CE7B RID: 249467
+			// Token: 0x04037768 RID: 227176
 			AttrIcon,
-			// Token: 0x0403CE7C RID: 249468
+			// Token: 0x04037769 RID: 227177
 			AttrName,
-			// Token: 0x0403CE7D RID: 249469
+			// Token: 0x0403776A RID: 227178
 			AttrValue
 		}
 	}

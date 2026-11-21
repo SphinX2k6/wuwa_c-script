@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000B4B RID: 2891
+	// Token: 0x020001F7 RID: 503
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.ERichCurveTangentWeightMode")]
 	public enum ERichCurveTangentWeightMode
 	{
-		// Token: 0x04004F9E RID: 20382
+		// Token: 0x04000C84 RID: 3204
 		RCTWM_WeightedNone,
-		// Token: 0x04004F9F RID: 20383
+		// Token: 0x04000C85 RID: 3205
 		RCTWM_WeightedArrive,
-		// Token: 0x04004FA0 RID: 20384
+		// Token: 0x04000C86 RID: 3206
 		RCTWM_WeightedLeave,
-		// Token: 0x04004FA1 RID: 20385
+		// Token: 0x04000C87 RID: 3207
 		RCTWM_WeightedBoth,
-		// Token: 0x04004FA2 RID: 20386
+		// Token: 0x04000C88 RID: 3208
 		RCTWM_MAX
 	}
 }

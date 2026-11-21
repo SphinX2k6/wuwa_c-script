@@ -5,14 +5,14 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E11 RID: 19985
+	// Token: 0x02003DDA RID: 15834
 	public class RoguelikeMemoryRewardItemData
 	{
-		// Token: 0x0401B58B RID: 112011
+		// Token: 0x04015F5E RID: 89950
 		[Nullable(2)]
 		public SeasonReward SeasonReward;
 
-		// Token: 0x0401B58C RID: 112012
+		// Token: 0x04015F5F RID: 89951
 		public Aki.Config.RogueSeasonReward? Config;
 	}
 }

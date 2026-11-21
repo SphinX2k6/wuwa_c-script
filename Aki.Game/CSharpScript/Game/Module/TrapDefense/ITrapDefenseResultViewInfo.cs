@@ -4,18 +4,18 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A57 RID: 19031
+	// Token: 0x020039FF RID: 14847
 	[NullableContext(1)]
 	public interface ITrapDefenseResultViewInfo
 	{
-		// Token: 0x17007A70 RID: 31344
-		// (get) Token: 0x060315DD RID: 202205
-		// (set) Token: 0x060315DE RID: 202206
+		// Token: 0x17004E1D RID: 19997
+		// (get) Token: 0x0602636D RID: 156525
+		// (set) Token: 0x0602636E RID: 156526
 		TrapDefenseChallengeResultNotify Notify { get; set; }
 
-		// Token: 0x17007A71 RID: 31345
-		// (get) Token: 0x060315DF RID: 202207
-		// (set) Token: 0x060315E0 RID: 202208
+		// Token: 0x17004E1E RID: 19998
+		// (get) Token: 0x0602636F RID: 156527
+		// (set) Token: 0x06026370 RID: 156528
 		bool NeedShowViewAnim { get; set; }
 	}
 }

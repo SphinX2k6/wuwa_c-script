@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02003098 RID: 12440
+// Token: 0x020025EF RID: 9711
 public enum EWalkOnWaterStage
 {
-	// Token: 0x0400CC9E RID: 52382
+	// Token: 0x0400D081 RID: 53377
 	None,
-	// Token: 0x0400CC9F RID: 52383
+	// Token: 0x0400D082 RID: 53378
 	UpToWaterSurface,
-	// Token: 0x0400CCA0 RID: 52384
+	// Token: 0x0400D083 RID: 53379
 	WalkOnWaterSurface
 }

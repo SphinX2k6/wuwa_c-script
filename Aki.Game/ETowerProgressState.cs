@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001529 RID: 5417
+// Token: 0x020009E1 RID: 2529
 public enum ETowerProgressState
 {
-	// Token: 0x04004400 RID: 17408
+	// Token: 0x040044A6 RID: 17574
 	InActive,
-	// Token: 0x04004401 RID: 17409
+	// Token: 0x040044A7 RID: 17575
 	Active,
-	// Token: 0x04004402 RID: 17410
+	// Token: 0x040044A8 RID: 17576
 	FinishedAndUnClaimed,
-	// Token: 0x04004403 RID: 17411
+	// Token: 0x040044A9 RID: 17577
 	FinishedAndClaimed
 }

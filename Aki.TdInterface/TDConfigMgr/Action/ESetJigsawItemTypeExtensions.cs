@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002409 RID: 9225
+	// Token: 0x020026A8 RID: 9896
 	public static class ESetJigsawItemTypeExtensions
 	{
-		// Token: 0x0600C8A7 RID: 51367 RVA: 0x001D5CBC File Offset: 0x001D3EBC
+		// Token: 0x0600D54E RID: 54606 RVA: 0x001EF8B8 File Offset: 0x001EDAB8
 		public static string ToEnumString(this ESetJigsawItemType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8A8 RID: 51368 RVA: 0x001D5CE4 File Offset: 0x001D3EE4
+		// Token: 0x0600D54F RID: 54607 RVA: 0x001EF8E0 File Offset: 0x001EDAE0
 		public static ESetJigsawItemType FromString(string name)
 		{
 			ESetJigsawItemType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8A9 RID: 51369 RVA: 0x001D5D0D File Offset: 0x001D3F0D
+		// Token: 0x0600D550 RID: 54608 RVA: 0x001EF909 File Offset: 0x001EDB09
 		public static bool TryFromString(string name, out ESetJigsawItemType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C8AA RID: 51370 RVA: 0x001D5D32 File Offset: 0x001D3F32
+		// Token: 0x0600D551 RID: 54609 RVA: 0x001EF92E File Offset: 0x001EDB2E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C8AB RID: 51371 RVA: 0x001D5D42 File Offset: 0x001D3F42
+		// Token: 0x0600D552 RID: 54610 RVA: 0x001EF93E File Offset: 0x001EDB3E
 		public static ESetJigsawItemType[] GetValues()
 		{
 			return new ESetJigsawItemType[1];
 		}
 
-		// Token: 0x0600C8AC RID: 51372 RVA: 0x001D5D4A File Offset: 0x001D3F4A
+		// Token: 0x0600D553 RID: 54611 RVA: 0x001EF946 File Offset: 0x001EDB46
 		public static string[] GetNames()
 		{
 			return new string[]

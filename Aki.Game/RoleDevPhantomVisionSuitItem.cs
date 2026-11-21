@@ -11,7 +11,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200280D RID: 10253
+// Token: 0x02001D88 RID: 7560
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -20,7 +20,7 @@ using UnrealEngine;
 })]
 public class RoleDevPhantomVisionSuitItem : GridProxyAbstract<RoleDevPhantomVisionSuitItemData>
 {
-	// Token: 0x060150A7 RID: 86183 RVA: 0x00553CC4 File Offset: 0x00551EC4
+	// Token: 0x06012AA7 RID: 76455 RVA: 0x0057EA98 File Offset: 0x0057CC98
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class RoleDevPhantomVisionSuitItem : GridProxyAbstract<RoleDevPhantomVisi
 		};
 	}
 
-	// Token: 0x060150A8 RID: 86184 RVA: 0x00553D60 File Offset: 0x00551F60
+	// Token: 0x06012AA8 RID: 76456 RVA: 0x0057EB34 File Offset: 0x0057CD34
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleDevPhantomVisionSuitItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -45,13 +45,13 @@ public class RoleDevPhantomVisionSuitItem : GridProxyAbstract<RoleDevPhantomVisi
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060150A9 RID: 86185 RVA: 0x00553DA3 File Offset: 0x00551FA3
+	// Token: 0x06012AA9 RID: 76457 RVA: 0x0057EB77 File Offset: 0x0057CD77
 	private void InitDetailVerticalLayout()
 	{
 		this.DetailVerticalLayout = new GenericLayout<RoleDevPhantomVisionSuitDisplayItem, IRoleDevPhantomSuitDisplayItemData>(base.GetHorizontalLayout(1), () => new RoleDevPhantomVisionSuitDisplayItem(), null, false, true);
 	}
 
-	// Token: 0x060150AA RID: 86186 RVA: 0x00553DDC File Offset: 0x00551FDC
+	// Token: 0x06012AAA RID: 76458 RVA: 0x0057EBB0 File Offset: 0x0057CDB0
 	private UniTask InitButtonConfirm()
 	{
 		RoleDevPhantomVisionSuitItem.<InitButtonConfirm>d__7 <InitButtonConfirm>d__;
@@ -62,7 +62,7 @@ public class RoleDevPhantomVisionSuitItem : GridProxyAbstract<RoleDevPhantomVisi
 		return <InitButtonConfirm>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060150AB RID: 86187 RVA: 0x00553E20 File Offset: 0x00552020
+	// Token: 0x06012AAB RID: 76459 RVA: 0x0057EBF4 File Offset: 0x0057CDF4
 	public override void Refresh(RoleDevPhantomVisionSuitItemData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -83,7 +83,7 @@ public class RoleDevPhantomVisionSuitItem : GridProxyAbstract<RoleDevPhantomVisi
 		this.RefreshDisplayContent(data);
 	}
 
-	// Token: 0x060150AC RID: 86188 RVA: 0x00553EF0 File Offset: 0x005520F0
+	// Token: 0x06012AAC RID: 76460 RVA: 0x0057ECC4 File Offset: 0x0057CEC4
 	private void RefreshDisplayContent(RoleDevPhantomVisionSuitItemData data)
 	{
 		List<IRoleDevPhantomSuitDisplayItemData> list = new List<IRoleDevPhantomSuitDisplayItemData>();
@@ -115,7 +115,7 @@ public class RoleDevPhantomVisionSuitItem : GridProxyAbstract<RoleDevPhantomVisi
 		detailVerticalLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x060150AD RID: 86189 RVA: 0x00553FE4 File Offset: 0x005521E4
+	// Token: 0x06012AAD RID: 76461 RVA: 0x0057EDB8 File Offset: 0x0057CFB8
 	private void OnClickConfirm(int _)
 	{
 		if (this.Data == null)
@@ -135,7 +135,7 @@ public class RoleDevPhantomVisionSuitItem : GridProxyAbstract<RoleDevPhantomVisi
 		}
 	}
 
-	// Token: 0x060150AE RID: 86190 RVA: 0x00554080 File Offset: 0x00552280
+	// Token: 0x06012AAE RID: 76462 RVA: 0x0057EE54 File Offset: 0x0057D054
 	private void HandleDungeonJump(int dungeonId)
 	{
 		if (GameModeController.Instance.IsInInstance())
@@ -156,7 +156,7 @@ public class RoleDevPhantomVisionSuitItem : GridProxyAbstract<RoleDevPhantomVisi
 		AdventureGuideController.Instance.RequestForDetection(DetectionType.SilentArea, silentAreaDetectData.Conf.LevelPlayList(), dungeonId);
 	}
 
-	// Token: 0x060150AF RID: 86191 RVA: 0x00554100 File Offset: 0x00552300
+	// Token: 0x06012AAF RID: 76463 RVA: 0x0057EED4 File Offset: 0x0057D0D4
 	private void HandleOpenFettersView(int fetterGroupId, int roleId, List<int> recommendGroupIds)
 	{
 		bool flag = RoleModel.Instance.IsRoleOwned(roleId);
@@ -169,7 +169,7 @@ public class RoleDevPhantomVisionSuitItem : GridProxyAbstract<RoleDevPhantomVisi
 		}, null);
 	}
 
-	// Token: 0x04009E28 RID: 40488
+	// Token: 0x0400A211 RID: 41489
 	[Nullable(new byte[]
 	{
 		2,
@@ -178,29 +178,29 @@ public class RoleDevPhantomVisionSuitItem : GridProxyAbstract<RoleDevPhantomVisi
 	})]
 	private GenericLayout<RoleDevPhantomVisionSuitDisplayItem, IRoleDevPhantomSuitDisplayItemData> DetailVerticalLayout;
 
-	// Token: 0x04009E29 RID: 40489
+	// Token: 0x0400A212 RID: 41490
 	[Nullable(2)]
 	private RoleDevPhantomVisionSuitItemData Data;
 
-	// Token: 0x04009E2A RID: 40490
+	// Token: 0x0400A213 RID: 41491
 	[Nullable(2)]
 	private ButtonItem ButtonConfirm;
 
-	// Token: 0x02008E54 RID: 36436
+	// Token: 0x0200809C RID: 32924
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E2B5 RID: 189109
+		// Token: 0x040299B1 RID: 170417
 		TxtName,
-		// Token: 0x0402E2B6 RID: 189110
+		// Token: 0x040299B2 RID: 170418
 		PanelDetailLayout,
-		// Token: 0x0402E2B7 RID: 189111
+		// Token: 0x040299B3 RID: 170419
 		ItemBase,
-		// Token: 0x0402E2B8 RID: 189112
+		// Token: 0x040299B4 RID: 170420
 		BtnConfirm,
-		// Token: 0x0402E2B9 RID: 189113
+		// Token: 0x040299B5 RID: 170421
 		IconSprite,
-		// Token: 0x0402E2BA RID: 189114
+		// Token: 0x040299B6 RID: 170422
 		IconTexture
 	}
 }

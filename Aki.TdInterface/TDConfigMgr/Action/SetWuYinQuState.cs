@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021F3 RID: 8691
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200245E RID: 9310
 	public class SetWuYinQuState : ActionParams
 	{
-		// Token: 0x0600BEE1 RID: 48865 RVA: 0x001B7294 File Offset: 0x001B5494
+		// Token: 0x0600CA9D RID: 51869 RVA: 0x001CE920 File Offset: 0x001CCB20
 		private SetWuYinQuState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BEE2 RID: 48866 RVA: 0x001B72CC File Offset: 0x001B54CC
+		// Token: 0x0600CA9E RID: 51870 RVA: 0x001CE958 File Offset: 0x001CCB58
 		public static SetWuYinQuState Create([Nullable(2)] SetWuYinQuState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BEE3 RID: 48867 RVA: 0x001B72DF File Offset: 0x001B54DF
+		// Token: 0x0600CA9F RID: 51871 RVA: 0x001CE96B File Offset: 0x001CCB6B
 		public static SetWuYinQuState CreateFromSetValue([Nullable(2)] SetWuYinQuState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BEE4 RID: 48868 RVA: 0x001B72F2 File Offset: 0x001B54F2
+		// Token: 0x0600CAA0 RID: 51872 RVA: 0x001CE97E File Offset: 0x001CCB7E
 		public SetWuYinQuState_SetValue ToSetValue()
 		{
 			return new SetWuYinQuState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039E6 RID: 14822
-		// (get) Token: 0x0600BEE5 RID: 48869 RVA: 0x001B7311 File Offset: 0x001B5511
-		// (set) Token: 0x0600BEE6 RID: 48870 RVA: 0x001B733C File Offset: 0x001B553C
+		// Token: 0x17003CDB RID: 15579
+		// (get) Token: 0x0600CAA1 RID: 51873 RVA: 0x001CE99D File Offset: 0x001CCB9D
+		// (set) Token: 0x0600CAA2 RID: 51874 RVA: 0x001CE9C8 File Offset: 0x001CCBC8
 		public virtual string WuYinQuName
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039E7 RID: 14823
-		// (get) Token: 0x0600BEE7 RID: 48871 RVA: 0x001B734A File Offset: 0x001B554A
-		// (set) Token: 0x0600BEE8 RID: 48872 RVA: 0x001B7375 File Offset: 0x001B5575
+		// Token: 0x17003CDC RID: 15580
+		// (get) Token: 0x0600CAA3 RID: 51875 RVA: 0x001CE9D6 File Offset: 0x001CCBD6
+		// (set) Token: 0x0600CAA4 RID: 51876 RVA: 0x001CEA01 File Offset: 0x001CCC01
 		public virtual EWuYinQuState State
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071D7 RID: 29143
+		// Token: 0x04007820 RID: 30752
 		[Nullable(2)]
 		protected new SetWuYinQuState FbInstance;
 
-		// Token: 0x040071D8 RID: 29144
+		// Token: 0x04007821 RID: 30753
 		[Nullable(2)]
 		protected SetWuYinQuState_SetValue PocoInterface;
 	}

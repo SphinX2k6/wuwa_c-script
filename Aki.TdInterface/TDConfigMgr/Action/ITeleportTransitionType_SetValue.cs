@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FA7 RID: 8103
+	// Token: 0x020021EA RID: 8682
 	public class ITeleportTransitionType_SetValue
 	{
-		// Token: 0x04006BA1 RID: 27553
+		// Token: 0x0400719C RID: 29084
 		public ETeleportTransitionType Type;
 	}
 }

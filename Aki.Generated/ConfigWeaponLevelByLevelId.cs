@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A82 RID: 2690
+	// Token: 0x02000B57 RID: 2903
 	public class ConfigWeaponLevelByLevelId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003F20 RID: 16160 RVA: 0x001BF152 File Offset: 0x001BD352
+		// Token: 0x0600441E RID: 17438 RVA: 0x001DE4E6 File Offset: 0x001DC6E6
 		static ConfigWeaponLevelByLevelId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWeaponLevelByLevelId.CreateStaticDefaultValue), new Action(ConfigWeaponLevelByLevelId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003F21 RID: 16161 RVA: 0x001BF174 File Offset: 0x001BD374
+		// Token: 0x0600441F RID: 17439 RVA: 0x001DE508 File Offset: 0x001DC708
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWeaponLevelByLevelId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003F22 RID: 16162 RVA: 0x001BF1F3 File Offset: 0x001BD3F3
+		// Token: 0x06004420 RID: 17440 RVA: 0x001DE587 File Offset: 0x001DC787
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWeaponLevelByLevelId.LogPair = null;
 			ConfigWeaponLevelByLevelId.HandleId = 0;
 		}
 
-		// Token: 0x06003F23 RID: 16163 RVA: 0x001BF201 File Offset: 0x001BD401
+		// Token: 0x06004421 RID: 17441 RVA: 0x001DE595 File Offset: 0x001DC795
 		public static void Init()
 		{
 			ConfigWeaponLevelByLevelId.HandleId = ConfigCommon.InitDataStatement(ConfigWeaponLevelByLevelId.HandleId, "db_weapon.db", "select BinData from `WeaponLevel` where LevelId = ?");
 		}
 
-		// Token: 0x06003F24 RID: 16164 RVA: 0x001BF21C File Offset: 0x001BD41C
+		// Token: 0x06004422 RID: 17442 RVA: 0x001DE5B0 File Offset: 0x001DC7B0
 		[NullableContext(2)]
 		public static IReadOnlyList<WeaponLevel> GetConfigList(int p0LevelId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04004974 RID: 18804
+		// Token: 0x04004F47 RID: 20295
 		private const string DB = "db_weapon.db";
 
-		// Token: 0x04004975 RID: 18805
+		// Token: 0x04004F48 RID: 20296
 		private const string FILE = "w.武器基础配置.xlsx";
 
-		// Token: 0x04004976 RID: 18806
+		// Token: 0x04004F49 RID: 20297
 		private const string TABLE = "WeaponLevel";
 
-		// Token: 0x04004977 RID: 18807
+		// Token: 0x04004F4A RID: 20298
 		private const string COMMAND = "select BinData from `WeaponLevel` where LevelId = ?";
 
-		// Token: 0x04004978 RID: 18808
+		// Token: 0x04004F4B RID: 20299
 		private const string KEY_PREFIX = "WeaponLevelByLevelId";
 
-		// Token: 0x04004979 RID: 18809
+		// Token: 0x04004F4C RID: 20300
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400497A RID: 18810
+		// Token: 0x04004F4D RID: 20301
 		private static int HandleId;
 	}
 }

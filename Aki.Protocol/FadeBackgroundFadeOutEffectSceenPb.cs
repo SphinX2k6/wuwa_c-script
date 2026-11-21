@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000517 RID: 1303
+	// Token: 0x02000501 RID: 1281
 	public sealed class FadeBackgroundFadeOutEffectSceenPb : IMessage<FadeBackgroundFadeOutEffectSceenPb>, IMessage, IEquatable<FadeBackgroundFadeOutEffectSceenPb>, IDeepCloneable<FadeBackgroundFadeOutEffectSceenPb>, IBufferMessage
 	{
-		// Token: 0x06007A81 RID: 31361 RVA: 0x00129965 File Offset: 0x00127B65
+		// Token: 0x06007905 RID: 30981 RVA: 0x00126AD1 File Offset: 0x00124CD1
 		[NullableContext(1)]
 		public static FadeBackgroundFadeOutEffectSceenPb Create()
 		{
 			return new FadeBackgroundFadeOutEffectSceenPb();
 		}
 
-		// Token: 0x170017C4 RID: 6084
-		// (get) Token: 0x06007A82 RID: 31362 RVA: 0x0012996C File Offset: 0x00127B6C
+		// Token: 0x17001773 RID: 6003
+		// (get) Token: 0x06007906 RID: 30982 RVA: 0x00126AD8 File Offset: 0x00124CD8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170017C5 RID: 6085
-		// (get) Token: 0x06007A83 RID: 31363 RVA: 0x0012996F File Offset: 0x00127B6F
+		// Token: 0x17001774 RID: 6004
+		// (get) Token: 0x06007907 RID: 30983 RVA: 0x00126ADB File Offset: 0x00124CDB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007A84 RID: 31364 RVA: 0x00129976 File Offset: 0x00127B76
+		// Token: 0x06007908 RID: 30984 RVA: 0x00126AE2 File Offset: 0x00124CE2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FadeBackgroundFadeOutEffectSceenPb()
 		{
 		}
 
-		// Token: 0x06007A85 RID: 31365 RVA: 0x00129989 File Offset: 0x00127B89
+		// Token: 0x06007909 RID: 30985 RVA: 0x00126AF5 File Offset: 0x00124CF5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FadeBackgroundFadeOutEffectSceenPb(FadeBackgroundFadeOutEffectSceenPb other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06007A86 RID: 31366 RVA: 0x001299AE File Offset: 0x00127BAE
+		// Token: 0x0600790A RID: 30986 RVA: 0x00126B1A File Offset: 0x00124D1A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FadeBackgroundFadeOutEffectSceenPb Clone()
@@ -65,9 +65,9 @@ namespace Aki.Protocol
 			return new FadeBackgroundFadeOutEffectSceenPb(this);
 		}
 
-		// Token: 0x170017C6 RID: 6086
-		// (get) Token: 0x06007A87 RID: 31367 RVA: 0x001299B6 File Offset: 0x00127BB6
-		// (set) Token: 0x06007A88 RID: 31368 RVA: 0x001299BE File Offset: 0x00127BBE
+		// Token: 0x17001775 RID: 6005
+		// (get) Token: 0x0600790B RID: 30987 RVA: 0x00126B22 File Offset: 0x00124D22
+		// (set) Token: 0x0600790C RID: 30988 RVA: 0x00126B2A File Offset: 0x00124D2A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string ScreenEffect
@@ -82,7 +82,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007A89 RID: 31369 RVA: 0x001299D1 File Offset: 0x00127BD1
+		// Token: 0x0600790D RID: 30989 RVA: 0x00126B3D File Offset: 0x00124D3D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -90,7 +90,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FadeBackgroundFadeOutEffectSceenPb);
 		}
 
-		// Token: 0x06007A8A RID: 31370 RVA: 0x001299DF File Offset: 0x00127BDF
+		// Token: 0x0600790E RID: 30990 RVA: 0x00126B4B File Offset: 0x00124D4B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FadeBackgroundFadeOutEffectSceenPb other)
@@ -98,7 +98,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (!(this.ScreenEffect != other.ScreenEffect) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06007A8B RID: 31371 RVA: 0x00129A14 File Offset: 0x00127C14
+		// Token: 0x0600790F RID: 30991 RVA: 0x00126B80 File Offset: 0x00124D80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007A8C RID: 31372 RVA: 0x00129A55 File Offset: 0x00127C55
+		// Token: 0x06007910 RID: 30992 RVA: 0x00126BC1 File Offset: 0x00124DC1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06007A8D RID: 31373 RVA: 0x00129A62 File Offset: 0x00127C62
+		// Token: 0x06007911 RID: 30993 RVA: 0x00126BCE File Offset: 0x00124DCE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06007A8E RID: 31374 RVA: 0x00129A6B File Offset: 0x00127C6B
+		// Token: 0x06007912 RID: 30994 RVA: 0x00126BD7 File Offset: 0x00124DD7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007A8F RID: 31375 RVA: 0x00129AA4 File Offset: 0x00127CA4
+		// Token: 0x06007913 RID: 30995 RVA: 0x00126C10 File Offset: 0x00124E10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007A90 RID: 31376 RVA: 0x00129AE7 File Offset: 0x00127CE7
+		// Token: 0x06007914 RID: 30996 RVA: 0x00126C53 File Offset: 0x00124E53
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FadeBackgroundFadeOutEffectSceenPb other)
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06007A91 RID: 31377 RVA: 0x00129B1D File Offset: 0x00127D1D
+		// Token: 0x06007915 RID: 30997 RVA: 0x00126C89 File Offset: 0x00124E89
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -188,7 +188,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06007A92 RID: 31378 RVA: 0x00129B28 File Offset: 0x00127D28
+		// Token: 0x06007916 RID: 30998 RVA: 0x00126C94 File Offset: 0x00124E94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -211,13 +211,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003EF3 RID: 16115
+		// Token: 0x04003EE4 RID: 16100
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003EF4 RID: 16116
+		// Token: 0x04003EE5 RID: 16101
 		public const int ScreenEffectFieldNumber = 1;
 
-		// Token: 0x04003EF5 RID: 16117
+		// Token: 0x04003EE6 RID: 16102
 		private string screenEffect_ = "";
 	}
 }

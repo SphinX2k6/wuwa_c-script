@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200559F RID: 21919
+	// Token: 0x02005B3D RID: 23357
 	public struct IMonsterShowOnDeathEffect : IFlatbufferObject
 	{
-		// Token: 0x1700A1E3 RID: 41443
-		// (get) Token: 0x06024483 RID: 148611 RVA: 0x005024CE File Offset: 0x005006CE
+		// Token: 0x1700AA6B RID: 43627
+		// (get) Token: 0x06026690 RID: 157328 RVA: 0x00542A46 File Offset: 0x00540C46
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024484 RID: 148612 RVA: 0x005024DB File Offset: 0x005006DB
+		// Token: 0x06026691 RID: 157329 RVA: 0x00542A53 File Offset: 0x00540C53
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06024485 RID: 148613 RVA: 0x005024E4 File Offset: 0x005006E4
+		// Token: 0x06026692 RID: 157330 RVA: 0x00542A5C File Offset: 0x00540C5C
 		public static IMonsterShowOnDeathEffect GetRootAsIMonsterShowOnDeathEffect(ByteBuffer _bb)
 		{
 			return IMonsterShowOnDeathEffect.GetRootAsIMonsterShowOnDeathEffect(_bb, default(IMonsterShowOnDeathEffect));
 		}
 
-		// Token: 0x06024486 RID: 148614 RVA: 0x00502500 File Offset: 0x00500700
+		// Token: 0x06026693 RID: 157331 RVA: 0x00542A78 File Offset: 0x00540C78
 		public static IMonsterShowOnDeathEffect GetRootAsIMonsterShowOnDeathEffect(ByteBuffer _bb, IMonsterShowOnDeathEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06024487 RID: 148615 RVA: 0x0050251D File Offset: 0x0050071D
+		// Token: 0x06026694 RID: 157332 RVA: 0x00542A95 File Offset: 0x00540C95
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06024488 RID: 148616 RVA: 0x0050252C File Offset: 0x0050072C
+		// Token: 0x06026695 RID: 157333 RVA: 0x00542AA4 File Offset: 0x00540CA4
 		public IMonsterShowOnDeathEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A1E4 RID: 41444
-		// (get) Token: 0x06024489 RID: 148617 RVA: 0x0050253C File Offset: 0x0050073C
+		// Token: 0x1700AA6C RID: 43628
+		// (get) Token: 0x06026696 RID: 157334 RVA: 0x00542AB4 File Offset: 0x00540CB4
 		public EMonsterShowOnDeathType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A1E5 RID: 41445
-		// (get) Token: 0x0602448A RID: 148618 RVA: 0x00502578 File Offset: 0x00500778
+		// Token: 0x1700AA6D RID: 43629
+		// (get) Token: 0x06026697 RID: 157335 RVA: 0x00542AF0 File Offset: 0x00540CF0
 		public int EffectId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602448B RID: 148619 RVA: 0x005025B4 File Offset: 0x005007B4
+		// Token: 0x06026698 RID: 157336 RVA: 0x00542B2C File Offset: 0x00540D2C
 		public static Offset<IMonsterShowOnDeathEffect> CreateIMonsterShowOnDeathEffect(FlatBufferBuilder builder, EMonsterShowOnDeathType Type = EMonsterShowOnDeathType.Effect, int EffectId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMonsterShowOnDeathEffect.EndIMonsterShowOnDeathEffect(builder);
 		}
 
-		// Token: 0x0602448C RID: 148620 RVA: 0x005025D1 File Offset: 0x005007D1
+		// Token: 0x06026699 RID: 157337 RVA: 0x00542B49 File Offset: 0x00540D49
 		public static void StartIMonsterShowOnDeathEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602448D RID: 148621 RVA: 0x005025DA File Offset: 0x005007DA
+		// Token: 0x0602669A RID: 157338 RVA: 0x00542B52 File Offset: 0x00540D52
 		public static void AddType(FlatBufferBuilder builder, EMonsterShowOnDeathType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602448E RID: 148622 RVA: 0x005025E5 File Offset: 0x005007E5
+		// Token: 0x0602669B RID: 157339 RVA: 0x00542B5D File Offset: 0x00540D5D
 		public static void AddEffectId(FlatBufferBuilder builder, int effectId)
 		{
 			builder.AddInt(1, effectId, 0);
 		}
 
-		// Token: 0x0602448F RID: 148623 RVA: 0x005025F0 File Offset: 0x005007F0
+		// Token: 0x0602669C RID: 157340 RVA: 0x00542B68 File Offset: 0x00540D68
 		public static Offset<IMonsterShowOnDeathEffect> EndIMonsterShowOnDeathEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<IMonsterShowOnDeathEffect>(builder.EndTable());
 		}
 
-		// Token: 0x06024490 RID: 148624 RVA: 0x00502600 File Offset: 0x00500800
+		// Token: 0x0602669D RID: 157341 RVA: 0x00542B78 File Offset: 0x00540D78
 		public IMonsterShowOnDeathEffectT UnPack()
 		{
 			IMonsterShowOnDeathEffectT monsterShowOnDeathEffectT = new IMonsterShowOnDeathEffectT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return monsterShowOnDeathEffectT;
 		}
 
-		// Token: 0x06024491 RID: 148625 RVA: 0x0050261B File Offset: 0x0050081B
+		// Token: 0x0602669E RID: 157342 RVA: 0x00542B93 File Offset: 0x00540D93
 		public void UnPackTo(IMonsterShowOnDeathEffectT _o)
 		{
 			_o.Type = this.Type;
 			_o.EffectId = this.EffectId;
 		}
 
-		// Token: 0x06024492 RID: 148626 RVA: 0x00502638 File Offset: 0x00500838
+		// Token: 0x0602669F RID: 157343 RVA: 0x00542BB0 File Offset: 0x00540DB0
 		public static Offset<IMonsterShowOnDeathEffect> Pack(FlatBufferBuilder builder, IMonsterShowOnDeathEffectT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMonsterShowOnDeathEffect.CreateIMonsterShowOnDeathEffect(builder, _o.Type, _o.EffectId);
 		}
 
-		// Token: 0x0400E8CF RID: 59599
+		// Token: 0x0400F531 RID: 62769
 		private Table __p;
 	}
 }

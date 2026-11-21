@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000818 RID: 2072
+	// Token: 0x02000834 RID: 2100
 	public class ConfigRoadBookTaskByTaskId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060030A2 RID: 12450 RVA: 0x0016C343 File Offset: 0x0016A543
+		// Token: 0x0600314A RID: 12618 RVA: 0x0017362B File Offset: 0x0017182B
 		static ConfigRoadBookTaskByTaskId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoadBookTaskByTaskId.CreateStaticDefaultValue), new Action(ConfigRoadBookTaskByTaskId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060030A3 RID: 12451 RVA: 0x0016C364 File Offset: 0x0016A564
+		// Token: 0x0600314B RID: 12619 RVA: 0x0017364C File Offset: 0x0017184C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoadBookTaskByTaskId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060030A4 RID: 12452 RVA: 0x0016C3E3 File Offset: 0x0016A5E3
+		// Token: 0x0600314C RID: 12620 RVA: 0x001736CB File Offset: 0x001718CB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoadBookTaskByTaskId.LogPair = null;
 			ConfigRoadBookTaskByTaskId.HandleId = 0;
 		}
 
-		// Token: 0x060030A5 RID: 12453 RVA: 0x0016C3F1 File Offset: 0x0016A5F1
+		// Token: 0x0600314D RID: 12621 RVA: 0x001736D9 File Offset: 0x001718D9
 		public static void Init()
 		{
 			ConfigRoadBookTaskByTaskId.HandleId = ConfigCommon.InitDataStatement(ConfigRoadBookTaskByTaskId.HandleId, "db_roadbook.db", "select BinData from `RoadBookTask` where TaskId=?");
 		}
 
-		// Token: 0x060030A6 RID: 12454 RVA: 0x0016C40C File Offset: 0x0016A60C
+		// Token: 0x0600314E RID: 12622 RVA: 0x001736F4 File Offset: 0x001718F4
 		public static RoadBookTask? GetConfig(int p0TaskId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoadBookTaskByTaskId.HandleId, ConfigRoadBookTaskByTaskId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoadBookTask?(rootAsRoadBookTask);
 		}
 
-		// Token: 0x0400388E RID: 14478
+		// Token: 0x04003952 RID: 14674
 		private const string DB = "db_roadbook.db";
 
-		// Token: 0x0400388F RID: 14479
+		// Token: 0x04003953 RID: 14675
 		private const string FILE = "q.千岛路书3.0.xlsx";
 
-		// Token: 0x04003890 RID: 14480
+		// Token: 0x04003954 RID: 14676
 		private const string TABLE = "RoadBookTask";
 
-		// Token: 0x04003891 RID: 14481
+		// Token: 0x04003955 RID: 14677
 		private const string COMMAND = "select BinData from `RoadBookTask` where TaskId=?";
 
-		// Token: 0x04003892 RID: 14482
+		// Token: 0x04003956 RID: 14678
 		private const string KEY_PREFIX = "RoadBookTaskByTaskId";
 
-		// Token: 0x04003893 RID: 14483
+		// Token: 0x04003957 RID: 14679
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003894 RID: 14484
+		// Token: 0x04003958 RID: 14680
 		private static int HandleId;
 	}
 }

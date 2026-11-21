@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Physics
 {
-	// Token: 0x02004340 RID: 17216
+	// Token: 0x020047A2 RID: 18338
 	public class IAcmLimitedT
 	{
-		// Token: 0x17007990 RID: 31120
-		// (get) Token: 0x06019869 RID: 104553 RVA: 0x003A7B10 File Offset: 0x003A5D10
-		// (set) Token: 0x0601986A RID: 104554 RVA: 0x003A7B18 File Offset: 0x003A5D18
+		// Token: 0x17007FC5 RID: 32709
+		// (get) Token: 0x0601AFF7 RID: 110583 RVA: 0x003D3538 File Offset: 0x003D1738
+		// (set) Token: 0x0601AFF8 RID: 110584 RVA: 0x003D3540 File Offset: 0x003D1740
 		public EAngularConstraintMotion Type { get; set; }
 
-		// Token: 0x17007991 RID: 31121
-		// (get) Token: 0x0601986B RID: 104555 RVA: 0x003A7B21 File Offset: 0x003A5D21
-		// (set) Token: 0x0601986C RID: 104556 RVA: 0x003A7B29 File Offset: 0x003A5D29
+		// Token: 0x17007FC6 RID: 32710
+		// (get) Token: 0x0601AFF9 RID: 110585 RVA: 0x003D3549 File Offset: 0x003D1749
+		// (set) Token: 0x0601AFFA RID: 110586 RVA: 0x003D3551 File Offset: 0x003D1751
 		public int LimitValue { get; set; }
 
-		// Token: 0x0601986D RID: 104557 RVA: 0x003A7B32 File Offset: 0x003A5D32
+		// Token: 0x0601AFFB RID: 110587 RVA: 0x003D355A File Offset: 0x003D175A
 		public IAcmLimitedT()
 		{
 			this.Type = EAngularConstraintMotion.ACM_Free;

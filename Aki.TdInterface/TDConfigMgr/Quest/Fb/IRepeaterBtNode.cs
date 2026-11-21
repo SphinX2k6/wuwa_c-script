@@ -8,13 +8,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012C9 RID: 4809
+	// Token: 0x0200140F RID: 5135
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IRepeaterBtNode : IBtNode
 	{
-		// Token: 0x06006DFE RID: 28158 RVA: 0x0010A320 File Offset: 0x00108520
-		[NullableContext(1)]
+		// Token: 0x0600747C RID: 29820 RVA: 0x001185B0 File Offset: 0x001167B0
+		[NullableContext(0)]
 		public static IRepeaterBtNode Create(IRepeaterBtNode? instance)
 		{
 			if (instance == null)
@@ -27,8 +27,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700223F RID: 8767
-		// (get) Token: 0x06006DFF RID: 28159 RVA: 0x0010A33F File Offset: 0x0010853F
+		// Token: 0x17002400 RID: 9216
+		// (get) Token: 0x0600747D RID: 29821 RVA: 0x001185CF File Offset: 0x001167CF
 		public override EBtNode Type
 		{
 			get
@@ -37,8 +37,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002240 RID: 8768
-		// (get) Token: 0x06006E00 RID: 28160 RVA: 0x0010A34C File Offset: 0x0010854C
+		// Token: 0x17002401 RID: 9217
+		// (get) Token: 0x0600747E RID: 29822 RVA: 0x001185DC File Offset: 0x001167DC
 		public override int Id
 		{
 			get
@@ -47,20 +47,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002241 RID: 8769
-		// (get) Token: 0x06006E01 RID: 28161 RVA: 0x0010A359 File Offset: 0x00108559
-		[Nullable(1)]
+		// Token: 0x17002402 RID: 9218
+		// (get) Token: 0x0600747F RID: 29823 RVA: 0x001185E9 File Offset: 0x001167E9
+		[Nullable(0)]
 		public override string Desc
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.Desc;
 			}
 		}
 
-		// Token: 0x17002242 RID: 8770
-		// (get) Token: 0x06006E02 RID: 28162 RVA: 0x0010A366 File Offset: 0x00108566
+		// Token: 0x17002403 RID: 9219
+		// (get) Token: 0x06007480 RID: 29824 RVA: 0x001185F6 File Offset: 0x001167F6
 		public override IFixProcessor FixProcessor
 		{
 			get
@@ -75,8 +75,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002243 RID: 8771
-		// (get) Token: 0x06006E03 RID: 28163 RVA: 0x0010A39C File Offset: 0x0010859C
+		// Token: 0x17002404 RID: 9220
+		// (get) Token: 0x06007481 RID: 29825 RVA: 0x0011862C File Offset: 0x0011682C
 		public override bool? _FoldedForTree
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002244 RID: 8772
-		// (get) Token: 0x06006E04 RID: 28164 RVA: 0x0010A3D4 File Offset: 0x001085D4
+		// Token: 0x17002405 RID: 9221
+		// (get) Token: 0x06007482 RID: 29826 RVA: 0x00118664 File Offset: 0x00116864
 		public override bool? Disabled
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002245 RID: 8773
-		// (get) Token: 0x06006E05 RID: 28165 RVA: 0x0010A40C File Offset: 0x0010860C
+		// Token: 0x17002406 RID: 9222
+		// (get) Token: 0x06007483 RID: 29827 RVA: 0x0011869C File Offset: 0x0011689C
 		public override int? EdFragmentId
 		{
 			get
@@ -113,8 +113,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002246 RID: 8774
-		// (get) Token: 0x06006E06 RID: 28166 RVA: 0x0010A424 File Offset: 0x00108624
+		// Token: 0x17002407 RID: 9223
+		// (get) Token: 0x06007484 RID: 29828 RVA: 0x001186B4 File Offset: 0x001168B4
 		public override int? EdSubTreeId
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002247 RID: 8775
-		// (get) Token: 0x06006E07 RID: 28167 RVA: 0x0010A43A File Offset: 0x0010863A
+		// Token: 0x17002408 RID: 9224
+		// (get) Token: 0x06007485 RID: 29829 RVA: 0x001186CA File Offset: 0x001168CA
 		public override string EdSubTreeName
 		{
 			get
@@ -133,8 +133,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002248 RID: 8776
-		// (get) Token: 0x06006E08 RID: 28168 RVA: 0x0010A440 File Offset: 0x00108640
+		// Token: 0x17002409 RID: 9225
+		// (get) Token: 0x06007486 RID: 29830 RVA: 0x001186D0 File Offset: 0x001168D0
 		public override int? EdSubTreeSegment
 		{
 			get
@@ -143,19 +143,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002249 RID: 8777
-		// (get) Token: 0x06006E09 RID: 28169 RVA: 0x0010A456 File Offset: 0x00108656
+		// Token: 0x1700240A RID: 9226
+		// (get) Token: 0x06007487 RID: 29831 RVA: 0x001186E6 File Offset: 0x001168E6
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> EdDebugEnterActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -163,12 +163,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700224A RID: 8778
-		// (get) Token: 0x06006E0A RID: 28170 RVA: 0x0010A459 File Offset: 0x00108659
-		[Nullable(1)]
+		// Token: 0x1700240B RID: 9227
+		// (get) Token: 0x06007488 RID: 29832 RVA: 0x001186E9 File Offset: 0x001168E9
+		[Nullable(0)]
 		public virtual IBtNode Child
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ChildInited)
@@ -181,8 +181,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700224B RID: 8779
-		// (get) Token: 0x06006E0B RID: 28171 RVA: 0x0010A488 File Offset: 0x00108688
+		// Token: 0x1700240C RID: 9228
+		// (get) Token: 0x06007489 RID: 29833 RVA: 0x00118718 File Offset: 0x00116918
 		public virtual int? MaxRepeatTimes
 		{
 			get
@@ -195,8 +195,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700224C RID: 8780
-		// (get) Token: 0x06006E0C RID: 28172 RVA: 0x0010A4BE File Offset: 0x001086BE
+		// Token: 0x1700240D RID: 9229
+		// (get) Token: 0x0600748A RID: 29834 RVA: 0x0011874E File Offset: 0x0011694E
 		public virtual IConditionGroup ExitCondition
 		{
 			get
@@ -211,26 +211,26 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F0F RID: 16143
+		// Token: 0x0400427D RID: 17021
 		private IRepeaterBtNode Instance;
 
-		// Token: 0x04003F10 RID: 16144
+		// Token: 0x0400427E RID: 17022
 		private IFixProcessor _FixProcessorCache;
 
-		// Token: 0x04003F11 RID: 16145
+		// Token: 0x0400427F RID: 17023
 		private bool _FixProcessorInited;
 
-		// Token: 0x04003F12 RID: 16146
-		[Nullable(1)]
+		// Token: 0x04004280 RID: 17024
+		[Nullable(0)]
 		private IBtNode _ChildCache;
 
-		// Token: 0x04003F13 RID: 16147
+		// Token: 0x04004281 RID: 17025
 		private bool _ChildInited;
 
-		// Token: 0x04003F14 RID: 16148
+		// Token: 0x04004282 RID: 17026
 		private IConditionGroup _ExitConditionCache;
 
-		// Token: 0x04003F15 RID: 16149
+		// Token: 0x04004283 RID: 17027
 		private bool _ExitConditionInited;
 	}
 }

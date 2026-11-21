@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000946 RID: 2374
+	// Token: 0x02000991 RID: 2449
 	public class ConfigSkillLevelBySkillLevelGroupIdAndSkillId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060037B7 RID: 14263 RVA: 0x001946B3 File Offset: 0x001928B3
+		// Token: 0x06003979 RID: 14713 RVA: 0x001A18D3 File Offset: 0x0019FAD3
 		static ConfigSkillLevelBySkillLevelGroupIdAndSkillId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSkillLevelBySkillLevelGroupIdAndSkillId.CreateStaticDefaultValue), new Action(ConfigSkillLevelBySkillLevelGroupIdAndSkillId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060037B8 RID: 14264 RVA: 0x001946D4 File Offset: 0x001928D4
+		// Token: 0x0600397A RID: 14714 RVA: 0x001A18F4 File Offset: 0x0019FAF4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSkillLevelBySkillLevelGroupIdAndSkillId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060037B9 RID: 14265 RVA: 0x00194753 File Offset: 0x00192953
+		// Token: 0x0600397B RID: 14715 RVA: 0x001A1973 File Offset: 0x0019FB73
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSkillLevelBySkillLevelGroupIdAndSkillId.LogPair = null;
 			ConfigSkillLevelBySkillLevelGroupIdAndSkillId.HandleId = 0;
 		}
 
-		// Token: 0x060037BA RID: 14266 RVA: 0x00194761 File Offset: 0x00192961
+		// Token: 0x0600397C RID: 14716 RVA: 0x001A1981 File Offset: 0x0019FB81
 		public static void Init()
 		{
 			ConfigSkillLevelBySkillLevelGroupIdAndSkillId.HandleId = ConfigCommon.InitDataStatement(ConfigSkillLevelBySkillLevelGroupIdAndSkillId.HandleId, "db_skill.db", "select BinData from `SkillLevel` where SkillLevelGroupId = ? AND SkillId = ?");
 		}
 
-		// Token: 0x060037BB RID: 14267 RVA: 0x0019477C File Offset: 0x0019297C
+		// Token: 0x0600397D RID: 14717 RVA: 0x001A199C File Offset: 0x0019FB9C
 		public static SkillLevel? GetConfig(int p0SkillLevelGroupId, int p1SkillId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSkillLevelBySkillLevelGroupIdAndSkillId.HandleId, ConfigSkillLevelBySkillLevelGroupIdAndSkillId.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new SkillLevel?(rootAsSkillLevel);
 		}
 
-		// Token: 0x040040D0 RID: 16592
+		// Token: 0x040042DD RID: 17117
 		private const string DB = "db_skill.db";
 
-		// Token: 0x040040D1 RID: 16593
+		// Token: 0x040042DE RID: 17118
 		private const string FILE = "j.技能.xlsx";
 
-		// Token: 0x040040D2 RID: 16594
+		// Token: 0x040042DF RID: 17119
 		private const string TABLE = "SkillLevel";
 
-		// Token: 0x040040D3 RID: 16595
+		// Token: 0x040042E0 RID: 17120
 		private const string COMMAND = "select BinData from `SkillLevel` where SkillLevelGroupId = ? AND SkillId = ?";
 
-		// Token: 0x040040D4 RID: 16596
+		// Token: 0x040042E1 RID: 17121
 		private const string KEY_PREFIX = "SkillLevelBySkillLevelGroupIdAndSkillId";
 
-		// Token: 0x040040D5 RID: 16597
+		// Token: 0x040042E2 RID: 17122
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040040D6 RID: 16598
+		// Token: 0x040042E3 RID: 17123
 		private static int HandleId;
 	}
 }

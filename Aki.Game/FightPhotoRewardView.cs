@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200127D RID: 4733
+// Token: 0x02000731 RID: 1841
 [NullableContext(1)]
 [Nullable(0)]
 public class FightPhotoRewardView : UiViewBase
 {
-	// Token: 0x06008133 RID: 33075 RVA: 0x001B67AD File Offset: 0x001B49AD
+	// Token: 0x060054CA RID: 21706 RVA: 0x001BF47D File Offset: 0x001BD67D
 	public FightPhotoRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06008134 RID: 33076 RVA: 0x001B67B8 File Offset: 0x001B49B8
+	// Token: 0x060054CB RID: 21707 RVA: 0x001BF488 File Offset: 0x001BD688
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class FightPhotoRewardView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008135 RID: 33077 RVA: 0x001B6854 File Offset: 0x001B4A54
+	// Token: 0x060054CC RID: 21708 RVA: 0x001BF524 File Offset: 0x001BD724
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FightPhotoRewardView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -44,21 +44,21 @@ public class FightPhotoRewardView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008136 RID: 33078 RVA: 0x001B6897 File Offset: 0x001B4A97
+	// Token: 0x060054CD RID: 21709 RVA: 0x001BF567 File Offset: 0x001BD767
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		EventSystem.Instance.Add(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x06008137 RID: 33079 RVA: 0x001B68D1 File Offset: 0x001B4AD1
+	// Token: 0x060054CE RID: 21710 RVA: 0x001BF5A1 File Offset: 0x001BD7A1
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x06008138 RID: 33080 RVA: 0x001B690B File Offset: 0x001B4B0B
+	// Token: 0x060054CF RID: 21711 RVA: 0x001BF5DB File Offset: 0x001BD7DB
 	private void OnRefreshCommonActivityRedDot(int activityId)
 	{
 		if (activityId == this.ActivityData.Id)
@@ -68,7 +68,7 @@ public class FightPhotoRewardView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008139 RID: 33081 RVA: 0x001B692D File Offset: 0x001B4B2D
+	// Token: 0x060054D0 RID: 21712 RVA: 0x001BF5FD File Offset: 0x001BD7FD
 	private void RefreshTaskLayout(bool isPlayAnim = false)
 	{
 		this.TaskLayout.RefreshByData(this.ActivityData.GetTaskDataList(this.CurrentTabId), delegate
@@ -77,7 +77,7 @@ public class FightPhotoRewardView : UiViewBase
 		}, isPlayAnim);
 	}
 
-	// Token: 0x0600813A RID: 33082 RVA: 0x001B6958 File Offset: 0x001B4B58
+	// Token: 0x060054D1 RID: 21713 RVA: 0x001BF628 File Offset: 0x001BD828
 	private FightPhotoTaskTabItem CreateTabItem()
 	{
 		return new FightPhotoTaskTabItem
@@ -87,7 +87,7 @@ public class FightPhotoRewardView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600813B RID: 33083 RVA: 0x001B697D File Offset: 0x001B4B7D
+	// Token: 0x060054D2 RID: 21714 RVA: 0x001BF64D File Offset: 0x001BD84D
 	private void OnTabClickCallBack(int tabId)
 	{
 		this.CurrentTabId = tabId;
@@ -96,7 +96,7 @@ public class FightPhotoRewardView : UiViewBase
 		this.RefreshTaskLayout(false);
 	}
 
-	// Token: 0x0600813C RID: 33084 RVA: 0x001B69AC File Offset: 0x001B4BAC
+	// Token: 0x060054D3 RID: 21715 RVA: 0x001BF67C File Offset: 0x001BD87C
 	private FightPhotoTaskItem CreateTaskItem()
 	{
 		return new FightPhotoTaskItem
@@ -105,19 +105,19 @@ public class FightPhotoRewardView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600813D RID: 33085 RVA: 0x001B69C5 File Offset: 0x001B4BC5
+	// Token: 0x060054D4 RID: 21716 RVA: 0x001BF695 File Offset: 0x001BD895
 	private void OnRewardBtnClick()
 	{
 		this.ActivityData.RequestTaskReward(this.CurrentTabId);
 	}
 
-	// Token: 0x0600813E RID: 33086 RVA: 0x001B69D8 File Offset: 0x001B4BD8
+	// Token: 0x060054D5 RID: 21717 RVA: 0x001BF6A8 File Offset: 0x001BD8A8
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600813F RID: 33087 RVA: 0x001B69E1 File Offset: 0x001B4BE1
+	// Token: 0x060054D6 RID: 21718 RVA: 0x001BF6B1 File Offset: 0x001BD8B1
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		if (param == "ListAnim")
@@ -131,34 +131,34 @@ public class FightPhotoRewardView : UiViewBase
 		}
 	}
 
-	// Token: 0x04003A94 RID: 14996
+	// Token: 0x04003B2C RID: 15148
 	[Nullable(2)]
 	private FightPhotoActivityData ActivityData;
 
-	// Token: 0x04003A95 RID: 14997
+	// Token: 0x04003B2D RID: 15149
 	private int CurrentTabId;
 
-	// Token: 0x04003A96 RID: 14998
+	// Token: 0x04003B2E RID: 15150
 	private GenericLayout<FightPhotoTaskTabItem, PhotoFightRewardTab> TabLayout;
 
-	// Token: 0x04003A97 RID: 14999
+	// Token: 0x04003B2F RID: 15151
 	private GenericScrollViewNew<FightPhotoTaskItem, FightPhotoTaskData> TaskLayout;
 
-	// Token: 0x02007893 RID: 30867
+	// Token: 0x02006A1E RID: 27166
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04027BA6 RID: 162726
+		// Token: 0x04022ED7 RID: 143063
 		ItemCaption,
-		// Token: 0x04027BA7 RID: 162727
+		// Token: 0x04022ED8 RID: 143064
 		LayoutTab,
-		// Token: 0x04027BA8 RID: 162728
+		// Token: 0x04022ED9 RID: 143065
 		ItemTab,
-		// Token: 0x04027BA9 RID: 162729
+		// Token: 0x04022EDA RID: 143066
 		ScrollReward,
-		// Token: 0x04027BAA RID: 162730
+		// Token: 0x04022EDB RID: 143067
 		ItemReward,
-		// Token: 0x04027BAB RID: 162731
+		// Token: 0x04022EDC RID: 143068
 		AnimController
 	}
 }

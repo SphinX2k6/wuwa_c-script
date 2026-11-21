@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200208A RID: 8330
+// Token: 0x0200155D RID: 5469
 [NullableContext(1)]
 [Nullable(0)]
 public class LoginInfo : ILoginInfo
 {
-	// Token: 0x17001442 RID: 5186
-	// (get) Token: 0x0601064F RID: 67151 RVA: 0x003FF2D5 File Offset: 0x003FD4D5
-	// (set) Token: 0x06010650 RID: 67152 RVA: 0x003FF2DD File Offset: 0x003FD4DD
+	// Token: 0x1700146F RID: 5231
+	// (get) Token: 0x0600DAB7 RID: 55991 RVA: 0x0040B71D File Offset: 0x0040991D
+	// (set) Token: 0x0600DAB8 RID: 55992 RVA: 0x0040B725 File Offset: 0x00409925
 	public int LoginCode { get; set; }
 
-	// Token: 0x17001443 RID: 5187
-	// (get) Token: 0x06010651 RID: 67153 RVA: 0x003FF2E6 File Offset: 0x003FD4E6
-	// (set) Token: 0x06010652 RID: 67154 RVA: 0x003FF2EE File Offset: 0x003FD4EE
+	// Token: 0x17001470 RID: 5232
+	// (get) Token: 0x0600DAB9 RID: 55993 RVA: 0x0040B72E File Offset: 0x0040992E
+	// (set) Token: 0x0600DABA RID: 55994 RVA: 0x0040B736 File Offset: 0x00409936
 	public string Uid { get; set; }
 
-	// Token: 0x17001444 RID: 5188
-	// (get) Token: 0x06010653 RID: 67155 RVA: 0x003FF2F7 File Offset: 0x003FD4F7
-	// (set) Token: 0x06010654 RID: 67156 RVA: 0x003FF2FF File Offset: 0x003FD4FF
+	// Token: 0x17001471 RID: 5233
+	// (get) Token: 0x0600DABB RID: 55995 RVA: 0x0040B73F File Offset: 0x0040993F
+	// (set) Token: 0x0600DABC RID: 55996 RVA: 0x0040B747 File Offset: 0x00409947
 	public string UserName { get; set; }
 
-	// Token: 0x17001445 RID: 5189
-	// (get) Token: 0x06010655 RID: 67157 RVA: 0x003FF308 File Offset: 0x003FD508
-	// (set) Token: 0x06010656 RID: 67158 RVA: 0x003FF310 File Offset: 0x003FD510
+	// Token: 0x17001472 RID: 5234
+	// (get) Token: 0x0600DABD RID: 55997 RVA: 0x0040B750 File Offset: 0x00409950
+	// (set) Token: 0x0600DABE RID: 55998 RVA: 0x0040B758 File Offset: 0x00409958
 	public string Token { get; set; }
 }

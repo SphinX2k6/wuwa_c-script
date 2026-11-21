@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000ED0 RID: 3792
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FE6 RID: 4070
 	public class IAtomicProcessBase
 	{
-		// Token: 0x060053B8 RID: 21432 RVA: 0x000CDD80 File Offset: 0x000CBF80
+		// Token: 0x06005934 RID: 22836 RVA: 0x000D9F28 File Offset: 0x000D8128
 		private IAtomicProcessBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060053B9 RID: 21433 RVA: 0x000CDDB8 File Offset: 0x000CBFB8
+		// Token: 0x06005935 RID: 22837 RVA: 0x000D9F60 File Offset: 0x000D8160
 		public static IAtomicProcessBase Create([Nullable(2)] IAtomicProcessBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060053BA RID: 21434 RVA: 0x000CDDCB File Offset: 0x000CBFCB
+		// Token: 0x06005936 RID: 22838 RVA: 0x000D9F73 File Offset: 0x000D8173
 		public static IAtomicProcessBase CreateFromSetValue([Nullable(2)] IAtomicProcessBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060053BB RID: 21435 RVA: 0x000CDDDE File Offset: 0x000CBFDE
+		// Token: 0x06005937 RID: 22839 RVA: 0x000D9F86 File Offset: 0x000D8186
 		public IAtomicProcessBase_SetValue ToSetValue()
 		{
 			return new IAtomicProcessBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C23 RID: 7203
-		// (get) Token: 0x060053BC RID: 21436 RVA: 0x000CDDF1 File Offset: 0x000CBFF1
-		// (set) Token: 0x060053BD RID: 21437 RVA: 0x000CDE1C File Offset: 0x000CC01C
+		// Token: 0x17001DBB RID: 7611
+		// (get) Token: 0x06005938 RID: 22840 RVA: 0x000D9F99 File Offset: 0x000D8199
+		// (set) Token: 0x06005939 RID: 22841 RVA: 0x000D9FC4 File Offset: 0x000D81C4
 		public virtual EAtomicProcess Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040032B3 RID: 12979
+		// Token: 0x040035C0 RID: 13760
 		[Nullable(2)]
 		protected IAtomicProcessBase FbInstance;
 
-		// Token: 0x040032B4 RID: 12980
+		// Token: 0x040035C1 RID: 13761
 		[Nullable(2)]
 		protected IAtomicProcessBase_SetValue PocoInterface;
 	}

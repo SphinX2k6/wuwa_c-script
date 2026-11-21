@@ -15,9 +15,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskAiFindClosetItem.TsTaskAiFindClosetItem_C")]
 public class TsTaskAiFindClosetItem : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170000FA RID: 250
-	// (get) Token: 0x0600064E RID: 1614 RVA: 0x0001F90F File Offset: 0x0001DB0F
-	// (set) Token: 0x0600064F RID: 1615 RVA: 0x0001F91F File Offset: 0x0001DB1F
+	// Token: 0x170000FC RID: 252
+	// (get) Token: 0x06000652 RID: 1618 RVA: 0x00020593 File Offset: 0x0001E793
+	// (set) Token: 0x06000653 RID: 1619 RVA: 0x000205A3 File Offset: 0x0001E7A3
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Range
 	{
@@ -31,9 +31,9 @@ public class TsTaskAiFindClosetItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170000FB RID: 251
-	// (get) Token: 0x06000650 RID: 1616 RVA: 0x0001F930 File Offset: 0x0001DB30
-	// (set) Token: 0x06000651 RID: 1617 RVA: 0x0001F944 File Offset: 0x0001DB44
+	// Token: 0x170000FD RID: 253
+	// (get) Token: 0x06000654 RID: 1620 RVA: 0x000205B4 File Offset: 0x0001E7B4
+	// (set) Token: 0x06000655 RID: 1621 RVA: 0x000205C8 File Offset: 0x0001E7C8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string ItemBlackboardKey
 	{
@@ -47,9 +47,9 @@ public class TsTaskAiFindClosetItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170000FC RID: 252
-	// (get) Token: 0x06000652 RID: 1618 RVA: 0x0001F959 File Offset: 0x0001DB59
-	// (set) Token: 0x06000653 RID: 1619 RVA: 0x0001F96D File Offset: 0x0001DB6D
+	// Token: 0x170000FE RID: 254
+	// (get) Token: 0x06000656 RID: 1622 RVA: 0x000205DD File Offset: 0x0001E7DD
+	// (set) Token: 0x06000657 RID: 1623 RVA: 0x000205F1 File Offset: 0x0001E7F1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string ItemDistanceBlackboardKey
 	{
@@ -63,9 +63,9 @@ public class TsTaskAiFindClosetItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170000FD RID: 253
-	// (get) Token: 0x06000654 RID: 1620 RVA: 0x0001F982 File Offset: 0x0001DB82
-	// (set) Token: 0x06000655 RID: 1621 RVA: 0x0001F996 File Offset: 0x0001DB96
+	// Token: 0x170000FF RID: 255
+	// (get) Token: 0x06000658 RID: 1624 RVA: 0x00020606 File Offset: 0x0001E806
+	// (set) Token: 0x06000659 RID: 1625 RVA: 0x0002061A File Offset: 0x0001E81A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string ItemLocationBlackboardKey
 	{
@@ -79,9 +79,9 @@ public class TsTaskAiFindClosetItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170000FE RID: 254
-	// (get) Token: 0x06000656 RID: 1622 RVA: 0x0001F9AB File Offset: 0x0001DBAB
-	// (set) Token: 0x06000657 RID: 1623 RVA: 0x0001F9BB File Offset: 0x0001DBBB
+	// Token: 0x17000100 RID: 256
+	// (get) Token: 0x0600065A RID: 1626 RVA: 0x0002062F File Offset: 0x0001E82F
+	// (set) Token: 0x0600065B RID: 1627 RVA: 0x0002063F File Offset: 0x0001E83F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool SearchFilterIsMarkByAi
 	{
@@ -95,8 +95,8 @@ public class TsTaskAiFindClosetItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170000FF RID: 255
-	// (get) Token: 0x06000658 RID: 1624 RVA: 0x0001F9CC File Offset: 0x0001DBCC
+	// Token: 0x17000101 RID: 257
+	// (get) Token: 0x0600065C RID: 1628 RVA: 0x00020650 File Offset: 0x0001E850
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<string> Tag
 	{
@@ -112,9 +112,9 @@ public class TsTaskAiFindClosetItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000100 RID: 256
-	// (get) Token: 0x06000659 RID: 1625 RVA: 0x0001FA05 File Offset: 0x0001DC05
-	// (set) Token: 0x0600065A RID: 1626 RVA: 0x0001FA15 File Offset: 0x0001DC15
+	// Token: 0x17000102 RID: 258
+	// (get) Token: 0x0600065D RID: 1629 RVA: 0x00020689 File Offset: 0x0001E889
+	// (set) Token: 0x0600065E RID: 1630 RVA: 0x00020699 File Offset: 0x0001E899
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool UseNavigation
 	{
@@ -128,9 +128,9 @@ public class TsTaskAiFindClosetItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000101 RID: 257
-	// (get) Token: 0x0600065B RID: 1627 RVA: 0x0001FA26 File Offset: 0x0001DC26
-	// (set) Token: 0x0600065C RID: 1628 RVA: 0x0001FA36 File Offset: 0x0001DC36
+	// Token: 0x17000103 RID: 259
+	// (get) Token: 0x0600065F RID: 1631 RVA: 0x000206AA File Offset: 0x0001E8AA
+	// (set) Token: 0x06000660 RID: 1632 RVA: 0x000206BA File Offset: 0x0001E8BA
 	[UProperty(EPropertyFlags.CPF_None)]
 	private unsafe bool TsUseNavigation
 	{
@@ -144,27 +144,21 @@ public class TsTaskAiFindClosetItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x0600065D RID: 1629 RVA: 0x0001FA48 File Offset: 0x0001DC48
+	// Token: 0x06000661 RID: 1633 RVA: 0x000206CC File Offset: 0x0001E8CC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void InitTsVariables()
+	protected virtual void InitTsVariables()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("InitTsVariables"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskAiFindClosetItem) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("InitTsVariables"), TsTaskAiFindClosetItem.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.InitTsVariables_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0600065E RID: 1630 RVA: 0x0001FAB8 File Offset: 0x0001DCB8
+	// Token: 0x06000662 RID: 1634 RVA: 0x00020728 File Offset: 0x0001E928
 	protected void InitTsVariables_Implementation()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -193,30 +187,27 @@ public class TsTaskAiFindClosetItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x0600065F RID: 1631 RVA: 0x0001FB98 File Offset: 0x0001DD98
+	// Token: 0x06000663 RID: 1635 RVA: 0x00020808 File Offset: 0x0001EA08
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskAiFindClosetItem) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskAiFindClosetItem.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000660 RID: 1632 RVA: 0x0001FC34 File Offset: 0x0001DE34
+	// Token: 0x06000664 RID: 1636 RVA: 0x000208B8 File Offset: 0x0001EAB8
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -263,7 +254,7 @@ public class TsTaskAiFindClosetItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000661 RID: 1633 RVA: 0x0001FDBB File Offset: 0x0001DFBB
+	// Token: 0x06000665 RID: 1637 RVA: 0x00020A3F File Offset: 0x0001EC3F
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskAiFindClosetItem._ClassPtr == IntPtr.Zero)
@@ -273,28 +264,28 @@ public class TsTaskAiFindClosetItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		return TsTaskAiFindClosetItem._ClassPtr;
 	}
 
-	// Token: 0x06000662 RID: 1634 RVA: 0x0001FDE0 File Offset: 0x0001DFE0
+	// Token: 0x06000666 RID: 1638 RVA: 0x00020A64 File Offset: 0x0001EC64
 	public TsTaskAiFindClosetItem() : this(BuiltinUtils.AllocNativeUObject(TsTaskAiFindClosetItem.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000663 RID: 1635 RVA: 0x0001FE08 File Offset: 0x0001E008
+	// Token: 0x06000667 RID: 1639 RVA: 0x00020A8C File Offset: 0x0001EC8C
 	public TsTaskAiFindClosetItem(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskAiFindClosetItem.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000664 RID: 1636 RVA: 0x0001FE3B File Offset: 0x0001E03B
+	// Token: 0x06000668 RID: 1640 RVA: 0x00020ABF File Offset: 0x0001ECBF
 	protected TsTaskAiFindClosetItem(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000665 RID: 1637 RVA: 0x0001FE65 File Offset: 0x0001E065
+	// Token: 0x06000669 RID: 1641 RVA: 0x00020AE9 File Offset: 0x0001ECE9
 	protected virtual void __CPPCALL_InitTsVariables_Implementation()
 	{
 		this.InitTsVariables_Implementation();
 	}
 
-	// Token: 0x06000666 RID: 1638 RVA: 0x0001FE70 File Offset: 0x0001E070
+	// Token: 0x0600066A RID: 1642 RVA: 0x00020AF4 File Offset: 0x0001ECF4
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -303,56 +294,56 @@ public class TsTaskAiFindClosetItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x04000494 RID: 1172
+	// Token: 0x04000498 RID: 1176
 	private bool IsInitTsVariables;
 
-	// Token: 0x04000495 RID: 1173
+	// Token: 0x04000499 RID: 1177
 	private float TsRange;
 
-	// Token: 0x04000496 RID: 1174
+	// Token: 0x0400049A RID: 1178
 	private string TsItemBlackboardKey = "";
 
-	// Token: 0x04000497 RID: 1175
+	// Token: 0x0400049B RID: 1179
 	private string TsItemDistanceBlackboardKey = "";
 
-	// Token: 0x04000498 RID: 1176
+	// Token: 0x0400049C RID: 1180
 	private string TsItemLocationBlackboardKey = "";
 
-	// Token: 0x04000499 RID: 1177
+	// Token: 0x0400049D RID: 1181
 	private bool TsSearchFilterIsMarkByAi;
 
-	// Token: 0x0400049A RID: 1178
+	// Token: 0x0400049E RID: 1182
 	[Nullable(2)]
 	private AiInteractionSearchFilter TsFilter;
 
-	// Token: 0x0400049B RID: 1179
+	// Token: 0x0400049F RID: 1183
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskAiFindClosetItem.TsTaskAiFindClosetItem_C";
 
-	// Token: 0x0400049C RID: 1180
+	// Token: 0x040004A0 RID: 1184
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400049D RID: 1181
+	// Token: 0x040004A1 RID: 1185
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400049E RID: 1182
+	// Token: 0x040004A2 RID: 1186
 	private static int __PropertyOffset_Range;
 
-	// Token: 0x0400049F RID: 1183
+	// Token: 0x040004A3 RID: 1187
 	private static int __PropertyOffset_ItemBlackboardKey;
 
-	// Token: 0x040004A0 RID: 1184
+	// Token: 0x040004A4 RID: 1188
 	private static int __PropertyOffset_ItemDistanceBlackboardKey;
 
-	// Token: 0x040004A1 RID: 1185
+	// Token: 0x040004A5 RID: 1189
 	private static int __PropertyOffset_ItemLocationBlackboardKey;
 
-	// Token: 0x040004A2 RID: 1186
+	// Token: 0x040004A6 RID: 1190
 	private static int __PropertyOffset_SearchFilterIsMarkByAi;
 
-	// Token: 0x040004A3 RID: 1187
+	// Token: 0x040004A7 RID: 1191
 	private static int __PropertyOffset_Tag;
 
-	// Token: 0x040004A4 RID: 1188
+	// Token: 0x040004A8 RID: 1192
 	[Nullable(new byte[]
 	{
 		2,
@@ -360,9 +351,9 @@ public class TsTaskAiFindClosetItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 	})]
 	private TArray<string> _Tag;
 
-	// Token: 0x040004A5 RID: 1189
+	// Token: 0x040004A9 RID: 1193
 	private static int __PropertyOffset_UseNavigation;
 
-	// Token: 0x040004A6 RID: 1190
+	// Token: 0x040004AA RID: 1194
 	private static int __PropertyOffset_TsUseNavigation;
 }

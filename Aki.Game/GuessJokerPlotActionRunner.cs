@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001030 RID: 4144
+// Token: 0x020004E4 RID: 1252
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerPlotActionRunner
 {
-	// Token: 0x06006A66 RID: 27238 RVA: 0x00155880 File Offset: 0x00153A80
+	// Token: 0x06003DFB RID: 15867 RVA: 0x0015E1A8 File Offset: 0x0015C3A8
 	public void PushPlotActions(IReadOnlyList<GuessJokerPlotAction> actions)
 	{
 		for (int i = 0; i < actions.Count; i++)
@@ -16,7 +16,7 @@ public class GuessJokerPlotActionRunner
 		}
 	}
 
-	// Token: 0x06006A67 RID: 27239 RVA: 0x001558AC File Offset: 0x00153AAC
+	// Token: 0x06003DFC RID: 15868 RVA: 0x0015E1D4 File Offset: 0x0015C3D4
 	private void PushPlotAction(GuessJokerPlotAction action)
 	{
 		EGuessJokerPlotTiming timing = action.Timing;
@@ -39,7 +39,7 @@ public class GuessJokerPlotActionRunner
 		this.Queue.Add(action);
 	}
 
-	// Token: 0x06006A68 RID: 27240 RVA: 0x0015598C File Offset: 0x00153B8C
+	// Token: 0x06003DFD RID: 15869 RVA: 0x0015E2B4 File Offset: 0x0015C4B4
 	private void InterruptCurrentAction()
 	{
 		if (this.CurrentAction == null)
@@ -58,7 +58,7 @@ public class GuessJokerPlotActionRunner
 		this.CurrentAction = null;
 	}
 
-	// Token: 0x06006A69 RID: 27241 RVA: 0x001559F8 File Offset: 0x00153BF8
+	// Token: 0x06003DFE RID: 15870 RVA: 0x0015E320 File Offset: 0x0015C520
 	private bool IsPlotInQueue(EGuessJokerPlotTiming timing, EGuessJokerPlayerType playerType)
 	{
 		for (int i = 0; i < this.Queue.Count; i++)
@@ -72,20 +72,20 @@ public class GuessJokerPlotActionRunner
 		return false;
 	}
 
-	// Token: 0x06006A6A RID: 27242 RVA: 0x00155A48 File Offset: 0x00153C48
+	// Token: 0x06003DFF RID: 15871 RVA: 0x0015E370 File Offset: 0x0015C570
 	private string GetTimingKey(EGuessJokerPlotTiming timing, EGuessJokerPlayerType playerType)
 	{
 		return string.Format("{0}_{1}", timing, playerType);
 	}
 
-	// Token: 0x06006A6B RID: 27243 RVA: 0x00155A60 File Offset: 0x00153C60
+	// Token: 0x06003E00 RID: 15872 RVA: 0x0015E388 File Offset: 0x0015C588
 	private bool IsPlotExecuting(EGuessJokerPlotTiming timing, EGuessJokerPlayerType playerType)
 	{
 		string timingKey = this.GetTimingKey(timing, playerType);
 		return this.ExecutingTimings.Contains(timingKey);
 	}
 
-	// Token: 0x06006A6C RID: 27244 RVA: 0x00155A84 File Offset: 0x00153C84
+	// Token: 0x06003E01 RID: 15873 RVA: 0x0015E3AC File Offset: 0x0015C5AC
 	private bool IsPlotInCd(EGuessJokerPlotTiming timing, EGuessJokerPlayerType playerType)
 	{
 		string timingKey = this.GetTimingKey(timing, playerType);
@@ -93,7 +93,7 @@ public class GuessJokerPlotActionRunner
 		return this.PlotCdMap.TryGetValue(timingKey, out num) && DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() < num;
 	}
 
-	// Token: 0x06006A6D RID: 27245 RVA: 0x00155ABC File Offset: 0x00153CBC
+	// Token: 0x06003E02 RID: 15874 RVA: 0x0015E3E4 File Offset: 0x0015C5E4
 	private void UpdateCd(GuessJokerPlotAction action, EGuessJokerPlotTiming timing)
 	{
 		float cd = action.Cd;
@@ -104,7 +104,7 @@ public class GuessJokerPlotActionRunner
 		}
 	}
 
-	// Token: 0x06006A6E RID: 27246 RVA: 0x00155B04 File Offset: 0x00153D04
+	// Token: 0x06003E03 RID: 15875 RVA: 0x0015E42C File Offset: 0x0015C62C
 	public void Tick(float delta)
 	{
 		if (this.CurrentAction == null && this.Queue.Count > 0)
@@ -140,7 +140,7 @@ public class GuessJokerPlotActionRunner
 		}
 	}
 
-	// Token: 0x06006A6F RID: 27247 RVA: 0x00155BE0 File Offset: 0x00153DE0
+	// Token: 0x06003E04 RID: 15876 RVA: 0x0015E508 File Offset: 0x0015C708
 	[NullableContext(2)]
 	protected GuessJokerPlotAction GetNextAction()
 	{
@@ -175,7 +175,7 @@ public class GuessJokerPlotActionRunner
 		return result;
 	}
 
-	// Token: 0x06006A70 RID: 27248 RVA: 0x00155C68 File Offset: 0x00153E68
+	// Token: 0x06003E05 RID: 15877 RVA: 0x0015E590 File Offset: 0x0015C790
 	protected void OnActionDone(GuessJokerPlotAction action)
 	{
 		EGuessJokerPlotTiming timing = action.Timing;
@@ -185,7 +185,7 @@ public class GuessJokerPlotActionRunner
 		this.CurrentActionCdUpdated = false;
 	}
 
-	// Token: 0x06006A71 RID: 27249 RVA: 0x00155CA0 File Offset: 0x00153EA0
+	// Token: 0x06003E06 RID: 15878 RVA: 0x0015E5C8 File Offset: 0x0015C7C8
 	public void Destroy()
 	{
 		if (this.CurrentAction != null)
@@ -199,22 +199,22 @@ public class GuessJokerPlotActionRunner
 		this.Queue.Clear();
 	}
 
-	// Token: 0x04003109 RID: 12553
+	// Token: 0x040031A2 RID: 12706
 	protected readonly List<GuessJokerPlotAction> Queue = new List<GuessJokerPlotAction>();
 
-	// Token: 0x0400310A RID: 12554
+	// Token: 0x040031A3 RID: 12707
 	[Nullable(2)]
 	protected GuessJokerPlotAction CurrentAction;
 
-	// Token: 0x0400310B RID: 12555
+	// Token: 0x040031A4 RID: 12708
 	private readonly Dictionary<string, long> PlotCdMap = new Dictionary<string, long>();
 
-	// Token: 0x0400310C RID: 12556
+	// Token: 0x040031A5 RID: 12709
 	private readonly HashSet<string> ExecutingTimings = new HashSet<string>();
 
-	// Token: 0x0400310D RID: 12557
+	// Token: 0x040031A6 RID: 12710
 	private bool CurrentActionCdUpdated;
 
-	// Token: 0x0400310E RID: 12558
+	// Token: 0x040031A7 RID: 12711
 	private readonly Dictionary<GuessJokerPlotAction, long> ActionEnqueueTimeMap = new Dictionary<GuessJokerPlotAction, long>();
 }

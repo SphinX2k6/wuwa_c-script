@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053B7 RID: 21431
+	// Token: 0x0200593D RID: 22845
 	public class IHookFetchMoveModeBaseT
 	{
-		// Token: 0x17009D89 RID: 40329
-		// (get) Token: 0x060231FA RID: 143866 RVA: 0x004DCC1A File Offset: 0x004DAE1A
-		// (set) Token: 0x060231FB RID: 143867 RVA: 0x004DCC22 File Offset: 0x004DAE22
+		// Token: 0x1700A5C1 RID: 42433
+		// (get) Token: 0x060252AE RID: 152238 RVA: 0x00519AEE File Offset: 0x00517CEE
+		// (set) Token: 0x060252AF RID: 152239 RVA: 0x00519AF6 File Offset: 0x00517CF6
 		public EHookFetchMoveMode Type { get; set; }
 
-		// Token: 0x060231FC RID: 143868 RVA: 0x004DCC2B File Offset: 0x004DAE2B
+		// Token: 0x060252B0 RID: 152240 RVA: 0x00519AFF File Offset: 0x00517CFF
 		public IHookFetchMoveModeBaseT()
 		{
 			this.Type = EHookFetchMoveMode.Uniform;

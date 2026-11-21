@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B08 RID: 27400
+	// Token: 0x02005C80 RID: 23680
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventClientSetPlayerPos : LevelEventBase
 	{
-		// Token: 0x06044063 RID: 278627 RVA: 0x010B72E9 File Offset: 0x010B54E9
+		// Token: 0x0603A1B5 RID: 238005 RVA: 0x01060B75 File Offset: 0x0105ED75
 		public LevelEventClientSetPlayerPos(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044064 RID: 278628 RVA: 0x010B72F4 File Offset: 0x010B54F4
+		// Token: 0x0603A1B6 RID: 238006 RVA: 0x01060B80 File Offset: 0x0105ED80
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			this.Params = (inParams as ClientSetPlayerPos);
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.OnClientTeleportStart(context);
 		}
 
-		// Token: 0x06044065 RID: 278629 RVA: 0x010B73DC File Offset: 0x010B55DC
+		// Token: 0x0603A1B7 RID: 238007 RVA: 0x01060C68 File Offset: 0x0105EE68
 		private unsafe void OnClientTeleportStart(GeneralContext context)
 		{
 			if (this.Params == null)
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044066 RID: 278630 RVA: 0x010B7764 File Offset: 0x010B5964
+		// Token: 0x0603A1B8 RID: 238008 RVA: 0x01060FF0 File Offset: 0x0105F1F0
 		private void OnClientTeleportEnd(bool result = true)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(result, false, true);
 		}
 
-		// Token: 0x06044067 RID: 278631 RVA: 0x010B77D8 File Offset: 0x010B59D8
+		// Token: 0x0603A1B9 RID: 238009 RVA: 0x01061064 File Offset: 0x0105F264
 		private bool InitTargetByRelativeEntityPos(IClientTpRelativeEntityPos config, global::Vector targetLocation, Quat targetQuat, global::Vector targetGravityDirect)
 		{
 			IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(config.SourcePosEntityId), null);
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x06044068 RID: 278632 RVA: 0x010B7AF4 File Offset: 0x010B5CF4
+		// Token: 0x0603A1BA RID: 238010 RVA: 0x01061380 File Offset: 0x0105F580
 		private bool InitTargetByStreamingTargetPoint(IClientTpToStreamingTargetPoint config, int entityId, global::Vector targetLocation, Quat targetQuat, global::Vector targetGravityDirect)
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(entityId);
@@ -386,7 +386,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x06044069 RID: 278633 RVA: 0x010B7C60 File Offset: 0x010B5E60
+		// Token: 0x0603A1BB RID: 238011 RVA: 0x010614EC File Offset: 0x0105F6EC
 		private bool SendClientTeleportRequest(global::Vector location, global::Rotator rotation, GeneralContext context)
 		{
 			TriggerContext triggerContext = context as TriggerContext;
@@ -398,7 +398,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return entityContext != null && entityContext.SubType.GetValueOrDefault() == GameCtxType.LongPressInteract && this.SendClientTeleportByLongPressInteract(location, rotation, entityContext);
 		}
 
-		// Token: 0x0604406A RID: 278634 RVA: 0x010B7CA8 File Offset: 0x010B5EA8
+		// Token: 0x0603A1BC RID: 238012 RVA: 0x01061534 File Offset: 0x0105F734
 		private bool SendClientTeleportByClientTrigger(global::Vector location, global::Rotator rotation, TriggerContext context)
 		{
 			bool flag = (context.TriggerEntityId ?? 0) == 0;
@@ -417,7 +417,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x0604406B RID: 278635 RVA: 0x010B7D30 File Offset: 0x010B5F30
+		// Token: 0x0603A1BD RID: 238013 RVA: 0x010615BC File Offset: 0x0105F7BC
 		private bool SendClientTeleportByLongPressInteract(global::Vector location, global::Rotator rotation, EntityContext context)
 		{
 			if (context.EntityId == null)
@@ -445,7 +445,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return false;
 		}
 
-		// Token: 0x0604406C RID: 278636 RVA: 0x010B7DD0 File Offset: 0x010B5FD0
+		// Token: 0x0603A1BE RID: 238014 RVA: 0x0106165C File Offset: 0x0105F85C
 		private bool CheckContextValid(GeneralContext context)
 		{
 			if (context is TriggerContext)
@@ -456,7 +456,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return entityContext != null && entityContext.SubType.GetValueOrDefault() == GameCtxType.LongPressInteract;
 		}
 
-		// Token: 0x0604406D RID: 278637 RVA: 0x010B7E08 File Offset: 0x010B6008
+		// Token: 0x0603A1BF RID: 238015 RVA: 0x01061694 File Offset: 0x0105F894
 		private int? GetEntityIdByContext(GeneralContext context)
 		{
 			TriggerContext triggerContext = context as TriggerContext;
@@ -472,7 +472,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return null;
 		}
 
-		// Token: 0x0604406E RID: 278638 RVA: 0x010B7E40 File Offset: 0x010B6040
+		// Token: 0x0603A1C0 RID: 238016 RVA: 0x010616CC File Offset: 0x0105F8CC
 		[NullableContext(2)]
 		private void ClientTeleportResponse(SeamlessTeleportResponse response, Net.CallbackStatus _)
 		{
@@ -482,14 +482,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x040238CC RID: 145612
+		// Token: 0x0401EB6E RID: 125806
 		[Nullable(2)]
 		private ClientSetPlayerPos Params;
 
-		// Token: 0x040238CD RID: 145613
+		// Token: 0x0401EB6F RID: 125807
 		private bool OriginEnableMovementSync;
 
-		// Token: 0x040238CE RID: 145614
+		// Token: 0x0401EB70 RID: 125808
 		private int? StreamingPointIndex;
 	}
 }

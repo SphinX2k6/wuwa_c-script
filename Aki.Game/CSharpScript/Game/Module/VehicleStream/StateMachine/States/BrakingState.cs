@@ -4,22 +4,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 {
-	// Token: 0x020048BA RID: 18618
+	// Token: 0x02003831 RID: 14385
 	public class BrakingState : VehicleStateBase
 	{
-		// Token: 0x06030A86 RID: 199302 RVA: 0x00B4C1B0 File Offset: 0x00B4A3B0
+		// Token: 0x060255B2 RID: 153010 RVA: 0x00A86FB8 File Offset: 0x00A851B8
 		[NullableContext(1)]
 		public BrakingState(VehicleSmBlackBoard blackBoard) : base(EVehicleStateType.Braking, blackBoard)
 		{
 		}
 
-		// Token: 0x06030A87 RID: 199303 RVA: 0x00B4C1BA File Offset: 0x00B4A3BA
+		// Token: 0x060255B3 RID: 153011 RVA: 0x00A86FC2 File Offset: 0x00A851C2
 		[NullableContext(2)]
 		protected override void OnEnter(EVehicleStateType lastState, string reason = null)
 		{
 		}
 
-		// Token: 0x06030A88 RID: 199304 RVA: 0x00B4C1BC File Offset: 0x00B4A3BC
+		// Token: 0x060255B4 RID: 153012 RVA: 0x00A86FC4 File Offset: 0x00A851C4
 		protected override void OnUpdate(float delta)
 		{
 			EVehicleStateType evehicleStateType = this.CheckGetNextState();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030A89 RID: 199305 RVA: 0x00B4C1E4 File Offset: 0x00B4A3E4
+		// Token: 0x060255B5 RID: 153013 RVA: 0x00A86FEC File Offset: 0x00A851EC
 		protected override EVehicleStateType CheckGetNextState()
 		{
 			string a = base.CheckObstruction(this.BlackBoard.CurrentRootDistance, "VehicleStream.braking");
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return EVehicleStateType.Running;
 		}
 
-		// Token: 0x0401A27C RID: 107132
+		// Token: 0x04014AEF RID: 84719
 		private double LastPlayHornAudioTime;
 	}
 }

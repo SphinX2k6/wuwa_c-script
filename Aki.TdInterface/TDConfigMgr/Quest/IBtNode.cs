@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E51 RID: 3665
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F62 RID: 3938
 	public class IBtNode
 	{
-		// Token: 0x060052B8 RID: 21176 RVA: 0x000CB9E4 File Offset: 0x000C9BE4
+		// Token: 0x06005834 RID: 22580 RVA: 0x000D7B8C File Offset: 0x000D5D8C
 		private IBtNode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060052B9 RID: 21177 RVA: 0x000CBA1C File Offset: 0x000C9C1C
+		// Token: 0x06005835 RID: 22581 RVA: 0x000D7BC4 File Offset: 0x000D5DC4
 		public static IBtNode Create([Nullable(2)] IBtNode instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060052BA RID: 21178 RVA: 0x000CBA2F File Offset: 0x000C9C2F
+		// Token: 0x06005836 RID: 22582 RVA: 0x000D7BD7 File Offset: 0x000D5DD7
 		public static IBtNode CreateFromSetValue([Nullable(2)] IBtNode_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060052BB RID: 21179 RVA: 0x000CBA44 File Offset: 0x000C9C44
+		// Token: 0x06005837 RID: 22583 RVA: 0x000D7BEC File Offset: 0x000D5DEC
 		public IBtNode_SetValue ToSetValue()
 		{
 			return new IBtNode_SetValue
@@ -72,9 +70,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001BD1 RID: 7121
-		// (get) Token: 0x060052BC RID: 21180 RVA: 0x000CBADA File Offset: 0x000C9CDA
-		// (set) Token: 0x060052BD RID: 21181 RVA: 0x000CBB05 File Offset: 0x000C9D05
+		// Token: 0x17001D69 RID: 7529
+		// (get) Token: 0x06005838 RID: 22584 RVA: 0x000D7C82 File Offset: 0x000D5E82
+		// (set) Token: 0x06005839 RID: 22585 RVA: 0x000D7CAD File Offset: 0x000D5EAD
 		public virtual EBtNode Type
 		{
 			get
@@ -95,9 +93,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BD2 RID: 7122
-		// (get) Token: 0x060052BE RID: 21182 RVA: 0x000CBB13 File Offset: 0x000C9D13
-		// (set) Token: 0x060052BF RID: 21183 RVA: 0x000CBB3E File Offset: 0x000C9D3E
+		// Token: 0x17001D6A RID: 7530
+		// (get) Token: 0x0600583A RID: 22586 RVA: 0x000D7CBB File Offset: 0x000D5EBB
+		// (set) Token: 0x0600583B RID: 22587 RVA: 0x000D7CE6 File Offset: 0x000D5EE6
 		public virtual int Id
 		{
 			get
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BD3 RID: 7123
-		// (get) Token: 0x060052C0 RID: 21184 RVA: 0x000CBB4C File Offset: 0x000C9D4C
-		// (set) Token: 0x060052C1 RID: 21185 RVA: 0x000CBB77 File Offset: 0x000C9D77
+		// Token: 0x17001D6B RID: 7531
+		// (get) Token: 0x0600583C RID: 22588 RVA: 0x000D7CF4 File Offset: 0x000D5EF4
+		// (set) Token: 0x0600583D RID: 22589 RVA: 0x000D7D1F File Offset: 0x000D5F1F
 		public virtual string Desc
 		{
 			get
@@ -141,9 +139,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BD4 RID: 7124
-		// (get) Token: 0x060052C2 RID: 21186 RVA: 0x000CBB88 File Offset: 0x000C9D88
-		// (set) Token: 0x060052C3 RID: 21187 RVA: 0x000CBBE9 File Offset: 0x000C9DE9
+		// Token: 0x17001D6C RID: 7532
+		// (get) Token: 0x0600583E RID: 22590 RVA: 0x000D7D30 File Offset: 0x000D5F30
+		// (set) Token: 0x0600583F RID: 22591 RVA: 0x000D7D91 File Offset: 0x000D5F91
 		[Nullable(2)]
 		public virtual IFixProcessor FixProcessor
 		{
@@ -174,9 +172,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BD5 RID: 7125
-		// (get) Token: 0x060052C4 RID: 21188 RVA: 0x000CBC00 File Offset: 0x000C9E00
-		// (set) Token: 0x060052C5 RID: 21189 RVA: 0x000CBC3A File Offset: 0x000C9E3A
+		// Token: 0x17001D6D RID: 7533
+		// (get) Token: 0x06005840 RID: 22592 RVA: 0x000D7DA8 File Offset: 0x000D5FA8
+		// (set) Token: 0x06005841 RID: 22593 RVA: 0x000D7DE2 File Offset: 0x000D5FE2
 		public virtual bool? _FoldedForTree
 		{
 			get
@@ -198,9 +196,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BD6 RID: 7126
-		// (get) Token: 0x060052C6 RID: 21190 RVA: 0x000CBC48 File Offset: 0x000C9E48
-		// (set) Token: 0x060052C7 RID: 21191 RVA: 0x000CBC82 File Offset: 0x000C9E82
+		// Token: 0x17001D6E RID: 7534
+		// (get) Token: 0x06005842 RID: 22594 RVA: 0x000D7DF0 File Offset: 0x000D5FF0
+		// (set) Token: 0x06005843 RID: 22595 RVA: 0x000D7E2A File Offset: 0x000D602A
 		public virtual bool? Disabled
 		{
 			get
@@ -222,9 +220,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BD7 RID: 7127
-		// (get) Token: 0x060052C8 RID: 21192 RVA: 0x000CBC90 File Offset: 0x000C9E90
-		// (set) Token: 0x060052C9 RID: 21193 RVA: 0x000CBCBA File Offset: 0x000C9EBA
+		// Token: 0x17001D6F RID: 7535
+		// (get) Token: 0x06005844 RID: 22596 RVA: 0x000D7E38 File Offset: 0x000D6038
+		// (set) Token: 0x06005845 RID: 22597 RVA: 0x000D7E62 File Offset: 0x000D6062
 		public virtual int? EdFragmentId
 		{
 			get
@@ -241,9 +239,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BD8 RID: 7128
-		// (get) Token: 0x060052CA RID: 21194 RVA: 0x000CBCC8 File Offset: 0x000C9EC8
-		// (set) Token: 0x060052CB RID: 21195 RVA: 0x000CBCF2 File Offset: 0x000C9EF2
+		// Token: 0x17001D70 RID: 7536
+		// (get) Token: 0x06005846 RID: 22598 RVA: 0x000D7E70 File Offset: 0x000D6070
+		// (set) Token: 0x06005847 RID: 22599 RVA: 0x000D7E9A File Offset: 0x000D609A
 		public virtual int? EdSubTreeId
 		{
 			get
@@ -260,9 +258,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BD9 RID: 7129
-		// (get) Token: 0x060052CC RID: 21196 RVA: 0x000CBD00 File Offset: 0x000C9F00
-		// (set) Token: 0x060052CD RID: 21197 RVA: 0x000CBD17 File Offset: 0x000C9F17
+		// Token: 0x17001D71 RID: 7537
+		// (get) Token: 0x06005848 RID: 22600 RVA: 0x000D7EA8 File Offset: 0x000D60A8
+		// (set) Token: 0x06005849 RID: 22601 RVA: 0x000D7EBF File Offset: 0x000D60BF
 		[Nullable(2)]
 		public virtual string EdSubTreeName
 		{
@@ -282,9 +280,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BDA RID: 7130
-		// (get) Token: 0x060052CE RID: 21198 RVA: 0x000CBD28 File Offset: 0x000C9F28
-		// (set) Token: 0x060052CF RID: 21199 RVA: 0x000CBD52 File Offset: 0x000C9F52
+		// Token: 0x17001D72 RID: 7538
+		// (get) Token: 0x0600584A RID: 22602 RVA: 0x000D7ED0 File Offset: 0x000D60D0
+		// (set) Token: 0x0600584B RID: 22603 RVA: 0x000D7EFA File Offset: 0x000D60FA
 		public virtual int? EdSubTreeSegment
 		{
 			get
@@ -301,20 +299,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BDB RID: 7131
-		// (get) Token: 0x060052D0 RID: 21200 RVA: 0x000CBD60 File Offset: 0x000C9F60
-		// (set) Token: 0x060052D1 RID: 21201 RVA: 0x000CBD77 File Offset: 0x000C9F77
+		// Token: 0x17001D73 RID: 7539
+		// (get) Token: 0x0600584C RID: 22604 RVA: 0x000D7F08 File Offset: 0x000D6108
+		// (set) Token: 0x0600584D RID: 22605 RVA: 0x000D7F1F File Offset: 0x000D611F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> EdDebugEnterActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -327,7 +325,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -335,21 +333,21 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04002FB1 RID: 12209
+		// Token: 0x040032A8 RID: 12968
 		public int? ParentNodeId;
 
-		// Token: 0x04002FB2 RID: 12210
+		// Token: 0x040032A9 RID: 12969
 		[Nullable(2)]
 		protected IBtNode FbInstance;
 
-		// Token: 0x04002FB3 RID: 12211
+		// Token: 0x040032AA RID: 12970
 		[Nullable(2)]
 		protected IBtNode_SetValue PocoInterface;
 
-		// Token: 0x04002FB4 RID: 12212
+		// Token: 0x040032AB RID: 12971
 		private IFixProcessor _FixProcessorCache;
 
-		// Token: 0x04002FB5 RID: 12213
+		// Token: 0x040032AC RID: 12972
 		private bool _FixProcessorInited;
 	}
 }

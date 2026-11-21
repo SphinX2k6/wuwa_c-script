@@ -2,10 +2,10 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-// Token: 0x02003552 RID: 13650
+// Token: 0x02002AC7 RID: 10951
 public class EQteItemJsonConverter : JsonConverter<EQteItem>
 {
-	// Token: 0x0601DF99 RID: 122777 RVA: 0x00866BA4 File Offset: 0x00864DA4
+	// Token: 0x0601BCC1 RID: 113857 RVA: 0x0088E768 File Offset: 0x0088C968
 	public override EQteItem Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 	{
 		string @string = reader.GetString();
@@ -16,7 +16,7 @@ public class EQteItemJsonConverter : JsonConverter<EQteItem>
 		return EQteItemExtensions.FromString(@string);
 	}
 
-	// Token: 0x0601DF9A RID: 122778 RVA: 0x00866BC8 File Offset: 0x00864DC8
+	// Token: 0x0601BCC2 RID: 113858 RVA: 0x0088E78C File Offset: 0x0088C98C
 	public override void Write(Utf8JsonWriter writer, EQteItem value, JsonSerializerOptions options)
 	{
 		writer.WriteStringValue(value.ToEnumString());

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200148B RID: 5259
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015E4 RID: 5604
 	public class AddBuffToFollowShooter : ActionParams
 	{
-		// Token: 0x060077A6 RID: 30630 RVA: 0x0011F280 File Offset: 0x0011D480
+		// Token: 0x06007E73 RID: 32371 RVA: 0x0012DECC File Offset: 0x0012C0CC
 		private AddBuffToFollowShooter_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060077A7 RID: 30631 RVA: 0x0011F2B8 File Offset: 0x0011D4B8
+		// Token: 0x06007E74 RID: 32372 RVA: 0x0012DF04 File Offset: 0x0012C104
 		public static AddBuffToFollowShooter Create([Nullable(2)] AddBuffToFollowShooter instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060077A8 RID: 30632 RVA: 0x0011F2CB File Offset: 0x0011D4CB
+		// Token: 0x06007E75 RID: 32373 RVA: 0x0012DF17 File Offset: 0x0012C117
 		public static AddBuffToFollowShooter CreateFromSetValue([Nullable(2)] AddBuffToFollowShooter_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060077A9 RID: 30633 RVA: 0x0011F2DE File Offset: 0x0011D4DE
+		// Token: 0x06007E76 RID: 32374 RVA: 0x0012DF2A File Offset: 0x0012C12A
 		public AddBuffToFollowShooter_SetValue ToSetValue()
 		{
 			return new AddBuffToFollowShooter_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002838 RID: 10296
-		// (get) Token: 0x060077AA RID: 30634 RVA: 0x0011F2FD File Offset: 0x0011D4FD
-		// (set) Token: 0x060077AB RID: 30635 RVA: 0x0011F324 File Offset: 0x0011D524
+		// Token: 0x17002A22 RID: 10786
+		// (get) Token: 0x06007E77 RID: 32375 RVA: 0x0012DF49 File Offset: 0x0012C149
+		// (set) Token: 0x06007E78 RID: 32376 RVA: 0x0012DF70 File Offset: 0x0012C170
 		public virtual List<long> BuffIds
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002839 RID: 10297
-		// (get) Token: 0x060077AC RID: 30636 RVA: 0x0011F334 File Offset: 0x0011D534
-		// (set) Token: 0x060077AD RID: 30637 RVA: 0x0011F36E File Offset: 0x0011D56E
+		// Token: 0x17002A23 RID: 10787
+		// (get) Token: 0x06007E79 RID: 32377 RVA: 0x0012DF80 File Offset: 0x0012C180
+		// (set) Token: 0x06007E7A RID: 32378 RVA: 0x0012DFBA File Offset: 0x0012C1BA
 		public virtual int? FollowShooterId
 		{
 			get
@@ -109,11 +107,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004596 RID: 17814
+		// Token: 0x04004931 RID: 18737
 		[Nullable(2)]
 		protected new AddBuffToFollowShooter FbInstance;
 
-		// Token: 0x04004597 RID: 17815
+		// Token: 0x04004932 RID: 18738
 		[Nullable(2)]
 		protected AddBuffToFollowShooter_SetValue PocoInterface;
 	}

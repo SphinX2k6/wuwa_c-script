@@ -4,12 +4,12 @@ using AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 {
-	// Token: 0x0200703B RID: 28731
+	// Token: 0x020061BC RID: 25020
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class JumpAlongRailConfig
 	{
-		// Token: 0x06045F49 RID: 286537 RVA: 0x0116E83C File Offset: 0x0116CA3C
+		// Token: 0x0603C12F RID: 246063 RVA: 0x011185AC File Offset: 0x011167AC
 		public void UpdateFromUeData(SMotorRailMoveConfig_JumpAlongRail data)
 		{
 			this.CommonConfig.UpdateFromUeData(data.CommonConfig);
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.ParabolaMoveConfig.UpdateFromUeData(data.ParabolaMove);
 		}
 
-		// Token: 0x06045F4A RID: 286538 RVA: 0x0116E86C File Offset: 0x0116CA6C
+		// Token: 0x0603C130 RID: 246064 RVA: 0x011185DC File Offset: 0x011167DC
 		public void DeepCopy(JumpAlongRailConfig other)
 		{
 			this.CommonConfig.DeepCopy(other.CommonConfig);
@@ -25,13 +25,13 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.ParabolaMoveConfig.DeepCopy(other.ParabolaMoveConfig);
 		}
 
-		// Token: 0x0402499A RID: 149914
+		// Token: 0x0401FC50 RID: 130128
 		public readonly CommonConfig CommonConfig = new CommonConfig();
 
-		// Token: 0x0402499B RID: 149915
+		// Token: 0x0401FC51 RID: 130129
 		public int SkillId = 100010016;
 
-		// Token: 0x0402499C RID: 149916
+		// Token: 0x0401FC52 RID: 130130
 		public readonly ParabolaMoveConfig ParabolaMoveConfig = new ParabolaMoveConfig();
 	}
 }

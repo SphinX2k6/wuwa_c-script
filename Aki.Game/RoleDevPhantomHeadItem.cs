@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002809 RID: 10249
+// Token: 0x02001D84 RID: 7556
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleDevPhantomHeadItem : UiPanelBase
 {
-	// Token: 0x06015079 RID: 86137 RVA: 0x00552E9D File Offset: 0x0055109D
+	// Token: 0x06012A79 RID: 76409 RVA: 0x0057DC71 File Offset: 0x0057BE71
 	public RoleDevPhantomHeadItem(int index)
 	{
 		this.Index = index;
 	}
 
-	// Token: 0x0601507A RID: 86138 RVA: 0x00552EAC File Offset: 0x005510AC
+	// Token: 0x06012A7A RID: 76410 RVA: 0x0057DC80 File Offset: 0x0057BE80
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ public class RoleDevPhantomHeadItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601507B RID: 86139 RVA: 0x00552FC4 File Offset: 0x005511C4
+	// Token: 0x06012A7B RID: 76411 RVA: 0x0057DD98 File Offset: 0x0057BF98
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleDevPhantomHeadItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -52,20 +52,20 @@ public class RoleDevPhantomHeadItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601507C RID: 86140 RVA: 0x00553007 File Offset: 0x00551207
+	// Token: 0x06012A7C RID: 76412 RVA: 0x0057DDDB File Offset: 0x0057BFDB
 	public void SetRoleId(int roleId)
 	{
 		this.CurrentRoleId = new int?(roleId);
 	}
 
-	// Token: 0x0601507D RID: 86141 RVA: 0x00553015 File Offset: 0x00551215
+	// Token: 0x06012A7D RID: 76413 RVA: 0x0057DDE9 File Offset: 0x0057BFE9
 	public void UpdateItem(PhantomDataBase data)
 	{
 		this.CurrentData = data;
 		this.OnUpdateItem(data);
 	}
 
-	// Token: 0x0601507E RID: 86142 RVA: 0x00553028 File Offset: 0x00551228
+	// Token: 0x06012A7E RID: 76414 RVA: 0x0057DDFC File Offset: 0x0057BFFC
 	protected void OnUpdateItem(PhantomDataBase data)
 	{
 		if (data != null)
@@ -100,7 +100,7 @@ public class RoleDevPhantomHeadItem : UiPanelBase
 		item4.SetUIActive(true);
 	}
 
-	// Token: 0x0601507F RID: 86143 RVA: 0x005530B8 File Offset: 0x005512B8
+	// Token: 0x06012A7F RID: 76415 RVA: 0x0057DE8C File Offset: 0x0057C08C
 	[NullableContext(1)]
 	private void RefreshIcon(PhantomDataBase data)
 	{
@@ -116,7 +116,7 @@ public class RoleDevPhantomHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015080 RID: 86144 RVA: 0x0055310C File Offset: 0x0055130C
+	// Token: 0x06012A80 RID: 76416 RVA: 0x0057DEE0 File Offset: 0x0057C0E0
 	[NullableContext(1)]
 	private void RefreshQuality(PhantomDataBase data)
 	{
@@ -132,7 +132,7 @@ public class RoleDevPhantomHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015081 RID: 86145 RVA: 0x00553158 File Offset: 0x00551358
+	// Token: 0x06012A81 RID: 76417 RVA: 0x0057DF2C File Offset: 0x0057C12C
 	[NullableContext(1)]
 	private void RefreshNum(PhantomDataBase data)
 	{
@@ -143,7 +143,7 @@ public class RoleDevPhantomHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015082 RID: 86146 RVA: 0x00553188 File Offset: 0x00551388
+	// Token: 0x06012A82 RID: 76418 RVA: 0x0057DF5C File Offset: 0x0057C15C
 	[NullableContext(1)]
 	private void RefreshLevel(PhantomDataBase data)
 	{
@@ -154,13 +154,13 @@ public class RoleDevPhantomHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015083 RID: 86147 RVA: 0x005531C2 File Offset: 0x005513C2
+	// Token: 0x06012A83 RID: 76419 RVA: 0x0057DF96 File Offset: 0x0057C196
 	public PhantomDataBase GetCurrentData()
 	{
 		return this.CurrentData;
 	}
 
-	// Token: 0x06015084 RID: 86148 RVA: 0x005531CC File Offset: 0x005513CC
+	// Token: 0x06012A84 RID: 76420 RVA: 0x0057DFA0 File Offset: 0x0057C1A0
 	private void OnClickHeadItem()
 	{
 		if (this.CurrentRoleId == null)
@@ -174,41 +174,41 @@ public class RoleDevPhantomHeadItem : UiPanelBase
 		PhantomUtil.OpenVisionEquipmentView(this.CurrentRoleId.Value, index, null);
 	}
 
-	// Token: 0x04009E16 RID: 40470
+	// Token: 0x0400A1FF RID: 41471
 	private PhantomDataBase CurrentData;
 
-	// Token: 0x04009E17 RID: 40471
+	// Token: 0x0400A200 RID: 41472
 	private int? CurrentRoleId;
 
-	// Token: 0x04009E18 RID: 40472
+	// Token: 0x0400A201 RID: 41473
 	private readonly int Index;
 
-	// Token: 0x04009E19 RID: 40473
+	// Token: 0x0400A202 RID: 41474
 	private VisionFetterSuitItem VisionFetterSuitItem;
 
-	// Token: 0x02008E4B RID: 36427
+	// Token: 0x02008093 RID: 32915
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E281 RID: 189057
+		// Token: 0x0402997D RID: 170365
 		ButtonHeadItem,
-		// Token: 0x0402E282 RID: 189058
+		// Token: 0x0402997E RID: 170366
 		CircleItemTexture,
-		// Token: 0x0402E283 RID: 189059
+		// Token: 0x0402997F RID: 170367
 		QualitySprite,
-		// Token: 0x0402E284 RID: 189060
+		// Token: 0x04029980 RID: 170368
 		CostItem,
-		// Token: 0x0402E285 RID: 189061
+		// Token: 0x04029981 RID: 170369
 		CostNumText,
-		// Token: 0x0402E286 RID: 189062
+		// Token: 0x04029982 RID: 170370
 		SuitElementItem,
-		// Token: 0x0402E287 RID: 189063
+		// Token: 0x04029983 RID: 170371
 		LevelItem,
-		// Token: 0x0402E288 RID: 189064
+		// Token: 0x04029984 RID: 170372
 		LevelText,
-		// Token: 0x0402E289 RID: 189065
+		// Token: 0x04029985 RID: 170373
 		PanelNor,
-		// Token: 0x0402E28A RID: 189066
+		// Token: 0x04029986 RID: 170374
 		PanelEmpty
 	}
 }

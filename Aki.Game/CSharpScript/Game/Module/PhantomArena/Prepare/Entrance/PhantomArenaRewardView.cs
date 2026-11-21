@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x0200517D RID: 20861
+	// Token: 0x0200414D RID: 16717
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaRewardView : UiViewBase
 	{
-		// Token: 0x0603558F RID: 218511 RVA: 0x00CA37B0 File Offset: 0x00CA19B0
+		// Token: 0x0602A48A RID: 173194 RVA: 0x00BF0D68 File Offset: 0x00BEEF68
 		public PhantomArenaRewardView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06035590 RID: 218512 RVA: 0x00CA37D0 File Offset: 0x00CA19D0
+		// Token: 0x0602A48B RID: 173195 RVA: 0x00BF0D88 File Offset: 0x00BEEF88
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,19 +44,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x06035591 RID: 218513 RVA: 0x00CA38D3 File Offset: 0x00CA1AD3
+		// Token: 0x0602A48C RID: 173196 RVA: 0x00BF0E8B File Offset: 0x00BEF08B
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.OnPhantomArenaTaskAwardUpdate, new Action<int>(this.OnGetRewardUpdate));
 		}
 
-		// Token: 0x06035592 RID: 218514 RVA: 0x00CA38F1 File Offset: 0x00CA1AF1
+		// Token: 0x0602A48D RID: 173197 RVA: 0x00BF0EA9 File Offset: 0x00BEF0A9
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnPhantomArenaTaskAwardUpdate, new Action<int>(this.OnGetRewardUpdate));
 		}
 
-		// Token: 0x06035593 RID: 218515 RVA: 0x00CA3910 File Offset: 0x00CA1B10
+		// Token: 0x0602A48E RID: 173198 RVA: 0x00BF0EC8 File Offset: 0x00BEF0C8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaRewardView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035594 RID: 218516 RVA: 0x00CA3954 File Offset: 0x00CA1B54
+		// Token: 0x0602A48F RID: 173199 RVA: 0x00BF0F0C File Offset: 0x00BEF10C
 		private void RefreshLeftButton()
 		{
 			this.SpecialTask = PhantomArenaModel.Instance.GetSpecialTask(this.ActivityId);
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x06035595 RID: 218517 RVA: 0x00CA3A1C File Offset: 0x00CA1C1C
+		// Token: 0x0602A490 RID: 173200 RVA: 0x00BF0FD4 File Offset: 0x00BEF1D4
 		private void RefreshScrollView(int tabIndex)
 		{
 			this.DataList.Clear();
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}, true);
 		}
 
-		// Token: 0x06035596 RID: 218518 RVA: 0x00CA3A69 File Offset: 0x00CA1C69
+		// Token: 0x0602A491 RID: 173201 RVA: 0x00BF1021 File Offset: 0x00BEF221
 		private PhantomBattleTaskTabItem CreateTaskTabItem()
 		{
 			return new PhantomBattleTaskTabItem
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x06035597 RID: 218519 RVA: 0x00CA3A90 File Offset: 0x00CA1C90
+		// Token: 0x0602A492 RID: 173202 RVA: 0x00BF1048 File Offset: 0x00BEF248
 		private void OnClickTab(int index)
 		{
 			for (int i = 0; i < this.TabTypeList.Count; i++)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.RefreshScrollView(this.CurrentTypeIndex);
 		}
 
-		// Token: 0x06035598 RID: 218520 RVA: 0x00CA3AE8 File Offset: 0x00CA1CE8
+		// Token: 0x0602A493 RID: 173203 RVA: 0x00BF10A0 File Offset: 0x00BEF2A0
 		private void OnGetRewardUpdate(int activityId)
 		{
 			for (int i = 0; i < this.TabTypeList.Count; i++)
@@ -131,20 +131,20 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.RefreshLeftButton();
 		}
 
-		// Token: 0x06035599 RID: 218521 RVA: 0x00CA3B2E File Offset: 0x00CA1D2E
+		// Token: 0x0602A494 RID: 173204 RVA: 0x00BF10E6 File Offset: 0x00BEF2E6
 		private PhantomBattleTaskItem CreateTaskItem()
 		{
 			return new PhantomBattleTaskItem();
 		}
 
-		// Token: 0x0603559A RID: 218522 RVA: 0x00CA3B38 File Offset: 0x00CA1D38
+		// Token: 0x0602A495 RID: 173205 RVA: 0x00BF10F0 File Offset: 0x00BEF2F0
 		private void OnDetailBtnClick()
 		{
 			int rewardItemId = PhantomArenaModel.Instance.GetRewardItemId(this.ActivityId);
-			ItemController.Instance.OpenItemTipsByItemId(rewardItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(rewardItemId, true, null, false);
 		}
 
-		// Token: 0x0603559B RID: 218523 RVA: 0x00CA3B64 File Offset: 0x00CA1D64
+		// Token: 0x0602A496 RID: 173206 RVA: 0x00BF111C File Offset: 0x00BEF31C
 		private void OnRewardBtnClick()
 		{
 			if (this.SpecialTask != null)
@@ -155,60 +155,60 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			Log.Instance.Error(ELogModule.PhantomArena, ELogAuthor.CXJ, "特殊奖励不存在", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0603559C RID: 218524 RVA: 0x00CA3BAE File Offset: 0x00CA1DAE
+		// Token: 0x0602A497 RID: 173207 RVA: 0x00BF1166 File Offset: 0x00BEF366
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401C5C5 RID: 116165
+		// Token: 0x04016FFA RID: 94202
 		private int ActivityId;
 
-		// Token: 0x0401C5C6 RID: 116166
+		// Token: 0x04016FFB RID: 94203
 		private GenericLayout<PhantomBattleTaskTabItem, int> TabLayout;
 
-		// Token: 0x0401C5C7 RID: 116167
+		// Token: 0x04016FFC RID: 94204
 		private GenericScrollViewNew<PhantomBattleTaskItem, PhantomArenaTaskData> TaskLayout;
 
-		// Token: 0x0401C5C8 RID: 116168
+		// Token: 0x04016FFD RID: 94205
 		private int CurrentTypeIndex;
 
-		// Token: 0x0401C5C9 RID: 116169
+		// Token: 0x04016FFE RID: 94206
 		protected List<int> TabTypeList = new List<int>();
 
-		// Token: 0x0401C5CA RID: 116170
+		// Token: 0x04016FFF RID: 94207
 		private List<PhantomArenaTaskData> DataList = new List<PhantomArenaTaskData>();
 
-		// Token: 0x0401C5CB RID: 116171
+		// Token: 0x04017000 RID: 94208
 		[Nullable(2)]
 		private ActivityTask SpecialTask;
 
-		// Token: 0x0200B2F0 RID: 45808
+		// Token: 0x02009D29 RID: 40233
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x040363A6 RID: 222118
+			// Token: 0x04030DFB RID: 200187
 			public const int ItemCaption = 0;
 
-			// Token: 0x040363A7 RID: 222119
+			// Token: 0x04030DFC RID: 200188
 			public const int ScrollLayoutTask = 1;
 
-			// Token: 0x040363A8 RID: 222120
+			// Token: 0x04030DFD RID: 200189
 			public const int ItemTask = 2;
 
-			// Token: 0x040363A9 RID: 222121
+			// Token: 0x04030DFE RID: 200190
 			public const int LayoutTab = 3;
 
-			// Token: 0x040363AA RID: 222122
+			// Token: 0x04030DFF RID: 200191
 			public const int TextTip = 4;
 
-			// Token: 0x040363AB RID: 222123
+			// Token: 0x04030E00 RID: 200192
 			public const int BtnReward = 5;
 
-			// Token: 0x040363AC RID: 222124
+			// Token: 0x04030E01 RID: 200193
 			public const int BtnDetail = 6;
 
-			// Token: 0x040363AD RID: 222125
+			// Token: 0x04030E02 RID: 200194
 			public const int TextTime = 7;
 		}
 	}

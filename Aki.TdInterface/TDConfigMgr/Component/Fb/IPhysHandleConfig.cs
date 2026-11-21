@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B33 RID: 2867
+	// Token: 0x02000C01 RID: 3073
 	public class IPhysHandleConfig
 	{
-		// Token: 0x06004231 RID: 16945 RVA: 0x000A992E File Offset: 0x000A7B2E
-		[NullableContext(1)]
+		// Token: 0x0600468A RID: 18058 RVA: 0x000B39F2 File Offset: 0x000B1BF2
 		public static IPhysHandleConfig Create(IPhysHandleConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001188 RID: 4488
-		// (get) Token: 0x06004232 RID: 16946 RVA: 0x000A994D File Offset: 0x000A7B4D
+		// Token: 0x17001283 RID: 4739
+		// (get) Token: 0x0600468B RID: 18059 RVA: 0x000B3A11 File Offset: 0x000B1C11
 		public virtual int PhysHandleLinearDamping
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001189 RID: 4489
-		// (get) Token: 0x06004233 RID: 16947 RVA: 0x000A995A File Offset: 0x000A7B5A
+		// Token: 0x17001284 RID: 4740
+		// (get) Token: 0x0600468C RID: 18060 RVA: 0x000B3A1E File Offset: 0x000B1C1E
 		public virtual int PhysHandleAngularStiffness
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700118A RID: 4490
-		// (get) Token: 0x06004234 RID: 16948 RVA: 0x000A9967 File Offset: 0x000A7B67
+		// Token: 0x17001285 RID: 4741
+		// (get) Token: 0x0600468D RID: 18061 RVA: 0x000B3A2B File Offset: 0x000B1C2B
 		public virtual int PhysHandleLinearStiffness
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700118B RID: 4491
-		// (get) Token: 0x06004235 RID: 16949 RVA: 0x000A9974 File Offset: 0x000A7B74
+		// Token: 0x17001286 RID: 4742
+		// (get) Token: 0x0600468E RID: 18062 RVA: 0x000B3A38 File Offset: 0x000B1C38
 		public virtual int PhysHandleAngularDamping
 		{
 			get
@@ -61,7 +59,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002556 RID: 9558
+		// Token: 0x0400279E RID: 10142
 		private IPhysHandleConfig Instance;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002840 RID: 10304
+	// Token: 0x02002B13 RID: 11027
 	public class IDollGrabShowcase : IUiGame
 	{
-		// Token: 0x0600E471 RID: 58481 RVA: 0x00219FCD File Offset: 0x002181CD
-		[NullableContext(1)]
+		// Token: 0x0600F296 RID: 62102 RVA: 0x00236E31 File Offset: 0x00235031
 		public static IDollGrabShowcase Create(IDollGrabShowcase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045B3 RID: 17843
-		// (get) Token: 0x0600E472 RID: 58482 RVA: 0x00219FEC File Offset: 0x002181EC
+		// Token: 0x1700491E RID: 18718
+		// (get) Token: 0x0600F297 RID: 62103 RVA: 0x00236E50 File Offset: 0x00235050
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045B4 RID: 17844
-		// (get) Token: 0x0600E473 RID: 58483 RVA: 0x00219FF9 File Offset: 0x002181F9
+		// Token: 0x1700491F RID: 18719
+		// (get) Token: 0x0600F298 RID: 62104 RVA: 0x00236E5D File Offset: 0x0023505D
 		public virtual int ShowcaseEntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E66 RID: 32358
+		// Token: 0x04008523 RID: 34083
 		private IDollGrabShowcase Instance;
 	}
 }

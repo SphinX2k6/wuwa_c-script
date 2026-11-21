@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002849 RID: 10313
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B1C RID: 11036
 	public class IFocusObjectCameraConfig
 	{
-		// Token: 0x0600E49C RID: 58524 RVA: 0x0021A444 File Offset: 0x00218644
+		// Token: 0x0600F2C1 RID: 62145 RVA: 0x002372A8 File Offset: 0x002354A8
 		public static IFocusObjectCameraConfig Create(IFocusObjectCameraConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045CC RID: 17868
-		// (get) Token: 0x0600E49D RID: 58525 RVA: 0x0021A463 File Offset: 0x00218663
+		// Token: 0x17004937 RID: 18743
+		// (get) Token: 0x0600F2C2 RID: 62146 RVA: 0x002372C7 File Offset: 0x002354C7
 		public virtual ICameraParams CameraConfig
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045CD RID: 17869
-		// (get) Token: 0x0600E49E RID: 58526 RVA: 0x0021A498 File Offset: 0x00218698
+		// Token: 0x17004938 RID: 18744
+		// (get) Token: 0x0600F2C3 RID: 62147 RVA: 0x002372FC File Offset: 0x002354FC
 		public virtual float? BlendInTime
 		{
 			get
@@ -52,14 +50,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E77 RID: 32375
+		// Token: 0x04008534 RID: 34100
 		private IFocusObjectCameraConfig Instance;
 
-		// Token: 0x04007E78 RID: 32376
+		// Token: 0x04008535 RID: 34101
 		[Nullable(2)]
 		private ICameraParams _CameraConfigCache;
 
-		// Token: 0x04007E79 RID: 32377
+		// Token: 0x04008536 RID: 34102
 		private bool _CameraConfigInited;
 	}
 }

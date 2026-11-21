@@ -3,33 +3,33 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 {
-	// Token: 0x02004803 RID: 18435
+	// Token: 0x02003734 RID: 14132
 	[NullableContext(1)]
 	public interface IMapMarkProgressItemData
 	{
-		// Token: 0x170078CE RID: 30926
-		// (get) Token: 0x0603045C RID: 197724
-		// (set) Token: 0x0603045D RID: 197725
+		// Token: 0x17004B8B RID: 19339
+		// (get) Token: 0x06024C2C RID: 150572
+		// (set) Token: 0x06024C2D RID: 150573
 		string NameId { get; set; }
 
-		// Token: 0x170078CF RID: 30927
-		// (get) Token: 0x0603045E RID: 197726
-		// (set) Token: 0x0603045F RID: 197727
+		// Token: 0x17004B8C RID: 19340
+		// (get) Token: 0x06024C2E RID: 150574
+		// (set) Token: 0x06024C2F RID: 150575
 		float Progress { get; set; }
 
-		// Token: 0x170078D0 RID: 30928
-		// (get) Token: 0x06030460 RID: 197728
-		// (set) Token: 0x06030461 RID: 197729
+		// Token: 0x17004B8D RID: 19341
+		// (get) Token: 0x06024C30 RID: 150576
+		// (set) Token: 0x06024C31 RID: 150577
 		float ProgressMax { get; set; }
 
-		// Token: 0x170078D1 RID: 30929
-		// (get) Token: 0x06030462 RID: 197730
-		// (set) Token: 0x06030463 RID: 197731
+		// Token: 0x17004B8E RID: 19342
+		// (get) Token: 0x06024C32 RID: 150578
+		// (set) Token: 0x06024C33 RID: 150579
 		float ProgressMin { get; set; }
 
-		// Token: 0x170078D2 RID: 30930
-		// (get) Token: 0x06030464 RID: 197732
-		// (set) Token: 0x06030465 RID: 197733
+		// Token: 0x17004B8F RID: 19343
+		// (get) Token: 0x06024C34 RID: 150580
+		// (set) Token: 0x06024C35 RID: 150581
 		[Nullable(2)]
 		Action<float> SetProgressCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

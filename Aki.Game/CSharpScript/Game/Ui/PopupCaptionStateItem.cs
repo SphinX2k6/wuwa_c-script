@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200464F RID: 17999
+	// Token: 0x02003580 RID: 13696
 	public class PopupCaptionStateItem : UiPanelBase
 	{
-		// Token: 0x0602E776 RID: 190326 RVA: 0x00ABC27C File Offset: 0x00ABA47C
+		// Token: 0x06022EC0 RID: 143040 RVA: 0x009E98AC File Offset: 0x009E7AAC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,14 +32,14 @@ namespace CSharpScript.Game.Ui
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0602E777 RID: 190327 RVA: 0x00ABC343 File Offset: 0x00ABA543
+		// Token: 0x06022EC1 RID: 143041 RVA: 0x009E9973 File Offset: 0x009E7B73
 		protected override void OnStart()
 		{
 			this.OldColor = base.GetSprite(1).GetColor();
 			this.ChangeColor = FColor.FromHex("FFCC7B");
 		}
 
-		// Token: 0x0602E778 RID: 190328 RVA: 0x00ABC367 File Offset: 0x00ABA567
+		// Token: 0x06022EC2 RID: 143042 RVA: 0x009E9997 File Offset: 0x009E7B97
 		private void OnClickBtn()
 		{
 			Action onClickCallBack = this.OnClickCallBack;
@@ -50,21 +50,21 @@ namespace CSharpScript.Game.Ui
 			onClickCallBack();
 		}
 
-		// Token: 0x0602E779 RID: 190329 RVA: 0x00ABC379 File Offset: 0x00ABA579
+		// Token: 0x06022EC3 RID: 143043 RVA: 0x009E99A9 File Offset: 0x009E7BA9
 		[NullableContext(1)]
 		public void BindClick(Action callback)
 		{
 			this.OnClickCallBack = callback;
 		}
 
-		// Token: 0x0602E77A RID: 190330 RVA: 0x00ABC382 File Offset: 0x00ABA582
+		// Token: 0x06022EC4 RID: 143044 RVA: 0x009E99B2 File Offset: 0x009E7BB2
 		[NullableContext(1)]
 		public void SetTipsLocalText(string localKey)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), localKey, Array.Empty<object>());
 		}
 
-		// Token: 0x0602E77B RID: 190331 RVA: 0x00ABC39C File Offset: 0x00ABA59C
+		// Token: 0x06022EC5 RID: 143045 RVA: 0x009E99CC File Offset: 0x009E7BCC
 		public void SetCaptionChangeColor(bool useChangeColor)
 		{
 			FColor color = useChangeColor ? this.ChangeColor : this.OldColor;
@@ -72,26 +72,26 @@ namespace CSharpScript.Game.Ui
 			base.GetText(2).SetColor(color);
 		}
 
-		// Token: 0x04018E2C RID: 101932
+		// Token: 0x04013485 RID: 78981
 		private FColor OldColor;
 
-		// Token: 0x04018E2D RID: 101933
+		// Token: 0x04013486 RID: 78982
 		private FColor ChangeColor;
 
-		// Token: 0x04018E2E RID: 101934
+		// Token: 0x04013487 RID: 78983
 		[Nullable(2)]
 		protected Action OnClickCallBack;
 
-		// Token: 0x0200A8B4 RID: 43188
+		// Token: 0x02009270 RID: 37488
 		private class EComponents
 		{
-			// Token: 0x040335B7 RID: 210359
+			// Token: 0x0402DD4D RID: 187725
 			public const int BtnFunctionA = 0;
 
-			// Token: 0x040335B8 RID: 210360
+			// Token: 0x0402DD4E RID: 187726
 			public const int SprIcon = 1;
 
-			// Token: 0x040335B9 RID: 210361
+			// Token: 0x0402DD4F RID: 187727
 			public const int TxtBtnTips = 2;
 		}
 	}

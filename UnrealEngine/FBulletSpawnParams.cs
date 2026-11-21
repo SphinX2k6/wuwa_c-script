@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020016CB RID: 5835
+	// Token: 0x02000326 RID: 806
 	[UnrealObjectPath("/Script/KuroBulletCore.BulletSpawnParams")]
 	[UnrealStructLayout(96, 16, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 96)]
 	public class FBulletSpawnParams : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060151F0 RID: 86512 RVA: 0x001F0E6E File Offset: 0x001EF06E
+		// Token: 0x06005478 RID: 21624 RVA: 0x00076563 File Offset: 0x00074763
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FBulletSpawnParams._ScriptStructPtr != 0) ? FBulletSpawnParams._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroBulletCore.BulletSpawnParams", ref FBulletSpawnParams._ScriptStructPtr);
 		}
 
-		// Token: 0x17005381 RID: 21377
-		// (get) Token: 0x060151F1 RID: 86513 RVA: 0x001F0E92 File Offset: 0x001EF092
-		// (set) Token: 0x060151F2 RID: 86514 RVA: 0x001F0EA6 File Offset: 0x001EF0A6
+		// Token: 0x170010B0 RID: 4272
+		// (get) Token: 0x06005479 RID: 21625 RVA: 0x00076587 File Offset: 0x00074787
+		// (set) Token: 0x0600547A RID: 21626 RVA: 0x0007659B File Offset: 0x0007479B
 		public unsafe FTransformDouble InitialTransform
 		{
 			get
@@ -32,9 +32,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005382 RID: 21378
-		// (get) Token: 0x060151F3 RID: 86515 RVA: 0x001F0EBB File Offset: 0x001EF0BB
-		// (set) Token: 0x060151F4 RID: 86516 RVA: 0x001F0ECF File Offset: 0x001EF0CF
+		// Token: 0x170010B1 RID: 4273
+		// (get) Token: 0x0600547B RID: 21627 RVA: 0x000765B0 File Offset: 0x000747B0
+		// (set) Token: 0x0600547C RID: 21628 RVA: 0x000765C4 File Offset: 0x000747C4
 		public unsafe FVector InheritedVelocity
 		{
 			get
@@ -47,24 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005383 RID: 21379
-		// (get) Token: 0x060151F5 RID: 86517 RVA: 0x001F0EE4 File Offset: 0x001EF0E4
-		// (set) Token: 0x060151F6 RID: 86518 RVA: 0x001F0EF4 File Offset: 0x001EF0F4
-		public unsafe EInheritedVelocityMode InheritedVelocityMode
-		{
-			get
-			{
-				return (EInheritedVelocityMode)(*(base.NativePtr + (IntPtr)FBulletSpawnParams.__PropertyOffset_InheritedVelocityMode));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)FBulletSpawnParams.__PropertyOffset_InheritedVelocityMode) = (byte)value;
-			}
-		}
-
-		// Token: 0x17005384 RID: 21380
-		// (get) Token: 0x060151F7 RID: 86519 RVA: 0x001F0F05 File Offset: 0x001EF105
-		// (set) Token: 0x060151F8 RID: 86520 RVA: 0x001F0F15 File Offset: 0x001EF115
+		// Token: 0x170010B2 RID: 4274
+		// (get) Token: 0x0600547D RID: 21629 RVA: 0x000765D9 File Offset: 0x000747D9
+		// (set) Token: 0x0600547E RID: 21630 RVA: 0x000765E9 File Offset: 0x000747E9
 		public unsafe float SpeedFactor
 		{
 			get
@@ -77,9 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005385 RID: 21381
-		// (get) Token: 0x060151F9 RID: 86521 RVA: 0x001F0F26 File Offset: 0x001EF126
-		// (set) Token: 0x060151FA RID: 86522 RVA: 0x001F0F3A File Offset: 0x001EF13A
+		// Token: 0x170010B3 RID: 4275
+		// (get) Token: 0x0600547F RID: 21631 RVA: 0x000765FA File Offset: 0x000747FA
+		// (set) Token: 0x06005480 RID: 21632 RVA: 0x0007660E File Offset: 0x0007480E
 		[Nullable(2)]
 		public unsafe UBulletActionBase ActionBeforeInit
 		{
@@ -95,73 +80,59 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060151FB RID: 86523 RVA: 0x001F0F4F File Offset: 0x001EF14F
+		// Token: 0x06005481 RID: 21633 RVA: 0x00076623 File Offset: 0x00074823
 		public FBulletSpawnParams()
 		{
 		}
 
-		// Token: 0x060151FC RID: 86524 RVA: 0x001F0F57 File Offset: 0x001EF157
-		[NullableContext(1)]
-		public FBulletSpawnParams(FTransformDouble InitialTransform, FVector InheritedVelocity, EInheritedVelocityMode InheritedVelocityMode, float SpeedFactor, UBulletActionBase ActionBeforeInit)
-		{
-			this.InitialTransform = InitialTransform;
-			this.InheritedVelocity = InheritedVelocity;
-			this.InheritedVelocityMode = InheritedVelocityMode;
-			this.SpeedFactor = SpeedFactor;
-			this.ActionBeforeInit = ActionBeforeInit;
-		}
-
-		// Token: 0x060151FD RID: 86525 RVA: 0x001F0F84 File Offset: 0x001EF184
+		// Token: 0x06005482 RID: 21634 RVA: 0x0007662B File Offset: 0x0007482B
 		protected override IntPtr GetUStructPtr()
 		{
 			return FBulletSpawnParams.StaticStruct();
 		}
 
-		// Token: 0x060151FE RID: 86526 RVA: 0x001F0F90 File Offset: 0x001EF190
+		// Token: 0x06005483 RID: 21635 RVA: 0x00076637 File Offset: 0x00074837
 		[NullableContext(2)]
 		public FBulletSpawnParams(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060151FF RID: 86527 RVA: 0x001F0F9A File Offset: 0x001EF19A
+		// Token: 0x06005484 RID: 21636 RVA: 0x00076641 File Offset: 0x00074841
 		public FBulletSpawnParams(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06015200 RID: 86528 RVA: 0x001F0FA5 File Offset: 0x001EF1A5
+		// Token: 0x06005485 RID: 21637 RVA: 0x0007664C File Offset: 0x0007484C
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FBulletSpawnParams(Pointer, false, true);
 		}
 
-		// Token: 0x06015201 RID: 86529 RVA: 0x001F0FAF File Offset: 0x001EF1AF
+		// Token: 0x06005486 RID: 21638 RVA: 0x00076656 File Offset: 0x00074856
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FBulletSpawnParams(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400B7F1 RID: 47089
+		// Token: 0x04002289 RID: 8841
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroBulletCore.BulletSpawnParams";
 
-		// Token: 0x0400B7F2 RID: 47090
+		// Token: 0x0400228A RID: 8842
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400B7F3 RID: 47091
+		// Token: 0x0400228B RID: 8843
 		internal static int __PropertyOffset_InitialTransform;
 
-		// Token: 0x0400B7F4 RID: 47092
+		// Token: 0x0400228C RID: 8844
 		internal static int __PropertyOffset_InheritedVelocity;
 
-		// Token: 0x0400B7F5 RID: 47093
-		internal static int __PropertyOffset_InheritedVelocityMode;
-
-		// Token: 0x0400B7F6 RID: 47094
+		// Token: 0x0400228D RID: 8845
 		internal static int __PropertyOffset_SpeedFactor;
 
-		// Token: 0x0400B7F7 RID: 47095
+		// Token: 0x0400228E RID: 8846
 		internal static int __PropertyOffset_ActionBeforeInit;
 	}
 }

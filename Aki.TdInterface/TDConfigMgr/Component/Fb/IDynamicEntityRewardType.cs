@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AAE RID: 2734
+	// Token: 0x02000B78 RID: 2936
 	public class IDynamicEntityRewardType
 	{
-		// Token: 0x06003F0F RID: 16143 RVA: 0x000A14D9 File Offset: 0x0009F6D9
-		[NullableContext(1)]
+		// Token: 0x06004339 RID: 17209 RVA: 0x000AAACD File Offset: 0x000A8CCD
 		public static IDynamicEntityRewardType Create(IDynamicEntityRewardType? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F70 RID: 3952
-		// (get) Token: 0x06003F10 RID: 16144 RVA: 0x000A14F8 File Offset: 0x0009F6F8
+		// Token: 0x17001044 RID: 4164
+		// (get) Token: 0x0600433A RID: 17210 RVA: 0x000AAAEC File Offset: 0x000A8CEC
 		public virtual EDynamicEntityRewardType Type
 		{
 			get
@@ -32,7 +30,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002307 RID: 8967
+		// Token: 0x04002523 RID: 9507
 		private IDynamicEntityRewardType Instance;
 	}
 }

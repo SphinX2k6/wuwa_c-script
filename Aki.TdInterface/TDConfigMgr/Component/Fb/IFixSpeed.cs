@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BDD RID: 3037
+	// Token: 0x02000CAC RID: 3244
 	public class IFixSpeed : IConveyorBeltMove
 	{
-		// Token: 0x060045CC RID: 17868 RVA: 0x000B0967 File Offset: 0x000AEB67
-		[NullableContext(1)]
+		// Token: 0x06004A2A RID: 18986 RVA: 0x000BAAE3 File Offset: 0x000B8CE3
 		public static IFixSpeed Create(IFixSpeed? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013CF RID: 5071
-		// (get) Token: 0x060045CD RID: 17869 RVA: 0x000B0986 File Offset: 0x000AEB86
+		// Token: 0x170014CD RID: 5325
+		// (get) Token: 0x06004A2B RID: 18987 RVA: 0x000BAB02 File Offset: 0x000B8D02
 		public override EConveyorBeltMoveType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013D0 RID: 5072
-		// (get) Token: 0x060045CE RID: 17870 RVA: 0x000B0993 File Offset: 0x000AEB93
+		// Token: 0x170014CE RID: 5326
+		// (get) Token: 0x06004A2C RID: 18988 RVA: 0x000BAB0F File Offset: 0x000B8D0F
 		public virtual int Speed
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027BE RID: 10174
+		// Token: 0x04002A09 RID: 10761
 		private IFixSpeed Instance;
 	}
 }

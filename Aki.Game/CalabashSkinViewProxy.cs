@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Data.UiRoleCamera.Struct;
-using CSharpScript.Game.Module.Common.UiCamera;
 using CSharpScript.Game.Module.Skin;
+using CSharpScript.Game.Module.UiCamera;
 using UnrealEngine;
 
-// Token: 0x02002A44 RID: 10820
+// Token: 0x02001FBF RID: 8127
 [NullableContext(1)]
 [Nullable(0)]
 public class CalabashSkinViewProxy : global::ViewModelBase<ECalabashSkinViewData>
 {
-	// Token: 0x060168A7 RID: 92327 RVA: 0x005B6F10 File Offset: 0x005B5110
+	// Token: 0x060142C8 RID: 82632 RVA: 0x005E3054 File Offset: 0x005E1254
 	public CalabashSkinViewProxy()
 	{
 		List<CalabashSkinData> value = new List<CalabashSkinData>();
@@ -21,8 +21,8 @@ public class CalabashSkinViewProxy : global::ViewModelBase<ECalabashSkinViewData
 		this.DataMap.Add(ECalabashSkinViewData.SelectedSkinId, 0);
 	}
 
-	// Token: 0x17001DE2 RID: 7650
-	// (get) Token: 0x060168A8 RID: 92328 RVA: 0x005B6F5A File Offset: 0x005B515A
+	// Token: 0x17001E3A RID: 7738
+	// (get) Token: 0x060142C9 RID: 82633 RVA: 0x005E309E File Offset: 0x005E129E
 	public bool NeedStopRotate
 	{
 		get
@@ -31,8 +31,8 @@ public class CalabashSkinViewProxy : global::ViewModelBase<ECalabashSkinViewData
 		}
 	}
 
-	// Token: 0x17001DE3 RID: 7651
-	// (get) Token: 0x060168A9 RID: 92329 RVA: 0x005B6F62 File Offset: 0x005B5162
+	// Token: 0x17001E3B RID: 7739
+	// (get) Token: 0x060142CA RID: 82634 RVA: 0x005E30A6 File Offset: 0x005E12A6
 	public int FailRequestCd
 	{
 		get
@@ -41,7 +41,7 @@ public class CalabashSkinViewProxy : global::ViewModelBase<ECalabashSkinViewData
 		}
 	}
 
-	// Token: 0x060168AA RID: 92330 RVA: 0x005B6F6C File Offset: 0x005B516C
+	// Token: 0x060142CB RID: 82635 RVA: 0x005E30B0 File Offset: 0x005E12B0
 	public void Init(ISkinViewData viewData)
 	{
 		this.SkinIdFromSkipInternal = viewData.CalabashSkinId.GetValueOrDefault();
@@ -51,58 +51,58 @@ public class CalabashSkinViewProxy : global::ViewModelBase<ECalabashSkinViewData
 		this.InitGridSelected();
 	}
 
-	// Token: 0x060168AB RID: 92331 RVA: 0x005B6FB9 File Offset: 0x005B51B9
+	// Token: 0x060142CC RID: 82636 RVA: 0x005E30FD File Offset: 0x005E12FD
 	public List<CalabashSkinData> GetSkinDataList()
 	{
 		return base.GetData(ECalabashSkinViewData.SkinDataList) as List<CalabashSkinData>;
 	}
 
-	// Token: 0x060168AC RID: 92332 RVA: 0x005B6FC7 File Offset: 0x005B51C7
+	// Token: 0x060142CD RID: 82637 RVA: 0x005E310B File Offset: 0x005E130B
 	public CalabashSkinData GetSkinDataByIndex(int index)
 	{
 		return this.GetSkinDataList()[index];
 	}
 
-	// Token: 0x060168AD RID: 92333 RVA: 0x005B6FD8 File Offset: 0x005B51D8
+	// Token: 0x060142CE RID: 82638 RVA: 0x005E311C File Offset: 0x005E131C
 	public CalabashSkinData GetSkinDataBySkinId(int skinId)
 	{
 		int dataIndexBySkinId = this.GetDataIndexBySkinId(skinId);
 		return this.GetSkinDataByIndex(dataIndexBySkinId);
 	}
 
-	// Token: 0x060168AE RID: 92334 RVA: 0x005B6FF4 File Offset: 0x005B51F4
+	// Token: 0x060142CF RID: 82639 RVA: 0x005E3138 File Offset: 0x005E1338
 	public void SetEquipSkinId(int skinId, bool notNotify = false)
 	{
 		this.PrevEquipSkinIdInternal = this.GetEquipSkinId();
 		base.SetData(ECalabashSkinViewData.EquipSkinId, skinId, new bool?(notNotify));
 	}
 
-	// Token: 0x060168AF RID: 92335 RVA: 0x005B7015 File Offset: 0x005B5215
+	// Token: 0x060142D0 RID: 82640 RVA: 0x005E3159 File Offset: 0x005E1359
 	public int GetEquipSkinId()
 	{
 		return (int)base.GetData(ECalabashSkinViewData.EquipSkinId);
 	}
 
-	// Token: 0x060168B0 RID: 92336 RVA: 0x005B7023 File Offset: 0x005B5223
+	// Token: 0x060142D1 RID: 82641 RVA: 0x005E3167 File Offset: 0x005E1367
 	public void SetSelectedSkinId(int skinId, bool notNotify = false)
 	{
 		base.SetData(ECalabashSkinViewData.SelectedSkinId, skinId, new bool?(notNotify));
 	}
 
-	// Token: 0x060168B1 RID: 92337 RVA: 0x005B7038 File Offset: 0x005B5238
+	// Token: 0x060142D2 RID: 82642 RVA: 0x005E317C File Offset: 0x005E137C
 	public int GetSelectedSkinId()
 	{
 		return (int)base.GetData(ECalabashSkinViewData.SelectedSkinId);
 	}
 
-	// Token: 0x060168B2 RID: 92338 RVA: 0x005B7046 File Offset: 0x005B5246
+	// Token: 0x060142D3 RID: 82643 RVA: 0x005E318A File Offset: 0x005E138A
 	public void SetGetDragItemFunc(Func<UUIDraggableComponent> getDragItemFunc)
 	{
 		this.GetDragItemFunc = getDragItemFunc;
 	}
 
-	// Token: 0x17001DE4 RID: 7652
-	// (get) Token: 0x060168B3 RID: 92339 RVA: 0x005B704F File Offset: 0x005B524F
+	// Token: 0x17001E3C RID: 7740
+	// (get) Token: 0x060142D4 RID: 82644 RVA: 0x005E3193 File Offset: 0x005E1393
 	public int PrevEquipSkinId
 	{
 		get
@@ -111,7 +111,7 @@ public class CalabashSkinViewProxy : global::ViewModelBase<ECalabashSkinViewData
 		}
 	}
 
-	// Token: 0x060168B4 RID: 92340 RVA: 0x005B7057 File Offset: 0x005B5257
+	// Token: 0x060142D5 RID: 82645 RVA: 0x005E319B File Offset: 0x005E139B
 	public UUIDraggableComponent GetDragItem()
 	{
 		Func<UUIDraggableComponent> getDragItemFunc = this.GetDragItemFunc;
@@ -122,25 +122,25 @@ public class CalabashSkinViewProxy : global::ViewModelBase<ECalabashSkinViewData
 		return getDragItemFunc();
 	}
 
-	// Token: 0x060168B5 RID: 92341 RVA: 0x005B706A File Offset: 0x005B526A
+	// Token: 0x060142D6 RID: 82646 RVA: 0x005E31AE File Offset: 0x005E13AE
 	private CalabashSkinData CreateCalabashSkinGridData(int skinId)
 	{
 		return new CalabashSkinData(skinId);
 	}
 
-	// Token: 0x060168B6 RID: 92342 RVA: 0x005B7074 File Offset: 0x005B5274
+	// Token: 0x060142D7 RID: 82647 RVA: 0x005E31B8 File Offset: 0x005E13B8
 	public int GetDataIndexBySkinId(int skinId)
 	{
 		int num = this.GetSkinDataList().FindIndex((CalabashSkinData data) => data.SkinId == skinId);
 		return (num < 0) ? 0 : num;
 	}
 
-	// Token: 0x060168B7 RID: 92343 RVA: 0x005B70B0 File Offset: 0x005B52B0
-	public IUiCameraInputComponentData GetCalabashSkinTabCameraInputData()
+	// Token: 0x060142D8 RID: 82648 RVA: 0x005E31F4 File Offset: 0x005E13F4
+	public UiCameraInputBindingData GetCalabashSkinTabCameraInputData()
 	{
 		SUiRoleCameraSetting? roleCameraConfig = UiRoleCameraConfig.Instance.GetRoleCameraConfig("葫芦皮肤旋转查看");
 		FVectorDouble fvectorDouble = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("TerminalCase").Value, ECollectActorType.UI).D_K2_GetActorLocation();
-		return new UiCameraInputComponentData
+		return new UiCameraInputBindingData
 		{
 			DragComponent = this.GetDragItem(),
 			CameraSettingConfig = roleCameraConfig.Value,
@@ -148,7 +148,7 @@ public class CalabashSkinViewProxy : global::ViewModelBase<ECalabashSkinViewData
 		};
 	}
 
-	// Token: 0x060168B8 RID: 92344 RVA: 0x005B7118 File Offset: 0x005B5318
+	// Token: 0x060142D9 RID: 82649 RVA: 0x005E325C File Offset: 0x005E145C
 	public void InitGridSelected()
 	{
 		if (this.SkinIdFromSkipInternal != 0)
@@ -164,7 +164,7 @@ public class CalabashSkinViewProxy : global::ViewModelBase<ECalabashSkinViewData
 		this.SetEquipSkinId(currentEquipSkinId, false);
 	}
 
-	// Token: 0x060168B9 RID: 92345 RVA: 0x005B7168 File Offset: 0x005B5368
+	// Token: 0x060142DA RID: 82650 RVA: 0x005E32AC File Offset: 0x005E14AC
 	public void InitSkinDataList()
 	{
 		IEnumerable<CalabashSkin> calabashSkinConfigList = SkinConfig.Instance.GetCalabashSkinConfigList();
@@ -207,26 +207,26 @@ public class CalabashSkinViewProxy : global::ViewModelBase<ECalabashSkinViewData
 		});
 	}
 
-	// Token: 0x060168BA RID: 92346 RVA: 0x005B7238 File Offset: 0x005B5438
+	// Token: 0x060142DB RID: 82651 RVA: 0x005E337C File Offset: 0x005E157C
 	public bool CalabashGridItemCanExecuteChange(object parameters, bool _, EToggleState state)
 	{
 		int skinId = (parameters as CalabashSkinData).SkinId;
 		return this.GetSelectedSkinId() != skinId;
 	}
 
-	// Token: 0x0400A758 RID: 42840
+	// Token: 0x0400AB5C RID: 43868
 	private bool NeedStopRotateInternal;
 
-	// Token: 0x0400A759 RID: 42841
+	// Token: 0x0400AB5D RID: 43869
 	private int FailRequestCdInternal;
 
-	// Token: 0x0400A75A RID: 42842
+	// Token: 0x0400AB5E RID: 43870
 	private int PrevEquipSkinIdInternal;
 
-	// Token: 0x0400A75B RID: 42843
+	// Token: 0x0400AB5F RID: 43871
 	private int SkinIdFromSkipInternal;
 
-	// Token: 0x0400A75C RID: 42844
+	// Token: 0x0400AB60 RID: 43872
 	[Nullable(new byte[]
 	{
 		2,
@@ -234,6 +234,6 @@ public class CalabashSkinViewProxy : global::ViewModelBase<ECalabashSkinViewData
 	})]
 	private Func<UUIDraggableComponent> GetDragItemFunc;
 
-	// Token: 0x0400A75D RID: 42845
+	// Token: 0x0400AB61 RID: 43873
 	public bool NeedLoadModel;
 }

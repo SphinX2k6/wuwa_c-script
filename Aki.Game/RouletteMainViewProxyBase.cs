@@ -6,18 +6,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200293D RID: 10557
+// Token: 0x02001EB8 RID: 7864
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class RouletteMainViewProxyBase
 {
-	// Token: 0x06015CAE RID: 89262 RVA: 0x0057FA94 File Offset: 0x0057DC94
+	// Token: 0x060136B3 RID: 79539 RVA: 0x005AAACC File Offset: 0x005A8CCC
 	public void RegisterView(RouletteMainView view)
 	{
 		this.View = view;
 	}
 
-	// Token: 0x06015CAF RID: 89263 RVA: 0x0057FAA0 File Offset: 0x0057DCA0
+	// Token: 0x060136B4 RID: 79540 RVA: 0x005AAAD8 File Offset: 0x005A8CD8
 	public UniTask BeforeStartAsync()
 	{
 		RouletteMainViewProxyBase.<BeforeStartAsync>d__6 <BeforeStartAsync>d__;
@@ -28,7 +28,7 @@ public abstract class RouletteMainViewProxyBase
 		return <BeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015CB0 RID: 89264 RVA: 0x0057FAE3 File Offset: 0x0057DCE3
+	// Token: 0x060136B5 RID: 79541 RVA: 0x005AAB1B File Offset: 0x005A8D1B
 	public void Start()
 	{
 		this.RouletteType = this.GetRouletteType();
@@ -36,91 +36,91 @@ public abstract class RouletteMainViewProxyBase
 		this.OnStart();
 	}
 
-	// Token: 0x06015CB1 RID: 89265 RVA: 0x0057FB03 File Offset: 0x0057DD03
+	// Token: 0x060136B6 RID: 79542 RVA: 0x005AAB3B File Offset: 0x005A8D3B
 	public void BeforeShow()
 	{
 		this.OnBeforeShow();
 	}
 
-	// Token: 0x06015CB2 RID: 89266 RVA: 0x0057FB0B File Offset: 0x0057DD0B
+	// Token: 0x060136B7 RID: 79543 RVA: 0x005AAB43 File Offset: 0x005A8D43
 	public void AddEventListenerByStart()
 	{
 		this.OnAddEventListenerByStart();
 	}
 
-	// Token: 0x06015CB3 RID: 89267 RVA: 0x0057FB13 File Offset: 0x0057DD13
+	// Token: 0x060136B8 RID: 79544 RVA: 0x005AAB4B File Offset: 0x005A8D4B
 	public void RemoveEventListenerByStart()
 	{
 		this.OnRemoveEventListenerByStart();
 	}
 
-	// Token: 0x06015CB4 RID: 89268 RVA: 0x0057FB1B File Offset: 0x0057DD1B
+	// Token: 0x060136B9 RID: 79545 RVA: 0x005AAB53 File Offset: 0x005A8D53
 	public void AddEventListener()
 	{
 		this.OnAddEventListener();
 	}
 
-	// Token: 0x06015CB5 RID: 89269 RVA: 0x0057FB23 File Offset: 0x0057DD23
+	// Token: 0x060136BA RID: 79546 RVA: 0x005AAB5B File Offset: 0x005A8D5B
 	public void RemoveEventListener()
 	{
 		this.OnRemoveEventListener();
 	}
 
-	// Token: 0x06015CB6 RID: 89270 RVA: 0x0057FB2B File Offset: 0x0057DD2B
+	// Token: 0x060136BB RID: 79547 RVA: 0x005AAB63 File Offset: 0x005A8D63
 	public bool CanOpenView()
 	{
 		return this.OnCanOpenView();
 	}
 
-	// Token: 0x06015CB7 RID: 89271 RVA: 0x0057FB33 File Offset: 0x0057DD33
+	// Token: 0x060136BC RID: 79548 RVA: 0x005AAB6B File Offset: 0x005A8D6B
 	public RouletteComponentMain GetRouletteComponent()
 	{
 		return this.OnGetRouletteComponent();
 	}
 
-	// Token: 0x06015CB8 RID: 89272 RVA: 0x0057FB3B File Offset: 0x0057DD3B
+	// Token: 0x060136BD RID: 79549 RVA: 0x005AAB73 File Offset: 0x005A8D73
 	public ERouletteType GetRouletteType()
 	{
 		return this.OnGetRouletteType();
 	}
 
-	// Token: 0x06015CB9 RID: 89273 RVA: 0x0057FB43 File Offset: 0x0057DD43
+	// Token: 0x060136BE RID: 79550 RVA: 0x005AAB7B File Offset: 0x005A8D7B
 	public bool GetCanSwitchType()
 	{
 		return this.OnGetCanSwitchType();
 	}
 
-	// Token: 0x06015CBA RID: 89274 RVA: 0x0057FB4B File Offset: 0x0057DD4B
+	// Token: 0x060136BF RID: 79551 RVA: 0x005AAB83 File Offset: 0x005A8D83
 	public bool GetPanelSwitchOpen()
 	{
 		return this.OnGetPanelSwitchOpen();
 	}
 
-	// Token: 0x06015CBB RID: 89275 RVA: 0x0057FB53 File Offset: 0x0057DD53
+	// Token: 0x060136C0 RID: 79552 RVA: 0x005AAB8B File Offset: 0x005A8D8B
 	public void RouletteTypeSwitch()
 	{
 		this.OnRouletteTypeSwitch();
 	}
 
-	// Token: 0x06015CBC RID: 89276 RVA: 0x0057FB5C File Offset: 0x0057DD5C
+	// Token: 0x060136C1 RID: 79553 RVA: 0x005AAB94 File Offset: 0x005A8D94
 	public virtual EToggleState? GetToggle1State()
 	{
 		return null;
 	}
 
-	// Token: 0x06015CBD RID: 89277 RVA: 0x0057FB74 File Offset: 0x0057DD74
+	// Token: 0x060136C2 RID: 79554 RVA: 0x005AABAC File Offset: 0x005A8DAC
 	public virtual EToggleState? GetToggle2State()
 	{
 		return null;
 	}
 
-	// Token: 0x06015CBE RID: 89278 RVA: 0x0057FB8A File Offset: 0x0057DD8A
+	// Token: 0x060136C3 RID: 79555 RVA: 0x005AABC2 File Offset: 0x005A8DC2
 	public bool GetCanOpenAssembly(ERouletteType rouletteType)
 	{
 		return this.OnGetCanOpenAssembly(rouletteType);
 	}
 
-	// Token: 0x06015CBF RID: 89279 RVA: 0x0057FB93 File Offset: 0x0057DD93
+	// Token: 0x060136C4 RID: 79556 RVA: 0x005AABCB File Offset: 0x005A8DCB
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -132,90 +132,90 @@ public abstract class RouletteMainViewProxyBase
 		return this.OnGetExploreRouletteDataMap();
 	}
 
-	// Token: 0x06015CC0 RID: 89280 RVA: 0x0057FB9B File Offset: 0x0057DD9B
+	// Token: 0x060136C5 RID: 79557 RVA: 0x005AABD3 File Offset: 0x005A8DD3
 	public int GetRouletteGridId(int index, ERouletteGridType gridType)
 	{
 		return this.OnGetRouletteGridId(index, gridType);
 	}
 
-	// Token: 0x06015CC1 RID: 89281 RVA: 0x0057FBA5 File Offset: 0x0057DDA5
+	// Token: 0x060136C6 RID: 79558 RVA: 0x005AABDD File Offset: 0x005A8DDD
 	public string GetActionName()
 	{
 		return this.OnGetActionName();
 	}
 
-	// Token: 0x06015CC2 RID: 89282 RVA: 0x0057FBAD File Offset: 0x0057DDAD
+	// Token: 0x060136C7 RID: 79559 RVA: 0x005AABE5 File Offset: 0x005A8DE5
 	public void RefreshTips()
 	{
 		this.OnRefreshTips();
 	}
 
-	// Token: 0x06015CC3 RID: 89283 RVA: 0x0057FBB5 File Offset: 0x0057DDB5
+	// Token: 0x060136C8 RID: 79560 RVA: 0x005AABED File Offset: 0x005A8DED
 	public void Destroy()
 	{
 		this.OnDestroy();
 	}
 
-	// Token: 0x06015CC4 RID: 89284 RVA: 0x0057FBBD File Offset: 0x0057DDBD
+	// Token: 0x060136C9 RID: 79561 RVA: 0x005AABF5 File Offset: 0x005A8DF5
 	protected virtual UniTask OnBeforeStartAsync()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x06015CC5 RID: 89285 RVA: 0x0057FBC4 File Offset: 0x0057DDC4
+	// Token: 0x060136CA RID: 79562 RVA: 0x005AABFC File Offset: 0x005A8DFC
 	protected virtual void OnStart()
 	{
 	}
 
-	// Token: 0x06015CC6 RID: 89286 RVA: 0x0057FBC6 File Offset: 0x0057DDC6
+	// Token: 0x060136CB RID: 79563 RVA: 0x005AABFE File Offset: 0x005A8DFE
 	protected virtual void OnBeforeShow()
 	{
 	}
 
-	// Token: 0x06015CC7 RID: 89287 RVA: 0x0057FBC8 File Offset: 0x0057DDC8
+	// Token: 0x060136CC RID: 79564 RVA: 0x005AAC00 File Offset: 0x005A8E00
 	protected virtual void OnAddEventListenerByStart()
 	{
 	}
 
-	// Token: 0x06015CC8 RID: 89288 RVA: 0x0057FBCA File Offset: 0x0057DDCA
+	// Token: 0x060136CD RID: 79565 RVA: 0x005AAC02 File Offset: 0x005A8E02
 	protected virtual void OnRemoveEventListenerByStart()
 	{
 	}
 
-	// Token: 0x06015CC9 RID: 89289 RVA: 0x0057FBCC File Offset: 0x0057DDCC
+	// Token: 0x060136CE RID: 79566 RVA: 0x005AAC04 File Offset: 0x005A8E04
 	protected virtual void OnAddEventListener()
 	{
 	}
 
-	// Token: 0x06015CCA RID: 89290 RVA: 0x0057FBCE File Offset: 0x0057DDCE
+	// Token: 0x060136CF RID: 79567 RVA: 0x005AAC06 File Offset: 0x005A8E06
 	protected virtual void OnRemoveEventListener()
 	{
 	}
 
-	// Token: 0x06015CCB RID: 89291
+	// Token: 0x060136D0 RID: 79568
 	protected abstract bool OnCanOpenView();
 
-	// Token: 0x06015CCC RID: 89292
+	// Token: 0x060136D1 RID: 79569
 	protected abstract RouletteComponentMain OnGetRouletteComponent();
 
-	// Token: 0x06015CCD RID: 89293
+	// Token: 0x060136D2 RID: 79570
 	protected abstract ERouletteType OnGetRouletteType();
 
-	// Token: 0x06015CCE RID: 89294
+	// Token: 0x060136D3 RID: 79571
 	protected abstract bool OnGetCanSwitchType();
 
-	// Token: 0x06015CCF RID: 89295
+	// Token: 0x060136D4 RID: 79572
 	protected abstract bool OnGetPanelSwitchOpen();
 
-	// Token: 0x06015CD0 RID: 89296 RVA: 0x0057FBD0 File Offset: 0x0057DDD0
+	// Token: 0x060136D5 RID: 79573 RVA: 0x005AAC08 File Offset: 0x005A8E08
 	protected virtual void OnRouletteTypeSwitch()
 	{
 	}
 
-	// Token: 0x06015CD1 RID: 89297
+	// Token: 0x060136D6 RID: 79574
 	protected abstract bool OnGetCanOpenAssembly(ERouletteType rouletteType);
 
-	// Token: 0x06015CD2 RID: 89298
+	// Token: 0x060136D7 RID: 79575
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -224,32 +224,32 @@ public abstract class RouletteMainViewProxyBase
 	})]
 	protected abstract List<ValueTuple<List<int>, ERouletteComponentNode, ERouletteGridType>> OnGetExploreRouletteDataMap();
 
-	// Token: 0x06015CD3 RID: 89299
+	// Token: 0x060136D8 RID: 79576
 	protected abstract int OnGetRouletteGridId(int index, ERouletteGridType gridType);
 
-	// Token: 0x06015CD4 RID: 89300
+	// Token: 0x060136D9 RID: 79577
 	protected abstract string OnGetActionName();
 
-	// Token: 0x06015CD5 RID: 89301 RVA: 0x0057FBD2 File Offset: 0x0057DDD2
+	// Token: 0x060136DA RID: 79578 RVA: 0x005AAC0A File Offset: 0x005A8E0A
 	protected virtual void OnRefreshTips()
 	{
 	}
 
-	// Token: 0x06015CD6 RID: 89302
+	// Token: 0x060136DB RID: 79579
 	protected abstract void OnDestroy();
 
-	// Token: 0x0400A24A RID: 41546
+	// Token: 0x0400A635 RID: 42549
 	public ERouletteType RouletteType;
 
-	// Token: 0x0400A24B RID: 41547
+	// Token: 0x0400A636 RID: 42550
 	public bool CanSwitchType;
 
-	// Token: 0x0400A24C RID: 41548
+	// Token: 0x0400A637 RID: 42551
 	public ERouletteActionType ActionType = ERouletteActionType.Action1;
 
-	// Token: 0x0400A24D RID: 41549
+	// Token: 0x0400A638 RID: 42552
 	public int? TouchId;
 
-	// Token: 0x0400A24E RID: 41550
+	// Token: 0x0400A639 RID: 42553
 	public RouletteMainView View;
 }

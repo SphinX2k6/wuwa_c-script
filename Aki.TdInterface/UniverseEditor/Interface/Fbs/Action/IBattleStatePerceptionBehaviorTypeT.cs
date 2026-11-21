@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061F8 RID: 25080
+	// Token: 0x02006866 RID: 26726
 	public class IBattleStatePerceptionBehaviorTypeT
 	{
-		// Token: 0x1700BAF4 RID: 47860
-		// (get) Token: 0x0602B3AD RID: 177069 RVA: 0x005F4CCE File Offset: 0x005F2ECE
-		// (set) Token: 0x0602B3AE RID: 177070 RVA: 0x005F4CD6 File Offset: 0x005F2ED6
+		// Token: 0x1700C477 RID: 50295
+		// (get) Token: 0x0602DAF4 RID: 187124 RVA: 0x0063F742 File Offset: 0x0063D942
+		// (set) Token: 0x0602DAF5 RID: 187125 RVA: 0x0063F74A File Offset: 0x0063D94A
 		public EBattleStatePerceptionBehavior Type { get; set; }
 
-		// Token: 0x0602B3AF RID: 177071 RVA: 0x005F4CDF File Offset: 0x005F2EDF
+		// Token: 0x0602DAF6 RID: 187126 RVA: 0x0063F753 File Offset: 0x0063D953
 		public IBattleStatePerceptionBehaviorTypeT()
 		{
 			this.Type = EBattleStatePerceptionBehavior.NotifyGatherToPlayer;

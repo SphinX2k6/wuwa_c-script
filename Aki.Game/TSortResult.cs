@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x02001877 RID: 6263
-// (Invoke) Token: 0x0600B7C8 RID: 47048
+// Token: 0x02000D30 RID: 3376
+// (Invoke) Token: 0x06008BB1 RID: 35761
 public delegate int TSortResult(object a, object b, bool isAscending, params object[] parameters);

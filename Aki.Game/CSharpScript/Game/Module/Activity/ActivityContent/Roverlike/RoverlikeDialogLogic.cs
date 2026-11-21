@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060F1 RID: 24817
+	// Token: 0x0200506F RID: 20591
 	public class RoverlikeDialogLogic
 	{
-		// Token: 0x0603EC1A RID: 257050 RVA: 0x00F28E3C File Offset: 0x00F2703C
+		// Token: 0x060338DC RID: 211164 RVA: 0x00E6FC50 File Offset: 0x00E6DE50
 		[NullableContext(1)]
 		public void PlayAudio(string eventPath, [Nullable(2)] Action finishCallback = null)
 		{
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}));
 		}
 
-		// Token: 0x0603EC1B RID: 257051 RVA: 0x00F28EDC File Offset: 0x00F270DC
+		// Token: 0x060338DD RID: 211165 RVA: 0x00E6FCF0 File Offset: 0x00E6DEF0
 		public void Stop()
 		{
 			this.PlayVersion++;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.FinishCallback = null;
 		}
 
-		// Token: 0x0603EC1C RID: 257052 RVA: 0x00F28F38 File Offset: 0x00F27138
+		// Token: 0x060338DE RID: 211166 RVA: 0x00E6FD4C File Offset: 0x00E6DF4C
 		private void OnFinish(int version)
 		{
 			if (version != this.PlayVersion)
@@ -71,14 +71,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			finishCallback();
 		}
 
-		// Token: 0x04020CB9 RID: 134329
+		// Token: 0x0401B5E6 RID: 112102
 		private int PlayEventResult;
 
-		// Token: 0x04020CBA RID: 134330
+		// Token: 0x0401B5E7 RID: 112103
 		[Nullable(2)]
 		private Action FinishCallback;
 
-		// Token: 0x04020CBB RID: 134331
+		// Token: 0x0401B5E8 RID: 112104
 		private int PlayVersion;
 	}
 }

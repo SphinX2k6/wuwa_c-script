@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200244B RID: 9291
+	// Token: 0x020026EC RID: 9964
 	public static class ESystemOptionTypeExtensions
 	{
-		// Token: 0x0600C9D0 RID: 51664 RVA: 0x001D8A38 File Offset: 0x001D6C38
+		// Token: 0x0600D680 RID: 54912 RVA: 0x001F2900 File Offset: 0x001F0B00
 		public static string ToEnumString(this ESystemOptionType value)
 		{
 			string result;
@@ -20,6 +20,9 @@ namespace Aki.TDConfigMgr.Action
 			case ESystemOptionType.GravityControl:
 				result = "GravityControl";
 				break;
+			case ESystemOptionType.LiveInteractSc:
+				result = "LiveInteractSc";
+				break;
 			default:
 				result = value.ToString();
 				break;
@@ -27,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9D1 RID: 51665 RVA: 0x001D8A80 File Offset: 0x001D6C80
+		// Token: 0x0600D681 RID: 54913 RVA: 0x001F2954 File Offset: 0x001F0B54
 		public static ESystemOptionType FromString(string name)
 		{
 			ESystemOptionType result;
@@ -38,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9D2 RID: 51666 RVA: 0x001D8AAC File Offset: 0x001D6CAC
+		// Token: 0x0600D682 RID: 54914 RVA: 0x001F2980 File Offset: 0x001F0B80
 		public static bool TryFromString(string name, out ESystemOptionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -56,45 +59,53 @@ namespace Aki.TDConfigMgr.Action
 				value = ESystemOptionType.PermanentRogueRandomEvent;
 				return true;
 			}
-			if (!(name == "GravityControl"))
+			if (name == "GravityControl")
+			{
+				value = ESystemOptionType.GravityControl;
+				return true;
+			}
+			if (!(name == "LiveInteractSc"))
 			{
 				value = ESystemOptionType.RogueRandomEvent;
 				return false;
 			}
-			value = ESystemOptionType.GravityControl;
+			value = ESystemOptionType.LiveInteractSc;
 			return true;
 		}
 
-		// Token: 0x0600C9D3 RID: 51667 RVA: 0x001D8B02 File Offset: 0x001D6D02
+		// Token: 0x0600D683 RID: 54915 RVA: 0x001F29E8 File Offset: 0x001F0BE8
 		public static string[] GetStringValues()
 		{
 			return new string[]
 			{
 				"RogueRandomEvent",
 				"PermanentRogueRandomEvent",
-				"GravityControl"
+				"GravityControl",
+				"LiveInteractSc"
 			};
 		}
 
-		// Token: 0x0600C9D4 RID: 51668 RVA: 0x001D8B22 File Offset: 0x001D6D22
+		// Token: 0x0600D684 RID: 54916 RVA: 0x001F2A10 File Offset: 0x001F0C10
 		public static ESystemOptionType[] GetValues()
 		{
 			return new ESystemOptionType[]
 			{
 				ESystemOptionType.RogueRandomEvent,
 				ESystemOptionType.PermanentRogueRandomEvent,
-				ESystemOptionType.GravityControl
+				ESystemOptionType.GravityControl,
+				ESystemOptionType.LiveInteractSc
 			};
 		}
 
-		// Token: 0x0600C9D5 RID: 51669 RVA: 0x001D8B32 File Offset: 0x001D6D32
+		// Token: 0x0600D685 RID: 54917 RVA: 0x001F2A23 File Offset: 0x001F0C23
 		public static string[] GetNames()
 		{
 			return new string[]
 			{
 				"RogueRandomEvent",
 				"PermanentRogueRandomEvent",
-				"GravityControl"
+				"GravityControl",
+				"LiveInteractSc"
 			};
 		}
 	}

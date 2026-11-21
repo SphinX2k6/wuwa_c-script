@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029F0 RID: 10736
+	// Token: 0x02002CDD RID: 11485
 	public class IDisableAlertAreaQuestCondition : IDisableAlertAreaCondition
 	{
-		// Token: 0x0600ED09 RID: 60681 RVA: 0x0022960A File Offset: 0x0022780A
-		[NullableContext(1)]
+		// Token: 0x0600FBA0 RID: 64416 RVA: 0x00246F8E File Offset: 0x0024518E
 		public static IDisableAlertAreaQuestCondition Create(IDisableAlertAreaQuestCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AEB RID: 19179
-		// (get) Token: 0x0600ED0A RID: 60682 RVA: 0x00229629 File Offset: 0x00227829
+		// Token: 0x17004E94 RID: 20116
+		// (get) Token: 0x0600FBA1 RID: 64417 RVA: 0x00246FAD File Offset: 0x002451AD
 		public override EDisableAlertAreaCondition Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AEC RID: 19180
-		// (get) Token: 0x0600ED0B RID: 60683 RVA: 0x00229636 File Offset: 0x00227836
+		// Token: 0x17004E95 RID: 20117
+		// (get) Token: 0x0600FBA2 RID: 64418 RVA: 0x00246FBA File Offset: 0x002451BA
 		public virtual int RelatedQuestId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008288 RID: 33416
+		// Token: 0x04008979 RID: 35193
 		private IDisableAlertAreaQuestCondition Instance;
 	}
 }

@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054E9 RID: 21737
+	// Token: 0x02005A6F RID: 23151
 	public class ILevelPrefabPerformComponentT
 	{
-		// Token: 0x1700A056 RID: 41046
-		// (get) Token: 0x06023DD3 RID: 146899 RVA: 0x004F5778 File Offset: 0x004F3978
-		// (set) Token: 0x06023DD4 RID: 146900 RVA: 0x004F5780 File Offset: 0x004F3980
+		// Token: 0x1700A890 RID: 43152
+		// (get) Token: 0x06025E8D RID: 155277 RVA: 0x0053289C File Offset: 0x00530A9C
+		// (set) Token: 0x06025E8E RID: 155278 RVA: 0x005328A4 File Offset: 0x00530AA4
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A057 RID: 41047
-		// (get) Token: 0x06023DD5 RID: 146901 RVA: 0x004F5789 File Offset: 0x004F3989
-		// (set) Token: 0x06023DD6 RID: 146902 RVA: 0x004F5791 File Offset: 0x004F3991
+		// Token: 0x1700A891 RID: 43153
+		// (get) Token: 0x06025E8F RID: 155279 RVA: 0x005328AD File Offset: 0x00530AAD
+		// (set) Token: 0x06025E90 RID: 155280 RVA: 0x005328B5 File Offset: 0x00530AB5
 		public List<ITowardEntityConfigT> TowardEntity { get; set; }
 
-		// Token: 0x1700A058 RID: 41048
-		// (get) Token: 0x06023DD7 RID: 146903 RVA: 0x004F579A File Offset: 0x004F399A
-		// (set) Token: 0x06023DD8 RID: 146904 RVA: 0x004F57A2 File Offset: 0x004F39A2
+		// Token: 0x1700A892 RID: 43154
+		// (get) Token: 0x06025E91 RID: 155281 RVA: 0x005328BE File Offset: 0x00530ABE
+		// (set) Token: 0x06025E92 RID: 155282 RVA: 0x005328C6 File Offset: 0x00530AC6
 		public ILevelPrefabParamsConfigT PrefabParams { get; set; }
 
-		// Token: 0x1700A059 RID: 41049
-		// (get) Token: 0x06023DD9 RID: 146905 RVA: 0x004F57AB File Offset: 0x004F39AB
-		// (set) Token: 0x06023DDA RID: 146906 RVA: 0x004F57B3 File Offset: 0x004F39B3
+		// Token: 0x1700A893 RID: 43155
+		// (get) Token: 0x06025E93 RID: 155283 RVA: 0x005328CF File Offset: 0x00530ACF
+		// (set) Token: 0x06025E94 RID: 155284 RVA: 0x005328D7 File Offset: 0x00530AD7
 		public List<IPrefabCompTransformT> CompTransform { get; set; }
 
-		// Token: 0x1700A05A RID: 41050
-		// (get) Token: 0x06023DDB RID: 146907 RVA: 0x004F57BC File Offset: 0x004F39BC
-		// (set) Token: 0x06023DDC RID: 146908 RVA: 0x004F57C4 File Offset: 0x004F39C4
+		// Token: 0x1700A894 RID: 43156
+		// (get) Token: 0x06025E95 RID: 155285 RVA: 0x005328E0 File Offset: 0x00530AE0
+		// (set) Token: 0x06025E96 RID: 155286 RVA: 0x005328E8 File Offset: 0x00530AE8
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023DDD RID: 146909 RVA: 0x004F57CD File Offset: 0x004F39CD
+		// Token: 0x06025E97 RID: 155287 RVA: 0x005328F1 File Offset: 0x00530AF1
 		public ILevelPrefabPerformComponentT()
 		{
 			this.Disabled = false;

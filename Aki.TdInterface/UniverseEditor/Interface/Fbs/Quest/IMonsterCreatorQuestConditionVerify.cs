@@ -6,10 +6,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F34 RID: 16180
+	// Token: 0x02004372 RID: 17266
 	public static class IMonsterCreatorQuestConditionVerify
 	{
-		// Token: 0x06016FDA RID: 94170 RVA: 0x003510D8 File Offset: 0x0034F2D8
+		// Token: 0x0601863C RID: 99900 RVA: 0x0037A520 File Offset: 0x00378720
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false))
@@ -37,9 +37,18 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 						{
 							verifyAction3 = (IMonsterCreatorQuestConditionVerify.<>O.<2>__Verify = new VerifyTableAction(IMonsterMergedHpBarSettingsVerify.Verify));
 						}
-						if (verifier.VerifyTable(tablePos, offsetId2, verifyAction3, false) && verifier.VerifyField(tablePos, 20, 1UL, 1UL, false))
+						if (verifier.VerifyTable(tablePos, offsetId2, verifyAction3, false))
 						{
-							return verifier.VerifyTableEnd(tablePos);
+							short offsetId3 = 20;
+							VerifyTableAction verifyAction4;
+							if ((verifyAction4 = IMonsterCreatorQuestConditionVerify.<>O.<3>__Verify) == null)
+							{
+								verifyAction4 = (IMonsterCreatorQuestConditionVerify.<>O.<3>__Verify = new VerifyTableAction(ISpecificMonsterDeadPositionVerify.Verify));
+							}
+							if (verifier.VerifyVectorOfTables(tablePos, offsetId3, verifyAction4, false) && verifier.VerifyField(tablePos, 22, 1UL, 1UL, false))
+							{
+								return verifier.VerifyTableEnd(tablePos);
+							}
 						}
 					}
 				}
@@ -47,18 +56,21 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return false;
 		}
 
-		// Token: 0x0200790A RID: 30986
+		// Token: 0x02008150 RID: 33104
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040131DD RID: 78301
+			// Token: 0x0401423C RID: 82492
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x040131DE RID: 78302
+			// Token: 0x0401423D RID: 82493
 			public static VerifyUnionAction <1>__Verify;
 
-			// Token: 0x040131DF RID: 78303
+			// Token: 0x0401423E RID: 82494
 			public static VerifyTableAction <2>__Verify;
+
+			// Token: 0x0401423F RID: 82495
+			public static VerifyTableAction <3>__Verify;
 		}
 	}
 }

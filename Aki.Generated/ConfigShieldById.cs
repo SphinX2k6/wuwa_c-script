@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000923 RID: 2339
+	// Token: 0x0200096E RID: 2414
 	public class ConfigShieldById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060036E5 RID: 14053 RVA: 0x0018FB4C File Offset: 0x0018DD4C
+		// Token: 0x060038A7 RID: 14503 RVA: 0x0019CD6C File Offset: 0x0019AF6C
 		static ConfigShieldById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigShieldById.CreateStaticDefaultValue), new Action(ConfigShieldById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060036E6 RID: 14054 RVA: 0x0018FB6C File Offset: 0x0018DD6C
+		// Token: 0x060038A8 RID: 14504 RVA: 0x0019CD8C File Offset: 0x0019AF8C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigShieldById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060036E7 RID: 14055 RVA: 0x0018FBEB File Offset: 0x0018DDEB
+		// Token: 0x060038A9 RID: 14505 RVA: 0x0019CE0B File Offset: 0x0019B00B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigShieldById.LogPair = null;
 			ConfigShieldById.HandleId = 0;
 		}
 
-		// Token: 0x060036E8 RID: 14056 RVA: 0x0018FBF9 File Offset: 0x0018DDF9
+		// Token: 0x060038AA RID: 14506 RVA: 0x0019CE19 File Offset: 0x0019B019
 		public static void Init()
 		{
 			ConfigShieldById.HandleId = ConfigCommon.InitDataStatement(ConfigShieldById.HandleId, "db_shield.db", "select BinData from `Shield` where Id = ?");
 		}
 
-		// Token: 0x060036E9 RID: 14057 RVA: 0x0018FC14 File Offset: 0x0018DE14
+		// Token: 0x060038AB RID: 14507 RVA: 0x0019CE34 File Offset: 0x0019B034
 		public static Shield? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigShieldById.HandleId, ConfigShieldById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Shield?(rootAsShield);
 		}
 
-		// Token: 0x04003FDB RID: 16347
+		// Token: 0x040041E8 RID: 16872
 		private const string DB = "db_shield.db";
 
-		// Token: 0x04003FDC RID: 16348
+		// Token: 0x040041E9 RID: 16873
 		private const string FILE = "h.护盾.xlsx";
 
-		// Token: 0x04003FDD RID: 16349
+		// Token: 0x040041EA RID: 16874
 		private const string TABLE = "Shield";
 
-		// Token: 0x04003FDE RID: 16350
+		// Token: 0x040041EB RID: 16875
 		private const string COMMAND = "select BinData from `Shield` where Id = ?";
 
-		// Token: 0x04003FDF RID: 16351
+		// Token: 0x040041EC RID: 16876
 		private const string KEY_PREFIX = "ShieldById";
 
-		// Token: 0x04003FE0 RID: 16352
+		// Token: 0x040041ED RID: 16877
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003FE1 RID: 16353
+		// Token: 0x040041EE RID: 16878
 		private static int HandleId;
 	}
 }

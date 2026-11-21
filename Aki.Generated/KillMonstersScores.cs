@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D8C RID: 3468
+	// Token: 0x02000E71 RID: 3697
 	public struct KillMonstersScores : IFlatbufferObject
 	{
-		// Token: 0x17001A7D RID: 6781
-		// (get) Token: 0x0600879A RID: 34714 RVA: 0x00268C35 File Offset: 0x00266E35
+		// Token: 0x17001AE1 RID: 6881
+		// (get) Token: 0x06008DB5 RID: 36277 RVA: 0x00286E49 File Offset: 0x00285049
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600879B RID: 34715 RVA: 0x00268C42 File Offset: 0x00266E42
+		// Token: 0x06008DB6 RID: 36278 RVA: 0x00286E56 File Offset: 0x00285056
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600879C RID: 34716 RVA: 0x00268C4C File Offset: 0x00266E4C
+		// Token: 0x06008DB7 RID: 36279 RVA: 0x00286E60 File Offset: 0x00285060
 		public static KillMonstersScores GetRootAsKillMonstersScores(ByteBuffer _bb)
 		{
 			return KillMonstersScores.GetRootAsKillMonstersScores(_bb, default(KillMonstersScores));
 		}
 
-		// Token: 0x0600879D RID: 34717 RVA: 0x00268C68 File Offset: 0x00266E68
+		// Token: 0x06008DB8 RID: 36280 RVA: 0x00286E7C File Offset: 0x0028507C
 		public static KillMonstersScores GetRootAsKillMonstersScores(ByteBuffer _bb, KillMonstersScores obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600879E RID: 34718 RVA: 0x00268C85 File Offset: 0x00266E85
+		// Token: 0x06008DB9 RID: 36281 RVA: 0x00286E99 File Offset: 0x00285099
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600879F RID: 34719 RVA: 0x00268C94 File Offset: 0x00266E94
+		// Token: 0x06008DBA RID: 36282 RVA: 0x00286EA8 File Offset: 0x002850A8
 		public KillMonstersScores __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001A7E RID: 6782
-		// (get) Token: 0x060087A0 RID: 34720 RVA: 0x00268CA4 File Offset: 0x00266EA4
+		// Token: 0x17001AE2 RID: 6882
+		// (get) Token: 0x06008DBB RID: 36283 RVA: 0x00286EB8 File Offset: 0x002850B8
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001A7F RID: 6783
-		// (get) Token: 0x060087A1 RID: 34721 RVA: 0x00268CE0 File Offset: 0x00266EE0
+		// Token: 0x17001AE3 RID: 6883
+		// (get) Token: 0x06008DBC RID: 36284 RVA: 0x00286EF4 File Offset: 0x002850F4
 		public int InstanceID
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001A80 RID: 6784
-		// (get) Token: 0x060087A2 RID: 34722 RVA: 0x00268D1C File Offset: 0x00266F1C
+		// Token: 0x17001AE4 RID: 6884
+		// (get) Token: 0x06008DBD RID: 36285 RVA: 0x00286F30 File Offset: 0x00285130
 		public int ScoreMin
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001A81 RID: 6785
-		// (get) Token: 0x060087A3 RID: 34723 RVA: 0x00268D58 File Offset: 0x00266F58
+		// Token: 0x17001AE5 RID: 6885
+		// (get) Token: 0x06008DBE RID: 36286 RVA: 0x00286F6C File Offset: 0x0028516C
 		public int ScoreMax
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001A82 RID: 6786
-		// (get) Token: 0x060087A4 RID: 34724 RVA: 0x00268D98 File Offset: 0x00266F98
+		// Token: 0x17001AE6 RID: 6886
+		// (get) Token: 0x06008DBF RID: 36287 RVA: 0x00286FAC File Offset: 0x002851AC
 		public int Reward
 		{
 			get
@@ -124,7 +124,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060087A5 RID: 34725 RVA: 0x00268DD8 File Offset: 0x00266FD8
+		// Token: 0x06008DC0 RID: 36288 RVA: 0x00286FEC File Offset: 0x002851EC
 		public int DifficultyOptions(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -135,8 +135,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001A83 RID: 6787
-		// (get) Token: 0x060087A6 RID: 34726 RVA: 0x00268E18 File Offset: 0x00267018
+		// Token: 0x17001AE7 RID: 6887
+		// (get) Token: 0x06008DC1 RID: 36289 RVA: 0x0028702C File Offset: 0x0028522C
 		public int DifficultyOptionsLength
 		{
 			get
@@ -150,20 +150,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060087A7 RID: 34727 RVA: 0x00268E44 File Offset: 0x00267044
+		// Token: 0x06008DC2 RID: 36290 RVA: 0x00287058 File Offset: 0x00285258
 		public Span<int> GetDifficultyOptionsBytes()
 		{
 			return this.__p.__vector_as_span<int>(14, 4);
 		}
 
-		// Token: 0x060087A8 RID: 34728 RVA: 0x00268E54 File Offset: 0x00267054
+		// Token: 0x06008DC3 RID: 36291 RVA: 0x00287068 File Offset: 0x00285268
 		public int[] GetDifficultyOptionsArray()
 		{
 			return this.__p.__vector_as_array<int>(14) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17001A84 RID: 6788
-		// (get) Token: 0x060087A9 RID: 34729 RVA: 0x00268E6C File Offset: 0x0026706C
+		// Token: 0x17001AE8 RID: 6888
+		// (get) Token: 0x06008DC4 RID: 36292 RVA: 0x00287080 File Offset: 0x00285280
 		public string Desc
 		{
 			get
@@ -177,37 +177,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060087AA RID: 34730 RVA: 0x00268EA4 File Offset: 0x002670A4
+		// Token: 0x06008DC5 RID: 36293 RVA: 0x002870B8 File Offset: 0x002852B8
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x060087AB RID: 34731 RVA: 0x00268EB4 File Offset: 0x002670B4
+		// Token: 0x06008DC6 RID: 36294 RVA: 0x002870C8 File Offset: 0x002852C8
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x060087AC RID: 34732 RVA: 0x00268ECC File Offset: 0x002670CC
+		// Token: 0x06008DC7 RID: 36295 RVA: 0x002870E0 File Offset: 0x002852E0
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DifficultyOptionsIter()或GetDifficultyOptionsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] DifficultyOptions()
+		public int[] DifficultyOptions()
 		{
-			KillMonstersScores killMonstersScores = this;
-			return killMonstersScores.GetDifficultyOptionsArray() ?? Array.Empty<int>();
+			return this.GetDifficultyOptionsArray();
 		}
 
-		// Token: 0x060087AD RID: 34733 RVA: 0x00268EF0 File Offset: 0x002670F0
+		// Token: 0x06008DC8 RID: 36296 RVA: 0x002870E8 File Offset: 0x002852E8
 		[NullableContext(1)]
-		public readonly IEnumerable<int> DifficultyOptionsIter()
+		public IEnumerable<int> DifficultyOptionsIter()
 		{
 			KillMonstersScores.<DifficultyOptionsIter>d__28 <DifficultyOptionsIter>d__ = new KillMonstersScores.<DifficultyOptionsIter>d__28(-2);
 			<DifficultyOptionsIter>d__.<>3__<>4__this = this;
 			return <DifficultyOptionsIter>d__;
 		}
 
-		// Token: 0x04004E18 RID: 19992
+		// Token: 0x040053FD RID: 21501
 		private Table __p;
 	}
 }

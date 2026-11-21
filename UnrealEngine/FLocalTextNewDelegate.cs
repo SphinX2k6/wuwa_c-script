@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020020ED RID: 8429
+	// Token: 0x020006D1 RID: 1745
 	public sealed class FLocalTextNewDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601FBCE RID: 129998 RVA: 0x002F302A File Offset: 0x002F122A
+		// Token: 0x060094B7 RID: 38071 RVA: 0x000E03CA File Offset: 0x000DE5CA
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLocalTextNewDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601FBCF RID: 129999 RVA: 0x002F3036 File Offset: 0x002F1236
+		// Token: 0x060094B8 RID: 38072 RVA: 0x000E03D6 File Offset: 0x000DE5D6
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLocalTextNewDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FLocalTextNewDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601FBD0 RID: 130000 RVA: 0x002F3059 File Offset: 0x002F1259
+		// Token: 0x060094B9 RID: 38073 RVA: 0x000E03F9 File Offset: 0x000DE5F9
 		public FLocalTextNewDelegate()
 		{
 		}
 
-		// Token: 0x0601FBD1 RID: 130001 RVA: 0x002F3061 File Offset: 0x002F1261
+		// Token: 0x060094BA RID: 38074 RVA: 0x000E0401 File Offset: 0x000DE601
 		[NullableContext(2)]
 		public FLocalTextNewDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601FBD2 RID: 130002 RVA: 0x002F306B File Offset: 0x002F126B
+		// Token: 0x060094BB RID: 38075 RVA: 0x000E040B File Offset: 0x000DE60B
 		public FLocalTextNewDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601FBD3 RID: 130003 RVA: 0x002F3076 File Offset: 0x002F1276
+		// Token: 0x060094BC RID: 38076 RVA: 0x000E0416 File Offset: 0x000DE616
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<string, UUIText, bool, string>) ?? ((Func<string, UUIText, bool, string>)Delegate.CreateDelegate(typeof(Func<string, UUIText, bool, string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601FBD4 RID: 130004 RVA: 0x002F30A8 File Offset: 0x002F12A8
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060094BD RID: 38077 RVA: 0x000E0448 File Offset: 0x000DE648
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -70,10 +69,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FLocalTextNewDelegate.RegisterId);
 		}
 
-		// Token: 0x0601FBD5 RID: 130005 RVA: 0x002F30E4 File Offset: 0x002F12E4
+		// Token: 0x060094BE RID: 38078 RVA: 0x000E0484 File Offset: 0x000DE684
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe string Execute(string TextKey, [Nullable(2)] UUIText uiText, bool isMainText)
 		{
 			FLocalTextNewDelegate.__FLocalTextNewDelegate_DelegateParams* ptr = stackalloc FLocalTextNewDelegate.__FLocalTextNewDelegate_DelegateParams[(UIntPtr)63] + 15L / (long)sizeof(FLocalTextNewDelegate.__FLocalTextNewDelegate_DelegateParams) & -16L;
@@ -87,10 +85,9 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601FBD6 RID: 130006 RVA: 0x002F3164 File Offset: 0x002F1364
+		// Token: 0x060094BF RID: 38079 RVA: 0x000E0504 File Offset: 0x000DE704
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<string, UUIText, bool, string> func = target as Func<string, UUIText, bool, string>;
@@ -104,43 +101,43 @@ namespace UnrealEngine
 			FString.CopyFrom((void*)(&((FLocalTextNewDelegate.__FLocalTextNewDelegate_DelegateParams*)__Parameters)->__Result), src);
 		}
 
-		// Token: 0x040111C0 RID: 70080
+		// Token: 0x040040B1 RID: 16561
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040111C1 RID: 70081
+		// Token: 0x040040B2 RID: 16562
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LocalTextNewDelegate__DelegateSignature";
 
-		// Token: 0x040111C2 RID: 70082
+		// Token: 0x040040B3 RID: 16563
 		private static int RegisterId;
 
-		// Token: 0x020034D5 RID: 13525
+		// Token: 0x02000F01 RID: 3841
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
-		protected ref struct __FLocalTextNewDelegate_DelegateParams
+		private ref struct __FLocalTextNewDelegate_DelegateParams
 		{
-			// Token: 0x040174E5 RID: 95461
+			// Token: 0x040062CA RID: 25290
 			[FieldOffset(0)]
 			public FString TextKey;
 
-			// Token: 0x040174E6 RID: 95462
+			// Token: 0x040062CB RID: 25291
 			[FieldOffset(16)]
 			public IntPtr uiText;
 
-			// Token: 0x040174E7 RID: 95463
+			// Token: 0x040062CC RID: 25292
 			[FieldOffset(24)]
 			public bool isMainText;
 
-			// Token: 0x040174E8 RID: 95464
+			// Token: 0x040062CD RID: 25293
 			[FieldOffset(32)]
 			public FString __Result;
 		}
 
-		// Token: 0x020034D6 RID: 13526
+		// Token: 0x02000F02 RID: 3842
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040174E9 RID: 95465
+			// Token: 0x040062CE RID: 25294
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

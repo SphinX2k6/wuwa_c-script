@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042CB RID: 17099
+	// Token: 0x02003321 RID: 13089
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/ERelation.ERelation")]
 	public enum ERelation : byte
 	{
-		// Token: 0x04017439 RID: 95289
+		// Token: 0x0401211B RID: 74011
 		None,
-		// Token: 0x0401743A RID: 95290
+		// Token: 0x0401211C RID: 74012
 		Friend,
-		// Token: 0x0401743B RID: 95291
+		// Token: 0x0401211D RID: 74013
 		Enemy,
-		// Token: 0x0401743C RID: 95292
+		// Token: 0x0401211E RID: 74014
 		ERelation_MAX
 	}
 }

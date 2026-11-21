@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B80 RID: 7040
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D2D RID: 7469
 	public class ILiftMoveType
 	{
-		// Token: 0x060096C5 RID: 38597 RVA: 0x0015C20C File Offset: 0x0015A40C
+		// Token: 0x06009EA7 RID: 40615 RVA: 0x0016CDB8 File Offset: 0x0016AFB8
 		private ILiftMoveType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060096C6 RID: 38598 RVA: 0x0015C244 File Offset: 0x0015A444
+		// Token: 0x06009EA8 RID: 40616 RVA: 0x0016CDF0 File Offset: 0x0016AFF0
 		public static ILiftMoveType Create([Nullable(2)] ILiftMoveType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060096C7 RID: 38599 RVA: 0x0015C257 File Offset: 0x0015A457
+		// Token: 0x06009EA9 RID: 40617 RVA: 0x0016CE03 File Offset: 0x0016B003
 		public static ILiftMoveType CreateFromSetValue([Nullable(2)] ILiftMoveType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060096C8 RID: 38600 RVA: 0x0015C26A File Offset: 0x0015A46A
+		// Token: 0x06009EAA RID: 40618 RVA: 0x0016CE16 File Offset: 0x0016B016
 		public ILiftMoveType_SetValue ToSetValue()
 		{
 			return new ILiftMoveType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F79 RID: 12153
-		// (get) Token: 0x060096C9 RID: 38601 RVA: 0x0015C27D File Offset: 0x0015A47D
-		// (set) Token: 0x060096CA RID: 38602 RVA: 0x0015C2A8 File Offset: 0x0015A4A8
+		// Token: 0x1700319E RID: 12702
+		// (get) Token: 0x06009EAB RID: 40619 RVA: 0x0016CE29 File Offset: 0x0016B029
+		// (set) Token: 0x06009EAC RID: 40620 RVA: 0x0016CE54 File Offset: 0x0016B054
 		public virtual ELiftMoveType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005C24 RID: 23588
+		// Token: 0x040060BD RID: 24765
 		[Nullable(2)]
 		protected ILiftMoveType FbInstance;
 
-		// Token: 0x04005C25 RID: 23589
+		// Token: 0x040060BE RID: 24766
 		[Nullable(2)]
 		protected ILiftMoveType_SetValue PocoInterface;
 	}

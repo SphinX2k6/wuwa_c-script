@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026A2 RID: 9890
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002965 RID: 10597
 	public class IFloorSettings
 	{
-		// Token: 0x0600DD55 RID: 56661 RVA: 0x0020E20F File Offset: 0x0020C40F
+		// Token: 0x0600EB2C RID: 60204 RVA: 0x0022A9AF File Offset: 0x00228BAF
 		public static IFloorSettings Create(IFloorSettings? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041D3 RID: 16851
-		// (get) Token: 0x0600DD56 RID: 56662 RVA: 0x0020E22E File Offset: 0x0020C42E
+		// Token: 0x17004510 RID: 17680
+		// (get) Token: 0x0600EB2D RID: 60205 RVA: 0x0022A9CE File Offset: 0x00228BCE
 		public virtual string MeshPath
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041D4 RID: 16852
-		// (get) Token: 0x0600DD57 RID: 56663 RVA: 0x0020E23B File Offset: 0x0020C43B
+		// Token: 0x17004511 RID: 17681
+		// (get) Token: 0x0600EB2E RID: 60206 RVA: 0x0022A9DB File Offset: 0x00228BDB
 		public virtual string MaterialPath
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041D5 RID: 16853
-		// (get) Token: 0x0600DD58 RID: 56664 RVA: 0x0020E248 File Offset: 0x0020C448
+		// Token: 0x17004512 RID: 17682
+		// (get) Token: 0x0600EB2F RID: 60207 RVA: 0x0022A9E8 File Offset: 0x00228BE8
 		public virtual IVector2 Scale
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041D6 RID: 16854
-		// (get) Token: 0x0600DD59 RID: 56665 RVA: 0x0020E27C File Offset: 0x0020C47C
+		// Token: 0x17004513 RID: 17683
+		// (get) Token: 0x0600EB30 RID: 60208 RVA: 0x0022AA1C File Offset: 0x00228C1C
 		public virtual float ShowTime
 		{
 			get
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041D7 RID: 16855
-		// (get) Token: 0x0600DD5A RID: 56666 RVA: 0x0020E289 File Offset: 0x0020C489
+		// Token: 0x17004514 RID: 17684
+		// (get) Token: 0x0600EB31 RID: 60209 RVA: 0x0022AA29 File Offset: 0x00228C29
 		public virtual float DisappearTime
 		{
 			get
@@ -79,14 +77,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AF0 RID: 31472
+		// Token: 0x0400818D RID: 33165
 		private IFloorSettings Instance;
 
-		// Token: 0x04007AF1 RID: 31473
+		// Token: 0x0400818E RID: 33166
 		[Nullable(2)]
 		private IVector2 _ScaleCache;
 
-		// Token: 0x04007AF2 RID: 31474
+		// Token: 0x0400818F RID: 33167
 		private bool _ScaleInited;
 	}
 }

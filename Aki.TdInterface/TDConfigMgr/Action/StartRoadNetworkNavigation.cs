@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200221C RID: 8732
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002487 RID: 9351
 	public class StartRoadNetworkNavigation : ActionParams
 	{
-		// Token: 0x0600BFB6 RID: 49078 RVA: 0x001B8B28 File Offset: 0x001B6D28
+		// Token: 0x0600CB74 RID: 52084 RVA: 0x001D01F4 File Offset: 0x001CE3F4
 		private StartRoadNetworkNavigation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BFB7 RID: 49079 RVA: 0x001B8B60 File Offset: 0x001B6D60
+		// Token: 0x0600CB75 RID: 52085 RVA: 0x001D022C File Offset: 0x001CE42C
 		public static StartRoadNetworkNavigation Create([Nullable(2)] StartRoadNetworkNavigation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFB8 RID: 49080 RVA: 0x001B8B73 File Offset: 0x001B6D73
+		// Token: 0x0600CB76 RID: 52086 RVA: 0x001D023F File Offset: 0x001CE43F
 		public static StartRoadNetworkNavigation CreateFromSetValue([Nullable(2)] StartRoadNetworkNavigation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFB9 RID: 49081 RVA: 0x001B8B86 File Offset: 0x001B6D86
+		// Token: 0x0600CB77 RID: 52087 RVA: 0x001D0252 File Offset: 0x001CE452
 		public StartRoadNetworkNavigation_SetValue ToSetValue()
 		{
 			return new StartRoadNetworkNavigation_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A15 RID: 14869
-		// (get) Token: 0x0600BFBA RID: 49082 RVA: 0x001B8BB4 File Offset: 0x001B6DB4
-		// (set) Token: 0x0600BFBB RID: 49083 RVA: 0x001B8C15 File Offset: 0x001B6E15
+		// Token: 0x17003D0B RID: 15627
+		// (get) Token: 0x0600CB78 RID: 52088 RVA: 0x001D0280 File Offset: 0x001CE480
+		// (set) Token: 0x0600CB79 RID: 52089 RVA: 0x001D02E1 File Offset: 0x001CE4E1
 		public virtual ISceneItemRoadNetworkNavigation Target
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A16 RID: 14870
-		// (get) Token: 0x0600BFBC RID: 49084 RVA: 0x001B8C2C File Offset: 0x001B6E2C
-		// (set) Token: 0x0600BFBD RID: 49085 RVA: 0x001B8C8D File Offset: 0x001B6E8D
+		// Token: 0x17003D0C RID: 15628
+		// (get) Token: 0x0600CB7A RID: 52090 RVA: 0x001D02F8 File Offset: 0x001CE4F8
+		// (set) Token: 0x0600CB7B RID: 52091 RVA: 0x001D0359 File Offset: 0x001CE559
 		public virtual ISplineWayPoint Start
 		{
 			get
@@ -121,9 +119,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A17 RID: 14871
-		// (get) Token: 0x0600BFBE RID: 49086 RVA: 0x001B8CA4 File Offset: 0x001B6EA4
-		// (set) Token: 0x0600BFBF RID: 49087 RVA: 0x001B8D05 File Offset: 0x001B6F05
+		// Token: 0x17003D0D RID: 15629
+		// (get) Token: 0x0600CB7C RID: 52092 RVA: 0x001D0370 File Offset: 0x001CE570
+		// (set) Token: 0x0600CB7D RID: 52093 RVA: 0x001D03D1 File Offset: 0x001CE5D1
 		public virtual ISplineWayPoint End
 		{
 			get
@@ -151,30 +149,30 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007251 RID: 29265
+		// Token: 0x0400789B RID: 30875
 		[Nullable(2)]
 		protected new StartRoadNetworkNavigation FbInstance;
 
-		// Token: 0x04007252 RID: 29266
+		// Token: 0x0400789C RID: 30876
 		[Nullable(2)]
 		protected StartRoadNetworkNavigation_SetValue PocoInterface;
 
-		// Token: 0x04007253 RID: 29267
+		// Token: 0x0400789D RID: 30877
 		private ISceneItemRoadNetworkNavigation _TargetCache;
 
-		// Token: 0x04007254 RID: 29268
+		// Token: 0x0400789E RID: 30878
 		private bool _TargetInited;
 
-		// Token: 0x04007255 RID: 29269
+		// Token: 0x0400789F RID: 30879
 		private ISplineWayPoint _StartCache;
 
-		// Token: 0x04007256 RID: 29270
+		// Token: 0x040078A0 RID: 30880
 		private bool _StartInited;
 
-		// Token: 0x04007257 RID: 29271
+		// Token: 0x040078A1 RID: 30881
 		private ISplineWayPoint _EndCache;
 
-		// Token: 0x04007258 RID: 29272
+		// Token: 0x040078A2 RID: 30882
 		private bool _EndInited;
 	}
 }

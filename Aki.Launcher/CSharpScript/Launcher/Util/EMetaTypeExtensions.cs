@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x0200007C RID: 124
+	// Token: 0x0200007F RID: 127
 	public static class EMetaTypeExtensions
 	{
-		// Token: 0x06000344 RID: 836 RVA: 0x000117CC File Offset: 0x0000F9CC
+		// Token: 0x06000354 RID: 852 RVA: 0x00012650 File Offset: 0x00010850
 		public static string ToEnumString(this EMetaType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace CSharpScript.Launcher.Util
 			return result;
 		}
 
-		// Token: 0x06000345 RID: 837 RVA: 0x00011804 File Offset: 0x0000FA04
+		// Token: 0x06000355 RID: 853 RVA: 0x00012688 File Offset: 0x00010888
 		public static EMetaType FromString(string name)
 		{
 			EMetaType result;
@@ -38,7 +38,7 @@ namespace CSharpScript.Launcher.Util
 			return result;
 		}
 
-		// Token: 0x06000346 RID: 838 RVA: 0x0001182D File Offset: 0x0000FA2D
+		// Token: 0x06000356 RID: 854 RVA: 0x000126B1 File Offset: 0x000108B1
 		public static bool TryFromString(string name, out EMetaType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace CSharpScript.Launcher.Util
 			return true;
 		}
 
-		// Token: 0x06000347 RID: 839 RVA: 0x00011866 File Offset: 0x0000FA66
+		// Token: 0x06000357 RID: 855 RVA: 0x000126EA File Offset: 0x000108EA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace CSharpScript.Launcher.Util
 			};
 		}
 
-		// Token: 0x06000348 RID: 840 RVA: 0x0001187E File Offset: 0x0000FA7E
+		// Token: 0x06000358 RID: 856 RVA: 0x00012702 File Offset: 0x00010902
 		public static EMetaType[] GetValues()
 		{
 			return new EMetaType[]
@@ -80,7 +80,7 @@ namespace CSharpScript.Launcher.Util
 			};
 		}
 
-		// Token: 0x06000349 RID: 841 RVA: 0x0001188A File Offset: 0x0000FA8A
+		// Token: 0x06000359 RID: 857 RVA: 0x0001270E File Offset: 0x0001090E
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -4,10 +4,10 @@ using CSharpScript.Game.NewWorld.Common.Component;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Decorators
 {
-	// Token: 0x02006DD2 RID: 28114
+	// Token: 0x02005F51 RID: 24401
 	public class LevelAiDecoratorEntityState : LevelAiDecorator
 	{
-		// Token: 0x0604491A RID: 280858 RVA: 0x010E9D6C File Offset: 0x010E7F6C
+		// Token: 0x0603AA7E RID: 240254 RVA: 0x01093FBC File Offset: 0x010921BC
 		protected override void OnExecutionStart()
 		{
 			ICompareEntityStateCondition compareEntityStateCondition = this.Params as ICompareEntityStateCondition;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Decorators
 			component.AddTagAddOrRemoveListener(tagIdByName, new BaseTagComponent.TTagSwitchedCallback(this.OnGameplayTagChanged), null);
 		}
 
-		// Token: 0x0604491B RID: 280859 RVA: 0x010E9DDC File Offset: 0x010E7FDC
+		// Token: 0x0603AA7F RID: 240255 RVA: 0x0109402C File Offset: 0x0109222C
 		protected override void OnExecutionFinish(ELevelAiNodeResult result)
 		{
 			ICompareEntityStateCondition compareEntityStateCondition = this.Params as ICompareEntityStateCondition;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Decorators
 			component.RemoveTagAddOrRemoveListener(tagIdByName, new BaseTagComponent.TTagSwitchedCallback(this.OnGameplayTagChanged));
 		}
 
-		// Token: 0x0604491C RID: 280860 RVA: 0x010E9E4C File Offset: 0x010E804C
+		// Token: 0x0603AA80 RID: 240256 RVA: 0x0109409C File Offset: 0x0109229C
 		protected override bool CheckCondition(ELevelAiDecoratorCheckType checkType)
 		{
 			ICompareEntityStateCondition compareEntityStateCondition = this.Params as ICompareEntityStateCondition;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Decorators
 			return flag;
 		}
 
-		// Token: 0x0604491D RID: 280861 RVA: 0x010E9EBC File Offset: 0x010E80BC
+		// Token: 0x0603AA81 RID: 240257 RVA: 0x0109410C File Offset: 0x0109230C
 		private void OnGameplayTagChanged(int tagId, bool tagExist)
 		{
 			bool rawValue = this.CheckCondition(ELevelAiDecoratorCheckType.PlanRecheck);

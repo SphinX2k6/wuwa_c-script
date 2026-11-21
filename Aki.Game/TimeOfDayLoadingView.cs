@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002BB6 RID: 11190
+// Token: 0x02002131 RID: 8497
 public class TimeOfDayLoadingView : UiViewBase
 {
-	// Token: 0x06017326 RID: 95014 RVA: 0x005E165C File Offset: 0x005DF85C
+	// Token: 0x06014D57 RID: 85335 RVA: 0x0060E230 File Offset: 0x0060C430
 	[NullableContext(1)]
 	public TimeOfDayLoadingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06017327 RID: 95015 RVA: 0x005E1668 File Offset: 0x005DF868
+	// Token: 0x06014D58 RID: 85336 RVA: 0x0060E23C File Offset: 0x0060C43C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -26,9 +26,16 @@ public class TimeOfDayLoadingView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06017328 RID: 95016 RVA: 0x005E16B0 File Offset: 0x005DF8B0
+	// Token: 0x06014D59 RID: 85337 RVA: 0x0060E284 File Offset: 0x0060C484
 	protected override void OnAfterShow()
 	{
 		UiManager.Instance.CloseView(EUiViewName.TimeOfDayLoadingView, null);
+	}
+
+	// Token: 0x020083B2 RID: 33714
+	private static class EComponents
+	{
+		// Token: 0x0402A835 RID: 174133
+		public const int Arrow = 0;
 	}
 }

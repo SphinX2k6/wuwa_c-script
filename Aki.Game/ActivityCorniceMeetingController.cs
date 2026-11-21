@@ -6,36 +6,36 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using Google.Protobuf;
 
-// Token: 0x020011F1 RID: 4593
+// Token: 0x020006A5 RID: 1701
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityCorniceMeetingController : ActivityControllerBase
 {
-	// Token: 0x06007A99 RID: 31385 RVA: 0x0019CEF6 File Offset: 0x0019B0F6
+	// Token: 0x06004E30 RID: 20016 RVA: 0x001A5B9E File Offset: 0x001A3D9E
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06007A9A RID: 31386 RVA: 0x0019CEF8 File Offset: 0x0019B0F8
+	// Token: 0x06004E31 RID: 20017 RVA: 0x001A5BA0 File Offset: 0x001A3DA0
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_AbnormalData";
 	}
 
-	// Token: 0x06007A9B RID: 31387 RVA: 0x0019CEFF File Offset: 0x0019B0FF
+	// Token: 0x06004E32 RID: 20018 RVA: 0x001A5BA7 File Offset: 0x001A3DA7
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.CorniceChallengeEndNotify, new Action<IMessage, Net.CallbackStatus>(this.OnChallengeEndNotify));
 	}
 
-	// Token: 0x06007A9C RID: 31388 RVA: 0x0019CF1D File Offset: 0x0019B11D
+	// Token: 0x06004E33 RID: 20019 RVA: 0x001A5BC5 File Offset: 0x001A3DC5
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.CorniceChallengeEndNotify);
 	}
 
-	// Token: 0x06007A9D RID: 31389 RVA: 0x0019CF30 File Offset: 0x0019B130
+	// Token: 0x06004E34 RID: 20020 RVA: 0x001A5BD8 File Offset: 0x001A3DD8
 	[NullableContext(2)]
 	private void OnChallengeEndNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -64,33 +64,33 @@ public class ActivityCorniceMeetingController : ActivityControllerBase
 		UiManager.Instance.OpenView(EUiViewName.CorniceMeetingSettleView, corniceChallengeEndNotify, null);
 	}
 
-	// Token: 0x06007A9E RID: 31390 RVA: 0x0019CFEC File Offset: 0x0019B1EC
+	// Token: 0x06004E35 RID: 20021 RVA: 0x001A5C94 File Offset: 0x001A3E94
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewCorniceMeeting();
 	}
 
-	// Token: 0x06007A9F RID: 31391 RVA: 0x0019CFF3 File Offset: 0x0019B1F3
+	// Token: 0x06004E36 RID: 20022 RVA: 0x001A5C9B File Offset: 0x001A3E9B
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.ActivityId = data.Id;
 		return new ActivityCorniceMeetingData();
 	}
 
-	// Token: 0x06007AA0 RID: 31392 RVA: 0x0019D006 File Offset: 0x0019B206
+	// Token: 0x06004E37 RID: 20023 RVA: 0x001A5CAE File Offset: 0x001A3EAE
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06007AA1 RID: 31393 RVA: 0x0019D009 File Offset: 0x0019B209
+	// Token: 0x06004E38 RID: 20024 RVA: 0x001A5CB1 File Offset: 0x001A3EB1
 	[NullableContext(2)]
 	public ActivityCorniceMeetingData GetCurrentActivityData()
 	{
 		return ActivityModel.Instance.GetActivityById(this.ActivityId) as ActivityCorniceMeetingData;
 	}
 
-	// Token: 0x06007AA2 RID: 31394 RVA: 0x0019D020 File Offset: 0x0019B220
+	// Token: 0x06004E39 RID: 20025 RVA: 0x001A5CC8 File Offset: 0x001A3EC8
 	public void MultiCorniceMeetingRewardRequest(int activityId, Dictionary<int, List<int>> scoreList, Action callback)
 	{
 		MulCorniceMeetingRewardRequest mulCorniceMeetingRewardRequest = MulCorniceMeetingRewardRequest.Create();
@@ -108,7 +108,7 @@ public class ActivityCorniceMeetingController : ActivityControllerBase
 			MulCorniceMeetingRewardResponse mulCorniceMeetingRewardResponse = (MulCorniceMeetingRewardResponse)msg;
 			if (mulCorniceMeetingRewardResponse != null && mulCorniceMeetingRewardResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(mulCorniceMeetingRewardResponse.ErrorCode, 28733, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(mulCorniceMeetingRewardResponse.ErrorCode, 20556, null, true, true);
 				return;
 			}
 			ActivityCorniceMeetingData currentActivityData = this.GetCurrentActivityData();
@@ -130,7 +130,7 @@ public class ActivityCorniceMeetingController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06007AA3 RID: 31395 RVA: 0x0019D0E8 File Offset: 0x0019B2E8
+	// Token: 0x06004E3A RID: 20026 RVA: 0x001A5D90 File Offset: 0x001A3F90
 	public void CorniceMeetingChallengeTransRequest(int levelPlayId)
 	{
 		CorniceChallengeTransRequest corniceChallengeTransRequest = CorniceChallengeTransRequest.Create();
@@ -140,13 +140,13 @@ public class ActivityCorniceMeetingController : ActivityControllerBase
 			CorniceChallengeTransResponse corniceChallengeTransResponse = (CorniceChallengeTransResponse)msg;
 			if (corniceChallengeTransResponse != null && corniceChallengeTransResponse.ErrorCode != ErrorCode.Success && corniceChallengeTransResponse.ErrorCode != ErrorCode.ErrPlayerIsTeleportCanNotDoTeleport)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(corniceChallengeTransResponse.ErrorCode, 29837, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(corniceChallengeTransResponse.ErrorCode, 23951, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x17000A7C RID: 2684
-	// (get) Token: 0x06007AA4 RID: 31396 RVA: 0x0019D132 File Offset: 0x0019B332
+	// Token: 0x17000A9C RID: 2716
+	// (get) Token: 0x06004E3B RID: 20027 RVA: 0x001A5DDA File Offset: 0x001A3FDA
 	public static ActivityCorniceMeetingController Instance
 	{
 		get
@@ -155,7 +155,7 @@ public class ActivityCorniceMeetingController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06007AA5 RID: 31397 RVA: 0x0019D139 File Offset: 0x0019B339
+	// Token: 0x06004E3C RID: 20028 RVA: 0x001A5DE1 File Offset: 0x001A3FE1
 	public static ActivityCorniceMeetingController GetOrCreateInstance()
 	{
 		if (ActivityCorniceMeetingController._Instance == null)
@@ -165,7 +165,7 @@ public class ActivityCorniceMeetingController : ActivityControllerBase
 		return ActivityCorniceMeetingController._Instance;
 	}
 
-	// Token: 0x06007AA6 RID: 31398 RVA: 0x0019D14D File Offset: 0x0019B34D
+	// Token: 0x06004E3D RID: 20029 RVA: 0x001A5DF5 File Offset: 0x001A3FF5
 	public static bool CreateInstance()
 	{
 		if (ActivityCorniceMeetingController._Instance != null)
@@ -176,27 +176,27 @@ public class ActivityCorniceMeetingController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06007AA7 RID: 31399 RVA: 0x0019D163 File Offset: 0x0019B363
+	// Token: 0x06004E3E RID: 20030 RVA: 0x001A5E0B File Offset: 0x001A400B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06007AA8 RID: 31400 RVA: 0x0019D165 File Offset: 0x0019B365
+	// Token: 0x06004E3F RID: 20031 RVA: 0x001A5E0D File Offset: 0x001A400D
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityCorniceMeetingController._Instance = null;
 	}
 
-	// Token: 0x06007AA9 RID: 31401 RVA: 0x0019D16D File Offset: 0x0019B36D
+	// Token: 0x06004E40 RID: 20032 RVA: 0x001A5E15 File Offset: 0x001A4015
 	static ActivityCorniceMeetingController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityCorniceMeetingController.CreateStaticDefaultValue), new Action(ActivityCorniceMeetingController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003831 RID: 14385
+	// Token: 0x040038CA RID: 14538
 	public int ActivityId;
 
-	// Token: 0x04003832 RID: 14386
+	// Token: 0x040038CB RID: 14539
 	[Nullable(2)]
 	private static ActivityCorniceMeetingController _Instance;
 }

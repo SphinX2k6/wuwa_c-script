@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F89 RID: 20361
+	// Token: 0x02003F52 RID: 16210
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickHackMarksView : BattleChildView
 	{
-		// Token: 0x06034220 RID: 213536 RVA: 0x00C3C010 File Offset: 0x00C3A210
+		// Token: 0x0602908E RID: 168078 RVA: 0x00B857BC File Offset: 0x00B839BC
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			EventSystem.Instance.Add<QuickHackMarkInstance>(EEventName.OnQuickHackStartMark, new Action<QuickHackMarkInstance>(this.OnQuickHackStartMark));
 		}
 
-		// Token: 0x06034221 RID: 213537 RVA: 0x00C3C094 File Offset: 0x00C3A294
+		// Token: 0x0602908F RID: 168079 RVA: 0x00B85840 File Offset: 0x00B83A40
 		public override void Reset()
 		{
 			base.Reset();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			EventSystem.Instance.Remove<QuickHackMarkInstance>(EEventName.OnQuickHackStartMark, new Action<QuickHackMarkInstance>(this.OnQuickHackStartMark));
 		}
 
-		// Token: 0x06034222 RID: 213538 RVA: 0x00C3C101 File Offset: 0x00C3A301
+		// Token: 0x06029090 RID: 168080 RVA: 0x00B858AD File Offset: 0x00B83AAD
 		public void OnShowBattleChildViewPanel()
 		{
 			QuickHackMarkManager markManager = QuickHackModel.Instance.MarkManager;
@@ -62,14 +62,14 @@ namespace CSharpScript.Game.Module.QuickHack
 			markManager.UpdateMarks();
 		}
 
-		// Token: 0x06034223 RID: 213539 RVA: 0x00C3C117 File Offset: 0x00C3A317
+		// Token: 0x06029091 RID: 168081 RVA: 0x00B858C3 File Offset: 0x00B83AC3
 		public void Update()
 		{
 			this.ConsumeWaitMarks();
 			this.UpdateAllMarksItem();
 		}
 
-		// Token: 0x06034224 RID: 213540 RVA: 0x00C3C128 File Offset: 0x00C3A328
+		// Token: 0x06029092 RID: 168082 RVA: 0x00B858D4 File Offset: 0x00B83AD4
 		private void ConsumeWaitMarks()
 		{
 			if (this.WaitMarkQueue == null || this.WaitMarkQueue.Size <= 0)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034225 RID: 213541 RVA: 0x00C3C184 File Offset: 0x00C3A384
+		// Token: 0x06029093 RID: 168083 RVA: 0x00B85930 File Offset: 0x00B83B30
 		private void UpdateAllMarksItem()
 		{
 			if (this.MarksItemMap == null || this.MarksItemMap.Count <= 0)
@@ -139,13 +139,13 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034226 RID: 213542 RVA: 0x00C3C2E8 File Offset: 0x00C3A4E8
+		// Token: 0x06029094 RID: 168084 RVA: 0x00B85A94 File Offset: 0x00B83C94
 		private void OnQuickHackStartMark(QuickHackMarkInstance mark)
 		{
 			this.PushMark(mark);
 		}
 
-		// Token: 0x06034227 RID: 213543 RVA: 0x00C3C2F1 File Offset: 0x00C3A4F1
+		// Token: 0x06029095 RID: 168085 RVA: 0x00B85A9D File Offset: 0x00B83C9D
 		private void PushMark(QuickHackMarkInstance mark)
 		{
 			if (this.WaitMarkQueue == null)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.WaitMarkQueue.Push(mark);
 		}
 
-		// Token: 0x06034228 RID: 213544 RVA: 0x00C3C314 File Offset: 0x00C3A514
+		// Token: 0x06029096 RID: 168086 RVA: 0x00B85AC0 File Offset: 0x00B83CC0
 		private UniTask StartMarkAsync(QuickHackMarkInstance mark)
 		{
 			QuickHackMarksView.<StartMarkAsync>d__13 <StartMarkAsync>d__;
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return <StartMarkAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034229 RID: 213545 RVA: 0x00C3C360 File Offset: 0x00C3A560
+		// Token: 0x06029097 RID: 168087 RVA: 0x00B85B0C File Offset: 0x00B83D0C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return <GetOrCreateMarksItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603422A RID: 213546 RVA: 0x00C3C3AC File Offset: 0x00C3A5AC
+		// Token: 0x06029098 RID: 168088 RVA: 0x00B85B58 File Offset: 0x00B83D58
 		private void OnMarksFinish(EntityHandle owner)
 		{
 			if (this.MarksItemMap == null)
@@ -199,10 +199,10 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0401BB81 RID: 113537
+		// Token: 0x04016556 RID: 91478
 		private const int SHOW_MAX_SIZE_PER_UPDATE = 3;
 
-		// Token: 0x0401BB82 RID: 113538
+		// Token: 0x04016557 RID: 91479
 		[Nullable(new byte[]
 		{
 			2,
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.QuickHack
 		})]
 		private Queue<QuickHackMarkInstance> WaitMarkQueue;
 
-		// Token: 0x0401BB83 RID: 113539
+		// Token: 0x04016558 RID: 91480
 		[Nullable(new byte[]
 		{
 			2,
@@ -219,11 +219,11 @@ namespace CSharpScript.Game.Module.QuickHack
 		})]
 		private Dictionary<EntityHandle, QuickHackMarksItem> MarksItemMap;
 
-		// Token: 0x0401BB84 RID: 113540
+		// Token: 0x04016559 RID: 91481
 		[Nullable(2)]
 		private Vector TempVector;
 
-		// Token: 0x0401BB85 RID: 113541
+		// Token: 0x0401655A RID: 91482
 		[Nullable(2)]
 		private Vector2D TempScreenPosition;
 	}

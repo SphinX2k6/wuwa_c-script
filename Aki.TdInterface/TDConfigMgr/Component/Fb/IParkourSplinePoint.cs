@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C3E RID: 3134
+	// Token: 0x02000D11 RID: 3345
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IParkourSplinePoint : IBaseSplinePointType
 	{
-		// Token: 0x060047B9 RID: 18361 RVA: 0x000B48ED File Offset: 0x000B2AED
-		[NullableContext(1)]
+		// Token: 0x06004C29 RID: 19497 RVA: 0x000BEC9D File Offset: 0x000BCE9D
+		[NullableContext(0)]
 		public static IParkourSplinePoint Create(IParkourSplinePoint? instance)
 		{
 			if (instance == null)
@@ -24,12 +24,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014FA RID: 5370
-		// (get) Token: 0x060047BA RID: 18362 RVA: 0x000B490C File Offset: 0x000B2B0C
-		[Nullable(1)]
+		// Token: 0x17001602 RID: 5634
+		// (get) Token: 0x06004C2A RID: 19498 RVA: 0x000BECBC File Offset: 0x000BCEBC
+		[Nullable(0)]
 		public override VectorInfo Position
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._PositionInited)
@@ -42,12 +42,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014FB RID: 5371
-		// (get) Token: 0x060047BB RID: 18363 RVA: 0x000B4940 File Offset: 0x000B2B40
-		[Nullable(1)]
+		// Token: 0x17001603 RID: 5635
+		// (get) Token: 0x06004C2B RID: 19499 RVA: 0x000BECF0 File Offset: 0x000BCEF0
+		[Nullable(0)]
 		public override VectorInfo ArriveTangent
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ArriveTangentInited)
@@ -60,12 +60,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014FC RID: 5372
-		// (get) Token: 0x060047BC RID: 18364 RVA: 0x000B4974 File Offset: 0x000B2B74
-		[Nullable(1)]
+		// Token: 0x17001604 RID: 5636
+		// (get) Token: 0x06004C2C RID: 19500 RVA: 0x000BED24 File Offset: 0x000BCF24
+		[Nullable(0)]
 		public override VectorInfo LeaveTangent
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._LeaveTangentInited)
@@ -78,8 +78,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014FD RID: 5373
-		// (get) Token: 0x060047BD RID: 18365 RVA: 0x000B49A8 File Offset: 0x000B2BA8
+		// Token: 0x17001605 RID: 5637
+		// (get) Token: 0x06004C2D RID: 19501 RVA: 0x000BED58 File Offset: 0x000BCF58
 		public override ESplineLine LineType
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014FE RID: 5374
-		// (get) Token: 0x060047BE RID: 18366 RVA: 0x000B49B5 File Offset: 0x000B2BB5
+		// Token: 0x17001606 RID: 5638
+		// (get) Token: 0x06004C2E RID: 19502 RVA: 0x000BED65 File Offset: 0x000BCF65
 		public override VectorInfo Rotation
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014FF RID: 5375
-		// (get) Token: 0x060047BF RID: 18367 RVA: 0x000B49E9 File Offset: 0x000B2BE9
+		// Token: 0x17001607 RID: 5639
+		// (get) Token: 0x06004C2F RID: 19503 RVA: 0x000BED99 File Offset: 0x000BCF99
 		public virtual int Radius
 		{
 			get
@@ -114,8 +114,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001500 RID: 5376
-		// (get) Token: 0x060047C0 RID: 18368 RVA: 0x000B49F8 File Offset: 0x000B2BF8
+		// Token: 0x17001608 RID: 5640
+		// (get) Token: 0x06004C30 RID: 19504 RVA: 0x000BEDA8 File Offset: 0x000BCFA8
 		public virtual float? ModifiedTime
 		{
 			get
@@ -128,8 +128,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001501 RID: 5377
-		// (get) Token: 0x060047C1 RID: 18369 RVA: 0x000B4A30 File Offset: 0x000B2C30
+		// Token: 0x17001609 RID: 5641
+		// (get) Token: 0x06004C31 RID: 19505 RVA: 0x000BEDE0 File Offset: 0x000BCFE0
 		public virtual long? BuffId
 		{
 			get
@@ -142,8 +142,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001502 RID: 5378
-		// (get) Token: 0x060047C2 RID: 18370 RVA: 0x000B4A66 File Offset: 0x000B2C66
+		// Token: 0x1700160A RID: 5642
+		// (get) Token: 0x06004C32 RID: 19506 RVA: 0x000BEE16 File Offset: 0x000BD016
 		public virtual IPointGroup PointGroup
 		{
 			get
@@ -158,8 +158,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001503 RID: 5379
-		// (get) Token: 0x060047C3 RID: 18371 RVA: 0x000B4A9A File Offset: 0x000B2C9A
+		// Token: 0x1700160B RID: 5643
+		// (get) Token: 0x06004C33 RID: 19507 RVA: 0x000BEE4A File Offset: 0x000BD04A
 		public virtual string PlayerTag
 		{
 			get
@@ -168,37 +168,37 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040028CD RID: 10445
+		// Token: 0x04002B22 RID: 11042
 		private IParkourSplinePoint Instance;
 
-		// Token: 0x040028CE RID: 10446
+		// Token: 0x04002B23 RID: 11043
 		private VectorInfo _PositionCache;
 
-		// Token: 0x040028CF RID: 10447
+		// Token: 0x04002B24 RID: 11044
 		private bool _PositionInited;
 
-		// Token: 0x040028D0 RID: 10448
+		// Token: 0x04002B25 RID: 11045
 		private VectorInfo _ArriveTangentCache;
 
-		// Token: 0x040028D1 RID: 10449
+		// Token: 0x04002B26 RID: 11046
 		private bool _ArriveTangentInited;
 
-		// Token: 0x040028D2 RID: 10450
+		// Token: 0x04002B27 RID: 11047
 		private VectorInfo _LeaveTangentCache;
 
-		// Token: 0x040028D3 RID: 10451
+		// Token: 0x04002B28 RID: 11048
 		private bool _LeaveTangentInited;
 
-		// Token: 0x040028D4 RID: 10452
+		// Token: 0x04002B29 RID: 11049
 		private VectorInfo _RotationCache;
 
-		// Token: 0x040028D5 RID: 10453
+		// Token: 0x04002B2A RID: 11050
 		private bool _RotationInited;
 
-		// Token: 0x040028D6 RID: 10454
+		// Token: 0x04002B2B RID: 11051
 		private IPointGroup _PointGroupCache;
 
-		// Token: 0x040028D7 RID: 10455
+		// Token: 0x04002B2C RID: 11052
 		private bool _PointGroupInited;
 	}
 }

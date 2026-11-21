@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018A6 RID: 6310
+	// Token: 0x020003C9 RID: 969
 	[UnrealObjectPath("/Script/KuroGameplay.EffectModelNDC")]
 	[UnrealStructLayout(152, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 152)]
 	public class UEffectModelNDC : UEffectModelBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06017402 RID: 95234 RVA: 0x0021EB4F File Offset: 0x0021CD4F
+		// Token: 0x06005EA3 RID: 24227 RVA: 0x00085F06 File Offset: 0x00084106
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UEffectModelNDC._ClassPtr;
 		}
 
-		// Token: 0x06017403 RID: 95235 RVA: 0x0021EB5C File Offset: 0x0021CD5C
+		// Token: 0x06005EA4 RID: 24228 RVA: 0x00085F14 File Offset: 0x00084114
 		public UEffectModelNDC() : this(BuiltinUtils.AllocNativeUObject(UEffectModelNDC.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06017404 RID: 95236 RVA: 0x0021EB84 File Offset: 0x0021CD84
+		// Token: 0x06005EA5 RID: 24229 RVA: 0x00085F3C File Offset: 0x0008413C
 		[NullableContext(1)]
 		public UEffectModelNDC(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UEffectModelNDC.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005D92 RID: 23954
-		// (get) Token: 0x06017405 RID: 95237 RVA: 0x0021EBB7 File Offset: 0x0021CDB7
-		// (set) Token: 0x06017406 RID: 95238 RVA: 0x0021EBCB File Offset: 0x0021CDCB
+		// Token: 0x170012D0 RID: 4816
+		// (get) Token: 0x06005EA6 RID: 24230 RVA: 0x00085F6F File Offset: 0x0008416F
+		// (set) Token: 0x06005EA7 RID: 24231 RVA: 0x00085F83 File Offset: 0x00084183
 		[Nullable(2)]
 		public unsafe UNiagaraDataChannelAsset NiagaraDataChannel
 		{
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D93 RID: 23955
-		// (get) Token: 0x06017407 RID: 95239 RVA: 0x0021EBE0 File Offset: 0x0021CDE0
-		// (set) Token: 0x06017408 RID: 95240 RVA: 0x0021EBF4 File Offset: 0x0021CDF4
+		// Token: 0x170012D1 RID: 4817
+		// (get) Token: 0x06005EA8 RID: 24232 RVA: 0x00085F98 File Offset: 0x00084198
+		// (set) Token: 0x06005EA9 RID: 24233 RVA: 0x00085FAC File Offset: 0x000841AC
 		public unsafe FVector Scale
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D94 RID: 23956
-		// (get) Token: 0x06017409 RID: 95241 RVA: 0x0021EC09 File Offset: 0x0021CE09
-		// (set) Token: 0x0601740A RID: 95242 RVA: 0x0021EC19 File Offset: 0x0021CE19
+		// Token: 0x170012D2 RID: 4818
+		// (get) Token: 0x06005EAA RID: 24234 RVA: 0x00085FC1 File Offset: 0x000841C1
+		// (set) Token: 0x06005EAB RID: 24235 RVA: 0x00085FD1 File Offset: 0x000841D1
 		public unsafe bool IgnoreActorScale
 		{
 			get
@@ -76,34 +76,34 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601740B RID: 95243 RVA: 0x0021EC2A File Offset: 0x0021CE2A
+		// Token: 0x06005EAC RID: 24236 RVA: 0x00085FE2 File Offset: 0x000841E2
 		static UEffectModelNDC()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.EffectModelNDC");
 		}
 
-		// Token: 0x0601740C RID: 95244 RVA: 0x0021EC38 File Offset: 0x0021CE38
+		// Token: 0x06005EAD RID: 24237 RVA: 0x00085FF0 File Offset: 0x000841F0
 		protected UEffectModelNDC(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C9DA RID: 51674
+		// Token: 0x040027A3 RID: 10147
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroGameplay.EffectModelNDC";
 
-		// Token: 0x0400C9DB RID: 51675
+		// Token: 0x040027A4 RID: 10148
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C9DC RID: 51676
+		// Token: 0x040027A5 RID: 10149
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C9DD RID: 51677
+		// Token: 0x040027A6 RID: 10150
 		internal static int __PropertyOffset_NiagaraDataChannel;
 
-		// Token: 0x0400C9DE RID: 51678
+		// Token: 0x040027A7 RID: 10151
 		internal static int __PropertyOffset_Scale;
 
-		// Token: 0x0400C9DF RID: 51679
+		// Token: 0x040027A8 RID: 10152
 		internal static int __PropertyOffset_IgnoreActorScale;
 	}
 }

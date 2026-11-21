@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 {
-	// Token: 0x02005242 RID: 21058
+	// Token: 0x02004212 RID: 16914
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBanButtonFunctionModule
 	{
-		// Token: 0x06035CA7 RID: 220327 RVA: 0x00CBA224 File Offset: 0x00CB8424
+		// Token: 0x0602ABA2 RID: 175010 RVA: 0x00C07864 File Offset: 0x00C05A64
 		private void RefreshButtonState(UUIButtonComponent button)
 		{
 			HashSet<string> hashSet;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			}
 		}
 
-		// Token: 0x06035CA8 RID: 220328 RVA: 0x00CBA25C File Offset: 0x00CB845C
+		// Token: 0x0602ABA3 RID: 175011 RVA: 0x00C0789C File Offset: 0x00C05A9C
 		private void OnBanButton(UUIButtonComponent button, string reason)
 		{
 			HashSet<string> hashSet;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			}
 		}
 
-		// Token: 0x06035CA9 RID: 220329 RVA: 0x00CBA28C File Offset: 0x00CB848C
+		// Token: 0x0602ABA4 RID: 175012 RVA: 0x00C078CC File Offset: 0x00C05ACC
 		private void OnResumeButton(UUIButtonComponent button, string reason)
 		{
 			HashSet<string> hashSet;
@@ -47,13 +47,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			}
 		}
 
-		// Token: 0x06035CAA RID: 220330 RVA: 0x00CBA2BB File Offset: 0x00CB84BB
+		// Token: 0x0602ABA5 RID: 175013 RVA: 0x00C078FB File Offset: 0x00C05AFB
 		public void RegisterButton(UUIButtonComponent button)
 		{
 			this.ButtonMap[button] = new HashSet<string>();
 		}
 
-		// Token: 0x06035CAB RID: 220331 RVA: 0x00CBA2D0 File Offset: 0x00CB84D0
+		// Token: 0x0602ABA6 RID: 175014 RVA: 0x00C07910 File Offset: 0x00C05B10
 		public void BanButton(UUIButtonComponent button, string reason)
 		{
 			Log instance = Log.Instance;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.OnBanButton(button, reason);
 		}
 
-		// Token: 0x06035CAC RID: 220332 RVA: 0x00CBA310 File Offset: 0x00CB8510
+		// Token: 0x0602ABA7 RID: 175015 RVA: 0x00C07950 File Offset: 0x00C05B50
 		public void ResumeButton(UUIButtonComponent button, string reason)
 		{
 			Log instance = Log.Instance;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.OnResumeButton(button, reason);
 		}
 
-		// Token: 0x06035CAD RID: 220333 RVA: 0x00CBA350 File Offset: 0x00CB8550
+		// Token: 0x0602ABA8 RID: 175016 RVA: 0x00C07990 File Offset: 0x00C05B90
 		public void BanButtonList(string reason)
 		{
 			Log instance = Log.Instance;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			}
 		}
 
-		// Token: 0x06035CAE RID: 220334 RVA: 0x00CBA3D4 File Offset: 0x00CB85D4
+		// Token: 0x0602ABA9 RID: 175017 RVA: 0x00C07A14 File Offset: 0x00C05C14
 		public void ResumeButtonList(string reason)
 		{
 			Log instance = Log.Instance;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			}
 		}
 
-		// Token: 0x0401C85A RID: 116826
+		// Token: 0x0401728F RID: 94863
 		protected Dictionary<UUIButtonComponent, HashSet<string>> ButtonMap = new Dictionary<UUIButtonComponent, HashSet<string>>();
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006297 RID: 25239
+	// Token: 0x02006908 RID: 26888
 	public class ICameraOperationType_UnionUnion
 	{
-		// Token: 0x1700BC59 RID: 48217
-		// (get) Token: 0x0602B995 RID: 178581 RVA: 0x0060089D File Offset: 0x005FEA9D
-		// (set) Token: 0x0602B996 RID: 178582 RVA: 0x006008A5 File Offset: 0x005FEAA5
+		// Token: 0x1700C5E1 RID: 50657
+		// (get) Token: 0x0602E0F6 RID: 188662 RVA: 0x0064B6A5 File Offset: 0x006498A5
+		// (set) Token: 0x0602E0F7 RID: 188663 RVA: 0x0064B6AD File Offset: 0x006498AD
 		public ICameraOperationType_Union Type { get; set; }
 
-		// Token: 0x1700BC5A RID: 48218
-		// (get) Token: 0x0602B997 RID: 178583 RVA: 0x006008AE File Offset: 0x005FEAAE
-		// (set) Token: 0x0602B998 RID: 178584 RVA: 0x006008B6 File Offset: 0x005FEAB6
+		// Token: 0x1700C5E2 RID: 50658
+		// (get) Token: 0x0602E0F8 RID: 188664 RVA: 0x0064B6B6 File Offset: 0x006498B6
+		// (set) Token: 0x0602E0F9 RID: 188665 RVA: 0x0064B6BE File Offset: 0x006498BE
 		public object Value { get; set; }
 
-		// Token: 0x0602B999 RID: 178585 RVA: 0x006008BF File Offset: 0x005FEABF
+		// Token: 0x0602E0FA RID: 188666 RVA: 0x0064B6C7 File Offset: 0x006498C7
 		public ICameraOperationType_UnionUnion()
 		{
 			this.Type = ICameraOperationType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602B99A RID: 178586 RVA: 0x006008D5 File Offset: 0x005FEAD5
+		// Token: 0x0602E0FB RID: 188667 RVA: 0x0064B6DD File Offset: 0x006498DD
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602B99B RID: 178587 RVA: 0x006008E7 File Offset: 0x005FEAE7
+		// Token: 0x0602E0FC RID: 188668 RVA: 0x0064B6EF File Offset: 0x006498EF
 		public ICameraOperationTypeT AsICameraOperationType()
 		{
 			return this.As<ICameraOperationTypeT>();
 		}
 
-		// Token: 0x0602B99C RID: 178588 RVA: 0x006008EF File Offset: 0x005FEAEF
+		// Token: 0x0602E0FD RID: 188669 RVA: 0x0064B6F7 File Offset: 0x006498F7
 		public static ICameraOperationType_UnionUnion FromICameraOperationType(ICameraOperationTypeT _icameraoperationtype)
 		{
 			return new ICameraOperationType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B99D RID: 178589 RVA: 0x00600904 File Offset: 0x005FEB04
+		// Token: 0x0602E0FE RID: 188670 RVA: 0x0064B70C File Offset: 0x0064990C
 		public IEnableCameraOperationT AsIEnableCameraOperation()
 		{
 			return this.As<IEnableCameraOperationT>();
 		}
 
-		// Token: 0x0602B99E RID: 178590 RVA: 0x0060090C File Offset: 0x005FEB0C
+		// Token: 0x0602E0FF RID: 188671 RVA: 0x0064B714 File Offset: 0x00649914
 		public static ICameraOperationType_UnionUnion FromIEnableCameraOperation(IEnableCameraOperationT _ienablecameraoperation)
 		{
 			return new ICameraOperationType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B99F RID: 178591 RVA: 0x00600921 File Offset: 0x005FEB21
+		// Token: 0x0602E100 RID: 188672 RVA: 0x0064B729 File Offset: 0x00649929
 		public IEnableSectionalCameraOperationT AsIEnableSectionalCameraOperation()
 		{
 			return this.As<IEnableSectionalCameraOperationT>();
 		}
 
-		// Token: 0x0602B9A0 RID: 178592 RVA: 0x00600929 File Offset: 0x005FEB29
+		// Token: 0x0602E101 RID: 188673 RVA: 0x0064B731 File Offset: 0x00649931
 		public static ICameraOperationType_UnionUnion FromIEnableSectionalCameraOperation(IEnableSectionalCameraOperationT _ienablesectionalcameraoperation)
 		{
 			return new ICameraOperationType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B9A1 RID: 178593 RVA: 0x0060093E File Offset: 0x005FEB3E
+		// Token: 0x0602E102 RID: 188674 RVA: 0x0064B746 File Offset: 0x00649946
 		public IDisableCameraOperationT AsIDisableCameraOperation()
 		{
 			return this.As<IDisableCameraOperationT>();
 		}
 
-		// Token: 0x0602B9A2 RID: 178594 RVA: 0x00600946 File Offset: 0x005FEB46
+		// Token: 0x0602E103 RID: 188675 RVA: 0x0064B74E File Offset: 0x0064994E
 		public static ICameraOperationType_UnionUnion FromIDisableCameraOperation(IDisableCameraOperationT _idisablecameraoperation)
 		{
 			return new ICameraOperationType_UnionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B9A3 RID: 178595 RVA: 0x0060095C File Offset: 0x005FEB5C
+		// Token: 0x0602E104 RID: 188676 RVA: 0x0064B764 File Offset: 0x00649964
 		public static int Pack(FlatBufferBuilder builder, ICameraOperationType_UnionUnion _o)
 		{
 			switch (_o.Type)

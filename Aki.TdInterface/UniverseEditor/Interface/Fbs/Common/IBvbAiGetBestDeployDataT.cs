@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D2F RID: 23855
+	// Token: 0x02006366 RID: 25446
 	public class IBvbAiGetBestDeployDataT
 	{
-		// Token: 0x1700B2CF RID: 45775
-		// (get) Token: 0x06028C8D RID: 167053 RVA: 0x0059A615 File Offset: 0x00598815
-		// (set) Token: 0x06028C8E RID: 167054 RVA: 0x0059A61D File Offset: 0x0059881D
+		// Token: 0x1700BC30 RID: 48176
+		// (get) Token: 0x0602B2F7 RID: 176887 RVA: 0x005E3085 File Offset: 0x005E1285
+		// (set) Token: 0x0602B2F8 RID: 176888 RVA: 0x005E308D File Offset: 0x005E128D
 		public EBvbEventName Type { get; set; }
 
-		// Token: 0x1700B2D0 RID: 45776
-		// (get) Token: 0x06028C8F RID: 167055 RVA: 0x0059A626 File Offset: 0x00598826
-		// (set) Token: 0x06028C90 RID: 167056 RVA: 0x0059A62E File Offset: 0x0059882E
+		// Token: 0x1700BC31 RID: 48177
+		// (get) Token: 0x0602B2F9 RID: 176889 RVA: 0x005E3096 File Offset: 0x005E1296
+		// (set) Token: 0x0602B2FA RID: 176890 RVA: 0x005E309E File Offset: 0x005E129E
 		public TVarRefUnion HandCard { get; set; }
 
-		// Token: 0x1700B2D1 RID: 45777
-		// (get) Token: 0x06028C91 RID: 167057 RVA: 0x0059A637 File Offset: 0x00598837
-		// (set) Token: 0x06028C92 RID: 167058 RVA: 0x0059A63F File Offset: 0x0059883F
+		// Token: 0x1700BC32 RID: 48178
+		// (get) Token: 0x0602B2FB RID: 176891 RVA: 0x005E30A7 File Offset: 0x005E12A7
+		// (set) Token: 0x0602B2FC RID: 176892 RVA: 0x005E30AF File Offset: 0x005E12AF
 		public TVarRefUnion BoardPosStored { get; set; }
 
-		// Token: 0x06028C93 RID: 167059 RVA: 0x0059A648 File Offset: 0x00598848
+		// Token: 0x0602B2FD RID: 176893 RVA: 0x005E30B8 File Offset: 0x005E12B8
 		public IBvbAiGetBestDeployDataT()
 		{
 			this.Type = EBvbEventName.AIEvolution;

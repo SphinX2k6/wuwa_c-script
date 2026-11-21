@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017A5 RID: 6053
+	// Token: 0x02001926 RID: 6438
 	public class IActorVisibilityEffectDefault_SetValue
 	{
-		// Token: 0x04005154 RID: 20820
+		// Token: 0x0400558A RID: 21898
 		public EActorVisibilityEffectType Type;
 	}
 }

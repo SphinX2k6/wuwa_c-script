@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 {
-	// Token: 0x020059EE RID: 23022
+	// Token: 0x020049C7 RID: 18887
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BindingExpressionComponentHolder
 	{
-		// Token: 0x0603A57C RID: 238972 RVA: 0x00DE146C File Offset: 0x00DDF66C
+		// Token: 0x0602F4A3 RID: 193699 RVA: 0x00D30CD8 File Offset: 0x00D2EED8
 		public BindingExpressionComponentHolder(Blackboard Blackboard)
 		{
 		}
 
-		// Token: 0x0603A57D RID: 238973 RVA: 0x00DE14D3 File Offset: 0x00DDF6D3
+		// Token: 0x0602F4A4 RID: 193700 RVA: 0x00D30D3F File Offset: 0x00D2EF3F
 		public void Init()
 		{
 			this.WatchingList.Clear();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.Ticker = TickSystem.Instance.Add(new Action<float>(this.OnTick), "BindingExpressionComponentHolder", ETickingGroup.TG_PrePhysics, false, 0, false);
 		}
 
-		// Token: 0x0603A57E RID: 238974 RVA: 0x00DE150C File Offset: 0x00DDF70C
+		// Token: 0x0602F4A5 RID: 193701 RVA: 0x00D30D78 File Offset: 0x00D2EF78
 		public void Destroy()
 		{
 			this.BindingExpressions.Clear();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A57F RID: 238975 RVA: 0x00DE15BC File Offset: 0x00DDF7BC
+		// Token: 0x0602F4A6 RID: 193702 RVA: 0x00D30E28 File Offset: 0x00D2F028
 		public void AddBindingExpression(int nodeId, int levelPlayConfigId)
 		{
 			this.LevelPlayIdToQuestNodeId[levelPlayConfigId] = nodeId;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A580 RID: 238976 RVA: 0x00DE16B0 File Offset: 0x00DDF8B0
+		// Token: 0x0602F4A7 RID: 193703 RVA: 0x00D30F1C File Offset: 0x00D2F11C
 		public void RemoveBindingExpression(int levelPlayConfigId)
 		{
 			BehaviorTreeExpressionComponent behaviorTreeExpressionComponent;
@@ -107,19 +107,19 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A581 RID: 238977 RVA: 0x00DE1714 File Offset: 0x00DDF914
+		// Token: 0x0602F4A8 RID: 193704 RVA: 0x00D30F80 File Offset: 0x00D2F180
 		public void AddWatchingLevelPlay(int levelPlayConfigId)
 		{
 			this.WatchingList.Add(levelPlayConfigId);
 		}
 
-		// Token: 0x0603A582 RID: 238978 RVA: 0x00DE1723 File Offset: 0x00DDF923
+		// Token: 0x0602F4A9 RID: 193705 RVA: 0x00D30F8F File Offset: 0x00D2F18F
 		public void RemoveWatchingLevelPlay(int levelPlayConfigId)
 		{
 			this.WatchingList.Remove(levelPlayConfigId);
 		}
 
-		// Token: 0x0603A583 RID: 238979 RVA: 0x00DE1734 File Offset: 0x00DDF934
+		// Token: 0x0602F4AA RID: 193706 RVA: 0x00D30FA0 File Offset: 0x00D2F1A0
 		public void EnableTrack(bool value, ESetTrackReason reason = ESetTrackReason.None, BindingExpressionComponentHolder.EUpdateTrackType type = BindingExpressionComponentHolder.EUpdateTrackType.Text | BindingExpressionComponentHolder.EUpdateTrackType.TrackMark)
 		{
 			BaseBehaviorTree behaviorTree = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(this.<Blackboard>P.TreeIncId), false);
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A584 RID: 238980 RVA: 0x00DE1804 File Offset: 0x00DDFA04
+		// Token: 0x0602F4AB RID: 193707 RVA: 0x00D31070 File Offset: 0x00D2F270
 		public bool IsValid()
 		{
 			foreach (int levelPlayConfigId in this.BindingExpressions.Keys)
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			return false;
 		}
 
-		// Token: 0x0603A585 RID: 238981 RVA: 0x00DE1868 File Offset: 0x00DDFA68
+		// Token: 0x0602F4AC RID: 193708 RVA: 0x00D310D4 File Offset: 0x00D2F2D4
 		public bool IsBinding()
 		{
 			foreach (BehaviorTreeExpressionComponent behaviorTreeExpressionComponent in this.BindingExpressions.Values)
@@ -176,37 +176,37 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			return false;
 		}
 
-		// Token: 0x0603A586 RID: 238982 RVA: 0x00DE18D0 File Offset: 0x00DDFAD0
+		// Token: 0x0602F4AD RID: 193709 RVA: 0x00D3113C File Offset: 0x00D2F33C
 		public void OnBindingNodeTextUpdate()
 		{
 			this.IsTrackTextDirty = true;
 		}
 
-		// Token: 0x0603A587 RID: 238983 RVA: 0x00DE18D9 File Offset: 0x00DDFAD9
+		// Token: 0x0602F4AE RID: 193710 RVA: 0x00D31145 File Offset: 0x00D2F345
 		public void OnBindingNodeTrackMarkUpdate()
 		{
 			this.IsTrackMarkDirty = true;
 		}
 
-		// Token: 0x0603A588 RID: 238984 RVA: 0x00DE18E2 File Offset: 0x00DDFAE2
+		// Token: 0x0602F4AF RID: 193711 RVA: 0x00D3114E File Offset: 0x00D2F34E
 		public BehaviorTreeViewShowData GetShowData(bool bTrackText)
 		{
 			return this.BuildBehaviorTreeViewShowData(true);
 		}
 
-		// Token: 0x0603A589 RID: 238985 RVA: 0x00DE18EB File Offset: 0x00DDFAEB
+		// Token: 0x0602F4B0 RID: 193712 RVA: 0x00D31157 File Offset: 0x00D2F357
 		public int GetNodeIdByLevelPlayConfigId(int levelPlayConfigId)
 		{
 			return this.LevelPlayIdToQuestNodeId.GetValueOrDefault(levelPlayConfigId, 0);
 		}
 
-		// Token: 0x0603A58A RID: 238986 RVA: 0x00DE18FA File Offset: 0x00DDFAFA
+		// Token: 0x0602F4B1 RID: 193713 RVA: 0x00D31166 File Offset: 0x00D2F366
 		public int GetCurFocusLevelPlayId()
 		{
 			return this.CurFocusLevelPlayId;
 		}
 
-		// Token: 0x0603A58B RID: 238987 RVA: 0x00DE1904 File Offset: 0x00DDFB04
+		// Token: 0x0602F4B2 RID: 193714 RVA: 0x00D31170 File Offset: 0x00D2F370
 		private bool IsBindingValid(int levelPlayConfigId)
 		{
 			BehaviorTreeExpressionComponent behaviorTreeExpressionComponent;
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			return (levelPlayInfo != null && levelPlayInfo.IsInTrackRange()) || ((trackLevelPlay != null) ? trackLevelPlay.TrackSwitchRule : null).GetValueOrDefault() != ELevelPlayTrackSwitchRule.SwitchByLevelPlayTrack;
 		}
 
-		// Token: 0x0603A58C RID: 238988 RVA: 0x00DE19A8 File Offset: 0x00DDFBA8
+		// Token: 0x0602F4B3 RID: 193715 RVA: 0x00D31214 File Offset: 0x00D2F414
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add<long>(EEventName.OnCreateBehaviorTree, new Action<long>(this.OnTreeCreate));
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			EventSystem.Instance.Add<int>(EEventName.OnLeaveLevelPlayNotify, new Action<int>(this.OnLeaveLevelPlayRange));
 		}
 
-		// Token: 0x0603A58D RID: 238989 RVA: 0x00DE1A28 File Offset: 0x00DDFC28
+		// Token: 0x0602F4B4 RID: 193716 RVA: 0x00D31294 File Offset: 0x00D2F494
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove<long>(EEventName.OnCreateBehaviorTree, new Action<long>(this.OnTreeCreate));
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			EventSystem.Instance.Remove<int>(EEventName.OnLeaveLevelPlayNotify, new Action<int>(this.OnLeaveLevelPlayRange));
 		}
 
-		// Token: 0x0603A58E RID: 238990 RVA: 0x00DE1AA8 File Offset: 0x00DDFCA8
+		// Token: 0x0602F4B5 RID: 193717 RVA: 0x00D31314 File Offset: 0x00D2F514
 		private void EnableTrackForText(bool enable, ESetTrackReason reason)
 		{
 			ETreeTextExpressReason p = ETreeTextExpressReason.None;
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A58F RID: 238991 RVA: 0x00DE1B6C File Offset: 0x00DDFD6C
+		// Token: 0x0602F4B6 RID: 193718 RVA: 0x00D313D8 File Offset: 0x00D2F5D8
 		private void EnableTrackForTrackMark(bool enable, ESetTrackReason reason)
 		{
 			if (enable)
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A590 RID: 238992 RVA: 0x00DE1BC8 File Offset: 0x00DDFDC8
+		// Token: 0x0602F4B7 RID: 193719 RVA: 0x00D31434 File Offset: 0x00D2F634
 		private BehaviorTreeViewShowData BuildBehaviorTreeViewShowData(bool bTrackText = true)
 		{
 			BehaviorTreeViewShowData behaviorTreeViewShowData = this.<Blackboard>P.CreateOriginalShowData(bTrackText);
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			return BehaviorTreeViewShowData.Create(btType, id, treeConfigId, flag, trackIconConfigId, num, titleTextKey, mainStepInfo, subStepText, new long?(value));
 		}
 
-		// Token: 0x0603A591 RID: 238993 RVA: 0x00DE1CDC File Offset: 0x00DDFEDC
+		// Token: 0x0602F4B8 RID: 193720 RVA: 0x00D31548 File Offset: 0x00D2F748
 		private List<ITrackData> BuildTrackData()
 		{
 			string questMarkIconPathByQuestId = QuestUtil.Instance.GetQuestMarkIconPathByQuestId(this.<Blackboard>P.TreeConfigId);
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			return list;
 		}
 
-		// Token: 0x0603A592 RID: 238994 RVA: 0x00DE1E10 File Offset: 0x00DE0010
+		// Token: 0x0602F4B9 RID: 193721 RVA: 0x00D3167C File Offset: 0x00D2F87C
 		private void RefreshTrack()
 		{
 			BaseBehaviorTree behaviorTree = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(this.<Blackboard>P.TreeIncId), false);
@@ -378,7 +378,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A593 RID: 238995 RVA: 0x00DE1E5C File Offset: 0x00DE005C
+		// Token: 0x0602F4BA RID: 193722 RVA: 0x00D316C8 File Offset: 0x00D2F8C8
 		private void OnTreeCreate(long treeIncId)
 		{
 			BaseBehaviorTree behaviorTree = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(treeIncId), false);
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A594 RID: 238996 RVA: 0x00DE1EE4 File Offset: 0x00DE00E4
+		// Token: 0x0602F4BB RID: 193723 RVA: 0x00D31750 File Offset: 0x00D2F950
 		private void OnTreeRemove(long treeIncId, ETreeRemoveReason eTreeRemoveReason)
 		{
 			BaseBehaviorTree behaviorTree = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(treeIncId), false);
@@ -417,7 +417,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A595 RID: 238997 RVA: 0x00DE1F80 File Offset: 0x00DE0180
+		// Token: 0x0602F4BC RID: 193724 RVA: 0x00D317EC File Offset: 0x00D2F9EC
 		private void OnEnterLevelPlayRange(int levelPlayId)
 		{
 			BaseBehaviorTree behaviorTreeByConfigId = GeneralLogicTreeModel.Instance.GetBehaviorTreeByConfigId(BtType.LevelPlay, levelPlayId);
@@ -436,7 +436,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A596 RID: 238998 RVA: 0x00DE2004 File Offset: 0x00DE0204
+		// Token: 0x0602F4BD RID: 193725 RVA: 0x00D31870 File Offset: 0x00D2FA70
 		private void OnLeaveLevelPlayRange(int levelPlayId)
 		{
 			BaseBehaviorTree behaviorTreeByConfigId = GeneralLogicTreeModel.Instance.GetBehaviorTreeByConfigId(BtType.LevelPlay, levelPlayId);
@@ -450,14 +450,14 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A597 RID: 238999 RVA: 0x00DE2052 File Offset: 0x00DE0252
+		// Token: 0x0602F4BE RID: 193726 RVA: 0x00D318BE File Offset: 0x00D2FABE
 		private void OnTick(float deltaTime)
 		{
 			this.TickFocusExpression(deltaTime);
 			this.TickTrackUpdate(deltaTime);
 		}
 
-		// Token: 0x0603A598 RID: 239000 RVA: 0x00DE2064 File Offset: 0x00DE0264
+		// Token: 0x0602F4BF RID: 193727 RVA: 0x00D318D0 File Offset: 0x00D2FAD0
 		private void TickTrackUpdate(float deltaTime)
 		{
 			if (!this.IsValid())
@@ -481,7 +481,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A599 RID: 239001 RVA: 0x00DE20E8 File Offset: 0x00DE02E8
+		// Token: 0x0602F4C0 RID: 193728 RVA: 0x00D31954 File Offset: 0x00D2FB54
 		private void TickFocusExpression(float deltaTime)
 		{
 			int curFocusLevelPlayId = this.CurFocusLevelPlayId;
@@ -506,7 +506,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A59A RID: 239002 RVA: 0x00DE2148 File Offset: 0x00DE0348
+		// Token: 0x0602F4C1 RID: 193729 RVA: 0x00D319B4 File Offset: 0x00D2FBB4
 		public double GetTrackDistance()
 		{
 			BehaviorNodeBase curTrackNode = this.GetCurTrackNode();
@@ -518,7 +518,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			return 0.0;
 		}
 
-		// Token: 0x0603A59B RID: 239003 RVA: 0x00DE2190 File Offset: 0x00DE0390
+		// Token: 0x0602F4C2 RID: 193730 RVA: 0x00D319FC File Offset: 0x00D2FBFC
 		public int GetDefaultMark()
 		{
 			BehaviorNodeBase curTrackNode = this.GetCurTrackNode();
@@ -530,7 +530,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			return 0;
 		}
 
-		// Token: 0x0603A59C RID: 239004 RVA: 0x00DE21D8 File Offset: 0x00DE03D8
+		// Token: 0x0602F4C3 RID: 193731 RVA: 0x00D31A44 File Offset: 0x00D2FC44
 		public double GetRangeMarkSize()
 		{
 			BehaviorNodeBase curTrackNode = this.GetCurTrackNode();
@@ -542,7 +542,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			return 0.0;
 		}
 
-		// Token: 0x0603A59D RID: 239005 RVA: 0x00DE2220 File Offset: 0x00DE0420
+		// Token: 0x0602F4C4 RID: 193732 RVA: 0x00D31A8C File Offset: 0x00D2FC8C
 		public double GetRangeMarkShowDis()
 		{
 			BehaviorNodeBase curTrackNode = this.GetCurTrackNode();
@@ -554,7 +554,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			return 0.0;
 		}
 
-		// Token: 0x0603A59E RID: 239006 RVA: 0x00DE2270 File Offset: 0x00DE0470
+		// Token: 0x0602F4C5 RID: 193733 RVA: 0x00D31ADC File Offset: 0x00D2FCDC
 		[NullableContext(2)]
 		public global::Vector GetNodeTrackPosition()
 		{
@@ -567,7 +567,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			return null;
 		}
 
-		// Token: 0x0603A59F RID: 239007 RVA: 0x00DE22B0 File Offset: 0x00DE04B0
+		// Token: 0x0602F4C6 RID: 193734 RVA: 0x00D31B1C File Offset: 0x00D2FD1C
 		[NullableContext(2)]
 		private BehaviorNodeBase GetCurTrackNode()
 		{
@@ -587,61 +587,61 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			return behaviorTreeExpressionComponent.GetBlackBoard().GetCurrentActiveChildQuestNode(true);
 		}
 
-		// Token: 0x0401E6A9 RID: 124585
+		// Token: 0x04019148 RID: 102728
 		[CompilerGenerated]
 		private Blackboard <Blackboard>P = Blackboard;
 
-		// Token: 0x0401E6AA RID: 124586
+		// Token: 0x04019149 RID: 102729
 		private const int TICK_INTERVAL = 100;
 
-		// Token: 0x0401E6AB RID: 124587
+		// Token: 0x0401914A RID: 102730
 		private readonly Dictionary<int, BehaviorTreeExpressionComponent> BindingExpressions = new Dictionary<int, BehaviorTreeExpressionComponent>();
 
-		// Token: 0x0401E6AC RID: 124588
+		// Token: 0x0401914B RID: 102731
 		private readonly HashSet<int> WatchingList = new HashSet<int>();
 
-		// Token: 0x0401E6AD RID: 124589
+		// Token: 0x0401914C RID: 102732
 		private readonly Dictionary<int, int> DefaultMapTrackMarkIds = new Dictionary<int, int>();
 
-		// Token: 0x0401E6AE RID: 124590
+		// Token: 0x0401914D RID: 102733
 		private readonly Dictionary<int, List<ITrackData>> DefaultMapTrackData = new Dictionary<int, List<ITrackData>>();
 
-		// Token: 0x0401E6AF RID: 124591
+		// Token: 0x0401914E RID: 102734
 		private readonly Dictionary<int, global::Vector> DefaultTrackPosCache = new Dictionary<int, global::Vector>();
 
-		// Token: 0x0401E6B0 RID: 124592
+		// Token: 0x0401914F RID: 102735
 		private readonly Dictionary<int, int> LevelPlayIdToQuestNodeId = new Dictionary<int, int>();
 
-		// Token: 0x0401E6B1 RID: 124593
+		// Token: 0x04019150 RID: 102736
 		public readonly Dictionary<int, Dictionary<int, List<ITrackData>>> BindingMapTrackDataCache = new Dictionary<int, Dictionary<int, List<ITrackData>>>();
 
-		// Token: 0x0401E6B2 RID: 124594
+		// Token: 0x04019151 RID: 102737
 		private bool IsTextExpressing;
 
-		// Token: 0x0401E6B3 RID: 124595
+		// Token: 0x04019152 RID: 102738
 		private bool IsTrackTextDirty;
 
-		// Token: 0x0401E6B4 RID: 124596
+		// Token: 0x04019153 RID: 102739
 		private bool IsTrackMarkDirty;
 
-		// Token: 0x0401E6B5 RID: 124597
+		// Token: 0x04019154 RID: 102740
 		private float TickTime;
 
-		// Token: 0x0401E6B6 RID: 124598
+		// Token: 0x04019155 RID: 102741
 		[Nullable(2)]
 		private Ticker Ticker;
 
-		// Token: 0x0401E6B7 RID: 124599
+		// Token: 0x04019156 RID: 102742
 		private int CurFocusLevelPlayId;
 
-		// Token: 0x0200BC3E RID: 48190
+		// Token: 0x0200A648 RID: 42568
 		[NullableContext(0)]
 		[Flags]
 		public enum EUpdateTrackType
 		{
-			// Token: 0x04038CBF RID: 232639
+			// Token: 0x0403368C RID: 210572
 			Text = 1,
-			// Token: 0x04038CC0 RID: 232640
+			// Token: 0x0403368D RID: 210573
 			TrackMark = 2
 		}
 	}

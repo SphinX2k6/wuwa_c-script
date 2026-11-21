@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045ED RID: 17901
+	// Token: 0x02004A55 RID: 19029
 	public struct TCsvFindSunSpiritLevelData : IFlatbufferObject
 	{
-		// Token: 0x17007F47 RID: 32583
-		// (get) Token: 0x0601B1C9 RID: 111049 RVA: 0x003DD294 File Offset: 0x003DB494
+		// Token: 0x17008588 RID: 34184
+		// (get) Token: 0x0601C99E RID: 117150 RVA: 0x00409530 File Offset: 0x00407730
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B1CA RID: 111050 RVA: 0x003DD2A1 File Offset: 0x003DB4A1
+		// Token: 0x0601C99F RID: 117151 RVA: 0x0040953D File Offset: 0x0040773D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B1CB RID: 111051 RVA: 0x003DD2A8 File Offset: 0x003DB4A8
+		// Token: 0x0601C9A0 RID: 117152 RVA: 0x00409544 File Offset: 0x00407744
 		public static TCsvFindSunSpiritLevelData GetRootAsTCsvFindSunSpiritLevelData(ByteBuffer _bb)
 		{
 			return TCsvFindSunSpiritLevelData.GetRootAsTCsvFindSunSpiritLevelData(_bb, default(TCsvFindSunSpiritLevelData));
 		}
 
-		// Token: 0x0601B1CC RID: 111052 RVA: 0x003DD2C4 File Offset: 0x003DB4C4
+		// Token: 0x0601C9A1 RID: 117153 RVA: 0x00409560 File Offset: 0x00407760
 		public static TCsvFindSunSpiritLevelData GetRootAsTCsvFindSunSpiritLevelData(ByteBuffer _bb, TCsvFindSunSpiritLevelData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B1CD RID: 111053 RVA: 0x003DD2E1 File Offset: 0x003DB4E1
+		// Token: 0x0601C9A2 RID: 117154 RVA: 0x0040957D File Offset: 0x0040777D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B1CE RID: 111054 RVA: 0x003DD2F0 File Offset: 0x003DB4F0
+		// Token: 0x0601C9A3 RID: 117155 RVA: 0x0040958C File Offset: 0x0040778C
 		public TCsvFindSunSpiritLevelData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007F48 RID: 32584
-		// (get) Token: 0x0601B1CF RID: 111055 RVA: 0x003DD300 File Offset: 0x003DB500
+		// Token: 0x17008589 RID: 34185
+		// (get) Token: 0x0601C9A4 RID: 117156 RVA: 0x0040959C File Offset: 0x0040779C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007F49 RID: 32585
-		// (get) Token: 0x0601B1D0 RID: 111056 RVA: 0x003DD33C File Offset: 0x003DB53C
+		// Token: 0x1700858A RID: 34186
+		// (get) Token: 0x0601C9A5 RID: 117157 RVA: 0x004095D8 File Offset: 0x004077D8
 		public IFindSunSpiritLevelConfig? Data
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B1D1 RID: 111057 RVA: 0x003DD399 File Offset: 0x003DB599
+		// Token: 0x0601C9A6 RID: 117158 RVA: 0x00409635 File Offset: 0x00407835
 		public static Offset<TCsvFindSunSpiritLevelData> CreateTCsvFindSunSpiritLevelData(FlatBufferBuilder builder, int Id = 0, Offset<IFindSunSpiritLevelConfig> DataOffset = default(Offset<IFindSunSpiritLevelConfig>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return TCsvFindSunSpiritLevelData.EndTCsvFindSunSpiritLevelData(builder);
 		}
 
-		// Token: 0x0601B1D2 RID: 111058 RVA: 0x003DD3B6 File Offset: 0x003DB5B6
+		// Token: 0x0601C9A7 RID: 117159 RVA: 0x00409652 File Offset: 0x00407852
 		public static void StartTCsvFindSunSpiritLevelData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601B1D3 RID: 111059 RVA: 0x003DD3BF File Offset: 0x003DB5BF
+		// Token: 0x0601C9A8 RID: 117160 RVA: 0x0040965B File Offset: 0x0040785B
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0601B1D4 RID: 111060 RVA: 0x003DD3CA File Offset: 0x003DB5CA
+		// Token: 0x0601C9A9 RID: 117161 RVA: 0x00409666 File Offset: 0x00407866
 		public static void AddData(FlatBufferBuilder builder, Offset<IFindSunSpiritLevelConfig> dataOffset)
 		{
 			builder.AddOffset(1, dataOffset.Value, 0);
 		}
 
-		// Token: 0x0601B1D5 RID: 111061 RVA: 0x003DD3DA File Offset: 0x003DB5DA
+		// Token: 0x0601C9AA RID: 117162 RVA: 0x00409676 File Offset: 0x00407876
 		public static Offset<TCsvFindSunSpiritLevelData> EndTCsvFindSunSpiritLevelData(FlatBufferBuilder builder)
 		{
 			return new Offset<TCsvFindSunSpiritLevelData>(builder.EndTable());
 		}
 
-		// Token: 0x0601B1D6 RID: 111062 RVA: 0x003DD3E8 File Offset: 0x003DB5E8
+		// Token: 0x0601C9AB RID: 117163 RVA: 0x00409684 File Offset: 0x00407884
 		public TCsvFindSunSpiritLevelDataT UnPack()
 		{
 			TCsvFindSunSpiritLevelDataT tcsvFindSunSpiritLevelDataT = new TCsvFindSunSpiritLevelDataT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return tcsvFindSunSpiritLevelDataT;
 		}
 
-		// Token: 0x0601B1D7 RID: 111063 RVA: 0x003DD404 File Offset: 0x003DB604
+		// Token: 0x0601C9AC RID: 117164 RVA: 0x004096A0 File Offset: 0x004078A0
 		public void UnPackTo(TCsvFindSunSpiritLevelDataT _o)
 		{
 			_o.Id = this.Id;
 			_o.Data = ((this.Data != null) ? this.Data.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601B1D8 RID: 111064 RVA: 0x003DD44C File Offset: 0x003DB64C
+		// Token: 0x0601C9AD RID: 117165 RVA: 0x004096E8 File Offset: 0x004078E8
 		public static Offset<TCsvFindSunSpiritLevelData> Pack(FlatBufferBuilder builder, TCsvFindSunSpiritLevelDataT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return TCsvFindSunSpiritLevelData.CreateTCsvFindSunSpiritLevelData(builder, _o.Id, dataOffset);
 		}
 
-		// Token: 0x0400C6CF RID: 50895
+		// Token: 0x0400D0FE RID: 53502
 		private Table __p;
 	}
 }

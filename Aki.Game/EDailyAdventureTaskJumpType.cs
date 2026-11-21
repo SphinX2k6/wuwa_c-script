@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001210 RID: 4624
+// Token: 0x020006C4 RID: 1732
 public enum EDailyAdventureTaskJumpType
 {
-	// Token: 0x040038B8 RID: 14520
+	// Token: 0x04003951 RID: 14673
 	Normal = 1,
-	// Token: 0x040038B9 RID: 14521
+	// Token: 0x04003952 RID: 14674
 	Map,
-	// Token: 0x040038BA RID: 14522
+	// Token: 0x04003953 RID: 14675
 	Role,
-	// Token: 0x040038BB RID: 14523
+	// Token: 0x04003954 RID: 14676
 	SkipTask
 }

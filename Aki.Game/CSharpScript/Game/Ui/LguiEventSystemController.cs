@@ -3,26 +3,26 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046B8 RID: 18104
+	// Token: 0x020035E9 RID: 13801
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LguiEventSystemController : ControllerBase
 	{
-		// Token: 0x0602EB12 RID: 191250 RVA: 0x00ACE9B3 File Offset: 0x00ACCBB3
+		// Token: 0x0602325E RID: 143966 RVA: 0x009FD287 File Offset: 0x009FB487
 		protected override bool OnInit()
 		{
 			this.AddEvents();
 			return true;
 		}
 
-		// Token: 0x0602EB13 RID: 191251 RVA: 0x00ACE9BC File Offset: 0x00ACCBBC
+		// Token: 0x0602325F RID: 143967 RVA: 0x009FD290 File Offset: 0x009FB490
 		protected override bool OnClear()
 		{
 			this.RemoveEvents();
 			return true;
 		}
 
-		// Token: 0x0602EB14 RID: 191252 RVA: 0x00ACE9C8 File Offset: 0x00ACCBC8
+		// Token: 0x06023260 RID: 143968 RVA: 0x009FD29C File Offset: 0x009FB49C
 		private void AddEvents()
 		{
 			InputDistributeController.Instance.BindActions(new <>z__ReadOnlyArray<string>(new string[]
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Ui
 			InputDistributeController.Instance.BindAxis("WheelAxis", new TInputHandle<float>(this.OnInputWheelAxis));
 		}
 
-		// Token: 0x0602EB15 RID: 191253 RVA: 0x00ACEA24 File Offset: 0x00ACCC24
+		// Token: 0x06023261 RID: 143969 RVA: 0x009FD2F8 File Offset: 0x009FB4F8
 		private void RemoveEvents()
 		{
 			InputDistributeController.Instance.UnBindActions(new <>z__ReadOnlyArray<string>(new string[]
@@ -44,20 +44,20 @@ namespace CSharpScript.Game.Ui
 			InputDistributeController.Instance.UnBindAxis("WheelAxis", new TInputHandle<float>(this.OnInputWheelAxis));
 		}
 
-		// Token: 0x0602EB16 RID: 191254 RVA: 0x00ACEA7D File Offset: 0x00ACCC7D
+		// Token: 0x06023262 RID: 143970 RVA: 0x009FD351 File Offset: 0x009FB551
 		private void OnClickedMouse(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification identification)
 		{
 			LguiEventSystemManager.Instance.ClickedMouse(actionName, actionType);
 		}
 
-		// Token: 0x0602EB17 RID: 191255 RVA: 0x00ACEA8B File Offset: 0x00ACCC8B
+		// Token: 0x06023263 RID: 143971 RVA: 0x009FD35F File Offset: 0x009FB55F
 		private void OnInputWheelAxis(string axisName, float value, InputIdentification identification)
 		{
 			LguiEventSystemManager.Instance.InputWheelAxis(axisName, value);
 		}
 
-		// Token: 0x17007662 RID: 30306
-		// (get) Token: 0x0602EB18 RID: 191256 RVA: 0x00ACEA99 File Offset: 0x00ACCC99
+		// Token: 0x1700491E RID: 18718
+		// (get) Token: 0x06023264 RID: 143972 RVA: 0x009FD36D File Offset: 0x009FB56D
 		public static LguiEventSystemController Instance
 		{
 			get
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB19 RID: 191257 RVA: 0x00ACEAA0 File Offset: 0x00ACCCA0
+		// Token: 0x06023265 RID: 143973 RVA: 0x009FD374 File Offset: 0x009FB574
 		public static LguiEventSystemController GetOrCreateInstance()
 		{
 			if (LguiEventSystemController._Instance == null)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Ui
 			return LguiEventSystemController._Instance;
 		}
 
-		// Token: 0x0602EB1A RID: 191258 RVA: 0x00ACEAB4 File Offset: 0x00ACCCB4
+		// Token: 0x06023266 RID: 143974 RVA: 0x009FD388 File Offset: 0x009FB588
 		public static bool CreateInstance()
 		{
 			if (LguiEventSystemController._Instance != null)
@@ -87,24 +87,24 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602EB1B RID: 191259 RVA: 0x00ACEACA File Offset: 0x00ACCCCA
+		// Token: 0x06023267 RID: 143975 RVA: 0x009FD39E File Offset: 0x009FB59E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602EB1C RID: 191260 RVA: 0x00ACEACC File Offset: 0x00ACCCCC
+		// Token: 0x06023268 RID: 143976 RVA: 0x009FD3A0 File Offset: 0x009FB5A0
 		public static void ResetStaticDefaultValue()
 		{
 			LguiEventSystemController._Instance = null;
 		}
 
-		// Token: 0x0602EB1D RID: 191261 RVA: 0x00ACEAD4 File Offset: 0x00ACCCD4
+		// Token: 0x06023269 RID: 143977 RVA: 0x009FD3A8 File Offset: 0x009FB5A8
 		static LguiEventSystemController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LguiEventSystemController.CreateStaticDefaultValue), new Action(LguiEventSystemController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040196C5 RID: 104133
+		// Token: 0x04013D6A RID: 81258
 		[Nullable(2)]
 		private static LguiEventSystemController _Instance;
 	}

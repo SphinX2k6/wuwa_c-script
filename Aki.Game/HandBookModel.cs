@@ -6,13 +6,13 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02001E09 RID: 7689
+// Token: 0x020012CB RID: 4811
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class HandBookModel : ModelBase
 {
-	// Token: 0x0600E9C9 RID: 59849 RVA: 0x00374DEA File Offset: 0x00372FEA
+	// Token: 0x0600BDE8 RID: 48616 RVA: 0x00380AF2 File Offset: 0x0037ECF2
 	public HandBookModel()
 	{
 		this.HandBookActiveStateMap = new Dictionary<EHandBookTabType, List<HandBookEntry>>();
@@ -22,7 +22,7 @@ public class HandBookModel : ModelBase
 		this.WeaponOpenTimeLockMap = new Dictionary<int, bool>();
 	}
 
-	// Token: 0x0600E9CA RID: 59850 RVA: 0x00374E2C File Offset: 0x0037302C
+	// Token: 0x0600BDE9 RID: 48617 RVA: 0x00380B34 File Offset: 0x0037ED34
 	public void UpdateHandBookActiveStateMap(IllustratedType type, IllustratedEntry entry)
 	{
 		EHandBookTabType clientHandBookType = this.GetClientHandBookType(type, new PhotographSubType?(entry.PhotographSubType));
@@ -64,13 +64,13 @@ public class HandBookModel : ModelBase
 		EventSystem.Instance.Emit<EHandBookTabType, int>(EEventName.OnHandBookDataUpdate, clientHandBookType, entry.Id);
 	}
 
-	// Token: 0x0600E9CB RID: 59851 RVA: 0x00374F6C File Offset: 0x0037316C
+	// Token: 0x0600BDEA RID: 48618 RVA: 0x00380C74 File Offset: 0x0037EE74
 	public void ClearHandBookActiveStateMap()
 	{
 		this.HandBookActiveStateMap.Clear();
 	}
 
-	// Token: 0x0600E9CC RID: 59852 RVA: 0x00374F7C File Offset: 0x0037317C
+	// Token: 0x0600BDEB RID: 48619 RVA: 0x00380C84 File Offset: 0x0037EE84
 	public void InitHandBookActiveStateMap(IllustratedType type, IllustratedEntry[] entryList)
 	{
 		List<HandBookEntry> clientHandBookEntryList = this.GetClientHandBookEntryList(entryList);
@@ -99,7 +99,7 @@ public class HandBookModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnHandBookDataInit);
 	}
 
-	// Token: 0x0600E9CD RID: 59853 RVA: 0x00375040 File Offset: 0x00373240
+	// Token: 0x0600BDEC RID: 48620 RVA: 0x00380D48 File Offset: 0x0037EF48
 	private void InitHandBookActiveStateMapQuestType()
 	{
 		this.HandBookActiveStateMap[EHandBookTabType.MainQuest] = new List<HandBookEntry>();
@@ -107,8 +107,8 @@ public class HandBookModel : ModelBase
 		this.HandBookActiveStateMap[EHandBookTabType.Quest] = new List<HandBookEntry>();
 	}
 
-	// Token: 0x0600E9CE RID: 59854 RVA: 0x00375078 File Offset: 0x00373278
-	public void InitHandBookRedDotList(List<IllustratedType> typeList)
+	// Token: 0x0600BDED RID: 48621 RVA: 0x00380D80 File Offset: 0x0037EF80
+	public void InitHandBookRedDotList(IReadOnlyList<IllustratedType> typeList)
 	{
 		this.HandBookRedDotList = new List<EHandBookTabType>();
 		int count = typeList.Count;
@@ -130,7 +130,7 @@ public class HandBookModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnHandBookRedDotUpdate);
 	}
 
-	// Token: 0x0600E9CF RID: 59855 RVA: 0x00375124 File Offset: 0x00373324
+	// Token: 0x0600BDEE RID: 48622 RVA: 0x00380E2C File Offset: 0x0037F02C
 	public void UpdateRedDot(EHandBookTabType type, int id)
 	{
 		List<HandBookEntry> list;
@@ -163,7 +163,7 @@ public class HandBookModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E9D0 RID: 59856 RVA: 0x003751C8 File Offset: 0x003733C8
+	// Token: 0x0600BDEF RID: 48623 RVA: 0x00380ED0 File Offset: 0x0037F0D0
 	public bool IsShowRedDot(EHandBookTabType type)
 	{
 		int count = this.HandBookRedDotList.Count;
@@ -177,7 +177,7 @@ public class HandBookModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600E9D1 RID: 59857 RVA: 0x00375200 File Offset: 0x00373400
+	// Token: 0x0600BDF0 RID: 48624 RVA: 0x00380F08 File Offset: 0x0037F108
 	public int GetCollectCount(EHandBookTabType type)
 	{
 		List<HandBookEntry> list;
@@ -188,7 +188,7 @@ public class HandBookModel : ModelBase
 		return list.Count;
 	}
 
-	// Token: 0x0600E9D2 RID: 59858 RVA: 0x00375228 File Offset: 0x00373428
+	// Token: 0x0600BDF1 RID: 48625 RVA: 0x00380F30 File Offset: 0x0037F130
 	public List<HandBookEntry> GetClientHandBookEntryList(IllustratedEntry[] entryList)
 	{
 		List<HandBookEntry> list = new List<HandBookEntry>();
@@ -207,7 +207,7 @@ public class HandBookModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600E9D3 RID: 59859 RVA: 0x003752B4 File Offset: 0x003734B4
+	// Token: 0x0600BDF2 RID: 48626 RVA: 0x00380FBC File Offset: 0x0037F1BC
 	[NullableContext(2)]
 	public HandBookEntry GetHandBookInfo(EHandBookTabType type, int id)
 	{
@@ -228,7 +228,7 @@ public class HandBookModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600E9D4 RID: 59860 RVA: 0x003752FC File Offset: 0x003734FC
+	// Token: 0x0600BDF3 RID: 48627 RVA: 0x00381004 File Offset: 0x0037F204
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -244,7 +244,7 @@ public class HandBookModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600E9D5 RID: 59861 RVA: 0x0037531C File Offset: 0x0037351C
+	// Token: 0x0600BDF4 RID: 48628 RVA: 0x00381024 File Offset: 0x0037F224
 	public EHandBookTabType GetClientHandBookType(IllustratedType type, PhotographSubType? subType = null)
 	{
 		EHandBookTabType result;
@@ -313,7 +313,7 @@ public class HandBookModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600E9D6 RID: 59862 RVA: 0x003753EC File Offset: 0x003735EC
+	// Token: 0x0600BDF5 RID: 48629 RVA: 0x003810F4 File Offset: 0x0037F2F4
 	public IllustratedType GetServerHandBookType(EHandBookTabType type)
 	{
 		switch (type)
@@ -344,7 +344,7 @@ public class HandBookModel : ModelBase
 		return IllustratedType.Photograph;
 	}
 
-	// Token: 0x0600E9D7 RID: 59863 RVA: 0x00375460 File Offset: 0x00373660
+	// Token: 0x0600BDF6 RID: 48630 RVA: 0x00381168 File Offset: 0x0037F368
 	public IllustratedType[] GetServerHandBookTypeList(List<EHandBookTabType> typeList)
 	{
 		int count = typeList.Count;
@@ -357,7 +357,7 @@ public class HandBookModel : ModelBase
 		return array;
 	}
 
-	// Token: 0x0600E9D8 RID: 59864 RVA: 0x0037549C File Offset: 0x0037369C
+	// Token: 0x0600BDF7 RID: 48631 RVA: 0x003811A4 File Offset: 0x0037F3A4
 	public AnimalHandBook? GetAnimalConfigByMeshId(int meshId)
 	{
 		if (this.AnimalConfigMap.Count == 0)
@@ -378,7 +378,7 @@ public class HandBookModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600E9D9 RID: 59865 RVA: 0x00375514 File Offset: 0x00373714
+	// Token: 0x0600BDF8 RID: 48632 RVA: 0x0038121C File Offset: 0x0037F41C
 	public int[] GetRoleHandBookCount()
 	{
 		int num = 0;
@@ -405,7 +405,7 @@ public class HandBookModel : ModelBase
 		};
 	}
 
-	// Token: 0x0600E9DA RID: 59866 RVA: 0x00375600 File Offset: 0x00373800
+	// Token: 0x0600BDF9 RID: 48633 RVA: 0x00381308 File Offset: 0x0037F508
 	public int[] GetQuestCount()
 	{
 		int num = 0;
@@ -425,7 +425,7 @@ public class HandBookModel : ModelBase
 		};
 	}
 
-	// Token: 0x0600E9DB RID: 59867 RVA: 0x003756A0 File Offset: 0x003738A0
+	// Token: 0x0600BDFA RID: 48634 RVA: 0x003813A8 File Offset: 0x0037F5A8
 	public int[] GetMonsterCount()
 	{
 		int num = 0;
@@ -456,7 +456,7 @@ public class HandBookModel : ModelBase
 		};
 	}
 
-	// Token: 0x0600E9DC RID: 59868 RVA: 0x0037573C File Offset: 0x0037393C
+	// Token: 0x0600BDFB RID: 48635 RVA: 0x00381444 File Offset: 0x0037F644
 	public int[] GetAllHandBookMonsterIdList()
 	{
 		List<int> list = new List<int>();
@@ -470,7 +470,7 @@ public class HandBookModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600E9DD RID: 59869 RVA: 0x003757A8 File Offset: 0x003739A8
+	// Token: 0x0600BDFC RID: 48636 RVA: 0x003814B0 File Offset: 0x0037F6B0
 	public int[] GetAllHandBookWeaponIdList()
 	{
 		List<int> list = new List<int>();
@@ -485,7 +485,7 @@ public class HandBookModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600E9DE RID: 59870 RVA: 0x0037582C File Offset: 0x00373A2C
+	// Token: 0x0600BDFD RID: 48637 RVA: 0x00381534 File Offset: 0x0037F734
 	public int[] GetAllHandBookWeaponSkinIdList()
 	{
 		List<int> list = new List<int>();
@@ -500,7 +500,7 @@ public class HandBookModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600E9DF RID: 59871 RVA: 0x003758B0 File Offset: 0x00373AB0
+	// Token: 0x0600BDFE RID: 48638 RVA: 0x003815B8 File Offset: 0x0037F7B8
 	public void RefreshRoleHandBookOpenTime(RoleIllustratedInfo[] dataList)
 	{
 		foreach (RoleIllustratedInfo roleIllustratedInfo in dataList)
@@ -509,14 +509,14 @@ public class HandBookModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E9E0 RID: 59872 RVA: 0x00375900 File Offset: 0x00373B00
+	// Token: 0x0600BDFF RID: 48639 RVA: 0x00381608 File Offset: 0x0037F808
 	public bool GetRoleCanShowInHandBook(int roleId)
 	{
 		bool flag;
 		return !this.RoleOpenTimeLockMap.TryGetValue(roleId, out flag) || !flag;
 	}
 
-	// Token: 0x0600E9E1 RID: 59873 RVA: 0x00375924 File Offset: 0x00373B24
+	// Token: 0x0600BE00 RID: 48640 RVA: 0x0038162C File Offset: 0x0037F82C
 	public void RefreshWeaponHandBookOpenTime(WeaponIllustratedInfo[] dataList)
 	{
 		foreach (WeaponIllustratedInfo weaponIllustratedInfo in dataList)
@@ -525,8 +525,8 @@ public class HandBookModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001284 RID: 4740
-	// (get) Token: 0x0600E9E2 RID: 59874 RVA: 0x00375973 File Offset: 0x00373B73
+	// Token: 0x170012AE RID: 4782
+	// (get) Token: 0x0600BE01 RID: 48641 RVA: 0x0038167B File Offset: 0x0037F87B
 	public static HandBookModel Instance
 	{
 		get
@@ -535,7 +535,7 @@ public class HandBookModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E9E3 RID: 59875 RVA: 0x0037597A File Offset: 0x00373B7A
+	// Token: 0x0600BE02 RID: 48642 RVA: 0x00381682 File Offset: 0x0037F882
 	public static HandBookModel GetOrCreateInstance()
 	{
 		if (HandBookModel._Instance == null)
@@ -545,7 +545,7 @@ public class HandBookModel : ModelBase
 		return HandBookModel._Instance;
 	}
 
-	// Token: 0x0600E9E4 RID: 59876 RVA: 0x0037598E File Offset: 0x00373B8E
+	// Token: 0x0600BE03 RID: 48643 RVA: 0x00381696 File Offset: 0x0037F896
 	public static bool CreateInstance()
 	{
 		if (HandBookModel._Instance != null)
@@ -556,45 +556,45 @@ public class HandBookModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600E9E5 RID: 59877 RVA: 0x003759A4 File Offset: 0x00373BA4
+	// Token: 0x0600BE04 RID: 48644 RVA: 0x003816AC File Offset: 0x0037F8AC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600E9E6 RID: 59878 RVA: 0x003759A6 File Offset: 0x00373BA6
+	// Token: 0x0600BE05 RID: 48645 RVA: 0x003816AE File Offset: 0x0037F8AE
 	public static void ResetStaticDefaultValue()
 	{
 		HandBookModel._Instance = null;
 	}
 
-	// Token: 0x0600E9E7 RID: 59879 RVA: 0x003759AE File Offset: 0x00373BAE
+	// Token: 0x0600BE06 RID: 48646 RVA: 0x003816B6 File Offset: 0x0037F8B6
 	static HandBookModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(HandBookModel.CreateStaticDefaultValue), new Action(HandBookModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006C7E RID: 27774
+	// Token: 0x04006D5F RID: 27999
 	private readonly Dictionary<EHandBookTabType, List<HandBookEntry>> HandBookActiveStateMap;
 
-	// Token: 0x04006C7F RID: 27775
+	// Token: 0x04006D60 RID: 28000
 	private List<EHandBookTabType> HandBookRedDotList;
 
-	// Token: 0x04006C80 RID: 27776
+	// Token: 0x04006D61 RID: 28001
 	private readonly Dictionary<int, AnimalHandBook> AnimalConfigMap;
 
-	// Token: 0x04006C81 RID: 27777
+	// Token: 0x04006D62 RID: 28002
 	public int CurrentSelectMonsterHandBookId;
 
-	// Token: 0x04006C82 RID: 27778
+	// Token: 0x04006D63 RID: 28003
 	public int CurrentSelectWeaponHandBookId;
 
-	// Token: 0x04006C83 RID: 27779
+	// Token: 0x04006D64 RID: 28004
 	public Dictionary<int, bool> RoleOpenTimeLockMap;
 
-	// Token: 0x04006C84 RID: 27780
+	// Token: 0x04006D65 RID: 28005
 	public Dictionary<int, bool> WeaponOpenTimeLockMap;
 
-	// Token: 0x04006C85 RID: 27781
+	// Token: 0x04006D66 RID: 28006
 	[Nullable(2)]
 	private static HandBookModel _Instance;
 }

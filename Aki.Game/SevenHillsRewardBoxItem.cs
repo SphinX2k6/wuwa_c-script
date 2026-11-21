@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020012AC RID: 4780
+// Token: 0x02000760 RID: 1888
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -16,7 +15,7 @@ using UnrealEngine;
 })]
 public class SevenHillsRewardBoxItem : GridProxyAbstract<LongShanScoreRewardData>
 {
-	// Token: 0x06008333 RID: 33587 RVA: 0x001BEAC0 File Offset: 0x001BCCC0
+	// Token: 0x060056CA RID: 22218 RVA: 0x001C7850 File Offset: 0x001C5A50
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -51,7 +50,7 @@ public class SevenHillsRewardBoxItem : GridProxyAbstract<LongShanScoreRewardData
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008334 RID: 33588 RVA: 0x001BEC4E File Offset: 0x001BCE4E
+	// Token: 0x060056CB RID: 22219 RVA: 0x001C79DE File Offset: 0x001C5BDE
 	protected override void OnStart()
 	{
 		base.GetUiNiagara(7).SetAlpha(0f);
@@ -59,7 +58,7 @@ public class SevenHillsRewardBoxItem : GridProxyAbstract<LongShanScoreRewardData
 		base.GetUiNiagara(8).SetUIActive(false);
 	}
 
-	// Token: 0x06008335 RID: 33589 RVA: 0x001BEC7C File Offset: 0x001BCE7C
+	// Token: 0x060056CC RID: 22220 RVA: 0x001C7A0C File Offset: 0x001C5C0C
 	[NullableContext(1)]
 	public override void Refresh(LongShanScoreRewardData rewardData, bool isSelected, int gridIndex)
 	{
@@ -69,7 +68,7 @@ public class SevenHillsRewardBoxItem : GridProxyAbstract<LongShanScoreRewardData
 		this.RefreshRewardState(state);
 	}
 
-	// Token: 0x06008336 RID: 33590 RVA: 0x001BECB8 File Offset: 0x001BCEB8
+	// Token: 0x060056CD RID: 22221 RVA: 0x001C7A48 File Offset: 0x001C5C48
 	public void RefreshRewardState(EActivityTaskState state)
 	{
 		UUINiagara uiNiagara = base.GetUiNiagara(8);
@@ -92,7 +91,7 @@ public class SevenHillsRewardBoxItem : GridProxyAbstract<LongShanScoreRewardData
 		this.RewardState = new EActivityTaskState?(state);
 	}
 
-	// Token: 0x06008337 RID: 33591 RVA: 0x001BED8C File Offset: 0x001BCF8C
+	// Token: 0x060056CE RID: 22222 RVA: 0x001C7B1C File Offset: 0x001C5D1C
 	private void OnClickRewardButton()
 	{
 		EActivityTaskState? rewardState = this.RewardState;
@@ -115,17 +114,17 @@ public class SevenHillsRewardBoxItem : GridProxyAbstract<LongShanScoreRewardData
 		}
 	}
 
-	// Token: 0x06008338 RID: 33592 RVA: 0x001BEDDC File Offset: 0x001BCFDC
+	// Token: 0x060056CF RID: 22223 RVA: 0x001C7B6C File Offset: 0x001C5D6C
 	private void RequestGetAllAvailableReward()
 	{
-		List<int> list = this.ActivityData.GetAllAvailableScoreRewardIds().ToList<int>();
+		List<int> list = new List<int>(this.ActivityData.GetAllAvailableScoreRewardIds());
 		if (list.Count > 0)
 		{
 			ActivityLongShanController.Instance.RequestScoreReward(this.ActivityData.Id, list);
 		}
 	}
 
-	// Token: 0x06008339 RID: 33593 RVA: 0x001BEE1C File Offset: 0x001BD01C
+	// Token: 0x060056D0 RID: 22224 RVA: 0x001C7BAC File Offset: 0x001C5DAC
 	private void RefreshRewardPopup(bool isClaimed)
 	{
 		List<DailyActivityDefine.RewardTuple> list = new List<DailyActivityDefine.RewardTuple>();
@@ -148,47 +147,47 @@ public class SevenHillsRewardBoxItem : GridProxyAbstract<LongShanScoreRewardData
 		EventSystem.Instance.Emit<RewardPopupData>(EEventName.RefreshRewardPopUp, p);
 	}
 
-	// Token: 0x04003B1F RID: 15135
+	// Token: 0x04003BB7 RID: 15287
 	private float Y_BIAS = 30f;
 
-	// Token: 0x04003B20 RID: 15136
+	// Token: 0x04003BB8 RID: 15288
 	private LongShanScoreRewardData Data;
 
-	// Token: 0x04003B21 RID: 15137
+	// Token: 0x04003BB9 RID: 15289
 	private EActivityTaskState? RewardState;
 
-	// Token: 0x04003B22 RID: 15138
+	// Token: 0x04003BBA RID: 15290
 	public ActivityLongShanData ActivityData;
 
-	// Token: 0x020078CC RID: 30924
+	// Token: 0x02006A56 RID: 27222
 	[NullableContext(0)]
 	private class ERewardItemNode
 	{
-		// Token: 0x04027CB9 RID: 163001
+		// Token: 0x04022FE7 RID: 143335
 		public const int SpriteProgressBar = 0;
 
-		// Token: 0x04027CBA RID: 163002
+		// Token: 0x04022FE8 RID: 143336
 		public const int BtnReward = 1;
 
-		// Token: 0x04027CBB RID: 163003
+		// Token: 0x04022FE9 RID: 143337
 		public const int SpriteUnfinished = 2;
 
-		// Token: 0x04027CBC RID: 163004
+		// Token: 0x04022FEA RID: 143338
 		public const int SpriteClaimed = 3;
 
-		// Token: 0x04027CBD RID: 163005
+		// Token: 0x04022FEB RID: 143339
 		public const int SpriteReceived = 4;
 
-		// Token: 0x04027CBE RID: 163006
+		// Token: 0x04022FEC RID: 143340
 		public const int ItemRedDot = 5;
 
-		// Token: 0x04027CBF RID: 163007
+		// Token: 0x04022FED RID: 143341
 		public const int TextGoal = 6;
 
-		// Token: 0x04027CC0 RID: 163008
+		// Token: 0x04022FEE RID: 143342
 		public const int NiagaraClaimed = 7;
 
-		// Token: 0x04027CC1 RID: 163009
+		// Token: 0x04022FEF RID: 143343
 		public const int NiagaraReceived = 8;
 	}
 }

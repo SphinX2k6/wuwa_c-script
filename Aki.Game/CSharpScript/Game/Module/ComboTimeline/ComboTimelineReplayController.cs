@@ -6,27 +6,27 @@ using CSharpScript.Game.Module.ComboTimeline.Entry;
 
 namespace CSharpScript.Game.Module.ComboTimeline
 {
-	// Token: 0x02005B93 RID: 23443
+	// Token: 0x02004B73 RID: 19315
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	[TickController(0)]
 	public class ComboTimelineReplayController : ControllerBase
 	{
-		// Token: 0x0603B4DF RID: 242911 RVA: 0x00E221E8 File Offset: 0x00E203E8
+		// Token: 0x0603042C RID: 197676 RVA: 0x00D72738 File Offset: 0x00D70938
 		protected override bool OnInit()
 		{
 			base.PauseTick();
 			return true;
 		}
 
-		// Token: 0x0603B4E0 RID: 242912 RVA: 0x00E221F1 File Offset: 0x00E203F1
+		// Token: 0x0603042D RID: 197677 RVA: 0x00D72741 File Offset: 0x00D70941
 		public static bool Start(string fileId)
 		{
 			return ComboTimelineReplayController.Instance.StartInternal(fileId);
 		}
 
-		// Token: 0x0603B4E1 RID: 242913 RVA: 0x00E22200 File Offset: 0x00E20400
+		// Token: 0x0603042E RID: 197678 RVA: 0x00D72750 File Offset: 0x00D70950
 		private unsafe bool StartInternal(string fileId)
 		{
 			if (string.IsNullOrEmpty(fileId))
@@ -64,13 +64,13 @@ namespace CSharpScript.Game.Module.ComboTimeline
 			return true;
 		}
 
-		// Token: 0x0603B4E2 RID: 242914 RVA: 0x00E2233F File Offset: 0x00E2053F
+		// Token: 0x0603042F RID: 197679 RVA: 0x00D7288F File Offset: 0x00D70A8F
 		public static bool Stop()
 		{
 			return ComboTimelineReplayController.Instance.StopInternal();
 		}
 
-		// Token: 0x0603B4E3 RID: 242915 RVA: 0x00E2234C File Offset: 0x00E2054C
+		// Token: 0x06030430 RID: 197680 RVA: 0x00D7289C File Offset: 0x00D70A9C
 		private bool StopInternal()
 		{
 			if (this.Session == null)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.ComboTimeline
 			return true;
 		}
 
-		// Token: 0x0603B4E4 RID: 242916 RVA: 0x00E223BC File Offset: 0x00E205BC
+		// Token: 0x06030431 RID: 197681 RVA: 0x00D7290C File Offset: 0x00D70B0C
 		protected unsafe override void OnTick(float delta)
 		{
 			ComboTimelineReplaySession session = this.Session;
@@ -160,22 +160,22 @@ namespace CSharpScript.Game.Module.ComboTimeline
 			}
 		}
 
-		// Token: 0x0603B4E5 RID: 242917 RVA: 0x00E22670 File Offset: 0x00E20870
+		// Token: 0x06030432 RID: 197682 RVA: 0x00D72BC0 File Offset: 0x00D70DC0
 		private bool TryApply(IShowTimelineBase entry)
 		{
 			IComboTimelineEntryHandler comboTimelineEntryHandler = ComboTimelineEntryRegistry.Get(entry.Type);
 			return comboTimelineEntryHandler == null || comboTimelineEntryHandler.Apply(entry, this.ReplayContext);
 		}
 
-		// Token: 0x0603B4E6 RID: 242918 RVA: 0x00E2269B File Offset: 0x00E2089B
+		// Token: 0x06030433 RID: 197683 RVA: 0x00D72BEB File Offset: 0x00D70DEB
 		private string Describe(IShowTimelineBase entry)
 		{
 			IComboTimelineEntryHandler comboTimelineEntryHandler = ComboTimelineEntryRegistry.Get(entry.Type);
 			return ((comboTimelineEntryHandler != null) ? comboTimelineEntryHandler.Describe(entry) : null) ?? entry.Type.ToEnumString();
 		}
 
-		// Token: 0x17008CE0 RID: 36064
-		// (get) Token: 0x0603B4E7 RID: 242919 RVA: 0x00E226C4 File Offset: 0x00E208C4
+		// Token: 0x170060B2 RID: 24754
+		// (get) Token: 0x06030434 RID: 197684 RVA: 0x00D72C14 File Offset: 0x00D70E14
 		public static ComboTimelineReplayController Instance
 		{
 			get
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.ComboTimeline
 			}
 		}
 
-		// Token: 0x0603B4E8 RID: 242920 RVA: 0x00E226CB File Offset: 0x00E208CB
+		// Token: 0x06030435 RID: 197685 RVA: 0x00D72C1B File Offset: 0x00D70E1B
 		public static ComboTimelineReplayController GetOrCreateInstance()
 		{
 			if (ComboTimelineReplayController._Instance == null)
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.ComboTimeline
 			return ComboTimelineReplayController._Instance;
 		}
 
-		// Token: 0x0603B4E9 RID: 242921 RVA: 0x00E226DF File Offset: 0x00E208DF
+		// Token: 0x06030436 RID: 197686 RVA: 0x00D72C2F File Offset: 0x00D70E2F
 		public static bool CreateInstance()
 		{
 			if (ComboTimelineReplayController._Instance != null)
@@ -205,34 +205,34 @@ namespace CSharpScript.Game.Module.ComboTimeline
 			return true;
 		}
 
-		// Token: 0x0603B4EA RID: 242922 RVA: 0x00E226F5 File Offset: 0x00E208F5
+		// Token: 0x06030437 RID: 197687 RVA: 0x00D72C45 File Offset: 0x00D70E45
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603B4EB RID: 242923 RVA: 0x00E226F7 File Offset: 0x00E208F7
+		// Token: 0x06030438 RID: 197688 RVA: 0x00D72C47 File Offset: 0x00D70E47
 		public static void ResetStaticDefaultValue()
 		{
 			ComboTimelineReplayController._Instance = null;
 		}
 
-		// Token: 0x0603B4EC RID: 242924 RVA: 0x00E226FF File Offset: 0x00E208FF
+		// Token: 0x06030439 RID: 197689 RVA: 0x00D72C4F File Offset: 0x00D70E4F
 		static ComboTimelineReplayController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ComboTimelineReplayController.CreateStaticDefaultValue), new Action(ComboTimelineReplayController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EE94 RID: 126612
+		// Token: 0x04019945 RID: 104773
 		[Nullable(2)]
 		private ComboTimelineReplaySession Session;
 
-		// Token: 0x0401EE95 RID: 126613
+		// Token: 0x04019946 RID: 104774
 		private readonly ComboTimelineReplayContext ReplayContext = new ComboTimelineReplayContext();
 
-		// Token: 0x0401EE96 RID: 126614
+		// Token: 0x04019947 RID: 104775
 		private readonly ComboTimelineReplayInputBlocker InputBlocker = new ComboTimelineReplayInputBlocker();
 
-		// Token: 0x0401EE97 RID: 126615
+		// Token: 0x04019948 RID: 104776
 		[Nullable(2)]
 		private static ComboTimelineReplayController _Instance;
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200095E RID: 2398
+	// Token: 0x020009A9 RID: 2473
 	public class ConfigSlideById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003848 RID: 14408 RVA: 0x00197C98 File Offset: 0x00195E98
+		// Token: 0x06003A0A RID: 14858 RVA: 0x001A4EB8 File Offset: 0x001A30B8
 		static ConfigSlideById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSlideById.CreateStaticDefaultValue), new Action(ConfigSlideById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003849 RID: 14409 RVA: 0x00197CB8 File Offset: 0x00195EB8
+		// Token: 0x06003A0B RID: 14859 RVA: 0x001A4ED8 File Offset: 0x001A30D8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSlideById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600384A RID: 14410 RVA: 0x00197D37 File Offset: 0x00195F37
+		// Token: 0x06003A0C RID: 14860 RVA: 0x001A4F57 File Offset: 0x001A3157
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSlideById.LogPair = null;
 			ConfigSlideById.HandleId = 0;
 		}
 
-		// Token: 0x0600384B RID: 14411 RVA: 0x00197D45 File Offset: 0x00195F45
+		// Token: 0x06003A0D RID: 14861 RVA: 0x001A4F65 File Offset: 0x001A3165
 		public static void Init()
 		{
 			ConfigSlideById.HandleId = ConfigCommon.InitDataStatement(ConfigSlideById.HandleId, "db_slide.db", "select BinData from `Slide` where Id=?");
 		}
 
-		// Token: 0x0600384C RID: 14412 RVA: 0x00197D60 File Offset: 0x00195F60
+		// Token: 0x06003A0E RID: 14862 RVA: 0x001A4F80 File Offset: 0x001A3180
 		public static Slide? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSlideById.HandleId, ConfigSlideById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new Slide?(rootAsSlide);
 		}
 
-		// Token: 0x04004178 RID: 16760
+		// Token: 0x04004385 RID: 17285
 		private const string DB = "db_slide.db";
 
-		// Token: 0x04004179 RID: 16761
+		// Token: 0x04004386 RID: 17286
 		private const string FILE = "h.滑行.xlsx";
 
-		// Token: 0x0400417A RID: 16762
+		// Token: 0x04004387 RID: 17287
 		private const string TABLE = "Slide";
 
-		// Token: 0x0400417B RID: 16763
+		// Token: 0x04004388 RID: 17288
 		private const string COMMAND = "select BinData from `Slide` where Id=?";
 
-		// Token: 0x0400417C RID: 16764
+		// Token: 0x04004389 RID: 17289
 		private const string KEY_PREFIX = "SlideById";
 
-		// Token: 0x0400417D RID: 16765
+		// Token: 0x0400438A RID: 17290
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400417E RID: 16766
+		// Token: 0x0400438B RID: 17291
 		private static int HandleId;
 	}
 }

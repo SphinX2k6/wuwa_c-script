@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem
 {
-	// Token: 0x020051C7 RID: 20935
+	// Token: 0x02004197 RID: 16791
 	[Nullable(new byte[]
 	{
 		0,

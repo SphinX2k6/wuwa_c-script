@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CBF RID: 3263
+	// Token: 0x02000DA1 RID: 3489
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFoxJumpPositionOnThisEntity : IFoxJumpInteractPointRelationType
 	{
-		// Token: 0x06004A9B RID: 19099 RVA: 0x000BAAC9 File Offset: 0x000B8CC9
-		[NullableContext(1)]
+		// Token: 0x06004F49 RID: 20297 RVA: 0x000C54D9 File Offset: 0x000C36D9
+		[NullableContext(0)]
 		public static IFoxJumpPositionOnThisEntity Create(IFoxJumpPositionOnThisEntity? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016DA RID: 5850
-		// (get) Token: 0x06004A9C RID: 19100 RVA: 0x000BAAE8 File Offset: 0x000B8CE8
+		// Token: 0x17001802 RID: 6146
+		// (get) Token: 0x06004F4A RID: 20298 RVA: 0x000C54F8 File Offset: 0x000C36F8
 		public override EFoxJumpInteractPointRelationType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016DB RID: 5851
-		// (get) Token: 0x06004A9D RID: 19101 RVA: 0x000BAAF5 File Offset: 0x000B8CF5
+		// Token: 0x17001803 RID: 6147
+		// (get) Token: 0x06004F4B RID: 20299 RVA: 0x000C5505 File Offset: 0x000C3705
 		public override VectorInfo Offset
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016DC RID: 5852
-		// (get) Token: 0x06004A9E RID: 19102 RVA: 0x000BAB29 File Offset: 0x000B8D29
+		// Token: 0x17001804 RID: 6148
+		// (get) Token: 0x06004F4C RID: 20300 RVA: 0x000C5539 File Offset: 0x000C3739
 		public override VectorInfo RaycastDestOffset
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016DD RID: 5853
-		// (get) Token: 0x06004A9F RID: 19103 RVA: 0x000BAB60 File Offset: 0x000B8D60
+		// Token: 0x17001805 RID: 6149
+		// (get) Token: 0x06004F4D RID: 20301 RVA: 0x000C5570 File Offset: 0x000C3770
 		public virtual int? SplineEntityId
 		{
 			get
@@ -80,19 +80,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A9C RID: 10908
+		// Token: 0x04002D16 RID: 11542
 		private IFoxJumpPositionOnThisEntity Instance;
 
-		// Token: 0x04002A9D RID: 10909
+		// Token: 0x04002D17 RID: 11543
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04002A9E RID: 10910
+		// Token: 0x04002D18 RID: 11544
 		private bool _OffsetInited;
 
-		// Token: 0x04002A9F RID: 10911
+		// Token: 0x04002D19 RID: 11545
 		private VectorInfo _RaycastDestOffsetCache;
 
-		// Token: 0x04002AA0 RID: 10912
+		// Token: 0x04002D1A RID: 11546
 		private bool _RaycastDestOffsetInited;
 	}
 }

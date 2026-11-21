@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002373 RID: 9075
+	// Token: 0x020025FC RID: 9724
 	public static class ELockStateExtensions
 	{
-		// Token: 0x0600C604 RID: 50692 RVA: 0x001D02E4 File Offset: 0x001CE4E4
+		// Token: 0x0600D248 RID: 53832 RVA: 0x001E92B8 File Offset: 0x001E74B8
 		public static string ToEnumString(this ELockState value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C605 RID: 50693 RVA: 0x001D031C File Offset: 0x001CE51C
+		// Token: 0x0600D249 RID: 53833 RVA: 0x001E92F0 File Offset: 0x001E74F0
 		public static ELockState FromString(string name)
 		{
 			ELockState result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C606 RID: 50694 RVA: 0x001D0345 File Offset: 0x001CE545
+		// Token: 0x0600D24A RID: 53834 RVA: 0x001E9319 File Offset: 0x001E7519
 		public static bool TryFromString(string name, out ELockState value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C607 RID: 50695 RVA: 0x001D037E File Offset: 0x001CE57E
+		// Token: 0x0600D24B RID: 53835 RVA: 0x001E9352 File Offset: 0x001E7552
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C608 RID: 50696 RVA: 0x001D0396 File Offset: 0x001CE596
+		// Token: 0x0600D24C RID: 53836 RVA: 0x001E936A File Offset: 0x001E756A
 		public static ELockState[] GetValues()
 		{
 			return new ELockState[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C609 RID: 50697 RVA: 0x001D03A2 File Offset: 0x001CE5A2
+		// Token: 0x0600D24D RID: 53837 RVA: 0x001E9376 File Offset: 0x001E7576
 		public static string[] GetNames()
 		{
 			return new string[]

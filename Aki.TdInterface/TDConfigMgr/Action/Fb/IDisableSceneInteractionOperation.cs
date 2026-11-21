@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200294F RID: 10575
+	// Token: 0x02002C31 RID: 11313
 	public class IDisableSceneInteractionOperation : ISceneInteractionOperationType
 	{
-		// Token: 0x0600EA80 RID: 60032 RVA: 0x002256D6 File Offset: 0x002238D6
-		[NullableContext(1)]
+		// Token: 0x0600F8EB RID: 63723 RVA: 0x00242CB6 File Offset: 0x00240EB6
 		public static IDisableSceneInteractionOperation Create(IDisableSceneInteractionOperation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049A4 RID: 18852
-		// (get) Token: 0x0600EA81 RID: 60033 RVA: 0x002256F5 File Offset: 0x002238F5
+		// Token: 0x17004D37 RID: 19767
+		// (get) Token: 0x0600F8EC RID: 63724 RVA: 0x00242CD5 File Offset: 0x00240ED5
 		public override ESceneInteractionOperationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400813F RID: 33087
+		// Token: 0x0400881B RID: 34843
 		private IDisableSceneInteractionOperation Instance;
 	}
 }

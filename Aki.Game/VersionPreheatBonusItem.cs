@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001571 RID: 5489
+// Token: 0x02000A29 RID: 2601
 [NullableContext(1)]
 [Nullable(0)]
 internal class VersionPreheatBonusItem : UiPanelBase
 {
-	// Token: 0x06009CFC RID: 40188 RVA: 0x0021F5A0 File Offset: 0x0021D7A0
+	// Token: 0x060070DA RID: 28890 RVA: 0x00229350 File Offset: 0x00227550
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -43,7 +43,7 @@ internal class VersionPreheatBonusItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009CFD RID: 40189 RVA: 0x0021F6EC File Offset: 0x0021D8EC
+	// Token: 0x060070DB RID: 28891 RVA: 0x0022949C File Offset: 0x0022769C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VersionPreheatBonusItem.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -54,7 +54,7 @@ internal class VersionPreheatBonusItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009CFE RID: 40190 RVA: 0x0021F730 File Offset: 0x0021D930
+	// Token: 0x060070DC RID: 28892 RVA: 0x002294E0 File Offset: 0x002276E0
 	public UniTask RefreshExternalAsync(VersionPreheatBonusData data)
 	{
 		VersionPreheatBonusItem.<RefreshExternalAsync>d__3 <RefreshExternalAsync>d__;
@@ -65,7 +65,7 @@ internal class VersionPreheatBonusItem : UiPanelBase
 		return <RefreshExternalAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009CFF RID: 40191 RVA: 0x0021F774 File Offset: 0x0021D974
+	// Token: 0x060070DD RID: 28893 RVA: 0x00229524 File Offset: 0x00227724
 	private void RefreshWhenActive()
 	{
 		base.GetRootItem().SetUIActive(true);
@@ -97,7 +97,7 @@ internal class VersionPreheatBonusItem : UiPanelBase
 		item3.SetUIActive(!VersionPreheatModel.Instance.IsBonusClicked());
 	}
 
-	// Token: 0x06009D00 RID: 40192 RVA: 0x0021F800 File Offset: 0x0021DA00
+	// Token: 0x060070DE RID: 28894 RVA: 0x002295B0 File Offset: 0x002277B0
 	private void HandleOnClick()
 	{
 		VersionPreheatModel.Instance.SetBonusClicked();
@@ -105,6 +105,6 @@ internal class VersionPreheatBonusItem : UiPanelBase
 		ActivityVersionPreheatController.Instance.SendDetailClickLogData(null);
 	}
 
-	// Token: 0x040044E7 RID: 17639
+	// Token: 0x0400458D RID: 17805
 	private UiSequencePlayer Player;
 }

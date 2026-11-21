@@ -6,12 +6,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005F6 RID: 1526
-	[NullableContext(1)]
+	// Token: 0x02000693 RID: 1683
+	[NullableContext(2)]
 	[Nullable(0)]
 	public class IPetalGrabRoleMotionInteract : IRoleMotionInteractType
 	{
-		// Token: 0x06002068 RID: 8296 RVA: 0x0005A368 File Offset: 0x00058568
+		// Token: 0x0600236A RID: 9066 RVA: 0x00060FE4 File Offset: 0x0005F1E4
+		[NullableContext(0)]
 		private IPetalGrabRoleMotionInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +27,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002069 RID: 8297 RVA: 0x0005A3A0 File Offset: 0x000585A0
+		// Token: 0x0600236B RID: 9067 RVA: 0x0006101C File Offset: 0x0005F21C
+		[NullableContext(0)]
 		public static IPetalGrabRoleMotionInteract Create([Nullable(2)] IPetalGrabRoleMotionInteract instance)
 		{
 			if (instance == null)
@@ -39,7 +41,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600206A RID: 8298 RVA: 0x0005A3B3 File Offset: 0x000585B3
+		// Token: 0x0600236C RID: 9068 RVA: 0x0006102F File Offset: 0x0005F22F
+		[NullableContext(0)]
 		public static IPetalGrabRoleMotionInteract CreateFromSetValue([Nullable(2)] IPetalGrabRoleMotionInteract_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +55,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600206B RID: 8299 RVA: 0x0005A3C8 File Offset: 0x000585C8
+		// Token: 0x0600236D RID: 9069 RVA: 0x00061044 File Offset: 0x0005F244
+		[NullableContext(0)]
 		public new IPetalGrabRoleMotionInteract_SetValue ToSetValue()
 		{
 			return new IPetalGrabRoleMotionInteract_SetValue
@@ -61,13 +65,15 @@ namespace Aki.TDConfigMgr.Component
 				HandOption = this.HandOption,
 				GrabPointOffset = this.GrabPointOffset,
 				GrabEvents = this.GrabEvents,
-				NextPointEntityId = this.NextPointEntityId
+				NextPointEntityId = this.NextPointEntityId,
+				FlightSplineId = this.FlightSplineId,
+				FlightSplineMovePattern = this.FlightSplineMovePattern
 			};
 		}
 
-		// Token: 0x170008A2 RID: 2210
-		// (get) Token: 0x0600206C RID: 8300 RVA: 0x0005A416 File Offset: 0x00058616
-		// (set) Token: 0x0600206D RID: 8301 RVA: 0x0005A441 File Offset: 0x00058641
+		// Token: 0x17000957 RID: 2391
+		// (get) Token: 0x0600236E RID: 9070 RVA: 0x000610AA File Offset: 0x0005F2AA
+		// (set) Token: 0x0600236F RID: 9071 RVA: 0x000610D5 File Offset: 0x0005F2D5
 		public override ERoleMotionInteractType Type
 		{
 			get
@@ -88,9 +94,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008A3 RID: 2211
-		// (get) Token: 0x0600206E RID: 8302 RVA: 0x0005A44F File Offset: 0x0005864F
-		// (set) Token: 0x0600206F RID: 8303 RVA: 0x0005A47A File Offset: 0x0005867A
+		// Token: 0x17000958 RID: 2392
+		// (get) Token: 0x06002370 RID: 9072 RVA: 0x000610E3 File Offset: 0x0005F2E3
+		// (set) Token: 0x06002371 RID: 9073 RVA: 0x0006110E File Offset: 0x0005F30E
 		public virtual EPetalGrabHandType HandOption
 		{
 			get
@@ -111,13 +117,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008A4 RID: 2212
-		// (get) Token: 0x06002070 RID: 8304 RVA: 0x0005A488 File Offset: 0x00058688
-		// (set) Token: 0x06002071 RID: 8305 RVA: 0x0005A4E9 File Offset: 0x000586E9
-		[Nullable(2)]
+		// Token: 0x17000959 RID: 2393
+		// (get) Token: 0x06002372 RID: 9074 RVA: 0x0006111C File Offset: 0x0005F31C
+		// (set) Token: 0x06002373 RID: 9075 RVA: 0x0006117D File Offset: 0x0005F37D
 		public virtual PosAndRot GrabPointOffset
 		{
-			[NullableContext(2)]
 			get
 			{
 				if (this._GrabPointOffsetInited)
@@ -136,7 +140,6 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this._GrabPointOffsetCache;
 			}
-			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().GrabPointOffset = value;
@@ -144,20 +147,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008A5 RID: 2213
-		// (get) Token: 0x06002072 RID: 8306 RVA: 0x0005A500 File Offset: 0x00058700
-		// (set) Token: 0x06002073 RID: 8307 RVA: 0x0005A593 File Offset: 0x00058793
+		// Token: 0x1700095A RID: 2394
+		// (get) Token: 0x06002374 RID: 9076 RVA: 0x00061194 File Offset: 0x0005F394
+		// (set) Token: 0x06002375 RID: 9077 RVA: 0x00061227 File Offset: 0x0005F427
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IPetalGrabEvent> GrabEvents
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -188,7 +191,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -197,9 +200,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008A6 RID: 2214
-		// (get) Token: 0x06002074 RID: 8308 RVA: 0x0005A5A8 File Offset: 0x000587A8
-		// (set) Token: 0x06002075 RID: 8309 RVA: 0x0005A5E2 File Offset: 0x000587E2
+		// Token: 0x1700095B RID: 2395
+		// (get) Token: 0x06002376 RID: 9078 RVA: 0x0006123C File Offset: 0x0005F43C
+		// (set) Token: 0x06002377 RID: 9079 RVA: 0x00061276 File Offset: 0x0005F476
 		public virtual int? NextPointEntityId
 		{
 			get
@@ -221,29 +224,76 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040016BA RID: 5818
-		[Nullable(2)]
+		// Token: 0x1700095C RID: 2396
+		// (get) Token: 0x06002378 RID: 9080 RVA: 0x00061284 File Offset: 0x0005F484
+		// (set) Token: 0x06002379 RID: 9081 RVA: 0x000612BE File Offset: 0x0005F4BE
+		public virtual int? FlightSplineId
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.FlightSplineId;
+				}
+				IPetalGrabRoleMotionInteract_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.FlightSplineId;
+			}
+			set
+			{
+				this.GetOrCreatePoco().FlightSplineId = value;
+			}
+		}
+
+		// Token: 0x1700095D RID: 2397
+		// (get) Token: 0x0600237A RID: 9082 RVA: 0x000612CC File Offset: 0x0005F4CC
+		// (set) Token: 0x0600237B RID: 9083 RVA: 0x000612F3 File Offset: 0x0005F4F3
+		public virtual ISplineMovePattern FlightSplineMovePattern
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.FlightSplineMovePattern;
+				}
+				IPetalGrabRoleMotionInteract_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.FlightSplineMovePattern;
+			}
+			set
+			{
+				this.GetOrCreatePoco().FlightSplineMovePattern = value;
+			}
+		}
+
+		// Token: 0x040018AA RID: 6314
 		protected new IPetalGrabRoleMotionInteract FbInstance;
 
-		// Token: 0x040016BB RID: 5819
-		[Nullable(2)]
+		// Token: 0x040018AB RID: 6315
 		protected new IPetalGrabRoleMotionInteract_SetValue PocoInterface;
 
-		// Token: 0x040016BC RID: 5820
+		// Token: 0x040018AC RID: 6316
+		[Nullable(0)]
 		private PosAndRot _GrabPointOffsetCache;
 
-		// Token: 0x040016BD RID: 5821
+		// Token: 0x040018AD RID: 6317
 		private bool _GrabPointOffsetInited;
 
-		// Token: 0x040016BE RID: 5822
+		// Token: 0x040018AE RID: 6318
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IPetalGrabEvent> _GrabEventsCache;
 
-		// Token: 0x040016BF RID: 5823
+		// Token: 0x040018AF RID: 6319
 		private bool _GrabEventsInited;
 	}
 }

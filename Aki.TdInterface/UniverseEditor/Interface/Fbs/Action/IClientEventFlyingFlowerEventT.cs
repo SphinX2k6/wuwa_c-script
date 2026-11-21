@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006398 RID: 25496
+	// Token: 0x02006A09 RID: 27145
 	public class IClientEventFlyingFlowerEventT
 	{
-		// Token: 0x1700BE1B RID: 48667
-		// (get) Token: 0x0602C1CD RID: 180685 RVA: 0x0060F216 File Offset: 0x0060D416
-		// (set) Token: 0x0602C1CE RID: 180686 RVA: 0x0060F21E File Offset: 0x0060D41E
+		// Token: 0x1700C79F RID: 51103
+		// (get) Token: 0x0602E92F RID: 190767 RVA: 0x0065A24E File Offset: 0x0065844E
+		// (set) Token: 0x0602E930 RID: 190768 RVA: 0x0065A256 File Offset: 0x00658456
 		public EClientEventFlyingFlowerEventType Type { get; set; }
 
-		// Token: 0x0602C1CF RID: 180687 RVA: 0x0060F227 File Offset: 0x0060D427
+		// Token: 0x0602E931 RID: 190769 RVA: 0x0065A25F File Offset: 0x0065845F
 		public IClientEventFlyingFlowerEventT()
 		{
 			this.Type = EClientEventFlyingFlowerEventType.UpdateSubtitle;

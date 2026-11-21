@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// Token: 0x02000280 RID: 640
+// Token: 0x02000287 RID: 647
 [InlineArray(7)]
 [StructLayout(LayoutKind.Auto)]
 internal struct <>y__InlineArray7<T>
 {
-	// Token: 0x04000A2A RID: 2602
+	// Token: 0x04000A78 RID: 2680
 	[CompilerGenerated]
 	private T _element0;
 }

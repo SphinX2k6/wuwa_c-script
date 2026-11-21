@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FBF RID: 24511
+	// Token: 0x02004FA6 RID: 20390
 	public class TotalTopUpPayAdditiveTagItem : UiPanelBase
 	{
-		// Token: 0x0603E216 RID: 254486 RVA: 0x00F01538 File Offset: 0x00EFF738
+		// Token: 0x060331B0 RID: 209328 RVA: 0x00E531F4 File Offset: 0x00E513F4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E217 RID: 254487 RVA: 0x00F015A4 File Offset: 0x00EFF7A4
+		// Token: 0x060331B1 RID: 209329 RVA: 0x00E53260 File Offset: 0x00E51460
 		protected override void OnStart()
 		{
 			TotalTopUpController instance = TotalTopUpController.Instance;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E218 RID: 254488 RVA: 0x00F015E8 File Offset: 0x00EFF7E8
+		// Token: 0x060331B2 RID: 209330 RVA: 0x00E532A4 File Offset: 0x00E514A4
 		public void RefreshByGoodsId(int goodsId)
 		{
 			TotalTopUpController instance = TotalTopUpController.Instance;
@@ -58,12 +58,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			text.SetText(goodsScore.ToString(), true);
 		}
 
-		// Token: 0x0200C297 RID: 49815
+		// Token: 0x0200ACA2 RID: 44194
 		private enum ENode
 		{
-			// Token: 0x0403AC8D RID: 240781
+			// Token: 0x04035669 RID: 218729
 			Text,
-			// Token: 0x0403AC8E RID: 240782
+			// Token: 0x0403566A RID: 218730
 			TextureIcon
 		}
 	}

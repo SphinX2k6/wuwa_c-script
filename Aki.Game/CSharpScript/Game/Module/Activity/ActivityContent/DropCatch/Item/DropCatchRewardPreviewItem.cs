@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 {
-	// Token: 0x020066E1 RID: 26337
+	// Token: 0x02005631 RID: 22065
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 	})]
 	public class DropCatchRewardPreviewItem : GridProxyAbstract<IDropCatchRewardPreviewData>
 	{
-		// Token: 0x06041D45 RID: 269637 RVA: 0x00FF6E48 File Offset: 0x00FF5048
+		// Token: 0x06036891 RID: 223377 RVA: 0x00F3824C File Offset: 0x00F3644C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 			};
 		}
 
-		// Token: 0x06041D46 RID: 269638 RVA: 0x00FF6F4C File Offset: 0x00FF514C
+		// Token: 0x06036892 RID: 223378 RVA: 0x00F38350 File Offset: 0x00F36550
 		protected override void OnStart()
 		{
 			if (this.RewardScrollView != null)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 			this.StarLayout = new GenericLayout<DropCatchRewardStarItem, bool>(base.GetHorizontalLayout(3), new Func<DropCatchRewardStarItem>(this.CreateStarItem), null, false, true);
 		}
 
-		// Token: 0x06041D47 RID: 269639 RVA: 0x00FF6FA9 File Offset: 0x00FF51A9
+		// Token: 0x06036893 RID: 223379 RVA: 0x00F383AD File Offset: 0x00F365AD
 		private CommonItemSmallItemGrid CreateRewardItem()
 		{
 			return new CommonItemSmallItemGrid
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 			};
 		}
 
-		// Token: 0x06041D48 RID: 269640 RVA: 0x00FF6FC2 File Offset: 0x00FF51C2
+		// Token: 0x06036894 RID: 223380 RVA: 0x00F383C6 File Offset: 0x00F365C6
 		private DropCatchRewardStarItem CreateStarItem()
 		{
 			return new DropCatchRewardStarItem();
 		}
 
-		// Token: 0x06041D49 RID: 269641 RVA: 0x00FF6FCC File Offset: 0x00FF51CC
+		// Token: 0x06036895 RID: 223381 RVA: 0x00F383D0 File Offset: 0x00F365D0
 		public override void Refresh(IDropCatchRewardPreviewData data, bool isSelected, int gridIndex)
 		{
 			if (data == null)
@@ -139,13 +139,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 			}
 		}
 
-		// Token: 0x06041D4A RID: 269642 RVA: 0x00FF71C7 File Offset: 0x00FF53C7
+		// Token: 0x06036896 RID: 223382 RVA: 0x00F385CB File Offset: 0x00F367CB
 		public void SetClickCallback(Action<int> callback)
 		{
 			this.ClickCallback = callback;
 		}
 
-		// Token: 0x06041D4B RID: 269643 RVA: 0x00FF71D0 File Offset: 0x00FF53D0
+		// Token: 0x06036897 RID: 223383 RVA: 0x00F385D4 File Offset: 0x00F367D4
 		private void OnClicked()
 		{
 			Action<int> clickCallback = this.ClickCallback;
@@ -156,15 +156,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 			clickCallback(this.CfgId);
 		}
 
-		// Token: 0x0402249A RID: 140442
+		// Token: 0x0401CCF3 RID: 118003
 		private int CfgId;
 
-		// Token: 0x0402249B RID: 140443
+		// Token: 0x0401CCF4 RID: 118004
 		private Action<int> ClickCallback = delegate(int index)
 		{
 		};
 
-		// Token: 0x0402249C RID: 140444
+		// Token: 0x0401CCF5 RID: 118005
 		[Nullable(new byte[]
 		{
 			2,
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-		// Token: 0x0402249D RID: 140445
+		// Token: 0x0401CCF6 RID: 118006
 		[Nullable(new byte[]
 		{
 			2,
@@ -180,13 +180,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 		})]
 		private GenericLayout<DropCatchRewardStarItem, bool> StarLayout;
 
-		// Token: 0x0402249E RID: 140446
+		// Token: 0x0401CCF7 RID: 118007
 		private bool IsRewarded;
 
-		// Token: 0x0402249F RID: 140447
+		// Token: 0x0401CCF8 RID: 118008
 		private const int PROGRESS_BAR_NORMAL_HEIGHT = 224;
 
-		// Token: 0x040224A0 RID: 140448
+		// Token: 0x0401CCF9 RID: 118009
 		private const int PROGRESS_BAR_LAST_HEIGHT = 194;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022AB RID: 8875
+	// Token: 0x0200251A RID: 9498
 	public static class EAvgRoleAnimationTypeExtensions
 	{
-		// Token: 0x0600C280 RID: 49792 RVA: 0x001C6A48 File Offset: 0x001C4C48
+		// Token: 0x0600CE4F RID: 52815 RVA: 0x001DE850 File Offset: 0x001DCA50
 		public static string ToEnumString(this EAvgRoleAnimationType value)
 		{
 			string result;
@@ -39,7 +39,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C281 RID: 49793 RVA: 0x001C6AC0 File Offset: 0x001C4CC0
+		// Token: 0x0600CE50 RID: 52816 RVA: 0x001DE8C8 File Offset: 0x001DCAC8
 		public static EAvgRoleAnimationType FromString(string name)
 		{
 			EAvgRoleAnimationType result;
@@ -50,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C282 RID: 49794 RVA: 0x001C6AEC File Offset: 0x001C4CEC
+		// Token: 0x0600CE51 RID: 52817 RVA: 0x001DE8F4 File Offset: 0x001DCAF4
 		public static bool TryFromString(string name, out EAvgRoleAnimationType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -124,7 +124,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C283 RID: 49795 RVA: 0x001C6BEF File Offset: 0x001C4DEF
+		// Token: 0x0600CE52 RID: 52818 RVA: 0x001DE9F7 File Offset: 0x001DCBF7
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -139,7 +139,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C284 RID: 49796 RVA: 0x001C6C2F File Offset: 0x001C4E2F
+		// Token: 0x0600CE53 RID: 52819 RVA: 0x001DEA37 File Offset: 0x001DCC37
 		public static EAvgRoleAnimationType[] GetValues()
 		{
 			return new EAvgRoleAnimationType[]
@@ -154,7 +154,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C285 RID: 49797 RVA: 0x001C6C42 File Offset: 0x001C4E42
+		// Token: 0x0600CE54 RID: 52820 RVA: 0x001DEA4A File Offset: 0x001DCC4A
 		public static string[] GetNames()
 		{
 			return new string[]

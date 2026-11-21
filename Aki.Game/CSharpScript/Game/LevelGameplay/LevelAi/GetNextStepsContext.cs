@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi
 {
-	// Token: 0x02006DB2 RID: 28082
+	// Token: 0x02005F31 RID: 24369
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GetNextStepsContext
 	{
-		// Token: 0x0604483A RID: 280634 RVA: 0x010E542C File Offset: 0x010E362C
+		// Token: 0x0603A99E RID: 240030 RVA: 0x0108F654 File Offset: 0x0108D854
 		public GetNextStepsContext(LevelAiPlan plan, bool bIsExecutingPlan, List<LevelAiPlanStepId> outStepIds)
 		{
 			this.Plan = plan;
@@ -18,14 +18,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.NumSubmittedSteps = 0;
 		}
 
-		// Token: 0x0604483B RID: 280635 RVA: 0x010E5450 File Offset: 0x010E3650
+		// Token: 0x0603A99F RID: 240031 RVA: 0x0108F678 File Offset: 0x0108D878
 		public void SubmitPlanStep(LevelAiPlanStepId planStepId)
 		{
 			this.OutStepIds.Add(planStepId);
 			this.NumSubmittedSteps++;
 		}
 
-		// Token: 0x0604483C RID: 280636 RVA: 0x010E546C File Offset: 0x010E366C
+		// Token: 0x0603A9A0 RID: 240032 RVA: 0x0108F694 File Offset: 0x0108D894
 		public int AddNextStepsAfter(LevelAiPlanStepId inStepId)
 		{
 			if (!this.Plan.HasLevel(inStepId.LevelIndex))
@@ -51,29 +51,29 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return this.NumSubmittedSteps - numSubmittedSteps;
 		}
 
-		// Token: 0x0604483D RID: 280637 RVA: 0x010E5529 File Offset: 0x010E3729
+		// Token: 0x0603A9A1 RID: 240033 RVA: 0x0108F751 File Offset: 0x0108D951
 		public int GetNumSubmittedSteps()
 		{
 			return this.NumSubmittedSteps;
 		}
 
-		// Token: 0x0604483E RID: 280638 RVA: 0x010E5531 File Offset: 0x010E3731
+		// Token: 0x0603A9A2 RID: 240034 RVA: 0x0108F759 File Offset: 0x0108D959
 		[return: Nullable(2)]
 		public LevelAiPlanStep GetStep(LevelAiPlanStepId inStepId)
 		{
 			return this.Plan.GetStep(inStepId);
 		}
 
-		// Token: 0x04023A20 RID: 145952
+		// Token: 0x0401ECC2 RID: 126146
 		private readonly LevelAiPlan Plan;
 
-		// Token: 0x04023A21 RID: 145953
+		// Token: 0x0401ECC3 RID: 126147
 		private readonly List<LevelAiPlanStepId> OutStepIds;
 
-		// Token: 0x04023A22 RID: 145954
+		// Token: 0x0401ECC4 RID: 126148
 		private int NumSubmittedSteps;
 
-		// Token: 0x04023A23 RID: 145955
+		// Token: 0x0401ECC5 RID: 126149
 		public bool IsExecutingPlan;
 	}
 }

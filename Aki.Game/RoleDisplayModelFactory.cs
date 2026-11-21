@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002812 RID: 10258
+// Token: 0x02001D8D RID: 7565
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleDisplayModelFactory : IStaticVariableResetter
 {
-	// Token: 0x0601510F RID: 86287 RVA: 0x00555C60 File Offset: 0x00553E60
+	// Token: 0x06012B0F RID: 76559 RVA: 0x00580A60 File Offset: 0x0057EC60
 	static RoleDisplayModelFactory()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleDisplayModelFactory.CreateStaticDefaultValue), new Action(RoleDisplayModelFactory.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17001BD5 RID: 7125
-	// (get) Token: 0x06015110 RID: 86288 RVA: 0x00555C7F File Offset: 0x00553E7F
+	// Token: 0x17001C2D RID: 7213
+	// (get) Token: 0x06012B10 RID: 76560 RVA: 0x00580A7F File Offset: 0x0057EC7F
 	public static RoleDisplayModelFactory Instance
 	{
 		get
@@ -26,19 +26,19 @@ public class RoleDisplayModelFactory : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06015111 RID: 86289 RVA: 0x00555C97 File Offset: 0x00553E97
+	// Token: 0x06012B11 RID: 76561 RVA: 0x00580A97 File Offset: 0x0057EC97
 	public static void CreateStaticDefaultValue()
 	{
 		RoleDisplayModelFactory.InstanceInternal = null;
 	}
 
-	// Token: 0x06015112 RID: 86290 RVA: 0x00555C9F File Offset: 0x00553E9F
+	// Token: 0x06012B12 RID: 76562 RVA: 0x00580A9F File Offset: 0x0057EC9F
 	public static void ResetStaticDefaultValue()
 	{
 		RoleDisplayModelFactory.InstanceInternal = null;
 	}
 
-	// Token: 0x06015113 RID: 86291 RVA: 0x00555CA8 File Offset: 0x00553EA8
+	// Token: 0x06012B13 RID: 76563 RVA: 0x00580AA8 File Offset: 0x0057ECA8
 	public RoleDisplayModelBase BuildRoleDisplayModel(int roleId, bool forceRuntime = false)
 	{
 		if (RoleDevUtils.GetRoleTypeTagByRoleId(roleId) == ERoleTypeTag.Forecast)
@@ -60,7 +60,7 @@ public class RoleDisplayModelFactory : IStaticVariableResetter
 		return runtimeRoleDisplayModel;
 	}
 
-	// Token: 0x04009E33 RID: 40499
+	// Token: 0x0400A21C RID: 41500
 	[Nullable(2)]
 	private static RoleDisplayModelFactory InstanceInternal;
 }

@@ -13,13 +13,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 {
-	// Token: 0x020063A2 RID: 25506
+	// Token: 0x02005320 RID: 21280
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ActivityMowingController : ActivityControllerBase
 	{
-		// Token: 0x0604026A RID: 262762 RVA: 0x00F88410 File Offset: 0x00F86610
+		// Token: 0x06034F2B RID: 216875 RVA: 0x00ECF348 File Offset: 0x00ECD548
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.HarvestActivityPointNotify, new Action<IMessage, Net.CallbackStatus>(this.OnHarvestActivityPointNotify));
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			Net.Instance.Register(ENotifyMessageId.HarvestActivityResultNotify, new Action<IMessage, Net.CallbackStatus>(this.OnHarvestActivityResultNotify));
 		}
 
-		// Token: 0x0604026B RID: 262763 RVA: 0x00F88471 File Offset: 0x00F86671
+		// Token: 0x06034F2C RID: 216876 RVA: 0x00ECF3A9 File Offset: 0x00ECD5A9
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.HarvestActivityPointNotify);
@@ -35,27 +35,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			Net.Instance.UnRegister(ENotifyMessageId.HarvestActivityResultNotify);
 		}
 
-		// Token: 0x0604026C RID: 262764 RVA: 0x00F884A3 File Offset: 0x00F866A3
+		// Token: 0x06034F2D RID: 216877 RVA: 0x00ECF3DB File Offset: 0x00ECD5DB
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 			EventSystem.Instance.Add(EEventName.LeaveInstanceDungeonConfirm, new Action(this.OnLeaveInstanceDungeonConfirm));
 		}
 
-		// Token: 0x0604026D RID: 262765 RVA: 0x00F884DD File Offset: 0x00F866DD
+		// Token: 0x06034F2E RID: 216878 RVA: 0x00ECF415 File Offset: 0x00ECD615
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 			EventSystem.Instance.Remove(EEventName.LeaveInstanceDungeonConfirm, new Action(this.OnLeaveInstanceDungeonConfirm));
 		}
 
-		// Token: 0x0604026E RID: 262766 RVA: 0x00F88517 File Offset: 0x00F86717
+		// Token: 0x06034F2F RID: 216879 RVA: 0x00ECF44F File Offset: 0x00ECD64F
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_ActivityMowing";
 		}
 
-		// Token: 0x0604026F RID: 262767 RVA: 0x00F88520 File Offset: 0x00F86720
+		// Token: 0x06034F30 RID: 216880 RVA: 0x00ECF458 File Offset: 0x00ECD658
 		private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason _)
 		{
 			if (this.CurrentActivityId == 0)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			}
 		}
 
-		// Token: 0x06040270 RID: 262768 RVA: 0x00F88584 File Offset: 0x00F86784
+		// Token: 0x06034F31 RID: 216881 RVA: 0x00ECF4BC File Offset: 0x00ECD6BC
 		private void OnLeaveInstanceDungeonConfirm()
 		{
 			if (InstanceDungeonEntranceModel.Instance.IsMowingInstanceDungeon())
@@ -84,31 +84,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			}
 		}
 
-		// Token: 0x06040271 RID: 262769 RVA: 0x00F88598 File Offset: 0x00F86798
+		// Token: 0x06034F32 RID: 216882 RVA: 0x00ECF4D0 File Offset: 0x00ECD6D0
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x06040272 RID: 262770 RVA: 0x00F8859A File Offset: 0x00F8679A
+		// Token: 0x06034F33 RID: 216883 RVA: 0x00ECF4D2 File Offset: 0x00ECD6D2
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new ActivityMowingSubView();
 		}
 
-		// Token: 0x06040273 RID: 262771 RVA: 0x00F885A1 File Offset: 0x00F867A1
+		// Token: 0x06034F34 RID: 216884 RVA: 0x00ECF4D9 File Offset: 0x00ECD6D9
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			this.CurrentActivityId = data.Id;
 			return new ActivityMowingData();
 		}
 
-		// Token: 0x06040274 RID: 262772 RVA: 0x00F885B4 File Offset: 0x00F867B4
+		// Token: 0x06034F35 RID: 216885 RVA: 0x00ECF4EC File Offset: 0x00ECD6EC
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x06040275 RID: 262773 RVA: 0x00F885B8 File Offset: 0x00F867B8
+		// Token: 0x06034F36 RID: 216886 RVA: 0x00ECF4F0 File Offset: 0x00ECD6F0
 		public void RequestGetPointReward(int activityId, int rewardUid)
 		{
 			HarvestActivityPointRequest harvestActivityPointRequest = HarvestActivityPointRequest.Create();
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 				HarvestActivityPointResponse harvestActivityPointResponse = (HarvestActivityPointResponse)msg;
 				if (harvestActivityPointResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(harvestActivityPointResponse.ErrorCode, 22430, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(harvestActivityPointResponse.ErrorCode, 26658, null, true, true);
 					return;
 				}
 				ActivityMowingData activityMowingData = ActivityModel.Instance.GetActivityById(activityId) as ActivityMowingData;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			}, 0);
 		}
 
-		// Token: 0x06040276 RID: 262774 RVA: 0x00F88614 File Offset: 0x00F86814
+		// Token: 0x06034F37 RID: 216887 RVA: 0x00ECF54C File Offset: 0x00ECD74C
 		public void RequestGetLevelReward(int activityId, int instanceId, int rewardUid)
 		{
 			HarvestActivityLevelRequest harvestActivityLevelRequest = HarvestActivityLevelRequest.Create();
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 				HarvestActivityLevelResponse harvestActivityLevelResponse = (HarvestActivityLevelResponse)msg;
 				if (harvestActivityLevelResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(harvestActivityLevelResponse.ErrorCode, 15302, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(harvestActivityLevelResponse.ErrorCode, 23959, null, true, true);
 					return;
 				}
 				ActivityMowingData activityMowingData = ActivityModel.Instance.GetActivityById(activityId) as ActivityMowingData;
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			}, 0);
 		}
 
-		// Token: 0x06040277 RID: 262775 RVA: 0x00F88670 File Offset: 0x00F86870
+		// Token: 0x06034F38 RID: 216888 RVA: 0x00ECF5A8 File Offset: 0x00ECD7A8
 		public void RequestSetDifficulty(int activityId, int diff)
 		{
 			HarvestActivityLevelDiffRequest harvestActivityLevelDiffRequest = HarvestActivityLevelDiffRequest.Create();
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 				HarvestActivityLevelDiffResponse harvestActivityLevelDiffResponse = (HarvestActivityLevelDiffResponse)msg;
 				if (harvestActivityLevelDiffResponse != null && harvestActivityLevelDiffResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(harvestActivityLevelDiffResponse.ErrorCode, 15960, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(harvestActivityLevelDiffResponse.ErrorCode, 28299, null, true, true);
 				}
 				ActivityMowingData activityMowingData = ActivityModel.Instance.GetActivityById(activityId) as ActivityMowingData;
 				if (((activityMowingData != null) ? activityMowingData.MowingLevelInfoDict : null) != null)
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			}, 0);
 		}
 
-		// Token: 0x06040278 RID: 262776 RVA: 0x00F886CC File Offset: 0x00F868CC
+		// Token: 0x06034F39 RID: 216889 RVA: 0x00ECF604 File Offset: 0x00ECD804
 		public void RequestSetDifficultyAll(int activityId, int diff)
 		{
 			if (this.GetMowingActivityData() == null)
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			this.RequestSetDifficulty(activityId, diff);
 		}
 
-		// Token: 0x06040279 RID: 262777 RVA: 0x00F886E0 File Offset: 0x00F868E0
+		// Token: 0x06034F3A RID: 216890 RVA: 0x00ECF618 File Offset: 0x00ECD818
 		[NullableContext(2)]
 		private void OnHarvestActivityPointNotify(IMessage msg, Net.CallbackStatus status = null)
 		{
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, harvestActivityPointNotify.ActivityId);
 		}
 
-		// Token: 0x0604027A RID: 262778 RVA: 0x00F8873C File Offset: 0x00F8693C
+		// Token: 0x06034F3B RID: 216891 RVA: 0x00ECF674 File Offset: 0x00ECD874
 		[NullableContext(2)]
 		private void OnHarvestActivityLevelNotify(IMessage msg, Net.CallbackStatus status = null)
 		{
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, harvestActivityLevelNotify.ActivityId);
 		}
 
-		// Token: 0x0604027B RID: 262779 RVA: 0x00F88798 File Offset: 0x00F86998
+		// Token: 0x06034F3C RID: 216892 RVA: 0x00ECF6D0 File Offset: 0x00ECD8D0
 		[NullableContext(2)]
 		private void OnHarvestActivityResultNotify(IMessage msg, Net.CallbackStatus status = null)
 		{
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			bool flag = harvestActivityResultNotify.ErrorCode > Aki.Protocol.ErrorCode.Success;
 			if (flag)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(harvestActivityResultNotify.ErrorCode, 28748, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(harvestActivityResultNotify.ErrorCode, 22031, null, true, true);
 			}
 			RewardExploreConfirmButtonData rewardExploreConfirmButtonData = new RewardExploreConfirmButtonData();
 			rewardExploreConfirmButtonData.ButtonTextId = "ConfirmBox_133_ButtonText_0";
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			instance.OpenExploreRewardView(configId, isSuccess, rewardItemDataList, exploreRecordInfo, exploreBarDataList, buttonInfoList, null, null, null, null, null, null, null, null, null, null, null);
 		}
 
-		// Token: 0x0604027C RID: 262780 RVA: 0x00F88938 File Offset: 0x00F86B38
+		// Token: 0x06034F3D RID: 216893 RVA: 0x00ECF870 File Offset: 0x00ECDA70
 		public void RequestExitDungeon()
 		{
 			HarvestActivityResultRequest message = HarvestActivityResultRequest.Create();
@@ -287,21 +287,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			}, 0);
 		}
 
-		// Token: 0x0604027D RID: 262781 RVA: 0x00F8897B File Offset: 0x00F86B7B
+		// Token: 0x06034F3E RID: 216894 RVA: 0x00ECF8B3 File Offset: 0x00ECDAB3
 		[NullableContext(2)]
 		public ActivityMowingData GetMowingActivityData()
 		{
 			return ActivityModel.Instance.GetActivityById(this.CurrentActivityId) as ActivityMowingData;
 		}
 
-		// Token: 0x0604027E RID: 262782 RVA: 0x00F88994 File Offset: 0x00F86B94
+		// Token: 0x06034F3F RID: 216895 RVA: 0x00ECF8CC File Offset: 0x00ECDACC
 		public override bool GetActivityLevelUnlockState(int levelId)
 		{
 			ActivityMowingData mowingActivityData = this.GetMowingActivityData();
 			return mowingActivityData == null || mowingActivityData.GetActivityLevelUnlockState(levelId);
 		}
 
-		// Token: 0x0604027F RID: 262783 RVA: 0x00F889B4 File Offset: 0x00F86BB4
+		// Token: 0x06034F40 RID: 216896 RVA: 0x00ECF8EC File Offset: 0x00ECDAEC
 		public bool IsMowingInstanceDungeon(int instanceId)
 		{
 			if (instanceId == 0)
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return config != null && config.GetValueOrDefault().InstSubType == 19;
 		}
 
-		// Token: 0x06040280 RID: 262784 RVA: 0x00F889F0 File Offset: 0x00F86BF0
+		// Token: 0x06034F41 RID: 216897 RVA: 0x00ECF928 File Offset: 0x00ECDB28
 		public int GetRecommendLevel(int instanceId, int worldLevel)
 		{
 			ActivityMowingData mowingActivityData = this.GetMowingActivityData();
@@ -323,14 +323,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return mowingActivityData.GetLevelDiffRecommendLevel(instanceId);
 		}
 
-		// Token: 0x06040281 RID: 262785 RVA: 0x00F88A10 File Offset: 0x00F86C10
+		// Token: 0x06034F42 RID: 216898 RVA: 0x00ECF948 File Offset: 0x00ECDB48
 		public bool CheckIsActivityLevel(int instanceId)
 		{
 			return this.IsMowingInstanceDungeon(instanceId);
 		}
 
-		// Token: 0x1700936C RID: 37740
-		// (get) Token: 0x06040282 RID: 262786 RVA: 0x00F88A19 File Offset: 0x00F86C19
+		// Token: 0x170066CE RID: 26318
+		// (get) Token: 0x06034F43 RID: 216899 RVA: 0x00ECF951 File Offset: 0x00ECDB51
 		public static ActivityMowingController Instance
 		{
 			get
@@ -339,7 +339,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			}
 		}
 
-		// Token: 0x06040283 RID: 262787 RVA: 0x00F88A20 File Offset: 0x00F86C20
+		// Token: 0x06034F44 RID: 216900 RVA: 0x00ECF958 File Offset: 0x00ECDB58
 		public static ActivityMowingController GetOrCreateInstance()
 		{
 			if (ActivityMowingController._Instance == null)
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return ActivityMowingController._Instance;
 		}
 
-		// Token: 0x06040284 RID: 262788 RVA: 0x00F88A34 File Offset: 0x00F86C34
+		// Token: 0x06034F45 RID: 216901 RVA: 0x00ECF96C File Offset: 0x00ECDB6C
 		public static bool CreateInstance()
 		{
 			if (ActivityMowingController._Instance != null)
@@ -360,41 +360,41 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return true;
 		}
 
-		// Token: 0x06040285 RID: 262789 RVA: 0x00F88A4A File Offset: 0x00F86C4A
+		// Token: 0x06034F46 RID: 216902 RVA: 0x00ECF982 File Offset: 0x00ECDB82
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06040286 RID: 262790 RVA: 0x00F88A4C File Offset: 0x00F86C4C
+		// Token: 0x06034F47 RID: 216903 RVA: 0x00ECF984 File Offset: 0x00ECDB84
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityMowingController._Instance = null;
 		}
 
-		// Token: 0x06040287 RID: 262791 RVA: 0x00F88A54 File Offset: 0x00F86C54
+		// Token: 0x06034F48 RID: 216904 RVA: 0x00ECF98C File Offset: 0x00ECDB8C
 		static ActivityMowingController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityMowingController.CreateStaticDefaultValue), new Action(ActivityMowingController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06040289 RID: 262793 RVA: 0x00F88A7B File Offset: 0x00F86C7B
+		// Token: 0x06034F4A RID: 216906 RVA: 0x00ECF9B3 File Offset: 0x00ECDBB3
 		[CompilerGenerated]
 		internal static void <OnHarvestActivityResultNotify>g__OnClickQuit|18_0()
 		{
 			InstanceDungeonEntranceController.Instance.LeaveInstanceDungeon();
 		}
 
-		// Token: 0x0604028A RID: 262794 RVA: 0x00F88A88 File Offset: 0x00F86C88
+		// Token: 0x06034F4B RID: 216907 RVA: 0x00ECF9C0 File Offset: 0x00ECDBC0
 		[CompilerGenerated]
 		internal static void <OnHarvestActivityResultNotify>g__OnClickFight|18_1()
 		{
-			InstanceDungeonController.Instance.SingleInstReChallengeRequest();
+			InstanceDungeonController.Instance.SingleInstReChallengeRequest(false);
 		}
 
-		// Token: 0x040216BE RID: 136894
+		// Token: 0x0401BFED RID: 114669
 		public int CurrentActivityId;
 
-		// Token: 0x040216BF RID: 136895
+		// Token: 0x0401BFEE RID: 114670
 		[Nullable(2)]
 		private static ActivityMowingController _Instance;
 	}

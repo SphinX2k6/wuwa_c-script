@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Core.Extension
 {
-	// Token: 0x02000137 RID: 311
+	// Token: 0x02000134 RID: 308
 	public static class VectorExtension
 	{
-		// Token: 0x06000AFC RID: 2812 RVA: 0x00034D6C File Offset: 0x00032F6C
+		// Token: 0x06000B4E RID: 2894 RVA: 0x000357C0 File Offset: 0x000339C0
 		[NullableContext(1)]
 		public static bool ContainsNaN(this IVector value)
 		{
@@ -25,7 +25,7 @@ namespace CSharpScript.Core.Extension
 			return value is FVectorDouble && ((FVectorDouble)value).ContainsNaN();
 		}
 
-		// Token: 0x06000AFD RID: 2813 RVA: 0x00034DBC File Offset: 0x00032FBC
+		// Token: 0x06000B4F RID: 2895 RVA: 0x00035810 File Offset: 0x00033A10
 		[NullableContext(2)]
 		public static Aki.Protocol.Vector ToProtocolVector(Aki.Config.Vector? vector)
 		{

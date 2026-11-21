@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Common.TipList
 {
-	// Token: 0x0200483A RID: 18490
+	// Token: 0x0200376B RID: 14187
 	public class WorldMapSecondaryTipListItem : UiPanelBase, IGridProxy<IWorldMapSecondaryTipItemParam>
 	{
-		// Token: 0x170078F8 RID: 30968
-		// (get) Token: 0x0603062B RID: 198187 RVA: 0x00B3B5E0 File Offset: 0x00B397E0
-		// (set) Token: 0x0603062C RID: 198188 RVA: 0x00B3B5E8 File Offset: 0x00B397E8
+		// Token: 0x17004BB5 RID: 19381
+		// (get) Token: 0x06024DFB RID: 151035 RVA: 0x00A6B6AC File Offset: 0x00A698AC
+		// (set) Token: 0x06024DFC RID: 151036 RVA: 0x00A6B6B4 File Offset: 0x00A698B4
 		[Nullable(new byte[]
 		{
 			2,
@@ -35,17 +35,17 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common.TipList
 			1
 		})] set; }
 
-		// Token: 0x170078F9 RID: 30969
-		// (get) Token: 0x0603062D RID: 198189 RVA: 0x00B3B5F1 File Offset: 0x00B397F1
-		// (set) Token: 0x0603062E RID: 198190 RVA: 0x00B3B5F9 File Offset: 0x00B397F9
+		// Token: 0x17004BB6 RID: 19382
+		// (get) Token: 0x06024DFD RID: 151037 RVA: 0x00A6B6BD File Offset: 0x00A698BD
+		// (set) Token: 0x06024DFE RID: 151038 RVA: 0x00A6B6C5 File Offset: 0x00A698C5
 		public int GridIndex { get; set; }
 
-		// Token: 0x170078FA RID: 30970
-		// (get) Token: 0x0603062F RID: 198191 RVA: 0x00B3B602 File Offset: 0x00B39802
-		// (set) Token: 0x06030630 RID: 198192 RVA: 0x00B3B60A File Offset: 0x00B3980A
+		// Token: 0x17004BB7 RID: 19383
+		// (get) Token: 0x06024DFF RID: 151039 RVA: 0x00A6B6CE File Offset: 0x00A698CE
+		// (set) Token: 0x06024E00 RID: 151040 RVA: 0x00A6B6D6 File Offset: 0x00A698D6
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x06030631 RID: 198193 RVA: 0x00B3B614 File Offset: 0x00B39814
+		// Token: 0x06024E01 RID: 151041 RVA: 0x00A6B6E0 File Offset: 0x00A698E0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common.TipList
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06030632 RID: 198194 RVA: 0x00B3B67D File Offset: 0x00B3987D
+		// Token: 0x06024E02 RID: 151042 RVA: 0x00A6B749 File Offset: 0x00A69949
 		[NullableContext(1)]
 		public virtual void Refresh(IWorldMapSecondaryTipItemParam data, bool isSelected, int gridIndex)
 		{
@@ -76,49 +76,49 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common.TipList
 			text2.SetText(data.Desc, true);
 		}
 
-		// Token: 0x06030633 RID: 198195 RVA: 0x00B3B6B0 File Offset: 0x00B398B0
+		// Token: 0x06024E03 RID: 151043 RVA: 0x00A6B77C File Offset: 0x00A6997C
 		public void Clear()
 		{
 		}
 
-		// Token: 0x06030634 RID: 198196 RVA: 0x00B3B6B2 File Offset: 0x00B398B2
+		// Token: 0x06024E04 RID: 151044 RVA: 0x00A6B77E File Offset: 0x00A6997E
 		public void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x06030635 RID: 198197 RVA: 0x00B3B6B4 File Offset: 0x00B398B4
+		// Token: 0x06024E05 RID: 151045 RVA: 0x00A6B780 File Offset: 0x00A69980
 		public void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x06030636 RID: 198198 RVA: 0x00B3B6B6 File Offset: 0x00B398B6
+		// Token: 0x06024E06 RID: 151046 RVA: 0x00A6B782 File Offset: 0x00A69982
 		[NullableContext(1)]
 		public object GetKey(IWorldMapSecondaryTipItemParam data, int gridIndex)
 		{
 			return this.GridIndex;
 		}
 
-		// Token: 0x06030637 RID: 198199 RVA: 0x00B3B6C3 File Offset: 0x00B398C3
+		// Token: 0x06024E07 RID: 151047 RVA: 0x00A6B78F File Offset: 0x00A6998F
 		[NullableContext(2)]
 		protected UUIText GetNameTxt()
 		{
 			return base.GetText(0);
 		}
 
-		// Token: 0x06030638 RID: 198200 RVA: 0x00B3B6CC File Offset: 0x00B398CC
+		// Token: 0x06024E08 RID: 151048 RVA: 0x00A6B798 File Offset: 0x00A69998
 		[NullableContext(2)]
 		protected UUIText GetDescTxt()
 		{
 			return base.GetText(1);
 		}
 
-		// Token: 0x0200AB12 RID: 43794
+		// Token: 0x020094C1 RID: 38081
 		private static class EComponents
 		{
-			// Token: 0x04033FDF RID: 212959
+			// Token: 0x0402E75F RID: 190303
 			public const int TxtItemName = 0;
 
-			// Token: 0x04033FE0 RID: 212960
+			// Token: 0x0402E760 RID: 190304
 			public const int TxtItemDesc = 1;
 		}
 	}

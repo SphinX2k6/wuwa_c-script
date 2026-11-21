@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x0200562A RID: 22058
+	// Token: 0x02004600 RID: 17920
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PopupComponentEventCost : UiPanelBase
 	{
-		// Token: 0x060381CA RID: 229834 RVA: 0x00D4ADF8 File Offset: 0x00D48FF8
+		// Token: 0x0602D0C8 RID: 184520 RVA: 0x00C98B40 File Offset: 0x00C96D40
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x060381CB RID: 229835 RVA: 0x00D4AE34 File Offset: 0x00D49034
+		// Token: 0x0602D0C9 RID: 184521 RVA: 0x00C98B7C File Offset: 0x00C96D7C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PopupComponentEventCost.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060381CC RID: 229836 RVA: 0x00D4AE78 File Offset: 0x00D49078
+		// Token: 0x0602D0CA RID: 184522 RVA: 0x00C98BC0 File Offset: 0x00C96DC0
 		public void Refresh(MapGridData gridData)
 		{
 			bool isExplore = gridData.IsExplore;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.SetActive(true);
 		}
 
-		// Token: 0x060381CD RID: 229837 RVA: 0x00D4AEF0 File Offset: 0x00D490F0
+		// Token: 0x0602D0CB RID: 184523 RVA: 0x00C98C38 File Offset: 0x00C96E38
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0401D84E RID: 120910
+		// Token: 0x040182D9 RID: 99033
 		[Nullable(2)]
 		protected PopupComponentInfoItem InfoItem;
 	}

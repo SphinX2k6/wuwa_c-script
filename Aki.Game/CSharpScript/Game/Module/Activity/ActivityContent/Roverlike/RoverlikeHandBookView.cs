@@ -11,13 +11,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200611D RID: 24861
+	// Token: 0x0200509B RID: 20635
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeHandBookView : UiViewBase
 	{
-		// Token: 0x17009186 RID: 37254
-		// (get) Token: 0x0603EDC7 RID: 257479 RVA: 0x00F2ECC1 File Offset: 0x00F2CEC1
+		// Token: 0x170064E8 RID: 25832
+		// (get) Token: 0x06033A89 RID: 211593 RVA: 0x00E75AD5 File Offset: 0x00E73CD5
 		[Nullable(2)]
 		private RoverlikeActivityData ActivityData
 		{
@@ -33,12 +33,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EDC8 RID: 257480 RVA: 0x00F2ECD3 File Offset: 0x00F2CED3
+		// Token: 0x06033A8A RID: 211594 RVA: 0x00E75AE7 File Offset: 0x00E73CE7
 		public RoverlikeHandBookView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603EDC9 RID: 257481 RVA: 0x00F2ECE8 File Offset: 0x00F2CEE8
+		// Token: 0x06033A8B RID: 211595 RVA: 0x00E75AFC File Offset: 0x00E73CFC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EDCA RID: 257482 RVA: 0x00F2ED51 File Offset: 0x00F2CF51
+		// Token: 0x06033A8C RID: 211596 RVA: 0x00E75B65 File Offset: 0x00E73D65
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x0603EDCB RID: 257483 RVA: 0x00F2ED70 File Offset: 0x00F2CF70
+		// Token: 0x06033A8D RID: 211597 RVA: 0x00E75B84 File Offset: 0x00E73D84
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeHandBookView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -69,18 +69,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EDCC RID: 257484 RVA: 0x00F2EDB3 File Offset: 0x00F2CFB3
+		// Token: 0x06033A8E RID: 211598 RVA: 0x00E75BC7 File Offset: 0x00E73DC7
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x0603EDCD RID: 257485 RVA: 0x00F2EDD1 File Offset: 0x00F2CFD1
+		// Token: 0x06033A8F RID: 211599 RVA: 0x00E75BE5 File Offset: 0x00E73DE5
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x0603EDCE RID: 257486 RVA: 0x00F2EDD4 File Offset: 0x00F2CFD4
+		// Token: 0x06033A90 RID: 211600 RVA: 0x00E75BE8 File Offset: 0x00E73DE8
 		private void InitTabComponent()
 		{
 			CommonTabComponentData<RoverlikeTabItem> data = new CommonTabComponentData<RoverlikeTabItem>(new Func<UUIItem, int?, RoverlikeTabItem>(this.ProxyCreate), new Action<int>(this.ToggleCallBack), new Func<int, CommonTabData>(this.GetCommonData));
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.TabViewComponent = new TabViewComponent<UiDynamicTab>(base.GetItem(1), EKeyMode.Default);
 		}
 
-		// Token: 0x0603EDCF RID: 257487 RVA: 0x00F2EE4C File Offset: 0x00F2D04C
+		// Token: 0x06033A91 RID: 211601 RVA: 0x00E75C60 File Offset: 0x00E73E60
 		private UniTask RefreshTabListAsync()
 		{
 			RoverlikeHandBookView.<RefreshTabListAsync>d__14 <RefreshTabListAsync>d__;
@@ -100,20 +100,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <RefreshTabListAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EDD0 RID: 257488 RVA: 0x00F2EE8F File Offset: 0x00F2D08F
+		// Token: 0x06033A92 RID: 211602 RVA: 0x00E75CA3 File Offset: 0x00E73EA3
 		private RoverlikeTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new RoverlikeTabItem();
 		}
 
-		// Token: 0x0603EDD1 RID: 257489 RVA: 0x00F2EE98 File Offset: 0x00F2D098
+		// Token: 0x06033A93 RID: 211603 RVA: 0x00E75CAC File Offset: 0x00E73EAC
 		private CommonTabData GetCommonData(int index)
 		{
 			UiDynamicTab uiDynamicTab = this.TabDataList[index];
 			return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 		}
 
-		// Token: 0x0603EDD2 RID: 257490 RVA: 0x00F2EED0 File Offset: 0x00F2D0D0
+		// Token: 0x06033A94 RID: 211604 RVA: 0x00E75CE4 File Offset: 0x00E73EE4
 		private void ToggleCallBack(int index)
 		{
 			UiDynamicTab data = this.TabDataList[index];
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.CurSelectTabView = new EUiTabViewName?(euiTabViewName);
 		}
 
-		// Token: 0x0603EDD3 RID: 257491 RVA: 0x00F2EF28 File Offset: 0x00F2D128
+		// Token: 0x06033A95 RID: 211605 RVA: 0x00E75D3C File Offset: 0x00E73F3C
 		private void OnRefreshCommonActivityRedDot(int activityId)
 		{
 			RoverlikeActivityData activityData = this.ActivityData;
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshAllTabRedDot();
 		}
 
-		// Token: 0x0603EDD4 RID: 257492 RVA: 0x00F2EF50 File Offset: 0x00F2D150
+		// Token: 0x06033A96 RID: 211606 RVA: 0x00E75D64 File Offset: 0x00E73F64
 		private void RefreshAllTabRedDot()
 		{
 			for (int i = 0; i < this.TabDataList.Count; i++)
@@ -147,20 +147,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EDD5 RID: 257493 RVA: 0x00F2EFAC File Offset: 0x00F2D1AC
+		// Token: 0x06033A97 RID: 211607 RVA: 0x00E75DC0 File Offset: 0x00E73FC0
 		private bool TabHasRedDot(EUiTabViewName viewName)
 		{
 			RoverlikeActivityData activityData = this.ActivityData;
 			return activityData != null && viewName == EUiTabViewName.RoverlikeOutsideBlessTabView && activityData.GetNewUnlockedBlessIds().Count > 0;
 		}
 
-		// Token: 0x0603EDD6 RID: 257494 RVA: 0x00F2EFE2 File Offset: 0x00F2D1E2
+		// Token: 0x06033A98 RID: 211608 RVA: 0x00E75DF6 File Offset: 0x00E73FF6
 		private void OnCloseClicked()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04020D2E RID: 134446
+		// Token: 0x0401B65B RID: 112219
 		[Nullable(new byte[]
 		{
 			2,
@@ -168,23 +168,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private TabComponentWithCaptionItem<RoverlikeTabItem> TabComponent;
 
-		// Token: 0x04020D2F RID: 134447
+		// Token: 0x0401B65C RID: 112220
 		[Nullable(2)]
 		private TabViewComponent<UiDynamicTab> TabViewComponent;
 
-		// Token: 0x04020D30 RID: 134448
+		// Token: 0x0401B65D RID: 112221
 		private List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-		// Token: 0x04020D31 RID: 134449
+		// Token: 0x0401B65E RID: 112222
 		private EUiTabViewName? CurSelectTabView;
 
-		// Token: 0x0200C37A RID: 50042
+		// Token: 0x0200AD62 RID: 44386
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403AFDF RID: 241631
+			// Token: 0x04035944 RID: 219460
 			CaptionItem,
-			// Token: 0x0403AFE0 RID: 241632
+			// Token: 0x04035945 RID: 219461
 			Content
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021E4 RID: 8676
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200244F RID: 9295
 	public class SetTimeLockState : ActionParams
 	{
-		// Token: 0x0600BE9D RID: 48797 RVA: 0x001B6BD4 File Offset: 0x001B4DD4
+		// Token: 0x0600CA59 RID: 51801 RVA: 0x001CE260 File Offset: 0x001CC460
 		private SetTimeLockState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BE9E RID: 48798 RVA: 0x001B6C0C File Offset: 0x001B4E0C
+		// Token: 0x0600CA5A RID: 51802 RVA: 0x001CE298 File Offset: 0x001CC498
 		public static SetTimeLockState Create([Nullable(2)] SetTimeLockState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE9F RID: 48799 RVA: 0x001B6C1F File Offset: 0x001B4E1F
+		// Token: 0x0600CA5B RID: 51803 RVA: 0x001CE2AB File Offset: 0x001CC4AB
 		public static SetTimeLockState CreateFromSetValue([Nullable(2)] SetTimeLockState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BEA0 RID: 48800 RVA: 0x001B6C32 File Offset: 0x001B4E32
+		// Token: 0x0600CA5C RID: 51804 RVA: 0x001CE2BE File Offset: 0x001CC4BE
 		public SetTimeLockState_SetValue ToSetValue()
 		{
 			return new SetTimeLockState_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039DA RID: 14810
-		// (get) Token: 0x0600BEA1 RID: 48801 RVA: 0x001B6C45 File Offset: 0x001B4E45
-		// (set) Token: 0x0600BEA2 RID: 48802 RVA: 0x001B6C70 File Offset: 0x001B4E70
+		// Token: 0x17003CCF RID: 15567
+		// (get) Token: 0x0600CA5D RID: 51805 RVA: 0x001CE2D1 File Offset: 0x001CC4D1
+		// (set) Token: 0x0600CA5E RID: 51806 RVA: 0x001CE2FC File Offset: 0x001CC4FC
 		public virtual ELockState LockState
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071BA RID: 29114
+		// Token: 0x04007803 RID: 30723
 		[Nullable(2)]
 		protected new SetTimeLockState FbInstance;
 
-		// Token: 0x040071BB RID: 29115
+		// Token: 0x04007804 RID: 30724
 		[Nullable(2)]
 		protected SetTimeLockState_SetValue PocoInterface;
 	}

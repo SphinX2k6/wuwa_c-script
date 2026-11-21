@@ -7,12 +7,12 @@ using CSharpScript.Game.Effect;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045D0 RID: 17872
+	// Token: 0x020034F8 RID: 13560
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EffectManagerBusinessProxy : Singleton
 	{
-		// Token: 0x0602E122 RID: 188706 RVA: 0x00A9ECC5 File Offset: 0x00A9CEC5
+		// Token: 0x0602280D RID: 141325 RVA: 0x009CAF8D File Offset: 0x009C918D
 		private void EffectReadyCallBack(int handle, string reason)
 		{
 			if (!EffectSystem.Instance.GetHideOnBurstSkill(handle))
@@ -22,13 +22,13 @@ namespace CSharpScript.Game.Render
 			this.EffectsDestroyOnBurstSkill.Add(handle);
 		}
 
-		// Token: 0x0602E123 RID: 188707 RVA: 0x00A9ECE2 File Offset: 0x00A9CEE2
+		// Token: 0x0602280E RID: 141326 RVA: 0x009CAFAA File Offset: 0x009C91AA
 		private void EffectFinishCallBack(int handle, string reason, bool immediately)
 		{
 			this.EffectsDestroyOnBurstSkill.Remove(handle);
 		}
 
-		// Token: 0x0602E124 RID: 188708 RVA: 0x00A9ECF1 File Offset: 0x00A9CEF1
+		// Token: 0x0602280F RID: 141327 RVA: 0x009CAFB9 File Offset: 0x009C91B9
 		private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Render
 			this.CurrentCharacterEntityId = ((baseCharacter2 != null) ? baseCharacter2.GetEntityIdNoBlueprint() : 0);
 		}
 
-		// Token: 0x0602E125 RID: 188709 RVA: 0x00A9ED24 File Offset: 0x00A9CF24
+		// Token: 0x06022810 RID: 141328 RVA: 0x009CAFEC File Offset: 0x009C91EC
 		private void OnCharUseSkill(int charId, int skillId, bool isAutonomousProxy)
 		{
 			if (this.CurrentCharacter == null || charId != this.CurrentCharacterEntityId)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E126 RID: 188710 RVA: 0x00A9EDF8 File Offset: 0x00A9CFF8
+		// Token: 0x06022811 RID: 141329 RVA: 0x009CB0C0 File Offset: 0x009C92C0
 		protected override bool OnInit()
 		{
 			this.DestroyOnBurstStat = Stat.Create("EffectManagerBusinessProxy_DestroyOnBurst", "", "");
@@ -75,8 +75,8 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x170075A8 RID: 30120
-		// (get) Token: 0x0602E127 RID: 188711 RVA: 0x00A9EE98 File Offset: 0x00A9D098
+		// Token: 0x1700485F RID: 18527
+		// (get) Token: 0x06022812 RID: 141330 RVA: 0x009CB160 File Offset: 0x009C9360
 		public static EffectManagerBusinessProxy Instance
 		{
 			get
@@ -90,12 +90,12 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E128 RID: 188712 RVA: 0x00A9EEBB File Offset: 0x00A9D0BB
+		// Token: 0x06022813 RID: 141331 RVA: 0x009CB183 File Offset: 0x009C9383
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E129 RID: 188713 RVA: 0x00A9EEBD File Offset: 0x00A9D0BD
+		// Token: 0x06022814 RID: 141332 RVA: 0x009CB185 File Offset: 0x009C9385
 		public static void ResetStaticDefaultValue()
 		{
 			EffectManagerBusinessProxy instance = EffectManagerBusinessProxy._instance;
@@ -106,28 +106,28 @@ namespace CSharpScript.Game.Render
 			EffectManagerBusinessProxy._instance = null;
 		}
 
-		// Token: 0x0602E12A RID: 188714 RVA: 0x00A9EED6 File Offset: 0x00A9D0D6
+		// Token: 0x06022815 RID: 141333 RVA: 0x009CB19E File Offset: 0x009C939E
 		static EffectManagerBusinessProxy()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(EffectManagerBusinessProxy.CreateStaticDefaultValue), new Action(EffectManagerBusinessProxy.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018AFC RID: 101116
+		// Token: 0x04013137 RID: 78135
 		[Nullable(2)]
 		private Stat DestroyOnBurstStat;
 
-		// Token: 0x04018AFD RID: 101117
+		// Token: 0x04013138 RID: 78136
 		[Nullable(2)]
 		private HashSet<int> EffectsDestroyOnBurstSkill;
 
-		// Token: 0x04018AFE RID: 101118
+		// Token: 0x04013139 RID: 78137
 		[Nullable(2)]
 		private Entity CurrentCharacter;
 
-		// Token: 0x04018AFF RID: 101119
+		// Token: 0x0401313A RID: 78138
 		private int CurrentCharacterEntityId;
 
-		// Token: 0x04018B00 RID: 101120
+		// Token: 0x0401313B RID: 78139
 		[Nullable(2)]
 		private static EffectManagerBusinessProxy _instance;
 	}

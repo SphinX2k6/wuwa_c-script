@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,14 +13,14 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F0C RID: 7948
+// Token: 0x020013CE RID: 5070
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryWeaponToggleItem : UiPanelBase, IGridProxy<IHonamiStoryWeaponToggleItemData>
 {
-	// Token: 0x1700131F RID: 4895
-	// (get) Token: 0x0600F4B9 RID: 62649 RVA: 0x003B09CF File Offset: 0x003AEBCF
-	// (set) Token: 0x0600F4BA RID: 62650 RVA: 0x003B09D7 File Offset: 0x003AEBD7
+	// Token: 0x17001349 RID: 4937
+	// (get) Token: 0x0600C8D8 RID: 51416 RVA: 0x003BC4C3 File Offset: 0x003BA6C3
+	// (set) Token: 0x0600C8D9 RID: 51417 RVA: 0x003BC4CB File Offset: 0x003BA6CB
 	[Nullable(new byte[]
 	{
 		2,
@@ -43,17 +42,17 @@ public class HonamiStoryWeaponToggleItem : UiPanelBase, IGridProxy<IHonamiStoryW
 		1
 	})] set; }
 
-	// Token: 0x17001320 RID: 4896
-	// (get) Token: 0x0600F4BB RID: 62651 RVA: 0x003B09E0 File Offset: 0x003AEBE0
-	// (set) Token: 0x0600F4BC RID: 62652 RVA: 0x003B09E8 File Offset: 0x003AEBE8
+	// Token: 0x1700134A RID: 4938
+	// (get) Token: 0x0600C8DA RID: 51418 RVA: 0x003BC4D4 File Offset: 0x003BA6D4
+	// (set) Token: 0x0600C8DB RID: 51419 RVA: 0x003BC4DC File Offset: 0x003BA6DC
 	public int GridIndex { get; set; }
 
-	// Token: 0x17001321 RID: 4897
-	// (get) Token: 0x0600F4BD RID: 62653 RVA: 0x003B09F1 File Offset: 0x003AEBF1
-	// (set) Token: 0x0600F4BE RID: 62654 RVA: 0x003B09F9 File Offset: 0x003AEBF9
+	// Token: 0x1700134B RID: 4939
+	// (get) Token: 0x0600C8DC RID: 51420 RVA: 0x003BC4E5 File Offset: 0x003BA6E5
+	// (set) Token: 0x0600C8DD RID: 51421 RVA: 0x003BC4ED File Offset: 0x003BA6ED
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x0600F4BF RID: 62655 RVA: 0x003B0A04 File Offset: 0x003AEC04
+	// Token: 0x0600C8DE RID: 51422 RVA: 0x003BC4F8 File Offset: 0x003BA6F8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 16;
@@ -102,7 +101,7 @@ public class HonamiStoryWeaponToggleItem : UiPanelBase, IGridProxy<IHonamiStoryW
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F4C0 RID: 62656 RVA: 0x003B0C80 File Offset: 0x003AEE80
+	// Token: 0x0600C8DF RID: 51423 RVA: 0x003BC774 File Offset: 0x003BA974
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryWeaponToggleItem.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -113,7 +112,7 @@ public class HonamiStoryWeaponToggleItem : UiPanelBase, IGridProxy<IHonamiStoryW
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F4C1 RID: 62657 RVA: 0x003B0CC3 File Offset: 0x003AEEC3
+	// Token: 0x0600C8E0 RID: 51424 RVA: 0x003BC7B7 File Offset: 0x003BA9B7
 	public void Refresh(IHonamiStoryWeaponToggleItemData data, bool isSelected, int gridIndex)
 	{
 		this.WeaponIdInternal = data.WeaponId;
@@ -125,7 +124,7 @@ public class HonamiStoryWeaponToggleItem : UiPanelBase, IGridProxy<IHonamiStoryW
 		this.RefreshItem();
 	}
 
-	// Token: 0x0600F4C2 RID: 62658 RVA: 0x003B0CF8 File Offset: 0x003AEEF8
+	// Token: 0x0600C8E1 RID: 51425 RVA: 0x003BC7EC File Offset: 0x003BA9EC
 	public void RefreshItem()
 	{
 		UUIItem item = base.GetItem(9);
@@ -175,8 +174,8 @@ public class HonamiStoryWeaponToggleItem : UiPanelBase, IGridProxy<IHonamiStoryW
 		}
 		if (isUnlock)
 		{
-			int[] source = config.Value.SuitId();
-			this.RefreshSuitActiveItems(source.ToList<int>());
+			int[] suitIdList = config.Value.SuitId();
+			this.RefreshSuitActiveItems(suitIdList);
 			if (this.UseWayInternal == EHonamiStoryWeaponUseWay.Change)
 			{
 				HonamiStoryRoleEquipData honamiStoryRoleEquipData = this.EquipData;
@@ -223,7 +222,7 @@ public class HonamiStoryWeaponToggleItem : UiPanelBase, IGridProxy<IHonamiStoryW
 		base.GetSprite(13).SetUIActive(false);
 	}
 
-	// Token: 0x0600F4C3 RID: 62659 RVA: 0x003B0F44 File Offset: 0x003AF144
+	// Token: 0x0600C8E2 RID: 51426 RVA: 0x003BCA30 File Offset: 0x003BAC30
 	public void RefreshCurSelectLightSprite(HonamiStoryRoleEquipData curSelectEquipData)
 	{
 		base.GetSprite(14).SetUIActive(false);
@@ -243,8 +242,8 @@ public class HonamiStoryWeaponToggleItem : UiPanelBase, IGridProxy<IHonamiStoryW
 		}
 	}
 
-	// Token: 0x0600F4C4 RID: 62660 RVA: 0x003B0FC0 File Offset: 0x003AF1C0
-	private void RefreshSuitActiveItems(List<int> suitIdList)
+	// Token: 0x0600C8E3 RID: 51427 RVA: 0x003BCAAC File Offset: 0x003BACAC
+	private void RefreshSuitActiveItems(IReadOnlyList<int> suitIdList)
 	{
 		HonamiStoryRoleEquipData honamiStoryRoleEquipData = this.EquipData;
 		if (honamiStoryRoleEquipData == null)
@@ -268,8 +267,8 @@ public class HonamiStoryWeaponToggleItem : UiPanelBase, IGridProxy<IHonamiStoryW
 		}
 	}
 
-	// Token: 0x17001322 RID: 4898
-	// (get) Token: 0x0600F4C5 RID: 62661 RVA: 0x003B1062 File Offset: 0x003AF262
+	// Token: 0x1700134C RID: 4940
+	// (get) Token: 0x0600C8E4 RID: 51428 RVA: 0x003BCB4E File Offset: 0x003BAD4E
 	public int WeaponId
 	{
 		get
@@ -278,20 +277,20 @@ public class HonamiStoryWeaponToggleItem : UiPanelBase, IGridProxy<IHonamiStoryW
 		}
 	}
 
-	// Token: 0x0600F4C6 RID: 62662 RVA: 0x003B106A File Offset: 0x003AF26A
+	// Token: 0x0600C8E5 RID: 51429 RVA: 0x003BCB56 File Offset: 0x003BAD56
 	[NullableContext(2)]
 	public HonamiStoryRoleEquipData GetEquipData()
 	{
 		return this.EquipData;
 	}
 
-	// Token: 0x0600F4C7 RID: 62663 RVA: 0x003B1072 File Offset: 0x003AF272
+	// Token: 0x0600C8E6 RID: 51430 RVA: 0x003BCB5E File Offset: 0x003BAD5E
 	public void BindWeaponToggleClick(Action<HonamiStoryWeaponToggleItem> callback)
 	{
 		this.OnWeaponToggleClick = callback;
 	}
 
-	// Token: 0x0600F4C8 RID: 62664 RVA: 0x003B107C File Offset: 0x003AF27C
+	// Token: 0x0600C8E7 RID: 51431 RVA: 0x003BCB68 File Offset: 0x003BAD68
 	private void OnUndeterminedClicked()
 	{
 		HashSet<int> hashSet = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.HonamiStoryWeaponUnlockSet, null) ?? new HashSet<int>();
@@ -305,46 +304,46 @@ public class HonamiStoryWeaponToggleItem : UiPanelBase, IGridProxy<IHonamiStoryW
 		this.SetNewItemShow(true);
 	}
 
-	// Token: 0x0600F4C9 RID: 62665 RVA: 0x003B10D0 File Offset: 0x003AF2D0
+	// Token: 0x0600C8E8 RID: 51432 RVA: 0x003BCBBC File Offset: 0x003BADBC
 	private void OnToggle(EToggleState toggleState)
 	{
 		this.OnUndeterminedClicked();
 	}
 
-	// Token: 0x0600F4CA RID: 62666 RVA: 0x003B10D8 File Offset: 0x003AF2D8
+	// Token: 0x0600C8E9 RID: 51433 RVA: 0x003BCBC4 File Offset: 0x003BADC4
 	public void OnSelected()
 	{
 		base.GetExtendToggle(5).SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x0600F4CB RID: 62667 RVA: 0x003B10EA File Offset: 0x003AF2EA
+	// Token: 0x0600C8EA RID: 51434 RVA: 0x003BCBD6 File Offset: 0x003BADD6
 	public void OnDeselected()
 	{
 		base.GetExtendToggle(5).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600F4CC RID: 62668 RVA: 0x003B10FC File Offset: 0x003AF2FC
+	// Token: 0x0600C8EB RID: 51435 RVA: 0x003BCBE8 File Offset: 0x003BADE8
 	public void Clear()
 	{
 	}
 
-	// Token: 0x0600F4CD RID: 62669 RVA: 0x003B10FE File Offset: 0x003AF2FE
+	// Token: 0x0600C8EC RID: 51436 RVA: 0x003BCBEA File Offset: 0x003BADEA
 	public void OnSelected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600F4CE RID: 62670 RVA: 0x003B1100 File Offset: 0x003AF300
+	// Token: 0x0600C8ED RID: 51437 RVA: 0x003BCBEC File Offset: 0x003BADEC
 	public void OnDeselected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600F4CF RID: 62671 RVA: 0x003B1102 File Offset: 0x003AF302
+	// Token: 0x0600C8EE RID: 51438 RVA: 0x003BCBEE File Offset: 0x003BADEE
 	public object GetKey(IHonamiStoryWeaponToggleItemData data, int gridIndex)
 	{
 		return this.GridIndex;
 	}
 
-	// Token: 0x0600F4D0 RID: 62672 RVA: 0x003B110F File Offset: 0x003AF30F
+	// Token: 0x0600C8EF RID: 51439 RVA: 0x003BCBFB File Offset: 0x003BADFB
 	public void SetIsEnable(bool value)
 	{
 		UUIItem rootItem = this.RootItem;
@@ -360,7 +359,7 @@ public class HonamiStoryWeaponToggleItem : UiPanelBase, IGridProxy<IHonamiStoryW
 		extendToggle.SetSelfInteractive(value);
 	}
 
-	// Token: 0x0600F4D1 RID: 62673 RVA: 0x003B1144 File Offset: 0x003AF344
+	// Token: 0x0600C8F0 RID: 51440 RVA: 0x003BCC30 File Offset: 0x003BAE30
 	public void SetNewItemShow(bool needEmit = true)
 	{
 		HashSet<int> hashSet = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.HonamiStoryWeaponUnlockSet, null) ?? new HashSet<int>();
@@ -388,66 +387,66 @@ public class HonamiStoryWeaponToggleItem : UiPanelBase, IGridProxy<IHonamiStoryW
 		}
 	}
 
-	// Token: 0x0600F4D2 RID: 62674 RVA: 0x003B11C0 File Offset: 0x003AF3C0
+	// Token: 0x0600C8F1 RID: 51441 RVA: 0x003BCCAC File Offset: 0x003BAEAC
 	public void ResetToggleState()
 	{
 		base.GetExtendToggle(5).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04007138 RID: 28984
+	// Token: 0x04007219 RID: 29209
 	private const int SUIT_ITEM_COUNT = 3;
 
-	// Token: 0x04007139 RID: 28985
+	// Token: 0x0400721A RID: 29210
 	private int WeaponIdInternal;
 
-	// Token: 0x0400713A RID: 28986
+	// Token: 0x0400721B RID: 29211
 	private EHonamiStoryWeaponUseWay UseWayInternal;
 
-	// Token: 0x0400713B RID: 28987
+	// Token: 0x0400721C RID: 29212
 	private Action<HonamiStoryWeaponToggleItem> OnWeaponToggleClick;
 
-	// Token: 0x0400713C RID: 28988
+	// Token: 0x0400721D RID: 29213
 	private List<HonamiStoryWeaponSuitActiveItem> SuitActiveItemList = new List<HonamiStoryWeaponSuitActiveItem>();
 
-	// Token: 0x0400713D RID: 28989
+	// Token: 0x0400721E RID: 29214
 	[Nullable(2)]
 	private HonamiStoryRoleEquipData EquipData;
 
-	// Token: 0x02008517 RID: 34071
+	// Token: 0x0200769C RID: 30364
 	[NullableContext(0)]
 	private enum EHonamiStoryWeaponToggleItemComponent
 	{
-		// Token: 0x0402B4FD RID: 177405
+		// Token: 0x04026821 RID: 157729
 		IconTexture,
-		// Token: 0x0402B4FE RID: 177406
+		// Token: 0x04026822 RID: 157730
 		SuitItemOne,
-		// Token: 0x0402B4FF RID: 177407
+		// Token: 0x04026823 RID: 157731
 		SuitItemTwo,
-		// Token: 0x0402B500 RID: 177408
+		// Token: 0x04026824 RID: 157732
 		SuitItemThree,
-		// Token: 0x0402B501 RID: 177409
+		// Token: 0x04026825 RID: 157733
 		NewItem,
-		// Token: 0x0402B502 RID: 177410
+		// Token: 0x04026826 RID: 157734
 		Toggle,
-		// Token: 0x0402B503 RID: 177411
+		// Token: 0x04026827 RID: 157735
 		SuitPanel,
-		// Token: 0x0402B504 RID: 177412
+		// Token: 0x04026828 RID: 157736
 		LockPanel,
-		// Token: 0x0402B505 RID: 177413
+		// Token: 0x04026829 RID: 157737
 		InfoPanel,
-		// Token: 0x0402B506 RID: 177414
+		// Token: 0x0402682A RID: 157738
 		RoleItem,
-		// Token: 0x0402B507 RID: 177415
+		// Token: 0x0402682B RID: 157739
 		RoleTexture,
-		// Token: 0x0402B508 RID: 177416
+		// Token: 0x0402682C RID: 157740
 		NumItem,
-		// Token: 0x0402B509 RID: 177417
+		// Token: 0x0402682D RID: 157741
 		NumText,
-		// Token: 0x0402B50A RID: 177418
+		// Token: 0x0402682E RID: 157742
 		SpriteEmpty,
-		// Token: 0x0402B50B RID: 177419
+		// Token: 0x0402682F RID: 157743
 		SpriteRoleLight,
-		// Token: 0x0402B50C RID: 177420
+		// Token: 0x04026830 RID: 157744
 		SpriteNumLight
 	}
 }

@@ -15,14 +15,14 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 {
-	// Token: 0x0200664A RID: 26186
+	// Token: 0x020055C8 RID: 21960
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class FarmGoldController : ActivityControllerBase
 	{
-		// Token: 0x17009615 RID: 38421
-		// (get) Token: 0x060419E9 RID: 268777 RVA: 0x00FEA7EE File Offset: 0x00FE89EE
+		// Token: 0x17006977 RID: 26999
+		// (get) Token: 0x060366AE RID: 222894 RVA: 0x00F318A6 File Offset: 0x00F2FAA6
 		public int InitLevelIndex
 		{
 			get
@@ -33,62 +33,62 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			}
 		}
 
-		// Token: 0x060419EA RID: 268778 RVA: 0x00FEA7FD File Offset: 0x00FE89FD
+		// Token: 0x060366AF RID: 222895 RVA: 0x00F318B5 File Offset: 0x00F2FAB5
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x060419EB RID: 268779 RVA: 0x00FEA7FF File Offset: 0x00FE89FF
+		// Token: 0x060366B0 RID: 222896 RVA: 0x00F318B7 File Offset: 0x00F2FAB7
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_FarmGoldMain";
 		}
 
-		// Token: 0x060419EC RID: 268780 RVA: 0x00FEA806 File Offset: 0x00FE8A06
+		// Token: 0x060366B1 RID: 222897 RVA: 0x00F318BE File Offset: 0x00F2FABE
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new FarmGoldSubView();
 		}
 
-		// Token: 0x060419ED RID: 268781 RVA: 0x00FEA80D File Offset: 0x00FE8A0D
+		// Token: 0x060366B2 RID: 222898 RVA: 0x00F318C5 File Offset: 0x00F2FAC5
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			return new FarmGoldData();
 		}
 
-		// Token: 0x060419EE RID: 268782 RVA: 0x00FEA814 File Offset: 0x00FE8A14
+		// Token: 0x060366B3 RID: 222899 RVA: 0x00F318CC File Offset: 0x00F2FACC
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x060419EF RID: 268783 RVA: 0x00FEA817 File Offset: 0x00FE8A17
+		// Token: 0x060366B4 RID: 222900 RVA: 0x00F318CF File Offset: 0x00F2FACF
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.LeaveInstanceDungeonConfirm, new Action(this.OnLeaveInstanceDungeonConfirm));
 		}
 
-		// Token: 0x060419F0 RID: 268784 RVA: 0x00FEA835 File Offset: 0x00FE8A35
+		// Token: 0x060366B5 RID: 222901 RVA: 0x00F318ED File Offset: 0x00F2FAED
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.LeaveInstanceDungeonConfirm, new Action(this.OnLeaveInstanceDungeonConfirm));
 		}
 
-		// Token: 0x060419F1 RID: 268785 RVA: 0x00FEA853 File Offset: 0x00FE8A53
+		// Token: 0x060366B6 RID: 222902 RVA: 0x00F3190B File Offset: 0x00F2FB0B
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.FarmGoldLevelNotify, new Action<IMessage, Net.CallbackStatus>(this.FarmGoldLevelNotify));
 			Net.Instance.Register(ENotifyMessageId.FarmGoldResultNotify, new Action<IMessage, Net.CallbackStatus>(this.OnFarmGoldResultNotify));
 		}
 
-		// Token: 0x060419F2 RID: 268786 RVA: 0x00FEA88D File Offset: 0x00FE8A8D
+		// Token: 0x060366B7 RID: 222903 RVA: 0x00F31945 File Offset: 0x00F2FB45
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.FarmGoldLevelNotify);
 			Net.Instance.UnRegister(ENotifyMessageId.FarmGoldResultNotify);
 		}
 
-		// Token: 0x060419F3 RID: 268787 RVA: 0x00FEA8AF File Offset: 0x00FE8AAF
+		// Token: 0x060366B8 RID: 222904 RVA: 0x00F31967 File Offset: 0x00F2FB67
 		private void OnLeaveInstanceDungeonConfirm()
 		{
 			if (InstanceDungeonEntranceModel.Instance.IsFarmGoldInstanceDungeon())
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			}
 		}
 
-		// Token: 0x060419F4 RID: 268788 RVA: 0x00FEA8C4 File Offset: 0x00FE8AC4
+		// Token: 0x060366B9 RID: 222905 RVA: 0x00F3197C File Offset: 0x00F2FB7C
 		public void RequestExitDungeon()
 		{
 			FarmGoldResultRequest message = new FarmGoldResultRequest();
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			}, 0);
 		}
 
-		// Token: 0x060419F5 RID: 268789 RVA: 0x00FEA908 File Offset: 0x00FE8B08
+		// Token: 0x060366BA RID: 222906 RVA: 0x00F319C0 File Offset: 0x00F2FBC0
 		public void RequestSetDifficulty(int activityId, int insId, int diff)
 		{
 			FarmGoldLevelDiffRequest farmGoldLevelDiffRequest = FarmGoldLevelDiffRequest.Create();
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 				FarmGoldLevelDiffResponse farmGoldLevelDiffResponse = (FarmGoldLevelDiffResponse)msg;
 				if (farmGoldLevelDiffResponse != null && farmGoldLevelDiffResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(farmGoldLevelDiffResponse.ErrorCode, 17979, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(farmGoldLevelDiffResponse.ErrorCode, 26415, null, true, true);
 				}
 				FarmGoldData farmGoldData = ActivityModel.Instance.GetActivityById(activityId) as FarmGoldData;
 				if (farmGoldData != null)
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			}, 0);
 		}
 
-		// Token: 0x060419F6 RID: 268790 RVA: 0x00FEA978 File Offset: 0x00FE8B78
+		// Token: 0x060366BB RID: 222907 RVA: 0x00F31A30 File Offset: 0x00F2FC30
 		[NullableContext(2)]
 		private void FarmGoldLevelNotify(IMessage msg, Net.CallbackStatus status = null)
 		{
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, farmGoldLevelNotify.ActivityId);
 		}
 
-		// Token: 0x060419F7 RID: 268791 RVA: 0x00FEAA14 File Offset: 0x00FE8C14
+		// Token: 0x060366BC RID: 222908 RVA: 0x00F31ACC File Offset: 0x00F2FCCC
 		public void RequestFarmGoldPoint(int activityId, List<int> ids)
 		{
 			if (ids == null || ids.Count <= 0)
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 				FarmGoldPointRepeatedResponse farmGoldPointRepeatedResponse = (FarmGoldPointRepeatedResponse)msg;
 				if (farmGoldPointRepeatedResponse != null && farmGoldPointRepeatedResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(farmGoldPointRepeatedResponse.ErrorCode, 25184, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(farmGoldPointRepeatedResponse.ErrorCode, 18879, null, true, true);
 					return;
 				}
 				if (farmGoldPointRepeatedResponse != null && farmGoldPointRepeatedResponse.ErrorCode == Aki.Protocol.ErrorCode.Success)
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			}, 0);
 		}
 
-		// Token: 0x060419F8 RID: 268792 RVA: 0x00FEAA8C File Offset: 0x00FE8C8C
+		// Token: 0x060366BD RID: 222909 RVA: 0x00F31B44 File Offset: 0x00F2FD44
 		public void RequestFarmGoldLevelPlay(int activityId, List<int> instIds)
 		{
 			if (instIds == null || instIds.Count <= 0)
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 				FarmGoldLevelPlayRepeatedResponse farmGoldLevelPlayRepeatedResponse = (FarmGoldLevelPlayRepeatedResponse)msg;
 				if (farmGoldLevelPlayRepeatedResponse != null && farmGoldLevelPlayRepeatedResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(farmGoldLevelPlayRepeatedResponse.ErrorCode, 20555, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(farmGoldLevelPlayRepeatedResponse.ErrorCode, 16947, null, true, true);
 					return;
 				}
 				if (farmGoldLevelPlayRepeatedResponse != null && farmGoldLevelPlayRepeatedResponse.ErrorCode == Aki.Protocol.ErrorCode.Success)
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			}, 0);
 		}
 
-		// Token: 0x060419F9 RID: 268793 RVA: 0x00FEAB04 File Offset: 0x00FE8D04
+		// Token: 0x060366BE RID: 222910 RVA: 0x00F31BBC File Offset: 0x00F2FDBC
 		[NullableContext(2)]
 		private void OnFarmGoldResultNotify(IMessage msg, Net.CallbackStatus status = null)
 		{
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			bool flag = farmGoldResultNotify.ErrorCode > Aki.Protocol.ErrorCode.Success;
 			if (flag)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(farmGoldResultNotify.ErrorCode, 21768, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(farmGoldResultNotify.ErrorCode, 20566, null, true, true);
 			}
 			Action onClickQuit = delegate()
 			{
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			};
 			Action onClickFight = delegate()
 			{
-				InstanceDungeonController.Instance.SingleInstReChallengeRequest();
+				InstanceDungeonController.Instance.SingleInstReChallengeRequest(false);
 			};
 			RewardExploreConfirmButtonData item2 = new RewardExploreConfirmButtonData
 			{
@@ -321,7 +321,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			instance.OpenExploreRewardView(configId, isSuccess, rewardItemDataList, exploreRecordInfo, exploreBarDataList, buttonInfoList, null, null, null, null, null, null, null, null, null, null, null);
 		}
 
-		// Token: 0x060419FA RID: 268794 RVA: 0x00FEAD28 File Offset: 0x00FE8F28
+		// Token: 0x060366BF RID: 222911 RVA: 0x00F31DE0 File Offset: 0x00F2FFE0
 		[NullableContext(0)]
 		public UniTask<bool> OpenDefaultFarmGoldView()
 		{
@@ -333,7 +333,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			return <OpenDefaultFarmGoldView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060419FB RID: 268795 RVA: 0x00FEAD6C File Offset: 0x00FE8F6C
+		// Token: 0x060366C0 RID: 222912 RVA: 0x00F31E24 File Offset: 0x00F30024
 		[NullableContext(0)]
 		public UniTask<bool> OpenFarmGoldEntranceView(int activityId)
 		{
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			return <OpenFarmGoldEntranceView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060419FC RID: 268796 RVA: 0x00FEADB0 File Offset: 0x00FE8FB0
+		// Token: 0x060366C1 RID: 222913 RVA: 0x00F31E68 File Offset: 0x00F30068
 		public void OpenTempFarmGoldEntranceView()
 		{
 			FarmGoldData activityData = this.CreateTempActivityData();
@@ -353,7 +353,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			UiManager.Instance.OpenView(EUiViewName.ActivityInstanceEntranceView, param, null);
 		}
 
-		// Token: 0x060419FD RID: 268797 RVA: 0x00FEADE0 File Offset: 0x00FE8FE0
+		// Token: 0x060366C2 RID: 222914 RVA: 0x00F31E98 File Offset: 0x00F30098
 		private FarmGoldData CreateTempActivityData()
 		{
 			FarmGoldData farmGoldData = new FarmGoldData();
@@ -381,7 +381,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			return farmGoldData;
 		}
 
-		// Token: 0x060419FE RID: 268798 RVA: 0x00FEAEAC File Offset: 0x00FE90AC
+		// Token: 0x060366C3 RID: 222915 RVA: 0x00F31F64 File Offset: 0x00F30164
 		private ActivityInstanceEntranceData CreateViewData(FarmGoldData activityData)
 		{
 			ActivityEntrancePointData activityEntrancePointData = ActivityEntrancePointData.Create(activityData.GetCurrentFullScore(), 0, new ERedDotName?(ERedDotName.FarmGoldReward), activityData.Id, activityData.GetRewardViewData(), new Func<string>(activityData.GetScoreDesc), delegate
@@ -537,7 +537,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			});
 		}
 
-		// Token: 0x060419FF RID: 268799 RVA: 0x00FEB214 File Offset: 0x00FE9414
+		// Token: 0x060366C4 RID: 222916 RVA: 0x00F322CC File Offset: 0x00F304CC
 		public void HandleDoubleConfirmSoloEnterDungeon(FarmGoldLevelData levelData)
 		{
 			InstanceDungeonModel.Instance.InstanceContinue = false;
@@ -568,7 +568,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			this.HandleSoloEnterDungeon(levelData);
 		}
 
-		// Token: 0x06041A00 RID: 268800 RVA: 0x00FEB2FC File Offset: 0x00FE94FC
+		// Token: 0x060366C5 RID: 222917 RVA: 0x00F323B4 File Offset: 0x00F305B4
 		private void HandleSoloEnterDungeon(FarmGoldLevelData levelData)
 		{
 			this.EnterInstanceLevelIndex = levelData.GetIndex();
@@ -579,14 +579,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			InstanceDungeonEntranceController.Instance.ContinueEntranceFlow();
 		}
 
-		// Token: 0x06041A01 RID: 268801 RVA: 0x00FEB34C File Offset: 0x00FE954C
+		// Token: 0x060366C6 RID: 222918 RVA: 0x00F32404 File Offset: 0x00F30604
 		public bool CheckInFarmGold()
 		{
 			InstanceDungeon? config = ConfigInstanceDungeonById.GetConfig(CreatureModel.Instance.GetInstanceId(), true);
 			return config != null && config.Value.InstSubType == 25 && GameModeController.Instance.IsInInstance();
 		}
 
-		// Token: 0x06041A02 RID: 268802 RVA: 0x00FEB394 File Offset: 0x00FE9594
+		// Token: 0x060366C7 RID: 222919 RVA: 0x00F3244C File Offset: 0x00F3064C
 		[NullableContext(2)]
 		public FarmGoldData GetCurrentActivityData()
 		{
@@ -598,8 +598,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			return activitiesByType[0] as FarmGoldData;
 		}
 
-		// Token: 0x17009616 RID: 38422
-		// (get) Token: 0x06041A03 RID: 268803 RVA: 0x00FEB3C5 File Offset: 0x00FE95C5
+		// Token: 0x17006978 RID: 27000
+		// (get) Token: 0x060366C8 RID: 222920 RVA: 0x00F3247D File Offset: 0x00F3067D
 		public static FarmGoldController Instance
 		{
 			get
@@ -608,7 +608,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			}
 		}
 
-		// Token: 0x06041A04 RID: 268804 RVA: 0x00FEB3CC File Offset: 0x00FE95CC
+		// Token: 0x060366C9 RID: 222921 RVA: 0x00F32484 File Offset: 0x00F30684
 		public static FarmGoldController GetOrCreateInstance()
 		{
 			if (FarmGoldController._Instance == null)
@@ -618,7 +618,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			return FarmGoldController._Instance;
 		}
 
-		// Token: 0x06041A05 RID: 268805 RVA: 0x00FEB3E0 File Offset: 0x00FE95E0
+		// Token: 0x060366CA RID: 222922 RVA: 0x00F32498 File Offset: 0x00F30698
 		public static bool CreateInstance()
 		{
 			if (FarmGoldController._Instance != null)
@@ -629,33 +629,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FarmGold
 			return true;
 		}
 
-		// Token: 0x06041A06 RID: 268806 RVA: 0x00FEB3F6 File Offset: 0x00FE95F6
+		// Token: 0x060366CB RID: 222923 RVA: 0x00F324AE File Offset: 0x00F306AE
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06041A07 RID: 268807 RVA: 0x00FEB3F8 File Offset: 0x00FE95F8
+		// Token: 0x060366CC RID: 222924 RVA: 0x00F324B0 File Offset: 0x00F306B0
 		public static void ResetStaticDefaultValue()
 		{
 			FarmGoldController._Instance = null;
 		}
 
-		// Token: 0x06041A08 RID: 268808 RVA: 0x00FEB400 File Offset: 0x00FE9600
+		// Token: 0x060366CD RID: 222925 RVA: 0x00F324B8 File Offset: 0x00F306B8
 		static FarmGoldController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FarmGoldController.CreateStaticDefaultValue), new Action(FarmGoldController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04022275 RID: 139893
+		// Token: 0x0401CBA6 RID: 117670
 		public bool IfLeaveInstanceDungeonWhenMainViewClose;
 
-		// Token: 0x04022276 RID: 139894
+		// Token: 0x0401CBA7 RID: 117671
 		private int EnterInstanceLevelIndex;
 
-		// Token: 0x04022277 RID: 139895
+		// Token: 0x0401CBA8 RID: 117672
 		private int InitLevelIndexInternal;
 
-		// Token: 0x04022278 RID: 139896
+		// Token: 0x0401CBA9 RID: 117673
 		[Nullable(2)]
 		private static FarmGoldController _Instance;
 	}

@@ -7,16 +7,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002DF6 RID: 11766
+// Token: 0x02002351 RID: 9041
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataDestroyBullet.LogicDataDestroyBullet_C")]
 public class LogicDataDestroyBullet : LogicDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170021E0 RID: 8672
-	// (get) Token: 0x06018B71 RID: 101233 RVA: 0x0065837C File Offset: 0x0065657C
-	// (set) Token: 0x06018B72 RID: 101234 RVA: 0x0065838C File Offset: 0x0065658C
+	// Token: 0x17002244 RID: 8772
+	// (get) Token: 0x06016426 RID: 91174 RVA: 0x0067E400 File Offset: 0x0067C600
+	// (set) Token: 0x06016427 RID: 91175 RVA: 0x0067E410 File Offset: 0x0067C610
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EBulletObject BulletOwner
 	{
@@ -30,9 +30,9 @@ public class LogicDataDestroyBullet : LogicDataBase, IUnrealUObject, IUnrealObje
 		}
 	}
 
-	// Token: 0x170021E1 RID: 8673
-	// (get) Token: 0x06018B73 RID: 101235 RVA: 0x0065839D File Offset: 0x0065659D
-	// (set) Token: 0x06018B74 RID: 101236 RVA: 0x006583B1 File Offset: 0x006565B1
+	// Token: 0x17002245 RID: 8773
+	// (get) Token: 0x06016428 RID: 91176 RVA: 0x0067E421 File Offset: 0x0067C621
+	// (set) Token: 0x06016429 RID: 91177 RVA: 0x0067E435 File Offset: 0x0067C635
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string DestroyBulletRowName
 	{
@@ -46,9 +46,9 @@ public class LogicDataDestroyBullet : LogicDataBase, IUnrealUObject, IUnrealObje
 		}
 	}
 
-	// Token: 0x170021E2 RID: 8674
-	// (get) Token: 0x06018B75 RID: 101237 RVA: 0x006583C6 File Offset: 0x006565C6
-	// (set) Token: 0x06018B76 RID: 101238 RVA: 0x006583D6 File Offset: 0x006565D6
+	// Token: 0x17002246 RID: 8774
+	// (get) Token: 0x0601642A RID: 91178 RVA: 0x0067E44A File Offset: 0x0067C64A
+	// (set) Token: 0x0601642B RID: 91179 RVA: 0x0067E45A File Offset: 0x0067C65A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool SummonChildBullet
 	{
@@ -62,7 +62,7 @@ public class LogicDataDestroyBullet : LogicDataBase, IUnrealUObject, IUnrealObje
 		}
 	}
 
-	// Token: 0x06018B77 RID: 101239 RVA: 0x006583E7 File Offset: 0x006565E7
+	// Token: 0x0601642C RID: 91180 RVA: 0x0067E46B File Offset: 0x0067C66B
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LogicDataDestroyBullet._ClassPtr == IntPtr.Zero)
@@ -72,36 +72,36 @@ public class LogicDataDestroyBullet : LogicDataBase, IUnrealUObject, IUnrealObje
 		return LogicDataDestroyBullet._ClassPtr;
 	}
 
-	// Token: 0x06018B78 RID: 101240 RVA: 0x0065840C File Offset: 0x0065660C
+	// Token: 0x0601642D RID: 91181 RVA: 0x0067E490 File Offset: 0x0067C690
 	public LogicDataDestroyBullet() : this(BuiltinUtils.AllocNativeUObject(LogicDataDestroyBullet.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018B79 RID: 101241 RVA: 0x00658434 File Offset: 0x00656634
+	// Token: 0x0601642E RID: 91182 RVA: 0x0067E4B8 File Offset: 0x0067C6B8
 	public LogicDataDestroyBullet(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataDestroyBullet.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018B7A RID: 101242 RVA: 0x00658467 File Offset: 0x00656667
+	// Token: 0x0601642F RID: 91183 RVA: 0x0067E4EB File Offset: 0x0067C6EB
 	protected LogicDataDestroyBullet(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B859 RID: 47193
+	// Token: 0x0400BBDF RID: 48095
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataDestroyBullet.LogicDataDestroyBullet_C";
 
-	// Token: 0x0400B85A RID: 47194
+	// Token: 0x0400BBE0 RID: 48096
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B85B RID: 47195
+	// Token: 0x0400BBE1 RID: 48097
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B85C RID: 47196
+	// Token: 0x0400BBE2 RID: 48098
 	private static int __PropertyOffset_BulletOwner;
 
-	// Token: 0x0400B85D RID: 47197
+	// Token: 0x0400BBE3 RID: 48099
 	private static int __PropertyOffset_DestroyBulletRowName;
 
-	// Token: 0x0400B85E RID: 47198
+	// Token: 0x0400BBE4 RID: 48100
 	private static int __PropertyOffset_SummonChildBullet;
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E70 RID: 24176
+	// Token: 0x020064B3 RID: 25779
 	public class TConstraintValueUnion
 	{
-		// Token: 0x1700B4BC RID: 46268
-		// (get) Token: 0x0602968F RID: 169615 RVA: 0x005ACE02 File Offset: 0x005AB002
-		// (set) Token: 0x06029690 RID: 169616 RVA: 0x005ACE0A File Offset: 0x005AB00A
+		// Token: 0x1700BE27 RID: 48679
+		// (get) Token: 0x0602BD37 RID: 179511 RVA: 0x005F5DA6 File Offset: 0x005F3FA6
+		// (set) Token: 0x0602BD38 RID: 179512 RVA: 0x005F5DAE File Offset: 0x005F3FAE
 		public TConstraintValue Type { get; set; }
 
-		// Token: 0x1700B4BD RID: 46269
-		// (get) Token: 0x06029691 RID: 169617 RVA: 0x005ACE13 File Offset: 0x005AB013
-		// (set) Token: 0x06029692 RID: 169618 RVA: 0x005ACE1B File Offset: 0x005AB01B
+		// Token: 0x1700BE28 RID: 48680
+		// (get) Token: 0x0602BD39 RID: 179513 RVA: 0x005F5DB7 File Offset: 0x005F3FB7
+		// (set) Token: 0x0602BD3A RID: 179514 RVA: 0x005F5DBF File Offset: 0x005F3FBF
 		public object Value { get; set; }
 
-		// Token: 0x06029693 RID: 169619 RVA: 0x005ACE24 File Offset: 0x005AB024
+		// Token: 0x0602BD3B RID: 179515 RVA: 0x005F5DC8 File Offset: 0x005F3FC8
 		public TConstraintValueUnion()
 		{
 			this.Type = TConstraintValue.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06029694 RID: 169620 RVA: 0x005ACE3A File Offset: 0x005AB03A
+		// Token: 0x0602BD3C RID: 179516 RVA: 0x005F5DDE File Offset: 0x005F3FDE
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06029695 RID: 169621 RVA: 0x005ACE4C File Offset: 0x005AB04C
+		// Token: 0x0602BD3D RID: 179517 RVA: 0x005F5DF0 File Offset: 0x005F3FF0
 		public IConstraintValueClampT AsIConstraintValueClamp()
 		{
 			return this.As<IConstraintValueClampT>();
 		}
 
-		// Token: 0x06029696 RID: 169622 RVA: 0x005ACE54 File Offset: 0x005AB054
+		// Token: 0x0602BD3E RID: 179518 RVA: 0x005F5DF8 File Offset: 0x005F3FF8
 		public static TConstraintValueUnion FromIConstraintValueClamp(IConstraintValueClampT _iconstraintvalueclamp)
 		{
 			return new TConstraintValueUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029697 RID: 169623 RVA: 0x005ACE69 File Offset: 0x005AB069
+		// Token: 0x0602BD3F RID: 179519 RVA: 0x005F5E0D File Offset: 0x005F400D
 		public IConstraintValueMaxT AsIConstraintValueMax()
 		{
 			return this.As<IConstraintValueMaxT>();
 		}
 
-		// Token: 0x06029698 RID: 169624 RVA: 0x005ACE71 File Offset: 0x005AB071
+		// Token: 0x0602BD40 RID: 179520 RVA: 0x005F5E15 File Offset: 0x005F4015
 		public static TConstraintValueUnion FromIConstraintValueMax(IConstraintValueMaxT _iconstraintvaluemax)
 		{
 			return new TConstraintValueUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029699 RID: 169625 RVA: 0x005ACE86 File Offset: 0x005AB086
+		// Token: 0x0602BD41 RID: 179521 RVA: 0x005F5E2A File Offset: 0x005F402A
 		public IConstraintValueMinT AsIConstraintValueMin()
 		{
 			return this.As<IConstraintValueMinT>();
 		}
 
-		// Token: 0x0602969A RID: 169626 RVA: 0x005ACE8E File Offset: 0x005AB08E
+		// Token: 0x0602BD42 RID: 179522 RVA: 0x005F5E32 File Offset: 0x005F4032
 		public static TConstraintValueUnion FromIConstraintValueMin(IConstraintValueMinT _iconstraintvaluemin)
 		{
 			return new TConstraintValueUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x0602969B RID: 169627 RVA: 0x005ACEA4 File Offset: 0x005AB0A4
+		// Token: 0x0602BD43 RID: 179523 RVA: 0x005F5E48 File Offset: 0x005F4048
 		public static int Pack(FlatBufferBuilder builder, TConstraintValueUnion _o)
 		{
 			switch (_o.Type)

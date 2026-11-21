@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046B0 RID: 18096
-	// (Invoke) Token: 0x0602EA85 RID: 191109
+	// Token: 0x020035E1 RID: 13793
+	// (Invoke) Token: 0x060231D1 RID: 143825
 	public delegate bool TLockShortcutKeyDelegate(string actionName, InputDistributeDefine.EActionType actionType);
 }

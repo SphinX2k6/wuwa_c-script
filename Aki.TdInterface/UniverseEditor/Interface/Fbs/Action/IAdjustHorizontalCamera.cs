@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006164 RID: 24932
+	// Token: 0x020067C9 RID: 26569
 	public struct IAdjustHorizontalCamera : IFlatbufferObject
 	{
-		// Token: 0x1700B955 RID: 47445
-		// (get) Token: 0x0602ADB1 RID: 175537 RVA: 0x005E8FDD File Offset: 0x005E71DD
+		// Token: 0x1700C2C5 RID: 49861
+		// (get) Token: 0x0602D4AA RID: 185514 RVA: 0x006331B9 File Offset: 0x006313B9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602ADB2 RID: 175538 RVA: 0x005E8FEA File Offset: 0x005E71EA
+		// Token: 0x0602D4AB RID: 185515 RVA: 0x006331C6 File Offset: 0x006313C6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602ADB3 RID: 175539 RVA: 0x005E8FF4 File Offset: 0x005E71F4
+		// Token: 0x0602D4AC RID: 185516 RVA: 0x006331D0 File Offset: 0x006313D0
 		public static IAdjustHorizontalCamera GetRootAsIAdjustHorizontalCamera(ByteBuffer _bb)
 		{
 			return IAdjustHorizontalCamera.GetRootAsIAdjustHorizontalCamera(_bb, default(IAdjustHorizontalCamera));
 		}
 
-		// Token: 0x0602ADB4 RID: 175540 RVA: 0x005E9010 File Offset: 0x005E7210
+		// Token: 0x0602D4AD RID: 185517 RVA: 0x006331EC File Offset: 0x006313EC
 		public static IAdjustHorizontalCamera GetRootAsIAdjustHorizontalCamera(ByteBuffer _bb, IAdjustHorizontalCamera obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602ADB5 RID: 175541 RVA: 0x005E902D File Offset: 0x005E722D
+		// Token: 0x0602D4AE RID: 185518 RVA: 0x00633209 File Offset: 0x00631409
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602ADB6 RID: 175542 RVA: 0x005E903C File Offset: 0x005E723C
+		// Token: 0x0602D4AF RID: 185519 RVA: 0x00633218 File Offset: 0x00631418
 		public IAdjustHorizontalCamera __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B956 RID: 47446
-		// (get) Token: 0x0602ADB7 RID: 175543 RVA: 0x005E904C File Offset: 0x005E724C
+		// Token: 0x1700C2C6 RID: 49862
+		// (get) Token: 0x0602D4B0 RID: 185520 RVA: 0x00633228 File Offset: 0x00631428
 		public EAdjustPlayerCamera Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B957 RID: 47447
-		// (get) Token: 0x0602ADB8 RID: 175544 RVA: 0x005E9088 File Offset: 0x005E7288
+		// Token: 0x1700C2C7 RID: 49863
+		// (get) Token: 0x0602D4B1 RID: 185521 RVA: 0x00633264 File Offset: 0x00631464
 		public int Priority
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B958 RID: 47448
-		// (get) Token: 0x0602ADB9 RID: 175545 RVA: 0x005E90C4 File Offset: 0x005E72C4
+		// Token: 0x1700C2C8 RID: 49864
+		// (get) Token: 0x0602D4B2 RID: 185522 RVA: 0x006332A0 File Offset: 0x006314A0
 		public float FadeInTime
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B959 RID: 47449
-		// (get) Token: 0x0602ADBA RID: 175546 RVA: 0x005E9104 File Offset: 0x005E7304
+		// Token: 0x1700C2C9 RID: 49865
+		// (get) Token: 0x0602D4B3 RID: 185523 RVA: 0x006332E0 File Offset: 0x006314E0
 		public IBaseCurve? FadeInCurve
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B95A RID: 47450
-		// (get) Token: 0x0602ADBB RID: 175547 RVA: 0x005E9164 File Offset: 0x005E7364
+		// Token: 0x1700C2CA RID: 49866
+		// (get) Token: 0x0602D4B4 RID: 185524 RVA: 0x00633340 File Offset: 0x00631540
 		public float FadeOutTime
 		{
 			get
@@ -124,8 +124,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B95B RID: 47451
-		// (get) Token: 0x0602ADBC RID: 175548 RVA: 0x005E91A8 File Offset: 0x005E73A8
+		// Token: 0x1700C2CB RID: 49867
+		// (get) Token: 0x0602D4B5 RID: 185525 RVA: 0x00633384 File Offset: 0x00631584
 		public IBaseCurve? FadeOutCurve
 		{
 			get
@@ -139,8 +139,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B95C RID: 47452
-		// (get) Token: 0x0602ADBD RID: 175549 RVA: 0x005E9208 File Offset: 0x005E7408
+		// Token: 0x1700C2CC RID: 49868
+		// (get) Token: 0x0602D4B6 RID: 185526 RVA: 0x006333E4 File Offset: 0x006315E4
 		public float ArmLength
 		{
 			get
@@ -154,8 +154,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B95D RID: 47453
-		// (get) Token: 0x0602ADBE RID: 175550 RVA: 0x005E924C File Offset: 0x005E744C
+		// Token: 0x1700C2CD RID: 49869
+		// (get) Token: 0x0602D4B7 RID: 185527 RVA: 0x00633428 File Offset: 0x00631628
 		public float MinumArmLength
 		{
 			get
@@ -169,8 +169,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B95E RID: 47454
-		// (get) Token: 0x0602ADBF RID: 175551 RVA: 0x005E9290 File Offset: 0x005E7490
+		// Token: 0x1700C2CE RID: 49870
+		// (get) Token: 0x0602D4B8 RID: 185528 RVA: 0x0063346C File Offset: 0x0063166C
 		public float MaxiumArmLength
 		{
 			get
@@ -184,8 +184,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B95F RID: 47455
-		// (get) Token: 0x0602ADC0 RID: 175552 RVA: 0x005E92D4 File Offset: 0x005E74D4
+		// Token: 0x1700C2CF RID: 49871
+		// (get) Token: 0x0602D4B9 RID: 185529 RVA: 0x006334B0 File Offset: 0x006316B0
 		public IVectorInfo? Offset
 		{
 			get
@@ -199,8 +199,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B960 RID: 47456
-		// (get) Token: 0x0602ADC1 RID: 175553 RVA: 0x005E9334 File Offset: 0x005E7534
+		// Token: 0x1700C2D0 RID: 49872
+		// (get) Token: 0x0602D4BA RID: 185530 RVA: 0x00633510 File Offset: 0x00631710
 		public IVectorInfo? ArmOffset
 		{
 			get
@@ -214,8 +214,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B961 RID: 47457
-		// (get) Token: 0x0602ADC2 RID: 175554 RVA: 0x005E9394 File Offset: 0x005E7594
+		// Token: 0x1700C2D1 RID: 49873
+		// (get) Token: 0x0602D4BB RID: 185531 RVA: 0x00633570 File Offset: 0x00631770
 		public float YawLimitMin
 		{
 			get
@@ -229,8 +229,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B962 RID: 47458
-		// (get) Token: 0x0602ADC3 RID: 175555 RVA: 0x005E93D8 File Offset: 0x005E75D8
+		// Token: 0x1700C2D2 RID: 49874
+		// (get) Token: 0x0602D4BC RID: 185532 RVA: 0x006335B4 File Offset: 0x006317B4
 		public float YawLimitMax
 		{
 			get
@@ -244,8 +244,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B963 RID: 47459
-		// (get) Token: 0x0602ADC4 RID: 175556 RVA: 0x005E941C File Offset: 0x005E761C
+		// Token: 0x1700C2D3 RID: 49875
+		// (get) Token: 0x0602D4BD RID: 185533 RVA: 0x006335F8 File Offset: 0x006317F8
 		public float PitchLimitMin
 		{
 			get
@@ -259,8 +259,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B964 RID: 47460
-		// (get) Token: 0x0602ADC5 RID: 175557 RVA: 0x005E9460 File Offset: 0x005E7660
+		// Token: 0x1700C2D4 RID: 49876
+		// (get) Token: 0x0602D4BE RID: 185534 RVA: 0x0063363C File Offset: 0x0063183C
 		public float PitchLimitMax
 		{
 			get
@@ -274,8 +274,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B965 RID: 47461
-		// (get) Token: 0x0602ADC6 RID: 175558 RVA: 0x005E94A4 File Offset: 0x005E76A4
+		// Token: 0x1700C2D5 RID: 49877
+		// (get) Token: 0x0602D4BF RID: 185535 RVA: 0x00633680 File Offset: 0x00631880
 		public float Fov
 		{
 			get
@@ -289,8 +289,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B966 RID: 47462
-		// (get) Token: 0x0602ADC7 RID: 175559 RVA: 0x005E94E8 File Offset: 0x005E76E8
+		// Token: 0x1700C2D6 RID: 49878
+		// (get) Token: 0x0602D4C0 RID: 185536 RVA: 0x006336C4 File Offset: 0x006318C4
 		public bool IsDisableResetFocus
 		{
 			get
@@ -300,8 +300,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B967 RID: 47463
-		// (get) Token: 0x0602ADC8 RID: 175560 RVA: 0x005E9528 File Offset: 0x005E7728
+		// Token: 0x1700C2D7 RID: 49879
+		// (get) Token: 0x0602D4C1 RID: 185537 RVA: 0x00633704 File Offset: 0x00631904
 		public TGravityDirection GravityDirectionType
 		{
 			get
@@ -315,7 +315,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602ADC9 RID: 175561 RVA: 0x005E9568 File Offset: 0x005E7768
+		// Token: 0x0602D4C2 RID: 185538 RVA: 0x00633744 File Offset: 0x00631944
 		public TTable? GravityDirection<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(40);
@@ -326,32 +326,32 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602ADCA RID: 175562 RVA: 0x005E95B0 File Offset: 0x005E77B0
+		// Token: 0x0602D4C3 RID: 185539 RVA: 0x0063378C File Offset: 0x0063198C
 		public IGravityDirectionByEntityGravity GravityDirectionAsIGravityDirectionByEntityGravity()
 		{
 			return this.GravityDirection<IGravityDirectionByEntityGravity>().Value;
 		}
 
-		// Token: 0x0602ADCB RID: 175563 RVA: 0x005E95CC File Offset: 0x005E77CC
+		// Token: 0x0602D4C4 RID: 185540 RVA: 0x006337A8 File Offset: 0x006319A8
 		public IGravityDirectionSelfRotation GravityDirectionAsIGravityDirectionSelfRotation()
 		{
 			return this.GravityDirection<IGravityDirectionSelfRotation>().Value;
 		}
 
-		// Token: 0x0602ADCC RID: 175564 RVA: 0x005E95E8 File Offset: 0x005E77E8
+		// Token: 0x0602D4C5 RID: 185541 RVA: 0x006337C4 File Offset: 0x006319C4
 		public IGravityDirectionVectorInfo GravityDirectionAsIGravityDirectionVectorInfo()
 		{
 			return this.GravityDirection<IGravityDirectionVectorInfo>().Value;
 		}
 
-		// Token: 0x0602ADCD RID: 175565 RVA: 0x005E9604 File Offset: 0x005E7804
+		// Token: 0x0602D4C6 RID: 185542 RVA: 0x006337E0 File Offset: 0x006319E0
 		public IGravityDirectionWorldAxis GravityDirectionAsIGravityDirectionWorldAxis()
 		{
 			return this.GravityDirection<IGravityDirectionWorldAxis>().Value;
 		}
 
-		// Token: 0x1700B968 RID: 47464
-		// (get) Token: 0x0602ADCE RID: 175566 RVA: 0x005E9620 File Offset: 0x005E7820
+		// Token: 0x1700C2D8 RID: 49880
+		// (get) Token: 0x0602D4C7 RID: 185543 RVA: 0x006337FC File Offset: 0x006319FC
 		public bool IsDisableCollision
 		{
 			get
@@ -361,8 +361,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B969 RID: 47465
-		// (get) Token: 0x0602ADCF RID: 175567 RVA: 0x005E9660 File Offset: 0x005E7860
+		// Token: 0x1700C2D9 RID: 49881
+		// (get) Token: 0x0602D4C8 RID: 185544 RVA: 0x0063383C File Offset: 0x00631A3C
 		public bool IsDisableDither
 		{
 			get
@@ -372,8 +372,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B96A RID: 47466
-		// (get) Token: 0x0602ADD0 RID: 175568 RVA: 0x005E96A0 File Offset: 0x005E78A0
+		// Token: 0x1700C2DA RID: 49882
+		// (get) Token: 0x0602D4C9 RID: 185545 RVA: 0x0063387C File Offset: 0x00631A7C
 		public string SubScreenBindKey
 		{
 			get
@@ -387,20 +387,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602ADD1 RID: 175569 RVA: 0x005E96D8 File Offset: 0x005E78D8
+		// Token: 0x0602D4CA RID: 185546 RVA: 0x006338B4 File Offset: 0x00631AB4
 		public Span<byte> GetSubScreenBindKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(46, 1);
 		}
 
-		// Token: 0x0602ADD2 RID: 175570 RVA: 0x005E96E8 File Offset: 0x005E78E8
+		// Token: 0x0602D4CB RID: 185547 RVA: 0x006338C4 File Offset: 0x00631AC4
 		public byte[] GetSubScreenBindKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(46);
 		}
 
-		// Token: 0x1700B96B RID: 47467
-		// (get) Token: 0x0602ADD3 RID: 175571 RVA: 0x005E96F8 File Offset: 0x005E78F8
+		// Token: 0x1700C2DB RID: 49883
+		// (get) Token: 0x0602D4CC RID: 185548 RVA: 0x006338D4 File Offset: 0x00631AD4
 		public int SplineEntityId
 		{
 			get
@@ -414,8 +414,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B96C RID: 47468
-		// (get) Token: 0x0602ADD4 RID: 175572 RVA: 0x005E9738 File Offset: 0x005E7938
+		// Token: 0x1700C2DC RID: 49884
+		// (get) Token: 0x0602D4CD RID: 185549 RVA: 0x00633914 File Offset: 0x00631B14
 		public float YawAngle
 		{
 			get
@@ -429,8 +429,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B96D RID: 47469
-		// (get) Token: 0x0602ADD5 RID: 175573 RVA: 0x005E977C File Offset: 0x005E797C
+		// Token: 0x1700C2DD RID: 49885
+		// (get) Token: 0x0602D4CE RID: 185550 RVA: 0x00633958 File Offset: 0x00631B58
 		public float PitchAngle
 		{
 			get
@@ -444,8 +444,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B96E RID: 47470
-		// (get) Token: 0x0602ADD6 RID: 175574 RVA: 0x005E97C0 File Offset: 0x005E79C0
+		// Token: 0x1700C2DE RID: 49886
+		// (get) Token: 0x0602D4CF RID: 185551 RVA: 0x0063399C File Offset: 0x00631B9C
 		public float RollAngle
 		{
 			get
@@ -459,8 +459,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B96F RID: 47471
-		// (get) Token: 0x0602ADD7 RID: 175575 RVA: 0x005E9804 File Offset: 0x005E7A04
+		// Token: 0x1700C2DF RID: 49887
+		// (get) Token: 0x0602D4D0 RID: 185552 RVA: 0x006339E0 File Offset: 0x00631BE0
 		public ICameraDepthOfField? DepthOfField
 		{
 			get
@@ -474,8 +474,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B970 RID: 47472
-		// (get) Token: 0x0602ADD8 RID: 175576 RVA: 0x005E9864 File Offset: 0x005E7A64
+		// Token: 0x1700C2E0 RID: 49888
+		// (get) Token: 0x0602D4D1 RID: 185553 RVA: 0x00633A40 File Offset: 0x00631C40
 		public ICameraOffsetInMovementDirection? OffsetInMovementDirection
 		{
 			get
@@ -489,8 +489,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B971 RID: 47473
-		// (get) Token: 0x0602ADD9 RID: 175577 RVA: 0x005E98C4 File Offset: 0x005E7AC4
+		// Token: 0x1700C2E1 RID: 49889
+		// (get) Token: 0x0602D4D2 RID: 185554 RVA: 0x00633AA0 File Offset: 0x00631CA0
 		public float NearClipDistanceToTarget
 		{
 			get
@@ -504,8 +504,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B972 RID: 47474
-		// (get) Token: 0x0602ADDA RID: 175578 RVA: 0x005E9908 File Offset: 0x005E7B08
+		// Token: 0x1700C2E2 RID: 49890
+		// (get) Token: 0x0602D4D3 RID: 185555 RVA: 0x00633AE4 File Offset: 0x00631CE4
 		public ISpringArmSoftZoneConfig? SpringArmSoftZoneConfig
 		{
 			get
@@ -519,8 +519,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B973 RID: 47475
-		// (get) Token: 0x0602ADDB RID: 175579 RVA: 0x005E9968 File Offset: 0x005E7B68
+		// Token: 0x1700C2E3 RID: 49891
+		// (get) Token: 0x0602D4D4 RID: 185556 RVA: 0x00633B44 File Offset: 0x00631D44
 		public ISpringArmFixConfig? SpringArmFix
 		{
 			get
@@ -534,8 +534,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B974 RID: 47476
-		// (get) Token: 0x0602ADDC RID: 175580 RVA: 0x005E99C8 File Offset: 0x005E7BC8
+		// Token: 0x1700C2E4 RID: 49892
+		// (get) Token: 0x0602D4D5 RID: 185557 RVA: 0x00633BA4 File Offset: 0x00631DA4
 		public bool IsCameraFollowSplineRoll
 		{
 			get
@@ -545,8 +545,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B975 RID: 47477
-		// (get) Token: 0x0602ADDD RID: 175581 RVA: 0x005E9A08 File Offset: 0x005E7C08
+		// Token: 0x1700C2E5 RID: 49893
+		// (get) Token: 0x0602D4D6 RID: 185558 RVA: 0x00633BE4 File Offset: 0x00631DE4
 		public ushort NullMask
 		{
 			get
@@ -560,7 +560,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602ADDE RID: 175582 RVA: 0x005E9A48 File Offset: 0x005E7C48
+		// Token: 0x0602D4D7 RID: 185559 RVA: 0x00633C24 File Offset: 0x00631E24
 		public static Offset<IAdjustHorizontalCamera> CreateIAdjustHorizontalCamera(FlatBufferBuilder builder, EAdjustPlayerCamera Type = EAdjustPlayerCamera.Basic, int Priority = 0, float FadeInTime = 0f, Offset<IBaseCurve> FadeInCurveOffset = default(Offset<IBaseCurve>), float FadeOutTime = 0f, Offset<IBaseCurve> FadeOutCurveOffset = default(Offset<IBaseCurve>), float ArmLength = 0f, float MinumArmLength = 0f, float MaxiumArmLength = 0f, Offset<IVectorInfo> OffsetOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> ArmOffsetOffset = default(Offset<IVectorInfo>), float YawLimitMin = 0f, float YawLimitMax = 0f, float PitchLimitMin = 0f, float PitchLimitMax = 0f, float Fov = 0f, bool IsDisableResetFocus = false, TGravityDirection GravityDirection_type = TGravityDirection.NONE, int GravityDirectionOffset = 0, bool IsDisableCollision = false, bool IsDisableDither = false, StringOffset SubScreenBindKeyOffset = default(StringOffset), int SplineEntityId = 0, float YawAngle = 0f, float PitchAngle = 0f, float RollAngle = 0f, Offset<ICameraDepthOfField> DepthOfFieldOffset = default(Offset<ICameraDepthOfField>), Offset<ICameraOffsetInMovementDirection> OffsetInMovementDirectionOffset = default(Offset<ICameraOffsetInMovementDirection>), float NearClipDistanceToTarget = 0f, Offset<ISpringArmSoftZoneConfig> SpringArmSoftZoneConfigOffset = default(Offset<ISpringArmSoftZoneConfig>), Offset<ISpringArmFixConfig> SpringArmFixOffset = default(Offset<ISpringArmFixConfig>), bool IsCameraFollowSplineRoll = false, ushort NullMask = 0)
 		{
 			builder.StartTable(33);
@@ -600,217 +600,217 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAdjustHorizontalCamera.EndIAdjustHorizontalCamera(builder);
 		}
 
-		// Token: 0x0602ADDF RID: 175583 RVA: 0x005E9B68 File Offset: 0x005E7D68
+		// Token: 0x0602D4D8 RID: 185560 RVA: 0x00633D44 File Offset: 0x00631F44
 		public static void StartIAdjustHorizontalCamera(FlatBufferBuilder builder)
 		{
 			builder.StartTable(33);
 		}
 
-		// Token: 0x0602ADE0 RID: 175584 RVA: 0x005E9B72 File Offset: 0x005E7D72
+		// Token: 0x0602D4D9 RID: 185561 RVA: 0x00633D4E File Offset: 0x00631F4E
 		public static void AddType(FlatBufferBuilder builder, EAdjustPlayerCamera type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602ADE1 RID: 175585 RVA: 0x005E9B7D File Offset: 0x005E7D7D
+		// Token: 0x0602D4DA RID: 185562 RVA: 0x00633D59 File Offset: 0x00631F59
 		public static void AddPriority(FlatBufferBuilder builder, int priority)
 		{
 			builder.AddInt(1, priority, 0);
 		}
 
-		// Token: 0x0602ADE2 RID: 175586 RVA: 0x005E9B88 File Offset: 0x005E7D88
+		// Token: 0x0602D4DB RID: 185563 RVA: 0x00633D64 File Offset: 0x00631F64
 		public static void AddFadeInTime(FlatBufferBuilder builder, float fadeInTime)
 		{
 			builder.AddFloat(2, fadeInTime, 0.0);
 		}
 
-		// Token: 0x0602ADE3 RID: 175587 RVA: 0x005E9B9B File Offset: 0x005E7D9B
+		// Token: 0x0602D4DC RID: 185564 RVA: 0x00633D77 File Offset: 0x00631F77
 		public static void AddFadeInCurve(FlatBufferBuilder builder, Offset<IBaseCurve> fadeInCurveOffset)
 		{
 			builder.AddOffset(3, fadeInCurveOffset.Value, 0);
 		}
 
-		// Token: 0x0602ADE4 RID: 175588 RVA: 0x005E9BAB File Offset: 0x005E7DAB
+		// Token: 0x0602D4DD RID: 185565 RVA: 0x00633D87 File Offset: 0x00631F87
 		public static void AddFadeOutTime(FlatBufferBuilder builder, float fadeOutTime)
 		{
 			builder.AddFloat(4, fadeOutTime, 0.0);
 		}
 
-		// Token: 0x0602ADE5 RID: 175589 RVA: 0x005E9BBE File Offset: 0x005E7DBE
+		// Token: 0x0602D4DE RID: 185566 RVA: 0x00633D9A File Offset: 0x00631F9A
 		public static void AddFadeOutCurve(FlatBufferBuilder builder, Offset<IBaseCurve> fadeOutCurveOffset)
 		{
 			builder.AddOffset(5, fadeOutCurveOffset.Value, 0);
 		}
 
-		// Token: 0x0602ADE6 RID: 175590 RVA: 0x005E9BCE File Offset: 0x005E7DCE
+		// Token: 0x0602D4DF RID: 185567 RVA: 0x00633DAA File Offset: 0x00631FAA
 		public static void AddArmLength(FlatBufferBuilder builder, float armLength)
 		{
 			builder.AddFloat(6, armLength, 0.0);
 		}
 
-		// Token: 0x0602ADE7 RID: 175591 RVA: 0x005E9BE1 File Offset: 0x005E7DE1
+		// Token: 0x0602D4E0 RID: 185568 RVA: 0x00633DBD File Offset: 0x00631FBD
 		public static void AddMinumArmLength(FlatBufferBuilder builder, float minumArmLength)
 		{
 			builder.AddFloat(7, minumArmLength, 0.0);
 		}
 
-		// Token: 0x0602ADE8 RID: 175592 RVA: 0x005E9BF4 File Offset: 0x005E7DF4
+		// Token: 0x0602D4E1 RID: 185569 RVA: 0x00633DD0 File Offset: 0x00631FD0
 		public static void AddMaxiumArmLength(FlatBufferBuilder builder, float maxiumArmLength)
 		{
 			builder.AddFloat(8, maxiumArmLength, 0.0);
 		}
 
-		// Token: 0x0602ADE9 RID: 175593 RVA: 0x005E9C07 File Offset: 0x005E7E07
+		// Token: 0x0602D4E2 RID: 185570 RVA: 0x00633DE3 File Offset: 0x00631FE3
 		public static void AddOffset(FlatBufferBuilder builder, Offset<IVectorInfo> offsetOffset)
 		{
 			builder.AddOffset(9, offsetOffset.Value, 0);
 		}
 
-		// Token: 0x0602ADEA RID: 175594 RVA: 0x005E9C18 File Offset: 0x005E7E18
+		// Token: 0x0602D4E3 RID: 185571 RVA: 0x00633DF4 File Offset: 0x00631FF4
 		public static void AddArmOffset(FlatBufferBuilder builder, Offset<IVectorInfo> armOffsetOffset)
 		{
 			builder.AddOffset(10, armOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x0602ADEB RID: 175595 RVA: 0x005E9C29 File Offset: 0x005E7E29
+		// Token: 0x0602D4E4 RID: 185572 RVA: 0x00633E05 File Offset: 0x00632005
 		public static void AddYawLimitMin(FlatBufferBuilder builder, float yawLimitMin)
 		{
 			builder.AddFloat(11, yawLimitMin, 0.0);
 		}
 
-		// Token: 0x0602ADEC RID: 175596 RVA: 0x005E9C3D File Offset: 0x005E7E3D
+		// Token: 0x0602D4E5 RID: 185573 RVA: 0x00633E19 File Offset: 0x00632019
 		public static void AddYawLimitMax(FlatBufferBuilder builder, float yawLimitMax)
 		{
 			builder.AddFloat(12, yawLimitMax, 0.0);
 		}
 
-		// Token: 0x0602ADED RID: 175597 RVA: 0x005E9C51 File Offset: 0x005E7E51
+		// Token: 0x0602D4E6 RID: 185574 RVA: 0x00633E2D File Offset: 0x0063202D
 		public static void AddPitchLimitMin(FlatBufferBuilder builder, float pitchLimitMin)
 		{
 			builder.AddFloat(13, pitchLimitMin, 0.0);
 		}
 
-		// Token: 0x0602ADEE RID: 175598 RVA: 0x005E9C65 File Offset: 0x005E7E65
+		// Token: 0x0602D4E7 RID: 185575 RVA: 0x00633E41 File Offset: 0x00632041
 		public static void AddPitchLimitMax(FlatBufferBuilder builder, float pitchLimitMax)
 		{
 			builder.AddFloat(14, pitchLimitMax, 0.0);
 		}
 
-		// Token: 0x0602ADEF RID: 175599 RVA: 0x005E9C79 File Offset: 0x005E7E79
+		// Token: 0x0602D4E8 RID: 185576 RVA: 0x00633E55 File Offset: 0x00632055
 		public static void AddFov(FlatBufferBuilder builder, float fov)
 		{
 			builder.AddFloat(15, fov, 0.0);
 		}
 
-		// Token: 0x0602ADF0 RID: 175600 RVA: 0x005E9C8D File Offset: 0x005E7E8D
+		// Token: 0x0602D4E9 RID: 185577 RVA: 0x00633E69 File Offset: 0x00632069
 		public static void AddIsDisableResetFocus(FlatBufferBuilder builder, bool isDisableResetFocus)
 		{
 			builder.AddBool(16, isDisableResetFocus, false);
 		}
 
-		// Token: 0x0602ADF1 RID: 175601 RVA: 0x005E9C99 File Offset: 0x005E7E99
+		// Token: 0x0602D4EA RID: 185578 RVA: 0x00633E75 File Offset: 0x00632075
 		public static void AddGravityDirectionType(FlatBufferBuilder builder, TGravityDirection gravityDirectionType)
 		{
 			builder.AddByte(17, (byte)gravityDirectionType, 0);
 		}
 
-		// Token: 0x0602ADF2 RID: 175602 RVA: 0x005E9CA5 File Offset: 0x005E7EA5
+		// Token: 0x0602D4EB RID: 185579 RVA: 0x00633E81 File Offset: 0x00632081
 		public static void AddGravityDirection(FlatBufferBuilder builder, int gravityDirectionOffset)
 		{
 			builder.AddOffset(18, gravityDirectionOffset, 0);
 		}
 
-		// Token: 0x0602ADF3 RID: 175603 RVA: 0x005E9CB1 File Offset: 0x005E7EB1
+		// Token: 0x0602D4EC RID: 185580 RVA: 0x00633E8D File Offset: 0x0063208D
 		public static void AddIsDisableCollision(FlatBufferBuilder builder, bool isDisableCollision)
 		{
 			builder.AddBool(19, isDisableCollision, false);
 		}
 
-		// Token: 0x0602ADF4 RID: 175604 RVA: 0x005E9CBD File Offset: 0x005E7EBD
+		// Token: 0x0602D4ED RID: 185581 RVA: 0x00633E99 File Offset: 0x00632099
 		public static void AddIsDisableDither(FlatBufferBuilder builder, bool isDisableDither)
 		{
 			builder.AddBool(20, isDisableDither, false);
 		}
 
-		// Token: 0x0602ADF5 RID: 175605 RVA: 0x005E9CC9 File Offset: 0x005E7EC9
+		// Token: 0x0602D4EE RID: 185582 RVA: 0x00633EA5 File Offset: 0x006320A5
 		public static void AddSubScreenBindKey(FlatBufferBuilder builder, StringOffset subScreenBindKeyOffset)
 		{
 			builder.AddOffset(21, subScreenBindKeyOffset.Value, 0);
 		}
 
-		// Token: 0x0602ADF6 RID: 175606 RVA: 0x005E9CDA File Offset: 0x005E7EDA
+		// Token: 0x0602D4EF RID: 185583 RVA: 0x00633EB6 File Offset: 0x006320B6
 		public static void AddSplineEntityId(FlatBufferBuilder builder, int splineEntityId)
 		{
 			builder.AddInt(22, splineEntityId, 0);
 		}
 
-		// Token: 0x0602ADF7 RID: 175607 RVA: 0x005E9CE6 File Offset: 0x005E7EE6
+		// Token: 0x0602D4F0 RID: 185584 RVA: 0x00633EC2 File Offset: 0x006320C2
 		public static void AddYawAngle(FlatBufferBuilder builder, float yawAngle)
 		{
 			builder.AddFloat(23, yawAngle, 0.0);
 		}
 
-		// Token: 0x0602ADF8 RID: 175608 RVA: 0x005E9CFA File Offset: 0x005E7EFA
+		// Token: 0x0602D4F1 RID: 185585 RVA: 0x00633ED6 File Offset: 0x006320D6
 		public static void AddPitchAngle(FlatBufferBuilder builder, float pitchAngle)
 		{
 			builder.AddFloat(24, pitchAngle, 0.0);
 		}
 
-		// Token: 0x0602ADF9 RID: 175609 RVA: 0x005E9D0E File Offset: 0x005E7F0E
+		// Token: 0x0602D4F2 RID: 185586 RVA: 0x00633EEA File Offset: 0x006320EA
 		public static void AddRollAngle(FlatBufferBuilder builder, float rollAngle)
 		{
 			builder.AddFloat(25, rollAngle, 0.0);
 		}
 
-		// Token: 0x0602ADFA RID: 175610 RVA: 0x005E9D22 File Offset: 0x005E7F22
+		// Token: 0x0602D4F3 RID: 185587 RVA: 0x00633EFE File Offset: 0x006320FE
 		public static void AddDepthOfField(FlatBufferBuilder builder, Offset<ICameraDepthOfField> depthOfFieldOffset)
 		{
 			builder.AddOffset(26, depthOfFieldOffset.Value, 0);
 		}
 
-		// Token: 0x0602ADFB RID: 175611 RVA: 0x005E9D33 File Offset: 0x005E7F33
+		// Token: 0x0602D4F4 RID: 185588 RVA: 0x00633F0F File Offset: 0x0063210F
 		public static void AddOffsetInMovementDirection(FlatBufferBuilder builder, Offset<ICameraOffsetInMovementDirection> offsetInMovementDirectionOffset)
 		{
 			builder.AddOffset(27, offsetInMovementDirectionOffset.Value, 0);
 		}
 
-		// Token: 0x0602ADFC RID: 175612 RVA: 0x005E9D44 File Offset: 0x005E7F44
+		// Token: 0x0602D4F5 RID: 185589 RVA: 0x00633F20 File Offset: 0x00632120
 		public static void AddNearClipDistanceToTarget(FlatBufferBuilder builder, float nearClipDistanceToTarget)
 		{
 			builder.AddFloat(28, nearClipDistanceToTarget, 0.0);
 		}
 
-		// Token: 0x0602ADFD RID: 175613 RVA: 0x005E9D58 File Offset: 0x005E7F58
+		// Token: 0x0602D4F6 RID: 185590 RVA: 0x00633F34 File Offset: 0x00632134
 		public static void AddSpringArmSoftZoneConfig(FlatBufferBuilder builder, Offset<ISpringArmSoftZoneConfig> springArmSoftZoneConfigOffset)
 		{
 			builder.AddOffset(29, springArmSoftZoneConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0602ADFE RID: 175614 RVA: 0x005E9D69 File Offset: 0x005E7F69
+		// Token: 0x0602D4F7 RID: 185591 RVA: 0x00633F45 File Offset: 0x00632145
 		public static void AddSpringArmFix(FlatBufferBuilder builder, Offset<ISpringArmFixConfig> springArmFixOffset)
 		{
 			builder.AddOffset(30, springArmFixOffset.Value, 0);
 		}
 
-		// Token: 0x0602ADFF RID: 175615 RVA: 0x005E9D7A File Offset: 0x005E7F7A
+		// Token: 0x0602D4F8 RID: 185592 RVA: 0x00633F56 File Offset: 0x00632156
 		public static void AddIsCameraFollowSplineRoll(FlatBufferBuilder builder, bool isCameraFollowSplineRoll)
 		{
 			builder.AddBool(31, isCameraFollowSplineRoll, false);
 		}
 
-		// Token: 0x0602AE00 RID: 175616 RVA: 0x005E9D86 File Offset: 0x005E7F86
+		// Token: 0x0602D4F9 RID: 185593 RVA: 0x00633F62 File Offset: 0x00632162
 		public static void AddNullMask(FlatBufferBuilder builder, ushort nullMask)
 		{
 			builder.AddUshort(32, nullMask, 0);
 		}
 
-		// Token: 0x0602AE01 RID: 175617 RVA: 0x005E9D92 File Offset: 0x005E7F92
+		// Token: 0x0602D4FA RID: 185594 RVA: 0x00633F6E File Offset: 0x0063216E
 		public static Offset<IAdjustHorizontalCamera> EndIAdjustHorizontalCamera(FlatBufferBuilder builder)
 		{
 			return new Offset<IAdjustHorizontalCamera>(builder.EndTable());
 		}
 
-		// Token: 0x0602AE02 RID: 175618 RVA: 0x005E9DA0 File Offset: 0x005E7FA0
+		// Token: 0x0602D4FB RID: 185595 RVA: 0x00633F7C File Offset: 0x0063217C
 		public IAdjustHorizontalCameraT UnPack()
 		{
 			IAdjustHorizontalCameraT adjustHorizontalCameraT = new IAdjustHorizontalCameraT();
@@ -818,7 +818,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return adjustHorizontalCameraT;
 		}
 
-		// Token: 0x0602AE03 RID: 175619 RVA: 0x005E9DBC File Offset: 0x005E7FBC
+		// Token: 0x0602D4FC RID: 185596 RVA: 0x00633F98 File Offset: 0x00632198
 		public void UnPackTo(IAdjustHorizontalCameraT _o)
 		{
 			_o.Type = this.Type;
@@ -871,7 +871,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602AE04 RID: 175620 RVA: 0x005EA188 File Offset: 0x005E8388
+		// Token: 0x0602D4FD RID: 185597 RVA: 0x00634364 File Offset: 0x00632564
 		public static Offset<IAdjustHorizontalCamera> Pack(FlatBufferBuilder builder, IAdjustHorizontalCameraT _o)
 		{
 			if (_o == null)
@@ -892,7 +892,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAdjustHorizontalCamera.CreateIAdjustHorizontalCamera(builder, _o.Type, _o.Priority, _o.FadeInTime, fadeInCurveOffset, _o.FadeOutTime, fadeOutCurveOffset, _o.ArmLength, _o.MinumArmLength, _o.MaxiumArmLength, offsetOffset, armOffsetOffset, _o.YawLimitMin, _o.YawLimitMax, _o.PitchLimitMin, _o.PitchLimitMax, _o.Fov, _o.IsDisableResetFocus, gravityDirection_type, gravityDirectionOffset, _o.IsDisableCollision, _o.IsDisableDither, subScreenBindKeyOffset, _o.SplineEntityId, _o.YawAngle, _o.PitchAngle, _o.RollAngle, depthOfFieldOffset, offsetInMovementDirectionOffset, _o.NearClipDistanceToTarget, springArmSoftZoneConfigOffset, springArmFixOffset, _o.IsCameraFollowSplineRoll, _o.NullMask);
 		}
 
-		// Token: 0x0401060D RID: 67085
+		// Token: 0x04011414 RID: 70676
 		private Table __p;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004A4 RID: 1188
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004FD RID: 1277
 	public class IJigsawCompletedConfig
 	{
-		// Token: 0x060017EC RID: 6124 RVA: 0x00047E80 File Offset: 0x00046080
+		// Token: 0x06001986 RID: 6534 RVA: 0x0004BBC8 File Offset: 0x00049DC8
 		private IJigsawCompletedConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060017ED RID: 6125 RVA: 0x00047EB8 File Offset: 0x000460B8
+		// Token: 0x06001987 RID: 6535 RVA: 0x0004BC00 File Offset: 0x00049E00
 		public static IJigsawCompletedConfig Create([Nullable(2)] IJigsawCompletedConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060017EE RID: 6126 RVA: 0x00047ECB File Offset: 0x000460CB
+		// Token: 0x06001988 RID: 6536 RVA: 0x0004BC13 File Offset: 0x00049E13
 		public static IJigsawCompletedConfig CreateFromSetValue([Nullable(2)] IJigsawCompletedConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060017EF RID: 6127 RVA: 0x00047EDE File Offset: 0x000460DE
+		// Token: 0x06001989 RID: 6537 RVA: 0x0004BC26 File Offset: 0x00049E26
 		public IJigsawCompletedConfig_SetValue ToSetValue()
 		{
 			return new IJigsawCompletedConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700065F RID: 1631
-		// (get) Token: 0x060017F0 RID: 6128 RVA: 0x00047F00 File Offset: 0x00046100
-		// (set) Token: 0x060017F1 RID: 6129 RVA: 0x00047F3A File Offset: 0x0004613A
+		// Token: 0x170006C6 RID: 1734
+		// (get) Token: 0x0600198A RID: 6538 RVA: 0x0004BC48 File Offset: 0x00049E48
+		// (set) Token: 0x0600198B RID: 6539 RVA: 0x0004BC82 File Offset: 0x00049E82
 		public virtual bool? IsSilentPiece
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000660 RID: 1632
-		// (get) Token: 0x060017F2 RID: 6130 RVA: 0x00047F48 File Offset: 0x00046148
-		// (set) Token: 0x060017F3 RID: 6131 RVA: 0x00047F82 File Offset: 0x00046182
+		// Token: 0x170006C7 RID: 1735
+		// (get) Token: 0x0600198C RID: 6540 RVA: 0x0004BC90 File Offset: 0x00049E90
+		// (set) Token: 0x0600198D RID: 6541 RVA: 0x0004BCCA File Offset: 0x00049ECA
 		public virtual bool? IsSilentFoundation
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040011CD RID: 4557
+		// Token: 0x040012EF RID: 4847
 		[Nullable(2)]
 		protected IJigsawCompletedConfig FbInstance;
 
-		// Token: 0x040011CE RID: 4558
+		// Token: 0x040012F0 RID: 4848
 		[Nullable(2)]
 		protected IJigsawCompletedConfig_SetValue PocoInterface;
 	}

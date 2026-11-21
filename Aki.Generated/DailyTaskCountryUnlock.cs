@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BB4 RID: 2996
+	// Token: 0x02000C96 RID: 3222
 	public struct DailyTaskCountryUnlock : IFlatbufferObject
 	{
-		// Token: 0x17000A09 RID: 2569
-		// (get) Token: 0x06005B16 RID: 23318 RVA: 0x002035F8 File Offset: 0x002017F8
+		// Token: 0x17000A4F RID: 2639
+		// (get) Token: 0x060060EF RID: 24815 RVA: 0x002232A0 File Offset: 0x002214A0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005B17 RID: 23319 RVA: 0x00203605 File Offset: 0x00201805
+		// Token: 0x060060F0 RID: 24816 RVA: 0x002232AD File Offset: 0x002214AD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005B18 RID: 23320 RVA: 0x0020360C File Offset: 0x0020180C
+		// Token: 0x060060F1 RID: 24817 RVA: 0x002232B4 File Offset: 0x002214B4
 		public static DailyTaskCountryUnlock GetRootAsDailyTaskCountryUnlock(ByteBuffer _bb)
 		{
 			return DailyTaskCountryUnlock.GetRootAsDailyTaskCountryUnlock(_bb, default(DailyTaskCountryUnlock));
 		}
 
-		// Token: 0x06005B19 RID: 23321 RVA: 0x00203628 File Offset: 0x00201828
+		// Token: 0x060060F2 RID: 24818 RVA: 0x002232D0 File Offset: 0x002214D0
 		public static DailyTaskCountryUnlock GetRootAsDailyTaskCountryUnlock(ByteBuffer _bb, DailyTaskCountryUnlock obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005B1A RID: 23322 RVA: 0x00203645 File Offset: 0x00201845
+		// Token: 0x060060F3 RID: 24819 RVA: 0x002232ED File Offset: 0x002214ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005B1B RID: 23323 RVA: 0x00203654 File Offset: 0x00201854
+		// Token: 0x060060F4 RID: 24820 RVA: 0x002232FC File Offset: 0x002214FC
 		public DailyTaskCountryUnlock __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000A0A RID: 2570
-		// (get) Token: 0x06005B1C RID: 23324 RVA: 0x00203664 File Offset: 0x00201864
+		// Token: 0x17000A50 RID: 2640
+		// (get) Token: 0x060060F5 RID: 24821 RVA: 0x0022330C File Offset: 0x0022150C
 		public int Id
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004BD8 RID: 19416
+		// Token: 0x040051BA RID: 20922
 		private Table __p;
 	}
 }

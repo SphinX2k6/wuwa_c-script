@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E5B RID: 7771
+// Token: 0x0200131D RID: 4893
 [NullableContext(1)]
 [Nullable(0)]
 public class HelpGuideView : UiViewBase
 {
-	// Token: 0x0600EC2A RID: 60458 RVA: 0x00381051 File Offset: 0x0037F251
+	// Token: 0x0600C049 RID: 49225 RVA: 0x0038CCFD File Offset: 0x0038AEFD
 	public HelpGuideView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600EC2B RID: 60459 RVA: 0x00381068 File Offset: 0x0037F268
+	// Token: 0x0600C04A RID: 49226 RVA: 0x0038CD14 File Offset: 0x0038AF14
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -49,13 +49,13 @@ public class HelpGuideView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600EC2C RID: 60460 RVA: 0x0038123C File Offset: 0x0037F43C
+	// Token: 0x0600C04B RID: 49227 RVA: 0x0038CEE8 File Offset: 0x0038B0E8
 	private void OnCloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600EC2D RID: 60461 RVA: 0x00381248 File Offset: 0x0037F448
+	// Token: 0x0600C04C RID: 49228 RVA: 0x0038CEF4 File Offset: 0x0038B0F4
 	private void PrePage()
 	{
 		if (this.MoveTween == null && this.NowPage > 0)
@@ -75,7 +75,7 @@ public class HelpGuideView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EC2E RID: 60462 RVA: 0x00381324 File Offset: 0x0037F524
+	// Token: 0x0600C04D RID: 49229 RVA: 0x0038CFD0 File Offset: 0x0038B1D0
 	private void NextPage()
 	{
 		if (this.MoveTween == null && this.NowPage < this.PageArray.Count - 1)
@@ -95,7 +95,7 @@ public class HelpGuideView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EC2F RID: 60463 RVA: 0x0038140B File Offset: 0x0037F60B
+	// Token: 0x0600C04E RID: 49230 RVA: 0x0038D0B7 File Offset: 0x0038B2B7
 	protected override void OnBeforeDestroy()
 	{
 		if (this.PageDotLayout != null)
@@ -110,7 +110,7 @@ public class HelpGuideView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EC30 RID: 60464 RVA: 0x00381444 File Offset: 0x0037F644
+	// Token: 0x0600C04F RID: 49231 RVA: 0x0038D0F0 File Offset: 0x0038B2F0
 	private ILayoutItem<TutorialPageItem> InitDetail(object data, UUIItem uiItem, int index)
 	{
 		TutorialPageItem tutorialPageItem = new TutorialPageItem(uiItem);
@@ -123,7 +123,7 @@ public class HelpGuideView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600EC31 RID: 60465 RVA: 0x0038147F File Offset: 0x0037F67F
+	// Token: 0x0600C050 RID: 49232 RVA: 0x0038D12B File Offset: 0x0038B32B
 	private void SwitchPanelAnim()
 	{
 		this.LastShowPanel.SetUiActive(true);
@@ -131,7 +131,7 @@ public class HelpGuideView : UiViewBase
 		this.LastShowPanel.PlayAnime(false);
 	}
 
-	// Token: 0x0600EC32 RID: 60466 RVA: 0x003814A8 File Offset: 0x0037F6A8
+	// Token: 0x0600C051 RID: 49233 RVA: 0x0038D154 File Offset: 0x0038B354
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HelpGuideView.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -142,7 +142,7 @@ public class HelpGuideView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EC33 RID: 60467 RVA: 0x003814EC File Offset: 0x0037F6EC
+	// Token: 0x0600C052 RID: 49234 RVA: 0x0038D198 File Offset: 0x0038B398
 	protected override void OnStart()
 	{
 		this.RefreshView(0);
@@ -150,7 +150,7 @@ public class HelpGuideView : UiViewBase
 		base.GetButton(13).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x0600EC34 RID: 60468 RVA: 0x0038152C File Offset: 0x0037F72C
+	// Token: 0x0600C053 RID: 49235 RVA: 0x0038D1D8 File Offset: 0x0038B3D8
 	protected override void OnBeforeShow()
 	{
 		this.UiViewSequence.PlaySequence("StartAtOnce", false, null);
@@ -159,7 +159,7 @@ public class HelpGuideView : UiViewBase
 		base.GetItem(9).SetUIActive(false);
 	}
 
-	// Token: 0x0600EC35 RID: 60469 RVA: 0x00381580 File Offset: 0x0037F780
+	// Token: 0x0600C054 RID: 49236 RVA: 0x0038D22C File Offset: 0x0038B42C
 	private void RefreshView(int index)
 	{
 		if (this.PageArray.Count > 1)
@@ -180,19 +180,19 @@ public class HelpGuideView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), value2.Title, Array.Empty<object>());
 	}
 
-	// Token: 0x04006D7F RID: 28031
+	// Token: 0x04006E60 RID: 28256
 	private const float TWEEN_TIME = 0.3f;
 
-	// Token: 0x04006D80 RID: 28032
+	// Token: 0x04006E61 RID: 28257
 	protected int HelpGroupId;
 
-	// Token: 0x04006D81 RID: 28033
+	// Token: 0x04006E62 RID: 28258
 	private IReadOnlyList<HelpText> PageArray = new List<HelpText>();
 
-	// Token: 0x04006D82 RID: 28034
+	// Token: 0x04006E63 RID: 28259
 	private int NowPage;
 
-	// Token: 0x04006D83 RID: 28035
+	// Token: 0x04006E64 RID: 28260
 	[Nullable(new byte[]
 	{
 		2,
@@ -200,51 +200,51 @@ public class HelpGuideView : UiViewBase
 	})]
 	private GenericLayoutNew<TutorialPageItem> PageDotLayout;
 
-	// Token: 0x04006D84 RID: 28036
+	// Token: 0x04006E65 RID: 28261
 	[Nullable(2)]
 	private HelpGuidePage CurrentShowPanel;
 
-	// Token: 0x04006D85 RID: 28037
+	// Token: 0x04006E66 RID: 28262
 	[Nullable(2)]
 	private HelpGuidePage LastShowPanel;
 
-	// Token: 0x04006D86 RID: 28038
+	// Token: 0x04006E67 RID: 28263
 	[Nullable(2)]
 	private ULTweener MoveTween;
 
-	// Token: 0x0200840D RID: 33805
+	// Token: 0x02007592 RID: 30098
 	[NullableContext(0)]
 	public enum ETutorialsPopupComponents
 	{
-		// Token: 0x0402AFAD RID: 176045
+		// Token: 0x040262D1 RID: 156369
 		SprIcon,
-		// Token: 0x0402AFAE RID: 176046
+		// Token: 0x040262D2 RID: 156370
 		TxtTitle,
-		// Token: 0x0402AFAF RID: 176047
+		// Token: 0x040262D3 RID: 156371
 		BtnBack,
-		// Token: 0x0402AFB0 RID: 176048
+		// Token: 0x040262D4 RID: 156372
 		PnlMid,
-		// Token: 0x0402AFB1 RID: 176049
+		// Token: 0x040262D5 RID: 156373
 		PnlBottom,
-		// Token: 0x0402AFB2 RID: 176050
+		// Token: 0x040262D6 RID: 156374
 		PnlPages,
-		// Token: 0x0402AFB3 RID: 176051
+		// Token: 0x040262D7 RID: 156375
 		UiItemPagesDot,
-		// Token: 0x0402AFB4 RID: 176052
+		// Token: 0x040262D8 RID: 156376
 		BtnArrowL,
-		// Token: 0x0402AFB5 RID: 176053
+		// Token: 0x040262D9 RID: 156377
 		BtnArrowR,
-		// Token: 0x0402AFB6 RID: 176054
+		// Token: 0x040262DA RID: 156378
 		UiItemTutorialsTps,
-		// Token: 0x0402AFB7 RID: 176055
+		// Token: 0x040262DB RID: 156379
 		UiItemLayerBg,
-		// Token: 0x0402AFB8 RID: 176056
+		// Token: 0x040262DC RID: 156380
 		UiItemLayerUi,
-		// Token: 0x0402AFB9 RID: 176057
+		// Token: 0x040262DD RID: 156381
 		PageParent,
-		// Token: 0x0402AFBA RID: 176058
+		// Token: 0x040262DE RID: 156382
 		BtnBg,
-		// Token: 0x0402AFBB RID: 176059
+		// Token: 0x040262DF RID: 156383
 		TipReadAll
 	}
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
@@ -15,17 +14,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.NetworkDetection
 {
-	// Token: 0x02005366 RID: 21350
+	// Token: 0x02004349 RID: 17225
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NetworkDetectionView : UiViewBase
 	{
-		// Token: 0x060368AD RID: 223405 RVA: 0x00CE9DD2 File Offset: 0x00CE7FD2
+		// Token: 0x0602B7F3 RID: 178163 RVA: 0x00C38C5A File Offset: 0x00C36E5A
 		public NetworkDetectionView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060368AE RID: 223406 RVA: 0x00CE9DFC File Offset: 0x00CE7FFC
+		// Token: 0x0602B7F4 RID: 178164 RVA: 0x00C38C84 File Offset: 0x00C36E84
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -62,7 +61,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060368AF RID: 223407 RVA: 0x00CE9FB0 File Offset: 0x00CE81B0
+		// Token: 0x0602B7F5 RID: 178165 RVA: 0x00C38E38 File Offset: 0x00C37038
 		protected override UniTask OnBeforeStartAsync()
 		{
 			NetworkDetectionView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -73,7 +72,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060368B0 RID: 223408 RVA: 0x00CE9FF4 File Offset: 0x00CE81F4
+		// Token: 0x0602B7F6 RID: 178166 RVA: 0x00C38E7C File Offset: 0x00C3707C
 		protected override void OnStart()
 		{
 			IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -95,7 +94,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			this.NetworkDetectionLogUploadHandle.LogUploadFinishCallBack = new TNetworkDetectionLogUploadFinishCallBack(this.OnLogUploadFinish);
 		}
 
-		// Token: 0x060368B1 RID: 223409 RVA: 0x00CEA0BB File Offset: 0x00CE82BB
+		// Token: 0x0602B7F7 RID: 178167 RVA: 0x00C38F43 File Offset: 0x00C37143
 		protected override void OnBeforeShow()
 		{
 			this.DetectionViewState = EDetectionViewState.Idle;
@@ -104,18 +103,17 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			EventSystem.Instance.Add(EEventName.OnConfirmNetworkDetectionItem, new Action(this.OnConfirmSelectServer));
 		}
 
-		// Token: 0x060368B2 RID: 223410 RVA: 0x00CEA0E9 File Offset: 0x00CE82E9
+		// Token: 0x0602B7F8 RID: 178168 RVA: 0x00C38F71 File Offset: 0x00C37171
 		protected override void OnAfterHide()
 		{
 			EventSystem.Instance.Remove(EEventName.OnConfirmNetworkDetectionItem, new Action(this.OnConfirmSelectServer));
 		}
 
-		// Token: 0x060368B3 RID: 223411 RVA: 0x00CEA104 File Offset: 0x00CE8304
+		// Token: 0x0602B7F9 RID: 178169 RVA: 0x00C38F8C File Offset: 0x00C3718C
 		private unsafe void CheckAndInitServerSelection()
 		{
 			bool flag = LauncherNetworkDetectionController.Instance.IsGlobalPlayer();
-			bool isPlayInEditor = Info.Instance.IsPlayInEditor;
-			bool flag2 = flag || isPlayInEditor;
+			bool flag2 = flag;
 			base.GetItem(0).SetUIActive(flag2);
 			this.RightButtonItem.SetEnableClick(!flag2);
 			Log instance = Log.Instance;
@@ -144,7 +142,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			}
 		}
 
-		// Token: 0x060368B4 RID: 223412 RVA: 0x00CEA204 File Offset: 0x00CE8404
+		// Token: 0x0602B7FA RID: 178170 RVA: 0x00C39080 File Offset: 0x00C37280
 		private NetworkDetectionItem InitContentLayoutItem()
 		{
 			NetworkDetectionItem networkDetectionItem = new NetworkDetectionItem();
@@ -152,13 +150,13 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			return networkDetectionItem;
 		}
 
-		// Token: 0x060368B5 RID: 223413 RVA: 0x00CEA224 File Offset: 0x00CE8424
+		// Token: 0x0602B7FB RID: 178171 RVA: 0x00C390A0 File Offset: 0x00C372A0
 		protected override void OnBeforeHide()
 		{
 			NetworkDetectionModel.Instance.ResetInterruptDetectionCheckTime();
 		}
 
-		// Token: 0x060368B6 RID: 223414 RVA: 0x00CEA230 File Offset: 0x00CE8430
+		// Token: 0x0602B7FC RID: 178172 RVA: 0x00C390AC File Offset: 0x00C372AC
 		protected override void OnBeforeDestroy()
 		{
 			NetworkDetectionTips networkDetectionUploadLogTips = this.NetworkDetectionUploadLogTips;
@@ -181,7 +179,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			LauncherNetworkDetectionController.Instance.ForceStopDomainDetect();
 		}
 
-		// Token: 0x060368B7 RID: 223415 RVA: 0x00CEA2A0 File Offset: 0x00CE84A0
+		// Token: 0x0602B7FD RID: 178173 RVA: 0x00C3911C File Offset: 0x00C3731C
 		public List<INetworkDetectionItemData> GetNetworkDetectionLayoutItemData()
 		{
 			List<INetworkDetectionItemData> list = new List<INetworkDetectionItemData>();
@@ -197,7 +195,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			return list;
 		}
 
-		// Token: 0x060368B8 RID: 223416 RVA: 0x00CEA310 File Offset: 0x00CE8510
+		// Token: 0x0602B7FE RID: 178174 RVA: 0x00C3918C File Offset: 0x00C3738C
 		private void OnSelectServerBtnClick()
 		{
 			if (this.DetectionViewState == EDetectionViewState.Detecting || this.DetectionViewState == EDetectionViewState.Uploading)
@@ -208,7 +206,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			UiManager.Instance.OpenView(EUiViewName.NetworkDetectionSelectServerView, null, null);
 		}
 
-		// Token: 0x060368B9 RID: 223417 RVA: 0x00CEA348 File Offset: 0x00CE8548
+		// Token: 0x0602B7FF RID: 178175 RVA: 0x00C391C4 File Offset: 0x00C373C4
 		private void UpdateSelectServer()
 		{
 			ILoginServersData currentSelectServerData = NetworkDetectionModel.Instance.CurrentSelectServerData;
@@ -223,7 +221,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			this.UpdateButtonState();
 		}
 
-		// Token: 0x060368BA RID: 223418 RVA: 0x00CEA390 File Offset: 0x00CE8590
+		// Token: 0x0602B800 RID: 178176 RVA: 0x00C3920C File Offset: 0x00C3740C
 		private void OnConfirmSelectServer()
 		{
 			ILoginServersData currentSelectServerData = NetworkDetectionModel.Instance.CurrentSelectServerData;
@@ -239,7 +237,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			}
 		}
 
-		// Token: 0x060368BB RID: 223419 RVA: 0x00CEA3DC File Offset: 0x00CE85DC
+		// Token: 0x0602B801 RID: 178177 RVA: 0x00C39258 File Offset: 0x00C37458
 		private void UpdateButtonState()
 		{
 			ILoginServersData currentSelectServerData = NetworkDetectionModel.Instance.CurrentSelectServerData;
@@ -276,7 +274,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			}
 		}
 
-		// Token: 0x060368BC RID: 223420 RVA: 0x00CEA520 File Offset: 0x00CE8720
+		// Token: 0x0602B802 RID: 178178 RVA: 0x00C3939C File Offset: 0x00C3759C
 		private void OnLeftBtnClick()
 		{
 			if ((this.DetectionViewState == EDetectionViewState.Detecting || this.DetectionViewState == EDetectionViewState.Uploading) && NetworkDetectionModel.Instance.NeedInterruptDetectionDoubleCheckTips())
@@ -288,7 +286,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060368BD RID: 223421 RVA: 0x00CEA570 File Offset: 0x00CE8770
+		// Token: 0x0602B803 RID: 178179 RVA: 0x00C393EC File Offset: 0x00C375EC
 		private void OnRightBtnClick(int _)
 		{
 			switch (this.DetectionViewState)
@@ -314,7 +312,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			}
 		}
 
-		// Token: 0x060368BE RID: 223422 RVA: 0x00CEA600 File Offset: 0x00CE8800
+		// Token: 0x0602B804 RID: 178180 RVA: 0x00C3947C File Offset: 0x00C3767C
 		private void OnLogUploadFinish()
 		{
 			this.DetectionViewState = EDetectionViewState.UpLoadComplete;
@@ -323,7 +321,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060368BF RID: 223423 RVA: 0x00CEA628 File Offset: 0x00CE8828
+		// Token: 0x0602B805 RID: 178181 RVA: 0x00C394A4 File Offset: 0x00C376A4
 		private UniTask ProceedDetection()
 		{
 			NetworkDetectionView.<ProceedDetection>d__28 <ProceedDetection>d__;
@@ -334,7 +332,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			return <ProceedDetection>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401CD62 RID: 118114
+		// Token: 0x040177F6 RID: 96246
 		[Nullable(new byte[]
 		{
 			2,
@@ -343,55 +341,55 @@ namespace CSharpScript.Game.Module.NetworkDetection
 		})]
 		private GenericLayout<NetworkDetectionItem, INetworkDetectionItemData> ContentLayout;
 
-		// Token: 0x0401CD63 RID: 118115
+		// Token: 0x040177F7 RID: 96247
 		private readonly List<NetworkDetectionItem> ContentLayoutItemList = new List<NetworkDetectionItem>();
 
-		// Token: 0x0401CD64 RID: 118116
+		// Token: 0x040177F8 RID: 96248
 		[Nullable(2)]
 		private NetworkDetectionLogUploadHandle NetworkDetectionLogUploadHandle;
 
-		// Token: 0x0401CD65 RID: 118117
+		// Token: 0x040177F9 RID: 96249
 		private EDetectionViewState DetectionViewState;
 
-		// Token: 0x0401CD66 RID: 118118
+		// Token: 0x040177FA RID: 96250
 		[Nullable(2)]
 		private ButtonItem RightButtonItem;
 
-		// Token: 0x0401CD67 RID: 118119
+		// Token: 0x040177FB RID: 96251
 		[Nullable(2)]
 		private NetworkDetectionTips NetworkDetectionUploadLogTips;
 
-		// Token: 0x0401CD68 RID: 118120
+		// Token: 0x040177FC RID: 96252
 		[Nullable(2)]
 		private NetworkDetectionTips NetworkDetectionTips;
 
-		// Token: 0x0401CD69 RID: 118121
+		// Token: 0x040177FD RID: 96253
 		private string DetectionTraceText = "";
 
-		// Token: 0x0401CD6A RID: 118122
+		// Token: 0x040177FE RID: 96254
 		private string TraceId = "";
 
-		// Token: 0x0200B5CE RID: 46542
+		// Token: 0x0200A007 RID: 40967
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403712A RID: 225578
+			// Token: 0x04031B82 RID: 203650
 			PnlServer,
-			// Token: 0x0403712B RID: 225579
+			// Token: 0x04031B83 RID: 203651
 			TxtServer,
-			// Token: 0x0403712C RID: 225580
+			// Token: 0x04031B84 RID: 203652
 			BtnFunctionD,
-			// Token: 0x0403712D RID: 225581
+			// Token: 0x04031B85 RID: 203653
 			ScrollView,
-			// Token: 0x0403712E RID: 225582
+			// Token: 0x04031B86 RID: 203654
 			NetInfoItem,
-			// Token: 0x0403712F RID: 225583
+			// Token: 0x04031B87 RID: 203655
 			BtnLeft,
-			// Token: 0x04037130 RID: 225584
+			// Token: 0x04031B88 RID: 203656
 			BtnRight,
-			// Token: 0x04037131 RID: 225585
+			// Token: 0x04031B89 RID: 203657
 			NetInfoContent,
-			// Token: 0x04037132 RID: 225586
+			// Token: 0x04031B8A RID: 203658
 			TexTips
 		}
 	}

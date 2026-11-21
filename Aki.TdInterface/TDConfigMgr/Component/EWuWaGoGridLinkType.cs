@@ -3,21 +3,21 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000163 RID: 355
+	// Token: 0x02000178 RID: 376
 	[EnumExtensions]
 	public enum EWuWaGoGridLinkType
 	{
-		// Token: 0x040006BE RID: 1726
+		// Token: 0x0400070B RID: 1803
 		EmptyGrid,
-		// Token: 0x040006BF RID: 1727
+		// Token: 0x0400070C RID: 1804
 		SingleLinkGrid,
-		// Token: 0x040006C0 RID: 1728
+		// Token: 0x0400070D RID: 1805
 		RightAngleLinkGrid,
-		// Token: 0x040006C1 RID: 1729
+		// Token: 0x0400070E RID: 1806
 		ThreeLinkGrid,
-		// Token: 0x040006C2 RID: 1730
+		// Token: 0x0400070F RID: 1807
 		StraightLinkGrid,
-		// Token: 0x040006C3 RID: 1731
+		// Token: 0x04000710 RID: 1808
 		AllLinkGrid
 	}
 }

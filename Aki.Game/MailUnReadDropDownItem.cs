@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x020021D7 RID: 8663
+// Token: 0x020016BB RID: 5819
 [NullableContext(1)]
 [Nullable(0)]
 public class MailUnReadDropDownItem : MailDropDownItem
 {
-	// Token: 0x06010DD7 RID: 69079 RVA: 0x0041A55C File Offset: 0x0041875C
+	// Token: 0x0600E268 RID: 57960 RVA: 0x00426E3C File Offset: 0x0042503C
 	public MailUnReadDropDownItem(UUIItem uiItem) : base(uiItem)
 	{
 	}
 
-	// Token: 0x06010DD8 RID: 69080 RVA: 0x0041A568 File Offset: 0x00418768
+	// Token: 0x0600E269 RID: 57961 RVA: 0x00426E48 File Offset: 0x00425048
 	public override MailData[] GetFilteredMailList()
 	{
 		List<MailData> unScanMails = MailModel.Instance.GetUnScanMails(null);
@@ -27,13 +27,13 @@ public class MailUnReadDropDownItem : MailDropDownItem
 		return unScanMails.ToArray();
 	}
 
-	// Token: 0x06010DD9 RID: 69081 RVA: 0x0041A5CC File Offset: 0x004187CC
+	// Token: 0x0600E26A RID: 57962 RVA: 0x00426EAC File Offset: 0x004250AC
 	public override string GetTitleText()
 	{
 		return this.GetFilteredMailList().Length.ToString();
 	}
 
-	// Token: 0x06010DDA RID: 69082 RVA: 0x0041A5E9 File Offset: 0x004187E9
+	// Token: 0x0600E26B RID: 57963 RVA: 0x00426EC9 File Offset: 0x004250C9
 	protected override void OnShowDropDownItemBase(MailFilter data)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.Name, Array.Empty<object>());

@@ -4,39 +4,39 @@ using CSharpScript.Game.World.Define;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072CE RID: 29390
+	// Token: 0x02006450 RID: 25680
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FreeCamera : Entity
 	{
-		// Token: 0x060481E1 RID: 295393 RVA: 0x0127F8A8 File Offset: 0x0127DAA8
+		// Token: 0x0603E5E8 RID: 255464 RVA: 0x01222396 File Offset: 0x01220596
 		public FreeCamera(int id, int index) : base(id, index)
 		{
 		}
 
-		// Token: 0x060481E2 RID: 295394 RVA: 0x0127F8B2 File Offset: 0x0127DAB2
+		// Token: 0x0603E5E9 RID: 255465 RVA: 0x012223A0 File Offset: 0x012205A0
 		[NullableContext(1)]
 		protected override TsGameBudgetGroupConfig StaticGameBudgetConfig()
 		{
 			return new TsGameBudgetGroupConfig(GameBudgetAllocatorConfigCreator.Instance.TsAlwaysTick2Config);
 		}
 
-		// Token: 0x17009F33 RID: 40755
-		// (get) Token: 0x060481E3 RID: 295395 RVA: 0x0127F8C3 File Offset: 0x0127DAC3
-		// (set) Token: 0x060481E4 RID: 295396 RVA: 0x0127F8CB File Offset: 0x0127DACB
+		// Token: 0x170076A0 RID: 30368
+		// (get) Token: 0x0603E5EA RID: 255466 RVA: 0x012223B1 File Offset: 0x012205B1
+		// (set) Token: 0x0603E5EB RID: 255467 RVA: 0x012223B9 File Offset: 0x012205B9
 		public FreeCameraLogicComponent LogicComponent { get; private set; }
 
-		// Token: 0x17009F34 RID: 40756
-		// (get) Token: 0x060481E5 RID: 295397 RVA: 0x0127F8D4 File Offset: 0x0127DAD4
-		// (set) Token: 0x060481E6 RID: 295398 RVA: 0x0127F8DC File Offset: 0x0127DADC
+		// Token: 0x170076A1 RID: 30369
+		// (get) Token: 0x0603E5EC RID: 255468 RVA: 0x012223C2 File Offset: 0x012205C2
+		// (set) Token: 0x0603E5ED RID: 255469 RVA: 0x012223CA File Offset: 0x012205CA
 		public FreeCameraDisplayComponent DisplayComponent { get; private set; }
 
-		// Token: 0x17009F35 RID: 40757
-		// (get) Token: 0x060481E7 RID: 295399 RVA: 0x0127F8E5 File Offset: 0x0127DAE5
-		// (set) Token: 0x060481E8 RID: 295400 RVA: 0x0127F8ED File Offset: 0x0127DAED
+		// Token: 0x170076A2 RID: 30370
+		// (get) Token: 0x0603E5EE RID: 255470 RVA: 0x012223D3 File Offset: 0x012205D3
+		// (set) Token: 0x0603E5EF RID: 255471 RVA: 0x012223DB File Offset: 0x012205DB
 		public FreeCameraInputComponent InputComponent { get; private set; }
 
-		// Token: 0x060481E9 RID: 295401 RVA: 0x0127F8F8 File Offset: 0x0127DAF8
+		// Token: 0x0603E5F0 RID: 255472 RVA: 0x012223E4 File Offset: 0x012205E4
 		protected override bool OnCreate(IEntityArgs args = null)
 		{
 			if (((args != null) ? args.GetP1<CameraModelInstance>() : null) == null)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x060481EA RID: 295402 RVA: 0x0127F98A File Offset: 0x0127DB8A
+		// Token: 0x0603E5F1 RID: 255473 RVA: 0x01222476 File Offset: 0x01220676
 		protected override bool OnStart()
 		{
 			this.LogicComponent = base.GetComponent<FreeCameraLogicComponent>();
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x060481EB RID: 295403 RVA: 0x0127F9B1 File Offset: 0x0127DBB1
+		// Token: 0x0603E5F2 RID: 255474 RVA: 0x0122249D File Offset: 0x0122069D
 		protected override bool OnClear()
 		{
 			this.LogicComponent = null;

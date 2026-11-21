@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A83 RID: 10883
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D77 RID: 11639
 	public class IFlowDefineNpcCancelMotorcycleSharingPerform : IFlowDefineNpcGroupPerformType
 	{
-		// Token: 0x0600EF33 RID: 61235 RVA: 0x0022C983 File Offset: 0x0022AB83
+		// Token: 0x0600FDE9 RID: 65001 RVA: 0x0024A68F File Offset: 0x0024888F
 		public static IFlowDefineNpcCancelMotorcycleSharingPerform Create(IFlowDefineNpcCancelMotorcycleSharingPerform? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BEF RID: 19439
-		// (get) Token: 0x0600EF34 RID: 61236 RVA: 0x0022C9A2 File Offset: 0x0022ABA2
+		// Token: 0x17004FA9 RID: 20393
+		// (get) Token: 0x0600FDEA RID: 65002 RVA: 0x0024A6AE File Offset: 0x002488AE
 		public override ENpcGroupPerformType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BF0 RID: 19440
-		// (get) Token: 0x0600EF35 RID: 61237 RVA: 0x0022C9AF File Offset: 0x0022ABAF
+		// Token: 0x17004FAA RID: 20394
+		// (get) Token: 0x0600FDEB RID: 65003 RVA: 0x0024A6BB File Offset: 0x002488BB
 		public virtual string Key
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400839F RID: 33695
+		// Token: 0x04008AA3 RID: 35491
 		private IFlowDefineNpcCancelMotorcycleSharingPerform Instance;
 	}
 }

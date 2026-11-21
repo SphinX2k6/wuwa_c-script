@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019C6 RID: 6598
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B53 RID: 6995
 	public class IDungeonEventType
 	{
-		// Token: 0x06008D59 RID: 36185 RVA: 0x0014B3E4 File Offset: 0x001495E4
+		// Token: 0x0600949B RID: 38043 RVA: 0x0015AEF0 File Offset: 0x001590F0
 		private IDungeonEventType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008D5A RID: 36186 RVA: 0x0014B41C File Offset: 0x0014961C
+		// Token: 0x0600949C RID: 38044 RVA: 0x0015AF28 File Offset: 0x00159128
 		public static IDungeonEventType Create([Nullable(2)] IDungeonEventType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008D5B RID: 36187 RVA: 0x0014B42F File Offset: 0x0014962F
+		// Token: 0x0600949D RID: 38045 RVA: 0x0015AF3B File Offset: 0x0015913B
 		public static IDungeonEventType CreateFromSetValue([Nullable(2)] IDungeonEventType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008D5C RID: 36188 RVA: 0x0014B442 File Offset: 0x00149642
+		// Token: 0x0600949E RID: 38046 RVA: 0x0015AF4E File Offset: 0x0015914E
 		public IDungeonEventType_SetValue ToSetValue()
 		{
 			return new IDungeonEventType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D58 RID: 11608
-		// (get) Token: 0x06008D5D RID: 36189 RVA: 0x0014B455 File Offset: 0x00149655
-		// (set) Token: 0x06008D5E RID: 36190 RVA: 0x0014B480 File Offset: 0x00149680
+		// Token: 0x17002F5D RID: 12125
+		// (get) Token: 0x0600949F RID: 38047 RVA: 0x0015AF61 File Offset: 0x00159161
+		// (set) Token: 0x060094A0 RID: 38048 RVA: 0x0015AF8C File Offset: 0x0015918C
 		public virtual EDungeonEventType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040057D3 RID: 22483
+		// Token: 0x04005C28 RID: 23592
 		[Nullable(2)]
 		protected IDungeonEventType FbInstance;
 
-		// Token: 0x040057D4 RID: 22484
+		// Token: 0x04005C29 RID: 23593
 		[Nullable(2)]
 		protected IDungeonEventType_SetValue PocoInterface;
 	}

@@ -9,13 +9,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CBB RID: 7355
+// Token: 0x0200117D RID: 4477
 [NullableContext(1)]
 [Nullable(0)]
 public class KurotatoFightInfoPanel : UiPanelBase
 {
-	// Token: 0x17001204 RID: 4612
-	// (get) Token: 0x0600DE37 RID: 56887 RVA: 0x0033F3DE File Offset: 0x0033D5DE
+	// Token: 0x1700122E RID: 4654
+	// (get) Token: 0x0600B254 RID: 45652 RVA: 0x0034AE1A File Offset: 0x0034901A
 	private float ComboDurationTime
 	{
 		get
@@ -28,7 +28,7 @@ public class KurotatoFightInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE38 RID: 56888 RVA: 0x0033F3FC File Offset: 0x0033D5FC
+	// Token: 0x0600B255 RID: 45653 RVA: 0x0034AE38 File Offset: 0x00349038
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -57,30 +57,30 @@ public class KurotatoFightInfoPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DE39 RID: 56889 RVA: 0x0033F5BA File Offset: 0x0033D7BA
+	// Token: 0x0600B256 RID: 45654 RVA: 0x0034AFF6 File Offset: 0x003491F6
 	private void OnQuitButtonClicked()
 	{
 		KurotatoController.Instance.LeaveInstanceDungeon();
 	}
 
-	// Token: 0x0600DE3A RID: 56890 RVA: 0x0033F5C6 File Offset: 0x0033D7C6
+	// Token: 0x0600B257 RID: 45655 RVA: 0x0034B002 File Offset: 0x00349202
 	private void OnSettingButtonClicked()
 	{
 		UiManager.Instance.OpenView(EUiViewName.MenuView, null, null);
 	}
 
-	// Token: 0x0600DE3B RID: 56891 RVA: 0x0033F5D9 File Offset: 0x0033D7D9
+	// Token: 0x0600B258 RID: 45656 RVA: 0x0034B015 File Offset: 0x00349215
 	private void OnBtnInfoClicked()
 	{
 		UiManager.Instance.OpenView(EUiViewName.KurotatoTabMainView, null, null);
 	}
 
-	// Token: 0x0600DE3C RID: 56892 RVA: 0x0033F5EC File Offset: 0x0033D7EC
+	// Token: 0x0600B259 RID: 45657 RVA: 0x0034B028 File Offset: 0x00349228
 	private void OnBtnMonsterClicked()
 	{
 	}
 
-	// Token: 0x0600DE3D RID: 56893 RVA: 0x0033F5F0 File Offset: 0x0033D7F0
+	// Token: 0x0600B25A RID: 45658 RVA: 0x0034B02C File Offset: 0x0034922C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		KurotatoFightInfoPanel.<OnBeforeStartAsync>d__30 <OnBeforeStartAsync>d__;
@@ -91,7 +91,7 @@ public class KurotatoFightInfoPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DE3E RID: 56894 RVA: 0x0033F634 File Offset: 0x0033D834
+	// Token: 0x0600B25B RID: 45659 RVA: 0x0034B070 File Offset: 0x00349270
 	protected unsafe override void OnStart()
 	{
 		base.GetButton(12).RootUIComp.Get().SetUIActive(true);
@@ -164,7 +164,7 @@ public class KurotatoFightInfoPanel : UiPanelBase
 		this.ChestCollectionItem.SetUiActive(true);
 	}
 
-	// Token: 0x0600DE3F RID: 56895 RVA: 0x0033F850 File Offset: 0x0033DA50
+	// Token: 0x0600B25C RID: 45660 RVA: 0x0034B28C File Offset: 0x0034948C
 	protected override void OnBeforeShow()
 	{
 		KurotatoBattleData battleData = KurotatoModel.Instance.BattleData;
@@ -173,13 +173,13 @@ public class KurotatoFightInfoPanel : UiPanelBase
 		this.TickEnabled = true;
 	}
 
-	// Token: 0x0600DE40 RID: 56896 RVA: 0x0033F889 File Offset: 0x0033DA89
+	// Token: 0x0600B25D RID: 45661 RVA: 0x0034B2C5 File Offset: 0x003494C5
 	protected override void OnBeforeHide()
 	{
 		this.TickEnabled = false;
 	}
 
-	// Token: 0x0600DE41 RID: 56897 RVA: 0x0033F894 File Offset: 0x0033DA94
+	// Token: 0x0600B25E RID: 45662 RVA: 0x0034B2D0 File Offset: 0x003494D0
 	public unsafe void OnTick(float delta)
 	{
 		if (!this.TickEnabled || !this.NeedTick)
@@ -216,14 +216,14 @@ public class KurotatoFightInfoPanel : UiPanelBase
 		this.SetComboRemainTimeBarPercent(this.RemainTime / this.ComboDurationTime);
 	}
 
-	// Token: 0x0600DE42 RID: 56898 RVA: 0x0033F9D6 File Offset: 0x0033DBD6
+	// Token: 0x0600B25F RID: 45663 RVA: 0x0034B412 File Offset: 0x00349612
 	public void ResetFightInfo()
 	{
 		this.RefreshComboNum(0);
 		this.RefreshPositiveArea(0);
 	}
 
-	// Token: 0x0600DE43 RID: 56899 RVA: 0x0033F9E8 File Offset: 0x0033DBE8
+	// Token: 0x0600B260 RID: 45664 RVA: 0x0034B424 File Offset: 0x00349624
 	public void RefreshComboNum(int comboNum)
 	{
 		Log instance = Log.Instance;
@@ -249,25 +249,25 @@ public class KurotatoFightInfoPanel : UiPanelBase
 		this.CurComboNum = comboNum;
 	}
 
-	// Token: 0x0600DE44 RID: 56900 RVA: 0x0033FAA4 File Offset: 0x0033DCA4
+	// Token: 0x0600B261 RID: 45665 RVA: 0x0034B4E0 File Offset: 0x003496E0
 	public void RefreshCurrencyNum(int currencyNum, bool playSequence = true)
 	{
 		bool efficiencyEnhance = KurotatoModel.Instance.BattleData.GetGoldGainEfficiency() > 0;
 		this.CurrencyCollectionItem.Refresh(currencyNum, efficiencyEnhance, playSequence);
 	}
 
-	// Token: 0x0600DE45 RID: 56901 RVA: 0x0033FAD2 File Offset: 0x0033DCD2
+	// Token: 0x0600B262 RID: 45666 RVA: 0x0034B50E File Offset: 0x0034970E
 	public void RefreshSpareGold(int spareGold, bool playSequence = true)
 	{
 		this.ChestCollectionItem.Refresh(spareGold, false, playSequence);
 	}
 
-	// Token: 0x0600DE46 RID: 56902 RVA: 0x0033FAE2 File Offset: 0x0033DCE2
+	// Token: 0x0600B263 RID: 45667 RVA: 0x0034B51E File Offset: 0x0034971E
 	public void RefreshChestNum(int chestNum, bool playSequence = true)
 	{
 	}
 
-	// Token: 0x0600DE47 RID: 56903 RVA: 0x0033FAE4 File Offset: 0x0033DCE4
+	// Token: 0x0600B264 RID: 45668 RVA: 0x0034B520 File Offset: 0x00349720
 	public void SetChestActive(bool active)
 	{
 		this.ChestCollectionItem.SetUiActive(active);
@@ -275,7 +275,7 @@ public class KurotatoFightInfoPanel : UiPanelBase
 		this.ComboPlayer.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x0600DE48 RID: 56904 RVA: 0x0033FB24 File Offset: 0x0033DD24
+	// Token: 0x0600B265 RID: 45669 RVA: 0x0034B560 File Offset: 0x00349760
 	public unsafe void SetComboAreaActive(bool active, bool playSequence = true)
 	{
 		Log instance = Log.Instance;
@@ -308,7 +308,7 @@ public class KurotatoFightInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE49 RID: 56905 RVA: 0x0033FC04 File Offset: 0x0033DE04
+	// Token: 0x0600B266 RID: 45670 RVA: 0x0034B640 File Offset: 0x00349840
 	public unsafe void SetPositiveAreaActive(bool active, bool playSequence = true)
 	{
 		Log instance = Log.Instance;
@@ -338,7 +338,7 @@ public class KurotatoFightInfoPanel : UiPanelBase
 		EventSystem.Instance.Emit<bool>(EEventName.SurvivorsRogueComboBuffShow, active);
 	}
 
-	// Token: 0x0600DE4A RID: 56906 RVA: 0x0033FD00 File Offset: 0x0033DF00
+	// Token: 0x0600B267 RID: 45671 RVA: 0x0034B73C File Offset: 0x0034993C
 	public void RefreshPositiveArea(int value)
 	{
 		Log instance = Log.Instance;
@@ -353,7 +353,7 @@ public class KurotatoFightInfoPanel : UiPanelBase
 		this.CurPositiveEffectActive = flag;
 	}
 
-	// Token: 0x0600DE4B RID: 56907 RVA: 0x0033FD89 File Offset: 0x0033DF89
+	// Token: 0x0600B268 RID: 45672 RVA: 0x0034B7C5 File Offset: 0x003499C5
 	private void SetComboRemainTimeBarPercent(float percent)
 	{
 		if (this.ComboRemainTimeBarSprite.bIsUIActive)
@@ -362,49 +362,49 @@ public class KurotatoFightInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x040065FE RID: 26110
+	// Token: 0x040066DD RID: 26333
 	private const int DEFAULT_COMBO_DURATION_TIME = 5000;
 
-	// Token: 0x040065FF RID: 26111
+	// Token: 0x040066DE RID: 26334
 	private readonly SurvivorsRogueCollectionItem CurrencyCollectionItem = new SurvivorsRogueCollectionItem();
 
-	// Token: 0x04006600 RID: 26112
+	// Token: 0x040066DF RID: 26335
 	private LevelSequencePlayer CurrencyEfficiencyEnhancePlayer;
 
-	// Token: 0x04006601 RID: 26113
+	// Token: 0x040066E0 RID: 26336
 	private readonly SurvivorsRogueCollectionItem ChestCollectionItem = new SurvivorsRogueCollectionItem();
 
-	// Token: 0x04006602 RID: 26114
+	// Token: 0x040066E1 RID: 26337
 	private UUIItem ComboArea;
 
-	// Token: 0x04006603 RID: 26115
+	// Token: 0x040066E2 RID: 26338
 	private LevelSequencePlayer ComboPlayer;
 
-	// Token: 0x04006604 RID: 26116
+	// Token: 0x040066E3 RID: 26339
 	private UUIItem PositiveArea;
 
-	// Token: 0x04006605 RID: 26117
+	// Token: 0x040066E4 RID: 26340
 	private LevelSequencePlayer PositiveAreaPlayer;
 
-	// Token: 0x04006606 RID: 26118
+	// Token: 0x040066E5 RID: 26341
 	private UUIArtText ComboNumText;
 
-	// Token: 0x04006607 RID: 26119
+	// Token: 0x040066E6 RID: 26342
 	private UUISprite ComboRemainTimeBarSprite;
 
-	// Token: 0x04006608 RID: 26120
+	// Token: 0x040066E7 RID: 26343
 	private UUITexture PositiveIcon;
 
-	// Token: 0x04006609 RID: 26121
+	// Token: 0x040066E8 RID: 26344
 	private UUIText PositiveText;
 
-	// Token: 0x0400660A RID: 26122
+	// Token: 0x040066E9 RID: 26345
 	private UUISprite PositiveArrow;
 
-	// Token: 0x0400660B RID: 26123
+	// Token: 0x040066EA RID: 26346
 	private readonly float ComboDurationTimeInternal;
 
-	// Token: 0x0400660C RID: 26124
+	// Token: 0x040066EB RID: 26347
 	[Nullable(new byte[]
 	{
 		2,
@@ -412,71 +412,71 @@ public class KurotatoFightInfoPanel : UiPanelBase
 	})]
 	private List<Action> ComboAnimHandle;
 
-	// Token: 0x0400660D RID: 26125
+	// Token: 0x040066EC RID: 26348
 	private float RemainTime;
 
-	// Token: 0x0400660E RID: 26126
+	// Token: 0x040066ED RID: 26349
 	private float FreezeTime;
 
-	// Token: 0x0400660F RID: 26127
+	// Token: 0x040066EE RID: 26350
 	protected int LastComboLevelIndex;
 
-	// Token: 0x04006610 RID: 26128
+	// Token: 0x040066EF RID: 26351
 	private bool NeedTick;
 
-	// Token: 0x04006611 RID: 26129
+	// Token: 0x040066F0 RID: 26352
 	private bool TickEnabled;
 
-	// Token: 0x04006612 RID: 26130
+	// Token: 0x040066F1 RID: 26353
 	private int CurComboNum;
 
-	// Token: 0x04006613 RID: 26131
+	// Token: 0x040066F2 RID: 26354
 	private bool CurPositiveEffectActive;
 
-	// Token: 0x020082A3 RID: 33443
+	// Token: 0x0200742D RID: 29741
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402A9CE RID: 174542
+		// Token: 0x04025CF9 RID: 154873
 		public const int QuitButton = 0;
 
-		// Token: 0x0402A9CF RID: 174543
+		// Token: 0x04025CFA RID: 154874
 		public const int CurrencyItem = 1;
 
-		// Token: 0x0402A9D0 RID: 174544
+		// Token: 0x04025CFB RID: 154875
 		public const int ChestItem = 2;
 
-		// Token: 0x0402A9D1 RID: 174545
+		// Token: 0x04025CFC RID: 154876
 		public const int ComboRemainTimeBar = 3;
 
-		// Token: 0x0402A9D2 RID: 174546
+		// Token: 0x04025CFD RID: 154877
 		public const int ComboNum = 4;
 
-		// Token: 0x0402A9D3 RID: 174547
+		// Token: 0x04025CFE RID: 154878
 		public const int PositiveIcon = 5;
 
-		// Token: 0x0402A9D4 RID: 174548
+		// Token: 0x04025CFF RID: 154879
 		public const int PositiveText = 6;
 
-		// Token: 0x0402A9D5 RID: 174549
+		// Token: 0x04025D00 RID: 154880
 		public const int PositiveTip = 7;
 
-		// Token: 0x0402A9D6 RID: 174550
+		// Token: 0x04025D01 RID: 154881
 		public const int SettingButton = 8;
 
-		// Token: 0x0402A9D7 RID: 174551
+		// Token: 0x04025D02 RID: 154882
 		public const int ComboArea = 9;
 
-		// Token: 0x0402A9D8 RID: 174552
+		// Token: 0x04025D03 RID: 154883
 		public const int PositiveArea = 10;
 
-		// Token: 0x0402A9D9 RID: 174553
+		// Token: 0x04025D04 RID: 154884
 		public const int PanelBox = 11;
 
-		// Token: 0x0402A9DA RID: 174554
+		// Token: 0x04025D05 RID: 154885
 		public const int BtnInfo = 12;
 
-		// Token: 0x0402A9DB RID: 174555
+		// Token: 0x04025D06 RID: 154886
 		public const int BtnMonster = 13;
 	}
 }

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061F1 RID: 25073
+	// Token: 0x0200516F RID: 20847
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AreaLayoutBaseItem : UiPanelBase, IDynamicScrollBaseItem<AreaLayoutItemData>
 	{
-		// Token: 0x0603F469 RID: 259177 RVA: 0x00F4A5FC File Offset: 0x00F487FC
+		// Token: 0x0603412A RID: 213290 RVA: 0x00E91554 File Offset: 0x00E8F754
 		public UniTask Init(UUIItem actor)
 		{
 			AreaLayoutBaseItem.<Init>d__1 <Init>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F46A RID: 259178 RVA: 0x00F4A648 File Offset: 0x00F48848
+		// Token: 0x0603412B RID: 213291 RVA: 0x00E915A0 File Offset: 0x00E8F7A0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F46B RID: 259179 RVA: 0x00F4A6D0 File Offset: 0x00F488D0
+		// Token: 0x0603412C RID: 213292 RVA: 0x00E91628 File Offset: 0x00E8F828
 		public FVector2D GetItemSize(AreaLayoutItemData itemData)
 		{
 			float width = this.RootItem.Width;
@@ -59,12 +59,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return this.VectorValue.ToUeVector2D(false);
 		}
 
-		// Token: 0x0603F46C RID: 259180 RVA: 0x00F4A797 File Offset: 0x00F48997
+		// Token: 0x0603412D RID: 213293 RVA: 0x00E916EF File Offset: 0x00E8F8EF
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x04021007 RID: 135175
+		// Token: 0x0401B936 RID: 112950
 		private Vector2D VectorValue;
 	}
 }

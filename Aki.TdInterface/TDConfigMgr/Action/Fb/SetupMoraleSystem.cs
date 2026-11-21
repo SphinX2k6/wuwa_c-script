@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A35 RID: 10805
+	// Token: 0x02002D22 RID: 11554
 	public class SetupMoraleSystem : ActionParams
 	{
-		// Token: 0x0600EE03 RID: 60931 RVA: 0x0022ACC7 File Offset: 0x00228EC7
-		[NullableContext(1)]
+		// Token: 0x0600FC9B RID: 64667 RVA: 0x0024867B File Offset: 0x0024687B
 		public static SetupMoraleSystem Create(ISetupMoraleSystem? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B5B RID: 19291
-		// (get) Token: 0x0600EE04 RID: 60932 RVA: 0x0022ACE6 File Offset: 0x00228EE6
+		// Token: 0x17004F05 RID: 20229
+		// (get) Token: 0x0600FC9C RID: 64668 RVA: 0x0024869A File Offset: 0x0024689A
 		public virtual int MoralePlayId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B5C RID: 19292
-		// (get) Token: 0x0600EE05 RID: 60933 RVA: 0x0022ACF3 File Offset: 0x00228EF3
+		// Token: 0x17004F06 RID: 20230
+		// (get) Token: 0x0600FC9D RID: 64669 RVA: 0x002486A7 File Offset: 0x002468A7
 		public virtual bool IsOn
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082FD RID: 33533
+		// Token: 0x040089F0 RID: 35312
 		private ISetupMoraleSystem Instance;
 	}
 }

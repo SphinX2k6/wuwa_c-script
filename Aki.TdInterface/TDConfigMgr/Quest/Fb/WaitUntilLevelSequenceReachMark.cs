@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013D2 RID: 5074
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001529 RID: 5417
 	public class WaitUntilLevelSequenceReachMark : IQuestCondition
 	{
-		// Token: 0x060073D1 RID: 29649 RVA: 0x00115B36 File Offset: 0x00113D36
+		// Token: 0x06007A92 RID: 31378 RVA: 0x0012451A File Offset: 0x0012271A
 		public static WaitUntilLevelSequenceReachMark Create(IWaitUntilLevelSequenceReachMark? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002600 RID: 9728
-		// (get) Token: 0x060073D2 RID: 29650 RVA: 0x00115B55 File Offset: 0x00113D55
+		// Token: 0x170027E2 RID: 10210
+		// (get) Token: 0x06007A93 RID: 31379 RVA: 0x00124539 File Offset: 0x00122739
 		public override EChildQuest Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002601 RID: 9729
-		// (get) Token: 0x060073D3 RID: 29651 RVA: 0x00115B62 File Offset: 0x00113D62
+		// Token: 0x170027E3 RID: 10211
+		// (get) Token: 0x06007A94 RID: 31380 RVA: 0x00124546 File Offset: 0x00122746
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002602 RID: 9730
-		// (get) Token: 0x060073D4 RID: 29652 RVA: 0x00115B96 File Offset: 0x00113D96
+		// Token: 0x170027E4 RID: 10212
+		// (get) Token: 0x06007A95 RID: 31381 RVA: 0x0012457A File Offset: 0x0012277A
 		public virtual int EntityId
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002603 RID: 9731
-		// (get) Token: 0x060073D5 RID: 29653 RVA: 0x00115BA3 File Offset: 0x00113DA3
+		// Token: 0x170027E5 RID: 10213
+		// (get) Token: 0x06007A96 RID: 31382 RVA: 0x00124587 File Offset: 0x00122787
 		public virtual string Mark
 		{
 			get
@@ -71,14 +69,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400430E RID: 17166
+		// Token: 0x0400469F RID: 18079
 		private IWaitUntilLevelSequenceReachMark Instance;
 
-		// Token: 0x0400430F RID: 17167
+		// Token: 0x040046A0 RID: 18080
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004310 RID: 17168
+		// Token: 0x040046A1 RID: 18081
 		private bool _PreConditionsInited;
 	}
 }

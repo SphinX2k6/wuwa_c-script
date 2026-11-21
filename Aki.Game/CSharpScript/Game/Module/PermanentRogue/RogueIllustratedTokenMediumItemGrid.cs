@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x0200531F RID: 21279
+	// Token: 0x020042EF RID: 17135
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 	})]
 	public class RogueIllustratedTokenMediumItemGrid : LoopScrollMediumItemGrid<RogueTokenViewData>
 	{
-		// Token: 0x060366AF RID: 222895 RVA: 0x00CE150C File Offset: 0x00CDF70C
+		// Token: 0x0602B5AB RID: 177579 RVA: 0x00C2EEDC File Offset: 0x00C2D0DC
 		protected override void OnRefresh(RogueTokenViewData data, bool isSelected, int gridIndex)
 		{
 			this.TokenViewData = data;
@@ -38,25 +38,25 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.SetSelected(isSelected, false);
 		}
 
-		// Token: 0x060366B0 RID: 222896 RVA: 0x00CE161E File Offset: 0x00CDF81E
+		// Token: 0x0602B5AC RID: 177580 RVA: 0x00C2EFEE File Offset: 0x00C2D1EE
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
 		}
 
-		// Token: 0x060366B1 RID: 222897 RVA: 0x00CE1628 File Offset: 0x00CDF828
+		// Token: 0x0602B5AD RID: 177581 RVA: 0x00C2EFF8 File Offset: 0x00C2D1F8
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x060366B2 RID: 222898 RVA: 0x00CE1632 File Offset: 0x00CDF832
+		// Token: 0x0602B5AE RID: 177582 RVA: 0x00C2F002 File Offset: 0x00C2D202
 		public void BindOnItemButtonClickedCallback(Action<RogueTokenViewData> onItemButtonClicked)
 		{
 			this.OnItemButtonClickedCallback = onItemButtonClicked;
 		}
 
-		// Token: 0x060366B3 RID: 222899 RVA: 0x00CE163B File Offset: 0x00CDF83B
+		// Token: 0x0602B5AF RID: 177583 RVA: 0x00C2F00B File Offset: 0x00C2D20B
 		protected override void OnExtendToggleStateChanged(EToggleState state)
 		{
 			if (this.OnItemButtonClickedCallback != null)
@@ -65,11 +65,11 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x0401CC3C RID: 117820
+		// Token: 0x04017672 RID: 95858
 		[Nullable(2)]
 		private RogueTokenViewData TokenViewData;
 
-		// Token: 0x0401CC3D RID: 117821
+		// Token: 0x04017673 RID: 95859
 		[Nullable(new byte[]
 		{
 			2,

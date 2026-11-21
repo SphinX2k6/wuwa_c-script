@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000430 RID: 1072
+	// Token: 0x02000446 RID: 1094
 	public class ConfigInfrPhoneMessageById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001929 RID: 6441 RVA: 0x000E7D2B File Offset: 0x000E5F2B
+		// Token: 0x060019AD RID: 6573 RVA: 0x000EE47F File Offset: 0x000EC67F
 		static ConfigInfrPhoneMessageById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfrPhoneMessageById.CreateStaticDefaultValue), new Action(ConfigInfrPhoneMessageById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600192A RID: 6442 RVA: 0x000E7D4C File Offset: 0x000E5F4C
+		// Token: 0x060019AE RID: 6574 RVA: 0x000EE4A0 File Offset: 0x000EC6A0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfrPhoneMessageById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600192B RID: 6443 RVA: 0x000E7DCB File Offset: 0x000E5FCB
+		// Token: 0x060019AF RID: 6575 RVA: 0x000EE51F File Offset: 0x000EC71F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfrPhoneMessageById.LogPair = null;
 			ConfigInfrPhoneMessageById.HandleId = 0;
 		}
 
-		// Token: 0x0600192C RID: 6444 RVA: 0x000E7DD9 File Offset: 0x000E5FD9
+		// Token: 0x060019B0 RID: 6576 RVA: 0x000EE52D File Offset: 0x000EC72D
 		public static void Init()
 		{
 			ConfigInfrPhoneMessageById.HandleId = ConfigCommon.InitDataStatement(ConfigInfrPhoneMessageById.HandleId, "db_infrastructure.db", "select BinData from `InfrPhoneMessage` where Id=?");
 		}
 
-		// Token: 0x0600192D RID: 6445 RVA: 0x000E7DF4 File Offset: 0x000E5FF4
+		// Token: 0x060019B1 RID: 6577 RVA: 0x000EE548 File Offset: 0x000EC748
 		public static InfrPhoneMessage? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInfrPhoneMessageById.HandleId, ConfigInfrPhoneMessageById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new InfrPhoneMessage?(rootAsInfrPhoneMessage);
 		}
 
-		// Token: 0x04001D34 RID: 7476
+		// Token: 0x04001DCE RID: 7630
 		private const string DB = "db_infrastructure.db";
 
-		// Token: 0x04001D35 RID: 7477
+		// Token: 0x04001DCF RID: 7631
 		private const string FILE = "j.基建_档案馆.xlsx";
 
-		// Token: 0x04001D36 RID: 7478
+		// Token: 0x04001DD0 RID: 7632
 		private const string TABLE = "InfrPhoneMessage";
 
-		// Token: 0x04001D37 RID: 7479
+		// Token: 0x04001DD1 RID: 7633
 		private const string COMMAND = "select BinData from `InfrPhoneMessage` where Id=?";
 
-		// Token: 0x04001D38 RID: 7480
+		// Token: 0x04001DD2 RID: 7634
 		private const string KEY_PREFIX = "InfrPhoneMessageById";
 
-		// Token: 0x04001D39 RID: 7481
+		// Token: 0x04001DD3 RID: 7635
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001D3A RID: 7482
+		// Token: 0x04001DD4 RID: 7636
 		private static int HandleId;
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect
 {
-	// Token: 0x02003DB8 RID: 15800
+	// Token: 0x02003102 RID: 12546
 	internal static class IBPI_EffectInterface_C_ReflectionImplementationFields
 	{
-		// Token: 0x04013D11 RID: 81169
+		// Token: 0x040104BC RID: 66748
 		public static IntPtr __RemoveHandle_NativeFunctionPtr;
 
-		// Token: 0x04013D12 RID: 81170
+		// Token: 0x040104BD RID: 66749
 		public static IntPtr __SetHandle_NativeFunctionPtr;
 
-		// Token: 0x04013D13 RID: 81171
+		// Token: 0x040104BE RID: 66750
 		public static IntPtr __GetHandle_NativeFunctionPtr;
 	}
 }

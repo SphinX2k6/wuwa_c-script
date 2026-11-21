@@ -7,13 +7,13 @@ using CSharpScript.Game.Module.Roulette.View;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x0200293B RID: 10555
+// Token: 0x02001EB6 RID: 7862
 [NullableContext(1)]
 [Nullable(0)]
 public class RouletteAssemblyViewProxy
 {
-	// Token: 0x17001D3D RID: 7485
-	// (get) Token: 0x06015C93 RID: 89235 RVA: 0x0057F3A8 File Offset: 0x0057D5A8
+	// Token: 0x17001D97 RID: 7575
+	// (get) Token: 0x06013698 RID: 79512 RVA: 0x005AA3E0 File Offset: 0x005A85E0
 	public RouletteListDataBase CurrentRouletteDataList
 	{
 		get
@@ -27,13 +27,13 @@ public class RouletteAssemblyViewProxy
 		}
 	}
 
-	// Token: 0x06015C94 RID: 89236 RVA: 0x0057F3D1 File Offset: 0x0057D5D1
+	// Token: 0x06013699 RID: 79513 RVA: 0x005AA409 File Offset: 0x005A8609
 	public void RegisterView(RouletteAssemblyView view)
 	{
 		this.View = view;
 	}
 
-	// Token: 0x06015C95 RID: 89237 RVA: 0x0057F3DC File Offset: 0x0057D5DC
+	// Token: 0x0601369A RID: 79514 RVA: 0x005AA414 File Offset: 0x005A8614
 	public UniTask OnBeforeStartAsync()
 	{
 		RouletteAssemblyViewProxy.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -44,19 +44,19 @@ public class RouletteAssemblyViewProxy
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015C96 RID: 89238 RVA: 0x0057F41F File Offset: 0x0057D61F
+	// Token: 0x0601369B RID: 79515 RVA: 0x005AA457 File Offset: 0x005A8657
 	public void Start()
 	{
 	}
 
-	// Token: 0x06015C97 RID: 89239 RVA: 0x0057F424 File Offset: 0x0057D624
+	// Token: 0x0601369C RID: 79516 RVA: 0x005AA45C File Offset: 0x005A865C
 	public void BeforeShow()
 	{
 		this.OpenParam.SelectGridId = null;
 		this.OpenParam.SelectGridIndex = null;
 	}
 
-	// Token: 0x06015C98 RID: 89240 RVA: 0x0057F45C File Offset: 0x0057D65C
+	// Token: 0x0601369D RID: 79517 RVA: 0x005AA494 File Offset: 0x005A8694
 	public void OnRouletteTypeSwitch(ERouletteType rouletteType)
 	{
 		this.CurrentRouletteType = rouletteType;
@@ -73,7 +73,7 @@ public class RouletteAssemblyViewProxy
 		this.CurrentRouletteListSaveData = this.CurrentRouletteDataList.GetRouletteListSaveData();
 	}
 
-	// Token: 0x06015C99 RID: 89241 RVA: 0x0057F4F0 File Offset: 0x0057D6F0
+	// Token: 0x0601369E RID: 79518 RVA: 0x005AA528 File Offset: 0x005A8728
 	public RouletteComponentAssembly GetRouletteComponent()
 	{
 		RouletteComponentAssembly result;
@@ -84,7 +84,7 @@ public class RouletteAssemblyViewProxy
 		return null;
 	}
 
-	// Token: 0x06015C9A RID: 89242 RVA: 0x0057F515 File Offset: 0x0057D715
+	// Token: 0x0601369F RID: 79519 RVA: 0x005AA54D File Offset: 0x005A874D
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -96,13 +96,13 @@ public class RouletteAssemblyViewProxy
 		return this.CurrentRouletteDataList.GetRouletteDataMap();
 	}
 
-	// Token: 0x06015C9B RID: 89243 RVA: 0x0057F524 File Offset: 0x0057D724
+	// Token: 0x060136A0 RID: 79520 RVA: 0x005AA55C File Offset: 0x005A875C
 	public int GetRouletteGridId(int index, ERouletteGridType gridType)
 	{
 		return this.CurrentRouletteDataList.GetRouletteGridId(index, gridType, false).GetValueOrDefault();
 	}
 
-	// Token: 0x06015C9C RID: 89244 RVA: 0x0057F548 File Offset: 0x0057D748
+	// Token: 0x060136A1 RID: 79521 RVA: 0x005AA580 File Offset: 0x005A8780
 	public void Destroy()
 	{
 		foreach (RouletteComponentAssembly rouletteComponentAssembly in this.RouletteComponentMap.Values)
@@ -112,13 +112,13 @@ public class RouletteAssemblyViewProxy
 		this.RouletteComponentMap.Clear();
 	}
 
-	// Token: 0x06015C9D RID: 89245 RVA: 0x0057F5AC File Offset: 0x0057D7AC
+	// Token: 0x060136A2 RID: 79522 RVA: 0x005AA5E4 File Offset: 0x005A87E4
 	public bool CanOpenView()
 	{
 		return this.GetTabTypeList().Count > 0;
 	}
 
-	// Token: 0x06015C9E RID: 89246 RVA: 0x0057F5BC File Offset: 0x0057D7BC
+	// Token: 0x060136A3 RID: 79523 RVA: 0x005AA5F4 File Offset: 0x005A87F4
 	private List<ERouletteType> GetTabTypeList()
 	{
 		List<IRouletteAssemblyTabData> list = new List<IRouletteAssemblyTabData>();
@@ -151,27 +151,27 @@ public class RouletteAssemblyViewProxy
 		return list2;
 	}
 
-	// Token: 0x0400A240 RID: 41536
+	// Token: 0x0400A62B RID: 42539
 	private readonly Dictionary<ERouletteType, RouletteComponentAssembly> RouletteComponentMap = new Dictionary<ERouletteType, RouletteComponentAssembly>();
 
-	// Token: 0x0400A241 RID: 41537
+	// Token: 0x0400A62C RID: 42540
 	protected RouletteAssemblyView View;
 
-	// Token: 0x0400A242 RID: 41538
+	// Token: 0x0400A62D RID: 42541
 	public IRouletteAssemblyOpenParam OpenParam;
 
-	// Token: 0x0400A243 RID: 41539
+	// Token: 0x0400A62E RID: 42542
 	public List<ERouletteType> TypeList = new List<ERouletteType>();
 
-	// Token: 0x0400A244 RID: 41540
+	// Token: 0x0400A62F RID: 42543
 	public Dictionary<ERouletteType, RouletteListDataBase> RouletteListDataMap = new Dictionary<ERouletteType, RouletteListDataBase>();
 
-	// Token: 0x0400A245 RID: 41541
+	// Token: 0x0400A630 RID: 42544
 	public ERouletteType CurrentRouletteType;
 
-	// Token: 0x0400A246 RID: 41542
+	// Token: 0x0400A631 RID: 42545
 	public Dictionary<ERouletteGridType, List<AssemblyGridData>> AssemblyGridDataMap = new Dictionary<ERouletteGridType, List<AssemblyGridData>>();
 
-	// Token: 0x0400A247 RID: 41543
+	// Token: 0x0400A632 RID: 42546
 	public IRouletteListSaveData CurrentRouletteListSaveData;
 }

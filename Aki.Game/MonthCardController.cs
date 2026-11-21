@@ -13,26 +13,26 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x0200234D RID: 9037
+// Token: 0x02001832 RID: 6194
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class MonthCardController : UiControllerBase
 {
-	// Token: 0x06011FC4 RID: 73668 RVA: 0x00468E0A File Offset: 0x0046700A
+	// Token: 0x0600F474 RID: 62580 RVA: 0x00475ED2 File Offset: 0x004740D2
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x06011FC5 RID: 73669 RVA: 0x00468E0D File Offset: 0x0046700D
+	// Token: 0x0600F475 RID: 62581 RVA: 0x00475ED5 File Offset: 0x004740D5
 	private void SetMonthCardRemainDays(int value)
 	{
 		MonthCardModel.Instance.SetRemainDays(value);
 		EventSystem.Instance.Emit(EEventName.ReceiveMonthCardDataEvent);
 	}
 
-	// Token: 0x06011FC6 RID: 73670 RVA: 0x00468E2C File Offset: 0x0046702C
+	// Token: 0x0600F476 RID: 62582 RVA: 0x00475EF4 File Offset: 0x004740F4
 	public UniTask RequestMonthCardData()
 	{
 		MonthCardController.<RequestMonthCardData>d__2 <RequestMonthCardData>d__;
@@ -43,19 +43,19 @@ public class MonthCardController : UiControllerBase
 		return <RequestMonthCardData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011FC7 RID: 73671 RVA: 0x00468E6F File Offset: 0x0046706F
+	// Token: 0x0600F477 RID: 62583 RVA: 0x00475F37 File Offset: 0x00474137
 	private void OnTryOpenMonthCardRewardView()
 	{
 		this.TryOpenMonthCardRewardView(false);
 	}
 
-	// Token: 0x06011FC8 RID: 73672 RVA: 0x00468E78 File Offset: 0x00467078
+	// Token: 0x0600F478 RID: 62584 RVA: 0x00475F40 File Offset: 0x00474140
 	private void OnLoadingNetDataDone()
 	{
 		this.RequestMonthCardData().Forget();
 	}
 
-	// Token: 0x06011FC9 RID: 73673 RVA: 0x00468E88 File Offset: 0x00467088
+	// Token: 0x0600F479 RID: 62585 RVA: 0x00475F50 File Offset: 0x00474150
 	[NullableContext(2)]
 	private unsafe void OnReceiveDailyRewardNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -79,7 +79,7 @@ public class MonthCardController : UiControllerBase
 		this.TryOpenMonthCardRewardView(true);
 	}
 
-	// Token: 0x06011FCA RID: 73674 RVA: 0x00468F64 File Offset: 0x00467164
+	// Token: 0x0600F47A RID: 62586 RVA: 0x0047602C File Offset: 0x0047422C
 	[NullableContext(2)]
 	private void OnMonthCardUse(IMessage msg, Net.CallbackStatus status)
 	{
@@ -117,7 +117,7 @@ public class MonthCardController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011FCB RID: 73675 RVA: 0x0046907E File Offset: 0x0046727E
+	// Token: 0x0600F47B RID: 62587 RVA: 0x00476146 File Offset: 0x00474346
 	private void TryOpenMonthCardRewardViewInShop()
 	{
 		if (MonthCardModel.Instance.CanShowDailyRewardView)
@@ -126,7 +126,7 @@ public class MonthCardController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011FCC RID: 73676 RVA: 0x00469094 File Offset: 0x00467294
+	// Token: 0x0600F47C RID: 62588 RVA: 0x0047615C File Offset: 0x0047435C
 	private void TryOpenMonthCardRewardView(bool isInstantly = false)
 	{
 		if (MonthCardModel.Instance.CanShowDailyRewardView)
@@ -139,7 +139,7 @@ public class MonthCardController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011FCD RID: 73677 RVA: 0x004690CD File Offset: 0x004672CD
+	// Token: 0x0600F47D RID: 62589 RVA: 0x00476195 File Offset: 0x00474395
 	private void OpenMonthCardRewardView(bool isBySplashScreen)
 	{
 		if (!UiManager.Instance.IsViewOpen(EUiViewName.MonthCardRewardView))
@@ -148,7 +148,7 @@ public class MonthCardController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011FCE RID: 73678 RVA: 0x004690F8 File Offset: 0x004672F8
+	// Token: 0x0600F47E RID: 62590 RVA: 0x004761C0 File Offset: 0x004743C0
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.OnItemUse, new Action<int, int>(this.OnItemUse));
@@ -156,7 +156,7 @@ public class MonthCardController : UiControllerBase
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnTryOpenMonthCardRewardView));
 	}
 
-	// Token: 0x06011FCF RID: 73679 RVA: 0x0046915C File Offset: 0x0046735C
+	// Token: 0x0600F47F RID: 62591 RVA: 0x00476224 File Offset: 0x00474424
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnItemUse, new Action<int, int>(this.OnItemUse));
@@ -164,7 +164,7 @@ public class MonthCardController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnTryOpenMonthCardRewardView));
 	}
 
-	// Token: 0x06011FD0 RID: 73680 RVA: 0x004691C0 File Offset: 0x004673C0
+	// Token: 0x0600F480 RID: 62592 RVA: 0x00476288 File Offset: 0x00474488
 	private void OnItemUse(int configId, int itemNum)
 	{
 		ItemInfo value = CSharpScript.Game.Module.Item.ItemConfig.Instance.GetConfig(configId).Value;
@@ -185,22 +185,22 @@ public class MonthCardController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011FD1 RID: 73681 RVA: 0x00469244 File Offset: 0x00467444
+	// Token: 0x0600F481 RID: 62593 RVA: 0x0047630C File Offset: 0x0047450C
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.MonthCardDailyRewardNotify, new Action<IMessage, Net.CallbackStatus>(this.OnReceiveDailyRewardNotify));
 		Net.Instance.Register(ENotifyMessageId.MonthCardUseNotify, new Action<IMessage, Net.CallbackStatus>(this.OnMonthCardUse));
 	}
 
-	// Token: 0x06011FD2 RID: 73682 RVA: 0x0046927E File Offset: 0x0046747E
+	// Token: 0x0600F482 RID: 62594 RVA: 0x00476346 File Offset: 0x00474546
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.MonthCardDailyRewardNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.MonthCardUseNotify);
 	}
 
-	// Token: 0x1700178A RID: 6026
-	// (get) Token: 0x06011FD3 RID: 73683 RVA: 0x004692A0 File Offset: 0x004674A0
+	// Token: 0x170017C4 RID: 6084
+	// (get) Token: 0x0600F483 RID: 62595 RVA: 0x00476368 File Offset: 0x00474568
 	public static MonthCardController Instance
 	{
 		get
@@ -209,7 +209,7 @@ public class MonthCardController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011FD4 RID: 73684 RVA: 0x004692A7 File Offset: 0x004674A7
+	// Token: 0x0600F484 RID: 62596 RVA: 0x0047636F File Offset: 0x0047456F
 	public static MonthCardController GetOrCreateInstance()
 	{
 		if (MonthCardController._Instance == null)
@@ -219,7 +219,7 @@ public class MonthCardController : UiControllerBase
 		return MonthCardController._Instance;
 	}
 
-	// Token: 0x06011FD5 RID: 73685 RVA: 0x004692BB File Offset: 0x004674BB
+	// Token: 0x0600F485 RID: 62597 RVA: 0x00476383 File Offset: 0x00474583
 	public static bool CreateInstance()
 	{
 		if (MonthCardController._Instance != null)
@@ -230,24 +230,24 @@ public class MonthCardController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06011FD6 RID: 73686 RVA: 0x004692D1 File Offset: 0x004674D1
+	// Token: 0x0600F486 RID: 62598 RVA: 0x00476399 File Offset: 0x00474599
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011FD7 RID: 73687 RVA: 0x004692D3 File Offset: 0x004674D3
+	// Token: 0x0600F487 RID: 62599 RVA: 0x0047639B File Offset: 0x0047459B
 	public static void ResetStaticDefaultValue()
 	{
 		MonthCardController._Instance = null;
 	}
 
-	// Token: 0x06011FD8 RID: 73688 RVA: 0x004692DB File Offset: 0x004674DB
+	// Token: 0x0600F488 RID: 62600 RVA: 0x004763A3 File Offset: 0x004745A3
 	static MonthCardController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MonthCardController.CreateStaticDefaultValue), new Action(MonthCardController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040087E5 RID: 34789
+	// Token: 0x04008928 RID: 35112
 	[Nullable(2)]
 	private static MonthCardController _Instance;
 }

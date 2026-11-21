@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001273 RID: 4723
+	// Token: 0x020013B3 RID: 5043
 	public class EQuestScheduleUiTypeJsonConverter : JsonConverter<EQuestScheduleUiType>
 	{
-		// Token: 0x06006AAE RID: 27310 RVA: 0x000FFE3C File Offset: 0x000FE03C
+		// Token: 0x06007101 RID: 28929 RVA: 0x0010DA68 File Offset: 0x0010BC68
 		public override EQuestScheduleUiType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return EQuestScheduleUiTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006AAF RID: 27311 RVA: 0x000FFE60 File Offset: 0x000FE060
+		// Token: 0x06007102 RID: 28930 RVA: 0x0010DA8C File Offset: 0x0010BC8C
 		public override void Write(Utf8JsonWriter writer, EQuestScheduleUiType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

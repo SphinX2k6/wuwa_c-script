@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015C9 RID: 5577
+	// Token: 0x02001728 RID: 5928
 	[EnumExtensions]
 	public enum EDynamicEntityRewardType
 	{
-		// Token: 0x04004A54 RID: 19028
+		// Token: 0x04004E0E RID: 19982
 		Traffic
 	}
 }

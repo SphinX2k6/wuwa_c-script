@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000990 RID: 2448
+	// Token: 0x02000A65 RID: 2661
 	public class ConfigStateMachinePreloadByAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003974 RID: 14708 RVA: 0x0019E634 File Offset: 0x0019C834
+		// Token: 0x06003E72 RID: 15986 RVA: 0x001BD9C8 File Offset: 0x001BBBC8
 		static ConfigStateMachinePreloadByAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigStateMachinePreloadByAll.CreateStaticDefaultValue), new Action(ConfigStateMachinePreloadByAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003975 RID: 14709 RVA: 0x0019E654 File Offset: 0x0019C854
+		// Token: 0x06003E73 RID: 15987 RVA: 0x001BD9E8 File Offset: 0x001BBBE8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigStateMachinePreloadByAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003976 RID: 14710 RVA: 0x0019E6D3 File Offset: 0x0019C8D3
+		// Token: 0x06003E74 RID: 15988 RVA: 0x001BDA67 File Offset: 0x001BBC67
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigStateMachinePreloadByAll.LogPair = null;
 			ConfigStateMachinePreloadByAll.HandleId = 0;
 		}
 
-		// Token: 0x06003977 RID: 14711 RVA: 0x0019E6E1 File Offset: 0x0019C8E1
+		// Token: 0x06003E75 RID: 15989 RVA: 0x001BDA75 File Offset: 0x001BBC75
 		public static void Init()
 		{
 			ConfigStateMachinePreloadByAll.HandleId = ConfigCommon.InitDataStatement(ConfigStateMachinePreloadByAll.HandleId, "db_state_machine_preload.db", "select BinData from `StateMachinePreload`");
 		}
 
-		// Token: 0x06003978 RID: 14712 RVA: 0x0019E6FC File Offset: 0x0019C8FC
+		// Token: 0x06003E76 RID: 15990 RVA: 0x001BDA90 File Offset: 0x001BBC90
 		[NullableContext(2)]
 		public static IReadOnlyList<StateMachinePreload> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040042D6 RID: 17110
+		// Token: 0x040048A9 RID: 18601
 		private const string DB = "db_state_machine_preload.db";
 
-		// Token: 0x040042D7 RID: 17111
+		// Token: 0x040048AA RID: 18602
 		private const string FILE = "Preload/StateMachinePreload.csv";
 
-		// Token: 0x040042D8 RID: 17112
+		// Token: 0x040048AB RID: 18603
 		private const string TABLE = "StateMachinePreload";
 
-		// Token: 0x040042D9 RID: 17113
+		// Token: 0x040048AC RID: 18604
 		private const string COMMAND = "select BinData from `StateMachinePreload`";
 
-		// Token: 0x040042DA RID: 17114
+		// Token: 0x040048AD RID: 18605
 		private const string KEY_PREFIX = "StateMachinePreloadByAll";
 
-		// Token: 0x040042DB RID: 17115
+		// Token: 0x040048AE RID: 18606
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040042DC RID: 17116
+		// Token: 0x040048AF RID: 18607
 		private static int HandleId;
 	}
 }

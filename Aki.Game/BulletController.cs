@@ -3,27 +3,21 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using AkiClient.Game.Aki.Core.Fight;
-using CSharpScript.Core.Common;
 using CSharpScript.Core.Framework;
 using CSharpScript.Game;
 using CSharpScript.Game.Common.Event;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02002DC3 RID: 11715
+// Token: 0x0200231D RID: 8989
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class BulletController : ControllerBase
 {
-	// Token: 0x060189B2 RID: 100786 RVA: 0x00649A88 File Offset: 0x00647C88
+	// Token: 0x0601625A RID: 90714 RVA: 0x0066F890 File Offset: 0x0066DA90
 	protected override bool OnInit()
 	{
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			BulletConstant.Instance.OpenCreateLog = true;
-			BulletConstant.Instance.OpenActionStat = true;
-		}
 		BulletActionRunner.InitStat();
 		BulletSpecialActionDeclare.RegisterAll();
 		if (this.ActionRunner == null)
@@ -39,7 +33,7 @@ public class BulletController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060189B3 RID: 100787 RVA: 0x00649B18 File Offset: 0x00647D18
+	// Token: 0x0601625B RID: 90715 RVA: 0x0066F8FC File Offset: 0x0066DAFC
 	protected override void OnTick(float delta)
 	{
 		if (this.ActionRunner == null)
@@ -56,7 +50,7 @@ public class BulletController : ControllerBase
 		BulletConfig.Instance.TickPreload();
 	}
 
-	// Token: 0x060189B4 RID: 100788 RVA: 0x00649BA0 File Offset: 0x00647DA0
+	// Token: 0x0601625C RID: 90716 RVA: 0x0066F984 File Offset: 0x0066DB84
 	protected override void OnAfterTick(float delta)
 	{
 		BulletModel.Instance.ProcessKuroBulletPendingOperation();
@@ -74,7 +68,7 @@ public class BulletController : ControllerBase
 		BulletPool.CheckAtFrameEnd();
 	}
 
-	// Token: 0x060189B5 RID: 100789 RVA: 0x00649C34 File Offset: 0x00647E34
+	// Token: 0x0601625D RID: 90717 RVA: 0x0066FA18 File Offset: 0x0066DC18
 	protected override bool OnClear()
 	{
 		this.ActionRunner.Clear();
@@ -84,7 +78,7 @@ public class BulletController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060189B6 RID: 100790 RVA: 0x00649C58 File Offset: 0x00647E58
+	// Token: 0x0601625E RID: 90718 RVA: 0x0066FA3C File Offset: 0x0066DC3C
 	protected override bool OnLeaveLevel()
 	{
 		BulletConfig.Instance.ClearBulletDataCache();
@@ -92,19 +86,19 @@ public class BulletController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060189B7 RID: 100791 RVA: 0x00649C6F File Offset: 0x00647E6F
+	// Token: 0x0601625F RID: 90719 RVA: 0x0066FA53 File Offset: 0x0066DC53
 	public BulletActionCenter GetActionCenter()
 	{
 		return this.ActionRunner.GetActionCenter();
 	}
 
-	// Token: 0x060189B8 RID: 100792 RVA: 0x00649C7C File Offset: 0x00647E7C
+	// Token: 0x06016260 RID: 90720 RVA: 0x0066FA60 File Offset: 0x0066DC60
 	public BulletActionRunner GetActionRunner()
 	{
 		return this.ActionRunner;
 	}
 
-	// Token: 0x060189B9 RID: 100793 RVA: 0x00649C84 File Offset: 0x00647E84
+	// Token: 0x06016261 RID: 90721 RVA: 0x0066FA68 File Offset: 0x0066DC68
 	private void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.OnSkillEnd, new Action<int, int>(this.OnSkillEnd));
@@ -112,7 +106,7 @@ public class BulletController : ControllerBase
 		EventSystem.Instance.Add(EEventName.SetNiagaraQuality, new Action(this.OnSetNiagaraQuality));
 	}
 
-	// Token: 0x060189BA RID: 100794 RVA: 0x00649CE4 File Offset: 0x00647EE4
+	// Token: 0x06016262 RID: 90722 RVA: 0x0066FAC8 File Offset: 0x0066DCC8
 	private void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<int, int>(EEventName.OnSkillEnd, new Action<int, int>(this.OnSkillEnd));
@@ -120,7 +114,7 @@ public class BulletController : ControllerBase
 		EventSystem.Instance.Remove(EEventName.SetNiagaraQuality, new Action(this.OnSetNiagaraQuality));
 	}
 
-	// Token: 0x060189BB RID: 100795 RVA: 0x00649D44 File Offset: 0x00647F44
+	// Token: 0x06016263 RID: 90723 RVA: 0x0066FB28 File Offset: 0x0066DD28
 	private void OnSkillEnd(int entityId, int skillId)
 	{
 		if (skillId == 0)
@@ -156,13 +150,13 @@ public class BulletController : ControllerBase
 		}
 	}
 
-	// Token: 0x060189BC RID: 100796 RVA: 0x00649E44 File Offset: 0x00648044
+	// Token: 0x06016264 RID: 90724 RVA: 0x0066FC28 File Offset: 0x0066DE28
 	private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		BulletConfig.Instance.RemoveCacheBulletDataByEntityId(handle.Id);
 	}
 
-	// Token: 0x060189BD RID: 100797 RVA: 0x00649E58 File Offset: 0x00648058
+	// Token: 0x06016265 RID: 90725 RVA: 0x0066FC3C File Offset: 0x0066DE3C
 	private void OnSetNiagaraQuality()
 	{
 		foreach (BulletEntity bulletEntity in BulletModel.Instance.GetBulletEntityMap().Values)
@@ -175,7 +169,7 @@ public class BulletController : ControllerBase
 		}
 	}
 
-	// Token: 0x060189BE RID: 100798 RVA: 0x00649EC0 File Offset: 0x006480C0
+	// Token: 0x06016266 RID: 90726 RVA: 0x0066FCA4 File Offset: 0x0066DEA4
 	[NullableContext(2)]
 	public bool HasAuthority(Entity owner)
 	{
@@ -193,31 +187,31 @@ public class BulletController : ControllerBase
 		return obj2 != null && obj2.IsAutonomousProxy();
 	}
 
-	// Token: 0x060189BF RID: 100799 RVA: 0x00649EE5 File Offset: 0x006480E5
+	// Token: 0x06016267 RID: 90727 RVA: 0x0066FCC9 File Offset: 0x0066DEC9
 	[NullableContext(2)]
 	public bool HasAuthority(TsBaseCharacter owner)
 	{
 		return owner != null && owner.IsAutonomousProxy();
 	}
 
-	// Token: 0x060189C0 RID: 100800 RVA: 0x00649EF2 File Offset: 0x006480F2
+	// Token: 0x06016268 RID: 90728 RVA: 0x0066FCD6 File Offset: 0x0066DED6
 	private void CreateBulletStatStart(string bulletRowName)
 	{
 	}
 
-	// Token: 0x060189C1 RID: 100801 RVA: 0x00649EF4 File Offset: 0x006480F4
+	// Token: 0x06016269 RID: 90729 RVA: 0x0066FCD8 File Offset: 0x0066DED8
 	private void CreateBulletStatSop(string bulletRowName)
 	{
 	}
 
-	// Token: 0x060189C2 RID: 100802 RVA: 0x00649EF6 File Offset: 0x006480F6
+	// Token: 0x0601626A RID: 90730 RVA: 0x0066FCDA File Offset: 0x0066DEDA
 	[return: Nullable(2)]
 	public BulletEntity CreateBulletCustomTarget([Nullable(2)] Entity owner, string bulletRowName, FTransformDouble? initialTransform, BulletController.BulletCreateParams bulletCreateParams = null, long? contextId = null, global::EBulletCreateSource createSource = global::EBulletCreateSource.Others)
 	{
 		return this.CreateBulletCustomTargetInternal(owner, bulletRowName, initialTransform, bulletCreateParams, contextId, createSource);
 	}
 
-	// Token: 0x060189C3 RID: 100803 RVA: 0x00649F08 File Offset: 0x00648108
+	// Token: 0x0601626B RID: 90731 RVA: 0x0066FCEC File Offset: 0x0066DEEC
 	[return: Nullable(2)]
 	public BulletEntity CreateBulletCustomTarget([Nullable(2)] TsBaseCharacter owner, string bulletRowName, FTransformDouble? initialTransform, BulletController.BulletCreateParams bulletCreateParams = null, long? contextId = null, global::EBulletCreateSource createSource = global::EBulletCreateSource.Others)
 	{
@@ -225,7 +219,7 @@ public class BulletController : ControllerBase
 		return this.CreateBulletCustomTargetInternal(owner2, bulletRowName, initialTransform, bulletCreateParams, contextId, createSource);
 	}
 
-	// Token: 0x060189C4 RID: 100804 RVA: 0x00649F34 File Offset: 0x00648134
+	// Token: 0x0601626C RID: 90732 RVA: 0x0066FD18 File Offset: 0x0066DF18
 	[return: Nullable(2)]
 	private unsafe BulletEntity CreateBulletCustomTargetInternal([Nullable(2)] Entity owner, string bulletRowName, FTransformDouble? initialTransform, BulletController.BulletCreateParams bulletCreateParams, long? contextId, global::EBulletCreateSource createSource)
 	{
@@ -310,7 +304,7 @@ public class BulletController : ControllerBase
 		return result;
 	}
 
-	// Token: 0x060189C5 RID: 100805 RVA: 0x0064A190 File Offset: 0x00648390
+	// Token: 0x0601626D RID: 90733 RVA: 0x0066FF74 File Offset: 0x0066E174
 	private int GetBaseTransformId(Entity ownerEntity, BulletDataMain data, string bulletRowName, int parentVictimId, int parentTargetId)
 	{
 		EPositionStandard bornPositionStandard = data.Base.BornPositionStandard;
@@ -351,7 +345,7 @@ public class BulletController : ControllerBase
 		return 0;
 	}
 
-	// Token: 0x060189C6 RID: 100806 RVA: 0x0064A240 File Offset: 0x00648440
+	// Token: 0x0601626E RID: 90734 RVA: 0x00670024 File Offset: 0x0066E224
 	[NullableContext(2)]
 	private global::EBulletSyncType ModSyncType(global::EBulletSyncType syncType, BulletDataMain data)
 	{
@@ -390,7 +384,7 @@ public class BulletController : ControllerBase
 		return syncType;
 	}
 
-	// Token: 0x060189C7 RID: 100807 RVA: 0x0064A2D8 File Offset: 0x006484D8
+	// Token: 0x0601626F RID: 90735 RVA: 0x006700BC File Offset: 0x0066E2BC
 	public int CreateBulletForDebug(TsBaseCharacter owner, string bulletRowName)
 	{
 		Entity entityNoBlueprint = owner.GetEntityNoBlueprint();
@@ -411,7 +405,7 @@ public class BulletController : ControllerBase
 		return 0;
 	}
 
-	// Token: 0x060189C8 RID: 100808 RVA: 0x0064A384 File Offset: 0x00648584
+	// Token: 0x06016270 RID: 90736 RVA: 0x00670168 File Offset: 0x0066E368
 	private int GetTargetId(Entity owner, BulletDataMain data, string bulletRowName, int parentVictimId, int parentTargetId, int parentId)
 	{
 		EBulletTarget trackTarget = data.Move.TrackTarget;
@@ -505,7 +499,7 @@ public class BulletController : ControllerBase
 		return 0;
 	}
 
-	// Token: 0x060189C9 RID: 100809 RVA: 0x0064A530 File Offset: 0x00648730
+	// Token: 0x06016271 RID: 90737 RVA: 0x00670314 File Offset: 0x0066E514
 	private int FindSkillTarget(Entity owner, string rowName)
 	{
 		BaseSkillComponent component = owner.GetComponent<BaseSkillComponent>();
@@ -518,7 +512,7 @@ public class BulletController : ControllerBase
 		return 0;
 	}
 
-	// Token: 0x060189CA RID: 100810 RVA: 0x0064A570 File Offset: 0x00648770
+	// Token: 0x06016272 RID: 90738 RVA: 0x00670354 File Offset: 0x0066E554
 	private int GetCurrentRoleLockOn()
 	{
 		CharacterLockOnComponent component = SceneTeamModel.Instance.GetCurrentEntity.Entity.GetComponent<CharacterLockOnComponent>();
@@ -530,7 +524,7 @@ public class BulletController : ControllerBase
 		return 0;
 	}
 
-	// Token: 0x060189CB RID: 100811 RVA: 0x0064A5B4 File Offset: 0x006487B4
+	// Token: 0x06016273 RID: 90739 RVA: 0x00670398 File Offset: 0x0066E598
 	private int GetBaseVelocityId(Entity owner, BulletDataMain data, string bulletRowName, int parentVictim, int parentTarget, int parentId)
 	{
 		EInitialVelocityDirection initVelocityDirStandard = data.Move.InitVelocityDirStandard;
@@ -583,7 +577,7 @@ public class BulletController : ControllerBase
 		return 0;
 	}
 
-	// Token: 0x060189CC RID: 100812 RVA: 0x0064A694 File Offset: 0x00648894
+	// Token: 0x06016274 RID: 90740 RVA: 0x00670478 File Offset: 0x0066E678
 	[return: Nullable(2)]
 	private BulletEntity CreateBullet(Entity owner, string bulletRowName, FTransformDouble? initialTransform, BulletController.BulletCreateParams bulletCreateParams, long? contextId = null, global::EBulletCreateSource createSource = global::EBulletCreateSource.Others)
 	{
@@ -596,19 +590,19 @@ public class BulletController : ControllerBase
 		return bulletEntity;
 	}
 
-	// Token: 0x060189CD RID: 100813 RVA: 0x0064A754 File Offset: 0x00648954
+	// Token: 0x06016275 RID: 90741 RVA: 0x00670538 File Offset: 0x0066E738
 	public void DestroyBullet(int id, bool summonChild, EBulletDestroyReason destroyReason = EBulletDestroyReason.Normal, bool destroyEffectImmediately = false)
 	{
 		BulletModel.Instance.DestroyBullet(id, summonChild, destroyReason, destroyEffectImmediately);
 	}
 
-	// Token: 0x060189CE RID: 100814 RVA: 0x0064A765 File Offset: 0x00648965
+	// Token: 0x06016276 RID: 90742 RVA: 0x00670549 File Offset: 0x0066E749
 	public void DestroyAllBullet(bool summonChild = false)
 	{
 		BulletModel.Instance.DestroyAllBullet(summonChild);
 	}
 
-	// Token: 0x060189CF RID: 100815 RVA: 0x0064A774 File Offset: 0x00648974
+	// Token: 0x06016277 RID: 90743 RVA: 0x00670558 File Offset: 0x0066E758
 	public void DestroySpecifiedBullet(int ownerId, FName bulletName, bool summonChild = false, int includeTeammate = 0, float interval = 0f)
 	{
 		if (includeTeammate == 1)
@@ -643,7 +637,7 @@ public class BulletController : ControllerBase
 		this.DestroyBulletByOwnerIdAndName(ownerId, bulletName, summonChild, interval);
 	}
 
-	// Token: 0x060189D0 RID: 100816 RVA: 0x0064A830 File Offset: 0x00648A30
+	// Token: 0x06016278 RID: 90744 RVA: 0x00670614 File Offset: 0x0066E814
 	public void DestroyBulletByOwnerIdAndName(int ownerId, FName bulletName, bool summonChild = false, float interval = 0f)
 	{
 		IReadOnlyCollection<BulletEntity> bulletSetByAttacker = BulletModel.Instance.GetBulletSetByAttacker(ownerId);
@@ -677,7 +671,7 @@ public class BulletController : ControllerBase
 		}
 	}
 
-	// Token: 0x060189D1 RID: 100817 RVA: 0x0064A930 File Offset: 0x00648B30
+	// Token: 0x06016279 RID: 90745 RVA: 0x00670714 File Offset: 0x0066E914
 	public unsafe void DelayDestroyBullet(BulletInfo bulletInfo, bool summonChild, float delayTime)
 	{
 		if (delayTime <= 0f)
@@ -706,7 +700,7 @@ public class BulletController : ControllerBase
 		bool openDestroyLog = BulletConstant.Instance.OpenDestroyLog;
 	}
 
-	// Token: 0x060189D2 RID: 100818 RVA: 0x0064AA28 File Offset: 0x00648C28
+	// Token: 0x0601627A RID: 90746 RVA: 0x0067080C File Offset: 0x0066EA0C
 	public int GetSpecifiedBulletCount(int ownerId, FName bulletName)
 	{
 		int num = 0;
@@ -725,14 +719,14 @@ public class BulletController : ControllerBase
 		return num;
 	}
 
-	// Token: 0x060189D3 RID: 100819 RVA: 0x0064AA9C File Offset: 0x00648C9C
+	// Token: 0x0601627B RID: 90747 RVA: 0x00670880 File Offset: 0x0066EA80
 	public void AddSimpleAction(BulletInfo bulletInfo, EBulletAction bulletActionType)
 	{
 		BulletActionInfoBase actionInfo = this.GetActionCenter().CreateBulletActionInfo(bulletActionType);
 		this.ActionRunner.AddAction(bulletInfo, actionInfo);
 	}
 
-	// Token: 0x060189D4 RID: 100820 RVA: 0x0064AAC4 File Offset: 0x00648CC4
+	// Token: 0x0601627C RID: 90748 RVA: 0x006708A8 File Offset: 0x0066EAA8
 	public void SetTimeDilation(float timeDilation)
 	{
 		foreach (OrderedSet<BulletEntity> orderedSet in BulletModel.Instance.GetAttackerBulletIterator())
@@ -744,7 +738,7 @@ public class BulletController : ControllerBase
 		}
 	}
 
-	// Token: 0x060189D5 RID: 100821 RVA: 0x0064AB48 File Offset: 0x00648D48
+	// Token: 0x0601627D RID: 90749 RVA: 0x0067092C File Offset: 0x0066EB2C
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.CreateBulletNotify, true, false)]
 	public static void CreateBulletNotify(Entity owner, [Nullable(1)] CreateBulletNotify data, CombatCommon combatCommon = null)
@@ -843,7 +837,7 @@ public class BulletController : ControllerBase
 		}
 	}
 
-	// Token: 0x060189D6 RID: 100822 RVA: 0x0064AED5 File Offset: 0x006490D5
+	// Token: 0x0601627E RID: 90750 RVA: 0x00670CB9 File Offset: 0x0066EEB9
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.DestroyBulletNotify, true, false)]
 	public static void DestroyBulletNotify(Entity entity, [Nullable(1)] DestroyBulletNotify data, CombatCommon combatCommon = null)
@@ -852,7 +846,7 @@ public class BulletController : ControllerBase
 		BulletModel.Instance.DestroyBulletRemote(data.Handle, data.IsCreateSubBullet);
 	}
 
-	// Token: 0x060189D7 RID: 100823 RVA: 0x0064AEF8 File Offset: 0x006490F8
+	// Token: 0x0601627F RID: 90751 RVA: 0x00670CDC File Offset: 0x0066EEDC
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.ModifyBulletParamsNotify, true, false)]
 	public static void ModifyBulletParamsNotify(Entity owner, [Nullable(1)] ModifyBulletParamsNotify data, CombatCommon combatCommon = null)
@@ -880,7 +874,7 @@ public class BulletController : ControllerBase
 		}
 	}
 
-	// Token: 0x060189D8 RID: 100824 RVA: 0x0064AF88 File Offset: 0x00649188
+	// Token: 0x06016280 RID: 90752 RVA: 0x00670D6C File Offset: 0x0066EF6C
 	[NullableContext(2)]
 	private BulletEntity CreateBulletRemote([Nullable(1)] Entity owner, [Nullable(1)] string bulletRowName, FTransformDouble initialTransform, int skillId, int spawnEntityId, int spawnVelocityEntityId, int targetId, long contextId, FVectorDouble? targetLocation = null, IVector randomPosOffset = null, IVector randomInitSpeedOffset = null, IVector size = null)
 	{
@@ -901,7 +895,7 @@ public class BulletController : ControllerBase
 		return result;
 	}
 
-	// Token: 0x060189D9 RID: 100825 RVA: 0x0064B020 File Offset: 0x00649220
+	// Token: 0x06016281 RID: 90753 RVA: 0x00670E04 File Offset: 0x0066F004
 	private unsafe int GetCustomEntityId(Entity owner, int pos, string bulletRowName)
 	{
 		if (float.IsNaN((float)pos))
@@ -945,7 +939,7 @@ public class BulletController : ControllerBase
 		return 0;
 	}
 
-	// Token: 0x060189DA RID: 100826 RVA: 0x0064B178 File Offset: 0x00649378
+	// Token: 0x06016282 RID: 90754 RVA: 0x00670F5C File Offset: 0x0066F15C
 	public Stat GetBulletCreateStat(string bulletRowName)
 	{
 		Stat stat;
@@ -957,7 +951,7 @@ public class BulletController : ControllerBase
 		return stat;
 	}
 
-	// Token: 0x060189DB RID: 100827 RVA: 0x0064B1A8 File Offset: 0x006493A8
+	// Token: 0x06016283 RID: 90755 RVA: 0x00670F8C File Offset: 0x0066F18C
 	public Stat GetBulletDestroyStat(string bulletRowName)
 	{
 		Stat stat;
@@ -969,7 +963,7 @@ public class BulletController : ControllerBase
 		return stat;
 	}
 
-	// Token: 0x060189DC RID: 100828 RVA: 0x0064B1D8 File Offset: 0x006493D8
+	// Token: 0x06016284 RID: 90756 RVA: 0x00670FBC File Offset: 0x0066F1BC
 	public Stat GetBulletMoveTickStat(string bulletRowName)
 	{
 		Stat stat;
@@ -981,7 +975,7 @@ public class BulletController : ControllerBase
 		return stat;
 	}
 
-	// Token: 0x060189DD RID: 100829 RVA: 0x0064B208 File Offset: 0x00649408
+	// Token: 0x06016285 RID: 90757 RVA: 0x00670FEC File Offset: 0x0066F1EC
 	public Stat GetBulletCollisionTickStat(string bulletRowName)
 	{
 		Stat stat;
@@ -993,7 +987,7 @@ public class BulletController : ControllerBase
 		return stat;
 	}
 
-	// Token: 0x060189DE RID: 100830 RVA: 0x0064B238 File Offset: 0x00649438
+	// Token: 0x06016286 RID: 90758 RVA: 0x0067101C File Offset: 0x0066F21C
 	public Stat GetBulletCollisionAfterTickStat(string bulletRowName)
 	{
 		Stat stat;
@@ -1005,14 +999,14 @@ public class BulletController : ControllerBase
 		return stat;
 	}
 
-	// Token: 0x060189DF RID: 100831 RVA: 0x0064B265 File Offset: 0x00649465
+	// Token: 0x06016287 RID: 90759 RVA: 0x00671049 File Offset: 0x0066F249
 	[NullableContext(2)]
 	public EntityHandle GetSceneBulletOwner()
 	{
 		return CreatureModel.Instance.GetEntity(BulletModel.Instance.SceneBulletOwnerId);
 	}
 
-	// Token: 0x060189E0 RID: 100832 RVA: 0x0064B27C File Offset: 0x0064947C
+	// Token: 0x06016288 RID: 90760 RVA: 0x00671060 File Offset: 0x0066F260
 	public void SetBulletSpeedRatio(int id, float newSpeed)
 	{
 		BulletEntity bulletEntityById = BulletModel.Instance.GetBulletEntityById(id);
@@ -1024,7 +1018,7 @@ public class BulletController : ControllerBase
 		}
 	}
 
-	// Token: 0x060189E1 RID: 100833 RVA: 0x0064B2B8 File Offset: 0x006494B8
+	// Token: 0x06016289 RID: 90761 RVA: 0x0067109C File Offset: 0x0066F29C
 	public void SetBulletLiveRatio(int id, float ratio)
 	{
 		BulletEntity bulletEntityById = BulletModel.Instance.GetBulletEntityById(id);
@@ -1035,32 +1029,32 @@ public class BulletController : ControllerBase
 		}
 	}
 
-	// Token: 0x060189E2 RID: 100834 RVA: 0x0064B2E7 File Offset: 0x006494E7
+	// Token: 0x0601628A RID: 90762 RVA: 0x006710CB File Offset: 0x0066F2CB
 	public int SpawnPattern(Entity ownerEntity, UKuroBulletPatternDataAsset patternData, FWorldEntityBulletParam extraParam)
 	{
 		return BulletModel.Instance.SpawnPattern(ownerEntity, patternData, extraParam);
 	}
 
-	// Token: 0x060189E3 RID: 100835 RVA: 0x0064B2F6 File Offset: 0x006494F6
+	// Token: 0x0601628B RID: 90763 RVA: 0x006710DA File Offset: 0x0066F2DA
 	public void DestroyPatternById(int patternId)
 	{
 		BulletModel.Instance.DestroyPatternById(patternId);
 	}
 
-	// Token: 0x060189E4 RID: 100836 RVA: 0x0064B303 File Offset: 0x00649503
+	// Token: 0x0601628C RID: 90764 RVA: 0x006710E7 File Offset: 0x0066F2E7
 	public void ProcessKuroBulletOperationList()
 	{
 		BulletModel.Instance.ProcessKuroBulletOperationList();
 	}
 
-	// Token: 0x060189E5 RID: 100837 RVA: 0x0064B30F File Offset: 0x0064950F
+	// Token: 0x0601628D RID: 90765 RVA: 0x006710F3 File Offset: 0x0066F2F3
 	public void ProcessKuroBulletOperation(FBulletHitWorldEntityOperation operation)
 	{
 		BulletModel.Instance.ProcessKuroBulletOperation(operation);
 	}
 
-	// Token: 0x170021B9 RID: 8633
-	// (get) Token: 0x060189E6 RID: 100838 RVA: 0x0064B31C File Offset: 0x0064951C
+	// Token: 0x17002215 RID: 8725
+	// (get) Token: 0x0601628E RID: 90766 RVA: 0x00671100 File Offset: 0x0066F300
 	public static BulletController Instance
 	{
 		get
@@ -1069,7 +1063,7 @@ public class BulletController : ControllerBase
 		}
 	}
 
-	// Token: 0x060189E7 RID: 100839 RVA: 0x0064B323 File Offset: 0x00649523
+	// Token: 0x0601628F RID: 90767 RVA: 0x00671107 File Offset: 0x0066F307
 	public static BulletController GetOrCreateInstance()
 	{
 		if (BulletController._Instance == null)
@@ -1079,7 +1073,7 @@ public class BulletController : ControllerBase
 		return BulletController._Instance;
 	}
 
-	// Token: 0x060189E8 RID: 100840 RVA: 0x0064B337 File Offset: 0x00649537
+	// Token: 0x06016290 RID: 90768 RVA: 0x0067111B File Offset: 0x0066F31B
 	public static bool CreateInstance()
 	{
 		if (BulletController._Instance != null)
@@ -1090,106 +1084,106 @@ public class BulletController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060189E9 RID: 100841 RVA: 0x0064B34D File Offset: 0x0064954D
+	// Token: 0x06016291 RID: 90769 RVA: 0x00671131 File Offset: 0x0066F331
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060189EA RID: 100842 RVA: 0x0064B34F File Offset: 0x0064954F
+	// Token: 0x06016292 RID: 90770 RVA: 0x00671133 File Offset: 0x0066F333
 	public static void ResetStaticDefaultValue()
 	{
 		BulletController._Instance = null;
 	}
 
-	// Token: 0x060189EB RID: 100843 RVA: 0x0064B357 File Offset: 0x00649557
+	// Token: 0x06016293 RID: 90771 RVA: 0x0067113B File Offset: 0x0066F33B
 	static BulletController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BulletController.CreateStaticDefaultValue), new Action(BulletController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B731 RID: 46897
+	// Token: 0x0400BAAC RID: 47788
 	private readonly List<BulletSystemBase> SystemList = new List<BulletSystemBase>();
 
-	// Token: 0x0400B732 RID: 46898
+	// Token: 0x0400BAAD RID: 47789
 	[Nullable(2)]
 	private BulletActionRunner ActionRunner;
 
-	// Token: 0x0400B733 RID: 46899
+	// Token: 0x0400BAAE RID: 47790
 	private readonly Dictionary<string, Stat> BulletCreateStatMap = new Dictionary<string, Stat>();
 
-	// Token: 0x0400B734 RID: 46900
+	// Token: 0x0400BAAF RID: 47791
 	private readonly Dictionary<string, Stat> BulletDestroyStatMap = new Dictionary<string, Stat>();
 
-	// Token: 0x0400B735 RID: 46901
+	// Token: 0x0400BAB0 RID: 47792
 	private readonly Dictionary<string, Stat> BulletMoveTickStatMap = new Dictionary<string, Stat>();
 
-	// Token: 0x0400B736 RID: 46902
+	// Token: 0x0400BAB1 RID: 47793
 	private readonly Dictionary<string, Stat> BulletCollisionTickStatMap = new Dictionary<string, Stat>();
 
-	// Token: 0x0400B737 RID: 46903
+	// Token: 0x0400BAB2 RID: 47794
 	private readonly Dictionary<string, Stat> BulletCollisionAfterTickStatMap = new Dictionary<string, Stat>();
 
-	// Token: 0x0400B738 RID: 46904
+	// Token: 0x0400BAB3 RID: 47795
 	private readonly Stat BulletConfigGetData = Stat.Create("BulletConfigGetData", "", "");
 
-	// Token: 0x0400B739 RID: 46905
+	// Token: 0x0400BAB4 RID: 47796
 	private readonly global::Transform TempTransform = global::Transform.Create();
 
-	// Token: 0x0400B73A RID: 46906
+	// Token: 0x0400BAB5 RID: 47797
 	private readonly global::Rotator TempRotator = global::Rotator.Create();
 
-	// Token: 0x0400B73B RID: 46907
+	// Token: 0x0400BAB6 RID: 47798
 	private readonly Quat TempQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400B73C RID: 46908
+	// Token: 0x0400BAB7 RID: 47799
 	[Nullable(2)]
 	private static BulletController _Instance;
 
-	// Token: 0x0200933A RID: 37690
+	// Token: 0x02008561 RID: 34145
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BulletCreateParams
 	{
-		// Token: 0x0402F8FA RID: 194810
+		// Token: 0x0402AF82 RID: 176002
 		public int SkillId;
 
-		// Token: 0x0402F8FB RID: 194811
+		// Token: 0x0402AF83 RID: 176003
 		public long? SkillContextId;
 
-		// Token: 0x0402F8FC RID: 194812
+		// Token: 0x0402AF84 RID: 176004
 		public global::EBulletSyncType SyncType;
 
-		// Token: 0x0402F8FD RID: 194813
+		// Token: 0x0402AF85 RID: 176005
 		public int? ParentVictimId = new int?(0);
 
-		// Token: 0x0402F8FE RID: 194814
+		// Token: 0x0402AF86 RID: 176006
 		public int? ParentTargetId = new int?(0);
 
-		// Token: 0x0402F8FF RID: 194815
+		// Token: 0x0402AF87 RID: 176007
 		public int ParentId;
 
-		// Token: 0x0402F900 RID: 194816
+		// Token: 0x0402AF88 RID: 176008
 		public global::Vector Size;
 
-		// Token: 0x0402F901 RID: 194817
+		// Token: 0x0402AF89 RID: 176009
 		public FVectorDouble? InitTargetLocation;
 
-		// Token: 0x0402F902 RID: 194818
+		// Token: 0x0402AF8A RID: 176010
 		public Aki.Protocol.EBulletCreateSource Source;
 
-		// Token: 0x0402F903 RID: 194819
+		// Token: 0x0402AF8B RID: 176011
 		public FVector? LocationOffset;
 
-		// Token: 0x0402F904 RID: 194820
+		// Token: 0x0402AF8C RID: 176012
 		public FRotator? BeginRotatorOffset;
 
-		// Token: 0x0402F905 RID: 194821
+		// Token: 0x0402AF8D RID: 176013
 		public bool CreateOnAuthority = true;
 
-		// Token: 0x0402F906 RID: 194822
+		// Token: 0x0402AF8E RID: 176014
 		public ISkillBattleContext BattleContext;
 
-		// Token: 0x0402F907 RID: 194823
+		// Token: 0x0402AF8F RID: 176015
 		[Nullable(new byte[]
 		{
 			2,
@@ -1197,22 +1191,22 @@ public class BulletController : ControllerBase
 		})]
 		public HashSet<string> ParentIds;
 
-		// Token: 0x0402F908 RID: 194824
+		// Token: 0x0402AF90 RID: 176016
 		public BulletDataMain BulletData;
 
-		// Token: 0x0402F909 RID: 194825
+		// Token: 0x0402AF91 RID: 176017
 		public int? TargetId;
 
-		// Token: 0x0402F90A RID: 194826
+		// Token: 0x0402AF92 RID: 176018
 		public int? BaseTransformId;
 
-		// Token: 0x0402F90B RID: 194827
+		// Token: 0x0402AF93 RID: 176019
 		public int? BaseVelocityId;
 
-		// Token: 0x0402F90C RID: 194828
+		// Token: 0x0402AF94 RID: 176020
 		public IVector RandomPosOffset;
 
-		// Token: 0x0402F90D RID: 194829
+		// Token: 0x0402AF95 RID: 176021
 		public IVector RandomInitSpeedOffset;
 	}
 }

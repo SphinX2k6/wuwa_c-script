@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021DB RID: 8667
+	// Token: 0x02000739 RID: 1849
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UIToggleComponent")]
 	[UnrealStructLayout(1232, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1232)]
 	public class UUIToggleComponent : UUISelectableComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06021060 RID: 135264 RVA: 0x0030B7D0 File Offset: 0x003099D0
+		// Token: 0x0600A111 RID: 41233 RVA: 0x000EE449 File Offset: 0x000EC649
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIToggleComponent._ClassPtr;
 		}
 
-		// Token: 0x06021061 RID: 135265 RVA: 0x0030B7DC File Offset: 0x003099DC
+		// Token: 0x0600A112 RID: 41234 RVA: 0x000EE458 File Offset: 0x000EC658
 		public UUIToggleComponent() : this(BuiltinUtils.AllocNativeUObject(UUIToggleComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06021062 RID: 135266 RVA: 0x0030B804 File Offset: 0x00309A04
+		// Token: 0x0600A113 RID: 41235 RVA: 0x000EE480 File Offset: 0x000EC680
 		public UUIToggleComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIToggleComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170080E5 RID: 32997
-		// (get) Token: 0x06021063 RID: 135267 RVA: 0x0030B837 File Offset: 0x00309A37
-		// (set) Token: 0x06021064 RID: 135268 RVA: 0x0030B84B File Offset: 0x00309A4B
+		// Token: 0x17001DFB RID: 7675
+		// (get) Token: 0x0600A114 RID: 41236 RVA: 0x000EE4B3 File Offset: 0x000EC6B3
+		// (set) Token: 0x0600A115 RID: 41237 RVA: 0x000EE4C7 File Offset: 0x000EC6C7
 		[Nullable(new byte[]
 		{
 			0,
@@ -59,24 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080E6 RID: 32998
-		// (get) Token: 0x06021065 RID: 135269 RVA: 0x0030B860 File Offset: 0x00309A60
-		// (set) Token: 0x06021066 RID: 135270 RVA: 0x0030B870 File Offset: 0x00309A70
-		public unsafe UIToggleTransitionType ToggleTransition
-		{
-			get
-			{
-				return (UIToggleTransitionType)(*(base.NativePtr + (IntPtr)UUIToggleComponent.__PropertyOffset_ToggleTransition));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUIToggleComponent.__PropertyOffset_ToggleTransition) = (byte)value;
-			}
-		}
-
-		// Token: 0x170080E7 RID: 32999
-		// (get) Token: 0x06021067 RID: 135271 RVA: 0x0030B881 File Offset: 0x00309A81
-		// (set) Token: 0x06021068 RID: 135272 RVA: 0x0030B895 File Offset: 0x00309A95
+		// Token: 0x17001DFC RID: 7676
+		// (get) Token: 0x0600A116 RID: 41238 RVA: 0x000EE4DC File Offset: 0x000EC6DC
+		// (set) Token: 0x0600A117 RID: 41239 RVA: 0x000EE4F0 File Offset: 0x000EC6F0
 		[Nullable(new byte[]
 		{
 			0,
@@ -104,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080E8 RID: 33000
-		// (get) Token: 0x06021069 RID: 135273 RVA: 0x0030B8AA File Offset: 0x00309AAA
-		// (set) Token: 0x0602106A RID: 135274 RVA: 0x0030B8BE File Offset: 0x00309ABE
+		// Token: 0x17001DFD RID: 7677
+		// (get) Token: 0x0600A118 RID: 41240 RVA: 0x000EE505 File Offset: 0x000EC705
+		// (set) Token: 0x0600A119 RID: 41241 RVA: 0x000EE519 File Offset: 0x000EC719
 		[Nullable(2)]
 		public unsafe ULTweener ToggleTransitionTweener
 		{
@@ -122,9 +107,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080E9 RID: 33001
-		// (get) Token: 0x0602106B RID: 135275 RVA: 0x0030B8D3 File Offset: 0x00309AD3
-		// (set) Token: 0x0602106C RID: 135276 RVA: 0x0030B8E3 File Offset: 0x00309AE3
+		// Token: 0x17001DFE RID: 7678
+		// (get) Token: 0x0600A11A RID: 41242 RVA: 0x000EE52E File Offset: 0x000EC72E
+		// (set) Token: 0x0600A11B RID: 41243 RVA: 0x000EE53E File Offset: 0x000EC73E
 		public unsafe float OnAlpha
 		{
 			get
@@ -137,9 +122,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080EA RID: 33002
-		// (get) Token: 0x0602106D RID: 135277 RVA: 0x0030B8F4 File Offset: 0x00309AF4
-		// (set) Token: 0x0602106E RID: 135278 RVA: 0x0030B904 File Offset: 0x00309B04
+		// Token: 0x17001DFF RID: 7679
+		// (get) Token: 0x0600A11C RID: 41244 RVA: 0x000EE54F File Offset: 0x000EC74F
+		// (set) Token: 0x0600A11D RID: 41245 RVA: 0x000EE55F File Offset: 0x000EC75F
 		public unsafe float OffAlpha
 		{
 			get
@@ -152,9 +137,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080EB RID: 33003
-		// (get) Token: 0x0602106F RID: 135279 RVA: 0x0030B915 File Offset: 0x00309B15
-		// (set) Token: 0x06021070 RID: 135280 RVA: 0x0030B929 File Offset: 0x00309B29
+		// Token: 0x17001E00 RID: 7680
+		// (get) Token: 0x0600A11E RID: 41246 RVA: 0x000EE570 File Offset: 0x000EC770
+		// (set) Token: 0x0600A11F RID: 41247 RVA: 0x000EE584 File Offset: 0x000EC784
 		public unsafe FColor OnColor
 		{
 			get
@@ -167,9 +152,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080EC RID: 33004
-		// (get) Token: 0x06021071 RID: 135281 RVA: 0x0030B93E File Offset: 0x00309B3E
-		// (set) Token: 0x06021072 RID: 135282 RVA: 0x0030B952 File Offset: 0x00309B52
+		// Token: 0x17001E01 RID: 7681
+		// (get) Token: 0x0600A120 RID: 41248 RVA: 0x000EE599 File Offset: 0x000EC799
+		// (set) Token: 0x0600A121 RID: 41249 RVA: 0x000EE5AD File Offset: 0x000EC7AD
 		public unsafe FColor OffColor
 		{
 			get
@@ -182,9 +167,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080ED RID: 33005
-		// (get) Token: 0x06021073 RID: 135283 RVA: 0x0030B967 File Offset: 0x00309B67
-		// (set) Token: 0x06021074 RID: 135284 RVA: 0x0030B977 File Offset: 0x00309B77
+		// Token: 0x17001E02 RID: 7682
+		// (get) Token: 0x0600A122 RID: 41250 RVA: 0x000EE5C2 File Offset: 0x000EC7C2
+		// (set) Token: 0x0600A123 RID: 41251 RVA: 0x000EE5D2 File Offset: 0x000EC7D2
 		public unsafe float ToggleDuration
 		{
 			get
@@ -197,9 +182,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080EE RID: 33006
-		// (get) Token: 0x06021075 RID: 135285 RVA: 0x0030B988 File Offset: 0x00309B88
-		// (set) Token: 0x06021076 RID: 135286 RVA: 0x0030B99C File Offset: 0x00309B9C
+		// Token: 0x17001E03 RID: 7683
+		// (get) Token: 0x0600A124 RID: 41252 RVA: 0x000EE5E3 File Offset: 0x000EC7E3
+		// (set) Token: 0x0600A125 RID: 41253 RVA: 0x000EE5F7 File Offset: 0x000EC7F7
 		public unsafe FName OnTransitionName
 		{
 			get
@@ -212,9 +197,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080EF RID: 33007
-		// (get) Token: 0x06021077 RID: 135287 RVA: 0x0030B9B1 File Offset: 0x00309BB1
-		// (set) Token: 0x06021078 RID: 135288 RVA: 0x0030B9C5 File Offset: 0x00309BC5
+		// Token: 0x17001E04 RID: 7684
+		// (get) Token: 0x0600A126 RID: 41254 RVA: 0x000EE60C File Offset: 0x000EC80C
+		// (set) Token: 0x0600A127 RID: 41255 RVA: 0x000EE620 File Offset: 0x000EC820
 		public unsafe FName OffTransitionName
 		{
 			get
@@ -227,9 +212,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080F0 RID: 33008
-		// (get) Token: 0x06021079 RID: 135289 RVA: 0x0030B9DA File Offset: 0x00309BDA
-		// (set) Token: 0x0602107A RID: 135290 RVA: 0x0030B9EE File Offset: 0x00309BEE
+		// Token: 0x17001E05 RID: 7685
+		// (get) Token: 0x0600A128 RID: 41256 RVA: 0x000EE635 File Offset: 0x000EC835
+		// (set) Token: 0x0600A129 RID: 41257 RVA: 0x000EE649 File Offset: 0x000EC849
 		[Nullable(new byte[]
 		{
 			0,
@@ -257,9 +242,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080F1 RID: 33009
-		// (get) Token: 0x0602107B RID: 135291 RVA: 0x0030BA03 File Offset: 0x00309C03
-		// (set) Token: 0x0602107C RID: 135292 RVA: 0x0030BA17 File Offset: 0x00309C17
+		// Token: 0x17001E06 RID: 7686
+		// (get) Token: 0x0600A12A RID: 41258 RVA: 0x000EE65E File Offset: 0x000EC85E
+		// (set) Token: 0x0600A12B RID: 41259 RVA: 0x000EE672 File Offset: 0x000EC872
 		[Nullable(new byte[]
 		{
 			0,
@@ -287,9 +272,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080F2 RID: 33010
-		// (get) Token: 0x0602107D RID: 135293 RVA: 0x0030BA2C File Offset: 0x00309C2C
-		// (set) Token: 0x0602107E RID: 135294 RVA: 0x0030BA3C File Offset: 0x00309C3C
+		// Token: 0x17001E07 RID: 7687
+		// (get) Token: 0x0600A12C RID: 41260 RVA: 0x000EE687 File Offset: 0x000EC887
+		// (set) Token: 0x0600A12D RID: 41261 RVA: 0x000EE697 File Offset: 0x000EC897
 		public unsafe bool IsOn
 		{
 			get
@@ -302,9 +287,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080F3 RID: 33011
-		// (get) Token: 0x0602107F RID: 135295 RVA: 0x0030BA4D File Offset: 0x00309C4D
-		// (set) Token: 0x06021080 RID: 135296 RVA: 0x0030BA5D File Offset: 0x00309C5D
+		// Token: 0x17001E08 RID: 7688
+		// (get) Token: 0x0600A12E RID: 41262 RVA: 0x000EE6A8 File Offset: 0x000EC8A8
+		// (set) Token: 0x0600A12F RID: 41263 RVA: 0x000EE6B8 File Offset: 0x000EC8B8
 		public unsafe bool bToggleOnSelect
 		{
 			get
@@ -317,9 +302,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080F4 RID: 33012
-		// (get) Token: 0x06021081 RID: 135297 RVA: 0x0030BA6E File Offset: 0x00309C6E
-		// (set) Token: 0x06021082 RID: 135298 RVA: 0x0030BA82 File Offset: 0x00309C82
+		// Token: 0x17001E09 RID: 7689
+		// (get) Token: 0x0600A130 RID: 41264 RVA: 0x000EE6C9 File Offset: 0x000EC8C9
+		// (set) Token: 0x0600A131 RID: 41265 RVA: 0x000EE6DD File Offset: 0x000EC8DD
 		[Nullable(new byte[]
 		{
 			0,
@@ -347,60 +332,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080F5 RID: 33013
-		// (get) Token: 0x06021083 RID: 135299 RVA: 0x0030BA97 File Offset: 0x00309C97
-		// (set) Token: 0x06021084 RID: 135300 RVA: 0x0030BAAB File Offset: 0x00309CAB
-		[Nullable(new byte[]
-		{
-			0,
-			1
-		})]
-		public unsafe TWeakObjectPtr<UUIToggleGroupComponent> GroupComp
-		{
-			[return: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UUIToggleComponent.__PropertyOffset_GroupComp);
-			}
-			[param: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUIToggleComponent.__PropertyOffset_GroupComp) = value;
-			}
-		}
-
-		// Token: 0x170080F6 RID: 33014
-		// (get) Token: 0x06021085 RID: 135301 RVA: 0x0030BAC0 File Offset: 0x00309CC0
-		// (set) Token: 0x06021086 RID: 135302 RVA: 0x0030BAF9 File Offset: 0x00309CF9
-		public FLGUIDrawableEvent OnToggle
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FLGUIDrawableEvent result;
-				if ((result = this._OnToggle) == null)
-				{
-					result = (this._OnToggle = new FLGUIDrawableEvent(base.NativePtr + (IntPtr)UUIToggleComponent.__PropertyOffset_OnToggle, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLGUIDrawableEvent.StaticStruct(), base.NativePtr + (IntPtr)UUIToggleComponent.__PropertyOffset_OnToggle, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170080F7 RID: 33015
-		// (get) Token: 0x06021087 RID: 135303 RVA: 0x0030BB1C File Offset: 0x00309D1C
-		// (set) Token: 0x06021088 RID: 135304 RVA: 0x0030BB55 File Offset: 0x00309D55
+		// Token: 0x17001E0A RID: 7690
+		// (get) Token: 0x0600A132 RID: 41266 RVA: 0x000EE6F4 File Offset: 0x000EC8F4
+		// (set) Token: 0x0600A133 RID: 41267 RVA: 0x000EE72D File Offset: 0x000EC92D
 		public FLGUIToggleDynamicDelegate OnToggleEvent
 		{
 			get
@@ -419,33 +353,26 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06021089 RID: 135305 RVA: 0x0030BB76 File Offset: 0x00309D76
+		// Token: 0x0600A134 RID: 41268 RVA: 0x000EE74E File Offset: 0x000EC94E
 		[NullableContext(2)]
 		public void UnregisterToggleEvent(in FLGUIDelegateHandleWrapper InDelegateHandle)
 		{
 			UUIToggleComponent.__UnregisterToggleEvent_Internal(base.NativePtr, (InDelegateHandle ?? new FLGUIDelegateHandleWrapper()).NativePtr);
 		}
 
-		// Token: 0x0602108A RID: 135306 RVA: 0x0030BB93 File Offset: 0x00309D93
+		// Token: 0x0600A135 RID: 41269 RVA: 0x000EE76B File Offset: 0x000EC96B
 		public void SetValue(bool newValue, bool fireEvent = true)
 		{
 			UUIToggleComponent.__SetValue_Internal(base.NativePtr, newValue, fireEvent);
 		}
 
-		// Token: 0x0602108B RID: 135307 RVA: 0x0030BBA2 File Offset: 0x00309DA2
-		[NullableContext(2)]
-		public void SetToggleGroup(UUIToggleGroupComponent InGroupComp)
-		{
-			UUIToggleComponent.__SetToggleGroup_Internal(base.NativePtr, (InGroupComp != null) ? InGroupComp.NativePtr : IntPtr.Zero);
-		}
-
-		// Token: 0x0602108C RID: 135308 RVA: 0x0030BBBF File Offset: 0x00309DBF
+		// Token: 0x0600A136 RID: 41270 RVA: 0x000EE77A File Offset: 0x000EC97A
 		public void SetState(bool newState, bool fireEvent = true)
 		{
 			UUIToggleComponent.__SetState_Internal(base.NativePtr, newState, fireEvent);
 		}
 
-		// Token: 0x0602108D RID: 135309 RVA: 0x0030BBCE File Offset: 0x00309DCE
+		// Token: 0x0600A137 RID: 41271 RVA: 0x000EE789 File Offset: 0x000EC989
 		public FLGUIDelegateHandleWrapper RegisterToggleEvent([Nullable(2)] in FLGUIToggleDynamicDelegate InDelegate)
 		{
 			IntPtr nativePtr = base.NativePtr;
@@ -453,149 +380,132 @@ namespace UnrealEngine
 			return new FLGUIDelegateHandleWrapper(UUIToggleComponent.__RegisterToggleEvent_Internal(nativePtr, (flguitoggleDynamicDelegate != null) ? flguitoggleDynamicDelegate.NativePtr : ((IntPtr)0)), null);
 		}
 
-		// Token: 0x0602108E RID: 135310 RVA: 0x0030BBF0 File Offset: 0x00309DF0
+		// Token: 0x0600A138 RID: 41272 RVA: 0x000EE7AB File Offset: 0x000EC9AB
 		public bool GetValue()
 		{
 			return UUIToggleComponent.__GetValue_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0602108F RID: 135311 RVA: 0x0030BBFD File Offset: 0x00309DFD
+		// Token: 0x0600A139 RID: 41273 RVA: 0x000EE7B8 File Offset: 0x000EC9B8
 		[NullableContext(2)]
 		public AActor GetToggleGroupActor()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(UUIToggleComponent.__GetToggleGroupActor_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06021090 RID: 135312 RVA: 0x0030BC0F File Offset: 0x00309E0F
+		// Token: 0x0600A13A RID: 41274 RVA: 0x000EE7CA File Offset: 0x000EC9CA
 		public bool GetState()
 		{
 			return UUIToggleComponent.__GetState_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06021091 RID: 135313 RVA: 0x0030BC1C File Offset: 0x00309E1C
+		// Token: 0x0600A13B RID: 41275 RVA: 0x000EE7D7 File Offset: 0x000EC9D7
 		public int GetIndexInGroup()
 		{
 			return UUIToggleComponent.__GetIndexInGroup_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06021092 RID: 135314
+		// Token: 0x0600A13C RID: 41276
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnregisterToggleEvent_Internal(IntPtr @this, IntPtr InDelegateHandle);
 
-		// Token: 0x06021093 RID: 135315
+		// Token: 0x0600A13D RID: 41277
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetValue_Internal(IntPtr @this, bool newValue, bool fireEvent);
 
-		// Token: 0x06021094 RID: 135316
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetToggleGroup_Internal(IntPtr @this, IntPtr InGroupComp);
-
-		// Token: 0x06021095 RID: 135317
+		// Token: 0x0600A13E RID: 41278
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetState_Internal(IntPtr @this, bool newState, bool fireEvent);
 
-		// Token: 0x06021096 RID: 135318
+		// Token: 0x0600A13F RID: 41279
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __RegisterToggleEvent_Internal(IntPtr @this, IntPtr InDelegate);
 
-		// Token: 0x06021097 RID: 135319
+		// Token: 0x0600A140 RID: 41280
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetValue_Internal(IntPtr @this);
 
-		// Token: 0x06021098 RID: 135320
+		// Token: 0x0600A141 RID: 41281
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetToggleGroupActor_Internal(IntPtr @this);
 
-		// Token: 0x06021099 RID: 135321
+		// Token: 0x0600A142 RID: 41282
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetState_Internal(IntPtr @this);
 
-		// Token: 0x0602109A RID: 135322
+		// Token: 0x0600A143 RID: 41283
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetIndexInGroup_Internal(IntPtr @this);
 
-		// Token: 0x0602109B RID: 135323 RVA: 0x0030BC29 File Offset: 0x00309E29
+		// Token: 0x0600A144 RID: 41284 RVA: 0x000EE7E4 File Offset: 0x000EC9E4
 		static UUIToggleComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIToggleComponent");
 		}
 
-		// Token: 0x0602109C RID: 135324 RVA: 0x0030BC37 File Offset: 0x00309E37
+		// Token: 0x0600A145 RID: 41285 RVA: 0x000EE7F2 File Offset: 0x000EC9F2
 		protected UUIToggleComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040119FA RID: 72186
+		// Token: 0x04004502 RID: 17666
 		public new const string __ObjectPath = "/Script/LGUI.UIToggleComponent";
 
-		// Token: 0x040119FB RID: 72187
+		// Token: 0x04004503 RID: 17667
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040119FC RID: 72188
+		// Token: 0x04004504 RID: 17668
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040119FD RID: 72189
+		// Token: 0x04004505 RID: 17669
 		internal static int __PropertyOffset_ToggleActor;
 
-		// Token: 0x040119FE RID: 72190
-		internal static int __PropertyOffset_ToggleTransition;
-
-		// Token: 0x040119FF RID: 72191
+		// Token: 0x04004506 RID: 17670
 		internal static int __PropertyOffset_ToggleTransitionComp;
 
-		// Token: 0x04011A00 RID: 72192
+		// Token: 0x04004507 RID: 17671
 		internal static int __PropertyOffset_ToggleTransitionTweener;
 
-		// Token: 0x04011A01 RID: 72193
+		// Token: 0x04004508 RID: 17672
 		internal static int __PropertyOffset_OnAlpha;
 
-		// Token: 0x04011A02 RID: 72194
+		// Token: 0x04004509 RID: 17673
 		internal static int __PropertyOffset_OffAlpha;
 
-		// Token: 0x04011A03 RID: 72195
+		// Token: 0x0400450A RID: 17674
 		internal static int __PropertyOffset_OnColor;
 
-		// Token: 0x04011A04 RID: 72196
+		// Token: 0x0400450B RID: 17675
 		internal static int __PropertyOffset_OffColor;
 
-		// Token: 0x04011A05 RID: 72197
+		// Token: 0x0400450C RID: 17676
 		internal static int __PropertyOffset_ToggleDuration;
 
-		// Token: 0x04011A06 RID: 72198
+		// Token: 0x0400450D RID: 17677
 		internal static int __PropertyOffset_OnTransitionName;
 
-		// Token: 0x04011A07 RID: 72199
+		// Token: 0x0400450E RID: 17678
 		internal static int __PropertyOffset_OffTransitionName;
 
-		// Token: 0x04011A08 RID: 72200
+		// Token: 0x0400450F RID: 17679
 		internal static int __PropertyOffset_OnActor;
 
-		// Token: 0x04011A09 RID: 72201
+		// Token: 0x04004510 RID: 17680
 		internal static int __PropertyOffset_OffActor;
 
-		// Token: 0x04011A0A RID: 72202
+		// Token: 0x04004511 RID: 17681
 		internal static int __PropertyOffset_IsOn;
 
-		// Token: 0x04011A0B RID: 72203
+		// Token: 0x04004512 RID: 17682
 		internal static int __PropertyOffset_bToggleOnSelect;
 
-		// Token: 0x04011A0C RID: 72204
+		// Token: 0x04004513 RID: 17683
 		internal static int __PropertyOffset_UIToggleGroupActor;
 
-		// Token: 0x04011A0D RID: 72205
-		internal static int __PropertyOffset_GroupComp;
-
-		// Token: 0x04011A0E RID: 72206
-		internal static int __PropertyOffset_OnToggle;
-
-		// Token: 0x04011A0F RID: 72207
-		[Nullable(2)]
-		private FLGUIDrawableEvent _OnToggle;
-
-		// Token: 0x04011A10 RID: 72208
+		// Token: 0x04004514 RID: 17684
 		internal static int __PropertyOffset_OnToggleEvent;
 
-		// Token: 0x04011A11 RID: 72209
+		// Token: 0x04004515 RID: 17685
 		[Nullable(2)]
 		private FLGUIToggleDynamicDelegate _OnToggleEvent;
 	}

@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E09 RID: 19977
+	// Token: 0x02003DD2 RID: 15826
 	public class RoguelikeBlackFlowerItem : UiPanelBase
 	{
-		// Token: 0x060338B1 RID: 211121 RVA: 0x00C0C010 File Offset: 0x00C0A210
+		// Token: 0x0602871C RID: 165660 RVA: 0x00B5551C File Offset: 0x00B5371C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060338B2 RID: 211122 RVA: 0x00C0C0D7 File Offset: 0x00C0A2D7
+		// Token: 0x0602871D RID: 165661 RVA: 0x00B555E3 File Offset: 0x00B537E3
 		protected override void OnBeforeShow()
 		{
 			this.RefreshHandle();
 		}
 
-		// Token: 0x060338B3 RID: 211123 RVA: 0x00C0C0E0 File Offset: 0x00C0A2E0
+		// Token: 0x0602871E RID: 165662 RVA: 0x00B555EC File Offset: 0x00B537EC
 		private void OnClickHelp()
 		{
 			RogueParam? paramConfigBySeasonId = RoguelikeModel.Instance.GetParamConfigBySeasonId(null);
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			UiManager.Instance.OpenView(EUiViewName.RoguelikeBlackFlowerPreviewView, roguelikeBlackFlowerOpenParam, null);
 		}
 
-		// Token: 0x060338B4 RID: 211124 RVA: 0x00C0C138 File Offset: 0x00C0A338
+		// Token: 0x0602871F RID: 165663 RVA: 0x00B55644 File Offset: 0x00B53844
 		private void RefreshHandle()
 		{
 			ActivityRogueData currentActivityData = ActivityRogueController.Instance.GetCurrentActivityData();
@@ -77,16 +77,16 @@ namespace CSharpScript.Game.Module.Roguelike
 			text2.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0200AF9C RID: 44956
+		// Token: 0x020099D1 RID: 39377
 		private class EComponentDefine
 		{
-			// Token: 0x04035515 RID: 218389
+			// Token: 0x0402FF48 RID: 196424
 			public const int TxtRemainNum = 0;
 
-			// Token: 0x04035516 RID: 218390
+			// Token: 0x0402FF49 RID: 196425
 			public const int TxtMaxNum = 1;
 
-			// Token: 0x04035517 RID: 218391
+			// Token: 0x0402FF4A RID: 196426
 			public const int BtnHelp = 2;
 		}
 	}

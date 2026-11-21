@@ -6,121 +6,113 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004318 RID: 17176
+	// Token: 0x02003351 RID: 13137
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/SGameplayTagProbabilityCooldownInfo.SGameplayTagProbabilityCooldownInfo")]
 	[UnrealStructLayout(20, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 20)]
 	public class SGameplayTagProbabilityCooldownInfo : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C704 RID: 182020 RVA: 0x00A1FC70 File Offset: 0x00A1DE70
+		// Token: 0x060213EF RID: 136175 RVA: 0x0095C6FC File Offset: 0x0095A8FC
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SGameplayTagProbabilityCooldownInfo._ScriptStructPtr != 0) ? SGameplayTagProbabilityCooldownInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SGameplayTagProbabilityCooldownInfo.SGameplayTagProbabilityCooldownInfo", ref SGameplayTagProbabilityCooldownInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x17006F3D RID: 28477
-		// (get) Token: 0x0602C705 RID: 182021 RVA: 0x00A1FC94 File Offset: 0x00A1DE94
-		// (set) Token: 0x0602C706 RID: 182022 RVA: 0x00A1FCA8 File Offset: 0x00A1DEA8
+		// Token: 0x17004354 RID: 17236
+		// (get) Token: 0x060213F0 RID: 136176 RVA: 0x0095C720 File Offset: 0x0095A920
+		// (set) Token: 0x060213F1 RID: 136177 RVA: 0x0095C734 File Offset: 0x0095A934
 		public unsafe FGameplayTag GameplayTag
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SGameplayTagProbabilityCooldownInfo.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SGameplayTagProbabilityCooldownInfo.__PropertyOffset_GameplayTag);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SGameplayTagProbabilityCooldownInfo.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SGameplayTagProbabilityCooldownInfo.__PropertyOffset_GameplayTag) = value;
 			}
 		}
 
-		// Token: 0x17006F3E RID: 28478
-		// (get) Token: 0x0602C707 RID: 182023 RVA: 0x00A1FCBD File Offset: 0x00A1DEBD
-		// (set) Token: 0x0602C708 RID: 182024 RVA: 0x00A1FCCD File Offset: 0x00A1DECD
+		// Token: 0x17004355 RID: 17237
+		// (get) Token: 0x060213F2 RID: 136178 RVA: 0x0095C749 File Offset: 0x0095A949
+		// (set) Token: 0x060213F3 RID: 136179 RVA: 0x0095C759 File Offset: 0x0095A959
 		public unsafe float Probability
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SGameplayTagProbabilityCooldownInfo.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SGameplayTagProbabilityCooldownInfo.__PropertyOffset_Probability);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SGameplayTagProbabilityCooldownInfo.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SGameplayTagProbabilityCooldownInfo.__PropertyOffset_Probability) = value;
 			}
 		}
 
-		// Token: 0x17006F3F RID: 28479
-		// (get) Token: 0x0602C709 RID: 182025 RVA: 0x00A1FCDE File Offset: 0x00A1DEDE
-		// (set) Token: 0x0602C70A RID: 182026 RVA: 0x00A1FCEE File Offset: 0x00A1DEEE
+		// Token: 0x17004356 RID: 17238
+		// (get) Token: 0x060213F4 RID: 136180 RVA: 0x0095C76A File Offset: 0x0095A96A
+		// (set) Token: 0x060213F5 RID: 136181 RVA: 0x0095C77A File Offset: 0x0095A97A
 		public unsafe int CooldownTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SGameplayTagProbabilityCooldownInfo.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SGameplayTagProbabilityCooldownInfo.__PropertyOffset_CooldownTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SGameplayTagProbabilityCooldownInfo.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SGameplayTagProbabilityCooldownInfo.__PropertyOffset_CooldownTime) = value;
 			}
 		}
 
-		// Token: 0x0602C70B RID: 182027 RVA: 0x00A1FCFF File Offset: 0x00A1DEFF
+		// Token: 0x060213F6 RID: 136182 RVA: 0x0095C78B File Offset: 0x0095A98B
 		public SGameplayTagProbabilityCooldownInfo()
 		{
 		}
 
-		// Token: 0x0602C70C RID: 182028 RVA: 0x00A1FD07 File Offset: 0x00A1DF07
-		public SGameplayTagProbabilityCooldownInfo(FGameplayTag GameplayTag, float Probability, int CooldownTime)
-		{
-			this.GameplayTag = GameplayTag;
-			this.Probability = Probability;
-			this.CooldownTime = CooldownTime;
-		}
-
-		// Token: 0x0602C70D RID: 182029 RVA: 0x00A1FD24 File Offset: 0x00A1DF24
+		// Token: 0x060213F7 RID: 136183 RVA: 0x0095C793 File Offset: 0x0095A993
 		protected override IntPtr GetUStructPtr()
 		{
 			return SGameplayTagProbabilityCooldownInfo.StaticStruct();
 		}
 
-		// Token: 0x0602C70E RID: 182030 RVA: 0x00A1FD30 File Offset: 0x00A1DF30
+		// Token: 0x060213F8 RID: 136184 RVA: 0x0095C79F File Offset: 0x0095A99F
 		[NullableContext(2)]
 		public SGameplayTagProbabilityCooldownInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C70F RID: 182031 RVA: 0x00A1FD3A File Offset: 0x00A1DF3A
+		// Token: 0x060213F9 RID: 136185 RVA: 0x0095C7A9 File Offset: 0x0095A9A9
 		public SGameplayTagProbabilityCooldownInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C710 RID: 182032 RVA: 0x00A1FD45 File Offset: 0x00A1DF45
+		// Token: 0x060213FA RID: 136186 RVA: 0x0095C7B4 File Offset: 0x0095A9B4
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SGameplayTagProbabilityCooldownInfo(Pointer, false, true);
 		}
 
-		// Token: 0x0602C711 RID: 182033 RVA: 0x00A1FD4F File Offset: 0x00A1DF4F
+		// Token: 0x060213FB RID: 136187 RVA: 0x0095C7BE File Offset: 0x0095A9BE
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SGameplayTagProbabilityCooldownInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040176D9 RID: 95961
+		// Token: 0x040122CB RID: 74443
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SGameplayTagProbabilityCooldownInfo.SGameplayTagProbabilityCooldownInfo";
 
-		// Token: 0x040176DA RID: 95962
+		// Token: 0x040122CC RID: 74444
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040176DB RID: 95963
-		internal static int __PropertyOffset_0;
+		// Token: 0x040122CD RID: 74445
+		internal static int __PropertyOffset_GameplayTag;
 
-		// Token: 0x040176DC RID: 95964
-		internal static int __PropertyOffset_1;
+		// Token: 0x040122CE RID: 74446
+		internal static int __PropertyOffset_Probability;
 
-		// Token: 0x040176DD RID: 95965
-		internal static int __PropertyOffset_2;
+		// Token: 0x040122CF RID: 74447
+		internal static int __PropertyOffset_CooldownTime;
 	}
 }

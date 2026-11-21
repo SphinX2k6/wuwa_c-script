@@ -4,13 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002918 RID: 10520
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02002BF4 RID: 11252
 	public class IOnetimeGamepadShake : IGamepadShakeConfig
 	{
-		// Token: 0x0600E97C RID: 59772 RVA: 0x00223A2B File Offset: 0x00221C2B
-		[NullableContext(1)]
+		// Token: 0x0600F7CE RID: 63438 RVA: 0x00240D83 File Offset: 0x0023EF83
 		public static IOnetimeGamepadShake Create(IOnetimeGamepadShake? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700490E RID: 18702
-		// (get) Token: 0x0600E97D RID: 59773 RVA: 0x00223A4A File Offset: 0x00221C4A
+		// Token: 0x17004C94 RID: 19604
+		// (get) Token: 0x0600F7CF RID: 63439 RVA: 0x00240DA2 File Offset: 0x0023EFA2
 		public override EGamepadShakeType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700490F RID: 18703
-		// (get) Token: 0x0600E97E RID: 59774 RVA: 0x00223A58 File Offset: 0x00221C58
+		// Token: 0x17004C95 RID: 19605
+		// (get) Token: 0x0600F7D0 RID: 63440 RVA: 0x00240DB0 File Offset: 0x0023EFB0
 		public virtual bool? IsIgnoreTimeDilation
 		{
 			get
@@ -47,17 +44,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004910 RID: 18704
-		// (get) Token: 0x0600E97F RID: 59775 RVA: 0x00223A8E File Offset: 0x00221C8E
+		// Token: 0x17004C96 RID: 19606
+		// (get) Token: 0x0600F7D1 RID: 63441 RVA: 0x00240DE6 File Offset: 0x0023EFE6
+		[Nullable(2)]
 		public virtual string GamepadShakeTag
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.Instance.GamepadShakeTag;
 			}
 		}
 
-		// Token: 0x040080DE RID: 32990
+		// Token: 0x040087AC RID: 34732
 		private IOnetimeGamepadShake Instance;
 	}
 }

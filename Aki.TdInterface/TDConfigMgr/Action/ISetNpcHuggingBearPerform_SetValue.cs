@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E37 RID: 7735
+	// Token: 0x0200206A RID: 8298
 	public class ISetNpcHuggingBearPerform_SetValue
 	{
-		// Token: 0x040062F1 RID: 25329
+		// Token: 0x040068C8 RID: 26824
 		public ENpcGroupPerformType Type;
 
-		// Token: 0x040062F2 RID: 25330
-		[Nullable(1)]
+		// Token: 0x040068C9 RID: 26825
 		public IPlayerInitiator Initiator;
 
-		// Token: 0x040062F3 RID: 25331
+		// Token: 0x040068CA RID: 26826
 		public int Target;
 
-		// Token: 0x040062F4 RID: 25332
+		// Token: 0x040068CB RID: 26827
 		public ENpcGroupPerformNpcType NpcType;
 	}
 }

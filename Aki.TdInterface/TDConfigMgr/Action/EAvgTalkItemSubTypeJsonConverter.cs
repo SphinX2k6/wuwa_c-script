@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022B2 RID: 8882
+	// Token: 0x02002521 RID: 9505
 	public class EAvgTalkItemSubTypeJsonConverter : JsonConverter<EAvgTalkItemSubType>
 	{
-		// Token: 0x0600C2A1 RID: 49825 RVA: 0x001C7134 File Offset: 0x001C5334
+		// Token: 0x0600CE70 RID: 52848 RVA: 0x001DEF3C File Offset: 0x001DD13C
 		public override EAvgTalkItemSubType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EAvgTalkItemSubTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C2A2 RID: 49826 RVA: 0x001C7158 File Offset: 0x001C5358
+		// Token: 0x0600CE71 RID: 52849 RVA: 0x001DEF60 File Offset: 0x001DD160
 		public override void Write(Utf8JsonWriter writer, EAvgTalkItemSubType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

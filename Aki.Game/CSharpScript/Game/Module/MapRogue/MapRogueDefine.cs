@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055AF RID: 21935
+	// Token: 0x02004585 RID: 17797
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueDefine
 	{
-		// Token: 0x06037EAF RID: 229039 RVA: 0x00D3FC12 File Offset: 0x00D3DE12
+		// Token: 0x0602CDAD RID: 183725 RVA: 0x00C8D95A File Offset: 0x00C8BB5A
 		public static int GridLocationToIndex(int x, int y, int width)
 		{
 			return y * width + x;
 		}
 
-		// Token: 0x06037EB0 RID: 229040 RVA: 0x00D3FC1C File Offset: 0x00D3DE1C
+		// Token: 0x0602CDAE RID: 183726 RVA: 0x00C8D964 File Offset: 0x00C8BB64
 		public static MapRogueMapPoint IndexToGridLocation(int index, int width)
 		{
 			int x = index % width;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x06037EB1 RID: 229041 RVA: 0x00D3FC4C File Offset: 0x00D3DE4C
+		// Token: 0x0602CDAF RID: 183727 RVA: 0x00C8D994 File Offset: 0x00C8BB94
 		public static int[] ParseNumbers(string input, string separator = "#")
 		{
 			string[] array = input.Split(separator, StringSplitOptions.None);
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return list.ToArray();
 		}
 
-		// Token: 0x06037EB2 RID: 229042 RVA: 0x00D3FC98 File Offset: 0x00D3DE98
+		// Token: 0x0602CDB0 RID: 183728 RVA: 0x00C8D9E0 File Offset: 0x00C8BBE0
 		public static bool InAxisAlignedDiamond(int x, int y, IGridRangeInfo info)
 		{
 			double num = Math.Abs((double)x - info.CenterX) / info.RadiusX;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return num + num2 <= 1.0;
 		}
 
-		// Token: 0x06037EB3 RID: 229043 RVA: 0x00D3FCE4 File Offset: 0x00D3DEE4
+		// Token: 0x0602CDB1 RID: 183729 RVA: 0x00C8DA2C File Offset: 0x00C8BC2C
 		public static GridPopupView popupModelBaseGenerator(MapGridData gridData, MapRogueGameInfo gameInfo)
 		{
 			GridPopupViewModelBase vm;
@@ -78,10 +78,10 @@ namespace CSharpScript.Game.Module.MapRogue
 			return new GridPopupView(vm);
 		}
 
-		// Token: 0x0401D602 RID: 120322
+		// Token: 0x0401808D RID: 98445
 		public const int TYPE_EVENT_WEIGHT = 1000000;
 
-		// Token: 0x0401D603 RID: 120323
+		// Token: 0x0401808E RID: 98446
 		public const int THOUSANDTH_RATIO = 1000;
 	}
 }

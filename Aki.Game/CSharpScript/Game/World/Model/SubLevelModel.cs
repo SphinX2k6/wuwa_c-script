@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.World.Model
 {
-	// Token: 0x0200452B RID: 17707
+	// Token: 0x02003450 RID: 13392
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SubLevelModel : ModelBase
 	{
-		// Token: 0x0602DBC0 RID: 187328 RVA: 0x00A82560 File Offset: 0x00A80760
+		// Token: 0x06022287 RID: 139911 RVA: 0x009AD778 File Offset: 0x009AB978
 		protected override bool OnLeaveLevel()
 		{
 			List<string> list = new List<string>();
@@ -33,51 +33,51 @@ namespace CSharpScript.Game.World.Model
 			return true;
 		}
 
-		// Token: 0x0602DBC1 RID: 187329 RVA: 0x00A8265C File Offset: 0x00A8085C
+		// Token: 0x06022288 RID: 139912 RVA: 0x009AD874 File Offset: 0x009ABA74
 		public void SetSubLevelSwitching(bool bBlockInput)
 		{
 			this.IsInSubLevelSwitchingInternal = true;
 			this.IsBlockingInputInSwitchingInternal = bBlockInput;
 		}
 
-		// Token: 0x0602DBC2 RID: 187330 RVA: 0x00A8266C File Offset: 0x00A8086C
+		// Token: 0x06022289 RID: 139913 RVA: 0x009AD884 File Offset: 0x009ABA84
 		public void UnsetSubLevelSwitching()
 		{
 			this.IsInSubLevelSwitchingInternal = false;
 			this.IsBlockingInputInSwitchingInternal = false;
 		}
 
-		// Token: 0x0602DBC3 RID: 187331 RVA: 0x00A8267C File Offset: 0x00A8087C
+		// Token: 0x0602228A RID: 139914 RVA: 0x009AD894 File Offset: 0x009ABA94
 		public bool IsInSubLevelSwitching()
 		{
 			return this.IsInSubLevelSwitchingInternal;
 		}
 
-		// Token: 0x0602DBC4 RID: 187332 RVA: 0x00A82684 File Offset: 0x00A80884
+		// Token: 0x0602228B RID: 139915 RVA: 0x009AD89C File Offset: 0x009ABA9C
 		public bool IsInSubLevelSwitchingAndBlockingInput()
 		{
 			return this.IsInSubLevelSwitchingInternal && this.IsBlockingInputInSwitchingInternal;
 		}
 
-		// Token: 0x0602DBC5 RID: 187333 RVA: 0x00A82696 File Offset: 0x00A80896
+		// Token: 0x0602228C RID: 139916 RVA: 0x009AD8AE File Offset: 0x009ABAAE
 		public Dictionary<string, SubLevel> GetAllPreloadSubLevels()
 		{
 			return this.PreloadLevelMap;
 		}
 
-		// Token: 0x0602DBC6 RID: 187334 RVA: 0x00A8269E File Offset: 0x00A8089E
+		// Token: 0x0602228D RID: 139917 RVA: 0x009AD8B6 File Offset: 0x009ABAB6
 		public Dictionary<string, SubLevel> GetAllSubLevels()
 		{
 			return this.SubLevelMap;
 		}
 
-		// Token: 0x0602DBC7 RID: 187335 RVA: 0x00A826A6 File Offset: 0x00A808A6
+		// Token: 0x0602228E RID: 139918 RVA: 0x009AD8BE File Offset: 0x009ABABE
 		public Dictionary<string, SubLevel> GetAllUnloadSubLevels()
 		{
 			return this.UnloadLevelMap;
 		}
 
-		// Token: 0x0602DBC8 RID: 187336 RVA: 0x00A826B0 File Offset: 0x00A808B0
+		// Token: 0x0602228F RID: 139919 RVA: 0x009AD8C8 File Offset: 0x009ABAC8
 		[return: Nullable(2)]
 		public SubLevel AddPreloadSubLevel(string path)
 		{
@@ -106,13 +106,13 @@ namespace CSharpScript.Game.World.Model
 			return subLevel;
 		}
 
-		// Token: 0x0602DBC9 RID: 187337 RVA: 0x00A8273F File Offset: 0x00A8093F
+		// Token: 0x06022290 RID: 139920 RVA: 0x009AD957 File Offset: 0x009ABB57
 		public bool RemovePreloadSubLevel(string path)
 		{
 			return this.PreloadLevelMap.Remove(path);
 		}
 
-		// Token: 0x0602DBCA RID: 187338 RVA: 0x00A82750 File Offset: 0x00A80950
+		// Token: 0x06022291 RID: 139921 RVA: 0x009AD968 File Offset: 0x009ABB68
 		[return: Nullable(2)]
 		public SubLevel GetPreloadSubLevel(string path)
 		{
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.World.Model
 			return result;
 		}
 
-		// Token: 0x0602DBCB RID: 187339 RVA: 0x00A82770 File Offset: 0x00A80970
+		// Token: 0x06022292 RID: 139922 RVA: 0x009AD988 File Offset: 0x009ABB88
 		[return: Nullable(2)]
 		public SubLevel GetPreloadOrLoadedSubLevel(string path)
 		{
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.World.Model
 			return result;
 		}
 
-		// Token: 0x0602DBCC RID: 187340 RVA: 0x00A827A4 File Offset: 0x00A809A4
+		// Token: 0x06022293 RID: 139923 RVA: 0x009AD9BC File Offset: 0x009ABBBC
 		[return: Nullable(2)]
 		public SubLevel GetSubLevel(string path)
 		{
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.World.Model
 			return result;
 		}
 
-		// Token: 0x0602DBCD RID: 187341 RVA: 0x00A827C4 File Offset: 0x00A809C4
+		// Token: 0x06022294 RID: 139924 RVA: 0x009AD9DC File Offset: 0x009ABBDC
 		[return: Nullable(2)]
 		public SubLevel AddSubLevel(string path, bool visibleAfterLoad)
 		{
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.World.Model
 			return subLevel;
 		}
 
-		// Token: 0x0602DBCE RID: 187342 RVA: 0x00A82820 File Offset: 0x00A80A20
+		// Token: 0x06022295 RID: 139925 RVA: 0x009ADA38 File Offset: 0x009ABC38
 		[NullableContext(0)]
 		public UniTask<bool> RemoveSubLevel([Nullable(1)] string path, bool bForceRemove = false)
 		{
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.World.Model
 			return <RemoveSubLevel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DBCF RID: 187343 RVA: 0x00A82874 File Offset: 0x00A80A74
+		// Token: 0x06022296 RID: 139926 RVA: 0x009ADA8C File Offset: 0x009ABC8C
 		public void MovePreloadSubLevelToSubLevel(string path)
 		{
 			SubLevel preloadSubLevel = this.GetPreloadSubLevel(path);
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.World.Model
 			this.AddSubLevelInstance(preloadSubLevel);
 		}
 
-		// Token: 0x0602DBD0 RID: 187344 RVA: 0x00A828A0 File Offset: 0x00A80AA0
+		// Token: 0x06022297 RID: 139927 RVA: 0x009ADAB8 File Offset: 0x009ABCB8
 		private bool AddSubLevelInstance(SubLevel level)
 		{
 			if (this.SubLevelMap.ContainsKey(level.Path))
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.World.Model
 			return true;
 		}
 
-		// Token: 0x0602DBD1 RID: 187345 RVA: 0x00A82900 File Offset: 0x00A80B00
+		// Token: 0x06022298 RID: 139928 RVA: 0x009ADB18 File Offset: 0x009ABD18
 		[return: Nullable(2)]
 		public SubLevel GetUnloadSubLevel(string path)
 		{
@@ -226,20 +226,20 @@ namespace CSharpScript.Game.World.Model
 			return result;
 		}
 
-		// Token: 0x0602DBD2 RID: 187346 RVA: 0x00A82920 File Offset: 0x00A80B20
+		// Token: 0x06022299 RID: 139929 RVA: 0x009ADB38 File Offset: 0x009ABD38
 		public void AddUnloadSubLevel(string path, SubLevel subLevel)
 		{
 			this.UnloadLevelMap[path] = subLevel;
 		}
 
-		// Token: 0x0602DBD3 RID: 187347 RVA: 0x00A8292F File Offset: 0x00A80B2F
+		// Token: 0x0602229A RID: 139930 RVA: 0x009ADB47 File Offset: 0x009ABD47
 		public bool RemoveUnloadSubLevel(string path)
 		{
 			return this.UnloadLevelMap.Remove(path);
 		}
 
-		// Token: 0x17007513 RID: 29971
-		// (get) Token: 0x0602DBD4 RID: 187348 RVA: 0x00A8293D File Offset: 0x00A80B3D
+		// Token: 0x170047C6 RID: 18374
+		// (get) Token: 0x0602229B RID: 139931 RVA: 0x009ADB55 File Offset: 0x009ABD55
 		public static SubLevelModel Instance
 		{
 			get
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.World.Model
 			}
 		}
 
-		// Token: 0x0602DBD5 RID: 187349 RVA: 0x00A82944 File Offset: 0x00A80B44
+		// Token: 0x0602229C RID: 139932 RVA: 0x009ADB5C File Offset: 0x009ABD5C
 		public static SubLevelModel GetOrCreateInstance()
 		{
 			if (SubLevelModel._Instance == null)
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.World.Model
 			return SubLevelModel._Instance;
 		}
 
-		// Token: 0x0602DBD6 RID: 187350 RVA: 0x00A82958 File Offset: 0x00A80B58
+		// Token: 0x0602229D RID: 139933 RVA: 0x009ADB70 File Offset: 0x009ABD70
 		public static bool CreateInstance()
 		{
 			if (SubLevelModel._Instance != null)
@@ -269,39 +269,39 @@ namespace CSharpScript.Game.World.Model
 			return true;
 		}
 
-		// Token: 0x0602DBD7 RID: 187351 RVA: 0x00A8296E File Offset: 0x00A80B6E
+		// Token: 0x0602229E RID: 139934 RVA: 0x009ADB86 File Offset: 0x009ABD86
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DBD8 RID: 187352 RVA: 0x00A82970 File Offset: 0x00A80B70
+		// Token: 0x0602229F RID: 139935 RVA: 0x009ADB88 File Offset: 0x009ABD88
 		public static void ResetStaticDefaultValue()
 		{
 			SubLevelModel._Instance = null;
 		}
 
-		// Token: 0x0602DBD9 RID: 187353 RVA: 0x00A82978 File Offset: 0x00A80B78
+		// Token: 0x060222A0 RID: 139936 RVA: 0x009ADB90 File Offset: 0x009ABD90
 		static SubLevelModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SubLevelModel.CreateStaticDefaultValue), new Action(SubLevelModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040186AC RID: 100012
+		// Token: 0x04012CD0 RID: 77008
 		private readonly Dictionary<string, SubLevel> PreloadLevelMap = new Dictionary<string, SubLevel>();
 
-		// Token: 0x040186AD RID: 100013
+		// Token: 0x04012CD1 RID: 77009
 		private readonly Dictionary<string, SubLevel> SubLevelMap = new Dictionary<string, SubLevel>();
 
-		// Token: 0x040186AE RID: 100014
+		// Token: 0x04012CD2 RID: 77010
 		private readonly Dictionary<string, SubLevel> UnloadLevelMap = new Dictionary<string, SubLevel>();
 
-		// Token: 0x040186AF RID: 100015
+		// Token: 0x04012CD3 RID: 77011
 		private bool IsInSubLevelSwitchingInternal;
 
-		// Token: 0x040186B0 RID: 100016
+		// Token: 0x04012CD4 RID: 77012
 		private bool IsBlockingInputInSwitchingInternal;
 
-		// Token: 0x040186B1 RID: 100017
+		// Token: 0x04012CD5 RID: 77013
 		[Nullable(2)]
 		private static SubLevelModel _Instance;
 	}

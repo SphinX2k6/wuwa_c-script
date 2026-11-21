@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 {
-	// Token: 0x02007111 RID: 28945
+	// Token: 0x0200633F RID: 25407
 	public interface IManipulateInteractHandler
 	{
-		// Token: 0x06046AB2 RID: 289458
+		// Token: 0x0603D8F7 RID: 252151
 		bool Start();
 
-		// Token: 0x06046AB3 RID: 289459
+		// Token: 0x0603D8F8 RID: 252152
 		void End();
 	}
 }

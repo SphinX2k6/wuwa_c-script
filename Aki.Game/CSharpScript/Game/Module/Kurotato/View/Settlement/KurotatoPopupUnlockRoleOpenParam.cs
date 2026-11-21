@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 {
-	// Token: 0x02005722 RID: 22306
+	// Token: 0x020046F9 RID: 18169
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoPopupUnlockRoleOpenParam : IKurotatoPopupUnlockRoleOpenParam
 	{
-		// Token: 0x1700885E RID: 34910
-		// (get) Token: 0x06038B78 RID: 232312 RVA: 0x00D75714 File Offset: 0x00D73914
-		// (set) Token: 0x06038B79 RID: 232313 RVA: 0x00D7571C File Offset: 0x00D7391C
+		// Token: 0x17005C26 RID: 23590
+		// (get) Token: 0x0602DA87 RID: 187015 RVA: 0x00CC3D48 File Offset: 0x00CC1F48
+		// (set) Token: 0x0602DA88 RID: 187016 RVA: 0x00CC3D50 File Offset: 0x00CC1F50
 		public List<int> RoleIds { get; set; } = new List<int>();
 
-		// Token: 0x1700885F RID: 34911
-		// (get) Token: 0x06038B7A RID: 232314 RVA: 0x00D75725 File Offset: 0x00D73925
-		// (set) Token: 0x06038B7B RID: 232315 RVA: 0x00D7572D File Offset: 0x00D7392D
+		// Token: 0x17005C27 RID: 23591
+		// (get) Token: 0x0602DA89 RID: 187017 RVA: 0x00CC3D59 File Offset: 0x00CC1F59
+		// (set) Token: 0x0602DA8A RID: 187018 RVA: 0x00CC3D61 File Offset: 0x00CC1F61
 		public int Index { get; set; }
 	}
 }

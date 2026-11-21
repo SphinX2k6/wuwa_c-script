@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AA0 RID: 6816
+	// Token: 0x02001C39 RID: 7225
 	public class IFlowTemplateMode_SetValue
 	{
-		// Token: 0x04005A0C RID: 23052
+		// Token: 0x04005E7C RID: 24188
 		public int Id;
 
-		// Token: 0x04005A0D RID: 23053
+		// Token: 0x04005E7D RID: 24189
 		public int CameraId;
 	}
 }

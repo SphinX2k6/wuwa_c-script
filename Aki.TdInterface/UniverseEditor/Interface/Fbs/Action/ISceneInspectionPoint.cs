@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F30 RID: 28464
+	// Token: 0x020076B7 RID: 30391
 	public struct ISceneInspectionPoint : IFlatbufferObject
 	{
-		// Token: 0x1700D392 RID: 54162
-		// (get) Token: 0x060324A3 RID: 205987 RVA: 0x006CAE2F File Offset: 0x006C902F
+		// Token: 0x1700DEEE RID: 57070
+		// (get) Token: 0x060354FB RID: 218363 RVA: 0x00726D97 File Offset: 0x00724F97
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060324A4 RID: 205988 RVA: 0x006CAE3C File Offset: 0x006C903C
+		// Token: 0x060354FC RID: 218364 RVA: 0x00726DA4 File Offset: 0x00724FA4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060324A5 RID: 205989 RVA: 0x006CAE44 File Offset: 0x006C9044
+		// Token: 0x060354FD RID: 218365 RVA: 0x00726DAC File Offset: 0x00724FAC
 		public static ISceneInspectionPoint GetRootAsISceneInspectionPoint(ByteBuffer _bb)
 		{
 			return ISceneInspectionPoint.GetRootAsISceneInspectionPoint(_bb, default(ISceneInspectionPoint));
 		}
 
-		// Token: 0x060324A6 RID: 205990 RVA: 0x006CAE60 File Offset: 0x006C9060
+		// Token: 0x060354FE RID: 218366 RVA: 0x00726DC8 File Offset: 0x00724FC8
 		public static ISceneInspectionPoint GetRootAsISceneInspectionPoint(ByteBuffer _bb, ISceneInspectionPoint obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060324A7 RID: 205991 RVA: 0x006CAE7D File Offset: 0x006C907D
+		// Token: 0x060354FF RID: 218367 RVA: 0x00726DE5 File Offset: 0x00724FE5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060324A8 RID: 205992 RVA: 0x006CAE8C File Offset: 0x006C908C
+		// Token: 0x06035500 RID: 218368 RVA: 0x00726DF4 File Offset: 0x00724FF4
 		public ISceneInspectionPoint __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D393 RID: 54163
-		// (get) Token: 0x060324A9 RID: 205993 RVA: 0x006CAE9C File Offset: 0x006C909C
+		// Token: 0x1700DEEF RID: 57071
+		// (get) Token: 0x06035501 RID: 218369 RVA: 0x00726E04 File Offset: 0x00725004
 		public IVectorInfo? InteractPointPos
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060324AA RID: 205994 RVA: 0x006CAEFC File Offset: 0x006C90FC
+		// Token: 0x06035502 RID: 218370 RVA: 0x00726E64 File Offset: 0x00725064
 		public IActionInfo? ActionList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700D394 RID: 54164
-		// (get) Token: 0x060324AB RID: 205995 RVA: 0x006CAF5C File Offset: 0x006C915C
+		// Token: 0x1700DEF0 RID: 57072
+		// (get) Token: 0x06035503 RID: 218371 RVA: 0x00726EC4 File Offset: 0x007250C4
 		public int ActionListLength
 		{
 			get
@@ -90,7 +90,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060324AC RID: 205996 RVA: 0x006CAF87 File Offset: 0x006C9187
+		// Token: 0x06035504 RID: 218372 RVA: 0x00726EEF File Offset: 0x007250EF
 		public static Offset<ISceneInspectionPoint> CreateISceneInspectionPoint(FlatBufferBuilder builder, Offset<IVectorInfo> InteractPointPosOffset = default(Offset<IVectorInfo>), VectorOffset ActionListOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -99,25 +99,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISceneInspectionPoint.EndISceneInspectionPoint(builder);
 		}
 
-		// Token: 0x060324AD RID: 205997 RVA: 0x006CAFA4 File Offset: 0x006C91A4
+		// Token: 0x06035505 RID: 218373 RVA: 0x00726F0C File Offset: 0x0072510C
 		public static void StartISceneInspectionPoint(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060324AE RID: 205998 RVA: 0x006CAFAD File Offset: 0x006C91AD
+		// Token: 0x06035506 RID: 218374 RVA: 0x00726F15 File Offset: 0x00725115
 		public static void AddInteractPointPos(FlatBufferBuilder builder, Offset<IVectorInfo> interactPointPosOffset)
 		{
 			builder.AddOffset(0, interactPointPosOffset.Value, 0);
 		}
 
-		// Token: 0x060324AF RID: 205999 RVA: 0x006CAFBD File Offset: 0x006C91BD
+		// Token: 0x06035507 RID: 218375 RVA: 0x00726F25 File Offset: 0x00725125
 		public static void AddActionList(FlatBufferBuilder builder, VectorOffset actionListOffset)
 		{
 			builder.AddOffset(1, actionListOffset.Value, 0);
 		}
 
-		// Token: 0x060324B0 RID: 206000 RVA: 0x006CAFD0 File Offset: 0x006C91D0
+		// Token: 0x06035508 RID: 218376 RVA: 0x00726F38 File Offset: 0x00725138
 		public static VectorOffset CreateActionListVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -128,7 +128,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x060324B1 RID: 206001 RVA: 0x006CB010 File Offset: 0x006C9210
+		// Token: 0x06035509 RID: 218377 RVA: 0x00726F78 File Offset: 0x00725178
 		public static VectorOffset CreateActionListVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x060324B2 RID: 206002 RVA: 0x006CB02A File Offset: 0x006C922A
+		// Token: 0x0603550A RID: 218378 RVA: 0x00726F92 File Offset: 0x00725192
 		public static VectorOffset CreateActionListVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x060324B3 RID: 206003 RVA: 0x006CB048 File Offset: 0x006C9248
+		// Token: 0x0603550B RID: 218379 RVA: 0x00726FB0 File Offset: 0x007251B0
 		public static VectorOffset CreateActionListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -152,19 +152,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x060324B4 RID: 206004 RVA: 0x006CB061 File Offset: 0x006C9261
+		// Token: 0x0603550C RID: 218380 RVA: 0x00726FC9 File Offset: 0x007251C9
 		public static void StartActionListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060324B5 RID: 206005 RVA: 0x006CB06C File Offset: 0x006C926C
+		// Token: 0x0603550D RID: 218381 RVA: 0x00726FD4 File Offset: 0x007251D4
 		public static Offset<ISceneInspectionPoint> EndISceneInspectionPoint(FlatBufferBuilder builder)
 		{
 			return new Offset<ISceneInspectionPoint>(builder.EndTable());
 		}
 
-		// Token: 0x060324B6 RID: 206006 RVA: 0x006CB07C File Offset: 0x006C927C
+		// Token: 0x0603550E RID: 218382 RVA: 0x00726FE4 File Offset: 0x007251E4
 		public ISceneInspectionPointT UnPack()
 		{
 			ISceneInspectionPointT sceneInspectionPointT = new ISceneInspectionPointT();
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return sceneInspectionPointT;
 		}
 
-		// Token: 0x060324B7 RID: 206007 RVA: 0x006CB098 File Offset: 0x006C9298
+		// Token: 0x0603550F RID: 218383 RVA: 0x00727000 File Offset: 0x00725200
 		public void UnPackTo(ISceneInspectionPointT _o)
 		{
 			_o.InteractPointPos = ((this.InteractPointPos != null) ? this.InteractPointPos.Value.UnPack() : null);
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060324B8 RID: 206008 RVA: 0x006CB128 File Offset: 0x006C9328
+		// Token: 0x06035510 RID: 218384 RVA: 0x00727090 File Offset: 0x00725290
 		public static Offset<ISceneInspectionPoint> Pack(FlatBufferBuilder builder, ISceneInspectionPointT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISceneInspectionPoint.CreateISceneInspectionPoint(builder, interactPointPosOffset, actionListOffset);
 		}
 
-		// Token: 0x0401191F RID: 71967
+		// Token: 0x040128A7 RID: 75943
 		private Table __p;
 	}
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02003273 RID: 12915
+// Token: 0x020027E2 RID: 10210
 public interface ITagTask
 {
-	// Token: 0x0601BF10 RID: 114448
+	// Token: 0x06019AF3 RID: 105203
 	void EndTask();
 }

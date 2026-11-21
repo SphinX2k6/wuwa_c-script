@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001148 RID: 4424
+// Token: 0x020005FC RID: 1532
 [NullableContext(1)]
 public interface IBabelTowerTeamTab
 {
-	// Token: 0x17000A2B RID: 2603
-	// (get) Token: 0x06007435 RID: 29749
-	// (set) Token: 0x06007436 RID: 29750
+	// Token: 0x17000A4B RID: 2635
+	// (get) Token: 0x060047CC RID: 18380
+	// (set) Token: 0x060047CD RID: 18381
 	EBabelTowerTeamTabType TabType { get; set; }
 
-	// Token: 0x17000A2C RID: 2604
-	// (get) Token: 0x06007437 RID: 29751
-	// (set) Token: 0x06007438 RID: 29752
+	// Token: 0x17000A4C RID: 2636
+	// (get) Token: 0x060047CE RID: 18382
+	// (set) Token: 0x060047CF RID: 18383
 	string Title { get; set; }
 }

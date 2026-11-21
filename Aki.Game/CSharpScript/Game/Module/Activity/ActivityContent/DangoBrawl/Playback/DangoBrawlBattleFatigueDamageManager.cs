@@ -4,15 +4,15 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 {
-	// Token: 0x02006860 RID: 26720
+	// Token: 0x020057B0 RID: 22448
 	public class DangoBrawlBattleFatigueDamageManager
 	{
-		// Token: 0x06042B90 RID: 273296 RVA: 0x0103AADA File Offset: 0x01038CDA
+		// Token: 0x060376E5 RID: 227045 RVA: 0x00F7C026 File Offset: 0x00F7A226
 		public void Init()
 		{
 		}
 
-		// Token: 0x06042B91 RID: 273297 RVA: 0x0103AADC File Offset: 0x01038CDC
+		// Token: 0x060376E6 RID: 227046 RVA: 0x00F7C028 File Offset: 0x00F7A228
 		[NullableContext(1)]
 		public void OnActivateGroup(IBattleActionGroup group)
 		{
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042B92 RID: 273298 RVA: 0x0103AB8C File Offset: 0x01038D8C
+		// Token: 0x060376E7 RID: 227047 RVA: 0x00F7C0D8 File Offset: 0x00F7A2D8
 		public void Destroy()
 		{
 		}

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006B0 RID: 1712
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000751 RID: 1873
 	public class ISceneTextGuideUiContent
 	{
-		// Token: 0x060024B4 RID: 9396 RVA: 0x00063478 File Offset: 0x00061678
+		// Token: 0x060027D0 RID: 10192 RVA: 0x0006A440 File Offset: 0x00068640
 		private ISceneTextGuideUiContent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060024B5 RID: 9397 RVA: 0x000634B0 File Offset: 0x000616B0
+		// Token: 0x060027D1 RID: 10193 RVA: 0x0006A478 File Offset: 0x00068678
 		public static ISceneTextGuideUiContent Create([Nullable(2)] ISceneTextGuideUiContent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060024B6 RID: 9398 RVA: 0x000634C3 File Offset: 0x000616C3
+		// Token: 0x060027D2 RID: 10194 RVA: 0x0006A48B File Offset: 0x0006868B
 		public static ISceneTextGuideUiContent CreateFromSetValue([Nullable(2)] ISceneTextGuideUiContent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060024B7 RID: 9399 RVA: 0x000634D6 File Offset: 0x000616D6
+		// Token: 0x060027D3 RID: 10195 RVA: 0x0006A49E File Offset: 0x0006869E
 		public ISceneTextGuideUiContent_SetValue ToSetValue()
 		{
 			return new ISceneTextGuideUiContent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009B1 RID: 2481
-		// (get) Token: 0x060024B8 RID: 9400 RVA: 0x0006350D File Offset: 0x0006170D
-		// (set) Token: 0x060024B9 RID: 9401 RVA: 0x00063538 File Offset: 0x00061738
+		// Token: 0x17000A6D RID: 2669
+		// (get) Token: 0x060027D4 RID: 10196 RVA: 0x0006A4D5 File Offset: 0x000686D5
+		// (set) Token: 0x060027D5 RID: 10197 RVA: 0x0006A500 File Offset: 0x00068700
 		public virtual string TidText
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009B2 RID: 2482
-		// (get) Token: 0x060024BA RID: 9402 RVA: 0x00063548 File Offset: 0x00061748
-		// (set) Token: 0x060024BB RID: 9403 RVA: 0x000635DB File Offset: 0x000617DB
+		// Token: 0x17000A6E RID: 2670
+		// (get) Token: 0x060027D6 RID: 10198 RVA: 0x0006A510 File Offset: 0x00068710
+		// (set) Token: 0x060027D7 RID: 10199 RVA: 0x0006A5A3 File Offset: 0x000687A3
 		public virtual List<ISceneTextGuideUiActionMappingIcon> ActionMappingIconList
 		{
 			get
@@ -124,9 +122,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009B3 RID: 2483
-		// (get) Token: 0x060024BC RID: 9404 RVA: 0x000635F0 File Offset: 0x000617F0
-		// (set) Token: 0x060024BD RID: 9405 RVA: 0x00063617 File Offset: 0x00061817
+		// Token: 0x17000A6F RID: 2671
+		// (get) Token: 0x060027D8 RID: 10200 RVA: 0x0006A5B8 File Offset: 0x000687B8
+		// (set) Token: 0x060027D9 RID: 10201 RVA: 0x0006A5DF File Offset: 0x000687DF
 		public virtual List<string> MobileIconList
 		{
 			get
@@ -148,11 +146,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009B4 RID: 2484
-		// (get) Token: 0x060024BE RID: 9406 RVA: 0x00063625 File Offset: 0x00061825
-		// (set) Token: 0x060024BF RID: 9407 RVA: 0x0006363C File Offset: 0x0006183C
+		// Token: 0x17000A70 RID: 2672
+		// (get) Token: 0x060027DA RID: 10202 RVA: 0x0006A5ED File Offset: 0x000687ED
+		// (set) Token: 0x060027DB RID: 10203 RVA: 0x0006A604 File Offset: 0x00068804
+		[Nullable(2)]
 		public virtual string EdTidText
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.PocoInterface != null)
@@ -161,24 +161,25 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return null;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().EdTidText = value;
 			}
 		}
 
-		// Token: 0x0400192B RID: 6443
+		// Token: 0x04001B28 RID: 6952
 		[Nullable(2)]
 		protected ISceneTextGuideUiContent FbInstance;
 
-		// Token: 0x0400192C RID: 6444
+		// Token: 0x04001B29 RID: 6953
 		[Nullable(2)]
 		protected ISceneTextGuideUiContent_SetValue PocoInterface;
 
-		// Token: 0x0400192D RID: 6445
+		// Token: 0x04001B2A RID: 6954
 		private List<ISceneTextGuideUiActionMappingIcon> _ActionMappingIconListCache;
 
-		// Token: 0x0400192E RID: 6446
+		// Token: 0x04001B2B RID: 6955
 		private bool _ActionMappingIconListInited;
 	}
 }

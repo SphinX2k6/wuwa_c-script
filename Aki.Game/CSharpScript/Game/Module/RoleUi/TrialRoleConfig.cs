@@ -5,13 +5,13 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.RoleUi
 {
-	// Token: 0x02004CE6 RID: 19686
+	// Token: 0x02003C98 RID: 15512
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class TrialRoleConfig : ConfigBase
 	{
-		// Token: 0x06032D6D RID: 208237 RVA: 0x00BD93B8 File Offset: 0x00BD75B8
+		// Token: 0x06027B48 RID: 162632 RVA: 0x00B1ECC0 File Offset: 0x00B1CEC0
 		public TrialRoleInfo? GetTrialRoleConfig(int id)
 		{
 			TrialRoleInfo? config = ConfigTrialRoleInfoById.GetConfig(id, true);
@@ -22,20 +22,20 @@ namespace CSharpScript.Game.Module.RoleUi
 			return null;
 		}
 
-		// Token: 0x06032D6E RID: 208238 RVA: 0x00BD93EC File Offset: 0x00BD75EC
+		// Token: 0x06027B49 RID: 162633 RVA: 0x00B1ECF4 File Offset: 0x00B1CEF4
 		[NullableContext(2)]
 		public IReadOnlyList<TrialRoleInfo> GetTrialRoleConfigsByGroupId(int id)
 		{
 			return ConfigTrialRoleInfoByGroupId.GetConfigList(id, true);
 		}
 
-		// Token: 0x06032D6F RID: 208239 RVA: 0x00BD93F5 File Offset: 0x00BD75F5
+		// Token: 0x06027B4A RID: 162634 RVA: 0x00B1ECFD File Offset: 0x00B1CEFD
 		public IReadOnlyList<TrialRoleInfo> GetTrialRoleConfigListByType(ETrialRoleType trialRoleType)
 		{
 			return ConfigTrialRoleInfoByType.GetConfigList((int)trialRoleType, true) ?? new List<TrialRoleInfo>();
 		}
 
-		// Token: 0x06032D70 RID: 208240 RVA: 0x00BD9408 File Offset: 0x00BD7608
+		// Token: 0x06027B4B RID: 162635 RVA: 0x00B1ED10 File Offset: 0x00B1CF10
 		public Dictionary<int, List<TrialRoleInfo>> GetTrialRoleAllConfigByType(ETrialRoleType trialRoleType)
 		{
 			Dictionary<int, List<TrialRoleInfo>> dictionary = new Dictionary<int, List<TrialRoleInfo>>();
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return dictionary;
 		}
 
-		// Token: 0x06032D71 RID: 208241 RVA: 0x00BD94E4 File Offset: 0x00BD76E4
+		// Token: 0x06027B4C RID: 162636 RVA: 0x00B1EDEC File Offset: 0x00B1CFEC
 		public RoleInfo? GetRoleConfigByTrialRoleId(int id)
 		{
 			TrialRoleInfo? trialRoleConfig = this.GetTrialRoleConfig(id);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return null;
 		}
 
-		// Token: 0x06032D72 RID: 208242 RVA: 0x00BD9544 File Offset: 0x00BD7744
+		// Token: 0x06027B4D RID: 162637 RVA: 0x00B1EE4C File Offset: 0x00B1D04C
 		public RoleInfo? GetRoleConfigByGroupId(int id)
 		{
 			IReadOnlyList<TrialRoleInfo> trialRoleConfigsByGroupId = this.GetTrialRoleConfigsByGroupId(id);
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return null;
 		}
 
-		// Token: 0x06032D73 RID: 208243 RVA: 0x00BD95B8 File Offset: 0x00BD77B8
+		// Token: 0x06027B4E RID: 162638 RVA: 0x00B1EEC0 File Offset: 0x00B1D0C0
 		public int? GetTrialRoleGroupId(int id)
 		{
 			TrialRoleInfo? trialRoleConfig = this.GetTrialRoleConfig(id);
@@ -99,8 +99,8 @@ namespace CSharpScript.Game.Module.RoleUi
 			return new int?(trialRoleConfig.GetValueOrDefault().GroupId);
 		}
 
-		// Token: 0x17007D9F RID: 32159
-		// (get) Token: 0x06032D74 RID: 208244 RVA: 0x00BD95F4 File Offset: 0x00BD77F4
+		// Token: 0x17005149 RID: 20809
+		// (get) Token: 0x06027B4F RID: 162639 RVA: 0x00B1EEFC File Offset: 0x00B1D0FC
 		public static TrialRoleConfig Instance
 		{
 			get
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032D75 RID: 208245 RVA: 0x00BD95FB File Offset: 0x00BD77FB
+		// Token: 0x06027B50 RID: 162640 RVA: 0x00B1EF03 File Offset: 0x00B1D103
 		public static TrialRoleConfig GetOrCreateInstance()
 		{
 			if (TrialRoleConfig._Instance == null)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return TrialRoleConfig._Instance;
 		}
 
-		// Token: 0x06032D76 RID: 208246 RVA: 0x00BD960F File Offset: 0x00BD780F
+		// Token: 0x06027B51 RID: 162641 RVA: 0x00B1EF17 File Offset: 0x00B1D117
 		public static bool CreateInstance()
 		{
 			if (TrialRoleConfig._Instance != null)
@@ -130,24 +130,24 @@ namespace CSharpScript.Game.Module.RoleUi
 			return true;
 		}
 
-		// Token: 0x06032D77 RID: 208247 RVA: 0x00BD9625 File Offset: 0x00BD7825
+		// Token: 0x06027B52 RID: 162642 RVA: 0x00B1EF2D File Offset: 0x00B1D12D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06032D78 RID: 208248 RVA: 0x00BD9627 File Offset: 0x00BD7827
+		// Token: 0x06027B53 RID: 162643 RVA: 0x00B1EF2F File Offset: 0x00B1D12F
 		public static void ResetStaticDefaultValue()
 		{
 			TrialRoleConfig._Instance = null;
 		}
 
-		// Token: 0x06032D79 RID: 208249 RVA: 0x00BD962F File Offset: 0x00BD782F
+		// Token: 0x06027B54 RID: 162644 RVA: 0x00B1EF37 File Offset: 0x00B1D137
 		static TrialRoleConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TrialRoleConfig.CreateStaticDefaultValue), new Action(TrialRoleConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401B0DB RID: 110811
+		// Token: 0x04015A60 RID: 88672
 		[Nullable(2)]
 		private static TrialRoleConfig _Instance;
 	}

@@ -4,30 +4,30 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C3E RID: 7230
+	// Token: 0x020004F8 RID: 1272
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroRhythmGame.EKuroRhythmChartEventType")]
 	public enum EKuroRhythmChartEventType : byte
 	{
-		// Token: 0x0400F100 RID: 61696
+		// Token: 0x04003257 RID: 12887
 		None,
-		// Token: 0x0400F101 RID: 61697
+		// Token: 0x04003258 RID: 12888
 		Road,
-		// Token: 0x0400F102 RID: 61698
+		// Token: 0x04003259 RID: 12889
 		Jump,
-		// Token: 0x0400F103 RID: 61699
+		// Token: 0x0400325A RID: 12890
 		Guide,
-		// Token: 0x0400F104 RID: 61700
+		// Token: 0x0400325B RID: 12891
 		Tunnel,
-		// Token: 0x0400F105 RID: 61701
+		// Token: 0x0400325C RID: 12892
 		KuroFreefly,
-		// Token: 0x0400F106 RID: 61702
+		// Token: 0x0400325D RID: 12893
 		EffectStart,
-		// Token: 0x0400F107 RID: 61703
+		// Token: 0x0400325E RID: 12894
 		EffectEnd,
-		// Token: 0x0400F108 RID: 61704
+		// Token: 0x0400325F RID: 12895
 		BPMChange,
-		// Token: 0x0400F109 RID: 61705
+		// Token: 0x04003260 RID: 12896
 		EKuroRhythmChartEventType_MAX
 	}
 }

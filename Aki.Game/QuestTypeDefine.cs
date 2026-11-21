@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Quest;
 using CSharpScript.Game.Module.RecallQuest.Model.RecallQuest;
 
-// Token: 0x0200264C RID: 9804
+// Token: 0x02001B37 RID: 6967
 public static class QuestTypeDefine
 {
-	// Token: 0x06014129 RID: 82217 RVA: 0x0050F31C File Offset: 0x0050D51C
+	// Token: 0x0601160B RID: 71179 RVA: 0x0051E0DC File Offset: 0x0051C2DC
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public static global::Quest CreateQuestObj(IQuest questConfig)

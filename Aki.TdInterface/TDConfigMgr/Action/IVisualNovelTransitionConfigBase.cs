@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020A7 RID: 8359
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022FC RID: 8956
 	public class IVisualNovelTransitionConfigBase
 	{
-		// Token: 0x0600B7DC RID: 47068 RVA: 0x001A9DB4 File Offset: 0x001A7FB4
+		// Token: 0x0600C334 RID: 49972 RVA: 0x001C09FC File Offset: 0x001BEBFC
 		private IVisualNovelTransitionConfigBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B7DD RID: 47069 RVA: 0x001A9DEC File Offset: 0x001A7FEC
+		// Token: 0x0600C335 RID: 49973 RVA: 0x001C0A34 File Offset: 0x001BEC34
 		public static IVisualNovelTransitionConfigBase Create([Nullable(2)] IVisualNovelTransitionConfigBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B7DE RID: 47070 RVA: 0x001A9DFF File Offset: 0x001A7FFF
+		// Token: 0x0600C336 RID: 49974 RVA: 0x001C0A47 File Offset: 0x001BEC47
 		public static IVisualNovelTransitionConfigBase CreateFromSetValue([Nullable(2)] IVisualNovelTransitionConfigBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B7DF RID: 47071 RVA: 0x001A9E12 File Offset: 0x001A8012
+		// Token: 0x0600C337 RID: 49975 RVA: 0x001C0A5A File Offset: 0x001BEC5A
 		public IVisualNovelTransitionConfigBase_SetValue ToSetValue()
 		{
 			return new IVisualNovelTransitionConfigBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700384C RID: 14412
-		// (get) Token: 0x0600B7E0 RID: 47072 RVA: 0x001A9E25 File Offset: 0x001A8025
-		// (set) Token: 0x0600B7E1 RID: 47073 RVA: 0x001A9E50 File Offset: 0x001A8050
+		// Token: 0x17003B30 RID: 15152
+		// (get) Token: 0x0600C338 RID: 49976 RVA: 0x001C0A6D File Offset: 0x001BEC6D
+		// (set) Token: 0x0600C339 RID: 49977 RVA: 0x001C0A98 File Offset: 0x001BEC98
 		public virtual EVisualNovelTransitionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E4F RID: 28239
+		// Token: 0x0400746D RID: 29805
 		[Nullable(2)]
 		protected IVisualNovelTransitionConfigBase FbInstance;
 
-		// Token: 0x04006E50 RID: 28240
+		// Token: 0x0400746E RID: 29806
 		[Nullable(2)]
 		protected IVisualNovelTransitionConfigBase_SetValue PocoInterface;
 	}

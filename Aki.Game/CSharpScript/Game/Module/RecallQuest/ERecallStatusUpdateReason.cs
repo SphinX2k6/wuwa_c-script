@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.RecallQuest
 {
-	// Token: 0x02004F16 RID: 20246
+	// Token: 0x02003EDF RID: 16095
 	public enum ERecallStatusUpdateReason
 	{
-		// Token: 0x0401B970 RID: 113008
+		// Token: 0x04016343 RID: 90947
 		ReLogin,
-		// Token: 0x0401B971 RID: 113009
+		// Token: 0x04016344 RID: 90948
 		NotifyChange
 	}
 }

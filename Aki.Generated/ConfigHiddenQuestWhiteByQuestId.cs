@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003D6 RID: 982
+	// Token: 0x020003EC RID: 1004
 	public class ConfigHiddenQuestWhiteByQuestId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600170B RID: 5899 RVA: 0x000DBC78 File Offset: 0x000D9E78
+		// Token: 0x0600178F RID: 6031 RVA: 0x000E23CC File Offset: 0x000E05CC
 		static ConfigHiddenQuestWhiteByQuestId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHiddenQuestWhiteByQuestId.CreateStaticDefaultValue), new Action(ConfigHiddenQuestWhiteByQuestId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600170C RID: 5900 RVA: 0x000DBC98 File Offset: 0x000D9E98
+		// Token: 0x06001790 RID: 6032 RVA: 0x000E23EC File Offset: 0x000E05EC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHiddenQuestWhiteByQuestId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600170D RID: 5901 RVA: 0x000DBD17 File Offset: 0x000D9F17
+		// Token: 0x06001791 RID: 6033 RVA: 0x000E246B File Offset: 0x000E066B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHiddenQuestWhiteByQuestId.LogPair = null;
 			ConfigHiddenQuestWhiteByQuestId.HandleId = 0;
 		}
 
-		// Token: 0x0600170E RID: 5902 RVA: 0x000DBD25 File Offset: 0x000D9F25
+		// Token: 0x06001792 RID: 6034 RVA: 0x000E2479 File Offset: 0x000E0679
 		public static void Init()
 		{
 			ConfigHiddenQuestWhiteByQuestId.HandleId = ConfigCommon.InitDataStatement(ConfigHiddenQuestWhiteByQuestId.HandleId, "db_download.db", "select BinData from `HiddenQuestWhite` where QuestId=?");
 		}
 
-		// Token: 0x0600170F RID: 5903 RVA: 0x000DBD40 File Offset: 0x000D9F40
+		// Token: 0x06001793 RID: 6035 RVA: 0x000E2494 File Offset: 0x000E0694
 		public static HiddenQuestWhite? GetConfig(int p0QuestId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigHiddenQuestWhiteByQuestId.HandleId, ConfigHiddenQuestWhiteByQuestId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new HiddenQuestWhite?(rootAsHiddenQuestWhite);
 		}
 
-		// Token: 0x04001ABE RID: 6846
+		// Token: 0x04001B58 RID: 7000
 		private const string DB = "db_download.db";
 
-		// Token: 0x04001ABF RID: 6847
+		// Token: 0x04001B59 RID: 7001
 		private const string FILE = "b.包体管理.xlsx";
 
-		// Token: 0x04001AC0 RID: 6848
+		// Token: 0x04001B5A RID: 7002
 		private const string TABLE = "HiddenQuestWhite";
 
-		// Token: 0x04001AC1 RID: 6849
+		// Token: 0x04001B5B RID: 7003
 		private const string COMMAND = "select BinData from `HiddenQuestWhite` where QuestId=?";
 
-		// Token: 0x04001AC2 RID: 6850
+		// Token: 0x04001B5C RID: 7004
 		private const string KEY_PREFIX = "HiddenQuestWhiteByQuestId";
 
-		// Token: 0x04001AC3 RID: 6851
+		// Token: 0x04001B5D RID: 7005
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001AC4 RID: 6852
+		// Token: 0x04001B5E RID: 7006
 		private static int HandleId;
 	}
 }

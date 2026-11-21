@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063D2 RID: 25554
+	// Token: 0x02005350 RID: 21328
 	public class MowingRiskPercentageData : IMowingRiskPercentageData
 	{
-		// Token: 0x170093F5 RID: 37877
-		// (get) Token: 0x06040452 RID: 263250 RVA: 0x00F8B9DF File Offset: 0x00F89BDF
-		// (set) Token: 0x06040453 RID: 263251 RVA: 0x00F8B9E7 File Offset: 0x00F89BE7
+		// Token: 0x17006757 RID: 26455
+		// (get) Token: 0x06035113 RID: 217363 RVA: 0x00ED2977 File Offset: 0x00ED0B77
+		// (set) Token: 0x06035114 RID: 217364 RVA: 0x00ED297F File Offset: 0x00ED0B7F
 		public int Count { get; set; }
 
-		// Token: 0x170093F6 RID: 37878
-		// (get) Token: 0x06040454 RID: 263252 RVA: 0x00F8B9F0 File Offset: 0x00F89BF0
-		// (set) Token: 0x06040455 RID: 263253 RVA: 0x00F8B9F8 File Offset: 0x00F89BF8
+		// Token: 0x17006758 RID: 26456
+		// (get) Token: 0x06035115 RID: 217365 RVA: 0x00ED2988 File Offset: 0x00ED0B88
+		// (set) Token: 0x06035116 RID: 217366 RVA: 0x00ED2990 File Offset: 0x00ED0B90
 		public int SuperLevel { get; set; }
 
-		// Token: 0x170093F7 RID: 37879
-		// (get) Token: 0x06040456 RID: 263254 RVA: 0x00F8BA01 File Offset: 0x00F89C01
-		// (set) Token: 0x06040457 RID: 263255 RVA: 0x00F8BA09 File Offset: 0x00F89C09
+		// Token: 0x17006759 RID: 26457
+		// (get) Token: 0x06035117 RID: 217367 RVA: 0x00ED2999 File Offset: 0x00ED0B99
+		// (set) Token: 0x06035118 RID: 217368 RVA: 0x00ED29A1 File Offset: 0x00ED0BA1
 		public float Partial { get; set; }
 
-		// Token: 0x170093F8 RID: 37880
-		// (get) Token: 0x06040458 RID: 263256 RVA: 0x00F8BA12 File Offset: 0x00F89C12
-		// (set) Token: 0x06040459 RID: 263257 RVA: 0x00F8BA1A File Offset: 0x00F89C1A
+		// Token: 0x1700675A RID: 26458
+		// (get) Token: 0x06035119 RID: 217369 RVA: 0x00ED29AA File Offset: 0x00ED0BAA
+		// (set) Token: 0x0603511A RID: 217370 RVA: 0x00ED29B2 File Offset: 0x00ED0BB2
 		public float Overall { get; set; }
 	}
 }

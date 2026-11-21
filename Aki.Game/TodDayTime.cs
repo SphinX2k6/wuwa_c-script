@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002BB1 RID: 11185
+// Token: 0x0200212D RID: 8493
 [NullableContext(1)]
 [Nullable(0)]
 public class TodDayTime : IStaticVariableResetter
 {
-	// Token: 0x060172D1 RID: 94929 RVA: 0x005DFCC5 File Offset: 0x005DDEC5
+	// Token: 0x06014D02 RID: 85250 RVA: 0x0060C899 File Offset: 0x0060AA99
 	static TodDayTime()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TodDayTime.CreateStaticDefaultValue), new Action(TodDayTime.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17001F4A RID: 8010
-	// (get) Token: 0x060172D2 RID: 94930 RVA: 0x005DFCE4 File Offset: 0x005DDEE4
+	// Token: 0x17001FA2 RID: 8098
+	// (get) Token: 0x06014D03 RID: 85251 RVA: 0x0060C8B8 File Offset: 0x0060AAB8
 	private static double Rate
 	{
 		get
@@ -26,21 +26,21 @@ public class TodDayTime : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060172D3 RID: 94931 RVA: 0x005DFD0A File Offset: 0x005DDF0A
+	// Token: 0x06014D04 RID: 85252 RVA: 0x0060C8DE File Offset: 0x0060AADE
 	public static void CreateStaticDefaultValue()
 	{
 		TodDayTime.RateInternal = 0.0;
 	}
 
-	// Token: 0x060172D4 RID: 94932 RVA: 0x005DFD1A File Offset: 0x005DDF1A
+	// Token: 0x06014D05 RID: 85253 RVA: 0x0060C8EE File Offset: 0x0060AAEE
 	public static void ResetStaticDefaultValue()
 	{
 		TodDayTime.RateInternal = 0.0;
 	}
 
-	// Token: 0x17001F4B RID: 8011
-	// (get) Token: 0x060172D5 RID: 94933 RVA: 0x005DFD2A File Offset: 0x005DDF2A
-	// (set) Token: 0x060172D6 RID: 94934 RVA: 0x005DFD32 File Offset: 0x005DDF32
+	// Token: 0x17001FA3 RID: 8099
+	// (get) Token: 0x06014D06 RID: 85254 RVA: 0x0060C8FE File Offset: 0x0060AAFE
+	// (set) Token: 0x06014D07 RID: 85255 RVA: 0x0060C906 File Offset: 0x0060AB06
 	public double Second
 	{
 		get
@@ -53,8 +53,8 @@ public class TodDayTime : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17001F4C RID: 8012
-	// (get) Token: 0x060172D7 RID: 94935 RVA: 0x005DFD40 File Offset: 0x005DDF40
+	// Token: 0x17001FA4 RID: 8100
+	// (get) Token: 0x06014D08 RID: 85256 RVA: 0x0060C914 File Offset: 0x0060AB14
 	public ETodDayState DayState
 	{
 		get
@@ -63,8 +63,8 @@ public class TodDayTime : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17001F4D RID: 8013
-	// (get) Token: 0x060172D8 RID: 94936 RVA: 0x005DFD52 File Offset: 0x005DDF52
+	// Token: 0x17001FA5 RID: 8101
+	// (get) Token: 0x06014D09 RID: 85257 RVA: 0x0060C926 File Offset: 0x0060AB26
 	public double Hour
 	{
 		get
@@ -73,8 +73,8 @@ public class TodDayTime : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17001F4E RID: 8014
-	// (get) Token: 0x060172D9 RID: 94937 RVA: 0x005DFD64 File Offset: 0x005DDF64
+	// Token: 0x17001FA6 RID: 8102
+	// (get) Token: 0x06014D0A RID: 85258 RVA: 0x0060C938 File Offset: 0x0060AB38
 	public double Minute
 	{
 		get
@@ -83,8 +83,8 @@ public class TodDayTime : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17001F4F RID: 8015
-	// (get) Token: 0x060172DA RID: 94938 RVA: 0x005DFD76 File Offset: 0x005DDF76
+	// Token: 0x17001FA7 RID: 8103
+	// (get) Token: 0x06014D0B RID: 85259 RVA: 0x0060C94A File Offset: 0x0060AB4A
 	public string HourMinuteString
 	{
 		get
@@ -93,7 +93,7 @@ public class TodDayTime : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060172DB RID: 94939 RVA: 0x005DFD84 File Offset: 0x005DDF84
+	// Token: 0x06014D0C RID: 85260 RVA: 0x0060C958 File Offset: 0x0060AB58
 	public static double ConvertFromRealTimeSecond(double realTimeSecond)
 	{
 		if (TodDayTime.Rate == 0.0)
@@ -104,13 +104,13 @@ public class TodDayTime : IStaticVariableResetter
 		return realTimeSecond * TodDayTime.Rate / 10000.0;
 	}
 
-	// Token: 0x060172DC RID: 94940 RVA: 0x005DFDD8 File Offset: 0x005DDFD8
+	// Token: 0x06014D0D RID: 85261 RVA: 0x0060C9AC File Offset: 0x0060ABAC
 	public static ETodDayState ConvertToDayState(double second)
 	{
 		return TimeOfDayConfig.Instance.GetDayStateByGameTimeMinute(TodDayTime.ConvertToMinute(second));
 	}
 
-	// Token: 0x060172DD RID: 94941 RVA: 0x005DFDEA File Offset: 0x005DDFEA
+	// Token: 0x06014D0E RID: 85262 RVA: 0x0060C9BE File Offset: 0x0060ABBE
 	public static double ConvertToOneDaySecond(double second)
 	{
 		if (second < 0.0)
@@ -120,7 +120,7 @@ public class TodDayTime : IStaticVariableResetter
 		return second % 86400.0;
 	}
 
-	// Token: 0x060172DE RID: 94942 RVA: 0x005DFE10 File Offset: 0x005DE010
+	// Token: 0x06014D0F RID: 85263 RVA: 0x0060C9E4 File Offset: 0x0060ABE4
 	public static string ConvertToHourMinuteString(double second)
 	{
 		double num = Math.Floor(second / 3600.0);
@@ -132,37 +132,37 @@ public class TodDayTime : IStaticVariableResetter
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060172DF RID: 94943 RVA: 0x005DFE85 File Offset: 0x005DE085
+	// Token: 0x06014D10 RID: 85264 RVA: 0x0060CA59 File Offset: 0x0060AC59
 	public static double ConvertToDay(double second)
 	{
 		return second / 86400.0;
 	}
 
-	// Token: 0x060172E0 RID: 94944 RVA: 0x005DFE92 File Offset: 0x005DE092
+	// Token: 0x06014D11 RID: 85265 RVA: 0x0060CA66 File Offset: 0x0060AC66
 	public static double ConvertToHour(double second)
 	{
 		return second / 3600.0;
 	}
 
-	// Token: 0x060172E1 RID: 94945 RVA: 0x005DFE9F File Offset: 0x005DE09F
+	// Token: 0x06014D12 RID: 85266 RVA: 0x0060CA73 File Offset: 0x0060AC73
 	public static double ConvertToMinute(double second)
 	{
 		return second / 60.0;
 	}
 
-	// Token: 0x060172E2 RID: 94946 RVA: 0x005DFEAC File Offset: 0x005DE0AC
+	// Token: 0x06014D13 RID: 85267 RVA: 0x0060CA80 File Offset: 0x0060AC80
 	public static double ConvertFromMinute(double minute)
 	{
 		return minute * 60.0;
 	}
 
-	// Token: 0x060172E3 RID: 94947 RVA: 0x005DFEB9 File Offset: 0x005DE0B9
+	// Token: 0x06014D14 RID: 85268 RVA: 0x0060CA8D File Offset: 0x0060AC8D
 	public static double ConvertFromHourMinute(double hour, double minute)
 	{
 		return hour * 3600.0 + minute * 60.0;
 	}
 
-	// Token: 0x060172E4 RID: 94948 RVA: 0x005DFED4 File Offset: 0x005DE0D4
+	// Token: 0x06014D15 RID: 85269 RVA: 0x0060CAA8 File Offset: 0x0060ACA8
 	public static bool CheckInMinuteSpan(double minute, TTodTimeSpan minuteSpan)
 	{
 		if (minute < 0.0 || minute > 1440.0)
@@ -185,9 +185,9 @@ public class TodDayTime : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0400AD7E RID: 44414
+	// Token: 0x0400B185 RID: 45445
 	private double SecondInternal;
 
-	// Token: 0x0400AD7F RID: 44415
+	// Token: 0x0400B186 RID: 45446
 	private static double RateInternal;
 }

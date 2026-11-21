@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 {
-	// Token: 0x02003BCC RID: 15308
+	// Token: 0x02003FD7 RID: 16343
 	public class IShowTimelineSwitchRoleT
 	{
-		// Token: 0x17006912 RID: 26898
-		// (get) Token: 0x060150BB RID: 86203 RVA: 0x0030D124 File Offset: 0x0030B324
-		// (set) Token: 0x060150BC RID: 86204 RVA: 0x0030D12C File Offset: 0x0030B32C
+		// Token: 0x17006EBA RID: 28346
+		// (get) Token: 0x060165B1 RID: 91569 RVA: 0x00333CAC File Offset: 0x00331EAC
+		// (set) Token: 0x060165B2 RID: 91570 RVA: 0x00333CB4 File Offset: 0x00331EB4
 		public EShowTimelineActionType Type { get; set; }
 
-		// Token: 0x17006913 RID: 26899
-		// (get) Token: 0x060150BD RID: 86205 RVA: 0x0030D135 File Offset: 0x0030B335
-		// (set) Token: 0x060150BE RID: 86206 RVA: 0x0030D13D File Offset: 0x0030B33D
+		// Token: 0x17006EBB RID: 28347
+		// (get) Token: 0x060165B3 RID: 91571 RVA: 0x00333CBD File Offset: 0x00331EBD
+		// (set) Token: 0x060165B4 RID: 91572 RVA: 0x00333CC5 File Offset: 0x00331EC5
 		public int RoleId { get; set; }
 
-		// Token: 0x060150BF RID: 86207 RVA: 0x0030D146 File Offset: 0x0030B346
+		// Token: 0x060165B5 RID: 91573 RVA: 0x00333CCE File Offset: 0x00331ECE
 		public IShowTimelineSwitchRoleT()
 		{
 			this.Type = EShowTimelineActionType.Skill;

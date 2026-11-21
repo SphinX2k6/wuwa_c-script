@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A99 RID: 6809
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C30 RID: 7216
 	public class IFlowStateIndex : IFlowIndex
 	{
-		// Token: 0x06009208 RID: 37384 RVA: 0x00153B74 File Offset: 0x00151D74
+		// Token: 0x06009980 RID: 39296 RVA: 0x00163CA4 File Offset: 0x00161EA4
 		private IFlowStateIndex_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009209 RID: 37385 RVA: 0x00153BAC File Offset: 0x00151DAC
+		// Token: 0x06009981 RID: 39297 RVA: 0x00163CDC File Offset: 0x00161EDC
 		public static IFlowStateIndex Create([Nullable(2)] IFlowStateIndex instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600920A RID: 37386 RVA: 0x00153BBF File Offset: 0x00151DBF
+		// Token: 0x06009982 RID: 39298 RVA: 0x00163CEF File Offset: 0x00161EEF
 		public static IFlowStateIndex CreateFromSetValue([Nullable(2)] IFlowStateIndex_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600920B RID: 37387 RVA: 0x00153BD2 File Offset: 0x00151DD2
+		// Token: 0x06009983 RID: 39299 RVA: 0x00163D02 File Offset: 0x00161F02
 		public new IFlowStateIndex_SetValue ToSetValue()
 		{
 			return new IFlowStateIndex_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E74 RID: 11892
-		// (get) Token: 0x0600920C RID: 37388 RVA: 0x00153BFD File Offset: 0x00151DFD
-		// (set) Token: 0x0600920D RID: 37389 RVA: 0x00153C28 File Offset: 0x00151E28
+		// Token: 0x17003085 RID: 12421
+		// (get) Token: 0x06009984 RID: 39300 RVA: 0x00163D2D File Offset: 0x00161F2D
+		// (set) Token: 0x06009985 RID: 39301 RVA: 0x00163D58 File Offset: 0x00161F58
 		public override string FlowListName
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E75 RID: 11893
-		// (get) Token: 0x0600920E RID: 37390 RVA: 0x00153C36 File Offset: 0x00151E36
-		// (set) Token: 0x0600920F RID: 37391 RVA: 0x00153C61 File Offset: 0x00151E61
+		// Token: 0x17003086 RID: 12422
+		// (get) Token: 0x06009986 RID: 39302 RVA: 0x00163D66 File Offset: 0x00161F66
+		// (set) Token: 0x06009987 RID: 39303 RVA: 0x00163D91 File Offset: 0x00161F91
 		public override int FlowId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E76 RID: 11894
-		// (get) Token: 0x06009210 RID: 37392 RVA: 0x00153C6F File Offset: 0x00151E6F
-		// (set) Token: 0x06009211 RID: 37393 RVA: 0x00153C9A File Offset: 0x00151E9A
+		// Token: 0x17003087 RID: 12423
+		// (get) Token: 0x06009988 RID: 39304 RVA: 0x00163D9F File Offset: 0x00161F9F
+		// (set) Token: 0x06009989 RID: 39305 RVA: 0x00163DCA File Offset: 0x00161FCA
 		public virtual int StateId
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040059FB RID: 23035
+		// Token: 0x04005E68 RID: 24168
 		[Nullable(2)]
 		protected new IFlowStateIndex FbInstance;
 
-		// Token: 0x040059FC RID: 23036
+		// Token: 0x04005E69 RID: 24169
 		[Nullable(2)]
 		protected new IFlowStateIndex_SetValue PocoInterface;
 	}

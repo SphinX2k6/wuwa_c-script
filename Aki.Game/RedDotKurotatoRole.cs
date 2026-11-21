@@ -3,28 +3,28 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Kurotato;
 using CSharpScript.Game.Module.Kurotato.Data;
 
-// Token: 0x0200333B RID: 13115
+// Token: 0x020028AD RID: 10413
 public class RedDotKurotatoRole : RedDotBase
 {
-	// Token: 0x0601C95F RID: 117087 RVA: 0x00804357 File Offset: 0x00802557
+	// Token: 0x0601A657 RID: 108119 RVA: 0x0082A91B File Offset: 0x00828B1B
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnRefreshKurotatoRoleRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C960 RID: 117088 RVA: 0x00804375 File Offset: 0x00802575
+	// Token: 0x0601A658 RID: 108120 RVA: 0x0082A939 File Offset: 0x00828B39
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRefreshKurotatoRoleRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C961 RID: 117089 RVA: 0x00804394 File Offset: 0x00802594
+	// Token: 0x0601A659 RID: 108121 RVA: 0x0082A958 File Offset: 0x00828B58
 	protected override ERedDotName? OnGetParentName()
 	{
 		return null;
 	}
 
-	// Token: 0x0601C962 RID: 117090 RVA: 0x008043AC File Offset: 0x008025AC
+	// Token: 0x0601A65A RID: 108122 RVA: 0x0082A970 File Offset: 0x00828B70
 	protected override bool OnCheck(int uId = 0)
 	{
 		KurotatoActivityData activityData = KurotatoActivityController.Instance.GetActivityData();

@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DFB RID: 24059
+	// Token: 0x02004DE0 RID: 19936
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarQingXiaoSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D29F RID: 250527 RVA: 0x00EBB29C File Offset: 0x00EB949C
+		// Token: 0x0603222E RID: 205358 RVA: 0x00E0C7E8 File Offset: 0x00E0A9E8
 		protected override void OnInitData()
 		{
 			base.OnInitData();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.JianPercentMachine.Init(this.GetJianTargetAttributePercent());
 		}
 
-		// Token: 0x0603D2A0 RID: 250528 RVA: 0x00EBB2C8 File Offset: 0x00EB94C8
+		// Token: 0x0603222F RID: 205359 RVA: 0x00E0C814 File Offset: 0x00E0AA14
 		protected float GetAttributePercent(EAttributeType attrId, EAttributeType maxAttrId)
 		{
 			float currentValue = this.AttributeComponent.GetCurrentValue(attrId);
@@ -31,19 +31,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return result;
 		}
 
-		// Token: 0x0603D2A1 RID: 250529 RVA: 0x00EBB302 File Offset: 0x00EB9502
+		// Token: 0x06032230 RID: 205360 RVA: 0x00E0C84E File Offset: 0x00E0AA4E
 		protected float GetQinTargetAttributePercent()
 		{
 			return this.GetAttributePercent(SpecialEnergyBarQingXiaoSlot.QIN_ATTR_ID, SpecialEnergyBarQingXiaoSlot.MAX_QIN_ATTR_ID);
 		}
 
-		// Token: 0x0603D2A2 RID: 250530 RVA: 0x00EBB314 File Offset: 0x00EB9514
+		// Token: 0x06032231 RID: 205361 RVA: 0x00E0C860 File Offset: 0x00E0AA60
 		protected float GetJianTargetAttributePercent()
 		{
 			return this.GetAttributePercent(SpecialEnergyBarQingXiaoSlot.JIAN_ATTR_ID, SpecialEnergyBarQingXiaoSlot.MAX_JIAN_ATTR_ID);
 		}
 
-		// Token: 0x0603D2A3 RID: 250531 RVA: 0x00EBB328 File Offset: 0x00EB9528
+		// Token: 0x06032232 RID: 205362 RVA: 0x00E0C874 File Offset: 0x00E0AA74
 		protected override void OnStart()
 		{
 			this.OverrideColor = true;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetItemStyle(SpecialEnergyBarQingXiaoSlot.JIAN_SLOT_INDEX, this.Config.OtherEffectColorList[SpecialEnergyBarQingXiaoSlot.JIAN_SLOT_INDEX - 1], this.Config.PointColorList[SpecialEnergyBarQingXiaoSlot.JIAN_SLOT_INDEX]);
 		}
 
-		// Token: 0x0603D2A4 RID: 250532 RVA: 0x00EBB39C File Offset: 0x00EB959C
+		// Token: 0x06032233 RID: 205363 RVA: 0x00E0C8E8 File Offset: 0x00E0AAE8
 		private void SetItemStyle(int index, string barColor, string pointColor)
 		{
 			this.SlotItemList[index].SetFullEffectPercent(1f);
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			specialEnergyBarSlotItem2.SetPointColor(fcolor);
 		}
 
-		// Token: 0x0603D2A5 RID: 250533 RVA: 0x00EBB3F4 File Offset: 0x00EB95F4
+		// Token: 0x06032234 RID: 205364 RVA: 0x00E0C940 File Offset: 0x00E0AB40
 		protected override void AddEvents()
 		{
 			base.AddEvents();
@@ -74,21 +74,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.ListenForAttributeChanged(SpecialEnergyBarQingXiaoSlot.MAX_JIAN_ATTR_ID, new Action<EAttributeType, float, float>(this.OnJianPercentChange));
 		}
 
-		// Token: 0x0603D2A6 RID: 250534 RVA: 0x00EBB463 File Offset: 0x00EB9663
+		// Token: 0x06032235 RID: 205365 RVA: 0x00E0C9AF File Offset: 0x00E0ABAF
 		private void OnQinPercentChange(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.QinPercentMachine.SetTargetPercent(this.GetQinTargetAttributePercent());
 			this.RefreshQinBarPercent(false);
 		}
 
-		// Token: 0x0603D2A7 RID: 250535 RVA: 0x00EBB47D File Offset: 0x00EB967D
+		// Token: 0x06032236 RID: 205366 RVA: 0x00E0C9C9 File Offset: 0x00E0ABC9
 		private void OnJianPercentChange(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.JianPercentMachine.SetTargetPercent(this.GetJianTargetAttributePercent());
 			this.RefreshJianBarPercent(false);
 		}
 
-		// Token: 0x0603D2A8 RID: 250536 RVA: 0x00EBB498 File Offset: 0x00EB9698
+		// Token: 0x06032237 RID: 205367 RVA: 0x00E0C9E4 File Offset: 0x00E0ABE4
 		protected void RefreshQinBarPercent(bool isStart = false)
 		{
 			float curPercent = this.QinPercentMachine.GetCurPercent();
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			percentCallback(SpecialEnergyBarQingXiaoSlot.QIN_SLOT_INDEX, curPercent);
 		}
 
-		// Token: 0x0603D2A9 RID: 250537 RVA: 0x00EBB4E0 File Offset: 0x00EB96E0
+		// Token: 0x06032238 RID: 205368 RVA: 0x00E0CA2C File Offset: 0x00E0AC2C
 		protected void RefreshJianBarPercent(bool isStart = false)
 		{
 			float curPercent = this.JianPercentMachine.GetCurPercent();
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			percentCallback(SpecialEnergyBarQingXiaoSlot.JIAN_SLOT_INDEX, curPercent);
 		}
 
-		// Token: 0x0603D2AA RID: 250538 RVA: 0x00EBB528 File Offset: 0x00EB9728
+		// Token: 0x06032239 RID: 205369 RVA: 0x00E0CA74 File Offset: 0x00E0AC74
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			bool keyEnable = this.GetKeyEnable();
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshJianBarPercent(isStart);
 		}
 
-		// Token: 0x0603D2AB RID: 250539 RVA: 0x00EBB55D File Offset: 0x00EB975D
+		// Token: 0x0603223A RID: 205370 RVA: 0x00E0CAA9 File Offset: 0x00E0ACA9
 		public void SetKeyEnable(bool enable)
 		{
 			if (this.IsKeyEnable == enable)
@@ -144,13 +144,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(enable, false);
 		}
 
-		// Token: 0x0603D2AC RID: 250540 RVA: 0x00EBB589 File Offset: 0x00EB9789
+		// Token: 0x0603223B RID: 205371 RVA: 0x00E0CAD5 File Offset: 0x00E0ACD5
 		protected override bool GetKeyEnable()
 		{
 			return this.IsKeyEnable;
 		}
 
-		// Token: 0x0603D2AD RID: 250541 RVA: 0x00EBB591 File Offset: 0x00EB9791
+		// Token: 0x0603223C RID: 205372 RVA: 0x00E0CADD File Offset: 0x00E0ACDD
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -164,34 +164,34 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FE3A RID: 130618
+		// Token: 0x0401A901 RID: 108801
 		private static readonly EAttributeType QIN_ATTR_ID = EAttributeType.SpecialEnergy1;
 
-		// Token: 0x0401FE3B RID: 130619
+		// Token: 0x0401A902 RID: 108802
 		private static readonly EAttributeType MAX_QIN_ATTR_ID = EAttributeType.SpecialEnergy1Max;
 
-		// Token: 0x0401FE3C RID: 130620
+		// Token: 0x0401A903 RID: 108803
 		private static readonly EAttributeType JIAN_ATTR_ID = EAttributeType.SpecialEnergy2;
 
-		// Token: 0x0401FE3D RID: 130621
+		// Token: 0x0401A904 RID: 108804
 		private static readonly EAttributeType MAX_JIAN_ATTR_ID = EAttributeType.SpecialEnergy2Max;
 
-		// Token: 0x0401FE3E RID: 130622
+		// Token: 0x0401A905 RID: 108805
 		private static readonly int QIN_SLOT_INDEX = 0;
 
-		// Token: 0x0401FE3F RID: 130623
+		// Token: 0x0401A906 RID: 108806
 		private static readonly int JIAN_SLOT_INDEX = 1;
 
-		// Token: 0x0401FE40 RID: 130624
+		// Token: 0x0401A907 RID: 108807
 		protected SpecialEnergyBarPercentMachine QinPercentMachine = new SpecialEnergyBarPercentMachine();
 
-		// Token: 0x0401FE41 RID: 130625
+		// Token: 0x0401A908 RID: 108808
 		protected SpecialEnergyBarPercentMachine JianPercentMachine = new SpecialEnergyBarPercentMachine();
 
-		// Token: 0x0401FE42 RID: 130626
+		// Token: 0x0401A909 RID: 108809
 		private bool IsKeyEnable;
 
-		// Token: 0x0401FE43 RID: 130627
+		// Token: 0x0401A90A RID: 108810
 		[Nullable(2)]
 		public Action<int, float> PercentCallback;
 	}

@@ -9,12 +9,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001C71 RID: 7281
+// Token: 0x02001130 RID: 4400
 [NullableContext(1)]
 [Nullable(0)]
 public class GachaAccumulateStageCyclicPanel : UiPanelBase
 {
-	// Token: 0x0600DB65 RID: 56165 RVA: 0x003303A4 File Offset: 0x0032E5A4
+	// Token: 0x0600AF7B RID: 44923 RVA: 0x0033B7F0 File Offset: 0x003399F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -44,7 +44,7 @@ public class GachaAccumulateStageCyclicPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600DB66 RID: 56166 RVA: 0x00330518 File Offset: 0x0032E718
+	// Token: 0x0600AF7C RID: 44924 RVA: 0x0033B964 File Offset: 0x00339B64
 	protected override void OnStart()
 	{
 		this.ItemGrid = new CommonItemSmallItemGrid();
@@ -56,7 +56,7 @@ public class GachaAccumulateStageCyclicPanel : UiPanelBase
 		base.GetExtendToggle(0).OnUndeterminedClicked.Add(new Action(this.OnClickPanel));
 	}
 
-	// Token: 0x0600DB67 RID: 56167 RVA: 0x003305BC File Offset: 0x0032E7BC
+	// Token: 0x0600AF7D RID: 44925 RVA: 0x0033BA08 File Offset: 0x00339C08
 	protected override void OnBeforeDestroy()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -72,7 +72,7 @@ public class GachaAccumulateStageCyclicPanel : UiPanelBase
 		extendToggle2.OnUndeterminedClicked.Remove(new Action(this.OnClickPanel));
 	}
 
-	// Token: 0x0600DB68 RID: 56168 RVA: 0x00330610 File Offset: 0x0032E810
+	// Token: 0x0600AF7E RID: 44926 RVA: 0x0033BA5C File Offset: 0x00339C5C
 	public void Refresh(int accumulateId, GachaAccumulateRewardData reward, GachaAccumulateData accumulateData)
 	{
 		this.AccumulateId = accumulateId;
@@ -147,13 +147,13 @@ public class GachaAccumulateStageCyclicPanel : UiPanelBase
 		itemGridExtendToggle.SetSelfInteractive(!flag3);
 	}
 
-	// Token: 0x0600DB69 RID: 56169 RVA: 0x0033082E File Offset: 0x0032EA2E
+	// Token: 0x0600AF7F RID: 44927 RVA: 0x0033BC7A File Offset: 0x00339E7A
 	private void OnToggleStateChange(EToggleState _)
 	{
 		this.OnClickPanel();
 	}
 
-	// Token: 0x0600DB6A RID: 56170 RVA: 0x00330838 File Offset: 0x0032EA38
+	// Token: 0x0600AF80 RID: 44928 RVA: 0x0033BC84 File Offset: 0x00339E84
 	private void OnClickPanel()
 	{
 		GachaAccumulateData accumulateData = GachaAccumulateModel.Instance.GetAccumulateData(this.AccumulateId);
@@ -168,29 +168,29 @@ public class GachaAccumulateStageCyclicPanel : UiPanelBase
 		}
 		if (gachaAccumulateRewardData.GetCyclicPendingClaimCount(accumulateData.CurGachaNum, accumulateData.GetCyclicBaseGachaNum()) <= 0)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(gachaAccumulateRewardData.GetRewardItemList()[0].ConfigId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(gachaAccumulateRewardData.GetRewardItemList()[0].ConfigId, true, null, false);
 			return;
 		}
 		List<int> list = accumulateData.CollectAllClaimableRewardIds();
 		GachaAccumulateController.Instance.ClaimAccumulateRewardAsync(this.AccumulateId, list.ToArray(), Array.Empty<int>()).Forget<bool>();
 	}
 
-	// Token: 0x04006499 RID: 25753
+	// Token: 0x0400656B RID: 25963
 	private const string ReceivedCheckColor = "eae4ab";
 
-	// Token: 0x0400649A RID: 25754
+	// Token: 0x0400656C RID: 25964
 	[Nullable(2)]
 	private CommonItemSmallItemGrid ItemGrid;
 
-	// Token: 0x0400649B RID: 25755
+	// Token: 0x0400656D RID: 25965
 	private int AccumulateId;
 
-	// Token: 0x0400649C RID: 25756
+	// Token: 0x0400656E RID: 25966
 	private int RewardId;
 
-	// Token: 0x0400649D RID: 25757
+	// Token: 0x0400656F RID: 25967
 	private bool ShowReceivable;
 
-	// Token: 0x0400649E RID: 25758
+	// Token: 0x04006570 RID: 25968
 	private bool ShowReceived;
 }

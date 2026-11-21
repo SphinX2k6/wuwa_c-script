@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002260 RID: 8800
+// Token: 0x02001744 RID: 5956
 [NullableContext(1)]
 public interface IMotorTechNodeListData
 {
-	// Token: 0x170015E9 RID: 5609
-	// (get) Token: 0x0601128F RID: 70287
-	// (set) Token: 0x06011290 RID: 70288
+	// Token: 0x17001620 RID: 5664
+	// (get) Token: 0x0600E725 RID: 59173
+	// (set) Token: 0x0600E726 RID: 59174
 	int[] TopIds { get; set; }
 
-	// Token: 0x170015EA RID: 5610
-	// (get) Token: 0x06011291 RID: 70289
-	// (set) Token: 0x06011292 RID: 70290
+	// Token: 0x17001621 RID: 5665
+	// (get) Token: 0x0600E727 RID: 59175
+	// (set) Token: 0x0600E728 RID: 59176
 	int[] BottomIds { get; set; }
 
-	// Token: 0x170015EB RID: 5611
-	// (get) Token: 0x06011293 RID: 70291
-	// (set) Token: 0x06011294 RID: 70292
+	// Token: 0x17001622 RID: 5666
+	// (get) Token: 0x0600E729 RID: 59177
+	// (set) Token: 0x0600E72A RID: 59178
 	int MiddleId { get; set; }
 }

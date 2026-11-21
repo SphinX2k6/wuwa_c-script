@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B86 RID: 23430
+	// Token: 0x0200619C RID: 24988
 	public struct IWindSourceComponent : IFlatbufferObject
 	{
-		// Token: 0x1700B10E RID: 45326
-		// (get) Token: 0x060281B5 RID: 164277 RVA: 0x00583462 File Offset: 0x00581662
+		// Token: 0x1700BA56 RID: 47702
+		// (get) Token: 0x0602A779 RID: 173945 RVA: 0x005CAEF2 File Offset: 0x005C90F2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060281B6 RID: 164278 RVA: 0x0058346F File Offset: 0x0058166F
+		// Token: 0x0602A77A RID: 173946 RVA: 0x005CAEFF File Offset: 0x005C90FF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060281B7 RID: 164279 RVA: 0x00583478 File Offset: 0x00581678
+		// Token: 0x0602A77B RID: 173947 RVA: 0x005CAF08 File Offset: 0x005C9108
 		public static IWindSourceComponent GetRootAsIWindSourceComponent(ByteBuffer _bb)
 		{
 			return IWindSourceComponent.GetRootAsIWindSourceComponent(_bb, default(IWindSourceComponent));
 		}
 
-		// Token: 0x060281B8 RID: 164280 RVA: 0x00583494 File Offset: 0x00581694
+		// Token: 0x0602A77C RID: 173948 RVA: 0x005CAF24 File Offset: 0x005C9124
 		public static IWindSourceComponent GetRootAsIWindSourceComponent(ByteBuffer _bb, IWindSourceComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060281B9 RID: 164281 RVA: 0x005834B1 File Offset: 0x005816B1
+		// Token: 0x0602A77D RID: 173949 RVA: 0x005CAF41 File Offset: 0x005C9141
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060281BA RID: 164282 RVA: 0x005834C0 File Offset: 0x005816C0
+		// Token: 0x0602A77E RID: 173950 RVA: 0x005CAF50 File Offset: 0x005C9150
 		public IWindSourceComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B10F RID: 45327
-		// (get) Token: 0x060281BB RID: 164283 RVA: 0x005834D0 File Offset: 0x005816D0
+		// Token: 0x1700BA57 RID: 47703
+		// (get) Token: 0x0602A77F RID: 173951 RVA: 0x005CAF60 File Offset: 0x005C9160
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B110 RID: 45328
-		// (get) Token: 0x060281BC RID: 164284 RVA: 0x00583510 File Offset: 0x00581710
+		// Token: 0x1700BA58 RID: 47704
+		// (get) Token: 0x0602A780 RID: 173952 RVA: 0x005CAFA0 File Offset: 0x005C91A0
 		public IWindDirectional? WindSource
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B111 RID: 45329
-		// (get) Token: 0x060281BD RID: 164285 RVA: 0x00583570 File Offset: 0x00581770
+		// Token: 0x1700BA59 RID: 47705
+		// (get) Token: 0x0602A781 RID: 173953 RVA: 0x005CB000 File Offset: 0x005C9200
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060281BE RID: 164286 RVA: 0x005835AC File Offset: 0x005817AC
+		// Token: 0x0602A782 RID: 173954 RVA: 0x005CB03C File Offset: 0x005C923C
 		public static Offset<IWindSourceComponent> CreateIWindSourceComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<IWindDirectional> WindSourceOffset = default(Offset<IWindDirectional>), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWindSourceComponent.EndIWindSourceComponent(builder);
 		}
 
-		// Token: 0x060281BF RID: 164287 RVA: 0x005835D0 File Offset: 0x005817D0
+		// Token: 0x0602A783 RID: 173955 RVA: 0x005CB060 File Offset: 0x005C9260
 		public static void StartIWindSourceComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060281C0 RID: 164288 RVA: 0x005835D9 File Offset: 0x005817D9
+		// Token: 0x0602A784 RID: 173956 RVA: 0x005CB069 File Offset: 0x005C9269
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x060281C1 RID: 164289 RVA: 0x005835E4 File Offset: 0x005817E4
+		// Token: 0x0602A785 RID: 173957 RVA: 0x005CB074 File Offset: 0x005C9274
 		public static void AddWindSource(FlatBufferBuilder builder, Offset<IWindDirectional> windSourceOffset)
 		{
 			builder.AddOffset(1, windSourceOffset.Value, 0);
 		}
 
-		// Token: 0x060281C2 RID: 164290 RVA: 0x005835F4 File Offset: 0x005817F4
+		// Token: 0x0602A786 RID: 173958 RVA: 0x005CB084 File Offset: 0x005C9284
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x060281C3 RID: 164291 RVA: 0x005835FF File Offset: 0x005817FF
+		// Token: 0x0602A787 RID: 173959 RVA: 0x005CB08F File Offset: 0x005C928F
 		public static Offset<IWindSourceComponent> EndIWindSourceComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IWindSourceComponent>(builder.EndTable());
 		}
 
-		// Token: 0x060281C4 RID: 164292 RVA: 0x0058360C File Offset: 0x0058180C
+		// Token: 0x0602A788 RID: 173960 RVA: 0x005CB09C File Offset: 0x005C929C
 		public IWindSourceComponentT UnPack()
 		{
 			IWindSourceComponentT windSourceComponentT = new IWindSourceComponentT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return windSourceComponentT;
 		}
 
-		// Token: 0x060281C5 RID: 164293 RVA: 0x00583628 File Offset: 0x00581828
+		// Token: 0x0602A789 RID: 173961 RVA: 0x005CB0B8 File Offset: 0x005C92B8
 		public void UnPackTo(IWindSourceComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060281C6 RID: 164294 RVA: 0x0058367C File Offset: 0x0058187C
+		// Token: 0x0602A78A RID: 173962 RVA: 0x005CB10C File Offset: 0x005C930C
 		public static Offset<IWindSourceComponent> Pack(FlatBufferBuilder builder, IWindSourceComponentT _o)
 		{
 			if (_o == null)
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWindSourceComponent.CreateIWindSourceComponent(builder, _o.Disabled, windSourceOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400F2E3 RID: 62179
+		// Token: 0x0400FFE9 RID: 65513
 		private Table __p;
 	}
 }

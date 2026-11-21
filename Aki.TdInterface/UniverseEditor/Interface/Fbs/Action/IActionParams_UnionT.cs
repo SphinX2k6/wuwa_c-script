@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006087 RID: 24711
+	// Token: 0x020066E9 RID: 26345
 	public class IActionParams_UnionT
 	{
-		// Token: 0x1700B626 RID: 46630
-		// (get) Token: 0x06029F85 RID: 171909 RVA: 0x005C9B0D File Offset: 0x005C7D0D
-		// (set) Token: 0x06029F86 RID: 171910 RVA: 0x005C9B15 File Offset: 0x005C7D15
+		// Token: 0x1700BF91 RID: 49041
+		// (get) Token: 0x0602C648 RID: 181832 RVA: 0x00613681 File Offset: 0x00611881
+		// (set) Token: 0x0602C649 RID: 181833 RVA: 0x00613689 File Offset: 0x00611889
 		public byte UnionIndex { get; set; }
 
-		// Token: 0x1700B627 RID: 46631
-		// (get) Token: 0x06029F87 RID: 171911 RVA: 0x005C9B1E File Offset: 0x005C7D1E
-		// (set) Token: 0x06029F88 RID: 171912 RVA: 0x005C9B26 File Offset: 0x005C7D26
+		// Token: 0x1700BF92 RID: 49042
+		// (get) Token: 0x0602C64A RID: 181834 RVA: 0x00613692 File Offset: 0x00611892
+		// (set) Token: 0x0602C64B RID: 181835 RVA: 0x0061369A File Offset: 0x0061189A
 		public IActionParams_Union_0Union Data0 { get; set; }
 
-		// Token: 0x1700B628 RID: 46632
-		// (get) Token: 0x06029F89 RID: 171913 RVA: 0x005C9B2F File Offset: 0x005C7D2F
-		// (set) Token: 0x06029F8A RID: 171914 RVA: 0x005C9B37 File Offset: 0x005C7D37
+		// Token: 0x1700BF93 RID: 49043
+		// (get) Token: 0x0602C64C RID: 181836 RVA: 0x006136A3 File Offset: 0x006118A3
+		// (set) Token: 0x0602C64D RID: 181837 RVA: 0x006136AB File Offset: 0x006118AB
 		public IActionParams_Union_1Union Data1 { get; set; }
 
-		// Token: 0x06029F8B RID: 171915 RVA: 0x005C9B40 File Offset: 0x005C7D40
+		// Token: 0x0602C64E RID: 181838 RVA: 0x006136B4 File Offset: 0x006118B4
 		public IActionParams_UnionT()
 		{
 			this.UnionIndex = 0;

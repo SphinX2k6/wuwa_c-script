@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002DDD RID: 11741
+// Token: 0x02002338 RID: 9016
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,19 +13,19 @@ using UnrealEngine;
 })]
 public class BulletLogicSupportController : BulletLogicController<LogicDataSupport, Entity>
 {
-	// Token: 0x06018A53 RID: 100947 RVA: 0x0064F515 File Offset: 0x0064D715
+	// Token: 0x06016300 RID: 90880 RVA: 0x00675651 File Offset: 0x00673851
 	public BulletLogicSupportController(LogicDataSupport logicConfig, Entity bulletEntity) : base(logicConfig, bulletEntity)
 	{
 	}
 
-	// Token: 0x06018A54 RID: 100948 RVA: 0x0064F51F File Offset: 0x0064D71F
+	// Token: 0x06016301 RID: 90881 RVA: 0x0067565B File Offset: 0x0067385B
 	public override void OnInit()
 	{
 		this.InitTraceInfo();
 		this.Bullet.GetBulletInfo().BulletDataMain.Execution.SupportCamp.Add(this.LogicController.Camp);
 	}
 
-	// Token: 0x06018A55 RID: 100949 RVA: 0x0064F554 File Offset: 0x0064D754
+	// Token: 0x06016302 RID: 90882 RVA: 0x00675690 File Offset: 0x00673890
 	private void InitTraceInfo()
 	{
 		this.TempImpactPoint = Vector.Create(0.0, 0.0, 0.0);
@@ -38,7 +38,7 @@ public class BulletLogicSupportController : BulletLogicController<LogicDataSuppo
 		TraceElementCommon.Instance.SetTraceHitColor(this.LineTrace, ColorUtils.LinearRed);
 	}
 
-	// Token: 0x06018A56 RID: 100950 RVA: 0x0064F5F4 File Offset: 0x0064D7F4
+	// Token: 0x06016303 RID: 90883 RVA: 0x00675730 File Offset: 0x00673930
 	public override void BulletLogicAction(Entity otherBullet)
 	{
 		BulletInfo bulletInfo = (otherBullet as BulletEntity).GetBulletInfo();
@@ -54,7 +54,7 @@ public class BulletLogicSupportController : BulletLogicController<LogicDataSuppo
 		}
 	}
 
-	// Token: 0x06018A57 RID: 100951 RVA: 0x0064F6A4 File Offset: 0x0064D8A4
+	// Token: 0x06016304 RID: 90884 RVA: 0x006757E0 File Offset: 0x006739E0
 	private FTransformDouble GetHitPointTransform(Entity otherBullet)
 	{
 		BulletActorComponent component = this.Bullet.GetComponent<BulletActorComponent>();
@@ -88,17 +88,17 @@ public class BulletLogicSupportController : BulletLogicController<LogicDataSuppo
 		return result;
 	}
 
-	// Token: 0x0400B797 RID: 46999
+	// Token: 0x0400BB1D RID: 47901
 	private const string PROFILE_KEY = "BulletLogicSupportController_GetHitPointTransform";
 
-	// Token: 0x0400B798 RID: 47000
+	// Token: 0x0400BB1E RID: 47902
 	private const float DRAW_TIME = 5f;
 
-	// Token: 0x0400B799 RID: 47001
+	// Token: 0x0400BB1F RID: 47903
 	[Nullable(2)]
 	private UTraceLineElement LineTrace;
 
-	// Token: 0x0400B79A RID: 47002
+	// Token: 0x0400BB20 RID: 47904
 	[Nullable(2)]
 	private Vector TempImpactPoint;
 }

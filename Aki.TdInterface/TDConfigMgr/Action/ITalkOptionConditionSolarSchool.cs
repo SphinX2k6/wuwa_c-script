@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F6C RID: 8044
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021A7 RID: 8615
 	public class ITalkOptionConditionSolarSchool : ITalkOptionConditionSystemConfigBase
 	{
-		// Token: 0x0600B10C RID: 45324 RVA: 0x0019D730 File Offset: 0x0019B930
+		// Token: 0x0600BBE6 RID: 48102 RVA: 0x001B3684 File Offset: 0x001B1884
 		private ITalkOptionConditionSolarSchool_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B10D RID: 45325 RVA: 0x0019D768 File Offset: 0x0019B968
+		// Token: 0x0600BBE7 RID: 48103 RVA: 0x001B36BC File Offset: 0x001B18BC
 		public static ITalkOptionConditionSolarSchool Create([Nullable(2)] ITalkOptionConditionSolarSchool instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B10E RID: 45326 RVA: 0x0019D77B File Offset: 0x0019B97B
+		// Token: 0x0600BBE8 RID: 48104 RVA: 0x001B36CF File Offset: 0x001B18CF
 		public static ITalkOptionConditionSolarSchool CreateFromSetValue([Nullable(2)] ITalkOptionConditionSolarSchool_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B10F RID: 45327 RVA: 0x0019D78E File Offset: 0x0019B98E
+		// Token: 0x0600BBE9 RID: 48105 RVA: 0x001B36E2 File Offset: 0x001B18E2
 		public new ITalkOptionConditionSolarSchool_SetValue ToSetValue()
 		{
 			return new ITalkOptionConditionSolarSchool_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036BC RID: 14012
-		// (get) Token: 0x0600B110 RID: 45328 RVA: 0x0019D7AD File Offset: 0x0019B9AD
-		// (set) Token: 0x0600B111 RID: 45329 RVA: 0x0019D7D8 File Offset: 0x0019B9D8
+		// Token: 0x17003988 RID: 14728
+		// (get) Token: 0x0600BBEA RID: 48106 RVA: 0x001B3701 File Offset: 0x001B1901
+		// (set) Token: 0x0600BBEB RID: 48107 RVA: 0x001B372C File Offset: 0x001B192C
 		public override ETalkOptionConditionSystem Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036BD RID: 14013
-		// (get) Token: 0x0600B112 RID: 45330 RVA: 0x0019D7E6 File Offset: 0x0019B9E6
-		// (set) Token: 0x0600B113 RID: 45331 RVA: 0x0019D811 File Offset: 0x0019BA11
+		// Token: 0x17003989 RID: 14729
+		// (get) Token: 0x0600BBEC RID: 48108 RVA: 0x001B373A File Offset: 0x001B193A
+		// (set) Token: 0x0600BBED RID: 48109 RVA: 0x001B3765 File Offset: 0x001B1965
 		public virtual int ConditionGroupId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B25 RID: 27429
+		// Token: 0x0400710D RID: 28941
 		[Nullable(2)]
 		protected new ITalkOptionConditionSolarSchool FbInstance;
 
-		// Token: 0x04006B26 RID: 27430
+		// Token: 0x0400710E RID: 28942
 		[Nullable(2)]
 		protected new ITalkOptionConditionSolarSchool_SetValue PocoInterface;
 	}

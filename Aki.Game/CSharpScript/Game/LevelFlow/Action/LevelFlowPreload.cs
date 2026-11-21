@@ -11,19 +11,19 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F95 RID: 28565
+	// Token: 0x02006116 RID: 24854
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowPreload : LevelFlowActionBase
 	{
-		// Token: 0x06045747 RID: 284487 RVA: 0x01139FE0 File Offset: 0x011381E0
+		// Token: 0x0603B8F5 RID: 243957 RVA: 0x010E3DE4 File Offset: 0x010E1FE4
 		public LevelFlowPreload Init(PreloadAction param)
 		{
 			this.PreloadActionParam = param;
 			return this;
 		}
 
-		// Token: 0x06045748 RID: 284488 RVA: 0x01139FEC File Offset: 0x011381EC
+		// Token: 0x0603B8F6 RID: 243958 RVA: 0x010E3DF0 File Offset: 0x010E1FF0
 		protected override void OnExecute()
 		{
 			PreloadAction preloadActionParam = this.PreloadActionParam;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x06045749 RID: 284489 RVA: 0x0113A148 File Offset: 0x01138348
+		// Token: 0x0603B8F7 RID: 243959 RVA: 0x010E3F4C File Offset: 0x010E214C
 		private unsafe void PreloadRole(PreloadAction params_)
 		{
 			IPreloadCharacterType preloadObjectType = params_.PreloadObjectType;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}, 60000, true, false);
 		}
 
-		// Token: 0x0604574A RID: 284490 RVA: 0x0113A31C File Offset: 0x0113851C
+		// Token: 0x0603B8F8 RID: 243960 RVA: 0x010E4120 File Offset: 0x010E2320
 		private UniTask PreloadLinkRes(PreloadAction params_)
 		{
 			LevelFlowPreload.<PreloadLinkRes>d__5 <PreloadLinkRes>d__;
@@ -155,11 +155,11 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return <PreloadLinkRes>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x040243DA RID: 148442
+		// Token: 0x0401F68F RID: 128655
 		[Nullable(2)]
 		private PreloadAction PreloadActionParam;
 
-		// Token: 0x040243DB RID: 148443
+		// Token: 0x0401F690 RID: 128656
 		private const int WAITE_ENTITY_PRELOAD_TIME = 60000;
 	}
 }

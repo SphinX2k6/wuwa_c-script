@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002628 RID: 9768
+	// Token: 0x020028E8 RID: 10472
 	public class ICharacterLookAtData
 	{
-		// Token: 0x0600DB42 RID: 56130 RVA: 0x0020A5FE File Offset: 0x002087FE
-		[NullableContext(1)]
+		// Token: 0x0600E910 RID: 59664 RVA: 0x00226DCA File Offset: 0x00224FCA
 		public static ICharacterLookAtData Create(ICharacterLookAtData? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170040B4 RID: 16564
-		// (get) Token: 0x0600DB43 RID: 56131 RVA: 0x0020A61D File Offset: 0x0020881D
+		// Token: 0x170043EE RID: 17390
+		// (get) Token: 0x0600E911 RID: 59665 RVA: 0x00226DE9 File Offset: 0x00224FE9
 		public virtual ECharacterLookAt Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040079CE RID: 31182
+		// Token: 0x0400806A RID: 32874
 		private ICharacterLookAtData Instance;
 	}
 }

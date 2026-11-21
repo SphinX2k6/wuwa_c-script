@@ -4,14 +4,14 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006F07 RID: 28423
+	// Token: 0x02006088 RID: 24712
 	public class IDollRewardItemData
 	{
-		// Token: 0x040240EC RID: 147692
+		// Token: 0x0401F3A1 RID: 127905
 		[Nullable(1)]
 		public ItemConfig ItemInfo;
 
-		// Token: 0x040240ED RID: 147693
+		// Token: 0x0401F3A2 RID: 127906
 		public int Count;
 	}
 }

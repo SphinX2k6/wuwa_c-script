@@ -5,12 +5,12 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.SimpleGameplay
 {
-	// Token: 0x02006BBE RID: 27582
+	// Token: 0x02005D37 RID: 23863
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SimpleGameplayHandlerMap<[Nullable(0)] THandler> where THandler : ISimpleGameplayHandlerBase
 	{
-		// Token: 0x0604434D RID: 279373 RVA: 0x010D0180 File Offset: 0x010CE380
+		// Token: 0x0603A4A5 RID: 238757 RVA: 0x0107A0D4 File Offset: 0x010782D4
 		public unsafe void Register(THandler handler)
 		{
 			ESimpleGameplayType type = handler.Type;
@@ -33,26 +33,26 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.SimpleGameplay
 			this.Handlers[type] = handler;
 		}
 
-		// Token: 0x0604434E RID: 279374 RVA: 0x010D0255 File Offset: 0x010CE455
+		// Token: 0x0603A4A6 RID: 238758 RVA: 0x0107A1A9 File Offset: 0x010783A9
 		[NullableContext(2)]
 		public THandler Get(ESimpleGameplayType type)
 		{
 			return this.Handlers.GetValueOrDefault(type);
 		}
 
-		// Token: 0x0604434F RID: 279375 RVA: 0x010D0263 File Offset: 0x010CE463
+		// Token: 0x0603A4A7 RID: 238759 RVA: 0x0107A1B7 File Offset: 0x010783B7
 		public void Unregister(ESimpleGameplayType type)
 		{
 			this.Handlers.Remove(type);
 		}
 
-		// Token: 0x06044350 RID: 279376 RVA: 0x010D0272 File Offset: 0x010CE472
+		// Token: 0x0603A4A8 RID: 238760 RVA: 0x0107A1C6 File Offset: 0x010783C6
 		public List<ESimpleGameplayType> GetAllRegisteredTypes()
 		{
 			return new List<ESimpleGameplayType>(this.Handlers.Keys);
 		}
 
-		// Token: 0x04023984 RID: 145796
+		// Token: 0x0401EC26 RID: 125990
 		private readonly Dictionary<ESimpleGameplayType, THandler> Handlers = new Dictionary<ESimpleGameplayType, THandler>();
 	}
 }

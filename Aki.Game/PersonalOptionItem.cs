@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020023D7 RID: 9175
+// Token: 0x020018BC RID: 6332
 public class PersonalOptionItem : GridProxyAbstract<int>
 {
-	// Token: 0x06012572 RID: 75122 RVA: 0x0048487E File Offset: 0x00482A7E
+	// Token: 0x0600FA24 RID: 64036 RVA: 0x00491D8A File Offset: 0x0048FF8A
 	[NullableContext(1)]
 	public PersonalOptionItem(UUIItem item)
 	{
@@ -19,7 +19,7 @@ public class PersonalOptionItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06012573 RID: 75123 RVA: 0x00484898 File Offset: 0x00482A98
+	// Token: 0x0600FA25 RID: 64037 RVA: 0x00491DA4 File Offset: 0x0048FFA4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -44,7 +44,7 @@ public class PersonalOptionItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06012574 RID: 75124 RVA: 0x00484980 File Offset: 0x00482B80
+	// Token: 0x0600FA26 RID: 64038 RVA: 0x00491E8C File Offset: 0x0049008C
 	public override void Refresh(int optionId, bool isSelected, int gridIndex)
 	{
 		this.OptionId = optionId;
@@ -74,14 +74,14 @@ public class PersonalOptionItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06012575 RID: 75125 RVA: 0x00484A82 File Offset: 0x00482C82
+	// Token: 0x0600FA27 RID: 64039 RVA: 0x00491F8E File Offset: 0x0049018E
 	private void OnClickItem()
 	{
 		this.ClickFunction = PersonalOptionController.Instance.GetOptionFunc((EPersonalOptionDefine)this.OptionId);
 		this.ClickFunction();
 	}
 
-	// Token: 0x06012576 RID: 75126 RVA: 0x00484AA8 File Offset: 0x00482CA8
+	// Token: 0x0600FA28 RID: 64040 RVA: 0x00491FB4 File Offset: 0x004901B4
 	protected override void OnBeforeDestroy()
 	{
 		PersonalTips? config = ConfigPersonalTipsById.GetConfig(this.OptionId, true);
@@ -101,26 +101,26 @@ public class PersonalOptionItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x04008AAF RID: 35503
+	// Token: 0x04008BF6 RID: 35830
 	private int OptionId;
 
-	// Token: 0x04008AB0 RID: 35504
+	// Token: 0x04008BF7 RID: 35831
 	[Nullable(2)]
 	private Action ClickFunction;
 
-	// Token: 0x02008978 RID: 35192
+	// Token: 0x02007B01 RID: 31489
 	private class EPersonalOptionItemDefine
 	{
-		// Token: 0x0402CAC2 RID: 182978
+		// Token: 0x04027DDD RID: 163293
 		public const int Button = 0;
 
-		// Token: 0x0402CAC3 RID: 182979
+		// Token: 0x04027DDE RID: 163294
 		public const int Description = 1;
 
-		// Token: 0x0402CAC4 RID: 182980
+		// Token: 0x04027DDF RID: 163295
 		public const int Icon = 2;
 
-		// Token: 0x0402CAC5 RID: 182981
+		// Token: 0x04027DE0 RID: 163296
 		public const int RedDot = 3;
 	}
 }

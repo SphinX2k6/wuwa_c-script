@@ -4,23 +4,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071EC RID: 29164
+	// Token: 0x020062A1 RID: 25249
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemManipulablePrecastState : SceneItemManipulableBaseState
 	{
-		// Token: 0x0604761E RID: 292382 RVA: 0x01228DBA File Offset: 0x01226FBA
+		// Token: 0x0603CF20 RID: 249632 RVA: 0x01182C0E File Offset: 0x01180E0E
 		public SceneItemManipulablePrecastState(SceneItemManipulatableComponent sceneItem) : base(sceneItem)
 		{
 		}
 
-		// Token: 0x0604761F RID: 292383 RVA: 0x01228DD9 File Offset: 0x01226FD9
+		// Token: 0x0603CF21 RID: 249633 RVA: 0x01182C2D File Offset: 0x01180E2D
 		public void SetDirection(int newValue)
 		{
 			this.Direction = newValue;
 		}
 
-		// Token: 0x06047620 RID: 292384 RVA: 0x01228DE2 File Offset: 0x01226FE2
+		// Token: 0x0603CF22 RID: 249634 RVA: 0x01182C36 File Offset: 0x01180E36
 		protected override void OnEnter()
 		{
 			this.Timer = 0f;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.StartActorLoc = Vector.Create(this.SceneItem.ActorComp.ActorLocationProxy);
 		}
 
-		// Token: 0x06047621 RID: 292385 RVA: 0x01228E24 File Offset: 0x01227024
+		// Token: 0x0603CF23 RID: 249635 RVA: 0x01182C78 File Offset: 0x01180E78
 		protected override void OnTick(float delta)
 		{
 			this.Timer += delta * 1000f;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.SceneItem.ActorComp.SetActorLocation(vector2.ToUeVector(false), "unknown", true);
 		}
 
-		// Token: 0x06047622 RID: 292386 RVA: 0x01228EE4 File Offset: 0x012270E4
+		// Token: 0x0603CF24 RID: 249636 RVA: 0x01182D38 File Offset: 0x01180F38
 		private Vector GetTargetLocation()
 		{
 			FTransformDouble actorTransform = Global.BaseCharacter.CharacterActorComponent.ActorTransform;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return vector;
 		}
 
-		// Token: 0x06047623 RID: 292387 RVA: 0x01228FBC File Offset: 0x012271BC
+		// Token: 0x0603CF25 RID: 249637 RVA: 0x01182E10 File Offset: 0x01181010
 		private void CalcCharacterDirs()
 		{
 			Vector vector = Vector.Create();
@@ -100,20 +100,20 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.CharacterVerticalDir.Normalize(9.99999993922529E-09);
 		}
 
-		// Token: 0x0402589C RID: 153756
+		// Token: 0x0402050B RID: 132363
 		private int Direction;
 
-		// Token: 0x0402589D RID: 153757
+		// Token: 0x0402050C RID: 132364
 		private string CurrentPrecastSpline = "";
 
-		// Token: 0x0402589E RID: 153758
+		// Token: 0x0402050D RID: 132365
 		[Nullable(2)]
 		private Vector CharacterDir;
 
-		// Token: 0x0402589F RID: 153759
+		// Token: 0x0402050E RID: 132366
 		private readonly Vector CharacterVerticalDir = Vector.Create();
 
-		// Token: 0x040258A0 RID: 153760
+		// Token: 0x0402050F RID: 132367
 		[Nullable(2)]
 		private Vector StartActorLoc;
 	}

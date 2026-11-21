@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056CB RID: 22219
+	// Token: 0x02005C99 RID: 23705
 	public struct IPasserbyNpcMoveState : IFlatbufferObject
 	{
-		// Token: 0x1700A557 RID: 42327
-		// (get) Token: 0x060251D0 RID: 152016 RVA: 0x0051FB46 File Offset: 0x0051DD46
+		// Token: 0x1700AE18 RID: 44568
+		// (get) Token: 0x06027515 RID: 161045 RVA: 0x0056214C File Offset: 0x0056034C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060251D1 RID: 152017 RVA: 0x0051FB53 File Offset: 0x0051DD53
+		// Token: 0x06027516 RID: 161046 RVA: 0x00562159 File Offset: 0x00560359
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060251D2 RID: 152018 RVA: 0x0051FB5C File Offset: 0x0051DD5C
+		// Token: 0x06027517 RID: 161047 RVA: 0x00562160 File Offset: 0x00560360
 		public static IPasserbyNpcMoveState GetRootAsIPasserbyNpcMoveState(ByteBuffer _bb)
 		{
 			return IPasserbyNpcMoveState.GetRootAsIPasserbyNpcMoveState(_bb, default(IPasserbyNpcMoveState));
 		}
 
-		// Token: 0x060251D3 RID: 152019 RVA: 0x0051FB78 File Offset: 0x0051DD78
+		// Token: 0x06027518 RID: 161048 RVA: 0x0056217C File Offset: 0x0056037C
 		public static IPasserbyNpcMoveState GetRootAsIPasserbyNpcMoveState(ByteBuffer _bb, IPasserbyNpcMoveState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060251D4 RID: 152020 RVA: 0x0051FB95 File Offset: 0x0051DD95
+		// Token: 0x06027519 RID: 161049 RVA: 0x00562199 File Offset: 0x00560399
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060251D5 RID: 152021 RVA: 0x0051FBA4 File Offset: 0x0051DDA4
+		// Token: 0x0602751A RID: 161050 RVA: 0x005621A8 File Offset: 0x005603A8
 		public IPasserbyNpcMoveState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A558 RID: 42328
-		// (get) Token: 0x060251D6 RID: 152022 RVA: 0x0051FBB4 File Offset: 0x0051DDB4
+		// Token: 0x1700AE19 RID: 44569
+		// (get) Token: 0x0602751B RID: 161051 RVA: 0x005621B8 File Offset: 0x005603B8
 		public EPatrolMoveState MoveState
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A559 RID: 42329
-		// (get) Token: 0x060251D7 RID: 152023 RVA: 0x0051FBF0 File Offset: 0x0051DDF0
+		// Token: 0x1700AE1A RID: 44570
+		// (get) Token: 0x0602751C RID: 161052 RVA: 0x005621F4 File Offset: 0x005603F4
 		public ECharPositionStateType CharPositionState
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A55A RID: 42330
-		// (get) Token: 0x060251D8 RID: 152024 RVA: 0x0051FC2C File Offset: 0x0051DE2C
+		// Token: 0x1700AE1B RID: 44571
+		// (get) Token: 0x0602751D RID: 161053 RVA: 0x00562230 File Offset: 0x00560430
 		public int MoveSpeed
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A55B RID: 42331
-		// (get) Token: 0x060251D9 RID: 152025 RVA: 0x0051FC68 File Offset: 0x0051DE68
+		// Token: 0x1700AE1C RID: 44572
+		// (get) Token: 0x0602751E RID: 161054 RVA: 0x0056226C File Offset: 0x0056046C
 		public bool UseAbpMappingSpeed
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A55C RID: 42332
-		// (get) Token: 0x060251DA RID: 152026 RVA: 0x0051FCA8 File Offset: 0x0051DEA8
+		// Token: 0x1700AE1D RID: 44573
+		// (get) Token: 0x0602751F RID: 161055 RVA: 0x005622AC File Offset: 0x005604AC
 		public byte NullMask
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060251DB RID: 152027 RVA: 0x0051FCE5 File Offset: 0x0051DEE5
+		// Token: 0x06027520 RID: 161056 RVA: 0x005622E9 File Offset: 0x005604E9
 		public static Offset<IPasserbyNpcMoveState> CreateIPasserbyNpcMoveState(FlatBufferBuilder builder, EPatrolMoveState MoveState = EPatrolMoveState.None, ECharPositionStateType CharPositionState = ECharPositionStateType.Ground, int MoveSpeed = 0, bool UseAbpMappingSpeed = false, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -131,49 +131,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPasserbyNpcMoveState.EndIPasserbyNpcMoveState(builder);
 		}
 
-		// Token: 0x060251DC RID: 152028 RVA: 0x0051FD19 File Offset: 0x0051DF19
+		// Token: 0x06027521 RID: 161057 RVA: 0x0056231D File Offset: 0x0056051D
 		public static void StartIPasserbyNpcMoveState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x060251DD RID: 152029 RVA: 0x0051FD22 File Offset: 0x0051DF22
+		// Token: 0x06027522 RID: 161058 RVA: 0x00562326 File Offset: 0x00560526
 		public static void AddMoveState(FlatBufferBuilder builder, EPatrolMoveState moveState)
 		{
 			builder.AddByte(0, (byte)moveState, 0);
 		}
 
-		// Token: 0x060251DE RID: 152030 RVA: 0x0051FD2D File Offset: 0x0051DF2D
+		// Token: 0x06027523 RID: 161059 RVA: 0x00562331 File Offset: 0x00560531
 		public static void AddCharPositionState(FlatBufferBuilder builder, ECharPositionStateType charPositionState)
 		{
 			builder.AddByte(1, (byte)charPositionState, 0);
 		}
 
-		// Token: 0x060251DF RID: 152031 RVA: 0x0051FD38 File Offset: 0x0051DF38
+		// Token: 0x06027524 RID: 161060 RVA: 0x0056233C File Offset: 0x0056053C
 		public static void AddMoveSpeed(FlatBufferBuilder builder, int moveSpeed)
 		{
 			builder.AddInt(2, moveSpeed, 0);
 		}
 
-		// Token: 0x060251E0 RID: 152032 RVA: 0x0051FD43 File Offset: 0x0051DF43
+		// Token: 0x06027525 RID: 161061 RVA: 0x00562347 File Offset: 0x00560547
 		public static void AddUseAbpMappingSpeed(FlatBufferBuilder builder, bool useAbpMappingSpeed)
 		{
 			builder.AddBool(3, useAbpMappingSpeed, false);
 		}
 
-		// Token: 0x060251E1 RID: 152033 RVA: 0x0051FD4E File Offset: 0x0051DF4E
+		// Token: 0x06027526 RID: 161062 RVA: 0x00562352 File Offset: 0x00560552
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x060251E2 RID: 152034 RVA: 0x0051FD59 File Offset: 0x0051DF59
+		// Token: 0x06027527 RID: 161063 RVA: 0x0056235D File Offset: 0x0056055D
 		public static Offset<IPasserbyNpcMoveState> EndIPasserbyNpcMoveState(FlatBufferBuilder builder)
 		{
 			return new Offset<IPasserbyNpcMoveState>(builder.EndTable());
 		}
 
-		// Token: 0x060251E3 RID: 152035 RVA: 0x0051FD68 File Offset: 0x0051DF68
+		// Token: 0x06027528 RID: 161064 RVA: 0x0056236C File Offset: 0x0056056C
 		public IPasserbyNpcMoveStateT UnPack()
 		{
 			IPasserbyNpcMoveStateT passerbyNpcMoveStateT = new IPasserbyNpcMoveStateT();
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return passerbyNpcMoveStateT;
 		}
 
-		// Token: 0x060251E4 RID: 152036 RVA: 0x0051FD83 File Offset: 0x0051DF83
+		// Token: 0x06027529 RID: 161065 RVA: 0x00562387 File Offset: 0x00560587
 		public void UnPackTo(IPasserbyNpcMoveStateT _o)
 		{
 			_o.MoveState = this.MoveState;
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060251E5 RID: 152037 RVA: 0x0051FDC4 File Offset: 0x0051DFC4
+		// Token: 0x0602752A RID: 161066 RVA: 0x005623C8 File Offset: 0x005605C8
 		public static Offset<IPasserbyNpcMoveState> Pack(FlatBufferBuilder builder, IPasserbyNpcMoveStateT _o)
 		{
 			if (_o == null)
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPasserbyNpcMoveState.CreateIPasserbyNpcMoveState(builder, _o.MoveState, _o.CharPositionState, _o.MoveSpeed, _o.UseAbpMappingSpeed, _o.NullMask);
 		}
 
-		// Token: 0x0400EB06 RID: 60166
+		// Token: 0x0400F7A7 RID: 63399
 		private Table __p;
 	}
 }

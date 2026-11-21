@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002966 RID: 10598
+// Token: 0x02001EE1 RID: 7905
 [NullableContext(1)]
 [Nullable(0)]
 public class SdkLoginViewData
 {
-	// Token: 0x06015E7C RID: 89724 RVA: 0x0058683E File Offset: 0x00584A3E
+	// Token: 0x06013880 RID: 80000 RVA: 0x005B1842 File Offset: 0x005AFA42
 	public static SdkLoginViewData Create(string descTextId, Action enterCallback, Action cancelCallback, List<SdkLoginViewLayoutData> layoutData)
 	{
 		return new SdkLoginViewData
@@ -19,19 +19,19 @@ public class SdkLoginViewData
 		};
 	}
 
-	// Token: 0x0400A306 RID: 41734
+	// Token: 0x0400A6F0 RID: 42736
 	public string DescTextId = "";
 
-	// Token: 0x0400A307 RID: 41735
+	// Token: 0x0400A6F1 RID: 42737
 	public Action EnterCallback = delegate()
 	{
 	};
 
-	// Token: 0x0400A308 RID: 41736
+	// Token: 0x0400A6F2 RID: 42738
 	public Action CancelCallback = delegate()
 	{
 	};
 
-	// Token: 0x0400A309 RID: 41737
+	// Token: 0x0400A6F3 RID: 42739
 	public List<SdkLoginViewLayoutData> LayoutData = new List<SdkLoginViewLayoutData>();
 }

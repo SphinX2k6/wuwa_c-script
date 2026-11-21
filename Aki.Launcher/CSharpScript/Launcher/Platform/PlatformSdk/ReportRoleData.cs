@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x0200013D RID: 317
+	// Token: 0x02000141 RID: 321
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ReportRoleData
 	{
-		// Token: 0x040005DE RID: 1502
+		// Token: 0x04000619 RID: 1561
 		public string serverId = "";
 
-		// Token: 0x040005DF RID: 1503
+		// Token: 0x0400061A RID: 1562
 		public string serverName = "";
 
-		// Token: 0x040005E0 RID: 1504
+		// Token: 0x0400061B RID: 1563
 		public string roleId = "";
 
-		// Token: 0x040005E1 RID: 1505
+		// Token: 0x0400061C RID: 1564
 		public string roleName = "";
 
-		// Token: 0x040005E2 RID: 1506
+		// Token: 0x0400061D RID: 1565
 		public string roleLevel = "";
 	}
 }

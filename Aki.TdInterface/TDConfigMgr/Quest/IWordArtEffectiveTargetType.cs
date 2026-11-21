@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001216 RID: 4630
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001352 RID: 4946
 	public class IWordArtEffectiveTargetType
 	{
-		// Token: 0x06006906 RID: 26886 RVA: 0x000FA6DC File Offset: 0x000F88DC
+		// Token: 0x06006F47 RID: 28487 RVA: 0x00107FE8 File Offset: 0x001061E8
 		private IWordArtEffectiveTargetType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006907 RID: 26887 RVA: 0x000FA714 File Offset: 0x000F8914
+		// Token: 0x06006F48 RID: 28488 RVA: 0x00108020 File Offset: 0x00106220
 		public static IWordArtEffectiveTargetType Create([Nullable(2)] IWordArtEffectiveTargetType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006908 RID: 26888 RVA: 0x000FA727 File Offset: 0x000F8927
+		// Token: 0x06006F49 RID: 28489 RVA: 0x00108033 File Offset: 0x00106233
 		public static IWordArtEffectiveTargetType CreateFromSetValue([Nullable(2)] IWordArtEffectiveTargetType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006909 RID: 26889 RVA: 0x000FA73A File Offset: 0x000F893A
+		// Token: 0x06006F4A RID: 28490 RVA: 0x00108046 File Offset: 0x00106246
 		public IWordArtEffectiveTargetType_SetValue ToSetValue()
 		{
 			return new IWordArtEffectiveTargetType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021E7 RID: 8679
-		// (get) Token: 0x0600690A RID: 26890 RVA: 0x000FA74D File Offset: 0x000F894D
-		// (set) Token: 0x0600690B RID: 26891 RVA: 0x000FA778 File Offset: 0x000F8978
+		// Token: 0x170023A8 RID: 9128
+		// (get) Token: 0x06006F4B RID: 28491 RVA: 0x00108059 File Offset: 0x00106259
+		// (set) Token: 0x06006F4C RID: 28492 RVA: 0x00108084 File Offset: 0x00106284
 		public virtual EWordArtEffectiveTargetType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003ED0 RID: 16080
+		// Token: 0x0400423E RID: 16958
 		[Nullable(2)]
 		protected IWordArtEffectiveTargetType FbInstance;
 
-		// Token: 0x04003ED1 RID: 16081
+		// Token: 0x0400423F RID: 16959
 		[Nullable(2)]
 		protected IWordArtEffectiveTargetType_SetValue PocoInterface;
 	}

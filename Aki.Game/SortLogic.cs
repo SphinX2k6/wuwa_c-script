@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020018A1 RID: 6305
+// Token: 0x02000D5A RID: 3418
 [NullableContext(1)]
 [Nullable(0)]
 public class SortLogic
 {
-	// Token: 0x0600B889 RID: 47241 RVA: 0x0029E2BC File Offset: 0x0029C4BC
+	// Token: 0x06008C72 RID: 35954 RVA: 0x002A89D8 File Offset: 0x002A6BD8
 	public SortLogic()
 	{
 		this.DataMapInternal = new Dictionary<ESortDataType, CommonSort>
@@ -112,7 +112,7 @@ public class SortLogic
 		};
 	}
 
-	// Token: 0x0600B88A RID: 47242 RVA: 0x0029E40C File Offset: 0x0029C60C
+	// Token: 0x06008C73 RID: 35955 RVA: 0x002A8B28 File Offset: 0x002A6D28
 	public void SortDataList<[Nullable(2)] T>(List<T> dataList, int configId, SortResultData resultData, params object[] parameters)
 	{
 		Sort? sortConfig = SortConfig.Instance.GetSortConfig(configId);
@@ -122,7 +122,7 @@ public class SortLogic
 		this.SortDataByData<T>(dataList, dataId, allSelectRuleSet, isAscending, parameters);
 	}
 
-	// Token: 0x0600B88B RID: 47243 RVA: 0x0029E450 File Offset: 0x0029C650
+	// Token: 0x06008C74 RID: 35956 RVA: 0x002A8B6C File Offset: 0x002A6D6C
 	public void SortDataByData<[Nullable(2)] T>(List<T> dataList, ESortDataType dataType, HashSet<int> ruleIdSet, bool isAscending, params object[] parameters)
 	{
 		CommonSort sortClass = this.DataMapInternal[dataType];
@@ -145,6 +145,6 @@ public class SortLogic
 		});
 	}
 
-	// Token: 0x0400538F RID: 21391
+	// Token: 0x0400543A RID: 21562
 	private readonly Dictionary<ESortDataType, CommonSort> DataMapInternal;
 }

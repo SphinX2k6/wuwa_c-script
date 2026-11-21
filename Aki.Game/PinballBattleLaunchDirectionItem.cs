@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CEB RID: 7403
+// Token: 0x020011AD RID: 4525
 public class PinballBattleLaunchDirectionItem : UiPanelBase
 {
-	// Token: 0x0600E03F RID: 57407 RVA: 0x003489C8 File Offset: 0x00346BC8
+	// Token: 0x0600B45C RID: 46172 RVA: 0x003543F0 File Offset: 0x003525F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -21,7 +21,7 @@ public class PinballBattleLaunchDirectionItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E040 RID: 57408 RVA: 0x00348A31 File Offset: 0x00346C31
+	// Token: 0x0600B45D RID: 46173 RVA: 0x00354459 File Offset: 0x00352659
 	protected override void OnStart()
 	{
 		UUITexture texture = base.GetTexture(0);

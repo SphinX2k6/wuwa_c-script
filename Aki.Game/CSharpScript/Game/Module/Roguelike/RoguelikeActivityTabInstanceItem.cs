@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E04 RID: 19972
+	// Token: 0x02003DCD RID: 15821
 	public class RoguelikeActivityTabInstanceItem : UiPanelBase
 	{
-		// Token: 0x06033883 RID: 211075 RVA: 0x00C0AC68 File Offset: 0x00C08E68
+		// Token: 0x060286EE RID: 165614 RVA: 0x00B54178 File Offset: 0x00B52378
 		public RoguelikeActivityTabInstanceItem(int instanceId)
 		{
 			this.InstanceId = instanceId;
 		}
 
-		// Token: 0x06033884 RID: 211076 RVA: 0x00C0AC90 File Offset: 0x00C08E90
+		// Token: 0x060286EF RID: 165615 RVA: 0x00B541A0 File Offset: 0x00B523A0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -38,13 +38,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033885 RID: 211077 RVA: 0x00C0AD5C File Offset: 0x00C08F5C
+		// Token: 0x060286F0 RID: 165616 RVA: 0x00B5426C File Offset: 0x00B5246C
 		protected override void OnStart()
 		{
 			this.Update(this.InstanceId);
 		}
 
-		// Token: 0x06033886 RID: 211078 RVA: 0x00C0AD6C File Offset: 0x00C08F6C
+		// Token: 0x060286F1 RID: 165617 RVA: 0x00B5427C File Offset: 0x00B5247C
 		protected void Update(int instanceId)
 		{
 			InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(instanceId);
@@ -81,36 +81,36 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetItem(3).SetUIActive(false);
 		}
 
-		// Token: 0x0401B568 RID: 111976
+		// Token: 0x04015F3B RID: 89915
 		public int InstanceId;
 
-		// Token: 0x0401B569 RID: 111977
+		// Token: 0x04015F3C RID: 89916
 		[Nullable(1)]
 		public List<CommonItemSmallItemGrid> ItemGridList = new List<CommonItemSmallItemGrid>();
 
-		// Token: 0x0401B56A RID: 111978
+		// Token: 0x04015F3D RID: 89917
 		public bool IsShowReward;
 
-		// Token: 0x0401B56B RID: 111979
+		// Token: 0x04015F3E RID: 89918
 		[Nullable(1)]
 		public List<TItem> RewardItemList = new List<TItem>();
 
-		// Token: 0x0200AF94 RID: 44948
+		// Token: 0x020099C9 RID: 39369
 		private class ERoguelikeActivityTabInstanceItemDefine
 		{
-			// Token: 0x040354E8 RID: 218344
+			// Token: 0x0402FF1B RID: 196379
 			public const int SpriteIcon = 0;
 
-			// Token: 0x040354E9 RID: 218345
+			// Token: 0x0402FF1C RID: 196380
 			public const int TxtName = 1;
 
-			// Token: 0x040354EA RID: 218346
+			// Token: 0x0402FF1D RID: 196381
 			public const int RewardContent = 2;
 
-			// Token: 0x040354EB RID: 218347
+			// Token: 0x0402FF1E RID: 196382
 			public const int RewardItem = 3;
 
-			// Token: 0x040354EC RID: 218348
+			// Token: 0x0402FF1F RID: 196383
 			public const int BtnConfirm = 4;
 		}
 	}

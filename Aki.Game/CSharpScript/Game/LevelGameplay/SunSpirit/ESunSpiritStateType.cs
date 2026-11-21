@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 {
-	// Token: 0x020069EF RID: 27119
+	// Token: 0x02005B4C RID: 23372
 	public enum ESunSpiritStateType
 	{
-		// Token: 0x04023377 RID: 144247
+		// Token: 0x0401E569 RID: 124265
 		None,
-		// Token: 0x04023378 RID: 144248
+		// Token: 0x0401E56A RID: 124266
 		FlyingToGear,
-		// Token: 0x04023379 RID: 144249
+		// Token: 0x0401E56B RID: 124267
 		FlyingToPlayer,
-		// Token: 0x0402337A RID: 144250
+		// Token: 0x0401E56C RID: 124268
 		OccupiedByGear,
-		// Token: 0x0402337B RID: 144251
+		// Token: 0x0401E56D RID: 124269
 		OccupiedByPlayer
 	}
 }

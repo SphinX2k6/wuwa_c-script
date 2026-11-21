@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006264 RID: 25188
+	// Token: 0x020068D5 RID: 26837
 	public class IBvbSkipChallengeT
 	{
-		// Token: 0x1700BBB5 RID: 48053
-		// (get) Token: 0x0602B762 RID: 178018 RVA: 0x005FBDA6 File Offset: 0x005F9FA6
-		// (set) Token: 0x0602B763 RID: 178019 RVA: 0x005FBDAE File Offset: 0x005F9FAE
+		// Token: 0x1700C53D RID: 50493
+		// (get) Token: 0x0602DEC3 RID: 188099 RVA: 0x00646BAE File Offset: 0x00644DAE
+		// (set) Token: 0x0602DEC4 RID: 188100 RVA: 0x00646BB6 File Offset: 0x00644DB6
 		public int ChallengeId { get; set; }
 
-		// Token: 0x0602B764 RID: 178020 RVA: 0x005FBDB7 File Offset: 0x005F9FB7
+		// Token: 0x0602DEC5 RID: 188101 RVA: 0x00646BBF File Offset: 0x00644DBF
 		public IBvbSkipChallengeT()
 		{
 			this.ChallengeId = 0;

@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001508 RID: 5384
+// Token: 0x020009C0 RID: 2496
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySoarSubView : ActivitySubViewBase
 {
-	// Token: 0x060099A5 RID: 39333 RVA: 0x00213E3C File Offset: 0x0021203C
+	// Token: 0x06006D83 RID: 28035 RVA: 0x0021DBF4 File Offset: 0x0021BDF4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -38,13 +38,13 @@ public class ActivitySoarSubView : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060099A6 RID: 39334 RVA: 0x00213F6B File Offset: 0x0021216B
+	// Token: 0x06006D84 RID: 28036 RVA: 0x0021DD23 File Offset: 0x0021BF23
 	protected override void OnSetData()
 	{
 		this.ActivityData = (ActivitySoarData)this.ActivityBaseData;
 	}
 
-	// Token: 0x060099A7 RID: 39335 RVA: 0x00213F80 File Offset: 0x00212180
+	// Token: 0x06006D85 RID: 28037 RVA: 0x0021DD38 File Offset: 0x0021BF38
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySoarSubView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -55,7 +55,7 @@ public class ActivitySoarSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060099A8 RID: 39336 RVA: 0x00213FC4 File Offset: 0x002121C4
+	// Token: 0x06006D86 RID: 28038 RVA: 0x0021DD7C File Offset: 0x0021BF7C
 	protected override void OnRefreshView()
 	{
 		bool flag = FunctionModel.Instance.IsOpen(10026010);
@@ -100,7 +100,7 @@ public class ActivitySoarSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060099A9 RID: 39337 RVA: 0x002140EC File Offset: 0x002122EC
+	// Token: 0x06006D87 RID: 28039 RVA: 0x0021DEA4 File Offset: 0x0021C0A4
 	protected override void OnTimer(float gap)
 	{
 		if (this.IsShowConfirmBox)
@@ -114,7 +114,7 @@ public class ActivitySoarSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060099AA RID: 39338 RVA: 0x00214115 File Offset: 0x00212315
+	// Token: 0x06006D88 RID: 28040 RVA: 0x0021DECD File Offset: 0x0021C0CD
 	private void OnConfirmBtnClick(ActivityBaseData _)
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -124,41 +124,41 @@ public class ActivitySoarSubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x04004377 RID: 17271
+	// Token: 0x0400441D RID: 17437
 	protected ActivitySoarData ActivityData;
 
-	// Token: 0x04004378 RID: 17272
+	// Token: 0x0400441E RID: 17438
 	protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x04004379 RID: 17273
+	// Token: 0x0400441F RID: 17439
 	private bool IsShowConfirmBox;
 
-	// Token: 0x02007B40 RID: 31552
+	// Token: 0x02006CCB RID: 27851
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04028885 RID: 166021
+		// Token: 0x04023BC1 RID: 146369
 		public const int ItemCommonInfo = 0;
 
-		// Token: 0x04028886 RID: 166022
+		// Token: 0x04023BC2 RID: 146370
 		public const int SpriteUnlock = 1;
 
-		// Token: 0x04028887 RID: 166023
+		// Token: 0x04023BC3 RID: 146371
 		public const int ItemLock = 2;
 
-		// Token: 0x04028888 RID: 166024
+		// Token: 0x04023BC4 RID: 146372
 		public const int TextState = 3;
 
-		// Token: 0x04028889 RID: 166025
+		// Token: 0x04023BC5 RID: 146373
 		public const int ItemMale = 4;
 
-		// Token: 0x0402888A RID: 166026
+		// Token: 0x04023BC6 RID: 146374
 		public const int ItemFemale = 5;
 
-		// Token: 0x0402888B RID: 166027
+		// Token: 0x04023BC7 RID: 146375
 		public const int TextDesc = 6;
 
-		// Token: 0x0402888C RID: 166028
+		// Token: 0x04023BC8 RID: 146376
 		public const int NiagaraUnlock = 7;
 	}
 }

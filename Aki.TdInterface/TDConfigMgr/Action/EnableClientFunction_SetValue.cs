@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001637 RID: 5687
+	// Token: 0x020017A4 RID: 6052
 	public class EnableClientFunction_SetValue
 	{
-		// Token: 0x04004C4F RID: 19535
+		// Token: 0x04005043 RID: 20547
 		public EEnableClientFunctionType Type;
 	}
 }

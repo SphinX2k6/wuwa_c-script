@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200319B RID: 12699
+// Token: 0x02002709 RID: 9993
 [NullableContext(2)]
 [Nullable(0)]
 public class SpecialSkillShachong : SpecialSkillBase
 {
-	// Token: 0x0601B596 RID: 112022 RVA: 0x007788EE File Offset: 0x00776AEE
+	// Token: 0x060190B6 RID: 102582 RVA: 0x007A0B7A File Offset: 0x0079ED7A
 	[NullableContext(1)]
 	public SpecialSkillShachong(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B597 RID: 112023 RVA: 0x007788F8 File Offset: 0x00776AF8
+	// Token: 0x060190B7 RID: 102583 RVA: 0x007A0B84 File Offset: 0x0079ED84
 	public override void OnStart()
 	{
 		FName? dynamicFName = FNameUtil.GetDynamicFName("Grid_Navigation");
@@ -41,7 +41,7 @@ public class SpecialSkillShachong : SpecialSkillBase
 		abilityComp.AddGameplayEventListener(this.TagId, new TGameplayEventCallback(this.OnEvent));
 	}
 
-	// Token: 0x0601B598 RID: 112024 RVA: 0x007789F4 File Offset: 0x00776BF4
+	// Token: 0x060190B8 RID: 102584 RVA: 0x007A0C80 File Offset: 0x0079EE80
 	[NullableContext(1)]
 	private void OnEvent(int tagId, FGameplayEventData payload)
 	{
@@ -61,7 +61,7 @@ public class SpecialSkillShachong : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B599 RID: 112025 RVA: 0x00778A5C File Offset: 0x00776C5C
+	// Token: 0x060190B9 RID: 102585 RVA: 0x007A0CE8 File Offset: 0x0079EEE8
 	public override void OnEnd()
 	{
 		AActor actorStreamingSource = this.ActorStreamingSource;
@@ -84,18 +84,18 @@ public class SpecialSkillShachong : SpecialSkillBase
 		this.AbilityComp = null;
 	}
 
-	// Token: 0x0400D5FD RID: 54781
+	// Token: 0x0400DA80 RID: 55936
 	private const float LOADINGRANGE = 10000f;
 
-	// Token: 0x0400D5FE RID: 54782
+	// Token: 0x0400DA81 RID: 55937
 	private AActor ActorStreamingSource;
 
-	// Token: 0x0400D5FF RID: 54783
+	// Token: 0x0400DA82 RID: 55938
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D600 RID: 54784
+	// Token: 0x0400DA83 RID: 55939
 	private CharacterAbilityComponent AbilityComp;
 
-	// Token: 0x0400D601 RID: 54785
+	// Token: 0x0400DA84 RID: 55940
 	private int TagId;
 }

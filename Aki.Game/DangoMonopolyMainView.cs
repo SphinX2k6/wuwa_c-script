@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -12,13 +11,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200123D RID: 4669
+// Token: 0x020006F1 RID: 1777
 [NullableContext(2)]
 [Nullable(0)]
 public class DangoMonopolyMainView : DangoMonopolyViewBase
 {
-	// Token: 0x17000ABC RID: 2748
-	// (get) Token: 0x06007E57 RID: 32343 RVA: 0x001ABC14 File Offset: 0x001A9E14
+	// Token: 0x17000ADC RID: 2780
+	// (get) Token: 0x060051EE RID: 20974 RVA: 0x001B48D4 File Offset: 0x001B2AD4
 	public new DangoMonopolyMainViewParam OpenParam
 	{
 		get
@@ -27,13 +26,13 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007E58 RID: 32344 RVA: 0x001ABC21 File Offset: 0x001A9E21
+	// Token: 0x060051EF RID: 20975 RVA: 0x001B48E1 File Offset: 0x001B2AE1
 	[NullableContext(1)]
 	public DangoMonopolyMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007E59 RID: 32345 RVA: 0x001ABC2C File Offset: 0x001A9E2C
+	// Token: 0x060051F0 RID: 20976 RVA: 0x001B48EC File Offset: 0x001B2AEC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -73,12 +72,12 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		};
 	}
 
-	// Token: 0x06007E5A RID: 32346 RVA: 0x001ABEE9 File Offset: 0x001AA0E9
+	// Token: 0x060051F1 RID: 20977 RVA: 0x001B4BA9 File Offset: 0x001B2DA9
 	private void InitDataParam()
 	{
 	}
 
-	// Token: 0x06007E5B RID: 32347 RVA: 0x001ABEEC File Offset: 0x001AA0EC
+	// Token: 0x060051F2 RID: 20978 RVA: 0x001B4BAC File Offset: 0x001B2DAC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoMonopolyMainView.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -89,7 +88,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E5C RID: 32348 RVA: 0x001ABF30 File Offset: 0x001AA130
+	// Token: 0x060051F3 RID: 20979 RVA: 0x001B4BF0 File Offset: 0x001B2DF0
 	protected override void OnStart()
 	{
 		if (this.ActivityData == null)
@@ -108,7 +107,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		EventSystem.Instance.Add(EEventName.DangoMonopolyMoveStart, new Action(this.EventDangoMonopolyMoveStart));
 	}
 
-	// Token: 0x06007E5D RID: 32349 RVA: 0x001ABF9C File Offset: 0x001AA19C
+	// Token: 0x060051F4 RID: 20980 RVA: 0x001B4C5C File Offset: 0x001B2E5C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.DangoMonopolyBoardRewardUpdate, new Action(this.EventDangoMonopolyBoardRewardUpdate));
@@ -119,7 +118,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		RedDotController.Instance.BindRedDot(ERedDotName.DangoMonopolyDiceNum, base.GetItem(20), new Action<bool, int>(this.UpdateDiceUseState), 0);
 	}
 
-	// Token: 0x06007E5E RID: 32350 RVA: 0x001AC058 File Offset: 0x001AA258
+	// Token: 0x060051F5 RID: 20981 RVA: 0x001B4D18 File Offset: 0x001B2F18
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.DangoMonopolyBoardRewardUpdate, new Action(this.EventDangoMonopolyBoardRewardUpdate));
@@ -130,7 +129,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		RedDotController.Instance.UnBindRedDot(ERedDotName.DangoMonopolyDiceNum);
 	}
 
-	// Token: 0x06007E5F RID: 32351 RVA: 0x001AC0F4 File Offset: 0x001AA2F4
+	// Token: 0x060051F6 RID: 20982 RVA: 0x001B4DB4 File Offset: 0x001B2FB4
 	protected override void OnBeforeShow()
 	{
 		if (!base.UpdateActivityData())
@@ -148,13 +147,13 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		this.RefreshTimerHandle = TimerSystem.RealTimeInstance.Forever(new TTimerAction(this.OnTimerRefresh), (float)num, 1f, null, null, true);
 	}
 
-	// Token: 0x06007E60 RID: 32352 RVA: 0x001AC177 File Offset: 0x001AA377
+	// Token: 0x060051F7 RID: 20983 RVA: 0x001B4E37 File Offset: 0x001B3037
 	public void OnTimerRefresh(float _)
 	{
 		this.CheckBoardUnlockTime();
 	}
 
-	// Token: 0x06007E61 RID: 32353 RVA: 0x001AC17F File Offset: 0x001AA37F
+	// Token: 0x060051F8 RID: 20984 RVA: 0x001B4E3F File Offset: 0x001B303F
 	public void CheckBoardUnlockTime()
 	{
 		if (this.ActivityData.IsRunningBoardLock() != this.IsBoardLock)
@@ -164,7 +163,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		this.UpdateBoardRemainTime();
 	}
 
-	// Token: 0x06007E62 RID: 32354 RVA: 0x001AC1A0 File Offset: 0x001AA3A0
+	// Token: 0x060051F9 RID: 20985 RVA: 0x001B4E60 File Offset: 0x001B3060
 	public bool CheckActivityClose()
 	{
 		if (!this.ActivityData.CheckIfClose())
@@ -175,7 +174,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return true;
 	}
 
-	// Token: 0x06007E63 RID: 32355 RVA: 0x001AC1BC File Offset: 0x001AA3BC
+	// Token: 0x060051FA RID: 20986 RVA: 0x001B4E7C File Offset: 0x001B307C
 	public void ClearTimer()
 	{
 		if (this.RefreshTimerHandle != null && TimerSystem.RealTimeInstance.Has(this.RefreshTimerHandle))
@@ -185,20 +184,20 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007E64 RID: 32356 RVA: 0x001AC1F0 File Offset: 0x001AA3F0
+	// Token: 0x060051FB RID: 20987 RVA: 0x001B4EB0 File Offset: 0x001B30B0
 	protected override void OnBeforeHide()
 	{
 		this.ClearTimer();
 		this.SetBattleFloatVisible(false).Forget();
 	}
 
-	// Token: 0x06007E65 RID: 32357 RVA: 0x001AC204 File Offset: 0x001AA404
+	// Token: 0x060051FC RID: 20988 RVA: 0x001B4EC4 File Offset: 0x001B30C4
 	protected override void OnAfterShow()
 	{
 		this.SetBattleFloatVisible(true).Forget();
 	}
 
-	// Token: 0x06007E66 RID: 32358 RVA: 0x001AC214 File Offset: 0x001AA414
+	// Token: 0x060051FD RID: 20989 RVA: 0x001B4ED4 File Offset: 0x001B30D4
 	public UniTask SetBattleFloatVisible(bool visible)
 	{
 		DangoMonopolyMainView.<SetBattleFloatVisible>d__31 <SetBattleFloatVisible>d__;
@@ -210,7 +209,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return <SetBattleFloatVisible>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E67 RID: 32359 RVA: 0x001AC260 File Offset: 0x001AA460
+	// Token: 0x060051FE RID: 20990 RVA: 0x001B4F20 File Offset: 0x001B3120
 	public UniTask CheckShowProcess()
 	{
 		DangoMonopolyMainView.<CheckShowProcess>d__32 <CheckShowProcess>d__;
@@ -221,7 +220,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return <CheckShowProcess>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E68 RID: 32360 RVA: 0x001AC2A4 File Offset: 0x001AA4A4
+	// Token: 0x060051FF RID: 20991 RVA: 0x001B4F64 File Offset: 0x001B3164
 	public UniTask CheckUpdateDangoPosition()
 	{
 		DangoMonopolyMainView.<CheckUpdateDangoPosition>d__33 <CheckUpdateDangoPosition>d__;
@@ -232,7 +231,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return <CheckUpdateDangoPosition>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E69 RID: 32361 RVA: 0x001AC2E8 File Offset: 0x001AA4E8
+	// Token: 0x06005200 RID: 20992 RVA: 0x001B4FA8 File Offset: 0x001B31A8
 	public UniTask CheckShowInfo()
 	{
 		DangoMonopolyMainView.<CheckShowInfo>d__34 <CheckShowInfo>d__;
@@ -243,7 +242,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return <CheckShowInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E6A RID: 32362 RVA: 0x001AC32C File Offset: 0x001AA52C
+	// Token: 0x06005201 RID: 20993 RVA: 0x001B4FEC File Offset: 0x001B31EC
 	public UniTask CheckWelcome(bool dangoPosShow = false)
 	{
 		DangoMonopolyMainView.<CheckWelcome>d__35 <CheckWelcome>d__;
@@ -255,7 +254,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return <CheckWelcome>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E6B RID: 32363 RVA: 0x001AC378 File Offset: 0x001AA578
+	// Token: 0x06005202 RID: 20994 RVA: 0x001B5038 File Offset: 0x001B3238
 	private void ActivityHide()
 	{
 		UUIButtonComponent button = base.GetButton(1);
@@ -286,13 +285,13 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x06007E6C RID: 32364 RVA: 0x001AC40D File Offset: 0x001AA60D
+	// Token: 0x06005203 RID: 20995 RVA: 0x001B50CD File Offset: 0x001B32CD
 	public void UpdateShowBoardData(DangoMonopolyBoardData boardData)
 	{
 		this.ShowBoardData = (boardData ?? this.ActivityData.BoardList[0]);
 	}
 
-	// Token: 0x06007E6D RID: 32365 RVA: 0x001AC42C File Offset: 0x001AA62C
+	// Token: 0x06005204 RID: 20996 RVA: 0x001B50EC File Offset: 0x001B32EC
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearTimer();
@@ -318,7 +317,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		EventSystem.Instance.Emit(EEventName.LeaveInstanceExternalConfirm);
 	}
 
-	// Token: 0x06007E6E RID: 32366 RVA: 0x001AC4DC File Offset: 0x001AA6DC
+	// Token: 0x06005205 RID: 20997 RVA: 0x001B519C File Offset: 0x001B339C
 	private void CloseCallBack()
 	{
 		ActivityDangoMonopolyData activityData = this.ActivityData;
@@ -339,20 +338,20 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06007E6F RID: 32367 RVA: 0x001AC55B File Offset: 0x001AA75B
+	// Token: 0x06005206 RID: 20998 RVA: 0x001B521B File Offset: 0x001B341B
 	private void HelpCallback()
 	{
 		HelpController.Instance.OpenHelpById(290);
 	}
 
-	// Token: 0x06007E70 RID: 32368 RVA: 0x001AC56C File Offset: 0x001AA76C
+	// Token: 0x06005207 RID: 20999 RVA: 0x001B522C File Offset: 0x001B342C
 	private void OnClickBtnSpeed()
 	{
 		this.ActivityData.SetActivitySpeed(null);
 		this.UpdateSpeed();
 	}
 
-	// Token: 0x06007E71 RID: 32369 RVA: 0x001AC593 File Offset: 0x001AA793
+	// Token: 0x06005208 RID: 21000 RVA: 0x001B5253 File Offset: 0x001B3453
 	private void OnClickBtnRoundRecord()
 	{
 		this.ActivityData.OpenViewDangoMonopolyTransition(delegate
@@ -366,7 +365,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		});
 	}
 
-	// Token: 0x06007E72 RID: 32370 RVA: 0x001AC5AC File Offset: 0x001AA7AC
+	// Token: 0x06005209 RID: 21001 RVA: 0x001B526C File Offset: 0x001B346C
 	public void UpdateBtnRoundRecord()
 	{
 		bool uiactive = this.ActivityData.GetFinishedRoundNum() > 0;
@@ -378,7 +377,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		button.RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x06007E73 RID: 32371 RVA: 0x001AC5E7 File Offset: 0x001AA7E7
+	// Token: 0x0600520A RID: 21002 RVA: 0x001B52A7 File Offset: 0x001B34A7
 	private void OnClickBtnDiceTask()
 	{
 		if (this.CheckActivityClose())
@@ -388,7 +387,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		this.ActivityData.OpenViewDiceTask();
 	}
 
-	// Token: 0x06007E74 RID: 32372 RVA: 0x001AC600 File Offset: 0x001AA800
+	// Token: 0x0600520B RID: 21003 RVA: 0x001B52C0 File Offset: 0x001B34C0
 	private void OnClickBtnUseDice()
 	{
 		if (this.CheckActivityClose())
@@ -412,14 +411,14 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		this.OnClickBtnDiceTask();
 	}
 
-	// Token: 0x06007E75 RID: 32373 RVA: 0x001AC661 File Offset: 0x001AA861
+	// Token: 0x0600520C RID: 21004 RVA: 0x001B5321 File Offset: 0x001B3521
 	[NullableContext(1)]
 	private DangoMonopolyBuffStateItem CreateBuffItem()
 	{
 		return new DangoMonopolyBuffStateItem();
 	}
 
-	// Token: 0x06007E76 RID: 32374 RVA: 0x001AC668 File Offset: 0x001AA868
+	// Token: 0x0600520D RID: 21005 RVA: 0x001B5328 File Offset: 0x001B3528
 	public void UpdateData()
 	{
 		ActivityDangoMonopolyData activityData = this.ActivityData;
@@ -458,7 +457,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		GenericLayout<DangoMonopolyBuffStateItem, IDangoMonopolyRoundBuffData> buffLayoutView = this.BuffLayoutView;
 		if (buffLayoutView != null)
 		{
-			buffLayoutView.RefreshByData(buffItemData.ToList<IDangoMonopolyRoundBuffData>(), null, true);
+			buffLayoutView.RefreshByData(buffItemData, null, true);
 		}
 		this.UpdateReward(false);
 		this.UpdateProgress();
@@ -468,7 +467,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		this.UpdateBoardLockTips();
 	}
 
-	// Token: 0x06007E77 RID: 32375 RVA: 0x001AC77C File Offset: 0x001AA97C
+	// Token: 0x0600520E RID: 21006 RVA: 0x001B5437 File Offset: 0x001B3637
 	[NullableContext(1)]
 	public List<IDangoMonopolyRoundBuffData> GetBuffItemData()
 	{
@@ -476,7 +475,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return ((showBoardData != null) ? showBoardData.GetDangoBuffShowList() : null) ?? new List<IDangoMonopolyRoundBuffData>();
 	}
 
-	// Token: 0x06007E78 RID: 32376 RVA: 0x001AC79C File Offset: 0x001AA99C
+	// Token: 0x0600520F RID: 21007 RVA: 0x001B5454 File Offset: 0x001B3654
 	public void UpdateBoardLockTips()
 	{
 		this.IsBoardLock = this.ActivityData.IsRunningBoardLock();
@@ -508,7 +507,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		text.ShowTextNew("DangoMonopoly_title_18");
 	}
 
-	// Token: 0x06007E79 RID: 32377 RVA: 0x001AC82D File Offset: 0x001AAA2D
+	// Token: 0x06005210 RID: 21008 RVA: 0x001B54E5 File Offset: 0x001B36E5
 	public void UpdateBoardRemainTime()
 	{
 		if (!this.IsBoardLock)
@@ -523,7 +522,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		text.SetText(this.ActivityData.GetBoardRemainTimeStr(), true);
 	}
 
-	// Token: 0x06007E7A RID: 32378 RVA: 0x001AC858 File Offset: 0x001AAA58
+	// Token: 0x06005211 RID: 21009 RVA: 0x001B5510 File Offset: 0x001B3710
 	public void UpdateDiceUseState(bool _1, int _2)
 	{
 		UUIItem sprite = base.GetSprite(11);
@@ -539,7 +538,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		button.RootUIComp.Get().SetUIActive(flag.GetValueOrDefault());
 	}
 
-	// Token: 0x06007E7B RID: 32379 RVA: 0x001AC8CC File Offset: 0x001AAACC
+	// Token: 0x06005212 RID: 21010 RVA: 0x001B5584 File Offset: 0x001B3784
 	public void UpdateReward(bool resetNavigation = false)
 	{
 		List<DangoMonopolyBoardData> boardList = this.ActivityData.BoardList;
@@ -576,7 +575,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		endRoundReward.Refresh(data, false, 0);
 	}
 
-	// Token: 0x06007E7C RID: 32380 RVA: 0x001ACA10 File Offset: 0x001AAC10
+	// Token: 0x06005213 RID: 21011 RVA: 0x001B56C8 File Offset: 0x001B38C8
 	[NullableContext(1)]
 	public void UpdateRewardPos(List<IDangoMonopolyRoundRewardItemData> rewardList, bool resetNavigation = false)
 	{
@@ -601,7 +600,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		UiNavigationNewController.Instance.MarkViewHandleRefreshNavigationDirtyByItem(rootItem);
 	}
 
-	// Token: 0x06007E7D RID: 32381 RVA: 0x001ACA80 File Offset: 0x001AAC80
+	// Token: 0x06005214 RID: 21012 RVA: 0x001B5738 File Offset: 0x001B3938
 	[NullableContext(1)]
 	public int GetRewardPos(List<IDangoMonopolyRoundRewardItemData> rewardList)
 	{
@@ -630,7 +629,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return Math.Max(0, num2 - 1);
 	}
 
-	// Token: 0x06007E7E RID: 32382 RVA: 0x001ACAEE File Offset: 0x001AACEE
+	// Token: 0x06005215 RID: 21013 RVA: 0x001B57A6 File Offset: 0x001B39A6
 	[NullableContext(1)]
 	private DangoMonopolyRoundRewardItem CreateRewardItemGrid()
 	{
@@ -640,12 +639,12 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		};
 	}
 
-	// Token: 0x06007E7F RID: 32383 RVA: 0x001ACB07 File Offset: 0x001AAD07
+	// Token: 0x06005216 RID: 21014 RVA: 0x001B57BF File Offset: 0x001B39BF
 	public void UpdateProgress()
 	{
 	}
 
-	// Token: 0x06007E80 RID: 32384 RVA: 0x001ACB09 File Offset: 0x001AAD09
+	// Token: 0x06005217 RID: 21015 RVA: 0x001B57C1 File Offset: 0x001B39C1
 	[NullableContext(1)]
 	private void OnClickReward(IDangoMonopolyRoundRewardItemData data)
 	{
@@ -658,10 +657,10 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 			this.ActivityData.RequestReceiveBoard(data.BoardId, true);
 			return;
 		}
-		ItemController.Instance.OpenItemTipsByItemId(data.ItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(data.ItemId, true, null, false);
 	}
 
-	// Token: 0x06007E81 RID: 32385 RVA: 0x001ACB44 File Offset: 0x001AAD44
+	// Token: 0x06005218 RID: 21016 RVA: 0x001B57FC File Offset: 0x001B39FC
 	public void UpdateSpeed()
 	{
 		string speedStr = this.ActivityData.GetSpeedStr();
@@ -673,7 +672,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		text.SetText(speedStr, true);
 	}
 
-	// Token: 0x06007E82 RID: 32386 RVA: 0x001ACB70 File Offset: 0x001AAD70
+	// Token: 0x06005219 RID: 21017 RVA: 0x001B5828 File Offset: 0x001B3A28
 	public void SetMoveDangoUiState(bool visible)
 	{
 		UUIItem item = base.GetItem(18);
@@ -709,7 +708,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		popupCaption3.SetCurrencyVisible(visible);
 	}
 
-	// Token: 0x06007E83 RID: 32387 RVA: 0x001ACC07 File Offset: 0x001AAE07
+	// Token: 0x0600521A RID: 21018 RVA: 0x001B58BF File Offset: 0x001B3ABF
 	private void EventDangoMonopolyMoveStart()
 	{
 		this.UpdateSpeed();
@@ -719,7 +718,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		this.MoveDangoOneStepAsync(true).Forget();
 	}
 
-	// Token: 0x06007E84 RID: 32388 RVA: 0x001ACC30 File Offset: 0x001AAE30
+	// Token: 0x0600521B RID: 21019 RVA: 0x001B58E8 File Offset: 0x001B3AE8
 	public UniTask MoveDangoOneStepAsync(bool isFirst = false)
 	{
 		DangoMonopolyMainView.<MoveDangoOneStepAsync>d__61 <MoveDangoOneStepAsync>d__;
@@ -731,7 +730,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return <MoveDangoOneStepAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E85 RID: 32389 RVA: 0x001ACC7C File Offset: 0x001AAE7C
+	// Token: 0x0600521C RID: 21020 RVA: 0x001B5934 File Offset: 0x001B3B34
 	public UniTask CheckTriggerBuffAsync()
 	{
 		DangoMonopolyMainView.<CheckTriggerBuffAsync>d__62 <CheckTriggerBuffAsync>d__;
@@ -742,7 +741,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return <CheckTriggerBuffAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E86 RID: 32390 RVA: 0x001ACCBF File Offset: 0x001AAEBF
+	// Token: 0x0600521D RID: 21021 RVA: 0x001B5977 File Offset: 0x001B3B77
 	public void CheckBuffIsWhenMoveFire(int id)
 	{
 		if (this.ActivityData.BuffIsWhenMoveFire(id))
@@ -757,7 +756,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007E87 RID: 32391 RVA: 0x001ACCF0 File Offset: 0x001AAEF0
+	// Token: 0x0600521E RID: 21022 RVA: 0x001B59A8 File Offset: 0x001B3BA8
 	[NullableContext(1)]
 	public UniTask CheckGridIsActiveDouble(DangoMonopolyGridData gridData)
 	{
@@ -770,7 +769,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return <CheckGridIsActiveDouble>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E88 RID: 32392 RVA: 0x001ACD3C File Offset: 0x001AAF3C
+	// Token: 0x0600521F RID: 21023 RVA: 0x001B59F4 File Offset: 0x001B3BF4
 	public UniTask DangoMonopolyMoveEnd()
 	{
 		DangoMonopolyMainView.<DangoMonopolyMoveEnd>d__65 <DangoMonopolyMoveEnd>d__;
@@ -781,7 +780,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return <DangoMonopolyMoveEnd>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E89 RID: 32393 RVA: 0x001ACD80 File Offset: 0x001AAF80
+	// Token: 0x06005220 RID: 21024 RVA: 0x001B5A38 File Offset: 0x001B3C38
 	public UniTask CheckEnterNextRound()
 	{
 		DangoMonopolyMainView.<CheckEnterNextRound>d__66 <CheckEnterNextRound>d__;
@@ -792,13 +791,13 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return <CheckEnterNextRound>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E8A RID: 32394 RVA: 0x001ACDC3 File Offset: 0x001AAFC3
+	// Token: 0x06005221 RID: 21025 RVA: 0x001B5A7B File Offset: 0x001B3C7B
 	private void EventDangoMonopolyBoardRewardUpdate()
 	{
 		this.UpdateReward(true);
 	}
 
-	// Token: 0x06007E8B RID: 32395 RVA: 0x001ACDCC File Offset: 0x001AAFCC
+	// Token: 0x06005222 RID: 21026 RVA: 0x001B5A84 File Offset: 0x001B3C84
 	public UniTask AwaitRewardShowClose()
 	{
 		DangoMonopolyMainView.<AwaitRewardShowClose>d__68 <AwaitRewardShowClose>d__;
@@ -809,7 +808,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return <AwaitRewardShowClose>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E8C RID: 32396 RVA: 0x001ACE0F File Offset: 0x001AB00F
+	// Token: 0x06005223 RID: 21027 RVA: 0x001B5AC7 File Offset: 0x001B3CC7
 	private void EventOnCloseRewardView()
 	{
 		CustomPromise rewardViewClosePromise = this.RewardViewClosePromise;
@@ -820,7 +819,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		rewardViewClosePromise.SetResult();
 	}
 
-	// Token: 0x06007E8D RID: 32397 RVA: 0x001ACE24 File Offset: 0x001AB024
+	// Token: 0x06005224 RID: 21028 RVA: 0x001B5ADC File Offset: 0x001B3CDC
 	public UniTask UpdateDangoPosition(bool show = true)
 	{
 		DangoMonopolyMainView.<UpdateDangoPosition>d__70 <UpdateDangoPosition>d__;
@@ -832,7 +831,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return <UpdateDangoPosition>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E8E RID: 32398 RVA: 0x001ACE70 File Offset: 0x001AB070
+	// Token: 0x06005225 RID: 21029 RVA: 0x001B5B28 File Offset: 0x001B3D28
 	public FVector2D GetDangoCursorPosition()
 	{
 		int runningGridId = this.ActivityData.GetRunningGridId();
@@ -855,7 +854,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return new FVector2D();
 	}
 
-	// Token: 0x06007E8F RID: 32399 RVA: 0x001ACF44 File Offset: 0x001AB144
+	// Token: 0x06005226 RID: 21030 RVA: 0x001B5BFC File Offset: 0x001B3DFC
 	private void EventDangoMonopolyStartShowProcess()
 	{
 		DangoMonopolyPosition dangoPosition = this.DangoPosition;
@@ -866,19 +865,19 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		dangoPosition.SetActive(false);
 	}
 
-	// Token: 0x06007E90 RID: 32400 RVA: 0x001ACF57 File Offset: 0x001AB157
+	// Token: 0x06005227 RID: 21031 RVA: 0x001B5C0F File Offset: 0x001B3E0F
 	private void EventDangoMonopolyEndShowProcess()
 	{
 		this.UpdateDangoPosition(true).Forget();
 	}
 
-	// Token: 0x06007E91 RID: 32401 RVA: 0x001ACF65 File Offset: 0x001AB165
+	// Token: 0x06005228 RID: 21032 RVA: 0x001B5C1D File Offset: 0x001B3E1D
 	private void OnClickAngleOfView(EToggleState toggleState)
 	{
 		this.UpdateAngleOfView().Forget();
 	}
 
-	// Token: 0x06007E92 RID: 32402 RVA: 0x001ACF74 File Offset: 0x001AB174
+	// Token: 0x06005229 RID: 21033 RVA: 0x001B5C2C File Offset: 0x001B3E2C
 	public UniTask UpdateAngleOfView()
 	{
 		DangoMonopolyMainView.<UpdateAngleOfView>d__75 <UpdateAngleOfView>d__;
@@ -889,7 +888,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		return <UpdateAngleOfView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E93 RID: 32403 RVA: 0x001ACFB8 File Offset: 0x001AB1B8
+	// Token: 0x0600522A RID: 21034 RVA: 0x001B5C70 File Offset: 0x001B3E70
 	public void UpdateAngleOfViewBtnState()
 	{
 		EToggleState state = this.IsOverView ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -901,7 +900,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		extendToggle.SetToggleStateForce(state, false, false, false);
 	}
 
-	// Token: 0x06007E94 RID: 32404 RVA: 0x001ACFE8 File Offset: 0x001AB1E8
+	// Token: 0x0600522B RID: 21035 RVA: 0x001B5CA0 File Offset: 0x001B3EA0
 	public void ResetAngleOfView()
 	{
 		if (!this.IsOverView)
@@ -912,10 +911,10 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 		this.UpdateAngleOfViewBtnState();
 	}
 
-	// Token: 0x04003994 RID: 14740
+	// Token: 0x04003A2C RID: 14892
 	private DangoMonopolyMainCaption PopupCaption;
 
-	// Token: 0x04003995 RID: 14741
+	// Token: 0x04003A2D RID: 14893
 	[Nullable(new byte[]
 	{
 		2,
@@ -924,7 +923,7 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 	})]
 	private GenericLayout<DangoMonopolyBuffStateItem, IDangoMonopolyRoundBuffData> BuffLayoutView;
 
-	// Token: 0x04003996 RID: 14742
+	// Token: 0x04003A2E RID: 14894
 	[Nullable(new byte[]
 	{
 		2,
@@ -933,90 +932,90 @@ public class DangoMonopolyMainView : DangoMonopolyViewBase
 	})]
 	private LoopScrollView<DangoMonopolyRoundRewardItem, IDangoMonopolyRoundRewardItemData> RewardLayout;
 
-	// Token: 0x04003997 RID: 14743
+	// Token: 0x04003A2F RID: 14895
 	private DangoMonopolyRoundRewardItem EndRoundReward;
 
-	// Token: 0x04003998 RID: 14744
+	// Token: 0x04003A30 RID: 14896
 	public DangoMonopolyBoardData ShowBoardData;
 
-	// Token: 0x04003999 RID: 14745
+	// Token: 0x04003A31 RID: 14897
 	public bool IsCheckShow;
 
-	// Token: 0x0400399A RID: 14746
+	// Token: 0x04003A32 RID: 14898
 	public const int WaitTimeActiveClose = 500;
 
-	// Token: 0x0400399B RID: 14747
+	// Token: 0x04003A33 RID: 14899
 	public CustomPromise RewardViewClosePromise;
 
-	// Token: 0x0400399C RID: 14748
+	// Token: 0x04003A34 RID: 14900
 	public CustomPromise ResultClosePromise;
 
-	// Token: 0x0400399D RID: 14749
+	// Token: 0x04003A35 RID: 14901
 	public CustomPromise ResultShowPromise;
 
-	// Token: 0x0400399E RID: 14750
+	// Token: 0x04003A36 RID: 14902
 	public TimerHandle RefreshTimerHandle;
 
-	// Token: 0x0400399F RID: 14751
+	// Token: 0x04003A37 RID: 14903
 	public bool IsBoardLock;
 
-	// Token: 0x040039A0 RID: 14752
+	// Token: 0x04003A38 RID: 14904
 	public DangoMonopolyPosition DangoPosition;
 
-	// Token: 0x040039A1 RID: 14753
+	// Token: 0x04003A39 RID: 14905
 	public bool IsOverView;
 
-	// Token: 0x0200782F RID: 30767
+	// Token: 0x020069BA RID: 27066
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x040279B8 RID: 162232
+		// Token: 0x04022CE9 RID: 142569
 		ItemCaption,
-		// Token: 0x040279B9 RID: 162233
+		// Token: 0x04022CEA RID: 142570
 		BtnSpeed,
-		// Token: 0x040279BA RID: 162234
+		// Token: 0x04022CEB RID: 142571
 		TxtSpeedTitle,
-		// Token: 0x040279BB RID: 162235
+		// Token: 0x04022CEC RID: 142572
 		TxtCurrentRound,
-		// Token: 0x040279BC RID: 162236
+		// Token: 0x04022CED RID: 142573
 		TxtTotalRound,
-		// Token: 0x040279BD RID: 162237
+		// Token: 0x04022CEE RID: 142574
 		VLayoutProperty,
-		// Token: 0x040279BE RID: 162238
+		// Token: 0x04022CEF RID: 142575
 		ItemProperty,
-		// Token: 0x040279BF RID: 162239
+		// Token: 0x04022CF0 RID: 142576
 		ItemAllBoardFinish,
-		// Token: 0x040279C0 RID: 162240
+		// Token: 0x04022CF1 RID: 142577
 		BtnRoundRecord,
-		// Token: 0x040279C1 RID: 162241
+		// Token: 0x04022CF2 RID: 142578
 		BtnDiceTask,
-		// Token: 0x040279C2 RID: 162242
+		// Token: 0x04022CF3 RID: 142579
 		BtnUseDice,
-		// Token: 0x040279C3 RID: 162243
+		// Token: 0x04022CF4 RID: 142580
 		SpriteDiceMask,
-		// Token: 0x040279C4 RID: 162244
+		// Token: 0x04022CF5 RID: 142581
 		TxtFinishedRound,
-		// Token: 0x040279C5 RID: 162245
+		// Token: 0x04022CF6 RID: 142582
 		TxtTotalRound2,
-		// Token: 0x040279C6 RID: 162246
+		// Token: 0x04022CF7 RID: 142583
 		LoopViewRoundReward,
-		// Token: 0x040279C7 RID: 162247
+		// Token: 0x04022CF8 RID: 142584
 		ItemRoundReward,
-		// Token: 0x040279C8 RID: 162248
+		// Token: 0x04022CF9 RID: 142585
 		ItemFinalReward,
-		// Token: 0x040279C9 RID: 162249
+		// Token: 0x04022CFA RID: 142586
 		ItemLeftTopRoot,
-		// Token: 0x040279CA RID: 162250
+		// Token: 0x04022CFB RID: 142587
 		ItemBottomRoot,
-		// Token: 0x040279CB RID: 162251
+		// Token: 0x04022CFC RID: 142588
 		ItemDiceTaskRedDot,
-		// Token: 0x040279CC RID: 162252
+		// Token: 0x04022CFD RID: 142589
 		ItemRollDiceRedDot,
-		// Token: 0x040279CD RID: 162253
+		// Token: 0x04022CFE RID: 142590
 		ItemBoardLockTipsRoot,
-		// Token: 0x040279CE RID: 162254
+		// Token: 0x04022CFF RID: 142591
 		TxtBoardLockTips,
-		// Token: 0x040279CF RID: 162255
+		// Token: 0x04022D00 RID: 142592
 		ToggleAngleOfView
 	}
 }

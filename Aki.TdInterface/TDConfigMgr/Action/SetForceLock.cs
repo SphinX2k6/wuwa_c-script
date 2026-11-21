@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021B9 RID: 8633
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002424 RID: 9252
 	public class SetForceLock : ActionParams
 	{
-		// Token: 0x0600BDA4 RID: 48548 RVA: 0x001B4D10 File Offset: 0x001B2F10
+		// Token: 0x0600C95E RID: 51550 RVA: 0x001CC348 File Offset: 0x001CA548
 		private SetForceLock_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BDA5 RID: 48549 RVA: 0x001B4D48 File Offset: 0x001B2F48
+		// Token: 0x0600C95F RID: 51551 RVA: 0x001CC380 File Offset: 0x001CA580
 		public static SetForceLock Create([Nullable(2)] SetForceLock instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDA6 RID: 48550 RVA: 0x001B4D5B File Offset: 0x001B2F5B
+		// Token: 0x0600C960 RID: 51552 RVA: 0x001CC393 File Offset: 0x001CA593
 		public static SetForceLock CreateFromSetValue([Nullable(2)] SetForceLock_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDA7 RID: 48551 RVA: 0x001B4D6E File Offset: 0x001B2F6E
+		// Token: 0x0600C961 RID: 51553 RVA: 0x001CC3A6 File Offset: 0x001CA5A6
 		public SetForceLock_SetValue ToSetValue()
 		{
 			return new SetForceLock_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700399D RID: 14749
-		// (get) Token: 0x0600BDA8 RID: 48552 RVA: 0x001B4D8D File Offset: 0x001B2F8D
-		// (set) Token: 0x0600BDA9 RID: 48553 RVA: 0x001B4DB8 File Offset: 0x001B2FB8
+		// Token: 0x17003C91 RID: 15505
+		// (get) Token: 0x0600C962 RID: 51554 RVA: 0x001CC3C5 File Offset: 0x001CA5C5
+		// (set) Token: 0x0600C963 RID: 51555 RVA: 0x001CC3F0 File Offset: 0x001CA5F0
 		public virtual int EntityId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700399E RID: 14750
-		// (get) Token: 0x0600BDAA RID: 48554 RVA: 0x001B4DC6 File Offset: 0x001B2FC6
-		// (set) Token: 0x0600BDAB RID: 48555 RVA: 0x001B4DF1 File Offset: 0x001B2FF1
+		// Token: 0x17003C92 RID: 15506
+		// (get) Token: 0x0600C964 RID: 51556 RVA: 0x001CC3FE File Offset: 0x001CA5FE
+		// (set) Token: 0x0600C965 RID: 51557 RVA: 0x001CC429 File Offset: 0x001CA629
 		public virtual bool IsLocked
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007134 RID: 28980
+		// Token: 0x0400777C RID: 30588
 		[Nullable(2)]
 		protected new SetForceLock FbInstance;
 
-		// Token: 0x04007135 RID: 28981
+		// Token: 0x0400777D RID: 30589
 		[Nullable(2)]
 		protected SetForceLock_SetValue PocoInterface;
 	}

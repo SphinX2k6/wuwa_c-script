@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C55 RID: 23637
+	// Token: 0x02004C35 RID: 19509
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MoraleTempExpView : BattleVisibleChildView
 	{
-		// Token: 0x0603BBEF RID: 244719 RVA: 0x00E44E28 File Offset: 0x00E43028
+		// Token: 0x06030B3A RID: 199482 RVA: 0x00D951F4 File Offset: 0x00D933F4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BBF0 RID: 244720 RVA: 0x00E44EF4 File Offset: 0x00E430F4
+		// Token: 0x06030B3B RID: 199483 RVA: 0x00D952C0 File Offset: 0x00D934C0
 		protected override UniTask OnCreateAsync()
 		{
 			MoraleTempExpView.<OnCreateAsync>d__25 <OnCreateAsync>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Battle
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BBF1 RID: 244721 RVA: 0x00E44F38 File Offset: 0x00E43138
+		// Token: 0x06030B3C RID: 199484 RVA: 0x00D95304 File Offset: 0x00D93504
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceEndEvent), false);
 		}
 
-		// Token: 0x0603BBF2 RID: 244722 RVA: 0x00E4509C File Offset: 0x00E4329C
+		// Token: 0x06030B3D RID: 199485 RVA: 0x00D95468 File Offset: 0x00D93668
 		protected override void OnBeforeDestroy()
 		{
 			foreach (MoraleTempExpUnit moraleTempExpUnit in this.ExpUnits)
@@ -102,14 +102,14 @@ namespace CSharpScript.Game.Module.Battle
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603BBF3 RID: 244723 RVA: 0x00E45100 File Offset: 0x00E43300
+		// Token: 0x06030B3E RID: 199486 RVA: 0x00D954CC File Offset: 0x00D936CC
 		public override void Reset()
 		{
 			this.RemoveEvents();
 			base.Reset();
 		}
 
-		// Token: 0x0603BBF4 RID: 244724 RVA: 0x00E45110 File Offset: 0x00E43310
+		// Token: 0x06030B3F RID: 199487 RVA: 0x00D954DC File Offset: 0x00D936DC
 		private UniTask AddExpUnit()
 		{
 			MoraleTempExpView.<AddExpUnit>d__29 <AddExpUnit>d__;
@@ -120,32 +120,32 @@ namespace CSharpScript.Game.Module.Battle
 			return <AddExpUnit>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BBF5 RID: 244725 RVA: 0x00E45153 File Offset: 0x00E43353
+		// Token: 0x06030B40 RID: 199488 RVA: 0x00D9551F File Offset: 0x00D9371F
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnMoraleTempExpChanged, new Action<int, int, int, int>(this.OnMoraleTempExpChanged));
 		}
 
-		// Token: 0x0603BBF6 RID: 244726 RVA: 0x00E45171 File Offset: 0x00E43371
+		// Token: 0x06030B41 RID: 199489 RVA: 0x00D9553D File Offset: 0x00D9373D
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnMoraleTempExpChanged, new Action<int, int, int, int>(this.OnMoraleTempExpChanged));
 		}
 
-		// Token: 0x0603BBF7 RID: 244727 RVA: 0x00E4518F File Offset: 0x00E4338F
+		// Token: 0x06030B42 RID: 199490 RVA: 0x00D9555B File Offset: 0x00D9375B
 		protected override void OnShowBattleChildView()
 		{
 			this.RefreshMoraleInfo();
 		}
 
-		// Token: 0x0603BBF8 RID: 244728 RVA: 0x00E45197 File Offset: 0x00E43397
+		// Token: 0x06030B43 RID: 199491 RVA: 0x00D95563 File Offset: 0x00D93763
 		protected override void OnHideBattleChildView()
 		{
 			this.StopCurrentState();
 			this.AnimState = MoraleTempExpView.EAnimState.None;
 		}
 
-		// Token: 0x0603BBF9 RID: 244729 RVA: 0x00E451A8 File Offset: 0x00E433A8
+		// Token: 0x06030B44 RID: 199492 RVA: 0x00D95574 File Offset: 0x00D93774
 		private void RefreshMoraleInfo()
 		{
 			MoraleBattleModel instance = MoraleBattleModel.Instance;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Battle
 			levelMaxSprite.SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603BBFA RID: 244730 RVA: 0x00E45240 File Offset: 0x00E43440
+		// Token: 0x06030B45 RID: 199493 RVA: 0x00D9560C File Offset: 0x00D9380C
 		private void RefreshTempLevelText(int tempLevel)
 		{
 			int num = MoraleBattleModel.Instance.GetMoraleLevel() + tempLevel;
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.Battle
 			levelText.SetText(num.ToString());
 		}
 
-		// Token: 0x0603BBFB RID: 244731 RVA: 0x00E45274 File Offset: 0x00E43474
+		// Token: 0x06030B46 RID: 199494 RVA: 0x00D95640 File Offset: 0x00D93840
 		private void OnMoraleTempExpChanged(int oldExp, int newExp, int oldLevel, int newLevel)
 		{
 			if (!base.GetVisible())
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BBFC RID: 244732 RVA: 0x00E4541C File Offset: 0x00E4361C
+		// Token: 0x06030B47 RID: 199495 RVA: 0x00D957E8 File Offset: 0x00D939E8
 		[NullableContext(1)]
 		private void OnSequenceEndEvent(string sequenceName)
 		{
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BBFD RID: 244733 RVA: 0x00E454E0 File Offset: 0x00E436E0
+		// Token: 0x06030B48 RID: 199496 RVA: 0x00D958AC File Offset: 0x00D93AAC
 		private void PlayLevelUpAnim()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.Battle
 			levelSequencePlayer.PlaySequencePurely("Up", false, false, null, null, false);
 		}
 
-		// Token: 0x0603BBFE RID: 244734 RVA: 0x00E45510 File Offset: 0x00E43710
+		// Token: 0x06030B49 RID: 199497 RVA: 0x00D958DC File Offset: 0x00D93ADC
 		private void PlayCrossLevelAnim()
 		{
 			this.StopCurrentState();
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.AnimState = MoraleTempExpView.EAnimState.CrossLevel;
 		}
 
-		// Token: 0x0603BBFF RID: 244735 RVA: 0x00E45560 File Offset: 0x00E43760
+		// Token: 0x06030B4A RID: 199498 RVA: 0x00D9592C File Offset: 0x00D93B2C
 		private void PlayReduceExpAnim()
 		{
 			this.StopCurrentState();
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.AnimState = MoraleTempExpView.EAnimState.ReduceExp;
 		}
 
-		// Token: 0x0603BC00 RID: 244736 RVA: 0x00E455D4 File Offset: 0x00E437D4
+		// Token: 0x06030B4B RID: 199499 RVA: 0x00D959A0 File Offset: 0x00D93BA0
 		private void PlayReduceLevelAnim()
 		{
 			this.StopCurrentState();
@@ -381,7 +381,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.AnimState = MoraleTempExpView.EAnimState.ReduceLevel;
 		}
 
-		// Token: 0x0603BC01 RID: 244737 RVA: 0x00E45648 File Offset: 0x00E43848
+		// Token: 0x06030B4C RID: 199500 RVA: 0x00D95A14 File Offset: 0x00D93C14
 		private void PlayMaxLevelAnim()
 		{
 			this.StopCurrentState();
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.AnimState = MoraleTempExpView.EAnimState.MaxLevel;
 		}
 
-		// Token: 0x0603BC02 RID: 244738 RVA: 0x00E456AC File Offset: 0x00E438AC
+		// Token: 0x06030B4D RID: 199501 RVA: 0x00D95A78 File Offset: 0x00D93C78
 		private void StopCurrentState()
 		{
 			switch (this.AnimState)
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC03 RID: 244739 RVA: 0x00E457B8 File Offset: 0x00E439B8
+		// Token: 0x06030B4E RID: 199502 RVA: 0x00D95B84 File Offset: 0x00D93D84
 		private void ResetAllUnit(float progress, MoraleTempExpView.ETweenAnimType? playTween = null)
 		{
 			this.CurrentUnitIndex = -1;
@@ -500,7 +500,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC04 RID: 244740 RVA: 0x00E4584C File Offset: 0x00E43A4C
+		// Token: 0x06030B4F RID: 199503 RVA: 0x00D95C18 File Offset: 0x00D93E18
 		private void PlayTweenByNextUnit(bool needOffset = false)
 		{
 			int num = this.IsAddProgress ? (this.CurrentUnitIndex + 1) : (this.CurrentUnitIndex - 1);
@@ -584,7 +584,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC05 RID: 244741 RVA: 0x00E459FB File Offset: 0x00E43BFB
+		// Token: 0x06030B50 RID: 199504 RVA: 0x00D95DC7 File Offset: 0x00D93FC7
 		private void DelayPlayNextTween()
 		{
 			this.StopPlayNextTween();
@@ -595,7 +595,7 @@ namespace CSharpScript.Game.Module.Battle
 			}, (float)Math.Max(20, this.ExpUnitTweenInterval), null, null, true, 1f);
 		}
 
-		// Token: 0x0603BC06 RID: 244742 RVA: 0x00E45A35 File Offset: 0x00E43C35
+		// Token: 0x06030B51 RID: 199505 RVA: 0x00D95E01 File Offset: 0x00D94001
 		private void StopPlayNextTween()
 		{
 			if (this.TweenAnimTimer != null)
@@ -605,129 +605,129 @@ namespace CSharpScript.Game.Module.Battle
 			this.TweenAnimTimer = null;
 		}
 
-		// Token: 0x0603BC07 RID: 244743 RVA: 0x00E45A57 File Offset: 0x00E43C57
+		// Token: 0x06030B52 RID: 199506 RVA: 0x00D95E23 File Offset: 0x00D94023
 		public override void ShowBattleVisibleChildView(bool checkVisible = false)
 		{
 			base.ShowBattleVisibleChildView(checkVisible);
 			EventSystem.Instance.Emit<bool>(EEventName.OnMoraleTempExpViewVisibleChanged, true);
 		}
 
-		// Token: 0x0603BC08 RID: 244744 RVA: 0x00E45A71 File Offset: 0x00E43C71
+		// Token: 0x06030B53 RID: 199507 RVA: 0x00D95E3D File Offset: 0x00D9403D
 		public override void HideBattleVisibleChildView()
 		{
 			base.HideBattleVisibleChildView();
 			EventSystem.Instance.Emit<bool>(EEventName.OnMoraleTempExpViewVisibleChanged, false);
 		}
 
-		// Token: 0x0401F1BB RID: 127419
+		// Token: 0x04019C6C RID: 105580
 		private const int EXP_UNIT_COUNT = 10;
 
-		// Token: 0x0401F1BC RID: 127420
+		// Token: 0x04019C6D RID: 105581
 		public const float EXP_PROGRESS_STEP = 0.1f;
 
-		// Token: 0x0401F1BD RID: 127421
+		// Token: 0x04019C6E RID: 105582
 		private const int EXP_UNIT_TWEEN_INTERVAL = 20;
 
-		// Token: 0x0401F1BE RID: 127422
+		// Token: 0x04019C6F RID: 105583
 		private const int CROSS_LEVEL_DIFF = 3;
 
-		// Token: 0x0401F1BF RID: 127423
+		// Token: 0x04019C70 RID: 105584
 		private UUIArtText LevelText;
 
-		// Token: 0x0401F1C0 RID: 127424
+		// Token: 0x04019C71 RID: 105585
 		private UUIItem UnitPanel;
 
-		// Token: 0x0401F1C1 RID: 127425
+		// Token: 0x04019C72 RID: 105586
 		private UUISprite LevelMaxSprite;
 
-		// Token: 0x0401F1C2 RID: 127426
+		// Token: 0x04019C73 RID: 105587
 		private UUIItem LevelAnimItem;
 
-		// Token: 0x0401F1C3 RID: 127427
+		// Token: 0x04019C74 RID: 105588
 		[Nullable(1)]
 		private readonly List<MoraleTempExpUnit> ExpUnits = new List<MoraleTempExpUnit>();
 
-		// Token: 0x0401F1C4 RID: 127428
+		// Token: 0x04019C75 RID: 105589
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401F1C5 RID: 127429
+		// Token: 0x04019C76 RID: 105590
 		private int CurrentLevel = 1;
 
-		// Token: 0x0401F1C6 RID: 127430
+		// Token: 0x04019C77 RID: 105591
 		private int TargetLevel = 1;
 
-		// Token: 0x0401F1C7 RID: 127431
+		// Token: 0x04019C78 RID: 105592
 		private int MaxLevel = 1;
 
-		// Token: 0x0401F1C8 RID: 127432
+		// Token: 0x04019C79 RID: 105593
 		private float TargetExpProgress;
 
-		// Token: 0x0401F1C9 RID: 127433
+		// Token: 0x04019C7A RID: 105594
 		private bool IsAddProgress = true;
 
-		// Token: 0x0401F1CA RID: 127434
+		// Token: 0x04019C7B RID: 105595
 		private int CurrentUnitIndex = -1;
 
-		// Token: 0x0401F1CB RID: 127435
+		// Token: 0x04019C7C RID: 105596
 		private TimerHandle TweenAnimTimer;
 
-		// Token: 0x0401F1CC RID: 127436
+		// Token: 0x04019C7D RID: 105597
 		private MoraleTempExpView.EAnimState AnimState;
 
-		// Token: 0x0401F1CD RID: 127437
+		// Token: 0x04019C7E RID: 105598
 		private bool IsPendingPlayNext;
 
-		// Token: 0x0401F1CE RID: 127438
+		// Token: 0x04019C7F RID: 105599
 		private int ExpUnitTweenInterval = 20;
 
-		// Token: 0x0401F1CF RID: 127439
+		// Token: 0x04019C80 RID: 105600
 		private int CrossLevelDiff = 3;
 
-		// Token: 0x0200BE68 RID: 48744
+		// Token: 0x0200A86E RID: 43118
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x040396B7 RID: 235191
+			// Token: 0x04034078 RID: 213112
 			LevelText,
-			// Token: 0x040396B8 RID: 235192
+			// Token: 0x04034079 RID: 213113
 			LevelMaxSprite,
-			// Token: 0x040396B9 RID: 235193
+			// Token: 0x0403407A RID: 213114
 			UnitPanel,
-			// Token: 0x040396BA RID: 235194
+			// Token: 0x0403407B RID: 213115
 			UnitItem,
-			// Token: 0x040396BB RID: 235195
+			// Token: 0x0403407C RID: 213116
 			LevelAnimItem
 		}
 
-		// Token: 0x0200BE69 RID: 48745
+		// Token: 0x0200A86F RID: 43119
 		[NullableContext(0)]
 		private enum EAnimState
 		{
-			// Token: 0x040396BD RID: 235197
+			// Token: 0x0403407E RID: 213118
 			None,
-			// Token: 0x040396BE RID: 235198
+			// Token: 0x0403407F RID: 213119
 			StepByStep,
-			// Token: 0x040396BF RID: 235199
+			// Token: 0x04034080 RID: 213120
 			CrossLevel,
-			// Token: 0x040396C0 RID: 235200
+			// Token: 0x04034081 RID: 213121
 			ReduceExp,
-			// Token: 0x040396C1 RID: 235201
+			// Token: 0x04034082 RID: 213122
 			ReduceLevel,
-			// Token: 0x040396C2 RID: 235202
+			// Token: 0x04034083 RID: 213123
 			MaxLevel
 		}
 
-		// Token: 0x0200BE6A RID: 48746
+		// Token: 0x0200A870 RID: 43120
 		[NullableContext(0)]
 		public enum ETweenAnimType
 		{
-			// Token: 0x040396C4 RID: 235204
+			// Token: 0x04034085 RID: 213125
 			In,
-			// Token: 0x040396C5 RID: 235205
+			// Token: 0x04034086 RID: 213126
 			Out,
-			// Token: 0x040396C6 RID: 235206
+			// Token: 0x04034087 RID: 213127
 			Break,
-			// Token: 0x040396C7 RID: 235207
+			// Token: 0x04034088 RID: 213128
 			Red
 		}
 	}

@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200160C RID: 5644
+	// Token: 0x02001778 RID: 6008
 	[EnumExtensions]
 	public enum ELockState
 	{
-		// Token: 0x04004BC1 RID: 19393
+		// Token: 0x04004FAF RID: 20399
 		Lock,
-		// Token: 0x04004BC2 RID: 19394
+		// Token: 0x04004FB0 RID: 20400
 		Unlock
 	}
 }

@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x0200013B RID: 315
+	// Token: 0x0200013F RID: 319
 	public enum ESdkRelation
 	{
-		// Token: 0x040005D3 RID: 1491
+		// Token: 0x0400060E RID: 1550
 		NotSet,
-		// Token: 0x040005D4 RID: 1492
+		// Token: 0x0400060F RID: 1551
 		Me,
-		// Token: 0x040005D5 RID: 1493
+		// Token: 0x04000610 RID: 1552
 		Friend,
-		// Token: 0x040005D6 RID: 1494
+		// Token: 0x04000611 RID: 1553
 		RequestingFriend,
-		// Token: 0x040005D7 RID: 1495
+		// Token: 0x04000612 RID: 1554
 		RequestedFriend,
-		// Token: 0x040005D8 RID: 1496
+		// Token: 0x04000613 RID: 1555
 		Blocking,
-		// Token: 0x040005D9 RID: 1497
+		// Token: 0x04000614 RID: 1556
 		FriendOfFriends,
-		// Token: 0x040005DA RID: 1498
+		// Token: 0x04000615 RID: 1557
 		NoRelationShip
 	}
 }

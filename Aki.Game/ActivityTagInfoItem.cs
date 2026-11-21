@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E4F RID: 7759
+// Token: 0x02001311 RID: 4881
 internal class ActivityTagInfoItem : UiPanelBase
 {
-	// Token: 0x0600EBF8 RID: 60408 RVA: 0x003805A4 File Offset: 0x0037E7A4
+	// Token: 0x0600C017 RID: 49175 RVA: 0x0038C23C File Offset: 0x0038A43C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -24,7 +24,7 @@ internal class ActivityTagInfoItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600EBF9 RID: 60409 RVA: 0x00380630 File Offset: 0x0037E830
+	// Token: 0x0600C018 RID: 49176 RVA: 0x0038C2C8 File Offset: 0x0038A4C8
 	public void SetView(ActivityTitleTags data)
 	{
 		base.GetSprite(0).SetUIActive(!string.IsNullOrEmpty(data.DescInTip));
@@ -39,14 +39,14 @@ internal class ActivityTagInfoItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), data.DescInTip, Array.Empty<object>());
 	}
 
-	// Token: 0x02008405 RID: 33797
+	// Token: 0x0200758A RID: 30090
 	private enum EItemComponents
 	{
-		// Token: 0x0402AF95 RID: 176021
+		// Token: 0x040262B9 RID: 156345
 		SprIcon,
-		// Token: 0x0402AF96 RID: 176022
+		// Token: 0x040262BA RID: 156346
 		TxtTitle,
-		// Token: 0x0402AF97 RID: 176023
+		// Token: 0x040262BB RID: 156347
 		TxtContent
 	}
 }

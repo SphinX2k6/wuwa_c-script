@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020010E8 RID: 4328
+// Token: 0x0200059C RID: 1436
 public enum EArtemisState
 {
-	// Token: 0x04003445 RID: 13381
+	// Token: 0x040034DE RID: 13534
 	Lock,
-	// Token: 0x04003446 RID: 13382
+	// Token: 0x040034DF RID: 13535
 	Unlock,
-	// Token: 0x04003447 RID: 13383
+	// Token: 0x040034E0 RID: 13536
 	Rewarded
 }

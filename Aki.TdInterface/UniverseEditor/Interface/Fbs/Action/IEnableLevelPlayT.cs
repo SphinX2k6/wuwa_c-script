@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006670 RID: 26224
+	// Token: 0x02006CE4 RID: 27876
 	public class IEnableLevelPlayT
 	{
-		// Token: 0x1700C2D0 RID: 49872
-		// (get) Token: 0x0602D8F7 RID: 186615 RVA: 0x0063CE01 File Offset: 0x0063B001
-		// (set) Token: 0x0602D8F8 RID: 186616 RVA: 0x0063CE09 File Offset: 0x0063B009
+		// Token: 0x1700CC73 RID: 52339
+		// (get) Token: 0x060300E0 RID: 196832 RVA: 0x00689B9D File Offset: 0x00687D9D
+		// (set) Token: 0x060300E1 RID: 196833 RVA: 0x00689BA5 File Offset: 0x00687DA5
 		public List<IEnableLevelPlayConfigT> Configs { get; set; }
 
-		// Token: 0x1700C2D1 RID: 49873
-		// (get) Token: 0x0602D8F9 RID: 186617 RVA: 0x0063CE12 File Offset: 0x0063B012
-		// (set) Token: 0x0602D8FA RID: 186618 RVA: 0x0063CE1A File Offset: 0x0063B01A
+		// Token: 0x1700CC74 RID: 52340
+		// (get) Token: 0x060300E2 RID: 196834 RVA: 0x00689BAE File Offset: 0x00687DAE
+		// (set) Token: 0x060300E3 RID: 196835 RVA: 0x00689BB6 File Offset: 0x00687DB6
 		public EPlayerType TargetPlayer { get; set; }
 
-		// Token: 0x1700C2D2 RID: 49874
-		// (get) Token: 0x0602D8FB RID: 186619 RVA: 0x0063CE23 File Offset: 0x0063B023
-		// (set) Token: 0x0602D8FC RID: 186620 RVA: 0x0063CE2B File Offset: 0x0063B02B
+		// Token: 0x1700CC75 RID: 52341
+		// (get) Token: 0x060300E4 RID: 196836 RVA: 0x00689BBF File Offset: 0x00687DBF
+		// (set) Token: 0x060300E5 RID: 196837 RVA: 0x00689BC7 File Offset: 0x00687DC7
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602D8FD RID: 186621 RVA: 0x0063CE34 File Offset: 0x0063B034
+		// Token: 0x060300E6 RID: 196838 RVA: 0x00689BD0 File Offset: 0x00687DD0
 		public IEnableLevelPlayT()
 		{
 			this.Configs = null;

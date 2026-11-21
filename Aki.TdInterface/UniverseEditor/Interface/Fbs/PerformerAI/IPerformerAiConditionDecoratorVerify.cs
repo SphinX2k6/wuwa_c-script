@@ -5,10 +5,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 {
-	// Token: 0x0200435F RID: 17247
+	// Token: 0x020047C1 RID: 18369
 	public static class IPerformerAiConditionDecoratorVerify
 	{
-		// Token: 0x06019945 RID: 104773 RVA: 0x003A956C File Offset: 0x003A776C
+		// Token: 0x0601B0D3 RID: 110803 RVA: 0x003D4F94 File Offset: 0x003D3194
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false))
@@ -27,11 +27,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			return false;
 		}
 
-		// Token: 0x02007987 RID: 31111
+		// Token: 0x020081D0 RID: 33232
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013305 RID: 78597
+			// Token: 0x0401436C RID: 82796
 			public static VerifyTableAction <0>__Verify;
 		}
 	}

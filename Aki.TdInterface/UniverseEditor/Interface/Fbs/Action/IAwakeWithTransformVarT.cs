@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061D7 RID: 25047
+	// Token: 0x02006845 RID: 26693
 	public class IAwakeWithTransformVarT
 	{
-		// Token: 0x1700BAC1 RID: 47809
-		// (get) Token: 0x0602B2BB RID: 176827 RVA: 0x005F363B File Offset: 0x005F183B
-		// (set) Token: 0x0602B2BC RID: 176828 RVA: 0x005F3643 File Offset: 0x005F1843
+		// Token: 0x1700C444 RID: 50244
+		// (get) Token: 0x0602DA02 RID: 186882 RVA: 0x0063E0AF File Offset: 0x0063C2AF
+		// (set) Token: 0x0602DA03 RID: 186883 RVA: 0x0063E0B7 File Offset: 0x0063C2B7
 		public EAwakePosType Type { get; set; }
 
-		// Token: 0x1700BAC2 RID: 47810
-		// (get) Token: 0x0602B2BD RID: 176829 RVA: 0x005F364C File Offset: 0x005F184C
-		// (set) Token: 0x0602B2BE RID: 176830 RVA: 0x005F3654 File Offset: 0x005F1854
+		// Token: 0x1700C445 RID: 50245
+		// (get) Token: 0x0602DA04 RID: 186884 RVA: 0x0063E0C0 File Offset: 0x0063C2C0
+		// (set) Token: 0x0602DA05 RID: 186885 RVA: 0x0063E0C8 File Offset: 0x0063C2C8
 		public TVarRefUnion TransformVar { get; set; }
 
-		// Token: 0x0602B2BF RID: 176831 RVA: 0x005F365D File Offset: 0x005F185D
+		// Token: 0x0602DA06 RID: 186886 RVA: 0x0063E0D1 File Offset: 0x0063C2D1
 		public IAwakeWithTransformVarT()
 		{
 			this.Type = EAwakePosType.TransformVar;

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002409 RID: 9225
+// Token: 0x020018EE RID: 6382
 public enum EPhantomLevelUpState
 {
-	// Token: 0x04008B77 RID: 35703
+	// Token: 0x04008CBE RID: 36030
 	NoMaterial,
-	// Token: 0x04008B78 RID: 35704
+	// Token: 0x04008CBF RID: 36031
 	NoEnoughMoney,
-	// Token: 0x04008B79 RID: 35705
+	// Token: 0x04008CC0 RID: 36032
 	CanLevelUp
 }

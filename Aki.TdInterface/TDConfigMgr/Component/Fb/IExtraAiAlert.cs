@@ -5,11 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C9F RID: 3231
+	// Token: 0x02000D81 RID: 3457
 	public class IExtraAiAlert
 	{
-		// Token: 0x060049E0 RID: 18912 RVA: 0x000B9266 File Offset: 0x000B7466
-		[NullableContext(1)]
+		// Token: 0x06004E8E RID: 20110 RVA: 0x000C3C76 File Offset: 0x000C1E76
 		public static IExtraAiAlert Create(IExtraAiAlert? instance)
 		{
 			if (instance == null)
@@ -22,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700165F RID: 5727
-		// (get) Token: 0x060049E1 RID: 18913 RVA: 0x000B9288 File Offset: 0x000B7488
+		// Token: 0x17001787 RID: 6023
+		// (get) Token: 0x06004E8F RID: 20111 RVA: 0x000C3C98 File Offset: 0x000C1E98
 		public virtual int? MoveAlert
 		{
 			get
@@ -36,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001660 RID: 5728
-		// (get) Token: 0x060049E2 RID: 18914 RVA: 0x000B92C0 File Offset: 0x000B74C0
+		// Token: 0x17001788 RID: 6024
+		// (get) Token: 0x06004E90 RID: 20112 RVA: 0x000C3CD0 File Offset: 0x000C1ED0
 		public virtual int? StopAlert
 		{
 			get
@@ -50,19 +49,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001661 RID: 5729
-		// (get) Token: 0x060049E3 RID: 18915 RVA: 0x000B92F8 File Offset: 0x000B74F8
+		// Token: 0x17001789 RID: 6025
+		// (get) Token: 0x06004E91 RID: 20113 RVA: 0x000C3D08 File Offset: 0x000C1F08
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IStateAlert> SelfStateAlert
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -85,18 +84,18 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A32 RID: 10802
+		// Token: 0x04002CAC RID: 11436
 		private IExtraAiAlert Instance;
 
-		// Token: 0x04002A33 RID: 10803
+		// Token: 0x04002CAD RID: 11437
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IStateAlert> _SelfStateAlertCache;
 
-		// Token: 0x04002A34 RID: 10804
+		// Token: 0x04002CAE RID: 11438
 		private bool _SelfStateAlertInited;
 	}
 }

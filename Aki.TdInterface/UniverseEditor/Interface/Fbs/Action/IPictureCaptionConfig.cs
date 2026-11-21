@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CC9 RID: 27849
+	// Token: 0x0200743F RID: 29759
 	public struct IPictureCaptionConfig : IFlatbufferObject
 	{
-		// Token: 0x1700CF54 RID: 53076
-		// (get) Token: 0x06031149 RID: 201033 RVA: 0x006A9138 File Offset: 0x006A7338
+		// Token: 0x1700DA91 RID: 55953
+		// (get) Token: 0x06034120 RID: 213280 RVA: 0x0070436C File Offset: 0x0070256C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603114A RID: 201034 RVA: 0x006A9145 File Offset: 0x006A7345
+		// Token: 0x06034121 RID: 213281 RVA: 0x00704379 File Offset: 0x00702579
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603114B RID: 201035 RVA: 0x006A914C File Offset: 0x006A734C
+		// Token: 0x06034122 RID: 213282 RVA: 0x00704380 File Offset: 0x00702580
 		public static IPictureCaptionConfig GetRootAsIPictureCaptionConfig(ByteBuffer _bb)
 		{
 			return IPictureCaptionConfig.GetRootAsIPictureCaptionConfig(_bb, default(IPictureCaptionConfig));
 		}
 
-		// Token: 0x0603114C RID: 201036 RVA: 0x006A9168 File Offset: 0x006A7368
+		// Token: 0x06034123 RID: 213283 RVA: 0x0070439C File Offset: 0x0070259C
 		public static IPictureCaptionConfig GetRootAsIPictureCaptionConfig(ByteBuffer _bb, IPictureCaptionConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603114D RID: 201037 RVA: 0x006A9185 File Offset: 0x006A7385
+		// Token: 0x06034124 RID: 213284 RVA: 0x007043B9 File Offset: 0x007025B9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603114E RID: 201038 RVA: 0x006A9194 File Offset: 0x006A7394
+		// Token: 0x06034125 RID: 213285 RVA: 0x007043C8 File Offset: 0x007025C8
 		public IPictureCaptionConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CF55 RID: 53077
-		// (get) Token: 0x0603114F RID: 201039 RVA: 0x006A91A4 File Offset: 0x006A73A4
+		// Token: 0x1700DA92 RID: 55954
+		// (get) Token: 0x06034126 RID: 213286 RVA: 0x007043D8 File Offset: 0x007025D8
 		public string PictureCaption
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031150 RID: 201040 RVA: 0x006A91DB File Offset: 0x006A73DB
+		// Token: 0x06034127 RID: 213287 RVA: 0x0070440F File Offset: 0x0070260F
 		public Span<byte> GetPictureCaptionBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06031151 RID: 201041 RVA: 0x006A91EA File Offset: 0x006A73EA
+		// Token: 0x06034128 RID: 213288 RVA: 0x0070441E File Offset: 0x0070261E
 		public byte[] GetPictureCaptionArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700CF56 RID: 53078
-		// (get) Token: 0x06031152 RID: 201042 RVA: 0x006A91F8 File Offset: 0x006A73F8
+		// Token: 0x1700DA93 RID: 55955
+		// (get) Token: 0x06034129 RID: 213289 RVA: 0x0070442C File Offset: 0x0070262C
 		public string UiPrefabId
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031153 RID: 201043 RVA: 0x006A922F File Offset: 0x006A742F
+		// Token: 0x0603412A RID: 213290 RVA: 0x00704463 File Offset: 0x00702663
 		public Span<byte> GetUiPrefabIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06031154 RID: 201044 RVA: 0x006A923E File Offset: 0x006A743E
+		// Token: 0x0603412B RID: 213291 RVA: 0x00704472 File Offset: 0x00702672
 		public byte[] GetUiPrefabIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700CF57 RID: 53079
-		// (get) Token: 0x06031155 RID: 201045 RVA: 0x006A924C File Offset: 0x006A744C
+		// Token: 0x1700DA94 RID: 55956
+		// (get) Token: 0x0603412C RID: 213292 RVA: 0x00704480 File Offset: 0x00702680
 		public float Duration
 		{
 			get
@@ -116,8 +116,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF58 RID: 53080
-		// (get) Token: 0x06031156 RID: 201046 RVA: 0x006A928C File Offset: 0x006A748C
+		// Token: 0x1700DA95 RID: 55957
+		// (get) Token: 0x0603412D RID: 213293 RVA: 0x007044C0 File Offset: 0x007026C0
 		public IUiAnimConfig? UiAnimConfig
 		{
 			get
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031157 RID: 201047 RVA: 0x006A92EA File Offset: 0x006A74EA
+		// Token: 0x0603412E RID: 213294 RVA: 0x0070451E File Offset: 0x0070271E
 		public static Offset<IPictureCaptionConfig> CreateIPictureCaptionConfig(FlatBufferBuilder builder, StringOffset PictureCaptionOffset = default(StringOffset), StringOffset UiPrefabIdOffset = default(StringOffset), float Duration = 0f, Offset<IUiAnimConfig> UiAnimConfigOffset = default(Offset<IUiAnimConfig>))
 		{
 			builder.StartTable(4);
@@ -142,43 +142,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPictureCaptionConfig.EndIPictureCaptionConfig(builder);
 		}
 
-		// Token: 0x06031158 RID: 201048 RVA: 0x006A9316 File Offset: 0x006A7516
+		// Token: 0x0603412F RID: 213295 RVA: 0x0070454A File Offset: 0x0070274A
 		public static void StartIPictureCaptionConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06031159 RID: 201049 RVA: 0x006A931F File Offset: 0x006A751F
+		// Token: 0x06034130 RID: 213296 RVA: 0x00704553 File Offset: 0x00702753
 		public static void AddPictureCaption(FlatBufferBuilder builder, StringOffset pictureCaptionOffset)
 		{
 			builder.AddOffset(0, pictureCaptionOffset.Value, 0);
 		}
 
-		// Token: 0x0603115A RID: 201050 RVA: 0x006A932F File Offset: 0x006A752F
+		// Token: 0x06034131 RID: 213297 RVA: 0x00704563 File Offset: 0x00702763
 		public static void AddUiPrefabId(FlatBufferBuilder builder, StringOffset uiPrefabIdOffset)
 		{
 			builder.AddOffset(1, uiPrefabIdOffset.Value, 0);
 		}
 
-		// Token: 0x0603115B RID: 201051 RVA: 0x006A933F File Offset: 0x006A753F
+		// Token: 0x06034132 RID: 213298 RVA: 0x00704573 File Offset: 0x00702773
 		public static void AddDuration(FlatBufferBuilder builder, float duration)
 		{
 			builder.AddFloat(2, duration, 0.0);
 		}
 
-		// Token: 0x0603115C RID: 201052 RVA: 0x006A9352 File Offset: 0x006A7552
+		// Token: 0x06034133 RID: 213299 RVA: 0x00704586 File Offset: 0x00702786
 		public static void AddUiAnimConfig(FlatBufferBuilder builder, Offset<IUiAnimConfig> uiAnimConfigOffset)
 		{
 			builder.AddOffset(3, uiAnimConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0603115D RID: 201053 RVA: 0x006A9362 File Offset: 0x006A7562
+		// Token: 0x06034134 RID: 213300 RVA: 0x00704596 File Offset: 0x00702796
 		public static Offset<IPictureCaptionConfig> EndIPictureCaptionConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IPictureCaptionConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0603115E RID: 201054 RVA: 0x006A9370 File Offset: 0x006A7570
+		// Token: 0x06034135 RID: 213301 RVA: 0x007045A4 File Offset: 0x007027A4
 		public IPictureCaptionConfigT UnPack()
 		{
 			IPictureCaptionConfigT pictureCaptionConfigT = new IPictureCaptionConfigT();
@@ -186,7 +186,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return pictureCaptionConfigT;
 		}
 
-		// Token: 0x0603115F RID: 201055 RVA: 0x006A938C File Offset: 0x006A758C
+		// Token: 0x06034136 RID: 213302 RVA: 0x007045C0 File Offset: 0x007027C0
 		public void UnPackTo(IPictureCaptionConfigT _o)
 		{
 			_o.PictureCaption = this.PictureCaption;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.UiAnimConfig = ((this.UiAnimConfig != null) ? this.UiAnimConfig.Value.UnPack() : null);
 		}
 
-		// Token: 0x06031160 RID: 201056 RVA: 0x006A93EC File Offset: 0x006A75EC
+		// Token: 0x06034137 RID: 213303 RVA: 0x00704620 File Offset: 0x00702820
 		public static Offset<IPictureCaptionConfig> Pack(FlatBufferBuilder builder, IPictureCaptionConfigT _o)
 		{
 			if (_o == null)
@@ -208,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPictureCaptionConfig.CreateIPictureCaptionConfig(builder, pictureCaptionOffset, uiPrefabIdOffset, _o.Duration, uiAnimConfigOffset);
 		}
 
-		// Token: 0x0401162E RID: 71214
+		// Token: 0x0401259E RID: 75166
 		private Table __p;
 	}
 }

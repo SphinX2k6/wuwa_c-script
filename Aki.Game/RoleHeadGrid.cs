@@ -6,18 +6,18 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001964 RID: 6500
+// Token: 0x02000E21 RID: 3617
 public class RoleHeadGrid : UiPanelBase
 {
-	// Token: 0x0600BE29 RID: 48681 RVA: 0x002B02FE File Offset: 0x002AE4FE
+	// Token: 0x0600922C RID: 37420 RVA: 0x002BB142 File Offset: 0x002B9342
 	[NullableContext(1)]
 	public RoleHeadGrid(AActor actor)
 	{
 		base.CreateThenShowByActor(actor, null);
 	}
 
-	// Token: 0x17000FE6 RID: 4070
-	// (get) Token: 0x0600BE2A RID: 48682 RVA: 0x002B0310 File Offset: 0x002AE510
+	// Token: 0x1700100A RID: 4106
+	// (get) Token: 0x0600922D RID: 37421 RVA: 0x002BB154 File Offset: 0x002B9354
 	private RoleInfo? Config
 	{
 		get
@@ -30,7 +30,7 @@ public class RoleHeadGrid : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BE2B RID: 48683 RVA: 0x002B033F File Offset: 0x002AE53F
+	// Token: 0x0600922E RID: 37422 RVA: 0x002BB183 File Offset: 0x002B9383
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class RoleHeadGrid : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600BE2C RID: 48684 RVA: 0x002B0364 File Offset: 0x002AE564
+	// Token: 0x0600922F RID: 37423 RVA: 0x002BB1A8 File Offset: 0x002B93A8
 	private void UpdateHeadTexture()
 	{
 		RoleInfo? config = this.Config;
@@ -60,20 +60,20 @@ public class RoleHeadGrid : UiPanelBase
 		base.SetRoleIcon(roleHeadIconBig, texture, this.RoleId, null, null);
 	}
 
-	// Token: 0x0600BE2D RID: 48685 RVA: 0x002B03C0 File Offset: 0x002AE5C0
+	// Token: 0x06009230 RID: 37424 RVA: 0x002BB204 File Offset: 0x002B9404
 	public void Refresh(int roleId)
 	{
 		this.RoleId = roleId;
 		this.UpdateHeadTexture();
 	}
 
-	// Token: 0x040055BA RID: 21946
+	// Token: 0x04005667 RID: 22119
 	private int RoleId;
 
-	// Token: 0x02007EBA RID: 32442
+	// Token: 0x02007049 RID: 28745
 	private enum EChildType
 	{
-		// Token: 0x040296E3 RID: 169699
+		// Token: 0x04024A20 RID: 150048
 		RoleHeadTexture
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001471 RID: 5233
+	// Token: 0x020015CA RID: 5578
 	public class IArcadeGameplayBase
 	{
-		// Token: 0x0600770F RID: 30479 RVA: 0x0011C93F File Offset: 0x0011AB3F
-		[NullableContext(1)]
+		// Token: 0x06007DDD RID: 32221 RVA: 0x0012B557 File Offset: 0x00129757
 		public static IArcadeGameplayBase Create(IArcadeGameplayBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002800 RID: 10240
-		// (get) Token: 0x06007710 RID: 30480 RVA: 0x0011C95E File Offset: 0x0011AB5E
+		// Token: 0x170029EB RID: 10731
+		// (get) Token: 0x06007DDE RID: 32222 RVA: 0x0012B576 File Offset: 0x00129776
 		public virtual EArcadeGameplayType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400453F RID: 17727
+		// Token: 0x040048DA RID: 18650
 		private IArcadeGameplayBase Instance;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EC6 RID: 3782
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FDC RID: 4060
 	public class IArcadeGameplayTetrisBoardGame : IArcadeGameplayBase
 	{
-		// Token: 0x06005384 RID: 21380 RVA: 0x000CD7C0 File Offset: 0x000CB9C0
+		// Token: 0x06005900 RID: 22784 RVA: 0x000D9968 File Offset: 0x000D7B68
 		private IArcadeGameplayTetrisBoardGame_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005385 RID: 21381 RVA: 0x000CD7F8 File Offset: 0x000CB9F8
+		// Token: 0x06005901 RID: 22785 RVA: 0x000D99A0 File Offset: 0x000D7BA0
 		public static IArcadeGameplayTetrisBoardGame Create([Nullable(2)] IArcadeGameplayTetrisBoardGame instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005386 RID: 21382 RVA: 0x000CD80B File Offset: 0x000CBA0B
+		// Token: 0x06005902 RID: 22786 RVA: 0x000D99B3 File Offset: 0x000D7BB3
 		public static IArcadeGameplayTetrisBoardGame CreateFromSetValue([Nullable(2)] IArcadeGameplayTetrisBoardGame_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005387 RID: 21383 RVA: 0x000CD81E File Offset: 0x000CBA1E
+		// Token: 0x06005903 RID: 22787 RVA: 0x000D99C6 File Offset: 0x000D7BC6
 		public new IArcadeGameplayTetrisBoardGame_SetValue ToSetValue()
 		{
 			return new IArcadeGameplayTetrisBoardGame_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C18 RID: 7192
-		// (get) Token: 0x06005388 RID: 21384 RVA: 0x000CD83D File Offset: 0x000CBA3D
-		// (set) Token: 0x06005389 RID: 21385 RVA: 0x000CD868 File Offset: 0x000CBA68
+		// Token: 0x17001DB0 RID: 7600
+		// (get) Token: 0x06005904 RID: 22788 RVA: 0x000D99E5 File Offset: 0x000D7BE5
+		// (set) Token: 0x06005905 RID: 22789 RVA: 0x000D9A10 File Offset: 0x000D7C10
 		public override EArcadeGameplayType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C19 RID: 7193
-		// (get) Token: 0x0600538A RID: 21386 RVA: 0x000CD876 File Offset: 0x000CBA76
-		// (set) Token: 0x0600538B RID: 21387 RVA: 0x000CD8A1 File Offset: 0x000CBAA1
+		// Token: 0x17001DB1 RID: 7601
+		// (get) Token: 0x06005906 RID: 22790 RVA: 0x000D9A1E File Offset: 0x000D7C1E
+		// (set) Token: 0x06005907 RID: 22791 RVA: 0x000D9A49 File Offset: 0x000D7C49
 		public virtual int LevelId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400329A RID: 12954
+		// Token: 0x040035A7 RID: 13735
 		[Nullable(2)]
 		protected new IArcadeGameplayTetrisBoardGame FbInstance;
 
-		// Token: 0x0400329B RID: 12955
+		// Token: 0x040035A8 RID: 13736
 		[Nullable(2)]
 		protected new IArcadeGameplayTetrisBoardGame_SetValue PocoInterface;
 	}

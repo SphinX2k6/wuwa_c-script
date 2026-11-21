@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E0D RID: 24077
+	// Token: 0x02004DF2 RID: 19954
 	public class SpecialEnergyBarXinYueHuPillarItem : UiPanelBase
 	{
-		// Token: 0x0603D3AD RID: 250797 RVA: 0x00EC0E5C File Offset: 0x00EBF05C
+		// Token: 0x0603233C RID: 205628 RVA: 0x00E123BC File Offset: 0x00E105BC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -28,28 +28,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D3AE RID: 250798 RVA: 0x00EC0F07 File Offset: 0x00EBF107
+		// Token: 0x0603233D RID: 205629 RVA: 0x00E12467 File Offset: 0x00E10667
 		protected override void OnStart()
 		{
 			this.InitTweenAnim(2);
 			this.InitTweenAnim(3);
 		}
 
-		// Token: 0x0603D3AF RID: 250799 RVA: 0x00EC0F17 File Offset: 0x00EBF117
+		// Token: 0x0603233E RID: 205630 RVA: 0x00E12477 File Offset: 0x00E10677
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearAllTweenAnim();
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603D3B0 RID: 250800 RVA: 0x00EC0F25 File Offset: 0x00EBF125
+		// Token: 0x0603233F RID: 205631 RVA: 0x00E12485 File Offset: 0x00E10685
 		public void Reset()
 		{
 			base.GetItem(0).SetUIActive(false);
 			base.GetItem(1).SetUIActive(false);
 		}
 
-		// Token: 0x0603D3B1 RID: 250801 RVA: 0x00EC0F41 File Offset: 0x00EBF141
+		// Token: 0x06032340 RID: 205632 RVA: 0x00E124A1 File Offset: 0x00E106A1
 		public void PlayStart()
 		{
 			this.StopTweenAnim(3);
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayTweenAnim(2);
 		}
 
-		// Token: 0x0603D3B2 RID: 250802 RVA: 0x00EC0F6B File Offset: 0x00EBF16B
+		// Token: 0x06032341 RID: 205633 RVA: 0x00E124CB File Offset: 0x00E106CB
 		public void PlayFull()
 		{
 			this.StopTweenAnim(2);
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayTweenAnim(3);
 		}
 
-		// Token: 0x0603D3B3 RID: 250803 RVA: 0x00EC0F95 File Offset: 0x00EBF195
+		// Token: 0x06032342 RID: 205634 RVA: 0x00E124F5 File Offset: 0x00E106F5
 		public void InitByState(bool isFull)
 		{
 			if (isFull)
@@ -78,44 +78,44 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayStart();
 		}
 
-		// Token: 0x0603D3B4 RID: 250804 RVA: 0x00EC0FA7 File Offset: 0x00EBF1A7
+		// Token: 0x06032343 RID: 205635 RVA: 0x00E12507 File Offset: 0x00E10707
 		protected void InitTweenAnim(int componentType)
 		{
 			this.TweenAnimPlayer.InitTweenAnim(componentType, base.GetItem(componentType), false);
 		}
 
-		// Token: 0x0603D3B5 RID: 250805 RVA: 0x00EC0FBD File Offset: 0x00EBF1BD
+		// Token: 0x06032344 RID: 205636 RVA: 0x00E1251D File Offset: 0x00E1071D
 		protected void PlayTweenAnim(int componentType)
 		{
 			this.TweenAnimPlayer.PlayTweenAnim(componentType);
 		}
 
-		// Token: 0x0603D3B6 RID: 250806 RVA: 0x00EC0FCB File Offset: 0x00EBF1CB
+		// Token: 0x06032345 RID: 205637 RVA: 0x00E1252B File Offset: 0x00E1072B
 		protected void StopTweenAnim(int componentType)
 		{
 			this.TweenAnimPlayer.StopTweenAnim(componentType);
 		}
 
-		// Token: 0x0603D3B7 RID: 250807 RVA: 0x00EC0FD9 File Offset: 0x00EBF1D9
+		// Token: 0x06032346 RID: 205638 RVA: 0x00E12539 File Offset: 0x00E10739
 		protected virtual void ClearAllTweenAnim()
 		{
 			this.TweenAnimPlayer.Clear(false);
 		}
 
-		// Token: 0x0401FEDE RID: 130782
+		// Token: 0x0401A9A5 RID: 108965
 		[Nullable(1)]
 		protected BattleUiTweenAnimPlayer TweenAnimPlayer = new BattleUiTweenAnimPlayer();
 
-		// Token: 0x0200C179 RID: 49529
+		// Token: 0x0200AB88 RID: 43912
 		internal enum EChildType
 		{
-			// Token: 0x0403A756 RID: 239446
+			// Token: 0x04035148 RID: 217416
 			NormalItem,
-			// Token: 0x0403A757 RID: 239447
+			// Token: 0x04035149 RID: 217417
 			LightNodeItem,
-			// Token: 0x0403A758 RID: 239448
+			// Token: 0x0403514A RID: 217418
 			AniStart,
-			// Token: 0x0403A759 RID: 239449
+			// Token: 0x0403514B RID: 217419
 			AniFull
 		}
 	}

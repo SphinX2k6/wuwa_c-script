@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A66 RID: 6758
+// Token: 0x02000F25 RID: 3877
 [NullableContext(2)]
 [Nullable(0)]
 public class DangoWorldMainPanel : BattleChildViewPanel
 {
-	// Token: 0x0600C6EF RID: 50927 RVA: 0x002D44DC File Offset: 0x002D26DC
+	// Token: 0x06009AFF RID: 39679 RVA: 0x002DF5D4 File Offset: 0x002DD7D4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		};
 	}
 
-	// Token: 0x0600C6F0 RID: 50928 RVA: 0x002D459C File Offset: 0x002D279C
+	// Token: 0x06009B00 RID: 39680 RVA: 0x002DF694 File Offset: 0x002DD894
 	protected override void AddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnAbyssRoleInfoUpdate, new Action(this.OnRoleChange));
@@ -41,7 +41,7 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		EventSystem.Instance.Add<IReadOnlySet<int>>(EEventName.OnActivityOpen, new Action<IReadOnlySet<int>>(this.OnActivityOpen));
 	}
 
-	// Token: 0x0600C6F1 RID: 50929 RVA: 0x002D4600 File Offset: 0x002D2800
+	// Token: 0x06009B01 RID: 39681 RVA: 0x002DF6F8 File Offset: 0x002DD8F8
 	protected override void RemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAbyssRoleInfoUpdate, new Action(this.OnRoleChange));
@@ -49,7 +49,7 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		EventSystem.Instance.Remove<IReadOnlySet<int>>(EEventName.OnActivityOpen, new Action<IReadOnlySet<int>>(this.OnActivityOpen));
 	}
 
-	// Token: 0x0600C6F2 RID: 50930 RVA: 0x002D4661 File Offset: 0x002D2861
+	// Token: 0x06009B02 RID: 39682 RVA: 0x002DF759 File Offset: 0x002DD959
 	[NullableContext(1)]
 	private void OnActivityOpen(IReadOnlySet<int> _)
 	{
@@ -57,13 +57,13 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		this.RefreshView();
 	}
 
-	// Token: 0x0600C6F3 RID: 50931 RVA: 0x002D4679 File Offset: 0x002D2879
+	// Token: 0x06009B03 RID: 39683 RVA: 0x002DF771 File Offset: 0x002DD971
 	private void OnRoleChange()
 	{
 		this.RefreshRightTopPanel();
 	}
 
-	// Token: 0x0600C6F4 RID: 50932 RVA: 0x002D4684 File Offset: 0x002D2884
+	// Token: 0x06009B04 RID: 39684 RVA: 0x002DF77C File Offset: 0x002DD97C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoWorldMainPanel.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -74,7 +74,7 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C6F5 RID: 50933 RVA: 0x002D46C8 File Offset: 0x002D28C8
+	// Token: 0x06009B05 RID: 39685 RVA: 0x002DF7C0 File Offset: 0x002DD9C0
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEvents();
@@ -106,14 +106,14 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		uiSequencePlayer.Clear();
 	}
 
-	// Token: 0x0600C6F6 RID: 50934 RVA: 0x002D4750 File Offset: 0x002D2950
+	// Token: 0x06009B06 RID: 39686 RVA: 0x002DF848 File Offset: 0x002DDA48
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView();
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x0600C6F7 RID: 50935 RVA: 0x002D4760 File Offset: 0x002D2960
+	// Token: 0x06009B07 RID: 39687 RVA: 0x002DF858 File Offset: 0x002DDA58
 	private void RefreshRedDot()
 	{
 		AbyssButtonItem dangoUpItem = this.DangoUpItem;
@@ -129,7 +129,7 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		shopItem.BindRedDot(ERedDotName.RedDotDangoPayShop, null);
 	}
 
-	// Token: 0x0600C6F8 RID: 50936 RVA: 0x002D47AA File Offset: 0x002D29AA
+	// Token: 0x06009B08 RID: 39688 RVA: 0x002DF8A2 File Offset: 0x002DDAA2
 	private void RefreshView()
 	{
 		DangoWorldQuestItem dangoWorldQuestItem = this.DangoWorldQuestItem;
@@ -141,7 +141,7 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		this.RefreshBtns();
 	}
 
-	// Token: 0x0600C6F9 RID: 50937 RVA: 0x002D47C9 File Offset: 0x002D29C9
+	// Token: 0x06009B09 RID: 39689 RVA: 0x002DF8C1 File Offset: 0x002DDAC1
 	private void RefreshRightTopPanel()
 	{
 		if (this.CurrentData != null)
@@ -150,7 +150,7 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600C6FA RID: 50938 RVA: 0x002D47E4 File Offset: 0x002D29E4
+	// Token: 0x06009B0A RID: 39690 RVA: 0x002DF8DC File Offset: 0x002DDADC
 	private void RefreshBtns()
 	{
 		if (this.CurrentData != null)
@@ -162,7 +162,7 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600C6FB RID: 50939 RVA: 0x002D4827 File Offset: 0x002D2A27
+	// Token: 0x06009B0B RID: 39691 RVA: 0x002DF91F File Offset: 0x002DDB1F
 	private void OnClickDangoUp()
 	{
 		if (!DangoAbyssModel.Instance.GetDangoUpAvailable())
@@ -172,7 +172,7 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		DangoAbyssActivityController.Instance.OpenCurrentRoleUpView();
 	}
 
-	// Token: 0x0600C6FC RID: 50940 RVA: 0x002D4840 File Offset: 0x002D2A40
+	// Token: 0x06009B0C RID: 39692 RVA: 0x002DF938 File Offset: 0x002DDB38
 	private void OnClickShop()
 	{
 		if (!DangoAbyssModel.Instance.GetShopAvailable())
@@ -182,7 +182,7 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		UiManager.Instance.OpenView(EUiViewName.DangoAbyssShopView, null, null);
 	}
 
-	// Token: 0x0600C6FD RID: 50941 RVA: 0x002D4860 File Offset: 0x002D2A60
+	// Token: 0x06009B0D RID: 39693 RVA: 0x002DF958 File Offset: 0x002DDB58
 	private void OnCloseBtnClick()
 	{
 		if (!DangoAbyssController.Instance.OpenCurrentActivityAbyssEntrance())
@@ -191,7 +191,7 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600C6FE RID: 50942 RVA: 0x002D487D File Offset: 0x002D2A7D
+	// Token: 0x06009B0E RID: 39694 RVA: 0x002DF975 File Offset: 0x002DDB75
 	public override void OnTickBattleChildViewPanel(float delta)
 	{
 		DangoWorldQuestItem dangoWorldQuestItem = this.DangoWorldQuestItem;
@@ -202,13 +202,13 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		dangoWorldQuestItem.Tick();
 	}
 
-	// Token: 0x0600C6FF RID: 50943 RVA: 0x002D488F File Offset: 0x002D2A8F
+	// Token: 0x06009B0F RID: 39695 RVA: 0x002DF987 File Offset: 0x002DDB87
 	protected override void OnBeforeHide()
 	{
 		this.UnbindRedDot();
 	}
 
-	// Token: 0x0600C700 RID: 50944 RVA: 0x002D4897 File Offset: 0x002D2A97
+	// Token: 0x06009B10 RID: 39696 RVA: 0x002DF98F File Offset: 0x002DDB8F
 	private void UnbindRedDot()
 	{
 		AbyssButtonItem dangoUpItem = this.DangoUpItem;
@@ -224,7 +224,7 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		shopItem.UnBindRedDot();
 	}
 
-	// Token: 0x0600C701 RID: 50945 RVA: 0x002D48BC File Offset: 0x002D2ABC
+	// Token: 0x06009B11 RID: 39697 RVA: 0x002DF9B4 File Offset: 0x002DDBB4
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -262,39 +262,39 @@ public class DangoWorldMainPanel : BattleChildViewPanel
 		};
 	}
 
-	// Token: 0x04005BA5 RID: 23461
+	// Token: 0x04005C74 RID: 23668
 	private DangoAbyssActivityData CurrentData;
 
-	// Token: 0x04005BA6 RID: 23462
+	// Token: 0x04005C75 RID: 23669
 	private DangoWorldMainProgressPanel RightTopPanel;
 
-	// Token: 0x04005BA7 RID: 23463
+	// Token: 0x04005C76 RID: 23670
 	private AbyssButtonItem DangoUpItem;
 
-	// Token: 0x04005BA8 RID: 23464
+	// Token: 0x04005C77 RID: 23671
 	private AbyssButtonItem ShopItem;
 
-	// Token: 0x04005BA9 RID: 23465
+	// Token: 0x04005C78 RID: 23672
 	private DangoWorldQuestItem DangoWorldQuestItem;
 
-	// Token: 0x04005BAA RID: 23466
+	// Token: 0x04005C79 RID: 23673
 	private UiSequencePlayer UiSequencePlayer;
 
-	// Token: 0x02007FB3 RID: 32691
+	// Token: 0x02007142 RID: 28994
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029B1E RID: 170782
+		// Token: 0x04024E5B RID: 151131
 		CloseBtn,
-		// Token: 0x04029B1F RID: 170783
+		// Token: 0x04024E5C RID: 151132
 		GoalScroller,
-		// Token: 0x04029B20 RID: 170784
+		// Token: 0x04024E5D RID: 151133
 		GoalItem,
-		// Token: 0x04029B21 RID: 170785
+		// Token: 0x04024E5E RID: 151134
 		RightTopPanel,
-		// Token: 0x04029B22 RID: 170786
+		// Token: 0x04024E5F RID: 151135
 		ShopItem,
-		// Token: 0x04029B23 RID: 170787
+		// Token: 0x04024E60 RID: 151136
 		DangoUpItem
 	}
 }

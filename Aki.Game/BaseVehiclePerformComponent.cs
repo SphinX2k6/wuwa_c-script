@@ -12,26 +12,26 @@ using CSharpScript.Game.Common.Event;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x020032C1 RID: 12993
+// Token: 0x02002832 RID: 10290
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseVehiclePerformComponent : EntityComponent
 {
-	// Token: 0x0601C313 RID: 115475 RVA: 0x007D7D8A File Offset: 0x007D5F8A
+	// Token: 0x06019F56 RID: 106326 RVA: 0x007FEF12 File Offset: 0x007FD112
 	[NullableContext(2)]
 	public IVehicleEnterExitMontage GetEnterVehicleHorseMontage(CommonNpcPerformComponent.EEnterVehicleDirection direction, bool isFemale)
 	{
 		return this.QueryEnterExitMontage(this.EnterPerformMontageMap, direction, isFemale);
 	}
 
-	// Token: 0x0601C314 RID: 115476 RVA: 0x007D7D9A File Offset: 0x007D5F9A
+	// Token: 0x06019F57 RID: 106327 RVA: 0x007FEF22 File Offset: 0x007FD122
 	[NullableContext(2)]
 	public IVehicleEnterExitMontage GetLeaveVehicleHorseMontage(CommonNpcPerformComponent.EEnterVehicleDirection direction, bool isFemale)
 	{
 		return this.QueryEnterExitMontage(this.LeavePerformMontageMap, direction, isFemale);
 	}
 
-	// Token: 0x0601C315 RID: 115477 RVA: 0x007D7DAC File Offset: 0x007D5FAC
+	// Token: 0x06019F58 RID: 106328 RVA: 0x007FEF34 File Offset: 0x007FD134
 	[return: Nullable(2)]
 	private IVehicleEnterExitMontage QueryEnterExitMontage(Dictionary<EEnterExitPerformVehicle_Gender, Dictionary<EEnterExitPerformVehicle_Direction, IVehicleEnterExitMontage>> genderMap, CommonNpcPerformComponent.EEnterVehicleDirection direction, bool isFemale)
 	{
@@ -59,7 +59,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601C316 RID: 115478 RVA: 0x007D7E5A File Offset: 0x007D605A
+	// Token: 0x06019F59 RID: 106329 RVA: 0x007FEFE2 File Offset: 0x007FD1E2
 	[NullableContext(2)]
 	public Entity GetCurrentOrLastDriver()
 	{
@@ -74,9 +74,9 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x1700271F RID: 10015
-	// (get) Token: 0x0601C317 RID: 115479 RVA: 0x007D7E8F File Offset: 0x007D608F
-	// (set) Token: 0x0601C318 RID: 115480 RVA: 0x007D7E98 File Offset: 0x007D6098
+	// Token: 0x17002A0B RID: 10763
+	// (get) Token: 0x06019F5A RID: 106330 RVA: 0x007FF017 File Offset: 0x007FD217
+	// (set) Token: 0x06019F5B RID: 106331 RVA: 0x007FF020 File Offset: 0x007FD220
 	[Nullable(2)]
 	public Entity Driver
 	{
@@ -103,12 +103,12 @@ public class BaseVehiclePerformComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C319 RID: 115481 RVA: 0x007D7EEF File Offset: 0x007D60EF
+	// Token: 0x06019F5C RID: 106332 RVA: 0x007FF077 File Offset: 0x007FD277
 	protected virtual void OnSetDriver()
 	{
 	}
 
-	// Token: 0x0601C31A RID: 115482 RVA: 0x007D7EF4 File Offset: 0x007D60F4
+	// Token: 0x06019F5D RID: 106333 RVA: 0x007FF07C File Offset: 0x007FD27C
 	[NullableContext(2)]
 	protected unsafe override bool OnInitData(IEntityArgs args = null)
 	{
@@ -147,7 +147,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601C31B RID: 115483 RVA: 0x007D8054 File Offset: 0x007D6254
+	// Token: 0x06019F5E RID: 106334 RVA: 0x007FF1DC File Offset: 0x007FD3DC
 	protected override bool OnStart()
 	{
 		this.EntityHandle = CreatureModel.Instance.GetEntityById(base.Entity.Id);
@@ -155,20 +155,20 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601C31C RID: 115484 RVA: 0x007D80A0 File Offset: 0x007D62A0
+	// Token: 0x06019F5F RID: 106335 RVA: 0x007FF228 File Offset: 0x007FD428
 	protected override bool OnEnd()
 	{
 		this.Driver = null;
 		return base.OnEnd();
 	}
 
-	// Token: 0x0601C31D RID: 115485 RVA: 0x007D80AF File Offset: 0x007D62AF
+	// Token: 0x06019F60 RID: 106336 RVA: 0x007FF237 File Offset: 0x007FD437
 	protected override void OnActivate()
 	{
 		this.InitVehicleFeatures();
 	}
 
-	// Token: 0x0601C31E RID: 115486 RVA: 0x007D80B7 File Offset: 0x007D62B7
+	// Token: 0x06019F61 RID: 106337 RVA: 0x007FF23F File Offset: 0x007FD43F
 	protected override void OnPostActivate()
 	{
 		if (base.Entity.Active)
@@ -177,13 +177,13 @@ public class BaseVehiclePerformComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C31F RID: 115487 RVA: 0x007D80D6 File Offset: 0x007D62D6
+	// Token: 0x06019F62 RID: 106338 RVA: 0x007FF25E File Offset: 0x007FD45E
 	protected override void OnEnable()
 	{
 		VehicleController.Instance.OnVehicleEnable(base.Entity);
 	}
 
-	// Token: 0x0601C320 RID: 115488 RVA: 0x007D80E8 File Offset: 0x007D62E8
+	// Token: 0x06019F63 RID: 106339 RVA: 0x007FF270 File Offset: 0x007FD470
 	protected override void OnAfterTick(float delta)
 	{
 		foreach (VehiclePassengerInfo vehiclePassengerInfo in this.PassengerInfoMap.Values)
@@ -197,7 +197,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C321 RID: 115489 RVA: 0x007D8154 File Offset: 0x007D6354
+	// Token: 0x06019F64 RID: 106340 RVA: 0x007FF2DC File Offset: 0x007FD4DC
 	protected virtual bool InitVehicleConfig()
 	{
 		BP_VehicleConfig_C asset = this.LoadVehicleConfigAsset();
@@ -206,7 +206,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return this.Config.Init();
 	}
 
-	// Token: 0x0601C322 RID: 115490 RVA: 0x007D8198 File Offset: 0x007D6398
+	// Token: 0x06019F65 RID: 106341 RVA: 0x007FF320 File Offset: 0x007FD520
 	[NullableContext(2)]
 	protected virtual BP_VehicleConfig_C LoadVehicleConfigAsset()
 	{
@@ -238,7 +238,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return this.LoadVehicleConfig(component.Config);
 	}
 
-	// Token: 0x0601C323 RID: 115491 RVA: 0x007D82B0 File Offset: 0x007D64B0
+	// Token: 0x06019F66 RID: 106342 RVA: 0x007FF438 File Offset: 0x007FD638
 	[return: Nullable(2)]
 	protected unsafe BP_VehicleConfig_C LoadVehicleConfig(string path)
 	{
@@ -265,7 +265,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return bp_VehicleConfig_C;
 	}
 
-	// Token: 0x0601C324 RID: 115492 RVA: 0x007D8394 File Offset: 0x007D6594
+	// Token: 0x06019F67 RID: 106343 RVA: 0x007FF51C File Offset: 0x007FD71C
 	protected void InitVehicleFeatures()
 	{
 		CreatureDataComponent creatureData = this.CreatureData;
@@ -304,17 +304,17 @@ public class BaseVehiclePerformComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C325 RID: 115493 RVA: 0x007D8474 File Offset: 0x007D6674
+	// Token: 0x06019F68 RID: 106344 RVA: 0x007FF5FC File Offset: 0x007FD7FC
 	protected virtual void InitVehicleMovementFeature(IMovementVehicleFeature config)
 	{
 	}
 
-	// Token: 0x0601C326 RID: 115494 RVA: 0x007D8476 File Offset: 0x007D6676
+	// Token: 0x06019F69 RID: 106345 RVA: 0x007FF5FE File Offset: 0x007FD7FE
 	protected virtual void InitVehicleBattleFeature(IBattleVehicleFeature config)
 	{
 	}
 
-	// Token: 0x0601C327 RID: 115495 RVA: 0x007D8478 File Offset: 0x007D6678
+	// Token: 0x06019F6A RID: 106346 RVA: 0x007FF600 File Offset: 0x007FD800
 	protected unsafe virtual void InitVehicleEnterExitPerformMontage(IPerformanceVehicleFeature config)
 	{
 		UDataTable udataTable = ResourceSystem.Instance.Load<UDataTable>(config.PerformConfig, "js_undefined");
@@ -356,7 +356,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C328 RID: 115496 RVA: 0x007D8650 File Offset: 0x007D6850
+	// Token: 0x06019F6B RID: 106347 RVA: 0x007FF7D8 File Offset: 0x007FD9D8
 	public virtual bool TryEnter(Entity entity, int seat)
 	{
 		if (!this.EnterConditionCheck(entity, seat, true))
@@ -375,7 +375,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601C329 RID: 115497 RVA: 0x007D86A8 File Offset: 0x007D68A8
+	// Token: 0x06019F6C RID: 106348 RVA: 0x007FF830 File Offset: 0x007FDA30
 	public unsafe virtual int TryEnterAtOnce(Entity entity, int seat, string reason = "", bool notSync = false)
 	{
 		if (!this.EnterConditionCheck(entity, seat, true))
@@ -435,7 +435,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return num;
 	}
 
-	// Token: 0x0601C32A RID: 115498 RVA: 0x007D88FC File Offset: 0x007D6AFC
+	// Token: 0x06019F6D RID: 106349 RVA: 0x007FFA84 File Offset: 0x007FDC84
 	public unsafe virtual void Enter(Entity entity, int seat, bool byChangeRole = false)
 	{
 		bool flag = this.DriverSeat == seat;
@@ -550,7 +550,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		component11.StartForceDisableAnimOptimization2(EForceDisableAnimOptimization.Driving);
 	}
 
-	// Token: 0x0601C32B RID: 115499 RVA: 0x007D8DDC File Offset: 0x007D6FDC
+	// Token: 0x06019F6E RID: 106350 RVA: 0x007FFF64 File Offset: 0x007FE164
 	public virtual bool TryLeave(Entity entity, ELeaveVehicleType type = ELeaveVehicleType.Launch)
 	{
 		if (!this.LeaveConditionCheck(entity, true))
@@ -579,7 +579,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601C32C RID: 115500 RVA: 0x007D8E4C File Offset: 0x007D704C
+	// Token: 0x06019F6F RID: 106351 RVA: 0x007FFFD4 File Offset: 0x007FE1D4
 	public unsafe virtual int TryLeaveAtOnce(Entity entity, ELeaveVehicleType type = ELeaveVehicleType.Launch, string reason = "", bool notSync = false)
 	{
 		if (!this.LeaveConditionCheck(entity, true))
@@ -660,7 +660,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return num;
 	}
 
-	// Token: 0x0601C32D RID: 115501 RVA: 0x007D9178 File Offset: 0x007D7378
+	// Token: 0x06019F70 RID: 106352 RVA: 0x00800300 File Offset: 0x007FE500
 	public void TryLeaveAll(ELeaveVehicleType type = ELeaveVehicleType.Launch)
 	{
 		foreach (KeyValuePair<int, VehiclePassengerInfo> keyValuePair in this.PassengerInfoMap)
@@ -670,7 +670,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C32E RID: 115502 RVA: 0x007D91DC File Offset: 0x007D73DC
+	// Token: 0x06019F71 RID: 106353 RVA: 0x00800364 File Offset: 0x007FE564
 	public virtual void TryLeaveAllAtOnce(ELeaveVehicleType type = ELeaveVehicleType.Launch, string reason = "")
 	{
 		foreach (KeyValuePair<int, VehiclePassengerInfo> keyValuePair in this.PassengerInfoMap)
@@ -680,7 +680,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C32F RID: 115503 RVA: 0x007D9240 File Offset: 0x007D7440
+	// Token: 0x06019F72 RID: 106354 RVA: 0x008003C8 File Offset: 0x007FE5C8
 	public unsafe virtual void Leave(Entity entity, ELeaveVehicleType type = ELeaveVehicleType.Launch, bool byChangeRole = false)
 	{
 		VehiclePassengerInfo vehiclePassengerInfo = null;
@@ -751,7 +751,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C330 RID: 115504 RVA: 0x007D9517 File Offset: 0x007D7717
+	// Token: 0x06019F73 RID: 106355 RVA: 0x0080069F File Offset: 0x007FE89F
 	public void ResetVehicleConfig(bool immediately = false)
 	{
 		VehicleConfig configInternal = this.ConfigInternal;
@@ -762,17 +762,17 @@ public class BaseVehiclePerformComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C331 RID: 115505 RVA: 0x007D953A File Offset: 0x007D773A
+	// Token: 0x06019F74 RID: 106356 RVA: 0x008006C2 File Offset: 0x007FE8C2
 	public virtual void RefreshMoveConfigFromVehicleConfig()
 	{
 	}
 
-	// Token: 0x0601C332 RID: 115506 RVA: 0x007D953C File Offset: 0x007D773C
+	// Token: 0x06019F75 RID: 106357 RVA: 0x008006C4 File Offset: 0x007FE8C4
 	public virtual void FixBornLocation([Nullable(2)] global::Vector target = null, string context = "FixBornLocation")
 	{
 	}
 
-	// Token: 0x0601C333 RID: 115507 RVA: 0x007D9540 File Offset: 0x007D7740
+	// Token: 0x06019F76 RID: 106358 RVA: 0x008006C8 File Offset: 0x007FE8C8
 	private void SendRoleEnterVehicleRequest(Entity entity, int seat, int atOnceHandle, string reason = "")
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -797,7 +797,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		}, 0);
 	}
 
-	// Token: 0x0601C334 RID: 115508 RVA: 0x007D95FC File Offset: 0x007D77FC
+	// Token: 0x06019F77 RID: 106359 RVA: 0x00800784 File Offset: 0x007FE984
 	private void SendRoleLeaveVehicleRequest(Entity entity, ELeaveVehicleType type, int atOnceHandle, string reason = "")
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -825,7 +825,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		}, 0);
 	}
 
-	// Token: 0x0601C335 RID: 115509 RVA: 0x007D96E4 File Offset: 0x007D78E4
+	// Token: 0x06019F78 RID: 106360 RVA: 0x0080086C File Offset: 0x007FEA6C
 	private void SendEntityEnterVehicleRequest(Entity entity, int seat, int atOnceHandle, string reason = "")
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -851,7 +851,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		}, 0);
 	}
 
-	// Token: 0x0601C336 RID: 115510 RVA: 0x007D97B4 File Offset: 0x007D79B4
+	// Token: 0x06019F79 RID: 106361 RVA: 0x0080093C File Offset: 0x007FEB3C
 	private void SendEntityLeaveVehicleRequest(Entity entity, ELeaveVehicleType type, int atOnceHandle, string reason = "")
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -880,13 +880,13 @@ public class BaseVehiclePerformComponent : EntityComponent
 		}, 0);
 	}
 
-	// Token: 0x0601C337 RID: 115511 RVA: 0x007D98B3 File Offset: 0x007D7AB3
+	// Token: 0x06019F7A RID: 106362 RVA: 0x00800A3B File Offset: 0x007FEC3B
 	public virtual void HandlePendingDestroy()
 	{
 		CreatureController.Instance.DelayRemoveEntityFinished(base.Entity);
 	}
 
-	// Token: 0x0601C338 RID: 115512 RVA: 0x007D98C8 File Offset: 0x007D7AC8
+	// Token: 0x06019F7B RID: 106363 RVA: 0x00800A50 File Offset: 0x007FEC50
 	protected virtual void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		EventSystem.Instance.RemoveWithTarget<ERemoveEntityType, EntityHandle>(this.EntityHandle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
@@ -901,7 +901,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C339 RID: 115513 RVA: 0x007D9968 File Offset: 0x007D7B68
+	// Token: 0x06019F7C RID: 106364 RVA: 0x00800AF0 File Offset: 0x007FECF0
 	protected unsafe virtual bool EnterConditionCheck(Entity entity, int seat, bool log = true)
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -986,7 +986,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601C33A RID: 115514 RVA: 0x007D9CE0 File Offset: 0x007D7EE0
+	// Token: 0x06019F7D RID: 106365 RVA: 0x00800E68 File Offset: 0x007FF068
 	protected unsafe virtual bool LeaveConditionCheck(Entity entity, bool log = true)
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -1011,29 +1011,29 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601C33B RID: 115515 RVA: 0x007D9DA9 File Offset: 0x007D7FA9
+	// Token: 0x06019F7E RID: 106366 RVA: 0x00800F31 File Offset: 0x007FF131
 	protected virtual void EnterVehiclePerform(VehiclePassengerInfo info)
 	{
 	}
 
-	// Token: 0x0601C33C RID: 115516 RVA: 0x007D9DAB File Offset: 0x007D7FAB
+	// Token: 0x06019F7F RID: 106367 RVA: 0x00800F33 File Offset: 0x007FF133
 	protected virtual void LeaveVehiclePerform(VehiclePassengerInfo info)
 	{
 	}
 
-	// Token: 0x0601C33D RID: 115517 RVA: 0x007D9DAD File Offset: 0x007D7FAD
+	// Token: 0x06019F80 RID: 106368 RVA: 0x00800F35 File Offset: 0x007FF135
 	public bool IsDriver(Entity entity)
 	{
 		return this.Driver == entity;
 	}
 
-	// Token: 0x0601C33E RID: 115518 RVA: 0x007D9DB8 File Offset: 0x007D7FB8
+	// Token: 0x06019F81 RID: 106369 RVA: 0x00800F40 File Offset: 0x007FF140
 	public bool IsPassenger(Entity entity)
 	{
 		return this.PassengerInfoMap.ContainsKey(entity.Id);
 	}
 
-	// Token: 0x0601C33F RID: 115519 RVA: 0x007D9DCC File Offset: 0x007D7FCC
+	// Token: 0x06019F82 RID: 106370 RVA: 0x00800F54 File Offset: 0x007FF154
 	public int TryFindUsableSeat(bool driverSeat)
 	{
 		for (int i = 0; i < this.MaxSeatCount; i++)
@@ -1046,7 +1046,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return -1;
 	}
 
-	// Token: 0x0601C340 RID: 115520 RVA: 0x007D9E07 File Offset: 0x007D8007
+	// Token: 0x06019F83 RID: 106371 RVA: 0x00800F8F File Offset: 0x007FF18F
 	public bool IsVehicleInUse(int seat)
 	{
 		if (seat == 999)
@@ -1056,12 +1056,12 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return this.SeatInfoMap.ContainsKey(seat);
 	}
 
-	// Token: 0x0601C341 RID: 115521 RVA: 0x007D9E2C File Offset: 0x007D802C
+	// Token: 0x06019F84 RID: 106372 RVA: 0x00800FB4 File Offset: 0x007FF1B4
 	public virtual void GetVehicleVelocity(global::Vector outVelocity)
 	{
 	}
 
-	// Token: 0x0601C342 RID: 115522 RVA: 0x007D9E30 File Offset: 0x007D8030
+	// Token: 0x06019F85 RID: 106373 RVA: 0x00800FB8 File Offset: 0x007FF1B8
 	protected bool CheckIsDriverAndHasAuthority(VehiclePassengerInfo info)
 	{
 		if (this.TrialAttributeId == null || !info.IsDriver)
@@ -1079,7 +1079,7 @@ public class BaseVehiclePerformComponent : EntityComponent
 		return baseBuffComponent != null && baseBuffComponent.HasBuffAuthority();
 	}
 
-	// Token: 0x0601C343 RID: 115523 RVA: 0x007D9E95 File Offset: 0x007D8095
+	// Token: 0x06019F86 RID: 106374 RVA: 0x0080101D File Offset: 0x007FF21D
 	public void AddTrialAttributeModifier(VehiclePassengerInfo info)
 	{
 		if (!this.CheckIsDriverAndHasAuthority(info))
@@ -1089,12 +1089,12 @@ public class BaseVehiclePerformComponent : EntityComponent
 		this.OnAddTrialAttributeModifier(info);
 	}
 
-	// Token: 0x0601C344 RID: 115524 RVA: 0x007D9EA8 File Offset: 0x007D80A8
+	// Token: 0x06019F87 RID: 106375 RVA: 0x00801030 File Offset: 0x007FF230
 	protected virtual void OnAddTrialAttributeModifier(VehiclePassengerInfo info)
 	{
 	}
 
-	// Token: 0x0601C345 RID: 115525 RVA: 0x007D9EAA File Offset: 0x007D80AA
+	// Token: 0x06019F88 RID: 106376 RVA: 0x00801032 File Offset: 0x007FF232
 	public void RemoveTrialAttributeModifier(VehiclePassengerInfo info)
 	{
 		if (!this.CheckIsDriverAndHasAuthority(info))
@@ -1104,12 +1104,12 @@ public class BaseVehiclePerformComponent : EntityComponent
 		this.OnRemoveTrialAttributeModifier(info);
 	}
 
-	// Token: 0x0601C346 RID: 115526 RVA: 0x007D9EBD File Offset: 0x007D80BD
+	// Token: 0x06019F89 RID: 106377 RVA: 0x00801045 File Offset: 0x007FF245
 	protected virtual void OnRemoveTrialAttributeModifier(VehiclePassengerInfo info)
 	{
 	}
 
-	// Token: 0x0601C347 RID: 115527 RVA: 0x007D9EC0 File Offset: 0x007D80C0
+	// Token: 0x06019F8A RID: 106378 RVA: 0x00801048 File Offset: 0x007FF248
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1117,340 +1117,322 @@ public class BaseVehiclePerformComponent : EntityComponent
 			return false;
 		}
 		BaseVehiclePerformComponent baseVehiclePerformComponent = (BaseVehiclePerformComponent)componentTemplate;
-		if (base.CanResetComponentProperty("CreatureData"))
+		if (baseVehiclePerformComponent.CreatureData == null)
 		{
-			if (baseVehiclePerformComponent.CreatureData == null)
-			{
-				this.CreatureData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureData), "CreatureData"))
-			{
-				return false;
-			}
+			this.CreatureData = null;
 		}
-		if (base.CanResetComponentProperty("MaxSeatCount"))
-		{
-			this.MaxSeatCount = baseVehiclePerformComponent.MaxSeatCount;
-		}
-		if (base.CanResetComponentProperty("DriverSeat"))
-		{
-			this.DriverSeat = baseVehiclePerformComponent.DriverSeat;
-		}
-		if (base.CanResetComponentProperty("CanBeenManipulated"))
-		{
-			this.CanBeenManipulated = baseVehiclePerformComponent.CanBeenManipulated;
-		}
-		if (base.CanResetComponentProperty("VehicleType"))
-		{
-			this.VehicleType = baseVehiclePerformComponent.VehicleType;
-		}
-		if (base.CanResetComponentProperty("Config"))
-		{
-			if (baseVehiclePerformComponent.Config == null)
-			{
-				this.Config = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleConfig>(this.Config), "Config"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ConfigInternal"))
-		{
-			if (baseVehiclePerformComponent.ConfigInternal == null)
-			{
-				this.ConfigInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleConfig>(this.ConfigInternal), "ConfigInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("VehicleFeatures"))
-		{
-			if (baseVehiclePerformComponent.VehicleFeatures == null)
-			{
-				this.VehicleFeatures = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EVehicleFeatureFlag>(this.VehicleFeatures), "VehicleFeatures"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("EnterPerformMontageMap") && baseVehiclePerformComponent.EnterPerformMontageMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EEnterExitPerformVehicle_Gender, Dictionary<EEnterExitPerformVehicle_Direction, IVehicleEnterExitMontage>>>(this.EnterPerformMontageMap), "EnterPerformMontageMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureData), "CreatureData"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LeavePerformMontageMap") && baseVehiclePerformComponent.LeavePerformMontageMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EEnterExitPerformVehicle_Gender, Dictionary<EEnterExitPerformVehicle_Direction, IVehicleEnterExitMontage>>>(this.LeavePerformMontageMap), "LeavePerformMontageMap"))
+		this.MaxSeatCount = baseVehiclePerformComponent.MaxSeatCount;
+		this.DriverSeat = baseVehiclePerformComponent.DriverSeat;
+		this.CanBeenManipulated = baseVehiclePerformComponent.CanBeenManipulated;
+		this.VehicleType = baseVehiclePerformComponent.VehicleType;
+		if (baseVehiclePerformComponent.Config == null)
+		{
+			this.Config = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LastDriverId"))
+		if (baseVehiclePerformComponent.ConfigInternal == null)
 		{
-			this.LastDriverId = baseVehiclePerformComponent.LastDriverId;
+			this.ConfigInternal = null;
 		}
-		if (base.CanResetComponentProperty("DriverInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConfigInternal), "ConfigInternal"))
 		{
-			if (baseVehiclePerformComponent.DriverInternal == null)
-			{
-				this.DriverInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.DriverInternal), "DriverInternal"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PassengerInfoMap"))
+		if (baseVehiclePerformComponent.VehicleFeatures == null)
 		{
-			if (baseVehiclePerformComponent.PassengerInfoMap == null)
-			{
-				this.PassengerInfoMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, VehiclePassengerInfo>>(this.PassengerInfoMap), "PassengerInfoMap"))
-			{
-				return false;
-			}
+			this.VehicleFeatures = null;
 		}
-		if (base.CanResetComponentProperty("SeatInfoMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EVehicleFeatureFlag>(this.VehicleFeatures), "VehicleFeatures"))
 		{
-			if (baseVehiclePerformComponent.SeatInfoMap == null)
-			{
-				this.SeatInfoMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, VehiclePassengerInfo>>(this.SeatInfoMap), "SeatInfoMap"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsPendingDestroy"))
+		if (baseVehiclePerformComponent.EnterPerformMontageMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EnterPerformMontageMap), "EnterPerformMontageMap"))
 		{
-			this.IsPendingDestroy = baseVehiclePerformComponent.IsPendingDestroy;
+			return false;
 		}
-		if (base.CanResetComponentProperty("TrialAttributeId"))
+		if (baseVehiclePerformComponent.LeavePerformMontageMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LeavePerformMontageMap), "LeavePerformMontageMap"))
 		{
-			this.TrialAttributeId = baseVehiclePerformComponent.TrialAttributeId;
+			return false;
 		}
-		if (base.CanResetComponentProperty("EntityHandle"))
+		this.LastDriverId = baseVehiclePerformComponent.LastDriverId;
+		if (baseVehiclePerformComponent.DriverInternal == null)
 		{
-			if (baseVehiclePerformComponent.EntityHandle == null)
-			{
-				this.EntityHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.EntityHandle), "EntityHandle"))
-			{
-				return false;
-			}
+			this.DriverInternal = null;
 		}
-		if (base.CanResetComponentProperty("TmpVector1"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DriverInternal), "DriverInternal"))
 		{
-			if (baseVehiclePerformComponent.TmpVector1 == null)
-			{
-				this.TmpVector1 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector1), "TmpVector1"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector2"))
+		if (baseVehiclePerformComponent.PassengerInfoMap == null)
 		{
-			if (baseVehiclePerformComponent.TmpVector2 == null)
-			{
-				this.TmpVector2 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector2), "TmpVector2"))
-			{
-				return false;
-			}
+			this.PassengerInfoMap = null;
 		}
-		if (base.CanResetComponentProperty("TmpVector3"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PassengerInfoMap), "PassengerInfoMap"))
 		{
-			if (baseVehiclePerformComponent.TmpVector3 == null)
-			{
-				this.TmpVector3 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector3), "TmpVector3"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector4"))
+		if (baseVehiclePerformComponent.SeatInfoMap == null)
 		{
-			if (baseVehiclePerformComponent.TmpVector4 == null)
-			{
-				this.TmpVector4 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector4), "TmpVector4"))
-			{
-				return false;
-			}
+			this.SeatInfoMap = null;
 		}
-		if (base.CanResetComponentProperty("TmpVector5"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SeatInfoMap), "SeatInfoMap"))
 		{
-			if (baseVehiclePerformComponent.TmpVector5 == null)
-			{
-				this.TmpVector5 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector5), "TmpVector5"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TmpRotator"))
+		this.IsPendingDestroy = baseVehiclePerformComponent.IsPendingDestroy;
+		this.TrialAttributeId = baseVehiclePerformComponent.TrialAttributeId;
+		if (baseVehiclePerformComponent.EntityHandle == null)
 		{
-			if (baseVehiclePerformComponent.TmpRotator == null)
-			{
-				this.TmpRotator = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.TmpRotator), "TmpRotator"))
-			{
-				return false;
-			}
+			this.EntityHandle = null;
 		}
-		if (base.CanResetComponentProperty("TmpQuat1"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EntityHandle), "EntityHandle"))
 		{
-			if (baseVehiclePerformComponent.TmpQuat1 == null)
-			{
-				this.TmpQuat1 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat1), "TmpQuat1"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TmpQuat2"))
+		if (baseVehiclePerformComponent.TmpVector1 == null)
 		{
-			if (baseVehiclePerformComponent.TmpQuat2 == null)
-			{
-				this.TmpQuat2 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat2), "TmpQuat2"))
-			{
-				return false;
-			}
+			this.TmpVector1 = null;
 		}
-		if (base.CanResetComponentProperty("TmpTrans1"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector1), "TmpVector1"))
 		{
-			if (baseVehiclePerformComponent.TmpTrans1 == null)
-			{
-				this.TmpTrans1 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.TmpTrans1), "TmpTrans1"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TmpTrans2"))
+		if (baseVehiclePerformComponent.TmpVector2 == null)
 		{
-			if (baseVehiclePerformComponent.TmpTrans2 == null)
-			{
-				this.TmpTrans2 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.TmpTrans2), "TmpTrans2"))
-			{
-				return false;
-			}
+			this.TmpVector2 = null;
 		}
-		if (base.CanResetComponentProperty("ModifierKey"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector2), "TmpVector2"))
 		{
-			this.ModifierKey = baseVehiclePerformComponent.ModifierKey;
+			return false;
 		}
+		if (baseVehiclePerformComponent.TmpVector3 == null)
+		{
+			this.TmpVector3 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector3), "TmpVector3"))
+		{
+			return false;
+		}
+		if (baseVehiclePerformComponent.TmpVector4 == null)
+		{
+			this.TmpVector4 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector4), "TmpVector4"))
+		{
+			return false;
+		}
+		if (baseVehiclePerformComponent.TmpVector5 == null)
+		{
+			this.TmpVector5 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector5), "TmpVector5"))
+		{
+			return false;
+		}
+		if (baseVehiclePerformComponent.TmpRotator == null)
+		{
+			this.TmpRotator = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator), "TmpRotator"))
+		{
+			return false;
+		}
+		if (baseVehiclePerformComponent.TmpQuat1 == null)
+		{
+			this.TmpQuat1 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat1), "TmpQuat1"))
+		{
+			return false;
+		}
+		if (baseVehiclePerformComponent.TmpQuat2 == null)
+		{
+			this.TmpQuat2 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat2), "TmpQuat2"))
+		{
+			return false;
+		}
+		if (baseVehiclePerformComponent.TmpTrans1 == null)
+		{
+			this.TmpTrans1 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTrans1), "TmpTrans1"))
+		{
+			return false;
+		}
+		if (baseVehiclePerformComponent.TmpTrans2 == null)
+		{
+			this.TmpTrans2 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTrans2), "TmpTrans2"))
+		{
+			return false;
+		}
+		this.ModifierKey = baseVehiclePerformComponent.ModifierKey;
 		return true;
 	}
 
-	// Token: 0x0400DF09 RID: 57097
+	// Token: 0x17002A0C RID: 10764
+	// (get) Token: 0x06019F8B RID: 106379 RVA: 0x00801412 File Offset: 0x007FF612
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A0D RID: 10765
+	// (get) Token: 0x06019F8C RID: 106380 RVA: 0x00801415 File Offset: 0x007FF615
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A0E RID: 10766
+	// (get) Token: 0x06019F8D RID: 106381 RVA: 0x00801418 File Offset: 0x007FF618
+	public override bool NeedPostActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A0F RID: 10767
+	// (get) Token: 0x06019F8E RID: 106382 RVA: 0x0080141B File Offset: 0x007FF61B
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A10 RID: 10768
+	// (get) Token: 0x06019F8F RID: 106383 RVA: 0x0080141E File Offset: 0x007FF61E
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A11 RID: 10769
+	// (get) Token: 0x06019F90 RID: 106384 RVA: 0x00801421 File Offset: 0x007FF621
+	public override bool NeedAfterTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E3AB RID: 58283
 	public const int ALWAYS_SUCCESS_VEHICLE_PREPERFORM_HANDLE = 1;
 
-	// Token: 0x0400DF0A RID: 57098
+	// Token: 0x0400E3AC RID: 58284
 	[Nullable(2)]
 	public CreatureDataComponent CreatureData;
 
-	// Token: 0x0400DF0B RID: 57099
+	// Token: 0x0400E3AD RID: 58285
 	public int MaxSeatCount;
 
-	// Token: 0x0400DF0C RID: 57100
+	// Token: 0x0400E3AE RID: 58286
 	public int DriverSeat = -1;
 
-	// Token: 0x0400DF0D RID: 57101
+	// Token: 0x0400E3AF RID: 58287
 	public bool CanBeenManipulated = true;
 
-	// Token: 0x0400DF0E RID: 57102
+	// Token: 0x0400E3B0 RID: 58288
 	public EVehicleType VehicleType;
 
-	// Token: 0x0400DF0F RID: 57103
+	// Token: 0x0400E3B1 RID: 58289
 	[Nullable(2)]
 	public VehicleConfig Config;
 
-	// Token: 0x0400DF10 RID: 57104
+	// Token: 0x0400E3B2 RID: 58290
 	[Nullable(2)]
 	protected VehicleConfig ConfigInternal;
 
-	// Token: 0x0400DF11 RID: 57105
+	// Token: 0x0400E3B3 RID: 58291
 	public HashSet<EVehicleFeatureFlag> VehicleFeatures = new HashSet<EVehicleFeatureFlag>();
 
-	// Token: 0x0400DF12 RID: 57106
+	// Token: 0x0400E3B4 RID: 58292
 	private readonly Dictionary<EEnterExitPerformVehicle_Gender, Dictionary<EEnterExitPerformVehicle_Direction, IVehicleEnterExitMontage>> EnterPerformMontageMap = new Dictionary<EEnterExitPerformVehicle_Gender, Dictionary<EEnterExitPerformVehicle_Direction, IVehicleEnterExitMontage>>();
 
-	// Token: 0x0400DF13 RID: 57107
+	// Token: 0x0400E3B5 RID: 58293
 	private readonly Dictionary<EEnterExitPerformVehicle_Gender, Dictionary<EEnterExitPerformVehicle_Direction, IVehicleEnterExitMontage>> LeavePerformMontageMap = new Dictionary<EEnterExitPerformVehicle_Gender, Dictionary<EEnterExitPerformVehicle_Direction, IVehicleEnterExitMontage>>();
 
-	// Token: 0x0400DF14 RID: 57108
+	// Token: 0x0400E3B6 RID: 58294
 	private int? LastDriverId;
 
-	// Token: 0x0400DF15 RID: 57109
+	// Token: 0x0400E3B7 RID: 58295
 	[Nullable(2)]
 	protected Entity DriverInternal;
 
-	// Token: 0x0400DF16 RID: 57110
+	// Token: 0x0400E3B8 RID: 58296
 	public Dictionary<int, VehiclePassengerInfo> PassengerInfoMap = new Dictionary<int, VehiclePassengerInfo>();
 
-	// Token: 0x0400DF17 RID: 57111
+	// Token: 0x0400E3B9 RID: 58297
 	public Dictionary<int, VehiclePassengerInfo> SeatInfoMap = new Dictionary<int, VehiclePassengerInfo>();
 
-	// Token: 0x0400DF18 RID: 57112
+	// Token: 0x0400E3BA RID: 58298
 	[StaticVariableRuleIgnore]
 	protected static int PrePerformHandleGenerator = 1;
 
-	// Token: 0x0400DF19 RID: 57113
+	// Token: 0x0400E3BB RID: 58299
 	public bool IsPendingDestroy;
 
-	// Token: 0x0400DF1A RID: 57114
+	// Token: 0x0400E3BC RID: 58300
 	protected int? TrialAttributeId;
 
-	// Token: 0x0400DF1B RID: 57115
+	// Token: 0x0400E3BD RID: 58301
 	[Nullable(2)]
 	protected EntityHandle EntityHandle;
 
-	// Token: 0x0400DF1C RID: 57116
+	// Token: 0x0400E3BE RID: 58302
 	protected global::Vector TmpVector1 = global::Vector.Create();
 
-	// Token: 0x0400DF1D RID: 57117
+	// Token: 0x0400E3BF RID: 58303
 	protected global::Vector TmpVector2 = global::Vector.Create();
 
-	// Token: 0x0400DF1E RID: 57118
+	// Token: 0x0400E3C0 RID: 58304
 	protected global::Vector TmpVector3 = global::Vector.Create();
 
-	// Token: 0x0400DF1F RID: 57119
+	// Token: 0x0400E3C1 RID: 58305
 	protected global::Vector TmpVector4 = global::Vector.Create();
 
-	// Token: 0x0400DF20 RID: 57120
+	// Token: 0x0400E3C2 RID: 58306
 	protected global::Vector TmpVector5 = global::Vector.Create();
 
-	// Token: 0x0400DF21 RID: 57121
+	// Token: 0x0400E3C3 RID: 58307
 	protected global::Rotator TmpRotator = global::Rotator.Create();
 
-	// Token: 0x0400DF22 RID: 57122
+	// Token: 0x0400E3C4 RID: 58308
 	protected Quat TmpQuat1 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400DF23 RID: 57123
+	// Token: 0x0400E3C5 RID: 58309
 	protected Quat TmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400DF24 RID: 57124
+	// Token: 0x0400E3C6 RID: 58310
 	protected global::Transform TmpTrans1 = global::Transform.Create();
 
-	// Token: 0x0400DF25 RID: 57125
+	// Token: 0x0400E3C7 RID: 58311
 	protected global::Transform TmpTrans2 = global::Transform.Create();
 
-	// Token: 0x0400DF26 RID: 57126
+	// Token: 0x0400E3C8 RID: 58312
 	protected string ModifierKey = "TrialAttributeModifier";
 }

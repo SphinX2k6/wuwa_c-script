@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200035B RID: 859
+	// Token: 0x02000370 RID: 880
 	public class ConfigFunctionMenuAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001427 RID: 5159 RVA: 0x000CB6A4 File Offset: 0x000C98A4
+		// Token: 0x060014A5 RID: 5285 RVA: 0x000D1BB0 File Offset: 0x000CFDB0
 		static ConfigFunctionMenuAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFunctionMenuAll.CreateStaticDefaultValue), new Action(ConfigFunctionMenuAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001428 RID: 5160 RVA: 0x000CB6C4 File Offset: 0x000C98C4
+		// Token: 0x060014A6 RID: 5286 RVA: 0x000D1BD0 File Offset: 0x000CFDD0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFunctionMenuAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001429 RID: 5161 RVA: 0x000CB743 File Offset: 0x000C9943
+		// Token: 0x060014A7 RID: 5287 RVA: 0x000D1C4F File Offset: 0x000CFE4F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFunctionMenuAll.LogPair = null;
 			ConfigFunctionMenuAll.HandleId = 0;
 		}
 
-		// Token: 0x0600142A RID: 5162 RVA: 0x000CB751 File Offset: 0x000C9951
+		// Token: 0x060014A8 RID: 5288 RVA: 0x000D1C5D File Offset: 0x000CFE5D
 		public static void Init()
 		{
 			ConfigFunctionMenuAll.HandleId = ConfigCommon.InitDataStatement(ConfigFunctionMenuAll.HandleId, "db_function.db", "select BinData from `FunctionMenu`");
 		}
 
-		// Token: 0x0600142B RID: 5163 RVA: 0x000CB76C File Offset: 0x000C996C
+		// Token: 0x060014A9 RID: 5289 RVA: 0x000D1C78 File Offset: 0x000CFE78
 		[NullableContext(2)]
 		public static IReadOnlyList<FunctionMenu> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001761 RID: 5985
+		// Token: 0x040017F4 RID: 6132
 		private const string DB = "db_function.db";
 
-		// Token: 0x04001762 RID: 5986
+		// Token: 0x040017F5 RID: 6133
 		private const string FILE = "g.功能开启.xlsx";
 
-		// Token: 0x04001763 RID: 5987
+		// Token: 0x040017F6 RID: 6134
 		private const string TABLE = "FunctionMenu";
 
-		// Token: 0x04001764 RID: 5988
+		// Token: 0x040017F7 RID: 6135
 		private const string COMMAND = "select BinData from `FunctionMenu`";
 
-		// Token: 0x04001765 RID: 5989
+		// Token: 0x040017F8 RID: 6136
 		private const string KEY_PREFIX = "FunctionMenuAll";
 
-		// Token: 0x04001766 RID: 5990
+		// Token: 0x040017F9 RID: 6137
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001767 RID: 5991
+		// Token: 0x040017FA RID: 6138
 		private static int HandleId;
 	}
 }

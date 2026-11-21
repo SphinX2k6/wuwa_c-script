@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002146 RID: 8518
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023A7 RID: 9127
 	public class RemoveBuffFromPlayer : ActionParams
 	{
-		// Token: 0x0600BB86 RID: 48006 RVA: 0x001B0ED8 File Offset: 0x001AF0D8
+		// Token: 0x0600C714 RID: 50964 RVA: 0x001C808C File Offset: 0x001C628C
 		private RemoveBuffFromPlayer_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BB87 RID: 48007 RVA: 0x001B0F10 File Offset: 0x001AF110
+		// Token: 0x0600C715 RID: 50965 RVA: 0x001C80C4 File Offset: 0x001C62C4
 		public static RemoveBuffFromPlayer Create([Nullable(2)] RemoveBuffFromPlayer instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB88 RID: 48008 RVA: 0x001B0F23 File Offset: 0x001AF123
+		// Token: 0x0600C716 RID: 50966 RVA: 0x001C80D7 File Offset: 0x001C62D7
 		public static RemoveBuffFromPlayer CreateFromSetValue([Nullable(2)] RemoveBuffFromPlayer_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB89 RID: 48009 RVA: 0x001B0F36 File Offset: 0x001AF136
+		// Token: 0x0600C717 RID: 50967 RVA: 0x001C80EA File Offset: 0x001C62EA
 		public RemoveBuffFromPlayer_SetValue ToSetValue()
 		{
 			return new RemoveBuffFromPlayer_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003937 RID: 14647
-		// (get) Token: 0x0600BB8A RID: 48010 RVA: 0x001B0F49 File Offset: 0x001AF149
-		// (set) Token: 0x0600BB8B RID: 48011 RVA: 0x001B0F70 File Offset: 0x001AF170
+		// Token: 0x17003C24 RID: 15396
+		// (get) Token: 0x0600C718 RID: 50968 RVA: 0x001C80FD File Offset: 0x001C62FD
+		// (set) Token: 0x0600C719 RID: 50969 RVA: 0x001C8124 File Offset: 0x001C6324
 		public virtual List<long> BuffIds
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400701F RID: 28703
+		// Token: 0x04007654 RID: 30292
 		[Nullable(2)]
 		protected new RemoveBuffFromPlayer FbInstance;
 
-		// Token: 0x04007020 RID: 28704
+		// Token: 0x04007655 RID: 30293
 		[Nullable(2)]
 		protected RemoveBuffFromPlayer_SetValue PocoInterface;
 	}

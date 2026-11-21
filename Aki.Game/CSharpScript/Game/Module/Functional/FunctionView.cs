@@ -19,18 +19,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Functional
 {
-	// Token: 0x02005A21 RID: 23073
+	// Token: 0x020049FD RID: 18941
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FunctionView : UiViewBase
 	{
-		// Token: 0x0603A84A RID: 239690 RVA: 0x00DECB2C File Offset: 0x00DEAD2C
+		// Token: 0x0602F793 RID: 194451 RVA: 0x00D3D0BC File Offset: 0x00D3B2BC
 		[NullableContext(1)]
 		public FunctionView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A84B RID: 239691 RVA: 0x00DECB4C File Offset: 0x00DEAD4C
+		// Token: 0x0602F794 RID: 194452 RVA: 0x00D3D0DC File Offset: 0x00D3B2DC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 40;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Functional
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A84C RID: 239692 RVA: 0x00DED338 File Offset: 0x00DEB538
+		// Token: 0x0602F795 RID: 194453 RVA: 0x00D3D8C8 File Offset: 0x00D3BAC8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FunctionView.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.Functional
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A84D RID: 239693 RVA: 0x00DED37B File Offset: 0x00DEB57B
+		// Token: 0x0602F796 RID: 194454 RVA: 0x00D3D90B File Offset: 0x00D3BB0B
 		private void RefreshPlayerTitle()
 		{
 			PlayerTitleItem titleItem = this.TitleItem;
@@ -181,19 +181,19 @@ namespace CSharpScript.Game.Module.Functional
 			titleItem.Refresh(new int?(PersonalModel.Instance.GetDressedPlayerTitleId()), new int?(PersonalModel.Instance.GetDressedPlayerTitleLevel()), new int?(PersonalModel.Instance.GetSex()));
 		}
 
-		// Token: 0x0603A84E RID: 239694 RVA: 0x00DED3BA File Offset: 0x00DEB5BA
+		// Token: 0x0602F797 RID: 194455 RVA: 0x00D3D94A File Offset: 0x00D3BB4A
 		private void BackClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603A84F RID: 239695 RVA: 0x00DED3C3 File Offset: 0x00DEB5C3
+		// Token: 0x0602F798 RID: 194456 RVA: 0x00D3D953 File Offset: 0x00D3BB53
 		private void EndClick()
 		{
 			ConfirmBoxController.Instance.ShowReturnLoginConfirmBox();
 		}
 
-		// Token: 0x0603A850 RID: 239696 RVA: 0x00DED3D0 File Offset: 0x00DEB5D0
+		// Token: 0x0602F799 RID: 194457 RVA: 0x00D3D960 File Offset: 0x00D3BB60
 		private void ReportBottomButtonClick(EFunctionBottomButtonType buttonType)
 		{
 			OnClickFunctionItemLogEvent onClickFunctionItemLogEvent = new OnClickFunctionItemLogEvent();
@@ -202,55 +202,55 @@ namespace CSharpScript.Game.Module.Functional
 			LogReportController.Instance.LogReport(onClickFunctionItemLogEvent);
 		}
 
-		// Token: 0x0603A851 RID: 239697 RVA: 0x00DED3FC File Offset: 0x00DEB5FC
+		// Token: 0x0602F79A RID: 194458 RVA: 0x00D3D98C File Offset: 0x00D3BB8C
 		private void NoticeBtnClick()
 		{
 			this.ReportBottomButtonClick(EFunctionBottomButtonType.Notice);
 			KuroSdkController.Instance.OpenNotice(EOpenNoticeStage.Normal);
 		}
 
-		// Token: 0x0603A852 RID: 239698 RVA: 0x00DED410 File Offset: 0x00DEB610
+		// Token: 0x0602F79B RID: 194459 RVA: 0x00D3D9A0 File Offset: 0x00D3BBA0
 		private void MailClick()
 		{
 			this.ReportBottomButtonClick(EFunctionBottomButtonType.Mail);
 			FunctionController.Instance.OpenFunctionRelateView(EFunctionType.Mail);
 		}
 
-		// Token: 0x0603A853 RID: 239699 RVA: 0x00DED428 File Offset: 0x00DEB628
+		// Token: 0x0602F79C RID: 194460 RVA: 0x00D3D9B8 File Offset: 0x00D3BBB8
 		private void HelpClick()
 		{
 			WorldLevelController.Instance.OpenWorldLevelInfoView();
 		}
 
-		// Token: 0x0603A854 RID: 239700 RVA: 0x00DED434 File Offset: 0x00DEB634
+		// Token: 0x0602F79D RID: 194461 RVA: 0x00D3D9C4 File Offset: 0x00D3BBC4
 		private void TimeClick()
 		{
 			this.ReportBottomButtonClick(EFunctionBottomButtonType.Time);
 			UiManager.Instance.OpenView(EUiViewName.TimeOfDaySecondView, null, null);
 		}
 
-		// Token: 0x0603A855 RID: 239701 RVA: 0x00DED44E File Offset: 0x00DEB64E
+		// Token: 0x0602F79E RID: 194462 RVA: 0x00D3D9DE File Offset: 0x00D3BBDE
 		private void SetUpClick()
 		{
 			this.ReportBottomButtonClick(EFunctionBottomButtonType.Setting);
 			FunctionController.Instance.OpenFunctionRelateView(EFunctionType.Menu);
 		}
 
-		// Token: 0x0603A856 RID: 239702 RVA: 0x00DED468 File Offset: 0x00DEB668
+		// Token: 0x0602F79F RID: 194463 RVA: 0x00D3D9F8 File Offset: 0x00D3BBF8
 		private void CopyUidClick()
 		{
 			GenericPromptController.Instance.ShowPromptByCode("CopiedMyUid", Array.Empty<object>());
 			ULGUIBPLibrary.ClipBoardCopy(PlayerInfoModel.Instance.GetId().ToString());
 		}
 
-		// Token: 0x0603A857 RID: 239703 RVA: 0x00DED4A6 File Offset: 0x00DEB6A6
+		// Token: 0x0602F7A0 RID: 194464 RVA: 0x00D3DA36 File Offset: 0x00D3BC36
 		private void PhotoBtnClick()
 		{
 			this.ReportBottomButtonClick(EFunctionBottomButtonType.Photograph);
 			FunctionController.Instance.OpenFunctionRelateView(EFunctionType.Photograph);
 		}
 
-		// Token: 0x0603A858 RID: 239704 RVA: 0x00DED4BE File Offset: 0x00DEB6BE
+		// Token: 0x0602F7A1 RID: 194465 RVA: 0x00D3DA4E File Offset: 0x00D3BC4E
 		private void HeadIconButtonClick()
 		{
 			if (FunctionModel.Instance.IsOpen(10060))
@@ -259,31 +259,31 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A859 RID: 239705 RVA: 0x00DED4EB File Offset: 0x00DEB6EB
+		// Token: 0x0602F7A2 RID: 194466 RVA: 0x00D3DA7B File Offset: 0x00D3BC7B
 		private void MoreButtonClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PersonalOptionView, null, null);
 		}
 
-		// Token: 0x0603A85A RID: 239706 RVA: 0x00DED4FE File Offset: 0x00DEB6FE
+		// Token: 0x0602F7A3 RID: 194467 RVA: 0x00D3DA8E File Offset: 0x00D3BC8E
 		private void SignButtonClick()
 		{
 			CommonInputViewController.Instance.OpenPersonalSignInputView();
 		}
 
-		// Token: 0x0603A85B RID: 239707 RVA: 0x00DED50A File Offset: 0x00DEB70A
+		// Token: 0x0602F7A4 RID: 194468 RVA: 0x00D3DA9A File Offset: 0x00D3BC9A
 		private void NameButtonClick()
 		{
 			CommonInputViewController.Instance.OpenSetRoleNameInputView();
 		}
 
-		// Token: 0x0603A85C RID: 239708 RVA: 0x00DED516 File Offset: 0x00DEB716
+		// Token: 0x0602F7A5 RID: 194469 RVA: 0x00D3DAA6 File Offset: 0x00D3BCA6
 		private void OpenPlayerTitleEditView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PersonalEditView, EPersonalEditDefine.PlayerTitle, null);
 		}
 
-		// Token: 0x0603A85D RID: 239709 RVA: 0x00DED530 File Offset: 0x00DEB730
+		// Token: 0x0602F7A6 RID: 194470 RVA: 0x00D3DAC0 File Offset: 0x00D3BCC0
 		private void MoveToLeft()
 		{
 			if (this.NoCircleExhibitionView.MovingState())
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.Module.Functional
 			this.NoCircleExhibitionView.AttachToIndex(showItemIndex, false);
 		}
 
-		// Token: 0x0603A85E RID: 239710 RVA: 0x00DED578 File Offset: 0x00DEB778
+		// Token: 0x0602F7A7 RID: 194471 RVA: 0x00D3DB08 File Offset: 0x00D3BD08
 		private void MoveToRight()
 		{
 			if (this.NoCircleExhibitionView.MovingState())
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.Functional
 			this.NoCircleExhibitionView.AttachToIndex(showItemIndex, false);
 		}
 
-		// Token: 0x0603A85F RID: 239711 RVA: 0x00DED5C8 File Offset: 0x00DEB7C8
+		// Token: 0x0602F7A8 RID: 194472 RVA: 0x00D3DB58 File Offset: 0x00D3BD58
 		private void OnClickOnlineButton()
 		{
 			if (!GameModeModel.Instance.IsMulti)
@@ -337,14 +337,14 @@ namespace CSharpScript.Game.Module.Functional
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603A860 RID: 239712 RVA: 0x00DED626 File Offset: 0x00DEB826
+		// Token: 0x0602F7A9 RID: 194473 RVA: 0x00D3DBB6 File Offset: 0x00D3BDB6
 		private void OnClickPreDownload()
 		{
 			this.ReportBottomButtonClick(EFunctionBottomButtonType.PreDownload);
 			PreDownloadController.Instance.OnPreDownloadBtnClick(false);
 		}
 
-		// Token: 0x0603A861 RID: 239713 RVA: 0x00DED63C File Offset: 0x00DEB83C
+		// Token: 0x0602F7AA RID: 194474 RVA: 0x00D3DBCC File Offset: 0x00D3BDCC
 		protected override void OnStart()
 		{
 			this.RedTipsLeftBtn = base.GetButton(17).RootUIComp;
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A862 RID: 239714 RVA: 0x00DED86C File Offset: 0x00DEBA6C
+		// Token: 0x0602F7AB RID: 194475 RVA: 0x00D3DDFC File Offset: 0x00D3BFFC
 		private void ReSizeDragContentSize()
 		{
 			UUIGridLayout gridLayout = base.GetGridLayout(30);
@@ -416,14 +416,14 @@ namespace CSharpScript.Game.Module.Functional
 			item.SetWidth(num2);
 		}
 
-		// Token: 0x0603A863 RID: 239715 RVA: 0x00DED8DD File Offset: 0x00DEBADD
+		// Token: 0x0602F7AC RID: 194476 RVA: 0x00D3DE6D File Offset: 0x00D3C06D
 		private void HideRedTipsBtn()
 		{
 			this.RedTipsRightBtn.SetUIActive(false);
 			this.RedTipsLeftBtn.SetUIActive(false);
 		}
 
-		// Token: 0x0603A864 RID: 239716 RVA: 0x00DED8F8 File Offset: 0x00DEBAF8
+		// Token: 0x0602F7AD RID: 194477 RVA: 0x00D3DE88 File Offset: 0x00D3C088
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.CurWorldLevelChange, new Action(this.OnCurWorldLevelChange));
@@ -439,7 +439,7 @@ namespace CSharpScript.Game.Module.Functional
 			EventSystem.Instance.Emit(EEventName.OnFunctionViewShow);
 		}
 
-		// Token: 0x0603A865 RID: 239717 RVA: 0x00DEDA30 File Offset: 0x00DEBC30
+		// Token: 0x0602F7AE RID: 194478 RVA: 0x00D3DFC0 File Offset: 0x00D3C1C0
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.CurWorldLevelChange, new Action(this.OnCurWorldLevelChange));
@@ -454,19 +454,19 @@ namespace CSharpScript.Game.Module.Functional
 			EventSystem.Instance.Remove(EEventName.OnPreDownloadAvailableUpdate, new Action(this.OnPreDownloadUpdate));
 		}
 
-		// Token: 0x0603A866 RID: 239718 RVA: 0x00DEDB55 File Offset: 0x00DEBD55
+		// Token: 0x0602F7AF RID: 194479 RVA: 0x00D3E0E5 File Offset: 0x00D3C2E5
 		private void OnCurWorldLevelChange()
 		{
 			this.RefreshWorldLevel();
 		}
 
-		// Token: 0x0603A867 RID: 239719 RVA: 0x00DEDB5D File Offset: 0x00DEBD5D
+		// Token: 0x0602F7B0 RID: 194480 RVA: 0x00D3E0ED File Offset: 0x00D3C2ED
 		private void OnSignChange()
 		{
 			this.RefreshSign();
 		}
 
-		// Token: 0x0603A868 RID: 239720 RVA: 0x00DEDB68 File Offset: 0x00DEBD68
+		// Token: 0x0602F7B1 RID: 194481 RVA: 0x00D3E0F8 File Offset: 0x00D3C2F8
 		private void OnNameChange()
 		{
 			string playerName = FunctionModel.Instance.GetPlayerName();
@@ -476,32 +476,32 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A869 RID: 239721 RVA: 0x00DEDB91 File Offset: 0x00DEBD91
+		// Token: 0x0602F7B2 RID: 194482 RVA: 0x00D3E121 File Offset: 0x00D3C321
 		private void OnHeadIconChange(int headPhotoId)
 		{
 			this.RefreshHeadIcon();
 		}
 
-		// Token: 0x0603A86A RID: 239722 RVA: 0x00DEDB99 File Offset: 0x00DEBD99
+		// Token: 0x0602F7B3 RID: 194483 RVA: 0x00D3E129 File Offset: 0x00D3C329
 		private void OnCardChange()
 		{
 			this.RefreshCard();
 		}
 
-		// Token: 0x0603A86B RID: 239723 RVA: 0x00DEDBA1 File Offset: 0x00DEBDA1
+		// Token: 0x0602F7B4 RID: 194484 RVA: 0x00D3E131 File Offset: 0x00D3C331
 		private void OnBirthChange()
 		{
 			this.RefreshBirthDay();
 		}
 
-		// Token: 0x0603A86C RID: 239724 RVA: 0x00DEDBA9 File Offset: 0x00DEBDA9
+		// Token: 0x0602F7B5 RID: 194485 RVA: 0x00D3E139 File Offset: 0x00D3C339
 		private void OnFunctionGridSelected(int index)
 		{
 			this.RefreshRedDot(index);
 			this.TabLayout.SetToggleSelectByIndex(index);
 		}
 
-		// Token: 0x0603A86D RID: 239725 RVA: 0x00DEDBC0 File Offset: 0x00DEBDC0
+		// Token: 0x0602F7B6 RID: 194486 RVA: 0x00D3E150 File Offset: 0x00D3C350
 		private void RefreshRedDot(int index)
 		{
 			this.RedTipsLeftBtn.SetUIActive(index > 0);
@@ -510,7 +510,7 @@ namespace CSharpScript.Game.Module.Functional
 			this.RedTipsRight.SetUIActive(this.IsRedRightBtnActive(index));
 		}
 
-		// Token: 0x0603A86E RID: 239726 RVA: 0x00DEDC1C File Offset: 0x00DEBE1C
+		// Token: 0x0602F7B7 RID: 194487 RVA: 0x00D3E1AC File Offset: 0x00D3C3AC
 		private void RefreshEndButtonShowState()
 		{
 			bool uiactive = !CloudGameManager.Instance.IsCloudGame && !Info.Instance.IsPs5Platform() && (!Info.Instance.IsXboxPlatform() || Info.Instance.IsWinGDKPlatform());
@@ -527,7 +527,7 @@ namespace CSharpScript.Game.Module.Functional
 			uuiitem.SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603A86F RID: 239727 RVA: 0x00DEDC84 File Offset: 0x00DEBE84
+		// Token: 0x0602F7B8 RID: 194488 RVA: 0x00D3E214 File Offset: 0x00D3C414
 		private bool IsRedLeftBtnActive(int index)
 		{
 			List<int> list = new List<int>();
@@ -550,7 +550,7 @@ namespace CSharpScript.Game.Module.Functional
 			return false;
 		}
 
-		// Token: 0x0603A870 RID: 239728 RVA: 0x00DEDD34 File Offset: 0x00DEBF34
+		// Token: 0x0602F7B9 RID: 194489 RVA: 0x00D3E2C4 File Offset: 0x00D3C4C4
 		private bool IsRedRightBtnActive(int index)
 		{
 			List<int> list = new List<int>();
@@ -576,7 +576,7 @@ namespace CSharpScript.Game.Module.Functional
 			return false;
 		}
 
-		// Token: 0x0603A871 RID: 239729 RVA: 0x00DEDDF0 File Offset: 0x00DEBFF0
+		// Token: 0x0602F7BA RID: 194490 RVA: 0x00D3E380 File Offset: 0x00D3C580
 		protected override void OnBeforeShow()
 		{
 			this.SetPlayerInfo();
@@ -587,20 +587,20 @@ namespace CSharpScript.Game.Module.Functional
 			GameSettingsDeviceRender.Instance.TemporaryDisableFrameGeneration("FunctionView");
 		}
 
-		// Token: 0x0603A872 RID: 239730 RVA: 0x00DEDE1F File Offset: 0x00DEC01F
+		// Token: 0x0602F7BB RID: 194491 RVA: 0x00D3E3AF File Offset: 0x00D3C5AF
 		protected override void OnAfterShow()
 		{
 			this.PrintCalculateData();
 			this.TryShowParallelPackageUpdateBoxView();
 		}
 
-		// Token: 0x0603A873 RID: 239731 RVA: 0x00DEDE2D File Offset: 0x00DEC02D
+		// Token: 0x0602F7BC RID: 194492 RVA: 0x00D3E3BD File Offset: 0x00D3C5BD
 		protected override void OnAfterHide()
 		{
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x0603A874 RID: 239732 RVA: 0x00DEDE38 File Offset: 0x00DEC038
+		// Token: 0x0602F7BD RID: 194493 RVA: 0x00D3E3C8 File Offset: 0x00D3C5C8
 		protected override void OnBeforeDestroy()
 		{
 			foreach (FunctionAttachItemGrid child in this.NoCircleExhibitionView.GetItems())
@@ -618,7 +618,7 @@ namespace CSharpScript.Game.Module.Functional
 			GameSettingsDeviceRender.Instance.CancelTemporaryDisableFrameGeneration("FunctionView");
 		}
 
-		// Token: 0x0603A875 RID: 239733 RVA: 0x00DEDF00 File Offset: 0x00DEC100
+		// Token: 0x0602F7BE RID: 194494 RVA: 0x00D3E490 File Offset: 0x00D3C690
 		private void BindRedDot()
 		{
 			this.BottomMailBtn.BindRedDot();
@@ -629,7 +629,7 @@ namespace CSharpScript.Game.Module.Functional
 			RedDotController.Instance.BindRedDot(ERedDotName.PersonalizedInfo, base.GetItem(34), null, 0);
 		}
 
-		// Token: 0x0603A876 RID: 239734 RVA: 0x00DEDF60 File Offset: 0x00DEC160
+		// Token: 0x0602F7BF RID: 194495 RVA: 0x00D3E4F0 File Offset: 0x00D3C6F0
 		private void UnBindRedDot()
 		{
 			this.BottomMailBtn.UnBindRedDot();
@@ -640,7 +640,7 @@ namespace CSharpScript.Game.Module.Functional
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.PersonalizedInfo, base.GetItem(34), 0);
 		}
 
-		// Token: 0x0603A877 RID: 239735 RVA: 0x00DEDFBC File Offset: 0x00DEC1BC
+		// Token: 0x0602F7C0 RID: 194496 RVA: 0x00D3E54C File Offset: 0x00D3C74C
 		private void SetPlayerInfo()
 		{
 			this.RefreshPlayerName();
@@ -653,14 +653,14 @@ namespace CSharpScript.Game.Module.Functional
 			this.RefreshPlayerTitle();
 		}
 
-		// Token: 0x0603A878 RID: 239736 RVA: 0x00DEDFF0 File Offset: 0x00DEC1F0
+		// Token: 0x0602F7C1 RID: 194497 RVA: 0x00D3E580 File Offset: 0x00D3C780
 		private void RefreshPlayerName()
 		{
 			string playerName = FunctionModel.Instance.GetPlayerName();
 			base.GetText(0).SetText(playerName, true);
 		}
 
-		// Token: 0x0603A879 RID: 239737 RVA: 0x00DEE018 File Offset: 0x00DEC218
+		// Token: 0x0602F7C2 RID: 194498 RVA: 0x00D3E5A8 File Offset: 0x00D3C7A8
 		private void RefreshPlayerLevelAndExp()
 		{
 			int? playerLevel = FunctionModel.Instance.GetPlayerLevel();
@@ -693,13 +693,13 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A87A RID: 239738 RVA: 0x00DEE124 File Offset: 0x00DEC324
+		// Token: 0x0602F7C3 RID: 194499 RVA: 0x00D3E6B4 File Offset: 0x00D3C8B4
 		private void RefreshWorldLevel()
 		{
 			LguiUtil.Instance.SetLocalText(base.GetText(2), "WorldLevelNum", new <>z__ReadOnlySingleElementList<object>(WorldLevelModel.Instance.CurWorldLevel));
 		}
 
-		// Token: 0x0603A87B RID: 239739 RVA: 0x00DEE150 File Offset: 0x00DEC350
+		// Token: 0x0602F7C4 RID: 194500 RVA: 0x00D3E6E0 File Offset: 0x00D3C8E0
 		private void RefreshHeadIcon()
 		{
 			int? numberPropById = PlayerInfoModel.Instance.GetNumberPropById(EPlayerInfoNumber.HeadPhoto);
@@ -722,7 +722,7 @@ namespace CSharpScript.Game.Module.Functional
 			base.GetItem(35).SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603A87C RID: 239740 RVA: 0x00DEE1E4 File Offset: 0x00DEC3E4
+		// Token: 0x0602F7C5 RID: 194501 RVA: 0x00D3E774 File Offset: 0x00D3C974
 		private void RefreshCard()
 		{
 			int curCardId = PersonalModel.Instance.GetCurCardId();
@@ -733,7 +733,7 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A87D RID: 239741 RVA: 0x00DEE234 File Offset: 0x00DEC434
+		// Token: 0x0602F7C6 RID: 194502 RVA: 0x00D3E7C4 File Offset: 0x00D3C9C4
 		private void RefreshSign()
 		{
 			string signature = PersonalModel.Instance.GetSignature();
@@ -746,7 +746,7 @@ namespace CSharpScript.Game.Module.Functional
 			text.SetText(signature, true);
 		}
 
-		// Token: 0x0603A87E RID: 239742 RVA: 0x00DEE27C File Offset: 0x00DEC47C
+		// Token: 0x0602F7C7 RID: 194503 RVA: 0x00D3E80C File Offset: 0x00D3CA0C
 		private void RefreshBirthDay()
 		{
 			int birthday = PersonalModel.Instance.GetBirthday();
@@ -771,7 +771,7 @@ namespace CSharpScript.Game.Module.Functional
 			}));
 		}
 
-		// Token: 0x0603A87F RID: 239743 RVA: 0x00DEE328 File Offset: 0x00DEC528
+		// Token: 0x0602F7C8 RID: 194504 RVA: 0x00D3E8B8 File Offset: 0x00D3CAB8
 		private void SetPanelTabItemStretchRight(float offsetValue)
 		{
 			UUIItem item = base.GetItem(31);
@@ -779,7 +779,7 @@ namespace CSharpScript.Game.Module.Functional
 			item.SetStretchRight(stretchRight + offsetValue);
 		}
 
-		// Token: 0x0603A880 RID: 239744 RVA: 0x00DEE34C File Offset: 0x00DEC54C
+		// Token: 0x0602F7C9 RID: 194505 RVA: 0x00D3E8DC File Offset: 0x00D3CADC
 		private void RefreshFunctionGrid()
 		{
 			this.CalculateData = this.CalculateGridNum();
@@ -812,7 +812,7 @@ namespace CSharpScript.Game.Module.Functional
 			this.NoCircleExhibitionView.ReloadView(count, this.DataList.ToArray(), 0);
 		}
 
-		// Token: 0x0603A881 RID: 239745 RVA: 0x00DEE454 File Offset: 0x00DEC654
+		// Token: 0x0602F7CA RID: 194506 RVA: 0x00D3E9E4 File Offset: 0x00D3CBE4
 		[NullableContext(1)]
 		private FunctionAttachItemGrid InitFunctionGrid(AActor actor, int index, int showNum)
 		{
@@ -822,7 +822,7 @@ namespace CSharpScript.Game.Module.Functional
 			return functionAttachItemGrid;
 		}
 
-		// Token: 0x0603A882 RID: 239746 RVA: 0x00DEE480 File Offset: 0x00DEC680
+		// Token: 0x0602F7CB RID: 194507 RVA: 0x00D3EA10 File Offset: 0x00D3CC10
 		private int GetTargetIndex(int functionId)
 		{
 			List<int[]> dataList = this.DataList;
@@ -847,7 +847,7 @@ namespace CSharpScript.Game.Module.Functional
 			return result;
 		}
 
-		// Token: 0x0603A883 RID: 239747 RVA: 0x00DEE4EC File Offset: 0x00DEC6EC
+		// Token: 0x0602F7CC RID: 194508 RVA: 0x00D3EA7C File Offset: 0x00D3CC7C
 		private void RefreshOnlineButton()
 		{
 			UUIButtonComponent button = base.GetButton(32);
@@ -878,7 +878,7 @@ namespace CSharpScript.Game.Module.Functional
 			this.RefreshPlayerPingItem(ping);
 		}
 
-		// Token: 0x0603A884 RID: 239748 RVA: 0x00DEE5A8 File Offset: 0x00DEC7A8
+		// Token: 0x0602F7CD RID: 194509 RVA: 0x00D3EB38 File Offset: 0x00D3CD38
 		private void RefreshPlayerPingItem(ENetPingState? ping)
 		{
 			UUISprite sprite = base.GetSprite(33);
@@ -910,7 +910,7 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A885 RID: 239749 RVA: 0x00DEE694 File Offset: 0x00DEC894
+		// Token: 0x0602F7CE RID: 194510 RVA: 0x00D3EC24 File Offset: 0x00D3CE24
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -971,7 +971,7 @@ namespace CSharpScript.Game.Module.Functional
 			};
 		}
 
-		// Token: 0x0603A886 RID: 239750 RVA: 0x00DEE79C File Offset: 0x00DEC99C
+		// Token: 0x0602F7CF RID: 194511 RVA: 0x00D3ED2C File Offset: 0x00D3CF2C
 		private void RefreshOtherButton()
 		{
 			base.GetButton(8).SetSelfInteractive(FunctionModel.Instance.IsOpen(10020));
@@ -993,13 +993,13 @@ namespace CSharpScript.Game.Module.Functional
 			uuiitem.SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603A887 RID: 239751 RVA: 0x00DEE87D File Offset: 0x00DECA7D
+		// Token: 0x0602F7D0 RID: 194512 RVA: 0x00D3EE0D File Offset: 0x00D3D00D
 		private void TryShowParallelPackageUpdateBoxView()
 		{
 			ParallelPackageController.Instance.TryShowParallelPackageUpdateConfirmBox(ParallelPackageDownloadBoxShowReason.Auto);
 		}
 
-		// Token: 0x0603A888 RID: 239752 RVA: 0x00DEE88C File Offset: 0x00DECA8C
+		// Token: 0x0602F7D1 RID: 194513 RVA: 0x00D3EE1C File Offset: 0x00D3D01C
 		private unsafe void PrintCalculateData()
 		{
 			Log instance = Log.Instance;
@@ -1021,7 +1021,7 @@ namespace CSharpScript.Game.Module.Functional
 			instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
 		}
 
-		// Token: 0x0603A889 RID: 239753 RVA: 0x00DEE978 File Offset: 0x00DECB78
+		// Token: 0x0602F7D2 RID: 194514 RVA: 0x00D3EF08 File Offset: 0x00D3D108
 		[NullableContext(1)]
 		private ICalculateData CalculateGridNum()
 		{
@@ -1049,16 +1049,16 @@ namespace CSharpScript.Game.Module.Functional
 			};
 		}
 
-		// Token: 0x0603A88A RID: 239754 RVA: 0x00DEEAC3 File Offset: 0x00DECCC3
+		// Token: 0x0602F7D3 RID: 194515 RVA: 0x00D3F053 File Offset: 0x00D3D253
 		private void ResDownLoadStateRefresh(EVideoDownloadStatus state)
 		{
 			this.RefreshResDownLoadTopPanelState();
 		}
 
-		// Token: 0x0603A88B RID: 239755 RVA: 0x00DEEACC File Offset: 0x00DECCCC
+		// Token: 0x0602F7D4 RID: 194516 RVA: 0x00D3F05C File Offset: 0x00D3D25C
 		private void RefreshResDownLoadTopPanelState()
 		{
-			if (!Info.Instance.IsPcPlatform() && SubPackageDownLoadModel.Instance.NeedShowBattleViewButton())
+			if (SubPackageDownLoadModel.Instance.NeedShowBattleViewButton())
 			{
 				FunctionResDownLoadItem bottomDownloadPanel = this.BottomDownloadPanel;
 				if (bottomDownloadPanel != null)
@@ -1090,7 +1090,7 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A88C RID: 239756 RVA: 0x00DEEB38 File Offset: 0x00DECD38
+		// Token: 0x0602F7D5 RID: 194517 RVA: 0x00D3F0BC File Offset: 0x00D3D2BC
 		private void OnPreDownloadUpdate()
 		{
 			bool uiactive = PreDownloadModel.Instance.IsPreDownloadAvailable() || PreDownloadModel.Instance.IsComplete();
@@ -1107,7 +1107,7 @@ namespace CSharpScript.Game.Module.Functional
 			uuiitem.SetUIActive(uiactive);
 		}
 
-		// Token: 0x0401E7A7 RID: 124839
+		// Token: 0x0401924E RID: 102990
 		[Nullable(new byte[]
 		{
 			2,
@@ -1116,176 +1116,176 @@ namespace CSharpScript.Game.Module.Functional
 		})]
 		private NoCircleAttachView<int[], FunctionAttachItemGrid> NoCircleExhibitionView;
 
-		// Token: 0x0401E7A8 RID: 124840
+		// Token: 0x0401924F RID: 102991
 		private FunctionTabLayout TabLayout;
 
-		// Token: 0x0401E7A9 RID: 124841
+		// Token: 0x04019250 RID: 102992
 		private UUIItem RedTipsLeftBtn;
 
-		// Token: 0x0401E7AA RID: 124842
+		// Token: 0x04019251 RID: 102993
 		private UUIItem RedTipsRightBtn;
 
-		// Token: 0x0401E7AB RID: 124843
+		// Token: 0x04019252 RID: 102994
 		private UUIItem RedTipsLeft;
 
-		// Token: 0x0401E7AC RID: 124844
+		// Token: 0x04019253 RID: 102995
 		private UUIItem RedTipsRight;
 
-		// Token: 0x0401E7AD RID: 124845
+		// Token: 0x04019254 RID: 102996
 		private FunctionBottomButtonItem BottomMailBtn;
 
-		// Token: 0x0401E7AE RID: 124846
+		// Token: 0x04019255 RID: 102997
 		private FunctionBottomButtonItem BottomNoticeBtn;
 
-		// Token: 0x0401E7AF RID: 124847
+		// Token: 0x04019256 RID: 102998
 		private FunctionBottomButtonItem BottomPhotoBtn;
 
-		// Token: 0x0401E7B0 RID: 124848
+		// Token: 0x04019257 RID: 102999
 		private FunctionBottomButtonItem BottomSettingBtn;
 
-		// Token: 0x0401E7B1 RID: 124849
+		// Token: 0x04019258 RID: 103000
 		private PlayerTitleItem TitleItem;
 
-		// Token: 0x0401E7B2 RID: 124850
+		// Token: 0x04019259 RID: 103001
 		private PreDownloadButtonItemB BottomPreDownloadBtn;
 
-		// Token: 0x0401E7B3 RID: 124851
+		// Token: 0x0401925A RID: 103002
 		private FunctionResDownLoadItem BottomDownloadPanel;
 
-		// Token: 0x0401E7B4 RID: 124852
+		// Token: 0x0401925B RID: 103003
 		[Nullable(1)]
 		private readonly Dictionary<int, FunctionAttachItemGrid> FunctionGridMap = new Dictionary<int, FunctionAttachItemGrid>();
 
-		// Token: 0x0401E7B5 RID: 124853
+		// Token: 0x0401925C RID: 103004
 		[Nullable(1)]
 		private List<int[]> DataList = new List<int[]>();
 
-		// Token: 0x0401E7B6 RID: 124854
+		// Token: 0x0401925D RID: 103005
 		[Nullable(1)]
 		private ICalculateData CalculateData;
 
-		// Token: 0x0200BC94 RID: 48276
+		// Token: 0x0200A69D RID: 42653
 		[NullableContext(0)]
 		private class ECompDefine
 		{
-			// Token: 0x04038E3E RID: 233022
+			// Token: 0x04033809 RID: 210953
 			public const int PlayerName = 0;
 
-			// Token: 0x04038E3F RID: 233023
+			// Token: 0x0403380A RID: 210954
 			public const int PlayerId = 1;
 
-			// Token: 0x04038E40 RID: 233024
+			// Token: 0x0403380B RID: 210955
 			public const int WorldLevel = 2;
 
-			// Token: 0x04038E41 RID: 233025
+			// Token: 0x0403380C RID: 210956
 			public const int HelpBtn = 3;
 
-			// Token: 0x04038E42 RID: 233026
+			// Token: 0x0403380D RID: 210957
 			public const int PlayerLevel = 4;
 
-			// Token: 0x04038E43 RID: 233027
+			// Token: 0x0403380E RID: 210958
 			public const int PlayerExp = 5;
 
-			// Token: 0x04038E44 RID: 233028
+			// Token: 0x0403380F RID: 210959
 			public const int BackBtn = 6;
 
-			// Token: 0x04038E45 RID: 233029
+			// Token: 0x04033810 RID: 210960
 			public const int EndBtn = 7;
 
-			// Token: 0x04038E46 RID: 233030
+			// Token: 0x04033811 RID: 210961
 			public const int MailBtn = 8;
 
-			// Token: 0x04038E47 RID: 233031
+			// Token: 0x04033812 RID: 210962
 			public const int ExpProgressBar = 9;
 
-			// Token: 0x04038E48 RID: 233032
+			// Token: 0x04033813 RID: 210963
 			public const int FuncDraggable = 10;
 
-			// Token: 0x04038E49 RID: 233033
+			// Token: 0x04033814 RID: 210964
 			public const int PlayerTexture = 11;
 
-			// Token: 0x04038E4A RID: 233034
+			// Token: 0x04033815 RID: 210965
 			public const int TimeButton = 12;
 
-			// Token: 0x04038E4B RID: 233035
+			// Token: 0x04033816 RID: 210966
 			public const int SetUpButton = 13;
 
-			// Token: 0x04038E4C RID: 233036
+			// Token: 0x04033817 RID: 210967
 			public const int CopyUidButton = 14;
 
-			// Token: 0x04038E4D RID: 233037
+			// Token: 0x04033818 RID: 210968
 			public const int NoticeBtn = 15;
 
-			// Token: 0x04038E4E RID: 233038
+			// Token: 0x04033819 RID: 210969
 			public const int RedTipsRightBtn = 16;
 
-			// Token: 0x04038E4F RID: 233039
+			// Token: 0x0403381A RID: 210970
 			public const int RedTipsLeftBtn = 17;
 
-			// Token: 0x04038E50 RID: 233040
+			// Token: 0x0403381B RID: 210971
 			public const int RedTipsRight = 18;
 
-			// Token: 0x04038E51 RID: 233041
+			// Token: 0x0403381C RID: 210972
 			public const int RedTipsLeft = 19;
 
-			// Token: 0x04038E52 RID: 233042
+			// Token: 0x0403381D RID: 210973
 			public const int PhotoBtn = 20;
 
-			// Token: 0x04038E53 RID: 233043
+			// Token: 0x0403381E RID: 210974
 			public const int HeadIconButton = 21;
 
-			// Token: 0x04038E54 RID: 233044
+			// Token: 0x0403381F RID: 210975
 			public const int MoreButton = 22;
 
-			// Token: 0x04038E55 RID: 233045
+			// Token: 0x04033820 RID: 210976
 			public const int Card = 23;
 
-			// Token: 0x04038E56 RID: 233046
+			// Token: 0x04033821 RID: 210977
 			public const int SignButton = 24;
 
-			// Token: 0x04038E57 RID: 233047
+			// Token: 0x04033822 RID: 210978
 			public const int SignText = 25;
 
-			// Token: 0x04038E58 RID: 233048
+			// Token: 0x04033823 RID: 210979
 			public const int BirthText = 26;
 
-			// Token: 0x04038E59 RID: 233049
+			// Token: 0x04033824 RID: 210980
 			public const int NameButton = 27;
 
-			// Token: 0x04038E5A RID: 233050
+			// Token: 0x04033825 RID: 210981
 			public const int TabRoot = 28;
 
-			// Token: 0x04038E5B RID: 233051
+			// Token: 0x04033826 RID: 210982
 			public const int GridItem = 29;
 
-			// Token: 0x04038E5C RID: 233052
+			// Token: 0x04033827 RID: 210983
 			public const int GridInsideLayout = 30;
 
-			// Token: 0x04038E5D RID: 233053
+			// Token: 0x04033828 RID: 210984
 			public const int PanelTabItem = 31;
 
-			// Token: 0x04038E5E RID: 233054
+			// Token: 0x04033829 RID: 210985
 			public const int OnlineButton = 32;
 
-			// Token: 0x04038E5F RID: 233055
+			// Token: 0x0403382A RID: 210986
 			public const int NetStateSprite = 33;
 
-			// Token: 0x04038E60 RID: 233056
+			// Token: 0x0403382B RID: 210987
 			public const int PersonalRedDot = 34;
 
-			// Token: 0x04038E61 RID: 233057
+			// Token: 0x0403382C RID: 210988
 			public const int PersonalTipItem = 35;
 
-			// Token: 0x04038E62 RID: 233058
+			// Token: 0x0403382D RID: 210989
 			public const int CopyUidButtonSprite = 36;
 
-			// Token: 0x04038E63 RID: 233059
+			// Token: 0x0403382E RID: 210990
 			public const int MobilePreDownloadBtn = 37;
 
-			// Token: 0x04038E64 RID: 233060
+			// Token: 0x0403382F RID: 210991
 			public const int PlayerTitleItem = 38;
 
-			// Token: 0x04038E65 RID: 233061
+			// Token: 0x04033830 RID: 210992
 			public const int DownLoadPanel = 39;
 		}
 	}

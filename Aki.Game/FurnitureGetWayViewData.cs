@@ -2,30 +2,30 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02000FD6 RID: 4054
+// Token: 0x0200048B RID: 1163
 [NullableContext(2)]
 [Nullable(0)]
 public class FurnitureGetWayViewData : IFurnitureGetWayViewData
 {
-	// Token: 0x17000867 RID: 2151
-	// (get) Token: 0x0600681E RID: 26654 RVA: 0x0014AFAA File Offset: 0x001491AA
-	// (set) Token: 0x0600681F RID: 26655 RVA: 0x0014AFB2 File Offset: 0x001491B2
+	// Token: 0x17000889 RID: 2185
+	// (get) Token: 0x06003BB6 RID: 15286 RVA: 0x0015386E File Offset: 0x00151A6E
+	// (set) Token: 0x06003BB7 RID: 15287 RVA: 0x00153876 File Offset: 0x00151A76
 	public Furniture FurnitureConfig { get; set; }
 
-	// Token: 0x17000868 RID: 2152
-	// (get) Token: 0x06006820 RID: 26656 RVA: 0x0014AFBB File Offset: 0x001491BB
-	// (set) Token: 0x06006821 RID: 26657 RVA: 0x0014AFC3 File Offset: 0x001491C3
+	// Token: 0x1700088A RID: 2186
+	// (get) Token: 0x06003BB8 RID: 15288 RVA: 0x0015387F File Offset: 0x00151A7F
+	// (set) Token: 0x06003BB9 RID: 15289 RVA: 0x00153887 File Offset: 0x00151A87
 	public EFurnitureLockReason LockReason { get; set; }
 
-	// Token: 0x17000869 RID: 2153
-	// (get) Token: 0x06006822 RID: 26658 RVA: 0x0014AFCC File Offset: 0x001491CC
-	// (set) Token: 0x06006823 RID: 26659 RVA: 0x0014AFD4 File Offset: 0x001491D4
+	// Token: 0x1700088B RID: 2187
+	// (get) Token: 0x06003BBA RID: 15290 RVA: 0x00153890 File Offset: 0x00151A90
+	// (set) Token: 0x06003BBB RID: 15291 RVA: 0x00153898 File Offset: 0x00151A98
 	[Nullable(1)]
 	public string LockReasonTextId { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x1700086A RID: 2154
-	// (get) Token: 0x06006824 RID: 26660 RVA: 0x0014AFDD File Offset: 0x001491DD
-	// (set) Token: 0x06006825 RID: 26661 RVA: 0x0014AFE5 File Offset: 0x001491E5
+	// Token: 0x1700088C RID: 2188
+	// (get) Token: 0x06003BBC RID: 15292 RVA: 0x001538A1 File Offset: 0x00151AA1
+	// (set) Token: 0x06003BBD RID: 15293 RVA: 0x001538A9 File Offset: 0x00151AA9
 	[Nullable(new byte[]
 	{
 		2,
@@ -41,13 +41,13 @@ public class FurnitureGetWayViewData : IFurnitureGetWayViewData
 		1
 	})] set; }
 
-	// Token: 0x1700086B RID: 2155
-	// (get) Token: 0x06006826 RID: 26662 RVA: 0x0014AFEE File Offset: 0x001491EE
-	// (set) Token: 0x06006827 RID: 26663 RVA: 0x0014AFF6 File Offset: 0x001491F6
+	// Token: 0x1700088D RID: 2189
+	// (get) Token: 0x06003BBE RID: 15294 RVA: 0x001538B2 File Offset: 0x00151AB2
+	// (set) Token: 0x06003BBF RID: 15295 RVA: 0x001538BA File Offset: 0x00151ABA
 	public Action JumpFunction { get; set; }
 
-	// Token: 0x1700086C RID: 2156
-	// (get) Token: 0x06006828 RID: 26664 RVA: 0x0014AFFF File Offset: 0x001491FF
-	// (set) Token: 0x06006829 RID: 26665 RVA: 0x0014B007 File Offset: 0x00149207
+	// Token: 0x1700088E RID: 2190
+	// (get) Token: 0x06003BC0 RID: 15296 RVA: 0x001538C3 File Offset: 0x00151AC3
+	// (set) Token: 0x06003BC1 RID: 15297 RVA: 0x001538CB File Offset: 0x00151ACB
 	public Action ConfirmFunction { get; set; }
 }

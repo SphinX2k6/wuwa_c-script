@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002930 RID: 10544
+	// Token: 0x02002C0C RID: 11276
 	public class ClientSetPlayerOperationRestriction : ActionParams
 	{
-		// Token: 0x0600E9F1 RID: 59889 RVA: 0x0022461F File Offset: 0x0022281F
-		[NullableContext(1)]
+		// Token: 0x0600F843 RID: 63555 RVA: 0x00241977 File Offset: 0x0023FB77
 		public static ClientSetPlayerOperationRestriction Create(IClientSetPlayerOperationRestriction? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004953 RID: 18771
-		// (get) Token: 0x0600E9F2 RID: 59890 RVA: 0x0022463E File Offset: 0x0022283E
+		// Token: 0x17004CD9 RID: 19673
+		// (get) Token: 0x0600F844 RID: 63556 RVA: 0x00241996 File Offset: 0x0023FB96
 		public virtual EPlayerOperationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400810A RID: 33034
+		// Token: 0x040087D8 RID: 34776
 		private IClientSetPlayerOperationRestriction Instance;
 	}
 }

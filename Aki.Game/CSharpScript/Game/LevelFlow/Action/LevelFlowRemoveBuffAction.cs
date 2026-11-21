@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F98 RID: 28568
+	// Token: 0x02006119 RID: 24857
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowRemoveBuffAction : LevelFlowActionBase
 	{
-		// Token: 0x0604575A RID: 284506 RVA: 0x0113A5E9 File Offset: 0x011387E9
+		// Token: 0x0603B908 RID: 243976 RVA: 0x010E43ED File Offset: 0x010E25ED
 		public LevelFlowRemoveBuffAction Init(int entityId, List<long> buffIds)
 		{
 			this.EntityId = entityId;
@@ -17,14 +17,14 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x0604575B RID: 284507 RVA: 0x0113A5FA File Offset: 0x011387FA
+		// Token: 0x0603B909 RID: 243977 RVA: 0x010E43FE File Offset: 0x010E25FE
 		protected override void OnExecute()
 		{
 			LevelFlowController.Instance.LevelFlowRemoveBuffRequest(this.BuffIds);
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x0604575C RID: 284508 RVA: 0x0113A614 File Offset: 0x01138814
+		// Token: 0x0603B90A RID: 243978 RVA: 0x010E4418 File Offset: 0x010E2618
 		protected unsafe override void LogExecuteInfo()
 		{
 			Log instance = Log.Instance;
@@ -39,10 +39,10 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x040243E3 RID: 148451
+		// Token: 0x0401F698 RID: 128664
 		private int EntityId;
 
-		// Token: 0x040243E4 RID: 148452
+		// Token: 0x0401F699 RID: 128665
 		private List<long> BuffIds = new List<long>();
 	}
 }

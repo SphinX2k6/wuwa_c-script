@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002175 RID: 8565
+	// Token: 0x02000708 RID: 1800
 	[UnrealObjectPath("/Script/LGUI.UIGridLayout")]
 	[UnrealStructLayout(480, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 480)]
 	public class UUIGridLayout : UUILayoutWithAnimation, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020560 RID: 132448 RVA: 0x00300429 File Offset: 0x002FE629
+		// Token: 0x06009929 RID: 39209 RVA: 0x000E6A6D File Offset: 0x000E4C6D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIGridLayout._ClassPtr;
 		}
 
-		// Token: 0x06020561 RID: 132449 RVA: 0x00300438 File Offset: 0x002FE638
+		// Token: 0x0600992A RID: 39210 RVA: 0x000E6A7C File Offset: 0x000E4C7C
 		public UUIGridLayout() : this(BuiltinUtils.AllocNativeUObject(UUIGridLayout.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06020562 RID: 132450 RVA: 0x00300460 File Offset: 0x002FE660
+		// Token: 0x0600992B RID: 39211 RVA: 0x000E6AA4 File Offset: 0x000E4CA4
 		[NullableContext(1)]
 		public UUIGridLayout(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIGridLayout.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007EC1 RID: 32449
-		// (get) Token: 0x06020563 RID: 132451 RVA: 0x00300493 File Offset: 0x002FE693
-		// (set) Token: 0x06020564 RID: 132452 RVA: 0x003004A7 File Offset: 0x002FE6A7
+		// Token: 0x17001C78 RID: 7288
+		// (get) Token: 0x0600992C RID: 39212 RVA: 0x000E6AD7 File Offset: 0x000E4CD7
+		// (set) Token: 0x0600992D RID: 39213 RVA: 0x000E6AEB File Offset: 0x000E4CEB
 		public unsafe FMargin Padding
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007EC2 RID: 32450
-		// (get) Token: 0x06020565 RID: 132453 RVA: 0x003004BC File Offset: 0x002FE6BC
-		// (set) Token: 0x06020566 RID: 132454 RVA: 0x003004D0 File Offset: 0x002FE6D0
+		// Token: 0x17001C79 RID: 7289
+		// (get) Token: 0x0600992E RID: 39214 RVA: 0x000E6B00 File Offset: 0x000E4D00
+		// (set) Token: 0x0600992F RID: 39215 RVA: 0x000E6B14 File Offset: 0x000E4D14
 		public unsafe FVector2D Spacing
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007EC3 RID: 32451
-		// (get) Token: 0x06020567 RID: 132455 RVA: 0x003004E5 File Offset: 0x002FE6E5
-		// (set) Token: 0x06020568 RID: 132456 RVA: 0x003004F5 File Offset: 0x002FE6F5
+		// Token: 0x17001C7A RID: 7290
+		// (get) Token: 0x06009930 RID: 39216 RVA: 0x000E6B29 File Offset: 0x000E4D29
+		// (set) Token: 0x06009931 RID: 39217 RVA: 0x000E6B39 File Offset: 0x000E4D39
 		public unsafe ELGUILayoutAlignmentType Align
 		{
 			get
@@ -73,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007EC4 RID: 32452
-		// (get) Token: 0x06020569 RID: 132457 RVA: 0x00300506 File Offset: 0x002FE706
-		// (set) Token: 0x0602056A RID: 132458 RVA: 0x00300516 File Offset: 0x002FE716
+		// Token: 0x17001C7B RID: 7291
+		// (get) Token: 0x06009932 RID: 39218 RVA: 0x000E6B4A File Offset: 0x000E4D4A
+		// (set) Token: 0x06009933 RID: 39219 RVA: 0x000E6B5A File Offset: 0x000E4D5A
 		public unsafe bool LastLineCanAlign
 		{
 			get
@@ -88,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007EC5 RID: 32453
-		// (get) Token: 0x0602056B RID: 132459 RVA: 0x00300527 File Offset: 0x002FE727
-		// (set) Token: 0x0602056C RID: 132460 RVA: 0x00300537 File Offset: 0x002FE737
+		// Token: 0x17001C7C RID: 7292
+		// (get) Token: 0x06009934 RID: 39220 RVA: 0x000E6B6B File Offset: 0x000E4D6B
+		// (set) Token: 0x06009935 RID: 39221 RVA: 0x000E6B7B File Offset: 0x000E4D7B
 		public unsafe bool HorizontalOrVertical
 		{
 			get
@@ -103,24 +103,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007EC6 RID: 32454
-		// (get) Token: 0x0602056D RID: 132461 RVA: 0x00300548 File Offset: 0x002FE748
-		// (set) Token: 0x0602056E RID: 132462 RVA: 0x00300558 File Offset: 0x002FE758
-		public unsafe EUIGridLayoutStartCorner StartCorner
-		{
-			get
-			{
-				return (EUIGridLayoutStartCorner)(*(base.NativePtr + (IntPtr)UUIGridLayout.__PropertyOffset_StartCorner));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUIGridLayout.__PropertyOffset_StartCorner) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007EC7 RID: 32455
-		// (get) Token: 0x0602056F RID: 132463 RVA: 0x00300569 File Offset: 0x002FE769
-		// (set) Token: 0x06020570 RID: 132464 RVA: 0x00300579 File Offset: 0x002FE779
+		// Token: 0x17001C7D RID: 7293
+		// (get) Token: 0x06009936 RID: 39222 RVA: 0x000E6B8C File Offset: 0x000E4D8C
+		// (set) Token: 0x06009937 RID: 39223 RVA: 0x000E6B9C File Offset: 0x000E4D9C
 		public unsafe bool DependOnSizeOrCount
 		{
 			get
@@ -133,9 +118,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007EC8 RID: 32456
-		// (get) Token: 0x06020571 RID: 132465 RVA: 0x0030058A File Offset: 0x002FE78A
-		// (set) Token: 0x06020572 RID: 132466 RVA: 0x0030059A File Offset: 0x002FE79A
+		// Token: 0x17001C7E RID: 7294
+		// (get) Token: 0x06009938 RID: 39224 RVA: 0x000E6BAD File Offset: 0x000E4DAD
+		// (set) Token: 0x06009939 RID: 39225 RVA: 0x000E6BBD File Offset: 0x000E4DBD
 		public unsafe bool ExpendChildSize
 		{
 			get
@@ -148,9 +133,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007EC9 RID: 32457
-		// (get) Token: 0x06020573 RID: 132467 RVA: 0x003005AB File Offset: 0x002FE7AB
-		// (set) Token: 0x06020574 RID: 132468 RVA: 0x003005BF File Offset: 0x002FE7BF
+		// Token: 0x17001C7F RID: 7295
+		// (get) Token: 0x0600993A RID: 39226 RVA: 0x000E6BCE File Offset: 0x000E4DCE
+		// (set) Token: 0x0600993B RID: 39227 RVA: 0x000E6BE2 File Offset: 0x000E4DE2
 		public unsafe FVector2D CellSize
 		{
 			get
@@ -163,9 +148,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007ECA RID: 32458
-		// (get) Token: 0x06020575 RID: 132469 RVA: 0x003005D4 File Offset: 0x002FE7D4
-		// (set) Token: 0x06020576 RID: 132470 RVA: 0x003005E4 File Offset: 0x002FE7E4
+		// Token: 0x17001C80 RID: 7296
+		// (get) Token: 0x0600993C RID: 39228 RVA: 0x000E6BF7 File Offset: 0x000E4DF7
+		// (set) Token: 0x0600993D RID: 39229 RVA: 0x000E6C07 File Offset: 0x000E4E07
 		public unsafe uint LineCount
 		{
 			get
@@ -178,9 +163,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007ECB RID: 32459
-		// (get) Token: 0x06020577 RID: 132471 RVA: 0x003005F5 File Offset: 0x002FE7F5
-		// (set) Token: 0x06020578 RID: 132472 RVA: 0x00300605 File Offset: 0x002FE805
+		// Token: 0x17001C81 RID: 7297
+		// (get) Token: 0x0600993E RID: 39230 RVA: 0x000E6C18 File Offset: 0x000E4E18
+		// (set) Token: 0x0600993F RID: 39231 RVA: 0x000E6C28 File Offset: 0x000E4E28
 		public unsafe bool WidthFitToChildren
 		{
 			get
@@ -193,9 +178,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007ECC RID: 32460
-		// (get) Token: 0x06020579 RID: 132473 RVA: 0x00300616 File Offset: 0x002FE816
-		// (set) Token: 0x0602057A RID: 132474 RVA: 0x00300626 File Offset: 0x002FE826
+		// Token: 0x17001C82 RID: 7298
+		// (get) Token: 0x06009940 RID: 39232 RVA: 0x000E6C39 File Offset: 0x000E4E39
+		// (set) Token: 0x06009941 RID: 39233 RVA: 0x000E6C49 File Offset: 0x000E4E49
 		public unsafe bool HeightFitToChildren
 		{
 			get
@@ -208,24 +193,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007ECD RID: 32461
-		// (get) Token: 0x0602057B RID: 132475 RVA: 0x00300637 File Offset: 0x002FE837
-		// (set) Token: 0x0602057C RID: 132476 RVA: 0x00300647 File Offset: 0x002FE847
-		public unsafe EGridFitType FitType
-		{
-			get
-			{
-				return (EGridFitType)(*(base.NativePtr + (IntPtr)UUIGridLayout.__PropertyOffset_FitType));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUIGridLayout.__PropertyOffset_FitType) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007ECE RID: 32462
-		// (get) Token: 0x0602057D RID: 132477 RVA: 0x00300658 File Offset: 0x002FE858
-		// (set) Token: 0x0602057E RID: 132478 RVA: 0x0030066C File Offset: 0x002FE86C
+		// Token: 0x17001C83 RID: 7299
+		// (get) Token: 0x06009942 RID: 39234 RVA: 0x000E6C5A File Offset: 0x000E4E5A
+		// (set) Token: 0x06009943 RID: 39235 RVA: 0x000E6C6E File Offset: 0x000E4E6E
 		public unsafe FVector2D CellScale
 		{
 			get
@@ -238,327 +208,311 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0602057F RID: 132479 RVA: 0x00300681 File Offset: 0x002FE881
+		// Token: 0x06009944 RID: 39236 RVA: 0x000E6C83 File Offset: 0x000E4E83
 		public void SetWidthFitToChildren(bool value)
 		{
 			UUIGridLayout.__SetWidthFitToChildren_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020580 RID: 132480 RVA: 0x0030068F File Offset: 0x002FE88F
+		// Token: 0x06009945 RID: 39237 RVA: 0x000E6C91 File Offset: 0x000E4E91
 		public void SetSpacing(FVector2D value)
 		{
 			UUIGridLayout.__SetSpacing_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020581 RID: 132481 RVA: 0x0030069D File Offset: 0x002FE89D
+		// Token: 0x06009946 RID: 39238 RVA: 0x000E6C9F File Offset: 0x000E4E9F
 		public void SetPadding(FMargin value)
 		{
 			UUIGridLayout.__SetPadding_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020582 RID: 132482 RVA: 0x003006AB File Offset: 0x002FE8AB
+		// Token: 0x06009947 RID: 39239 RVA: 0x000E6CAD File Offset: 0x000E4EAD
 		public void SetMaxItemCountInOneLine(int value)
 		{
 			UUIGridLayout.__SetMaxItemCountInOneLine_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020583 RID: 132483 RVA: 0x003006B9 File Offset: 0x002FE8B9
+		// Token: 0x06009948 RID: 39240 RVA: 0x000E6CBB File Offset: 0x000E4EBB
 		public void SetLineCount(int value)
 		{
 			UUIGridLayout.__SetLineCount_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020584 RID: 132484 RVA: 0x003006C7 File Offset: 0x002FE8C7
+		// Token: 0x06009949 RID: 39241 RVA: 0x000E6CC9 File Offset: 0x000E4EC9
 		public void SetLastLineCanAlign(bool value)
 		{
 			UUIGridLayout.__SetLastLineCanAlign_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020585 RID: 132485 RVA: 0x003006D5 File Offset: 0x002FE8D5
-		public void SetHorizontalOrVertical(bool value, EUIGridLayoutStartCorner startCorner = EUIGridLayoutStartCorner.UpperLeft)
-		{
-			UUIGridLayout.__SetHorizontalOrVertical_Internal(base.NativePtr, value, startCorner);
-		}
-
-		// Token: 0x06020586 RID: 132486 RVA: 0x003006E4 File Offset: 0x002FE8E4
+		// Token: 0x0600994A RID: 39242 RVA: 0x000E6CD7 File Offset: 0x000E4ED7
 		public void SetHeightFitToChildren(bool value)
 		{
 			UUIGridLayout.__SetHeightFitToChildren_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020587 RID: 132487 RVA: 0x003006F2 File Offset: 0x002FE8F2
+		// Token: 0x0600994B RID: 39243 RVA: 0x000E6CE5 File Offset: 0x000E4EE5
 		public void SetExpendChildSize(bool value)
 		{
 			UUIGridLayout.__SetExpendChildSize_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020588 RID: 132488 RVA: 0x00300700 File Offset: 0x002FE900
+		// Token: 0x0600994C RID: 39244 RVA: 0x000E6CF3 File Offset: 0x000E4EF3
 		public void SetDependOnSizeOrCount(bool value)
 		{
 			UUIGridLayout.__SetDependOnSizeOrCount_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020589 RID: 132489 RVA: 0x0030070E File Offset: 0x002FE90E
+		// Token: 0x0600994D RID: 39245 RVA: 0x000E6D01 File Offset: 0x000E4F01
 		public void SetCellSize(FVector2D value)
 		{
 			UUIGridLayout.__SetCellSize_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x0602058A RID: 132490 RVA: 0x0030071C File Offset: 0x002FE91C
+		// Token: 0x0600994E RID: 39246 RVA: 0x000E6D0F File Offset: 0x000E4F0F
 		public void SetCellScale(FVector2D value)
 		{
 			UUIGridLayout.__SetCellScale_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x0602058B RID: 132491 RVA: 0x0030072A File Offset: 0x002FE92A
+		// Token: 0x0600994F RID: 39247 RVA: 0x000E6D1D File Offset: 0x000E4F1D
 		public void SetAlign(ELGUILayoutAlignmentType value)
 		{
 			UUIGridLayout.__SetAlign_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x0602058C RID: 132492 RVA: 0x00300738 File Offset: 0x002FE938
+		// Token: 0x06009950 RID: 39248 RVA: 0x000E6D2B File Offset: 0x000E4F2B
 		public bool GetWidthFitToChildren()
 		{
 			return UUIGridLayout.__GetWidthFitToChildren_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0602058D RID: 132493 RVA: 0x00300745 File Offset: 0x002FE945
+		// Token: 0x06009951 RID: 39249 RVA: 0x000E6D38 File Offset: 0x000E4F38
 		public FVector2D GetSpacing()
 		{
 			return UUIGridLayout.__GetSpacing_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0602058E RID: 132494 RVA: 0x00300752 File Offset: 0x002FE952
+		// Token: 0x06009952 RID: 39250 RVA: 0x000E6D45 File Offset: 0x000E4F45
 		public FMargin GetPadding()
 		{
 			return UUIGridLayout.__GetPadding_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0602058F RID: 132495 RVA: 0x0030075F File Offset: 0x002FE95F
+		// Token: 0x06009953 RID: 39251 RVA: 0x000E6D52 File Offset: 0x000E4F52
 		public int GetMaxItemCountInOneLine()
 		{
 			return UUIGridLayout.__GetMaxItemCountInOneLine_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020590 RID: 132496 RVA: 0x0030076C File Offset: 0x002FE96C
+		// Token: 0x06009954 RID: 39252 RVA: 0x000E6D5F File Offset: 0x000E4F5F
 		public int GetLineCount()
 		{
 			return UUIGridLayout.__GetLineCount_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020591 RID: 132497 RVA: 0x00300779 File Offset: 0x002FE979
+		// Token: 0x06009955 RID: 39253 RVA: 0x000E6D6C File Offset: 0x000E4F6C
 		public bool GetLastLineCanAlign()
 		{
 			return UUIGridLayout.__GetLastLineCanAlign_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020592 RID: 132498 RVA: 0x00300786 File Offset: 0x002FE986
+		// Token: 0x06009956 RID: 39254 RVA: 0x000E6D79 File Offset: 0x000E4F79
 		public bool GetHorizontalOrVertical()
 		{
 			return UUIGridLayout.__GetHorizontalOrVertical_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020593 RID: 132499 RVA: 0x00300793 File Offset: 0x002FE993
+		// Token: 0x06009957 RID: 39255 RVA: 0x000E6D86 File Offset: 0x000E4F86
 		public bool GetHeightFitToChildren()
 		{
 			return UUIGridLayout.__GetHeightFitToChildren_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020594 RID: 132500 RVA: 0x003007A0 File Offset: 0x002FE9A0
+		// Token: 0x06009958 RID: 39256 RVA: 0x000E6D93 File Offset: 0x000E4F93
 		public bool GetExpendChildSize()
 		{
 			return UUIGridLayout.__GetExpendChildSize_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020595 RID: 132501 RVA: 0x003007AD File Offset: 0x002FE9AD
+		// Token: 0x06009959 RID: 39257 RVA: 0x000E6DA0 File Offset: 0x000E4FA0
 		public bool GetDependOnSizeOrCount()
 		{
 			return UUIGridLayout.__GetDependOnSizeOrCount_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020596 RID: 132502 RVA: 0x003007BA File Offset: 0x002FE9BA
+		// Token: 0x0600995A RID: 39258 RVA: 0x000E6DAD File Offset: 0x000E4FAD
 		public FVector2D GetCellSize()
 		{
 			return UUIGridLayout.__GetCellSize_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020597 RID: 132503 RVA: 0x003007C7 File Offset: 0x002FE9C7
+		// Token: 0x0600995B RID: 39259 RVA: 0x000E6DBA File Offset: 0x000E4FBA
 		public ELGUILayoutAlignmentType GetAlign()
 		{
 			return UUIGridLayout.__GetAlign_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020598 RID: 132504 RVA: 0x003007D4 File Offset: 0x002FE9D4
+		// Token: 0x0600995C RID: 39260 RVA: 0x000E6DC7 File Offset: 0x000E4FC7
 		public FVector2D GetActuralRange()
 		{
 			return UUIGridLayout.__GetActuralRange_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020599 RID: 132505
+		// Token: 0x0600995D RID: 39261
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetWidthFitToChildren_Internal(IntPtr @this, bool value);
 
-		// Token: 0x0602059A RID: 132506
+		// Token: 0x0600995E RID: 39262
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSpacing_Internal(IntPtr @this, FVector2D value);
 
-		// Token: 0x0602059B RID: 132507
+		// Token: 0x0600995F RID: 39263
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPadding_Internal(IntPtr @this, FMargin value);
 
-		// Token: 0x0602059C RID: 132508
+		// Token: 0x06009960 RID: 39264
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMaxItemCountInOneLine_Internal(IntPtr @this, int value);
 
-		// Token: 0x0602059D RID: 132509
+		// Token: 0x06009961 RID: 39265
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLineCount_Internal(IntPtr @this, int value);
 
-		// Token: 0x0602059E RID: 132510
+		// Token: 0x06009962 RID: 39266
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLastLineCanAlign_Internal(IntPtr @this, bool value);
 
-		// Token: 0x0602059F RID: 132511
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetHorizontalOrVertical_Internal(IntPtr @this, bool value, EUIGridLayoutStartCorner startCorner);
-
-		// Token: 0x060205A0 RID: 132512
+		// Token: 0x06009963 RID: 39267
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetHeightFitToChildren_Internal(IntPtr @this, bool value);
 
-		// Token: 0x060205A1 RID: 132513
+		// Token: 0x06009964 RID: 39268
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetExpendChildSize_Internal(IntPtr @this, bool value);
 
-		// Token: 0x060205A2 RID: 132514
+		// Token: 0x06009965 RID: 39269
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetDependOnSizeOrCount_Internal(IntPtr @this, bool value);
 
-		// Token: 0x060205A3 RID: 132515
+		// Token: 0x06009966 RID: 39270
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCellSize_Internal(IntPtr @this, FVector2D value);
 
-		// Token: 0x060205A4 RID: 132516
+		// Token: 0x06009967 RID: 39271
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCellScale_Internal(IntPtr @this, FVector2D value);
 
-		// Token: 0x060205A5 RID: 132517
+		// Token: 0x06009968 RID: 39272
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAlign_Internal(IntPtr @this, ELGUILayoutAlignmentType value);
 
-		// Token: 0x060205A6 RID: 132518
+		// Token: 0x06009969 RID: 39273
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetWidthFitToChildren_Internal(IntPtr @this);
 
-		// Token: 0x060205A7 RID: 132519
+		// Token: 0x0600996A RID: 39274
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D __GetSpacing_Internal(IntPtr @this);
 
-		// Token: 0x060205A8 RID: 132520
+		// Token: 0x0600996B RID: 39275
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMargin __GetPadding_Internal(IntPtr @this);
 
-		// Token: 0x060205A9 RID: 132521
+		// Token: 0x0600996C RID: 39276
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetMaxItemCountInOneLine_Internal(IntPtr @this);
 
-		// Token: 0x060205AA RID: 132522
+		// Token: 0x0600996D RID: 39277
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetLineCount_Internal(IntPtr @this);
 
-		// Token: 0x060205AB RID: 132523
+		// Token: 0x0600996E RID: 39278
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetLastLineCanAlign_Internal(IntPtr @this);
 
-		// Token: 0x060205AC RID: 132524
+		// Token: 0x0600996F RID: 39279
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetHorizontalOrVertical_Internal(IntPtr @this);
 
-		// Token: 0x060205AD RID: 132525
+		// Token: 0x06009970 RID: 39280
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetHeightFitToChildren_Internal(IntPtr @this);
 
-		// Token: 0x060205AE RID: 132526
+		// Token: 0x06009971 RID: 39281
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetExpendChildSize_Internal(IntPtr @this);
 
-		// Token: 0x060205AF RID: 132527
+		// Token: 0x06009972 RID: 39282
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetDependOnSizeOrCount_Internal(IntPtr @this);
 
-		// Token: 0x060205B0 RID: 132528
+		// Token: 0x06009973 RID: 39283
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D __GetCellSize_Internal(IntPtr @this);
 
-		// Token: 0x060205B1 RID: 132529
+		// Token: 0x06009974 RID: 39284
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern ELGUILayoutAlignmentType __GetAlign_Internal(IntPtr @this);
 
-		// Token: 0x060205B2 RID: 132530
+		// Token: 0x06009975 RID: 39285
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D __GetActuralRange_Internal(IntPtr @this);
 
-		// Token: 0x060205B3 RID: 132531 RVA: 0x003007E1 File Offset: 0x002FE9E1
+		// Token: 0x06009976 RID: 39286 RVA: 0x000E6DD4 File Offset: 0x000E4FD4
 		static UUIGridLayout()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIGridLayout");
 		}
 
-		// Token: 0x060205B4 RID: 132532 RVA: 0x003007EF File Offset: 0x002FE9EF
+		// Token: 0x06009977 RID: 39287 RVA: 0x000E6DE2 File Offset: 0x000E4FE2
 		protected UUIGridLayout(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040115EF RID: 71151
+		// Token: 0x04004298 RID: 17048
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UIGridLayout";
 
-		// Token: 0x040115F0 RID: 71152
+		// Token: 0x04004299 RID: 17049
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040115F1 RID: 71153
+		// Token: 0x0400429A RID: 17050
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040115F2 RID: 71154
+		// Token: 0x0400429B RID: 17051
 		internal static int __PropertyOffset_Padding;
 
-		// Token: 0x040115F3 RID: 71155
+		// Token: 0x0400429C RID: 17052
 		internal static int __PropertyOffset_Spacing;
 
-		// Token: 0x040115F4 RID: 71156
+		// Token: 0x0400429D RID: 17053
 		internal static int __PropertyOffset_Align;
 
-		// Token: 0x040115F5 RID: 71157
+		// Token: 0x0400429E RID: 17054
 		internal static int __PropertyOffset_LastLineCanAlign;
 
-		// Token: 0x040115F6 RID: 71158
+		// Token: 0x0400429F RID: 17055
 		internal static int __PropertyOffset_HorizontalOrVertical;
 
-		// Token: 0x040115F7 RID: 71159
-		internal static int __PropertyOffset_StartCorner;
-
-		// Token: 0x040115F8 RID: 71160
+		// Token: 0x040042A0 RID: 17056
 		internal static int __PropertyOffset_DependOnSizeOrCount;
 
-		// Token: 0x040115F9 RID: 71161
+		// Token: 0x040042A1 RID: 17057
 		internal static int __PropertyOffset_ExpendChildSize;
 
-		// Token: 0x040115FA RID: 71162
+		// Token: 0x040042A2 RID: 17058
 		internal static int __PropertyOffset_CellSize;
 
-		// Token: 0x040115FB RID: 71163
+		// Token: 0x040042A3 RID: 17059
 		internal static int __PropertyOffset_LineCount;
 
-		// Token: 0x040115FC RID: 71164
+		// Token: 0x040042A4 RID: 17060
 		internal static int __PropertyOffset_WidthFitToChildren;
 
-		// Token: 0x040115FD RID: 71165
+		// Token: 0x040042A5 RID: 17061
 		internal static int __PropertyOffset_HeightFitToChildren;
 
-		// Token: 0x040115FE RID: 71166
-		internal static int __PropertyOffset_FitType;
-
-		// Token: 0x040115FF RID: 71167
+		// Token: 0x040042A6 RID: 17062
 		internal static int __PropertyOffset_CellScale;
 	}
 }

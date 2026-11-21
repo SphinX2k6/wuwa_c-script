@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F17 RID: 24343
+	// Token: 0x02004EFE RID: 20222
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivityInstanceEntranceScrollItem : UiPanelBase, IDynamicScrollItem<ActivityEntranceItemData>
 	{
-		// Token: 0x0603DD82 RID: 253314 RVA: 0x00EF287C File Offset: 0x00EF0A7C
+		// Token: 0x06032D1D RID: 208157 RVA: 0x00E44584 File Offset: 0x00E42784
 		[NullableContext(1)]
 		public UniTask Init(UUIItem actor)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DD83 RID: 253315 RVA: 0x00EF28C8 File Offset: 0x00EF0AC8
+		// Token: 0x06032D1E RID: 208158 RVA: 0x00E445D0 File Offset: 0x00E427D0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DD84 RID: 253316 RVA: 0x00EF2974 File Offset: 0x00EF0B74
+		// Token: 0x06032D1F RID: 208159 RVA: 0x00E4467C File Offset: 0x00E4287C
 		private UniTask InitChildItem()
 		{
 			ActivityInstanceEntranceScrollItem.<InitChildItem>d__9 <InitChildItem>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return <InitChildItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DD85 RID: 253317 RVA: 0x00EF29B8 File Offset: 0x00EF0BB8
+		// Token: 0x06032D20 RID: 208160 RVA: 0x00E446C0 File Offset: 0x00E428C0
 		[NullableContext(1)]
 		public AUIBaseActor GetUsingItem(ActivityEntranceItemData data)
 		{
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return (flag ? base.GetItem(1) : base.GetItem(3)).GetOwner() as AUIBaseActor;
 		}
 
-		// Token: 0x0603DD86 RID: 253318 RVA: 0x00EF2A14 File Offset: 0x00EF0C14
+		// Token: 0x06032D21 RID: 208161 RVA: 0x00E4471C File Offset: 0x00E4291C
 		[NullableContext(1)]
 		public void Update(ActivityEntranceItemData data, int index)
 		{
@@ -121,41 +121,41 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			currentUsingItem2.SetUIActive(true);
 		}
 
-		// Token: 0x0603DD87 RID: 253319 RVA: 0x00EF2AD8 File Offset: 0x00EF0CD8
+		// Token: 0x06032D22 RID: 208162 RVA: 0x00E447E0 File Offset: 0x00E429E0
 		public void ClearItem()
 		{
 			base.Destroy(null);
 		}
 
-		// Token: 0x040204D3 RID: 132307
+		// Token: 0x0401AFA5 RID: 110501
 		protected ActivityEntranceItemData Data;
 
-		// Token: 0x040204D4 RID: 132308
+		// Token: 0x0401AFA6 RID: 110502
 		private MainContentItem MainContentItem;
 
-		// Token: 0x040204D5 RID: 132309
+		// Token: 0x0401AFA7 RID: 110503
 		private SubContentItem SubContentItem;
 
-		// Token: 0x040204D6 RID: 132310
+		// Token: 0x0401AFA8 RID: 110504
 		private MainContentItem LockMainContentItem;
 
-		// Token: 0x040204D7 RID: 132311
+		// Token: 0x0401AFA9 RID: 110505
 		private SubContentItem LockSubContentItem;
 
-		// Token: 0x040204D8 RID: 132312
+		// Token: 0x0401AFAA RID: 110506
 		private UUIItem CurrentUsingItem;
 
-		// Token: 0x0200C24C RID: 49740
+		// Token: 0x0200AC59 RID: 44121
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403AB25 RID: 240421
+			// Token: 0x04035517 RID: 218391
 			InstanceSeriesItem,
-			// Token: 0x0403AB26 RID: 240422
+			// Token: 0x04035518 RID: 218392
 			InstanceItem,
-			// Token: 0x0403AB27 RID: 240423
+			// Token: 0x04035519 RID: 218393
 			LockInstanceSeriesItem,
-			// Token: 0x0403AB28 RID: 240424
+			// Token: 0x0403551A RID: 218394
 			LockInstanceItem
 		}
 	}

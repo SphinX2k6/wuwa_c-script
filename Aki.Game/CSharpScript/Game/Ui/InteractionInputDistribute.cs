@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004686 RID: 18054
+	// Token: 0x020035B7 RID: 13751
 	public class InteractionInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E995 RID: 190869 RVA: 0x00AC9E64 File Offset: 0x00AC8064
+		// Token: 0x060230DF RID: 143583 RVA: 0x009F7B98 File Offset: 0x009F5D98
 		public unsafe override bool OnRefresh()
 		{
 			if (InteractionModel.Instance.IsInteractionTurning || TsInteractionUtils.IsInteractWaitOpenViewName)

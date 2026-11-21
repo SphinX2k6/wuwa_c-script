@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Command
 {
-	// Token: 0x02005EE2 RID: 24290
+	// Token: 0x02006525 RID: 25893
 	public enum EReferenceSearchUassetType : byte
 	{
-		// Token: 0x0400F9E1 RID: 63969
+		// Token: 0x04010745 RID: 67397
 		Actor
 	}
 }

@@ -10,13 +10,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 {
-	// Token: 0x0200709B RID: 28827
+	// Token: 0x02006300 RID: 25344
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class NpcTimetableController : ControllerBase
 	{
-		// Token: 0x060463D2 RID: 287698 RVA: 0x0119318C File Offset: 0x0119138C
+		// Token: 0x0603D4BD RID: 251069 RVA: 0x011B6298 File Offset: 0x011B4498
 		protected override bool OnInit()
 		{
 			GlobalConfigFromCsv? globalConfigFromCsv;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			return true;
 		}
 
-		// Token: 0x060463D3 RID: 287699 RVA: 0x0119320F File Offset: 0x0119140F
+		// Token: 0x0603D4BE RID: 251070 RVA: 0x011B631B File Offset: 0x011B451B
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.TimeScheduleTriggerNotify);
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			return true;
 		}
 
-		// Token: 0x060463D4 RID: 287700 RVA: 0x01193234 File Offset: 0x01191434
+		// Token: 0x0603D4BF RID: 251071 RVA: 0x011B6340 File Offset: 0x011B4540
 		[NullableContext(2)]
 		protected void OnTimeScheduleTriggerNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			}
 		}
 
-		// Token: 0x060463D5 RID: 287701 RVA: 0x0119330C File Offset: 0x0119150C
+		// Token: 0x0603D4C0 RID: 251072 RVA: 0x011B6418 File Offset: 0x011B4618
 		[NullableContext(2)]
 		protected void OnTimeScheduleEndNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			}
 		}
 
-		// Token: 0x060463D6 RID: 287702 RVA: 0x011933C4 File Offset: 0x011915C4
+		// Token: 0x0603D4C1 RID: 251073 RVA: 0x011B64D0 File Offset: 0x011B46D0
 		[NullableContext(2)]
 		public TimetableConfigData GetTimeScheduleByCreatureId(long creatureId)
 		{
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			return result;
 		}
 
-		// Token: 0x060463D7 RID: 287703 RVA: 0x011933E4 File Offset: 0x011915E4
+		// Token: 0x0603D4C2 RID: 251074 RVA: 0x011B64F0 File Offset: 0x011B46F0
 		[NullableContext(2)]
 		protected TimetableConfigData GetTimetableConfigData(int scheduleId)
 		{
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			return result;
 		}
 
-		// Token: 0x060463D8 RID: 287704 RVA: 0x01193420 File Offset: 0x01191620
+		// Token: 0x0603D4C3 RID: 251075 RVA: 0x011B652C File Offset: 0x011B472C
 		[NullableContext(2)]
 		protected TimetableConfigData ParseTimeScheduleFromId(int scheduleId)
 		{
@@ -144,13 +144,13 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			return timetableConfigData;
 		}
 
-		// Token: 0x060463D9 RID: 287705 RVA: 0x011934F0 File Offset: 0x011916F0
+		// Token: 0x0603D4C4 RID: 251076 RVA: 0x011B65FC File Offset: 0x011B47FC
 		public void SaveTimetableSavedData(long creatureId, TimetableSavedData state)
 		{
 			this.TimetableSavedDataMap[creatureId] = state.DeepCopy();
 		}
 
-		// Token: 0x060463DA RID: 287706 RVA: 0x01193504 File Offset: 0x01191704
+		// Token: 0x0603D4C5 RID: 251077 RVA: 0x011B6610 File Offset: 0x011B4810
 		public void ClearTimetableSavedData(long creatureId, string reason = "")
 		{
 			TimetableSavedData timetableSavedData;
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			this.TimetableSavedDataMap.Remove(creatureId);
 		}
 
-		// Token: 0x060463DB RID: 287707 RVA: 0x01193530 File Offset: 0x01191730
+		// Token: 0x0603D4C6 RID: 251078 RVA: 0x011B663C File Offset: 0x011B483C
 		[NullableContext(2)]
 		public TimetableSavedData GetTimetableSavedData(long creatureId)
 		{
@@ -170,21 +170,21 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			return result;
 		}
 
-		// Token: 0x060463DC RID: 287708 RVA: 0x01193550 File Offset: 0x01191750
+		// Token: 0x0603D4C7 RID: 251079 RVA: 0x011B665C File Offset: 0x011B485C
 		public bool IsInTimeSchedule(Entity entity)
 		{
 			CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
 			return component != null && this.TimeScheduleCache.ContainsKey(component.GetCreatureDataId());
 		}
 
-		// Token: 0x060463DD RID: 287709 RVA: 0x0119357A File Offset: 0x0119177A
+		// Token: 0x0603D4C8 RID: 251080 RVA: 0x011B6686 File Offset: 0x011B4886
 		public float GetMaxDelaySwitchTime()
 		{
 			return this.MaxDelaySwitchTime;
 		}
 
-		// Token: 0x17009C25 RID: 39973
-		// (get) Token: 0x060463DE RID: 287710 RVA: 0x01193582 File Offset: 0x01191782
+		// Token: 0x17007407 RID: 29703
+		// (get) Token: 0x0603D4C9 RID: 251081 RVA: 0x011B668E File Offset: 0x011B488E
 		public static NpcTimetableController Instance
 		{
 			get
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			}
 		}
 
-		// Token: 0x060463DF RID: 287711 RVA: 0x01193589 File Offset: 0x01191789
+		// Token: 0x0603D4CA RID: 251082 RVA: 0x011B6695 File Offset: 0x011B4895
 		public static NpcTimetableController GetOrCreateInstance()
 		{
 			if (NpcTimetableController._Instance == null)
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			return NpcTimetableController._Instance;
 		}
 
-		// Token: 0x060463E0 RID: 287712 RVA: 0x0119359D File Offset: 0x0119179D
+		// Token: 0x0603D4CB RID: 251083 RVA: 0x011B66A9 File Offset: 0x011B48A9
 		public static bool CreateInstance()
 		{
 			if (NpcTimetableController._Instance != null)
@@ -214,36 +214,36 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			return true;
 		}
 
-		// Token: 0x060463E1 RID: 287713 RVA: 0x011935B3 File Offset: 0x011917B3
+		// Token: 0x0603D4CC RID: 251084 RVA: 0x011B66BF File Offset: 0x011B48BF
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060463E2 RID: 287714 RVA: 0x011935B5 File Offset: 0x011917B5
+		// Token: 0x0603D4CD RID: 251085 RVA: 0x011B66C1 File Offset: 0x011B48C1
 		public static void ResetStaticDefaultValue()
 		{
 			NpcTimetableController._Instance = null;
 		}
 
-		// Token: 0x060463E3 RID: 287715 RVA: 0x011935BD File Offset: 0x011917BD
+		// Token: 0x0603D4CE RID: 251086 RVA: 0x011B66C9 File Offset: 0x011B48C9
 		static NpcTimetableController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(NpcTimetableController.CreateStaticDefaultValue), new Action(NpcTimetableController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04024CEB RID: 150763
+		// Token: 0x0402083D RID: 133181
 		protected float MaxDelaySwitchTime;
 
-		// Token: 0x04024CEC RID: 150764
+		// Token: 0x0402083E RID: 133182
 		protected readonly Dictionary<long, TimetableSavedData> TimetableSavedDataMap = new Dictionary<long, TimetableSavedData>();
 
-		// Token: 0x04024CED RID: 150765
+		// Token: 0x0402083F RID: 133183
 		protected readonly Dictionary<int, TimetableConfigData> TimeScheduleConfigDataMap = new Dictionary<int, TimetableConfigData>();
 
-		// Token: 0x04024CEE RID: 150766
+		// Token: 0x04020840 RID: 133184
 		protected readonly Dictionary<long, TimetableConfigData> TimeScheduleCache = new Dictionary<long, TimetableConfigData>();
 
-		// Token: 0x04024CEF RID: 150767
+		// Token: 0x04020841 RID: 133185
 		[Nullable(2)]
 		private static NpcTimetableController _Instance;
 	}

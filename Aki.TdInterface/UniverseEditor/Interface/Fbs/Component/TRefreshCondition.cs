@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C93 RID: 23699
+	// Token: 0x020062C4 RID: 25284
 	public enum TRefreshCondition : byte
 	{
-		// Token: 0x0400F51A RID: 62746
+		// Token: 0x04010260 RID: 66144
 		NONE,
-		// Token: 0x0400F51B RID: 62747
+		// Token: 0x04010261 RID: 66145
 		IRefreshOnDeath,
-		// Token: 0x0400F51C RID: 62748
+		// Token: 0x04010262 RID: 66146
 		IRefreshOnHostInteract
 	}
 }

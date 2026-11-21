@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Level.Swing;
 using UnrealEngine;
 
-// Token: 0x02003008 RID: 12296
+// Token: 0x0200255E RID: 9566
 [NullableContext(1)]
 [Nullable(0)]
 public class SwingConfig
 {
-	// Token: 0x0601A0CE RID: 106702 RVA: 0x006D3588 File Offset: 0x006D1788
+	// Token: 0x06017A14 RID: 96788 RVA: 0x006FB580 File Offset: 0x006F9780
 	[NullableContext(2)]
 	public bool Init(BP_CharacterSwingConfig_C asset = null)
 	{
@@ -29,7 +29,7 @@ public class SwingConfig
 		return false;
 	}
 
-	// Token: 0x0601A0CF RID: 106703 RVA: 0x006D366C File Offset: 0x006D186C
+	// Token: 0x06017A15 RID: 96789 RVA: 0x006FB664 File Offset: 0x006F9864
 	[NullableContext(2)]
 	public bool InitRole(int roleId, BP_RoleSwingConfig_C asset = null)
 	{
@@ -55,7 +55,7 @@ public class SwingConfig
 		return true;
 	}
 
-	// Token: 0x0601A0D0 RID: 106704 RVA: 0x006D3748 File Offset: 0x006D1948
+	// Token: 0x06017A16 RID: 96790 RVA: 0x006FB740 File Offset: 0x006F9940
 	[NullableContext(2)]
 	private string FindRoleMontage(int roleId, [Nullable(new byte[]
 	{
@@ -76,33 +76,33 @@ public class SwingConfig
 		return null;
 	}
 
-	// Token: 0x0400C55E RID: 50526
+	// Token: 0x0400C92B RID: 51499
 	public int SitOnModelBufferTime = 400;
 
-	// Token: 0x0400C55F RID: 50527
+	// Token: 0x0400C92C RID: 51500
 	public int StandUpModelBufferTime = 500;
 
-	// Token: 0x0400C560 RID: 50528
+	// Token: 0x0400C92D RID: 51501
 	public float StandUpMoveAwayDist = 10f;
 
-	// Token: 0x0400C561 RID: 50529
+	// Token: 0x0400C92E RID: 51502
 	public string AttachSocket = "Bone_Root";
 
-	// Token: 0x0400C562 RID: 50530
+	// Token: 0x0400C92F RID: 51503
 	public Rotator AttachRotator = Rotator.Create();
 
-	// Token: 0x0400C563 RID: 50531
+	// Token: 0x0400C930 RID: 51504
 	public Vector AttachLocation = Vector.Create();
 
-	// Token: 0x0400C564 RID: 50532
+	// Token: 0x0400C931 RID: 51505
 	public string ReferenceActor = "SkeletalMesh";
 
-	// Token: 0x0400C565 RID: 50533
+	// Token: 0x0400C932 RID: 51506
 	public bool ExitImmediately;
 
-	// Token: 0x0400C566 RID: 50534
+	// Token: 0x0400C933 RID: 51507
 	public string AnimMontagePath = "";
 
-	// Token: 0x0400C567 RID: 50535
+	// Token: 0x0400C934 RID: 51508
 	public bool IsRole;
 }

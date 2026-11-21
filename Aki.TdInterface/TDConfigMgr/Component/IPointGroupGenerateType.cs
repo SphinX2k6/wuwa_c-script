@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000612 RID: 1554
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006AF RID: 1711
 	public class IPointGroupGenerateType
 	{
-		// Token: 0x06002128 RID: 8488 RVA: 0x0005BF3C File Offset: 0x0005A13C
+		// Token: 0x0600242E RID: 9262 RVA: 0x00062C50 File Offset: 0x00060E50
 		private IPointGroupGenerateType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002129 RID: 8489 RVA: 0x0005BF74 File Offset: 0x0005A174
+		// Token: 0x0600242F RID: 9263 RVA: 0x00062C88 File Offset: 0x00060E88
 		public static IPointGroupGenerateType Create([Nullable(2)] IPointGroupGenerateType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600212A RID: 8490 RVA: 0x0005BF87 File Offset: 0x0005A187
+		// Token: 0x06002430 RID: 9264 RVA: 0x00062C9B File Offset: 0x00060E9B
 		public static IPointGroupGenerateType CreateFromSetValue([Nullable(2)] IPointGroupGenerateType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600212B RID: 8491 RVA: 0x0005BF9A File Offset: 0x0005A19A
+		// Token: 0x06002431 RID: 9265 RVA: 0x00062CAE File Offset: 0x00060EAE
 		public IPointGroupGenerateType_SetValue ToSetValue()
 		{
 			return new IPointGroupGenerateType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008D8 RID: 2264
-		// (get) Token: 0x0600212C RID: 8492 RVA: 0x0005BFAD File Offset: 0x0005A1AD
-		// (set) Token: 0x0600212D RID: 8493 RVA: 0x0005BFD8 File Offset: 0x0005A1D8
+		// Token: 0x1700098F RID: 2447
+		// (get) Token: 0x06002432 RID: 9266 RVA: 0x00062CC1 File Offset: 0x00060EC1
+		// (set) Token: 0x06002433 RID: 9267 RVA: 0x00062CEC File Offset: 0x00060EEC
 		public virtual EPointGroupGenerateType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001730 RID: 5936
+		// Token: 0x04001922 RID: 6434
 		[Nullable(2)]
 		protected IPointGroupGenerateType FbInstance;
 
-		// Token: 0x04001731 RID: 5937
+		// Token: 0x04001923 RID: 6435
 		[Nullable(2)]
 		protected IPointGroupGenerateType_SetValue PocoInterface;
 	}

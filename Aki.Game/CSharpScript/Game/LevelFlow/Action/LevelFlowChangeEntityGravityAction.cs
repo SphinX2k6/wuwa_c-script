@@ -4,10 +4,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F7F RID: 28543
+	// Token: 0x02006100 RID: 24832
 	public class LevelFlowChangeEntityGravityAction : LevelFlowActionBase
 	{
-		// Token: 0x060456D0 RID: 284368 RVA: 0x0113702D File Offset: 0x0113522D
+		// Token: 0x0603B87E RID: 243838 RVA: 0x010E0E31 File Offset: 0x010DF031
 		[NullableContext(1)]
 		public LevelFlowChangeEntityGravityAction Init(int entityId, global::Vector gravity)
 		{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x060456D1 RID: 284369 RVA: 0x01137040 File Offset: 0x01135240
+		// Token: 0x0603B87F RID: 243839 RVA: 0x010E0E44 File Offset: 0x010DF044
 		protected override void OnExecute()
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(this.EntityId);
@@ -66,10 +66,10 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x040243AB RID: 148395
+		// Token: 0x0401F660 RID: 128608
 		private int EntityId;
 
-		// Token: 0x040243AC RID: 148396
+		// Token: 0x0401F661 RID: 128609
 		[Nullable(2)]
 		private global::Vector Gravity;
 	}

@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049FB RID: 18939
+	// Token: 0x02004EBB RID: 20155
 	public class ICheckEntityBuffStackT
 	{
-		// Token: 0x170088FE RID: 35070
-		// (get) Token: 0x0601D998 RID: 121240 RVA: 0x0042A5C5 File Offset: 0x004287C5
-		// (set) Token: 0x0601D999 RID: 121241 RVA: 0x0042A5CD File Offset: 0x004287CD
+		// Token: 0x17008FCE RID: 36814
+		// (get) Token: 0x0601F40B RID: 128011 RVA: 0x0045B231 File Offset: 0x00459431
+		// (set) Token: 0x0601F40C RID: 128012 RVA: 0x0045B239 File Offset: 0x00459439
 		public ECondition Type { get; set; }
 
-		// Token: 0x170088FF RID: 35071
-		// (get) Token: 0x0601D99A RID: 121242 RVA: 0x0042A5D6 File Offset: 0x004287D6
-		// (set) Token: 0x0601D99B RID: 121243 RVA: 0x0042A5DE File Offset: 0x004287DE
+		// Token: 0x17008FCF RID: 36815
+		// (get) Token: 0x0601F40D RID: 128013 RVA: 0x0045B242 File Offset: 0x00459442
+		// (set) Token: 0x0601F40E RID: 128014 RVA: 0x0045B24A File Offset: 0x0045944A
 		public IMonsterBuffContainerT Target { get; set; }
 
-		// Token: 0x17008900 RID: 35072
-		// (get) Token: 0x0601D99C RID: 121244 RVA: 0x0042A5E7 File Offset: 0x004287E7
-		// (set) Token: 0x0601D99D RID: 121245 RVA: 0x0042A5EF File Offset: 0x004287EF
+		// Token: 0x17008FD0 RID: 36816
+		// (get) Token: 0x0601F40F RID: 128015 RVA: 0x0045B253 File Offset: 0x00459453
+		// (set) Token: 0x0601F410 RID: 128016 RVA: 0x0045B25B File Offset: 0x0045945B
 		public long BuffId { get; set; }
 
-		// Token: 0x17008901 RID: 35073
-		// (get) Token: 0x0601D99E RID: 121246 RVA: 0x0042A5F8 File Offset: 0x004287F8
-		// (set) Token: 0x0601D99F RID: 121247 RVA: 0x0042A600 File Offset: 0x00428800
+		// Token: 0x17008FD1 RID: 36817
+		// (get) Token: 0x0601F411 RID: 128017 RVA: 0x0045B264 File Offset: 0x00459464
+		// (set) Token: 0x0601F412 RID: 128018 RVA: 0x0045B26C File Offset: 0x0045946C
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008902 RID: 35074
-		// (get) Token: 0x0601D9A0 RID: 121248 RVA: 0x0042A609 File Offset: 0x00428809
-		// (set) Token: 0x0601D9A1 RID: 121249 RVA: 0x0042A611 File Offset: 0x00428811
+		// Token: 0x17008FD2 RID: 36818
+		// (get) Token: 0x0601F413 RID: 128019 RVA: 0x0045B275 File Offset: 0x00459475
+		// (set) Token: 0x0601F414 RID: 128020 RVA: 0x0045B27D File Offset: 0x0045947D
 		public int Stack { get; set; }
 
-		// Token: 0x0601D9A2 RID: 121250 RVA: 0x0042A61A File Offset: 0x0042881A
+		// Token: 0x0601F415 RID: 128021 RVA: 0x0045B286 File Offset: 0x00459486
 		public ICheckEntityBuffStackT()
 		{
 			this.Type = ECondition.CompareVar;

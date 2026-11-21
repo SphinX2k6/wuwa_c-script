@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Interface
 {
-	// Token: 0x020071F6 RID: 29174
+	// Token: 0x020062AB RID: 25259
 	public interface IFlowerPollutionManager
 	{
-		// Token: 0x060476A6 RID: 292518
+		// Token: 0x0603CFAE RID: 249774
 		void ClearFlowerPollution();
 
-		// Token: 0x060476A7 RID: 292519
+		// Token: 0x0603CFAF RID: 249775
 		void UpdateFlowerPollution(float delta);
 	}
 }

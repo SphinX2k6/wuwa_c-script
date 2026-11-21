@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 
-// Token: 0x020029FA RID: 10746
+// Token: 0x02001F75 RID: 8053
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -12,7 +12,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 })]
 public class ShopMediumItemGrid : LoopScrollMediumItemGrid<ShopItemFullInfo>
 {
-	// Token: 0x060164AE RID: 91310 RVA: 0x005A4490 File Offset: 0x005A2690
+	// Token: 0x06013EB5 RID: 81589 RVA: 0x005CF468 File Offset: 0x005CD668
 	protected override void OnRefresh(ShopItemFullInfo data, bool isSelected, int gridIndex)
 	{
 		if (data == null)
@@ -34,7 +34,7 @@ public class ShopMediumItemGrid : LoopScrollMediumItemGrid<ShopItemFullInfo>
 		base.Apply<PropMediumItemGrid>(parameters);
 	}
 
-	// Token: 0x060164AF RID: 91311 RVA: 0x005A452A File Offset: 0x005A272A
+	// Token: 0x06013EB6 RID: 81590 RVA: 0x005CF502 File Offset: 0x005CD702
 	public override void OnSelected(bool fireEvent)
 	{
 		ShopModel.Instance.OpenItemInfo = this.ItemInfo;
@@ -42,13 +42,13 @@ public class ShopMediumItemGrid : LoopScrollMediumItemGrid<ShopItemFullInfo>
 		this.SetSelected(true, false);
 	}
 
-	// Token: 0x060164B0 RID: 91312 RVA: 0x005A4554 File Offset: 0x005A2754
+	// Token: 0x06013EB7 RID: 81591 RVA: 0x005CF52C File Offset: 0x005CD72C
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, false);
 	}
 
-	// Token: 0x0400A5DD RID: 42461
+	// Token: 0x0400A9C7 RID: 43463
 	[Nullable(2)]
 	public ShopItemFullInfo ItemInfo;
 }

@@ -5,10 +5,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.CountDown
 {
-	// Token: 0x02006F18 RID: 28440
+	// Token: 0x02006099 RID: 24729
 	public static class LevelGamePlayPrepareCountDownDefine
 	{
-		// Token: 0x06045376 RID: 283510 RVA: 0x011202A8 File Offset: 0x0111E4A8
+		// Token: 0x0603B524 RID: 242980 RVA: 0x010CA248 File Offset: 0x010C8448
 		// Note: this type is marked as 'beforefieldinit'.
 		static LevelGamePlayPrepareCountDownDefine()
 		{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.LevelGamePlay.CountDown
 			LevelGamePlayPrepareCountDownDefine.countDownUiStyleToResourceId = dictionary;
 		}
 
-		// Token: 0x04024150 RID: 147792
+		// Token: 0x0401F405 RID: 128005
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<ECountDownUiStyle, string> countDownUiStyleToResourceId;

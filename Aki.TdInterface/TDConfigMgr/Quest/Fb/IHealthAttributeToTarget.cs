@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200138E RID: 5006
+	// Token: 0x020014DF RID: 5343
 	public class IHealthAttributeToTarget : IAttributeToTarget
 	{
-		// Token: 0x0600727F RID: 29311 RVA: 0x00113505 File Offset: 0x00111705
-		[NullableContext(1)]
+		// Token: 0x06007925 RID: 31013 RVA: 0x00121B89 File Offset: 0x0011FD89
 		public static IHealthAttributeToTarget Create(IHealthAttributeToTarget? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002536 RID: 9526
-		// (get) Token: 0x06007280 RID: 29312 RVA: 0x00113524 File Offset: 0x00111724
+		// Token: 0x17002709 RID: 9993
+		// (get) Token: 0x06007926 RID: 31014 RVA: 0x00121BA8 File Offset: 0x0011FDA8
 		public override EAttributeToTarget Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002537 RID: 9527
-		// (get) Token: 0x06007281 RID: 29313 RVA: 0x00113531 File Offset: 0x00111731
+		// Token: 0x1700270A RID: 9994
+		// (get) Token: 0x06007927 RID: 31015 RVA: 0x00121BB5 File Offset: 0x0011FDB5
 		public virtual float Min
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002538 RID: 9528
-		// (get) Token: 0x06007282 RID: 29314 RVA: 0x0011353E File Offset: 0x0011173E
+		// Token: 0x1700270B RID: 9995
+		// (get) Token: 0x06007928 RID: 31016 RVA: 0x00121BC2 File Offset: 0x0011FDC2
 		public virtual float Max
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002539 RID: 9529
-		// (get) Token: 0x06007283 RID: 29315 RVA: 0x0011354C File Offset: 0x0011174C
+		// Token: 0x1700270C RID: 9996
+		// (get) Token: 0x06007929 RID: 31017 RVA: 0x00121BD0 File Offset: 0x0011FDD0
 		public virtual bool? ZeroHealthOnDeath
 		{
 			get
@@ -65,7 +63,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400422C RID: 16940
+		// Token: 0x040045AD RID: 17837
 		private IHealthAttributeToTarget Instance;
 	}
 }

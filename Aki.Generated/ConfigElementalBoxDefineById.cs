@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200025C RID: 604
+	// Token: 0x02000270 RID: 624
 	public class ConfigElementalBoxDefineById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000E2C RID: 3628 RVA: 0x000A9947 File Offset: 0x000A7B47
+		// Token: 0x06000EA4 RID: 3748 RVA: 0x000AFC0B File Offset: 0x000ADE0B
 		static ConfigElementalBoxDefineById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigElementalBoxDefineById.CreateStaticDefaultValue), new Action(ConfigElementalBoxDefineById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000E2D RID: 3629 RVA: 0x000A9968 File Offset: 0x000A7B68
+		// Token: 0x06000EA5 RID: 3749 RVA: 0x000AFC2C File Offset: 0x000ADE2C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigElementalBoxDefineById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000E2E RID: 3630 RVA: 0x000A99E7 File Offset: 0x000A7BE7
+		// Token: 0x06000EA6 RID: 3750 RVA: 0x000AFCAB File Offset: 0x000ADEAB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigElementalBoxDefineById.LogPair = null;
 			ConfigElementalBoxDefineById.HandleId = 0;
 		}
 
-		// Token: 0x06000E2F RID: 3631 RVA: 0x000A99F5 File Offset: 0x000A7BF5
+		// Token: 0x06000EA7 RID: 3751 RVA: 0x000AFCB9 File Offset: 0x000ADEB9
 		public static void Init()
 		{
 			ConfigElementalBoxDefineById.HandleId = ConfigCommon.InitDataStatement(ConfigElementalBoxDefineById.HandleId, "db_elementalboxdefine.db", "select BinData from `ElementalBoxDefine` where Id=?");
 		}
 
-		// Token: 0x06000E30 RID: 3632 RVA: 0x000A9A10 File Offset: 0x000A7C10
+		// Token: 0x06000EA8 RID: 3752 RVA: 0x000AFCD4 File Offset: 0x000ADED4
 		public static ElementalBoxDefine? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigElementalBoxDefineById.HandleId, ConfigElementalBoxDefineById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ElementalBoxDefine?(rootAsElementalBoxDefine);
 		}
 
-		// Token: 0x04001068 RID: 4200
+		// Token: 0x040010F4 RID: 4340
 		private const string DB = "db_elementalboxdefine.db";
 
-		// Token: 0x04001069 RID: 4201
+		// Token: 0x040010F5 RID: 4341
 		private const string FILE = "k.可视化编辑/c.Csv/x.匣子核心定义/*.csv*";
 
-		// Token: 0x0400106A RID: 4202
+		// Token: 0x040010F6 RID: 4342
 		private const string TABLE = "ElementalBoxDefine";
 
-		// Token: 0x0400106B RID: 4203
+		// Token: 0x040010F7 RID: 4343
 		private const string COMMAND = "select BinData from `ElementalBoxDefine` where Id=?";
 
-		// Token: 0x0400106C RID: 4204
+		// Token: 0x040010F8 RID: 4344
 		private const string KEY_PREFIX = "ElementalBoxDefineById";
 
-		// Token: 0x0400106D RID: 4205
+		// Token: 0x040010F9 RID: 4345
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400106E RID: 4206
+		// Token: 0x040010FA RID: 4346
 		private static int HandleId;
 	}
 }

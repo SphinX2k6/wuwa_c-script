@@ -3,43 +3,43 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060AE RID: 24750
+	// Token: 0x0200502C RID: 20524
 	[NullableContext(1)]
 	public interface ISolarSpeedActivitySubViewData
 	{
-		// Token: 0x170090AD RID: 37037
-		// (get) Token: 0x0603E937 RID: 256311
-		// (set) Token: 0x0603E938 RID: 256312
+		// Token: 0x1700640F RID: 25615
+		// (get) Token: 0x060335FB RID: 210427
+		// (set) Token: 0x060335FC RID: 210428
 		string RewardTextId { get; set; }
 
-		// Token: 0x170090AE RID: 37038
-		// (get) Token: 0x0603E939 RID: 256313
-		// (set) Token: 0x0603E93A RID: 256314
+		// Token: 0x17006410 RID: 25616
+		// (get) Token: 0x060335FD RID: 210429
+		// (set) Token: 0x060335FE RID: 210430
 		string ButtonTextId { get; set; }
 
-		// Token: 0x170090AF RID: 37039
-		// (get) Token: 0x0603E93B RID: 256315
-		// (set) Token: 0x0603E93C RID: 256316
+		// Token: 0x17006411 RID: 25617
+		// (get) Token: 0x060335FF RID: 210431
+		// (set) Token: 0x06033600 RID: 210432
 		Func<bool> RewardRedDotStateGetter { get; set; }
 
-		// Token: 0x170090B0 RID: 37040
-		// (get) Token: 0x0603E93D RID: 256317
-		// (set) Token: 0x0603E93E RID: 256318
+		// Token: 0x17006412 RID: 25618
+		// (get) Token: 0x06033601 RID: 210433
+		// (set) Token: 0x06033602 RID: 210434
 		Func<bool> ConfirmRedDotStateGetter { get; set; }
 
-		// Token: 0x170090B1 RID: 37041
-		// (get) Token: 0x0603E93F RID: 256319
-		// (set) Token: 0x0603E940 RID: 256320
+		// Token: 0x17006413 RID: 25619
+		// (get) Token: 0x06033603 RID: 210435
+		// (set) Token: 0x06033604 RID: 210436
 		Func<string> RewardProgressCurrentGetter { get; set; }
 
-		// Token: 0x170090B2 RID: 37042
-		// (get) Token: 0x0603E941 RID: 256321
-		// (set) Token: 0x0603E942 RID: 256322
+		// Token: 0x17006414 RID: 25620
+		// (get) Token: 0x06033605 RID: 210437
+		// (set) Token: 0x06033606 RID: 210438
 		string RewardProgressTextId { get; set; }
 
-		// Token: 0x170090B3 RID: 37043
-		// (get) Token: 0x0603E943 RID: 256323
-		// (set) Token: 0x0603E944 RID: 256324
+		// Token: 0x17006415 RID: 25621
+		// (get) Token: 0x06033607 RID: 210439
+		// (set) Token: 0x06033608 RID: 210440
 		string RewardProgressTotal { get; set; }
 	}
 }

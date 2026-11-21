@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A42 RID: 2626
+	// Token: 0x02000B07 RID: 2823
 	public static class ETriggerKeyExtensions
 	{
-		// Token: 0x060039DA RID: 14810 RVA: 0x00095298 File Offset: 0x00093498
+		// Token: 0x06003DB2 RID: 15794 RVA: 0x0009DC04 File Offset: 0x0009BE04
 		public static string ToEnumString(this ETriggerKey value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060039DB RID: 14811 RVA: 0x000952E0 File Offset: 0x000934E0
+		// Token: 0x06003DB3 RID: 15795 RVA: 0x0009DC4C File Offset: 0x0009BE4C
 		public static ETriggerKey FromString(string name)
 		{
 			ETriggerKey result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060039DC RID: 14812 RVA: 0x0009530C File Offset: 0x0009350C
+		// Token: 0x06003DB4 RID: 15796 RVA: 0x0009DC78 File Offset: 0x0009BE78
 		public static bool TryFromString(string name, out ETriggerKey value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060039DD RID: 14813 RVA: 0x00095362 File Offset: 0x00093562
+		// Token: 0x06003DB5 RID: 15797 RVA: 0x0009DCCE File Offset: 0x0009BECE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060039DE RID: 14814 RVA: 0x00095382 File Offset: 0x00093582
+		// Token: 0x06003DB6 RID: 15798 RVA: 0x0009DCEE File Offset: 0x0009BEEE
 		public static ETriggerKey[] GetValues()
 		{
 			return new ETriggerKey[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060039DF RID: 14815 RVA: 0x00095392 File Offset: 0x00093592
+		// Token: 0x06003DB7 RID: 15799 RVA: 0x0009DCFE File Offset: 0x0009BEFE
 		public static string[] GetNames()
 		{
 			return new string[]

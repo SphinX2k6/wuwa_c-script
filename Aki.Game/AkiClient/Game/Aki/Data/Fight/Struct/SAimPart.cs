@@ -6,7 +6,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Fight.Struct
 {
-	// Token: 0x02003F5F RID: 16223
+	// Token: 0x02003201 RID: 12801
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -14,207 +14,194 @@ namespace AkiClient.Game.Aki.Data.Fight.Struct
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 64)]
 	public class SAimPart : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06029536 RID: 169270 RVA: 0x009C16B8 File Offset: 0x009BF8B8
+		// Token: 0x0601FDD6 RID: 130518 RVA: 0x00937BA5 File Offset: 0x00935DA5
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SAimPart._ScriptStructPtr != 0) ? SAimPart._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Fight/Struct/SAimPart.SAimPart", ref SAimPart._ScriptStructPtr);
 		}
 
-		// Token: 0x170062A4 RID: 25252
-		// (get) Token: 0x06029537 RID: 169271 RVA: 0x009C16DC File Offset: 0x009BF8DC
-		// (set) Token: 0x06029538 RID: 169272 RVA: 0x009C16F0 File Offset: 0x009BF8F0
+		// Token: 0x17003BE5 RID: 15333
+		// (get) Token: 0x0601FDD7 RID: 130519 RVA: 0x00937BC9 File Offset: 0x00935DC9
+		// (set) Token: 0x0601FDD8 RID: 130520 RVA: 0x00937BDD File Offset: 0x00935DDD
 		public unsafe string BoneName
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SAimPart.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SAimPart.__PropertyOffset_BoneName)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SAimPart.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SAimPart.__PropertyOffset_BoneName)), value);
 			}
 		}
 
-		// Token: 0x170062A5 RID: 25253
-		// (get) Token: 0x06029539 RID: 169273 RVA: 0x009C1705 File Offset: 0x009BF905
-		// (set) Token: 0x0602953A RID: 169274 RVA: 0x009C1719 File Offset: 0x009BF919
+		// Token: 0x17003BE6 RID: 15334
+		// (get) Token: 0x0601FDD9 RID: 130521 RVA: 0x00937BF2 File Offset: 0x00935DF2
+		// (set) Token: 0x0601FDDA RID: 130522 RVA: 0x00937C06 File Offset: 0x00935E06
 		public unsafe FVector Offset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_Offset);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_Offset) = value;
 			}
 		}
 
-		// Token: 0x170062A6 RID: 25254
-		// (get) Token: 0x0602953B RID: 169275 RVA: 0x009C172E File Offset: 0x009BF92E
-		// (set) Token: 0x0602953C RID: 169276 RVA: 0x009C173E File Offset: 0x009BF93E
+		// Token: 0x17003BE7 RID: 15335
+		// (get) Token: 0x0601FDDB RID: 130523 RVA: 0x00937C1B File Offset: 0x00935E1B
+		// (set) Token: 0x0601FDDC RID: 130524 RVA: 0x00937C2B File Offset: 0x00935E2B
 		public unsafe float RadiusIn
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_RadiusIn);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_RadiusIn) = value;
 			}
 		}
 
-		// Token: 0x170062A7 RID: 25255
-		// (get) Token: 0x0602953D RID: 169277 RVA: 0x009C174F File Offset: 0x009BF94F
-		// (set) Token: 0x0602953E RID: 169278 RVA: 0x009C175F File Offset: 0x009BF95F
+		// Token: 0x17003BE8 RID: 15336
+		// (get) Token: 0x0601FDDD RID: 130525 RVA: 0x00937C3C File Offset: 0x00935E3C
+		// (set) Token: 0x0601FDDE RID: 130526 RVA: 0x00937C4C File Offset: 0x00935E4C
 		public unsafe float RadiusOut
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_RadiusOut);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_RadiusOut) = value;
 			}
 		}
 
-		// Token: 0x170062A8 RID: 25256
-		// (get) Token: 0x0602953F RID: 169279 RVA: 0x009C1770 File Offset: 0x009BF970
-		// (set) Token: 0x06029540 RID: 169280 RVA: 0x009C1780 File Offset: 0x009BF980
+		// Token: 0x17003BE9 RID: 15337
+		// (get) Token: 0x0601FDDF RID: 130527 RVA: 0x00937C5D File Offset: 0x00935E5D
+		// (set) Token: 0x0601FDE0 RID: 130528 RVA: 0x00937C6D File Offset: 0x00935E6D
 		public unsafe float RadiusOutOnStart
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_RadiusOutOnStart);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_RadiusOutOnStart) = value;
 			}
 		}
 
-		// Token: 0x170062A9 RID: 25257
-		// (get) Token: 0x06029541 RID: 169281 RVA: 0x009C1791 File Offset: 0x009BF991
-		// (set) Token: 0x06029542 RID: 169282 RVA: 0x009C17A1 File Offset: 0x009BF9A1
+		// Token: 0x17003BEA RID: 15338
+		// (get) Token: 0x0601FDE1 RID: 130529 RVA: 0x00937C7E File Offset: 0x00935E7E
+		// (set) Token: 0x0601FDE2 RID: 130530 RVA: 0x00937C8E File Offset: 0x00935E8E
 		public unsafe float MobileCorrect
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_MobileCorrect);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_MobileCorrect) = value;
 			}
 		}
 
-		// Token: 0x170062AA RID: 25258
-		// (get) Token: 0x06029543 RID: 169283 RVA: 0x009C17B2 File Offset: 0x009BF9B2
-		// (set) Token: 0x06029544 RID: 169284 RVA: 0x009C17C2 File Offset: 0x009BF9C2
+		// Token: 0x17003BEB RID: 15339
+		// (get) Token: 0x0601FDE3 RID: 130531 RVA: 0x00937C9F File Offset: 0x00935E9F
+		// (set) Token: 0x0601FDE4 RID: 130532 RVA: 0x00937CAF File Offset: 0x00935EAF
 		public unsafe float GamePadCorrect
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_GamePadCorrect);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)SAimPart.__PropertyOffset_GamePadCorrect) = value;
 			}
 		}
 
-		// Token: 0x170062AB RID: 25259
-		// (get) Token: 0x06029545 RID: 169285 RVA: 0x009C17D3 File Offset: 0x009BF9D3
-		// (set) Token: 0x06029546 RID: 169286 RVA: 0x009C17E7 File Offset: 0x009BF9E7
+		// Token: 0x17003BEC RID: 15340
+		// (get) Token: 0x0601FDE5 RID: 130533 RVA: 0x00937CC0 File Offset: 0x00935EC0
+		// (set) Token: 0x0601FDE6 RID: 130534 RVA: 0x00937CD4 File Offset: 0x00935ED4
 		public unsafe string 忽略的骨骼碰撞
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SAimPart.__PropertyOffset_7)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SAimPart.__PropertyOffset_忽略的骨骼碰撞)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SAimPart.__PropertyOffset_7)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SAimPart.__PropertyOffset_忽略的骨骼碰撞)), value);
 			}
 		}
 
-		// Token: 0x06029547 RID: 169287 RVA: 0x009C17FC File Offset: 0x009BF9FC
+		// Token: 0x0601FDE7 RID: 130535 RVA: 0x00937CE9 File Offset: 0x00935EE9
 		public SAimPart()
 		{
 		}
 
-		// Token: 0x06029548 RID: 169288 RVA: 0x009C1804 File Offset: 0x009BFA04
-		public SAimPart(string BoneName, FVector Offset, float RadiusIn, float RadiusOut, float RadiusOutOnStart, float MobileCorrect, float GamePadCorrect, string 忽略的骨骼碰撞)
-		{
-			this.BoneName = BoneName;
-			this.Offset = Offset;
-			this.RadiusIn = RadiusIn;
-			this.RadiusOut = RadiusOut;
-			this.RadiusOutOnStart = RadiusOutOnStart;
-			this.MobileCorrect = MobileCorrect;
-			this.GamePadCorrect = GamePadCorrect;
-			this.忽略的骨骼碰撞 = 忽略的骨骼碰撞;
-		}
-
-		// Token: 0x06029549 RID: 169289 RVA: 0x009C1854 File Offset: 0x009BFA54
+		// Token: 0x0601FDE8 RID: 130536 RVA: 0x00937CF1 File Offset: 0x00935EF1
 		protected override IntPtr GetUStructPtr()
 		{
 			return SAimPart.StaticStruct();
 		}
 
-		// Token: 0x0602954A RID: 169290 RVA: 0x009C1860 File Offset: 0x009BFA60
+		// Token: 0x0601FDE9 RID: 130537 RVA: 0x00937CFD File Offset: 0x00935EFD
 		[NullableContext(2)]
 		public SAimPart(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602954B RID: 169291 RVA: 0x009C186A File Offset: 0x009BFA6A
+		// Token: 0x0601FDEA RID: 130538 RVA: 0x00937D07 File Offset: 0x00935F07
 		public SAimPart(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602954C RID: 169292 RVA: 0x009C1875 File Offset: 0x009BFA75
+		// Token: 0x0601FDEB RID: 130539 RVA: 0x00937D12 File Offset: 0x00935F12
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SAimPart(Pointer, false, true);
 		}
 
-		// Token: 0x0602954D RID: 169293 RVA: 0x009C187F File Offset: 0x009BFA7F
+		// Token: 0x0601FDEC RID: 130540 RVA: 0x00937D1C File Offset: 0x00935F1C
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SAimPart(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040152CE RID: 86734
+		// Token: 0x040111CD RID: 70093
 		public const string __ObjectPath = "/Game/Aki/Data/Fight/Struct/SAimPart.SAimPart";
 
-		// Token: 0x040152CF RID: 86735
+		// Token: 0x040111CE RID: 70094
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040152D0 RID: 86736
-		internal static int __PropertyOffset_0;
+		// Token: 0x040111CF RID: 70095
+		internal static int __PropertyOffset_BoneName;
 
-		// Token: 0x040152D1 RID: 86737
-		internal static int __PropertyOffset_1;
+		// Token: 0x040111D0 RID: 70096
+		internal static int __PropertyOffset_Offset;
 
-		// Token: 0x040152D2 RID: 86738
-		internal static int __PropertyOffset_2;
+		// Token: 0x040111D1 RID: 70097
+		internal static int __PropertyOffset_RadiusIn;
 
-		// Token: 0x040152D3 RID: 86739
-		internal static int __PropertyOffset_3;
+		// Token: 0x040111D2 RID: 70098
+		internal static int __PropertyOffset_RadiusOut;
 
-		// Token: 0x040152D4 RID: 86740
-		internal static int __PropertyOffset_4;
+		// Token: 0x040111D3 RID: 70099
+		internal static int __PropertyOffset_RadiusOutOnStart;
 
-		// Token: 0x040152D5 RID: 86741
-		internal static int __PropertyOffset_5;
+		// Token: 0x040111D4 RID: 70100
+		internal static int __PropertyOffset_MobileCorrect;
 
-		// Token: 0x040152D6 RID: 86742
-		internal static int __PropertyOffset_6;
+		// Token: 0x040111D5 RID: 70101
+		internal static int __PropertyOffset_GamePadCorrect;
 
-		// Token: 0x040152D7 RID: 86743
-		internal static int __PropertyOffset_7;
+		// Token: 0x040111D6 RID: 70102
+		internal static int __PropertyOffset_忽略的骨骼碰撞;
 	}
 }

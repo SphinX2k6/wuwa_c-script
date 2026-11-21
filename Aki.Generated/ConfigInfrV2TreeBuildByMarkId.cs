@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000441 RID: 1089
+	// Token: 0x02000457 RID: 1111
 	public class ConfigInfrV2TreeBuildByMarkId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001990 RID: 6544 RVA: 0x000EA070 File Offset: 0x000E8270
+		// Token: 0x06001A14 RID: 6676 RVA: 0x000F07C4 File Offset: 0x000EE9C4
 		static ConfigInfrV2TreeBuildByMarkId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfrV2TreeBuildByMarkId.CreateStaticDefaultValue), new Action(ConfigInfrV2TreeBuildByMarkId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001991 RID: 6545 RVA: 0x000EA090 File Offset: 0x000E8290
+		// Token: 0x06001A15 RID: 6677 RVA: 0x000F07E4 File Offset: 0x000EE9E4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfrV2TreeBuildByMarkId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001992 RID: 6546 RVA: 0x000EA10F File Offset: 0x000E830F
+		// Token: 0x06001A16 RID: 6678 RVA: 0x000F0863 File Offset: 0x000EEA63
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfrV2TreeBuildByMarkId.LogPair = null;
 			ConfigInfrV2TreeBuildByMarkId.HandleId = 0;
 		}
 
-		// Token: 0x06001993 RID: 6547 RVA: 0x000EA11D File Offset: 0x000E831D
+		// Token: 0x06001A17 RID: 6679 RVA: 0x000F0871 File Offset: 0x000EEA71
 		public static void Init()
 		{
 			ConfigInfrV2TreeBuildByMarkId.HandleId = ConfigCommon.InitDataStatement(ConfigInfrV2TreeBuildByMarkId.HandleId, "db_villageinfr.db", "select BinData from `InfrV2TreeBuild` where MarkId=?");
 		}
 
-		// Token: 0x06001994 RID: 6548 RVA: 0x000EA138 File Offset: 0x000E8338
+		// Token: 0x06001A18 RID: 6680 RVA: 0x000F088C File Offset: 0x000EEA8C
 		public static InfrV2TreeBuild? GetConfig(int p0MarkId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInfrV2TreeBuildByMarkId.HandleId, ConfigInfrV2TreeBuildByMarkId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new InfrV2TreeBuild?(rootAsInfrV2TreeBuild);
 		}
 
-		// Token: 0x04001DAB RID: 7595
+		// Token: 0x04001E45 RID: 7749
 		private const string DB = "db_villageinfr.db";
 
-		// Token: 0x04001DAC RID: 7596
+		// Token: 0x04001E46 RID: 7750
 		private const string FILE = "j.基建V2.xlsx";
 
-		// Token: 0x04001DAD RID: 7597
+		// Token: 0x04001E47 RID: 7751
 		private const string TABLE = "InfrV2TreeBuild";
 
-		// Token: 0x04001DAE RID: 7598
+		// Token: 0x04001E48 RID: 7752
 		private const string COMMAND = "select BinData from `InfrV2TreeBuild` where MarkId=?";
 
-		// Token: 0x04001DAF RID: 7599
+		// Token: 0x04001E49 RID: 7753
 		private const string KEY_PREFIX = "InfrV2TreeBuildByMarkId";
 
-		// Token: 0x04001DB0 RID: 7600
+		// Token: 0x04001E4A RID: 7754
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001DB1 RID: 7601
+		// Token: 0x04001E4B RID: 7755
 		private static int HandleId;
 	}
 }

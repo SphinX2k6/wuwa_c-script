@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x02005904 RID: 22788
+	// Token: 0x020048DD RID: 18653
 	public class InfrArchiveCollectCardItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06039DE3 RID: 237027 RVA: 0x00DBE41C File Offset: 0x00DBC61C
+		// Token: 0x0602ED06 RID: 191750 RVA: 0x00D0D68C File Offset: 0x00D0B88C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -54,14 +54,14 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039DE4 RID: 237028 RVA: 0x00DBE611 File Offset: 0x00DBC811
+		// Token: 0x0602ED07 RID: 191751 RVA: 0x00D0D881 File Offset: 0x00D0BA81
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.ArchiveId = data;
 			this.RefreshCardView();
 		}
 
-		// Token: 0x06039DE5 RID: 237029 RVA: 0x00DBE620 File Offset: 0x00DBC820
+		// Token: 0x0602ED08 RID: 191752 RVA: 0x00D0D890 File Offset: 0x00D0BA90
 		private void RefreshCardView()
 		{
 			InfrArchiveItem? archiveItemConfig = InfrastructureConfig.Instance.GetArchiveItemConfig(this.ArchiveId);
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			base.GetUiNiagara(10).SetNiagaraVarInt("Subuv", archiveItemConfig.Value.EffectId);
 		}
 
-		// Token: 0x06039DE6 RID: 237030 RVA: 0x00DBE774 File Offset: 0x00DBC974
+		// Token: 0x0602ED09 RID: 191753 RVA: 0x00D0D9E4 File Offset: 0x00D0BBE4
 		private void OnClickBtnItem()
 		{
 			InfrArchiveItem? archiveItemConfig = InfrastructureConfig.Instance.GetArchiveItemConfig(this.ArchiveId);
@@ -92,11 +92,11 @@ namespace CSharpScript.Game.Module.Infrastructure
 						this.ArchiveId
 					});
 				}
-				InfoDisplayController.Instance.OpenInfoDisplay(archiveItemConfig.Value.InfoDisplayId, null, null, false, new ELayerType?(ELayerType.Pop));
+				InfoDisplayController.Instance.OpenInfoDisplay(archiveItemConfig.Value.InfoDisplayId, null, null, false, new ELayerType?(ELayerType.Pop), null);
 			}
 		}
 
-		// Token: 0x06039DE7 RID: 237031 RVA: 0x00DBE80C File Offset: 0x00DBCA0C
+		// Token: 0x0602ED0A RID: 191754 RVA: 0x00D0DA7C File Offset: 0x00D0BC7C
 		private void OnClickBtnGo()
 		{
 			InfrArchiveItem? archiveItemConfig = InfrastructureConfig.Instance.GetArchiveItemConfig(this.ArchiveId);
@@ -106,43 +106,43 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x0401E2FF RID: 123647
+		// Token: 0x04018D9C RID: 101788
 		private int ArchiveId;
 
-		// Token: 0x0200BB66 RID: 47974
+		// Token: 0x0200A578 RID: 42360
 		private class EChildType
 		{
-			// Token: 0x04038906 RID: 231686
+			// Token: 0x040332F8 RID: 209656
 			public const int BtnItem = 0;
 
-			// Token: 0x04038907 RID: 231687
+			// Token: 0x040332F9 RID: 209657
 			public const int PanelLock = 1;
 
-			// Token: 0x04038908 RID: 231688
+			// Token: 0x040332FA RID: 209658
 			public const int TextureCardIconLock = 2;
 
-			// Token: 0x04038909 RID: 231689
+			// Token: 0x040332FB RID: 209659
 			public const int TextLockTitle = 3;
 
-			// Token: 0x0403890A RID: 231690
+			// Token: 0x040332FC RID: 209660
 			public const int BtnGo = 4;
 
-			// Token: 0x0403890B RID: 231691
+			// Token: 0x040332FD RID: 209661
 			public const int PanelUnlock = 5;
 
-			// Token: 0x0403890C RID: 231692
+			// Token: 0x040332FE RID: 209662
 			public const int TextureCardIconUnlock = 6;
 
-			// Token: 0x0403890D RID: 231693
+			// Token: 0x040332FF RID: 209663
 			public const int TextTitle = 7;
 
-			// Token: 0x0403890E RID: 231694
+			// Token: 0x04033300 RID: 209664
 			public const int TextureQuality = 8;
 
-			// Token: 0x0403890F RID: 231695
+			// Token: 0x04033301 RID: 209665
 			public const int PanelNew = 9;
 
-			// Token: 0x04038910 RID: 231696
+			// Token: 0x04033302 RID: 209666
 			public const int NiagaraIcon = 10;
 		}
 	}

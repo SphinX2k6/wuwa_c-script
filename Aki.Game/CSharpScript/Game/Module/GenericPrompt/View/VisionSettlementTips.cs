@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GenericPrompt.View
 {
-	// Token: 0x020059B5 RID: 22965
+	// Token: 0x0200498E RID: 18830
 	public class VisionSettlementTips : GenericPromptFloatTipsBase
 	{
-		// Token: 0x0603A3AD RID: 238509 RVA: 0x00DD6C26 File Offset: 0x00DD4E26
+		// Token: 0x0602F2D4 RID: 193236 RVA: 0x00D260FF File Offset: 0x00D242FF
 		[NullableContext(1)]
 		public VisionSettlementTips(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A3AE RID: 238510 RVA: 0x00DD6C2F File Offset: 0x00DD4E2F
+		// Token: 0x0602F2D5 RID: 193237 RVA: 0x00D26108 File Offset: 0x00D24308
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(3, typeof(UUITexture)));
 		}
 
-		// Token: 0x0603A3AF RID: 238511 RVA: 0x00DD6C70 File Offset: 0x00DD4E70
+		// Token: 0x0602F2D6 RID: 193238 RVA: 0x00D26148 File Offset: 0x00D24348
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -38,13 +38,13 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			}
 		}
 
-		// Token: 0x0200BC1E RID: 48158
+		// Token: 0x0200A629 RID: 42537
 		private class EPhantomSpawnPointTips
 		{
-			// Token: 0x04038C65 RID: 232549
+			// Token: 0x04033634 RID: 210484
 			public const int RedIcon = 2;
 
-			// Token: 0x04038C66 RID: 232550
+			// Token: 0x04033635 RID: 210485
 			public const int WhiteIcon = 3;
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000512 RID: 1298
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000579 RID: 1401
 	public class IMonsterNpcInteractionWallRun : IMonsterNpcInteractionConfig
 	{
-		// Token: 0x06001A52 RID: 6738 RVA: 0x0004CD08 File Offset: 0x0004AF08
+		// Token: 0x06001C4E RID: 7246 RVA: 0x00051AC4 File Offset: 0x0004FCC4
 		private IMonsterNpcInteractionWallRun_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001A53 RID: 6739 RVA: 0x0004CD40 File Offset: 0x0004AF40
+		// Token: 0x06001C4F RID: 7247 RVA: 0x00051AFC File Offset: 0x0004FCFC
 		public static IMonsterNpcInteractionWallRun Create([Nullable(2)] IMonsterNpcInteractionWallRun instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A54 RID: 6740 RVA: 0x0004CD53 File Offset: 0x0004AF53
+		// Token: 0x06001C50 RID: 7248 RVA: 0x00051B0F File Offset: 0x0004FD0F
 		public static IMonsterNpcInteractionWallRun CreateFromSetValue([Nullable(2)] IMonsterNpcInteractionWallRun_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A55 RID: 6741 RVA: 0x0004CD66 File Offset: 0x0004AF66
+		// Token: 0x06001C51 RID: 7249 RVA: 0x00051B22 File Offset: 0x0004FD22
 		public new IMonsterNpcInteractionWallRun_SetValue ToSetValue()
 		{
 			return new IMonsterNpcInteractionWallRun_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006ED RID: 1773
-		// (get) Token: 0x06001A56 RID: 6742 RVA: 0x0004CD79 File Offset: 0x0004AF79
-		// (set) Token: 0x06001A57 RID: 6743 RVA: 0x0004CDA4 File Offset: 0x0004AFA4
+		// Token: 0x17000770 RID: 1904
+		// (get) Token: 0x06001C52 RID: 7250 RVA: 0x00051B35 File Offset: 0x0004FD35
+		// (set) Token: 0x06001C53 RID: 7251 RVA: 0x00051B60 File Offset: 0x0004FD60
 		public override EMonsterNpcInteractionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001317 RID: 4887
+		// Token: 0x04001481 RID: 5249
 		[Nullable(2)]
 		protected new IMonsterNpcInteractionWallRun FbInstance;
 
-		// Token: 0x04001318 RID: 4888
+		// Token: 0x04001482 RID: 5250
 		[Nullable(2)]
 		protected new IMonsterNpcInteractionWallRun_SetValue PocoInterface;
 	}

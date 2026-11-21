@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020025F7 RID: 9719
+// Token: 0x02001AE2 RID: 6882
 public class PowerItemInfo
 {
-	// Token: 0x17001954 RID: 6484
-	// (get) Token: 0x06013C5B RID: 80987 RVA: 0x004F4F85 File Offset: 0x004F3185
-	// (set) Token: 0x06013C5A RID: 80986 RVA: 0x004F4F60 File Offset: 0x004F3160
+	// Token: 0x1700198C RID: 6540
+	// (get) Token: 0x0601113D RID: 69949 RVA: 0x00503D11 File Offset: 0x00501F11
+	// (set) Token: 0x0601113C RID: 69948 RVA: 0x00503CEC File Offset: 0x00501EEC
 	public int ItemId
 	{
 		get
@@ -25,37 +25,37 @@ public class PowerItemInfo
 		}
 	}
 
-	// Token: 0x06013C5C RID: 80988 RVA: 0x004F4F8D File Offset: 0x004F318D
+	// Token: 0x0601113E RID: 69950 RVA: 0x00503D19 File Offset: 0x00501F19
 	public PowerItemInfo(int itemId)
 	{
 		this.ItemId = itemId;
 	}
 
-	// Token: 0x040094FB RID: 38139
+	// Token: 0x04009652 RID: 38482
 	[Nullable(1)]
 	public string ItemName = "";
 
-	// Token: 0x040094FC RID: 38140
+	// Token: 0x04009653 RID: 38483
 	private int InnerItemId;
 
-	// Token: 0x040094FD RID: 38141
+	// Token: 0x04009654 RID: 38484
 	public int StackValue;
 
-	// Token: 0x040094FE RID: 38142
+	// Token: 0x04009655 RID: 38485
 	public int RenewValue;
 
-	// Token: 0x040094FF RID: 38143
+	// Token: 0x04009656 RID: 38486
 	public int CostValue;
 
-	// Token: 0x04009500 RID: 38144
+	// Token: 0x04009657 RID: 38487
 	public int ShopId;
 
-	// Token: 0x04009501 RID: 38145
+	// Token: 0x04009658 RID: 38488
 	public int GoodsId;
 
-	// Token: 0x04009502 RID: 38146
+	// Token: 0x04009659 RID: 38489
 	public bool IsHideWhenZero;
 
-	// Token: 0x04009503 RID: 38147
+	// Token: 0x0400965A RID: 38490
 	public int RemainCount;
 }

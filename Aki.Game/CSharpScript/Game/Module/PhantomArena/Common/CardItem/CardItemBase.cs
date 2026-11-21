@@ -7,23 +7,23 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem
 {
-	// Token: 0x020051C8 RID: 20936
+	// Token: 0x02004198 RID: 16792
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class CardItemBase<[Nullable(2)] TItemData> : UiPanelBase
 	{
-		// Token: 0x0603599C RID: 219548 RVA: 0x00CB3288 File Offset: 0x00CB1488
+		// Token: 0x0602A897 RID: 174231 RVA: 0x00C008C4 File Offset: 0x00BFEAC4
 		private void RegisterCardComponent()
 		{
 			this.OnRegisterCardComponent();
 		}
 
-		// Token: 0x0603599D RID: 219549 RVA: 0x00CB3290 File Offset: 0x00CB1490
+		// Token: 0x0602A898 RID: 174232 RVA: 0x00C008CC File Offset: 0x00BFEACC
 		protected virtual void OnRegisterCardComponent()
 		{
 		}
 
-		// Token: 0x0603599E RID: 219550 RVA: 0x00CB3294 File Offset: 0x00CB1494
+		// Token: 0x0602A899 RID: 174233 RVA: 0x00C008D0 File Offset: 0x00BFEAD0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CardItemBase<TItemData>.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603599F RID: 219551 RVA: 0x00CB32D8 File Offset: 0x00CB14D8
+		// Token: 0x0602A89A RID: 174234 RVA: 0x00C00914 File Offset: 0x00BFEB14
 		[NullableContext(2)]
 		private ICardComponentBase AddComponent(ECardItemComponent key)
 		{
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem
 			return cardComponentBase;
 		}
 
-		// Token: 0x060359A0 RID: 219552 RVA: 0x00CB3340 File Offset: 0x00CB1540
+		// Token: 0x0602A89B RID: 174235 RVA: 0x00C0097C File Offset: 0x00BFEB7C
 		[return: Nullable(2)]
 		public T GetComponent<T>(ECardItemComponent key) where T : class, ICardComponentBase
 		{
@@ -64,22 +64,22 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem
 			return cardComponentBase as T;
 		}
 
-		// Token: 0x060359A1 RID: 219553
+		// Token: 0x0602A89C RID: 174236
 		public abstract void Refresh(TItemData data);
 
-		// Token: 0x060359A2 RID: 219554 RVA: 0x00CB3372 File Offset: 0x00CB1572
+		// Token: 0x0602A89D RID: 174237 RVA: 0x00C009AE File Offset: 0x00BFEBAE
 		protected virtual UniTask OnBeforeChildStartAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0401C72B RID: 116523
+		// Token: 0x04017160 RID: 94560
 		protected List<TCardComponentsRegisterInfoByItem> ComponentsRegisterInfoByItem = new List<TCardComponentsRegisterInfoByItem>();
 
-		// Token: 0x0401C72C RID: 116524
+		// Token: 0x04017161 RID: 94561
 		protected List<TCardComponentsRegisterInfoByResourceId> ComponentsRegisterInfoByResourceId = new List<TCardComponentsRegisterInfoByResourceId>();
 
-		// Token: 0x0401C72D RID: 116525
+		// Token: 0x04017162 RID: 94562
 		private readonly Dictionary<ECardItemComponent, ICardComponentBase> ComponentsMap = new Dictionary<ECardItemComponent, ICardComponentBase>();
 	}
 }

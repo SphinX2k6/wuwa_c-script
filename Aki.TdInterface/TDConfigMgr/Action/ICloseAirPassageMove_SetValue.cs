@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018D5 RID: 6357
+	// Token: 0x02001A66 RID: 6758
 	public class ICloseAirPassageMove_SetValue
 	{
-		// Token: 0x040055A4 RID: 21924
+		// Token: 0x040059FE RID: 23038
 		public ESplineMovePattern Type;
 
-		// Token: 0x040055A5 RID: 21925
+		// Token: 0x040059FF RID: 23039
 		public float? GravitySwitchAngularVelocity;
 	}
 }

@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 {
-	// Token: 0x0200643D RID: 25661
+	// Token: 0x020053BB RID: 21435
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorDecalLinkRewardView : UiViewBase
 	{
-		// Token: 0x0604080C RID: 264204 RVA: 0x00F9CE23 File Offset: 0x00F9B023
+		// Token: 0x060354CD RID: 218317 RVA: 0x00EE3D9F File Offset: 0x00EE1F9F
 		public MotorDecalLinkRewardView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0604080D RID: 264205 RVA: 0x00F9CE50 File Offset: 0x00F9B050
+		// Token: 0x060354CE RID: 218318 RVA: 0x00EE3DCC File Offset: 0x00EE1FCC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			};
 		}
 
-		// Token: 0x0604080E RID: 264206 RVA: 0x00F9D00C File Offset: 0x00F9B20C
+		// Token: 0x060354CF RID: 218319 RVA: 0x00EE3F88 File Offset: 0x00EE2188
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorDecalLinkRewardView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604080F RID: 264207 RVA: 0x00F9D050 File Offset: 0x00F9B250
+		// Token: 0x060354D0 RID: 218320 RVA: 0x00EE3FCC File Offset: 0x00EE21CC
 		private void OnSequencePlayEvent(string sequenceName, string eventName)
 		{
 			if ((sequenceName == "Sle" && eventName == "On") || (sequenceName == "Change" && eventName == "On"))
@@ -86,21 +86,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			}
 		}
 
-		// Token: 0x06040810 RID: 264208 RVA: 0x00F9D0AE File Offset: 0x00F9B2AE
+		// Token: 0x060354D1 RID: 218321 RVA: 0x00EE402A File Offset: 0x00EE222A
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.ActivityViewRefreshCurrent, new Action<int>(this.OnActivityRefresh));
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnActivityRefresh));
 		}
 
-		// Token: 0x06040811 RID: 264209 RVA: 0x00F9D0E8 File Offset: 0x00F9B2E8
+		// Token: 0x060354D2 RID: 218322 RVA: 0x00EE4064 File Offset: 0x00EE2264
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.ActivityViewRefreshCurrent, new Action<int>(this.OnActivityRefresh));
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnActivityRefresh));
 		}
 
-		// Token: 0x06040812 RID: 264210 RVA: 0x00F9D122 File Offset: 0x00F9B322
+		// Token: 0x060354D3 RID: 218323 RVA: 0x00EE409E File Offset: 0x00EE229E
 		private void OnActivityRefresh(int eventActivityId)
 		{
 			if (eventActivityId != this.ActivityId || this.ViewModel == null)
@@ -110,19 +110,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			this.Refresh(this.ViewModel, true);
 		}
 
-		// Token: 0x06040813 RID: 264211 RVA: 0x00F9D143 File Offset: 0x00F9B343
+		// Token: 0x060354D4 RID: 218324 RVA: 0x00EE40BF File Offset: 0x00EE22BF
 		private MotorDecalLinkQuestItem QuestItemProxyCreate()
 		{
 			return new MotorDecalLinkQuestItem();
 		}
 
-		// Token: 0x06040814 RID: 264212 RVA: 0x00F9D14A File Offset: 0x00F9B34A
+		// Token: 0x060354D5 RID: 218325 RVA: 0x00EE40C6 File Offset: 0x00EE22C6
 		private MotorDecalLinkRewardViewDotItem CreateDotItem()
 		{
 			return new MotorDecalLinkRewardViewDotItem();
 		}
 
-		// Token: 0x06040815 RID: 264213 RVA: 0x00F9D154 File Offset: 0x00F9B354
+		// Token: 0x060354D6 RID: 218326 RVA: 0x00EE40D0 File Offset: 0x00EE22D0
 		private void OnDecalToggleStateChanged(int index)
 		{
 			this.SelectedDecalIndex = index;
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			viewRootSeqPlayer.PlayLevelSequenceByName("Sle", false, null, false);
 		}
 
-		// Token: 0x06040816 RID: 264214 RVA: 0x00F9D1C0 File Offset: 0x00F9B3C0
+		// Token: 0x060354D7 RID: 218327 RVA: 0x00EE413C File Offset: 0x00EE233C
 		public void Refresh(MotorDecalLinkMainViewModel viewModel, bool isFastMode)
 		{
 			this.RefreshDotItem(viewModel);
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			}, false);
 		}
 
-		// Token: 0x06040817 RID: 264215 RVA: 0x00F9D24C File Offset: 0x00F9B44C
+		// Token: 0x060354D8 RID: 218328 RVA: 0x00EE41C8 File Offset: 0x00EE23C8
 		private void RefreshDecal(MotorDecalLinkIpViewModel ip, bool isFastMode)
 		{
 			int ipId = ip.IpId;
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			}
 		}
 
-		// Token: 0x06040818 RID: 264216 RVA: 0x00F9D460 File Offset: 0x00F9B660
+		// Token: 0x060354D9 RID: 218329 RVA: 0x00EE43DC File Offset: 0x00EE25DC
 		private void RefreshStickerPreview(MotorDecalLinkIpViewModel ip)
 		{
 			string text = (this.SelectedDecalIndex >= 0 && this.SelectedDecalIndex < ip.DecalPreviewPaths.Count) ? ip.DecalPreviewPaths[this.SelectedDecalIndex] : "";
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			}
 		}
 
-		// Token: 0x06040819 RID: 264217 RVA: 0x00F9D4E8 File Offset: 0x00F9B6E8
+		// Token: 0x060354DA RID: 218330 RVA: 0x00EE4464 File Offset: 0x00EE2664
 		private void RefreshDotItem(MotorDecalLinkMainViewModel viewModel)
 		{
 			if (this.DotLayout == null)
@@ -304,13 +304,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			this.DotLayout.RefreshByData(this.DotDataList, null, false);
 		}
 
-		// Token: 0x0604081A RID: 264218 RVA: 0x00F9D56F File Offset: 0x00F9B76F
+		// Token: 0x060354DB RID: 218331 RVA: 0x00EE44EB File Offset: 0x00EE26EB
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0604081B RID: 264219 RVA: 0x00F9D578 File Offset: 0x00F9B778
+		// Token: 0x060354DC RID: 218332 RVA: 0x00EE44F4 File Offset: 0x00EE26F4
 		private void OnClickMoveBtn(int delta)
 		{
 			if (this.ViewModel == null)
@@ -321,11 +321,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			this.Refresh(this.ViewModel, false);
 		}
 
-		// Token: 0x040218AE RID: 137390
+		// Token: 0x0401C1DD RID: 115165
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x040218AF RID: 137391
+		// Token: 0x0401C1DE RID: 115166
 		[Nullable(new byte[]
 		{
 			2,
@@ -333,14 +333,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 		})]
 		private GenericLayout<MotorDecalLinkRewardViewDotItem, bool> DotLayout;
 
-		// Token: 0x040218B0 RID: 137392
+		// Token: 0x0401C1DF RID: 115167
 		[Nullable(2)]
 		private MotorDecalLinkMainViewModel ViewModel;
 
-		// Token: 0x040218B1 RID: 137393
+		// Token: 0x0401C1E0 RID: 115168
 		private List<bool> DotDataList = new List<bool>();
 
-		// Token: 0x040218B2 RID: 137394
+		// Token: 0x0401C1E1 RID: 115169
 		[Nullable(new byte[]
 		{
 			2,
@@ -349,13 +349,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 		})]
 		private GenericScrollViewNew<MotorDecalLinkQuestItem, MotorDecalLinkQuestViewModel> QuestScrollView;
 
-		// Token: 0x040218B3 RID: 137395
+		// Token: 0x0401C1E2 RID: 115170
 		private int ActivityId;
 
-		// Token: 0x040218B4 RID: 137396
+		// Token: 0x0401C1E3 RID: 115171
 		private int? CurrentIpId = new int?(0);
 
-		// Token: 0x040218B5 RID: 137397
+		// Token: 0x0401C1E4 RID: 115172
 		[Nullable(new byte[]
 		{
 			1,
@@ -363,18 +363,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 		})]
 		private List<UUIExtendToggle> DecalToggleList = new List<UUIExtendToggle>();
 
-		// Token: 0x040218B6 RID: 137398
+		// Token: 0x0401C1E5 RID: 115173
 		private int SelectedDecalIndex;
 
-		// Token: 0x040218B7 RID: 137399
+		// Token: 0x0401C1E6 RID: 115174
 		[Nullable(2)]
 		private LevelSequencePlayer StickerRootSeqPlayer;
 
-		// Token: 0x040218B8 RID: 137400
+		// Token: 0x0401C1E7 RID: 115175
 		[Nullable(2)]
 		private LevelSequencePlayer ViewRootSeqPlayer;
 
-		// Token: 0x040218B9 RID: 137401
+		// Token: 0x0401C1E8 RID: 115176
 		[Nullable(2)]
 		private UUIInturnAnimController QuestAnimController;
 	}

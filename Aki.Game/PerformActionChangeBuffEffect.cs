@@ -2,26 +2,26 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020031DF RID: 12767
+// Token: 0x0200274E RID: 10062
 [NullableContext(1)]
 [Nullable(0)]
 public class PerformActionChangeBuffEffect : PerformAction
 {
-	// Token: 0x0601B895 RID: 112789 RVA: 0x0078DFFF File Offset: 0x0078C1FF
+	// Token: 0x0601940E RID: 103438 RVA: 0x007B68F7 File Offset: 0x007B4AF7
 	public override void Register(Entity entity)
 	{
 		base.Register(entity);
 		this.CueComp = entity.GetComponent<BaseGameplayCueComponent>();
 	}
 
-	// Token: 0x0601B896 RID: 112790 RVA: 0x0078E014 File Offset: 0x0078C214
+	// Token: 0x0601940F RID: 103439 RVA: 0x007B690C File Offset: 0x007B4B0C
 	public override void UnRegister()
 	{
 		this.CueComp = null;
 		base.UnRegister();
 	}
 
-	// Token: 0x0601B897 RID: 112791 RVA: 0x0078E024 File Offset: 0x0078C224
+	// Token: 0x06019410 RID: 103440 RVA: 0x007B691C File Offset: 0x007B4B1C
 	public override void Begin()
 	{
 		if (this.Entity == null)
@@ -39,7 +39,7 @@ public class PerformActionChangeBuffEffect : PerformAction
 		}
 	}
 
-	// Token: 0x0601B898 RID: 112792 RVA: 0x0078E0AC File Offset: 0x0078C2AC
+	// Token: 0x06019411 RID: 103441 RVA: 0x007B69A4 File Offset: 0x007B4BA4
 	public override void End()
 	{
 		if (this.Entity == null)
@@ -57,16 +57,16 @@ public class PerformActionChangeBuffEffect : PerformAction
 		this.CueHandles.Clear();
 	}
 
-	// Token: 0x0400D859 RID: 55385
+	// Token: 0x0400DCF7 RID: 56567
 	public new EPerformActionType Type = EPerformActionType.ChangeBuffEffect;
 
-	// Token: 0x0400D85A RID: 55386
+	// Token: 0x0400DCF8 RID: 56568
 	public List<int> BuffEffectIds = new List<int>();
 
-	// Token: 0x0400D85B RID: 55387
+	// Token: 0x0400DCF9 RID: 56569
 	[Nullable(2)]
 	public BaseGameplayCueComponent CueComp;
 
-	// Token: 0x0400D85C RID: 55388
+	// Token: 0x0400DCFA RID: 56570
 	private readonly List<int> CueHandles = new List<int>();
 }

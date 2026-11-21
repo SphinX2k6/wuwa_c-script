@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011AA RID: 4522
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012E4 RID: 4836
 	public class ITitlePreState
 	{
-		// Token: 0x060066B0 RID: 26288 RVA: 0x000F6070 File Offset: 0x000F4270
+		// Token: 0x06006CE7 RID: 27879 RVA: 0x0010383C File Offset: 0x00101A3C
 		private ITitlePreState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060066B1 RID: 26289 RVA: 0x000F60A8 File Offset: 0x000F42A8
+		// Token: 0x06006CE8 RID: 27880 RVA: 0x00103874 File Offset: 0x00101A74
 		public static ITitlePreState Create([Nullable(2)] ITitlePreState instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060066B2 RID: 26290 RVA: 0x000F60BB File Offset: 0x000F42BB
+		// Token: 0x06006CE9 RID: 27881 RVA: 0x00103887 File Offset: 0x00101A87
 		public static ITitlePreState CreateFromSetValue([Nullable(2)] ITitlePreState_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060066B3 RID: 26291 RVA: 0x000F60CE File Offset: 0x000F42CE
+		// Token: 0x06006CEA RID: 27882 RVA: 0x0010389A File Offset: 0x00101A9A
 		public ITitlePreState_SetValue ToSetValue()
 		{
 			return new ITitlePreState_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700215E RID: 8542
-		// (get) Token: 0x060066B4 RID: 26292 RVA: 0x000F60F9 File Offset: 0x000F42F9
-		// (set) Token: 0x060066B5 RID: 26293 RVA: 0x000F6124 File Offset: 0x000F4324
+		// Token: 0x1700231D RID: 8989
+		// (get) Token: 0x06006CEB RID: 27883 RVA: 0x001038C5 File Offset: 0x00101AC5
+		// (set) Token: 0x06006CEC RID: 27884 RVA: 0x001038F0 File Offset: 0x00101AF0
 		public virtual string TidPreStateTitle
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700215F RID: 8543
-		// (get) Token: 0x060066B6 RID: 26294 RVA: 0x000F6134 File Offset: 0x000F4334
-		// (set) Token: 0x060066B7 RID: 26295 RVA: 0x000F6195 File Offset: 0x000F4395
+		// Token: 0x1700231E RID: 8990
+		// (get) Token: 0x06006CED RID: 27885 RVA: 0x00103900 File Offset: 0x00101B00
+		// (set) Token: 0x06006CEE RID: 27886 RVA: 0x00103961 File Offset: 0x00101B61
 		public virtual IConditionGroup SwitchConditions
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002160 RID: 8544
-		// (get) Token: 0x060066B8 RID: 26296 RVA: 0x000F61AA File Offset: 0x000F43AA
-		// (set) Token: 0x060066B9 RID: 26297 RVA: 0x000F61C1 File Offset: 0x000F43C1
+		// Token: 0x1700231F RID: 8991
+		// (get) Token: 0x06006CEF RID: 27887 RVA: 0x00103976 File Offset: 0x00101B76
+		// (set) Token: 0x06006CF0 RID: 27888 RVA: 0x0010398D File Offset: 0x00101B8D
 		[Nullable(2)]
 		public virtual string EdTidPreStateTitle
 		{
@@ -137,18 +135,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003D9F RID: 15775
+		// Token: 0x04004107 RID: 16647
 		[Nullable(2)]
 		protected ITitlePreState FbInstance;
 
-		// Token: 0x04003DA0 RID: 15776
+		// Token: 0x04004108 RID: 16648
 		[Nullable(2)]
 		protected ITitlePreState_SetValue PocoInterface;
 
-		// Token: 0x04003DA1 RID: 15777
+		// Token: 0x04004109 RID: 16649
 		private IConditionGroup _SwitchConditionsCache;
 
-		// Token: 0x04003DA2 RID: 15778
+		// Token: 0x0400410A RID: 16650
 		private bool _SwitchConditionsInited;
 	}
 }

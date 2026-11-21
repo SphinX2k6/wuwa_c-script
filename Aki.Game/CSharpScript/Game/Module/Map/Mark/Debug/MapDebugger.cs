@@ -9,30 +9,30 @@ using CSharpScript.Game.Module.Map.View.BaseMap;
 
 namespace CSharpScript.Game.Module.Map.Mark.Debug
 {
-	// Token: 0x020054C6 RID: 21702
+	// Token: 0x020044A4 RID: 17572
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class MapDebugger
 	{
-		// Token: 0x06037682 RID: 226946 RVA: 0x00D287B2 File Offset: 0x00D269B2
+		// Token: 0x0602C5AD RID: 181677 RVA: 0x00C78112 File Offset: 0x00C76312
 		private static string DumpMarkItem(BaseMap map, MarkItem markItem)
 		{
 			return string.Empty;
 		}
 
-		// Token: 0x06037683 RID: 226947 RVA: 0x00D287B9 File Offset: 0x00D269B9
+		// Token: 0x0602C5AE RID: 181678 RVA: 0x00C78119 File Offset: 0x00C76319
 		public static string DumpMarkItemForUi(BaseMap map, MarkItem markItem)
 		{
 			return string.Empty;
 		}
 
-		// Token: 0x06037684 RID: 226948 RVA: 0x00D287C0 File Offset: 0x00D269C0
+		// Token: 0x0602C5AF RID: 181679 RVA: 0x00C78120 File Offset: 0x00C76320
 		[Conditional("DEBUG")]
 		public static void PrintMarkItemDumpInfo(BaseMap map, MarkItem markItem)
 		{
 		}
 
-		// Token: 0x06037685 RID: 226949 RVA: 0x00D287C4 File Offset: 0x00D269C4
+		// Token: 0x0602C5B0 RID: 181680 RVA: 0x00C78124 File Offset: 0x00C76324
 		public static void PrintTrackDataInfo(string title, ITrackData data)
 		{
 			StringBuilder stringBuilder = new StringBuilder();

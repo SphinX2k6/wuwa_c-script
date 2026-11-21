@@ -7,23 +7,23 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002486 RID: 9350
+// Token: 0x0200196B RID: 6507
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomInteractListPanel : UiPanelBase
 {
-	// Token: 0x1700189C RID: 6300
-	// (get) Token: 0x06012C2D RID: 76845 RVA: 0x004A0517 File Offset: 0x0049E717
-	// (set) Token: 0x06012C2E RID: 76846 RVA: 0x004A051F File Offset: 0x0049E71F
+	// Token: 0x170018D6 RID: 6358
+	// (get) Token: 0x060100E4 RID: 65764 RVA: 0x004ADC6F File Offset: 0x004ABE6F
+	// (set) Token: 0x060100E5 RID: 65765 RVA: 0x004ADC77 File Offset: 0x004ABE77
 	public bool UseLongPress { get; set; }
 
-	// Token: 0x06012C2F RID: 76847 RVA: 0x004A0528 File Offset: 0x0049E728
+	// Token: 0x060100E6 RID: 65766 RVA: 0x004ADC80 File Offset: 0x004ABE80
 	public PhantomInteractListPanel(bool useLongPress)
 	{
 		this.UseLongPress = useLongPress;
 	}
 
-	// Token: 0x06012C30 RID: 76848 RVA: 0x004A0568 File Offset: 0x0049E768
+	// Token: 0x060100E7 RID: 65767 RVA: 0x004ADCC0 File Offset: 0x004ABEC0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class PhantomInteractListPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012C31 RID: 76849 RVA: 0x004A0648 File Offset: 0x0049E848
+	// Token: 0x060100E8 RID: 65768 RVA: 0x004ADDA0 File Offset: 0x004ABFA0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomInteractListPanel.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ public class PhantomInteractListPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012C32 RID: 76850 RVA: 0x004A068C File Offset: 0x0049E88C
+	// Token: 0x060100E9 RID: 65769 RVA: 0x004ADDE4 File Offset: 0x004ABFE4
 	private void RefreshLongPressItemPosition()
 	{
 		FVector? pointerEventDataPosition = LguiEventSystemManager.Instance.GetPointerEventDataPosition(0);
@@ -69,7 +69,7 @@ public class PhantomInteractListPanel : UiPanelBase
 		item.SetLGUISpaceAbsolutePosition(fvector);
 	}
 
-	// Token: 0x06012C33 RID: 76851 RVA: 0x004A073B File Offset: 0x0049E93B
+	// Token: 0x060100EA RID: 65770 RVA: 0x004ADE93 File Offset: 0x004AC093
 	private void ClearDragClickTick()
 	{
 		if (this.LongPressTick != -1)
@@ -79,13 +79,13 @@ public class PhantomInteractListPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012C34 RID: 76852 RVA: 0x004A075E File Offset: 0x0049E95E
+	// Token: 0x060100EB RID: 65771 RVA: 0x004ADEB6 File Offset: 0x004AC0B6
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearDragClickTick();
 	}
 
-	// Token: 0x06012C35 RID: 76853 RVA: 0x004A0768 File Offset: 0x0049E968
+	// Token: 0x060100EC RID: 65772 RVA: 0x004ADEC0 File Offset: 0x004AC0C0
 	private void OnLongPressTick(float _)
 	{
 		ValueTuple<bool, bool> valueTuple = this.LongPressContext.Update(Time.Instance.DeltaTime);
@@ -131,7 +131,7 @@ public class PhantomInteractListPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012C36 RID: 76854 RVA: 0x004A0841 File Offset: 0x0049EA41
+	// Token: 0x060100ED RID: 65773 RVA: 0x004ADF99 File Offset: 0x004AC199
 	private void OnListItemClick(IPhantomInteractItemData itemData)
 	{
 		if (this.OnClickCb != null)
@@ -140,7 +140,7 @@ public class PhantomInteractListPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012C37 RID: 76855 RVA: 0x004A0857 File Offset: 0x0049EA57
+	// Token: 0x060100EE RID: 65774 RVA: 0x004ADFAF File Offset: 0x004AC1AF
 	private void OnListItemHover(IPhantomInteractItemData itemData, bool isHover)
 	{
 		if (this.OnHoverCb != null)
@@ -149,7 +149,7 @@ public class PhantomInteractListPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012C38 RID: 76856 RVA: 0x004A0870 File Offset: 0x0049EA70
+	// Token: 0x060100EF RID: 65775 RVA: 0x004ADFC8 File Offset: 0x004AC1C8
 	private void OnListItemPointerDown(IPhantomInteractItemData itemData)
 	{
 		if (itemData.MonsterId <= 0)
@@ -181,7 +181,7 @@ public class PhantomInteractListPanel : UiPanelBase
 		longPressPanel.SetFillProgress(0f);
 	}
 
-	// Token: 0x06012C39 RID: 76857 RVA: 0x004A08FC File Offset: 0x0049EAFC
+	// Token: 0x060100F0 RID: 65776 RVA: 0x004AE054 File Offset: 0x004AC254
 	private void OnListItemPointerUp(IPhantomInteractItemData itemData)
 	{
 		if (this.LongPressContext.IsBeforeLongPressThreshold())
@@ -205,7 +205,7 @@ public class PhantomInteractListPanel : UiPanelBase
 		this.LongPressContext.Reset();
 	}
 
-	// Token: 0x06012C3A RID: 76858 RVA: 0x004A096C File Offset: 0x0049EB6C
+	// Token: 0x060100F1 RID: 65777 RVA: 0x004AE0C4 File Offset: 0x004AC2C4
 	private void OnListItemToggleChange(PhantomInteractListItem item, IPhantomInteractItemData itemData, bool isOn)
 	{
 		bool flag = itemData.ItemIndex == this.SelectIndex;
@@ -215,7 +215,7 @@ public class PhantomInteractListPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012C3B RID: 76859 RVA: 0x004A0994 File Offset: 0x0049EB94
+	// Token: 0x060100F2 RID: 65778 RVA: 0x004AE0EC File Offset: 0x004AC2EC
 	public void Refresh(List<IPhantomInteractItemData> itemDataList, bool showIndex, bool needAnim = true)
 	{
 		for (int i = 0; i < this.TogItems.Count; i++)
@@ -229,7 +229,7 @@ public class PhantomInteractListPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012C3C RID: 76860 RVA: 0x004A09E0 File Offset: 0x0049EBE0
+	// Token: 0x060100F3 RID: 65779 RVA: 0x004AE138 File Offset: 0x004AC338
 	public void SetSelectedItem(int index)
 	{
 		this.SelectIndex = index;
@@ -239,7 +239,7 @@ public class PhantomInteractListPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012C3D RID: 76861 RVA: 0x004A0A44 File Offset: 0x0049EC44
+	// Token: 0x060100F4 RID: 65780 RVA: 0x004AE19C File Offset: 0x004AC39C
 	private static ILongPressParam LoadLongPressParam()
 	{
 		return new LongPressParam
@@ -252,7 +252,7 @@ public class PhantomInteractListPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x04008D4B RID: 36171
+	// Token: 0x04008E92 RID: 36498
 	private PhantomInteractListPanel.EComponent[] allTogItems = new PhantomInteractListPanel.EComponent[]
 	{
 		PhantomInteractListPanel.EComponent.TogItemT1,
@@ -265,29 +265,29 @@ public class PhantomInteractListPanel : UiPanelBase
 		PhantomInteractListPanel.EComponent.TogItemB4
 	};
 
-	// Token: 0x04008D4C RID: 36172
+	// Token: 0x04008E93 RID: 36499
 	private readonly List<PhantomInteractListItem> TogItems = new List<PhantomInteractListItem>();
 
-	// Token: 0x04008D4D RID: 36173
+	// Token: 0x04008E94 RID: 36500
 	[Nullable(2)]
 	private PhantomInteractListLongPressPanel LongPressPanel;
 
-	// Token: 0x04008D4E RID: 36174
+	// Token: 0x04008E95 RID: 36501
 	[Nullable(2)]
 	private ILongPressParam LongPressParam;
 
-	// Token: 0x04008D4F RID: 36175
+	// Token: 0x04008E96 RID: 36502
 	[Nullable(2)]
 	private LongPressContext LongPressContext;
 
-	// Token: 0x04008D50 RID: 36176
+	// Token: 0x04008E97 RID: 36503
 	private int LongPressTick = -1;
 
-	// Token: 0x04008D51 RID: 36177
+	// Token: 0x04008E98 RID: 36504
 	[Nullable(2)]
 	private IPhantomInteractItemData LongPressItemData;
 
-	// Token: 0x04008D52 RID: 36178
+	// Token: 0x04008E99 RID: 36505
 	[Nullable(new byte[]
 	{
 		2,
@@ -295,7 +295,7 @@ public class PhantomInteractListPanel : UiPanelBase
 	})]
 	public Action<IPhantomInteractItemData> OnClickCb;
 
-	// Token: 0x04008D53 RID: 36179
+	// Token: 0x04008E9A RID: 36506
 	[Nullable(new byte[]
 	{
 		2,
@@ -303,30 +303,30 @@ public class PhantomInteractListPanel : UiPanelBase
 	})]
 	public Action<IPhantomInteractItemData, bool> OnHoverCb;
 
-	// Token: 0x04008D54 RID: 36180
+	// Token: 0x04008E9B RID: 36507
 	private int SelectIndex = -1;
 
-	// Token: 0x020089F9 RID: 35321
+	// Token: 0x02007B80 RID: 31616
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CCE5 RID: 183525
+		// Token: 0x04027FFB RID: 163835
 		TogItemT1,
-		// Token: 0x0402CCE6 RID: 183526
+		// Token: 0x04027FFC RID: 163836
 		TogItemT2,
-		// Token: 0x0402CCE7 RID: 183527
+		// Token: 0x04027FFD RID: 163837
 		TogItemT3,
-		// Token: 0x0402CCE8 RID: 183528
+		// Token: 0x04027FFE RID: 163838
 		TogItemT4,
-		// Token: 0x0402CCE9 RID: 183529
+		// Token: 0x04027FFF RID: 163839
 		TogItemB1,
-		// Token: 0x0402CCEA RID: 183530
+		// Token: 0x04028000 RID: 163840
 		TogItemB2,
-		// Token: 0x0402CCEB RID: 183531
+		// Token: 0x04028001 RID: 163841
 		TogItemB3,
-		// Token: 0x0402CCEC RID: 183532
+		// Token: 0x04028002 RID: 163842
 		TogItemB4,
-		// Token: 0x0402CCED RID: 183533
+		// Token: 0x04028003 RID: 163843
 		ItemLongPress
 	}
 }

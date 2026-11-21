@@ -5,17 +5,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028EF RID: 10479
+// Token: 0x02001E6A RID: 7786
 public class CommonAttributeItem : UiPanelBase
 {
-	// Token: 0x06015A2E RID: 88622 RVA: 0x00575CC3 File Offset: 0x00573EC3
+	// Token: 0x06013432 RID: 78898 RVA: 0x005A0B97 File Offset: 0x0059ED97
 	[NullableContext(1)]
 	public CommonAttributeItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x06015A2F RID: 88623 RVA: 0x00575CD8 File Offset: 0x00573ED8
+	// Token: 0x06013433 RID: 78899 RVA: 0x005A0BAC File Offset: 0x0059EDAC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class CommonAttributeItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06015A30 RID: 88624 RVA: 0x00575DC4 File Offset: 0x00573FC4
+	// Token: 0x06013434 RID: 78900 RVA: 0x005A0C98 File Offset: 0x0059EE98
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(4);
@@ -45,13 +45,13 @@ public class CommonAttributeItem : UiPanelBase
 		extendToggle.CanExecuteChange.Bind(new Func<bool>(this.CanClickLikeToggle));
 	}
 
-	// Token: 0x06015A31 RID: 88625 RVA: 0x00575E1A File Offset: 0x0057401A
+	// Token: 0x06013435 RID: 78901 RVA: 0x005A0CEE File Offset: 0x0059EEEE
 	private bool CanClickLikeToggle()
 	{
 		return !string.IsNullOrEmpty(this.Data.DetailText);
 	}
 
-	// Token: 0x06015A32 RID: 88626 RVA: 0x00575E34 File Offset: 0x00574034
+	// Token: 0x06013436 RID: 78902 RVA: 0x005A0D08 File Offset: 0x0059EF08
 	[NullableContext(1)]
 	public void ShowTemp(ScrollViewDataBase data)
 	{
@@ -91,7 +91,7 @@ public class CommonAttributeItem : UiPanelBase
 		base.GetText(3).SetText("", true);
 	}
 
-	// Token: 0x06015A33 RID: 88627 RVA: 0x00575F44 File Offset: 0x00574144
+	// Token: 0x06013437 RID: 78903 RVA: 0x005A0E18 File Offset: 0x0059F018
 	protected void ToggleEvent(EToggleState bState)
 	{
 		bool uiactive = bState == EToggleState.ETT_Checked;
@@ -99,28 +99,28 @@ public class CommonAttributeItem : UiPanelBase
 		base.GetItem(7).SetUIActive(uiactive);
 	}
 
-	// Token: 0x0400A0E6 RID: 41190
+	// Token: 0x0400A4D1 RID: 42193
 	[Nullable(2)]
 	private CommonAttributeData Data;
 
-	// Token: 0x02008EFB RID: 36603
+	// Token: 0x02008143 RID: 33091
 	private enum EAttrListDefine
 	{
-		// Token: 0x0402E5C3 RID: 189891
+		// Token: 0x04029CBE RID: 171198
 		AttrIconTexture,
-		// Token: 0x0402E5C4 RID: 189892
+		// Token: 0x04029CBF RID: 171199
 		AttrNameText,
-		// Token: 0x0402E5C5 RID: 189893
+		// Token: 0x04029CC0 RID: 171200
 		AttrBaseValue,
-		// Token: 0x0402E5C6 RID: 189894
+		// Token: 0x04029CC1 RID: 171201
 		AttrAddValue,
-		// Token: 0x0402E5C7 RID: 189895
+		// Token: 0x04029CC2 RID: 171202
 		Toggle,
-		// Token: 0x0402E5C8 RID: 189896
+		// Token: 0x04029CC3 RID: 171203
 		DetailText,
-		// Token: 0x0402E5C9 RID: 189897
+		// Token: 0x04029CC4 RID: 171204
 		Arrow,
-		// Token: 0x0402E5CA RID: 189898
+		// Token: 0x04029CC5 RID: 171205
 		ExplainContent
 	}
 }

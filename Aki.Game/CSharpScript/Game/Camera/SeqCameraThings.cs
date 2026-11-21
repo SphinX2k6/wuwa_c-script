@@ -4,39 +4,39 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072AF RID: 29359
+	// Token: 0x02006431 RID: 25649
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SeqCameraThings
 	{
-		// Token: 0x04025FB0 RID: 155568
+		// Token: 0x04021290 RID: 135824
 		public FVectorDouble CameraLocation = Vector.Create().ToUeVector(false);
 
-		// Token: 0x04025FB1 RID: 155569
+		// Token: 0x04021291 RID: 135825
 		public FRotator CameraRotation = Rotator.Create().ToUeRotator();
 
-		// Token: 0x04025FB2 RID: 155570
+		// Token: 0x04021292 RID: 135826
 		public FVectorDouble CameraScale = Vector.Create().ToUeVector(false);
 
-		// Token: 0x04025FB3 RID: 155571
+		// Token: 0x04021293 RID: 135827
 		public FTransformDouble? OriginRootTransform;
 
-		// Token: 0x04025FB4 RID: 155572
+		// Token: 0x04021294 RID: 135828
 		public bool ConstrainAspectRatio;
 
-		// Token: 0x04025FB5 RID: 155573
+		// Token: 0x04021295 RID: 135829
 		public float CurrentAperture;
 
-		// Token: 0x04025FB6 RID: 155574
+		// Token: 0x04021296 RID: 135830
 		public float CurrentFocalLength;
 
-		// Token: 0x04025FB7 RID: 155575
+		// Token: 0x04021297 RID: 135831
 		public FCameraFocusSettings FocusSettings;
 
-		// Token: 0x04025FB8 RID: 155576
+		// Token: 0x04021298 RID: 135832
 		public FCameraLensSettings LensSettings;
 
-		// Token: 0x04025FB9 RID: 155577
+		// Token: 0x04021299 RID: 135833
 		public float FieldOfView;
 	}
 }

@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200261D RID: 9757
+	// Token: 0x020028DD RID: 10461
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ChangeInteractOptionText : ActionParams
 	{
-		// Token: 0x0600DB11 RID: 56081 RVA: 0x0020A110 File Offset: 0x00208310
-		[NullableContext(1)]
+		// Token: 0x0600E8DF RID: 59615 RVA: 0x002268DC File Offset: 0x00224ADC
+		[NullableContext(0)]
 		public static ChangeInteractOptionText Create(IChangeInteractOptionText? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004099 RID: 16537
-		// (get) Token: 0x0600DB12 RID: 56082 RVA: 0x0020A12F File Offset: 0x0020832F
+		// Token: 0x170043D3 RID: 17363
+		// (get) Token: 0x0600E8E0 RID: 59616 RVA: 0x002268FB File Offset: 0x00224AFB
 		public virtual string TidContent
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700409A RID: 16538
-		// (get) Token: 0x0600DB13 RID: 56083 RVA: 0x0020A13C File Offset: 0x0020833C
+		// Token: 0x170043D4 RID: 17364
+		// (get) Token: 0x0600E8E1 RID: 59617 RVA: 0x00226908 File Offset: 0x00224B08
 		public virtual string EdTidContent
 		{
 			get
@@ -43,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040079B7 RID: 31159
+		// Token: 0x04008053 RID: 32851
 		private IChangeInteractOptionText Instance;
 	}
 }

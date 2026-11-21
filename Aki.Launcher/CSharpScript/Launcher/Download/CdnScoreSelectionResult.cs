@@ -4,14 +4,14 @@ using CSharpScript.Launcher.BaseConfig;
 
 namespace CSharpScript.Launcher.Download
 {
-	// Token: 0x020001F3 RID: 499
+	// Token: 0x020001F8 RID: 504
 	public sealed class CdnScoreSelectionResult
 	{
-		// Token: 0x04000803 RID: 2051
+		// Token: 0x04000843 RID: 2115
 		[Nullable(2)]
 		public ICdnScoreFormula Formula;
 
-		// Token: 0x04000804 RID: 2052
+		// Token: 0x04000844 RID: 2116
 		[Nullable(1)]
 		public string Reason = string.Empty;
 	}

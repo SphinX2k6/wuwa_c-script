@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071E0 RID: 29152
+	// Token: 0x02006295 RID: 25237
 	public class SceneItemManipulableCastFreeState : SceneItemManipulableCastState
 	{
-		// Token: 0x060475B0 RID: 292272 RVA: 0x01224A27 File Offset: 0x01222C27
+		// Token: 0x0603CEB2 RID: 249522 RVA: 0x0117E85B File Offset: 0x0117CA5B
 		[NullableContext(1)]
 		public SceneItemManipulableCastFreeState(SceneItemManipulatableComponent SceneItem, [Nullable(new byte[]
 		{
@@ -20,13 +20,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 		{
 		}
 
-		// Token: 0x060475B1 RID: 292273 RVA: 0x01224A3D File Offset: 0x01222C3D
+		// Token: 0x0603CEB3 RID: 249523 RVA: 0x0117E871 File Offset: 0x0117CA71
 		public void SetForward(FVector newValue)
 		{
 			this.Forward = newValue;
 		}
 
-		// Token: 0x060475B2 RID: 292274 RVA: 0x01224A48 File Offset: 0x01222C48
+		// Token: 0x0603CEB4 RID: 249524 RVA: 0x0117E87C File Offset: 0x0117CA7C
 		protected override void OnEnter()
 		{
 			base.OnEnter();
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475B3 RID: 292275 RVA: 0x01224B73 File Offset: 0x01222D73
+		// Token: 0x0603CEB5 RID: 249525 RVA: 0x0117E9A7 File Offset: 0x0117CBA7
 		protected override void OnTick(float delta)
 		{
 			this.UpdateRotationAccordingToVelocity();
 		}
 
-		// Token: 0x060475B4 RID: 292276 RVA: 0x01224B7C File Offset: 0x01222D7C
+		// Token: 0x0603CEB6 RID: 249526 RVA: 0x0117E9B0 File Offset: 0x0117CBB0
 		protected override void OnChangeMoveController(bool isAutonomous)
 		{
 			if (isAutonomous)
@@ -89,13 +89,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475B5 RID: 292277 RVA: 0x01224BB1 File Offset: 0x01222DB1
+		// Token: 0x0603CEB7 RID: 249527 RVA: 0x0117E9E5 File Offset: 0x0117CBE5
 		public override bool IsNoLockCasting()
 		{
 			return true;
 		}
 
-		// Token: 0x04025849 RID: 153673
+		// Token: 0x040204B8 RID: 132280
 		private FVector Forward = new FVector();
 	}
 }

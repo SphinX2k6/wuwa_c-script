@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043F5 RID: 17397
+	// Token: 0x0200485A RID: 18522
 	public enum ESnapFloorType : byte
 	{
-		// Token: 0x0400C335 RID: 49973
+		// Token: 0x0400CD5D RID: 52573
 		RoughSnap,
-		// Token: 0x0400C336 RID: 49974
+		// Token: 0x0400CD5E RID: 52574
 		PreciseSnap,
-		// Token: 0x0400C337 RID: 49975
+		// Token: 0x0400CD5F RID: 52575
 		Fly,
-		// Token: 0x0400C338 RID: 49976
+		// Token: 0x0400CD60 RID: 52576
 		OnWater,
-		// Token: 0x0400C339 RID: 49977
+		// Token: 0x0400CD61 RID: 52577
 		Water,
-		// Token: 0x0400C33A RID: 49978
+		// Token: 0x0400CD62 RID: 52578
 		Ignore
 	}
 }

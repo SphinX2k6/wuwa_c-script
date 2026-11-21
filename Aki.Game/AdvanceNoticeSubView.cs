@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020010DB RID: 4315
+// Token: 0x0200058F RID: 1423
 public class AdvanceNoticeSubView : ActivitySubViewBase
 {
-	// Token: 0x0600705B RID: 28763 RVA: 0x0016EA3C File Offset: 0x0016CC3C
+	// Token: 0x060043F1 RID: 17393 RVA: 0x001773F8 File Offset: 0x001755F8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class AdvanceNoticeSubView : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x0600705C RID: 28764 RVA: 0x0016EB40 File Offset: 0x0016CD40
+	// Token: 0x060043F2 RID: 17394 RVA: 0x001774FC File Offset: 0x001756FC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		AdvanceNoticeSubView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ public class AdvanceNoticeSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600705D RID: 28765 RVA: 0x0016EB83 File Offset: 0x0016CD83
+	// Token: 0x060043F3 RID: 17395 RVA: 0x0017753F File Offset: 0x0017573F
 	protected override void OnBeforeShow()
 	{
 		AdvanceNoticeMultiGridItem multiGridItem = this.MultiGridItem;
@@ -52,7 +52,7 @@ public class AdvanceNoticeSubView : ActivitySubViewBase
 		multiGridItem.PlayAnim();
 	}
 
-	// Token: 0x0600705E RID: 28766 RVA: 0x0016EB98 File Offset: 0x0016CD98
+	// Token: 0x060043F4 RID: 17396 RVA: 0x00177554 File Offset: 0x00175754
 	protected override void OnRefreshView()
 	{
 		if (this.ActivityBaseData == null)
@@ -76,7 +76,7 @@ public class AdvanceNoticeSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600705F RID: 28767 RVA: 0x0016ECD0 File Offset: 0x0016CED0
+	// Token: 0x060043F5 RID: 17397 RVA: 0x0017768C File Offset: 0x0017588C
 	private void OnUrlButtonClick()
 	{
 		if (this.ActivityBaseData == null || !KuroSdkController.Instance.CanUseSdk())
@@ -97,38 +97,38 @@ public class AdvanceNoticeSubView : ActivitySubViewBase
 		KuroSdkController.Instance.OpenWebView("", text, true, true, true, "Default");
 	}
 
-	// Token: 0x04003420 RID: 13344
+	// Token: 0x040034B9 RID: 13497
 	[Nullable(2)]
 	protected AdvanceNoticeMultiGridItem MultiGridItem;
 
-	// Token: 0x020076A4 RID: 30372
+	// Token: 0x02006838 RID: 26680
 	private class EComponentDefine
 	{
-		// Token: 0x0402727D RID: 160381
+		// Token: 0x040225C6 RID: 140742
 		public const int UrlItem = 0;
 
-		// Token: 0x0402727E RID: 160382
+		// Token: 0x040225C7 RID: 140743
 		public const int UrlButton = 1;
 
-		// Token: 0x0402727F RID: 160383
+		// Token: 0x040225C8 RID: 140744
 		public const int TopRightSprite = 2;
 
-		// Token: 0x04027280 RID: 160384
+		// Token: 0x040225C9 RID: 140745
 		public const int ContentRootItem = 3;
 
-		// Token: 0x04027281 RID: 160385
+		// Token: 0x040225CA RID: 140746
 		public const int TitleDescText = 4;
 
-		// Token: 0x04027282 RID: 160386
+		// Token: 0x040225CB RID: 140747
 		public const int VersionText = 5;
 
-		// Token: 0x04027283 RID: 160387
+		// Token: 0x040225CC RID: 140748
 		public const int DateText = 6;
 
-		// Token: 0x04027284 RID: 160388
+		// Token: 0x040225CD RID: 140749
 		public const int UrlDescText = 7;
 
-		// Token: 0x04027285 RID: 160389
+		// Token: 0x040225CE RID: 140750
 		public const int LeftTexture = 8;
 	}
 }

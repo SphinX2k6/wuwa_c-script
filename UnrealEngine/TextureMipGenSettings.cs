@@ -4,56 +4,56 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020011DB RID: 4571
+	// Token: 0x0200029D RID: 669
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.TextureMipGenSettings")]
 	public enum TextureMipGenSettings
 	{
-		// Token: 0x04009048 RID: 36936
+		// Token: 0x04001CD5 RID: 7381
 		TMGS_FromTextureGroup,
-		// Token: 0x04009049 RID: 36937
+		// Token: 0x04001CD6 RID: 7382
 		TMGS_SimpleAverage,
-		// Token: 0x0400904A RID: 36938
+		// Token: 0x04001CD7 RID: 7383
 		TMGS_Sharpen0,
-		// Token: 0x0400904B RID: 36939
+		// Token: 0x04001CD8 RID: 7384
 		TMGS_Sharpen1,
-		// Token: 0x0400904C RID: 36940
+		// Token: 0x04001CD9 RID: 7385
 		TMGS_Sharpen2,
-		// Token: 0x0400904D RID: 36941
+		// Token: 0x04001CDA RID: 7386
 		TMGS_Sharpen3,
-		// Token: 0x0400904E RID: 36942
+		// Token: 0x04001CDB RID: 7387
 		TMGS_Sharpen4,
-		// Token: 0x0400904F RID: 36943
+		// Token: 0x04001CDC RID: 7388
 		TMGS_Sharpen5,
-		// Token: 0x04009050 RID: 36944
+		// Token: 0x04001CDD RID: 7389
 		TMGS_Sharpen6,
-		// Token: 0x04009051 RID: 36945
+		// Token: 0x04001CDE RID: 7390
 		TMGS_Sharpen7,
-		// Token: 0x04009052 RID: 36946
+		// Token: 0x04001CDF RID: 7391
 		TMGS_Sharpen8,
-		// Token: 0x04009053 RID: 36947
+		// Token: 0x04001CE0 RID: 7392
 		TMGS_Sharpen9,
-		// Token: 0x04009054 RID: 36948
+		// Token: 0x04001CE1 RID: 7393
 		TMGS_Sharpen10,
-		// Token: 0x04009055 RID: 36949
+		// Token: 0x04001CE2 RID: 7394
 		TMGS_NoMipmaps,
-		// Token: 0x04009056 RID: 36950
+		// Token: 0x04001CE3 RID: 7395
 		TMGS_LeaveExistingMips,
-		// Token: 0x04009057 RID: 36951
+		// Token: 0x04001CE4 RID: 7396
 		TMGS_Blur1,
-		// Token: 0x04009058 RID: 36952
+		// Token: 0x04001CE5 RID: 7397
 		TMGS_Blur2,
-		// Token: 0x04009059 RID: 36953
+		// Token: 0x04001CE6 RID: 7398
 		TMGS_Blur3,
-		// Token: 0x0400905A RID: 36954
+		// Token: 0x04001CE7 RID: 7399
 		TMGS_Blur4,
-		// Token: 0x0400905B RID: 36955
+		// Token: 0x04001CE8 RID: 7400
 		TMGS_Blur5,
-		// Token: 0x0400905C RID: 36956
+		// Token: 0x04001CE9 RID: 7401
 		TMGS_Unfiltered,
-		// Token: 0x0400905D RID: 36957
+		// Token: 0x04001CEA RID: 7402
 		TMGS_BuildFromSourceImage,
-		// Token: 0x0400905E RID: 36958
+		// Token: 0x04001CEB RID: 7403
 		TMGS_MAX
 	}
 }

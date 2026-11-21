@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C8F RID: 7311
+	// Token: 0x02000528 RID: 1320
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroSDK.EPaymentType")]
 	public enum EPaymentType : byte
 	{
-		// Token: 0x0400F3F4 RID: 62452
+		// Token: 0x0400345E RID: 13406
 		Success = 1,
-		// Token: 0x0400F3F5 RID: 62453
+		// Token: 0x0400345F RID: 13407
 		Fail,
-		// Token: 0x0400F3F6 RID: 62454
+		// Token: 0x04003460 RID: 13408
 		Cancel,
-		// Token: 0x0400F3F7 RID: 62455
+		// Token: 0x04003461 RID: 13409
 		EPaymentType_MAX
 	}
 }

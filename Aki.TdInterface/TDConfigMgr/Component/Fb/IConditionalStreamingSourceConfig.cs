@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E34 RID: 3636
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F30 RID: 3888
 	public class IConditionalStreamingSourceConfig
 	{
-		// Token: 0x06005232 RID: 21042 RVA: 0x000CA83A File Offset: 0x000C8A3A
+		// Token: 0x06005759 RID: 22361 RVA: 0x000D6102 File Offset: 0x000D4302
 		public static IConditionalStreamingSourceConfig Create(IConditionalStreamingSourceConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B87 RID: 7047
-		// (get) Token: 0x06005233 RID: 21043 RVA: 0x000CA859 File Offset: 0x000C8A59
+		// Token: 0x17001CF4 RID: 7412
+		// (get) Token: 0x0600575A RID: 22362 RVA: 0x000D6121 File Offset: 0x000D4321
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B88 RID: 7048
-		// (get) Token: 0x06005234 RID: 21044 RVA: 0x000CA88D File Offset: 0x000C8A8D
+		// Token: 0x17001CF5 RID: 7413
+		// (get) Token: 0x0600575B RID: 22363 RVA: 0x000D6155 File Offset: 0x000D4355
 		public virtual IStreamingSourceConfig StreamingSourceConfig
 		{
 			get
@@ -55,21 +53,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F5B RID: 12123
+		// Token: 0x04003223 RID: 12835
 		private IConditionalStreamingSourceConfig Instance;
 
-		// Token: 0x04002F5C RID: 12124
+		// Token: 0x04003224 RID: 12836
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002F5D RID: 12125
+		// Token: 0x04003225 RID: 12837
 		private bool _ConditionInited;
 
-		// Token: 0x04002F5E RID: 12126
+		// Token: 0x04003226 RID: 12838
 		[Nullable(2)]
 		private IStreamingSourceConfig _StreamingSourceConfigCache;
 
-		// Token: 0x04002F5F RID: 12127
+		// Token: 0x04003227 RID: 12839
 		private bool _StreamingSourceConfigInited;
 	}
 }

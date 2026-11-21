@@ -19,12 +19,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200717E RID: 29054
+	// Token: 0x02006232 RID: 25138
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemGravityFlipComponent : EntityComponent
 	{
-		// Token: 0x06046FF7 RID: 290807 RVA: 0x011F95B0 File Offset: 0x011F77B0
+		// Token: 0x0603C88A RID: 247946 RVA: 0x01153EE4 File Offset: 0x011520E4
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046FF8 RID: 290808 RVA: 0x011F95D8 File Offset: 0x011F77D8
+		// Token: 0x0603C88B RID: 247947 RVA: 0x01153F0C File Offset: 0x0115210C
 		protected override bool OnStart()
 		{
 			this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046FF9 RID: 290809 RVA: 0x011F97F8 File Offset: 0x011F79F8
+		// Token: 0x0603C88C RID: 247948 RVA: 0x0115412C File Offset: 0x0115232C
 		protected override bool OnEnd()
 		{
 			if (this.DirectorActor != null)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046FFA RID: 290810 RVA: 0x011F9923 File Offset: 0x011F7B23
+		// Token: 0x0603C88D RID: 247949 RVA: 0x01154257 File Offset: 0x01152457
 		public bool SetGravityDirection(GravityFlipType? direction)
 		{
 			if (direction != null)
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return false;
 		}
 
-		// Token: 0x06046FFB RID: 290811 RVA: 0x011F994B File Offset: 0x011F7B4B
+		// Token: 0x0603C88E RID: 247950 RVA: 0x0115427F File Offset: 0x0115247F
 		private void OnSceneInteractionLoadCompleted()
 		{
 			this.CreateInteractOption();
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.UpdatePrefabState(true);
 		}
 
-		// Token: 0x06046FFC RID: 290812 RVA: 0x011F9960 File Offset: 0x011F7B60
+		// Token: 0x0603C88F RID: 247951 RVA: 0x01154294 File Offset: 0x01152494
 		private void OnSceneItemLockPropChange(bool isLock)
 		{
 			this.IsLock = isLock;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.UpdatePrefabState(true);
 		}
 
-		// Token: 0x06046FFD RID: 290813 RVA: 0x011F9A0B File Offset: 0x011F7C0B
+		// Token: 0x0603C890 RID: 247952 RVA: 0x0115433F File Offset: 0x0115253F
 		private void OnMyPlayerInOutRangeLocal(bool isIn)
 		{
 			this.PlayerInRange = isIn;
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			tagComp.RemoveTag(new int?(this.CurEnterEffectTagId));
 		}
 
-		// Token: 0x06046FFE RID: 290814 RVA: 0x011F9A4C File Offset: 0x011F7C4C
+		// Token: 0x0603C891 RID: 247953 RVA: 0x01154380 File Offset: 0x01152580
 		private void OnActorRotateTagAdd(int tagId, bool isAdd)
 		{
 			if (!isAdd)
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046FFF RID: 290815 RVA: 0x011F9AB8 File Offset: 0x011F7CB8
+		// Token: 0x0603C892 RID: 247954 RVA: 0x011543EC File Offset: 0x011525EC
 		private void LoadRotateSequence()
 		{
 			ResourceSystem.Instance.LoadAsync<ULevelSequence>("/Game/Aki/Scene/InteractionLevel/Animation/2_2/GravitySwitch/Gravity_L_90.Gravity_L_90", delegate([Nullable(2)] ULevelSequence sequence, string path)
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06047000 RID: 290816 RVA: 0x011F9B30 File Offset: 0x011F7D30
+		// Token: 0x0603C893 RID: 247955 RVA: 0x01154464 File Offset: 0x01152664
 		private void CreateInteractOption()
 		{
 			if (this.InteractOptionCreated)
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.InteractOptionCreated = true;
 		}
 
-		// Token: 0x06047001 RID: 290817 RVA: 0x011F9C80 File Offset: 0x011F7E80
+		// Token: 0x0603C894 RID: 247956 RVA: 0x011545B4 File Offset: 0x011527B4
 		public void ExecuteInteract()
 		{
 			GravityFlipModel.Instance.InitGravityFlipParams(this);
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			FlowController.Instance.StartFlowForView("剧情_2_2_重力机关交互表现", 1, 1, uiParam, true);
 		}
 
-		// Token: 0x06047002 RID: 290818 RVA: 0x011F9CBE File Offset: 0x011F7EBE
+		// Token: 0x0603C895 RID: 247957 RVA: 0x011545F2 File Offset: 0x011527F2
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return config.Config;
 		}
 
-		// Token: 0x06047003 RID: 290819 RVA: 0x011F9CD1 File Offset: 0x011F7ED1
+		// Token: 0x0603C896 RID: 247958 RVA: 0x01154605 File Offset: 0x01152805
 		private void GenerateStaticDirector()
 		{
 			if (this.DirectorActor == null)
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047004 RID: 290820 RVA: 0x011F9D10 File Offset: 0x011F7F10
+		// Token: 0x0603C897 RID: 247959 RVA: 0x01154644 File Offset: 0x01152844
 		[NullableContext(2)]
 		public void PlayRotateSequence(EGravityDirection offsetAngle, Action finishCallback = null)
 		{
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047005 RID: 290821 RVA: 0x011F9F00 File Offset: 0x011F8100
+		// Token: 0x0603C898 RID: 247960 RVA: 0x01154834 File Offset: 0x01152A34
 		public bool CheckPlayerGravityDirectionAsSelf()
 		{
 			if (this.Left90Sequence == null || this.Right90Sequence == null || this.Left180Sequence == null)
@@ -450,7 +450,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return global::Vector.Create(characterActorComponent.ActorGravityDirectProxy).DotProduct(vector) > 0.99;
 		}
 
-		// Token: 0x06047006 RID: 290822 RVA: 0x011F9FB0 File Offset: 0x011F81B0
+		// Token: 0x0603C899 RID: 247961 RVA: 0x011548E4 File Offset: 0x01152AE4
 		public void OnNotifyUpdateGravityDirection(GravityFlipType newDirection)
 		{
 			this.IsNotifyRotating = true;
@@ -495,7 +495,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ActorComp.SwitchToState(targetState, true, false);
 		}
 
-		// Token: 0x06047007 RID: 290823 RVA: 0x011FA0C3 File Offset: 0x011F82C3
+		// Token: 0x0603C89A RID: 247962 RVA: 0x011549F7 File Offset: 0x01152BF7
 		private EGravityDirection ConvProtoTypeToGravityDirection(GravityFlipType direction)
 		{
 			switch (direction)
@@ -513,7 +513,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047008 RID: 290824 RVA: 0x011FA0F0 File Offset: 0x011F82F0
+		// Token: 0x0603C89B RID: 247963 RVA: 0x01154A24 File Offset: 0x01152C24
 		public void AddInteractTag()
 		{
 			int num = SceneItemGravityFlipComponent.interactEffectTagMap[this.CurGravityDirection];
@@ -534,7 +534,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.UpdatePrefabState(false);
 		}
 
-		// Token: 0x06047009 RID: 290825 RVA: 0x011FA16C File Offset: 0x011F836C
+		// Token: 0x0603C89C RID: 247964 RVA: 0x01154AA0 File Offset: 0x01152CA0
 		public void RemoveInteractTag()
 		{
 			LevelTagComponent tagComp = this.TagComp;
@@ -555,7 +555,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604700A RID: 290826 RVA: 0x011FA1E6 File Offset: 0x011F83E6
+		// Token: 0x0603C89D RID: 247965 RVA: 0x01154B1A File Offset: 0x01152D1A
 		public void OnEnterInteract()
 		{
 			LevelTagComponent tagComp = this.TagComp;
@@ -566,7 +566,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.IsInteracting = true;
 		}
 
-		// Token: 0x0604700B RID: 290827 RVA: 0x011FA20C File Offset: 0x011F840C
+		// Token: 0x0603C89E RID: 247966 RVA: 0x01154B40 File Offset: 0x01152D40
 		public void OnExitInteract(bool useSelfDirection = false)
 		{
 			EGravityDirection key = useSelfDirection ? this.CurGravityDirection : GravityFlipModel.Instance.CurrentGravityDirection;
@@ -588,7 +588,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.UpdatePrefabState(useSelfDirection);
 		}
 
-		// Token: 0x0604700C RID: 290828 RVA: 0x011FA288 File Offset: 0x011F8488
+		// Token: 0x0603C89F RID: 247967 RVA: 0x01154BBC File Offset: 0x01152DBC
 		public void UpdatePrefabState(bool useSelfDirection = false)
 		{
 			if (this.IsLock)
@@ -607,7 +607,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ActorComp.SwitchToState(targetState, true, false);
 		}
 
-		// Token: 0x0604700D RID: 290829 RVA: 0x011FA314 File Offset: 0x011F8514
+		// Token: 0x0603C8A0 RID: 247968 RVA: 0x01154C48 File Offset: 0x01152E48
 		private void HideAllHalo()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -635,7 +635,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			actorByKey3.SetActorHiddenInGame(true);
 		}
 
-		// Token: 0x0604700E RID: 290830 RVA: 0x011FA3A0 File Offset: 0x011F85A0
+		// Token: 0x0603C8A1 RID: 247969 RVA: 0x01154CD4 File Offset: 0x01152ED4
 		private void ShowDirectionHalo()
 		{
 			string key = "";
@@ -681,7 +681,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			actorByKey.SetActorHiddenInGame(false);
 		}
 
-		// Token: 0x0604700F RID: 290831 RVA: 0x011FA43C File Offset: 0x011F863C
+		// Token: 0x0603C8A2 RID: 247970 RVA: 0x01154D70 File Offset: 0x01152F70
 		private void TryAddCurGravityEnterTag()
 		{
 			int num = SceneItemGravityFlipComponent.enterEffectTagMap[this.CurGravityDirection];
@@ -697,7 +697,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.CurEnterEffectTagId = num;
 		}
 
-		// Token: 0x06047010 RID: 290832 RVA: 0x011FA490 File Offset: 0x011F8690
+		// Token: 0x0603C8A3 RID: 247971 RVA: 0x01154DC4 File Offset: 0x01152FC4
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -705,137 +705,109 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemGravityFlipComponent sceneItemGravityFlipComponent = (SceneItemGravityFlipComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemGravityFlipComponent.Config == null)
 			{
-				if (sceneItemGravityFlipComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<GravityFlipComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (sceneItemGravityFlipComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (sceneItemGravityFlipComponent.CreatureDataComp == null)
 			{
-				if (sceneItemGravityFlipComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (sceneItemGravityFlipComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PropComp"))
+			if (sceneItemGravityFlipComponent.ActorComp == null)
 			{
-				if (sceneItemGravityFlipComponent.PropComp == null)
-				{
-					this.PropComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemPropertyComponent>(this.PropComp), "PropComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("InteractOptionCreated"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.InteractOptionCreated = sceneItemGravityFlipComponent.InteractOptionCreated;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurGravityDirection"))
+			if (sceneItemGravityFlipComponent.TagComp == null)
 			{
-				this.CurGravityDirection = sceneItemGravityFlipComponent.CurGravityDirection;
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("DirectorActor"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				if (sceneItemGravityFlipComponent.DirectorActor == null)
-				{
-					this.DirectorActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ALevelSequenceActor>(this.DirectorActor), "DirectorActor"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurEnterEffectTagId"))
+			if (sceneItemGravityFlipComponent.PropComp == null)
 			{
-				this.CurEnterEffectTagId = sceneItemGravityFlipComponent.CurEnterEffectTagId;
+				this.PropComp = null;
 			}
-			if (base.CanResetComponentProperty("IsInteracting"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PropComp), "PropComp"))
 			{
-				this.IsInteracting = sceneItemGravityFlipComponent.IsInteracting;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsNotifyRotating"))
+			this.InteractOptionCreated = sceneItemGravityFlipComponent.InteractOptionCreated;
+			this.CurGravityDirection = sceneItemGravityFlipComponent.CurGravityDirection;
+			if (sceneItemGravityFlipComponent.DirectorActor == null)
 			{
-				this.IsNotifyRotating = sceneItemGravityFlipComponent.IsNotifyRotating;
+				this.DirectorActor = null;
 			}
-			if (base.CanResetComponentProperty("IsLock"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DirectorActor), "DirectorActor"))
 			{
-				this.IsLock = sceneItemGravityFlipComponent.IsLock;
+				return false;
 			}
-			if (base.CanResetComponentProperty("PlayerInRange"))
+			this.CurEnterEffectTagId = sceneItemGravityFlipComponent.CurEnterEffectTagId;
+			this.IsInteracting = sceneItemGravityFlipComponent.IsInteracting;
+			this.IsNotifyRotating = sceneItemGravityFlipComponent.IsNotifyRotating;
+			this.IsLock = sceneItemGravityFlipComponent.IsLock;
+			this.PlayerInRange = sceneItemGravityFlipComponent.PlayerInRange;
+			if (sceneItemGravityFlipComponent.Left90Sequence == null)
 			{
-				this.PlayerInRange = sceneItemGravityFlipComponent.PlayerInRange;
+				this.Left90Sequence = null;
 			}
-			if (base.CanResetComponentProperty("Left90Sequence"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Left90Sequence), "Left90Sequence"))
 			{
-				if (sceneItemGravityFlipComponent.Left90Sequence == null)
-				{
-					this.Left90Sequence = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ULevelSequence>(this.Left90Sequence), "Left90Sequence"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("Right90Sequence"))
+			if (sceneItemGravityFlipComponent.Right90Sequence == null)
 			{
-				if (sceneItemGravityFlipComponent.Right90Sequence == null)
-				{
-					this.Right90Sequence = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ULevelSequence>(this.Right90Sequence), "Right90Sequence"))
-				{
-					return false;
-				}
+				this.Right90Sequence = null;
 			}
-			if (base.CanResetComponentProperty("Left180Sequence"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Right90Sequence), "Right90Sequence"))
 			{
-				if (sceneItemGravityFlipComponent.Left180Sequence == null)
-				{
-					this.Left180Sequence = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ULevelSequence>(this.Left180Sequence), "Left180Sequence"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (sceneItemGravityFlipComponent.Left180Sequence == null)
+			{
+				this.Left180Sequence = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Left180Sequence), "Left180Sequence"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x06047016 RID: 290838 RVA: 0x011FA9FF File Offset: 0x011F8BFF
+		// Token: 0x1700726D RID: 29293
+		// (get) Token: 0x0603C8A4 RID: 247972 RVA: 0x01154FBB File Offset: 0x011531BB
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700726E RID: 29294
+		// (get) Token: 0x0603C8A5 RID: 247973 RVA: 0x01154FBE File Offset: 0x011531BE
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0603C8AB RID: 247979 RVA: 0x01155267 File Offset: 0x01153467
 		[CompilerGenerated]
 		private void <OnNotifyUpdateGravityDirection>g__finishCallback|44_0()
 		{
@@ -844,28 +816,28 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.IsNotifyRotating = false;
 		}
 
-		// Token: 0x040254E3 RID: 152803
+		// Token: 0x0402014A RID: 131402
 		private static readonly FName BINDING_TAG = new FName("Obj");
 
-		// Token: 0x040254E4 RID: 152804
+		// Token: 0x0402014B RID: 131403
 		private const string POINT_LIGHT_DOWN = "HaloYellow";
 
-		// Token: 0x040254E5 RID: 152805
+		// Token: 0x0402014C RID: 131404
 		private const string POINT_LIGHT_UP = "HaloBlue";
 
-		// Token: 0x040254E6 RID: 152806
+		// Token: 0x0402014D RID: 131405
 		private const string POINT_LIGHT_LEFT_RIGHT = "HaloGreen";
 
-		// Token: 0x040254E7 RID: 152807
+		// Token: 0x0402014E RID: 131406
 		private const string SEQ_ROTATE_LEFT_90 = "/Game/Aki/Scene/InteractionLevel/Animation/2_2/GravitySwitch/Gravity_L_90.Gravity_L_90";
 
-		// Token: 0x040254E8 RID: 152808
+		// Token: 0x0402014F RID: 131407
 		private const string SEQ_ROTATE_RIGHT_90 = "/Game/Aki/Scene/InteractionLevel/Animation/2_2/GravitySwitch/Gravity_R_90.Gravity_R_90";
 
-		// Token: 0x040254E9 RID: 152809
+		// Token: 0x04020150 RID: 131408
 		private const string SEQ_ROTATE_LEFT_180 = "/Game/Aki/Scene/InteractionLevel/Animation/2_2/GravitySwitch/Gravity_L_180.Gravity_L_180";
 
-		// Token: 0x040254EA RID: 152810
+		// Token: 0x04020151 RID: 131409
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EGravityDirection, int> interactEffectTagMap = new Dictionary<EGravityDirection, int>
 		{
@@ -887,7 +859,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		};
 
-		// Token: 0x040254EB RID: 152811
+		// Token: 0x04020152 RID: 131410
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EGravityDirection, int> enterEffectTagMap = new Dictionary<EGravityDirection, int>
 		{
@@ -909,7 +881,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		};
 
-		// Token: 0x040254EC RID: 152812
+		// Token: 0x04020153 RID: 131411
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EGravityDirection, int> notInteractEffectTagMap = new Dictionary<EGravityDirection, int>
 		{
@@ -931,7 +903,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		};
 
-		// Token: 0x040254ED RID: 152813
+		// Token: 0x04020154 RID: 131412
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EGravityDirection, EKuroSceneInteractionState> notInteractStateMap = new Dictionary<EGravityDirection, EKuroSceneInteractionState>
 		{
@@ -953,7 +925,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		};
 
-		// Token: 0x040254EE RID: 152814
+		// Token: 0x04020155 RID: 131413
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EGravityDirection, EKuroSceneInteractionState> interactingStateMap = new Dictionary<EGravityDirection, EKuroSceneInteractionState>
 		{
@@ -975,63 +947,63 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		};
 
-		// Token: 0x040254EF RID: 152815
+		// Token: 0x04020156 RID: 131414
 		private static readonly EKuroSceneInteractionState lockStateMap = EKuroSceneInteractionState.State9;
 
-		// Token: 0x040254F0 RID: 152816
+		// Token: 0x04020157 RID: 131415
 		[Nullable(2)]
 		private GravityFlipComponent Config;
 
-		// Token: 0x040254F1 RID: 152817
+		// Token: 0x04020158 RID: 131416
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x040254F2 RID: 152818
+		// Token: 0x04020159 RID: 131417
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x040254F3 RID: 152819
+		// Token: 0x0402015A RID: 131418
 		[Nullable(2)]
 		private LevelTagComponent TagComp;
 
-		// Token: 0x040254F4 RID: 152820
+		// Token: 0x0402015B RID: 131419
 		[Nullable(2)]
 		private SceneItemPropertyComponent PropComp;
 
-		// Token: 0x040254F5 RID: 152821
+		// Token: 0x0402015C RID: 131420
 		private bool InteractOptionCreated;
 
-		// Token: 0x040254F6 RID: 152822
+		// Token: 0x0402015D RID: 131421
 		public EGravityDirection CurGravityDirection;
 
-		// Token: 0x040254F7 RID: 152823
+		// Token: 0x0402015E RID: 131422
 		[Nullable(2)]
 		private ALevelSequenceActor DirectorActor;
 
-		// Token: 0x040254F8 RID: 152824
+		// Token: 0x0402015F RID: 131423
 		private int CurEnterEffectTagId = -1;
 
-		// Token: 0x040254F9 RID: 152825
+		// Token: 0x04020160 RID: 131424
 		public bool IsInteracting;
 
-		// Token: 0x040254FA RID: 152826
+		// Token: 0x04020161 RID: 131425
 		private bool IsNotifyRotating;
 
-		// Token: 0x040254FB RID: 152827
+		// Token: 0x04020162 RID: 131426
 		private bool IsLock;
 
-		// Token: 0x040254FC RID: 152828
+		// Token: 0x04020163 RID: 131427
 		private bool PlayerInRange;
 
-		// Token: 0x040254FD RID: 152829
+		// Token: 0x04020164 RID: 131428
 		[Nullable(2)]
 		private ULevelSequence Left90Sequence;
 
-		// Token: 0x040254FE RID: 152830
+		// Token: 0x04020165 RID: 131429
 		[Nullable(2)]
 		private ULevelSequence Right90Sequence;
 
-		// Token: 0x040254FF RID: 152831
+		// Token: 0x04020166 RID: 131430
 		[Nullable(2)]
 		private ULevelSequence Left180Sequence;
 	}

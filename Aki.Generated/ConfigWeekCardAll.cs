@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A92 RID: 2706
+	// Token: 0x02000B67 RID: 2919
 	public class ConfigWeekCardAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003F80 RID: 16256 RVA: 0x001C16F0 File Offset: 0x001BF8F0
+		// Token: 0x0600447E RID: 17534 RVA: 0x001E0A84 File Offset: 0x001DEC84
 		static ConfigWeekCardAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWeekCardAll.CreateStaticDefaultValue), new Action(ConfigWeekCardAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003F81 RID: 16257 RVA: 0x001C1710 File Offset: 0x001BF910
+		// Token: 0x0600447F RID: 17535 RVA: 0x001E0AA4 File Offset: 0x001DECA4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWeekCardAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003F82 RID: 16258 RVA: 0x001C178F File Offset: 0x001BF98F
+		// Token: 0x06004480 RID: 17536 RVA: 0x001E0B23 File Offset: 0x001DED23
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWeekCardAll.LogPair = null;
 			ConfigWeekCardAll.HandleId = 0;
 		}
 
-		// Token: 0x06003F83 RID: 16259 RVA: 0x001C179D File Offset: 0x001BF99D
+		// Token: 0x06004481 RID: 17537 RVA: 0x001E0B31 File Offset: 0x001DED31
 		public static void Init()
 		{
 			ConfigWeekCardAll.HandleId = ConfigCommon.InitDataStatement(ConfigWeekCardAll.HandleId, "db_weekcard.db", "select BinData from `WeekCard`");
 		}
 
-		// Token: 0x06003F84 RID: 16260 RVA: 0x001C17B8 File Offset: 0x001BF9B8
+		// Token: 0x06004482 RID: 17538 RVA: 0x001E0B4C File Offset: 0x001DED4C
 		[NullableContext(2)]
 		public static IReadOnlyList<WeekCard> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040049E4 RID: 18916
+		// Token: 0x04004FB7 RID: 20407
 		private const string DB = "db_weekcard.db";
 
-		// Token: 0x040049E5 RID: 18917
+		// Token: 0x04004FB8 RID: 20408
 		private const string FILE = "z.周卡.xlsx";
 
-		// Token: 0x040049E6 RID: 18918
+		// Token: 0x04004FB9 RID: 20409
 		private const string TABLE = "WeekCard";
 
-		// Token: 0x040049E7 RID: 18919
+		// Token: 0x04004FBA RID: 20410
 		private const string COMMAND = "select BinData from `WeekCard`";
 
-		// Token: 0x040049E8 RID: 18920
+		// Token: 0x04004FBB RID: 20411
 		private const string KEY_PREFIX = "WeekCardAll";
 
-		// Token: 0x040049E9 RID: 18921
+		// Token: 0x04004FBC RID: 20412
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040049EA RID: 18922
+		// Token: 0x04004FBD RID: 20413
 		private static int HandleId;
 	}
 }

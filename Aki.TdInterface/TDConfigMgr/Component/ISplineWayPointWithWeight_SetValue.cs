@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000702 RID: 1794
+	// Token: 0x020007A3 RID: 1955
 	public class ISplineWayPointWithWeight_SetValue
 	{
-		// Token: 0x04001A27 RID: 6695
+		// Token: 0x04001C26 RID: 7206
 		public int Spline;
 
-		// Token: 0x04001A28 RID: 6696
+		// Token: 0x04001C27 RID: 7207
 		public int PointId;
 
-		// Token: 0x04001A29 RID: 6697
+		// Token: 0x04001C28 RID: 7208
 		public int Weight;
 	}
 }

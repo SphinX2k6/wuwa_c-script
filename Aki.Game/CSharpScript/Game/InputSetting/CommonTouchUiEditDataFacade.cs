@@ -9,37 +9,37 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x0200700E RID: 28686
+	// Token: 0x0200618F RID: 24975
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonTouchUiEditDataFacade : ITouchUiEditDataFacade
 	{
-		// Token: 0x17009B9C RID: 39836
-		// (get) Token: 0x06045CDC RID: 285916 RVA: 0x0115BA89 File Offset: 0x01159C89
-		// (set) Token: 0x06045CDD RID: 285917 RVA: 0x0115BA91 File Offset: 0x01159C91
+		// Token: 0x170070DC RID: 28892
+		// (get) Token: 0x0603BE92 RID: 245394 RVA: 0x01105E95 File Offset: 0x01104095
+		// (set) Token: 0x0603BE93 RID: 245395 RVA: 0x01105E9D File Offset: 0x0110409D
 		public int MinTouchMoveDifference { get; set; }
 
-		// Token: 0x17009B9D RID: 39837
-		// (get) Token: 0x06045CDE RID: 285918 RVA: 0x0115BA9A File Offset: 0x01159C9A
-		// (set) Token: 0x06045CDF RID: 285919 RVA: 0x0115BAA2 File Offset: 0x01159CA2
+		// Token: 0x170070DD RID: 28893
+		// (get) Token: 0x0603BE94 RID: 245396 RVA: 0x01105EA6 File Offset: 0x011040A6
+		// (set) Token: 0x0603BE95 RID: 245397 RVA: 0x01105EAE File Offset: 0x011040AE
 		public int MaxTouchMoveDifference { get; set; }
 
-		// Token: 0x17009B9E RID: 39838
-		// (get) Token: 0x06045CE0 RID: 285920 RVA: 0x0115BAAB File Offset: 0x01159CAB
-		// (set) Token: 0x06045CE1 RID: 285921 RVA: 0x0115BAB3 File Offset: 0x01159CB3
+		// Token: 0x170070DE RID: 28894
+		// (get) Token: 0x0603BE96 RID: 245398 RVA: 0x01105EB7 File Offset: 0x011040B7
+		// (set) Token: 0x0603BE97 RID: 245399 RVA: 0x01105EBF File Offset: 0x011040BF
 		public float MaxTouchMoveValue { get; set; }
 
-		// Token: 0x17009B9F RID: 39839
-		// (get) Token: 0x06045CE2 RID: 285922 RVA: 0x0115BABC File Offset: 0x01159CBC
-		// (set) Token: 0x06045CE3 RID: 285923 RVA: 0x0115BAC4 File Offset: 0x01159CC4
+		// Token: 0x170070DF RID: 28895
+		// (get) Token: 0x0603BE98 RID: 245400 RVA: 0x01105EC8 File Offset: 0x011040C8
+		// (set) Token: 0x0603BE99 RID: 245401 RVA: 0x01105ED0 File Offset: 0x011040D0
 		public float MinTouchMoveValue { get; set; }
 
-		// Token: 0x17009BA0 RID: 39840
-		// (get) Token: 0x06045CE4 RID: 285924 RVA: 0x0115BACD File Offset: 0x01159CCD
-		// (set) Token: 0x06045CE5 RID: 285925 RVA: 0x0115BAD5 File Offset: 0x01159CD5
+		// Token: 0x170070E0 RID: 28896
+		// (get) Token: 0x0603BE9A RID: 245402 RVA: 0x01105ED9 File Offset: 0x011040D9
+		// (set) Token: 0x0603BE9B RID: 245403 RVA: 0x01105EE1 File Offset: 0x011040E1
 		public float ControlScaleRate { get; set; }
 
-		// Token: 0x06045CE6 RID: 285926 RVA: 0x0115BAE0 File Offset: 0x01159CE0
+		// Token: 0x0603BE9C RID: 245404 RVA: 0x01105EEC File Offset: 0x011040EC
 		public void Init()
 		{
 			this.MinTouchMoveDifference = ConfigCommonParamById.GetIntConfig("MinTouchMoveDifference").Value;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.InputSetting
 			Net.Instance.Register(ENotifyMessageId.CommonUiSettingNotify, new Action<IMessage, Net.CallbackStatus>(this.OnSettingUpdate));
 		}
 
-		// Token: 0x06045CE7 RID: 285927 RVA: 0x0115BB81 File Offset: 0x01159D81
+		// Token: 0x0603BE9D RID: 245405 RVA: 0x01105F8D File Offset: 0x0110418D
 		public void Clear()
 		{
 			this.DataMap.Clear();
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.InputSetting
 			Net.Instance.UnRegister(ENotifyMessageId.CommonUiSettingNotify);
 		}
 
-		// Token: 0x06045CE8 RID: 285928 RVA: 0x0115BBB0 File Offset: 0x01159DB0
+		// Token: 0x0603BE9E RID: 245406 RVA: 0x01105FBC File Offset: 0x011041BC
 		public void SetGroup(int group)
 		{
 			this.Group = group;
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.InputSetting
 			this.GroupConfig = CommonTouchUiEditConfig.Instance.GetGroupConfigById(this.Group);
 		}
 
-		// Token: 0x06045CE9 RID: 285929 RVA: 0x0115BBE5 File Offset: 0x01159DE5
+		// Token: 0x0603BE9F RID: 245407 RVA: 0x01105FF1 File Offset: 0x011041F1
 		public CommonTouchUiEditGroup? GetGroupConfig()
 		{
 			return this.GroupConfig;
 		}
 
-		// Token: 0x06045CEA RID: 285930 RVA: 0x0115BBF0 File Offset: 0x01159DF0
+		// Token: 0x0603BEA0 RID: 245408 RVA: 0x01105FFC File Offset: 0x011041FC
 		public string[] GetResIdList()
 		{
 			HashSet<string> hashSet = new HashSet<string>();
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.InputSetting
 			return array;
 		}
 
-		// Token: 0x06045CEB RID: 285931 RVA: 0x0115BC98 File Offset: 0x01159E98
+		// Token: 0x0603BEA1 RID: 245409 RVA: 0x011060A4 File Offset: 0x011042A4
 		public int GetStorageId(string resId, int index)
 		{
 			if (this.ConfigList == null)
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.InputSetting
 			return 0;
 		}
 
-		// Token: 0x06045CEC RID: 285932 RVA: 0x0115BCF4 File Offset: 0x01159EF4
+		// Token: 0x0603BEA2 RID: 245410 RVA: 0x01106100 File Offset: 0x01104300
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.InputSetting
 			return new ValueTuple<string, int>?(new ValueTuple<string, int>(configById.Value.PanelResId, configById.Value.ItemIndex));
 		}
 
-		// Token: 0x06045CED RID: 285933 RVA: 0x0115BD48 File Offset: 0x01159F48
+		// Token: 0x0603BEA3 RID: 245411 RVA: 0x01106154 File Offset: 0x01104354
 		[return: Nullable(2)]
 		public ITouchUiEditData GetDefaultData(string resId, int index)
 		{
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.InputSetting
 			};
 		}
 
-		// Token: 0x06045CEE RID: 285934 RVA: 0x0115BE30 File Offset: 0x0115A030
+		// Token: 0x0603BEA4 RID: 245412 RVA: 0x0110623C File Offset: 0x0110443C
 		public void SaveData(ITouchUiEditData[] dataList)
 		{
 			List<MobileButtonSetting> list = new List<MobileButtonSetting>();
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.InputSetting
 			}, 0);
 		}
 
-		// Token: 0x06045CEF RID: 285935 RVA: 0x0115BF60 File Offset: 0x0115A160
+		// Token: 0x0603BEA5 RID: 245413 RVA: 0x0110636C File Offset: 0x0110456C
 		[return: Nullable(2)]
 		public ITouchUiEditData GetData(string resId, int index)
 		{
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.InputSetting
 			return this.GetDefaultData(resId, index);
 		}
 
-		// Token: 0x06045CF0 RID: 285936 RVA: 0x0115BF90 File Offset: 0x0115A190
+		// Token: 0x0603BEA6 RID: 245414 RVA: 0x0110639C File Offset: 0x0110459C
 		public void ResetEditData()
 		{
 			this.DataMap.Clear();
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045CF1 RID: 285937 RVA: 0x0115C078 File Offset: 0x0115A278
+		// Token: 0x0603BEA7 RID: 245415 RVA: 0x01106484 File Offset: 0x01104684
 		[NullableContext(2)]
 		private void OnSettingUpdate(IMessage msg, Net.CallbackStatus _)
 		{
@@ -295,20 +295,20 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x04024806 RID: 149510
+		// Token: 0x0401FABC RID: 129724
 		private int Group;
 
-		// Token: 0x04024807 RID: 149511
+		// Token: 0x0401FABD RID: 129725
 		private readonly Dictionary<int, ITouchUiEditData> DataMap = new Dictionary<int, ITouchUiEditData>();
 
-		// Token: 0x04024808 RID: 149512
+		// Token: 0x0401FABE RID: 129726
 		private readonly Dictionary<string, ITouchUiEditData> DataMapFromNotify = new Dictionary<string, ITouchUiEditData>();
 
-		// Token: 0x04024809 RID: 149513
+		// Token: 0x0401FABF RID: 129727
 		[Nullable(2)]
 		private IReadOnlyList<CommonTouchUiEdit> ConfigList;
 
-		// Token: 0x0402480A RID: 149514
+		// Token: 0x0401FAC0 RID: 129728
 		private CommonTouchUiEditGroup? GroupConfig;
 	}
 }

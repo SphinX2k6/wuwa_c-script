@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200321F RID: 12831
+// Token: 0x0200278E RID: 10126
 public class NpcPerformAlertState : NpcPerformBaseState
 {
-	// Token: 0x0601BA99 RID: 113305 RVA: 0x0079A3A1 File Offset: 0x007985A1
+	// Token: 0x0601961E RID: 103966 RVA: 0x007C2B3D File Offset: 0x007C0D3D
 	[NullableContext(1)]
 	public NpcPerformAlertState(EntityHandle owner, ENpcPerformState state, [Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ public class NpcPerformAlertState : NpcPerformBaseState
 	{
 	}
 
-	// Token: 0x0601BA9A RID: 113306 RVA: 0x0079A3AC File Offset: 0x007985AC
+	// Token: 0x0601961F RID: 103967 RVA: 0x007C2B48 File Offset: 0x007C0D48
 	public override bool CanChangeFrom(ENpcPerformState fromState)
 	{
 		CommonNpcPerformComponent component = this.Owner.Entity.GetComponent<CommonNpcPerformComponent>();
@@ -42,7 +42,7 @@ public class NpcPerformAlertState : NpcPerformBaseState
 		return flag && fromState == ENpcPerformState.Idle && !component.IsInPlot;
 	}
 
-	// Token: 0x0601BA9B RID: 113307 RVA: 0x0079A418 File Offset: 0x00798618
+	// Token: 0x06019620 RID: 103968 RVA: 0x007C2BB4 File Offset: 0x007C0DB4
 	protected override void OnEnter(ENpcPerformState? lastState)
 	{
 		if (Global.BaseCharacter == null)
@@ -54,18 +54,18 @@ public class NpcPerformAlertState : NpcPerformBaseState
 		EventSystem.Instance.AddWithTarget(this.Owner.Entity, EEventName.OnStalkAlertLifted, new Action(this.OnStalkAlertLifted));
 	}
 
-	// Token: 0x0601BA9C RID: 113308 RVA: 0x0079A485 File Offset: 0x00798685
+	// Token: 0x06019621 RID: 103969 RVA: 0x007C2C21 File Offset: 0x007C0E21
 	protected override void OnExit(ENpcPerformState nextState)
 	{
 		EventSystem.Instance.RemoveWithTarget(this.Owner.Entity, EEventName.OnStalkAlertLifted, new Action(this.OnStalkAlertLifted));
 	}
 
-	// Token: 0x0601BA9D RID: 113309 RVA: 0x0079A4AE File Offset: 0x007986AE
+	// Token: 0x06019622 RID: 103970 RVA: 0x007C2C4A File Offset: 0x007C0E4A
 	private void OnStalkAlertLifted()
 	{
 		this.StateMachine.Switch(ENpcPerformState.Idle);
 	}
 
-	// Token: 0x0400D9AF RID: 55727
+	// Token: 0x0400DE4E RID: 56910
 	private const int TURN_SPEED = 20000;
 }

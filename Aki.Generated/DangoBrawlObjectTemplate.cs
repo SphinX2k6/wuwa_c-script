@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BC7 RID: 3015
+	// Token: 0x02000CA9 RID: 3241
 	public struct DangoBrawlObjectTemplate : IFlatbufferObject
 	{
-		// Token: 0x17000B27 RID: 2855
-		// (get) Token: 0x06005E33 RID: 24115 RVA: 0x0020AB89 File Offset: 0x00208D89
+		// Token: 0x17000B6D RID: 2925
+		// (get) Token: 0x0600640C RID: 25612 RVA: 0x0022A33D File Offset: 0x0022853D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005E34 RID: 24116 RVA: 0x0020AB96 File Offset: 0x00208D96
+		// Token: 0x0600640D RID: 25613 RVA: 0x0022A34A File Offset: 0x0022854A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005E35 RID: 24117 RVA: 0x0020ABA0 File Offset: 0x00208DA0
+		// Token: 0x0600640E RID: 25614 RVA: 0x0022A354 File Offset: 0x00228554
 		public static DangoBrawlObjectTemplate GetRootAsDangoBrawlObjectTemplate(ByteBuffer _bb)
 		{
 			return DangoBrawlObjectTemplate.GetRootAsDangoBrawlObjectTemplate(_bb, default(DangoBrawlObjectTemplate));
 		}
 
-		// Token: 0x06005E36 RID: 24118 RVA: 0x0020ABBC File Offset: 0x00208DBC
+		// Token: 0x0600640F RID: 25615 RVA: 0x0022A370 File Offset: 0x00228570
 		public static DangoBrawlObjectTemplate GetRootAsDangoBrawlObjectTemplate(ByteBuffer _bb, DangoBrawlObjectTemplate obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005E37 RID: 24119 RVA: 0x0020ABD9 File Offset: 0x00208DD9
+		// Token: 0x06006410 RID: 25616 RVA: 0x0022A38D File Offset: 0x0022858D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005E38 RID: 24120 RVA: 0x0020ABE8 File Offset: 0x00208DE8
+		// Token: 0x06006411 RID: 25617 RVA: 0x0022A39C File Offset: 0x0022859C
 		public DangoBrawlObjectTemplate __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000B28 RID: 2856
-		// (get) Token: 0x06005E39 RID: 24121 RVA: 0x0020ABF8 File Offset: 0x00208DF8
+		// Token: 0x17000B6E RID: 2926
+		// (get) Token: 0x06006412 RID: 25618 RVA: 0x0022A3AC File Offset: 0x002285AC
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000B29 RID: 2857
-		// (get) Token: 0x06005E3A RID: 24122 RVA: 0x0020AC34 File Offset: 0x00208E34
+		// Token: 0x17000B6F RID: 2927
+		// (get) Token: 0x06006413 RID: 25619 RVA: 0x0022A3E8 File Offset: 0x002285E8
 		public string SubType
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005E3B RID: 24123 RVA: 0x0020AC6B File Offset: 0x00208E6B
+		// Token: 0x06006414 RID: 25620 RVA: 0x0022A41F File Offset: 0x0022861F
 		public Span<byte> GetSubTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06005E3C RID: 24124 RVA: 0x0020AC7A File Offset: 0x00208E7A
+		// Token: 0x06006415 RID: 25621 RVA: 0x0022A42E File Offset: 0x0022862E
 		public byte[] GetSubTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000B2A RID: 2858
-		// (get) Token: 0x06005E3D RID: 24125 RVA: 0x0020AC94 File Offset: 0x00208E94
+		// Token: 0x17000B70 RID: 2928
+		// (get) Token: 0x06006416 RID: 25622 RVA: 0x0022A448 File Offset: 0x00228648
 		public int DataId
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000B2B RID: 2859
-		// (get) Token: 0x06005E3E RID: 24126 RVA: 0x0020ACD0 File Offset: 0x00208ED0
+		// Token: 0x17000B71 RID: 2929
+		// (get) Token: 0x06006417 RID: 25623 RVA: 0x0022A484 File Offset: 0x00228684
 		public string LinkCenterOffset
 		{
 			get
@@ -119,20 +119,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005E3F RID: 24127 RVA: 0x0020AD08 File Offset: 0x00208F08
+		// Token: 0x06006418 RID: 25624 RVA: 0x0022A4BC File Offset: 0x002286BC
 		public Span<byte> GetLinkCenterOffsetBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06005E40 RID: 24128 RVA: 0x0020AD18 File Offset: 0x00208F18
+		// Token: 0x06006419 RID: 25625 RVA: 0x0022A4CC File Offset: 0x002286CC
 		public byte[] GetLinkCenterOffsetArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000B2C RID: 2860
-		// (get) Token: 0x06005E41 RID: 24129 RVA: 0x0020AD30 File Offset: 0x00208F30
+		// Token: 0x17000B72 RID: 2930
+		// (get) Token: 0x0600641A RID: 25626 RVA: 0x0022A4E4 File Offset: 0x002286E4
 		public string ShapeCells
 		{
 			get
@@ -146,20 +146,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005E42 RID: 24130 RVA: 0x0020AD68 File Offset: 0x00208F68
+		// Token: 0x0600641B RID: 25627 RVA: 0x0022A51C File Offset: 0x0022871C
 		public Span<byte> GetShapeCellsBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06005E43 RID: 24131 RVA: 0x0020AD78 File Offset: 0x00208F78
+		// Token: 0x0600641C RID: 25628 RVA: 0x0022A52C File Offset: 0x0022872C
 		public byte[] GetShapeCellsArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000B2D RID: 2861
-		// (get) Token: 0x06005E44 RID: 24132 RVA: 0x0020AD90 File Offset: 0x00208F90
+		// Token: 0x17000B73 RID: 2931
+		// (get) Token: 0x0600641D RID: 25629 RVA: 0x0022A544 File Offset: 0x00228744
 		public string StarCells
 		{
 			get
@@ -173,19 +173,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005E45 RID: 24133 RVA: 0x0020ADC8 File Offset: 0x00208FC8
+		// Token: 0x0600641E RID: 25630 RVA: 0x0022A57C File Offset: 0x0022877C
 		public Span<byte> GetStarCellsBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x06005E46 RID: 24134 RVA: 0x0020ADD8 File Offset: 0x00208FD8
+		// Token: 0x0600641F RID: 25631 RVA: 0x0022A58C File Offset: 0x0022878C
 		public byte[] GetStarCellsArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004BF0 RID: 19440
+		// Token: 0x040051D2 RID: 20946
 		private Table __p;
 	}
 }

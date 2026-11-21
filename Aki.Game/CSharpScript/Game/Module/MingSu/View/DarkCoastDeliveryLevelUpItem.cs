@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MingSu.View
 {
-	// Token: 0x020053D9 RID: 21465
+	// Token: 0x020043BC RID: 17340
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 	})]
 	public class DarkCoastDeliveryLevelUpItem : GridProxyAbstract<DarkCoastDeliveryLevelData>
 	{
-		// Token: 0x06036DD7 RID: 224727 RVA: 0x00CFE570 File Offset: 0x00CFC770
+		// Token: 0x0602BD1E RID: 179486 RVA: 0x00C4D640 File Offset: 0x00C4B840
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			};
 		}
 
-		// Token: 0x06036DD8 RID: 224728 RVA: 0x00CFE594 File Offset: 0x00CFC794
+		// Token: 0x0602BD1F RID: 179487 RVA: 0x00C4D664 File Offset: 0x00C4B864
 		[NullableContext(1)]
 		public override void Refresh(DarkCoastDeliveryLevelData data, bool isSelected, int gridIndex)
 		{
@@ -31,10 +31,10 @@ namespace CSharpScript.Game.Module.MingSu.View
 			base.SetTextureShowUntilLoaded(visionTexture, base.GetTexture(0), null);
 		}
 
-		// Token: 0x0200B67D RID: 46717
+		// Token: 0x0200A0B5 RID: 41141
 		private static class EComponent
 		{
-			// Token: 0x04037475 RID: 226421
+			// Token: 0x04031ECA RID: 204490
 			public const int VisionTexture = 0;
 		}
 	}

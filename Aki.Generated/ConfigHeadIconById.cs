@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003D0 RID: 976
+	// Token: 0x020003E6 RID: 998
 	public class ConfigHeadIconById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060016E7 RID: 5863 RVA: 0x000DAF8C File Offset: 0x000D918C
+		// Token: 0x0600176B RID: 5995 RVA: 0x000E16E0 File Offset: 0x000DF8E0
 		static ConfigHeadIconById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHeadIconById.CreateStaticDefaultValue), new Action(ConfigHeadIconById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060016E8 RID: 5864 RVA: 0x000DAFAC File Offset: 0x000D91AC
+		// Token: 0x0600176C RID: 5996 RVA: 0x000E1700 File Offset: 0x000DF900
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHeadIconById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060016E9 RID: 5865 RVA: 0x000DB02B File Offset: 0x000D922B
+		// Token: 0x0600176D RID: 5997 RVA: 0x000E177F File Offset: 0x000DF97F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHeadIconById.LogPair = null;
 			ConfigHeadIconById.HandleId = 0;
 		}
 
-		// Token: 0x060016EA RID: 5866 RVA: 0x000DB039 File Offset: 0x000D9239
+		// Token: 0x0600176E RID: 5998 RVA: 0x000E178D File Offset: 0x000DF98D
 		public static void Init()
 		{
 			ConfigHeadIconById.HandleId = ConfigCommon.InitDataStatement(ConfigHeadIconById.HandleId, "db_head_icon.db", "select BinData from `HeadIcon` where Id=?");
 		}
 
-		// Token: 0x060016EB RID: 5867 RVA: 0x000DB054 File Offset: 0x000D9254
+		// Token: 0x0600176F RID: 5999 RVA: 0x000E17A8 File Offset: 0x000DF9A8
 		public static HeadIcon? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigHeadIconById.HandleId, ConfigHeadIconById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new HeadIcon?(rootAsHeadIcon);
 		}
 
-		// Token: 0x04001A94 RID: 6804
+		// Token: 0x04001B2E RID: 6958
 		private const string DB = "db_head_icon.db";
 
-		// Token: 0x04001A95 RID: 6805
+		// Token: 0x04001B2F RID: 6959
 		private const string FILE = "t.头像.xlsx";
 
-		// Token: 0x04001A96 RID: 6806
+		// Token: 0x04001B30 RID: 6960
 		private const string TABLE = "HeadIcon";
 
-		// Token: 0x04001A97 RID: 6807
+		// Token: 0x04001B31 RID: 6961
 		private const string COMMAND = "select BinData from `HeadIcon` where Id=?";
 
-		// Token: 0x04001A98 RID: 6808
+		// Token: 0x04001B32 RID: 6962
 		private const string KEY_PREFIX = "HeadIconById";
 
-		// Token: 0x04001A99 RID: 6809
+		// Token: 0x04001B33 RID: 6963
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001A9A RID: 6810
+		// Token: 0x04001B34 RID: 6964
 		private static int HandleId;
 	}
 }

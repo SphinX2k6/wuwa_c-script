@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.MechanismTimeline
 {
-	// Token: 0x0200547A RID: 21626
+	// Token: 0x0200445D RID: 17501
 	public class MechanismEventLevelPrefabContext : MechanismEventContext
 	{
-		// Token: 0x060372E1 RID: 226017 RVA: 0x00D1602A File Offset: 0x00D1422A
+		// Token: 0x0602C22A RID: 180778 RVA: 0x00C65482 File Offset: 0x00C63682
 		public MechanismEventLevelPrefabContext(int pbDataId, int levelPrefabHandleId)
 		{
 		}
 
-		// Token: 0x17008459 RID: 33881
-		// (get) Token: 0x060372E2 RID: 226018 RVA: 0x00D16040 File Offset: 0x00D14240
+		// Token: 0x17005825 RID: 22565
+		// (get) Token: 0x0602C22B RID: 180779 RVA: 0x00C65498 File Offset: 0x00C63698
 		public override EMechanismEventContextType ContextType
 		{
 			get
@@ -20,10 +20,10 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			}
 		}
 
-		// Token: 0x0401D1B2 RID: 119218
+		// Token: 0x04017C4B RID: 97355
 		public readonly int PbDataId = pbDataId;
 
-		// Token: 0x0401D1B3 RID: 119219
+		// Token: 0x04017C4C RID: 97356
 		public readonly int LevelPrefabHandleId = levelPrefabHandleId;
 	}
 }

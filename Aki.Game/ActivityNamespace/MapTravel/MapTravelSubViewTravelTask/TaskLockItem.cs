@@ -4,7 +4,7 @@ using CSharpScript.Game.Module.SkipInterface;
 
 namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 {
-	// Token: 0x020044D9 RID: 17625
+	// Token: 0x02002F66 RID: 12134
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,12 +13,12 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 	})]
 	internal class TaskLockItem : TaskItemBase<MapTravelLockAreaData>
 	{
-		// Token: 0x0602D690 RID: 186000 RVA: 0x00A3FB89 File Offset: 0x00A3DD89
+		// Token: 0x0601CBCE RID: 117710 RVA: 0x008C57ED File Offset: 0x008C39ED
 		public TaskLockItem(ActivityMapTravelData activityBaseData) : base(activityBaseData)
 		{
 		}
 
-		// Token: 0x0602D691 RID: 186001 RVA: 0x00A3FB94 File Offset: 0x00A3DD94
+		// Token: 0x0601CBCF RID: 117711 RVA: 0x008C57F8 File Offset: 0x008C39F8
 		public void Refresh(MapTravelLockAreaData taskData)
 		{
 			this.TaskData = taskData;
@@ -29,7 +29,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			base.GetItem(5).SetUIActive(true);
 		}
 
-		// Token: 0x0602D692 RID: 186002 RVA: 0x00A3FC15 File Offset: 0x00A3DE15
+		// Token: 0x0601CBD0 RID: 117712 RVA: 0x008C5879 File Offset: 0x008C3A79
 		protected override void OnClickedButton()
 		{
 			if (this.TaskData.JumpId > 0)

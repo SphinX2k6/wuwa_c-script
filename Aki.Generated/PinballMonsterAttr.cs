@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F30 RID: 3888
+	// Token: 0x02001015 RID: 4117
 	public struct PinballMonsterAttr : IFlatbufferObject
 	{
-		// Token: 0x17002976 RID: 10614
-		// (get) Token: 0x0600AF66 RID: 44902 RVA: 0x002C2CFD File Offset: 0x002C0EFD
+		// Token: 0x170029DC RID: 10716
+		// (get) Token: 0x0600B587 RID: 46471 RVA: 0x002DF6EE File Offset: 0x002DD8EE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AF67 RID: 44903 RVA: 0x002C2D0A File Offset: 0x002C0F0A
+		// Token: 0x0600B588 RID: 46472 RVA: 0x002DF6FB File Offset: 0x002DD8FB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600AF68 RID: 44904 RVA: 0x002C2D14 File Offset: 0x002C0F14
+		// Token: 0x0600B589 RID: 46473 RVA: 0x002DF704 File Offset: 0x002DD904
 		public static PinballMonsterAttr GetRootAsPinballMonsterAttr(ByteBuffer _bb)
 		{
 			return PinballMonsterAttr.GetRootAsPinballMonsterAttr(_bb, default(PinballMonsterAttr));
 		}
 
-		// Token: 0x0600AF69 RID: 44905 RVA: 0x002C2D30 File Offset: 0x002C0F30
+		// Token: 0x0600B58A RID: 46474 RVA: 0x002DF720 File Offset: 0x002DD920
 		public static PinballMonsterAttr GetRootAsPinballMonsterAttr(ByteBuffer _bb, PinballMonsterAttr obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600AF6A RID: 44906 RVA: 0x002C2D4D File Offset: 0x002C0F4D
+		// Token: 0x0600B58B RID: 46475 RVA: 0x002DF73D File Offset: 0x002DD93D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600AF6B RID: 44907 RVA: 0x002C2D5C File Offset: 0x002C0F5C
+		// Token: 0x0600B58C RID: 46476 RVA: 0x002DF74C File Offset: 0x002DD94C
 		public PinballMonsterAttr __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002977 RID: 10615
-		// (get) Token: 0x0600AF6C RID: 44908 RVA: 0x002C2D6C File Offset: 0x002C0F6C
+		// Token: 0x170029DD RID: 10717
+		// (get) Token: 0x0600B58D RID: 46477 RVA: 0x002DF75C File Offset: 0x002DD95C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002978 RID: 10616
-		// (get) Token: 0x0600AF6D RID: 44909 RVA: 0x002C2DA8 File Offset: 0x002C0FA8
+		// Token: 0x170029DE RID: 10718
+		// (get) Token: 0x0600B58E RID: 46478 RVA: 0x002DF798 File Offset: 0x002DD998
 		public int Life
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002979 RID: 10617
-		// (get) Token: 0x0600AF6E RID: 44910 RVA: 0x002C2DE4 File Offset: 0x002C0FE4
+		// Token: 0x170029DF RID: 10719
+		// (get) Token: 0x0600B58F RID: 46479 RVA: 0x002DF7D4 File Offset: 0x002DD9D4
 		public int LifeMax
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700297A RID: 10618
-		// (get) Token: 0x0600AF6F RID: 44911 RVA: 0x002C2E20 File Offset: 0x002C1020
+		// Token: 0x170029E0 RID: 10720
+		// (get) Token: 0x0600B590 RID: 46480 RVA: 0x002DF810 File Offset: 0x002DDA10
 		public int Atk
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700297B RID: 10619
-		// (get) Token: 0x0600AF70 RID: 44912 RVA: 0x002C2E60 File Offset: 0x002C1060
+		// Token: 0x170029E1 RID: 10721
+		// (get) Token: 0x0600B591 RID: 46481 RVA: 0x002DF850 File Offset: 0x002DDA50
 		public int Def
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700297C RID: 10620
-		// (get) Token: 0x0600AF71 RID: 44913 RVA: 0x002C2EA0 File Offset: 0x002C10A0
+		// Token: 0x170029E2 RID: 10722
+		// (get) Token: 0x0600B592 RID: 46482 RVA: 0x002DF890 File Offset: 0x002DDA90
 		public int Crit
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700297D RID: 10621
-		// (get) Token: 0x0600AF72 RID: 44914 RVA: 0x002C2EE0 File Offset: 0x002C10E0
+		// Token: 0x170029E3 RID: 10723
+		// (get) Token: 0x0600B593 RID: 46483 RVA: 0x002DF8D0 File Offset: 0x002DDAD0
 		public int CritDamage
 		{
 			get
@@ -152,8 +152,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700297E RID: 10622
-		// (get) Token: 0x0600AF73 RID: 44915 RVA: 0x002C2F20 File Offset: 0x002C1120
+		// Token: 0x170029E4 RID: 10724
+		// (get) Token: 0x0600B594 RID: 46484 RVA: 0x002DF910 File Offset: 0x002DDB10
 		public int DamageAmplify1
 		{
 			get
@@ -167,8 +167,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700297F RID: 10623
-		// (get) Token: 0x0600AF74 RID: 44916 RVA: 0x002C2F60 File Offset: 0x002C1160
+		// Token: 0x170029E5 RID: 10725
+		// (get) Token: 0x0600B595 RID: 46485 RVA: 0x002DF950 File Offset: 0x002DDB50
 		public int DamageReduce
 		{
 			get
@@ -182,8 +182,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002980 RID: 10624
-		// (get) Token: 0x0600AF75 RID: 44917 RVA: 0x002C2FA0 File Offset: 0x002C11A0
+		// Token: 0x170029E6 RID: 10726
+		// (get) Token: 0x0600B596 RID: 46486 RVA: 0x002DF990 File Offset: 0x002DDB90
 		public int DamageReduceAuto
 		{
 			get
@@ -197,8 +197,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002981 RID: 10625
-		// (get) Token: 0x0600AF76 RID: 44918 RVA: 0x002C2FE0 File Offset: 0x002C11E0
+		// Token: 0x170029E7 RID: 10727
+		// (get) Token: 0x0600B597 RID: 46487 RVA: 0x002DF9D0 File Offset: 0x002DDBD0
 		public int DamageReduceStrong
 		{
 			get
@@ -212,8 +212,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002982 RID: 10626
-		// (get) Token: 0x0600AF77 RID: 44919 RVA: 0x002C3020 File Offset: 0x002C1220
+		// Token: 0x170029E8 RID: 10728
+		// (get) Token: 0x0600B598 RID: 46488 RVA: 0x002DFA10 File Offset: 0x002DDC10
 		public int DamageReduceSkill
 		{
 			get
@@ -227,8 +227,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002983 RID: 10627
-		// (get) Token: 0x0600AF78 RID: 44920 RVA: 0x002C3060 File Offset: 0x002C1260
+		// Token: 0x170029E9 RID: 10729
+		// (get) Token: 0x0600B599 RID: 46489 RVA: 0x002DFA50 File Offset: 0x002DDC50
 		public int DamageReduceSprint
 		{
 			get
@@ -242,8 +242,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002984 RID: 10628
-		// (get) Token: 0x0600AF79 RID: 44921 RVA: 0x002C30A0 File Offset: 0x002C12A0
+		// Token: 0x170029EA RID: 10730
+		// (get) Token: 0x0600B59A RID: 46490 RVA: 0x002DFA90 File Offset: 0x002DDC90
 		public int DamageReduceSummon
 		{
 			get
@@ -257,8 +257,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002985 RID: 10629
-		// (get) Token: 0x0600AF7A RID: 44922 RVA: 0x002C30E0 File Offset: 0x002C12E0
+		// Token: 0x170029EB RID: 10731
+		// (get) Token: 0x0600B59B RID: 46491 RVA: 0x002DFAD0 File Offset: 0x002DDCD0
 		public int ProtectMax
 		{
 			get
@@ -272,7 +272,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004FFA RID: 20474
+		// Token: 0x040055DF RID: 21983
 		private Table __p;
 	}
 }

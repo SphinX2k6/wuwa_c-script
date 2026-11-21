@@ -4,18 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006A3 RID: 1699
+	// Token: 0x02000744 RID: 1860
 	public class ISceneItemEventConfig_SetValue
 	{
-		// Token: 0x04001900 RID: 6400
-		[Nullable(1)]
+		// Token: 0x04001AFD RID: 6909
 		public string EntityStateTagName;
 
-		// Token: 0x04001901 RID: 6401
+		// Token: 0x04001AFE RID: 6910
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ISceneItemSequenceEventData> SequenceEvents;
 	}

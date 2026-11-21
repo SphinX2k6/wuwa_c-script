@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001954 RID: 6484
+	// Token: 0x02001ADF RID: 6879
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ICustomScreenTextSetting
 	{
-		// Token: 0x06008AE9 RID: 35561 RVA: 0x00146E08 File Offset: 0x00145008
-		[NullableContext(1)]
+		// Token: 0x0600921D RID: 37405 RVA: 0x00156804 File Offset: 0x00154A04
+		[NullableContext(0)]
 		private ICustomScreenTextSetting_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008AEA RID: 35562 RVA: 0x00146E40 File Offset: 0x00145040
-		[NullableContext(1)]
+		// Token: 0x0600921E RID: 37406 RVA: 0x0015683C File Offset: 0x00154A3C
+		[NullableContext(0)]
 		public static ICustomScreenTextSetting Create([Nullable(2)] ICustomScreenTextSetting instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008AEB RID: 35563 RVA: 0x00146E53 File Offset: 0x00145053
-		[NullableContext(1)]
+		// Token: 0x0600921F RID: 37407 RVA: 0x0015684F File Offset: 0x00154A4F
+		[NullableContext(0)]
 		public static ICustomScreenTextSetting CreateFromSetValue([Nullable(2)] ICustomScreenTextSetting_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008AEC RID: 35564 RVA: 0x00146E66 File Offset: 0x00145066
-		[NullableContext(1)]
+		// Token: 0x06009220 RID: 37408 RVA: 0x00156862 File Offset: 0x00154A62
+		[NullableContext(0)]
 		public ICustomScreenTextSetting_SetValue ToSetValue()
 		{
 			return new ICustomScreenTextSetting_SetValue
@@ -65,9 +65,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CCB RID: 11467
-		// (get) Token: 0x06008AED RID: 35565 RVA: 0x00146E94 File Offset: 0x00145094
-		// (set) Token: 0x06008AEE RID: 35566 RVA: 0x00146ECE File Offset: 0x001450CE
+		// Token: 0x17002ECC RID: 11980
+		// (get) Token: 0x06009221 RID: 37409 RVA: 0x00156890 File Offset: 0x00154A90
+		// (set) Token: 0x06009222 RID: 37410 RVA: 0x001568CA File Offset: 0x00154ACA
 		public virtual bool? IsShowTextInfo
 		{
 			get
@@ -89,9 +89,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CCC RID: 11468
-		// (get) Token: 0x06008AEF RID: 35567 RVA: 0x00146EDC File Offset: 0x001450DC
-		// (set) Token: 0x06008AF0 RID: 35568 RVA: 0x00146F03 File Offset: 0x00145103
+		// Token: 0x17002ECD RID: 11981
+		// (get) Token: 0x06009223 RID: 37411 RVA: 0x001568D8 File Offset: 0x00154AD8
+		// (set) Token: 0x06009224 RID: 37412 RVA: 0x001568FF File Offset: 0x00154AFF
 		public virtual string TidTextContent
 		{
 			get
@@ -113,9 +113,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CCD RID: 11469
-		// (get) Token: 0x06008AF1 RID: 35569 RVA: 0x00146F11 File Offset: 0x00145111
-		// (set) Token: 0x06008AF2 RID: 35570 RVA: 0x00146F28 File Offset: 0x00145128
+		// Token: 0x17002ECE RID: 11982
+		// (get) Token: 0x06009225 RID: 37413 RVA: 0x0015690D File Offset: 0x00154B0D
+		// (set) Token: 0x06009226 RID: 37414 RVA: 0x00156924 File Offset: 0x00154B24
 		public virtual string EdTidTextContent
 		{
 			get
@@ -132,10 +132,10 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040056BC RID: 22204
+		// Token: 0x04005B0F RID: 23311
 		protected ICustomScreenTextSetting FbInstance;
 
-		// Token: 0x040056BD RID: 22205
+		// Token: 0x04005B10 RID: 23312
 		protected ICustomScreenTextSetting_SetValue PocoInterface;
 	}
 }

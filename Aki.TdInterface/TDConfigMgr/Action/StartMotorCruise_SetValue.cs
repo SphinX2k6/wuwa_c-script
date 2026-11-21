@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200221B RID: 8731
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002486 RID: 9350
 	public class StartMotorCruise_SetValue
 	{
-		// Token: 0x0400724E RID: 29262
+		// Token: 0x04007898 RID: 30872
 		public ISplineWayPoint StartPoint;
 
-		// Token: 0x0400724F RID: 29263
+		// Token: 0x04007899 RID: 30873
 		public ISplineWayPoint EndPoint;
 
-		// Token: 0x04007250 RID: 29264
+		// Token: 0x0400789A RID: 30874
 		public bool AllowSkip;
 	}
 }

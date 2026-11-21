@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003E2 RID: 994
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200043B RID: 1083
 	public class IGraph3dNodeBase
 	{
-		// Token: 0x060013FB RID: 5115 RVA: 0x00040488 File Offset: 0x0003E688
+		// Token: 0x06001595 RID: 5525 RVA: 0x000441D0 File Offset: 0x000423D0
 		private IGraph3dNodeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060013FC RID: 5116 RVA: 0x000404C0 File Offset: 0x0003E6C0
+		// Token: 0x06001596 RID: 5526 RVA: 0x00044208 File Offset: 0x00042408
 		public static IGraph3dNodeBase Create([Nullable(2)] IGraph3dNodeBase instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060013FD RID: 5117 RVA: 0x000404D3 File Offset: 0x0003E6D3
+		// Token: 0x06001597 RID: 5527 RVA: 0x0004421B File Offset: 0x0004241B
 		public static IGraph3dNodeBase CreateFromSetValue([Nullable(2)] IGraph3dNodeBase_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060013FE RID: 5118 RVA: 0x000404E6 File Offset: 0x0003E6E6
+		// Token: 0x06001598 RID: 5528 RVA: 0x0004422E File Offset: 0x0004242E
 		public IGraph3dNodeBase_SetValue ToSetValue()
 		{
 			return new IGraph3dNodeBase_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000588 RID: 1416
-		// (get) Token: 0x060013FF RID: 5119 RVA: 0x00040505 File Offset: 0x0003E705
-		// (set) Token: 0x06001400 RID: 5120 RVA: 0x00040530 File Offset: 0x0003E730
+		// Token: 0x170005EF RID: 1519
+		// (get) Token: 0x06001599 RID: 5529 RVA: 0x0004424D File Offset: 0x0004244D
+		// (set) Token: 0x0600159A RID: 5530 RVA: 0x00044278 File Offset: 0x00042478
 		public virtual int Id
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000589 RID: 1417
-		// (get) Token: 0x06001401 RID: 5121 RVA: 0x00040540 File Offset: 0x0003E740
-		// (set) Token: 0x06001402 RID: 5122 RVA: 0x000405A1 File Offset: 0x0003E7A1
+		// Token: 0x170005F0 RID: 1520
+		// (get) Token: 0x0600159B RID: 5531 RVA: 0x00044288 File Offset: 0x00042488
+		// (set) Token: 0x0600159C RID: 5532 RVA: 0x000442E9 File Offset: 0x000424E9
 		public virtual VectorInfo Position
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000FCB RID: 4043
+		// Token: 0x040010ED RID: 4333
 		[Nullable(2)]
 		protected IGraph3dNodeBase FbInstance;
 
-		// Token: 0x04000FCC RID: 4044
+		// Token: 0x040010EE RID: 4334
 		[Nullable(2)]
 		protected IGraph3dNodeBase_SetValue PocoInterface;
 
-		// Token: 0x04000FCD RID: 4045
+		// Token: 0x040010EF RID: 4335
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04000FCE RID: 4046
+		// Token: 0x040010F0 RID: 4336
 		private bool _PositionInited;
 	}
 }

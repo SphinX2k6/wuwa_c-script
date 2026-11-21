@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049B9 RID: 18873
-	// (Invoke) Token: 0x060311B6 RID: 201142
+	// Token: 0x02003933 RID: 14643
+	// (Invoke) Token: 0x06025CEC RID: 154860
 	public delegate int RewardTakeDataCallback();
 }

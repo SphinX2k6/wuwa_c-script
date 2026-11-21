@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020000DC RID: 220
+// Token: 0x020000DE RID: 222
 public class CubicBezierCurve : CurveBase
 {
-	// Token: 0x060006D8 RID: 1752 RVA: 0x00024784 File Offset: 0x00022984
+	// Token: 0x06000719 RID: 1817 RVA: 0x00024D58 File Offset: 0x00022F58
 	[NullableContext(1)]
 	public CubicBezierCurve(params float[] parameters) : base(Array.Empty<float>())
 	{
@@ -20,7 +20,7 @@ public class CubicBezierCurve : CurveBase
 		this.Ay = 1f - this.Cy - this.By;
 	}
 
-	// Token: 0x060006D9 RID: 1753 RVA: 0x0002483C File Offset: 0x00022A3C
+	// Token: 0x0600071A RID: 1818 RVA: 0x00024E10 File Offset: 0x00023010
 	public override float GetCurrentValueInternal(float key)
 	{
 		if (key <= 0f)
@@ -45,24 +45,24 @@ public class CubicBezierCurve : CurveBase
 		return ((this.Ay * num + this.By) * num + this.Cy) * num;
 	}
 
-	// Token: 0x04000580 RID: 1408
+	// Token: 0x0400058F RID: 1423
 	private static readonly int NEWTON_ITERATIONS = 6;
 
-	// Token: 0x04000581 RID: 1409
+	// Token: 0x04000590 RID: 1424
 	private readonly float Ax;
 
-	// Token: 0x04000582 RID: 1410
+	// Token: 0x04000591 RID: 1425
 	private readonly float Bx;
 
-	// Token: 0x04000583 RID: 1411
+	// Token: 0x04000592 RID: 1426
 	private readonly float Cx = 1f;
 
-	// Token: 0x04000584 RID: 1412
+	// Token: 0x04000593 RID: 1427
 	private readonly float Ay;
 
-	// Token: 0x04000585 RID: 1413
+	// Token: 0x04000594 RID: 1428
 	private readonly float By;
 
-	// Token: 0x04000586 RID: 1414
+	// Token: 0x04000595 RID: 1429
 	private readonly float Cy = 1f;
 }

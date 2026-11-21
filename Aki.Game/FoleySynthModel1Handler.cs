@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003019 RID: 12313
+// Token: 0x0200256F RID: 9583
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,13 +11,13 @@ using System.Runtime.CompilerServices;
 })]
 public class FoleySynthModel1Handler : FoleySynthHandlerBase<FoleySynthModel1Config>
 {
-	// Token: 0x0601A156 RID: 106838 RVA: 0x006D67C8 File Offset: 0x006D49C8
+	// Token: 0x06017A9E RID: 96926 RVA: 0x006FE6D0 File Offset: 0x006FC8D0
 	[NullableContext(2)]
 	public FoleySynthModel1Handler(CharacterActorComponent actorComp, CharacterAkComponent akComp, int recordCount) : base(actorComp, akComp, recordCount)
 	{
 	}
 
-	// Token: 0x0601A157 RID: 106839 RVA: 0x006D67D4 File Offset: 0x006D49D4
+	// Token: 0x06017A9F RID: 96927 RVA: 0x006FE6DC File Offset: 0x006FC8DC
 	protected override void OnInit(IReadOnlyList<FoleySynthModel1Config> configs)
 	{
 		foreach (FoleySynthModel1Config item in configs)
@@ -26,7 +26,7 @@ public class FoleySynthModel1Handler : FoleySynthHandlerBase<FoleySynthModel1Con
 		}
 	}
 
-	// Token: 0x0601A158 RID: 106840 RVA: 0x006D6824 File Offset: 0x006D4A24
+	// Token: 0x06017AA0 RID: 96928 RVA: 0x006FE72C File Offset: 0x006FC92C
 	protected unsafe override void OnParseBoneSpeedForAudio()
 	{
 		float num = 0f;

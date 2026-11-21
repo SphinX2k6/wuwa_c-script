@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014A7 RID: 5287
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001600 RID: 5632
 	public class AvgShakeUi : ActionParams
 	{
-		// Token: 0x06007862 RID: 30818 RVA: 0x00120AA8 File Offset: 0x0011ECA8
+		// Token: 0x06007F2F RID: 32559 RVA: 0x0012F6F4 File Offset: 0x0012D8F4
 		private AvgShakeUi_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007863 RID: 30819 RVA: 0x00120AE0 File Offset: 0x0011ECE0
+		// Token: 0x06007F30 RID: 32560 RVA: 0x0012F72C File Offset: 0x0012D92C
 		public static AvgShakeUi Create([Nullable(2)] AvgShakeUi instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007864 RID: 30820 RVA: 0x00120AF3 File Offset: 0x0011ECF3
+		// Token: 0x06007F31 RID: 32561 RVA: 0x0012F73F File Offset: 0x0012D93F
 		public static AvgShakeUi CreateFromSetValue([Nullable(2)] AvgShakeUi_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007865 RID: 30821 RVA: 0x00120B06 File Offset: 0x0011ED06
+		// Token: 0x06007F32 RID: 32562 RVA: 0x0012F752 File Offset: 0x0012D952
 		public AvgShakeUi_SetValue ToSetValue()
 		{
 			return new AvgShakeUi_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700286C RID: 10348
-		// (get) Token: 0x06007866 RID: 30822 RVA: 0x00120B25 File Offset: 0x0011ED25
-		// (set) Token: 0x06007867 RID: 30823 RVA: 0x00120B50 File Offset: 0x0011ED50
+		// Token: 0x17002A56 RID: 10838
+		// (get) Token: 0x06007F33 RID: 32563 RVA: 0x0012F771 File Offset: 0x0012D971
+		// (set) Token: 0x06007F34 RID: 32564 RVA: 0x0012F79C File Offset: 0x0012D99C
 		public virtual EAvgShakeUiIntensity Intensity
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700286D RID: 10349
-		// (get) Token: 0x06007868 RID: 30824 RVA: 0x00120B5E File Offset: 0x0011ED5E
-		// (set) Token: 0x06007869 RID: 30825 RVA: 0x00120B89 File Offset: 0x0011ED89
+		// Token: 0x17002A57 RID: 10839
+		// (get) Token: 0x06007F35 RID: 32565 RVA: 0x0012F7AA File Offset: 0x0012D9AA
+		// (set) Token: 0x06007F36 RID: 32566 RVA: 0x0012F7D5 File Offset: 0x0012D9D5
 		public virtual int RepeatCount
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040045F8 RID: 17912
+		// Token: 0x04004993 RID: 18835
 		[Nullable(2)]
 		protected new AvgShakeUi FbInstance;
 
-		// Token: 0x040045F9 RID: 17913
+		// Token: 0x04004994 RID: 18836
 		[Nullable(2)]
 		protected AvgShakeUi_SetValue PocoInterface;
 	}

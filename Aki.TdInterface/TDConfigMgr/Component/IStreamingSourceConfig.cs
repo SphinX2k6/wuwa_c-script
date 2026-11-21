@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000729 RID: 1833
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007CA RID: 1994
 	public class IStreamingSourceConfig
 	{
-		// Token: 0x06002797 RID: 10135 RVA: 0x00069504 File Offset: 0x00067704
+		// Token: 0x06002ABB RID: 10939 RVA: 0x000706AC File Offset: 0x0006E8AC
 		private IStreamingSourceConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002798 RID: 10136 RVA: 0x0006953C File Offset: 0x0006773C
+		// Token: 0x06002ABC RID: 10940 RVA: 0x000706E4 File Offset: 0x0006E8E4
 		public static IStreamingSourceConfig Create([Nullable(2)] IStreamingSourceConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002799 RID: 10137 RVA: 0x0006954F File Offset: 0x0006774F
+		// Token: 0x06002ABD RID: 10941 RVA: 0x000706F7 File Offset: 0x0006E8F7
 		public static IStreamingSourceConfig CreateFromSetValue([Nullable(2)] IStreamingSourceConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600279A RID: 10138 RVA: 0x00069562 File Offset: 0x00067762
+		// Token: 0x06002ABE RID: 10942 RVA: 0x0007070A File Offset: 0x0006E90A
 		public IStreamingSourceConfig_SetValue ToSetValue()
 		{
 			return new IStreamingSourceConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A6E RID: 2670
-		// (get) Token: 0x0600279B RID: 10139 RVA: 0x00069581 File Offset: 0x00067781
-		// (set) Token: 0x0600279C RID: 10140 RVA: 0x000695AC File Offset: 0x000677AC
+		// Token: 0x17000B2E RID: 2862
+		// (get) Token: 0x06002ABF RID: 10943 RVA: 0x00070729 File Offset: 0x0006E929
+		// (set) Token: 0x06002AC0 RID: 10944 RVA: 0x00070754 File Offset: 0x0006E954
 		public virtual int StreamingSourceTargetEntityId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A6F RID: 2671
-		// (get) Token: 0x0600279D RID: 10141 RVA: 0x000695BC File Offset: 0x000677BC
-		// (set) Token: 0x0600279E RID: 10142 RVA: 0x000695F6 File Offset: 0x000677F6
+		// Token: 0x17000B2F RID: 2863
+		// (get) Token: 0x06002AC1 RID: 10945 RVA: 0x00070764 File Offset: 0x0006E964
+		// (set) Token: 0x06002AC2 RID: 10946 RVA: 0x0007079E File Offset: 0x0006E99E
 		public virtual bool? IsNoRenderStreaming
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001AB8 RID: 6840
+		// Token: 0x04001CBD RID: 7357
 		[Nullable(2)]
 		protected IStreamingSourceConfig FbInstance;
 
-		// Token: 0x04001AB9 RID: 6841
+		// Token: 0x04001CBE RID: 7358
 		[Nullable(2)]
 		protected IStreamingSourceConfig_SetValue PocoInterface;
 	}

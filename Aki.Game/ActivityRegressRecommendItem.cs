@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001440 RID: 5184
+// Token: 0x020008F4 RID: 2292
 [NullableContext(1)]
 [Nullable(0)]
 internal class ActivityRegressRecommendItem : GridProxyAbstract<int>
 {
-	// Token: 0x06009259 RID: 37465 RVA: 0x001F4DE4 File Offset: 0x001F2FE4
+	// Token: 0x060065EE RID: 26094 RVA: 0x001FD920 File Offset: 0x001FBB20
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,20 +39,20 @@ internal class ActivityRegressRecommendItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0600925A RID: 37466 RVA: 0x001F4F89 File Offset: 0x001F3189
+	// Token: 0x060065EF RID: 26095 RVA: 0x001FDAC5 File Offset: 0x001FBCC5
 	protected override void OnStart()
 	{
 		this.RemainTimeText = ConfigMultiTextLang.GetLocalTextNew("ActivityRemainingTime", null);
 		this.RewardLayout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(9), new Func<CommonItemSmallItemGrid>(this.InitRewardItem), null, false, true);
 	}
 
-	// Token: 0x0600925B RID: 37467 RVA: 0x001F4FBE File Offset: 0x001F31BE
+	// Token: 0x060065F0 RID: 26096 RVA: 0x001FDAFA File Offset: 0x001FBCFA
 	private CommonItemSmallItemGrid InitRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0600925C RID: 37468 RVA: 0x001F4FC8 File Offset: 0x001F31C8
+	// Token: 0x060065F1 RID: 26097 RVA: 0x001FDB04 File Offset: 0x001FBD04
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		RegressRecommend? regressRecommend = ActivityRegressConfig.Instance.GetRegressRecommend(data);
@@ -82,7 +82,7 @@ internal class ActivityRegressRecommendItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600925D RID: 37469 RVA: 0x001F5058 File Offset: 0x001F3258
+	// Token: 0x060065F2 RID: 26098 RVA: 0x001FDB94 File Offset: 0x001FBD94
 	private void RefreshItemByQuest()
 	{
 		RegressRecommend? regressRecommend = ActivityRegressConfig.Instance.GetRegressRecommend(this.RegressRecommendId);
@@ -178,7 +178,7 @@ internal class ActivityRegressRecommendItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600925E RID: 37470 RVA: 0x001F536C File Offset: 0x001F356C
+	// Token: 0x060065F3 RID: 26099 RVA: 0x001FDEA8 File Offset: 0x001FC0A8
 	private void RefreshItemByTimeLimitActivity()
 	{
 		RegressRecommend? regressRecommend = ActivityRegressConfig.Instance.GetRegressRecommend(this.RegressRecommendId);
@@ -218,7 +218,7 @@ internal class ActivityRegressRecommendItem : GridProxyAbstract<int>
 		rewardLayout.RefreshByData(dropPreviewRewardItemListForPreview, null, false);
 	}
 
-	// Token: 0x0600925F RID: 37471 RVA: 0x001F54C8 File Offset: 0x001F36C8
+	// Token: 0x060065F4 RID: 26100 RVA: 0x001FE004 File Offset: 0x001FC204
 	private void RefreshActivityIcon(ActivityBaseData activityData)
 	{
 		string[] array = activityData.LocalConfig.Value.TabTexture();
@@ -239,7 +239,7 @@ internal class ActivityRegressRecommendItem : GridProxyAbstract<int>
 		});
 	}
 
-	// Token: 0x06009260 RID: 37472 RVA: 0x001F554C File Offset: 0x001F374C
+	// Token: 0x060065F5 RID: 26101 RVA: 0x001FE088 File Offset: 0x001FC288
 	private void SetTagIconByActivityConfig(ActivityBaseData activityData)
 	{
 		Activity? localConfig = activityData.LocalConfig;
@@ -264,7 +264,7 @@ internal class ActivityRegressRecommendItem : GridProxyAbstract<int>
 		sprite.SetColor(ActivityRegressColors.RegressYellowColor.Value);
 	}
 
-	// Token: 0x06009261 RID: 37473 RVA: 0x001F55F8 File Offset: 0x001F37F8
+	// Token: 0x060065F6 RID: 26102 RVA: 0x001FE134 File Offset: 0x001FC334
 	private void SetTitleByActivityConfig(ActivityBaseData activityData)
 	{
 		Activity? localConfig = activityData.LocalConfig;
@@ -275,7 +275,7 @@ internal class ActivityRegressRecommendItem : GridProxyAbstract<int>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), localConfig.Value.Title, Array.Empty<object>());
 	}
 
-	// Token: 0x06009262 RID: 37474 RVA: 0x001F563C File Offset: 0x001F383C
+	// Token: 0x060065F7 RID: 26103 RVA: 0x001FE178 File Offset: 0x001FC378
 	private void RefreshItemByNormalActivity()
 	{
 		RegressRecommend? regressRecommend = ActivityRegressConfig.Instance.GetRegressRecommend(this.RegressRecommendId);
@@ -315,7 +315,7 @@ internal class ActivityRegressRecommendItem : GridProxyAbstract<int>
 		rewardLayout.RefreshByData(dropPreviewRewardItemListForPreview, null, false);
 	}
 
-	// Token: 0x06009263 RID: 37475 RVA: 0x001F5798 File Offset: 0x001F3998
+	// Token: 0x060065F8 RID: 26104 RVA: 0x001FE2D4 File Offset: 0x001FC4D4
 	private void RefreshItemByArea()
 	{
 		RegressRecommend? regressRecommend = ActivityRegressConfig.Instance.GetRegressRecommend(this.RegressRecommendId);
@@ -377,7 +377,7 @@ internal class ActivityRegressRecommendItem : GridProxyAbstract<int>
 		}, false);
 	}
 
-	// Token: 0x06009264 RID: 37476 RVA: 0x001F59A4 File Offset: 0x001F3BA4
+	// Token: 0x060065F9 RID: 26105 RVA: 0x001FE4E0 File Offset: 0x001FC6E0
 	private void OnClickJumpBtn()
 	{
 		switch (this.RecommendType)
@@ -403,13 +403,13 @@ internal class ActivityRegressRecommendItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06009265 RID: 37477 RVA: 0x001F5A37 File Offset: 0x001F3C37
+	// Token: 0x060065FA RID: 26106 RVA: 0x001FE573 File Offset: 0x001FC773
 	private void OnClickPreOpenBtnBtn()
 	{
 		this.OpenActivity();
 	}
 
-	// Token: 0x06009266 RID: 37478 RVA: 0x001F5A3F File Offset: 0x001F3C3F
+	// Token: 0x060065FB RID: 26107 RVA: 0x001FE57B File Offset: 0x001FC77B
 	private void OpenActivity()
 	{
 		ActivityRegressController.RegressStartJumpToActivity(delegate
@@ -418,7 +418,7 @@ internal class ActivityRegressRecommendItem : GridProxyAbstract<int>
 		});
 	}
 
-	// Token: 0x040040D9 RID: 16601
+	// Token: 0x04004171 RID: 16753
 	[Nullable(new byte[]
 	{
 		2,
@@ -426,18 +426,18 @@ internal class ActivityRegressRecommendItem : GridProxyAbstract<int>
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x040040DA RID: 16602
+	// Token: 0x04004172 RID: 16754
 	private int RegressRecommendId;
 
-	// Token: 0x040040DB RID: 16603
+	// Token: 0x04004173 RID: 16755
 	private int JumpParam;
 
-	// Token: 0x040040DC RID: 16604
+	// Token: 0x04004174 RID: 16756
 	private int MainQuestId;
 
-	// Token: 0x040040DD RID: 16605
+	// Token: 0x04004175 RID: 16757
 	private ERegressRecommendType RecommendType = ERegressRecommendType.Area;
 
-	// Token: 0x040040DE RID: 16606
+	// Token: 0x04004176 RID: 16758
 	private string RemainTimeText = "";
 }

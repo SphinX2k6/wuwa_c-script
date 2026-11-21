@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.QuickTimeAction.Context;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020026C1 RID: 9921
+// Token: 0x02001BAC RID: 7084
 [NullableContext(2)]
 [Nullable(0)]
 public class QtaCustomizationLimitedHoldItemBar : UiPanelBase
 {
-	// Token: 0x06014586 RID: 83334 RVA: 0x005267C0 File Offset: 0x005249C0
+	// Token: 0x06011A68 RID: 72296 RVA: 0x005354F8 File Offset: 0x005336F8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -29,7 +29,7 @@ public class QtaCustomizationLimitedHoldItemBar : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014587 RID: 83335 RVA: 0x0052686C File Offset: 0x00524A6C
+	// Token: 0x06011A69 RID: 72297 RVA: 0x005355A4 File Offset: 0x005337A4
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -40,7 +40,7 @@ public class QtaCustomizationLimitedHoldItemBar : UiPanelBase
 		this.FxBarB = base.GetUiNiagara(3);
 	}
 
-	// Token: 0x06014588 RID: 83336 RVA: 0x005268BC File Offset: 0x00524ABC
+	// Token: 0x06011A6A RID: 72298 RVA: 0x005355F4 File Offset: 0x005337F4
 	public void SetValid(bool isValid)
 	{
 		if (this.LastBgValue != null)
@@ -53,7 +53,7 @@ public class QtaCustomizationLimitedHoldItemBar : UiPanelBase
 		}
 	}
 
-	// Token: 0x06014589 RID: 83337 RVA: 0x00526910 File Offset: 0x00524B10
+	// Token: 0x06011A6B RID: 72299 RVA: 0x00535648 File Offset: 0x00533848
 	[NullableContext(1)]
 	public void SetBgParam(QtaCzBgBarValue bgValue)
 	{
@@ -73,7 +73,7 @@ public class QtaCustomizationLimitedHoldItemBar : UiPanelBase
 		this.FxBarB.SetUIRelativeRotation(this.TmpRotation);
 	}
 
-	// Token: 0x0601458A RID: 83338 RVA: 0x00526A14 File Offset: 0x00524C14
+	// Token: 0x06011A6C RID: 72300 RVA: 0x0053574C File Offset: 0x0053394C
 	public void SetBgPercent(float p)
 	{
 		this.LastBgPercent = new float?(p);
@@ -89,53 +89,53 @@ public class QtaCustomizationLimitedHoldItemBar : UiPanelBase
 		this.FxBarB.ActivateSystem(true);
 	}
 
-	// Token: 0x040098F1 RID: 39153
+	// Token: 0x04009A49 RID: 39497
 	private UUITexture TexBarA;
 
-	// Token: 0x040098F2 RID: 39154
+	// Token: 0x04009A4A RID: 39498
 	private UUITexture TexBarB;
 
-	// Token: 0x040098F3 RID: 39155
+	// Token: 0x04009A4B RID: 39499
 	private UUINiagara FxBarA;
 
-	// Token: 0x040098F4 RID: 39156
+	// Token: 0x04009A4C RID: 39500
 	private UUINiagara FxBarB;
 
-	// Token: 0x040098F5 RID: 39157
+	// Token: 0x04009A4D RID: 39501
 	private bool IsTexMode;
 
-	// Token: 0x040098F6 RID: 39158
+	// Token: 0x04009A4E RID: 39502
 	private readonly FName P1Name = new FName("Anchor");
 
-	// Token: 0x040098F7 RID: 39159
+	// Token: 0x04009A4F RID: 39503
 	private readonly FName P2Name = new FName("Progress");
 
-	// Token: 0x040098F8 RID: 39160
+	// Token: 0x04009A50 RID: 39504
 	private FRotator TmpRotation = new FRotator();
 
-	// Token: 0x040098F9 RID: 39161
+	// Token: 0x04009A51 RID: 39505
 	private FLinearColor TmpAnchor = new FLinearColor(0f, 0.25f, 0.5f, 0.75f);
 
-	// Token: 0x040098FA RID: 39162
+	// Token: 0x04009A52 RID: 39506
 	private QtaCzBgBarValue LastBgValue;
 
-	// Token: 0x040098FB RID: 39163
+	// Token: 0x04009A53 RID: 39507
 	private float? LastBgPercent;
 
-	// Token: 0x02008D28 RID: 36136
+	// Token: 0x02007EB1 RID: 32433
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402DD1F RID: 187679
+		// Token: 0x04029036 RID: 167990
 		public const int TexBarA = 0;
 
-		// Token: 0x0402DD20 RID: 187680
+		// Token: 0x04029037 RID: 167991
 		public const int TexBarB = 1;
 
-		// Token: 0x0402DD21 RID: 187681
+		// Token: 0x04029038 RID: 167992
 		public const int FxBarA = 2;
 
-		// Token: 0x0402DD22 RID: 187682
+		// Token: 0x04029039 RID: 167993
 		public const int FxBarB = 3;
 	}
 }

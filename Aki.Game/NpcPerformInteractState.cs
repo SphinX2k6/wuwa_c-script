@@ -6,12 +6,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.LevelGamePlay;
 using UnrealEngine;
 
-// Token: 0x02003226 RID: 12838
+// Token: 0x02002795 RID: 10133
 [NullableContext(1)]
 [Nullable(0)]
 public class NpcPerformInteractState : NpcPerformBaseState
 {
-	// Token: 0x0601BAF0 RID: 113392 RVA: 0x0079C69B File Offset: 0x0079A89B
+	// Token: 0x06019675 RID: 104053 RVA: 0x007C4E37 File Offset: 0x007C3037
 	public NpcPerformInteractState(EntityHandle owner, ENpcPerformState state, [Nullable(new byte[]
 	{
 		2,
@@ -20,14 +20,14 @@ public class NpcPerformInteractState : NpcPerformBaseState
 	{
 	}
 
-	// Token: 0x0601BAF1 RID: 113393 RVA: 0x0079C6BC File Offset: 0x0079A8BC
+	// Token: 0x06019676 RID: 104054 RVA: 0x007C4E58 File Offset: 0x007C3058
 	public override bool CanChangeFrom(ENpcPerformState fromState)
 	{
 		CommonNpcPerformComponent component = this.Owner.Entity.GetComponent<CommonNpcPerformComponent>();
 		return this.HaveInteractConfig && fromState == ENpcPerformState.Idle && !component.IsInPlot;
 	}
 
-	// Token: 0x0601BAF2 RID: 113394 RVA: 0x0079C6F4 File Offset: 0x0079A8F4
+	// Token: 0x06019677 RID: 104055 RVA: 0x007C4E90 File Offset: 0x007C3090
 	[NullableContext(2)]
 	protected override void OnCreate(IEntityArgs args = null)
 	{
@@ -70,7 +70,7 @@ public class NpcPerformInteractState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0601BAF3 RID: 113395 RVA: 0x0079C798 File Offset: 0x0079A998
+	// Token: 0x06019678 RID: 104056 RVA: 0x007C4F34 File Offset: 0x007C3134
 	protected override void OnEnter(ENpcPerformState? lastState)
 	{
 		if (!string.IsNullOrEmpty(this.InteractMontage))
@@ -130,12 +130,12 @@ public class NpcPerformInteractState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0601BAF4 RID: 113396 RVA: 0x0079C91C File Offset: 0x0079AB1C
+	// Token: 0x06019679 RID: 104057 RVA: 0x007C50B8 File Offset: 0x007C32B8
 	protected override void OnUpdate(float delta)
 	{
 	}
 
-	// Token: 0x0601BAF5 RID: 113397 RVA: 0x0079C920 File Offset: 0x0079AB20
+	// Token: 0x0601967A RID: 104058 RVA: 0x007C50BC File Offset: 0x007C32BC
 	protected override void OnExit(ENpcPerformState nextState)
 	{
 		EventSystem.Instance.RemoveWithTarget(this.Owner, EEventName.OnInteractPlotEnd, new Action(this.OnInteractPlotEnd));
@@ -152,28 +152,28 @@ public class NpcPerformInteractState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0601BAF6 RID: 113398 RVA: 0x0079C9A8 File Offset: 0x0079ABA8
+	// Token: 0x0601967B RID: 104059 RVA: 0x007C5144 File Offset: 0x007C3344
 	protected override void OnDestroy()
 	{
 	}
 
-	// Token: 0x0601BAF7 RID: 113399 RVA: 0x0079C9AA File Offset: 0x0079ABAA
+	// Token: 0x0601967C RID: 104060 RVA: 0x007C5146 File Offset: 0x007C3346
 	private void OnInteractPlotEnd()
 	{
 		this.StateMachine.Switch(ENpcPerformState.Idle);
 	}
 
-	// Token: 0x0400D9F6 RID: 55798
+	// Token: 0x0400DE95 RID: 56981
 	private string InteractMontage = "";
 
-	// Token: 0x0400D9F7 RID: 55799
+	// Token: 0x0400DE96 RID: 56982
 	[Nullable(2)]
 	private UAnimMontage MontagePlaying;
 
-	// Token: 0x0400D9F8 RID: 55800
+	// Token: 0x0400DE97 RID: 56983
 	private bool HaveInteractConfig;
 
-	// Token: 0x0400D9F9 RID: 55801
+	// Token: 0x0400DE98 RID: 56984
 	[Nullable(new byte[]
 	{
 		2,
@@ -181,9 +181,9 @@ public class NpcPerformInteractState : NpcPerformBaseState
 	})]
 	private IEnumerable<IConditionalNpcPerformOnInteract> ConditionalInteractConfig;
 
-	// Token: 0x0400D9FA RID: 55802
+	// Token: 0x0400DE99 RID: 56985
 	private string ConditionalInteractMontage = "";
 
-	// Token: 0x0400D9FB RID: 55803
+	// Token: 0x0400DE9A RID: 56986
 	private bool NotInterrupMontageOnExit;
 }

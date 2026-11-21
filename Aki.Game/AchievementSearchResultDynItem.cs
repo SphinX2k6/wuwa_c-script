@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F30 RID: 3888
+// Token: 0x020003E5 RID: 997
 [NullableContext(1)]
 [Nullable(0)]
 public class AchievementSearchResultDynItem : UiPanelBase, IDynamicScrollBaseItem<AchievementSearchData>
 {
-	// Token: 0x060062AD RID: 25261 RVA: 0x00135190 File Offset: 0x00133390
+	// Token: 0x06003645 RID: 13893 RVA: 0x0013DAB8 File Offset: 0x0013BCB8
 	public UniTask Init(UUIItem actor)
 	{
 		AchievementSearchResultDynItem.<Init>d__2 <Init>d__;
@@ -25,7 +25,7 @@ public class AchievementSearchResultDynItem : UiPanelBase, IDynamicScrollBaseIte
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060062AE RID: 25262 RVA: 0x001351DC File Offset: 0x001333DC
+	// Token: 0x06003646 RID: 13894 RVA: 0x0013DB04 File Offset: 0x0013BD04
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -39,7 +39,7 @@ public class AchievementSearchResultDynItem : UiPanelBase, IDynamicScrollBaseIte
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060062AF RID: 25263 RVA: 0x00135248 File Offset: 0x00133448
+	// Token: 0x06003647 RID: 13895 RVA: 0x0013DB70 File Offset: 0x0013BD70
 	protected override void OnStart()
 	{
 		this.DescVec = Vector2D.Create();
@@ -50,7 +50,7 @@ public class AchievementSearchResultDynItem : UiPanelBase, IDynamicScrollBaseIte
 		this.ItemVec.Set((double)item.GetWidth(), (double)item.GetHeight());
 	}
 
-	// Token: 0x060062B0 RID: 25264 RVA: 0x001352AD File Offset: 0x001334AD
+	// Token: 0x06003648 RID: 13896 RVA: 0x0013DBD5 File Offset: 0x0013BDD5
 	public FVector2D GetItemSize(AchievementSearchData data)
 	{
 		if (data.AchievementSearchGroupData != null)
@@ -64,16 +64,16 @@ public class AchievementSearchResultDynItem : UiPanelBase, IDynamicScrollBaseIte
 		return new Vector2D().ToUeVector2D(false);
 	}
 
-	// Token: 0x060062B1 RID: 25265 RVA: 0x001352E4 File Offset: 0x001334E4
+	// Token: 0x06003649 RID: 13897 RVA: 0x0013DC0C File Offset: 0x0013BE0C
 	public void ClearItem()
 	{
 	}
 
-	// Token: 0x04002CC0 RID: 11456
+	// Token: 0x04002D59 RID: 11609
 	[Nullable(2)]
 	private Vector2D DescVec;
 
-	// Token: 0x04002CC1 RID: 11457
+	// Token: 0x04002D5A RID: 11610
 	[Nullable(2)]
 	private Vector2D ItemVec;
 }

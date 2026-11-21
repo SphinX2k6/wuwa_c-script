@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Roulette.View
 {
-	// Token: 0x02004C94 RID: 19604
+	// Token: 0x02003C45 RID: 15429
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GridRedDotInfo
 	{
-		// Token: 0x17007D04 RID: 32004
-		// (get) Token: 0x06032AB4 RID: 207540 RVA: 0x00BD1BFE File Offset: 0x00BCFDFE
-		// (set) Token: 0x06032AB5 RID: 207541 RVA: 0x00BD1C06 File Offset: 0x00BCFE06
+		// Token: 0x170050AE RID: 20654
+		// (get) Token: 0x06027867 RID: 161895 RVA: 0x00B16862 File Offset: 0x00B14A62
+		// (set) Token: 0x06027868 RID: 161896 RVA: 0x00B1686A File Offset: 0x00B14A6A
 		public ERouletteExploreId Id { get; set; }
 
-		// Token: 0x17007D05 RID: 32005
-		// (get) Token: 0x06032AB6 RID: 207542 RVA: 0x00BD1C0F File Offset: 0x00BCFE0F
-		// (set) Token: 0x06032AB7 RID: 207543 RVA: 0x00BD1C17 File Offset: 0x00BCFE17
+		// Token: 0x170050AF RID: 20655
+		// (get) Token: 0x06027869 RID: 161897 RVA: 0x00B16873 File Offset: 0x00B14A73
+		// (set) Token: 0x0602786A RID: 161898 RVA: 0x00B1687B File Offset: 0x00B14A7B
 		public Func<AssemblyGridData, bool> CheckFunction { get; set; }
 	}
 }

@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060F9 RID: 24825
+	// Token: 0x02005077 RID: 20599
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeBlessingSuitData : IRoverlikeBlessingSuitData
 	{
-		// Token: 0x17009157 RID: 37207
-		// (get) Token: 0x0603EC68 RID: 257128 RVA: 0x00F29B31 File Offset: 0x00F27D31
-		// (set) Token: 0x0603EC69 RID: 257129 RVA: 0x00F29B39 File Offset: 0x00F27D39
+		// Token: 0x170064B9 RID: 25785
+		// (get) Token: 0x0603392A RID: 211242 RVA: 0x00E70945 File Offset: 0x00E6EB45
+		// (set) Token: 0x0603392B RID: 211243 RVA: 0x00E7094D File Offset: 0x00E6EB4D
 		public int SuitId { get; set; }
 
-		// Token: 0x17009158 RID: 37208
-		// (get) Token: 0x0603EC6A RID: 257130 RVA: 0x00F29B42 File Offset: 0x00F27D42
-		// (set) Token: 0x0603EC6B RID: 257131 RVA: 0x00F29B4A File Offset: 0x00F27D4A
+		// Token: 0x170064BA RID: 25786
+		// (get) Token: 0x0603392C RID: 211244 RVA: 0x00E70956 File Offset: 0x00E6EB56
+		// (set) Token: 0x0603392D RID: 211245 RVA: 0x00E7095E File Offset: 0x00E6EB5E
 		public List<int> BlessingIdList { get; set; } = new List<int>();
 	}
 }

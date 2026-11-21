@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol.Summon;
@@ -11,12 +10,12 @@ using CSharpScript.Game.Module.SkillButtonUi;
 using CSharpScript.Game.World.Model;
 using UnrealEngine;
 
-// Token: 0x02003237 RID: 12855
+// Token: 0x020027A6 RID: 10150
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleBreakWeaknessComponent : EntityComponent
 {
-	// Token: 0x0601BBA4 RID: 113572 RVA: 0x007A25C0 File Offset: 0x007A07C0
+	// Token: 0x06019734 RID: 104244 RVA: 0x007CAE34 File Offset: 0x007C9034
 	protected override bool OnStart()
 	{
 		this.SkillComponent = base.Entity.GetComponent<BaseSkillComponent>();
@@ -58,7 +57,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BBA5 RID: 113573 RVA: 0x007A27B0 File Offset: 0x007A09B0
+	// Token: 0x06019735 RID: 104245 RVA: 0x007CB024 File Offset: 0x007C9224
 	protected override bool OnEnd()
 	{
 		if (this.HasBreakWeaknessSkill)
@@ -80,7 +79,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BBA6 RID: 113574 RVA: 0x007A28B4 File Offset: 0x007A0AB4
+	// Token: 0x06019736 RID: 104246 RVA: 0x007CB128 File Offset: 0x007C9328
 	protected override void OnTick(float delta)
 	{
 		if (this.BreakWeaknessCandidates.Count == 0)
@@ -93,20 +92,20 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		this.TryStartBreakWeaknessTask(breakWeaknessSkillTargetCandidate ?? this.GetFirstValidBreakWeaknessCandidate(candidates));
 	}
 
-	// Token: 0x0601BBA7 RID: 113575 RVA: 0x007A2900 File Offset: 0x007A0B00
+	// Token: 0x06019737 RID: 104247 RVA: 0x007CB174 File Offset: 0x007C9374
 	private void OnHit(HitInformation hitData, HitContext _)
 	{
 		Entity target = hitData.Target;
 		this.CheckBreakWeakness(target, hitData);
 	}
 
-	// Token: 0x0601BBA8 RID: 113576 RVA: 0x007A291C File Offset: 0x007A0B1C
+	// Token: 0x06019738 RID: 104248 RVA: 0x007CB190 File Offset: 0x007C9390
 	private void OnCharLimitDodge(Entity attacker, Entity victim, int skillId, long bulletId)
 	{
 		this.CheckBreakWeakness(attacker, null);
 	}
 
-	// Token: 0x0601BBA9 RID: 113577 RVA: 0x007A2928 File Offset: 0x007A0B28
+	// Token: 0x06019739 RID: 104249 RVA: 0x007CB19C File Offset: 0x007C939C
 	[NullableContext(2)]
 	private void CheckBreakWeakness(Entity targetEntity = null, HitInformation hitData = null)
 	{
@@ -125,7 +124,20 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		}
 		BaseSkillComponent skillComponent = this.SkillComponent;
 		global::Skill skill = (skillComponent != null) ? skillComponent.CurrentSkill : null;
-		if (skill != null && skill.SkillGenres.Contains(ESkillGenre.破弱技能13))
+		IReadOnlyList<ESkillGenre> readOnlyList = (skill != null) ? skill.SkillGenres : null;
+		bool flag = false;
+		if (readOnlyList != null)
+		{
+			for (int i = 0; i < readOnlyList.Count; i++)
+			{
+				if (readOnlyList[i] == ESkillGenre.破弱技能13)
+				{
+					flag = true;
+					break;
+				}
+			}
+		}
+		if (flag)
 		{
 			return;
 		}
@@ -141,12 +153,12 @@ public class RoleBreakWeaknessComponent : EntityComponent
 				int num3 = 0;
 				if (!(num2.GetValueOrDefault() == num3 & num2 != null))
 				{
-					goto IL_F3;
+					goto IL_118;
 				}
 			}
 			return;
 		}
-		IL_F3:
+		IL_118:
 		BaseSkillComponent skillComponent2 = this.SkillComponent;
 		int? num4;
 		if (skillComponent2 == null)
@@ -182,7 +194,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		});
 	}
 
-	// Token: 0x0601BBAA RID: 113578 RVA: 0x007A2AD8 File Offset: 0x007A0CD8
+	// Token: 0x0601973A RID: 104250 RVA: 0x007CB378 File Offset: 0x007C9578
 	[return: Nullable(2)]
 	private RoleBreakWeaknessComponent.BreakWeaknessCandidate GetBreakWeaknessSkillTargetCandidate(IReadOnlyList<RoleBreakWeaknessComponent.BreakWeaknessCandidate> candidates)
 	{
@@ -196,7 +208,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601BBAB RID: 113579 RVA: 0x007A2B4C File Offset: 0x007A0D4C
+	// Token: 0x0601973B RID: 104251 RVA: 0x007CB3EC File Offset: 0x007C95EC
 	[return: Nullable(2)]
 	private RoleBreakWeaknessComponent.BreakWeaknessCandidate GetFirstValidBreakWeaknessCandidate(IReadOnlyList<RoleBreakWeaknessComponent.BreakWeaknessCandidate> candidates)
 	{
@@ -210,7 +222,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601BBAC RID: 113580 RVA: 0x007A2BA4 File Offset: 0x007A0DA4
+	// Token: 0x0601973C RID: 104252 RVA: 0x007CB444 File Offset: 0x007C9644
 	[NullableContext(2)]
 	private void TryStartBreakWeaknessTask(RoleBreakWeaknessComponent.BreakWeaknessCandidate candidate)
 	{
@@ -242,7 +254,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		this.StartTask(targetEntity, targetSocket, true);
 	}
 
-	// Token: 0x0601BBAD RID: 113581 RVA: 0x007A2C23 File Offset: 0x007A0E23
+	// Token: 0x0601973D RID: 104253 RVA: 0x007CB4C3 File Offset: 0x007C96C3
 	private void SetTimer()
 	{
 		this.BreakWeaknessTimer = TimerSystem.FlowTimeInstance.Delay(delegate(float _)
@@ -251,7 +263,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		}, 5000f, null, null, true, 1f);
 	}
 
-	// Token: 0x0601BBAE RID: 113582 RVA: 0x007A2C4E File Offset: 0x007A0E4E
+	// Token: 0x0601973E RID: 104254 RVA: 0x007CB4EE File Offset: 0x007C96EE
 	private bool DestroyTimer()
 	{
 		if (TimerSystem.FlowTimeInstance.Has(this.BreakWeaknessTimer))
@@ -263,7 +275,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		return false;
 	}
 
-	// Token: 0x0601BBAF RID: 113583 RVA: 0x007A2C7D File Offset: 0x007A0E7D
+	// Token: 0x0601973F RID: 104255 RVA: 0x007CB51D File Offset: 0x007C971D
 	private void OnBattleStateChanged(bool inFight)
 	{
 		if (!inFight)
@@ -272,7 +284,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BBB0 RID: 113584 RVA: 0x007A2C89 File Offset: 0x007A0E89
+	// Token: 0x06019740 RID: 104256 RVA: 0x007CB529 File Offset: 0x007C9729
 	[NullableContext(2)]
 	[return: Nullable(1)]
 	private string GetBreakWeaknessTargetSocket(Entity targetEntity, int skillTargetEntityId, HitInformation hitData = null)
@@ -285,7 +297,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		return this.GetNearestLockOnSocket(targetEntity, hitData);
 	}
 
-	// Token: 0x0601BBB1 RID: 113585 RVA: 0x007A2CBC File Offset: 0x007A0EBC
+	// Token: 0x06019741 RID: 104257 RVA: 0x007CB55C File Offset: 0x007C975C
 	[NullableContext(2)]
 	[return: Nullable(1)]
 	private string GetNearestLockOnSocket(Entity targetEntity, HitInformation hitData = null)
@@ -333,16 +345,22 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x0601BBB2 RID: 113586 RVA: 0x007A2E24 File Offset: 0x007A1024
+	// Token: 0x06019742 RID: 104258 RVA: 0x007CB6C4 File Offset: 0x007C98C4
+	private int GetActiveBreakWeaknessTag()
+	{
+		return RoleBreakWeaknessComponent.weaknessTag;
+	}
+
+	// Token: 0x06019743 RID: 104259 RVA: 0x007CB6CC File Offset: 0x007C98CC
 	[NullableContext(2)]
 	private bool IsValidBreakWeaknessTarget(Entity targetEntity)
 	{
 		BaseTagComponent baseTagComponent = (targetEntity != null) ? targetEntity.GetComponent<BaseTagComponent>() : null;
-		if (targetEntity == null || (baseTagComponent == null || !baseTagComponent.HasTag(this.weaknessTag)))
+		if (targetEntity == null || (baseTagComponent == null || !baseTagComponent.HasTag(this.GetActiveBreakWeaknessTag())))
 		{
 			return false;
 		}
-		foreach (int tagId in this.targetForbiddenTags)
+		foreach (int tagId in RoleBreakWeaknessComponent.targetForbiddenTags)
 		{
 			if (baseTagComponent.HasTag(tagId))
 			{
@@ -359,7 +377,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		return !(monsterMatchType.GetValueOrDefault() == emonsterMatchType & monsterMatchType != null);
 	}
 
-	// Token: 0x0601BBB3 RID: 113587 RVA: 0x007A2EAC File Offset: 0x007A10AC
+	// Token: 0x06019744 RID: 104260 RVA: 0x007CB754 File Offset: 0x007C9954
 	private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		if (((oldEntity != null) ? oldEntity.Entity : null) != base.Entity || this.TargetEntityId == 0)
@@ -383,7 +401,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BBB4 RID: 113588 RVA: 0x007A2F34 File Offset: 0x007A1134
+	// Token: 0x06019745 RID: 104261 RVA: 0x007CB7DC File Offset: 0x007C99DC
 	private bool TakeOverTaskAfterRoleSwitch(int targetEntityId, string targetSocket)
 	{
 		if (!this.HasBreakWeaknessSkill || this.HasHiddenTag())
@@ -403,7 +421,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BBB5 RID: 113589 RVA: 0x007A2F90 File Offset: 0x007A1190
+	// Token: 0x06019746 RID: 104262 RVA: 0x007CB838 File Offset: 0x007C9A38
 	private void StartTask(Entity targetEntity, string targetSocket, bool showButton = true)
 	{
 		this.TargetEntityId = targetEntity.Id;
@@ -420,12 +438,12 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		BaseTagComponent tagComponent = this.TagComponent;
 		if (tagComponent != null)
 		{
-			tagComponent.AddTag(new int?(this.activateButtonTag));
+			tagComponent.AddTag(new int?(RoleBreakWeaknessComponent.activateButtonTag));
 		}
 		this.SetTimer();
 	}
 
-	// Token: 0x0601BBB6 RID: 113590 RVA: 0x007A2FF4 File Offset: 0x007A11F4
+	// Token: 0x06019747 RID: 104263 RVA: 0x007CB89C File Offset: 0x007C9A9C
 	private void EndTask(bool hideButton = true)
 	{
 		this.BreakWeaknessCandidates.Clear();
@@ -447,13 +465,13 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		BaseTagComponent tagComponent = this.TagComponent;
 		if (tagComponent != null)
 		{
-			tagComponent.RemoveTag(new int?(this.activateButtonTag));
+			tagComponent.RemoveTag(new int?(RoleBreakWeaknessComponent.activateButtonTag));
 		}
 		this.TargetEntityId = 0;
 		this.TargetSocket = "";
 	}
 
-	// Token: 0x0601BBB7 RID: 113591 RVA: 0x007A307C File Offset: 0x007A127C
+	// Token: 0x06019748 RID: 104264 RVA: 0x007CB924 File Offset: 0x007C9B24
 	private void BindTagTasks(BaseTagComponent tagComp, IReadOnlyList<int> tags, List<ITagTask> tasks, BaseTagComponent.TTagSwitchedCallback callback)
 	{
 		foreach (int value in tags)
@@ -466,7 +484,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BBB8 RID: 113592 RVA: 0x007A30D8 File Offset: 0x007A12D8
+	// Token: 0x06019749 RID: 104265 RVA: 0x007CB980 File Offset: 0x007C9B80
 	private void UnbindTagTasks(List<ITagTask> tasks)
 	{
 		if (tasks.Count == 0)
@@ -480,7 +498,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		tasks.Clear();
 	}
 
-	// Token: 0x0601BBB9 RID: 113593 RVA: 0x007A3134 File Offset: 0x007A1334
+	// Token: 0x0601974A RID: 104266 RVA: 0x007CB9DC File Offset: 0x007C9BDC
 	private void BindTargetStatusTags(Entity targetEntity)
 	{
 		this.UnbindTargetStatusTags();
@@ -489,11 +507,11 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		{
 			return;
 		}
-		this.BindTagTasks(component, this.targetForbiddenTags, this.TargetForbiddenTagTasks, new BaseTagComponent.TTagSwitchedCallback(this.OnTargetForbiddenTagChange));
-		this.TargetWeaknessTagTask = component.ListenForTagAddOrRemove(new int?(this.weaknessTag), new BaseTagComponent.TTagSwitchedCallback(this.OnTargetWeaknessTagChange), null);
+		this.BindTagTasks(component, RoleBreakWeaknessComponent.targetForbiddenTags, this.TargetForbiddenTagTasks, new BaseTagComponent.TTagSwitchedCallback(this.OnTargetForbiddenTagChange));
+		this.TargetWeaknessTagTask = component.ListenForTagAddOrRemove(new int?(this.GetActiveBreakWeaknessTag()), new BaseTagComponent.TTagSwitchedCallback(this.OnTargetWeaknessTagChange), null);
 	}
 
-	// Token: 0x0601BBBA RID: 113594 RVA: 0x007A3195 File Offset: 0x007A1395
+	// Token: 0x0601974B RID: 104267 RVA: 0x007CBA3C File Offset: 0x007C9C3C
 	private void UnbindTargetStatusTags()
 	{
 		this.UnbindTagTasks(this.TargetForbiddenTagTasks);
@@ -504,7 +522,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BBBB RID: 113595 RVA: 0x007A31BD File Offset: 0x007A13BD
+	// Token: 0x0601974C RID: 104268 RVA: 0x007CBA64 File Offset: 0x007C9C64
 	private void OnTargetForbiddenTagChange(int tagId, bool tagExist)
 	{
 		if (tagExist)
@@ -513,7 +531,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BBBC RID: 113596 RVA: 0x007A31C9 File Offset: 0x007A13C9
+	// Token: 0x0601974D RID: 104269 RVA: 0x007CBA70 File Offset: 0x007C9C70
 	private void OnTargetWeaknessTagChange(int tagId, bool tagExist)
 	{
 		if (!tagExist)
@@ -522,7 +540,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BBBD RID: 113597 RVA: 0x007A31D8 File Offset: 0x007A13D8
+	// Token: 0x0601974E RID: 104270 RVA: 0x007CBA7C File Offset: 0x007C9C7C
 	private void InitRoleTagConfig()
 	{
 		this.HiddenTags.Clear();
@@ -536,31 +554,31 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		this.DisableTags.AddRange(behaviorCommonButtonConfig.Value.DisableTags());
 	}
 
-	// Token: 0x0601BBBE RID: 113598 RVA: 0x007A3249 File Offset: 0x007A1449
+	// Token: 0x0601974F RID: 104271 RVA: 0x007CBAED File Offset: 0x007C9CED
 	private bool HasHiddenTag()
 	{
 		BaseTagComponent tagComponent = this.TagComponent;
 		return tagComponent != null && tagComponent.HasAnyTag(this.HiddenTags);
 	}
 
-	// Token: 0x0601BBBF RID: 113599 RVA: 0x007A3262 File Offset: 0x007A1462
+	// Token: 0x06019750 RID: 104272 RVA: 0x007CBB06 File Offset: 0x007C9D06
 	private bool HasDisableTag()
 	{
 		BaseTagComponent tagComponent = this.TagComponent;
 		return tagComponent != null && tagComponent.HasAnyTag(this.DisableTags);
 	}
 
-	// Token: 0x0601BBC0 RID: 113600 RVA: 0x007A327C File Offset: 0x007A147C
+	// Token: 0x06019751 RID: 104273 RVA: 0x007CBB20 File Offset: 0x007C9D20
 	private int? GetSpecialBreakWeaknessChildTag()
 	{
 		BaseTagComponent tagComponent = this.TagComponent;
-		if (tagComponent == null || !tagComponent.HasTag(this.specialBreakWeaknessTag))
+		if (tagComponent == null || !tagComponent.HasTag(RoleBreakWeaknessComponent.specialBreakWeaknessTag))
 		{
 			return null;
 		}
 		foreach (int num in this.TagComponent.TagContainer.GetAllExactTags())
 		{
-			if (num != this.specialBreakWeaknessTag && GameplayTagUtils.IsChildTag(num, this.specialBreakWeaknessTag))
+			if (num != RoleBreakWeaknessComponent.specialBreakWeaknessTag && GameplayTagUtils.IsChildTag(num, RoleBreakWeaknessComponent.specialBreakWeaknessTag))
 			{
 				return new int?(num);
 			}
@@ -568,7 +586,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601BBC1 RID: 113601 RVA: 0x007A3320 File Offset: 0x007A1520
+	// Token: 0x06019752 RID: 104274 RVA: 0x007CBBC0 File Offset: 0x007C9DC0
 	private void BindRoleHiddenTags()
 	{
 		this.UnbindRoleHiddenTags();
@@ -579,13 +597,13 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		this.BindTagTasks(this.TagComponent, this.HiddenTags, this.RoleHiddenTagTasks, new BaseTagComponent.TTagSwitchedCallback(this.OnRoleHiddenTagChange));
 	}
 
-	// Token: 0x0601BBC2 RID: 113602 RVA: 0x007A336D File Offset: 0x007A156D
+	// Token: 0x06019753 RID: 104275 RVA: 0x007CBC0D File Offset: 0x007C9E0D
 	private void UnbindRoleHiddenTags()
 	{
 		this.UnbindTagTasks(this.RoleHiddenTagTasks);
 	}
 
-	// Token: 0x0601BBC3 RID: 113603 RVA: 0x007A337B File Offset: 0x007A157B
+	// Token: 0x06019754 RID: 104276 RVA: 0x007CBC1B File Offset: 0x007C9E1B
 	private void OnRoleHiddenTagChange(int tagId, bool tagExist)
 	{
 		if (tagExist)
@@ -594,7 +612,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BBC4 RID: 113604 RVA: 0x007A3388 File Offset: 0x007A1588
+	// Token: 0x06019755 RID: 104277 RVA: 0x007CBC28 File Offset: 0x007C9E28
 	private void OnMonsterBeginBroken(int entityId)
 	{
 		if (entityId != this.TargetEntityId)
@@ -603,25 +621,30 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		}
 		if (!this.HasBreakWeaknessSkill)
 		{
+			Log.Instance.Info(ELogModule.Battle, ELogAuthor.CFT, "破弱技能不存在，不往下执行", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return;
 		}
 		if (!InputFunctionCommon.CanResponseInput(base.Entity))
 		{
+			Log.Instance.Info(ELogModule.Battle, ELogAuthor.CFT, "破弱 玩家当前不能响应输入，不往下执行", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return;
 		}
 		if (this.HasDisableTag())
 		{
+			Log.Instance.Info(ELogModule.Battle, ELogAuthor.CFT, "破弱 玩家有禁止使用的Tag，不往下执行", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return;
 		}
 		Entity entity = EntitySystem.Instance.Get(this.TargetEntityId);
 		if (entity == null)
 		{
+			Log.Instance.Info(ELogModule.Battle, ELogAuthor.CFT, "破弱目标不存在，不往下执行", default(ReadOnlySpan<ValueTuple<string, object>>));
 			this.EndTask(true);
 			return;
 		}
 		int? specialBreakWeaknessChildTag = this.GetSpecialBreakWeaknessChildTag();
 		if (specialBreakWeaknessChildTag != null)
 		{
+			Log.Instance.Info(ELogModule.Battle, ELogAuthor.CFT, "存在特殊破弱Tag,走发送游戏事件逻辑", default(ReadOnlySpan<ValueTuple<string, object>>));
 			BaseActorComponent component = entity.GetComponent<BaseActorComponent>();
 			AActor target = (component != null) ? component.Owner : null;
 			FGameplayEventData fgameplayEventData = new FGameplayEventData();
@@ -630,11 +653,12 @@ public class RoleBreakWeaknessComponent : EntityComponent
 			this.EndTask(true);
 			return;
 		}
+		Log.Instance.Info(ELogModule.Battle, ELogAuthor.CFT, "发送破弱触发器事件", default(ReadOnlySpan<ValueTuple<string, object>>));
 		SceneTeamController.Instance.EmitEvent<Entity, Entity, string>(base.Entity, EEventName.TriggerBreakWeakness, base.Entity, entity, this.TargetSocket);
 		this.EndTask(true);
 	}
 
-	// Token: 0x0601BBC5 RID: 113605 RVA: 0x007A345D File Offset: 0x007A165D
+	// Token: 0x06019756 RID: 104278 RVA: 0x007CBDA8 File Offset: 0x007C9FA8
 	private void OnSequenceCameraStatus(bool status, string cameraName)
 	{
 		if (cameraName != "MainCamera")
@@ -647,7 +671,7 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BBC6 RID: 113606 RVA: 0x007A3478 File Offset: 0x007A1678
+	// Token: 0x06019757 RID: 104279 RVA: 0x007CBDC4 File Offset: 0x007C9FC4
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -655,119 +679,123 @@ public class RoleBreakWeaknessComponent : EntityComponent
 			return false;
 		}
 		RoleBreakWeaknessComponent roleBreakWeaknessComponent = (RoleBreakWeaknessComponent)componentTemplate;
-		if (base.CanResetComponentProperty("SkillComponent"))
+		if (roleBreakWeaknessComponent.SkillComponent == null)
 		{
-			if (roleBreakWeaknessComponent.SkillComponent == null)
-			{
-				this.SkillComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseSkillComponent>(this.SkillComponent), "SkillComponent"))
-			{
-				return false;
-			}
+			this.SkillComponent = null;
 		}
-		if (base.CanResetComponentProperty("AbilityComponent"))
-		{
-			if (roleBreakWeaknessComponent.AbilityComponent == null)
-			{
-				this.AbilityComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAbilityComponent>(this.AbilityComponent), "AbilityComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagComponent"))
-		{
-			if (roleBreakWeaknessComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("HasBreakWeaknessSkill"))
-		{
-			this.HasBreakWeaknessSkill = roleBreakWeaknessComponent.HasBreakWeaknessSkill;
-		}
-		if (base.CanResetComponentProperty("SummonedEntity"))
-		{
-			if (roleBreakWeaknessComponent.SummonedEntity == null)
-			{
-				this.SummonedEntity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.SummonedEntity), "SummonedEntity"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SummonedEntityListened"))
-		{
-			if (roleBreakWeaknessComponent.SummonedEntityListened == null)
-			{
-				this.SummonedEntityListened = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.SummonedEntityListened), "SummonedEntityListened"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BreakWeaknessTimer"))
-		{
-			if (roleBreakWeaknessComponent.BreakWeaknessTimer == null)
-			{
-				this.BreakWeaknessTimer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.BreakWeaknessTimer), "BreakWeaknessTimer"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TargetEntityId"))
-		{
-			this.TargetEntityId = roleBreakWeaknessComponent.TargetEntityId;
-		}
-		if (base.CanResetComponentProperty("TargetSocket"))
-		{
-			this.TargetSocket = roleBreakWeaknessComponent.TargetSocket;
-		}
-		if (base.CanResetComponentProperty("TargetForbiddenTagTasks") && roleBreakWeaknessComponent.TargetForbiddenTagTasks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.TargetForbiddenTagTasks), "TargetForbiddenTagTasks"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComponent), "SkillComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TargetWeaknessTagTask"))
+		if (roleBreakWeaknessComponent.AbilityComponent == null)
 		{
-			if (roleBreakWeaknessComponent.TargetWeaknessTagTask == null)
-			{
-				this.TargetWeaknessTagTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TargetWeaknessTagTask), "TargetWeaknessTagTask"))
-			{
-				return false;
-			}
+			this.AbilityComponent = null;
 		}
-		return (!base.CanResetComponentProperty("HiddenTags") || roleBreakWeaknessComponent.HiddenTags == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.HiddenTags), "HiddenTags")) && (!base.CanResetComponentProperty("DisableTags") || roleBreakWeaknessComponent.DisableTags == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.DisableTags), "DisableTags")) && (!base.CanResetComponentProperty("RoleHiddenTagTasks") || roleBreakWeaknessComponent.RoleHiddenTagTasks == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.RoleHiddenTagTasks), "RoleHiddenTagTasks")) && (!base.CanResetComponentProperty("BreakWeaknessCandidates") || roleBreakWeaknessComponent.BreakWeaknessCandidates == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<RoleBreakWeaknessComponent.BreakWeaknessCandidate>>(this.BreakWeaknessCandidates), "BreakWeaknessCandidates")) && (!base.CanResetComponentProperty("TmpSocketLocation") || roleBreakWeaknessComponent.TmpSocketLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpSocketLocation), "TmpSocketLocation"));
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AbilityComponent), "AbilityComponent"))
+		{
+			return false;
+		}
+		if (roleBreakWeaknessComponent.TagComponent == null)
+		{
+			this.TagComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
+		{
+			return false;
+		}
+		this.HasBreakWeaknessSkill = roleBreakWeaknessComponent.HasBreakWeaknessSkill;
+		if (roleBreakWeaknessComponent.SummonedEntity == null)
+		{
+			this.SummonedEntity = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SummonedEntity), "SummonedEntity"))
+		{
+			return false;
+		}
+		if (roleBreakWeaknessComponent.SummonedEntityListened == null)
+		{
+			this.SummonedEntityListened = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SummonedEntityListened), "SummonedEntityListened"))
+		{
+			return false;
+		}
+		if (roleBreakWeaknessComponent.BreakWeaknessTimer == null)
+		{
+			this.BreakWeaknessTimer = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BreakWeaknessTimer), "BreakWeaknessTimer"))
+		{
+			return false;
+		}
+		this.TargetEntityId = roleBreakWeaknessComponent.TargetEntityId;
+		this.TargetSocket = roleBreakWeaknessComponent.TargetSocket;
+		if (roleBreakWeaknessComponent.TargetForbiddenTagTasks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetForbiddenTagTasks), "TargetForbiddenTagTasks"))
+		{
+			return false;
+		}
+		if (roleBreakWeaknessComponent.TargetWeaknessTagTask == null)
+		{
+			this.TargetWeaknessTagTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetWeaknessTagTask), "TargetWeaknessTagTask"))
+		{
+			return false;
+		}
+		return (roleBreakWeaknessComponent.HiddenTags == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.HiddenTags), "HiddenTags")) && (roleBreakWeaknessComponent.DisableTags == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisableTags), "DisableTags")) && (roleBreakWeaknessComponent.RoleHiddenTagTasks == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.RoleHiddenTagTasks), "RoleHiddenTagTasks")) && (roleBreakWeaknessComponent.BreakWeaknessCandidates == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.BreakWeaknessCandidates), "BreakWeaknessCandidates")) && (roleBreakWeaknessComponent.TmpSocketLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpSocketLocation), "TmpSocketLocation"));
 	}
 
-	// Token: 0x0400DA79 RID: 55929
+	// Token: 0x1700288E RID: 10382
+	// (get) Token: 0x06019758 RID: 104280 RVA: 0x007CC001 File Offset: 0x007CA201
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700288F RID: 10383
+	// (get) Token: 0x06019759 RID: 104281 RVA: 0x007CC004 File Offset: 0x007CA204
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002890 RID: 10384
+	// (get) Token: 0x0601975A RID: 104282 RVA: 0x007CC007 File Offset: 0x007CA207
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DF18 RID: 57112
 	private const int BREAK_WEAKNESS_DELAY = 5000;
 
-	// Token: 0x0400DA7A RID: 55930
+	// Token: 0x0400DF19 RID: 57113
 	public const int BREAK_WEAKNESS_BUTTON_CONFIG_ID = 2004;
 
-	// Token: 0x0400DA7B RID: 55931
-	private readonly int weaknessTag = GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.弱点机制.弱点状态"];
+	// Token: 0x0400DF1A RID: 57114
+	[StaticVariableRuleIgnore]
+	private static readonly int weaknessTag = GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.弱点机制.弱点状态"];
 
-	// Token: 0x0400DA7C RID: 55932
-	private readonly int activateButtonTag = GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.弱点机制.激活破弱按钮"];
+	// Token: 0x0400DF1B RID: 57115
+	[StaticVariableRuleIgnore]
+	private static readonly int activateButtonTag = GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.弱点机制.激活破弱按钮"];
 
-	// Token: 0x0400DA7D RID: 55933
-	private readonly int specialBreakWeaknessTag = GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.弱点机制.特殊破弱"];
+	// Token: 0x0400DF1C RID: 57116
+	[StaticVariableRuleIgnore]
+	private static readonly int specialBreakWeaknessTag = GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.弱点机制.特殊破弱"];
 
-	// Token: 0x0400DA7E RID: 55934
-	private readonly int[] targetForbiddenTags = new int[]
+	// Token: 0x0400DF1D RID: 57117
+	[StaticVariableRuleIgnore]
+	private static readonly int[] targetForbiddenTags = new int[]
 	{
 		GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.弱点机制.禁止进入弱点状态"],
 		GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.无敌.通用无敌"],
@@ -775,85 +803,85 @@ public class RoleBreakWeaknessComponent : EntityComponent
 		GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.不被敌方子弹命中"]
 	};
 
-	// Token: 0x0400DA7F RID: 55935
+	// Token: 0x0400DF1E RID: 57118
 	[Nullable(2)]
 	private BaseSkillComponent SkillComponent;
 
-	// Token: 0x0400DA80 RID: 55936
+	// Token: 0x0400DF1F RID: 57119
 	[Nullable(2)]
 	private CharacterAbilityComponent AbilityComponent;
 
-	// Token: 0x0400DA81 RID: 55937
+	// Token: 0x0400DF20 RID: 57120
 	[Nullable(2)]
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400DA82 RID: 55938
+	// Token: 0x0400DF21 RID: 57121
 	private bool HasBreakWeaknessSkill;
 
-	// Token: 0x0400DA83 RID: 55939
+	// Token: 0x0400DF22 RID: 57122
 	[Nullable(2)]
 	private EntityHandle SummonedEntity;
 
-	// Token: 0x0400DA84 RID: 55940
+	// Token: 0x0400DF23 RID: 57123
 	[Nullable(2)]
 	private Entity SummonedEntityListened;
 
-	// Token: 0x0400DA85 RID: 55941
+	// Token: 0x0400DF24 RID: 57124
 	[Nullable(2)]
 	private TimerHandle BreakWeaknessTimer;
 
-	// Token: 0x0400DA86 RID: 55942
+	// Token: 0x0400DF25 RID: 57125
 	private int TargetEntityId;
 
-	// Token: 0x0400DA87 RID: 55943
+	// Token: 0x0400DF26 RID: 57126
 	private string TargetSocket = "";
 
-	// Token: 0x0400DA88 RID: 55944
+	// Token: 0x0400DF27 RID: 57127
 	private readonly List<ITagTask> TargetForbiddenTagTasks = new List<ITagTask>();
 
-	// Token: 0x0400DA89 RID: 55945
+	// Token: 0x0400DF28 RID: 57128
 	[Nullable(2)]
 	private ITagTask TargetWeaknessTagTask;
 
-	// Token: 0x0400DA8A RID: 55946
+	// Token: 0x0400DF29 RID: 57129
 	private readonly List<int> HiddenTags = new List<int>();
 
-	// Token: 0x0400DA8B RID: 55947
+	// Token: 0x0400DF2A RID: 57130
 	private readonly List<int> DisableTags = new List<int>();
 
-	// Token: 0x0400DA8C RID: 55948
+	// Token: 0x0400DF2B RID: 57131
 	private readonly List<ITagTask> RoleHiddenTagTasks = new List<ITagTask>();
 
-	// Token: 0x0400DA8D RID: 55949
+	// Token: 0x0400DF2C RID: 57132
 	private readonly List<RoleBreakWeaknessComponent.BreakWeaknessCandidate> BreakWeaknessCandidates = new List<RoleBreakWeaknessComponent.BreakWeaknessCandidate>();
 
-	// Token: 0x0400DA8E RID: 55950
+	// Token: 0x0400DF2D RID: 57133
 	private readonly global::Vector TmpSocketLocation = global::Vector.Create();
 
-	// Token: 0x02009725 RID: 38693
+	// Token: 0x0200894B RID: 35147
 	[Nullable(0)]
 	[RequiredMember]
 	private class BreakWeaknessCandidate
 	{
-		// Token: 0x1700A131 RID: 41265
-		// (get) Token: 0x0604C49F RID: 312479 RVA: 0x0141B59C File Offset: 0x0141979C
-		// (set) Token: 0x0604C4A0 RID: 312480 RVA: 0x0141B5A4 File Offset: 0x014197A4
+		// Token: 0x170078C0 RID: 30912
+		// (get) Token: 0x0604292D RID: 272685 RVA: 0x013C61FC File Offset: 0x013C43FC
+		// (set) Token: 0x0604292E RID: 272686 RVA: 0x013C6204 File Offset: 0x013C4404
 		[RequiredMember]
 		public Entity TargetEntity { get; set; }
 
-		// Token: 0x1700A132 RID: 41266
-		// (get) Token: 0x0604C4A1 RID: 312481 RVA: 0x0141B5AD File Offset: 0x014197AD
-		// (set) Token: 0x0604C4A2 RID: 312482 RVA: 0x0141B5B5 File Offset: 0x014197B5
+		// Token: 0x170078C1 RID: 30913
+		// (get) Token: 0x0604292F RID: 272687 RVA: 0x013C620D File Offset: 0x013C440D
+		// (set) Token: 0x06042930 RID: 272688 RVA: 0x013C6215 File Offset: 0x013C4415
 		[RequiredMember]
 		public string TargetSocket { get; set; }
 
-		// Token: 0x1700A133 RID: 41267
-		// (get) Token: 0x0604C4A3 RID: 312483 RVA: 0x0141B5BE File Offset: 0x014197BE
-		// (set) Token: 0x0604C4A4 RID: 312484 RVA: 0x0141B5C6 File Offset: 0x014197C6
+		// Token: 0x170078C2 RID: 30914
+		// (get) Token: 0x06042931 RID: 272689 RVA: 0x013C621E File Offset: 0x013C441E
+		// (set) Token: 0x06042932 RID: 272690 RVA: 0x013C6226 File Offset: 0x013C4426
 		[RequiredMember]
 		public int SkillTargetEntityId { get; set; }
 
-		// Token: 0x0604C4A5 RID: 312485 RVA: 0x0141B5CF File Offset: 0x014197CF
+		// Token: 0x06042933 RID: 272691 RVA: 0x013C622F File Offset: 0x013C442F
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public BreakWeaknessCandidate()

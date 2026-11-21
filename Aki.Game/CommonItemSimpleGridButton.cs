@@ -9,13 +9,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020018B8 RID: 6328
+// Token: 0x02000D71 RID: 3441
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonItemSimpleGridButton : GridProxyAbstract<TItem>
 {
-	// Token: 0x17000F5A RID: 3930
-	// (get) Token: 0x0600B969 RID: 47465 RVA: 0x002A0E2E File Offset: 0x0029F02E
+	// Token: 0x17000F7D RID: 3965
+	// (get) Token: 0x06008D52 RID: 36178 RVA: 0x002AB582 File Offset: 0x002A9782
 	public int ItemId
 	{
 		get
@@ -24,7 +24,7 @@ public class CommonItemSimpleGridButton : GridProxyAbstract<TItem>
 		}
 	}
 
-	// Token: 0x0600B96A RID: 47466 RVA: 0x002A0E38 File Offset: 0x0029F038
+	// Token: 0x06008D53 RID: 36179 RVA: 0x002AB58C File Offset: 0x002A978C
 	[NullableContext(2)]
 	public CommonItemSimpleGridButton(AActor commonItemActor = null)
 	{
@@ -34,7 +34,7 @@ public class CommonItemSimpleGridButton : GridProxyAbstract<TItem>
 		}
 	}
 
-	// Token: 0x0600B96B RID: 47467 RVA: 0x002A0E88 File Offset: 0x0029F088
+	// Token: 0x06008D54 RID: 36180 RVA: 0x002AB5DC File Offset: 0x002A97DC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -55,17 +55,17 @@ public class CommonItemSimpleGridButton : GridProxyAbstract<TItem>
 		};
 	}
 
-	// Token: 0x0600B96C RID: 47468 RVA: 0x002A0F89 File Offset: 0x0029F189
+	// Token: 0x06008D55 RID: 36181 RVA: 0x002AB6DD File Offset: 0x002A98DD
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x0600B96D RID: 47469 RVA: 0x002A0F8B File Offset: 0x0029F18B
+	// Token: 0x06008D56 RID: 36182 RVA: 0x002AB6DF File Offset: 0x002A98DF
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x0600B96E RID: 47470 RVA: 0x002A0F8D File Offset: 0x0029F18D
+	// Token: 0x06008D57 RID: 36183 RVA: 0x002AB6E1 File Offset: 0x002A98E1
 	private void ButtonClick()
 	{
 		if (this.ClickCallback == null)
@@ -75,7 +75,7 @@ public class CommonItemSimpleGridButton : GridProxyAbstract<TItem>
 		this.ClickCallback(this.ItemConfigId);
 	}
 
-	// Token: 0x0600B96F RID: 47471 RVA: 0x002A0FAC File Offset: 0x0029F1AC
+	// Token: 0x06008D58 RID: 36184 RVA: 0x002AB700 File Offset: 0x002A9900
 	private void UpdateView()
 	{
 		UUITexture texture = base.GetTexture(1);
@@ -84,7 +84,7 @@ public class CommonItemSimpleGridButton : GridProxyAbstract<TItem>
 		base.SetItemQualityIcon(sprite, this.ItemConfigId, this.BelongViewName, CommonDefine.EQualityIconType.BackgroundSprite, null);
 	}
 
-	// Token: 0x0600B970 RID: 47472 RVA: 0x002A0FF4 File Offset: 0x0029F1F4
+	// Token: 0x06008D59 RID: 36185 RVA: 0x002AB748 File Offset: 0x002A9948
 	public override void Refresh(TItem data, bool isSelect, int gridIndex)
 	{
 		InventoryDefine.IGetItemData itemData = data.ItemData;
@@ -92,37 +92,37 @@ public class CommonItemSimpleGridButton : GridProxyAbstract<TItem>
 		this.RefreshItem(itemData.ItemId, count);
 	}
 
-	// Token: 0x0600B971 RID: 47473 RVA: 0x002A101C File Offset: 0x0029F21C
+	// Token: 0x06008D5A RID: 36186 RVA: 0x002AB770 File Offset: 0x002A9970
 	public void SetQualityActive(bool isShow)
 	{
 		base.GetSprite(0).SetUIActive(isShow);
 	}
 
-	// Token: 0x0600B972 RID: 47474 RVA: 0x002A102B File Offset: 0x0029F22B
+	// Token: 0x06008D5B RID: 36187 RVA: 0x002AB77F File Offset: 0x002A997F
 	public void SetCanReceiveActive(bool isShow)
 	{
 		base.GetSprite(5).SetUIActive(isShow);
 	}
 
-	// Token: 0x0600B973 RID: 47475 RVA: 0x002A103A File Offset: 0x0029F23A
+	// Token: 0x06008D5C RID: 36188 RVA: 0x002AB78E File Offset: 0x002A998E
 	public void SetLockReceiveActive(bool isShow)
 	{
 		base.GetSprite(6).SetUIActive(isShow);
 	}
 
-	// Token: 0x0600B974 RID: 47476 RVA: 0x002A1049 File Offset: 0x0029F249
+	// Token: 0x06008D5D RID: 36189 RVA: 0x002AB79D File Offset: 0x002A999D
 	public void SetReceivedActive(bool isShow)
 	{
 		base.GetItem(7).SetUIActive(isShow);
 	}
 
-	// Token: 0x0600B975 RID: 47477 RVA: 0x002A1058 File Offset: 0x0029F258
+	// Token: 0x06008D5E RID: 36190 RVA: 0x002AB7AC File Offset: 0x002A99AC
 	public void SetBelongViewName(EUiViewName viewName)
 	{
 		this.BelongViewName = new EUiViewName?(viewName);
 	}
 
-	// Token: 0x0600B976 RID: 47478 RVA: 0x002A1066 File Offset: 0x0029F266
+	// Token: 0x06008D5F RID: 36191 RVA: 0x002AB7BA File Offset: 0x002A99BA
 	public void RefreshItem(int itemConfigId, int itemCount = 0)
 	{
 		this.ItemConfigId = itemConfigId;
@@ -130,13 +130,13 @@ public class CommonItemSimpleGridButton : GridProxyAbstract<TItem>
 		this.SetCount(itemCount);
 	}
 
-	// Token: 0x0600B977 RID: 47479 RVA: 0x002A107C File Offset: 0x0029F27C
+	// Token: 0x06008D60 RID: 36192 RVA: 0x002AB7D0 File Offset: 0x002A99D0
 	public void BindClickCallback(Action<int> clickCallback)
 	{
 		this.ClickCallback = clickCallback;
 	}
 
-	// Token: 0x0600B978 RID: 47480 RVA: 0x002A1085 File Offset: 0x0029F285
+	// Token: 0x06008D61 RID: 36193 RVA: 0x002AB7D9 File Offset: 0x002A99D9
 	protected void SetCount(int count = 0)
 	{
 		if (count == 0)
@@ -148,27 +148,27 @@ public class CommonItemSimpleGridButton : GridProxyAbstract<TItem>
 		this.GetCountItem().SetUIActive(true);
 	}
 
-	// Token: 0x0600B979 RID: 47481 RVA: 0x002A10C4 File Offset: 0x0029F2C4
+	// Token: 0x06008D62 RID: 36194 RVA: 0x002AB818 File Offset: 0x002A9A18
 	[NullableContext(2)]
 	protected UUIText GetCountText()
 	{
 		return base.GetText(2);
 	}
 
-	// Token: 0x0600B97A RID: 47482 RVA: 0x002A10CD File Offset: 0x0029F2CD
+	// Token: 0x06008D63 RID: 36195 RVA: 0x002AB821 File Offset: 0x002A9A21
 	[NullableContext(2)]
 	protected UUIItem GetCountItem()
 	{
 		return base.GetItem(3);
 	}
 
-	// Token: 0x0600B97B RID: 47483 RVA: 0x002A10D6 File Offset: 0x0029F2D6
+	// Token: 0x06008D64 RID: 36196 RVA: 0x002AB82A File Offset: 0x002A9A2A
 	public void SetCountTextId(string textId)
 	{
 		this.CountTextId = textId;
 	}
 
-	// Token: 0x0600B97C RID: 47484 RVA: 0x002A10E0 File Offset: 0x0029F2E0
+	// Token: 0x06008D65 RID: 36197 RVA: 0x002AB834 File Offset: 0x002A9A34
 	public UniTask RefreshItemAsync(int itemConfigId, int itemCount = 0)
 	{
 		CommonItemSimpleGridButton.<RefreshItemAsync>d__25 <RefreshItemAsync>d__;
@@ -181,7 +181,7 @@ public class CommonItemSimpleGridButton : GridProxyAbstract<TItem>
 		return <RefreshItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B97D RID: 47485 RVA: 0x002A1134 File Offset: 0x0029F334
+	// Token: 0x06008D66 RID: 36198 RVA: 0x002AB888 File Offset: 0x002A9A88
 	private UniTask UpdateViewAsync()
 	{
 		CommonItemSimpleGridButton.<UpdateViewAsync>d__26 <UpdateViewAsync>d__;
@@ -192,42 +192,42 @@ public class CommonItemSimpleGridButton : GridProxyAbstract<TItem>
 		return <UpdateViewAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005423 RID: 21539
+	// Token: 0x040054CE RID: 21710
 	private int ItemConfigId;
 
-	// Token: 0x04005424 RID: 21540
+	// Token: 0x040054CF RID: 21711
 	private string CountTextId = "ShowCount";
 
-	// Token: 0x04005425 RID: 21541
+	// Token: 0x040054D0 RID: 21712
 	private EUiViewName? BelongViewName;
 
-	// Token: 0x04005426 RID: 21542
+	// Token: 0x040054D1 RID: 21713
 	private Action<int> ClickCallback = delegate(int itemConfigId)
 	{
-		ItemController.Instance.OpenItemTipsByItemId(itemConfigId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(itemConfigId, true, null, false);
 	};
 
-	// Token: 0x02007E45 RID: 32325
+	// Token: 0x02006FCC RID: 28620
 	[NullableContext(0)]
 	private enum EChildComponentType
 	{
-		// Token: 0x04029522 RID: 169250
+		// Token: 0x0402484F RID: 149583
 		SpriteQuality,
-		// Token: 0x04029523 RID: 169251
+		// Token: 0x04024850 RID: 149584
 		TextureIcon,
-		// Token: 0x04029524 RID: 169252
+		// Token: 0x04024851 RID: 149585
 		TextCount,
-		// Token: 0x04029525 RID: 169253
+		// Token: 0x04024852 RID: 149586
 		NumItem,
-		// Token: 0x04029526 RID: 169254
+		// Token: 0x04024853 RID: 149587
 		ButtonClick,
-		// Token: 0x04029527 RID: 169255
+		// Token: 0x04024854 RID: 149588
 		CanReceiveSprite,
-		// Token: 0x04029528 RID: 169256
+		// Token: 0x04024855 RID: 149589
 		LockSprite,
-		// Token: 0x04029529 RID: 169257
+		// Token: 0x04024856 RID: 149590
 		ReceivedItem,
-		// Token: 0x0402952A RID: 169258
+		// Token: 0x04024857 RID: 149591
 		AddSprite
 	}
 }

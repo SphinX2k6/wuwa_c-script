@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x0200362C RID: 13868
+// Token: 0x02002BA1 RID: 11169
 public class __TsTaskNpcBoardVehicle_InheritProxy : TsTaskNpcBoardVehicle
 {
-	// Token: 0x0601E1E7 RID: 123367 RVA: 0x008816D4 File Offset: 0x0087F8D4
+	// Token: 0x0601BF0F RID: 114447 RVA: 0x008A9768 File Offset: 0x008A7968
 	[NullableContext(1)]
 	public __TsTaskNpcBoardVehicle_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcBoardVehicle.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E1E8 RID: 123368 RVA: 0x00881707 File Offset: 0x0087F907
+	// Token: 0x0601BF10 RID: 114448 RVA: 0x008A979B File Offset: 0x008A799B
 	protected __TsTaskNpcBoardVehicle_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E1E9 RID: 123369 RVA: 0x00881710 File Offset: 0x0087F910
+	// Token: 0x0601BF11 RID: 114449 RVA: 0x008A97A4 File Offset: 0x008A79A4
 	protected unsafe override void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -25,7 +25,7 @@ public class __TsTaskNpcBoardVehicle_InheritProxy : TsTaskNpcBoardVehicle
 		base.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601E1EA RID: 123370 RVA: 0x00881740 File Offset: 0x0087F940
+	// Token: 0x0601BF12 RID: 114450 RVA: 0x008A97D4 File Offset: 0x008A79D4
 	protected unsafe override void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

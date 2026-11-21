@@ -13,19 +13,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 {
-	// Token: 0x02007035 RID: 28725
+	// Token: 0x020061B6 RID: 25014
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MotorcycleRailMoveComponent : EntityComponent
 	{
-		// Token: 0x06045EF8 RID: 286456 RVA: 0x0116A997 File Offset: 0x01168B97
+		// Token: 0x0603C0DA RID: 245978 RVA: 0x011147E3 File Offset: 0x011129E3
 		public bool GetIsInRailMoveMode()
 		{
 			return this.IsInRailMoveMode;
 		}
 
-		// Token: 0x17009BE5 RID: 39909
-		// (get) Token: 0x06045EF9 RID: 286457 RVA: 0x0116A99F File Offset: 0x01168B9F
+		// Token: 0x17007152 RID: 29010
+		// (get) Token: 0x0603C0DB RID: 245979 RVA: 0x011147EB File Offset: 0x011129EB
 		[Nullable(1)]
 		private MotorcycleRailMoveConfig CurrentRailMoveConfig
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045EFA RID: 286458 RVA: 0x0116A9C0 File Offset: 0x01168BC0
+		// Token: 0x0603C0DC RID: 245980 RVA: 0x0111480C File Offset: 0x01112A0C
 		private unsafe void UpdateCurrentRailComp(MotorcycleRailComponent newRailComp)
 		{
 			if (newRailComp == this.CurrentRailComp)
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045EFB RID: 286459 RVA: 0x0116AAD0 File Offset: 0x01168CD0
+		// Token: 0x0603C0DD RID: 245981 RVA: 0x0111491C File Offset: 0x01112B1C
 		private void OnEnterRail()
 		{
 			if (this.CurrentRailComp == null)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045EFC RID: 286460 RVA: 0x0116AC94 File Offset: 0x01168E94
+		// Token: 0x0603C0DE RID: 245982 RVA: 0x01114AE0 File Offset: 0x01112CE0
 		private void OnLeaveRail()
 		{
 			if (this.CurrentRailComp == null)
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.StartAutoEnterRailCd(this.CurrentRailMoveConfig.BasicRailMoveConfig.AutoEnterRailCdAfterLeaveRail * 1000f);
 		}
 
-		// Token: 0x06045EFD RID: 286461 RVA: 0x0116AE74 File Offset: 0x01169074
+		// Token: 0x0603C0DF RID: 245983 RVA: 0x01114CC0 File Offset: 0x01112EC0
 		private unsafe void RequestLeaveRail(long oldRailCreatureDataId)
 		{
 			MotorSliderRequest motorSliderRequest = MotorSliderRequest.Create();
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}, 0);
 		}
 
-		// Token: 0x06045EFE RID: 286462 RVA: 0x0116AECC File Offset: 0x011690CC
+		// Token: 0x0603C0E0 RID: 245984 RVA: 0x01114D18 File Offset: 0x01112F18
 		private unsafe void RequestEnterRail(long newRailCreatureDataId)
 		{
 			MotorSliderRequest motorSliderRequest = MotorSliderRequest.Create();
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}, 0);
 		}
 
-		// Token: 0x06045EFF RID: 286463 RVA: 0x0116AF24 File Offset: 0x01169124
+		// Token: 0x0603C0E1 RID: 245985 RVA: 0x01114D70 File Offset: 0x01112F70
 		private void OnHandleClientEvent(FGameplayTag eventTag)
 		{
 			if (this.CurrentRailComp == null || !this.IsInRailMoveMode)
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F00 RID: 286464 RVA: 0x0116AFC4 File Offset: 0x011691C4
+		// Token: 0x0603C0E2 RID: 245986 RVA: 0x01114E10 File Offset: 0x01113010
 		private void PlayCue(int cueId)
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(base.Entity.Id);
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			hashSet.Add(num);
 		}
 
-		// Token: 0x06045F01 RID: 286465 RVA: 0x0116B050 File Offset: 0x01169250
+		// Token: 0x0603C0E3 RID: 245987 RVA: 0x01114E9C File Offset: 0x0111309C
 		private void RemoveCue(int cueId)
 		{
 			HashSet<int> hashSet;
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.CurrentCueHandleMap.Remove(cueId);
 		}
 
-		// Token: 0x06045F02 RID: 286466 RVA: 0x0116B0C8 File Offset: 0x011692C8
+		// Token: 0x0603C0E4 RID: 245988 RVA: 0x01114F14 File Offset: 0x01113114
 		private void RemoveAllCue()
 		{
 			foreach (HashSet<int> hashSet in this.CurrentCueHandleMap.Values)
@@ -321,7 +321,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.CurrentCueHandleMap.Clear();
 		}
 
-		// Token: 0x06045F03 RID: 286467 RVA: 0x0116B16C File Offset: 0x0116936C
+		// Token: 0x0603C0E5 RID: 245989 RVA: 0x01114FB8 File Offset: 0x011131B8
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public unsafe SMotorRailMoveConfig GetRailMoveConfigUeData(string rowName)
@@ -354,13 +354,13 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return dataTableRow;
 		}
 
-		// Token: 0x06045F04 RID: 286468 RVA: 0x0116B242 File Offset: 0x01169442
+		// Token: 0x0603C0E6 RID: 245990 RVA: 0x0111508E File Offset: 0x0111328E
 		public void UpdateDefaultRailMoveConfig()
 		{
 			MotorcycleRailMoveUtils.Instance.UpdateRailMoveConfig("Default", this.DefaultRailMoveConfig, new Func<string, SMotorRailMoveConfig>(this.GetRailMoveConfigUeData));
 		}
 
-		// Token: 0x06045F05 RID: 286469 RVA: 0x0116B268 File Offset: 0x01169468
+		// Token: 0x0603C0E7 RID: 245991 RVA: 0x011150B4 File Offset: 0x011132B4
 		private unsafe void LoadRailMoveConfigDataTable(bool bAsync = true)
 		{
 			if (this.LoadConfigHandle != -1)
@@ -429,14 +429,14 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F06 RID: 286470 RVA: 0x0116B3A6 File Offset: 0x011695A6
+		// Token: 0x0603C0E8 RID: 245992 RVA: 0x011151F2 File Offset: 0x011133F2
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			this.LoadRailMoveConfigDataTable(true);
 			return true;
 		}
 
-		// Token: 0x06045F07 RID: 286471 RVA: 0x0116B3B0 File Offset: 0x011695B0
+		// Token: 0x0603C0E9 RID: 245993 RVA: 0x011151FC File Offset: 0x011133FC
 		protected override bool OnInit()
 		{
 			this.ActorComp = base.Entity.GetComponent<VehicleActorComponent>();
@@ -444,7 +444,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return true;
 		}
 
-		// Token: 0x06045F08 RID: 286472 RVA: 0x0116B3D8 File Offset: 0x011695D8
+		// Token: 0x0603C0EA RID: 245994 RVA: 0x01115224 File Offset: 0x01113424
 		protected override void OnActivate()
 		{
 			this.UpdateDefaultRailMoveConfig();
@@ -467,7 +467,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F09 RID: 286473 RVA: 0x0116B50C File Offset: 0x0116970C
+		// Token: 0x0603C0EB RID: 245995 RVA: 0x01115358 File Offset: 0x01113558
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveAllTargetUseKey(this);
@@ -475,7 +475,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return true;
 		}
 
-		// Token: 0x06045F0A RID: 286474 RVA: 0x0116B524 File Offset: 0x01169724
+		// Token: 0x0603C0EC RID: 245996 RVA: 0x01115370 File Offset: 0x01113570
 		private unsafe void OnBeforeSkill(int skillId, bool isAutonomousProxy)
 		{
 			if (this.RailMoveConfigDataTable == null)
@@ -524,7 +524,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F0B RID: 286475 RVA: 0x0116B676 File Offset: 0x01169876
+		// Token: 0x0603C0ED RID: 245997 RVA: 0x011154C2 File Offset: 0x011136C2
 		private void OnJumpAlongRailSkill()
 		{
 			if (!this.IsInRailMoveMode)
@@ -534,7 +534,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.TryJumpAlongRail();
 		}
 
-		// Token: 0x06045F0C RID: 286476 RVA: 0x0116B688 File Offset: 0x01169888
+		// Token: 0x0603C0EE RID: 245998 RVA: 0x011154D4 File Offset: 0x011136D4
 		private void OnJumpSwitchRailSkill()
 		{
 			if (!this.IsInRailMoveMode)
@@ -563,7 +563,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F0D RID: 286477 RVA: 0x0116B71C File Offset: 0x0116991C
+		// Token: 0x0603C0EF RID: 245999 RVA: 0x01115568 File Offset: 0x01113768
 		private void OnJumpOffRailSkill()
 		{
 			if (!this.IsInRailMoveMode)
@@ -592,7 +592,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F0E RID: 286478 RVA: 0x0116B7B0 File Offset: 0x011699B0
+		// Token: 0x0603C0F0 RID: 246000 RVA: 0x011155FC File Offset: 0x011137FC
 		private void OnJumpToRailSkill()
 		{
 			if (this.IsInRailMoveMode)
@@ -602,13 +602,13 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.TryJumpEnterRailMove();
 		}
 
-		// Token: 0x06045F0F RID: 286479 RVA: 0x0116B7C2 File Offset: 0x011699C2
+		// Token: 0x0603C0F1 RID: 246001 RVA: 0x0111560E File Offset: 0x0111380E
 		[NullableContext(1)]
 		protected void OnVehicleBeenEntered(VehiclePassengerInfo info, bool byChangeRole)
 		{
 		}
 
-		// Token: 0x06045F10 RID: 286480 RVA: 0x0116B7C4 File Offset: 0x011699C4
+		// Token: 0x0603C0F2 RID: 246002 RVA: 0x01115610 File Offset: 0x01113810
 		[NullableContext(1)]
 		protected void OnVehicleBeenLeaved(VehiclePassengerInfo info, bool byChangeRole)
 		{
@@ -618,7 +618,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F11 RID: 286481 RVA: 0x0116B7D4 File Offset: 0x011699D4
+		// Token: 0x0603C0F3 RID: 246003 RVA: 0x01115620 File Offset: 0x01113820
 		protected override void OnTick(float delta)
 		{
 			if (this.RailMoveConfigDataTable == null)
@@ -631,7 +631,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.OnTickCheckSkill();
 		}
 
-		// Token: 0x06045F12 RID: 286482 RVA: 0x0116B800 File Offset: 0x01169A00
+		// Token: 0x0603C0F4 RID: 246004 RVA: 0x0111564C File Offset: 0x0111384C
 		private unsafe void OnTickRailMove(float deltaSeconds)
 		{
 			MotorcycleRailMoveDataBase currentRailMoveData = this.CurrentRailMoveData;
@@ -729,7 +729,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F13 RID: 286483 RVA: 0x0116BB20 File Offset: 0x01169D20
+		// Token: 0x0603C0F5 RID: 246005 RVA: 0x0111596C File Offset: 0x01113B6C
 		private unsafe void ApplyRailMove(float deltaSeconds)
 		{
 			VehicleActorComponent actorComp = this.ActorComp;
@@ -796,7 +796,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F14 RID: 286484 RVA: 0x0116BDD0 File Offset: 0x01169FD0
+		// Token: 0x0603C0F6 RID: 246006 RVA: 0x01115C1C File Offset: 0x01113E1C
 		private void OnEnterRailMove()
 		{
 			if (this.IsInRailMoveMode)
@@ -823,7 +823,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F15 RID: 286485 RVA: 0x0116BEA8 File Offset: 0x0116A0A8
+		// Token: 0x0603C0F7 RID: 246007 RVA: 0x01115CF4 File Offset: 0x01113EF4
 		private void OnLeaveRailMove()
 		{
 			if (!this.IsInRailMoveMode)
@@ -855,7 +855,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.StartAutoEnterRailCd(this.CurrentRailMoveConfig.BasicRailMoveConfig.AutoEnterRailCdAfterLeaveRailMove * 1000f);
 		}
 
-		// Token: 0x06045F16 RID: 286486 RVA: 0x0116BFB8 File Offset: 0x0116A1B8
+		// Token: 0x0603C0F8 RID: 246008 RVA: 0x01115E04 File Offset: 0x01114004
 		private void OnTickCheckRail()
 		{
 			VehiclePerformComponent performComp = this.PerformComp;
@@ -877,7 +877,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F17 RID: 286487 RVA: 0x0116C034 File Offset: 0x0116A234
+		// Token: 0x0603C0F9 RID: 246009 RVA: 0x01115E80 File Offset: 0x01114080
 		private void TickCheckRailForEnter()
 		{
 			bool enable = false;
@@ -893,7 +893,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.SetSelfTagEnable(GameplayTagDefine.EGameplayTagId["载具.摩托.滑轨.能够跳跃上轨"], enable);
 		}
 
-		// Token: 0x06045F18 RID: 286488 RVA: 0x0116C078 File Offset: 0x0116A278
+		// Token: 0x0603C0FA RID: 246010 RVA: 0x01115EC4 File Offset: 0x011140C4
 		private MotorcycleRailComponent FindRailAndDistForDirectlyEnter()
 		{
 			if (this.IsInDirectlyEnterRailCd)
@@ -944,7 +944,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return null;
 		}
 
-		// Token: 0x06045F19 RID: 286489 RVA: 0x0116C180 File Offset: 0x0116A380
+		// Token: 0x0603C0FB RID: 246011 RVA: 0x01115FCC File Offset: 0x011141CC
 		private MotorcycleRailComponent FindRailAndDistForJumpEnter()
 		{
 			if (this.ActorComp == null || this.IsInRailMoveMode)
@@ -991,7 +991,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return null;
 		}
 
-		// Token: 0x06045F1A RID: 286490 RVA: 0x0116C280 File Offset: 0x0116A480
+		// Token: 0x0603C0FC RID: 246012 RVA: 0x011160CC File Offset: 0x011142CC
 		private void TickCheckRailForSwitch()
 		{
 			bool flag = this.FindSideRailForSwitch(EMotorcycleSide.Left) != null;
@@ -1001,7 +1001,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.SetSelfTagEnable(GameplayTagDefine.EGameplayTagId["载具.摩托.滑轨.能够切轨"], flag || flag2);
 		}
 
-		// Token: 0x06045F1B RID: 286491 RVA: 0x0116C2E8 File Offset: 0x0116A4E8
+		// Token: 0x0603C0FD RID: 246013 RVA: 0x01116134 File Offset: 0x01114334
 		private MotorcycleRailComponent FindSideRailForSwitch(EMotorcycleSide sideToFind)
 		{
 			if (this.ActorComp == null || !this.IsInRailMoveMode)
@@ -1075,7 +1075,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return null;
 		}
 
-		// Token: 0x06045F1C RID: 286492 RVA: 0x0116C42C File Offset: 0x0116A62C
+		// Token: 0x0603C0FE RID: 246014 RVA: 0x01116278 File Offset: 0x01114478
 		private void OnTickCheckSkill()
 		{
 			if (this.CurrentRailMoveData != null && this.IsInNotAllowedSkill())
@@ -1092,7 +1092,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F1D RID: 286493 RVA: 0x0116C4A4 File Offset: 0x0116A6A4
+		// Token: 0x0603C0FF RID: 246015 RVA: 0x011162F0 File Offset: 0x011144F0
 		private void OnTickCheckInput()
 		{
 			bool flag = false;
@@ -1129,7 +1129,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F1E RID: 286494 RVA: 0x0116C578 File Offset: 0x0116A778
+		// Token: 0x0603C100 RID: 246016 RVA: 0x011163C4 File Offset: 0x011145C4
 		private void SetPlayerTagEnable(int tagId, bool enable)
 		{
 			int playerId = CreatureModel.Instance.GetPlayerId();
@@ -1149,7 +1149,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F1F RID: 286495 RVA: 0x0116C5E0 File Offset: 0x0116A7E0
+		// Token: 0x0603C101 RID: 246017 RVA: 0x0111642C File Offset: 0x0111462C
 		private void SetSelfTagEnable(int tagId, bool enable)
 		{
 			VehicleTagComponent tagComp = this.TagComp;
@@ -1169,14 +1169,14 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F20 RID: 286496 RVA: 0x0116C628 File Offset: 0x0116A828
+		// Token: 0x0603C102 RID: 246018 RVA: 0x01116474 File Offset: 0x01114674
 		private bool GetSelfTagEnable(int tagId)
 		{
 			VehicleTagComponent tagComp = this.TagComp;
 			return tagComp != null && tagComp.HasTag(tagId);
 		}
 
-		// Token: 0x06045F21 RID: 286497 RVA: 0x0116C648 File Offset: 0x0116A848
+		// Token: 0x0603C103 RID: 246019 RVA: 0x01116494 File Offset: 0x01114694
 		[NullableContext(1)]
 		private void SetSelfBuffEnable(long buffId, bool bEnable, string reason)
 		{
@@ -1211,7 +1211,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F22 RID: 286498 RVA: 0x0116C6E4 File Offset: 0x0116A8E4
+		// Token: 0x0603C104 RID: 246020 RVA: 0x01116530 File Offset: 0x01114730
 		[NullableContext(1)]
 		private void SetDriverBuffEnable(long buffId, bool bEnable, string reason)
 		{
@@ -1248,7 +1248,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			roleBuffComponent2.RemoveBuff(buffId, -1, reason, new long?(this.CreatureDataComp.MotorContextId), null, null);
 		}
 
-		// Token: 0x06045F23 RID: 286499 RVA: 0x0116C785 File Offset: 0x0116A985
+		// Token: 0x0603C105 RID: 246021 RVA: 0x011165D1 File Offset: 0x011147D1
 		public void SetClearAllRailMove()
 		{
 			if (this.CurrentRailMoveData != null)
@@ -1258,7 +1258,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.PendingRailMoveDataQueue.Clear();
 		}
 
-		// Token: 0x06045F24 RID: 286500 RVA: 0x0116C7A6 File Offset: 0x0116A9A6
+		// Token: 0x0603C106 RID: 246022 RVA: 0x011165F2 File Offset: 0x011147F2
 		public void SetClearAllRailMoveAndTickImmediately()
 		{
 			if (this.CurrentRailMoveData != null)
@@ -1269,7 +1269,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.OnTick(0f);
 		}
 
-		// Token: 0x06045F25 RID: 286501 RVA: 0x0116C7D2 File Offset: 0x0116A9D2
+		// Token: 0x0603C107 RID: 246023 RVA: 0x0111661E File Offset: 0x0111481E
 		public void SetFinishCurrentRailMove()
 		{
 			if (this.CurrentRailMoveData != null)
@@ -1278,7 +1278,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F26 RID: 286502 RVA: 0x0116C7E8 File Offset: 0x0116A9E8
+		// Token: 0x0603C108 RID: 246024 RVA: 0x01116634 File Offset: 0x01114834
 		[NullableContext(1)]
 		public void TryJumpToSpecifiedRail(MotorcycleRailComponent railComp)
 		{
@@ -1293,7 +1293,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.AddJumpToTargetRailMove(railComp);
 		}
 
-		// Token: 0x06045F27 RID: 286503 RVA: 0x0116C816 File Offset: 0x0116AA16
+		// Token: 0x0603C109 RID: 246025 RVA: 0x01116662 File Offset: 0x01114862
 		[NullableContext(1)]
 		public void TryDirectlyEnterSpecifiedRail(MotorcycleRailComponent railComp)
 		{
@@ -1308,7 +1308,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.AddDirectlyEnterTargetRailMove(railComp);
 		}
 
-		// Token: 0x06045F28 RID: 286504 RVA: 0x0116C844 File Offset: 0x0116AA44
+		// Token: 0x0603C10A RID: 246026 RVA: 0x01116690 File Offset: 0x01114890
 		[NullableContext(1)]
 		private void AddJumpToTargetRailMove(MotorcycleRailComponent railComp)
 		{
@@ -1348,7 +1348,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.PendingRailMoveDataQueue.Push(motorcycleAccelerateAlongRailMoveData);
 		}
 
-		// Token: 0x06045F29 RID: 286505 RVA: 0x0116C9C4 File Offset: 0x0116ABC4
+		// Token: 0x0603C10B RID: 246027 RVA: 0x01116810 File Offset: 0x01114A10
 		[NullableContext(1)]
 		private void AddDirectlyEnterTargetRailMove(MotorcycleRailComponent railComp)
 		{
@@ -1387,7 +1387,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.PendingRailMoveDataQueue.Push(motorcycleAccelerateAlongRailMoveData);
 		}
 
-		// Token: 0x06045F2A RID: 286506 RVA: 0x0116CB28 File Offset: 0x0116AD28
+		// Token: 0x0603C10C RID: 246028 RVA: 0x01116974 File Offset: 0x01114B74
 		[NullableContext(1)]
 		private void AddSwitchTargetRailMove(MotorcycleRailComponent railComp)
 		{
@@ -1427,7 +1427,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.PendingRailMoveDataQueue.Push(motorcycleAccelerateAlongRailMoveData);
 		}
 
-		// Token: 0x06045F2B RID: 286507 RVA: 0x0116CCB0 File Offset: 0x0116AEB0
+		// Token: 0x0603C10D RID: 246029 RVA: 0x01116AFC File Offset: 0x01114CFC
 		[NullableContext(1)]
 		private void AddJumpOffFromCurrentRailMove(MotorcycleRailComponent railComp, EMotorcycleSide side)
 		{
@@ -1462,7 +1462,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.PendingRailMoveDataQueue.Push(motorcycleJumpFromRailMoveData);
 		}
 
-		// Token: 0x06045F2C RID: 286508 RVA: 0x0116CDE4 File Offset: 0x0116AFE4
+		// Token: 0x0603C10E RID: 246030 RVA: 0x01116C30 File Offset: 0x01114E30
 		[NullableContext(1)]
 		private void AddJumpAlongTargetRailMove(MotorcycleRailComponent railComp, bool bIsForward)
 		{
@@ -1503,7 +1503,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.PendingRailMoveDataQueue.Push(motorcycleAccelerateAlongRailMoveData);
 		}
 
-		// Token: 0x06045F2D RID: 286509 RVA: 0x0116CF6C File Offset: 0x0116B16C
+		// Token: 0x0603C10F RID: 246031 RVA: 0x01116DB8 File Offset: 0x01114FB8
 		private bool TrySwitchToSideRail(EMotorcycleSide side)
 		{
 			MotorcycleRailComponent motorcycleRailComponent = this.FindSideRailForSwitch(side);
@@ -1516,7 +1516,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return false;
 		}
 
-		// Token: 0x06045F2E RID: 286510 RVA: 0x0116CF94 File Offset: 0x0116B194
+		// Token: 0x0603C110 RID: 246032 RVA: 0x01116DE0 File Offset: 0x01114FE0
 		private bool TryJumpEnterRailMove()
 		{
 			MotorcycleRailComponent motorcycleRailComponent = this.FindRailAndDistForJumpEnter();
@@ -1528,7 +1528,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return false;
 		}
 
-		// Token: 0x06045F2F RID: 286511 RVA: 0x0116CFB8 File Offset: 0x0116B1B8
+		// Token: 0x0603C111 RID: 246033 RVA: 0x01116E04 File Offset: 0x01115004
 		private bool TryJumpOffFromRail(EMotorcycleSide side)
 		{
 			if (!this.IsInRailMoveMode)
@@ -1553,7 +1553,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return true;
 		}
 
-		// Token: 0x06045F30 RID: 286512 RVA: 0x0116D034 File Offset: 0x0116B234
+		// Token: 0x0603C112 RID: 246034 RVA: 0x01116E80 File Offset: 0x01115080
 		private bool TryJumpAlongRail()
 		{
 			if (this.IsInRailMoveMode && this.CurrentRailMoveData != null && !this.CurrentRailMoveData.IsFinishMove)
@@ -1579,7 +1579,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return false;
 		}
 
-		// Token: 0x06045F31 RID: 286513 RVA: 0x0116D0CC File Offset: 0x0116B2CC
+		// Token: 0x0603C113 RID: 246035 RVA: 0x01116F18 File Offset: 0x01115118
 		private unsafe void VehicleRailMoveUpdater(global::Vector loc = null, global::Rotator rot = null, global::Vector vel = null, bool bSweep = false)
 		{
 			if (this.ActorComp == null)
@@ -1651,7 +1651,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F32 RID: 286514 RVA: 0x0116D364 File Offset: 0x0116B564
+		// Token: 0x0603C114 RID: 246036 RVA: 0x011171B0 File Offset: 0x011153B0
 		private bool VehicleRailMoveGetter(global::Vector outLoc = null, global::Rotator outRot = null, global::Vector outVel = null)
 		{
 			if (this.ActorComp == null)
@@ -1696,7 +1696,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return false;
 		}
 
-		// Token: 0x06045F33 RID: 286515 RVA: 0x0116D46C File Offset: 0x0116B66C
+		// Token: 0x0603C115 RID: 246037 RVA: 0x011172B8 File Offset: 0x011154B8
 		private void StartAutoEnterRailCd(float intervel)
 		{
 			this.StopDirectlyEnterRailCd();
@@ -1717,7 +1717,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F34 RID: 286516 RVA: 0x0116D4D7 File Offset: 0x0116B6D7
+		// Token: 0x0603C116 RID: 246038 RVA: 0x01117323 File Offset: 0x01115523
 		private void StopDirectlyEnterRailCd()
 		{
 			TimerHandle directlyEnterRailCdHandle = this.DirectlyEnterRailCdHandle;
@@ -1728,7 +1728,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.DirectlyEnterRailCdHandle = null;
 		}
 
-		// Token: 0x06045F35 RID: 286517 RVA: 0x0116D508 File Offset: 0x0116B708
+		// Token: 0x0603C117 RID: 246039 RVA: 0x01117354 File Offset: 0x01115554
 		public bool IsInNotAllowedSkill()
 		{
 			VehicleSkillComponent component = base.Entity.GetComponent<VehicleSkillComponent>();
@@ -1740,7 +1740,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return !this.CurrentRailMoveConfig.BasicRailMoveConfig.AllowUseSkillIds.Contains(skillId) && this.CurrentRailMoveConfig.JumpAlongRailConfig.SkillId != skillId && this.CurrentRailMoveConfig.SwitchRailConfig.SkillId != skillId && this.CurrentRailMoveConfig.JumpOffRailConfig.SkillId != skillId && this.CurrentRailMoveConfig.JumpToRailConfig.SkillId != skillId;
 		}
 
-		// Token: 0x06045F36 RID: 286518 RVA: 0x0116D5A4 File Offset: 0x0116B7A4
+		// Token: 0x0603C118 RID: 246040 RVA: 0x011173F0 File Offset: 0x011155F0
 		public void GmForceReloadRailMoveConfig()
 		{
 			this.UpdateDefaultRailMoveConfig();
@@ -1753,7 +1753,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F37 RID: 286519 RVA: 0x0116D624 File Offset: 0x0116B824
+		// Token: 0x0603C119 RID: 246041 RVA: 0x01117470 File Offset: 0x01115670
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -1762,264 +1762,253 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 				return false;
 			}
 			MotorcycleRailMoveComponent motorcycleRailMoveComponent = (MotorcycleRailMoveComponent)componentTemplate;
-			if (base.CanResetComponentProperty("IsInRailMoveMode"))
+			this.IsInRailMoveMode = motorcycleRailMoveComponent.IsInRailMoveMode;
+			if (motorcycleRailMoveComponent.CurrentRailMoveData == null)
 			{
-				this.IsInRailMoveMode = motorcycleRailMoveComponent.IsInRailMoveMode;
+				this.CurrentRailMoveData = null;
 			}
-			if (base.CanResetComponentProperty("CurrentRailMoveData"))
-			{
-				if (motorcycleRailMoveComponent.CurrentRailMoveData == null)
-				{
-					this.CurrentRailMoveData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcycleRailMoveDataBase>(this.CurrentRailMoveData), "CurrentRailMoveData"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PendingRailMoveDataQueue") && motorcycleRailMoveComponent.PendingRailMoveDataQueue != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Queue<MotorcycleRailMoveDataBase>>(this.PendingRailMoveDataQueue), "PendingRailMoveDataQueue"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentRailMoveData), "CurrentRailMoveData"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
-			{
-				if (motorcycleRailMoveComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (motorcycleRailMoveComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PerformComp"))
-			{
-				if (motorcycleRailMoveComponent.PerformComp == null)
-				{
-					this.PerformComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehiclePerformComponent>(this.PerformComp), "PerformComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (motorcycleRailMoveComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CueComp"))
-			{
-				if (motorcycleRailMoveComponent.CueComp == null)
-				{
-					this.CueComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseGameplayCueComponent>(this.CueComp), "CueComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("BuffComp"))
-			{
-				if (motorcycleRailMoveComponent.BuffComp == null)
-				{
-					this.BuffComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleBuffComponent>(this.BuffComp), "BuffComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DebugMoveComp"))
-			{
-				if (motorcycleRailMoveComponent.DebugMoveComp == null)
-				{
-					this.DebugMoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ActorDebugMovementComponent>(this.DebugMoveComp), "DebugMoveComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsInDirectlyEnterRailCd"))
-			{
-				this.IsInDirectlyEnterRailCd = motorcycleRailMoveComponent.IsInDirectlyEnterRailCd;
-			}
-			if (base.CanResetComponentProperty("DirectlyEnterRailCdHandle"))
-			{
-				if (motorcycleRailMoveComponent.DirectlyEnterRailCdHandle == null)
-				{
-					this.DirectlyEnterRailCdHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DirectlyEnterRailCdHandle), "DirectlyEnterRailCdHandle"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CurrentRailComp"))
-			{
-				if (motorcycleRailMoveComponent.CurrentRailComp == null)
-				{
-					this.CurrentRailComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcycleRailComponent>(this.CurrentRailComp), "CurrentRailComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DefaultRailMoveConfig") && motorcycleRailMoveComponent.DefaultRailMoveConfig != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcycleRailMoveConfig>(this.DefaultRailMoveConfig), "DefaultRailMoveConfig"))
+			if (motorcycleRailMoveComponent.PendingRailMoveDataQueue != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PendingRailMoveDataQueue), "PendingRailMoveDataQueue"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("RailMoveConfigDataTable"))
+			if (motorcycleRailMoveComponent.CreatureDataComp == null)
 			{
-				if (motorcycleRailMoveComponent.RailMoveConfigDataTable == null)
-				{
-					this.RailMoveConfigDataTable = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UDataTable>(this.RailMoveConfigDataTable), "RailMoveConfigDataTable"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("RailMoveConfigUeDataCacheMap") && motorcycleRailMoveComponent.RailMoveConfigUeDataCacheMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, SMotorRailMoveConfig>>(this.RailMoveConfigUeDataCacheMap), "RailMoveConfigUeDataCacheMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("LoadConfigHandle"))
+			if (motorcycleRailMoveComponent.ActorComp == null)
 			{
-				this.LoadConfigHandle = motorcycleRailMoveComponent.LoadConfigHandle;
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("CurrentCueHandleMap") && motorcycleRailMoveComponent.CurrentCueHandleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, HashSet<int>>>(this.CurrentCueHandleMap), "CurrentCueHandleMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("VehicleRailMoveTransform"))
+			if (motorcycleRailMoveComponent.PerformComp == null)
 			{
-				if (motorcycleRailMoveComponent.VehicleRailMoveTransform == null)
-				{
-					this.VehicleRailMoveTransform = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.VehicleRailMoveTransform), "VehicleRailMoveTransform"))
-				{
-					return false;
-				}
+				this.PerformComp = null;
 			}
-			if (base.CanResetComponentProperty("SweepWhenApplyVehicleRailMove"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformComp), "PerformComp"))
 			{
-				this.SweepWhenApplyVehicleRailMove = motorcycleRailMoveComponent.SweepWhenApplyVehicleRailMove;
+				return false;
 			}
-			if (base.CanResetComponentProperty("VehicleRailMoveVelocity"))
+			if (motorcycleRailMoveComponent.TagComp == null)
 			{
-				if (motorcycleRailMoveComponent.VehicleRailMoveVelocity == null)
-				{
-					this.VehicleRailMoveVelocity = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.VehicleRailMoveVelocity), "VehicleRailMoveVelocity"))
-				{
-					return false;
-				}
+				this.TagComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+			{
+				return false;
+			}
+			if (motorcycleRailMoveComponent.CueComp == null)
+			{
+				this.CueComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CueComp), "CueComp"))
+			{
+				return false;
+			}
+			if (motorcycleRailMoveComponent.BuffComp == null)
+			{
+				this.BuffComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComp), "BuffComp"))
+			{
+				return false;
+			}
+			if (motorcycleRailMoveComponent.DebugMoveComp == null)
+			{
+				this.DebugMoveComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DebugMoveComp), "DebugMoveComp"))
+			{
+				return false;
+			}
+			this.IsInDirectlyEnterRailCd = motorcycleRailMoveComponent.IsInDirectlyEnterRailCd;
+			if (motorcycleRailMoveComponent.DirectlyEnterRailCdHandle == null)
+			{
+				this.DirectlyEnterRailCdHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DirectlyEnterRailCdHandle), "DirectlyEnterRailCdHandle"))
+			{
+				return false;
+			}
+			if (motorcycleRailMoveComponent.CurrentRailComp == null)
+			{
+				this.CurrentRailComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentRailComp), "CurrentRailComp"))
+			{
+				return false;
+			}
+			if (motorcycleRailMoveComponent.DefaultRailMoveConfig != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DefaultRailMoveConfig), "DefaultRailMoveConfig"))
+			{
+				return false;
+			}
+			if (motorcycleRailMoveComponent.RailMoveConfigDataTable == null)
+			{
+				this.RailMoveConfigDataTable = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RailMoveConfigDataTable), "RailMoveConfigDataTable"))
+			{
+				return false;
+			}
+			if (motorcycleRailMoveComponent.RailMoveConfigUeDataCacheMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.RailMoveConfigUeDataCacheMap), "RailMoveConfigUeDataCacheMap"))
+			{
+				return false;
+			}
+			this.LoadConfigHandle = motorcycleRailMoveComponent.LoadConfigHandle;
+			if (motorcycleRailMoveComponent.CurrentCueHandleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentCueHandleMap), "CurrentCueHandleMap"))
+			{
+				return false;
+			}
+			if (motorcycleRailMoveComponent.VehicleRailMoveTransform == null)
+			{
+				this.VehicleRailMoveTransform = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleRailMoveTransform), "VehicleRailMoveTransform"))
+			{
+				return false;
+			}
+			this.SweepWhenApplyVehicleRailMove = motorcycleRailMoveComponent.SweepWhenApplyVehicleRailMove;
+			if (motorcycleRailMoveComponent.VehicleRailMoveVelocity == null)
+			{
+				this.VehicleRailMoveVelocity = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleRailMoveVelocity), "VehicleRailMoveVelocity"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024962 RID: 149858
+		// Token: 0x17007153 RID: 29011
+		// (get) Token: 0x0603C11A RID: 246042 RVA: 0x01117777 File Offset: 0x01115977
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007154 RID: 29012
+		// (get) Token: 0x0603C11B RID: 246043 RVA: 0x0111777A File Offset: 0x0111597A
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007155 RID: 29013
+		// (get) Token: 0x0603C11C RID: 246044 RVA: 0x0111777D File Offset: 0x0111597D
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007156 RID: 29014
+		// (get) Token: 0x0603C11D RID: 246045 RVA: 0x01117780 File Offset: 0x01115980
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FC18 RID: 130072
 		private const int LOG_THRESHOLD_MOVE_TOO_FAR_DIST_SQUARED = 250000;
 
-		// Token: 0x04024963 RID: 149859
+		// Token: 0x0401FC19 RID: 130073
 		private const float LOG_THRESHOLD_DELTA_TIME_TOO_BIG = 1f;
 
-		// Token: 0x04024964 RID: 149860
+		// Token: 0x0401FC1A RID: 130074
 		private const float MORTOR_MAX_SPEED = 3500f;
 
-		// Token: 0x04024965 RID: 149861
+		// Token: 0x0401FC1B RID: 130075
 		private const float WHEEL_ACCEL = 113.097336f;
 
-		// Token: 0x04024966 RID: 149862
+		// Token: 0x0401FC1C RID: 130076
 		private const float WHEEL_RADIUS = 37f;
 
-		// Token: 0x04024967 RID: 149863
+		// Token: 0x0401FC1D RID: 130077
 		private bool IsInRailMoveMode;
 
-		// Token: 0x04024968 RID: 149864
+		// Token: 0x0401FC1E RID: 130078
 		private MotorcycleRailMoveDataBase CurrentRailMoveData;
 
-		// Token: 0x04024969 RID: 149865
+		// Token: 0x0401FC1F RID: 130079
 		[Nullable(1)]
 		private readonly Queue<MotorcycleRailMoveDataBase> PendingRailMoveDataQueue = new Queue<MotorcycleRailMoveDataBase>(4);
 
-		// Token: 0x0402496A RID: 149866
+		// Token: 0x0401FC20 RID: 130080
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x0402496B RID: 149867
+		// Token: 0x0401FC21 RID: 130081
 		private VehicleActorComponent ActorComp;
 
-		// Token: 0x0402496C RID: 149868
+		// Token: 0x0401FC22 RID: 130082
 		private VehiclePerformComponent PerformComp;
 
-		// Token: 0x0402496D RID: 149869
+		// Token: 0x0401FC23 RID: 130083
 		private VehicleTagComponent TagComp;
 
-		// Token: 0x0402496E RID: 149870
+		// Token: 0x0401FC24 RID: 130084
 		private BaseGameplayCueComponent CueComp;
 
-		// Token: 0x0402496F RID: 149871
+		// Token: 0x0401FC25 RID: 130085
 		private VehicleBuffComponent BuffComp;
 
-		// Token: 0x04024970 RID: 149872
+		// Token: 0x0401FC26 RID: 130086
 		private ActorDebugMovementComponent DebugMoveComp;
 
-		// Token: 0x04024971 RID: 149873
+		// Token: 0x0401FC27 RID: 130087
 		private bool IsInDirectlyEnterRailCd;
 
-		// Token: 0x04024972 RID: 149874
+		// Token: 0x0401FC28 RID: 130088
 		private TimerHandle DirectlyEnterRailCdHandle;
 
-		// Token: 0x04024973 RID: 149875
+		// Token: 0x0401FC29 RID: 130089
 		private MotorcycleRailComponent CurrentRailComp;
 
-		// Token: 0x04024974 RID: 149876
+		// Token: 0x0401FC2A RID: 130090
 		[Nullable(1)]
 		private readonly MotorcycleRailMoveConfig DefaultRailMoveConfig = new MotorcycleRailMoveConfig();
 
-		// Token: 0x04024975 RID: 149877
+		// Token: 0x0401FC2B RID: 130091
 		private UDataTable RailMoveConfigDataTable;
 
-		// Token: 0x04024976 RID: 149878
+		// Token: 0x0401FC2C RID: 130092
 		[Nullable(1)]
 		private readonly Dictionary<string, SMotorRailMoveConfig> RailMoveConfigUeDataCacheMap = new Dictionary<string, SMotorRailMoveConfig>();
 
-		// Token: 0x04024977 RID: 149879
+		// Token: 0x0401FC2D RID: 130093
 		private int LoadConfigHandle = -1;
 
-		// Token: 0x04024978 RID: 149880
+		// Token: 0x0401FC2E RID: 130094
 		[Nullable(1)]
 		private readonly Dictionary<int, HashSet<int>> CurrentCueHandleMap = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x04024979 RID: 149881
+		// Token: 0x0401FC2F RID: 130095
 		private global::Transform VehicleRailMoveTransform;
 
-		// Token: 0x0402497A RID: 149882
+		// Token: 0x0401FC30 RID: 130096
 		private bool SweepWhenApplyVehicleRailMove;
 
-		// Token: 0x0402497B RID: 149883
+		// Token: 0x0401FC31 RID: 130097
 		private global::Vector VehicleRailMoveVelocity;
 	}
 }

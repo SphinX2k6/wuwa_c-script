@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AEC RID: 19180
+	// Token: 0x02003A94 RID: 14996
 	public class TrapDefenseResultInfoBtn : UiPanelBase
 	{
-		// Token: 0x06031AF0 RID: 203504 RVA: 0x00B88A74 File Offset: 0x00B86C74
+		// Token: 0x06026880 RID: 157824 RVA: 0x00ACCA28 File Offset: 0x00ACAC28
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031AF1 RID: 203505 RVA: 0x00B88B1A File Offset: 0x00B86D1A
+		// Token: 0x06026881 RID: 157825 RVA: 0x00ACCACE File Offset: 0x00ACACCE
 		private void OnClicked()
 		{
 			if (this.ClickCb != null)
@@ -40,17 +40,17 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A888 RID: 108680
+		// Token: 0x040151DA RID: 86490
 		[Nullable(1)]
 		public Action ClickCb;
 
-		// Token: 0x0200AC7F RID: 44159
+		// Token: 0x0200969F RID: 38559
 		internal class EBtn
 		{
-			// Token: 0x040346C0 RID: 214720
+			// Token: 0x0402F071 RID: 192625
 			public const int Panel = 0;
 
-			// Token: 0x040346C1 RID: 214721
+			// Token: 0x0402F072 RID: 192626
 			public const int Btn = 1;
 		}
 	}

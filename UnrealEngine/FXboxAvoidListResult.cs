@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F14 RID: 7956
+	// Token: 0x0200061F RID: 1567
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.XboxAvoidListResult")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FXboxAvoidListResult : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601E306 RID: 123654 RVA: 0x002CE2F6 File Offset: 0x002CC4F6
+		// Token: 0x0600892B RID: 35115 RVA: 0x000CEF4D File Offset: 0x000CD14D
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FXboxAvoidListResult._ScriptStructPtr != 0) ? FXboxAvoidListResult._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroUtility.XboxAvoidListResult", ref FXboxAvoidListResult._ScriptStructPtr);
 		}
 
-		// Token: 0x170077E6 RID: 30694
-		// (get) Token: 0x0601E307 RID: 123655 RVA: 0x002CE31A File Offset: 0x002CC51A
-		// (set) Token: 0x0601E308 RID: 123656 RVA: 0x002CE32A File Offset: 0x002CC52A
+		// Token: 0x17001996 RID: 6550
+		// (get) Token: 0x0600892C RID: 35116 RVA: 0x000CEF71 File Offset: 0x000CD171
+		// (set) Token: 0x0600892D RID: 35117 RVA: 0x000CEF81 File Offset: 0x000CD181
 		public unsafe bool bSuccess
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077E7 RID: 30695
-		// (get) Token: 0x0601E309 RID: 123657 RVA: 0x002CE33C File Offset: 0x002CC53C
-		// (set) Token: 0x0601E30A RID: 123658 RVA: 0x002CE37F File Offset: 0x002CC57F
+		// Token: 0x17001997 RID: 6551
+		// (get) Token: 0x0600892E RID: 35118 RVA: 0x000CEF94 File Offset: 0x000CD194
+		// (set) Token: 0x0600892F RID: 35119 RVA: 0x000CEFD7 File Offset: 0x000CD1D7
 		public TArray<long> Xuids
 		{
 			get
@@ -54,60 +54,53 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E30B RID: 123659 RVA: 0x002CE38D File Offset: 0x002CC58D
+		// Token: 0x06008930 RID: 35120 RVA: 0x000CEFE5 File Offset: 0x000CD1E5
 		public FXboxAvoidListResult()
 		{
 		}
 
-		// Token: 0x0601E30C RID: 123660 RVA: 0x002CE395 File Offset: 0x002CC595
-		public FXboxAvoidListResult(bool bSuccess, TArray<long> Xuids)
-		{
-			this.bSuccess = bSuccess;
-			this.Xuids = Xuids;
-		}
-
-		// Token: 0x0601E30D RID: 123661 RVA: 0x002CE3AB File Offset: 0x002CC5AB
+		// Token: 0x06008931 RID: 35121 RVA: 0x000CEFED File Offset: 0x000CD1ED
 		protected override IntPtr GetUStructPtr()
 		{
 			return FXboxAvoidListResult.StaticStruct();
 		}
 
-		// Token: 0x0601E30E RID: 123662 RVA: 0x002CE3B7 File Offset: 0x002CC5B7
+		// Token: 0x06008932 RID: 35122 RVA: 0x000CEFF9 File Offset: 0x000CD1F9
 		[NullableContext(2)]
 		public FXboxAvoidListResult(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E30F RID: 123663 RVA: 0x002CE3C1 File Offset: 0x002CC5C1
+		// Token: 0x06008933 RID: 35123 RVA: 0x000CF003 File Offset: 0x000CD203
 		public FXboxAvoidListResult(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E310 RID: 123664 RVA: 0x002CE3CC File Offset: 0x002CC5CC
+		// Token: 0x06008934 RID: 35124 RVA: 0x000CF00E File Offset: 0x000CD20E
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FXboxAvoidListResult(Pointer, false, true);
 		}
 
-		// Token: 0x0601E311 RID: 123665 RVA: 0x002CE3D6 File Offset: 0x002CC5D6
+		// Token: 0x06008935 RID: 35125 RVA: 0x000CF018 File Offset: 0x000CD218
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FXboxAvoidListResult(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040104BE RID: 66750
+		// Token: 0x04003B89 RID: 15241
 		public const string __ObjectPath = "/Script/KuroUtility.XboxAvoidListResult";
 
-		// Token: 0x040104BF RID: 66751
+		// Token: 0x04003B8A RID: 15242
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040104C0 RID: 66752
+		// Token: 0x04003B8B RID: 15243
 		internal static int __PropertyOffset_bSuccess;
 
-		// Token: 0x040104C1 RID: 66753
+		// Token: 0x04003B8C RID: 15244
 		internal static int __PropertyOffset_Xuids;
 
-		// Token: 0x040104C2 RID: 66754
+		// Token: 0x04003B8D RID: 15245
 		[Nullable(2)]
 		private TArray<long> _Xuids;
 	}

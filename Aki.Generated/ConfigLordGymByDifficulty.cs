@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004F4 RID: 1268
+	// Token: 0x0200050A RID: 1290
 	public class ConfigLordGymByDifficulty : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001DC3 RID: 7619 RVA: 0x001017BF File Offset: 0x000FF9BF
+		// Token: 0x06001E47 RID: 7751 RVA: 0x00107F13 File Offset: 0x00106113
 		static ConfigLordGymByDifficulty()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLordGymByDifficulty.CreateStaticDefaultValue), new Action(ConfigLordGymByDifficulty.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001DC4 RID: 7620 RVA: 0x001017E0 File Offset: 0x000FF9E0
+		// Token: 0x06001E48 RID: 7752 RVA: 0x00107F34 File Offset: 0x00106134
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLordGymByDifficulty.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001DC5 RID: 7621 RVA: 0x0010185F File Offset: 0x000FFA5F
+		// Token: 0x06001E49 RID: 7753 RVA: 0x00107FB3 File Offset: 0x001061B3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLordGymByDifficulty.LogPair = null;
 			ConfigLordGymByDifficulty.HandleId = 0;
 		}
 
-		// Token: 0x06001DC6 RID: 7622 RVA: 0x0010186D File Offset: 0x000FFA6D
+		// Token: 0x06001E4A RID: 7754 RVA: 0x00107FC1 File Offset: 0x001061C1
 		public static void Init()
 		{
 			ConfigLordGymByDifficulty.HandleId = ConfigCommon.InitDataStatement(ConfigLordGymByDifficulty.HandleId, "db_lordgym.db", "select BinData from `LordGym` where Difficulty=?");
 		}
 
-		// Token: 0x06001DC7 RID: 7623 RVA: 0x00101888 File Offset: 0x000FFA88
+		// Token: 0x06001E4B RID: 7755 RVA: 0x00107FDC File Offset: 0x001061DC
 		[NullableContext(2)]
 		public static IReadOnlyList<LordGym> GetConfigList(int p0Difficulty, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002290 RID: 8848
+		// Token: 0x0400232A RID: 9002
 		private const string DB = "db_lordgym.db";
 
-		// Token: 0x04002291 RID: 8849
+		// Token: 0x0400232B RID: 9003
 		private const string FILE = "l.领主道馆.xlsx";
 
-		// Token: 0x04002292 RID: 8850
+		// Token: 0x0400232C RID: 9004
 		private const string TABLE = "LordGym";
 
-		// Token: 0x04002293 RID: 8851
+		// Token: 0x0400232D RID: 9005
 		private const string COMMAND = "select BinData from `LordGym` where Difficulty=?";
 
-		// Token: 0x04002294 RID: 8852
+		// Token: 0x0400232E RID: 9006
 		private const string KEY_PREFIX = "LordGymByDifficulty";
 
-		// Token: 0x04002295 RID: 8853
+		// Token: 0x0400232F RID: 9007
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002296 RID: 8854
+		// Token: 0x04002330 RID: 9008
 		private static int HandleId;
 	}
 }

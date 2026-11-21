@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -13,13 +12,13 @@ using CSharpScript.Game.Module.ItemReward;
 using CSharpScript.Game.Module.PayShop;
 using Google.Protobuf.Collections;
 
-// Token: 0x02002362 RID: 9058
+// Token: 0x02001847 RID: 6215
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class PayShopModel : ModelBase
 {
-	// Token: 0x060120BD RID: 73917 RVA: 0x0046D734 File Offset: 0x0046B934
+	// Token: 0x0600F56D RID: 62829 RVA: 0x0047A7F4 File Offset: 0x004789F4
 	public PayShopModel()
 	{
 		Dictionary<PayShopDefine.EPayShopTabType, Func<bool>> dictionary = new Dictionary<PayShopDefine.EPayShopTabType, Func<bool>>();
@@ -27,16 +26,16 @@ public class PayShopModel : ModelBase
 		this.VisibilityPredicates = dictionary;
 	}
 
-	// Token: 0x060120BE RID: 73918 RVA: 0x0046D7C0 File Offset: 0x0046B9C0
+	// Token: 0x0600F56E RID: 62830 RVA: 0x0047A880 File Offset: 0x00478A80
 	public bool IsPayShopVisible(PayShopDefine.EPayShopTabType payShopId)
 	{
 		Func<bool> func;
 		return !this.VisibilityPredicates.TryGetValue(payShopId, out func) || func();
 	}
 
-	// Token: 0x17001795 RID: 6037
-	// (get) Token: 0x060120BF RID: 73919 RVA: 0x0046D7E5 File Offset: 0x0046B9E5
-	// (set) Token: 0x060120C0 RID: 73920 RVA: 0x0046D7ED File Offset: 0x0046B9ED
+	// Token: 0x170017CF RID: 6095
+	// (get) Token: 0x0600F56F RID: 62831 RVA: 0x0047A8A5 File Offset: 0x00478AA5
+	// (set) Token: 0x0600F570 RID: 62832 RVA: 0x0047A8AD File Offset: 0x00478AAD
 	public string Version
 	{
 		get
@@ -49,13 +48,13 @@ public class PayShopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060120C1 RID: 73921 RVA: 0x0046D7F6 File Offset: 0x0046B9F6
+	// Token: 0x0600F571 RID: 62833 RVA: 0x0047A8B6 File Offset: 0x00478AB6
 	public int GetCurrentPayShopId()
 	{
 		return this.CurrentPayShopId;
 	}
 
-	// Token: 0x060120C2 RID: 73922 RVA: 0x0046D800 File Offset: 0x0046BA00
+	// Token: 0x0600F572 RID: 62834 RVA: 0x0047A8C0 File Offset: 0x00478AC0
 	public UiDynamicTab? GetTabInfoByPayShopIdId(int payShopId)
 	{
 		foreach (PayShopDefine.EPayShopTabType epayShopTabType in this.GetPayShopIdList())
@@ -69,8 +68,8 @@ public class PayShopModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060120C3 RID: 73923 RVA: 0x0046D878 File Offset: 0x0046BA78
-	public void SetPayShopInfoList(List<PayShopInfo> infoList)
+	// Token: 0x0600F573 RID: 62835 RVA: 0x0047A938 File Offset: 0x00478B38
+	public void SetPayShopInfoList(IEnumerable<PayShopInfo> infoList)
 	{
 		foreach (PayShopInfo info in infoList)
 		{
@@ -79,8 +78,8 @@ public class PayShopModel : ModelBase
 		EventSystem.Instance.Emit<IEnumerable<PayShopDefine.EPayShopTabType>>(EEventName.RefreshAllPayShop, this.PayShopMap.Keys);
 	}
 
-	// Token: 0x060120C4 RID: 73924 RVA: 0x0046D8E4 File Offset: 0x0046BAE4
-	public void SetPayShopRecommendData(List<PayShopRecommendConfigInfo> info)
+	// Token: 0x0600F574 RID: 62836 RVA: 0x0047A99C File Offset: 0x00478B9C
+	public void SetPayShopRecommendData(IEnumerable<PayShopRecommendConfigInfo> info)
 	{
 		foreach (PayShopRecommendConfigInfo payShopRecommendConfigInfo in info)
 		{
@@ -99,7 +98,7 @@ public class PayShopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060120C5 RID: 73925 RVA: 0x0046D968 File Offset: 0x0046BB68
+	// Token: 0x0600F575 RID: 62837 RVA: 0x0047AA1C File Offset: 0x00478C1C
 	public bool CheckRecommendHasBought(int type, int boughtParam)
 	{
 		if (type == 1)
@@ -134,8 +133,8 @@ public class PayShopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060120C6 RID: 73926 RVA: 0x0046D9C4 File Offset: 0x0046BBC4
-	public void SetPayShopTabData(List<PayShopTabConfigInfo> info)
+	// Token: 0x0600F576 RID: 62838 RVA: 0x0047AA78 File Offset: 0x00478C78
+	public void SetPayShopTabData(IReadOnlyList<PayShopTabConfigInfo> info)
 	{
 		if (info.Count == 0)
 		{
@@ -150,15 +149,15 @@ public class PayShopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060120C7 RID: 73927 RVA: 0x0046DA38 File Offset: 0x0046BC38
+	// Token: 0x0600F577 RID: 62839 RVA: 0x0047AAE8 File Offset: 0x00478CE8
 	public void SetPayShopInfo(PayShopInfo info)
 	{
 		this.RefreshPayShopInfo(info);
 		this.CurrentPayShopId = info.Id;
 	}
 
-	// Token: 0x060120C8 RID: 73928 RVA: 0x0046DA50 File Offset: 0x0046BC50
-	public void SetPayShopGoodsList(List<Aki.Protocol.PayShopItem> goodsInfoList)
+	// Token: 0x0600F578 RID: 62840 RVA: 0x0047AB00 File Offset: 0x00478D00
+	public void SetPayShopGoodsList(IEnumerable<Aki.Protocol.PayShopItem> goodsInfoList)
 	{
 		HashSet<int> hashSet = new HashSet<int>();
 		foreach (Aki.Protocol.PayShopItem payShopItem in goodsInfoList)
@@ -185,7 +184,7 @@ public class PayShopModel : ModelBase
 		EventSystem.Instance.Emit<IReadOnlySet<int>>(EEventName.RefreshGoodsList, hashSet);
 	}
 
-	// Token: 0x060120C9 RID: 73929 RVA: 0x0046DB24 File Offset: 0x0046BD24
+	// Token: 0x0600F579 RID: 62841 RVA: 0x0047ABD0 File Offset: 0x00478DD0
 	public PayShopInfoData GetPayShopInfoById(PayShopDefine.EPayShopTabType payShopId)
 	{
 		PayShopInfoData result;
@@ -196,7 +195,7 @@ public class PayShopModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060120CA RID: 73930 RVA: 0x0046DB44 File Offset: 0x0046BD44
+	// Token: 0x0600F57A RID: 62842 RVA: 0x0047ABF0 File Offset: 0x00478DF0
 	private unsafe void RefreshPayShopInfo(PayShopInfo info)
 	{
 		PayShopDefine.EPayShopTabType id = (PayShopDefine.EPayShopTabType)info.Id;
@@ -226,7 +225,7 @@ public class PayShopModel : ModelBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x060120CB RID: 73931 RVA: 0x0046DC58 File Offset: 0x0046BE58
+	// Token: 0x0600F57B RID: 62843 RVA: 0x0047AD04 File Offset: 0x00478F04
 	protected void RefreshPayShopGoods(Aki.Protocol.PayShopItem goodsInfo)
 	{
 		PayShopGoodsData payShopGoodsData = new PayShopGoodsData();
@@ -238,7 +237,7 @@ public class PayShopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060120CC RID: 73932 RVA: 0x0046DC90 File Offset: 0x0046BE90
+	// Token: 0x0600F57C RID: 62844 RVA: 0x0047AD3C File Offset: 0x00478F3C
 	private PayShopGoods CreatePayShopGoods(Aki.Protocol.PayShopItem goodsInfo, PayShopDefine.EPayShopTabType payShopId)
 	{
 		PayShopGoodsData payShopGoodsData = new PayShopGoodsData();
@@ -249,8 +248,8 @@ public class PayShopModel : ModelBase
 		return payShopGoods;
 	}
 
-	// Token: 0x060120CD RID: 73933 RVA: 0x0046DCCC File Offset: 0x0046BECC
-	public void UnLockPayShopGoods(List<int> idList)
+	// Token: 0x0600F57D RID: 62845 RVA: 0x0047AD78 File Offset: 0x00478F78
+	public void UnLockPayShopGoods(IEnumerable<int> idList)
 	{
 		Dictionary<int, HashSet<int>> dictionary = new Dictionary<int, HashSet<int>>();
 		foreach (int key in idList)
@@ -272,7 +271,7 @@ public class PayShopModel : ModelBase
 		EventSystem.Instance.Emit<IReadOnlyDictionary<int, HashSet<int>>>(EEventName.UnLockGoods, dictionary);
 	}
 
-	// Token: 0x060120CE RID: 73934 RVA: 0x0046DD7C File Offset: 0x0046BF7C
+	// Token: 0x0600F57E RID: 62846 RVA: 0x0047AE20 File Offset: 0x00479020
 	public List<PayShopDefine.EPayShopTabType> GetPayShopIdList()
 	{
 		if (!this.ShopChangeDirty)
@@ -298,7 +297,7 @@ public class PayShopModel : ModelBase
 		return this.CurrentPayShopTabTypeList;
 	}
 
-	// Token: 0x060120CF RID: 73935 RVA: 0x0046DE18 File Offset: 0x0046C018
+	// Token: 0x0600F57F RID: 62847 RVA: 0x0047AEBC File Offset: 0x004790BC
 	public List<int> GetPayShopTabIdList(PayShopDefine.EPayShopTabType payShopId, bool sort = true)
 	{
 		HashSet<int> hashSet = new HashSet<int>();
@@ -355,7 +354,7 @@ public class PayShopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060120D0 RID: 73936 RVA: 0x0046DF9C File Offset: 0x0046C19C
+	// Token: 0x0600F580 RID: 62848 RVA: 0x0047B040 File Offset: 0x00479240
 	private List<PayShopGoods> CollectTabSourceGoods(PayShopDefine.EPayShopTabType payShopId)
 	{
 		List<PayShopGoods> list = new List<PayShopGoods>();
@@ -388,11 +387,26 @@ public class PayShopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060120D1 RID: 73937 RVA: 0x0046E090 File Offset: 0x0046C290
+	// Token: 0x0600F581 RID: 62849 RVA: 0x0047B134 File Offset: 0x00479334
 	private bool IfGoodsContributeTab(PayShopDefine.EPayShopTabType payShopId, PayShopGoods goods)
 	{
 		int tabId = goods.GetTabId();
-		if ((payShopId == PayShopDefine.EPayShopTabType.NewPlayerShop || (payShopId == PayShopDefine.EPayShopTabType.GiftBag && PayShopDefine.GiftBagShopSpecialTabList.Contains(tabId))) && !goods.CheckGoodIfShow())
+		bool flag = payShopId == PayShopDefine.EPayShopTabType.NewPlayerShop;
+		if (!flag && payShopId == PayShopDefine.EPayShopTabType.GiftBag)
+		{
+			using (IEnumerator<int> enumerator = PayShopDefine.GiftBagShopSpecialTabList.GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (enumerator.Current == tabId)
+					{
+						flag = true;
+						break;
+					}
+				}
+			}
+		}
+		if (flag && !goods.CheckGoodIfShow())
 		{
 			return false;
 		}
@@ -408,7 +422,7 @@ public class PayShopModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060120D2 RID: 73938 RVA: 0x0046E10C File Offset: 0x0046C30C
+	// Token: 0x0600F582 RID: 62850 RVA: 0x0047B1E4 File Offset: 0x004793E4
 	public int GetPayShopFirstTabId(PayShopDefine.EPayShopTabType payShopId)
 	{
 		HashSet<int> hashSet;
@@ -445,19 +459,19 @@ public class PayShopModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x060120D3 RID: 73939 RVA: 0x0046E1D8 File Offset: 0x0046C3D8
+	// Token: 0x0600F583 RID: 62851 RVA: 0x0047B2B0 File Offset: 0x004794B0
 	private bool IfPayGiftRoutedShop(PayShopDefine.EPayShopTabType payShopId)
 	{
 		return PayShopDefine.payGiftRoutedShopSet.Contains(payShopId);
 	}
 
-	// Token: 0x060120D4 RID: 73940 RVA: 0x0046E1E5 File Offset: 0x0046C3E5
+	// Token: 0x0600F584 RID: 62852 RVA: 0x0047B2BD File Offset: 0x004794BD
 	private bool IfSkinShopGoods(PayShopDefine.EPayShopTabType payShopId)
 	{
 		return payShopId == PayShopDefine.EPayShopTabType.SkinShop;
 	}
 
-	// Token: 0x060120D5 RID: 73941 RVA: 0x0046E1EC File Offset: 0x0046C3EC
+	// Token: 0x0600F585 RID: 62853 RVA: 0x0047B2C4 File Offset: 0x004794C4
 	public List<PayShopGoods> GetPayShopGoodsByTabType(PayShopDefine.EPayShopTabType payShopId, int tabId = 1)
 	{
 		List<PayShopGoods> list = new List<PayShopGoods>();
@@ -502,7 +516,7 @@ public class PayShopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060120D6 RID: 73942 RVA: 0x0046E350 File Offset: 0x0046C550
+	// Token: 0x0600F586 RID: 62854 RVA: 0x0047B428 File Offset: 0x00479628
 	public PayShopGoods GetGoodsInTab(PayShopDefine.EPayShopTabType payShopId, int itemConfigId)
 	{
 		List<PayShopGoods> list = new List<PayShopGoods>();
@@ -528,7 +542,7 @@ public class PayShopModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060120D7 RID: 73943 RVA: 0x0046E420 File Offset: 0x0046C620
+	// Token: 0x0600F587 RID: 62855 RVA: 0x0047B4F8 File Offset: 0x004796F8
 	public List<PayShopGoods> GetPayShopTabData(PayShopDefine.EPayShopTabType payShopId, int tabId = 1, bool isSort = true)
 	{
 		if (payShopId == PayShopDefine.EPayShopTabType.None || payShopId == PayShopDefine.EPayShopTabType.Default)
@@ -551,7 +565,7 @@ public class PayShopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060120D8 RID: 73944 RVA: 0x0046E4A8 File Offset: 0x0046C6A8
+	// Token: 0x0600F588 RID: 62856 RVA: 0x0047B580 File Offset: 0x00479780
 	private List<PayShopGoods> SortPayShopGoods(PayShopDefine.EPayShopTabType payShopId, List<PayShopGoods> goods)
 	{
 		if (this.GetPayShopInfoSortRule(payShopId) == 1)
@@ -588,7 +602,7 @@ public class PayShopModel : ModelBase
 		return goods;
 	}
 
-	// Token: 0x060120D9 RID: 73945 RVA: 0x0046E5A0 File Offset: 0x0046C7A0
+	// Token: 0x0600F589 RID: 62857 RVA: 0x0047B678 File Offset: 0x00479878
 	private Comparison<PayShopGoods> GetSortFunctionByPayShopId(PayShopDefine.EPayShopTabType payShopId)
 	{
 		if (this.GetPayShopInfoSortRule(payShopId) == 1)
@@ -598,7 +612,7 @@ public class PayShopModel : ModelBase
 		return new Comparison<PayShopGoods>(this.GoodsSort);
 	}
 
-	// Token: 0x060120DA RID: 73946 RVA: 0x0046E5C5 File Offset: 0x0046C7C5
+	// Token: 0x0600F58A RID: 62858 RVA: 0x0047B69D File Offset: 0x0047989D
 	private int SortBySortValueThenId(PayShopGoods aGoods, PayShopGoods bGoods)
 	{
 		if (aGoods.GetGoodsData().GetSortValue() != bGoods.GetGoodsData().GetSortValue())
@@ -608,7 +622,7 @@ public class PayShopModel : ModelBase
 		return aGoods.GetGoodsId() - bGoods.GetGoodsId();
 	}
 
-	// Token: 0x060120DB RID: 73947 RVA: 0x0046E604 File Offset: 0x0046C804
+	// Token: 0x0600F58B RID: 62859 RVA: 0x0047B6DC File Offset: 0x004798DC
 	private int SortByQualityThenSortValueThenId(PayShopGoods aGoods, PayShopGoods bGoods)
 	{
 		if (aGoods.GetItemData().Quality != bGoods.GetItemData().Quality)
@@ -622,7 +636,7 @@ public class PayShopModel : ModelBase
 		return aGoods.GetGoodsId() - bGoods.GetGoodsId();
 	}
 
-	// Token: 0x060120DC RID: 73948 RVA: 0x0046E680 File Offset: 0x0046C880
+	// Token: 0x0600F58C RID: 62860 RVA: 0x0047B758 File Offset: 0x00479958
 	private int RougeLikeSort(PayShopGoods aGoods, PayShopGoods bGoods)
 	{
 		if (aGoods.IsSoldOut() != bGoods.IsSoldOut())
@@ -657,7 +671,7 @@ public class PayShopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060120DD RID: 73949 RVA: 0x0046E728 File Offset: 0x0046C928
+	// Token: 0x0600F58D RID: 62861 RVA: 0x0047B800 File Offset: 0x00479A00
 	private int GoodsSort(PayShopGoods aGoods, PayShopGoods bGoods)
 	{
 		if (aGoods.IsSoldOut() != bGoods.IsSoldOut())
@@ -676,38 +690,43 @@ public class PayShopModel : ModelBase
 			}
 			return 1;
 		}
-		else if (aGoods.IfCanBuy() != bGoods.IfCanBuy())
-		{
-			if (!aGoods.IfCanBuy())
-			{
-				return 1;
-			}
-			return -1;
-		}
 		else
 		{
-			if (aGoods.GetGoodsData().GetSortValue() != bGoods.GetGoodsData().GetSortValue())
+			bool flag = aGoods.IfCanBuy() || aGoods.IsShowTimePreview();
+			bool flag2 = bGoods.IfCanBuy() || bGoods.IsShowTimePreview();
+			if (flag != flag2)
 			{
-				return aGoods.GetGoodsData().GetSortValue() - bGoods.GetGoodsData().GetSortValue();
+				if (!flag)
+				{
+					return 1;
+				}
+				return -1;
 			}
-			CSharpScript.Game.Module.PayShop.IItemData itemData = aGoods.GetItemData();
-			CSharpScript.Game.Module.PayShop.IItemData itemData2 = bGoods.GetItemData();
-			if (itemData.Quality != itemData2.Quality)
+			else
 			{
-				return itemData2.Quality - itemData.Quality;
+				if (aGoods.GetGoodsData().GetSortValue() != bGoods.GetGoodsData().GetSortValue())
+				{
+					return aGoods.GetGoodsData().GetSortValue() - bGoods.GetGoodsData().GetSortValue();
+				}
+				CSharpScript.Game.Module.PayShop.IItemData itemData = aGoods.GetItemData();
+				CSharpScript.Game.Module.PayShop.IItemData itemData2 = bGoods.GetItemData();
+				if (itemData.Quality != itemData2.Quality)
+				{
+					return itemData2.Quality - itemData.Quality;
+				}
+				return aGoods.GetGoodsId() - bGoods.GetGoodsId();
 			}
-			return aGoods.GetGoodsId() - bGoods.GetGoodsId();
 		}
 	}
 
-	// Token: 0x060120DE RID: 73950 RVA: 0x0046E7EA File Offset: 0x0046C9EA
+	// Token: 0x0600F58E RID: 62862 RVA: 0x0047B8D7 File Offset: 0x00479AD7
 	[NullableContext(2)]
 	public PayShopGoods GetPayShopGoods(int goodsId)
 	{
 		return this.PayShopGoodsMap.GetValueOrDefault(goodsId);
 	}
 
-	// Token: 0x060120DF RID: 73951 RVA: 0x0046E7F8 File Offset: 0x0046C9F8
+	// Token: 0x0600F58F RID: 62863 RVA: 0x0047B8E8 File Offset: 0x00479AE8
 	public CommonDefine.ICountDown GetPayShopCountDownData(PayShopDefine.EPayShopTabType payShopId)
 	{
 		long payShopUpdateTime = this.GetPayShopUpdateTime(payShopId);
@@ -729,7 +748,7 @@ public class PayShopModel : ModelBase
 		return TimeUtil.Instance.GetCountDownData(num2, null, null);
 	}
 
-	// Token: 0x060120E0 RID: 73952 RVA: 0x0046E878 File Offset: 0x0046CA78
+	// Token: 0x0600F590 RID: 62864 RVA: 0x0047B968 File Offset: 0x00479B68
 	public long GetPayShopUpdateTime(PayShopDefine.EPayShopTabType payShopId)
 	{
 		PayShopInfoData payShopInfoById = this.GetPayShopInfoById(payShopId);
@@ -740,7 +759,7 @@ public class PayShopModel : ModelBase
 		return payShopInfoById.UpdateTime;
 	}
 
-	// Token: 0x060120E1 RID: 73953 RVA: 0x0046E89C File Offset: 0x0046CA9C
+	// Token: 0x0600F591 RID: 62865 RVA: 0x0047B98C File Offset: 0x00479B8C
 	public void UpdatePayShopGoodsCount(int goodsId, int count)
 	{
 		PayShopGoods payShopGoods;
@@ -758,7 +777,7 @@ public class PayShopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060120E2 RID: 73954 RVA: 0x0046E900 File Offset: 0x0046CB00
+	// Token: 0x0600F592 RID: 62866 RVA: 0x0047B9F0 File Offset: 0x00479BF0
 	public void UpdateActivityPayShopGoodsCount(int goodsId, int count)
 	{
 		PayShopGoods payShopGoods;
@@ -768,7 +787,7 @@ public class PayShopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060120E3 RID: 73955 RVA: 0x0046E92C File Offset: 0x0046CB2C
+	// Token: 0x0600F593 RID: 62867 RVA: 0x0047BA1C File Offset: 0x00479C1C
 	public List<PayShopGoods> GetNeedCheckGoods(PayShopDefine.EPayShopTabType payShopId)
 	{
 		List<PayShopGoods> list = new List<PayShopGoods>();
@@ -782,7 +801,7 @@ public class PayShopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060120E4 RID: 73956 RVA: 0x0046E9A8 File Offset: 0x0046CBA8
+	// Token: 0x0600F594 RID: 62868 RVA: 0x0047BA98 File Offset: 0x00479C98
 	public bool CheckPayShopEntranceHasRedDot()
 	{
 		if (!FunctionModel.Instance.IsOpen(10010))
@@ -799,7 +818,7 @@ public class PayShopModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060120E5 RID: 73957 RVA: 0x0046EA18 File Offset: 0x0046CC18
+	// Token: 0x0600F595 RID: 62869 RVA: 0x0047BB08 File Offset: 0x00479D08
 	public bool CheckPayShopHasRedDot(PayShopDefine.EPayShopTabType payShopId)
 	{
 		if (payShopId == PayShopDefine.EPayShopTabType.Recommend)
@@ -811,7 +830,19 @@ public class PayShopModel : ModelBase
 			return !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.PayShopRechargeRedDot, false) && PayItemModel.Instance.HasBonusData();
 		}
 		PayShopDefine.EShopTabViewType payShopInfoTabViewType = (PayShopDefine.EShopTabViewType)this.GetPayShopInfoTabViewType(payShopId);
-		if (!PayShopDefine.payShopViewTabType.Contains(payShopInfoTabViewType))
+		bool flag = false;
+		using (IEnumerator<PayShopDefine.EShopTabViewType> enumerator = PayShopDefine.payShopViewTabType.GetEnumerator())
+		{
+			while (enumerator.MoveNext())
+			{
+				if (enumerator.Current == payShopInfoTabViewType)
+				{
+					flag = true;
+					break;
+				}
+			}
+		}
+		if (!flag)
 		{
 			return false;
 		}
@@ -825,7 +856,7 @@ public class PayShopModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060120E6 RID: 73958 RVA: 0x0046EAD0 File Offset: 0x0046CCD0
+	// Token: 0x0600F596 RID: 62870 RVA: 0x0047BBF8 File Offset: 0x00479DF8
 	public bool CheckPayShopTabHasRedDot(PayShopDefine.EPayShopTabType payShopId, int tabId = 1)
 	{
 		if (payShopId == PayShopDefine.EPayShopTabType.Recommend)
@@ -863,7 +894,7 @@ public class PayShopModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060120E7 RID: 73959 RVA: 0x0046EBC8 File Offset: 0x0046CDC8
+	// Token: 0x0600F597 RID: 62871 RVA: 0x0047BCF0 File Offset: 0x00479EF0
 	private bool CheckRecommendPayShopTabRedDot(PayShopDefine.EPayShopTabType payShopId, int tabId = 1)
 	{
 		if (!this.GetPayShopTabIdList(payShopId, false).Contains(tabId))
@@ -878,7 +909,7 @@ public class PayShopModel : ModelBase
 		return recommendDataById != null && recommendDataById.RecommendType == 3 && WeekCardModel.Instance.GetViewModel(EWeekCardKind.Normal).GetRedDotState();
 	}
 
-	// Token: 0x060120E8 RID: 73960 RVA: 0x0046EC24 File Offset: 0x0046CE24
+	// Token: 0x0600F598 RID: 62872 RVA: 0x0047BD4C File Offset: 0x00479F4C
 	public bool ReadShopItemCheckFlag(PayShopDefine.EPayShopTabType payShopId, int tabId = 1)
 	{
 		List<PayShopGoods> list;
@@ -906,7 +937,7 @@ public class PayShopModel : ModelBase
 		return flag;
 	}
 
-	// Token: 0x060120E9 RID: 73961 RVA: 0x0046ED10 File Offset: 0x0046CF10
+	// Token: 0x0600F599 RID: 62873 RVA: 0x0047BE38 File Offset: 0x0047A038
 	public bool CheckShopItemCheckFlag(PayShopDefine.EPayShopTabType payShopId, int tabId = 1)
 	{
 		List<PayShopGoods> list;
@@ -928,7 +959,7 @@ public class PayShopModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060120EA RID: 73962 RVA: 0x0046EDD4 File Offset: 0x0046CFD4
+	// Token: 0x0600F59A RID: 62874 RVA: 0x0047BEFC File Offset: 0x0047A0FC
 	public string GetPayShopItemQualitySpriteByItemIdAndQuality(int itemId, int quality)
 	{
 		InventoryDefine.EItemDataType itemDataTypeByConfigId = InventoryConfig.Instance.GetItemDataTypeByConfigId(new int?(itemId));
@@ -943,7 +974,7 @@ public class PayShopModel : ModelBase
 		return CSharpScript.Game.Module.Item.ItemConfig.Instance.GetQualityConfig(quality).Value.PayShopQualitySprite;
 	}
 
-	// Token: 0x060120EB RID: 73963 RVA: 0x0046EE5C File Offset: 0x0046D05C
+	// Token: 0x0600F59B RID: 62875 RVA: 0x0047BF84 File Offset: 0x0047A184
 	public int GetPayShopInfoTabViewType(PayShopDefine.EPayShopTabType payShopId)
 	{
 		PayShopInfoData payShopInfoById = this.GetPayShopInfoById(payShopId);
@@ -954,7 +985,7 @@ public class PayShopModel : ModelBase
 		return payShopInfoById.ShopTabViewType;
 	}
 
-	// Token: 0x060120EC RID: 73964 RVA: 0x0046EE7C File Offset: 0x0046D07C
+	// Token: 0x0600F59C RID: 62876 RVA: 0x0047BFA4 File Offset: 0x0047A1A4
 	public int GetPayShopInfoDynamicTabId(PayShopDefine.EPayShopTabType payShopId)
 	{
 		PayShopInfoData payShopInfoById = this.GetPayShopInfoById(payShopId);
@@ -965,7 +996,7 @@ public class PayShopModel : ModelBase
 		return payShopInfoById.DynamicTabId;
 	}
 
-	// Token: 0x060120ED RID: 73965 RVA: 0x0046EE9C File Offset: 0x0046D09C
+	// Token: 0x0600F59D RID: 62877 RVA: 0x0047BFC4 File Offset: 0x0047A1C4
 	public int GetPayShopInfoSortRule(PayShopDefine.EPayShopTabType payShopId)
 	{
 		PayShopInfoData payShopInfoById = this.GetPayShopInfoById(payShopId);
@@ -976,7 +1007,7 @@ public class PayShopModel : ModelBase
 		return payShopInfoById.SortRule;
 	}
 
-	// Token: 0x060120EE RID: 73966 RVA: 0x0046EEBC File Offset: 0x0046D0BC
+	// Token: 0x0600F59E RID: 62878 RVA: 0x0047BFE4 File Offset: 0x0047A1E4
 	public int GetPayShopInfoSort(PayShopDefine.EPayShopTabType payShopId)
 	{
 		PayShopInfoData payShopInfoById = this.GetPayShopInfoById(payShopId);
@@ -987,7 +1018,7 @@ public class PayShopModel : ModelBase
 		return payShopInfoById.Sort;
 	}
 
-	// Token: 0x060120EF RID: 73967 RVA: 0x0046EEDC File Offset: 0x0046D0DC
+	// Token: 0x0600F59F RID: 62879 RVA: 0x0047C004 File Offset: 0x0047A204
 	public void AddPreviewPayGiftEntry(int configId, IPreviewPayGiftEntry entry)
 	{
 		if (configId <= 0)
@@ -997,14 +1028,14 @@ public class PayShopModel : ModelBase
 		this.PreviewPayGiftEntryMap[configId] = entry;
 	}
 
-	// Token: 0x060120F0 RID: 73968 RVA: 0x0046EEF0 File Offset: 0x0046D0F0
+	// Token: 0x0600F5A0 RID: 62880 RVA: 0x0047C018 File Offset: 0x0047A218
 	[NullableContext(2)]
 	public IPreviewPayGiftEntry TryGetPreviewPayGiftEntry(int configId)
 	{
 		return this.PreviewPayGiftEntryMap.GetValueOrDefault(configId);
 	}
 
-	// Token: 0x060120F1 RID: 73969 RVA: 0x0046EEFE File Offset: 0x0046D0FE
+	// Token: 0x0600F5A1 RID: 62881 RVA: 0x0047C026 File Offset: 0x0047A226
 	public void ClearPreviewPayGiftEntries()
 	{
 		if (this.PreviewPayGiftEntryMap.Count == 0)
@@ -1014,7 +1045,7 @@ public class PayShopModel : ModelBase
 		this.PreviewPayGiftEntryMap.Clear();
 	}
 
-	// Token: 0x060120F2 RID: 73970 RVA: 0x0046EF1C File Offset: 0x0046D11C
+	// Token: 0x0600F5A2 RID: 62882 RVA: 0x0047C044 File Offset: 0x0047A244
 	[NullableContext(2)]
 	public PayGiftPreviewBuildResult TryBuildConsoleExtraPayGiftPreview(int reasonId)
 	{
@@ -1064,7 +1095,7 @@ public class PayShopModel : ModelBase
 		};
 	}
 
-	// Token: 0x060120F3 RID: 73971 RVA: 0x0046F024 File Offset: 0x0046D224
+	// Token: 0x0600F5A3 RID: 62883 RVA: 0x0047C14C File Offset: 0x0047A34C
 	private unsafe List<RewardItemData> BuildPayGiftPreviewItemList(PayPackageData payGiftData)
 	{
 		if (payGiftData.ItemId <= 0 || payGiftData.ItemCount <= 0)
@@ -1083,7 +1114,7 @@ public class PayShopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060120F4 RID: 73972 RVA: 0x0046F0A4 File Offset: 0x0046D2A4
+	// Token: 0x0600F5A4 RID: 62884 RVA: 0x0047C1CC File Offset: 0x0047A3CC
 	private string BuildPayGiftRewardTitleText(PayPackageData payGiftData)
 	{
 		int itemId = payGiftData.ItemId;
@@ -1100,7 +1131,7 @@ public class PayShopModel : ModelBase
 		return text;
 	}
 
-	// Token: 0x060120F5 RID: 73973 RVA: 0x0046F0EC File Offset: 0x0046D2EC
+	// Token: 0x0600F5A5 RID: 62885 RVA: 0x0047C214 File Offset: 0x0047A414
 	private string BuildPayGiftRewardDescText(PayPackageData payGiftData)
 	{
 		int itemId = payGiftData.ItemId;
@@ -1115,7 +1146,7 @@ public class PayShopModel : ModelBase
 		});
 	}
 
-	// Token: 0x060120F6 RID: 73974 RVA: 0x0046F13C File Offset: 0x0046D33C
+	// Token: 0x0600F5A6 RID: 62886 RVA: 0x0047C264 File Offset: 0x0047A464
 	public List<int> GetPayShopInfoMoney(PayShopDefine.EPayShopTabType payShopId)
 	{
 		PayShopInfoData payShopInfoById = this.GetPayShopInfoById(payShopId);
@@ -1126,7 +1157,7 @@ public class PayShopModel : ModelBase
 		return payShopInfoById.Money;
 	}
 
-	// Token: 0x060120F7 RID: 73975 RVA: 0x0046F160 File Offset: 0x0046D360
+	// Token: 0x0600F5A7 RID: 62887 RVA: 0x0047C288 File Offset: 0x0047A488
 	public List<int> GetPayShopTableList(int shopId)
 	{
 		List<PayShopTabData> list = new List<PayShopTabData>();
@@ -1149,7 +1180,7 @@ public class PayShopModel : ModelBase
 		return list2;
 	}
 
-	// Token: 0x060120F8 RID: 73976 RVA: 0x0046F23C File Offset: 0x0046D43C
+	// Token: 0x0600F5A8 RID: 62888 RVA: 0x0047C364 File Offset: 0x0047A564
 	public PayShopTabData GetPayShopTabDataByPayShopIdAndTabId(PayShopDefine.EPayShopTabType payShopId, int tabId)
 	{
 		foreach (PayShopTabData payShopTabData in this.PayShopTabArray)
@@ -1162,7 +1193,7 @@ public class PayShopModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060120F9 RID: 73977 RVA: 0x0046F2A4 File Offset: 0x0046D4A4
+	// Token: 0x0600F5A9 RID: 62889 RVA: 0x0047C3CC File Offset: 0x0047A5CC
 	public List<PayShopRecommendData> GetRecommendData()
 	{
 		List<PayShopRecommendData> list = new List<PayShopRecommendData>();
@@ -1173,7 +1204,7 @@ public class PayShopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060120FA RID: 73978 RVA: 0x0046F304 File Offset: 0x0046D504
+	// Token: 0x0600F5AA RID: 62890 RVA: 0x0047C42C File Offset: 0x0047A62C
 	public List<PayShopRecommendData> GetNeedShowRecommendData()
 	{
 		List<PayShopRecommendData> list = new List<PayShopRecommendData>();
@@ -1187,7 +1218,7 @@ public class PayShopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060120FB RID: 73979 RVA: 0x0046F36C File Offset: 0x0046D56C
+	// Token: 0x0600F5AB RID: 62891 RVA: 0x0047C494 File Offset: 0x0047A694
 	public PayShopRecommendData GetRecommendDataById(int id)
 	{
 		PayShopRecommendData result;
@@ -1198,7 +1229,7 @@ public class PayShopModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060120FC RID: 73980 RVA: 0x0046F38C File Offset: 0x0046D58C
+	// Token: 0x0600F5AC RID: 62892 RVA: 0x0047C4B4 File Offset: 0x0047A6B4
 	public void ClearData()
 	{
 		this.PayShopInfoMap.Clear();
@@ -1208,8 +1239,8 @@ public class PayShopModel : ModelBase
 		this.ConsoleExtraPerformancePayGiftId = 0;
 	}
 
-	// Token: 0x17001796 RID: 6038
-	// (get) Token: 0x060120FD RID: 73981 RVA: 0x0046F3C1 File Offset: 0x0046D5C1
+	// Token: 0x170017D0 RID: 6096
+	// (get) Token: 0x0600F5AD RID: 62893 RVA: 0x0047C4E9 File Offset: 0x0047A6E9
 	public static PayShopModel Instance
 	{
 		get
@@ -1218,7 +1249,7 @@ public class PayShopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060120FE RID: 73982 RVA: 0x0046F3C8 File Offset: 0x0046D5C8
+	// Token: 0x0600F5AE RID: 62894 RVA: 0x0047C4F0 File Offset: 0x0047A6F0
 	public static PayShopModel GetOrCreateInstance()
 	{
 		if (PayShopModel._Instance == null)
@@ -1228,7 +1259,7 @@ public class PayShopModel : ModelBase
 		return PayShopModel._Instance;
 	}
 
-	// Token: 0x060120FF RID: 73983 RVA: 0x0046F3DC File Offset: 0x0046D5DC
+	// Token: 0x0600F5AF RID: 62895 RVA: 0x0047C504 File Offset: 0x0047A704
 	public static bool CreateInstance()
 	{
 		if (PayShopModel._Instance != null)
@@ -1239,63 +1270,63 @@ public class PayShopModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06012100 RID: 73984 RVA: 0x0046F3F2 File Offset: 0x0046D5F2
+	// Token: 0x0600F5B0 RID: 62896 RVA: 0x0047C51A File Offset: 0x0047A71A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06012101 RID: 73985 RVA: 0x0046F3F4 File Offset: 0x0046D5F4
+	// Token: 0x0600F5B1 RID: 62897 RVA: 0x0047C51C File Offset: 0x0047A71C
 	public static void ResetStaticDefaultValue()
 	{
 		PayShopModel._Instance = null;
 	}
 
-	// Token: 0x06012102 RID: 73986 RVA: 0x0046F3FC File Offset: 0x0046D5FC
+	// Token: 0x0600F5B2 RID: 62898 RVA: 0x0047C524 File Offset: 0x0047A724
 	static PayShopModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PayShopModel.CreateStaticDefaultValue), new Action(PayShopModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040088AD RID: 34989
+	// Token: 0x040089F2 RID: 35314
 	private readonly Dictionary<PayShopDefine.EPayShopTabType, PayShopInfoData> PayShopInfoMap = new Dictionary<PayShopDefine.EPayShopTabType, PayShopInfoData>();
 
-	// Token: 0x040088AE RID: 34990
+	// Token: 0x040089F3 RID: 35315
 	private readonly Dictionary<PayShopDefine.EPayShopTabType, HashSet<int>> PayShopMap = new Dictionary<PayShopDefine.EPayShopTabType, HashSet<int>>();
 
-	// Token: 0x040088AF RID: 34991
+	// Token: 0x040089F4 RID: 35316
 	private readonly Dictionary<int, PayShopGoods> PayShopGoodsMap = new Dictionary<int, PayShopGoods>();
 
-	// Token: 0x040088B0 RID: 34992
+	// Token: 0x040089F5 RID: 35317
 	private List<PayShopTabData> PayShopTabArray = new List<PayShopTabData>();
 
-	// Token: 0x040088B1 RID: 34993
+	// Token: 0x040089F6 RID: 35318
 	private readonly Dictionary<int, PayShopRecommendData> PayShopRecommendData = new Dictionary<int, PayShopRecommendData>();
 
-	// Token: 0x040088B2 RID: 34994
+	// Token: 0x040089F7 RID: 35319
 	private string DataVersionInternal = "";
 
-	// Token: 0x040088B3 RID: 34995
+	// Token: 0x040089F8 RID: 35320
 	private int CurrentPayShopId;
 
-	// Token: 0x040088B4 RID: 34996
+	// Token: 0x040089F9 RID: 35321
 	private bool ShopChangeDirty;
 
-	// Token: 0x040088B5 RID: 34997
+	// Token: 0x040089FA RID: 35322
 	private List<PayShopDefine.EPayShopTabType> CurrentPayShopTabTypeList = new List<PayShopDefine.EPayShopTabType>();
 
-	// Token: 0x040088B6 RID: 34998
+	// Token: 0x040089FB RID: 35323
 	public bool BusinessCompliance;
 
-	// Token: 0x040088B7 RID: 34999
+	// Token: 0x040089FC RID: 35324
 	public int ConsoleExtraPerformancePayGiftId;
 
-	// Token: 0x040088B8 RID: 35000
+	// Token: 0x040089FD RID: 35325
 	private readonly Dictionary<int, IPreviewPayGiftEntry> PreviewPayGiftEntryMap = new Dictionary<int, IPreviewPayGiftEntry>();
 
-	// Token: 0x040088B9 RID: 35001
+	// Token: 0x040089FE RID: 35326
 	private readonly Dictionary<PayShopDefine.EPayShopTabType, Func<bool>> VisibilityPredicates;
 
-	// Token: 0x040088BA RID: 35002
+	// Token: 0x040089FF RID: 35327
 	[Nullable(2)]
 	private static PayShopModel _Instance;
 }

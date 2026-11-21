@@ -6,16 +6,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 {
-	// Token: 0x02004FB7 RID: 20407
+	// Token: 0x02003F80 RID: 16256
 	public class QuestMultiLineMapMoveComponent : BuildingMapMoveComponent
 	{
-		// Token: 0x060343C7 RID: 213959 RVA: 0x00C432EB File Offset: 0x00C414EB
+		// Token: 0x06029235 RID: 168501 RVA: 0x00B8CA97 File Offset: 0x00B8AC97
 		[NullableContext(1)]
 		public QuestMultiLineMapMoveComponent(UUIDraggableComponent draggable) : base(draggable, true, false, false)
 		{
 		}
 
-		// Token: 0x060343C8 RID: 213960 RVA: 0x00C432F8 File Offset: 0x00C414F8
+		// Token: 0x06029236 RID: 168502 RVA: 0x00B8CAA4 File Offset: 0x00B8ACA4
 		[return: TupleElementNames(new string[]
 		{
 			"offsetX",
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return new ValueTuple<int, int>(item, item2);
 		}
 
-		// Token: 0x060343C9 RID: 213961 RVA: 0x00C43340 File Offset: 0x00C41540
+		// Token: 0x06029237 RID: 168503 RVA: 0x00B8CAEC File Offset: 0x00B8ACEC
 		protected override void UpdateMoveSafeArea()
 		{
 			ValueTuple<int, int> safeOffset = QuestMultiLineMapMoveComponent.GetSafeOffset();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.MoveSafeArea.MaxY = (double)item2;
 		}
 
-		// Token: 0x060343CA RID: 213962 RVA: 0x00C43398 File Offset: 0x00C41598
+		// Token: 0x06029238 RID: 168504 RVA: 0x00B8CB44 File Offset: 0x00B8AD44
 		protected override void UpdateMoveDangerousArea()
 		{
 			ValueTuple<int, int> safeOffset = QuestMultiLineMapMoveComponent.GetSafeOffset();

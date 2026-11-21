@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020019DE RID: 6622
+// Token: 0x02000E9D RID: 3741
 [NullableContext(1)]
 [Nullable(0)]
 public class CyberpunkConfirmBoxView : UiViewBase
 {
-	// Token: 0x0600C16E RID: 49518 RVA: 0x002BA665 File Offset: 0x002B8865
+	// Token: 0x0600957B RID: 38267 RVA: 0x002C563D File Offset: 0x002C383D
 	public CyberpunkConfirmBoxView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C16F RID: 49519 RVA: 0x002BA68C File Offset: 0x002B888C
+	// Token: 0x0600957C RID: 38268 RVA: 0x002C5664 File Offset: 0x002C3864
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -49,7 +49,7 @@ public class CyberpunkConfirmBoxView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C170 RID: 49520 RVA: 0x002BA7DC File Offset: 0x002B89DC
+	// Token: 0x0600957D RID: 38269 RVA: 0x002C57B4 File Offset: 0x002C39B4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CyberpunkConfirmBoxView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -60,7 +60,7 @@ public class CyberpunkConfirmBoxView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C171 RID: 49521 RVA: 0x002BA820 File Offset: 0x002B8A20
+	// Token: 0x0600957E RID: 38270 RVA: 0x002C57F8 File Offset: 0x002C39F8
 	protected override void OnBeforeShow()
 	{
 		IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -81,7 +81,7 @@ public class CyberpunkConfirmBoxView : UiViewBase
 		childPopView3.PopItem.OverrideBackBtnCallBack(new Action(this.OnClose));
 	}
 
-	// Token: 0x0600C172 RID: 49522 RVA: 0x002BA89B File Offset: 0x002B8A9B
+	// Token: 0x0600957F RID: 38271 RVA: 0x002C5873 File Offset: 0x002C3A73
 	protected override void OnAfterShow()
 	{
 		Action afterShowFunction = this.ConfirmBoxData.GetAfterShowFunction();
@@ -92,7 +92,7 @@ public class CyberpunkConfirmBoxView : UiViewBase
 		afterShowFunction();
 	}
 
-	// Token: 0x0600C173 RID: 49523 RVA: 0x002BA8B2 File Offset: 0x002B8AB2
+	// Token: 0x06009580 RID: 38272 RVA: 0x002C588A File Offset: 0x002C3A8A
 	protected override void OnBeforeHide()
 	{
 		if (this.LastHide)
@@ -111,7 +111,7 @@ public class CyberpunkConfirmBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C174 RID: 49524 RVA: 0x002BA8D8 File Offset: 0x002B8AD8
+	// Token: 0x06009581 RID: 38273 RVA: 0x002C58B0 File Offset: 0x002C3AB0
 	protected override void OnBeforeDestroy()
 	{
 		this.ResetButtonList();
@@ -134,14 +134,14 @@ public class CyberpunkConfirmBoxView : UiViewBase
 		destroyFunction();
 	}
 
-	// Token: 0x0600C175 RID: 49525 RVA: 0x002BA936 File Offset: 0x002B8B36
+	// Token: 0x06009582 RID: 38274 RVA: 0x002C590E File Offset: 0x002C3B0E
 	protected void OnClose()
 	{
 		this.SelectedIndex = -1;
 		this.ConfirmBoxButtonClick();
 	}
 
-	// Token: 0x0600C176 RID: 49526 RVA: 0x002BA948 File Offset: 0x002B8B48
+	// Token: 0x06009583 RID: 38275 RVA: 0x002C5920 File Offset: 0x002C3B20
 	protected void ConfirmBoxButtonClick()
 	{
 		ConfirmBoxDataNew confirmBoxData = this.ConfirmBoxData;
@@ -169,7 +169,7 @@ public class CyberpunkConfirmBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C177 RID: 49527 RVA: 0x002BA9B7 File Offset: 0x002B8BB7
+	// Token: 0x06009584 RID: 38276 RVA: 0x002C598F File Offset: 0x002C3B8F
 	private void HandleSelectedIndexWhenClose()
 	{
 		if (this.SelectedIndex == -1)
@@ -178,7 +178,7 @@ public class CyberpunkConfirmBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C178 RID: 49528 RVA: 0x002BA9CC File Offset: 0x002B8BCC
+	// Token: 0x06009585 RID: 38277 RVA: 0x002C59A4 File Offset: 0x002C3BA4
 	protected UniTask InitButton()
 	{
 		CyberpunkConfirmBoxView.<InitButton>d__16 <InitButton>d__;
@@ -189,7 +189,7 @@ public class CyberpunkConfirmBoxView : UiViewBase
 		return <InitButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C179 RID: 49529 RVA: 0x002BAA10 File Offset: 0x002B8C10
+	// Token: 0x06009586 RID: 38278 RVA: 0x002C59E8 File Offset: 0x002C3BE8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -208,7 +208,7 @@ public class CyberpunkConfirmBoxView : UiViewBase
 		return <CreateButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C17A RID: 49530 RVA: 0x002BAA6C File Offset: 0x002B8C6C
+	// Token: 0x06009587 RID: 38279 RVA: 0x002C5A44 File Offset: 0x002C3C44
 	private void ResetButtonList()
 	{
 		int i = 0;
@@ -221,13 +221,13 @@ public class CyberpunkConfirmBoxView : UiViewBase
 		this.ButtonList = Array.Empty<ConfirmBoxButton>();
 	}
 
-	// Token: 0x0600C17B RID: 49531 RVA: 0x002BAAA7 File Offset: 0x002B8CA7
+	// Token: 0x06009588 RID: 38280 RVA: 0x002C5A7F File Offset: 0x002C3C7F
 	private void OnClickCloseButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600C17C RID: 49532 RVA: 0x002BAAB0 File Offset: 0x002B8CB0
+	// Token: 0x06009589 RID: 38281 RVA: 0x002C5A88 File Offset: 0x002C3C88
 	private void OnClickMaskButton()
 	{
 		if (!this.Config.Value.NeedMaskClose)
@@ -237,42 +237,42 @@ public class CyberpunkConfirmBoxView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04005924 RID: 22820
+	// Token: 0x040059F3 RID: 23027
 	protected ConfirmBoxButton[] ButtonList = Array.Empty<ConfirmBoxButton>();
 
-	// Token: 0x04005925 RID: 22821
+	// Token: 0x040059F4 RID: 23028
 	protected ConfirmBox? Config;
 
-	// Token: 0x04005926 RID: 22822
+	// Token: 0x040059F5 RID: 23029
 	[Nullable(2)]
 	protected ConfirmBoxDataNew ConfirmBoxData;
 
-	// Token: 0x04005927 RID: 22823
+	// Token: 0x040059F6 RID: 23030
 	protected int SelectedIndex = -1;
 
-	// Token: 0x04005928 RID: 22824
+	// Token: 0x040059F7 RID: 23031
 	protected readonly List<UUIButtonComponent> ButtonComponentList = new List<UUIButtonComponent>();
 
-	// Token: 0x02007F04 RID: 32516
+	// Token: 0x02007093 RID: 28819
 	[NullableContext(0)]
 	private class ECyberpunkConfirmBoxDefine
 	{
-		// Token: 0x040297EA RID: 169962
+		// Token: 0x04024B27 RID: 150311
 		public const int TxtPrompt = 0;
 
-		// Token: 0x040297EB RID: 169963
+		// Token: 0x04024B28 RID: 150312
 		public const int BtnCancel = 1;
 
-		// Token: 0x040297EC RID: 169964
+		// Token: 0x04024B29 RID: 150313
 		public const int BtnConfirm = 2;
 
-		// Token: 0x040297ED RID: 169965
+		// Token: 0x04024B2A RID: 150314
 		public const int UiItemBackBtn = 3;
 
-		// Token: 0x040297EE RID: 169966
+		// Token: 0x04024B2B RID: 150315
 		public const int TitleTxt = 4;
 
-		// Token: 0x040297EF RID: 169967
+		// Token: 0x04024B2C RID: 150316
 		public const int BtnMask = 5;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061C7 RID: 25031
+	// Token: 0x02006835 RID: 26677
 	public struct IAvgPlayRoleActionItem : IFlatbufferObject
 	{
-		// Token: 0x1700BA9C RID: 47772
-		// (get) Token: 0x0602B220 RID: 176672 RVA: 0x005F242B File Offset: 0x005F062B
+		// Token: 0x1700C41F RID: 50207
+		// (get) Token: 0x0602D967 RID: 186727 RVA: 0x0063CE9F File Offset: 0x0063B09F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B221 RID: 176673 RVA: 0x005F2438 File Offset: 0x005F0638
+		// Token: 0x0602D968 RID: 186728 RVA: 0x0063CEAC File Offset: 0x0063B0AC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B222 RID: 176674 RVA: 0x005F2440 File Offset: 0x005F0640
+		// Token: 0x0602D969 RID: 186729 RVA: 0x0063CEB4 File Offset: 0x0063B0B4
 		public static IAvgPlayRoleActionItem GetRootAsIAvgPlayRoleActionItem(ByteBuffer _bb)
 		{
 			return IAvgPlayRoleActionItem.GetRootAsIAvgPlayRoleActionItem(_bb, default(IAvgPlayRoleActionItem));
 		}
 
-		// Token: 0x0602B223 RID: 176675 RVA: 0x005F245C File Offset: 0x005F065C
+		// Token: 0x0602D96A RID: 186730 RVA: 0x0063CED0 File Offset: 0x0063B0D0
 		public static IAvgPlayRoleActionItem GetRootAsIAvgPlayRoleActionItem(ByteBuffer _bb, IAvgPlayRoleActionItem obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B224 RID: 176676 RVA: 0x005F2479 File Offset: 0x005F0679
+		// Token: 0x0602D96B RID: 186731 RVA: 0x0063CEED File Offset: 0x0063B0ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B225 RID: 176677 RVA: 0x005F2488 File Offset: 0x005F0688
+		// Token: 0x0602D96C RID: 186732 RVA: 0x0063CEFC File Offset: 0x0063B0FC
 		public IAvgPlayRoleActionItem __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BA9D RID: 47773
-		// (get) Token: 0x0602B226 RID: 176678 RVA: 0x005F2498 File Offset: 0x005F0698
+		// Token: 0x1700C420 RID: 50208
+		// (get) Token: 0x0602D96D RID: 186733 RVA: 0x0063CF0C File Offset: 0x0063B10C
 		public EAvgPlayRoleActionType ActionType
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BA9E RID: 47774
-		// (get) Token: 0x0602B227 RID: 176679 RVA: 0x005F24D4 File Offset: 0x005F06D4
+		// Token: 0x1700C421 RID: 50209
+		// (get) Token: 0x0602D96E RID: 186734 RVA: 0x0063CF48 File Offset: 0x0063B148
 		public int RoleId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BA9F RID: 47775
-		// (get) Token: 0x0602B228 RID: 176680 RVA: 0x005F2510 File Offset: 0x005F0710
+		// Token: 0x1700C422 RID: 50210
+		// (get) Token: 0x0602D96F RID: 186735 RVA: 0x0063CF84 File Offset: 0x0063B184
 		public EAvgRolePosition PositionConfig
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BAA0 RID: 47776
-		// (get) Token: 0x0602B229 RID: 176681 RVA: 0x005F254C File Offset: 0x005F074C
+		// Token: 0x1700C423 RID: 50211
+		// (get) Token: 0x0602D970 RID: 186736 RVA: 0x0063CFC0 File Offset: 0x0063B1C0
 		public EAvgRoleAnimationType AnimationType
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BAA1 RID: 47777
-		// (get) Token: 0x0602B22A RID: 176682 RVA: 0x005F258C File Offset: 0x005F078C
+		// Token: 0x1700C424 RID: 50212
+		// (get) Token: 0x0602D971 RID: 186737 RVA: 0x0063D000 File Offset: 0x0063B200
 		public bool IsAnimationLoop
 		{
 			get
@@ -118,8 +118,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BAA2 RID: 47778
-		// (get) Token: 0x0602B22B RID: 176683 RVA: 0x005F25CC File Offset: 0x005F07CC
+		// Token: 0x1700C425 RID: 50213
+		// (get) Token: 0x0602D972 RID: 186738 RVA: 0x0063D040 File Offset: 0x0063B240
 		public EAvgVisualEffect VisualEffect
 		{
 			get
@@ -133,8 +133,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BAA3 RID: 47779
-		// (get) Token: 0x0602B22C RID: 176684 RVA: 0x005F260C File Offset: 0x005F080C
+		// Token: 0x1700C426 RID: 50214
+		// (get) Token: 0x0602D973 RID: 186739 RVA: 0x0063D080 File Offset: 0x0063B280
 		public byte NullMask
 		{
 			get
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B22D RID: 176685 RVA: 0x005F264C File Offset: 0x005F084C
+		// Token: 0x0602D974 RID: 186740 RVA: 0x0063D0C0 File Offset: 0x0063B2C0
 		public static Offset<IAvgPlayRoleActionItem> CreateIAvgPlayRoleActionItem(FlatBufferBuilder builder, EAvgPlayRoleActionType ActionType = EAvgPlayRoleActionType.Enter, int RoleId = 0, EAvgRolePosition PositionConfig = EAvgRolePosition.Center, EAvgRoleAnimationType AnimationType = EAvgRoleAnimationType.Idle, bool IsAnimationLoop = false, EAvgVisualEffect VisualEffect = EAvgVisualEffect.Default, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -162,61 +162,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAvgPlayRoleActionItem.EndIAvgPlayRoleActionItem(builder);
 		}
 
-		// Token: 0x0602B22E RID: 176686 RVA: 0x005F269B File Offset: 0x005F089B
+		// Token: 0x0602D975 RID: 186741 RVA: 0x0063D10F File Offset: 0x0063B30F
 		public static void StartIAvgPlayRoleActionItem(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x0602B22F RID: 176687 RVA: 0x005F26A4 File Offset: 0x005F08A4
+		// Token: 0x0602D976 RID: 186742 RVA: 0x0063D118 File Offset: 0x0063B318
 		public static void AddActionType(FlatBufferBuilder builder, EAvgPlayRoleActionType actionType)
 		{
 			builder.AddByte(0, (byte)actionType, 0);
 		}
 
-		// Token: 0x0602B230 RID: 176688 RVA: 0x005F26AF File Offset: 0x005F08AF
+		// Token: 0x0602D977 RID: 186743 RVA: 0x0063D123 File Offset: 0x0063B323
 		public static void AddRoleId(FlatBufferBuilder builder, int roleId)
 		{
 			builder.AddInt(1, roleId, 0);
 		}
 
-		// Token: 0x0602B231 RID: 176689 RVA: 0x005F26BA File Offset: 0x005F08BA
+		// Token: 0x0602D978 RID: 186744 RVA: 0x0063D12E File Offset: 0x0063B32E
 		public static void AddPositionConfig(FlatBufferBuilder builder, EAvgRolePosition positionConfig)
 		{
 			builder.AddByte(2, (byte)positionConfig, 0);
 		}
 
-		// Token: 0x0602B232 RID: 176690 RVA: 0x005F26C5 File Offset: 0x005F08C5
+		// Token: 0x0602D979 RID: 186745 RVA: 0x0063D139 File Offset: 0x0063B339
 		public static void AddAnimationType(FlatBufferBuilder builder, EAvgRoleAnimationType animationType)
 		{
 			builder.AddByte(3, (byte)animationType, 0);
 		}
 
-		// Token: 0x0602B233 RID: 176691 RVA: 0x005F26D0 File Offset: 0x005F08D0
+		// Token: 0x0602D97A RID: 186746 RVA: 0x0063D144 File Offset: 0x0063B344
 		public static void AddIsAnimationLoop(FlatBufferBuilder builder, bool isAnimationLoop)
 		{
 			builder.AddBool(4, isAnimationLoop, false);
 		}
 
-		// Token: 0x0602B234 RID: 176692 RVA: 0x005F26DB File Offset: 0x005F08DB
+		// Token: 0x0602D97B RID: 186747 RVA: 0x0063D14F File Offset: 0x0063B34F
 		public static void AddVisualEffect(FlatBufferBuilder builder, EAvgVisualEffect visualEffect)
 		{
 			builder.AddByte(5, (byte)visualEffect, 0);
 		}
 
-		// Token: 0x0602B235 RID: 176693 RVA: 0x005F26E6 File Offset: 0x005F08E6
+		// Token: 0x0602D97C RID: 186748 RVA: 0x0063D15A File Offset: 0x0063B35A
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x0602B236 RID: 176694 RVA: 0x005F26F1 File Offset: 0x005F08F1
+		// Token: 0x0602D97D RID: 186749 RVA: 0x0063D165 File Offset: 0x0063B365
 		public static Offset<IAvgPlayRoleActionItem> EndIAvgPlayRoleActionItem(FlatBufferBuilder builder)
 		{
 			return new Offset<IAvgPlayRoleActionItem>(builder.EndTable());
 		}
 
-		// Token: 0x0602B237 RID: 176695 RVA: 0x005F2700 File Offset: 0x005F0900
+		// Token: 0x0602D97E RID: 186750 RVA: 0x0063D174 File Offset: 0x0063B374
 		public IAvgPlayRoleActionItemT UnPack()
 		{
 			IAvgPlayRoleActionItemT avgPlayRoleActionItemT = new IAvgPlayRoleActionItemT();
@@ -224,7 +224,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return avgPlayRoleActionItemT;
 		}
 
-		// Token: 0x0602B238 RID: 176696 RVA: 0x005F271C File Offset: 0x005F091C
+		// Token: 0x0602D97F RID: 186751 RVA: 0x0063D190 File Offset: 0x0063B390
 		public void UnPackTo(IAvgPlayRoleActionItemT _o)
 		{
 			_o.ActionType = this.ActionType;
@@ -236,7 +236,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602B239 RID: 176697 RVA: 0x005F2780 File Offset: 0x005F0980
+		// Token: 0x0602D980 RID: 186752 RVA: 0x0063D1F4 File Offset: 0x0063B3F4
 		public static Offset<IAvgPlayRoleActionItem> Pack(FlatBufferBuilder builder, IAvgPlayRoleActionItemT _o)
 		{
 			if (_o == null)
@@ -246,7 +246,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAvgPlayRoleActionItem.CreateIAvgPlayRoleActionItem(builder, _o.ActionType, _o.RoleId, _o.PositionConfig, _o.AnimationType, _o.IsAnimationLoop, _o.VisualEffect, _o.NullMask);
 		}
 
-		// Token: 0x040106E9 RID: 67305
+		// Token: 0x040114FB RID: 70907
 		private Table __p;
 	}
 }

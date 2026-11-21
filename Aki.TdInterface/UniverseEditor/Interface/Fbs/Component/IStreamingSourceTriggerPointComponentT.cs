@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059DE RID: 23006
+	// Token: 0x02005FEB RID: 24555
 	public class IStreamingSourceTriggerPointComponentT
 	{
-		// Token: 0x1700ACD8 RID: 44248
-		// (get) Token: 0x0602707E RID: 159870 RVA: 0x0055EDD3 File Offset: 0x0055CFD3
-		// (set) Token: 0x0602707F RID: 159871 RVA: 0x0055EDDB File Offset: 0x0055CFDB
+		// Token: 0x1700B610 RID: 46608
+		// (get) Token: 0x060295F6 RID: 169462 RVA: 0x005A5D97 File Offset: 0x005A3F97
+		// (set) Token: 0x060295F7 RID: 169463 RVA: 0x005A5D9F File Offset: 0x005A3F9F
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700ACD9 RID: 44249
-		// (get) Token: 0x06027080 RID: 159872 RVA: 0x0055EDE4 File Offset: 0x0055CFE4
-		// (set) Token: 0x06027081 RID: 159873 RVA: 0x0055EDEC File Offset: 0x0055CFEC
+		// Token: 0x1700B611 RID: 46609
+		// (get) Token: 0x060295F8 RID: 169464 RVA: 0x005A5DA8 File Offset: 0x005A3FA8
+		// (set) Token: 0x060295F9 RID: 169465 RVA: 0x005A5DB0 File Offset: 0x005A3FB0
 		public int Radius { get; set; }
 
-		// Token: 0x1700ACDA RID: 44250
-		// (get) Token: 0x06027082 RID: 159874 RVA: 0x0055EDF5 File Offset: 0x0055CFF5
-		// (set) Token: 0x06027083 RID: 159875 RVA: 0x0055EDFD File Offset: 0x0055CFFD
+		// Token: 0x1700B612 RID: 46610
+		// (get) Token: 0x060295FA RID: 169466 RVA: 0x005A5DB9 File Offset: 0x005A3FB9
+		// (set) Token: 0x060295FB RID: 169467 RVA: 0x005A5DC1 File Offset: 0x005A3FC1
 		public TStreamingSourceConfigUnion StreamingSource { get; set; }
 
-		// Token: 0x1700ACDB RID: 44251
-		// (get) Token: 0x06027084 RID: 159876 RVA: 0x0055EE06 File Offset: 0x0055D006
-		// (set) Token: 0x06027085 RID: 159877 RVA: 0x0055EE0E File Offset: 0x0055D00E
+		// Token: 0x1700B613 RID: 46611
+		// (get) Token: 0x060295FC RID: 169468 RVA: 0x005A5DCA File Offset: 0x005A3FCA
+		// (set) Token: 0x060295FD RID: 169469 RVA: 0x005A5DD2 File Offset: 0x005A3FD2
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027086 RID: 159878 RVA: 0x0055EE17 File Offset: 0x0055D017
+		// Token: 0x060295FE RID: 169470 RVA: 0x005A5DDB File Offset: 0x005A3FDB
 		public IStreamingSourceTriggerPointComponentT()
 		{
 			this.Disabled = false;

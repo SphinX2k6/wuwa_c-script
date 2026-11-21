@@ -19,23 +19,24 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Interaction;
 using CSharpScript.Game.Module.SeamlessTravel;
 using CSharpScript.Game.Module.Teleport;
+using CSharpScript.Game.NewWorld.Character.Common.Component.Move;
 using CSharpScript.Game.NewWorld.Character.Custom.Components;
 using CSharpScript.Game.Render;
 using UnrealEngine;
 
-// Token: 0x02000227 RID: 551
+// Token: 0x0200022B RID: 555
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 {
-	// Token: 0x17000507 RID: 1287
-	// (get) Token: 0x06002185 RID: 8581 RVA: 0x000C30AA File Offset: 0x000C12AA
-	// (set) Token: 0x06002186 RID: 8582 RVA: 0x000C30B2 File Offset: 0x000C12B2
+	// Token: 0x17000528 RID: 1320
+	// (get) Token: 0x06002233 RID: 8755 RVA: 0x000CA3CA File Offset: 0x000C85CA
+	// (set) Token: 0x06002234 RID: 8756 RVA: 0x000CA3D2 File Offset: 0x000C85D2
 	[Nullable(2)]
 	public CameraModelInstance CameraModel { [NullableContext(2)] get; [NullableContext(2)] private set; }
 
-	// Token: 0x06002187 RID: 8583 RVA: 0x000C30BC File Offset: 0x000C12BC
+	// Token: 0x06002235 RID: 8757 RVA: 0x000CA3DC File Offset: 0x000C85DC
 	public FightCameraLogicComponent()
 	{
 		this.CameraConfigController = new CameraConfigController(this);
@@ -100,9 +101,9 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		};
 	}
 
-	// Token: 0x17000508 RID: 1288
-	// (get) Token: 0x06002188 RID: 8584 RVA: 0x000C37A5 File Offset: 0x000C19A5
-	// (set) Token: 0x06002189 RID: 8585 RVA: 0x000C37AD File Offset: 0x000C19AD
+	// Token: 0x17000529 RID: 1321
+	// (get) Token: 0x06002236 RID: 8758 RVA: 0x000CAAD0 File Offset: 0x000C8CD0
+	// (set) Token: 0x06002237 RID: 8759 RVA: 0x000CAAD8 File Offset: 0x000C8CD8
 	public float StartHideDistance
 	{
 		get
@@ -116,8 +117,8 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x17000509 RID: 1289
-	// (get) Token: 0x0600218A RID: 8586 RVA: 0x000C37BF File Offset: 0x000C19BF
+	// Token: 0x1700052A RID: 1322
+	// (get) Token: 0x06002238 RID: 8760 RVA: 0x000CAAEA File Offset: 0x000C8CEA
 	public float StartHideDistanceSquared
 	{
 		get
@@ -126,8 +127,8 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x1700050A RID: 1290
-	// (get) Token: 0x0600218B RID: 8587 RVA: 0x000C37C7 File Offset: 0x000C19C7
+	// Token: 0x1700052B RID: 1323
+	// (get) Token: 0x06002239 RID: 8761 RVA: 0x000CAAF2 File Offset: 0x000C8CF2
 	public bool IsTargetLocationValid
 	{
 		get
@@ -136,20 +137,20 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x0600218C RID: 8588 RVA: 0x000C37D7 File Offset: 0x000C19D7
+	// Token: 0x0600223A RID: 8762 RVA: 0x000CAB02 File Offset: 0x000C8D02
 	public void SetSuppressClearRoll(ESuppressClearRollFlag flag)
 	{
 		this.SuppressClearRollFlags |= (int)flag;
 	}
 
-	// Token: 0x0600218D RID: 8589 RVA: 0x000C37E7 File Offset: 0x000C19E7
+	// Token: 0x0600223B RID: 8763 RVA: 0x000CAB12 File Offset: 0x000C8D12
 	public void ClearSuppressClearRoll(ESuppressClearRollFlag flag)
 	{
 		this.SuppressClearRollFlags &= (int)(~(int)flag);
 	}
 
-	// Token: 0x1700050B RID: 1291
-	// (get) Token: 0x0600218E RID: 8590 RVA: 0x000C37F8 File Offset: 0x000C19F8
+	// Token: 0x1700052C RID: 1324
+	// (get) Token: 0x0600223C RID: 8764 RVA: 0x000CAB23 File Offset: 0x000C8D23
 	public bool ShouldClearRoll
 	{
 		get
@@ -158,8 +159,8 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x1700050C RID: 1292
-	// (get) Token: 0x0600218F RID: 8591 RVA: 0x000C3803 File Offset: 0x000C1A03
+	// Token: 0x1700052D RID: 1325
+	// (get) Token: 0x0600223D RID: 8765 RVA: 0x000CAB2E File Offset: 0x000C8D2E
 	public ACameraActor CameraActor
 	{
 		get
@@ -168,13 +169,13 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002190 RID: 8592 RVA: 0x000C3810 File Offset: 0x000C1A10
+	// Token: 0x0600223E RID: 8766 RVA: 0x000CAB3B File Offset: 0x000C8D3B
 	public float GetArmLengthWithSetting(VirtualCamera camera)
 	{
 		return (float)MathUtils.Instance.Lerp((double)camera.ArmLength, (double)camera.MaxArmLength, this.CameraModel.CameraSettingArmLengthPercentage);
 	}
 
-	// Token: 0x06002191 RID: 8593 RVA: 0x000C3838 File Offset: 0x000C1A38
+	// Token: 0x0600223F RID: 8767 RVA: 0x000CAB64 File Offset: 0x000C8D64
 	public float GetArmLengthWithSettingAndZoom(VirtualCamera camera, bool withClamp = true)
 	{
 		float num = this.GetArmLengthWithSetting(camera) * camera.ZoomModifier;
@@ -185,7 +186,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return MathUtils.Instance.Clamp(num, camera.MinArmLength, camera.MaxArmLength);
 	}
 
-	// Token: 0x06002192 RID: 8594 RVA: 0x000C3870 File Offset: 0x000C1A70
+	// Token: 0x06002240 RID: 8768 RVA: 0x000CAB9C File Offset: 0x000C8D9C
 	public static T[] TArrayToArray<[Nullable(2)] T>([Nullable(new byte[]
 	{
 		2,
@@ -199,7 +200,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return tArray.ToArray<T>();
 	}
 
-	// Token: 0x06002193 RID: 8595 RVA: 0x000C3884 File Offset: 0x000C1A84
+	// Token: 0x06002241 RID: 8769 RVA: 0x000CABB0 File Offset: 0x000C8DB0
 	[NullableContext(0)]
 	[return: Nullable(new byte[]
 	{
@@ -234,7 +235,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return dictionary;
 	}
 
-	// Token: 0x06002194 RID: 8596 RVA: 0x000C3900 File Offset: 0x000C1B00
+	// Token: 0x06002242 RID: 8770 RVA: 0x000CAC34 File Offset: 0x000C8E34
 	[NullableContext(0)]
 	[return: Nullable(new byte[]
 	{
@@ -271,7 +272,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return dictionary;
 	}
 
-	// Token: 0x06002195 RID: 8597 RVA: 0x000C3980 File Offset: 0x000C1B80
+	// Token: 0x06002243 RID: 8771 RVA: 0x000CACBC File Offset: 0x000C8EBC
 	protected void SetConfigMap(EFightCameraDefault key, string value)
 	{
 		object obj;
@@ -281,7 +282,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002196 RID: 8598 RVA: 0x000C39A8 File Offset: 0x000C1BA8
+	// Token: 0x06002244 RID: 8772 RVA: 0x000CACE4 File Offset: 0x000C8EE4
 	protected void SetCurveConfigMap(EFightCameraDefault key, string value)
 	{
 		object obj;
@@ -291,7 +292,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002197 RID: 8599 RVA: 0x000C39D0 File Offset: 0x000C1BD0
+	// Token: 0x06002245 RID: 8773 RVA: 0x000CAD0C File Offset: 0x000C8F0C
 	protected void SetVehicleConfigMap(EFightCameraVehicle key, string value)
 	{
 		object obj;
@@ -301,7 +302,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002198 RID: 8600 RVA: 0x000C39F8 File Offset: 0x000C1BF8
+	// Token: 0x06002246 RID: 8774 RVA: 0x000CAD34 File Offset: 0x000C8F34
 	protected void SetVehicleCurveConfigMap(EFightCameraVehicle key, string value)
 	{
 		object obj;
@@ -311,7 +312,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002199 RID: 8601 RVA: 0x000C3A20 File Offset: 0x000C1C20
+	// Token: 0x06002247 RID: 8775 RVA: 0x000CAD5C File Offset: 0x000C8F5C
 	private unsafe void SetConfigValue(string memberName, float value)
 	{
 		object obj;
@@ -361,7 +362,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x0600219A RID: 8602 RVA: 0x000C3B80 File Offset: 0x000C1D80
+	// Token: 0x06002248 RID: 8776 RVA: 0x000CAEBC File Offset: 0x000C90BC
 	private void SetCurveConfigValue(string memberName, CurveBase value)
 	{
 		object obj;
@@ -372,7 +373,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.SetMember(memberName, value);
 	}
 
-	// Token: 0x0600219B RID: 8603 RVA: 0x000C3BA4 File Offset: 0x000C1DA4
+	// Token: 0x06002249 RID: 8777 RVA: 0x000CAEE0 File Offset: 0x000C90E0
 	public unsafe void SetConfigs(Dictionary<EFightCameraDefault, float> config, Dictionary<EFightCameraDefault, CurveBase> curveConfig, Dictionary<EFightCameraVehicle, float> vehicleConfig, Dictionary<EFightCameraVehicle, CurveBase> vehicleCurveConfig, FName tagName, FName cameraArmLocationSocketName, EFightCameraSocketOverrideType cameraArmLocationSocketOverrideType, bool reset)
 	{
 		if (reset || !FNameUtil.IsEmpty(new FName?(cameraArmLocationSocketName)) || cameraArmLocationSocketOverrideType == EFightCameraSocketOverrideType.骨骼无条件覆盖)
@@ -448,7 +449,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("key", keyValuePair4.Key);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 2) = new ValueTuple<string, object>("value", keyValuePair4.Value);
 					instance3.Error(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 3));
-					this.SetCurveConfigValue(keyValuePair4.Value, CurveUtils.CreateCurve(global::ECurveType.Linear, Array.Empty<float>()));
+					this.SetCurveConfigValue(keyValuePair4.Value, CurveUtils.CreateCurve(ECurveType.Linear, Array.Empty<float>()));
 				}
 			}
 		}
@@ -476,13 +477,13 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x0600219C RID: 8604 RVA: 0x000C40A8 File Offset: 0x000C22A8
+	// Token: 0x0600224A RID: 8778 RVA: 0x000CB3E4 File Offset: 0x000C95E4
 	public void ResetDefaultConfig()
 	{
 		this.SetConfigs(this.DefaultConfigs, this.DefaultCurveConfigs, this.VehicleConfigs, this.VehicleCurveConfigs, FNameUtil.GetDynamicFName("DefaultConfig").Value, this.CameraConfigController.GetDefaultConfig().CameraArmLocationSocketName, this.CameraConfigController.GetDefaultConfig().CameraArmLocationSocketOverrideType, true);
 	}
 
-	// Token: 0x0600219D RID: 8605 RVA: 0x000C4108 File Offset: 0x000C2308
+	// Token: 0x0600224B RID: 8779 RVA: 0x000CB444 File Offset: 0x000C9644
 	public void ApplyConfig()
 	{
 		this.DesiredCamera.ArmLength = this.ArmLength;
@@ -523,7 +524,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		EventSystem.Instance.Emit<int, string>(EEventName.UpdateCameraInfo, this.CharacterEntityHandle.Id, this.CameraModel.CameraName);
 	}
 
-	// Token: 0x0600219E RID: 8606 RVA: 0x000C4396 File Offset: 0x000C2596
+	// Token: 0x0600224C RID: 8780 RVA: 0x000CB6D2 File Offset: 0x000C98D2
 	[NullableContext(2)]
 	protected override bool OnCreate(IEntityArgs args = null)
 	{
@@ -531,7 +532,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return base.OnCreate(args);
 	}
 
-	// Token: 0x0600219F RID: 8607 RVA: 0x000C43B4 File Offset: 0x000C25B4
+	// Token: 0x0600224D RID: 8781 RVA: 0x000CB6F0 File Offset: 0x000C98F0
 	protected override bool OnInit()
 	{
 		this.SetConfigMap(EFightCameraDefault.基础臂长, "ArmLength");
@@ -630,6 +631,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.SetConfigMap(EFightCameraDefault.Yaw回正速度倍率, "YawTransToForwardSpeedRatio");
 		this.SetConfigMap(EFightCameraDefault.Yaw输入启用时间, "YawInputEnableTime");
 		this.SetConfigMap(EFightCameraDefault.Yaw回正时间, "YawRollbackEnableTime");
+		this.SetConfigMap(EFightCameraDefault.Yaw软区回正时间, "YawSoftZoneRollbackEnableTime");
 		this.SetConfigMap(EFightCameraDefault.Pitch输入启动时间, "PitchInputEnableTime");
 		this.SetConfigMap(EFightCameraDefault.Pitch回正时间, "PitchRollbackEnableTime");
 		this.SetConfigMap(EFightCameraDefault.Pitch软区Min, "PitchSoftZoneMin");
@@ -660,38 +662,13 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.SettlementCamera.Init(this);
 		this.CameraTransformBuffer = new CameraTransformBuffer();
 		this.CameraTransformBuffer.Init(this);
-		base.AddUnResetProperty(new string[]
-		{
-			"LastCamera",
-			"DesiredCamera",
-			"CameraConfigController",
-			"CameraGravityController",
-			"CameraFocusController",
-			"CameraInputController",
-			"CameraModifyController",
-			"CameraAdjustController",
-			"CameraSidestepController",
-			"CameraAutoController",
-			"CameraGuideController",
-			"CameraRunningController",
-			"CameraRotatorController",
-			"CameraDialogueController",
-			"CameraFixedController",
-			"CameraClimbController",
-			"CameraHookController",
-			"CameraSplineMoveController",
-			"CameraCollision",
-			"CameraRotationZone",
-			"SettlementCamera",
-			"CameraTransformBuffer"
-		});
 		EventSystem.Instance.Add<VehiclePassengerInfo, bool>(EEventName.OnEnterVehicle, new Action<VehiclePassengerInfo, bool>(this.OnEnterVehicle));
 		EventSystem.Instance.Add<VehiclePassengerInfo, bool>(EEventName.OnLeaveVehicle, new Action<VehiclePassengerInfo, bool>(this.OnLeaveVehicle));
 		EventSystem.Instance.Add<VehiclePassengerInfo>(EEventName.OnAfterAttachVehicle, new Action<VehiclePassengerInfo>(this.OnAfterAttachVehicle));
 		return true;
 	}
 
-	// Token: 0x060021A0 RID: 8608 RVA: 0x000C4B38 File Offset: 0x000C2D38
+	// Token: 0x0600224E RID: 8782 RVA: 0x000CBDB4 File Offset: 0x000C9FB4
 	private void RegisterPairConfigKeys()
 	{
 		this.PairConfigKeySet.Clear();
@@ -724,7 +701,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.AddPairKey(EFightCameraDefault.动态FOV映射下界, EFightCameraDefault.动态FOV映射上界, true);
 	}
 
-	// Token: 0x060021A1 RID: 8609 RVA: 0x000C4C78 File Offset: 0x000C2E78
+	// Token: 0x0600224F RID: 8783 RVA: 0x000CBEF4 File Offset: 0x000CA0F4
 	private void AddPairKey(EFightCameraDefault key1, EFightCameraDefault key2, bool needValueCheck = true)
 	{
 		if (!this.PairConfigKeySet.ContainsKey(key1) && !this.PairConfigKeySet.ContainsKey(key2))
@@ -739,7 +716,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021A2 RID: 8610 RVA: 0x000C4CE0 File Offset: 0x000C2EE0
+	// Token: 0x06002250 RID: 8784 RVA: 0x000CBF5C File Offset: 0x000CA15C
 	public void LoadConfig()
 	{
 		this.DisplayComponentInternal = base.Entity.GetComponent<FightCameraDisplayComponent>();
@@ -771,7 +748,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x060021A3 RID: 8611 RVA: 0x000C4D44 File Offset: 0x000C2F44
+	// Token: 0x06002251 RID: 8785 RVA: 0x000CBFC0 File Offset: 0x000CA1C0
 	[NullableContext(2)]
 	public int ApplyCameraModify(FGameplayTag? tag, float duration, float blendInTime, float blendOutTime, [Nullable(1)] SCameraModifier_Settings settings, UAnimSequenceBase anim, float breakBlendOutTime = 0.2f, SBaseCurve blendInCurve = null, SBaseCurve blendOutCurve = null, [Nullable(new byte[]
 	{
@@ -788,68 +765,68 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return this.CameraModifyController.ApplyCameraModify(tag, duration, blendInTime, blendOutTime, breakBlendOutTime, settings, anim, new OneOf<CurveBase, SBaseCurve>(blendInCurve), new OneOf<CurveBase, SBaseCurve>(blendOutCurve), newLookAtActor, lookAtActorSocket, animOwner);
 	}
 
-	// Token: 0x060021A4 RID: 8612 RVA: 0x000C4D7B File Offset: 0x000C2F7B
+	// Token: 0x06002252 RID: 8786 RVA: 0x000CBFF7 File Offset: 0x000CA1F7
 	public void StopCameraModify(UAnimSequenceBase anim, int modifyInstance)
 	{
 		this.CameraModifyController.StopCameraModify(anim, modifyInstance);
 	}
 
-	// Token: 0x060021A5 RID: 8613 RVA: 0x000C4D8A File Offset: 0x000C2F8A
+	// Token: 0x06002253 RID: 8787 RVA: 0x000CC006 File Offset: 0x000CA206
 	public void ForceStopModify(bool withFadeOut)
 	{
 		this.CameraModifyController.ForceStopModify(withFadeOut);
 	}
 
-	// Token: 0x060021A6 RID: 8614 RVA: 0x000C4D98 File Offset: 0x000C2F98
+	// Token: 0x06002254 RID: 8788 RVA: 0x000CC014 File Offset: 0x000CA214
 	public bool HasCameraModify()
 	{
 		return this.CameraModifyController.IsModified;
 	}
 
-	// Token: 0x060021A7 RID: 8615 RVA: 0x000C4DA5 File Offset: 0x000C2FA5
+	// Token: 0x06002255 RID: 8789 RVA: 0x000CC021 File Offset: 0x000CA221
 	public int GetCameraModifyInstance()
 	{
 		return this.CameraModifyController.ModifyInstance;
 	}
 
-	// Token: 0x060021A8 RID: 8616 RVA: 0x000C4DB4 File Offset: 0x000C2FB4
+	// Token: 0x06002256 RID: 8790 RVA: 0x000CC030 File Offset: 0x000CA230
 	[NullableContext(2)]
 	public void ApplyCameraGuide([Nullable(1)] global::Vector lookAt, float fadeInTime, float stayTime, float fadeOutTime, bool lockCameraInput, global::Vector endPosition, float? fov, bool ignoreAdjustYaw = false, bool staticCamera = false, float specificArmLength = 0f, bool disableArmOffset = false, Action callback = null, bool forceUsingCameraGuideParameters = false)
 	{
 		this.CameraGuideController.ApplyCameraGuide(lookAt, fadeInTime, stayTime, fadeOutTime, lockCameraInput, endPosition, fov, ignoreAdjustYaw, staticCamera, specificArmLength, disableArmOffset, callback, forceUsingCameraGuideParameters);
 	}
 
-	// Token: 0x060021A9 RID: 8617 RVA: 0x000C4DE3 File Offset: 0x000C2FE3
+	// Token: 0x06002257 RID: 8791 RVA: 0x000CC05F File Offset: 0x000CA25F
 	public void CameraGuideFinishStaying()
 	{
 		this.CameraGuideController.CameraGuideFinishStaying();
 	}
 
-	// Token: 0x060021AA RID: 8618 RVA: 0x000C4DF0 File Offset: 0x000C2FF0
+	// Token: 0x06002258 RID: 8792 RVA: 0x000CC06C File Offset: 0x000CA26C
 	public void ApplyCameraHook(GrapplingHookPointComponent point, [Nullable(2)] GrapplingHookPointComponent currentTarget = null)
 	{
 		this.CameraHookController.ApplyCameraHook(point, currentTarget);
 	}
 
-	// Token: 0x060021AB RID: 8619 RVA: 0x000C4DFF File Offset: 0x000C2FFF
+	// Token: 0x06002259 RID: 8793 RVA: 0x000CC07B File Offset: 0x000CA27B
 	public void ExitCameraHook(bool fadeOut = true)
 	{
 		this.CameraHookController.ExitCameraHook(fadeOut);
 	}
 
-	// Token: 0x060021AC RID: 8620 RVA: 0x000C4E0D File Offset: 0x000C300D
+	// Token: 0x0600225A RID: 8794 RVA: 0x000CC089 File Offset: 0x000CA289
 	public void ExitCameraGuide()
 	{
 		this.CameraGuideController.ExitCameraGuide();
 	}
 
-	// Token: 0x060021AD RID: 8621 RVA: 0x000C4E1A File Offset: 0x000C301A
+	// Token: 0x0600225B RID: 8795 RVA: 0x000CC096 File Offset: 0x000CA296
 	public void ExitCameraGuideAtOnce()
 	{
 		this.CameraGuideController.ExitCameraGuideAtOnce();
 	}
 
-	// Token: 0x060021AE RID: 8622 RVA: 0x000C4E28 File Offset: 0x000C3028
+	// Token: 0x0600225C RID: 8796 RVA: 0x000CC0A4 File Offset: 0x000CA2A4
 	public void ApplyDepthOfField(float? fStop = null, float? distance = null, float? blurAmount = null, float? blurRadius = null)
 	{
 		UCameraComponent cameraComponent = this.CameraActor.CameraComponent;
@@ -884,7 +861,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021AF RID: 8623 RVA: 0x000C4EE0 File Offset: 0x000C30E0
+	// Token: 0x0600225D RID: 8797 RVA: 0x000CC15C File Offset: 0x000CA35C
 	public void ApplyRadialBlur(float? intensity, FVector2D? center, float? radius, float? hardness, int? passNumber, int? sampleNumber)
 	{
 		UCameraComponent cameraComponent = this.CameraActor.CameraComponent;
@@ -946,7 +923,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021B0 RID: 8624 RVA: 0x000C4FF4 File Offset: 0x000C31F4
+	// Token: 0x0600225E RID: 8798 RVA: 0x000CC270 File Offset: 0x000CA470
 	public void ExitDepthOfField()
 	{
 		ACameraActor cameraActor = this.CameraActor;
@@ -971,7 +948,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.IsEnablePanning = false;
 	}
 
-	// Token: 0x060021B1 RID: 8625 RVA: 0x000C504C File Offset: 0x000C324C
+	// Token: 0x0600225F RID: 8799 RVA: 0x000CC2C8 File Offset: 0x000CA4C8
 	public void ExitRadialBlur()
 	{
 		ACameraActor cameraActor = this.CameraActor;
@@ -997,31 +974,31 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021B2 RID: 8626 RVA: 0x000C50AB File Offset: 0x000C32AB
+	// Token: 0x06002260 RID: 8800 RVA: 0x000CC327 File Offset: 0x000CA527
 	public void ApplyCameraSpline(int splineId, float yawAngle, float pitchAngle, float fadeInTime, bool? isSyncRoll = false, float? rollAngle = 0f)
 	{
 		this.CameraSplineMoveController.ApplyCameraSpline(splineId, yawAngle, pitchAngle, fadeInTime, isSyncRoll, rollAngle);
 	}
 
-	// Token: 0x060021B3 RID: 8627 RVA: 0x000C50C1 File Offset: 0x000C32C1
+	// Token: 0x06002261 RID: 8801 RVA: 0x000CC33D File Offset: 0x000CA53D
 	public void ExitCameraSpline()
 	{
 		this.CameraSplineMoveController.EndCameraSpline();
 	}
 
-	// Token: 0x060021B4 RID: 8628 RVA: 0x000C50CE File Offset: 0x000C32CE
+	// Token: 0x06002262 RID: 8802 RVA: 0x000CC34A File Offset: 0x000CA54A
 	public void EnterCameraExplore(int id, FVectorDouble? lookAt1, FVectorDouble? lookAt2, float prepTime, float fadeDistance, float armLengthMin, float armLengthMax)
 	{
 		this.CameraRunningController.EnterCameraExplore(id, lookAt1, lookAt2, prepTime, fadeDistance, armLengthMin, armLengthMax);
 	}
 
-	// Token: 0x060021B5 RID: 8629 RVA: 0x000C50E6 File Offset: 0x000C32E6
+	// Token: 0x06002263 RID: 8803 RVA: 0x000CC362 File Offset: 0x000CA562
 	public void ExitCameraExplore(int id)
 	{
 		this.CameraRunningController.ExitCameraExplore(id);
 	}
 
-	// Token: 0x060021B6 RID: 8630 RVA: 0x000C50F4 File Offset: 0x000C32F4
+	// Token: 0x06002264 RID: 8804 RVA: 0x000CC370 File Offset: 0x000CA570
 	[NullableContext(2)]
 	public void EnterSequenceDialogue(global::Vector armLocation, bool delayBlendInDialogueCamera = false, float? specificOffsetRate = null, float? specificHeightOffset = null)
 	{
@@ -1032,19 +1009,19 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.CameraDialogueController.EnterSequenceDialogue(armLocation, delayBlendInDialogueCamera, specificOffsetRate, specificHeightOffset);
 	}
 
-	// Token: 0x060021B7 RID: 8631 RVA: 0x000C510F File Offset: 0x000C330F
+	// Token: 0x06002265 RID: 8805 RVA: 0x000CC38B File Offset: 0x000CA58B
 	public void AdjustDialogueCamera(VectorInfo cameraTargetPos, float pitchAngle, float yawAngle, float? armLength)
 	{
 		this.CameraDialogueController.AdjustDialogueParams(cameraTargetPos, pitchAngle, yawAngle, armLength);
 	}
 
-	// Token: 0x060021B8 RID: 8632 RVA: 0x000C5121 File Offset: 0x000C3321
+	// Token: 0x06002266 RID: 8806 RVA: 0x000CC39D File Offset: 0x000CA59D
 	public void ExitSequenceDialogue()
 	{
 		this.CameraDialogueController.ExitSequenceDialogue();
 	}
 
-	// Token: 0x060021B9 RID: 8633 RVA: 0x000C5130 File Offset: 0x000C3330
+	// Token: 0x06002267 RID: 8807 RVA: 0x000CC3AC File Offset: 0x000CA5AC
 	public void SetRotation(FRotator rotation)
 	{
 		if (rotation.ContainsNaN())
@@ -1063,7 +1040,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.CurrentCamera.ArmRotation.Quaternion(null).RotateVector(global::Vector.ForwardVectorProxy, this.CameraForward);
 	}
 
-	// Token: 0x060021BA RID: 8634 RVA: 0x000C51C0 File Offset: 0x000C33C0
+	// Token: 0x06002268 RID: 8808 RVA: 0x000CC43C File Offset: 0x000CA63C
 	[NullableContext(2)]
 	public void SetPawn(APawn pawn)
 	{
@@ -1079,7 +1056,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021BB RID: 8635 RVA: 0x000C51F8 File Offset: 0x000C33F8
+	// Token: 0x06002269 RID: 8809 RVA: 0x000CC474 File Offset: 0x000CA674
 	[NullableContext(2)]
 	public unsafe void SetCharacter(TsBaseCharacter character)
 	{
@@ -1294,7 +1271,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		EventSystem.Instance.Emit<EntityHandle, string>(EEventName.CameraCharacterChanged, this.CharacterEntityHandle, this.CameraModel.CameraName);
 	}
 
-	// Token: 0x060021BC RID: 8636 RVA: 0x000C592E File Offset: 0x000C3B2E
+	// Token: 0x0600226A RID: 8810 RVA: 0x000CCBAA File Offset: 0x000CADAA
 	[NullableContext(2)]
 	public void SetFollowShooter(EntityHandle followShooter)
 	{
@@ -1318,13 +1295,13 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.FollowShooterTagComponentInternal = followShooterTagComponentInternal;
 	}
 
-	// Token: 0x060021BD RID: 8637 RVA: 0x000C596B File Offset: 0x000C3B6B
+	// Token: 0x0600226B RID: 8811 RVA: 0x000CCBE7 File Offset: 0x000CADE7
 	private void GetTargetSocketLocation(global::Vector outLocation)
 	{
 		CameraUtility.GetSocketLocation(null, this.TargetSocketName, outLocation, this.TargetEntity);
 	}
 
-	// Token: 0x060021BE RID: 8638 RVA: 0x000C5980 File Offset: 0x000C3B80
+	// Token: 0x0600226C RID: 8812 RVA: 0x000CCBFC File Offset: 0x000CADFC
 	public void ResetArmLengthAndRotation(FRotator additiveRotation)
 	{
 		if (!this.IsCharacterValid)
@@ -1336,21 +1313,21 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.SetRotation(cameraDefaultFocusUeRotator + additiveRotation);
 	}
 
-	// Token: 0x060021BF RID: 8639 RVA: 0x000C59BC File Offset: 0x000C3BBC
+	// Token: 0x0600226D RID: 8813 RVA: 0x000CCC38 File Offset: 0x000CAE38
 	public void ResetInitialCameraRotation()
 	{
 		CameraUtility.SetPitchInGravity(this.CameraRotation, (double)this.InitialCameraPitch, this.CameraRotation);
 		this.SetRotation(this.CameraRotation.ToUeRotator());
 	}
 
-	// Token: 0x060021C0 RID: 8640 RVA: 0x000C59E8 File Offset: 0x000C3BE8
+	// Token: 0x0600226E RID: 8814 RVA: 0x000CCC64 File Offset: 0x000CAE64
 	[NullableContext(2)]
 	public TsBaseCharacter GetCharacter()
 	{
 		return this.Character;
 	}
 
-	// Token: 0x060021C1 RID: 8641 RVA: 0x000C59F0 File Offset: 0x000C3BF0
+	// Token: 0x0600226F RID: 8815 RVA: 0x000CCC6C File Offset: 0x000CAE6C
 	public void CopyVirtualCamera(VirtualCamera target, VirtualCamera origin, bool currentValue = false)
 	{
 		target.ArmLength = origin.ArmLength;
@@ -1415,7 +1392,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021C2 RID: 8642 RVA: 0x000C5C98 File Offset: 0x000C3E98
+	// Token: 0x06002270 RID: 8816 RVA: 0x000CCF14 File Offset: 0x000CB114
 	public void StartFade(float duration, CurveBase fadeCurve, bool fadeArmLength, bool fadeArmOffset, bool fadeCameraOffset, bool fadeFov, bool isUniqueFade)
 	{
 		this.CurrentCamera.ArmRotation.Pitch = (float)MathUtils.Instance.StandardizingPitch((double)this.CurrentCamera.ArmRotation.Pitch);
@@ -1433,11 +1410,11 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		if (this.FadeDuration > 0f && this.FadeCurve == null)
 		{
 			global::Log.Instance.Error(ELogModule.Camera, ELogAuthor.LCZ, "No Fade Curve.", default(ReadOnlySpan<ValueTuple<string, object>>));
-			this.FadeCurve = CurveUtils.CreateCurve(global::ECurveType.Linear, Array.Empty<float>());
+			this.FadeCurve = CurveUtils.CreateCurve(ECurveType.Linear, Array.Empty<float>());
 		}
 	}
 
-	// Token: 0x060021C3 RID: 8643 RVA: 0x000C5D9D File Offset: 0x000C3F9D
+	// Token: 0x06002271 RID: 8817 RVA: 0x000CD019 File Offset: 0x000CB219
 	public void ResetArmLocation(bool fading, float fadeTime = 0f)
 	{
 		if (fading)
@@ -1448,7 +1425,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021C4 RID: 8644 RVA: 0x000C5DBB File Offset: 0x000C3FBB
+	// Token: 0x06002272 RID: 8818 RVA: 0x000CD037 File Offset: 0x000CB237
 	public void SetArmLocation(global::Vector location)
 	{
 		if (!this.IsModifiedArmLocation)
@@ -1458,7 +1435,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021C5 RID: 8645 RVA: 0x000C5DE0 File Offset: 0x000C3FE0
+	// Token: 0x06002273 RID: 8819 RVA: 0x000CD05C File Offset: 0x000CB25C
 	protected override bool OnStart()
 	{
 		this.LoadConfig();
@@ -1482,7 +1459,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return true;
 	}
 
-	// Token: 0x060021C6 RID: 8646 RVA: 0x000C5F1C File Offset: 0x000C411C
+	// Token: 0x06002274 RID: 8820 RVA: 0x000CD198 File Offset: 0x000CB398
 	protected override bool OnEnd()
 	{
 		this.CameraCollision.Clear();
@@ -1509,7 +1486,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return true;
 	}
 
-	// Token: 0x060021C7 RID: 8647 RVA: 0x000C6073 File Offset: 0x000C4273
+	// Token: 0x06002275 RID: 8821 RVA: 0x000CD2EF File Offset: 0x000CB4EF
 	private void OnCharPossessed(Entity entity, [Nullable(2)] AController newController)
 	{
 		if (CreatureModel.Instance.GetEntityById(entity.Id) == this.CharacterEntityHandle)
@@ -1518,7 +1495,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021C8 RID: 8648 RVA: 0x000C6099 File Offset: 0x000C4299
+	// Token: 0x06002276 RID: 8822 RVA: 0x000CD315 File Offset: 0x000CB515
 	private void OnCharUnpossessed(Entity entity, [Nullable(2)] AController oldController)
 	{
 		if (CreatureModel.Instance.GetEntityById(entity.Id) == this.CharacterEntityHandle)
@@ -1527,19 +1504,19 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021C9 RID: 8649 RVA: 0x000C60BA File Offset: 0x000C42BA
+	// Token: 0x06002277 RID: 8823 RVA: 0x000CD336 File Offset: 0x000CB536
 	private void OnFollowShooterPossessed(EntityHandle follower)
 	{
 		this.SetFollowShooter(follower);
 	}
 
-	// Token: 0x060021CA RID: 8650 RVA: 0x000C60C3 File Offset: 0x000C42C3
+	// Token: 0x06002278 RID: 8824 RVA: 0x000CD33F File Offset: 0x000CB53F
 	private void OnFollowShooterUnPossessed()
 	{
 		this.SetFollowShooter(null);
 	}
 
-	// Token: 0x060021CB RID: 8651 RVA: 0x000C60CC File Offset: 0x000C42CC
+	// Token: 0x06002279 RID: 8825 RVA: 0x000CD348 File Offset: 0x000CB548
 	private void OnSwitchSelfCenteredMode(ESelfCenteredMode selfCenterMode, float globalTimeDilation)
 	{
 		TimerSystem.Instance.Next(delegate(float _)
@@ -1548,13 +1525,13 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}, null, null);
 	}
 
-	// Token: 0x060021CC RID: 8652 RVA: 0x000C60E7 File Offset: 0x000C42E7
+	// Token: 0x0600227A RID: 8826 RVA: 0x000CD363 File Offset: 0x000CB563
 	public void ForceTickOutSide()
 	{
 		this.OnAfterTick(0f);
 	}
 
-	// Token: 0x060021CD RID: 8653 RVA: 0x000C60F4 File Offset: 0x000C42F4
+	// Token: 0x0600227B RID: 8827 RVA: 0x000CD370 File Offset: 0x000CB570
 	protected override void OnAfterTick(float deltaTime)
 	{
 		this.UpdateDiagnosticCameraDistance();
@@ -1643,7 +1620,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		cameraCollision.ResetAllNpcDither();
 	}
 
-	// Token: 0x060021CE RID: 8654 RVA: 0x000C6340 File Offset: 0x000C4540
+	// Token: 0x0600227C RID: 8828 RVA: 0x000CD5BC File Offset: 0x000CB7BC
 	private void PreTickUpdateControllers(float second)
 	{
 		ICameraControllerBase[] preTickCameraControllerUpdateList = this.PreTickCameraControllerUpdateList;
@@ -1653,7 +1630,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021CF RID: 8655 RVA: 0x000C636C File Offset: 0x000C456C
+	// Token: 0x0600227D RID: 8829 RVA: 0x000CD5E8 File Offset: 0x000CB7E8
 	private void TickUpdateControllers(float second)
 	{
 		ICameraControllerBase[] tickCameraControllerUpdateList = this.TickCameraControllerUpdateList;
@@ -1663,7 +1640,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021D0 RID: 8656 RVA: 0x000C6398 File Offset: 0x000C4598
+	// Token: 0x0600227E RID: 8830 RVA: 0x000CD614 File Offset: 0x000CB814
 	private bool ShouldClampArmLengthOnTick()
 	{
 		CameraModify modifySettings = this.CameraModifyController.ModifySettings;
@@ -1683,13 +1660,13 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return false;
 	}
 
-	// Token: 0x060021D1 RID: 8657 RVA: 0x000C63F2 File Offset: 0x000C45F2
+	// Token: 0x0600227F RID: 8831 RVA: 0x000CD66E File Offset: 0x000CB86E
 	public string GetConfigMapValue(EFightCameraDefault key)
 	{
 		return this.ConfigMap[key];
 	}
 
-	// Token: 0x060021D2 RID: 8658 RVA: 0x000C6400 File Offset: 0x000C4600
+	// Token: 0x06002280 RID: 8832 RVA: 0x000CD67C File Offset: 0x000CB87C
 	[Conditional("DEBUG")]
 	private void SaveDesiredCameraAndLogicComponentDebugProps(ICameraControllerBase controller)
 	{
@@ -1804,7 +1781,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021D3 RID: 8659 RVA: 0x000C6784 File Offset: 0x000C4984
+	// Token: 0x06002281 RID: 8833 RVA: 0x000CDA00 File Offset: 0x000CBC00
 	[Conditional("DEBUG")]
 	private void SaveLogicComponentDebugProps()
 	{
@@ -1888,49 +1865,49 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021D4 RID: 8660 RVA: 0x000C6A00 File Offset: 0x000C4C00
+	// Token: 0x06002282 RID: 8834 RVA: 0x000CDC7C File Offset: 0x000CBE7C
 	[Conditional("DEBUG")]
 	private void ClearDebugControllerModifications()
 	{
 	}
 
-	// Token: 0x060021D5 RID: 8661 RVA: 0x000C6A02 File Offset: 0x000C4C02
+	// Token: 0x06002283 RID: 8835 RVA: 0x000CDC7E File Offset: 0x000CBE7E
 	[Conditional("DEBUG")]
 	private void BeginSampleDesiredCameraAndLogicComponentDebugProps(ICameraControllerBase controller)
 	{
 	}
 
-	// Token: 0x060021D6 RID: 8662 RVA: 0x000C6A04 File Offset: 0x000C4C04
+	// Token: 0x06002284 RID: 8836 RVA: 0x000CDC80 File Offset: 0x000CBE80
 	[Conditional("DEBUG")]
 	private void EndSampleDesiredCameraAndLogicComponentDebugProps(ICameraControllerBase controller)
 	{
 	}
 
-	// Token: 0x060021D7 RID: 8663 RVA: 0x000C6A06 File Offset: 0x000C4C06
+	// Token: 0x06002285 RID: 8837 RVA: 0x000CDC82 File Offset: 0x000CBE82
 	[Conditional("DEBUG")]
 	private void BeginSampleLogicComponentDebugProps(Stat stat)
 	{
 	}
 
-	// Token: 0x060021D8 RID: 8664 RVA: 0x000C6A08 File Offset: 0x000C4C08
+	// Token: 0x06002286 RID: 8838 RVA: 0x000CDC84 File Offset: 0x000CBE84
 	[Conditional("DEBUG")]
 	private void EndSampleLogicComponentDebugProps(string sampleName, Stat stat)
 	{
 	}
 
-	// Token: 0x060021D9 RID: 8665 RVA: 0x000C6A0A File Offset: 0x000C4C0A
+	// Token: 0x06002287 RID: 8839 RVA: 0x000CDC86 File Offset: 0x000CBE86
 	private Stat GetControllerStat(string name)
 	{
 		return null;
 	}
 
-	// Token: 0x060021DA RID: 8666 RVA: 0x000C6A0D File Offset: 0x000C4C0D
+	// Token: 0x06002288 RID: 8840 RVA: 0x000CDC89 File Offset: 0x000CBE89
 	public string DebugValueToString([Nullable(2)] object v, int vectorFractionDigits = 4, int rotatorFractionDigits = 4, int numberFractionDigits = 4)
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x060021DB RID: 8667 RVA: 0x000C6A14 File Offset: 0x000C4C14
+	// Token: 0x06002289 RID: 8841 RVA: 0x000CDC90 File Offset: 0x000CBE90
 	[Conditional("DEBUG")]
 	private void UpdateControllerModifications(ICameraControllerBase controller)
 	{
@@ -1941,7 +1918,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 			string item = valueTuple.Item1;
 			object item2 = valueTuple.Item2;
 			object valueOrDefault = this.DebugDesiredCameraProps.GetValueOrDefault(item);
-			if (FightCameraLogicComponent.<UpdateControllerModifications>g__IsValueModified|431_0(valueOrDefault, item2))
+			if (FightCameraLogicComponent.<UpdateControllerModifications>g__IsValueModified|433_0(valueOrDefault, item2))
 			{
 				list.Add(new ValueTuple<string, string, string>("DesiredCamera." + item, this.DebugValueToString(valueOrDefault, 4, 4, 4), this.DebugValueToString(item2, 4, 4, 4)));
 			}
@@ -1951,7 +1928,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 			string item3 = valueTuple2.Item1;
 			object item4 = valueTuple2.Item2;
 			object valueOrDefault2 = this.DebugCurrentCameraProps.GetValueOrDefault(item3);
-			if (FightCameraLogicComponent.<UpdateControllerModifications>g__IsValueModified|431_0(valueOrDefault2, item4))
+			if (FightCameraLogicComponent.<UpdateControllerModifications>g__IsValueModified|433_0(valueOrDefault2, item4))
 			{
 				list.Add(new ValueTuple<string, string, string>("CurrentCamera." + item3, this.DebugValueToString(valueOrDefault2, 4, 4, 4), this.DebugValueToString(item4, 4, 4, 4)));
 			}
@@ -1964,7 +1941,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 				object value = keyValuePair.Value;
 				object obj;
 				this.TryGetMember(key, out obj);
-				if (obj != null && FightCameraLogicComponent.<UpdateControllerModifications>g__IsValueModified|431_0(value, obj))
+				if (obj != null && FightCameraLogicComponent.<UpdateControllerModifications>g__IsValueModified|433_0(value, obj))
 				{
 					list.Add(new ValueTuple<string, string, string>("FightCameraLogicComponent." + key, this.DebugValueToString(value, 4, 4, 4), this.DebugValueToString(obj, 4, 4, 4)));
 				}
@@ -1978,7 +1955,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 				object value2 = keyValuePair2.Value;
 				object obj2;
 				this.TryGetMember(key2, out obj2);
-				if (obj2 != null && FightCameraLogicComponent.<UpdateControllerModifications>g__IsValueModified|431_0(value2, obj2))
+				if (obj2 != null && FightCameraLogicComponent.<UpdateControllerModifications>g__IsValueModified|433_0(value2, obj2))
 				{
 					list.Add(new ValueTuple<string, string, string>(text + "." + key2, this.DebugValueToString(value2, 4, 4, 4), this.DebugValueToString(obj2, 4, 4, 4)));
 				}
@@ -1990,7 +1967,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021DC RID: 8668 RVA: 0x000C6CC8 File Offset: 0x000C4EC8
+	// Token: 0x0600228A RID: 8842 RVA: 0x000CDF44 File Offset: 0x000CC144
 	[Conditional("DEBUG")]
 	private void UpdateLogicComponentDebugProps(string name)
 	{
@@ -2000,7 +1977,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 			string item = valueTuple.Item1;
 			object item2 = valueTuple.Item2;
 			object valueOrDefault = this.DebugDesiredCameraProps.GetValueOrDefault(item);
-			if (FightCameraLogicComponent.<UpdateLogicComponentDebugProps>g__IsValueModified|432_0(valueOrDefault, item2))
+			if (FightCameraLogicComponent.<UpdateLogicComponentDebugProps>g__IsValueModified|434_0(valueOrDefault, item2))
 			{
 				list.Add(new ValueTuple<string, string, string>("DesiredCamera." + item, this.DebugValueToString(valueOrDefault, 4, 4, 4), this.DebugValueToString(item2, 4, 4, 4)));
 			}
@@ -2010,7 +1987,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 			string item3 = valueTuple2.Item1;
 			object item4 = valueTuple2.Item2;
 			object valueOrDefault2 = this.DebugCurrentCameraProps.GetValueOrDefault(item3);
-			if (FightCameraLogicComponent.<UpdateLogicComponentDebugProps>g__IsValueModified|432_0(valueOrDefault2, item4))
+			if (FightCameraLogicComponent.<UpdateLogicComponentDebugProps>g__IsValueModified|434_0(valueOrDefault2, item4))
 			{
 				list.Add(new ValueTuple<string, string, string>("CurrentCamera." + item3, this.DebugValueToString(valueOrDefault2, 4, 4, 4), this.DebugValueToString(item4, 4, 4, 4)));
 			}
@@ -2023,7 +2000,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 				object value = keyValuePair.Value;
 				object obj;
 				this.TryGetMember(key, out obj);
-				if (obj != null && FightCameraLogicComponent.<UpdateLogicComponentDebugProps>g__IsValueModified|432_0(value, obj))
+				if (obj != null && FightCameraLogicComponent.<UpdateLogicComponentDebugProps>g__IsValueModified|434_0(value, obj))
 				{
 					list.Add(new ValueTuple<string, string, string>("FightCameraLogicComponent." + key, this.DebugValueToString(value, 4, 4, 4), this.DebugValueToString(obj, 4, 4, 4)));
 				}
@@ -2035,7 +2012,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021DD RID: 8669 RVA: 0x000C6EC4 File Offset: 0x000C50C4
+	// Token: 0x0600228B RID: 8843 RVA: 0x000CE140 File Offset: 0x000CC340
 	private void ResetModifiedInfos()
 	{
 		this.IsModifiedArmLocation = false;
@@ -2049,7 +2026,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.IsModifiedFov = false;
 	}
 
-	// Token: 0x060021DE RID: 8670 RVA: 0x000C6F10 File Offset: 0x000C5110
+	// Token: 0x0600228C RID: 8844 RVA: 0x000CE18C File Offset: 0x000CC38C
 	private float ArmCenterEdgeClamp(float currentValue, float targetValue, float deltaTime, float speedMin, float speedMax, float edgeMin, float edgeMax, CurveBase curve)
 	{
 		float num = currentValue - targetValue;
@@ -2062,7 +2039,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return MathUtils.Instance.Clamp(currentValue + num2, currentValue, targetValue);
 	}
 
-	// Token: 0x060021DF RID: 8671 RVA: 0x000C6F74 File Offset: 0x000C5174
+	// Token: 0x0600228D RID: 8845 RVA: 0x000CE1F0 File Offset: 0x000CC3F0
 	private double ArmLocationClamp(double currentValue, double centerValue, float deltaTime, float speedMin, float speedMax, float edgeMin, float edgeMax, CurveBase curve)
 	{
 		double num = currentValue - centerValue;
@@ -2075,7 +2052,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return MathUtils.Instance.Clamp(currentValue - (double)num3, centerValue, centerValue + (double)edgeMax);
 	}
 
-	// Token: 0x060021E0 RID: 8672 RVA: 0x000C6FF8 File Offset: 0x000C51F8
+	// Token: 0x0600228E RID: 8846 RVA: 0x000CE274 File Offset: 0x000CC474
 	private double ArmLocationClampReverse(double currentValue, double centerValue, float deltaTime, float speedMin, float speedMax, float edgeMin, float edgeMax, CurveBase curve)
 	{
 		double num = currentValue - centerValue;
@@ -2104,7 +2081,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021E1 RID: 8673 RVA: 0x000C70D0 File Offset: 0x000C52D0
+	// Token: 0x0600228F RID: 8847 RVA: 0x000CE34C File Offset: 0x000CC54C
 	private double ArmLocationClampReverseSpeed(double currentValue, double centerValue, float deltaTime, float speedMin, float speedMax, float reverseSpeed, float edgeMin, float edgeMax, CurveBase curve, float angleRange)
 	{
 		global::Vector inputDirectProxy = this.Character.CharacterActorComponent.InputDirectProxy;
@@ -2151,7 +2128,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021E2 RID: 8674 RVA: 0x000C7260 File Offset: 0x000C5460
+	// Token: 0x06002290 RID: 8848 RVA: 0x000CE4DC File Offset: 0x000CC6DC
 	private double ArmLocationClampReverseRoll(double currentValue, double centerValue, float deltaTime, float speedMin, float speedMax, float reverseSpeed, float edgeMin, float edgeMax, CurveBase curve, float angleRange)
 	{
 		global::Vector tempVector = this.TempVector3;
@@ -2186,7 +2163,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021E3 RID: 8675 RVA: 0x000C73A8 File Offset: 0x000C55A8
+	// Token: 0x06002291 RID: 8849 RVA: 0x000CE624 File Offset: 0x000CC824
 	private double ArmLocationClampAhead(double currentValue, double centerValue, float deltaTime, float speedMin, float speedMax, float edgeMin, float edgeMax, CurveBase curve)
 	{
 		if (this.IsCameraArmCenterRightRollbackEnable())
@@ -2217,7 +2194,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021E4 RID: 8676 RVA: 0x000C74D0 File Offset: 0x000C56D0
+	// Token: 0x06002292 RID: 8850 RVA: 0x000CE74C File Offset: 0x000CC94C
 	private void UpdateArmLocation(float deltaTime)
 	{
 		if (this.IsFollowing)
@@ -2287,7 +2264,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.DesiredCamera.ArmLocation.AdditionEqual(inB);
 	}
 
-	// Token: 0x060021E5 RID: 8677 RVA: 0x000C77FC File Offset: 0x000C59FC
+	// Token: 0x06002293 RID: 8851 RVA: 0x000CEA78 File Offset: 0x000CCC78
 	private void ArmLocationClampX(float deltaTime)
 	{
 		if (this.CameraZoneMode == EFightCameraZoneMode.Soar)
@@ -2298,7 +2275,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.TempVector2.X = this.ArmLocationClamp(this.TempVector2.X, this.TempVector.X, deltaTime, this.ArmCenterForwardSpeedMin, this.ArmCenterForwardSpeedMax, this.CurrentArmCenterForwardEdgeMin, this.CurrentArmCenterForwardEdgeMax, this.ArmCenterForwardCurve);
 	}
 
-	// Token: 0x060021E6 RID: 8678 RVA: 0x000C78AC File Offset: 0x000C5AAC
+	// Token: 0x06002294 RID: 8852 RVA: 0x000CEB28 File Offset: 0x000CCD28
 	private void ArmLocationClampY(float deltaTime)
 	{
 		if (this.CameraZoneMode == EFightCameraZoneMode.Soar)
@@ -2316,10 +2293,15 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 			this.TempVector2.Y = this.ArmLocationClampAhead(this.ArmLocationDelta.Y + this.TempVector.Y, this.TempVector.Y, deltaTime, this.ArmCenterRightSpeedMin, this.ArmCenterRightSpeedMax, this.CurrentArmCenterRightEdgeMin, this.CurrentArmCenterRightEdgeMax, this.ArmCenterRightCurve);
 			return;
 		}
+		if (this.CameraZoneMode == EFightCameraZoneMode.Flower)
+		{
+			this.TempVector2.Y = this.ArmLocationClampFlowerY(deltaTime);
+			return;
+		}
 		this.TempVector2.Y = this.ArmLocationClamp(this.TempVector2.Y, this.TempVector.Y, deltaTime, this.ArmCenterRightSpeedMin, this.ArmCenterRightSpeedMax, this.CurrentArmCenterRightEdgeMin, this.CurrentArmCenterRightEdgeMax, this.ArmCenterRightCurve);
 	}
 
-	// Token: 0x060021E7 RID: 8679 RVA: 0x000C7A2C File Offset: 0x000C5C2C
+	// Token: 0x06002295 RID: 8853 RVA: 0x000CECC4 File Offset: 0x000CCEC4
 	private void ArmLocationClampZ(float deltaTime)
 	{
 		if (this.CameraZoneMode == EFightCameraZoneMode.Soar)
@@ -2327,17 +2309,106 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 			this.TempVector2.Z = this.ArmLocationClampReverse(this.ArmLocationDelta.Z + this.TempVector.Z, this.TempVector.Z, deltaTime, this.ArmCenterUpSpeedMin, this.ArmCenterUpSpeedMax, this.CurrentArmCenterUpEdgeMin, this.CurrentArmCenterUpEdgeMax, this.ArmCenterUpCurve);
 			return;
 		}
+		if (this.CameraZoneMode == EFightCameraZoneMode.Flower)
+		{
+			this.TempVector2.Z = this.ArmLocationClampFlowerZ(deltaTime);
+			return;
+		}
 		this.TempVector2.Z = this.ArmLocationClamp(this.TempVector2.Z, this.TempVector.Z, deltaTime, this.ArmCenterUpSpeedMin, this.ArmCenterUpSpeedMax, this.CurrentArmCenterUpEdgeMin, this.CurrentArmCenterUpEdgeMax, this.ArmCenterUpCurve);
 	}
 
-	// Token: 0x060021E8 RID: 8680 RVA: 0x000C7ADC File Offset: 0x000C5CDC
+	// Token: 0x06002296 RID: 8854 RVA: 0x000CED90 File Offset: 0x000CCF90
+	private double ArmLocationClampFlowerY(float deltaTime)
+	{
+		double y = this.TempVector.Y;
+		float num = Math.Min(0f, this.CurrentArmCenterRightEdgeMin);
+		float num2 = Math.Max(0f, this.CurrentArmCenterRightEdgeMax);
+		float num3 = Math.Max(-num, num2);
+		if (!double.IsFinite((double)num3) || (double)num3 <= 0.0001)
+		{
+			return y;
+		}
+		double num4 = double.IsFinite(this.ArmLocationDelta.Y) ? MathUtils.Instance.Clamp(this.ArmLocationDelta.Y, (double)num, (double)num2) : 0.0;
+		if (!float.IsFinite(deltaTime) || deltaTime <= 0f)
+		{
+			return y + num4;
+		}
+		this.GetCameraTargetInput(this.TempVector3);
+		float num5 = MathUtils.Instance.IsNearlyZero(this.TempVector3.Y, new double?(0.0001)) ? 0f : ((this.TempVector3.Y > 0.0) ? num2 : num);
+		if (Math.Abs((double)num5 - num4) <= 0.01)
+		{
+			return y + (double)num5;
+		}
+		float num6 = this.ArmCenterEdgeClamp((float)num4, num5, deltaTime, this.ArmCenterRightSpeedMin, this.ArmCenterRightSpeedMax, -num3, num3, this.ArmCenterRightCurve);
+		if ((double)Math.Abs(num5 - num6) <= 0.01)
+		{
+			num6 = num5;
+		}
+		return y + (double)MathUtils.Instance.Clamp(num6, num, num2);
+	}
+
+	// Token: 0x06002297 RID: 8855 RVA: 0x000CEEF8 File Offset: 0x000CD0F8
+	private double ArmLocationClampFlowerZ(float deltaTime)
+	{
+		double z = this.TempVector.Z;
+		float num = Math.Min(0f, this.CurrentArmCenterUpEdgeMin);
+		float num2 = Math.Max(0f, this.CurrentArmCenterUpEdgeMax);
+		float num3 = Math.Max(-num, num2);
+		if (!double.IsFinite((double)num3) || (double)num3 <= 0.0001)
+		{
+			return z;
+		}
+		double num4 = double.IsFinite(this.ArmLocationDelta.Z) ? MathUtils.Instance.Clamp(this.ArmLocationDelta.Z, (double)num, (double)num2) : 0.0;
+		if (!float.IsFinite(deltaTime) || deltaTime <= 0f)
+		{
+			return z + num4;
+		}
+		EntityHandle characterEntityHandle = this.CharacterEntityHandle;
+		CharacterFlowerFlyingComponent characterFlowerFlyingComponent;
+		if (characterEntityHandle == null)
+		{
+			characterFlowerFlyingComponent = null;
+		}
+		else
+		{
+			WorldEntity entity = characterEntityHandle.Entity;
+			characterFlowerFlyingComponent = ((entity != null) ? entity.GetComponent<CharacterFlowerFlyingComponent>() : null);
+		}
+		CharacterFlowerFlyingComponent characterFlowerFlyingComponent2 = characterFlowerFlyingComponent;
+		UKuroCustomMovementFlowerFlying ukuroCustomMovementFlowerFlying = (characterFlowerFlyingComponent2 != null && characterFlowerFlyingComponent2.Valid) ? characterFlowerFlyingComponent2.FlowerFlyingExtension : null;
+		float num5 = (ukuroCustomMovementFlowerFlying != null) ? ukuroCustomMovementFlowerFlying.GetCurrentPitch() : 0f;
+		double num6 = float.IsFinite(num5) ? Math.Sin((double)(num5 * 0.017453292f)) : 0.0;
+		double num7 = num6 * (double)((num6 >= 0.0) ? num2 : (-(double)num));
+		double value = num7 - num4;
+		if (Math.Abs(value) <= 0.01)
+		{
+			return z + num7;
+		}
+		float key = MathUtils.Instance.Clamp((float)(Math.Abs(value) / (double)num3), 0f, 1f);
+		CurveBase armCenterUpCurve = this.ArmCenterUpCurve;
+		float alpha = (armCenterUpCurve != null) ? armCenterUpCurve.GetCurrentValue(key) : 0f;
+		float num8 = MathUtils.Instance.Lerp(this.ArmCenterUpSpeedMin, this.ArmCenterUpSpeedMax, alpha);
+		if (!float.IsFinite(num8) || num8 <= 0f)
+		{
+			return z + num4;
+		}
+		double num9 = Math.Min((double)num8 * (double)deltaTime, Math.Abs(value));
+		double num10 = num4 + (double)Math.Sign(value) * num9;
+		if (Math.Abs(num7 - num10) <= 0.01)
+		{
+			num10 = num7;
+		}
+		return z + MathUtils.Instance.Clamp(num10, (double)num, (double)num2);
+	}
+
+	// Token: 0x06002298 RID: 8856 RVA: 0x000CF0FC File Offset: 0x000CD2FC
 	private float GetFloatUpHeight()
 	{
 		this.CurrentFloatUpHeightRatio = (this.Fading ? this.CurrentFloatUpHeightRatio : MathUtils.Instance.RangeClamp(this.TempArmLength, this.CameraOffsetFloatUpArmLengthMin, this.CameraOffsetFloatUpArmLengthMax, 0f, 1f));
 		return MathUtils.Instance.Lerp(this.CurrentCamera.CameraOffsetFloatUpMin, this.CurrentCamera.CameraOffsetFloatUpMax, this.CurrentFloatUpHeightRatio) + MathUtils.Instance.RangeClamp(this.TempArmLength, this.FloatUpArmLengthMax, this.FloatUpArmLengthMin, 0f, this.FloatUpHeight);
 	}
 
-	// Token: 0x060021E9 RID: 8681 RVA: 0x000C7B74 File Offset: 0x000C5D74
+	// Token: 0x06002299 RID: 8857 RVA: 0x000CF194 File Offset: 0x000CD394
 	private void PreUpdateFading(float deltaTime)
 	{
 		if (!this.Fading)
@@ -2363,7 +2434,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.CurrentCamera.MaxArmLength = MathUtils.Instance.Lerp(this.LastCamera.MaxArmLength, this.DesiredCamera.MaxArmLength, currentValue);
 	}
 
-	// Token: 0x060021EA RID: 8682 RVA: 0x000C7CB4 File Offset: 0x000C5EB4
+	// Token: 0x0600229A RID: 8858 RVA: 0x000CF2D4 File Offset: 0x000CD4D4
 	private void UpdateFading()
 	{
 		if (!this.Fading)
@@ -2441,7 +2512,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.CurrentCamera.Fov = this.DesiredCamera.Fov;
 	}
 
-	// Token: 0x060021EB RID: 8683 RVA: 0x000C82AC File Offset: 0x000C64AC
+	// Token: 0x0600229B RID: 8859 RVA: 0x000CF8CC File Offset: 0x000CDACC
 	private void UpdateActorTransform(float deltaTime)
 	{
 		if (!this.IsCharacterValid)
@@ -2523,7 +2594,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.FinalCameraDistance = (float)this.TempVector.Size();
 	}
 
-	// Token: 0x060021EC RID: 8684 RVA: 0x000C8644 File Offset: 0x000C6844
+	// Token: 0x0600229C RID: 8860 RVA: 0x000CFC68 File Offset: 0x000CDE68
 	private void UpdateArmLength()
 	{
 		if (this.CameraGuideController.IsCameraSpecificArmLengthEnabled)
@@ -2534,7 +2605,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.TempArmLength = this.GetRawArmLength();
 	}
 
-	// Token: 0x060021ED RID: 8685 RVA: 0x000C8674 File Offset: 0x000C6874
+	// Token: 0x0600229D RID: 8861 RVA: 0x000CFC98 File Offset: 0x000CDE98
 	public float GetRawArmLength()
 	{
 		float num;
@@ -2551,7 +2622,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return num + this.CurrentCamera.CharAddArmLength;
 	}
 
-	// Token: 0x060021EE RID: 8686 RVA: 0x000C86E4 File Offset: 0x000C68E4
+	// Token: 0x0600229E RID: 8862 RVA: 0x000CFD08 File Offset: 0x000CDF08
 	private void UpdatePitch(float deltaTime)
 	{
 		this.CameraRotationZone.UpdatePitchZone(deltaTime);
@@ -2590,7 +2661,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		instance.AddZnInGravityForActor((character != null) ? character.CharacterActorComponent : null, this.DesiredCamera.ArmLocation, (double)num3);
 	}
 
-	// Token: 0x060021EF RID: 8687 RVA: 0x000C88C0 File Offset: 0x000C6AC0
+	// Token: 0x0600229F RID: 8863 RVA: 0x000CFEE4 File Offset: 0x000CE0E4
 	private void UpdateYaw(float deltaTime)
 	{
 		this.CameraRotationZone.UpdateYawZone(deltaTime);
@@ -2628,13 +2699,13 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		CameraUtility.SetYawInGravity(this.DesiredCamera.ArmRotation, (double)num3, this.DesiredCamera.ArmRotation);
 	}
 
-	// Token: 0x060021F0 RID: 8688 RVA: 0x000C8A7C File Offset: 0x000C6C7C
+	// Token: 0x060022A0 RID: 8864 RVA: 0x000D00A0 File Offset: 0x000CE2A0
 	private bool IsYawLimitChanged(float yawLimitMin, float yawLimitMax)
 	{
 		return !MathUtils.Instance.IsNearlyEqual((double)yawLimitMin, -180.0, null) || !MathUtils.Instance.IsNearlyEqual((double)yawLimitMax, 180.0, null);
 	}
 
-	// Token: 0x060021F1 RID: 8689 RVA: 0x000C8ACC File Offset: 0x000C6CCC
+	// Token: 0x060022A1 RID: 8865 RVA: 0x000D00F0 File Offset: 0x000CE2F0
 	private void UpdateRoll(float deltaTime)
 	{
 		if (this.ShouldClearRoll)
@@ -2657,13 +2728,13 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		CameraUtility.SetRollInGravity(this.DesiredCamera.ArmRotation, (double)num, this.DesiredCamera.ArmRotation);
 	}
 
-	// Token: 0x060021F2 RID: 8690 RVA: 0x000C8BB9 File Offset: 0x000C6DB9
+	// Token: 0x060022A2 RID: 8866 RVA: 0x000D01DD File Offset: 0x000CE3DD
 	[Conditional("DEBUG")]
 	private void DrawCameraDebugInfo()
 	{
 	}
 
-	// Token: 0x060021F3 RID: 8691 RVA: 0x000C8BBC File Offset: 0x000C6DBC
+	// Token: 0x060022A3 RID: 8867 RVA: 0x000D01E0 File Offset: 0x000CE3E0
 	private void UpdateInput(float second)
 	{
 		this.GetCameraTargetMoveVector(this.PlayerMoveVector);
@@ -2691,19 +2762,19 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.CameraArmCenterRightRollbackTime = 0f;
 	}
 
-	// Token: 0x060021F4 RID: 8692 RVA: 0x000C8CA2 File Offset: 0x000C6EA2
+	// Token: 0x060022A4 RID: 8868 RVA: 0x000D02C6 File Offset: 0x000CE4C6
 	private bool IsCameraArmCenterRightInputEnable()
 	{
 		return MathUtils.Instance.IsNearlyZero((double)this.ArmCenterRightInputEnableTime, new double?(0.0001)) || this.CameraArmCenterRightInputTime > this.ArmCenterRightInputEnableTime;
 	}
 
-	// Token: 0x060021F5 RID: 8693 RVA: 0x000C8CD8 File Offset: 0x000C6ED8
+	// Token: 0x060022A5 RID: 8869 RVA: 0x000D02FC File Offset: 0x000CE4FC
 	private bool IsCameraArmCenterRightRollbackEnable()
 	{
 		return MathUtils.Instance.IsNearlyZero((double)this.CameraArmCenterRightInputTime, new double?(0.0001)) && (MathUtils.Instance.IsNearlyZero((double)this.ArmCenterRightRollbackEnableTime, new double?(0.0001)) || this.CameraArmCenterRightRollbackTime > this.ArmCenterRightRollbackEnableTime);
 	}
 
-	// Token: 0x060021F6 RID: 8694 RVA: 0x000C8D3C File Offset: 0x000C6F3C
+	// Token: 0x060022A6 RID: 8870 RVA: 0x000D0360 File Offset: 0x000CE560
 	private void UpdateTarget()
 	{
 		if (!this.IsCharacterValid)
@@ -2790,7 +2861,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060021F7 RID: 8695 RVA: 0x000C8F7C File Offset: 0x000C717C
+	// Token: 0x060022A7 RID: 8871 RVA: 0x000D05A0 File Offset: 0x000CE7A0
 	private bool CanCurrentShowTargetBeClean(CharacterLockOnComponent lockOnComponent, bool isLockSight)
 	{
 		if (!this.TargetEntity.Valid || !this.TargetEntity.Entity.Active)
@@ -2851,7 +2922,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return false;
 	}
 
-	// Token: 0x060021F8 RID: 8696 RVA: 0x000C9128 File Offset: 0x000C7328
+	// Token: 0x060022A8 RID: 8872 RVA: 0x000D074C File Offset: 0x000CE94C
 	private void UpdateCameraQuaternion()
 	{
 		global::Vector vector;
@@ -2885,13 +2956,13 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.CameraQuat.Inverse(this.CameraQuatInverse);
 	}
 
-	// Token: 0x060021F9 RID: 8697 RVA: 0x000C924E File Offset: 0x000C744E
+	// Token: 0x060022A9 RID: 8873 RVA: 0x000D0872 File Offset: 0x000CEA72
 	public void SetInputEnable(object handler, bool bVisible)
 	{
 		this.CameraInputController.SetInputEnable(handler, bVisible);
 	}
 
-	// Token: 0x060021FA RID: 8698 RVA: 0x000C925D File Offset: 0x000C745D
+	// Token: 0x060022AA RID: 8874 RVA: 0x000D0881 File Offset: 0x000CEA81
 	private void RefreshPlayerRotator()
 	{
 		if (!this.UpdateVehicleRotator())
@@ -2901,7 +2972,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		CameraUtility.GetRotatorInGravity(this.PlayerRotator, this.PlayerRotatorInGravity);
 	}
 
-	// Token: 0x060021FB RID: 8699 RVA: 0x000C9294 File Offset: 0x000C7494
+	// Token: 0x060022AB RID: 8875 RVA: 0x000D08B8 File Offset: 0x000CEAB8
 	protected void RefreshPlayerLocation(float deltaTime)
 	{
 		if (this.UpdateOverrideLocation())
@@ -2932,7 +3003,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.CameraCollision.TraceCheckPlayerLocation(component.ActorLocationProxy, this.PlayerLocation, this.PlayerLocation);
 	}
 
-	// Token: 0x060021FC RID: 8700 RVA: 0x000C9334 File Offset: 0x000C7534
+	// Token: 0x060022AC RID: 8876 RVA: 0x000D0958 File Offset: 0x000CEB58
 	private bool UpdateOverrideLocation()
 	{
 		if (!this.HasOverrideLocation)
@@ -2943,25 +3014,25 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return true;
 	}
 
-	// Token: 0x060021FD RID: 8701 RVA: 0x000C9352 File Offset: 0x000C7552
+	// Token: 0x060022AD RID: 8877 RVA: 0x000D0976 File Offset: 0x000CEB76
 	private void RefreshPlayerLocationInGravity()
 	{
 		CameraUtility.GetVectorInGravity(this.PlayerLocation, this.PlayerLocationInGravity);
 	}
 
-	// Token: 0x060021FE RID: 8702 RVA: 0x000C9366 File Offset: 0x000C7566
+	// Token: 0x060022AE RID: 8878 RVA: 0x000D098A File Offset: 0x000CEB8A
 	private void BufferPlayerLocation(float second)
 	{
 		this.CameraTransformBuffer.BufferPlayerLocation(second, this.PlayerLocation);
 	}
 
-	// Token: 0x060021FF RID: 8703 RVA: 0x000C937A File Offset: 0x000C757A
+	// Token: 0x060022AF RID: 8879 RVA: 0x000D099E File Offset: 0x000CEB9E
 	private void RefreshPlayerVelocity()
 	{
 		this.GetCameraTargetVelocity(this.PlayerVelocity);
 	}
 
-	// Token: 0x06002200 RID: 8704 RVA: 0x000C9388 File Offset: 0x000C7588
+	// Token: 0x060022B0 RID: 8880 RVA: 0x000D09AC File Offset: 0x000CEBAC
 	private void RefreshFov(float deltaTime)
 	{
 		this.LastFrameFov = this.CameraActor.CameraComponent.FieldOfView;
@@ -2999,13 +3070,13 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.DesiredCamera.EnableDynamicFov = this.CurrentCamera.EnableDynamicFov;
 	}
 
-	// Token: 0x06002201 RID: 8705 RVA: 0x000C95F8 File Offset: 0x000C77F8
+	// Token: 0x060022B1 RID: 8881 RVA: 0x000D0C1C File Offset: 0x000CEE1C
 	private bool CanUseDynamicFov()
 	{
 		return !this.CameraGuideController.ForceUsingCameraGuideParameters;
 	}
 
-	// Token: 0x06002202 RID: 8706 RVA: 0x000C9608 File Offset: 0x000C7808
+	// Token: 0x060022B2 RID: 8882 RVA: 0x000D0C2C File Offset: 0x000CEE2C
 	public void GetPlayerLocation(global::Vector outLocation)
 	{
 		if (FNameUtil.IsEmpty(new FName?(this.CameraArmLocationSocketName)))
@@ -3035,7 +3106,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002203 RID: 8707 RVA: 0x000C96D4 File Offset: 0x000C78D4
+	// Token: 0x060022B3 RID: 8883 RVA: 0x000D0CF8 File Offset: 0x000CEEF8
 	public void GetCameraTargetRotator(Rotator outRotator)
 	{
 		CharacterDriveVehicleComponent characterDriveVehicleComponent = this.CharacterDriveVehicleComponent;
@@ -3051,7 +3122,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		outRotator.DeepCopy(this.PlayerRotator);
 	}
 
-	// Token: 0x06002204 RID: 8708 RVA: 0x000C9728 File Offset: 0x000C7928
+	// Token: 0x060022B4 RID: 8884 RVA: 0x000D0D4C File Offset: 0x000CEF4C
 	public void GetCameraTargetInput(global::Vector outVector)
 	{
 		if (this.EnableFocusOnVehicle)
@@ -3066,7 +3137,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		outVector.DeepCopy(this.Character.CharacterActorComponent.InputDirectProxy);
 	}
 
-	// Token: 0x06002205 RID: 8709 RVA: 0x000C9779 File Offset: 0x000C7979
+	// Token: 0x060022B5 RID: 8885 RVA: 0x000D0D9D File Offset: 0x000CEF9D
 	public void GetCameraTargetMoveVector(global::Vector outVector)
 	{
 		if (this.EnableFocusOnVehicle)
@@ -3081,7 +3152,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.CharacterInputComponent.GetMoveVector(outVector);
 	}
 
-	// Token: 0x06002206 RID: 8710 RVA: 0x000C97B0 File Offset: 0x000C79B0
+	// Token: 0x060022B6 RID: 8886 RVA: 0x000D0DD4 File Offset: 0x000CEFD4
 	public void GetCameraTargetVelocity(global::Vector outVector)
 	{
 		if (this.EnableFocusOnVehicle)
@@ -3096,7 +3167,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		outVector.DeepCopy(this.Character.CharacterActorComponent.ActorVelocityProxy);
 	}
 
-	// Token: 0x06002207 RID: 8711 RVA: 0x000C9804 File Offset: 0x000C7A04
+	// Token: 0x060022B7 RID: 8887 RVA: 0x000D0E28 File Offset: 0x000CF028
 	public void GetCameraTargetForward(global::Vector outVector)
 	{
 		if (this.EnableFocusOnVehicle)
@@ -3111,7 +3182,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		outVector.DeepCopy(this.Character.CharacterActorComponent.ActorForwardProxy);
 	}
 
-	// Token: 0x06002208 RID: 8712 RVA: 0x000C9858 File Offset: 0x000C7A58
+	// Token: 0x060022B8 RID: 8888 RVA: 0x000D0E7C File Offset: 0x000CF07C
 	public bool CheckPositionInScreen(global::Vector location, float minX, float maxX, float minY, float maxY)
 	{
 		APlayerController characterController = Global.CharacterController;
@@ -3120,7 +3191,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return UGameplayStatics.D_ProjectWorldToScreen(characterController, fvectorDouble, ref screenPosition, false) && this.GetScreenPositionIsInRange(screenPosition, minX, maxX, minY, maxY);
 	}
 
-	// Token: 0x06002209 RID: 8713 RVA: 0x000C9898 File Offset: 0x000C7A98
+	// Token: 0x060022B9 RID: 8889 RVA: 0x000D0EBC File Offset: 0x000CF0BC
 	public bool GetScreenPositionIsInRange(FVector2D screenPosition, float minX, float maxX, float minY, float maxY)
 	{
 		Global.CharacterController.GetViewportSize(ref this.ScreenSizeRefX, ref this.ScreenSizeRefY);
@@ -3129,7 +3200,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return screenPosition.X > (float)screenSizeRefX * minX && screenPosition.X < (float)screenSizeRefX * maxX && screenPosition.Y > (float)screenSizeRefY * minY && screenPosition.Y < (float)screenSizeRefY * maxY;
 	}
 
-	// Token: 0x0600220A RID: 8714 RVA: 0x000C9900 File Offset: 0x000C7B00
+	// Token: 0x060022BA RID: 8890 RVA: 0x000D0F24 File Offset: 0x000CF124
 	public float AdjustPitch(global::Vector baseOffset)
 	{
 		CharacterActorComponent characterActorComponent = this.Character.CharacterActorComponent;
@@ -3163,7 +3234,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return (float)num2;
 	}
 
-	// Token: 0x0600220B RID: 8715 RVA: 0x000C9A5D File Offset: 0x000C7C5D
+	// Token: 0x060022BB RID: 8891 RVA: 0x000D1081 File Offset: 0x000CF281
 	public bool ContainsTag(int tagId, bool checkFollowShooter = false)
 	{
 		if (this.IsCharacterValid)
@@ -3177,7 +3248,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return false;
 	}
 
-	// Token: 0x0600220C RID: 8716 RVA: 0x000C9A7F File Offset: 0x000C7C7F
+	// Token: 0x060022BC RID: 8892 RVA: 0x000D10A3 File Offset: 0x000CF2A3
 	public bool ContainsAnyTag(IList<int> tagIds, bool checkFollowShooter = false)
 	{
 		if (this.IsCharacterValid)
@@ -3191,27 +3262,27 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return false;
 	}
 
-	// Token: 0x0600220D RID: 8717 RVA: 0x000C9AA1 File Offset: 0x000C7CA1
+	// Token: 0x060022BD RID: 8893 RVA: 0x000D10C5 File Offset: 0x000CF2C5
 	public bool GetUsingGoBattle()
 	{
 		return this.IsCharacterValid && this.CharacterEntityHandle.Entity.GetComponent<RoleTeamComponent>().GoBattleSkill;
 	}
 
-	// Token: 0x0600220E RID: 8718 RVA: 0x000C9AC2 File Offset: 0x000C7CC2
+	// Token: 0x060022BE RID: 8894 RVA: 0x000D10E6 File Offset: 0x000CF2E6
 	public bool TargetContainsTag(int tagId)
 	{
 		BaseTagComponent targetTagComponentInternal = this.TargetTagComponentInternal;
 		return targetTagComponentInternal != null && targetTagComponentInternal.HasTag(tagId);
 	}
 
-	// Token: 0x0600220F RID: 8719 RVA: 0x000C9AD6 File Offset: 0x000C7CD6
+	// Token: 0x060022BF RID: 8895 RVA: 0x000D10FA File Offset: 0x000CF2FA
 	public bool AccompanyContainsTag(int tagId)
 	{
 		BaseTagComponent followShooterTagComponentInternal = this.FollowShooterTagComponentInternal;
 		return followShooterTagComponentInternal != null && followShooterTagComponentInternal.HasTag(tagId);
 	}
 
-	// Token: 0x06002210 RID: 8720 RVA: 0x000C9AEC File Offset: 0x000C7CEC
+	// Token: 0x060022C0 RID: 8896 RVA: 0x000D1110 File Offset: 0x000CF310
 	public void AddPlayerTag(int tagId)
 	{
 		int playerId = CreatureModel.Instance.GetPlayerId();
@@ -3226,7 +3297,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		FormationDataController.Instance.AddPlayerTag(playerId, new int?(tagId));
 	}
 
-	// Token: 0x06002211 RID: 8721 RVA: 0x000C9B34 File Offset: 0x000C7D34
+	// Token: 0x060022C1 RID: 8897 RVA: 0x000D1158 File Offset: 0x000CF358
 	public void RemovePlayerTag(int tagId)
 	{
 		int playerId = CreatureModel.Instance.GetPlayerId();
@@ -3241,7 +3312,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		FormationDataController.Instance.RemovePlayerTag(playerId, new int?(tagId));
 	}
 
-	// Token: 0x06002212 RID: 8722 RVA: 0x000C9B7C File Offset: 0x000C7D7C
+	// Token: 0x060022C2 RID: 8898 RVA: 0x000D11A0 File Offset: 0x000CF3A0
 	public void SetRotationInternal(FRotator rotation)
 	{
 		this.CameraRotation.DeepCopy(rotation);
@@ -3265,7 +3336,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002213 RID: 8723 RVA: 0x000C9BF4 File Offset: 0x000C7DF4
+	// Token: 0x060022C3 RID: 8899 RVA: 0x000D1218 File Offset: 0x000CF418
 	public void SetRotationInternal(IRotator rotation)
 	{
 		this.CameraRotation.DeepCopy(rotation);
@@ -3289,13 +3360,25 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002214 RID: 8724 RVA: 0x000C9C6B File Offset: 0x000C7E6B
+	// Token: 0x060022C4 RID: 8900 RVA: 0x000D128F File Offset: 0x000CF48F
 	public void SetIsDitherEffectEnable(bool isEnable)
 	{
 		this.IsDitherEffectEnable = isEnable;
 	}
 
-	// Token: 0x06002215 RID: 8725 RVA: 0x000C9C74 File Offset: 0x000C7E74
+	// Token: 0x060022C5 RID: 8901 RVA: 0x000D1298 File Offset: 0x000CF498
+	public void AddDitherDisableReason(string reason)
+	{
+		this.DitherDisableReasons.Add(reason);
+	}
+
+	// Token: 0x060022C6 RID: 8902 RVA: 0x000D12A7 File Offset: 0x000CF4A7
+	public void RemoveDitherDisableReason(string reason)
+	{
+		this.DitherDisableReasons.Remove(reason);
+	}
+
+	// Token: 0x060022C7 RID: 8903 RVA: 0x000D12B8 File Offset: 0x000CF4B8
 	private void UpdateCharacterDitherEffect()
 	{
 		if (!this.IsCharacterValid)
@@ -3318,7 +3401,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		{
 			return;
 		}
-		if (!this.IsDitherEffectEnable)
+		if (!this.IsDitherEffectEnable || this.DitherDisableReasons.Count > 0)
 		{
 			return;
 		}
@@ -3368,7 +3451,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.Character.SetDitherEffect(dither, ECharacterDitherType.Fight);
 	}
 
-	// Token: 0x06002216 RID: 8726 RVA: 0x000C9E44 File Offset: 0x000C8044
+	// Token: 0x060022C8 RID: 8904 RVA: 0x000D1498 File Offset: 0x000CF698
 	private void UpdatePostProcessSettings()
 	{
 		if (this.IsEnablePanning)
@@ -3382,7 +3465,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002217 RID: 8727 RVA: 0x000C9E94 File Offset: 0x000C8094
+	// Token: 0x060022C9 RID: 8905 RVA: 0x000D14E8 File Offset: 0x000CF6E8
 	private void UpdateLandscapeLodScaleFactor()
 	{
 		if ((this.LastFrameFov < 80f && this.CurrentCamera.Fov < 80f) || (this.LastFrameFov >= 80f && this.CurrentCamera.Fov >= 80f))
@@ -3392,38 +3475,38 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		ALandscapeProxy.SetKuroLandscapeFOVFactorByCamera((this.CurrentCamera.Fov >= 80f) ? 0f : this.DefaultLandscapeLodScaleFactor);
 	}
 
-	// Token: 0x06002218 RID: 8728 RVA: 0x000C9F04 File Offset: 0x000C8104
+	// Token: 0x060022CA RID: 8906 RVA: 0x000D1558 File Offset: 0x000CF758
 	[NullableContext(2)]
 	public void SetCameraGravityMode(ECameraGravityMode cameraGravityMode, global::Vector gravityDirect = null)
 	{
 		this.CameraGravityController.SetCameraGravityMode(cameraGravityMode, gravityDirect ?? global::Vector.DownVectorProxy);
 	}
 
-	// Token: 0x06002219 RID: 8729 RVA: 0x000C9F1C File Offset: 0x000C811C
+	// Token: 0x060022CB RID: 8907 RVA: 0x000D1570 File Offset: 0x000CF770
 	public void SetCameraGravityModeByUeConfig(SCamera_ChangeGravity config)
 	{
 		this.CameraGravityController.SetCameraGravityModeByUeConfig(config);
 	}
 
-	// Token: 0x0600221A RID: 8730 RVA: 0x000C9F2A File Offset: 0x000C812A
+	// Token: 0x060022CC RID: 8908 RVA: 0x000D157E File Offset: 0x000CF77E
 	public void SetCameraGravityModeByConfig(CameraGravityConfig config)
 	{
 		this.CameraGravityController.SetCameraGravityModeByConfig(config);
 	}
 
-	// Token: 0x0600221B RID: 8731 RVA: 0x000C9F38 File Offset: 0x000C8138
+	// Token: 0x060022CD RID: 8909 RVA: 0x000D158C File Offset: 0x000CF78C
 	public bool IsInNormalGravityMode()
 	{
 		return this.CameraGravityController.IsInNormalGravityMode();
 	}
 
-	// Token: 0x0600221C RID: 8732 RVA: 0x000C9F45 File Offset: 0x000C8145
+	// Token: 0x060022CE RID: 8910 RVA: 0x000D1599 File Offset: 0x000CF799
 	private void UpdateCharacterGravity()
 	{
 		this.CameraGravityController.UpdateCharacterGravity();
 	}
 
-	// Token: 0x0600221D RID: 8733 RVA: 0x000C9F54 File Offset: 0x000C8154
+	// Token: 0x060022CF RID: 8911 RVA: 0x000D15A8 File Offset: 0x000CF7A8
 	[NullableContext(2)]
 	private void OnTeleportComplete(TeleportContext teleportContext)
 	{
@@ -3433,7 +3516,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x0600221E RID: 8734 RVA: 0x000C9F80 File Offset: 0x000C8180
+	// Token: 0x060022D0 RID: 8912 RVA: 0x000D15D4 File Offset: 0x000CF7D4
 	private void OnWorldDone()
 	{
 		if (!SeamlessTravelModel.Instance.IsSeamlessTravel)
@@ -3443,7 +3526,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x0600221F RID: 8735 RVA: 0x000C9F9C File Offset: 0x000C819C
+	// Token: 0x060022D1 RID: 8913 RVA: 0x000D15F0 File Offset: 0x000CF7F0
 	private void OnSequenceCameraStatus(bool status, string cameraName)
 	{
 		CameraModelInstance cameraModel = this.CameraModel;
@@ -3458,7 +3541,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.ResetFightCameraLogic(false, false);
 	}
 
-	// Token: 0x06002220 RID: 8736 RVA: 0x000C9FC8 File Offset: 0x000C81C8
+	// Token: 0x060022D2 RID: 8914 RVA: 0x000D161C File Offset: 0x000CF81C
 	public void ResetFightCameraLogic(bool bRestoreAdjust = true, bool bTeleport = false)
 	{
 		if (bTeleport)
@@ -3489,43 +3572,43 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.ResetBufferLocation();
 	}
 
-	// Token: 0x06002221 RID: 8737 RVA: 0x000CA100 File Offset: 0x000C8300
+	// Token: 0x060022D3 RID: 8915 RVA: 0x000D1754 File Offset: 0x000CF954
 	public void PlaySettlementCamera(EDynamicSettlementType settlementType = EDynamicSettlementType.Battle)
 	{
 		this.SettlementCamera.PlaySettlementCamera(settlementType);
 	}
 
-	// Token: 0x06002222 RID: 8738 RVA: 0x000CA10E File Offset: 0x000C830E
+	// Token: 0x060022D4 RID: 8916 RVA: 0x000D1762 File Offset: 0x000CF962
 	public void PlayCameraRotator(global::Vector lookAt1, global::Vector lookAt2, Rotator addRotator, float time)
 	{
 		this.CameraRotatorController.PlayCameraRotator(lookAt1, lookAt2, addRotator, time, true, 0f);
 	}
 
-	// Token: 0x06002223 RID: 8739 RVA: 0x000CA128 File Offset: 0x000C8328
+	// Token: 0x060022D5 RID: 8917 RVA: 0x000D177C File Offset: 0x000CF97C
 	public void PlayCameraRotatorWithCurve(global::Vector lookAt1, global::Vector lookAt2, Rotator addRotator, float time, [Nullable(2)] CurveBase curve = null, bool canBreakByInput = true, float stayTime = 0f, [Nullable(2)] Action callback = null)
 	{
 		this.CameraRotatorController.PlayCameraRotatorWithCurve(lookAt1, lookAt2, addRotator, time, (float)this.CameraRotateToTargetMinAlpha, (float)this.CameraRotateToTargetMaxAlpha, curve ?? this.CameraRotateToTargetCurve, canBreakByInput, stayTime, callback);
 	}
 
-	// Token: 0x06002224 RID: 8740 RVA: 0x000CA165 File Offset: 0x000C8365
+	// Token: 0x060022D6 RID: 8918 RVA: 0x000D17B9 File Offset: 0x000CF9B9
 	public void PlayCameraRotatorWithCurveSustaining(global::Vector lookAtPosition, float time, float stayTime, bool canBreakByInput, [Nullable(2)] Action callback = null)
 	{
 		this.CameraRotatorController.BeginCameraSustainingRotator(lookAtPosition, time, stayTime, this.CameraRotateToTargetMinAlpha, this.CameraRotateToTargetMaxAlpha, canBreakByInput, callback);
 	}
 
-	// Token: 0x06002225 RID: 8741 RVA: 0x000CA185 File Offset: 0x000C8385
+	// Token: 0x060022D7 RID: 8919 RVA: 0x000D17D9 File Offset: 0x000CF9D9
 	public void PlayCameraEulerRotator(Rotator desRotator, float time)
 	{
 		this.CameraRotatorController.PlayCameraEulerRotator(desRotator, time, true, 0f);
 	}
 
-	// Token: 0x06002226 RID: 8742 RVA: 0x000CA19A File Offset: 0x000C839A
+	// Token: 0x060022D8 RID: 8920 RVA: 0x000D17EE File Offset: 0x000CF9EE
 	public void PlayCameraEulerRotatorWithCurve(Rotator desRotator, float time, [Nullable(2)] CurveBase curve = null, bool canBreakByInput = true, float stayTime = 0f)
 	{
 		this.CameraRotatorController.PlayCameraEulerRotatorWithCurve(desRotator, time, (float)this.CameraRotateToTargetMinAlpha, (float)this.CameraRotateToTargetMaxAlpha, curve ?? this.CameraRotateToTargetCurve, canBreakByInput, stayTime);
 	}
 
-	// Token: 0x06002227 RID: 8743 RVA: 0x000CA1C8 File Offset: 0x000C83C8
+	// Token: 0x060022D9 RID: 8921 RVA: 0x000D181C File Offset: 0x000CFA1C
 	public void ResetFocus()
 	{
 		CharacterActorComponent characterActorComponent = this.Character.CharacterActorComponent;
@@ -3534,33 +3617,33 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.PlayCameraRotatorWithCurve(characterActorComponent.ActorLocationProxy, this.ResetTargetLocation, this.ResetAddRotator, 0.2f, null, true, 0f, null);
 	}
 
-	// Token: 0x06002228 RID: 8744 RVA: 0x000CA233 File Offset: 0x000C8433
+	// Token: 0x060022DA RID: 8922 RVA: 0x000D1887 File Offset: 0x000CFA87
 	public void ResetCameraInput()
 	{
 		this.CameraInputController.ResetCameraInput();
 	}
 
-	// Token: 0x06002229 RID: 8745 RVA: 0x000CA240 File Offset: 0x000C8440
+	// Token: 0x060022DB RID: 8923 RVA: 0x000D1894 File Offset: 0x000CFA94
 	public ACameraActor EnterSpecialGameplayCamera(int gameplayId)
 	{
 		this.CameraSpecialGameplayController.EnterSpecialGameplayController(gameplayId, 0f, UnrealEngine.EViewTargetBlendFunction.VTBlend_Linear, this.Character, null, null);
 		return this.CameraSpecialGameplayController.CameraActor;
 	}
 
-	// Token: 0x0600222A RID: 8746 RVA: 0x000CA27A File Offset: 0x000C847A
+	// Token: 0x060022DC RID: 8924 RVA: 0x000D18CE File Offset: 0x000CFACE
 	public void ExitSpecialGameplayCamera()
 	{
 		this.CameraSpecialGameplayController.ExitSpecialGameplayController(0f);
 	}
 
-	// Token: 0x0600222B RID: 8747 RVA: 0x000CA28C File Offset: 0x000C848C
+	// Token: 0x060022DD RID: 8925 RVA: 0x000D18E0 File Offset: 0x000CFAE0
 	public ACameraActor EnterPhotoCamera(PhotoCameraType defaultMode, [Nullable(2)] PhotoCameraLensState pendingLens = null)
 	{
 		this.CameraSpecialGameplayController.EnterSpecialGameplayController(4, 0f, UnrealEngine.EViewTargetBlendFunction.VTBlend_Linear, this.Character, new PhotoCameraType?(defaultMode), pendingLens);
 		return this.CameraSpecialGameplayController.CameraActor;
 	}
 
-	// Token: 0x0600222C RID: 8748 RVA: 0x000CA2B8 File Offset: 0x000C84B8
+	// Token: 0x060022DE RID: 8926 RVA: 0x000D190C File Offset: 0x000CFB0C
 	public void ExitPhotoCamera()
 	{
 		if (this.CameraSpecialGameplayController.CheckIsInSpecialGameplay(4))
@@ -3569,13 +3652,13 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x0600222D RID: 8749 RVA: 0x000CA2D8 File Offset: 0x000C84D8
+	// Token: 0x060022DF RID: 8927 RVA: 0x000D192C File Offset: 0x000CFB2C
 	public bool IsInPhotoCamera()
 	{
 		return this.CameraSpecialGameplayController.CheckIsInSpecialGameplay(4);
 	}
 
-	// Token: 0x0600222E RID: 8750 RVA: 0x000CA2E8 File Offset: 0x000C84E8
+	// Token: 0x060022E0 RID: 8928 RVA: 0x000D193C File Offset: 0x000CFB3C
 	public ACameraActor EnterZoneFollowCamera(SZoneFollowCameraSettings settings)
 	{
 		this.CameraSpecialGameplayController.EnterSpecialGameplayController(3, 0f, UnrealEngine.EViewTargetBlendFunction.VTBlend_Linear, null, null, null);
@@ -3588,7 +3671,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return this.CameraSpecialGameplayController.CameraActor;
 	}
 
-	// Token: 0x0600222F RID: 8751 RVA: 0x000CA339 File Offset: 0x000C8539
+	// Token: 0x060022E1 RID: 8929 RVA: 0x000D198D File Offset: 0x000CFB8D
 	public void ExitZoneFollowCamera()
 	{
 		if (this.CameraSpecialGameplayController.CheckIsInSpecialGameplay(3))
@@ -3597,7 +3680,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002230 RID: 8752 RVA: 0x000CA359 File Offset: 0x000C8559
+	// Token: 0x060022E2 RID: 8930 RVA: 0x000D19AD File Offset: 0x000CFBAD
 	public void SetOverrideLocation(global::Vector location)
 	{
 		this.OverrideLocation.DeepCopy(location);
@@ -3607,7 +3690,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002231 RID: 8753 RVA: 0x000CA376 File Offset: 0x000C8576
+	// Token: 0x060022E3 RID: 8931 RVA: 0x000D19CA File Offset: 0x000CFBCA
 	public void ClearOverrideLocation()
 	{
 		if (this.HasOverrideLocation)
@@ -3616,7 +3699,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002232 RID: 8754 RVA: 0x000CA388 File Offset: 0x000C8588
+	// Token: 0x060022E4 RID: 8932 RVA: 0x000D19DC File Offset: 0x000CFBDC
 	public void EnterLockTargetCameraByEntity(int entityId, int priority)
 	{
 		this.ExitLockTargetCamera();
@@ -3624,7 +3707,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.LockTargetCameraHandle = ((cameraModel != null) ? new int?(cameraModel.EnableCameraSpecificLockEntity(entityId, priority, ECameraSpecificLockGroup.LevelEvent)) : null);
 	}
 
-	// Token: 0x06002233 RID: 8755 RVA: 0x000CA3C4 File Offset: 0x000C85C4
+	// Token: 0x060022E5 RID: 8933 RVA: 0x000D1A18 File Offset: 0x000CFC18
 	public void EnterLockTargetCameraByLocation(global::Vector location, int priority)
 	{
 		this.ExitLockTargetCamera();
@@ -3632,7 +3715,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.LockTargetCameraHandle = ((cameraModel != null) ? new int?(cameraModel.EnableCameraSpecificLockLocation(location, priority, ECameraSpecificLockGroup.LevelEvent)) : null);
 	}
 
-	// Token: 0x06002234 RID: 8756 RVA: 0x000CA400 File Offset: 0x000C8600
+	// Token: 0x060022E6 RID: 8934 RVA: 0x000D1A54 File Offset: 0x000CFC54
 	public void ExitLockTargetCamera()
 	{
 		if (this.LockTargetCameraHandle == null)
@@ -3647,7 +3730,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.LockTargetCameraHandle = null;
 	}
 
-	// Token: 0x06002235 RID: 8757 RVA: 0x000CA438 File Offset: 0x000C8638
+	// Token: 0x060022E7 RID: 8935 RVA: 0x000D1A8C File Offset: 0x000CFC8C
 	public void UpdateZoneFollowTargetPosition(global::Vector position)
 	{
 		ZoneFollowCamera currentGameplay = this.CameraSpecialGameplayController.GetCurrentGameplay<ZoneFollowCamera>();
@@ -3657,7 +3740,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002236 RID: 8758 RVA: 0x000CA45C File Offset: 0x000C865C
+	// Token: 0x060022E8 RID: 8936 RVA: 0x000D1AB0 File Offset: 0x000CFCB0
 	public void EnableZoneFollowExternalPosition(bool enable)
 	{
 		ZoneFollowCamera currentGameplay = this.CameraSpecialGameplayController.GetCurrentGameplay<ZoneFollowCamera>();
@@ -3667,7 +3750,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002237 RID: 8759 RVA: 0x000CA47F File Offset: 0x000C867F
+	// Token: 0x060022E9 RID: 8937 RVA: 0x000D1AD3 File Offset: 0x000CFCD3
 	public void SnapZoneFollowToCurrentTarget()
 	{
 		ZoneFollowCamera currentGameplay = this.CameraSpecialGameplayController.GetCurrentGameplay<ZoneFollowCamera>();
@@ -3678,7 +3761,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		currentGameplay.ApplyInitialTransform();
 	}
 
-	// Token: 0x06002238 RID: 8760 RVA: 0x000CA498 File Offset: 0x000C8698
+	// Token: 0x060022EA RID: 8938 RVA: 0x000D1AEC File Offset: 0x000CFCEC
 	[NullableContext(2)]
 	public void RestoreCameraFromAdjust(float? fadeInTime = null, Action exitFixCameraCallback = null, bool needYaw = true)
 	{
@@ -3694,7 +3777,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.OnRestoreCameraFromAdjust(fadeInTime, exitFixCameraCallback, needYaw);
 	}
 
-	// Token: 0x06002239 RID: 8761 RVA: 0x000CA534 File Offset: 0x000C8734
+	// Token: 0x060022EB RID: 8939 RVA: 0x000D1B88 File Offset: 0x000CFD88
 	[NullableContext(2)]
 	private void OnRestoreCameraFromAdjust(float? fadeInTime = null, Action exitFixCameraCallback = null, bool needYaw = true)
 	{
@@ -3722,7 +3805,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.SetCameraGravityMode(ECameraGravityMode.CameraTargetGravityDirect, null);
 	}
 
-	// Token: 0x0600223A RID: 8762 RVA: 0x000CA638 File Offset: 0x000C8838
+	// Token: 0x060022EC RID: 8940 RVA: 0x000D1C8C File Offset: 0x000CFE8C
 	public float GetCameraPitchInGravity()
 	{
 		if (this.IsInNormalGravityMode())
@@ -3732,7 +3815,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return (float)(Math.Asin(this.CameraForward.DotProduct(this.GravityUp)) * 57.295780181884766);
 	}
 
-	// Token: 0x0600223B RID: 8763 RVA: 0x000CA684 File Offset: 0x000C8884
+	// Token: 0x060022ED RID: 8941 RVA: 0x000D1CD8 File Offset: 0x000CFED8
 	public void ClearRollInGravity(Rotator inOutRotator)
 	{
 		if (this.IsInNormalGravityMode())
@@ -3746,7 +3829,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.TempQuat.Rotator(inOutRotator);
 	}
 
-	// Token: 0x0600223C RID: 8764 RVA: 0x000CA6F1 File Offset: 0x000C88F1
+	// Token: 0x060022EE RID: 8942 RVA: 0x000D1D45 File Offset: 0x000CFF45
 	public void LockCameraCollision(ECameraCollisionLockType lockType)
 	{
 		CameraCollision cameraCollision = this.CameraCollision;
@@ -3757,7 +3840,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		cameraCollision.LockCameraCollision(lockType);
 	}
 
-	// Token: 0x0600223D RID: 8765 RVA: 0x000CA704 File Offset: 0x000C8904
+	// Token: 0x060022EF RID: 8943 RVA: 0x000D1D58 File Offset: 0x000CFF58
 	public void UnlockCameraCollision(ECameraCollisionLockType lockType)
 	{
 		CameraCollision cameraCollision = this.CameraCollision;
@@ -3768,14 +3851,14 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		cameraCollision.UnlockCameraCollision(lockType);
 	}
 
-	// Token: 0x0600223E RID: 8766 RVA: 0x000CA717 File Offset: 0x000C8917
+	// Token: 0x060022F0 RID: 8944 RVA: 0x000D1D6B File Offset: 0x000CFF6B
 	public bool IsCameraCollisionEnable()
 	{
 		CameraCollision cameraCollision = this.CameraCollision;
 		return cameraCollision != null && cameraCollision.IsCameraCollisionEnable();
 	}
 
-	// Token: 0x0600223F RID: 8767 RVA: 0x000CA72A File Offset: 0x000C892A
+	// Token: 0x060022F1 RID: 8945 RVA: 0x000D1D7E File Offset: 0x000CFF7E
 	public void LockCameraNpcDither(ENpcDitherLockType lockType)
 	{
 		CameraCollision cameraCollision = this.CameraCollision;
@@ -3786,7 +3869,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		cameraCollision.LockCameraNpcDither(lockType);
 	}
 
-	// Token: 0x06002240 RID: 8768 RVA: 0x000CA73D File Offset: 0x000C893D
+	// Token: 0x060022F2 RID: 8946 RVA: 0x000D1D91 File Offset: 0x000CFF91
 	public void UnlockCameraNpcDither(ENpcDitherLockType lockType)
 	{
 		CameraCollision cameraCollision = this.CameraCollision;
@@ -3797,14 +3880,14 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		cameraCollision.UnlockCameraNpcDither(lockType);
 	}
 
-	// Token: 0x06002241 RID: 8769 RVA: 0x000CA750 File Offset: 0x000C8950
+	// Token: 0x060022F3 RID: 8947 RVA: 0x000D1DA4 File Offset: 0x000CFFA4
 	public bool IsCameraCollisionNpcDither()
 	{
 		CameraCollision cameraCollision = this.CameraCollision;
 		return cameraCollision != null && cameraCollision.IsCameraNpcDitherEnable();
 	}
 
-	// Token: 0x06002242 RID: 8770 RVA: 0x000CA764 File Offset: 0x000C8964
+	// Token: 0x060022F4 RID: 8948 RVA: 0x000D1DB8 File Offset: 0x000CFFB8
 	private void UpdateDiagnosticCameraDistance()
 	{
 		if (!this.EnableDiagnosticInvalidCameraDistance)
@@ -3831,7 +3914,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.ShouldOutputDiagnosticCameraDistanceLog = true;
 	}
 
-	// Token: 0x06002243 RID: 8771 RVA: 0x000CA804 File Offset: 0x000C8A04
+	// Token: 0x060022F5 RID: 8949 RVA: 0x000D1E58 File Offset: 0x000D0058
 	private unsafe void DiagnosticCameraDistanceBeforeTick()
 	{
 		if (!this.ShouldOutputDiagnosticCameraDistanceLog)
@@ -3881,7 +3964,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 13));
 	}
 
-	// Token: 0x06002244 RID: 8772 RVA: 0x000CAA74 File Offset: 0x000C8C74
+	// Token: 0x060022F6 RID: 8950 RVA: 0x000D20C8 File Offset: 0x000D02C8
 	private unsafe void DiagnosticCameraDistanceBeforeAfterTick()
 	{
 		if (!this.ShouldOutputDiagnosticCameraDistanceLog)
@@ -3928,7 +4011,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 13));
 	}
 
-	// Token: 0x06002245 RID: 8773 RVA: 0x000CACDC File Offset: 0x000C8EDC
+	// Token: 0x060022F7 RID: 8951 RVA: 0x000D2330 File Offset: 0x000D0530
 	private bool UpdateVehicleRotator()
 	{
 		if (this.VehicleEntityHandle == null)
@@ -3970,7 +4053,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return true;
 	}
 
-	// Token: 0x06002246 RID: 8774 RVA: 0x000CADC0 File Offset: 0x000C8FC0
+	// Token: 0x060022F8 RID: 8952 RVA: 0x000D2414 File Offset: 0x000D0614
 	private bool UpdateVehicleLocation(float deltaTime)
 	{
 		if (this.VehicleEntityHandle == null)
@@ -4046,7 +4129,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return false;
 	}
 
-	// Token: 0x06002247 RID: 8775 RVA: 0x000CAFF4 File Offset: 0x000C91F4
+	// Token: 0x060022F9 RID: 8953 RVA: 0x000D2648 File Offset: 0x000D0848
 	private void UpdateSoarCameraShake()
 	{
 		EntityHandle characterEntityHandle = this.CharacterEntityHandle;
@@ -4141,7 +4224,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002248 RID: 8776 RVA: 0x000CB1B0 File Offset: 0x000C93B0
+	// Token: 0x060022FA RID: 8954 RVA: 0x000D2804 File Offset: 0x000D0A04
 	private void UpdateCameraShake()
 	{
 		if (this.SoarCameraShake != null || !this.ContainsTag(GameplayTagDefine.EGameplayTagId["功能.第一人称.第一人称开启镜头浮动"], false))
@@ -4191,7 +4274,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.CameraShake.ShakeScale = floatValue;
 	}
 
-	// Token: 0x06002249 RID: 8777 RVA: 0x000CB2F3 File Offset: 0x000C94F3
+	// Token: 0x060022FB RID: 8955 RVA: 0x000D2947 File Offset: 0x000D0B47
 	private void UpdateHideHeadState()
 	{
 		CameraModelInstance cameraModel = this.CameraModel;
@@ -4199,7 +4282,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		cameraModel.SetHideHeadEnabled(characterTagComponentInternal != null && characterTagComponentInternal.HasTag(FightCameraLogicComponent.HideHeadTag), EHideHeadEnum.Tag);
 	}
 
-	// Token: 0x0600224A RID: 8778 RVA: 0x000CB318 File Offset: 0x000C9518
+	// Token: 0x060022FC RID: 8956 RVA: 0x000D296C File Offset: 0x000D0B6C
 	public void ResetBufferLocation()
 	{
 		CameraTransformBuffer cameraTransformBuffer = this.CameraTransformBuffer;
@@ -4210,7 +4293,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.LastFrameAttachToVehicle = this.AttachToVehicle;
 	}
 
-	// Token: 0x0600224B RID: 8779 RVA: 0x000CB338 File Offset: 0x000C9538
+	// Token: 0x060022FD RID: 8957 RVA: 0x000D298C File Offset: 0x000D0B8C
 	private void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		if (info.IsRolePassenger(true))
@@ -4231,7 +4314,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x0600224C RID: 8780 RVA: 0x000CB3F8 File Offset: 0x000C95F8
+	// Token: 0x060022FE RID: 8958 RVA: 0x000D2A4C File Offset: 0x000D0C4C
 	private void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		if (!info.IsRolePassenger(true))
@@ -4249,7 +4332,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.CameraRotationZone.SetVehicle(null);
 	}
 
-	// Token: 0x0600224D RID: 8781 RVA: 0x000CB458 File Offset: 0x000C9658
+	// Token: 0x060022FF RID: 8959 RVA: 0x000D2AAC File Offset: 0x000D0CAC
 	private void OnAfterAttachVehicle(VehiclePassengerInfo info)
 	{
 		if (info.IsRolePassenger(true))
@@ -4285,7 +4368,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x0600224E RID: 8782 RVA: 0x000CB569 File Offset: 0x000C9769
+	// Token: 0x06002300 RID: 8960 RVA: 0x000D2BBD File Offset: 0x000D0DBD
 	private void OnMoveStateChanged(ECharMoveState oldMoveState, ECharMoveState newMoveState)
 	{
 		this.CharacterMoveEnterState = newMoveState;
@@ -4295,13 +4378,13 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}, null, null);
 	}
 
-	// Token: 0x0600224F RID: 8783 RVA: 0x000CB58B File Offset: 0x000C978B
+	// Token: 0x06002301 RID: 8961 RVA: 0x000D2BDF File Offset: 0x000D0DDF
 	private void OnCharGravityDirectChanged(global::Vector newGravityDirect, bool isStandardGravity)
 	{
 		this.UpdateCharacterGravity();
 	}
 
-	// Token: 0x06002250 RID: 8784 RVA: 0x000CB593 File Offset: 0x000C9793
+	// Token: 0x06002302 RID: 8962 RVA: 0x000D2BE7 File Offset: 0x000D0DE7
 	private void OnTagChanged(int gameplayTagId, bool tagExist)
 	{
 		if (gameplayTagId != FightCameraLogicComponent.VehicleWaterFall)
@@ -4320,13 +4403,13 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		this.CameraTargetLocationBufferTime = 0f;
 	}
 
-	// Token: 0x06002251 RID: 8785 RVA: 0x000CB5C2 File Offset: 0x000C97C2
+	// Token: 0x06002303 RID: 8963 RVA: 0x000D2C16 File Offset: 0x000D0E16
 	private void OnHideHeadTagChanged(int gameplayTagId, bool tagExist)
 	{
 		this.CameraModel.SetHideHeadEnabled(tagExist, EHideHeadEnum.Tag);
 	}
 
-	// Token: 0x06002252 RID: 8786 RVA: 0x000CB5D4 File Offset: 0x000C97D4
+	// Token: 0x06002304 RID: 8964 RVA: 0x000D2C28 File Offset: 0x000D0E28
 	protected override bool OnClear()
 	{
 		this.SelfCenteredTimeDilation = 1f;
@@ -4347,13 +4430,13 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return true;
 	}
 
-	// Token: 0x06002253 RID: 8787 RVA: 0x000CB6B3 File Offset: 0x000C98B3
+	// Token: 0x06002305 RID: 8965 RVA: 0x000D2D07 File Offset: 0x000D0F07
 	public string GetConfigMapValue(int key)
 	{
 		return this.GetConfigMapValue((EFightCameraDefault)key);
 	}
 
-	// Token: 0x06002254 RID: 8788 RVA: 0x000CB6C0 File Offset: 0x000C98C0
+	// Token: 0x06002306 RID: 8966 RVA: 0x000D2D14 File Offset: 0x000D0F14
 	private void SetValueFromDefaultConfig(EFightCameraDefault key)
 	{
 		float num;
@@ -4368,7 +4451,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002255 RID: 8789 RVA: 0x000CB700 File Offset: 0x000C9900
+	// Token: 0x06002307 RID: 8967 RVA: 0x000D2D54 File Offset: 0x000D0F54
 	private unsafe void PostProcessConfig(Dictionary<EFightCameraDefault, float> config, FName tagName)
 	{
 		foreach (ValueTuple<EFightCameraDefault, EFightCameraDefault> valueTuple in this.PairKeyArray)
@@ -4425,7 +4508,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002256 RID: 8790 RVA: 0x000CB9C4 File Offset: 0x000C9BC4
+	// Token: 0x06002308 RID: 8968 RVA: 0x000D3018 File Offset: 0x000D1218
 	public bool GetPairConfigKey<[Nullable(0)] T>(T key, out T pairKey) where T : Enum
 	{
 		if (key is EFightCameraDefault)
@@ -4442,7 +4525,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return false;
 	}
 
-	// Token: 0x06002257 RID: 8791 RVA: 0x000CBA1C File Offset: 0x000C9C1C
+	// Token: 0x06002309 RID: 8969 RVA: 0x000D3070 File Offset: 0x000D1270
 	public bool GetPairConfigKey(int key, out int pairKey)
 	{
 		EFightCameraDefault efightCameraDefault;
@@ -4455,7 +4538,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return false;
 	}
 
-	// Token: 0x06002258 RID: 8792 RVA: 0x000CBA50 File Offset: 0x000C9C50
+	// Token: 0x0600230A RID: 8970 RVA: 0x000D30A4 File Offset: 0x000D12A4
 	public float GetConfigValue(string key)
 	{
 		object obj;
@@ -4500,1772 +4583,14 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return result;
 	}
 
-	// Token: 0x06002259 RID: 8793 RVA: 0x000CBAFC File Offset: 0x000C9CFC
-	public override bool ClearComponent(EntityComponent componentTemplate)
-	{
-		if (!base.ClearComponent(componentTemplate))
-		{
-			return false;
-		}
-		FightCameraLogicComponent fightCameraLogicComponent = (FightCameraLogicComponent)componentTemplate;
-		if (base.CanResetComponentProperty("<CameraModel>k__BackingField"))
-		{
-			if (fightCameraLogicComponent.CameraModel == null)
-			{
-				this.CameraModel = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraModelInstance>(this.CameraModel), "<CameraModel>k__BackingField"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ArmLength"))
-		{
-			this.ArmLength = fightCameraLogicComponent.ArmLength;
-		}
-		if (base.CanResetComponentProperty("ArmOffsetX"))
-		{
-			this.ArmOffsetX = fightCameraLogicComponent.ArmOffsetX;
-		}
-		if (base.CanResetComponentProperty("ArmOffsetY"))
-		{
-			this.ArmOffsetY = fightCameraLogicComponent.ArmOffsetY;
-		}
-		if (base.CanResetComponentProperty("ArmOffsetZ"))
-		{
-			this.ArmOffsetZ = fightCameraLogicComponent.ArmOffsetZ;
-		}
-		if (base.CanResetComponentProperty("MinArmLength"))
-		{
-			this.MinArmLength = fightCameraLogicComponent.MinArmLength;
-		}
-		if (base.CanResetComponentProperty("MaxArmLength"))
-		{
-			this.MaxArmLength = fightCameraLogicComponent.MaxArmLength;
-		}
-		if (base.CanResetComponentProperty("CameraOffsetX"))
-		{
-			this.CameraOffsetX = fightCameraLogicComponent.CameraOffsetX;
-		}
-		if (base.CanResetComponentProperty("CameraOffsetY"))
-		{
-			this.CameraOffsetY = fightCameraLogicComponent.CameraOffsetY;
-		}
-		if (base.CanResetComponentProperty("CameraOffsetZ"))
-		{
-			this.CameraOffsetZ = fightCameraLogicComponent.CameraOffsetZ;
-		}
-		if (base.CanResetComponentProperty("Fov"))
-		{
-			this.Fov = fightCameraLogicComponent.Fov;
-		}
-		if (base.CanResetComponentProperty("CameraLocationFadeTime"))
-		{
-			this.CameraLocationFadeTime = fightCameraLogicComponent.CameraLocationFadeTime;
-		}
-		if (base.CanResetComponentProperty("CollisionProbeSize"))
-		{
-			this.CollisionProbeSize = fightCameraLogicComponent.CollisionProbeSize;
-		}
-		if (base.CanResetComponentProperty("NearCollisionProbeSize"))
-		{
-			this.NearCollisionProbeSize = fightCameraLogicComponent.NearCollisionProbeSize;
-		}
-		if (base.CanResetComponentProperty("CurrentCollisionSize"))
-		{
-			this.CurrentCollisionSize = fightCameraLogicComponent.CurrentCollisionSize;
-		}
-		if (base.CanResetComponentProperty("CheckCollisionProbeSize"))
-		{
-			this.CheckCollisionProbeSize = fightCameraLogicComponent.CheckCollisionProbeSize;
-		}
-		if (base.CanResetComponentProperty("CheckWidth"))
-		{
-			this.CheckWidth = fightCameraLogicComponent.CheckWidth;
-		}
-		if (base.CanResetComponentProperty("CollisionAdditionalHeightInWater"))
-		{
-			this.CollisionAdditionalHeightInWater = fightCameraLogicComponent.CollisionAdditionalHeightInWater;
-		}
-		if (base.CanResetComponentProperty("DefaultPitchHorizontalOffset"))
-		{
-			this.DefaultPitchHorizontalOffset = fightCameraLogicComponent.DefaultPitchHorizontalOffset;
-		}
-		if (base.CanResetComponentProperty("DefaultPitchVerticalOffset"))
-		{
-			this.DefaultPitchVerticalOffset = fightCameraLogicComponent.DefaultPitchVerticalOffset;
-		}
-		if (base.CanResetComponentProperty("DefaultPitchInRangeMin"))
-		{
-			this.DefaultPitchInRangeMin = fightCameraLogicComponent.DefaultPitchInRangeMin;
-		}
-		if (base.CanResetComponentProperty("DefaultPitchInRangeCenter"))
-		{
-			this.DefaultPitchInRangeCenter = fightCameraLogicComponent.DefaultPitchInRangeCenter;
-		}
-		if (base.CanResetComponentProperty("DefaultPitchInRangeMax"))
-		{
-			this.DefaultPitchInRangeMax = fightCameraLogicComponent.DefaultPitchInRangeMax;
-		}
-		if (base.CanResetComponentProperty("DefaultPitchOutRangeMin"))
-		{
-			this.DefaultPitchOutRangeMin = fightCameraLogicComponent.DefaultPitchOutRangeMin;
-		}
-		if (base.CanResetComponentProperty("DefaultPitchOutRangeCenter"))
-		{
-			this.DefaultPitchOutRangeCenter = fightCameraLogicComponent.DefaultPitchOutRangeCenter;
-		}
-		if (base.CanResetComponentProperty("DefaultPitchOutRangeMax"))
-		{
-			this.DefaultPitchOutRangeMax = fightCameraLogicComponent.DefaultPitchOutRangeMax;
-		}
-		if (base.CanResetComponentProperty("FloatUpArmLengthMin"))
-		{
-			this.FloatUpArmLengthMin = fightCameraLogicComponent.FloatUpArmLengthMin;
-		}
-		if (base.CanResetComponentProperty("FloatUpArmLengthMax"))
-		{
-			this.FloatUpArmLengthMax = fightCameraLogicComponent.FloatUpArmLengthMax;
-		}
-		if (base.CanResetComponentProperty("CameraOffsetFloatUpArmLengthMin"))
-		{
-			this.CameraOffsetFloatUpArmLengthMin = fightCameraLogicComponent.CameraOffsetFloatUpArmLengthMin;
-		}
-		if (base.CanResetComponentProperty("CameraOffsetFloatUpArmLengthMax"))
-		{
-			this.CameraOffsetFloatUpArmLengthMax = fightCameraLogicComponent.CameraOffsetFloatUpArmLengthMax;
-		}
-		if (base.CanResetComponentProperty("CameraOffsetFloatUpMin"))
-		{
-			this.CameraOffsetFloatUpMin = fightCameraLogicComponent.CameraOffsetFloatUpMin;
-		}
-		if (base.CanResetComponentProperty("CameraOffsetFloatUpMax"))
-		{
-			this.CameraOffsetFloatUpMax = fightCameraLogicComponent.CameraOffsetFloatUpMax;
-		}
-		if (base.CanResetComponentProperty("MaxDistance"))
-		{
-			this.MaxDistance = fightCameraLogicComponent.MaxDistance;
-		}
-		if (base.CanResetComponentProperty("InSpeed"))
-		{
-			this.InSpeed = fightCameraLogicComponent.InSpeed;
-		}
-		if (base.CanResetComponentProperty("OutSpeed"))
-		{
-			this.OutSpeed = fightCameraLogicComponent.OutSpeed;
-		}
-		if (base.CanResetComponentProperty("CenterCollisionSize"))
-		{
-			this.CenterCollisionSize = fightCameraLogicComponent.CenterCollisionSize;
-		}
-		if (base.CanResetComponentProperty("CollisionSizePercentage"))
-		{
-			this.CollisionSizePercentage = fightCameraLogicComponent.CollisionSizePercentage;
-		}
-		if (base.CanResetComponentProperty("StartHideDistanceInternal"))
-		{
-			this.StartHideDistanceInternal = fightCameraLogicComponent.StartHideDistanceInternal;
-		}
-		if (base.CanResetComponentProperty("StartHideDistSquared"))
-		{
-			this.StartHideDistSquared = fightCameraLogicComponent.StartHideDistSquared;
-		}
-		if (base.CanResetComponentProperty("CompleteHideDistance"))
-		{
-			this.CompleteHideDistance = fightCameraLogicComponent.CompleteHideDistance;
-		}
-		if (base.CanResetComponentProperty("StartHidePitch"))
-		{
-			this.StartHidePitch = fightCameraLogicComponent.StartHidePitch;
-		}
-		if (base.CanResetComponentProperty("CompleteHidePitch"))
-		{
-			this.CompleteHidePitch = fightCameraLogicComponent.CompleteHidePitch;
-		}
-		if (base.CanResetComponentProperty("StartDitherValue"))
-		{
-			this.StartDitherValue = fightCameraLogicComponent.StartDitherValue;
-		}
-		if (base.CanResetComponentProperty("YawLimitMin"))
-		{
-			this.YawLimitMin = fightCameraLogicComponent.YawLimitMin;
-		}
-		if (base.CanResetComponentProperty("YawLimitMax"))
-		{
-			this.YawLimitMax = fightCameraLogicComponent.YawLimitMax;
-		}
-		if (base.CanResetComponentProperty("PitchLimitMin"))
-		{
-			this.PitchLimitMin = fightCameraLogicComponent.PitchLimitMin;
-		}
-		if (base.CanResetComponentProperty("PitchLimitMax"))
-		{
-			this.PitchLimitMax = fightCameraLogicComponent.PitchLimitMax;
-		}
-		if (base.CanResetComponentProperty("LookDownOffsetZ"))
-		{
-			this.LookDownOffsetZ = fightCameraLogicComponent.LookDownOffsetZ;
-		}
-		if (base.CanResetComponentProperty("LookUpOffsetZ"))
-		{
-			this.LookUpOffsetZ = fightCameraLogicComponent.LookUpOffsetZ;
-		}
-		if (base.CanResetComponentProperty("ArmCenterUpSpeedMin"))
-		{
-			this.ArmCenterUpSpeedMin = fightCameraLogicComponent.ArmCenterUpSpeedMin;
-		}
-		if (base.CanResetComponentProperty("ArmCenterUpSpeedMax"))
-		{
-			this.ArmCenterUpSpeedMax = fightCameraLogicComponent.ArmCenterUpSpeedMax;
-		}
-		if (base.CanResetComponentProperty("ArmCenterUpEdgeMin"))
-		{
-			this.ArmCenterUpEdgeMin = fightCameraLogicComponent.ArmCenterUpEdgeMin;
-		}
-		if (base.CanResetComponentProperty("ArmCenterUpEdgeMax"))
-		{
-			this.ArmCenterUpEdgeMax = fightCameraLogicComponent.ArmCenterUpEdgeMax;
-		}
-		if (base.CanResetComponentProperty("ArmCenterUpCurve"))
-		{
-			if (fightCameraLogicComponent.ArmCenterUpCurve == null)
-			{
-				this.ArmCenterUpCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CurveBase>(this.ArmCenterUpCurve), "ArmCenterUpCurve"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ArmCenterUpInputEnableTime"))
-		{
-			this.ArmCenterUpInputEnableTime = fightCameraLogicComponent.ArmCenterUpInputEnableTime;
-		}
-		if (base.CanResetComponentProperty("ArmCenterUpRollbackEnableTime"))
-		{
-			this.ArmCenterUpRollbackEnableTime = fightCameraLogicComponent.ArmCenterUpRollbackEnableTime;
-		}
-		if (base.CanResetComponentProperty("ArmCenterForwardSpeedMin"))
-		{
-			this.ArmCenterForwardSpeedMin = fightCameraLogicComponent.ArmCenterForwardSpeedMin;
-		}
-		if (base.CanResetComponentProperty("ArmCenterForwardSpeedMax"))
-		{
-			this.ArmCenterForwardSpeedMax = fightCameraLogicComponent.ArmCenterForwardSpeedMax;
-		}
-		if (base.CanResetComponentProperty("ArmCenterForwardEdgeMin"))
-		{
-			this.ArmCenterForwardEdgeMin = fightCameraLogicComponent.ArmCenterForwardEdgeMin;
-		}
-		if (base.CanResetComponentProperty("ArmCenterForwardEdgeMax"))
-		{
-			this.ArmCenterForwardEdgeMax = fightCameraLogicComponent.ArmCenterForwardEdgeMax;
-		}
-		if (base.CanResetComponentProperty("ArmCenterForwardCurve"))
-		{
-			if (fightCameraLogicComponent.ArmCenterForwardCurve == null)
-			{
-				this.ArmCenterForwardCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CurveBase>(this.ArmCenterForwardCurve), "ArmCenterForwardCurve"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ArmCenterForwardInputEnableTime"))
-		{
-			this.ArmCenterForwardInputEnableTime = fightCameraLogicComponent.ArmCenterForwardInputEnableTime;
-		}
-		if (base.CanResetComponentProperty("ArmCenterForwardRollbackEnableTime"))
-		{
-			this.ArmCenterForwardRollbackEnableTime = fightCameraLogicComponent.ArmCenterForwardRollbackEnableTime;
-		}
-		if (base.CanResetComponentProperty("ArmCenterRightSpeedMin"))
-		{
-			this.ArmCenterRightSpeedMin = fightCameraLogicComponent.ArmCenterRightSpeedMin;
-		}
-		if (base.CanResetComponentProperty("ArmCenterRightSpeedMax"))
-		{
-			this.ArmCenterRightSpeedMax = fightCameraLogicComponent.ArmCenterRightSpeedMax;
-		}
-		if (base.CanResetComponentProperty("ArmCenterRightEdgeMin"))
-		{
-			this.ArmCenterRightEdgeMin = fightCameraLogicComponent.ArmCenterRightEdgeMin;
-		}
-		if (base.CanResetComponentProperty("ArmCenterRightEdgeMax"))
-		{
-			this.ArmCenterRightEdgeMax = fightCameraLogicComponent.ArmCenterRightEdgeMax;
-		}
-		if (base.CanResetComponentProperty("ArmCenterRightCurve"))
-		{
-			if (fightCameraLogicComponent.ArmCenterRightCurve == null)
-			{
-				this.ArmCenterRightCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CurveBase>(this.ArmCenterRightCurve), "ArmCenterRightCurve"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ArmCenterRightReverseSpeed"))
-		{
-			this.ArmCenterRightReverseSpeed = fightCameraLogicComponent.ArmCenterRightReverseSpeed;
-		}
-		if (base.CanResetComponentProperty("ArmCenterRightReverseRotationEdge"))
-		{
-			this.ArmCenterRightReverseRotationEdge = fightCameraLogicComponent.ArmCenterRightReverseRotationEdge;
-		}
-		if (base.CanResetComponentProperty("ArmCenterRightInputEnableTime"))
-		{
-			this.ArmCenterRightInputEnableTime = fightCameraLogicComponent.ArmCenterRightInputEnableTime;
-		}
-		if (base.CanResetComponentProperty("ArmCenterRightRollbackEnableTime"))
-		{
-			this.ArmCenterRightRollbackEnableTime = fightCameraLogicComponent.ArmCenterRightRollbackEnableTime;
-		}
-		if (base.CanResetComponentProperty("InitialCameraPitch"))
-		{
-			this.InitialCameraPitch = fightCameraLogicComponent.InitialCameraPitch;
-		}
-		if (base.CanResetComponentProperty("CameraRotateToTargetMinAlpha"))
-		{
-			this.CameraRotateToTargetMinAlpha = fightCameraLogicComponent.CameraRotateToTargetMinAlpha;
-		}
-		if (base.CanResetComponentProperty("CameraRotateToTargetMaxAlpha"))
-		{
-			this.CameraRotateToTargetMaxAlpha = fightCameraLogicComponent.CameraRotateToTargetMaxAlpha;
-		}
-		if (base.CanResetComponentProperty("CameraRotateToTargetCurve"))
-		{
-			if (fightCameraLogicComponent.CameraRotateToTargetCurve == null)
-			{
-				this.CameraRotateToTargetCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CurveBase>(this.CameraRotateToTargetCurve), "CameraRotateToTargetCurve"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsDisableResetFocus"))
-		{
-			this.IsDisableResetFocus = fightCameraLogicComponent.IsDisableResetFocus;
-		}
-		if (base.CanResetComponentProperty("AdditionPitchMax"))
-		{
-			this.AdditionPitchMax = fightCameraLogicComponent.AdditionPitchMax;
-		}
-		if (base.CanResetComponentProperty("AdditionPitchMin"))
-		{
-			this.AdditionPitchMin = fightCameraLogicComponent.AdditionPitchMin;
-		}
-		if (base.CanResetComponentProperty("AdditionPitchDeltaHeight"))
-		{
-			this.AdditionPitchDeltaHeight = fightCameraLogicComponent.AdditionPitchDeltaHeight;
-		}
-		if (base.CanResetComponentProperty("AdditionPitchCurve"))
-		{
-			if (fightCameraLogicComponent.AdditionPitchCurve == null)
-			{
-				this.AdditionPitchCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CurveBase>(this.AdditionPitchCurve), "AdditionPitchCurve"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("WorldYawMin"))
-		{
-			this.WorldYawMin = fightCameraLogicComponent.WorldYawMin;
-		}
-		if (base.CanResetComponentProperty("WorldYawMax"))
-		{
-			this.WorldYawMax = fightCameraLogicComponent.WorldYawMax;
-		}
-		if (base.CanResetComponentProperty("WorldRollMin"))
-		{
-			this.WorldRollMin = fightCameraLogicComponent.WorldRollMin;
-		}
-		if (base.CanResetComponentProperty("WorldRollMax"))
-		{
-			this.WorldRollMax = fightCameraLogicComponent.WorldRollMax;
-		}
-		if (base.CanResetComponentProperty("CameraZoneMode"))
-		{
-			this.CameraZoneMode = fightCameraLogicComponent.CameraZoneMode;
-		}
-		if (base.CanResetComponentProperty("YawZoneSpeedMin"))
-		{
-			this.YawZoneSpeedMin = fightCameraLogicComponent.YawZoneSpeedMin;
-		}
-		if (base.CanResetComponentProperty("YawZoneSpeedMax"))
-		{
-			this.YawZoneSpeedMax = fightCameraLogicComponent.YawZoneSpeedMax;
-		}
-		if (base.CanResetComponentProperty("YawSoftZoneMin"))
-		{
-			this.YawSoftZoneMin = fightCameraLogicComponent.YawSoftZoneMin;
-		}
-		if (base.CanResetComponentProperty("YawSoftZoneMax"))
-		{
-			this.YawSoftZoneMax = fightCameraLogicComponent.YawSoftZoneMax;
-		}
-		if (base.CanResetComponentProperty("YawDeadZoneMin"))
-		{
-			this.YawDeadZoneMin = fightCameraLogicComponent.YawDeadZoneMin;
-		}
-		if (base.CanResetComponentProperty("YawDeadZoneMax"))
-		{
-			this.YawDeadZoneMax = fightCameraLogicComponent.YawDeadZoneMax;
-		}
-		if (base.CanResetComponentProperty("YawSoftZoneSpeedRatio"))
-		{
-			this.YawSoftZoneSpeedRatio = fightCameraLogicComponent.YawSoftZoneSpeedRatio;
-		}
-		if (base.CanResetComponentProperty("YawDeadZoneTransToSoftZoneSpeedRatio"))
-		{
-			this.YawDeadZoneTransToSoftZoneSpeedRatio = fightCameraLogicComponent.YawDeadZoneTransToSoftZoneSpeedRatio;
-		}
-		if (base.CanResetComponentProperty("YawTransToForwardSpeedRatio"))
-		{
-			this.YawTransToForwardSpeedRatio = fightCameraLogicComponent.YawTransToForwardSpeedRatio;
-		}
-		if (base.CanResetComponentProperty("YawInputEnableTime"))
-		{
-			this.YawInputEnableTime = fightCameraLogicComponent.YawInputEnableTime;
-		}
-		if (base.CanResetComponentProperty("YawRollbackEnableTime"))
-		{
-			this.YawRollbackEnableTime = fightCameraLogicComponent.YawRollbackEnableTime;
-		}
-		if (base.CanResetComponentProperty("PitchInputEnableTime"))
-		{
-			this.PitchInputEnableTime = fightCameraLogicComponent.PitchInputEnableTime;
-		}
-		if (base.CanResetComponentProperty("PitchRollbackEnableTime"))
-		{
-			this.PitchRollbackEnableTime = fightCameraLogicComponent.PitchRollbackEnableTime;
-		}
-		if (base.CanResetComponentProperty("PitchSoftZoneMin"))
-		{
-			this.PitchSoftZoneMin = fightCameraLogicComponent.PitchSoftZoneMin;
-		}
-		if (base.CanResetComponentProperty("PitchSoftZoneMax"))
-		{
-			this.PitchSoftZoneMax = fightCameraLogicComponent.PitchSoftZoneMax;
-		}
-		if (base.CanResetComponentProperty("PitchDeadZoneMin"))
-		{
-			this.PitchDeadZoneMin = fightCameraLogicComponent.PitchDeadZoneMin;
-		}
-		if (base.CanResetComponentProperty("PitchDeadZoneMax"))
-		{
-			this.PitchDeadZoneMax = fightCameraLogicComponent.PitchDeadZoneMax;
-		}
-		if (base.CanResetComponentProperty("PitchBasis"))
-		{
-			this.PitchBasis = fightCameraLogicComponent.PitchBasis;
-		}
-		if (base.CanResetComponentProperty("PitchZoneSpeedMin"))
-		{
-			this.PitchZoneSpeedMin = fightCameraLogicComponent.PitchZoneSpeedMin;
-		}
-		if (base.CanResetComponentProperty("PitchZoneSpeedMax"))
-		{
-			this.PitchZoneSpeedMax = fightCameraLogicComponent.PitchZoneSpeedMax;
-		}
-		if (base.CanResetComponentProperty("CharAddArmLength"))
-		{
-			this.CharAddArmLength = fightCameraLogicComponent.CharAddArmLength;
-		}
-		if (base.CanResetComponentProperty("CharAddZ"))
-		{
-			this.CharAddZ = fightCameraLogicComponent.CharAddZ;
-		}
-		if (base.CanResetComponentProperty("EnableDynamicFov"))
-		{
-			this.EnableDynamicFov = fightCameraLogicComponent.EnableDynamicFov;
-		}
-		if (base.CanResetComponentProperty("DynamicFovMin"))
-		{
-			this.DynamicFovMin = fightCameraLogicComponent.DynamicFovMin;
-		}
-		if (base.CanResetComponentProperty("DynamicFovMax"))
-		{
-			this.DynamicFovMax = fightCameraLogicComponent.DynamicFovMax;
-		}
-		if (base.CanResetComponentProperty("DynamicFovParamMin"))
-		{
-			this.DynamicFovParamMin = fightCameraLogicComponent.DynamicFovParamMin;
-		}
-		if (base.CanResetComponentProperty("DynamicFovParamMax"))
-		{
-			this.DynamicFovParamMax = fightCameraLogicComponent.DynamicFovParamMax;
-		}
-		if (base.CanResetComponentProperty("DynamicFovLerpSpeed"))
-		{
-			this.DynamicFovLerpSpeed = fightCameraLogicComponent.DynamicFovLerpSpeed;
-		}
-		if (base.CanResetComponentProperty("DynamicFovCurve"))
-		{
-			if (fightCameraLogicComponent.DynamicFovCurve == null)
-			{
-				this.DynamicFovCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CurveBase>(this.DynamicFovCurve), "DynamicFovCurve"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TargetDynamicFov"))
-		{
-			this.TargetDynamicFov = fightCameraLogicComponent.TargetDynamicFov;
-		}
-		if (base.CanResetComponentProperty("SmoothedClampSpeedRatio"))
-		{
-			this.SmoothedClampSpeedRatio = fightCameraLogicComponent.SmoothedClampSpeedRatio;
-		}
-		if (base.CanResetComponentProperty("LastFrameCameraArmLocationSocketName"))
-		{
-			this.LastFrameCameraArmLocationSocketName = fightCameraLogicComponent.LastFrameCameraArmLocationSocketName;
-		}
-		if (base.CanResetComponentProperty("CameraArmLocationSocketName"))
-		{
-			this.CameraArmLocationSocketName = fightCameraLogicComponent.CameraArmLocationSocketName;
-		}
-		if (base.CanResetComponentProperty("EnableFocusOnVehicle"))
-		{
-			this.EnableFocusOnVehicle = fightCameraLogicComponent.EnableFocusOnVehicle;
-		}
-		if (base.CanResetComponentProperty("AttachToVehicle"))
-		{
-			this.AttachToVehicle = fightCameraLogicComponent.AttachToVehicle;
-		}
-		if (base.CanResetComponentProperty("OverrideLocation") && fightCameraLogicComponent.OverrideLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.OverrideLocation), "OverrideLocation"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("HasOverrideLocation"))
-		{
-			this.HasOverrideLocation = fightCameraLogicComponent.HasOverrideLocation;
-		}
-		if (base.CanResetComponentProperty("IsCharacterValid"))
-		{
-			this.IsCharacterValid = fightCameraLogicComponent.IsCharacterValid;
-		}
-		if (base.CanResetComponentProperty("Character"))
-		{
-			if (fightCameraLogicComponent.Character == null)
-			{
-				this.Character = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsBaseCharacter>(this.Character), "Character"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CharacterController"))
-		{
-			if (fightCameraLogicComponent.CharacterController == null)
-			{
-				this.CharacterController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BP_CharacterController_C>(this.CharacterController), "CharacterController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CharacterEntityHandle"))
-		{
-			if (fightCameraLogicComponent.CharacterEntityHandle == null)
-			{
-				this.CharacterEntityHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.CharacterEntityHandle), "CharacterEntityHandle"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CharacterInputComponent"))
-		{
-			if (fightCameraLogicComponent.CharacterInputComponent == null)
-			{
-				this.CharacterInputComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterInputComponent>(this.CharacterInputComponent), "CharacterInputComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CharacterTagComponentInternal"))
-		{
-			if (fightCameraLogicComponent.CharacterTagComponentInternal == null)
-			{
-				this.CharacterTagComponentInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.CharacterTagComponentInternal), "CharacterTagComponentInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CharacterDriveVehicleComponent"))
-		{
-			if (fightCameraLogicComponent.CharacterDriveVehicleComponent == null)
-			{
-				this.CharacterDriveVehicleComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterDriveVehicleComponent>(this.CharacterDriveVehicleComponent), "CharacterDriveVehicleComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CharacterMoveEnterState"))
-		{
-			this.CharacterMoveEnterState = fightCameraLogicComponent.CharacterMoveEnterState;
-		}
-		if (base.CanResetComponentProperty("FollowShooterEntityHandle"))
-		{
-			if (fightCameraLogicComponent.FollowShooterEntityHandle == null)
-			{
-				this.FollowShooterEntityHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.FollowShooterEntityHandle), "FollowShooterEntityHandle"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("FollowShooterTagComponentInternal"))
-		{
-			if (fightCameraLogicComponent.FollowShooterTagComponentInternal == null)
-			{
-				this.FollowShooterTagComponentInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.FollowShooterTagComponentInternal), "FollowShooterTagComponentInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsSpecificLockTarget"))
-		{
-			this.IsSpecificLockTarget = fightCameraLogicComponent.IsSpecificLockTarget;
-		}
-		if (base.CanResetComponentProperty("SpecificLockTargetType"))
-		{
-			this.SpecificLockTargetType = fightCameraLogicComponent.SpecificLockTargetType;
-		}
-		if (base.CanResetComponentProperty("LockTargetCameraHandle"))
-		{
-			this.LockTargetCameraHandle = fightCameraLogicComponent.LockTargetCameraHandle;
-		}
-		if (base.CanResetComponentProperty("TargetEntity"))
-		{
-			if (fightCameraLogicComponent.TargetEntity == null)
-			{
-				this.TargetEntity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.TargetEntity), "TargetEntity"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TargetTagComponentInternal"))
-		{
-			if (fightCameraLogicComponent.TargetTagComponentInternal == null)
-			{
-				this.TargetTagComponentInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TargetTagComponentInternal), "TargetTagComponentInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TargetSocketName"))
-		{
-			this.TargetSocketName = fightCameraLogicComponent.TargetSocketName;
-		}
-		if (base.CanResetComponentProperty("TargetClearByBlockTime"))
-		{
-			this.TargetClearByBlockTime = fightCameraLogicComponent.TargetClearByBlockTime;
-		}
-		if (base.CanResetComponentProperty("IsFollowing"))
-		{
-			this.IsFollowing = fightCameraLogicComponent.IsFollowing;
-		}
-		if (base.CanResetComponentProperty("IsFixingX"))
-		{
-			this.IsFixingX = fightCameraLogicComponent.IsFixingX;
-		}
-		if (base.CanResetComponentProperty("IsFixingY"))
-		{
-			this.IsFixingY = fightCameraLogicComponent.IsFixingY;
-		}
-		if (base.CanResetComponentProperty("IsFixingZ"))
-		{
-			this.IsFixingZ = fightCameraLogicComponent.IsFixingZ;
-		}
-		if (base.CanResetComponentProperty("RestoreFollowingOnChangeRole"))
-		{
-			this.RestoreFollowingOnChangeRole = fightCameraLogicComponent.RestoreFollowingOnChangeRole;
-		}
-		if (base.CanResetComponentProperty("ArmLocationFadeElapseTime"))
-		{
-			this.ArmLocationFadeElapseTime = fightCameraLogicComponent.ArmLocationFadeElapseTime;
-		}
-		if (base.CanResetComponentProperty("VehicleEntityHandle"))
-		{
-			if (fightCameraLogicComponent.VehicleEntityHandle == null)
-			{
-				this.VehicleEntityHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.VehicleEntityHandle), "VehicleEntityHandle"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("VehicleActorComponent"))
-		{
-			if (fightCameraLogicComponent.VehicleActorComponent == null)
-			{
-				this.VehicleActorComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleActorComponent>(this.VehicleActorComponent), "VehicleActorComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("VehicleMoveComponent"))
-		{
-			if (fightCameraLogicComponent.VehicleMoveComponent == null)
-			{
-				this.VehicleMoveComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleMoveComponent>(this.VehicleMoveComponent), "VehicleMoveComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("VehicleInputComponent"))
-		{
-			if (fightCameraLogicComponent.VehicleInputComponent == null)
-			{
-				this.VehicleInputComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleInputComponent>(this.VehicleInputComponent), "VehicleInputComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("VehicleAnimationComponent"))
-		{
-			if (fightCameraLogicComponent.VehicleAnimationComponent == null)
-			{
-				this.VehicleAnimationComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleAnimationComponent>(this.VehicleAnimationComponent), "VehicleAnimationComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BaseVehiclePerformComponent"))
-		{
-			if (fightCameraLogicComponent.BaseVehiclePerformComponent == null)
-			{
-				this.BaseVehiclePerformComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseVehiclePerformComponent>(this.BaseVehiclePerformComponent), "BaseVehiclePerformComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("GongduolaPerformComponent"))
-		{
-			if (fightCameraLogicComponent.GongduolaPerformComponent == null)
-			{
-				this.GongduolaPerformComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<GongduolaPerformComponent>(this.GongduolaPerformComponent), "GongduolaPerformComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PlayerRotator"))
-		{
-			if (fightCameraLogicComponent.PlayerRotator == null)
-			{
-				this.PlayerRotator = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.PlayerRotator), "PlayerRotator"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PlayerLocation"))
-		{
-			if (fightCameraLogicComponent.PlayerLocation == null)
-			{
-				this.PlayerLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PlayerLocation), "PlayerLocation"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PlayerLocationForDither"))
-		{
-			if (fightCameraLogicComponent.PlayerLocationForDither == null)
-			{
-				this.PlayerLocationForDither = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PlayerLocationForDither), "PlayerLocationForDither"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("LastFramePlayerLocation"))
-		{
-			if (fightCameraLogicComponent.LastFramePlayerLocation == null)
-			{
-				this.LastFramePlayerLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastFramePlayerLocation), "LastFramePlayerLocation"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PlayerVelocity"))
-		{
-			if (fightCameraLogicComponent.PlayerVelocity == null)
-			{
-				this.PlayerVelocity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PlayerVelocity), "PlayerVelocity"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TargetLocation"))
-		{
-			if (fightCameraLogicComponent.TargetLocation == null)
-			{
-				this.TargetLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TargetLocation), "TargetLocation"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PlayerVehicleDeltaLocation"))
-		{
-			if (fightCameraLogicComponent.PlayerVehicleDeltaLocation == null)
-			{
-				this.PlayerVehicleDeltaLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PlayerVehicleDeltaLocation), "PlayerVehicleDeltaLocation"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PlayerMoveVector"))
-		{
-			if (fightCameraLogicComponent.PlayerMoveVector == null)
-			{
-				this.PlayerMoveVector = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PlayerMoveVector), "PlayerMoveVector"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TempArmLength"))
-		{
-			this.TempArmLength = fightCameraLogicComponent.TempArmLength;
-		}
-		if (base.CanResetComponentProperty("TmpArmLocation") && fightCameraLogicComponent.TmpArmLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpArmLocation), "TmpArmLocation"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("TmpArmLocationOffset") && fightCameraLogicComponent.TmpArmLocationOffset != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpArmLocationOffset), "TmpArmLocationOffset"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("ArmLocationFading"))
-		{
-			this.ArmLocationFading = fightCameraLogicComponent.ArmLocationFading;
-		}
-		if (base.CanResetComponentProperty("ArmLocationFadeDuration"))
-		{
-			this.ArmLocationFadeDuration = fightCameraLogicComponent.ArmLocationFadeDuration;
-		}
-		if (base.CanResetComponentProperty("Fading"))
-		{
-			this.Fading = fightCameraLogicComponent.Fading;
-		}
-		if (base.CanResetComponentProperty("FadeArmLength"))
-		{
-			this.FadeArmLength = fightCameraLogicComponent.FadeArmLength;
-		}
-		if (base.CanResetComponentProperty("FadeArmOffset"))
-		{
-			this.FadeArmOffset = fightCameraLogicComponent.FadeArmOffset;
-		}
-		if (base.CanResetComponentProperty("FadeCameraOffset"))
-		{
-			this.FadeCameraOffset = fightCameraLogicComponent.FadeCameraOffset;
-		}
-		if (base.CanResetComponentProperty("FadeFov"))
-		{
-			this.FadeFov = fightCameraLogicComponent.FadeFov;
-		}
-		if (base.CanResetComponentProperty("FadeDuration"))
-		{
-			this.FadeDuration = fightCameraLogicComponent.FadeDuration;
-		}
-		if (base.CanResetComponentProperty("FadeCurve"))
-		{
-			if (fightCameraLogicComponent.FadeCurve == null)
-			{
-				this.FadeCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CurveBase>(this.FadeCurve), "FadeCurve"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsUniqueFade"))
-		{
-			this.IsUniqueFade = fightCameraLogicComponent.IsUniqueFade;
-		}
-		if (base.CanResetComponentProperty("FadeElapse"))
-		{
-			this.FadeElapse = fightCameraLogicComponent.FadeElapse;
-		}
-		if (base.CanResetComponentProperty("CameraArmCenterRightInputTime"))
-		{
-			this.CameraArmCenterRightInputTime = fightCameraLogicComponent.CameraArmCenterRightInputTime;
-		}
-		if (base.CanResetComponentProperty("CameraArmCenterRightRollbackTime"))
-		{
-			this.CameraArmCenterRightRollbackTime = fightCameraLogicComponent.CameraArmCenterRightRollbackTime;
-		}
-		if (base.CanResetComponentProperty("LastCameraArmCenterLeftInput"))
-		{
-			this.LastCameraArmCenterLeftInput = fightCameraLogicComponent.LastCameraArmCenterLeftInput;
-		}
-		if (base.CanResetComponentProperty("LastCameraArmCenterRightInput"))
-		{
-			this.LastCameraArmCenterRightInput = fightCameraLogicComponent.LastCameraArmCenterRightInput;
-		}
-		if (base.CanResetComponentProperty("CurrentCamera") && fightCameraLogicComponent.CurrentCamera != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<VirtualCamera>(this.CurrentCamera), "CurrentCamera"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("CameraLocation") && fightCameraLogicComponent.CameraLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CameraLocation), "CameraLocation"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("CameraForward") && fightCameraLogicComponent.CameraForward != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CameraForward), "CameraForward"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("LastCamera") && fightCameraLogicComponent.LastCamera != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<VirtualCamera>(this.LastCamera), "LastCamera"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("DesiredCamera"))
-		{
-			if (fightCameraLogicComponent.DesiredCamera == null)
-			{
-				this.DesiredCamera = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VirtualCamera>(this.DesiredCamera), "DesiredCamera"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DebugDesiredCameraProps"))
-		{
-			if (fightCameraLogicComponent.DebugDesiredCameraProps == null)
-			{
-				this.DebugDesiredCameraProps = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, object>>(this.DebugDesiredCameraProps), "DebugDesiredCameraProps"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DebugCurrentCameraProps"))
-		{
-			if (fightCameraLogicComponent.DebugCurrentCameraProps == null)
-			{
-				this.DebugCurrentCameraProps = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, object>>(this.DebugCurrentCameraProps), "DebugCurrentCameraProps"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DebugLogicComponentsProps"))
-		{
-			if (fightCameraLogicComponent.DebugLogicComponentsProps == null)
-			{
-				this.DebugLogicComponentsProps = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, object>>(this.DebugLogicComponentsProps), "DebugLogicComponentsProps"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DebugControllersProps"))
-		{
-			if (fightCameraLogicComponent.DebugControllersProps == null)
-			{
-				this.DebugControllersProps = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, Dictionary<string, object>>>(this.DebugControllersProps), "DebugControllersProps"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DebugControllerModifications"))
-		{
-			if (fightCameraLogicComponent.DebugControllerModifications == null)
-			{
-				this.DebugControllerModifications = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, List<ValueTuple<string, string, string>>>>(this.DebugControllerModifications), "DebugControllerModifications"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DebugCameraPropsRaw"))
-		{
-			if (fightCameraLogicComponent.DebugCameraPropsRaw == null)
-			{
-				this.DebugCameraPropsRaw = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, object>>(this.DebugCameraPropsRaw), "DebugCameraPropsRaw"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraConfigController"))
-		{
-			if (fightCameraLogicComponent.CameraConfigController == null)
-			{
-				this.CameraConfigController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraConfigController>(this.CameraConfigController), "CameraConfigController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraFocusController"))
-		{
-			if (fightCameraLogicComponent.CameraFocusController == null)
-			{
-				this.CameraFocusController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraFocusController>(this.CameraFocusController), "CameraFocusController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraInputController"))
-		{
-			if (fightCameraLogicComponent.CameraInputController == null)
-			{
-				this.CameraInputController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraInputController>(this.CameraInputController), "CameraInputController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraModifyController"))
-		{
-			if (fightCameraLogicComponent.CameraModifyController == null)
-			{
-				this.CameraModifyController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraModifyController>(this.CameraModifyController), "CameraModifyController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraAdjustController"))
-		{
-			if (fightCameraLogicComponent.CameraAdjustController == null)
-			{
-				this.CameraAdjustController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraAdjustController>(this.CameraAdjustController), "CameraAdjustController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraSidestepController"))
-		{
-			if (fightCameraLogicComponent.CameraSidestepController == null)
-			{
-				this.CameraSidestepController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraSidestepController>(this.CameraSidestepController), "CameraSidestepController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraAutoController"))
-		{
-			if (fightCameraLogicComponent.CameraAutoController == null)
-			{
-				this.CameraAutoController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraAutoController>(this.CameraAutoController), "CameraAutoController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraGuideController"))
-		{
-			if (fightCameraLogicComponent.CameraGuideController == null)
-			{
-				this.CameraGuideController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraGuideController>(this.CameraGuideController), "CameraGuideController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraRunningController"))
-		{
-			if (fightCameraLogicComponent.CameraRunningController == null)
-			{
-				this.CameraRunningController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraExploreController>(this.CameraRunningController), "CameraRunningController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraRotatorController"))
-		{
-			if (fightCameraLogicComponent.CameraRotatorController == null)
-			{
-				this.CameraRotatorController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraRotatorController>(this.CameraRotatorController), "CameraRotatorController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraDialogueController"))
-		{
-			if (fightCameraLogicComponent.CameraDialogueController == null)
-			{
-				this.CameraDialogueController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraDialogueController>(this.CameraDialogueController), "CameraDialogueController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraFixedController"))
-		{
-			if (fightCameraLogicComponent.CameraFixedController == null)
-			{
-				this.CameraFixedController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraFixedController>(this.CameraFixedController), "CameraFixedController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraClimbController"))
-		{
-			if (fightCameraLogicComponent.CameraClimbController == null)
-			{
-				this.CameraClimbController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraClimbController>(this.CameraClimbController), "CameraClimbController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraHookController"))
-		{
-			if (fightCameraLogicComponent.CameraHookController == null)
-			{
-				this.CameraHookController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraHookController>(this.CameraHookController), "CameraHookController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraGravityController"))
-		{
-			if (fightCameraLogicComponent.CameraGravityController == null)
-			{
-				this.CameraGravityController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraGravityController>(this.CameraGravityController), "CameraGravityController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraSplineMoveController"))
-		{
-			if (fightCameraLogicComponent.CameraSplineMoveController == null)
-			{
-				this.CameraSplineMoveController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraSplineMoveController>(this.CameraSplineMoveController), "CameraSplineMoveController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraSpecialGameplayController"))
-		{
-			if (fightCameraLogicComponent.CameraSpecialGameplayController == null)
-			{
-				this.CameraSpecialGameplayController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraSpecialGameplayController>(this.CameraSpecialGameplayController), "CameraSpecialGameplayController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraRotation"))
-		{
-			if (fightCameraLogicComponent.CameraRotation == null)
-			{
-				this.CameraRotation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.CameraRotation), "CameraRotation"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsModifiedArmLocation"))
-		{
-			this.IsModifiedArmLocation = fightCameraLogicComponent.IsModifiedArmLocation;
-		}
-		if (base.CanResetComponentProperty("IsModifiedArmLength"))
-		{
-			this.IsModifiedArmLength = fightCameraLogicComponent.IsModifiedArmLength;
-		}
-		if (base.CanResetComponentProperty("IsModifiedArmOffset"))
-		{
-			this.IsModifiedArmOffset = fightCameraLogicComponent.IsModifiedArmOffset;
-		}
-		if (base.CanResetComponentProperty("IsModifiedZoomModifier"))
-		{
-			this.IsModifiedZoomModifier = fightCameraLogicComponent.IsModifiedZoomModifier;
-		}
-		if (base.CanResetComponentProperty("IsModifiedArmRotationYaw"))
-		{
-			this.IsModifiedArmRotationYaw = fightCameraLogicComponent.IsModifiedArmRotationYaw;
-		}
-		if (base.CanResetComponentProperty("IsModifiedArmRotationPitch"))
-		{
-			this.IsModifiedArmRotationPitch = fightCameraLogicComponent.IsModifiedArmRotationPitch;
-		}
-		if (base.CanResetComponentProperty("IsModifiedArmRotationRoll"))
-		{
-			this.IsModifiedArmRotationRoll = fightCameraLogicComponent.IsModifiedArmRotationRoll;
-		}
-		if (base.CanResetComponentProperty("IsModifiedCameraOffset"))
-		{
-			this.IsModifiedCameraOffset = fightCameraLogicComponent.IsModifiedCameraOffset;
-		}
-		if (base.CanResetComponentProperty("IsModifiedFov"))
-		{
-			this.IsModifiedFov = fightCameraLogicComponent.IsModifiedFov;
-		}
-		if (base.CanResetComponentProperty("SuppressClearRollFlags"))
-		{
-			this.SuppressClearRollFlags = fightCameraLogicComponent.SuppressClearRollFlags;
-		}
-		if (base.CanResetComponentProperty("FloatUpHeight"))
-		{
-			this.FloatUpHeight = fightCameraLogicComponent.FloatUpHeight;
-		}
-		if (base.CanResetComponentProperty("DisplayComponentInternal"))
-		{
-			if (fightCameraLogicComponent.DisplayComponentInternal == null)
-			{
-				this.DisplayComponentInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FightCameraDisplayComponent>(this.DisplayComponentInternal), "DisplayComponentInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CacheCameraVector") && fightCameraLogicComponent.CacheCameraVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheCameraVector), "CacheCameraVector"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("CacheWorldUp") && fightCameraLogicComponent.CacheWorldUp != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheWorldUp), "CacheWorldUp"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("CacheCameraForward") && fightCameraLogicComponent.CacheCameraForward != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheCameraForward), "CacheCameraForward"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("CameraQuat") && fightCameraLogicComponent.CameraQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.CameraQuat), "CameraQuat"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("CameraQuatInverse") && fightCameraLogicComponent.CameraQuatInverse != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.CameraQuatInverse), "CameraQuatInverse"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("ArmLocationDelta") && fightCameraLogicComponent.ArmLocationDelta != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.ArmLocationDelta), "ArmLocationDelta"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("TempVector") && fightCameraLogicComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector), "TempVector"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("TempVector2") && fightCameraLogicComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector2), "TempVector2"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("TempVector3") && fightCameraLogicComponent.TempVector3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector3), "TempVector3"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("TempVector4") && fightCameraLogicComponent.TempVector4 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector4), "TempVector4"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("TempRotator") && fightCameraLogicComponent.TempRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TempRotator), "TempRotator"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("TempQuat") && fightCameraLogicComponent.TempQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TempQuat), "TempQuat"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("TempQuat2") && fightCameraLogicComponent.TempQuat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TempQuat2), "TempQuat2"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("TempQuat3") && fightCameraLogicComponent.TempQuat3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TempQuat3), "TempQuat3"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("TempQuatInverse") && fightCameraLogicComponent.TempQuatInverse != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TempQuatInverse), "TempQuatInverse"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("TempDesireLocation") && fightCameraLogicComponent.TempDesireLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempDesireLocation), "TempDesireLocation"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("IsDitherEffectEnable"))
-		{
-			this.IsDitherEffectEnable = fightCameraLogicComponent.IsDitherEffectEnable;
-		}
-		if (base.CanResetComponentProperty("Initialized"))
-		{
-			this.Initialized = fightCameraLogicComponent.Initialized;
-		}
-		if (base.CanResetComponentProperty("CameraConfig"))
-		{
-			if (fightCameraLogicComponent.CameraConfig == null)
-			{
-				this.CameraConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BP_FightCameraConfig_C>(this.CameraConfig), "CameraConfig"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DefaultConfigs"))
-		{
-			if (fightCameraLogicComponent.DefaultConfigs == null)
-			{
-				this.DefaultConfigs = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EFightCameraDefault, float>>(this.DefaultConfigs), "DefaultConfigs"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DefaultCurveConfigs"))
-		{
-			if (fightCameraLogicComponent.DefaultCurveConfigs == null)
-			{
-				this.DefaultCurveConfigs = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EFightCameraDefault, CurveBase>>(this.DefaultCurveConfigs), "DefaultCurveConfigs"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ConfigMap") && fightCameraLogicComponent.ConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EFightCameraDefault, string>>(this.ConfigMap), "ConfigMap"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("CurveConfigMap") && fightCameraLogicComponent.CurveConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EFightCameraDefault, string>>(this.CurveConfigMap), "CurveConfigMap"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("VehicleConfigs"))
-		{
-			if (fightCameraLogicComponent.VehicleConfigs == null)
-			{
-				this.VehicleConfigs = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EFightCameraVehicle, float>>(this.VehicleConfigs), "VehicleConfigs"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("VehicleCurveConfigs"))
-		{
-			if (fightCameraLogicComponent.VehicleCurveConfigs == null)
-			{
-				this.VehicleCurveConfigs = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EFightCameraVehicle, CurveBase>>(this.VehicleCurveConfigs), "VehicleCurveConfigs"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("VehicleConfigMap") && fightCameraLogicComponent.VehicleConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EFightCameraVehicle, string>>(this.VehicleConfigMap), "VehicleConfigMap"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("VehicleCurveConfigMap") && fightCameraLogicComponent.VehicleCurveConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EFightCameraVehicle, string>>(this.VehicleCurveConfigMap), "VehicleCurveConfigMap"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("CameraCollision"))
-		{
-			if (fightCameraLogicComponent.CameraCollision == null)
-			{
-				this.CameraCollision = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraCollision>(this.CameraCollision), "CameraCollision"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraRotationZone"))
-		{
-			if (fightCameraLogicComponent.CameraRotationZone == null)
-			{
-				this.CameraRotationZone = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraRotationZone>(this.CameraRotationZone), "CameraRotationZone"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraTransformBuffer"))
-		{
-			if (fightCameraLogicComponent.CameraTransformBuffer == null)
-			{
-				this.CameraTransformBuffer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraTransformBuffer>(this.CameraTransformBuffer), "CameraTransformBuffer"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SettlementCamera"))
-		{
-			if (fightCameraLogicComponent.SettlementCamera == null)
-			{
-				this.SettlementCamera = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SettlementCamera>(this.SettlementCamera), "SettlementCamera"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SoarCameraShakeCurve"))
-		{
-			if (fightCameraLogicComponent.SoarCameraShakeCurve == null)
-			{
-				this.SoarCameraShakeCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCurveFloat>(this.SoarCameraShakeCurve), "SoarCameraShakeCurve"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SoarCameraShake"))
-		{
-			if (fightCameraLogicComponent.SoarCameraShake == null)
-			{
-				this.SoarCameraShake = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCameraShakeBase>(this.SoarCameraShake), "SoarCameraShake"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("StartLoadCameraCurve"))
-		{
-			this.StartLoadCameraCurve = fightCameraLogicComponent.StartLoadCameraCurve;
-		}
-		if (base.CanResetComponentProperty("CameraShakeCurve"))
-		{
-			if (fightCameraLogicComponent.CameraShakeCurve == null)
-			{
-				this.CameraShakeCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCurveFloat>(this.CameraShakeCurve), "CameraShakeCurve"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraShakeClass"))
-		{
-			if (fightCameraLogicComponent.CameraShakeClass == null)
-			{
-				this.CameraShakeClass = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UClass>(this.CameraShakeClass), "CameraShakeClass"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraShake"))
-		{
-			if (fightCameraLogicComponent.CameraShake == null)
-			{
-				this.CameraShake = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCameraShakeBase>(this.CameraShake), "CameraShake"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CurrentArmCenterForwardEdgeMin"))
-		{
-			this.CurrentArmCenterForwardEdgeMin = fightCameraLogicComponent.CurrentArmCenterForwardEdgeMin;
-		}
-		if (base.CanResetComponentProperty("CurrentArmCenterForwardEdgeMax"))
-		{
-			this.CurrentArmCenterForwardEdgeMax = fightCameraLogicComponent.CurrentArmCenterForwardEdgeMax;
-		}
-		if (base.CanResetComponentProperty("CurrentArmCenterRightEdgeMin"))
-		{
-			this.CurrentArmCenterRightEdgeMin = fightCameraLogicComponent.CurrentArmCenterRightEdgeMin;
-		}
-		if (base.CanResetComponentProperty("CurrentArmCenterRightEdgeMax"))
-		{
-			this.CurrentArmCenterRightEdgeMax = fightCameraLogicComponent.CurrentArmCenterRightEdgeMax;
-		}
-		if (base.CanResetComponentProperty("CurrentArmCenterUpEdgeMin"))
-		{
-			this.CurrentArmCenterUpEdgeMin = fightCameraLogicComponent.CurrentArmCenterUpEdgeMin;
-		}
-		if (base.CanResetComponentProperty("CurrentArmCenterUpEdgeMax"))
-		{
-			this.CurrentArmCenterUpEdgeMax = fightCameraLogicComponent.CurrentArmCenterUpEdgeMax;
-		}
-		if (base.CanResetComponentProperty("DefaultLandscapeLodScaleFactor"))
-		{
-			this.DefaultLandscapeLodScaleFactor = fightCameraLogicComponent.DefaultLandscapeLodScaleFactor;
-		}
-		if (base.CanResetComponentProperty("LastFrameFov"))
-		{
-			this.LastFrameFov = fightCameraLogicComponent.LastFrameFov;
-		}
-		if (base.CanResetComponentProperty("StartFloatUpHeightRatio"))
-		{
-			this.StartFloatUpHeightRatio = fightCameraLogicComponent.StartFloatUpHeightRatio;
-		}
-		if (base.CanResetComponentProperty("CurrentFloatUpHeightRatio"))
-		{
-			this.CurrentFloatUpHeightRatio = fightCameraLogicComponent.CurrentFloatUpHeightRatio;
-		}
-		if (base.CanResetComponentProperty("EnableVehicleWaterFallCamera"))
-		{
-			this.EnableVehicleWaterFallCamera = fightCameraLogicComponent.EnableVehicleWaterFallCamera;
-		}
-		if (base.CanResetComponentProperty("LastFrameAttachToVehicle"))
-		{
-			this.LastFrameAttachToVehicle = fightCameraLogicComponent.LastFrameAttachToVehicle;
-		}
-		if (base.CanResetComponentProperty("FinalCameraDistance"))
-		{
-			this.FinalCameraDistance = fightCameraLogicComponent.FinalCameraDistance;
-		}
-		if (base.CanResetComponentProperty("NanOutputTime"))
-		{
-			this.NanOutputTime = fightCameraLogicComponent.NanOutputTime;
-		}
-		if (base.CanResetComponentProperty("GravityMode"))
-		{
-			this.GravityMode = fightCameraLogicComponent.GravityMode;
-		}
-		if (base.CanResetComponentProperty("GravityDirect"))
-		{
-			if (fightCameraLogicComponent.GravityDirect == null)
-			{
-				this.GravityDirect = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.GravityDirect), "GravityDirect"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("GravityUp"))
-		{
-			if (fightCameraLogicComponent.GravityUp == null)
-			{
-				this.GravityUp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.GravityUp), "GravityUp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("GravityQuat"))
-		{
-			if (fightCameraLogicComponent.GravityQuat == null)
-			{
-				this.GravityQuat = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.GravityQuat), "GravityQuat"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("GravityInverseQuat"))
-		{
-			if (fightCameraLogicComponent.GravityInverseQuat == null)
-			{
-				this.GravityInverseQuat = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.GravityInverseQuat), "GravityInverseQuat"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CameraRotationInGravity"))
-		{
-			if (fightCameraLogicComponent.CameraRotationInGravity == null)
-			{
-				this.CameraRotationInGravity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.CameraRotationInGravity), "CameraRotationInGravity"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PlayerLocationInGravity"))
-		{
-			if (fightCameraLogicComponent.PlayerLocationInGravity == null)
-			{
-				this.PlayerLocationInGravity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PlayerLocationInGravity), "PlayerLocationInGravity"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PlayerRotatorInGravity"))
-		{
-			if (fightCameraLogicComponent.PlayerRotatorInGravity == null)
-			{
-				this.PlayerRotatorInGravity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.PlayerRotatorInGravity), "PlayerRotatorInGravity"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CacheTargetGravity"))
-		{
-			if (fightCameraLogicComponent.CacheTargetGravity == null)
-			{
-				this.CacheTargetGravity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheTargetGravity), "CacheTargetGravity"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DiagnosticCameraDistanceMap") && fightCameraLogicComponent.DiagnosticCameraDistanceMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<float, float>>(this.DiagnosticCameraDistanceMap), "DiagnosticCameraDistanceMap"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("ShouldOutputDiagnosticCameraDistanceLog"))
-		{
-			this.ShouldOutputDiagnosticCameraDistanceLog = fightCameraLogicComponent.ShouldOutputDiagnosticCameraDistanceLog;
-		}
-		if (base.CanResetComponentProperty("OutputDiagnosticCameraDistanceExp"))
-		{
-			this.OutputDiagnosticCameraDistanceExp = fightCameraLogicComponent.OutputDiagnosticCameraDistanceExp;
-		}
-		if (base.CanResetComponentProperty("OutputDiagnosticCameraDistanceSquared"))
-		{
-			this.OutputDiagnosticCameraDistanceSquared = fightCameraLogicComponent.OutputDiagnosticCameraDistanceSquared;
-		}
-		if (base.CanResetComponentProperty("PairConfigKeySet") && fightCameraLogicComponent.PairConfigKeySet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EFightCameraDefault, EFightCameraDefault>>(this.PairConfigKeySet), "PairConfigKeySet"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("PairKeyArray") && fightCameraLogicComponent.PairKeyArray != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ValueTuple<EFightCameraDefault, EFightCameraDefault>>>(this.PairKeyArray), "PairKeyArray"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("NeedValueCheckPairKeySet") && fightCameraLogicComponent.NeedValueCheckPairKeySet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EFightCameraDefault>(this.NeedValueCheckPairKeySet), "NeedValueCheckPairKeySet"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("SelfCenteredTimeDilation"))
-		{
-			this.SelfCenteredTimeDilation = fightCameraLogicComponent.SelfCenteredTimeDilation;
-		}
-		if (base.CanResetComponentProperty("IsEnablePanning"))
-		{
-			this.IsEnablePanning = fightCameraLogicComponent.IsEnablePanning;
-		}
-		if (base.CanResetComponentProperty("ResetTargetLocation") && fightCameraLogicComponent.ResetTargetLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.ResetTargetLocation), "ResetTargetLocation"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("ResetAddRotator") && fightCameraLogicComponent.ResetAddRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.ResetAddRotator), "ResetAddRotator"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("ScreenSizeRefX"))
-		{
-			this.ScreenSizeRefX = fightCameraLogicComponent.ScreenSizeRefX;
-		}
-		if (base.CanResetComponentProperty("ScreenSizeRefY"))
-		{
-			this.ScreenSizeRefY = fightCameraLogicComponent.ScreenSizeRefY;
-		}
-		if (base.CanResetComponentProperty("CameraTargetLocationBufferTime"))
-		{
-			this.CameraTargetLocationBufferTime = fightCameraLogicComponent.CameraTargetLocationBufferTime;
-		}
-		if (base.CanResetComponentProperty("IsStartCameraTargetLocationBuffer"))
-		{
-			this.IsStartCameraTargetLocationBuffer = fightCameraLogicComponent.IsStartCameraTargetLocationBuffer;
-		}
-		return (!base.CanResetComponentProperty("TempArmLocation") || fightCameraLogicComponent.TempArmLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempArmLocation), "TempArmLocation")) && (!base.CanResetComponentProperty("TempOffset") || fightCameraLogicComponent.TempOffset == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempOffset), "TempOffset"));
-	}
-
-	// Token: 0x0600225A RID: 8794 RVA: 0x000CE4F0 File Offset: 0x000CC6F0
+	// Token: 0x0600230B RID: 8971 RVA: 0x000D3150 File Offset: 0x000D1350
 	[NullableContext(0)]
 	public virtual bool TryGetMember(string key, out object value)
 	{
 		uint num = <PrivateImplementationDetails>.ComputeStringHash(key);
 		if (num <= 2314933328U)
 		{
-			if (num <= 1059729464U)
+			if (num <= 1054760544U)
 			{
 				if (num <= 567375772U)
 				{
@@ -6619,9 +4944,9 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 						return true;
 					}
 				}
-				else if (num <= 801993083U)
+				else if (num <= 799943525U)
 				{
-					if (num <= 680640550U)
+					if (num <= 672725236U)
 					{
 						if (num <= 629650999U)
 						{
@@ -6682,20 +5007,20 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 						}
 						else if (num != 647972525U)
 						{
-							if (num != 672725236U)
+							if (num != 662581684U)
 							{
-								if (num == 680640550U)
+								if (num == 672725236U)
 								{
-									if (key == "CameraGuideController")
+									if (key == "CameraGravityController")
 									{
-										value = this.CameraGuideController;
+										value = this.CameraGravityController;
 										return true;
 									}
 								}
 							}
-							else if (key == "CameraGravityController")
+							else if (key == "YawSoftZoneRollbackEnableTime")
 							{
-								value = this.CameraGravityController;
+								value = this.YawSoftZoneRollbackEnableTime;
 								return true;
 							}
 						}
@@ -6705,453 +5030,453 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 							return true;
 						}
 					}
-					else if (num <= 717412841U)
+					else if (num <= 701335480U)
 					{
-						if (num <= 692359169U)
+						if (num <= 688349898U)
 						{
-							if (num != 688349898U)
+							if (num != 680640550U)
 							{
-								if (num == 692359169U)
+								if (num == 688349898U)
 								{
-									if (key == "ArmCenterForwardInputEnableTime")
+									if (key == "CameraInputController")
 									{
-										value = this.ArmCenterForwardInputEnableTime;
+										value = this.CameraInputController;
 										return true;
 									}
 								}
 							}
-							else if (key == "CameraInputController")
+							else if (key == "CameraGuideController")
 							{
-								value = this.CameraInputController;
+								value = this.CameraGuideController;
 								return true;
 							}
 						}
-						else if (num != 697081505U)
+						else if (num != 692359169U)
 						{
-							if (num != 701335480U)
+							if (num != 697081505U)
 							{
-								if (num == 717412841U)
+								if (num == 701335480U)
 								{
-									if (key == "DefaultPitchOutRangeMax")
+									if (key == "ArmCenterRightInputEnableTime")
 									{
-										value = this.DefaultPitchOutRangeMax;
+										value = this.ArmCenterRightInputEnableTime;
 										return true;
 									}
 								}
 							}
-							else if (key == "ArmCenterRightInputEnableTime")
+							else if (key == "MaxArmLength")
 							{
-								value = this.ArmCenterRightInputEnableTime;
+								value = this.MaxArmLength;
 								return true;
 							}
 						}
-						else if (key == "MaxArmLength")
+						else if (key == "ArmCenterForwardInputEnableTime")
 						{
-							value = this.MaxArmLength;
+							value = this.ArmCenterForwardInputEnableTime;
 							return true;
 						}
 					}
-					else if (num <= 774198167U)
+					else if (num <= 744405509U)
 					{
-						if (num != 744405509U)
+						if (num != 717412841U)
 						{
-							if (num == 774198167U)
+							if (num == 744405509U)
 							{
-								if (key == "TmpArmLocation")
+								if (key == "CameraLocation")
 								{
-									value = this.TmpArmLocation;
+									value = this.CameraLocation;
 									return true;
 								}
 							}
 						}
-						else if (key == "CameraLocation")
+						else if (key == "DefaultPitchOutRangeMax")
 						{
-							value = this.CameraLocation;
+							value = this.DefaultPitchOutRangeMax;
 							return true;
 						}
 					}
-					else if (num != 782467221U)
+					else if (num != 774198167U)
 					{
-						if (num != 799943525U)
+						if (num != 782467221U)
 						{
-							if (num == 801993083U)
+							if (num == 799943525U)
 							{
-								if (key == "ArmCenterRightReverseSpeed")
+								if (key == "ArmLength")
 								{
-									value = this.ArmCenterRightReverseSpeed;
+									value = this.ArmLength;
 									return true;
 								}
 							}
 						}
-						else if (key == "ArmLength")
+						else if (key == "DebugDesiredCameraProps")
 						{
-							value = this.ArmLength;
+							value = this.DebugDesiredCameraProps;
 							return true;
 						}
 					}
-					else if (key == "DebugDesiredCameraProps")
+					else if (key == "TmpArmLocation")
 					{
-						value = this.DebugDesiredCameraProps;
+						value = this.TmpArmLocation;
 						return true;
 					}
 				}
-				else if (num <= 1010131257U)
+				else if (num <= 1009695058U)
 				{
-					if (num <= 948547638U)
+					if (num <= 880648252U)
 					{
-						if (num <= 837530523U)
+						if (num <= 826753164U)
 						{
-							if (num != 826753164U)
+							if (num != 801993083U)
 							{
-								if (num == 837530523U)
+								if (num == 826753164U)
 								{
-									if (key == "StartHidePitch")
+									if (key == "HasOverrideLocation")
 									{
-										value = this.StartHidePitch;
+										value = this.HasOverrideLocation;
 										return true;
 									}
 								}
 							}
-							else if (key == "HasOverrideLocation")
+							else if (key == "ArmCenterRightReverseSpeed")
 							{
-								value = this.HasOverrideLocation;
+								value = this.ArmCenterRightReverseSpeed;
 								return true;
 							}
 						}
-						else if (num != 851435380U)
+						else if (num != 837530523U)
 						{
-							if (num != 880648252U)
+							if (num != 851435380U)
 							{
-								if (num == 948547638U)
+								if (num == 880648252U)
 								{
-									if (key == "CameraArmCenterRightInputTime")
+									if (key == "LastCameraArmCenterLeftInput")
 									{
-										value = this.CameraArmCenterRightInputTime;
+										value = this.LastCameraArmCenterLeftInput;
 										return true;
 									}
 								}
 							}
-							else if (key == "LastCameraArmCenterLeftInput")
+							else if (key == "CameraRotateToTargetCurve")
 							{
-								value = this.LastCameraArmCenterLeftInput;
+								value = this.CameraRotateToTargetCurve;
 								return true;
 							}
 						}
-						else if (key == "CameraRotateToTargetCurve")
+						else if (key == "StartHidePitch")
 						{
-							value = this.CameraRotateToTargetCurve;
+							value = this.StartHidePitch;
 							return true;
 						}
 					}
-					else if (num <= 958841313U)
+					else if (num <= 950544654U)
 					{
-						if (num != 950544654U)
+						if (num != 948547638U)
 						{
-							if (num == 958841313U)
+							if (num == 950544654U)
 							{
-								if (key == "ArmCenterUpInputEnableTime")
+								if (key == "VehicleEntityHandle")
 								{
-									value = this.ArmCenterUpInputEnableTime;
+									value = this.VehicleEntityHandle;
 									return true;
 								}
 							}
 						}
-						else if (key == "VehicleEntityHandle")
+						else if (key == "CameraArmCenterRightInputTime")
 						{
-							value = this.VehicleEntityHandle;
+							value = this.CameraArmCenterRightInputTime;
 							return true;
 						}
 					}
-					else if (num != 985518237U)
+					else if (num != 958841313U)
 					{
-						if (num != 1009695058U)
+						if (num != 985518237U)
 						{
-							if (num == 1010131257U)
+							if (num == 1009695058U)
 							{
-								if (key == "StartHideDistanceSquared")
+								if (key == "LastCamera")
 								{
-									value = this.StartHideDistanceSquared;
+									value = this.LastCamera;
 									return true;
 								}
 							}
 						}
-						else if (key == "LastCamera")
+						else if (key == "Initialized")
 						{
-							value = this.LastCamera;
+							value = this.Initialized;
 							return true;
 						}
 					}
-					else if (key == "Initialized")
+					else if (key == "ArmCenterUpInputEnableTime")
 					{
-						value = this.Initialized;
+						value = this.ArmCenterUpInputEnableTime;
 						return true;
 					}
 				}
-				else if (num <= 1043096550U)
+				else if (num <= 1036827135U)
 				{
-					if (num <= 1018130055U)
+					if (num <= 1015309379U)
 					{
-						if (num != 1015309379U)
+						if (num != 1010131257U)
 						{
-							if (num == 1018130055U)
+							if (num == 1015309379U)
 							{
-								if (key == "DefaultPitchOutRangeMin")
+								if (key == "StartLoadCameraCurve")
 								{
-									value = this.DefaultPitchOutRangeMin;
+									value = this.StartLoadCameraCurve;
 									return true;
 								}
 							}
 						}
-						else if (key == "StartLoadCameraCurve")
+						else if (key == "StartHideDistanceSquared")
 						{
-							value = this.StartLoadCameraCurve;
+							value = this.StartHideDistanceSquared;
 							return true;
 						}
 					}
-					else if (num != 1024967081U)
+					else if (num != 1018130055U)
 					{
-						if (num != 1036827135U)
+						if (num != 1024967081U)
 						{
-							if (num == 1043096550U)
+							if (num == 1036827135U)
 							{
-								if (key == "TempDesireLocation")
+								if (key == "FadeElapse")
 								{
-									value = this.TempDesireLocation;
+									value = this.FadeElapse;
 									return true;
 								}
 							}
 						}
-						else if (key == "FadeElapse")
+						else if (key == "CheckWidth")
 						{
-							value = this.FadeElapse;
+							value = this.CheckWidth;
 							return true;
 						}
 					}
-					else if (key == "CheckWidth")
+					else if (key == "DefaultPitchOutRangeMin")
 					{
-						value = this.CheckWidth;
+						value = this.DefaultPitchOutRangeMin;
 						return true;
 					}
 				}
-				else if (num <= 1048290642U)
+				else if (num <= 1047114489U)
 				{
-					if (num != 1047114489U)
+					if (num != 1043096550U)
 					{
-						if (num == 1048290642U)
+						if (num == 1047114489U)
 						{
-							if (key == "CharAddZ")
+							if (key == "CameraRunningController")
 							{
-								value = this.CharAddZ;
-								return true;
-							}
-						}
-					}
-					else if (key == "CameraRunningController")
-					{
-						value = this.CameraRunningController;
-						return true;
-					}
-				}
-				else if (num != 1054193244U)
-				{
-					if (num != 1054760544U)
-					{
-						if (num == 1059729464U)
-						{
-							if (key == "ArmCenterUpSpeedMin")
-							{
-								value = this.ArmCenterUpSpeedMin;
+								value = this.CameraRunningController;
 								return true;
 							}
 						}
 					}
-					else if (key == "TempRotator")
+					else if (key == "TempDesireLocation")
 					{
-						value = this.TempRotator;
+						value = this.TempDesireLocation;
 						return true;
 					}
 				}
-				else if (key == "TargetClearByBlockTime")
+				else if (num != 1048290642U)
 				{
-					value = this.TargetClearByBlockTime;
+					if (num != 1054193244U)
+					{
+						if (num == 1054760544U)
+						{
+							if (key == "TempRotator")
+							{
+								value = this.TempRotator;
+								return true;
+							}
+						}
+					}
+					else if (key == "TargetClearByBlockTime")
+					{
+						value = this.TargetClearByBlockTime;
+						return true;
+					}
+				}
+				else if (key == "CharAddZ")
+				{
+					value = this.CharAddZ;
 					return true;
 				}
 			}
 			else if (num <= 1687688521U)
 			{
-				if (num <= 1357254421U)
+				if (num <= 1356168187U)
 				{
-					if (num <= 1259189048U)
+					if (num <= 1249129854U)
 					{
-						if (num <= 1182713049U)
+						if (num <= 1163518164U)
 						{
-							if (num <= 1147077283U)
+							if (num <= 1092692786U)
 							{
-								if (num != 1092692786U)
+								if (num != 1059729464U)
 								{
-									if (num == 1147077283U)
+									if (num == 1092692786U)
 									{
-										if (key == "CameraShakeCurve")
+										if (key == "PitchZoneSpeedMin")
 										{
-											value = this.CameraShakeCurve;
+											value = this.PitchZoneSpeedMin;
 											return true;
 										}
 									}
 								}
-								else if (key == "PitchZoneSpeedMin")
+								else if (key == "ArmCenterUpSpeedMin")
 								{
-									value = this.PitchZoneSpeedMin;
+									value = this.ArmCenterUpSpeedMin;
 									return true;
 								}
 							}
-							else if (num != 1163518164U)
+							else if (num != 1147077283U)
 							{
-								if (num == 1182713049U)
+								if (num == 1163518164U)
 								{
-									if (key == "SettlementCamera")
+									if (key == "DiagnosticCameraDistanceMap")
 									{
-										value = this.SettlementCamera;
+										value = this.DiagnosticCameraDistanceMap;
 										return true;
 									}
 								}
 							}
-							else if (key == "DiagnosticCameraDistanceMap")
+							else if (key == "CameraShakeCurve")
 							{
-								value = this.DiagnosticCameraDistanceMap;
+								value = this.CameraShakeCurve;
 								return true;
 							}
 						}
-						else if (num <= 1188642070U)
+						else if (num <= 1184465240U)
 						{
-							if (num != 1184465240U)
+							if (num != 1182713049U)
 							{
-								if (num == 1188642070U)
+								if (num == 1184465240U)
 								{
-									if (key == "CharacterMoveEnterState")
+									if (key == "CameraOffsetFloatUpMin")
 									{
-										value = this.CharacterMoveEnterState;
+										value = this.CameraOffsetFloatUpMin;
 										return true;
 									}
 								}
 							}
-							else if (key == "CameraOffsetFloatUpMin")
+							else if (key == "SettlementCamera")
 							{
-								value = this.CameraOffsetFloatUpMin;
+								value = this.SettlementCamera;
 								return true;
 							}
 						}
-						else if (num != 1192138979U)
+						else if (num != 1188642070U)
 						{
-							if (num != 1249129854U)
+							if (num != 1192138979U)
 							{
-								if (num == 1259189048U)
+								if (num == 1249129854U)
 								{
-									if (key == "PitchZoneSpeedMax")
+									if (key == "CameraOffsetFloatUpArmLengthMin")
 									{
-										value = this.PitchZoneSpeedMax;
+										value = this.CameraOffsetFloatUpArmLengthMin;
 										return true;
 									}
 								}
 							}
-							else if (key == "CameraOffsetFloatUpArmLengthMin")
+							else if (key == "IsDitherEffectEnable")
 							{
-								value = this.CameraOffsetFloatUpArmLengthMin;
+								value = this.IsDitherEffectEnable;
 								return true;
 							}
 						}
-						else if (key == "IsDitherEffectEnable")
+						else if (key == "CharacterMoveEnterState")
 						{
-							value = this.IsDitherEffectEnable;
+							value = this.CharacterMoveEnterState;
 							return true;
 						}
 					}
-					else if (num <= 1319985167U)
+					else if (num <= 1308461115U)
 					{
-						if (num <= 1285864112U)
+						if (num <= 1265220884U)
 						{
-							if (num != 1265220884U)
+							if (num != 1259189048U)
 							{
-								if (num == 1285864112U)
+								if (num == 1265220884U)
 								{
-									if (key == "LastFrameCameraArmLocationSocketName")
+									if (key == "Fading")
 									{
-										value = this.LastFrameCameraArmLocationSocketName;
+										value = this.Fading;
 										return true;
 									}
 								}
 							}
-							else if (key == "Fading")
+							else if (key == "PitchZoneSpeedMax")
 							{
-								value = this.Fading;
+								value = this.PitchZoneSpeedMax;
 								return true;
 							}
 						}
-						else if (num != 1304049787U)
+						else if (num != 1285864112U)
 						{
-							if (num != 1308461115U)
+							if (num != 1304049787U)
 							{
-								if (num == 1319985167U)
+								if (num == 1308461115U)
 								{
-									if (key == "ArmCenterRightEdgeMax")
+									if (key == "VehicleActorComponent")
 									{
-										value = this.ArmCenterRightEdgeMax;
+										value = this.VehicleActorComponent;
 										return true;
 									}
 								}
 							}
-							else if (key == "VehicleActorComponent")
+							else if (key == "ArmLocationFading")
 							{
-								value = this.VehicleActorComponent;
+								value = this.ArmLocationFading;
 								return true;
 							}
 						}
-						else if (key == "ArmLocationFading")
+						else if (key == "LastFrameCameraArmLocationSocketName")
 						{
-							value = this.ArmLocationFading;
+							value = this.LastFrameCameraArmLocationSocketName;
 							return true;
 						}
 					}
-					else if (num <= 1332986293U)
+					else if (num <= 1327230892U)
 					{
-						if (num != 1327230892U)
+						if (num != 1319985167U)
 						{
-							if (num == 1332986293U)
+							if (num == 1327230892U)
 							{
-								if (key == "DebugControllersProps")
+								if (key == "PlayerRotatorInGravity")
 								{
-									value = this.DebugControllersProps;
-									return true;
-								}
-							}
-						}
-						else if (key == "PlayerRotatorInGravity")
-						{
-							value = this.PlayerRotatorInGravity;
-							return true;
-						}
-					}
-					else if (num != 1355897079U)
-					{
-						if (num != 1356168187U)
-						{
-							if (num == 1357254421U)
-							{
-								if (key == "PairKeyArray")
-								{
-									value = this.PairKeyArray;
+									value = this.PlayerRotatorInGravity;
 									return true;
 								}
 							}
 						}
-						else if (key == "PitchRollbackEnableTime")
+						else if (key == "ArmCenterRightEdgeMax")
 						{
-							value = this.PitchRollbackEnableTime;
+							value = this.ArmCenterRightEdgeMax;
 							return true;
 						}
 					}
-					else if (key == "EnableVehicleWaterFallCamera")
+					else if (num != 1332986293U)
 					{
-						value = this.EnableVehicleWaterFallCamera;
+						if (num != 1355897079U)
+						{
+							if (num == 1356168187U)
+							{
+								if (key == "PitchRollbackEnableTime")
+								{
+									value = this.PitchRollbackEnableTime;
+									return true;
+								}
+							}
+						}
+						else if (key == "EnableVehicleWaterFallCamera")
+						{
+							value = this.EnableVehicleWaterFallCamera;
+							return true;
+						}
+					}
+					else if (key == "DebugControllersProps")
+					{
+						value = this.DebugControllersProps;
 						return true;
 					}
 				}
@@ -7159,39 +5484,47 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 				{
 					if (num <= 1430117010U)
 					{
-						if (num <= 1414409968U)
+						if (num <= 1382278674U)
 						{
-							if (num != 1382278674U)
+							if (num != 1357254421U)
 							{
-								if (num == 1414409968U)
+								if (num == 1382278674U)
 								{
-									if (key == "CameraTransformBuffer")
+									if (key == "GravityMode")
 									{
-										value = this.CameraTransformBuffer;
+										value = this.GravityMode;
 										return true;
 									}
 								}
 							}
-							else if (key == "GravityMode")
+							else if (key == "PairKeyArray")
 							{
-								value = this.GravityMode;
+								value = this.PairKeyArray;
 								return true;
 							}
 						}
-						else if (num != 1414782263U)
+						else if (num != 1414409968U)
 						{
-							if (num == 1430117010U)
+							if (num != 1414782263U)
 							{
-								if (key == "ArmCenterUpSpeedMax")
+								if (num == 1430117010U)
 								{
-									value = this.ArmCenterUpSpeedMax;
-									return true;
+									if (key == "ArmCenterUpSpeedMax")
+									{
+										value = this.ArmCenterUpSpeedMax;
+										return true;
+									}
 								}
 							}
+							else if (key == "CameraActor")
+							{
+								value = this.CameraActor;
+								return true;
+							}
 						}
-						else if (key == "CameraActor")
+						else if (key == "CameraTransformBuffer")
 						{
-							value = this.CameraActor;
+							value = this.CameraTransformBuffer;
 							return true;
 						}
 					}
@@ -7687,7 +6020,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 				return true;
 			}
 		}
-		else if (num <= 3375512089U)
+		else if (num <= 3375238956U)
 		{
 			if (num <= 2787733810U)
 			{
@@ -8041,21 +6374,21 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 					return true;
 				}
 			}
-			else if (num <= 3103747270U)
+			else if (num <= 3101974580U)
 			{
-				if (num <= 2922924394U)
+				if (num <= 2921834694U)
 				{
-					if (num <= 2838700320U)
+					if (num <= 2816564042U)
 					{
-						if (num <= 2813272464U)
+						if (num <= 2806837660U)
 						{
 							if (num != 2804511429U)
 							{
-								if (num == 2813272464U)
+								if (num == 2806837660U)
 								{
-									if (key == "CurrentArmCenterRightEdgeMin")
+									if (key == "DitherDisableReasons")
 									{
-										value = this.CurrentArmCenterRightEdgeMin;
+										value = this.DitherDisableReasons;
 										return true;
 									}
 								}
@@ -8066,514 +6399,514 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 								return true;
 							}
 						}
-						else if (num != 2816564042U)
+						else if (num != 2813272464U)
 						{
-							if (num == 2838700320U)
+							if (num == 2816564042U)
 							{
-								if (key == "GravityUp")
+								if (key == "CameraLocationFadeTime")
 								{
-									value = this.GravityUp;
+									value = this.CameraLocationFadeTime;
 									return true;
 								}
 							}
 						}
-						else if (key == "CameraLocationFadeTime")
+						else if (key == "CurrentArmCenterRightEdgeMin")
 						{
-							value = this.CameraLocationFadeTime;
+							value = this.CurrentArmCenterRightEdgeMin;
 							return true;
 						}
 					}
-					else if (num <= 2850055131U)
+					else if (num <= 2849421473U)
 					{
-						if (num != 2849421473U)
+						if (num != 2838700320U)
 						{
-							if (num == 2850055131U)
+							if (num == 2849421473U)
 							{
-								if (key == "PitchSoftZoneMax")
+								if (key == "ArmCenterRightCurve")
 								{
-									value = this.PitchSoftZoneMax;
+									value = this.ArmCenterRightCurve;
 									return true;
 								}
 							}
 						}
-						else if (key == "ArmCenterRightCurve")
+						else if (key == "GravityUp")
 						{
-							value = this.ArmCenterRightCurve;
+							value = this.GravityUp;
 							return true;
 						}
 					}
-					else if (num != 2878056641U)
+					else if (num != 2850055131U)
 					{
-						if (num != 2921834694U)
+						if (num != 2878056641U)
 						{
-							if (num == 2922924394U)
+							if (num == 2921834694U)
 							{
-								if (key == "FollowShooterTagComponentInternal")
+								if (key == "DefaultPitchInRangeMax")
 								{
-									value = this.FollowShooterTagComponentInternal;
+									value = this.DefaultPitchInRangeMax;
 									return true;
 								}
 							}
 						}
-						else if (key == "DefaultPitchInRangeMax")
+						else if (key == "InSpeed")
 						{
-							value = this.DefaultPitchInRangeMax;
+							value = this.InSpeed;
 							return true;
 						}
 					}
-					else if (key == "InSpeed")
+					else if (key == "PitchSoftZoneMax")
 					{
-						value = this.InSpeed;
+						value = this.PitchSoftZoneMax;
 						return true;
 					}
 				}
-				else if (num <= 3051981194U)
+				else if (num <= 3042856542U)
 				{
-					if (num <= 2955157443U)
+					if (num <= 2945423020U)
 					{
-						if (num != 2945423020U)
+						if (num != 2922924394U)
 						{
-							if (num == 2955157443U)
+							if (num == 2945423020U)
 							{
-								if (key == "IsModifiedArmLocation")
+								if (key == "ArmCenterForwardEdgeMin")
 								{
-									value = this.IsModifiedArmLocation;
+									value = this.ArmCenterForwardEdgeMin;
 									return true;
 								}
 							}
 						}
-						else if (key == "ArmCenterForwardEdgeMin")
+						else if (key == "FollowShooterTagComponentInternal")
 						{
-							value = this.ArmCenterForwardEdgeMin;
+							value = this.FollowShooterTagComponentInternal;
 							return true;
 						}
 					}
-					else if (num != 3024346833U)
+					else if (num != 2955157443U)
 					{
-						if (num != 3042856542U)
+						if (num != 3024346833U)
 						{
-							if (num == 3051981194U)
+							if (num == 3042856542U)
 							{
-								if (key == "CameraFocusController")
+								if (key == "DesiredCamera")
 								{
-									value = this.CameraFocusController;
+									value = this.DesiredCamera;
 									return true;
 								}
 							}
 						}
-						else if (key == "DesiredCamera")
+						else if (key == "DisplayComponentInternal")
 						{
-							value = this.DesiredCamera;
+							value = this.DisplayComponentInternal;
 							return true;
 						}
 					}
-					else if (key == "DisplayComponentInternal")
+					else if (key == "IsModifiedArmLocation")
 					{
-						value = this.DisplayComponentInternal;
+						value = this.IsModifiedArmLocation;
 						return true;
 					}
 				}
-				else if (num <= 3076987013U)
+				else if (num <= 3069998072U)
 				{
-					if (num != 3069998072U)
+					if (num != 3051981194U)
 					{
-						if (num == 3076987013U)
+						if (num == 3069998072U)
 						{
-							if (key == "IsModifiedArmRotationYaw")
+							if (key == "CameraConfig")
 							{
-								value = this.IsModifiedArmRotationYaw;
+								value = this.CameraConfig;
 								return true;
 							}
 						}
 					}
-					else if (key == "CameraConfig")
+					else if (key == "CameraFocusController")
 					{
-						value = this.CameraConfig;
+						value = this.CameraFocusController;
 						return true;
 					}
 				}
-				else if (num != 3094944049U)
+				else if (num != 3076987013U)
 				{
-					if (num != 3101974580U)
+					if (num != 3094944049U)
 					{
-						if (num == 3103747270U)
+						if (num == 3101974580U)
 						{
-							if (key == "IsDisableResetFocus")
+							if (key == "CameraRotation")
 							{
-								value = this.IsDisableResetFocus;
+								value = this.CameraRotation;
 								return true;
 							}
 						}
 					}
-					else if (key == "CameraRotation")
+					else if (key == "CurrentFloatUpHeightRatio")
 					{
-						value = this.CameraRotation;
+						value = this.CurrentFloatUpHeightRatio;
 						return true;
 					}
 				}
-				else if (key == "CurrentFloatUpHeightRatio")
+				else if (key == "IsModifiedArmRotationYaw")
 				{
-					value = this.CurrentFloatUpHeightRatio;
+					value = this.IsModifiedArmRotationYaw;
 					return true;
 				}
 			}
-			else if (num <= 3236065385U)
+			else if (num <= 3216934640U)
 			{
-				if (num <= 3180342814U)
+				if (num <= 3179029758U)
 				{
-					if (num <= 3130006520U)
+					if (num <= 3125213556U)
 					{
-						if (num != 3125213556U)
+						if (num != 3103747270U)
 						{
-							if (num == 3130006520U)
+							if (num == 3125213556U)
 							{
-								if (key == "VehicleInputComponent")
+								if (key == "CameraModifyController")
 								{
-									value = this.VehicleInputComponent;
+									value = this.CameraModifyController;
 									return true;
 								}
 							}
 						}
-						else if (key == "CameraModifyController")
+						else if (key == "IsDisableResetFocus")
 						{
-							value = this.CameraModifyController;
+							value = this.IsDisableResetFocus;
 							return true;
 						}
 					}
-					else if (num != 3161435670U)
+					else if (num != 3130006520U)
 					{
-						if (num != 3179029758U)
+						if (num != 3161435670U)
 						{
-							if (num == 3180342814U)
+							if (num == 3179029758U)
 							{
-								if (key == "GravityQuat")
+								if (key == "ArmCenterForwardEdgeMax")
 								{
-									value = this.GravityQuat;
+									value = this.ArmCenterForwardEdgeMax;
 									return true;
 								}
 							}
 						}
-						else if (key == "ArmCenterForwardEdgeMax")
+						else if (key == "CharacterTagComponentInternal")
 						{
-							value = this.ArmCenterForwardEdgeMax;
+							value = this.CharacterTagComponentInternal;
 							return true;
 						}
 					}
-					else if (key == "CharacterTagComponentInternal")
+					else if (key == "VehicleInputComponent")
 					{
-						value = this.CharacterTagComponentInternal;
+						value = this.VehicleInputComponent;
 						return true;
 					}
 				}
-				else if (num <= 3195238868U)
+				else if (num <= 3194142263U)
 				{
-					if (num != 3194142263U)
+					if (num != 3180342814U)
 					{
-						if (num == 3195238868U)
+						if (num == 3194142263U)
 						{
-							if (key == "StartHideDistSquared")
+							if (key == "DynamicFovLerpSpeed")
 							{
-								value = this.StartHideDistSquared;
+								value = this.DynamicFovLerpSpeed;
 								return true;
 							}
 						}
 					}
-					else if (key == "DynamicFovLerpSpeed")
+					else if (key == "GravityQuat")
 					{
-						value = this.DynamicFovLerpSpeed;
+						value = this.GravityQuat;
 						return true;
 					}
 				}
-				else if (num != 3213661821U)
+				else if (num != 3195238868U)
 				{
-					if (num != 3216934640U)
+					if (num != 3213661821U)
 					{
-						if (num == 3236065385U)
+						if (num == 3216934640U)
 						{
-							if (key == "CameraRotateToTargetMinAlpha")
+							if (key == "CameraFixedController")
 							{
-								value = this.CameraRotateToTargetMinAlpha;
+								value = this.CameraFixedController;
 								return true;
 							}
 						}
 					}
-					else if (key == "CameraFixedController")
+					else if (key == "PlayerRotator")
 					{
-						value = this.CameraFixedController;
+						value = this.PlayerRotator;
 						return true;
 					}
 				}
-				else if (key == "PlayerRotator")
+				else if (key == "StartHideDistSquared")
 				{
-					value = this.PlayerRotator;
+					value = this.StartHideDistSquared;
 					return true;
 				}
 			}
-			else if (num <= 3284466851U)
+			else if (num <= 3282093698U)
 			{
-				if (num <= 3255193791U)
+				if (num <= 3255061900U)
 				{
-					if (num != 3255061900U)
+					if (num != 3236065385U)
 					{
-						if (num == 3255193791U)
+						if (num == 3255061900U)
 						{
-							if (key == "NeedValueCheckPairKeySet")
+							if (key == "CameraDialogueController")
 							{
-								value = this.NeedValueCheckPairKeySet;
+								value = this.CameraDialogueController;
 								return true;
 							}
 						}
 					}
-					else if (key == "CameraDialogueController")
+					else if (key == "CameraRotateToTargetMinAlpha")
 					{
-						value = this.CameraDialogueController;
+						value = this.CameraRotateToTargetMinAlpha;
 						return true;
 					}
 				}
-				else if (num != 3278094999U)
+				else if (num != 3255193791U)
 				{
-					if (num != 3282093698U)
+					if (num != 3278094999U)
 					{
-						if (num == 3284466851U)
+						if (num == 3282093698U)
 						{
-							if (key == "ArmCenterForwardRollbackEnableTime")
+							if (key == "FadeFov")
 							{
-								value = this.ArmCenterForwardRollbackEnableTime;
+								value = this.FadeFov;
 								return true;
 							}
 						}
 					}
-					else if (key == "FadeFov")
+					else if (key == "AttachToVehicle")
 					{
-						value = this.FadeFov;
+						value = this.AttachToVehicle;
 						return true;
 					}
 				}
-				else if (key == "AttachToVehicle")
+				else if (key == "NeedValueCheckPairKeySet")
 				{
-					value = this.AttachToVehicle;
+					value = this.NeedValueCheckPairKeySet;
 					return true;
 				}
 			}
-			else if (num <= 3329128716U)
+			else if (num <= 3325179232U)
 			{
-				if (num != 3325179232U)
+				if (num != 3284466851U)
 				{
-					if (num == 3329128716U)
+					if (num == 3325179232U)
 					{
-						if (key == "TmpArmLocationOffset")
+						if (key == "ArmOffsetZ")
 						{
-							value = this.TmpArmLocationOffset;
-							return true;
-						}
-					}
-				}
-				else if (key == "ArmOffsetZ")
-				{
-					value = this.ArmOffsetZ;
-					return true;
-				}
-			}
-			else if (num != 3358734470U)
-			{
-				if (num != 3375238956U)
-				{
-					if (num == 3375512089U)
-					{
-						if (key == "ArmOffsetY")
-						{
-							value = this.ArmOffsetY;
+							value = this.ArmOffsetZ;
 							return true;
 						}
 					}
 				}
-				else if (key == "NearCollisionProbeSize")
+				else if (key == "ArmCenterForwardRollbackEnableTime")
 				{
-					value = this.NearCollisionProbeSize;
+					value = this.ArmCenterForwardRollbackEnableTime;
 					return true;
 				}
 			}
-			else if (key == "ArmOffsetX")
+			else if (num != 3329128716U)
 			{
-				value = this.ArmOffsetX;
+				if (num != 3358734470U)
+				{
+					if (num == 3375238956U)
+					{
+						if (key == "NearCollisionProbeSize")
+						{
+							value = this.NearCollisionProbeSize;
+							return true;
+						}
+					}
+				}
+				else if (key == "ArmOffsetX")
+				{
+					value = this.ArmOffsetX;
+					return true;
+				}
+			}
+			else if (key == "TmpArmLocationOffset")
+			{
+				value = this.TmpArmLocationOffset;
 				return true;
 			}
 		}
 		else if (num <= 3846323488U)
 		{
-			if (num <= 3582012784U)
+			if (num <= 3553475252U)
 			{
-				if (num <= 3489201912U)
+				if (num <= 3450182146U)
 				{
-					if (num <= 3405234840U)
+					if (num <= 3404460555U)
 					{
-						if (num <= 3403248142U)
+						if (num <= 3377868421U)
 						{
-							if (num != 3377868421U)
+							if (num != 3375512089U)
 							{
-								if (num == 3403248142U)
+								if (num == 3377868421U)
 								{
-									if (key == "CameraCollision")
+									if (key == "LastFrameFov")
 									{
-										value = this.CameraCollision;
+										value = this.LastFrameFov;
 										return true;
 									}
 								}
 							}
-							else if (key == "LastFrameFov")
+							else if (key == "ArmOffsetY")
 							{
-								value = this.LastFrameFov;
+								value = this.ArmOffsetY;
 								return true;
 							}
 						}
-						else if (num != 3404460555U)
+						else if (num != 3403248142U)
 						{
-							if (num == 3405234840U)
+							if (num == 3404460555U)
 							{
-								if (key == "ArmCenterForwardSpeedMin")
+								if (key == "ArmCenterRightSpeedMin")
 								{
-									value = this.ArmCenterForwardSpeedMin;
+									value = this.ArmCenterRightSpeedMin;
 									return true;
 								}
 							}
 						}
-						else if (key == "ArmCenterRightSpeedMin")
+						else if (key == "CameraCollision")
 						{
-							value = this.ArmCenterRightSpeedMin;
+							value = this.CameraCollision;
 							return true;
 						}
 					}
-					else if (num <= 3415407366U)
+					else if (num <= 3408097751U)
 					{
-						if (num != 3408097751U)
+						if (num != 3405234840U)
 						{
-							if (num == 3415407366U)
+							if (num == 3408097751U)
 							{
-								if (key == "PlayerLocationForDither")
+								if (key == "TempArmLength")
 								{
-									value = this.PlayerLocationForDither;
+									value = this.TempArmLength;
 									return true;
 								}
 							}
 						}
-						else if (key == "TempArmLength")
+						else if (key == "ArmCenterForwardSpeedMin")
 						{
-							value = this.TempArmLength;
+							value = this.ArmCenterForwardSpeedMin;
 							return true;
 						}
 					}
-					else if (num != 3434902360U)
+					else if (num != 3415407366U)
 					{
-						if (num != 3450182146U)
+						if (num != 3434902360U)
 						{
-							if (num == 3489201912U)
+							if (num == 3450182146U)
 							{
-								if (key == "ArmCenterUpCurve")
+								if (key == "FadeCurve")
 								{
-									value = this.ArmCenterUpCurve;
+									value = this.FadeCurve;
 									return true;
 								}
 							}
 						}
-						else if (key == "FadeCurve")
+						else if (key == "DynamicFovCurve")
 						{
-							value = this.FadeCurve;
+							value = this.DynamicFovCurve;
 							return true;
 						}
 					}
-					else if (key == "DynamicFovCurve")
+					else if (key == "PlayerLocationForDither")
 					{
-						value = this.DynamicFovCurve;
+						value = this.PlayerLocationForDither;
 						return true;
 					}
 				}
-				else if (num <= 3537549711U)
+				else if (num <= 3525616546U)
 				{
-					if (num <= 3512188346U)
+					if (num <= 3506019783U)
 					{
-						if (num != 3506019783U)
+						if (num != 3489201912U)
 						{
-							if (num == 3512188346U)
+							if (num == 3506019783U)
 							{
-								if (key == "PlayerMoveVector")
+								if (key == "MinArmLength")
 								{
-									value = this.PlayerMoveVector;
+									value = this.MinArmLength;
 									return true;
 								}
 							}
 						}
-						else if (key == "MinArmLength")
+						else if (key == "ArmCenterUpCurve")
 						{
-							value = this.MinArmLength;
+							value = this.ArmCenterUpCurve;
 							return true;
 						}
 					}
-					else if (num != 3522848913U)
+					else if (num != 3512188346U)
 					{
-						if (num != 3525616546U)
+						if (num != 3522848913U)
 						{
-							if (num == 3537549711U)
+							if (num == 3525616546U)
 							{
-								if (key == "FadeCameraOffset")
+								if (key == "IsCharacterValid")
 								{
-									value = this.FadeCameraOffset;
+									value = this.IsCharacterValid;
 									return true;
 								}
 							}
 						}
-						else if (key == "IsCharacterValid")
+						else if (key == "PreTickCameraControllerUpdateList")
 						{
-							value = this.IsCharacterValid;
+							value = this.PreTickCameraControllerUpdateList;
 							return true;
 						}
 					}
-					else if (key == "PreTickCameraControllerUpdateList")
+					else if (key == "PlayerMoveVector")
 					{
-						value = this.PreTickCameraControllerUpdateList;
+						value = this.PlayerMoveVector;
 						return true;
 					}
 				}
-				else if (num <= 3545552192U)
+				else if (num <= 3541802163U)
 				{
-					if (num != 3541802163U)
+					if (num != 3537549711U)
 					{
-						if (num == 3545552192U)
+						if (num == 3541802163U)
 						{
-							if (key == "BaseVehiclePerformComponent")
+							if (key == "CameraForward")
 							{
-								value = this.BaseVehiclePerformComponent;
-								return true;
-							}
-						}
-					}
-					else if (key == "CameraForward")
-					{
-						value = this.CameraForward;
-						return true;
-					}
-				}
-				else if (num != 3552179588U)
-				{
-					if (num != 3553475252U)
-					{
-						if (num == 3582012784U)
-						{
-							if (key == "WorldYawMax")
-							{
-								value = this.WorldYawMax;
+								value = this.CameraForward;
 								return true;
 							}
 						}
 					}
-					else if (key == "TempQuatInverse")
+					else if (key == "FadeCameraOffset")
 					{
-						value = this.TempQuatInverse;
+						value = this.FadeCameraOffset;
 						return true;
 					}
 				}
-				else if (key == "AdditionPitchCurve")
+				else if (num != 3545552192U)
 				{
-					value = this.AdditionPitchCurve;
+					if (num != 3552179588U)
+					{
+						if (num == 3553475252U)
+						{
+							if (key == "TempQuatInverse")
+							{
+								value = this.TempQuatInverse;
+								return true;
+							}
+						}
+					}
+					else if (key == "AdditionPitchCurve")
+					{
+						value = this.AdditionPitchCurve;
+						return true;
+					}
+				}
+				else if (key == "BaseVehiclePerformComponent")
+				{
+					value = this.BaseVehiclePerformComponent;
 					return true;
 				}
 			}
@@ -8581,39 +6914,47 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 			{
 				if (num <= 3645702292U)
 				{
-					if (num <= 3617655588U)
+					if (num <= 3587442304U)
 					{
-						if (num != 3587442304U)
+						if (num != 3582012784U)
 						{
-							if (num == 3617655588U)
+							if (num == 3587442304U)
 							{
-								if (key == "CheckCollisionProbeSize")
+								if (key == "FadeArmOffset")
 								{
-									value = this.CheckCollisionProbeSize;
+									value = this.FadeArmOffset;
 									return true;
 								}
 							}
 						}
-						else if (key == "FadeArmOffset")
+						else if (key == "WorldYawMax")
 						{
-							value = this.FadeArmOffset;
+							value = this.WorldYawMax;
 							return true;
 						}
 					}
-					else if (num != 3624774561U)
+					else if (num != 3617655588U)
 					{
-						if (num == 3645702292U)
+						if (num != 3624774561U)
 						{
-							if (key == "ResetAddRotator")
+							if (num == 3645702292U)
 							{
-								value = this.ResetAddRotator;
-								return true;
+								if (key == "ResetAddRotator")
+								{
+									value = this.ResetAddRotator;
+									return true;
+								}
 							}
 						}
+						else if (key == "FollowShooterEntityHandle")
+						{
+							value = this.FollowShooterEntityHandle;
+							return true;
+						}
 					}
-					else if (key == "FollowShooterEntityHandle")
+					else if (key == "CheckCollisionProbeSize")
 					{
-						value = this.FollowShooterEntityHandle;
+						value = this.CheckCollisionProbeSize;
 						return true;
 					}
 				}
@@ -9112,7 +7453,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return false;
 	}
 
-	// Token: 0x0600225B RID: 8795 RVA: 0x000D2214 File Offset: 0x000D0414
+	// Token: 0x0600230C RID: 8972 RVA: 0x000D6ECC File Offset: 0x000D50CC
 	[NullableContext(0)]
 	public virtual void SetMember(string key, object value)
 	{
@@ -14107,136 +12448,121 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 			case 29:
 			{
 				char c = key[9];
-				if (c != 'C')
+				if (c <= 'U')
 				{
-					switch (c)
+					if (c != 'C')
 					{
-					case 'R':
-						if (key == "ArmCenterRightInputEnableTime")
+						switch (c)
 						{
-							float num2;
-							if (value is double)
+						case 'R':
+							if (key == "ArmCenterRightInputEnableTime")
 							{
-								double num479 = (double)value;
-								num2 = (float)num479;
-							}
-							else if (value is float)
-							{
-								float num480 = (float)value;
-								num2 = num480;
-							}
-							else if (value is int)
-							{
-								int num481 = (int)value;
-								num2 = (float)num481;
-							}
-							else if (value is long)
-							{
-								long num482 = (long)value;
-								num2 = (float)num482;
-							}
-							else
-							{
-								num2 = (float)value;
-							}
-							this.ArmCenterRightInputEnableTime = num2;
-							return;
-						}
-						break;
-					case 'S':
-						break;
-					case 'T':
-						if (key == "CharacterTagComponentInternal")
-						{
-							this.CharacterTagComponentInternal = (BaseTagComponent)value;
-							return;
-						}
-						break;
-					case 'U':
-						if (key == "ArmCenterUpRollbackEnableTime")
-						{
-							float num2;
-							if (value is double)
-							{
-								double num483 = (double)value;
-								num2 = (float)num483;
-							}
-							else if (value is float)
-							{
-								float num484 = (float)value;
-								num2 = num484;
-							}
-							else if (value is int)
-							{
-								int num485 = (int)value;
-								num2 = (float)num485;
-							}
-							else if (value is long)
-							{
-								long num486 = (long)value;
-								num2 = (float)num486;
-							}
-							else
-							{
-								num2 = (float)value;
-							}
-							this.ArmCenterUpRollbackEnableTime = num2;
-							return;
-						}
-						break;
-					default:
-						if (c == 'a')
-						{
-							if (key == "LastCameraArmCenterRightInput")
-							{
-								this.LastCameraArmCenterRightInput = (bool)value;
+								float num2;
+								if (value is double)
+								{
+									double num479 = (double)value;
+									num2 = (float)num479;
+								}
+								else if (value is float)
+								{
+									float num480 = (float)value;
+									num2 = num480;
+								}
+								else if (value is int)
+								{
+									int num481 = (int)value;
+									num2 = (float)num481;
+								}
+								else if (value is long)
+								{
+									long num482 = (long)value;
+									num2 = (float)num482;
+								}
+								else
+								{
+									num2 = (float)value;
+								}
+								this.ArmCenterRightInputEnableTime = num2;
 								return;
 							}
+							break;
+						case 'T':
+							if (key == "CharacterTagComponentInternal")
+							{
+								this.CharacterTagComponentInternal = (BaseTagComponent)value;
+								return;
+							}
+							break;
+						case 'U':
+							if (key == "ArmCenterUpRollbackEnableTime")
+							{
+								float num2;
+								if (value is double)
+								{
+									double num483 = (double)value;
+									num2 = (float)num483;
+								}
+								else if (value is float)
+								{
+									float num484 = (float)value;
+									num2 = num484;
+								}
+								else if (value is int)
+								{
+									int num485 = (int)value;
+									num2 = (float)num485;
+								}
+								else if (value is long)
+								{
+									long num486 = (long)value;
+									num2 = (float)num486;
+								}
+								else
+								{
+									num2 = (float)value;
+								}
+								this.ArmCenterUpRollbackEnableTime = num2;
+								return;
+							}
+							break;
 						}
-						break;
+					}
+					else if (key == "CameraArmCenterRightInputTime")
+					{
+						float num2;
+						if (value is double)
+						{
+							double num487 = (double)value;
+							num2 = (float)num487;
+						}
+						else if (value is float)
+						{
+							float num488 = (float)value;
+							num2 = num488;
+						}
+						else if (value is int)
+						{
+							int num489 = (int)value;
+							num2 = (float)num489;
+						}
+						else if (value is long)
+						{
+							long num490 = (long)value;
+							num2 = (float)num490;
+						}
+						else
+						{
+							num2 = (float)value;
+						}
+						this.CameraArmCenterRightInputTime = num2;
+						return;
 					}
 				}
-				else if (key == "CameraArmCenterRightInputTime")
+				else if (c != 'a')
 				{
-					float num2;
-					if (value is double)
+					if (c == 'n')
 					{
-						double num487 = (double)value;
-						num2 = (float)num487;
-					}
-					else if (value is float)
-					{
-						float num488 = (float)value;
-						num2 = num488;
-					}
-					else if (value is int)
-					{
-						int num489 = (int)value;
-						num2 = (float)num489;
-					}
-					else if (value is long)
-					{
-						long num490 = (long)value;
-						num2 = (float)num490;
-					}
-					else
-					{
-						num2 = (float)value;
-					}
-					this.CameraArmCenterRightInputTime = num2;
-					return;
-				}
-				break;
-			}
-			case 30:
-			{
-				char c = key[28];
-				if (c != 'a')
-				{
-					switch (c)
-					{
-					case 'i':
-						if (key == "CurrentArmCenterForwardEdgeMin")
+						if (key == "YawSoftZoneRollbackEnableTime")
 						{
 							float num2;
 							if (value is double)
@@ -14263,12 +12589,27 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 							{
 								num2 = (float)value;
 							}
-							this.CurrentArmCenterForwardEdgeMin = num2;
+							this.YawSoftZoneRollbackEnableTime = num2;
 							return;
 						}
-						break;
-					case 'm':
-						if (key == "CameraTargetLocationBufferTime")
+					}
+				}
+				else if (key == "LastCameraArmCenterRightInput")
+				{
+					this.LastCameraArmCenterRightInput = (bool)value;
+					return;
+				}
+				break;
+			}
+			case 30:
+			{
+				char c = key[28];
+				if (c != 'a')
+				{
+					switch (c)
+					{
+					case 'i':
+						if (key == "CurrentArmCenterForwardEdgeMin")
 						{
 							float num2;
 							if (value is double)
@@ -14295,19 +12636,12 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 							{
 								num2 = (float)value;
 							}
-							this.CameraTargetLocationBufferTime = num2;
+							this.CurrentArmCenterForwardEdgeMin = num2;
 							return;
 						}
 						break;
-					case 'n':
-						if (key == "CharacterDriveVehicleComponent")
-						{
-							this.CharacterDriveVehicleComponent = (CharacterDriveVehicleComponent)value;
-							return;
-						}
-						break;
-					case 'o':
-						if (key == "DefaultLandscapeLodScaleFactor")
+					case 'm':
+						if (key == "CameraTargetLocationBufferTime")
 						{
 							float num2;
 							if (value is double)
@@ -14334,6 +12668,45 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 							{
 								num2 = (float)value;
 							}
+							this.CameraTargetLocationBufferTime = num2;
+							return;
+						}
+						break;
+					case 'n':
+						if (key == "CharacterDriveVehicleComponent")
+						{
+							this.CharacterDriveVehicleComponent = (CharacterDriveVehicleComponent)value;
+							return;
+						}
+						break;
+					case 'o':
+						if (key == "DefaultLandscapeLodScaleFactor")
+						{
+							float num2;
+							if (value is double)
+							{
+								double num503 = (double)value;
+								num2 = (float)num503;
+							}
+							else if (value is float)
+							{
+								float num504 = (float)value;
+								num2 = num504;
+							}
+							else if (value is int)
+							{
+								int num505 = (int)value;
+								num2 = (float)num505;
+							}
+							else if (value is long)
+							{
+								long num506 = (long)value;
+								num2 = (float)num506;
+							}
+							else
+							{
+								num2 = (float)value;
+							}
 							this.DefaultLandscapeLodScaleFactor = num2;
 							return;
 						}
@@ -14345,23 +12718,23 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 					float num2;
 					if (value is double)
 					{
-						double num503 = (double)value;
-						num2 = (float)num503;
+						double num507 = (double)value;
+						num2 = (float)num507;
 					}
 					else if (value is float)
 					{
-						float num504 = (float)value;
-						num2 = num504;
+						float num508 = (float)value;
+						num2 = num508;
 					}
 					else if (value is int)
 					{
-						int num505 = (int)value;
-						num2 = (float)num505;
+						int num509 = (int)value;
+						num2 = (float)num509;
 					}
 					else if (value is long)
 					{
-						long num506 = (long)value;
-						num2 = (float)num506;
+						long num510 = (long)value;
+						num2 = (float)num510;
 					}
 					else
 					{
@@ -14393,23 +12766,23 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 						float num2;
 						if (value is double)
 						{
-							double num507 = (double)value;
-							num2 = (float)num507;
+							double num511 = (double)value;
+							num2 = (float)num511;
 						}
 						else if (value is float)
 						{
-							float num508 = (float)value;
-							num2 = num508;
+							float num512 = (float)value;
+							num2 = num512;
 						}
 						else if (value is int)
 						{
-							int num509 = (int)value;
-							num2 = (float)num509;
+							int num513 = (int)value;
+							num2 = (float)num513;
 						}
 						else if (value is long)
 						{
-							long num510 = (long)value;
-							num2 = (float)num510;
+							long num514 = (long)value;
+							num2 = (float)num514;
 						}
 						else
 						{
@@ -14428,23 +12801,23 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 							float num2;
 							if (value is double)
 							{
-								double num511 = (double)value;
-								num2 = (float)num511;
+								double num515 = (double)value;
+								num2 = (float)num515;
 							}
 							else if (value is float)
 							{
-								float num512 = (float)value;
-								num2 = num512;
+								float num516 = (float)value;
+								num2 = num516;
 							}
 							else if (value is int)
 							{
-								int num513 = (int)value;
-								num2 = (float)num513;
+								int num517 = (int)value;
+								num2 = (float)num517;
 							}
 							else if (value is long)
 							{
-								long num514 = (long)value;
-								num2 = (float)num514;
+								long num518 = (long)value;
+								num2 = (float)num518;
 							}
 							else
 							{
@@ -14460,23 +12833,23 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 					float num2;
 					if (value is double)
 					{
-						double num515 = (double)value;
-						num2 = (float)num515;
+						double num519 = (double)value;
+						num2 = (float)num519;
 					}
 					else if (value is float)
 					{
-						float num516 = (float)value;
-						num2 = num516;
+						float num520 = (float)value;
+						num2 = num520;
 					}
 					else if (value is int)
 					{
-						int num517 = (int)value;
-						num2 = (float)num517;
+						int num521 = (int)value;
+						num2 = (float)num521;
 					}
 					else if (value is long)
 					{
-						long num518 = (long)value;
-						num2 = (float)num518;
+						long num522 = (long)value;
+						num2 = (float)num522;
 					}
 					else
 					{
@@ -14501,23 +12874,23 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 								float num2;
 								if (value is double)
 								{
-									double num519 = (double)value;
-									num2 = (float)num519;
+									double num523 = (double)value;
+									num2 = (float)num523;
 								}
 								else if (value is float)
 								{
-									float num520 = (float)value;
-									num2 = num520;
+									float num524 = (float)value;
+									num2 = num524;
 								}
 								else if (value is int)
 								{
-									int num521 = (int)value;
-									num2 = (float)num521;
+									int num525 = (int)value;
+									num2 = (float)num525;
 								}
 								else if (value is long)
 								{
-									long num522 = (long)value;
-									num2 = (float)num522;
+									long num526 = (long)value;
+									num2 = (float)num526;
 								}
 								else
 								{
@@ -14533,23 +12906,23 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 						float num2;
 						if (value is double)
 						{
-							double num523 = (double)value;
-							num2 = (float)num523;
+							double num527 = (double)value;
+							num2 = (float)num527;
 						}
 						else if (value is float)
 						{
-							float num524 = (float)value;
-							num2 = num524;
+							float num528 = (float)value;
+							num2 = num528;
 						}
 						else if (value is int)
 						{
-							int num525 = (int)value;
-							num2 = (float)num525;
+							int num529 = (int)value;
+							num2 = (float)num529;
 						}
 						else if (value is long)
 						{
-							long num526 = (long)value;
-							num2 = (float)num526;
+							long num530 = (long)value;
+							num2 = (float)num530;
 						}
 						else
 						{
@@ -14564,23 +12937,23 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 					float num2;
 					if (value is double)
 					{
-						double num527 = (double)value;
-						num2 = (float)num527;
+						double num531 = (double)value;
+						num2 = (float)num531;
 					}
 					else if (value is float)
 					{
-						float num528 = (float)value;
-						num2 = num528;
+						float num532 = (float)value;
+						num2 = num532;
 					}
 					else if (value is int)
 					{
-						int num529 = (int)value;
-						num2 = (float)num529;
+						int num533 = (int)value;
+						num2 = (float)num533;
 					}
 					else if (value is long)
 					{
-						long num530 = (long)value;
-						num2 = (float)num530;
+						long num534 = (long)value;
+						num2 = (float)num534;
 					}
 					else
 					{
@@ -14612,23 +12985,23 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 						float num2;
 						if (value is double)
 						{
-							double num531 = (double)value;
-							num2 = (float)num531;
+							double num535 = (double)value;
+							num2 = (float)num535;
 						}
 						else if (value is float)
 						{
-							float num532 = (float)value;
-							num2 = num532;
+							float num536 = (float)value;
+							num2 = num536;
 						}
 						else if (value is int)
 						{
-							int num533 = (int)value;
-							num2 = (float)num533;
+							int num537 = (int)value;
+							num2 = (float)num537;
 						}
 						else if (value is long)
 						{
-							long num534 = (long)value;
-							num2 = (float)num534;
+							long num538 = (long)value;
+							num2 = (float)num538;
 						}
 						else
 						{
@@ -14647,23 +13020,23 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 							float num2;
 							if (value is double)
 							{
-								double num535 = (double)value;
-								num2 = (float)num535;
+								double num539 = (double)value;
+								num2 = (float)num539;
 							}
 							else if (value is float)
 							{
-								float num536 = (float)value;
-								num2 = num536;
+								float num540 = (float)value;
+								num2 = num540;
 							}
 							else if (value is int)
 							{
-								int num537 = (int)value;
-								num2 = (float)num537;
+								int num541 = (int)value;
+								num2 = (float)num541;
 							}
 							else if (value is long)
 							{
-								long num538 = (long)value;
-								num2 = (float)num538;
+								long num542 = (long)value;
+								num2 = (float)num542;
 							}
 							else
 							{
@@ -14687,23 +13060,23 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 					float num2;
 					if (value is double)
 					{
-						double num539 = (double)value;
-						num2 = (float)num539;
+						double num543 = (double)value;
+						num2 = (float)num543;
 					}
 					else if (value is float)
 					{
-						float num540 = (float)value;
-						num2 = num540;
+						float num544 = (float)value;
+						num2 = num544;
 					}
 					else if (value is int)
 					{
-						int num541 = (int)value;
-						num2 = (float)num541;
+						int num545 = (int)value;
+						num2 = (float)num545;
 					}
 					else if (value is long)
 					{
-						long num542 = (long)value;
-						num2 = (float)num542;
+						long num546 = (long)value;
+						num2 = (float)num546;
 					}
 					else
 					{
@@ -14725,23 +13098,23 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 							float num2;
 							if (value is double)
 							{
-								double num543 = (double)value;
-								num2 = (float)num543;
+								double num547 = (double)value;
+								num2 = (float)num547;
 							}
 							else if (value is float)
 							{
-								float num544 = (float)value;
-								num2 = num544;
+								float num548 = (float)value;
+								num2 = num548;
 							}
 							else if (value is int)
 							{
-								int num545 = (int)value;
-								num2 = (float)num545;
+								int num549 = (int)value;
+								num2 = (float)num549;
 							}
 							else if (value is long)
 							{
-								long num546 = (long)value;
-								num2 = (float)num546;
+								long num550 = (long)value;
+								num2 = (float)num550;
 							}
 							else
 							{
@@ -14765,23 +13138,23 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 					float num2;
 					if (value is double)
 					{
-						double num547 = (double)value;
-						num2 = (float)num547;
+						double num551 = (double)value;
+						num2 = (float)num551;
 					}
 					else if (value is float)
 					{
-						float num548 = (float)value;
-						num2 = num548;
+						float num552 = (float)value;
+						num2 = num552;
 					}
 					else if (value is int)
 					{
-						int num549 = (int)value;
-						num2 = (float)num549;
+						int num553 = (int)value;
+						num2 = (float)num553;
 					}
 					else if (value is long)
 					{
-						long num550 = (long)value;
-						num2 = (float)num550;
+						long num554 = (long)value;
+						num2 = (float)num554;
 					}
 					else
 					{
@@ -14803,19 +13176,876 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		throw new KeyNotFoundException("设置FightCameraLogicComponent成员属性失败" + key + ")");
 	}
 
-	// Token: 0x0600225C RID: 8796 RVA: 0x000D8EE7 File Offset: 0x000D70E7
+	// Token: 0x0600230D RID: 8973 RVA: 0x000DDC5B File Offset: 0x000DBE5B
 	[NullableContext(0)]
 	public virtual IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
-		FightCameraLogicComponent.<MemberIter>d__562 <MemberIter>d__ = new FightCameraLogicComponent.<MemberIter>d__562(-2);
+		FightCameraLogicComponent.<MemberIter>d__567 <MemberIter>d__ = new FightCameraLogicComponent.<MemberIter>d__567(-2);
 		<MemberIter>d__.<>4__this = this;
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x06002260 RID: 8800 RVA: 0x000D9230 File Offset: 0x000D7430
+	// Token: 0x0600230E RID: 8974 RVA: 0x000DDC6C File Offset: 0x000DBE6C
+	public override bool ClearComponent(EntityComponent componentTemplate)
+	{
+		if (!base.ClearComponent(componentTemplate))
+		{
+			return false;
+		}
+		FightCameraLogicComponent fightCameraLogicComponent = (FightCameraLogicComponent)componentTemplate;
+		if (fightCameraLogicComponent.CameraModel == null)
+		{
+			this.CameraModel = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraModel), "CameraModel"))
+		{
+			return false;
+		}
+		this.ArmLength = fightCameraLogicComponent.ArmLength;
+		this.ArmOffsetX = fightCameraLogicComponent.ArmOffsetX;
+		this.ArmOffsetY = fightCameraLogicComponent.ArmOffsetY;
+		this.ArmOffsetZ = fightCameraLogicComponent.ArmOffsetZ;
+		this.MinArmLength = fightCameraLogicComponent.MinArmLength;
+		this.MaxArmLength = fightCameraLogicComponent.MaxArmLength;
+		this.CameraOffsetX = fightCameraLogicComponent.CameraOffsetX;
+		this.CameraOffsetY = fightCameraLogicComponent.CameraOffsetY;
+		this.CameraOffsetZ = fightCameraLogicComponent.CameraOffsetZ;
+		this.Fov = fightCameraLogicComponent.Fov;
+		this.CameraLocationFadeTime = fightCameraLogicComponent.CameraLocationFadeTime;
+		this.CollisionProbeSize = fightCameraLogicComponent.CollisionProbeSize;
+		this.NearCollisionProbeSize = fightCameraLogicComponent.NearCollisionProbeSize;
+		this.CurrentCollisionSize = fightCameraLogicComponent.CurrentCollisionSize;
+		this.CheckCollisionProbeSize = fightCameraLogicComponent.CheckCollisionProbeSize;
+		this.CheckWidth = fightCameraLogicComponent.CheckWidth;
+		this.CollisionAdditionalHeightInWater = fightCameraLogicComponent.CollisionAdditionalHeightInWater;
+		this.DefaultPitchHorizontalOffset = fightCameraLogicComponent.DefaultPitchHorizontalOffset;
+		this.DefaultPitchVerticalOffset = fightCameraLogicComponent.DefaultPitchVerticalOffset;
+		this.DefaultPitchInRangeMin = fightCameraLogicComponent.DefaultPitchInRangeMin;
+		this.DefaultPitchInRangeCenter = fightCameraLogicComponent.DefaultPitchInRangeCenter;
+		this.DefaultPitchInRangeMax = fightCameraLogicComponent.DefaultPitchInRangeMax;
+		this.DefaultPitchOutRangeMin = fightCameraLogicComponent.DefaultPitchOutRangeMin;
+		this.DefaultPitchOutRangeCenter = fightCameraLogicComponent.DefaultPitchOutRangeCenter;
+		this.DefaultPitchOutRangeMax = fightCameraLogicComponent.DefaultPitchOutRangeMax;
+		this.FloatUpArmLengthMin = fightCameraLogicComponent.FloatUpArmLengthMin;
+		this.FloatUpArmLengthMax = fightCameraLogicComponent.FloatUpArmLengthMax;
+		this.CameraOffsetFloatUpArmLengthMin = fightCameraLogicComponent.CameraOffsetFloatUpArmLengthMin;
+		this.CameraOffsetFloatUpArmLengthMax = fightCameraLogicComponent.CameraOffsetFloatUpArmLengthMax;
+		this.CameraOffsetFloatUpMin = fightCameraLogicComponent.CameraOffsetFloatUpMin;
+		this.CameraOffsetFloatUpMax = fightCameraLogicComponent.CameraOffsetFloatUpMax;
+		this.MaxDistance = fightCameraLogicComponent.MaxDistance;
+		this.InSpeed = fightCameraLogicComponent.InSpeed;
+		this.OutSpeed = fightCameraLogicComponent.OutSpeed;
+		this.CenterCollisionSize = fightCameraLogicComponent.CenterCollisionSize;
+		this.CollisionSizePercentage = fightCameraLogicComponent.CollisionSizePercentage;
+		this.StartHideDistanceInternal = fightCameraLogicComponent.StartHideDistanceInternal;
+		this.StartHideDistSquared = fightCameraLogicComponent.StartHideDistSquared;
+		this.CompleteHideDistance = fightCameraLogicComponent.CompleteHideDistance;
+		this.StartHidePitch = fightCameraLogicComponent.StartHidePitch;
+		this.CompleteHidePitch = fightCameraLogicComponent.CompleteHidePitch;
+		this.StartDitherValue = fightCameraLogicComponent.StartDitherValue;
+		this.YawLimitMin = fightCameraLogicComponent.YawLimitMin;
+		this.YawLimitMax = fightCameraLogicComponent.YawLimitMax;
+		this.PitchLimitMin = fightCameraLogicComponent.PitchLimitMin;
+		this.PitchLimitMax = fightCameraLogicComponent.PitchLimitMax;
+		this.LookDownOffsetZ = fightCameraLogicComponent.LookDownOffsetZ;
+		this.LookUpOffsetZ = fightCameraLogicComponent.LookUpOffsetZ;
+		this.ArmCenterUpSpeedMin = fightCameraLogicComponent.ArmCenterUpSpeedMin;
+		this.ArmCenterUpSpeedMax = fightCameraLogicComponent.ArmCenterUpSpeedMax;
+		this.ArmCenterUpEdgeMin = fightCameraLogicComponent.ArmCenterUpEdgeMin;
+		this.ArmCenterUpEdgeMax = fightCameraLogicComponent.ArmCenterUpEdgeMax;
+		if (fightCameraLogicComponent.ArmCenterUpCurve == null)
+		{
+			this.ArmCenterUpCurve = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ArmCenterUpCurve), "ArmCenterUpCurve"))
+		{
+			return false;
+		}
+		this.ArmCenterUpInputEnableTime = fightCameraLogicComponent.ArmCenterUpInputEnableTime;
+		this.ArmCenterUpRollbackEnableTime = fightCameraLogicComponent.ArmCenterUpRollbackEnableTime;
+		this.ArmCenterForwardSpeedMin = fightCameraLogicComponent.ArmCenterForwardSpeedMin;
+		this.ArmCenterForwardSpeedMax = fightCameraLogicComponent.ArmCenterForwardSpeedMax;
+		this.ArmCenterForwardEdgeMin = fightCameraLogicComponent.ArmCenterForwardEdgeMin;
+		this.ArmCenterForwardEdgeMax = fightCameraLogicComponent.ArmCenterForwardEdgeMax;
+		if (fightCameraLogicComponent.ArmCenterForwardCurve == null)
+		{
+			this.ArmCenterForwardCurve = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ArmCenterForwardCurve), "ArmCenterForwardCurve"))
+		{
+			return false;
+		}
+		this.ArmCenterForwardInputEnableTime = fightCameraLogicComponent.ArmCenterForwardInputEnableTime;
+		this.ArmCenterForwardRollbackEnableTime = fightCameraLogicComponent.ArmCenterForwardRollbackEnableTime;
+		this.ArmCenterRightSpeedMin = fightCameraLogicComponent.ArmCenterRightSpeedMin;
+		this.ArmCenterRightSpeedMax = fightCameraLogicComponent.ArmCenterRightSpeedMax;
+		this.ArmCenterRightEdgeMin = fightCameraLogicComponent.ArmCenterRightEdgeMin;
+		this.ArmCenterRightEdgeMax = fightCameraLogicComponent.ArmCenterRightEdgeMax;
+		if (fightCameraLogicComponent.ArmCenterRightCurve == null)
+		{
+			this.ArmCenterRightCurve = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ArmCenterRightCurve), "ArmCenterRightCurve"))
+		{
+			return false;
+		}
+		this.ArmCenterRightReverseSpeed = fightCameraLogicComponent.ArmCenterRightReverseSpeed;
+		this.ArmCenterRightReverseRotationEdge = fightCameraLogicComponent.ArmCenterRightReverseRotationEdge;
+		this.ArmCenterRightInputEnableTime = fightCameraLogicComponent.ArmCenterRightInputEnableTime;
+		this.ArmCenterRightRollbackEnableTime = fightCameraLogicComponent.ArmCenterRightRollbackEnableTime;
+		this.InitialCameraPitch = fightCameraLogicComponent.InitialCameraPitch;
+		this.CameraRotateToTargetMinAlpha = fightCameraLogicComponent.CameraRotateToTargetMinAlpha;
+		this.CameraRotateToTargetMaxAlpha = fightCameraLogicComponent.CameraRotateToTargetMaxAlpha;
+		if (fightCameraLogicComponent.CameraRotateToTargetCurve == null)
+		{
+			this.CameraRotateToTargetCurve = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraRotateToTargetCurve), "CameraRotateToTargetCurve"))
+		{
+			return false;
+		}
+		this.IsDisableResetFocus = fightCameraLogicComponent.IsDisableResetFocus;
+		this.AdditionPitchMax = fightCameraLogicComponent.AdditionPitchMax;
+		this.AdditionPitchMin = fightCameraLogicComponent.AdditionPitchMin;
+		this.AdditionPitchDeltaHeight = fightCameraLogicComponent.AdditionPitchDeltaHeight;
+		if (fightCameraLogicComponent.AdditionPitchCurve == null)
+		{
+			this.AdditionPitchCurve = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AdditionPitchCurve), "AdditionPitchCurve"))
+		{
+			return false;
+		}
+		this.WorldYawMin = fightCameraLogicComponent.WorldYawMin;
+		this.WorldYawMax = fightCameraLogicComponent.WorldYawMax;
+		this.WorldRollMin = fightCameraLogicComponent.WorldRollMin;
+		this.WorldRollMax = fightCameraLogicComponent.WorldRollMax;
+		this.CameraZoneMode = fightCameraLogicComponent.CameraZoneMode;
+		this.YawZoneSpeedMin = fightCameraLogicComponent.YawZoneSpeedMin;
+		this.YawZoneSpeedMax = fightCameraLogicComponent.YawZoneSpeedMax;
+		this.YawSoftZoneMin = fightCameraLogicComponent.YawSoftZoneMin;
+		this.YawSoftZoneMax = fightCameraLogicComponent.YawSoftZoneMax;
+		this.YawDeadZoneMin = fightCameraLogicComponent.YawDeadZoneMin;
+		this.YawDeadZoneMax = fightCameraLogicComponent.YawDeadZoneMax;
+		this.YawSoftZoneSpeedRatio = fightCameraLogicComponent.YawSoftZoneSpeedRatio;
+		this.YawDeadZoneTransToSoftZoneSpeedRatio = fightCameraLogicComponent.YawDeadZoneTransToSoftZoneSpeedRatio;
+		this.YawTransToForwardSpeedRatio = fightCameraLogicComponent.YawTransToForwardSpeedRatio;
+		this.YawInputEnableTime = fightCameraLogicComponent.YawInputEnableTime;
+		this.YawRollbackEnableTime = fightCameraLogicComponent.YawRollbackEnableTime;
+		this.YawSoftZoneRollbackEnableTime = fightCameraLogicComponent.YawSoftZoneRollbackEnableTime;
+		this.PitchInputEnableTime = fightCameraLogicComponent.PitchInputEnableTime;
+		this.PitchRollbackEnableTime = fightCameraLogicComponent.PitchRollbackEnableTime;
+		this.PitchSoftZoneMin = fightCameraLogicComponent.PitchSoftZoneMin;
+		this.PitchSoftZoneMax = fightCameraLogicComponent.PitchSoftZoneMax;
+		this.PitchDeadZoneMin = fightCameraLogicComponent.PitchDeadZoneMin;
+		this.PitchDeadZoneMax = fightCameraLogicComponent.PitchDeadZoneMax;
+		this.PitchBasis = fightCameraLogicComponent.PitchBasis;
+		this.PitchZoneSpeedMin = fightCameraLogicComponent.PitchZoneSpeedMin;
+		this.PitchZoneSpeedMax = fightCameraLogicComponent.PitchZoneSpeedMax;
+		this.CharAddArmLength = fightCameraLogicComponent.CharAddArmLength;
+		this.CharAddZ = fightCameraLogicComponent.CharAddZ;
+		this.EnableDynamicFov = fightCameraLogicComponent.EnableDynamicFov;
+		this.DynamicFovMin = fightCameraLogicComponent.DynamicFovMin;
+		this.DynamicFovMax = fightCameraLogicComponent.DynamicFovMax;
+		this.DynamicFovParamMin = fightCameraLogicComponent.DynamicFovParamMin;
+		this.DynamicFovParamMax = fightCameraLogicComponent.DynamicFovParamMax;
+		this.DynamicFovLerpSpeed = fightCameraLogicComponent.DynamicFovLerpSpeed;
+		if (fightCameraLogicComponent.DynamicFovCurve == null)
+		{
+			this.DynamicFovCurve = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DynamicFovCurve), "DynamicFovCurve"))
+		{
+			return false;
+		}
+		this.TargetDynamicFov = fightCameraLogicComponent.TargetDynamicFov;
+		this.SmoothedClampSpeedRatio = fightCameraLogicComponent.SmoothedClampSpeedRatio;
+		this.LastFrameCameraArmLocationSocketName = fightCameraLogicComponent.LastFrameCameraArmLocationSocketName;
+		this.CameraArmLocationSocketName = fightCameraLogicComponent.CameraArmLocationSocketName;
+		this.EnableFocusOnVehicle = fightCameraLogicComponent.EnableFocusOnVehicle;
+		this.AttachToVehicle = fightCameraLogicComponent.AttachToVehicle;
+		if (fightCameraLogicComponent.OverrideLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.OverrideLocation), "OverrideLocation"))
+		{
+			return false;
+		}
+		this.HasOverrideLocation = fightCameraLogicComponent.HasOverrideLocation;
+		this.IsCharacterValid = fightCameraLogicComponent.IsCharacterValid;
+		if (fightCameraLogicComponent.Character == null)
+		{
+			this.Character = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Character), "Character"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CharacterController == null)
+		{
+			this.CharacterController = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterController), "CharacterController"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CharacterEntityHandle == null)
+		{
+			this.CharacterEntityHandle = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterEntityHandle), "CharacterEntityHandle"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CharacterInputComponent == null)
+		{
+			this.CharacterInputComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterInputComponent), "CharacterInputComponent"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CharacterTagComponentInternal == null)
+		{
+			this.CharacterTagComponentInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterTagComponentInternal), "CharacterTagComponentInternal"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CharacterDriveVehicleComponent == null)
+		{
+			this.CharacterDriveVehicleComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterDriveVehicleComponent), "CharacterDriveVehicleComponent"))
+		{
+			return false;
+		}
+		this.CharacterMoveEnterState = fightCameraLogicComponent.CharacterMoveEnterState;
+		if (fightCameraLogicComponent.FollowShooterEntityHandle == null)
+		{
+			this.FollowShooterEntityHandle = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FollowShooterEntityHandle), "FollowShooterEntityHandle"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.FollowShooterTagComponentInternal == null)
+		{
+			this.FollowShooterTagComponentInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FollowShooterTagComponentInternal), "FollowShooterTagComponentInternal"))
+		{
+			return false;
+		}
+		this.IsSpecificLockTarget = fightCameraLogicComponent.IsSpecificLockTarget;
+		this.SpecificLockTargetType = fightCameraLogicComponent.SpecificLockTargetType;
+		this.LockTargetCameraHandle = fightCameraLogicComponent.LockTargetCameraHandle;
+		if (fightCameraLogicComponent.TargetEntity == null)
+		{
+			this.TargetEntity = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetEntity), "TargetEntity"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.TargetTagComponentInternal == null)
+		{
+			this.TargetTagComponentInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetTagComponentInternal), "TargetTagComponentInternal"))
+		{
+			return false;
+		}
+		this.TargetSocketName = fightCameraLogicComponent.TargetSocketName;
+		this.TargetClearByBlockTime = fightCameraLogicComponent.TargetClearByBlockTime;
+		this.IsFollowing = fightCameraLogicComponent.IsFollowing;
+		this.IsFixingX = fightCameraLogicComponent.IsFixingX;
+		this.IsFixingY = fightCameraLogicComponent.IsFixingY;
+		this.IsFixingZ = fightCameraLogicComponent.IsFixingZ;
+		this.RestoreFollowingOnChangeRole = fightCameraLogicComponent.RestoreFollowingOnChangeRole;
+		this.ArmLocationFadeElapseTime = fightCameraLogicComponent.ArmLocationFadeElapseTime;
+		if (fightCameraLogicComponent.VehicleEntityHandle == null)
+		{
+			this.VehicleEntityHandle = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleEntityHandle), "VehicleEntityHandle"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.VehicleActorComponent == null)
+		{
+			this.VehicleActorComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleActorComponent), "VehicleActorComponent"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.VehicleMoveComponent == null)
+		{
+			this.VehicleMoveComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleMoveComponent), "VehicleMoveComponent"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.VehicleInputComponent == null)
+		{
+			this.VehicleInputComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleInputComponent), "VehicleInputComponent"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.VehicleAnimationComponent == null)
+		{
+			this.VehicleAnimationComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleAnimationComponent), "VehicleAnimationComponent"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.BaseVehiclePerformComponent == null)
+		{
+			this.BaseVehiclePerformComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BaseVehiclePerformComponent), "BaseVehiclePerformComponent"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.GongduolaPerformComponent == null)
+		{
+			this.GongduolaPerformComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GongduolaPerformComponent), "GongduolaPerformComponent"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.PlayerRotator == null)
+		{
+			this.PlayerRotator = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlayerRotator), "PlayerRotator"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.PlayerLocation == null)
+		{
+			this.PlayerLocation = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlayerLocation), "PlayerLocation"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.PlayerLocationForDither == null)
+		{
+			this.PlayerLocationForDither = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlayerLocationForDither), "PlayerLocationForDither"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.LastFramePlayerLocation == null)
+		{
+			this.LastFramePlayerLocation = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastFramePlayerLocation), "LastFramePlayerLocation"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.PlayerVelocity == null)
+		{
+			this.PlayerVelocity = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlayerVelocity), "PlayerVelocity"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.TargetLocation == null)
+		{
+			this.TargetLocation = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetLocation), "TargetLocation"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.PlayerVehicleDeltaLocation == null)
+		{
+			this.PlayerVehicleDeltaLocation = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlayerVehicleDeltaLocation), "PlayerVehicleDeltaLocation"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.PlayerMoveVector == null)
+		{
+			this.PlayerMoveVector = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlayerMoveVector), "PlayerMoveVector"))
+		{
+			return false;
+		}
+		this.TempArmLength = fightCameraLogicComponent.TempArmLength;
+		if (fightCameraLogicComponent.TmpArmLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpArmLocation), "TmpArmLocation"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.TmpArmLocationOffset != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpArmLocationOffset), "TmpArmLocationOffset"))
+		{
+			return false;
+		}
+		this.ArmLocationFading = fightCameraLogicComponent.ArmLocationFading;
+		this.ArmLocationFadeDuration = fightCameraLogicComponent.ArmLocationFadeDuration;
+		this.Fading = fightCameraLogicComponent.Fading;
+		this.FadeArmLength = fightCameraLogicComponent.FadeArmLength;
+		this.FadeArmOffset = fightCameraLogicComponent.FadeArmOffset;
+		this.FadeCameraOffset = fightCameraLogicComponent.FadeCameraOffset;
+		this.FadeFov = fightCameraLogicComponent.FadeFov;
+		this.FadeDuration = fightCameraLogicComponent.FadeDuration;
+		if (fightCameraLogicComponent.FadeCurve == null)
+		{
+			this.FadeCurve = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FadeCurve), "FadeCurve"))
+		{
+			return false;
+		}
+		this.IsUniqueFade = fightCameraLogicComponent.IsUniqueFade;
+		this.FadeElapse = fightCameraLogicComponent.FadeElapse;
+		this.CameraArmCenterRightInputTime = fightCameraLogicComponent.CameraArmCenterRightInputTime;
+		this.CameraArmCenterRightRollbackTime = fightCameraLogicComponent.CameraArmCenterRightRollbackTime;
+		this.LastCameraArmCenterLeftInput = fightCameraLogicComponent.LastCameraArmCenterLeftInput;
+		this.LastCameraArmCenterRightInput = fightCameraLogicComponent.LastCameraArmCenterRightInput;
+		if (fightCameraLogicComponent.CurrentCamera != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentCamera), "CurrentCamera"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CameraLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraLocation), "CameraLocation"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CameraForward != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraForward), "CameraForward"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.DebugDesiredCameraProps == null)
+		{
+			this.DebugDesiredCameraProps = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DebugDesiredCameraProps), "DebugDesiredCameraProps"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.DebugCurrentCameraProps == null)
+		{
+			this.DebugCurrentCameraProps = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DebugCurrentCameraProps), "DebugCurrentCameraProps"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.DebugLogicComponentsProps == null)
+		{
+			this.DebugLogicComponentsProps = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DebugLogicComponentsProps), "DebugLogicComponentsProps"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.DebugControllersProps == null)
+		{
+			this.DebugControllersProps = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DebugControllersProps), "DebugControllersProps"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.DebugControllerModifications == null)
+		{
+			this.DebugControllerModifications = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DebugControllerModifications), "DebugControllerModifications"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.DebugCameraPropsRaw == null)
+		{
+			this.DebugCameraPropsRaw = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DebugCameraPropsRaw), "DebugCameraPropsRaw"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CameraRotation == null)
+		{
+			this.CameraRotation = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraRotation), "CameraRotation"))
+		{
+			return false;
+		}
+		this.IsModifiedArmLocation = fightCameraLogicComponent.IsModifiedArmLocation;
+		this.IsModifiedArmLength = fightCameraLogicComponent.IsModifiedArmLength;
+		this.IsModifiedArmOffset = fightCameraLogicComponent.IsModifiedArmOffset;
+		this.IsModifiedZoomModifier = fightCameraLogicComponent.IsModifiedZoomModifier;
+		this.IsModifiedArmRotationYaw = fightCameraLogicComponent.IsModifiedArmRotationYaw;
+		this.IsModifiedArmRotationPitch = fightCameraLogicComponent.IsModifiedArmRotationPitch;
+		this.IsModifiedArmRotationRoll = fightCameraLogicComponent.IsModifiedArmRotationRoll;
+		this.IsModifiedCameraOffset = fightCameraLogicComponent.IsModifiedCameraOffset;
+		this.IsModifiedFov = fightCameraLogicComponent.IsModifiedFov;
+		this.SuppressClearRollFlags = fightCameraLogicComponent.SuppressClearRollFlags;
+		this.FloatUpHeight = fightCameraLogicComponent.FloatUpHeight;
+		if (fightCameraLogicComponent.DisplayComponentInternal == null)
+		{
+			this.DisplayComponentInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisplayComponentInternal), "DisplayComponentInternal"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CacheCameraVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheCameraVector), "CacheCameraVector"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CacheWorldUp != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheWorldUp), "CacheWorldUp"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CacheCameraForward != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheCameraForward), "CacheCameraForward"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CameraQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraQuat), "CameraQuat"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CameraQuatInverse != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraQuatInverse), "CameraQuatInverse"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.ArmLocationDelta != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ArmLocationDelta), "ArmLocationDelta"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector2), "TempVector2"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.TempVector3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector3), "TempVector3"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.TempVector4 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector4), "TempVector4"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.TempRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempRotator), "TempRotator"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.TempQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempQuat), "TempQuat"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.TempQuat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempQuat2), "TempQuat2"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.TempQuat3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempQuat3), "TempQuat3"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.TempQuatInverse != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempQuatInverse), "TempQuatInverse"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.TempDesireLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempDesireLocation), "TempDesireLocation"))
+		{
+			return false;
+		}
+		this.IsDitherEffectEnable = fightCameraLogicComponent.IsDitherEffectEnable;
+		if (fightCameraLogicComponent.DitherDisableReasons != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.DitherDisableReasons), "DitherDisableReasons"))
+		{
+			return false;
+		}
+		this.Initialized = fightCameraLogicComponent.Initialized;
+		if (fightCameraLogicComponent.CameraConfig == null)
+		{
+			this.CameraConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraConfig), "CameraConfig"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.DefaultConfigs == null)
+		{
+			this.DefaultConfigs = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DefaultConfigs), "DefaultConfigs"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.DefaultCurveConfigs == null)
+		{
+			this.DefaultCurveConfigs = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DefaultCurveConfigs), "DefaultCurveConfigs"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.ConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConfigMap), "ConfigMap"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CurveConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurveConfigMap), "CurveConfigMap"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.VehicleConfigs == null)
+		{
+			this.VehicleConfigs = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleConfigs), "VehicleConfigs"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.VehicleCurveConfigs == null)
+		{
+			this.VehicleCurveConfigs = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleCurveConfigs), "VehicleCurveConfigs"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.VehicleConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleConfigMap), "VehicleConfigMap"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.VehicleCurveConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleCurveConfigMap), "VehicleCurveConfigMap"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.SoarCameraShakeCurve == null)
+		{
+			this.SoarCameraShakeCurve = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SoarCameraShakeCurve), "SoarCameraShakeCurve"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.SoarCameraShake == null)
+		{
+			this.SoarCameraShake = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SoarCameraShake), "SoarCameraShake"))
+		{
+			return false;
+		}
+		this.StartLoadCameraCurve = fightCameraLogicComponent.StartLoadCameraCurve;
+		if (fightCameraLogicComponent.CameraShakeCurve == null)
+		{
+			this.CameraShakeCurve = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraShakeCurve), "CameraShakeCurve"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CameraShakeClass == null)
+		{
+			this.CameraShakeClass = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraShakeClass), "CameraShakeClass"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CameraShake == null)
+		{
+			this.CameraShake = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraShake), "CameraShake"))
+		{
+			return false;
+		}
+		this.CurrentArmCenterForwardEdgeMin = fightCameraLogicComponent.CurrentArmCenterForwardEdgeMin;
+		this.CurrentArmCenterForwardEdgeMax = fightCameraLogicComponent.CurrentArmCenterForwardEdgeMax;
+		this.CurrentArmCenterRightEdgeMin = fightCameraLogicComponent.CurrentArmCenterRightEdgeMin;
+		this.CurrentArmCenterRightEdgeMax = fightCameraLogicComponent.CurrentArmCenterRightEdgeMax;
+		this.CurrentArmCenterUpEdgeMin = fightCameraLogicComponent.CurrentArmCenterUpEdgeMin;
+		this.CurrentArmCenterUpEdgeMax = fightCameraLogicComponent.CurrentArmCenterUpEdgeMax;
+		this.DefaultLandscapeLodScaleFactor = fightCameraLogicComponent.DefaultLandscapeLodScaleFactor;
+		this.LastFrameFov = fightCameraLogicComponent.LastFrameFov;
+		this.StartFloatUpHeightRatio = fightCameraLogicComponent.StartFloatUpHeightRatio;
+		this.CurrentFloatUpHeightRatio = fightCameraLogicComponent.CurrentFloatUpHeightRatio;
+		this.EnableVehicleWaterFallCamera = fightCameraLogicComponent.EnableVehicleWaterFallCamera;
+		this.LastFrameAttachToVehicle = fightCameraLogicComponent.LastFrameAttachToVehicle;
+		this.FinalCameraDistance = fightCameraLogicComponent.FinalCameraDistance;
+		this.NanOutputTime = fightCameraLogicComponent.NanOutputTime;
+		this.GravityMode = fightCameraLogicComponent.GravityMode;
+		if (fightCameraLogicComponent.GravityDirect == null)
+		{
+			this.GravityDirect = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GravityDirect), "GravityDirect"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.GravityUp == null)
+		{
+			this.GravityUp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GravityUp), "GravityUp"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.GravityQuat == null)
+		{
+			this.GravityQuat = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GravityQuat), "GravityQuat"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.GravityInverseQuat == null)
+		{
+			this.GravityInverseQuat = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GravityInverseQuat), "GravityInverseQuat"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CameraRotationInGravity == null)
+		{
+			this.CameraRotationInGravity = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraRotationInGravity), "CameraRotationInGravity"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.PlayerLocationInGravity == null)
+		{
+			this.PlayerLocationInGravity = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlayerLocationInGravity), "PlayerLocationInGravity"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.PlayerRotatorInGravity == null)
+		{
+			this.PlayerRotatorInGravity = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlayerRotatorInGravity), "PlayerRotatorInGravity"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.CacheTargetGravity == null)
+		{
+			this.CacheTargetGravity = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheTargetGravity), "CacheTargetGravity"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.DiagnosticCameraDistanceMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DiagnosticCameraDistanceMap), "DiagnosticCameraDistanceMap"))
+		{
+			return false;
+		}
+		this.ShouldOutputDiagnosticCameraDistanceLog = fightCameraLogicComponent.ShouldOutputDiagnosticCameraDistanceLog;
+		this.OutputDiagnosticCameraDistanceExp = fightCameraLogicComponent.OutputDiagnosticCameraDistanceExp;
+		this.OutputDiagnosticCameraDistanceSquared = fightCameraLogicComponent.OutputDiagnosticCameraDistanceSquared;
+		if (fightCameraLogicComponent.PairConfigKeySet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PairConfigKeySet), "PairConfigKeySet"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.PairKeyArray != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PairKeyArray), "PairKeyArray"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.NeedValueCheckPairKeySet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EFightCameraDefault>(this.NeedValueCheckPairKeySet), "NeedValueCheckPairKeySet"))
+		{
+			return false;
+		}
+		this.SelfCenteredTimeDilation = fightCameraLogicComponent.SelfCenteredTimeDilation;
+		this.IsEnablePanning = fightCameraLogicComponent.IsEnablePanning;
+		if (fightCameraLogicComponent.ResetTargetLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ResetTargetLocation), "ResetTargetLocation"))
+		{
+			return false;
+		}
+		if (fightCameraLogicComponent.ResetAddRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ResetAddRotator), "ResetAddRotator"))
+		{
+			return false;
+		}
+		this.ScreenSizeRefX = fightCameraLogicComponent.ScreenSizeRefX;
+		this.ScreenSizeRefY = fightCameraLogicComponent.ScreenSizeRefY;
+		this.CameraTargetLocationBufferTime = fightCameraLogicComponent.CameraTargetLocationBufferTime;
+		this.IsStartCameraTargetLocationBuffer = fightCameraLogicComponent.IsStartCameraTargetLocationBuffer;
+		return (fightCameraLogicComponent.TempArmLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempArmLocation), "TempArmLocation")) && (fightCameraLogicComponent.TempOffset == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempOffset), "TempOffset"));
+	}
+
+	// Token: 0x1700052E RID: 1326
+	// (get) Token: 0x0600230F RID: 8975 RVA: 0x000DF3A3 File Offset: 0x000DD5A3
+	public override bool NeedCreateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700052F RID: 1327
+	// (get) Token: 0x06002310 RID: 8976 RVA: 0x000DF3A6 File Offset: 0x000DD5A6
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17000530 RID: 1328
+	// (get) Token: 0x06002311 RID: 8977 RVA: 0x000DF3A9 File Offset: 0x000DD5A9
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17000531 RID: 1329
+	// (get) Token: 0x06002312 RID: 8978 RVA: 0x000DF3AC File Offset: 0x000DD5AC
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17000532 RID: 1330
+	// (get) Token: 0x06002313 RID: 8979 RVA: 0x000DF3AF File Offset: 0x000DD5AF
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17000533 RID: 1331
+	// (get) Token: 0x06002314 RID: 8980 RVA: 0x000DF3B2 File Offset: 0x000DD5B2
+	public override bool NeedAfterTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x06002318 RID: 8984 RVA: 0x000DF6F0 File Offset: 0x000DD8F0
 	[NullableContext(2)]
 	[CompilerGenerated]
-	internal static bool <UpdateControllerModifications>g__IsValueModified|431_0(object oldValue, object newValue)
+	internal static bool <UpdateControllerModifications>g__IsValueModified|433_0(object oldValue, object newValue)
 	{
 		global::Vector vector = oldValue as global::Vector;
 		if (vector != null)
@@ -14847,10 +14077,10 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return oldValue != null && newValue != null && oldValue.GetType() == newValue.GetType() && !oldValue.Equals(newValue);
 	}
 
-	// Token: 0x06002261 RID: 8801 RVA: 0x000D92F0 File Offset: 0x000D74F0
+	// Token: 0x06002319 RID: 8985 RVA: 0x000DF7B0 File Offset: 0x000DD9B0
 	[NullableContext(2)]
 	[CompilerGenerated]
-	internal static bool <UpdateLogicComponentDebugProps>g__IsValueModified|432_0(object oldValue, object newValue)
+	internal static bool <UpdateLogicComponentDebugProps>g__IsValueModified|434_0(object oldValue, object newValue)
 	{
 		global::Vector vector = oldValue as global::Vector;
 		if (vector != null)
@@ -14882,63 +14112,63 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		return oldValue != null && oldValue.GetType() == ((newValue != null) ? newValue.GetType() : null) && !oldValue.Equals(newValue);
 	}
 
-	// Token: 0x04001650 RID: 5712
+	// Token: 0x04001692 RID: 5778
 	public const float CLEAN_TARGET_SPEED_THRESHOLD = 70f;
 
-	// Token: 0x04001652 RID: 5714
+	// Token: 0x04001694 RID: 5780
 	private const string CONFIG_PATH = "/Game/Aki/Data/Camera/DA_FightcameraConfig.DA_FightCameraConfig";
 
-	// Token: 0x04001653 RID: 5715
+	// Token: 0x04001695 RID: 5781
 	private const string MOBILE_CONFIG_PATH = "/Game/Aki/Data/Camera/DA_FightCameraConfig_Mobile.DA_FightCameraConfig_Mobile";
 
-	// Token: 0x04001654 RID: 5716
+	// Token: 0x04001696 RID: 5782
 	public const string WalkingCameraShakePath = "/Game/Aki/Character/Role/Common/Data/CameraShake/Camera/NCS_Role_Walking.NCS_Role_Walking_C";
 
-	// Token: 0x04001655 RID: 5717
+	// Token: 0x04001697 RID: 5783
 	public const string WalkingCameraShakeCurvePath = "/Game/Aki/Character/Role/Common/Data/CameraShake/Camera/CameraShake_Curve_Walking.CameraShake_Curve_Walking";
 
-	// Token: 0x04001656 RID: 5718
+	// Token: 0x04001698 RID: 5784
 	private const int CAMERA_LOCATION_NEARLY_DISTANCE = 1;
 
-	// Token: 0x04001657 RID: 5719
+	// Token: 0x04001699 RID: 5785
 	private const int LOOK_AT_FORWARD_DISTANCE = 1000;
 
-	// Token: 0x04001658 RID: 5720
+	// Token: 0x0400169A RID: 5786
 	private const float RESET_FOCUS_ROTATION_TIME = 0.2f;
 
-	// Token: 0x04001659 RID: 5721
+	// Token: 0x0400169B RID: 5787
 	private const int MAX_TARGET_HAS_BLOCK_TIME = 1000;
 
-	// Token: 0x0400165A RID: 5722
+	// Token: 0x0400169C RID: 5788
 	private const int SHOW_TARGET_VALID_TIME = 100;
 
-	// Token: 0x0400165B RID: 5723
+	// Token: 0x0400169D RID: 5789
 	private const float BREAK_BLEND_OUT_TIME = 0.2f;
 
-	// Token: 0x0400165C RID: 5724
+	// Token: 0x0400169E RID: 5790
 	private const int LANDSCAPE_LOD_SCALE_FOV = 80;
 
-	// Token: 0x0400165D RID: 5725
+	// Token: 0x0400169F RID: 5791
 	private const float CAMERA_TARGET_BUFFER_TIME = 0.25f;
 
-	// Token: 0x0400165E RID: 5726
+	// Token: 0x040016A0 RID: 5792
 	private const int MAX_DIAGNOSTIC_OUTPUT_TIME = 5;
 
-	// Token: 0x0400165F RID: 5727
+	// Token: 0x040016A1 RID: 5793
 	private const int VALID_DIAGNOSTIC_DISTANCE_SQR = 900;
 
-	// Token: 0x04001660 RID: 5728
+	// Token: 0x040016A2 RID: 5794
 	private const float MAX_NAN_OUTPUT_TIME = 5f;
 
-	// Token: 0x04001661 RID: 5729
+	// Token: 0x040016A3 RID: 5795
 	[StaticVariableRuleIgnore]
 	private static readonly int VehicleWaterFall = GameplayTagDefine.EGameplayTagId["载具.贡多拉.攀瀑"];
 
-	// Token: 0x04001662 RID: 5730
+	// Token: 0x040016A4 RID: 5796
 	[StaticVariableRuleIgnore]
 	private static readonly int HideHeadTag = GameplayTagDefine.EGameplayTagId["功能.第一人称.隐藏头部"];
 
-	// Token: 0x04001663 RID: 5731
+	// Token: 0x040016A5 RID: 5797
 	[StaticVariableRuleIgnore]
 	private static readonly int[] LockSightTag = new int[]
 	{
@@ -14946,664 +14176,669 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 		GameplayTagDefine.EGameplayTagId["行为状态.方向状态.看向方向"]
 	};
 
-	// Token: 0x04001664 RID: 5732
+	// Token: 0x040016A6 RID: 5798
 	private const int POINT_SIZE = 20;
 
-	// Token: 0x04001665 RID: 5733
+	// Token: 0x040016A7 RID: 5799
 	private const int LINE_LENGTH = 2000;
 
-	// Token: 0x04001666 RID: 5734
+	// Token: 0x040016A8 RID: 5800
 	private const int LINE_SIZE = 5;
 
-	// Token: 0x04001667 RID: 5735
+	// Token: 0x040016A9 RID: 5801
 	private const int CIRCLE_SEGMENT = 48;
 
-	// Token: 0x04001668 RID: 5736
+	// Token: 0x040016AA RID: 5802
 	private const int CAMERA_DIRECTION_LENGTH = 500;
 
-	// Token: 0x04001669 RID: 5737
+	// Token: 0x040016AB RID: 5803
 	private const int CAMERA_DIRECTION_ARROW_SIZE = 2000;
 
-	// Token: 0x0400166A RID: 5738
+	// Token: 0x040016AC RID: 5804
 	public const int CleanTargetSpeedThreshold = 70;
 
-	// Token: 0x0400166B RID: 5739
+	// Token: 0x040016AD RID: 5805
 	[StaticVariableRuleIgnore]
 	private static readonly Stat UpdatePlayerStat = Stat.Create("UpdatePlayerStat", "", "");
 
-	// Token: 0x0400166C RID: 5740
+	// Token: 0x040016AE RID: 5806
 	[StaticVariableRuleIgnore]
 	private static readonly Stat UpdateControllerStat = Stat.Create("UpdateControllerStat", "", "");
 
-	// Token: 0x0400166D RID: 5741
+	// Token: 0x040016AF RID: 5807
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ClampArmLengthStat = Stat.Create("ClampArmLengthStat", "", "");
 
-	// Token: 0x0400166E RID: 5742
+	// Token: 0x040016B0 RID: 5808
 	[StaticVariableRuleIgnore]
 	private static readonly Stat UpdateArmLocationStat = Stat.Create("UpdateArmLocationStat", "", "");
 
-	// Token: 0x0400166F RID: 5743
+	// Token: 0x040016B1 RID: 5809
 	[StaticVariableRuleIgnore]
 	private static readonly Stat UpdateArmLengthStat = Stat.Create("UpdateArmLengthStat", "", "");
 
-	// Token: 0x04001670 RID: 5744
+	// Token: 0x040016B2 RID: 5810
 	[StaticVariableRuleIgnore]
 	private static readonly Stat UpdatePitchStat = Stat.Create("UpdatePitchStat", "", "");
 
-	// Token: 0x04001671 RID: 5745
+	// Token: 0x040016B3 RID: 5811
 	[StaticVariableRuleIgnore]
 	private static readonly Stat UpdateYawStat = Stat.Create("UpdateYawStat", "", "");
 
-	// Token: 0x04001672 RID: 5746
+	// Token: 0x040016B4 RID: 5812
 	[StaticVariableRuleIgnore]
 	private static readonly Stat UpdateRollStat = Stat.Create("UpdateRollStat", "", "");
 
-	// Token: 0x04001673 RID: 5747
+	// Token: 0x040016B5 RID: 5813
 	[StaticVariableRuleIgnore]
 	private static readonly Stat UpdateFadingStat = Stat.Create("UpdateFadingStat", "", "");
 
-	// Token: 0x04001674 RID: 5748
+	// Token: 0x040016B6 RID: 5814
 	[StaticVariableRuleIgnore]
 	private static readonly Stat UpdateActorTransStat = Stat.Create("UpdateActorTransStat", "", "");
 
-	// Token: 0x04001675 RID: 5749
+	// Token: 0x040016B7 RID: 5815
 	[StaticVariableRuleIgnore]
 	private static readonly Stat CameraPostStat = Stat.Create("CameraPostStat", "", "");
 
-	// Token: 0x04001676 RID: 5750
+	// Token: 0x040016B8 RID: 5816
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<string, Stat> ControllerStatMap = new Dictionary<string, Stat>();
 
-	// Token: 0x04001677 RID: 5751
+	// Token: 0x040016B9 RID: 5817
 	public float ArmLength;
 
-	// Token: 0x04001678 RID: 5752
+	// Token: 0x040016BA RID: 5818
 	public float ArmOffsetX;
 
-	// Token: 0x04001679 RID: 5753
+	// Token: 0x040016BB RID: 5819
 	public float ArmOffsetY;
 
-	// Token: 0x0400167A RID: 5754
+	// Token: 0x040016BC RID: 5820
 	public float ArmOffsetZ;
 
-	// Token: 0x0400167B RID: 5755
+	// Token: 0x040016BD RID: 5821
 	public float MinArmLength;
 
-	// Token: 0x0400167C RID: 5756
+	// Token: 0x040016BE RID: 5822
 	public float MaxArmLength;
 
-	// Token: 0x0400167D RID: 5757
+	// Token: 0x040016BF RID: 5823
 	public float CameraOffsetX;
 
-	// Token: 0x0400167E RID: 5758
+	// Token: 0x040016C0 RID: 5824
 	public float CameraOffsetY;
 
-	// Token: 0x0400167F RID: 5759
+	// Token: 0x040016C1 RID: 5825
 	public float CameraOffsetZ;
 
-	// Token: 0x04001680 RID: 5760
+	// Token: 0x040016C2 RID: 5826
 	public float Fov;
 
-	// Token: 0x04001681 RID: 5761
+	// Token: 0x040016C3 RID: 5827
 	public float CameraLocationFadeTime;
 
-	// Token: 0x04001682 RID: 5762
+	// Token: 0x040016C4 RID: 5828
 	public float CollisionProbeSize;
 
-	// Token: 0x04001683 RID: 5763
+	// Token: 0x040016C5 RID: 5829
 	public float NearCollisionProbeSize;
 
-	// Token: 0x04001684 RID: 5764
+	// Token: 0x040016C6 RID: 5830
 	public float CurrentCollisionSize;
 
-	// Token: 0x04001685 RID: 5765
+	// Token: 0x040016C7 RID: 5831
 	public float CheckCollisionProbeSize;
 
-	// Token: 0x04001686 RID: 5766
+	// Token: 0x040016C8 RID: 5832
 	public float CheckWidth;
 
-	// Token: 0x04001687 RID: 5767
+	// Token: 0x040016C9 RID: 5833
 	public float CollisionAdditionalHeightInWater;
 
-	// Token: 0x04001688 RID: 5768
+	// Token: 0x040016CA RID: 5834
 	public float DefaultPitchHorizontalOffset;
 
-	// Token: 0x04001689 RID: 5769
+	// Token: 0x040016CB RID: 5835
 	public float DefaultPitchVerticalOffset;
 
-	// Token: 0x0400168A RID: 5770
+	// Token: 0x040016CC RID: 5836
 	public float DefaultPitchInRangeMin;
 
-	// Token: 0x0400168B RID: 5771
+	// Token: 0x040016CD RID: 5837
 	public float DefaultPitchInRangeCenter;
 
-	// Token: 0x0400168C RID: 5772
+	// Token: 0x040016CE RID: 5838
 	public float DefaultPitchInRangeMax;
 
-	// Token: 0x0400168D RID: 5773
+	// Token: 0x040016CF RID: 5839
 	public float DefaultPitchOutRangeMin;
 
-	// Token: 0x0400168E RID: 5774
+	// Token: 0x040016D0 RID: 5840
 	public float DefaultPitchOutRangeCenter;
 
-	// Token: 0x0400168F RID: 5775
+	// Token: 0x040016D1 RID: 5841
 	public float DefaultPitchOutRangeMax;
 
-	// Token: 0x04001690 RID: 5776
+	// Token: 0x040016D2 RID: 5842
 	public float FloatUpArmLengthMin;
 
-	// Token: 0x04001691 RID: 5777
+	// Token: 0x040016D3 RID: 5843
 	public float FloatUpArmLengthMax;
 
-	// Token: 0x04001692 RID: 5778
+	// Token: 0x040016D4 RID: 5844
 	public float CameraOffsetFloatUpArmLengthMin;
 
-	// Token: 0x04001693 RID: 5779
+	// Token: 0x040016D5 RID: 5845
 	public float CameraOffsetFloatUpArmLengthMax;
 
-	// Token: 0x04001694 RID: 5780
+	// Token: 0x040016D6 RID: 5846
 	public float CameraOffsetFloatUpMin;
 
-	// Token: 0x04001695 RID: 5781
+	// Token: 0x040016D7 RID: 5847
 	public float CameraOffsetFloatUpMax;
 
-	// Token: 0x04001696 RID: 5782
+	// Token: 0x040016D8 RID: 5848
 	public float MaxDistance;
 
-	// Token: 0x04001697 RID: 5783
+	// Token: 0x040016D9 RID: 5849
 	public float InSpeed;
 
-	// Token: 0x04001698 RID: 5784
+	// Token: 0x040016DA RID: 5850
 	public float OutSpeed;
 
-	// Token: 0x04001699 RID: 5785
+	// Token: 0x040016DB RID: 5851
 	public float CenterCollisionSize;
 
-	// Token: 0x0400169A RID: 5786
+	// Token: 0x040016DC RID: 5852
 	public float CollisionSizePercentage;
 
-	// Token: 0x0400169B RID: 5787
+	// Token: 0x040016DD RID: 5853
 	private float StartHideDistanceInternal;
 
-	// Token: 0x0400169C RID: 5788
+	// Token: 0x040016DE RID: 5854
 	private float StartHideDistSquared;
 
-	// Token: 0x0400169D RID: 5789
+	// Token: 0x040016DF RID: 5855
 	public float CompleteHideDistance;
 
-	// Token: 0x0400169E RID: 5790
+	// Token: 0x040016E0 RID: 5856
 	public float StartHidePitch;
 
-	// Token: 0x0400169F RID: 5791
+	// Token: 0x040016E1 RID: 5857
 	public float CompleteHidePitch;
 
-	// Token: 0x040016A0 RID: 5792
+	// Token: 0x040016E2 RID: 5858
 	public float StartDitherValue;
 
-	// Token: 0x040016A1 RID: 5793
+	// Token: 0x040016E3 RID: 5859
 	public float YawLimitMin;
 
-	// Token: 0x040016A2 RID: 5794
+	// Token: 0x040016E4 RID: 5860
 	public float YawLimitMax;
 
-	// Token: 0x040016A3 RID: 5795
+	// Token: 0x040016E5 RID: 5861
 	public float PitchLimitMin;
 
-	// Token: 0x040016A4 RID: 5796
+	// Token: 0x040016E6 RID: 5862
 	public float PitchLimitMax;
 
-	// Token: 0x040016A5 RID: 5797
+	// Token: 0x040016E7 RID: 5863
 	public float LookDownOffsetZ;
 
-	// Token: 0x040016A6 RID: 5798
+	// Token: 0x040016E8 RID: 5864
 	public float LookUpOffsetZ;
 
-	// Token: 0x040016A7 RID: 5799
+	// Token: 0x040016E9 RID: 5865
 	public float ArmCenterUpSpeedMin;
 
-	// Token: 0x040016A8 RID: 5800
+	// Token: 0x040016EA RID: 5866
 	public float ArmCenterUpSpeedMax;
 
-	// Token: 0x040016A9 RID: 5801
+	// Token: 0x040016EB RID: 5867
 	public float ArmCenterUpEdgeMin;
 
-	// Token: 0x040016AA RID: 5802
+	// Token: 0x040016EC RID: 5868
 	public float ArmCenterUpEdgeMax;
 
-	// Token: 0x040016AB RID: 5803
+	// Token: 0x040016ED RID: 5869
 	[Nullable(2)]
 	public CurveBase ArmCenterUpCurve;
 
-	// Token: 0x040016AC RID: 5804
+	// Token: 0x040016EE RID: 5870
 	public float ArmCenterUpInputEnableTime;
 
-	// Token: 0x040016AD RID: 5805
+	// Token: 0x040016EF RID: 5871
 	public float ArmCenterUpRollbackEnableTime;
 
-	// Token: 0x040016AE RID: 5806
+	// Token: 0x040016F0 RID: 5872
 	public float ArmCenterForwardSpeedMin;
 
-	// Token: 0x040016AF RID: 5807
+	// Token: 0x040016F1 RID: 5873
 	public float ArmCenterForwardSpeedMax;
 
-	// Token: 0x040016B0 RID: 5808
+	// Token: 0x040016F2 RID: 5874
 	public float ArmCenterForwardEdgeMin;
 
-	// Token: 0x040016B1 RID: 5809
-	public float ArmCenterForwardEdgeMax;
-
-	// Token: 0x040016B2 RID: 5810
-	[Nullable(2)]
-	public CurveBase ArmCenterForwardCurve;
-
-	// Token: 0x040016B3 RID: 5811
-	public float ArmCenterForwardInputEnableTime;
-
-	// Token: 0x040016B4 RID: 5812
-	public float ArmCenterForwardRollbackEnableTime;
-
-	// Token: 0x040016B5 RID: 5813
-	public float ArmCenterRightSpeedMin;
-
-	// Token: 0x040016B6 RID: 5814
-	public float ArmCenterRightSpeedMax;
-
-	// Token: 0x040016B7 RID: 5815
-	public float ArmCenterRightEdgeMin;
-
-	// Token: 0x040016B8 RID: 5816
-	public float ArmCenterRightEdgeMax;
-
-	// Token: 0x040016B9 RID: 5817
-	[Nullable(2)]
-	public CurveBase ArmCenterRightCurve;
-
-	// Token: 0x040016BA RID: 5818
-	public float ArmCenterRightReverseSpeed;
-
-	// Token: 0x040016BB RID: 5819
-	public float ArmCenterRightReverseRotationEdge;
-
-	// Token: 0x040016BC RID: 5820
-	public float ArmCenterRightInputEnableTime;
-
-	// Token: 0x040016BD RID: 5821
-	public float ArmCenterRightRollbackEnableTime;
-
-	// Token: 0x040016BE RID: 5822
-	public float InitialCameraPitch;
-
-	// Token: 0x040016BF RID: 5823
-	public int CameraRotateToTargetMinAlpha;
-
-	// Token: 0x040016C0 RID: 5824
-	public int CameraRotateToTargetMaxAlpha;
-
-	// Token: 0x040016C1 RID: 5825
-	[Nullable(2)]
-	public CurveBase CameraRotateToTargetCurve;
-
-	// Token: 0x040016C2 RID: 5826
-	public float IsDisableResetFocus;
-
-	// Token: 0x040016C3 RID: 5827
-	public float AdditionPitchMax;
-
-	// Token: 0x040016C4 RID: 5828
-	public float AdditionPitchMin;
-
-	// Token: 0x040016C5 RID: 5829
-	public float AdditionPitchDeltaHeight;
-
-	// Token: 0x040016C6 RID: 5830
-	[Nullable(2)]
-	public CurveBase AdditionPitchCurve;
-
-	// Token: 0x040016C7 RID: 5831
-	public float WorldYawMin;
-
-	// Token: 0x040016C8 RID: 5832
-	public float WorldYawMax;
-
-	// Token: 0x040016C9 RID: 5833
-	public float WorldRollMin;
-
-	// Token: 0x040016CA RID: 5834
-	public float WorldRollMax;
-
-	// Token: 0x040016CB RID: 5835
-	public EFightCameraZoneMode CameraZoneMode;
-
-	// Token: 0x040016CC RID: 5836
-	public float YawZoneSpeedMin;
-
-	// Token: 0x040016CD RID: 5837
-	public float YawZoneSpeedMax;
-
-	// Token: 0x040016CE RID: 5838
-	public float YawSoftZoneMin;
-
-	// Token: 0x040016CF RID: 5839
-	public float YawSoftZoneMax;
-
-	// Token: 0x040016D0 RID: 5840
-	public float YawDeadZoneMin;
-
-	// Token: 0x040016D1 RID: 5841
-	public float YawDeadZoneMax;
-
-	// Token: 0x040016D2 RID: 5842
-	public float YawSoftZoneSpeedRatio;
-
-	// Token: 0x040016D3 RID: 5843
-	public float YawDeadZoneTransToSoftZoneSpeedRatio;
-
-	// Token: 0x040016D4 RID: 5844
-	public float YawTransToForwardSpeedRatio;
-
-	// Token: 0x040016D5 RID: 5845
-	public float YawInputEnableTime;
-
-	// Token: 0x040016D6 RID: 5846
-	public float YawRollbackEnableTime;
-
-	// Token: 0x040016D7 RID: 5847
-	public float PitchInputEnableTime;
-
-	// Token: 0x040016D8 RID: 5848
-	public float PitchRollbackEnableTime;
-
-	// Token: 0x040016D9 RID: 5849
-	public float PitchSoftZoneMin;
-
-	// Token: 0x040016DA RID: 5850
-	public float PitchSoftZoneMax;
-
-	// Token: 0x040016DB RID: 5851
-	public float PitchDeadZoneMin;
-
-	// Token: 0x040016DC RID: 5852
-	public float PitchDeadZoneMax;
-
-	// Token: 0x040016DD RID: 5853
-	public float PitchBasis;
-
-	// Token: 0x040016DE RID: 5854
-	public float PitchZoneSpeedMin;
-
-	// Token: 0x040016DF RID: 5855
-	public float PitchZoneSpeedMax;
-
-	// Token: 0x040016E0 RID: 5856
-	public float CharAddArmLength;
-
-	// Token: 0x040016E1 RID: 5857
-	public float CharAddZ;
-
-	// Token: 0x040016E2 RID: 5858
-	public float EnableDynamicFov;
-
-	// Token: 0x040016E3 RID: 5859
-	public float DynamicFovMin;
-
-	// Token: 0x040016E4 RID: 5860
-	public float DynamicFovMax;
-
-	// Token: 0x040016E5 RID: 5861
-	public float DynamicFovParamMin;
-
-	// Token: 0x040016E6 RID: 5862
-	public float DynamicFovParamMax;
-
-	// Token: 0x040016E7 RID: 5863
-	public float DynamicFovLerpSpeed;
-
-	// Token: 0x040016E8 RID: 5864
-	[Nullable(2)]
-	public CurveBase DynamicFovCurve;
-
-	// Token: 0x040016E9 RID: 5865
-	public float TargetDynamicFov;
-
-	// Token: 0x040016EA RID: 5866
-	private float SmoothedClampSpeedRatio;
-
-	// Token: 0x040016EB RID: 5867
-	private readonly float RatioSmoothFactor = 0.15f;
-
-	// Token: 0x040016EC RID: 5868
-	public FName LastFrameCameraArmLocationSocketName = FNameUtil.EMPTY;
-
-	// Token: 0x040016ED RID: 5869
-	public FName CameraArmLocationSocketName = FNameUtil.EMPTY;
-
-	// Token: 0x040016EE RID: 5870
-	public bool EnableFocusOnVehicle;
-
-	// Token: 0x040016EF RID: 5871
-	public bool AttachToVehicle;
-
-	// Token: 0x040016F0 RID: 5872
-	private readonly global::Vector OverrideLocation = global::Vector.Create();
-
-	// Token: 0x040016F1 RID: 5873
-	private bool HasOverrideLocation;
-
-	// Token: 0x040016F2 RID: 5874
-	private bool IsCharacterValid;
-
 	// Token: 0x040016F3 RID: 5875
-	[Nullable(2)]
-	public TsBaseCharacter Character;
+	public float ArmCenterForwardEdgeMax;
 
 	// Token: 0x040016F4 RID: 5876
 	[Nullable(2)]
-	public BP_CharacterController_C CharacterController;
+	public CurveBase ArmCenterForwardCurve;
 
 	// Token: 0x040016F5 RID: 5877
-	[Nullable(2)]
-	public EntityHandle CharacterEntityHandle;
+	public float ArmCenterForwardInputEnableTime;
 
 	// Token: 0x040016F6 RID: 5878
-	[Nullable(2)]
-	public CharacterInputComponent CharacterInputComponent;
+	public float ArmCenterForwardRollbackEnableTime;
 
 	// Token: 0x040016F7 RID: 5879
-	[Nullable(2)]
-	private BaseTagComponent CharacterTagComponentInternal;
+	public float ArmCenterRightSpeedMin;
 
 	// Token: 0x040016F8 RID: 5880
-	[Nullable(2)]
-	public CharacterDriveVehicleComponent CharacterDriveVehicleComponent;
+	public float ArmCenterRightSpeedMax;
 
 	// Token: 0x040016F9 RID: 5881
-	public ECharMoveState CharacterMoveEnterState;
+	public float ArmCenterRightEdgeMin;
 
 	// Token: 0x040016FA RID: 5882
-	[Nullable(2)]
-	public EntityHandle FollowShooterEntityHandle;
+	public float ArmCenterRightEdgeMax;
 
 	// Token: 0x040016FB RID: 5883
 	[Nullable(2)]
-	public BaseTagComponent FollowShooterTagComponentInternal;
+	public CurveBase ArmCenterRightCurve;
 
 	// Token: 0x040016FC RID: 5884
-	public bool IsSpecificLockTarget;
+	public float ArmCenterRightReverseSpeed;
 
 	// Token: 0x040016FD RID: 5885
-	public ECameraSpecificLockType SpecificLockTargetType;
+	public float ArmCenterRightReverseRotationEdge;
 
 	// Token: 0x040016FE RID: 5886
-	private int? LockTargetCameraHandle;
+	public float ArmCenterRightInputEnableTime;
 
 	// Token: 0x040016FF RID: 5887
+	public float ArmCenterRightRollbackEnableTime;
+
+	// Token: 0x04001700 RID: 5888
+	public float InitialCameraPitch;
+
+	// Token: 0x04001701 RID: 5889
+	public int CameraRotateToTargetMinAlpha;
+
+	// Token: 0x04001702 RID: 5890
+	public int CameraRotateToTargetMaxAlpha;
+
+	// Token: 0x04001703 RID: 5891
+	[Nullable(2)]
+	public CurveBase CameraRotateToTargetCurve;
+
+	// Token: 0x04001704 RID: 5892
+	public float IsDisableResetFocus;
+
+	// Token: 0x04001705 RID: 5893
+	public float AdditionPitchMax;
+
+	// Token: 0x04001706 RID: 5894
+	public float AdditionPitchMin;
+
+	// Token: 0x04001707 RID: 5895
+	public float AdditionPitchDeltaHeight;
+
+	// Token: 0x04001708 RID: 5896
+	[Nullable(2)]
+	public CurveBase AdditionPitchCurve;
+
+	// Token: 0x04001709 RID: 5897
+	public float WorldYawMin;
+
+	// Token: 0x0400170A RID: 5898
+	public float WorldYawMax;
+
+	// Token: 0x0400170B RID: 5899
+	public float WorldRollMin;
+
+	// Token: 0x0400170C RID: 5900
+	public float WorldRollMax;
+
+	// Token: 0x0400170D RID: 5901
+	public EFightCameraZoneMode CameraZoneMode;
+
+	// Token: 0x0400170E RID: 5902
+	public float YawZoneSpeedMin;
+
+	// Token: 0x0400170F RID: 5903
+	public float YawZoneSpeedMax;
+
+	// Token: 0x04001710 RID: 5904
+	public float YawSoftZoneMin;
+
+	// Token: 0x04001711 RID: 5905
+	public float YawSoftZoneMax;
+
+	// Token: 0x04001712 RID: 5906
+	public float YawDeadZoneMin;
+
+	// Token: 0x04001713 RID: 5907
+	public float YawDeadZoneMax;
+
+	// Token: 0x04001714 RID: 5908
+	public float YawSoftZoneSpeedRatio;
+
+	// Token: 0x04001715 RID: 5909
+	public float YawDeadZoneTransToSoftZoneSpeedRatio;
+
+	// Token: 0x04001716 RID: 5910
+	public float YawTransToForwardSpeedRatio;
+
+	// Token: 0x04001717 RID: 5911
+	public float YawInputEnableTime;
+
+	// Token: 0x04001718 RID: 5912
+	public float YawRollbackEnableTime;
+
+	// Token: 0x04001719 RID: 5913
+	public float YawSoftZoneRollbackEnableTime;
+
+	// Token: 0x0400171A RID: 5914
+	public float PitchInputEnableTime;
+
+	// Token: 0x0400171B RID: 5915
+	public float PitchRollbackEnableTime;
+
+	// Token: 0x0400171C RID: 5916
+	public float PitchSoftZoneMin;
+
+	// Token: 0x0400171D RID: 5917
+	public float PitchSoftZoneMax;
+
+	// Token: 0x0400171E RID: 5918
+	public float PitchDeadZoneMin;
+
+	// Token: 0x0400171F RID: 5919
+	public float PitchDeadZoneMax;
+
+	// Token: 0x04001720 RID: 5920
+	public float PitchBasis;
+
+	// Token: 0x04001721 RID: 5921
+	public float PitchZoneSpeedMin;
+
+	// Token: 0x04001722 RID: 5922
+	public float PitchZoneSpeedMax;
+
+	// Token: 0x04001723 RID: 5923
+	public float CharAddArmLength;
+
+	// Token: 0x04001724 RID: 5924
+	public float CharAddZ;
+
+	// Token: 0x04001725 RID: 5925
+	public float EnableDynamicFov;
+
+	// Token: 0x04001726 RID: 5926
+	public float DynamicFovMin;
+
+	// Token: 0x04001727 RID: 5927
+	public float DynamicFovMax;
+
+	// Token: 0x04001728 RID: 5928
+	public float DynamicFovParamMin;
+
+	// Token: 0x04001729 RID: 5929
+	public float DynamicFovParamMax;
+
+	// Token: 0x0400172A RID: 5930
+	public float DynamicFovLerpSpeed;
+
+	// Token: 0x0400172B RID: 5931
+	[Nullable(2)]
+	public CurveBase DynamicFovCurve;
+
+	// Token: 0x0400172C RID: 5932
+	public float TargetDynamicFov;
+
+	// Token: 0x0400172D RID: 5933
+	private float SmoothedClampSpeedRatio;
+
+	// Token: 0x0400172E RID: 5934
+	private readonly float RatioSmoothFactor = 0.15f;
+
+	// Token: 0x0400172F RID: 5935
+	public FName LastFrameCameraArmLocationSocketName = FNameUtil.EMPTY;
+
+	// Token: 0x04001730 RID: 5936
+	public FName CameraArmLocationSocketName = FNameUtil.EMPTY;
+
+	// Token: 0x04001731 RID: 5937
+	public bool EnableFocusOnVehicle;
+
+	// Token: 0x04001732 RID: 5938
+	public bool AttachToVehicle;
+
+	// Token: 0x04001733 RID: 5939
+	private readonly global::Vector OverrideLocation = global::Vector.Create();
+
+	// Token: 0x04001734 RID: 5940
+	private bool HasOverrideLocation;
+
+	// Token: 0x04001735 RID: 5941
+	private bool IsCharacterValid;
+
+	// Token: 0x04001736 RID: 5942
+	[Nullable(2)]
+	public TsBaseCharacter Character;
+
+	// Token: 0x04001737 RID: 5943
+	[Nullable(2)]
+	public BP_CharacterController_C CharacterController;
+
+	// Token: 0x04001738 RID: 5944
+	[Nullable(2)]
+	public EntityHandle CharacterEntityHandle;
+
+	// Token: 0x04001739 RID: 5945
+	[Nullable(2)]
+	public CharacterInputComponent CharacterInputComponent;
+
+	// Token: 0x0400173A RID: 5946
+	[Nullable(2)]
+	private BaseTagComponent CharacterTagComponentInternal;
+
+	// Token: 0x0400173B RID: 5947
+	[Nullable(2)]
+	public CharacterDriveVehicleComponent CharacterDriveVehicleComponent;
+
+	// Token: 0x0400173C RID: 5948
+	public ECharMoveState CharacterMoveEnterState;
+
+	// Token: 0x0400173D RID: 5949
+	[Nullable(2)]
+	public EntityHandle FollowShooterEntityHandle;
+
+	// Token: 0x0400173E RID: 5950
+	[Nullable(2)]
+	public BaseTagComponent FollowShooterTagComponentInternal;
+
+	// Token: 0x0400173F RID: 5951
+	public bool IsSpecificLockTarget;
+
+	// Token: 0x04001740 RID: 5952
+	public ECameraSpecificLockType SpecificLockTargetType;
+
+	// Token: 0x04001741 RID: 5953
+	private int? LockTargetCameraHandle;
+
+	// Token: 0x04001742 RID: 5954
 	[Nullable(2)]
 	public EntityHandle TargetEntity;
 
-	// Token: 0x04001700 RID: 5888
+	// Token: 0x04001743 RID: 5955
 	[Nullable(2)]
 	private BaseTagComponent TargetTagComponentInternal;
 
-	// Token: 0x04001701 RID: 5889
+	// Token: 0x04001744 RID: 5956
 	public FName? TargetSocketName;
 
-	// Token: 0x04001702 RID: 5890
+	// Token: 0x04001745 RID: 5957
 	private double? TargetClearByBlockTime;
 
-	// Token: 0x04001703 RID: 5891
+	// Token: 0x04001746 RID: 5958
 	public bool IsFollowing = true;
 
-	// Token: 0x04001704 RID: 5892
+	// Token: 0x04001747 RID: 5959
 	public bool IsFixingX;
 
-	// Token: 0x04001705 RID: 5893
+	// Token: 0x04001748 RID: 5960
 	public bool IsFixingY;
 
-	// Token: 0x04001706 RID: 5894
+	// Token: 0x04001749 RID: 5961
 	public bool IsFixingZ;
 
-	// Token: 0x04001707 RID: 5895
+	// Token: 0x0400174A RID: 5962
 	public bool RestoreFollowingOnChangeRole;
 
-	// Token: 0x04001708 RID: 5896
+	// Token: 0x0400174B RID: 5963
 	protected float ArmLocationFadeElapseTime;
 
-	// Token: 0x04001709 RID: 5897
+	// Token: 0x0400174C RID: 5964
 	[Nullable(2)]
 	public EntityHandle VehicleEntityHandle;
 
-	// Token: 0x0400170A RID: 5898
+	// Token: 0x0400174D RID: 5965
 	[Nullable(2)]
 	public VehicleActorComponent VehicleActorComponent;
 
-	// Token: 0x0400170B RID: 5899
+	// Token: 0x0400174E RID: 5966
 	[Nullable(2)]
 	public VehicleMoveComponent VehicleMoveComponent;
 
-	// Token: 0x0400170C RID: 5900
+	// Token: 0x0400174F RID: 5967
 	[Nullable(2)]
 	public VehicleInputComponent VehicleInputComponent;
 
-	// Token: 0x0400170D RID: 5901
+	// Token: 0x04001750 RID: 5968
 	[Nullable(2)]
 	public VehicleAnimationComponent VehicleAnimationComponent;
 
-	// Token: 0x0400170E RID: 5902
+	// Token: 0x04001751 RID: 5969
 	[Nullable(2)]
 	public BaseVehiclePerformComponent BaseVehiclePerformComponent;
 
-	// Token: 0x0400170F RID: 5903
+	// Token: 0x04001752 RID: 5970
 	[Nullable(2)]
 	public GongduolaPerformComponent GongduolaPerformComponent;
 
-	// Token: 0x04001710 RID: 5904
+	// Token: 0x04001753 RID: 5971
 	public Rotator PlayerRotator = Rotator.Create();
 
-	// Token: 0x04001711 RID: 5905
+	// Token: 0x04001754 RID: 5972
 	public global::Vector PlayerLocation = global::Vector.Create();
 
-	// Token: 0x04001712 RID: 5906
+	// Token: 0x04001755 RID: 5973
 	public global::Vector PlayerLocationForDither = global::Vector.Create();
 
-	// Token: 0x04001713 RID: 5907
+	// Token: 0x04001756 RID: 5974
 	public global::Vector LastFramePlayerLocation = global::Vector.Create();
 
-	// Token: 0x04001714 RID: 5908
+	// Token: 0x04001757 RID: 5975
 	public global::Vector PlayerVelocity = global::Vector.Create();
 
-	// Token: 0x04001715 RID: 5909
+	// Token: 0x04001758 RID: 5976
 	public global::Vector TargetLocation = global::Vector.Create();
 
-	// Token: 0x04001716 RID: 5910
+	// Token: 0x04001759 RID: 5977
 	public global::Vector PlayerVehicleDeltaLocation = global::Vector.Create();
 
-	// Token: 0x04001717 RID: 5911
+	// Token: 0x0400175A RID: 5978
 	public global::Vector PlayerMoveVector = global::Vector.Create();
 
-	// Token: 0x04001718 RID: 5912
+	// Token: 0x0400175B RID: 5979
 	public float TempArmLength;
 
-	// Token: 0x04001719 RID: 5913
+	// Token: 0x0400175C RID: 5980
 	public readonly global::Vector TmpArmLocation = global::Vector.Create();
 
-	// Token: 0x0400171A RID: 5914
+	// Token: 0x0400175D RID: 5981
 	private readonly global::Vector TmpArmLocationOffset = global::Vector.Create();
 
-	// Token: 0x0400171B RID: 5915
+	// Token: 0x0400175E RID: 5982
 	private bool ArmLocationFading;
 
-	// Token: 0x0400171C RID: 5916
+	// Token: 0x0400175F RID: 5983
 	private float ArmLocationFadeDuration;
 
-	// Token: 0x0400171D RID: 5917
+	// Token: 0x04001760 RID: 5984
 	public bool Fading;
 
-	// Token: 0x0400171E RID: 5918
+	// Token: 0x04001761 RID: 5985
 	private bool FadeArmLength;
 
-	// Token: 0x0400171F RID: 5919
+	// Token: 0x04001762 RID: 5986
 	private bool FadeArmOffset;
 
-	// Token: 0x04001720 RID: 5920
+	// Token: 0x04001763 RID: 5987
 	private bool FadeCameraOffset;
 
-	// Token: 0x04001721 RID: 5921
+	// Token: 0x04001764 RID: 5988
 	private bool FadeFov;
 
-	// Token: 0x04001722 RID: 5922
+	// Token: 0x04001765 RID: 5989
 	public float FadeDuration;
 
-	// Token: 0x04001723 RID: 5923
+	// Token: 0x04001766 RID: 5990
 	[Nullable(2)]
 	private CurveBase FadeCurve;
 
-	// Token: 0x04001724 RID: 5924
+	// Token: 0x04001767 RID: 5991
 	public bool IsUniqueFade;
 
-	// Token: 0x04001725 RID: 5925
+	// Token: 0x04001768 RID: 5992
 	private float FadeElapse;
 
-	// Token: 0x04001726 RID: 5926
+	// Token: 0x04001769 RID: 5993
 	private float CameraArmCenterRightInputTime;
 
-	// Token: 0x04001727 RID: 5927
+	// Token: 0x0400176A RID: 5994
 	private float CameraArmCenterRightRollbackTime;
 
-	// Token: 0x04001728 RID: 5928
+	// Token: 0x0400176B RID: 5995
 	private bool LastCameraArmCenterLeftInput;
 
-	// Token: 0x04001729 RID: 5929
+	// Token: 0x0400176C RID: 5996
 	private bool LastCameraArmCenterRightInput;
 
-	// Token: 0x0400172A RID: 5930
+	// Token: 0x0400176D RID: 5997
 	public readonly VirtualCamera CurrentCamera = new VirtualCamera();
 
-	// Token: 0x0400172B RID: 5931
+	// Token: 0x0400176E RID: 5998
 	public readonly global::Vector CameraLocation = global::Vector.Create();
 
-	// Token: 0x0400172C RID: 5932
+	// Token: 0x0400176F RID: 5999
 	public readonly global::Vector CameraForward = global::Vector.Create();
 
-	// Token: 0x0400172D RID: 5933
+	// Token: 0x04001770 RID: 6000
+	[UnResetProperty]
 	public readonly VirtualCamera LastCamera = new VirtualCamera();
 
-	// Token: 0x0400172E RID: 5934
+	// Token: 0x04001771 RID: 6001
+	[UnResetProperty]
 	public VirtualCamera DesiredCamera = new VirtualCamera();
 
-	// Token: 0x0400172F RID: 5935
+	// Token: 0x04001772 RID: 6002
 	public Dictionary<string, object> DebugDesiredCameraProps = new Dictionary<string, object>();
 
-	// Token: 0x04001730 RID: 5936
+	// Token: 0x04001773 RID: 6003
 	public Dictionary<string, object> DebugCurrentCameraProps = new Dictionary<string, object>();
 
-	// Token: 0x04001731 RID: 5937
+	// Token: 0x04001774 RID: 6004
 	public Dictionary<string, object> DebugLogicComponentsProps = new Dictionary<string, object>();
 
-	// Token: 0x04001732 RID: 5938
+	// Token: 0x04001775 RID: 6005
 	public Dictionary<string, Dictionary<string, object>> DebugControllersProps = new Dictionary<string, Dictionary<string, object>>();
 
-	// Token: 0x04001733 RID: 5939
+	// Token: 0x04001776 RID: 6006
 	[TupleElementNames(new string[]
 	{
 		"PropertyName",
@@ -15622,7 +14857,7 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 	})]
 	public Dictionary<string, List<ValueTuple<string, string, string>>> DebugControllerModifications = new Dictionary<string, List<ValueTuple<string, string, string>>>();
 
-	// Token: 0x04001734 RID: 5940
+	// Token: 0x04001777 RID: 6007
 	[Nullable(new byte[]
 	{
 		2,
@@ -15631,315 +14866,339 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 	})]
 	public Dictionary<string, object> DebugCameraPropsRaw;
 
-	// Token: 0x04001735 RID: 5941
+	// Token: 0x04001778 RID: 6008
+	[UnResetProperty]
 	public CameraConfigController CameraConfigController;
 
-	// Token: 0x04001736 RID: 5942
+	// Token: 0x04001779 RID: 6009
+	[UnResetProperty]
 	public CameraFocusController CameraFocusController;
 
-	// Token: 0x04001737 RID: 5943
+	// Token: 0x0400177A RID: 6010
+	[UnResetProperty]
 	public CameraInputController CameraInputController;
 
-	// Token: 0x04001738 RID: 5944
+	// Token: 0x0400177B RID: 6011
+	[UnResetProperty]
 	public CameraModifyController CameraModifyController;
 
-	// Token: 0x04001739 RID: 5945
+	// Token: 0x0400177C RID: 6012
+	[UnResetProperty]
 	public CameraAdjustController CameraAdjustController;
 
-	// Token: 0x0400173A RID: 5946
+	// Token: 0x0400177D RID: 6013
+	[UnResetProperty]
 	public CameraSidestepController CameraSidestepController;
 
-	// Token: 0x0400173B RID: 5947
+	// Token: 0x0400177E RID: 6014
+	[UnResetProperty]
 	public CameraAutoController CameraAutoController;
 
-	// Token: 0x0400173C RID: 5948
+	// Token: 0x0400177F RID: 6015
+	[UnResetProperty]
 	public CameraGuideController CameraGuideController;
 
-	// Token: 0x0400173D RID: 5949
+	// Token: 0x04001780 RID: 6016
+	[UnResetProperty]
 	public CameraExploreController CameraRunningController;
 
-	// Token: 0x0400173E RID: 5950
+	// Token: 0x04001781 RID: 6017
+	[UnResetProperty]
 	public CameraRotatorController CameraRotatorController;
 
-	// Token: 0x0400173F RID: 5951
+	// Token: 0x04001782 RID: 6018
+	[UnResetProperty]
 	public CameraDialogueController CameraDialogueController;
 
-	// Token: 0x04001740 RID: 5952
+	// Token: 0x04001783 RID: 6019
+	[UnResetProperty]
 	public CameraFixedController CameraFixedController;
 
-	// Token: 0x04001741 RID: 5953
+	// Token: 0x04001784 RID: 6020
+	[UnResetProperty]
 	public CameraClimbController CameraClimbController;
 
-	// Token: 0x04001742 RID: 5954
+	// Token: 0x04001785 RID: 6021
+	[UnResetProperty]
 	public CameraHookController CameraHookController;
 
-	// Token: 0x04001743 RID: 5955
+	// Token: 0x04001786 RID: 6022
+	[UnResetProperty]
 	public CameraGravityController CameraGravityController;
 
-	// Token: 0x04001744 RID: 5956
+	// Token: 0x04001787 RID: 6023
+	[UnResetProperty]
 	public CameraSplineMoveController CameraSplineMoveController;
 
-	// Token: 0x04001745 RID: 5957
+	// Token: 0x04001788 RID: 6024
+	[UnResetProperty]
 	public CameraSpecialGameplayController CameraSpecialGameplayController;
 
-	// Token: 0x04001746 RID: 5958
+	// Token: 0x04001789 RID: 6025
 	private readonly ICameraControllerBase[] CameraControllerUpdateList;
 
-	// Token: 0x04001747 RID: 5959
+	// Token: 0x0400178A RID: 6026
 	private readonly ICameraControllerBase[] PreTickCameraControllerUpdateList;
 
-	// Token: 0x04001748 RID: 5960
+	// Token: 0x0400178B RID: 6027
 	private readonly ICameraControllerBase[] TickCameraControllerUpdateList;
 
-	// Token: 0x04001749 RID: 5961
+	// Token: 0x0400178C RID: 6028
 	public Rotator CameraRotation = Rotator.Create();
 
-	// Token: 0x0400174A RID: 5962
+	// Token: 0x0400178D RID: 6029
 	public bool IsModifiedArmLocation;
 
-	// Token: 0x0400174B RID: 5963
+	// Token: 0x0400178E RID: 6030
 	public bool IsModifiedArmLength;
 
-	// Token: 0x0400174C RID: 5964
+	// Token: 0x0400178F RID: 6031
 	public bool IsModifiedArmOffset;
 
-	// Token: 0x0400174D RID: 5965
+	// Token: 0x04001790 RID: 6032
 	public bool IsModifiedZoomModifier;
 
-	// Token: 0x0400174E RID: 5966
+	// Token: 0x04001791 RID: 6033
 	public bool IsModifiedArmRotationYaw;
 
-	// Token: 0x0400174F RID: 5967
+	// Token: 0x04001792 RID: 6034
 	public bool IsModifiedArmRotationPitch;
 
-	// Token: 0x04001750 RID: 5968
+	// Token: 0x04001793 RID: 6035
 	public bool IsModifiedArmRotationRoll;
 
-	// Token: 0x04001751 RID: 5969
+	// Token: 0x04001794 RID: 6036
 	public bool IsModifiedCameraOffset;
 
-	// Token: 0x04001752 RID: 5970
+	// Token: 0x04001795 RID: 6037
 	public bool IsModifiedFov;
 
-	// Token: 0x04001753 RID: 5971
+	// Token: 0x04001796 RID: 6038
 	private int SuppressClearRollFlags;
 
-	// Token: 0x04001754 RID: 5972
+	// Token: 0x04001797 RID: 6039
 	private float FloatUpHeight;
 
-	// Token: 0x04001755 RID: 5973
+	// Token: 0x04001798 RID: 6040
 	[Nullable(2)]
 	private FightCameraDisplayComponent DisplayComponentInternal;
 
-	// Token: 0x04001756 RID: 5974
+	// Token: 0x04001799 RID: 6041
 	private readonly global::Vector CacheCameraVector = global::Vector.Create();
 
-	// Token: 0x04001757 RID: 5975
+	// Token: 0x0400179A RID: 6042
 	private readonly global::Vector CacheWorldUp = global::Vector.Create();
 
-	// Token: 0x04001758 RID: 5976
+	// Token: 0x0400179B RID: 6043
 	private readonly global::Vector CacheCameraForward = global::Vector.Create();
 
-	// Token: 0x04001759 RID: 5977
+	// Token: 0x0400179C RID: 6044
 	private readonly Quat CameraQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400175A RID: 5978
+	// Token: 0x0400179D RID: 6045
 	private readonly Quat CameraQuatInverse = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400175B RID: 5979
+	// Token: 0x0400179E RID: 6046
 	private readonly global::Vector ArmLocationDelta = global::Vector.Create();
 
-	// Token: 0x0400175C RID: 5980
+	// Token: 0x0400179F RID: 6047
 	protected readonly global::Vector TempVector = global::Vector.Create();
 
-	// Token: 0x0400175D RID: 5981
+	// Token: 0x040017A0 RID: 6048
 	protected readonly global::Vector TempVector2 = global::Vector.Create();
 
-	// Token: 0x0400175E RID: 5982
+	// Token: 0x040017A1 RID: 6049
 	protected readonly global::Vector TempVector3 = global::Vector.Create();
 
-	// Token: 0x0400175F RID: 5983
+	// Token: 0x040017A2 RID: 6050
 	protected readonly global::Vector TempVector4 = global::Vector.Create();
 
-	// Token: 0x04001760 RID: 5984
+	// Token: 0x040017A3 RID: 6051
 	protected readonly Rotator TempRotator = Rotator.Create();
 
-	// Token: 0x04001761 RID: 5985
+	// Token: 0x040017A4 RID: 6052
 	protected readonly Quat TempQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04001762 RID: 5986
+	// Token: 0x040017A5 RID: 6053
 	protected readonly Quat TempQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04001763 RID: 5987
+	// Token: 0x040017A6 RID: 6054
 	protected readonly Quat TempQuat3 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04001764 RID: 5988
+	// Token: 0x040017A7 RID: 6055
 	protected readonly Quat TempQuatInverse = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04001765 RID: 5989
+	// Token: 0x040017A8 RID: 6056
 	protected readonly global::Vector TempDesireLocation = global::Vector.Create();
 
-	// Token: 0x04001766 RID: 5990
+	// Token: 0x040017A9 RID: 6057
 	private bool IsDitherEffectEnable = true;
 
-	// Token: 0x04001767 RID: 5991
+	// Token: 0x040017AA RID: 6058
+	private readonly HashSet<string> DitherDisableReasons = new HashSet<string>();
+
+	// Token: 0x040017AB RID: 6059
 	public bool Initialized;
 
-	// Token: 0x04001768 RID: 5992
+	// Token: 0x040017AC RID: 6060
 	[Nullable(2)]
 	public BP_FightCameraConfig_C CameraConfig;
 
-	// Token: 0x04001769 RID: 5993
+	// Token: 0x040017AD RID: 6061
 	public Dictionary<EFightCameraDefault, float> DefaultConfigs = new Dictionary<EFightCameraDefault, float>();
 
-	// Token: 0x0400176A RID: 5994
+	// Token: 0x040017AE RID: 6062
 	public Dictionary<EFightCameraDefault, CurveBase> DefaultCurveConfigs = new Dictionary<EFightCameraDefault, CurveBase>();
 
-	// Token: 0x0400176B RID: 5995
+	// Token: 0x040017AF RID: 6063
 	private readonly Dictionary<EFightCameraDefault, string> ConfigMap = new Dictionary<EFightCameraDefault, string>();
 
-	// Token: 0x0400176C RID: 5996
+	// Token: 0x040017B0 RID: 6064
 	private readonly Dictionary<EFightCameraDefault, string> CurveConfigMap = new Dictionary<EFightCameraDefault, string>();
 
-	// Token: 0x0400176D RID: 5997
+	// Token: 0x040017B1 RID: 6065
 	public Dictionary<EFightCameraVehicle, float> VehicleConfigs = new Dictionary<EFightCameraVehicle, float>();
 
-	// Token: 0x0400176E RID: 5998
+	// Token: 0x040017B2 RID: 6066
 	public Dictionary<EFightCameraVehicle, CurveBase> VehicleCurveConfigs = new Dictionary<EFightCameraVehicle, CurveBase>();
 
-	// Token: 0x0400176F RID: 5999
+	// Token: 0x040017B3 RID: 6067
 	private readonly Dictionary<EFightCameraVehicle, string> VehicleConfigMap = new Dictionary<EFightCameraVehicle, string>();
 
-	// Token: 0x04001770 RID: 6000
+	// Token: 0x040017B4 RID: 6068
 	private readonly Dictionary<EFightCameraVehicle, string> VehicleCurveConfigMap = new Dictionary<EFightCameraVehicle, string>();
 
-	// Token: 0x04001771 RID: 6001
+	// Token: 0x040017B5 RID: 6069
 	[Nullable(2)]
+	[UnResetProperty]
 	public CameraCollision CameraCollision;
 
-	// Token: 0x04001772 RID: 6002
+	// Token: 0x040017B6 RID: 6070
 	[Nullable(2)]
+	[UnResetProperty]
 	public CameraRotationZone CameraRotationZone;
 
-	// Token: 0x04001773 RID: 6003
+	// Token: 0x040017B7 RID: 6071
 	[Nullable(2)]
+	[UnResetProperty]
 	public CameraTransformBuffer CameraTransformBuffer;
 
-	// Token: 0x04001774 RID: 6004
+	// Token: 0x040017B8 RID: 6072
 	[Nullable(2)]
+	[UnResetProperty]
 	public SettlementCamera SettlementCamera;
 
-	// Token: 0x04001775 RID: 6005
+	// Token: 0x040017B9 RID: 6073
 	[Nullable(2)]
 	private UCurveFloat SoarCameraShakeCurve;
 
-	// Token: 0x04001776 RID: 6006
+	// Token: 0x040017BA RID: 6074
 	[Nullable(2)]
 	private UCameraShakeBase SoarCameraShake;
 
-	// Token: 0x04001777 RID: 6007
+	// Token: 0x040017BB RID: 6075
 	private bool StartLoadCameraCurve;
 
-	// Token: 0x04001778 RID: 6008
+	// Token: 0x040017BC RID: 6076
 	[Nullable(2)]
 	private UCurveFloat CameraShakeCurve;
 
-	// Token: 0x04001779 RID: 6009
+	// Token: 0x040017BD RID: 6077
 	[Nullable(2)]
 	private UClass CameraShakeClass;
 
-	// Token: 0x0400177A RID: 6010
+	// Token: 0x040017BE RID: 6078
 	[Nullable(2)]
 	private UCameraShakeBase CameraShake;
 
-	// Token: 0x0400177B RID: 6011
+	// Token: 0x040017BF RID: 6079
 	public float CurrentArmCenterForwardEdgeMin;
 
-	// Token: 0x0400177C RID: 6012
+	// Token: 0x040017C0 RID: 6080
 	public float CurrentArmCenterForwardEdgeMax;
 
-	// Token: 0x0400177D RID: 6013
+	// Token: 0x040017C1 RID: 6081
 	public float CurrentArmCenterRightEdgeMin;
 
-	// Token: 0x0400177E RID: 6014
+	// Token: 0x040017C2 RID: 6082
 	public float CurrentArmCenterRightEdgeMax;
 
-	// Token: 0x0400177F RID: 6015
+	// Token: 0x040017C3 RID: 6083
 	public float CurrentArmCenterUpEdgeMin;
 
-	// Token: 0x04001780 RID: 6016
+	// Token: 0x040017C4 RID: 6084
 	public float CurrentArmCenterUpEdgeMax;
 
-	// Token: 0x04001781 RID: 6017
+	// Token: 0x040017C5 RID: 6085
 	private float DefaultLandscapeLodScaleFactor;
 
-	// Token: 0x04001782 RID: 6018
+	// Token: 0x040017C6 RID: 6086
 	private float LastFrameFov;
 
-	// Token: 0x04001783 RID: 6019
+	// Token: 0x040017C7 RID: 6087
 	private float StartFloatUpHeightRatio;
 
-	// Token: 0x04001784 RID: 6020
+	// Token: 0x040017C8 RID: 6088
 	private float CurrentFloatUpHeightRatio;
 
-	// Token: 0x04001785 RID: 6021
+	// Token: 0x040017C9 RID: 6089
 	public bool EnableVehicleWaterFallCamera;
 
-	// Token: 0x04001786 RID: 6022
+	// Token: 0x040017CA RID: 6090
 	public bool LastFrameAttachToVehicle;
 
-	// Token: 0x04001787 RID: 6023
+	// Token: 0x040017CB RID: 6091
 	public float FinalCameraDistance;
 
-	// Token: 0x04001788 RID: 6024
+	// Token: 0x040017CC RID: 6092
 	private float NanOutputTime = 5f;
 
-	// Token: 0x04001789 RID: 6025
+	// Token: 0x040017CD RID: 6093
 	public ECameraGravityMode GravityMode = ECameraGravityMode.CameraTargetGravityDirect;
 
-	// Token: 0x0400178A RID: 6026
+	// Token: 0x040017CE RID: 6094
 	public global::Vector GravityDirect = global::Vector.Create(0.0, 0.0, -1.0);
 
-	// Token: 0x0400178B RID: 6027
+	// Token: 0x040017CF RID: 6095
 	public global::Vector GravityUp = global::Vector.Create(0.0, 0.0, 1.0);
 
-	// Token: 0x0400178C RID: 6028
+	// Token: 0x040017D0 RID: 6096
 	public Quat GravityQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400178D RID: 6029
+	// Token: 0x040017D1 RID: 6097
 	public Quat GravityInverseQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400178E RID: 6030
+	// Token: 0x040017D2 RID: 6098
 	public Rotator CameraRotationInGravity = Rotator.Create();
 
-	// Token: 0x0400178F RID: 6031
+	// Token: 0x040017D3 RID: 6099
 	public global::Vector PlayerLocationInGravity = global::Vector.Create();
 
-	// Token: 0x04001790 RID: 6032
+	// Token: 0x040017D4 RID: 6100
 	public Rotator PlayerRotatorInGravity = Rotator.Create();
 
-	// Token: 0x04001791 RID: 6033
+	// Token: 0x040017D5 RID: 6101
 	public global::Vector CacheTargetGravity = global::Vector.Create(0.0, 0.0, -1.0);
 
-	// Token: 0x04001792 RID: 6034
+	// Token: 0x040017D6 RID: 6102
 	private readonly bool EnableDiagnosticInvalidCameraDistance = true;
 
-	// Token: 0x04001793 RID: 6035
+	// Token: 0x040017D7 RID: 6103
 	private readonly Dictionary<float, float> DiagnosticCameraDistanceMap = new Dictionary<float, float>();
 
-	// Token: 0x04001794 RID: 6036
+	// Token: 0x040017D8 RID: 6104
 	private bool ShouldOutputDiagnosticCameraDistanceLog;
 
-	// Token: 0x04001795 RID: 6037
+	// Token: 0x040017D9 RID: 6105
 	private float OutputDiagnosticCameraDistanceExp;
 
-	// Token: 0x04001796 RID: 6038
+	// Token: 0x040017DA RID: 6106
 	private float OutputDiagnosticCameraDistanceSquared;
 
-	// Token: 0x04001797 RID: 6039
+	// Token: 0x040017DB RID: 6107
 	private readonly Dictionary<EFightCameraDefault, EFightCameraDefault> PairConfigKeySet = new Dictionary<EFightCameraDefault, EFightCameraDefault>();
 
-	// Token: 0x04001798 RID: 6040
+	// Token: 0x040017DC RID: 6108
 	[Nullable(new byte[]
 	{
 		1,
@@ -15947,39 +15206,39 @@ public class FightCameraLogicComponent : EntityComponent, ICanGetConfigMapValue
 	})]
 	private readonly List<ValueTuple<EFightCameraDefault, EFightCameraDefault>> PairKeyArray = new List<ValueTuple<EFightCameraDefault, EFightCameraDefault>>();
 
-	// Token: 0x04001799 RID: 6041
+	// Token: 0x040017DD RID: 6109
 	private readonly HashSet<EFightCameraDefault> NeedValueCheckPairKeySet = new HashSet<EFightCameraDefault>();
 
-	// Token: 0x0400179A RID: 6042
+	// Token: 0x040017DE RID: 6110
 	private float SelfCenteredTimeDilation = 1f;
 
-	// Token: 0x0400179B RID: 6043
+	// Token: 0x040017DF RID: 6111
 	private bool IsEnablePanning;
 
-	// Token: 0x0400179C RID: 6044
+	// Token: 0x040017E0 RID: 6112
 	private readonly global::Vector ResetTargetLocation = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x0400179D RID: 6045
+	// Token: 0x040017E1 RID: 6113
 	private readonly Rotator ResetAddRotator = Rotator.Create(0f, 0f, 0f);
 
-	// Token: 0x0400179E RID: 6046
+	// Token: 0x040017E2 RID: 6114
 	private int ScreenSizeRefX;
 
-	// Token: 0x0400179F RID: 6047
+	// Token: 0x040017E3 RID: 6115
 	private int ScreenSizeRefY;
 
-	// Token: 0x040017A0 RID: 6048
+	// Token: 0x040017E4 RID: 6116
 	private readonly float CameraTargetLocationBufferTotalTime = 0.25f;
 
-	// Token: 0x040017A1 RID: 6049
+	// Token: 0x040017E5 RID: 6117
 	private float CameraTargetLocationBufferTime;
 
-	// Token: 0x040017A2 RID: 6050
+	// Token: 0x040017E6 RID: 6118
 	private bool IsStartCameraTargetLocationBuffer;
 
-	// Token: 0x040017A3 RID: 6051
+	// Token: 0x040017E7 RID: 6119
 	private readonly global::Vector TempArmLocation = global::Vector.Create();
 
-	// Token: 0x040017A4 RID: 6052
+	// Token: 0x040017E8 RID: 6120
 	private readonly global::Vector TempOffset = global::Vector.Create();
 }

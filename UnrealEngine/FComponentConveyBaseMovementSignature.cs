@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000953 RID: 2387
+	// Token: 0x020001AF RID: 431
 	[UnrealStructLayout(1, 1, UnrealReflectionPropertyTypeCode.MulticastSparseDelegate)]
 	public sealed class FComponentConveyBaseMovementSignature : FSparseDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0600871F RID: 34591 RVA: 0x000C0FB7 File Offset: 0x000BF1B7
+		// Token: 0x06002006 RID: 8198 RVA: 0x0002E977 File Offset: 0x0002CB77
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FComponentConveyBaseMovementSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x06008720 RID: 34592 RVA: 0x000C0FC3 File Offset: 0x000BF1C3
+		// Token: 0x06002007 RID: 8199 RVA: 0x0002E983 File Offset: 0x0002CB83
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FComponentConveyBaseMovementSignature._FunctionPtr == IntPtr.Zero)
@@ -27,8 +27,8 @@ namespace UnrealEngine
 			return FComponentConveyBaseMovementSignature._FunctionPtr;
 		}
 
-		// Token: 0x17001FF7 RID: 8183
-		// (get) Token: 0x06008721 RID: 34593 RVA: 0x000C0FE6 File Offset: 0x000BF1E6
+		// Token: 0x17000477 RID: 1143
+		// (get) Token: 0x06002008 RID: 8200 RVA: 0x0002E9A6 File Offset: 0x0002CBA6
 		public override FName DelegateName
 		{
 			get
@@ -37,21 +37,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06008722 RID: 34594 RVA: 0x000C0FED File Offset: 0x000BF1ED
+		// Token: 0x06002009 RID: 8201 RVA: 0x0002E9AD File Offset: 0x0002CBAD
 		[NullableContext(2)]
 		public FComponentConveyBaseMovementSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06008723 RID: 34595 RVA: 0x000C0FF7 File Offset: 0x000BF1F7
+		// Token: 0x0600200A RID: 8202 RVA: 0x0002E9B7 File Offset: 0x0002CBB7
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<float, FVector, UCharacterMovementComponent>) ?? ((Action<float, FVector, UCharacterMovementComponent>)Delegate.CreateDelegate(typeof(Action<float, FVector, UCharacterMovementComponent>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06008724 RID: 34596 RVA: 0x000C102C File Offset: 0x000BF22C
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600200B RID: 8203 RVA: 0x0002E9EC File Offset: 0x0002CBEC
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace UnrealEngine
 			base.Add(delegateName, Callback, FComponentConveyBaseMovementSignature.RegisterId);
 		}
 
-		// Token: 0x06008725 RID: 34597 RVA: 0x000C107C File Offset: 0x000BF27C
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600200C RID: 8204 RVA: 0x0002EA3C File Offset: 0x0002CC3C
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -83,10 +81,9 @@ namespace UnrealEngine
 			base.Remove(delegateName, Callback);
 		}
 
-		// Token: 0x06008726 RID: 34598 RVA: 0x000C109C File Offset: 0x000BF29C
+		// Token: 0x0600200D RID: 8205 RVA: 0x0002EA5C File Offset: 0x0002CC5C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(float DeltaSeconds, FVector FloorLocation, UCharacterMovementComponent CharacterMovement)
 		{
 			FComponentConveyBaseMovementSignature.__FComponentConveyBaseMovementSignature_DelegateParams* ptr = stackalloc FComponentConveyBaseMovementSignature.__FComponentConveyBaseMovementSignature_DelegateParams[(UIntPtr)39] + 15L / (long)sizeof(FComponentConveyBaseMovementSignature.__FComponentConveyBaseMovementSignature_DelegateParams) & -16L;
@@ -97,10 +94,9 @@ namespace UnrealEngine
 			FSparseDelegate.BroadcastInternal(base.GetOwner().NativePtr, this.DelegateName, (void*)ptr);
 		}
 
-		// Token: 0x06008727 RID: 34599 RVA: 0x000C1108 File Offset: 0x000BF308
+		// Token: 0x0600200E RID: 8206 RVA: 0x0002EAC8 File Offset: 0x0002CCC8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<float, FVector, UCharacterMovementComponent> action = target as Action<float, FVector, UCharacterMovementComponent>;
@@ -112,39 +108,39 @@ namespace UnrealEngine
 			action(((FComponentConveyBaseMovementSignature.__FComponentConveyBaseMovementSignature_DelegateParams*)__Parameters)->DeltaSeconds, ((FComponentConveyBaseMovementSignature.__FComponentConveyBaseMovementSignature_DelegateParams*)__Parameters)->FloorLocation, orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0400404C RID: 16460
+		// Token: 0x04000AA6 RID: 2726
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400404D RID: 16461
+		// Token: 0x04000AA7 RID: 2727
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.ComponentConveyBaseMovementSignature__DelegateSignature";
 
-		// Token: 0x0400404E RID: 16462
+		// Token: 0x04000AA8 RID: 2728
 		private static int RegisterId;
 
-		// Token: 0x02002CC9 RID: 11465
+		// Token: 0x02000985 RID: 2437
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FComponentConveyBaseMovementSignature_DelegateParams
+		private ref struct __FComponentConveyBaseMovementSignature_DelegateParams
 		{
-			// Token: 0x04016667 RID: 91751
+			// Token: 0x040058DC RID: 22748
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 
-			// Token: 0x04016668 RID: 91752
+			// Token: 0x040058DD RID: 22749
 			[FieldOffset(4)]
 			public FVector FloorLocation;
 
-			// Token: 0x04016669 RID: 91753
+			// Token: 0x040058DE RID: 22750
 			[FieldOffset(16)]
 			public IntPtr CharacterMovement;
 		}
 
-		// Token: 0x02002CCA RID: 11466
+		// Token: 0x02000986 RID: 2438
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401666A RID: 91754
+			// Token: 0x040058DF RID: 22751
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

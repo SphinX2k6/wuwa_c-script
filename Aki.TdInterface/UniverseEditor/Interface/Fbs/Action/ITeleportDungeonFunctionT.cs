@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007380 RID: 29568
+	// Token: 0x02007B67 RID: 31591
 	public class ITeleportDungeonFunctionT
 	{
-		// Token: 0x1700E080 RID: 57472
-		// (get) Token: 0x06035AC9 RID: 219849 RVA: 0x0074EF17 File Offset: 0x0074D117
-		// (set) Token: 0x06035ACA RID: 219850 RVA: 0x0074EF1F File Offset: 0x0074D11F
+		// Token: 0x1700EC90 RID: 60560
+		// (get) Token: 0x06038E64 RID: 233060 RVA: 0x007B1457 File Offset: 0x007AF657
+		// (set) Token: 0x06038E65 RID: 233061 RVA: 0x007B145F File Offset: 0x007AF65F
 		public EEnableFunctionType Type { get; set; }
 
-		// Token: 0x1700E081 RID: 57473
-		// (get) Token: 0x06035ACB RID: 219851 RVA: 0x0074EF28 File Offset: 0x0074D128
-		// (set) Token: 0x06035ACC RID: 219852 RVA: 0x0074EF30 File Offset: 0x0074D130
+		// Token: 0x1700EC91 RID: 60561
+		// (get) Token: 0x06038E66 RID: 233062 RVA: 0x007B1468 File Offset: 0x007AF668
+		// (set) Token: 0x06038E67 RID: 233063 RVA: 0x007B1470 File Offset: 0x007AF670
 		public bool Enable { get; set; }
 
-		// Token: 0x1700E082 RID: 57474
-		// (get) Token: 0x06035ACD RID: 219853 RVA: 0x0074EF39 File Offset: 0x0074D139
-		// (set) Token: 0x06035ACE RID: 219854 RVA: 0x0074EF41 File Offset: 0x0074D141
+		// Token: 0x1700EC92 RID: 60562
+		// (get) Token: 0x06038E68 RID: 233064 RVA: 0x007B1479 File Offset: 0x007AF679
+		// (set) Token: 0x06038E69 RID: 233065 RVA: 0x007B1481 File Offset: 0x007AF681
 		public List<int> DungeonList { get; set; }
 
-		// Token: 0x1700E083 RID: 57475
-		// (get) Token: 0x06035ACF RID: 219855 RVA: 0x0074EF4A File Offset: 0x0074D14A
-		// (set) Token: 0x06035AD0 RID: 219856 RVA: 0x0074EF52 File Offset: 0x0074D152
+		// Token: 0x1700EC93 RID: 60563
+		// (get) Token: 0x06038E6A RID: 233066 RVA: 0x007B148A File Offset: 0x007AF68A
+		// (set) Token: 0x06038E6B RID: 233067 RVA: 0x007B1492 File Offset: 0x007AF692
 		public byte NullMask { get; set; }
 
-		// Token: 0x06035AD1 RID: 219857 RVA: 0x0074EF5B File Offset: 0x0074D15B
+		// Token: 0x06038E6C RID: 233068 RVA: 0x007B149B File Offset: 0x007AF69B
 		public ITeleportDungeonFunctionT()
 		{
 			this.Type = EEnableFunctionType.TeleportDungeon;

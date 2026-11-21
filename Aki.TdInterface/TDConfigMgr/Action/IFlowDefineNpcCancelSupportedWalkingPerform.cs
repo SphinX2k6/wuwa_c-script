@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A85 RID: 6789
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C1A RID: 7194
 	public class IFlowDefineNpcCancelSupportedWalkingPerform : IFlowDefineNpcGroupPerformType
 	{
-		// Token: 0x06009168 RID: 37224 RVA: 0x001527DC File Offset: 0x001509DC
+		// Token: 0x060098D2 RID: 39122 RVA: 0x00162708 File Offset: 0x00160908
 		private IFlowDefineNpcCancelSupportedWalkingPerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009169 RID: 37225 RVA: 0x00152814 File Offset: 0x00150A14
+		// Token: 0x060098D3 RID: 39123 RVA: 0x00162740 File Offset: 0x00160940
 		public static IFlowDefineNpcCancelSupportedWalkingPerform Create([Nullable(2)] IFlowDefineNpcCancelSupportedWalkingPerform instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600916A RID: 37226 RVA: 0x00152827 File Offset: 0x00150A27
+		// Token: 0x060098D4 RID: 39124 RVA: 0x00162753 File Offset: 0x00160953
 		public static IFlowDefineNpcCancelSupportedWalkingPerform CreateFromSetValue([Nullable(2)] IFlowDefineNpcCancelSupportedWalkingPerform_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600916B RID: 37227 RVA: 0x0015283A File Offset: 0x00150A3A
+		// Token: 0x060098D5 RID: 39125 RVA: 0x00162766 File Offset: 0x00160966
 		public new IFlowDefineNpcCancelSupportedWalkingPerform_SetValue ToSetValue()
 		{
 			return new IFlowDefineNpcCancelSupportedWalkingPerform_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E42 RID: 11842
-		// (get) Token: 0x0600916C RID: 37228 RVA: 0x00152859 File Offset: 0x00150A59
-		// (set) Token: 0x0600916D RID: 37229 RVA: 0x00152884 File Offset: 0x00150A84
+		// Token: 0x1700304F RID: 12367
+		// (get) Token: 0x060098D6 RID: 39126 RVA: 0x00162785 File Offset: 0x00160985
+		// (set) Token: 0x060098D7 RID: 39127 RVA: 0x001627B0 File Offset: 0x001609B0
 		public override ENpcGroupPerformType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E43 RID: 11843
-		// (get) Token: 0x0600916E RID: 37230 RVA: 0x00152892 File Offset: 0x00150A92
-		// (set) Token: 0x0600916F RID: 37231 RVA: 0x001528BD File Offset: 0x00150ABD
+		// Token: 0x17003050 RID: 12368
+		// (get) Token: 0x060098D8 RID: 39128 RVA: 0x001627BE File Offset: 0x001609BE
+		// (set) Token: 0x060098D9 RID: 39129 RVA: 0x001627E9 File Offset: 0x001609E9
 		public virtual string Key
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040059AD RID: 22957
+		// Token: 0x04005E12 RID: 24082
 		[Nullable(2)]
 		protected new IFlowDefineNpcCancelSupportedWalkingPerform FbInstance;
 
-		// Token: 0x040059AE RID: 22958
+		// Token: 0x04005E13 RID: 24083
 		[Nullable(2)]
 		protected new IFlowDefineNpcCancelSupportedWalkingPerform_SetValue PocoInterface;
 	}

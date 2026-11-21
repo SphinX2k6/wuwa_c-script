@@ -7,16 +7,16 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002739 RID: 10041
+// Token: 0x02001C24 RID: 7204
 public class RacingBetsSpecialTip : UiViewBase
 {
-	// Token: 0x060149A8 RID: 84392 RVA: 0x00536E45 File Offset: 0x00535045
+	// Token: 0x06011E8A RID: 73354 RVA: 0x00545B51 File Offset: 0x00543D51
 	[NullableContext(1)]
 	public RacingBetsSpecialTip(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060149A9 RID: 84393 RVA: 0x00536E4E File Offset: 0x0053504E
+	// Token: 0x06011E8B RID: 73355 RVA: 0x00545B5A File Offset: 0x00543D5A
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class RacingBetsSpecialTip : UiViewBase
 		};
 	}
 
-	// Token: 0x060149AA RID: 84394 RVA: 0x00536E88 File Offset: 0x00535088
+	// Token: 0x06011E8C RID: 73356 RVA: 0x00545B94 File Offset: 0x00543D94
 	protected override void OnBeforeShow()
 	{
 		object[] array = this.OpenParam as object[];
@@ -49,7 +49,7 @@ public class RacingBetsSpecialTip : UiViewBase
 		base.GetText(1).SetText(multiText, true);
 	}
 
-	// Token: 0x060149AB RID: 84395 RVA: 0x00536F54 File Offset: 0x00535154
+	// Token: 0x06011E8D RID: 73357 RVA: 0x00545C60 File Offset: 0x00543E60
 	protected override void OnAfterPlayStartSequence()
 	{
 		object[] array = this.OpenParam as object[];
@@ -66,13 +66,13 @@ public class RacingBetsSpecialTip : UiViewBase
 		uniTaskCompletionSource.TrySetResult(true);
 	}
 
-	// Token: 0x02008DAF RID: 36271
+	// Token: 0x02007F37 RID: 32567
 	private class EComponent
 	{
-		// Token: 0x0402DFE4 RID: 188388
+		// Token: 0x040292FA RID: 168698
 		public const int SpecialIcon = 0;
 
-		// Token: 0x0402DFE5 RID: 188389
+		// Token: 0x040292FB RID: 168699
 		public const int SpecialText = 1;
 	}
 }

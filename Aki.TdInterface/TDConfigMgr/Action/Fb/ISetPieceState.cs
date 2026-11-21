@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002972 RID: 10610
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C57 RID: 11351
 	public class ISetPieceState : ISetJigsawFoundationType
 	{
-		// Token: 0x0600EB1D RID: 60189 RVA: 0x00226776 File Offset: 0x00224976
+		// Token: 0x0600F993 RID: 63891 RVA: 0x00243E2E File Offset: 0x0024202E
 		public static ISetPieceState Create(ISetPieceState? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049FB RID: 18939
-		// (get) Token: 0x0600EB1E RID: 60190 RVA: 0x00226795 File Offset: 0x00224995
+		// Token: 0x17004D93 RID: 19859
+		// (get) Token: 0x0600F994 RID: 63892 RVA: 0x00243E4D File Offset: 0x0024204D
 		public override ESetJigsawFoundationType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049FC RID: 18940
-		// (get) Token: 0x0600EB1F RID: 60191 RVA: 0x002267A2 File Offset: 0x002249A2
+		// Token: 0x17004D94 RID: 19860
+		// (get) Token: 0x0600F995 RID: 63893 RVA: 0x00243E5A File Offset: 0x0024205A
 		public virtual int EntityId
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049FD RID: 18941
-		// (get) Token: 0x0600EB20 RID: 60192 RVA: 0x002267B0 File Offset: 0x002249B0
+		// Token: 0x17004D95 RID: 19861
+		// (get) Token: 0x0600F996 RID: 63894 RVA: 0x00243E68 File Offset: 0x00242068
 		public virtual List<IJigsawPiece> PieceState
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008186 RID: 33158
+		// Token: 0x04008867 RID: 34919
 		private ISetPieceState Instance;
 
-		// Token: 0x04008187 RID: 33159
+		// Token: 0x04008868 RID: 34920
 		private List<IJigsawPiece> _PieceStateCache;
 
-		// Token: 0x04008188 RID: 33160
+		// Token: 0x04008869 RID: 34921
 		private bool _PieceStateInited;
 	}
 }

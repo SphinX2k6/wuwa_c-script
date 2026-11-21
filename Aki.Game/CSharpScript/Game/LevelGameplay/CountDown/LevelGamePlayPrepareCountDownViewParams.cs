@@ -4,24 +4,24 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.CountDown
 {
-	// Token: 0x02006F17 RID: 28439
+	// Token: 0x02006098 RID: 24728
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelGamePlayPrepareCountDownViewParams : ILevelGamePlayPrepareCountDownViewParams
 	{
-		// Token: 0x17009B04 RID: 39684
-		// (get) Token: 0x0604536F RID: 283503 RVA: 0x0112026D File Offset: 0x0111E46D
-		// (set) Token: 0x06045370 RID: 283504 RVA: 0x01120275 File Offset: 0x0111E475
+		// Token: 0x17007043 RID: 28739
+		// (get) Token: 0x0603B51D RID: 242973 RVA: 0x010CA20D File Offset: 0x010C840D
+		// (set) Token: 0x0603B51E RID: 242974 RVA: 0x010CA215 File Offset: 0x010C8415
 		public int CountDownNum { get; set; }
 
-		// Token: 0x17009B05 RID: 39685
-		// (get) Token: 0x06045371 RID: 283505 RVA: 0x0112027E File Offset: 0x0111E47E
-		// (set) Token: 0x06045372 RID: 283506 RVA: 0x01120286 File Offset: 0x0111E486
+		// Token: 0x17007044 RID: 28740
+		// (get) Token: 0x0603B51F RID: 242975 RVA: 0x010CA21E File Offset: 0x010C841E
+		// (set) Token: 0x0603B520 RID: 242976 RVA: 0x010CA226 File Offset: 0x010C8426
 		public string TidText { get; set; }
 
-		// Token: 0x17009B06 RID: 39686
-		// (get) Token: 0x06045373 RID: 283507 RVA: 0x0112028F File Offset: 0x0111E48F
-		// (set) Token: 0x06045374 RID: 283508 RVA: 0x01120297 File Offset: 0x0111E497
+		// Token: 0x17007045 RID: 28741
+		// (get) Token: 0x0603B521 RID: 242977 RVA: 0x010CA22F File Offset: 0x010C842F
+		// (set) Token: 0x0603B522 RID: 242978 RVA: 0x010CA237 File Offset: 0x010C8437
 		public ECountDownUiStyle? UiStyle { get; set; }
 	}
 }

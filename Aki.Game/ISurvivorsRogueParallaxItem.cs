@@ -2,22 +2,22 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B44 RID: 11076
+// Token: 0x020020C0 RID: 8384
 [NullableContext(1)]
 public interface ISurvivorsRogueParallaxItem
 {
-	// Token: 0x17001EA0 RID: 7840
-	// (get) Token: 0x06016F91 RID: 94097
-	// (set) Token: 0x06016F92 RID: 94098
+	// Token: 0x17001EF8 RID: 7928
+	// (get) Token: 0x060149C2 RID: 84418
+	// (set) Token: 0x060149C3 RID: 84419
 	UUIItem Item { get; set; }
 
-	// Token: 0x17001EA1 RID: 7841
-	// (get) Token: 0x06016F93 RID: 94099
-	// (set) Token: 0x06016F94 RID: 94100
+	// Token: 0x17001EF9 RID: 7929
+	// (get) Token: 0x060149C4 RID: 84420
+	// (set) Token: 0x060149C5 RID: 84421
 	float InitPosY { get; set; }
 
-	// Token: 0x17001EA2 RID: 7842
-	// (get) Token: 0x06016F95 RID: 94101
-	// (set) Token: 0x06016F96 RID: 94102
+	// Token: 0x17001EFA RID: 7930
+	// (get) Token: 0x060149C6 RID: 84422
+	// (set) Token: 0x060149C7 RID: 84423
 	float ParallaxFactor { get; set; }
 }

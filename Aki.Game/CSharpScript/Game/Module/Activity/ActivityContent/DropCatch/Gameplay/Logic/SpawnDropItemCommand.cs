@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006719 RID: 26393
+	// Token: 0x02005669 RID: 22121
 	public class SpawnDropItemCommand : IDropCatchCommand
 	{
-		// Token: 0x06041E90 RID: 269968 RVA: 0x00FFCA08 File Offset: 0x00FFAC08
+		// Token: 0x060369DC RID: 223708 RVA: 0x00F3DDD4 File Offset: 0x00F3BFD4
 		[NullableContext(1)]
 		public void Execute(ICommandContext context, [Nullable(2)] object @params)
 		{

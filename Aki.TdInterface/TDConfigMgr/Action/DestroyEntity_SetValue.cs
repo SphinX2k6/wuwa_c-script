@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200155F RID: 5471
+	// Token: 0x020016BD RID: 5821
 	public class DestroyEntity_SetValue
 	{
-		// Token: 0x0400472C RID: 18220
-		[Nullable(1)]
+		// Token: 0x04004ACC RID: 19148
 		public List<int> EntityIds;
 
-		// Token: 0x0400472D RID: 18221
+		// Token: 0x04004ACD RID: 19149
 		public bool? DelayDestroy;
 	}
 }

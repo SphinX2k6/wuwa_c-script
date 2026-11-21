@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickTimeAction
 {
-	// Token: 0x02004F41 RID: 20289
+	// Token: 0x02003F0A RID: 16138
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class QtaPromptPlayer
 	{
-		// Token: 0x06034052 RID: 213074 RVA: 0x00C32C3B File Offset: 0x00C30E3B
+		// Token: 0x06028EC0 RID: 167616 RVA: 0x00B7C3DB File Offset: 0x00B7A5DB
 		[NullableContext(1)]
 		public void SetQtaContext(QtaContextBase context)
 		{
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x06034053 RID: 213075 RVA: 0x00C32C7C File Offset: 0x00C30E7C
+		// Token: 0x06028EC1 RID: 167617 RVA: 0x00B7C41C File Offset: 0x00B7A61C
 		[NullableContext(1)]
 		public void StartUiEffect(SQtaBase config)
 		{
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			this.HideBattleUiChildren.Clear();
 		}
 
-		// Token: 0x06034054 RID: 213076 RVA: 0x00C32D5C File Offset: 0x00C30F5C
+		// Token: 0x06028EC2 RID: 167618 RVA: 0x00B7C4FC File Offset: 0x00B7A6FC
 		public void RemoveUiEffect()
 		{
 			if (this.IsHideAllBattleUi)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			this.HideBattleUiChildren.Clear();
 		}
 
-		// Token: 0x06034055 RID: 213077 RVA: 0x00C32DAE File Offset: 0x00C30FAE
+		// Token: 0x06028EC3 RID: 167619 RVA: 0x00B7C54E File Offset: 0x00B7A74E
 		public void PlayEffectByResult(EQtaResult resultType, int qtaHandle)
 		{
 			if (resultType == EQtaResult.Success)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			this.PlayEffect(EQtaPromptType.结果失败提示, qtaHandle);
 		}
 
-		// Token: 0x06034056 RID: 213078 RVA: 0x00C32DC8 File Offset: 0x00C30FC8
+		// Token: 0x06028EC4 RID: 167620 RVA: 0x00B7C568 File Offset: 0x00B7A768
 		public void PlayEffect(EQtaPromptType promptType, int qtaHandle)
 		{
 			if (this.Context == null || qtaHandle != this.Context.HandleId)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			this.LastAudioHandle = this.PlayQtaAudio(promptType, null);
 		}
 
-		// Token: 0x06034057 RID: 213079 RVA: 0x00C32E41 File Offset: 0x00C31041
+		// Token: 0x06028EC5 RID: 167621 RVA: 0x00B7C5E1 File Offset: 0x00B7A7E1
 		public void StopEffect(int qtaHandle)
 		{
 			if (this.Context == null || qtaHandle != this.Context.HandleId)
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			this.StopEffectInner();
 		}
 
-		// Token: 0x06034058 RID: 213080 RVA: 0x00C32E60 File Offset: 0x00C31060
+		// Token: 0x06028EC6 RID: 167622 RVA: 0x00B7C600 File Offset: 0x00B7A800
 		private void StopEffectInner()
 		{
 			this.RemoveCueHandle();
@@ -137,14 +137,14 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			this.LastAudioHandle = 0;
 		}
 
-		// Token: 0x06034059 RID: 213081 RVA: 0x00C32EA2 File Offset: 0x00C310A2
+		// Token: 0x06028EC7 RID: 167623 RVA: 0x00B7C642 File Offset: 0x00B7A842
 		public void RemoveEffect()
 		{
 			this.RemoveUiEffect();
 			this.StopEffectInner();
 		}
 
-		// Token: 0x0603405A RID: 213082 RVA: 0x00C32EB0 File Offset: 0x00C310B0
+		// Token: 0x06028EC8 RID: 167624 RVA: 0x00B7C650 File Offset: 0x00B7A850
 		private void PlayCue(EQtaPromptType promptType)
 		{
 			if (this.EntityCueComp == null)
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x0603405B RID: 213083 RVA: 0x00C32F50 File Offset: 0x00C31150
+		// Token: 0x06028EC9 RID: 167625 RVA: 0x00B7C6F0 File Offset: 0x00B7A8F0
 		private void RemoveCueHandle()
 		{
 			if (this.EntityCueComp != null && this.CueHandleIds.Count > 0)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x0603405C RID: 213084 RVA: 0x00C32FCC File Offset: 0x00C311CC
+		// Token: 0x06028ECA RID: 167626 RVA: 0x00B7C76C File Offset: 0x00B7A96C
 		private void PlayScreenEffect(EQtaPromptType promptType)
 		{
 			QtaPromptPlayer.<>c__DisplayClass21_0 CS$<>8__locals1 = new QtaPromptPlayer.<>c__DisplayClass21_0();
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x0603405D RID: 213085 RVA: 0x00C33188 File Offset: 0x00C31388
+		// Token: 0x06028ECB RID: 167627 RVA: 0x00B7C928 File Offset: 0x00B7AB28
 		private void RemoveScreenEffect()
 		{
 			if (this.ScreenEffectTimer != null)
@@ -254,13 +254,13 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x0603405E RID: 213086 RVA: 0x00C33204 File Offset: 0x00C31404
+		// Token: 0x06028ECC RID: 167628 RVA: 0x00B7C9A4 File Offset: 0x00B7ABA4
 		private bool IsPlayingScreenEffect()
 		{
 			return this.ScreenEffectInst != null || this.ScreenEffectHandle != -1;
 		}
 
-		// Token: 0x0603405F RID: 213087 RVA: 0x00C3321C File Offset: 0x00C3141C
+		// Token: 0x06028ECD RID: 167629 RVA: 0x00B7C9BC File Offset: 0x00B7ABBC
 		private void PlayCameraShake(EQtaPromptType promptType)
 		{
 			if (this.Context == null)
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x06034060 RID: 213088 RVA: 0x00C332E0 File Offset: 0x00C314E0
+		// Token: 0x06028ECE RID: 167630 RVA: 0x00B7CA80 File Offset: 0x00B7AC80
 		private void RemoveCameraShake(bool immediately = true)
 		{
 			if (this.CameraShakeTimer != null)
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x06034061 RID: 213089 RVA: 0x00C33330 File Offset: 0x00C31530
+		// Token: 0x06028ECF RID: 167631 RVA: 0x00B7CAD0 File Offset: 0x00B7ACD0
 		private void PlayGamepadShake(EQtaPromptType promptType)
 		{
 			if (this.Context == null)
@@ -321,7 +321,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			GamepadController.Instance.TriggerGamepadShakeByQte((ECommonQteContextType)this.Context.Type.Value, ukuroForceFeedbackEffect);
 		}
 
-		// Token: 0x06034062 RID: 213090 RVA: 0x00C33398 File Offset: 0x00C31598
+		// Token: 0x06028ED0 RID: 167632 RVA: 0x00B7CB38 File Offset: 0x00B7AD38
 		private void StopGamepadShake()
 		{
 			if (this.Context == null)
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			GamepadController.Instance.StopQteGamepadShake((ECommonQteContextType)this.Context.Type.Value, ukuroForceFeedbackEffect);
 		}
 
-		// Token: 0x06034063 RID: 213091 RVA: 0x00C33405 File Offset: 0x00C31605
+		// Token: 0x06028ED1 RID: 167633 RVA: 0x00B7CBA5 File Offset: 0x00B7ADA5
 		public int PlayQtaAudio(EQtaPromptType promptType, AActor actor = null)
 		{
 			QtaContextBase context = this.Context;
@@ -355,7 +355,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			return this.PlayQtaAudioWithPath(audioEvent, actor);
 		}
 
-		// Token: 0x06034064 RID: 213092 RVA: 0x00C33430 File Offset: 0x00C31630
+		// Token: 0x06028ED2 RID: 167634 RVA: 0x00B7CBD0 File Offset: 0x00B7ADD0
 		private int PlayQtaAudioWithPath(string audioEvent, AActor actor = null)
 		{
 			if (string.IsNullOrEmpty(audioEvent))
@@ -378,7 +378,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			return AudioSystem.Instance.PostEvent(text);
 		}
 
-		// Token: 0x06034065 RID: 213093 RVA: 0x00C334B0 File Offset: 0x00C316B0
+		// Token: 0x06028ED3 RID: 167635 RVA: 0x00B7CC50 File Offset: 0x00B7AE50
 		[NullableContext(1)]
 		public void SeekQtaAudio(int position, string audioEvent, [Nullable(2)] AActor actor = null, int? handle = null)
 		{
@@ -398,7 +398,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}));
 		}
 
-		// Token: 0x06034066 RID: 213094 RVA: 0x00C33508 File Offset: 0x00C31708
+		// Token: 0x06028ED4 RID: 167636 RVA: 0x00B7CCA8 File Offset: 0x00B7AEA8
 		public void StopQtaAudio(int handle, int? blendOutTime = null)
 		{
 			if (handle == 0)
@@ -411,42 +411,42 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}));
 		}
 
-		// Token: 0x0401BA14 RID: 113172
+		// Token: 0x040163E9 RID: 91113
 		private QtaContextBase Context;
 
-		// Token: 0x0401BA15 RID: 113173
+		// Token: 0x040163EA RID: 91114
 		private BaseGameplayCueComponent EntityCueComp;
 
-		// Token: 0x0401BA16 RID: 113174
+		// Token: 0x040163EB RID: 91115
 		private EffectScreenPlayData_C ScreenEffectInst;
 
-		// Token: 0x0401BA17 RID: 113175
+		// Token: 0x040163EC RID: 91116
 		private int ScreenEffectHandle = -1;
 
-		// Token: 0x0401BA18 RID: 113176
+		// Token: 0x040163ED RID: 91117
 		private TimerHandle ScreenEffectTimer;
 
-		// Token: 0x0401BA19 RID: 113177
+		// Token: 0x040163EE RID: 91118
 		private UMatineeCameraShake CameraShakeInst;
 
-		// Token: 0x0401BA1A RID: 113178
+		// Token: 0x040163EF RID: 91119
 		private TimerHandle CameraShakeTimer;
 
-		// Token: 0x0401BA1B RID: 113179
+		// Token: 0x040163F0 RID: 91120
 		private bool IsHideAllBattleUi;
 
-		// Token: 0x0401BA1C RID: 113180
+		// Token: 0x040163F1 RID: 91121
 		[Nullable(1)]
 		private List<EBattleUiChild> HideBattleUiChildren = new List<EBattleUiChild>();
 
-		// Token: 0x0401BA1D RID: 113181
+		// Token: 0x040163F2 RID: 91122
 		private int LastAudioHandle;
 
-		// Token: 0x0401BA1E RID: 113182
+		// Token: 0x040163F3 RID: 91123
 		[Nullable(1)]
 		private readonly List<int> CueHandleIds = new List<int>();
 
-		// Token: 0x0401BA1F RID: 113183
+		// Token: 0x040163F4 RID: 91124
 		private int LastGamepadShakePromptType;
 	}
 }

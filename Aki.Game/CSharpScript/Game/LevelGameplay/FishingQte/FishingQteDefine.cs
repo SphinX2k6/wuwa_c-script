@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E25 RID: 28197
+	// Token: 0x02005FA5 RID: 24485
 	public class FishingQteDefine
 	{
-		// Token: 0x06044BD8 RID: 281560 RVA: 0x010F75FC File Offset: 0x010F57FC
+		// Token: 0x0603AD41 RID: 240961 RVA: 0x010A1B38 File Offset: 0x0109FD38
 		public static int calculateCellSize(int startIndex, int endIndex)
 		{
 			if (endIndex >= startIndex)
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return 36 - startIndex + endIndex + 1;
 		}
 
-		// Token: 0x06044BD9 RID: 281561 RVA: 0x010F7610 File Offset: 0x010F5810
+		// Token: 0x0603AD42 RID: 240962 RVA: 0x010A1B4C File Offset: 0x0109FD4C
 		public static int fixedCellIndex(int index)
 		{
 			if (index > 36)
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x04023C1F RID: 146463
+		// Token: 0x0401EEC2 RID: 126658
 		public const int FISHINGQTE_RINGCELLCOUNT = 36;
 
-		// Token: 0x04023C20 RID: 146464
+		// Token: 0x0401EEC3 RID: 126659
 		public const int FISHINGQTE_RING_ANGLE = 360;
 
-		// Token: 0x04023C21 RID: 146465
+		// Token: 0x0401EEC4 RID: 126660
 		public const int FISHINGQTE_SINGLECELL_ANGLE = 10;
 	}
 }

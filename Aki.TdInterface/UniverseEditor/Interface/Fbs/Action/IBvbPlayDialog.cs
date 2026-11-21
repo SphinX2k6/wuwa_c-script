@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006248 RID: 25160
+	// Token: 0x020068B9 RID: 26809
 	public struct IBvbPlayDialog : IFlatbufferObject
 	{
-		// Token: 0x1700BB85 RID: 48005
-		// (get) Token: 0x0602B62C RID: 177708 RVA: 0x005F8ECE File Offset: 0x005F70CE
+		// Token: 0x1700C50D RID: 50445
+		// (get) Token: 0x0602DD8D RID: 187789 RVA: 0x00643CD6 File Offset: 0x00641ED6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B62D RID: 177709 RVA: 0x005F8EDB File Offset: 0x005F70DB
+		// Token: 0x0602DD8E RID: 187790 RVA: 0x00643CE3 File Offset: 0x00641EE3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B62E RID: 177710 RVA: 0x005F8EE4 File Offset: 0x005F70E4
+		// Token: 0x0602DD8F RID: 187791 RVA: 0x00643CEC File Offset: 0x00641EEC
 		public static IBvbPlayDialog GetRootAsIBvbPlayDialog(ByteBuffer _bb)
 		{
 			return IBvbPlayDialog.GetRootAsIBvbPlayDialog(_bb, default(IBvbPlayDialog));
 		}
 
-		// Token: 0x0602B62F RID: 177711 RVA: 0x005F8F00 File Offset: 0x005F7100
+		// Token: 0x0602DD90 RID: 187792 RVA: 0x00643D08 File Offset: 0x00641F08
 		public static IBvbPlayDialog GetRootAsIBvbPlayDialog(ByteBuffer _bb, IBvbPlayDialog obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B630 RID: 177712 RVA: 0x005F8F1D File Offset: 0x005F711D
+		// Token: 0x0602DD91 RID: 187793 RVA: 0x00643D25 File Offset: 0x00641F25
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B631 RID: 177713 RVA: 0x005F8F2C File Offset: 0x005F712C
+		// Token: 0x0602DD92 RID: 187794 RVA: 0x00643D34 File Offset: 0x00641F34
 		public IBvbPlayDialog __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BB86 RID: 48006
-		// (get) Token: 0x0602B632 RID: 177714 RVA: 0x005F8F3C File Offset: 0x005F713C
+		// Token: 0x1700C50E RID: 50446
+		// (get) Token: 0x0602DD93 RID: 187795 RVA: 0x00643D44 File Offset: 0x00641F44
 		public EBvbPlayDialogType DialogType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B633 RID: 177715 RVA: 0x005F8F78 File Offset: 0x005F7178
+		// Token: 0x0602DD94 RID: 187796 RVA: 0x00643D80 File Offset: 0x00641F80
 		public static Offset<IBvbPlayDialog> CreateIBvbPlayDialog(FlatBufferBuilder builder, EBvbPlayDialogType DialogType = EBvbPlayDialogType.DungeonBegin)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBvbPlayDialog.EndIBvbPlayDialog(builder);
 		}
 
-		// Token: 0x0602B634 RID: 177716 RVA: 0x005F8F8E File Offset: 0x005F718E
+		// Token: 0x0602DD95 RID: 187797 RVA: 0x00643D96 File Offset: 0x00641F96
 		public static void StartIBvbPlayDialog(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602B635 RID: 177717 RVA: 0x005F8F97 File Offset: 0x005F7197
+		// Token: 0x0602DD96 RID: 187798 RVA: 0x00643D9F File Offset: 0x00641F9F
 		public static void AddDialogType(FlatBufferBuilder builder, EBvbPlayDialogType dialogType)
 		{
 			builder.AddByte(0, (byte)dialogType, 0);
 		}
 
-		// Token: 0x0602B636 RID: 177718 RVA: 0x005F8FA2 File Offset: 0x005F71A2
+		// Token: 0x0602DD97 RID: 187799 RVA: 0x00643DAA File Offset: 0x00641FAA
 		public static Offset<IBvbPlayDialog> EndIBvbPlayDialog(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbPlayDialog>(builder.EndTable());
 		}
 
-		// Token: 0x0602B637 RID: 177719 RVA: 0x005F8FB0 File Offset: 0x005F71B0
+		// Token: 0x0602DD98 RID: 187800 RVA: 0x00643DB8 File Offset: 0x00641FB8
 		public IBvbPlayDialogT UnPack()
 		{
 			IBvbPlayDialogT bvbPlayDialogT = new IBvbPlayDialogT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return bvbPlayDialogT;
 		}
 
-		// Token: 0x0602B638 RID: 177720 RVA: 0x005F8FCB File Offset: 0x005F71CB
+		// Token: 0x0602DD99 RID: 187801 RVA: 0x00643DD3 File Offset: 0x00641FD3
 		public void UnPackTo(IBvbPlayDialogT _o)
 		{
 			_o.DialogType = this.DialogType;
 		}
 
-		// Token: 0x0602B639 RID: 177721 RVA: 0x005F8FDC File Offset: 0x005F71DC
+		// Token: 0x0602DD9A RID: 187802 RVA: 0x00643DE4 File Offset: 0x00641FE4
 		public static Offset<IBvbPlayDialog> Pack(FlatBufferBuilder builder, IBvbPlayDialogT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBvbPlayDialog.CreateIBvbPlayDialog(builder, _o.DialogType);
 		}
 
-		// Token: 0x04010795 RID: 67477
+		// Token: 0x040115AA RID: 71082
 		private Table __p;
 	}
 }

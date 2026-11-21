@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003C7 RID: 967
+	// Token: 0x020003DD RID: 989
 	public class ConfigGuQinActivityParamById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060016B1 RID: 5809 RVA: 0x000D9C6C File Offset: 0x000D7E6C
+		// Token: 0x06001735 RID: 5941 RVA: 0x000E03C0 File Offset: 0x000DE5C0
 		static ConfigGuQinActivityParamById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGuQinActivityParamById.CreateStaticDefaultValue), new Action(ConfigGuQinActivityParamById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060016B2 RID: 5810 RVA: 0x000D9C8C File Offset: 0x000D7E8C
+		// Token: 0x06001736 RID: 5942 RVA: 0x000E03E0 File Offset: 0x000DE5E0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGuQinActivityParamById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060016B3 RID: 5811 RVA: 0x000D9D0B File Offset: 0x000D7F0B
+		// Token: 0x06001737 RID: 5943 RVA: 0x000E045F File Offset: 0x000DE65F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGuQinActivityParamById.LogPair = null;
 			ConfigGuQinActivityParamById.HandleId = 0;
 		}
 
-		// Token: 0x060016B4 RID: 5812 RVA: 0x000D9D19 File Offset: 0x000D7F19
+		// Token: 0x06001738 RID: 5944 RVA: 0x000E046D File Offset: 0x000DE66D
 		public static void Init()
 		{
 			ConfigGuQinActivityParamById.HandleId = ConfigCommon.InitDataStatement(ConfigGuQinActivityParamById.HandleId, "db_guqinactivity.db", "select BinData from `GuQinActivityParam` where Id=?");
 		}
 
-		// Token: 0x060016B5 RID: 5813 RVA: 0x000D9D34 File Offset: 0x000D7F34
+		// Token: 0x06001739 RID: 5945 RVA: 0x000E0488 File Offset: 0x000DE688
 		public static GuQinActivityParam? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGuQinActivityParamById.HandleId, ConfigGuQinActivityParamById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GuQinActivityParam?(rootAsGuQinActivityParam);
 		}
 
-		// Token: 0x04001A55 RID: 6741
+		// Token: 0x04001AEF RID: 6895
 		private const string DB = "db_guqinactivity.db";
 
-		// Token: 0x04001A56 RID: 6742
+		// Token: 0x04001AF0 RID: 6896
 		private const string FILE = "q.清宵弹琴活动.xlsx";
 
-		// Token: 0x04001A57 RID: 6743
+		// Token: 0x04001AF1 RID: 6897
 		private const string TABLE = "GuQinActivityParam";
 
-		// Token: 0x04001A58 RID: 6744
+		// Token: 0x04001AF2 RID: 6898
 		private const string COMMAND = "select BinData from `GuQinActivityParam` where Id=?";
 
-		// Token: 0x04001A59 RID: 6745
+		// Token: 0x04001AF3 RID: 6899
 		private const string KEY_PREFIX = "GuQinActivityParamById";
 
-		// Token: 0x04001A5A RID: 6746
+		// Token: 0x04001AF4 RID: 6900
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001A5B RID: 6747
+		// Token: 0x04001AF5 RID: 6901
 		private static int HandleId;
 	}
 }

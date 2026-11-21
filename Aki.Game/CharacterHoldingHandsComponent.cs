@@ -12,18 +12,18 @@ using CSharpScript.Game.LevelGamePlay;
 using NpcSitOnChair;
 using UnrealEngine;
 
-// Token: 0x02003067 RID: 12391
+// Token: 0x020025BD RID: 9661
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601A62C RID: 108076 RVA: 0x00708434 File Offset: 0x00706634
+	// Token: 0x06017FE0 RID: 98272 RVA: 0x0072ED70 File Offset: 0x0072CF70
 	static CharacterHoldingHandsComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterHoldingHandsComponent.CreateStaticDefaultValue), new Action(CharacterHoldingHandsComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601A62D RID: 108077 RVA: 0x00708454 File Offset: 0x00706654
+	// Token: 0x06017FE1 RID: 98273 RVA: 0x0072ED90 File Offset: 0x0072CF90
 	public static void CreateStaticDefaultValue()
 	{
 		CharacterHoldingHandsComponent.CommonParams = null;
@@ -42,7 +42,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		CharacterHoldingHandsComponent.DisableInputTagIds.Add(GameplayTagDefine.EGameplayTagId["角色.Common.BUFF通用标识.不能切人"]);
 	}
 
-	// Token: 0x0601A62E RID: 108078 RVA: 0x0070857E File Offset: 0x0070677E
+	// Token: 0x06017FE2 RID: 98274 RVA: 0x0072EEBA File Offset: 0x0072D0BA
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterHoldingHandsComponent.CommonParams = null;
@@ -50,8 +50,8 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		CharacterHoldingHandsComponent.DisableInputTagIds = null;
 	}
 
-	// Token: 0x1700244A RID: 9290
-	// (get) Token: 0x0601A62F RID: 108079 RVA: 0x00708592 File Offset: 0x00706792
+	// Token: 0x1700257C RID: 9596
+	// (get) Token: 0x06017FE3 RID: 98275 RVA: 0x0072EECE File Offset: 0x0072D0CE
 	[Nullable(1)]
 	public HoldingHandsParams Params
 	{
@@ -66,8 +66,8 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x1700244B RID: 9291
-	// (get) Token: 0x0601A630 RID: 108080 RVA: 0x007085AC File Offset: 0x007067AC
+	// Token: 0x1700257D RID: 9597
+	// (get) Token: 0x06017FE4 RID: 98276 RVA: 0x0072EEE8 File Offset: 0x0072D0E8
 	public BP_KeepFollowingConfig_C KeepFollowingConfig
 	{
 		get
@@ -80,7 +80,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A631 RID: 108081 RVA: 0x00708600 File Offset: 0x00706800
+	// Token: 0x06017FE5 RID: 98277 RVA: 0x0072EF3C File Offset: 0x0072D13C
 	protected override bool OnStart()
 	{
 		this.CreatureDataComp = base.Entity.CheckGetComponent<CreatureDataComponent>();
@@ -104,7 +104,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return true;
 	}
 
-	// Token: 0x0601A632 RID: 108082 RVA: 0x007086F4 File Offset: 0x007068F4
+	// Token: 0x06017FE6 RID: 98278 RVA: 0x0072F030 File Offset: 0x0072D230
 	protected override void OnActivate()
 	{
 		CharacterAnimationComponent animComp = this.AnimComp;
@@ -147,7 +147,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A633 RID: 108083 RVA: 0x007087E8 File Offset: 0x007069E8
+	// Token: 0x06017FE7 RID: 98279 RVA: 0x0072F124 File Offset: 0x0072D324
 	protected override bool OnEnd()
 	{
 		this.ReleaseAllHands("实体销毁", true, false);
@@ -155,7 +155,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return true;
 	}
 
-	// Token: 0x0601A634 RID: 108084 RVA: 0x00708800 File Offset: 0x00706A00
+	// Token: 0x06017FE8 RID: 98280 RVA: 0x0072F13C File Offset: 0x0072D33C
 	protected override void OnTick(float deltaTime)
 	{
 		if (this.HandRuntimes.Count == 0)
@@ -186,13 +186,13 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		this.TickInputLimit(roleState, (double)deltaTime);
 	}
 
-	// Token: 0x0601A635 RID: 108085 RVA: 0x007088D8 File Offset: 0x00706AD8
+	// Token: 0x06017FE9 RID: 98281 RVA: 0x0072F214 File Offset: 0x0072D414
 	private bool CheckDisableTags(EHoldingHandsRoleState roleState)
 	{
 		return this.TagComp.HasAnyTag(this.Params.DisableTags);
 	}
 
-	// Token: 0x0601A636 RID: 108086 RVA: 0x007088F0 File Offset: 0x00706AF0
+	// Token: 0x06017FEA RID: 98282 RVA: 0x0072F22C File Offset: 0x0072D42C
 	private void TickInputLimit(EHoldingHandsRoleState roleState, double deltaTime)
 	{
 		if (roleState != EHoldingHandsRoleState.Leader)
@@ -217,8 +217,8 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		this.MoveComp.SetInputScale(1f);
 	}
 
-	// Token: 0x1700244C RID: 9292
-	// (get) Token: 0x0601A637 RID: 108087 RVA: 0x007089A5 File Offset: 0x00706BA5
+	// Token: 0x1700257E RID: 9598
+	// (get) Token: 0x06017FEB RID: 98283 RVA: 0x0072F2E1 File Offset: 0x0072D4E1
 	public HoldingHandsModel Model
 	{
 		get
@@ -227,7 +227,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A638 RID: 108088 RVA: 0x007089AC File Offset: 0x00706BAC
+	// Token: 0x06017FEC RID: 98284 RVA: 0x0072F2E8 File Offset: 0x0072D4E8
 	[NullableContext(1)]
 	public HandRuntime GetHandRuntime(EHandType handType)
 	{
@@ -241,7 +241,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return handRuntime;
 	}
 
-	// Token: 0x0601A639 RID: 108089 RVA: 0x007089E4 File Offset: 0x00706BE4
+	// Token: 0x06017FED RID: 98285 RVA: 0x0072F320 File Offset: 0x0072D520
 	public HoldingHandsRelation GetRelationByHand(EHandType handType)
 	{
 		string key;
@@ -257,7 +257,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return model.GetRelation(key);
 	}
 
-	// Token: 0x0601A63A RID: 108090 RVA: 0x00708A18 File Offset: 0x00706C18
+	// Token: 0x06017FEE RID: 98286 RVA: 0x0072F354 File Offset: 0x0072D554
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public HoldingHandsRelation GetRelationByFollower(CharacterHoldingHandsComponent follower)
@@ -274,7 +274,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return null;
 	}
 
-	// Token: 0x0601A63B RID: 108091 RVA: 0x00708A9C File Offset: 0x00706C9C
+	// Token: 0x06017FEF RID: 98287 RVA: 0x0072F3D8 File Offset: 0x0072D5D8
 	public IkTarget GetHandIkTarget(EHandType handType)
 	{
 		HandRuntime handRuntime;
@@ -285,7 +285,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return handRuntime.IkTarget;
 	}
 
-	// Token: 0x0601A63C RID: 108092 RVA: 0x00708AC4 File Offset: 0x00706CC4
+	// Token: 0x06017FF0 RID: 98288 RVA: 0x0072F400 File Offset: 0x0072D600
 	public FIKTarget GetHandIkTargetUe(EHandType handType)
 	{
 		HandRuntime handRuntime;
@@ -307,7 +307,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return handRuntime.IkTargetUe;
 	}
 
-	// Token: 0x0601A63D RID: 108093 RVA: 0x00708B5C File Offset: 0x00706D5C
+	// Token: 0x06017FF1 RID: 98289 RVA: 0x0072F498 File Offset: 0x0072D698
 	public EHoldingHandsRoleState GetRoleState()
 	{
 		if (this.RelationKeys == null || this.RelationKeys.Count == 0)
@@ -333,25 +333,25 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return EHoldingHandsRoleState.None;
 	}
 
-	// Token: 0x0601A63E RID: 108094 RVA: 0x00708C00 File Offset: 0x00706E00
+	// Token: 0x06017FF2 RID: 98290 RVA: 0x0072F53C File Offset: 0x0072D73C
 	public bool GetIsHoldingHands()
 	{
 		return this.GetRoleState() == EHoldingHandsRoleState.Leader;
 	}
 
-	// Token: 0x0601A63F RID: 108095 RVA: 0x00708C0B File Offset: 0x00706E0B
+	// Token: 0x06017FF3 RID: 98291 RVA: 0x0072F547 File Offset: 0x0072D747
 	public bool GetIsBeHoldingHands()
 	{
 		return this.GetRoleState() == EHoldingHandsRoleState.Follower;
 	}
 
-	// Token: 0x0601A640 RID: 108096 RVA: 0x00708C16 File Offset: 0x00706E16
+	// Token: 0x06017FF4 RID: 98292 RVA: 0x0072F552 File Offset: 0x0072D752
 	public bool GetIsAcceptingInvitation()
 	{
 		return this.IsAcceptingInvitation;
 	}
 
-	// Token: 0x0601A641 RID: 108097 RVA: 0x00708C20 File Offset: 0x00706E20
+	// Token: 0x06017FF5 RID: 98293 RVA: 0x0072F55C File Offset: 0x0072D75C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -371,7 +371,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return null;
 	}
 
-	// Token: 0x0601A642 RID: 108098 RVA: 0x00708CB8 File Offset: 0x00706EB8
+	// Token: 0x06017FF6 RID: 98294 RVA: 0x0072F5F4 File Offset: 0x0072D7F4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -391,27 +391,27 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return null;
 	}
 
-	// Token: 0x0601A643 RID: 108099 RVA: 0x00708D50 File Offset: 0x00706F50
+	// Token: 0x06017FF7 RID: 98295 RVA: 0x0072F68C File Offset: 0x0072D88C
 	public bool GetHandReachable(EHandType hand)
 	{
 		HoldingHandsRelation relationByHand = this.GetRelationByHand(hand);
 		return relationByHand != null && relationByHand is Binding && (relationByHand as Binding).Reachable;
 	}
 
-	// Token: 0x0601A644 RID: 108100 RVA: 0x00708D7D File Offset: 0x00706F7D
+	// Token: 0x06017FF8 RID: 98296 RVA: 0x0072F6B9 File Offset: 0x0072D8B9
 	public bool GetIfHanding()
 	{
 		return this.GetRoleState() > EHoldingHandsRoleState.None;
 	}
 
-	// Token: 0x0601A645 RID: 108101 RVA: 0x00708D88 File Offset: 0x00706F88
+	// Token: 0x06017FF9 RID: 98297 RVA: 0x0072F6C4 File Offset: 0x0072D8C4
 	[NullableContext(1)]
 	public static double GetMaxReachableDistance(Binding binding)
 	{
 		return binding.LeaderRuntime.MaxBendLength + binding.FollowerRuntime.MaxBendLength;
 	}
 
-	// Token: 0x0601A646 RID: 108102 RVA: 0x00708DA1 File Offset: 0x00706FA1
+	// Token: 0x06017FFA RID: 98298 RVA: 0x0072F6DD File Offset: 0x0072D8DD
 	[NullableContext(1)]
 	public global::Vector GetFollowingPosition(CharacterHoldingHandsComponent leader)
 	{
@@ -423,7 +423,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return this.TempVector;
 	}
 
-	// Token: 0x0601A647 RID: 108103 RVA: 0x00708DCC File Offset: 0x00706FCC
+	// Token: 0x06017FFB RID: 98299 RVA: 0x0072F708 File Offset: 0x0072D908
 	public unsafe void SetBindingsNoLerp()
 	{
 		foreach (string key in this.RelationKeys.Values)
@@ -452,7 +452,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A648 RID: 108104 RVA: 0x00708F24 File Offset: 0x00707124
+	// Token: 0x06017FFC RID: 98300 RVA: 0x0072F860 File Offset: 0x0072DA60
 	[NullableContext(1)]
 	public static void StartInvitation(Invitation invitation, EHandType leaderHandType)
 	{
@@ -552,7 +552,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		leader.AddOrRemoveInvitationTags(true, EHoldingHandsRoleState.Leader);
 	}
 
-	// Token: 0x0601A649 RID: 108105 RVA: 0x00709158 File Offset: 0x00707358
+	// Token: 0x06017FFD RID: 98301 RVA: 0x0072FA94 File Offset: 0x0072DC94
 	public void FollowerAccept()
 	{
 		foreach (string key in this.RelationKeys.Values)
@@ -591,7 +591,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A64A RID: 108106 RVA: 0x00709248 File Offset: 0x00707448
+	// Token: 0x06017FFE RID: 98302 RVA: 0x0072FB84 File Offset: 0x0072DD84
 	public void InvitationToBinding()
 	{
 		foreach (string key in this.RelationKeys.Values)
@@ -675,7 +675,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A64B RID: 108107 RVA: 0x00709500 File Offset: 0x00707700
+	// Token: 0x06017FFF RID: 98303 RVA: 0x0072FE3C File Offset: 0x0072E03C
 	public void OnInvitationAnimEnd()
 	{
 		foreach (string key in this.RelationKeys.Values)
@@ -710,7 +710,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A64C RID: 108108 RVA: 0x00709680 File Offset: 0x00707880
+	// Token: 0x06018000 RID: 98304 RVA: 0x0072FFBC File Offset: 0x0072E1BC
 	[NullableContext(1)]
 	private static void OnInvitationEndTurnComplete(Binding binding)
 	{
@@ -739,7 +739,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A64D RID: 108109 RVA: 0x0070973C File Offset: 0x0070793C
+	// Token: 0x06018001 RID: 98305 RVA: 0x00730078 File Offset: 0x0072E278
 	[NullableContext(1)]
 	private void TurnToTarget(global::Vector facing, double minAngle, [Nullable(2)] Action onEnd = null)
 	{
@@ -774,7 +774,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		onEnd2();
 	}
 
-	// Token: 0x0601A64E RID: 108110 RVA: 0x00709874 File Offset: 0x00707A74
+	// Token: 0x06018002 RID: 98306 RVA: 0x007301B0 File Offset: 0x0072E3B0
 	private void TickTurnInterrupt()
 	{
 		if (this.TurnEndTimer != null && this.TurnEndTimer.Valid())
@@ -794,7 +794,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A64F RID: 108111 RVA: 0x007098DC File Offset: 0x00707ADC
+	// Token: 0x06018003 RID: 98307 RVA: 0x00730218 File Offset: 0x0072E418
 	[NullableContext(1)]
 	public void OnAddBinding(EHandType handType, string bindingKey, bool invitation = false)
 	{
@@ -811,7 +811,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A650 RID: 108112 RVA: 0x00709930 File Offset: 0x00707B30
+	// Token: 0x06018004 RID: 98308 RVA: 0x0073026C File Offset: 0x0072E46C
 	public unsafe void OnEnterHoldingHands(EHandType handType)
 	{
 		EHoldingHandsRoleState roleState = this.GetRoleState();
@@ -850,7 +850,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		this.TryAddEvents();
 	}
 
-	// Token: 0x0601A651 RID: 108113 RVA: 0x00709AB0 File Offset: 0x00707CB0
+	// Token: 0x06018005 RID: 98309 RVA: 0x007303EC File Offset: 0x0072E5EC
 	[NullableContext(1)]
 	public void ReleaseAllHands(string reason = "", bool lerp = false, bool sendRequest = true)
 	{
@@ -875,7 +875,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A652 RID: 108114 RVA: 0x00709B4C File Offset: 0x00707D4C
+	// Token: 0x06018006 RID: 98310 RVA: 0x00730488 File Offset: 0x0072E688
 	public void OnDeleteRelation(EHandType handType, bool isLeader, bool lerp = true)
 	{
 		HoldingHandsRelation relationByHand = this.GetRelationByHand(handType);
@@ -894,7 +894,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		this.OnExitHoldingHands(isLeader, handType, flag);
 	}
 
-	// Token: 0x0601A653 RID: 108115 RVA: 0x00709BBC File Offset: 0x00707DBC
+	// Token: 0x06018007 RID: 98311 RVA: 0x007304F8 File Offset: 0x0072E6F8
 	private unsafe void OnExitHoldingHands(bool isLeader, EHandType handType, bool isBinding)
 	{
 		EHoldingHandsRoleState eholdingHandsRoleState = isLeader ? EHoldingHandsRoleState.Leader : EHoldingHandsRoleState.Follower;
@@ -954,7 +954,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		this.TryRemoveEvents();
 	}
 
-	// Token: 0x0601A654 RID: 108116 RVA: 0x00709D88 File Offset: 0x00707F88
+	// Token: 0x06018008 RID: 98312 RVA: 0x007306C4 File Offset: 0x0072E8C4
 	private void AddOrRemoveInvitationTags(bool add, EHoldingHandsRoleState roleState)
 	{
 		if (roleState != EHoldingHandsRoleState.Leader)
@@ -987,7 +987,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A655 RID: 108117 RVA: 0x00709E50 File Offset: 0x00708050
+	// Token: 0x06018009 RID: 98313 RVA: 0x0073078C File Offset: 0x0072E98C
 	private void AddOrRemoveBindingTags(bool add, EHoldingHandsRoleState roleState)
 	{
 		List<int> list = null;
@@ -1029,7 +1029,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A656 RID: 108118 RVA: 0x00709F28 File Offset: 0x00708128
+	// Token: 0x0601800A RID: 98314 RVA: 0x00730864 File Offset: 0x0072EA64
 	public void OnReachable(bool reachable, EHandType handType)
 	{
 		int reachableTag = this.Params.ReachableTag;
@@ -1051,7 +1051,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		this.EnableAdditiveArmAnim(false, handType);
 	}
 
-	// Token: 0x0601A657 RID: 108119 RVA: 0x00709F84 File Offset: 0x00708184
+	// Token: 0x0601800B RID: 98315 RVA: 0x007308C0 File Offset: 0x0072EAC0
 	private void EnableAdditiveArmAnim(bool enable, EHandType handType)
 	{
 		int value = (handType == EHandType.Right) ? GameplayTagDefine.EGameplayTagId["功能.功能制作.融合.叠加层仅右手"] : GameplayTagDefine.EGameplayTagId["功能.功能制作.融合.叠加层仅左手"];
@@ -1082,7 +1082,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A658 RID: 108120 RVA: 0x0070A00F File Offset: 0x0070820F
+	// Token: 0x0601800C RID: 98316 RVA: 0x0073094B File Offset: 0x0072EB4B
 	public void OnlyStopAiMove()
 	{
 		BaseMoveComponent moveComp = this.MoveComp;
@@ -1093,7 +1093,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		moveComp.MoveController.StopKeepHoldingHands();
 	}
 
-	// Token: 0x0601A659 RID: 108121 RVA: 0x0070A028 File Offset: 0x00708228
+	// Token: 0x0601800D RID: 98317 RVA: 0x00730964 File Offset: 0x0072EB64
 	public void OnlyStartAiMove()
 	{
 		ValueTuple<EHandType, CharacterHoldingHandsComponent>? leaderInfo = this.GetLeaderInfo();
@@ -1117,7 +1117,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A65A RID: 108122 RVA: 0x0070A0F4 File Offset: 0x007082F4
+	// Token: 0x0601800E RID: 98318 RVA: 0x00730A30 File Offset: 0x0072EC30
 	public void TryAddEvents()
 	{
 		if (this.EventsAdded)
@@ -1134,7 +1134,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		this.EventsAdded = true;
 	}
 
-	// Token: 0x0601A65B RID: 108123 RVA: 0x0070A190 File Offset: 0x00708390
+	// Token: 0x0601800F RID: 98319 RVA: 0x00730ACC File Offset: 0x0072ECCC
 	public void TryRemoveEvents()
 	{
 		if (!this.EventsAdded)
@@ -1151,7 +1151,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		this.EventsAdded = false;
 	}
 
-	// Token: 0x0601A65C RID: 108124 RVA: 0x0070A22C File Offset: 0x0070842C
+	// Token: 0x06018010 RID: 98320 RVA: 0x00730B68 File Offset: 0x0072ED68
 	private unsafe void OnSkillEnd(int entityId, int skillId)
 	{
 		if (CharacterHoldingHandsComponent.ListenSkillIds.Contains((long)skillId))
@@ -1171,7 +1171,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A65D RID: 108125 RVA: 0x0070A2B4 File Offset: 0x007084B4
+	// Token: 0x06018011 RID: 98321 RVA: 0x00730BF0 File Offset: 0x0072EDF0
 	private unsafe void OnSillEndByInterrupt(int entityId, int skillId)
 	{
 		if (entityId == base.Entity.Id && CharacterHoldingHandsComponent.ListenSkillIds.Contains((long)skillId))
@@ -1191,7 +1191,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A65E RID: 108126 RVA: 0x0070A354 File Offset: 0x00708554
+	// Token: 0x06018012 RID: 98322 RVA: 0x00730C90 File Offset: 0x0072EE90
 	[NullableContext(1)]
 	protected void OnStateInherit(Entity other, bool notInheritMoveAndAnim)
 	{
@@ -1239,20 +1239,20 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A65F RID: 108127 RVA: 0x0070A4B8 File Offset: 0x007086B8
+	// Token: 0x06018013 RID: 98323 RVA: 0x00730DF4 File Offset: 0x0072EFF4
 	[NullableContext(1)]
 	private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		this.ReleaseAllHands("换人", false, true);
 	}
 
-	// Token: 0x0601A660 RID: 108128 RVA: 0x0070A4C7 File Offset: 0x007086C7
+	// Token: 0x06018014 RID: 98324 RVA: 0x00730E03 File Offset: 0x0072F003
 	private void OnTeleportStart(bool _)
 	{
 		this.ReleaseAllHands("传送开始", false, true);
 	}
 
-	// Token: 0x0601A661 RID: 108129 RVA: 0x0070A4D8 File Offset: 0x007086D8
+	// Token: 0x06018015 RID: 98325 RVA: 0x00730E14 File Offset: 0x0072F014
 	[NullableContext(1)]
 	public bool CheckObstacle(CharacterHoldingHandsComponent other)
 	{
@@ -1277,7 +1277,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return TraceElementCommon.Instance.SphereTrace(this.TraceElement, "CharacterHoldingHandsComponent.CheckBindingObstacle");
 	}
 
-	// Token: 0x0601A662 RID: 108130 RVA: 0x0070A5F4 File Offset: 0x007087F4
+	// Token: 0x06018016 RID: 98326 RVA: 0x00730F30 File Offset: 0x0072F130
 	public void CreateTraceElement()
 	{
 		this.TraceElement = new UTraceSphereElement();
@@ -1289,7 +1289,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		this.TraceElement.AddObjectTypeQuery(KuroObjectTypeQuery.WorldStaticIgnoreBullet);
 	}
 
-	// Token: 0x0601A663 RID: 108131 RVA: 0x0070A66C File Offset: 0x0070886C
+	// Token: 0x06018017 RID: 98327 RVA: 0x00730FA8 File Offset: 0x0072F1A8
 	[NullableContext(1)]
 	public static HoldingHandsParams LoadCommonParams()
 	{
@@ -1308,7 +1308,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return CharacterHoldingHandsComponent.CommonParams = new HoldingHandsParams(bp_HoldingHandsConfig_C);
 	}
 
-	// Token: 0x0601A664 RID: 108132 RVA: 0x0070A6D8 File Offset: 0x007088D8
+	// Token: 0x06018018 RID: 98328 RVA: 0x00731014 File Offset: 0x0072F214
 	private void CreateInputLayer()
 	{
 		if (this.InputLayer != null)
@@ -1320,7 +1320,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		InputController.Instance.AddInputLayer(base.Entity.Id, this.InputLayer);
 	}
 
-	// Token: 0x0601A665 RID: 108133 RVA: 0x0070A731 File Offset: 0x00708931
+	// Token: 0x06018019 RID: 98329 RVA: 0x0073106D File Offset: 0x0072F26D
 	private void RemoveInputLayer()
 	{
 		if (this.InputLayer != null)
@@ -1331,7 +1331,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A666 RID: 108134 RVA: 0x0070A75D File Offset: 0x0070895D
+	// Token: 0x0601801A RID: 98330 RVA: 0x00731099 File Offset: 0x0072F299
 	public double GetLongPressDuration(EInputAction actionType)
 	{
 		if (actionType == 6)
@@ -1341,13 +1341,13 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return 0.0;
 	}
 
-	// Token: 0x0601A667 RID: 108135 RVA: 0x0070A77D File Offset: 0x0070897D
+	// Token: 0x0601801B RID: 98331 RVA: 0x007310B9 File Offset: 0x0072F2B9
 	public bool IsHoldingAction(EInputAction actionType)
 	{
 		return this.InputLayer != null && this.InputLayer.IsHoldingAction(actionType);
 	}
 
-	// Token: 0x0601A668 RID: 108136 RVA: 0x0070A798 File Offset: 0x00708998
+	// Token: 0x0601801C RID: 98332 RVA: 0x007310D4 File Offset: 0x0072F2D4
 	public HoldingHandsRelation OnLeaderSitDown()
 	{
 		if (this.SavedRelation != null)
@@ -1414,13 +1414,13 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return null;
 	}
 
-	// Token: 0x0601A669 RID: 108137 RVA: 0x0070A8D0 File Offset: 0x00708AD0
+	// Token: 0x0601801D RID: 98333 RVA: 0x0073120C File Offset: 0x0072F40C
 	public void ClearSavedRelation()
 	{
 		this.SavedRelation = null;
 	}
 
-	// Token: 0x0601A66A RID: 108138 RVA: 0x0070A8DC File Offset: 0x00708ADC
+	// Token: 0x0601801E RID: 98334 RVA: 0x00731218 File Offset: 0x0072F418
 	public void OnLeaderAndFollowerStandUp()
 	{
 		if (this.SavedRelation == null)
@@ -1438,7 +1438,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		this.ClearSavedRelation();
 	}
 
-	// Token: 0x0601A66B RID: 108139 RVA: 0x0070A95C File Offset: 0x00708B5C
+	// Token: 0x0601801F RID: 98335 RVA: 0x00731298 File Offset: 0x0072F498
 	public bool IsSitDown()
 	{
 		Entity entity = base.Entity;
@@ -1452,13 +1452,13 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		return npcSitOnChairComponent != null && npcSitOnChairComponent.Phase > NpcSitOnChair.ETaskPhase.None;
 	}
 
-	// Token: 0x0601A66C RID: 108140 RVA: 0x0070A9A7 File Offset: 0x00708BA7
+	// Token: 0x06018020 RID: 98336 RVA: 0x007312E3 File Offset: 0x0072F4E3
 	public bool IsSitDownWithHoldingHands()
 	{
 		return this.SavedRelation != null && this.IsSitDown();
 	}
 
-	// Token: 0x0601A66D RID: 108141 RVA: 0x0070A9BC File Offset: 0x00708BBC
+	// Token: 0x06018021 RID: 98337 RVA: 0x007312F8 File Offset: 0x0072F4F8
 	public Entity GetHoldingHandsOtherEntity()
 	{
 		if (this.IsSitDownWithHoldingHands())
@@ -1486,7 +1486,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A66E RID: 108142 RVA: 0x0070AA44 File Offset: 0x00708C44
+	// Token: 0x06018022 RID: 98338 RVA: 0x00731380 File Offset: 0x0072F580
 	public void SetDisableInputTags(bool add = true)
 	{
 		if (this.TagComp == null)
@@ -1519,7 +1519,7 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601A66F RID: 108143 RVA: 0x0070AB28 File Offset: 0x00708D28
+	// Token: 0x06018023 RID: 98339 RVA: 0x00731464 File Offset: 0x0072F664
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -1528,336 +1528,307 @@ public class CharacterHoldingHandsComponent : EntityComponent, IStaticVariableRe
 			return false;
 		}
 		CharacterHoldingHandsComponent characterHoldingHandsComponent = (CharacterHoldingHandsComponent)componentTemplate;
-		if (base.CanResetComponentProperty("AnimInstance"))
+		if (characterHoldingHandsComponent.AnimInstance == null)
 		{
-			if (characterHoldingHandsComponent.AnimInstance == null)
-			{
-				this.AnimInstance = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroAnimInstanceChar>(this.AnimInstance), "AnimInstance"))
-			{
-				return false;
-			}
+			this.AnimInstance = null;
 		}
-		if (base.CanResetComponentProperty("SkelMesh"))
-		{
-			if (characterHoldingHandsComponent.SkelMesh == null)
-			{
-				this.SkelMesh = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.SkelMesh), "SkelMesh"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TraceElement"))
-		{
-			if (characterHoldingHandsComponent.TraceElement == null)
-			{
-				this.TraceElement = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.TraceElement), "TraceElement"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ActorComp"))
-		{
-			if (characterHoldingHandsComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagComp"))
-		{
-			if (characterHoldingHandsComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AnimComp"))
-		{
-			if (characterHoldingHandsComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("UnifiedStateComp"))
-		{
-			if (characterHoldingHandsComponent.UnifiedStateComp == null)
-			{
-				this.UnifiedStateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseUnifiedStateComponent>(this.UnifiedStateComp), "UnifiedStateComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MoveComp"))
-		{
-			if (characterHoldingHandsComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CreatureDataComp"))
-		{
-			if (characterHoldingHandsComponent.CreatureDataComp == null)
-			{
-				this.CreatureDataComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SkillComp"))
-		{
-			if (characterHoldingHandsComponent.SkillComp == null)
-			{
-				this.SkillComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseSkillComponent>(this.SkillComp), "SkillComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("InputLayer"))
-		{
-			if (characterHoldingHandsComponent.InputLayer == null)
-			{
-				this.InputLayer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<HoldingHandsInputLayer>(this.InputLayer), "InputLayer"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("HandRuntimes"))
-		{
-			if (characterHoldingHandsComponent.HandRuntimes == null)
-			{
-				this.HandRuntimes = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EHandType, HandRuntime>>(this.HandRuntimes), "HandRuntimes"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("RelationKeys"))
-		{
-			if (characterHoldingHandsComponent.RelationKeys == null)
-			{
-				this.RelationKeys = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EHandType, string>>(this.RelationKeys), "RelationKeys"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TempVector") && characterHoldingHandsComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector), "TempVector"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimInstance), "AnimInstance"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempVector2") && characterHoldingHandsComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector2), "TempVector2"))
+		if (characterHoldingHandsComponent.SkelMesh == null)
+		{
+			this.SkelMesh = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkelMesh), "SkelMesh"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("MovePoint") && characterHoldingHandsComponent.MovePoint != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.MovePoint), "MovePoint"))
+		if (characterHoldingHandsComponent.TraceElement == null)
+		{
+			this.TraceElement = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceElement), "TraceElement"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("IsAutonomous"))
+		if (characterHoldingHandsComponent.ActorComp == null)
 		{
-			this.IsAutonomous = characterHoldingHandsComponent.IsAutonomous;
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("IsAcceptingInvitation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			this.IsAcceptingInvitation = characterHoldingHandsComponent.IsAcceptingInvitation;
+			return false;
 		}
-		if (base.CanResetComponentProperty("SavedRelation"))
+		if (characterHoldingHandsComponent.TagComp == null)
 		{
-			if (characterHoldingHandsComponent.SavedRelation == null)
-			{
-				this.SavedRelation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<HoldingHandsRelation>(this.SavedRelation), "SavedRelation"))
-			{
-				return false;
-			}
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("DelayEndInvitationTimer"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
-			if (characterHoldingHandsComponent.DelayEndInvitationTimer == null)
-			{
-				this.DelayEndInvitationTimer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DelayEndInvitationTimer), "DelayEndInvitationTimer"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TurnEndTimer"))
+		if (characterHoldingHandsComponent.AnimComp == null)
 		{
-			if (characterHoldingHandsComponent.TurnEndTimer == null)
-			{
-				this.TurnEndTimer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.TurnEndTimer), "TurnEndTimer"))
-			{
-				return false;
-			}
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("TurnEndAction"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
-			if (characterHoldingHandsComponent.TurnEndAction == null)
-			{
-				this.TurnEndAction = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TTimerAction>(this.TurnEndAction), "TurnEndAction"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CanSkillInterrupt"))
+		if (characterHoldingHandsComponent.UnifiedStateComp == null)
 		{
-			this.CanSkillInterrupt = characterHoldingHandsComponent.CanSkillInterrupt;
+			this.UnifiedStateComp = null;
 		}
-		if (base.CanResetComponentProperty("EventsAdded"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComp), "UnifiedStateComp"))
 		{
-			this.EventsAdded = characterHoldingHandsComponent.EventsAdded;
+			return false;
 		}
-		if (base.CanResetComponentProperty("DisableInputTagAdded"))
+		if (characterHoldingHandsComponent.MoveComp == null)
 		{
-			this.DisableInputTagAdded = characterHoldingHandsComponent.DisableInputTagAdded;
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("KeepFollowingConfigInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			if (characterHoldingHandsComponent.KeepFollowingConfigInternal == null)
-			{
-				this.KeepFollowingConfigInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BP_KeepFollowingConfig_C>(this.KeepFollowingConfigInternal), "KeepFollowingConfigInternal"))
-			{
-				return false;
-			}
+			return false;
+		}
+		if (characterHoldingHandsComponent.CreatureDataComp == null)
+		{
+			this.CreatureDataComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
+		{
+			return false;
+		}
+		if (characterHoldingHandsComponent.SkillComp == null)
+		{
+			this.SkillComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComp), "SkillComp"))
+		{
+			return false;
+		}
+		if (characterHoldingHandsComponent.InputLayer == null)
+		{
+			this.InputLayer = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputLayer), "InputLayer"))
+		{
+			return false;
+		}
+		if (characterHoldingHandsComponent.HandRuntimes == null)
+		{
+			this.HandRuntimes = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HandRuntimes), "HandRuntimes"))
+		{
+			return false;
+		}
+		if (characterHoldingHandsComponent.RelationKeys == null)
+		{
+			this.RelationKeys = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RelationKeys), "RelationKeys"))
+		{
+			return false;
+		}
+		if (characterHoldingHandsComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
+		{
+			return false;
+		}
+		if (characterHoldingHandsComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector2), "TempVector2"))
+		{
+			return false;
+		}
+		if (characterHoldingHandsComponent.MovePoint != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MovePoint), "MovePoint"))
+		{
+			return false;
+		}
+		this.IsAutonomous = characterHoldingHandsComponent.IsAutonomous;
+		this.IsAcceptingInvitation = characterHoldingHandsComponent.IsAcceptingInvitation;
+		if (characterHoldingHandsComponent.SavedRelation == null)
+		{
+			this.SavedRelation = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SavedRelation), "SavedRelation"))
+		{
+			return false;
+		}
+		if (characterHoldingHandsComponent.DelayEndInvitationTimer == null)
+		{
+			this.DelayEndInvitationTimer = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelayEndInvitationTimer), "DelayEndInvitationTimer"))
+		{
+			return false;
+		}
+		if (characterHoldingHandsComponent.TurnEndTimer == null)
+		{
+			this.TurnEndTimer = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TurnEndTimer), "TurnEndTimer"))
+		{
+			return false;
+		}
+		if (characterHoldingHandsComponent.TurnEndAction == null)
+		{
+			this.TurnEndAction = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TurnEndAction), "TurnEndAction"))
+		{
+			return false;
+		}
+		this.CanSkillInterrupt = characterHoldingHandsComponent.CanSkillInterrupt;
+		this.EventsAdded = characterHoldingHandsComponent.EventsAdded;
+		this.DisableInputTagAdded = characterHoldingHandsComponent.DisableInputTagAdded;
+		if (characterHoldingHandsComponent.KeepFollowingConfigInternal == null)
+		{
+			this.KeepFollowingConfigInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.KeepFollowingConfigInternal), "KeepFollowingConfigInternal"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400CA30 RID: 51760
+	// Token: 0x1700257F RID: 9599
+	// (get) Token: 0x06018024 RID: 98340 RVA: 0x0073182C File Offset: 0x0072FA2C
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002580 RID: 9600
+	// (get) Token: 0x06018025 RID: 98341 RVA: 0x0073182F File Offset: 0x0072FA2F
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002581 RID: 9601
+	// (get) Token: 0x06018026 RID: 98342 RVA: 0x00731832 File Offset: 0x0072FA32
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002582 RID: 9602
+	// (get) Token: 0x06018027 RID: 98343 RVA: 0x00731835 File Offset: 0x0072FA35
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CE0A RID: 52746
 	private const int SKILL_ID_INVITATION_START = 401101;
 
-	// Token: 0x0400CA31 RID: 51761
+	// Token: 0x0400CE0B RID: 52747
 	private const int SKILL_ID_INVITATION_END = 401102;
 
-	// Token: 0x0400CA32 RID: 51762
+	// Token: 0x0400CE0C RID: 52748
 	public UKuroAnimInstanceChar AnimInstance;
 
-	// Token: 0x0400CA33 RID: 51763
+	// Token: 0x0400CE0D RID: 52749
 	public USkeletalMeshComponent SkelMesh;
 
-	// Token: 0x0400CA34 RID: 51764
+	// Token: 0x0400CE0E RID: 52750
 	public UTraceSphereElement TraceElement;
 
-	// Token: 0x0400CA35 RID: 51765
+	// Token: 0x0400CE0F RID: 52751
 	public CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CA36 RID: 51766
+	// Token: 0x0400CE10 RID: 52752
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400CA37 RID: 51767
+	// Token: 0x0400CE11 RID: 52753
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400CA38 RID: 51768
+	// Token: 0x0400CE12 RID: 52754
 	private BaseUnifiedStateComponent UnifiedStateComp;
 
-	// Token: 0x0400CA39 RID: 51769
+	// Token: 0x0400CE13 RID: 52755
 	public BaseMoveComponent MoveComp;
 
-	// Token: 0x0400CA3A RID: 51770
+	// Token: 0x0400CE14 RID: 52756
 	private CreatureDataComponent CreatureDataComp;
 
-	// Token: 0x0400CA3B RID: 51771
+	// Token: 0x0400CE15 RID: 52757
 	private BaseSkillComponent SkillComp;
 
-	// Token: 0x0400CA3C RID: 51772
+	// Token: 0x0400CE16 RID: 52758
 	private HoldingHandsInputLayer InputLayer;
 
-	// Token: 0x0400CA3D RID: 51773
+	// Token: 0x0400CE17 RID: 52759
 	[Nullable(1)]
 	private Dictionary<EHandType, HandRuntime> HandRuntimes = new Dictionary<EHandType, HandRuntime>();
 
-	// Token: 0x0400CA3E RID: 51774
+	// Token: 0x0400CE18 RID: 52760
 	[Nullable(1)]
 	private Dictionary<EHandType, string> RelationKeys = new Dictionary<EHandType, string>();
 
-	// Token: 0x0400CA3F RID: 51775
+	// Token: 0x0400CE19 RID: 52761
 	[Nullable(1)]
 	private readonly global::Vector TempVector = global::Vector.Create();
 
-	// Token: 0x0400CA40 RID: 51776
+	// Token: 0x0400CE1A RID: 52762
 	[Nullable(1)]
 	private readonly global::Vector TempVector2 = global::Vector.Create();
 
-	// Token: 0x0400CA41 RID: 51777
+	// Token: 0x0400CE1B RID: 52763
 	[Nullable(1)]
 	private readonly global::Vector MovePoint = global::Vector.Create();
 
-	// Token: 0x0400CA42 RID: 51778
+	// Token: 0x0400CE1C RID: 52764
 	private bool IsAutonomous;
 
-	// Token: 0x0400CA43 RID: 51779
+	// Token: 0x0400CE1D RID: 52765
 	private bool IsAcceptingInvitation;
 
-	// Token: 0x0400CA44 RID: 51780
+	// Token: 0x0400CE1E RID: 52766
 	private HoldingHandsRelation SavedRelation;
 
-	// Token: 0x0400CA45 RID: 51781
+	// Token: 0x0400CE1F RID: 52767
 	private TimerHandle DelayEndInvitationTimer;
 
-	// Token: 0x0400CA46 RID: 51782
+	// Token: 0x0400CE20 RID: 52768
 	private TimerHandle TurnEndTimer;
 
-	// Token: 0x0400CA47 RID: 51783
+	// Token: 0x0400CE21 RID: 52769
 	private TTimerAction TurnEndAction;
 
-	// Token: 0x0400CA48 RID: 51784
+	// Token: 0x0400CE22 RID: 52770
 	public bool CanSkillInterrupt = true;
 
-	// Token: 0x0400CA49 RID: 51785
+	// Token: 0x0400CE23 RID: 52771
 	private bool EventsAdded;
 
-	// Token: 0x0400CA4A RID: 51786
+	// Token: 0x0400CE24 RID: 52772
 	private bool DisableInputTagAdded;
 
-	// Token: 0x0400CA4B RID: 51787
+	// Token: 0x0400CE25 RID: 52773
 	private BP_KeepFollowingConfig_C KeepFollowingConfigInternal;
 
-	// Token: 0x0400CA4C RID: 51788
+	// Token: 0x0400CE26 RID: 52774
 	private static HoldingHandsParams CommonParams;
 
-	// Token: 0x0400CA4D RID: 51789
+	// Token: 0x0400CE27 RID: 52775
 	[Nullable(1)]
 	private static HashSet<long> ListenSkillIds;
 
-	// Token: 0x0400CA4E RID: 51790
+	// Token: 0x0400CE28 RID: 52776
 	[Nullable(1)]
 	private static List<int> DisableInputTagIds;
 }

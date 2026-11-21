@@ -5,10 +5,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004626 RID: 17958
+	// Token: 0x0200354F RID: 13647
 	public class UiAsyncTaskQueue
 	{
-		// Token: 0x0602E42C RID: 189484 RVA: 0x00AB1FED File Offset: 0x00AB01ED
+		// Token: 0x06022B21 RID: 142113 RVA: 0x009DE6E1 File Offset: 0x009DC8E1
 		[NullableContext(1)]
 		public void EnQueue(UiAsyncTask task)
 		{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Ui
 			this.TaskQueue.Push(task);
 		}
 
-		// Token: 0x0602E42D RID: 189485 RVA: 0x00AB2010 File Offset: 0x00AB0210
+		// Token: 0x06022B22 RID: 142114 RVA: 0x009DE704 File Offset: 0x009DC904
 		public UniTask ProcessQueue()
 		{
 			UiAsyncTaskQueue.<ProcessQueue>d__5 <ProcessQueue>d__;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Ui
 			return <ProcessQueue>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E42E RID: 189486 RVA: 0x00AB2054 File Offset: 0x00AB0254
+		// Token: 0x06022B23 RID: 142115 RVA: 0x009DE748 File Offset: 0x009DC948
 		public void Cancel()
 		{
 			this.Canceled = true;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Ui
 			this.TaskQueue.Clear();
 		}
 
-		// Token: 0x0602E42F RID: 189487 RVA: 0x00AB20BC File Offset: 0x00AB02BC
+		// Token: 0x06022B24 RID: 142116 RVA: 0x009DE7B0 File Offset: 0x009DC9B0
 		public void CancelPending()
 		{
 			if (this.TaskQueue == null)
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Ui
 			this.TaskQueue.Clear();
 		}
 
-		// Token: 0x04018D4C RID: 101708
+		// Token: 0x0401338B RID: 78731
 		[Nullable(new byte[]
 		{
 			2,
@@ -80,13 +80,13 @@ namespace CSharpScript.Game.Ui
 		})]
 		public Queue<UiAsyncTask> TaskQueue;
 
-		// Token: 0x04018D4D RID: 101709
+		// Token: 0x0401338C RID: 78732
 		private bool IsProcessing;
 
-		// Token: 0x04018D4E RID: 101710
+		// Token: 0x0401338D RID: 78733
 		private bool Canceled;
 
-		// Token: 0x04018D4F RID: 101711
+		// Token: 0x0401338E RID: 78734
 		[Nullable(2)]
 		private UiAsyncTask CurrentRunningTask;
 	}

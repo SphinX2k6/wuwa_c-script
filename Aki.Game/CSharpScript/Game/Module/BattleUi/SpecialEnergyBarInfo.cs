@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005CA2 RID: 23714
+	// Token: 0x02004C84 RID: 19588
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarInfo
 	{
-		// Token: 0x0603BEAA RID: 245418 RVA: 0x00E51138 File Offset: 0x00E4F338
+		// Token: 0x06030DFD RID: 200189 RVA: 0x00DA17D8 File Offset: 0x00D9F9D8
 		public unsafe void Init(int id, SSpecialEnergyBar config)
 		{
 			this.Id = id;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.InitKeyInfo(config.KeyInfoList);
 		}
 
-		// Token: 0x0603BEAB RID: 245419 RVA: 0x00E513A0 File Offset: 0x00E4F5A0
+		// Token: 0x06030DFE RID: 200190 RVA: 0x00DA1A40 File Offset: 0x00D9FC40
 		private void InitKeyInfo(TArray<SSpecialEnergyBarKey> keyInfoList)
 		{
 			int num = keyInfoList.Num();
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BEAC RID: 245420 RVA: 0x00E513F4 File Offset: 0x00E4F5F4
+		// Token: 0x06030DFF RID: 200191 RVA: 0x00DA1A94 File Offset: 0x00D9FC94
 		private Dictionary<int, T> ParseGameplayAnySimple<[Nullable(2)] T>(TMap<FGameplayTag, T> map)
 		{
 			int num = map.Num();
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return dictionary;
 		}
 
-		// Token: 0x0603BEAD RID: 245421 RVA: 0x00E51468 File Offset: 0x00E4F668
+		// Token: 0x06030E00 RID: 200192 RVA: 0x00DA1B10 File Offset: 0x00D9FD10
 		private void InitExtraParams<[Nullable(2)] T>(TArray<T> srcArray, List<T> destArray)
 		{
 			int num = srcArray.Num();
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BEAE RID: 245422 RVA: 0x00E5149C File Offset: 0x00E4F69C
+		// Token: 0x06030E01 RID: 200193 RVA: 0x00DA1B44 File Offset: 0x00D9FD44
 		private void InitPathList(TArray<TSoftObjectPtr<UNiagaraSystem>> srcArray, List<string> destArray)
 		{
 			int num = srcArray.Num();
@@ -142,79 +142,79 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0401F427 RID: 128039
+		// Token: 0x04019EE0 RID: 106208
 		public int Id;
 
-		// Token: 0x0401F428 RID: 128040
+		// Token: 0x04019EE1 RID: 106209
 		public int PrefabType;
 
-		// Token: 0x0401F429 RID: 128041
+		// Token: 0x04019EE2 RID: 106210
 		public int ExtraType;
 
-		// Token: 0x0401F42A RID: 128042
+		// Token: 0x04019EE3 RID: 106211
 		public int SlotNum;
 
-		// Token: 0x0401F42B RID: 128043
+		// Token: 0x04019EE4 RID: 106212
 		public List<float> ExtraFloatParams = new List<float>();
 
-		// Token: 0x0401F42C RID: 128044
+		// Token: 0x04019EE5 RID: 106213
 		public string PrefabPath = string.Empty;
 
-		// Token: 0x0401F42D RID: 128045
+		// Token: 0x04019EE6 RID: 106214
 		public int AttributeId;
 
-		// Token: 0x0401F42E RID: 128046
+		// Token: 0x04019EE7 RID: 106215
 		public int MaxAttributeId;
 
-		// Token: 0x0401F42F RID: 128047
+		// Token: 0x04019EE8 RID: 106216
 		public long BuffId;
 
-		// Token: 0x0401F430 RID: 128048
+		// Token: 0x04019EE9 RID: 106217
 		public int KeyEnableTagId;
 
-		// Token: 0x0401F431 RID: 128049
+		// Token: 0x04019EEA RID: 106218
 		[Nullable(2)]
 		public Dictionary<int, int> TagEnergyBarIdMap;
 
-		// Token: 0x0401F432 RID: 128050
+		// Token: 0x04019EEB RID: 106219
 		[Nullable(2)]
 		public string EffectColor;
 
-		// Token: 0x0401F433 RID: 128051
+		// Token: 0x04019EEC RID: 106220
 		public List<string> OtherEffectColorList = new List<string>();
 
-		// Token: 0x0401F434 RID: 128052
+		// Token: 0x04019EED RID: 106221
 		[Nullable(2)]
 		public string PointColor;
 
-		// Token: 0x0401F435 RID: 128053
+		// Token: 0x04019EEE RID: 106222
 		public string[] PointColorList = Array.Empty<string>();
 
-		// Token: 0x0401F436 RID: 128054
+		// Token: 0x04019EEF RID: 106223
 		[Nullable(2)]
 		public string IconPath;
 
-		// Token: 0x0401F437 RID: 128055
+		// Token: 0x04019EF0 RID: 106224
 		[Nullable(2)]
 		public string EnableIconPath;
 
-		// Token: 0x0401F438 RID: 128056
+		// Token: 0x04019EF1 RID: 106225
 		[Nullable(2)]
 		public string FrontIconPath;
 
-		// Token: 0x0401F439 RID: 128057
+		// Token: 0x04019EF2 RID: 106226
 		public List<string> NiagaraPathList = new List<string>();
 
-		// Token: 0x0401F43A RID: 128058
+		// Token: 0x04019EF3 RID: 106227
 		public int KeyEnableNiagaraIndex;
 
-		// Token: 0x0401F43B RID: 128059
+		// Token: 0x04019EF4 RID: 106228
 		public int KeyType;
 
-		// Token: 0x0401F43C RID: 128060
+		// Token: 0x04019EF5 RID: 106229
 		public float DisableKeyOnPercent;
 
-		// Token: 0x0401F43D RID: 128061
+		// Token: 0x04019EF6 RID: 106230
 		public List<SpecialEnergyBarKeyInfo> KeyInfoList = new List<SpecialEnergyBarKeyInfo>();
 	}
 }

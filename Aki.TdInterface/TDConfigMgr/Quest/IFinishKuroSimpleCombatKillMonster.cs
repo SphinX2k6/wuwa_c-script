@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F7B RID: 3963
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010A5 RID: 4261
 	public class IFinishKuroSimpleCombatKillMonster : IQuestCondition
 	{
-		// Token: 0x06005824 RID: 22564 RVA: 0x000D72E8 File Offset: 0x000D54E8
+		// Token: 0x06005DF6 RID: 24054 RVA: 0x000E3D10 File Offset: 0x000E1F10
 		private IFinishKuroSimpleCombatKillMonster_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005825 RID: 22565 RVA: 0x000D7320 File Offset: 0x000D5520
+		// Token: 0x06005DF7 RID: 24055 RVA: 0x000E3D48 File Offset: 0x000E1F48
 		public static IFinishKuroSimpleCombatKillMonster Create([Nullable(2)] IFinishKuroSimpleCombatKillMonster instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005826 RID: 22566 RVA: 0x000D7333 File Offset: 0x000D5533
+		// Token: 0x06005DF8 RID: 24056 RVA: 0x000E3D5B File Offset: 0x000E1F5B
 		public static IFinishKuroSimpleCombatKillMonster CreateFromSetValue([Nullable(2)] IFinishKuroSimpleCombatKillMonster_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005827 RID: 22567 RVA: 0x000D7346 File Offset: 0x000D5546
+		// Token: 0x06005DF9 RID: 24057 RVA: 0x000E3D6E File Offset: 0x000E1F6E
 		public new IFinishKuroSimpleCombatKillMonster_SetValue ToSetValue()
 		{
 			return new IFinishKuroSimpleCombatKillMonster_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D5B RID: 7515
-		// (get) Token: 0x06005828 RID: 22568 RVA: 0x000D7371 File Offset: 0x000D5571
-		// (set) Token: 0x06005829 RID: 22569 RVA: 0x000D739C File Offset: 0x000D559C
+		// Token: 0x17001F00 RID: 7936
+		// (get) Token: 0x06005DFA RID: 24058 RVA: 0x000E3D99 File Offset: 0x000E1F99
+		// (set) Token: 0x06005DFB RID: 24059 RVA: 0x000E3DC4 File Offset: 0x000E1FC4
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D5C RID: 7516
-		// (get) Token: 0x0600582A RID: 22570 RVA: 0x000D73AC File Offset: 0x000D55AC
-		// (set) Token: 0x0600582B RID: 22571 RVA: 0x000D740D File Offset: 0x000D560D
+		// Token: 0x17001F01 RID: 7937
+		// (get) Token: 0x06005DFC RID: 24060 RVA: 0x000E3DD4 File Offset: 0x000E1FD4
+		// (set) Token: 0x06005DFD RID: 24061 RVA: 0x000E3E35 File Offset: 0x000E2035
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D5D RID: 7517
-		// (get) Token: 0x0600582C RID: 22572 RVA: 0x000D7424 File Offset: 0x000D5624
-		// (set) Token: 0x0600582D RID: 22573 RVA: 0x000D745E File Offset: 0x000D565E
+		// Token: 0x17001F02 RID: 7938
+		// (get) Token: 0x06005DFE RID: 24062 RVA: 0x000E3E4C File Offset: 0x000E204C
+		// (set) Token: 0x06005DFF RID: 24063 RVA: 0x000E3E86 File Offset: 0x000E2086
 		public virtual int? KuroSimpleCombatSpawnMonsterConfigId
 		{
 			get
@@ -142,18 +140,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003540 RID: 13632
+		// Token: 0x04003870 RID: 14448
 		[Nullable(2)]
 		protected new IFinishKuroSimpleCombatKillMonster FbInstance;
 
-		// Token: 0x04003541 RID: 13633
+		// Token: 0x04003871 RID: 14449
 		[Nullable(2)]
 		protected new IFinishKuroSimpleCombatKillMonster_SetValue PocoInterface;
 
-		// Token: 0x04003542 RID: 13634
+		// Token: 0x04003872 RID: 14450
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003543 RID: 13635
+		// Token: 0x04003873 RID: 14451
 		private bool _PreConditionsInited;
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 {
-	// Token: 0x02006EBC RID: 28348
+	// Token: 0x0200603C RID: 24636
 	public enum EDollGrabMachineLightGroupState
 	{
-		// Token: 0x04023F30 RID: 147248
+		// Token: 0x0401F1E3 RID: 127459
 		Normal,
-		// Token: 0x04023F31 RID: 147249
+		// Token: 0x0401F1E4 RID: 127460
 		Complete,
-		// Token: 0x04023F32 RID: 147250
+		// Token: 0x0401F1E5 RID: 127461
 		BeforePlay,
-		// Token: 0x04023F33 RID: 147251
+		// Token: 0x0401F1E6 RID: 127462
 		Playing
 	}
 }

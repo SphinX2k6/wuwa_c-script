@@ -5,19 +5,19 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001303 RID: 4867
+// Token: 0x020007B7 RID: 1975
 [NullableContext(1)]
 [Nullable(0)]
 public class BusinessViewController
 {
-	// Token: 0x060086D5 RID: 34517 RVA: 0x001CC88C File Offset: 0x001CAA8C
+	// Token: 0x06005A70 RID: 23152 RVA: 0x001D56F8 File Offset: 0x001D38F8
 	private void InitViewStateManager()
 	{
 		this.ViewStateManager.RegisterViewState(EBusinessSkipDefine.MainView, null, new Action(this.View.SkipToMainView));
 		this.ViewStateManager.RegisterViewState(EBusinessSkipDefine.DelegationDetails, null, new Action<object[]>(this.View.SkipToDelegationDetails));
 	}
 
-	// Token: 0x060086D6 RID: 34518 RVA: 0x001CC8CA File Offset: 0x001CAACA
+	// Token: 0x06005A71 RID: 23153 RVA: 0x001D5736 File Offset: 0x001D3936
 	public void RegisterView(BusinessMainView view)
 	{
 		this.View = view;
@@ -25,7 +25,7 @@ public class BusinessViewController
 		this.InitViewStateManager();
 	}
 
-	// Token: 0x060086D7 RID: 34519 RVA: 0x001CC8EC File Offset: 0x001CAAEC
+	// Token: 0x06005A72 RID: 23154 RVA: 0x001D5758 File Offset: 0x001D3958
 	public UniTask BeforeShowAsync()
 	{
 		BusinessViewController.<BeforeShowAsync>d__7 <BeforeShowAsync>d__;
@@ -36,7 +36,7 @@ public class BusinessViewController
 		return <BeforeShowAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060086D8 RID: 34520 RVA: 0x001CC930 File Offset: 0x001CAB30
+	// Token: 0x06005A73 RID: 23155 RVA: 0x001D579C File Offset: 0x001D399C
 	public void Show()
 	{
 		if (this.Model.SkipTarget != EBusinessSkipDefine.MainView)
@@ -51,19 +51,19 @@ public class BusinessViewController
 		this.View.SwitchShowViewSequence(inMainView);
 	}
 
-	// Token: 0x060086D9 RID: 34521 RVA: 0x001CC98D File Offset: 0x001CAB8D
+	// Token: 0x06005A74 RID: 23156 RVA: 0x001D57F9 File Offset: 0x001D39F9
 	public void SwitchToState(EBusinessSkipDefine state, params object[] params_)
 	{
 		this.ViewStateManager.SwitchToState(state, params_);
 	}
 
-	// Token: 0x060086DA RID: 34522 RVA: 0x001CC99C File Offset: 0x001CAB9C
+	// Token: 0x06005A75 RID: 23157 RVA: 0x001D5808 File Offset: 0x001D3A08
 	public void BackToState(EBusinessSkipDefine state)
 	{
 		this.ViewStateManager.BackToState(state);
 	}
 
-	// Token: 0x060086DB RID: 34523 RVA: 0x001CC9AC File Offset: 0x001CABAC
+	// Token: 0x06005A76 RID: 23158 RVA: 0x001D5818 File Offset: 0x001D3A18
 	public void SkipToBuild()
 	{
 		UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.MoonChasingMainView);
@@ -76,13 +76,13 @@ public class BusinessViewController
 		UiManager.Instance.NormalResetToView(EUiViewName.MoonChasingMainView, null, true);
 	}
 
-	// Token: 0x060086DC RID: 34524 RVA: 0x001CC9FC File Offset: 0x001CABFC
+	// Token: 0x06005A77 RID: 23159 RVA: 0x001D5868 File Offset: 0x001D3A68
 	public void SkipToHelper()
 	{
 		MoonChasingController.Instance.OpenHelperView();
 	}
 
-	// Token: 0x060086DD RID: 34525 RVA: 0x001CCA08 File Offset: 0x001CAC08
+	// Token: 0x06005A78 RID: 23160 RVA: 0x001D5874 File Offset: 0x001D3A74
 	public void JumpByConfigCondition(int id)
 	{
 		TrackMoonEntrust delegationConfig = BusinessConfig.Instance.GetDelegationConfig(id);
@@ -104,7 +104,7 @@ public class BusinessViewController
 		ScrollingTipsController.Instance.ShowTipsByTextId("Moonfiesta_EntrustLock", Array.Empty<object>());
 	}
 
-	// Token: 0x060086DE RID: 34526 RVA: 0x001CCA80 File Offset: 0x001CAC80
+	// Token: 0x06005A79 RID: 23161 RVA: 0x001D58EC File Offset: 0x001D3AEC
 	private void JumpToMainTask(int mainTaskId)
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.MoonChasingBusinessJumpToTask);
@@ -121,7 +121,7 @@ public class BusinessViewController
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060086DF RID: 34527 RVA: 0x001CCB10 File Offset: 0x001CAD10
+	// Token: 0x06005A7A RID: 23162 RVA: 0x001D597C File Offset: 0x001D3B7C
 	private void JumpToBranchTask(int branchTaskId)
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.MoonChasingBusinessJumpToTask);
@@ -138,7 +138,7 @@ public class BusinessViewController
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060086E0 RID: 34528 RVA: 0x001CCBA0 File Offset: 0x001CADA0
+	// Token: 0x06005A7B RID: 23163 RVA: 0x001D5A0C File Offset: 0x001D3C0C
 	private void JumpToBuilding(int buildingId)
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.MoonChasingBusinessJumpToBuilding);
@@ -154,7 +154,7 @@ public class BusinessViewController
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060086E1 RID: 34529 RVA: 0x001CCC18 File Offset: 0x001CAE18
+	// Token: 0x06005A7C RID: 23164 RVA: 0x001D5A84 File Offset: 0x001D3C84
 	public void JumpEnergyNotEnough()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.MoonChasingBusinessEnergyNotEnough);
@@ -165,14 +165,14 @@ public class BusinessViewController
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060086E2 RID: 34530 RVA: 0x001CCC68 File Offset: 0x001CAE68
+	// Token: 0x06005A7D RID: 23165 RVA: 0x001D5AD4 File Offset: 0x001D3CD4
 	public void JumpMoneyNotEnough()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.MoonChasingBusinessMoneyNotEnough);
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060086E3 RID: 34531 RVA: 0x001CCC8C File Offset: 0x001CAE8C
+	// Token: 0x06005A7E RID: 23166 RVA: 0x001D5AF8 File Offset: 0x001D3CF8
 	public void BackToLastState()
 	{
 		if (this.ViewStateManager.CurrentState == EBusinessSkipDefine.MainView)
@@ -183,7 +183,7 @@ public class BusinessViewController
 		this.ViewStateManager.BackToLastState();
 	}
 
-	// Token: 0x060086E4 RID: 34532 RVA: 0x001CCCB3 File Offset: 0x001CAEB3
+	// Token: 0x06005A7F RID: 23167 RVA: 0x001D5B1F File Offset: 0x001D3D1F
 	public void OpenHelpView()
 	{
 		if (this.ViewStateManager.CurrentState == EBusinessSkipDefine.DelegationDetails)
@@ -194,18 +194,18 @@ public class BusinessViewController
 		HelpController.Instance.OpenHelpById(103);
 	}
 
-	// Token: 0x04003C47 RID: 15431
+	// Token: 0x04003CDF RID: 15583
 	private const int MAINVIEW_HELPID = 103;
 
-	// Token: 0x04003C48 RID: 15432
+	// Token: 0x04003CE0 RID: 15584
 	private const int DELEGATE_HELPID = 104;
 
-	// Token: 0x04003C49 RID: 15433
+	// Token: 0x04003CE1 RID: 15585
 	private BusinessMainView View;
 
-	// Token: 0x04003C4A RID: 15434
+	// Token: 0x04003CE2 RID: 15586
 	private MoonChasingBusinessViewModel Model;
 
-	// Token: 0x04003C4B RID: 15435
+	// Token: 0x04003CE3 RID: 15587
 	private readonly ViewStateManager ViewStateManager = new ViewStateManager();
 }

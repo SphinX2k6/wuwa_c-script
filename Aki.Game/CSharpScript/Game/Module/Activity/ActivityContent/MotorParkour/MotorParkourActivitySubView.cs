@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 {
-	// Token: 0x020063F8 RID: 25592
+	// Token: 0x02005376 RID: 21366
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MotorParkourActivitySubView : ActivitySubViewBase
 	{
-		// Token: 0x17009430 RID: 37936
-		// (get) Token: 0x060405D1 RID: 263633 RVA: 0x00F9193C File Offset: 0x00F8FB3C
+		// Token: 0x17006792 RID: 26514
+		// (get) Token: 0x06035292 RID: 217746 RVA: 0x00ED891C File Offset: 0x00ED6B1C
 		protected new MotorParkourActivityData ActivityBaseData
 		{
 			get
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x060405D2 RID: 263634 RVA: 0x00F9194C File Offset: 0x00F8FB4C
+		// Token: 0x06035293 RID: 217747 RVA: 0x00ED892C File Offset: 0x00ED6B2C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060405D3 RID: 263635 RVA: 0x00F919D8 File Offset: 0x00F8FBD8
+		// Token: 0x06035294 RID: 217748 RVA: 0x00ED89B8 File Offset: 0x00ED6BB8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorParkourActivitySubView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060405D4 RID: 263636 RVA: 0x00F91A1B File Offset: 0x00F8FC1B
+		// Token: 0x06035295 RID: 217749 RVA: 0x00ED89FB File Offset: 0x00ED6BFB
 		protected override void OnRefreshView()
 		{
 			this.CommonInfoPanel.SetFunctionRedDotVisible(this.ActivityBaseData.RedPointShowState);
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			commonInfoPanel.OnRefreshView();
 		}
 
-		// Token: 0x060405D5 RID: 263637 RVA: 0x00F91A43 File Offset: 0x00F8FC43
+		// Token: 0x06035296 RID: 217750 RVA: 0x00ED8A23 File Offset: 0x00ED6C23
 		private void OnConfirmBtnClick(ActivityBaseData data)
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -78,20 +78,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			});
 		}
 
-		// Token: 0x040217A5 RID: 137125
+		// Token: 0x0401C0D4 RID: 114900
 		protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-		// Token: 0x0200C615 RID: 50709
+		// Token: 0x0200AFFC RID: 45052
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BCD6 RID: 244950
+			// Token: 0x04036635 RID: 222773
 			public const int CommonActionInfo = 0;
 
-			// Token: 0x0403BCD7 RID: 244951
+			// Token: 0x04036636 RID: 222774
 			public const int TextureBg = 1;
 
-			// Token: 0x0403BCD8 RID: 244952
+			// Token: 0x04036637 RID: 222775
 			public const int TextureCharacterBg = 2;
 		}
 	}

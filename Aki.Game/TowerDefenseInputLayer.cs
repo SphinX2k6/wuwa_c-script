@@ -6,18 +6,18 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Input;
 using UnrealEngine;
 
-// Token: 0x02000ED0 RID: 3792
+// Token: 0x02000385 RID: 901
 [NullableContext(2)]
 [Nullable(0)]
 public class TowerDefenseInputLayer : InputLayer
 {
-	// Token: 0x06005E4E RID: 24142 RVA: 0x00116BBE File Offset: 0x00114DBE
+	// Token: 0x060031E5 RID: 12773 RVA: 0x0011E876 File Offset: 0x0011CA76
 	public override EInputLayer GetLayerType()
 	{
 		return EInputLayer.TowerDefense;
 	}
 
-	// Token: 0x06005E4F RID: 24143 RVA: 0x00116BC4 File Offset: 0x00114DC4
+	// Token: 0x060031E6 RID: 12774 RVA: 0x0011E87C File Offset: 0x0011CA7C
 	public override SInputCommand HandlePress(CSharpScript.Game.Input.EInputAction action, float time)
 	{
 		switch (action)
@@ -25,7 +25,12 @@ public class TowerDefenseInputLayer : InputLayer
 		case 1:
 		{
 			FGameplayTag tagValue = default(FGameplayTag);
-			return new SInputCommand(ECommandType.Jump, 1, tagValue);
+			return new SInputCommand
+			{
+				CommandType = ECommandType.Jump,
+				IntValue = 1,
+				TagValue = tagValue
+			};
 		}
 		case 3:
 			return null;
@@ -35,7 +40,12 @@ public class TowerDefenseInputLayer : InputLayer
 		case 5:
 		{
 			FGameplayTag tagValue2 = default(FGameplayTag);
-			return new SInputCommand(ECommandType.Sprint, 1, tagValue2);
+			return new SInputCommand
+			{
+				CommandType = ECommandType.Sprint,
+				IntValue = 1,
+				TagValue = tagValue2
+			};
 		}
 		case 7:
 			this.TriggerUseItemAction();
@@ -44,7 +54,7 @@ public class TowerDefenseInputLayer : InputLayer
 		return InputLayer.GetSwallowCommand();
 	}
 
-	// Token: 0x06005E50 RID: 24144 RVA: 0x00116C4C File Offset: 0x00114E4C
+	// Token: 0x060031E7 RID: 12775 RVA: 0x0011E928 File Offset: 0x0011CB28
 	public override SInputCommand HandleRelease(CSharpScript.Game.Input.EInputAction action, float time)
 	{
 		byte b = action;
@@ -61,7 +71,7 @@ public class TowerDefenseInputLayer : InputLayer
 		return InputLayer.GetSwallowCommand();
 	}
 
-	// Token: 0x06005E51 RID: 24145 RVA: 0x00116C8C File Offset: 0x00114E8C
+	// Token: 0x060031E8 RID: 12776 RVA: 0x0011E968 File Offset: 0x0011CB68
 	public override SInputCommand HandleHold(CSharpScript.Game.Input.EInputAction action, float time)
 	{
 		byte b = action;
@@ -78,13 +88,13 @@ public class TowerDefenseInputLayer : InputLayer
 		return InputLayer.GetSwallowCommand();
 	}
 
-	// Token: 0x06005E52 RID: 24146 RVA: 0x00116CC9 File Offset: 0x00114EC9
+	// Token: 0x060031E9 RID: 12777 RVA: 0x0011E9A5 File Offset: 0x0011CBA5
 	private void ExecShootAction(EKSC_OperateType operateType, float time)
 	{
 		TowerDefensePlayerController.HandleTowerDefenseCommit(operateType, time);
 	}
 
-	// Token: 0x06005E53 RID: 24147 RVA: 0x00116CD2 File Offset: 0x00114ED2
+	// Token: 0x060031EA RID: 12778 RVA: 0x0011E9AE File Offset: 0x0011CBAE
 	private void ExecUseItemAction()
 	{
 		if (!this.IsInLongTimeUseItem)
@@ -94,13 +104,13 @@ public class TowerDefenseInputLayer : InputLayer
 		this.IsInLongTimeUseItem = false;
 	}
 
-	// Token: 0x06005E54 RID: 24148 RVA: 0x00116CE8 File Offset: 0x00114EE8
+	// Token: 0x060031EB RID: 12779 RVA: 0x0011E9C4 File Offset: 0x0011CBC4
 	private void TriggerUseItemAction()
 	{
 		this.IsInLongTimeUseItem = false;
 	}
 
-	// Token: 0x06005E55 RID: 24149 RVA: 0x00116CF1 File Offset: 0x00114EF1
+	// Token: 0x060031EC RID: 12780 RVA: 0x0011E9CD File Offset: 0x0011CBCD
 	private void CancelUseItemAction()
 	{
 		if (Info.Instance.IsInTouch())
@@ -109,6 +119,6 @@ public class TowerDefenseInputLayer : InputLayer
 		}
 	}
 
-	// Token: 0x04002AE1 RID: 10977
+	// Token: 0x04002B7C RID: 11132
 	private bool IsInLongTimeUseItem;
 }

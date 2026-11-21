@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005207 RID: 20999
+	// Token: 0x0200576F RID: 22383
 	public struct IExploreSkillSearchTargetCfg : IFlatbufferObject
 	{
-		// Token: 0x170099D1 RID: 39377
-		// (get) Token: 0x060221E6 RID: 139750 RVA: 0x004BC115 File Offset: 0x004BA315
+		// Token: 0x1700A1CD RID: 41421
+		// (get) Token: 0x0602417C RID: 147836 RVA: 0x004F6BD9 File Offset: 0x004F4DD9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060221E7 RID: 139751 RVA: 0x004BC122 File Offset: 0x004BA322
+		// Token: 0x0602417D RID: 147837 RVA: 0x004F6BE6 File Offset: 0x004F4DE6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060221E8 RID: 139752 RVA: 0x004BC12C File Offset: 0x004BA32C
+		// Token: 0x0602417E RID: 147838 RVA: 0x004F6BF0 File Offset: 0x004F4DF0
 		public static IExploreSkillSearchTargetCfg GetRootAsIExploreSkillSearchTargetCfg(ByteBuffer _bb)
 		{
 			return IExploreSkillSearchTargetCfg.GetRootAsIExploreSkillSearchTargetCfg(_bb, default(IExploreSkillSearchTargetCfg));
 		}
 
-		// Token: 0x060221E9 RID: 139753 RVA: 0x004BC148 File Offset: 0x004BA348
+		// Token: 0x0602417F RID: 147839 RVA: 0x004F6C0C File Offset: 0x004F4E0C
 		public static IExploreSkillSearchTargetCfg GetRootAsIExploreSkillSearchTargetCfg(ByteBuffer _bb, IExploreSkillSearchTargetCfg obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060221EA RID: 139754 RVA: 0x004BC165 File Offset: 0x004BA365
+		// Token: 0x06024180 RID: 147840 RVA: 0x004F6C29 File Offset: 0x004F4E29
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060221EB RID: 139755 RVA: 0x004BC174 File Offset: 0x004BA374
+		// Token: 0x06024181 RID: 147841 RVA: 0x004F6C38 File Offset: 0x004F4E38
 		public IExploreSkillSearchTargetCfg __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170099D2 RID: 39378
-		// (get) Token: 0x060221EC RID: 139756 RVA: 0x004BC184 File Offset: 0x004BA384
+		// Token: 0x1700A1CE RID: 41422
+		// (get) Token: 0x06024182 RID: 147842 RVA: 0x004F6C48 File Offset: 0x004F4E48
 		public EExploreSkillSearchTargetCfg Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060221ED RID: 139757 RVA: 0x004BC1C0 File Offset: 0x004BA3C0
+		// Token: 0x06024183 RID: 147843 RVA: 0x004F6C84 File Offset: 0x004F4E84
 		public static Offset<IExploreSkillSearchTargetCfg> CreateIExploreSkillSearchTargetCfg(FlatBufferBuilder builder, EExploreSkillSearchTargetCfg Type = EExploreSkillSearchTargetCfg.AngleWeight)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IExploreSkillSearchTargetCfg.EndIExploreSkillSearchTargetCfg(builder);
 		}
 
-		// Token: 0x060221EE RID: 139758 RVA: 0x004BC1D6 File Offset: 0x004BA3D6
+		// Token: 0x06024184 RID: 147844 RVA: 0x004F6C9A File Offset: 0x004F4E9A
 		public static void StartIExploreSkillSearchTargetCfg(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060221EF RID: 139759 RVA: 0x004BC1DF File Offset: 0x004BA3DF
+		// Token: 0x06024185 RID: 147845 RVA: 0x004F6CA3 File Offset: 0x004F4EA3
 		public static void AddType(FlatBufferBuilder builder, EExploreSkillSearchTargetCfg type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060221F0 RID: 139760 RVA: 0x004BC1EA File Offset: 0x004BA3EA
+		// Token: 0x06024186 RID: 147846 RVA: 0x004F6CAE File Offset: 0x004F4EAE
 		public static Offset<IExploreSkillSearchTargetCfg> EndIExploreSkillSearchTargetCfg(FlatBufferBuilder builder)
 		{
 			return new Offset<IExploreSkillSearchTargetCfg>(builder.EndTable());
 		}
 
-		// Token: 0x060221F1 RID: 139761 RVA: 0x004BC1F8 File Offset: 0x004BA3F8
+		// Token: 0x06024187 RID: 147847 RVA: 0x004F6CBC File Offset: 0x004F4EBC
 		public IExploreSkillSearchTargetCfgT UnPack()
 		{
 			IExploreSkillSearchTargetCfgT exploreSkillSearchTargetCfgT = new IExploreSkillSearchTargetCfgT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return exploreSkillSearchTargetCfgT;
 		}
 
-		// Token: 0x060221F2 RID: 139762 RVA: 0x004BC213 File Offset: 0x004BA413
+		// Token: 0x06024188 RID: 147848 RVA: 0x004F6CD7 File Offset: 0x004F4ED7
 		public void UnPackTo(IExploreSkillSearchTargetCfgT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060221F3 RID: 139763 RVA: 0x004BC224 File Offset: 0x004BA424
+		// Token: 0x06024189 RID: 147849 RVA: 0x004F6CE8 File Offset: 0x004F4EE8
 		public static Offset<IExploreSkillSearchTargetCfg> Pack(FlatBufferBuilder builder, IExploreSkillSearchTargetCfgT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IExploreSkillSearchTargetCfg.CreateIExploreSkillSearchTargetCfg(builder, _o.Type);
 		}
 
-		// Token: 0x0400E338 RID: 58168
+		// Token: 0x0400EF3E RID: 61246
 		private Table __p;
 	}
 }

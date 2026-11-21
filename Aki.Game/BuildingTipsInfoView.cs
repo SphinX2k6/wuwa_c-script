@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012FB RID: 4859
+// Token: 0x020007AF RID: 1967
 [NullableContext(1)]
 [Nullable(0)]
 public class BuildingTipsInfoView : UiViewBase
 {
-	// Token: 0x06008670 RID: 34416 RVA: 0x001CACEB File Offset: 0x001C8EEB
+	// Token: 0x06005A0B RID: 23051 RVA: 0x001D3B57 File Offset: 0x001D1D57
 	public BuildingTipsInfoView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06008671 RID: 34417 RVA: 0x001CAD00 File Offset: 0x001C8F00
+	// Token: 0x06005A0C RID: 23052 RVA: 0x001D3B6C File Offset: 0x001D1D6C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -56,7 +56,7 @@ public class BuildingTipsInfoView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008672 RID: 34418 RVA: 0x001CAFA4 File Offset: 0x001C91A4
+	// Token: 0x06005A0D RID: 23053 RVA: 0x001D3E10 File Offset: 0x001D2010
 	private UniTask InitCaption()
 	{
 		BuildingTipsInfoView.<InitCaption>d__8 <InitCaption>d__;
@@ -67,7 +67,7 @@ public class BuildingTipsInfoView : UiViewBase
 		return <InitCaption>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008673 RID: 34419 RVA: 0x001CAFE8 File Offset: 0x001C91E8
+	// Token: 0x06005A0E RID: 23054 RVA: 0x001D3E54 File Offset: 0x001D2054
 	private UniTask InitCostItem()
 	{
 		BuildingTipsInfoView.<InitCostItem>d__9 <InitCostItem>d__;
@@ -78,13 +78,13 @@ public class BuildingTipsInfoView : UiViewBase
 		return <InitCostItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008674 RID: 34420 RVA: 0x001CB02B File Offset: 0x001C922B
+	// Token: 0x06005A0F RID: 23055 RVA: 0x001D3E97 File Offset: 0x001D2097
 	private void InitLayout()
 	{
 		this.AttrLayout = new GenericLayout<BuildingAttributeItem, IAdditionData>(base.GetLayoutBase(17), new Func<BuildingAttributeItem>(this.InitAttributeItem), (AUIBaseActor)base.GetItem(18).GetOwner(), false, true);
 	}
 
-	// Token: 0x06008675 RID: 34421 RVA: 0x001CB060 File Offset: 0x001C9260
+	// Token: 0x06005A10 RID: 23056 RVA: 0x001D3ECC File Offset: 0x001D20CC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BuildingTipsInfoView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -95,7 +95,7 @@ public class BuildingTipsInfoView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008676 RID: 34422 RVA: 0x001CB0A4 File Offset: 0x001C92A4
+	// Token: 0x06005A11 RID: 23057 RVA: 0x001D3F10 File Offset: 0x001D2110
 	protected override UniTask OnBeforeShowAsyncImplementImplement()
 	{
 		BuildingTipsInfoView.<OnBeforeShowAsyncImplementImplement>d__12 <OnBeforeShowAsyncImplementImplement>d__;
@@ -106,7 +106,7 @@ public class BuildingTipsInfoView : UiViewBase
 		return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008677 RID: 34423 RVA: 0x001CB0E8 File Offset: 0x001C92E8
+	// Token: 0x06005A12 RID: 23058 RVA: 0x001D3F54 File Offset: 0x001D2154
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -134,13 +134,13 @@ public class BuildingTipsInfoView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008678 RID: 34424 RVA: 0x001CB132 File Offset: 0x001C9332
+	// Token: 0x06005A13 RID: 23059 RVA: 0x001D3F9E File Offset: 0x001D219E
 	private BuildingAttributeItem InitAttributeItem()
 	{
 		return new BuildingAttributeItem();
 	}
 
-	// Token: 0x06008679 RID: 34425 RVA: 0x001CB13C File Offset: 0x001C933C
+	// Token: 0x06005A14 RID: 23060 RVA: 0x001D3FA8 File Offset: 0x001D21A8
 	public void RefreshText(int buildingId)
 	{
 		BuildingData buildingDataById = MoonChasingBuildingModel.Instance.GetBuildingDataById(buildingId);
@@ -158,7 +158,7 @@ public class BuildingTipsInfoView : UiViewBase
 		}));
 	}
 
-	// Token: 0x0600867A RID: 34426 RVA: 0x001CB200 File Offset: 0x001C9400
+	// Token: 0x06005A15 RID: 23061 RVA: 0x001D406C File Offset: 0x001D226C
 	public UniTask RefreshAttribute(int buildingId)
 	{
 		BuildingTipsInfoView.<RefreshAttribute>d__16 <RefreshAttribute>d__;
@@ -170,7 +170,7 @@ public class BuildingTipsInfoView : UiViewBase
 		return <RefreshAttribute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600867B RID: 34427 RVA: 0x001CB24C File Offset: 0x001C944C
+	// Token: 0x06005A16 RID: 23062 RVA: 0x001D40B8 File Offset: 0x001D22B8
 	public void RefreshRoleItem(int buildingId)
 	{
 		BuildingData buildingDataById = MoonChasingBuildingModel.Instance.GetBuildingDataById(buildingId);
@@ -189,7 +189,7 @@ public class BuildingTipsInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600867C RID: 34428 RVA: 0x001CB2F8 File Offset: 0x001C94F8
+	// Token: 0x06005A17 RID: 23063 RVA: 0x001D4164 File Offset: 0x001D2364
 	public void RefreshBottom(int buildingId)
 	{
 		BuildingData buildingDataById = MoonChasingBuildingModel.Instance.GetBuildingDataById(buildingId);
@@ -220,7 +220,7 @@ public class BuildingTipsInfoView : UiViewBase
 		this.ConfirmItem.SetShowText("Moonfiesta_BuildingTips_Building");
 	}
 
-	// Token: 0x0600867D RID: 34429 RVA: 0x001CB400 File Offset: 0x001C9600
+	// Token: 0x06005A18 RID: 23064 RVA: 0x001D426C File Offset: 0x001D246C
 	public void RefreshTexture(int buildingId)
 	{
 		BuildingData buildingDataById = MoonChasingBuildingModel.Instance.GetBuildingDataById(buildingId);
@@ -272,16 +272,16 @@ public class BuildingTipsInfoView : UiViewBase
 		item3.SetUIActive(buildingDataById.IsBuild);
 	}
 
-	// Token: 0x04003C2C RID: 15404
+	// Token: 0x04003CC4 RID: 15556
 	protected CommonCostItem CostItem;
 
-	// Token: 0x04003C2D RID: 15405
+	// Token: 0x04003CC5 RID: 15557
 	protected ButtonItem ConfirmItem;
 
-	// Token: 0x04003C2E RID: 15406
+	// Token: 0x04003CC6 RID: 15558
 	protected PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003C2F RID: 15407
+	// Token: 0x04003CC7 RID: 15559
 	[Nullable(new byte[]
 	{
 		2,
@@ -290,80 +290,80 @@ public class BuildingTipsInfoView : UiViewBase
 	})]
 	protected GenericLayout<BuildingAttributeItem, IAdditionData> AttrLayout;
 
-	// Token: 0x04003C30 RID: 15408
+	// Token: 0x04003CC8 RID: 15560
 	private readonly BuildingTipsInfoViewController Vc = new BuildingTipsInfoViewController();
 
-	// Token: 0x02007925 RID: 31013
+	// Token: 0x02006AAF RID: 27311
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04027E8F RID: 163471
+		// Token: 0x040231BC RID: 143804
 		public const int Texture = 0;
 
-		// Token: 0x04027E90 RID: 163472
+		// Token: 0x040231BD RID: 143805
 		public const int Title = 1;
 
-		// Token: 0x04027E91 RID: 163473
+		// Token: 0x040231BE RID: 143806
 		public const int Level = 2;
 
-		// Token: 0x04027E92 RID: 163474
+		// Token: 0x040231BF RID: 143807
 		public const int Content = 3;
 
-		// Token: 0x04027E93 RID: 163475
+		// Token: 0x040231C0 RID: 143808
 		public const int RoleItem = 4;
 
-		// Token: 0x04027E94 RID: 163476
+		// Token: 0x040231C1 RID: 143809
 		public const int RoleIcon = 5;
 
-		// Token: 0x04027E95 RID: 163477
+		// Token: 0x040231C2 RID: 143810
 		public const int RoleDesc = 6;
 
-		// Token: 0x04027E96 RID: 163478
+		// Token: 0x040231C3 RID: 143811
 		public const int ConfirmRootItem = 7;
 
-		// Token: 0x04027E97 RID: 163479
+		// Token: 0x040231C4 RID: 143812
 		public const int CostItem = 8;
 
-		// Token: 0x04027E98 RID: 163480
+		// Token: 0x040231C5 RID: 143813
 		public const int ConfirmItem = 9;
 
-		// Token: 0x04027E99 RID: 163481
+		// Token: 0x040231C6 RID: 143814
 		public const int LockItem = 10;
 
-		// Token: 0x04027E9A RID: 163482
+		// Token: 0x040231C7 RID: 143815
 		public const int LockText = 11;
 
-		// Token: 0x04027E9B RID: 163483
+		// Token: 0x040231C8 RID: 143816
 		public const int MaxItem = 12;
 
-		// Token: 0x04027E9C RID: 163484
+		// Token: 0x040231C9 RID: 143817
 		public const int LeftBtn = 13;
 
-		// Token: 0x04027E9D RID: 163485
+		// Token: 0x040231CA RID: 143818
 		public const int RightBtn = 14;
 
-		// Token: 0x04027E9E RID: 163486
+		// Token: 0x040231CB RID: 143819
 		public const int TrackBtn = 15;
 
-		// Token: 0x04027E9F RID: 163487
+		// Token: 0x040231CC RID: 143820
 		public const int CaptionItem = 16;
 
-		// Token: 0x04027EA0 RID: 163488
+		// Token: 0x040231CD RID: 143821
 		public const int AttributeLayout = 17;
 
-		// Token: 0x04027EA1 RID: 163489
+		// Token: 0x040231CE RID: 143822
 		public const int AttributeItem = 18;
 
-		// Token: 0x04027EA2 RID: 163490
+		// Token: 0x040231CF RID: 143823
 		public const int BuildFrameTexture = 19;
 
-		// Token: 0x04027EA3 RID: 163491
+		// Token: 0x040231D0 RID: 143824
 		public const int LevelUpFrameBgTexture = 20;
 
-		// Token: 0x04027EA4 RID: 163492
+		// Token: 0x040231D1 RID: 143825
 		public const int LevelUpFrameTexture = 21;
 
-		// Token: 0x04027EA5 RID: 163493
+		// Token: 0x040231D2 RID: 143826
 		public const int ConditionBtn = 22;
 	}
 }

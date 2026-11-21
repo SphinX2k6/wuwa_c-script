@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001268 RID: 4712
+// Token: 0x0200071C RID: 1820
 public class FarmGoldRecommandTagItem : GridProxyAbstract<FarmGoldRecommendTag>
 {
-	// Token: 0x0600804C RID: 32844 RVA: 0x001B2714 File Offset: 0x001B0914
+	// Token: 0x060053E3 RID: 21475 RVA: 0x001BB3E4 File Offset: 0x001B95E4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,7 +22,7 @@ public class FarmGoldRecommandTagItem : GridProxyAbstract<FarmGoldRecommendTag>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600804D RID: 32845 RVA: 0x001B2780 File Offset: 0x001B0980
+	// Token: 0x060053E4 RID: 21476 RVA: 0x001BB450 File Offset: 0x001B9650
 	public override void Refresh(FarmGoldRecommendTag config, bool isSelected, int gridIndex)
 	{
 		UUIText text = base.GetText(1);
@@ -31,12 +31,12 @@ public class FarmGoldRecommandTagItem : GridProxyAbstract<FarmGoldRecommendTag>
 		base.SetTextureByPath(config.RecommendIcon, texture, null, null);
 	}
 
-	// Token: 0x0200787F RID: 30847
+	// Token: 0x02006A0A RID: 27146
 	private enum EComponents
 	{
-		// Token: 0x04027B47 RID: 162631
+		// Token: 0x04022E78 RID: 142968
 		Icon,
-		// Token: 0x04027B48 RID: 162632
+		// Token: 0x04022E79 RID: 142969
 		Text
 	}
 }

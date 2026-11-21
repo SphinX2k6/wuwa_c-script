@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02001DFE RID: 7678
+// Token: 0x020012C0 RID: 4800
 public class WeaponHandBookDynamicLayoutItemData
 {
-	// Token: 0x04006C63 RID: 27747
+	// Token: 0x04006D44 RID: 27972
 	public bool IsSkin;
 
-	// Token: 0x04006C64 RID: 27748
+	// Token: 0x04006D45 RID: 27973
 	public int? ItemId;
 }

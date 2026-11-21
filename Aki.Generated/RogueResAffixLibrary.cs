@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FED RID: 4077
+	// Token: 0x020010D5 RID: 4309
 	public struct RogueResAffixLibrary : IFlatbufferObject
 	{
-		// Token: 0x17002FA3 RID: 12195
-		// (get) Token: 0x0600C069 RID: 49257 RVA: 0x002E7F81 File Offset: 0x002E6181
+		// Token: 0x1700301E RID: 12318
+		// (get) Token: 0x0600C6B3 RID: 50867 RVA: 0x003042A7 File Offset: 0x003024A7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C06A RID: 49258 RVA: 0x002E7F8E File Offset: 0x002E618E
+		// Token: 0x0600C6B4 RID: 50868 RVA: 0x003042B4 File Offset: 0x003024B4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C06B RID: 49259 RVA: 0x002E7F98 File Offset: 0x002E6198
+		// Token: 0x0600C6B5 RID: 50869 RVA: 0x003042BC File Offset: 0x003024BC
 		public static RogueResAffixLibrary GetRootAsRogueResAffixLibrary(ByteBuffer _bb)
 		{
 			return RogueResAffixLibrary.GetRootAsRogueResAffixLibrary(_bb, default(RogueResAffixLibrary));
 		}
 
-		// Token: 0x0600C06C RID: 49260 RVA: 0x002E7FB4 File Offset: 0x002E61B4
+		// Token: 0x0600C6B6 RID: 50870 RVA: 0x003042D8 File Offset: 0x003024D8
 		public static RogueResAffixLibrary GetRootAsRogueResAffixLibrary(ByteBuffer _bb, RogueResAffixLibrary obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C06D RID: 49261 RVA: 0x002E7FD1 File Offset: 0x002E61D1
+		// Token: 0x0600C6B7 RID: 50871 RVA: 0x003042F5 File Offset: 0x003024F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C06E RID: 49262 RVA: 0x002E7FE0 File Offset: 0x002E61E0
+		// Token: 0x0600C6B8 RID: 50872 RVA: 0x00304304 File Offset: 0x00302504
 		public RogueResAffixLibrary __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002FA4 RID: 12196
-		// (get) Token: 0x0600C06F RID: 49263 RVA: 0x002E7FF0 File Offset: 0x002E61F0
+		// Token: 0x1700301F RID: 12319
+		// (get) Token: 0x0600C6B9 RID: 50873 RVA: 0x00304314 File Offset: 0x00302514
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002FA5 RID: 12197
-		// (get) Token: 0x0600C070 RID: 49264 RVA: 0x002E802C File Offset: 0x002E622C
+		// Token: 0x17003020 RID: 12320
+		// (get) Token: 0x0600C6BA RID: 50874 RVA: 0x00304350 File Offset: 0x00302550
 		public int AffixId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x040050CE RID: 20686
+		// Token: 0x040056B6 RID: 22198
 		private Table __p;
 	}
 }

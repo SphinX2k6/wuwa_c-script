@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062D3 RID: 25299
+	// Token: 0x02006944 RID: 26948
 	public class IChangeElementalBoxStateT
 	{
-		// Token: 0x1700BCDB RID: 48347
-		// (get) Token: 0x0602BBB9 RID: 179129 RVA: 0x006048B3 File Offset: 0x00602AB3
-		// (set) Token: 0x0602BBBA RID: 179130 RVA: 0x006048BB File Offset: 0x00602ABB
+		// Token: 0x1700C665 RID: 50789
+		// (get) Token: 0x0602E322 RID: 189218 RVA: 0x0064F8BF File Offset: 0x0064DABF
+		// (set) Token: 0x0602E323 RID: 189219 RVA: 0x0064F8C7 File Offset: 0x0064DAC7
 		public TChangeElementalBoxStateTargetUnion Target { get; set; }
 
-		// Token: 0x1700BCDC RID: 48348
-		// (get) Token: 0x0602BBBB RID: 179131 RVA: 0x006048C4 File Offset: 0x00602AC4
-		// (set) Token: 0x0602BBBC RID: 179132 RVA: 0x006048CC File Offset: 0x00602ACC
+		// Token: 0x1700C666 RID: 50790
+		// (get) Token: 0x0602E324 RID: 189220 RVA: 0x0064F8D0 File Offset: 0x0064DAD0
+		// (set) Token: 0x0602E325 RID: 189221 RVA: 0x0064F8D8 File Offset: 0x0064DAD8
 		public string State { get; set; }
 
-		// Token: 0x0602BBBD RID: 179133 RVA: 0x006048D5 File Offset: 0x00602AD5
+		// Token: 0x0602E326 RID: 189222 RVA: 0x0064F8E1 File Offset: 0x0064DAE1
 		public IChangeElementalBoxStateT()
 		{
 			this.Target = null;

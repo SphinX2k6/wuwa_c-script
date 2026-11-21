@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001472 RID: 5234
+	// Token: 0x020015CB RID: 5579
 	public class IArcadeGameplayDropCatch : IArcadeGameplayBase
 	{
-		// Token: 0x06007712 RID: 30482 RVA: 0x0011C973 File Offset: 0x0011AB73
-		[NullableContext(1)]
+		// Token: 0x06007DE0 RID: 32224 RVA: 0x0012B58B File Offset: 0x0012978B
 		public static IArcadeGameplayDropCatch Create(IArcadeGameplayDropCatch? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002801 RID: 10241
-		// (get) Token: 0x06007713 RID: 30483 RVA: 0x0011C992 File Offset: 0x0011AB92
+		// Token: 0x170029EC RID: 10732
+		// (get) Token: 0x06007DE1 RID: 32225 RVA: 0x0012B5AA File Offset: 0x001297AA
 		public override EArcadeGameplayType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002802 RID: 10242
-		// (get) Token: 0x06007714 RID: 30484 RVA: 0x0011C99F File Offset: 0x0011AB9F
+		// Token: 0x170029ED RID: 10733
+		// (get) Token: 0x06007DE2 RID: 32226 RVA: 0x0012B5B7 File Offset: 0x001297B7
 		public virtual int LevelId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004540 RID: 17728
+		// Token: 0x040048DB RID: 18651
 		private IArcadeGameplayDropCatch Instance;
 	}
 }

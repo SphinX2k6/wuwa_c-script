@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B3F RID: 6975
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CEE RID: 7406
 	public class IInstrumentQteConfig
 	{
-		// Token: 0x06009542 RID: 38210 RVA: 0x001591CC File Offset: 0x001573CC
+		// Token: 0x06009D2C RID: 40236 RVA: 0x00169EA8 File Offset: 0x001680A8
 		private IInstrumentQteConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009543 RID: 38211 RVA: 0x00159204 File Offset: 0x00157404
+		// Token: 0x06009D2D RID: 40237 RVA: 0x00169EE0 File Offset: 0x001680E0
 		public static IInstrumentQteConfig Create([Nullable(2)] IInstrumentQteConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009544 RID: 38212 RVA: 0x00159217 File Offset: 0x00157417
+		// Token: 0x06009D2E RID: 40238 RVA: 0x00169EF3 File Offset: 0x001680F3
 		public static IInstrumentQteConfig CreateFromSetValue([Nullable(2)] IInstrumentQteConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009545 RID: 38213 RVA: 0x0015922C File Offset: 0x0015742C
+		// Token: 0x06009D2F RID: 40239 RVA: 0x00169F08 File Offset: 0x00168108
 		public IInstrumentQteConfig_SetValue ToSetValue()
 		{
 			return new IInstrumentQteConfig_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F18 RID: 12056
-		// (get) Token: 0x06009546 RID: 38214 RVA: 0x0015927A File Offset: 0x0015747A
-		// (set) Token: 0x06009547 RID: 38215 RVA: 0x001592A5 File Offset: 0x001574A5
+		// Token: 0x1700313E RID: 12606
+		// (get) Token: 0x06009D30 RID: 40240 RVA: 0x00169F56 File Offset: 0x00168156
+		// (set) Token: 0x06009D31 RID: 40241 RVA: 0x00169F81 File Offset: 0x00168181
 		public virtual int Id
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F19 RID: 12057
-		// (get) Token: 0x06009548 RID: 38216 RVA: 0x001592B3 File Offset: 0x001574B3
-		// (set) Token: 0x06009549 RID: 38217 RVA: 0x001592DE File Offset: 0x001574DE
+		// Token: 0x1700313F RID: 12607
+		// (get) Token: 0x06009D32 RID: 40242 RVA: 0x00169F8F File Offset: 0x0016818F
+		// (set) Token: 0x06009D33 RID: 40243 RVA: 0x00169FBA File Offset: 0x001681BA
 		public virtual EInstrumentType InstrumentType
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F1A RID: 12058
-		// (get) Token: 0x0600954A RID: 38218 RVA: 0x001592EC File Offset: 0x001574EC
-		// (set) Token: 0x0600954B RID: 38219 RVA: 0x00159317 File Offset: 0x00157517
+		// Token: 0x17003140 RID: 12608
+		// (get) Token: 0x06009D34 RID: 40244 RVA: 0x00169FC8 File Offset: 0x001681C8
+		// (set) Token: 0x06009D35 RID: 40245 RVA: 0x00169FF3 File Offset: 0x001681F3
 		public virtual string Description
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F1B RID: 12059
-		// (get) Token: 0x0600954C RID: 38220 RVA: 0x00159328 File Offset: 0x00157528
-		// (set) Token: 0x0600954D RID: 38221 RVA: 0x00159410 File Offset: 0x00157610
+		// Token: 0x17003141 RID: 12609
+		// (get) Token: 0x06009D36 RID: 40246 RVA: 0x0016A004 File Offset: 0x00168204
+		// (set) Token: 0x06009D37 RID: 40247 RVA: 0x0016A0EC File Offset: 0x001682EC
 		public virtual List<List<int>> QteSequence
 		{
 			get
@@ -177,9 +175,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F1C RID: 12060
-		// (get) Token: 0x0600954E RID: 38222 RVA: 0x00159425 File Offset: 0x00157625
-		// (set) Token: 0x0600954F RID: 38223 RVA: 0x00159450 File Offset: 0x00157650
+		// Token: 0x17003142 RID: 12610
+		// (get) Token: 0x06009D38 RID: 40248 RVA: 0x0016A101 File Offset: 0x00168301
+		// (set) Token: 0x06009D39 RID: 40249 RVA: 0x0016A12C File Offset: 0x0016832C
 		public virtual string PreludeAsset
 		{
 			get
@@ -200,18 +198,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B5B RID: 23387
+		// Token: 0x04005FF9 RID: 24569
 		[Nullable(2)]
 		protected IInstrumentQteConfig FbInstance;
 
-		// Token: 0x04005B5C RID: 23388
+		// Token: 0x04005FFA RID: 24570
 		[Nullable(2)]
 		protected IInstrumentQteConfig_SetValue PocoInterface;
 
-		// Token: 0x04005B5D RID: 23389
+		// Token: 0x04005FFB RID: 24571
 		private List<List<int>> _QteSequenceCache;
 
-		// Token: 0x04005B5E RID: 23390
+		// Token: 0x04005FFC RID: 24572
 		private bool _QteSequenceInited;
 	}
 }

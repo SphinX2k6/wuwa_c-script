@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 {
-	// Token: 0x02006ED0 RID: 28368
+	// Token: 0x02006050 RID: 24656
 	public static class EDollGrabMachineStateExtensions
 	{
-		// Token: 0x060451DB RID: 283099 RVA: 0x01117650 File Offset: 0x01115850
+		// Token: 0x0603B384 RID: 242564 RVA: 0x010C13E0 File Offset: 0x010BF5E0
 		public static string ToEnumString(this EDollGrabMachineState value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return result;
 		}
 
-		// Token: 0x060451DC RID: 283100 RVA: 0x01117698 File Offset: 0x01115898
+		// Token: 0x0603B385 RID: 242565 RVA: 0x010C1428 File Offset: 0x010BF628
 		public static EDollGrabMachineState FromString(string name)
 		{
 			EDollGrabMachineState result;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return result;
 		}
 
-		// Token: 0x060451DD RID: 283101 RVA: 0x011176C4 File Offset: 0x011158C4
+		// Token: 0x0603B386 RID: 242566 RVA: 0x010C1454 File Offset: 0x010BF654
 		public static bool TryFromString(string name, out EDollGrabMachineState value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return true;
 		}
 
-		// Token: 0x060451DE RID: 283102 RVA: 0x0111771A File Offset: 0x0111591A
+		// Token: 0x0603B387 RID: 242567 RVA: 0x010C14AA File Offset: 0x010BF6AA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			};
 		}
 
-		// Token: 0x060451DF RID: 283103 RVA: 0x0111773A File Offset: 0x0111593A
+		// Token: 0x0603B388 RID: 242568 RVA: 0x010C14CA File Offset: 0x010BF6CA
 		public static EDollGrabMachineState[] GetValues()
 		{
 			return new EDollGrabMachineState[]
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			};
 		}
 
-		// Token: 0x060451E0 RID: 283104 RVA: 0x0111774A File Offset: 0x0111594A
+		// Token: 0x0603B389 RID: 242569 RVA: 0x010C14DA File Offset: 0x010BF6DA
 		public static string[] GetNames()
 		{
 			return new string[]

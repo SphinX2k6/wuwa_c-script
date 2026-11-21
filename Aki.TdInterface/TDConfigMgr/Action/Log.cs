@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020CF RID: 8399
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200232C RID: 9004
 	public class Log : ActionParams
 	{
-		// Token: 0x0600B892 RID: 47250 RVA: 0x001AAFB4 File Offset: 0x001A91B4
+		// Token: 0x0600C40A RID: 50186 RVA: 0x001C1EDC File Offset: 0x001C00DC
 		private Log_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B893 RID: 47251 RVA: 0x001AAFEC File Offset: 0x001A91EC
+		// Token: 0x0600C40B RID: 50187 RVA: 0x001C1F14 File Offset: 0x001C0114
 		public static Log Create([Nullable(2)] Log instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B894 RID: 47252 RVA: 0x001AAFFF File Offset: 0x001A91FF
+		// Token: 0x0600C40C RID: 50188 RVA: 0x001C1F27 File Offset: 0x001C0127
 		public static Log CreateFromSetValue([Nullable(2)] Log_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B895 RID: 47253 RVA: 0x001AB012 File Offset: 0x001A9212
+		// Token: 0x0600C40D RID: 50189 RVA: 0x001C1F3A File Offset: 0x001C013A
 		public Log_SetValue ToSetValue()
 		{
 			return new Log_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700386B RID: 14443
-		// (get) Token: 0x0600B896 RID: 47254 RVA: 0x001AB031 File Offset: 0x001A9231
-		// (set) Token: 0x0600B897 RID: 47255 RVA: 0x001AB05C File Offset: 0x001A925C
+		// Token: 0x17003B53 RID: 15187
+		// (get) Token: 0x0600C40E RID: 50190 RVA: 0x001C1F59 File Offset: 0x001C0159
+		// (set) Token: 0x0600C40F RID: 50191 RVA: 0x001C1F84 File Offset: 0x001C0184
 		public virtual string Level
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700386C RID: 14444
-		// (get) Token: 0x0600B898 RID: 47256 RVA: 0x001AB06A File Offset: 0x001A926A
-		// (set) Token: 0x0600B899 RID: 47257 RVA: 0x001AB095 File Offset: 0x001A9295
+		// Token: 0x17003B54 RID: 15188
+		// (get) Token: 0x0600C410 RID: 50192 RVA: 0x001C1F92 File Offset: 0x001C0192
+		// (set) Token: 0x0600C411 RID: 50193 RVA: 0x001C1FBD File Offset: 0x001C01BD
 		public virtual string Content
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E98 RID: 28312
+		// Token: 0x040074C2 RID: 29890
 		[Nullable(2)]
 		protected new Log FbInstance;
 
-		// Token: 0x04006E99 RID: 28313
+		// Token: 0x040074C3 RID: 29891
 		[Nullable(2)]
 		protected Log_SetValue PocoInterface;
 	}

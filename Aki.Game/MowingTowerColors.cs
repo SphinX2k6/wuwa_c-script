@@ -1,16 +1,16 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02001380 RID: 4992
+// Token: 0x02000834 RID: 2100
 public class MowingTowerColors : IStaticVariableResetter
 {
-	// Token: 0x06008BE1 RID: 35809 RVA: 0x001DED31 File Offset: 0x001DCF31
+	// Token: 0x06005F7C RID: 24444 RVA: 0x001E7B85 File Offset: 0x001E5D85
 	static MowingTowerColors()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MowingTowerColors.CreateStaticDefaultValue), new Action(MowingTowerColors.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06008BE2 RID: 35810 RVA: 0x001DED50 File Offset: 0x001DCF50
+	// Token: 0x06005F7D RID: 24445 RVA: 0x001E7BA4 File Offset: 0x001E5DA4
 	public static void CreateStaticDefaultValue()
 	{
 		MowingTowerColors.bgNormalMowingTowerColor = new FColor?(FColor.FromHex("ab9559"));
@@ -21,7 +21,7 @@ public class MowingTowerColors : IStaticVariableResetter
 		MowingTowerColors.infiniteMowingTowerColor = new FColor?(FColor.FromHex("f1ac61"));
 	}
 
-	// Token: 0x06008BE3 RID: 35811 RVA: 0x001DEDD8 File Offset: 0x001DCFD8
+	// Token: 0x06005F7E RID: 24446 RVA: 0x001E7C2C File Offset: 0x001E5E2C
 	public static void ResetStaticDefaultValue()
 	{
 		MowingTowerColors.bgNormalMowingTowerColor = null;
@@ -32,21 +32,21 @@ public class MowingTowerColors : IStaticVariableResetter
 		MowingTowerColors.infiniteMowingTowerColor = null;
 	}
 
-	// Token: 0x04003DFF RID: 15871
+	// Token: 0x04003E97 RID: 16023
 	public static FColor? bgNormalMowingTowerColor;
 
-	// Token: 0x04003E00 RID: 15872
+	// Token: 0x04003E98 RID: 16024
 	public static FColor? bgLockMowingTowerColor;
 
-	// Token: 0x04003E01 RID: 15873
+	// Token: 0x04003E99 RID: 16025
 	public static FColor? bgInfiniteMowingTowerColor;
 
-	// Token: 0x04003E02 RID: 15874
+	// Token: 0x04003E9A RID: 16026
 	public static FColor? normalMowingTowerColor;
 
-	// Token: 0x04003E03 RID: 15875
+	// Token: 0x04003E9B RID: 16027
 	public static FColor? lockMowingTowerColor;
 
-	// Token: 0x04003E04 RID: 15876
+	// Token: 0x04003E9C RID: 16028
 	public static FColor? infiniteMowingTowerColor;
 }

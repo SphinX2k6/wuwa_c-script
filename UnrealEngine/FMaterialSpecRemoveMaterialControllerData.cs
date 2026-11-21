@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001922 RID: 6434
+	// Token: 0x02000410 RID: 1040
 	public sealed class FMaterialSpecRemoveMaterialControllerData : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06017DDB RID: 97755 RVA: 0x0022F711 File Offset: 0x0022D911
+		// Token: 0x06006551 RID: 25937 RVA: 0x00090D11 File Offset: 0x0008EF11
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FMaterialSpecRemoveMaterialControllerData.StaticFunctionPtr();
 		}
 
-		// Token: 0x06017DDC RID: 97756 RVA: 0x0022F71D File Offset: 0x0022D91D
+		// Token: 0x06006552 RID: 25938 RVA: 0x00090D1D File Offset: 0x0008EF1D
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FMaterialSpecRemoveMaterialControllerData._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FMaterialSpecRemoveMaterialControllerData._FunctionPtr;
 		}
 
-		// Token: 0x06017DDD RID: 97757 RVA: 0x0022F740 File Offset: 0x0022D940
+		// Token: 0x06006553 RID: 25939 RVA: 0x00090D40 File Offset: 0x0008EF40
 		public FMaterialSpecRemoveMaterialControllerData()
 		{
 		}
 
-		// Token: 0x06017DDE RID: 97758 RVA: 0x0022F748 File Offset: 0x0022D948
+		// Token: 0x06006554 RID: 25940 RVA: 0x00090D48 File Offset: 0x0008EF48
 		[NullableContext(2)]
 		public FMaterialSpecRemoveMaterialControllerData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017DDF RID: 97759 RVA: 0x0022F752 File Offset: 0x0022D952
+		// Token: 0x06006555 RID: 25941 RVA: 0x00090D52 File Offset: 0x0008EF52
 		public FMaterialSpecRemoveMaterialControllerData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017DE0 RID: 97760 RVA: 0x0022F75D File Offset: 0x0022D95D
+		// Token: 0x06006556 RID: 25942 RVA: 0x00090D5D File Offset: 0x0008EF5D
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<UKuroCharRenderingComponent, int>) ?? ((Action<UKuroCharRenderingComponent, int>)Delegate.CreateDelegate(typeof(Action<UKuroCharRenderingComponent, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06017DE1 RID: 97761 RVA: 0x0022F78F File Offset: 0x0022D98F
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06006557 RID: 25943 RVA: 0x00090D8F File Offset: 0x0008EF8F
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FMaterialSpecRemoveMaterialControllerData.RegisterId);
 		}
 
-		// Token: 0x06017DE2 RID: 97762 RVA: 0x0022F7CC File Offset: 0x0022D9CC
+		// Token: 0x06006558 RID: 25944 RVA: 0x00090DCC File Offset: 0x0008EFCC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(UKuroCharRenderingComponent RenderComponent, int MaterialControllerHandle)
 		{
 			FMaterialSpecRemoveMaterialControllerData.__FMaterialSpecRemoveMaterialControllerData_DelegateParams* ptr = stackalloc FMaterialSpecRemoveMaterialControllerData.__FMaterialSpecRemoveMaterialControllerData_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FMaterialSpecRemoveMaterialControllerData.__FMaterialSpecRemoveMaterialControllerData_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06017DE3 RID: 97763 RVA: 0x0022F820 File Offset: 0x0022DA20
+		// Token: 0x06006559 RID: 25945 RVA: 0x00090E20 File Offset: 0x0008F020
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UKuroCharRenderingComponent, int> action = target as Action<UKuroCharRenderingComponent, int>;
@@ -96,35 +93,35 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, ((FMaterialSpecRemoveMaterialControllerData.__FMaterialSpecRemoveMaterialControllerData_DelegateParams*)__Parameters)->MaterialControllerHandle);
 		}
 
-		// Token: 0x0400CED7 RID: 52951
+		// Token: 0x04002A9C RID: 10908
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400CED8 RID: 52952
+		// Token: 0x04002A9D RID: 10909
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.MaterialSpecRemoveMaterialControllerData__DelegateSignature";
 
-		// Token: 0x0400CED9 RID: 52953
+		// Token: 0x04002A9E RID: 10910
 		private static int RegisterId;
 
-		// Token: 0x02002FED RID: 12269
+		// Token: 0x02000B01 RID: 2817
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FMaterialSpecRemoveMaterialControllerData_DelegateParams
+		private ref struct __FMaterialSpecRemoveMaterialControllerData_DelegateParams
 		{
-			// Token: 0x04016BEE RID: 93166
+			// Token: 0x04005B97 RID: 23447
 			[FieldOffset(0)]
 			public IntPtr RenderComponent;
 
-			// Token: 0x04016BEF RID: 93167
+			// Token: 0x04005B98 RID: 23448
 			[FieldOffset(8)]
 			public int MaterialControllerHandle;
 		}
 
-		// Token: 0x02002FEE RID: 12270
+		// Token: 0x02000B02 RID: 2818
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016BF0 RID: 93168
+			// Token: 0x04005B99 RID: 23449
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

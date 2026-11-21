@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DC0 RID: 7616
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FD7 RID: 8151
 	public class IRoadNetworkNavigationTarget
 	{
-		// Token: 0x0600A321 RID: 41761 RVA: 0x00172978 File Offset: 0x00170B78
+		// Token: 0x0600AD2B RID: 44331 RVA: 0x001870A0 File Offset: 0x001852A0
 		private IRoadNetworkNavigationTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A322 RID: 41762 RVA: 0x001729B0 File Offset: 0x00170BB0
+		// Token: 0x0600AD2C RID: 44332 RVA: 0x001870D8 File Offset: 0x001852D8
 		public static IRoadNetworkNavigationTarget Create([Nullable(2)] IRoadNetworkNavigationTarget instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A323 RID: 41763 RVA: 0x001729C3 File Offset: 0x00170BC3
+		// Token: 0x0600AD2D RID: 44333 RVA: 0x001870EB File Offset: 0x001852EB
 		public static IRoadNetworkNavigationTarget CreateFromSetValue([Nullable(2)] IRoadNetworkNavigationTarget_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A324 RID: 41764 RVA: 0x001729D6 File Offset: 0x00170BD6
+		// Token: 0x0600AD2E RID: 44334 RVA: 0x001870FE File Offset: 0x001852FE
 		public IRoadNetworkNavigationTarget_SetValue ToSetValue()
 		{
 			return new IRoadNetworkNavigationTarget_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003247 RID: 12871
-		// (get) Token: 0x0600A325 RID: 41765 RVA: 0x001729E9 File Offset: 0x00170BE9
-		// (set) Token: 0x0600A326 RID: 41766 RVA: 0x00172A14 File Offset: 0x00170C14
+		// Token: 0x170034E1 RID: 13537
+		// (get) Token: 0x0600AD2F RID: 44335 RVA: 0x00187111 File Offset: 0x00185311
+		// (set) Token: 0x0600AD30 RID: 44336 RVA: 0x0018713C File Offset: 0x0018533C
 		public virtual ERoadNetworkNavigationTarget Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061DC RID: 25052
+		// Token: 0x04006764 RID: 26468
 		[Nullable(2)]
 		protected IRoadNetworkNavigationTarget FbInstance;
 
-		// Token: 0x040061DD RID: 25053
+		// Token: 0x04006765 RID: 26469
 		[Nullable(2)]
 		protected IRoadNetworkNavigationTarget_SetValue PocoInterface;
 	}

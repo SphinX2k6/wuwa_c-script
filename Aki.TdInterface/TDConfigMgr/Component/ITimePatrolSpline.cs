@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200077B RID: 1915
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200081C RID: 2076
 	public class ITimePatrolSpline : ISplineType
 	{
-		// Token: 0x06002982 RID: 10626 RVA: 0x0006D7A4 File Offset: 0x0006B9A4
+		// Token: 0x06002CA6 RID: 11430 RVA: 0x0007494C File Offset: 0x00072B4C
 		private ITimePatrolSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002983 RID: 10627 RVA: 0x0006D7DC File Offset: 0x0006B9DC
+		// Token: 0x06002CA7 RID: 11431 RVA: 0x00074984 File Offset: 0x00072B84
 		public static ITimePatrolSpline Create([Nullable(2)] ITimePatrolSpline instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002984 RID: 10628 RVA: 0x0006D7EF File Offset: 0x0006B9EF
+		// Token: 0x06002CA8 RID: 11432 RVA: 0x00074997 File Offset: 0x00072B97
 		public static ITimePatrolSpline CreateFromSetValue([Nullable(2)] ITimePatrolSpline_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002985 RID: 10629 RVA: 0x0006D802 File Offset: 0x0006BA02
+		// Token: 0x06002CA9 RID: 11433 RVA: 0x000749AA File Offset: 0x00072BAA
 		public new ITimePatrolSpline_SetValue ToSetValue()
 		{
 			return new ITimePatrolSpline_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AEA RID: 2794
-		// (get) Token: 0x06002986 RID: 10630 RVA: 0x0006D821 File Offset: 0x0006BA21
-		// (set) Token: 0x06002987 RID: 10631 RVA: 0x0006D84C File Offset: 0x0006BA4C
+		// Token: 0x17000BAA RID: 2986
+		// (get) Token: 0x06002CAA RID: 11434 RVA: 0x000749C9 File Offset: 0x00072BC9
+		// (set) Token: 0x06002CAB RID: 11435 RVA: 0x000749F4 File Offset: 0x00072BF4
 		public override ESplineType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AEB RID: 2795
-		// (get) Token: 0x06002988 RID: 10632 RVA: 0x0006D85C File Offset: 0x0006BA5C
-		// (set) Token: 0x06002989 RID: 10633 RVA: 0x0006D8EF File Offset: 0x0006BAEF
+		// Token: 0x17000BAB RID: 2987
+		// (get) Token: 0x06002CAC RID: 11436 RVA: 0x00074A04 File Offset: 0x00072C04
+		// (set) Token: 0x06002CAD RID: 11437 RVA: 0x00074A97 File Offset: 0x00072C97
 		public virtual List<ITimePatrolSplinePoint> Points
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001BD3 RID: 7123
+		// Token: 0x04001DD8 RID: 7640
 		[Nullable(2)]
 		protected new ITimePatrolSpline FbInstance;
 
-		// Token: 0x04001BD4 RID: 7124
+		// Token: 0x04001DD9 RID: 7641
 		[Nullable(2)]
 		protected new ITimePatrolSpline_SetValue PocoInterface;
 
-		// Token: 0x04001BD5 RID: 7125
+		// Token: 0x04001DDA RID: 7642
 		private List<ITimePatrolSplinePoint> _PointsCache;
 
-		// Token: 0x04001BD6 RID: 7126
+		// Token: 0x04001DDB RID: 7643
 		private bool _PointsInited;
 	}
 }

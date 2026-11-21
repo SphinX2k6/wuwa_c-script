@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002530 RID: 9520
+// Token: 0x02001A17 RID: 6679
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,19 +11,19 @@ using System.Runtime.CompilerServices;
 })]
 public class TipsChatGridData : MultiTemplateGridDataBase<PhoneMsgChatData, TipsChatItem>
 {
-	// Token: 0x06013245 RID: 78405 RVA: 0x004C0676 File Offset: 0x004BE876
+	// Token: 0x06010705 RID: 67333 RVA: 0x004CE382 File Offset: 0x004CC582
 	public TipsChatGridData(PhoneMsgChatData data)
 	{
 		base.Data = data;
 	}
 
-	// Token: 0x06013246 RID: 78406 RVA: 0x004C0685 File Offset: 0x004BE885
+	// Token: 0x06010706 RID: 67334 RVA: 0x004CE391 File Offset: 0x004CC591
 	public override int GetTemplateIndex()
 	{
 		return 2;
 	}
 
-	// Token: 0x06013247 RID: 78407 RVA: 0x004C0688 File Offset: 0x004BE888
+	// Token: 0x06010707 RID: 67335 RVA: 0x004CE394 File Offset: 0x004CC594
 	public override TipsChatItem CreateProxy()
 	{
 		return new TipsChatItem();

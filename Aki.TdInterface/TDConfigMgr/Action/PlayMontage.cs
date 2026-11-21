@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002119 RID: 8473
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200237A RID: 9082
 	public class PlayMontage : ActionParams
 	{
-		// Token: 0x0600BA76 RID: 47734 RVA: 0x001AED34 File Offset: 0x001ACF34
+		// Token: 0x0600C602 RID: 50690 RVA: 0x001C5E94 File Offset: 0x001C4094
 		private PlayMontage_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BA77 RID: 47735 RVA: 0x001AED6C File Offset: 0x001ACF6C
+		// Token: 0x0600C603 RID: 50691 RVA: 0x001C5ECC File Offset: 0x001C40CC
 		public static PlayMontage Create([Nullable(2)] PlayMontage instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BA78 RID: 47736 RVA: 0x001AED7F File Offset: 0x001ACF7F
+		// Token: 0x0600C604 RID: 50692 RVA: 0x001C5EDF File Offset: 0x001C40DF
 		public static PlayMontage CreateFromSetValue([Nullable(2)] PlayMontage_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BA79 RID: 47737 RVA: 0x001AED94 File Offset: 0x001ACF94
+		// Token: 0x0600C605 RID: 50693 RVA: 0x001C5EF4 File Offset: 0x001C40F4
 		public PlayMontage_SetValue ToSetValue()
 		{
 			return new PlayMontage_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170038EF RID: 14575
-		// (get) Token: 0x0600BA7A RID: 47738 RVA: 0x001AEDE2 File Offset: 0x001ACFE2
-		// (set) Token: 0x0600BA7B RID: 47739 RVA: 0x001AEE0D File Offset: 0x001AD00D
+		// Token: 0x17003BDB RID: 15323
+		// (get) Token: 0x0600C606 RID: 50694 RVA: 0x001C5F42 File Offset: 0x001C4142
+		// (set) Token: 0x0600C607 RID: 50695 RVA: 0x001C5F6D File Offset: 0x001C416D
 		public virtual int EntityId
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038F0 RID: 14576
-		// (get) Token: 0x0600BA7C RID: 47740 RVA: 0x001AEE1C File Offset: 0x001AD01C
-		// (set) Token: 0x0600BA7D RID: 47741 RVA: 0x001AEE7D File Offset: 0x001AD07D
+		// Token: 0x17003BDC RID: 15324
+		// (get) Token: 0x0600C608 RID: 50696 RVA: 0x001C5F7C File Offset: 0x001C417C
+		// (set) Token: 0x0600C609 RID: 50697 RVA: 0x001C5FDD File Offset: 0x001C41DD
 		public virtual IActionMontage ActionMontage
 		{
 			get
@@ -116,9 +114,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038F1 RID: 14577
-		// (get) Token: 0x0600BA7E RID: 47742 RVA: 0x001AEE92 File Offset: 0x001AD092
-		// (set) Token: 0x0600BA7F RID: 47743 RVA: 0x001AEEB9 File Offset: 0x001AD0B9
+		// Token: 0x17003BDD RID: 15325
+		// (get) Token: 0x0600C60A RID: 50698 RVA: 0x001C5FF2 File Offset: 0x001C41F2
+		// (set) Token: 0x0600C60B RID: 50699 RVA: 0x001C6019 File Offset: 0x001C4219
 		[Nullable(2)]
 		public virtual string ExpressionMontage
 		{
@@ -143,9 +141,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038F2 RID: 14578
-		// (get) Token: 0x0600BA80 RID: 47744 RVA: 0x001AEEC7 File Offset: 0x001AD0C7
-		// (set) Token: 0x0600BA81 RID: 47745 RVA: 0x001AEEEE File Offset: 0x001AD0EE
+		// Token: 0x17003BDE RID: 15326
+		// (get) Token: 0x0600C60C RID: 50700 RVA: 0x001C6027 File Offset: 0x001C4227
+		// (set) Token: 0x0600C60D RID: 50701 RVA: 0x001C604E File Offset: 0x001C424E
 		[Nullable(2)]
 		public virtual string MouthSequence
 		{
@@ -170,9 +168,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038F3 RID: 14579
-		// (get) Token: 0x0600BA82 RID: 47746 RVA: 0x001AEEFC File Offset: 0x001AD0FC
-		// (set) Token: 0x0600BA83 RID: 47747 RVA: 0x001AEF36 File Offset: 0x001AD136
+		// Token: 0x17003BDF RID: 15327
+		// (get) Token: 0x0600C60E RID: 50702 RVA: 0x001C605C File Offset: 0x001C425C
+		// (set) Token: 0x0600C60F RID: 50703 RVA: 0x001C6096 File Offset: 0x001C4296
 		public virtual int? Duration
 		{
 			get
@@ -194,18 +192,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006F9A RID: 28570
+		// Token: 0x040075CE RID: 30158
 		[Nullable(2)]
 		protected new PlayMontage FbInstance;
 
-		// Token: 0x04006F9B RID: 28571
+		// Token: 0x040075CF RID: 30159
 		[Nullable(2)]
 		protected PlayMontage_SetValue PocoInterface;
 
-		// Token: 0x04006F9C RID: 28572
+		// Token: 0x040075D0 RID: 30160
 		private IActionMontage _ActionMontageCache;
 
-		// Token: 0x04006F9D RID: 28573
+		// Token: 0x040075D1 RID: 30161
 		private bool _ActionMontageInited;
 	}
 }

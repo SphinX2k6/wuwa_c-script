@@ -2,30 +2,30 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002A18 RID: 10776
+// Token: 0x02001F93 RID: 8083
 [NullableContext(1)]
 [Nullable(0)]
 public class SkeletalObserverManager : IStaticVariableResetter
 {
-	// Token: 0x060165E5 RID: 91621 RVA: 0x005A9500 File Offset: 0x005A7700
+	// Token: 0x06013FEC RID: 81900 RVA: 0x005D44D8 File Offset: 0x005D26D8
 	static SkeletalObserverManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SkeletalObserverManager.CreateStaticDefaultValue), new Action(SkeletalObserverManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060165E6 RID: 91622 RVA: 0x005A951F File Offset: 0x005A771F
+	// Token: 0x06013FED RID: 81901 RVA: 0x005D44F7 File Offset: 0x005D26F7
 	public static void CreateStaticDefaultValue()
 	{
 		SkeletalObserverManager.SkeletalObserverHandleList = new List<SkeletalObserverHandle>();
 	}
 
-	// Token: 0x060165E7 RID: 91623 RVA: 0x005A952B File Offset: 0x005A772B
+	// Token: 0x06013FEE RID: 81902 RVA: 0x005D4503 File Offset: 0x005D2703
 	public static void ResetStaticDefaultValue()
 	{
 		SkeletalObserverManager.SkeletalObserverHandleList = null;
 	}
 
-	// Token: 0x060165E8 RID: 91624 RVA: 0x005A9534 File Offset: 0x005A7734
+	// Token: 0x06013FEF RID: 81903 RVA: 0x005D450C File Offset: 0x005D270C
 	public static SkeletalObserverHandle NewSkeletalObserver(EUiModelUseWay useWay)
 	{
 		SkeletalObserverHandle skeletalObserverHandle = new SkeletalObserverHandle();
@@ -34,7 +34,7 @@ public class SkeletalObserverManager : IStaticVariableResetter
 		return skeletalObserverHandle;
 	}
 
-	// Token: 0x060165E9 RID: 91625 RVA: 0x005A955A File Offset: 0x005A775A
+	// Token: 0x06013FF0 RID: 81904 RVA: 0x005D4532 File Offset: 0x005D2732
 	public static void DestroySkeletalObserver(SkeletalObserverHandle skeletalObserverHandle)
 	{
 		if (!SkeletalObserverManager.SkeletalObserverHandleList.Contains(skeletalObserverHandle))
@@ -45,7 +45,7 @@ public class SkeletalObserverManager : IStaticVariableResetter
 		SkeletalObserverManager.SkeletalObserverHandleList.Remove(skeletalObserverHandle);
 	}
 
-	// Token: 0x060165EA RID: 91626 RVA: 0x005A957C File Offset: 0x005A777C
+	// Token: 0x06013FF1 RID: 81905 RVA: 0x005D4554 File Offset: 0x005D2754
 	public static void ClearAllSkeletalObserver()
 	{
 		foreach (SkeletalObserverHandle skeletalObserverHandle in SkeletalObserverManager.SkeletalObserverHandleList)
@@ -55,7 +55,7 @@ public class SkeletalObserverManager : IStaticVariableResetter
 		SkeletalObserverManager.SkeletalObserverHandleList.Clear();
 	}
 
-	// Token: 0x060165EB RID: 91627 RVA: 0x005A95D8 File Offset: 0x005A77D8
+	// Token: 0x06013FF2 RID: 81906 RVA: 0x005D45B0 File Offset: 0x005D27B0
 	[NullableContext(2)]
 	public static SkeletalObserverHandle GetLastSkeletalObserver()
 	{
@@ -67,6 +67,6 @@ public class SkeletalObserverManager : IStaticVariableResetter
 		return SkeletalObserverManager.SkeletalObserverHandleList[num];
 	}
 
-	// Token: 0x0400A679 RID: 42617
+	// Token: 0x0400AA63 RID: 43619
 	private static List<SkeletalObserverHandle> SkeletalObserverHandleList;
 }

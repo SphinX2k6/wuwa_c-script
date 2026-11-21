@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Battle;
 using CSharpScript.Game.Module.CombatMessage;
 using CSharpScript.Game.NewWorld.Character.Common.Component;
 
-// Token: 0x02003563 RID: 13667
+// Token: 0x02002AD8 RID: 10968
 public class DecoratorManager
 {
-	// Token: 0x0601DFE2 RID: 122850 RVA: 0x0087C6CC File Offset: 0x0087A8CC
+	// Token: 0x0601BD0A RID: 113930 RVA: 0x008A4738 File Offset: 0x008A2938
 	public static bool Init()
 	{
 		Action<Entity, AiInformationNotify, CombatCommon> callBack;
@@ -85,344 +85,350 @@ public class DecoratorManager
 			callBack12 = (global::DecoratorManager.<>O.<11>__EndSkillNotify = new Action<Entity, EndSkillNotify, CombatCommon>(SkillMessageController.EndSkillNotify));
 		}
 		CombatNet.Listen<EndSkillNotify>(callBack12, ENotifyMessageId.EndSkillNotify, true, true);
-		Action<Entity, CreateBulletNotify, CombatCommon> callBack13;
-		if ((callBack13 = global::DecoratorManager.<>O.<12>__CreateBulletNotify) == null)
+		Action<Entity, DamageShowNotify, CombatCommon> callBack13;
+		if ((callBack13 = global::DecoratorManager.<>O.<12>__DamageShowNotify) == null)
 		{
-			callBack13 = (global::DecoratorManager.<>O.<12>__CreateBulletNotify = new Action<Entity, CreateBulletNotify, CombatCommon>(BulletController.CreateBulletNotify));
+			callBack13 = (global::DecoratorManager.<>O.<12>__DamageShowNotify = new Action<Entity, DamageShowNotify, CombatCommon>(DamageUiController.DamageShowNotify));
 		}
-		CombatNet.Listen<CreateBulletNotify>(callBack13, ENotifyMessageId.CreateBulletNotify, true, false);
-		Action<Entity, DestroyBulletNotify, CombatCommon> callBack14;
-		if ((callBack14 = global::DecoratorManager.<>O.<13>__DestroyBulletNotify) == null)
+		CombatNet.Listen<DamageShowNotify>(callBack13, ENotifyMessageId.DamageShowNotify, false, false);
+		Action<Entity, CreateBulletNotify, CombatCommon> callBack14;
+		if ((callBack14 = global::DecoratorManager.<>O.<13>__CreateBulletNotify) == null)
 		{
-			callBack14 = (global::DecoratorManager.<>O.<13>__DestroyBulletNotify = new Action<Entity, DestroyBulletNotify, CombatCommon>(BulletController.DestroyBulletNotify));
+			callBack14 = (global::DecoratorManager.<>O.<13>__CreateBulletNotify = new Action<Entity, CreateBulletNotify, CombatCommon>(BulletController.CreateBulletNotify));
 		}
-		CombatNet.Listen<DestroyBulletNotify>(callBack14, ENotifyMessageId.DestroyBulletNotify, true, false);
-		Action<Entity, ModifyBulletParamsNotify, CombatCommon> callBack15;
-		if ((callBack15 = global::DecoratorManager.<>O.<14>__ModifyBulletParamsNotify) == null)
+		CombatNet.Listen<CreateBulletNotify>(callBack14, ENotifyMessageId.CreateBulletNotify, true, false);
+		Action<Entity, DestroyBulletNotify, CombatCommon> callBack15;
+		if ((callBack15 = global::DecoratorManager.<>O.<14>__DestroyBulletNotify) == null)
 		{
-			callBack15 = (global::DecoratorManager.<>O.<14>__ModifyBulletParamsNotify = new Action<Entity, ModifyBulletParamsNotify, CombatCommon>(BulletController.ModifyBulletParamsNotify));
+			callBack15 = (global::DecoratorManager.<>O.<14>__DestroyBulletNotify = new Action<Entity, DestroyBulletNotify, CombatCommon>(BulletController.DestroyBulletNotify));
 		}
-		CombatNet.Listen<ModifyBulletParamsNotify>(callBack15, ENotifyMessageId.ModifyBulletParamsNotify, true, false);
-		Action<Entity, ApplyGameplayEffectNotify, CombatCommon> callBack16;
-		if ((callBack16 = global::DecoratorManager.<>O.<15>__BroadcastAddBuffNotify) == null)
+		CombatNet.Listen<DestroyBulletNotify>(callBack15, ENotifyMessageId.DestroyBulletNotify, true, false);
+		Action<Entity, ModifyBulletParamsNotify, CombatCommon> callBack16;
+		if ((callBack16 = global::DecoratorManager.<>O.<15>__ModifyBulletParamsNotify) == null)
 		{
-			callBack16 = (global::DecoratorManager.<>O.<15>__BroadcastAddBuffNotify = new Action<Entity, ApplyGameplayEffectNotify, CombatCommon>(BaseBuffComponent.BroadcastAddBuffNotify));
+			callBack16 = (global::DecoratorManager.<>O.<15>__ModifyBulletParamsNotify = new Action<Entity, ModifyBulletParamsNotify, CombatCommon>(BulletController.ModifyBulletParamsNotify));
 		}
-		CombatNet.Listen<ApplyGameplayEffectNotify>(callBack16, ENotifyMessageId.ApplyGameplayEffectNotify, false, false);
-		Action<Entity, ApplyBuffFailedNotify, CombatCommon> callBack17;
-		if ((callBack17 = global::DecoratorManager.<>O.<16>__BroadcastAddBuffFailedNotify) == null)
+		CombatNet.Listen<ModifyBulletParamsNotify>(callBack16, ENotifyMessageId.ModifyBulletParamsNotify, true, false);
+		Action<Entity, ApplyGameplayEffectNotify, CombatCommon> callBack17;
+		if ((callBack17 = global::DecoratorManager.<>O.<16>__BroadcastAddBuffNotify) == null)
 		{
-			callBack17 = (global::DecoratorManager.<>O.<16>__BroadcastAddBuffFailedNotify = new Action<Entity, ApplyBuffFailedNotify, CombatCommon>(BaseBuffComponent.BroadcastAddBuffFailedNotify));
+			callBack17 = (global::DecoratorManager.<>O.<16>__BroadcastAddBuffNotify = new Action<Entity, ApplyGameplayEffectNotify, CombatCommon>(BaseBuffComponent.BroadcastAddBuffNotify));
 		}
-		CombatNet.Listen<ApplyBuffFailedNotify>(callBack17, ENotifyMessageId.ApplyBuffFailedNotify, false, false);
-		Action<Entity, BuffStackCountNotify, CombatCommon> callBack18;
-		if ((callBack18 = global::DecoratorManager.<>O.<17>__BroadcastBuffStackChangedNotify) == null)
+		CombatNet.Listen<ApplyGameplayEffectNotify>(callBack17, ENotifyMessageId.ApplyGameplayEffectNotify, false, false);
+		Action<Entity, ApplyBuffFailedNotify, CombatCommon> callBack18;
+		if ((callBack18 = global::DecoratorManager.<>O.<17>__BroadcastAddBuffFailedNotify) == null)
 		{
-			callBack18 = (global::DecoratorManager.<>O.<17>__BroadcastBuffStackChangedNotify = new Action<Entity, BuffStackCountNotify, CombatCommon>(BaseBuffComponent.BroadcastBuffStackChangedNotify));
+			callBack18 = (global::DecoratorManager.<>O.<17>__BroadcastAddBuffFailedNotify = new Action<Entity, ApplyBuffFailedNotify, CombatCommon>(BaseBuffComponent.BroadcastAddBuffFailedNotify));
 		}
-		CombatNet.Listen<BuffStackCountNotify>(callBack18, ENotifyMessageId.BuffStackCountNotify, false, false);
-		Action<Entity, RemoveGameplayEffectNotify, CombatCommon> callBack19;
-		if ((callBack19 = global::DecoratorManager.<>O.<18>__BroadcastRemoveBuffNotify) == null)
+		CombatNet.Listen<ApplyBuffFailedNotify>(callBack18, ENotifyMessageId.ApplyBuffFailedNotify, false, false);
+		Action<Entity, BuffStackCountNotify, CombatCommon> callBack19;
+		if ((callBack19 = global::DecoratorManager.<>O.<18>__BroadcastBuffStackChangedNotify) == null)
 		{
-			callBack19 = (global::DecoratorManager.<>O.<18>__BroadcastRemoveBuffNotify = new Action<Entity, RemoveGameplayEffectNotify, CombatCommon>(BaseBuffComponent.BroadcastRemoveBuffNotify));
+			callBack19 = (global::DecoratorManager.<>O.<18>__BroadcastBuffStackChangedNotify = new Action<Entity, BuffStackCountNotify, CombatCommon>(BaseBuffComponent.BroadcastBuffStackChangedNotify));
 		}
-		CombatNet.Listen<RemoveGameplayEffectNotify>(callBack19, ENotifyMessageId.RemoveGameplayEffectNotify, false, false);
-		Action<Entity, BuffDurationNotify, CombatCommon> callBack20;
-		if ((callBack20 = global::DecoratorManager.<>O.<19>__BuffDurationNotify) == null)
+		CombatNet.Listen<BuffStackCountNotify>(callBack19, ENotifyMessageId.BuffStackCountNotify, false, false);
+		Action<Entity, RemoveGameplayEffectNotify, CombatCommon> callBack20;
+		if ((callBack20 = global::DecoratorManager.<>O.<19>__BroadcastRemoveBuffNotify) == null)
 		{
-			callBack20 = (global::DecoratorManager.<>O.<19>__BuffDurationNotify = new Action<Entity, BuffDurationNotify, CombatCommon>(BaseBuffComponent.BuffDurationNotify));
+			callBack20 = (global::DecoratorManager.<>O.<19>__BroadcastRemoveBuffNotify = new Action<Entity, RemoveGameplayEffectNotify, CombatCommon>(BaseBuffComponent.BroadcastRemoveBuffNotify));
 		}
-		CombatNet.Listen<BuffDurationNotify>(callBack20, ENotifyMessageId.BuffDurationNotify, false, false);
-		Action<Entity, ApplyBuffS2cRequestNotify, CombatCommon> callBack21;
-		if ((callBack21 = global::DecoratorManager.<>O.<20>__OrderAddBuffS2cNotify) == null)
+		CombatNet.Listen<RemoveGameplayEffectNotify>(callBack20, ENotifyMessageId.RemoveGameplayEffectNotify, false, false);
+		Action<Entity, BuffDurationNotify, CombatCommon> callBack21;
+		if ((callBack21 = global::DecoratorManager.<>O.<20>__BuffDurationNotify) == null)
 		{
-			callBack21 = (global::DecoratorManager.<>O.<20>__OrderAddBuffS2cNotify = new Action<Entity, ApplyBuffS2cRequestNotify, CombatCommon>(BaseBuffComponent.OrderAddBuffS2cNotify));
+			callBack21 = (global::DecoratorManager.<>O.<20>__BuffDurationNotify = new Action<Entity, BuffDurationNotify, CombatCommon>(BaseBuffComponent.BuffDurationNotify));
 		}
-		CombatNet.Listen<ApplyBuffS2cRequestNotify>(callBack21, ENotifyMessageId.ApplyBuffS2cRequestNotify, false, true);
-		Action<Entity, RemoveBuffS2cRequestNotify, CombatCommon> callBack22;
-		if ((callBack22 = global::DecoratorManager.<>O.<21>__OrderRemoveBuffS2cNotify) == null)
+		CombatNet.Listen<BuffDurationNotify>(callBack21, ENotifyMessageId.BuffDurationNotify, false, false);
+		Action<Entity, ApplyBuffS2cRequestNotify, CombatCommon> callBack22;
+		if ((callBack22 = global::DecoratorManager.<>O.<21>__OrderAddBuffS2cNotify) == null)
 		{
-			callBack22 = (global::DecoratorManager.<>O.<21>__OrderRemoveBuffS2cNotify = new Action<Entity, RemoveBuffS2cRequestNotify, CombatCommon>(BaseBuffComponent.OrderRemoveBuffS2cNotify));
+			callBack22 = (global::DecoratorManager.<>O.<21>__OrderAddBuffS2cNotify = new Action<Entity, ApplyBuffS2cRequestNotify, CombatCommon>(BaseBuffComponent.OrderAddBuffS2cNotify));
 		}
-		CombatNet.Listen<RemoveBuffS2cRequestNotify>(callBack22, ENotifyMessageId.RemoveBuffS2cRequestNotify, false, false);
-		Action<Entity, RemoveBuffByIdS2cRequestNotify, CombatCommon> callBack23;
-		if ((callBack23 = global::DecoratorManager.<>O.<22>__OrderRemoveBuffByIdS2cNotify) == null)
+		CombatNet.Listen<ApplyBuffS2cRequestNotify>(callBack22, ENotifyMessageId.ApplyBuffS2cRequestNotify, false, true);
+		Action<Entity, RemoveBuffS2cRequestNotify, CombatCommon> callBack23;
+		if ((callBack23 = global::DecoratorManager.<>O.<22>__OrderRemoveBuffS2cNotify) == null)
 		{
-			callBack23 = (global::DecoratorManager.<>O.<22>__OrderRemoveBuffByIdS2cNotify = new Action<Entity, RemoveBuffByIdS2cRequestNotify, CombatCommon>(BaseBuffComponent.OrderRemoveBuffByIdS2cNotify));
+			callBack23 = (global::DecoratorManager.<>O.<22>__OrderRemoveBuffS2cNotify = new Action<Entity, RemoveBuffS2cRequestNotify, CombatCommon>(BaseBuffComponent.OrderRemoveBuffS2cNotify));
 		}
-		CombatNet.Listen<RemoveBuffByIdS2cRequestNotify>(callBack23, ENotifyMessageId.RemoveBuffByIdS2cRequestNotify, false, false);
-		Action<Entity, RemoveBuffByServerIdS2cRequestNotify, CombatCommon> callBack24;
-		if ((callBack24 = global::DecoratorManager.<>O.<23>__OrderRemoveBuffByServerIdNotify) == null)
+		CombatNet.Listen<RemoveBuffS2cRequestNotify>(callBack23, ENotifyMessageId.RemoveBuffS2cRequestNotify, false, false);
+		Action<Entity, RemoveBuffByIdS2cRequestNotify, CombatCommon> callBack24;
+		if ((callBack24 = global::DecoratorManager.<>O.<23>__OrderRemoveBuffByIdS2cNotify) == null)
 		{
-			callBack24 = (global::DecoratorManager.<>O.<23>__OrderRemoveBuffByServerIdNotify = new Action<Entity, RemoveBuffByServerIdS2cRequestNotify, CombatCommon>(BaseBuffComponent.OrderRemoveBuffByServerIdNotify));
+			callBack24 = (global::DecoratorManager.<>O.<23>__OrderRemoveBuffByIdS2cNotify = new Action<Entity, RemoveBuffByIdS2cRequestNotify, CombatCommon>(BaseBuffComponent.OrderRemoveBuffByIdS2cNotify));
 		}
-		CombatNet.Listen<RemoveBuffByServerIdS2cRequestNotify>(callBack24, ENotifyMessageId.RemoveBuffByServerIdS2cRequestNotify, false, false);
-		Action<Entity, OrderApplyBuffNotify, CombatCommon> callBack25;
-		if ((callBack25 = global::DecoratorManager.<>O.<24>__OrderAddBuffNotify) == null)
+		CombatNet.Listen<RemoveBuffByIdS2cRequestNotify>(callBack24, ENotifyMessageId.RemoveBuffByIdS2cRequestNotify, false, false);
+		Action<Entity, RemoveBuffByServerIdS2cRequestNotify, CombatCommon> callBack25;
+		if ((callBack25 = global::DecoratorManager.<>O.<24>__OrderRemoveBuffByServerIdNotify) == null)
 		{
-			callBack25 = (global::DecoratorManager.<>O.<24>__OrderAddBuffNotify = new Action<Entity, OrderApplyBuffNotify, CombatCommon>(BaseBuffComponent.OrderAddBuffNotify));
+			callBack25 = (global::DecoratorManager.<>O.<24>__OrderRemoveBuffByServerIdNotify = new Action<Entity, RemoveBuffByServerIdS2cRequestNotify, CombatCommon>(BaseBuffComponent.OrderRemoveBuffByServerIdNotify));
 		}
-		CombatNet.Listen<OrderApplyBuffNotify>(callBack25, ENotifyMessageId.OrderApplyBuffNotify, false, false);
-		Action<Entity, OrderRemoveBuffNotify, CombatCommon> callBack26;
-		if ((callBack26 = global::DecoratorManager.<>O.<25>__OrderRemoveBuffNotify) == null)
+		CombatNet.Listen<RemoveBuffByServerIdS2cRequestNotify>(callBack25, ENotifyMessageId.RemoveBuffByServerIdS2cRequestNotify, false, false);
+		Action<Entity, OrderApplyBuffNotify, CombatCommon> callBack26;
+		if ((callBack26 = global::DecoratorManager.<>O.<25>__OrderAddBuffNotify) == null)
 		{
-			callBack26 = (global::DecoratorManager.<>O.<25>__OrderRemoveBuffNotify = new Action<Entity, OrderRemoveBuffNotify, CombatCommon>(BaseBuffComponent.OrderRemoveBuffNotify));
+			callBack26 = (global::DecoratorManager.<>O.<25>__OrderAddBuffNotify = new Action<Entity, OrderApplyBuffNotify, CombatCommon>(BaseBuffComponent.OrderAddBuffNotify));
 		}
-		CombatNet.Listen<OrderRemoveBuffNotify>(callBack26, ENotifyMessageId.OrderRemoveBuffNotify, false, false);
-		Action<Entity, OrderRemoveBuffByTagsNotify, CombatCommon> callBack27;
-		if ((callBack27 = global::DecoratorManager.<>O.<26>__OrderRemoveBuffByTagsNotify) == null)
+		CombatNet.Listen<OrderApplyBuffNotify>(callBack26, ENotifyMessageId.OrderApplyBuffNotify, false, false);
+		Action<Entity, OrderRemoveBuffNotify, CombatCommon> callBack27;
+		if ((callBack27 = global::DecoratorManager.<>O.<26>__OrderRemoveBuffNotify) == null)
 		{
-			callBack27 = (global::DecoratorManager.<>O.<26>__OrderRemoveBuffByTagsNotify = new Action<Entity, OrderRemoveBuffByTagsNotify, CombatCommon>(BaseBuffComponent.OrderRemoveBuffByTagsNotify));
+			callBack27 = (global::DecoratorManager.<>O.<26>__OrderRemoveBuffNotify = new Action<Entity, OrderRemoveBuffNotify, CombatCommon>(BaseBuffComponent.OrderRemoveBuffNotify));
 		}
-		CombatNet.Listen<OrderRemoveBuffByTagsNotify>(callBack27, ENotifyMessageId.OrderRemoveBuffByTagsNotify, false, false);
-		Action<Entity, ActivateBuffNotify, CombatCommon> callBack28;
-		if ((callBack28 = global::DecoratorManager.<>O.<27>__BroadcastActivateBuffNotify) == null)
+		CombatNet.Listen<OrderRemoveBuffNotify>(callBack27, ENotifyMessageId.OrderRemoveBuffNotify, false, false);
+		Action<Entity, OrderRemoveBuffByTagsNotify, CombatCommon> callBack28;
+		if ((callBack28 = global::DecoratorManager.<>O.<27>__OrderRemoveBuffByTagsNotify) == null)
 		{
-			callBack28 = (global::DecoratorManager.<>O.<27>__BroadcastActivateBuffNotify = new Action<Entity, ActivateBuffNotify, CombatCommon>(BaseBuffComponent.BroadcastActivateBuffNotify));
+			callBack28 = (global::DecoratorManager.<>O.<27>__OrderRemoveBuffByTagsNotify = new Action<Entity, OrderRemoveBuffByTagsNotify, CombatCommon>(BaseBuffComponent.OrderRemoveBuffByTagsNotify));
 		}
-		CombatNet.Listen<ActivateBuffNotify>(callBack28, ENotifyMessageId.ActivateBuffNotify, false, false);
-		Action<Entity, TransformBuffStackNotify, CombatCommon> callBack29;
-		if ((callBack29 = global::DecoratorManager.<>O.<28>__BroadcastTransformBuffStackNotify) == null)
+		CombatNet.Listen<OrderRemoveBuffByTagsNotify>(callBack28, ENotifyMessageId.OrderRemoveBuffByTagsNotify, false, false);
+		Action<Entity, ActivateBuffNotify, CombatCommon> callBack29;
+		if ((callBack29 = global::DecoratorManager.<>O.<28>__BroadcastActivateBuffNotify) == null)
 		{
-			callBack29 = (global::DecoratorManager.<>O.<28>__BroadcastTransformBuffStackNotify = new Action<Entity, TransformBuffStackNotify, CombatCommon>(BaseBuffComponent.BroadcastTransformBuffStackNotify));
+			callBack29 = (global::DecoratorManager.<>O.<28>__BroadcastActivateBuffNotify = new Action<Entity, ActivateBuffNotify, CombatCommon>(BaseBuffComponent.BroadcastActivateBuffNotify));
 		}
-		CombatNet.Listen<TransformBuffStackNotify>(callBack29, ENotifyMessageId.TransformBuffStackNotify, false, false);
-		Action<Entity, DamageExecuteNotify, CombatCommon> callBack30;
-		if ((callBack30 = global::DecoratorManager.<>O.<29>__OnDamageExecuteNotify) == null)
+		CombatNet.Listen<ActivateBuffNotify>(callBack29, ENotifyMessageId.ActivateBuffNotify, false, false);
+		Action<Entity, TransformBuffStackNotify, CombatCommon> callBack30;
+		if ((callBack30 = global::DecoratorManager.<>O.<29>__BroadcastTransformBuffStackNotify) == null)
 		{
-			callBack30 = (global::DecoratorManager.<>O.<29>__OnDamageExecuteNotify = new Action<Entity, DamageExecuteNotify, CombatCommon>(BaseDamageComponent.OnDamageExecuteNotify));
+			callBack30 = (global::DecoratorManager.<>O.<29>__BroadcastTransformBuffStackNotify = new Action<Entity, TransformBuffStackNotify, CombatCommon>(BaseBuffComponent.BroadcastTransformBuffStackNotify));
 		}
-		CombatNet.Listen<DamageExecuteNotify>(callBack30, ENotifyMessageId.DamageExecuteNotify, false, false);
-		Action<Entity, GameplayCueNotify, CombatCommon> callBack31;
-		if ((callBack31 = global::DecoratorManager.<>O.<30>__GameplayCueNotify) == null)
+		CombatNet.Listen<TransformBuffStackNotify>(callBack30, ENotifyMessageId.TransformBuffStackNotify, false, false);
+		Action<Entity, DamageExecuteNotify, CombatCommon> callBack31;
+		if ((callBack31 = global::DecoratorManager.<>O.<30>__OnDamageExecuteNotify) == null)
 		{
-			callBack31 = (global::DecoratorManager.<>O.<30>__GameplayCueNotify = new Action<Entity, GameplayCueNotify, CombatCommon>(BaseGameplayCueComponent.GameplayCueNotify));
+			callBack31 = (global::DecoratorManager.<>O.<30>__OnDamageExecuteNotify = new Action<Entity, DamageExecuteNotify, CombatCommon>(BaseDamageComponent.OnDamageExecuteNotify));
 		}
-		CombatNet.Listen<GameplayCueNotify>(callBack31, ENotifyMessageId.GameplayCueNotify, true, false);
-		Action<Entity, AttributeChangedNotify, CombatCommon> callBack32;
-		if ((callBack32 = global::DecoratorManager.<>O.<31>__AttributeChangedNotify) == null)
+		CombatNet.Listen<DamageExecuteNotify>(callBack31, ENotifyMessageId.DamageExecuteNotify, false, false);
+		Action<Entity, GameplayCueNotify, CombatCommon> callBack32;
+		if ((callBack32 = global::DecoratorManager.<>O.<31>__GameplayCueNotify) == null)
 		{
-			callBack32 = (global::DecoratorManager.<>O.<31>__AttributeChangedNotify = new Action<Entity, AttributeChangedNotify, CombatCommon>(CharacterAttributeComponent.AttributeChangedNotify));
+			callBack32 = (global::DecoratorManager.<>O.<31>__GameplayCueNotify = new Action<Entity, GameplayCueNotify, CombatCommon>(BaseGameplayCueComponent.GameplayCueNotify));
 		}
-		CombatNet.Listen<AttributeChangedNotify>(callBack32, ENotifyMessageId.AttributeChangedNotify, true, false);
-		Action<Entity, RecoverPropChangedNotify, CombatCommon> callBack33;
-		if ((callBack33 = global::DecoratorManager.<>O.<32>__RecoverPropChangedNotify) == null)
+		CombatNet.Listen<GameplayCueNotify>(callBack32, ENotifyMessageId.GameplayCueNotify, true, false);
+		Action<Entity, AttributeChangedNotify, CombatCommon> callBack33;
+		if ((callBack33 = global::DecoratorManager.<>O.<32>__AttributeChangedNotify) == null)
 		{
-			callBack33 = (global::DecoratorManager.<>O.<32>__RecoverPropChangedNotify = new Action<Entity, RecoverPropChangedNotify, CombatCommon>(CharacterAttributeComponent.RecoverPropChangedNotify));
+			callBack33 = (global::DecoratorManager.<>O.<32>__AttributeChangedNotify = new Action<Entity, AttributeChangedNotify, CombatCommon>(CharacterAttributeComponent.AttributeChangedNotify));
 		}
-		CombatNet.Listen<RecoverPropChangedNotify>(callBack33, ENotifyMessageId.RecoverPropChangedNotify, true, false);
-		Action<Entity, DamageRecordNotify, CombatCommon> callBack34;
-		if ((callBack34 = global::DecoratorManager.<>O.<33>__OnDamageRecordNotify) == null)
+		CombatNet.Listen<AttributeChangedNotify>(callBack33, ENotifyMessageId.AttributeChangedNotify, true, false);
+		Action<Entity, RecoverPropChangedNotify, CombatCommon> callBack34;
+		if ((callBack34 = global::DecoratorManager.<>O.<33>__RecoverPropChangedNotify) == null)
 		{
-			callBack34 = (global::DecoratorManager.<>O.<33>__OnDamageRecordNotify = new Action<Entity, DamageRecordNotify, CombatCommon>(CharacterGasDebugComponent.OnDamageRecordNotify));
+			callBack34 = (global::DecoratorManager.<>O.<33>__RecoverPropChangedNotify = new Action<Entity, RecoverPropChangedNotify, CombatCommon>(CharacterAttributeComponent.RecoverPropChangedNotify));
 		}
-		CombatNet.Listen<DamageRecordNotify>(callBack34, ENotifyMessageId.DamageRecordNotify, true, false);
-		Action<Entity, PassiveSkillAddNotify, CombatCommon> callBack35;
-		if ((callBack35 = global::DecoratorManager.<>O.<34>__PassiveSkillAddNotify) == null)
+		CombatNet.Listen<RecoverPropChangedNotify>(callBack34, ENotifyMessageId.RecoverPropChangedNotify, true, false);
+		Action<Entity, DamageRecordNotify, CombatCommon> callBack35;
+		if ((callBack35 = global::DecoratorManager.<>O.<34>__OnDamageRecordNotify) == null)
 		{
-			callBack35 = (global::DecoratorManager.<>O.<34>__PassiveSkillAddNotify = new Action<Entity, PassiveSkillAddNotify, CombatCommon>(CharacterPassiveSkillComponent.PassiveSkillAddNotify));
+			callBack35 = (global::DecoratorManager.<>O.<34>__OnDamageRecordNotify = new Action<Entity, DamageRecordNotify, CombatCommon>(CharacterGasDebugComponent.OnDamageRecordNotify));
 		}
-		CombatNet.Listen<PassiveSkillAddNotify>(callBack35, ENotifyMessageId.PassiveSkillAddNotify, false, false);
-		Action<Entity, PassiveSkillRemoveNotify, CombatCommon> callBack36;
-		if ((callBack36 = global::DecoratorManager.<>O.<35>__PassiveSkillRemoveNotify) == null)
+		CombatNet.Listen<DamageRecordNotify>(callBack35, ENotifyMessageId.DamageRecordNotify, true, false);
+		Action<Entity, PassiveSkillAddNotify, CombatCommon> callBack36;
+		if ((callBack36 = global::DecoratorManager.<>O.<35>__PassiveSkillAddNotify) == null)
 		{
-			callBack36 = (global::DecoratorManager.<>O.<35>__PassiveSkillRemoveNotify = new Action<Entity, PassiveSkillRemoveNotify, CombatCommon>(CharacterPassiveSkillComponent.PassiveSkillRemoveNotify));
+			callBack36 = (global::DecoratorManager.<>O.<35>__PassiveSkillAddNotify = new Action<Entity, PassiveSkillAddNotify, CombatCommon>(CharacterPassiveSkillComponent.PassiveSkillAddNotify));
 		}
-		CombatNet.Listen<PassiveSkillRemoveNotify>(callBack36, ENotifyMessageId.PassiveSkillRemoveNotify, false, false);
-		Action<Entity, PlayerBattleStateChangeNotify, CombatCommon> callBack37;
-		if ((callBack37 = global::DecoratorManager.<>O.<36>__OnPlayerBattleStateChangeNotify) == null)
+		CombatNet.Listen<PassiveSkillAddNotify>(callBack36, ENotifyMessageId.PassiveSkillAddNotify, false, false);
+		Action<Entity, PassiveSkillRemoveNotify, CombatCommon> callBack37;
+		if ((callBack37 = global::DecoratorManager.<>O.<36>__PassiveSkillRemoveNotify) == null)
 		{
-			callBack37 = (global::DecoratorManager.<>O.<36>__OnPlayerBattleStateChangeNotify = new Action<Entity, PlayerBattleStateChangeNotify, CombatCommon>(CharacterUnifiedStateComponent.OnPlayerBattleStateChangeNotify));
+			callBack37 = (global::DecoratorManager.<>O.<36>__PassiveSkillRemoveNotify = new Action<Entity, PassiveSkillRemoveNotify, CombatCommon>(CharacterPassiveSkillComponent.PassiveSkillRemoveNotify));
 		}
-		CombatNet.Listen<PlayerBattleStateChangeNotify>(callBack37, ENotifyMessageId.PlayerBattleStateChangeNotify, false, false);
-		Action<Entity, HitNotify, CombatCommon> callBack38;
-		if ((callBack38 = global::DecoratorManager.<>O.<37>__HitNotify) == null)
+		CombatNet.Listen<PassiveSkillRemoveNotify>(callBack37, ENotifyMessageId.PassiveSkillRemoveNotify, false, false);
+		Action<Entity, PlayerBattleStateChangeNotify, CombatCommon> callBack38;
+		if ((callBack38 = global::DecoratorManager.<>O.<37>__OnPlayerBattleStateChangeNotify) == null)
 		{
-			callBack38 = (global::DecoratorManager.<>O.<37>__HitNotify = new Action<Entity, HitNotify, CombatCommon>(BaseHitComponent.HitNotify));
+			callBack38 = (global::DecoratorManager.<>O.<37>__OnPlayerBattleStateChangeNotify = new Action<Entity, PlayerBattleStateChangeNotify, CombatCommon>(CharacterUnifiedStateComponent.OnPlayerBattleStateChangeNotify));
 		}
-		CombatNet.Listen<HitNotify>(callBack38, ENotifyMessageId.HitNotify, true, false);
-		Action<Entity, AiHateNotify, CombatCommon> callBack39;
-		if ((callBack39 = global::DecoratorManager.<>O.<38>__AiHateNotify) == null)
+		CombatNet.Listen<PlayerBattleStateChangeNotify>(callBack38, ENotifyMessageId.PlayerBattleStateChangeNotify, false, false);
+		Action<Entity, HitNotify, CombatCommon> callBack39;
+		if ((callBack39 = global::DecoratorManager.<>O.<38>__HitNotify) == null)
 		{
-			callBack39 = (global::DecoratorManager.<>O.<38>__AiHateNotify = new Action<Entity, AiHateNotify, CombatCommon>(CharacterAiComponent.AiHateNotify));
+			callBack39 = (global::DecoratorManager.<>O.<38>__HitNotify = new Action<Entity, HitNotify, CombatCommon>(BaseHitComponent.HitNotify));
 		}
-		CombatNet.Listen<AiHateNotify>(callBack39, ENotifyMessageId.AiHateNotify, true, false);
-		Action<Entity, BoneVisibleChangeNotify, CombatCommon> callBack40;
-		if ((callBack40 = global::DecoratorManager.<>O.<39>__BoneVisibleChangeNotify) == null)
+		CombatNet.Listen<HitNotify>(callBack39, ENotifyMessageId.HitNotify, true, false);
+		Action<Entity, AiHateNotify, CombatCommon> callBack40;
+		if ((callBack40 = global::DecoratorManager.<>O.<39>__AiHateNotify) == null)
 		{
-			callBack40 = (global::DecoratorManager.<>O.<39>__BoneVisibleChangeNotify = new Action<Entity, BoneVisibleChangeNotify, CombatCommon>(CharacterAnimationComponent.BoneVisibleChangeNotify));
+			callBack40 = (global::DecoratorManager.<>O.<39>__AiHateNotify = new Action<Entity, AiHateNotify, CombatCommon>(CharacterAiComponent.AiHateNotify));
 		}
-		CombatNet.Listen<BoneVisibleChangeNotify>(callBack40, ENotifyMessageId.BoneVisibleChangeNotify, true, false);
-		Action<Entity, AnimationGameplayTagNotify, CombatCommon> callBack41;
-		if ((callBack41 = global::DecoratorManager.<>O.<40>__AnimationGameplayTagNotify) == null)
+		CombatNet.Listen<AiHateNotify>(callBack40, ENotifyMessageId.AiHateNotify, true, false);
+		Action<Entity, BoneVisibleChangeNotify, CombatCommon> callBack41;
+		if ((callBack41 = global::DecoratorManager.<>O.<40>__BoneVisibleChangeNotify) == null)
 		{
-			callBack41 = (global::DecoratorManager.<>O.<40>__AnimationGameplayTagNotify = new Action<Entity, AnimationGameplayTagNotify, CombatCommon>(CharacterAnimationSyncComponent.AnimationGameplayTagNotify));
+			callBack41 = (global::DecoratorManager.<>O.<40>__BoneVisibleChangeNotify = new Action<Entity, BoneVisibleChangeNotify, CombatCommon>(CharacterAnimationComponent.BoneVisibleChangeNotify));
 		}
-		CombatNet.Listen<AnimationGameplayTagNotify>(callBack41, ENotifyMessageId.AnimationGameplayTagNotify, true, false);
-		Action<Entity, AnimationStateChangedNotify, CombatCommon> callBack42;
-		if ((callBack42 = global::DecoratorManager.<>O.<41>__AnimationStateChangedNotify) == null)
+		CombatNet.Listen<BoneVisibleChangeNotify>(callBack41, ENotifyMessageId.BoneVisibleChangeNotify, true, false);
+		Action<Entity, AnimationGameplayTagNotify, CombatCommon> callBack42;
+		if ((callBack42 = global::DecoratorManager.<>O.<41>__AnimationGameplayTagNotify) == null)
 		{
-			callBack42 = (global::DecoratorManager.<>O.<41>__AnimationStateChangedNotify = new Action<Entity, AnimationStateChangedNotify, CombatCommon>(CharacterAnimationSyncComponent.AnimationStateChangedNotify));
+			callBack42 = (global::DecoratorManager.<>O.<41>__AnimationGameplayTagNotify = new Action<Entity, AnimationGameplayTagNotify, CombatCommon>(CharacterAnimationSyncComponent.AnimationGameplayTagNotify));
 		}
-		CombatNet.Listen<AnimationStateChangedNotify>(callBack42, ENotifyMessageId.AnimationStateChangedNotify, true, false);
-		Action<Entity, PackAnimChangedNotify, CombatCommon> callBack43;
-		if ((callBack43 = global::DecoratorManager.<>O.<42>__PackAnimChangedNotify) == null)
+		CombatNet.Listen<AnimationGameplayTagNotify>(callBack42, ENotifyMessageId.AnimationGameplayTagNotify, true, false);
+		Action<Entity, AnimationStateChangedNotify, CombatCommon> callBack43;
+		if ((callBack43 = global::DecoratorManager.<>O.<42>__AnimationStateChangedNotify) == null)
 		{
-			callBack43 = (global::DecoratorManager.<>O.<42>__PackAnimChangedNotify = new Action<Entity, PackAnimChangedNotify, CombatCommon>(CharacterAnimationSyncComponent.PackAnimChangedNotify));
+			callBack43 = (global::DecoratorManager.<>O.<42>__AnimationStateChangedNotify = new Action<Entity, AnimationStateChangedNotify, CombatCommon>(CharacterAnimationSyncComponent.AnimationStateChangedNotify));
 		}
-		CombatNet.Listen<PackAnimChangedNotify>(callBack43, ENotifyMessageId.PackAnimChangedNotify, false, false);
-		Action<Entity, AnimationStateInitNotify, CombatCommon> callBack44;
-		if ((callBack44 = global::DecoratorManager.<>O.<43>__AnimationStateInitNotify) == null)
+		CombatNet.Listen<AnimationStateChangedNotify>(callBack43, ENotifyMessageId.AnimationStateChangedNotify, true, false);
+		Action<Entity, PackAnimChangedNotify, CombatCommon> callBack44;
+		if ((callBack44 = global::DecoratorManager.<>O.<43>__PackAnimChangedNotify) == null)
 		{
-			callBack44 = (global::DecoratorManager.<>O.<43>__AnimationStateInitNotify = new Action<Entity, AnimationStateInitNotify, CombatCommon>(CharacterAnimationSyncComponent.AnimationStateInitNotify));
+			callBack44 = (global::DecoratorManager.<>O.<43>__PackAnimChangedNotify = new Action<Entity, PackAnimChangedNotify, CombatCommon>(CharacterAnimationSyncComponent.PackAnimChangedNotify));
 		}
-		CombatNet.Listen<AnimationStateInitNotify>(callBack44, ENotifyMessageId.AnimationStateInitNotify, false, false);
-		Action<Entity, AddCombineEntitiesRelationNotify, CombatCommon> callBack45;
-		if ((callBack45 = global::DecoratorManager.<>O.<44>__AddCombineEntitiesRelationNotify) == null)
+		CombatNet.Listen<PackAnimChangedNotify>(callBack44, ENotifyMessageId.PackAnimChangedNotify, false, false);
+		Action<Entity, AnimationStateInitNotify, CombatCommon> callBack45;
+		if ((callBack45 = global::DecoratorManager.<>O.<44>__AnimationStateInitNotify) == null)
 		{
-			callBack45 = (global::DecoratorManager.<>O.<44>__AddCombineEntitiesRelationNotify = new Action<Entity, AddCombineEntitiesRelationNotify, CombatCommon>(CharacterAttachComponent.AddCombineEntitiesRelationNotify));
+			callBack45 = (global::DecoratorManager.<>O.<44>__AnimationStateInitNotify = new Action<Entity, AnimationStateInitNotify, CombatCommon>(CharacterAnimationSyncComponent.AnimationStateInitNotify));
 		}
-		CombatNet.Listen<AddCombineEntitiesRelationNotify>(callBack45, ENotifyMessageId.AddCombineEntitiesRelationNotify, true, false);
-		Action<Entity, RemoveCombineRelationNotify, CombatCommon> callBack46;
-		if ((callBack46 = global::DecoratorManager.<>O.<45>__RemoveCombineRelationNotify) == null)
+		CombatNet.Listen<AnimationStateInitNotify>(callBack45, ENotifyMessageId.AnimationStateInitNotify, false, false);
+		Action<Entity, AddCombineEntitiesRelationNotify, CombatCommon> callBack46;
+		if ((callBack46 = global::DecoratorManager.<>O.<45>__AddCombineEntitiesRelationNotify) == null)
 		{
-			callBack46 = (global::DecoratorManager.<>O.<45>__RemoveCombineRelationNotify = new Action<Entity, RemoveCombineRelationNotify, CombatCommon>(CharacterAttachComponent.RemoveCombineRelationNotify));
+			callBack46 = (global::DecoratorManager.<>O.<45>__AddCombineEntitiesRelationNotify = new Action<Entity, AddCombineEntitiesRelationNotify, CombatCommon>(CharacterAttachComponent.AddCombineEntitiesRelationNotify));
 		}
-		CombatNet.Listen<RemoveCombineRelationNotify>(callBack46, ENotifyMessageId.RemoveCombineRelationNotify, true, false);
-		Action<Entity, CaughtNotify, CombatCommon> callBack47;
-		if ((callBack47 = global::DecoratorManager.<>O.<46>__CaughtNotify) == null)
+		CombatNet.Listen<AddCombineEntitiesRelationNotify>(callBack46, ENotifyMessageId.AddCombineEntitiesRelationNotify, true, false);
+		Action<Entity, RemoveCombineRelationNotify, CombatCommon> callBack47;
+		if ((callBack47 = global::DecoratorManager.<>O.<46>__RemoveCombineRelationNotify) == null)
 		{
-			callBack47 = (global::DecoratorManager.<>O.<46>__CaughtNotify = new Action<Entity, CaughtNotify, CombatCommon>(CharacterCaughtNewComponent.CaughtNotify));
+			callBack47 = (global::DecoratorManager.<>O.<46>__RemoveCombineRelationNotify = new Action<Entity, RemoveCombineRelationNotify, CombatCommon>(CharacterAttachComponent.RemoveCombineRelationNotify));
 		}
-		CombatNet.Listen<CaughtNotify>(callBack47, ENotifyMessageId.CaughtNotify, true, false);
-		Action<Entity, LogicStateInitNotify, CombatCommon> callBack48;
-		if ((callBack48 = global::DecoratorManager.<>O.<47>__LogicStateInitNotify) == null)
+		CombatNet.Listen<RemoveCombineRelationNotify>(callBack47, ENotifyMessageId.RemoveCombineRelationNotify, true, false);
+		Action<Entity, CaughtNotify, CombatCommon> callBack48;
+		if ((callBack48 = global::DecoratorManager.<>O.<47>__CaughtNotify) == null)
 		{
-			callBack48 = (global::DecoratorManager.<>O.<47>__LogicStateInitNotify = new Action<Entity, LogicStateInitNotify, CombatCommon>(CharacterLogicStateSyncComponent.LogicStateInitNotify));
+			callBack48 = (global::DecoratorManager.<>O.<47>__CaughtNotify = new Action<Entity, CaughtNotify, CombatCommon>(CharacterCaughtNewComponent.CaughtNotify));
 		}
-		CombatNet.Listen<LogicStateInitNotify>(callBack48, ENotifyMessageId.LogicStateInitNotify, true, false);
-		Action<Entity, SwitchLogicStateNotify, CombatCommon> callBack49;
-		if ((callBack49 = global::DecoratorManager.<>O.<48>__SwitchLogicStateNotify) == null)
+		CombatNet.Listen<CaughtNotify>(callBack48, ENotifyMessageId.CaughtNotify, true, false);
+		Action<Entity, LogicStateInitNotify, CombatCommon> callBack49;
+		if ((callBack49 = global::DecoratorManager.<>O.<48>__LogicStateInitNotify) == null)
 		{
-			callBack49 = (global::DecoratorManager.<>O.<48>__SwitchLogicStateNotify = new Action<Entity, SwitchLogicStateNotify, CombatCommon>(CharacterLogicStateSyncComponent.SwitchLogicStateNotify));
+			callBack49 = (global::DecoratorManager.<>O.<48>__LogicStateInitNotify = new Action<Entity, LogicStateInitNotify, CombatCommon>(CharacterLogicStateSyncComponent.LogicStateInitNotify));
 		}
-		CombatNet.Listen<SwitchLogicStateNotify>(callBack49, ENotifyMessageId.SwitchLogicStateNotify, true, false);
-		Action<Entity, PartUpdateNotify, CombatCommon> callBack50;
-		if ((callBack50 = global::DecoratorManager.<>O.<49>__PartUpdateNotify) == null)
+		CombatNet.Listen<LogicStateInitNotify>(callBack49, ENotifyMessageId.LogicStateInitNotify, true, false);
+		Action<Entity, SwitchLogicStateNotify, CombatCommon> callBack50;
+		if ((callBack50 = global::DecoratorManager.<>O.<49>__SwitchLogicStateNotify) == null)
 		{
-			callBack50 = (global::DecoratorManager.<>O.<49>__PartUpdateNotify = new Action<Entity, PartUpdateNotify, CombatCommon>(CharacterPartComponent.PartUpdateNotify));
+			callBack50 = (global::DecoratorManager.<>O.<49>__SwitchLogicStateNotify = new Action<Entity, SwitchLogicStateNotify, CombatCommon>(CharacterLogicStateSyncComponent.SwitchLogicStateNotify));
 		}
-		CombatNet.Listen<PartUpdateNotify>(callBack50, ENotifyMessageId.PartUpdateNotify, false, false);
-		Action<Entity, PartComponentInitNotify, CombatCommon> callBack51;
-		if ((callBack51 = global::DecoratorManager.<>O.<50>__PartComponentInitNotify) == null)
+		CombatNet.Listen<SwitchLogicStateNotify>(callBack50, ENotifyMessageId.SwitchLogicStateNotify, true, false);
+		Action<Entity, PartUpdateNotify, CombatCommon> callBack51;
+		if ((callBack51 = global::DecoratorManager.<>O.<50>__PartUpdateNotify) == null)
 		{
-			callBack51 = (global::DecoratorManager.<>O.<50>__PartComponentInitNotify = new Action<Entity, PartComponentInitNotify, CombatCommon>(CharacterPartComponent.PartComponentInitNotify));
+			callBack51 = (global::DecoratorManager.<>O.<50>__PartUpdateNotify = new Action<Entity, PartUpdateNotify, CombatCommon>(CharacterPartComponent.PartUpdateNotify));
 		}
-		CombatNet.Listen<PartComponentInitNotify>(callBack51, ENotifyMessageId.PartComponentInitNotify, false, false);
-		Action<Entity, ShieldUpdateNotify, CombatCommon> callBack52;
-		if ((callBack52 = global::DecoratorManager.<>O.<51>__OnShieldUpdateNotify) == null)
+		CombatNet.Listen<PartUpdateNotify>(callBack51, ENotifyMessageId.PartUpdateNotify, false, false);
+		Action<Entity, PartComponentInitNotify, CombatCommon> callBack52;
+		if ((callBack52 = global::DecoratorManager.<>O.<51>__PartComponentInitNotify) == null)
 		{
-			callBack52 = (global::DecoratorManager.<>O.<51>__OnShieldUpdateNotify = new Action<Entity, ShieldUpdateNotify, CombatCommon>(CharacterShieldComponent.OnShieldUpdateNotify));
+			callBack52 = (global::DecoratorManager.<>O.<51>__PartComponentInitNotify = new Action<Entity, PartComponentInitNotify, CombatCommon>(CharacterPartComponent.PartComponentInitNotify));
 		}
-		CombatNet.Listen<ShieldUpdateNotify>(callBack52, ENotifyMessageId.ShieldUpdateNotify, false, false);
-		Action<Entity, ChangeStateNotify, CombatCommon> callBack53;
-		if ((callBack53 = global::DecoratorManager.<>O.<52>__ChangeStateNotify) == null)
+		CombatNet.Listen<PartComponentInitNotify>(callBack52, ENotifyMessageId.PartComponentInitNotify, false, false);
+		Action<Entity, ShieldUpdateNotify, CombatCommon> callBack53;
+		if ((callBack53 = global::DecoratorManager.<>O.<52>__OnShieldUpdateNotify) == null)
 		{
-			callBack53 = (global::DecoratorManager.<>O.<52>__ChangeStateNotify = new Action<Entity, ChangeStateNotify, CombatCommon>(CharacterStateMachineNewComponent.ChangeStateNotify));
+			callBack53 = (global::DecoratorManager.<>O.<52>__OnShieldUpdateNotify = new Action<Entity, ShieldUpdateNotify, CombatCommon>(CharacterShieldComponent.OnShieldUpdateNotify));
 		}
-		CombatNet.Listen<ChangeStateNotify>(callBack53, ENotifyMessageId.ChangeStateNotify, true, false);
-		Action<Entity, ChangeStateConfirmNotify, CombatCommon> callBack54;
-		if ((callBack54 = global::DecoratorManager.<>O.<53>__ChangeStateConfirmNotify) == null)
+		CombatNet.Listen<ShieldUpdateNotify>(callBack53, ENotifyMessageId.ShieldUpdateNotify, false, false);
+		Action<Entity, ChangeStateNotify, CombatCommon> callBack54;
+		if ((callBack54 = global::DecoratorManager.<>O.<53>__ChangeStateNotify) == null)
 		{
-			callBack54 = (global::DecoratorManager.<>O.<53>__ChangeStateConfirmNotify = new Action<Entity, ChangeStateConfirmNotify, CombatCommon>(CharacterStateMachineNewComponent.ChangeStateConfirmNotify));
+			callBack54 = (global::DecoratorManager.<>O.<53>__ChangeStateNotify = new Action<Entity, ChangeStateNotify, CombatCommon>(CharacterStateMachineNewComponent.ChangeStateNotify));
 		}
-		CombatNet.Listen<ChangeStateConfirmNotify>(callBack54, ENotifyMessageId.ChangeStateConfirmNotify, true, false);
-		Action<Entity, FsmResetNotify, CombatCommon> callBack55;
-		if ((callBack55 = global::DecoratorManager.<>O.<54>__FsmResetNotify) == null)
+		CombatNet.Listen<ChangeStateNotify>(callBack54, ENotifyMessageId.ChangeStateNotify, true, false);
+		Action<Entity, ChangeStateConfirmNotify, CombatCommon> callBack55;
+		if ((callBack55 = global::DecoratorManager.<>O.<54>__ChangeStateConfirmNotify) == null)
 		{
-			callBack55 = (global::DecoratorManager.<>O.<54>__FsmResetNotify = new Action<Entity, FsmResetNotify, CombatCommon>(CharacterStateMachineNewComponent.FsmResetNotify));
+			callBack55 = (global::DecoratorManager.<>O.<54>__ChangeStateConfirmNotify = new Action<Entity, ChangeStateConfirmNotify, CombatCommon>(CharacterStateMachineNewComponent.ChangeStateConfirmNotify));
 		}
-		CombatNet.Listen<FsmResetNotify>(callBack55, ENotifyMessageId.FsmResetNotify, true, false);
-		Action<Entity, FsmBlackboardNotify, CombatCommon> callBack56;
-		if ((callBack56 = global::DecoratorManager.<>O.<55>__FsmBlackboardNotify) == null)
+		CombatNet.Listen<ChangeStateConfirmNotify>(callBack55, ENotifyMessageId.ChangeStateConfirmNotify, true, false);
+		Action<Entity, FsmResetNotify, CombatCommon> callBack56;
+		if ((callBack56 = global::DecoratorManager.<>O.<55>__FsmResetNotify) == null)
 		{
-			callBack56 = (global::DecoratorManager.<>O.<55>__FsmBlackboardNotify = new Action<Entity, FsmBlackboardNotify, CombatCommon>(CharacterStateMachineNewComponent.FsmBlackboardNotify));
+			callBack56 = (global::DecoratorManager.<>O.<55>__FsmResetNotify = new Action<Entity, FsmResetNotify, CombatCommon>(CharacterStateMachineNewComponent.FsmResetNotify));
 		}
-		CombatNet.Listen<FsmBlackboardNotify>(callBack56, ENotifyMessageId.FsmBlackboardNotify, true, false);
-		Action<Entity, FsmCustomBlackboardNotify, CombatCommon> callBack57;
-		if ((callBack57 = global::DecoratorManager.<>O.<56>__FsmCustomBlackboardNotify) == null)
+		CombatNet.Listen<FsmResetNotify>(callBack56, ENotifyMessageId.FsmResetNotify, true, false);
+		Action<Entity, FsmBlackboardNotify, CombatCommon> callBack57;
+		if ((callBack57 = global::DecoratorManager.<>O.<56>__FsmBlackboardNotify) == null)
 		{
-			callBack57 = (global::DecoratorManager.<>O.<56>__FsmCustomBlackboardNotify = new Action<Entity, FsmCustomBlackboardNotify, CombatCommon>(CharacterStateMachineNewComponent.FsmCustomBlackboardNotify));
+			callBack57 = (global::DecoratorManager.<>O.<56>__FsmBlackboardNotify = new Action<Entity, FsmBlackboardNotify, CombatCommon>(CharacterStateMachineNewComponent.FsmBlackboardNotify));
 		}
-		CombatNet.Listen<FsmCustomBlackboardNotify>(callBack57, ENotifyMessageId.FsmCustomBlackboardNotify, true, false);
-		Action<Entity, FsmMontageDurationNotify, CombatCommon> callBack58;
-		if ((callBack58 = global::DecoratorManager.<>O.<57>__FsmMontageDurationNotify) == null)
+		CombatNet.Listen<FsmBlackboardNotify>(callBack57, ENotifyMessageId.FsmBlackboardNotify, true, false);
+		Action<Entity, FsmCustomBlackboardNotify, CombatCommon> callBack58;
+		if ((callBack58 = global::DecoratorManager.<>O.<57>__FsmCustomBlackboardNotify) == null)
 		{
-			callBack58 = (global::DecoratorManager.<>O.<57>__FsmMontageDurationNotify = new Action<Entity, FsmMontageDurationNotify, CombatCommon>(CharacterStateMachineNewComponent.FsmMontageDurationNotify));
+			callBack58 = (global::DecoratorManager.<>O.<57>__FsmCustomBlackboardNotify = new Action<Entity, FsmCustomBlackboardNotify, CombatCommon>(CharacterStateMachineNewComponent.FsmCustomBlackboardNotify));
 		}
-		CombatNet.Listen<FsmMontageDurationNotify>(callBack58, ENotifyMessageId.FsmMontageDurationNotify, true, false);
-		Action<Entity, VisionTriggerNotify, CombatCommon> callBack59;
-		if ((callBack59 = global::DecoratorManager.<>O.<58>__VisionTriggerNotify) == null)
+		CombatNet.Listen<FsmCustomBlackboardNotify>(callBack58, ENotifyMessageId.FsmCustomBlackboardNotify, true, false);
+		Action<Entity, FsmMontageDurationNotify, CombatCommon> callBack59;
+		if ((callBack59 = global::DecoratorManager.<>O.<58>__FsmMontageDurationNotify) == null)
 		{
-			callBack59 = (global::DecoratorManager.<>O.<58>__VisionTriggerNotify = new Action<Entity, VisionTriggerNotify, CombatCommon>(CharacterVisionComponent.VisionTriggerNotify));
+			callBack59 = (global::DecoratorManager.<>O.<58>__FsmMontageDurationNotify = new Action<Entity, FsmMontageDurationNotify, CombatCommon>(CharacterStateMachineNewComponent.FsmMontageDurationNotify));
 		}
-		CombatNet.Listen<VisionTriggerNotify>(callBack59, ENotifyMessageId.VisionTriggerNotify, true, false);
-		Action<Entity, DrownNotify, CombatCommon> callBack60;
-		if ((callBack60 = global::DecoratorManager.<>O.<59>__DrownNotify) == null)
+		CombatNet.Listen<FsmMontageDurationNotify>(callBack59, ENotifyMessageId.FsmMontageDurationNotify, true, false);
+		Action<Entity, VisionTriggerNotify, CombatCommon> callBack60;
+		if ((callBack60 = global::DecoratorManager.<>O.<59>__VisionTriggerNotify) == null)
 		{
-			callBack60 = (global::DecoratorManager.<>O.<59>__DrownNotify = new Action<Entity, DrownNotify, CombatCommon>(RoleDeathComponent.DrownNotify));
+			callBack60 = (global::DecoratorManager.<>O.<59>__VisionTriggerNotify = new Action<Entity, VisionTriggerNotify, CombatCommon>(CharacterVisionComponent.VisionTriggerNotify));
 		}
-		CombatNet.Listen<DrownNotify>(callBack60, ENotifyMessageId.DrownNotify, true, false);
-		Action<Entity, ExecuteQteNotify, CombatCommon> callBack61;
-		if ((callBack61 = global::DecoratorManager.<>O.<60>__ExecuteQteNotify) == null)
+		CombatNet.Listen<VisionTriggerNotify>(callBack60, ENotifyMessageId.VisionTriggerNotify, true, false);
+		Action<Entity, DrownNotify, CombatCommon> callBack61;
+		if ((callBack61 = global::DecoratorManager.<>O.<60>__DrownNotify) == null)
 		{
-			callBack61 = (global::DecoratorManager.<>O.<60>__ExecuteQteNotify = new Action<Entity, ExecuteQteNotify, CombatCommon>(RoleQteComponent.ExecuteQteNotify));
+			callBack61 = (global::DecoratorManager.<>O.<60>__DrownNotify = new Action<Entity, DrownNotify, CombatCommon>(RoleDeathComponent.DrownNotify));
 		}
-		CombatNet.Listen<ExecuteQteNotify>(callBack61, ENotifyMessageId.ExecuteQteNotify, true, false);
-		Action<Entity, SquadPropChangedNotify, CombatCommon> callBack62;
-		if ((callBack62 = global::DecoratorManager.<>O.<61>__SquadPropChangedNotify) == null)
+		CombatNet.Listen<DrownNotify>(callBack61, ENotifyMessageId.DrownNotify, true, false);
+		Action<Entity, ExecuteQteNotify, CombatCommon> callBack62;
+		if ((callBack62 = global::DecoratorManager.<>O.<61>__ExecuteQteNotify) == null)
 		{
-			callBack62 = (global::DecoratorManager.<>O.<61>__SquadPropChangedNotify = new Action<Entity, SquadPropChangedNotify, CombatCommon>(SquadPropComponent.SquadPropChangedNotify));
+			callBack62 = (global::DecoratorManager.<>O.<61>__ExecuteQteNotify = new Action<Entity, ExecuteQteNotify, CombatCommon>(RoleQteComponent.ExecuteQteNotify));
 		}
-		CombatNet.Listen<SquadPropChangedNotify>(callBack62, ENotifyMessageId.SquadPropChangedNotify, true, false);
-		Action<Entity, MotorSummonAndRideNotify, CombatCommon> callBack63;
-		if ((callBack63 = global::DecoratorManager.<>O.<62>__MotorSummonAndRideNotify) == null)
+		CombatNet.Listen<ExecuteQteNotify>(callBack62, ENotifyMessageId.ExecuteQteNotify, true, false);
+		Action<Entity, SquadPropChangedNotify, CombatCommon> callBack63;
+		if ((callBack63 = global::DecoratorManager.<>O.<62>__SquadPropChangedNotify) == null)
 		{
-			callBack63 = (global::DecoratorManager.<>O.<62>__MotorSummonAndRideNotify = new Action<Entity, MotorSummonAndRideNotify, CombatCommon>(VehicleController.MotorSummonAndRideNotify));
+			callBack63 = (global::DecoratorManager.<>O.<62>__SquadPropChangedNotify = new Action<Entity, SquadPropChangedNotify, CombatCommon>(SquadPropComponent.SquadPropChangedNotify));
 		}
-		CombatNet.Listen<MotorSummonAndRideNotify>(callBack63, ENotifyMessageId.MotorSummonAndRideNotify, true, false);
-		Action<Entity, EntityLivingStatusNotify, CombatCommon> callBack64;
-		if ((callBack64 = global::DecoratorManager.<>O.<63>__ExecuteEntityLivingStatus) == null)
+		CombatNet.Listen<SquadPropChangedNotify>(callBack63, ENotifyMessageId.SquadPropChangedNotify, true, false);
+		Action<Entity, MotorSummonAndRideNotify, CombatCommon> callBack64;
+		if ((callBack64 = global::DecoratorManager.<>O.<63>__MotorSummonAndRideNotify) == null)
 		{
-			callBack64 = (global::DecoratorManager.<>O.<63>__ExecuteEntityLivingStatus = new Action<Entity, EntityLivingStatusNotify, CombatCommon>(BattleLogicController.ExecuteEntityLivingStatus));
+			callBack64 = (global::DecoratorManager.<>O.<63>__MotorSummonAndRideNotify = new Action<Entity, MotorSummonAndRideNotify, CombatCommon>(VehicleController.MotorSummonAndRideNotify));
 		}
-		CombatNet.Listen<EntityLivingStatusNotify>(callBack64, ENotifyMessageId.EntityLivingStatusNotify, true, false);
-		Action<Entity, ModifyEntityCampNotify, CombatCommon> callBack65;
-		if ((callBack65 = global::DecoratorManager.<>O.<64>__OnModifyEntityCampNotify) == null)
+		CombatNet.Listen<MotorSummonAndRideNotify>(callBack64, ENotifyMessageId.MotorSummonAndRideNotify, true, false);
+		Action<Entity, EntityLivingStatusNotify, CombatCommon> callBack65;
+		if ((callBack65 = global::DecoratorManager.<>O.<64>__ExecuteEntityLivingStatus) == null)
 		{
-			callBack65 = (global::DecoratorManager.<>O.<64>__OnModifyEntityCampNotify = new Action<Entity, ModifyEntityCampNotify, CombatCommon>(CreatureController.OnModifyEntityCampNotify));
+			callBack65 = (global::DecoratorManager.<>O.<64>__ExecuteEntityLivingStatus = new Action<Entity, EntityLivingStatusNotify, CombatCommon>(BattleLogicController.ExecuteEntityLivingStatus));
 		}
-		CombatNet.Listen<ModifyEntityCampNotify>(callBack65, ENotifyMessageId.ModifyEntityCampNotify, false, false);
-		Func<Entity, UseSkillNotify, CombatCommon, bool> callBack66;
-		if ((callBack66 = global::DecoratorManager.<>O.<65>__PreUseSkillNotify) == null)
+		CombatNet.Listen<EntityLivingStatusNotify>(callBack65, ENotifyMessageId.EntityLivingStatusNotify, true, false);
+		Action<Entity, ModifyEntityCampNotify, CombatCommon> callBack66;
+		if ((callBack66 = global::DecoratorManager.<>O.<65>__OnModifyEntityCampNotify) == null)
 		{
-			callBack66 = (global::DecoratorManager.<>O.<65>__PreUseSkillNotify = new Func<Entity, UseSkillNotify, CombatCommon, bool>(SkillMessageController.PreUseSkillNotify));
+			callBack66 = (global::DecoratorManager.<>O.<65>__OnModifyEntityCampNotify = new Action<Entity, ModifyEntityCampNotify, CombatCommon>(CreatureController.OnModifyEntityCampNotify));
 		}
-		CombatNet.Preprocess<UseSkillNotify>(callBack66, ENotifyMessageId.UseSkillNotify);
-		Func<Entity, HitNotify, CombatCommon, bool> callBack67;
-		if ((callBack67 = global::DecoratorManager.<>O.<66>__PreHitNotify) == null)
+		CombatNet.Listen<ModifyEntityCampNotify>(callBack66, ENotifyMessageId.ModifyEntityCampNotify, false, false);
+		Func<Entity, UseSkillNotify, CombatCommon, bool> callBack67;
+		if ((callBack67 = global::DecoratorManager.<>O.<66>__PreUseSkillNotify) == null)
 		{
-			callBack67 = (global::DecoratorManager.<>O.<66>__PreHitNotify = new Func<Entity, HitNotify, CombatCommon, bool>(BaseHitComponent.PreHitNotify));
+			callBack67 = (global::DecoratorManager.<>O.<66>__PreUseSkillNotify = new Func<Entity, UseSkillNotify, CombatCommon, bool>(SkillMessageController.PreUseSkillNotify));
 		}
-		CombatNet.Preprocess<HitNotify>(callBack67, ENotifyMessageId.HitNotify);
+		CombatNet.Preprocess<UseSkillNotify>(callBack67, ENotifyMessageId.UseSkillNotify);
+		Func<Entity, HitNotify, CombatCommon, bool> callBack68;
+		if ((callBack68 = global::DecoratorManager.<>O.<67>__PreHitNotify) == null)
+		{
+			callBack68 = (global::DecoratorManager.<>O.<67>__PreHitNotify = new Func<Entity, HitNotify, CombatCommon, bool>(BaseHitComponent.PreHitNotify));
+		}
+		CombatNet.Preprocess<HitNotify>(callBack68, ENotifyMessageId.HitNotify);
 		return true;
 	}
 
-	// Token: 0x020099CA RID: 39370
+	// Token: 0x02008BE4 RID: 35812
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04030E51 RID: 200273
+		// Token: 0x0402C4D4 RID: 181460
 		[Nullable(new byte[]
 		{
 			0,
@@ -432,7 +438,7 @@ public class DecoratorManager
 		})]
 		public static Action<Entity, AiInformationNotify, CombatCommon> <0>__AiInformationNotify;
 
-		// Token: 0x04030E52 RID: 200274
+		// Token: 0x0402C4D5 RID: 181461
 		[Nullable(new byte[]
 		{
 			0,
@@ -442,7 +448,7 @@ public class DecoratorManager
 		})]
 		public static Action<Entity, AiBlackboardCdNotify, CombatCommon> <1>__AiInformationS;
 
-		// Token: 0x04030E53 RID: 200275
+		// Token: 0x0402C4D6 RID: 181462
 		[Nullable(new byte[]
 		{
 			0,
@@ -452,7 +458,7 @@ public class DecoratorManager
 		})]
 		public static Action<Entity, NewLinkNotify, CombatCommon> <2>__OnNewLinkStateNotify;
 
-		// Token: 0x04030E54 RID: 200276
+		// Token: 0x0402C4D7 RID: 181463
 		[Nullable(new byte[]
 		{
 			0,
@@ -462,7 +468,7 @@ public class DecoratorManager
 		})]
 		public static Action<Entity, EntityIsVisibleNotify, CombatCommon> <3>__EntityIsVisibleNotify;
 
-		// Token: 0x04030E55 RID: 200277
+		// Token: 0x0402C4D8 RID: 181464
 		[Nullable(new byte[]
 		{
 			0,
@@ -472,7 +478,7 @@ public class DecoratorManager
 		})]
 		public static Action<Entity, ActorVisibleNotify, CombatCommon> <4>__ActorIsVisibleNotify;
 
-		// Token: 0x04030E56 RID: 200278
+		// Token: 0x0402C4D9 RID: 181465
 		[Nullable(new byte[]
 		{
 			0,
@@ -482,7 +488,7 @@ public class DecoratorManager
 		})]
 		public static Action<Entity, EntityLoadCompleteNotify, CombatCommon> <5>__EntityLoadCompleteNotify;
 
-		// Token: 0x04030E57 RID: 200279
+		// Token: 0x0402C4DA RID: 181466
 		[Nullable(new byte[]
 		{
 			0,
@@ -492,7 +498,7 @@ public class DecoratorManager
 		})]
 		public static Action<Entity, PlayerRebackSceneNotify, CombatCommon> <6>__PlayerRebackSceneNotify;
 
-		// Token: 0x04030E58 RID: 200280
+		// Token: 0x0402C4DB RID: 181467
 		[Nullable(new byte[]
 		{
 			0,
@@ -502,7 +508,7 @@ public class DecoratorManager
 		})]
 		public static Action<Entity, MaterialNotify, CombatCommon> <7>__MaterialNotify;
 
-		// Token: 0x04030E59 RID: 200281
+		// Token: 0x0402C4DC RID: 181468
 		[Nullable(new byte[]
 		{
 			0,
@@ -512,7 +518,7 @@ public class DecoratorManager
 		})]
 		public static Action<Entity, EntityStaticHookMoveNotify, CombatCommon> <8>__OnHookMoveNotify;
 
-		// Token: 0x04030E5A RID: 200282
+		// Token: 0x0402C4DD RID: 181469
 		[Nullable(new byte[]
 		{
 			0,
@@ -522,7 +528,7 @@ public class DecoratorManager
 		})]
 		public static Action<Entity, UseSkillNotify, CombatCommon> <9>__UseSkillNotify;
 
-		// Token: 0x04030E5B RID: 200283
+		// Token: 0x0402C4DE RID: 181470
 		[Nullable(new byte[]
 		{
 			0,
@@ -532,7 +538,7 @@ public class DecoratorManager
 		})]
 		public static Action<Entity, SkillNotify, CombatCommon> <10>__SkillNotify;
 
-		// Token: 0x04030E5C RID: 200284
+		// Token: 0x0402C4DF RID: 181471
 		[Nullable(new byte[]
 		{
 			0,
@@ -542,7 +548,7 @@ public class DecoratorManager
 		})]
 		public static Action<Entity, EndSkillNotify, CombatCommon> <11>__EndSkillNotify;
 
-		// Token: 0x04030E5D RID: 200285
+		// Token: 0x0402C4E0 RID: 181472
 		[Nullable(new byte[]
 		{
 			0,
@@ -550,9 +556,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, CreateBulletNotify, CombatCommon> <12>__CreateBulletNotify;
+		public static Action<Entity, DamageShowNotify, CombatCommon> <12>__DamageShowNotify;
 
-		// Token: 0x04030E5E RID: 200286
+		// Token: 0x0402C4E1 RID: 181473
 		[Nullable(new byte[]
 		{
 			0,
@@ -560,9 +566,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, DestroyBulletNotify, CombatCommon> <13>__DestroyBulletNotify;
+		public static Action<Entity, CreateBulletNotify, CombatCommon> <13>__CreateBulletNotify;
 
-		// Token: 0x04030E5F RID: 200287
+		// Token: 0x0402C4E2 RID: 181474
 		[Nullable(new byte[]
 		{
 			0,
@@ -570,9 +576,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, ModifyBulletParamsNotify, CombatCommon> <14>__ModifyBulletParamsNotify;
+		public static Action<Entity, DestroyBulletNotify, CombatCommon> <14>__DestroyBulletNotify;
 
-		// Token: 0x04030E60 RID: 200288
+		// Token: 0x0402C4E3 RID: 181475
 		[Nullable(new byte[]
 		{
 			0,
@@ -580,9 +586,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, ApplyGameplayEffectNotify, CombatCommon> <15>__BroadcastAddBuffNotify;
+		public static Action<Entity, ModifyBulletParamsNotify, CombatCommon> <15>__ModifyBulletParamsNotify;
 
-		// Token: 0x04030E61 RID: 200289
+		// Token: 0x0402C4E4 RID: 181476
 		[Nullable(new byte[]
 		{
 			0,
@@ -590,9 +596,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, ApplyBuffFailedNotify, CombatCommon> <16>__BroadcastAddBuffFailedNotify;
+		public static Action<Entity, ApplyGameplayEffectNotify, CombatCommon> <16>__BroadcastAddBuffNotify;
 
-		// Token: 0x04030E62 RID: 200290
+		// Token: 0x0402C4E5 RID: 181477
 		[Nullable(new byte[]
 		{
 			0,
@@ -600,9 +606,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, BuffStackCountNotify, CombatCommon> <17>__BroadcastBuffStackChangedNotify;
+		public static Action<Entity, ApplyBuffFailedNotify, CombatCommon> <17>__BroadcastAddBuffFailedNotify;
 
-		// Token: 0x04030E63 RID: 200291
+		// Token: 0x0402C4E6 RID: 181478
 		[Nullable(new byte[]
 		{
 			0,
@@ -610,9 +616,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, RemoveGameplayEffectNotify, CombatCommon> <18>__BroadcastRemoveBuffNotify;
+		public static Action<Entity, BuffStackCountNotify, CombatCommon> <18>__BroadcastBuffStackChangedNotify;
 
-		// Token: 0x04030E64 RID: 200292
+		// Token: 0x0402C4E7 RID: 181479
 		[Nullable(new byte[]
 		{
 			0,
@@ -620,9 +626,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, BuffDurationNotify, CombatCommon> <19>__BuffDurationNotify;
+		public static Action<Entity, RemoveGameplayEffectNotify, CombatCommon> <19>__BroadcastRemoveBuffNotify;
 
-		// Token: 0x04030E65 RID: 200293
+		// Token: 0x0402C4E8 RID: 181480
 		[Nullable(new byte[]
 		{
 			0,
@@ -630,9 +636,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, ApplyBuffS2cRequestNotify, CombatCommon> <20>__OrderAddBuffS2cNotify;
+		public static Action<Entity, BuffDurationNotify, CombatCommon> <20>__BuffDurationNotify;
 
-		// Token: 0x04030E66 RID: 200294
+		// Token: 0x0402C4E9 RID: 181481
 		[Nullable(new byte[]
 		{
 			0,
@@ -640,9 +646,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, RemoveBuffS2cRequestNotify, CombatCommon> <21>__OrderRemoveBuffS2cNotify;
+		public static Action<Entity, ApplyBuffS2cRequestNotify, CombatCommon> <21>__OrderAddBuffS2cNotify;
 
-		// Token: 0x04030E67 RID: 200295
+		// Token: 0x0402C4EA RID: 181482
 		[Nullable(new byte[]
 		{
 			0,
@@ -650,9 +656,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, RemoveBuffByIdS2cRequestNotify, CombatCommon> <22>__OrderRemoveBuffByIdS2cNotify;
+		public static Action<Entity, RemoveBuffS2cRequestNotify, CombatCommon> <22>__OrderRemoveBuffS2cNotify;
 
-		// Token: 0x04030E68 RID: 200296
+		// Token: 0x0402C4EB RID: 181483
 		[Nullable(new byte[]
 		{
 			0,
@@ -660,9 +666,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, RemoveBuffByServerIdS2cRequestNotify, CombatCommon> <23>__OrderRemoveBuffByServerIdNotify;
+		public static Action<Entity, RemoveBuffByIdS2cRequestNotify, CombatCommon> <23>__OrderRemoveBuffByIdS2cNotify;
 
-		// Token: 0x04030E69 RID: 200297
+		// Token: 0x0402C4EC RID: 181484
 		[Nullable(new byte[]
 		{
 			0,
@@ -670,9 +676,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, OrderApplyBuffNotify, CombatCommon> <24>__OrderAddBuffNotify;
+		public static Action<Entity, RemoveBuffByServerIdS2cRequestNotify, CombatCommon> <24>__OrderRemoveBuffByServerIdNotify;
 
-		// Token: 0x04030E6A RID: 200298
+		// Token: 0x0402C4ED RID: 181485
 		[Nullable(new byte[]
 		{
 			0,
@@ -680,9 +686,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, OrderRemoveBuffNotify, CombatCommon> <25>__OrderRemoveBuffNotify;
+		public static Action<Entity, OrderApplyBuffNotify, CombatCommon> <25>__OrderAddBuffNotify;
 
-		// Token: 0x04030E6B RID: 200299
+		// Token: 0x0402C4EE RID: 181486
 		[Nullable(new byte[]
 		{
 			0,
@@ -690,9 +696,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, OrderRemoveBuffByTagsNotify, CombatCommon> <26>__OrderRemoveBuffByTagsNotify;
+		public static Action<Entity, OrderRemoveBuffNotify, CombatCommon> <26>__OrderRemoveBuffNotify;
 
-		// Token: 0x04030E6C RID: 200300
+		// Token: 0x0402C4EF RID: 181487
 		[Nullable(new byte[]
 		{
 			0,
@@ -700,9 +706,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, ActivateBuffNotify, CombatCommon> <27>__BroadcastActivateBuffNotify;
+		public static Action<Entity, OrderRemoveBuffByTagsNotify, CombatCommon> <27>__OrderRemoveBuffByTagsNotify;
 
-		// Token: 0x04030E6D RID: 200301
+		// Token: 0x0402C4F0 RID: 181488
 		[Nullable(new byte[]
 		{
 			0,
@@ -710,9 +716,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, TransformBuffStackNotify, CombatCommon> <28>__BroadcastTransformBuffStackNotify;
+		public static Action<Entity, ActivateBuffNotify, CombatCommon> <28>__BroadcastActivateBuffNotify;
 
-		// Token: 0x04030E6E RID: 200302
+		// Token: 0x0402C4F1 RID: 181489
 		[Nullable(new byte[]
 		{
 			0,
@@ -720,9 +726,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, DamageExecuteNotify, CombatCommon> <29>__OnDamageExecuteNotify;
+		public static Action<Entity, TransformBuffStackNotify, CombatCommon> <29>__BroadcastTransformBuffStackNotify;
 
-		// Token: 0x04030E6F RID: 200303
+		// Token: 0x0402C4F2 RID: 181490
 		[Nullable(new byte[]
 		{
 			0,
@@ -730,9 +736,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, GameplayCueNotify, CombatCommon> <30>__GameplayCueNotify;
+		public static Action<Entity, DamageExecuteNotify, CombatCommon> <30>__OnDamageExecuteNotify;
 
-		// Token: 0x04030E70 RID: 200304
+		// Token: 0x0402C4F3 RID: 181491
 		[Nullable(new byte[]
 		{
 			0,
@@ -740,9 +746,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, AttributeChangedNotify, CombatCommon> <31>__AttributeChangedNotify;
+		public static Action<Entity, GameplayCueNotify, CombatCommon> <31>__GameplayCueNotify;
 
-		// Token: 0x04030E71 RID: 200305
+		// Token: 0x0402C4F4 RID: 181492
 		[Nullable(new byte[]
 		{
 			0,
@@ -750,9 +756,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, RecoverPropChangedNotify, CombatCommon> <32>__RecoverPropChangedNotify;
+		public static Action<Entity, AttributeChangedNotify, CombatCommon> <32>__AttributeChangedNotify;
 
-		// Token: 0x04030E72 RID: 200306
+		// Token: 0x0402C4F5 RID: 181493
 		[Nullable(new byte[]
 		{
 			0,
@@ -760,9 +766,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, DamageRecordNotify, CombatCommon> <33>__OnDamageRecordNotify;
+		public static Action<Entity, RecoverPropChangedNotify, CombatCommon> <33>__RecoverPropChangedNotify;
 
-		// Token: 0x04030E73 RID: 200307
+		// Token: 0x0402C4F6 RID: 181494
 		[Nullable(new byte[]
 		{
 			0,
@@ -770,9 +776,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, PassiveSkillAddNotify, CombatCommon> <34>__PassiveSkillAddNotify;
+		public static Action<Entity, DamageRecordNotify, CombatCommon> <34>__OnDamageRecordNotify;
 
-		// Token: 0x04030E74 RID: 200308
+		// Token: 0x0402C4F7 RID: 181495
 		[Nullable(new byte[]
 		{
 			0,
@@ -780,9 +786,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, PassiveSkillRemoveNotify, CombatCommon> <35>__PassiveSkillRemoveNotify;
+		public static Action<Entity, PassiveSkillAddNotify, CombatCommon> <35>__PassiveSkillAddNotify;
 
-		// Token: 0x04030E75 RID: 200309
+		// Token: 0x0402C4F8 RID: 181496
 		[Nullable(new byte[]
 		{
 			0,
@@ -790,9 +796,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, PlayerBattleStateChangeNotify, CombatCommon> <36>__OnPlayerBattleStateChangeNotify;
+		public static Action<Entity, PassiveSkillRemoveNotify, CombatCommon> <36>__PassiveSkillRemoveNotify;
 
-		// Token: 0x04030E76 RID: 200310
+		// Token: 0x0402C4F9 RID: 181497
 		[Nullable(new byte[]
 		{
 			0,
@@ -800,9 +806,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, HitNotify, CombatCommon> <37>__HitNotify;
+		public static Action<Entity, PlayerBattleStateChangeNotify, CombatCommon> <37>__OnPlayerBattleStateChangeNotify;
 
-		// Token: 0x04030E77 RID: 200311
+		// Token: 0x0402C4FA RID: 181498
 		[Nullable(new byte[]
 		{
 			0,
@@ -810,9 +816,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, AiHateNotify, CombatCommon> <38>__AiHateNotify;
+		public static Action<Entity, HitNotify, CombatCommon> <38>__HitNotify;
 
-		// Token: 0x04030E78 RID: 200312
+		// Token: 0x0402C4FB RID: 181499
 		[Nullable(new byte[]
 		{
 			0,
@@ -820,9 +826,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, BoneVisibleChangeNotify, CombatCommon> <39>__BoneVisibleChangeNotify;
+		public static Action<Entity, AiHateNotify, CombatCommon> <39>__AiHateNotify;
 
-		// Token: 0x04030E79 RID: 200313
+		// Token: 0x0402C4FC RID: 181500
 		[Nullable(new byte[]
 		{
 			0,
@@ -830,9 +836,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, AnimationGameplayTagNotify, CombatCommon> <40>__AnimationGameplayTagNotify;
+		public static Action<Entity, BoneVisibleChangeNotify, CombatCommon> <40>__BoneVisibleChangeNotify;
 
-		// Token: 0x04030E7A RID: 200314
+		// Token: 0x0402C4FD RID: 181501
 		[Nullable(new byte[]
 		{
 			0,
@@ -840,9 +846,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, AnimationStateChangedNotify, CombatCommon> <41>__AnimationStateChangedNotify;
+		public static Action<Entity, AnimationGameplayTagNotify, CombatCommon> <41>__AnimationGameplayTagNotify;
 
-		// Token: 0x04030E7B RID: 200315
+		// Token: 0x0402C4FE RID: 181502
 		[Nullable(new byte[]
 		{
 			0,
@@ -850,9 +856,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, PackAnimChangedNotify, CombatCommon> <42>__PackAnimChangedNotify;
+		public static Action<Entity, AnimationStateChangedNotify, CombatCommon> <42>__AnimationStateChangedNotify;
 
-		// Token: 0x04030E7C RID: 200316
+		// Token: 0x0402C4FF RID: 181503
 		[Nullable(new byte[]
 		{
 			0,
@@ -860,9 +866,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, AnimationStateInitNotify, CombatCommon> <43>__AnimationStateInitNotify;
+		public static Action<Entity, PackAnimChangedNotify, CombatCommon> <43>__PackAnimChangedNotify;
 
-		// Token: 0x04030E7D RID: 200317
+		// Token: 0x0402C500 RID: 181504
 		[Nullable(new byte[]
 		{
 			0,
@@ -870,9 +876,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, AddCombineEntitiesRelationNotify, CombatCommon> <44>__AddCombineEntitiesRelationNotify;
+		public static Action<Entity, AnimationStateInitNotify, CombatCommon> <44>__AnimationStateInitNotify;
 
-		// Token: 0x04030E7E RID: 200318
+		// Token: 0x0402C501 RID: 181505
 		[Nullable(new byte[]
 		{
 			0,
@@ -880,9 +886,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, RemoveCombineRelationNotify, CombatCommon> <45>__RemoveCombineRelationNotify;
+		public static Action<Entity, AddCombineEntitiesRelationNotify, CombatCommon> <45>__AddCombineEntitiesRelationNotify;
 
-		// Token: 0x04030E7F RID: 200319
+		// Token: 0x0402C502 RID: 181506
 		[Nullable(new byte[]
 		{
 			0,
@@ -890,9 +896,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, CaughtNotify, CombatCommon> <46>__CaughtNotify;
+		public static Action<Entity, RemoveCombineRelationNotify, CombatCommon> <46>__RemoveCombineRelationNotify;
 
-		// Token: 0x04030E80 RID: 200320
+		// Token: 0x0402C503 RID: 181507
 		[Nullable(new byte[]
 		{
 			0,
@@ -900,9 +906,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, LogicStateInitNotify, CombatCommon> <47>__LogicStateInitNotify;
+		public static Action<Entity, CaughtNotify, CombatCommon> <47>__CaughtNotify;
 
-		// Token: 0x04030E81 RID: 200321
+		// Token: 0x0402C504 RID: 181508
 		[Nullable(new byte[]
 		{
 			0,
@@ -910,9 +916,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, SwitchLogicStateNotify, CombatCommon> <48>__SwitchLogicStateNotify;
+		public static Action<Entity, LogicStateInitNotify, CombatCommon> <48>__LogicStateInitNotify;
 
-		// Token: 0x04030E82 RID: 200322
+		// Token: 0x0402C505 RID: 181509
 		[Nullable(new byte[]
 		{
 			0,
@@ -920,9 +926,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, PartUpdateNotify, CombatCommon> <49>__PartUpdateNotify;
+		public static Action<Entity, SwitchLogicStateNotify, CombatCommon> <49>__SwitchLogicStateNotify;
 
-		// Token: 0x04030E83 RID: 200323
+		// Token: 0x0402C506 RID: 181510
 		[Nullable(new byte[]
 		{
 			0,
@@ -930,9 +936,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, PartComponentInitNotify, CombatCommon> <50>__PartComponentInitNotify;
+		public static Action<Entity, PartUpdateNotify, CombatCommon> <50>__PartUpdateNotify;
 
-		// Token: 0x04030E84 RID: 200324
+		// Token: 0x0402C507 RID: 181511
 		[Nullable(new byte[]
 		{
 			0,
@@ -940,9 +946,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, ShieldUpdateNotify, CombatCommon> <51>__OnShieldUpdateNotify;
+		public static Action<Entity, PartComponentInitNotify, CombatCommon> <51>__PartComponentInitNotify;
 
-		// Token: 0x04030E85 RID: 200325
+		// Token: 0x0402C508 RID: 181512
 		[Nullable(new byte[]
 		{
 			0,
@@ -950,9 +956,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, ChangeStateNotify, CombatCommon> <52>__ChangeStateNotify;
+		public static Action<Entity, ShieldUpdateNotify, CombatCommon> <52>__OnShieldUpdateNotify;
 
-		// Token: 0x04030E86 RID: 200326
+		// Token: 0x0402C509 RID: 181513
 		[Nullable(new byte[]
 		{
 			0,
@@ -960,9 +966,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, ChangeStateConfirmNotify, CombatCommon> <53>__ChangeStateConfirmNotify;
+		public static Action<Entity, ChangeStateNotify, CombatCommon> <53>__ChangeStateNotify;
 
-		// Token: 0x04030E87 RID: 200327
+		// Token: 0x0402C50A RID: 181514
 		[Nullable(new byte[]
 		{
 			0,
@@ -970,9 +976,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, FsmResetNotify, CombatCommon> <54>__FsmResetNotify;
+		public static Action<Entity, ChangeStateConfirmNotify, CombatCommon> <54>__ChangeStateConfirmNotify;
 
-		// Token: 0x04030E88 RID: 200328
+		// Token: 0x0402C50B RID: 181515
 		[Nullable(new byte[]
 		{
 			0,
@@ -980,9 +986,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, FsmBlackboardNotify, CombatCommon> <55>__FsmBlackboardNotify;
+		public static Action<Entity, FsmResetNotify, CombatCommon> <55>__FsmResetNotify;
 
-		// Token: 0x04030E89 RID: 200329
+		// Token: 0x0402C50C RID: 181516
 		[Nullable(new byte[]
 		{
 			0,
@@ -990,9 +996,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, FsmCustomBlackboardNotify, CombatCommon> <56>__FsmCustomBlackboardNotify;
+		public static Action<Entity, FsmBlackboardNotify, CombatCommon> <56>__FsmBlackboardNotify;
 
-		// Token: 0x04030E8A RID: 200330
+		// Token: 0x0402C50D RID: 181517
 		[Nullable(new byte[]
 		{
 			0,
@@ -1000,9 +1006,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, FsmMontageDurationNotify, CombatCommon> <57>__FsmMontageDurationNotify;
+		public static Action<Entity, FsmCustomBlackboardNotify, CombatCommon> <57>__FsmCustomBlackboardNotify;
 
-		// Token: 0x04030E8B RID: 200331
+		// Token: 0x0402C50E RID: 181518
 		[Nullable(new byte[]
 		{
 			0,
@@ -1010,9 +1016,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, VisionTriggerNotify, CombatCommon> <58>__VisionTriggerNotify;
+		public static Action<Entity, FsmMontageDurationNotify, CombatCommon> <58>__FsmMontageDurationNotify;
 
-		// Token: 0x04030E8C RID: 200332
+		// Token: 0x0402C50F RID: 181519
 		[Nullable(new byte[]
 		{
 			0,
@@ -1020,9 +1026,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, DrownNotify, CombatCommon> <59>__DrownNotify;
+		public static Action<Entity, VisionTriggerNotify, CombatCommon> <59>__VisionTriggerNotify;
 
-		// Token: 0x04030E8D RID: 200333
+		// Token: 0x0402C510 RID: 181520
 		[Nullable(new byte[]
 		{
 			0,
@@ -1030,9 +1036,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, ExecuteQteNotify, CombatCommon> <60>__ExecuteQteNotify;
+		public static Action<Entity, DrownNotify, CombatCommon> <60>__DrownNotify;
 
-		// Token: 0x04030E8E RID: 200334
+		// Token: 0x0402C511 RID: 181521
 		[Nullable(new byte[]
 		{
 			0,
@@ -1040,9 +1046,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, SquadPropChangedNotify, CombatCommon> <61>__SquadPropChangedNotify;
+		public static Action<Entity, ExecuteQteNotify, CombatCommon> <61>__ExecuteQteNotify;
 
-		// Token: 0x04030E8F RID: 200335
+		// Token: 0x0402C512 RID: 181522
 		[Nullable(new byte[]
 		{
 			0,
@@ -1050,9 +1056,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, MotorSummonAndRideNotify, CombatCommon> <62>__MotorSummonAndRideNotify;
+		public static Action<Entity, SquadPropChangedNotify, CombatCommon> <62>__SquadPropChangedNotify;
 
-		// Token: 0x04030E90 RID: 200336
+		// Token: 0x0402C513 RID: 181523
 		[Nullable(new byte[]
 		{
 			0,
@@ -1060,9 +1066,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, EntityLivingStatusNotify, CombatCommon> <63>__ExecuteEntityLivingStatus;
+		public static Action<Entity, MotorSummonAndRideNotify, CombatCommon> <63>__MotorSummonAndRideNotify;
 
-		// Token: 0x04030E91 RID: 200337
+		// Token: 0x0402C514 RID: 181524
 		[Nullable(new byte[]
 		{
 			0,
@@ -1070,9 +1076,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Action<Entity, ModifyEntityCampNotify, CombatCommon> <64>__OnModifyEntityCampNotify;
+		public static Action<Entity, EntityLivingStatusNotify, CombatCommon> <64>__ExecuteEntityLivingStatus;
 
-		// Token: 0x04030E92 RID: 200338
+		// Token: 0x0402C515 RID: 181525
 		[Nullable(new byte[]
 		{
 			0,
@@ -1080,9 +1086,9 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Func<Entity, UseSkillNotify, CombatCommon, bool> <65>__PreUseSkillNotify;
+		public static Action<Entity, ModifyEntityCampNotify, CombatCommon> <65>__OnModifyEntityCampNotify;
 
-		// Token: 0x04030E93 RID: 200339
+		// Token: 0x0402C516 RID: 181526
 		[Nullable(new byte[]
 		{
 			0,
@@ -1090,6 +1096,16 @@ public class DecoratorManager
 			1,
 			2
 		})]
-		public static Func<Entity, HitNotify, CombatCommon, bool> <66>__PreHitNotify;
+		public static Func<Entity, UseSkillNotify, CombatCommon, bool> <66>__PreUseSkillNotify;
+
+		// Token: 0x0402C517 RID: 181527
+		[Nullable(new byte[]
+		{
+			0,
+			2,
+			1,
+			2
+		})]
+		public static Func<Entity, HitNotify, CombatCommon, bool> <67>__PreHitNotify;
 	}
 }

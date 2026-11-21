@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028B4 RID: 10420
+	// Token: 0x02002B89 RID: 11145
 	public class IAxisLockScreenConfig : ActionParams
 	{
-		// Token: 0x0600E729 RID: 59177 RVA: 0x0021F33A File Offset: 0x0021D53A
-		[NullableContext(1)]
+		// Token: 0x0600F558 RID: 62808 RVA: 0x0023C2BA File Offset: 0x0023A4BA
 		public static IAxisLockScreenConfig Create(IAxisLockScreenConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004783 RID: 18307
-		// (get) Token: 0x0600E72A RID: 59178 RVA: 0x0021F359 File Offset: 0x0021D559
+		// Token: 0x17004AF4 RID: 19188
+		// (get) Token: 0x0600F559 RID: 62809 RVA: 0x0023C2D9 File Offset: 0x0023A4D9
 		public virtual float TriggerAngle
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004784 RID: 18308
-		// (get) Token: 0x0600E72B RID: 59179 RVA: 0x0021F366 File Offset: 0x0021D566
+		// Token: 0x17004AF5 RID: 19189
+		// (get) Token: 0x0600F55A RID: 62810 RVA: 0x0023C2E6 File Offset: 0x0023A4E6
 		public virtual float FadeInTime
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004785 RID: 18309
-		// (get) Token: 0x0600E72C RID: 59180 RVA: 0x0021F373 File Offset: 0x0021D573
+		// Token: 0x17004AF6 RID: 19190
+		// (get) Token: 0x0600F55B RID: 62811 RVA: 0x0023C2F3 File Offset: 0x0023A4F3
 		public virtual float FadeOutTime
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007FC4 RID: 32708
+		// Token: 0x04008683 RID: 34435
 		private IAxisLockScreenConfig Instance;
 	}
 }

@@ -4,17 +4,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048C4 RID: 18628
+	// Token: 0x0200383B RID: 14395
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InTurnGridAppearAnimation : GridAppearAnimationBase
 	{
-		// Token: 0x06030B04 RID: 199428 RVA: 0x00B4EB11 File Offset: 0x00B4CD11
+		// Token: 0x06025630 RID: 153136 RVA: 0x00A89919 File Offset: 0x00A87B19
 		public InTurnGridAppearAnimation(IGridPreserver gridPreserver) : base(gridPreserver)
 		{
 		}
 
-		// Token: 0x06030B05 RID: 199429 RVA: 0x00B4EB25 File Offset: 0x00B4CD25
+		// Token: 0x06025631 RID: 153137 RVA: 0x00A8992D File Offset: 0x00A87B2D
 		protected override void OnStart()
 		{
 			if (!this.IsInGridAppearAnimation)
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030B06 RID: 199430 RVA: 0x00B4EB35 File Offset: 0x00B4CD35
+		// Token: 0x06025632 RID: 153138 RVA: 0x00A8993D File Offset: 0x00A87B3D
 		protected override void OnEnd()
 		{
 			this.IsInGridAppearAnimation = false;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Util
 			this.CurrentAppearGridIndex = 0;
 		}
 
-		// Token: 0x06030B07 RID: 199431 RVA: 0x00B4EB5B File Offset: 0x00B4CD5B
+		// Token: 0x06025633 RID: 153139 RVA: 0x00A89963 File Offset: 0x00A87B63
 		protected override void OnInterrupt()
 		{
 			base.OnInterrupt();
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Util
 			this.CurrentAppearGridIndex = 0;
 		}
 
-		// Token: 0x06030B08 RID: 199432 RVA: 0x00B4EB87 File Offset: 0x00B4CD87
+		// Token: 0x06025634 RID: 153140 RVA: 0x00A8998F File Offset: 0x00A87B8F
 		protected override void OnUpdate(float deltaTimeMilliseconds)
 		{
 			if (this.IsInGridAppearAnimation)
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030B09 RID: 199433 RVA: 0x00B4EB98 File Offset: 0x00B4CD98
+		// Token: 0x06025635 RID: 153141 RVA: 0x00A899A0 File Offset: 0x00A87BA0
 		private void StartPlayGridAppearAnimation()
 		{
 			if ((this.GridPreserver.GetGridAnimationInterval() <= 0f && this.GridPreserver.GetGridAnimationStartTime() <= 0f) || this.DisplayGridNum <= 0)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Util
 			base.GridsForEach(new Action<int, UUIItem>(this.HideGrid));
 		}
 
-		// Token: 0x06030B0A RID: 199434 RVA: 0x00B4EC2B File Offset: 0x00B4CE2B
+		// Token: 0x06025636 RID: 153142 RVA: 0x00A89A33 File Offset: 0x00A87C33
 		private void ResetAnim()
 		{
 			this.GridAppearLastTime = 0f;
@@ -77,13 +77,13 @@ namespace CSharpScript.Game.Module.Util
 			this.CurrentAppearGridIndex = this.GridPreserver.GetDisplayGridStartIndex();
 		}
 
-		// Token: 0x06030B0B RID: 199435 RVA: 0x00B4EC5B File Offset: 0x00B4CE5B
+		// Token: 0x06025637 RID: 153143 RVA: 0x00A89A63 File Offset: 0x00A87C63
 		private void HideGrid(int index, UUIItem grid)
 		{
 			grid.SetUIActive(false);
 		}
 
-		// Token: 0x06030B0C RID: 199436 RVA: 0x00B4EC64 File Offset: 0x00B4CE64
+		// Token: 0x06025638 RID: 153144 RVA: 0x00A89A6C File Offset: 0x00A87C6C
 		private void UpdatePlayGridAppearAnimation(float deltaTimeMilliseconds)
 		{
 			USequencerManager sequencerManager = ALGUIManagerActor.GetSequencerManager(GlobalData.World);
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Util
 			this.ShowGridByDisplayIndexAndMoveNext();
 		}
 
-		// Token: 0x06030B0D RID: 199437 RVA: 0x00B4ED24 File Offset: 0x00B4CF24
+		// Token: 0x06025639 RID: 153145 RVA: 0x00A89B2C File Offset: 0x00A87D2C
 		private void ShowGridByDisplayIndexAndMoveNext()
 		{
 			if (this.CurrentAppearGridIndex < this.GridPreserver.GetDisplayGridStartIndex() || this.CurrentAppearGridIndex > this.GridPreserver.GetDisplayGridEndIndex())
@@ -129,16 +129,16 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x0401A2A3 RID: 107171
+		// Token: 0x04014B16 RID: 84758
 		private float GridAppearLastTime;
 
-		// Token: 0x0401A2A4 RID: 107172
+		// Token: 0x04014B17 RID: 84759
 		private float GridAppearCurrentTime;
 
-		// Token: 0x0401A2A5 RID: 107173
+		// Token: 0x04014B18 RID: 84760
 		private int CurrentAppearGridIndex;
 
-		// Token: 0x0401A2A6 RID: 107174
+		// Token: 0x04014B19 RID: 84761
 		private readonly float MillisecondToSecond = 1000f;
 	}
 }

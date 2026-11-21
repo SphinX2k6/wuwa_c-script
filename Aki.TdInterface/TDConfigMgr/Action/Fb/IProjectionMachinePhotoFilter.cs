@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002842 RID: 10306
+	// Token: 0x02002B15 RID: 11029
 	public class IProjectionMachinePhotoFilter
 	{
-		// Token: 0x0600E47A RID: 58490 RVA: 0x0021A0DE File Offset: 0x002182DE
-		[NullableContext(1)]
+		// Token: 0x0600F29F RID: 62111 RVA: 0x00236F42 File Offset: 0x00235142
 		public static IProjectionMachinePhotoFilter Create(IProjectionMachinePhotoFilter? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045B8 RID: 17848
-		// (get) Token: 0x0600E47B RID: 58491 RVA: 0x0021A0FD File Offset: 0x002182FD
+		// Token: 0x17004923 RID: 18723
+		// (get) Token: 0x0600F2A0 RID: 62112 RVA: 0x00236F61 File Offset: 0x00235161
 		public virtual float DefaultParam1
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045B9 RID: 17849
-		// (get) Token: 0x0600E47C RID: 58492 RVA: 0x0021A10A File Offset: 0x0021830A
+		// Token: 0x17004924 RID: 18724
+		// (get) Token: 0x0600F2A1 RID: 62113 RVA: 0x00236F6E File Offset: 0x0023516E
 		public virtual float DefaultParam2
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045BA RID: 17850
-		// (get) Token: 0x0600E47D RID: 58493 RVA: 0x0021A117 File Offset: 0x00218317
+		// Token: 0x17004925 RID: 18725
+		// (get) Token: 0x0600F2A2 RID: 62114 RVA: 0x00236F7B File Offset: 0x0023517B
 		public virtual float TargetParam1
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045BB RID: 17851
-		// (get) Token: 0x0600E47E RID: 58494 RVA: 0x0021A124 File Offset: 0x00218324
+		// Token: 0x17004926 RID: 18726
+		// (get) Token: 0x0600F2A3 RID: 62115 RVA: 0x00236F88 File Offset: 0x00235188
 		public virtual float TargetParam2
 		{
 			get
@@ -61,7 +59,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E6A RID: 32362
+		// Token: 0x04008527 RID: 34087
 		private IProjectionMachinePhotoFilter Instance;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060C0 RID: 24768
+	// Token: 0x02006722 RID: 26402
 	public class IActorFxEmoteStopSubType_UnionUnion
 	{
-		// Token: 0x1700B686 RID: 46726
-		// (get) Token: 0x0602A49A RID: 173210 RVA: 0x005D42B5 File Offset: 0x005D24B5
-		// (set) Token: 0x0602A49B RID: 173211 RVA: 0x005D42BD File Offset: 0x005D24BD
+		// Token: 0x1700BFF1 RID: 49137
+		// (get) Token: 0x0602CB7B RID: 183163 RVA: 0x0061E25D File Offset: 0x0061C45D
+		// (set) Token: 0x0602CB7C RID: 183164 RVA: 0x0061E265 File Offset: 0x0061C465
 		public IActorFxEmoteStopSubType_Union Type { get; set; }
 
-		// Token: 0x1700B687 RID: 46727
-		// (get) Token: 0x0602A49C RID: 173212 RVA: 0x005D42C6 File Offset: 0x005D24C6
-		// (set) Token: 0x0602A49D RID: 173213 RVA: 0x005D42CE File Offset: 0x005D24CE
+		// Token: 0x1700BFF2 RID: 49138
+		// (get) Token: 0x0602CB7D RID: 183165 RVA: 0x0061E26E File Offset: 0x0061C46E
+		// (set) Token: 0x0602CB7E RID: 183166 RVA: 0x0061E276 File Offset: 0x0061C476
 		public object Value { get; set; }
 
-		// Token: 0x0602A49E RID: 173214 RVA: 0x005D42D7 File Offset: 0x005D24D7
+		// Token: 0x0602CB7F RID: 183167 RVA: 0x0061E27F File Offset: 0x0061C47F
 		public IActorFxEmoteStopSubType_UnionUnion()
 		{
 			this.Type = IActorFxEmoteStopSubType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602A49F RID: 173215 RVA: 0x005D42ED File Offset: 0x005D24ED
+		// Token: 0x0602CB80 RID: 183168 RVA: 0x0061E295 File Offset: 0x0061C495
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602A4A0 RID: 173216 RVA: 0x005D42FF File Offset: 0x005D24FF
+		// Token: 0x0602CB81 RID: 183169 RVA: 0x0061E2A7 File Offset: 0x0061C4A7
 		public IActorFxEmoteStopSubTypeT AsIActorFxEmoteStopSubType()
 		{
 			return this.As<IActorFxEmoteStopSubTypeT>();
 		}
 
-		// Token: 0x0602A4A1 RID: 173217 RVA: 0x005D4307 File Offset: 0x005D2507
+		// Token: 0x0602CB82 RID: 183170 RVA: 0x0061E2AF File Offset: 0x0061C4AF
 		public static IActorFxEmoteStopSubType_UnionUnion FromIActorFxEmoteStopSubType(IActorFxEmoteStopSubTypeT _iactorfxemotestopsubtype)
 		{
 			return new IActorFxEmoteStopSubType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602A4A2 RID: 173218 RVA: 0x005D431C File Offset: 0x005D251C
+		// Token: 0x0602CB83 RID: 183171 RVA: 0x0061E2C4 File Offset: 0x0061C4C4
 		public IActorFxEmoteStopAllT AsIActorFxEmoteStopAll()
 		{
 			return this.As<IActorFxEmoteStopAllT>();
 		}
 
-		// Token: 0x0602A4A3 RID: 173219 RVA: 0x005D4324 File Offset: 0x005D2524
+		// Token: 0x0602CB84 RID: 183172 RVA: 0x0061E2CC File Offset: 0x0061C4CC
 		public static IActorFxEmoteStopSubType_UnionUnion FromIActorFxEmoteStopAll(IActorFxEmoteStopAllT _iactorfxemotestopall)
 		{
 			return new IActorFxEmoteStopSubType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602A4A4 RID: 173220 RVA: 0x005D4339 File Offset: 0x005D2539
+		// Token: 0x0602CB85 RID: 183173 RVA: 0x0061E2E1 File Offset: 0x0061C4E1
 		public IActorFxEmoteStopSocketsT AsIActorFxEmoteStopSockets()
 		{
 			return this.As<IActorFxEmoteStopSocketsT>();
 		}
 
-		// Token: 0x0602A4A5 RID: 173221 RVA: 0x005D4341 File Offset: 0x005D2541
+		// Token: 0x0602CB86 RID: 183174 RVA: 0x0061E2E9 File Offset: 0x0061C4E9
 		public static IActorFxEmoteStopSubType_UnionUnion FromIActorFxEmoteStopSockets(IActorFxEmoteStopSocketsT _iactorfxemotestopsockets)
 		{
 			return new IActorFxEmoteStopSubType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602A4A6 RID: 173222 RVA: 0x005D4358 File Offset: 0x005D2558
+		// Token: 0x0602CB87 RID: 183175 RVA: 0x0061E300 File Offset: 0x0061C500
 		public static int Pack(FlatBufferBuilder builder, IActorFxEmoteStopSubType_UnionUnion _o)
 		{
 			switch (_o.Type)

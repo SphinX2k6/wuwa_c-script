@@ -5,17 +5,17 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020012F3 RID: 4851
+// Token: 0x020007A7 RID: 1959
 [NullableContext(1)]
 [Nullable(0)]
 public class BuildingLevelUpView : UiTickViewBase
 {
-	// Token: 0x0600862B RID: 34347 RVA: 0x001C98DF File Offset: 0x001C7ADF
+	// Token: 0x060059C6 RID: 22982 RVA: 0x001D274B File Offset: 0x001D094B
 	public BuildingLevelUpView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600862C RID: 34348 RVA: 0x001C98F4 File Offset: 0x001C7AF4
+	// Token: 0x060059C7 RID: 22983 RVA: 0x001D2760 File Offset: 0x001D0960
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ public class BuildingLevelUpView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x0600862D RID: 34349 RVA: 0x001C9A70 File Offset: 0x001C7C70
+	// Token: 0x060059C8 RID: 22984 RVA: 0x001D28DC File Offset: 0x001D0ADC
 	protected override void OnStart()
 	{
 		this.Vc.RegisterView(this);
@@ -51,13 +51,13 @@ public class BuildingLevelUpView : UiTickViewBase
 		this.SetFillAmount(0f);
 	}
 
-	// Token: 0x0600862E RID: 34350 RVA: 0x001C9ABF File Offset: 0x001C7CBF
+	// Token: 0x060059C9 RID: 22985 RVA: 0x001D292B File Offset: 0x001D0B2B
 	protected override void OnTick(float delta)
 	{
 		this.Vc.Tick(delta);
 	}
 
-	// Token: 0x0600862F RID: 34351 RVA: 0x001C9AD0 File Offset: 0x001C7CD0
+	// Token: 0x060059CA RID: 22986 RVA: 0x001D293C File Offset: 0x001D0B3C
 	public void InitUnlock(int buildingId)
 	{
 		Building buildingById = BuildingConfig.Instance.GetBuildingById(buildingId);
@@ -115,7 +115,7 @@ public class BuildingLevelUpView : UiTickViewBase
 		item4.SetUIActive(false);
 	}
 
-	// Token: 0x06008630 RID: 34352 RVA: 0x001C9C26 File Offset: 0x001C7E26
+	// Token: 0x060059CB RID: 22987 RVA: 0x001D2A92 File Offset: 0x001D0C92
 	public void ShowUnlock()
 	{
 		UUIText text = base.GetText(1);
@@ -136,7 +136,7 @@ public class BuildingLevelUpView : UiTickViewBase
 		rootComponent.SetUIActive(false);
 	}
 
-	// Token: 0x06008631 RID: 34353 RVA: 0x001C9C58 File Offset: 0x001C7E58
+	// Token: 0x060059CC RID: 22988 RVA: 0x001D2AC4 File Offset: 0x001D0CC4
 	public void FinishUnlock(int buildingId)
 	{
 		BuildingData buildingDataById = MoonChasingBuildingModel.Instance.GetBuildingDataById(buildingId);
@@ -195,7 +195,7 @@ public class BuildingLevelUpView : UiTickViewBase
 		item4.SetUIActive(true);
 	}
 
-	// Token: 0x06008632 RID: 34354 RVA: 0x001C9D88 File Offset: 0x001C7F88
+	// Token: 0x060059CD RID: 22989 RVA: 0x001D2BF4 File Offset: 0x001D0DF4
 	public void InitLevelUp(int buildingId)
 	{
 		UUISliderComponent slider = base.GetSlider(0);
@@ -249,7 +249,7 @@ public class BuildingLevelUpView : UiTickViewBase
 		item4.SetUIActive(true);
 	}
 
-	// Token: 0x06008633 RID: 34355 RVA: 0x001C9E67 File Offset: 0x001C8067
+	// Token: 0x060059CE RID: 22990 RVA: 0x001D2CD3 File Offset: 0x001D0ED3
 	public void ShowLevelUp()
 	{
 		UUIText text = base.GetText(1);
@@ -260,7 +260,7 @@ public class BuildingLevelUpView : UiTickViewBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x06008634 RID: 34356 RVA: 0x001C9E7C File Offset: 0x001C807C
+	// Token: 0x060059CF RID: 22991 RVA: 0x001D2CE8 File Offset: 0x001D0EE8
 	public void FinishLevelUp(int buildingId)
 	{
 		BuildingData buildingDataById = MoonChasingBuildingModel.Instance.GetBuildingDataById(buildingId);
@@ -293,13 +293,13 @@ public class BuildingLevelUpView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "Moonfiesta_ClickContinue", Array.Empty<object>());
 	}
 
-	// Token: 0x06008635 RID: 34357 RVA: 0x001C9F28 File Offset: 0x001C8128
+	// Token: 0x060059D0 RID: 22992 RVA: 0x001D2D94 File Offset: 0x001D0F94
 	public void SetFillAmount(float fillAmount)
 	{
 		this.Slider.SetValue(fillAmount, true);
 	}
 
-	// Token: 0x06008636 RID: 34358 RVA: 0x001C9F38 File Offset: 0x001C8138
+	// Token: 0x060059D1 RID: 22993 RVA: 0x001D2DA4 File Offset: 0x001D0FA4
 	public void PlayBuildingLoopSequence(bool isPlay)
 	{
 		if (this.IsPlayingBuildingSequence == isPlay)
@@ -315,63 +315,63 @@ public class BuildingLevelUpView : UiTickViewBase
 		this.BuildingSequencePlayer.StopPrevSequence(false, true);
 	}
 
-	// Token: 0x04003C18 RID: 15384
+	// Token: 0x04003CB0 RID: 15536
 	private UUISliderComponent Slider;
 
-	// Token: 0x04003C19 RID: 15385
+	// Token: 0x04003CB1 RID: 15537
 	[Nullable(2)]
 	private UiSequencePlayer BuildingSequencePlayer;
 
-	// Token: 0x04003C1A RID: 15386
+	// Token: 0x04003CB2 RID: 15538
 	private bool IsPlayingBuildingSequence;
 
-	// Token: 0x04003C1B RID: 15387
+	// Token: 0x04003CB3 RID: 15539
 	private readonly BuildingLevelUpViewController Vc = new BuildingLevelUpViewController();
 
-	// Token: 0x02007922 RID: 31010
+	// Token: 0x02006AAC RID: 27308
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04027E7D RID: 163453
+		// Token: 0x040231AA RID: 143786
 		public const int Slider = 0;
 
-		// Token: 0x04027E7E RID: 163454
+		// Token: 0x040231AB RID: 143787
 		public const int ProgressText = 1;
 
-		// Token: 0x04027E7F RID: 163455
+		// Token: 0x040231AC RID: 143788
 		public const int FinishItem = 2;
 
-		// Token: 0x04027E80 RID: 163456
+		// Token: 0x040231AD RID: 143789
 		public const int FinishText = 3;
 
-		// Token: 0x04027E81 RID: 163457
+		// Token: 0x040231AE RID: 143790
 		public const int RewardTips = 4;
 
-		// Token: 0x04027E82 RID: 163458
+		// Token: 0x040231AF RID: 143791
 		public const int UnlockBtn = 5;
 
-		// Token: 0x04027E83 RID: 163459
+		// Token: 0x040231B0 RID: 143792
 		public const int CloseBtn = 6;
 
-		// Token: 0x04027E84 RID: 163460
+		// Token: 0x040231B1 RID: 143793
 		public const int Texture = 7;
 
-		// Token: 0x04027E85 RID: 163461
+		// Token: 0x040231B2 RID: 143794
 		public const int BuildSuccessTexture = 8;
 
-		// Token: 0x04027E86 RID: 163462
+		// Token: 0x040231B3 RID: 143795
 		public const int BuildSuccessDialog = 9;
 
-		// Token: 0x04027E87 RID: 163463
+		// Token: 0x040231B4 RID: 143796
 		public const int BuildFrameTexture = 10;
 
-		// Token: 0x04027E88 RID: 163464
+		// Token: 0x040231B5 RID: 143797
 		public const int LevelUpFrameBgTexture = 11;
 
-		// Token: 0x04027E89 RID: 163465
+		// Token: 0x040231B6 RID: 143798
 		public const int LevelUpFrameTexture = 12;
 
-		// Token: 0x04027E8A RID: 163466
+		// Token: 0x040231B7 RID: 143799
 		public const int BuildingItem = 13;
 	}
 }

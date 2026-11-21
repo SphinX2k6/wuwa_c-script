@@ -1,44 +1,44 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020019CF RID: 6607
+// Token: 0x02000E8E RID: 3726
 [NullableContext(1)]
 public interface IWorldNavigationConfig
 {
-	// Token: 0x1700101D RID: 4125
-	// (get) Token: 0x0600C0E9 RID: 49385
-	// (set) Token: 0x0600C0EA RID: 49386
+	// Token: 0x17001042 RID: 4162
+	// (get) Token: 0x060094F6 RID: 38134
+	// (set) Token: 0x060094F7 RID: 38135
 	Vector SourcePosition { get; set; }
 
-	// Token: 0x1700101E RID: 4126
-	// (get) Token: 0x0600C0EB RID: 49387
-	// (set) Token: 0x0600C0EC RID: 49388
+	// Token: 0x17001043 RID: 4163
+	// (get) Token: 0x060094F8 RID: 38136
+	// (set) Token: 0x060094F9 RID: 38137
 	Vector DestPosition { get; set; }
 
-	// Token: 0x1700101F RID: 4127
-	// (get) Token: 0x0600C0ED RID: 49389
-	// (set) Token: 0x0600C0EE RID: 49390
+	// Token: 0x17001044 RID: 4164
+	// (get) Token: 0x060094FA RID: 38138
+	// (set) Token: 0x060094FB RID: 38139
 	int MapId { get; set; }
 
-	// Token: 0x17001020 RID: 4128
-	// (get) Token: 0x0600C0EF RID: 49391
-	// (set) Token: 0x0600C0F0 RID: 49392
+	// Token: 0x17001045 RID: 4165
+	// (get) Token: 0x060094FC RID: 38140
+	// (set) Token: 0x060094FD RID: 38141
 	[Nullable(2)]
 	BaseMoveComponent MoveComponent { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x17001021 RID: 4129
-	// (get) Token: 0x0600C0F1 RID: 49393
-	// (set) Token: 0x0600C0F2 RID: 49394
+	// Token: 0x17001046 RID: 4166
+	// (get) Token: 0x060094FE RID: 38142
+	// (set) Token: 0x060094FF RID: 38143
 	int? DistanceThreshold { get; set; }
 
-	// Token: 0x17001022 RID: 4130
-	// (get) Token: 0x0600C0F3 RID: 49395
-	// (set) Token: 0x0600C0F4 RID: 49396
+	// Token: 0x17001047 RID: 4167
+	// (get) Token: 0x06009500 RID: 38144
+	// (set) Token: 0x06009501 RID: 38145
 	int? TryFindPathTimes { get; set; }
 
-	// Token: 0x17001023 RID: 4131
-	// (get) Token: 0x0600C0F5 RID: 49397
-	// (set) Token: 0x0600C0F6 RID: 49398
+	// Token: 0x17001048 RID: 4168
+	// (get) Token: 0x06009502 RID: 38146
+	// (set) Token: 0x06009503 RID: 38147
 	[Nullable(2)]
 	TWorldNavigationCallback Callback { [NullableContext(2)] get; [NullableContext(2)] set; }
 }

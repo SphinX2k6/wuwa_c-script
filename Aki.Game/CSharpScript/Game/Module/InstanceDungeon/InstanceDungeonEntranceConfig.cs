@@ -6,13 +6,13 @@ using CSharpScript.Game.Module.InstanceDungeon.Define;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x0200586C RID: 22636
+	// Token: 0x02004844 RID: 18500
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InstanceDungeonEntranceConfig : ConfigBase
 	{
-		// Token: 0x17008A5E RID: 35422
-		// (get) Token: 0x060398D3 RID: 235731 RVA: 0x00DAAEC8 File Offset: 0x00DA90C8
+		// Token: 0x17005E2A RID: 24106
+		// (get) Token: 0x0602E7F0 RID: 190448 RVA: 0x00CF9C18 File Offset: 0x00CF7E18
 		private unsafe Dictionary<int, InstanceDungeonEntrance> InstanceId2EntranceCfg
 		{
 			get
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x060398D4 RID: 235732 RVA: 0x00DAAF5C File Offset: 0x00DA915C
+		// Token: 0x0602E7F1 RID: 190449 RVA: 0x00CF9CAC File Offset: 0x00CF7EAC
 		protected override bool OnInit()
 		{
 			this.FlowMap[EInstanceEntranceFlowType.Normal] = new InstanceDungeonEntranceFlowNormal();
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return true;
 		}
 
-		// Token: 0x060398D5 RID: 235733 RVA: 0x00DAB064 File Offset: 0x00DA9264
+		// Token: 0x0602E7F2 RID: 190450 RVA: 0x00CF9DB4 File Offset: 0x00CF7FB4
 		public InstanceDungeonEntrance? GetConfig(int id)
 		{
 			InstanceDungeonEntrance? config = ConfigInstanceDungeonEntranceById.GetConfig(id, true);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return config;
 		}
 
-		// Token: 0x060398D6 RID: 235734 RVA: 0x00DAB0BC File Offset: 0x00DA92BC
+		// Token: 0x0602E7F3 RID: 190451 RVA: 0x00CF9E0C File Offset: 0x00CF800C
 		[NullableContext(2)]
 		public string GetConfigValueByParam(int id, string param, [Nullable(1)] string tag)
 		{
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return null;
 		}
 
-		// Token: 0x060398D7 RID: 235735 RVA: 0x00DAB128 File Offset: 0x00DA9328
+		// Token: 0x0602E7F4 RID: 190452 RVA: 0x00CF9E78 File Offset: 0x00CF8078
 		public int GetInstanceDungeonEntranceFlowId(int id)
 		{
 			InstanceDungeonEntrance? config = this.GetConfig(id);
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return num.Value;
 		}
 
-		// Token: 0x060398D8 RID: 235736 RVA: 0x00DAB1C0 File Offset: 0x00DA93C0
+		// Token: 0x0602E7F5 RID: 190453 RVA: 0x00CF9F10 File Offset: 0x00CF8110
 		[NullableContext(2)]
 		public InstanceDungeonEntranceFlowBase GetInstanceDungeonEntranceFlow(int id)
 		{
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return this.FlowMap.GetValueOrDefault((EInstanceEntranceFlowType)num.Value);
 		}
 
-		// Token: 0x060398D9 RID: 235737 RVA: 0x00DAB264 File Offset: 0x00DA9464
+		// Token: 0x0602E7F6 RID: 190454 RVA: 0x00CF9FB4 File Offset: 0x00CF81B4
 		public void OnEditBattleViewClose()
 		{
 			foreach (InstanceDungeonEntranceFlowBase instanceDungeonEntranceFlowBase in this.FlowMap.Values)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x060398DA RID: 235738 RVA: 0x00DAB2BC File Offset: 0x00DA94BC
+		// Token: 0x0602E7F7 RID: 190455 RVA: 0x00CFA00C File Offset: 0x00CF820C
 		public int GetEntranceIdByMarkId(int markId)
 		{
 			int result;
@@ -152,13 +152,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return result;
 		}
 
-		// Token: 0x060398DB RID: 235739 RVA: 0x00DAB2DC File Offset: 0x00DA94DC
+		// Token: 0x0602E7F8 RID: 190456 RVA: 0x00CFA02C File Offset: 0x00CF822C
 		public bool CheckMarkIdLinkDungeonEntrance(int markId)
 		{
 			return this.GetEntranceIdByMarkId(markId) > 0;
 		}
 
-		// Token: 0x060398DC RID: 235740 RVA: 0x00DAB2E8 File Offset: 0x00DA94E8
+		// Token: 0x0602E7F9 RID: 190457 RVA: 0x00CFA038 File Offset: 0x00CF8238
 		public bool CheckMarkIdIsTowerEntrance(int markId)
 		{
 			int id;
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return (config != null && config.GetValueOrDefault().FlowId == 4) || (config != null && config.GetValueOrDefault().FlowId == 3) || (config != null && config.GetValueOrDefault().FlowId == 5);
 		}
 
-		// Token: 0x060398DD RID: 235741 RVA: 0x00DAB370 File Offset: 0x00DA9570
+		// Token: 0x0602E7FA RID: 190458 RVA: 0x00CFA0C0 File Offset: 0x00CF82C0
 		public bool CheckMarkIdIsShipTowerEntrance(int markId)
 		{
 			int id;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return config != null && config.GetValueOrDefault().FlowId == 11;
 		}
 
-		// Token: 0x060398DE RID: 235742 RVA: 0x00DAB3B8 File Offset: 0x00DA95B8
+		// Token: 0x0602E7FB RID: 190459 RVA: 0x00CFA108 File Offset: 0x00CF8308
 		public bool CheckMarkIdIsRoguelike(int markId)
 		{
 			int id;
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return config != null && config.GetValueOrDefault().FlowId == 6;
 		}
 
-		// Token: 0x060398DF RID: 235743 RVA: 0x00DAB3FC File Offset: 0x00DA95FC
+		// Token: 0x0602E7FC RID: 190460 RVA: 0x00CFA14C File Offset: 0x00CF834C
 		public bool CheckMarkIdIsRogueRes(int markId)
 		{
 			int id;
@@ -206,14 +206,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return config != null && config.GetValueOrDefault().FlowId == 14;
 		}
 
-		// Token: 0x060398E0 RID: 235744 RVA: 0x00DAB444 File Offset: 0x00DA9644
+		// Token: 0x0602E7FD RID: 190461 RVA: 0x00CFA194 File Offset: 0x00CF8394
 		public bool CheckInstanceIdIsTowerDefense(int instanceId)
 		{
 			InstanceDungeonEntrance instanceDungeonEntrance;
 			return this.InstanceId2EntranceCfg.TryGetValue(instanceId, out instanceDungeonEntrance) && instanceDungeonEntrance.FlowId == 8;
 		}
 
-		// Token: 0x060398E1 RID: 235745 RVA: 0x00DAB470 File Offset: 0x00DA9670
+		// Token: 0x0602E7FE RID: 190462 RVA: 0x00CFA1C0 File Offset: 0x00CF83C0
 		public bool CheckMarkIdIsWheelTower(int markId)
 		{
 			int id;
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return config != null && config.GetValueOrDefault().FlowId == 17;
 		}
 
-		// Token: 0x060398E2 RID: 235746 RVA: 0x00DAB4B8 File Offset: 0x00DA96B8
+		// Token: 0x0602E7FF RID: 190463 RVA: 0x00CFA208 File Offset: 0x00CF8408
 		public int GetEntranceIdByInstanceId(int instanceId)
 		{
 			InstanceDungeonEntrance instanceDungeonEntrance;
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return instanceDungeonEntrance.Id;
 		}
 
-		// Token: 0x060398E3 RID: 235747 RVA: 0x00DAB51C File Offset: 0x00DA971C
+		// Token: 0x0602E800 RID: 190464 RVA: 0x00CFA26C File Offset: 0x00CF846C
 		public Dictionary<int, int> GetEntranceMarkIdMap()
 		{
 			if (this.EntranceMarkIdMap == null)
@@ -260,8 +260,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return this.EntranceMarkIdMap;
 		}
 
-		// Token: 0x17008A5F RID: 35423
-		// (get) Token: 0x060398E4 RID: 235748 RVA: 0x00DAB5A0 File Offset: 0x00DA97A0
+		// Token: 0x17005E2B RID: 24107
+		// (get) Token: 0x0602E801 RID: 190465 RVA: 0x00CFA2F0 File Offset: 0x00CF84F0
 		public static InstanceDungeonEntranceConfig Instance
 		{
 			get
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x060398E5 RID: 235749 RVA: 0x00DAB5A7 File Offset: 0x00DA97A7
+		// Token: 0x0602E802 RID: 190466 RVA: 0x00CFA2F7 File Offset: 0x00CF84F7
 		public static InstanceDungeonEntranceConfig GetOrCreateInstance()
 		{
 			if (InstanceDungeonEntranceConfig._Instance == null)
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return InstanceDungeonEntranceConfig._Instance;
 		}
 
-		// Token: 0x060398E6 RID: 235750 RVA: 0x00DAB5BB File Offset: 0x00DA97BB
+		// Token: 0x0602E803 RID: 190467 RVA: 0x00CFA30B File Offset: 0x00CF850B
 		public static bool CreateInstance()
 		{
 			if (InstanceDungeonEntranceConfig._Instance != null)
@@ -291,35 +291,35 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return true;
 		}
 
-		// Token: 0x060398E7 RID: 235751 RVA: 0x00DAB5D1 File Offset: 0x00DA97D1
+		// Token: 0x0602E804 RID: 190468 RVA: 0x00CFA321 File Offset: 0x00CF8521
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060398E8 RID: 235752 RVA: 0x00DAB5D3 File Offset: 0x00DA97D3
+		// Token: 0x0602E805 RID: 190469 RVA: 0x00CFA323 File Offset: 0x00CF8523
 		public static void ResetStaticDefaultValue()
 		{
 			InstanceDungeonEntranceConfig._Instance = null;
 		}
 
-		// Token: 0x060398E9 RID: 235753 RVA: 0x00DAB5DB File Offset: 0x00DA97DB
+		// Token: 0x0602E806 RID: 190470 RVA: 0x00CFA32B File Offset: 0x00CF852B
 		static InstanceDungeonEntranceConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InstanceDungeonEntranceConfig.CreateStaticDefaultValue), new Action(InstanceDungeonEntranceConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E196 RID: 123286
+		// Token: 0x04018C33 RID: 101427
 		private readonly Dictionary<EInstanceEntranceFlowType, InstanceDungeonEntranceFlowBase> FlowMap = new Dictionary<EInstanceEntranceFlowType, InstanceDungeonEntranceFlowBase>();
 
-		// Token: 0x0401E197 RID: 123287
+		// Token: 0x04018C34 RID: 101428
 		[Nullable(2)]
 		private Dictionary<int, int> EntranceMarkIdMap;
 
-		// Token: 0x0401E198 RID: 123288
+		// Token: 0x04018C35 RID: 101429
 		[Nullable(2)]
 		private Dictionary<int, InstanceDungeonEntrance> InstanceId2EntranceCfgInternal;
 
-		// Token: 0x0401E199 RID: 123289
+		// Token: 0x04018C36 RID: 101430
 		[Nullable(2)]
 		private static InstanceDungeonEntranceConfig _Instance;
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009FC RID: 2556
+	// Token: 0x02000AC1 RID: 2753
 	public static class ERotationTypeExtensions
 	{
-		// Token: 0x0600389F RID: 14495 RVA: 0x000928B4 File Offset: 0x00090AB4
+		// Token: 0x06003C77 RID: 15479 RVA: 0x0009B1A4 File Offset: 0x000993A4
 		public static string ToEnumString(this ERotationType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038A0 RID: 14496 RVA: 0x000928EC File Offset: 0x00090AEC
+		// Token: 0x06003C78 RID: 15480 RVA: 0x0009B1DC File Offset: 0x000993DC
 		public static ERotationType FromString(string name)
 		{
 			ERotationType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038A1 RID: 14497 RVA: 0x00092915 File Offset: 0x00090B15
+		// Token: 0x06003C79 RID: 15481 RVA: 0x0009B205 File Offset: 0x00099405
 		public static bool TryFromString(string name, out ERotationType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060038A2 RID: 14498 RVA: 0x0009294E File Offset: 0x00090B4E
+		// Token: 0x06003C7A RID: 15482 RVA: 0x0009B23E File Offset: 0x0009943E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060038A3 RID: 14499 RVA: 0x00092966 File Offset: 0x00090B66
+		// Token: 0x06003C7B RID: 15483 RVA: 0x0009B256 File Offset: 0x00099456
 		public static ERotationType[] GetValues()
 		{
 			return new ERotationType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060038A4 RID: 14500 RVA: 0x00092972 File Offset: 0x00090B72
+		// Token: 0x06003C7C RID: 15484 RVA: 0x0009B262 File Offset: 0x00099462
 		public static string[] GetNames()
 		{
 			return new string[]

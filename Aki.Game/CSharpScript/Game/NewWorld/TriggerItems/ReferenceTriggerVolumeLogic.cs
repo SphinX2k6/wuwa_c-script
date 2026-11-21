@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.TriggerItems
 {
-	// Token: 0x02007055 RID: 28757
+	// Token: 0x020061D6 RID: 25046
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ReferenceTriggerVolumeLogic
 	{
-		// Token: 0x06045FCC RID: 286668 RVA: 0x01172114 File Offset: 0x01170314
+		// Token: 0x0603C1BA RID: 246202 RVA: 0x0111BDD4 File Offset: 0x01119FD4
 		public ReferenceTriggerVolumeLogic(IList<IActorRef> refs)
 		{
 			foreach (IActorRef actorRef in refs)
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.NewWorld.TriggerItems
 			}
 		}
 
-		// Token: 0x06045FCD RID: 286669 RVA: 0x011721CC File Offset: 0x011703CC
+		// Token: 0x0603C1BB RID: 246203 RVA: 0x0111BE8C File Offset: 0x0111A08C
 		public void AddVolume(string path, AVolume volume)
 		{
 			if (!this.RefSet.Contains(path))
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.NewWorld.TriggerItems
 			this.TriggerVolumeCache[path] = volume;
 		}
 
-		// Token: 0x06045FCE RID: 286670 RVA: 0x01172219 File Offset: 0x01170419
+		// Token: 0x0603C1BC RID: 246204 RVA: 0x0111BED9 File Offset: 0x0111A0D9
 		public void RemoveVolume(string path)
 		{
 			if (!this.RefSet.Contains(path))
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.NewWorld.TriggerItems
 			this.RoleTriggerOverlappedVolumeSet.Remove(path);
 		}
 
-		// Token: 0x06045FCF RID: 286671 RVA: 0x01172258 File Offset: 0x01170458
+		// Token: 0x0603C1BD RID: 246205 RVA: 0x0111BF18 File Offset: 0x0111A118
 		public List<AVolume> GetVolumes()
 		{
 			List<AVolume> list = new List<AVolume>();
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.NewWorld.TriggerItems
 			return list;
 		}
 
-		// Token: 0x06045FD0 RID: 286672 RVA: 0x011722C0 File Offset: 0x011704C0
+		// Token: 0x0603C1BE RID: 246206 RVA: 0x0111BF80 File Offset: 0x0111A180
 		public void Clear()
 		{
 			foreach (KeyValuePair<string, AVolume> keyValuePair in this.TriggerVolumeCache)
@@ -88,19 +88,19 @@ namespace CSharpScript.Game.NewWorld.TriggerItems
 			this.OnMyRoleTriggerOverlapCallbackList.Clear();
 		}
 
-		// Token: 0x06045FD1 RID: 286673 RVA: 0x0117236C File Offset: 0x0117056C
+		// Token: 0x0603C1BF RID: 246207 RVA: 0x0111C02C File Offset: 0x0111A22C
 		public void Destroy()
 		{
 			this.Clear();
 		}
 
-		// Token: 0x06045FD2 RID: 286674 RVA: 0x01172374 File Offset: 0x01170574
+		// Token: 0x0603C1C0 RID: 246208 RVA: 0x0111C034 File Offset: 0x0111A234
 		public bool IsPlayerOverlapped()
 		{
 			return this.RoleTriggerOverlappedVolumeSet.Count > 0;
 		}
 
-		// Token: 0x06045FD3 RID: 286675 RVA: 0x01172384 File Offset: 0x01170584
+		// Token: 0x0603C1C1 RID: 246209 RVA: 0x0111C044 File Offset: 0x0111A244
 		public void AddOnPlayerOverlapCallback(Action<bool> callback, bool callbackIfAlreadyOverlapped = false)
 		{
 			this.OnMyRoleTriggerOverlapCallbackList.Add(callback);
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.NewWorld.TriggerItems
 			}
 		}
 
-		// Token: 0x06045FD4 RID: 286676 RVA: 0x011723AC File Offset: 0x011705AC
+		// Token: 0x0603C1C2 RID: 246210 RVA: 0x0111C06C File Offset: 0x0111A26C
 		public void RemoveOnPlayerOverlapCallback(Action<bool> callback)
 		{
 			int num = this.OnMyRoleTriggerOverlapCallbackList.IndexOf(callback);
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.NewWorld.TriggerItems
 			this.OnMyRoleTriggerOverlapCallbackList.RemoveAt(num);
 		}
 
-		// Token: 0x06045FD5 RID: 286677 RVA: 0x011723D7 File Offset: 0x011705D7
+		// Token: 0x0603C1C3 RID: 246211 RVA: 0x0111C097 File Offset: 0x0111A297
 		protected void OnCollisionEnterFunc(string path, [Nullable(2)] AActor otherActor)
 		{
 			if (!this.CheckBeginOverlapRoleTrigger(otherActor))
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.NewWorld.TriggerItems
 			}
 		}
 
-		// Token: 0x06045FD6 RID: 286678 RVA: 0x01172404 File Offset: 0x01170604
+		// Token: 0x0603C1C4 RID: 246212 RVA: 0x0111C0C4 File Offset: 0x0111A2C4
 		protected void OnCollisionExitFunc(string path, [Nullable(2)] AActor otherActor)
 		{
 			if (!this.CheckBeginOverlapRoleTrigger(otherActor))
@@ -150,14 +150,14 @@ namespace CSharpScript.Game.NewWorld.TriggerItems
 			}
 		}
 
-		// Token: 0x06045FD7 RID: 286679 RVA: 0x01172431 File Offset: 0x01170631
+		// Token: 0x0603C1C5 RID: 246213 RVA: 0x0111C0F1 File Offset: 0x0111A2F1
 		[NullableContext(2)]
 		private bool CheckBeginOverlapRoleTrigger(AActor otherActor)
 		{
 			return otherActor == RoleTriggerController.Instance.GetMyRoleTrigger();
 		}
 
-		// Token: 0x06045FD8 RID: 286680 RVA: 0x01172444 File Offset: 0x01170644
+		// Token: 0x0603C1C6 RID: 246214 RVA: 0x0111C104 File Offset: 0x0111A304
 		private void RegisterEvents(string path, ABrush inTrigger)
 		{
 			if (inTrigger == null || !inTrigger.IsValid())
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.NewWorld.TriggerItems
 			inTrigger.OnActorEndOverlap.Add(action2);
 		}
 
-		// Token: 0x06045FD9 RID: 286681 RVA: 0x01172514 File Offset: 0x01170714
+		// Token: 0x0603C1C7 RID: 246215 RVA: 0x0111C1D4 File Offset: 0x0111A3D4
 		private void RemoveEvents(string path, ABrush inTrigger)
 		{
 			ValueTuple<Action<AActor, AActor>, Action<AActor, AActor>> valueTuple;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.NewWorld.TriggerItems
 			}
 		}
 
-		// Token: 0x06045FDA RID: 286682 RVA: 0x011725A0 File Offset: 0x011707A0
+		// Token: 0x0603C1C8 RID: 246216 RVA: 0x0111C260 File Offset: 0x0111A460
 		private void HandleRoleTriggerOverlapCallback(bool isEnter)
 		{
 			if (this.OnMyRoleTriggerOverlapCallbackList.Count == 0)
@@ -222,13 +222,13 @@ namespace CSharpScript.Game.NewWorld.TriggerItems
 			}
 		}
 
-		// Token: 0x04024A31 RID: 150065
+		// Token: 0x0401FCE7 RID: 130279
 		private const int VALID_LEN = 3;
 
-		// Token: 0x04024A32 RID: 150066
+		// Token: 0x0401FCE8 RID: 130280
 		private readonly Dictionary<string, AVolume> TriggerVolumeCache = new Dictionary<string, AVolume>();
 
-		// Token: 0x04024A33 RID: 150067
+		// Token: 0x0401FCE9 RID: 130281
 		[TupleElementNames(new string[]
 		{
 			"Begin",
@@ -248,13 +248,13 @@ namespace CSharpScript.Game.NewWorld.TriggerItems
 		})]
 		private readonly Dictionary<string, ValueTuple<Action<AActor, AActor>, Action<AActor, AActor>>> VolumeOverlapCallbacks = new Dictionary<string, ValueTuple<Action<AActor, AActor>, Action<AActor, AActor>>>();
 
-		// Token: 0x04024A34 RID: 150068
+		// Token: 0x0401FCEA RID: 130282
 		private readonly HashSet<string> RefSet = new HashSet<string>();
 
-		// Token: 0x04024A35 RID: 150069
+		// Token: 0x0401FCEB RID: 130283
 		private readonly HashSet<string> RoleTriggerOverlappedVolumeSet = new HashSet<string>();
 
-		// Token: 0x04024A36 RID: 150070
+		// Token: 0x0401FCEC RID: 130284
 		private readonly List<Action<bool>> OnMyRoleTriggerOverlapCallbackList = new List<Action<bool>>();
 	}
 }

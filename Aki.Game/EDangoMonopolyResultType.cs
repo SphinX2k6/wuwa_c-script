@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001241 RID: 4673
+// Token: 0x020006F5 RID: 1781
 public enum EDangoMonopolyResultType
 {
-	// Token: 0x040039A7 RID: 14759
+	// Token: 0x04003A3F RID: 14911
 	Result,
-	// Token: 0x040039A8 RID: 14760
+	// Token: 0x04003A40 RID: 14912
 	Record
 }

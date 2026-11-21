@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200673B RID: 26427
+	// Token: 0x02006DBB RID: 28091
 	public enum IExitVehicleType_Union : byte
 	{
-		// Token: 0x04010E1E RID: 69150
+		// Token: 0x04011C50 RID: 72784
 		NONE,
-		// Token: 0x04010E1F RID: 69151
+		// Token: 0x04011C51 RID: 72785
 		IExitVehicleType,
-		// Token: 0x04010E20 RID: 69152
+		// Token: 0x04011C52 RID: 72786
 		IExitVehicleLaunch,
-		// Token: 0x04010E21 RID: 69153
+		// Token: 0x04011C53 RID: 72787
 		IExitVehicleStandUp,
-		// Token: 0x04010E22 RID: 69154
+		// Token: 0x04011C54 RID: 72788
 		IExitVehicleTeleport,
-		// Token: 0x04010E23 RID: 69155
+		// Token: 0x04011C55 RID: 72789
 		IExitVehicleSeatStandUp
 	}
 }

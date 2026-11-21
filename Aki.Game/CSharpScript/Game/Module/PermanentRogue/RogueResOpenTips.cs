@@ -6,16 +6,16 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005328 RID: 21288
+	// Token: 0x020042F8 RID: 17144
 	public class RogueResOpenTips : GenericPromptFloatTipsBase
 	{
-		// Token: 0x060366F7 RID: 222967 RVA: 0x00CE2C27 File Offset: 0x00CE0E27
+		// Token: 0x0602B5F3 RID: 177651 RVA: 0x00C305F7 File Offset: 0x00C2E7F7
 		[NullableContext(1)]
 		public RogueResOpenTips(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060366F8 RID: 222968 RVA: 0x00CE2C30 File Offset: 0x00CE0E30
+		// Token: 0x0602B5F4 RID: 177652 RVA: 0x00C30600 File Offset: 0x00C2E800
 		protected override void SetMainText([ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 		{
 		}
 
-		// Token: 0x060366F9 RID: 222969 RVA: 0x00CE2C32 File Offset: 0x00CE0E32
+		// Token: 0x0602B5F5 RID: 177653 RVA: 0x00C30602 File Offset: 0x00C2E802
 		protected override void SetExtraText([ParamCollection] [Nullable(new byte[]
 		{
 			1,

@@ -5,10 +5,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CE0 RID: 27872
+	// Token: 0x02007453 RID: 29779
 	public static class IPlayDissolveEffectVerify
 	{
-		// Token: 0x06031259 RID: 201305 RVA: 0x006AB228 File Offset: 0x006A9428
+		// Token: 0x06034222 RID: 213538 RVA: 0x007063AC File Offset: 0x007045AC
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyString(tablePos, 6, false))
@@ -19,7 +19,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				{
 					verifyAction = (IPlayDissolveEffectVerify.<>O.<0>__Verify = new VerifyTableAction(IVector2Verify.Verify));
 				}
-				if (verifier.VerifyTable(tablePos, offsetId, verifyAction, false) && verifier.VerifyField(tablePos, 10, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 12, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 14, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 16, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 18, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 20, 1UL, 1UL, false))
+				if (verifier.VerifyTable(tablePos, offsetId, verifyAction, false) && verifier.VerifyField(tablePos, 10, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 12, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 14, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 16, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 18, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 20, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 22, 1UL, 1UL, false))
 				{
 					return verifier.VerifyTableEnd(tablePos);
 				}
@@ -27,11 +27,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return false;
 		}
 
-		// Token: 0x02007DEF RID: 32239
+		// Token: 0x0200867A RID: 34426
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040139A3 RID: 80291
+			// Token: 0x04014A66 RID: 84582
 			public static VerifyTableAction <0>__Verify;
 		}
 	}

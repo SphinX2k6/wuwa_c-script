@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200210B RID: 8459
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200236C RID: 9068
 	public class PlayEffect2 : ActionParams
 	{
-		// Token: 0x0600BA16 RID: 47638 RVA: 0x001AE0F0 File Offset: 0x001AC2F0
+		// Token: 0x0600C5A2 RID: 50594 RVA: 0x001C5250 File Offset: 0x001C3450
 		private PlayEffect2_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BA17 RID: 47639 RVA: 0x001AE128 File Offset: 0x001AC328
+		// Token: 0x0600C5A3 RID: 50595 RVA: 0x001C5288 File Offset: 0x001C3488
 		public static PlayEffect2 Create([Nullable(2)] PlayEffect2 instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BA18 RID: 47640 RVA: 0x001AE13B File Offset: 0x001AC33B
+		// Token: 0x0600C5A4 RID: 50596 RVA: 0x001C529B File Offset: 0x001C349B
 		public static PlayEffect2 CreateFromSetValue([Nullable(2)] PlayEffect2_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BA19 RID: 47641 RVA: 0x001AE14E File Offset: 0x001AC34E
+		// Token: 0x0600C5A5 RID: 50597 RVA: 0x001C52AE File Offset: 0x001C34AE
 		public PlayEffect2_SetValue ToSetValue()
 		{
 			return new PlayEffect2_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170038D4 RID: 14548
-		// (get) Token: 0x0600BA1A RID: 47642 RVA: 0x001AE16D File Offset: 0x001AC36D
-		// (set) Token: 0x0600BA1B RID: 47643 RVA: 0x001AE198 File Offset: 0x001AC398
+		// Token: 0x17003BC0 RID: 15296
+		// (get) Token: 0x0600C5A6 RID: 50598 RVA: 0x001C52CD File Offset: 0x001C34CD
+		// (set) Token: 0x0600C5A7 RID: 50599 RVA: 0x001C52F8 File Offset: 0x001C34F8
 		public virtual EEffectType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038D5 RID: 14549
-		// (get) Token: 0x0600BA1C RID: 47644 RVA: 0x001AE1A6 File Offset: 0x001AC3A6
-		// (set) Token: 0x0600BA1D RID: 47645 RVA: 0x001AE1D1 File Offset: 0x001AC3D1
+		// Token: 0x17003BC1 RID: 15297
+		// (get) Token: 0x0600C5A8 RID: 50600 RVA: 0x001C5306 File Offset: 0x001C3506
+		// (set) Token: 0x0600C5A9 RID: 50601 RVA: 0x001C5331 File Offset: 0x001C3531
 		public virtual string Path
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006F67 RID: 28519
+		// Token: 0x0400759B RID: 30107
 		[Nullable(2)]
 		protected new PlayEffect2 FbInstance;
 
-		// Token: 0x04006F68 RID: 28520
+		// Token: 0x0400759C RID: 30108
 		[Nullable(2)]
 		protected PlayEffect2_SetValue PocoInterface;
 	}

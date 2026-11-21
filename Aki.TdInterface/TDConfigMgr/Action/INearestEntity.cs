@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C56 RID: 7254
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E4D RID: 7757
 	public class INearestEntity : ITeleportConfig
 	{
-		// Token: 0x06009B97 RID: 39831 RVA: 0x001654B8 File Offset: 0x001636B8
+		// Token: 0x0600A4EF RID: 42223 RVA: 0x001787F8 File Offset: 0x001769F8
 		private INearestEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009B98 RID: 39832 RVA: 0x001654F0 File Offset: 0x001636F0
+		// Token: 0x0600A4F0 RID: 42224 RVA: 0x00178830 File Offset: 0x00176A30
 		public static INearestEntity Create([Nullable(2)] INearestEntity instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009B99 RID: 39833 RVA: 0x00165503 File Offset: 0x00163703
+		// Token: 0x0600A4F1 RID: 42225 RVA: 0x00178843 File Offset: 0x00176A43
 		public static INearestEntity CreateFromSetValue([Nullable(2)] INearestEntity_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009B9A RID: 39834 RVA: 0x00165516 File Offset: 0x00163716
+		// Token: 0x0600A4F2 RID: 42226 RVA: 0x00178856 File Offset: 0x00176A56
 		public new INearestEntity_SetValue ToSetValue()
 		{
 			return new INearestEntity_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030A1 RID: 12449
-		// (get) Token: 0x06009B9B RID: 39835 RVA: 0x00165535 File Offset: 0x00163735
-		// (set) Token: 0x06009B9C RID: 39836 RVA: 0x00165560 File Offset: 0x00163760
+		// Token: 0x17003312 RID: 13074
+		// (get) Token: 0x0600A4F3 RID: 42227 RVA: 0x00178875 File Offset: 0x00176A75
+		// (set) Token: 0x0600A4F4 RID: 42228 RVA: 0x001788A0 File Offset: 0x00176AA0
 		public override ETeleportType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030A2 RID: 12450
-		// (get) Token: 0x06009B9D RID: 39837 RVA: 0x0016556E File Offset: 0x0016376E
-		// (set) Token: 0x06009B9E RID: 39838 RVA: 0x00165595 File Offset: 0x00163795
+		// Token: 0x17003313 RID: 13075
+		// (get) Token: 0x0600A4F5 RID: 42229 RVA: 0x001788AE File Offset: 0x00176AAE
+		// (set) Token: 0x0600A4F6 RID: 42230 RVA: 0x001788D5 File Offset: 0x00176AD5
 		public virtual List<int> EntityIds
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E7A RID: 24186
+		// Token: 0x040063B1 RID: 25521
 		[Nullable(2)]
 		protected new INearestEntity FbInstance;
 
-		// Token: 0x04005E7B RID: 24187
+		// Token: 0x040063B2 RID: 25522
 		[Nullable(2)]
 		protected new INearestEntity_SetValue PocoInterface;
 	}

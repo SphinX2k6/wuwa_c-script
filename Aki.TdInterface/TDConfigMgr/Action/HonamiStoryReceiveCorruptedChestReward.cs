@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200174C RID: 5964
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020018CD RID: 6349
 	public class HonamiStoryReceiveCorruptedChestReward : ActionParams
 	{
-		// Token: 0x06007E33 RID: 32307 RVA: 0x0012E448 File Offset: 0x0012C648
-		[NullableContext(1)]
+		// Token: 0x06008523 RID: 34083 RVA: 0x0013D6A8 File Offset: 0x0013B8A8
 		private HonamiStoryReceiveCorruptedChestReward_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007E34 RID: 32308 RVA: 0x0012E480 File Offset: 0x0012C680
-		[NullableContext(1)]
+		// Token: 0x06008524 RID: 34084 RVA: 0x0013D6E0 File Offset: 0x0013B8E0
 		public static HonamiStoryReceiveCorruptedChestReward Create([Nullable(2)] HonamiStoryReceiveCorruptedChestReward instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007E35 RID: 32309 RVA: 0x0012E493 File Offset: 0x0012C693
-		[NullableContext(1)]
+		// Token: 0x06008525 RID: 34085 RVA: 0x0013D6F3 File Offset: 0x0013B8F3
 		public static HonamiStoryReceiveCorruptedChestReward CreateFromSetValue([Nullable(2)] HonamiStoryReceiveCorruptedChestReward_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007E36 RID: 32310 RVA: 0x0012E4A6 File Offset: 0x0012C6A6
-		[NullableContext(1)]
+		// Token: 0x06008526 RID: 34086 RVA: 0x0013D706 File Offset: 0x0013B906
 		public HonamiStoryReceiveCorruptedChestReward_SetValue ToSetValue()
 		{
 			return new HonamiStoryReceiveCorruptedChestReward_SetValue
@@ -65,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700297C RID: 10620
-		// (get) Token: 0x06007E37 RID: 32311 RVA: 0x0012E4D1 File Offset: 0x0012C6D1
-		// (set) Token: 0x06007E38 RID: 32312 RVA: 0x0012E4FC File Offset: 0x0012C6FC
+		// Token: 0x17002B6A RID: 11114
+		// (get) Token: 0x06008527 RID: 34087 RVA: 0x0013D731 File Offset: 0x0013B931
+		// (set) Token: 0x06008528 RID: 34088 RVA: 0x0013D75C File Offset: 0x0013B95C
 		public virtual int Cost
 		{
 			get
@@ -88,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700297D RID: 10621
-		// (get) Token: 0x06007E39 RID: 32313 RVA: 0x0012E50C File Offset: 0x0012C70C
-		// (set) Token: 0x06007E3A RID: 32314 RVA: 0x0012E546 File Offset: 0x0012C746
+		// Token: 0x17002B6B RID: 11115
+		// (get) Token: 0x06008529 RID: 34089 RVA: 0x0013D76C File Offset: 0x0013B96C
+		// (set) Token: 0x0600852A RID: 34090 RVA: 0x0013D7A6 File Offset: 0x0013B9A6
 		public virtual int? CostGroup
 		{
 			get
@@ -112,11 +106,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700297E RID: 10622
-		// (get) Token: 0x06007E3B RID: 32315 RVA: 0x0012E554 File Offset: 0x0012C754
-		// (set) Token: 0x06007E3C RID: 32316 RVA: 0x0012E57B File Offset: 0x0012C77B
+		// Token: 0x17002B6C RID: 11116
+		// (get) Token: 0x0600852B RID: 34091 RVA: 0x0013D7B4 File Offset: 0x0013B9B4
+		// (set) Token: 0x0600852C RID: 34092 RVA: 0x0013D7DB File Offset: 0x0013B9DB
+		[Nullable(2)]
 		public virtual string ChangeSelfEntityStateAfterReceived
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -130,16 +126,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.ChangeSelfEntityStateAfterReceived;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().ChangeSelfEntityStateAfterReceived = value;
 			}
 		}
 
-		// Token: 0x04005067 RID: 20583
+		// Token: 0x0400549D RID: 21661
+		[Nullable(2)]
 		protected new HonamiStoryReceiveCorruptedChestReward FbInstance;
 
-		// Token: 0x04005068 RID: 20584
+		// Token: 0x0400549E RID: 21662
+		[Nullable(2)]
 		protected HonamiStoryReceiveCorruptedChestReward_SetValue PocoInterface;
 	}
 }

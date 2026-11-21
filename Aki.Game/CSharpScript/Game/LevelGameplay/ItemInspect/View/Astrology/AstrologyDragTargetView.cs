@@ -5,19 +5,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 {
-	// Token: 0x02006DE8 RID: 28136
+	// Token: 0x02005F67 RID: 24423
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AstrologyDragTargetView : UiPanelBase
 	{
-		// Token: 0x06044A33 RID: 281139 RVA: 0x010F05AA File Offset: 0x010EE7AA
+		// Token: 0x0603AB97 RID: 240535 RVA: 0x0109A7F6 File Offset: 0x010989F6
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 			this.SequencePlayer.BindOnEndSequenceEvent(new Action<string>(this.OnSequenceEnd));
 		}
 
-		// Token: 0x06044A34 RID: 281140 RVA: 0x010F05D4 File Offset: 0x010EE7D4
+		// Token: 0x0603AB98 RID: 240536 RVA: 0x0109A820 File Offset: 0x01098A20
 		protected override void OnBeforeShow()
 		{
 			this.HasPlayedFinish = false;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			sequencePlayer.PlaySequencePurely("Start", false, false);
 		}
 
-		// Token: 0x06044A35 RID: 281141 RVA: 0x010F05F4 File Offset: 0x010EE7F4
+		// Token: 0x0603AB99 RID: 240537 RVA: 0x0109A840 File Offset: 0x01098A40
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearFinishFallbackTimer();
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x06044A36 RID: 281142 RVA: 0x010F062E File Offset: 0x010EE82E
+		// Token: 0x0603AB9A RID: 240538 RVA: 0x0109A87A File Offset: 0x01098A7A
 		[NullableContext(1)]
 		public void SetScreenPosition(Vector2D position)
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			rootItem.SetAnchorOffset(position.ToUeVector2D(false));
 		}
 
-		// Token: 0x06044A37 RID: 281143 RVA: 0x010F0647 File Offset: 0x010EE847
+		// Token: 0x0603AB9B RID: 240539 RVA: 0x0109A893 File Offset: 0x01098A93
 		public void PlayShow()
 		{
 			if (this.HasPlayedClose || base.IsDestroy)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			sequencePlayer.PlaySequencePurely("Start", false, false);
 		}
 
-		// Token: 0x06044A38 RID: 281144 RVA: 0x010F0680 File Offset: 0x010EE880
+		// Token: 0x0603AB9C RID: 240540 RVA: 0x0109A8CC File Offset: 0x01098ACC
 		public void PlayCloseThenHide()
 		{
 			if (this.IsHidePlaying || this.HasPlayedClose || base.IsDestroy)
@@ -90,14 +90,14 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.HideFallbackTimer = TimerSystem.Instance.Delay(new TTimerAction(this.HideSelf), 1500f, null, null, true, 1f);
 		}
 
-		// Token: 0x06044A39 RID: 281145 RVA: 0x010F06EE File Offset: 0x010EE8EE
+		// Token: 0x0603AB9D RID: 240541 RVA: 0x0109A93A File Offset: 0x01098B3A
 		public void HideImmediately()
 		{
 			this.CancelHide();
 			base.SetUiActive(false);
 		}
 
-		// Token: 0x06044A3A RID: 281146 RVA: 0x010F0700 File Offset: 0x010EE900
+		// Token: 0x0603AB9E RID: 240542 RVA: 0x0109A94C File Offset: 0x01098B4C
 		public void PlayFinish(Action onAnimEnd = null)
 		{
 			if (this.HasPlayedFinish)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}
 		}
 
-		// Token: 0x06044A3B RID: 281147 RVA: 0x010F0768 File Offset: 0x010EE968
+		// Token: 0x0603AB9F RID: 240543 RVA: 0x0109A9B4 File Offset: 0x01098BB4
 		public void PlayCloseThenDestroy(Action onAnimEnd = null)
 		{
 			if (this.HasPlayedClose || base.IsDestroy)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.CloseFallbackTimer = TimerSystem.Instance.Delay(new TTimerAction(this.DestroySelf), 1500f, null, null, true, 1f);
 		}
 
-		// Token: 0x06044A3C RID: 281148 RVA: 0x010F07E8 File Offset: 0x010EE9E8
+		// Token: 0x0603ABA0 RID: 240544 RVA: 0x0109AA34 File Offset: 0x01098C34
 		[NullableContext(1)]
 		private void OnSequenceEnd(string sequenceName)
 		{
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}
 		}
 
-		// Token: 0x06044A3D RID: 281149 RVA: 0x010F0828 File Offset: 0x010EEA28
+		// Token: 0x0603ABA1 RID: 240545 RVA: 0x0109AA74 File Offset: 0x01098C74
 		private void NotifyFinishAnimEnd()
 		{
 			this.ClearFinishFallbackTimer();
@@ -173,13 +173,13 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			onFinishAnimEnd();
 		}
 
-		// Token: 0x06044A3E RID: 281150 RVA: 0x010F0847 File Offset: 0x010EEA47
+		// Token: 0x0603ABA2 RID: 240546 RVA: 0x0109AA93 File Offset: 0x01098C93
 		private void NotifyFinishAnimEnd(float _)
 		{
 			this.NotifyFinishAnimEnd();
 		}
 
-		// Token: 0x06044A3F RID: 281151 RVA: 0x010F084F File Offset: 0x010EEA4F
+		// Token: 0x0603ABA3 RID: 240547 RVA: 0x0109AA9B File Offset: 0x01098C9B
 		private void DestroySelf()
 		{
 			this.ClearCloseFallbackTimer();
@@ -196,13 +196,13 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			onCloseAnimEnd();
 		}
 
-		// Token: 0x06044A40 RID: 281152 RVA: 0x010F087D File Offset: 0x010EEA7D
+		// Token: 0x0603ABA4 RID: 240548 RVA: 0x0109AAC9 File Offset: 0x01098CC9
 		private void DestroySelf(float _)
 		{
 			this.DestroySelf();
 		}
 
-		// Token: 0x06044A41 RID: 281153 RVA: 0x010F0885 File Offset: 0x010EEA85
+		// Token: 0x0603ABA5 RID: 240549 RVA: 0x0109AAD1 File Offset: 0x01098CD1
 		private void HideSelf()
 		{
 			this.ClearHideFallbackTimer();
@@ -210,20 +210,20 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			base.SetUiActive(false);
 		}
 
-		// Token: 0x06044A42 RID: 281154 RVA: 0x010F089B File Offset: 0x010EEA9B
+		// Token: 0x0603ABA6 RID: 240550 RVA: 0x0109AAE7 File Offset: 0x01098CE7
 		private void HideSelf(float _)
 		{
 			this.HideSelf();
 		}
 
-		// Token: 0x06044A43 RID: 281155 RVA: 0x010F08A3 File Offset: 0x010EEAA3
+		// Token: 0x0603ABA7 RID: 240551 RVA: 0x0109AAEF File Offset: 0x01098CEF
 		private void CancelHide()
 		{
 			this.ClearHideFallbackTimer();
 			this.IsHidePlaying = false;
 		}
 
-		// Token: 0x06044A44 RID: 281156 RVA: 0x010F08B2 File Offset: 0x010EEAB2
+		// Token: 0x0603ABA8 RID: 240552 RVA: 0x0109AAFE File Offset: 0x01098CFE
 		private void ClearFinishFallbackTimer()
 		{
 			TimerHandle finishFallbackTimer = this.FinishFallbackTimer;
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.FinishFallbackTimer = null;
 		}
 
-		// Token: 0x06044A45 RID: 281157 RVA: 0x010F08CD File Offset: 0x010EEACD
+		// Token: 0x0603ABA9 RID: 240553 RVA: 0x0109AB19 File Offset: 0x01098D19
 		private void ClearCloseFallbackTimer()
 		{
 			TimerHandle closeFallbackTimer = this.CloseFallbackTimer;
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.CloseFallbackTimer = null;
 		}
 
-		// Token: 0x06044A46 RID: 281158 RVA: 0x010F08E8 File Offset: 0x010EEAE8
+		// Token: 0x0603ABAA RID: 240554 RVA: 0x0109AB34 File Offset: 0x01098D34
 		private void ClearHideFallbackTimer()
 		{
 			TimerHandle hideFallbackTimer = this.HideFallbackTimer;
@@ -256,37 +256,37 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.HideFallbackTimer = null;
 		}
 
-		// Token: 0x04023B42 RID: 146242
+		// Token: 0x0401EDE4 RID: 126436
 		private const int FINISH_ANIM_FALLBACK_MS = 1500;
 
-		// Token: 0x04023B43 RID: 146243
+		// Token: 0x0401EDE5 RID: 126437
 		private const int CLOSE_ANIM_FALLBACK_MS = 1500;
 
-		// Token: 0x04023B44 RID: 146244
+		// Token: 0x0401EDE6 RID: 126438
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04023B45 RID: 146245
+		// Token: 0x0401EDE7 RID: 126439
 		private bool HasPlayedFinish;
 
-		// Token: 0x04023B46 RID: 146246
+		// Token: 0x0401EDE8 RID: 126440
 		private bool HasPlayedClose;
 
-		// Token: 0x04023B47 RID: 146247
+		// Token: 0x0401EDE9 RID: 126441
 		private bool IsHidePlaying;
 
-		// Token: 0x04023B48 RID: 146248
+		// Token: 0x0401EDEA RID: 126442
 		private Action OnFinishAnimEnd;
 
-		// Token: 0x04023B49 RID: 146249
+		// Token: 0x0401EDEB RID: 126443
 		private Action OnCloseAnimEnd;
 
-		// Token: 0x04023B4A RID: 146250
+		// Token: 0x0401EDEC RID: 126444
 		private TimerHandle FinishFallbackTimer;
 
-		// Token: 0x04023B4B RID: 146251
+		// Token: 0x0401EDED RID: 126445
 		private TimerHandle CloseFallbackTimer;
 
-		// Token: 0x04023B4C RID: 146252
+		// Token: 0x0401EDEE RID: 126446
 		private TimerHandle HideFallbackTimer;
 	}
 }

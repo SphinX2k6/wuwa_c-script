@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A0A RID: 2570
+	// Token: 0x02000ACF RID: 2767
 	public static class ESlashAngleTypeExtensions
 	{
-		// Token: 0x060038DE RID: 14558 RVA: 0x00092FD0 File Offset: 0x000911D0
+		// Token: 0x06003CB6 RID: 15542 RVA: 0x0009B8C0 File Offset: 0x00099AC0
 		public static string ToEnumString(this ESlashAngleType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038DF RID: 14559 RVA: 0x00093008 File Offset: 0x00091208
+		// Token: 0x06003CB7 RID: 15543 RVA: 0x0009B8F8 File Offset: 0x00099AF8
 		public static ESlashAngleType FromString(string name)
 		{
 			ESlashAngleType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038E0 RID: 14560 RVA: 0x00093031 File Offset: 0x00091231
+		// Token: 0x06003CB8 RID: 15544 RVA: 0x0009B921 File Offset: 0x00099B21
 		public static bool TryFromString(string name, out ESlashAngleType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060038E1 RID: 14561 RVA: 0x0009306A File Offset: 0x0009126A
+		// Token: 0x06003CB9 RID: 15545 RVA: 0x0009B95A File Offset: 0x00099B5A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060038E2 RID: 14562 RVA: 0x00093082 File Offset: 0x00091282
+		// Token: 0x06003CBA RID: 15546 RVA: 0x0009B972 File Offset: 0x00099B72
 		public static ESlashAngleType[] GetValues()
 		{
 			return new ESlashAngleType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060038E3 RID: 14563 RVA: 0x0009308E File Offset: 0x0009128E
+		// Token: 0x06003CBB RID: 15547 RVA: 0x0009B97E File Offset: 0x00099B7E
 		public static string[] GetNames()
 		{
 			return new string[]

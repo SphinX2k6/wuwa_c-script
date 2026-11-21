@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200197C RID: 6524
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B07 RID: 6919
 	public class IDelayRemoveAfterSkillFinish : IDelayRemoveType
 	{
-		// Token: 0x06008BB9 RID: 35769 RVA: 0x001484E0 File Offset: 0x001466E0
+		// Token: 0x060092F1 RID: 37617 RVA: 0x00157F70 File Offset: 0x00156170
 		private IDelayRemoveAfterSkillFinish_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008BBA RID: 35770 RVA: 0x00148518 File Offset: 0x00146718
+		// Token: 0x060092F2 RID: 37618 RVA: 0x00157FA8 File Offset: 0x001561A8
 		public static IDelayRemoveAfterSkillFinish Create([Nullable(2)] IDelayRemoveAfterSkillFinish instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008BBB RID: 35771 RVA: 0x0014852B File Offset: 0x0014672B
+		// Token: 0x060092F3 RID: 37619 RVA: 0x00157FBB File Offset: 0x001561BB
 		public static IDelayRemoveAfterSkillFinish CreateFromSetValue([Nullable(2)] IDelayRemoveAfterSkillFinish_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008BBC RID: 35772 RVA: 0x0014853E File Offset: 0x0014673E
+		// Token: 0x060092F4 RID: 37620 RVA: 0x00157FCE File Offset: 0x001561CE
 		public new IDelayRemoveAfterSkillFinish_SetValue ToSetValue()
 		{
 			return new IDelayRemoveAfterSkillFinish_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CF7 RID: 11511
-		// (get) Token: 0x06008BBD RID: 35773 RVA: 0x00148551 File Offset: 0x00146751
-		// (set) Token: 0x06008BBE RID: 35774 RVA: 0x0014857C File Offset: 0x0014677C
+		// Token: 0x17002EFA RID: 12026
+		// (get) Token: 0x060092F5 RID: 37621 RVA: 0x00157FE1 File Offset: 0x001561E1
+		// (set) Token: 0x060092F6 RID: 37622 RVA: 0x0015800C File Offset: 0x0015620C
 		public override EDelayRemoveType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400571A RID: 22298
+		// Token: 0x04005B6F RID: 23407
 		[Nullable(2)]
 		protected new IDelayRemoveAfterSkillFinish FbInstance;
 
-		// Token: 0x0400571B RID: 22299
+		// Token: 0x04005B70 RID: 23408
 		[Nullable(2)]
 		protected new IDelayRemoveAfterSkillFinish_SetValue PocoInterface;
 	}

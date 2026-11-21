@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000891 RID: 2193
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000934 RID: 2356
 	public class SceneItemLifeCycleComponent : IComponentBase
 	{
-		// Token: 0x060030E7 RID: 12519 RVA: 0x0007DC48 File Offset: 0x0007BE48
+		// Token: 0x06003423 RID: 13347 RVA: 0x00085130 File Offset: 0x00083330
 		private SceneItemLifeCycleComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060030E8 RID: 12520 RVA: 0x0007DC80 File Offset: 0x0007BE80
+		// Token: 0x06003424 RID: 13348 RVA: 0x00085168 File Offset: 0x00083368
 		public static SceneItemLifeCycleComponent Create([Nullable(2)] SceneItemLifeCycleComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060030E9 RID: 12521 RVA: 0x0007DC93 File Offset: 0x0007BE93
+		// Token: 0x06003425 RID: 13349 RVA: 0x0008517B File Offset: 0x0008337B
 		public static SceneItemLifeCycleComponent CreateFromSetValue([Nullable(2)] SceneItemLifeCycleComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060030EA RID: 12522 RVA: 0x0007DCA6 File Offset: 0x0007BEA6
+		// Token: 0x06003426 RID: 13350 RVA: 0x0008518E File Offset: 0x0008338E
 		public new SceneItemLifeCycleComponent_SetValue ToSetValue()
 		{
 			return new SceneItemLifeCycleComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000CFD RID: 3325
-		// (get) Token: 0x060030EB RID: 12523 RVA: 0x0007DCE0 File Offset: 0x0007BEE0
-		// (set) Token: 0x060030EC RID: 12524 RVA: 0x0007DD1A File Offset: 0x0007BF1A
+		// Token: 0x17000DC6 RID: 3526
+		// (get) Token: 0x06003427 RID: 13351 RVA: 0x000851C8 File Offset: 0x000833C8
+		// (set) Token: 0x06003428 RID: 13352 RVA: 0x00085202 File Offset: 0x00083402
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CFE RID: 3326
-		// (get) Token: 0x060030ED RID: 12525 RVA: 0x0007DD28 File Offset: 0x0007BF28
-		// (set) Token: 0x060030EE RID: 12526 RVA: 0x0007DD52 File Offset: 0x0007BF52
+		// Token: 0x17000DC7 RID: 3527
+		// (get) Token: 0x06003429 RID: 13353 RVA: 0x00085210 File Offset: 0x00083410
+		// (set) Token: 0x0600342A RID: 13354 RVA: 0x0008523A File Offset: 0x0008343A
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CFF RID: 3327
-		// (get) Token: 0x060030EF RID: 12527 RVA: 0x0007DD60 File Offset: 0x0007BF60
-		// (set) Token: 0x060030F0 RID: 12528 RVA: 0x0007DDC1 File Offset: 0x0007BFC1
+		// Token: 0x17000DC8 RID: 3528
+		// (get) Token: 0x0600342B RID: 13355 RVA: 0x00085248 File Offset: 0x00083448
+		// (set) Token: 0x0600342C RID: 13356 RVA: 0x000852A9 File Offset: 0x000834A9
 		public virtual ICreateStageConfig CreateStageConfig
 		{
 			get
@@ -135,9 +133,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D00 RID: 3328
-		// (get) Token: 0x060030F1 RID: 12529 RVA: 0x0007DDD8 File Offset: 0x0007BFD8
-		// (set) Token: 0x060030F2 RID: 12530 RVA: 0x0007DE39 File Offset: 0x0007C039
+		// Token: 0x17000DC9 RID: 3529
+		// (get) Token: 0x0600342D RID: 13357 RVA: 0x000852C0 File Offset: 0x000834C0
+		// (set) Token: 0x0600342E RID: 13358 RVA: 0x00085321 File Offset: 0x00083521
 		public virtual IDestroyStageConfig DestroyStageConfig
 		{
 			get
@@ -165,24 +163,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04002029 RID: 8233
+		// Token: 0x0400223B RID: 8763
 		[Nullable(2)]
 		protected new SceneItemLifeCycleComponent FbInstance;
 
-		// Token: 0x0400202A RID: 8234
+		// Token: 0x0400223C RID: 8764
 		[Nullable(2)]
 		protected new SceneItemLifeCycleComponent_SetValue PocoInterface;
 
-		// Token: 0x0400202B RID: 8235
+		// Token: 0x0400223D RID: 8765
 		private ICreateStageConfig _CreateStageConfigCache;
 
-		// Token: 0x0400202C RID: 8236
+		// Token: 0x0400223E RID: 8766
 		private bool _CreateStageConfigInited;
 
-		// Token: 0x0400202D RID: 8237
+		// Token: 0x0400223F RID: 8767
 		private IDestroyStageConfig _DestroyStageConfigCache;
 
-		// Token: 0x0400202E RID: 8238
+		// Token: 0x04002240 RID: 8768
 		private bool _DestroyStageConfigInited;
 	}
 }

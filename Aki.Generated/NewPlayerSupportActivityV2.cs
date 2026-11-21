@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E86 RID: 3718
+	// Token: 0x02000F6B RID: 3947
 	public struct NewPlayerSupportActivityV2 : IFlatbufferObject
 	{
-		// Token: 0x17002314 RID: 8980
-		// (get) Token: 0x06009EAD RID: 40621 RVA: 0x0029CAF4 File Offset: 0x0029ACF4
+		// Token: 0x17002379 RID: 9081
+		// (get) Token: 0x0600A4CD RID: 42189 RVA: 0x002BA14C File Offset: 0x002B834C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009EAE RID: 40622 RVA: 0x0029CB01 File Offset: 0x0029AD01
+		// Token: 0x0600A4CE RID: 42190 RVA: 0x002BA159 File Offset: 0x002B8359
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009EAF RID: 40623 RVA: 0x0029CB08 File Offset: 0x0029AD08
+		// Token: 0x0600A4CF RID: 42191 RVA: 0x002BA160 File Offset: 0x002B8360
 		public static NewPlayerSupportActivityV2 GetRootAsNewPlayerSupportActivityV2(ByteBuffer _bb)
 		{
 			return NewPlayerSupportActivityV2.GetRootAsNewPlayerSupportActivityV2(_bb, default(NewPlayerSupportActivityV2));
 		}
 
-		// Token: 0x06009EB0 RID: 40624 RVA: 0x0029CB24 File Offset: 0x0029AD24
+		// Token: 0x0600A4D0 RID: 42192 RVA: 0x002BA17C File Offset: 0x002B837C
 		public static NewPlayerSupportActivityV2 GetRootAsNewPlayerSupportActivityV2(ByteBuffer _bb, NewPlayerSupportActivityV2 obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009EB1 RID: 40625 RVA: 0x0029CB41 File Offset: 0x0029AD41
+		// Token: 0x0600A4D1 RID: 42193 RVA: 0x002BA199 File Offset: 0x002B8399
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009EB2 RID: 40626 RVA: 0x0029CB50 File Offset: 0x0029AD50
+		// Token: 0x0600A4D2 RID: 42194 RVA: 0x002BA1A8 File Offset: 0x002B83A8
 		public NewPlayerSupportActivityV2 __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002315 RID: 8981
-		// (get) Token: 0x06009EB3 RID: 40627 RVA: 0x0029CB60 File Offset: 0x0029AD60
+		// Token: 0x1700237A RID: 9082
+		// (get) Token: 0x0600A4D3 RID: 42195 RVA: 0x002BA1B8 File Offset: 0x002B83B8
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002316 RID: 8982
-		// (get) Token: 0x06009EB4 RID: 40628 RVA: 0x0029CB9C File Offset: 0x0029AD9C
+		// Token: 0x1700237B RID: 9083
+		// (get) Token: 0x0600A4D4 RID: 42196 RVA: 0x002BA1F4 File Offset: 0x002B83F4
 		public int ContinueDays
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002317 RID: 8983
-		// (get) Token: 0x06009EB5 RID: 40629 RVA: 0x0029CBD8 File Offset: 0x0029ADD8
+		// Token: 0x1700237C RID: 9084
+		// (get) Token: 0x0600A4D5 RID: 42197 RVA: 0x002BA230 File Offset: 0x002B8430
 		public int LivenessContinueDays
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009EB6 RID: 40630 RVA: 0x0029CC14 File Offset: 0x0029AE14
+		// Token: 0x0600A4D6 RID: 42198 RVA: 0x002BA26C File Offset: 0x002B846C
 		public int LivenessBonusItemId(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -105,8 +105,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002318 RID: 8984
-		// (get) Token: 0x06009EB7 RID: 40631 RVA: 0x0029CC54 File Offset: 0x0029AE54
+		// Token: 0x1700237D RID: 9085
+		// (get) Token: 0x0600A4D7 RID: 42199 RVA: 0x002BA2AC File Offset: 0x002B84AC
 		public int LivenessBonusItemIdLength
 		{
 			get
@@ -120,20 +120,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009EB8 RID: 40632 RVA: 0x0029CC80 File Offset: 0x0029AE80
+		// Token: 0x0600A4D8 RID: 42200 RVA: 0x002BA2D8 File Offset: 0x002B84D8
 		public Span<int> GetLivenessBonusItemIdBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06009EB9 RID: 40633 RVA: 0x0029CC90 File Offset: 0x0029AE90
+		// Token: 0x0600A4D9 RID: 42201 RVA: 0x002BA2E8 File Offset: 0x002B84E8
 		public int[] GetLivenessBonusItemIdArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002319 RID: 8985
-		// (get) Token: 0x06009EBA RID: 40634 RVA: 0x0029CCA8 File Offset: 0x0029AEA8
+		// Token: 0x1700237E RID: 9086
+		// (get) Token: 0x0600A4DA RID: 42202 RVA: 0x002BA300 File Offset: 0x002B8500
 		public int LivenessTimes
 		{
 			get
@@ -147,7 +147,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009EBB RID: 40635 RVA: 0x0029CCE8 File Offset: 0x0029AEE8
+		// Token: 0x0600A4DB RID: 42203 RVA: 0x002BA340 File Offset: 0x002B8540
 		public int PayGifts(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -158,8 +158,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700231A RID: 8986
-		// (get) Token: 0x06009EBC RID: 40636 RVA: 0x0029CD28 File Offset: 0x0029AF28
+		// Token: 0x1700237F RID: 9087
+		// (get) Token: 0x0600A4DC RID: 42204 RVA: 0x002BA380 File Offset: 0x002B8580
 		public int PayGiftsLength
 		{
 			get
@@ -173,20 +173,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009EBD RID: 40637 RVA: 0x0029CD54 File Offset: 0x0029AF54
+		// Token: 0x0600A4DD RID: 42205 RVA: 0x002BA3AC File Offset: 0x002B85AC
 		public Span<int> GetPayGiftsBytes()
 		{
 			return this.__p.__vector_as_span<int>(14, 4);
 		}
 
-		// Token: 0x06009EBE RID: 40638 RVA: 0x0029CD64 File Offset: 0x0029AF64
+		// Token: 0x0600A4DE RID: 42206 RVA: 0x002BA3BC File Offset: 0x002B85BC
 		public int[] GetPayGiftsArray()
 		{
 			return this.__p.__vector_as_array<int>(14) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x1700231B RID: 8987
-		// (get) Token: 0x06009EBF RID: 40639 RVA: 0x0029CD7C File Offset: 0x0029AF7C
+		// Token: 0x17002380 RID: 9088
+		// (get) Token: 0x0600A4DF RID: 42207 RVA: 0x002BA3D4 File Offset: 0x002B85D4
 		public int PayGiftsContinueDays
 		{
 			get
@@ -200,7 +200,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009EC0 RID: 40640 RVA: 0x0029CDBC File Offset: 0x0029AFBC
+		// Token: 0x0600A4E0 RID: 42208 RVA: 0x002BA414 File Offset: 0x002B8614
 		public int GachaIds(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -211,8 +211,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700231C RID: 8988
-		// (get) Token: 0x06009EC1 RID: 40641 RVA: 0x0029CDFC File Offset: 0x0029AFFC
+		// Token: 0x17002381 RID: 9089
+		// (get) Token: 0x0600A4E1 RID: 42209 RVA: 0x002BA454 File Offset: 0x002B8654
 		public int GachaIdsLength
 		{
 			get
@@ -226,20 +226,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009EC2 RID: 40642 RVA: 0x0029CE28 File Offset: 0x0029B028
+		// Token: 0x0600A4E2 RID: 42210 RVA: 0x002BA480 File Offset: 0x002B8680
 		public Span<int> GetGachaIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x06009EC3 RID: 40643 RVA: 0x0029CE38 File Offset: 0x0029B038
+		// Token: 0x0600A4E3 RID: 42211 RVA: 0x002BA490 File Offset: 0x002B8690
 		public int[] GetGachaIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x1700231D RID: 8989
-		// (get) Token: 0x06009EC4 RID: 40644 RVA: 0x0029CE50 File Offset: 0x0029B050
+		// Token: 0x17002382 RID: 9090
+		// (get) Token: 0x0600A4E4 RID: 42212 RVA: 0x002BA4A8 File Offset: 0x002B86A8
 		public int GachaContinueDays
 		{
 			get
@@ -253,8 +253,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700231E RID: 8990
-		// (get) Token: 0x06009EC5 RID: 40645 RVA: 0x0029CE90 File Offset: 0x0029B090
+		// Token: 0x17002383 RID: 9091
+		// (get) Token: 0x0600A4E5 RID: 42213 RVA: 0x002BA4E8 File Offset: 0x002B86E8
 		public int WeekCardContinueDays
 		{
 			get
@@ -268,7 +268,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009EC6 RID: 40646 RVA: 0x0029CED0 File Offset: 0x0029B0D0
+		// Token: 0x0600A4E6 RID: 42214 RVA: 0x002BA528 File Offset: 0x002B8728
 		public int WeekCardIds(int j)
 		{
 			int num = this.__p.__offset(24);
@@ -279,8 +279,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700231F RID: 8991
-		// (get) Token: 0x06009EC7 RID: 40647 RVA: 0x0029CF10 File Offset: 0x0029B110
+		// Token: 0x17002384 RID: 9092
+		// (get) Token: 0x0600A4E7 RID: 42215 RVA: 0x002BA568 File Offset: 0x002B8768
 		public int WeekCardIdsLength
 		{
 			get
@@ -294,91 +294,83 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009EC8 RID: 40648 RVA: 0x0029CF3C File Offset: 0x0029B13C
+		// Token: 0x0600A4E8 RID: 42216 RVA: 0x002BA594 File Offset: 0x002B8794
 		public Span<int> GetWeekCardIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(24, 4);
 		}
 
-		// Token: 0x06009EC9 RID: 40649 RVA: 0x0029CF4C File Offset: 0x0029B14C
+		// Token: 0x0600A4E9 RID: 42217 RVA: 0x002BA5A4 File Offset: 0x002B87A4
 		public int[] GetWeekCardIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(24) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06009ECA RID: 40650 RVA: 0x0029CF64 File Offset: 0x0029B164
+		// Token: 0x0600A4EA RID: 42218 RVA: 0x002BA5BC File Offset: 0x002B87BC
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用GachaIdsIter()或GetGachaIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] GachaIds()
+		public int[] GachaIds()
 		{
-			NewPlayerSupportActivityV2 newPlayerSupportActivityV = this;
-			return newPlayerSupportActivityV.GetGachaIdsArray() ?? Array.Empty<int>();
+			return this.GetGachaIdsArray();
 		}
 
-		// Token: 0x06009ECB RID: 40651 RVA: 0x0029CF88 File Offset: 0x0029B188
+		// Token: 0x0600A4EB RID: 42219 RVA: 0x002BA5C4 File Offset: 0x002B87C4
 		[NullableContext(1)]
-		public readonly IEnumerable<int> GachaIdsIter()
+		public IEnumerable<int> GachaIdsIter()
 		{
 			NewPlayerSupportActivityV2.<GachaIdsIter>d__43 <GachaIdsIter>d__ = new NewPlayerSupportActivityV2.<GachaIdsIter>d__43(-2);
 			<GachaIdsIter>d__.<>3__<>4__this = this;
 			return <GachaIdsIter>d__;
 		}
 
-		// Token: 0x06009ECC RID: 40652 RVA: 0x0029CFA0 File Offset: 0x0029B1A0
+		// Token: 0x0600A4EC RID: 42220 RVA: 0x002BA5D9 File Offset: 0x002B87D9
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用LivenessBonusItemIdIter()或GetLivenessBonusItemIdBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] LivenessBonusItemId()
+		public int[] LivenessBonusItemId()
 		{
-			NewPlayerSupportActivityV2 newPlayerSupportActivityV = this;
-			return newPlayerSupportActivityV.GetLivenessBonusItemIdArray() ?? Array.Empty<int>();
+			return this.GetLivenessBonusItemIdArray();
 		}
 
-		// Token: 0x06009ECD RID: 40653 RVA: 0x0029CFC4 File Offset: 0x0029B1C4
+		// Token: 0x0600A4ED RID: 42221 RVA: 0x002BA5E1 File Offset: 0x002B87E1
 		[NullableContext(1)]
-		public readonly IEnumerable<int> LivenessBonusItemIdIter()
+		public IEnumerable<int> LivenessBonusItemIdIter()
 		{
 			NewPlayerSupportActivityV2.<LivenessBonusItemIdIter>d__45 <LivenessBonusItemIdIter>d__ = new NewPlayerSupportActivityV2.<LivenessBonusItemIdIter>d__45(-2);
 			<LivenessBonusItemIdIter>d__.<>3__<>4__this = this;
 			return <LivenessBonusItemIdIter>d__;
 		}
 
-		// Token: 0x06009ECE RID: 40654 RVA: 0x0029CFDC File Offset: 0x0029B1DC
+		// Token: 0x0600A4EE RID: 42222 RVA: 0x002BA5F6 File Offset: 0x002B87F6
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PayGiftsIter()或GetPayGiftsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] PayGifts()
+		public int[] PayGifts()
 		{
-			NewPlayerSupportActivityV2 newPlayerSupportActivityV = this;
-			return newPlayerSupportActivityV.GetPayGiftsArray() ?? Array.Empty<int>();
+			return this.GetPayGiftsArray();
 		}
 
-		// Token: 0x06009ECF RID: 40655 RVA: 0x0029D000 File Offset: 0x0029B200
+		// Token: 0x0600A4EF RID: 42223 RVA: 0x002BA5FE File Offset: 0x002B87FE
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PayGiftsIter()
+		public IEnumerable<int> PayGiftsIter()
 		{
 			NewPlayerSupportActivityV2.<PayGiftsIter>d__47 <PayGiftsIter>d__ = new NewPlayerSupportActivityV2.<PayGiftsIter>d__47(-2);
 			<PayGiftsIter>d__.<>3__<>4__this = this;
 			return <PayGiftsIter>d__;
 		}
 
-		// Token: 0x06009ED0 RID: 40656 RVA: 0x0029D018 File Offset: 0x0029B218
+		// Token: 0x0600A4F0 RID: 42224 RVA: 0x002BA613 File Offset: 0x002B8813
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WeekCardIdsIter()或GetWeekCardIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] WeekCardIds()
+		public int[] WeekCardIds()
 		{
-			NewPlayerSupportActivityV2 newPlayerSupportActivityV = this;
-			return newPlayerSupportActivityV.GetWeekCardIdsArray() ?? Array.Empty<int>();
+			return this.GetWeekCardIdsArray();
 		}
 
-		// Token: 0x06009ED1 RID: 40657 RVA: 0x0029D03C File Offset: 0x0029B23C
+		// Token: 0x0600A4F1 RID: 42225 RVA: 0x002BA61B File Offset: 0x002B881B
 		[NullableContext(1)]
-		public readonly IEnumerable<int> WeekCardIdsIter()
+		public IEnumerable<int> WeekCardIdsIter()
 		{
 			NewPlayerSupportActivityV2.<WeekCardIdsIter>d__49 <WeekCardIdsIter>d__ = new NewPlayerSupportActivityV2.<WeekCardIdsIter>d__49(-2);
 			<WeekCardIdsIter>d__.<>3__<>4__this = this;
 			return <WeekCardIdsIter>d__;
 		}
 
-		// Token: 0x04004F34 RID: 20276
+		// Token: 0x04005519 RID: 21785
 		private Table __p;
 	}
 }

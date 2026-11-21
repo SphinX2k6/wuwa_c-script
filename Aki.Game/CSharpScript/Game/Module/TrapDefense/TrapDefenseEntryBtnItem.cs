@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A8D RID: 19085
+	// Token: 0x02003A35 RID: 14901
 	public class TrapDefenseEntryBtnItem : UiPanelBase
 	{
-		// Token: 0x0603177E RID: 202622 RVA: 0x00B772A7 File Offset: 0x00B754A7
+		// Token: 0x0602650E RID: 156942 RVA: 0x00ABB25B File Offset: 0x00AB945B
 		public TrapDefenseEntryBtnItem(ETrapDefenseLevelType mode)
 		{
 			this.Mode = mode;
 		}
 
-		// Token: 0x0603177F RID: 202623 RVA: 0x00B772B8 File Offset: 0x00B754B8
+		// Token: 0x0602650F RID: 156943 RVA: 0x00ABB26C File Offset: 0x00AB946C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -55,21 +55,21 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031780 RID: 202624 RVA: 0x00B7748A File Offset: 0x00B7568A
+		// Token: 0x06026510 RID: 156944 RVA: 0x00ABB43E File Offset: 0x00AB963E
 		protected override void OnStart()
 		{
 			this.BindRedDot();
 			this.RefreshByMode();
 		}
 
-		// Token: 0x06031781 RID: 202625 RVA: 0x00B77498 File Offset: 0x00B75698
+		// Token: 0x06026511 RID: 156945 RVA: 0x00ABB44C File Offset: 0x00AB964C
 		protected override void OnBeforeDestroy()
 		{
 			RedDotController.Instance.UnBindRedDot(ERedDotName.TrapDefenseMainLevel);
 			RedDotController.Instance.UnBindRedDot(ERedDotName.TrapDefenseRougeLevel);
 		}
 
-		// Token: 0x06031782 RID: 202626 RVA: 0x00B774B8 File Offset: 0x00B756B8
+		// Token: 0x06026512 RID: 156946 RVA: 0x00ABB46C File Offset: 0x00AB966C
 		public void RefreshUnlockTimer()
 		{
 			if (TrapDefenseModel.Instance.RougeModeData.ModeIsOpen())
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(7), ETrapDefenseTextKey.RogueUnlockCountDown.ToString(), new <>z__ReadOnlySingleElementList<object>(item));
 		}
 
-		// Token: 0x06031783 RID: 202627 RVA: 0x00B77528 File Offset: 0x00B75728
+		// Token: 0x06026513 RID: 156947 RVA: 0x00ABB4DC File Offset: 0x00AB96DC
 		public void RefreshByMode()
 		{
 			if (this.Mode == ETrapDefenseLevelType.Mainline)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031784 RID: 202628 RVA: 0x00B7754C File Offset: 0x00B7574C
+		// Token: 0x06026514 RID: 156948 RVA: 0x00ABB500 File Offset: 0x00AB9700
 		private void RefreshLevelMode()
 		{
 			ValueTuple<int, int> modeStarProgress = TrapDefenseModel.Instance.LevelModeData.GetModeStarProgress();
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			base.GetText(5).SetText("", true);
 		}
 
-		// Token: 0x06031785 RID: 202629 RVA: 0x00B77638 File Offset: 0x00B75838
+		// Token: 0x06026515 RID: 156949 RVA: 0x00ABB5EC File Offset: 0x00AB97EC
 		private void RefreshRogueMode()
 		{
 			bool flag = TrapDefenseModel.Instance.RougeModeData.ModeIsOpen();
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031786 RID: 202630 RVA: 0x00B777EC File Offset: 0x00B759EC
+		// Token: 0x06026516 RID: 156950 RVA: 0x00ABB7A0 File Offset: 0x00AB99A0
 		private void BindRedDot()
 		{
 			UUIItem item = base.GetItem(6);
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			RedDotController.Instance.BindRedDot(ERedDotName.TrapDefenseRougeModeOpen, item, null, 0);
 		}
 
-		// Token: 0x06031787 RID: 202631 RVA: 0x00B77830 File Offset: 0x00B75A30
+		// Token: 0x06026517 RID: 156951 RVA: 0x00ABB7E4 File Offset: 0x00AB99E4
 		private void OnBtnClick()
 		{
 			if (this.Mode == ETrapDefenseLevelType.Mainline)
@@ -191,43 +191,43 @@ namespace CSharpScript.Game.Module.TrapDefense
 			TrapDefenseModel.Instance.OpenViewRougeLevelMode(null, null);
 		}
 
-		// Token: 0x0401A73E RID: 108350
+		// Token: 0x04015090 RID: 86160
 		public readonly ETrapDefenseLevelType Mode;
 
-		// Token: 0x0200ABDE RID: 43998
+		// Token: 0x020095FE RID: 38398
 		private class EComponentDefine
 		{
-			// Token: 0x040343A7 RID: 213927
+			// Token: 0x0402ED58 RID: 191832
 			public const int BtnSelf = 0;
 
-			// Token: 0x040343A8 RID: 213928
+			// Token: 0x0402ED59 RID: 191833
 			public const int TextTitle = 1;
 
-			// Token: 0x040343A9 RID: 213929
+			// Token: 0x0402ED5A RID: 191834
 			public const int TextScoreLabel = 2;
 
-			// Token: 0x040343AA RID: 213930
+			// Token: 0x0402ED5B RID: 191835
 			public const int ArtTextScore = 3;
 
-			// Token: 0x040343AB RID: 213931
+			// Token: 0x0402ED5C RID: 191836
 			public const int TextLevelLabel = 4;
 
-			// Token: 0x040343AC RID: 213932
+			// Token: 0x0402ED5D RID: 191837
 			public const int TextLevelProgress = 5;
 
-			// Token: 0x040343AD RID: 213933
+			// Token: 0x0402ED5E RID: 191838
 			public const int ItemRedDot = 6;
 
-			// Token: 0x040343AE RID: 213934
+			// Token: 0x0402ED5F RID: 191839
 			public const int TextLockTips = 7;
 
-			// Token: 0x040343AF RID: 213935
+			// Token: 0x0402ED60 RID: 191840
 			public const int ItemUnlockPanel = 8;
 
-			// Token: 0x040343B0 RID: 213936
+			// Token: 0x0402ED61 RID: 191841
 			public const int ItemLockPanel = 9;
 
-			// Token: 0x040343B1 RID: 213937
+			// Token: 0x0402ED62 RID: 191842
 			public const int ItemLevelInfo = 10;
 		}
 	}

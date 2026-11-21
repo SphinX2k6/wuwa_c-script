@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B95 RID: 2965
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C63 RID: 3171
 	public class IHitBulletTypeFixedBulletId : IHitBulletType
 	{
-		// Token: 0x0600441F RID: 17439 RVA: 0x000AD382 File Offset: 0x000AB582
+		// Token: 0x06004878 RID: 18552 RVA: 0x000B7446 File Offset: 0x000B5646
 		public static IHitBulletTypeFixedBulletId Create(IHitBulletTypeFixedBulletId? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012B2 RID: 4786
-		// (get) Token: 0x06004420 RID: 17440 RVA: 0x000AD3A1 File Offset: 0x000AB5A1
+		// Token: 0x170013AD RID: 5037
+		// (get) Token: 0x06004879 RID: 18553 RVA: 0x000B7465 File Offset: 0x000B5665
 		public override EHitBulletType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012B3 RID: 4787
-		// (get) Token: 0x06004421 RID: 17441 RVA: 0x000AD3B0 File Offset: 0x000AB5B0
+		// Token: 0x170013AE RID: 5038
+		// (get) Token: 0x0600487A RID: 18554 RVA: 0x000B7474 File Offset: 0x000B5674
 		public virtual List<long> BulletId
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012B4 RID: 4788
-		// (get) Token: 0x06004422 RID: 17442 RVA: 0x000AD414 File Offset: 0x000AB614
+		// Token: 0x170013AF RID: 5039
+		// (get) Token: 0x0600487B RID: 18555 RVA: 0x000B74D8 File Offset: 0x000B56D8
 		public virtual bool? PlayerAttack
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002672 RID: 9842
+		// Token: 0x040028BA RID: 10426
 		private IHitBulletTypeFixedBulletId Instance;
 
-		// Token: 0x04002673 RID: 9843
+		// Token: 0x040028BB RID: 10427
 		private List<long> _BulletIdCache;
 
-		// Token: 0x04002674 RID: 9844
+		// Token: 0x040028BC RID: 10428
 		private bool _BulletIdInited;
 	}
 }

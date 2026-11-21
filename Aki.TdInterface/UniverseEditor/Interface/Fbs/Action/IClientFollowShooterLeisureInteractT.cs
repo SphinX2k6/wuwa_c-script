@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063BF RID: 25535
+	// Token: 0x02006A39 RID: 27193
 	public class IClientFollowShooterLeisureInteractT
 	{
-		// Token: 0x1700BE49 RID: 48713
-		// (get) Token: 0x0602C2C3 RID: 180931 RVA: 0x00610BA3 File Offset: 0x0060EDA3
-		// (set) Token: 0x0602C2C4 RID: 180932 RVA: 0x00610BAB File Offset: 0x0060EDAB
+		// Token: 0x1700C7D5 RID: 51157
+		// (get) Token: 0x0602EA56 RID: 191062 RVA: 0x0065C0AB File Offset: 0x0065A2AB
+		// (set) Token: 0x0602EA57 RID: 191063 RVA: 0x0065C0B3 File Offset: 0x0065A2B3
 		public int Id { get; set; }
 
-		// Token: 0x1700BE4A RID: 48714
-		// (get) Token: 0x0602C2C5 RID: 180933 RVA: 0x00610BB4 File Offset: 0x0060EDB4
-		// (set) Token: 0x0602C2C6 RID: 180934 RVA: 0x00610BBC File Offset: 0x0060EDBC
+		// Token: 0x1700C7D6 RID: 51158
+		// (get) Token: 0x0602EA58 RID: 191064 RVA: 0x0065C0BC File Offset: 0x0065A2BC
+		// (set) Token: 0x0602EA59 RID: 191065 RVA: 0x0065C0C4 File Offset: 0x0065A2C4
 		public TClientFollowShooterLeisureTypeUnion InteractType { get; set; }
 
-		// Token: 0x0602C2C7 RID: 180935 RVA: 0x00610BC5 File Offset: 0x0060EDC5
+		// Token: 0x0602EA5A RID: 191066 RVA: 0x0065C0CD File Offset: 0x0065A2CD
 		public IClientFollowShooterLeisureInteractT()
 		{
 			this.Id = 0;

@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A5A RID: 19034
+	// Token: 0x02003A02 RID: 14850
 	public class TrapDefenseResultInfo : ITrapDefenseResultInfo
 	{
-		// Token: 0x17007A78 RID: 31352
-		// (get) Token: 0x060315EE RID: 202222 RVA: 0x00B724BD File Offset: 0x00B706BD
-		// (set) Token: 0x060315EF RID: 202223 RVA: 0x00B724C5 File Offset: 0x00B706C5
+		// Token: 0x17004E25 RID: 20005
+		// (get) Token: 0x0602637E RID: 156542 RVA: 0x00AB6441 File Offset: 0x00AB4641
+		// (set) Token: 0x0602637F RID: 156543 RVA: 0x00AB6449 File Offset: 0x00AB4649
 		public int Value { get; set; }
 
-		// Token: 0x17007A79 RID: 31353
-		// (get) Token: 0x060315F0 RID: 202224 RVA: 0x00B724CE File Offset: 0x00B706CE
-		// (set) Token: 0x060315F1 RID: 202225 RVA: 0x00B724D6 File Offset: 0x00B706D6
+		// Token: 0x17004E26 RID: 20006
+		// (get) Token: 0x06026380 RID: 156544 RVA: 0x00AB6452 File Offset: 0x00AB4652
+		// (set) Token: 0x06026381 RID: 156545 RVA: 0x00AB645A File Offset: 0x00AB465A
 		public ETrapDefenseResultType Type { get; set; }
 
-		// Token: 0x17007A7A RID: 31354
-		// (get) Token: 0x060315F2 RID: 202226 RVA: 0x00B724DF File Offset: 0x00B706DF
-		// (set) Token: 0x060315F3 RID: 202227 RVA: 0x00B724E7 File Offset: 0x00B706E7
+		// Token: 0x17004E27 RID: 20007
+		// (get) Token: 0x06026382 RID: 156546 RVA: 0x00AB6463 File Offset: 0x00AB4663
+		// (set) Token: 0x06026383 RID: 156547 RVA: 0x00AB646B File Offset: 0x00AB466B
 		public int? Total { get; set; }
 
-		// Token: 0x17007A7B RID: 31355
-		// (get) Token: 0x060315F4 RID: 202228 RVA: 0x00B724F0 File Offset: 0x00B706F0
-		// (set) Token: 0x060315F5 RID: 202229 RVA: 0x00B724F8 File Offset: 0x00B706F8
+		// Token: 0x17004E28 RID: 20008
+		// (get) Token: 0x06026384 RID: 156548 RVA: 0x00AB6474 File Offset: 0x00AB4674
+		// (set) Token: 0x06026385 RID: 156549 RVA: 0x00AB647C File Offset: 0x00AB467C
 		public int? History { get; set; }
 	}
 }

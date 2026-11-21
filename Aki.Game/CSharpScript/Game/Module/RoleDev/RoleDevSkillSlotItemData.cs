@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CD3 RID: 19667
+	// Token: 0x02003C84 RID: 15492
 	public class RoleDevSkillSlotItemData : IRoleDevSkillSlotItemData
 	{
-		// Token: 0x17007D82 RID: 32130
-		// (get) Token: 0x06032C51 RID: 207953 RVA: 0x00BD5471 File Offset: 0x00BD3671
-		// (set) Token: 0x06032C52 RID: 207954 RVA: 0x00BD5479 File Offset: 0x00BD3679
+		// Token: 0x1700512C RID: 20780
+		// (get) Token: 0x06027A05 RID: 162309 RVA: 0x00B1A209 File Offset: 0x00B18409
+		// (set) Token: 0x06027A06 RID: 162310 RVA: 0x00B1A211 File Offset: 0x00B18411
 		public int RoleId { get; set; }
 
-		// Token: 0x17007D83 RID: 32131
-		// (get) Token: 0x06032C53 RID: 207955 RVA: 0x00BD5482 File Offset: 0x00BD3682
-		// (set) Token: 0x06032C54 RID: 207956 RVA: 0x00BD548A File Offset: 0x00BD368A
+		// Token: 0x1700512D RID: 20781
+		// (get) Token: 0x06027A07 RID: 162311 RVA: 0x00B1A21A File Offset: 0x00B1841A
+		// (set) Token: 0x06027A08 RID: 162312 RVA: 0x00B1A222 File Offset: 0x00B18422
 		public int SkillNodeId { get; set; }
 
-		// Token: 0x17007D84 RID: 32132
-		// (get) Token: 0x06032C55 RID: 207957 RVA: 0x00BD5493 File Offset: 0x00BD3693
-		// (set) Token: 0x06032C56 RID: 207958 RVA: 0x00BD549B File Offset: 0x00BD369B
+		// Token: 0x1700512E RID: 20782
+		// (get) Token: 0x06027A09 RID: 162313 RVA: 0x00B1A22B File Offset: 0x00B1842B
+		// (set) Token: 0x06027A0A RID: 162314 RVA: 0x00B1A233 File Offset: 0x00B18433
 		public int CurrentLevel { get; set; }
 
-		// Token: 0x17007D85 RID: 32133
-		// (get) Token: 0x06032C57 RID: 207959 RVA: 0x00BD54A4 File Offset: 0x00BD36A4
-		// (set) Token: 0x06032C58 RID: 207960 RVA: 0x00BD54AC File Offset: 0x00BD36AC
+		// Token: 0x1700512F RID: 20783
+		// (get) Token: 0x06027A0B RID: 162315 RVA: 0x00B1A23C File Offset: 0x00B1843C
+		// (set) Token: 0x06027A0C RID: 162316 RVA: 0x00B1A244 File Offset: 0x00B18444
 		public int NormalTargetLevel { get; set; }
 
-		// Token: 0x17007D86 RID: 32134
-		// (get) Token: 0x06032C59 RID: 207961 RVA: 0x00BD54B5 File Offset: 0x00BD36B5
-		// (set) Token: 0x06032C5A RID: 207962 RVA: 0x00BD54BD File Offset: 0x00BD36BD
+		// Token: 0x17005130 RID: 20784
+		// (get) Token: 0x06027A0D RID: 162317 RVA: 0x00B1A24D File Offset: 0x00B1844D
+		// (set) Token: 0x06027A0E RID: 162318 RVA: 0x00B1A255 File Offset: 0x00B18455
 		public int PerfectTargetLevel { get; set; }
 	}
 }

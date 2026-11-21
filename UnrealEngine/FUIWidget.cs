@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021E2 RID: 8674
+	// Token: 0x0200073E RID: 1854
 	[UnrealObjectPath("/Script/LGUI.UIWidget")]
 	[UnrealStructLayout(84, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 84)]
 	public class FUIWidget : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602112C RID: 135468 RVA: 0x0030C534 File Offset: 0x0030A734
+		// Token: 0x0600A1A3 RID: 41379 RVA: 0x000EED50 File Offset: 0x000ECF50
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FUIWidget._ScriptStructPtr != 0) ? FUIWidget._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/LGUI.UIWidget", ref FUIWidget._ScriptStructPtr);
 		}
 
-		// Token: 0x17008113 RID: 33043
-		// (get) Token: 0x0602112D RID: 135469 RVA: 0x0030C558 File Offset: 0x0030A758
-		// (set) Token: 0x0602112E RID: 135470 RVA: 0x0030C568 File Offset: 0x0030A768
+		// Token: 0x17001E1D RID: 7709
+		// (get) Token: 0x0600A1A4 RID: 41380 RVA: 0x000EED74 File Offset: 0x000ECF74
+		// (set) Token: 0x0600A1A5 RID: 41381 RVA: 0x000EED84 File Offset: 0x000ECF84
 		public unsafe int depth
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008114 RID: 33044
-		// (get) Token: 0x0602112F RID: 135471 RVA: 0x0030C579 File Offset: 0x0030A779
-		// (set) Token: 0x06021130 RID: 135472 RVA: 0x0030C58D File Offset: 0x0030A78D
+		// Token: 0x17001E1E RID: 7710
+		// (get) Token: 0x0600A1A6 RID: 41382 RVA: 0x000EED95 File Offset: 0x000ECF95
+		// (set) Token: 0x0600A1A7 RID: 41383 RVA: 0x000EEDA9 File Offset: 0x000ECFA9
 		public unsafe FColor color
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008115 RID: 33045
-		// (get) Token: 0x06021131 RID: 135473 RVA: 0x0030C5A2 File Offset: 0x0030A7A2
-		// (set) Token: 0x06021132 RID: 135474 RVA: 0x0030C5B6 File Offset: 0x0030A7B6
+		// Token: 0x17001E1F RID: 7711
+		// (get) Token: 0x0600A1A8 RID: 41384 RVA: 0x000EEDBE File Offset: 0x000ECFBE
+		// (set) Token: 0x0600A1A9 RID: 41385 RVA: 0x000EEDD2 File Offset: 0x000ECFD2
 		public unsafe FVector2D pivot
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008116 RID: 33046
-		// (get) Token: 0x06021133 RID: 135475 RVA: 0x0030C5CB File Offset: 0x0030A7CB
-		// (set) Token: 0x06021134 RID: 135476 RVA: 0x0030C5DB File Offset: 0x0030A7DB
+		// Token: 0x17001E20 RID: 7712
+		// (get) Token: 0x0600A1AA RID: 41386 RVA: 0x000EEDE7 File Offset: 0x000ECFE7
+		// (set) Token: 0x0600A1AB RID: 41387 RVA: 0x000EEDF7 File Offset: 0x000ECFF7
 		public unsafe UIAnchorHorizontalAlign anchorHAlign
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008117 RID: 33047
-		// (get) Token: 0x06021135 RID: 135477 RVA: 0x0030C5EC File Offset: 0x0030A7EC
-		// (set) Token: 0x06021136 RID: 135478 RVA: 0x0030C5FC File Offset: 0x0030A7FC
+		// Token: 0x17001E21 RID: 7713
+		// (get) Token: 0x0600A1AC RID: 41388 RVA: 0x000EEE08 File Offset: 0x000ED008
+		// (set) Token: 0x0600A1AD RID: 41389 RVA: 0x000EEE18 File Offset: 0x000ED018
 		public unsafe UIAnchorVerticalAlign anchorVAlign
 		{
 			get
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008118 RID: 33048
-		// (get) Token: 0x06021137 RID: 135479 RVA: 0x0030C60D File Offset: 0x0030A80D
-		// (set) Token: 0x06021138 RID: 135480 RVA: 0x0030C61D File Offset: 0x0030A81D
+		// Token: 0x17001E22 RID: 7714
+		// (get) Token: 0x0600A1AE RID: 41390 RVA: 0x000EEE29 File Offset: 0x000ED029
+		// (set) Token: 0x0600A1AF RID: 41391 RVA: 0x000EEE39 File Offset: 0x000ED039
 		public unsafe float anchorOffsetX
 		{
 			get
@@ -106,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008119 RID: 33049
-		// (get) Token: 0x06021139 RID: 135481 RVA: 0x0030C62E File Offset: 0x0030A82E
-		// (set) Token: 0x0602113A RID: 135482 RVA: 0x0030C63E File Offset: 0x0030A83E
+		// Token: 0x17001E23 RID: 7715
+		// (get) Token: 0x0600A1B0 RID: 41392 RVA: 0x000EEE4A File Offset: 0x000ED04A
+		// (set) Token: 0x0600A1B1 RID: 41393 RVA: 0x000EEE5A File Offset: 0x000ED05A
 		public unsafe float anchorOffsetY
 		{
 			get
@@ -121,9 +121,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700811A RID: 33050
-		// (get) Token: 0x0602113B RID: 135483 RVA: 0x0030C64F File Offset: 0x0030A84F
-		// (set) Token: 0x0602113C RID: 135484 RVA: 0x0030C65F File Offset: 0x0030A85F
+		// Token: 0x17001E24 RID: 7716
+		// (get) Token: 0x0600A1B2 RID: 41394 RVA: 0x000EEE6B File Offset: 0x000ED06B
+		// (set) Token: 0x0600A1B3 RID: 41395 RVA: 0x000EEE7B File Offset: 0x000ED07B
 		public unsafe float width
 		{
 			get
@@ -136,9 +136,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700811B RID: 33051
-		// (get) Token: 0x0602113D RID: 135485 RVA: 0x0030C670 File Offset: 0x0030A870
-		// (set) Token: 0x0602113E RID: 135486 RVA: 0x0030C680 File Offset: 0x0030A880
+		// Token: 0x17001E25 RID: 7717
+		// (get) Token: 0x0600A1B4 RID: 41396 RVA: 0x000EEE8C File Offset: 0x000ED08C
+		// (set) Token: 0x0600A1B5 RID: 41397 RVA: 0x000EEE9C File Offset: 0x000ED09C
 		public unsafe float height
 		{
 			get
@@ -151,9 +151,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700811C RID: 33052
-		// (get) Token: 0x0602113F RID: 135487 RVA: 0x0030C691 File Offset: 0x0030A891
-		// (set) Token: 0x06021140 RID: 135488 RVA: 0x0030C6A1 File Offset: 0x0030A8A1
+		// Token: 0x17001E26 RID: 7718
+		// (get) Token: 0x0600A1B6 RID: 41398 RVA: 0x000EEEAD File Offset: 0x000ED0AD
+		// (set) Token: 0x0600A1B7 RID: 41399 RVA: 0x000EEEBD File Offset: 0x000ED0BD
 		public unsafe float stretchLeft
 		{
 			get
@@ -166,9 +166,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700811D RID: 33053
-		// (get) Token: 0x06021141 RID: 135489 RVA: 0x0030C6B2 File Offset: 0x0030A8B2
-		// (set) Token: 0x06021142 RID: 135490 RVA: 0x0030C6C2 File Offset: 0x0030A8C2
+		// Token: 0x17001E27 RID: 7719
+		// (get) Token: 0x0600A1B8 RID: 41400 RVA: 0x000EEECE File Offset: 0x000ED0CE
+		// (set) Token: 0x0600A1B9 RID: 41401 RVA: 0x000EEEDE File Offset: 0x000ED0DE
 		public unsafe float stretchRight
 		{
 			get
@@ -181,9 +181,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700811E RID: 33054
-		// (get) Token: 0x06021143 RID: 135491 RVA: 0x0030C6D3 File Offset: 0x0030A8D3
-		// (set) Token: 0x06021144 RID: 135492 RVA: 0x0030C6E3 File Offset: 0x0030A8E3
+		// Token: 0x17001E28 RID: 7720
+		// (get) Token: 0x0600A1BA RID: 41402 RVA: 0x000EEEEF File Offset: 0x000ED0EF
+		// (set) Token: 0x0600A1BB RID: 41403 RVA: 0x000EEEFF File Offset: 0x000ED0FF
 		public unsafe float stretchTop
 		{
 			get
@@ -196,9 +196,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700811F RID: 33055
-		// (get) Token: 0x06021145 RID: 135493 RVA: 0x0030C6F4 File Offset: 0x0030A8F4
-		// (set) Token: 0x06021146 RID: 135494 RVA: 0x0030C704 File Offset: 0x0030A904
+		// Token: 0x17001E29 RID: 7721
+		// (get) Token: 0x0600A1BC RID: 41404 RVA: 0x000EEF10 File Offset: 0x000ED110
+		// (set) Token: 0x0600A1BD RID: 41405 RVA: 0x000EEF20 File Offset: 0x000ED120
 		public unsafe float stretchBottom
 		{
 			get
@@ -211,9 +211,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008120 RID: 33056
-		// (get) Token: 0x06021147 RID: 135495 RVA: 0x0030C715 File Offset: 0x0030A915
-		// (set) Token: 0x06021148 RID: 135496 RVA: 0x0030C729 File Offset: 0x0030A929
+		// Token: 0x17001E2A RID: 7722
+		// (get) Token: 0x0600A1BE RID: 41406 RVA: 0x000EEF31 File Offset: 0x000ED131
+		// (set) Token: 0x0600A1BF RID: 41407 RVA: 0x000EEF45 File Offset: 0x000ED145
 		public unsafe FVector2D MinAnchor
 		{
 			get
@@ -226,9 +226,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008121 RID: 33057
-		// (get) Token: 0x06021149 RID: 135497 RVA: 0x0030C73E File Offset: 0x0030A93E
-		// (set) Token: 0x0602114A RID: 135498 RVA: 0x0030C752 File Offset: 0x0030A952
+		// Token: 0x17001E2B RID: 7723
+		// (get) Token: 0x0600A1C0 RID: 41408 RVA: 0x000EEF5A File Offset: 0x000ED15A
+		// (set) Token: 0x0600A1C1 RID: 41409 RVA: 0x000EEF6E File Offset: 0x000ED16E
 		public unsafe FVector2D MaxAnchor
 		{
 			get
@@ -241,9 +241,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008122 RID: 33058
-		// (get) Token: 0x0602114B RID: 135499 RVA: 0x0030C767 File Offset: 0x0030A967
-		// (set) Token: 0x0602114C RID: 135500 RVA: 0x0030C777 File Offset: 0x0030A977
+		// Token: 0x17001E2C RID: 7724
+		// (get) Token: 0x0600A1C2 RID: 41410 RVA: 0x000EEF83 File Offset: 0x000ED183
+		// (set) Token: 0x0600A1C3 RID: 41411 RVA: 0x000EEF93 File Offset: 0x000ED193
 		public unsafe bool bCustomMinMaxAnchor
 		{
 			get
@@ -256,9 +256,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008123 RID: 33059
-		// (get) Token: 0x0602114D RID: 135501 RVA: 0x0030C788 File Offset: 0x0030A988
-		// (set) Token: 0x0602114E RID: 135502 RVA: 0x0030C798 File Offset: 0x0030A998
+		// Token: 0x17001E2D RID: 7725
+		// (get) Token: 0x0600A1C4 RID: 41412 RVA: 0x000EEFA4 File Offset: 0x000ED1A4
+		// (set) Token: 0x0600A1C5 RID: 41413 RVA: 0x000EEFB4 File Offset: 0x000ED1B4
 		public unsafe float AnchorXPercent
 		{
 			get
@@ -271,9 +271,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008124 RID: 33060
-		// (get) Token: 0x0602114F RID: 135503 RVA: 0x0030C7A9 File Offset: 0x0030A9A9
-		// (set) Token: 0x06021150 RID: 135504 RVA: 0x0030C7B9 File Offset: 0x0030A9B9
+		// Token: 0x17001E2E RID: 7726
+		// (get) Token: 0x0600A1C6 RID: 41414 RVA: 0x000EEFC5 File Offset: 0x000ED1C5
+		// (set) Token: 0x0600A1C7 RID: 41415 RVA: 0x000EEFD5 File Offset: 0x000ED1D5
 		public unsafe float AnchorYPercent
 		{
 			get
@@ -286,9 +286,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008125 RID: 33061
-		// (get) Token: 0x06021151 RID: 135505 RVA: 0x0030C7CA File Offset: 0x0030A9CA
-		// (set) Token: 0x06021152 RID: 135506 RVA: 0x0030C7DA File Offset: 0x0030A9DA
+		// Token: 0x17001E2F RID: 7727
+		// (get) Token: 0x0600A1C8 RID: 41416 RVA: 0x000EEFE6 File Offset: 0x000ED1E6
+		// (set) Token: 0x0600A1C9 RID: 41417 RVA: 0x000EEFF6 File Offset: 0x000ED1F6
 		public unsafe bool ShowXPercent
 		{
 			get
@@ -301,9 +301,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008126 RID: 33062
-		// (get) Token: 0x06021153 RID: 135507 RVA: 0x0030C7EB File Offset: 0x0030A9EB
-		// (set) Token: 0x06021154 RID: 135508 RVA: 0x0030C7FB File Offset: 0x0030A9FB
+		// Token: 0x17001E30 RID: 7728
+		// (get) Token: 0x0600A1CA RID: 41418 RVA: 0x000EF007 File Offset: 0x000ED207
+		// (set) Token: 0x0600A1CB RID: 41419 RVA: 0x000EF017 File Offset: 0x000ED217
 		public unsafe bool ShowYPercent
 		{
 			get
@@ -316,132 +316,107 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06021155 RID: 135509 RVA: 0x0030C80C File Offset: 0x0030AA0C
+		// Token: 0x0600A1CC RID: 41420 RVA: 0x000EF028 File Offset: 0x000ED228
 		public FUIWidget()
 		{
 		}
 
-		// Token: 0x06021156 RID: 135510 RVA: 0x0030C814 File Offset: 0x0030AA14
-		public FUIWidget(int depth, FColor color, FVector2D pivot, UIAnchorHorizontalAlign anchorHAlign, UIAnchorVerticalAlign anchorVAlign, float anchorOffsetX, float anchorOffsetY, float width, float height, float stretchLeft, float stretchRight, float stretchTop, float stretchBottom, FVector2D MinAnchor, FVector2D MaxAnchor, bool bCustomMinMaxAnchor, float AnchorXPercent, float AnchorYPercent, bool ShowXPercent, bool ShowYPercent)
-		{
-			this.depth = depth;
-			this.color = color;
-			this.pivot = pivot;
-			this.anchorHAlign = anchorHAlign;
-			this.anchorVAlign = anchorVAlign;
-			this.anchorOffsetX = anchorOffsetX;
-			this.anchorOffsetY = anchorOffsetY;
-			this.width = width;
-			this.height = height;
-			this.stretchLeft = stretchLeft;
-			this.stretchRight = stretchRight;
-			this.stretchTop = stretchTop;
-			this.stretchBottom = stretchBottom;
-			this.MinAnchor = MinAnchor;
-			this.MaxAnchor = MaxAnchor;
-			this.bCustomMinMaxAnchor = bCustomMinMaxAnchor;
-			this.AnchorXPercent = AnchorXPercent;
-			this.AnchorYPercent = AnchorYPercent;
-			this.ShowXPercent = ShowXPercent;
-			this.ShowYPercent = ShowYPercent;
-		}
-
-		// Token: 0x06021157 RID: 135511 RVA: 0x0030C8C4 File Offset: 0x0030AAC4
+		// Token: 0x0600A1CD RID: 41421 RVA: 0x000EF030 File Offset: 0x000ED230
 		protected override IntPtr GetUStructPtr()
 		{
 			return FUIWidget.StaticStruct();
 		}
 
-		// Token: 0x06021158 RID: 135512 RVA: 0x0030C8D0 File Offset: 0x0030AAD0
+		// Token: 0x0600A1CE RID: 41422 RVA: 0x000EF03C File Offset: 0x000ED23C
 		[NullableContext(2)]
 		public FUIWidget(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06021159 RID: 135513 RVA: 0x0030C8DA File Offset: 0x0030AADA
+		// Token: 0x0600A1CF RID: 41423 RVA: 0x000EF046 File Offset: 0x000ED246
 		public FUIWidget(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602115A RID: 135514 RVA: 0x0030C8E5 File Offset: 0x0030AAE5
+		// Token: 0x0600A1D0 RID: 41424 RVA: 0x000EF051 File Offset: 0x000ED251
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FUIWidget(Pointer, false, true);
 		}
 
-		// Token: 0x0602115B RID: 135515 RVA: 0x0030C8EF File Offset: 0x0030AAEF
+		// Token: 0x0600A1D1 RID: 41425 RVA: 0x000EF05B File Offset: 0x000ED25B
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FUIWidget(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04011A49 RID: 72265
+		// Token: 0x04004535 RID: 17717
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.UIWidget";
 
-		// Token: 0x04011A4A RID: 72266
+		// Token: 0x04004536 RID: 17718
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04011A4B RID: 72267
+		// Token: 0x04004537 RID: 17719
 		internal static int __PropertyOffset_depth;
 
-		// Token: 0x04011A4C RID: 72268
+		// Token: 0x04004538 RID: 17720
 		internal static int __PropertyOffset_color;
 
-		// Token: 0x04011A4D RID: 72269
+		// Token: 0x04004539 RID: 17721
 		internal static int __PropertyOffset_pivot;
 
-		// Token: 0x04011A4E RID: 72270
+		// Token: 0x0400453A RID: 17722
 		internal static int __PropertyOffset_anchorHAlign;
 
-		// Token: 0x04011A4F RID: 72271
+		// Token: 0x0400453B RID: 17723
 		internal static int __PropertyOffset_anchorVAlign;
 
-		// Token: 0x04011A50 RID: 72272
+		// Token: 0x0400453C RID: 17724
 		internal static int __PropertyOffset_anchorOffsetX;
 
-		// Token: 0x04011A51 RID: 72273
+		// Token: 0x0400453D RID: 17725
 		internal static int __PropertyOffset_anchorOffsetY;
 
-		// Token: 0x04011A52 RID: 72274
+		// Token: 0x0400453E RID: 17726
 		internal static int __PropertyOffset_width;
 
-		// Token: 0x04011A53 RID: 72275
+		// Token: 0x0400453F RID: 17727
 		internal static int __PropertyOffset_height;
 
-		// Token: 0x04011A54 RID: 72276
+		// Token: 0x04004540 RID: 17728
 		internal static int __PropertyOffset_stretchLeft;
 
-		// Token: 0x04011A55 RID: 72277
+		// Token: 0x04004541 RID: 17729
 		internal static int __PropertyOffset_stretchRight;
 
-		// Token: 0x04011A56 RID: 72278
+		// Token: 0x04004542 RID: 17730
 		internal static int __PropertyOffset_stretchTop;
 
-		// Token: 0x04011A57 RID: 72279
+		// Token: 0x04004543 RID: 17731
 		internal static int __PropertyOffset_stretchBottom;
 
-		// Token: 0x04011A58 RID: 72280
+		// Token: 0x04004544 RID: 17732
 		internal static int __PropertyOffset_MinAnchor;
 
-		// Token: 0x04011A59 RID: 72281
+		// Token: 0x04004545 RID: 17733
 		internal static int __PropertyOffset_MaxAnchor;
 
-		// Token: 0x04011A5A RID: 72282
+		// Token: 0x04004546 RID: 17734
 		internal static int __PropertyOffset_bCustomMinMaxAnchor;
 
-		// Token: 0x04011A5B RID: 72283
+		// Token: 0x04004547 RID: 17735
 		internal static int __PropertyOffset_AnchorXPercent;
 
-		// Token: 0x04011A5C RID: 72284
+		// Token: 0x04004548 RID: 17736
 		internal static int __PropertyOffset_AnchorYPercent;
 
-		// Token: 0x04011A5D RID: 72285
+		// Token: 0x04004549 RID: 17737
 		internal static int __PropertyOffset_ShowXPercent;
 
-		// Token: 0x04011A5E RID: 72286
+		// Token: 0x0400454A RID: 17738
 		internal static int __PropertyOffset_ShowYPercent;
 	}
 }

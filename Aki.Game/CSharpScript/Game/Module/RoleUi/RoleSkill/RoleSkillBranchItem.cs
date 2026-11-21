@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleSkill
 {
-	// Token: 0x02004CF8 RID: 19704
+	// Token: 0x02003CAA RID: 15530
 	public class RoleSkillBranchItem : UiPanelBase
 	{
-		// Token: 0x06032EFC RID: 208636 RVA: 0x00BDF498 File Offset: 0x00BDD698
+		// Token: 0x06027CD7 RID: 163031 RVA: 0x00B24DA0 File Offset: 0x00B22FA0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleSkill
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06032EFD RID: 208637 RVA: 0x00BDF66C File Offset: 0x00BDD86C
+		// Token: 0x06027CD8 RID: 163032 RVA: 0x00B24F74 File Offset: 0x00B23174
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleSkillBranchItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleSkill
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032EFE RID: 208638 RVA: 0x00BDF6B0 File Offset: 0x00BDD8B0
+		// Token: 0x06027CD9 RID: 163033 RVA: 0x00B24FB8 File Offset: 0x00B231B8
 		private UniTask InitBranchTipsItem()
 		{
 			RoleSkillBranchItem.<InitBranchTipsItem>d__7 <InitBranchTipsItem>d__;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleSkill
 			return <InitBranchTipsItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032EFF RID: 208639 RVA: 0x00BDF6F4 File Offset: 0x00BDD8F4
+		// Token: 0x06027CDA RID: 163034 RVA: 0x00B24FFC File Offset: 0x00B231FC
 		public bool SetSkillBranchVisible(ESkillBranchInvisibleReason reason, bool visible)
 		{
 			if (visible)
@@ -90,20 +90,20 @@ namespace CSharpScript.Game.Module.RoleUi.RoleSkill
 			return flag;
 		}
 
-		// Token: 0x06032F00 RID: 208640 RVA: 0x00BDF734 File Offset: 0x00BDD934
+		// Token: 0x06027CDB RID: 163035 RVA: 0x00B2503C File Offset: 0x00B2323C
 		public void SetSkillBranchTipsVisible(bool visible)
 		{
 			this.RoleSkillBranchTipsItem.SetTipsVisible(visible, true);
 			base.GetButton(6).RootUIComp.Get().SetUIActive(visible);
 		}
 
-		// Token: 0x06032F01 RID: 208641 RVA: 0x00BDF768 File Offset: 0x00BDD968
+		// Token: 0x06027CDC RID: 163036 RVA: 0x00B25070 File Offset: 0x00B23270
 		private bool CanShowSkillBranch()
 		{
 			return this.InvisibleSet.Count == 0;
 		}
 
-		// Token: 0x06032F02 RID: 208642 RVA: 0x00BDF778 File Offset: 0x00BDD978
+		// Token: 0x06027CDD RID: 163037 RVA: 0x00B25080 File Offset: 0x00B23280
 		public void Refresh(int roleId, bool enableSwitchBranch)
 		{
 			this.RoleId = roleId;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleSkill
 			}
 		}
 
-		// Token: 0x06032F03 RID: 208643 RVA: 0x00BDF8D8 File Offset: 0x00BDDAD8
+		// Token: 0x06027CDE RID: 163038 RVA: 0x00B251E0 File Offset: 0x00B233E0
 		private void OnBranchToggleClick(EToggleState state)
 		{
 			int index = (state > EToggleState.ETT_UnChecked) ? 1 : 0;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleSkill
 			RoleController.Instance.RequestRoleSkillBranchModify(this.RoleId, roleBranchIdByIndex);
 		}
 
-		// Token: 0x06032F04 RID: 208644 RVA: 0x00BDF923 File Offset: 0x00BDDB23
+		// Token: 0x06027CDF RID: 163039 RVA: 0x00B2522B File Offset: 0x00B2342B
 		private void OnBranchHelpButtonClick()
 		{
 			if (this.RoleSkillBranchTipsItem.IsTipsVisible)
@@ -154,53 +154,53 @@ namespace CSharpScript.Game.Module.RoleUi.RoleSkill
 			this.SetSkillBranchTipsVisible(true);
 		}
 
-		// Token: 0x06032F05 RID: 208645 RVA: 0x00BDF95E File Offset: 0x00BDDB5E
+		// Token: 0x06027CE0 RID: 163040 RVA: 0x00B25266 File Offset: 0x00B23466
 		private bool CanExecuteChange()
 		{
 			return RoleModel.Instance.CheckCanSwitchRoleBranch(true) && RoleModel.Instance.IsRoleHasBranch(this.RoleId);
 		}
 
-		// Token: 0x06032F06 RID: 208646 RVA: 0x00BDF980 File Offset: 0x00BDDB80
+		// Token: 0x06027CE1 RID: 163041 RVA: 0x00B25288 File Offset: 0x00B23488
 		private void OnCloseTipsButtonClick()
 		{
 			this.RoleSkillBranchTipsItem.SetTipsVisible(false, true);
 			base.GetButton(6).RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x0401B189 RID: 110985
+		// Token: 0x04015B0E RID: 88846
 		private int RoleId;
 
-		// Token: 0x0401B18A RID: 110986
+		// Token: 0x04015B0F RID: 88847
 		private bool EnableSwitchBranch;
 
-		// Token: 0x0401B18B RID: 110987
+		// Token: 0x04015B10 RID: 88848
 		[Nullable(2)]
 		private RoleSkillBranchTipsItem RoleSkillBranchTipsItem;
 
-		// Token: 0x0401B18C RID: 110988
+		// Token: 0x04015B11 RID: 88849
 		[Nullable(1)]
 		private HashSet<ESkillBranchInvisibleReason> InvisibleSet = new HashSet<ESkillBranchInvisibleReason>();
 
-		// Token: 0x0200AE87 RID: 44679
+		// Token: 0x020098A5 RID: 39077
 		private enum EComponent
 		{
-			// Token: 0x04034FEA RID: 217066
+			// Token: 0x0402F992 RID: 194962
 			BranchToggle,
-			// Token: 0x04034FEB RID: 217067
+			// Token: 0x0402F993 RID: 194963
 			StateSprite,
-			// Token: 0x04034FEC RID: 217068
+			// Token: 0x0402F994 RID: 194964
 			BranchHelpButton,
-			// Token: 0x04034FED RID: 217069
+			// Token: 0x0402F995 RID: 194965
 			BranchTipsSlot,
-			// Token: 0x04034FEE RID: 217070
+			// Token: 0x0402F996 RID: 194966
 			BranchLeftTagSprite,
-			// Token: 0x04034FEF RID: 217071
+			// Token: 0x0402F997 RID: 194967
 			BranchRightTagSprite,
-			// Token: 0x04034FF0 RID: 217072
+			// Token: 0x0402F998 RID: 194968
 			CloseTipsButton,
-			// Token: 0x04034FF1 RID: 217073
+			// Token: 0x0402F999 RID: 194969
 			BranchLeftItem,
-			// Token: 0x04034FF2 RID: 217074
+			// Token: 0x0402F99A RID: 194970
 			BranchRightItem
 		}
 	}

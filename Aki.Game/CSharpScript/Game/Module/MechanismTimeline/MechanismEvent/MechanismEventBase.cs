@@ -5,18 +5,18 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.Module.MechanismTimeline.MechanismEvent
 {
-	// Token: 0x02005481 RID: 21633
+	// Token: 0x02004464 RID: 17508
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MechanismEventBase
 	{
-		// Token: 0x0603731F RID: 226079 RVA: 0x00D167BA File Offset: 0x00D149BA
+		// Token: 0x0602C268 RID: 180840 RVA: 0x00C65C12 File Offset: 0x00C63E12
 		public MechanismEventBase(IMechanismEventInfo eventInfo, MechanismEventContext context, SceneItemEventListenerComponent eventListenerComponent, bool isServerAction)
 		{
 		}
 
-		// Token: 0x17008468 RID: 33896
-		// (get) Token: 0x06037320 RID: 226080 RVA: 0x00D167DF File Offset: 0x00D149DF
+		// Token: 0x17005834 RID: 22580
+		// (get) Token: 0x0602C269 RID: 180841 RVA: 0x00C65C37 File Offset: 0x00C63E37
 		public string Type
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.MechanismTimeline.MechanismEvent
 			}
 		}
 
-		// Token: 0x17008469 RID: 33897
-		// (get) Token: 0x06037321 RID: 226081 RVA: 0x00D167FB File Offset: 0x00D149FB
+		// Token: 0x17005835 RID: 22581
+		// (get) Token: 0x0602C26A RID: 180842 RVA: 0x00C65C53 File Offset: 0x00C63E53
 		public string SeqGuid
 		{
 			get
@@ -35,8 +35,8 @@ namespace CSharpScript.Game.Module.MechanismTimeline.MechanismEvent
 			}
 		}
 
-		// Token: 0x1700846A RID: 33898
-		// (get) Token: 0x06037322 RID: 226082 RVA: 0x00D16808 File Offset: 0x00D14A08
+		// Token: 0x17005836 RID: 22582
+		// (get) Token: 0x0602C26B RID: 180843 RVA: 0x00C65C60 File Offset: 0x00C63E60
 		public string EventName
 		{
 			get
@@ -45,8 +45,8 @@ namespace CSharpScript.Game.Module.MechanismTimeline.MechanismEvent
 			}
 		}
 
-		// Token: 0x1700846B RID: 33899
-		// (get) Token: 0x06037323 RID: 226083 RVA: 0x00D1681A File Offset: 0x00D14A1A
+		// Token: 0x17005837 RID: 22583
+		// (get) Token: 0x0602C26C RID: 180844 RVA: 0x00C65C72 File Offset: 0x00C63E72
 		public int PlayerId
 		{
 			get
@@ -55,8 +55,8 @@ namespace CSharpScript.Game.Module.MechanismTimeline.MechanismEvent
 			}
 		}
 
-		// Token: 0x1700846C RID: 33900
-		// (get) Token: 0x06037324 RID: 226084 RVA: 0x00D16827 File Offset: 0x00D14A27
+		// Token: 0x17005838 RID: 22584
+		// (get) Token: 0x0602C26D RID: 180845 RVA: 0x00C65C7F File Offset: 0x00C63E7F
 		public long CreatureDataId
 		{
 			get
@@ -65,13 +65,13 @@ namespace CSharpScript.Game.Module.MechanismTimeline.MechanismEvent
 			}
 		}
 
-		// Token: 0x06037325 RID: 226085 RVA: 0x00D16834 File Offset: 0x00D14A34
+		// Token: 0x0602C26E RID: 180846 RVA: 0x00C65C8C File Offset: 0x00C63E8C
 		public void Dispose()
 		{
 			this.OnDispose();
 		}
 
-		// Token: 0x06037326 RID: 226086 RVA: 0x00D1683C File Offset: 0x00D14A3C
+		// Token: 0x0602C26F RID: 180847 RVA: 0x00C65C94 File Offset: 0x00C63E94
 		public void Trigger()
 		{
 			this.OnTrigger(this.EventInfo.Info.Action.Params);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline.MechanismEvent
 			}
 		}
 
-		// Token: 0x06037327 RID: 226087 RVA: 0x00D16890 File Offset: 0x00D14A90
+		// Token: 0x0602C270 RID: 180848 RVA: 0x00C65CE8 File Offset: 0x00C63EE8
 		public void Start()
 		{
 			this.OnStart(this.EventInfo.Info.Action.Params);
@@ -91,13 +91,13 @@ namespace CSharpScript.Game.Module.MechanismTimeline.MechanismEvent
 			}
 		}
 
-		// Token: 0x06037328 RID: 226088 RVA: 0x00D168E2 File Offset: 0x00D14AE2
+		// Token: 0x0602C271 RID: 180849 RVA: 0x00C65D3A File Offset: 0x00C63F3A
 		public void Tick()
 		{
 			this.OnTick();
 		}
 
-		// Token: 0x06037329 RID: 226089 RVA: 0x00D168EC File Offset: 0x00D14AEC
+		// Token: 0x0602C272 RID: 180850 RVA: 0x00C65D44 File Offset: 0x00C63F44
 		public void End()
 		{
 			this.OnEnd(this.EventInfo.Info.Action.Params);
@@ -107,41 +107,41 @@ namespace CSharpScript.Game.Module.MechanismTimeline.MechanismEvent
 			}
 		}
 
-		// Token: 0x0603732A RID: 226090 RVA: 0x00D1693E File Offset: 0x00D14B3E
+		// Token: 0x0602C273 RID: 180851 RVA: 0x00C65D96 File Offset: 0x00C63F96
 		protected virtual void OnTrigger(ActionParams @params)
 		{
 		}
 
-		// Token: 0x0603732B RID: 226091 RVA: 0x00D16940 File Offset: 0x00D14B40
+		// Token: 0x0602C274 RID: 180852 RVA: 0x00C65D98 File Offset: 0x00C63F98
 		protected virtual void OnStart(ActionParams @params)
 		{
 		}
 
-		// Token: 0x0603732C RID: 226092 RVA: 0x00D16942 File Offset: 0x00D14B42
+		// Token: 0x0602C275 RID: 180853 RVA: 0x00C65D9A File Offset: 0x00C63F9A
 		protected virtual void OnTick()
 		{
 		}
 
-		// Token: 0x0603732D RID: 226093 RVA: 0x00D16944 File Offset: 0x00D14B44
+		// Token: 0x0602C276 RID: 180854 RVA: 0x00C65D9C File Offset: 0x00C63F9C
 		protected virtual void OnEnd(ActionParams @params)
 		{
 		}
 
-		// Token: 0x0603732E RID: 226094 RVA: 0x00D16946 File Offset: 0x00D14B46
+		// Token: 0x0602C277 RID: 180855 RVA: 0x00C65D9E File Offset: 0x00C63F9E
 		protected virtual void OnDispose()
 		{
 		}
 
-		// Token: 0x0401D1BD RID: 119229
+		// Token: 0x04017C56 RID: 97366
 		public readonly IMechanismEventInfo EventInfo = eventInfo;
 
-		// Token: 0x0401D1BE RID: 119230
+		// Token: 0x04017C57 RID: 97367
 		public readonly MechanismEventContext Context = context;
 
-		// Token: 0x0401D1BF RID: 119231
+		// Token: 0x04017C58 RID: 97368
 		public readonly SceneItemEventListenerComponent EventListenerComponent = eventListenerComponent;
 
-		// Token: 0x0401D1C0 RID: 119232
+		// Token: 0x04017C59 RID: 97369
 		public readonly bool IsServerAction = isServerAction;
 	}
 }

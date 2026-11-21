@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020019EC RID: 6636
+// Token: 0x02000EAB RID: 3755
 public enum EDailyActiveTaskUpdateType
 {
-	// Token: 0x04005960 RID: 22880
+	// Token: 0x04005A2F RID: 23087
 	AreaExplore = 2,
-	// Token: 0x04005961 RID: 22881
+	// Token: 0x04005A30 RID: 23088
 	Quest
 }

@@ -2,26 +2,26 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001DAB RID: 7595
+// Token: 0x0200126D RID: 4717
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class GreatSwordChallengeModel : ModelBase
 {
-	// Token: 0x0600E685 RID: 59013 RVA: 0x00365156 File Offset: 0x00363356
+	// Token: 0x0600BAA3 RID: 47779 RVA: 0x00370DB6 File Offset: 0x0036EFB6
 	public void InitChallenge(ITrialChallenge challenge)
 	{
 		this.Challenge = challenge;
 	}
 
-	// Token: 0x0600E686 RID: 59014 RVA: 0x0036515F File Offset: 0x0036335F
+	// Token: 0x0600BAA4 RID: 47780 RVA: 0x00370DBF File Offset: 0x0036EFBF
 	public List<TrialSubChallenge> GetSubChallenges()
 	{
 		ITrialChallenge challenge = this.Challenge;
 		return (((challenge != null) ? challenge.SubChallenges : null) as List<TrialSubChallenge>) ?? new List<TrialSubChallenge>();
 	}
 
-	// Token: 0x0600E687 RID: 59015 RVA: 0x00365184 File Offset: 0x00363384
+	// Token: 0x0600BAA5 RID: 47781 RVA: 0x00370DE4 File Offset: 0x0036EFE4
 	public void SetSubChallengeState(int index, bool unlocked, bool completed)
 	{
 		if (this.Challenge != null && this.Challenge.SubChallenges[index] != null)
@@ -31,50 +31,50 @@ public class GreatSwordChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E688 RID: 59016 RVA: 0x003651DA File Offset: 0x003633DA
+	// Token: 0x0600BAA6 RID: 47782 RVA: 0x00370E3A File Offset: 0x0036F03A
 	public void SetActionIncId(int incId)
 	{
 		this.ActionIncId = incId;
 	}
 
-	// Token: 0x0600E689 RID: 59017 RVA: 0x003651E3 File Offset: 0x003633E3
+	// Token: 0x0600BAA7 RID: 47783 RVA: 0x00370E43 File Offset: 0x0036F043
 	public void SetIsStartChallenge(bool isStart)
 	{
 		this.IsStartChallenge = isStart;
 	}
 
-	// Token: 0x0600E68A RID: 59018 RVA: 0x003651EC File Offset: 0x003633EC
+	// Token: 0x0600BAA8 RID: 47784 RVA: 0x00370E4C File Offset: 0x0036F04C
 	public int GetActionIncId()
 	{
 		return this.ActionIncId;
 	}
 
-	// Token: 0x0600E68B RID: 59019 RVA: 0x003651F4 File Offset: 0x003633F4
+	// Token: 0x0600BAA9 RID: 47785 RVA: 0x00370E54 File Offset: 0x0036F054
 	public bool GetIsStartChallenge()
 	{
 		return this.IsStartChallenge;
 	}
 
-	// Token: 0x0600E68C RID: 59020 RVA: 0x003651FC File Offset: 0x003633FC
+	// Token: 0x0600BAAA RID: 47786 RVA: 0x00370E5C File Offset: 0x0036F05C
 	[NullableContext(2)]
 	public ITrialChallenge GetChallenge()
 	{
 		return this.Challenge;
 	}
 
-	// Token: 0x0600E68D RID: 59021 RVA: 0x00365204 File Offset: 0x00363404
+	// Token: 0x0600BAAB RID: 47787 RVA: 0x00370E64 File Offset: 0x0036F064
 	public int GetSelectedIndex()
 	{
 		return this.SelectedIndex;
 	}
 
-	// Token: 0x0600E68E RID: 59022 RVA: 0x0036520C File Offset: 0x0036340C
+	// Token: 0x0600BAAC RID: 47788 RVA: 0x00370E6C File Offset: 0x0036F06C
 	public void SetSelectedIndex(int index)
 	{
 		this.SelectedIndex = index;
 	}
 
-	// Token: 0x0600E68F RID: 59023 RVA: 0x00365215 File Offset: 0x00363415
+	// Token: 0x0600BAAD RID: 47789 RVA: 0x00370E75 File Offset: 0x0036F075
 	public void ClearData()
 	{
 		this.Challenge = null;
@@ -83,8 +83,8 @@ public class GreatSwordChallengeModel : ModelBase
 		this.IsStartChallenge = false;
 	}
 
-	// Token: 0x1700126B RID: 4715
-	// (get) Token: 0x0600E690 RID: 59024 RVA: 0x00365233 File Offset: 0x00363433
+	// Token: 0x17001295 RID: 4757
+	// (get) Token: 0x0600BAAE RID: 47790 RVA: 0x00370E93 File Offset: 0x0036F093
 	public static GreatSwordChallengeModel Instance
 	{
 		get
@@ -93,7 +93,7 @@ public class GreatSwordChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E691 RID: 59025 RVA: 0x0036523A File Offset: 0x0036343A
+	// Token: 0x0600BAAF RID: 47791 RVA: 0x00370E9A File Offset: 0x0036F09A
 	public static GreatSwordChallengeModel GetOrCreateInstance()
 	{
 		if (GreatSwordChallengeModel._Instance == null)
@@ -103,7 +103,7 @@ public class GreatSwordChallengeModel : ModelBase
 		return GreatSwordChallengeModel._Instance;
 	}
 
-	// Token: 0x0600E692 RID: 59026 RVA: 0x0036524E File Offset: 0x0036344E
+	// Token: 0x0600BAB0 RID: 47792 RVA: 0x00370EAE File Offset: 0x0036F0AE
 	public static bool CreateInstance()
 	{
 		if (GreatSwordChallengeModel._Instance != null)
@@ -114,37 +114,37 @@ public class GreatSwordChallengeModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600E693 RID: 59027 RVA: 0x00365264 File Offset: 0x00363464
+	// Token: 0x0600BAB1 RID: 47793 RVA: 0x00370EC4 File Offset: 0x0036F0C4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600E694 RID: 59028 RVA: 0x00365266 File Offset: 0x00363466
+	// Token: 0x0600BAB2 RID: 47794 RVA: 0x00370EC6 File Offset: 0x0036F0C6
 	public static void ResetStaticDefaultValue()
 	{
 		GreatSwordChallengeModel._Instance = null;
 	}
 
-	// Token: 0x0600E695 RID: 59029 RVA: 0x0036526E File Offset: 0x0036346E
+	// Token: 0x0600BAB3 RID: 47795 RVA: 0x00370ECE File Offset: 0x0036F0CE
 	static GreatSwordChallengeModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GreatSwordChallengeModel.CreateStaticDefaultValue), new Action(GreatSwordChallengeModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006A9C RID: 27292
+	// Token: 0x04006B7D RID: 27517
 	[Nullable(2)]
 	private ITrialChallenge Challenge;
 
-	// Token: 0x04006A9D RID: 27293
+	// Token: 0x04006B7E RID: 27518
 	private int SelectedIndex;
 
-	// Token: 0x04006A9E RID: 27294
+	// Token: 0x04006B7F RID: 27519
 	private int ActionIncId;
 
-	// Token: 0x04006A9F RID: 27295
+	// Token: 0x04006B80 RID: 27520
 	private bool IsStartChallenge;
 
-	// Token: 0x04006AA0 RID: 27296
+	// Token: 0x04006B81 RID: 27521
 	[Nullable(2)]
 	private static GreatSwordChallengeModel _Instance;
 }

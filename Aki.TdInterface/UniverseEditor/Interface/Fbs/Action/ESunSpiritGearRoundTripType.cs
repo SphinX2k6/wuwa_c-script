@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006018 RID: 24600
+	// Token: 0x02006677 RID: 26231
 	public enum ESunSpiritGearRoundTripType : byte
 	{
-		// Token: 0x04010061 RID: 65633
+		// Token: 0x04010E46 RID: 69190
 		FlyToGear,
-		// Token: 0x04010062 RID: 65634
+		// Token: 0x04010E47 RID: 69191
 		BackFromGear
 	}
 }

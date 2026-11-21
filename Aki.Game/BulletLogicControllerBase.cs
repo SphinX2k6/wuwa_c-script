@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002DCA RID: 11722
+// Token: 0x02002324 RID: 8996
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class BulletLogicControllerBase
 {
-	// Token: 0x170021BA RID: 8634
-	// (get) Token: 0x060189F8 RID: 100856 RVA: 0x0064BEC7 File Offset: 0x0064A0C7
-	// (set) Token: 0x060189F9 RID: 100857 RVA: 0x0064BECF File Offset: 0x0064A0CF
+	// Token: 0x17002216 RID: 8726
+	// (get) Token: 0x060162A0 RID: 90784 RVA: 0x00671CAB File Offset: 0x0066FEAB
+	// (set) Token: 0x060162A1 RID: 90785 RVA: 0x00671CB3 File Offset: 0x0066FEB3
 	public bool NeedTick
 	{
 		get
@@ -21,45 +21,45 @@ public abstract class BulletLogicControllerBase
 		}
 	}
 
-	// Token: 0x060189FA RID: 100858 RVA: 0x0064BED8 File Offset: 0x0064A0D8
+	// Token: 0x060162A2 RID: 90786 RVA: 0x00671CBC File Offset: 0x0066FEBC
 	protected BulletLogicControllerBase(Entity bullet)
 	{
 		this.Bullet = (bullet as BulletEntity);
 		this.NeedTickInternal = false;
 	}
 
-	// Token: 0x060189FB RID: 100859 RVA: 0x0064BEF3 File Offset: 0x0064A0F3
+	// Token: 0x060162A3 RID: 90787 RVA: 0x00671CD7 File Offset: 0x0066FED7
 	public virtual void OnInit()
 	{
 	}
 
-	// Token: 0x060189FC RID: 100860
+	// Token: 0x060162A4 RID: 90788
 	[NullableContext(2)]
 	public abstract void BulletLogicActionFromBase(object param = null);
 
-	// Token: 0x060189FD RID: 100861
+	// Token: 0x060162A5 RID: 90789
 	[NullableContext(2)]
 	public abstract void BulletLogicActionOnHitObstaclesFromBase(object param = null);
 
-	// Token: 0x060189FE RID: 100862 RVA: 0x0064BEF5 File Offset: 0x0064A0F5
+	// Token: 0x060162A6 RID: 90790 RVA: 0x00671CD9 File Offset: 0x0066FED9
 	protected virtual void Update(float deltaTime)
 	{
 	}
 
-	// Token: 0x060189FF RID: 100863 RVA: 0x0064BEF7 File Offset: 0x0064A0F7
+	// Token: 0x060162A7 RID: 90791 RVA: 0x00671CDB File Offset: 0x0066FEDB
 	public void Tick(float deltaTime)
 	{
 		this.Update(deltaTime);
 	}
 
-	// Token: 0x06018A00 RID: 100864 RVA: 0x0064BF00 File Offset: 0x0064A100
+	// Token: 0x060162A8 RID: 90792 RVA: 0x00671CE4 File Offset: 0x0066FEE4
 	public virtual void OnBulletDestroy()
 	{
 	}
 
-	// Token: 0x0400B74D RID: 46925
+	// Token: 0x0400BAC8 RID: 47816
 	protected BulletEntity Bullet;
 
-	// Token: 0x0400B74E RID: 46926
+	// Token: 0x0400BAC9 RID: 47817
 	private bool NeedTickInternal;
 }

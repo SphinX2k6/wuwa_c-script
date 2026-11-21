@@ -1,34 +1,34 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002FDA RID: 12250
+// Token: 0x0200252F RID: 9519
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PassiveSkillPlayerQueueController : ControllerBase
 {
-	// Token: 0x06019F7B RID: 106363 RVA: 0x006CBD17 File Offset: 0x006C9F17
+	// Token: 0x060178AE RID: 96430 RVA: 0x006F3B57 File Offset: 0x006F1D57
 	protected override bool OnInit()
 	{
 		this.Queue.Clear();
 		return true;
 	}
 
-	// Token: 0x06019F7C RID: 106364 RVA: 0x006CBD25 File Offset: 0x006C9F25
+	// Token: 0x060178AF RID: 96431 RVA: 0x006F3B65 File Offset: 0x006F1D65
 	protected override bool OnClear()
 	{
 		this.Queue.Clear();
 		return true;
 	}
 
-	// Token: 0x06019F7D RID: 106365 RVA: 0x006CBD33 File Offset: 0x006C9F33
+	// Token: 0x060178B0 RID: 96432 RVA: 0x006F3B73 File Offset: 0x006F1D73
 	public bool DoAction(TPassiveSkillQueueCallback func)
 	{
 		return this.Queue.DoActionCheckCd(func);
 	}
 
-	// Token: 0x170023B9 RID: 9145
-	// (get) Token: 0x06019F7E RID: 106366 RVA: 0x006CBD41 File Offset: 0x006C9F41
+	// Token: 0x1700247B RID: 9339
+	// (get) Token: 0x060178B1 RID: 96433 RVA: 0x006F3B81 File Offset: 0x006F1D81
 	public static PassiveSkillPlayerQueueController Instance
 	{
 		get
@@ -37,7 +37,7 @@ public class PassiveSkillPlayerQueueController : ControllerBase
 		}
 	}
 
-	// Token: 0x06019F7F RID: 106367 RVA: 0x006CBD48 File Offset: 0x006C9F48
+	// Token: 0x060178B2 RID: 96434 RVA: 0x006F3B88 File Offset: 0x006F1D88
 	public static PassiveSkillPlayerQueueController GetOrCreateInstance()
 	{
 		if (PassiveSkillPlayerQueueController._Instance == null)
@@ -47,7 +47,7 @@ public class PassiveSkillPlayerQueueController : ControllerBase
 		return PassiveSkillPlayerQueueController._Instance;
 	}
 
-	// Token: 0x06019F80 RID: 106368 RVA: 0x006CBD5C File Offset: 0x006C9F5C
+	// Token: 0x060178B3 RID: 96435 RVA: 0x006F3B9C File Offset: 0x006F1D9C
 	public static bool CreateInstance()
 	{
 		if (PassiveSkillPlayerQueueController._Instance != null)
@@ -58,27 +58,27 @@ public class PassiveSkillPlayerQueueController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06019F81 RID: 106369 RVA: 0x006CBD72 File Offset: 0x006C9F72
+	// Token: 0x060178B4 RID: 96436 RVA: 0x006F3BB2 File Offset: 0x006F1DB2
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06019F82 RID: 106370 RVA: 0x006CBD74 File Offset: 0x006C9F74
+	// Token: 0x060178B5 RID: 96437 RVA: 0x006F3BB4 File Offset: 0x006F1DB4
 	public static void ResetStaticDefaultValue()
 	{
 		PassiveSkillPlayerQueueController._Instance = null;
 	}
 
-	// Token: 0x06019F83 RID: 106371 RVA: 0x006CBD7C File Offset: 0x006C9F7C
+	// Token: 0x060178B6 RID: 96438 RVA: 0x006F3BBC File Offset: 0x006F1DBC
 	static PassiveSkillPlayerQueueController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PassiveSkillPlayerQueueController.CreateStaticDefaultValue), new Action(PassiveSkillPlayerQueueController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400C49C RID: 50332
+	// Token: 0x0400C864 RID: 51300
 	private readonly PassiveSkillPlayerQueue Queue = new PassiveSkillPlayerQueue();
 
-	// Token: 0x0400C49D RID: 50333
+	// Token: 0x0400C865 RID: 51301
 	[Nullable(2)]
 	private static PassiveSkillPlayerQueueController _Instance;
 }

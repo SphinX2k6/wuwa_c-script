@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CEE RID: 23790
+	// Token: 0x02004CD0 RID: 19664
 	public class BattleSkillNumItem : UiPanelBase
 	{
-		// Token: 0x0603C3E7 RID: 246759 RVA: 0x00E6BEDF File Offset: 0x00E6A0DF
+		// Token: 0x0603133D RID: 201533 RVA: 0x00DBC493 File Offset: 0x00DBA693
 		[NullableContext(1)]
 		public BattleSkillNumItem(UUIItem rootUiItem)
 		{
 			base.CreateByResourceIdAsync("UiItem_BattleSkillNumItem", rootUiItem, false).Forget();
 		}
 
-		// Token: 0x0603C3E8 RID: 246760 RVA: 0x00E6BF0C File Offset: 0x00E6A10C
+		// Token: 0x0603133E RID: 201534 RVA: 0x00DBC4C0 File Offset: 0x00DBA6C0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C3E9 RID: 246761 RVA: 0x00E6BF78 File Offset: 0x00E6A178
+		// Token: 0x0603133F RID: 201535 RVA: 0x00DBC52C File Offset: 0x00DBA72C
 		protected override void OnStart()
 		{
 			foreach (Action action in this.OperationMap.Values)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C3EA RID: 246762 RVA: 0x00E6BFD0 File Offset: 0x00E6A1D0
+		// Token: 0x06031340 RID: 201536 RVA: 0x00DBC584 File Offset: 0x00DBA784
 		public void SetComponentActive(bool visibility)
 		{
 			BattleSkillNumItem.<>c__DisplayClass7_0 CS$<>8__locals1 = new BattleSkillNumItem.<>c__DisplayClass7_0();
@@ -56,12 +56,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<SetComponentActive>g__Callback|0();
 		}
 
-		// Token: 0x0603C3EB RID: 246763 RVA: 0x00E6C028 File Offset: 0x00E6A228
+		// Token: 0x06031341 RID: 201537 RVA: 0x00DBC5DC File Offset: 0x00DBA7DC
 		public void SetTotalCount(int count)
 		{
 		}
 
-		// Token: 0x0603C3EC RID: 246764 RVA: 0x00E6C02C File Offset: 0x00E6A22C
+		// Token: 0x06031342 RID: 201538 RVA: 0x00DBC5E0 File Offset: 0x00DBA7E0
 		public void SetRemainingCount(int remainingUseCount)
 		{
 			BattleSkillNumItem.<>c__DisplayClass9_0 CS$<>8__locals1 = new BattleSkillNumItem.<>c__DisplayClass9_0();
@@ -75,32 +75,32 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<SetRemainingCount>g__Callback|0();
 		}
 
-		// Token: 0x0603C3ED RID: 246765 RVA: 0x00E6C078 File Offset: 0x00E6A278
+		// Token: 0x06031343 RID: 201539 RVA: 0x00DBC62C File Offset: 0x00DBA82C
 		public void RefreshCountType(int totalUseCount)
 		{
 		}
 
-		// Token: 0x0603C3EE RID: 246766 RVA: 0x00E6C07A File Offset: 0x00E6A27A
+		// Token: 0x06031344 RID: 201540 RVA: 0x00DBC62E File Offset: 0x00DBA82E
 		public void RefreshTotalCount(int totalLimitUseCount)
 		{
 		}
 
-		// Token: 0x0401F651 RID: 128593
+		// Token: 0x0401A10A RID: 106762
 		private int RemainingUseCount = -1;
 
-		// Token: 0x0401F652 RID: 128594
+		// Token: 0x0401A10B RID: 106763
 		public bool TargetActive;
 
-		// Token: 0x0401F653 RID: 128595
+		// Token: 0x0401A10C RID: 106764
 		[Nullable(1)]
 		private readonly Dictionary<string, Action> OperationMap = new Dictionary<string, Action>();
 
-		// Token: 0x0200BF4A RID: 48970
+		// Token: 0x0200A950 RID: 43344
 		private enum ESkillNumItem
 		{
-			// Token: 0x04039B25 RID: 236325
+			// Token: 0x040344E7 RID: 214247
 			BgSprite,
-			// Token: 0x04039B26 RID: 236326
+			// Token: 0x040344E8 RID: 214248
 			NumText
 		}
 	}

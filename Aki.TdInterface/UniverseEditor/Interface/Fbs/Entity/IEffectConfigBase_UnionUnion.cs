@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x02004788 RID: 18312
+	// Token: 0x02004BF0 RID: 19440
 	public class IEffectConfigBase_UnionUnion
 	{
-		// Token: 0x17008355 RID: 33621
-		// (get) Token: 0x0601C323 RID: 115491 RVA: 0x003FE261 File Offset: 0x003FC461
-		// (set) Token: 0x0601C324 RID: 115492 RVA: 0x003FE269 File Offset: 0x003FC469
+		// Token: 0x17008996 RID: 35222
+		// (get) Token: 0x0601DAF8 RID: 121592 RVA: 0x0042A4FD File Offset: 0x004286FD
+		// (set) Token: 0x0601DAF9 RID: 121593 RVA: 0x0042A505 File Offset: 0x00428705
 		public IEffectConfigBase_Union Type { get; set; }
 
-		// Token: 0x17008356 RID: 33622
-		// (get) Token: 0x0601C325 RID: 115493 RVA: 0x003FE272 File Offset: 0x003FC472
-		// (set) Token: 0x0601C326 RID: 115494 RVA: 0x003FE27A File Offset: 0x003FC47A
+		// Token: 0x17008997 RID: 35223
+		// (get) Token: 0x0601DAFA RID: 121594 RVA: 0x0042A50E File Offset: 0x0042870E
+		// (set) Token: 0x0601DAFB RID: 121595 RVA: 0x0042A516 File Offset: 0x00428716
 		public object Value { get; set; }
 
-		// Token: 0x0601C327 RID: 115495 RVA: 0x003FE283 File Offset: 0x003FC483
+		// Token: 0x0601DAFC RID: 121596 RVA: 0x0042A51F File Offset: 0x0042871F
 		public IEffectConfigBase_UnionUnion()
 		{
 			this.Type = IEffectConfigBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601C328 RID: 115496 RVA: 0x003FE299 File Offset: 0x003FC499
+		// Token: 0x0601DAFD RID: 121597 RVA: 0x0042A535 File Offset: 0x00428735
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601C329 RID: 115497 RVA: 0x003FE2AB File Offset: 0x003FC4AB
+		// Token: 0x0601DAFE RID: 121598 RVA: 0x0042A547 File Offset: 0x00428747
 		public IEffectConfigBaseT AsIEffectConfigBase()
 		{
 			return this.As<IEffectConfigBaseT>();
 		}
 
-		// Token: 0x0601C32A RID: 115498 RVA: 0x003FE2B3 File Offset: 0x003FC4B3
+		// Token: 0x0601DAFF RID: 121599 RVA: 0x0042A54F File Offset: 0x0042874F
 		public static IEffectConfigBase_UnionUnion FromIEffectConfigBase(IEffectConfigBaseT _ieffectconfigbase)
 		{
 			return new IEffectConfigBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			};
 		}
 
-		// Token: 0x0601C32B RID: 115499 RVA: 0x003FE2C8 File Offset: 0x003FC4C8
+		// Token: 0x0601DB00 RID: 121600 RVA: 0x0042A564 File Offset: 0x00428764
 		public IEffectConfigMonsterDeathT AsIEffectConfigMonsterDeath()
 		{
 			return this.As<IEffectConfigMonsterDeathT>();
 		}
 
-		// Token: 0x0601C32C RID: 115500 RVA: 0x003FE2D0 File Offset: 0x003FC4D0
+		// Token: 0x0601DB01 RID: 121601 RVA: 0x0042A56C File Offset: 0x0042876C
 		public static IEffectConfigBase_UnionUnion FromIEffectConfigMonsterDeath(IEffectConfigMonsterDeathT _ieffectconfigmonsterdeath)
 		{
 			return new IEffectConfigBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			};
 		}
 
-		// Token: 0x0601C32D RID: 115501 RVA: 0x003FE2E5 File Offset: 0x003FC4E5
+		// Token: 0x0601DB02 RID: 121602 RVA: 0x0042A581 File Offset: 0x00428781
 		public IEffectConfigMonsterDeathGroupT AsIEffectConfigMonsterDeathGroup()
 		{
 			return this.As<IEffectConfigMonsterDeathGroupT>();
 		}
 
-		// Token: 0x0601C32E RID: 115502 RVA: 0x003FE2ED File Offset: 0x003FC4ED
+		// Token: 0x0601DB03 RID: 121603 RVA: 0x0042A589 File Offset: 0x00428789
 		public static IEffectConfigBase_UnionUnion FromIEffectConfigMonsterDeathGroup(IEffectConfigMonsterDeathGroupT _ieffectconfigmonsterdeathgroup)
 		{
 			return new IEffectConfigBase_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			};
 		}
 
-		// Token: 0x0601C32F RID: 115503 RVA: 0x003FE304 File Offset: 0x003FC504
+		// Token: 0x0601DB04 RID: 121604 RVA: 0x0042A5A0 File Offset: 0x004287A0
 		public static int Pack(FlatBufferBuilder builder, IEffectConfigBase_UnionUnion _o)
 		{
 			switch (_o.Type)

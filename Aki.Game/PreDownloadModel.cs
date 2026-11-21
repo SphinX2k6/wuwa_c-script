@@ -8,31 +8,31 @@ using CSharpScript.Launcher.Ui.HotFix;
 using CSharpScript.Launcher.Util;
 using UnrealEngine;
 
-// Token: 0x02002219 RID: 8729
+// Token: 0x020016FD RID: 5885
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class PreDownloadModel : ModelBase
 {
-	// Token: 0x06011016 RID: 69654 RVA: 0x004254B7 File Offset: 0x004236B7
+	// Token: 0x0600E4AC RID: 58540 RVA: 0x00432053 File Offset: 0x00430253
 	public bool GetHasStartDownload()
 	{
 		return this.HasDownloadStarted;
 	}
 
-	// Token: 0x06011017 RID: 69655 RVA: 0x004254BF File Offset: 0x004236BF
+	// Token: 0x0600E4AD RID: 58541 RVA: 0x0043205B File Offset: 0x0043025B
 	public void SetDownloadMode(EPreDownloadMode newMode)
 	{
 		this.CurrentDownloadMode = newMode;
 	}
 
-	// Token: 0x06011018 RID: 69656 RVA: 0x004254C8 File Offset: 0x004236C8
+	// Token: 0x0600E4AE RID: 58542 RVA: 0x00432064 File Offset: 0x00430264
 	public EPreDownloadMode GetDownloadMode()
 	{
 		return this.CurrentDownloadMode;
 	}
 
-	// Token: 0x06011019 RID: 69657 RVA: 0x004254D0 File Offset: 0x004236D0
+	// Token: 0x0600E4AF RID: 58543 RVA: 0x0043206C File Offset: 0x0043026C
 	protected override bool OnInit()
 	{
 		this.AddEvents();
@@ -40,7 +40,7 @@ public class PreDownloadModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601101A RID: 69658 RVA: 0x004254E4 File Offset: 0x004236E4
+	// Token: 0x0600E4B0 RID: 58544 RVA: 0x00432080 File Offset: 0x00430280
 	protected override bool OnClear()
 	{
 		this.RemoveEvents();
@@ -51,7 +51,7 @@ public class PreDownloadModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601101B RID: 69659 RVA: 0x00425510 File Offset: 0x00423710
+	// Token: 0x0600E4B1 RID: 58545 RVA: 0x004320AC File Offset: 0x004302AC
 	protected void AddEvents()
 	{
 		ReConnectModel.Instance.NetworkListener.NetworkChangeDelegate.Add(new Action<byte>(this.OnNetworkTypeChange));
@@ -63,7 +63,7 @@ public class PreDownloadModel : ModelBase
 		};
 	}
 
-	// Token: 0x0601101C RID: 69660 RVA: 0x00425588 File Offset: 0x00423788
+	// Token: 0x0600E4B2 RID: 58546 RVA: 0x00432124 File Offset: 0x00430324
 	protected void RemoveEvents()
 	{
 		ReConnectModel.Instance.NetworkListener.NetworkChangeDelegate.Remove(new Action<byte>(this.OnNetworkTypeChange));
@@ -72,7 +72,7 @@ public class PreDownloadModel : ModelBase
 		HotFixManager.MobilePreDownloadApplyTierChangeHandler = null;
 	}
 
-	// Token: 0x0601101D RID: 69661 RVA: 0x004255F3 File Offset: 0x004237F3
+	// Token: 0x0600E4B3 RID: 58547 RVA: 0x0043218F File Offset: 0x0043038F
 	private void ResetPreDownloadState()
 	{
 		this.HasDownloadStarted = false;
@@ -82,20 +82,20 @@ public class PreDownloadModel : ModelBase
 		this.UpdateData = null;
 	}
 
-	// Token: 0x0601101E RID: 69662 RVA: 0x00425618 File Offset: 0x00423818
+	// Token: 0x0600E4B4 RID: 58548 RVA: 0x004321B4 File Offset: 0x004303B4
 	public bool IsPreDownloadAvailable()
 	{
 		IPreDownload preDownload = PreDownloadManager.Get();
-		return (Info.Instance.IsMobilePlatform() || Info.Instance.IsPlayInEditor) && preDownload.IsPreDownloadEnabled();
+		return Info.Instance.IsMobilePlatform() && preDownload.IsPreDownloadEnabled();
 	}
 
-	// Token: 0x0601101F RID: 69663 RVA: 0x0042564B File Offset: 0x0042384B
+	// Token: 0x0600E4B5 RID: 58549 RVA: 0x004321DB File Offset: 0x004303DB
 	public bool IsComplete()
 	{
 		return PreDownloadManager.Get().IsComplete();
 	}
 
-	// Token: 0x06011020 RID: 69664 RVA: 0x00425658 File Offset: 0x00423858
+	// Token: 0x0600E4B6 RID: 58550 RVA: 0x004321E8 File Offset: 0x004303E8
 	private void OnNetworkTypeChange(byte newType)
 	{
 		IPreDownload preDownload = PreDownloadManager.Get();
@@ -111,13 +111,13 @@ public class PreDownloadModel : ModelBase
 		PreDownloadController.Instance.OnCellNetTypeChanged();
 	}
 
-	// Token: 0x06011021 RID: 69665 RVA: 0x00425692 File Offset: 0x00423892
+	// Token: 0x0600E4B7 RID: 58551 RVA: 0x00432222 File Offset: 0x00430422
 	public bool HasClickBtnCheck()
 	{
 		return this.IsPreDownloadAvailable() && !this.HasDownloadStarted;
 	}
 
-	// Token: 0x06011022 RID: 69666 RVA: 0x004256A8 File Offset: 0x004238A8
+	// Token: 0x0600E4B8 RID: 58552 RVA: 0x00432238 File Offset: 0x00430438
 	public void StartPreDownload()
 	{
 		IPreDownload preDownload = PreDownloadManager.Get();
@@ -139,7 +139,7 @@ public class PreDownloadModel : ModelBase
 		preDownload.Start(EPreDownloadMode.Normal);
 	}
 
-	// Token: 0x06011023 RID: 69667 RVA: 0x00425740 File Offset: 0x00423940
+	// Token: 0x0600E4B9 RID: 58553 RVA: 0x004322D0 File Offset: 0x004304D0
 	public void ResumePreDownload()
 	{
 		IPreDownload preDownload = PreDownloadManager.Get();
@@ -153,7 +153,7 @@ public class PreDownloadModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.PreDownloadStateUpdate);
 	}
 
-	// Token: 0x06011024 RID: 69668 RVA: 0x00425780 File Offset: 0x00423980
+	// Token: 0x0600E4BA RID: 58554 RVA: 0x00432310 File Offset: 0x00430510
 	public void PausePreDownload(EPreDownloadPauseType pauseReason)
 	{
 		if (pauseReason > EPreDownloadPauseType.None)
@@ -165,7 +165,7 @@ public class PreDownloadModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.PreDownloadStateUpdate);
 	}
 
-	// Token: 0x06011025 RID: 69669 RVA: 0x004257BD File Offset: 0x004239BD
+	// Token: 0x0600E4BB RID: 58555 RVA: 0x0043234D File Offset: 0x0043054D
 	public void SwitchResumeOrPause()
 	{
 		if (PreDownloadManager.Get().IsDownloading())
@@ -182,7 +182,7 @@ public class PreDownloadModel : ModelBase
 		this.ResumePreDownload();
 	}
 
-	// Token: 0x06011026 RID: 69670 RVA: 0x004257F8 File Offset: 0x004239F8
+	// Token: 0x0600E4BC RID: 58556 RVA: 0x00432388 File Offset: 0x00430588
 	private void OnReconnect()
 	{
 		IPreDownload preDownload = PreDownloadManager.Get();
@@ -193,7 +193,7 @@ public class PreDownloadModel : ModelBase
 		this.PausePreDownload(EPreDownloadPauseType.Reconnect);
 	}
 
-	// Token: 0x06011027 RID: 69671 RVA: 0x00425824 File Offset: 0x00423A24
+	// Token: 0x0600E4BD RID: 58557 RVA: 0x004323B4 File Offset: 0x004305B4
 	public void SwitchDownloadMode()
 	{
 		if (this.CurrentDownloadMode == EPreDownloadMode.Normal)
@@ -215,7 +215,7 @@ public class PreDownloadModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011028 RID: 69672 RVA: 0x0042589C File Offset: 0x00423A9C
+	// Token: 0x0600E4BE RID: 58558 RVA: 0x0043242C File Offset: 0x0043062C
 	private bool IsSpaceEnough()
 	{
 		IPreDownload preDownload = PreDownloadManager.Get();
@@ -226,7 +226,7 @@ public class PreDownloadModel : ModelBase
 		return num >= needSpace + 10485760L;
 	}
 
-	// Token: 0x06011029 RID: 69673 RVA: 0x004258D4 File Offset: 0x00423AD4
+	// Token: 0x0600E4BF RID: 58559 RVA: 0x00432464 File Offset: 0x00430664
 	private void NoSpaceConfirmBox()
 	{
 		IPreDownload preDownload = PreDownloadManager.Get();
@@ -244,7 +244,7 @@ public class PreDownloadModel : ModelBase
 		ScrollingTipsController.Instance.ShowTipsByTextId("PreDownload_NoSpace", Array.Empty<object>());
 	}
 
-	// Token: 0x0601102A RID: 69674 RVA: 0x00425954 File Offset: 0x00423B54
+	// Token: 0x0600E4C0 RID: 58560 RVA: 0x004324E4 File Offset: 0x004306E4
 	private void OnPreDownloadComplete()
 	{
 		PreDownloadDownloadModeSuccessRecord logData = new PreDownloadDownloadModeSuccessRecord((this.CurrentDownloadMode == EPreDownloadMode.Speed) ? 1 : 2);
@@ -254,19 +254,19 @@ public class PreDownloadModel : ModelBase
 		PreDownloadManager.Get().RemoveCompleteEvent(new Action(this.OnPreDownloadComplete));
 	}
 
-	// Token: 0x0601102B RID: 69675 RVA: 0x004259B9 File Offset: 0x00423BB9
+	// Token: 0x0600E4C1 RID: 58561 RVA: 0x00432549 File Offset: 0x00430749
 	public bool IsBinPatching()
 	{
 		return this.IsBinPatch;
 	}
 
-	// Token: 0x0601102C RID: 69676 RVA: 0x004259C1 File Offset: 0x00423BC1
+	// Token: 0x0600E4C2 RID: 58562 RVA: 0x00432551 File Offset: 0x00430751
 	public void ClearView()
 	{
 		PreDownloadManager.Get().SetView(this.PreDownloadNoViewObj);
 	}
 
-	// Token: 0x0601102D RID: 69677 RVA: 0x004259D4 File Offset: 0x00423BD4
+	// Token: 0x0600E4C3 RID: 58563 RVA: 0x00432564 File Offset: 0x00430764
 	public void OnUpdateDownData(bool bNeedWait, float rate, string fileName, string speedText, string sizeCurrent, string sizeTotal)
 	{
 		this.IsBinPatch = false;
@@ -282,7 +282,7 @@ public class PreDownloadModel : ModelBase
 		this.UpdateData.SizeTotal = sizeTotal;
 	}
 
-	// Token: 0x0601102E RID: 69678 RVA: 0x00425A48 File Offset: 0x00423C48
+	// Token: 0x0600E4C4 RID: 58564 RVA: 0x004325D8 File Offset: 0x004307D8
 	public void OnBinPatch(bool bNeedWait, float rate, string textId, params string[] args)
 	{
 		if (this.BinPatch == null)
@@ -296,14 +296,14 @@ public class PreDownloadModel : ModelBase
 		this.IsBinPatch = true;
 	}
 
-	// Token: 0x0601102F RID: 69679 RVA: 0x00425AA0 File Offset: 0x00423CA0
+	// Token: 0x0600E4C5 RID: 58565 RVA: 0x00432630 File Offset: 0x00430830
 	public void AddEnableCheck()
 	{
 		PreDownloadManager.Get().AddEnabledEvent(new Action(this.OnPreDownloadEnable));
 		LauncherLog.Instance.Info("On PreDownload AddEnabledEvent", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06011030 RID: 69680 RVA: 0x00425ADC File Offset: 0x00423CDC
+	// Token: 0x0600E4C6 RID: 58566 RVA: 0x0043266C File Offset: 0x0043086C
 	private void OnPreDownloadEnable()
 	{
 		PreDownloadManager.Get().TryRemoveTick();
@@ -312,8 +312,8 @@ public class PreDownloadModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.PreDownloadStateUpdate);
 	}
 
-	// Token: 0x170015A7 RID: 5543
-	// (get) Token: 0x06011031 RID: 69681 RVA: 0x00425B2B File Offset: 0x00423D2B
+	// Token: 0x170015DE RID: 5598
+	// (get) Token: 0x0600E4C7 RID: 58567 RVA: 0x004326BB File Offset: 0x004308BB
 	public static PreDownloadModel Instance
 	{
 		get
@@ -322,7 +322,7 @@ public class PreDownloadModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011032 RID: 69682 RVA: 0x00425B32 File Offset: 0x00423D32
+	// Token: 0x0600E4C8 RID: 58568 RVA: 0x004326C2 File Offset: 0x004308C2
 	public static PreDownloadModel GetOrCreateInstance()
 	{
 		if (PreDownloadModel._Instance == null)
@@ -332,7 +332,7 @@ public class PreDownloadModel : ModelBase
 		return PreDownloadModel._Instance;
 	}
 
-	// Token: 0x06011033 RID: 69683 RVA: 0x00425B46 File Offset: 0x00423D46
+	// Token: 0x0600E4C9 RID: 58569 RVA: 0x004326D6 File Offset: 0x004308D6
 	public static bool CreateInstance()
 	{
 		if (PreDownloadModel._Instance != null)
@@ -343,42 +343,42 @@ public class PreDownloadModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011034 RID: 69684 RVA: 0x00425B5C File Offset: 0x00423D5C
+	// Token: 0x0600E4CA RID: 58570 RVA: 0x004326EC File Offset: 0x004308EC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011035 RID: 69685 RVA: 0x00425B5E File Offset: 0x00423D5E
+	// Token: 0x0600E4CB RID: 58571 RVA: 0x004326EE File Offset: 0x004308EE
 	public static void ResetStaticDefaultValue()
 	{
 		PreDownloadModel._Instance = null;
 	}
 
-	// Token: 0x06011036 RID: 69686 RVA: 0x00425B66 File Offset: 0x00423D66
+	// Token: 0x0600E4CC RID: 58572 RVA: 0x004326F6 File Offset: 0x004308F6
 	static PreDownloadModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PreDownloadModel.CreateStaticDefaultValue), new Action(PreDownloadModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008180 RID: 33152
+	// Token: 0x040082BE RID: 33470
 	private bool HasDownloadStarted;
 
-	// Token: 0x04008181 RID: 33153
+	// Token: 0x040082BF RID: 33471
 	private EPreDownloadMode CurrentDownloadMode;
 
-	// Token: 0x04008182 RID: 33154
+	// Token: 0x040082C0 RID: 33472
 	private bool IsBinPatch;
 
-	// Token: 0x04008183 RID: 33155
+	// Token: 0x040082C1 RID: 33473
 	public BinPatchData BinPatch;
 
-	// Token: 0x04008184 RID: 33156
+	// Token: 0x040082C2 RID: 33474
 	public UpdateDownData UpdateData;
 
-	// Token: 0x04008185 RID: 33157
+	// Token: 0x040082C3 RID: 33475
 	private PreDownloadNoView PreDownloadNoViewObj;
 
-	// Token: 0x04008186 RID: 33158
+	// Token: 0x040082C4 RID: 33476
 	[Nullable(2)]
 	private static PreDownloadModel _Instance;
 }

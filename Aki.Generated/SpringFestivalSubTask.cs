@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010ED RID: 4333
+	// Token: 0x02001223 RID: 4643
 	public struct SpringFestivalSubTask : IFlatbufferObject
 	{
-		// Token: 0x17003845 RID: 14405
-		// (get) Token: 0x0600D909 RID: 55561 RVA: 0x00320969 File Offset: 0x0031EB69
+		// Token: 0x17003B9B RID: 15259
+		// (get) Token: 0x0600E654 RID: 58964 RVA: 0x0034BEED File Offset: 0x0034A0ED
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D90A RID: 55562 RVA: 0x00320976 File Offset: 0x0031EB76
+		// Token: 0x0600E655 RID: 58965 RVA: 0x0034BEFA File Offset: 0x0034A0FA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D90B RID: 55563 RVA: 0x00320980 File Offset: 0x0031EB80
+		// Token: 0x0600E656 RID: 58966 RVA: 0x0034BF04 File Offset: 0x0034A104
 		public static SpringFestivalSubTask GetRootAsSpringFestivalSubTask(ByteBuffer _bb)
 		{
 			return SpringFestivalSubTask.GetRootAsSpringFestivalSubTask(_bb, default(SpringFestivalSubTask));
 		}
 
-		// Token: 0x0600D90C RID: 55564 RVA: 0x0032099C File Offset: 0x0031EB9C
+		// Token: 0x0600E657 RID: 58967 RVA: 0x0034BF20 File Offset: 0x0034A120
 		public static SpringFestivalSubTask GetRootAsSpringFestivalSubTask(ByteBuffer _bb, SpringFestivalSubTask obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D90D RID: 55565 RVA: 0x003209B9 File Offset: 0x0031EBB9
+		// Token: 0x0600E658 RID: 58968 RVA: 0x0034BF3D File Offset: 0x0034A13D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D90E RID: 55566 RVA: 0x003209C8 File Offset: 0x0031EBC8
+		// Token: 0x0600E659 RID: 58969 RVA: 0x0034BF4C File Offset: 0x0034A14C
 		public SpringFestivalSubTask __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003846 RID: 14406
-		// (get) Token: 0x0600D90F RID: 55567 RVA: 0x003209D8 File Offset: 0x0031EBD8
+		// Token: 0x17003B9C RID: 15260
+		// (get) Token: 0x0600E65A RID: 58970 RVA: 0x0034BF5C File Offset: 0x0034A15C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003847 RID: 14407
-		// (get) Token: 0x0600D910 RID: 55568 RVA: 0x00320A14 File Offset: 0x0031EC14
+		// Token: 0x17003B9D RID: 15261
+		// (get) Token: 0x0600E65B RID: 58971 RVA: 0x0034BF98 File Offset: 0x0034A198
 		public int QuestId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003848 RID: 14408
-		// (get) Token: 0x0600D911 RID: 55569 RVA: 0x00320A50 File Offset: 0x0031EC50
+		// Token: 0x17003B9E RID: 15262
+		// (get) Token: 0x0600E65C RID: 58972 RVA: 0x0034BFD4 File Offset: 0x0034A1D4
 		public int TrackEntity
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005221 RID: 21025
+		// Token: 0x04005864 RID: 22628
 		private Table __p;
 	}
 }

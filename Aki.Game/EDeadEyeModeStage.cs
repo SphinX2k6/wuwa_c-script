@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001A77 RID: 6775
+// Token: 0x02000F36 RID: 3894
 public enum EDeadEyeModeStage
 {
-	// Token: 0x04005C07 RID: 23559
+	// Token: 0x04005CD6 RID: 23766
 	None,
-	// Token: 0x04005C08 RID: 23560
+	// Token: 0x04005CD7 RID: 23767
 	JumpCamp,
-	// Token: 0x04005C09 RID: 23561
+	// Token: 0x04005CD8 RID: 23768
 	AimInput,
-	// Token: 0x04005C0A RID: 23562
+	// Token: 0x04005CD9 RID: 23769
 	WaitSettlement,
-	// Token: 0x04005C0B RID: 23563
+	// Token: 0x04005CDA RID: 23770
 	ShootingSettlement
 }

@@ -11,7 +11,7 @@ using UnrealEngine;
 [Nullable(0)]
 public class ConditionEventPair
 {
-	// Token: 0x06000CEA RID: 3306 RVA: 0x00044E44 File Offset: 0x00043044
+	// Token: 0x06000CF0 RID: 3312 RVA: 0x000459E0 File Offset: 0x00043BE0
 	private BaseTagComponent.TTagChangedCallback GetTagChangedClosure(int tagId)
 	{
 		return delegate(int newCount, int changedTagId, int exactTagId, int oldCount)
@@ -33,7 +33,7 @@ public class ConditionEventPair
 		};
 	}
 
-	// Token: 0x06000CEB RID: 3307 RVA: 0x00044E64 File Offset: 0x00043064
+	// Token: 0x06000CF1 RID: 3313 RVA: 0x00045A00 File Offset: 0x00043C00
 	private void OnAttrChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		if (this.Conditions.Attributes[attributeId].InRange(newValue))
@@ -52,7 +52,7 @@ public class ConditionEventPair
 		}
 	}
 
-	// Token: 0x06000CEC RID: 3308 RVA: 0x00044ED0 File Offset: 0x000430D0
+	// Token: 0x06000CF2 RID: 3314 RVA: 0x00045A6C File Offset: 0x00043C6C
 	private void OnAttrRateChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		if (this.AttributeComponent == null)
@@ -112,7 +112,7 @@ public class ConditionEventPair
 		}
 	}
 
-	// Token: 0x06000CED RID: 3309 RVA: 0x000450A4 File Offset: 0x000432A4
+	// Token: 0x06000CF3 RID: 3315 RVA: 0x00045C40 File Offset: 0x00043E40
 	public void InitConditions(SAiConditions conditions, UKuroBooleanEventBinder eventBinder, CharacterActorComponent actorComp)
 	{
 		this.Clear();
@@ -164,7 +164,7 @@ public class ConditionEventPair
 		this.ResetConditions(true);
 	}
 
-	// Token: 0x06000CEE RID: 3310 RVA: 0x00045330 File Offset: 0x00043530
+	// Token: 0x06000CF4 RID: 3316 RVA: 0x00045ECC File Offset: 0x000440CC
 	public void Clear()
 	{
 		if (this.ListenAttributeIds != null)
@@ -205,7 +205,7 @@ public class ConditionEventPair
 		this.AsyncTagTasks.Clear();
 	}
 
-	// Token: 0x06000CEF RID: 3311 RVA: 0x00045454 File Offset: 0x00043654
+	// Token: 0x06000CF5 RID: 3317 RVA: 0x00045FF0 File Offset: 0x000441F0
 	private void IncreaseCount()
 	{
 		this.TrueCount++;
@@ -223,7 +223,7 @@ public class ConditionEventPair
 		}
 	}
 
-	// Token: 0x06000CF0 RID: 3312 RVA: 0x000454B8 File Offset: 0x000436B8
+	// Token: 0x06000CF6 RID: 3318 RVA: 0x00046054 File Offset: 0x00044254
 	private void DecreaseCount()
 	{
 		this.TrueCount--;
@@ -241,7 +241,7 @@ public class ConditionEventPair
 		}
 	}
 
-	// Token: 0x06000CF1 RID: 3313 RVA: 0x0004551C File Offset: 0x0004371C
+	// Token: 0x06000CF7 RID: 3319 RVA: 0x000460B8 File Offset: 0x000442B8
 	public void ResetConditions(bool onlyTrue = false)
 	{
 		this.TrueCount = 0;
@@ -303,45 +303,45 @@ public class ConditionEventPair
 		this.EventBinder.Callback.Broadcast(false);
 	}
 
-	// Token: 0x04000A49 RID: 2633
+	// Token: 0x04000A51 RID: 2641
 	[Nullable(2)]
 	private AiConditions Conditions;
 
-	// Token: 0x04000A4A RID: 2634
+	// Token: 0x04000A52 RID: 2642
 	[Nullable(2)]
 	public UKuroBooleanEventBinder EventBinder;
 
-	// Token: 0x04000A4B RID: 2635
+	// Token: 0x04000A53 RID: 2643
 	[Nullable(2)]
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x04000A4C RID: 2636
+	// Token: 0x04000A54 RID: 2644
 	[Nullable(2)]
 	private BaseAttributeComponent AttributeComponent;
 
-	// Token: 0x04000A4D RID: 2637
+	// Token: 0x04000A55 RID: 2645
 	private readonly HashSet<int> TagTrueSet = new HashSet<int>();
 
-	// Token: 0x04000A4E RID: 2638
+	// Token: 0x04000A56 RID: 2646
 	private readonly HashSet<EAttributeType> AttributeTrueSet = new HashSet<EAttributeType>();
 
-	// Token: 0x04000A4F RID: 2639
+	// Token: 0x04000A57 RID: 2647
 	private readonly HashSet<int> AttributeRateTrueSet = new HashSet<int>();
 
-	// Token: 0x04000A50 RID: 2640
+	// Token: 0x04000A58 RID: 2648
 	private int TrueCount;
 
-	// Token: 0x04000A51 RID: 2641
+	// Token: 0x04000A59 RID: 2649
 	private int SumCount;
 
-	// Token: 0x04000A52 RID: 2642
+	// Token: 0x04000A5A RID: 2650
 	private readonly List<ITagTask> AsyncTagTasks = new List<ITagTask>();
 
-	// Token: 0x04000A53 RID: 2643
+	// Token: 0x04000A5B RID: 2651
 	[Nullable(2)]
 	private EAttributeType[] ListenAttributeIds;
 
-	// Token: 0x04000A54 RID: 2644
+	// Token: 0x04000A5C RID: 2652
 	[Nullable(2)]
 	private EAttributeType[] ListenAttributeRateIds;
 }

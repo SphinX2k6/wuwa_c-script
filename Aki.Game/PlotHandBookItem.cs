@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Module.Util.Layout;
 using UnrealEngine;
 
-// Token: 0x02001E42 RID: 7746
+// Token: 0x02001304 RID: 4868
 [NullableContext(1)]
 [Nullable(0)]
 public class PlotHandBookItem : GridProxyAbstract<PlotType>
 {
-	// Token: 0x0600EB93 RID: 60307 RVA: 0x0037E797 File Offset: 0x0037C997
+	// Token: 0x0600BFB2 RID: 49074 RVA: 0x0038A427 File Offset: 0x00388627
 	[NullableContext(2)]
 	public PlotHandBookItem(UUIItem uiItem = null)
 	{
@@ -23,7 +23,7 @@ public class PlotHandBookItem : GridProxyAbstract<PlotType>
 		}
 	}
 
-	// Token: 0x0600EB94 RID: 60308 RVA: 0x0037E7C4 File Offset: 0x0037C9C4
+	// Token: 0x0600BFB3 RID: 49075 RVA: 0x0038A454 File Offset: 0x00388654
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class PlotHandBookItem : GridProxyAbstract<PlotType>
 		};
 	}
 
-	// Token: 0x0600EB95 RID: 60309 RVA: 0x0037E800 File Offset: 0x0037CA00
+	// Token: 0x0600BFB4 RID: 49076 RVA: 0x0038A490 File Offset: 0x00388690
 	public override void Refresh(PlotType data, bool isSelected, int gridIndex)
 	{
 		PlotType plotType = data;
@@ -59,7 +59,7 @@ public class PlotHandBookItem : GridProxyAbstract<PlotType>
 		this.ContentGenericLayout.RebuildLayoutByDataNew<HandBookCommonItemData>(this.HandBookCommonItemDataList, null);
 	}
 
-	// Token: 0x0600EB96 RID: 60310 RVA: 0x0037E914 File Offset: 0x0037CB14
+	// Token: 0x0600BFB5 RID: 49077 RVA: 0x0038A5A4 File Offset: 0x003887A4
 	private ILayoutItem<PlotHandBookChildItem> InitChildItem(object data, UUIItem uiItem, int index)
 	{
 		PlotHandBookChildItem plotHandBookChildItem = new PlotHandBookChildItem(uiItem);
@@ -71,7 +71,7 @@ public class PlotHandBookItem : GridProxyAbstract<PlotType>
 		};
 	}
 
-	// Token: 0x0600EB97 RID: 60311 RVA: 0x0037E94E File Offset: 0x0037CB4E
+	// Token: 0x0600BFB6 RID: 49078 RVA: 0x0038A5DE File Offset: 0x003887DE
 	public List<PlotHandBookChildItem> GetChildItemList()
 	{
 		if (this.ContentGenericLayout == null)
@@ -81,14 +81,14 @@ public class PlotHandBookItem : GridProxyAbstract<PlotType>
 		return this.ContentGenericLayout.GetLayoutItemList();
 	}
 
-	// Token: 0x0600EB98 RID: 60312 RVA: 0x0037E969 File Offset: 0x0037CB69
+	// Token: 0x0600BFB7 RID: 49079 RVA: 0x0038A5F9 File Offset: 0x003887F9
 	protected override void OnBeforeDestroy()
 	{
 		this.GeographyHandBookList = new List<PhotographHandBook>();
 		this.HandBookCommonItemDataList = new List<HandBookCommonItemData>();
 	}
 
-	// Token: 0x04006D49 RID: 27977
+	// Token: 0x04006E2A RID: 28202
 	[Nullable(new byte[]
 	{
 		2,
@@ -96,20 +96,20 @@ public class PlotHandBookItem : GridProxyAbstract<PlotType>
 	})]
 	private GenericLayoutNew<PlotHandBookChildItem> ContentGenericLayout;
 
-	// Token: 0x04006D4A RID: 27978
+	// Token: 0x04006E2B RID: 28203
 	private List<PhotographHandBook> GeographyHandBookList;
 
-	// Token: 0x04006D4B RID: 27979
+	// Token: 0x04006E2C RID: 28204
 	private List<HandBookCommonItemData> HandBookCommonItemDataList;
 
-	// Token: 0x020083F3 RID: 33779
+	// Token: 0x02007578 RID: 30072
 	[NullableContext(0)]
 	private class EGeographyHandBookItemDefine
 	{
-		// Token: 0x0402AF4A RID: 175946
+		// Token: 0x0402626E RID: 156270
 		public const int TitleText = 0;
 
-		// Token: 0x0402AF4B RID: 175947
+		// Token: 0x0402626F RID: 156271
 		public const int GirdLayout = 1;
 	}
 }

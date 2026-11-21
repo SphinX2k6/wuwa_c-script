@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052B6 RID: 21174
+	// Token: 0x02005821 RID: 22561
 	public class IFollowTrackToSplineDestinationT
 	{
-		// Token: 0x17009B45 RID: 39749
-		// (get) Token: 0x06022863 RID: 141411 RVA: 0x004C907B File Offset: 0x004C727B
-		// (set) Token: 0x06022864 RID: 141412 RVA: 0x004C9083 File Offset: 0x004C7283
+		// Token: 0x1700A34E RID: 41806
+		// (get) Token: 0x06024827 RID: 149543 RVA: 0x00504177 File Offset: 0x00502377
+		// (set) Token: 0x06024828 RID: 149544 RVA: 0x0050417F File Offset: 0x0050237F
 		public EFollowTrackEndType Type { get; set; }
 
-		// Token: 0x17009B46 RID: 39750
-		// (get) Token: 0x06022865 RID: 141413 RVA: 0x004C908C File Offset: 0x004C728C
-		// (set) Token: 0x06022866 RID: 141414 RVA: 0x004C9094 File Offset: 0x004C7294
+		// Token: 0x1700A34F RID: 41807
+		// (get) Token: 0x06024829 RID: 149545 RVA: 0x00504188 File Offset: 0x00502388
+		// (set) Token: 0x0602482A RID: 149546 RVA: 0x00504190 File Offset: 0x00502390
 		public string ChangeSelfState { get; set; }
 
-		// Token: 0x06022867 RID: 141415 RVA: 0x004C909D File Offset: 0x004C729D
+		// Token: 0x0602482B RID: 149547 RVA: 0x00504199 File Offset: 0x00502399
 		public IFollowTrackToSplineDestinationT()
 		{
 			this.Type = EFollowTrackEndType.ToStart;

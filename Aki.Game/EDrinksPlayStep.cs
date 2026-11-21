@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02000F41 RID: 3905
+// Token: 0x020003F6 RID: 1014
 public enum EDrinksPlayStep
 {
-	// Token: 0x04002D32 RID: 11570
+	// Token: 0x04002DCB RID: 11723
 	Drink1,
-	// Token: 0x04002D33 RID: 11571
+	// Token: 0x04002DCC RID: 11724
 	Drink2,
-	// Token: 0x04002D34 RID: 11572
+	// Token: 0x04002DCD RID: 11725
 	Batching,
-	// Token: 0x04002D35 RID: 11573
+	// Token: 0x04002DCE RID: 11726
 	Ornament = 4
 }

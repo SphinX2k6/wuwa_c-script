@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DB7 RID: 19895
+	// Token: 0x020052BB RID: 21179
 	public enum EInhaledPerResultType : byte
 	{
-		// Token: 0x0400D9E9 RID: 55785
+		// Token: 0x0400E538 RID: 58680
 		DestroySelf,
-		// Token: 0x0400D9EA RID: 55786
+		// Token: 0x0400E539 RID: 58681
 		ChangeSelfState
 	}
 }

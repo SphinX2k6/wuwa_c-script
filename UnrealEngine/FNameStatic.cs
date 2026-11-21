@@ -5,11 +5,11 @@ using System.Text;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002AD9 RID: 10969
+	// Token: 0x02000888 RID: 2184
 	public class FNameStatic
 	{
-		// Token: 0x17009977 RID: 39287
-		// (get) Token: 0x060283A5 RID: 164773 RVA: 0x003D2F23 File Offset: 0x003D1123
+		// Token: 0x17002303 RID: 8963
+		// (get) Token: 0x0600BD5C RID: 48476 RVA: 0x0012E262 File Offset: 0x0012C462
 		public static FName OnActorBeginOverlap
 		{
 			get
@@ -18,8 +18,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009978 RID: 39288
-		// (get) Token: 0x060283A6 RID: 164774 RVA: 0x003D2F32 File Offset: 0x003D1132
+		// Token: 0x17002304 RID: 8964
+		// (get) Token: 0x0600BD5D RID: 48477 RVA: 0x0012E271 File Offset: 0x0012C471
 		public static FName OnActorEndOverlap
 		{
 			get
@@ -28,8 +28,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009979 RID: 39289
-		// (get) Token: 0x060283A7 RID: 164775 RVA: 0x003D2F42 File Offset: 0x003D1142
+		// Token: 0x17002305 RID: 8965
+		// (get) Token: 0x0600BD5E RID: 48478 RVA: 0x0012E281 File Offset: 0x0012C481
 		public static FName OnActorHit
 		{
 			get
@@ -38,8 +38,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700997A RID: 39290
-		// (get) Token: 0x060283A8 RID: 164776 RVA: 0x003D2F52 File Offset: 0x003D1152
+		// Token: 0x17002306 RID: 8966
+		// (get) Token: 0x0600BD5F RID: 48479 RVA: 0x0012E291 File Offset: 0x0012C491
 		public static FName OnBeginCursorOver
 		{
 			get
@@ -48,8 +48,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700997B RID: 39291
-		// (get) Token: 0x060283A9 RID: 164777 RVA: 0x003D2F62 File Offset: 0x003D1162
+		// Token: 0x17002307 RID: 8967
+		// (get) Token: 0x0600BD60 RID: 48480 RVA: 0x0012E2A1 File Offset: 0x0012C4A1
 		public static FName OnClicked
 		{
 			get
@@ -58,8 +58,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700997C RID: 39292
-		// (get) Token: 0x060283AA RID: 164778 RVA: 0x003D2F72 File Offset: 0x003D1172
+		// Token: 0x17002308 RID: 8968
+		// (get) Token: 0x0600BD61 RID: 48481 RVA: 0x0012E2B1 File Offset: 0x0012C4B1
 		public static FName OnComponentActivated
 		{
 			get
@@ -68,8 +68,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700997D RID: 39293
-		// (get) Token: 0x060283AB RID: 164779 RVA: 0x003D2F82 File Offset: 0x003D1182
+		// Token: 0x17002309 RID: 8969
+		// (get) Token: 0x0600BD62 RID: 48482 RVA: 0x0012E2C1 File Offset: 0x0012C4C1
 		public static FName OnComponentBeginOverlap
 		{
 			get
@@ -78,8 +78,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700997E RID: 39294
-		// (get) Token: 0x060283AC RID: 164780 RVA: 0x003D2F92 File Offset: 0x003D1192
+		// Token: 0x1700230A RID: 8970
+		// (get) Token: 0x0600BD63 RID: 48483 RVA: 0x0012E2D1 File Offset: 0x0012C4D1
 		public static FName OnComponentBeginOverlapBlock
 		{
 			get
@@ -88,8 +88,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700997F RID: 39295
-		// (get) Token: 0x060283AD RID: 164781 RVA: 0x003D2FA2 File Offset: 0x003D11A2
+		// Token: 0x1700230B RID: 8971
+		// (get) Token: 0x0600BD64 RID: 48484 RVA: 0x0012E2E1 File Offset: 0x0012C4E1
 		public static FName OnComponentBeginOverlapNoGcAlloc
 		{
 			get
@@ -98,8 +98,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009980 RID: 39296
-		// (get) Token: 0x060283AE RID: 164782 RVA: 0x003D2FB5 File Offset: 0x003D11B5
+		// Token: 0x1700230C RID: 8972
+		// (get) Token: 0x0600BD65 RID: 48485 RVA: 0x0012E2F4 File Offset: 0x0012C4F4
 		public static FName OnComponentDeactivated
 		{
 			get
@@ -108,8 +108,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009981 RID: 39297
-		// (get) Token: 0x060283AF RID: 164783 RVA: 0x003D2FC8 File Offset: 0x003D11C8
+		// Token: 0x1700230D RID: 8973
+		// (get) Token: 0x0600BD66 RID: 48486 RVA: 0x0012E307 File Offset: 0x0012C507
 		public static FName OnComponentEndOverlap
 		{
 			get
@@ -118,8 +118,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009982 RID: 39298
-		// (get) Token: 0x060283B0 RID: 164784 RVA: 0x003D2FDB File Offset: 0x003D11DB
+		// Token: 0x1700230E RID: 8974
+		// (get) Token: 0x0600BD67 RID: 48487 RVA: 0x0012E31A File Offset: 0x0012C51A
 		public static FName OnComponentHit
 		{
 			get
@@ -128,8 +128,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009983 RID: 39299
-		// (get) Token: 0x060283B1 RID: 164785 RVA: 0x003D2FEE File Offset: 0x003D11EE
+		// Token: 0x1700230F RID: 8975
+		// (get) Token: 0x0600BD68 RID: 48488 RVA: 0x0012E32D File Offset: 0x0012C52D
 		public static FName OnComponentSleep
 		{
 			get
@@ -138,8 +138,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009984 RID: 39300
-		// (get) Token: 0x060283B2 RID: 164786 RVA: 0x003D3001 File Offset: 0x003D1201
+		// Token: 0x17002310 RID: 8976
+		// (get) Token: 0x0600BD69 RID: 48489 RVA: 0x0012E340 File Offset: 0x0012C540
 		public static FName OnComponentWake
 		{
 			get
@@ -148,8 +148,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009985 RID: 39301
-		// (get) Token: 0x060283B3 RID: 164787 RVA: 0x003D3014 File Offset: 0x003D1214
+		// Token: 0x17002311 RID: 8977
+		// (get) Token: 0x0600BD6A RID: 48490 RVA: 0x0012E353 File Offset: 0x0012C553
 		public static FName OnConveyBase
 		{
 			get
@@ -158,8 +158,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009986 RID: 39302
-		// (get) Token: 0x060283B4 RID: 164788 RVA: 0x003D3027 File Offset: 0x003D1227
+		// Token: 0x17002312 RID: 8978
+		// (get) Token: 0x0600BD6B RID: 48491 RVA: 0x0012E366 File Offset: 0x0012C566
 		public static FName OnDestroyed
 		{
 			get
@@ -168,8 +168,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009987 RID: 39303
-		// (get) Token: 0x060283B5 RID: 164789 RVA: 0x003D303A File Offset: 0x003D123A
+		// Token: 0x17002313 RID: 8979
+		// (get) Token: 0x0600BD6C RID: 48492 RVA: 0x0012E379 File Offset: 0x0012C579
 		public static FName OnEndCursorOver
 		{
 			get
@@ -178,8 +178,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009988 RID: 39304
-		// (get) Token: 0x060283B6 RID: 164790 RVA: 0x003D304D File Offset: 0x003D124D
+		// Token: 0x17002314 RID: 8980
+		// (get) Token: 0x0600BD6D RID: 48493 RVA: 0x0012E38C File Offset: 0x0012C58C
 		public static FName OnEndPlay
 		{
 			get
@@ -188,8 +188,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009989 RID: 39305
-		// (get) Token: 0x060283B7 RID: 164791 RVA: 0x003D3060 File Offset: 0x003D1260
+		// Token: 0x17002315 RID: 8981
+		// (get) Token: 0x0600BD6E RID: 48494 RVA: 0x0012E39F File Offset: 0x0012C59F
 		public static FName OnInputTouchBegin
 		{
 			get
@@ -198,8 +198,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700998A RID: 39306
-		// (get) Token: 0x060283B8 RID: 164792 RVA: 0x003D3073 File Offset: 0x003D1273
+		// Token: 0x17002316 RID: 8982
+		// (get) Token: 0x0600BD6F RID: 48495 RVA: 0x0012E3B2 File Offset: 0x0012C5B2
 		public static FName OnInputTouchEnd
 		{
 			get
@@ -208,8 +208,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700998B RID: 39307
-		// (get) Token: 0x060283B9 RID: 164793 RVA: 0x003D3086 File Offset: 0x003D1286
+		// Token: 0x17002317 RID: 8983
+		// (get) Token: 0x0600BD70 RID: 48496 RVA: 0x0012E3C5 File Offset: 0x0012C5C5
 		public static FName OnInputTouchEnter
 		{
 			get
@@ -218,8 +218,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700998C RID: 39308
-		// (get) Token: 0x060283BA RID: 164794 RVA: 0x003D3099 File Offset: 0x003D1299
+		// Token: 0x17002318 RID: 8984
+		// (get) Token: 0x0600BD71 RID: 48497 RVA: 0x0012E3D8 File Offset: 0x0012C5D8
 		public static FName OnInputTouchLeave
 		{
 			get
@@ -228,8 +228,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700998D RID: 39309
-		// (get) Token: 0x060283BB RID: 164795 RVA: 0x003D30AC File Offset: 0x003D12AC
+		// Token: 0x17002319 RID: 8985
+		// (get) Token: 0x0600BD72 RID: 48498 RVA: 0x0012E3EB File Offset: 0x0012C5EB
 		public static FName OnPreDestroyed
 		{
 			get
@@ -238,8 +238,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700998E RID: 39310
-		// (get) Token: 0x060283BC RID: 164796 RVA: 0x003D30BF File Offset: 0x003D12BF
+		// Token: 0x1700231A RID: 8986
+		// (get) Token: 0x0600BD73 RID: 48499 RVA: 0x0012E3FE File Offset: 0x0012C5FE
 		public static FName OnReleased
 		{
 			get
@@ -248,58 +248,18 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700998F RID: 39311
-		// (get) Token: 0x060283BD RID: 164797 RVA: 0x003D30D2 File Offset: 0x003D12D2
-		public static FName OnTakeAnyDamage
-		{
-			get
-			{
-				return FNameStatic.GetLazyAnsi(ref FNameStatic.__Index_24, 400, 15);
-			}
-		}
-
-		// Token: 0x17009990 RID: 39312
-		// (get) Token: 0x060283BE RID: 164798 RVA: 0x003D30E5 File Offset: 0x003D12E5
-		public static FName OnTakePointDamage
-		{
-			get
-			{
-				return FNameStatic.GetLazyAnsi(ref FNameStatic.__Index_25, 415, 17);
-			}
-		}
-
-		// Token: 0x17009991 RID: 39313
-		// (get) Token: 0x060283BF RID: 164799 RVA: 0x003D30F8 File Offset: 0x003D12F8
-		public static FName OnTakeRadialDamage
-		{
-			get
-			{
-				return FNameStatic.GetLazyAnsi(ref FNameStatic.__Index_26, 432, 18);
-			}
-		}
-
-		// Token: 0x17009992 RID: 39314
-		// (get) Token: 0x060283C0 RID: 164800 RVA: 0x003D310B File Offset: 0x003D130B
-		public static FName PhysicsVolumeChangedDelegate
-		{
-			get
-			{
-				return FNameStatic.GetLazyAnsi(ref FNameStatic.__Index_27, 450, 28);
-			}
-		}
-
-		// Token: 0x17009993 RID: 39315
-		// (get) Token: 0x060283C1 RID: 164801 RVA: 0x003D311E File Offset: 0x003D131E
+		// Token: 0x1700231B RID: 8987
+		// (get) Token: 0x0600BD74 RID: 48500 RVA: 0x0012E411 File Offset: 0x0012C611
 		public static FName SparseMulti1
 		{
 			get
 			{
-				return FNameStatic.GetLazyAnsi(ref FNameStatic.__Index_28, 478, 12);
+				return FNameStatic.GetLazyAnsi(ref FNameStatic.__Index_24, 400, 12);
 			}
 		}
 
-		// Token: 0x17009994 RID: 39316
-		// (get) Token: 0x060283C2 RID: 164802 RVA: 0x003D3131 File Offset: 0x003D1331
+		// Token: 0x1700231C RID: 8988
+		// (get) Token: 0x0600BD75 RID: 48501 RVA: 0x0012E424 File Offset: 0x0012C624
 		private unsafe static ReadOnlySpan<byte> NameInitUtf16
 		{
 			get
@@ -308,8 +268,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009995 RID: 39317
-		// (get) Token: 0x060283C3 RID: 164803 RVA: 0x003D313E File Offset: 0x003D133E
+		// Token: 0x1700231D RID: 8989
+		// (get) Token: 0x0600BD76 RID: 48502 RVA: 0x0012E431 File Offset: 0x0012C631
 		private unsafe static ReadOnlySpan<byte> NameLazyUtf16
 		{
 			get
@@ -318,8 +278,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009996 RID: 39318
-		// (get) Token: 0x060283C4 RID: 164804 RVA: 0x003D314B File Offset: 0x003D134B
+		// Token: 0x1700231E RID: 8990
+		// (get) Token: 0x0600BD77 RID: 48503 RVA: 0x0012E43E File Offset: 0x0012C63E
 		private unsafe static ReadOnlySpan<byte> NameInitAnsi
 		{
 			get
@@ -328,17 +288,17 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009997 RID: 39319
-		// (get) Token: 0x060283C5 RID: 164805 RVA: 0x003D3158 File Offset: 0x003D1358
+		// Token: 0x1700231F RID: 8991
+		// (get) Token: 0x0600BD78 RID: 48504 RVA: 0x0012E44B File Offset: 0x0012C64B
 		private unsafe static ReadOnlySpan<byte> NameLazyAnsi
 		{
 			get
 			{
-				return new ReadOnlySpan<byte>((void*)(&<PrivateImplementationDetails>.21B32F20BCB26B2A0A377C69D0C9557E8CBA7AB43F870F7441E278301AC87B87), 490);
+				return new ReadOnlySpan<byte>((void*)(&<PrivateImplementationDetails>.C821B4362BFDA56DEDB7B385DCD991F62348D182C2AC0B1C4BD03FA2B7167D25), 412);
 			}
 		}
 
-		// Token: 0x060283C6 RID: 164806 RVA: 0x003D316C File Offset: 0x003D136C
+		// Token: 0x0600BD79 RID: 48505 RVA: 0x0012E45C File Offset: 0x0012C65C
 		unsafe static FNameStatic()
 		{
 			int num = 1;
@@ -353,7 +313,7 @@ namespace UnrealEngine
 			new Span<char>(stackalloc byte[(UIntPtr)2048], 1024);
 		}
 
-		// Token: 0x060283C7 RID: 164807 RVA: 0x003D31C8 File Offset: 0x003D13C8
+		// Token: 0x0600BD7A RID: 48506 RVA: 0x0012E4B8 File Offset: 0x0012C6B8
 		private static FName GetLazyAnsi(ref ushort index, int offset, ushort length)
 		{
 			if (index != 0)
@@ -366,7 +326,7 @@ namespace UnrealEngine
 			return fname;
 		}
 
-		// Token: 0x060283C8 RID: 164808 RVA: 0x003D3218 File Offset: 0x003D1418
+		// Token: 0x0600BD7B RID: 48507 RVA: 0x0012E508 File Offset: 0x0012C708
 		private unsafe static FName GetLazyUtf16(ref ushort index, int offset, ushort length)
 		{
 			if (index != 0)
@@ -380,101 +340,89 @@ namespace UnrealEngine
 			return fname;
 		}
 
-		// Token: 0x060283C9 RID: 164809 RVA: 0x003D3280 File Offset: 0x003D1480
+		// Token: 0x0600BD7C RID: 48508 RVA: 0x0012E570 File Offset: 0x0012C770
 		private static ReadOnlySpan<char> ToUtf16(ReadOnlySpan<byte> utf8, Span<char> buffer)
 		{
 			int chars = Encoding.UTF8.GetChars(utf8, buffer);
 			return buffer.Slice(0, chars);
 		}
 
-		// Token: 0x04016261 RID: 90721
+		// Token: 0x0400567C RID: 22140
 		private static ushort __Index_0;
 
-		// Token: 0x04016262 RID: 90722
+		// Token: 0x0400567D RID: 22141
 		private static ushort __Index_1;
 
-		// Token: 0x04016263 RID: 90723
+		// Token: 0x0400567E RID: 22142
 		private static ushort __Index_2;
 
-		// Token: 0x04016264 RID: 90724
+		// Token: 0x0400567F RID: 22143
 		private static ushort __Index_3;
 
-		// Token: 0x04016265 RID: 90725
+		// Token: 0x04005680 RID: 22144
 		private static ushort __Index_4;
 
-		// Token: 0x04016266 RID: 90726
+		// Token: 0x04005681 RID: 22145
 		private static ushort __Index_5;
 
-		// Token: 0x04016267 RID: 90727
+		// Token: 0x04005682 RID: 22146
 		private static ushort __Index_6;
 
-		// Token: 0x04016268 RID: 90728
+		// Token: 0x04005683 RID: 22147
 		private static ushort __Index_7;
 
-		// Token: 0x04016269 RID: 90729
+		// Token: 0x04005684 RID: 22148
 		private static ushort __Index_8;
 
-		// Token: 0x0401626A RID: 90730
+		// Token: 0x04005685 RID: 22149
 		private static ushort __Index_9;
 
-		// Token: 0x0401626B RID: 90731
+		// Token: 0x04005686 RID: 22150
 		private static ushort __Index_10;
 
-		// Token: 0x0401626C RID: 90732
+		// Token: 0x04005687 RID: 22151
 		private static ushort __Index_11;
 
-		// Token: 0x0401626D RID: 90733
+		// Token: 0x04005688 RID: 22152
 		private static ushort __Index_12;
 
-		// Token: 0x0401626E RID: 90734
+		// Token: 0x04005689 RID: 22153
 		private static ushort __Index_13;
 
-		// Token: 0x0401626F RID: 90735
+		// Token: 0x0400568A RID: 22154
 		private static ushort __Index_14;
 
-		// Token: 0x04016270 RID: 90736
+		// Token: 0x0400568B RID: 22155
 		private static ushort __Index_15;
 
-		// Token: 0x04016271 RID: 90737
+		// Token: 0x0400568C RID: 22156
 		private static ushort __Index_16;
 
-		// Token: 0x04016272 RID: 90738
+		// Token: 0x0400568D RID: 22157
 		private static ushort __Index_17;
 
-		// Token: 0x04016273 RID: 90739
+		// Token: 0x0400568E RID: 22158
 		private static ushort __Index_18;
 
-		// Token: 0x04016274 RID: 90740
+		// Token: 0x0400568F RID: 22159
 		private static ushort __Index_19;
 
-		// Token: 0x04016275 RID: 90741
+		// Token: 0x04005690 RID: 22160
 		private static ushort __Index_20;
 
-		// Token: 0x04016276 RID: 90742
+		// Token: 0x04005691 RID: 22161
 		private static ushort __Index_21;
 
-		// Token: 0x04016277 RID: 90743
+		// Token: 0x04005692 RID: 22162
 		private static ushort __Index_22;
 
-		// Token: 0x04016278 RID: 90744
+		// Token: 0x04005693 RID: 22163
 		private static ushort __Index_23;
 
-		// Token: 0x04016279 RID: 90745
+		// Token: 0x04005694 RID: 22164
 		private static ushort __Index_24;
 
-		// Token: 0x0401627A RID: 90746
-		private static ushort __Index_25;
-
-		// Token: 0x0401627B RID: 90747
-		private static ushort __Index_26;
-
-		// Token: 0x0401627C RID: 90748
-		private static ushort __Index_27;
-
-		// Token: 0x0401627D RID: 90749
-		private static ushort __Index_28;
-
-		// Token: 0x0401627E RID: 90750
+		// Token: 0x04005695 RID: 22165
 		private static List<FName> LazyNames;
 	}
 }

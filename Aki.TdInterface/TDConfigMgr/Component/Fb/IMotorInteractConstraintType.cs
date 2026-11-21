@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B12 RID: 2834
+	// Token: 0x02000BE0 RID: 3040
 	public class IMotorInteractConstraintType
 	{
-		// Token: 0x06004177 RID: 16759 RVA: 0x000A8129 File Offset: 0x000A6329
-		[NullableContext(1)]
+		// Token: 0x060045CD RID: 17869 RVA: 0x000B2155 File Offset: 0x000B0355
 		public static IMotorInteractConstraintType Create(IMotorInteractConstraintType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001110 RID: 4368
-		// (get) Token: 0x06004178 RID: 16760 RVA: 0x000A8148 File Offset: 0x000A6348
+		// Token: 0x17001208 RID: 4616
+		// (get) Token: 0x060045CE RID: 17870 RVA: 0x000B2174 File Offset: 0x000B0374
 		public virtual EMotorInteractConstraintType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040024E3 RID: 9443
+		// Token: 0x04002727 RID: 10023
 		private IMotorInteractConstraintType Instance;
 	}
 }

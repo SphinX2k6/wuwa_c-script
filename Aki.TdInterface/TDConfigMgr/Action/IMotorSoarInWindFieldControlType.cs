@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C26 RID: 7206
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E1D RID: 7709
 	public class IMotorSoarInWindFieldControlType
 	{
-		// Token: 0x06009A99 RID: 39577 RVA: 0x001637D4 File Offset: 0x001619D4
+		// Token: 0x0600A3F1 RID: 41969 RVA: 0x00176B14 File Offset: 0x00174D14
 		private IMotorSoarInWindFieldControlType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009A9A RID: 39578 RVA: 0x0016380C File Offset: 0x00161A0C
+		// Token: 0x0600A3F2 RID: 41970 RVA: 0x00176B4C File Offset: 0x00174D4C
 		public static IMotorSoarInWindFieldControlType Create([Nullable(2)] IMotorSoarInWindFieldControlType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A9B RID: 39579 RVA: 0x0016381F File Offset: 0x00161A1F
+		// Token: 0x0600A3F3 RID: 41971 RVA: 0x00176B5F File Offset: 0x00174D5F
 		public static IMotorSoarInWindFieldControlType CreateFromSetValue([Nullable(2)] IMotorSoarInWindFieldControlType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A9C RID: 39580 RVA: 0x00163832 File Offset: 0x00161A32
+		// Token: 0x0600A3F4 RID: 41972 RVA: 0x00176B72 File Offset: 0x00174D72
 		public IMotorSoarInWindFieldControlType_SetValue ToSetValue()
 		{
 			return new IMotorSoarInWindFieldControlType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700306A RID: 12394
-		// (get) Token: 0x06009A9D RID: 39581 RVA: 0x00163845 File Offset: 0x00161A45
-		// (set) Token: 0x06009A9E RID: 39582 RVA: 0x00163870 File Offset: 0x00161A70
+		// Token: 0x170032DB RID: 13019
+		// (get) Token: 0x0600A3F5 RID: 41973 RVA: 0x00176B85 File Offset: 0x00174D85
+		// (set) Token: 0x0600A3F6 RID: 41974 RVA: 0x00176BB0 File Offset: 0x00174DB0
 		public virtual EMotorSoarInWindFieldControlType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E01 RID: 24065
+		// Token: 0x04006338 RID: 25400
 		[Nullable(2)]
 		protected IMotorSoarInWindFieldControlType FbInstance;
 
-		// Token: 0x04005E02 RID: 24066
+		// Token: 0x04006339 RID: 25401
 		[Nullable(2)]
 		protected IMotorSoarInWindFieldControlType_SetValue PocoInterface;
 	}

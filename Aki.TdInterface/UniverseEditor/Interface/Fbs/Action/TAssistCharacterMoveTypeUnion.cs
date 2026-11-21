@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007645 RID: 30277
+	// Token: 0x02007E53 RID: 32339
 	public class TAssistCharacterMoveTypeUnion
 	{
-		// Token: 0x1700E5C1 RID: 58817
-		// (get) Token: 0x06037224 RID: 225828 RVA: 0x00779DD2 File Offset: 0x00777FD2
-		// (set) Token: 0x06037225 RID: 225829 RVA: 0x00779DDA File Offset: 0x00777FDA
+		// Token: 0x1700F1FF RID: 61951
+		// (get) Token: 0x0603A6C9 RID: 239305 RVA: 0x007DDECE File Offset: 0x007DC0CE
+		// (set) Token: 0x0603A6CA RID: 239306 RVA: 0x007DDED6 File Offset: 0x007DC0D6
 		public TAssistCharacterMoveType Type { get; set; }
 
-		// Token: 0x1700E5C2 RID: 58818
-		// (get) Token: 0x06037226 RID: 225830 RVA: 0x00779DE3 File Offset: 0x00777FE3
-		// (set) Token: 0x06037227 RID: 225831 RVA: 0x00779DEB File Offset: 0x00777FEB
+		// Token: 0x1700F200 RID: 61952
+		// (get) Token: 0x0603A6CB RID: 239307 RVA: 0x007DDEDF File Offset: 0x007DC0DF
+		// (set) Token: 0x0603A6CC RID: 239308 RVA: 0x007DDEE7 File Offset: 0x007DC0E7
 		public object Value { get; set; }
 
-		// Token: 0x06037228 RID: 225832 RVA: 0x00779DF4 File Offset: 0x00777FF4
+		// Token: 0x0603A6CD RID: 239309 RVA: 0x007DDEF0 File Offset: 0x007DC0F0
 		public TAssistCharacterMoveTypeUnion()
 		{
 			this.Type = TAssistCharacterMoveType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037229 RID: 225833 RVA: 0x00779E0A File Offset: 0x0077800A
+		// Token: 0x0603A6CE RID: 239310 RVA: 0x007DDF06 File Offset: 0x007DC106
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603722A RID: 225834 RVA: 0x00779E1C File Offset: 0x0077801C
+		// Token: 0x0603A6CF RID: 239311 RVA: 0x007DDF18 File Offset: 0x007DC118
 		public IAssistCharacterNavigationMoveT AsIAssistCharacterNavigationMove()
 		{
 			return this.As<IAssistCharacterNavigationMoveT>();
 		}
 
-		// Token: 0x0603722B RID: 225835 RVA: 0x00779E24 File Offset: 0x00778024
+		// Token: 0x0603A6D0 RID: 239312 RVA: 0x007DDF20 File Offset: 0x007DC120
 		public static TAssistCharacterMoveTypeUnion FromIAssistCharacterNavigationMove(IAssistCharacterNavigationMoveT _iassistcharacternavigationmove)
 		{
 			return new TAssistCharacterMoveTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603722C RID: 225836 RVA: 0x00779E39 File Offset: 0x00778039
+		// Token: 0x0603A6D1 RID: 239313 RVA: 0x007DDF35 File Offset: 0x007DC135
 		public IAssistCharacterSplineMoveT AsIAssistCharacterSplineMove()
 		{
 			return this.As<IAssistCharacterSplineMoveT>();
 		}
 
-		// Token: 0x0603722D RID: 225837 RVA: 0x00779E41 File Offset: 0x00778041
+		// Token: 0x0603A6D2 RID: 239314 RVA: 0x007DDF3D File Offset: 0x007DC13D
 		public static TAssistCharacterMoveTypeUnion FromIAssistCharacterSplineMove(IAssistCharacterSplineMoveT _iassistcharactersplinemove)
 		{
 			return new TAssistCharacterMoveTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603722E RID: 225838 RVA: 0x00779E58 File Offset: 0x00778058
+		// Token: 0x0603A6D3 RID: 239315 RVA: 0x007DDF54 File Offset: 0x007DC154
 		public static int Pack(FlatBufferBuilder builder, TAssistCharacterMoveTypeUnion _o)
 		{
 			TAssistCharacterMoveType type = _o.Type;

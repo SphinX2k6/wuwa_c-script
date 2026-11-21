@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000208 RID: 520
+// Token: 0x0200020C RID: 524
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseCameraGravityLerpExecutor : IStaticVariableResetter
 {
-	// Token: 0x0600206E RID: 8302 RVA: 0x000ACC16 File Offset: 0x000AAE16
+	// Token: 0x0600211C RID: 8476 RVA: 0x000B3F36 File Offset: 0x000B2136
 	static BaseCameraGravityLerpExecutor()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BaseCameraGravityLerpExecutor.CreateStaticDefaultValue), new Action(BaseCameraGravityLerpExecutor.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600206F RID: 8303 RVA: 0x000ACC38 File Offset: 0x000AAE38
+	// Token: 0x0600211D RID: 8477 RVA: 0x000B3F58 File Offset: 0x000B2158
 	public unsafe void Init(CameraGravityController owner, CameraGravityLerpConfig lerpConfig)
 	{
 		this.Owner = owner;
@@ -38,7 +38,7 @@ public class BaseCameraGravityLerpExecutor : IStaticVariableResetter
 		this.InitInternal();
 	}
 
-	// Token: 0x06002070 RID: 8304 RVA: 0x000ACD26 File Offset: 0x000AAF26
+	// Token: 0x0600211E RID: 8478 RVA: 0x000B4046 File Offset: 0x000B2246
 	public void Update(float deltaTime)
 	{
 		if (!this.EnableUpdate())
@@ -53,13 +53,13 @@ public class BaseCameraGravityLerpExecutor : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06002071 RID: 8305 RVA: 0x000ACD4B File Offset: 0x000AAF4B
+	// Token: 0x0600211F RID: 8479 RVA: 0x000B406B File Offset: 0x000B226B
 	public bool EnableUpdate()
 	{
 		return !this.IsFinished;
 	}
 
-	// Token: 0x06002072 RID: 8306 RVA: 0x000ACD58 File Offset: 0x000AAF58
+	// Token: 0x06002120 RID: 8480 RVA: 0x000B4078 File Offset: 0x000B2278
 	private void DrawDebugInfo()
 	{
 		if (!BaseCameraGravityLerpExecutor.Debug)
@@ -73,7 +73,7 @@ public class BaseCameraGravityLerpExecutor : IStaticVariableResetter
 		this.Owner.DrawCameraGravityDebugArrow(Vector.UpVectorProxy, CameraGravityLerpDebugColors.Orange);
 	}
 
-	// Token: 0x06002073 RID: 8307 RVA: 0x000ACDF0 File Offset: 0x000AAFF0
+	// Token: 0x06002121 RID: 8481 RVA: 0x000B4110 File Offset: 0x000B2310
 	private void DrawGravityQuatDebugInfo(FLinearColor gravityForwardColor)
 	{
 		if (!BaseCameraGravityLerpExecutor.Debug)
@@ -90,7 +90,7 @@ public class BaseCameraGravityLerpExecutor : IStaticVariableResetter
 		this.Owner.DrawCameraGravityDebugArrow(this.TempVector6, CameraGravityLerpDebugColors.Magenta);
 	}
 
-	// Token: 0x06002074 RID: 8308 RVA: 0x000ACE9C File Offset: 0x000AB09C
+	// Token: 0x06002122 RID: 8482 RVA: 0x000B41BC File Offset: 0x000B23BC
 	protected unsafe void InternalSetCameraGravityDirect(Vector gravityDirect, Vector flatAngleAxis, float flatAngleSign = 1f)
 	{
 		if (!gravityDirect.IsNormalized())
@@ -145,7 +145,7 @@ public class BaseCameraGravityLerpExecutor : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06002075 RID: 8309 RVA: 0x000AD0A8 File Offset: 0x000AB2A8
+	// Token: 0x06002123 RID: 8483 RVA: 0x000B43C8 File Offset: 0x000B25C8
 	protected bool SqLerpGravityVector(Vector from, Vector to, float alpha, Vector @out)
 	{
 		Vector tempVector = this.TempVector4;
@@ -180,13 +180,13 @@ public class BaseCameraGravityLerpExecutor : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x06002076 RID: 8310 RVA: 0x000AD210 File Offset: 0x000AB410
+	// Token: 0x06002124 RID: 8484 RVA: 0x000B4530 File Offset: 0x000B2730
 	protected bool IsNearOppositeGravityVector(Vector from, Vector to)
 	{
 		return Math.Abs(Math.Acos(MathUtils.Instance.Clamp(Vector.DotProduct(from, to), -1.0, 1.0)) * 57.295780181884766 - 180.0) <= 5.0;
 	}
 
-	// Token: 0x06002077 RID: 8311 RVA: 0x000AD26C File Offset: 0x000AB46C
+	// Token: 0x06002125 RID: 8485 RVA: 0x000B458C File Offset: 0x000B278C
 	protected float ResolveNearOppositeGravitySign(Vector flatAngleAxis, Vector cameraTargetForward)
 	{
 		float? num = this.TryResolveNearOppositeGravitySignByModelBuffer(flatAngleAxis);
@@ -201,7 +201,7 @@ public class BaseCameraGravityLerpExecutor : IStaticVariableResetter
 		return this.FlatAngleGravityQuatSign;
 	}
 
-	// Token: 0x06002078 RID: 8312 RVA: 0x000AD2C8 File Offset: 0x000AB4C8
+	// Token: 0x06002126 RID: 8486 RVA: 0x000B45E8 File Offset: 0x000B27E8
 	protected float? TryResolveNearOppositeGravitySignByModelBuffer(Vector flatAngleAxis)
 	{
 		if (this.HasStableModelBufferAxis)
@@ -262,7 +262,7 @@ public class BaseCameraGravityLerpExecutor : IStaticVariableResetter
 		return new float?((float)((num3 >= 0.0) ? 1 : -1));
 	}
 
-	// Token: 0x06002079 RID: 8313 RVA: 0x000AD4AC File Offset: 0x000AB6AC
+	// Token: 0x06002127 RID: 8487 RVA: 0x000B47CC File Offset: 0x000B29CC
 	protected unsafe void Finish()
 	{
 		this.IsFinished = true;
@@ -281,90 +281,90 @@ public class BaseCameraGravityLerpExecutor : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600207A RID: 8314 RVA: 0x000AD575 File Offset: 0x000AB775
+	// Token: 0x06002128 RID: 8488 RVA: 0x000B4895 File Offset: 0x000B2A95
 	protected virtual void InitInternal()
 	{
 	}
 
-	// Token: 0x0600207B RID: 8315 RVA: 0x000AD577 File Offset: 0x000AB777
+	// Token: 0x06002129 RID: 8489 RVA: 0x000B4897 File Offset: 0x000B2A97
 	protected virtual float UpdateInternal(float deltaTime)
 	{
 		return 1f;
 	}
 
-	// Token: 0x0600207C RID: 8316 RVA: 0x000AD57E File Offset: 0x000AB77E
+	// Token: 0x0600212A RID: 8490 RVA: 0x000B489E File Offset: 0x000B2A9E
 	public static void CreateStaticDefaultValue()
 	{
 		BaseCameraGravityLerpExecutor.Debug = false;
 	}
 
-	// Token: 0x0600207D RID: 8317 RVA: 0x000AD586 File Offset: 0x000AB786
+	// Token: 0x0600212B RID: 8491 RVA: 0x000B48A6 File Offset: 0x000B2AA6
 	public static void ResetStaticDefaultValue()
 	{
 		BaseCameraGravityLerpExecutor.Debug = false;
 	}
 
-	// Token: 0x0400145A RID: 5210
+	// Token: 0x0400149C RID: 5276
 	private const float COS_30_DEG = 0.8660254f;
 
-	// Token: 0x0400145B RID: 5211
+	// Token: 0x0400149D RID: 5277
 	protected const float NearOppositeGravityAngleToleranceDeg = 5f;
 
-	// Token: 0x0400145C RID: 5212
+	// Token: 0x0400149E RID: 5278
 	[Nullable(2)]
 	public CameraGravityController Owner;
 
-	// Token: 0x0400145D RID: 5213
+	// Token: 0x0400149F RID: 5279
 	public CameraGravityLerpConfig LerpConfig = new CameraGravityLerpConfig();
 
-	// Token: 0x0400145E RID: 5214
+	// Token: 0x040014A0 RID: 5280
 	public bool IsFinished;
 
-	// Token: 0x0400145F RID: 5215
+	// Token: 0x040014A1 RID: 5281
 	public static bool Debug;
 
-	// Token: 0x04001460 RID: 5216
+	// Token: 0x040014A2 RID: 5282
 	protected readonly Vector TempVector = Vector.Create();
 
-	// Token: 0x04001461 RID: 5217
+	// Token: 0x040014A3 RID: 5283
 	protected readonly Vector TempVector2 = Vector.Create();
 
-	// Token: 0x04001462 RID: 5218
+	// Token: 0x040014A4 RID: 5284
 	protected readonly Vector TempVector3 = Vector.Create();
 
-	// Token: 0x04001463 RID: 5219
+	// Token: 0x040014A5 RID: 5285
 	protected readonly Vector TempVector4 = Vector.Create();
 
-	// Token: 0x04001464 RID: 5220
+	// Token: 0x040014A6 RID: 5286
 	protected readonly Vector TempVector5 = Vector.Create();
 
-	// Token: 0x04001465 RID: 5221
+	// Token: 0x040014A7 RID: 5287
 	protected readonly Vector TempVector6 = Vector.Create();
 
-	// Token: 0x04001466 RID: 5222
+	// Token: 0x040014A8 RID: 5288
 	protected readonly Quat TempQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04001467 RID: 5223
+	// Token: 0x040014A9 RID: 5289
 	protected readonly Quat ModelBufferStartQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04001468 RID: 5224
+	// Token: 0x040014AA RID: 5290
 	protected readonly Quat ModelBufferTargetQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04001469 RID: 5225
+	// Token: 0x040014AB RID: 5291
 	protected readonly Quat ModelBufferInverseQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400146A RID: 5226
+	// Token: 0x040014AC RID: 5292
 	protected readonly Quat ModelBufferDeltaQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400146B RID: 5227
+	// Token: 0x040014AD RID: 5293
 	protected readonly Vector FlatAngleGravityQuatAxis = Vector.Create();
 
-	// Token: 0x0400146C RID: 5228
+	// Token: 0x040014AE RID: 5294
 	public float FlatAngleGravityQuatSign = 1f;
 
-	// Token: 0x0400146D RID: 5229
+	// Token: 0x040014AF RID: 5295
 	public bool HasStableModelBufferAxis;
 
-	// Token: 0x0400146E RID: 5230
+	// Token: 0x040014B0 RID: 5296
 	protected bool HasFlatAngleGravityQuatAxis;
 }

@@ -4,18 +4,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072C0 RID: 29376
+	// Token: 0x02006442 RID: 25666
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CameraRelativeNearClipAction : ICameraNearClipAction<CameraRelativeNearClipConfig>
 	{
-		// Token: 0x06048113 RID: 295187 RVA: 0x0127A6F8 File Offset: 0x012788F8
+		// Token: 0x0603E507 RID: 255239 RVA: 0x0121CA90 File Offset: 0x0121AC90
 		public CameraRelativeNearClipAction(int id, CameraRelativeNearClipConfig nearClipConfig)
 		{
 		}
 
-		// Token: 0x17009F2D RID: 40749
-		// (get) Token: 0x06048114 RID: 295188 RVA: 0x0127A715 File Offset: 0x01278915
+		// Token: 0x17007694 RID: 30356
+		// (get) Token: 0x0603E508 RID: 255240 RVA: 0x0121CAAD File Offset: 0x0121ACAD
 		public CameraRelativeNearClipConfig NearClipConfig
 		{
 			get
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Camera
 			}
 		} = nearClipConfig;
 
-		// Token: 0x06048115 RID: 295189 RVA: 0x0127A720 File Offset: 0x01278920
+		// Token: 0x0603E509 RID: 255241 RVA: 0x0121CAB8 File Offset: 0x0121ACB8
 		public unsafe void Start()
 		{
 			Log instance = Log.Instance;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Camera
 			this.DefaultPlayAfterTickId = ticker.Id;
 		}
 
-		// Token: 0x06048116 RID: 295190 RVA: 0x0127A7F4 File Offset: 0x012789F4
+		// Token: 0x0603E50A RID: 255242 RVA: 0x0121CB8C File Offset: 0x0121AD8C
 		private void AfterTick(float delta)
 		{
 			FightCamera fightCamera = CameraController.Instance.MainModel.FightCamera;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Camera
 			this.UpdateNearClip(fightCameraLogicComponent.FinalCameraDistance - this.<nearClipConfig>P.Distance);
 		}
 
-		// Token: 0x06048117 RID: 295191 RVA: 0x0127A866 File Offset: 0x01278A66
+		// Token: 0x0603E50B RID: 255243 RVA: 0x0121CBFE File Offset: 0x0121ADFE
 		private void UpdateNearClip(float targetNearClipDistance)
 		{
 			if (MathUtils.Instance.IsNearlyEqual((double)this.CurrentClipDistance, (double)targetNearClipDistance, new double?((double)1)))
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.Camera
 			UKuroCameraFunctionLibrary.DelaySetNearClipPlane(this.CurrentClipDistance);
 		}
 
-		// Token: 0x06048118 RID: 295192 RVA: 0x0127A897 File Offset: 0x01278A97
+		// Token: 0x0603E50C RID: 255244 RVA: 0x0121CC2F File Offset: 0x0121AE2F
 		public bool IsPause()
 		{
 			return this.IsPauseState;
 		}
 
-		// Token: 0x06048119 RID: 295193 RVA: 0x0127A8A0 File Offset: 0x01278AA0
+		// Token: 0x0603E50D RID: 255245 RVA: 0x0121CC38 File Offset: 0x0121AE38
 		public unsafe void Pause()
 		{
 			Log instance = Log.Instance;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Camera
 			TickSystem.Instance.Pause(this.DefaultPlayAfterTickId);
 		}
 
-		// Token: 0x0604811A RID: 295194 RVA: 0x0127A98C File Offset: 0x01278B8C
+		// Token: 0x0603E50E RID: 255246 RVA: 0x0121CD24 File Offset: 0x0121AF24
 		public unsafe void Resume()
 		{
 			Log instance = Log.Instance;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Camera
 			TickSystem.Instance.Resume(this.DefaultPlayAfterTickId);
 		}
 
-		// Token: 0x0604811B RID: 295195 RVA: 0x0127AA78 File Offset: 0x01278C78
+		// Token: 0x0603E50F RID: 255247 RVA: 0x0121CE10 File Offset: 0x0121B010
 		public unsafe void End()
 		{
 			Log instance = Log.Instance;
@@ -135,20 +135,20 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x0402605C RID: 155740
+		// Token: 0x0402133C RID: 135996
 		[CompilerGenerated]
 		private CameraRelativeNearClipConfig <nearClipConfig>P;
 
-		// Token: 0x0402605D RID: 155741
+		// Token: 0x0402133D RID: 135997
 		public readonly int Id = id;
 
-		// Token: 0x0402605E RID: 155742
+		// Token: 0x0402133E RID: 135998
 		private bool IsPauseState;
 
-		// Token: 0x0402605F RID: 155743
+		// Token: 0x0402133F RID: 135999
 		private float CurrentClipDistance;
 
-		// Token: 0x04026060 RID: 155744
+		// Token: 0x04021340 RID: 136000
 		private int DefaultPlayAfterTickId = -1;
 	}
 }

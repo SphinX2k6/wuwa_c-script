@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
@@ -17,20 +16,20 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A84 RID: 6788
+// Token: 0x02000F43 RID: 3907
 [NullableContext(1)]
 [Nullable(0)]
 public class LoginDebugView : UiViewBase
 {
-	// Token: 0x0600C810 RID: 51216 RVA: 0x002D93FA File Offset: 0x002D75FA
+	// Token: 0x06009C20 RID: 39968 RVA: 0x002E4516 File Offset: 0x002E2716
 	public LoginDebugView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C811 RID: 51217 RVA: 0x002D940C File Offset: 0x002D760C
+	// Token: 0x06009C21 RID: 39969 RVA: 0x002E4528 File Offset: 0x002E2728
 	protected unsafe override void OnRegisterComponent()
 	{
-		int num = 21;
+		int num = 20;
 		List<ValueTuple<int, Type>> list = new List<ValueTuple<int, Type>>(num);
 		CollectionsMarshal.SetCount<ValueTuple<int, Type>>(list, num);
 		Span<ValueTuple<int, Type>> span = CollectionsMarshal.AsSpan<ValueTuple<int, Type>>(list);
@@ -71,13 +70,11 @@ public class LoginDebugView : UiViewBase
 		num2++;
 		*span[num2] = new ValueTuple<int, Type>(17, typeof(UUITextInputComponent));
 		num2++;
-		*span[num2] = new ValueTuple<int, Type>(18, typeof(UUIExtendToggle));
+		*span[num2] = new ValueTuple<int, Type>(18, typeof(UUIDropdownComponent));
 		num2++;
-		*span[num2] = new ValueTuple<int, Type>(19, typeof(UUIItem));
-		num2++;
-		*span[num2] = new ValueTuple<int, Type>(20, typeof(UUITextInputComponent));
+		*span[num2] = new ValueTuple<int, Type>(19, typeof(UUITextInputComponent));
 		this.ComponentRegisterInfos = list;
-		num2 = 8;
+		num2 = 7;
 		List<ValueTuple<int, Delegate>> list2 = new List<ValueTuple<int, Delegate>>(num2);
 		CollectionsMarshal.SetCount<ValueTuple<int, Delegate>>(list2, num2);
 		Span<ValueTuple<int, Delegate>> span2 = CollectionsMarshal.AsSpan<ValueTuple<int, Delegate>>(list2);
@@ -95,12 +92,10 @@ public class LoginDebugView : UiViewBase
 		*span2[num] = new ValueTuple<int, Delegate>(9, new Action<EToggleState>(this.CloudToggleChanged));
 		num++;
 		*span2[num] = new ValueTuple<int, Delegate>(11, new Action<EToggleState>(this.SkipPlotToggle));
-		num++;
-		*span2[num] = new ValueTuple<int, Delegate>(18, new Action<EToggleState>(this.OnClickUseCopySourceAccountToggle));
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C812 RID: 51218 RVA: 0x002D982C File Offset: 0x002D7A2C
+	// Token: 0x06009C22 RID: 39970 RVA: 0x002E4900 File Offset: 0x002E2B00
 	protected override void OnStart()
 	{
 		this.IcmpPingCallBack = DelegateUtils.ToManualReleaseDelegate<FPingCallExDelegate>(new Action<string, float, int>(this.IcmpCallBack));
@@ -108,16 +103,7 @@ public class LoginDebugView : UiViewBase
 		LoginModel.Instance.InitConfig();
 		LoginModel.Instance.FixLoginFailInfo();
 		LoginModel.Instance.InitRecentlyAccountList();
-		UUIExtendToggle extendToggle = base.GetExtendToggle(18);
-		if (extendToggle != null)
-		{
-			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
-		}
-		UUIItem item = base.GetItem(19);
-		if (item != null)
-		{
-			item.SetUIActive(false);
-		}
+		this.InitCopyAccountLoginDropDown();
 		this.OrigiMapData = new TArray<FUIDropdownOptionData>();
 		this.ToShowMapData = new TArray<FUIDropdownOptionData>();
 		base.GetInputText(13).OnTextChange.Bind(new Action<string>(this.SearchMap));
@@ -127,7 +113,7 @@ public class LoginDebugView : UiViewBase
 		this.HttpLogin();
 	}
 
-	// Token: 0x0600C813 RID: 51219 RVA: 0x002D9928 File Offset: 0x002D7B28
+	// Token: 0x06009C23 RID: 39971 RVA: 0x002E49D4 File Offset: 0x002E2BD4
 	private void OnHttpLoginInit()
 	{
 		this.InitServer();
@@ -144,7 +130,7 @@ public class LoginDebugView : UiViewBase
 		LoginModel.Instance.SmokeTestReady = true;
 	}
 
-	// Token: 0x0600C814 RID: 51220 RVA: 0x002D9994 File Offset: 0x002D7B94
+	// Token: 0x06009C24 RID: 39972 RVA: 0x002E4A40 File Offset: 0x002E2C40
 	private unsafe void InitServer()
 	{
 		UUIDropdownComponent dropdown = base.GetDropdown(3);
@@ -168,7 +154,12 @@ public class LoginDebugView : UiViewBase
 				for (int i = 0; i < serverInfoList.Count; i++)
 				{
 					ServerConfig serverConfig = serverInfoList[i];
-					dropdown.Options.Add(new FUIDropdownOptionData(serverConfig.Name, sprite, 0, ""));
+					dropdown.Options.Add(new FUIDropdownOptionData
+					{
+						TextOrConfigTableName = serverConfig.Name,
+						Sprite = sprite,
+						TextId = 0
+					});
 					if (serverConfig.Ip == serverIp)
 					{
 						Log instance2 = Log.Instance;
@@ -199,7 +190,7 @@ public class LoginDebugView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C815 RID: 51221 RVA: 0x002D9B60 File Offset: 0x002D7D60
+	// Token: 0x06009C25 RID: 39973 RVA: 0x002E4C1C File Offset: 0x002E2E1C
 	private void RefreshServerIpInputText()
 	{
 		string text = this.GetServerIp() ?? "";
@@ -212,7 +203,7 @@ public class LoginDebugView : UiViewBase
 		base.GetInputText(14).SetText(text, false);
 	}
 
-	// Token: 0x0600C816 RID: 51222 RVA: 0x002D9BB4 File Offset: 0x002D7DB4
+	// Token: 0x06009C26 RID: 39974 RVA: 0x002E4C70 File Offset: 0x002E2E70
 	private void InitMap()
 	{
 		UUIDropdownComponent dropdown = base.GetDropdown(4);
@@ -231,7 +222,11 @@ public class LoginDebugView : UiViewBase
 				{
 					LoginMapConfig loginMapConfig = singleMapList[i];
 					string text = loginMapConfig.MapId.ToString() + "-" + loginMapConfig.MapName;
-					FUIDropdownOptionData value = new FUIDropdownOptionData(text, sprite, 0, "");
+					FUIDropdownOptionData value = new FUIDropdownOptionData
+					{
+						TextOrConfigTableName = text,
+						Sprite = sprite
+					};
 					this.OrigiMapData.Add(value);
 					dropdown.Options.Add(value);
 					if (loginMapConfig.MapId == singleMapId)
@@ -262,7 +257,7 @@ public class LoginDebugView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C817 RID: 51223 RVA: 0x002D9D48 File Offset: 0x002D7F48
+	// Token: 0x06009C27 RID: 39975 RVA: 0x002E4E0C File Offset: 0x002E300C
 	private void InitSex()
 	{
 		if (base.GetExtendToggle(7) != null)
@@ -273,7 +268,7 @@ public class LoginDebugView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C818 RID: 51224 RVA: 0x002D9D84 File Offset: 0x002D7F84
+	// Token: 0x06009C28 RID: 39976 RVA: 0x002E4E48 File Offset: 0x002E3048
 	private void InitCloud()
 	{
 		if (base.GetExtendToggle(9) != null)
@@ -284,7 +279,7 @@ public class LoginDebugView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C819 RID: 51225 RVA: 0x002D9DB8 File Offset: 0x002D7FB8
+	// Token: 0x06009C29 RID: 39977 RVA: 0x002E4E7C File Offset: 0x002E307C
 	private void InitSkip()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(11);
@@ -297,7 +292,7 @@ public class LoginDebugView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C81A RID: 51226 RVA: 0x002D9E00 File Offset: 0x002D8000
+	// Token: 0x06009C2A RID: 39978 RVA: 0x002E4EC4 File Offset: 0x002E30C4
 	protected override void OnBeforeDestroy()
 	{
 		if (this.IcmpPingCallBack != null)
@@ -306,12 +301,48 @@ public class LoginDebugView : UiViewBase
 			this.IcmpPingCallBack = null;
 		}
 		base.GetDropdown(15).OnSelectChange.Unbind();
+		base.GetDropdown(18).OnSelectChange.Unbind();
 		LoginModel.Instance.SaveRecentlyAccountList();
 		LoginModel.Instance.CleanConfig();
-		LoginModel.Instance.SetServerId(base.GetInputText(20).GetText());
+		LoginModel.Instance.SetServerId(base.GetInputText(19).GetText());
 	}
 
-	// Token: 0x0600C81B RID: 51227 RVA: 0x002D9E6C File Offset: 0x002D806C
+	// Token: 0x06009C2B RID: 39979 RVA: 0x002E4F40 File Offset: 0x002E3140
+	private void InitCopyAccountLoginDropDown()
+	{
+		UUIDropdownComponent dropdown = base.GetDropdown(18);
+		ULGUISpriteData_BaseObject sprite = dropdown.GetOption(0).Sprite;
+		dropdown.Options.Empty(true);
+		foreach (string textOrConfigTableName in new string[]
+		{
+			"新号登录",
+			"复制账号",
+			"复制账号（快速编队）"
+		})
+		{
+			dropdown.Options.Add(new FUIDropdownOptionData
+			{
+				TextOrConfigTableName = textOrConfigTableName,
+				Sprite = sprite
+			});
+		}
+		LoginDefine.EAccountLoginMode eaccountLoginMode = LoginDefine.EAccountLoginMode.CopyAccount;
+		if (GlobalData.IsPlayInEditor)
+		{
+			eaccountLoginMode = LoginDefine.EAccountLoginMode.CopyAccountQuickFormation;
+		}
+		int num = LocalStorage.GetGlobal<int>(ELocalStorageGlobalKey.LoginDebugAccountLoginMode, (int)eaccountLoginMode);
+		if (num < 0 || num > 2)
+		{
+			num = (int)eaccountLoginMode;
+		}
+		dropdown.SetValue(-1, false);
+		dropdown.SetValue(num, false);
+		this.OnCopyAccountLoginModeChanged(num);
+		dropdown.OnSelectChange.Bind(new Action<int>(this.OnCopyAccountLoginModeChanged));
+	}
+
+	// Token: 0x06009C2C RID: 39980 RVA: 0x002E5018 File Offset: 0x002E3218
 	private void InitRecentlyAccountDropDown()
 	{
 		UUIDropdownComponent dropdown = base.GetDropdown(16);
@@ -327,13 +358,17 @@ public class LoginDebugView : UiViewBase
 		{
 			foreach (string textOrConfigTableName in recentlyAccountList)
 			{
-				dropdown.Options.Add(new FUIDropdownOptionData(textOrConfigTableName, sprite, 0, ""));
+				dropdown.Options.Add(new FUIDropdownOptionData
+				{
+					TextOrConfigTableName = textOrConfigTableName,
+					Sprite = sprite
+				});
 			}
 		}
 		dropdown.OnSelectChange.Bind(new Action<int>(this.OnRecentlyAccountSelectChange));
 	}
 
-	// Token: 0x0600C81C RID: 51228 RVA: 0x002D9F38 File Offset: 0x002D8138
+	// Token: 0x06009C2D RID: 39981 RVA: 0x002E50EC File Offset: 0x002E32EC
 	private void InitGmCountDropDown()
 	{
 		UUIDropdownComponent dropdown = base.GetDropdown(15);
@@ -345,36 +380,34 @@ public class LoginDebugView : UiViewBase
 		dropdown.Options.Empty(true);
 		foreach (GmAccount gmAccount in ConfigGmAccountAll.GetConfigList(true))
 		{
-			dropdown.Options.Add(new FUIDropdownOptionData(gmAccount.GmName, sprite, 0, ""));
+			dropdown.Options.Add(new FUIDropdownOptionData
+			{
+				TextOrConfigTableName = gmAccount.GmName,
+				Sprite = sprite
+			});
 		}
 		dropdown.CaptionText.Get().UIText.SetText("创建指定GM账号", true);
 		dropdown.OnSelectChange.Bind(new Action<int>(this.OnGmAccountSelectChange));
 	}
 
-	// Token: 0x0600C81D RID: 51229 RVA: 0x002D9FF8 File Offset: 0x002D81F8
+	// Token: 0x06009C2E RID: 39982 RVA: 0x002E51B4 File Offset: 0x002E33B4
 	private void CheckPakKeyAndLogin()
 	{
 		PakKeyUpdate.Instance.CheckPakKey(delegate
 		{
-			if (UKuroPakKeyLibrary.HasPendingEncryptedPaks() && !BaseConfigController.Instance.GetIosAuditFirstDownloadTipWithSkip())
-			{
-				Log.Instance.Info(ELogModule.Login, ELogAuthor.LRA, "存在未成功挂载的Pak包！", default(ReadOnlySpan<ValueTuple<string, object>>));
-				LoginController.Instance.GetAndShowStopServerNotice();
-				return;
-			}
 			LoginController.Instance.GetHttp(true, true);
 		}, null).Forget(delegate(Exception error)
 		{
 		}, true);
 	}
 
-	// Token: 0x0600C81E RID: 51230 RVA: 0x002DA054 File Offset: 0x002D8254
+	// Token: 0x06009C2F RID: 39983 RVA: 0x002E5210 File Offset: 0x002E3410
 	private void QuitBtnClickCallBack()
 	{
 		ReConnectController.Instance.Logout(ELogoutReason.LoginViewQuit);
 	}
 
-	// Token: 0x0600C81F RID: 51231 RVA: 0x002DA064 File Offset: 0x002D8264
+	// Token: 0x06009C30 RID: 39984 RVA: 0x002E5220 File Offset: 0x002E3420
 	private void LoginBtnClickCallBack()
 	{
 		if (!LoginModel.Instance.IsLoginStatus(LoginDefine.ELoginStatus.Init))
@@ -403,7 +436,7 @@ public class LoginDebugView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600C820 RID: 51232 RVA: 0x002DA0DC File Offset: 0x002D82DC
+	// Token: 0x06009C31 RID: 39985 RVA: 0x002E5298 File Offset: 0x002E3498
 	private void QuickLoginUseCurBtnClickCallBack()
 	{
 		if (!LoginModel.Instance.IsLoginStatus(LoginDefine.ELoginStatus.Init))
@@ -427,7 +460,7 @@ public class LoginDebugView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600C821 RID: 51233 RVA: 0x002DA154 File Offset: 0x002D8354
+	// Token: 0x06009C32 RID: 39986 RVA: 0x002E5310 File Offset: 0x002E3510
 	private void QuickLoginUseNewBtnClickCallBack()
 	{
 		if (!LoginModel.Instance.IsLoginStatus(LoginDefine.ELoginStatus.Init))
@@ -455,13 +488,13 @@ public class LoginDebugView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600C822 RID: 51234 RVA: 0x002DA19C File Offset: 0x002D839C
+	// Token: 0x06009C33 RID: 39987 RVA: 0x002E5358 File Offset: 0x002E3558
 	private void ToggleStateChange(EToggleState state)
 	{
 		base.GetSprite(8).SetUIActive(state == EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x0600C823 RID: 51235 RVA: 0x002DA1AE File Offset: 0x002D83AE
+	// Token: 0x06009C34 RID: 39988 RVA: 0x002E536A File Offset: 0x002E356A
 	private void CloudToggleChanged(EToggleState state)
 	{
 		base.GetSprite(10).SetUIActive(state == EToggleState.ETT_Checked);
@@ -469,40 +502,24 @@ public class LoginDebugView : UiViewBase
 		GameSettingsManager.Instance.Clear();
 	}
 
-	// Token: 0x0600C824 RID: 51236 RVA: 0x002DA1D9 File Offset: 0x002D83D9
+	// Token: 0x06009C35 RID: 39989 RVA: 0x002E5395 File Offset: 0x002E3595
 	private void SkipPlotToggle(EToggleState state)
 	{
 		base.GetSprite(12).SetUIActive(state == EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x0600C825 RID: 51237 RVA: 0x002DA1EC File Offset: 0x002D83EC
-	private void OnClickUseCopySourceAccountToggle(EToggleState state)
+	// Token: 0x06009C36 RID: 39990 RVA: 0x002E53A8 File Offset: 0x002E35A8
+	private void OnCopyAccountLoginModeChanged(int index)
 	{
-		if (state == EToggleState.ETT_Checked)
+		if (index < 0 || index > 2)
 		{
-			LoginModel.Instance.IsCopyAccount = true;
-			UUIItem item = base.GetItem(19);
-			if (item == null)
-			{
-				return;
-			}
-			item.SetUIActive(true);
 			return;
 		}
-		else
-		{
-			LoginModel.Instance.IsCopyAccount = false;
-			UUIItem item2 = base.GetItem(19);
-			if (item2 == null)
-			{
-				return;
-			}
-			item2.SetUIActive(false);
-			return;
-		}
+		LocalStorage.SetGlobal<int>(ELocalStorageGlobalKey.LoginDebugAccountLoginMode, index);
+		LoginModel.Instance.SelectedAccountLoginMode = (LoginDefine.EAccountLoginMode)index;
 	}
 
-	// Token: 0x0600C826 RID: 51238 RVA: 0x002DA23C File Offset: 0x002D843C
+	// Token: 0x06009C37 RID: 39991 RVA: 0x002E53D8 File Offset: 0x002E35D8
 	private void OnRecentlyAccountSelectChange(int index)
 	{
 		if (index == -1)
@@ -527,7 +544,7 @@ public class LoginDebugView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600C827 RID: 51239 RVA: 0x002DA2D8 File Offset: 0x002D84D8
+	// Token: 0x06009C38 RID: 39992 RVA: 0x002E5474 File Offset: 0x002E3674
 	private void OnGmAccountSelectChange(int index)
 	{
 		this.GmAccountIndex = index;
@@ -542,7 +559,7 @@ public class LoginDebugView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.LoginDebugPlayerNameView, new Action(this.OnGmAccountSetName), null);
 	}
 
-	// Token: 0x0600C828 RID: 51240 RVA: 0x002DA338 File Offset: 0x002D8538
+	// Token: 0x06009C39 RID: 39993 RVA: 0x002E54D4 File Offset: 0x002E36D4
 	private void OnGmAccountSetName()
 	{
 		int gmAccountIndex = this.GmAccountIndex;
@@ -583,7 +600,7 @@ public class LoginDebugView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600C829 RID: 51241 RVA: 0x002DA480 File Offset: 0x002D8680
+	// Token: 0x06009C3A RID: 39994 RVA: 0x002E561C File Offset: 0x002E381C
 	private void SearchMap(string value)
 	{
 		string text = base.GetInputText(13).GetText();
@@ -610,7 +627,7 @@ public class LoginDebugView : UiViewBase
 		dropdown.SetOptions(this.ToShowMapData);
 	}
 
-	// Token: 0x0600C82A RID: 51242 RVA: 0x002DA528 File Offset: 0x002D8728
+	// Token: 0x06009C3B RID: 39995 RVA: 0x002E56C4 File Offset: 0x002E38C4
 	private void OnSelectServer(int index)
 	{
 		if (index < 0)
@@ -641,13 +658,13 @@ public class LoginDebugView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C82B RID: 51243 RVA: 0x002DA5C0 File Offset: 0x002D87C0
+	// Token: 0x06009C3C RID: 39996 RVA: 0x002E575C File Offset: 0x002E395C
 	private string GetNewAccount()
 	{
 		return PublicUtil.Instance.GetLocalHost() + "[" + TimeUtil.Instance.DateFormat(DateTime.Now) + "]";
 	}
 
-	// Token: 0x0600C82C RID: 51244 RVA: 0x002DA5EC File Offset: 0x002D87EC
+	// Token: 0x06009C3D RID: 39997 RVA: 0x002E5788 File Offset: 0x002E3988
 	[return: Nullable(2)]
 	private LoginDebugView.IpPortInfo ParseServerIpAndPort(string str)
 	{
@@ -674,20 +691,28 @@ public class LoginDebugView : UiViewBase
 		}
 		else
 		{
-			if (str.Count((char c) => c == ':') >= 2)
+			int num2 = 0;
+			for (int i = 0; i < str.Length; i++)
+			{
+				if (str[i] == ':')
+				{
+					num2++;
+				}
+			}
+			if (num2 >= 2)
 			{
 				return new LoginDebugView.IpPortInfo
 				{
 					Ip = "[" + str + "]"
 				};
 			}
-			int num2 = str.IndexOf(':');
-			if (num2 >= 0)
+			int num3 = str.IndexOf(':');
+			if (num3 >= 0)
 			{
 				return new LoginDebugView.IpPortInfo
 				{
-					Ip = str.Substring(0, num2),
-					Port = str.Substring(num2 + 1)
+					Ip = str.Substring(0, num3),
+					Port = str.Substring(num3 + 1)
 				};
 			}
 			return new LoginDebugView.IpPortInfo
@@ -697,13 +722,13 @@ public class LoginDebugView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C82D RID: 51245 RVA: 0x002DA700 File Offset: 0x002D8900
+	// Token: 0x06009C3E RID: 39998 RVA: 0x002E589F File Offset: 0x002E3A9F
 	private static bool IsIpAddress(string host)
 	{
 		return host.StartsWith("[") || Regex.IsMatch(host, "^(\\d{1,3}\\.){3}\\d{1,3}$");
 	}
 
-	// Token: 0x0600C82E RID: 51246 RVA: 0x002DA71C File Offset: 0x002D891C
+	// Token: 0x06009C3F RID: 39999 RVA: 0x002E58BC File Offset: 0x002E3ABC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -711,28 +736,28 @@ public class LoginDebugView : UiViewBase
 	})]
 	private static UniTask<string> ResolveDomainToIp(string domain)
 	{
-		LoginDebugView.<ResolveDomainToIp>d__37 <ResolveDomainToIp>d__;
+		LoginDebugView.<ResolveDomainToIp>d__38 <ResolveDomainToIp>d__;
 		<ResolveDomainToIp>d__.<>t__builder = AsyncUniTaskMethodBuilder<string>.Create();
 		<ResolveDomainToIp>d__.domain = domain;
 		<ResolveDomainToIp>d__.<>1__state = -1;
-		<ResolveDomainToIp>d__.<>t__builder.Start<LoginDebugView.<ResolveDomainToIp>d__37>(ref <ResolveDomainToIp>d__);
+		<ResolveDomainToIp>d__.<>t__builder.Start<LoginDebugView.<ResolveDomainToIp>d__38>(ref <ResolveDomainToIp>d__);
 		return <ResolveDomainToIp>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C82F RID: 51247 RVA: 0x002DA760 File Offset: 0x002D8960
+	// Token: 0x06009C40 RID: 40000 RVA: 0x002E5900 File Offset: 0x002E3B00
 	private UniTask ResolveDomainThenApply(string domain, Action onDone)
 	{
-		LoginDebugView.<ResolveDomainThenApply>d__38 <ResolveDomainThenApply>d__;
+		LoginDebugView.<ResolveDomainThenApply>d__39 <ResolveDomainThenApply>d__;
 		<ResolveDomainThenApply>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<ResolveDomainThenApply>d__.<>4__this = this;
 		<ResolveDomainThenApply>d__.domain = domain;
 		<ResolveDomainThenApply>d__.onDone = onDone;
 		<ResolveDomainThenApply>d__.<>1__state = -1;
-		<ResolveDomainThenApply>d__.<>t__builder.Start<LoginDebugView.<ResolveDomainThenApply>d__38>(ref <ResolveDomainThenApply>d__);
+		<ResolveDomainThenApply>d__.<>t__builder.Start<LoginDebugView.<ResolveDomainThenApply>d__39>(ref <ResolveDomainThenApply>d__);
 		return <ResolveDomainThenApply>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C830 RID: 51248 RVA: 0x002DA7B3 File Offset: 0x002D89B3
+	// Token: 0x06009C41 RID: 40001 RVA: 0x002E5953 File Offset: 0x002E3B53
 	private void ApplyCustomServer(string ip, [Nullable(2)] string port)
 	{
 		LoginModel.Instance.SetServerName("手动输入IP地址服务器");
@@ -740,7 +765,7 @@ public class LoginDebugView : UiViewBase
 		LoginModel.Instance.TrySetCustomServerPort(port, 2);
 	}
 
-	// Token: 0x0600C831 RID: 51249 RVA: 0x002DA7D8 File Offset: 0x002D89D8
+	// Token: 0x06009C42 RID: 40002 RVA: 0x002E5978 File Offset: 0x002E3B78
 	private unsafe void SetLoginData(Action onDone)
 	{
 		UUIDropdownComponent dropdown = base.GetDropdown(4);
@@ -857,7 +882,7 @@ public class LoginDebugView : UiViewBase
 		onDone();
 	}
 
-	// Token: 0x0600C832 RID: 51250 RVA: 0x002DAB64 File Offset: 0x002D8D64
+	// Token: 0x06009C43 RID: 40003 RVA: 0x002E5D04 File Offset: 0x002E3F04
 	private void HttpLogin()
 	{
 		if (!KuroSdkController.Instance.CanUseSdk())
@@ -870,8 +895,12 @@ public class LoginDebugView : UiViewBase
 			LoginModel.Instance.AddServerInfoByCdn();
 			if (privateServers.enable)
 			{
-				string[] array = (from m in Regex.Matches(privateServers.serverUrl, "://.*?/")
-				select m.Value).ToArray<string>();
+				MatchCollection matchCollection = Regex.Matches(privateServers.serverUrl, "://.*?/");
+				string[] array = new string[matchCollection.Count];
+				for (int i = 0; i < matchCollection.Count; i++)
+				{
+					array[i] = matchCollection[i].Value;
+				}
 				if (array.Length >= 0)
 				{
 					string text = array[0];
@@ -888,7 +917,7 @@ public class LoginDebugView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C833 RID: 51251 RVA: 0x002DAC40 File Offset: 0x002D8E40
+	// Token: 0x06009C44 RID: 40004 RVA: 0x002E5DE8 File Offset: 0x002E3FE8
 	private void IcmpCallBack(string ipAddress, float time, int responseState)
 	{
 		if (responseState == 0)
@@ -924,13 +953,13 @@ public class LoginDebugView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C834 RID: 51252 RVA: 0x002DAD1E File Offset: 0x002D8F1E
+	// Token: 0x06009C45 RID: 40005 RVA: 0x002E5EC6 File Offset: 0x002E40C6
 	private void HttpCallBack(bool success, int code, string data)
 	{
 		this.HttpCallBackInternal(success, new int?(code), data, true);
 	}
 
-	// Token: 0x0600C835 RID: 51253 RVA: 0x002DAD30 File Offset: 0x002D8F30
+	// Token: 0x06009C46 RID: 40006 RVA: 0x002E5ED8 File Offset: 0x002E40D8
 	[NullableContext(2)]
 	private void HttpCallBackInternal(bool success = false, int? code = null, string data = null, bool addDataTableServers = true)
 	{
@@ -955,14 +984,14 @@ public class LoginDebugView : UiViewBase
 		this.OnHttpLoginInit();
 	}
 
-	// Token: 0x0600C836 RID: 51254 RVA: 0x002DAD94 File Offset: 0x002D8F94
+	// Token: 0x06009C47 RID: 40007 RVA: 0x002E5F3C File Offset: 0x002E413C
 	private void SetServerIp(string serverIp, int reason)
 	{
 		LoginModel.Instance.SetServerIp(serverIp, reason);
 		LocalStorage.SetGlobal<string>(ELocalStorageGlobalKey.LoginDebugServerIp, serverIp);
 	}
 
-	// Token: 0x0600C837 RID: 51255 RVA: 0x002DADAC File Offset: 0x002D8FAC
+	// Token: 0x06009C48 RID: 40008 RVA: 0x002E5F54 File Offset: 0x002E4154
 	[NullableContext(2)]
 	private string GetServerIp()
 	{
@@ -974,19 +1003,19 @@ public class LoginDebugView : UiViewBase
 		return global;
 	}
 
-	// Token: 0x0600C838 RID: 51256 RVA: 0x002DADDF File Offset: 0x002D8FDF
+	// Token: 0x06009C49 RID: 40009 RVA: 0x002E5F87 File Offset: 0x002E4187
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<bool>(EEventName.LoginRequestResult, new Action<bool>(this.CreateCharacterResult));
 	}
 
-	// Token: 0x0600C839 RID: 51257 RVA: 0x002DADFA File Offset: 0x002D8FFA
+	// Token: 0x06009C4A RID: 40010 RVA: 0x002E5FA2 File Offset: 0x002E41A2
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.LoginRequestResult, new Action<bool>(this.CreateCharacterResult));
 	}
 
-	// Token: 0x0600C83A RID: 51258 RVA: 0x002DAE15 File Offset: 0x002D9015
+	// Token: 0x06009C4B RID: 40011 RVA: 0x002E5FBD File Offset: 0x002E41BD
 	private void CreateCharacterResult(bool result)
 	{
 		if (!result)
@@ -996,14 +1025,14 @@ public class LoginDebugView : UiViewBase
 		BlackScreenController.Instance.AddBlackScreen("None", "LoginFinish", "Black", "Default");
 	}
 
-	// Token: 0x04005C5D RID: 23645
+	// Token: 0x04005D2C RID: 23852
 	[Nullable(2)]
 	private TimerHandle TimerId;
 
-	// Token: 0x04005C5E RID: 23646
+	// Token: 0x04005D2D RID: 23853
 	private int GmAccountIndex = -1;
 
-	// Token: 0x04005C5F RID: 23647
+	// Token: 0x04005D2E RID: 23854
 	[Nullable(new byte[]
 	{
 		2,
@@ -1011,7 +1040,7 @@ public class LoginDebugView : UiViewBase
 	})]
 	private TArray<FUIDropdownOptionData> OrigiMapData;
 
-	// Token: 0x04005C60 RID: 23648
+	// Token: 0x04005D2F RID: 23855
 	[Nullable(new byte[]
 	{
 		2,
@@ -1019,90 +1048,87 @@ public class LoginDebugView : UiViewBase
 	})]
 	private TArray<FUIDropdownOptionData> ToShowMapData;
 
-	// Token: 0x04005C61 RID: 23649
+	// Token: 0x04005D30 RID: 23856
 	[Nullable(2)]
 	private FPingCallExDelegate IcmpPingCallBack;
 
-	// Token: 0x02007FE1 RID: 32737
+	// Token: 0x02007170 RID: 29040
 	[NullableContext(0)]
 	private class ELoginChildCom
 	{
-		// Token: 0x04029BEE RID: 170990
+		// Token: 0x04024F2B RID: 151339
 		public const int QuitBtn = 0;
 
-		// Token: 0x04029BEF RID: 170991
+		// Token: 0x04024F2C RID: 151340
 		public const int LoginBtn = 1;
 
-		// Token: 0x04029BF0 RID: 170992
+		// Token: 0x04024F2D RID: 151341
 		public const int AccountTextInput = 2;
 
-		// Token: 0x04029BF1 RID: 170993
+		// Token: 0x04024F2E RID: 151342
 		public const int ServerComboBox = 3;
 
-		// Token: 0x04029BF2 RID: 170994
+		// Token: 0x04024F2F RID: 151343
 		public const int SingleMapComboBox = 4;
 
-		// Token: 0x04029BF3 RID: 170995
+		// Token: 0x04024F30 RID: 151344
 		public const int QuickLoginUseNewBtn = 5;
 
-		// Token: 0x04029BF4 RID: 170996
+		// Token: 0x04024F31 RID: 151345
 		public const int QuickLoginUseCurBtn = 6;
 
-		// Token: 0x04029BF5 RID: 170997
+		// Token: 0x04024F32 RID: 151346
 		public const int SexToggle = 7;
 
-		// Token: 0x04029BF6 RID: 170998
+		// Token: 0x04024F33 RID: 151347
 		public const int SexSprite = 8;
 
-		// Token: 0x04029BF7 RID: 170999
+		// Token: 0x04024F34 RID: 151348
 		public const int CloudToggle = 9;
 
-		// Token: 0x04029BF8 RID: 171000
+		// Token: 0x04024F35 RID: 151349
 		public const int CloudSprite = 10;
 
-		// Token: 0x04029BF9 RID: 171001
+		// Token: 0x04024F36 RID: 151350
 		public const int SkipPlotToggle = 11;
 
-		// Token: 0x04029BFA RID: 171002
+		// Token: 0x04024F37 RID: 151351
 		public const int SkipPlotSprite = 12;
 
-		// Token: 0x04029BFB RID: 171003
+		// Token: 0x04024F38 RID: 151352
 		public const int SearchMapInput = 13;
 
-		// Token: 0x04029BFC RID: 171004
+		// Token: 0x04024F39 RID: 151353
 		public const int TargetIPInput = 14;
 
-		// Token: 0x04029BFD RID: 171005
+		// Token: 0x04024F3A RID: 151354
 		public const int GmAccountDropDown = 15;
 
-		// Token: 0x04029BFE RID: 171006
+		// Token: 0x04024F3B RID: 151355
 		public const int RecentlyAccountDropDown = 16;
 
-		// Token: 0x04029BFF RID: 171007
+		// Token: 0x04024F3C RID: 151356
 		public const int SourceAccountTextInput = 17;
 
-		// Token: 0x04029C00 RID: 171008
-		public const int UseCopySourceAccountToggle = 18;
+		// Token: 0x04024F3D RID: 151357
+		public const int CopyAccountLoginDropDown = 18;
 
-		// Token: 0x04029C01 RID: 171009
-		public const int SourceAccountToggleCheckItem = 19;
-
-		// Token: 0x04029C02 RID: 171010
-		public const int ServerIpInput = 20;
+		// Token: 0x04024F3E RID: 151358
+		public const int ServerIpInput = 19;
 	}
 
-	// Token: 0x02007FE2 RID: 32738
+	// Token: 0x02007171 RID: 29041
 	[Nullable(0)]
 	private class IpPortInfo
 	{
-		// Token: 0x1700A066 RID: 41062
-		// (get) Token: 0x06049E26 RID: 302630 RVA: 0x0132814A File Offset: 0x0132634A
-		// (set) Token: 0x06049E27 RID: 302631 RVA: 0x01328152 File Offset: 0x01326352
+		// Token: 0x17007804 RID: 30724
+		// (get) Token: 0x06040244 RID: 262724 RVA: 0x012CB63E File Offset: 0x012C983E
+		// (set) Token: 0x06040245 RID: 262725 RVA: 0x012CB646 File Offset: 0x012C9846
 		public string Ip { get; set; } = "";
 
-		// Token: 0x1700A067 RID: 41063
-		// (get) Token: 0x06049E28 RID: 302632 RVA: 0x0132815B File Offset: 0x0132635B
-		// (set) Token: 0x06049E29 RID: 302633 RVA: 0x01328163 File Offset: 0x01326363
+		// Token: 0x17007805 RID: 30725
+		// (get) Token: 0x06040246 RID: 262726 RVA: 0x012CB64F File Offset: 0x012C984F
+		// (set) Token: 0x06040247 RID: 262727 RVA: 0x012CB657 File Offset: 0x012C9857
 		[Nullable(2)]
 		public string Port { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

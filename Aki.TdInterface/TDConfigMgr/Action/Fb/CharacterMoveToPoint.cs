@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002737 RID: 10039
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A03 RID: 10755
 	public class CharacterMoveToPoint : ActionParams
 	{
-		// Token: 0x0600DFC4 RID: 57284 RVA: 0x00212501 File Offset: 0x00210701
+		// Token: 0x0600EDC4 RID: 60868 RVA: 0x0022F039 File Offset: 0x0022D239
 		public static CharacterMoveToPoint Create(ICharacterMoveToPoint? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004318 RID: 17176
-		// (get) Token: 0x0600DFC5 RID: 57285 RVA: 0x00212520 File Offset: 0x00210720
+		// Token: 0x1700466C RID: 18028
+		// (get) Token: 0x0600EDC5 RID: 60869 RVA: 0x0022F058 File Offset: 0x0022D258
 		public virtual ITargetEntityType Target
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004319 RID: 17177
-		// (get) Token: 0x0600DFC6 RID: 57286 RVA: 0x0021254F File Offset: 0x0021074F
+		// Token: 0x1700466D RID: 18029
+		// (get) Token: 0x0600EDC6 RID: 60870 RVA: 0x0022F087 File Offset: 0x0022D287
 		public virtual VectorInfo Pos
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700431A RID: 17178
-		// (get) Token: 0x0600DFC7 RID: 57287 RVA: 0x00212583 File Offset: 0x00210783
+		// Token: 0x1700466E RID: 18030
+		// (get) Token: 0x0600EDC7 RID: 60871 RVA: 0x0022F0BB File Offset: 0x0022D2BB
 		public virtual ECharacterMoveToPointType MoveType
 		{
 			get
@@ -65,20 +63,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C29 RID: 31785
+		// Token: 0x040082D7 RID: 33495
 		private ICharacterMoveToPoint Instance;
 
-		// Token: 0x04007C2A RID: 31786
+		// Token: 0x040082D8 RID: 33496
 		private ITargetEntityType _TargetCache;
 
-		// Token: 0x04007C2B RID: 31787
+		// Token: 0x040082D9 RID: 33497
 		private bool _TargetInited;
 
-		// Token: 0x04007C2C RID: 31788
+		// Token: 0x040082DA RID: 33498
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x04007C2D RID: 31789
+		// Token: 0x040082DB RID: 33499
 		private bool _PosInited;
 	}
 }

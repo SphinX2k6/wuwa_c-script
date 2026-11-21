@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020DF RID: 8415
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002340 RID: 9024
 	public class MoveToPosA : ActionParams
 	{
-		// Token: 0x0600B8E2 RID: 47330 RVA: 0x001AB874 File Offset: 0x001A9A74
+		// Token: 0x0600C46C RID: 50284 RVA: 0x001C2950 File Offset: 0x001C0B50
 		private MoveToPosA_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B8E3 RID: 47331 RVA: 0x001AB8AC File Offset: 0x001A9AAC
+		// Token: 0x0600C46D RID: 50285 RVA: 0x001C2988 File Offset: 0x001C0B88
 		public static MoveToPosA Create([Nullable(2)] MoveToPosA instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B8E4 RID: 47332 RVA: 0x001AB8BF File Offset: 0x001A9ABF
+		// Token: 0x0600C46E RID: 50286 RVA: 0x001C299B File Offset: 0x001C0B9B
 		public static MoveToPosA CreateFromSetValue([Nullable(2)] MoveToPosA_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B8E5 RID: 47333 RVA: 0x001AB8D2 File Offset: 0x001A9AD2
+		// Token: 0x0600C46F RID: 50287 RVA: 0x001C29AE File Offset: 0x001C0BAE
 		public MoveToPosA_SetValue ToSetValue()
 		{
 			return new MoveToPosA_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700387B RID: 14459
-		// (get) Token: 0x0600B8E6 RID: 47334 RVA: 0x001AB8F1 File Offset: 0x001A9AF1
-		// (set) Token: 0x0600B8E7 RID: 47335 RVA: 0x001AB920 File Offset: 0x001A9B20
+		// Token: 0x17003B66 RID: 15206
+		// (get) Token: 0x0600C470 RID: 50288 RVA: 0x001C29CD File Offset: 0x001C0BCD
+		// (set) Token: 0x0600C471 RID: 50289 RVA: 0x001C29FC File Offset: 0x001C0BFC
 		public virtual float Timeout
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700387C RID: 14460
-		// (get) Token: 0x0600B8E8 RID: 47336 RVA: 0x001AB930 File Offset: 0x001A9B30
-		// (set) Token: 0x0600B8E9 RID: 47337 RVA: 0x001AB991 File Offset: 0x001A9B91
+		// Token: 0x17003B67 RID: 15207
+		// (get) Token: 0x0600C472 RID: 50290 RVA: 0x001C2A0C File Offset: 0x001C0C0C
+		// (set) Token: 0x0600C473 RID: 50291 RVA: 0x001C2A6D File Offset: 0x001C0C6D
 		public virtual PosA Pos
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006EBC RID: 28348
+		// Token: 0x040074ED RID: 29933
 		[Nullable(2)]
 		protected new MoveToPosA FbInstance;
 
-		// Token: 0x04006EBD RID: 28349
+		// Token: 0x040074EE RID: 29934
 		[Nullable(2)]
 		protected MoveToPosA_SetValue PocoInterface;
 
-		// Token: 0x04006EBE RID: 28350
+		// Token: 0x040074EF RID: 29935
 		private PosA _PosCache;
 
-		// Token: 0x04006EBF RID: 28351
+		// Token: 0x040074F0 RID: 29936
 		private bool _PosInited;
 	}
 }

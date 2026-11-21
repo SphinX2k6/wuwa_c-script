@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using CSharpScript.Game.Module.Map.Mark;
-using CSharpScript.Game.Module.Map.Mark.Component;
 using CSharpScript.Game.Module.Map.Marks.MarkItemView.Components;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 {
-	// Token: 0x02005535 RID: 21813
+	// Token: 0x02004507 RID: 17671
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,12 +15,12 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 	})]
 	public class MarkItemNameHandle : MarkItemComponentHandle<MarkNameComponent>
 	{
-		// Token: 0x06037AF7 RID: 228087 RVA: 0x00D36FBC File Offset: 0x00D351BC
+		// Token: 0x0602C9CC RID: 182732 RVA: 0x00C84C50 File Offset: 0x00C82E50
 		public MarkItemNameHandle(IMarkItemComponentContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06037AF8 RID: 228088 RVA: 0x00D36FC8 File Offset: 0x00D351C8
+		// Token: 0x0602C9CD RID: 182733 RVA: 0x00C84C5C File Offset: 0x00C82E5C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -38,7 +36,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			return <LoadComponentAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037AF9 RID: 228089 RVA: 0x00D3700B File Offset: 0x00D3520B
+		// Token: 0x0602C9CE RID: 182734 RVA: 0x00C84C9F File Offset: 0x00C82E9F
 		protected override MarkNameComponent GetOrCreateComponent()
 		{
 			if (this.ComponentInternal == null)
@@ -51,40 +49,33 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			return this.ComponentInternal;
 		}
 
-		// Token: 0x06037AFA RID: 228090 RVA: 0x00D37033 File Offset: 0x00D35233
+		// Token: 0x0602C9CF RID: 182735 RVA: 0x00C84CC7 File Offset: 0x00C82EC7
 		public void SetName(IMarkItemParam param)
 		{
 			this.Param = param;
 		}
 
-		// Token: 0x06037AFB RID: 228091 RVA: 0x00D3703C File Offset: 0x00D3523C
-		protected override void OnSetVisible(bool active)
-		{
-			this.Context.MarkItemEntity.ViewLifeCircle.SetChildViewVisibility(EMarkViewComponentType.Name, active);
-		}
-
-		// Token: 0x06037AFC RID: 228092 RVA: 0x00D37058 File Offset: 0x00D35258
+		// Token: 0x0602C9D0 RID: 182736 RVA: 0x00C84CD0 File Offset: 0x00C82ED0
 		protected override void OnApplyModified()
 		{
-			MarkViewLifeCircleComponent viewLifeCircle = this.Context.MarkItemEntity.ViewLifeCircle;
-			if (viewLifeCircle.IsChildViewStateDirty(EMarkViewComponentType.Name))
+			if (base.VisibleDirty)
 			{
 				MarkNameComponent orCreateComponent = this.GetOrCreateComponent();
 				if (!this.IsComponentValid(orCreateComponent))
 				{
 					return;
 				}
-				bool active = viewLifeCircle.IsChildViewVisible(EMarkViewComponentType.Name, false);
-				viewLifeCircle.SetChildViewVisibleClean(EMarkViewComponentType.Name);
+				bool visible = base.Visible;
+				base.CleanVisibleDirty();
 				if (this.Param != null)
 				{
 					orCreateComponent.SetNameParam(this.Param);
 				}
-				MarkItemComponentHandle<MarkNameComponent>.SetComponentActive(orCreateComponent, active);
+				MarkItemComponentHandle<MarkNameComponent>.SetComponentActive(orCreateComponent, visible);
 			}
 		}
 
-		// Token: 0x0401D43C RID: 119868
+		// Token: 0x04017EC0 RID: 97984
 		[Nullable(2)]
 		private IMarkItemParam Param;
 	}

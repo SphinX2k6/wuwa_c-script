@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Match;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005366 RID: 21350
+	// Token: 0x020058EC RID: 22764
 	public class IHeadStateViewConfigT
 	{
-		// Token: 0x17009CE6 RID: 40166
-		// (get) Token: 0x06022EFE RID: 143102 RVA: 0x004D69D3 File Offset: 0x004D4BD3
-		// (set) Token: 0x06022EFF RID: 143103 RVA: 0x004D69DB File Offset: 0x004D4BDB
+		// Token: 0x1700A51E RID: 42270
+		// (get) Token: 0x06024FB2 RID: 151474 RVA: 0x005138A7 File Offset: 0x00511AA7
+		// (set) Token: 0x06024FB3 RID: 151475 RVA: 0x005138AF File Offset: 0x00511AAF
 		public EHeadStateViewType HeadStateViewType { get; set; }
 
-		// Token: 0x17009CE7 RID: 40167
-		// (get) Token: 0x06022F00 RID: 143104 RVA: 0x004D69E4 File Offset: 0x004D4BE4
-		// (set) Token: 0x06022F01 RID: 143105 RVA: 0x004D69EC File Offset: 0x004D4BEC
+		// Token: 0x1700A51F RID: 42271
+		// (get) Token: 0x06024FB4 RID: 151476 RVA: 0x005138B8 File Offset: 0x00511AB8
+		// (set) Token: 0x06024FB5 RID: 151477 RVA: 0x005138C0 File Offset: 0x00511AC0
 		public int ZOffset { get; set; }
 
-		// Token: 0x17009CE8 RID: 40168
-		// (get) Token: 0x06022F02 RID: 143106 RVA: 0x004D69F5 File Offset: 0x004D4BF5
-		// (set) Token: 0x06022F03 RID: 143107 RVA: 0x004D69FD File Offset: 0x004D4BFD
+		// Token: 0x1700A520 RID: 42272
+		// (get) Token: 0x06024FB6 RID: 151478 RVA: 0x005138C9 File Offset: 0x00511AC9
+		// (set) Token: 0x06024FB7 RID: 151479 RVA: 0x005138D1 File Offset: 0x00511AD1
 		public int ForwardOffset { get; set; }
 
-		// Token: 0x17009CE9 RID: 40169
-		// (get) Token: 0x06022F04 RID: 143108 RVA: 0x004D6A06 File Offset: 0x004D4C06
-		// (set) Token: 0x06022F05 RID: 143109 RVA: 0x004D6A0E File Offset: 0x004D4C0E
+		// Token: 0x1700A521 RID: 42273
+		// (get) Token: 0x06024FB8 RID: 151480 RVA: 0x005138DA File Offset: 0x00511ADA
+		// (set) Token: 0x06024FB9 RID: 151481 RVA: 0x005138E2 File Offset: 0x00511AE2
 		public string HeadStateSocketName { get; set; }
 
-		// Token: 0x06022F06 RID: 143110 RVA: 0x004D6A17 File Offset: 0x004D4C17
+		// Token: 0x06024FBA RID: 151482 RVA: 0x005138EB File Offset: 0x00511AEB
 		public IHeadStateViewConfigT()
 		{
 			this.HeadStateViewType = EHeadStateViewType.None;

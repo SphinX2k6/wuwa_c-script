@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F0F RID: 7951
+	// Token: 0x0200061A RID: 1562
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.TrophyDetailData")]
 	[UnrealStructLayout(88, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 88)]
 	public class FTrophyDetailData : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601E2BA RID: 123578 RVA: 0x002CDBDC File Offset: 0x002CBDDC
+		// Token: 0x060088E2 RID: 35042 RVA: 0x000CE8D7 File Offset: 0x000CCAD7
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FTrophyDetailData._ScriptStructPtr != 0) ? FTrophyDetailData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroUtility.TrophyDetailData", ref FTrophyDetailData._ScriptStructPtr);
 		}
 
-		// Token: 0x170077D5 RID: 30677
-		// (get) Token: 0x0601E2BB RID: 123579 RVA: 0x002CDC00 File Offset: 0x002CBE00
-		// (set) Token: 0x0601E2BC RID: 123580 RVA: 0x002CDC10 File Offset: 0x002CBE10
+		// Token: 0x17001985 RID: 6533
+		// (get) Token: 0x060088E3 RID: 35043 RVA: 0x000CE8FB File Offset: 0x000CCAFB
+		// (set) Token: 0x060088E4 RID: 35044 RVA: 0x000CE90B File Offset: 0x000CCB0B
 		public unsafe int trophyId
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077D6 RID: 30678
-		// (get) Token: 0x0601E2BD RID: 123581 RVA: 0x002CDC21 File Offset: 0x002CBE21
-		// (set) Token: 0x0601E2BE RID: 123582 RVA: 0x002CDC31 File Offset: 0x002CBE31
+		// Token: 0x17001986 RID: 6534
+		// (get) Token: 0x060088E5 RID: 35045 RVA: 0x000CE91C File Offset: 0x000CCB1C
+		// (set) Token: 0x060088E6 RID: 35046 RVA: 0x000CE92C File Offset: 0x000CCB2C
 		public unsafe int trophyGrade
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077D7 RID: 30679
-		// (get) Token: 0x0601E2BF RID: 123583 RVA: 0x002CDC42 File Offset: 0x002CBE42
-		// (set) Token: 0x0601E2C0 RID: 123584 RVA: 0x002CDC52 File Offset: 0x002CBE52
+		// Token: 0x17001987 RID: 6535
+		// (get) Token: 0x060088E7 RID: 35047 RVA: 0x000CE93D File Offset: 0x000CCB3D
+		// (set) Token: 0x060088E8 RID: 35048 RVA: 0x000CE94D File Offset: 0x000CCB4D
 		public unsafe int groupId
 		{
 			get
@@ -63,9 +63,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077D8 RID: 30680
-		// (get) Token: 0x0601E2C1 RID: 123585 RVA: 0x002CDC63 File Offset: 0x002CBE63
-		// (set) Token: 0x0601E2C2 RID: 123586 RVA: 0x002CDC73 File Offset: 0x002CBE73
+		// Token: 0x17001988 RID: 6536
+		// (get) Token: 0x060088E9 RID: 35049 RVA: 0x000CE95E File Offset: 0x000CCB5E
+		// (set) Token: 0x060088EA RID: 35050 RVA: 0x000CE96E File Offset: 0x000CCB6E
 		public unsafe bool hidden
 		{
 			get
@@ -78,9 +78,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077D9 RID: 30681
-		// (get) Token: 0x0601E2C3 RID: 123587 RVA: 0x002CDC84 File Offset: 0x002CBE84
-		// (set) Token: 0x0601E2C4 RID: 123588 RVA: 0x002CDC94 File Offset: 0x002CBE94
+		// Token: 0x17001989 RID: 6537
+		// (get) Token: 0x060088EB RID: 35051 RVA: 0x000CE97F File Offset: 0x000CCB7F
+		// (set) Token: 0x060088EC RID: 35052 RVA: 0x000CE98F File Offset: 0x000CCB8F
 		public unsafe bool hasReward
 		{
 			get
@@ -93,9 +93,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077DA RID: 30682
-		// (get) Token: 0x0601E2C5 RID: 123589 RVA: 0x002CDCA5 File Offset: 0x002CBEA5
-		// (set) Token: 0x0601E2C6 RID: 123590 RVA: 0x002CDCB5 File Offset: 0x002CBEB5
+		// Token: 0x1700198A RID: 6538
+		// (get) Token: 0x060088ED RID: 35053 RVA: 0x000CE9A0 File Offset: 0x000CCBA0
+		// (set) Token: 0x060088EE RID: 35054 RVA: 0x000CE9B0 File Offset: 0x000CCBB0
 		public unsafe int progressType
 		{
 			get
@@ -108,9 +108,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077DB RID: 30683
-		// (get) Token: 0x0601E2C7 RID: 123591 RVA: 0x002CDCC6 File Offset: 0x002CBEC6
-		// (set) Token: 0x0601E2C8 RID: 123592 RVA: 0x002CDCDA File Offset: 0x002CBEDA
+		// Token: 0x1700198B RID: 6539
+		// (get) Token: 0x060088EF RID: 35055 RVA: 0x000CE9C1 File Offset: 0x000CCBC1
+		// (set) Token: 0x060088F0 RID: 35056 RVA: 0x000CE9D5 File Offset: 0x000CCBD5
 		public unsafe string progress
 		{
 			get
@@ -123,9 +123,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077DC RID: 30684
-		// (get) Token: 0x0601E2C9 RID: 123593 RVA: 0x002CDCEF File Offset: 0x002CBEEF
-		// (set) Token: 0x0601E2CA RID: 123594 RVA: 0x002CDD03 File Offset: 0x002CBF03
+		// Token: 0x1700198C RID: 6540
+		// (get) Token: 0x060088F1 RID: 35057 RVA: 0x000CE9EA File Offset: 0x000CCBEA
+		// (set) Token: 0x060088F2 RID: 35058 RVA: 0x000CE9FE File Offset: 0x000CCBFE
 		public unsafe string name
 		{
 			get
@@ -138,9 +138,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077DD RID: 30685
-		// (get) Token: 0x0601E2CB RID: 123595 RVA: 0x002CDD18 File Offset: 0x002CBF18
-		// (set) Token: 0x0601E2CC RID: 123596 RVA: 0x002CDD2C File Offset: 0x002CBF2C
+		// Token: 0x1700198D RID: 6541
+		// (get) Token: 0x060088F3 RID: 35059 RVA: 0x000CEA13 File Offset: 0x000CCC13
+		// (set) Token: 0x060088F4 RID: 35060 RVA: 0x000CEA27 File Offset: 0x000CCC27
 		public unsafe string desc
 		{
 			get
@@ -153,9 +153,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077DE RID: 30686
-		// (get) Token: 0x0601E2CD RID: 123597 RVA: 0x002CDD41 File Offset: 0x002CBF41
-		// (set) Token: 0x0601E2CE RID: 123598 RVA: 0x002CDD55 File Offset: 0x002CBF55
+		// Token: 0x1700198E RID: 6542
+		// (get) Token: 0x060088F5 RID: 35061 RVA: 0x000CEA3C File Offset: 0x000CCC3C
+		// (set) Token: 0x060088F6 RID: 35062 RVA: 0x000CEA50 File Offset: 0x000CCC50
 		public unsafe string reward
 		{
 			get
@@ -168,89 +168,74 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E2CF RID: 123599 RVA: 0x002CDD6A File Offset: 0x002CBF6A
+		// Token: 0x060088F7 RID: 35063 RVA: 0x000CEA65 File Offset: 0x000CCC65
 		public FTrophyDetailData()
 		{
 		}
 
-		// Token: 0x0601E2D0 RID: 123600 RVA: 0x002CDD74 File Offset: 0x002CBF74
-		public FTrophyDetailData(int trophyId, int trophyGrade, int groupId, bool hidden, bool hasReward, int progressType, string progress, string name, string desc, string reward)
-		{
-			this.trophyId = trophyId;
-			this.trophyGrade = trophyGrade;
-			this.groupId = groupId;
-			this.hidden = hidden;
-			this.hasReward = hasReward;
-			this.progressType = progressType;
-			this.progress = progress;
-			this.name = name;
-			this.desc = desc;
-			this.reward = reward;
-		}
-
-		// Token: 0x0601E2D1 RID: 123601 RVA: 0x002CDDD4 File Offset: 0x002CBFD4
+		// Token: 0x060088F8 RID: 35064 RVA: 0x000CEA6D File Offset: 0x000CCC6D
 		protected override IntPtr GetUStructPtr()
 		{
 			return FTrophyDetailData.StaticStruct();
 		}
 
-		// Token: 0x0601E2D2 RID: 123602 RVA: 0x002CDDE0 File Offset: 0x002CBFE0
+		// Token: 0x060088F9 RID: 35065 RVA: 0x000CEA79 File Offset: 0x000CCC79
 		[NullableContext(2)]
 		public FTrophyDetailData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E2D3 RID: 123603 RVA: 0x002CDDEA File Offset: 0x002CBFEA
+		// Token: 0x060088FA RID: 35066 RVA: 0x000CEA83 File Offset: 0x000CCC83
 		public FTrophyDetailData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E2D4 RID: 123604 RVA: 0x002CDDF5 File Offset: 0x002CBFF5
+		// Token: 0x060088FB RID: 35067 RVA: 0x000CEA8E File Offset: 0x000CCC8E
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FTrophyDetailData(Pointer, false, true);
 		}
 
-		// Token: 0x0601E2D5 RID: 123605 RVA: 0x002CDDFF File Offset: 0x002CBFFF
+		// Token: 0x060088FC RID: 35068 RVA: 0x000CEA98 File Offset: 0x000CCC98
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FTrophyDetailData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401049F RID: 66719
+		// Token: 0x04003B6A RID: 15210
 		public const string __ObjectPath = "/Script/KuroUtility.TrophyDetailData";
 
-		// Token: 0x040104A0 RID: 66720
+		// Token: 0x04003B6B RID: 15211
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040104A1 RID: 66721
+		// Token: 0x04003B6C RID: 15212
 		internal static int __PropertyOffset_trophyId;
 
-		// Token: 0x040104A2 RID: 66722
+		// Token: 0x04003B6D RID: 15213
 		internal static int __PropertyOffset_trophyGrade;
 
-		// Token: 0x040104A3 RID: 66723
+		// Token: 0x04003B6E RID: 15214
 		internal static int __PropertyOffset_groupId;
 
-		// Token: 0x040104A4 RID: 66724
+		// Token: 0x04003B6F RID: 15215
 		internal static int __PropertyOffset_hidden;
 
-		// Token: 0x040104A5 RID: 66725
+		// Token: 0x04003B70 RID: 15216
 		internal static int __PropertyOffset_hasReward;
 
-		// Token: 0x040104A6 RID: 66726
+		// Token: 0x04003B71 RID: 15217
 		internal static int __PropertyOffset_progressType;
 
-		// Token: 0x040104A7 RID: 66727
+		// Token: 0x04003B72 RID: 15218
 		internal static int __PropertyOffset_progress;
 
-		// Token: 0x040104A8 RID: 66728
+		// Token: 0x04003B73 RID: 15219
 		internal static int __PropertyOffset_name;
 
-		// Token: 0x040104A9 RID: 66729
+		// Token: 0x04003B74 RID: 15220
 		internal static int __PropertyOffset_desc;
 
-		// Token: 0x040104AA RID: 66730
+		// Token: 0x04003B75 RID: 15221
 		internal static int __PropertyOffset_reward;
 	}
 }

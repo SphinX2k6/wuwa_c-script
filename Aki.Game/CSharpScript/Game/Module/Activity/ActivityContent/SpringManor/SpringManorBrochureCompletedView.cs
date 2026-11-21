@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006083 RID: 24707
+	// Token: 0x02005001 RID: 20481
 	public class SpringManorBrochureCompletedView : UiViewBase
 	{
-		// Token: 0x0603E77F RID: 255871 RVA: 0x00F18BCA File Offset: 0x00F16DCA
+		// Token: 0x06033443 RID: 209987 RVA: 0x00E5F98E File Offset: 0x00E5DB8E
 		[NullableContext(1)]
 		public SpringManorBrochureCompletedView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E780 RID: 255872 RVA: 0x00F18BD4 File Offset: 0x00F16DD4
+		// Token: 0x06033444 RID: 209988 RVA: 0x00E5F998 File Offset: 0x00E5DB98
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E781 RID: 255873 RVA: 0x00F18CAB File Offset: 0x00F16EAB
+		// Token: 0x06033445 RID: 209989 RVA: 0x00E5FA6F File Offset: 0x00E5DC6F
 		protected override void OnStart()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			});
 		}
 
-		// Token: 0x0603E782 RID: 255874 RVA: 0x00F18CD8 File Offset: 0x00F16ED8
+		// Token: 0x06033446 RID: 209990 RVA: 0x00E5FA9C File Offset: 0x00E5DC9C
 		protected override void OnBeforeShow()
 		{
 			SpringManorBrochureCompletedViewOpenParam springManorBrochureCompletedViewOpenParam = this.OpenParam as SpringManorBrochureCompletedViewOpenParam;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.SetDetailInfo();
 		}
 
-		// Token: 0x0603E783 RID: 255875 RVA: 0x00F18D04 File Offset: 0x00F16F04
+		// Token: 0x06033447 RID: 209991 RVA: 0x00E5FAC8 File Offset: 0x00E5DCC8
 		private void SetDetailInfo()
 		{
 			SpringManorConfig instance = SpringManorConfig.Instance;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			captionItem.SetTitle(bookItem.Value.DescriptionTitle);
 		}
 
-		// Token: 0x0603E784 RID: 255876 RVA: 0x00F18E20 File Offset: 0x00F17020
+		// Token: 0x06033448 RID: 209992 RVA: 0x00E5FBE4 File Offset: 0x00E5DDE4
 		private void OnClickBtnConfirmR()
 		{
 			if (this.NextConfigId <= 0)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E785 RID: 255877 RVA: 0x00F18E84 File Offset: 0x00F17084
+		// Token: 0x06033449 RID: 209993 RVA: 0x00E5FC48 File Offset: 0x00E5DE48
 		private UniTask TeleportPlayerToEntity(int configId)
 		{
 			SpringManorBrochureCompletedView.<TeleportPlayerToEntity>d__9 <TeleportPlayerToEntity>d__;
@@ -129,21 +129,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <TeleportPlayerToEntity>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E786 RID: 255878 RVA: 0x00F18EC7 File Offset: 0x00F170C7
+		// Token: 0x0603344A RID: 209994 RVA: 0x00E5FC8B File Offset: 0x00E5DE8B
 		private void OnClickBtnConfirmL()
 		{
 			UiManager.Instance.OpenView(EUiViewName.SpringManorBrochureView, null, null);
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04020ADF RID: 133855
+		// Token: 0x0401B40C RID: 111628
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04020AE0 RID: 133856
+		// Token: 0x0401B40D RID: 111629
 		private int ConfigId;
 
-		// Token: 0x04020AE1 RID: 133857
+		// Token: 0x0401B40E RID: 111630
 		private int NextConfigId;
 	}
 }

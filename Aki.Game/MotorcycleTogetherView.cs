@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002231 RID: 8753
+// Token: 0x02001715 RID: 5909
 [NullableContext(2)]
 [Nullable(0)]
 public class MotorcycleTogetherView : UiViewBase
 {
-	// Token: 0x06011143 RID: 69955 RVA: 0x00429DE0 File Offset: 0x00427FE0
+	// Token: 0x0600E5D9 RID: 58841 RVA: 0x00436984 File Offset: 0x00434B84
 	[NullableContext(1)]
 	public MotorcycleTogetherView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011144 RID: 69956 RVA: 0x00429DEC File Offset: 0x00427FEC
+	// Token: 0x0600E5DA RID: 58842 RVA: 0x00436990 File Offset: 0x00434B90
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class MotorcycleTogetherView : UiViewBase
 		};
 	}
 
-	// Token: 0x06011145 RID: 69957 RVA: 0x00429EC4 File Offset: 0x004280C4
+	// Token: 0x0600E5DB RID: 58843 RVA: 0x00436A68 File Offset: 0x00434C68
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleTogetherView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ public class MotorcycleTogetherView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011146 RID: 69958 RVA: 0x00429F08 File Offset: 0x00428108
+	// Token: 0x0600E5DC RID: 58844 RVA: 0x00436AAC File Offset: 0x00434CAC
 	private void InitAreaList()
 	{
 		IReadOnlyList<MotorRoleCategory> readOnlyList = ConfigMotorRoleCategoryAll.GetConfigList(true);
@@ -83,30 +83,30 @@ public class MotorcycleTogetherView : UiViewBase
 		this.AreaSwitchGroupItem.RefreshAreaList(list2, selectAreaId);
 	}
 
-	// Token: 0x06011147 RID: 69959 RVA: 0x00429FEC File Offset: 0x004281EC
+	// Token: 0x0600E5DD RID: 58845 RVA: 0x00436B90 File Offset: 0x00434D90
 	protected override void OnBeforeShow()
 	{
 	}
 
-	// Token: 0x06011148 RID: 69960 RVA: 0x00429FEE File Offset: 0x004281EE
+	// Token: 0x0600E5DE RID: 58846 RVA: 0x00436B92 File Offset: 0x00434D92
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnMovieMotorRideSharingModeChangeResponse, new Action<bool, bool>(this.OnMovieMotorRideSharingModeChangeResponse));
 	}
 
-	// Token: 0x06011149 RID: 69961 RVA: 0x0042A00C File Offset: 0x0042820C
+	// Token: 0x0600E5DF RID: 58847 RVA: 0x00436BB0 File Offset: 0x00434DB0
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnMovieMotorRideSharingModeChangeResponse, new Action<bool, bool>(this.OnMovieMotorRideSharingModeChangeResponse));
 	}
 
-	// Token: 0x0601114A RID: 69962 RVA: 0x0042A02A File Offset: 0x0042822A
+	// Token: 0x0600E5E0 RID: 58848 RVA: 0x00436BCE File Offset: 0x00434DCE
 	private void OnSwitchArea(int areaId)
 	{
 		this.RefreshRoleList(areaId);
 	}
 
-	// Token: 0x0601114B RID: 69963 RVA: 0x0042A034 File Offset: 0x00428234
+	// Token: 0x0600E5E1 RID: 58849 RVA: 0x00436BD8 File Offset: 0x00434DD8
 	private void RefreshRoleList(int areaId)
 	{
 		RoleInstance[] roleList = RoleModel.Instance.GetRoleList();
@@ -168,14 +168,14 @@ public class MotorcycleTogetherView : UiViewBase
 		this.RefreshViewState();
 	}
 
-	// Token: 0x0601114C RID: 69964 RVA: 0x0042A15C File Offset: 0x0042835C
+	// Token: 0x0600E5E2 RID: 58850 RVA: 0x00436D00 File Offset: 0x00434F00
 	private void RefreshViewState()
 	{
 		bool flag = this.CurrentSelectRoleId != 0;
 		this.ButtonConfirm.SetLocalTextNew(flag ? "MotorSharingRide_Button01" : "MotorSharingRide_Button02", Array.Empty<object>());
 	}
 
-	// Token: 0x0601114D RID: 69965 RVA: 0x0042A192 File Offset: 0x00428392
+	// Token: 0x0600E5E3 RID: 58851 RVA: 0x00436D36 File Offset: 0x00434F36
 	[NullableContext(1)]
 	private MotorcycleTogetherRoleItem CreateLoopItem()
 	{
@@ -186,7 +186,7 @@ public class MotorcycleTogetherView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601114E RID: 69966 RVA: 0x0042A1BD File Offset: 0x004283BD
+	// Token: 0x0600E5E4 RID: 58852 RVA: 0x00436D61 File Offset: 0x00434F61
 	private void RoleItemToggleCallBack(bool state, int roleId, int index)
 	{
 		this.RoleScrollView.DeselectCurrentGridProxy(false);
@@ -202,13 +202,13 @@ public class MotorcycleTogetherView : UiViewBase
 		this.RefreshViewState();
 	}
 
-	// Token: 0x0601114F RID: 69967 RVA: 0x0042A1F1 File Offset: 0x004283F1
+	// Token: 0x0600E5E5 RID: 58853 RVA: 0x00436D95 File Offset: 0x00434F95
 	private bool IsRoleSelectOn(int roleId)
 	{
 		return this.CurrentSelectRoleId == roleId;
 	}
 
-	// Token: 0x06011150 RID: 69968 RVA: 0x0042A1FC File Offset: 0x004283FC
+	// Token: 0x0600E5E6 RID: 58854 RVA: 0x00436DA0 File Offset: 0x00434FA0
 	private void OnClickConfirmBtn(int _)
 	{
 		if (!ShipTogetherModel.Instance.IsInMovieRideSharingMode)
@@ -227,7 +227,7 @@ public class MotorcycleTogetherView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011151 RID: 69969 RVA: 0x0042A26F File Offset: 0x0042846F
+	// Token: 0x0600E5E7 RID: 58855 RVA: 0x00436E13 File Offset: 0x00435013
 	private void OnClickExitBtn()
 	{
 		if (!ShipTogetherModel.Instance.RiderSharingState)
@@ -240,7 +240,7 @@ public class MotorcycleTogetherView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011152 RID: 69970 RVA: 0x0042A2A0 File Offset: 0x004284A0
+	// Token: 0x0600E5E8 RID: 58856 RVA: 0x00436E44 File Offset: 0x00435044
 	private UniTask ExitRideShareMode()
 	{
 		MotorcycleTogetherView.<ExitRideShareMode>d__22 <ExitRideShareMode>d__;
@@ -251,7 +251,7 @@ public class MotorcycleTogetherView : UiViewBase
 		return <ExitRideShareMode>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011153 RID: 69971 RVA: 0x0042A2E3 File Offset: 0x004284E3
+	// Token: 0x0600E5E9 RID: 58857 RVA: 0x00436E87 File Offset: 0x00435087
 	private void OnMovieMotorRideSharingModeChangeResponse(bool enable, bool success)
 	{
 		CustomPromise exitRideSharePromise = this.ExitRideSharePromise;
@@ -266,13 +266,13 @@ public class MotorcycleTogetherView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400821F RID: 33311
+	// Token: 0x0400835D RID: 33629
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04008220 RID: 33312
+	// Token: 0x0400835E RID: 33630
 	private AreaSwitchGroupItem AreaSwitchGroupItem;
 
-	// Token: 0x04008221 RID: 33313
+	// Token: 0x0400835F RID: 33631
 	[Nullable(new byte[]
 	{
 		2,
@@ -281,38 +281,38 @@ public class MotorcycleTogetherView : UiViewBase
 	})]
 	private LoopScrollView<MotorcycleTogetherRoleItem, RoleInstance> RoleScrollView;
 
-	// Token: 0x04008222 RID: 33314
+	// Token: 0x04008360 RID: 33632
 	private ButtonItem ButtonConfirm;
 
-	// Token: 0x04008223 RID: 33315
+	// Token: 0x04008361 RID: 33633
 	private int CurrentSelectRoleId;
 
-	// Token: 0x04008224 RID: 33316
+	// Token: 0x04008362 RID: 33634
 	private CustomPromise ExitRideSharePromise;
 
-	// Token: 0x02008761 RID: 34657
+	// Token: 0x020078EA RID: 30954
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402C016 RID: 180246
+		// Token: 0x0402732E RID: 160558
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402C017 RID: 180247
+		// Token: 0x0402732F RID: 160559
 		public const int SwitchGroupItem = 1;
 
-		// Token: 0x0402C018 RID: 180248
+		// Token: 0x04027330 RID: 160560
 		public const int RoleLoopScrollView = 2;
 
-		// Token: 0x0402C019 RID: 180249
+		// Token: 0x04027331 RID: 160561
 		public const int RoleItem = 3;
 
-		// Token: 0x0402C01A RID: 180250
+		// Token: 0x04027332 RID: 160562
 		public const int BtnConfirm = 4;
 
-		// Token: 0x0402C01B RID: 180251
+		// Token: 0x04027333 RID: 160563
 		public const int BtnExit = 5;
 
-		// Token: 0x0402C01C RID: 180252
+		// Token: 0x04027334 RID: 160564
 		public const int EmptyItem = 6;
 	}
 }

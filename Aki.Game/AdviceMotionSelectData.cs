@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x020016C4 RID: 5828
+// Token: 0x02000B7C RID: 2940
 public class AdviceMotionSelectData
 {
-	// Token: 0x0600A677 RID: 42615 RVA: 0x00253FA0 File Offset: 0x002521A0
+	// Token: 0x06007A57 RID: 31319 RVA: 0x0025E3B0 File Offset: 0x0025C5B0
 	public AdviceMotionSelectData(int index)
 	{
 		this.Index = index;
 	}
 
-	// Token: 0x0600A678 RID: 42616 RVA: 0x00253FAF File Offset: 0x002521AF
+	// Token: 0x06007A58 RID: 31320 RVA: 0x0025E3BF File Offset: 0x0025C5BF
 	public int GetIndex()
 	{
 		return this.Index;
 	}
 
-	// Token: 0x04004B29 RID: 19241
+	// Token: 0x04004BD0 RID: 19408
 	private readonly int Index;
 }

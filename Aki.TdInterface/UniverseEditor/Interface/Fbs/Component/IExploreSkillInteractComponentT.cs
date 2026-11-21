@@ -5,60 +5,60 @@ using Aki.UniverseEditor.Interface.Fbs.Match;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051E7 RID: 20967
+	// Token: 0x0200574F RID: 22351
 	public class IExploreSkillInteractComponentT
 	{
-		// Token: 0x17009990 RID: 39312
-		// (get) Token: 0x060220B0 RID: 139440 RVA: 0x004B9C23 File Offset: 0x004B7E23
-		// (set) Token: 0x060220B1 RID: 139441 RVA: 0x004B9C2B File Offset: 0x004B7E2B
+		// Token: 0x1700A18C RID: 41356
+		// (get) Token: 0x06024044 RID: 147524 RVA: 0x004F46A3 File Offset: 0x004F28A3
+		// (set) Token: 0x06024045 RID: 147525 RVA: 0x004F46AB File Offset: 0x004F28AB
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009991 RID: 39313
-		// (get) Token: 0x060220B2 RID: 139442 RVA: 0x004B9C34 File Offset: 0x004B7E34
-		// (set) Token: 0x060220B3 RID: 139443 RVA: 0x004B9C3C File Offset: 0x004B7E3C
+		// Token: 0x1700A18D RID: 41357
+		// (get) Token: 0x06024046 RID: 147526 RVA: 0x004F46B4 File Offset: 0x004F28B4
+		// (set) Token: 0x06024047 RID: 147527 RVA: 0x004F46BC File Offset: 0x004F28BC
 		public string ExploreSkillUiResource { get; set; }
 
-		// Token: 0x17009992 RID: 39314
-		// (get) Token: 0x060220B4 RID: 139444 RVA: 0x004B9C45 File Offset: 0x004B7E45
-		// (set) Token: 0x060220B5 RID: 139445 RVA: 0x004B9C4D File Offset: 0x004B7E4D
+		// Token: 0x1700A18E RID: 41358
+		// (get) Token: 0x06024048 RID: 147528 RVA: 0x004F46C5 File Offset: 0x004F28C5
+		// (set) Token: 0x06024049 RID: 147529 RVA: 0x004F46CD File Offset: 0x004F28CD
 		public TExploreSkillInteractOptionUnion Option { get; set; }
 
-		// Token: 0x17009993 RID: 39315
-		// (get) Token: 0x060220B6 RID: 139446 RVA: 0x004B9C56 File Offset: 0x004B7E56
-		// (set) Token: 0x060220B7 RID: 139447 RVA: 0x004B9C5E File Offset: 0x004B7E5E
+		// Token: 0x1700A18F RID: 41359
+		// (get) Token: 0x0602404A RID: 147530 RVA: 0x004F46D6 File Offset: 0x004F28D6
+		// (set) Token: 0x0602404B RID: 147531 RVA: 0x004F46DE File Offset: 0x004F28DE
 		public int PlayerStateRestritionId { get; set; }
 
-		// Token: 0x17009994 RID: 39316
-		// (get) Token: 0x060220B8 RID: 139448 RVA: 0x004B9C67 File Offset: 0x004B7E67
-		// (set) Token: 0x060220B9 RID: 139449 RVA: 0x004B9C6F File Offset: 0x004B7E6F
+		// Token: 0x1700A190 RID: 41360
+		// (get) Token: 0x0602404C RID: 147532 RVA: 0x004F46E7 File Offset: 0x004F28E7
+		// (set) Token: 0x0602404D RID: 147533 RVA: 0x004F46EF File Offset: 0x004F28EF
 		public List<TMatchRoleOptionUnion> MatchRoleOption { get; set; }
 
-		// Token: 0x17009995 RID: 39317
-		// (get) Token: 0x060220BA RID: 139450 RVA: 0x004B9C78 File Offset: 0x004B7E78
-		// (set) Token: 0x060220BB RID: 139451 RVA: 0x004B9C80 File Offset: 0x004B7E80
+		// Token: 0x1700A191 RID: 41361
+		// (get) Token: 0x0602404E RID: 147534 RVA: 0x004F46F8 File Offset: 0x004F28F8
+		// (set) Token: 0x0602404F RID: 147535 RVA: 0x004F4700 File Offset: 0x004F2900
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17009996 RID: 39318
-		// (get) Token: 0x060220BC RID: 139452 RVA: 0x004B9C89 File Offset: 0x004B7E89
-		// (set) Token: 0x060220BD RID: 139453 RVA: 0x004B9C91 File Offset: 0x004B7E91
+		// Token: 0x1700A192 RID: 41362
+		// (get) Token: 0x06024050 RID: 147536 RVA: 0x004F4709 File Offset: 0x004F2909
+		// (set) Token: 0x06024051 RID: 147537 RVA: 0x004F4711 File Offset: 0x004F2911
 		public TExploreSkillSearchTargetCfgUnion SearchTargetCfg { get; set; }
 
-		// Token: 0x17009997 RID: 39319
-		// (get) Token: 0x060220BE RID: 139454 RVA: 0x004B9C9A File Offset: 0x004B7E9A
-		// (set) Token: 0x060220BF RID: 139455 RVA: 0x004B9CA2 File Offset: 0x004B7EA2
+		// Token: 0x1700A193 RID: 41363
+		// (get) Token: 0x06024052 RID: 147538 RVA: 0x004F471A File Offset: 0x004F291A
+		// (set) Token: 0x06024053 RID: 147539 RVA: 0x004F4722 File Offset: 0x004F2922
 		public IIgnoresCollisionCfgT IgnoresCollisionCfg { get; set; }
 
-		// Token: 0x17009998 RID: 39320
-		// (get) Token: 0x060220C0 RID: 139456 RVA: 0x004B9CAB File Offset: 0x004B7EAB
-		// (set) Token: 0x060220C1 RID: 139457 RVA: 0x004B9CB3 File Offset: 0x004B7EB3
+		// Token: 0x1700A194 RID: 41364
+		// (get) Token: 0x06024054 RID: 147540 RVA: 0x004F472B File Offset: 0x004F292B
+		// (set) Token: 0x06024055 RID: 147541 RVA: 0x004F4733 File Offset: 0x004F2933
 		public List<string> SelfInteractBlockDetectionKeys { get; set; }
 
-		// Token: 0x17009999 RID: 39321
-		// (get) Token: 0x060220C2 RID: 139458 RVA: 0x004B9CBC File Offset: 0x004B7EBC
-		// (set) Token: 0x060220C3 RID: 139459 RVA: 0x004B9CC4 File Offset: 0x004B7EC4
+		// Token: 0x1700A195 RID: 41365
+		// (get) Token: 0x06024056 RID: 147542 RVA: 0x004F473C File Offset: 0x004F293C
+		// (set) Token: 0x06024057 RID: 147543 RVA: 0x004F4744 File Offset: 0x004F2944
 		public byte NullMask { get; set; }
 
-		// Token: 0x060220C4 RID: 139460 RVA: 0x004B9CD0 File Offset: 0x004B7ED0
+		// Token: 0x06024058 RID: 147544 RVA: 0x004F4750 File Offset: 0x004F2950
 		public IExploreSkillInteractComponentT()
 		{
 			this.Disabled = false;

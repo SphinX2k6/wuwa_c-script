@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020028A3 RID: 10403
+// Token: 0x02001E1E RID: 7710
 [NullableContext(1)]
 public interface IRoleSkillBranchTipsContentItemData
 {
-	// Token: 0x17001CCE RID: 7374
-	// (get) Token: 0x06015781 RID: 87937
-	// (set) Token: 0x06015782 RID: 87938
+	// Token: 0x17001D26 RID: 7462
+	// (get) Token: 0x06013181 RID: 78209
+	// (set) Token: 0x06013182 RID: 78210
 	string IconPath { get; set; }
 
-	// Token: 0x17001CCF RID: 7375
-	// (get) Token: 0x06015783 RID: 87939
-	// (set) Token: 0x06015784 RID: 87940
+	// Token: 0x17001D27 RID: 7463
+	// (get) Token: 0x06013183 RID: 78211
+	// (set) Token: 0x06013184 RID: 78212
 	string TitleKey { get; set; }
 
-	// Token: 0x17001CD0 RID: 7376
-	// (get) Token: 0x06015785 RID: 87941
-	// (set) Token: 0x06015786 RID: 87942
+	// Token: 0x17001D28 RID: 7464
+	// (get) Token: 0x06013185 RID: 78213
+	// (set) Token: 0x06013186 RID: 78214
 	string DescKey { get; set; }
 
-	// Token: 0x17001CD1 RID: 7377
-	// (get) Token: 0x06015787 RID: 87943
-	// (set) Token: 0x06015788 RID: 87944
+	// Token: 0x17001D29 RID: 7465
+	// (get) Token: 0x06013187 RID: 78215
+	// (set) Token: 0x06013188 RID: 78216
 	bool IsHighlight { get; set; }
 }

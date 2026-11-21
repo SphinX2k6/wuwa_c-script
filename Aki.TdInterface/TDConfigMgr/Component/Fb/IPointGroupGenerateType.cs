@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C3A RID: 3130
+	// Token: 0x02000D0D RID: 3341
 	public class IPointGroupGenerateType
 	{
-		// Token: 0x060047A9 RID: 18345 RVA: 0x000B46E1 File Offset: 0x000B28E1
-		[NullableContext(1)]
+		// Token: 0x06004C19 RID: 19481 RVA: 0x000BEA91 File Offset: 0x000BCC91
 		public static IPointGroupGenerateType Create(IPointGroupGenerateType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014F2 RID: 5362
-		// (get) Token: 0x060047AA RID: 18346 RVA: 0x000B4700 File Offset: 0x000B2900
+		// Token: 0x170015FA RID: 5626
+		// (get) Token: 0x06004C1A RID: 19482 RVA: 0x000BEAB0 File Offset: 0x000BCCB0
 		public virtual EPointGroupGenerateType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040028C1 RID: 10433
+		// Token: 0x04002B16 RID: 11030
 		private IPointGroupGenerateType Instance;
 	}
 }

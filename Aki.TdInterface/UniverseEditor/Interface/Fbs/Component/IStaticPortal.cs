@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059C8 RID: 22984
+	// Token: 0x02005FD5 RID: 24533
 	public struct IStaticPortal : IFlatbufferObject
 	{
-		// Token: 0x1700AC9B RID: 44187
-		// (get) Token: 0x06026F8E RID: 159630 RVA: 0x0055CE51 File Offset: 0x0055B051
+		// Token: 0x1700B5D3 RID: 46547
+		// (get) Token: 0x06029506 RID: 169222 RVA: 0x005A3E17 File Offset: 0x005A2017
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026F8F RID: 159631 RVA: 0x0055CE5E File Offset: 0x0055B05E
+		// Token: 0x06029507 RID: 169223 RVA: 0x005A3E24 File Offset: 0x005A2024
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026F90 RID: 159632 RVA: 0x0055CE68 File Offset: 0x0055B068
+		// Token: 0x06029508 RID: 169224 RVA: 0x005A3E2C File Offset: 0x005A202C
 		public static IStaticPortal GetRootAsIStaticPortal(ByteBuffer _bb)
 		{
 			return IStaticPortal.GetRootAsIStaticPortal(_bb, default(IStaticPortal));
 		}
 
-		// Token: 0x06026F91 RID: 159633 RVA: 0x0055CE84 File Offset: 0x0055B084
+		// Token: 0x06029509 RID: 169225 RVA: 0x005A3E48 File Offset: 0x005A2048
 		public static IStaticPortal GetRootAsIStaticPortal(ByteBuffer _bb, IStaticPortal obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026F92 RID: 159634 RVA: 0x0055CEA1 File Offset: 0x0055B0A1
+		// Token: 0x0602950A RID: 169226 RVA: 0x005A3E65 File Offset: 0x005A2065
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026F93 RID: 159635 RVA: 0x0055CEB0 File Offset: 0x0055B0B0
+		// Token: 0x0602950B RID: 169227 RVA: 0x005A3E74 File Offset: 0x005A2074
 		public IStaticPortal __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AC9C RID: 44188
-		// (get) Token: 0x06026F94 RID: 159636 RVA: 0x0055CEC0 File Offset: 0x0055B0C0
+		// Token: 0x1700B5D4 RID: 46548
+		// (get) Token: 0x0602950C RID: 169228 RVA: 0x005A3E84 File Offset: 0x005A2084
 		public EPortalType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AC9D RID: 44189
-		// (get) Token: 0x06026F95 RID: 159637 RVA: 0x0055CEFC File Offset: 0x0055B0FC
+		// Token: 0x1700B5D5 RID: 46549
+		// (get) Token: 0x0602950D RID: 169229 RVA: 0x005A3EC0 File Offset: 0x005A20C0
 		public EPortalModel PortalModel
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AC9E RID: 44190
-		// (get) Token: 0x06026F96 RID: 159638 RVA: 0x0055CF38 File Offset: 0x0055B138
+		// Token: 0x1700B5D6 RID: 46550
+		// (get) Token: 0x0602950E RID: 169230 RVA: 0x005A3EFC File Offset: 0x005A20FC
 		public IPortalRenderConfig? RenderConfig
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AC9F RID: 44191
-		// (get) Token: 0x06026F97 RID: 159639 RVA: 0x0055CF98 File Offset: 0x0055B198
+		// Token: 0x1700B5D7 RID: 46551
+		// (get) Token: 0x0602950F RID: 169231 RVA: 0x005A3F5C File Offset: 0x005A215C
 		public int LinkPortalEntityId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700ACA0 RID: 44192
-		// (get) Token: 0x06026F98 RID: 159640 RVA: 0x0055CFD8 File Offset: 0x0055B1D8
+		// Token: 0x1700B5D8 RID: 46552
+		// (get) Token: 0x06029510 RID: 169232 RVA: 0x005A3F9C File Offset: 0x005A219C
 		public bool IsStreamSource
 		{
 			get
@@ -118,8 +118,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700ACA1 RID: 44193
-		// (get) Token: 0x06026F99 RID: 159641 RVA: 0x0055D018 File Offset: 0x0055B218
+		// Token: 0x1700B5D9 RID: 46553
+		// (get) Token: 0x06029511 RID: 169233 RVA: 0x005A3FDC File Offset: 0x005A21DC
 		public byte NullMask
 		{
 			get
@@ -133,7 +133,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026F9A RID: 159642 RVA: 0x0055D055 File Offset: 0x0055B255
+		// Token: 0x06029512 RID: 169234 RVA: 0x005A4019 File Offset: 0x005A2219
 		public static Offset<IStaticPortal> CreateIStaticPortal(FlatBufferBuilder builder, EPortalType Type = EPortalType.Static, EPortalModel PortalModel = EPortalModel.A, Offset<IPortalRenderConfig> RenderConfigOffset = default(Offset<IPortalRenderConfig>), int LinkPortalEntityId = 0, bool IsStreamSource = false, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -146,55 +146,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IStaticPortal.EndIStaticPortal(builder);
 		}
 
-		// Token: 0x06026F9B RID: 159643 RVA: 0x0055D091 File Offset: 0x0055B291
+		// Token: 0x06029513 RID: 169235 RVA: 0x005A4055 File Offset: 0x005A2255
 		public static void StartIStaticPortal(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06026F9C RID: 159644 RVA: 0x0055D09A File Offset: 0x0055B29A
+		// Token: 0x06029514 RID: 169236 RVA: 0x005A405E File Offset: 0x005A225E
 		public static void AddType(FlatBufferBuilder builder, EPortalType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06026F9D RID: 159645 RVA: 0x0055D0A5 File Offset: 0x0055B2A5
+		// Token: 0x06029515 RID: 169237 RVA: 0x005A4069 File Offset: 0x005A2269
 		public static void AddPortalModel(FlatBufferBuilder builder, EPortalModel portalModel)
 		{
 			builder.AddByte(1, (byte)portalModel, 0);
 		}
 
-		// Token: 0x06026F9E RID: 159646 RVA: 0x0055D0B0 File Offset: 0x0055B2B0
+		// Token: 0x06029516 RID: 169238 RVA: 0x005A4074 File Offset: 0x005A2274
 		public static void AddRenderConfig(FlatBufferBuilder builder, Offset<IPortalRenderConfig> renderConfigOffset)
 		{
 			builder.AddOffset(2, renderConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06026F9F RID: 159647 RVA: 0x0055D0C0 File Offset: 0x0055B2C0
+		// Token: 0x06029517 RID: 169239 RVA: 0x005A4084 File Offset: 0x005A2284
 		public static void AddLinkPortalEntityId(FlatBufferBuilder builder, int linkPortalEntityId)
 		{
 			builder.AddInt(3, linkPortalEntityId, 0);
 		}
 
-		// Token: 0x06026FA0 RID: 159648 RVA: 0x0055D0CB File Offset: 0x0055B2CB
+		// Token: 0x06029518 RID: 169240 RVA: 0x005A408F File Offset: 0x005A228F
 		public static void AddIsStreamSource(FlatBufferBuilder builder, bool isStreamSource)
 		{
 			builder.AddBool(4, isStreamSource, false);
 		}
 
-		// Token: 0x06026FA1 RID: 159649 RVA: 0x0055D0D6 File Offset: 0x0055B2D6
+		// Token: 0x06029519 RID: 169241 RVA: 0x005A409A File Offset: 0x005A229A
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x06026FA2 RID: 159650 RVA: 0x0055D0E1 File Offset: 0x0055B2E1
+		// Token: 0x0602951A RID: 169242 RVA: 0x005A40A5 File Offset: 0x005A22A5
 		public static Offset<IStaticPortal> EndIStaticPortal(FlatBufferBuilder builder)
 		{
 			return new Offset<IStaticPortal>(builder.EndTable());
 		}
 
-		// Token: 0x06026FA3 RID: 159651 RVA: 0x0055D0F0 File Offset: 0x0055B2F0
+		// Token: 0x0602951B RID: 169243 RVA: 0x005A40B4 File Offset: 0x005A22B4
 		public IStaticPortalT UnPack()
 		{
 			IStaticPortalT staticPortalT = new IStaticPortalT();
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return staticPortalT;
 		}
 
-		// Token: 0x06026FA4 RID: 159652 RVA: 0x0055D10C File Offset: 0x0055B30C
+		// Token: 0x0602951C RID: 169244 RVA: 0x005A40D0 File Offset: 0x005A22D0
 		public void UnPackTo(IStaticPortalT _o)
 		{
 			_o.Type = this.Type;
@@ -213,7 +213,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06026FA5 RID: 159653 RVA: 0x0055D184 File Offset: 0x0055B384
+		// Token: 0x0602951D RID: 169245 RVA: 0x005A4148 File Offset: 0x005A2348
 		public static Offset<IStaticPortal> Pack(FlatBufferBuilder builder, IStaticPortalT _o)
 		{
 			if (_o == null)
@@ -224,7 +224,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IStaticPortal.CreateIStaticPortal(builder, _o.Type, _o.PortalModel, renderConfigOffset, _o.LinkPortalEntityId, _o.IsStreamSource, _o.NullMask);
 		}
 
-		// Token: 0x0400EFEF RID: 61423
+		// Token: 0x0400FCE6 RID: 64742
 		private Table __p;
 	}
 }

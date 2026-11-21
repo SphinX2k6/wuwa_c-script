@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Comic.View
 {
-	// Token: 0x02005B8F RID: 23439
+	// Token: 0x02004B6F RID: 19311
 	public class ComicView : UiViewBase, IUiViewResource
 	{
-		// Token: 0x0603B4C2 RID: 242882 RVA: 0x00E21A18 File Offset: 0x00E1FC18
+		// Token: 0x0603040F RID: 197647 RVA: 0x00D71F84 File Offset: 0x00D70184
 		[NullableContext(1)]
 		public ComicView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603B4C3 RID: 242883 RVA: 0x00E21A24 File Offset: 0x00E1FC24
+		// Token: 0x06030410 RID: 197648 RVA: 0x00D71F90 File Offset: 0x00D70190
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Comic.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B4C4 RID: 242884 RVA: 0x00E21A6C File Offset: 0x00E1FC6C
+		// Token: 0x06030411 RID: 197649 RVA: 0x00D71FD8 File Offset: 0x00D701D8
 		[NullableContext(1)]
 		public string GetExtraResourceId([Nullable(2)] object param)
 		{
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Comic.View
 			return ((comicDisplayConfig != null) ? comicDisplayConfig.GetValueOrDefault().ResourceId : null) ?? string.Empty;
 		}
 
-		// Token: 0x0603B4C5 RID: 242885 RVA: 0x00E21AB8 File Offset: 0x00E1FCB8
+		// Token: 0x06030412 RID: 197650 RVA: 0x00D72024 File Offset: 0x00D70224
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ComicView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Comic.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B4C6 RID: 242886 RVA: 0x00E21AFB File Offset: 0x00E1FCFB
+		// Token: 0x06030413 RID: 197651 RVA: 0x00D72067 File Offset: 0x00D70267
 		private void NextPage()
 		{
 			if (this.SwitchPromise != null)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Comic.View
 			this.NextPageAsync();
 		}
 
-		// Token: 0x0603B4C7 RID: 242887 RVA: 0x00E21B10 File Offset: 0x00E1FD10
+		// Token: 0x06030414 RID: 197652 RVA: 0x00D7207C File Offset: 0x00D7027C
 		public UniTask NextPageAsync()
 		{
 			ComicView.<NextPageAsync>d__8 <NextPageAsync>d__;
@@ -72,19 +72,19 @@ namespace CSharpScript.Game.Module.Comic.View
 			return <NextPageAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B4C8 RID: 242888 RVA: 0x00E21B53 File Offset: 0x00E1FD53
+		// Token: 0x06030415 RID: 197653 RVA: 0x00D720BF File Offset: 0x00D702BF
 		private void OnComicPanelSkip()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603B4C9 RID: 242889 RVA: 0x00E21B5C File Offset: 0x00E1FD5C
+		// Token: 0x06030416 RID: 197654 RVA: 0x00D720C8 File Offset: 0x00D702C8
 		private void OnComicPanelComplete()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603B4CA RID: 242890 RVA: 0x00E21B65 File Offset: 0x00E1FD65
+		// Token: 0x06030417 RID: 197655 RVA: 0x00D720D1 File Offset: 0x00D702D1
 		[NullableContext(1)]
 		private void OnEventSequence(string sequenceName, string eventName)
 		{
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Comic.View
 			}
 		}
 
-		// Token: 0x0603B4CB RID: 242891 RVA: 0x00E21B88 File Offset: 0x00E1FD88
+		// Token: 0x06030418 RID: 197656 RVA: 0x00D720F4 File Offset: 0x00D702F4
 		protected override UniTask OnBeforeHideAsync()
 		{
 			ComicView.<OnBeforeHideAsync>d__12 <OnBeforeHideAsync>d__;
@@ -110,18 +110,18 @@ namespace CSharpScript.Game.Module.Comic.View
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401EE85 RID: 126597
+		// Token: 0x04019936 RID: 104758
 		[Nullable(2)]
 		private ComicPanel ComicPanel;
 
-		// Token: 0x0401EE86 RID: 126598
+		// Token: 0x04019937 RID: 104759
 		[Nullable(2)]
 		private UniTaskCompletionSource SwitchPromise;
 
-		// Token: 0x0200BD95 RID: 48533
+		// Token: 0x0200A79F RID: 42911
 		private static class EComDefine
 		{
-			// Token: 0x040392E0 RID: 234208
+			// Token: 0x04033CAE RID: 212142
 			public const int ComicPanel = 0;
 		}
 	}

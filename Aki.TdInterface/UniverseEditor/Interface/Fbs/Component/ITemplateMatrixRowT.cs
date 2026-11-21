@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A59 RID: 23129
+	// Token: 0x02006066 RID: 24678
 	public class ITemplateMatrixRowT
 	{
-		// Token: 0x1700AE10 RID: 44560
-		// (get) Token: 0x060275A4 RID: 161188 RVA: 0x0056A64D File Offset: 0x0056884D
-		// (set) Token: 0x060275A5 RID: 161189 RVA: 0x0056A655 File Offset: 0x00568855
+		// Token: 0x1700B748 RID: 46920
+		// (get) Token: 0x06029B1C RID: 170780 RVA: 0x005B1659 File Offset: 0x005AF859
+		// (set) Token: 0x06029B1D RID: 170781 RVA: 0x005B1661 File Offset: 0x005AF861
 		public List<ISpawnTemplateEntityConfigT> Items { get; set; }
 
-		// Token: 0x060275A6 RID: 161190 RVA: 0x0056A65E File Offset: 0x0056885E
+		// Token: 0x06029B1E RID: 170782 RVA: 0x005B166A File Offset: 0x005AF86A
 		public ITemplateMatrixRowT()
 		{
 			this.Items = null;

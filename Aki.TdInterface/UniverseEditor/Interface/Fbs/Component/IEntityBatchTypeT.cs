@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005163 RID: 20835
+	// Token: 0x020056C8 RID: 22216
 	public class IEntityBatchTypeT
 	{
-		// Token: 0x170097FC RID: 38908
-		// (get) Token: 0x06021A4A RID: 137802 RVA: 0x004AB45E File Offset: 0x004A965E
-		// (set) Token: 0x06021A4B RID: 137803 RVA: 0x004AB466 File Offset: 0x004A9666
+		// Token: 0x17009FE9 RID: 40937
+		// (get) Token: 0x0602399E RID: 145822 RVA: 0x004E53EA File Offset: 0x004E35EA
+		// (set) Token: 0x0602399F RID: 145823 RVA: 0x004E53F2 File Offset: 0x004E35F2
 		public EEntityBatchType Type { get; set; }
 
-		// Token: 0x06021A4C RID: 137804 RVA: 0x004AB46F File Offset: 0x004A966F
+		// Token: 0x060239A0 RID: 145824 RVA: 0x004E53FB File Offset: 0x004E35FB
 		public IEntityBatchTypeT()
 		{
 			this.Type = EEntityBatchType.EntityList;

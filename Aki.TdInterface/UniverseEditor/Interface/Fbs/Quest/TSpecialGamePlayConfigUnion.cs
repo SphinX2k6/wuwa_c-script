@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004318 RID: 17176
+	// Token: 0x02004777 RID: 18295
 	public class TSpecialGamePlayConfigUnion
 	{
-		// Token: 0x17007972 RID: 31090
-		// (get) Token: 0x0601978F RID: 104335 RVA: 0x003A66B3 File Offset: 0x003A48B3
-		// (set) Token: 0x06019790 RID: 104336 RVA: 0x003A66BB File Offset: 0x003A48BB
+		// Token: 0x17007FA5 RID: 32677
+		// (get) Token: 0x0601AF11 RID: 110353 RVA: 0x003D1FE3 File Offset: 0x003D01E3
+		// (set) Token: 0x0601AF12 RID: 110354 RVA: 0x003D1FEB File Offset: 0x003D01EB
 		public TSpecialGamePlayConfig Type { get; set; }
 
-		// Token: 0x17007973 RID: 31091
-		// (get) Token: 0x06019791 RID: 104337 RVA: 0x003A66C4 File Offset: 0x003A48C4
-		// (set) Token: 0x06019792 RID: 104338 RVA: 0x003A66CC File Offset: 0x003A48CC
+		// Token: 0x17007FA6 RID: 32678
+		// (get) Token: 0x0601AF13 RID: 110355 RVA: 0x003D1FF4 File Offset: 0x003D01F4
+		// (set) Token: 0x0601AF14 RID: 110356 RVA: 0x003D1FFC File Offset: 0x003D01FC
 		public object Value { get; set; }
 
-		// Token: 0x06019793 RID: 104339 RVA: 0x003A66D5 File Offset: 0x003A48D5
+		// Token: 0x0601AF15 RID: 110357 RVA: 0x003D2005 File Offset: 0x003D0205
 		public TSpecialGamePlayConfigUnion()
 		{
 			this.Type = TSpecialGamePlayConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06019794 RID: 104340 RVA: 0x003A66EB File Offset: 0x003A48EB
+		// Token: 0x0601AF16 RID: 110358 RVA: 0x003D201B File Offset: 0x003D021B
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06019795 RID: 104341 RVA: 0x003A66FD File Offset: 0x003A48FD
+		// Token: 0x0601AF17 RID: 110359 RVA: 0x003D202D File Offset: 0x003D022D
 		public IEavesdropGamePlayConfigT AsIEavesdropGamePlayConfig()
 		{
 			return this.As<IEavesdropGamePlayConfigT>();
 		}
 
-		// Token: 0x06019796 RID: 104342 RVA: 0x003A6705 File Offset: 0x003A4905
+		// Token: 0x0601AF18 RID: 110360 RVA: 0x003D2035 File Offset: 0x003D0235
 		public static TSpecialGamePlayConfigUnion FromIEavesdropGamePlayConfig(IEavesdropGamePlayConfigT _ieavesdropgameplayconfig)
 		{
 			return new TSpecialGamePlayConfigUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019797 RID: 104343 RVA: 0x003A671A File Offset: 0x003A491A
+		// Token: 0x0601AF19 RID: 110361 RVA: 0x003D204A File Offset: 0x003D024A
 		public IFirstPersonTurretGamePlayConfigT AsIFirstPersonTurretGamePlayConfig()
 		{
 			return this.As<IFirstPersonTurretGamePlayConfigT>();
 		}
 
-		// Token: 0x06019798 RID: 104344 RVA: 0x003A6722 File Offset: 0x003A4922
+		// Token: 0x0601AF1A RID: 110362 RVA: 0x003D2052 File Offset: 0x003D0252
 		public static TSpecialGamePlayConfigUnion FromIFirstPersonTurretGamePlayConfig(IFirstPersonTurretGamePlayConfigT _ifirstpersonturretgameplayconfig)
 		{
 			return new TSpecialGamePlayConfigUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019799 RID: 104345 RVA: 0x003A6737 File Offset: 0x003A4937
+		// Token: 0x0601AF1B RID: 110363 RVA: 0x003D2067 File Offset: 0x003D0267
 		public IFreezeOnSightGamePlayConfigT AsIFreezeOnSightGamePlayConfig()
 		{
 			return this.As<IFreezeOnSightGamePlayConfigT>();
 		}
 
-		// Token: 0x0601979A RID: 104346 RVA: 0x003A673F File Offset: 0x003A493F
+		// Token: 0x0601AF1C RID: 110364 RVA: 0x003D206F File Offset: 0x003D026F
 		public static TSpecialGamePlayConfigUnion FromIFreezeOnSightGamePlayConfig(IFreezeOnSightGamePlayConfigT _ifreezeonsightgameplayconfig)
 		{
 			return new TSpecialGamePlayConfigUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601979B RID: 104347 RVA: 0x003A6754 File Offset: 0x003A4954
+		// Token: 0x0601AF1D RID: 110365 RVA: 0x003D2084 File Offset: 0x003D0284
 		public IStalkingGamePlayConfigT AsIStalkingGamePlayConfig()
 		{
 			return this.As<IStalkingGamePlayConfigT>();
 		}
 
-		// Token: 0x0601979C RID: 104348 RVA: 0x003A675C File Offset: 0x003A495C
+		// Token: 0x0601AF1E RID: 110366 RVA: 0x003D208C File Offset: 0x003D028C
 		public static TSpecialGamePlayConfigUnion FromIStalkingGamePlayConfig(IStalkingGamePlayConfigT _istalkinggameplayconfig)
 		{
 			return new TSpecialGamePlayConfigUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601979D RID: 104349 RVA: 0x003A6774 File Offset: 0x003A4974
+		// Token: 0x0601AF1F RID: 110367 RVA: 0x003D20A4 File Offset: 0x003D02A4
 		public static int Pack(FlatBufferBuilder builder, TSpecialGamePlayConfigUnion _o)
 		{
 			switch (_o.Type)

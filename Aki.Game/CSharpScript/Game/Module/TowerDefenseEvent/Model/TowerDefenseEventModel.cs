@@ -6,13 +6,13 @@ using CSharpScript.Game.Module.TrapDefense;
 
 namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 {
-	// Token: 0x02004B16 RID: 19222
+	// Token: 0x02003ABE RID: 15038
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class TowerDefenseEventModel : ModelBase
 	{
-		// Token: 0x06031CAA RID: 203946 RVA: 0x00B8ECF4 File Offset: 0x00B8CEF4
+		// Token: 0x06026A3A RID: 158266 RVA: 0x00AD2D60 File Offset: 0x00AD0F60
 		public void InitInstance(TrapDefenseActivity? config)
 		{
 			this.Waves.Clear();
@@ -30,8 +30,8 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			}
 		}
 
-		// Token: 0x17007B4C RID: 31564
-		// (get) Token: 0x06031CAB RID: 203947 RVA: 0x00B8EDA4 File Offset: 0x00B8CFA4
+		// Token: 0x17004EF9 RID: 20217
+		// (get) Token: 0x06026A3B RID: 158267 RVA: 0x00AD2E10 File Offset: 0x00AD1010
 		public int CurrentTrapCount
 		{
 			get
@@ -40,14 +40,14 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			}
 		}
 
-		// Token: 0x06031CAC RID: 203948 RVA: 0x00B8EDB4 File Offset: 0x00B8CFB4
+		// Token: 0x06026A3C RID: 158268 RVA: 0x00AD2E20 File Offset: 0x00AD1020
 		public bool HasPlaceToBuildTrap()
 		{
 			long maxTrapCount = TrapDefenseModel.Instance.BattleData.GetMaxTrapCount();
 			return (long)this.CurrentTrapCount < maxTrapCount;
 		}
 
-		// Token: 0x06031CAD RID: 203949 RVA: 0x00B8EDDC File Offset: 0x00B8CFDC
+		// Token: 0x06026A3D RID: 158269 RVA: 0x00AD2E48 File Offset: 0x00AD1048
 		public void GetWaveSplineIds(List<int> splineIds)
 		{
 			splineIds.Clear();
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			splineIds.AddRange(this.Waves[batch - 1].GetSplineListBytes());
 		}
 
-		// Token: 0x06031CAE RID: 203950 RVA: 0x00B8EE34 File Offset: 0x00B8D034
+		// Token: 0x06026A3E RID: 158270 RVA: 0x00AD2EA0 File Offset: 0x00AD10A0
 		public bool IsEnoughGoldToBuildTrap(ITowerDefenseEventTrapBaseInfo baseInfo)
 		{
 			long goldNum = TrapDefenseModel.Instance.BattleData.GetGoldNum();
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			return trapDefenseBuildingDevelopItemData != null && (long)trapDefenseBuildingDevelopItemData.GetBuildingCost(true) <= goldNum;
 		}
 
-		// Token: 0x06031CAF RID: 203951 RVA: 0x00B8EE81 File Offset: 0x00B8D081
+		// Token: 0x06026A3F RID: 158271 RVA: 0x00AD2EED File Offset: 0x00AD10ED
 		public bool ValidateBuildTrap(ITowerDefenseEventTrapBaseInfo baseInfo)
 		{
 			return this.HasPlaceToBuildTrap() && this.IsEnoughGoldToBuildTrap(baseInfo);
 		}
 
-		// Token: 0x06031CB0 RID: 203952 RVA: 0x00B8EE94 File Offset: 0x00B8D094
+		// Token: 0x06026A40 RID: 158272 RVA: 0x00AD2F00 File Offset: 0x00AD1100
 		[return: Nullable(2)]
 		public string TryAddEntity(ITowerDefenseEventCombatInfo entityModel)
 		{
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			return null;
 		}
 
-		// Token: 0x06031CB1 RID: 203953 RVA: 0x00B8EEE8 File Offset: 0x00B8D0E8
+		// Token: 0x06026A41 RID: 158273 RVA: 0x00AD2F54 File Offset: 0x00AD1154
 		[NullableContext(2)]
 		public ITowerDefenseEventCombatInfo GetEntity(long uid)
 		{
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			return result;
 		}
 
-		// Token: 0x06031CB2 RID: 203954 RVA: 0x00B8EF08 File Offset: 0x00B8D108
+		// Token: 0x06026A42 RID: 158274 RVA: 0x00AD2F74 File Offset: 0x00AD1174
 		public void GetAllEntities(List<ITowerDefenseEventCombatInfo> entities)
 		{
 			entities.Clear();
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			}
 		}
 
-		// Token: 0x06031CB3 RID: 203955 RVA: 0x00B8EF68 File Offset: 0x00B8D168
+		// Token: 0x06026A43 RID: 158275 RVA: 0x00AD2FD4 File Offset: 0x00AD11D4
 		public bool HasAnyTrapByType(int type)
 		{
 			using (Dictionary<long, ITowerDefenseEventTrapInfo>.ValueCollection.Enumerator enumerator = this.TrapEntities.Values.GetEnumerator())
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			return false;
 		}
 
-		// Token: 0x06031CB4 RID: 203956 RVA: 0x00B8EFC8 File Offset: 0x00B8D1C8
+		// Token: 0x06026A44 RID: 158276 RVA: 0x00AD3034 File Offset: 0x00AD1234
 		[NullableContext(2)]
 		public ITowerDefenseEventCombatInfo RemoveEntity(long uid)
 		{
@@ -145,13 +145,13 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			return towerDefenseEventCombatInfo;
 		}
 
-		// Token: 0x06031CB5 RID: 203957 RVA: 0x00B8F004 File Offset: 0x00B8D204
+		// Token: 0x06026A45 RID: 158277 RVA: 0x00AD3070 File Offset: 0x00AD1270
 		public bool HasEntity(int uid)
 		{
 			return this.AllEntities.ContainsKey((long)uid);
 		}
 
-		// Token: 0x06031CB6 RID: 203958 RVA: 0x00B8F014 File Offset: 0x00B8D214
+		// Token: 0x06026A46 RID: 158278 RVA: 0x00AD3080 File Offset: 0x00AD1280
 		public int? GetMachineIdByIndex(int index)
 		{
 			List<TrapDefenseBuildingSlotData> slotData = TrapDefenseModel.Instance.ViewModelBuildingDevelop.GetSlotData();
@@ -167,8 +167,8 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			return new int?(slotData2.Id);
 		}
 
-		// Token: 0x17007B4D RID: 31565
-		// (get) Token: 0x06031CB7 RID: 203959 RVA: 0x00B8F06C File Offset: 0x00B8D26C
+		// Token: 0x17004EFA RID: 20218
+		// (get) Token: 0x06026A47 RID: 158279 RVA: 0x00AD30D8 File Offset: 0x00AD12D8
 		public static TowerDefenseEventModel Instance
 		{
 			get
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			}
 		}
 
-		// Token: 0x06031CB8 RID: 203960 RVA: 0x00B8F073 File Offset: 0x00B8D273
+		// Token: 0x06026A48 RID: 158280 RVA: 0x00AD30DF File Offset: 0x00AD12DF
 		public static TowerDefenseEventModel GetOrCreateInstance()
 		{
 			if (TowerDefenseEventModel._Instance == null)
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			return TowerDefenseEventModel._Instance;
 		}
 
-		// Token: 0x06031CB9 RID: 203961 RVA: 0x00B8F087 File Offset: 0x00B8D287
+		// Token: 0x06026A49 RID: 158281 RVA: 0x00AD30F3 File Offset: 0x00AD12F3
 		public static bool CreateInstance()
 		{
 			if (TowerDefenseEventModel._Instance != null)
@@ -198,33 +198,33 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			return true;
 		}
 
-		// Token: 0x06031CBA RID: 203962 RVA: 0x00B8F09D File Offset: 0x00B8D29D
+		// Token: 0x06026A4A RID: 158282 RVA: 0x00AD3109 File Offset: 0x00AD1309
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06031CBB RID: 203963 RVA: 0x00B8F09F File Offset: 0x00B8D29F
+		// Token: 0x06026A4B RID: 158283 RVA: 0x00AD310B File Offset: 0x00AD130B
 		public static void ResetStaticDefaultValue()
 		{
 			TowerDefenseEventModel._Instance = null;
 		}
 
-		// Token: 0x06031CBC RID: 203964 RVA: 0x00B8F0A7 File Offset: 0x00B8D2A7
+		// Token: 0x06026A4C RID: 158284 RVA: 0x00AD3113 File Offset: 0x00AD1313
 		static TowerDefenseEventModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TowerDefenseEventModel.CreateStaticDefaultValue), new Action(TowerDefenseEventModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A92E RID: 108846
+		// Token: 0x04015280 RID: 86656
 		private readonly List<TrapDefenseWave> Waves = new List<TrapDefenseWave>();
 
-		// Token: 0x0401A92F RID: 108847
+		// Token: 0x04015281 RID: 86657
 		private readonly Dictionary<long, ITowerDefenseEventCombatInfo> AllEntities = new Dictionary<long, ITowerDefenseEventCombatInfo>();
 
-		// Token: 0x0401A930 RID: 108848
+		// Token: 0x04015282 RID: 86658
 		private readonly Dictionary<long, ITowerDefenseEventTrapInfo> TrapEntities = new Dictionary<long, ITowerDefenseEventTrapInfo>();
 
-		// Token: 0x0401A931 RID: 108849
+		// Token: 0x04015283 RID: 86659
 		[Nullable(2)]
 		private static TowerDefenseEventModel _Instance;
 	}

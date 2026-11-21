@@ -4,34 +4,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.GenericPrompt
 {
-	// Token: 0x02005995 RID: 22933
+	// Token: 0x0200496E RID: 18798
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PromptParamHub<T> : IPromptParamHub
 	{
-		// Token: 0x17008B7F RID: 35711
-		// (get) Token: 0x0603A31E RID: 238366 RVA: 0x00DD4BA3 File Offset: 0x00DD2DA3
-		// (set) Token: 0x0603A31F RID: 238367 RVA: 0x00DD4BAB File Offset: 0x00DD2DAB
+		// Token: 0x17005F4C RID: 24396
+		// (get) Token: 0x0602F244 RID: 193092 RVA: 0x00D24033 File Offset: 0x00D22233
+		// (set) Token: 0x0602F245 RID: 193093 RVA: 0x00D2403B File Offset: 0x00D2223B
 		public int TypeId { get; set; }
 
-		// Token: 0x17008B80 RID: 35712
-		// (get) Token: 0x0603A320 RID: 238368 RVA: 0x00DD4BB4 File Offset: 0x00DD2DB4
-		// (set) Token: 0x0603A321 RID: 238369 RVA: 0x00DD4BBC File Offset: 0x00DD2DBC
+		// Token: 0x17005F4D RID: 24397
+		// (get) Token: 0x0602F246 RID: 193094 RVA: 0x00D24044 File Offset: 0x00D22244
+		// (set) Token: 0x0602F247 RID: 193095 RVA: 0x00D2404C File Offset: 0x00D2224C
 		public TableTextArgNew MainTextObj { get; set; }
 
-		// Token: 0x17008B81 RID: 35713
-		// (get) Token: 0x0603A322 RID: 238370 RVA: 0x00DD4BC5 File Offset: 0x00DD2DC5
-		// (set) Token: 0x0603A323 RID: 238371 RVA: 0x00DD4BCD File Offset: 0x00DD2DCD
+		// Token: 0x17005F4E RID: 24398
+		// (get) Token: 0x0602F248 RID: 193096 RVA: 0x00D24055 File Offset: 0x00D22255
+		// (set) Token: 0x0602F249 RID: 193097 RVA: 0x00D2405D File Offset: 0x00D2225D
 		public TableTextArgNew ExtraTextObj { get; set; }
 
-		// Token: 0x17008B82 RID: 35714
-		// (get) Token: 0x0603A324 RID: 238372 RVA: 0x00DD4BD6 File Offset: 0x00DD2DD6
-		// (set) Token: 0x0603A325 RID: 238373 RVA: 0x00DD4BDE File Offset: 0x00DD2DDE
+		// Token: 0x17005F4F RID: 24399
+		// (get) Token: 0x0602F24A RID: 193098 RVA: 0x00D24066 File Offset: 0x00D22266
+		// (set) Token: 0x0602F24B RID: 193099 RVA: 0x00D2406E File Offset: 0x00D2226E
 		public int? PromptId { get; set; }
 
-		// Token: 0x17008B83 RID: 35715
-		// (get) Token: 0x0603A326 RID: 238374 RVA: 0x00DD4BE7 File Offset: 0x00DD2DE7
-		// (set) Token: 0x0603A327 RID: 238375 RVA: 0x00DD4BEF File Offset: 0x00DD2DEF
+		// Token: 0x17005F50 RID: 24400
+		// (get) Token: 0x0602F24C RID: 193100 RVA: 0x00D24077 File Offset: 0x00D22277
+		// (set) Token: 0x0602F24D RID: 193101 RVA: 0x00D2407F File Offset: 0x00D2227F
 		[Nullable(new byte[]
 		{
 			2,
@@ -47,9 +47,9 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			1
 		})] set; }
 
-		// Token: 0x17008B84 RID: 35716
-		// (get) Token: 0x0603A328 RID: 238376 RVA: 0x00DD4BF8 File Offset: 0x00DD2DF8
-		// (set) Token: 0x0603A329 RID: 238377 RVA: 0x00DD4C00 File Offset: 0x00DD2E00
+		// Token: 0x17005F51 RID: 24401
+		// (get) Token: 0x0602F24E RID: 193102 RVA: 0x00D24088 File Offset: 0x00D22288
+		// (set) Token: 0x0602F24F RID: 193103 RVA: 0x00D24090 File Offset: 0x00D22290
 		[Nullable(new byte[]
 		{
 			2,
@@ -65,28 +65,28 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			1
 		})] set; }
 
-		// Token: 0x17008B85 RID: 35717
-		// (get) Token: 0x0603A32A RID: 238378 RVA: 0x00DD4C09 File Offset: 0x00DD2E09
-		// (set) Token: 0x0603A32B RID: 238379 RVA: 0x00DD4C11 File Offset: 0x00DD2E11
+		// Token: 0x17005F52 RID: 24402
+		// (get) Token: 0x0602F250 RID: 193104 RVA: 0x00D24099 File Offset: 0x00D22299
+		// (set) Token: 0x0602F251 RID: 193105 RVA: 0x00D240A1 File Offset: 0x00D222A1
 		public Action CloseCallback { get; set; }
 
-		// Token: 0x17008B86 RID: 35718
-		// (get) Token: 0x0603A32C RID: 238380 RVA: 0x00DD4C1A File Offset: 0x00DD2E1A
-		// (set) Token: 0x0603A32D RID: 238381 RVA: 0x00DD4C22 File Offset: 0x00DD2E22
+		// Token: 0x17005F53 RID: 24403
+		// (get) Token: 0x0602F252 RID: 193106 RVA: 0x00D240AA File Offset: 0x00D222AA
+		// (set) Token: 0x0602F253 RID: 193107 RVA: 0x00D240B2 File Offset: 0x00D222B2
 		public float? Duration { get; set; }
 
-		// Token: 0x17008B87 RID: 35719
-		// (get) Token: 0x0603A32E RID: 238382 RVA: 0x00DD4C2B File Offset: 0x00DD2E2B
-		// (set) Token: 0x0603A32F RID: 238383 RVA: 0x00DD4C33 File Offset: 0x00DD2E33
+		// Token: 0x17005F54 RID: 24404
+		// (get) Token: 0x0602F254 RID: 193108 RVA: 0x00D240BB File Offset: 0x00D222BB
+		// (set) Token: 0x0602F255 RID: 193109 RVA: 0x00D240C3 File Offset: 0x00D222C3
 		public string PromptKey { get; set; }
 
-		// Token: 0x17008B88 RID: 35720
-		// (get) Token: 0x0603A330 RID: 238384 RVA: 0x00DD4C3C File Offset: 0x00DD2E3C
-		// (set) Token: 0x0603A331 RID: 238385 RVA: 0x00DD4C44 File Offset: 0x00DD2E44
+		// Token: 0x17005F55 RID: 24405
+		// (get) Token: 0x0602F256 RID: 193110 RVA: 0x00D240CC File Offset: 0x00D222CC
+		// (set) Token: 0x0602F257 RID: 193111 RVA: 0x00D240D4 File Offset: 0x00D222D4
 		public T ExtraParam { get; set; }
 
-		// Token: 0x17008B89 RID: 35721
-		// (get) Token: 0x0603A332 RID: 238386 RVA: 0x00DD4C4D File Offset: 0x00DD2E4D
+		// Token: 0x17005F56 RID: 24406
+		// (get) Token: 0x0602F258 RID: 193112 RVA: 0x00D240DD File Offset: 0x00D222DD
 		public object ExtraParamObj
 		{
 			get

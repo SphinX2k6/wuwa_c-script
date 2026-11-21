@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DC0 RID: 19904
+	// Token: 0x02003D89 RID: 15753
 	public interface IBossChallengeStateVisibility
 	{
-		// Token: 0x17007EB3 RID: 32435
-		// (get) Token: 0x06033623 RID: 210467
-		// (set) Token: 0x06033624 RID: 210468
+		// Token: 0x17005263 RID: 21091
+		// (get) Token: 0x06028490 RID: 165008
+		// (set) Token: 0x06028491 RID: 165009
 		bool ShowUnlock { get; set; }
 
-		// Token: 0x17007EB4 RID: 32436
-		// (get) Token: 0x06033625 RID: 210469
-		// (set) Token: 0x06033626 RID: 210470
+		// Token: 0x17005264 RID: 21092
+		// (get) Token: 0x06028492 RID: 165010
+		// (set) Token: 0x06028493 RID: 165011
 		bool ShowEmptyIcon { get; set; }
 
-		// Token: 0x17007EB5 RID: 32437
-		// (get) Token: 0x06033627 RID: 210471
-		// (set) Token: 0x06033628 RID: 210472
+		// Token: 0x17005265 RID: 21093
+		// (get) Token: 0x06028494 RID: 165012
+		// (set) Token: 0x06028495 RID: 165013
 		bool ShowFinished { get; set; }
 	}
 }

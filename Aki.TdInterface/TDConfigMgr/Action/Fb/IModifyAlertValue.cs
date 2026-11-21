@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029FA RID: 10746
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CE7 RID: 11495
 	public class IModifyAlertValue : IAlertSystemOption
 	{
-		// Token: 0x0600ED2F RID: 60719 RVA: 0x0022989C File Offset: 0x00227A9C
+		// Token: 0x0600FBC6 RID: 64454 RVA: 0x00247220 File Offset: 0x00245420
 		public static IModifyAlertValue Create(IModifyAlertValue? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AFD RID: 19197
-		// (get) Token: 0x0600ED30 RID: 60720 RVA: 0x002298BB File Offset: 0x00227ABB
+		// Token: 0x17004EA6 RID: 20134
+		// (get) Token: 0x0600FBC7 RID: 64455 RVA: 0x0024723F File Offset: 0x0024543F
 		public override EAlertSystemOption Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AFE RID: 19198
-		// (get) Token: 0x0600ED31 RID: 60721 RVA: 0x002298C8 File Offset: 0x00227AC8
+		// Token: 0x17004EA7 RID: 20135
+		// (get) Token: 0x0600FBC8 RID: 64456 RVA: 0x0024724C File Offset: 0x0024544C
 		public override int AreaId
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AFF RID: 19199
-		// (get) Token: 0x0600ED32 RID: 60722 RVA: 0x002298D5 File Offset: 0x00227AD5
+		// Token: 0x17004EA8 RID: 20136
+		// (get) Token: 0x0600FBC9 RID: 64457 RVA: 0x00247259 File Offset: 0x00245459
 		public virtual ISetAlertValueType SetType
 		{
 			get
@@ -58,8 +55,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B00 RID: 19200
-		// (get) Token: 0x0600ED33 RID: 60723 RVA: 0x00229904 File Offset: 0x00227B04
+		// Token: 0x17004EA9 RID: 20137
+		// (get) Token: 0x0600FBCA RID: 64458 RVA: 0x00247288 File Offset: 0x00245488
 		public virtual IAlertValueSpeedChangeType ChangeSpeed
 		{
 			get
@@ -74,19 +71,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008294 RID: 33428
+		// Token: 0x04008985 RID: 35205
 		private IModifyAlertValue Instance;
 
-		// Token: 0x04008295 RID: 33429
+		// Token: 0x04008986 RID: 35206
 		private ISetAlertValueType _SetTypeCache;
 
-		// Token: 0x04008296 RID: 33430
+		// Token: 0x04008987 RID: 35207
 		private bool _SetTypeInited;
 
-		// Token: 0x04008297 RID: 33431
+		// Token: 0x04008988 RID: 35208
 		private IAlertValueSpeedChangeType _ChangeSpeedCache;
 
-		// Token: 0x04008298 RID: 33432
+		// Token: 0x04008989 RID: 35209
 		private bool _ChangeSpeedInited;
 	}
 }

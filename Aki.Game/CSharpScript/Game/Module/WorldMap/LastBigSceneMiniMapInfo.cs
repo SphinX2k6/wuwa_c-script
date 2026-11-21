@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x02004793 RID: 18323
+	// Token: 0x020036C4 RID: 14020
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LastBigSceneMiniMapInfo : ILastBigSceneMiniMapInfo
 	{
-		// Token: 0x170077E2 RID: 30690
-		// (get) Token: 0x0602FEE4 RID: 196324 RVA: 0x00B19CAF File Offset: 0x00B17EAF
-		// (set) Token: 0x0602FEE5 RID: 196325 RVA: 0x00B19CB7 File Offset: 0x00B17EB7
+		// Token: 0x17004A9E RID: 19102
+		// (get) Token: 0x060246AF RID: 149167 RVA: 0x00A49B8B File Offset: 0x00A47D8B
+		// (set) Token: 0x060246B0 RID: 149168 RVA: 0x00A49B93 File Offset: 0x00A47D93
 		public int InstanceDungeonId { get; set; }
 
-		// Token: 0x170077E3 RID: 30691
-		// (get) Token: 0x0602FEE6 RID: 196326 RVA: 0x00B19CC0 File Offset: 0x00B17EC0
-		// (set) Token: 0x0602FEE7 RID: 196327 RVA: 0x00B19CC8 File Offset: 0x00B17EC8
+		// Token: 0x17004A9F RID: 19103
+		// (get) Token: 0x060246B1 RID: 149169 RVA: 0x00A49B9C File Offset: 0x00A47D9C
+		// (set) Token: 0x060246B2 RID: 149170 RVA: 0x00A49BA4 File Offset: 0x00A47DA4
 		public Vector Position { get; set; }
 	}
 }

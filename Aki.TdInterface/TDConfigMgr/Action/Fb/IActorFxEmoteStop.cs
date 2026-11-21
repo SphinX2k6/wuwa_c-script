@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002534 RID: 9524
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020027DB RID: 10203
 	public class IActorFxEmoteStop : IActorFxEmoteType
 	{
-		// Token: 0x0600D449 RID: 54345 RVA: 0x001F6E02 File Offset: 0x001F5002
+		// Token: 0x0600E1A9 RID: 57769 RVA: 0x00212862 File Offset: 0x00210A62
 		public static IActorFxEmoteStop Create(IActorFxEmoteStop? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003BA3 RID: 15267
-		// (get) Token: 0x0600D44A RID: 54346 RVA: 0x001F6E21 File Offset: 0x001F5021
+		// Token: 0x17003EA1 RID: 16033
+		// (get) Token: 0x0600E1AA RID: 57770 RVA: 0x00212881 File Offset: 0x00210A81
 		public override EActorFxEmoteType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BA4 RID: 15268
-		// (get) Token: 0x0600D44B RID: 54347 RVA: 0x001F6E2E File Offset: 0x001F502E
+		// Token: 0x17003EA2 RID: 16034
+		// (get) Token: 0x0600E1AB RID: 57771 RVA: 0x0021288E File Offset: 0x00210A8E
 		public virtual IActorFxEmoteStopSubType StopType
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BA5 RID: 15269
-		// (get) Token: 0x0600D44C RID: 54348 RVA: 0x001F6E60 File Offset: 0x001F5060
+		// Token: 0x17003EA3 RID: 16035
+		// (get) Token: 0x0600E1AC RID: 57772 RVA: 0x002128C0 File Offset: 0x00210AC0
 		public virtual float? DelayTime
 		{
 			get
@@ -62,13 +59,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400744A RID: 29770
+		// Token: 0x04007A9F RID: 31391
 		private IActorFxEmoteStop Instance;
 
-		// Token: 0x0400744B RID: 29771
+		// Token: 0x04007AA0 RID: 31392
 		private IActorFxEmoteStopSubType _StopTypeCache;
 
-		// Token: 0x0400744C RID: 29772
+		// Token: 0x04007AA1 RID: 31393
 		private bool _StopTypeInited;
 	}
 }

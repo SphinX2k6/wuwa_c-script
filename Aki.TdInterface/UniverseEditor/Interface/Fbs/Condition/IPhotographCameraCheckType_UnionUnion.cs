@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C7D RID: 19581
+	// Token: 0x02005176 RID: 20854
 	public class IPhotographCameraCheckType_UnionUnion
 	{
-		// Token: 0x17008E34 RID: 36404
-		// (get) Token: 0x0601F0CD RID: 127181 RVA: 0x00457075 File Offset: 0x00455275
-		// (set) Token: 0x0601F0CE RID: 127182 RVA: 0x0045707D File Offset: 0x0045527D
+		// Token: 0x17009562 RID: 38242
+		// (get) Token: 0x06020CEF RID: 134383 RVA: 0x0048ABC5 File Offset: 0x00488DC5
+		// (set) Token: 0x06020CF0 RID: 134384 RVA: 0x0048ABCD File Offset: 0x00488DCD
 		public IPhotographCameraCheckType_Union Type { get; set; }
 
-		// Token: 0x17008E35 RID: 36405
-		// (get) Token: 0x0601F0CF RID: 127183 RVA: 0x00457086 File Offset: 0x00455286
-		// (set) Token: 0x0601F0D0 RID: 127184 RVA: 0x0045708E File Offset: 0x0045528E
+		// Token: 0x17009563 RID: 38243
+		// (get) Token: 0x06020CF1 RID: 134385 RVA: 0x0048ABD6 File Offset: 0x00488DD6
+		// (set) Token: 0x06020CF2 RID: 134386 RVA: 0x0048ABDE File Offset: 0x00488DDE
 		public object Value { get; set; }
 
-		// Token: 0x0601F0D1 RID: 127185 RVA: 0x00457097 File Offset: 0x00455297
+		// Token: 0x06020CF3 RID: 134387 RVA: 0x0048ABE7 File Offset: 0x00488DE7
 		public IPhotographCameraCheckType_UnionUnion()
 		{
 			this.Type = IPhotographCameraCheckType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F0D2 RID: 127186 RVA: 0x004570AD File Offset: 0x004552AD
+		// Token: 0x06020CF4 RID: 134388 RVA: 0x0048ABFD File Offset: 0x00488DFD
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F0D3 RID: 127187 RVA: 0x004570BF File Offset: 0x004552BF
+		// Token: 0x06020CF5 RID: 134389 RVA: 0x0048AC0F File Offset: 0x00488E0F
 		public IPhotographCameraCheckTypeT AsIPhotographCameraCheckType()
 		{
 			return this.As<IPhotographCameraCheckTypeT>();
 		}
 
-		// Token: 0x0601F0D4 RID: 127188 RVA: 0x004570C7 File Offset: 0x004552C7
+		// Token: 0x06020CF6 RID: 134390 RVA: 0x0048AC17 File Offset: 0x00488E17
 		public static IPhotographCameraCheckType_UnionUnion FromIPhotographCameraCheckType(IPhotographCameraCheckTypeT _iphotographcamerachecktype)
 		{
 			return new IPhotographCameraCheckType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F0D5 RID: 127189 RVA: 0x004570DC File Offset: 0x004552DC
+		// Token: 0x06020CF7 RID: 134391 RVA: 0x0048AC2C File Offset: 0x00488E2C
 		public IPhotographCameraCheckTemplateT AsIPhotographCameraCheckTemplate()
 		{
 			return this.As<IPhotographCameraCheckTemplateT>();
 		}
 
-		// Token: 0x0601F0D6 RID: 127190 RVA: 0x004570E4 File Offset: 0x004552E4
+		// Token: 0x06020CF8 RID: 134392 RVA: 0x0048AC34 File Offset: 0x00488E34
 		public static IPhotographCameraCheckType_UnionUnion FromIPhotographCameraCheckTemplate(IPhotographCameraCheckTemplateT _iphotographcamerachecktemplate)
 		{
 			return new IPhotographCameraCheckType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F0D7 RID: 127191 RVA: 0x004570F9 File Offset: 0x004552F9
+		// Token: 0x06020CF9 RID: 134393 RVA: 0x0048AC49 File Offset: 0x00488E49
 		public IPhotographCameraCheckAspectRatioTypeT AsIPhotographCameraCheckAspectRatioType()
 		{
 			return this.As<IPhotographCameraCheckAspectRatioTypeT>();
 		}
 
-		// Token: 0x0601F0D8 RID: 127192 RVA: 0x00457101 File Offset: 0x00455301
+		// Token: 0x06020CFA RID: 134394 RVA: 0x0048AC51 File Offset: 0x00488E51
 		public static IPhotographCameraCheckType_UnionUnion FromIPhotographCameraCheckAspectRatioType(IPhotographCameraCheckAspectRatioTypeT _iphotographcameracheckaspectratiotype)
 		{
 			return new IPhotographCameraCheckType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F0D9 RID: 127193 RVA: 0x00457116 File Offset: 0x00455316
+		// Token: 0x06020CFB RID: 134395 RVA: 0x0048AC66 File Offset: 0x00488E66
 		public IPhotographCameraCheckBlurIntensityT AsIPhotographCameraCheckBlurIntensity()
 		{
 			return this.As<IPhotographCameraCheckBlurIntensityT>();
 		}
 
-		// Token: 0x0601F0DA RID: 127194 RVA: 0x0045711E File Offset: 0x0045531E
+		// Token: 0x06020CFC RID: 134396 RVA: 0x0048AC6E File Offset: 0x00488E6E
 		public static IPhotographCameraCheckType_UnionUnion FromIPhotographCameraCheckBlurIntensity(IPhotographCameraCheckBlurIntensityT _iphotographcameracheckblurintensity)
 		{
 			return new IPhotographCameraCheckType_UnionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F0DB RID: 127195 RVA: 0x00457134 File Offset: 0x00455334
+		// Token: 0x06020CFD RID: 134397 RVA: 0x0048AC84 File Offset: 0x00488E84
 		public static int Pack(FlatBufferBuilder builder, IPhotographCameraCheckType_UnionUnion _o)
 		{
 			switch (_o.Type)

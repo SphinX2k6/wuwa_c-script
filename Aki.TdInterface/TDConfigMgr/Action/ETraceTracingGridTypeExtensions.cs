@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200247D RID: 9341
+	// Token: 0x02002720 RID: 10016
 	public static class ETraceTracingGridTypeExtensions
 	{
-		// Token: 0x0600CAB1 RID: 51889 RVA: 0x001DD5AC File Offset: 0x001DB7AC
+		// Token: 0x0600D76A RID: 55146 RVA: 0x001F7774 File Offset: 0x001F5974
 		public static string ToEnumString(this ETraceTracingGridType value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAB2 RID: 51890 RVA: 0x001DD60C File Offset: 0x001DB80C
+		// Token: 0x0600D76B RID: 55147 RVA: 0x001F77D4 File Offset: 0x001F59D4
 		public static ETraceTracingGridType FromString(string name)
 		{
 			ETraceTracingGridType result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAB3 RID: 51891 RVA: 0x001DD638 File Offset: 0x001DB838
+		// Token: 0x0600D76C RID: 55148 RVA: 0x001F7800 File Offset: 0x001F5A00
 		public static bool TryFromString(string name, out ETraceTracingGridType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CAB4 RID: 51892 RVA: 0x001DD6B2 File Offset: 0x001DB8B2
+		// Token: 0x0600D76D RID: 55149 RVA: 0x001F787A File Offset: 0x001F5A7A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAB5 RID: 51893 RVA: 0x001DD6E2 File Offset: 0x001DB8E2
+		// Token: 0x0600D76E RID: 55150 RVA: 0x001F78AA File Offset: 0x001F5AAA
 		public static ETraceTracingGridType[] GetValues()
 		{
 			return new ETraceTracingGridType[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAB6 RID: 51894 RVA: 0x001DD6F5 File Offset: 0x001DB8F5
+		// Token: 0x0600D76F RID: 55151 RVA: 0x001F78BD File Offset: 0x001F5ABD
 		public static string[] GetNames()
 		{
 			return new string[]

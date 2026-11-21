@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000ABA RID: 2746
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B84 RID: 2948
 	public class IRandomNpcRule : IRefreshRule
 	{
-		// Token: 0x06003F47 RID: 16199 RVA: 0x000A1B21 File Offset: 0x0009FD21
+		// Token: 0x06004371 RID: 17265 RVA: 0x000AB115 File Offset: 0x000A9315
 		public static IRandomNpcRule Create(IRandomNpcRule? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F90 RID: 3984
-		// (get) Token: 0x06003F48 RID: 16200 RVA: 0x000A1B40 File Offset: 0x0009FD40
+		// Token: 0x17001064 RID: 4196
+		// (get) Token: 0x06004372 RID: 17266 RVA: 0x000AB134 File Offset: 0x000A9334
 		public override ERefreshRule Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F91 RID: 3985
-		// (get) Token: 0x06003F49 RID: 16201 RVA: 0x000A1B50 File Offset: 0x0009FD50
+		// Token: 0x17001065 RID: 4197
+		// (get) Token: 0x06004373 RID: 17267 RVA: 0x000AB144 File Offset: 0x000A9344
 		public virtual List<IFixedDateTime> DateTimeList
 		{
 			get
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F92 RID: 3986
-		// (get) Token: 0x06003F4A RID: 16202 RVA: 0x000A1BB9 File Offset: 0x0009FDB9
+		// Token: 0x17001066 RID: 4198
+		// (get) Token: 0x06004374 RID: 17268 RVA: 0x000AB1AD File Offset: 0x000A93AD
 		public virtual IProbabilityRefreshGroup ProbabilityRefreshGroup
 		{
 			get
@@ -70,20 +68,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002323 RID: 8995
+		// Token: 0x0400253F RID: 9535
 		private IRandomNpcRule Instance;
 
-		// Token: 0x04002324 RID: 8996
+		// Token: 0x04002540 RID: 9536
 		private List<IFixedDateTime> _DateTimeListCache;
 
-		// Token: 0x04002325 RID: 8997
+		// Token: 0x04002541 RID: 9537
 		private bool _DateTimeListInited;
 
-		// Token: 0x04002326 RID: 8998
+		// Token: 0x04002542 RID: 9538
 		[Nullable(2)]
 		private IProbabilityRefreshGroup _ProbabilityRefreshGroupCache;
 
-		// Token: 0x04002327 RID: 8999
+		// Token: 0x04002543 RID: 9539
 		private bool _ProbabilityRefreshGroupInited;
 	}
 }

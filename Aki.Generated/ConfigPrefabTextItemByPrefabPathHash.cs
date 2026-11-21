@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000755 RID: 1877
+	// Token: 0x0200076D RID: 1901
 	public class ConfigPrefabTextItemByPrefabPathHash : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002C0F RID: 11279 RVA: 0x001526E4 File Offset: 0x001508E4
+		// Token: 0x06002C9F RID: 11423 RVA: 0x00159160 File Offset: 0x00157360
 		static ConfigPrefabTextItemByPrefabPathHash()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPrefabTextItemByPrefabPathHash.CreateStaticDefaultValue), new Action(ConfigPrefabTextItemByPrefabPathHash.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002C10 RID: 11280 RVA: 0x00152704 File Offset: 0x00150904
+		// Token: 0x06002CA0 RID: 11424 RVA: 0x00159180 File Offset: 0x00157380
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPrefabTextItemByPrefabPathHash.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002C11 RID: 11281 RVA: 0x00152783 File Offset: 0x00150983
+		// Token: 0x06002CA1 RID: 11425 RVA: 0x001591FF File Offset: 0x001573FF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPrefabTextItemByPrefabPathHash.LogPair = null;
 			ConfigPrefabTextItemByPrefabPathHash.HandleId = 0;
 		}
 
-		// Token: 0x06002C12 RID: 11282 RVA: 0x00152791 File Offset: 0x00150991
+		// Token: 0x06002CA2 RID: 11426 RVA: 0x0015920D File Offset: 0x0015740D
 		public static void Init()
 		{
 			ConfigPrefabTextItemByPrefabPathHash.HandleId = ConfigCommon.InitDataStatement(ConfigPrefabTextItemByPrefabPathHash.HandleId, "db_ui_prefabtextitem.db", "select BinData from `PrefabTextItem` where PrefabPathHash = ?");
 		}
 
-		// Token: 0x06002C13 RID: 11283 RVA: 0x001527AC File Offset: 0x001509AC
+		// Token: 0x06002CA3 RID: 11427 RVA: 0x00159228 File Offset: 0x00157428
 		[NullableContext(2)]
 		public static IReadOnlyList<PrefabTextItem> GetConfigList(long p0PrefabPathHash, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003339 RID: 13113
+		// Token: 0x040033E1 RID: 13281
 		private const string DB = "db_ui_prefabtextitem.db";
 
-		// Token: 0x0400333A RID: 13114
+		// Token: 0x040033E2 RID: 13282
 		private const string FILE = "u.UiTextCollect/u.预制体文本收集.csv";
 
-		// Token: 0x0400333B RID: 13115
+		// Token: 0x040033E3 RID: 13283
 		private const string TABLE = "PrefabTextItem";
 
-		// Token: 0x0400333C RID: 13116
+		// Token: 0x040033E4 RID: 13284
 		private const string COMMAND = "select BinData from `PrefabTextItem` where PrefabPathHash = ?";
 
-		// Token: 0x0400333D RID: 13117
+		// Token: 0x040033E5 RID: 13285
 		private const string KEY_PREFIX = "PrefabTextItemByPrefabPathHash";
 
-		// Token: 0x0400333E RID: 13118
+		// Token: 0x040033E6 RID: 13286
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400333F RID: 13119
+		// Token: 0x040033E7 RID: 13287
 		private static int HandleId;
 	}
 }

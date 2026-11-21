@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052C7 RID: 21191
+	// Token: 0x02005832 RID: 22578
 	public enum IFoxJumpInteractPointRelationType_Union : byte
 	{
-		// Token: 0x0400E44F RID: 58447
+		// Token: 0x0400F05C RID: 61532
 		NONE,
-		// Token: 0x0400E450 RID: 58448
+		// Token: 0x0400F05D RID: 61533
 		IFoxJumpInteractPointRelationType,
-		// Token: 0x0400E451 RID: 58449
+		// Token: 0x0400F05E RID: 61534
 		IFoxJumpPositionOnThisEntity,
-		// Token: 0x0400E452 RID: 58450
+		// Token: 0x0400F05F RID: 61535
 		IFoxJumpPositionOnPathDrivenSpawnedActor
 	}
 }

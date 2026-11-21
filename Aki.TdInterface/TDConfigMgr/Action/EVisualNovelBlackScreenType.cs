@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016F9 RID: 5881
+	// Token: 0x02001875 RID: 6261
 	[EnumExtensions]
 	public enum EVisualNovelBlackScreenType
 	{
-		// Token: 0x04004F9C RID: 20380
+		// Token: 0x040053C9 RID: 21449
 		Black,
-		// Token: 0x04004F9D RID: 20381
+		// Token: 0x040053CA RID: 21450
 		White
 	}
 }

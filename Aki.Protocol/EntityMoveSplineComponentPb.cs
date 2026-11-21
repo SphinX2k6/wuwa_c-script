@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020004A4 RID: 1188
+	// Token: 0x0200048D RID: 1165
 	public sealed class EntityMoveSplineComponentPb : IMessage<EntityMoveSplineComponentPb>, IMessage, IEquatable<EntityMoveSplineComponentPb>, IDeepCloneable<EntityMoveSplineComponentPb>, IBufferMessage
 	{
-		// Token: 0x06007151 RID: 29009 RVA: 0x00116053 File Offset: 0x00114253
+		// Token: 0x06006FC3 RID: 28611 RVA: 0x00112FDB File Offset: 0x001111DB
 		[NullableContext(1)]
 		public static EntityMoveSplineComponentPb Create()
 		{
 			return new EntityMoveSplineComponentPb();
 		}
 
-		// Token: 0x170015DB RID: 5595
-		// (get) Token: 0x06007152 RID: 29010 RVA: 0x0011605A File Offset: 0x0011425A
+		// Token: 0x17001587 RID: 5511
+		// (get) Token: 0x06006FC4 RID: 28612 RVA: 0x00112FE2 File Offset: 0x001111E2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170015DC RID: 5596
-		// (get) Token: 0x06007153 RID: 29011 RVA: 0x0011605D File Offset: 0x0011425D
+		// Token: 0x17001588 RID: 5512
+		// (get) Token: 0x06006FC5 RID: 28613 RVA: 0x00112FE5 File Offset: 0x001111E5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007154 RID: 29012 RVA: 0x00116064 File Offset: 0x00114264
+		// Token: 0x06006FC6 RID: 28614 RVA: 0x00112FEC File Offset: 0x001111EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityMoveSplineComponentPb()
 		{
 		}
 
-		// Token: 0x06007155 RID: 29013 RVA: 0x0011606C File Offset: 0x0011426C
+		// Token: 0x06006FC7 RID: 28615 RVA: 0x00112FF4 File Offset: 0x001111F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityMoveSplineComponentPb(EntityMoveSplineComponentPb other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06007156 RID: 29014 RVA: 0x001160D3 File Offset: 0x001142D3
+		// Token: 0x06006FC8 RID: 28616 RVA: 0x0011305B File Offset: 0x0011125B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityMoveSplineComponentPb Clone()
@@ -70,9 +70,9 @@ namespace Aki.Protocol
 			return new EntityMoveSplineComponentPb(this);
 		}
 
-		// Token: 0x170015DD RID: 5597
-		// (get) Token: 0x06007157 RID: 29015 RVA: 0x001160DB File Offset: 0x001142DB
-		// (set) Token: 0x06007158 RID: 29016 RVA: 0x001160E3 File Offset: 0x001142E3
+		// Token: 0x17001589 RID: 5513
+		// (get) Token: 0x06006FC9 RID: 28617 RVA: 0x00113063 File Offset: 0x00111263
+		// (set) Token: 0x06006FCA RID: 28618 RVA: 0x0011306B File Offset: 0x0011126B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SplineEntityId
@@ -87,9 +87,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170015DE RID: 5598
-		// (get) Token: 0x06007159 RID: 29017 RVA: 0x001160EC File Offset: 0x001142EC
-		// (set) Token: 0x0600715A RID: 29018 RVA: 0x001160F4 File Offset: 0x001142F4
+		// Token: 0x1700158A RID: 5514
+		// (get) Token: 0x06006FCB RID: 28619 RVA: 0x00113074 File Offset: 0x00111274
+		// (set) Token: 0x06006FCC RID: 28620 RVA: 0x0011307C File Offset: 0x0011127C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MoveSplineConfig MoveSplineConfig
@@ -104,9 +104,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170015DF RID: 5599
-		// (get) Token: 0x0600715B RID: 29019 RVA: 0x001160FD File Offset: 0x001142FD
-		// (set) Token: 0x0600715C RID: 29020 RVA: 0x00116116 File Offset: 0x00114316
+		// Token: 0x1700158B RID: 5515
+		// (get) Token: 0x06006FCD RID: 28621 RVA: 0x00113085 File Offset: 0x00111285
+		// (set) Token: 0x06006FCE RID: 28622 RVA: 0x0011309E File Offset: 0x0011129E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneItemSplineRuntimeData SceneItemRuntimeData
@@ -126,8 +126,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170015E0 RID: 5600
-		// (get) Token: 0x0600715D RID: 29021 RVA: 0x0011612D File Offset: 0x0011432D
+		// Token: 0x1700158C RID: 5516
+		// (get) Token: 0x06006FCF RID: 28623 RVA: 0x001130B5 File Offset: 0x001112B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityMoveSplineComponentPb.RuntimeDataOneofCase RuntimeDataCase
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600715E RID: 29022 RVA: 0x00116135 File Offset: 0x00114335
+		// Token: 0x06006FD0 RID: 28624 RVA: 0x001130BD File Offset: 0x001112BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearRuntimeData()
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			this.runtimeData_ = null;
 		}
 
-		// Token: 0x0600715F RID: 29023 RVA: 0x00116145 File Offset: 0x00114345
+		// Token: 0x06006FD1 RID: 28625 RVA: 0x001130CD File Offset: 0x001112CD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -155,7 +155,7 @@ namespace Aki.Protocol
 			return this.Equals(other as EntityMoveSplineComponentPb);
 		}
 
-		// Token: 0x06007160 RID: 29024 RVA: 0x00116154 File Offset: 0x00114354
+		// Token: 0x06006FD2 RID: 28626 RVA: 0x001130DC File Offset: 0x001112DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(EntityMoveSplineComponentPb other)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.SplineEntityId == other.SplineEntityId && object.Equals(this.MoveSplineConfig, other.MoveSplineConfig) && object.Equals(this.SceneItemRuntimeData, other.SceneItemRuntimeData) && this.RuntimeDataCase == other.RuntimeDataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06007161 RID: 29025 RVA: 0x001161C8 File Offset: 0x001143C8
+		// Token: 0x06006FD3 RID: 28627 RVA: 0x00113150 File Offset: 0x00111350
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007162 RID: 29026 RVA: 0x0011623E File Offset: 0x0011443E
+		// Token: 0x06006FD4 RID: 28628 RVA: 0x001131C6 File Offset: 0x001113C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06007163 RID: 29027 RVA: 0x0011624B File Offset: 0x0011444B
+		// Token: 0x06006FD5 RID: 28629 RVA: 0x001131D3 File Offset: 0x001113D3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -205,7 +205,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06007164 RID: 29028 RVA: 0x00116254 File Offset: 0x00114454
+		// Token: 0x06006FD6 RID: 28630 RVA: 0x001131DC File Offset: 0x001113DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -231,7 +231,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007165 RID: 29029 RVA: 0x001162CC File Offset: 0x001144CC
+		// Token: 0x06006FD7 RID: 28631 RVA: 0x00113254 File Offset: 0x00111454
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -256,7 +256,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007166 RID: 29030 RVA: 0x0011633C File Offset: 0x0011453C
+		// Token: 0x06006FD8 RID: 28632 RVA: 0x001132C4 File Offset: 0x001114C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(EntityMoveSplineComponentPb other)
@@ -288,7 +288,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06007167 RID: 29031 RVA: 0x001163D2 File Offset: 0x001145D2
+		// Token: 0x06006FD9 RID: 28633 RVA: 0x0011335A File Offset: 0x0011155A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -296,7 +296,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06007168 RID: 29032 RVA: 0x001163DC File Offset: 0x001145DC
+		// Token: 0x06006FDA RID: 28634 RVA: 0x00113364 File Offset: 0x00111564
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -343,36 +343,36 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003C7D RID: 15485
+		// Token: 0x04003C6B RID: 15467
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003C7E RID: 15486
+		// Token: 0x04003C6C RID: 15468
 		public const int SplineEntityIdFieldNumber = 1;
 
-		// Token: 0x04003C7F RID: 15487
+		// Token: 0x04003C6D RID: 15469
 		private int splineEntityId_;
 
-		// Token: 0x04003C80 RID: 15488
+		// Token: 0x04003C6E RID: 15470
 		public const int MoveSplineConfigFieldNumber = 2;
 
-		// Token: 0x04003C81 RID: 15489
+		// Token: 0x04003C6F RID: 15471
 		private MoveSplineConfig moveSplineConfig_;
 
-		// Token: 0x04003C82 RID: 15490
+		// Token: 0x04003C70 RID: 15472
 		public const int SceneItemRuntimeDataFieldNumber = 11;
 
-		// Token: 0x04003C83 RID: 15491
+		// Token: 0x04003C71 RID: 15473
 		private object runtimeData_;
 
-		// Token: 0x04003C84 RID: 15492
+		// Token: 0x04003C72 RID: 15474
 		private EntityMoveSplineComponentPb.RuntimeDataOneofCase runtimeDataCase_;
 
-		// Token: 0x02001773 RID: 6003
+		// Token: 0x020017EB RID: 6123
 		public enum RuntimeDataOneofCase
 		{
-			// Token: 0x0400C683 RID: 50819
+			// Token: 0x0400CBAE RID: 52142
 			None,
-			// Token: 0x0400C684 RID: 50820
+			// Token: 0x0400CBAF RID: 52143
 			SceneItemRuntimeData = 11
 		}
 	}

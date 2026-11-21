@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075F3 RID: 30195
+	// Token: 0x02007E01 RID: 32257
 	public class IVisualNovelTransitionTimeT
 	{
-		// Token: 0x1700E55F RID: 58719
-		// (get) Token: 0x0603700A RID: 225290 RVA: 0x00776911 File Offset: 0x00774B11
-		// (set) Token: 0x0603700B RID: 225291 RVA: 0x00776919 File Offset: 0x00774B19
+		// Token: 0x1700F19D RID: 61853
+		// (get) Token: 0x0603A4AF RID: 238767 RVA: 0x007DAA0D File Offset: 0x007D8C0D
+		// (set) Token: 0x0603A4B0 RID: 238768 RVA: 0x007DAA15 File Offset: 0x007D8C15
 		public EVisualNovelTransitionType Type { get; set; }
 
-		// Token: 0x1700E560 RID: 58720
-		// (get) Token: 0x0603700C RID: 225292 RVA: 0x00776922 File Offset: 0x00774B22
-		// (set) Token: 0x0603700D RID: 225293 RVA: 0x0077692A File Offset: 0x00774B2A
+		// Token: 0x1700F19E RID: 61854
+		// (get) Token: 0x0603A4B1 RID: 238769 RVA: 0x007DAA1E File Offset: 0x007D8C1E
+		// (set) Token: 0x0603A4B2 RID: 238770 RVA: 0x007DAA26 File Offset: 0x007D8C26
 		public IVisualNovelDateT EndDate { get; set; }
 
-		// Token: 0x1700E561 RID: 58721
-		// (get) Token: 0x0603700E RID: 225294 RVA: 0x00776933 File Offset: 0x00774B33
-		// (set) Token: 0x0603700F RID: 225295 RVA: 0x0077693B File Offset: 0x00774B3B
+		// Token: 0x1700F19F RID: 61855
+		// (get) Token: 0x0603A4B3 RID: 238771 RVA: 0x007DAA2F File Offset: 0x007D8C2F
+		// (set) Token: 0x0603A4B4 RID: 238772 RVA: 0x007DAA37 File Offset: 0x007D8C37
 		public int EndPeriodId { get; set; }
 
-		// Token: 0x1700E562 RID: 58722
-		// (get) Token: 0x06037010 RID: 225296 RVA: 0x00776944 File Offset: 0x00774B44
-		// (set) Token: 0x06037011 RID: 225297 RVA: 0x0077694C File Offset: 0x00774B4C
+		// Token: 0x1700F1A0 RID: 61856
+		// (get) Token: 0x0603A4B5 RID: 238773 RVA: 0x007DAA40 File Offset: 0x007D8C40
+		// (set) Token: 0x0603A4B6 RID: 238774 RVA: 0x007DAA48 File Offset: 0x007D8C48
 		public bool IsFullScreen { get; set; }
 
-		// Token: 0x1700E563 RID: 58723
-		// (get) Token: 0x06037012 RID: 225298 RVA: 0x00776955 File Offset: 0x00774B55
-		// (set) Token: 0x06037013 RID: 225299 RVA: 0x0077695D File Offset: 0x00774B5D
+		// Token: 0x1700F1A1 RID: 61857
+		// (get) Token: 0x0603A4B7 RID: 238775 RVA: 0x007DAA51 File Offset: 0x007D8C51
+		// (set) Token: 0x0603A4B8 RID: 238776 RVA: 0x007DAA59 File Offset: 0x007D8C59
 		public byte NullMask { get; set; }
 
-		// Token: 0x06037014 RID: 225300 RVA: 0x00776966 File Offset: 0x00774B66
+		// Token: 0x0603A4B9 RID: 238777 RVA: 0x007DAA62 File Offset: 0x007D8C62
 		public IVisualNovelTransitionTimeT()
 		{
 			this.Type = EVisualNovelTransitionType.Location;

@@ -7,22 +7,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020011A6 RID: 4518
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000292 RID: 658
 	[UnrealObjectPath("/Script/Engine.StreamableRenderAsset")]
-	[UnrealStructLayout(2544, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2544)]
+	[UnrealStructLayout(2664, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2664)]
 	public abstract class UStreamableRenderAsset : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06010A51 RID: 68177 RVA: 0x00186FDA File Offset: 0x001851DA
+		// Token: 0x060048C0 RID: 18624 RVA: 0x00065F16 File Offset: 0x00064116
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UStreamableRenderAsset._ClassPtr;
 		}
 
-		// Token: 0x170040F3 RID: 16627
-		// (get) Token: 0x06010A52 RID: 68178 RVA: 0x00186FE6 File Offset: 0x001851E6
-		// (set) Token: 0x06010A53 RID: 68179 RVA: 0x00186FF6 File Offset: 0x001851F6
+		// Token: 0x17000D97 RID: 3479
+		// (get) Token: 0x060048C1 RID: 18625 RVA: 0x00065F22 File Offset: 0x00064122
+		// (set) Token: 0x060048C2 RID: 18626 RVA: 0x00065F32 File Offset: 0x00064132
 		public unsafe double ForceMipLevelsToBeResidentTimestamp
 		{
 			get
@@ -35,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170040F4 RID: 16628
-		// (get) Token: 0x06010A54 RID: 68180 RVA: 0x00187007 File Offset: 0x00185207
-		// (set) Token: 0x06010A55 RID: 68181 RVA: 0x00187017 File Offset: 0x00185217
+		// Token: 0x17000D98 RID: 3480
+		// (get) Token: 0x060048C3 RID: 18627 RVA: 0x00065F43 File Offset: 0x00064143
+		// (set) Token: 0x060048C4 RID: 18628 RVA: 0x00065F53 File Offset: 0x00064153
 		public unsafe int NumCinematicMipLevels
 		{
 			get
@@ -50,72 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170040F5 RID: 16629
-		// (get) Token: 0x06010A56 RID: 68182 RVA: 0x00187028 File Offset: 0x00185228
-		// (set) Token: 0x06010A57 RID: 68183 RVA: 0x00187061 File Offset: 0x00185261
-		public FPerPlatformInt KuroRuntimeLODBias
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FPerPlatformInt result;
-				if ((result = this._KuroRuntimeLODBias) == null)
-				{
-					result = (this._KuroRuntimeLODBias = new FPerPlatformInt(base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroRuntimeLODBias, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPerPlatformInt.StaticStruct(), base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroRuntimeLODBias, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170040F6 RID: 16630
-		// (get) Token: 0x06010A58 RID: 68184 RVA: 0x00187084 File Offset: 0x00185284
-		// (set) Token: 0x06010A59 RID: 68185 RVA: 0x001870BD File Offset: 0x001852BD
-		public FPerPlatformInt KuroDeviceLevelExtraLODBias
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FPerPlatformInt result;
-				if ((result = this._KuroDeviceLevelExtraLODBias) == null)
-				{
-					result = (this._KuroDeviceLevelExtraLODBias = new FPerPlatformInt(base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroDeviceLevelExtraLODBias, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPerPlatformInt.StaticStruct(), base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroDeviceLevelExtraLODBias, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170040F7 RID: 16631
-		// (get) Token: 0x06010A5A RID: 68186 RVA: 0x001870E0 File Offset: 0x001852E0
-		// (set) Token: 0x06010A5B RID: 68187 RVA: 0x00187119 File Offset: 0x00185319
-		public FPerPlatformInt KuroDeviceLevelExtraLODBiasEffectedLevel
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FPerPlatformInt result;
-				if ((result = this._KuroDeviceLevelExtraLODBiasEffectedLevel) == null)
-				{
-					result = (this._KuroDeviceLevelExtraLODBiasEffectedLevel = new FPerPlatformInt(base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroDeviceLevelExtraLODBiasEffectedLevel, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPerPlatformInt.StaticStruct(), base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroDeviceLevelExtraLODBiasEffectedLevel, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170040F8 RID: 16632
-		// (get) Token: 0x06010A5C RID: 68188 RVA: 0x0018713A File Offset: 0x0018533A
-		// (set) Token: 0x06010A5D RID: 68189 RVA: 0x0018714A File Offset: 0x0018534A
+		// Token: 0x17000D99 RID: 3481
+		// (get) Token: 0x060048C5 RID: 18629 RVA: 0x00065F64 File Offset: 0x00064164
+		// (set) Token: 0x060048C6 RID: 18630 RVA: 0x00065F74 File Offset: 0x00064174
 		public unsafe long KuroRuntimeLODBias_PackedData
 		{
 			get
@@ -128,9 +63,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170040F9 RID: 16633
-		// (get) Token: 0x06010A5E RID: 68190 RVA: 0x0018715B File Offset: 0x0018535B
-		// (set) Token: 0x06010A5F RID: 68191 RVA: 0x0018716B File Offset: 0x0018536B
+		// Token: 0x17000D9A RID: 3482
+		// (get) Token: 0x060048C7 RID: 18631 RVA: 0x00065F85 File Offset: 0x00064185
+		// (set) Token: 0x060048C8 RID: 18632 RVA: 0x00065F95 File Offset: 0x00064195
 		public unsafe long KuroRuntimeLODBias_PackedData2
 		{
 			get
@@ -143,117 +78,24 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170040FA RID: 16634
-		// (get) Token: 0x06010A60 RID: 68192 RVA: 0x0018717C File Offset: 0x0018537C
-		// (set) Token: 0x06010A61 RID: 68193 RVA: 0x001871B5 File Offset: 0x001853B5
-		public FPerPlatformInt KuroStreamingBoostFactor
+		// Token: 0x17000D9B RID: 3483
+		// (get) Token: 0x060048C9 RID: 18633 RVA: 0x00065FA6 File Offset: 0x000641A6
+		// (set) Token: 0x060048CA RID: 18634 RVA: 0x00065FB6 File Offset: 0x000641B6
+		public unsafe float KuroKeepRequireMipDurationWhenInit
 		{
 			get
 			{
-				base.FastCheckIsValid();
-				FPerPlatformInt result;
-				if ((result = this._KuroStreamingBoostFactor) == null)
-				{
-					result = (this._KuroStreamingBoostFactor = new FPerPlatformInt(base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroStreamingBoostFactor, this));
-				}
-				return result;
+				return *(base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroKeepRequireMipDurationWhenInit);
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FPerPlatformInt.StaticStruct(), base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroStreamingBoostFactor, value.NativePtr, 1, false);
+				*(base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroKeepRequireMipDurationWhenInit) = value;
 			}
 		}
 
-		// Token: 0x170040FB RID: 16635
-		// (get) Token: 0x06010A62 RID: 68194 RVA: 0x001871D8 File Offset: 0x001853D8
-		// (set) Token: 0x06010A63 RID: 68195 RVA: 0x00187211 File Offset: 0x00185411
-		public FPerPlatformInt KuroStreamingPriority
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FPerPlatformInt result;
-				if ((result = this._KuroStreamingPriority) == null)
-				{
-					result = (this._KuroStreamingPriority = new FPerPlatformInt(base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroStreamingPriority, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPerPlatformInt.StaticStruct(), base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroStreamingPriority, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170040FC RID: 16636
-		// (get) Token: 0x06010A64 RID: 68196 RVA: 0x00187234 File Offset: 0x00185434
-		// (set) Token: 0x06010A65 RID: 68197 RVA: 0x0018726D File Offset: 0x0018546D
-		public FPerPlatformInt KuroStreamingPriorityDistanceScale
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FPerPlatformInt result;
-				if ((result = this._KuroStreamingPriorityDistanceScale) == null)
-				{
-					result = (this._KuroStreamingPriorityDistanceScale = new FPerPlatformInt(base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroStreamingPriorityDistanceScale, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPerPlatformInt.StaticStruct(), base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroStreamingPriorityDistanceScale, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170040FD RID: 16637
-		// (get) Token: 0x06010A66 RID: 68198 RVA: 0x0018728E File Offset: 0x0018548E
-		// (set) Token: 0x06010A67 RID: 68199 RVA: 0x0018729E File Offset: 0x0018549E
-		public unsafe EKuroStreamingGroup KuroStreamingGroup
-		{
-			get
-			{
-				return (EKuroStreamingGroup)(*(base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroStreamingGroup));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroStreamingGroup) = (byte)value;
-			}
-		}
-
-		// Token: 0x170040FE RID: 16638
-		// (get) Token: 0x06010A68 RID: 68200 RVA: 0x001872AF File Offset: 0x001854AF
-		// (set) Token: 0x06010A69 RID: 68201 RVA: 0x001872BF File Offset: 0x001854BF
-		public unsafe EKuroStreamingGroup KuroMobileStreamingGroup
-		{
-			get
-			{
-				return (EKuroStreamingGroup)(*(base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroMobileStreamingGroup));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroMobileStreamingGroup) = (byte)value;
-			}
-		}
-
-		// Token: 0x170040FF RID: 16639
-		// (get) Token: 0x06010A6A RID: 68202 RVA: 0x001872D0 File Offset: 0x001854D0
-		// (set) Token: 0x06010A6B RID: 68203 RVA: 0x001872E0 File Offset: 0x001854E0
-		public unsafe EKuroStreamingGroup KuroPS5StreamingGroup
-		{
-			get
-			{
-				return (EKuroStreamingGroup)(*(base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroPS5StreamingGroup));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UStreamableRenderAsset.__PropertyOffset_KuroPS5StreamingGroup) = (byte)value;
-			}
-		}
-
-		// Token: 0x17004100 RID: 16640
-		// (get) Token: 0x06010A6C RID: 68204 RVA: 0x001872F1 File Offset: 0x001854F1
-		// (set) Token: 0x06010A6D RID: 68205 RVA: 0x00187301 File Offset: 0x00185501
+		// Token: 0x17000D9C RID: 3484
+		// (get) Token: 0x060048CB RID: 18635 RVA: 0x00065FC7 File Offset: 0x000641C7
+		// (set) Token: 0x060048CC RID: 18636 RVA: 0x00065FD7 File Offset: 0x000641D7
 		public unsafe int StreamingIndex
 		{
 			get
@@ -266,9 +108,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004101 RID: 16641
-		// (get) Token: 0x06010A6E RID: 68206 RVA: 0x00187312 File Offset: 0x00185512
-		// (set) Token: 0x06010A6F RID: 68207 RVA: 0x00187322 File Offset: 0x00185522
+		// Token: 0x17000D9D RID: 3485
+		// (get) Token: 0x060048CD RID: 18637 RVA: 0x00065FE8 File Offset: 0x000641E8
+		// (set) Token: 0x060048CE RID: 18638 RVA: 0x00065FF8 File Offset: 0x000641F8
 		public unsafe int CachedCombinedLODBias
 		{
 			get
@@ -281,9 +123,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004102 RID: 16642
-		// (get) Token: 0x06010A70 RID: 68208 RVA: 0x00187333 File Offset: 0x00185533
-		// (set) Token: 0x06010A71 RID: 68209 RVA: 0x0018734C File Offset: 0x0018554C
+		// Token: 0x17000D9E RID: 3486
+		// (get) Token: 0x060048CF RID: 18639 RVA: 0x00066009 File Offset: 0x00064209
+		// (set) Token: 0x060048D0 RID: 18640 RVA: 0x00066022 File Offset: 0x00064222
 		public unsafe bool NeverStream
 		{
 			get
@@ -296,9 +138,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004103 RID: 16643
-		// (get) Token: 0x06010A72 RID: 68210 RVA: 0x0018737C File Offset: 0x0018557C
-		// (set) Token: 0x06010A73 RID: 68211 RVA: 0x00187395 File Offset: 0x00185595
+		// Token: 0x17000D9F RID: 3487
+		// (get) Token: 0x060048D1 RID: 18641 RVA: 0x00066052 File Offset: 0x00064252
+		// (set) Token: 0x060048D2 RID: 18642 RVA: 0x0006606B File Offset: 0x0006426B
 		public unsafe bool bGlobalForceMipLevelsToBeResident
 		{
 			get
@@ -311,9 +153,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004104 RID: 16644
-		// (get) Token: 0x06010A74 RID: 68212 RVA: 0x001873C5 File Offset: 0x001855C5
-		// (set) Token: 0x06010A75 RID: 68213 RVA: 0x001873DE File Offset: 0x001855DE
+		// Token: 0x17000DA0 RID: 3488
+		// (get) Token: 0x060048D3 RID: 18643 RVA: 0x0006609B File Offset: 0x0006429B
+		// (set) Token: 0x060048D4 RID: 18644 RVA: 0x000660B4 File Offset: 0x000642B4
 		public unsafe bool bHasStreamingUpdatePending
 		{
 			get
@@ -326,9 +168,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004105 RID: 16645
-		// (get) Token: 0x06010A76 RID: 68214 RVA: 0x0018740E File Offset: 0x0018560E
-		// (set) Token: 0x06010A77 RID: 68215 RVA: 0x00187427 File Offset: 0x00185627
+		// Token: 0x17000DA1 RID: 3489
+		// (get) Token: 0x060048D5 RID: 18645 RVA: 0x000660E4 File Offset: 0x000642E4
+		// (set) Token: 0x060048D6 RID: 18646 RVA: 0x000660FD File Offset: 0x000642FD
 		public unsafe bool bForceMiplevelsToBeResident
 		{
 			get
@@ -341,9 +183,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004106 RID: 16646
-		// (get) Token: 0x06010A78 RID: 68216 RVA: 0x00187457 File Offset: 0x00185657
-		// (set) Token: 0x06010A79 RID: 68217 RVA: 0x00187470 File Offset: 0x00185670
+		// Token: 0x17000DA2 RID: 3490
+		// (get) Token: 0x060048D7 RID: 18647 RVA: 0x0006612D File Offset: 0x0006432D
+		// (set) Token: 0x060048D8 RID: 18648 RVA: 0x00066146 File Offset: 0x00064346
 		public unsafe bool bIgnoreStreamingMipBias
 		{
 			get
@@ -356,9 +198,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004107 RID: 16647
-		// (get) Token: 0x06010A7A RID: 68218 RVA: 0x001874A0 File Offset: 0x001856A0
-		// (set) Token: 0x06010A7B RID: 68219 RVA: 0x001874B9 File Offset: 0x001856B9
+		// Token: 0x17000DA3 RID: 3491
+		// (get) Token: 0x060048D9 RID: 18649 RVA: 0x00066176 File Offset: 0x00064376
+		// (set) Token: 0x060048DA RID: 18650 RVA: 0x0006618F File Offset: 0x0006438F
 		public unsafe bool bUseCinematicMipLevels
 		{
 			get
@@ -371,75 +213,68 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06010A7C RID: 68220 RVA: 0x001874EC File Offset: 0x001856EC
+		// Token: 0x060048DB RID: 18651 RVA: 0x000661C0 File Offset: 0x000643C0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void SetKuroStreamingQualityLevel(int InQualityLevel)
 		{
 			UStreamableRenderAsset.__SetKuroStreamingQualityLevel_FunctionParams* ptr = stackalloc UStreamableRenderAsset.__SetKuroStreamingQualityLevel_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UStreamableRenderAsset.__SetKuroStreamingQualityLevel_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UStreamableRenderAsset.__SetKuroStreamingQualityLevel_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InQualityLevel = InQualityLevel;
-			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__SetKuroStreamingQualityLevel_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__SetKuroStreamingQualityLevel_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06010A7D RID: 68221 RVA: 0x00187534 File Offset: 0x00185734
+		// Token: 0x060048DC RID: 18652 RVA: 0x00066208 File Offset: 0x00064408
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void SetKuroStreamingLevelState(int InLevelState)
 		{
 			UStreamableRenderAsset.__SetKuroStreamingLevelState_FunctionParams* ptr = stackalloc UStreamableRenderAsset.__SetKuroStreamingLevelState_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UStreamableRenderAsset.__SetKuroStreamingLevelState_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UStreamableRenderAsset.__SetKuroStreamingLevelState_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InLevelState = InLevelState;
-			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__SetKuroStreamingLevelState_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__SetKuroStreamingLevelState_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06010A7E RID: 68222 RVA: 0x0018757C File Offset: 0x0018577C
+		// Token: 0x060048DD RID: 18653 RVA: 0x00066250 File Offset: 0x00064450
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static FVector4 GetStreamingRenderAssetsInfo()
 		{
 			UStreamableRenderAsset.__GetStreamingRenderAssetsInfo_FunctionParams* ptr = stackalloc UStreamableRenderAsset.__GetStreamingRenderAssetsInfo_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UStreamableRenderAsset.__GetStreamingRenderAssetsInfo_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UStreamableRenderAsset.__GetStreamingRenderAssetsInfo_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__GetStreamingRenderAssetsInfo_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__GetStreamingRenderAssetsInfo_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06010A7F RID: 68223 RVA: 0x001875C4 File Offset: 0x001857C4
+		// Token: 0x060048DE RID: 18654 RVA: 0x00066294 File Offset: 0x00064494
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static FVector4 GetStreamingPoolInfo()
 		{
 			UStreamableRenderAsset.__GetStreamingPoolInfo_FunctionParams* ptr = stackalloc UStreamableRenderAsset.__GetStreamingPoolInfo_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UStreamableRenderAsset.__GetStreamingPoolInfo_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UStreamableRenderAsset.__GetStreamingPoolInfo_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__GetStreamingPoolInfo_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__GetStreamingPoolInfo_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06010A80 RID: 68224 RVA: 0x0018760C File Offset: 0x0018580C
+		// Token: 0x060048DF RID: 18655 RVA: 0x000662D8 File Offset: 0x000644D8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static FVector4 GetStreamingExtendedBudgetInfo()
 		{
 			UStreamableRenderAsset.__GetStreamingExtendedBudgetInfo_FunctionParams* ptr = stackalloc UStreamableRenderAsset.__GetStreamingExtendedBudgetInfo_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UStreamableRenderAsset.__GetStreamingExtendedBudgetInfo_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UStreamableRenderAsset.__GetStreamingExtendedBudgetInfo_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__GetStreamingExtendedBudgetInfo_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__GetStreamingExtendedBudgetInfo_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06010A81 RID: 68225 RVA: 0x00187654 File Offset: 0x00185854
+		// Token: 0x060048E0 RID: 18656 RVA: 0x0006631C File Offset: 0x0006451C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static FVector4 GetStreamingBudgetInfo()
 		{
 			UStreamableRenderAsset.__GetStreamingBudgetInfo_FunctionParams* ptr = stackalloc UStreamableRenderAsset.__GetStreamingBudgetInfo_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UStreamableRenderAsset.__GetStreamingBudgetInfo_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UStreamableRenderAsset.__GetStreamingBudgetInfo_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__GetStreamingBudgetInfo_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__GetStreamingBudgetInfo_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06010A82 RID: 68226 RVA: 0x0018769C File Offset: 0x0018589C
+		// Token: 0x060048E1 RID: 18657 RVA: 0x00066360 File Offset: 0x00064560
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static int GetKuroStreamingRuntimeLODBiasDeviceMappingIndices(int QualityLevel0 = 0, int QualityLevel1 = 1, int QualityLevel2 = 2, int QualityLevel3 = 3, int QualityLevel4 = 3, int QualityLevel5 = 4)
 		{
 			UStreamableRenderAsset.__GetKuroStreamingRuntimeLODBiasDeviceMappingIndices_FunctionParams* ptr = stackalloc UStreamableRenderAsset.__GetKuroStreamingRuntimeLODBiasDeviceMappingIndices_FunctionParams[(UIntPtr)43] + 15L / (long)sizeof(UStreamableRenderAsset.__GetKuroStreamingRuntimeLODBiasDeviceMappingIndices_FunctionParams) & -16L;
@@ -450,35 +285,32 @@ namespace UnrealEngine
 			ptr->QualityLevel3 = QualityLevel3;
 			ptr->QualityLevel4 = QualityLevel4;
 			ptr->QualityLevel5 = QualityLevel5;
-			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__GetKuroStreamingRuntimeLODBiasDeviceMappingIndices_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__GetKuroStreamingRuntimeLODBiasDeviceMappingIndices_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06010A83 RID: 68227 RVA: 0x00187710 File Offset: 0x00185910
+		// Token: 0x060048E2 RID: 18658 RVA: 0x000663D0 File Offset: 0x000645D0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static int GetKuroStreamingQualityLevel()
 		{
 			UStreamableRenderAsset.__GetKuroStreamingQualityLevel_FunctionParams* ptr = stackalloc UStreamableRenderAsset.__GetKuroStreamingQualityLevel_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UStreamableRenderAsset.__GetKuroStreamingQualityLevel_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UStreamableRenderAsset.__GetKuroStreamingQualityLevel_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__GetKuroStreamingQualityLevel_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__GetKuroStreamingQualityLevel_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06010A84 RID: 68228 RVA: 0x00187758 File Offset: 0x00185958
+		// Token: 0x060048E3 RID: 18659 RVA: 0x00066414 File Offset: 0x00064614
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static int GetKuroStreamingLevelState()
 		{
 			UStreamableRenderAsset.__GetKuroStreamingLevelState_FunctionParams* ptr = stackalloc UStreamableRenderAsset.__GetKuroStreamingLevelState_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UStreamableRenderAsset.__GetKuroStreamingLevelState_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UStreamableRenderAsset.__GetKuroStreamingLevelState_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__GetKuroStreamingLevelState_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__GetKuroStreamingLevelState_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06010A85 RID: 68229 RVA: 0x001877A0 File Offset: 0x001859A0
+		// Token: 0x060048E4 RID: 18660 RVA: 0x00066458 File Offset: 0x00064658
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static int EncodeStreamingLODBiasMapping(int QualityLevel0 = 0, int QualityLevel1 = 1, int QualityLevel2 = 2, int QualityLevel3 = 3, int QualityLevel4 = 4)
 		{
 			UStreamableRenderAsset.__EncodeStreamingLODBiasMapping_FunctionParams* ptr = stackalloc UStreamableRenderAsset.__EncodeStreamingLODBiasMapping_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(UStreamableRenderAsset.__EncodeStreamingLODBiasMapping_FunctionParams) & -16L;
@@ -488,320 +320,263 @@ namespace UnrealEngine
 			ptr->QualityLevel2 = QualityLevel2;
 			ptr->QualityLevel3 = QualityLevel3;
 			ptr->QualityLevel4 = QualityLevel4;
-			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__EncodeStreamingLODBiasMapping_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UStreamableRenderAsset._ClassDefaultObjectPtr, UStreamableRenderAsset.__EncodeStreamingLODBiasMapping_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06010A86 RID: 68230 RVA: 0x00187809 File Offset: 0x00185A09
+		// Token: 0x060048E5 RID: 18661 RVA: 0x000664C0 File Offset: 0x000646C0
 		static UStreamableRenderAsset()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.StreamableRenderAsset");
 		}
 
-		// Token: 0x06010A87 RID: 68231 RVA: 0x00187818 File Offset: 0x00185A18
+		// Token: 0x060048E6 RID: 18662 RVA: 0x000664D0 File Offset: 0x000646D0
 		protected UStreamableRenderAsset() : this(BuiltinUtils.AllocNativeUObject(UStreamableRenderAsset.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06010A88 RID: 68232 RVA: 0x00187840 File Offset: 0x00185A40
+		// Token: 0x060048E7 RID: 18663 RVA: 0x000664F8 File Offset: 0x000646F8
 		protected UStreamableRenderAsset(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04008E63 RID: 36451
+		// Token: 0x04001C36 RID: 7222
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.StreamableRenderAsset";
 
-		// Token: 0x04008E64 RID: 36452
+		// Token: 0x04001C37 RID: 7223
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04008E65 RID: 36453
+		// Token: 0x04001C38 RID: 7224
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04008E66 RID: 36454
+		// Token: 0x04001C39 RID: 7225
 		internal static int __PropertyOffset_ForceMipLevelsToBeResidentTimestamp;
 
-		// Token: 0x04008E67 RID: 36455
+		// Token: 0x04001C3A RID: 7226
 		internal static int __PropertyOffset_NumCinematicMipLevels;
 
-		// Token: 0x04008E68 RID: 36456
-		internal static int __PropertyOffset_KuroRuntimeLODBias;
-
-		// Token: 0x04008E69 RID: 36457
-		[Nullable(2)]
-		private FPerPlatformInt _KuroRuntimeLODBias;
-
-		// Token: 0x04008E6A RID: 36458
-		internal static int __PropertyOffset_KuroDeviceLevelExtraLODBias;
-
-		// Token: 0x04008E6B RID: 36459
-		[Nullable(2)]
-		private FPerPlatformInt _KuroDeviceLevelExtraLODBias;
-
-		// Token: 0x04008E6C RID: 36460
-		internal static int __PropertyOffset_KuroDeviceLevelExtraLODBiasEffectedLevel;
-
-		// Token: 0x04008E6D RID: 36461
-		[Nullable(2)]
-		private FPerPlatformInt _KuroDeviceLevelExtraLODBiasEffectedLevel;
-
-		// Token: 0x04008E6E RID: 36462
+		// Token: 0x04001C3B RID: 7227
 		internal static int __PropertyOffset_KuroRuntimeLODBias_PackedData;
 
-		// Token: 0x04008E6F RID: 36463
+		// Token: 0x04001C3C RID: 7228
 		internal static int __PropertyOffset_KuroRuntimeLODBias_PackedData2;
 
-		// Token: 0x04008E70 RID: 36464
-		internal static int __PropertyOffset_KuroStreamingBoostFactor;
+		// Token: 0x04001C3D RID: 7229
+		internal static int __PropertyOffset_KuroKeepRequireMipDurationWhenInit;
 
-		// Token: 0x04008E71 RID: 36465
-		[Nullable(2)]
-		private FPerPlatformInt _KuroStreamingBoostFactor;
-
-		// Token: 0x04008E72 RID: 36466
-		internal static int __PropertyOffset_KuroStreamingPriority;
-
-		// Token: 0x04008E73 RID: 36467
-		[Nullable(2)]
-		private FPerPlatformInt _KuroStreamingPriority;
-
-		// Token: 0x04008E74 RID: 36468
-		internal static int __PropertyOffset_KuroStreamingPriorityDistanceScale;
-
-		// Token: 0x04008E75 RID: 36469
-		[Nullable(2)]
-		private FPerPlatformInt _KuroStreamingPriorityDistanceScale;
-
-		// Token: 0x04008E76 RID: 36470
-		internal static int __PropertyOffset_KuroStreamingGroup;
-
-		// Token: 0x04008E77 RID: 36471
-		internal static int __PropertyOffset_KuroMobileStreamingGroup;
-
-		// Token: 0x04008E78 RID: 36472
-		internal static int __PropertyOffset_KuroPS5StreamingGroup;
-
-		// Token: 0x04008E79 RID: 36473
+		// Token: 0x04001C3E RID: 7230
 		internal static int __PropertyOffset_StreamingIndex;
 
-		// Token: 0x04008E7A RID: 36474
+		// Token: 0x04001C3F RID: 7231
 		internal static int __PropertyOffset_CachedCombinedLODBias;
 
-		// Token: 0x04008E7B RID: 36475
+		// Token: 0x04001C40 RID: 7232
 		internal static int __PropertyOffset_NeverStream;
 
-		// Token: 0x04008E7C RID: 36476
+		// Token: 0x04001C41 RID: 7233
 		internal static byte __PropertyMask_NeverStream;
 
-		// Token: 0x04008E7D RID: 36477
+		// Token: 0x04001C42 RID: 7234
 		internal static int __PropertyOffset_bGlobalForceMipLevelsToBeResident;
 
-		// Token: 0x04008E7E RID: 36478
+		// Token: 0x04001C43 RID: 7235
 		internal static byte __PropertyMask_bGlobalForceMipLevelsToBeResident;
 
-		// Token: 0x04008E7F RID: 36479
+		// Token: 0x04001C44 RID: 7236
 		internal static int __PropertyOffset_bHasStreamingUpdatePending;
 
-		// Token: 0x04008E80 RID: 36480
+		// Token: 0x04001C45 RID: 7237
 		internal static byte __PropertyMask_bHasStreamingUpdatePending;
 
-		// Token: 0x04008E81 RID: 36481
+		// Token: 0x04001C46 RID: 7238
 		internal static int __PropertyOffset_bForceMiplevelsToBeResident;
 
-		// Token: 0x04008E82 RID: 36482
+		// Token: 0x04001C47 RID: 7239
 		internal static byte __PropertyMask_bForceMiplevelsToBeResident;
 
-		// Token: 0x04008E83 RID: 36483
+		// Token: 0x04001C48 RID: 7240
 		internal static int __PropertyOffset_bIgnoreStreamingMipBias;
 
-		// Token: 0x04008E84 RID: 36484
+		// Token: 0x04001C49 RID: 7241
 		internal static byte __PropertyMask_bIgnoreStreamingMipBias;
 
-		// Token: 0x04008E85 RID: 36485
+		// Token: 0x04001C4A RID: 7242
 		internal static int __PropertyOffset_bUseCinematicMipLevels;
 
-		// Token: 0x04008E86 RID: 36486
+		// Token: 0x04001C4B RID: 7243
 		internal static byte __PropertyMask_bUseCinematicMipLevels;
 
-		// Token: 0x04008E87 RID: 36487
+		// Token: 0x04001C4C RID: 7244
 		private static IntPtr __SetKuroStreamingQualityLevel_NativeFunctionPtr;
 
-		// Token: 0x04008E88 RID: 36488
+		// Token: 0x04001C4D RID: 7245
 		private static IntPtr __SetKuroStreamingLevelState_NativeFunctionPtr;
 
-		// Token: 0x04008E89 RID: 36489
+		// Token: 0x04001C4E RID: 7246
 		private static IntPtr __GetStreamingRenderAssetsInfo_NativeFunctionPtr;
 
-		// Token: 0x04008E8A RID: 36490
+		// Token: 0x04001C4F RID: 7247
 		private static IntPtr __GetStreamingPoolInfo_NativeFunctionPtr;
 
-		// Token: 0x04008E8B RID: 36491
+		// Token: 0x04001C50 RID: 7248
 		private static IntPtr __GetStreamingExtendedBudgetInfo_NativeFunctionPtr;
 
-		// Token: 0x04008E8C RID: 36492
+		// Token: 0x04001C51 RID: 7249
 		private static IntPtr __GetStreamingBudgetInfo_NativeFunctionPtr;
 
-		// Token: 0x04008E8D RID: 36493
+		// Token: 0x04001C52 RID: 7250
 		private static IntPtr __GetKuroStreamingRuntimeLODBiasDeviceMappingIndices_NativeFunctionPtr;
 
-		// Token: 0x04008E8E RID: 36494
+		// Token: 0x04001C53 RID: 7251
 		private static IntPtr __GetKuroStreamingQualityLevel_NativeFunctionPtr;
 
-		// Token: 0x04008E8F RID: 36495
+		// Token: 0x04001C54 RID: 7252
 		private static IntPtr __GetKuroStreamingLevelState_NativeFunctionPtr;
 
-		// Token: 0x04008E90 RID: 36496
+		// Token: 0x04001C55 RID: 7253
 		private static IntPtr __EncodeStreamingLODBiasMapping_NativeFunctionPtr;
 
-		// Token: 0x02002DE9 RID: 11753
-		[NullableContext(0)]
+		// Token: 0x020009E9 RID: 2537
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetKuroStreamingQualityLevel_FunctionParams
 		{
-			// Token: 0x0401682D RID: 92205
+			// Token: 0x04005983 RID: 22915
 			[FieldOffset(0)]
 			public int InQualityLevel;
 		}
 
-		// Token: 0x02002DEA RID: 11754
-		[NullableContext(0)]
+		// Token: 0x020009EA RID: 2538
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetKuroStreamingLevelState_FunctionParams
 		{
-			// Token: 0x0401682E RID: 92206
+			// Token: 0x04005984 RID: 22916
 			[FieldOffset(0)]
 			public int InLevelState;
 		}
 
-		// Token: 0x02002DEB RID: 11755
-		[NullableContext(0)]
+		// Token: 0x020009EB RID: 2539
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetStreamingRenderAssetsInfo_FunctionParams
 		{
-			// Token: 0x0401682F RID: 92207
+			// Token: 0x04005985 RID: 22917
 			[FieldOffset(0)]
 			public FVector4 __Result;
 		}
 
-		// Token: 0x02002DEC RID: 11756
-		[NullableContext(0)]
+		// Token: 0x020009EC RID: 2540
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetStreamingPoolInfo_FunctionParams
 		{
-			// Token: 0x04016830 RID: 92208
+			// Token: 0x04005986 RID: 22918
 			[FieldOffset(0)]
 			public FVector4 __Result;
 		}
 
-		// Token: 0x02002DED RID: 11757
-		[NullableContext(0)]
+		// Token: 0x020009ED RID: 2541
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetStreamingExtendedBudgetInfo_FunctionParams
 		{
-			// Token: 0x04016831 RID: 92209
+			// Token: 0x04005987 RID: 22919
 			[FieldOffset(0)]
 			public FVector4 __Result;
 		}
 
-		// Token: 0x02002DEE RID: 11758
-		[NullableContext(0)]
+		// Token: 0x020009EE RID: 2542
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetStreamingBudgetInfo_FunctionParams
 		{
-			// Token: 0x04016832 RID: 92210
+			// Token: 0x04005988 RID: 22920
 			[FieldOffset(0)]
 			public FVector4 __Result;
 		}
 
-		// Token: 0x02002DEF RID: 11759
-		[NullableContext(0)]
+		// Token: 0x020009EF RID: 2543
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 28)]
 		protected ref struct __GetKuroStreamingRuntimeLODBiasDeviceMappingIndices_FunctionParams
 		{
-			// Token: 0x04016833 RID: 92211
+			// Token: 0x04005989 RID: 22921
 			[FieldOffset(0)]
 			public int QualityLevel0;
 
-			// Token: 0x04016834 RID: 92212
+			// Token: 0x0400598A RID: 22922
 			[FieldOffset(4)]
 			public int QualityLevel1;
 
-			// Token: 0x04016835 RID: 92213
+			// Token: 0x0400598B RID: 22923
 			[FieldOffset(8)]
 			public int QualityLevel2;
 
-			// Token: 0x04016836 RID: 92214
+			// Token: 0x0400598C RID: 22924
 			[FieldOffset(12)]
 			public int QualityLevel3;
 
-			// Token: 0x04016837 RID: 92215
+			// Token: 0x0400598D RID: 22925
 			[FieldOffset(16)]
 			public int QualityLevel4;
 
-			// Token: 0x04016838 RID: 92216
+			// Token: 0x0400598E RID: 22926
 			[FieldOffset(20)]
 			public int QualityLevel5;
 
-			// Token: 0x04016839 RID: 92217
+			// Token: 0x0400598F RID: 22927
 			[FieldOffset(24)]
 			public int __Result;
 		}
 
-		// Token: 0x02002DF0 RID: 11760
-		[NullableContext(0)]
+		// Token: 0x020009F0 RID: 2544
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetKuroStreamingQualityLevel_FunctionParams
 		{
-			// Token: 0x0401683A RID: 92218
+			// Token: 0x04005990 RID: 22928
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x02002DF1 RID: 11761
-		[NullableContext(0)]
+		// Token: 0x020009F1 RID: 2545
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetKuroStreamingLevelState_FunctionParams
 		{
-			// Token: 0x0401683B RID: 92219
+			// Token: 0x04005991 RID: 22929
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x02002DF2 RID: 11762
-		[NullableContext(0)]
+		// Token: 0x020009F2 RID: 2546
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __EncodeStreamingLODBiasMapping_FunctionParams
 		{
-			// Token: 0x0401683C RID: 92220
+			// Token: 0x04005992 RID: 22930
 			[FieldOffset(0)]
 			public int QualityLevel0;
 
-			// Token: 0x0401683D RID: 92221
+			// Token: 0x04005993 RID: 22931
 			[FieldOffset(4)]
 			public int QualityLevel1;
 
-			// Token: 0x0401683E RID: 92222
+			// Token: 0x04005994 RID: 22932
 			[FieldOffset(8)]
 			public int QualityLevel2;
 
-			// Token: 0x0401683F RID: 92223
+			// Token: 0x04005995 RID: 22933
 			[FieldOffset(12)]
 			public int QualityLevel3;
 
-			// Token: 0x04016840 RID: 92224
+			// Token: 0x04005996 RID: 22934
 			[FieldOffset(16)]
 			public int QualityLevel4;
 
-			// Token: 0x04016841 RID: 92225
+			// Token: 0x04005997 RID: 22935
 			[FieldOffset(20)]
 			public int __Result;
 		}

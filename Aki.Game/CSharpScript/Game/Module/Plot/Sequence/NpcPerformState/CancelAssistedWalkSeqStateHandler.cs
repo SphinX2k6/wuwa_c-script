@@ -6,13 +6,13 @@ using CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 {
-	// Token: 0x0200502A RID: 20522
+	// Token: 0x02003FF4 RID: 16372
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CancelAssistedWalkSeqStateHandler : SeqNpcPerformStateHandler
 	{
-		// Token: 0x17008023 RID: 32803
-		// (get) Token: 0x06034856 RID: 215126 RVA: 0x00C6033D File Offset: 0x00C5E53D
+		// Token: 0x170053D8 RID: 21464
+		// (get) Token: 0x060296F9 RID: 169721 RVA: 0x00BAB8B5 File Offset: 0x00BA9AB5
 		public override ENpcGroupPerformType PerformType
 		{
 			get
@@ -21,8 +21,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			}
 		}
 
-		// Token: 0x17008024 RID: 32804
-		// (get) Token: 0x06034857 RID: 215127 RVA: 0x00C60340 File Offset: 0x00C5E540
+		// Token: 0x170053D9 RID: 21465
+		// (get) Token: 0x060296FA RID: 169722 RVA: 0x00BAB8B8 File Offset: 0x00BA9AB8
 		public override ENpcRelationType RelationType
 		{
 			get
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			}
 		}
 
-		// Token: 0x06034858 RID: 215128 RVA: 0x00C60344 File Offset: 0x00C5E544
+		// Token: 0x060296FB RID: 169723 RVA: 0x00BAB8BC File Offset: 0x00BA9ABC
 		[return: Nullable(2)]
 		public override NpcRelation Capture(string key)
 		{
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			};
 		}
 
-		// Token: 0x06034859 RID: 215129 RVA: 0x00C60394 File Offset: 0x00C5E594
+		// Token: 0x060296FC RID: 169724 RVA: 0x00BAB90C File Offset: 0x00BA9B0C
 		public unsafe override void OnBattleCharacterHidden(NpcRelation relation, string reason)
 		{
 			CancelAssistedWalkSeqRelation cancelAssistedWalkSeqRelation = relation as CancelAssistedWalkSeqRelation;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			AssistedWalkUtils.Instance.RequestStopAssistedWalk(cancelAssistedWalkSeqRelation.Key, reason, global::EHandType.Right);
 		}
 
-		// Token: 0x0603485A RID: 215130 RVA: 0x00C60414 File Offset: 0x00C5E614
+		// Token: 0x060296FD RID: 169725 RVA: 0x00BAB98C File Offset: 0x00BA9B8C
 		public override void Restore(NpcRelation relation, string reason)
 		{
 			CancelAssistedWalkSeqRelation cancelAssistedWalkSeqRelation = relation as CancelAssistedWalkSeqRelation;

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A4C RID: 23116
+	// Token: 0x02004A28 RID: 18984
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeAreaStrongholdContainer : UiPanelBase
 	{
-		// Token: 0x0603A9DD RID: 240093 RVA: 0x00DF3EDA File Offset: 0x00DF20DA
+		// Token: 0x0602F926 RID: 194854 RVA: 0x00D4445E File Offset: 0x00D4265E
 		public FlagChallengeAreaStrongholdContainer(int activityId, int levelId, int areaId)
 		{
 			this.ActivityId = activityId;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.AreaId = areaId;
 		}
 
-		// Token: 0x0603A9DE RID: 240094 RVA: 0x00DF3F02 File Offset: 0x00DF2102
+		// Token: 0x0602F927 RID: 194855 RVA: 0x00D44486 File Offset: 0x00D42686
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603A9DF RID: 240095 RVA: 0x00DF3F3C File Offset: 0x00DF213C
+		// Token: 0x0602F928 RID: 194856 RVA: 0x00D444C0 File Offset: 0x00D426C0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FlagChallengeAreaStrongholdContainer.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A9E0 RID: 240096 RVA: 0x00DF3F80 File Offset: 0x00DF2180
+		// Token: 0x0602F929 RID: 194857 RVA: 0x00D44504 File Offset: 0x00D42704
 		protected override void OnStart()
 		{
 			EFlagChallengeUiStyleType uiStyle = (EFlagChallengeUiStyleType)FlagChallengeConfig.Instance.GetLevelConfig(this.LevelId).Value.UiStyle;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			});
 		}
 
-		// Token: 0x0603A9E1 RID: 240097 RVA: 0x00DF4020 File Offset: 0x00DF2220
+		// Token: 0x0602F92A RID: 194858 RVA: 0x00D445A4 File Offset: 0x00D427A4
 		private UniTask CreateStrongholdItemAsync(FlagChallengeStrongholdData data)
 		{
 			FlagChallengeAreaStrongholdContainer.<CreateStrongholdItemAsync>d__10 <CreateStrongholdItemAsync>d__;
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return <CreateStrongholdItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A9E2 RID: 240098 RVA: 0x00DF406B File Offset: 0x00DF226B
+		// Token: 0x0602F92B RID: 194859 RVA: 0x00D445EF File Offset: 0x00D427EF
 		public void SetItemSelectChangeCallback(Action<int> callback)
 		{
 			this.ItemSelectChangeCallback = callback;
 		}
 
-		// Token: 0x0603A9E3 RID: 240099 RVA: 0x00DF4074 File Offset: 0x00DF2274
+		// Token: 0x0602F92C RID: 194860 RVA: 0x00D445F8 File Offset: 0x00D427F8
 		public void SetItemSelect(int id)
 		{
 			FlagChallengeAreaStrongholdItem flagChallengeAreaStrongholdItem;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603A9E4 RID: 240100 RVA: 0x00DF409C File Offset: 0x00DF229C
+		// Token: 0x0602F92D RID: 194861 RVA: 0x00D44620 File Offset: 0x00D42820
 		private void OnItemToggleCallback(int id)
 		{
 			if (this.SelectedStrongholdId != null)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			itemSelectChangeCallback(id);
 		}
 
-		// Token: 0x0603A9E5 RID: 240101 RVA: 0x00DF4114 File Offset: 0x00DF2314
+		// Token: 0x0602F92E RID: 194862 RVA: 0x00D44698 File Offset: 0x00D42898
 		[NullableContext(2)]
 		public FlagChallengeAreaStrongholdItem GetBossStrongholdItem()
 		{
@@ -118,23 +118,23 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return null;
 		}
 
-		// Token: 0x0401E8B8 RID: 125112
+		// Token: 0x0401935F RID: 103263
 		private readonly int ActivityId;
 
-		// Token: 0x0401E8B9 RID: 125113
+		// Token: 0x04019360 RID: 103264
 		private readonly int LevelId;
 
-		// Token: 0x0401E8BA RID: 125114
+		// Token: 0x04019361 RID: 103265
 		private readonly int AreaId;
 
-		// Token: 0x0401E8BB RID: 125115
+		// Token: 0x04019362 RID: 103266
 		private readonly Dictionary<int, FlagChallengeAreaStrongholdItem> StrongholdItemMap = new Dictionary<int, FlagChallengeAreaStrongholdItem>();
 
-		// Token: 0x0401E8BC RID: 125116
+		// Token: 0x04019363 RID: 103267
 		[Nullable(2)]
 		private Action<int> ItemSelectChangeCallback;
 
-		// Token: 0x0401E8BD RID: 125117
+		// Token: 0x04019364 RID: 103268
 		private int? SelectedStrongholdId;
 	}
 }

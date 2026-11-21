@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Roguelike;
 
-// Token: 0x02002D66 RID: 11622
+// Token: 0x020022C0 RID: 8896
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class WeeklyRogueModel : ModelBase
 {
-	// Token: 0x17002102 RID: 8450
-	// (get) Token: 0x06018702 RID: 100098 RVA: 0x006388AD File Offset: 0x00636AAD
+	// Token: 0x1700215D RID: 8541
+	// (get) Token: 0x06015FA4 RID: 90020 RVA: 0x0065E8BD File Offset: 0x0065CABD
 	public Dictionary<int, int> CurrencyDictMap
 	{
 		get
@@ -23,13 +22,13 @@ public class WeeklyRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x06018703 RID: 100099 RVA: 0x006388B5 File Offset: 0x00636AB5
+	// Token: 0x06015FA5 RID: 90021 RVA: 0x0065E8C5 File Offset: 0x0065CAC5
 	public void SetCurrency(int id, int count)
 	{
 		this.CurrencyDict[id] = count;
 	}
 
-	// Token: 0x06018704 RID: 100100 RVA: 0x006388C4 File Offset: 0x00636AC4
+	// Token: 0x06015FA6 RID: 90022 RVA: 0x0065E8D4 File Offset: 0x0065CAD4
 	public int GetCurrency(int currencyId)
 	{
 		int result;
@@ -40,8 +39,8 @@ public class WeeklyRogueModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x17002103 RID: 8451
-	// (get) Token: 0x06018705 RID: 100101 RVA: 0x006388E4 File Offset: 0x00636AE4
+	// Token: 0x1700215E RID: 8542
+	// (get) Token: 0x06015FA7 RID: 90023 RVA: 0x0065E8F4 File Offset: 0x0065CAF4
 	public int CycleId
 	{
 		get
@@ -55,9 +54,9 @@ public class WeeklyRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x17002104 RID: 8452
-	// (get) Token: 0x06018706 RID: 100102 RVA: 0x006388F7 File Offset: 0x00636AF7
-	// (set) Token: 0x06018707 RID: 100103 RVA: 0x00638904 File Offset: 0x00636B04
+	// Token: 0x1700215F RID: 8543
+	// (get) Token: 0x06015FA8 RID: 90024 RVA: 0x0065E907 File Offset: 0x0065CB07
+	// (set) Token: 0x06015FA9 RID: 90025 RVA: 0x0065E914 File Offset: 0x0065CB14
 	public string CurrentRoomMusicState
 	{
 		get
@@ -70,8 +69,8 @@ public class WeeklyRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x17002105 RID: 8453
-	// (get) Token: 0x06018708 RID: 100104 RVA: 0x0063891C File Offset: 0x00636B1C
+	// Token: 0x17002160 RID: 8544
+	// (get) Token: 0x06015FAA RID: 90026 RVA: 0x0065E92C File Offset: 0x0065CB2C
 	[Nullable(2)]
 	public WeeklyRogueData ActivityDataNew
 	{
@@ -91,8 +90,8 @@ public class WeeklyRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x17002106 RID: 8454
-	// (get) Token: 0x06018709 RID: 100105 RVA: 0x00638958 File Offset: 0x00636B58
+	// Token: 0x17002161 RID: 8545
+	// (get) Token: 0x06015FAB RID: 90027 RVA: 0x0065E968 File Offset: 0x0065CB68
 	public WeeklyRogueData ActivityData
 	{
 		get
@@ -112,7 +111,7 @@ public class WeeklyRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601870A RID: 100106 RVA: 0x006389BC File Offset: 0x00636BBC
+	// Token: 0x06015FAC RID: 90028 RVA: 0x0065E9CC File Offset: 0x0065CBCC
 	public bool HasLastInfo()
 	{
 		WeeklyRogueData activityDataNew = this.ActivityDataNew;
@@ -120,21 +119,21 @@ public class WeeklyRogueModel : ModelBase
 		return rogueWeeklyLastInfo != null && rogueWeeklyLastInfo.InstId != 0;
 	}
 
-	// Token: 0x0601870B RID: 100107 RVA: 0x006389EA File Offset: 0x00636BEA
+	// Token: 0x06015FAD RID: 90029 RVA: 0x0065E9FA File Offset: 0x0065CBFA
 	public void ChangeDescMode()
 	{
 		this.DescMode = ((this.DescMode == EDescModel.SIMPLE) ? EDescModel.DETAIL : EDescModel.SIMPLE);
 		EventSystem.Instance.Emit(EEventName.WeeklyRogueDescModeChange);
 	}
 
-	// Token: 0x0601870C RID: 100108 RVA: 0x00638A0E File Offset: 0x00636C0E
+	// Token: 0x06015FAE RID: 90030 RVA: 0x0065EA1E File Offset: 0x0065CC1E
 	[NullableContext(2)]
 	public RogueWeeklyOption GetCurrentOption()
 	{
 		return this.GetOptionByBindId(this.CurrentBindId);
 	}
 
-	// Token: 0x0601870D RID: 100109 RVA: 0x00638A1C File Offset: 0x00636C1C
+	// Token: 0x06015FAF RID: 90031 RVA: 0x0065EA2C File Offset: 0x0065CC2C
 	[NullableContext(2)]
 	public RogueWeeklyOption GetOptionByBindId(int bindId)
 	{
@@ -146,7 +145,7 @@ public class WeeklyRogueModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0601870E RID: 100110 RVA: 0x00638A3C File Offset: 0x00636C3C
+	// Token: 0x06015FB0 RID: 90032 RVA: 0x0065EA4C File Offset: 0x0065CC4C
 	public void UpdateInstInfo(RogueWeeklyInstInfoNotify data)
 	{
 		this.BuffTypeMap.Clear();
@@ -174,7 +173,7 @@ public class WeeklyRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601870F RID: 100111 RVA: 0x00638B74 File Offset: 0x00636D74
+	// Token: 0x06015FB1 RID: 90033 RVA: 0x0065EB84 File Offset: 0x0065CD84
 	public List<int> GetBuffIdListByType(EWeeklyRogueBuffType type)
 	{
 		List<int> collection;
@@ -185,7 +184,7 @@ public class WeeklyRogueModel : ModelBase
 		return new List<int>(collection);
 	}
 
-	// Token: 0x06018710 RID: 100112 RVA: 0x00638BA0 File Offset: 0x00636DA0
+	// Token: 0x06015FB2 RID: 90034 RVA: 0x0065EBB0 File Offset: 0x0065CDB0
 	public int GetArtifactBuffId()
 	{
 		List<int> list;
@@ -196,7 +195,7 @@ public class WeeklyRogueModel : ModelBase
 		return list[0];
 	}
 
-	// Token: 0x06018711 RID: 100113 RVA: 0x00638BC8 File Offset: 0x00636DC8
+	// Token: 0x06015FB3 RID: 90035 RVA: 0x0065EBD8 File Offset: 0x0065CDD8
 	public List<int> GetCoreTokenIdListByArtifactId(int artifactId)
 	{
 		IReadOnlyList<RogueWeeklyBuffPool> rogueWeeklyBuffPoolByRelatedArtifactId = WeeklyRogueConfig.Instance.GetRogueWeeklyBuffPoolByRelatedArtifactId(artifactId);
@@ -211,7 +210,7 @@ public class WeeklyRogueModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06018712 RID: 100114 RVA: 0x00638C2C File Offset: 0x00636E2C
+	// Token: 0x06015FB4 RID: 90036 RVA: 0x0065EC3C File Offset: 0x0065CE3C
 	public List<int> GetRogueWeeklyBuffTagIdList(int id)
 	{
 		List<int> list = new List<int>();
@@ -236,7 +235,7 @@ public class WeeklyRogueModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06018713 RID: 100115 RVA: 0x00638CF0 File Offset: 0x00636EF0
+	// Token: 0x06015FB5 RID: 90037 RVA: 0x0065ED00 File Offset: 0x0065CF00
 	public List<string> GetRogueWeeklyBuffDescParam(int id)
 	{
 		List<string> list = new List<string>();
@@ -269,14 +268,14 @@ public class WeeklyRogueModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06018714 RID: 100116 RVA: 0x00638DAC File Offset: 0x00636FAC
+	// Token: 0x06015FB6 RID: 90038 RVA: 0x0065EDBC File Offset: 0x0065CFBC
 	public bool CheckIsInWeeklyRogue()
 	{
 		InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(CreatureModel.Instance.GetInstanceId());
 		return config != null && config.GetValueOrDefault().InstSubType == 29 && GameModeController.Instance.IsInInstance();
 	}
 
-	// Token: 0x06018715 RID: 100117 RVA: 0x00638DFC File Offset: 0x00636FFC
+	// Token: 0x06015FB7 RID: 90039 RVA: 0x0065EE0C File Offset: 0x0065D00C
 	public bool IsWeeklyRogueOpen()
 	{
 		int? instanceDungeonId = BattleTeamModel.Instance.Context.InstanceDungeonId;
@@ -288,15 +287,15 @@ public class WeeklyRogueModel : ModelBase
 		return config != null && config.Value.InstSubType == 29;
 	}
 
-	// Token: 0x06018716 RID: 100118 RVA: 0x00638E54 File Offset: 0x00637054
+	// Token: 0x06015FB8 RID: 90040 RVA: 0x0065EE64 File Offset: 0x0065D064
 	public bool CheckIsRecommendRole(int roleId)
 	{
 		WeeklyRogueData activityDataNew = this.ActivityDataNew;
 		RogueWeeklyCycle? rogueWeeklyCycle = (activityDataNew != null) ? activityDataNew.GetCycleConfig() : null;
-		return rogueWeeklyCycle != null && rogueWeeklyCycle.Value.RecommendedRole().Contains(roleId);
+		return rogueWeeklyCycle != null && Array.IndexOf<int>(rogueWeeklyCycle.Value.RecommendedRole(), roleId) >= 0;
 	}
 
-	// Token: 0x06018717 RID: 100119 RVA: 0x00638E9C File Offset: 0x0063709C
+	// Token: 0x06015FB9 RID: 90041 RVA: 0x0065EEB4 File Offset: 0x0065D0B4
 	public IReadOnlyList<int> GetAllRecommendRole()
 	{
 		WeeklyRogueData activityDataNew = this.ActivityDataNew;
@@ -308,7 +307,7 @@ public class WeeklyRogueModel : ModelBase
 		return rogueWeeklyCycle.Value.RecommendedRole();
 	}
 
-	// Token: 0x06018718 RID: 100120 RVA: 0x00638EE4 File Offset: 0x006370E4
+	// Token: 0x06015FBA RID: 90042 RVA: 0x0065EEFC File Offset: 0x0065D0FC
 	public IActivityRewardViewData GetScoreRewardData()
 	{
 		List<IActivityRewardData> scoreDataList = new List<IActivityRewardData>();
@@ -369,7 +368,7 @@ public class WeeklyRogueModel : ModelBase
 		};
 	}
 
-	// Token: 0x06018719 RID: 100121 RVA: 0x00638F78 File Offset: 0x00637178
+	// Token: 0x06015FBB RID: 90043 RVA: 0x0065EF90 File Offset: 0x0065D190
 	private string GetPreviewButtonTextByState(EActivityRewardState state)
 	{
 		switch (state)
@@ -385,14 +384,14 @@ public class WeeklyRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601871A RID: 100122 RVA: 0x00638FE0 File Offset: 0x006371E0
+	// Token: 0x06015FBC RID: 90044 RVA: 0x0065EFF8 File Offset: 0x0065D1F8
 	public bool GetMapNoteShowState()
 	{
 		WeeklyRogueData activityDataNew = this.ActivityDataNew;
 		return activityDataNew != null && activityDataNew.IsUnLock() && !activityDataNew.IsScoreRewardAllDone();
 	}
 
-	// Token: 0x0601871B RID: 100123 RVA: 0x00639010 File Offset: 0x00637210
+	// Token: 0x06015FBD RID: 90045 RVA: 0x0065F028 File Offset: 0x0065D228
 	[NullableContext(2)]
 	public List<int> GetRewardIdsByDifficulties(bool isCanReceive)
 	{
@@ -412,8 +411,8 @@ public class WeeklyRogueModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x17002107 RID: 8455
-	// (get) Token: 0x0601871C RID: 100124 RVA: 0x0063909C File Offset: 0x0063729C
+	// Token: 0x17002162 RID: 8546
+	// (get) Token: 0x06015FBE RID: 90046 RVA: 0x0065F0B4 File Offset: 0x0065D2B4
 	public static WeeklyRogueModel Instance
 	{
 		get
@@ -422,7 +421,7 @@ public class WeeklyRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601871D RID: 100125 RVA: 0x006390A3 File Offset: 0x006372A3
+	// Token: 0x06015FBF RID: 90047 RVA: 0x0065F0BB File Offset: 0x0065D2BB
 	public static WeeklyRogueModel GetOrCreateInstance()
 	{
 		if (WeeklyRogueModel._Instance == null)
@@ -432,7 +431,7 @@ public class WeeklyRogueModel : ModelBase
 		return WeeklyRogueModel._Instance;
 	}
 
-	// Token: 0x0601871E RID: 100126 RVA: 0x006390B7 File Offset: 0x006372B7
+	// Token: 0x06015FC0 RID: 90048 RVA: 0x0065F0CF File Offset: 0x0065D2CF
 	public static bool CreateInstance()
 	{
 		if (WeeklyRogueModel._Instance != null)
@@ -443,79 +442,79 @@ public class WeeklyRogueModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601871F RID: 100127 RVA: 0x006390CD File Offset: 0x006372CD
+	// Token: 0x06015FC1 RID: 90049 RVA: 0x0065F0E5 File Offset: 0x0065D2E5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06018720 RID: 100128 RVA: 0x006390CF File Offset: 0x006372CF
+	// Token: 0x06015FC2 RID: 90050 RVA: 0x0065F0E7 File Offset: 0x0065D2E7
 	public static void ResetStaticDefaultValue()
 	{
 		WeeklyRogueModel._Instance = null;
 	}
 
-	// Token: 0x06018721 RID: 100129 RVA: 0x006390D7 File Offset: 0x006372D7
+	// Token: 0x06015FC3 RID: 90051 RVA: 0x0065F0EF File Offset: 0x0065D2EF
 	static WeeklyRogueModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WeeklyRogueModel.CreateStaticDefaultValue), new Action(WeeklyRogueModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B526 RID: 46374
+	// Token: 0x0400B89B RID: 47259
 	public List<int> BuffList = new List<int>();
 
-	// Token: 0x0400B527 RID: 46375
+	// Token: 0x0400B89C RID: 47260
 	private readonly Dictionary<EWeeklyRogueBuffType, List<int>> BuffTypeMap = new Dictionary<EWeeklyRogueBuffType, List<int>>();
 
-	// Token: 0x0400B528 RID: 46376
+	// Token: 0x0400B89D RID: 47261
 	public int ModifierIdInForce;
 
-	// Token: 0x0400B529 RID: 46377
+	// Token: 0x0400B89E RID: 47262
 	public Dictionary<int, RogueWeeklyOption> OptionMap = new Dictionary<int, RogueWeeklyOption>();
 
-	// Token: 0x0400B52A RID: 46378
+	// Token: 0x0400B89F RID: 47263
 	private readonly Dictionary<int, int> CurrencyDict = new Dictionary<int, int>();
 
-	// Token: 0x0400B52B RID: 46379
+	// Token: 0x0400B8A0 RID: 47264
 	public int CurrentLayer;
 
-	// Token: 0x0400B52C RID: 46380
+	// Token: 0x0400B8A1 RID: 47265
 	public int MaxLayer;
 
-	// Token: 0x0400B52D RID: 46381
+	// Token: 0x0400B8A2 RID: 47266
 	public int CurrentBindId;
 
-	// Token: 0x0400B52E RID: 46382
+	// Token: 0x0400B8A3 RID: 47267
 	public string CurrentRoomTypeId = "";
 
-	// Token: 0x0400B52F RID: 46383
+	// Token: 0x0400B8A4 RID: 47268
 	public int CurrentRoomId;
 
-	// Token: 0x0400B530 RID: 46384
+	// Token: 0x0400B8A5 RID: 47269
 	public int CurrentRoomType;
 
-	// Token: 0x0400B531 RID: 46385
+	// Token: 0x0400B8A6 RID: 47270
 	public int CurrentScore;
 
-	// Token: 0x0400B532 RID: 46386
+	// Token: 0x0400B8A7 RID: 47271
 	public EDescModel DescMode;
 
-	// Token: 0x0400B533 RID: 46387
+	// Token: 0x0400B8A8 RID: 47272
 	public List<int> SelectRoleIdList = new List<int>();
 
-	// Token: 0x0400B534 RID: 46388
+	// Token: 0x0400B8A9 RID: 47273
 	[Nullable(2)]
 	public RogueWeeklyEntry SelectEntry;
 
-	// Token: 0x0400B535 RID: 46389
+	// Token: 0x0400B8AA RID: 47274
 	public int CurrentActivityId;
 
-	// Token: 0x0400B536 RID: 46390
+	// Token: 0x0400B8AB RID: 47275
 	public bool IsOpenedViewByWorld;
 
-	// Token: 0x0400B537 RID: 46391
+	// Token: 0x0400B8AC RID: 47276
 	private readonly StateRef CurrentRoomMusicStateInternal = new StateRef("game_rogue_room_type", "none");
 
-	// Token: 0x0400B538 RID: 46392
+	// Token: 0x0400B8AD RID: 47277
 	[Nullable(2)]
 	private static WeeklyRogueModel _Instance;
 }

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E84 RID: 7812
+	// Token: 0x020020B9 RID: 8377
 	public class ISlashTowerPrefabConfig_SetValue
 	{
-		// Token: 0x040063C1 RID: 25537
+		// Token: 0x040069A5 RID: 27045
 		public ECreatePrefabType Type;
 
-		// Token: 0x040063C2 RID: 25538
+		// Token: 0x040069A6 RID: 27046
 		public int Index;
 	}
 }

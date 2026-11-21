@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D0B RID: 15627
+	// Token: 0x02004122 RID: 16674
 	public class IArcadeGameplayTetrisBoardGameT
 	{
-		// Token: 0x17006B36 RID: 27446
-		// (get) Token: 0x060158E9 RID: 88297 RVA: 0x0031D410 File Offset: 0x0031B610
-		// (set) Token: 0x060158EA RID: 88298 RVA: 0x0031D418 File Offset: 0x0031B618
+		// Token: 0x170070F0 RID: 28912
+		// (get) Token: 0x06016E21 RID: 93729 RVA: 0x00344688 File Offset: 0x00342888
+		// (set) Token: 0x06016E22 RID: 93730 RVA: 0x00344690 File Offset: 0x00342890
 		public EArcadeGameplayType Type { get; set; }
 
-		// Token: 0x17006B37 RID: 27447
-		// (get) Token: 0x060158EB RID: 88299 RVA: 0x0031D421 File Offset: 0x0031B621
-		// (set) Token: 0x060158EC RID: 88300 RVA: 0x0031D429 File Offset: 0x0031B629
+		// Token: 0x170070F1 RID: 28913
+		// (get) Token: 0x06016E23 RID: 93731 RVA: 0x00344699 File Offset: 0x00342899
+		// (set) Token: 0x06016E24 RID: 93732 RVA: 0x003446A1 File Offset: 0x003428A1
 		public int LevelId { get; set; }
 
-		// Token: 0x060158ED RID: 88301 RVA: 0x0031D432 File Offset: 0x0031B632
+		// Token: 0x06016E25 RID: 93733 RVA: 0x003446AA File Offset: 0x003428AA
 		public IArcadeGameplayTetrisBoardGameT()
 		{
 			this.Type = EArcadeGameplayType.DropCatch;

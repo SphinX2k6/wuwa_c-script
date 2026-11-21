@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020019F7 RID: 6647
+// Token: 0x02000EB6 RID: 3766
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class DailyActivityRewardItem : GridProxyAbstract<DailyActivityRewardData>
 {
-	// Token: 0x0600C27F RID: 49791 RVA: 0x002BE4E3 File Offset: 0x002BC6E3
+	// Token: 0x0600968C RID: 38540 RVA: 0x002C94BB File Offset: 0x002C76BB
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class DailyActivityRewardItem : GridProxyAbstract<DailyActivityRewardData
 		};
 	}
 
-	// Token: 0x0600C280 RID: 49792 RVA: 0x002BE51C File Offset: 0x002BC71C
+	// Token: 0x0600968D RID: 38541 RVA: 0x002C94F4 File Offset: 0x002C76F4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DailyActivityRewardItem.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -36,7 +36,7 @@ public class DailyActivityRewardItem : GridProxyAbstract<DailyActivityRewardData
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C281 RID: 49793 RVA: 0x002BE560 File Offset: 0x002BC760
+	// Token: 0x0600968E RID: 38542 RVA: 0x002C9538 File Offset: 0x002C7738
 	[NullableContext(1)]
 	public override void Refresh(DailyActivityRewardData data, bool isSelected, int gridIndex)
 	{
@@ -58,20 +58,20 @@ public class DailyActivityRewardItem : GridProxyAbstract<DailyActivityRewardData
 		this.DailyActiveState = this.RewardItem.DailyActiveState;
 	}
 
-	// Token: 0x0600C282 RID: 49794 RVA: 0x002BE600 File Offset: 0x002BC800
+	// Token: 0x0600968F RID: 38543 RVA: 0x002C95D8 File Offset: 0x002C77D8
 	public void RefreshProgress(double progress)
 	{
 		this.Data.Progress = progress;
 		this.RefreshSelf();
 	}
 
-	// Token: 0x0600C283 RID: 49795 RVA: 0x002BE614 File Offset: 0x002BC814
+	// Token: 0x06009690 RID: 38544 RVA: 0x002C95EC File Offset: 0x002C77EC
 	public void RefreshSelf()
 	{
 		this.Refresh(this.Data, false, base.GridIndex);
 	}
 
-	// Token: 0x0600C284 RID: 49796 RVA: 0x002BE62C File Offset: 0x002BC82C
+	// Token: 0x06009691 RID: 38545 RVA: 0x002C9604 File Offset: 0x002C7804
 	public UniTask PlayRewardAnimAsync()
 	{
 		DailyActivityRewardItem.<PlayRewardAnimAsync>d__12 <PlayRewardAnimAsync>d__;
@@ -82,25 +82,25 @@ public class DailyActivityRewardItem : GridProxyAbstract<DailyActivityRewardData
 		return <PlayRewardAnimAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400598A RID: 22922
+	// Token: 0x04005A59 RID: 23129
 	private UUISprite ProgressSprite;
 
-	// Token: 0x0400598B RID: 22923
+	// Token: 0x04005A5A RID: 23130
 	private DailyActivityRewardItemContent RewardItem;
 
-	// Token: 0x0400598C RID: 22924
+	// Token: 0x04005A5B RID: 23131
 	private DailyActivityRewardData Data;
 
-	// Token: 0x0400598D RID: 22925
+	// Token: 0x04005A5C RID: 23132
 	public EDailyActiveState? DailyActiveState;
 
-	// Token: 0x0400598E RID: 22926
+	// Token: 0x04005A5D RID: 23133
 	public Action RewardRequestDelegate;
 
-	// Token: 0x0400598F RID: 22927
+	// Token: 0x04005A5E RID: 23134
 	public DailyActivityDefine.IActivityRewardPanelDataAdapter DataAdapter;
 
-	// Token: 0x04005990 RID: 22928
+	// Token: 0x04005A5F RID: 23135
 	[Nullable(new byte[]
 	{
 		2,

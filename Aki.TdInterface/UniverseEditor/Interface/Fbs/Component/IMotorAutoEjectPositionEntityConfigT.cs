@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055AF RID: 21935
+	// Token: 0x02005B4D RID: 23373
 	public class IMotorAutoEjectPositionEntityConfigT
 	{
-		// Token: 0x1700A1FE RID: 41470
-		// (get) Token: 0x06024503 RID: 148739 RVA: 0x005031F0 File Offset: 0x005013F0
-		// (set) Token: 0x06024504 RID: 148740 RVA: 0x005031F8 File Offset: 0x005013F8
+		// Token: 0x1700AA86 RID: 43654
+		// (get) Token: 0x06026710 RID: 157456 RVA: 0x00543768 File Offset: 0x00541968
+		// (set) Token: 0x06026711 RID: 157457 RVA: 0x00543770 File Offset: 0x00541970
 		public EMotorAutoEjectType Type { get; set; }
 
-		// Token: 0x1700A1FF RID: 41471
-		// (get) Token: 0x06024505 RID: 148741 RVA: 0x00503201 File Offset: 0x00501401
-		// (set) Token: 0x06024506 RID: 148742 RVA: 0x00503209 File Offset: 0x00501409
+		// Token: 0x1700AA87 RID: 43655
+		// (get) Token: 0x06026712 RID: 157458 RVA: 0x00543779 File Offset: 0x00541979
+		// (set) Token: 0x06026713 RID: 157459 RVA: 0x00543781 File Offset: 0x00541981
 		public int EntityId { get; set; }
 
-		// Token: 0x06024507 RID: 148743 RVA: 0x00503212 File Offset: 0x00501412
+		// Token: 0x06026714 RID: 157460 RVA: 0x0054378A File Offset: 0x0054198A
 		public IMotorAutoEjectPositionEntityConfigT()
 		{
 			this.Type = EMotorAutoEjectType.NextHook;

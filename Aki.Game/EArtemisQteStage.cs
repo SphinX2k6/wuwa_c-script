@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x020010F8 RID: 4344
+// Token: 0x020005AC RID: 1452
 public enum EArtemisQteStage
 {
-	// Token: 0x04003477 RID: 13431
+	// Token: 0x04003510 RID: 13584
 	None,
-	// Token: 0x04003478 RID: 13432
+	// Token: 0x04003511 RID: 13585
 	Ready,
-	// Token: 0x04003479 RID: 13433
+	// Token: 0x04003512 RID: 13586
 	OnGoing,
-	// Token: 0x0400347A RID: 13434
+	// Token: 0x04003513 RID: 13587
 	Pause,
-	// Token: 0x0400347B RID: 13435
+	// Token: 0x04003514 RID: 13588
 	End,
-	// Token: 0x0400347C RID: 13436
+	// Token: 0x04003515 RID: 13589
 	AnimEnd,
-	// Token: 0x0400347D RID: 13437
+	// Token: 0x04003516 RID: 13590
 	Success,
-	// Token: 0x0400347E RID: 13438
+	// Token: 0x04003517 RID: 13591
 	Destroy
 }

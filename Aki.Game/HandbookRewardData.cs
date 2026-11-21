@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x02001336 RID: 4918
+// Token: 0x020007EA RID: 2026
 [NullableContext(1)]
 [Nullable(0)]
 public class HandbookRewardData
 {
-	// Token: 0x060088F0 RID: 35056 RVA: 0x001D41FC File Offset: 0x001D23FC
+	// Token: 0x06005C8B RID: 23691 RVA: 0x001DD068 File Offset: 0x001DB268
 	public List<TItem> GetPreviewReward()
 	{
 		if (this.Rewards.Count != 0)
@@ -27,7 +27,7 @@ public class HandbookRewardData
 		return this.Rewards;
 	}
 
-	// Token: 0x060088F1 RID: 35057 RVA: 0x001D424C File Offset: 0x001D244C
+	// Token: 0x06005C8C RID: 23692 RVA: 0x001DD0B8 File Offset: 0x001DB2B8
 	public EHandbookRewardState GetState(int currentGoal)
 	{
 		if (this.Achieved)
@@ -41,18 +41,18 @@ public class HandbookRewardData
 		return EHandbookRewardState.Active;
 	}
 
-	// Token: 0x04003D07 RID: 15623
+	// Token: 0x04003D9F RID: 15775
 	public int Id;
 
-	// Token: 0x04003D08 RID: 15624
+	// Token: 0x04003DA0 RID: 15776
 	public int Goal;
 
-	// Token: 0x04003D09 RID: 15625
+	// Token: 0x04003DA1 RID: 15777
 	public bool Achieved;
 
-	// Token: 0x04003D0A RID: 15626
+	// Token: 0x04003DA2 RID: 15778
 	public int DropId;
 
-	// Token: 0x04003D0B RID: 15627
+	// Token: 0x04003DA3 RID: 15779
 	private List<TItem> Rewards = new List<TItem>();
 }

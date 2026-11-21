@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023E8 RID: 9192
+	// Token: 0x0200267F RID: 9855
 	public class ERegionConfigTypeJsonConverter : JsonConverter<ERegionConfigType>
 	{
-		// Token: 0x0600C814 RID: 51220 RVA: 0x001D4A6C File Offset: 0x001D2C6C
+		// Token: 0x0600D497 RID: 54423 RVA: 0x001EE218 File Offset: 0x001EC418
 		public override ERegionConfigType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ERegionConfigTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C815 RID: 51221 RVA: 0x001D4A90 File Offset: 0x001D2C90
+		// Token: 0x0600D498 RID: 54424 RVA: 0x001EE23C File Offset: 0x001EC43C
 		public override void Write(Utf8JsonWriter writer, ERegionConfigType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

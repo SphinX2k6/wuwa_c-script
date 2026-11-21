@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007E5 RID: 2021
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000888 RID: 2184
 	public class IWindDirectional : IWindSourceBase
 	{
-		// Token: 0x06002BE9 RID: 11241 RVA: 0x00072570 File Offset: 0x00070770
+		// Token: 0x06002F19 RID: 12057 RVA: 0x000798D4 File Offset: 0x00077AD4
 		private IWindDirectional_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002BEA RID: 11242 RVA: 0x000725A8 File Offset: 0x000707A8
+		// Token: 0x06002F1A RID: 12058 RVA: 0x0007990C File Offset: 0x00077B0C
 		public static IWindDirectional Create([Nullable(2)] IWindDirectional instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002BEB RID: 11243 RVA: 0x000725BB File Offset: 0x000707BB
+		// Token: 0x06002F1B RID: 12059 RVA: 0x0007991F File Offset: 0x00077B1F
 		public static IWindDirectional CreateFromSetValue([Nullable(2)] IWindDirectional_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002BEC RID: 11244 RVA: 0x000725CE File Offset: 0x000707CE
+		// Token: 0x06002F1C RID: 12060 RVA: 0x00079932 File Offset: 0x00077B32
 		public new IWindDirectional_SetValue ToSetValue()
 		{
 			return new IWindDirectional_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B80 RID: 2944
-		// (get) Token: 0x06002BED RID: 11245 RVA: 0x000725F9 File Offset: 0x000707F9
-		// (set) Token: 0x06002BEE RID: 11246 RVA: 0x00072624 File Offset: 0x00070824
+		// Token: 0x17000C43 RID: 3139
+		// (get) Token: 0x06002F1D RID: 12061 RVA: 0x0007995D File Offset: 0x00077B5D
+		// (set) Token: 0x06002F1E RID: 12062 RVA: 0x00079988 File Offset: 0x00077B88
 		public override EWindSourceType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B81 RID: 2945
-		// (get) Token: 0x06002BEF RID: 11247 RVA: 0x00072634 File Offset: 0x00070834
-		// (set) Token: 0x06002BF0 RID: 11248 RVA: 0x00072695 File Offset: 0x00070895
+		// Token: 0x17000C44 RID: 3140
+		// (get) Token: 0x06002F1F RID: 12063 RVA: 0x00079998 File Offset: 0x00077B98
+		// (set) Token: 0x06002F20 RID: 12064 RVA: 0x000799F9 File Offset: 0x00077BF9
 		public virtual VectorInfo Rot
 		{
 			get
@@ -116,9 +114,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B82 RID: 2946
-		// (get) Token: 0x06002BF1 RID: 11249 RVA: 0x000726AC File Offset: 0x000708AC
-		// (set) Token: 0x06002BF2 RID: 11250 RVA: 0x0007273F File Offset: 0x0007093F
+		// Token: 0x17000C45 RID: 3141
+		// (get) Token: 0x06002F21 RID: 12065 RVA: 0x00079A10 File Offset: 0x00077C10
+		// (set) Token: 0x06002F22 RID: 12066 RVA: 0x00079AA3 File Offset: 0x00077CA3
 		public virtual List<IWindDirectionalStateGrade> Grades
 		{
 			get
@@ -154,24 +152,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D20 RID: 7456
+		// Token: 0x04001F2C RID: 7980
 		[Nullable(2)]
 		protected new IWindDirectional FbInstance;
 
-		// Token: 0x04001D21 RID: 7457
+		// Token: 0x04001F2D RID: 7981
 		[Nullable(2)]
 		protected new IWindDirectional_SetValue PocoInterface;
 
-		// Token: 0x04001D22 RID: 7458
+		// Token: 0x04001F2E RID: 7982
 		private VectorInfo _RotCache;
 
-		// Token: 0x04001D23 RID: 7459
+		// Token: 0x04001F2F RID: 7983
 		private bool _RotInited;
 
-		// Token: 0x04001D24 RID: 7460
+		// Token: 0x04001F30 RID: 7984
 		private List<IWindDirectionalStateGrade> _GradesCache;
 
-		// Token: 0x04001D25 RID: 7461
+		// Token: 0x04001F31 RID: 7985
 		private bool _GradesInited;
 	}
 }

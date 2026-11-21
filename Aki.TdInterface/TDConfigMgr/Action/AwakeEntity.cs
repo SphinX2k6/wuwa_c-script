@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014A9 RID: 5289
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001602 RID: 5634
 	public class AwakeEntity : ActionParams
 	{
-		// Token: 0x0600786C RID: 30828 RVA: 0x00120BA8 File Offset: 0x0011EDA8
+		// Token: 0x06007F39 RID: 32569 RVA: 0x0012F7F4 File Offset: 0x0012D9F4
 		private AwakeEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600786D RID: 30829 RVA: 0x00120BE0 File Offset: 0x0011EDE0
+		// Token: 0x06007F3A RID: 32570 RVA: 0x0012F82C File Offset: 0x0012DA2C
 		public static AwakeEntity Create([Nullable(2)] AwakeEntity instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600786E RID: 30830 RVA: 0x00120BF3 File Offset: 0x0011EDF3
+		// Token: 0x06007F3B RID: 32571 RVA: 0x0012F83F File Offset: 0x0012DA3F
 		public static AwakeEntity CreateFromSetValue([Nullable(2)] AwakeEntity_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600786F RID: 30831 RVA: 0x00120C06 File Offset: 0x0011EE06
+		// Token: 0x06007F3C RID: 32572 RVA: 0x0012F852 File Offset: 0x0012DA52
 		public AwakeEntity_SetValue ToSetValue()
 		{
 			return new AwakeEntity_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700286E RID: 10350
-		// (get) Token: 0x06007870 RID: 30832 RVA: 0x00120C34 File Offset: 0x0011EE34
-		// (set) Token: 0x06007871 RID: 30833 RVA: 0x00120C95 File Offset: 0x0011EE95
+		// Token: 0x17002A58 RID: 10840
+		// (get) Token: 0x06007F3D RID: 32573 RVA: 0x0012F880 File Offset: 0x0012DA80
+		// (set) Token: 0x06007F3E RID: 32574 RVA: 0x0012F8E1 File Offset: 0x0012DAE1
 		[Nullable(2)]
 		public virtual IAwakeWithTransformVar Position
 		{
@@ -95,9 +93,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700286F RID: 10351
-		// (get) Token: 0x06007872 RID: 30834 RVA: 0x00120CAC File Offset: 0x0011EEAC
-		// (set) Token: 0x06007873 RID: 30835 RVA: 0x00120CE6 File Offset: 0x0011EEE6
+		// Token: 0x17002A59 RID: 10841
+		// (get) Token: 0x06007F3F RID: 32575 RVA: 0x0012F8F8 File Offset: 0x0012DAF8
+		// (set) Token: 0x06007F40 RID: 32576 RVA: 0x0012F932 File Offset: 0x0012DB32
 		public virtual bool? IsSnap
 		{
 			get
@@ -119,9 +117,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002870 RID: 10352
-		// (get) Token: 0x06007874 RID: 30836 RVA: 0x00120CF4 File Offset: 0x0011EEF4
-		// (set) Token: 0x06007875 RID: 30837 RVA: 0x00120D1B File Offset: 0x0011EF1B
+		// Token: 0x17002A5A RID: 10842
+		// (get) Token: 0x06007F41 RID: 32577 RVA: 0x0012F940 File Offset: 0x0012DB40
+		// (set) Token: 0x06007F42 RID: 32578 RVA: 0x0012F967 File Offset: 0x0012DB67
 		public virtual List<int> EntityIds
 		{
 			get
@@ -143,18 +141,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040045FC RID: 17916
+		// Token: 0x04004997 RID: 18839
 		[Nullable(2)]
 		protected new AwakeEntity FbInstance;
 
-		// Token: 0x040045FD RID: 17917
+		// Token: 0x04004998 RID: 18840
 		[Nullable(2)]
 		protected AwakeEntity_SetValue PocoInterface;
 
-		// Token: 0x040045FE RID: 17918
+		// Token: 0x04004999 RID: 18841
 		private IAwakeWithTransformVar _PositionCache;
 
-		// Token: 0x040045FF RID: 17919
+		// Token: 0x0400499A RID: 18842
 		private bool _PositionInited;
 	}
 }

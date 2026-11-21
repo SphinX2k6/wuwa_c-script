@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AA9 RID: 2729
+	// Token: 0x02000B73 RID: 2931
 	public class IRefreshConditionBase
 	{
-		// Token: 0x06003EF8 RID: 16120 RVA: 0x000A120E File Offset: 0x0009F40E
-		[NullableContext(1)]
+		// Token: 0x06004322 RID: 17186 RVA: 0x000AA802 File Offset: 0x000A8A02
 		public static IRefreshConditionBase Create(IRefreshConditionBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F63 RID: 3939
-		// (get) Token: 0x06003EF9 RID: 16121 RVA: 0x000A122D File Offset: 0x0009F42D
+		// Token: 0x17001037 RID: 4151
+		// (get) Token: 0x06004323 RID: 17187 RVA: 0x000AA821 File Offset: 0x000A8A21
 		public virtual ERewardDropType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022FA RID: 8954
+		// Token: 0x04002516 RID: 9494
 		private IRefreshConditionBase Instance;
 	}
 }

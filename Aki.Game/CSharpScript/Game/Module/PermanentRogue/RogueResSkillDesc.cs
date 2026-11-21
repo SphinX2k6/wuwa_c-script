@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005332 RID: 21298
+	// Token: 0x02004302 RID: 17154
 	public class RogueResSkillDesc : UiPanelBase
 	{
-		// Token: 0x0603671B RID: 223003 RVA: 0x00CE3D2C File Offset: 0x00CE1F2C
+		// Token: 0x0602B617 RID: 177687 RVA: 0x00C316FC File Offset: 0x00C2F8FC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,13 +21,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x0603671C RID: 223004 RVA: 0x00CE3D9C File Offset: 0x00CE1F9C
+		// Token: 0x0602B618 RID: 177688 RVA: 0x00C3176C File Offset: 0x00C2F96C
 		protected override void OnStart()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0603671D RID: 223005 RVA: 0x00CE3DA4 File Offset: 0x00CE1FA4
+		// Token: 0x0602B619 RID: 177689 RVA: 0x00C31774 File Offset: 0x00C2F974
 		public void Refresh()
 		{
 			if (this.Data == null)
@@ -43,10 +43,10 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x0401CCA9 RID: 117929
+		// Token: 0x040176DF RID: 95967
 		public RogueResTalentTree? Data;
 
-		// Token: 0x0401CCAA RID: 117930
+		// Token: 0x040176E0 RID: 95968
 		public int Index;
 	}
 }

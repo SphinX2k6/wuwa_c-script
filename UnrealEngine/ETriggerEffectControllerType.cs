@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002929 RID: 10537
+	// Token: 0x02000850 RID: 2128
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/TriggerEffect.ETriggerEffectControllerType")]
 	public enum ETriggerEffectControllerType : byte
 	{
-		// Token: 0x040156C4 RID: 87748
+		// Token: 0x04005434 RID: 21556
 		DualSense,
-		// Token: 0x040156C5 RID: 87749
+		// Token: 0x04005435 RID: 21557
 		Sense,
-		// Token: 0x040156C6 RID: 87750
+		// Token: 0x04005436 RID: 21558
 		BothControllerTypes,
-		// Token: 0x040156C7 RID: 87751
+		// Token: 0x04005437 RID: 21559
 		TriggerEffectControllerType_Count,
-		// Token: 0x040156C8 RID: 87752
+		// Token: 0x04005438 RID: 21560
 		ETriggerEffectControllerType_MAX
 	}
 }

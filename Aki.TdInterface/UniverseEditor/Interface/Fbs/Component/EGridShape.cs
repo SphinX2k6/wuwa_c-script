@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DAB RID: 19883
+	// Token: 0x020052AF RID: 21167
 	public enum EGridShape : byte
 	{
-		// Token: 0x0400D9AB RID: 55723
+		// Token: 0x0400E4FA RID: 58618
 		Vertical,
-		// Token: 0x0400D9AC RID: 55724
+		// Token: 0x0400E4FB RID: 58619
 		Horizontal
 	}
 }

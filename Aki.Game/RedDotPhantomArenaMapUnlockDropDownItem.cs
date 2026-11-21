@@ -2,40 +2,40 @@
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.PhantomArena;
 
-// Token: 0x020033F4 RID: 13300
+// Token: 0x02002966 RID: 10598
 public class RedDotPhantomArenaMapUnlockDropDownItem : RedDotBase
 {
-	// Token: 0x0601CCA6 RID: 117926 RVA: 0x0080A6F1 File Offset: 0x008088F1
+	// Token: 0x0601A99E RID: 108958 RVA: 0x00830CB5 File Offset: 0x0082EEB5
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.RedDotPhantomArenaMapUnlock);
 	}
 
-	// Token: 0x0601CCA7 RID: 117927 RVA: 0x0080A6FD File Offset: 0x008088FD
+	// Token: 0x0601A99F RID: 108959 RVA: 0x00830CC1 File Offset: 0x0082EEC1
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnPhantomArenaMapUnlockUpdate, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CCA8 RID: 117928 RVA: 0x0080A71B File Offset: 0x0080891B
+	// Token: 0x0601A9A0 RID: 108960 RVA: 0x00830CDF File Offset: 0x0082EEDF
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.OnPhantomArenaMapUnlockUpdate, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CCA9 RID: 117929 RVA: 0x0080A739 File Offset: 0x00808939
+	// Token: 0x0601A9A1 RID: 108961 RVA: 0x00830CFD File Offset: 0x0082EEFD
 	protected override bool OnCheck(int uId = 0)
 	{
 		return PhantomArenaModel.Instance.GetMapUnlockRedDotById(uId);
 	}
 
-	// Token: 0x0601CCAA RID: 117930 RVA: 0x0080A746 File Offset: 0x00808946
+	// Token: 0x0601A9A2 RID: 108962 RVA: 0x00830D0A File Offset: 0x0082EF0A
 	protected override bool IsMultiple()
 	{
 		return true;
 	}
 
-	// Token: 0x0601CCAB RID: 117931 RVA: 0x0080A749 File Offset: 0x00808949
+	// Token: 0x0601A9A3 RID: 108963 RVA: 0x00830D0D File Offset: 0x0082EF0D
 	protected override int GetParentCheckUid(int uId)
 	{
 		PhantomArenaActivityData permanentPhantomArenaActivityData = PhantomArenaModel.Instance.GetPermanentPhantomArenaActivityData();

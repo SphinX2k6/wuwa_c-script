@@ -2,28 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F67 RID: 24423
+	// Token: 0x020065AC RID: 26028
 	public enum EExecClientBattleActionType : byte
 	{
-		// Token: 0x0400FD3E RID: 64830
+		// Token: 0x04010AC1 RID: 68289
 		SendTagEventToControlCharacter,
-		// Token: 0x0400FD3F RID: 64831
+		// Token: 0x04010AC2 RID: 68290
 		TriggerHookPointSkill,
-		// Token: 0x0400FD40 RID: 64832
+		// Token: 0x04010AC3 RID: 68291
 		TriggerMotorSkill,
-		// Token: 0x0400FD41 RID: 64833
+		// Token: 0x04010AC4 RID: 68292
 		FollowShooterSkill,
-		// Token: 0x0400FD42 RID: 64834
+		// Token: 0x04010AC5 RID: 68293
 		GroupAiCommunicate,
-		// Token: 0x0400FD43 RID: 64835
+		// Token: 0x04010AC6 RID: 68294
 		ChangeAnimalEmotionBubble,
-		// Token: 0x0400FD44 RID: 64836
+		// Token: 0x04010AC7 RID: 68295
 		MonsterNpcInteract,
-		// Token: 0x0400FD45 RID: 64837
+		// Token: 0x04010AC8 RID: 68296
 		RoboSoldierSpecialHookSkill,
-		// Token: 0x0400FD46 RID: 64838
+		// Token: 0x04010AC9 RID: 68297
 		AssistCharacterMoveToPoint,
-		// Token: 0x0400FD47 RID: 64839
-		AssistCharacterStopMoveToPoint
+		// Token: 0x04010ACA RID: 68298
+		AssistCharacterStopMoveToPoint,
+		// Token: 0x04010ACB RID: 68299
+		MechExecute
 	}
 }

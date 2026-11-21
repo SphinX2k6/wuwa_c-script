@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200521F RID: 21023
+	// Token: 0x02005787 RID: 22407
 	public struct IFailureConditionArbitraryState : IFlatbufferObject
 	{
-		// Token: 0x170099F9 RID: 39417
-		// (get) Token: 0x060222A9 RID: 139945 RVA: 0x004BD850 File Offset: 0x004BBA50
+		// Token: 0x1700A1F5 RID: 41461
+		// (get) Token: 0x0602423F RID: 148031 RVA: 0x004F8314 File Offset: 0x004F6514
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060222AA RID: 139946 RVA: 0x004BD85D File Offset: 0x004BBA5D
+		// Token: 0x06024240 RID: 148032 RVA: 0x004F8321 File Offset: 0x004F6521
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060222AB RID: 139947 RVA: 0x004BD864 File Offset: 0x004BBA64
+		// Token: 0x06024241 RID: 148033 RVA: 0x004F8328 File Offset: 0x004F6528
 		public static IFailureConditionArbitraryState GetRootAsIFailureConditionArbitraryState(ByteBuffer _bb)
 		{
 			return IFailureConditionArbitraryState.GetRootAsIFailureConditionArbitraryState(_bb, default(IFailureConditionArbitraryState));
 		}
 
-		// Token: 0x060222AC RID: 139948 RVA: 0x004BD880 File Offset: 0x004BBA80
+		// Token: 0x06024242 RID: 148034 RVA: 0x004F8344 File Offset: 0x004F6544
 		public static IFailureConditionArbitraryState GetRootAsIFailureConditionArbitraryState(ByteBuffer _bb, IFailureConditionArbitraryState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060222AD RID: 139949 RVA: 0x004BD89D File Offset: 0x004BBA9D
+		// Token: 0x06024243 RID: 148035 RVA: 0x004F8361 File Offset: 0x004F6561
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060222AE RID: 139950 RVA: 0x004BD8AC File Offset: 0x004BBAAC
+		// Token: 0x06024244 RID: 148036 RVA: 0x004F8370 File Offset: 0x004F6570
 		public IFailureConditionArbitraryState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170099FA RID: 39418
-		// (get) Token: 0x060222AF RID: 139951 RVA: 0x004BD8BC File Offset: 0x004BBABC
+		// Token: 0x1700A1F6 RID: 41462
+		// (get) Token: 0x06024245 RID: 148037 RVA: 0x004F8380 File Offset: 0x004F6580
 		public ETargetGearGroupFailureCondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170099FB RID: 39419
-		// (get) Token: 0x060222B0 RID: 139952 RVA: 0x004BD8F8 File Offset: 0x004BBAF8
+		// Token: 0x1700A1F7 RID: 41463
+		// (get) Token: 0x06024246 RID: 148038 RVA: 0x004F83BC File Offset: 0x004F65BC
 		public string State
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060222B1 RID: 139953 RVA: 0x004BD92F File Offset: 0x004BBB2F
+		// Token: 0x06024247 RID: 148039 RVA: 0x004F83F3 File Offset: 0x004F65F3
 		public Span<byte> GetStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060222B2 RID: 139954 RVA: 0x004BD93E File Offset: 0x004BBB3E
+		// Token: 0x06024248 RID: 148040 RVA: 0x004F8402 File Offset: 0x004F6602
 		public byte[] GetStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x060222B3 RID: 139955 RVA: 0x004BD94C File Offset: 0x004BBB4C
+		// Token: 0x06024249 RID: 148041 RVA: 0x004F8410 File Offset: 0x004F6610
 		public static Offset<IFailureConditionArbitraryState> CreateIFailureConditionArbitraryState(FlatBufferBuilder builder, ETargetGearGroupFailureCondition Type = ETargetGearGroupFailureCondition.ArbitraryState, StringOffset StateOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFailureConditionArbitraryState.EndIFailureConditionArbitraryState(builder);
 		}
 
-		// Token: 0x060222B4 RID: 139956 RVA: 0x004BD969 File Offset: 0x004BBB69
+		// Token: 0x0602424A RID: 148042 RVA: 0x004F842D File Offset: 0x004F662D
 		public static void StartIFailureConditionArbitraryState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060222B5 RID: 139957 RVA: 0x004BD972 File Offset: 0x004BBB72
+		// Token: 0x0602424B RID: 148043 RVA: 0x004F8436 File Offset: 0x004F6636
 		public static void AddType(FlatBufferBuilder builder, ETargetGearGroupFailureCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060222B6 RID: 139958 RVA: 0x004BD97D File Offset: 0x004BBB7D
+		// Token: 0x0602424C RID: 148044 RVA: 0x004F8441 File Offset: 0x004F6641
 		public static void AddState(FlatBufferBuilder builder, StringOffset stateOffset)
 		{
 			builder.AddOffset(1, stateOffset.Value, 0);
 		}
 
-		// Token: 0x060222B7 RID: 139959 RVA: 0x004BD98D File Offset: 0x004BBB8D
+		// Token: 0x0602424D RID: 148045 RVA: 0x004F8451 File Offset: 0x004F6651
 		public static Offset<IFailureConditionArbitraryState> EndIFailureConditionArbitraryState(FlatBufferBuilder builder)
 		{
 			return new Offset<IFailureConditionArbitraryState>(builder.EndTable());
 		}
 
-		// Token: 0x060222B8 RID: 139960 RVA: 0x004BD99C File Offset: 0x004BBB9C
+		// Token: 0x0602424E RID: 148046 RVA: 0x004F8460 File Offset: 0x004F6660
 		public IFailureConditionArbitraryStateT UnPack()
 		{
 			IFailureConditionArbitraryStateT failureConditionArbitraryStateT = new IFailureConditionArbitraryStateT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return failureConditionArbitraryStateT;
 		}
 
-		// Token: 0x060222B9 RID: 139961 RVA: 0x004BD9B7 File Offset: 0x004BBBB7
+		// Token: 0x0602424F RID: 148047 RVA: 0x004F847B File Offset: 0x004F667B
 		public void UnPackTo(IFailureConditionArbitraryStateT _o)
 		{
 			_o.Type = this.Type;
 			_o.State = this.State;
 		}
 
-		// Token: 0x060222BA RID: 139962 RVA: 0x004BD9D4 File Offset: 0x004BBBD4
+		// Token: 0x06024250 RID: 148048 RVA: 0x004F8498 File Offset: 0x004F6698
 		public static Offset<IFailureConditionArbitraryState> Pack(FlatBufferBuilder builder, IFailureConditionArbitraryStateT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFailureConditionArbitraryState.CreateIFailureConditionArbitraryState(builder, _o.Type, stateOffset);
 		}
 
-		// Token: 0x0400E35A RID: 58202
+		// Token: 0x0400EF60 RID: 61280
 		private Table __p;
 	}
 }

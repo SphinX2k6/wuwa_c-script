@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.TowerDefence;
 
-// Token: 0x02002BC1 RID: 11201
+// Token: 0x0200213C RID: 8508
 [NullableContext(1)]
 [Nullable(0)]
 public class ParsedTowerDefenseMsg : ActivityBaseData
 {
-	// Token: 0x06017439 RID: 95289 RVA: 0x005E8112 File Offset: 0x005E6312
+	// Token: 0x06014E6A RID: 85610 RVA: 0x00614CDE File Offset: 0x00612EDE
 	protected override void OnInit(ActivityData data)
 	{
 		EventSystem.Instance.Emit(EEventName.TowerDefenseDataInit);
 	}
 
-	// Token: 0x0601743A RID: 95290 RVA: 0x005E8124 File Offset: 0x005E6324
+	// Token: 0x06014E6B RID: 85611 RVA: 0x00614CF0 File Offset: 0x00612EF0
 	protected unsafe override void PhraseEx(ActivityData data)
 	{
 		TowerDefenceActivityInfo towerDefenceActivityData = data.TowerDefenceActivityData;
@@ -37,13 +36,13 @@ public class ParsedTowerDefenseMsg : ActivityBaseData
 		this.ParseTowerDefenseActivityData(towerDefenceActivityData);
 	}
 
-	// Token: 0x0601743B RID: 95291 RVA: 0x005E81AD File Offset: 0x005E63AD
+	// Token: 0x06014E6C RID: 85612 RVA: 0x00614D79 File Offset: 0x00612F79
 	public override bool GetExDataRedPointShowState()
 	{
 		return TowerDefenseController.Instance.CheckHasNewStage() || TowerDefenseController.Instance.CheckHasReward();
 	}
 
-	// Token: 0x0601743C RID: 95292 RVA: 0x005E81C8 File Offset: 0x005E63C8
+	// Token: 0x06014E6D RID: 85613 RVA: 0x00614D94 File Offset: 0x00612F94
 	protected override bool GetExDataFinishShowState()
 	{
 		if (!base.IsUnLock())
@@ -76,7 +75,7 @@ public class ParsedTowerDefenseMsg : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x0601743D RID: 95293 RVA: 0x005E82B0 File Offset: 0x005E64B0
+	// Token: 0x06014E6E RID: 85614 RVA: 0x00614E7C File Offset: 0x0061307C
 	public void ParseTowerDefenseActivityData(TowerDefenceActivityInfo data)
 	{
 		this.ScoreRewardCache.Clear();
@@ -86,19 +85,19 @@ public class ParsedTowerDefenseMsg : ActivityBaseData
 			TowerDefenceReward value = ConfigTowerDefenceRewardById.GetConfig(num, true).Value;
 			this.ScoreRewardCache[num] = value;
 		}
-		this.ParseTowerDefenseInstanceDataList(data.InstanceInfos.ToList<TowerDefenceInstanceInfo>(), true);
+		this.ParseTowerDefenseInstanceDataList(data.InstanceInfos, true);
 		this.TotalScore = data.TotalScore;
 	}
 
-	// Token: 0x0601743E RID: 95294 RVA: 0x005E8344 File Offset: 0x005E6544
-	public void ParseTowerDefenseInstanceDataList(List<TowerDefenceInstanceInfo> dataList, bool isFull = true)
+	// Token: 0x06014E6F RID: 85615 RVA: 0x00614F0C File Offset: 0x0061310C
+	public void ParseTowerDefenseInstanceDataList(IEnumerable<TowerDefenceInstanceInfo> dataList, bool isFull = true)
 	{
 		if (isFull)
 		{
 			this.TotalScore = 0;
 			this.StageListCache.Clear();
 			this.StageMapCache.Clear();
-			using (List<TowerDefenceInstanceInfo>.Enumerator enumerator = dataList.GetEnumerator())
+			using (IEnumerator<TowerDefenceInstanceInfo> enumerator = dataList.GetEnumerator())
 			{
 				while (enumerator.MoveNext())
 				{
@@ -156,8 +155,8 @@ public class ParsedTowerDefenseMsg : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0601743F RID: 95295 RVA: 0x005E8614 File Offset: 0x005E6814
-	public void ParseTowerDefenseOwnPhantomDataList(List<TowerDefencePhantomInfo> infoList)
+	// Token: 0x06014E70 RID: 85616 RVA: 0x006151C8 File Offset: 0x006133C8
+	public void ParseTowerDefenseOwnPhantomDataList(IEnumerable<TowerDefencePhantomInfo> infoList)
 	{
 		foreach (TowerDefencePhantomInfo towerDefencePhantomInfo in infoList)
 		{
@@ -170,7 +169,7 @@ public class ParsedTowerDefenseMsg : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06017440 RID: 95296 RVA: 0x005E86A4 File Offset: 0x005E68A4
+	// Token: 0x06014E71 RID: 85617 RVA: 0x00615254 File Offset: 0x00613454
 	public EActivityRewardState GetScoreRewardStateById(int rewardId)
 	{
 		TowerDefenceReward? config = ConfigTowerDefenceRewardById.GetConfig(rewardId, true);
@@ -185,7 +184,7 @@ public class ParsedTowerDefenseMsg : ActivityBaseData
 		return EActivityRewardState.Enable;
 	}
 
-	// Token: 0x06017441 RID: 95297 RVA: 0x005E86E4 File Offset: 0x005E68E4
+	// Token: 0x06014E72 RID: 85618 RVA: 0x00615294 File Offset: 0x00613494
 	public EActivityRewardState GetPassRewardStateById(int instanceId)
 	{
 		TowerDefenceInstance? config = ConfigTowerDefenceInstanceById.GetConfig(instanceId, true);
@@ -220,13 +219,13 @@ public class ParsedTowerDefenseMsg : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06017442 RID: 95298 RVA: 0x005E8750 File Offset: 0x005E6950
+	// Token: 0x06014E73 RID: 85619 RVA: 0x00615300 File Offset: 0x00613500
 	public void UpdateByScoreRewardRequest(int rewardId)
 	{
 		this.ScoreRewardCache[rewardId] = ConfigTowerDefenceRewardById.GetConfig(rewardId, true).Value;
 	}
 
-	// Token: 0x06017443 RID: 95299 RVA: 0x005E8778 File Offset: 0x005E6978
+	// Token: 0x06014E74 RID: 85620 RVA: 0x00615328 File Offset: 0x00613528
 	public void UpdateByInstanceRewardRequest(int instanceId)
 	{
 		ITowerDefenseParsedStageMessage towerDefenseParsedStageMessage = this.StageMapCache[instanceId];
@@ -234,14 +233,14 @@ public class ParsedTowerDefenseMsg : ActivityBaseData
 		towerDefenseParsedStageMessage.Meta.Rewarded = true;
 	}
 
-	// Token: 0x06017444 RID: 95300 RVA: 0x005E8798 File Offset: 0x005E6998
+	// Token: 0x06014E75 RID: 85621 RVA: 0x00615348 File Offset: 0x00613548
 	public bool IsStageUnLocked(int instanceId)
 	{
 		TowerDefenceInstance? config = ConfigTowerDefenceInstanceByInstanceId.GetConfig(instanceId, true);
 		return config != null && this.IsStageUnlockedByTowerDefenseInstanceId(config.Value.Id);
 	}
 
-	// Token: 0x06017445 RID: 95301 RVA: 0x005E87D0 File Offset: 0x005E69D0
+	// Token: 0x06014E76 RID: 85622 RVA: 0x00615380 File Offset: 0x00613580
 	public unsafe bool IsStageUnlockedByTowerDefenseInstanceId(int towerDefenseInstanceId)
 	{
 		double serverTimeStamp = TimeUtil.Instance.GetServerTimeStamp();
@@ -262,7 +261,7 @@ public class ParsedTowerDefenseMsg : ActivityBaseData
 		return serverTimeStamp > (double)unlockTime;
 	}
 
-	// Token: 0x06017446 RID: 95302 RVA: 0x005E8868 File Offset: 0x005E6A68
+	// Token: 0x06014E77 RID: 85623 RVA: 0x00615418 File Offset: 0x00613618
 	public unsafe bool IsPassedInstance(int instanceId)
 	{
 		TowerDefenceInstance? config = ConfigTowerDefenceInstanceByInstanceId.GetConfig(instanceId, true);
@@ -282,7 +281,7 @@ public class ParsedTowerDefenseMsg : ActivityBaseData
 		return towerDefenseParsedStageMessage.Passed;
 	}
 
-	// Token: 0x06017447 RID: 95303 RVA: 0x005E8914 File Offset: 0x005E6B14
+	// Token: 0x06014E78 RID: 85624 RVA: 0x006154C4 File Offset: 0x006136C4
 	public unsafe double GetPassTimeByInstanceId(int instanceId)
 	{
 		TowerDefenceInstance? config = ConfigTowerDefenceInstanceByInstanceId.GetConfig(instanceId, true);
@@ -302,7 +301,7 @@ public class ParsedTowerDefenseMsg : ActivityBaseData
 		return towerDefenseParsedStageMessage.PassTime;
 	}
 
-	// Token: 0x06017448 RID: 95304 RVA: 0x005E89C8 File Offset: 0x005E6BC8
+	// Token: 0x06014E79 RID: 85625 RVA: 0x00615578 File Offset: 0x00613778
 	public int GetSuitableInstanceId()
 	{
 		int result = 0;
@@ -332,7 +331,7 @@ public class ParsedTowerDefenseMsg : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06017449 RID: 95305 RVA: 0x005E8A80 File Offset: 0x005E6C80
+	// Token: 0x06014E7A RID: 85626 RVA: 0x00615630 File Offset: 0x00613830
 	public int GetSuitableStageId()
 	{
 		int result = 0;
@@ -362,21 +361,21 @@ public class ParsedTowerDefenseMsg : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x0400ADF2 RID: 44530
+	// Token: 0x0400B1F7 RID: 45559
 	public Dictionary<int, TowerDefencePhantomInfo> OwnPhantomInBattleDataCache = new Dictionary<int, TowerDefencePhantomInfo>();
 
-	// Token: 0x0400ADF3 RID: 44531
+	// Token: 0x0400B1F8 RID: 45560
 	public Dictionary<int, bool> OwnPhantomInBattleNewLevelUpFlagCache = new Dictionary<int, bool>();
 
-	// Token: 0x0400ADF4 RID: 44532
+	// Token: 0x0400B1F9 RID: 45561
 	public Dictionary<int, TowerDefenceReward> ScoreRewardCache = new Dictionary<int, TowerDefenceReward>();
 
-	// Token: 0x0400ADF5 RID: 44533
+	// Token: 0x0400B1FA RID: 45562
 	public List<ITowerDefenseParsedStageMessage> StageListCache = new List<ITowerDefenseParsedStageMessage>();
 
-	// Token: 0x0400ADF6 RID: 44534
+	// Token: 0x0400B1FB RID: 45563
 	public Dictionary<int, ITowerDefenseParsedStageMessage> StageMapCache = new Dictionary<int, ITowerDefenseParsedStageMessage>();
 
-	// Token: 0x0400ADF7 RID: 44535
+	// Token: 0x0400B1FC RID: 45564
 	public int TotalScore;
 }

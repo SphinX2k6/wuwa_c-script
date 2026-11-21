@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A4F RID: 6735
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BE4 RID: 7140
 	[JsonConverter(typeof(IFadeBackgroundImageConverter))]
 	public class IFadeBackgroundImage : IFadeBackgroundType
 	{
-		// Token: 0x0600902A RID: 36906 RVA: 0x00150264 File Offset: 0x0014E464
+		// Token: 0x06009794 RID: 38804 RVA: 0x00160190 File Offset: 0x0015E390
 		private IFadeBackgroundImage_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600902B RID: 36907 RVA: 0x0015029C File Offset: 0x0014E49C
+		// Token: 0x06009795 RID: 38805 RVA: 0x001601C8 File Offset: 0x0015E3C8
 		public static IFadeBackgroundImage Create([Nullable(2)] IFadeBackgroundImage instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600902C RID: 36908 RVA: 0x001502AF File Offset: 0x0014E4AF
+		// Token: 0x06009796 RID: 38806 RVA: 0x001601DB File Offset: 0x0015E3DB
 		public static IFadeBackgroundImage CreateFromSetValue([Nullable(2)] IFadeBackgroundImage_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600902D RID: 36909 RVA: 0x001502C2 File Offset: 0x0014E4C2
+		// Token: 0x06009797 RID: 38807 RVA: 0x001601EE File Offset: 0x0015E3EE
 		public new IFadeBackgroundImage_SetValue ToSetValue()
 		{
 			return new IFadeBackgroundImage_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DF4 RID: 11764
-		// (get) Token: 0x0600902E RID: 36910 RVA: 0x001502F9 File Offset: 0x0014E4F9
-		// (set) Token: 0x0600902F RID: 36911 RVA: 0x00150324 File Offset: 0x0014E524
+		// Token: 0x17003001 RID: 12289
+		// (get) Token: 0x06009798 RID: 38808 RVA: 0x00160225 File Offset: 0x0015E425
+		// (set) Token: 0x06009799 RID: 38809 RVA: 0x00160250 File Offset: 0x0015E450
 		public override EFadeBackgroundType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DF5 RID: 11765
-		// (get) Token: 0x06009030 RID: 36912 RVA: 0x00150332 File Offset: 0x0014E532
-		// (set) Token: 0x06009031 RID: 36913 RVA: 0x0015035D File Offset: 0x0014E55D
+		// Token: 0x17003002 RID: 12290
+		// (get) Token: 0x0600979A RID: 38810 RVA: 0x0016025E File Offset: 0x0015E45E
+		// (set) Token: 0x0600979B RID: 38811 RVA: 0x00160289 File Offset: 0x0015E489
 		public virtual string BackgroundImage
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DF6 RID: 11766
-		// (get) Token: 0x06009032 RID: 36914 RVA: 0x0015036C File Offset: 0x0014E56C
-		// (set) Token: 0x06009033 RID: 36915 RVA: 0x001503CD File Offset: 0x0014E5CD
+		// Token: 0x17003003 RID: 12291
+		// (get) Token: 0x0600979C RID: 38812 RVA: 0x00160298 File Offset: 0x0015E498
+		// (set) Token: 0x0600979D RID: 38813 RVA: 0x001602F9 File Offset: 0x0015E4F9
 		[Nullable(2)]
 		public virtual IFadeBackgroundFadeInEffect FadeInEffect
 		{
@@ -143,9 +141,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DF7 RID: 11767
-		// (get) Token: 0x06009034 RID: 36916 RVA: 0x001503E4 File Offset: 0x0014E5E4
-		// (set) Token: 0x06009035 RID: 36917 RVA: 0x00150445 File Offset: 0x0014E645
+		// Token: 0x17003004 RID: 12292
+		// (get) Token: 0x0600979E RID: 38814 RVA: 0x00160310 File Offset: 0x0015E510
+		// (set) Token: 0x0600979F RID: 38815 RVA: 0x00160371 File Offset: 0x0015E571
 		[Nullable(2)]
 		public virtual IFadeBackgroundFadeOutEffect FadeOutEffect
 		{
@@ -176,24 +174,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400590B RID: 22795
+		// Token: 0x04005D70 RID: 23920
 		[Nullable(2)]
 		protected new IFadeBackgroundImage FbInstance;
 
-		// Token: 0x0400590C RID: 22796
+		// Token: 0x04005D71 RID: 23921
 		[Nullable(2)]
 		protected new IFadeBackgroundImage_SetValue PocoInterface;
 
-		// Token: 0x0400590D RID: 22797
+		// Token: 0x04005D72 RID: 23922
 		private IFadeBackgroundFadeInEffect _FadeInEffectCache;
 
-		// Token: 0x0400590E RID: 22798
+		// Token: 0x04005D73 RID: 23923
 		private bool _FadeInEffectInited;
 
-		// Token: 0x0400590F RID: 22799
+		// Token: 0x04005D74 RID: 23924
 		private IFadeBackgroundFadeOutEffect _FadeOutEffectCache;
 
-		// Token: 0x04005910 RID: 22800
+		// Token: 0x04005D75 RID: 23925
 		private bool _FadeOutEffectInited;
 	}
 }

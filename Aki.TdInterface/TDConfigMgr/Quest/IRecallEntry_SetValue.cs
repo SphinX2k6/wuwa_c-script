@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010E9 RID: 4329
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001217 RID: 4631
 	public class IRecallEntry_SetValue
 	{
-		// Token: 0x04003ADD RID: 15069
+		// Token: 0x04003E2A RID: 15914
 		public int RecallId;
 
-		// Token: 0x04003ADE RID: 15070
+		// Token: 0x04003E2B RID: 15915
 		public List<int> IncludeGroups;
 
-		// Token: 0x04003ADF RID: 15071
+		// Token: 0x04003E2C RID: 15916
 		public List<int> ExcludeGroups;
 	}
 }

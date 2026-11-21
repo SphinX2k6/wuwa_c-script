@@ -4,34 +4,34 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 {
-	// Token: 0x02005080 RID: 20608
+	// Token: 0x02004050 RID: 16464
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotTextWriterComponentContext
 	{
-		// Token: 0x17008067 RID: 32871
-		// (get) Token: 0x06034CCD RID: 216269 RVA: 0x00C7DB15 File Offset: 0x00C7BD15
-		// (set) Token: 0x06034CCE RID: 216270 RVA: 0x00C7DB1D File Offset: 0x00C7BD1D
+		// Token: 0x17005427 RID: 21543
+		// (get) Token: 0x06029BC2 RID: 170946 RVA: 0x00BCAEED File Offset: 0x00BC90ED
+		// (set) Token: 0x06029BC3 RID: 170947 RVA: 0x00BCAEF5 File Offset: 0x00BC90F5
 		public UUIText TextComponent { get; set; }
 
-		// Token: 0x17008068 RID: 32872
-		// (get) Token: 0x06034CCF RID: 216271 RVA: 0x00C7DB26 File Offset: 0x00C7BD26
-		// (set) Token: 0x06034CD0 RID: 216272 RVA: 0x00C7DB2E File Offset: 0x00C7BD2E
+		// Token: 0x17005428 RID: 21544
+		// (get) Token: 0x06029BC4 RID: 170948 RVA: 0x00BCAEFE File Offset: 0x00BC90FE
+		// (set) Token: 0x06029BC5 RID: 170949 RVA: 0x00BCAF06 File Offset: 0x00BC9106
 		public UUIEffectTextAnimation TextAnimComp { get; set; }
 
-		// Token: 0x17008069 RID: 32873
-		// (get) Token: 0x06034CD1 RID: 216273 RVA: 0x00C7DB37 File Offset: 0x00C7BD37
-		// (set) Token: 0x06034CD2 RID: 216274 RVA: 0x00C7DB3F File Offset: 0x00C7BD3F
+		// Token: 0x17005429 RID: 21545
+		// (get) Token: 0x06029BC6 RID: 170950 RVA: 0x00BCAF0F File Offset: 0x00BC910F
+		// (set) Token: 0x06029BC7 RID: 170951 RVA: 0x00BCAF17 File Offset: 0x00BC9117
 		public ULGUIPlayTweenComponent TweenComp { get; set; }
 
-		// Token: 0x1700806A RID: 32874
-		// (get) Token: 0x06034CD3 RID: 216275 RVA: 0x00C7DB48 File Offset: 0x00C7BD48
-		// (set) Token: 0x06034CD4 RID: 216276 RVA: 0x00C7DB50 File Offset: 0x00C7BD50
+		// Token: 0x1700542A RID: 21546
+		// (get) Token: 0x06029BC8 RID: 170952 RVA: 0x00BCAF20 File Offset: 0x00BC9120
+		// (set) Token: 0x06029BC9 RID: 170953 RVA: 0x00BCAF28 File Offset: 0x00BC9128
 		public Action OnAnimCompleteDelegate { get; set; }
 
-		// Token: 0x1700806B RID: 32875
-		// (get) Token: 0x06034CD5 RID: 216277 RVA: 0x00C7DB59 File Offset: 0x00C7BD59
-		// (set) Token: 0x06034CD6 RID: 216278 RVA: 0x00C7DB61 File Offset: 0x00C7BD61
+		// Token: 0x1700542B RID: 21547
+		// (get) Token: 0x06029BCA RID: 170954 RVA: 0x00BCAF31 File Offset: 0x00BC9131
+		// (set) Token: 0x06029BCB RID: 170955 RVA: 0x00BCAF39 File Offset: 0x00BC9139
 		public Action OnStopDelegate { get; set; }
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020A5 RID: 8357
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022F6 RID: 8950
 	public class IVisualNovelRoleIntroductionSolarSchool : IVisualNovelRoleIntroductionConfigBase
 	{
-		// Token: 0x0600B7D0 RID: 47056 RVA: 0x001A9C60 File Offset: 0x001A7E60
+		// Token: 0x0600C316 RID: 49942 RVA: 0x001C06EC File Offset: 0x001BE8EC
 		private IVisualNovelRoleIntroductionSolarSchool_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B7D1 RID: 47057 RVA: 0x001A9C98 File Offset: 0x001A7E98
+		// Token: 0x0600C317 RID: 49943 RVA: 0x001C0724 File Offset: 0x001BE924
 		public static IVisualNovelRoleIntroductionSolarSchool Create([Nullable(2)] IVisualNovelRoleIntroductionSolarSchool instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B7D2 RID: 47058 RVA: 0x001A9CAB File Offset: 0x001A7EAB
+		// Token: 0x0600C318 RID: 49944 RVA: 0x001C0737 File Offset: 0x001BE937
 		public static IVisualNovelRoleIntroductionSolarSchool CreateFromSetValue([Nullable(2)] IVisualNovelRoleIntroductionSolarSchool_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B7D3 RID: 47059 RVA: 0x001A9CBE File Offset: 0x001A7EBE
+		// Token: 0x0600C319 RID: 49945 RVA: 0x001C074A File Offset: 0x001BE94A
 		public new IVisualNovelRoleIntroductionSolarSchool_SetValue ToSetValue()
 		{
 			return new IVisualNovelRoleIntroductionSolarSchool_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003849 RID: 14409
-		// (get) Token: 0x0600B7D4 RID: 47060 RVA: 0x001A9CE9 File Offset: 0x001A7EE9
-		// (set) Token: 0x0600B7D5 RID: 47061 RVA: 0x001A9D14 File Offset: 0x001A7F14
+		// Token: 0x17003B2A RID: 15146
+		// (get) Token: 0x0600C31A RID: 49946 RVA: 0x001C0775 File Offset: 0x001BE975
+		// (set) Token: 0x0600C31B RID: 49947 RVA: 0x001C07A0 File Offset: 0x001BE9A0
 		public override EVisualNovelSubType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700384A RID: 14410
-		// (get) Token: 0x0600B7D6 RID: 47062 RVA: 0x001A9D22 File Offset: 0x001A7F22
-		// (set) Token: 0x0600B7D7 RID: 47063 RVA: 0x001A9D4D File Offset: 0x001A7F4D
+		// Token: 0x17003B2B RID: 15147
+		// (get) Token: 0x0600C31C RID: 49948 RVA: 0x001C07AE File Offset: 0x001BE9AE
+		// (set) Token: 0x0600C31D RID: 49949 RVA: 0x001C07D9 File Offset: 0x001BE9D9
 		public virtual int IntroductionId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700384B RID: 14411
-		// (get) Token: 0x0600B7D8 RID: 47064 RVA: 0x001A9D5C File Offset: 0x001A7F5C
-		// (set) Token: 0x0600B7D9 RID: 47065 RVA: 0x001A9D96 File Offset: 0x001A7F96
+		// Token: 0x17003B2C RID: 15148
+		// (get) Token: 0x0600C31E RID: 49950 RVA: 0x001C07E8 File Offset: 0x001BE9E8
+		// (set) Token: 0x0600C31F RID: 49951 RVA: 0x001C0822 File Offset: 0x001BEA22
 		public virtual float? Duration
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E4A RID: 28234
+		// Token: 0x04007461 RID: 29793
 		[Nullable(2)]
 		protected new IVisualNovelRoleIntroductionSolarSchool FbInstance;
 
-		// Token: 0x04006E4B RID: 28235
+		// Token: 0x04007462 RID: 29794
 		[Nullable(2)]
 		protected new IVisualNovelRoleIntroductionSolarSchool_SetValue PocoInterface;
 	}

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DF2 RID: 28146
+	// Token: 0x0200756D RID: 30061
 	public struct IQteHourglass : IFlatbufferObject
 	{
-		// Token: 0x1700D1C0 RID: 53696
-		// (get) Token: 0x06031B5B RID: 203611 RVA: 0x006BB2C5 File Offset: 0x006B94C5
+		// Token: 0x1700DD08 RID: 56584
+		// (get) Token: 0x06034B57 RID: 215895 RVA: 0x007169AD File Offset: 0x00714BAD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031B5C RID: 203612 RVA: 0x006BB2D2 File Offset: 0x006B94D2
+		// Token: 0x06034B58 RID: 215896 RVA: 0x007169BA File Offset: 0x00714BBA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031B5D RID: 203613 RVA: 0x006BB2DC File Offset: 0x006B94DC
+		// Token: 0x06034B59 RID: 215897 RVA: 0x007169C4 File Offset: 0x00714BC4
 		public static IQteHourglass GetRootAsIQteHourglass(ByteBuffer _bb)
 		{
 			return IQteHourglass.GetRootAsIQteHourglass(_bb, default(IQteHourglass));
 		}
 
-		// Token: 0x06031B5E RID: 203614 RVA: 0x006BB2F8 File Offset: 0x006B94F8
+		// Token: 0x06034B5A RID: 215898 RVA: 0x007169E0 File Offset: 0x00714BE0
 		public static IQteHourglass GetRootAsIQteHourglass(ByteBuffer _bb, IQteHourglass obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031B5F RID: 203615 RVA: 0x006BB315 File Offset: 0x006B9515
+		// Token: 0x06034B5B RID: 215899 RVA: 0x007169FD File Offset: 0x00714BFD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031B60 RID: 203616 RVA: 0x006BB324 File Offset: 0x006B9524
+		// Token: 0x06034B5C RID: 215900 RVA: 0x00716A0C File Offset: 0x00714C0C
 		public IQteHourglass __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D1C1 RID: 53697
-		// (get) Token: 0x06031B61 RID: 203617 RVA: 0x006BB334 File Offset: 0x006B9534
+		// Token: 0x1700DD09 RID: 56585
+		// (get) Token: 0x06034B5D RID: 215901 RVA: 0x00716A1C File Offset: 0x00714C1C
 		public ESimpleGameplayType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031B62 RID: 203618 RVA: 0x006BB370 File Offset: 0x006B9570
+		// Token: 0x06034B5E RID: 215902 RVA: 0x00716A58 File Offset: 0x00714C58
 		public int QteIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700D1C2 RID: 53698
-		// (get) Token: 0x06031B63 RID: 203619 RVA: 0x006BB3B0 File Offset: 0x006B95B0
+		// Token: 0x1700DD0A RID: 56586
+		// (get) Token: 0x06034B5F RID: 215903 RVA: 0x00716A98 File Offset: 0x00714C98
 		public int QteIdsLength
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031B64 RID: 203620 RVA: 0x006BB3DB File Offset: 0x006B95DB
+		// Token: 0x06034B60 RID: 215904 RVA: 0x00716AC3 File Offset: 0x00714CC3
 		public Span<int> GetQteIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x06031B65 RID: 203621 RVA: 0x006BB3EA File Offset: 0x006B95EA
+		// Token: 0x06034B61 RID: 215905 RVA: 0x00716AD2 File Offset: 0x00714CD2
 		public int[] GetQteIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x06031B66 RID: 203622 RVA: 0x006BB3F8 File Offset: 0x006B95F8
+		// Token: 0x06034B62 RID: 215906 RVA: 0x00716AE0 File Offset: 0x00714CE0
 		public IQteHourglassConfig? QteConfigs(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -112,8 +112,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IQteHourglassConfig?(default(IQteHourglassConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700D1C3 RID: 53699
-		// (get) Token: 0x06031B67 RID: 203623 RVA: 0x006BB458 File Offset: 0x006B9658
+		// Token: 0x1700DD0B RID: 56587
+		// (get) Token: 0x06034B63 RID: 215907 RVA: 0x00716B40 File Offset: 0x00714D40
 		public int QteConfigsLength
 		{
 			get
@@ -127,8 +127,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D1C4 RID: 53700
-		// (get) Token: 0x06031B68 RID: 203624 RVA: 0x006BB484 File Offset: 0x006B9684
+		// Token: 0x1700DD0C RID: 56588
+		// (get) Token: 0x06034B64 RID: 215908 RVA: 0x00716B6C File Offset: 0x00714D6C
 		public byte NullMask
 		{
 			get
@@ -142,7 +142,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031B69 RID: 203625 RVA: 0x006BB4C1 File Offset: 0x006B96C1
+		// Token: 0x06034B65 RID: 215909 RVA: 0x00716BA9 File Offset: 0x00714DA9
 		public static Offset<IQteHourglass> CreateIQteHourglass(FlatBufferBuilder builder, ESimpleGameplayType Type = ESimpleGameplayType.Cipher, VectorOffset QteIdsOffset = default(VectorOffset), VectorOffset QteConfigsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -153,25 +153,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IQteHourglass.EndIQteHourglass(builder);
 		}
 
-		// Token: 0x06031B6A RID: 203626 RVA: 0x006BB4ED File Offset: 0x006B96ED
+		// Token: 0x06034B66 RID: 215910 RVA: 0x00716BD5 File Offset: 0x00714DD5
 		public static void StartIQteHourglass(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06031B6B RID: 203627 RVA: 0x006BB4F6 File Offset: 0x006B96F6
+		// Token: 0x06034B67 RID: 215911 RVA: 0x00716BDE File Offset: 0x00714DDE
 		public static void AddType(FlatBufferBuilder builder, ESimpleGameplayType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06031B6C RID: 203628 RVA: 0x006BB501 File Offset: 0x006B9701
+		// Token: 0x06034B68 RID: 215912 RVA: 0x00716BE9 File Offset: 0x00714DE9
 		public static void AddQteIds(FlatBufferBuilder builder, VectorOffset qteIdsOffset)
 		{
 			builder.AddOffset(1, qteIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06031B6D RID: 203629 RVA: 0x006BB514 File Offset: 0x006B9714
+		// Token: 0x06034B69 RID: 215913 RVA: 0x00716BFC File Offset: 0x00714DFC
 		public static VectorOffset CreateQteIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031B6E RID: 203630 RVA: 0x006BB54B File Offset: 0x006B974B
+		// Token: 0x06034B6A RID: 215914 RVA: 0x00716C33 File Offset: 0x00714E33
 		public static VectorOffset CreateQteIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031B6F RID: 203631 RVA: 0x006BB565 File Offset: 0x006B9765
+		// Token: 0x06034B6B RID: 215915 RVA: 0x00716C4D File Offset: 0x00714E4D
 		public static VectorOffset CreateQteIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -198,7 +198,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031B70 RID: 203632 RVA: 0x006BB583 File Offset: 0x006B9783
+		// Token: 0x06034B6C RID: 215916 RVA: 0x00716C6B File Offset: 0x00714E6B
 		public static VectorOffset CreateQteIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -206,19 +206,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031B71 RID: 203633 RVA: 0x006BB59C File Offset: 0x006B979C
+		// Token: 0x06034B6D RID: 215917 RVA: 0x00716C84 File Offset: 0x00714E84
 		public static void StartQteIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06031B72 RID: 203634 RVA: 0x006BB5A7 File Offset: 0x006B97A7
+		// Token: 0x06034B6E RID: 215918 RVA: 0x00716C8F File Offset: 0x00714E8F
 		public static void AddQteConfigs(FlatBufferBuilder builder, VectorOffset qteConfigsOffset)
 		{
 			builder.AddOffset(2, qteConfigsOffset.Value, 0);
 		}
 
-		// Token: 0x06031B73 RID: 203635 RVA: 0x006BB5B8 File Offset: 0x006B97B8
+		// Token: 0x06034B6F RID: 215919 RVA: 0x00716CA0 File Offset: 0x00714EA0
 		public static VectorOffset CreateQteConfigsVector(FlatBufferBuilder builder, Offset<IQteHourglassConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -229,7 +229,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031B74 RID: 203636 RVA: 0x006BB5F8 File Offset: 0x006B97F8
+		// Token: 0x06034B70 RID: 215920 RVA: 0x00716CE0 File Offset: 0x00714EE0
 		public static VectorOffset CreateQteConfigsVectorBlock(FlatBufferBuilder builder, Offset<IQteHourglassConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -237,7 +237,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031B75 RID: 203637 RVA: 0x006BB612 File Offset: 0x006B9812
+		// Token: 0x06034B71 RID: 215921 RVA: 0x00716CFA File Offset: 0x00714EFA
 		public static VectorOffset CreateQteConfigsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IQteHourglassConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -245,7 +245,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031B76 RID: 203638 RVA: 0x006BB630 File Offset: 0x006B9830
+		// Token: 0x06034B72 RID: 215922 RVA: 0x00716D18 File Offset: 0x00714F18
 		public static VectorOffset CreateQteConfigsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -253,25 +253,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031B77 RID: 203639 RVA: 0x006BB649 File Offset: 0x006B9849
+		// Token: 0x06034B73 RID: 215923 RVA: 0x00716D31 File Offset: 0x00714F31
 		public static void StartQteConfigsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06031B78 RID: 203640 RVA: 0x006BB654 File Offset: 0x006B9854
+		// Token: 0x06034B74 RID: 215924 RVA: 0x00716D3C File Offset: 0x00714F3C
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06031B79 RID: 203641 RVA: 0x006BB65F File Offset: 0x006B985F
+		// Token: 0x06034B75 RID: 215925 RVA: 0x00716D47 File Offset: 0x00714F47
 		public static Offset<IQteHourglass> EndIQteHourglass(FlatBufferBuilder builder)
 		{
 			return new Offset<IQteHourglass>(builder.EndTable());
 		}
 
-		// Token: 0x06031B7A RID: 203642 RVA: 0x006BB66C File Offset: 0x006B986C
+		// Token: 0x06034B76 RID: 215926 RVA: 0x00716D54 File Offset: 0x00714F54
 		public IQteHourglassT UnPack()
 		{
 			IQteHourglassT qteHourglassT = new IQteHourglassT();
@@ -279,7 +279,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return qteHourglassT;
 		}
 
-		// Token: 0x06031B7B RID: 203643 RVA: 0x006BB688 File Offset: 0x006B9888
+		// Token: 0x06034B77 RID: 215927 RVA: 0x00716D70 File Offset: 0x00714F70
 		public void UnPackTo(IQteHourglassT _o)
 		{
 			_o.Type = this.Type;
@@ -296,7 +296,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06031B7C RID: 203644 RVA: 0x006BB730 File Offset: 0x006B9930
+		// Token: 0x06034B78 RID: 215928 RVA: 0x00716E18 File Offset: 0x00715018
 		public static Offset<IQteHourglass> Pack(FlatBufferBuilder builder, IQteHourglassT _o)
 		{
 			if (_o == null)
@@ -322,7 +322,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IQteHourglass.CreateIQteHourglass(builder, _o.Type, qteIdsOffset, qteConfigsOffset, _o.NullMask);
 		}
 
-		// Token: 0x040117CC RID: 71628
+		// Token: 0x04012748 RID: 75592
 		private Table __p;
 	}
 }

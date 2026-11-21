@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065E6 RID: 26086
+	// Token: 0x02005564 RID: 21860
 	public enum EFishingSize
 	{
-		// Token: 0x04022087 RID: 139399
+		// Token: 0x0401C9B8 RID: 117176
 		Silver,
-		// Token: 0x04022088 RID: 139400
+		// Token: 0x0401C9B9 RID: 117177
 		Normal,
-		// Token: 0x04022089 RID: 139401
+		// Token: 0x0401C9BA RID: 117178
 		Golden
 	}
 }

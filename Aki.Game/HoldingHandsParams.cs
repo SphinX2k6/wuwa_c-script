@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Character.Role.Common.Data.Structure;
 using AkiClient.Game.Aki.Data.Level.KeepFollowing;
 using UnrealEngine;
 
-// Token: 0x02003066 RID: 12390
+// Token: 0x020025BC RID: 9660
 [NullableContext(1)]
 [Nullable(0)]
 public class HoldingHandsParams
 {
-	// Token: 0x0601A62B RID: 108075 RVA: 0x00707F98 File Offset: 0x00706198
+	// Token: 0x06017FDF RID: 98271 RVA: 0x0072E8D4 File Offset: 0x0072CAD4
 	[NullableContext(2)]
 	public HoldingHandsParams(BP_HoldingHandsConfig_C asset = null)
 	{
@@ -64,124 +64,124 @@ public class HoldingHandsParams
 		this.KeepFollowingDa = asset.跟随配置;
 	}
 
-	// Token: 0x0400CA08 RID: 51720
+	// Token: 0x0400CDE2 RID: 52706
 	public bool Debug;
 
-	// Token: 0x0400CA09 RID: 51721
+	// Token: 0x0400CDE3 RID: 52707
 	public int ReachableTag;
 
-	// Token: 0x0400CA0A RID: 51722
+	// Token: 0x0400CDE4 RID: 52708
 	public List<int> InvitingTags = new List<int>();
 
-	// Token: 0x0400CA0B RID: 51723
+	// Token: 0x0400CDE5 RID: 52709
 	public List<int> LeadingTags = new List<int>();
 
-	// Token: 0x0400CA0C RID: 51724
+	// Token: 0x0400CDE6 RID: 52710
 	public List<int> FollowingTags = new List<int>();
 
-	// Token: 0x0400CA0D RID: 51725
+	// Token: 0x0400CDE7 RID: 52711
 	public List<int> DisableTags = new List<int>();
 
-	// Token: 0x0400CA0E RID: 51726
+	// Token: 0x0400CDE8 RID: 52712
 	public double EndTime = 5.0;
 
-	// Token: 0x0400CA0F RID: 51727
+	// Token: 0x0400CDE9 RID: 52713
 	public double LongPressDuration = 1.0;
 
-	// Token: 0x0400CA10 RID: 51728
+	// Token: 0x0400CDEA RID: 52714
 	public double IkAlphaDamping = 500.0;
 
-	// Token: 0x0400CA11 RID: 51729
+	// Token: 0x0400CDEB RID: 52715
 	public double BindVecDamping = 100.0;
 
-	// Token: 0x0400CA12 RID: 51730
+	// Token: 0x0400CDEC RID: 52716
 	public double BindVecDampingInvitation = 400.0;
 
-	// Token: 0x0400CA13 RID: 51731
+	// Token: 0x0400CDED RID: 52717
 	public double WalkRotateSpeedMax = 180.0;
 
-	// Token: 0x0400CA14 RID: 51732
+	// Token: 0x0400CDEE RID: 52718
 	public double RunRotateSpeedMax = 180.0;
 
-	// Token: 0x0400CA15 RID: 51733
+	// Token: 0x0400CDEF RID: 52719
 	public double InputScaleRun = 1.0;
 
-	// Token: 0x0400CA16 RID: 51734
+	// Token: 0x0400CDF0 RID: 52720
 	public HoldingHandsRange YawRange = new HoldingHandsRange(-90f, 90f);
 
-	// Token: 0x0400CA17 RID: 51735
+	// Token: 0x0400CDF1 RID: 52721
 	public HoldingHandsRange PitchRange = new HoldingHandsRange(-90f, 90f);
 
-	// Token: 0x0400CA18 RID: 51736
+	// Token: 0x0400CDF2 RID: 52722
 	public HoldingHandsRange ShoulderYawRange = new HoldingHandsRange(-90f, 90f);
 
-	// Token: 0x0400CA19 RID: 51737
+	// Token: 0x0400CDF3 RID: 52723
 	public HoldingHandsRange ShoulderPitchRange = new HoldingHandsRange(-90f, 90f);
 
-	// Token: 0x0400CA1A RID: 51738
+	// Token: 0x0400CDF4 RID: 52724
 	public double ReachableExtraAngle = 5.0;
 
-	// Token: 0x0400CA1B RID: 51739
+	// Token: 0x0400CDF5 RID: 52725
 	public double BindDistanceUnReachable = 10.0;
 
-	// Token: 0x0400CA1C RID: 51740
+	// Token: 0x0400CDF6 RID: 52726
 	public double BindDistanceReachable = 30.0;
 
-	// Token: 0x0400CA1D RID: 51741
+	// Token: 0x0400CDF7 RID: 52727
 	public double UnReachableDistanceScale = 0.8;
 
-	// Token: 0x0400CA1E RID: 51742
+	// Token: 0x0400CDF8 RID: 52728
 	public double ReachableDistanceScale = 1.0;
 
-	// Token: 0x0400CA1F RID: 51743
+	// Token: 0x0400CDF9 RID: 52729
 	public double ShoulderDeltaHeightUnReachable = 35.0;
 
-	// Token: 0x0400CA20 RID: 51744
+	// Token: 0x0400CDFA RID: 52730
 	public double ShoulderDeltaHeightReachable = 40.0;
 
-	// Token: 0x0400CA21 RID: 51745
+	// Token: 0x0400CDFB RID: 52731
 	public int LeaderHitPriority = 50;
 
-	// Token: 0x0400CA22 RID: 51746
+	// Token: 0x0400CDFC RID: 52732
 	public int FollowerHitPriority = 49;
 
-	// Token: 0x0400CA23 RID: 51747
+	// Token: 0x0400CDFD RID: 52733
 	public float LeaderMass = 90f;
 
-	// Token: 0x0400CA24 RID: 51748
+	// Token: 0x0400CDFE RID: 52734
 	public float FollowerMass = 60f;
 
-	// Token: 0x0400CA25 RID: 51749
+	// Token: 0x0400CDFF RID: 52735
 	public double InvitationDistance = 83.0;
 
-	// Token: 0x0400CA26 RID: 51750
+	// Token: 0x0400CE00 RID: 52736
 	public float InvitationDistanceTolerance = 5f;
 
-	// Token: 0x0400CA27 RID: 51751
+	// Token: 0x0400CE01 RID: 52737
 	public double InvitationEndDistance = 55.0;
 
-	// Token: 0x0400CA28 RID: 51752
+	// Token: 0x0400CE02 RID: 52738
 	public float InvitationEndDistanceTolerance;
 
-	// Token: 0x0400CA29 RID: 51753
+	// Token: 0x0400CE03 RID: 52739
 	public float InvitationEndMoveSpeed = 50f;
 
-	// Token: 0x0400CA2A RID: 51754
+	// Token: 0x0400CE04 RID: 52740
 	public float InvitationTurnSpeed = 200f;
 
-	// Token: 0x0400CA2B RID: 51755
+	// Token: 0x0400CE05 RID: 52741
 	public double HandMinAngle = 45.0;
 
-	// Token: 0x0400CA2C RID: 51756
+	// Token: 0x0400CE06 RID: 52742
 	public double LeaderBindPosScale = 1.0;
 
-	// Token: 0x0400CA2D RID: 51757
+	// Token: 0x0400CE07 RID: 52743
 	public double FollowerBindPosScale = 1.0;
 
-	// Token: 0x0400CA2E RID: 51758
+	// Token: 0x0400CE08 RID: 52744
 	public double BindPosDistance = 2.0;
 
-	// Token: 0x0400CA2F RID: 51759
+	// Token: 0x0400CE09 RID: 52745
 	[Nullable(new byte[]
 	{
 		2,

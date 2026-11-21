@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006603 RID: 26115
+	// Token: 0x02006C74 RID: 27764
 	public struct IDollGrabShowcase : IFlatbufferObject
 	{
-		// Token: 0x1700C207 RID: 49671
-		// (get) Token: 0x0602D575 RID: 185717 RVA: 0x00636DE5 File Offset: 0x00634FE5
+		// Token: 0x1700CBA5 RID: 52133
+		// (get) Token: 0x0602FD46 RID: 195910 RVA: 0x0068394D File Offset: 0x00681B4D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D576 RID: 185718 RVA: 0x00636DF2 File Offset: 0x00634FF2
+		// Token: 0x0602FD47 RID: 195911 RVA: 0x0068395A File Offset: 0x00681B5A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D577 RID: 185719 RVA: 0x00636DFC File Offset: 0x00634FFC
+		// Token: 0x0602FD48 RID: 195912 RVA: 0x00683964 File Offset: 0x00681B64
 		public static IDollGrabShowcase GetRootAsIDollGrabShowcase(ByteBuffer _bb)
 		{
 			return IDollGrabShowcase.GetRootAsIDollGrabShowcase(_bb, default(IDollGrabShowcase));
 		}
 
-		// Token: 0x0602D578 RID: 185720 RVA: 0x00636E18 File Offset: 0x00635018
+		// Token: 0x0602FD49 RID: 195913 RVA: 0x00683980 File Offset: 0x00681B80
 		public static IDollGrabShowcase GetRootAsIDollGrabShowcase(ByteBuffer _bb, IDollGrabShowcase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D579 RID: 185721 RVA: 0x00636E35 File Offset: 0x00635035
+		// Token: 0x0602FD4A RID: 195914 RVA: 0x0068399D File Offset: 0x00681B9D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D57A RID: 185722 RVA: 0x00636E44 File Offset: 0x00635044
+		// Token: 0x0602FD4B RID: 195915 RVA: 0x006839AC File Offset: 0x00681BAC
 		public IDollGrabShowcase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C208 RID: 49672
-		// (get) Token: 0x0602D57B RID: 185723 RVA: 0x00636E54 File Offset: 0x00635054
+		// Token: 0x1700CBA6 RID: 52134
+		// (get) Token: 0x0602FD4C RID: 195916 RVA: 0x006839BC File Offset: 0x00681BBC
 		public ESimpleGameplayType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C209 RID: 49673
-		// (get) Token: 0x0602D57C RID: 185724 RVA: 0x00636E90 File Offset: 0x00635090
+		// Token: 0x1700CBA7 RID: 52135
+		// (get) Token: 0x0602FD4D RID: 195917 RVA: 0x006839F8 File Offset: 0x00681BF8
 		public int ShowcaseEntityId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D57D RID: 185725 RVA: 0x00636ECC File Offset: 0x006350CC
+		// Token: 0x0602FD4E RID: 195918 RVA: 0x00683A34 File Offset: 0x00681C34
 		public static Offset<IDollGrabShowcase> CreateIDollGrabShowcase(FlatBufferBuilder builder, ESimpleGameplayType Type = ESimpleGameplayType.Cipher, int ShowcaseEntityId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDollGrabShowcase.EndIDollGrabShowcase(builder);
 		}
 
-		// Token: 0x0602D57E RID: 185726 RVA: 0x00636EE9 File Offset: 0x006350E9
+		// Token: 0x0602FD4F RID: 195919 RVA: 0x00683A51 File Offset: 0x00681C51
 		public static void StartIDollGrabShowcase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602D57F RID: 185727 RVA: 0x00636EF2 File Offset: 0x006350F2
+		// Token: 0x0602FD50 RID: 195920 RVA: 0x00683A5A File Offset: 0x00681C5A
 		public static void AddType(FlatBufferBuilder builder, ESimpleGameplayType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D580 RID: 185728 RVA: 0x00636EFD File Offset: 0x006350FD
+		// Token: 0x0602FD51 RID: 195921 RVA: 0x00683A65 File Offset: 0x00681C65
 		public static void AddShowcaseEntityId(FlatBufferBuilder builder, int showcaseEntityId)
 		{
 			builder.AddInt(1, showcaseEntityId, 0);
 		}
 
-		// Token: 0x0602D581 RID: 185729 RVA: 0x00636F08 File Offset: 0x00635108
+		// Token: 0x0602FD52 RID: 195922 RVA: 0x00683A70 File Offset: 0x00681C70
 		public static Offset<IDollGrabShowcase> EndIDollGrabShowcase(FlatBufferBuilder builder)
 		{
 			return new Offset<IDollGrabShowcase>(builder.EndTable());
 		}
 
-		// Token: 0x0602D582 RID: 185730 RVA: 0x00636F18 File Offset: 0x00635118
+		// Token: 0x0602FD53 RID: 195923 RVA: 0x00683A80 File Offset: 0x00681C80
 		public IDollGrabShowcaseT UnPack()
 		{
 			IDollGrabShowcaseT dollGrabShowcaseT = new IDollGrabShowcaseT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return dollGrabShowcaseT;
 		}
 
-		// Token: 0x0602D583 RID: 185731 RVA: 0x00636F33 File Offset: 0x00635133
+		// Token: 0x0602FD54 RID: 195924 RVA: 0x00683A9B File Offset: 0x00681C9B
 		public void UnPackTo(IDollGrabShowcaseT _o)
 		{
 			_o.Type = this.Type;
 			_o.ShowcaseEntityId = this.ShowcaseEntityId;
 		}
 
-		// Token: 0x0602D584 RID: 185732 RVA: 0x00636F50 File Offset: 0x00635150
+		// Token: 0x0602FD55 RID: 195925 RVA: 0x00683AB8 File Offset: 0x00681CB8
 		public static Offset<IDollGrabShowcase> Pack(FlatBufferBuilder builder, IDollGrabShowcaseT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDollGrabShowcase.CreateIDollGrabShowcase(builder, _o.Type, _o.ShowcaseEntityId);
 		}
 
-		// Token: 0x04010C87 RID: 68743
+		// Token: 0x04011AA2 RID: 72354
 		private Table __p;
 	}
 }

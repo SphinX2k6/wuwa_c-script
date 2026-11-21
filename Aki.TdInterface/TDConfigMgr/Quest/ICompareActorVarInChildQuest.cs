@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F1A RID: 3866
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001030 RID: 4144
 	public class ICompareActorVarInChildQuest
 	{
-		// Token: 0x0600557C RID: 21884 RVA: 0x000D17F8 File Offset: 0x000CF9F8
+		// Token: 0x06005AF8 RID: 23288 RVA: 0x000DD9A0 File Offset: 0x000DBBA0
 		private ICompareActorVarInChildQuest_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600557D RID: 21885 RVA: 0x000D1830 File Offset: 0x000CFA30
+		// Token: 0x06005AF9 RID: 23289 RVA: 0x000DD9D8 File Offset: 0x000DBBD8
 		public static ICompareActorVarInChildQuest Create([Nullable(2)] ICompareActorVarInChildQuest instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600557E RID: 21886 RVA: 0x000D1843 File Offset: 0x000CFA43
+		// Token: 0x06005AFA RID: 23290 RVA: 0x000DD9EB File Offset: 0x000DBBEB
 		public static ICompareActorVarInChildQuest CreateFromSetValue([Nullable(2)] ICompareActorVarInChildQuest_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600557F RID: 21887 RVA: 0x000D1856 File Offset: 0x000CFA56
+		// Token: 0x06005AFB RID: 23291 RVA: 0x000DD9FE File Offset: 0x000DBBFE
 		public ICompareActorVarInChildQuest_SetValue ToSetValue()
 		{
 			return new ICompareActorVarInChildQuest_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C98 RID: 7320
-		// (get) Token: 0x06005580 RID: 21888 RVA: 0x000D1890 File Offset: 0x000CFA90
-		// (set) Token: 0x06005581 RID: 21889 RVA: 0x000D18F1 File Offset: 0x000CFAF1
+		// Token: 0x17001E30 RID: 7728
+		// (get) Token: 0x06005AFC RID: 23292 RVA: 0x000DDA38 File Offset: 0x000DBC38
+		// (set) Token: 0x06005AFD RID: 23293 RVA: 0x000DDA99 File Offset: 0x000DBC99
 		public virtual IActorRef ActorRef
 		{
 			get
@@ -95,9 +93,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C99 RID: 7321
-		// (get) Token: 0x06005582 RID: 21890 RVA: 0x000D1906 File Offset: 0x000CFB06
-		// (set) Token: 0x06005583 RID: 21891 RVA: 0x000D1931 File Offset: 0x000CFB31
+		// Token: 0x17001E31 RID: 7729
+		// (get) Token: 0x06005AFE RID: 23294 RVA: 0x000DDAAE File Offset: 0x000DBCAE
+		// (set) Token: 0x06005AFF RID: 23295 RVA: 0x000DDAD9 File Offset: 0x000DBCD9
 		public virtual string Var1
 		{
 			get
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C9A RID: 7322
-		// (get) Token: 0x06005584 RID: 21892 RVA: 0x000D193F File Offset: 0x000CFB3F
-		// (set) Token: 0x06005585 RID: 21893 RVA: 0x000D196A File Offset: 0x000CFB6A
+		// Token: 0x17001E32 RID: 7730
+		// (get) Token: 0x06005B00 RID: 23296 RVA: 0x000DDAE7 File Offset: 0x000DBCE7
+		// (set) Token: 0x06005B01 RID: 23297 RVA: 0x000DDB12 File Offset: 0x000DBD12
 		public virtual ECompare Compare
 		{
 			get
@@ -141,9 +139,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C9B RID: 7323
-		// (get) Token: 0x06005586 RID: 21894 RVA: 0x000D1978 File Offset: 0x000CFB78
-		// (set) Token: 0x06005587 RID: 21895 RVA: 0x000D199F File Offset: 0x000CFB9F
+		// Token: 0x17001E33 RID: 7731
+		// (get) Token: 0x06005B02 RID: 23298 RVA: 0x000DDB20 File Offset: 0x000DBD20
+		// (set) Token: 0x06005B03 RID: 23299 RVA: 0x000DDB47 File Offset: 0x000DBD47
 		public virtual VarRef Var2
 		{
 			get
@@ -165,18 +163,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040033B9 RID: 13241
+		// Token: 0x040036C6 RID: 14022
 		[Nullable(2)]
 		protected ICompareActorVarInChildQuest FbInstance;
 
-		// Token: 0x040033BA RID: 13242
+		// Token: 0x040036C7 RID: 14023
 		[Nullable(2)]
 		protected ICompareActorVarInChildQuest_SetValue PocoInterface;
 
-		// Token: 0x040033BB RID: 13243
+		// Token: 0x040036C8 RID: 14024
 		private IActorRef _ActorRefCache;
 
-		// Token: 0x040033BC RID: 13244
+		// Token: 0x040036C9 RID: 14025
 		private bool _ActorRefInited;
 	}
 }

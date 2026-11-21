@@ -4,25 +4,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B7B RID: 23419
+	// Token: 0x02006191 RID: 24977
 	public class IWindDirectionalT
 	{
-		// Token: 0x1700B0FF RID: 45311
-		// (get) Token: 0x06028173 RID: 164211 RVA: 0x00582E4A File Offset: 0x0058104A
-		// (set) Token: 0x06028174 RID: 164212 RVA: 0x00582E52 File Offset: 0x00581052
+		// Token: 0x1700BA47 RID: 47687
+		// (get) Token: 0x0602A737 RID: 173879 RVA: 0x005CA8DA File Offset: 0x005C8ADA
+		// (set) Token: 0x0602A738 RID: 173880 RVA: 0x005CA8E2 File Offset: 0x005C8AE2
 		public EWindSourceType Type { get; set; }
 
-		// Token: 0x1700B100 RID: 45312
-		// (get) Token: 0x06028175 RID: 164213 RVA: 0x00582E5B File Offset: 0x0058105B
-		// (set) Token: 0x06028176 RID: 164214 RVA: 0x00582E63 File Offset: 0x00581063
+		// Token: 0x1700BA48 RID: 47688
+		// (get) Token: 0x0602A739 RID: 173881 RVA: 0x005CA8EB File Offset: 0x005C8AEB
+		// (set) Token: 0x0602A73A RID: 173882 RVA: 0x005CA8F3 File Offset: 0x005C8AF3
 		public IVectorInfoT Rot { get; set; }
 
-		// Token: 0x1700B101 RID: 45313
-		// (get) Token: 0x06028177 RID: 164215 RVA: 0x00582E6C File Offset: 0x0058106C
-		// (set) Token: 0x06028178 RID: 164216 RVA: 0x00582E74 File Offset: 0x00581074
+		// Token: 0x1700BA49 RID: 47689
+		// (get) Token: 0x0602A73B RID: 173883 RVA: 0x005CA8FC File Offset: 0x005C8AFC
+		// (set) Token: 0x0602A73C RID: 173884 RVA: 0x005CA904 File Offset: 0x005C8B04
 		public List<IWindDirectionalStateGradeT> Grades { get; set; }
 
-		// Token: 0x06028179 RID: 164217 RVA: 0x00582E7D File Offset: 0x0058107D
+		// Token: 0x0602A73D RID: 173885 RVA: 0x005CA90D File Offset: 0x005C8B0D
 		public IWindDirectionalT()
 		{
 			this.Type = EWindSourceType.Directional;

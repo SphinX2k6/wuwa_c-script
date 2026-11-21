@@ -6,12 +6,12 @@ using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.Camera;
 using UnrealEngine;
 
-// Token: 0x02000F70 RID: 3952
+// Token: 0x02000425 RID: 1061
 [NullableContext(2)]
 [Nullable(0)]
 public class FurnitureCameraComponent
 {
-	// Token: 0x06006516 RID: 25878 RVA: 0x00141898 File Offset: 0x0013FA98
+	// Token: 0x060038AE RID: 14510 RVA: 0x0014A134 File Offset: 0x00148334
 	public void EnterAreaCamera(int areaCameraId, IFurnitureCameraFadeInContext fadeInContext = null)
 	{
 		this.CameraMode = EFurnitureCameraMode.AreaCamera;
@@ -43,7 +43,7 @@ public class FurnitureCameraComponent
 		this.EnterCameraInternal(cameraContext, fadeInContext2);
 	}
 
-	// Token: 0x06006517 RID: 25879 RVA: 0x00141980 File Offset: 0x0013FB80
+	// Token: 0x060038AF RID: 14511 RVA: 0x0014A21C File Offset: 0x0014841C
 	[NullableContext(1)]
 	public void EnterSlotCamera(IFurnitureSlotContext slotContext, [Nullable(2)] IFurnitureCameraFadeInContext fadeInContext = null)
 	{
@@ -101,7 +101,7 @@ public class FurnitureCameraComponent
 		this.EnterCameraInternal(cameraContext, furnitureCameraFadeInContext);
 	}
 
-	// Token: 0x06006518 RID: 25880 RVA: 0x00141B24 File Offset: 0x0013FD24
+	// Token: 0x060038B0 RID: 14512 RVA: 0x0014A3C0 File Offset: 0x001485C0
 	[NullableContext(1)]
 	private void EnterCameraInternal(IFurnitureCameraContext cameraContext, IFurnitureCameraFadeInContext fadeInContext)
 	{
@@ -114,45 +114,45 @@ public class FurnitureCameraComponent
 		playerComponent.EnterFixSceneSubCamera(cameraContext.Pos, cameraContext.Rot, cameraContext.Fov, fadeInContext.FadeInTime, 0f, ESceneSubCameraType.Fix, null, new UnrealEngine.EViewTargetBlendFunction?(UnrealEngine.EViewTargetBlendFunction.VTBlend_EaseOut), new float?(fadeInContext.FadeInExp), new UnrealEngine.EViewTargetBlendFunction?(UnrealEngine.EViewTargetBlendFunction.VTBlend_Linear), new float?(0f), new bool?(false), null, new bool?(false), null, "", null, null, null, false, false);
 	}
 
-	// Token: 0x06006519 RID: 25881 RVA: 0x00141BAF File Offset: 0x0013FDAF
+	// Token: 0x060038B1 RID: 14513 RVA: 0x0014A44B File Offset: 0x0014864B
 	public void ExitFurnitureCamera()
 	{
 		CameraController.Instance.MainModel.SceneCamera.PlayerComponent.ExitFixSceneSubCamera(null, true);
 	}
 
-	// Token: 0x0600651A RID: 25882 RVA: 0x00141BCC File Offset: 0x0013FDCC
+	// Token: 0x060038B2 RID: 14514 RVA: 0x0014A468 File Offset: 0x00148668
 	public EFurnitureCameraMode GetCameraMode()
 	{
 		return this.CameraMode;
 	}
 
-	// Token: 0x0600651B RID: 25883 RVA: 0x00141BD4 File Offset: 0x0013FDD4
+	// Token: 0x060038B3 RID: 14515 RVA: 0x0014A470 File Offset: 0x00148670
 	public IFurnitureCameraContext GetCameraContext()
 	{
 		return this.CameraContext;
 	}
 
-	// Token: 0x0600651C RID: 25884 RVA: 0x00141BDC File Offset: 0x0013FDDC
+	// Token: 0x060038B4 RID: 14516 RVA: 0x0014A478 File Offset: 0x00148678
 	public IFurnitureSlotContext GetSlotContext()
 	{
 		return this.SlotContext;
 	}
 
-	// Token: 0x0600651D RID: 25885 RVA: 0x00141BE4 File Offset: 0x0013FDE4
+	// Token: 0x060038B5 RID: 14517 RVA: 0x0014A480 File Offset: 0x00148680
 	public IFurnitureAreaCameraContext GetAreaCameraContext()
 	{
 		return this.AreaCameraContext;
 	}
 
-	// Token: 0x04002DF8 RID: 11768
+	// Token: 0x04002E91 RID: 11921
 	private EFurnitureCameraMode CameraMode;
 
-	// Token: 0x04002DF9 RID: 11769
+	// Token: 0x04002E92 RID: 11922
 	private IFurnitureCameraContext CameraContext;
 
-	// Token: 0x04002DFA RID: 11770
+	// Token: 0x04002E93 RID: 11923
 	private IFurnitureSlotContext SlotContext;
 
-	// Token: 0x04002DFB RID: 11771
+	// Token: 0x04002E94 RID: 11924
 	private IFurnitureAreaCameraContext AreaCameraContext;
 }

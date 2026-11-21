@@ -7,52 +7,60 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BFF RID: 3071
+	// Token: 0x02000CE1 RID: 3297
+	[NullableContext(1)]
+	[Nullable(0)]
 	public struct DrinksBatching : IFlatbufferObject
 	{
-		// Token: 0x17000D1D RID: 3357
-		// (get) Token: 0x06006385 RID: 25477 RVA: 0x00216329 File Offset: 0x00214529
+		// Token: 0x17000D69 RID: 3433
+		// (get) Token: 0x06006964 RID: 26980 RVA: 0x00235989 File Offset: 0x00233B89
+		[Nullable(0)]
 		public ByteBuffer ByteBuffer
 		{
+			[NullableContext(0)]
 			get
 			{
 				return this.__p.bb;
 			}
 		}
 
-		// Token: 0x06006386 RID: 25478 RVA: 0x00216336 File Offset: 0x00214536
+		// Token: 0x06006965 RID: 26981 RVA: 0x00235996 File Offset: 0x00233B96
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006387 RID: 25479 RVA: 0x00216340 File Offset: 0x00214540
+		// Token: 0x06006966 RID: 26982 RVA: 0x002359A0 File Offset: 0x00233BA0
+		[NullableContext(0)]
 		public static DrinksBatching GetRootAsDrinksBatching(ByteBuffer _bb)
 		{
 			return DrinksBatching.GetRootAsDrinksBatching(_bb, default(DrinksBatching));
 		}
 
-		// Token: 0x06006388 RID: 25480 RVA: 0x0021635C File Offset: 0x0021455C
+		// Token: 0x06006967 RID: 26983 RVA: 0x002359BC File Offset: 0x00233BBC
+		[NullableContext(0)]
 		public static DrinksBatching GetRootAsDrinksBatching(ByteBuffer _bb, DrinksBatching obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006389 RID: 25481 RVA: 0x00216379 File Offset: 0x00214579
+		// Token: 0x06006968 RID: 26984 RVA: 0x002359D9 File Offset: 0x00233BD9
+		[NullableContext(0)]
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600638A RID: 25482 RVA: 0x00216388 File Offset: 0x00214588
+		// Token: 0x06006969 RID: 26985 RVA: 0x002359E8 File Offset: 0x00233BE8
+		[NullableContext(0)]
 		public DrinksBatching __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000D1E RID: 3358
-		// (get) Token: 0x0600638B RID: 25483 RVA: 0x00216398 File Offset: 0x00214598
+		// Token: 0x17000D6A RID: 3434
+		// (get) Token: 0x0600696A RID: 26986 RVA: 0x002359F8 File Offset: 0x00233BF8
 		public int Id
 		{
 			get
@@ -66,10 +74,12 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D1F RID: 3359
-		// (get) Token: 0x0600638C RID: 25484 RVA: 0x002163D4 File Offset: 0x002145D4
+		// Token: 0x17000D6B RID: 3435
+		// (get) Token: 0x0600696B RID: 26987 RVA: 0x00235A34 File Offset: 0x00233C34
+		[Nullable(0)]
 		public string Icon
 		{
+			[NullableContext(0)]
 			get
 			{
 				int num = this.__p.__offset(6);
@@ -81,22 +91,26 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600638D RID: 25485 RVA: 0x0021640B File Offset: 0x0021460B
+		// Token: 0x0600696C RID: 26988 RVA: 0x00235A6B File Offset: 0x00233C6B
+		[NullableContext(0)]
 		public Span<byte> GetIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600638E RID: 25486 RVA: 0x0021641A File Offset: 0x0021461A
+		// Token: 0x0600696D RID: 26989 RVA: 0x00235A7A File Offset: 0x00233C7A
+		[NullableContext(0)]
 		public byte[] GetIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000D20 RID: 3360
-		// (get) Token: 0x0600638F RID: 25487 RVA: 0x00216434 File Offset: 0x00214634
+		// Token: 0x17000D6C RID: 3436
+		// (get) Token: 0x0600696E RID: 26990 RVA: 0x00235A94 File Offset: 0x00233C94
+		[Nullable(0)]
 		public string Name
 		{
+			[NullableContext(0)]
 			get
 			{
 				int num = this.__p.__offset(8);
@@ -108,19 +122,21 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006390 RID: 25488 RVA: 0x0021646B File Offset: 0x0021466B
+		// Token: 0x0600696F RID: 26991 RVA: 0x00235ACB File Offset: 0x00233CCB
+		[NullableContext(0)]
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06006391 RID: 25489 RVA: 0x0021647A File Offset: 0x0021467A
+		// Token: 0x06006970 RID: 26992 RVA: 0x00235ADA File Offset: 0x00233CDA
+		[NullableContext(0)]
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06006392 RID: 25490 RVA: 0x00216494 File Offset: 0x00214694
+		// Token: 0x06006971 RID: 26993 RVA: 0x00235AF4 File Offset: 0x00233CF4
 		public DicIntInt? Flavor(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -131,8 +147,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000D21 RID: 3361
-		// (get) Token: 0x06006393 RID: 25491 RVA: 0x002164F8 File Offset: 0x002146F8
+		// Token: 0x17000D6D RID: 3437
+		// (get) Token: 0x06006972 RID: 26994 RVA: 0x00235B58 File Offset: 0x00233D58
 		public int FlavorLength
 		{
 			get
@@ -146,8 +162,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D22 RID: 3362
-		// (get) Token: 0x06006394 RID: 25492 RVA: 0x00216524 File Offset: 0x00214724
+		// Token: 0x17000D6E RID: 3438
+		// (get) Token: 0x06006973 RID: 26995 RVA: 0x00235B84 File Offset: 0x00233D84
 		public int MeshTagId
 		{
 			get
@@ -161,7 +177,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006395 RID: 25493 RVA: 0x00216564 File Offset: 0x00214764
+		// Token: 0x06006974 RID: 26996 RVA: 0x00235BC4 File Offset: 0x00233DC4
 		public DicIntInt? ScaleMap(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -172,8 +188,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000D23 RID: 3363
-		// (get) Token: 0x06006396 RID: 25494 RVA: 0x002165C8 File Offset: 0x002147C8
+		// Token: 0x17000D6F RID: 3439
+		// (get) Token: 0x06006975 RID: 26997 RVA: 0x00235C28 File Offset: 0x00233E28
 		public int ScaleMapLength
 		{
 			get
@@ -187,7 +203,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006397 RID: 25495 RVA: 0x002165F4 File Offset: 0x002147F4
+		// Token: 0x06006976 RID: 26998 RVA: 0x00235C54 File Offset: 0x00233E54
 		public DicIntInt? HeighScaleMap(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -198,8 +214,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000D24 RID: 3364
-		// (get) Token: 0x06006398 RID: 25496 RVA: 0x00216658 File Offset: 0x00214858
+		// Token: 0x17000D70 RID: 3440
+		// (get) Token: 0x06006977 RID: 26999 RVA: 0x00235CB8 File Offset: 0x00233EB8
 		public int HeighScaleMapLength
 		{
 			get
@@ -213,7 +229,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006399 RID: 25497 RVA: 0x00216684 File Offset: 0x00214884
+		// Token: 0x06006978 RID: 27000 RVA: 0x00235CE4 File Offset: 0x00233EE4
 		public DicIntInt? PosScaleMap(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -224,8 +240,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000D25 RID: 3365
-		// (get) Token: 0x0600639A RID: 25498 RVA: 0x002166E8 File Offset: 0x002148E8
+		// Token: 0x17000D71 RID: 3441
+		// (get) Token: 0x06006979 RID: 27001 RVA: 0x00235D48 File Offset: 0x00233F48
 		public int PosScaleMapLength
 		{
 			get
@@ -239,7 +255,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600639B RID: 25499 RVA: 0x00216714 File Offset: 0x00214914
+		// Token: 0x0600697A RID: 27002 RVA: 0x00235D74 File Offset: 0x00233F74
 		public DicIntIntArray? PosOnLiquid1(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -250,8 +266,8 @@ namespace Aki.Config
 			return new DicIntIntArray?(default(DicIntIntArray).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000D26 RID: 3366
-		// (get) Token: 0x0600639C RID: 25500 RVA: 0x00216778 File Offset: 0x00214978
+		// Token: 0x17000D72 RID: 3442
+		// (get) Token: 0x0600697B RID: 27003 RVA: 0x00235DD8 File Offset: 0x00233FD8
 		public int PosOnLiquid1Length
 		{
 			get
@@ -265,7 +281,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600639D RID: 25501 RVA: 0x002167A4 File Offset: 0x002149A4
+		// Token: 0x0600697C RID: 27004 RVA: 0x00235E04 File Offset: 0x00234004
 		public DicIntIntArray? PosOnLiquid2(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -276,8 +292,8 @@ namespace Aki.Config
 			return new DicIntIntArray?(default(DicIntIntArray).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000D27 RID: 3367
-		// (get) Token: 0x0600639E RID: 25502 RVA: 0x00216808 File Offset: 0x00214A08
+		// Token: 0x17000D73 RID: 3443
+		// (get) Token: 0x0600697D RID: 27005 RVA: 0x00235E68 File Offset: 0x00234068
 		public int PosOnLiquid2Length
 		{
 			get
@@ -291,109 +307,91 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600639F RID: 25503 RVA: 0x00216834 File Offset: 0x00214A34
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用FlavorFrozenDict()缓存字典，遍历请使用FlavorIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> Flavor()
+		// Token: 0x0600697E RID: 27006 RVA: 0x00235E94 File Offset: 0x00234094
+		public Dictionary<int, int> Flavor()
 		{
 			return this.FlavorIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x060063A0 RID: 25504 RVA: 0x0021688A File Offset: 0x00214A8A
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> FlavorIter()
+		// Token: 0x0600697F RID: 27007 RVA: 0x00235EEA File Offset: 0x002340EA
+		public IEnumerable<DicIntInt> FlavorIter()
 		{
 			DrinksBatching.<FlavorIter>d__39 <FlavorIter>d__ = new DrinksBatching.<FlavorIter>d__39(-2);
 			<FlavorIter>d__.<>3__<>4__this = this;
 			return <FlavorIter>d__;
 		}
 
-		// Token: 0x060063A1 RID: 25505 RVA: 0x002168A0 File Offset: 0x00214AA0
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用HeighScaleMapFrozenDict()缓存字典，遍历请使用HeighScaleMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> HeighScaleMap()
+		// Token: 0x06006980 RID: 27008 RVA: 0x00235F00 File Offset: 0x00234100
+		public Dictionary<int, int> HeighScaleMap()
 		{
 			return this.HeighScaleMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x060063A2 RID: 25506 RVA: 0x002168F6 File Offset: 0x00214AF6
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> HeighScaleMapIter()
+		// Token: 0x06006981 RID: 27009 RVA: 0x00235F56 File Offset: 0x00234156
+		public IEnumerable<DicIntInt> HeighScaleMapIter()
 		{
 			DrinksBatching.<HeighScaleMapIter>d__41 <HeighScaleMapIter>d__ = new DrinksBatching.<HeighScaleMapIter>d__41(-2);
 			<HeighScaleMapIter>d__.<>3__<>4__this = this;
 			return <HeighScaleMapIter>d__;
 		}
 
-		// Token: 0x060063A3 RID: 25507 RVA: 0x0021690C File Offset: 0x00214B0C
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用PosOnLiquid1FrozenDict()缓存字典，遍历请使用PosOnLiquid1Iter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, IntArray> PosOnLiquid1()
+		// Token: 0x06006982 RID: 27010 RVA: 0x00235F6C File Offset: 0x0023416C
+		public Dictionary<int, IntArray> PosOnLiquid1()
 		{
 			return this.PosOnLiquid1Iter().ToDictionary((DicIntIntArray element) => element.Key, (DicIntIntArray element) => element.Value.Value);
 		}
 
-		// Token: 0x060063A4 RID: 25508 RVA: 0x00216962 File Offset: 0x00214B62
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntIntArray> PosOnLiquid1Iter()
+		// Token: 0x06006983 RID: 27011 RVA: 0x00235FC2 File Offset: 0x002341C2
+		public IEnumerable<DicIntIntArray> PosOnLiquid1Iter()
 		{
 			DrinksBatching.<PosOnLiquid1Iter>d__43 <PosOnLiquid1Iter>d__ = new DrinksBatching.<PosOnLiquid1Iter>d__43(-2);
 			<PosOnLiquid1Iter>d__.<>3__<>4__this = this;
 			return <PosOnLiquid1Iter>d__;
 		}
 
-		// Token: 0x060063A5 RID: 25509 RVA: 0x00216978 File Offset: 0x00214B78
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用PosOnLiquid2FrozenDict()缓存字典，遍历请使用PosOnLiquid2Iter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, IntArray> PosOnLiquid2()
+		// Token: 0x06006984 RID: 27012 RVA: 0x00235FD8 File Offset: 0x002341D8
+		public Dictionary<int, IntArray> PosOnLiquid2()
 		{
 			return this.PosOnLiquid2Iter().ToDictionary((DicIntIntArray element) => element.Key, (DicIntIntArray element) => element.Value.Value);
 		}
 
-		// Token: 0x060063A6 RID: 25510 RVA: 0x002169CE File Offset: 0x00214BCE
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntIntArray> PosOnLiquid2Iter()
+		// Token: 0x06006985 RID: 27013 RVA: 0x0023602E File Offset: 0x0023422E
+		public IEnumerable<DicIntIntArray> PosOnLiquid2Iter()
 		{
 			DrinksBatching.<PosOnLiquid2Iter>d__45 <PosOnLiquid2Iter>d__ = new DrinksBatching.<PosOnLiquid2Iter>d__45(-2);
 			<PosOnLiquid2Iter>d__.<>3__<>4__this = this;
 			return <PosOnLiquid2Iter>d__;
 		}
 
-		// Token: 0x060063A7 RID: 25511 RVA: 0x002169E4 File Offset: 0x00214BE4
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用PosScaleMapFrozenDict()缓存字典，遍历请使用PosScaleMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> PosScaleMap()
+		// Token: 0x06006986 RID: 27014 RVA: 0x00236044 File Offset: 0x00234244
+		public Dictionary<int, int> PosScaleMap()
 		{
 			return this.PosScaleMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x060063A8 RID: 25512 RVA: 0x00216A3A File Offset: 0x00214C3A
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> PosScaleMapIter()
+		// Token: 0x06006987 RID: 27015 RVA: 0x0023609A File Offset: 0x0023429A
+		public IEnumerable<DicIntInt> PosScaleMapIter()
 		{
 			DrinksBatching.<PosScaleMapIter>d__47 <PosScaleMapIter>d__ = new DrinksBatching.<PosScaleMapIter>d__47(-2);
 			<PosScaleMapIter>d__.<>3__<>4__this = this;
 			return <PosScaleMapIter>d__;
 		}
 
-		// Token: 0x060063A9 RID: 25513 RVA: 0x00216A50 File Offset: 0x00214C50
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用ScaleMapFrozenDict()缓存字典，遍历请使用ScaleMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> ScaleMap()
+		// Token: 0x06006988 RID: 27016 RVA: 0x002360B0 File Offset: 0x002342B0
+		public Dictionary<int, int> ScaleMap()
 		{
 			return this.ScaleMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x060063AA RID: 25514 RVA: 0x00216AA6 File Offset: 0x00214CA6
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> ScaleMapIter()
+		// Token: 0x06006989 RID: 27017 RVA: 0x00236106 File Offset: 0x00234306
+		public IEnumerable<DicIntInt> ScaleMapIter()
 		{
 			DrinksBatching.<ScaleMapIter>d__49 <ScaleMapIter>d__ = new DrinksBatching.<ScaleMapIter>d__49(-2);
 			<ScaleMapIter>d__.<>3__<>4__this = this;
 			return <ScaleMapIter>d__;
 		}
 
-		// Token: 0x060063AB RID: 25515 RVA: 0x00216ABC File Offset: 0x00214CBC
+		// Token: 0x0600698A RID: 27018 RVA: 0x0023611C File Offset: 0x0023431C
 		public int? GetFlavor(int key)
 		{
 			this.EnsureFlavorCacheIfNeeded();
@@ -405,7 +403,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x060063AC RID: 25516 RVA: 0x00216AF0 File Offset: 0x00214CF0
+		// Token: 0x0600698B RID: 27019 RVA: 0x00236150 File Offset: 0x00234350
 		public int? GetHeighScaleMap(int key)
 		{
 			this.EnsureHeighScaleMapCacheIfNeeded();
@@ -417,7 +415,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x060063AD RID: 25517 RVA: 0x00216B24 File Offset: 0x00214D24
+		// Token: 0x0600698C RID: 27020 RVA: 0x00236184 File Offset: 0x00234384
 		public IntArray? GetPosOnLiquid1(int key)
 		{
 			this.EnsurePosOnLiquid1CacheIfNeeded();
@@ -429,7 +427,7 @@ namespace Aki.Config
 			return new IntArray?(value);
 		}
 
-		// Token: 0x060063AE RID: 25518 RVA: 0x00216B58 File Offset: 0x00214D58
+		// Token: 0x0600698D RID: 27021 RVA: 0x002361B8 File Offset: 0x002343B8
 		public IntArray? GetPosOnLiquid2(int key)
 		{
 			this.EnsurePosOnLiquid2CacheIfNeeded();
@@ -441,7 +439,7 @@ namespace Aki.Config
 			return new IntArray?(value);
 		}
 
-		// Token: 0x060063AF RID: 25519 RVA: 0x00216B8C File Offset: 0x00214D8C
+		// Token: 0x0600698E RID: 27022 RVA: 0x002361EC File Offset: 0x002343EC
 		public int? GetPosScaleMap(int key)
 		{
 			this.EnsurePosScaleMapCacheIfNeeded();
@@ -453,7 +451,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x060063B0 RID: 25520 RVA: 0x00216BC0 File Offset: 0x00214DC0
+		// Token: 0x0600698F RID: 27023 RVA: 0x00236220 File Offset: 0x00234420
 		public int? GetScaleMap(int key)
 		{
 			this.EnsureScaleMapCacheIfNeeded();
@@ -465,7 +463,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x060063B1 RID: 25521 RVA: 0x00216BF4 File Offset: 0x00214DF4
+		// Token: 0x06006990 RID: 27024 RVA: 0x00236254 File Offset: 0x00234454
 		private void EnsureFlavorCacheIfNeeded()
 		{
 			if (this.FlavorCache != null)
@@ -475,7 +473,7 @@ namespace Aki.Config
 			this.FlavorCache = this.FlavorIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x060063B2 RID: 25522 RVA: 0x00216C5C File Offset: 0x00214E5C
+		// Token: 0x06006991 RID: 27025 RVA: 0x002362BC File Offset: 0x002344BC
 		private void EnsureHeighScaleMapCacheIfNeeded()
 		{
 			if (this.HeighScaleMapCache != null)
@@ -485,7 +483,7 @@ namespace Aki.Config
 			this.HeighScaleMapCache = this.HeighScaleMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x060063B3 RID: 25523 RVA: 0x00216CC4 File Offset: 0x00214EC4
+		// Token: 0x06006992 RID: 27026 RVA: 0x00236324 File Offset: 0x00234524
 		private void EnsurePosOnLiquid1CacheIfNeeded()
 		{
 			if (this.PosOnLiquid1Cache != null)
@@ -495,7 +493,7 @@ namespace Aki.Config
 			this.PosOnLiquid1Cache = this.PosOnLiquid1Iter().ToFrozenDictionary((DicIntIntArray kvp) => kvp.Key, (DicIntIntArray kvp) => kvp.Value.Value, null);
 		}
 
-		// Token: 0x060063B4 RID: 25524 RVA: 0x00216D2C File Offset: 0x00214F2C
+		// Token: 0x06006993 RID: 27027 RVA: 0x0023638C File Offset: 0x0023458C
 		private void EnsurePosOnLiquid2CacheIfNeeded()
 		{
 			if (this.PosOnLiquid2Cache != null)
@@ -505,7 +503,7 @@ namespace Aki.Config
 			this.PosOnLiquid2Cache = this.PosOnLiquid2Iter().ToFrozenDictionary((DicIntIntArray kvp) => kvp.Key, (DicIntIntArray kvp) => kvp.Value.Value, null);
 		}
 
-		// Token: 0x060063B5 RID: 25525 RVA: 0x00216D94 File Offset: 0x00214F94
+		// Token: 0x06006994 RID: 27028 RVA: 0x002363F4 File Offset: 0x002345F4
 		private void EnsurePosScaleMapCacheIfNeeded()
 		{
 			if (this.PosScaleMapCache != null)
@@ -515,7 +513,7 @@ namespace Aki.Config
 			this.PosScaleMapCache = this.PosScaleMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x060063B6 RID: 25526 RVA: 0x00216DFC File Offset: 0x00214FFC
+		// Token: 0x06006995 RID: 27029 RVA: 0x0023645C File Offset: 0x0023465C
 		private void EnsureScaleMapCacheIfNeeded()
 		{
 			if (this.ScaleMapCache != null)
@@ -525,78 +523,72 @@ namespace Aki.Config
 			this.ScaleMapCache = this.ScaleMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x060063B7 RID: 25527 RVA: 0x00216E62 File Offset: 0x00215062
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetFlavorFrozenDict(int key)
+		// Token: 0x06006996 RID: 27030 RVA: 0x002364C2 File Offset: 0x002346C2
+		public FrozenDictionary<int, int> GetFlavorFrozenDict()
 		{
 			this.EnsureFlavorCacheIfNeeded();
 			return this.FlavorCache;
 		}
 
-		// Token: 0x060063B8 RID: 25528 RVA: 0x00216E70 File Offset: 0x00215070
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetHeighScaleMapFrozenDict(int key)
+		// Token: 0x06006997 RID: 27031 RVA: 0x002364D0 File Offset: 0x002346D0
+		public FrozenDictionary<int, int> GetHeighScaleMapFrozenDict()
 		{
 			this.EnsureHeighScaleMapCacheIfNeeded();
 			return this.HeighScaleMapCache;
 		}
 
-		// Token: 0x060063B9 RID: 25529 RVA: 0x00216E7E File Offset: 0x0021507E
-		[NullableContext(2)]
-		public FrozenDictionary<int, IntArray> GetPosOnLiquid1FrozenDict(int key)
+		// Token: 0x06006998 RID: 27032 RVA: 0x002364DE File Offset: 0x002346DE
+		public FrozenDictionary<int, IntArray> GetPosOnLiquid1FrozenDict()
 		{
 			this.EnsurePosOnLiquid1CacheIfNeeded();
 			return this.PosOnLiquid1Cache;
 		}
 
-		// Token: 0x060063BA RID: 25530 RVA: 0x00216E8C File Offset: 0x0021508C
-		[NullableContext(2)]
-		public FrozenDictionary<int, IntArray> GetPosOnLiquid2FrozenDict(int key)
+		// Token: 0x06006999 RID: 27033 RVA: 0x002364EC File Offset: 0x002346EC
+		public FrozenDictionary<int, IntArray> GetPosOnLiquid2FrozenDict()
 		{
 			this.EnsurePosOnLiquid2CacheIfNeeded();
 			return this.PosOnLiquid2Cache;
 		}
 
-		// Token: 0x060063BB RID: 25531 RVA: 0x00216E9A File Offset: 0x0021509A
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetPosScaleMapFrozenDict(int key)
+		// Token: 0x0600699A RID: 27034 RVA: 0x002364FA File Offset: 0x002346FA
+		public FrozenDictionary<int, int> GetPosScaleMapFrozenDict()
 		{
 			this.EnsurePosScaleMapCacheIfNeeded();
 			return this.PosScaleMapCache;
 		}
 
-		// Token: 0x060063BC RID: 25532 RVA: 0x00216EA8 File Offset: 0x002150A8
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetScaleMapFrozenDict(int key)
+		// Token: 0x0600699B RID: 27035 RVA: 0x00236508 File Offset: 0x00234708
+		public FrozenDictionary<int, int> GetScaleMapFrozenDict()
 		{
 			this.EnsureScaleMapCacheIfNeeded();
 			return this.ScaleMapCache;
 		}
 
-		// Token: 0x04004C2E RID: 19502
+		// Token: 0x04005210 RID: 21008
 		private Table __p;
 
-		// Token: 0x04004C2F RID: 19503
+		// Token: 0x04005211 RID: 21009
 		[Nullable(2)]
 		private FrozenDictionary<int, int> FlavorCache;
 
-		// Token: 0x04004C30 RID: 19504
+		// Token: 0x04005212 RID: 21010
 		[Nullable(2)]
 		private FrozenDictionary<int, int> HeighScaleMapCache;
 
-		// Token: 0x04004C31 RID: 19505
+		// Token: 0x04005213 RID: 21011
 		[Nullable(2)]
 		private FrozenDictionary<int, IntArray> PosOnLiquid1Cache;
 
-		// Token: 0x04004C32 RID: 19506
+		// Token: 0x04005214 RID: 21012
 		[Nullable(2)]
 		private FrozenDictionary<int, IntArray> PosOnLiquid2Cache;
 
-		// Token: 0x04004C33 RID: 19507
+		// Token: 0x04005215 RID: 21013
 		[Nullable(2)]
 		private FrozenDictionary<int, int> PosScaleMapCache;
 
-		// Token: 0x04004C34 RID: 19508
+		// Token: 0x04005216 RID: 21014
 		[Nullable(2)]
 		private FrozenDictionary<int, int> ScaleMapCache;
 	}

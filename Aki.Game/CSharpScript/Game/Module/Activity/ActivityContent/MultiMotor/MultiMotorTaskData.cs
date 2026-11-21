@@ -7,18 +7,18 @@ using CSharpScript.Game.Module.Reward;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x02006392 RID: 25490
+	// Token: 0x02005310 RID: 21264
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MultiMotorTaskData
 	{
-		// Token: 0x060401C1 RID: 262593 RVA: 0x00F842E0 File Offset: 0x00F824E0
+		// Token: 0x06034E82 RID: 216706 RVA: 0x00ECB254 File Offset: 0x00EC9454
 		public MultiMotorTaskData(int taskId)
 		{
 			this.TaskId = taskId;
 		}
 
-		// Token: 0x060401C2 RID: 262594 RVA: 0x00F84304 File Offset: 0x00F82504
+		// Token: 0x06034E83 RID: 216707 RVA: 0x00ECB278 File Offset: 0x00EC9478
 		public void RefreshByTaskInfo(OnlineMotorTask taskInfo)
 		{
 			switch (taskInfo.State)
@@ -58,8 +58,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x17009361 RID: 37729
-		// (get) Token: 0x060401C3 RID: 262595 RVA: 0x00F84411 File Offset: 0x00F82611
+		// Token: 0x170066C3 RID: 26307
+		// (get) Token: 0x06034E84 RID: 216708 RVA: 0x00ECB385 File Offset: 0x00EC9585
 		public bool IsRunning
 		{
 			get
@@ -68,8 +68,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x17009362 RID: 37730
-		// (get) Token: 0x060401C4 RID: 262596 RVA: 0x00F8441C File Offset: 0x00F8261C
+		// Token: 0x170066C4 RID: 26308
+		// (get) Token: 0x06034E85 RID: 216709 RVA: 0x00ECB390 File Offset: 0x00EC9590
 		public bool IsFinished
 		{
 			get
@@ -78,8 +78,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x17009363 RID: 37731
-		// (get) Token: 0x060401C5 RID: 262597 RVA: 0x00F84427 File Offset: 0x00F82627
+		// Token: 0x170066C5 RID: 26309
+		// (get) Token: 0x06034E86 RID: 216710 RVA: 0x00ECB39B File Offset: 0x00EC959B
 		public bool IsReceived
 		{
 			get
@@ -88,15 +88,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401C6 RID: 262598 RVA: 0x00F84432 File Offset: 0x00F82632
+		// Token: 0x06034E87 RID: 216711 RVA: 0x00ECB3A6 File Offset: 0x00EC95A6
 		public void RefreshState(EActivityTaskState state)
 		{
 			this.Status = state;
 		}
 
-		// Token: 0x17009364 RID: 37732
-		// (get) Token: 0x060401C7 RID: 262599 RVA: 0x00F8443B File Offset: 0x00F8263B
-		// (set) Token: 0x060401C8 RID: 262600 RVA: 0x00F84443 File Offset: 0x00F82643
+		// Token: 0x170066C6 RID: 26310
+		// (get) Token: 0x06034E88 RID: 216712 RVA: 0x00ECB3AF File Offset: 0x00EC95AF
+		// (set) Token: 0x06034E89 RID: 216713 RVA: 0x00ECB3B7 File Offset: 0x00EC95B7
 		public int LevelId
 		{
 			get
@@ -109,8 +109,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x17009365 RID: 37733
-		// (get) Token: 0x060401C9 RID: 262601 RVA: 0x00F8444C File Offset: 0x00F8264C
+		// Token: 0x170066C7 RID: 26311
+		// (get) Token: 0x06034E8A RID: 216714 RVA: 0x00ECB3C0 File Offset: 0x00EC95C0
 		public bool IsGlobalTask
 		{
 			get
@@ -119,8 +119,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x17009366 RID: 37734
-		// (get) Token: 0x060401CA RID: 262602 RVA: 0x00F84458 File Offset: 0x00F82658
+		// Token: 0x170066C8 RID: 26312
+		// (get) Token: 0x06034E8B RID: 216715 RVA: 0x00ECB3CC File Offset: 0x00EC95CC
 		public string DescString
 		{
 			get
@@ -242,28 +242,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x04021660 RID: 136800
+		// Token: 0x0401BF8F RID: 114575
 		public int TaskId;
 
-		// Token: 0x04021661 RID: 136801
+		// Token: 0x0401BF90 RID: 114576
 		public readonly List<TItem> RewardList = new List<TItem>();
 
-		// Token: 0x04021662 RID: 136802
+		// Token: 0x0401BF91 RID: 114577
 		private int LevelInternal;
 
-		// Token: 0x04021663 RID: 136803
+		// Token: 0x0401BF92 RID: 114578
 		private int Champion;
 
-		// Token: 0x04021664 RID: 136804
+		// Token: 0x0401BF93 RID: 114579
 		private int FirstRunner;
 
-		// Token: 0x04021665 RID: 136805
+		// Token: 0x0401BF94 RID: 114580
 		private int PlayCount;
 
-		// Token: 0x04021666 RID: 136806
+		// Token: 0x0401BF95 RID: 114581
 		private int SpeedLap;
 
-		// Token: 0x04021667 RID: 136807
+		// Token: 0x0401BF96 RID: 114582
 		public EActivityTaskState Status = EActivityTaskState.Active;
 	}
 }

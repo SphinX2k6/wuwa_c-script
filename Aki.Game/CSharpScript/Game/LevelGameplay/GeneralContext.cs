@@ -5,24 +5,24 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006998 RID: 27032
+	// Token: 0x02005AF4 RID: 23284
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GeneralContext : IStaticVariableResetter
 	{
-		// Token: 0x0604342E RID: 275502 RVA: 0x0106587F File Offset: 0x01063A7F
+		// Token: 0x06039466 RID: 234598 RVA: 0x01009AE7 File Offset: 0x01007CE7
 		static GeneralContext()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GeneralContext.CreateStaticDefaultValue), new Action(GeneralContext.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0604342F RID: 275503 RVA: 0x0106589E File Offset: 0x01063A9E
+		// Token: 0x06039467 RID: 234599 RVA: 0x01009B06 File Offset: 0x01007D06
 		public virtual void Reset()
 		{
 			this.SubType = null;
 		}
 
-		// Token: 0x06043430 RID: 275504 RVA: 0x010658AC File Offset: 0x01063AAC
+		// Token: 0x06039468 RID: 234600 RVA: 0x01009B14 File Offset: 0x01007D14
 		protected static GeneralContext GetObj(EGeneralContextType type, GameCtxType? subType, Func<GeneralContext> ctor)
 		{
 			List<GeneralContext> list;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return generalContext;
 		}
 
-		// Token: 0x06043431 RID: 275505 RVA: 0x0106591C File Offset: 0x01063B1C
+		// Token: 0x06039469 RID: 234601 RVA: 0x01009B84 File Offset: 0x01007D84
 		public void Release()
 		{
 			this.Reset();
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			this.InPool = true;
 		}
 
-		// Token: 0x06043432 RID: 275506 RVA: 0x0106597C File Offset: 0x01063B7C
+		// Token: 0x0603946A RID: 234602 RVA: 0x01009BE4 File Offset: 0x01007DE4
 		[return: Nullable(2)]
 		public static GeneralContext Copy(GeneralContext obj)
 		{
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return result;
 		}
 
-		// Token: 0x06043433 RID: 275507 RVA: 0x01065BAC File Offset: 0x01063DAC
+		// Token: 0x0603946B RID: 234603 RVA: 0x01009E14 File Offset: 0x01008014
 		[return: Nullable(2)]
 		public static T ExtractContext<[Nullable(0)] T>(GeneralContext context, EGeneralContextType targetType) where T : GeneralContext
 		{
@@ -158,28 +158,28 @@ namespace CSharpScript.Game.LevelGamePlay
 			return contextByType as T;
 		}
 
-		// Token: 0x06043434 RID: 275508 RVA: 0x01065C2C File Offset: 0x01063E2C
+		// Token: 0x0603946C RID: 234604 RVA: 0x01009E94 File Offset: 0x01008094
 		public static void CreateStaticDefaultValue()
 		{
 			GeneralContext.Pool = new Dictionary<int, List<GeneralContext>>();
 		}
 
-		// Token: 0x06043435 RID: 275509 RVA: 0x01065C38 File Offset: 0x01063E38
+		// Token: 0x0603946D RID: 234605 RVA: 0x01009EA0 File Offset: 0x010080A0
 		public static void ResetStaticDefaultValue()
 		{
 			GeneralContext.Pool = null;
 		}
 
-		// Token: 0x0402309D RID: 143517
+		// Token: 0x0401E287 RID: 123527
 		private static Dictionary<int, List<GeneralContext>> Pool;
 
-		// Token: 0x0402309E RID: 143518
+		// Token: 0x0401E288 RID: 123528
 		public EGeneralContextType? Type;
 
-		// Token: 0x0402309F RID: 143519
+		// Token: 0x0401E289 RID: 123529
 		public GameCtxType? SubType;
 
-		// Token: 0x040230A0 RID: 143520
+		// Token: 0x0401E28A RID: 123530
 		private bool InPool;
 	}
 }

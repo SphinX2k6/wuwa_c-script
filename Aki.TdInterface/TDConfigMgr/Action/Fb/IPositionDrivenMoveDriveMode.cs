@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200271E RID: 10014
+	// Token: 0x020029E5 RID: 10725
 	public class IPositionDrivenMoveDriveMode : ISplineMoveDriveMode
 	{
-		// Token: 0x0600DF58 RID: 57176 RVA: 0x00211959 File Offset: 0x0020FB59
-		[NullableContext(1)]
+		// Token: 0x0600ED44 RID: 60740 RVA: 0x0022E301 File Offset: 0x0022C501
 		public static IPositionDrivenMoveDriveMode Create(IPositionDrivenMoveDriveMode? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042DE RID: 17118
-		// (get) Token: 0x0600DF59 RID: 57177 RVA: 0x00211978 File Offset: 0x0020FB78
+		// Token: 0x17004628 RID: 17960
+		// (get) Token: 0x0600ED45 RID: 60741 RVA: 0x0022E320 File Offset: 0x0022C520
 		public override ESplineMoveDriveMode Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042DF RID: 17119
-		// (get) Token: 0x0600DF5A RID: 57178 RVA: 0x00211988 File Offset: 0x0020FB88
+		// Token: 0x17004629 RID: 17961
+		// (get) Token: 0x0600ED46 RID: 60742 RVA: 0x0022E330 File Offset: 0x0022C530
 		public virtual bool? IsFixedPitch
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BF2 RID: 31730
+		// Token: 0x04008297 RID: 33431
 		private IPositionDrivenMoveDriveMode Instance;
 	}
 }

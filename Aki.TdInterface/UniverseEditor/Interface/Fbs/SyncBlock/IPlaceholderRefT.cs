@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.SyncBlock
 {
-	// Token: 0x02003B7F RID: 15231
+	// Token: 0x02003F87 RID: 16263
 	public class IPlaceholderRefT
 	{
-		// Token: 0x17006871 RID: 26737
-		// (get) Token: 0x06014DD5 RID: 85461 RVA: 0x003076AC File Offset: 0x003058AC
-		// (set) Token: 0x06014DD6 RID: 85462 RVA: 0x003076B4 File Offset: 0x003058B4
+		// Token: 0x17006E10 RID: 28176
+		// (get) Token: 0x0601629F RID: 90783 RVA: 0x0032DC44 File Offset: 0x0032BE44
+		// (set) Token: 0x060162A0 RID: 90784 RVA: 0x0032DC4C File Offset: 0x0032BE4C
 		public TPlaceholderType Type { get; set; }
 
-		// Token: 0x17006872 RID: 26738
-		// (get) Token: 0x06014DD7 RID: 85463 RVA: 0x003076BD File Offset: 0x003058BD
-		// (set) Token: 0x06014DD8 RID: 85464 RVA: 0x003076C5 File Offset: 0x003058C5
+		// Token: 0x17006E11 RID: 28177
+		// (get) Token: 0x060162A1 RID: 90785 RVA: 0x0032DC55 File Offset: 0x0032BE55
+		// (set) Token: 0x060162A2 RID: 90786 RVA: 0x0032DC5D File Offset: 0x0032BE5D
 		public string Name { get; set; }
 
-		// Token: 0x17006873 RID: 26739
-		// (get) Token: 0x06014DD9 RID: 85465 RVA: 0x003076CE File Offset: 0x003058CE
-		// (set) Token: 0x06014DDA RID: 85466 RVA: 0x003076D6 File Offset: 0x003058D6
+		// Token: 0x17006E12 RID: 28178
+		// (get) Token: 0x060162A3 RID: 90787 RVA: 0x0032DC66 File Offset: 0x0032BE66
+		// (set) Token: 0x060162A4 RID: 90788 RVA: 0x0032DC6E File Offset: 0x0032BE6E
 		public string FieldName { get; set; }
 
-		// Token: 0x06014DDB RID: 85467 RVA: 0x003076DF File Offset: 0x003058DF
+		// Token: 0x060162A5 RID: 90789 RVA: 0x0032DC77 File Offset: 0x0032BE77
 		public IPlaceholderRefT()
 		{
 			this.Type = TPlaceholderType.BuffIdList;

@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002489 RID: 9353
+// Token: 0x0200196F RID: 6511
 [NullableContext(1)]
 [Nullable(0)]
 public class CostTabItem : CommonTabItemBase
 {
-	// Token: 0x06012C61 RID: 76897 RVA: 0x004A16C2 File Offset: 0x0049F8C2
+	// Token: 0x0601011A RID: 65818 RVA: 0x004AEE2D File Offset: 0x004AD02D
 	public CostTabItem(UUIItem uiItem)
 	{
 		this.SourceItem = uiItem;
 	}
 
-	// Token: 0x06012C62 RID: 76898 RVA: 0x004A16D1 File Offset: 0x0049F8D1
+	// Token: 0x0601011B RID: 65819 RVA: 0x004AEE3C File Offset: 0x004AD03C
 	public void Init()
 	{
 		base.SetRootActor(this.SourceItem.GetOwner(), true);
 	}
 
-	// Token: 0x06012C63 RID: 76899 RVA: 0x004A16E8 File Offset: 0x0049F8E8
+	// Token: 0x0601011C RID: 65820 RVA: 0x004AEE50 File Offset: 0x004AD050
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,14 +37,14 @@ public class CostTabItem : CommonTabItemBase
 		};
 	}
 
-	// Token: 0x06012C64 RID: 76900 RVA: 0x004A1791 File Offset: 0x0049F991
+	// Token: 0x0601011D RID: 65821 RVA: 0x004AEEF9 File Offset: 0x004AD0F9
 	protected override void OnStart()
 	{
 		base.OnStart();
 		base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06012C65 RID: 76901 RVA: 0x004A17AA File Offset: 0x0049F9AA
+	// Token: 0x0601011E RID: 65822 RVA: 0x004AEF12 File Offset: 0x004AD112
 	private void ToggleClick(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -53,41 +53,41 @@ public class CostTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x06012C66 RID: 76902 RVA: 0x004A17C4 File Offset: 0x0049F9C4
+	// Token: 0x0601011F RID: 65823 RVA: 0x004AEF2C File Offset: 0x004AD12C
 	protected override void OnUpdateTabIcon(string iconPath)
 	{
 		this.SetSpriteByPath(iconPath, base.GetSprite(0), false, null, null);
 	}
 
-	// Token: 0x06012C67 RID: 76903 RVA: 0x004A17EA File Offset: 0x0049F9EA
+	// Token: 0x06010120 RID: 65824 RVA: 0x004AEF52 File Offset: 0x004AD152
 	protected override void OnSetToggleState(EToggleState state, bool bFire)
 	{
 		base.GetExtendToggle(1).SetToggleState(state, bFire, false, false);
 	}
 
-	// Token: 0x06012C68 RID: 76904 RVA: 0x004A17FD File Offset: 0x0049F9FD
+	// Token: 0x06010121 RID: 65825 RVA: 0x004AEF65 File Offset: 0x004AD165
 	protected override UUIExtendToggle GetTabToggle()
 	{
 		return base.GetExtendToggle(1);
 	}
 
-	// Token: 0x04008D64 RID: 36196
+	// Token: 0x04008EAB RID: 36523
 	[Nullable(2)]
 	private readonly UUIItem SourceItem;
 
-	// Token: 0x02008A00 RID: 35328
+	// Token: 0x02007B87 RID: 31623
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CD07 RID: 183559
+		// Token: 0x0402801D RID: 163869
 		Icon,
-		// Token: 0x0402CD08 RID: 183560
+		// Token: 0x0402801E RID: 163870
 		Toggle,
-		// Token: 0x0402CD09 RID: 183561
+		// Token: 0x0402801F RID: 163871
 		RedDot,
-		// Token: 0x0402CD0A RID: 183562
+		// Token: 0x04028020 RID: 163872
 		SpriteIcon,
-		// Token: 0x0402CD0B RID: 183563
+		// Token: 0x04028021 RID: 163873
 		SpriteSubIcon
 	}
 }

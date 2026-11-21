@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C1D RID: 3101
+	// Token: 0x02000CED RID: 3309
 	public class IMonsterNpcInteractionGazePerform : IMonsterNpcInteractionConfig
 	{
-		// Token: 0x06004713 RID: 18195 RVA: 0x000B30A4 File Offset: 0x000B12A4
-		[NullableContext(1)]
+		// Token: 0x06004B76 RID: 19318 RVA: 0x000BD270 File Offset: 0x000BB470
 		public static IMonsterNpcInteractionGazePerform Create(IMonsterNpcInteractionGazePerform? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001496 RID: 5270
-		// (get) Token: 0x06004714 RID: 18196 RVA: 0x000B30C3 File Offset: 0x000B12C3
+		// Token: 0x17001597 RID: 5527
+		// (get) Token: 0x06004B77 RID: 19319 RVA: 0x000BD28F File Offset: 0x000BB48F
 		public override EMonsterNpcInteractionType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002858 RID: 10328
+		// Token: 0x04002AA4 RID: 10916
 		private IMonsterNpcInteractionGazePerform Instance;
 	}
 }

@@ -5,14 +5,14 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067C0 RID: 26560
+	// Token: 0x02005710 RID: 22288
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBenchServerData
 	{
-		// Token: 0x170096B3 RID: 38579
-		// (get) Token: 0x0604226B RID: 270955 RVA: 0x0100AB1C File Offset: 0x01008D1C
-		// (set) Token: 0x0604226C RID: 270956 RVA: 0x0100AB24 File Offset: 0x01008D24
+		// Token: 0x170069F4 RID: 27124
+		// (get) Token: 0x06036DC1 RID: 224705 RVA: 0x00F4BF00 File Offset: 0x00F4A100
+		// (set) Token: 0x06036DC2 RID: 224706 RVA: 0x00F4BF08 File Offset: 0x00F4A108
 		public DangoBrawlBenchItemInfo[] MyInfoList
 		{
 			get
@@ -32,13 +32,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x0604226D RID: 270957 RVA: 0x0100AB75 File Offset: 0x01008D75
+		// Token: 0x06036DC3 RID: 224707 RVA: 0x00F4BF59 File Offset: 0x00F4A159
 		public List<DangoBrawlBenchItemServerData> GetItemList()
 		{
 			return new List<DangoBrawlBenchItemServerData>(this.ItemMap.Values);
 		}
 
-		// Token: 0x0604226E RID: 270958 RVA: 0x0100AB88 File Offset: 0x01008D88
+		// Token: 0x06036DC4 RID: 224708 RVA: 0x00F4BF6C File Offset: 0x00F4A16C
 		public static DangoBrawlBenchItemServerData MakeData(int uid, int configId)
 		{
 			DangoBrawlBenchItemInfo dangoBrawlBenchItemInfo = DangoBrawlBenchItemInfo.Create();
@@ -49,10 +49,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return new DangoBrawlBenchItemServerData(dangoBrawlBenchItemInfo);
 		}
 
-		// Token: 0x0402289D RID: 141469
+		// Token: 0x0401D0FA RID: 119034
 		private DangoBrawlBenchItemInfo[] InfoList = Array.Empty<DangoBrawlBenchItemInfo>();
 
-		// Token: 0x0402289E RID: 141470
+		// Token: 0x0401D0FB RID: 119035
 		private readonly Dictionary<int, DangoBrawlBenchItemServerData> ItemMap = new Dictionary<int, DangoBrawlBenchItemServerData>();
 	}
 }

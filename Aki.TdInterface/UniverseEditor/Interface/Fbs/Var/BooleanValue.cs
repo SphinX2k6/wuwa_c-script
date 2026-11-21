@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x020039EB RID: 14827
+	// Token: 0x02003DC4 RID: 15812
 	public struct BooleanValue : IFlatbufferObject
 	{
-		// Token: 0x170065C5 RID: 26053
-		// (get) Token: 0x060140E5 RID: 82149 RVA: 0x002F0022 File Offset: 0x002EE222
+		// Token: 0x17006AF5 RID: 27381
+		// (get) Token: 0x06015401 RID: 87041 RVA: 0x0031320E File Offset: 0x0031140E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x060140E6 RID: 82150 RVA: 0x002F002F File Offset: 0x002EE22F
+		// Token: 0x06015402 RID: 87042 RVA: 0x0031321B File Offset: 0x0031141B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060140E7 RID: 82151 RVA: 0x002F0038 File Offset: 0x002EE238
+		// Token: 0x06015403 RID: 87043 RVA: 0x00313224 File Offset: 0x00311424
 		public static BooleanValue GetRootAsBooleanValue(ByteBuffer _bb)
 		{
 			return BooleanValue.GetRootAsBooleanValue(_bb, default(BooleanValue));
 		}
 
-		// Token: 0x060140E8 RID: 82152 RVA: 0x002F0054 File Offset: 0x002EE254
+		// Token: 0x06015404 RID: 87044 RVA: 0x00313240 File Offset: 0x00311440
 		public static BooleanValue GetRootAsBooleanValue(ByteBuffer _bb, BooleanValue obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060140E9 RID: 82153 RVA: 0x002F0071 File Offset: 0x002EE271
+		// Token: 0x06015405 RID: 87045 RVA: 0x0031325D File Offset: 0x0031145D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060140EA RID: 82154 RVA: 0x002F0080 File Offset: 0x002EE280
+		// Token: 0x06015406 RID: 87046 RVA: 0x0031326C File Offset: 0x0031146C
 		public BooleanValue __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170065C6 RID: 26054
-		// (get) Token: 0x060140EB RID: 82155 RVA: 0x002F0090 File Offset: 0x002EE290
+		// Token: 0x17006AF6 RID: 27382
+		// (get) Token: 0x06015407 RID: 87047 RVA: 0x0031327C File Offset: 0x0031147C
 		public bool Value
 		{
 			get
@@ -58,7 +58,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x060140EC RID: 82156 RVA: 0x002F00CF File Offset: 0x002EE2CF
+		// Token: 0x06015408 RID: 87048 RVA: 0x003132BB File Offset: 0x003114BB
 		public static Offset<BooleanValue> CreateBooleanValue(FlatBufferBuilder builder, bool value = false)
 		{
 			builder.StartTable(1);
@@ -66,25 +66,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return BooleanValue.EndBooleanValue(builder);
 		}
 
-		// Token: 0x060140ED RID: 82157 RVA: 0x002F00E5 File Offset: 0x002EE2E5
+		// Token: 0x06015409 RID: 87049 RVA: 0x003132D1 File Offset: 0x003114D1
 		public static void StartBooleanValue(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060140EE RID: 82158 RVA: 0x002F00EE File Offset: 0x002EE2EE
+		// Token: 0x0601540A RID: 87050 RVA: 0x003132DA File Offset: 0x003114DA
 		public static void AddValue(FlatBufferBuilder builder, bool value)
 		{
 			builder.AddBool(0, value, false);
 		}
 
-		// Token: 0x060140EF RID: 82159 RVA: 0x002F00F9 File Offset: 0x002EE2F9
+		// Token: 0x0601540B RID: 87051 RVA: 0x003132E5 File Offset: 0x003114E5
 		public static Offset<BooleanValue> EndBooleanValue(FlatBufferBuilder builder)
 		{
 			return new Offset<BooleanValue>(builder.EndTable());
 		}
 
-		// Token: 0x060140F0 RID: 82160 RVA: 0x002F0108 File Offset: 0x002EE308
+		// Token: 0x0601540C RID: 87052 RVA: 0x003132F4 File Offset: 0x003114F4
 		public BooleanValueT UnPack()
 		{
 			BooleanValueT booleanValueT = new BooleanValueT();
@@ -92,13 +92,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return booleanValueT;
 		}
 
-		// Token: 0x060140F1 RID: 82161 RVA: 0x002F0123 File Offset: 0x002EE323
+		// Token: 0x0601540D RID: 87053 RVA: 0x0031330F File Offset: 0x0031150F
 		public void UnPackTo(BooleanValueT _o)
 		{
 			_o.Value = this.Value;
 		}
 
-		// Token: 0x060140F2 RID: 82162 RVA: 0x002F0134 File Offset: 0x002EE334
+		// Token: 0x0601540E RID: 87054 RVA: 0x00313320 File Offset: 0x00311520
 		public static Offset<BooleanValue> Pack(FlatBufferBuilder builder, BooleanValueT _o)
 		{
 			if (_o == null)
@@ -108,7 +108,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return BooleanValue.CreateBooleanValue(builder, _o.Value);
 		}
 
-		// Token: 0x0400ADDE RID: 44510
+		// Token: 0x0400B6F5 RID: 46837
 		private Table __p;
 	}
 }

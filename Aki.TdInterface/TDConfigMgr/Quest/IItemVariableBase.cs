@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FCD RID: 4045
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010F9 RID: 4345
 	public class IItemVariableBase
 	{
-		// Token: 0x06005A24 RID: 23076 RVA: 0x000DB388 File Offset: 0x000D9588
+		// Token: 0x06006002 RID: 24578 RVA: 0x000E7F14 File Offset: 0x000E6114
 		private IItemVariableBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005A25 RID: 23077 RVA: 0x000DB3C0 File Offset: 0x000D95C0
+		// Token: 0x06006003 RID: 24579 RVA: 0x000E7F4C File Offset: 0x000E614C
 		public static IItemVariableBase Create([Nullable(2)] IItemVariableBase instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005A26 RID: 23078 RVA: 0x000DB3D3 File Offset: 0x000D95D3
+		// Token: 0x06006004 RID: 24580 RVA: 0x000E7F5F File Offset: 0x000E615F
 		public static IItemVariableBase CreateFromSetValue([Nullable(2)] IItemVariableBase_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005A27 RID: 23079 RVA: 0x000DB3E6 File Offset: 0x000D95E6
+		// Token: 0x06006005 RID: 24581 RVA: 0x000E7F72 File Offset: 0x000E6172
 		public IItemVariableBase_SetValue ToSetValue()
 		{
 			return new IItemVariableBase_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DE0 RID: 7648
-		// (get) Token: 0x06005A28 RID: 23080 RVA: 0x000DB405 File Offset: 0x000D9605
-		// (set) Token: 0x06005A29 RID: 23081 RVA: 0x000DB430 File Offset: 0x000D9630
+		// Token: 0x17001F88 RID: 8072
+		// (get) Token: 0x06006006 RID: 24582 RVA: 0x000E7F91 File Offset: 0x000E6191
+		// (set) Token: 0x06006007 RID: 24583 RVA: 0x000E7FBC File Offset: 0x000E61BC
 		public virtual EHandInItemType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DE1 RID: 7649
-		// (get) Token: 0x06005A2A RID: 23082 RVA: 0x000DB43E File Offset: 0x000D963E
-		// (set) Token: 0x06005A2B RID: 23083 RVA: 0x000DB465 File Offset: 0x000D9665
+		// Token: 0x17001F89 RID: 8073
+		// (get) Token: 0x06006008 RID: 24584 RVA: 0x000E7FCA File Offset: 0x000E61CA
+		// (set) Token: 0x06006009 RID: 24585 RVA: 0x000E7FF1 File Offset: 0x000E61F1
 		public virtual VarRef Var
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003657 RID: 13911
+		// Token: 0x0400398C RID: 14732
 		[Nullable(2)]
 		protected IItemVariableBase FbInstance;
 
-		// Token: 0x04003658 RID: 13912
+		// Token: 0x0400398D RID: 14733
 		[Nullable(2)]
 		protected IItemVariableBase_SetValue PocoInterface;
 	}

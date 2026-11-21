@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001A01 RID: 6657
+// Token: 0x02000EC0 RID: 3776
 [NullableContext(1)]
 public interface IDamageNumFormatRule
 {
-	// Token: 0x0600C2E4 RID: 49892
+	// Token: 0x060096F2 RID: 38642
 	string FormatNumber(float num);
 }

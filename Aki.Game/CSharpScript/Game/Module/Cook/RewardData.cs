@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Cook
 {
-	// Token: 0x02005B08 RID: 23304
+	// Token: 0x02004AE9 RID: 19177
 	public class RewardData : IRewardData
 	{
-		// Token: 0x17008C78 RID: 35960
-		// (get) Token: 0x0603B012 RID: 241682 RVA: 0x00E11136 File Offset: 0x00E0F336
-		// (set) Token: 0x0603B013 RID: 241683 RVA: 0x00E1113E File Offset: 0x00E0F33E
+		// Token: 0x17006052 RID: 24658
+		// (get) Token: 0x0602FF84 RID: 196484 RVA: 0x00D61E4E File Offset: 0x00D6004E
+		// (set) Token: 0x0602FF85 RID: 196485 RVA: 0x00D61E56 File Offset: 0x00D60056
 		public int RewardId { get; set; }
 
-		// Token: 0x17008C79 RID: 35961
-		// (get) Token: 0x0603B014 RID: 241684 RVA: 0x00E11147 File Offset: 0x00E0F347
-		// (set) Token: 0x0603B015 RID: 241685 RVA: 0x00E1114F File Offset: 0x00E0F34F
+		// Token: 0x17006053 RID: 24659
+		// (get) Token: 0x0602FF86 RID: 196486 RVA: 0x00D61E5F File Offset: 0x00D6005F
+		// (set) Token: 0x0602FF87 RID: 196487 RVA: 0x00D61E67 File Offset: 0x00D60067
 		public int Count { get; set; }
 
-		// Token: 0x17008C7A RID: 35962
-		// (get) Token: 0x0603B016 RID: 241686 RVA: 0x00E11158 File Offset: 0x00E0F358
-		// (set) Token: 0x0603B017 RID: 241687 RVA: 0x00E11160 File Offset: 0x00E0F360
+		// Token: 0x17006054 RID: 24660
+		// (get) Token: 0x0602FF88 RID: 196488 RVA: 0x00D61E70 File Offset: 0x00D60070
+		// (set) Token: 0x0602FF89 RID: 196489 RVA: 0x00D61E78 File Offset: 0x00D60078
 		public bool IsGet { get; set; }
 	}
 }

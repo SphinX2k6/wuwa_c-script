@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006772 RID: 26482
+	// Token: 0x020056C2 RID: 22210
 	public enum EDangoBrawlUIItemAnimType
 	{
-		// Token: 0x0402278D RID: 141197
+		// Token: 0x0401CFEA RID: 118762
 		Weapon,
-		// Token: 0x0402278E RID: 141198
+		// Token: 0x0401CFEB RID: 118763
 		Buff,
-		// Token: 0x0402278F RID: 141199
+		// Token: 0x0401CFEC RID: 118764
 		Grayable,
-		// Token: 0x04022790 RID: 141200
+		// Token: 0x0401CFED RID: 118765
 		Direct
 	}
 }

@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B6C RID: 27500
+	// Token: 0x02005CE4 RID: 23780
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventSendSceneActorsEvent : LevelEventBase
 	{
-		// Token: 0x06044219 RID: 279065 RVA: 0x010C644F File Offset: 0x010C464F
+		// Token: 0x0603A36B RID: 238443 RVA: 0x010700C3 File Offset: 0x0106E2C3
 		public LevelEventSendSceneActorsEvent(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604421A RID: 279066 RVA: 0x010C6458 File Offset: 0x010C4658
+		// Token: 0x0603A36C RID: 238444 RVA: 0x010700CC File Offset: 0x0106E2CC
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			SendSceneActorEvent sendSceneActorEvent = inParams as SendSceneActorEvent;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x0604421B RID: 279067 RVA: 0x010C6514 File Offset: 0x010C4714
+		// Token: 0x0603A36D RID: 238445 RVA: 0x01070188 File Offset: 0x0106E388
 		private void HandleProjection3dTo2d([Nullable(2)] ISceneActorProjection3dTo2dEvent param, GeneralContext context)
 		{
 			if (param == null)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			bp_SceneCapture_3To2_C.CaptureScene_Running();
 		}
 
-		// Token: 0x0604421C RID: 279068 RVA: 0x010C6608 File Offset: 0x010C4808
+		// Token: 0x0603A36E RID: 238446 RVA: 0x0107027C File Offset: 0x0106E47C
 		[return: Nullable(2)]
 		private AActor GetSceneRefActor(string pathName, GeneralContext context)
 		{

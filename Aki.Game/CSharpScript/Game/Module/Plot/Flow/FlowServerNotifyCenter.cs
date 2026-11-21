@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.LevelLoading;
 
 namespace CSharpScript.Game.Module.Plot.Flow
 {
-	// Token: 0x020050A1 RID: 20641
+	// Token: 0x02004071 RID: 16497
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlowServerNotifyCenter : ControllerAssistantBase
 	{
-		// Token: 0x06034E66 RID: 216678 RVA: 0x00C87012 File Offset: 0x00C85212
+		// Token: 0x06029D5F RID: 171359 RVA: 0x00BD429A File Offset: 0x00BD249A
 		protected override void OnDestroy()
 		{
 		}
 
-		// Token: 0x06034E67 RID: 216679 RVA: 0x00C87014 File Offset: 0x00C85214
+		// Token: 0x06029D60 RID: 171360 RVA: 0x00BD429C File Offset: 0x00BD249C
 		public void HandleFlowStartNotify(FlowStartNotify notify)
 		{
 			long flowIncId = notify.FlowIncId;
@@ -44,14 +44,14 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			FlowController.Instance.StartFlow(notify.FlowListName, notify.FlowId, notify.StateId, context, flowIncId, true, notify.Async, notify.IsSkip, pos);
 		}
 
-		// Token: 0x06034E68 RID: 216680 RVA: 0x00C870F0 File Offset: 0x00C852F0
+		// Token: 0x06029D61 RID: 171361 RVA: 0x00BD4378 File Offset: 0x00BD2578
 		public void HandleFlowEndNotify(FlowEndNotify notify)
 		{
 			long value = MathUtils.Instance.LongToNumber(notify.FlowIncId);
 			FlowController.Instance.FinishFlow("服务器剧情通知打断剧情", new long?(value), true);
 		}
 
-		// Token: 0x06034E69 RID: 216681 RVA: 0x00C87124 File Offset: 0x00C85324
+		// Token: 0x06029D62 RID: 171362 RVA: 0x00BD43AC File Offset: 0x00BD25AC
 		[NullableContext(2)]
 		public unsafe void HandleFlowSkipBlackScreenNotify(FlowServerSkipNotify notify)
 		{

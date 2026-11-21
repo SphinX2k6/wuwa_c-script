@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 {
-	// Token: 0x0200577B RID: 22395
+	// Token: 0x02004752 RID: 18258
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 	})]
 	internal class AttrInfoItem : SyncGridProxyAbstract<IKurotatoAttrDisplay>
 	{
-		// Token: 0x06038E51 RID: 233041 RVA: 0x00D85BA8 File Offset: 0x00D83DA8
+		// Token: 0x0602DD61 RID: 187745 RVA: 0x00CD4868 File Offset: 0x00CD2A68
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038E52 RID: 233042 RVA: 0x00D85C14 File Offset: 0x00D83E14
+		// Token: 0x0602DD62 RID: 187746 RVA: 0x00CD48D4 File Offset: 0x00CD2AD4
 		[NullableContext(1)]
 		public override void Refresh(IKurotatoAttrDisplay data)
 		{
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			base.SetTextureByPath(data.Icon, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x0200B997 RID: 47511
+		// Token: 0x0200A3AF RID: 41903
 		private class EAttrItemComp
 		{
-			// Token: 0x040381EB RID: 229867
+			// Token: 0x04032BE0 RID: 207840
 			public const int TextInfo = 0;
 
-			// Token: 0x040381EC RID: 229868
+			// Token: 0x04032BE1 RID: 207841
 			public const int TextureIcon = 1;
 		}
 	}

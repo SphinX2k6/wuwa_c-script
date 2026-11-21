@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003F0 RID: 1008
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000449 RID: 1097
 	public class IGroupAiMode
 	{
-		// Token: 0x0600144D RID: 5197 RVA: 0x00041064 File Offset: 0x0003F264
+		// Token: 0x060015E7 RID: 5607 RVA: 0x00044DAC File Offset: 0x00042FAC
 		private IGroupAiMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600144E RID: 5198 RVA: 0x0004109C File Offset: 0x0003F29C
+		// Token: 0x060015E8 RID: 5608 RVA: 0x00044DE4 File Offset: 0x00042FE4
 		public static IGroupAiMode Create([Nullable(2)] IGroupAiMode instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600144F RID: 5199 RVA: 0x000410AF File Offset: 0x0003F2AF
+		// Token: 0x060015E9 RID: 5609 RVA: 0x00044DF7 File Offset: 0x00042FF7
 		public static IGroupAiMode CreateFromSetValue([Nullable(2)] IGroupAiMode_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001450 RID: 5200 RVA: 0x000410C2 File Offset: 0x0003F2C2
+		// Token: 0x060015EA RID: 5610 RVA: 0x00044E0A File Offset: 0x0004300A
 		public IGroupAiMode_SetValue ToSetValue()
 		{
 			return new IGroupAiMode_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700059C RID: 1436
-		// (get) Token: 0x06001451 RID: 5201 RVA: 0x000410D5 File Offset: 0x0003F2D5
-		// (set) Token: 0x06001452 RID: 5202 RVA: 0x00041100 File Offset: 0x0003F300
+		// Token: 0x17000603 RID: 1539
+		// (get) Token: 0x060015EB RID: 5611 RVA: 0x00044E1D File Offset: 0x0004301D
+		// (set) Token: 0x060015EC RID: 5612 RVA: 0x00044E48 File Offset: 0x00043048
 		public virtual EGroupAiMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000FFF RID: 4095
+		// Token: 0x04001121 RID: 4385
 		[Nullable(2)]
 		protected IGroupAiMode FbInstance;
 
-		// Token: 0x04001000 RID: 4096
+		// Token: 0x04001122 RID: 4386
 		[Nullable(2)]
 		protected IGroupAiMode_SetValue PocoInterface;
 	}

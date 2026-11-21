@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018AF RID: 6319
+	// Token: 0x020003D1 RID: 977
 	public sealed class FEffectSpecUnregisterBodyEffect : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06017626 RID: 95782 RVA: 0x00222ECF File Offset: 0x002210CF
+		// Token: 0x060060B9 RID: 24761 RVA: 0x0008A0AF File Offset: 0x000882AF
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FEffectSpecUnregisterBodyEffect.StaticFunctionPtr();
 		}
 
-		// Token: 0x06017627 RID: 95783 RVA: 0x00222EDB File Offset: 0x002210DB
+		// Token: 0x060060BA RID: 24762 RVA: 0x0008A0BB File Offset: 0x000882BB
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FEffectSpecUnregisterBodyEffect._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FEffectSpecUnregisterBodyEffect._FunctionPtr;
 		}
 
-		// Token: 0x06017628 RID: 95784 RVA: 0x00222EFE File Offset: 0x002210FE
+		// Token: 0x060060BB RID: 24763 RVA: 0x0008A0DE File Offset: 0x000882DE
 		public FEffectSpecUnregisterBodyEffect()
 		{
 		}
 
-		// Token: 0x06017629 RID: 95785 RVA: 0x00222F06 File Offset: 0x00221106
+		// Token: 0x060060BC RID: 24764 RVA: 0x0008A0E6 File Offset: 0x000882E6
 		[NullableContext(2)]
 		public FEffectSpecUnregisterBodyEffect(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601762A RID: 95786 RVA: 0x00222F10 File Offset: 0x00221110
+		// Token: 0x060060BD RID: 24765 RVA: 0x0008A0F0 File Offset: 0x000882F0
 		public FEffectSpecUnregisterBodyEffect(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601762B RID: 95787 RVA: 0x00222F1B File Offset: 0x0022111B
+		// Token: 0x060060BE RID: 24766 RVA: 0x0008A0FB File Offset: 0x000882FB
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int, AActor, USkeletalMeshComponent, UObject, UEffectModelBase>) ?? ((Action<int, AActor, USkeletalMeshComponent, UObject, UEffectModelBase>)Delegate.CreateDelegate(typeof(Action<int, AActor, USkeletalMeshComponent, UObject, UEffectModelBase>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601762C RID: 95788 RVA: 0x00222F4D File Offset: 0x0022114D
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060060BF RID: 24767 RVA: 0x0008A12D File Offset: 0x0008832D
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -71,10 +70,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FEffectSpecUnregisterBodyEffect.RegisterId);
 		}
 
-		// Token: 0x0601762D RID: 95789 RVA: 0x00222F88 File Offset: 0x00221188
+		// Token: 0x060060C0 RID: 24768 RVA: 0x0008A168 File Offset: 0x00088368
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int EffectId, AActor EffectActor, USkeletalMeshComponent ContextMeshComponent, UObject ContextSourceObject, UEffectModelBase EffectModel)
 		{
 			FEffectSpecUnregisterBodyEffect.__FEffectSpecUnregisterBodyEffect_DelegateParams* ptr = stackalloc FEffectSpecUnregisterBodyEffect.__FEffectSpecUnregisterBodyEffect_DelegateParams[(UIntPtr)55] + 15L / (long)sizeof(FEffectSpecUnregisterBodyEffect.__FEffectSpecUnregisterBodyEffect_DelegateParams) & -16L;
@@ -87,10 +85,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601762E RID: 95790 RVA: 0x00223024 File Offset: 0x00221224
+		// Token: 0x060060C1 RID: 24769 RVA: 0x0008A204 File Offset: 0x00088404
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, AActor, USkeletalMeshComponent, UObject, UEffectModelBase> action = target as Action<int, AActor, USkeletalMeshComponent, UObject, UEffectModelBase>;
@@ -105,47 +102,47 @@ namespace UnrealEngine
 			action(((FEffectSpecUnregisterBodyEffect.__FEffectSpecUnregisterBodyEffect_DelegateParams*)__Parameters)->EffectId, orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, orCreateUObjectByNativePointer3, orCreateUObjectByNativePointer4);
 		}
 
-		// Token: 0x0400CB73 RID: 52083
+		// Token: 0x04002932 RID: 10546
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400CB74 RID: 52084
+		// Token: 0x04002933 RID: 10547
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.EffectSpecUnregisterBodyEffect__DelegateSignature";
 
-		// Token: 0x0400CB75 RID: 52085
+		// Token: 0x04002934 RID: 10548
 		private static int RegisterId;
 
-		// Token: 0x02002FA5 RID: 12197
+		// Token: 0x02000AC8 RID: 2760
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
-		protected ref struct __FEffectSpecUnregisterBodyEffect_DelegateParams
+		private ref struct __FEffectSpecUnregisterBodyEffect_DelegateParams
 		{
-			// Token: 0x04016B81 RID: 93057
+			// Token: 0x04005B3E RID: 23358
 			[FieldOffset(0)]
 			public int EffectId;
 
-			// Token: 0x04016B82 RID: 93058
+			// Token: 0x04005B3F RID: 23359
 			[FieldOffset(8)]
 			public IntPtr EffectActor;
 
-			// Token: 0x04016B83 RID: 93059
+			// Token: 0x04005B40 RID: 23360
 			[FieldOffset(16)]
 			public IntPtr ContextMeshComponent;
 
-			// Token: 0x04016B84 RID: 93060
+			// Token: 0x04005B41 RID: 23361
 			[FieldOffset(24)]
 			public IntPtr ContextSourceObject;
 
-			// Token: 0x04016B85 RID: 93061
+			// Token: 0x04005B42 RID: 23362
 			[FieldOffset(32)]
 			public IntPtr EffectModel;
 		}
 
-		// Token: 0x02002FA6 RID: 12198
+		// Token: 0x02000AC9 RID: 2761
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B86 RID: 93062
+			// Token: 0x04005B43 RID: 23363
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

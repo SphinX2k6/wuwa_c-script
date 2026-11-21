@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000752 RID: 1874
+	// Token: 0x0200076A RID: 1898
 	public class ConfigPrefabRichTextDataById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002BFD RID: 11261 RVA: 0x00152110 File Offset: 0x00150310
+		// Token: 0x06002C8D RID: 11405 RVA: 0x00158B8C File Offset: 0x00156D8C
 		static ConfigPrefabRichTextDataById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPrefabRichTextDataById.CreateStaticDefaultValue), new Action(ConfigPrefabRichTextDataById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002BFE RID: 11262 RVA: 0x00152130 File Offset: 0x00150330
+		// Token: 0x06002C8E RID: 11406 RVA: 0x00158BAC File Offset: 0x00156DAC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPrefabRichTextDataById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002BFF RID: 11263 RVA: 0x001521AF File Offset: 0x001503AF
+		// Token: 0x06002C8F RID: 11407 RVA: 0x00158C2B File Offset: 0x00156E2B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPrefabRichTextDataById.LogPair = null;
 			ConfigPrefabRichTextDataById.HandleId = 0;
 		}
 
-		// Token: 0x06002C00 RID: 11264 RVA: 0x001521BD File Offset: 0x001503BD
+		// Token: 0x06002C90 RID: 11408 RVA: 0x00158C39 File Offset: 0x00156E39
 		public static void Init()
 		{
 			ConfigPrefabRichTextDataById.HandleId = ConfigCommon.InitDataStatement(ConfigPrefabRichTextDataById.HandleId, "db_ui_prefabrichtextdata.db", "select BinData from `PrefabRichTextData` where Id=?");
 		}
 
-		// Token: 0x06002C01 RID: 11265 RVA: 0x001521D8 File Offset: 0x001503D8
+		// Token: 0x06002C91 RID: 11409 RVA: 0x00158C54 File Offset: 0x00156E54
 		public static PrefabRichTextData? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPrefabRichTextDataById.HandleId, ConfigPrefabRichTextDataById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new PrefabRichTextData?(rootAsPrefabRichTextData);
 		}
 
-		// Token: 0x04003324 RID: 13092
+		// Token: 0x040033CC RID: 13260
 		private const string DB = "db_ui_prefabrichtextdata.db";
 
-		// Token: 0x04003325 RID: 13093
+		// Token: 0x040033CD RID: 13261
 		private const string FILE = "u.UiTextCollect/w.文本库富文本信息.csv";
 
-		// Token: 0x04003326 RID: 13094
+		// Token: 0x040033CE RID: 13262
 		private const string TABLE = "PrefabRichTextData";
 
-		// Token: 0x04003327 RID: 13095
+		// Token: 0x040033CF RID: 13263
 		private const string COMMAND = "select BinData from `PrefabRichTextData` where Id=?";
 
-		// Token: 0x04003328 RID: 13096
+		// Token: 0x040033D0 RID: 13264
 		private const string KEY_PREFIX = "PrefabRichTextDataById";
 
-		// Token: 0x04003329 RID: 13097
+		// Token: 0x040033D1 RID: 13265
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400332A RID: 13098
+		// Token: 0x040033D2 RID: 13266
 		private static int HandleId;
 	}
 }

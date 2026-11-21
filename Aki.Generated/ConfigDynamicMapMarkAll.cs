@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000246 RID: 582
+	// Token: 0x0200025A RID: 602
 	public class ConfigDynamicMapMarkAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000DA8 RID: 3496 RVA: 0x000A6B7C File Offset: 0x000A4D7C
+		// Token: 0x06000E20 RID: 3616 RVA: 0x000ACE40 File Offset: 0x000AB040
 		static ConfigDynamicMapMarkAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDynamicMapMarkAll.CreateStaticDefaultValue), new Action(ConfigDynamicMapMarkAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000DA9 RID: 3497 RVA: 0x000A6B9C File Offset: 0x000A4D9C
+		// Token: 0x06000E21 RID: 3617 RVA: 0x000ACE60 File Offset: 0x000AB060
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDynamicMapMarkAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000DAA RID: 3498 RVA: 0x000A6C1B File Offset: 0x000A4E1B
+		// Token: 0x06000E22 RID: 3618 RVA: 0x000ACEDF File Offset: 0x000AB0DF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDynamicMapMarkAll.LogPair = null;
 			ConfigDynamicMapMarkAll.HandleId = 0;
 		}
 
-		// Token: 0x06000DAB RID: 3499 RVA: 0x000A6C29 File Offset: 0x000A4E29
+		// Token: 0x06000E23 RID: 3619 RVA: 0x000ACEED File Offset: 0x000AB0ED
 		public static void Init()
 		{
 			ConfigDynamicMapMarkAll.HandleId = ConfigCommon.InitDataStatement(ConfigDynamicMapMarkAll.HandleId, "db_map_mark.db", "select BinData from `DynamicMapMark`");
 		}
 
-		// Token: 0x06000DAC RID: 3500 RVA: 0x000A6C44 File Offset: 0x000A4E44
+		// Token: 0x06000E24 RID: 3620 RVA: 0x000ACF08 File Offset: 0x000AB108
 		[NullableContext(2)]
 		public static IReadOnlyList<DynamicMapMark> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000FCE RID: 4046
+		// Token: 0x0400105A RID: 4186
 		private const string DB = "db_map_mark.db";
 
-		// Token: 0x04000FCF RID: 4047
+		// Token: 0x0400105B RID: 4187
 		private const string FILE = "d.地图标记.xlsx";
 
-		// Token: 0x04000FD0 RID: 4048
+		// Token: 0x0400105C RID: 4188
 		private const string TABLE = "DynamicMapMark";
 
-		// Token: 0x04000FD1 RID: 4049
+		// Token: 0x0400105D RID: 4189
 		private const string COMMAND = "select BinData from `DynamicMapMark`";
 
-		// Token: 0x04000FD2 RID: 4050
+		// Token: 0x0400105E RID: 4190
 		private const string KEY_PREFIX = "DynamicMapMarkAll";
 
-		// Token: 0x04000FD3 RID: 4051
+		// Token: 0x0400105F RID: 4191
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000FD4 RID: 4052
+		// Token: 0x04001060 RID: 4192
 		private static int HandleId;
 	}
 }

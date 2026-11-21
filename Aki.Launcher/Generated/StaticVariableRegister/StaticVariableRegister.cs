@@ -13,7 +13,7 @@ namespace Generated.StaticVariableRegister
 	// Token: 0x0200001A RID: 26
 	public static class StaticVariableRegister
 	{
-		// Token: 0x060000C3 RID: 195 RVA: 0x000075A8 File Offset: 0x000057A8
+		// Token: 0x060000C3 RID: 195 RVA: 0x000075E0 File Offset: 0x000057E0
 		public static bool CreateAllStaticDefaultValue()
 		{
 			TableRegistry.CreateStaticDefaultValue();
@@ -78,7 +78,7 @@ namespace Generated.StaticVariableRegister
 			return true;
 		}
 
-		// Token: 0x060000C4 RID: 196 RVA: 0x000076E0 File Offset: 0x000058E0
+		// Token: 0x060000C4 RID: 196 RVA: 0x00007718 File Offset: 0x00005918
 		public static bool ResetAllStaticDefaultValue()
 		{
 			NearbyQuitGate.ResetStaticDefaultValue();

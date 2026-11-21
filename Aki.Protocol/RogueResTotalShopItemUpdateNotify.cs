@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001012 RID: 4114
+	// Token: 0x02001002 RID: 4098
 	[NetMessage(EMessageId.RogueResTotalShopItemUpdateNotify)]
 	public sealed class RogueResTotalShopItemUpdateNotify : IMessage<RogueResTotalShopItemUpdateNotify>, IMessage, IEquatable<RogueResTotalShopItemUpdateNotify>, IDeepCloneable<RogueResTotalShopItemUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x06015FF1 RID: 90097 RVA: 0x00332A00 File Offset: 0x00330C00
+		// Token: 0x06015F0C RID: 89868 RVA: 0x00331344 File Offset: 0x0032F544
 		[NullableContext(1)]
 		public static RogueResTotalShopItemUpdateNotify Create()
 		{
 			return new RogueResTotalShopItemUpdateNotify();
 		}
 
-		// Token: 0x17004985 RID: 18821
-		// (get) Token: 0x06015FF2 RID: 90098 RVA: 0x00332A07 File Offset: 0x00330C07
+		// Token: 0x1700495B RID: 18779
+		// (get) Token: 0x06015F0D RID: 89869 RVA: 0x0033134B File Offset: 0x0032F54B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004986 RID: 18822
-		// (get) Token: 0x06015FF3 RID: 90099 RVA: 0x00332A0A File Offset: 0x00330C0A
+		// Token: 0x1700495C RID: 18780
+		// (get) Token: 0x06015F0E RID: 89870 RVA: 0x0033134E File Offset: 0x0032F54E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015FF4 RID: 90100 RVA: 0x00332A11 File Offset: 0x00330C11
+		// Token: 0x06015F0F RID: 89871 RVA: 0x00331355 File Offset: 0x0032F555
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResTotalShopItemUpdateNotify()
 		{
 		}
 
-		// Token: 0x06015FF5 RID: 90101 RVA: 0x00332A19 File Offset: 0x00330C19
+		// Token: 0x06015F10 RID: 89872 RVA: 0x0033135D File Offset: 0x0032F55D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResTotalShopItemUpdateNotify(RogueResTotalShopItemUpdateNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06015FF6 RID: 90102 RVA: 0x00332A4A File Offset: 0x00330C4A
+		// Token: 0x06015F11 RID: 89873 RVA: 0x0033138E File Offset: 0x0032F58E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResTotalShopItemUpdateNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new RogueResTotalShopItemUpdateNotify(this);
 		}
 
-		// Token: 0x17004987 RID: 18823
-		// (get) Token: 0x06015FF7 RID: 90103 RVA: 0x00332A52 File Offset: 0x00330C52
-		// (set) Token: 0x06015FF8 RID: 90104 RVA: 0x00332A5A File Offset: 0x00330C5A
+		// Token: 0x1700495D RID: 18781
+		// (get) Token: 0x06015F12 RID: 89874 RVA: 0x00331396 File Offset: 0x0032F596
+		// (set) Token: 0x06015F13 RID: 89875 RVA: 0x0033139E File Offset: 0x0032F59E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SeasonId
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004988 RID: 18824
-		// (get) Token: 0x06015FF9 RID: 90105 RVA: 0x00332A63 File Offset: 0x00330C63
-		// (set) Token: 0x06015FFA RID: 90106 RVA: 0x00332A6B File Offset: 0x00330C6B
+		// Token: 0x1700495E RID: 18782
+		// (get) Token: 0x06015F14 RID: 89876 RVA: 0x003313A7 File Offset: 0x0032F5A7
+		// (set) Token: 0x06015F15 RID: 89877 RVA: 0x003313AF File Offset: 0x0032F5AF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TotalShopItem
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015FFB RID: 90107 RVA: 0x00332A74 File Offset: 0x00330C74
+		// Token: 0x06015F16 RID: 89878 RVA: 0x003313B8 File Offset: 0x0032F5B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RogueResTotalShopItemUpdateNotify);
 		}
 
-		// Token: 0x06015FFC RID: 90108 RVA: 0x00332A82 File Offset: 0x00330C82
+		// Token: 0x06015F17 RID: 89879 RVA: 0x003313C6 File Offset: 0x0032F5C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RogueResTotalShopItemUpdateNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.SeasonId == other.SeasonId && this.TotalShopItem == other.TotalShopItem && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06015FFD RID: 90109 RVA: 0x00332AC0 File Offset: 0x00330CC0
+		// Token: 0x06015F18 RID: 89880 RVA: 0x00331404 File Offset: 0x0032F604
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015FFE RID: 90110 RVA: 0x00332B18 File Offset: 0x00330D18
+		// Token: 0x06015F19 RID: 89881 RVA: 0x0033145C File Offset: 0x0032F65C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06015FFF RID: 90111 RVA: 0x00332B25 File Offset: 0x00330D25
+		// Token: 0x06015F1A RID: 89882 RVA: 0x00331469 File Offset: 0x0032F669
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06016000 RID: 90112 RVA: 0x00332B30 File Offset: 0x00330D30
+		// Token: 0x06015F1B RID: 89883 RVA: 0x00331474 File Offset: 0x0032F674
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.TotalShopItem != 0)
-			{
-				output.WriteRawTag(24);
-				output.WriteInt32(this.TotalShopItem);
-			}
 			if (this.SeasonId != 0)
 			{
-				output.WriteRawTag(72);
+				output.WriteRawTag(16);
 				output.WriteInt32(this.SeasonId);
+			}
+			if (this.TotalShopItem != 0)
+			{
+				output.WriteRawTag(48);
+				output.WriteInt32(this.TotalShopItem);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016001 RID: 90113 RVA: 0x00332B8C File Offset: 0x00330D8C
+		// Token: 0x06015F1C RID: 89884 RVA: 0x003314D0 File Offset: 0x0032F6D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016002 RID: 90114 RVA: 0x00332BE4 File Offset: 0x00330DE4
+		// Token: 0x06015F1D RID: 89885 RVA: 0x00331528 File Offset: 0x0032F728
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RogueResTotalShopItemUpdateNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06016003 RID: 90115 RVA: 0x00332C34 File Offset: 0x00330E34
+		// Token: 0x06015F1E RID: 89886 RVA: 0x00331578 File Offset: 0x0032F778
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06016004 RID: 90116 RVA: 0x00332C40 File Offset: 0x00330E40
+		// Token: 0x06015F1F RID: 89887 RVA: 0x00331584 File Offset: 0x0032F784
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,37 +236,37 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 24U)
+				if (num != 16U)
 				{
-					if (num != 72U)
+					if (num != 48U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.SeasonId = input.ReadInt32();
+						this.TotalShopItem = input.ReadInt32();
 					}
 				}
 				else
 				{
-					this.TotalShopItem = input.ReadInt32();
+					this.SeasonId = input.ReadInt32();
 				}
 			}
 		}
 
-		// Token: 0x040083F0 RID: 33776
+		// Token: 0x0400841A RID: 33818
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040083F1 RID: 33777
-		public const int SeasonIdFieldNumber = 9;
+		// Token: 0x0400841B RID: 33819
+		public const int SeasonIdFieldNumber = 2;
 
-		// Token: 0x040083F2 RID: 33778
+		// Token: 0x0400841C RID: 33820
 		private int seasonId_;
 
-		// Token: 0x040083F3 RID: 33779
-		public const int TotalShopItemFieldNumber = 3;
+		// Token: 0x0400841D RID: 33821
+		public const int TotalShopItemFieldNumber = 6;
 
-		// Token: 0x040083F4 RID: 33780
+		// Token: 0x0400841E RID: 33822
 		private int totalShopItem_;
 	}
 }

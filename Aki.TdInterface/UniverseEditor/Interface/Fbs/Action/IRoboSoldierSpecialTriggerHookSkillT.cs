@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EDA RID: 28378
+	// Token: 0x0200765E RID: 30302
 	public class IRoboSoldierSpecialTriggerHookSkillT
 	{
-		// Token: 0x1700D328 RID: 54056
-		// (get) Token: 0x06032267 RID: 205415 RVA: 0x006C74E0 File Offset: 0x006C56E0
-		// (set) Token: 0x06032268 RID: 205416 RVA: 0x006C74E8 File Offset: 0x006C56E8
+		// Token: 0x1700DE7F RID: 56959
+		// (get) Token: 0x060352A7 RID: 217767 RVA: 0x00723214 File Offset: 0x00721414
+		// (set) Token: 0x060352A8 RID: 217768 RVA: 0x0072321C File Offset: 0x0072141C
 		public EExecClientBattleActionType Type { get; set; }
 
-		// Token: 0x1700D329 RID: 54057
-		// (get) Token: 0x06032269 RID: 205417 RVA: 0x006C74F1 File Offset: 0x006C56F1
-		// (set) Token: 0x0603226A RID: 205418 RVA: 0x006C74F9 File Offset: 0x006C56F9
+		// Token: 0x1700DE80 RID: 56960
+		// (get) Token: 0x060352A9 RID: 217769 RVA: 0x00723225 File Offset: 0x00721425
+		// (set) Token: 0x060352AA RID: 217770 RVA: 0x0072322D File Offset: 0x0072142D
 		public int HookEntityId { get; set; }
 
-		// Token: 0x0603226B RID: 205419 RVA: 0x006C7502 File Offset: 0x006C5702
+		// Token: 0x060352AB RID: 217771 RVA: 0x00723236 File Offset: 0x00721436
 		public IRoboSoldierSpecialTriggerHookSkillT()
 		{
 			this.Type = EExecClientBattleActionType.SendTagEventToControlCharacter;

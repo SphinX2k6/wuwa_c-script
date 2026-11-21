@@ -5,20 +5,20 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 {
-	// Token: 0x0200723F RID: 29247
+	// Token: 0x020062F4 RID: 25332
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class SlashGameplayController : ControllerBase
 	{
-		// Token: 0x06047AE3 RID: 293603 RVA: 0x01258AFB File Offset: 0x01256CFB
+		// Token: 0x0603D445 RID: 250949 RVA: 0x011B17AB File Offset: 0x011AF9AB
 		protected override bool OnInit()
 		{
 			EventSystem.Instance.Add<Entity, bool>(EEventName.OnEntityBeSlashAim, new Action<Entity, bool>(this.OnEntityBeSlashAim));
 			return true;
 		}
 
-		// Token: 0x06047AE4 RID: 293604 RVA: 0x01258B1A File Offset: 0x01256D1A
+		// Token: 0x0603D446 RID: 250950 RVA: 0x011B17CA File Offset: 0x011AF9CA
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove<Entity, bool>(EEventName.OnEntityBeSlashAim, new Action<Entity, bool>(this.OnEntityBeSlashAim));
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return true;
 		}
 
-		// Token: 0x06047AE5 RID: 293605 RVA: 0x01258B5C File Offset: 0x01256D5C
+		// Token: 0x0603D447 RID: 250951 RVA: 0x011B180C File Offset: 0x011AFA0C
 		private void OnEntityBeSlashAim(Entity entity, bool isExist)
 		{
 			bool flag = false;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.BeAimEntities.Remove(entity);
 		}
 
-		// Token: 0x06047AE6 RID: 293606 RVA: 0x01258BFC File Offset: 0x01256DFC
+		// Token: 0x0603D448 RID: 250952 RVA: 0x011B18AC File Offset: 0x011AFAAC
 		public bool CheckGroups()
 		{
 			if (this.BeAimEntities.Count == 0)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return false;
 		}
 
-		// Token: 0x06047AE7 RID: 293607 RVA: 0x01258CAC File Offset: 0x01256EAC
+		// Token: 0x0603D449 RID: 250953 RVA: 0x011B195C File Offset: 0x011AFB5C
 		public void AddGroupEntities(HashSet<Entity> entities)
 		{
 			this.SameGroupEntitiesArray.Add(entities);
@@ -105,14 +105,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047AE8 RID: 293608 RVA: 0x01258D6C File Offset: 0x01256F6C
+		// Token: 0x0603D44A RID: 250954 RVA: 0x011B1A1C File Offset: 0x011AFC1C
 		public void RemoveGroupEntities(HashSet<Entity> entities)
 		{
 			this.SameGroupEntitiesArray.Remove(entities);
 		}
 
-		// Token: 0x17009E46 RID: 40518
-		// (get) Token: 0x06047AE9 RID: 293609 RVA: 0x01258D7B File Offset: 0x01256F7B
+		// Token: 0x170073FD RID: 29693
+		// (get) Token: 0x0603D44B RID: 250955 RVA: 0x011B1A2B File Offset: 0x011AFC2B
 		public static SlashGameplayController Instance
 		{
 			get
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047AEA RID: 293610 RVA: 0x01258D82 File Offset: 0x01256F82
+		// Token: 0x0603D44C RID: 250956 RVA: 0x011B1A32 File Offset: 0x011AFC32
 		public static SlashGameplayController GetOrCreateInstance()
 		{
 			if (SlashGameplayController._Instance == null)
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return SlashGameplayController._Instance;
 		}
 
-		// Token: 0x06047AEB RID: 293611 RVA: 0x01258D96 File Offset: 0x01256F96
+		// Token: 0x0603D44D RID: 250957 RVA: 0x011B1A46 File Offset: 0x011AFC46
 		public static bool CreateInstance()
 		{
 			if (SlashGameplayController._Instance != null)
@@ -142,33 +142,33 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return true;
 		}
 
-		// Token: 0x06047AEC RID: 293612 RVA: 0x01258DAC File Offset: 0x01256FAC
+		// Token: 0x0603D44E RID: 250958 RVA: 0x011B1A5C File Offset: 0x011AFC5C
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047AED RID: 293613 RVA: 0x01258DAE File Offset: 0x01256FAE
+		// Token: 0x0603D44F RID: 250959 RVA: 0x011B1A5E File Offset: 0x011AFC5E
 		public static void ResetStaticDefaultValue()
 		{
 			SlashGameplayController._Instance = null;
 		}
 
-		// Token: 0x06047AEE RID: 293614 RVA: 0x01258DB6 File Offset: 0x01256FB6
+		// Token: 0x0603D450 RID: 250960 RVA: 0x011B1A66 File Offset: 0x011AFC66
 		static SlashGameplayController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SlashGameplayController.CreateStaticDefaultValue), new Action(SlashGameplayController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025B61 RID: 154465
+		// Token: 0x040207D0 RID: 133072
 		private readonly HashSet<HashSet<Entity>> SameGroupEntitiesArray = new HashSet<HashSet<Entity>>();
 
-		// Token: 0x04025B62 RID: 154466
+		// Token: 0x040207D1 RID: 133073
 		private readonly HashSet<Entity> BeAimEntities = new HashSet<Entity>();
 
-		// Token: 0x04025B63 RID: 154467
+		// Token: 0x040207D2 RID: 133074
 		private readonly HashSet<Entity> PendingAimEntities = new HashSet<Entity>();
 
-		// Token: 0x04025B64 RID: 154468
+		// Token: 0x040207D3 RID: 133075
 		[Nullable(2)]
 		private static SlashGameplayController _Instance;
 	}

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020030D3 RID: 12499
+// Token: 0x0200262B RID: 9771
 public enum EMenuLockOnMode
 {
-	// Token: 0x0400CE94 RID: 52884
+	// Token: 0x0400D284 RID: 53892
 	JoystickDirectionFirst,
-	// Token: 0x0400CE95 RID: 52885
+	// Token: 0x0400D285 RID: 53893
 	CameraDirectionFirst,
-	// Token: 0x0400CE96 RID: 52886
+	// Token: 0x0400D286 RID: 53894
 	DistanceFirst
 }

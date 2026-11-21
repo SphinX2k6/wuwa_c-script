@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02000E79 RID: 3705
+// Token: 0x0200032E RID: 814
 public enum EKscEntityRemoveReasonType
 {
-	// Token: 0x04002942 RID: 10562
+	// Token: 0x040029DD RID: 10717
 	None = -1,
-	// Token: 0x04002943 RID: 10563
+	// Token: 0x040029DE RID: 10718
 	Dead,
-	// Token: 0x04002944 RID: 10564
+	// Token: 0x040029DF RID: 10719
 	WorldKill,
-	// Token: 0x04002945 RID: 10565
+	// Token: 0x040029E0 RID: 10720
 	Coin,
-	// Token: 0x04002946 RID: 10566
+	// Token: 0x040029E1 RID: 10721
 	CombatDirty,
-	// Token: 0x04002947 RID: 10567
+	// Token: 0x040029E2 RID: 10722
 	Destroy
 }

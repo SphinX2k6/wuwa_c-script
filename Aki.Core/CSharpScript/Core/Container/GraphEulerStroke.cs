@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Core.Container
 {
-	// Token: 0x0200015F RID: 351
+	// Token: 0x02000164 RID: 356
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GraphEulerStroke
 	{
-		// Token: 0x06000C07 RID: 3079 RVA: 0x00038204 File Offset: 0x00036404
+		// Token: 0x06000C66 RID: 3174 RVA: 0x00038F48 File Offset: 0x00037148
 		public static IEulerStrokeJudge Judge<[Nullable(2)] TVec>(Graph<TVec> graph)
 		{
 			IAdjacency adjacency = GraphEulerStroke.BuildAdjacency<TVec>(graph);
@@ -87,7 +87,7 @@ namespace CSharpScript.Core.Container
 			};
 		}
 
-		// Token: 0x06000C08 RID: 3080 RVA: 0x00038404 File Offset: 0x00036604
+		// Token: 0x06000C67 RID: 3175 RVA: 0x00039148 File Offset: 0x00037348
 		[NullableContext(2)]
 		public static List<int> TryGetSingleStroke<TVec>([Nullable(1)] Graph<TVec> graph)
 		{
@@ -111,7 +111,7 @@ namespace CSharpScript.Core.Container
 			return list2;
 		}
 
-		// Token: 0x06000C09 RID: 3081 RVA: 0x000384B4 File Offset: 0x000366B4
+		// Token: 0x06000C68 RID: 3176 RVA: 0x000391F8 File Offset: 0x000373F8
 		public static List<List<int>> DecomposeToStrokes<[Nullable(2)] TVec>(Graph<TVec> graph)
 		{
 			List<IComponent> list = GraphEulerStroke.SplitEdgeConnectedComponents<TVec>(graph);
@@ -129,7 +129,7 @@ namespace CSharpScript.Core.Container
 			return list2;
 		}
 
-		// Token: 0x06000C0A RID: 3082 RVA: 0x00038568 File Offset: 0x00036768
+		// Token: 0x06000C69 RID: 3177 RVA: 0x000392AC File Offset: 0x000374AC
 		public static List<List<int>> SplitToEdges<[Nullable(2)] TVec>(Graph<TVec> graph)
 		{
 			List<List<int>> list = new List<List<int>>();
@@ -147,7 +147,7 @@ namespace CSharpScript.Core.Container
 			return list;
 		}
 
-		// Token: 0x06000C0B RID: 3083 RVA: 0x000385E8 File Offset: 0x000367E8
+		// Token: 0x06000C6A RID: 3178 RVA: 0x0003932C File Offset: 0x0003752C
 		public unsafe static List<TVec> StrokeToLocations<[Nullable(2)] TVec>(Graph<TVec> graph, List<int> stroke)
 		{
 			List<TVec> list = new List<TVec>();
@@ -173,7 +173,7 @@ namespace CSharpScript.Core.Container
 			return list;
 		}
 
-		// Token: 0x06000C0C RID: 3084 RVA: 0x000386B0 File Offset: 0x000368B0
+		// Token: 0x06000C6B RID: 3179 RVA: 0x000393F4 File Offset: 0x000375F4
 		private static IAdjacency BuildAdjacency<[Nullable(2)] TVec>(Graph<TVec> graph)
 		{
 			Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -197,7 +197,7 @@ namespace CSharpScript.Core.Container
 			};
 		}
 
-		// Token: 0x06000C0D RID: 3085 RVA: 0x00038794 File Offset: 0x00036994
+		// Token: 0x06000C6C RID: 3180 RVA: 0x000394D8 File Offset: 0x000376D8
 		private static void AddUndirectedEdge(Dictionary<int, int> degree, Dictionary<int, List<IAdjItem>> adj, IGraphRuntimeEdge edge)
 		{
 			if (edge.From == edge.To)
@@ -224,7 +224,7 @@ namespace CSharpScript.Core.Container
 			degree[edge.To] = (degree.TryGetValue(edge.To, out num2) ? num2 : 0) + 1;
 		}
 
-		// Token: 0x06000C0E RID: 3086 RVA: 0x00038870 File Offset: 0x00036A70
+		// Token: 0x06000C6D RID: 3181 RVA: 0x000395B4 File Offset: 0x000377B4
 		private static bool IsEdgeConnected(int startId, Dictionary<int, List<IAdjItem>> adj, Dictionary<int, int> degree)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -261,7 +261,7 @@ namespace CSharpScript.Core.Container
 			return true;
 		}
 
-		// Token: 0x06000C0F RID: 3087 RVA: 0x000389A0 File Offset: 0x00036BA0
+		// Token: 0x06000C6E RID: 3182 RVA: 0x000396E4 File Offset: 0x000378E4
 		private static List<IComponent> SplitEdgeConnectedComponents<[Nullable(2)] TVec>(Graph<TVec> graph)
 		{
 			IAdjacency adjacency = GraphEulerStroke.BuildAdjacency<TVec>(graph);
@@ -325,7 +325,7 @@ namespace CSharpScript.Core.Container
 			return list;
 		}
 
-		// Token: 0x06000C10 RID: 3088 RVA: 0x00038C6C File Offset: 0x00036E6C
+		// Token: 0x06000C6F RID: 3183 RVA: 0x000399B0 File Offset: 0x00037BB0
 		private static List<List<int>> DecomposeComponent(Dictionary<int, int> degree, Dictionary<int, List<IAdjItem>> adj, int realEdgeCount)
 		{
 			Dictionary<int, List<IAdjItem>> dictionary = new Dictionary<int, List<IAdjItem>>();
@@ -428,7 +428,7 @@ namespace CSharpScript.Core.Container
 			return list4;
 		}
 
-		// Token: 0x06000C11 RID: 3089 RVA: 0x00038F1C File Offset: 0x0003711C
+		// Token: 0x06000C70 RID: 3184 RVA: 0x00039C60 File Offset: 0x00037E60
 		private static List<ISequence> Hierholzer(int startId, Dictionary<int, List<IAdjItem>> adj, int edgeCount)
 		{
 			HashSet<int> hashSet = new HashSet<int>();

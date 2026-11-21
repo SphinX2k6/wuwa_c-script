@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DD9 RID: 24025
+	// Token: 0x02004DBD RID: 19901
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarFuLuoLuoNoteItem : UiPanelBase
 	{
-		// Token: 0x0603D117 RID: 250135 RVA: 0x00EB1394 File Offset: 0x00EAF594
+		// Token: 0x0603208E RID: 204942 RVA: 0x00E02288 File Offset: 0x00E00488
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D118 RID: 250136 RVA: 0x00EB14C4 File Offset: 0x00EAF6C4
+		// Token: 0x0603208F RID: 204943 RVA: 0x00E023B8 File Offset: 0x00E005B8
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayTweenAnim(3);
 		}
 
-		// Token: 0x0603D119 RID: 250137 RVA: 0x00EB1537 File Offset: 0x00EAF737
+		// Token: 0x06032090 RID: 204944 RVA: 0x00E0242B File Offset: 0x00E0062B
 		public void SetParent(UUIItem parentUiItem)
 		{
 			if (this.ParentUiItem == parentUiItem)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rootItem.SetUIParent(this.ParentUiItem, false);
 		}
 
-		// Token: 0x0603D11A RID: 250138 RVA: 0x00EB1564 File Offset: 0x00EAF764
+		// Token: 0x06032091 RID: 204945 RVA: 0x00E02458 File Offset: 0x00E00658
 		public void SetEnergyType(int energyType)
 		{
 			if (energyType == this.EnergyType)
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D11B RID: 250139 RVA: 0x00EB15E9 File Offset: 0x00EAF7E9
+		// Token: 0x06032092 RID: 204946 RVA: 0x00E024DD File Offset: 0x00E006DD
 		public void SetLockState(bool state)
 		{
 			if (this.LockState == state)
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshState();
 		}
 
-		// Token: 0x0603D11C RID: 250140 RVA: 0x00EB1602 File Offset: 0x00EAF802
+		// Token: 0x06032093 RID: 204947 RVA: 0x00E024F6 File Offset: 0x00E006F6
 		public void SetPerformState(bool state)
 		{
 			if (this.PerformState == state)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshState();
 		}
 
-		// Token: 0x0603D11D RID: 250141 RVA: 0x00EB161C File Offset: 0x00EAF81C
+		// Token: 0x06032094 RID: 204948 RVA: 0x00E02510 File Offset: 0x00E00710
 		private void RefreshState()
 		{
 			int num = 0;
@@ -161,67 +161,67 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D11E RID: 250142 RVA: 0x00EB16BF File Offset: 0x00EAF8BF
+		// Token: 0x06032095 RID: 204949 RVA: 0x00E025B3 File Offset: 0x00E007B3
 		protected void InitTweenAnim(int componentType)
 		{
 			this.TweenAnimPlayer.InitTweenAnim(componentType, base.GetItem(componentType), false);
 		}
 
-		// Token: 0x0603D11F RID: 250143 RVA: 0x00EB16D5 File Offset: 0x00EAF8D5
+		// Token: 0x06032096 RID: 204950 RVA: 0x00E025C9 File Offset: 0x00E007C9
 		protected void PlayTweenAnim(int componentType)
 		{
 			this.TweenAnimPlayer.PlayTweenAnim(componentType);
 		}
 
-		// Token: 0x0603D120 RID: 250144 RVA: 0x00EB16E3 File Offset: 0x00EAF8E3
+		// Token: 0x06032097 RID: 204951 RVA: 0x00E025D7 File Offset: 0x00E007D7
 		protected void StopTweenAnim(int componentType)
 		{
 			this.TweenAnimPlayer.StopTweenAnim(componentType);
 		}
 
-		// Token: 0x0603D121 RID: 250145 RVA: 0x00EB16F1 File Offset: 0x00EAF8F1
+		// Token: 0x06032098 RID: 204952 RVA: 0x00E025E5 File Offset: 0x00E007E5
 		protected void ClearAllTweenAnim()
 		{
 			this.TweenAnimPlayer.Clear(false);
 		}
 
-		// Token: 0x0401FD1D RID: 130333
+		// Token: 0x0401A7DA RID: 108506
 		private readonly BattleUiTweenAnimPlayer TweenAnimPlayer = new BattleUiTweenAnimPlayer();
 
-		// Token: 0x0401FD1E RID: 130334
+		// Token: 0x0401A7DB RID: 108507
 		private readonly List<UUIItem> ItemList = new List<UUIItem>();
 
-		// Token: 0x0401FD1F RID: 130335
+		// Token: 0x0401A7DC RID: 108508
 		private int EnergyType = -1;
 
-		// Token: 0x0401FD20 RID: 130336
+		// Token: 0x0401A7DD RID: 108509
 		private bool LockState;
 
-		// Token: 0x0401FD21 RID: 130337
+		// Token: 0x0401A7DE RID: 108510
 		private bool PerformState;
 
-		// Token: 0x0401FD22 RID: 130338
+		// Token: 0x0401A7DF RID: 108511
 		private int State;
 
-		// Token: 0x0200C0F9 RID: 49401
+		// Token: 0x0200AB02 RID: 43778
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A3F1 RID: 238577
+			// Token: 0x04034DC3 RID: 216515
 			Item1,
-			// Token: 0x0403A3F2 RID: 238578
+			// Token: 0x04034DC4 RID: 216516
 			Item2,
-			// Token: 0x0403A3F3 RID: 238579
+			// Token: 0x04034DC5 RID: 216517
 			Item3,
-			// Token: 0x0403A3F4 RID: 238580
+			// Token: 0x04034DC6 RID: 216518
 			AniDefault,
-			// Token: 0x0403A3F5 RID: 238581
+			// Token: 0x04034DC7 RID: 216519
 			AniLock,
-			// Token: 0x0403A3F6 RID: 238582
+			// Token: 0x04034DC8 RID: 216520
 			AniPerform,
-			// Token: 0x0403A3F7 RID: 238583
+			// Token: 0x04034DC9 RID: 216521
 			AniCast,
-			// Token: 0x0403A3F8 RID: 238584
+			// Token: 0x04034DCA RID: 216522
 			AniExhaust
 		}
 	}

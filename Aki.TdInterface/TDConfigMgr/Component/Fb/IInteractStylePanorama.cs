@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A7B RID: 2683
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B45 RID: 2885
 	public class IInteractStylePanorama : IInteractStyleBase
 	{
-		// Token: 0x06003DC1 RID: 15809 RVA: 0x0009E516 File Offset: 0x0009C716
+		// Token: 0x060041EA RID: 16874 RVA: 0x000A7ACE File Offset: 0x000A5CCE
 		public static IInteractStylePanorama Create(IInteractStylePanorama? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E88 RID: 3720
-		// (get) Token: 0x06003DC2 RID: 15810 RVA: 0x0009E535 File Offset: 0x0009C735
+		// Token: 0x17000F5B RID: 3931
+		// (get) Token: 0x060041EB RID: 16875 RVA: 0x000A7AED File Offset: 0x000A5CED
 		public override EInteractStyleType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E89 RID: 3721
-		// (get) Token: 0x06003DC3 RID: 15811 RVA: 0x0009E542 File Offset: 0x0009C742
+		// Token: 0x17000F5C RID: 3932
+		// (get) Token: 0x060041EC RID: 16876 RVA: 0x000A7AFA File Offset: 0x000A5CFA
 		public virtual VectorInfo TargetPos
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E8A RID: 3722
-		// (get) Token: 0x06003DC4 RID: 15812 RVA: 0x0009E576 File Offset: 0x0009C776
+		// Token: 0x17000F5D RID: 3933
+		// (get) Token: 0x060041ED RID: 16877 RVA: 0x000A7B2E File Offset: 0x000A5D2E
 		public virtual int TriggerRange
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E8B RID: 3723
-		// (get) Token: 0x06003DC5 RID: 15813 RVA: 0x0009E583 File Offset: 0x0009C783
+		// Token: 0x17000F5E RID: 3934
+		// (get) Token: 0x060041EE RID: 16878 RVA: 0x000A7B3B File Offset: 0x000A5D3B
 		public virtual int TriggerAngle
 		{
 			get
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E8C RID: 3724
-		// (get) Token: 0x06003DC6 RID: 15814 RVA: 0x0009E590 File Offset: 0x0009C790
+		// Token: 0x17000F5F RID: 3935
+		// (get) Token: 0x060041EF RID: 16879 RVA: 0x000A7B48 File Offset: 0x000A5D48
 		public virtual int? ProtectRange
 		{
 			get
@@ -83,14 +81,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002262 RID: 8802
+		// Token: 0x0400247E RID: 9342
 		private IInteractStylePanorama Instance;
 
-		// Token: 0x04002263 RID: 8803
+		// Token: 0x0400247F RID: 9343
 		[Nullable(2)]
 		private VectorInfo _TargetPosCache;
 
-		// Token: 0x04002264 RID: 8804
+		// Token: 0x04002480 RID: 9344
 		private bool _TargetPosInited;
 	}
 }

@@ -4,14 +4,14 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand
 {
-	// Token: 0x020069C5 RID: 27077
+	// Token: 0x02005B21 RID: 23329
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TuningGridData
 	{
-		// Token: 0x17009868 RID: 39016
-		// (get) Token: 0x060435EE RID: 275950 RVA: 0x01076354 File Offset: 0x01074554
-		// (set) Token: 0x060435ED RID: 275949 RVA: 0x0107631F File Offset: 0x0107451F
+		// Token: 0x17006D48 RID: 27976
+		// (get) Token: 0x0603962A RID: 235050 RVA: 0x0101A7E8 File Offset: 0x010189E8
+		// (set) Token: 0x06039629 RID: 235049 RVA: 0x0101A7B3 File Offset: 0x010189B3
 		public int Index
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			}
 		}
 
-		// Token: 0x060435EF RID: 275951 RVA: 0x0107635C File Offset: 0x0107455C
+		// Token: 0x0603962B RID: 235051 RVA: 0x0101A7F0 File Offset: 0x010189F0
 		public ITuningStateData GetCurGridState()
 		{
 			if (!this.IsStatic)
@@ -36,41 +36,41 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			return this.StaticState;
 		}
 
-		// Token: 0x060435F0 RID: 275952 RVA: 0x01076373 File Offset: 0x01074573
+		// Token: 0x0603962C RID: 235052 RVA: 0x0101A807 File Offset: 0x01018A07
 		public double GetCenterDistance()
 		{
 			return (double)(Math.Abs(this.GridLoc[0] - (int)Math.Floor(2.5)) + Math.Abs(this.GridLoc[1] - (int)Math.Floor(3.5)));
 		}
 
-		// Token: 0x04023253 RID: 143955
+		// Token: 0x0401E443 RID: 123971
 		private int IndexInner;
 
-		// Token: 0x04023254 RID: 143956
+		// Token: 0x0401E444 RID: 123972
 		public bool IsStatic = true;
 
-		// Token: 0x04023255 RID: 143957
+		// Token: 0x0401E445 RID: 123973
 		public int[] GridLoc = new int[]
 		{
 			-1,
 			-1
 		};
 
-		// Token: 0x04023256 RID: 143958
+		// Token: 0x0401E446 RID: 123974
 		public ETuningStandGridType GridType;
 
-		// Token: 0x04023257 RID: 143959
+		// Token: 0x0401E447 RID: 123975
 		public EGridMainType GridMainType;
 
-		// Token: 0x04023258 RID: 143960
+		// Token: 0x0401E448 RID: 123976
 		public int GridValue;
 
-		// Token: 0x04023259 RID: 143961
+		// Token: 0x0401E449 RID: 123977
 		public ITuningStateData StaticState = new TuningStateData
 		{
 			State = EGridBelongType.Empty
 		};
 
-		// Token: 0x0402325A RID: 143962
+		// Token: 0x0401E44A RID: 123978
 		public ITuningStateData DynamicState = new TuningStateData
 		{
 			State = EGridBelongType.Empty

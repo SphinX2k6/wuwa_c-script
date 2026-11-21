@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004C0 RID: 1216
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000519 RID: 1305
 	public class ILevelPrefab : IModelConfig
 	{
-		// Token: 0x060018A6 RID: 6310 RVA: 0x000499E8 File Offset: 0x00047BE8
+		// Token: 0x06001A40 RID: 6720 RVA: 0x0004D730 File Offset: 0x0004B930
 		private ILevelPrefab_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060018A7 RID: 6311 RVA: 0x00049A20 File Offset: 0x00047C20
+		// Token: 0x06001A41 RID: 6721 RVA: 0x0004D768 File Offset: 0x0004B968
 		public static ILevelPrefab Create([Nullable(2)] ILevelPrefab instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060018A8 RID: 6312 RVA: 0x00049A33 File Offset: 0x00047C33
+		// Token: 0x06001A42 RID: 6722 RVA: 0x0004D77B File Offset: 0x0004B97B
 		public static ILevelPrefab CreateFromSetValue([Nullable(2)] ILevelPrefab_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060018A9 RID: 6313 RVA: 0x00049A48 File Offset: 0x00047C48
+		// Token: 0x06001A43 RID: 6723 RVA: 0x0004D790 File Offset: 0x0004B990
 		public new ILevelPrefab_SetValue ToSetValue()
 		{
 			return new ILevelPrefab_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000692 RID: 1682
-		// (get) Token: 0x060018AA RID: 6314 RVA: 0x00049AA2 File Offset: 0x00047CA2
-		// (set) Token: 0x060018AB RID: 6315 RVA: 0x00049ACD File Offset: 0x00047CCD
+		// Token: 0x170006F9 RID: 1785
+		// (get) Token: 0x06001A44 RID: 6724 RVA: 0x0004D7EA File Offset: 0x0004B9EA
+		// (set) Token: 0x06001A45 RID: 6725 RVA: 0x0004D815 File Offset: 0x0004BA15
 		public override EModelType Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000693 RID: 1683
-		// (get) Token: 0x060018AC RID: 6316 RVA: 0x00049ADB File Offset: 0x00047CDB
-		// (set) Token: 0x060018AD RID: 6317 RVA: 0x00049B06 File Offset: 0x00047D06
+		// Token: 0x170006FA RID: 1786
+		// (get) Token: 0x06001A46 RID: 6726 RVA: 0x0004D823 File Offset: 0x0004BA23
+		// (set) Token: 0x06001A47 RID: 6727 RVA: 0x0004D84E File Offset: 0x0004BA4E
 		public virtual ELevelPrefabBpType BlueprintPath
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000694 RID: 1684
-		// (get) Token: 0x060018AE RID: 6318 RVA: 0x00049B14 File Offset: 0x00047D14
-		// (set) Token: 0x060018AF RID: 6319 RVA: 0x00049B3F File Offset: 0x00047D3F
+		// Token: 0x170006FB RID: 1787
+		// (get) Token: 0x06001A48 RID: 6728 RVA: 0x0004D85C File Offset: 0x0004BA5C
+		// (set) Token: 0x06001A49 RID: 6729 RVA: 0x0004D887 File Offset: 0x0004BA87
 		public virtual string PrefabPath
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000695 RID: 1685
-		// (get) Token: 0x060018B0 RID: 6320 RVA: 0x00049B50 File Offset: 0x00047D50
-		// (set) Token: 0x060018B1 RID: 6321 RVA: 0x00049B8A File Offset: 0x00047D8A
+		// Token: 0x170006FC RID: 1788
+		// (get) Token: 0x06001A4A RID: 6730 RVA: 0x0004D898 File Offset: 0x0004BA98
+		// (set) Token: 0x06001A4B RID: 6731 RVA: 0x0004D8D2 File Offset: 0x0004BAD2
 		public virtual int? NameOffsetZ
 		{
 			get
@@ -158,9 +156,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000696 RID: 1686
-		// (get) Token: 0x060018B2 RID: 6322 RVA: 0x00049B98 File Offset: 0x00047D98
-		// (set) Token: 0x060018B3 RID: 6323 RVA: 0x00049C2B File Offset: 0x00047E2B
+		// Token: 0x170006FD RID: 1789
+		// (get) Token: 0x06001A4C RID: 6732 RVA: 0x0004D8E0 File Offset: 0x0004BAE0
+		// (set) Token: 0x06001A4D RID: 6733 RVA: 0x0004D973 File Offset: 0x0004BB73
 		public virtual List<IPrefabStateConfig> PrefabStateList
 		{
 			get
@@ -196,9 +194,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000697 RID: 1687
-		// (get) Token: 0x060018B4 RID: 6324 RVA: 0x00049C40 File Offset: 0x00047E40
-		// (set) Token: 0x060018B5 RID: 6325 RVA: 0x00049CD3 File Offset: 0x00047ED3
+		// Token: 0x170006FE RID: 1790
+		// (get) Token: 0x06001A4E RID: 6734 RVA: 0x0004D988 File Offset: 0x0004BB88
+		// (set) Token: 0x06001A4F RID: 6735 RVA: 0x0004DA1B File Offset: 0x0004BC1B
 		public virtual List<IPrefabEffectConfig> EffectStateList
 		{
 			get
@@ -234,24 +232,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001244 RID: 4676
+		// Token: 0x04001366 RID: 4966
 		[Nullable(2)]
 		protected new ILevelPrefab FbInstance;
 
-		// Token: 0x04001245 RID: 4677
+		// Token: 0x04001367 RID: 4967
 		[Nullable(2)]
 		protected new ILevelPrefab_SetValue PocoInterface;
 
-		// Token: 0x04001246 RID: 4678
+		// Token: 0x04001368 RID: 4968
 		private List<IPrefabStateConfig> _PrefabStateListCache;
 
-		// Token: 0x04001247 RID: 4679
+		// Token: 0x04001369 RID: 4969
 		private bool _PrefabStateListInited;
 
-		// Token: 0x04001248 RID: 4680
+		// Token: 0x0400136A RID: 4970
 		private List<IPrefabEffectConfig> _EffectStateListCache;
 
-		// Token: 0x04001249 RID: 4681
+		// Token: 0x0400136B RID: 4971
 		private bool _EffectStateListInited;
 	}
 }

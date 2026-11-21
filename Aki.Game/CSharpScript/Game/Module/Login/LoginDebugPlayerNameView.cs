@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056AE RID: 22190
+	// Token: 0x02004684 RID: 18052
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LoginDebugPlayerNameView : UiViewBase
 	{
-		// Token: 0x06038748 RID: 231240 RVA: 0x00D6749A File Offset: 0x00D6569A
+		// Token: 0x0602D645 RID: 185925 RVA: 0x00CB565E File Offset: 0x00CB385E
 		public LoginDebugPlayerNameView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06038749 RID: 231241 RVA: 0x00D674A4 File Offset: 0x00D656A4
+		// Token: 0x0602D646 RID: 185926 RVA: 0x00CB5668 File Offset: 0x00CB3868
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.Login
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603874A RID: 231242 RVA: 0x00D675D0 File Offset: 0x00D657D0
+		// Token: 0x0602D647 RID: 185927 RVA: 0x00CB5794 File Offset: 0x00CB3994
 		protected override void OnBeforeCreate()
 		{
 			this.OnSuccessCallBack = (Action)this.OpenParam;
 		}
 
-		// Token: 0x0603874B RID: 231243 RVA: 0x00D675E3 File Offset: 0x00D657E3
+		// Token: 0x0602D648 RID: 185928 RVA: 0x00CB57A7 File Offset: 0x00CB39A7
 		private void OnTextChangeCallBack(string inString)
 		{
 			UUIButtonComponent button = base.GetButton(3);
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Login
 			button.SetSelfInteractive(inString.Length > 0);
 		}
 
-		// Token: 0x0603874C RID: 231244 RVA: 0x00D67600 File Offset: 0x00D65800
+		// Token: 0x0602D649 RID: 185929 RVA: 0x00CB57C4 File Offset: 0x00CB39C4
 		protected override void OnStart()
 		{
 			UUIText text = base.GetText(1);
@@ -80,13 +80,13 @@ namespace CSharpScript.Game.Module.Login
 			button.SetSelfInteractive(false);
 		}
 
-		// Token: 0x0603874D RID: 231245 RVA: 0x00D6764F File Offset: 0x00D6584F
+		// Token: 0x0602D64A RID: 185930 RVA: 0x00CB5813 File Offset: 0x00CB3A13
 		private void OnClickCancelBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603874E RID: 231246 RVA: 0x00D67658 File Offset: 0x00D65858
+		// Token: 0x0602D64B RID: 185931 RVA: 0x00CB581C File Offset: 0x00CB3A1C
 		private void OnClickConfirmBtn()
 		{
 			string text = base.GetInputText(0).GetText();
@@ -105,20 +105,20 @@ namespace CSharpScript.Game.Module.Login
 			onSuccessCallBack();
 		}
 
-		// Token: 0x0603874F RID: 231247 RVA: 0x00D676A8 File Offset: 0x00D658A8
+		// Token: 0x0602D64C RID: 185932 RVA: 0x00CB586C File Offset: 0x00CB3A6C
 		private void ShowNameTooLongView()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ChangeName);
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06038750 RID: 231248 RVA: 0x00D676C9 File Offset: 0x00D658C9
+		// Token: 0x0602D64D RID: 185933 RVA: 0x00CB588D File Offset: 0x00CB3A8D
 		protected override void OnBeforeDestroy()
 		{
 			this.OnSuccessCallBack = null;
 		}
 
-		// Token: 0x0401DA61 RID: 121441
+		// Token: 0x040184EC RID: 99564
 		private Action OnSuccessCallBack;
 	}
 }

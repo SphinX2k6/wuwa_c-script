@@ -5,10 +5,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 {
-	// Token: 0x02004919 RID: 18713
+	// Token: 0x02004DC9 RID: 19913
 	public static class TCsvLoopTeleportDataVerify
 	{
-		// Token: 0x0601D459 RID: 119897 RVA: 0x00421128 File Offset: 0x0041F328
+		// Token: 0x0601EE72 RID: 126578 RVA: 0x004514E0 File Offset: 0x0044F6E0
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 4UL, 4UL, false))
@@ -27,11 +27,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return false;
 		}
 
-		// Token: 0x02007A1D RID: 31261
+		// Token: 0x0200826C RID: 33388
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040133E0 RID: 78816
+			// Token: 0x0401444D RID: 83021
 			public static VerifyTableAction <0>__Verify;
 		}
 	}

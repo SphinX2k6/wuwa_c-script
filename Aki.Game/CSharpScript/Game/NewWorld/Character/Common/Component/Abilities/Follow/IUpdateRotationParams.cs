@@ -4,28 +4,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x02007144 RID: 28996
+	// Token: 0x02006372 RID: 25458
 	[NullableContext(1)]
 	public interface IUpdateRotationParams
 	{
-		// Token: 0x17009D3F RID: 40255
-		// (get) Token: 0x06046C86 RID: 289926
-		// (set) Token: 0x06046C87 RID: 289927
+		// Token: 0x17007511 RID: 29969
+		// (get) Token: 0x0603DAD7 RID: 252631
+		// (set) Token: 0x0603DAD8 RID: 252632
 		float DeltaTimeMs { get; set; }
 
-		// Token: 0x17009D40 RID: 40256
-		// (get) Token: 0x06046C88 RID: 289928
-		// (set) Token: 0x06046C89 RID: 289929
+		// Token: 0x17007512 RID: 29970
+		// (get) Token: 0x0603DAD9 RID: 252633
+		// (set) Token: 0x0603DADA RID: 252634
 		float RotationInterpSpeed { get; set; }
 
-		// Token: 0x17009D41 RID: 40257
-		// (get) Token: 0x06046C8A RID: 289930
-		// (set) Token: 0x06046C8B RID: 289931
+		// Token: 0x17007513 RID: 29971
+		// (get) Token: 0x0603DADB RID: 252635
+		// (set) Token: 0x0603DADC RID: 252636
 		FRotator RotateOffset { get; set; }
 
-		// Token: 0x17009D42 RID: 40258
-		// (get) Token: 0x06046C8C RID: 289932
-		// (set) Token: 0x06046C8D RID: 289933
+		// Token: 0x17007514 RID: 29972
+		// (get) Token: 0x0603DADD RID: 252637
+		// (set) Token: 0x0603DADE RID: 252638
 		FollowShooterAimTarget AimTarget { get; set; }
 	}
 }

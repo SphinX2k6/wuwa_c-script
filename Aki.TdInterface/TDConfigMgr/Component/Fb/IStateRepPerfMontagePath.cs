@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A92 RID: 2706
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B5C RID: 2908
 	public class IStateRepPerfMontagePath : IStateRepPerfBase
 	{
-		// Token: 0x06003E3E RID: 15934 RVA: 0x0009F603 File Offset: 0x0009D803
+		// Token: 0x06004267 RID: 16999 RVA: 0x000A8BBB File Offset: 0x000A6DBB
 		public static IStateRepPerfMontagePath Create(IStateRepPerfMontagePath? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000ED7 RID: 3799
-		// (get) Token: 0x06003E3F RID: 15935 RVA: 0x0009F622 File Offset: 0x0009D822
+		// Token: 0x17000FAA RID: 4010
+		// (get) Token: 0x06004268 RID: 17000 RVA: 0x000A8BDA File Offset: 0x000A6DDA
 		public override EStateRepPerfType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000ED8 RID: 3800
-		// (get) Token: 0x06003E40 RID: 15936 RVA: 0x0009F62F File Offset: 0x0009D82F
+		// Token: 0x17000FAB RID: 4011
+		// (get) Token: 0x06004269 RID: 17001 RVA: 0x000A8BE7 File Offset: 0x000A6DE7
 		public virtual string MontagePath
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000ED9 RID: 3801
-		// (get) Token: 0x06003E41 RID: 15937 RVA: 0x0009F63C File Offset: 0x0009D83C
+		// Token: 0x17000FAC RID: 4012
+		// (get) Token: 0x0600426A RID: 17002 RVA: 0x000A8BF4 File Offset: 0x000A6DF4
 		public virtual string MontageName
 		{
 			get
@@ -52,7 +49,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022AB RID: 8875
+		// Token: 0x040024C7 RID: 9415
 		private IStateRepPerfMontagePath Instance;
 	}
 }

@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.Roverlike;
 
 namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 {
-	// Token: 0x02005E5B RID: 24155
+	// Token: 0x02004E40 RID: 20032
 	public static class BattleViewDynamicUIDefine
 	{
-		// Token: 0x040200C5 RID: 131269
+		// Token: 0x0401AB8C RID: 109452
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly IReadOnlyDictionary<EBattleViewDynamicUIType, BattleViewDynamicUIConfig> BattleViewDynamicUIConfigMap = new Dictionary<EBattleViewDynamicUIType, BattleViewDynamicUIConfig>

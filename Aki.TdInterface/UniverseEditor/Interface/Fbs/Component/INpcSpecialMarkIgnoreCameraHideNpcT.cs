@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005654 RID: 22100
+	// Token: 0x02005BF2 RID: 23538
 	public class INpcSpecialMarkIgnoreCameraHideNpcT
 	{
-		// Token: 0x1700A3AE RID: 41902
-		// (get) Token: 0x06024BD3 RID: 150483 RVA: 0x00511B8E File Offset: 0x0050FD8E
-		// (set) Token: 0x06024BD4 RID: 150484 RVA: 0x00511B96 File Offset: 0x0050FD96
+		// Token: 0x1700AC38 RID: 44088
+		// (get) Token: 0x06026DF4 RID: 159220 RVA: 0x005524F6 File Offset: 0x005506F6
+		// (set) Token: 0x06026DF5 RID: 159221 RVA: 0x005524FE File Offset: 0x005506FE
 		public ESpecialNpcMarkType Type { get; set; }
 
-		// Token: 0x06024BD5 RID: 150485 RVA: 0x00511B9F File Offset: 0x0050FD9F
+		// Token: 0x06026DF6 RID: 159222 RVA: 0x00552507 File Offset: 0x00550707
 		public INpcSpecialMarkIgnoreCameraHideNpcT()
 		{
 			this.Type = ESpecialNpcMarkType.TrafficLight;

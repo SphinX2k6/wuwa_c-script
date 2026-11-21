@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x0200300E RID: 12302
+// Token: 0x02002564 RID: 9572
 public class TRotationRequestWithPriority : FunctionRequestWithPriority<ESetRotationPriority>
 {
 }

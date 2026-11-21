@@ -7,14 +7,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001B3 RID: 435
+// Token: 0x020001B7 RID: 439
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyEffectTrig.TsAnimNotifyEffectTrig_C")]
 public class TsAnimNotifyEffectTrig : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000468 RID: 1128
-	// (get) Token: 0x06001B61 RID: 7009 RVA: 0x0008D393 File Offset: 0x0008B593
-	// (set) Token: 0x06001B62 RID: 7010 RVA: 0x0008D3A3 File Offset: 0x0008B5A3
+	// Token: 0x1700048A RID: 1162
+	// (get) Token: 0x06001BFE RID: 7166 RVA: 0x00093C9B File Offset: 0x00091E9B
+	// (set) Token: 0x06001BFF RID: 7167 RVA: 0x00093CAB File Offset: 0x00091EAB
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int AteIndex
 	{
@@ -28,9 +28,9 @@ public class TsAnimNotifyEffectTrig : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17000469 RID: 1129
-	// (get) Token: 0x06001B63 RID: 7011 RVA: 0x0008D3B4 File Offset: 0x0008B5B4
-	// (set) Token: 0x06001B64 RID: 7012 RVA: 0x0008D3C4 File Offset: 0x0008B5C4
+	// Token: 0x1700048B RID: 1163
+	// (get) Token: 0x06001C00 RID: 7168 RVA: 0x00093CBC File Offset: 0x00091EBC
+	// (set) Token: 0x06001C01 RID: 7169 RVA: 0x00093CCC File Offset: 0x00091ECC
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EEffectAction 攻击类型
 	{
@@ -44,9 +44,9 @@ public class TsAnimNotifyEffectTrig : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x1700046A RID: 1130
-	// (get) Token: 0x06001B65 RID: 7013 RVA: 0x0008D3D5 File Offset: 0x0008B5D5
-	// (set) Token: 0x06001B66 RID: 7014 RVA: 0x0008D3E5 File Offset: 0x0008B5E5
+	// Token: 0x1700048C RID: 1164
+	// (get) Token: 0x06001C02 RID: 7170 RVA: 0x00093CDD File Offset: 0x00091EDD
+	// (set) Token: 0x06001C03 RID: 7171 RVA: 0x00093CED File Offset: 0x00091EED
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float 攻击半径
 	{
@@ -60,9 +60,9 @@ public class TsAnimNotifyEffectTrig : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x1700046B RID: 1131
-	// (get) Token: 0x06001B67 RID: 7015 RVA: 0x0008D3F6 File Offset: 0x0008B5F6
-	// (set) Token: 0x06001B68 RID: 7016 RVA: 0x0008D406 File Offset: 0x0008B606
+	// Token: 0x1700048D RID: 1165
+	// (get) Token: 0x06001C04 RID: 7172 RVA: 0x00093CFE File Offset: 0x00091EFE
+	// (set) Token: 0x06001C05 RID: 7173 RVA: 0x00093D0E File Offset: 0x00091F0E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float 攻击强度
 	{
@@ -76,9 +76,9 @@ public class TsAnimNotifyEffectTrig : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x1700046C RID: 1132
-	// (get) Token: 0x06001B69 RID: 7017 RVA: 0x0008D417 File Offset: 0x0008B617
-	// (set) Token: 0x06001B6A RID: 7018 RVA: 0x0008D427 File Offset: 0x0008B627
+	// Token: 0x1700048E RID: 1166
+	// (get) Token: 0x06001C06 RID: 7174 RVA: 0x00093D1F File Offset: 0x00091F1F
+	// (set) Token: 0x06001C07 RID: 7175 RVA: 0x00093D2F File Offset: 0x00091F2F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float 持续时间
 	{
@@ -92,9 +92,9 @@ public class TsAnimNotifyEffectTrig : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x1700046D RID: 1133
-	// (get) Token: 0x06001B6B RID: 7019 RVA: 0x0008D438 File Offset: 0x0008B638
-	// (set) Token: 0x06001B6C RID: 7020 RVA: 0x0008D448 File Offset: 0x0008B648
+	// Token: 0x1700048F RID: 1167
+	// (get) Token: 0x06001C08 RID: 7176 RVA: 0x00093D40 File Offset: 0x00091F40
+	// (set) Token: 0x06001C09 RID: 7177 RVA: 0x00093D50 File Offset: 0x00091F50
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float 纹理高度
 	{
@@ -108,9 +108,9 @@ public class TsAnimNotifyEffectTrig : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x1700046E RID: 1134
-	// (get) Token: 0x06001B6D RID: 7021 RVA: 0x0008D459 File Offset: 0x0008B659
-	// (set) Token: 0x06001B6E RID: 7022 RVA: 0x0008D46D File Offset: 0x0008B66D
+	// Token: 0x17000490 RID: 1168
+	// (get) Token: 0x06001C0A RID: 7178 RVA: 0x00093D61 File Offset: 0x00091F61
+	// (set) Token: 0x06001C0B RID: 7179 RVA: 0x00093D75 File Offset: 0x00091F75
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector 特效节点Location
 	{
@@ -124,9 +124,9 @@ public class TsAnimNotifyEffectTrig : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x1700046F RID: 1135
-	// (get) Token: 0x06001B6F RID: 7023 RVA: 0x0008D482 File Offset: 0x0008B682
-	// (set) Token: 0x06001B70 RID: 7024 RVA: 0x0008D496 File Offset: 0x0008B696
+	// Token: 0x17000491 RID: 1169
+	// (get) Token: 0x06001C0C RID: 7180 RVA: 0x00093D8A File Offset: 0x00091F8A
+	// (set) Token: 0x06001C0D RID: 7181 RVA: 0x00093D9E File Offset: 0x00091F9E
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UMaterialParameterCollection AteMPC
@@ -143,7 +143,7 @@ public class TsAnimNotifyEffectTrig : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x06001B71 RID: 7025 RVA: 0x0008D4AC File Offset: 0x0008B6AC
+	// Token: 0x06001C0E RID: 7182 RVA: 0x00093DB4 File Offset: 0x00091FB4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
@@ -192,7 +192,7 @@ public class TsAnimNotifyEffectTrig : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		return true;
 	}
 
-	// Token: 0x06001B72 RID: 7026 RVA: 0x0008D6B8 File Offset: 0x0008B8B8
+	// Token: 0x06001C0F RID: 7183 RVA: 0x00093FC0 File Offset: 0x000921C0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override string GetNotifyName()
@@ -200,7 +200,7 @@ public class TsAnimNotifyEffectTrig : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		return "触发特效";
 	}
 
-	// Token: 0x06001B73 RID: 7027 RVA: 0x0008D6BF File Offset: 0x0008B8BF
+	// Token: 0x06001C10 RID: 7184 RVA: 0x00093FC7 File Offset: 0x000921C7
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyEffectTrig._ClassPtr == IntPtr.Zero)
@@ -210,23 +210,23 @@ public class TsAnimNotifyEffectTrig : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		return TsAnimNotifyEffectTrig._ClassPtr;
 	}
 
-	// Token: 0x06001B74 RID: 7028 RVA: 0x0008D6E4 File Offset: 0x0008B8E4
+	// Token: 0x06001C11 RID: 7185 RVA: 0x00093FEC File Offset: 0x000921EC
 	public TsAnimNotifyEffectTrig() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyEffectTrig.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001B75 RID: 7029 RVA: 0x0008D70C File Offset: 0x0008B90C
+	// Token: 0x06001C12 RID: 7186 RVA: 0x00094014 File Offset: 0x00092214
 	[NullableContext(1)]
 	public TsAnimNotifyEffectTrig(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyEffectTrig.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001B76 RID: 7030 RVA: 0x0008D73F File Offset: 0x0008B93F
+	// Token: 0x06001C13 RID: 7187 RVA: 0x00094047 File Offset: 0x00092247
 	protected TsAnimNotifyEffectTrig(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001B77 RID: 7031 RVA: 0x0008D760 File Offset: 0x0008B960
+	// Token: 0x06001C14 RID: 7188 RVA: 0x00094068 File Offset: 0x00092268
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -234,51 +234,51 @@ public class TsAnimNotifyEffectTrig : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		__Params->__Result = this.K2_Notify(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001B78 RID: 7032 RVA: 0x0008D793 File Offset: 0x0008B993
+	// Token: 0x06001C15 RID: 7189 RVA: 0x0009409B File Offset: 0x0009229B
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName());
 	}
 
-	// Token: 0x04001181 RID: 4481
+	// Token: 0x040011C4 RID: 4548
 	[Nullable(1)]
 	private readonly Vector TempVector = Vector.Create();
 
-	// Token: 0x04001182 RID: 4482
+	// Token: 0x040011C5 RID: 4549
 	[Nullable(1)]
 	private readonly Vector TempVectorDouble = Vector.Create();
 
-	// Token: 0x04001183 RID: 4483
+	// Token: 0x040011C6 RID: 4550
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyEffectTrig.TsAnimNotifyEffectTrig_C";
 
-	// Token: 0x04001184 RID: 4484
+	// Token: 0x040011C7 RID: 4551
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04001185 RID: 4485
+	// Token: 0x040011C8 RID: 4552
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04001186 RID: 4486
+	// Token: 0x040011C9 RID: 4553
 	private static int __PropertyOffset_AteIndex;
 
-	// Token: 0x04001187 RID: 4487
+	// Token: 0x040011CA RID: 4554
 	private static int __PropertyOffset_攻击类型;
 
-	// Token: 0x04001188 RID: 4488
+	// Token: 0x040011CB RID: 4555
 	private static int __PropertyOffset_攻击半径;
 
-	// Token: 0x04001189 RID: 4489
+	// Token: 0x040011CC RID: 4556
 	private static int __PropertyOffset_攻击强度;
 
-	// Token: 0x0400118A RID: 4490
+	// Token: 0x040011CD RID: 4557
 	private static int __PropertyOffset_持续时间;
 
-	// Token: 0x0400118B RID: 4491
+	// Token: 0x040011CE RID: 4558
 	private static int __PropertyOffset_纹理高度;
 
-	// Token: 0x0400118C RID: 4492
+	// Token: 0x040011CF RID: 4559
 	private static int __PropertyOffset_特效节点Location;
 
-	// Token: 0x0400118D RID: 4493
+	// Token: 0x040011D0 RID: 4560
 	private static int __PropertyOffset_AteMPC;
 }

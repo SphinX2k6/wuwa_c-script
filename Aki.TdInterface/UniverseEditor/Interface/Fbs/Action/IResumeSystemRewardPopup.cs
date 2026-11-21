@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EC4 RID: 28356
+	// Token: 0x02007648 RID: 30280
 	public struct IResumeSystemRewardPopup : IFlatbufferObject
 	{
-		// Token: 0x1700D30A RID: 54026
-		// (get) Token: 0x060321D5 RID: 205269 RVA: 0x006C674D File Offset: 0x006C494D
+		// Token: 0x1700DE61 RID: 56929
+		// (get) Token: 0x06035215 RID: 217621 RVA: 0x00722481 File Offset: 0x00720681
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060321D6 RID: 205270 RVA: 0x006C675A File Offset: 0x006C495A
+		// Token: 0x06035216 RID: 217622 RVA: 0x0072248E File Offset: 0x0072068E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060321D7 RID: 205271 RVA: 0x006C6764 File Offset: 0x006C4964
+		// Token: 0x06035217 RID: 217623 RVA: 0x00722498 File Offset: 0x00720698
 		public static IResumeSystemRewardPopup GetRootAsIResumeSystemRewardPopup(ByteBuffer _bb)
 		{
 			return IResumeSystemRewardPopup.GetRootAsIResumeSystemRewardPopup(_bb, default(IResumeSystemRewardPopup));
 		}
 
-		// Token: 0x060321D8 RID: 205272 RVA: 0x006C6780 File Offset: 0x006C4980
+		// Token: 0x06035218 RID: 217624 RVA: 0x007224B4 File Offset: 0x007206B4
 		public static IResumeSystemRewardPopup GetRootAsIResumeSystemRewardPopup(ByteBuffer _bb, IResumeSystemRewardPopup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060321D9 RID: 205273 RVA: 0x006C679D File Offset: 0x006C499D
+		// Token: 0x06035219 RID: 217625 RVA: 0x007224D1 File Offset: 0x007206D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060321DA RID: 205274 RVA: 0x006C67AC File Offset: 0x006C49AC
+		// Token: 0x0603521A RID: 217626 RVA: 0x007224E0 File Offset: 0x007206E0
 		public IResumeSystemRewardPopup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D30B RID: 54027
-		// (get) Token: 0x060321DB RID: 205275 RVA: 0x006C67BC File Offset: 0x006C49BC
+		// Token: 0x1700DE62 RID: 56930
+		// (get) Token: 0x0603521B RID: 217627 RVA: 0x007224F0 File Offset: 0x007206F0
 		public IResumeGiantDeliveryRewardPopup? SystemType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060321DC RID: 205276 RVA: 0x006C6819 File Offset: 0x006C4A19
+		// Token: 0x0603521C RID: 217628 RVA: 0x0072254D File Offset: 0x0072074D
 		public static Offset<IResumeSystemRewardPopup> CreateIResumeSystemRewardPopup(FlatBufferBuilder builder, Offset<IResumeGiantDeliveryRewardPopup> SystemTypeOffset = default(Offset<IResumeGiantDeliveryRewardPopup>))
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IResumeSystemRewardPopup.EndIResumeSystemRewardPopup(builder);
 		}
 
-		// Token: 0x060321DD RID: 205277 RVA: 0x006C682F File Offset: 0x006C4A2F
+		// Token: 0x0603521D RID: 217629 RVA: 0x00722563 File Offset: 0x00720763
 		public static void StartIResumeSystemRewardPopup(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060321DE RID: 205278 RVA: 0x006C6838 File Offset: 0x006C4A38
+		// Token: 0x0603521E RID: 217630 RVA: 0x0072256C File Offset: 0x0072076C
 		public static void AddSystemType(FlatBufferBuilder builder, Offset<IResumeGiantDeliveryRewardPopup> systemTypeOffset)
 		{
 			builder.AddOffset(0, systemTypeOffset.Value, 0);
 		}
 
-		// Token: 0x060321DF RID: 205279 RVA: 0x006C6848 File Offset: 0x006C4A48
+		// Token: 0x0603521F RID: 217631 RVA: 0x0072257C File Offset: 0x0072077C
 		public static Offset<IResumeSystemRewardPopup> EndIResumeSystemRewardPopup(FlatBufferBuilder builder)
 		{
 			return new Offset<IResumeSystemRewardPopup>(builder.EndTable());
 		}
 
-		// Token: 0x060321E0 RID: 205280 RVA: 0x006C6858 File Offset: 0x006C4A58
+		// Token: 0x06035220 RID: 217632 RVA: 0x0072258C File Offset: 0x0072078C
 		public IResumeSystemRewardPopupT UnPack()
 		{
 			IResumeSystemRewardPopupT resumeSystemRewardPopupT = new IResumeSystemRewardPopupT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return resumeSystemRewardPopupT;
 		}
 
-		// Token: 0x060321E1 RID: 205281 RVA: 0x006C6874 File Offset: 0x006C4A74
+		// Token: 0x06035221 RID: 217633 RVA: 0x007225A8 File Offset: 0x007207A8
 		public void UnPackTo(IResumeSystemRewardPopupT _o)
 		{
 			_o.SystemType = ((this.SystemType != null) ? this.SystemType.Value.UnPack() : null);
 		}
 
-		// Token: 0x060321E2 RID: 205282 RVA: 0x006C68B0 File Offset: 0x006C4AB0
+		// Token: 0x06035222 RID: 217634 RVA: 0x007225E4 File Offset: 0x007207E4
 		public static Offset<IResumeSystemRewardPopup> Pack(FlatBufferBuilder builder, IResumeSystemRewardPopupT _o)
 		{
 			if (_o == null)
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IResumeSystemRewardPopup.CreateIResumeSystemRewardPopup(builder, systemTypeOffset);
 		}
 
-		// Token: 0x040118B5 RID: 71861
+		// Token: 0x0401283A RID: 75834
 		private Table __p;
 	}
 }

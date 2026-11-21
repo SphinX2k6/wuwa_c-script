@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.EditorObject
 {
-	// Token: 0x020048FA RID: 18682
+	// Token: 0x02004D5F RID: 19807
 	public class IEditorObjectT
 	{
-		// Token: 0x17008780 RID: 34688
-		// (get) Token: 0x0601D35A RID: 119642 RVA: 0x0041F285 File Offset: 0x0041D485
-		// (set) Token: 0x0601D35B RID: 119643 RVA: 0x0041F28D File Offset: 0x0041D48D
+		// Token: 0x17008DC8 RID: 36296
+		// (get) Token: 0x0601EB47 RID: 125767 RVA: 0x0044BA21 File Offset: 0x00449C21
+		// (set) Token: 0x0601EB48 RID: 125768 RVA: 0x0044BA29 File Offset: 0x00449C29
 		public TEditorObjectType ObjType { get; set; }
 
-		// Token: 0x17008781 RID: 34689
-		// (get) Token: 0x0601D35C RID: 119644 RVA: 0x0041F296 File Offset: 0x0041D496
-		// (set) Token: 0x0601D35D RID: 119645 RVA: 0x0041F29E File Offset: 0x0041D49E
+		// Token: 0x17008DC9 RID: 36297
+		// (get) Token: 0x0601EB49 RID: 125769 RVA: 0x0044BA32 File Offset: 0x00449C32
+		// (set) Token: 0x0601EB4A RID: 125770 RVA: 0x0044BA3A File Offset: 0x00449C3A
 		public List<string> Children { get; set; }
 
-		// Token: 0x17008782 RID: 34690
-		// (get) Token: 0x0601D35E RID: 119646 RVA: 0x0041F2A7 File Offset: 0x0041D4A7
-		// (set) Token: 0x0601D35F RID: 119647 RVA: 0x0041F2AF File Offset: 0x0041D4AF
+		// Token: 0x17008DCA RID: 36298
+		// (get) Token: 0x0601EB4B RID: 125771 RVA: 0x0044BA43 File Offset: 0x00449C43
+		// (set) Token: 0x0601EB4C RID: 125772 RVA: 0x0044BA4B File Offset: 0x00449C4B
 		public List<string> Reference { get; set; }
 
-		// Token: 0x17008783 RID: 34691
-		// (get) Token: 0x0601D360 RID: 119648 RVA: 0x0041F2B8 File Offset: 0x0041D4B8
-		// (set) Token: 0x0601D361 RID: 119649 RVA: 0x0041F2C0 File Offset: 0x0041D4C0
+		// Token: 0x17008DCB RID: 36299
+		// (get) Token: 0x0601EB4D RID: 125773 RVA: 0x0044BA54 File Offset: 0x00449C54
+		// (set) Token: 0x0601EB4E RID: 125774 RVA: 0x0044BA5C File Offset: 0x00449C5C
 		public List<string> WeakReference { get; set; }
 
-		// Token: 0x17008784 RID: 34692
-		// (get) Token: 0x0601D362 RID: 119650 RVA: 0x0041F2C9 File Offset: 0x0041D4C9
-		// (set) Token: 0x0601D363 RID: 119651 RVA: 0x0041F2D1 File Offset: 0x0041D4D1
+		// Token: 0x17008DCC RID: 36300
+		// (get) Token: 0x0601EB4F RID: 125775 RVA: 0x0044BA65 File Offset: 0x00449C65
+		// (set) Token: 0x0601EB50 RID: 125776 RVA: 0x0044BA6D File Offset: 0x00449C6D
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601D364 RID: 119652 RVA: 0x0041F2DA File Offset: 0x0041D4DA
+		// Token: 0x0601EB51 RID: 125777 RVA: 0x0044BA76 File Offset: 0x00449C76
 		public IEditorObjectT()
 		{
 			this.ObjType = TEditorObjectType.BehaviorTreeFragment;

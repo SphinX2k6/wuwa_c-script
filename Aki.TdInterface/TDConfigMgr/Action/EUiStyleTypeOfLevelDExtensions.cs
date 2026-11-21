@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002493 RID: 9363
+	// Token: 0x02002736 RID: 10038
 	public static class EUiStyleTypeOfLevelDExtensions
 	{
-		// Token: 0x0600CB14 RID: 51988 RVA: 0x001DE608 File Offset: 0x001DC808
+		// Token: 0x0600D7CD RID: 55245 RVA: 0x001F87D0 File Offset: 0x001F69D0
 		public static string ToEnumString(this EUiStyleTypeOfLevelD value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB15 RID: 51989 RVA: 0x001DE640 File Offset: 0x001DC840
+		// Token: 0x0600D7CE RID: 55246 RVA: 0x001F8808 File Offset: 0x001F6A08
 		public static EUiStyleTypeOfLevelD FromString(string name)
 		{
 			EUiStyleTypeOfLevelD result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB16 RID: 51990 RVA: 0x001DE669 File Offset: 0x001DC869
+		// Token: 0x0600D7CF RID: 55247 RVA: 0x001F8831 File Offset: 0x001F6A31
 		public static bool TryFromString(string name, out EUiStyleTypeOfLevelD value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CB17 RID: 51991 RVA: 0x001DE6A2 File Offset: 0x001DC8A2
+		// Token: 0x0600D7D0 RID: 55248 RVA: 0x001F886A File Offset: 0x001F6A6A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CB18 RID: 51992 RVA: 0x001DE6BA File Offset: 0x001DC8BA
+		// Token: 0x0600D7D1 RID: 55249 RVA: 0x001F8882 File Offset: 0x001F6A82
 		public static EUiStyleTypeOfLevelD[] GetValues()
 		{
 			return new EUiStyleTypeOfLevelD[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CB19 RID: 51993 RVA: 0x001DE6C6 File Offset: 0x001DC8C6
+		// Token: 0x0600D7D2 RID: 55250 RVA: 0x001F888E File Offset: 0x001F6A8E
 		public static string[] GetNames()
 		{
 			return new string[]

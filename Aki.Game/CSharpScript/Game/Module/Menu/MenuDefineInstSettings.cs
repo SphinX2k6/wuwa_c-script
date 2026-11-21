@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.AdventureGuide;
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x02005403 RID: 21507
+	// Token: 0x020043E6 RID: 17382
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class MenuDefineInstSettings
 	{
-		// Token: 0x06036F5B RID: 225115 RVA: 0x00D04FD8 File Offset: 0x00D031D8
+		// Token: 0x0602BEA3 RID: 179875 RVA: 0x00C5441C File Offset: 0x00C5261C
 		// Note: this type is marked as 'beforefieldinit'.
 		static MenuDefineInstSettings()
 		{
@@ -23,11 +23,11 @@ namespace CSharpScript.Game.Module.Menu
 			MenuDefineInstSettings.disableSettingsWorldInstMap = dictionary;
 		}
 
-		// Token: 0x0401D009 RID: 118793
+		// Token: 0x04017AA2 RID: 96930
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<EDungeonSubType, EFunction[]> disableSettingsInstMap = new Dictionary<EDungeonSubType, EFunction[]>();
 
-		// Token: 0x0401D00A RID: 118794
+		// Token: 0x04017AA3 RID: 96931
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<EWorldDungeonSubType, EFunction[]> disableSettingsWorldInstMap;
 	}

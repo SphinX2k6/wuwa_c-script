@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x0200516A RID: 20842
+	// Token: 0x0200413A RID: 16698
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaEntranceTaskTabView : UiTabViewBase
 	{
-		// Token: 0x0603548C RID: 218252 RVA: 0x00C9E350 File Offset: 0x00C9C550
+		// Token: 0x0602A388 RID: 172936 RVA: 0x00BEB89C File Offset: 0x00BE9A9C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x0603548D RID: 218253 RVA: 0x00C9E3AC File Offset: 0x00C9C5AC
+		// Token: 0x0602A389 RID: 172937 RVA: 0x00BEB8F8 File Offset: 0x00BE9AF8
 		protected override void OnStart()
 		{
 			this.ActivityId = (int)this.ExtraParams;
@@ -34,14 +34,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.ScrollView = new LoopScrollView<PhantomBattleTaskItem, PhantomArenaTaskData>(base.GetLoopScrollViewComponent(1), base.GetItem(2).GetOwner() as AUIBaseActor, new Func<PhantomBattleTaskItem>(this.OnCreateTaskItem), false);
 		}
 
-		// Token: 0x0603548E RID: 218254 RVA: 0x00C9E41B File Offset: 0x00C9C61B
+		// Token: 0x0602A38A RID: 172938 RVA: 0x00BEB967 File Offset: 0x00BE9B67
 		protected override void OnBeforeDestroy()
 		{
 			this.TaskTabLayout = null;
 			this.ScrollView = null;
 		}
 
-		// Token: 0x0603548F RID: 218255 RVA: 0x00C9E42C File Offset: 0x00C9C62C
+		// Token: 0x0602A38B RID: 172939 RVA: 0x00BEB978 File Offset: 0x00BE9B78
 		protected override void OnBeforeShow()
 		{
 			List<int> list = this.CreateTabItemDataList();
@@ -57,19 +57,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}, false);
 		}
 
-		// Token: 0x06035490 RID: 218256 RVA: 0x00C9E477 File Offset: 0x00C9C677
+		// Token: 0x0602A38C RID: 172940 RVA: 0x00BEB9C3 File Offset: 0x00BE9BC3
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.OnPhantomArenaTaskAwardUpdate, new Action<int>(this.OnGetRewardUpdate));
 		}
 
-		// Token: 0x06035491 RID: 218257 RVA: 0x00C9E495 File Offset: 0x00C9C695
+		// Token: 0x0602A38D RID: 172941 RVA: 0x00BEB9E1 File Offset: 0x00BE9BE1
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnPhantomArenaTaskAwardUpdate, new Action<int>(this.OnGetRewardUpdate));
 		}
 
-		// Token: 0x06035492 RID: 218258 RVA: 0x00C9E4B3 File Offset: 0x00C9C6B3
+		// Token: 0x0602A38E RID: 172942 RVA: 0x00BEB9FF File Offset: 0x00BE9BFF
 		private PhantomBattleTaskTabItem InitTaskItem()
 		{
 			return new PhantomBattleTaskTabItem
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x06035493 RID: 218259 RVA: 0x00C9E4D8 File Offset: 0x00C9C6D8
+		// Token: 0x0602A38F RID: 172943 RVA: 0x00BEBA24 File Offset: 0x00BE9C24
 		private void OnClickTab(int index)
 		{
 			for (int i = 0; i < this.TabTypeList.Count; i++)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.RefreshScrollView(this.CurrentTypeIndex);
 		}
 
-		// Token: 0x06035494 RID: 218260 RVA: 0x00C9E530 File Offset: 0x00C9C730
+		// Token: 0x0602A390 RID: 172944 RVA: 0x00BEBA7C File Offset: 0x00BE9C7C
 		private void OnGetRewardUpdate(int activityId)
 		{
 			for (int i = 0; i < this.TabTypeList.Count; i++)
@@ -100,13 +100,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.RefreshScrollView(this.CurrentTypeIndex);
 		}
 
-		// Token: 0x06035495 RID: 218261 RVA: 0x00C9E571 File Offset: 0x00C9C771
+		// Token: 0x0602A391 RID: 172945 RVA: 0x00BEBABD File Offset: 0x00BE9CBD
 		private PhantomBattleTaskItem OnCreateTaskItem()
 		{
 			return new PhantomBattleTaskItem();
 		}
 
-		// Token: 0x06035496 RID: 218262 RVA: 0x00C9E578 File Offset: 0x00C9C778
+		// Token: 0x0602A392 RID: 172946 RVA: 0x00BEBAC4 File Offset: 0x00BE9CC4
 		private List<int> CreateTabItemDataList()
 		{
 			this.TabTypeList = PhantomArenaModel.Instance.GetTaskTabList(this.ActivityId);
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			return this.TabTypeList;
 		}
 
-		// Token: 0x06035497 RID: 218263 RVA: 0x00C9E5A0 File Offset: 0x00C9C7A0
+		// Token: 0x0602A393 RID: 172947 RVA: 0x00BEBAEC File Offset: 0x00BE9CEC
 		private UniTask RefreshScrollView(int tabIndex)
 		{
 			PhantomArenaEntranceTaskTabView.<RefreshScrollView>d__18 <RefreshScrollView>d__;
@@ -126,10 +126,10 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			return <RefreshScrollView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401C57A RID: 116090
+		// Token: 0x04016FAF RID: 94127
 		protected int ActivityId;
 
-		// Token: 0x0401C57B RID: 116091
+		// Token: 0x04016FB0 RID: 94128
 		[Nullable(new byte[]
 		{
 			2,
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 		})]
 		private GenericLayout<PhantomBattleTaskTabItem, int> TaskTabLayout;
 
-		// Token: 0x0401C57C RID: 116092
+		// Token: 0x04016FB1 RID: 94129
 		[Nullable(new byte[]
 		{
 			2,
@@ -146,26 +146,26 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 		})]
 		private LoopScrollView<PhantomBattleTaskItem, PhantomArenaTaskData> ScrollView;
 
-		// Token: 0x0401C57D RID: 116093
+		// Token: 0x04016FB2 RID: 94130
 		private int CurrentTypeIndex;
 
-		// Token: 0x0401C57E RID: 116094
+		// Token: 0x04016FB3 RID: 94131
 		protected List<int> TabTypeList = new List<int>();
 
-		// Token: 0x0401C57F RID: 116095
+		// Token: 0x04016FB4 RID: 94132
 		private List<PhantomArenaTaskData> DataList = new List<PhantomArenaTaskData>();
 
-		// Token: 0x0200B2CC RID: 45772
+		// Token: 0x02009D06 RID: 40198
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040362C4 RID: 221892
+			// Token: 0x04030D1B RID: 199963
 			public const int PanelHorizon = 0;
 
-			// Token: 0x040362C5 RID: 221893
+			// Token: 0x04030D1C RID: 199964
 			public const int SvList = 1;
 
-			// Token: 0x040362C6 RID: 221894
+			// Token: 0x04030D1D RID: 199965
 			public const int TaskItem = 2;
 		}
 	}

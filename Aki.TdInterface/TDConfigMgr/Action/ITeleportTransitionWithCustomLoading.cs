@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FAC RID: 8108
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021EF RID: 8687
 	public class ITeleportTransitionWithCustomLoading : ITeleportTransitionType
 	{
-		// Token: 0x0600B24A RID: 45642 RVA: 0x0019F878 File Offset: 0x0019DA78
+		// Token: 0x0600BD4E RID: 48462 RVA: 0x001B5C28 File Offset: 0x001B3E28
 		private ITeleportTransitionWithCustomLoading_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B24B RID: 45643 RVA: 0x0019F8B0 File Offset: 0x0019DAB0
+		// Token: 0x0600BD4F RID: 48463 RVA: 0x001B5C60 File Offset: 0x001B3E60
 		public static ITeleportTransitionWithCustomLoading Create([Nullable(2)] ITeleportTransitionWithCustomLoading instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B24C RID: 45644 RVA: 0x0019F8C3 File Offset: 0x0019DAC3
+		// Token: 0x0600BD50 RID: 48464 RVA: 0x001B5C73 File Offset: 0x001B3E73
 		public static ITeleportTransitionWithCustomLoading CreateFromSetValue([Nullable(2)] ITeleportTransitionWithCustomLoading_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B24D RID: 45645 RVA: 0x0019F8D6 File Offset: 0x0019DAD6
+		// Token: 0x0600BD51 RID: 48465 RVA: 0x001B5C86 File Offset: 0x001B3E86
 		public new ITeleportTransitionWithCustomLoading_SetValue ToSetValue()
 		{
 			return new ITeleportTransitionWithCustomLoading_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036FB RID: 14075
-		// (get) Token: 0x0600B24E RID: 45646 RVA: 0x0019F8F5 File Offset: 0x0019DAF5
-		// (set) Token: 0x0600B24F RID: 45647 RVA: 0x0019F920 File Offset: 0x0019DB20
+		// Token: 0x170039D0 RID: 14800
+		// (get) Token: 0x0600BD52 RID: 48466 RVA: 0x001B5CA5 File Offset: 0x001B3EA5
+		// (set) Token: 0x0600BD53 RID: 48467 RVA: 0x001B5CD0 File Offset: 0x001B3ED0
 		public override ETeleportTransitionType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036FC RID: 14076
-		// (get) Token: 0x0600B250 RID: 45648 RVA: 0x0019F92E File Offset: 0x0019DB2E
-		// (set) Token: 0x0600B251 RID: 45649 RVA: 0x0019F959 File Offset: 0x0019DB59
+		// Token: 0x170039D1 RID: 14801
+		// (get) Token: 0x0600BD54 RID: 48468 RVA: 0x001B5CDE File Offset: 0x001B3EDE
+		// (set) Token: 0x0600BD55 RID: 48469 RVA: 0x001B5D09 File Offset: 0x001B3F09
 		public virtual int ConfigId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006BAC RID: 27564
+		// Token: 0x040071A7 RID: 29095
 		[Nullable(2)]
 		protected new ITeleportTransitionWithCustomLoading FbInstance;
 
-		// Token: 0x04006BAD RID: 27565
+		// Token: 0x040071A8 RID: 29096
 		[Nullable(2)]
 		protected new ITeleportTransitionWithCustomLoading_SetValue PocoInterface;
 	}

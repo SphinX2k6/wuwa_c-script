@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x02000068 RID: 104
+	// Token: 0x0200006A RID: 106
 	public enum ETier
 	{
-		// Token: 0x040001BA RID: 442
+		// Token: 0x040001E1 RID: 481
 		None,
-		// Token: 0x040001BB RID: 443
+		// Token: 0x040001E2 RID: 482
 		SD,
-		// Token: 0x040001BC RID: 444
+		// Token: 0x040001E3 RID: 483
 		HD,
-		// Token: 0x040001BD RID: 445
+		// Token: 0x040001E4 RID: 484
 		UHD
 	}
 }

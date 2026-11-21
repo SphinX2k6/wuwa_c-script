@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004B4 RID: 1204
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200050D RID: 1293
 	public class ILevelAiCycleLooply : ILevelAiCycleModeType
 	{
-		// Token: 0x0600184E RID: 6222 RVA: 0x00048CF4 File Offset: 0x00046EF4
+		// Token: 0x060019E8 RID: 6632 RVA: 0x0004CA3C File Offset: 0x0004AC3C
 		private ILevelAiCycleLooply_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600184F RID: 6223 RVA: 0x00048D2C File Offset: 0x00046F2C
+		// Token: 0x060019E9 RID: 6633 RVA: 0x0004CA74 File Offset: 0x0004AC74
 		public static ILevelAiCycleLooply Create([Nullable(2)] ILevelAiCycleLooply instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001850 RID: 6224 RVA: 0x00048D3F File Offset: 0x00046F3F
+		// Token: 0x060019EA RID: 6634 RVA: 0x0004CA87 File Offset: 0x0004AC87
 		public static ILevelAiCycleLooply CreateFromSetValue([Nullable(2)] ILevelAiCycleLooply_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001851 RID: 6225 RVA: 0x00048D52 File Offset: 0x00046F52
+		// Token: 0x060019EB RID: 6635 RVA: 0x0004CA9A File Offset: 0x0004AC9A
 		public new ILevelAiCycleLooply_SetValue ToSetValue()
 		{
 			return new ILevelAiCycleLooply_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000678 RID: 1656
-		// (get) Token: 0x06001852 RID: 6226 RVA: 0x00048D71 File Offset: 0x00046F71
-		// (set) Token: 0x06001853 RID: 6227 RVA: 0x00048D9C File Offset: 0x00046F9C
+		// Token: 0x170006DF RID: 1759
+		// (get) Token: 0x060019EC RID: 6636 RVA: 0x0004CAB9 File Offset: 0x0004ACB9
+		// (set) Token: 0x060019ED RID: 6637 RVA: 0x0004CAE4 File Offset: 0x0004ACE4
 		public override ELevelAiCycleMode Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000679 RID: 1657
-		// (get) Token: 0x06001854 RID: 6228 RVA: 0x00048DAA File Offset: 0x00046FAA
-		// (set) Token: 0x06001855 RID: 6229 RVA: 0x00048DD5 File Offset: 0x00046FD5
+		// Token: 0x170006E0 RID: 1760
+		// (get) Token: 0x060019EE RID: 6638 RVA: 0x0004CAF2 File Offset: 0x0004ACF2
+		// (set) Token: 0x060019EF RID: 6639 RVA: 0x0004CB1D File Offset: 0x0004AD1D
 		public virtual bool IsCircle
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400120A RID: 4618
+		// Token: 0x0400132C RID: 4908
 		[Nullable(2)]
 		protected new ILevelAiCycleLooply FbInstance;
 
-		// Token: 0x0400120B RID: 4619
+		// Token: 0x0400132D RID: 4909
 		[Nullable(2)]
 		protected new ILevelAiCycleLooply_SetValue PocoInterface;
 	}

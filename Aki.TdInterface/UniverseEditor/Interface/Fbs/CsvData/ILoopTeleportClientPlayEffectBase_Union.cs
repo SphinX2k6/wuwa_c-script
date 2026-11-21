@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 {
-	// Token: 0x0200490B RID: 18699
+	// Token: 0x02004DA6 RID: 19878
 	public enum ILoopTeleportClientPlayEffectBase_Union : byte
 	{
-		// Token: 0x0400CF7C RID: 53116
+		// Token: 0x0400DA07 RID: 55815
 		NONE,
-		// Token: 0x0400CF7D RID: 53117
+		// Token: 0x0400DA08 RID: 55816
 		ILoopTeleportClientPlayEffectBase,
-		// Token: 0x0400CF7E RID: 53118
+		// Token: 0x0400DA09 RID: 55817
 		ILoopTeleportClientScreenEffect,
-		// Token: 0x0400CF7F RID: 53119
+		// Token: 0x0400DA0A RID: 55818
 		ILoopTeleportClientMpcEffect
 	}
 }

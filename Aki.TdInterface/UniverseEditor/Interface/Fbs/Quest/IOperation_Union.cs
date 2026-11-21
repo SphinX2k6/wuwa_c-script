@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F65 RID: 16229
+	// Token: 0x020043A3 RID: 17315
 	public enum IOperation_Union : byte
 	{
-		// Token: 0x0400B97B RID: 47483
+		// Token: 0x0400C359 RID: 50009
 		NONE,
-		// Token: 0x0400B97C RID: 47484
+		// Token: 0x0400C35A RID: 50010
 		IOperation,
-		// Token: 0x0400B97D RID: 47485
+		// Token: 0x0400C35B RID: 50011
 		IDisableHLOD,
-		// Token: 0x0400B97E RID: 47486
+		// Token: 0x0400C35C RID: 50012
 		IAssignLoadingBackground
 	}
 }

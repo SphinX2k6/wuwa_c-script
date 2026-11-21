@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleMorph.View
 {
-	// Token: 0x02004D69 RID: 19817
+	// Token: 0x02003D32 RID: 15666
 	public class LiuLiDaoLingSkillItem : UiPanelBase
 	{
-		// Token: 0x060333A8 RID: 209832 RVA: 0x00BF28BF File Offset: 0x00BF0ABF
+		// Token: 0x06028216 RID: 164374 RVA: 0x00B3BAE3 File Offset: 0x00B39CE3
 		[NullableContext(1)]
 		public void RefreshByMoveType(int index, EInputAxis inputAxis, float inputValue, Action<int> onPressCallback)
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			this.OnPressCallback = onPressCallback;
 		}
 
-		// Token: 0x060333A9 RID: 209833 RVA: 0x00BF28E0 File Offset: 0x00BF0AE0
+		// Token: 0x06028217 RID: 164375 RVA: 0x00B3BB04 File Offset: 0x00B39D04
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060333AA RID: 209834 RVA: 0x00BF2928 File Offset: 0x00BF0B28
+		// Token: 0x06028218 RID: 164376 RVA: 0x00B3BB4C File Offset: 0x00B39D4C
 		protected override void OnAfterShow()
 		{
 			base.OnAfterShow();
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			button.OnPointCancelCallBack.Bind(new Action(this.OnButtonReleased));
 		}
 
-		// Token: 0x060333AB RID: 209835 RVA: 0x00BF2986 File Offset: 0x00BF0B86
+		// Token: 0x06028219 RID: 164377 RVA: 0x00B3BBAA File Offset: 0x00B39DAA
 		protected override void OnBeforeHide()
 		{
 			base.OnBeforeHide();
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			button.OnPointCancelCallBack.Unbind();
 		}
 
-		// Token: 0x060333AC RID: 209836 RVA: 0x00BF29BC File Offset: 0x00BF0BBC
+		// Token: 0x0602821A RID: 164378 RVA: 0x00B3BBE0 File Offset: 0x00B39DE0
 		private void OnButtonPressed()
 		{
 			this.IsPress = true;
@@ -67,14 +67,14 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			onPressCallback(this.Index);
 		}
 
-		// Token: 0x060333AD RID: 209837 RVA: 0x00BF29F2 File Offset: 0x00BF0BF2
+		// Token: 0x0602821B RID: 164379 RVA: 0x00B3BC16 File Offset: 0x00B39E16
 		private void OnButtonReleased()
 		{
 			this.IsPress = false;
 			InputController.Instance.InputAxis(this.InputAxis, 0f, true);
 		}
 
-		// Token: 0x060333AE RID: 209838 RVA: 0x00BF2A11 File Offset: 0x00BF0C11
+		// Token: 0x0602821C RID: 164380 RVA: 0x00B3BC35 File Offset: 0x00B39E35
 		public void Tick(float delta)
 		{
 			if (!this.IsPress)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			InputController.Instance.InputAxis(this.InputAxis, this.InputValue, true);
 		}
 
-		// Token: 0x060333AF RID: 209839 RVA: 0x00BF2A33 File Offset: 0x00BF0C33
+		// Token: 0x0602821D RID: 164381 RVA: 0x00B3BC57 File Offset: 0x00B39E57
 		public void Press(bool isPress)
 		{
 			if (isPress == this.IsPress)
@@ -99,26 +99,26 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			this.OnButtonReleased();
 		}
 
-		// Token: 0x0401B323 RID: 111395
+		// Token: 0x04015CF5 RID: 89333
 		private int Index;
 
-		// Token: 0x0401B324 RID: 111396
+		// Token: 0x04015CF6 RID: 89334
 		private bool IsPress;
 
-		// Token: 0x0401B325 RID: 111397
+		// Token: 0x04015CF7 RID: 89335
 		private EInputAxis InputAxis = EInputAxis.None;
 
-		// Token: 0x0401B326 RID: 111398
+		// Token: 0x04015CF8 RID: 89336
 		private float InputValue;
 
-		// Token: 0x0401B327 RID: 111399
+		// Token: 0x04015CF9 RID: 89337
 		[Nullable(2)]
 		private Action<int> OnPressCallback;
 
-		// Token: 0x0200AEDE RID: 44766
+		// Token: 0x02009911 RID: 39185
 		private enum EChildType
 		{
-			// Token: 0x040351C3 RID: 217539
+			// Token: 0x0402FBF4 RID: 195572
 			BtnClick
 		}
 	}

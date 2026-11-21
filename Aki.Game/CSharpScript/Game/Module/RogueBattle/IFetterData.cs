@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E56 RID: 20054
+	// Token: 0x02003E1F RID: 15903
 	public interface IFetterData
 	{
-		// Token: 0x17007ED5 RID: 32469
-		// (get) Token: 0x06033AC3 RID: 211651
-		// (set) Token: 0x06033AC4 RID: 211652
+		// Token: 0x17005285 RID: 21125
+		// (get) Token: 0x0602892E RID: 166190
+		// (set) Token: 0x0602892F RID: 166191
 		int Id { get; set; }
 
-		// Token: 0x17007ED6 RID: 32470
-		// (get) Token: 0x06033AC5 RID: 211653
-		// (set) Token: 0x06033AC6 RID: 211654
+		// Token: 0x17005286 RID: 21126
+		// (get) Token: 0x06028930 RID: 166192
+		// (set) Token: 0x06028931 RID: 166193
 		int Lv { get; set; }
 
-		// Token: 0x17007ED7 RID: 32471
-		// (get) Token: 0x06033AC7 RID: 211655
-		// (set) Token: 0x06033AC8 RID: 211656
+		// Token: 0x17005287 RID: 21127
+		// (get) Token: 0x06028932 RID: 166194
+		// (set) Token: 0x06028933 RID: 166195
 		int Star { get; set; }
 
-		// Token: 0x17007ED8 RID: 32472
-		// (get) Token: 0x06033AC9 RID: 211657
-		// (set) Token: 0x06033ACA RID: 211658
+		// Token: 0x17005288 RID: 21128
+		// (get) Token: 0x06028934 RID: 166196
+		// (set) Token: 0x06028935 RID: 166197
 		bool IsLevelUp { get; set; }
 	}
 }

@@ -5,20 +5,20 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200051B RID: 1307
+	// Token: 0x02000582 RID: 1410
 	public class IMonsterSummonInteractPoint_SetValue
 	{
-		// Token: 0x0400132A RID: 4906
+		// Token: 0x04001494 RID: 5268
 		public EExploreSkillInteractType Type;
 
-		// Token: 0x0400132B RID: 4907
+		// Token: 0x04001495 RID: 5269
 		public float Range;
 
-		// Token: 0x0400132C RID: 4908
+		// Token: 0x04001496 RID: 5270
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> Actions;
 	}

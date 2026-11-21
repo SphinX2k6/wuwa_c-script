@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 {
-	// Token: 0x020000A9 RID: 169
+	// Token: 0x020000AC RID: 172
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ResourceDiffUpdater
 	{
-		// Token: 0x060005CA RID: 1482 RVA: 0x00033680 File Offset: 0x00031880
+		// Token: 0x060005E2 RID: 1506 RVA: 0x00034D10 File Offset: 0x00032F10
 		public ResourceDiffUpdater(string name, int priority, List<ResPackageInfo> resPackageInfos)
 		{
 			this.Name = name;
@@ -21,7 +21,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			this.ResPackageInfos = resPackageInfos;
 		}
 
-		// Token: 0x060005CB RID: 1483 RVA: 0x000336C0 File Offset: 0x000318C0
+		// Token: 0x060005E3 RID: 1507 RVA: 0x00034D50 File Offset: 0x00032F50
 		public UniTask Init()
 		{
 			ResourceDiffUpdater.<Init>d__9 <Init>d__;
@@ -32,7 +32,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060005CC RID: 1484 RVA: 0x00033704 File Offset: 0x00031904
+		// Token: 0x060005E4 RID: 1508 RVA: 0x00034D94 File Offset: 0x00032F94
 		protected virtual void CreateDiffUpdater()
 		{
 			UrlPrefixDownload downloader = new UrlPrefixDownload();
@@ -43,7 +43,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			this.DiffUpdater = new DiffUpdate(this.ResPackageInfos, downloader, resourceDiffUpdateUiEvent, reportEvent, true, EUpdateType.IndependentLang);
 		}
 
-		// Token: 0x060005CD RID: 1485 RVA: 0x00033758 File Offset: 0x00031958
+		// Token: 0x060005E5 RID: 1509 RVA: 0x00034DE8 File Offset: 0x00032FE8
 		protected virtual UniTask AnalysisManifests()
 		{
 			ResourceDiffUpdater.<AnalysisManifests>d__11 <AnalysisManifests>d__;
@@ -54,13 +54,13 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			return <AnalysisManifests>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060005CE RID: 1486 RVA: 0x0003379B File Offset: 0x0003199B
+		// Token: 0x060005E6 RID: 1510 RVA: 0x00034E2B File Offset: 0x0003302B
 		protected virtual List<ResPackageInfo> EnumeratePacksWithActiveTierChild()
 		{
 			return ResPackageInfo.EnumerateWithTierChild(this.ResPackageInfos, RemoteInfo.Instance.ActiveTier);
 		}
 
-		// Token: 0x060005CF RID: 1487 RVA: 0x000337B4 File Offset: 0x000319B4
+		// Token: 0x060005E7 RID: 1511 RVA: 0x00034E44 File Offset: 0x00033044
 		public virtual void CalculateSizeInfo()
 		{
 			if (this.UpdateStatus == EResDownloadStatus.Downloading)
@@ -95,7 +95,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			this.ViewInfoInternal.TotalSize = num;
 		}
 
-		// Token: 0x060005D0 RID: 1488 RVA: 0x000338A8 File Offset: 0x00031AA8
+		// Token: 0x060005E8 RID: 1512 RVA: 0x00034F38 File Offset: 0x00033138
 		public virtual UniTask UpdateResourceProcedure()
 		{
 			ResourceDiffUpdater.<UpdateResourceProcedure>d__14 <UpdateResourceProcedure>d__;
@@ -106,7 +106,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			return <UpdateResourceProcedure>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060005D1 RID: 1489 RVA: 0x000338EC File Offset: 0x00031AEC
+		// Token: 0x060005E9 RID: 1513 RVA: 0x00034F7C File Offset: 0x0003317C
 		public virtual void Stop()
 		{
 			LauncherLog instance = LauncherLog.Instance;
@@ -120,7 +120,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			}
 		}
 
-		// Token: 0x060005D2 RID: 1490 RVA: 0x0003393C File Offset: 0x00031B3C
+		// Token: 0x060005EA RID: 1514 RVA: 0x00034FCC File Offset: 0x000331CC
 		public virtual bool IsCompleteDownloaded()
 		{
 			using (List<ResPackageInfo>.Enumerator enumerator = this.EnumeratePacksWithActiveTierChild().GetEnumerator())
@@ -136,8 +136,8 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			return true;
 		}
 
-		// Token: 0x170000CF RID: 207
-		// (get) Token: 0x060005D3 RID: 1491 RVA: 0x00033998 File Offset: 0x00031B98
+		// Token: 0x170000D1 RID: 209
+		// (get) Token: 0x060005EB RID: 1515 RVA: 0x00035028 File Offset: 0x00033228
 		public double SpendTime
 		{
 			get
@@ -146,7 +146,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			}
 		}
 
-		// Token: 0x060005D4 RID: 1492 RVA: 0x000339A0 File Offset: 0x00031BA0
+		// Token: 0x060005EC RID: 1516 RVA: 0x00035030 File Offset: 0x00033230
 		public virtual void Clear()
 		{
 			this.UpdateStatus = EResDownloadStatus.Cancel;
@@ -157,13 +157,13 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			}
 		}
 
-		// Token: 0x060005D5 RID: 1493 RVA: 0x00033A00 File Offset: 0x00031C00
+		// Token: 0x060005ED RID: 1517 RVA: 0x00035090 File Offset: 0x00033290
 		public void AddOnDownloadFinish(Action<EResDownloadStatus> callback)
 		{
 			this.OnDownloadFinish.Add(callback);
 		}
 
-		// Token: 0x060005D6 RID: 1494 RVA: 0x00033A10 File Offset: 0x00031C10
+		// Token: 0x060005EE RID: 1518 RVA: 0x000350A0 File Offset: 0x000332A0
 		public void RemoveOnDownload(Action<EResDownloadStatus> callback)
 		{
 			int num = this.OnDownloadFinish.IndexOf(callback);
@@ -173,7 +173,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			}
 		}
 
-		// Token: 0x060005D7 RID: 1495 RVA: 0x00033A3C File Offset: 0x00031C3C
+		// Token: 0x060005EF RID: 1519 RVA: 0x000350CC File Offset: 0x000332CC
 		protected unsafe void InvokeDownloadFinishCallback()
 		{
 			LauncherLog instance = LauncherLog.Instance;
@@ -188,8 +188,8 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			}
 		}
 
-		// Token: 0x170000D0 RID: 208
-		// (get) Token: 0x060005D8 RID: 1496 RVA: 0x00033AF0 File Offset: 0x00031CF0
+		// Token: 0x170000D2 RID: 210
+		// (get) Token: 0x060005F0 RID: 1520 RVA: 0x00035180 File Offset: 0x00033380
 		[Nullable(2)]
 		public virtual ResourceUpdateViewAgent ViewInfo
 		{
@@ -200,30 +200,30 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			}
 		}
 
-		// Token: 0x0400039B RID: 923
+		// Token: 0x040003C9 RID: 969
 		public string Name = "";
 
-		// Token: 0x0400039C RID: 924
+		// Token: 0x040003CA RID: 970
 		public int Priority;
 
-		// Token: 0x0400039D RID: 925
+		// Token: 0x040003CB RID: 971
 		public EResDownloadStatus UpdateStatus;
 
-		// Token: 0x0400039E RID: 926
+		// Token: 0x040003CC RID: 972
 		protected double SpendTimeInternal;
 
-		// Token: 0x0400039F RID: 927
+		// Token: 0x040003CD RID: 973
 		protected List<ResPackageInfo> ResPackageInfos = new List<ResPackageInfo>();
 
-		// Token: 0x040003A0 RID: 928
+		// Token: 0x040003CE RID: 974
 		[Nullable(2)]
 		protected DiffUpdate DiffUpdater;
 
-		// Token: 0x040003A1 RID: 929
+		// Token: 0x040003CF RID: 975
 		[Nullable(2)]
 		protected ResourceUpdateViewAgent ViewInfoInternal;
 
-		// Token: 0x040003A2 RID: 930
+		// Token: 0x040003D0 RID: 976
 		protected List<Action<EResDownloadStatus>> OnDownloadFinish = new List<Action<EResDownloadStatus>>();
 	}
 }

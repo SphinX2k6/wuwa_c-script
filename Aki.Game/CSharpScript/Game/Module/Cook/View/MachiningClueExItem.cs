@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B12 RID: 23314
+	// Token: 0x02004AF3 RID: 19187
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MachiningClueExItem : UiPanelBase
 	{
-		// Token: 0x0603B064 RID: 241764 RVA: 0x00E12354 File Offset: 0x00E10554
+		// Token: 0x0602FFD6 RID: 196566 RVA: 0x00D6306C File Offset: 0x00D6126C
 		public MachiningClueExItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B065 RID: 241765 RVA: 0x00E1236C File Offset: 0x00E1056C
+		// Token: 0x0602FFD7 RID: 196567 RVA: 0x00D63084 File Offset: 0x00D61284
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B066 RID: 241766 RVA: 0x00E123F8 File Offset: 0x00E105F8
+		// Token: 0x0602FFD8 RID: 196568 RVA: 0x00D63110 File Offset: 0x00D61310
 		public void Update(bool isUnlock, string contentText)
 		{
 			base.GetSprite(0).SetUIActive(isUnlock);

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005437 RID: 21559
+	// Token: 0x0200441A RID: 17434
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class VoiceLanguageToggle : LanguageToggleBase, IResourceUpdateView
 	{
-		// Token: 0x060370F1 RID: 225521 RVA: 0x00D0C4EC File Offset: 0x00D0A6EC
+		// Token: 0x0602C03A RID: 180282 RVA: 0x00C5B90C File Offset: 0x00C59B0C
 		[NullableContext(0)]
 		public UniTask<bool> ShowNotEnoughSpaceConfirmation(long totalSize)
 		{
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return <ShowNotEnoughSpaceConfirmation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060370F2 RID: 225522 RVA: 0x00D0C530 File Offset: 0x00D0A730
+		// Token: 0x0602C03B RID: 180283 RVA: 0x00C5B950 File Offset: 0x00C59B50
 		public void UpdatePatchProgress(long receiveSize, long curProgress, long totalProgress, long downloadSpeed)
 		{
 			if (this.Updater == null)
@@ -55,14 +55,14 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.UpdateProgressUi(curProgress, totalProgress, downloadSpeed);
 		}
 
-		// Token: 0x060370F3 RID: 225523 RVA: 0x00D0C5B7 File Offset: 0x00D0A7B7
+		// Token: 0x0602C03C RID: 180284 RVA: 0x00C5B9D7 File Offset: 0x00C59BD7
 		[NullableContext(1)]
 		public void SetDownloadStatusCallback(Action callback)
 		{
 			this.DownloadStatusCallback = callback;
 		}
 
-		// Token: 0x060370F4 RID: 225524 RVA: 0x00D0C5C0 File Offset: 0x00D0A7C0
+		// Token: 0x0602C03D RID: 180285 RVA: 0x00C5B9E0 File Offset: 0x00C59BE0
 		public unsafe void RefreshUi()
 		{
 			UUIText text = base.GetText(2);
@@ -130,13 +130,13 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			text.SetText(this.LastProgressText, true);
 		}
 
-		// Token: 0x060370F5 RID: 225525 RVA: 0x00D0C875 File Offset: 0x00D0AA75
+		// Token: 0x0602C03E RID: 180286 RVA: 0x00C5BC95 File Offset: 0x00C59E95
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
 		}
 
-		// Token: 0x060370F6 RID: 225526 RVA: 0x00D0C880 File Offset: 0x00D0AA80
+		// Token: 0x0602C03F RID: 180287 RVA: 0x00C5BCA0 File Offset: 0x00C59EA0
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -166,14 +166,14 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.RefreshUi();
 		}
 
-		// Token: 0x060370F7 RID: 225527 RVA: 0x00D0C948 File Offset: 0x00D0AB48
+		// Token: 0x0602C040 RID: 180288 RVA: 0x00C5BD68 File Offset: 0x00C59F68
 		public LanguageUpdater GetUpdater()
 		{
 			string audioCodeById = GameSettingsManager.Instance.GetAudioCodeById(this.Index);
 			return LanguageUpdateManager.Instance.GetUpdater(audioCodeById);
 		}
 
-		// Token: 0x060370F8 RID: 225528 RVA: 0x00D0C974 File Offset: 0x00D0AB74
+		// Token: 0x0602C041 RID: 180289 RVA: 0x00C5BD94 File Offset: 0x00C59F94
 		private void UpdateProgressUi(long nowVal, long allVal, long downloadSpeed)
 		{
 			string value = LauncherTextLib.SpaceSizeFormat(nowVal);
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			base.GetText(2).SetText(this.LastProgressText, true);
 		}
 
-		// Token: 0x060370F9 RID: 225529 RVA: 0x00D0C9EC File Offset: 0x00D0ABEC
+		// Token: 0x0602C042 RID: 180290 RVA: 0x00C5BE0C File Offset: 0x00C5A00C
 		protected override void OnBeforeDestroy()
 		{
 			if (this.Updater == null)
@@ -203,17 +203,17 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.Updater.UpdateView.SetImplement(new LanguageDownloadTips(this.Updater, base.GetMainText()));
 		}
 
-		// Token: 0x0401D0D0 RID: 118992
+		// Token: 0x04017B69 RID: 97129
 		private string LanguageCode;
 
-		// Token: 0x0401D0D1 RID: 118993
+		// Token: 0x04017B6A RID: 97130
 		public LanguageUpdater Updater;
 
-		// Token: 0x0401D0D2 RID: 118994
+		// Token: 0x04017B6B RID: 97131
 		[Nullable(1)]
 		private string LastProgressText = "";
 
-		// Token: 0x0401D0D3 RID: 118995
+		// Token: 0x04017B6C RID: 97132
 		private Action DownloadStatusCallback;
 	}
 }

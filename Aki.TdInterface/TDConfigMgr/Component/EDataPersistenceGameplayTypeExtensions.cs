@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200091E RID: 2334
+	// Token: 0x020009CB RID: 2507
 	public static class EDataPersistenceGameplayTypeExtensions
 	{
-		// Token: 0x060034B8 RID: 13496 RVA: 0x00089EB0 File Offset: 0x000880B0
+		// Token: 0x06003824 RID: 14372 RVA: 0x00091A30 File Offset: 0x0008FC30
 		public static string ToEnumString(this EDataPersistenceGameplayType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034B9 RID: 13497 RVA: 0x00089ED8 File Offset: 0x000880D8
+		// Token: 0x06003825 RID: 14373 RVA: 0x00091A58 File Offset: 0x0008FC58
 		public static EDataPersistenceGameplayType FromString(string name)
 		{
 			EDataPersistenceGameplayType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034BA RID: 13498 RVA: 0x00089F01 File Offset: 0x00088101
+		// Token: 0x06003826 RID: 14374 RVA: 0x00091A81 File Offset: 0x0008FC81
 		public static bool TryFromString(string name, out EDataPersistenceGameplayType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060034BB RID: 13499 RVA: 0x00089F26 File Offset: 0x00088126
+		// Token: 0x06003827 RID: 14375 RVA: 0x00091AA6 File Offset: 0x0008FCA6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060034BC RID: 13500 RVA: 0x00089F36 File Offset: 0x00088136
+		// Token: 0x06003828 RID: 14376 RVA: 0x00091AB6 File Offset: 0x0008FCB6
 		public static EDataPersistenceGameplayType[] GetValues()
 		{
 			return new EDataPersistenceGameplayType[1];
 		}
 
-		// Token: 0x060034BD RID: 13501 RVA: 0x00089F3E File Offset: 0x0008813E
+		// Token: 0x06003829 RID: 14377 RVA: 0x00091ABE File Offset: 0x0008FCBE
 		public static string[] GetNames()
 		{
 			return new string[]

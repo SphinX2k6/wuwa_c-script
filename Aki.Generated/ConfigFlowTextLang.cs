@@ -5,16 +5,16 @@ using Aki.Common.Proxy;
 
 namespace Aki.Config
 {
-	// Token: 0x0200033B RID: 827
+	// Token: 0x02000350 RID: 848
 	public class ConfigFlowTextLang : IQueryLocalText, IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001367 RID: 4967 RVA: 0x000C6FF0 File Offset: 0x000C51F0
+		// Token: 0x060013E5 RID: 5093 RVA: 0x000CD4FC File Offset: 0x000CB6FC
 		static ConfigFlowTextLang()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFlowTextLang.CreateStaticDefaultValue), new Action(ConfigFlowTextLang.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001368 RID: 4968 RVA: 0x000C7010 File Offset: 0x000C5210
+		// Token: 0x060013E6 RID: 5094 RVA: 0x000CD51C File Offset: 0x000CB71C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFlowTextLang.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,7 +27,7 @@ namespace Aki.Config
 			ConfigFlowTextLang.LangCache = new Dictionary<int, Dictionary<string, string>>();
 		}
 
-		// Token: 0x06001369 RID: 4969 RVA: 0x000C7083 File Offset: 0x000C5283
+		// Token: 0x060013E7 RID: 5095 RVA: 0x000CD58F File Offset: 0x000CB78F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFlowTextLang.LogPair = null;
@@ -35,13 +35,13 @@ namespace Aki.Config
 			ConfigFlowTextLang.HandleId = 0;
 		}
 
-		// Token: 0x0600136A RID: 4970 RVA: 0x000C7097 File Offset: 0x000C5297
+		// Token: 0x060013E8 RID: 5096 RVA: 0x000CD5A3 File Offset: 0x000CB7A3
 		public static void Init()
 		{
 			ConfigFlowTextLang.HandleId = ConfigCommon.GetLangStatementId("FlowText", "lang_flow_text.db", "select content from `FlowText` where id = ?", "");
 		}
 
-		// Token: 0x0600136B RID: 4971 RVA: 0x000C70B8 File Offset: 0x000C52B8
+		// Token: 0x060013E9 RID: 5097 RVA: 0x000CD5C4 File Offset: 0x000CB7C4
 		[NullableContext(2)]
 		public static string GetLocalText(int id, string culture = null)
 		{
@@ -107,19 +107,19 @@ namespace Aki.Config
 			return text;
 		}
 
-		// Token: 0x04001681 RID: 5761
+		// Token: 0x04001714 RID: 5908
 		private const string TEXT_NOT_FOUND = "text not found";
 
-		// Token: 0x04001682 RID: 5762
+		// Token: 0x04001715 RID: 5909
 		private const string DB = "lang_flow_text.db";
 
-		// Token: 0x04001683 RID: 5763
+		// Token: 0x04001716 RID: 5910
 		private const string TABLE = "FlowText";
 
-		// Token: 0x04001684 RID: 5764
+		// Token: 0x04001717 RID: 5911
 		private const string COMMAND = "select content from `FlowText` where id = ?";
 
-		// Token: 0x04001685 RID: 5765
+		// Token: 0x04001718 RID: 5912
 		[Nullable(new byte[]
 		{
 			2,
@@ -129,7 +129,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001686 RID: 5766
+		// Token: 0x04001719 RID: 5913
 		[Nullable(new byte[]
 		{
 			2,
@@ -139,7 +139,7 @@ namespace Aki.Config
 		})]
 		private static Dictionary<int, Dictionary<string, string>> LangCache;
 
-		// Token: 0x04001687 RID: 5767
+		// Token: 0x0400171A RID: 5914
 		private static int HandleId;
 	}
 }

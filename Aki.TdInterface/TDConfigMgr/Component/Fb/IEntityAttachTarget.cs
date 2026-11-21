@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C7D RID: 3197
+	// Token: 0x02000D5C RID: 3420
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IEntityAttachTarget : IAttachTarget
 	{
-		// Token: 0x0600493A RID: 18746 RVA: 0x000B7C25 File Offset: 0x000B5E25
-		[NullableContext(1)]
+		// Token: 0x06004DD9 RID: 19929 RVA: 0x000C2429 File Offset: 0x000C0629
+		[NullableContext(0)]
 		public static IEntityAttachTarget Create(IEntityAttachTarget? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015FD RID: 5629
-		// (get) Token: 0x0600493B RID: 18747 RVA: 0x000B7C44 File Offset: 0x000B5E44
+		// Token: 0x1700171C RID: 5916
+		// (get) Token: 0x06004DDA RID: 19930 RVA: 0x000C2448 File Offset: 0x000C0648
 		public override EAttachType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015FE RID: 5630
-		// (get) Token: 0x0600493C RID: 18748 RVA: 0x000B7C51 File Offset: 0x000B5E51
+		// Token: 0x1700171D RID: 5917
+		// (get) Token: 0x06004DDB RID: 19931 RVA: 0x000C2455 File Offset: 0x000C0655
 		public virtual int EntityId
 		{
 			get
@@ -44,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015FF RID: 5631
-		// (get) Token: 0x0600493D RID: 18749 RVA: 0x000B7C5E File Offset: 0x000B5E5E
+		// Token: 0x1700171E RID: 5918
+		// (get) Token: 0x06004DDC RID: 19932 RVA: 0x000C2462 File Offset: 0x000C0662
 		public virtual string AttachPoint
 		{
 			get
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001600 RID: 5632
-		// (get) Token: 0x0600493E RID: 18750 RVA: 0x000B7C6B File Offset: 0x000B5E6B
+		// Token: 0x1700171F RID: 5919
+		// (get) Token: 0x06004DDD RID: 19933 RVA: 0x000C246F File Offset: 0x000C066F
 		public virtual VectorInfo PosOffset
 		{
 			get
@@ -70,13 +70,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029C8 RID: 10696
+		// Token: 0x04002C35 RID: 11317
 		private IEntityAttachTarget Instance;
 
-		// Token: 0x040029C9 RID: 10697
+		// Token: 0x04002C36 RID: 11318
 		private VectorInfo _PosOffsetCache;
 
-		// Token: 0x040029CA RID: 10698
+		// Token: 0x04002C37 RID: 11319
 		private bool _PosOffsetInited;
 	}
 }

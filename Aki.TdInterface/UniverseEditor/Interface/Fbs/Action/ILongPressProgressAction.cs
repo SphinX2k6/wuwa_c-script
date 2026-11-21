@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A53 RID: 27219
+	// Token: 0x02007175 RID: 29045
 	public struct ILongPressProgressAction : IFlatbufferObject
 	{
-		// Token: 0x1700C9EC RID: 51692
-		// (get) Token: 0x0602FA82 RID: 195202 RVA: 0x0067C73D File Offset: 0x0067A93D
+		// Token: 0x1700D497 RID: 54423
+		// (get) Token: 0x060327A8 RID: 206760 RVA: 0x006D27FD File Offset: 0x006D09FD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FA83 RID: 195203 RVA: 0x0067C74A File Offset: 0x0067A94A
+		// Token: 0x060327A9 RID: 206761 RVA: 0x006D280A File Offset: 0x006D0A0A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602FA84 RID: 195204 RVA: 0x0067C754 File Offset: 0x0067A954
+		// Token: 0x060327AA RID: 206762 RVA: 0x006D2814 File Offset: 0x006D0A14
 		public static ILongPressProgressAction GetRootAsILongPressProgressAction(ByteBuffer _bb)
 		{
 			return ILongPressProgressAction.GetRootAsILongPressProgressAction(_bb, default(ILongPressProgressAction));
 		}
 
-		// Token: 0x0602FA85 RID: 195205 RVA: 0x0067C770 File Offset: 0x0067A970
+		// Token: 0x060327AB RID: 206763 RVA: 0x006D2830 File Offset: 0x006D0A30
 		public static ILongPressProgressAction GetRootAsILongPressProgressAction(ByteBuffer _bb, ILongPressProgressAction obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602FA86 RID: 195206 RVA: 0x0067C78D File Offset: 0x0067A98D
+		// Token: 0x060327AC RID: 206764 RVA: 0x006D284D File Offset: 0x006D0A4D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602FA87 RID: 195207 RVA: 0x0067C79C File Offset: 0x0067A99C
+		// Token: 0x060327AD RID: 206765 RVA: 0x006D285C File Offset: 0x006D0A5C
 		public ILongPressProgressAction __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C9ED RID: 51693
-		// (get) Token: 0x0602FA88 RID: 195208 RVA: 0x0067C7AC File Offset: 0x0067A9AC
+		// Token: 0x1700D498 RID: 54424
+		// (get) Token: 0x060327AE RID: 206766 RVA: 0x006D286C File Offset: 0x006D0A6C
 		public float Percentage
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FA89 RID: 195209 RVA: 0x0067C7EC File Offset: 0x0067A9EC
+		// Token: 0x060327AF RID: 206767 RVA: 0x006D28AC File Offset: 0x006D0AAC
 		public IActionInfo? Actions(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700C9EE RID: 51694
-		// (get) Token: 0x0602FA8A RID: 195210 RVA: 0x0067C84C File Offset: 0x0067AA4C
+		// Token: 0x1700D499 RID: 54425
+		// (get) Token: 0x060327B0 RID: 206768 RVA: 0x006D290C File Offset: 0x006D0B0C
 		public int ActionsLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FA8B RID: 195211 RVA: 0x0067C877 File Offset: 0x0067AA77
+		// Token: 0x060327B1 RID: 206769 RVA: 0x006D2937 File Offset: 0x006D0B37
 		public static Offset<ILongPressProgressAction> CreateILongPressProgressAction(FlatBufferBuilder builder, float Percentage = 0f, VectorOffset ActionsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ILongPressProgressAction.EndILongPressProgressAction(builder);
 		}
 
-		// Token: 0x0602FA8C RID: 195212 RVA: 0x0067C894 File Offset: 0x0067AA94
+		// Token: 0x060327B2 RID: 206770 RVA: 0x006D2954 File Offset: 0x006D0B54
 		public static void StartILongPressProgressAction(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602FA8D RID: 195213 RVA: 0x0067C89D File Offset: 0x0067AA9D
+		// Token: 0x060327B3 RID: 206771 RVA: 0x006D295D File Offset: 0x006D0B5D
 		public static void AddPercentage(FlatBufferBuilder builder, float percentage)
 		{
 			builder.AddFloat(0, percentage, 0.0);
 		}
 
-		// Token: 0x0602FA8E RID: 195214 RVA: 0x0067C8B0 File Offset: 0x0067AAB0
+		// Token: 0x060327B4 RID: 206772 RVA: 0x006D2970 File Offset: 0x006D0B70
 		public static void AddActions(FlatBufferBuilder builder, VectorOffset actionsOffset)
 		{
 			builder.AddOffset(1, actionsOffset.Value, 0);
 		}
 
-		// Token: 0x0602FA8F RID: 195215 RVA: 0x0067C8C0 File Offset: 0x0067AAC0
+		// Token: 0x060327B5 RID: 206773 RVA: 0x006D2980 File Offset: 0x006D0B80
 		public static VectorOffset CreateActionsVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FA90 RID: 195216 RVA: 0x0067C900 File Offset: 0x0067AB00
+		// Token: 0x060327B6 RID: 206774 RVA: 0x006D29C0 File Offset: 0x006D0BC0
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FA91 RID: 195217 RVA: 0x0067C91A File Offset: 0x0067AB1A
+		// Token: 0x060327B7 RID: 206775 RVA: 0x006D29DA File Offset: 0x006D0BDA
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FA92 RID: 195218 RVA: 0x0067C938 File Offset: 0x0067AB38
+		// Token: 0x060327B8 RID: 206776 RVA: 0x006D29F8 File Offset: 0x006D0BF8
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FA93 RID: 195219 RVA: 0x0067C951 File Offset: 0x0067AB51
+		// Token: 0x060327B9 RID: 206777 RVA: 0x006D2A11 File Offset: 0x006D0C11
 		public static void StartActionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602FA94 RID: 195220 RVA: 0x0067C95C File Offset: 0x0067AB5C
+		// Token: 0x060327BA RID: 206778 RVA: 0x006D2A1C File Offset: 0x006D0C1C
 		public static Offset<ILongPressProgressAction> EndILongPressProgressAction(FlatBufferBuilder builder)
 		{
 			return new Offset<ILongPressProgressAction>(builder.EndTable());
 		}
 
-		// Token: 0x0602FA95 RID: 195221 RVA: 0x0067C96C File Offset: 0x0067AB6C
+		// Token: 0x060327BB RID: 206779 RVA: 0x006D2A2C File Offset: 0x006D0C2C
 		public ILongPressProgressActionT UnPack()
 		{
 			ILongPressProgressActionT longPressProgressActionT = new ILongPressProgressActionT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return longPressProgressActionT;
 		}
 
-		// Token: 0x0602FA96 RID: 195222 RVA: 0x0067C988 File Offset: 0x0067AB88
+		// Token: 0x060327BC RID: 206780 RVA: 0x006D2A48 File Offset: 0x006D0C48
 		public void UnPackTo(ILongPressProgressActionT _o)
 		{
 			_o.Percentage = this.Percentage;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FA97 RID: 195223 RVA: 0x0067C9F4 File Offset: 0x0067ABF4
+		// Token: 0x060327BD RID: 206781 RVA: 0x006D2AB4 File Offset: 0x006D0CB4
 		public static Offset<ILongPressProgressAction> Pack(FlatBufferBuilder builder, ILongPressProgressActionT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ILongPressProgressAction.CreateILongPressProgressAction(builder, _o.Percentage, actionsOffset);
 		}
 
-		// Token: 0x04011272 RID: 70258
+		// Token: 0x0401216A RID: 74090
 		private Table __p;
 	}
 }

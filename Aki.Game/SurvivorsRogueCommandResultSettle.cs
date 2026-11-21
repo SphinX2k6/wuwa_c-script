@@ -4,15 +4,15 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002AE5 RID: 10981
+// Token: 0x02002061 RID: 8289
 public class SurvivorsRogueCommandResultSettle : SurvivorsRogueCommandBase
 {
-	// Token: 0x06016D9F RID: 93599 RVA: 0x005CCC3D File Offset: 0x005CAE3D
+	// Token: 0x060147D0 RID: 83920 RVA: 0x005F978D File Offset: 0x005F798D
 	public SurvivorsRogueCommandResultSettle(ESurvivorsRogueCommandType type) : base(type)
 	{
 	}
 
-	// Token: 0x06016DA0 RID: 93600 RVA: 0x005CCC48 File Offset: 0x005CAE48
+	// Token: 0x060147D1 RID: 83921 RVA: 0x005F9798 File Offset: 0x005F7998
 	[NullableContext(1)]
 	public override string ToString()
 	{
@@ -23,22 +23,22 @@ public class SurvivorsRogueCommandResultSettle : SurvivorsRogueCommandBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06016DA1 RID: 93601 RVA: 0x005CCC98 File Offset: 0x005CAE98
+	// Token: 0x060147D2 RID: 83922 RVA: 0x005F97E8 File Offset: 0x005F79E8
 	protected override void OnUpdate()
 	{
 	}
 
-	// Token: 0x06016DA2 RID: 93602 RVA: 0x005CCC9A File Offset: 0x005CAE9A
+	// Token: 0x060147D3 RID: 83923 RVA: 0x005F97EA File Offset: 0x005F79EA
 	protected override void Back2Fore()
 	{
 	}
 
-	// Token: 0x06016DA3 RID: 93603 RVA: 0x005CCC9C File Offset: 0x005CAE9C
+	// Token: 0x060147D4 RID: 83924 RVA: 0x005F97EC File Offset: 0x005F79EC
 	protected override void Fore2Back()
 	{
 	}
 
-	// Token: 0x06016DA4 RID: 93604 RVA: 0x005CCCA0 File Offset: 0x005CAEA0
+	// Token: 0x060147D5 RID: 83925 RVA: 0x005F97F0 File Offset: 0x005F79F0
 	protected override void OnStartExecute()
 	{
 		ResultView viewInfo = this.GetViewInfo();
@@ -56,44 +56,44 @@ public class SurvivorsRogueCommandResultSettle : SurvivorsRogueCommandBase
 		base.OpenView(EUiViewName.SurvivorsRogueSettleView, false);
 	}
 
-	// Token: 0x06016DA5 RID: 93605 RVA: 0x005CCD1A File Offset: 0x005CAF1A
+	// Token: 0x060147D6 RID: 83926 RVA: 0x005F986A File Offset: 0x005F7A6A
 	protected override void OnExecute()
 	{
 	}
 
-	// Token: 0x06016DA6 RID: 93606 RVA: 0x005CCD1C File Offset: 0x005CAF1C
+	// Token: 0x060147D7 RID: 83927 RVA: 0x005F986C File Offset: 0x005F7A6C
 	protected override void OnFinish()
 	{
 	}
 
-	// Token: 0x06016DA7 RID: 93607 RVA: 0x005CCD1E File Offset: 0x005CAF1E
+	// Token: 0x060147D8 RID: 83928 RVA: 0x005F986E File Offset: 0x005F7A6E
 	protected override void OnDelete()
 	{
 	}
 
-	// Token: 0x06016DA8 RID: 93608 RVA: 0x005CCD20 File Offset: 0x005CAF20
+	// Token: 0x060147D9 RID: 83929 RVA: 0x005F9870 File Offset: 0x005F7A70
 	[NullableContext(2)]
 	public ResultView GetViewInfo()
 	{
 		return this.Data.ResultView;
 	}
 
-	// Token: 0x0400A9BE RID: 43454
+	// Token: 0x0400ADC4 RID: 44484
 	private const int TIME_DEATH_DELAY = 3000;
 
-	// Token: 0x02009107 RID: 37127
+	// Token: 0x0200834B RID: 33611
 	private static class EResultSettleReason
 	{
-		// Token: 0x0402EFAE RID: 192430
+		// Token: 0x0402A6B4 RID: 173748
 		public const int EarlyExit = 0;
 
-		// Token: 0x0402EFAF RID: 192431
+		// Token: 0x0402A6B5 RID: 173749
 		public const int PlayerDeath = 1;
 
-		// Token: 0x0402EFB0 RID: 192432
+		// Token: 0x0402A6B6 RID: 173750
 		public const int SuccessPass = 2;
 
-		// Token: 0x0402EFB1 RID: 192433
+		// Token: 0x0402A6B7 RID: 173751
 		public const int OutSettle = 3;
 	}
 }

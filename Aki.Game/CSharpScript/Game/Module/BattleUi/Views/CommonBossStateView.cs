@@ -13,12 +13,12 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D0B RID: 23819
+	// Token: 0x02004CED RID: 19693
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CommonBossStateView : BossStateViewBase
 	{
-		// Token: 0x0603C594 RID: 247188 RVA: 0x00E757DC File Offset: 0x00E739DC
+		// Token: 0x060314ED RID: 201965 RVA: 0x00DC5E44 File Offset: 0x00DC4044
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 40;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HitEffectDuration = (float)ConfigCommonParamById.GetIntConfig("HitEffectDuration").Value;
 		}
 
-		// Token: 0x0603C595 RID: 247189 RVA: 0x00E75D64 File Offset: 0x00E73F64
+		// Token: 0x060314EE RID: 201966 RVA: 0x00DC63CC File Offset: 0x00DC45CC
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffItemContainer.Init(item, 12, false, false, false, null);
 		}
 
-		// Token: 0x0603C596 RID: 247190 RVA: 0x00E75E50 File Offset: 0x00E74050
+		// Token: 0x060314EF RID: 201967 RVA: 0x00DC64B8 File Offset: 0x00DC46B8
 		protected override void OnBeforeDestroy()
 		{
 			this.LevelSequencePlayer.Clear();
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C597 RID: 247191 RVA: 0x00E75EC8 File Offset: 0x00E740C8
+		// Token: 0x060314F0 RID: 201968 RVA: 0x00DC6530 File Offset: 0x00DC4730
 		protected override void OnActivate()
 		{
 			base.OnActivate();
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.VisibleMachine.SetVisible(true, 667f);
 		}
 
-		// Token: 0x0603C598 RID: 247192 RVA: 0x00E75FE0 File Offset: 0x00E741E0
+		// Token: 0x060314F1 RID: 201969 RVA: 0x00DC6648 File Offset: 0x00DC4848
 		protected override void OnDeactivate()
 		{
 			base.OnDeactivate();
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			weaknessItem.Refresh(null);
 		}
 
-		// Token: 0x0603C599 RID: 247193 RVA: 0x00E7604C File Offset: 0x00E7424C
+		// Token: 0x060314F2 RID: 201970 RVA: 0x00DC66B4 File Offset: 0x00DC48B4
 		public override void Initialize(object param = null)
 		{
 			base.Initialize(param);
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsShowFallDownBar = this.HasFallDownTag;
 		}
 
-		// Token: 0x0603C59A RID: 247194 RVA: 0x00E760E8 File Offset: 0x00E742E8
+		// Token: 0x060314F3 RID: 201971 RVA: 0x00DC6750 File Offset: 0x00DC4950
 		protected override UniTask InitializeAsync(object param = null)
 		{
 			CommonBossStateView.<InitializeAsync>d__46 <InitializeAsync>d__;
@@ -222,13 +222,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C59B RID: 247195 RVA: 0x00E7612B File Offset: 0x00E7432B
+		// Token: 0x060314F4 RID: 201972 RVA: 0x00DC6793 File Offset: 0x00DC4993
 		public override void OnBossShieldChanged(float shield)
 		{
 			this.RefreshHpAndShield(true);
 		}
 
-		// Token: 0x0603C59C RID: 247196 RVA: 0x00E76134 File Offset: 0x00E74334
+		// Token: 0x060314F5 RID: 201973 RVA: 0x00DC679C File Offset: 0x00DC499C
 		public override void OnFallDownVisibleChanged(bool showFallDown)
 		{
 			if (showFallDown)
@@ -243,38 +243,38 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetFallDownBar(false);
 		}
 
-		// Token: 0x0603C59D RID: 247197 RVA: 0x00E761AC File Offset: 0x00E743AC
+		// Token: 0x060314F6 RID: 201974 RVA: 0x00DC6814 File Offset: 0x00DC4A14
 		protected override void OnBossHeathChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.RefreshHpAndShield(true);
 		}
 
-		// Token: 0x0603C59E RID: 247198 RVA: 0x00E761B5 File Offset: 0x00E743B5
+		// Token: 0x060314F7 RID: 201975 RVA: 0x00DC681D File Offset: 0x00DC4A1D
 		public override void OnBossMaxHealthChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.RefreshHpAndShield(false);
 		}
 
-		// Token: 0x0603C59F RID: 247199 RVA: 0x00E761BE File Offset: 0x00E743BE
+		// Token: 0x060314F8 RID: 201976 RVA: 0x00DC6826 File Offset: 0x00DC4A26
 		protected override void OnBossHardnessChanged(float hardness)
 		{
 			this.RefreshRage();
 		}
 
-		// Token: 0x0603C5A0 RID: 247200 RVA: 0x00E761C6 File Offset: 0x00E743C6
+		// Token: 0x060314F9 RID: 201977 RVA: 0x00DC682E File Offset: 0x00DC4A2E
 		protected override void OnBossLanguageChange()
 		{
 			this.RefreshBossNameAndHead();
 		}
 
-		// Token: 0x0603C5A1 RID: 247201 RVA: 0x00E761CE File Offset: 0x00E743CE
+		// Token: 0x060314FA RID: 201978 RVA: 0x00DC6836 File Offset: 0x00DC4A36
 		protected override void OnBossStateChange()
 		{
 			this.RefreshRageVisible(true);
 			this.RefreshToughItemVisible();
 		}
 
-		// Token: 0x0603C5A2 RID: 247202 RVA: 0x00E761E0 File Offset: 0x00E743E0
+		// Token: 0x060314FB RID: 201979 RVA: 0x00DC6848 File Offset: 0x00DC4A48
 		protected override void OnVulnerabilityActivated(int tagId, bool bTagExists)
 		{
 			this.HpFlickerVisible = bTagExists;
@@ -290,13 +290,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HpFlickerTweenComponent.Stop();
 		}
 
-		// Token: 0x0603C5A3 RID: 247203 RVA: 0x00E76236 File Offset: 0x00E74436
+		// Token: 0x060314FC RID: 201980 RVA: 0x00DC689E File Offset: 0x00DC4A9E
 		protected override void OnLevelChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.RefreshBossLevel();
 		}
 
-		// Token: 0x0603C5A4 RID: 247204 RVA: 0x00E76240 File Offset: 0x00E74440
+		// Token: 0x060314FD RID: 201981 RVA: 0x00DC68A8 File Offset: 0x00DC4AA8
 		public override void Tick(float delta)
 		{
 			if (this.IsPlayingHpBarAnim)
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Tick(delta);
 		}
 
-		// Token: 0x0603C5A5 RID: 247205 RVA: 0x00E762FE File Offset: 0x00E744FE
+		// Token: 0x060314FE RID: 201982 RVA: 0x00DC6966 File Offset: 0x00DC4B66
 		public override void ChangeBuff(in GameplayCue cueConfig, bool isAdd, int handleId, int entityId = 0)
 		{
 			if (isAdd)
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffItemContainer.RemoveBuffByCue(cueConfig, handleId, true);
 		}
 
-		// Token: 0x0603C5A6 RID: 247206 RVA: 0x00E76328 File Offset: 0x00E74528
+		// Token: 0x060314FF RID: 201983 RVA: 0x00DC6990 File Offset: 0x00DC4B90
 		protected void RefreshHpAndShield(bool bPlayBarAnimation = false)
 		{
 			ValueTuple<float, float> hpAndShieldPercent = this.GetHpAndShieldPercent();
@@ -362,7 +362,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshHpWeaknessPercent();
 		}
 
-		// Token: 0x0603C5A7 RID: 247207 RVA: 0x00E76378 File Offset: 0x00E74578
+		// Token: 0x06031500 RID: 201984 RVA: 0x00DC69E0 File Offset: 0x00DC4BE0
 		protected virtual void PlayBarAnimation(float hpPercent)
 		{
 			if (hpPercent < this.CurrentBarPercent)
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C5A8 RID: 247208 RVA: 0x00E7640A File Offset: 0x00E7460A
+		// Token: 0x06031501 RID: 201985 RVA: 0x00DC6A72 File Offset: 0x00DC4C72
 		private void PlayHitEffect(float param)
 		{
 			if (this.GlobalShaderCollection != null)
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C5A9 RID: 247209 RVA: 0x00E7642F File Offset: 0x00E7462F
+		// Token: 0x06031502 RID: 201986 RVA: 0x00DC6A97 File Offset: 0x00DC4C97
 		private void StopBarLerpAnimation()
 		{
 			base.GetItem(8).SetUIActive(false);
@@ -402,7 +402,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsPlayingHpBarAnim = false;
 		}
 
-		// Token: 0x0603C5AA RID: 247210 RVA: 0x00E76450 File Offset: 0x00E74650
+		// Token: 0x06031503 RID: 201987 RVA: 0x00DC6AB8 File Offset: 0x00DC4CB8
 		protected virtual void SetHpBarPercent(float percent)
 		{
 			base.GetSprite(7).SetFillAmount(percent);
@@ -412,13 +412,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C5AB RID: 247211 RVA: 0x00E76475 File Offset: 0x00E74675
+		// Token: 0x06031504 RID: 201988 RVA: 0x00DC6ADD File Offset: 0x00DC4CDD
 		protected void SetHpBarColor(FColor color)
 		{
 			base.GetSprite(7).SetColor(color);
 		}
 
-		// Token: 0x0603C5AC RID: 247212 RVA: 0x00E76484 File Offset: 0x00E74684
+		// Token: 0x06031505 RID: 201989 RVA: 0x00DC6AEC File Offset: 0x00DC4CEC
 		protected void SetHpBarSprite(ULGUISpriteData_BaseObject sprite)
 		{
 			if (sprite != null && sprite.IsValid())
@@ -428,7 +428,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C5AD RID: 247213 RVA: 0x00E764BC File Offset: 0x00E746BC
+		// Token: 0x06031506 RID: 201990 RVA: 0x00DC6B24 File Offset: 0x00DC4D24
 		protected virtual void SetBarBufferPercent(float pctBuffer, float pctReal)
 		{
 			float num = this.HpParentWidth * pctReal;
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetSprite(9).SetAnchorOffsetX(-num4);
 		}
 
-		// Token: 0x0603C5AE RID: 247214 RVA: 0x00E76518 File Offset: 0x00E74718
+		// Token: 0x06031507 RID: 201991 RVA: 0x00DC6B80 File Offset: 0x00DC4D80
 		private void SetShieldBarPercent(float percent)
 		{
 			UUISprite sprite = base.GetSprite(10);
@@ -455,7 +455,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sprite.SetUIActive(false);
 		}
 
-		// Token: 0x0603C5AF RID: 247215 RVA: 0x00E7654C File Offset: 0x00E7474C
+		// Token: 0x06031508 RID: 201992 RVA: 0x00DC6BB4 File Offset: 0x00DC4DB4
 		private void RefreshBuff()
 		{
 			int? entityId = base.GetEntityId();
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffItemContainer.RefreshBuff(handle);
 		}
 
-		// Token: 0x0603C5B0 RID: 247216 RVA: 0x00E76594 File Offset: 0x00E74794
+		// Token: 0x06031509 RID: 201993 RVA: 0x00DC6BFC File Offset: 0x00DC4DFC
 		private void RefreshExtraItem()
 		{
 			ExtraItemParams extraItemParamsByCreatureData = StateExtraFunction.GetExtraItemParamsByCreatureData(base.GetCreatureDataComp());
@@ -512,7 +512,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, true);
 		}
 
-		// Token: 0x0603C5B1 RID: 247217 RVA: 0x00E76668 File Offset: 0x00E74868
+		// Token: 0x0603150A RID: 201994 RVA: 0x00DC6CD0 File Offset: 0x00DC4ED0
 		private void RefreshBossLevel()
 		{
 			if (!this.IsValid())
@@ -542,7 +542,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			LguiUtil.Instance.SetLocalText(text, "LevelShow", new <>z__ReadOnlySingleElementList<object>(num));
 		}
 
-		// Token: 0x0603C5B2 RID: 247218 RVA: 0x00E7671C File Offset: 0x00E7491C
+		// Token: 0x0603150B RID: 201995 RVA: 0x00DC6D84 File Offset: 0x00DC4F84
 		private void RefreshBossTextColor()
 		{
 			if (!this.IsValid())
@@ -556,14 +556,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetText(1).SetColor(color);
 		}
 
-		// Token: 0x0603C5B3 RID: 247219 RVA: 0x00E76767 File Offset: 0x00E74967
+		// Token: 0x0603150C RID: 201996 RVA: 0x00DC6DCF File Offset: 0x00DC4FCF
 		public override void HideBossName(bool bVisible)
 		{
 			base.GetText(0).SetUIActive(bVisible);
 			base.GetText(1).SetUIActive(bVisible);
 		}
 
-		// Token: 0x0603C5B4 RID: 247220 RVA: 0x00E76784 File Offset: 0x00E74984
+		// Token: 0x0603150D RID: 201997 RVA: 0x00DC6DEC File Offset: 0x00DC4FEC
 		private void RefreshBossNameAndHead()
 		{
 			if (!this.IsValid())
@@ -580,7 +580,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			text.SetText(configTextByKey + configTextByKey2, true);
 		}
 
-		// Token: 0x0603C5B5 RID: 247221 RVA: 0x00E767E0 File Offset: 0x00E749E0
+		// Token: 0x0603150E RID: 201998 RVA: 0x00DC6E48 File Offset: 0x00DC5048
 		public void SetNameAndLevel(string name1, string name2, [Nullable(1)] string level)
 		{
 			UUIText text = base.GetText(1);
@@ -599,7 +599,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C5B6 RID: 247222 RVA: 0x00E76848 File Offset: 0x00E74A48
+		// Token: 0x0603150F RID: 201999 RVA: 0x00DC6EB0 File Offset: 0x00DC50B0
 		private void RefreshToughItemVisible()
 		{
 			bool flag = this.IsShowFallDownBar || this.IsShowRage;
@@ -611,7 +611,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ToughVisibleMachine.SetVisible(flag, 250f);
 		}
 
-		// Token: 0x0603C5B7 RID: 247223 RVA: 0x00E76889 File Offset: 0x00E74A89
+		// Token: 0x06031510 RID: 202000 RVA: 0x00DC6EF1 File Offset: 0x00DC50F1
 		private void OnToughRealVisibleChanged(bool visible)
 		{
 			base.GetItem(11).SetUIActive(visible);
@@ -621,7 +621,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C5B8 RID: 247224 RVA: 0x00E768AE File Offset: 0x00E74AAE
+		// Token: 0x06031511 RID: 202001 RVA: 0x00DC6F16 File Offset: 0x00DC5116
 		private void OnPlayToughVisibleAnim(bool visible)
 		{
 			if (visible)
@@ -632,7 +632,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayTweenAnim(30);
 		}
 
-		// Token: 0x0603C5B9 RID: 247225 RVA: 0x00E768C4 File Offset: 0x00E74AC4
+		// Token: 0x06031512 RID: 202002 RVA: 0x00DC6F2C File Offset: 0x00DC512C
 		private void OnStopToughVisibleAnim(bool visible)
 		{
 			if (visible)
@@ -643,7 +643,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StopTweenAnim(30);
 		}
 
-		// Token: 0x0603C5BA RID: 247226 RVA: 0x00E768DC File Offset: 0x00E74ADC
+		// Token: 0x06031513 RID: 202003 RVA: 0x00DC6F44 File Offset: 0x00DC5144
 		private void RefreshRage()
 		{
 			if (!this.IsValid())
@@ -662,14 +662,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurrentRagePercent = num;
 		}
 
-		// Token: 0x0603C5BB RID: 247227 RVA: 0x00E76931 File Offset: 0x00E74B31
+		// Token: 0x06031514 RID: 202004 RVA: 0x00DC6F99 File Offset: 0x00DC5199
 		private void SetRageBarPercent(float percent)
 		{
 			base.GetSprite(4).SetFillAmount(percent);
 			this.RageStateMachine.GetHit(percent, this.CurrentRagePercent);
 		}
 
-		// Token: 0x0603C5BC RID: 247228 RVA: 0x00E76954 File Offset: 0x00E74B54
+		// Token: 0x06031515 RID: 202005 RVA: 0x00DC6FBC File Offset: 0x00DC51BC
 		private void SetRageEffect(float percent)
 		{
 			if (percent < 1f)
@@ -700,7 +700,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StopRageEmptyAnimation();
 		}
 
-		// Token: 0x0603C5BD RID: 247229 RVA: 0x00E769C0 File Offset: 0x00E74BC0
+		// Token: 0x06031516 RID: 202006 RVA: 0x00DC7028 File Offset: 0x00DC5228
 		private void HideMaxRageEffect()
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(12);
@@ -710,7 +710,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C5BE RID: 247230 RVA: 0x00E769E8 File Offset: 0x00E74BE8
+		// Token: 0x06031517 RID: 202007 RVA: 0x00DC7050 File Offset: 0x00DC5250
 		private void RefreshRageVisible(bool forceRefreshRage = false)
 		{
 			this.RefreshIsShowRage();
@@ -726,7 +726,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C5BF RID: 247231 RVA: 0x00E76A41 File Offset: 0x00E74C41
+		// Token: 0x06031518 RID: 202008 RVA: 0x00DC70A9 File Offset: 0x00DC52A9
 		private void RefreshIsShowRage()
 		{
 			if (this.IsShowFallDownBar)
@@ -742,7 +742,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsShowRage = true;
 		}
 
-		// Token: 0x0603C5C0 RID: 247232 RVA: 0x00E76A70 File Offset: 0x00E74C70
+		// Token: 0x06031519 RID: 202009 RVA: 0x00DC70D8 File Offset: 0x00DC52D8
 		private void PlayRageLittleReduceAnimation(float curPercent, float targetPercent, bool isNewHit)
 		{
 			if (curPercent <= targetPercent)
@@ -760,13 +760,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C5C1 RID: 247233 RVA: 0x00E76AC3 File Offset: 0x00E74CC3
+		// Token: 0x0603151A RID: 202010 RVA: 0x00DC712B File Offset: 0x00DC532B
 		private void StopRageLittleReduceAnimation()
 		{
 			base.GetSprite(20).SetUIActive(false);
 		}
 
-		// Token: 0x0603C5C2 RID: 247234 RVA: 0x00E76AD4 File Offset: 0x00E74CD4
+		// Token: 0x0603151B RID: 202011 RVA: 0x00DC713C File Offset: 0x00DC533C
 		private void PlayRageLargeReduceAnimation(float curPercent, float targetPercent)
 		{
 			if (curPercent <= targetPercent)
@@ -782,24 +782,24 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayTweenAnim(26);
 		}
 
-		// Token: 0x0603C5C3 RID: 247235 RVA: 0x00E76B32 File Offset: 0x00E74D32
+		// Token: 0x0603151C RID: 202012 RVA: 0x00DC719A File Offset: 0x00DC539A
 		private void StopRageLargeReduceAnimation()
 		{
 			base.GetItem(22).SetUIActive(false);
 		}
 
-		// Token: 0x0603C5C4 RID: 247236 RVA: 0x00E76B42 File Offset: 0x00E74D42
+		// Token: 0x0603151D RID: 202013 RVA: 0x00DC71AA File Offset: 0x00DC53AA
 		private void PlayRageEmptyAnimation()
 		{
 			this.PlayTweenAnim(31);
 		}
 
-		// Token: 0x0603C5C5 RID: 247237 RVA: 0x00E76B4C File Offset: 0x00E74D4C
+		// Token: 0x0603151E RID: 202014 RVA: 0x00DC71B4 File Offset: 0x00DC53B4
 		private void StopRageEmptyAnimation()
 		{
 		}
 
-		// Token: 0x0603C5C6 RID: 247238 RVA: 0x00E76B4E File Offset: 0x00E74D4E
+		// Token: 0x0603151F RID: 202015 RVA: 0x00DC71B6 File Offset: 0x00DC53B6
 		private void SetFallDownBar(bool state)
 		{
 			this.IsShowFallDownBar = state;
@@ -808,7 +808,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshToughItemVisible();
 		}
 
-		// Token: 0x0603C5C7 RID: 247239 RVA: 0x00E76B70 File Offset: 0x00E74D70
+		// Token: 0x06031520 RID: 202016 RVA: 0x00DC71D8 File Offset: 0x00DC53D8
 		private void RefreshFallDownBarVisible()
 		{
 			if (this.IsShowFallDownBar == this.FallDownBarVisible)
@@ -825,7 +825,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StopTweenAnim(29);
 		}
 
-		// Token: 0x0603C5C8 RID: 247240 RVA: 0x00E76BC4 File Offset: 0x00E74DC4
+		// Token: 0x06031521 RID: 202017 RVA: 0x00DC722C File Offset: 0x00DC542C
 		private void RefreshFallDownBar(float delta = 0f)
 		{
 			if (!this.IsShowFallDownBar)
@@ -862,7 +862,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C5C9 RID: 247241 RVA: 0x00E76CB8 File Offset: 0x00E74EB8
+		// Token: 0x06031522 RID: 202018 RVA: 0x00DC7320 File Offset: 0x00DC5520
 		private void RefreshWeaknessItem(bool isStart = false)
 		{
 			base.GetUiNiagara(37).SetUIActive(false);
@@ -876,7 +876,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.WeaknessItem.SetStateChangeCallback(new Action(this.OnWeaknessStateChanged));
 		}
 
-		// Token: 0x0603C5CA RID: 247242 RVA: 0x00E76D11 File Offset: 0x00E74F11
+		// Token: 0x06031523 RID: 202019 RVA: 0x00DC7379 File Offset: 0x00DC5579
 		private void RefreshHpWeaknessPercent()
 		{
 			if (this.WeaknessItem != null && this.WeaknessItem.IsFullState(true))
@@ -885,7 +885,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C5CB RID: 247243 RVA: 0x00E76D3C File Offset: 0x00E74F3C
+		// Token: 0x06031524 RID: 202020 RVA: 0x00DC73A4 File Offset: 0x00DC55A4
 		private void RefreshHpWeaknessState(bool isStart = false)
 		{
 			if (this.WeaknessItem.IsInBreakAnim() && !isStart)
@@ -903,14 +903,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(35).SetUIActive(false);
 		}
 
-		// Token: 0x0603C5CC RID: 247244 RVA: 0x00E76DA3 File Offset: 0x00E74FA3
+		// Token: 0x06031525 RID: 202021 RVA: 0x00DC740B File Offset: 0x00DC560B
 		private void OnWeaknessStateChanged()
 		{
 			this.RefreshHpWeaknessPercent();
 			this.RefreshHpWeaknessState(false);
 		}
 
-		// Token: 0x0603C5CD RID: 247245 RVA: 0x00E76DB4 File Offset: 0x00E74FB4
+		// Token: 0x06031526 RID: 202022 RVA: 0x00DC741C File Offset: 0x00DC561C
 		protected virtual void InitAllTweenAnim()
 		{
 			this.InitTweenAnim(25);
@@ -924,7 +924,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitTweenAnim(39);
 		}
 
-		// Token: 0x0603C5CE RID: 247246 RVA: 0x00E76E0C File Offset: 0x00E7500C
+		// Token: 0x06031527 RID: 202023 RVA: 0x00DC7474 File Offset: 0x00DC5674
 		protected void InitTweenAnim(int componentType)
 		{
 			TArray<UActorComponent> tarray = base.GetItem(componentType).GetOwner().K2_GetComponentsByClass(ULGUIPlayTweenComponent.StaticClass());
@@ -936,7 +936,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenAnimMap[componentType] = list;
 		}
 
-		// Token: 0x0603C5CF RID: 247247 RVA: 0x00E76E8C File Offset: 0x00E7508C
+		// Token: 0x06031528 RID: 202024 RVA: 0x00DC74FC File Offset: 0x00DC56FC
 		protected void PlayTweenAnim(int componentType)
 		{
 			List<ULGUIPlayTweenComponent> list;
@@ -949,7 +949,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C5D0 RID: 247248 RVA: 0x00E76EE8 File Offset: 0x00E750E8
+		// Token: 0x06031529 RID: 202025 RVA: 0x00DC7558 File Offset: 0x00DC5758
 		protected void StopTweenAnim(int componentType)
 		{
 			List<ULGUIPlayTweenComponent> list;
@@ -962,13 +962,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C5D1 RID: 247249 RVA: 0x00E76F44 File Offset: 0x00E75144
+		// Token: 0x0603152A RID: 202026 RVA: 0x00DC75B4 File Offset: 0x00DC57B4
 		public override void HideWithAnim()
 		{
 			this.VisibleMachine.SetVisible(false, 167f);
 		}
 
-		// Token: 0x0603C5D2 RID: 247250 RVA: 0x00E76F57 File Offset: 0x00E75157
+		// Token: 0x0603152B RID: 202027 RVA: 0x00DC75C7 File Offset: 0x00DC57C7
 		private void OnRealVisibleChanged(bool visible)
 		{
 			if (!visible)
@@ -977,234 +977,234 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C5D3 RID: 247251 RVA: 0x00E76F64 File Offset: 0x00E75164
+		// Token: 0x0603152C RID: 202028 RVA: 0x00DC75D4 File Offset: 0x00DC57D4
 		private void OnPlayVisibleAnim(bool visible)
 		{
 			this.LevelSequencePlayer.PlaySequencePurely(visible ? "ShowView" : "CloseView", false, false, null, null, false);
 		}
 
-		// Token: 0x0603C5D4 RID: 247252 RVA: 0x00E76F98 File Offset: 0x00E75198
+		// Token: 0x0603152D RID: 202029 RVA: 0x00DC7608 File Offset: 0x00DC5808
 		private void OnStopVisibleAnim(bool visible)
 		{
 			this.LevelSequencePlayer.StopCurrentSequence(false, false);
 		}
 
-		// Token: 0x0603C5D5 RID: 247253 RVA: 0x00E76FA7 File Offset: 0x00E751A7
+		// Token: 0x0603152E RID: 202030 RVA: 0x00DC7617 File Offset: 0x00DC5817
 		[NullableContext(1)]
 		protected override string GetResourceId()
 		{
 			return "UiItem_BossState_Prefab";
 		}
 
-		// Token: 0x0401F708 RID: 128776
+		// Token: 0x0401A1C1 RID: 106945
 		[StaticVariableRuleIgnore]
 		private static readonly FName RgbSplitProgress = new FName("RGBSplit_Progress");
 
-		// Token: 0x0401F709 RID: 128777
+		// Token: 0x0401A1C2 RID: 106946
 		private const float FALL_DOWN_DISAPPEAR_PERCENT = 0.9f;
 
-		// Token: 0x0401F70A RID: 128778
+		// Token: 0x0401A1C3 RID: 106947
 		private const float FALL_DOWN_DISAPPEAR_TAIL_COUNT_FACTOR = 10f;
 
-		// Token: 0x0401F70B RID: 128779
+		// Token: 0x0401A1C4 RID: 106948
 		private const float SHOW_VIEW_ANIM_TIME = 667f;
 
-		// Token: 0x0401F70C RID: 128780
+		// Token: 0x0401A1C5 RID: 106949
 		private const float CLOSE_VIEW_ANIM_TIME = 167f;
 
-		// Token: 0x0401F70D RID: 128781
+		// Token: 0x0401A1C6 RID: 106950
 		private const float TOUGH_ANIM_TIME = 250f;
 
-		// Token: 0x0401F70E RID: 128782
+		// Token: 0x0401A1C7 RID: 106951
 		private const EAttributeType fallDownAttributeId = EAttributeType.ParalysisTime;
 
-		// Token: 0x0401F70F RID: 128783
+		// Token: 0x0401A1C8 RID: 106952
 		private const EAttributeType fallDownMaxAttributeId = EAttributeType.ParalysisTimeMax;
 
-		// Token: 0x0401F710 RID: 128784
+		// Token: 0x0401A1C9 RID: 106953
 		private const int MAX_BUFF_ITEM_COUNT = 12;
 
-		// Token: 0x0401F711 RID: 128785
+		// Token: 0x0401A1CA RID: 106954
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401F712 RID: 128786
+		// Token: 0x0401A1CB RID: 106955
 		private ULGUIPlayTweenComponent HpFlickerTweenComponent;
 
-		// Token: 0x0401F713 RID: 128787
+		// Token: 0x0401A1CC RID: 106956
 		private VisibleAnimMachine VisibleMachine;
 
-		// Token: 0x0401F714 RID: 128788
+		// Token: 0x0401A1CD RID: 106957
 		private VisibleAnimMachine ToughVisibleMachine;
 
-		// Token: 0x0401F715 RID: 128789
+		// Token: 0x0401A1CE RID: 106958
 		private float HitLargePercent;
 
-		// Token: 0x0401F716 RID: 128790
+		// Token: 0x0401A1CF RID: 106959
 		protected float CurrentBarPercent = 1f;
 
-		// Token: 0x0401F717 RID: 128791
+		// Token: 0x0401A1D0 RID: 106960
 		private float CurrentRagePercent = 1f;
 
-		// Token: 0x0401F718 RID: 128792
+		// Token: 0x0401A1D1 RID: 106961
 		private bool IsMaxHardnessEffectVisible;
 
-		// Token: 0x0401F719 RID: 128793
+		// Token: 0x0401A1D2 RID: 106962
 		[Nullable(1)]
 		private readonly BuffItemContainer BuffItemContainer = new BuffItemContainer();
 
-		// Token: 0x0401F71A RID: 128794
+		// Token: 0x0401A1D3 RID: 106963
 		[Nullable(1)]
 		private readonly HpBufferStateMachine HpStateMachine = new HpBufferStateMachine();
 
-		// Token: 0x0401F71B RID: 128795
+		// Token: 0x0401A1D4 RID: 106964
 		[Nullable(1)]
 		private readonly FallDownPercentMachine FallDownPercentMachine = new FallDownPercentMachine();
 
-		// Token: 0x0401F71C RID: 128796
+		// Token: 0x0401A1D5 RID: 106965
 		[Nullable(1)]
 		private readonly RageBufferStateMachine RageStateMachine = new RageBufferStateMachine();
 
-		// Token: 0x0401F71D RID: 128797
+		// Token: 0x0401A1D6 RID: 106966
 		private UMaterialParameterCollection GlobalShaderCollection;
 
-		// Token: 0x0401F71E RID: 128798
+		// Token: 0x0401A1D7 RID: 106967
 		private float HitEffectCountdown = -1f;
 
-		// Token: 0x0401F71F RID: 128799
+		// Token: 0x0401A1D8 RID: 106968
 		private float HitEffectDuration;
 
-		// Token: 0x0401F720 RID: 128800
+		// Token: 0x0401A1D9 RID: 106969
 		private float HpParentWidth;
 
-		// Token: 0x0401F721 RID: 128801
+		// Token: 0x0401A1DA RID: 106970
 		private float RageWidth;
 
-		// Token: 0x0401F722 RID: 128802
+		// Token: 0x0401A1DB RID: 106971
 		private bool ToughItemVisible;
 
-		// Token: 0x0401F723 RID: 128803
+		// Token: 0x0401A1DC RID: 106972
 		private bool IsShowFallDownBar;
 
-		// Token: 0x0401F724 RID: 128804
+		// Token: 0x0401A1DD RID: 106973
 		private bool FallDownBarVisible;
 
-		// Token: 0x0401F725 RID: 128805
+		// Token: 0x0401A1DE RID: 106974
 		private bool IsShowRage = true;
 
-		// Token: 0x0401F726 RID: 128806
+		// Token: 0x0401A1DF RID: 106975
 		private bool RageVisible = true;
 
-		// Token: 0x0401F727 RID: 128807
+		// Token: 0x0401A1E0 RID: 106976
 		private bool RefreshRageEffectNextVisible;
 
-		// Token: 0x0401F728 RID: 128808
+		// Token: 0x0401A1E1 RID: 106977
 		private bool HpFlickerVisible;
 
-		// Token: 0x0401F729 RID: 128809
+		// Token: 0x0401A1E2 RID: 106978
 		private float FallDownBarWidth;
 
-		// Token: 0x0401F72A RID: 128810
+		// Token: 0x0401A1E3 RID: 106979
 		private float TailCount;
 
-		// Token: 0x0401F72B RID: 128811
+		// Token: 0x0401A1E4 RID: 106980
 		private bool IsPlayingHpBarAnim;
 
-		// Token: 0x0401F72C RID: 128812
+		// Token: 0x0401A1E5 RID: 106981
 		private StateExtraItemBase ExtraItem;
 
-		// Token: 0x0401F72D RID: 128813
+		// Token: 0x0401A1E6 RID: 106982
 		private bool IsLoadingExtraItem;
 
-		// Token: 0x0401F72E RID: 128814
+		// Token: 0x0401A1E7 RID: 106983
 		protected HeadStateWeaknessItem WeaknessItem;
 
-		// Token: 0x0401F72F RID: 128815
+		// Token: 0x0401A1E8 RID: 106984
 		[Nullable(1)]
 		private readonly Dictionary<int, List<ULGUIPlayTweenComponent>> TweenAnimMap = new Dictionary<int, List<ULGUIPlayTweenComponent>>();
 
-		// Token: 0x0200BF84 RID: 49028
+		// Token: 0x0200A98A RID: 43402
 		[NullableContext(0)]
 		private enum EChildComponentType
 		{
-			// Token: 0x04039C06 RID: 236550
+			// Token: 0x040345C8 RID: 214472
 			BossLevelText,
-			// Token: 0x04039C07 RID: 236551
+			// Token: 0x040345C9 RID: 214473
 			BossNameText,
-			// Token: 0x04039C08 RID: 236552
+			// Token: 0x040345CA RID: 214474
 			RageItem,
-			// Token: 0x04039C09 RID: 236553
+			// Token: 0x040345CB RID: 214475
 			ToughBg,
-			// Token: 0x04039C0A RID: 236554
+			// Token: 0x040345CC RID: 214476
 			RageBar,
-			// Token: 0x04039C0B RID: 236555
+			// Token: 0x040345CD RID: 214477
 			HpShieldBarItem,
-			// Token: 0x04039C0C RID: 236556
+			// Token: 0x040345CE RID: 214478
 			HpBarItem,
-			// Token: 0x04039C0D RID: 236557
+			// Token: 0x040345CF RID: 214479
 			NormalHpBarSprite,
-			// Token: 0x04039C0E RID: 236558
+			// Token: 0x040345D0 RID: 214480
 			BarBufferCanvas,
-			// Token: 0x04039C0F RID: 236559
+			// Token: 0x040345D1 RID: 214481
 			BarBufferSprite,
-			// Token: 0x04039C10 RID: 236560
+			// Token: 0x040345D2 RID: 214482
 			ShieldBarSprite,
-			// Token: 0x04039C11 RID: 236561
+			// Token: 0x040345D3 RID: 214483
 			ToughItem,
-			// Token: 0x04039C12 RID: 236562
+			// Token: 0x040345D4 RID: 214484
 			MaxHardnessEffect,
-			// Token: 0x04039C13 RID: 236563
+			// Token: 0x040345D5 RID: 214485
 			BuffHorizontalItem,
-			// Token: 0x04039C14 RID: 236564
+			// Token: 0x040345D6 RID: 214486
 			HpLight,
-			// Token: 0x04039C15 RID: 236565
+			// Token: 0x040345D7 RID: 214487
 			HardnessNormal,
-			// Token: 0x04039C16 RID: 236566
+			// Token: 0x040345D8 RID: 214488
 			HardnessBreak,
-			// Token: 0x04039C17 RID: 236567
+			// Token: 0x040345D9 RID: 214489
 			FallDownItem,
-			// Token: 0x04039C18 RID: 236568
+			// Token: 0x040345DA RID: 214490
 			FallDownBar,
-			// Token: 0x04039C19 RID: 236569
+			// Token: 0x040345DB RID: 214491
 			FallDownBarSign,
-			// Token: 0x04039C1A RID: 236570
+			// Token: 0x040345DC RID: 214492
 			RageReduceLittle,
-			// Token: 0x04039C1B RID: 236571
+			// Token: 0x040345DD RID: 214493
 			HpFlicker,
-			// Token: 0x04039C1C RID: 236572
+			// Token: 0x040345DE RID: 214494
 			RageReduceLargeCanvas,
-			// Token: 0x04039C1D RID: 236573
+			// Token: 0x040345DF RID: 214495
 			RageReduceLarge,
-			// Token: 0x04039C1E RID: 236574
+			// Token: 0x040345E0 RID: 214496
 			RageEmpty,
-			// Token: 0x04039C1F RID: 236575
+			// Token: 0x040345E1 RID: 214497
 			AnimSmallHit,
-			// Token: 0x04039C20 RID: 236576
+			// Token: 0x040345E2 RID: 214498
 			AnimBigHit,
-			// Token: 0x04039C21 RID: 236577
+			// Token: 0x040345E3 RID: 214499
 			AnimToughStart,
-			// Token: 0x04039C22 RID: 236578
+			// Token: 0x040345E4 RID: 214500
 			AnimToughHit,
-			// Token: 0x04039C23 RID: 236579
+			// Token: 0x040345E5 RID: 214501
 			AnimToughFlick,
-			// Token: 0x04039C24 RID: 236580
+			// Token: 0x040345E6 RID: 214502
 			AnimToughClose,
-			// Token: 0x04039C25 RID: 236581
+			// Token: 0x040345E7 RID: 214503
 			AnimBreak,
-			// Token: 0x04039C26 RID: 236582
+			// Token: 0x040345E8 RID: 214504
 			ExtraItem,
-			// Token: 0x04039C27 RID: 236583
+			// Token: 0x040345E9 RID: 214505
 			BloodModeIcon,
-			// Token: 0x04039C28 RID: 236584
+			// Token: 0x040345EA RID: 214506
 			WeaknessContainer,
-			// Token: 0x04039C29 RID: 236585
+			// Token: 0x040345EB RID: 214507
 			HpWeaknessNode,
-			// Token: 0x04039C2A RID: 236586
+			// Token: 0x040345EC RID: 214508
 			HpWeaknessSprite1,
-			// Token: 0x04039C2B RID: 236587
+			// Token: 0x040345ED RID: 214509
 			HpWeaknessEffect,
-			// Token: 0x04039C2C RID: 236588
+			// Token: 0x040345EE RID: 214510
 			AniHpWeaknessFull,
-			// Token: 0x04039C2D RID: 236589
+			// Token: 0x040345EF RID: 214511
 			AniHpWeaknessBreak
 		}
 	}

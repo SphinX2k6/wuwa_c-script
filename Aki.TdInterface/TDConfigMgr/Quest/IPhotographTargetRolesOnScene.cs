@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200104B RID: 4171
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001179 RID: 4473
 	public class IPhotographTargetRolesOnScene : IPhotographTarget
 	{
-		// Token: 0x06005D72 RID: 23922 RVA: 0x000E23E8 File Offset: 0x000E05E8
+		// Token: 0x06006364 RID: 25444 RVA: 0x000EF3BC File Offset: 0x000ED5BC
 		private IPhotographTargetRolesOnScene_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005D73 RID: 23923 RVA: 0x000E2420 File Offset: 0x000E0620
+		// Token: 0x06006365 RID: 25445 RVA: 0x000EF3F4 File Offset: 0x000ED5F4
 		public static IPhotographTargetRolesOnScene Create([Nullable(2)] IPhotographTargetRolesOnScene instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D74 RID: 23924 RVA: 0x000E2433 File Offset: 0x000E0633
+		// Token: 0x06006366 RID: 25446 RVA: 0x000EF407 File Offset: 0x000ED607
 		public static IPhotographTargetRolesOnScene CreateFromSetValue([Nullable(2)] IPhotographTargetRolesOnScene_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D75 RID: 23925 RVA: 0x000E2446 File Offset: 0x000E0646
+		// Token: 0x06006367 RID: 25447 RVA: 0x000EF41A File Offset: 0x000ED61A
 		public new IPhotographTargetRolesOnScene_SetValue ToSetValue()
 		{
 			return new IPhotographTargetRolesOnScene_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001ECA RID: 7882
-		// (get) Token: 0x06005D76 RID: 23926 RVA: 0x000E2459 File Offset: 0x000E0659
-		// (set) Token: 0x06005D77 RID: 23927 RVA: 0x000E2484 File Offset: 0x000E0684
+		// Token: 0x17002079 RID: 8313
+		// (get) Token: 0x06006368 RID: 25448 RVA: 0x000EF42D File Offset: 0x000ED62D
+		// (set) Token: 0x06006369 RID: 25449 RVA: 0x000EF458 File Offset: 0x000ED658
 		public override EPhotographTargetType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003845 RID: 14405
+		// Token: 0x04003B8D RID: 15245
 		[Nullable(2)]
 		protected new IPhotographTargetRolesOnScene FbInstance;
 
-		// Token: 0x04003846 RID: 14406
+		// Token: 0x04003B8E RID: 15246
 		[Nullable(2)]
 		protected new IPhotographTargetRolesOnScene_SetValue PocoInterface;
 	}

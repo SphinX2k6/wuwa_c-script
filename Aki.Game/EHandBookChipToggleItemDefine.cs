@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x02001DD4 RID: 7636
+// Token: 0x02001296 RID: 4758
 public class EHandBookChipToggleItemDefine
 {
-	// Token: 0x04006B7F RID: 27519
+	// Token: 0x04006C60 RID: 27744
 	public const int ItemGridItem = 0;
 
-	// Token: 0x04006B80 RID: 27520
+	// Token: 0x04006C61 RID: 27745
 	public const int DownArrowItem = 1;
 
-	// Token: 0x04006B81 RID: 27521
+	// Token: 0x04006C62 RID: 27746
 	public const int NameText = 2;
 
-	// Token: 0x04006B82 RID: 27522
+	// Token: 0x04006C63 RID: 27747
 	public const int NewItem = 3;
 
-	// Token: 0x04006B83 RID: 27523
+	// Token: 0x04006C64 RID: 27748
 	public const int LockItem = 4;
 
-	// Token: 0x04006B84 RID: 27524
+	// Token: 0x04006C65 RID: 27749
 	public const int Toggle = 5;
 
-	// Token: 0x04006B85 RID: 27525
+	// Token: 0x04006C66 RID: 27750
 	public const int RightArrowItem = 6;
 }

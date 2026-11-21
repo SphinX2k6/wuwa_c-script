@@ -4,17 +4,16 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001736 RID: 5942
+	// Token: 0x020018B5 RID: 6325
 	public class GetItem_SetValue
 	{
-		// Token: 0x04005037 RID: 20535
-		[Nullable(1)]
+		// Token: 0x0400546A RID: 21610
 		public List<IItemData> Items;
 
-		// Token: 0x04005038 RID: 20536
+		// Token: 0x0400546B RID: 21611
 		public EItemGetUiType? UiType;
 
-		// Token: 0x04005039 RID: 20537
+		// Token: 0x0400546C RID: 21612
 		[Nullable(2)]
 		public IItemGetUiConfigSpecialQuest UiConfig;
 	}

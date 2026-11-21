@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001150 RID: 4432
+	// Token: 0x02001286 RID: 4742
 	public struct TrainRoleDialog : IFlatbufferObject
 	{
-		// Token: 0x17003B59 RID: 15193
-		// (get) Token: 0x0600E149 RID: 57673 RVA: 0x00333744 File Offset: 0x00331944
+		// Token: 0x17003EBD RID: 16061
+		// (get) Token: 0x0600EEB7 RID: 61111 RVA: 0x0035EAF4 File Offset: 0x0035CCF4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E14A RID: 57674 RVA: 0x00333751 File Offset: 0x00331951
+		// Token: 0x0600EEB8 RID: 61112 RVA: 0x0035EB01 File Offset: 0x0035CD01
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E14B RID: 57675 RVA: 0x00333758 File Offset: 0x00331958
+		// Token: 0x0600EEB9 RID: 61113 RVA: 0x0035EB08 File Offset: 0x0035CD08
 		public static TrainRoleDialog GetRootAsTrainRoleDialog(ByteBuffer _bb)
 		{
 			return TrainRoleDialog.GetRootAsTrainRoleDialog(_bb, default(TrainRoleDialog));
 		}
 
-		// Token: 0x0600E14C RID: 57676 RVA: 0x00333774 File Offset: 0x00331974
+		// Token: 0x0600EEBA RID: 61114 RVA: 0x0035EB24 File Offset: 0x0035CD24
 		public static TrainRoleDialog GetRootAsTrainRoleDialog(ByteBuffer _bb, TrainRoleDialog obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E14D RID: 57677 RVA: 0x00333791 File Offset: 0x00331991
+		// Token: 0x0600EEBB RID: 61115 RVA: 0x0035EB41 File Offset: 0x0035CD41
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E14E RID: 57678 RVA: 0x003337A0 File Offset: 0x003319A0
+		// Token: 0x0600EEBC RID: 61116 RVA: 0x0035EB50 File Offset: 0x0035CD50
 		public TrainRoleDialog __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003B5A RID: 15194
-		// (get) Token: 0x0600E14F RID: 57679 RVA: 0x003337B0 File Offset: 0x003319B0
+		// Token: 0x17003EBE RID: 16062
+		// (get) Token: 0x0600EEBD RID: 61117 RVA: 0x0035EB60 File Offset: 0x0035CD60
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B5B RID: 15195
-		// (get) Token: 0x0600E150 RID: 57680 RVA: 0x003337EC File Offset: 0x003319EC
+		// Token: 0x17003EBF RID: 16063
+		// (get) Token: 0x0600EEBE RID: 61118 RVA: 0x0035EB9C File Offset: 0x0035CD9C
 		public int RoleId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B5C RID: 15196
-		// (get) Token: 0x0600E151 RID: 57681 RVA: 0x00333828 File Offset: 0x00331A28
+		// Token: 0x17003EC0 RID: 16064
+		// (get) Token: 0x0600EEBF RID: 61119 RVA: 0x0035EBD8 File Offset: 0x0035CDD8
 		public int TrainType
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B5D RID: 15197
-		// (get) Token: 0x0600E152 RID: 57682 RVA: 0x00333864 File Offset: 0x00331A64
+		// Token: 0x17003EC1 RID: 16065
+		// (get) Token: 0x0600EEC0 RID: 61120 RVA: 0x0035EC14 File Offset: 0x0035CE14
 		public string Dialog
 		{
 			get
@@ -107,19 +107,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E153 RID: 57683 RVA: 0x0033389C File Offset: 0x00331A9C
+		// Token: 0x0600EEC1 RID: 61121 RVA: 0x0035EC4C File Offset: 0x0035CE4C
 		public Span<byte> GetDialogBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600E154 RID: 57684 RVA: 0x003338AC File Offset: 0x00331AAC
+		// Token: 0x0600EEC2 RID: 61122 RVA: 0x0035EC5C File Offset: 0x0035CE5C
 		public byte[] GetDialogArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04005295 RID: 21141
+		// Token: 0x040058D8 RID: 22744
 		private Table __p;
 	}
 }

@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View
 {
-	// Token: 0x02005C12 RID: 23570
+	// Token: 0x02004BF2 RID: 19442
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossPilingNewBuffTipsView : UiViewBase
 	{
-		// Token: 0x0603B8FD RID: 243965 RVA: 0x00E33E85 File Offset: 0x00E32085
+		// Token: 0x06030848 RID: 198728 RVA: 0x00D841CD File Offset: 0x00D823CD
 		public BossPilingNewBuffTipsView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B8FE RID: 243966 RVA: 0x00E33E9C File Offset: 0x00E3209C
+		// Token: 0x06030849 RID: 198729 RVA: 0x00D841E4 File Offset: 0x00D823E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B8FF RID: 243967 RVA: 0x00E33FCC File Offset: 0x00E321CC
+		// Token: 0x0603084A RID: 198730 RVA: 0x00D84314 File Offset: 0x00D82514
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BossPilingNewBuffTipsView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B900 RID: 243968 RVA: 0x00E34010 File Offset: 0x00E32210
+		// Token: 0x0603084B RID: 198731 RVA: 0x00D84358 File Offset: 0x00D82558
 		protected override void OnStart()
 		{
 			BossPilingNewBuffInfo bossPilingNewBuffInfo = this.OpenParam as BossPilingNewBuffInfo;
@@ -116,14 +116,14 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			texture.SetUIActive(false);
 		}
 
-		// Token: 0x0603B901 RID: 243969 RVA: 0x00E341E0 File Offset: 0x00E323E0
+		// Token: 0x0603084C RID: 198732 RVA: 0x00D84528 File Offset: 0x00D82728
 		private void RefreshQualityTexture(string bgPath, string flowPath)
 		{
 			base.SetTextureByPath(bgPath, base.GetTexture(4), null, null);
 			base.SetTextureByPath(flowPath, base.GetTexture(7), null, null);
 		}
 
-		// Token: 0x0603B902 RID: 243970 RVA: 0x00E34220 File Offset: 0x00E32420
+		// Token: 0x0603084D RID: 198733 RVA: 0x00D84568 File Offset: 0x00D82768
 		protected override void OnAfterShow()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -139,49 +139,49 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			countPanel.PlaySequence(this.PlayRate);
 		}
 
-		// Token: 0x0603B903 RID: 243971 RVA: 0x00E34275 File Offset: 0x00E32475
+		// Token: 0x0603084E RID: 198734 RVA: 0x00D845BD File Offset: 0x00D827BD
 		protected override void OnBeforeDestroy()
 		{
 			BossPilingModel.Instance.InstBuffAcquireCount--;
 			ItemModel.Instance.LastCloseTimeStamp = TimeUtil.Instance.GetServerTimeStamp();
 		}
 
-		// Token: 0x0401F039 RID: 127033
+		// Token: 0x04019AEA RID: 105194
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401F03A RID: 127034
+		// Token: 0x04019AEB RID: 105195
 		private bool IsGolden;
 
-		// Token: 0x0401F03B RID: 127035
+		// Token: 0x04019AEC RID: 105196
 		[Nullable(2)]
 		private BossPilingBuffCountPanel CountPanel;
 
-		// Token: 0x0401F03C RID: 127036
+		// Token: 0x04019AED RID: 105197
 		protected BossPilingBuffSimpleItem BuffItem;
 
-		// Token: 0x0401F03D RID: 127037
+		// Token: 0x04019AEE RID: 105198
 		protected float PlayRate = 1f;
 
-		// Token: 0x0200BDF4 RID: 48628
+		// Token: 0x0200A7FC RID: 43004
 		[NullableContext(0)]
 		private enum ENewItemTipsViewCom
 		{
-			// Token: 0x04039467 RID: 234599
+			// Token: 0x04033E2A RID: 212522
 			MainTypeIconTexture,
-			// Token: 0x04039468 RID: 234600
+			// Token: 0x04033E2B RID: 212523
 			ItemNameText,
-			// Token: 0x04039469 RID: 234601
+			// Token: 0x04033E2C RID: 212524
 			BuffItem,
-			// Token: 0x0403946A RID: 234602
+			// Token: 0x04033E2D RID: 212525
 			ItemDescribeText,
-			// Token: 0x0403946B RID: 234603
+			// Token: 0x04033E2E RID: 212526
 			QualityTexture,
-			// Token: 0x0403946C RID: 234604
+			// Token: 0x04033E2F RID: 212527
 			QualityNiagara,
-			// Token: 0x0403946D RID: 234605
+			// Token: 0x04033E30 RID: 212528
 			NewPanel,
-			// Token: 0x0403946E RID: 234606
+			// Token: 0x04033E31 RID: 212529
 			FlowTexture
 		}
 	}

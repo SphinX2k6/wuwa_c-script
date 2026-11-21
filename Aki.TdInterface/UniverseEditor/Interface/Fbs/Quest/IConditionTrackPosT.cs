@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DBC RID: 15804
+	// Token: 0x020041D3 RID: 16851
 	public class IConditionTrackPosT
 	{
-		// Token: 0x17006D18 RID: 27928
-		// (get) Token: 0x060160CD RID: 90317 RVA: 0x00330603 File Offset: 0x0032E803
-		// (set) Token: 0x060160CE RID: 90318 RVA: 0x0033060B File Offset: 0x0032E80B
+		// Token: 0x170072D2 RID: 29394
+		// (get) Token: 0x06017606 RID: 95750 RVA: 0x0035798B File Offset: 0x00355B8B
+		// (set) Token: 0x06017607 RID: 95751 RVA: 0x00357993 File Offset: 0x00355B93
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17006D19 RID: 27929
-		// (get) Token: 0x060160CF RID: 90319 RVA: 0x00330614 File Offset: 0x0032E814
-		// (set) Token: 0x060160D0 RID: 90320 RVA: 0x0033061C File Offset: 0x0032E81C
+		// Token: 0x170072D3 RID: 29395
+		// (get) Token: 0x06017608 RID: 95752 RVA: 0x0035799C File Offset: 0x00355B9C
+		// (set) Token: 0x06017609 RID: 95753 RVA: 0x003579A4 File Offset: 0x00355BA4
 		public IVectorInfoT TrackPos { get; set; }
 
-		// Token: 0x060160D1 RID: 90321 RVA: 0x00330625 File Offset: 0x0032E825
+		// Token: 0x0601760A RID: 95754 RVA: 0x003579AD File Offset: 0x00355BAD
 		public IConditionTrackPosT()
 		{
 			this.Condition = null;

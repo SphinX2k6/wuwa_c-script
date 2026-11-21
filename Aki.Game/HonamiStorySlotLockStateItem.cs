@@ -5,10 +5,10 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EA0 RID: 7840
+// Token: 0x02001362 RID: 4962
 public class HonamiStorySlotLockStateItem : UiPanelBase
 {
-	// Token: 0x0600F0BF RID: 61631 RVA: 0x0039D008 File Offset: 0x0039B208
+	// Token: 0x0600C4DE RID: 50398 RVA: 0x003A8BC4 File Offset: 0x003A6DC4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,26 +18,26 @@ public class HonamiStorySlotLockStateItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F0C0 RID: 61632 RVA: 0x0039D041 File Offset: 0x0039B241
+	// Token: 0x0600C4DF RID: 50399 RVA: 0x003A8BFD File Offset: 0x003A6DFD
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSeqEnd), false);
 	}
 
-	// Token: 0x0600F0C1 RID: 61633 RVA: 0x0039D06C File Offset: 0x0039B26C
+	// Token: 0x0600C4E0 RID: 50400 RVA: 0x003A8C28 File Offset: 0x003A6E28
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnLevelSeq));
 	}
 
-	// Token: 0x0600F0C2 RID: 61634 RVA: 0x0039D08A File Offset: 0x0039B28A
+	// Token: 0x0600C4E1 RID: 50401 RVA: 0x003A8C46 File Offset: 0x003A6E46
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnLevelSeq));
 	}
 
-	// Token: 0x0600F0C3 RID: 61635 RVA: 0x0039D0A8 File Offset: 0x0039B2A8
+	// Token: 0x0600C4E2 RID: 50402 RVA: 0x003A8C64 File Offset: 0x003A6E64
 	public void RefreshState(bool isLock, bool isFirstLock, bool canUpdate)
 	{
 		if (isLock)
@@ -105,7 +105,7 @@ public class HonamiStorySlotLockStateItem : UiPanelBase
 		this.IsLock = new bool?(isLock);
 	}
 
-	// Token: 0x0600F0C4 RID: 61636 RVA: 0x0039D1DC File Offset: 0x0039B3DC
+	// Token: 0x0600C4E3 RID: 50403 RVA: 0x003A8D98 File Offset: 0x003A6F98
 	public void RefreshUnlockState(bool isFirstLock = false)
 	{
 		if (this.IsFirstLock != null && !this.IsFirstLock.Value && isFirstLock)
@@ -129,7 +129,7 @@ public class HonamiStorySlotLockStateItem : UiPanelBase
 		this.IsFirstLock = new bool?(isFirstLock);
 	}
 
-	// Token: 0x0600F0C5 RID: 61637 RVA: 0x0039D294 File Offset: 0x0039B494
+	// Token: 0x0600C4E4 RID: 50404 RVA: 0x003A8E50 File Offset: 0x003A7050
 	[NullableContext(1)]
 	private void OnSeqEnd(string seqName)
 	{
@@ -150,7 +150,7 @@ public class HonamiStorySlotLockStateItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F0C6 RID: 61638 RVA: 0x0039D2F4 File Offset: 0x0039B4F4
+	// Token: 0x0600C4E5 RID: 50405 RVA: 0x003A8EB0 File Offset: 0x003A70B0
 	[NullableContext(1)]
 	private void OnLevelSeq(string param)
 	{
@@ -163,28 +163,28 @@ public class HonamiStorySlotLockStateItem : UiPanelBase
 		this.SetSpriteByPath(text ?? string.Empty, base.GetSprite(0), false, null, null);
 	}
 
-	// Token: 0x04006F59 RID: 28505
+	// Token: 0x0400703A RID: 28730
 	private bool? IsLock;
 
-	// Token: 0x04006F5A RID: 28506
+	// Token: 0x0400703B RID: 28731
 	private bool? IsFirstLock;
 
-	// Token: 0x04006F5B RID: 28507
+	// Token: 0x0400703C RID: 28732
 	private bool? CanUpdate;
 
-	// Token: 0x04006F5C RID: 28508
+	// Token: 0x0400703D RID: 28733
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04006F5D RID: 28509
+	// Token: 0x0400703E RID: 28734
 	private bool NeedCanUpdateAnim;
 
-	// Token: 0x02008469 RID: 33897
+	// Token: 0x020075EE RID: 30190
 	private enum ESlotLock
 	{
-		// Token: 0x0402B193 RID: 176531
+		// Token: 0x040264B7 RID: 156855
 		Sprite,
-		// Token: 0x0402B194 RID: 176532
+		// Token: 0x040264B8 RID: 156856
 		Niagara
 	}
 }

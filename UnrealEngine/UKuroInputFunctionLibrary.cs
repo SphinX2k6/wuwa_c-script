@@ -6,37 +6,37 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001998 RID: 6552
+	// Token: 0x0200044C RID: 1100
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroInput.KuroInputFunctionLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKuroInputFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601855E RID: 99678 RVA: 0x0023E23A File Offset: 0x0023C43A
+		// Token: 0x06006A12 RID: 27154 RVA: 0x0009AB7A File Offset: 0x00098D7A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroInputFunctionLibrary._ClassPtr;
 		}
 
-		// Token: 0x0601855F RID: 99679 RVA: 0x0023E248 File Offset: 0x0023C448
+		// Token: 0x06006A13 RID: 27155 RVA: 0x0009AB88 File Offset: 0x00098D88
 		public UKuroInputFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(UKuroInputFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06018560 RID: 99680 RVA: 0x0023E270 File Offset: 0x0023C470
+		// Token: 0x06006A14 RID: 27156 RVA: 0x0009ABB0 File Offset: 0x00098DB0
 		[NullableContext(1)]
 		public UKuroInputFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroInputFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06018561 RID: 99681 RVA: 0x0023E2A3 File Offset: 0x0023C4A3
+		// Token: 0x06006A15 RID: 27157 RVA: 0x0009ABE3 File Offset: 0x00098DE3
 		public static void TryUseHighPrecisionMouseMovement(APlayerController InPlayerController, bool bUse)
 		{
 			UKuroInputFunctionLibrary.__TryUseHighPrecisionMouseMovement_Internal((InPlayerController != null) ? InPlayerController.NativePtr : IntPtr.Zero, bUse);
 		}
 
-		// Token: 0x06018562 RID: 99682 RVA: 0x0023E2BC File Offset: 0x0023C4BC
+		// Token: 0x06006A16 RID: 27158 RVA: 0x0009ABFC File Offset: 0x00098DFC
 		[NullableContext(1)]
 		public unsafe static FInputModeReply SetUIOnlyInputMode([Nullable(2)] APlayerController InPlayerController, string Reason, bool bLockMouseToViewport = false)
 		{
@@ -46,7 +46,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06018563 RID: 99683 RVA: 0x0023E2F8 File Offset: 0x0023C4F8
+		// Token: 0x06006A17 RID: 27159 RVA: 0x0009AC38 File Offset: 0x00098E38
 		[NullableContext(1)]
 		public unsafe static FInputModeReply SetGameOnlyInputMode([Nullable(2)] APlayerController InPlayerController, string Reason)
 		{
@@ -56,7 +56,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06018564 RID: 99684 RVA: 0x0023E334 File Offset: 0x0023C534
+		// Token: 0x06006A18 RID: 27160 RVA: 0x0009AC74 File Offset: 0x00098E74
 		[NullableContext(1)]
 		public unsafe static FInputModeReply SetGameAndUIInputMode([Nullable(2)] APlayerController InPlayerController, string Reason, bool bLockMouseToViewport = false, bool bHideCursorDuringCapture = false)
 		{
@@ -66,59 +66,59 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06018565 RID: 99685 RVA: 0x0023E370 File Offset: 0x0023C570
+		// Token: 0x06006A19 RID: 27161 RVA: 0x0009ACB0 File Offset: 0x00098EB0
 		public static void ResetInputMode(APlayerController InPlayerController)
 		{
 			UKuroInputFunctionLibrary.__ResetInputMode_Internal((InPlayerController != null) ? InPlayerController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06018566 RID: 99686 RVA: 0x0023E387 File Offset: 0x0023C587
+		// Token: 0x06006A1A RID: 27162 RVA: 0x0009ACC7 File Offset: 0x00098EC7
 		public static void ReplyInputMode(APlayerController InPlayerController, FInputModeReply InputModeReply)
 		{
 			UKuroInputFunctionLibrary.__ReplyInputMode_Internal((InPlayerController != null) ? InPlayerController.NativePtr : IntPtr.Zero, (InputModeReply ?? new FInputModeReply()).NativePtr);
 		}
 
-		// Token: 0x06018567 RID: 99687 RVA: 0x0023E3AD File Offset: 0x0023C5AD
+		// Token: 0x06006A1B RID: 27163 RVA: 0x0009ACED File Offset: 0x00098EED
 		public static bool HasInputModeReply(FInputModeReply InputModeReply)
 		{
 			return UKuroInputFunctionLibrary.__HasInputModeReply_Internal((InputModeReply ?? new FInputModeReply()).NativePtr);
 		}
 
-		// Token: 0x06018568 RID: 99688 RVA: 0x0023E3C3 File Offset: 0x0023C5C3
+		// Token: 0x06006A1C RID: 27164 RVA: 0x0009AD03 File Offset: 0x00098F03
 		public static void ClearTouchBindings(APlayerController PlayerController)
 		{
 			UKuroInputFunctionLibrary.__ClearTouchBindings_Internal((PlayerController != null) ? PlayerController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06018569 RID: 99689 RVA: 0x0023E3DA File Offset: 0x0023C5DA
+		// Token: 0x06006A1D RID: 27165 RVA: 0x0009AD1A File Offset: 0x00098F1A
 		public static void ClearKeyBindings(APlayerController PlayerController)
 		{
 			UKuroInputFunctionLibrary.__ClearKeyBindings_Internal((PlayerController != null) ? PlayerController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601856A RID: 99690
+		// Token: 0x06006A1E RID: 27166
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void ClearInputModeReply();
 
-		// Token: 0x0601856B RID: 99691 RVA: 0x0023E3F1 File Offset: 0x0023C5F1
+		// Token: 0x06006A1F RID: 27167 RVA: 0x0009AD31 File Offset: 0x00098F31
 		public static void ClearAxisBindings(APlayerController PlayerController)
 		{
 			UKuroInputFunctionLibrary.__ClearAxisBindings_Internal((PlayerController != null) ? PlayerController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601856C RID: 99692 RVA: 0x0023E408 File Offset: 0x0023C608
+		// Token: 0x06006A20 RID: 27168 RVA: 0x0009AD48 File Offset: 0x00098F48
 		public static void ClearActionBindings(APlayerController PlayerController)
 		{
 			UKuroInputFunctionLibrary.__ClearActionBindings_Internal((PlayerController != null) ? PlayerController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601856D RID: 99693 RVA: 0x0023E41F File Offset: 0x0023C61F
+		// Token: 0x06006A21 RID: 27169 RVA: 0x0009AD5F File Offset: 0x00098F5F
 		public static void ApplyInputMode(APlayerController InPlayerController)
 		{
 			UKuroInputFunctionLibrary.__ApplyInputMode_Internal((InPlayerController != null) ? InPlayerController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601856E RID: 99694 RVA: 0x0023E438 File Offset: 0x0023C638
+		// Token: 0x06006A22 RID: 27170 RVA: 0x0009AD78 File Offset: 0x00098F78
 		public unsafe static void AddTouchBinding(APlayerController PlayerController, EInputEvent KeyEvent, UObject Object, in FName FuncName)
 		{
 			fixed (FName* ptr = &FuncName)
@@ -128,7 +128,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601856F RID: 99695 RVA: 0x0023E47C File Offset: 0x0023C67C
+		// Token: 0x06006A23 RID: 27171 RVA: 0x0009ADBC File Offset: 0x00098FBC
 		public unsafe static void AddKeyBinding(APlayerController PlayerController, in FInputChord Chord, EInputEvent KeyEvent, UObject Object, in FName FuncName)
 		{
 			fixed (FName* ptr = &FuncName)
@@ -138,7 +138,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06018570 RID: 99696 RVA: 0x0023E4D0 File Offset: 0x0023C6D0
+		// Token: 0x06006A24 RID: 27172 RVA: 0x0009AE10 File Offset: 0x00099010
 		public unsafe static void AddAxisBinding(APlayerController PlayerController, in FName AxisName, UObject Object, in FName FuncName)
 		{
 			fixed (FName* ptr = &AxisName)
@@ -153,7 +153,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06018571 RID: 99697 RVA: 0x0023E514 File Offset: 0x0023C714
+		// Token: 0x06006A25 RID: 27173 RVA: 0x0009AE54 File Offset: 0x00099054
 		public unsafe static void AddActionBinding(APlayerController PlayerController, in FName ActionName, EInputEvent KeyEvent, UObject Object, in FName FuncName)
 		{
 			fixed (FName* ptr = &ActionName)
@@ -168,92 +168,92 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06018572 RID: 99698
+		// Token: 0x06006A26 RID: 27174
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __TryUseHighPrecisionMouseMovement_Internal(IntPtr InPlayerController, bool bUse);
 
-		// Token: 0x06018573 RID: 99699
+		// Token: 0x06006A27 RID: 27175
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __SetUIOnlyInputMode_Internal(IntPtr InPlayerController, in FString Reason, bool bLockMouseToViewport);
 
-		// Token: 0x06018574 RID: 99700
+		// Token: 0x06006A28 RID: 27176
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __SetGameOnlyInputMode_Internal(IntPtr InPlayerController, in FString Reason);
 
-		// Token: 0x06018575 RID: 99701
+		// Token: 0x06006A29 RID: 27177
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __SetGameAndUIInputMode_Internal(IntPtr InPlayerController, in FString Reason, bool bLockMouseToViewport, bool bHideCursorDuringCapture);
 
-		// Token: 0x06018576 RID: 99702
+		// Token: 0x06006A2A RID: 27178
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResetInputMode_Internal(IntPtr InPlayerController);
 
-		// Token: 0x06018577 RID: 99703
+		// Token: 0x06006A2B RID: 27179
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReplyInputMode_Internal(IntPtr InPlayerController, IntPtr InputModeReply);
 
-		// Token: 0x06018578 RID: 99704
+		// Token: 0x06006A2C RID: 27180
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasInputModeReply_Internal(IntPtr InputModeReply);
 
-		// Token: 0x06018579 RID: 99705
+		// Token: 0x06006A2D RID: 27181
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearTouchBindings_Internal(IntPtr PlayerController);
 
-		// Token: 0x0601857A RID: 99706
+		// Token: 0x06006A2E RID: 27182
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearKeyBindings_Internal(IntPtr PlayerController);
 
-		// Token: 0x0601857B RID: 99707
+		// Token: 0x06006A2F RID: 27183
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearAxisBindings_Internal(IntPtr PlayerController);
 
-		// Token: 0x0601857C RID: 99708
+		// Token: 0x06006A30 RID: 27184
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearActionBindings_Internal(IntPtr PlayerController);
 
-		// Token: 0x0601857D RID: 99709
+		// Token: 0x06006A31 RID: 27185
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ApplyInputMode_Internal(IntPtr InPlayerController);
 
-		// Token: 0x0601857E RID: 99710
+		// Token: 0x06006A32 RID: 27186
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddTouchBinding_Internal(IntPtr PlayerController, TEnumAsByte<EInputEvent> KeyEvent, IntPtr Object, in FName FuncName);
 
-		// Token: 0x0601857F RID: 99711
+		// Token: 0x06006A33 RID: 27187
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddKeyBinding_Internal(IntPtr PlayerController, IntPtr Chord, TEnumAsByte<EInputEvent> KeyEvent, IntPtr Object, in FName FuncName);
 
-		// Token: 0x06018580 RID: 99712
+		// Token: 0x06006A34 RID: 27188
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddAxisBinding_Internal(IntPtr PlayerController, in FName AxisName, IntPtr Object, in FName FuncName);
 
-		// Token: 0x06018581 RID: 99713
+		// Token: 0x06006A35 RID: 27189
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddActionBinding_Internal(IntPtr PlayerController, in FName ActionName, TEnumAsByte<EInputEvent> KeyEvent, IntPtr Object, in FName FuncName);
 
-		// Token: 0x06018582 RID: 99714 RVA: 0x0023E560 File Offset: 0x0023C760
+		// Token: 0x06006A36 RID: 27190 RVA: 0x0009AEA0 File Offset: 0x000990A0
 		static UKuroInputFunctionLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroInput.KuroInputFunctionLibrary");
 		}
 
-		// Token: 0x06018583 RID: 99715 RVA: 0x0023E56E File Offset: 0x0023C76E
+		// Token: 0x06006A37 RID: 27191 RVA: 0x0009AEAE File Offset: 0x000990AE
 		protected UKuroInputFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D29C RID: 53916
+		// Token: 0x04002D08 RID: 11528
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroInput.KuroInputFunctionLibrary";
 
-		// Token: 0x0400D29D RID: 53917
+		// Token: 0x04002D09 RID: 11529
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D29E RID: 53918
+		// Token: 0x04002D0A RID: 11530
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

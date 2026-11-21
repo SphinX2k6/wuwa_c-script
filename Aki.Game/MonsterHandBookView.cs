@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Character.Kpose.Blueprint;
 using CSharpScript.Game.Module.RoleUi;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E36 RID: 7734
+// Token: 0x020012F8 RID: 4856
 [NullableContext(2)]
 [Nullable(0)]
 public class MonsterHandBookView : UiViewBase
 {
-	// Token: 0x0600EB15 RID: 60181 RVA: 0x0037B11B File Offset: 0x0037931B
+	// Token: 0x0600BF34 RID: 48948 RVA: 0x00386DA7 File Offset: 0x00384FA7
 	[NullableContext(1)]
 	public MonsterHandBookView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600EB16 RID: 60182 RVA: 0x0037B13C File Offset: 0x0037933C
+	// Token: 0x0600BF35 RID: 48949 RVA: 0x00386DC8 File Offset: 0x00384FC8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -58,7 +58,7 @@ public class MonsterHandBookView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600EB17 RID: 60183 RVA: 0x0037B39C File Offset: 0x0037959C
+	// Token: 0x0600BF36 RID: 48950 RVA: 0x00387028 File Offset: 0x00385228
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MonsterHandBookView.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
@@ -69,15 +69,15 @@ public class MonsterHandBookView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EB18 RID: 60184 RVA: 0x0037B3E0 File Offset: 0x003795E0
+	// Token: 0x0600BF37 RID: 48951 RVA: 0x0038706C File Offset: 0x0038526C
 	protected override void OnBeforeShowImplementImplement()
 	{
 		this.RefreshCollectText();
 		int[] allHandBookMonsterIdList = HandBookModel.Instance.GetAllHandBookMonsterIdList();
-		this.FilterBtn.UpdateData(EFilterSortGroupId.MonsterHandBook, allHandBookMonsterIdList.ToList<int>(), Array.Empty<object>());
+		this.FilterBtn.UpdateData(EFilterSortGroupId.MonsterHandBook, new List<int>(allHandBookMonsterIdList), Array.Empty<object>());
 	}
 
-	// Token: 0x0600EB19 RID: 60185 RVA: 0x0037B418 File Offset: 0x00379618
+	// Token: 0x0600BF38 RID: 48952 RVA: 0x003870A4 File Offset: 0x003852A4
 	private void RefeshView()
 	{
 		if (this.RefreshLockState())
@@ -97,7 +97,7 @@ public class MonsterHandBookView : UiViewBase
 		this.RefreshSkinBtn(monsterHandBookConfigById.Value.MonsterId);
 	}
 
-	// Token: 0x0600EB1A RID: 60186 RVA: 0x0037B514 File Offset: 0x00379714
+	// Token: 0x0600BF39 RID: 48953 RVA: 0x003871A0 File Offset: 0x003853A0
 	private bool RefreshLockState()
 	{
 		base.GetButton(12).RootUIComp.Get().SetUIActive(!this.IsLock);
@@ -132,7 +132,7 @@ public class MonsterHandBookView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x0600EB1B RID: 60187 RVA: 0x0037B640 File Offset: 0x00379840
+	// Token: 0x0600BF3A RID: 48954 RVA: 0x003872CC File Offset: 0x003854CC
 	private void RefreshCollectText()
 	{
 		int[] collectProgress = HandBookController.Instance.GetCollectProgress(EHandBookTabType.Monster);
@@ -143,7 +143,7 @@ public class MonsterHandBookView : UiViewBase
 		}));
 	}
 
-	// Token: 0x0600EB1C RID: 60188 RVA: 0x0037B690 File Offset: 0x00379890
+	// Token: 0x0600BF3B RID: 48955 RVA: 0x0038731C File Offset: 0x0038551C
 	[NullableContext(1)]
 	private MonsterHandBookItem CreateNodeGrid(object data, UUIItem uiItem, int index)
 	{
@@ -153,7 +153,7 @@ public class MonsterHandBookView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600EB1D RID: 60189 RVA: 0x0037B6AC File Offset: 0x003798AC
+	// Token: 0x0600BF3C RID: 48956 RVA: 0x00387338 File Offset: 0x00385538
 	[NullableContext(1)]
 	private void OnClickMonsterItemCallBack(UUIExtendToggle toggle, int handBookId, bool isLock)
 	{
@@ -183,7 +183,7 @@ public class MonsterHandBookView : UiViewBase
 		this.ReadMonsterHandBook(handBookId);
 	}
 
-	// Token: 0x0600EB1E RID: 60190 RVA: 0x0037B730 File Offset: 0x00379930
+	// Token: 0x0600BF3D RID: 48957 RVA: 0x003873BC File Offset: 0x003855BC
 	[NullableContext(1)]
 	private void OnFilterUpdate(List<int> list, bool isOutSideChange, EFilterSortType OperationType)
 	{
@@ -241,7 +241,7 @@ public class MonsterHandBookView : UiViewBase
 		monsterGenericLayout.RefreshByData(list4.ToArray(), false, false);
 	}
 
-	// Token: 0x0600EB1F RID: 60191 RVA: 0x0037B964 File Offset: 0x00379B64
+	// Token: 0x0600BF3E RID: 48958 RVA: 0x003875F0 File Offset: 0x003857F0
 	private void LoadVision()
 	{
 		if (this.BpHandle != -1 || UiSceneManager.Instance.GetHandBookVision() != null)
@@ -268,7 +268,7 @@ public class MonsterHandBookView : UiViewBase
 		}, 100, this.MemoryTag);
 	}
 
-	// Token: 0x0600EB20 RID: 60192 RVA: 0x0037BA58 File Offset: 0x00379C58
+	// Token: 0x0600BF3F RID: 48959 RVA: 0x003876E4 File Offset: 0x003858E4
 	[NullableContext(1)]
 	private void SetVisionInfo(int monsterId, UClass csClass)
 	{
@@ -307,10 +307,10 @@ public class MonsterHandBookView : UiViewBase
 		this.MeshStreamTaskId = MeshStreamController.Instance.AddMeshStreamTask(meshStreamTaskContext);
 	}
 
-	// Token: 0x0600EB21 RID: 60193 RVA: 0x0037BB80 File Offset: 0x00379D80
+	// Token: 0x0600BF40 RID: 48960 RVA: 0x0038780C File Offset: 0x00385A0C
 	private void OnLoadFinish(int monsterId)
 	{
-		UiCameraControlRotationComponent uiCameraComponent = UiCameraManager.Get().GetUiCameraComponent<UiCameraControlRotationComponent>();
+		UiCameraLogicComponent uiCameraComponent = UiCameraModel.Instance.GetOrCreateCamera().GetUiCameraComponent<UiCameraLogicComponent>();
 		BP_KposeBase_C handBookVision = UiSceneManager.Instance.GetHandBookVision();
 		if (handBookVision == null)
 		{
@@ -327,8 +327,11 @@ public class MonsterHandBookView : UiViewBase
 		{
 			return;
 		}
-		UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(monsterHandBookConfigById.Value.HandBookCamera, false, false, "1001", false, null, null);
-		uiCameraComponent.SetArmLength((float)handBookVision.CameraArmLength);
+		UiCameraModel.Instance.PushCameraHandleByHandleName(monsterHandBookConfigById.Value.HandBookCamera, false, false, "1001", false, null);
+		if (uiCameraComponent != null)
+		{
+			uiCameraComponent.SetArmLength((float)handBookVision.CameraArmLength);
+		}
 		UiSceneManager.Instance.ShowHandBookVision();
 		if (handBookVision != null)
 		{
@@ -342,7 +345,7 @@ public class MonsterHandBookView : UiViewBase
 		loadingItem.SetLoadingActive(false);
 	}
 
-	// Token: 0x0600EB22 RID: 60194 RVA: 0x0037BC64 File Offset: 0x00379E64
+	// Token: 0x0600BF41 RID: 48961 RVA: 0x003878EC File Offset: 0x00385AEC
 	private void DestroyVision()
 	{
 		if (this.BpHandle != -1)
@@ -361,14 +364,14 @@ public class MonsterHandBookView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EB23 RID: 60195 RVA: 0x0037BCC7 File Offset: 0x00379EC7
+	// Token: 0x0600BF42 RID: 48962 RVA: 0x0038794F File Offset: 0x00385B4F
 	protected override void OnBeforeDestroy()
 	{
 		this.DestroyVision();
 		this.LoadingItem.Destroy(null);
 	}
 
-	// Token: 0x0600EB24 RID: 60196 RVA: 0x0037BCDC File Offset: 0x00379EDC
+	// Token: 0x0600BF43 RID: 48963 RVA: 0x00387964 File Offset: 0x00385B64
 	private void EnterInternalView()
 	{
 		if (this.IsInternal)
@@ -388,8 +391,8 @@ public class MonsterHandBookView : UiViewBase
 			this.CaptionItem.SetCloseBtnActive(false);
 		}
 		this.IsInternal = true;
-		UiCamera uiCamera = UiCameraManager.Get();
-		UiCameraControlRotationComponent rotationComponent = uiCamera.GetUiCameraComponent<UiCameraControlRotationComponent>();
+		UiCamera orCreateCamera = UiCameraModel.Instance.GetOrCreateCamera();
+		UiCameraBlendComponent blendComponent = orCreateCamera.GetUiCameraComponent<UiCameraBlendComponent>();
 		MonsterHandBook? monsterHandBookConfigById = HandBookConfig.Instance.GetMonsterHandBookConfigById(this.CurrentSelectedMonsterInfoId);
 		if (monsterHandBookConfigById == null)
 		{
@@ -400,14 +403,19 @@ public class MonsterHandBookView : UiViewBase
 		{
 			if (curve != null)
 			{
-				rotationComponent.DoMoveForward((float)bodyTypeConfig.Value.MoveForwardDistance, (float)bodyTypeConfig.Value.MoveForwardDuration, curve);
+				UiCameraBlendComponent blendComponent = blendComponent;
+				if (blendComponent == null)
+				{
+					return;
+				}
+				blendComponent.DoMoveForward((float)bodyTypeConfig.Value.MoveForwardDistance, (float)bodyTypeConfig.Value.MoveForwardDuration, curve);
 			}
 		}, 100, this.MemoryTag);
 		this.VisionCameraInputItem.CanPitchInput = true;
 		this.RefreshInternal();
 	}
 
-	// Token: 0x0600EB25 RID: 60197 RVA: 0x0037BE1C File Offset: 0x0037A01C
+	// Token: 0x0600BF44 RID: 48964 RVA: 0x00387AA8 File Offset: 0x00385CA8
 	private void QuitInternalView()
 	{
 		if (!this.IsInternal)
@@ -439,8 +447,9 @@ public class MonsterHandBookView : UiViewBase
 		}
 		uuiitem.SetUIActive(uiactive);
 		this.IsInternal = false;
-		UiCamera uiCamera = UiCameraManager.Get();
-		UiCameraControlRotationComponent rotationComponent = uiCamera.GetUiCameraComponent<UiCameraControlRotationComponent>();
+		UiCamera orCreateCamera = UiCameraModel.Instance.GetOrCreateCamera();
+		UiCameraLogicComponent logicComponent = orCreateCamera.GetUiCameraComponent<UiCameraLogicComponent>();
+		UiCameraBlendComponent blendComponent = orCreateCamera.GetUiCameraComponent<UiCameraBlendComponent>();
 		MonsterHandBook? monsterHandBookConfigById = HandBookConfig.Instance.GetMonsterHandBookConfigById(this.CurrentSelectedMonsterInfoId);
 		if (monsterHandBookConfigById == null)
 		{
@@ -454,9 +463,22 @@ public class MonsterHandBookView : UiViewBase
 				BP_KposeBase_C handBookVision = UiSceneManager.Instance.GetHandBookVision();
 				if (handBookVision != null && handBookVision.IsValid())
 				{
-					rotationComponent.SetArmLength((float)handBookVision.CameraArmLength);
-					rotationComponent.SetArmRotationByDefaultCamera();
-					rotationComponent.StartFade((float)bodyTypeConfig.Value.MoveForwardDuration, curve, true, true, true, true);
+					UiCameraLogicComponent logicComponent = logicComponent;
+					if (logicComponent != null)
+					{
+						logicComponent.SetArmLength((float)handBookVision.CameraArmLength);
+					}
+					UiCameraLogicComponent logicComponent2 = logicComponent;
+					if (logicComponent2 != null)
+					{
+						logicComponent2.SetArmRotationByDefaultCamera();
+					}
+					UiCameraBlendComponent blendComponent = blendComponent;
+					if (blendComponent == null)
+					{
+						return;
+					}
+					blendComponent.StartFade((float)bodyTypeConfig.Value.MoveForwardDuration, curve, true, true, true, true);
 				}
 			}
 		}, 100, this.MemoryTag);
@@ -464,7 +486,7 @@ public class MonsterHandBookView : UiViewBase
 		this.RefreshInternal();
 	}
 
-	// Token: 0x0600EB26 RID: 60198 RVA: 0x0037BF94 File Offset: 0x0037A194
+	// Token: 0x0600BF45 RID: 48965 RVA: 0x00387C34 File Offset: 0x00385E34
 	private void RefreshInternal()
 	{
 		base.GetItem(18).SetUIActive(!this.IsInternal);
@@ -475,7 +497,7 @@ public class MonsterHandBookView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EB27 RID: 60199 RVA: 0x0037BFEC File Offset: 0x0037A1EC
+	// Token: 0x0600BF46 RID: 48966 RVA: 0x00387C8C File Offset: 0x00385E8C
 	private void OnMonsterSkinBtnClick()
 	{
 		if (this.SkinList == null)
@@ -509,13 +531,13 @@ public class MonsterHandBookView : UiViewBase
 		this.RefeshView();
 	}
 
-	// Token: 0x0600EB28 RID: 60200 RVA: 0x0037C110 File Offset: 0x0037A310
+	// Token: 0x0600BF47 RID: 48967 RVA: 0x00387DB0 File Offset: 0x00385FB0
 	private void OnBackCheckBtnClick()
 	{
 		this.QuitInternalView();
 	}
 
-	// Token: 0x0600EB29 RID: 60201 RVA: 0x0037C118 File Offset: 0x0037A318
+	// Token: 0x0600BF48 RID: 48968 RVA: 0x00387DB8 File Offset: 0x00385FB8
 	private void RefreshSkinBtn(int monsterId)
 	{
 		if (this.IsShowingSkin)
@@ -539,7 +561,7 @@ public class MonsterHandBookView : UiViewBase
 		this.ShowSkinIndex = 0;
 	}
 
-	// Token: 0x0600EB2A RID: 60202 RVA: 0x0037C1BC File Offset: 0x0037A3BC
+	// Token: 0x0600BF49 RID: 48969 RVA: 0x00387E5C File Offset: 0x0038605C
 	private void ReadMonsterHandBook(int handBookId)
 	{
 		HandBookEntry handBookInfo = HandBookModel.Instance.GetHandBookInfo(EHandBookTabType.Monster, handBookId);
@@ -553,10 +575,10 @@ public class MonsterHandBookView : UiViewBase
 		}
 	}
 
-	// Token: 0x04006D0D RID: 27917
+	// Token: 0x04006DEE RID: 28142
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04006D0E RID: 27918
+	// Token: 0x04006DEF RID: 28143
 	[Nullable(new byte[]
 	{
 		2,
@@ -566,113 +588,113 @@ public class MonsterHandBookView : UiViewBase
 	})]
 	private DynamicScrollView<MonsterHandBookItem, MonsterHandBookDynamicItem, MonsterHandBookDynamicData> MonsterGenericLayout;
 
-	// Token: 0x04006D0F RID: 27919
+	// Token: 0x04006DF0 RID: 28144
 	private UUIExtendToggle CurrentToggle;
 
-	// Token: 0x04006D10 RID: 27920
+	// Token: 0x04006DF1 RID: 28145
 	private FilterSortEntrance<int> FilterBtn;
 
-	// Token: 0x04006D11 RID: 27921
+	// Token: 0x04006DF2 RID: 28146
 	private MonsterHandBookDynamicItem MonsterBaseItem;
 
-	// Token: 0x04006D12 RID: 27922
+	// Token: 0x04006DF3 RID: 28147
 	private int BpHandle = -1;
 
-	// Token: 0x04006D13 RID: 27923
+	// Token: 0x04006DF4 RID: 28148
 	private RoleModelLoadingItem LoadingItem;
 
-	// Token: 0x04006D14 RID: 27924
+	// Token: 0x04006DF5 RID: 28149
 	private int MeshStreamTaskId = -1;
 
-	// Token: 0x04006D15 RID: 27925
+	// Token: 0x04006DF6 RID: 28150
 	private VisionCameraInputItem VisionCameraInputItem;
 
-	// Token: 0x04006D16 RID: 27926
+	// Token: 0x04006DF7 RID: 28151
 	private bool IsInternal;
 
-	// Token: 0x04006D17 RID: 27927
+	// Token: 0x04006DF8 RID: 28152
 	private int CurrentSelectedMonsterInfoId;
 
-	// Token: 0x04006D18 RID: 27928
+	// Token: 0x04006DF9 RID: 28153
 	private bool IsLock = true;
 
-	// Token: 0x04006D19 RID: 27929
+	// Token: 0x04006DFA RID: 28154
 	private int[] SkinList;
 
-	// Token: 0x04006D1A RID: 27930
+	// Token: 0x04006DFB RID: 28155
 	private int ShowSkinIndex;
 
-	// Token: 0x04006D1B RID: 27931
+	// Token: 0x04006DFC RID: 28156
 	private bool IsShowingSkin;
 
-	// Token: 0x020083E6 RID: 33766
+	// Token: 0x0200756B RID: 30059
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402AEFB RID: 175867
+		// Token: 0x0402621E RID: 156190
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402AEFC RID: 175868
+		// Token: 0x0402621F RID: 156191
 		public const int DragItem = 1;
 
-		// Token: 0x0402AEFD RID: 175869
+		// Token: 0x04026220 RID: 156192
 		public const int CollectText = 2;
 
-		// Token: 0x0402AEFE RID: 175870
+		// Token: 0x04026221 RID: 156193
 		public const int CollectNumText = 3;
 
-		// Token: 0x0402AEFF RID: 175871
+		// Token: 0x04026222 RID: 156194
 		public const int MonsterScrollView = 4;
 
-		// Token: 0x0402AF00 RID: 175872
+		// Token: 0x04026223 RID: 156195
 		public const int MonsterItem = 5;
 
-		// Token: 0x0402AF01 RID: 175873
+		// Token: 0x04026224 RID: 156196
 		public const int SortFilterItem = 6;
 
-		// Token: 0x0402AF02 RID: 175874
+		// Token: 0x04026225 RID: 156197
 		public const int MonsterNameText = 7;
 
-		// Token: 0x0402AF03 RID: 175875
+		// Token: 0x04026226 RID: 156198
 		public const int MonsterLevelNameText = 8;
 
-		// Token: 0x0402AF04 RID: 175876
+		// Token: 0x04026227 RID: 156199
 		public const int ElementLayout = 9;
 
-		// Token: 0x0402AF05 RID: 175877
+		// Token: 0x04026228 RID: 156200
 		public const int ElementItem = 10;
 
-		// Token: 0x0402AF06 RID: 175878
+		// Token: 0x04026229 RID: 156201
 		public const int DesText = 11;
 
-		// Token: 0x0402AF07 RID: 175879
+		// Token: 0x0402622A RID: 156202
 		public const int CheckBtn = 12;
 
-		// Token: 0x0402AF08 RID: 175880
+		// Token: 0x0402622B RID: 156203
 		public const int SkinBtn = 13;
 
-		// Token: 0x0402AF09 RID: 175881
+		// Token: 0x0402622C RID: 156204
 		public const int PoseLayout = 14;
 
-		// Token: 0x0402AF0A RID: 175882
+		// Token: 0x0402622D RID: 156205
 		public const int PoseItem = 15;
 
-		// Token: 0x0402AF0B RID: 175883
+		// Token: 0x0402622E RID: 156206
 		public const int UnLockItem = 16;
 
-		// Token: 0x0402AF0C RID: 175884
+		// Token: 0x0402622F RID: 156207
 		public const int NoneItem = 17;
 
-		// Token: 0x0402AF0D RID: 175885
+		// Token: 0x04026230 RID: 156208
 		public const int LeftItem = 18;
 
-		// Token: 0x0402AF0E RID: 175886
+		// Token: 0x04026231 RID: 156209
 		public const int NoneAText = 19;
 
-		// Token: 0x0402AF0F RID: 175887
+		// Token: 0x04026232 RID: 156210
 		public const int NoneBText = 20;
 
-		// Token: 0x0402AF10 RID: 175888
+		// Token: 0x04026233 RID: 156211
 		public const int BackCheckBtn = 21;
 	}
 }

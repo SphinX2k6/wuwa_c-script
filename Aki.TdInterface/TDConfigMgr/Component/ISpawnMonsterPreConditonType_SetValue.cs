@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006ED RID: 1773
+	// Token: 0x0200078E RID: 1934
 	public class ISpawnMonsterPreConditonType_SetValue
 	{
-		// Token: 0x040019F9 RID: 6649
+		// Token: 0x04001BF8 RID: 7160
 		public ESpawnMonsterPreCondition Type;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200022D RID: 557
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000254 RID: 596
 	public class IChantConfig
 	{
-		// Token: 0x060009B6 RID: 2486 RVA: 0x00029C08 File Offset: 0x00027E08
+		// Token: 0x06000A2A RID: 2602 RVA: 0x0002B3C8 File Offset: 0x000295C8
 		private IChantConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060009B7 RID: 2487 RVA: 0x00029C40 File Offset: 0x00027E40
+		// Token: 0x06000A2B RID: 2603 RVA: 0x0002B400 File Offset: 0x00029600
 		public static IChantConfig Create([Nullable(2)] IChantConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060009B8 RID: 2488 RVA: 0x00029C53 File Offset: 0x00027E53
+		// Token: 0x06000A2C RID: 2604 RVA: 0x0002B413 File Offset: 0x00029613
 		public static IChantConfig CreateFromSetValue([Nullable(2)] IChantConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060009B9 RID: 2489 RVA: 0x00029C66 File Offset: 0x00027E66
+		// Token: 0x06000A2D RID: 2605 RVA: 0x0002B426 File Offset: 0x00029626
 		public IChantConfig_SetValue ToSetValue()
 		{
 			return new IChantConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170002F5 RID: 757
-		// (get) Token: 0x060009BA RID: 2490 RVA: 0x00029C91 File Offset: 0x00027E91
-		// (set) Token: 0x060009BB RID: 2491 RVA: 0x00029CBC File Offset: 0x00027EBC
+		// Token: 0x17000314 RID: 788
+		// (get) Token: 0x06000A2E RID: 2606 RVA: 0x0002B451 File Offset: 0x00029651
+		// (set) Token: 0x06000A2F RID: 2607 RVA: 0x0002B47C File Offset: 0x0002967C
 		public virtual int ChantTime
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002F6 RID: 758
-		// (get) Token: 0x060009BC RID: 2492 RVA: 0x00029CCA File Offset: 0x00027ECA
-		// (set) Token: 0x060009BD RID: 2493 RVA: 0x00029CF5 File Offset: 0x00027EF5
+		// Token: 0x17000315 RID: 789
+		// (get) Token: 0x06000A30 RID: 2608 RVA: 0x0002B48A File Offset: 0x0002968A
+		// (set) Token: 0x06000A31 RID: 2609 RVA: 0x0002B4B5 File Offset: 0x000296B5
 		public virtual string ChantCameraShake
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002F7 RID: 759
-		// (get) Token: 0x060009BE RID: 2494 RVA: 0x00029D03 File Offset: 0x00027F03
-		// (set) Token: 0x060009BF RID: 2495 RVA: 0x00029D2E File Offset: 0x00027F2E
+		// Token: 0x17000316 RID: 790
+		// (get) Token: 0x06000A32 RID: 2610 RVA: 0x0002B4C3 File Offset: 0x000296C3
+		// (set) Token: 0x06000A33 RID: 2611 RVA: 0x0002B4EE File Offset: 0x000296EE
 		public virtual string ChantCameraStateTag
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040009F7 RID: 2551
+		// Token: 0x04000A81 RID: 2689
 		[Nullable(2)]
 		protected IChantConfig FbInstance;
 
-		// Token: 0x040009F8 RID: 2552
+		// Token: 0x04000A82 RID: 2690
 		[Nullable(2)]
 		protected IChantConfig_SetValue PocoInterface;
 	}

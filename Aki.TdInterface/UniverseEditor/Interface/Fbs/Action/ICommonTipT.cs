@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200647E RID: 25726
+	// Token: 0x02006AE9 RID: 27369
 	public class ICommonTipT
 	{
-		// Token: 0x1700BF74 RID: 49012
-		// (get) Token: 0x0602C94E RID: 182606 RVA: 0x0061F8C7 File Offset: 0x0061DAC7
-		// (set) Token: 0x0602C94F RID: 182607 RVA: 0x0061F8CF File Offset: 0x0061DACF
+		// Token: 0x1700C901 RID: 51457
+		// (get) Token: 0x0602F0C8 RID: 192712 RVA: 0x0066B49B File Offset: 0x0066969B
+		// (set) Token: 0x0602F0C9 RID: 192713 RVA: 0x0066B4A3 File Offset: 0x006696A3
 		public TCommonTipOptionUnion TipOption { get; set; }
 
-		// Token: 0x1700BF75 RID: 49013
-		// (get) Token: 0x0602C950 RID: 182608 RVA: 0x0061F8D8 File Offset: 0x0061DAD8
-		// (set) Token: 0x0602C951 RID: 182609 RVA: 0x0061F8E0 File Offset: 0x0061DAE0
+		// Token: 0x1700C902 RID: 51458
+		// (get) Token: 0x0602F0CA RID: 192714 RVA: 0x0066B4AC File Offset: 0x006696AC
+		// (set) Token: 0x0602F0CB RID: 192715 RVA: 0x0066B4B4 File Offset: 0x006696B4
 		public int Duration { get; set; }
 
-		// Token: 0x1700BF76 RID: 49014
-		// (get) Token: 0x0602C952 RID: 182610 RVA: 0x0061F8E9 File Offset: 0x0061DAE9
-		// (set) Token: 0x0602C953 RID: 182611 RVA: 0x0061F8F1 File Offset: 0x0061DAF1
+		// Token: 0x1700C903 RID: 51459
+		// (get) Token: 0x0602F0CC RID: 192716 RVA: 0x0066B4BD File Offset: 0x006696BD
+		// (set) Token: 0x0602F0CD RID: 192717 RVA: 0x0066B4C5 File Offset: 0x006696C5
 		public string Token { get; set; }
 
-		// Token: 0x1700BF77 RID: 49015
-		// (get) Token: 0x0602C954 RID: 182612 RVA: 0x0061F8FA File Offset: 0x0061DAFA
-		// (set) Token: 0x0602C955 RID: 182613 RVA: 0x0061F902 File Offset: 0x0061DB02
+		// Token: 0x1700C904 RID: 51460
+		// (get) Token: 0x0602F0CE RID: 192718 RVA: 0x0066B4CE File Offset: 0x006696CE
+		// (set) Token: 0x0602F0CF RID: 192719 RVA: 0x0066B4D6 File Offset: 0x006696D6
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602C956 RID: 182614 RVA: 0x0061F90B File Offset: 0x0061DB0B
+		// Token: 0x0602F0D0 RID: 192720 RVA: 0x0066B4DF File Offset: 0x006696DF
 		public ICommonTipT()
 		{
 			this.TipOption = null;

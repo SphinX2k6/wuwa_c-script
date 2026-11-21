@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -15,18 +14,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 {
-	// Token: 0x02006864 RID: 26724
+	// Token: 0x020057B4 RID: 22452
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBattleReportPlayer
 	{
-		// Token: 0x06042BA2 RID: 273314 RVA: 0x0103ABD9 File Offset: 0x01038DD9
+		// Token: 0x060376F7 RID: 227063 RVA: 0x00F7C125 File Offset: 0x00F7A325
 		public bool IsFightOver()
 		{
 			return this.HasReportFightOver;
 		}
 
-		// Token: 0x06042BA3 RID: 273315 RVA: 0x0103ABE4 File Offset: 0x01038DE4
+		// Token: 0x060376F8 RID: 227064 RVA: 0x00F7C130 File Offset: 0x00F7A330
 		private void DriveTerminalAnimation()
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -54,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			obj4.PlayVictorySequence();
 		}
 
-		// Token: 0x06042BA4 RID: 273316 RVA: 0x0103AC80 File Offset: 0x01038E80
+		// Token: 0x060376F9 RID: 227065 RVA: 0x00F7C1CC File Offset: 0x00F7A3CC
 		private void LogFightOver(DangoBrawlBattleManager manager, bool selfWin)
 		{
 			DangoBrawlFightingClock fightingClock = manager.FightingClock;
@@ -65,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BA5 RID: 273317 RVA: 0x0103ACCC File Offset: 0x01038ECC
+		// Token: 0x060376FA RID: 227066 RVA: 0x00F7C218 File Offset: 0x00F7A418
 		private static int GetHpForLog(DangoBrawlBattleManager manager, bool isSelf)
 		{
 			ActivityGameplayEntity entity = manager.GetEntity(isSelf);
@@ -77,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return dangoAttributeComponent.GetAttribute(1);
 		}
 
-		// Token: 0x06042BA6 RID: 273318 RVA: 0x0103ACFC File Offset: 0x01038EFC
+		// Token: 0x060376FB RID: 227067 RVA: 0x00F7C248 File Offset: 0x00F7A448
 		private void TryChangeToRoundSettle()
 		{
 			if (this.HasChangedToSettle)
@@ -133,19 +132,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			battleFsm.ChangeState(EDangoBrawlFsmState.RoundSettle).Forget();
 		}
 
-		// Token: 0x17009789 RID: 38793
-		// (get) Token: 0x06042BA7 RID: 273319 RVA: 0x0103AE08 File Offset: 0x01039008
+		// Token: 0x17006ACA RID: 27338
+		// (get) Token: 0x060376FC RID: 227068 RVA: 0x00F7C354 File Offset: 0x00F7A554
 		public DangoBrawlBattleSkillManager SkillManager { get; } = new DangoBrawlBattleSkillManager();
 
-		// Token: 0x1700978A RID: 38794
-		// (get) Token: 0x06042BA8 RID: 273320 RVA: 0x0103AE10 File Offset: 0x01039010
+		// Token: 0x17006ACB RID: 27339
+		// (get) Token: 0x060376FD RID: 227069 RVA: 0x00F7C35C File Offset: 0x00F7A55C
 		public DangoBrawlBattleBuffManager BuffManager { get; } = new DangoBrawlBattleBuffManager();
 
-		// Token: 0x1700978B RID: 38795
-		// (get) Token: 0x06042BA9 RID: 273321 RVA: 0x0103AE18 File Offset: 0x01039018
+		// Token: 0x17006ACC RID: 27340
+		// (get) Token: 0x060376FE RID: 227070 RVA: 0x00F7C364 File Offset: 0x00F7A564
 		public DangoBrawlBattleFatigueDamageManager FatigueDamageManager { get; } = new DangoBrawlBattleFatigueDamageManager();
 
-		// Token: 0x06042BAA RID: 273322 RVA: 0x0103AE20 File Offset: 0x01039020
+		// Token: 0x060376FF RID: 227071 RVA: 0x00F7C36C File Offset: 0x00F7A56C
 		public void Init()
 		{
 			this.SkillManager.Init();
@@ -154,7 +153,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.BuildDualTracks();
 		}
 
-		// Token: 0x06042BAB RID: 273323 RVA: 0x0103AE4C File Offset: 0x0103904C
+		// Token: 0x06037700 RID: 227072 RVA: 0x00F7C398 File Offset: 0x00F7A598
 		public void Tick(float delta)
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -203,7 +202,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BAC RID: 273324 RVA: 0x0103AF78 File Offset: 0x01039178
+		// Token: 0x06037701 RID: 227073 RVA: 0x00F7C4C4 File Offset: 0x00F7A6C4
 		private void TryResetDamageGeometryWhenIdle()
 		{
 			UDamageUiManager ueDamageUiManager = DamageUiManager.Instance.UeDamageUiManager;
@@ -228,7 +227,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BAD RID: 273325 RVA: 0x0103AFD8 File Offset: 0x010391D8
+		// Token: 0x06037702 RID: 227074 RVA: 0x00F7C524 File Offset: 0x00F7A724
 		private bool StateAdvancedBuffSince(int stateBefore)
 		{
 			for (int i = stateBefore; i < this.NextStateIdx; i++)
@@ -242,7 +241,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return false;
 		}
 
-		// Token: 0x06042BAE RID: 273326 RVA: 0x0103B01B File Offset: 0x0103921B
+		// Token: 0x06037703 RID: 227075 RVA: 0x00F7C567 File Offset: 0x00F7A767
 		public void Destroy()
 		{
 			this.ClearAllPerformances();
@@ -251,7 +250,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.FatigueDamageManager.Destroy();
 		}
 
-		// Token: 0x06042BAF RID: 273327 RVA: 0x0103B044 File Offset: 0x01039244
+		// Token: 0x06037704 RID: 227076 RVA: 0x00F7C590 File Offset: 0x00F7A790
 		private void ClearAllPerformances()
 		{
 			foreach (TimerHandle timerHandle in this.PendingHandles)
@@ -266,7 +265,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.ActiveEffectIds.Clear();
 		}
 
-		// Token: 0x06042BB0 RID: 273328 RVA: 0x0103B104 File Offset: 0x01039304
+		// Token: 0x06037705 RID: 227077 RVA: 0x00F7C650 File Offset: 0x00F7A850
 		public void BuildDualTracks()
 		{
 			this.StateTrack.Clear();
@@ -296,7 +295,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.LogTracksBuilt(list);
 		}
 
-		// Token: 0x06042BB1 RID: 273329 RVA: 0x0103B1CC File Offset: 0x010393CC
+		// Token: 0x06037706 RID: 227078 RVA: 0x00F7C718 File Offset: 0x00F7A918
 		private void LogTracksBuilt(List<IDangoBrawlBattleAction> report)
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -314,7 +313,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BB2 RID: 273330 RVA: 0x0103B258 File Offset: 0x01039458
+		// Token: 0x06037707 RID: 227079 RVA: 0x00F7C7A4 File Offset: 0x00F7A9A4
 		private void ResolveTrueLoser(List<IDangoBrawlBattleAction> report)
 		{
 			for (int i = report.Count - 1; i >= 0; i--)
@@ -328,7 +327,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.TrueLoserFighterUId = -1;
 		}
 
-		// Token: 0x06042BB3 RID: 273331 RVA: 0x0103B2A8 File Offset: 0x010394A8
+		// Token: 0x06037708 RID: 227080 RVA: 0x00F7C7F4 File Offset: 0x00F7A9F4
 		[NullableContext(2)]
 		private DangoBrawlBattleReportPlayer.StateEntry FindLoserFatalHpEntry()
 		{
@@ -344,7 +343,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return stateEntry;
 		}
 
-		// Token: 0x06042BB4 RID: 273332 RVA: 0x0103B334 File Offset: 0x01039534
+		// Token: 0x06037709 RID: 227081 RVA: 0x00F7C880 File Offset: 0x00F7AA80
 		private void RetimeLoserDeathToFatalHp()
 		{
 			if (this.TrueLoserFighterUId == -1)
@@ -365,7 +364,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BB5 RID: 273333 RVA: 0x0103B3C8 File Offset: 0x010395C8
+		// Token: 0x0603770A RID: 227082 RVA: 0x00F7C914 File Offset: 0x00F7AB14
 		private void TruncateTracksAtDeath()
 		{
 			if (this.TrueLoserFighterUId == -1)
@@ -397,7 +396,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.VisualTrack.RemoveAll((DangoBrawlBattleReportPlayer.VisualCue c) => c.SettleMs > deathMs);
 		}
 
-		// Token: 0x06042BB6 RID: 273334 RVA: 0x0103B4FC File Offset: 0x010396FC
+		// Token: 0x0603770B RID: 227083 RVA: 0x00F7CA48 File Offset: 0x00F7AC48
 		private void BuildAnimTrack(List<IDangoBrawlBattleAction> report)
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -410,7 +409,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.BuildAnimTrackForSide(report, battleManager, false, this.OpponentAnimTrack, montageSpaceTime);
 		}
 
-		// Token: 0x06042BB7 RID: 273335 RVA: 0x0103B544 File Offset: 0x01039744
+		// Token: 0x0603770C RID: 227084 RVA: 0x00F7CA90 File Offset: 0x00F7AC90
 		private void BuildAnimTrackForSide(List<IDangoBrawlBattleAction> report, DangoBrawlBattleManager manager, bool isSelf, List<DangoBrawlBattleReportPlayer.AnimCue> track, int spaceTimeMs)
 		{
 			ActivityGameplayEntity entity = manager.GetEntity(isSelf);
@@ -446,7 +445,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			});
 		}
 
-		// Token: 0x06042BB8 RID: 273336 RVA: 0x0103B614 File Offset: 0x01039814
+		// Token: 0x0603770D RID: 227085 RVA: 0x00F7CB60 File Offset: 0x00F7AD60
 		private void InitAttrSnapshotFromFighters()
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -471,19 +470,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 						}
 					}
 					this.AttrSnapshotForBuild[key] = dictionary;
-					string.Join(",", dictionary.Select(delegate(KeyValuePair<int, int> p)
-					{
-						DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
-						defaultInterpolatedStringHandler.AppendFormatted<DangoBrawlProType>((DangoBrawlProType)p.Key);
-						defaultInterpolatedStringHandler.AppendLiteral("=");
-						defaultInterpolatedStringHandler.AppendFormatted<int>(p.Value);
-						return defaultInterpolatedStringHandler.ToStringAndClear();
-					}));
 				}
 			}
 		}
 
-		// Token: 0x06042BB9 RID: 273337 RVA: 0x0103B750 File Offset: 0x01039950
+		// Token: 0x0603770E RID: 227086 RVA: 0x00F7CC68 File Offset: 0x00F7AE68
 		private List<DangoBrawlBattleReportPlayer.BattleActionGroupEx> BuildGroupsEx(List<IDangoBrawlBattleAction> report)
 		{
 			List<DangoBrawlBattleReportPlayer.BattleActionGroupEx> list = new List<DangoBrawlBattleReportPlayer.BattleActionGroupEx>();
@@ -556,7 +547,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return list;
 		}
 
-		// Token: 0x06042BBA RID: 273338 RVA: 0x0103B9E8 File Offset: 0x01039BE8
+		// Token: 0x0603770F RID: 227087 RVA: 0x00F7CF00 File Offset: 0x00F7B100
 		private unsafe void DispatchToTracks(List<IDangoBrawlBattleAction> report, List<DangoBrawlBattleReportPlayer.BattleActionGroupEx> groupsEx)
 		{
 			Dictionary<int, DangoBrawlBattleReportPlayer.BattleActionGroupEx> dictionary = new Dictionary<int, DangoBrawlBattleReportPlayer.BattleActionGroupEx>();
@@ -623,7 +614,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BBB RID: 273339 RVA: 0x0103BBE4 File Offset: 0x01039DE4
+		// Token: 0x06037710 RID: 227088 RVA: 0x00F7D0FC File Offset: 0x00F7B2FC
 		private void DispatchAttrChangeToState(IDangoBrawlBattleAction action, DangoBrawlBattleReportPlayer.BattleActionGroupEx group, int originalIdx)
 		{
 			DangoBrawlFightActionAttrChangeInfo attrChange = action.AttrChange;
@@ -766,7 +757,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BBC RID: 273340 RVA: 0x0103C030 File Offset: 0x0103A230
+		// Token: 0x06037711 RID: 227089 RVA: 0x00F7D548 File Offset: 0x00F7B748
 		private unsafe void DispatchVisualForAction(IDangoBrawlBattleAction action, DangoBrawlBattleReportPlayer.BattleActionGroupEx group, int originalIdx)
 		{
 			bool flag;
@@ -925,22 +916,58 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BBD RID: 273341 RVA: 0x0103C4E0 File Offset: 0x0103A6E0
+		// Token: 0x06037712 RID: 227090 RVA: 0x00F7D9F8 File Offset: 0x00F7BBF8
 		private void SortTracksStable()
 		{
-			List<DangoBrawlBattleReportPlayer.StateEntry> collection = (from e in this.StateTrack
-			orderby e.ApplyMs, e.OriginalIndex, e.SegmentIndex
-			select e).ToList<DangoBrawlBattleReportPlayer.StateEntry>();
-			this.StateTrack.Clear();
-			this.StateTrack.AddRange(collection);
-			List<DangoBrawlBattleReportPlayer.VisualCue> collection2 = (from c in this.VisualTrack
-			orderby c.SettleMs, c.OriginalIndex, c.SegmentIndex
-			select c).ToList<DangoBrawlBattleReportPlayer.VisualCue>();
-			this.VisualTrack.Clear();
-			this.VisualTrack.AddRange(collection2);
+			List<DangoBrawlBattleReportPlayer.StateEntry> stateTrack = this.StateTrack;
+			Comparison<DangoBrawlBattleReportPlayer.StateEntry> comparison;
+			if ((comparison = DangoBrawlBattleReportPlayer.<>O.<0>__CompareStateEntry) == null)
+			{
+				comparison = (DangoBrawlBattleReportPlayer.<>O.<0>__CompareStateEntry = new Comparison<DangoBrawlBattleReportPlayer.StateEntry>(DangoBrawlBattleReportPlayer.CompareStateEntry));
+			}
+			NoLinq.SortStable<DangoBrawlBattleReportPlayer.StateEntry>(stateTrack, comparison);
+			List<DangoBrawlBattleReportPlayer.VisualCue> visualTrack = this.VisualTrack;
+			Comparison<DangoBrawlBattleReportPlayer.VisualCue> comparison2;
+			if ((comparison2 = DangoBrawlBattleReportPlayer.<>O.<1>__CompareVisualCue) == null)
+			{
+				comparison2 = (DangoBrawlBattleReportPlayer.<>O.<1>__CompareVisualCue = new Comparison<DangoBrawlBattleReportPlayer.VisualCue>(DangoBrawlBattleReportPlayer.CompareVisualCue));
+			}
+			NoLinq.SortStable<DangoBrawlBattleReportPlayer.VisualCue>(visualTrack, comparison2);
 		}
 
-		// Token: 0x06042BBE RID: 273342 RVA: 0x0103C60C File Offset: 0x0103A80C
+		// Token: 0x06037713 RID: 227091 RVA: 0x00F7DA54 File Offset: 0x00F7BC54
+		private static int CompareStateEntry(DangoBrawlBattleReportPlayer.StateEntry a, DangoBrawlBattleReportPlayer.StateEntry b)
+		{
+			int num = a.ApplyMs.CompareTo(b.ApplyMs);
+			if (num != 0)
+			{
+				return num;
+			}
+			num = a.OriginalIndex.CompareTo(b.OriginalIndex);
+			if (num != 0)
+			{
+				return num;
+			}
+			return a.SegmentIndex.CompareTo(b.SegmentIndex);
+		}
+
+		// Token: 0x06037714 RID: 227092 RVA: 0x00F7DAA0 File Offset: 0x00F7BCA0
+		private static int CompareVisualCue(DangoBrawlBattleReportPlayer.VisualCue a, DangoBrawlBattleReportPlayer.VisualCue b)
+		{
+			int num = a.SettleMs.CompareTo(b.SettleMs);
+			if (num != 0)
+			{
+				return num;
+			}
+			num = a.OriginalIndex.CompareTo(b.OriginalIndex);
+			if (num != 0)
+			{
+				return num;
+			}
+			return a.SegmentIndex.CompareTo(b.SegmentIndex);
+		}
+
+		// Token: 0x06037715 RID: 227093 RVA: 0x00F7DAEC File Offset: 0x00F7BCEC
 		private void TickStateTrack(int nowMs)
 		{
 			while (this.NextStateIdx < this.StateTrack.Count && this.StateTrack[this.NextStateIdx].ApplyMs <= nowMs)
@@ -950,7 +977,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BBF RID: 273343 RVA: 0x0103C66C File Offset: 0x0103A86C
+		// Token: 0x06037716 RID: 227094 RVA: 0x00F7DB4C File Offset: 0x00F7BD4C
 		private void TickVisualTrack(int nowMs)
 		{
 			while (this.NextVisualIdx < this.VisualTrack.Count && this.VisualTrack[this.NextVisualIdx].SettleMs <= nowMs)
@@ -960,7 +987,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BC0 RID: 273344 RVA: 0x0103C6CC File Offset: 0x0103A8CC
+		// Token: 0x06037717 RID: 227095 RVA: 0x00F7DBAC File Offset: 0x00F7BDAC
 		private void TickAnimTracks(int nowMs)
 		{
 			if (this.HasReportFightOver)
@@ -983,7 +1010,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BC1 RID: 273345 RVA: 0x0103C788 File Offset: 0x0103A988
+		// Token: 0x06037718 RID: 227096 RVA: 0x00F7DC68 File Offset: 0x00F7BE68
 		private unsafe void PlayAnimCue(DangoBrawlBattleReportPlayer.AnimCue cue)
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -1022,7 +1049,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BC2 RID: 273346 RVA: 0x0103C8D0 File Offset: 0x0103AAD0
+		// Token: 0x06037719 RID: 227097 RVA: 0x00F7DDB0 File Offset: 0x00F7BFB0
 		[NullableContext(2)]
 		private void PostDangoAudio(bool isSelf, string eventName)
 		{
@@ -1057,7 +1084,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			AudioSystem.Instance.PostEvent(eventName, acharacter2, null);
 		}
 
-		// Token: 0x06042BC3 RID: 273347 RVA: 0x0103C93C File Offset: 0x0103AB3C
+		// Token: 0x0603771A RID: 227098 RVA: 0x00F7DE1C File Offset: 0x00F7C01C
 		private void FlushAnimTracksToIdle()
 		{
 			this.NextSelfAnimIdx = this.SelfAnimTrack.Count;
@@ -1092,7 +1119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			component2.PlayMontage(EDangoBrawlMontageState.Idle);
 		}
 
-		// Token: 0x06042BC4 RID: 273348 RVA: 0x0103C9BC File Offset: 0x0103ABBC
+		// Token: 0x0603771B RID: 227099 RVA: 0x00F7DE9C File Offset: 0x00F7C09C
 		private void ApplyStateEntry(DangoBrawlBattleReportPlayer.StateEntry entry)
 		{
 			if (entry.AttrDeltas != null)
@@ -1148,7 +1175,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BC5 RID: 273349 RVA: 0x0103CB20 File Offset: 0x0103AD20
+		// Token: 0x0603771C RID: 227100 RVA: 0x00F7E000 File Offset: 0x00F7C200
 		private void PlayVisualCue(DangoBrawlBattleReportPlayer.VisualCue cue)
 		{
 			if (cue.Action.SkillCast != null)
@@ -1266,7 +1293,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BC6 RID: 273350 RVA: 0x0103CEC0 File Offset: 0x0103B0C0
+		// Token: 0x0603771D RID: 227101 RVA: 0x00F7E3A0 File Offset: 0x00F7C5A0
 		private string DescribeVisualCue(DangoBrawlBattleReportPlayer.VisualCue cue)
 		{
 			IDangoBrawlBattleAction action = cue.Action;
@@ -1385,7 +1412,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return "Unknown";
 		}
 
-		// Token: 0x06042BC7 RID: 273351 RVA: 0x0103D380 File Offset: 0x0103B580
+		// Token: 0x0603771E RID: 227102 RVA: 0x00F7E860 File Offset: 0x00F7CA60
 		private static string DescribeFighterUid(int fighterUid)
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -1404,7 +1431,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06042BC8 RID: 273352 RVA: 0x0103D404 File Offset: 0x0103B604
+		// Token: 0x0603771F RID: 227103 RVA: 0x00F7E8E4 File Offset: 0x00F7CAE4
 		private static string DescribeItemUid(int itemUid)
 		{
 			if (itemUid == 0)
@@ -1427,7 +1454,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06042BC9 RID: 273353 RVA: 0x0103D478 File Offset: 0x0103B678
+		// Token: 0x06037720 RID: 227104 RVA: 0x00F7E958 File Offset: 0x00F7CB58
 		private string DescribeBuffUid(int buffUid)
 		{
 			int itemUid;
@@ -1444,7 +1471,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06042BCA RID: 273354 RVA: 0x0103D4DC File Offset: 0x0103B6DC
+		// Token: 0x06037721 RID: 227105 RVA: 0x00F7E9BC File Offset: 0x00F7CBBC
 		private void ReportSimpleDamageAction(IDangoBrawlBattleAction action, int segmentIndex)
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -1510,13 +1537,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BCB RID: 273355 RVA: 0x0103D6B6 File Offset: 0x0103B8B6
+		// Token: 0x06037722 RID: 227106 RVA: 0x00F7EB96 File Offset: 0x00F7CD96
 		private int GetSegmentHitDelay(int skillConfigId, int segmentIndex)
 		{
 			return this.SkillManager.GetSegmentHitDelayMs(skillConfigId, segmentIndex);
 		}
 
-		// Token: 0x06042BCC RID: 273356 RVA: 0x0103D6C5 File Offset: 0x0103B8C5
+		// Token: 0x06037723 RID: 227107 RVA: 0x00F7EBA5 File Offset: 0x00F7CDA5
 		private void ForceFlushStateTrack()
 		{
 			while (this.NextStateIdx < this.StateTrack.Count)
@@ -1526,7 +1553,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BCD RID: 273357 RVA: 0x0103D704 File Offset: 0x0103B904
+		// Token: 0x06037724 RID: 227108 RVA: 0x00F7EBE4 File Offset: 0x00F7CDE4
 		private static int ExtractTargetFighterUId(IDangoBrawlBattleAction action)
 		{
 			if (action.AttrChange != null)
@@ -1556,7 +1583,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return 0;
 		}
 
-		// Token: 0x06042BCE RID: 273358 RVA: 0x0103D78C File Offset: 0x0103B98C
+		// Token: 0x06037725 RID: 227109 RVA: 0x00F7EC6C File Offset: 0x00F7CE6C
 		[NullableContext(2)]
 		private static DangoAttributeComponent GetAttrComp(int fighterUid)
 		{
@@ -1574,157 +1601,170 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return entity.GetComponent<DangoAttributeComponent>();
 		}
 
-		// Token: 0x06042BCF RID: 273359 RVA: 0x0103D7C4 File Offset: 0x0103B9C4
+		// Token: 0x06037726 RID: 227110 RVA: 0x00F7ECA4 File Offset: 0x00F7CEA4
 		private static bool IsHpLikeAttr(int attrKey)
 		{
 			return attrKey == 1 || attrKey == 7;
 		}
 
-		// Token: 0x04022BBB RID: 142267
+		// Token: 0x0401D418 RID: 119832
 		private readonly List<TimerHandle> PendingHandles = new List<TimerHandle>();
 
-		// Token: 0x04022BBC RID: 142268
+		// Token: 0x0401D419 RID: 119833
 		private readonly List<int> ActiveEffectIds = new List<int>();
 
-		// Token: 0x04022BBD RID: 142269
+		// Token: 0x0401D41A RID: 119834
 		private readonly float MaxTime = 60000f;
 
-		// Token: 0x04022BBE RID: 142270
+		// Token: 0x0401D41B RID: 119835
 		private bool HasReportFightOver;
 
-		// Token: 0x04022BBF RID: 142271
+		// Token: 0x0401D41C RID: 119836
 		private bool HasChangedToSettle;
 
-		// Token: 0x04022BC0 RID: 142272
+		// Token: 0x0401D41D RID: 119837
 		private float TerminalStartMs = -1f;
 
-		// Token: 0x04022BC1 RID: 142273
+		// Token: 0x0401D41E RID: 119838
 		private const float TerminalTimeoutMs = 5000f;
 
-		// Token: 0x04022BC2 RID: 142274
+		// Token: 0x0401D41F RID: 119839
 		private bool HasNotifiedFatigueFirstTime;
 
-		// Token: 0x04022BC3 RID: 142275
+		// Token: 0x0401D420 RID: 119840
 		private bool HasPendingDamageGeometryReset;
 
-		// Token: 0x04022BC7 RID: 142279
+		// Token: 0x0401D424 RID: 119844
 		private readonly List<DangoBrawlBattleReportPlayer.StateEntry> StateTrack = new List<DangoBrawlBattleReportPlayer.StateEntry>();
 
-		// Token: 0x04022BC8 RID: 142280
+		// Token: 0x0401D425 RID: 119845
 		private readonly List<DangoBrawlBattleReportPlayer.VisualCue> VisualTrack = new List<DangoBrawlBattleReportPlayer.VisualCue>();
 
-		// Token: 0x04022BC9 RID: 142281
+		// Token: 0x0401D426 RID: 119846
 		private int NextStateIdx;
 
-		// Token: 0x04022BCA RID: 142282
+		// Token: 0x0401D427 RID: 119847
 		private int NextVisualIdx;
 
-		// Token: 0x04022BCB RID: 142283
+		// Token: 0x0401D428 RID: 119848
 		private readonly Dictionary<int, Dictionary<int, int>> AttrSnapshotForBuild = new Dictionary<int, Dictionary<int, int>>();
 
-		// Token: 0x04022BCC RID: 142284
+		// Token: 0x0401D429 RID: 119849
 		private const int NoLoser = -1;
 
-		// Token: 0x04022BCD RID: 142285
+		// Token: 0x0401D42A RID: 119850
 		private int TrueLoserFighterUId = -1;
 
-		// Token: 0x04022BCE RID: 142286
+		// Token: 0x0401D42B RID: 119851
 		private readonly List<DangoBrawlBattleReportPlayer.AnimCue> SelfAnimTrack = new List<DangoBrawlBattleReportPlayer.AnimCue>();
 
-		// Token: 0x04022BCF RID: 142287
+		// Token: 0x0401D42C RID: 119852
 		private readonly List<DangoBrawlBattleReportPlayer.AnimCue> OpponentAnimTrack = new List<DangoBrawlBattleReportPlayer.AnimCue>();
 
-		// Token: 0x04022BD0 RID: 142288
+		// Token: 0x0401D42D RID: 119853
 		private int NextSelfAnimIdx;
 
-		// Token: 0x04022BD1 RID: 142289
+		// Token: 0x0401D42E RID: 119854
 		private int NextOpponentAnimIdx;
 
-		// Token: 0x0200CA33 RID: 51763
+		// Token: 0x0200B3FD RID: 46077
 		[NullableContext(0)]
 		public class StateEntry
 		{
-			// Token: 0x0403D1DE RID: 250334
+			// Token: 0x04037AC3 RID: 228035
 			public int ApplyMs;
 
-			// Token: 0x0403D1DF RID: 250335
+			// Token: 0x04037AC4 RID: 228036
 			public int SourceGroupUid;
 
-			// Token: 0x0403D1E0 RID: 250336
+			// Token: 0x04037AC5 RID: 228037
 			public int OriginalIndex;
 
-			// Token: 0x0403D1E1 RID: 250337
+			// Token: 0x04037AC6 RID: 228038
 			public int SegmentIndex;
 
-			// Token: 0x0403D1E2 RID: 250338
+			// Token: 0x04037AC7 RID: 228039
 			public int TargetFighterUId;
 
-			// Token: 0x0403D1E3 RID: 250339
+			// Token: 0x04037AC8 RID: 228040
 			[Nullable(1)]
 			public IDangoBrawlBattleAction Action;
 
-			// Token: 0x0403D1E4 RID: 250340
+			// Token: 0x04037AC9 RID: 228041
 			[Nullable(2)]
 			public Dictionary<int, int> AttrDeltas;
 
-			// Token: 0x0403D1E5 RID: 250341
+			// Token: 0x04037ACA RID: 228042
 			public bool ForceLoserZero;
 		}
 
-		// Token: 0x0200CA34 RID: 51764
+		// Token: 0x0200B3FE RID: 46078
 		[NullableContext(0)]
 		public class VisualCue
 		{
-			// Token: 0x0403D1E6 RID: 250342
+			// Token: 0x04037ACB RID: 228043
 			public int SettleMs;
 
-			// Token: 0x0403D1E7 RID: 250343
+			// Token: 0x04037ACC RID: 228044
 			public int SourceGroupUid;
 
-			// Token: 0x0403D1E8 RID: 250344
+			// Token: 0x04037ACD RID: 228045
 			public int OriginalIndex;
 
-			// Token: 0x0403D1E9 RID: 250345
+			// Token: 0x04037ACE RID: 228046
 			public int SegmentIndex;
 
-			// Token: 0x0403D1EA RID: 250346
+			// Token: 0x04037ACF RID: 228047
 			[Nullable(1)]
 			public IDangoBrawlBattleAction Action;
 		}
 
-		// Token: 0x0200CA35 RID: 51765
+		// Token: 0x0200B3FF RID: 46079
 		[Nullable(0)]
 		public class BattleActionGroupEx
 		{
-			// Token: 0x0403D1EB RID: 250347
+			// Token: 0x04037AD0 RID: 228048
 			public int GroupUid;
 
-			// Token: 0x0403D1EC RID: 250348
+			// Token: 0x04037AD1 RID: 228049
 			public int TriggerMs;
 
-			// Token: 0x0403D1ED RID: 250349
+			// Token: 0x04037AD2 RID: 228050
 			public List<int> SegmentSettleMsList = new List<int>();
 
-			// Token: 0x0403D1EE RID: 250350
+			// Token: 0x04037AD3 RID: 228051
 			public List<IDangoBrawlBattleAction> Actions = new List<IDangoBrawlBattleAction>();
 
-			// Token: 0x0403D1EF RID: 250351
+			// Token: 0x04037AD4 RID: 228052
 			[Nullable(2)]
 			public DangoBrawlFightActionSkillCastInfo SkillCastRef;
 		}
 
-		// Token: 0x0200CA36 RID: 51766
+		// Token: 0x0200B400 RID: 46080
 		[NullableContext(0)]
 		public class AnimCue
 		{
-			// Token: 0x0403D1F0 RID: 250352
+			// Token: 0x04037AD5 RID: 228053
 			public int TriggerMs;
 
-			// Token: 0x0403D1F1 RID: 250353
+			// Token: 0x04037AD6 RID: 228054
 			public EDangoBrawlMontageState State;
 
-			// Token: 0x0403D1F2 RID: 250354
+			// Token: 0x04037AD7 RID: 228055
 			public bool IsSelf;
+		}
+
+		// Token: 0x0200B401 RID: 46081
+		[CompilerGenerated]
+		private static class <>O
+		{
+			// Token: 0x04037AD8 RID: 228056
+			[Nullable(0)]
+			public static Comparison<DangoBrawlBattleReportPlayer.StateEntry> <0>__CompareStateEntry;
+
+			// Token: 0x04037AD9 RID: 228057
+			[Nullable(0)]
+			public static Comparison<DangoBrawlBattleReportPlayer.VisualCue> <1>__CompareVisualCue;
 		}
 	}
 }

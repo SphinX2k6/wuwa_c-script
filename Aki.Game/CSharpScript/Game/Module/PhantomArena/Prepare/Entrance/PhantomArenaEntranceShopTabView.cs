@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
@@ -9,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x02005167 RID: 20839
+	// Token: 0x02004137 RID: 16695
 	public class PhantomArenaEntranceShopTabView : UiTabViewBase
 	{
-		// Token: 0x06035475 RID: 218229 RVA: 0x00C9DDD4 File Offset: 0x00C9BFD4
+		// Token: 0x0602A371 RID: 172913 RVA: 0x00BEB304 File Offset: 0x00BE9504
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,51 +21,51 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x06035476 RID: 218230 RVA: 0x00C9DE10 File Offset: 0x00C9C010
+		// Token: 0x0602A372 RID: 172914 RVA: 0x00BEB340 File Offset: 0x00BE9540
 		protected override void OnStart()
 		{
 			this.ActivityId = (int)this.ExtraParams;
 			this.ScrollView = new LoopScrollView<PhantomArenaEntranceShopItem, IPayShopUnionData>(base.GetLoopScrollViewComponent(0), base.GetItem(1).GetOwner() as AUIBaseActor, new Func<PhantomArenaEntranceShopItem>(this.InitItem), false);
 		}
 
-		// Token: 0x06035477 RID: 218231 RVA: 0x00C9DE5E File Offset: 0x00C9C05E
+		// Token: 0x0602A373 RID: 172915 RVA: 0x00BEB38E File Offset: 0x00BE958E
 		protected override void OnBeforeDestroy()
 		{
 			this.ScrollView = null;
 		}
 
-		// Token: 0x06035478 RID: 218232 RVA: 0x00C9DE67 File Offset: 0x00C9C067
+		// Token: 0x0602A374 RID: 172916 RVA: 0x00BEB397 File Offset: 0x00BE9597
 		protected override void OnBeforeShow()
 		{
 			this.OnRefreshGoods();
 		}
 
-		// Token: 0x06035479 RID: 218233 RVA: 0x00C9DE6F File Offset: 0x00C9C06F
+		// Token: 0x0602A375 RID: 172917 RVA: 0x00BEB39F File Offset: 0x00BE959F
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.EventRefreshGoods));
 		}
 
-		// Token: 0x0603547A RID: 218234 RVA: 0x00C9DE8D File Offset: 0x00C9C08D
+		// Token: 0x0602A376 RID: 172918 RVA: 0x00BEB3BD File Offset: 0x00BE95BD
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.EventRefreshGoods));
 		}
 
-		// Token: 0x0603547B RID: 218235 RVA: 0x00C9DEAB File Offset: 0x00C9C0AB
+		// Token: 0x0602A377 RID: 172919 RVA: 0x00BEB3DB File Offset: 0x00BE95DB
 		[NullableContext(1)]
 		protected PhantomArenaEntranceShopItem InitItem()
 		{
 			return new PhantomArenaEntranceShopItem();
 		}
 
-		// Token: 0x0603547C RID: 218236 RVA: 0x00C9DEB2 File Offset: 0x00C9C0B2
+		// Token: 0x0602A378 RID: 172920 RVA: 0x00BEB3E2 File Offset: 0x00BE95E2
 		protected void EventRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType payShopId, int tabId)
 		{
 			this.OnRefreshGoods();
 		}
 
-		// Token: 0x0603547D RID: 218237 RVA: 0x00C9DEBC File Offset: 0x00C9C0BC
+		// Token: 0x0602A379 RID: 172921 RVA: 0x00BEB3EC File Offset: 0x00BE95EC
 		protected void OnRefreshGoods()
 		{
 			PhantomArenaModel.Instance.OnShopViewOpen(this.ActivityId);
@@ -76,13 +75,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			{
 				return;
 			}
-			scrollView.RefreshByData(shopList.Cast<IPayShopUnionData>().ToList<IPayShopUnionData>(), false, null, true);
+			scrollView.RefreshByData(shopList.ConvertAll<IPayShopUnionData>(([Nullable(1)] object shop) => (IPayShopUnionData)shop), false, null, true);
 		}
 
-		// Token: 0x0401C572 RID: 116082
+		// Token: 0x04016FA7 RID: 94119
 		protected int ActivityId;
 
-		// Token: 0x0401C573 RID: 116083
+		// Token: 0x04016FA8 RID: 94120
 		[Nullable(new byte[]
 		{
 			2,
@@ -91,13 +90,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 		})]
 		private LoopScrollView<PhantomArenaEntranceShopItem, IPayShopUnionData> ScrollView;
 
-		// Token: 0x0200B2C9 RID: 45769
+		// Token: 0x02009D02 RID: 40194
 		private class EComponentDefine
 		{
-			// Token: 0x040362B8 RID: 221880
+			// Token: 0x04030D0D RID: 199949
 			public const int LoopShop = 0;
 
-			// Token: 0x040362B9 RID: 221881
+			// Token: 0x04030D0E RID: 199950
 			public const int ShopItem = 1;
 		}
 	}

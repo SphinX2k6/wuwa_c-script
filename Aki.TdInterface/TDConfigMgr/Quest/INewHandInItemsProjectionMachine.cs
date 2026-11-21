@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001029 RID: 4137
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001155 RID: 4437
 	public class INewHandInItemsProjectionMachine : INewHandInItemsBase
 	{
-		// Token: 0x06005C48 RID: 23624 RVA: 0x000DF8FC File Offset: 0x000DDAFC
+		// Token: 0x0600622A RID: 25130 RVA: 0x000EC5F4 File Offset: 0x000EA7F4
 		private INewHandInItemsProjectionMachine_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005C49 RID: 23625 RVA: 0x000DF934 File Offset: 0x000DDB34
+		// Token: 0x0600622B RID: 25131 RVA: 0x000EC62C File Offset: 0x000EA82C
 		public static INewHandInItemsProjectionMachine Create([Nullable(2)] INewHandInItemsProjectionMachine instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C4A RID: 23626 RVA: 0x000DF947 File Offset: 0x000DDB47
+		// Token: 0x0600622C RID: 25132 RVA: 0x000EC63F File Offset: 0x000EA83F
 		public static INewHandInItemsProjectionMachine CreateFromSetValue([Nullable(2)] INewHandInItemsProjectionMachine_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C4B RID: 23627 RVA: 0x000DF95A File Offset: 0x000DDB5A
+		// Token: 0x0600622D RID: 25133 RVA: 0x000EC652 File Offset: 0x000EA852
 		public new INewHandInItemsProjectionMachine_SetValue ToSetValue()
 		{
 			return new INewHandInItemsProjectionMachine_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E68 RID: 7784
-		// (get) Token: 0x06005C4C RID: 23628 RVA: 0x000DF985 File Offset: 0x000DDB85
-		// (set) Token: 0x06005C4D RID: 23629 RVA: 0x000DF9B0 File Offset: 0x000DDBB0
+		// Token: 0x17002012 RID: 8210
+		// (get) Token: 0x0600622E RID: 25134 RVA: 0x000EC67D File Offset: 0x000EA87D
+		// (set) Token: 0x0600622F RID: 25135 RVA: 0x000EC6A8 File Offset: 0x000EA8A8
 		public override ENewHandInItemsType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E69 RID: 7785
-		// (get) Token: 0x06005C4E RID: 23630 RVA: 0x000DF9BE File Offset: 0x000DDBBE
-		// (set) Token: 0x06005C4F RID: 23631 RVA: 0x000DF9E9 File Offset: 0x000DDBE9
+		// Token: 0x17002013 RID: 8211
+		// (get) Token: 0x06006230 RID: 25136 RVA: 0x000EC6B6 File Offset: 0x000EA8B6
+		// (set) Token: 0x06006231 RID: 25137 RVA: 0x000EC6E1 File Offset: 0x000EA8E1
 		public virtual int EntityId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E6A RID: 7786
-		// (get) Token: 0x06005C50 RID: 23632 RVA: 0x000DF9F7 File Offset: 0x000DDBF7
-		// (set) Token: 0x06005C51 RID: 23633 RVA: 0x000DFA22 File Offset: 0x000DDC22
+		// Token: 0x17002014 RID: 8212
+		// (get) Token: 0x06006232 RID: 25138 RVA: 0x000EC6EF File Offset: 0x000EA8EF
+		// (set) Token: 0x06006233 RID: 25139 RVA: 0x000EC71A File Offset: 0x000EA91A
 		public virtual int ItemId
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003785 RID: 14213
+		// Token: 0x04003AC0 RID: 15040
 		[Nullable(2)]
 		protected new INewHandInItemsProjectionMachine FbInstance;
 
-		// Token: 0x04003786 RID: 14214
+		// Token: 0x04003AC1 RID: 15041
 		[Nullable(2)]
 		protected new INewHandInItemsProjectionMachine_SetValue PocoInterface;
 	}

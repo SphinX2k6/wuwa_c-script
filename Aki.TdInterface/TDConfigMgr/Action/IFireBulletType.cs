@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A67 RID: 6759
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BFC RID: 7164
 	public class IFireBulletType
 	{
-		// Token: 0x060090BE RID: 37054 RVA: 0x00151474 File Offset: 0x0014F674
+		// Token: 0x06009828 RID: 38952 RVA: 0x001613A0 File Offset: 0x0015F5A0
 		private IFireBulletType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060090BF RID: 37055 RVA: 0x001514AC File Offset: 0x0014F6AC
+		// Token: 0x06009829 RID: 38953 RVA: 0x001613D8 File Offset: 0x0015F5D8
 		public static IFireBulletType Create([Nullable(2)] IFireBulletType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060090C0 RID: 37056 RVA: 0x001514BF File Offset: 0x0014F6BF
+		// Token: 0x0600982A RID: 38954 RVA: 0x001613EB File Offset: 0x0015F5EB
 		public static IFireBulletType CreateFromSetValue([Nullable(2)] IFireBulletType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060090C1 RID: 37057 RVA: 0x001514D2 File Offset: 0x0014F6D2
+		// Token: 0x0600982B RID: 38955 RVA: 0x001613FE File Offset: 0x0015F5FE
 		public IFireBulletType_SetValue ToSetValue()
 		{
 			return new IFireBulletType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E1A RID: 11802
-		// (get) Token: 0x060090C2 RID: 37058 RVA: 0x001514E5 File Offset: 0x0014F6E5
-		// (set) Token: 0x060090C3 RID: 37059 RVA: 0x00151510 File Offset: 0x0014F710
+		// Token: 0x17003027 RID: 12327
+		// (get) Token: 0x0600982C RID: 38956 RVA: 0x00161411 File Offset: 0x0015F611
+		// (set) Token: 0x0600982D RID: 38957 RVA: 0x0016143C File Offset: 0x0015F63C
 		public virtual EFireBulletType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400595B RID: 22875
+		// Token: 0x04005DC0 RID: 24000
 		[Nullable(2)]
 		protected IFireBulletType FbInstance;
 
-		// Token: 0x0400595C RID: 22876
+		// Token: 0x04005DC1 RID: 24001
 		[Nullable(2)]
 		protected IFireBulletType_SetValue PocoInterface;
 	}

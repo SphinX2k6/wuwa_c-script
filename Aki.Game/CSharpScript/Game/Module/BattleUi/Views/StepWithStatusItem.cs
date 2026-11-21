@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D92 RID: 23954
+	// Token: 0x02004D74 RID: 19828
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class StepWithStatusItem : StepBaseItem
 	{
-		// Token: 0x0603CCA7 RID: 248999 RVA: 0x00E98BD1 File Offset: 0x00E96DD1
+		// Token: 0x06031C04 RID: 203780 RVA: 0x00DE9489 File Offset: 0x00DE7689
 		public StepWithStatusItem(EMissionItemView viewId, int stepId) : base(viewId, stepId)
 		{
 		}
 
-		// Token: 0x0603CCA8 RID: 249000 RVA: 0x00E98BDC File Offset: 0x00E96DDC
+		// Token: 0x06031C05 RID: 203781 RVA: 0x00DE9494 File Offset: 0x00DE7694
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(4, typeof(UUISprite)));
 		}
 
-		// Token: 0x0603CCA9 RID: 249001 RVA: 0x00E98C40 File Offset: 0x00E96E40
+		// Token: 0x06031C06 RID: 203782 RVA: 0x00DE94F8 File Offset: 0x00DE76F8
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StepLose = base.GetSprite(3);
 		}
 
-		// Token: 0x0603CCAA RID: 249002 RVA: 0x00E98C70 File Offset: 0x00E96E70
+		// Token: 0x06031C07 RID: 203783 RVA: 0x00DE9528 File Offset: 0x00DE7728
 		public override UniTask OnReset()
 		{
 			StepWithStatusItem.<OnReset>d__10 <OnReset>d__;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnReset>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CCAB RID: 249003 RVA: 0x00E98CB3 File Offset: 0x00E96EB3
+		// Token: 0x06031C08 RID: 203784 RVA: 0x00DE956B File Offset: 0x00DE776B
 		protected override void UpdateStepInfo()
 		{
 			base.UpdateStepInfo();
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StepStatusNode.SetUIActive(this.StatusNodeVisible);
 		}
 
-		// Token: 0x0603CCAC RID: 249004 RVA: 0x00E98CD8 File Offset: 0x00E96ED8
+		// Token: 0x06031C09 RID: 203785 RVA: 0x00DE9590 File Offset: 0x00DE7790
 		protected override UniTask OnConfigRefresh(IMissionItemViewShowData showData, MissionViewStepTextInfoBase config)
 		{
 			StepWithStatusItem.<OnConfigRefresh>d__12 <OnConfigRefresh>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnConfigRefresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CCAD RID: 249005 RVA: 0x00E98D2C File Offset: 0x00E96F2C
+		// Token: 0x06031C0A RID: 203786 RVA: 0x00DE95E4 File Offset: 0x00DE77E4
 		protected bool UpdateStepStatusNode()
 		{
 			bool flag = this.CheckCanShowStatusRoot();
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return flag;
 		}
 
-		// Token: 0x0603CCAE RID: 249006 RVA: 0x00E98D88 File Offset: 0x00E96F88
+		// Token: 0x06031C0B RID: 203787 RVA: 0x00DE9640 File Offset: 0x00DE7840
 		private void ExecuteOnCurrentStatusRefresh(EStatusType statusType, EStepStatusRefreshReason reason)
 		{
 			switch (statusType)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnStatusChanged(this.CurrentStatusType, reason);
 		}
 
-		// Token: 0x0603CCAF RID: 249007 RVA: 0x00E98DE4 File Offset: 0x00E96FE4
+		// Token: 0x06031C0C RID: 203788 RVA: 0x00DE969C File Offset: 0x00DE789C
 		private EStatusType CheckStatusByConfig()
 		{
 			if (this.Config == null || this.ShowData == null)
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CCB0 RID: 249008 RVA: 0x00E98FC4 File Offset: 0x00E971C4
+		// Token: 0x06031C0D RID: 203789 RVA: 0x00DE987C File Offset: 0x00DE7A7C
 		private void SetSuccessNodeActive(bool newActive)
 		{
 			if ((this.StepSuccess.IsUIActiveSelf() && this.StepSuccess.Alpha == 1f) == newActive)
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StepSuccess.SetUIActive(newActive);
 		}
 
-		// Token: 0x0603CCB1 RID: 249009 RVA: 0x00E98FF8 File Offset: 0x00E971F8
+		// Token: 0x06031C0E RID: 203790 RVA: 0x00DE98B0 File Offset: 0x00DE7AB0
 		private void SetLoseNodeActive(bool newActive)
 		{
 			if (this.StepLose.IsUIActiveSelf() == newActive)
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StepLose.SetUIActive(newActive);
 		}
 
-		// Token: 0x0603CCB2 RID: 249010 RVA: 0x00E99018 File Offset: 0x00E97218
+		// Token: 0x06031C0F RID: 203791 RVA: 0x00DE98D0 File Offset: 0x00DE7AD0
 		protected virtual bool CheckCanShowStatusRoot()
 		{
 			if (this.Config != null)
@@ -252,44 +252,44 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603CCB3 RID: 249011 RVA: 0x00E9907B File Offset: 0x00E9727B
+		// Token: 0x06031C10 RID: 203792 RVA: 0x00DE9933 File Offset: 0x00DE7B33
 		protected virtual bool CheckCanUpdateStatusNode()
 		{
 			return true;
 		}
 
-		// Token: 0x0603CCB4 RID: 249012 RVA: 0x00E9907E File Offset: 0x00E9727E
+		// Token: 0x06031C11 RID: 203793 RVA: 0x00DE9936 File Offset: 0x00DE7B36
 		protected virtual void OnStatusChanged(EStatusType status, EStepStatusRefreshReason reason)
 		{
 		}
 
-		// Token: 0x0401FAB6 RID: 129718
+		// Token: 0x0401A56E RID: 107886
 		protected UUISprite StepStatusNode;
 
-		// Token: 0x0401FAB7 RID: 129719
+		// Token: 0x0401A56F RID: 107887
 		protected UUISprite StepSuccess;
 
-		// Token: 0x0401FAB8 RID: 129720
+		// Token: 0x0401A570 RID: 107888
 		protected UUISprite StepLose;
 
-		// Token: 0x0401FAB9 RID: 129721
+		// Token: 0x0401A571 RID: 107889
 		public bool StatusNodeVisible;
 
-		// Token: 0x0401FABA RID: 129722
+		// Token: 0x0401A572 RID: 107890
 		private bool NoExpressOnInit;
 
-		// Token: 0x0401FABB RID: 129723
+		// Token: 0x0401A573 RID: 107891
 		protected EStatusType CurrentStatusType;
 
-		// Token: 0x0200C04B RID: 49227
+		// Token: 0x0200AA51 RID: 43601
 		[NullableContext(0)]
 		private enum EChildComponent
 		{
-			// Token: 0x0403A081 RID: 237697
+			// Token: 0x04034A44 RID: 215620
 			StepSuccess = 2,
-			// Token: 0x0403A082 RID: 237698
+			// Token: 0x04034A45 RID: 215621
 			StepLose,
-			// Token: 0x0403A083 RID: 237699
+			// Token: 0x04034A46 RID: 215622
 			StepStatusNode
 		}
 	}

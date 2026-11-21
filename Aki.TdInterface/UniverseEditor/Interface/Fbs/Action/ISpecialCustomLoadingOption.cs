@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007172 RID: 29042
+	// Token: 0x02007941 RID: 31041
 	public struct ISpecialCustomLoadingOption : IFlatbufferObject
 	{
-		// Token: 0x1700D7C7 RID: 55239
-		// (get) Token: 0x060337E7 RID: 210919 RVA: 0x006EFEF3 File Offset: 0x006EE0F3
+		// Token: 0x1700E3B9 RID: 58297
+		// (get) Token: 0x06036AC1 RID: 223937 RVA: 0x00750E81 File Offset: 0x0074F081
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060337E8 RID: 210920 RVA: 0x006EFF00 File Offset: 0x006EE100
+		// Token: 0x06036AC2 RID: 223938 RVA: 0x00750E8E File Offset: 0x0074F08E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060337E9 RID: 210921 RVA: 0x006EFF08 File Offset: 0x006EE108
+		// Token: 0x06036AC3 RID: 223939 RVA: 0x00750E98 File Offset: 0x0074F098
 		public static ISpecialCustomLoadingOption GetRootAsISpecialCustomLoadingOption(ByteBuffer _bb)
 		{
 			return ISpecialCustomLoadingOption.GetRootAsISpecialCustomLoadingOption(_bb, default(ISpecialCustomLoadingOption));
 		}
 
-		// Token: 0x060337EA RID: 210922 RVA: 0x006EFF24 File Offset: 0x006EE124
+		// Token: 0x06036AC4 RID: 223940 RVA: 0x00750EB4 File Offset: 0x0074F0B4
 		public static ISpecialCustomLoadingOption GetRootAsISpecialCustomLoadingOption(ByteBuffer _bb, ISpecialCustomLoadingOption obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060337EB RID: 210923 RVA: 0x006EFF41 File Offset: 0x006EE141
+		// Token: 0x06036AC5 RID: 223941 RVA: 0x00750ED1 File Offset: 0x0074F0D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060337EC RID: 210924 RVA: 0x006EFF50 File Offset: 0x006EE150
+		// Token: 0x06036AC6 RID: 223942 RVA: 0x00750EE0 File Offset: 0x0074F0E0
 		public ISpecialCustomLoadingOption __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D7C8 RID: 55240
-		// (get) Token: 0x060337ED RID: 210925 RVA: 0x006EFF60 File Offset: 0x006EE160
+		// Token: 0x1700E3BA RID: 58298
+		// (get) Token: 0x06036AC7 RID: 223943 RVA: 0x00750EF0 File Offset: 0x0074F0F0
 		public ESpecialCustomLoadingType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060337EE RID: 210926 RVA: 0x006EFF9C File Offset: 0x006EE19C
+		// Token: 0x06036AC8 RID: 223944 RVA: 0x00750F2C File Offset: 0x0074F12C
 		public static Offset<ISpecialCustomLoadingOption> CreateISpecialCustomLoadingOption(FlatBufferBuilder builder, ESpecialCustomLoadingType Type = ESpecialCustomLoadingType.HonamiStory)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISpecialCustomLoadingOption.EndISpecialCustomLoadingOption(builder);
 		}
 
-		// Token: 0x060337EF RID: 210927 RVA: 0x006EFFB2 File Offset: 0x006EE1B2
+		// Token: 0x06036AC9 RID: 223945 RVA: 0x00750F42 File Offset: 0x0074F142
 		public static void StartISpecialCustomLoadingOption(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060337F0 RID: 210928 RVA: 0x006EFFBB File Offset: 0x006EE1BB
+		// Token: 0x06036ACA RID: 223946 RVA: 0x00750F4B File Offset: 0x0074F14B
 		public static void AddType(FlatBufferBuilder builder, ESpecialCustomLoadingType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060337F1 RID: 210929 RVA: 0x006EFFC6 File Offset: 0x006EE1C6
+		// Token: 0x06036ACB RID: 223947 RVA: 0x00750F56 File Offset: 0x0074F156
 		public static Offset<ISpecialCustomLoadingOption> EndISpecialCustomLoadingOption(FlatBufferBuilder builder)
 		{
 			return new Offset<ISpecialCustomLoadingOption>(builder.EndTable());
 		}
 
-		// Token: 0x060337F2 RID: 210930 RVA: 0x006EFFD4 File Offset: 0x006EE1D4
+		// Token: 0x06036ACC RID: 223948 RVA: 0x00750F64 File Offset: 0x0074F164
 		public ISpecialCustomLoadingOptionT UnPack()
 		{
 			ISpecialCustomLoadingOptionT specialCustomLoadingOptionT = new ISpecialCustomLoadingOptionT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return specialCustomLoadingOptionT;
 		}
 
-		// Token: 0x060337F3 RID: 210931 RVA: 0x006EFFEF File Offset: 0x006EE1EF
+		// Token: 0x06036ACD RID: 223949 RVA: 0x00750F7F File Offset: 0x0074F17F
 		public void UnPackTo(ISpecialCustomLoadingOptionT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060337F4 RID: 210932 RVA: 0x006F0000 File Offset: 0x006EE200
+		// Token: 0x06036ACE RID: 223950 RVA: 0x00750F90 File Offset: 0x0074F190
 		public static Offset<ISpecialCustomLoadingOption> Pack(FlatBufferBuilder builder, ISpecialCustomLoadingOptionT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISpecialCustomLoadingOption.CreateISpecialCustomLoadingOption(builder, _o.Type);
 		}
 
-		// Token: 0x04011C16 RID: 72726
+		// Token: 0x04012C0C RID: 76812
 		private Table __p;
 	}
 }

@@ -6,16 +6,16 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002891 RID: 10385
+// Token: 0x02001E0C RID: 7692
 public class RoleLevelUpSuccessEffectView : UiViewBase
 {
-	// Token: 0x06015609 RID: 87561 RVA: 0x00563783 File Offset: 0x00561983
+	// Token: 0x06013007 RID: 77831 RVA: 0x0058E4DF File Offset: 0x0058C6DF
 	[NullableContext(1)]
 	public RoleLevelUpSuccessEffectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601560A RID: 87562 RVA: 0x0056378C File Offset: 0x0056198C
+	// Token: 0x06013008 RID: 77832 RVA: 0x0058E4E8 File Offset: 0x0058C6E8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class RoleLevelUpSuccessEffectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601560B RID: 87563 RVA: 0x00563864 File Offset: 0x00561A64
+	// Token: 0x06013009 RID: 77833 RVA: 0x0058E5C0 File Offset: 0x0058C7C0
 	protected override void OnBeforeCreate()
 	{
 		if (this.OpenParam == null)
@@ -46,14 +46,14 @@ public class RoleLevelUpSuccessEffectView : UiViewBase
 		this.SetAudioInternal();
 	}
 
-	// Token: 0x0601560C RID: 87564 RVA: 0x005638B0 File Offset: 0x00561AB0
+	// Token: 0x0601300A RID: 77834 RVA: 0x0058E60C File Offset: 0x0058C80C
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(1);
 		this.EffectTextLayout = new GenericScrollViewNew<SuccessDescriptionItem, SingleText>(base.GetScrollViewWithScrollbar(0), new Func<SuccessDescriptionItem>(this.CreateTextItem), item.GetOwner() as AUIBaseActor, false, null);
 	}
 
-	// Token: 0x0601560D RID: 87565 RVA: 0x005638F0 File Offset: 0x00561AF0
+	// Token: 0x0601300B RID: 77835 RVA: 0x0058E64C File Offset: 0x0058C84C
 	protected override void OnBeforeShow()
 	{
 		this.SetTitleInternal();
@@ -61,7 +61,7 @@ public class RoleLevelUpSuccessEffectView : UiViewBase
 		this.SetTipsTextInternal();
 	}
 
-	// Token: 0x0601560E RID: 87566 RVA: 0x00563904 File Offset: 0x00561B04
+	// Token: 0x0601300C RID: 77836 RVA: 0x0058E660 File Offset: 0x0058C860
 	private void SetAudioInternal()
 	{
 		string audioId = this.Data.AudioId;
@@ -72,7 +72,7 @@ public class RoleLevelUpSuccessEffectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601560F RID: 87567 RVA: 0x00563944 File Offset: 0x00561B44
+	// Token: 0x0601300D RID: 77837 RVA: 0x0058E6A0 File Offset: 0x0058C8A0
 	private void OnClickButton()
 	{
 		Action clickFunction = this.Data.ClickFunction;
@@ -83,28 +83,28 @@ public class RoleLevelUpSuccessEffectView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06015610 RID: 87568 RVA: 0x0056396D File Offset: 0x00561B6D
+	// Token: 0x0601300E RID: 77838 RVA: 0x0058E6C9 File Offset: 0x0058C8C9
 	[NullableContext(1)]
 	private SuccessDescriptionItem CreateTextItem()
 	{
 		return new SuccessDescriptionItem();
 	}
 
-	// Token: 0x06015611 RID: 87569 RVA: 0x00563974 File Offset: 0x00561B74
+	// Token: 0x0601300F RID: 77839 RVA: 0x0058E6D0 File Offset: 0x0058C8D0
 	private void SetTipsTextInternal()
 	{
 		string key = this.Data.ClickText ?? "Text_BackToView_Text";
 		base.GetText(3).ShowTextNew(key);
 	}
 
-	// Token: 0x06015612 RID: 87570 RVA: 0x005639A4 File Offset: 0x00561BA4
+	// Token: 0x06013010 RID: 77840 RVA: 0x0058E700 File Offset: 0x0058C900
 	private void SetTitleInternal()
 	{
 		string key = this.Data.Title ?? "Text_ActivedSucceed_Text";
 		base.GetText(2).ShowTextNew(key);
 	}
 
-	// Token: 0x06015613 RID: 87571 RVA: 0x005639D4 File Offset: 0x00561BD4
+	// Token: 0x06013011 RID: 77841 RVA: 0x0058E730 File Offset: 0x0058C930
 	private void SetViewContentInternal()
 	{
 		if (this.EffectTextLayout != null)
@@ -119,11 +119,11 @@ public class RoleLevelUpSuccessEffectView : UiViewBase
 		}
 	}
 
-	// Token: 0x04009FB8 RID: 40888
+	// Token: 0x0400A3A1 RID: 41889
 	[Nullable(2)]
 	private ILevelUpSuccessEffectData Data;
 
-	// Token: 0x04009FB9 RID: 40889
+	// Token: 0x0400A3A2 RID: 41890
 	[Nullable(new byte[]
 	{
 		2,
@@ -132,20 +132,20 @@ public class RoleLevelUpSuccessEffectView : UiViewBase
 	})]
 	private GenericScrollViewNew<SuccessDescriptionItem, SingleText> EffectTextLayout;
 
-	// Token: 0x02008E91 RID: 36497
+	// Token: 0x020080D7 RID: 32983
 	public enum ERoleSuccessEffectNode
 	{
-		// Token: 0x0402E3C7 RID: 189383
+		// Token: 0x04029AC1 RID: 170689
 		TextScrollLayout,
-		// Token: 0x0402E3C8 RID: 189384
+		// Token: 0x04029AC2 RID: 170690
 		TextItem,
-		// Token: 0x0402E3C9 RID: 189385
+		// Token: 0x04029AC3 RID: 170691
 		Title,
-		// Token: 0x0402E3CA RID: 189386
+		// Token: 0x04029AC4 RID: 170692
 		TipsText,
-		// Token: 0x0402E3CB RID: 189387
+		// Token: 0x04029AC5 RID: 170693
 		TipsButton,
-		// Token: 0x0402E3CC RID: 189388
+		// Token: 0x04029AC6 RID: 170694
 		TipsButton2
 	}
 }

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013AB RID: 5035
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014FC RID: 5372
 	public class ITakePhotoPosCondition
 	{
-		// Token: 0x06007309 RID: 29449 RVA: 0x00114561 File Offset: 0x00112761
+		// Token: 0x060079B0 RID: 31152 RVA: 0x00122C1D File Offset: 0x00120E1D
 		public static ITakePhotoPosCondition Create(ITakePhotoPosCondition? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002586 RID: 9606
-		// (get) Token: 0x0600730A RID: 29450 RVA: 0x00114580 File Offset: 0x00112780
+		// Token: 0x1700275A RID: 10074
+		// (get) Token: 0x060079B1 RID: 31153 RVA: 0x00122C3C File Offset: 0x00120E3C
 		public virtual int RangeEntity
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002587 RID: 9607
-		// (get) Token: 0x0600730B RID: 29451 RVA: 0x0011458D File Offset: 0x0011278D
+		// Token: 0x1700275B RID: 10075
+		// (get) Token: 0x060079B2 RID: 31154 RVA: 0x00122C49 File Offset: 0x00120E49
 		public virtual string TidDescription
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002588 RID: 9608
-		// (get) Token: 0x0600730C RID: 29452 RVA: 0x0011459A File Offset: 0x0011279A
+		// Token: 0x1700275C RID: 10076
+		// (get) Token: 0x060079B3 RID: 31155 RVA: 0x00122C56 File Offset: 0x00120E56
 		[Nullable(2)]
 		public virtual string EdTidDescription
 		{
@@ -54,7 +52,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004283 RID: 17027
+		// Token: 0x04004604 RID: 17924
 		private ITakePhotoPosCondition Instance;
 	}
 }

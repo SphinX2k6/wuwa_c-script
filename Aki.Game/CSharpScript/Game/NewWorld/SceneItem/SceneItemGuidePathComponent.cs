@@ -16,14 +16,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007180 RID: 29056
+	// Token: 0x02006234 RID: 25140
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemGuidePathComponent : EntityComponent, IGuidePathVisibilityHost
 	{
-		// Token: 0x17009D7A RID: 40314
-		// (get) Token: 0x06047019 RID: 290841 RVA: 0x011FAA32 File Offset: 0x011F8C32
-		// (set) Token: 0x0604701A RID: 290842 RVA: 0x011FAA40 File Offset: 0x011F8C40
+		// Token: 0x1700726F RID: 29295
+		// (get) Token: 0x0603C8AD RID: 247981 RVA: 0x01155285 File Offset: 0x01153485
+		// (set) Token: 0x0603C8AE RID: 247982 RVA: 0x01155293 File Offset: 0x01153493
 		Action<ISceneItemGuidePathVisibilityProvider, EGuidePathProviderRemovedBehavior?> IGuidePathVisibilityHost.SetExternalVisibilityProvider
 		{
 			get
@@ -35,9 +35,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D7B RID: 40315
-		// (get) Token: 0x0604701B RID: 290843 RVA: 0x011FAA42 File Offset: 0x011F8C42
-		// (set) Token: 0x0604701C RID: 290844 RVA: 0x011FAA50 File Offset: 0x011F8C50
+		// Token: 0x17007270 RID: 29296
+		// (get) Token: 0x0603C8AF RID: 247983 RVA: 0x01155295 File Offset: 0x01153495
+		// (set) Token: 0x0603C8B0 RID: 247984 RVA: 0x011552A3 File Offset: 0x011534A3
 		Action<ISceneItemGuidePathVisibilityProvider> IGuidePathVisibilityHost.ClearExternalVisibilityProvider
 		{
 			get
@@ -49,9 +49,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D7C RID: 40316
-		// (get) Token: 0x0604701D RID: 290845 RVA: 0x011FAA52 File Offset: 0x011F8C52
-		// (set) Token: 0x0604701E RID: 290846 RVA: 0x011FAA60 File Offset: 0x011F8C60
+		// Token: 0x17007271 RID: 29297
+		// (get) Token: 0x0603C8B1 RID: 247985 RVA: 0x011552A5 File Offset: 0x011534A5
+		// (set) Token: 0x0603C8B2 RID: 247986 RVA: 0x011552B3 File Offset: 0x011534B3
 		Action<ISceneItemGuidePathVisibilityProvider> IGuidePathVisibilityHost.NotifyExternalVisibilityChanged
 		{
 			get
@@ -63,9 +63,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D7D RID: 40317
-		// (get) Token: 0x0604701F RID: 290847 RVA: 0x011FAA62 File Offset: 0x011F8C62
-		// (set) Token: 0x06047020 RID: 290848 RVA: 0x011FAA70 File Offset: 0x011F8C70
+		// Token: 0x17007272 RID: 29298
+		// (get) Token: 0x0603C8B3 RID: 247987 RVA: 0x011552B5 File Offset: 0x011534B5
+		// (set) Token: 0x0603C8B4 RID: 247988 RVA: 0x011552C3 File Offset: 0x011534C3
 		Func<bool> IGuidePathVisibilityHost.HasExternalVisibilityProvider
 		{
 			get
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047021 RID: 290849 RVA: 0x011FAA74 File Offset: 0x011F8C74
+		// Token: 0x0603C8B5 RID: 247989 RVA: 0x011552C8 File Offset: 0x011534C8
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047022 RID: 290850 RVA: 0x011FAAFC File Offset: 0x011F8CFC
+		// Token: 0x0603C8B6 RID: 247990 RVA: 0x01155350 File Offset: 0x01153550
 		private bool InitRgbColorConfig(IColorChangeStrategyOfRGB config)
 		{
 			int tagIdByName = GameplayTagUtils.GetTagIdByName(config.RedState);
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047023 RID: 290851 RVA: 0x011FABFC File Offset: 0x011F8DFC
+		// Token: 0x0603C8B7 RID: 247991 RVA: 0x01155450 File Offset: 0x01153650
 		protected override void OnActivate()
 		{
 			this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047024 RID: 290852 RVA: 0x011FAD10 File Offset: 0x011F8F10
+		// Token: 0x0603C8B8 RID: 247992 RVA: 0x01155564 File Offset: 0x01153764
 		private void GetTotalCountDownTime()
 		{
 			Entity entity = base.Entity;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.TotalCountDownTime = delayChangeState.Time * (float)TimeUtil.Instance.InverseMillisecond;
 		}
 
-		// Token: 0x06047025 RID: 290853 RVA: 0x011FAD7C File Offset: 0x011F8F7C
+		// Token: 0x0603C8B9 RID: 247993 RVA: 0x011555D0 File Offset: 0x011537D0
 		protected override bool OnEnd()
 		{
 			if (this.RegisteredPbDataId > 0)
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047026 RID: 290854 RVA: 0x011FAED3 File Offset: 0x011F90D3
+		// Token: 0x0603C8BA RID: 247994 RVA: 0x01155727 File Offset: 0x01153927
 		protected override void OnTick(float delta)
 		{
 			if (!Info.Instance.EnableForceTick)
@@ -223,13 +223,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.TickInternal(delta);
 		}
 
-		// Token: 0x06047027 RID: 290855 RVA: 0x011FAEE9 File Offset: 0x011F90E9
+		// Token: 0x0603C8BB RID: 247995 RVA: 0x0115573D File Offset: 0x0115393D
 		protected override void OnForceTick(float delta)
 		{
 			this.TickInternal(delta);
 		}
 
-		// Token: 0x06047028 RID: 290856 RVA: 0x011FAEF4 File Offset: 0x011F90F4
+		// Token: 0x0603C8BC RID: 247996 RVA: 0x01155748 File Offset: 0x01153948
 		private void TickInternal(float delta)
 		{
 			if (this.IsFinish)
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ChangeEffectColor(percentTime, false);
 		}
 
-		// Token: 0x06047029 RID: 290857 RVA: 0x011FAF7C File Offset: 0x011F917C
+		// Token: 0x0603C8BD RID: 247997 RVA: 0x011557D0 File Offset: 0x011539D0
 		private void LoadPathAsset()
 		{
 			IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(this.Config.SplineEntityId), null);
@@ -337,13 +337,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604702A RID: 290858 RVA: 0x011FB294 File Offset: 0x011F9494
+		// Token: 0x0603C8BE RID: 247998 RVA: 0x01155AE8 File Offset: 0x01153CE8
 		private void OnScanStart(float interval)
 		{
 			this.OnScanStart(interval, false);
 		}
 
-		// Token: 0x0604702B RID: 290859 RVA: 0x011FB2A0 File Offset: 0x011F94A0
+		// Token: 0x0603C8BF RID: 247999 RVA: 0x01155AF4 File Offset: 0x01153CF4
 		private void OnScanStart(float interval, bool force)
 		{
 			if (this.HasFakeScanConfig && !force)
@@ -361,7 +361,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			});
 		}
 
-		// Token: 0x0604702C RID: 290860 RVA: 0x011FB2F8 File Offset: 0x011F94F8
+		// Token: 0x0603C8C0 RID: 248000 RVA: 0x01155B4C File Offset: 0x01153D4C
 		private void OnUseSkill(int charId, int skillId, bool isAutonomousProxy)
 		{
 			if (skillId == 210004)
@@ -386,7 +386,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604702D RID: 290861 RVA: 0x011FB3AC File Offset: 0x011F95AC
+		// Token: 0x0603C8C1 RID: 248001 RVA: 0x01155C00 File Offset: 0x01153E00
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			if (stateId == GameplayTagDefine.EGameplayTagId["关卡.Common.状态.完成"])
@@ -435,7 +435,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604702E RID: 290862 RVA: 0x011FB494 File Offset: 0x011F9694
+		// Token: 0x0603C8C2 RID: 248002 RVA: 0x01155CE8 File Offset: 0x01153EE8
 		[NullableContext(2)]
 		private unsafe void GetResetTime(bool needEnableTick = false, Action callback = null)
 		{
@@ -472,7 +472,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 0);
 		}
 
-		// Token: 0x0604702F RID: 290863 RVA: 0x011FB4F8 File Offset: 0x011F96F8
+		// Token: 0x0603C8C3 RID: 248003 RVA: 0x01155D4C File Offset: 0x01153F4C
 		private void GetInitialTag()
 		{
 			if (this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["关卡.Common.状态.激活"]))
@@ -493,7 +493,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047030 RID: 290864 RVA: 0x011FB57C File Offset: 0x011F977C
+		// Token: 0x0603C8C4 RID: 248004 RVA: 0x01155DD0 File Offset: 0x01153FD0
 		private void ShowGuidePath(float interval)
 		{
 			this.ShowEffect();
@@ -518,7 +518,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, interval * (float)TimeUtil.Instance.InverseMillisecond, null, null, true, 1f);
 		}
 
-		// Token: 0x06047031 RID: 290865 RVA: 0x011FB618 File Offset: 0x011F9818
+		// Token: 0x0603C8C5 RID: 248005 RVA: 0x01155E6C File Offset: 0x0115406C
 		private void HideEffect()
 		{
 			if (!EffectSystem.Instance.IsValid(this.EffectHandle))
@@ -533,7 +533,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.EffectHandle = 0;
 		}
 
-		// Token: 0x06047032 RID: 290866 RVA: 0x011FB677 File Offset: 0x011F9877
+		// Token: 0x0603C8C6 RID: 248006 RVA: 0x01155ECB File Offset: 0x011540CB
 		private void ShowEffect()
 		{
 			if (this.EffectHandle != 0)
@@ -543,7 +543,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.SpawnEffect();
 		}
 
-		// Token: 0x06047033 RID: 290867 RVA: 0x011FB688 File Offset: 0x011F9888
+		// Token: 0x0603C8C7 RID: 248007 RVA: 0x01155EDC File Offset: 0x011540DC
 		private void ChangeEffectColor(float percentTime, bool suddenChange)
 		{
 			FLinearColor? flinearColor = null;
@@ -593,7 +593,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			valueOrDefault3.SetColorParameter(SceneItemGuidePathComponent.colorString, flinearColor3);
 		}
 
-		// Token: 0x06047034 RID: 290868 RVA: 0x011FB774 File Offset: 0x011F9974
+		// Token: 0x0603C8C8 RID: 248008 RVA: 0x01155FC8 File Offset: 0x011541C8
 		private void SpawnEffect()
 		{
 			IEffectSpline effectSpline = this.Spline.SplineData as IEffectSpline;
@@ -611,7 +611,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.InitNiagara();
 		}
 
-		// Token: 0x06047035 RID: 290869 RVA: 0x011FB830 File Offset: 0x011F9A30
+		// Token: 0x0603C8C9 RID: 248009 RVA: 0x01156084 File Offset: 0x01154284
 		private void InitNiagara()
 		{
 			if (!EffectSystem.Instance.IsValid(this.EffectHandle))
@@ -625,7 +625,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047036 RID: 290870 RVA: 0x011FB89C File Offset: 0x011F9A9C
+		// Token: 0x0603C8CA RID: 248010 RVA: 0x011560F0 File Offset: 0x011542F0
 		private void OnEffectFinish(ELoadEffectResult result, int handle)
 		{
 			if (Info.Instance.EnableForceTick)
@@ -656,13 +656,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 100f, null, null, true, 1f);
 		}
 
-		// Token: 0x06047037 RID: 290871 RVA: 0x011FB92E File Offset: 0x011F9B2E
+		// Token: 0x0603C8CB RID: 248011 RVA: 0x01156182 File Offset: 0x01154382
 		private bool CanChangeColor()
 		{
 			return this.Config.ColorChangeOption != null;
 		}
 
-		// Token: 0x06047038 RID: 290872 RVA: 0x011FB940 File Offset: 0x011F9B40
+		// Token: 0x0603C8CC RID: 248012 RVA: 0x01156194 File Offset: 0x01154394
 		public void SetExternalVisibilityProvider(ISceneItemGuidePathVisibilityProvider provider, EGuidePathProviderRemovedBehavior removedBehavior = EGuidePathProviderRemovedBehavior.RestoreDefault)
 		{
 			if (this.ExternalProvider == provider)
@@ -682,13 +682,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ApplyExternalVisibility();
 		}
 
-		// Token: 0x06047039 RID: 290873 RVA: 0x011FB99B File Offset: 0x011F9B9B
+		// Token: 0x0603C8CD RID: 248013 RVA: 0x011561EF File Offset: 0x011543EF
 		private void SetExternalVisibilityProviderInternal(ISceneItemGuidePathVisibilityProvider provider, EGuidePathProviderRemovedBehavior? removedBehavior)
 		{
 			this.SetExternalVisibilityProvider(provider, removedBehavior.GetValueOrDefault());
 		}
 
-		// Token: 0x0604703A RID: 290874 RVA: 0x011FB9AC File Offset: 0x011F9BAC
+		// Token: 0x0603C8CE RID: 248014 RVA: 0x01156200 File Offset: 0x01154400
 		public void ClearExternalVisibilityProvider(ISceneItemGuidePathVisibilityProvider provider)
 		{
 			if (this.ExternalProvider != provider)
@@ -725,7 +725,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604703B RID: 290875 RVA: 0x011FBA27 File Offset: 0x011F9C27
+		// Token: 0x0603C8CF RID: 248015 RVA: 0x0115627B File Offset: 0x0115447B
 		public void NotifyExternalVisibilityChanged(ISceneItemGuidePathVisibilityProvider provider)
 		{
 			if (this.ExternalProvider != provider)
@@ -735,13 +735,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ApplyExternalVisibility();
 		}
 
-		// Token: 0x0604703C RID: 290876 RVA: 0x011FBA39 File Offset: 0x011F9C39
+		// Token: 0x0603C8D0 RID: 248016 RVA: 0x0115628D File Offset: 0x0115448D
 		public bool HasExternalVisibilityProvider()
 		{
 			return this.ExternalProvider != null;
 		}
 
-		// Token: 0x0604703D RID: 290877 RVA: 0x011FBA44 File Offset: 0x011F9C44
+		// Token: 0x0603C8D1 RID: 248017 RVA: 0x01156298 File Offset: 0x01154498
 		private void ApplyExternalVisibility()
 		{
 			if (this.ExternalProvider == null)
@@ -770,7 +770,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.HideEffect();
 		}
 
-		// Token: 0x0604703E RID: 290878 RVA: 0x011FBAD8 File Offset: 0x011F9CD8
+		// Token: 0x0603C8D2 RID: 248018 RVA: 0x0115632C File Offset: 0x0115452C
 		private void DetachDefaultVisibilityHandlers()
 		{
 			if (EventSystem.Instance.HasWithTarget<float>(base.Entity, EEventName.OnScanStart, new Action<float>(this.OnScanStart)))
@@ -788,7 +788,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604703F RID: 290879 RVA: 0x011FBB80 File Offset: 0x011F9D80
+		// Token: 0x0603C8D3 RID: 248019 RVA: 0x011563D4 File Offset: 0x011545D4
 		private void AttachDefaultVisibilityHandlers()
 		{
 			CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -821,7 +821,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047040 RID: 290880 RVA: 0x011FBC6C File Offset: 0x011F9E6C
+		// Token: 0x0603C8D4 RID: 248020 RVA: 0x011564C0 File Offset: 0x011546C0
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -829,247 +829,209 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemGuidePathComponent sceneItemGuidePathComponent = (SceneItemGuidePathComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemGuidePathComponent.Config == null)
 			{
-				if (sceneItemGuidePathComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<GuideLineCreatorComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (sceneItemGuidePathComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (sceneItemGuidePathComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("GuidePathComp"))
-			{
-				if (sceneItemGuidePathComponent.GuidePathComp == null)
-				{
-					this.GuidePathComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroSceneItemGuidePathComponent>(this.GuidePathComp), "GuidePathComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("Spline"))
-			{
-				if (sceneItemGuidePathComponent.Spline == null)
-				{
-					this.Spline = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsGameSplineActor>(this.Spline), "Spline"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DisableKey"))
-			{
-				this.DisableKey = sceneItemGuidePathComponent.DisableKey;
-			}
-			if (base.CanResetComponentProperty("DelayKey"))
-			{
-				if (sceneItemGuidePathComponent.DelayKey == null)
-				{
-					this.DelayKey = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DelayKey), "DelayKey"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CurCountdownTime"))
-			{
-				this.CurCountdownTime = sceneItemGuidePathComponent.CurCountdownTime;
-			}
-			if (base.CanResetComponentProperty("TotalCountDownTime"))
-			{
-				this.TotalCountDownTime = sceneItemGuidePathComponent.TotalCountDownTime;
-			}
-			if (base.CanResetComponentProperty("IsActive"))
-			{
-				this.IsActive = sceneItemGuidePathComponent.IsActive;
-			}
-			if (base.CanResetComponentProperty("IsFinish"))
-			{
-				this.IsFinish = sceneItemGuidePathComponent.IsFinish;
-			}
-			if (base.CanResetComponentProperty("EffectHandle"))
-			{
-				this.EffectHandle = sceneItemGuidePathComponent.EffectHandle;
-			}
-			if (base.CanResetComponentProperty("NiagaraComp"))
-			{
-				this.NiagaraComp = sceneItemGuidePathComponent.NiagaraComp;
-			}
-			if (base.CanResetComponentProperty("ColorNormal"))
-			{
-				this.ColorNormal = sceneItemGuidePathComponent.ColorNormal;
-			}
-			if (base.CanResetComponentProperty("ColorChangeCoefficient"))
-			{
-				this.ColorChangeCoefficient = sceneItemGuidePathComponent.ColorChangeCoefficient;
-			}
-			if (base.CanResetComponentProperty("ColorFinish"))
-			{
-				this.ColorFinish = sceneItemGuidePathComponent.ColorFinish;
-			}
-			if (base.CanResetComponentProperty("HasFakeScanConfig"))
-			{
-				this.HasFakeScanConfig = sceneItemGuidePathComponent.HasFakeScanConfig;
-			}
-			if (base.CanResetComponentProperty("FakeScanRange"))
-			{
-				this.FakeScanRange = sceneItemGuidePathComponent.FakeScanRange;
-			}
-			if (base.CanResetComponentProperty("SplineCreateMode"))
-			{
-				this.SplineCreateMode = sceneItemGuidePathComponent.SplineCreateMode;
-			}
-			if (base.CanResetComponentProperty("SpawnInterval"))
-			{
-				this.SpawnInterval = sceneItemGuidePathComponent.SpawnInterval;
-			}
-			if (base.CanResetComponentProperty("SplineComp"))
-			{
-				if (sceneItemGuidePathComponent.SplineComp == null)
-				{
-					this.SplineComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USplineComponent>(this.SplineComp), "SplineComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("OnFinishTimerHandle"))
-			{
-				if (sceneItemGuidePathComponent.OnFinishTimerHandle == null)
-				{
-					this.OnFinishTimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.OnFinishTimerHandle), "OnFinishTimerHandle"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ColorConfigMap") && sceneItemGuidePathComponent.ColorConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, FLinearColor>>(this.ColorConfigMap), "ColorConfigMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("IsPathAssetReady"))
+			if (sceneItemGuidePathComponent.ActorComp == null)
 			{
-				this.IsPathAssetReady = sceneItemGuidePathComponent.IsPathAssetReady;
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("RegisteredPbDataId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.RegisteredPbDataId = sceneItemGuidePathComponent.RegisteredPbDataId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ExternalProvider"))
+			if (sceneItemGuidePathComponent.TagComp == null)
 			{
-				if (sceneItemGuidePathComponent.ExternalProvider == null)
-				{
-					this.ExternalProvider = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ISceneItemGuidePathVisibilityProvider>(this.ExternalProvider), "ExternalProvider"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("ExternalProviderRemovedBehavior"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				this.ExternalProviderRemovedBehavior = sceneItemGuidePathComponent.ExternalProviderRemovedBehavior;
+				return false;
 			}
+			if (sceneItemGuidePathComponent.GuidePathComp == null)
+			{
+				this.GuidePathComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GuidePathComp), "GuidePathComp"))
+			{
+				return false;
+			}
+			if (sceneItemGuidePathComponent.Spline == null)
+			{
+				this.Spline = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Spline), "Spline"))
+			{
+				return false;
+			}
+			this.DisableKey = sceneItemGuidePathComponent.DisableKey;
+			if (sceneItemGuidePathComponent.DelayKey == null)
+			{
+				this.DelayKey = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelayKey), "DelayKey"))
+			{
+				return false;
+			}
+			this.CurCountdownTime = sceneItemGuidePathComponent.CurCountdownTime;
+			this.TotalCountDownTime = sceneItemGuidePathComponent.TotalCountDownTime;
+			this.IsActive = sceneItemGuidePathComponent.IsActive;
+			this.IsFinish = sceneItemGuidePathComponent.IsFinish;
+			this.EffectHandle = sceneItemGuidePathComponent.EffectHandle;
+			this.NiagaraComp = sceneItemGuidePathComponent.NiagaraComp;
+			this.ColorNormal = sceneItemGuidePathComponent.ColorNormal;
+			this.ColorChangeCoefficient = sceneItemGuidePathComponent.ColorChangeCoefficient;
+			this.ColorFinish = sceneItemGuidePathComponent.ColorFinish;
+			this.HasFakeScanConfig = sceneItemGuidePathComponent.HasFakeScanConfig;
+			this.FakeScanRange = sceneItemGuidePathComponent.FakeScanRange;
+			this.SplineCreateMode = sceneItemGuidePathComponent.SplineCreateMode;
+			this.SpawnInterval = sceneItemGuidePathComponent.SpawnInterval;
+			if (sceneItemGuidePathComponent.SplineComp == null)
+			{
+				this.SplineComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineComp), "SplineComp"))
+			{
+				return false;
+			}
+			if (sceneItemGuidePathComponent.OnFinishTimerHandle == null)
+			{
+				this.OnFinishTimerHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnFinishTimerHandle), "OnFinishTimerHandle"))
+			{
+				return false;
+			}
+			if (sceneItemGuidePathComponent.ColorConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ColorConfigMap), "ColorConfigMap"))
+			{
+				return false;
+			}
+			this.IsPathAssetReady = sceneItemGuidePathComponent.IsPathAssetReady;
+			this.RegisteredPbDataId = sceneItemGuidePathComponent.RegisteredPbDataId;
+			if (sceneItemGuidePathComponent.ExternalProvider == null)
+			{
+				this.ExternalProvider = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ExternalProvider), "ExternalProvider"))
+			{
+				return false;
+			}
+			this.ExternalProviderRemovedBehavior = sceneItemGuidePathComponent.ExternalProviderRemovedBehavior;
 			return true;
 		}
 
-		// Token: 0x04025500 RID: 152832
+		// Token: 0x17007273 RID: 29299
+		// (get) Token: 0x0603C8D5 RID: 248021 RVA: 0x01156751 File Offset: 0x01154951
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007274 RID: 29300
+		// (get) Token: 0x0603C8D6 RID: 248022 RVA: 0x01156754 File Offset: 0x01154954
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007275 RID: 29301
+		// (get) Token: 0x0603C8D7 RID: 248023 RVA: 0x01156757 File Offset: 0x01154957
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007276 RID: 29302
+		// (get) Token: 0x0603C8D8 RID: 248024 RVA: 0x0115675A File Offset: 0x0115495A
+		public override bool NeedForceTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020167 RID: 131431
 		private static readonly FName colorString = FNameUtil.GetDynamicFName("Color").Value;
 
-		// Token: 0x04025501 RID: 152833
+		// Token: 0x04020168 RID: 131432
 		private static readonly FLinearColor colorRed = new FLinearColor(12f, 2f, 2f, 1f);
 
-		// Token: 0x04025502 RID: 152834
+		// Token: 0x04020169 RID: 131433
 		private static readonly FLinearColor colorBlue = new FLinearColor(6f, 8f, 15f, 1f);
 
-		// Token: 0x04025503 RID: 152835
+		// Token: 0x0402016A RID: 131434
 		private static readonly FLinearColor colorYellow = new FLinearColor(12f, 8f, 4f, 1f);
 
-		// Token: 0x04025504 RID: 152836
+		// Token: 0x0402016B RID: 131435
 		private static readonly int finishTag = GameplayTagDefine.EGameplayTagId["关卡.Common.状态.完成"];
 
-		// Token: 0x04025505 RID: 152837
+		// Token: 0x0402016C RID: 131436
 		private static readonly int activatedTag = GameplayTagDefine.EGameplayTagId["关卡.Common.状态.激活"];
 
-		// Token: 0x04025506 RID: 152838
+		// Token: 0x0402016D RID: 131437
 		private static readonly int normalTag = GameplayTagDefine.EGameplayTagId["关卡.Common.状态.常态"];
 
-		// Token: 0x04025507 RID: 152839
+		// Token: 0x0402016E RID: 131438
 		public const int SCAN_SKILL_ID = 210004;
 
-		// Token: 0x04025508 RID: 152840
+		// Token: 0x0402016F RID: 131439
 		[Nullable(2)]
 		private GuideLineCreatorComponent Config;
 
-		// Token: 0x04025509 RID: 152841
+		// Token: 0x04020170 RID: 131440
 		[Nullable(2)]
 		private BaseActorComponent ActorComp;
 
-		// Token: 0x0402550A RID: 152842
+		// Token: 0x04020171 RID: 131441
 		[Nullable(2)]
 		private LevelTagComponent TagComp;
 
-		// Token: 0x0402550B RID: 152843
+		// Token: 0x04020172 RID: 131442
 		[Nullable(2)]
 		private UKuroSceneItemGuidePathComponent GuidePathComp;
 
-		// Token: 0x0402550C RID: 152844
+		// Token: 0x04020173 RID: 131443
 		[Nullable(2)]
 		private TsGameSplineActor Spline;
 
-		// Token: 0x0402550D RID: 152845
+		// Token: 0x04020174 RID: 131444
 		private int? DisableKey;
 
-		// Token: 0x0402550E RID: 152846
+		// Token: 0x04020175 RID: 131445
 		[Nullable(2)]
 		private TimerHandle DelayKey;
 
-		// Token: 0x0402550F RID: 152847
+		// Token: 0x04020176 RID: 131446
 		private float CurCountdownTime;
 
-		// Token: 0x04025510 RID: 152848
+		// Token: 0x04020177 RID: 131447
 		private float TotalCountDownTime;
 
-		// Token: 0x04025511 RID: 152849
+		// Token: 0x04020178 RID: 131448
 		private bool IsActive;
 
-		// Token: 0x04025512 RID: 152850
+		// Token: 0x04020179 RID: 131449
 		private bool IsFinish;
 
-		// Token: 0x04025513 RID: 152851
+		// Token: 0x0402017A RID: 131450
 		private int EffectHandle;
 
-		// Token: 0x04025514 RID: 152852
+		// Token: 0x0402017B RID: 131451
 		[Nullable(new byte[]
 		{
 			0,
@@ -1078,49 +1040,49 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private OneOf<KuroEffectNiagaraComponentHandle, UNiagaraComponent>? NiagaraComp;
 
-		// Token: 0x04025515 RID: 152853
+		// Token: 0x0402017C RID: 131452
 		private FLinearColor? ColorNormal;
 
-		// Token: 0x04025516 RID: 152854
+		// Token: 0x0402017D RID: 131453
 		private FLinearColor? ColorChangeCoefficient;
 
-		// Token: 0x04025517 RID: 152855
+		// Token: 0x0402017E RID: 131454
 		private FLinearColor? ColorFinish;
 
-		// Token: 0x04025518 RID: 152856
+		// Token: 0x0402017F RID: 131455
 		private bool HasFakeScanConfig;
 
-		// Token: 0x04025519 RID: 152857
+		// Token: 0x04020180 RID: 131456
 		private float FakeScanRange;
 
-		// Token: 0x0402551A RID: 152858
+		// Token: 0x04020181 RID: 131457
 		private EEffectSplineCreateMode? SplineCreateMode;
 
-		// Token: 0x0402551B RID: 152859
+		// Token: 0x04020182 RID: 131458
 		private float SpawnInterval;
 
-		// Token: 0x0402551C RID: 152860
+		// Token: 0x04020183 RID: 131459
 		[Nullable(2)]
 		private USplineComponent SplineComp;
 
-		// Token: 0x0402551D RID: 152861
+		// Token: 0x04020184 RID: 131460
 		[Nullable(2)]
 		private TimerHandle OnFinishTimerHandle;
 
-		// Token: 0x0402551E RID: 152862
+		// Token: 0x04020185 RID: 131461
 		private readonly Dictionary<int, FLinearColor> ColorConfigMap = new Dictionary<int, FLinearColor>();
 
-		// Token: 0x0402551F RID: 152863
+		// Token: 0x04020186 RID: 131462
 		private bool IsPathAssetReady;
 
-		// Token: 0x04025520 RID: 152864
+		// Token: 0x04020187 RID: 131463
 		private int RegisteredPbDataId;
 
-		// Token: 0x04025521 RID: 152865
+		// Token: 0x04020188 RID: 131464
 		[Nullable(2)]
 		private ISceneItemGuidePathVisibilityProvider ExternalProvider;
 
-		// Token: 0x04025522 RID: 152866
+		// Token: 0x04020189 RID: 131465
 		private EGuidePathProviderRemovedBehavior ExternalProviderRemovedBehavior;
 	}
 }

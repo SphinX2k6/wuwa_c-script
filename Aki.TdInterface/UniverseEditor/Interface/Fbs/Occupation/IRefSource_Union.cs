@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x020043C2 RID: 17346
+	// Token: 0x02004824 RID: 18468
 	public enum IRefSource_Union : byte
 	{
-		// Token: 0x0400C20B RID: 49675
+		// Token: 0x0400CC2C RID: 52268
 		NONE,
-		// Token: 0x0400C20C RID: 49676
+		// Token: 0x0400CC2D RID: 52269
 		IRefSource,
-		// Token: 0x0400C20D RID: 49677
+		// Token: 0x0400CC2E RID: 52270
 		IAwakeEntityRefSource,
-		// Token: 0x0400C20E RID: 49678
+		// Token: 0x0400CC2F RID: 52271
 		IDestroyEntityRefSource,
-		// Token: 0x0400C20F RID: 49679
+		// Token: 0x0400CC30 RID: 52272
 		IManualOccupationRefSource
 	}
 }

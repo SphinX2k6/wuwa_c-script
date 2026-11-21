@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017CE RID: 6094
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001955 RID: 6485
 	public class IAirPassageMoveLimit
 	{
-		// Token: 0x060082DF RID: 33503 RVA: 0x00138E30 File Offset: 0x00137030
+		// Token: 0x060089F1 RID: 35313 RVA: 0x00148418 File Offset: 0x00146618
 		private IAirPassageMoveLimit_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060082E0 RID: 33504 RVA: 0x00138E68 File Offset: 0x00137068
+		// Token: 0x060089F2 RID: 35314 RVA: 0x00148450 File Offset: 0x00146650
 		public static IAirPassageMoveLimit Create([Nullable(2)] IAirPassageMoveLimit instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060082E1 RID: 33505 RVA: 0x00138E7B File Offset: 0x0013707B
+		// Token: 0x060089F3 RID: 35315 RVA: 0x00148463 File Offset: 0x00146663
 		public static IAirPassageMoveLimit CreateFromSetValue([Nullable(2)] IAirPassageMoveLimit_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060082E2 RID: 33506 RVA: 0x00138E8E File Offset: 0x0013708E
+		// Token: 0x060089F4 RID: 35316 RVA: 0x00148476 File Offset: 0x00146676
 		public IAirPassageMoveLimit_SetValue ToSetValue()
 		{
 			return new IAirPassageMoveLimit_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B0F RID: 11023
-		// (get) Token: 0x060082E3 RID: 33507 RVA: 0x00138EAD File Offset: 0x001370AD
-		// (set) Token: 0x060082E4 RID: 33508 RVA: 0x00138EDC File Offset: 0x001370DC
+		// Token: 0x17002D05 RID: 11525
+		// (get) Token: 0x060089F5 RID: 35317 RVA: 0x00148495 File Offset: 0x00146695
+		// (set) Token: 0x060089F6 RID: 35318 RVA: 0x001484C4 File Offset: 0x001466C4
 		public virtual float DirectionAngleLimit
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B10 RID: 11024
-		// (get) Token: 0x060082E5 RID: 33509 RVA: 0x00138EEA File Offset: 0x001370EA
-		// (set) Token: 0x060082E6 RID: 33510 RVA: 0x00138F19 File Offset: 0x00137119
+		// Token: 0x17002D06 RID: 11526
+		// (get) Token: 0x060089F7 RID: 35319 RVA: 0x001484D2 File Offset: 0x001466D2
+		// (set) Token: 0x060089F8 RID: 35320 RVA: 0x00148501 File Offset: 0x00146701
 		public virtual float EdgeLimitCurveFactor
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400532A RID: 21290
+		// Token: 0x0400576E RID: 22382
 		[Nullable(2)]
 		protected IAirPassageMoveLimit FbInstance;
 
-		// Token: 0x0400532B RID: 21291
+		// Token: 0x0400576F RID: 22383
 		[Nullable(2)]
 		protected IAirPassageMoveLimit_SetValue PocoInterface;
 	}

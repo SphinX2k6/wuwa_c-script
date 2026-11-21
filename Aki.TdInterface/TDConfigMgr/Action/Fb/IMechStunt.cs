@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002812 RID: 10258
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002AE5 RID: 10981
 	public class IMechStunt : ILeisureInteractType
 	{
-		// Token: 0x0600E38F RID: 58255 RVA: 0x0021887E File Offset: 0x00216A7E
+		// Token: 0x0600F1B4 RID: 61876 RVA: 0x002356E2 File Offset: 0x002338E2
 		public static IMechStunt Create(IMechStunt? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700452D RID: 17709
-		// (get) Token: 0x0600E390 RID: 58256 RVA: 0x0021889D File Offset: 0x00216A9D
+		// Token: 0x17004898 RID: 18584
+		// (get) Token: 0x0600F1B5 RID: 61877 RVA: 0x00235701 File Offset: 0x00233901
 		public override ELeisureInteract Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700452E RID: 17710
-		// (get) Token: 0x0600E391 RID: 58257 RVA: 0x002188AA File Offset: 0x00216AAA
+		// Token: 0x17004899 RID: 18585
+		// (get) Token: 0x0600F1B6 RID: 61878 RVA: 0x0023570E File Offset: 0x0023390E
 		public virtual IMechStuntConfigType StuntConfig
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700452F RID: 17711
-		// (get) Token: 0x0600E392 RID: 58258 RVA: 0x002188D9 File Offset: 0x00216AD9
+		// Token: 0x1700489A RID: 18586
+		// (get) Token: 0x0600F1B7 RID: 61879 RVA: 0x0023573D File Offset: 0x0023393D
 		[Nullable(2)]
 		public virtual VectorInfo TargetPos
 		{
@@ -67,8 +65,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004530 RID: 17712
-		// (get) Token: 0x0600E393 RID: 58259 RVA: 0x00218910 File Offset: 0x00216B10
+		// Token: 0x1700489B RID: 18587
+		// (get) Token: 0x0600F1B8 RID: 61880 RVA: 0x00235774 File Offset: 0x00233974
 		public virtual bool? CanInterrupt
 		{
 			get
@@ -81,20 +79,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DFC RID: 32252
+		// Token: 0x040084B9 RID: 33977
 		private IMechStunt Instance;
 
-		// Token: 0x04007DFD RID: 32253
+		// Token: 0x040084BA RID: 33978
 		private IMechStuntConfigType _StuntConfigCache;
 
-		// Token: 0x04007DFE RID: 32254
+		// Token: 0x040084BB RID: 33979
 		private bool _StuntConfigInited;
 
-		// Token: 0x04007DFF RID: 32255
+		// Token: 0x040084BC RID: 33980
 		[Nullable(2)]
 		private VectorInfo _TargetPosCache;
 
-		// Token: 0x04007E00 RID: 32256
+		// Token: 0x040084BD RID: 33981
 		private bool _TargetPosInited;
 	}
 }

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001763 RID: 5987
+	// Token: 0x020018E4 RID: 6372
 	public class IActorFaceExpressionStop_SetValue
 	{
-		// Token: 0x040050AD RID: 20653
+		// Token: 0x040054E3 RID: 21731
 		public EActorFaceExpressionType Type;
 
-		// Token: 0x040050AE RID: 20654
+		// Token: 0x040054E4 RID: 21732
 		public float? DelayTime;
 	}
 }

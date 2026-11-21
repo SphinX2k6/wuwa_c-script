@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C8D RID: 11405
+// Token: 0x020021E6 RID: 8678
 [NullableContext(2)]
 public interface IUiMorphData
 {
-	// Token: 0x1700200E RID: 8206
-	// (get) Token: 0x06017D52 RID: 97618
-	// (set) Token: 0x06017D53 RID: 97619
+	// Token: 0x1700205F RID: 8287
+	// (get) Token: 0x060155C6 RID: 87494
+	// (set) Token: 0x060155C7 RID: 87495
 	USkeletalMesh MainSkeletalMesh { get; set; }
 
-	// Token: 0x1700200F RID: 8207
-	// (get) Token: 0x06017D54 RID: 97620
-	// (set) Token: 0x06017D55 RID: 97621
+	// Token: 0x17002060 RID: 8288
+	// (get) Token: 0x060155C8 RID: 87496
+	// (set) Token: 0x060155C9 RID: 87497
 	[Nullable(new byte[]
 	{
 		2,
@@ -30,19 +30,19 @@ public interface IUiMorphData
 		1
 	})] set; }
 
-	// Token: 0x17002010 RID: 8208
-	// (get) Token: 0x06017D56 RID: 97622
-	// (set) Token: 0x06017D57 RID: 97623
+	// Token: 0x17002061 RID: 8289
+	// (get) Token: 0x060155CA RID: 87498
+	// (set) Token: 0x060155CB RID: 87499
 	[Nullable(1)]
 	List<UiModelDecorationParam> DecorationParamList { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17002011 RID: 8209
-	// (get) Token: 0x06017D58 RID: 97624
-	// (set) Token: 0x06017D59 RID: 97625
+	// Token: 0x17002062 RID: 8290
+	// (get) Token: 0x060155CC RID: 87500
+	// (set) Token: 0x060155CD RID: 87501
 	UClass AnimClass { get; set; }
 
-	// Token: 0x17002012 RID: 8210
-	// (get) Token: 0x06017D5A RID: 97626
-	// (set) Token: 0x06017D5B RID: 97627
+	// Token: 0x17002063 RID: 8291
+	// (get) Token: 0x060155CE RID: 87502
+	// (set) Token: 0x060155CF RID: 87503
 	string RoleBody { get; set; }
 }

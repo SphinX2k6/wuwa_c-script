@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022CE RID: 8910
+	// Token: 0x0200253D RID: 9533
 	public class ECameraShakeTypeJsonConverter : JsonConverter<ECameraShakeType>
 	{
-		// Token: 0x0600C31F RID: 49951 RVA: 0x001C83C8 File Offset: 0x001C65C8
+		// Token: 0x0600CEEE RID: 52974 RVA: 0x001E01D0 File Offset: 0x001DE3D0
 		public override ECameraShakeType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ECameraShakeTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C320 RID: 49952 RVA: 0x001C83EC File Offset: 0x001C65EC
+		// Token: 0x0600CEEF RID: 52975 RVA: 0x001E01F4 File Offset: 0x001DE3F4
 		public override void Write(Utf8JsonWriter writer, ECameraShakeType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

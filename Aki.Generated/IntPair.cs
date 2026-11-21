@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011CE RID: 4558
+	// Token: 0x02001304 RID: 4868
 	public struct IntPair : IFlatbufferObject
 	{
-		// Token: 0x17003EF0 RID: 16112
-		// (get) Token: 0x0600EAA1 RID: 60065 RVA: 0x003486DC File Offset: 0x003468DC
+		// Token: 0x17004255 RID: 16981
+		// (get) Token: 0x0600F812 RID: 63506 RVA: 0x00373328 File Offset: 0x00371528
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EAA2 RID: 60066 RVA: 0x003486E9 File Offset: 0x003468E9
+		// Token: 0x0600F813 RID: 63507 RVA: 0x00373335 File Offset: 0x00371535
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600EAA3 RID: 60067 RVA: 0x003486F0 File Offset: 0x003468F0
+		// Token: 0x0600F814 RID: 63508 RVA: 0x0037333C File Offset: 0x0037153C
 		public static IntPair GetRootAsIntPair(ByteBuffer _bb)
 		{
 			return IntPair.GetRootAsIntPair(_bb, default(IntPair));
 		}
 
-		// Token: 0x0600EAA4 RID: 60068 RVA: 0x0034870C File Offset: 0x0034690C
+		// Token: 0x0600F815 RID: 63509 RVA: 0x00373358 File Offset: 0x00371558
 		public static IntPair GetRootAsIntPair(ByteBuffer _bb, IntPair obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600EAA5 RID: 60069 RVA: 0x00348729 File Offset: 0x00346929
+		// Token: 0x0600F816 RID: 63510 RVA: 0x00373375 File Offset: 0x00371575
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600EAA6 RID: 60070 RVA: 0x00348738 File Offset: 0x00346938
+		// Token: 0x0600F817 RID: 63511 RVA: 0x00373384 File Offset: 0x00371584
 		public IntPair __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003EF1 RID: 16113
-		// (get) Token: 0x0600EAA7 RID: 60071 RVA: 0x00348748 File Offset: 0x00346948
+		// Token: 0x17004256 RID: 16982
+		// (get) Token: 0x0600F818 RID: 63512 RVA: 0x00373394 File Offset: 0x00371594
 		public int Item1
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003EF2 RID: 16114
-		// (get) Token: 0x0600EAA8 RID: 60072 RVA: 0x00348784 File Offset: 0x00346984
+		// Token: 0x17004257 RID: 16983
+		// (get) Token: 0x0600F819 RID: 63513 RVA: 0x003733D0 File Offset: 0x003715D0
 		public int Item2
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0400533C RID: 21308
+		// Token: 0x0400597F RID: 22911
 		private Table __p;
 	}
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x020021F7 RID: 8695
+// Token: 0x020016DB RID: 5851
 public class PreemptiveFrameTaskDefine
 {
-	// Token: 0x04008085 RID: 32901
+	// Token: 0x040081C3 RID: 33219
 	public const int SIMPLE_FRAME_TASK_LIMIT = 30;
 }

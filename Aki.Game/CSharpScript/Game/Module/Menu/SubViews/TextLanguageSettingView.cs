@@ -5,7 +5,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x0200542F RID: 21551
+	// Token: 0x02004412 RID: 17426
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,12 +14,12 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 	})]
 	public class TextLanguageSettingView : LanguageSettingViewBase<TextLanguageToggle>
 	{
-		// Token: 0x060370C0 RID: 225472 RVA: 0x00D0B79C File Offset: 0x00D0999C
+		// Token: 0x0602C009 RID: 180233 RVA: 0x00C5ABBC File Offset: 0x00C58DBC
 		public TextLanguageSettingView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060370C1 RID: 225473 RVA: 0x00D0B7A5 File Offset: 0x00D099A5
+		// Token: 0x0602C00A RID: 180234 RVA: 0x00C5ABC5 File Offset: 0x00C58DC5
 		[return: Nullable(2)]
 		protected override TextLanguageToggle CreateToggle(UUIItem uiItem, int index, bool isToggled)
 		{
@@ -28,14 +28,14 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return textLanguageToggle;
 		}
 
-		// Token: 0x060370C2 RID: 225474 RVA: 0x00D0B7B8 File Offset: 0x00D099B8
+		// Token: 0x0602C00B RID: 180235 RVA: 0x00C5ABD8 File Offset: 0x00C58DD8
 		protected override void OnRefreshView(TextLanguageToggle newToggle)
 		{
 			string mainText = this.MenuDataIns.OptionsNameList[newToggle.GetIndex()];
 			newToggle.SetMainText(mainText);
 		}
 
-		// Token: 0x060370C3 RID: 225475 RVA: 0x00D0B7E3 File Offset: 0x00D099E3
+		// Token: 0x0602C00C RID: 180236 RVA: 0x00C5AC03 File Offset: 0x00C58E03
 		protected override void OnSelected(TextLanguageToggle newToggle, EToggleState newToggleState)
 		{
 			newToggle.SetSpriteActive(true);

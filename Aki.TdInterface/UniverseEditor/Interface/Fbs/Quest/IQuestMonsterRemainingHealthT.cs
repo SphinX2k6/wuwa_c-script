@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FF9 RID: 16377
+	// Token: 0x0200443A RID: 17466
 	public class IQuestMonsterRemainingHealthT
 	{
-		// Token: 0x17007311 RID: 29457
-		// (get) Token: 0x060179EB RID: 96747 RVA: 0x003686CF File Offset: 0x003668CF
-		// (set) Token: 0x060179EC RID: 96748 RVA: 0x003686D7 File Offset: 0x003668D7
+		// Token: 0x17007913 RID: 30995
+		// (get) Token: 0x06019084 RID: 102532 RVA: 0x003924C3 File Offset: 0x003906C3
+		// (set) Token: 0x06019085 RID: 102533 RVA: 0x003924CB File Offset: 0x003906CB
 		public EStatisticsEventType Type { get; set; }
 
-		// Token: 0x17007312 RID: 29458
-		// (get) Token: 0x060179ED RID: 96749 RVA: 0x003686E0 File Offset: 0x003668E0
-		// (set) Token: 0x060179EE RID: 96750 RVA: 0x003686E8 File Offset: 0x003668E8
+		// Token: 0x17007914 RID: 30996
+		// (get) Token: 0x06019086 RID: 102534 RVA: 0x003924D4 File Offset: 0x003906D4
+		// (set) Token: 0x06019087 RID: 102535 RVA: 0x003924DC File Offset: 0x003906DC
 		public TVarRefUnion Var { get; set; }
 
-		// Token: 0x17007313 RID: 29459
-		// (get) Token: 0x060179EF RID: 96751 RVA: 0x003686F1 File Offset: 0x003668F1
-		// (set) Token: 0x060179F0 RID: 96752 RVA: 0x003686F9 File Offset: 0x003668F9
+		// Token: 0x17007915 RID: 30997
+		// (get) Token: 0x06019088 RID: 102536 RVA: 0x003924E5 File Offset: 0x003906E5
+		// (set) Token: 0x06019089 RID: 102537 RVA: 0x003924ED File Offset: 0x003906ED
 		public int EntityId { get; set; }
 
-		// Token: 0x17007314 RID: 29460
-		// (get) Token: 0x060179F1 RID: 96753 RVA: 0x00368702 File Offset: 0x00366902
-		// (set) Token: 0x060179F2 RID: 96754 RVA: 0x0036870A File Offset: 0x0036690A
+		// Token: 0x17007916 RID: 30998
+		// (get) Token: 0x0601908A RID: 102538 RVA: 0x003924F6 File Offset: 0x003906F6
+		// (set) Token: 0x0601908B RID: 102539 RVA: 0x003924FE File Offset: 0x003906FE
 		public bool IsStatisticsAdd { get; set; }
 
-		// Token: 0x060179F3 RID: 96755 RVA: 0x00368713 File Offset: 0x00366913
+		// Token: 0x0601908C RID: 102540 RVA: 0x00392507 File Offset: 0x00390707
 		public IQuestMonsterRemainingHealthT()
 		{
 			this.Type = EStatisticsEventType.Collect;

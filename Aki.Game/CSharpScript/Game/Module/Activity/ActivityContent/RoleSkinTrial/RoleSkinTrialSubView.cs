@@ -15,12 +15,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 {
-	// Token: 0x020061B5 RID: 25013
+	// Token: 0x02005133 RID: 20787
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleSkinTrialSubView : ActivitySubViewBase
 	{
-		// Token: 0x0603F2DC RID: 258780 RVA: 0x00F43C14 File Offset: 0x00F41E14
+		// Token: 0x06033F9C RID: 212892 RVA: 0x00E8AAE0 File Offset: 0x00E88CE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 20;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F2DD RID: 258781 RVA: 0x00F43F3C File Offset: 0x00F4213C
+		// Token: 0x06033F9D RID: 212893 RVA: 0x00E8AE08 File Offset: 0x00E89008
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleSkinTrialSubView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -90,19 +90,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F2DE RID: 258782 RVA: 0x00F43F7F File Offset: 0x00F4217F
+		// Token: 0x06033F9E RID: 212894 RVA: 0x00E8AE4B File Offset: 0x00E8904B
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnStateChange));
 		}
 
-		// Token: 0x0603F2DF RID: 258783 RVA: 0x00F43F9D File Offset: 0x00F4219D
+		// Token: 0x06033F9F RID: 212895 RVA: 0x00E8AE69 File Offset: 0x00E89069
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnStateChange));
 		}
 
-		// Token: 0x0603F2E0 RID: 258784 RVA: 0x00F43FBB File Offset: 0x00F421BB
+		// Token: 0x06033FA0 RID: 212896 RVA: 0x00E8AE87 File Offset: 0x00E89087
 		private void OnStateChange(int id)
 		{
 			if (id != this.ActivityBaseData.Id)
@@ -112,13 +112,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			this.RefreshReward(this.SelectToggleIndex);
 		}
 
-		// Token: 0x0603F2E1 RID: 258785 RVA: 0x00F43FD8 File Offset: 0x00F421D8
+		// Token: 0x06033FA1 RID: 212897 RVA: 0x00E8AEA4 File Offset: 0x00E890A4
 		private ActivitySmallItemGrid InitGridItem()
 		{
 			return new ActivitySmallItemGrid();
 		}
 
-		// Token: 0x0603F2E2 RID: 258786 RVA: 0x00F43FDF File Offset: 0x00F421DF
+		// Token: 0x06033FA2 RID: 212898 RVA: 0x00E8AEAB File Offset: 0x00E890AB
 		private RoleItem InitRoleItem()
 		{
 			return new RoleItem
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			};
 		}
 
-		// Token: 0x0603F2E3 RID: 258787 RVA: 0x00F43FF8 File Offset: 0x00F421F8
+		// Token: 0x06033FA3 RID: 212899 RVA: 0x00E8AEC4 File Offset: 0x00E890C4
 		private void ToggleCallBack(RoleItemData data)
 		{
 			this.SelectToggleIndex = data.Index;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			this.PlaySwitchSequence();
 		}
 
-		// Token: 0x0603F2E4 RID: 258788 RVA: 0x00F4401E File Offset: 0x00F4221E
+		// Token: 0x06033FA4 RID: 212900 RVA: 0x00E8AEEA File Offset: 0x00E890EA
 		protected override void OnRefreshView()
 		{
 			this.CurrentData = (this.ActivityBaseData as RoleSkinTrialData);
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			this.RefreshLayout();
 		}
 
-		// Token: 0x0603F2E5 RID: 258789 RVA: 0x00F4405C File Offset: 0x00F4225C
+		// Token: 0x06033FA5 RID: 212901 RVA: 0x00E8AF28 File Offset: 0x00E89128
 		private void RefreshViewBySelectToggleIndex(int index)
 		{
 			this.RefreshReward(index);
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			this.RefreshInfluenceTexture(index);
 		}
 
-		// Token: 0x0603F2E6 RID: 258790 RVA: 0x00F4408C File Offset: 0x00F4228C
+		// Token: 0x06033FA6 RID: 212902 RVA: 0x00E8AF58 File Offset: 0x00E89158
 		private void RefreshTitleComponent()
 		{
 			Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			this.RefreshTimeTitle();
 		}
 
-		// Token: 0x0603F2E7 RID: 258791 RVA: 0x00F44144 File Offset: 0x00F42344
+		// Token: 0x06033FA7 RID: 212903 RVA: 0x00E8B010 File Offset: 0x00E89210
 		private void RefreshTimeTitle()
 		{
 			ValueTuple<bool, string, long> timeVisibleAndRemainTime = ActivityModel.Instance.GetTimeVisibleAndRemainTime(this.ActivityBaseData, null);
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			}
 		}
 
-		// Token: 0x0603F2E8 RID: 258792 RVA: 0x00F4418C File Offset: 0x00F4238C
+		// Token: 0x06033FA8 RID: 212904 RVA: 0x00E8B058 File Offset: 0x00E89258
 		private void RefreshDescriptionComponent(int index)
 		{
 			int selectIdByIndex = this.CurrentData.GetSelectIdByIndex(index);
@@ -203,13 +203,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			}
 		}
 
-		// Token: 0x0603F2E9 RID: 258793 RVA: 0x00F4420F File Offset: 0x00F4240F
+		// Token: 0x06033FA9 RID: 212905 RVA: 0x00E8B0DB File Offset: 0x00E892DB
 		protected override void OnTimer(float gap)
 		{
 			this.RefreshTimeTitle();
 		}
 
-		// Token: 0x0603F2EA RID: 258794 RVA: 0x00F44218 File Offset: 0x00F42418
+		// Token: 0x06033FAA RID: 212906 RVA: 0x00E8B0E4 File Offset: 0x00E892E4
 		private void RefreshReward(int index)
 		{
 			int selectIdByIndex = this.CurrentData.GetSelectIdByIndex(index);
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			base.GetButton(8).RootUIComp.Get().SetUIActive(rewardStateById == ChallengeState.WaitTakeReward);
 		}
 
-		// Token: 0x0603F2EB RID: 258795 RVA: 0x00F442B4 File Offset: 0x00F424B4
+		// Token: 0x06033FAB RID: 212907 RVA: 0x00E8B180 File Offset: 0x00E89380
 		private void RefreshUiConfigPerformance(int index)
 		{
 			int selectIdByIndex = this.CurrentData.GetSelectIdByIndex(index);
@@ -237,26 +237,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			base.GetTexture(13).SetColor(FColor.FromHex(((roleSkinTrialUiConfigById != null) ? roleSkinTrialUiConfigById.GetValueOrDefault().Color5 : null) ?? ""));
 		}
 
-		// Token: 0x0603F2EC RID: 258796 RVA: 0x00F443EC File Offset: 0x00F425EC
+		// Token: 0x06033FAC RID: 212908 RVA: 0x00E8B2B8 File Offset: 0x00E894B8
 		private void RefreshLayout()
 		{
 			List<int> roleList = this.CurrentData.GetRoleList();
 			List<RoleItemData> list = new List<RoleItemData>();
 			for (int i = 0; i < roleList.Count; i++)
 			{
-				int roleId = roleList[i];
+				int num = roleList[i];
 				list.Add(new RoleItemData
 				{
-					RoleId = roleId,
+					RoleId = num,
 					ActivityId = this.CurrentData.Id,
 					Index = i,
-					SelectState = (i == this.SelectToggleIndex)
+					SelectState = (i == this.SelectToggleIndex),
+					FinishState = (this.CurrentData.GetRewardStateById(num) == ChallengeState.Finish),
+					RoleSkinTrialData = this.CurrentData
 				});
 			}
 			this.RoleLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603F2ED RID: 258797 RVA: 0x00F44473 File Offset: 0x00F42673
+		// Token: 0x06033FAD RID: 212909 RVA: 0x00E8B362 File Offset: 0x00E89562
 		private void ButtonInstanceEnterClick()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -271,7 +273,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			});
 		}
 
-		// Token: 0x0603F2EE RID: 258798 RVA: 0x00F44494 File Offset: 0x00F42694
+		// Token: 0x06033FAE RID: 212910 RVA: 0x00E8B380 File Offset: 0x00E89580
 		private void RefreshNameText(int index)
 		{
 			int selectIdByIndex = this.CurrentData.GetSelectIdByIndex(index);
@@ -281,7 +283,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(16), roleSkinData.GetSubTitle(), Array.Empty<object>());
 		}
 
-		// Token: 0x0603F2EF RID: 258799 RVA: 0x00F44514 File Offset: 0x00F42714
+		// Token: 0x06033FAF RID: 212911 RVA: 0x00E8B400 File Offset: 0x00E89600
 		private UniTask RefreshSpine(int index)
 		{
 			RoleSkinTrialSubView.<RefreshSpine>d__28 <RefreshSpine>d__;
@@ -293,7 +295,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			return <RefreshSpine>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F2F0 RID: 258800 RVA: 0x00F44560 File Offset: 0x00F42760
+		// Token: 0x06033FB0 RID: 212912 RVA: 0x00E8B44C File Offset: 0x00E8964C
 		private void PlaySwitchSequence()
 		{
 			if (this.LevelSequenceSwitchPlayer.GetCurrentSequence() == "Switch")
@@ -304,21 +306,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			this.LevelSequenceSwitchPlayer.PlayLevelSequenceByName("Switch", false, null, false);
 		}
 
-		// Token: 0x0603F2F1 RID: 258801 RVA: 0x00F445B0 File Offset: 0x00F427B0
+		// Token: 0x06033FB1 RID: 212913 RVA: 0x00E8B49C File Offset: 0x00E8969C
 		private void ButtonRewardClaimedClick()
 		{
 			int selectIdByIndex = this.CurrentData.GetSelectIdByIndex(this.SelectToggleIndex);
 			RoleSkinTrialController.RequestRoleSkinTrailInstanceReward(this.CurrentData.Id, selectIdByIndex);
 		}
 
-		// Token: 0x0603F2F2 RID: 258802 RVA: 0x00F445E0 File Offset: 0x00F427E0
+		// Token: 0x06033FB2 RID: 212914 RVA: 0x00E8B4CC File Offset: 0x00E896CC
 		private void OnShopButtonClick()
 		{
 			int selectIdByIndex = this.CurrentData.GetSelectIdByIndex(this.SelectToggleIndex);
 			SkipTaskManager.RunByConfigId(this.CurrentData.GetAccessIdById(selectIdByIndex), null);
 		}
 
-		// Token: 0x0603F2F3 RID: 258803 RVA: 0x00F44614 File Offset: 0x00F42814
+		// Token: 0x06033FB3 RID: 212915 RVA: 0x00E8B500 File Offset: 0x00E89700
 		private void RefreshInfluenceTexture(int index)
 		{
 			int selectIdByIndex = this.CurrentData.GetSelectIdByIndex(index);
@@ -336,7 +338,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			}
 		}
 
-		// Token: 0x0603F2F4 RID: 258804 RVA: 0x00F446CC File Offset: 0x00F428CC
+		// Token: 0x06033FB4 RID: 212916 RVA: 0x00E8B5B8 File Offset: 0x00E897B8
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequenceSwitchPlayer = this.LevelSequenceSwitchPlayer;
@@ -347,7 +349,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			levelSequenceSwitchPlayer.Clear();
 		}
 
-		// Token: 0x0603F2F5 RID: 258805 RVA: 0x00F446E0 File Offset: 0x00F428E0
+		// Token: 0x06033FB5 RID: 212917 RVA: 0x00E8B5CC File Offset: 0x00E897CC
 		private void RefreshHorizontalLayout()
 		{
 			bool uiactive = this.CurrentData.GetRoleList().Count > 1;
@@ -355,92 +357,92 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			base.GetItem(18).SetUIActive(uiactive);
 		}
 
-		// Token: 0x04020EDA RID: 134874
+		// Token: 0x0401B807 RID: 112647
 		private int SelectToggleIndex;
 
-		// Token: 0x04020EDB RID: 134875
+		// Token: 0x0401B808 RID: 112648
 		private GenericLayout<RoleItem, RoleItemData> RoleLayout;
 
-		// Token: 0x04020EDC RID: 134876
+		// Token: 0x0401B809 RID: 112649
 		private RoleSkinTrialData CurrentData;
 
-		// Token: 0x04020EDD RID: 134877
+		// Token: 0x0401B80A RID: 112650
 		private LevelSequencePlayer LevelSequenceSwitchPlayer;
 
-		// Token: 0x04020EDE RID: 134878
+		// Token: 0x0401B80B RID: 112651
 		private ActivityTitleTypeA TitleComponent;
 
-		// Token: 0x04020EDF RID: 134879
+		// Token: 0x0401B80C RID: 112652
 		private ActivityDescriptionTypeB DescriptionComponent;
 
-		// Token: 0x04020EE0 RID: 134880
+		// Token: 0x0401B80D RID: 112653
 		private ActivityRewardList<ActivitySmallItemGrid, IItemGridData> RewardListComponent;
 
-		// Token: 0x04020EE1 RID: 134881
+		// Token: 0x0401B80E RID: 112654
 		private ActivityFunctionalTypeA FunctionalComponent;
 
-		// Token: 0x0200C405 RID: 50181
+		// Token: 0x0200ADEC RID: 44524
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B29E RID: 242334
+			// Token: 0x04035BFF RID: 220159
 			public const int TexInfluence = 0;
 
-			// Token: 0x0403B29F RID: 242335
+			// Token: 0x04035C00 RID: 220160
 			public const int PanelRole = 1;
 
-			// Token: 0x0403B2A0 RID: 242336
+			// Token: 0x04035C01 RID: 220161
 			public const int TitleItem = 2;
 
-			// Token: 0x0403B2A1 RID: 242337
+			// Token: 0x04035C02 RID: 220162
 			public const int DescriptionItem = 3;
 
-			// Token: 0x0403B2A2 RID: 242338
+			// Token: 0x04035C03 RID: 220163
 			public const int RewardListItem = 4;
 
-			// Token: 0x0403B2A3 RID: 242339
+			// Token: 0x04035C04 RID: 220164
 			public const int FunctionArea = 5;
 
-			// Token: 0x0403B2A4 RID: 242340
+			// Token: 0x04035C05 RID: 220165
 			public const int PanelDone = 6;
 
-			// Token: 0x0403B2A5 RID: 242341
+			// Token: 0x04035C06 RID: 220166
 			public const int PanelOngoing = 7;
 
-			// Token: 0x0403B2A6 RID: 242342
+			// Token: 0x04035C07 RID: 220167
 			public const int BtnReward = 8;
 
-			// Token: 0x0403B2A7 RID: 242343
+			// Token: 0x04035C08 RID: 220168
 			public const int TexColor1 = 9;
 
-			// Token: 0x0403B2A8 RID: 242344
+			// Token: 0x04035C09 RID: 220169
 			public const int TexColor2 = 10;
 
-			// Token: 0x0403B2A9 RID: 242345
+			// Token: 0x04035C0A RID: 220170
 			public const int TexColor3 = 11;
 
-			// Token: 0x0403B2AA RID: 242346
+			// Token: 0x04035C0B RID: 220171
 			public const int TexColor4 = 12;
 
-			// Token: 0x0403B2AB RID: 242347
+			// Token: 0x04035C0C RID: 220172
 			public const int TexColor5 = 13;
 
-			// Token: 0x0403B2AC RID: 242348
+			// Token: 0x04035C0D RID: 220173
 			public const int ShopBtn = 14;
 
-			// Token: 0x0403B2AD RID: 242349
+			// Token: 0x04035C0E RID: 220174
 			public const int MainNameText = 15;
 
-			// Token: 0x0403B2AE RID: 242350
+			// Token: 0x04035C0F RID: 220175
 			public const int SubNameText = 16;
 
-			// Token: 0x0403B2AF RID: 242351
+			// Token: 0x04035C10 RID: 220176
 			public const int SpineTexture = 17;
 
-			// Token: 0x0403B2B0 RID: 242352
+			// Token: 0x04035C11 RID: 220177
 			public const int HorizontalMaskItem = 18;
 
-			// Token: 0x0403B2B1 RID: 242353
+			// Token: 0x04035C12 RID: 220178
 			public const int SpineParentItem = 19;
 		}
 	}

@@ -6,13 +6,13 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.ResManager.Model
 {
-	// Token: 0x02004F11 RID: 20241
+	// Token: 0x02003EDA RID: 16090
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class ResourceManagerModel : ModelBase
 	{
-		// Token: 0x06033E6A RID: 212586 RVA: 0x00C29650 File Offset: 0x00C27850
+		// Token: 0x06028CD5 RID: 167125 RVA: 0x00B72C40 File Offset: 0x00B70E40
 		protected override bool OnInit()
 		{
 			IReadOnlyList<MapBlockInfo> configList = ConfigMapBlockInfoAll.GetConfigList(false);
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.ResManager.Model
 			return true;
 		}
 
-		// Token: 0x06033E6B RID: 212587 RVA: 0x00C2974C File Offset: 0x00C2794C
+		// Token: 0x06028CD6 RID: 167126 RVA: 0x00B72D3C File Offset: 0x00B70F3C
 		public unsafe void FillLoginInfo(int[] quests, ConfirmResourceSceneInfo[] sceneInfos)
 		{
 			Log instance = Log.Instance;
@@ -58,8 +58,8 @@ namespace CSharpScript.Game.Module.ResManager.Model
 			this.LoginSceneInfosInternal.AddRange(sceneInfos);
 		}
 
-		// Token: 0x17007F3A RID: 32570
-		// (get) Token: 0x06033E6C RID: 212588 RVA: 0x00C297EF File Offset: 0x00C279EF
+		// Token: 0x170052EA RID: 21226
+		// (get) Token: 0x06028CD7 RID: 167127 RVA: 0x00B72DDF File Offset: 0x00B70FDF
 		public List<ConfirmResourceSceneInfo> LoginSceneInfos
 		{
 			get
@@ -68,8 +68,8 @@ namespace CSharpScript.Game.Module.ResManager.Model
 			}
 		}
 
-		// Token: 0x17007F3B RID: 32571
-		// (get) Token: 0x06033E6D RID: 212589 RVA: 0x00C297F7 File Offset: 0x00C279F7
+		// Token: 0x170052EB RID: 21227
+		// (get) Token: 0x06028CD8 RID: 167128 RVA: 0x00B72DE7 File Offset: 0x00B70FE7
 		public Dictionary<int, string> MapBlockIdToPackName
 		{
 			get
@@ -78,8 +78,8 @@ namespace CSharpScript.Game.Module.ResManager.Model
 			}
 		}
 
-		// Token: 0x17007F3C RID: 32572
-		// (get) Token: 0x06033E6E RID: 212590 RVA: 0x00C297FF File Offset: 0x00C279FF
+		// Token: 0x170052EC RID: 21228
+		// (get) Token: 0x06028CD9 RID: 167129 RVA: 0x00B72DEF File Offset: 0x00B70FEF
 		public HashSet<int> LoginQuests
 		{
 			get
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.ResManager.Model
 			}
 		}
 
-		// Token: 0x06033E6F RID: 212591 RVA: 0x00C29808 File Offset: 0x00C27A08
+		// Token: 0x06028CDA RID: 167130 RVA: 0x00B72DF8 File Offset: 0x00B70FF8
 		public void SetBlockDownloadState(int blockId, bool state)
 		{
 			Log instance = Log.Instance;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.ResManager.Model
 			this.BlockDownloadState[blockId] = state;
 		}
 
-		// Token: 0x06033E70 RID: 212592 RVA: 0x00C29874 File Offset: 0x00C27A74
+		// Token: 0x06028CDB RID: 167131 RVA: 0x00B72E64 File Offset: 0x00B71064
 		public bool GetBlockDownloadState(int blockId)
 		{
 			bool result;
@@ -121,26 +121,26 @@ namespace CSharpScript.Game.Module.ResManager.Model
 			return result;
 		}
 
-		// Token: 0x06033E71 RID: 212593 RVA: 0x00C298D0 File Offset: 0x00C27AD0
+		// Token: 0x06028CDC RID: 167132 RVA: 0x00B72EC0 File Offset: 0x00B710C0
 		protected override bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x06033E72 RID: 212594 RVA: 0x00C298D3 File Offset: 0x00C27AD3
+		// Token: 0x06028CDD RID: 167133 RVA: 0x00B72EC3 File Offset: 0x00B710C3
 		protected override bool OnLeaveLevel()
 		{
 			return true;
 		}
 
-		// Token: 0x06033E73 RID: 212595 RVA: 0x00C298D6 File Offset: 0x00C27AD6
+		// Token: 0x06028CDE RID: 167134 RVA: 0x00B72EC6 File Offset: 0x00B710C6
 		protected override bool OnChangeMode()
 		{
 			return true;
 		}
 
-		// Token: 0x17007F3D RID: 32573
-		// (get) Token: 0x06033E74 RID: 212596 RVA: 0x00C298D9 File Offset: 0x00C27AD9
+		// Token: 0x170052ED RID: 21229
+		// (get) Token: 0x06028CDF RID: 167135 RVA: 0x00B72EC9 File Offset: 0x00B710C9
 		public static ResourceManagerModel Instance
 		{
 			get
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.ResManager.Model
 			}
 		}
 
-		// Token: 0x06033E75 RID: 212597 RVA: 0x00C298E0 File Offset: 0x00C27AE0
+		// Token: 0x06028CE0 RID: 167136 RVA: 0x00B72ED0 File Offset: 0x00B710D0
 		public static ResourceManagerModel GetOrCreateInstance()
 		{
 			if (ResourceManagerModel._Instance == null)
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.ResManager.Model
 			return ResourceManagerModel._Instance;
 		}
 
-		// Token: 0x06033E76 RID: 212598 RVA: 0x00C298F4 File Offset: 0x00C27AF4
+		// Token: 0x06028CE1 RID: 167137 RVA: 0x00B72EE4 File Offset: 0x00B710E4
 		public static bool CreateInstance()
 		{
 			if (ResourceManagerModel._Instance != null)
@@ -170,42 +170,42 @@ namespace CSharpScript.Game.Module.ResManager.Model
 			return true;
 		}
 
-		// Token: 0x06033E77 RID: 212599 RVA: 0x00C2990A File Offset: 0x00C27B0A
+		// Token: 0x06028CE2 RID: 167138 RVA: 0x00B72EFA File Offset: 0x00B710FA
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06033E78 RID: 212600 RVA: 0x00C2990C File Offset: 0x00C27B0C
+		// Token: 0x06028CE3 RID: 167139 RVA: 0x00B72EFC File Offset: 0x00B710FC
 		public static void ResetStaticDefaultValue()
 		{
 			ResourceManagerModel._Instance = null;
 		}
 
-		// Token: 0x06033E79 RID: 212601 RVA: 0x00C29914 File Offset: 0x00C27B14
+		// Token: 0x06028CE4 RID: 167140 RVA: 0x00B72F04 File Offset: 0x00B71104
 		static ResourceManagerModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ResourceManagerModel.CreateStaticDefaultValue), new Action(ResourceManagerModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401B95B RID: 112987
+		// Token: 0x0401632E RID: 90926
 		private readonly Dictionary<int, string> BlockIdToPackName = new Dictionary<int, string>();
 
-		// Token: 0x0401B95C RID: 112988
+		// Token: 0x0401632F RID: 90927
 		private readonly HashSet<int> LoginQuestsInternal = new HashSet<int>();
 
-		// Token: 0x0401B95D RID: 112989
+		// Token: 0x04016330 RID: 90928
 		private readonly List<ConfirmResourceSceneInfo> LoginSceneInfosInternal = new List<ConfirmResourceSceneInfo>();
 
-		// Token: 0x0401B95E RID: 112990
+		// Token: 0x04016331 RID: 90929
 		private readonly Dictionary<int, bool> BlockDownloadState = new Dictionary<int, bool>();
 
-		// Token: 0x0401B95F RID: 112991
+		// Token: 0x04016332 RID: 90930
 		public readonly Dictionary<int, int[]> QuestsRefBlocks = new Dictionary<int, int[]>();
 
-		// Token: 0x0401B960 RID: 112992
+		// Token: 0x04016333 RID: 90931
 		public readonly HashSet<int> BlockNeedReOpenMap = new HashSet<int>();
 
-		// Token: 0x0401B961 RID: 112993
+		// Token: 0x04016334 RID: 90932
 		[Nullable(2)]
 		private static ResourceManagerModel _Instance;
 	}

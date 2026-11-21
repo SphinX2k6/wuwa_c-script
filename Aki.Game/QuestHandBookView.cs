@@ -8,18 +8,18 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E43 RID: 7747
+// Token: 0x02001305 RID: 4869
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestHandBookView : UiViewBase
 {
-	// Token: 0x0600EB99 RID: 60313 RVA: 0x0037E981 File Offset: 0x0037CB81
+	// Token: 0x0600BFB8 RID: 49080 RVA: 0x0038A611 File Offset: 0x00388811
 	public QuestHandBookView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 		this.PlotTypeList = new List<PlotType>();
 	}
 
-	// Token: 0x0600EB9A RID: 60314 RVA: 0x0037E998 File Offset: 0x0037CB98
+	// Token: 0x0600BFB9 RID: 49081 RVA: 0x0038A628 File Offset: 0x00388828
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,27 +30,27 @@ public class QuestHandBookView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600EB9B RID: 60315 RVA: 0x0037E9F2 File Offset: 0x0037CBF2
+	// Token: 0x0600BFBA RID: 49082 RVA: 0x0038A682 File Offset: 0x00388882
 	protected override void OnStart()
 	{
 		this.Refresh();
 		this.InitCommonTabTitle();
 	}
 
-	// Token: 0x0600EB9C RID: 60316 RVA: 0x0037EA00 File Offset: 0x0037CC00
+	// Token: 0x0600BFBB RID: 49083 RVA: 0x0038A690 File Offset: 0x00388890
 	private void OnHandBookDataUpdate(EHandBookTabType eHandBookTabType, int i)
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x0600EB9D RID: 60317 RVA: 0x0037EA08 File Offset: 0x0037CC08
+	// Token: 0x0600BFBC RID: 49084 RVA: 0x0038A698 File Offset: 0x00388898
 	protected void Refresh()
 	{
 		this.InitVerticalLayout();
 		this.RefreshCollectText();
 	}
 
-	// Token: 0x0600EB9E RID: 60318 RVA: 0x0037EA18 File Offset: 0x0037CC18
+	// Token: 0x0600BFBD RID: 49085 RVA: 0x0038A6A8 File Offset: 0x003888A8
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnHandBookDataInit, new Action(this.Refresh));
@@ -58,7 +58,7 @@ public class QuestHandBookView : UiViewBase
 		EventSystem.Instance.Add(EEventName.OnPhotoSelect, new Action<int>(this.OnPhotoSelect));
 	}
 
-	// Token: 0x0600EB9F RID: 60319 RVA: 0x0037EA7C File Offset: 0x0037CC7C
+	// Token: 0x0600BFBE RID: 49086 RVA: 0x0038A70C File Offset: 0x0038890C
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnHandBookDataInit, new Action(this.Refresh));
@@ -66,12 +66,12 @@ public class QuestHandBookView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnPhotoSelect, new Action<int>(this.OnPhotoSelect));
 	}
 
-	// Token: 0x0600EBA0 RID: 60320 RVA: 0x0037EADD File Offset: 0x0037CCDD
+	// Token: 0x0600BFBF RID: 49087 RVA: 0x0038A76D File Offset: 0x0038896D
 	protected override void OnAfterShow()
 	{
 	}
 
-	// Token: 0x0600EBA1 RID: 60321 RVA: 0x0037EAE0 File Offset: 0x0037CCE0
+	// Token: 0x0600BFC0 RID: 49088 RVA: 0x0038A770 File Offset: 0x00388970
 	protected void InitCommonTabTitle()
 	{
 		HandBookEntrance? handBookEntranceConfig = HandBookConfig.Instance.GetHandBookEntranceConfig(EHandBookTabType.Quest);
@@ -81,7 +81,7 @@ public class QuestHandBookView : UiViewBase
 		this.CaptionItem.SetTitleIcon(handBookEntranceConfig.Value.TitleIcon);
 	}
 
-	// Token: 0x0600EBA2 RID: 60322 RVA: 0x0037EB58 File Offset: 0x0037CD58
+	// Token: 0x0600BFC1 RID: 49089 RVA: 0x0038A7E8 File Offset: 0x003889E8
 	protected void InitVerticalLayout()
 	{
 		List<PlotType> list = ConfigCommon.ToList<PlotType>(HandBookConfig.Instance.GetPlotTypeConfigList());
@@ -95,7 +95,7 @@ public class QuestHandBookView : UiViewBase
 		this.GenericLayout.RebuildLayoutByDataNew<PlotType>(this.PlotTypeList, null);
 	}
 
-	// Token: 0x0600EBA3 RID: 60323 RVA: 0x0037EBDC File Offset: 0x0037CDDC
+	// Token: 0x0600BFC2 RID: 49090 RVA: 0x0038A86C File Offset: 0x00388A6C
 	private ILayoutItem<PlotHandBookItem> InitPlotHandBookItem(object data, UUIItem uiItem, int index)
 	{
 		PlotHandBookItem plotHandBookItem = new PlotHandBookItem(uiItem);
@@ -107,19 +107,19 @@ public class QuestHandBookView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600EBA4 RID: 60324 RVA: 0x0037EC16 File Offset: 0x0037CE16
+	// Token: 0x0600BFC3 RID: 49091 RVA: 0x0038A8A6 File Offset: 0x00388AA6
 	private int SortIndex(PlotType a, PlotType b)
 	{
 		return a.Id - b.Id;
 	}
 
-	// Token: 0x0600EBA5 RID: 60325 RVA: 0x0037EC27 File Offset: 0x0037CE27
+	// Token: 0x0600BFC4 RID: 49092 RVA: 0x0038A8B7 File Offset: 0x00388AB7
 	private void OnClickCloseButton()
 	{
 		UiManager.Instance.CloseView(EUiViewName.QuestHandBookView, null);
 	}
 
-	// Token: 0x0600EBA6 RID: 60326 RVA: 0x0037EC3C File Offset: 0x0037CE3C
+	// Token: 0x0600BFC5 RID: 49093 RVA: 0x0038A8CC File Offset: 0x00388ACC
 	protected void RefreshCollectText()
 	{
 		int[] collectProgress = HandBookController.Instance.GetCollectProgress(EHandBookTabType.Quest);
@@ -130,7 +130,7 @@ public class QuestHandBookView : UiViewBase
 		}));
 	}
 
-	// Token: 0x0600EBA7 RID: 60327 RVA: 0x0037EC8C File Offset: 0x0037CE8C
+	// Token: 0x0600BFC6 RID: 49094 RVA: 0x0038A91C File Offset: 0x00388B1C
 	protected override void OnBeforeShow()
 	{
 		bool flag = true;
@@ -157,7 +157,7 @@ public class QuestHandBookView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EBA8 RID: 60328 RVA: 0x0037ED58 File Offset: 0x0037CF58
+	// Token: 0x0600BFC7 RID: 49095 RVA: 0x0038A9E8 File Offset: 0x00388BE8
 	protected override void OnBeforeDestroy()
 	{
 		if (this.GenericLayout != null)
@@ -168,7 +168,7 @@ public class QuestHandBookView : UiViewBase
 		this.PlotTypeList = new List<PlotType>();
 	}
 
-	// Token: 0x0600EBA9 RID: 60329 RVA: 0x0037ED80 File Offset: 0x0037CF80
+	// Token: 0x0600BFC8 RID: 49096 RVA: 0x0038AA10 File Offset: 0x00388C10
 	protected void OnPhotoSelect(int configId)
 	{
 		GenericLayoutNew<PlotHandBookItem> genericLayout = this.GenericLayout;
@@ -197,7 +197,7 @@ public class QuestHandBookView : UiViewBase
 		}
 	}
 
-	// Token: 0x04006D4C RID: 27980
+	// Token: 0x04006E2D RID: 28205
 	[Nullable(new byte[]
 	{
 		2,
@@ -205,24 +205,24 @@ public class QuestHandBookView : UiViewBase
 	})]
 	protected GenericLayoutNew<PlotHandBookItem> GenericLayout;
 
-	// Token: 0x04006D4D RID: 27981
+	// Token: 0x04006E2E RID: 28206
 	private List<PlotType> PlotTypeList;
 
-	// Token: 0x04006D4E RID: 27982
+	// Token: 0x04006E2F RID: 28207
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x020083F4 RID: 33780
+	// Token: 0x02007579 RID: 30073
 	[NullableContext(0)]
 	private class EGeographyHandBookViewDefine
 	{
-		// Token: 0x0402AF4C RID: 175948
+		// Token: 0x04026270 RID: 156272
 		public const int TitleItem = 0;
 
-		// Token: 0x0402AF4D RID: 175949
+		// Token: 0x04026271 RID: 156273
 		public const int VerticalLayout = 1;
 
-		// Token: 0x0402AF4E RID: 175950
+		// Token: 0x04026272 RID: 156274
 		public const int CollectCountText = 2;
 	}
 }

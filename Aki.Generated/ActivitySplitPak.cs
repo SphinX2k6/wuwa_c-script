@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000ACD RID: 2765
+	// Token: 0x02000BA7 RID: 2983
 	public struct ActivitySplitPak : IFlatbufferObject
 	{
-		// Token: 0x17000184 RID: 388
-		// (get) Token: 0x060043F6 RID: 17398 RVA: 0x001CD72D File Offset: 0x001CB92D
+		// Token: 0x1700019B RID: 411
+		// (get) Token: 0x0600493D RID: 18749 RVA: 0x001ED2B5 File Offset: 0x001EB4B5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060043F7 RID: 17399 RVA: 0x001CD73A File Offset: 0x001CB93A
+		// Token: 0x0600493E RID: 18750 RVA: 0x001ED2C2 File Offset: 0x001EB4C2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060043F8 RID: 17400 RVA: 0x001CD744 File Offset: 0x001CB944
+		// Token: 0x0600493F RID: 18751 RVA: 0x001ED2CC File Offset: 0x001EB4CC
 		public static ActivitySplitPak GetRootAsActivitySplitPak(ByteBuffer _bb)
 		{
 			return ActivitySplitPak.GetRootAsActivitySplitPak(_bb, default(ActivitySplitPak));
 		}
 
-		// Token: 0x060043F9 RID: 17401 RVA: 0x001CD760 File Offset: 0x001CB960
+		// Token: 0x06004940 RID: 18752 RVA: 0x001ED2E8 File Offset: 0x001EB4E8
 		public static ActivitySplitPak GetRootAsActivitySplitPak(ByteBuffer _bb, ActivitySplitPak obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060043FA RID: 17402 RVA: 0x001CD77D File Offset: 0x001CB97D
+		// Token: 0x06004941 RID: 18753 RVA: 0x001ED305 File Offset: 0x001EB505
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060043FB RID: 17403 RVA: 0x001CD78C File Offset: 0x001CB98C
+		// Token: 0x06004942 RID: 18754 RVA: 0x001ED314 File Offset: 0x001EB514
 		public ActivitySplitPak __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000185 RID: 389
-		// (get) Token: 0x060043FC RID: 17404 RVA: 0x001CD79C File Offset: 0x001CB99C
+		// Token: 0x1700019C RID: 412
+		// (get) Token: 0x06004943 RID: 18755 RVA: 0x001ED324 File Offset: 0x001EB524
 		public int ActivityType
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000186 RID: 390
-		// (get) Token: 0x060043FD RID: 17405 RVA: 0x001CD7D8 File Offset: 0x001CB9D8
+		// Token: 0x1700019D RID: 413
+		// (get) Token: 0x06004944 RID: 18756 RVA: 0x001ED360 File Offset: 0x001EB560
 		public string ActivityTypeString
 		{
 			get
@@ -80,19 +80,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060043FE RID: 17406 RVA: 0x001CD80F File Offset: 0x001CBA0F
+		// Token: 0x06004945 RID: 18757 RVA: 0x001ED397 File Offset: 0x001EB597
 		public Span<byte> GetActivityTypeStringBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060043FF RID: 17407 RVA: 0x001CD81E File Offset: 0x001CBA1E
+		// Token: 0x06004946 RID: 18758 RVA: 0x001ED3A6 File Offset: 0x001EB5A6
 		public byte[] GetActivityTypeStringArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06004400 RID: 17408 RVA: 0x001CD838 File Offset: 0x001CBA38
+		// Token: 0x06004947 RID: 18759 RVA: 0x001ED3C0 File Offset: 0x001EB5C0
 		public string DependentDbList(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -103,8 +103,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000187 RID: 391
-		// (get) Token: 0x06004401 RID: 17409 RVA: 0x001CD874 File Offset: 0x001CBA74
+		// Token: 0x1700019E RID: 414
+		// (get) Token: 0x06004948 RID: 18760 RVA: 0x001ED3FC File Offset: 0x001EB5FC
 		public int DependentDbListLength
 		{
 			get
@@ -118,24 +118,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004402 RID: 17410 RVA: 0x001CD89F File Offset: 0x001CBA9F
+		// Token: 0x06004949 RID: 18761 RVA: 0x001ED427 File Offset: 0x001EB627
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DependentDbListIter()或GetDependentDbListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] DependentDbList()
+		public string[] DependentDbList()
 		{
 			return this.DependentDbListIter().ToArray<string>();
 		}
 
-		// Token: 0x06004403 RID: 17411 RVA: 0x001CD8AC File Offset: 0x001CBAAC
+		// Token: 0x0600494A RID: 18762 RVA: 0x001ED434 File Offset: 0x001EB634
 		[NullableContext(1)]
-		public readonly IEnumerable<string> DependentDbListIter()
+		public IEnumerable<string> DependentDbListIter()
 		{
 			ActivitySplitPak.<DependentDbListIter>d__18 <DependentDbListIter>d__ = new ActivitySplitPak.<DependentDbListIter>d__18(-2);
 			<DependentDbListIter>d__.<>3__<>4__this = this;
 			return <DependentDbListIter>d__;
 		}
 
-		// Token: 0x04004AAA RID: 19114
+		// Token: 0x04005084 RID: 20612
 		private Table __p;
 	}
 }

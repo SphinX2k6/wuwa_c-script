@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02002684 RID: 9860
+// Token: 0x02001B6F RID: 7023
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestReviewNodeStarItem : QuestReviewNodeItemBase
 {
-	// Token: 0x0601434C RID: 82764 RVA: 0x0051AA78 File Offset: 0x00518C78
+	// Token: 0x0601182E RID: 71726 RVA: 0x005297B0 File Offset: 0x005279B0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -27,7 +27,7 @@ public class QuestReviewNodeStarItem : QuestReviewNodeItemBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601434D RID: 82765 RVA: 0x0051AB24 File Offset: 0x00518D24
+	// Token: 0x0601182F RID: 71727 RVA: 0x0052985C File Offset: 0x00527A5C
 	public override void Refresh(IQuestReviewNodeParam param)
 	{
 		base.GetRootItem().SetAlpha(1f);
@@ -45,8 +45,8 @@ public class QuestReviewNodeStarItem : QuestReviewNodeItemBase
 		this.SpriteLineHorizontal.SetColor(color);
 	}
 
-	// Token: 0x170019F9 RID: 6649
-	// (get) Token: 0x0601434E RID: 82766 RVA: 0x0051AC15 File Offset: 0x00518E15
+	// Token: 0x17001A31 RID: 6705
+	// (get) Token: 0x06011830 RID: 71728 RVA: 0x0052994D File Offset: 0x00527B4D
 	private UUISprite SpriteLineHorizontal
 	{
 		get
@@ -55,20 +55,20 @@ public class QuestReviewNodeStarItem : QuestReviewNodeItemBase
 		}
 	}
 
-	// Token: 0x02008CD5 RID: 36053
+	// Token: 0x02007E5E RID: 32350
 	[NullableContext(0)]
 	private class ENodeStarComponentDefine
 	{
-		// Token: 0x0402DB36 RID: 187190
+		// Token: 0x04028E4D RID: 167501
 		public const int SpriteLineHorizontalSolid = 0;
 
-		// Token: 0x0402DB37 RID: 187191
+		// Token: 0x04028E4E RID: 167502
 		public const int SpriteStartPoint = 1;
 
-		// Token: 0x0402DB38 RID: 187192
+		// Token: 0x04028E4F RID: 167503
 		public const int SpriteLineHorizontalDotted = 2;
 
-		// Token: 0x0402DB39 RID: 187193
+		// Token: 0x04028E50 RID: 167504
 		public const int SpriteIcon = 3;
 	}
 }

@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AA5 RID: 19109
+	// Token: 0x02003A4D RID: 14925
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseResultResultItem : GridProxyAbstract<ITrapDefenseResultInfo>
 	{
-		// Token: 0x0603184D RID: 202829 RVA: 0x00B7AE1C File Offset: 0x00B7901C
+		// Token: 0x060265DD RID: 157149 RVA: 0x00ABEDD0 File Offset: 0x00ABCFD0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -38,13 +38,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603184E RID: 202830 RVA: 0x00B7AF09 File Offset: 0x00B79109
+		// Token: 0x060265DE RID: 157150 RVA: 0x00ABEEBD File Offset: 0x00ABD0BD
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayout<TrapDefenseResultStarItem, ITrapDefenseStarInfo>(base.GetHorizontalLayout(3), new Func<TrapDefenseResultStarItem>(this.CreateStar), null, false, true);
 		}
 
-		// Token: 0x0603184F RID: 202831 RVA: 0x00B7AF2C File Offset: 0x00B7912C
+		// Token: 0x060265DF RID: 157151 RVA: 0x00ABEEE0 File Offset: 0x00ABD0E0
 		public override void Refresh(ITrapDefenseResultInfo data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031850 RID: 202832 RVA: 0x00B7B124 File Offset: 0x00B79324
+		// Token: 0x060265E0 RID: 157152 RVA: 0x00ABF0D8 File Offset: 0x00ABD2D8
 		public void PlayStarIn()
 		{
 			if (this.Data.Type != ETrapDefenseResultType.Star)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031851 RID: 202833 RVA: 0x00B7B188 File Offset: 0x00B79388
+		// Token: 0x060265E1 RID: 157153 RVA: 0x00ABF13C File Offset: 0x00ABD33C
 		public void EndStarAnim()
 		{
 			foreach (ITrapDefenseStarInfo trapDefenseStarInfo in this.StarList)
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031852 RID: 202834 RVA: 0x00B7B1DC File Offset: 0x00B793DC
+		// Token: 0x060265E2 RID: 157154 RVA: 0x00ABF190 File Offset: 0x00ABD390
 		private int GetAnimDelay(int index, int length)
 		{
 			if (length <= 1 || index <= 1)
@@ -166,41 +166,41 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return num + (int)Math.Floor((double)((float)((num2 - num) * (index - 2)) / ((float)(length - 2) * 1f)));
 		}
 
-		// Token: 0x06031853 RID: 202835 RVA: 0x00B7B218 File Offset: 0x00B79418
+		// Token: 0x060265E3 RID: 157155 RVA: 0x00ABF1CC File Offset: 0x00ABD3CC
 		private TrapDefenseResultStarItem CreateStar()
 		{
 			return new TrapDefenseResultStarItem();
 		}
 
-		// Token: 0x0401A780 RID: 108416
+		// Token: 0x040150D2 RID: 86226
 		private GenericLayout<TrapDefenseResultStarItem, ITrapDefenseStarInfo> Layout;
 
-		// Token: 0x0401A781 RID: 108417
+		// Token: 0x040150D3 RID: 86227
 		private ITrapDefenseResultInfo Data;
 
-		// Token: 0x0401A782 RID: 108418
+		// Token: 0x040150D4 RID: 86228
 		private List<ITrapDefenseStarInfo> StarList = new List<ITrapDefenseStarInfo>();
 
-		// Token: 0x0200ABFA RID: 44026
+		// Token: 0x0200961A RID: 38426
 		[NullableContext(0)]
 		private class EResult
 		{
-			// Token: 0x0403441F RID: 214047
+			// Token: 0x0402EDD0 RID: 191952
 			public const int Title = 0;
 
-			// Token: 0x04034420 RID: 214048
+			// Token: 0x0402EDD1 RID: 191953
 			public const int Value = 1;
 
-			// Token: 0x04034421 RID: 214049
+			// Token: 0x0402EDD2 RID: 191954
 			public const int Icon = 2;
 
-			// Token: 0x04034422 RID: 214050
+			// Token: 0x0402EDD3 RID: 191955
 			public const int StarLayout = 3;
 
-			// Token: 0x04034423 RID: 214051
+			// Token: 0x0402EDD4 RID: 191956
 			public const int StarItem = 4;
 
-			// Token: 0x04034424 RID: 214052
+			// Token: 0x0402EDD5 RID: 191957
 			public const int PanelTxt = 5;
 		}
 	}

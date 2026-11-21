@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FC5 RID: 24517
+	// Token: 0x0200661A RID: 26138
 	public enum EOptionLockType : byte
 	{
-		// Token: 0x0400FF16 RID: 65302
+		// Token: 0x04010CD5 RID: 68821
 		OnMotor
 	}
 }

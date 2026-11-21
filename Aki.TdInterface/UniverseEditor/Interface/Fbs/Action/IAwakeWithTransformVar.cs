@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061D6 RID: 25046
+	// Token: 0x02006844 RID: 26692
 	public struct IAwakeWithTransformVar : IFlatbufferObject
 	{
-		// Token: 0x1700BABE RID: 47806
-		// (get) Token: 0x0602B2A4 RID: 176804 RVA: 0x005F324A File Offset: 0x005F144A
+		// Token: 0x1700C441 RID: 50241
+		// (get) Token: 0x0602D9EB RID: 186859 RVA: 0x0063DCBE File Offset: 0x0063BEBE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B2A5 RID: 176805 RVA: 0x005F3257 File Offset: 0x005F1457
+		// Token: 0x0602D9EC RID: 186860 RVA: 0x0063DCCB File Offset: 0x0063BECB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B2A6 RID: 176806 RVA: 0x005F3260 File Offset: 0x005F1460
+		// Token: 0x0602D9ED RID: 186861 RVA: 0x0063DCD4 File Offset: 0x0063BED4
 		public static IAwakeWithTransformVar GetRootAsIAwakeWithTransformVar(ByteBuffer _bb)
 		{
 			return IAwakeWithTransformVar.GetRootAsIAwakeWithTransformVar(_bb, default(IAwakeWithTransformVar));
 		}
 
-		// Token: 0x0602B2A7 RID: 176807 RVA: 0x005F327C File Offset: 0x005F147C
+		// Token: 0x0602D9EE RID: 186862 RVA: 0x0063DCF0 File Offset: 0x0063BEF0
 		public static IAwakeWithTransformVar GetRootAsIAwakeWithTransformVar(ByteBuffer _bb, IAwakeWithTransformVar obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B2A8 RID: 176808 RVA: 0x005F3299 File Offset: 0x005F1499
+		// Token: 0x0602D9EF RID: 186863 RVA: 0x0063DD0D File Offset: 0x0063BF0D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B2A9 RID: 176809 RVA: 0x005F32A8 File Offset: 0x005F14A8
+		// Token: 0x0602D9F0 RID: 186864 RVA: 0x0063DD1C File Offset: 0x0063BF1C
 		public IAwakeWithTransformVar __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BABF RID: 47807
-		// (get) Token: 0x0602B2AA RID: 176810 RVA: 0x005F32B8 File Offset: 0x005F14B8
+		// Token: 0x1700C442 RID: 50242
+		// (get) Token: 0x0602D9F1 RID: 186865 RVA: 0x0063DD2C File Offset: 0x0063BF2C
 		public EAwakePosType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BAC0 RID: 47808
-		// (get) Token: 0x0602B2AB RID: 176811 RVA: 0x005F32F4 File Offset: 0x005F14F4
+		// Token: 0x1700C443 RID: 50243
+		// (get) Token: 0x0602D9F2 RID: 186866 RVA: 0x0063DD68 File Offset: 0x0063BF68
 		public TVarRef TransformVarType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B2AC RID: 176812 RVA: 0x005F3330 File Offset: 0x005F1530
+		// Token: 0x0602D9F3 RID: 186867 RVA: 0x0063DDA4 File Offset: 0x0063BFA4
 		public TTable? TransformVar<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,37 +89,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602B2AD RID: 176813 RVA: 0x005F3374 File Offset: 0x005F1574
+		// Token: 0x0602D9F4 RID: 186868 RVA: 0x0063DDE8 File Offset: 0x0063BFE8
 		public IConstVarRef TransformVarAsIConstVarRef()
 		{
 			return this.TransformVar<IConstVarRef>().Value;
 		}
 
-		// Token: 0x0602B2AE RID: 176814 RVA: 0x005F3390 File Offset: 0x005F1590
+		// Token: 0x0602D9F5 RID: 186869 RVA: 0x0063DE04 File Offset: 0x0063C004
 		public IGlobalVarRef TransformVarAsIGlobalVarRef()
 		{
 			return this.TransformVar<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x0602B2AF RID: 176815 RVA: 0x005F33AC File Offset: 0x005F15AC
+		// Token: 0x0602D9F6 RID: 186870 RVA: 0x0063DE20 File Offset: 0x0063C020
 		public IOtherVarRef TransformVarAsIOtherVarRef()
 		{
 			return this.TransformVar<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x0602B2B0 RID: 176816 RVA: 0x005F33C8 File Offset: 0x005F15C8
+		// Token: 0x0602D9F7 RID: 186871 RVA: 0x0063DE3C File Offset: 0x0063C03C
 		public ISelfVarRef TransformVarAsISelfVarRef()
 		{
 			return this.TransformVar<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x0602B2B1 RID: 176817 RVA: 0x005F33E4 File Offset: 0x005F15E4
+		// Token: 0x0602D9F8 RID: 186872 RVA: 0x0063DE58 File Offset: 0x0063C058
 		public ISystemVarRef TransformVarAsISystemVarRef()
 		{
 			return this.TransformVar<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x0602B2B2 RID: 176818 RVA: 0x005F33FF File Offset: 0x005F15FF
+		// Token: 0x0602D9F9 RID: 186873 RVA: 0x0063DE73 File Offset: 0x0063C073
 		public static Offset<IAwakeWithTransformVar> CreateIAwakeWithTransformVar(FlatBufferBuilder builder, EAwakePosType Type = EAwakePosType.TransformVar, TVarRef TransformVar_type = TVarRef.NONE, int TransformVarOffset = 0)
 		{
 			builder.StartTable(3);
@@ -129,37 +129,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAwakeWithTransformVar.EndIAwakeWithTransformVar(builder);
 		}
 
-		// Token: 0x0602B2B3 RID: 176819 RVA: 0x005F3423 File Offset: 0x005F1623
+		// Token: 0x0602D9FA RID: 186874 RVA: 0x0063DE97 File Offset: 0x0063C097
 		public static void StartIAwakeWithTransformVar(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602B2B4 RID: 176820 RVA: 0x005F342C File Offset: 0x005F162C
+		// Token: 0x0602D9FB RID: 186875 RVA: 0x0063DEA0 File Offset: 0x0063C0A0
 		public static void AddType(FlatBufferBuilder builder, EAwakePosType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602B2B5 RID: 176821 RVA: 0x005F3437 File Offset: 0x005F1637
+		// Token: 0x0602D9FC RID: 186876 RVA: 0x0063DEAB File Offset: 0x0063C0AB
 		public static void AddTransformVarType(FlatBufferBuilder builder, TVarRef transformVarType)
 		{
 			builder.AddByte(1, (byte)transformVarType, 0);
 		}
 
-		// Token: 0x0602B2B6 RID: 176822 RVA: 0x005F3442 File Offset: 0x005F1642
+		// Token: 0x0602D9FD RID: 186877 RVA: 0x0063DEB6 File Offset: 0x0063C0B6
 		public static void AddTransformVar(FlatBufferBuilder builder, int transformVarOffset)
 		{
 			builder.AddOffset(2, transformVarOffset, 0);
 		}
 
-		// Token: 0x0602B2B7 RID: 176823 RVA: 0x005F344D File Offset: 0x005F164D
+		// Token: 0x0602D9FE RID: 186878 RVA: 0x0063DEC1 File Offset: 0x0063C0C1
 		public static Offset<IAwakeWithTransformVar> EndIAwakeWithTransformVar(FlatBufferBuilder builder)
 		{
 			return new Offset<IAwakeWithTransformVar>(builder.EndTable());
 		}
 
-		// Token: 0x0602B2B8 RID: 176824 RVA: 0x005F345C File Offset: 0x005F165C
+		// Token: 0x0602D9FF RID: 186879 RVA: 0x0063DED0 File Offset: 0x0063C0D0
 		public IAwakeWithTransformVarT UnPack()
 		{
 			IAwakeWithTransformVarT awakeWithTransformVarT = new IAwakeWithTransformVarT();
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return awakeWithTransformVarT;
 		}
 
-		// Token: 0x0602B2B9 RID: 176825 RVA: 0x005F3478 File Offset: 0x005F1678
+		// Token: 0x0602DA00 RID: 186880 RVA: 0x0063DEEC File Offset: 0x0063C0EC
 		public void UnPackTo(IAwakeWithTransformVarT _o)
 		{
 			_o.Type = this.Type;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B2BA RID: 176826 RVA: 0x005F35E4 File Offset: 0x005F17E4
+		// Token: 0x0602DA01 RID: 186881 RVA: 0x0063E058 File Offset: 0x0063C258
 		public static Offset<IAwakeWithTransformVar> Pack(FlatBufferBuilder builder, IAwakeWithTransformVarT _o)
 		{
 			if (_o == null)
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAwakeWithTransformVar.CreateIAwakeWithTransformVar(builder, _o.Type, transformVar_type, transformVarOffset);
 		}
 
-		// Token: 0x04010701 RID: 67329
+		// Token: 0x04011513 RID: 70931
 		private Table __p;
 	}
 }

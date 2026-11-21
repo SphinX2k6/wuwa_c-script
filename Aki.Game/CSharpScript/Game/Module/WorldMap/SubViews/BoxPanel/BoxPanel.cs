@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.BoxPanel
 {
-	// Token: 0x02004842 RID: 18498
+	// Token: 0x02003773 RID: 14195
 	public class BoxPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x0603067F RID: 198271 RVA: 0x00B3C6FB File Offset: 0x00B3A8FB
+		// Token: 0x06024E4F RID: 151119 RVA: 0x00A6C8E3 File Offset: 0x00A6AAE3
 		[NullableContext(1)]
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x06030680 RID: 198272 RVA: 0x00B3C704 File Offset: 0x00B3A904
+		// Token: 0x06024E50 RID: 151120 RVA: 0x00A6C8EC File Offset: 0x00A6AAEC
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.BoxPanel
 			item3.SetUIActive(false);
 		}
 
-		// Token: 0x06030681 RID: 198273 RVA: 0x00B3C7A4 File Offset: 0x00B3A9A4
+		// Token: 0x06024E51 RID: 151121 RVA: 0x00A6C98C File Offset: 0x00A6AB8C
 		[NullableContext(1)]
 		protected override void OnShowWorldMapSecondaryUi(params object[] parameters)
 		{
@@ -69,10 +69,10 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.BoxPanel
 			}
 		}
 
-		// Token: 0x0200AB21 RID: 43809
+		// Token: 0x020094CF RID: 38095
 		public static class EComponents
 		{
-			// Token: 0x04034018 RID: 213016
+			// Token: 0x0402E793 RID: 190355
 			public const int BoxPanel = 0;
 		}
 	}

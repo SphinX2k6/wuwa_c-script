@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001C9 RID: 457
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001EC RID: 492
 	public class IAnimalModelConfig
 	{
-		// Token: 0x0600074E RID: 1870 RVA: 0x00024B94 File Offset: 0x00022D94
+		// Token: 0x060007A2 RID: 1954 RVA: 0x00025E98 File Offset: 0x00024098
 		private IAnimalModelConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600074F RID: 1871 RVA: 0x00024BCC File Offset: 0x00022DCC
+		// Token: 0x060007A3 RID: 1955 RVA: 0x00025ED0 File Offset: 0x000240D0
 		public static IAnimalModelConfig Create([Nullable(2)] IAnimalModelConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000750 RID: 1872 RVA: 0x00024BDF File Offset: 0x00022DDF
+		// Token: 0x060007A4 RID: 1956 RVA: 0x00025EE3 File Offset: 0x000240E3
 		public static IAnimalModelConfig CreateFromSetValue([Nullable(2)] IAnimalModelConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000751 RID: 1873 RVA: 0x00024BF2 File Offset: 0x00022DF2
+		// Token: 0x060007A5 RID: 1957 RVA: 0x00025EF6 File Offset: 0x000240F6
 		public IAnimalModelConfig_SetValue ToSetValue()
 		{
 			return new IAnimalModelConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000257 RID: 599
-		// (get) Token: 0x06000752 RID: 1874 RVA: 0x00024C05 File Offset: 0x00022E05
-		// (set) Token: 0x06000753 RID: 1875 RVA: 0x00024C30 File Offset: 0x00022E30
+		// Token: 0x1700026C RID: 620
+		// (get) Token: 0x060007A6 RID: 1958 RVA: 0x00025F09 File Offset: 0x00024109
+		// (set) Token: 0x060007A7 RID: 1959 RVA: 0x00025F34 File Offset: 0x00024134
 		public virtual EAnimalModelType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000893 RID: 2195
+		// Token: 0x04000907 RID: 2311
 		[Nullable(2)]
 		protected IAnimalModelConfig FbInstance;
 
-		// Token: 0x04000894 RID: 2196
+		// Token: 0x04000908 RID: 2312
 		[Nullable(2)]
 		protected IAnimalModelConfig_SetValue PocoInterface;
 	}

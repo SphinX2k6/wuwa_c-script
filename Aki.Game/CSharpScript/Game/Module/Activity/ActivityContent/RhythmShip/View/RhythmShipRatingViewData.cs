@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200623F RID: 25151
+	// Token: 0x020051BD RID: 20925
 	public class RhythmShipRatingViewData : IRhythmShipRatingViewData
 	{
-		// Token: 0x17009250 RID: 37456
-		// (get) Token: 0x0603F621 RID: 259617 RVA: 0x00F5293F File Offset: 0x00F50B3F
-		// (set) Token: 0x0603F622 RID: 259618 RVA: 0x00F52947 File Offset: 0x00F50B47
+		// Token: 0x170065B2 RID: 26034
+		// (get) Token: 0x060342E2 RID: 213730 RVA: 0x00E9989B File Offset: 0x00E97A9B
+		// (set) Token: 0x060342E3 RID: 213731 RVA: 0x00E998A3 File Offset: 0x00E97AA3
 		public int LevelId { get; set; }
 
-		// Token: 0x17009251 RID: 37457
-		// (get) Token: 0x0603F623 RID: 259619 RVA: 0x00F52950 File Offset: 0x00F50B50
-		// (set) Token: 0x0603F624 RID: 259620 RVA: 0x00F52958 File Offset: 0x00F50B58
+		// Token: 0x170065B3 RID: 26035
+		// (get) Token: 0x060342E4 RID: 213732 RVA: 0x00E998AC File Offset: 0x00E97AAC
+		// (set) Token: 0x060342E5 RID: 213733 RVA: 0x00E998B4 File Offset: 0x00E97AB4
 		public int SubLevelId { get; set; }
 	}
 }

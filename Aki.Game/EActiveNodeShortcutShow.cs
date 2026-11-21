@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x02001D80 RID: 7552
+// Token: 0x02001242 RID: 4674
 public enum EActiveNodeShortcutShow
 {
-	// Token: 0x040069EB RID: 27115
+	// Token: 0x04006ACB RID: 27339
 	None,
-	// Token: 0x040069EC RID: 27116
+	// Token: 0x04006ACC RID: 27340
 	GiveUp,
-	// Token: 0x040069ED RID: 27117
+	// Token: 0x04006ACD RID: 27341
 	Communicate,
-	// Token: 0x040069EE RID: 27118
+	// Token: 0x04006ACE RID: 27342
 	ChallengeAgain,
-	// Token: 0x040069EF RID: 27119
+	// Token: 0x04006ACF RID: 27343
 	TrackTarget,
-	// Token: 0x040069F0 RID: 27120
+	// Token: 0x04006AD0 RID: 27344
 	PhoneMessage,
-	// Token: 0x040069F1 RID: 27121
+	// Token: 0x04006AD1 RID: 27345
 	FastReturn,
-	// Token: 0x040069F2 RID: 27122
+	// Token: 0x04006AD2 RID: 27346
 	QuestMultiLineView,
-	// Token: 0x040069F3 RID: 27123
+	// Token: 0x04006AD3 RID: 27347
 	SheriffAnomalyProgress,
-	// Token: 0x040069F4 RID: 27124
+	// Token: 0x04006AD4 RID: 27348
 	SheriffReasoningBoard,
-	// Token: 0x040069F5 RID: 27125
+	// Token: 0x04006AD5 RID: 27349
 	SheriffMainBoard,
-	// Token: 0x040069F6 RID: 27126
+	// Token: 0x04006AD6 RID: 27350
 	SheriffClueDetail
 }

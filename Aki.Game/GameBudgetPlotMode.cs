@@ -4,45 +4,45 @@ using CSharpScript.Game;
 using CSharpScript.Game.Camera;
 using UnrealEngine;
 
-// Token: 0x02001CAC RID: 7340
+// Token: 0x0200116E RID: 4462
 public class GameBudgetPlotMode : GameBudgetMode
 {
-	// Token: 0x0600DD9C RID: 56732 RVA: 0x0033D499 File Offset: 0x0033B699
+	// Token: 0x0600B1C0 RID: 45504 RVA: 0x00348E4C File Offset: 0x0034704C
 	public GameBudgetPlotMode() : base("EGameBudgetMode.Plot", EGameBudgetMode.Plot)
 	{
-	}
-
-	// Token: 0x0600DD9D RID: 56733 RVA: 0x0033D4A8 File Offset: 0x0033B6A8
-	public override void OnEnterMode()
-	{
-		GameBudgetInterfaceController.Instance.SetCenterRole(Global.BaseCharacter);
-		SequenceCamera sequenceCamera = CameraModel.Instance.MainModel.SequenceCamera;
-		BP_CineCamera_C bp_CineCamera_C;
-		if (sequenceCamera == null)
+		base.Active("centerRole", delegate
 		{
-			bp_CineCamera_C = null;
-		}
-		else
+			GameBudgetController.Instance.ApplyCenterRole(Global.BaseCharacter);
+		}, delegate
 		{
-			SequenceCameraDisplayComponent displayComponent = sequenceCamera.DisplayComponent;
-			bp_CineCamera_C = ((displayComponent != null) ? displayComponent.CineCamera : null);
-		}
-		BP_CineCamera_C bp_CineCamera_C2 = bp_CineCamera_C;
-		if (bp_CineCamera_C2 != null)
+		});
+		base.Active("sequenceCameraAssistant", delegate
 		{
-			GameBudgetInterfaceController.Instance.SequenceCamera = bp_CineCamera_C2;
-			UKuroGameBudgetAllocatorCSharpInterface.AddAssistantActor(bp_CineCamera_C2);
-		}
-	}
-
-	// Token: 0x0600DD9E RID: 56734 RVA: 0x0033D500 File Offset: 0x0033B700
-	public override void OnExitMode()
-	{
-		AActor sequenceCamera = GameBudgetInterfaceController.Instance.SequenceCamera;
-		if (sequenceCamera != null)
+			SequenceCamera sequenceCamera = CameraModel.Instance.MainModel.SequenceCamera;
+			BP_CineCamera_C bp_CineCamera_C;
+			if (sequenceCamera == null)
+			{
+				bp_CineCamera_C = null;
+			}
+			else
+			{
+				SequenceCameraDisplayComponent displayComponent = sequenceCamera.DisplayComponent;
+				bp_CineCamera_C = ((displayComponent != null) ? displayComponent.CineCamera : null);
+			}
+			BP_CineCamera_C bp_CineCamera_C2 = bp_CineCamera_C;
+			if (bp_CineCamera_C2 != null)
+			{
+				GameBudgetInterfaceController.Instance.SequenceCamera = bp_CineCamera_C2;
+				UKuroGameBudgetAllocatorCSharpInterface.AddAssistantActor(bp_CineCamera_C2);
+			}
+		}, delegate
 		{
-			UKuroGameBudgetAllocatorCSharpInterface.RemoveAssistantActor(sequenceCamera);
+			AActor sequenceCamera = GameBudgetInterfaceController.Instance.SequenceCamera;
+			if (sequenceCamera != null && sequenceCamera.IsValid())
+			{
+				UKuroGameBudgetAllocatorCSharpInterface.RemoveAssistantActor(sequenceCamera);
+			}
 			GameBudgetInterfaceController.Instance.SequenceCamera = null;
-		}
+		});
 	}
 }

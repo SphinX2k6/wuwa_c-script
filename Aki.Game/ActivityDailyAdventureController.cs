@@ -4,74 +4,74 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using Google.Protobuf;
 
-// Token: 0x0200120B RID: 4619
+// Token: 0x020006BF RID: 1727
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityDailyAdventureController : ActivityControllerBase
 {
-	// Token: 0x06007BA9 RID: 31657 RVA: 0x001A160D File Offset: 0x0019F80D
+	// Token: 0x06004F3F RID: 20287 RVA: 0x001AA2C5 File Offset: 0x001A84C5
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06007BAA RID: 31658 RVA: 0x001A1610 File Offset: 0x0019F810
+	// Token: 0x06004F40 RID: 20288 RVA: 0x001AA2C8 File Offset: 0x001A84C8
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06007BAB RID: 31659 RVA: 0x001A1612 File Offset: 0x0019F812
+	// Token: 0x06004F41 RID: 20289 RVA: 0x001AA2CA File Offset: 0x001A84CA
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityDailyAdventure";
 	}
 
-	// Token: 0x06007BAC RID: 31660 RVA: 0x001A1619 File Offset: 0x0019F819
+	// Token: 0x06004F42 RID: 20290 RVA: 0x001AA2D1 File Offset: 0x001A84D1
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewDailyAdventure();
 	}
 
-	// Token: 0x06007BAD RID: 31661 RVA: 0x001A1620 File Offset: 0x0019F820
+	// Token: 0x06004F43 RID: 20291 RVA: 0x001AA2D8 File Offset: 0x001A84D8
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.CurrentActivityId = data.Id;
 		return new ActivityDailyAdventureData();
 	}
 
-	// Token: 0x06007BAE RID: 31662 RVA: 0x001A1633 File Offset: 0x0019F833
+	// Token: 0x06004F44 RID: 20292 RVA: 0x001AA2EB File Offset: 0x001A84EB
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 	}
 
-	// Token: 0x06007BAF RID: 31663 RVA: 0x001A1651 File Offset: 0x0019F851
+	// Token: 0x06004F45 RID: 20293 RVA: 0x001AA309 File Offset: 0x001A8509
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 	}
 
-	// Token: 0x06007BB0 RID: 31664 RVA: 0x001A166F File Offset: 0x0019F86F
+	// Token: 0x06004F46 RID: 20294 RVA: 0x001AA327 File Offset: 0x001A8527
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.DailyAdventureTaskUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnDailyAdventureTaskUpdateNotify));
 	}
 
-	// Token: 0x06007BB1 RID: 31665 RVA: 0x001A168D File Offset: 0x0019F88D
+	// Token: 0x06004F47 RID: 20295 RVA: 0x001AA345 File Offset: 0x001A8545
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.DailyAdventureTaskUpdateNotify);
 	}
 
-	// Token: 0x06007BB2 RID: 31666 RVA: 0x001A169F File Offset: 0x0019F89F
+	// Token: 0x06004F48 RID: 20296 RVA: 0x001AA357 File Offset: 0x001A8557
 	[NullableContext(2)]
 	protected ActivityDailyAdventureData GetDailyAdventureData()
 	{
 		return ActivityModel.Instance.GetActivityById(this.CurrentActivityId) as ActivityDailyAdventureData;
 	}
 
-	// Token: 0x06007BB3 RID: 31667 RVA: 0x001A16B8 File Offset: 0x0019F8B8
+	// Token: 0x06004F49 RID: 20297 RVA: 0x001AA370 File Offset: 0x001A8570
 	public int GetDefaultMapMarkId()
 	{
 		ActivityDailyAdventureData dailyAdventureData = this.GetDailyAdventureData();
@@ -82,7 +82,7 @@ public class ActivityDailyAdventureController : ActivityControllerBase
 		return dailyAdventureData.GetDefaultMapMarkId();
 	}
 
-	// Token: 0x06007BB4 RID: 31668 RVA: 0x001A16D8 File Offset: 0x0019F8D8
+	// Token: 0x06004F4A RID: 20298 RVA: 0x001AA390 File Offset: 0x001A8590
 	private void OnCommonItemCountAnyChange(int configId, int count)
 	{
 		if (configId != 13)
@@ -98,7 +98,7 @@ public class ActivityDailyAdventureController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, dailyAdventureData.Id);
 	}
 
-	// Token: 0x06007BB5 RID: 31669 RVA: 0x001A1714 File Offset: 0x0019F914
+	// Token: 0x06004F4B RID: 20299 RVA: 0x001AA3CC File Offset: 0x001A85CC
 	[NullableContext(2)]
 	private void OnDailyAdventureTaskUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -115,7 +115,7 @@ public class ActivityDailyAdventureController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, dailyAdventureData.Id);
 	}
 
-	// Token: 0x06007BB6 RID: 31670 RVA: 0x001A17B0 File Offset: 0x0019F9B0
+	// Token: 0x06004F4C RID: 20300 RVA: 0x001AA468 File Offset: 0x001A8668
 	public void RequestTaskReward(int id)
 	{
 		DailyAdventureTaskRewardRequest dailyAdventureTaskRewardRequest = DailyAdventureTaskRewardRequest.Create();
@@ -129,7 +129,7 @@ public class ActivityDailyAdventureController : ActivityControllerBase
 			}
 			if (dailyAdventureTaskRewardResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(dailyAdventureTaskRewardResponse.ErrorCode, 16686, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(dailyAdventureTaskRewardResponse.ErrorCode, 17499, null, true, true);
 				return;
 			}
 			ActivityDailyAdventureData dailyAdventureData = this.GetDailyAdventureData();
@@ -142,7 +142,7 @@ public class ActivityDailyAdventureController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06007BB7 RID: 31671 RVA: 0x001A1800 File Offset: 0x0019FA00
+	// Token: 0x06004F4D RID: 20301 RVA: 0x001AA4B8 File Offset: 0x001A86B8
 	public void RequestPointReward(int id)
 	{
 		DailyAdventurePtRewardRequest dailyAdventurePtRewardRequest = DailyAdventurePtRewardRequest.Create();
@@ -156,7 +156,7 @@ public class ActivityDailyAdventureController : ActivityControllerBase
 			}
 			if (dailyAdventurePtRewardResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(dailyAdventurePtRewardResponse.ErrorCode, 16430, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(dailyAdventurePtRewardResponse.ErrorCode, 17678, null, true, true);
 				return;
 			}
 			ActivityDailyAdventureData dailyAdventureData = this.GetDailyAdventureData();
@@ -169,8 +169,8 @@ public class ActivityDailyAdventureController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x17000A8F RID: 2703
-	// (get) Token: 0x06007BB8 RID: 31672 RVA: 0x001A1850 File Offset: 0x0019FA50
+	// Token: 0x17000AAF RID: 2735
+	// (get) Token: 0x06004F4E RID: 20302 RVA: 0x001AA508 File Offset: 0x001A8708
 	public static ActivityDailyAdventureController Instance
 	{
 		get
@@ -179,7 +179,7 @@ public class ActivityDailyAdventureController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06007BB9 RID: 31673 RVA: 0x001A1857 File Offset: 0x0019FA57
+	// Token: 0x06004F4F RID: 20303 RVA: 0x001AA50F File Offset: 0x001A870F
 	public static ActivityDailyAdventureController GetOrCreateInstance()
 	{
 		if (ActivityDailyAdventureController._Instance == null)
@@ -189,7 +189,7 @@ public class ActivityDailyAdventureController : ActivityControllerBase
 		return ActivityDailyAdventureController._Instance;
 	}
 
-	// Token: 0x06007BBA RID: 31674 RVA: 0x001A186B File Offset: 0x0019FA6B
+	// Token: 0x06004F50 RID: 20304 RVA: 0x001AA523 File Offset: 0x001A8723
 	public static bool CreateInstance()
 	{
 		if (ActivityDailyAdventureController._Instance != null)
@@ -200,27 +200,27 @@ public class ActivityDailyAdventureController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06007BBB RID: 31675 RVA: 0x001A1881 File Offset: 0x0019FA81
+	// Token: 0x06004F51 RID: 20305 RVA: 0x001AA539 File Offset: 0x001A8739
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06007BBC RID: 31676 RVA: 0x001A1883 File Offset: 0x0019FA83
+	// Token: 0x06004F52 RID: 20306 RVA: 0x001AA53B File Offset: 0x001A873B
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityDailyAdventureController._Instance = null;
 	}
 
-	// Token: 0x06007BBD RID: 31677 RVA: 0x001A188B File Offset: 0x0019FA8B
+	// Token: 0x06004F53 RID: 20307 RVA: 0x001AA543 File Offset: 0x001A8743
 	static ActivityDailyAdventureController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityDailyAdventureController.CreateStaticDefaultValue), new Action(ActivityDailyAdventureController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040038A6 RID: 14502
+	// Token: 0x0400393F RID: 14655
 	public int CurrentActivityId;
 
-	// Token: 0x040038A7 RID: 14503
+	// Token: 0x04003940 RID: 14656
 	[Nullable(2)]
 	private static ActivityDailyAdventureController _Instance;
 }

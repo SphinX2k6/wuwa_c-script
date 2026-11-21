@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200447D RID: 17533
+	// Token: 0x020048E5 RID: 18661
 	public class IDartScatterJudgeT
 	{
-		// Token: 0x17007BBE RID: 31678
-		// (get) Token: 0x0601A23C RID: 107068 RVA: 0x003BBCF4 File Offset: 0x003B9EF4
-		// (set) Token: 0x0601A23D RID: 107069 RVA: 0x003BBCFC File Offset: 0x003B9EFC
+		// Token: 0x170081FD RID: 33277
+		// (get) Token: 0x0601BA0D RID: 113165 RVA: 0x003E7F00 File Offset: 0x003E6100
+		// (set) Token: 0x0601BA0E RID: 113166 RVA: 0x003E7F08 File Offset: 0x003E6108
 		public int Probability { get; set; }
 
-		// Token: 0x17007BBF RID: 31679
-		// (get) Token: 0x0601A23E RID: 107070 RVA: 0x003BBD05 File Offset: 0x003B9F05
-		// (set) Token: 0x0601A23F RID: 107071 RVA: 0x003BBD0D File Offset: 0x003B9F0D
+		// Token: 0x170081FE RID: 33278
+		// (get) Token: 0x0601BA0F RID: 113167 RVA: 0x003E7F11 File Offset: 0x003E6111
+		// (set) Token: 0x0601BA10 RID: 113168 RVA: 0x003E7F19 File Offset: 0x003E6119
 		public int Range { get; set; }
 
-		// Token: 0x0601A240 RID: 107072 RVA: 0x003BBD16 File Offset: 0x003B9F16
+		// Token: 0x0601BA11 RID: 113169 RVA: 0x003E7F22 File Offset: 0x003E6122
 		public IDartScatterJudgeT()
 		{
 			this.Probability = 0;

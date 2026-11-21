@@ -1,25 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Map.MapDefine;
-using CSharpScript.Game.Module.Map.Mark;
 using CSharpScript.Game.Module.Map.Marks.MarkItem;
 using CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x02005524 RID: 21796
+	// Token: 0x020044F7 RID: 17655
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TaskMarkItemView : ServerMarkItemView
 	{
-		// Token: 0x06037A71 RID: 227953 RVA: 0x00D35D38 File Offset: 0x00D33F38
+		// Token: 0x0602C941 RID: 182593 RVA: 0x00C83B44 File Offset: 0x00C81D44
 		public TaskMarkItemView(ServerMarkItem holder) : base(holder)
 		{
 		}
 
-		// Token: 0x06037A72 RID: 227954 RVA: 0x00D35D41 File Offset: 0x00D33F41
+		// Token: 0x0602C942 RID: 182594 RVA: 0x00C83B4D File Offset: 0x00C81D4D
 		public override void RegisterEvents()
 		{
 			MarkItem holder = this.Holder;
@@ -29,7 +27,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A73 RID: 227955 RVA: 0x00D35D76 File Offset: 0x00D33F76
+		// Token: 0x0602C943 RID: 182595 RVA: 0x00C83B82 File Offset: 0x00C81D82
 		public override void UnRegisterEvents()
 		{
 			MarkItem holder = this.Holder;
@@ -39,7 +37,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A74 RID: 227956 RVA: 0x00D35DAB File Offset: 0x00D33FAB
+		// Token: 0x0602C944 RID: 182596 RVA: 0x00C83BB7 File Offset: 0x00C81DB7
 		private void OnSubMapChanged(int floorIndex)
 		{
 			TaskMarkItem taskMarkItem = this.Holder as TaskMarkItem;
@@ -50,14 +48,14 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			taskMarkItem.UpdateMultiMapFloorSelectedState();
 		}
 
-		// Token: 0x06037A75 RID: 227957 RVA: 0x00D35DC2 File Offset: 0x00D33FC2
+		// Token: 0x0602C945 RID: 182597 RVA: 0x00C83BCE File Offset: 0x00C81DCE
 		public void UpdateIcon()
 		{
 			base.MarkItemChildIconHandle.Update();
 			base.MarkItemChildIconHandle.ApplyModified();
 		}
 
-		// Token: 0x06037A76 RID: 227958 RVA: 0x00D35DDC File Offset: 0x00D33FDC
+		// Token: 0x0602C946 RID: 182598 RVA: 0x00C83BE8 File Offset: 0x00C81DE8
 		protected override void OnViewRefresh()
 		{
 			base.GetSprite(1).SetUIActive(true);
@@ -70,7 +68,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A77 RID: 227959 RVA: 0x00D35E2F File Offset: 0x00D3402F
+		// Token: 0x0602C947 RID: 182599 RVA: 0x00C83C3B File Offset: 0x00C81E3B
 		private void Refresh()
 		{
 			this.InitRangeImage();
@@ -79,28 +77,28 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			base.MarkItemTopRightIconHandle.ApplyModified();
 		}
 
-		// Token: 0x06037A78 RID: 227960 RVA: 0x00D35E60 File Offset: 0x00D34060
+		// Token: 0x0602C948 RID: 182600 RVA: 0x00C83C6C File Offset: 0x00C81E6C
 		private void InitRangeImage()
 		{
 			this.IsCanShowRangeImage = false;
-			float rangeSize = this.Holder.MarkItemEntity.Resource.RangeSize;
+			float rangeSize = this.Holder.RangeSize;
 			this.IsRangeTrack = (rangeSize > 0f);
 			if (rangeSize <= 0f)
 			{
 				return;
 			}
-			this.UpdateRangeShow(GeneralLogicTreeUtil.Instance.GetPlayerLocation() ?? global::Vector.ZeroVectorProxy, false);
+			this.UpdateRangeShow(GeneralLogicTreeUtil.Instance.GetPlayerLocation() ?? Vector.ZeroVectorProxy, false);
 			this.Flag = true;
 		}
 
-		// Token: 0x06037A79 RID: 227961 RVA: 0x00D35EC2 File Offset: 0x00D340C2
+		// Token: 0x0602C949 RID: 182601 RVA: 0x00C83CC4 File Offset: 0x00C81EC4
 		protected override IMarkItemHandle CreateRangeHandle<[Nullable(0)] T>(IMarkItemComponentContext markComponentContext)
 		{
 			return new TaskMarkItemRangeHandle(markComponentContext);
 		}
 
-		// Token: 0x06037A7A RID: 227962 RVA: 0x00D35ECA File Offset: 0x00D340CA
-		protected override void OnSafeUpdate(global::Vector playerLocation, bool bDragging = false, bool bIsScale = false)
+		// Token: 0x0602C94A RID: 182602 RVA: 0x00C83CCC File Offset: 0x00C81ECC
+		protected override void OnSafeUpdate(Vector playerLocation, bool bDragging = false, bool bIsScale = false)
 		{
 			MarkItem holder = this.Holder;
 			if (holder != null && holder.MapType == EMapType.WorldMap)
@@ -110,14 +108,14 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			this.UpdateRangeShow(playerLocation, bDragging);
 		}
 
-		// Token: 0x06037A7B RID: 227963 RVA: 0x00D35EF1 File Offset: 0x00D340F1
+		// Token: 0x0602C94B RID: 182603 RVA: 0x00C83CF3 File Offset: 0x00C81EF3
 		public bool IsRangeImageActive()
 		{
-			return this.Holder.MarkItemEntity.ViewLifeCircle.IsChildViewVisible(EMarkViewComponentType.Range, false);
+			return base.MarkItemRangeHandle.IsVisible;
 		}
 
-		// Token: 0x06037A7C RID: 227964 RVA: 0x00D35F0C File Offset: 0x00D3410C
-		private void UpdateRangeShow(global::Vector playerLocation, bool bDragging = false)
+		// Token: 0x0602C94C RID: 182604 RVA: 0x00C83D00 File Offset: 0x00C81F00
+		private void UpdateRangeShow(Vector playerLocation, bool bDragging = false)
 		{
 			if (!this.IsRangeTrack)
 			{
@@ -138,13 +136,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			if (taskMarkItem.RangeMarkShowDisUp != 0.0 || taskMarkItem.RangeMarkShowDisDown != 0.0)
 			{
 				double num2 = (playerLocation.Z - this.Holder.WorldPosition.Z) * 0.009999999776482582;
-				num3 = global::Vector.Dist2D(playerLocation, this.Holder.WorldPosition) * 0.009999999776482582;
+				num3 = Vector.Dist2D(playerLocation, this.Holder.WorldPosition) * 0.009999999776482582;
 				flag = (num2 < taskMarkItem.RangeMarkShowDisUp && num2 > taskMarkItem.RangeMarkShowDisDown);
 				flag2 = (num3 > rangeMarkShowDis && num2 > taskMarkItem.RangeMarkShowDisUp && num2 < taskMarkItem.RangeMarkShowDisDown);
 			}
 			else
 			{
-				num3 = global::Vector.Dist(playerLocation, this.Holder.WorldPosition) * 0.009999999776482582;
+				num3 = Vector.Dist(playerLocation, this.Holder.WorldPosition) * 0.009999999776482582;
 				flag2 = (num3 > rangeMarkShowDis);
 			}
 			base.MarkItemTrackHandle.SetVisible(flag2 && this.Holder.IsTracked);
@@ -157,30 +155,20 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			this.UpdateRangeImageActive(num3 < num && flag);
 		}
 
-		// Token: 0x06037A7D RID: 227965 RVA: 0x00D36088 File Offset: 0x00D34288
+		// Token: 0x0602C94D RID: 182605 RVA: 0x00C83E6C File Offset: 0x00C8206C
 		private void UpdateRangeImageActive(bool active)
 		{
-			TaskMarkItem taskMarkItem = (TaskMarkItem)this.Holder;
-			int? num = (taskMarkItem != null) ? new int?(taskMarkItem.RawInstanceDungeonId) : null;
-			int num2 = CreatureModel.Instance.GetInstanceId();
-			InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(num2);
-			if (config != null && config.GetValueOrDefault().EntranceEntitiesLength > 0)
-			{
-				num2 = config.Value.EntranceEntities(0).Value.DungeonId;
-			}
 			MarkItem holder = this.Holder;
 			if (holder != null && holder.MapType == EMapType.WorldMap)
 			{
-				int? num3 = num;
-				int num4 = num2;
-				bool flag = !(num3.GetValueOrDefault() == num4 & num3 != null);
+				bool flag = ((TaskMarkItem)this.Holder).IsCrossInstanceDungeon();
 				this.SetRangeImageActive(active && !flag);
 				return;
 			}
 			this.SetRangeImageActive(active);
 		}
 
-		// Token: 0x06037A7E RID: 227966 RVA: 0x00D36164 File Offset: 0x00D34364
+		// Token: 0x0602C94E RID: 182606 RVA: 0x00C83EBC File Offset: 0x00C820BC
 		private void SetRangeImageActive(bool active)
 		{
 			if (!this.IsRangeTrack)
@@ -197,7 +185,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 			this.IsCanShowRangeImage = active;
 			base.MarkItemRangeHandle.SetVisible(active);
-			if (this.Holder.MarkItemEntity.ViewLifeCircle.IsChildViewStateDirty(EMarkViewComponentType.Range) && this.Holder.MapType == EMapType.MiniMap)
+			if (base.MarkItemRangeHandle.IsVisibleDirty && this.Holder.MapType == EMapType.MiniMap)
 			{
 				TaskMarkItem taskMarkItem = (TaskMarkItem)this.Holder;
 				EventSystem.Instance.Emit<ETrackSource, long, int, int, bool>(EEventName.TaskRangeTrackStateChange, taskMarkItem.TrackSource, taskMarkItem.TreeIncId.Value, taskMarkItem.NodeId, taskMarkItem.MarkId, active);
@@ -211,16 +199,16 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x0401D42D RID: 119853
+		// Token: 0x04017EB0 RID: 97968
 		public readonly int QuestStepId;
 
-		// Token: 0x0401D42E RID: 119854
+		// Token: 0x04017EB1 RID: 97969
 		private bool IsRangeTrack;
 
-		// Token: 0x0401D42F RID: 119855
+		// Token: 0x04017EB2 RID: 97970
 		private bool IsCanShowRangeImage;
 
-		// Token: 0x0401D430 RID: 119856
+		// Token: 0x04017EB3 RID: 97971
 		private bool Flag;
 	}
 }

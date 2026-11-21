@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DF5 RID: 19957
+	// Token: 0x02003DBE RID: 15806
 	public class RoguelikePhantomNewUnlockView : UiViewBase
 	{
-		// Token: 0x06033800 RID: 210944 RVA: 0x00C087DD File Offset: 0x00C069DD
+		// Token: 0x0602866B RID: 165483 RVA: 0x00B51CED File Offset: 0x00B4FEED
 		[NullableContext(1)]
 		public RoguelikePhantomNewUnlockView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06033801 RID: 210945 RVA: 0x00C087E8 File Offset: 0x00C069E8
+		// Token: 0x0602866C RID: 165484 RVA: 0x00B51CF8 File Offset: 0x00B4FEF8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033802 RID: 210946 RVA: 0x00C08914 File Offset: 0x00C06B14
+		// Token: 0x0602866D RID: 165485 RVA: 0x00B51E24 File Offset: 0x00B50024
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikePhantomNewUnlockView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -59,13 +59,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033803 RID: 210947 RVA: 0x00C08957 File Offset: 0x00C06B57
+		// Token: 0x0602866E RID: 165486 RVA: 0x00B51E67 File Offset: 0x00B50067
 		private void CloseBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06033804 RID: 210948 RVA: 0x00C08960 File Offset: 0x00C06B60
+		// Token: 0x0602866F RID: 165487 RVA: 0x00B51E70 File Offset: 0x00B50070
 		[NullableContext(1)]
 		private RoguelikePhantomSelectDragItem CreatePhantomSelectDragItem()
 		{
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			};
 		}
 
-		// Token: 0x06033805 RID: 210949 RVA: 0x00C08979 File Offset: 0x00C06B79
+		// Token: 0x06028670 RID: 165488 RVA: 0x00B51E89 File Offset: 0x00B50089
 		private bool CanToggleStateChange(bool bState)
 		{
 			return false;
 		}
 
-		// Token: 0x0401B542 RID: 111938
+		// Token: 0x04015F15 RID: 89877
 		[Nullable(new byte[]
 		{
 			2,
@@ -90,25 +90,25 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericScrollViewNew<RoguelikePhantomSelectDragItem, IPhantomSelectItemData> PhantomSelectItemLayout;
 
-		// Token: 0x0200AF7C RID: 44924
+		// Token: 0x020099B1 RID: 39345
 		private class EComponents
 		{
-			// Token: 0x0403548B RID: 218251
+			// Token: 0x0402FEBE RID: 196286
 			public const int BtnMask = 0;
 
-			// Token: 0x0403548C RID: 218252
+			// Token: 0x0402FEBF RID: 196287
 			public const int TxtTitle = 1;
 
-			// Token: 0x0403548D RID: 218253
+			// Token: 0x0402FEC0 RID: 196288
 			public const int PanelTitle = 2;
 
-			// Token: 0x0403548E RID: 218254
+			// Token: 0x0402FEC1 RID: 196289
 			public const int TxtClose = 3;
 
-			// Token: 0x0403548F RID: 218255
+			// Token: 0x0402FEC2 RID: 196290
 			public const int ScrollView = 4;
 
-			// Token: 0x04035490 RID: 218256
+			// Token: 0x0402FEC3 RID: 196291
 			public const int Content = 5;
 		}
 	}

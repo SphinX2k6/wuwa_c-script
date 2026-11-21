@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -18,12 +17,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02002A91 RID: 10897
+// Token: 0x0200200D RID: 8205
 [NullableContext(1)]
 [Nullable(0)]
 public class SubPackageController : UiControllerBase
 {
-	// Token: 0x06016AF5 RID: 92917 RVA: 0x005BEBD4 File Offset: 0x005BCDD4
+	// Token: 0x0601451A RID: 83226 RVA: 0x005EADBC File Offset: 0x005E8FBC
 	public void DeleteUnneededResourceOnInit()
 	{
 		if (this.HaveDeleteUnneededResourceOnInit.GetValueOrDefault())
@@ -54,7 +53,7 @@ public class SubPackageController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06016AF6 RID: 92918 RVA: 0x005BEC5C File Offset: 0x005BCE5C
+	// Token: 0x0601451B RID: 83227 RVA: 0x005EAE44 File Offset: 0x005E9044
 	private unsafe void DownLoadPackage()
 	{
 		SubPackageDownLoadModel.Instance.PauseSubPackageId = 0;
@@ -115,7 +114,7 @@ public class SubPackageController : UiControllerBase
 		this.SaveLocalDownLoadList();
 	}
 
-	// Token: 0x06016AF7 RID: 92919 RVA: 0x005BEE94 File Offset: 0x005BD094
+	// Token: 0x0601451C RID: 83228 RVA: 0x005EB07C File Offset: 0x005E927C
 	public UniTask PushSubPackageDownLoading(List<int> idList, [Nullable(2)] Action callBack = null)
 	{
 		SubPackageController.<PushSubPackageDownLoading>d__6 <PushSubPackageDownLoading>d__;
@@ -128,7 +127,7 @@ public class SubPackageController : UiControllerBase
 		return <PushSubPackageDownLoading>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016AF8 RID: 92920 RVA: 0x005BEEE8 File Offset: 0x005BD0E8
+	// Token: 0x0601451D RID: 83229 RVA: 0x005EB0D0 File Offset: 0x005E92D0
 	[NullableContext(2)]
 	public UniTask RestartSubPackageDownLoading(int id, Action callBack = null)
 	{
@@ -141,7 +140,7 @@ public class SubPackageController : UiControllerBase
 		return <RestartSubPackageDownLoading>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016AF9 RID: 92921 RVA: 0x005BEF34 File Offset: 0x005BD134
+	// Token: 0x0601451E RID: 83230 RVA: 0x005EB11C File Offset: 0x005E931C
 	public UniTask PrioritySubPackageDownLoading(List<int> idList, [Nullable(2)] Action callBack = null)
 	{
 		SubPackageController.<PrioritySubPackageDownLoading>d__8 <PrioritySubPackageDownLoading>d__;
@@ -154,7 +153,7 @@ public class SubPackageController : UiControllerBase
 		return <PrioritySubPackageDownLoading>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016AFA RID: 92922 RVA: 0x005BEF88 File Offset: 0x005BD188
+	// Token: 0x0601451F RID: 83231 RVA: 0x005EB170 File Offset: 0x005E9370
 	[NullableContext(2)]
 	public void StopSubPackageDownLoading(int id, Action callBack = null)
 	{
@@ -176,16 +175,22 @@ public class SubPackageController : UiControllerBase
 		this.SaveLocalDownLoadList();
 	}
 
-	// Token: 0x06016AFB RID: 92923 RVA: 0x005BF030 File Offset: 0x005BD230
+	// Token: 0x06014520 RID: 83232 RVA: 0x005EB218 File Offset: 0x005E9418
 	public void CancelSubPackageDownLoading(int id)
 	{
 		if (SubPackageDownLoadModel.Instance.GetSubPackageDownLoadItemStateById(id) == ESubPackageDownLoadState.Finish)
 		{
 			return;
 		}
-		SubPackageDownLoadModel.Instance.SubPackageDownLoadList = (from value in SubPackageDownLoadModel.Instance.SubPackageDownLoadList
-		where value != id
-		select value).ToList<int>();
+		List<int> list = new List<int>();
+		foreach (int num in SubPackageDownLoadModel.Instance.SubPackageDownLoadList)
+		{
+			if (num != id)
+			{
+				list.Add(num);
+			}
+		}
+		SubPackageDownLoadModel.Instance.SubPackageDownLoadList = list;
 		SubPackageDownLoadModel.Instance.SetSubPackageDownLoadItemStateMap(id, ESubPackageDownLoadState.None);
 		if (id == SubPackageDownLoadModel.Instance.PauseSubPackageId)
 		{
@@ -205,7 +210,7 @@ public class SubPackageController : UiControllerBase
 		this.SaveLocalDownLoadList();
 	}
 
-	// Token: 0x06016AFC RID: 92924 RVA: 0x005BF14C File Offset: 0x005BD34C
+	// Token: 0x06014521 RID: 83233 RVA: 0x005EB340 File Offset: 0x005E9540
 	public void CancelSubPackageDownLoadingList(List<int> idList)
 	{
 		List<int> list = new List<int>();
@@ -242,23 +247,39 @@ public class SubPackageController : UiControllerBase
 		this.SaveLocalDownLoadList();
 	}
 
-	// Token: 0x06016AFD RID: 92925 RVA: 0x005BF2C4 File Offset: 0x005BD4C4
+	// Token: 0x06014522 RID: 83234 RVA: 0x005EB4B8 File Offset: 0x005E96B8
 	public unsafe void DeleteUnneededResource(bool isAutoClear)
 	{
 		this.ReportSubPackageClearSpaceLogEvent();
 		List<int> finishQuestList = QuestNewModel.Instance.GetFinishQuestList();
-		HashSet<int> protectedQuestIds = isAutoClear ? SubPackageDownLoadModel.Instance.GetRecallProtectedQuestIds() : new HashSet<int>();
-		List<int> list = (protectedQuestIds.Count > 0) ? (from questId in finishQuestList
-		where !protectedQuestIds.Contains(questId)
-		select questId).ToList<int>() : finishQuestList;
-		if (protectedQuestIds.Count > 0)
+		HashSet<int> hashSet = isAutoClear ? SubPackageDownLoadModel.Instance.GetRecallProtectedQuestIds() : new HashSet<int>();
+		List<int> list;
+		if (hashSet.Count > 0)
+		{
+			list = new List<int>();
+			using (List<int>.Enumerator enumerator = finishQuestList.GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					int item = enumerator.Current;
+					if (!hashSet.Contains(item))
+					{
+						list.Add(item);
+					}
+				}
+				goto IL_75;
+			}
+		}
+		list = finishQuestList;
+		IL_75:
+		if (hashSet.Count > 0)
 		{
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.SubPackageDownLoad;
 			ELogAuthor author = ELogAuthor.LJQ;
 			string message = "自动清理可删除资源-剔除受保护回顾任务";
 			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("protectedQuestIds", string.Join<int>(",", protectedQuestIds));
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("protectedQuestIds", string.Join<int>(",", hashSet));
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("clearQuestCount", list.Count);
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
@@ -270,7 +291,7 @@ public class SubPackageController : UiControllerBase
 		this.ReportSubPackageClearSpaceFinishLogEvent(isAutoClear);
 	}
 
-	// Token: 0x06016AFE RID: 92926 RVA: 0x005BF3D0 File Offset: 0x005BD5D0
+	// Token: 0x06014523 RID: 83235 RVA: 0x005EB5E8 File Offset: 0x005E97E8
 	[NullableContext(0)]
 	private UniTask<bool> IsNotUseCellData()
 	{
@@ -282,7 +303,7 @@ public class SubPackageController : UiControllerBase
 		return <IsNotUseCellData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016AFF RID: 92927 RVA: 0x005BF414 File Offset: 0x005BD614
+	// Token: 0x06014524 RID: 83236 RVA: 0x005EB62C File Offset: 0x005E982C
 	private unsafe void OnNetworkTypeChange(byte newType)
 	{
 		int downLoadingId = SubPackageDownLoadModel.Instance.DownLoadingSubPackageId;
@@ -348,7 +369,7 @@ public class SubPackageController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06016B00 RID: 92928 RVA: 0x005BF69C File Offset: 0x005BD89C
+	// Token: 0x06014525 RID: 83237 RVA: 0x005EB8B4 File Offset: 0x005E9AB4
 	public void ShowDownloadSubPackageNetFailedConfirm(int downLoadingId)
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.LoginResDownLoadFailedConfirm);
@@ -369,7 +390,7 @@ public class SubPackageController : UiControllerBase
 		ConfirmBoxController.Instance.ShowNetWorkConfirmBoxView(confirmBoxDataNew, null);
 	}
 
-	// Token: 0x06016B01 RID: 92929 RVA: 0x005BF718 File Offset: 0x005BD918
+	// Token: 0x06014526 RID: 83238 RVA: 0x005EB930 File Offset: 0x005E9B30
 	public void AutoDownLoadKeySubPackage()
 	{
 		this.PrioritySubPackageDownLoading(new List<int>
@@ -387,7 +408,7 @@ public class SubPackageController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06016B02 RID: 92930 RVA: 0x005BF794 File Offset: 0x005BD994
+	// Token: 0x06014527 RID: 83239 RVA: 0x005EB9AC File Offset: 0x005E9BAC
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.SceneBlockSplitHumanChangleNotify, new Action<IMessage, Net.CallbackStatus>(this.SceneBlockSplitHumanChangleNotify));
@@ -396,7 +417,7 @@ public class SubPackageController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.SceneBlockSplitPopWindowNotify, new Action<IMessage, Net.CallbackStatus>(this.SceneBlockSplitPopWindowNotify));
 	}
 
-	// Token: 0x06016B03 RID: 92931 RVA: 0x005BF814 File Offset: 0x005BDA14
+	// Token: 0x06014528 RID: 83240 RVA: 0x005EBA2C File Offset: 0x005E9C2C
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.SceneBlockSplitHumanChangleNotify);
@@ -405,43 +426,45 @@ public class SubPackageController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.SceneBlockSplitPopWindowNotify);
 	}
 
-	// Token: 0x06016B04 RID: 92932 RVA: 0x005BF864 File Offset: 0x005BDA64
+	// Token: 0x06014529 RID: 83241 RVA: 0x005EBA7C File Offset: 0x005E9C7C
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.EnterAreaNotify, new Action<int>(this.EnterAreaNotify));
 		EventSystem.Instance.Add(EEventName.OnRoleChangeEnd, new Action(this.OnRoleChangeEnd));
 		EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.WorldDoneAndCloseLoading));
+		EventSystem.Instance.Add(EEventName.BackLoginView, new Action(this.OnBackLoginView));
 		SubPackageDownLoadModel.Instance.NetworkListener.NetworkChangeDelegate.Add(new Action<byte>(this.OnNetworkTypeChange));
 	}
 
-	// Token: 0x06016B05 RID: 92933 RVA: 0x005BF8E8 File Offset: 0x005BDAE8
+	// Token: 0x0601452A RID: 83242 RVA: 0x005EBB1C File Offset: 0x005E9D1C
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.EnterAreaNotify, new Action<int>(this.EnterAreaNotify));
 		EventSystem.Instance.Remove(EEventName.OnRoleChangeEnd, new Action(this.OnRoleChangeEnd));
 		EventSystem.Instance.Remove(EEventName.WorldDoneAndCloseLoading, new Action(this.WorldDoneAndCloseLoading));
+		EventSystem.Instance.Remove(EEventName.BackLoginView, new Action(this.OnBackLoginView));
 		SubPackageDownLoadModel.Instance.NetworkListener.NetworkChangeDelegate.Clear();
 	}
 
-	// Token: 0x06016B06 RID: 92934 RVA: 0x005BF95D File Offset: 0x005BDB5D
+	// Token: 0x0601452B RID: 83243 RVA: 0x005EBBAD File Offset: 0x005E9DAD
 	[NullableContext(2)]
 	private void SceneBlockSplitHumanChangleNotify(IMessage msg, Net.CallbackStatus status)
 	{
 	}
 
-	// Token: 0x06016B07 RID: 92935 RVA: 0x005BF95F File Offset: 0x005BDB5F
+	// Token: 0x0601452C RID: 83244 RVA: 0x005EBBAF File Offset: 0x005E9DAF
 	[NullableContext(2)]
 	private void SceneBlockSplitHumanFullNotify(IMessage msg, Net.CallbackStatus status)
 	{
 	}
 
-	// Token: 0x06016B08 RID: 92936 RVA: 0x005BF961 File Offset: 0x005BDB61
+	// Token: 0x0601452D RID: 83245 RVA: 0x005EBBB1 File Offset: 0x005E9DB1
 	[NullableContext(2)]
 	private void SceneBlockSplitHumanSwitchStateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 	}
 
-	// Token: 0x06016B09 RID: 92937 RVA: 0x005BF964 File Offset: 0x005BDB64
+	// Token: 0x0601452E RID: 83246 RVA: 0x005EBBB4 File Offset: 0x005E9DB4
 	[NullableContext(2)]
 	private void SceneBlockSplitPopWindowNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -458,7 +481,7 @@ public class SubPackageController : UiControllerBase
 		}, null, null);
 	}
 
-	// Token: 0x06016B0A RID: 92938 RVA: 0x005BF9CC File Offset: 0x005BDBCC
+	// Token: 0x0601452F RID: 83247 RVA: 0x005EBC1C File Offset: 0x005E9E1C
 	public void SceneBlockChangePush(List<int> downloadBlockIdList, [Nullable(2)] List<int> deleteBlockIdList = null)
 	{
 		SceneBlockChangePush sceneBlockChangePush = Aki.Protocol.SceneBlockChangePush.Create();
@@ -470,7 +493,7 @@ public class SubPackageController : UiControllerBase
 		Net.Instance.Send(EPushMessageId.SceneBlockChangePush, sceneBlockChangePush);
 	}
 
-	// Token: 0x06016B0B RID: 92939 RVA: 0x005BFA0C File Offset: 0x005BDC0C
+	// Token: 0x06014530 RID: 83248 RVA: 0x005EBC5C File Offset: 0x005E9E5C
 	public void SceneBlockSplitClientLoginPush(List<int> downloadBlockIdList)
 	{
 		SceneBlockSplitClientLoginPush sceneBlockSplitClientLoginPush = Aki.Protocol.SceneBlockSplitClientLoginPush.Create();
@@ -478,15 +501,15 @@ public class SubPackageController : UiControllerBase
 		Net.Instance.Send(EPushMessageId.SceneBlockSplitClientLoginPush, sceneBlockSplitClientLoginPush);
 	}
 
-	// Token: 0x06016B0C RID: 92940 RVA: 0x005BFA3C File Offset: 0x005BDC3C
+	// Token: 0x06014531 RID: 83249 RVA: 0x005EBC8C File Offset: 0x005E9E8C
 	public void DownLoadFinish()
 	{
-		int subPackage = SubPackageDownLoadModel.Instance.DownLoadingSubPackageId;
-		if (subPackage == 0)
+		int downLoadingSubPackageId = SubPackageDownLoadModel.Instance.DownLoadingSubPackageId;
+		if (downLoadingSubPackageId == 0)
 		{
 			return;
 		}
-		using (List<ResourceDiffUpdater>.Enumerator enumerator = (SubPackageDownLoadModel.Instance.GetSubPackageDownLoadItemUpdater(subPackage) ?? new List<ResourceDiffUpdater>()).GetEnumerator())
+		using (List<ResourceDiffUpdater>.Enumerator enumerator = (SubPackageDownLoadModel.Instance.GetSubPackageDownLoadItemUpdater(downLoadingSubPackageId) ?? new List<ResourceDiffUpdater>()).GetEnumerator())
 		{
 			while (enumerator.MoveNext())
 			{
@@ -500,9 +523,9 @@ public class SubPackageController : UiControllerBase
 		ELogModule module = ELogModule.SubPackageDownLoad;
 		ELogAuthor author = ELogAuthor.LJQ;
 		string message = "DownLoadFinish";
-		ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("id", subPackage);
+		ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("id", downLoadingSubPackageId);
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-		if (subPackage == 1 && GameModeModel.Instance.WorldDone)
+		if (downLoadingSubPackageId == 1 && GameModeModel.Instance.WorldDone)
 		{
 			SubPackageDownLoadModel.Instance.UpdaterDownLoadSize();
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.SubPackageDownloadListFinishConfirm);
@@ -525,36 +548,45 @@ public class SubPackageController : UiControllerBase
 			});
 			ConfirmBoxController.Instance.ShowNetWorkConfirmBoxView(confirmBoxDataNew, null);
 		}
-		SubPackageDownLoadModel.Instance.SetSubPackageDownLoadItemStateMap(subPackage, ESubPackageDownLoadState.Finish);
-		SubPackageDownLoadModel.Instance.SubPackageDownLoadList = (from value in SubPackageDownLoadModel.Instance.SubPackageDownLoadList
-		where value != subPackage
-		select value).ToList<int>();
-		if (!SubPackageDefine.IsDynamicRecallId(subPackage))
+		SubPackageDownLoadModel.Instance.SetSubPackageDownLoadItemStateMap(downLoadingSubPackageId, ESubPackageDownLoadState.Finish);
+		List<int> list = new List<int>();
+		foreach (int num in SubPackageDownLoadModel.Instance.SubPackageDownLoadList)
 		{
-			DownLoadSubPackage value2 = SubPackageConfig.Instance.GetDownLoadSubPackageById(subPackage).Value;
-			if (value2.Type == 4)
+			if (num != downLoadingSubPackageId)
+			{
+				list.Add(num);
+			}
+		}
+		SubPackageDownLoadModel.Instance.SubPackageDownLoadList = list;
+		if (!SubPackageDefine.IsDynamicRecallId(downLoadingSubPackageId))
+		{
+			DownLoadSubPackage value = SubPackageConfig.Instance.GetDownLoadSubPackageById(downLoadingSubPackageId).Value;
+			if (value.Type == 4)
 			{
 				ScrollingTipsController.Instance.ShowTipsByTextId("SubPackageDownLoad_Gender_Tips", Array.Empty<object>());
 			}
 			else
 			{
 				bool flag = false;
-				if (value2.Type == 2)
+				if (value.Type == 2)
 				{
-					List<int> list = new List<int>();
-					foreach (int num in value2.Area())
+					List<int> list2 = new List<int>();
+					foreach (int num2 in value.Area())
 					{
-						if (!ResourceManagerController.Instance.IsNeedReOpenMap(num))
+						if (ResourceManagerController.Instance.IsNeedReOpenMap(num2))
 						{
-							list.Add(num);
 							flag = true;
 						}
+						else
+						{
+							list2.Add(num2);
+						}
 					}
-					this.SceneBlockChangePush(list, null);
+					this.SceneBlockChangePush(list2, null);
 				}
 				if (GameModeModel.Instance.WorldDone)
 				{
-					string localTextNew = ConfigMultiTextLang.GetLocalTextNew(value2.Title, null);
+					string localTextNew = ConfigMultiTextLang.GetLocalTextNew(value.Title, null);
 					if (!flag)
 					{
 						ScrollingTipsController.Instance.ShowTipsByTextId("SubPackageDownLoad_Finish_Tips", new object[]
@@ -575,7 +607,7 @@ public class SubPackageController : UiControllerBase
 		else
 		{
 			RecallConfig? recallConfig;
-			string localTextNew2 = ConfigMultiTextLang.GetLocalTextNew(((ConfigRecallConfigByRecallId.GetConfig(SubPackageDefine.RecallIdFromDynamic(subPackage), true) != null) ? recallConfig.GetValueOrDefault().QuestName : null) ?? "", null);
+			string localTextNew2 = ConfigMultiTextLang.GetLocalTextNew(((ConfigRecallConfigByRecallId.GetConfig(SubPackageDefine.RecallIdFromDynamic(downLoadingSubPackageId), true) != null) ? recallConfig.GetValueOrDefault().QuestName : null) ?? "", null);
 			ScrollingTipsController.Instance.ShowTipsByTextId("SubPackageDownLoad_Finish_Tips", new object[]
 			{
 				localTextNew2
@@ -588,7 +620,7 @@ public class SubPackageController : UiControllerBase
 		this.SaveLocalDownLoadList();
 	}
 
-	// Token: 0x06016B0D RID: 92941 RVA: 0x005BFD50 File Offset: 0x005BDF50
+	// Token: 0x06014532 RID: 83250 RVA: 0x005EBFA8 File Offset: 0x005EA1A8
 	private void EnterAreaNotify(int areaId)
 	{
 		if (ConfirmBoxController.Instance.CheckIsConfirmBoxOpen())
@@ -622,7 +654,7 @@ public class SubPackageController : UiControllerBase
 		ScrollingTipsController.Instance.ShowTipsByTextId("SubPackageDownLoad_Downloading", Array.Empty<object>());
 	}
 
-	// Token: 0x06016B0E RID: 92942 RVA: 0x005BFE51 File Offset: 0x005BE051
+	// Token: 0x06014533 RID: 83251 RVA: 0x005EC0A9 File Offset: 0x005EA2A9
 	private void OnRoleChangeEnd()
 	{
 		if (!ResourceDiffUpdaterManager.Instance.IsGrayBoxHit())
@@ -632,7 +664,7 @@ public class SubPackageController : UiControllerBase
 		ResourceManagerController.Instance.UpdateServerQuestState();
 	}
 
-	// Token: 0x06016B0F RID: 92943 RVA: 0x005BFE6C File Offset: 0x005BE06C
+	// Token: 0x06014534 RID: 83252 RVA: 0x005EC0C4 File Offset: 0x005EA2C4
 	private void WorldDoneAndCloseLoading()
 	{
 		this.DeleteUnneededResourceOnInit();
@@ -645,19 +677,14 @@ public class SubPackageController : UiControllerBase
 			LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.SubDownLoadClearOnLogin, true);
 			HotFixManager.HandleAutoClear = false;
 		}
+		this.RestorePauseIdFromStorage();
 		List<int> player = LocalStorage.GetPlayer<List<int>>(ELocalStoragePlayerKey.SubDownLoadLastDownLoadList, null);
 		if (player == null || player.Count <= 0)
 		{
+			EventSystem.Instance.Emit(EEventName.OnRefreshSubPackageDownLoadByPriority);
 			return;
 		}
-		foreach (int num in player)
-		{
-			if (!SubPackageDefine.IsDynamicRecallId(num) && SubPackageDownLoadModel.Instance.GetSubPackageDownLoadItemStateById(num) != ESubPackageDownLoadState.Finish && num != SubPackageDownLoadModel.Instance.DownLoadingSubPackageId && num != SubPackageDownLoadModel.Instance.PauseSubPackageId && !SubPackageDownLoadModel.Instance.SubPackageDownLoadList.Contains(num))
-			{
-				SubPackageDownLoadModel.Instance.SubPackageDownLoadList.Add(num);
-				SubPackageDownLoadModel.Instance.SetSubPackageDownLoadItemStateMap(num, ESubPackageDownLoadState.Waiting);
-			}
-		}
+		this.RestoreStaticDownLoadList(player);
 		if (SubPackageDownLoadModel.Instance.PauseSubPackageId == 0)
 		{
 			this.DownLoadPackage();
@@ -666,7 +693,48 @@ public class SubPackageController : UiControllerBase
 		this.SaveLocalDownLoadList();
 	}
 
-	// Token: 0x06016B10 RID: 92944 RVA: 0x005BFF80 File Offset: 0x005BE180
+	// Token: 0x06014535 RID: 83253 RVA: 0x005EC15C File Offset: 0x005EA35C
+	public void RestoreStaticDownLoadList(List<int> list)
+	{
+		foreach (int num in list)
+		{
+			if (!SubPackageDefine.IsDynamicRecallId(num) && SubPackageDownLoadModel.Instance.GetSubPackageDownLoadItemStateById(num) != ESubPackageDownLoadState.Finish && num != SubPackageDownLoadModel.Instance.DownLoadingSubPackageId && num != SubPackageDownLoadModel.Instance.PauseSubPackageId && !SubPackageDownLoadModel.Instance.SubPackageDownLoadList.Contains(num))
+			{
+				SubPackageDownLoadModel.Instance.SubPackageDownLoadList.Add(num);
+				SubPackageDownLoadModel.Instance.SetSubPackageDownLoadItemStateMap(num, ESubPackageDownLoadState.Waiting);
+			}
+		}
+	}
+
+	// Token: 0x06014536 RID: 83254 RVA: 0x005EC204 File Offset: 0x005EA404
+	private void OnBackLoginView()
+	{
+		if (!ResourceDiffUpdaterManager.Instance.IsGrayBoxHit())
+		{
+			return;
+		}
+		int downLoadingSubPackageId = SubPackageDownLoadModel.Instance.DownLoadingSubPackageId;
+		if (downLoadingSubPackageId == 0)
+		{
+			return;
+		}
+		Log instance = Log.Instance;
+		ELogModule module = ELogModule.SubPackageDownLoad;
+		ELogAuthor author = ELogAuthor.LJQ;
+		string message = "返回登录,停止下载中条目并按下载中落盘";
+		ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("id", downLoadingSubPackageId);
+		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+		if (downLoadingSubPackageId != 1)
+		{
+			this.SaveLocalDownLoadList();
+		}
+		foreach (ResourceDiffUpdater resourceDiffUpdater in (SubPackageDownLoadModel.Instance.GetSubPackageDownLoadItemUpdater(downLoadingSubPackageId) ?? new List<ResourceDiffUpdater>()))
+		{
+			resourceDiffUpdater.Stop();
+		}
+	}
+
+	// Token: 0x06014537 RID: 83255 RVA: 0x005EC2B8 File Offset: 0x005EA4B8
 	public bool CheckBlockHaveDownLoad(int blockId)
 	{
 		if (!ResourceDiffUpdaterManager.Instance.IsGrayBoxHit())
@@ -677,7 +745,7 @@ public class SubPackageController : UiControllerBase
 		return SubPackageDownLoadModel.Instance.GetSubPackageDownLoadItemStateById(blockBelongToSubPackage) == ESubPackageDownLoadState.Finish;
 	}
 
-	// Token: 0x06016B11 RID: 92945 RVA: 0x005BFFB8 File Offset: 0x005BE1B8
+	// Token: 0x06014538 RID: 83256 RVA: 0x005EC2F0 File Offset: 0x005EA4F0
 	public void SaveLocalDownLoadList()
 	{
 		if (PlayerInfoModel.Instance.GetId().GetValueOrDefault() <= 0)
@@ -686,18 +754,43 @@ public class SubPackageController : UiControllerBase
 			return;
 		}
 		List<int> list = new List<int>();
-		list.AddRange(from id in SubPackageDownLoadModel.Instance.SubPackageDownLoadList
-		where !SubPackageDefine.IsDynamicRecallId(id)
-		select id);
-		int downLoadingSubPackageId = SubPackageDownLoadModel.Instance.DownLoadingSubPackageId;
-		if (downLoadingSubPackageId != 0 && !SubPackageDefine.IsDynamicRecallId(downLoadingSubPackageId))
+		List<int> list2 = new List<int>();
+		foreach (int num in SubPackageDownLoadModel.Instance.SubPackageDownLoadList)
 		{
-			list.Insert(0, downLoadingSubPackageId);
+			if (!SubPackageDefine.IsDynamicRecallId(num))
+			{
+				list.Add(num);
+			}
+			else
+			{
+				list2.Add(num);
+			}
+		}
+		int downLoadingSubPackageId = SubPackageDownLoadModel.Instance.DownLoadingSubPackageId;
+		if (downLoadingSubPackageId != 0)
+		{
+			if (SubPackageDefine.IsDynamicRecallId(downLoadingSubPackageId))
+			{
+				list2.Insert(0, downLoadingSubPackageId);
+			}
+			else
+			{
+				list.Insert(0, downLoadingSubPackageId);
+			}
 		}
 		LocalStorage.SetPlayer<List<int>>(ELocalStoragePlayerKey.SubDownLoadLastDownLoadList, list);
+		LocalStorage.SetPlayer<List<int>>(ELocalStoragePlayerKey.SubDownLoadLastDynamicDownLoadList, list2);
+		LocalStorage.SetPlayer<int>(ELocalStoragePlayerKey.SubDownLoadLastDownLoadingId, (downLoadingSubPackageId != 1) ? downLoadingSubPackageId : 0);
+		int pauseSubPackageId = SubPackageDownLoadModel.Instance.PauseSubPackageId;
+		if (pauseSubPackageId != 0 && pauseSubPackageId != 1)
+		{
+			LocalStorage.SetPlayer<int>(ELocalStoragePlayerKey.SubDownLoadLastPauseId, pauseSubPackageId);
+			return;
+		}
+		LocalStorage.SetPlayer<int>(ELocalStoragePlayerKey.SubDownLoadLastPauseId, 0);
 	}
 
-	// Token: 0x06016B12 RID: 92946 RVA: 0x005C0060 File Offset: 0x005BE260
+	// Token: 0x06014539 RID: 83257 RVA: 0x005EC420 File Offset: 0x005EA620
 	public void ClearLocalDownLoadList()
 	{
 		if (PlayerInfoModel.Instance.GetId().GetValueOrDefault() <= 0)
@@ -706,9 +799,23 @@ public class SubPackageController : UiControllerBase
 			return;
 		}
 		LocalStorage.SetPlayer<List<int>>(ELocalStoragePlayerKey.SubDownLoadLastDownLoadList, new List<int>());
+		LocalStorage.SetPlayer<int>(ELocalStoragePlayerKey.SubDownLoadLastPauseId, 0);
+		LocalStorage.SetPlayer<List<int>>(ELocalStoragePlayerKey.SubDownLoadLastDynamicDownLoadList, new List<int>());
+		LocalStorage.SetPlayer<int>(ELocalStoragePlayerKey.SubDownLoadLastDownLoadingId, 0);
 	}
 
-	// Token: 0x06016B13 RID: 92947 RVA: 0x005C00B4 File Offset: 0x005BE2B4
+	// Token: 0x0601453A RID: 83258 RVA: 0x005EC49C File Offset: 0x005EA69C
+	public void RestorePauseIdFromStorage()
+	{
+		int player = LocalStorage.GetPlayer<int>(ELocalStoragePlayerKey.SubDownLoadLastPauseId, 0);
+		if (player == 0 || player == 1 || SubPackageDefine.IsDynamicRecallId(player))
+		{
+			return;
+		}
+		SubPackageDownLoadModel.Instance.RestorePauseItemState(player);
+	}
+
+	// Token: 0x0601453B RID: 83259 RVA: 0x005EC4D0 File Offset: 0x005EA6D0
 	public void ReportSubPackageKeySubPackageLogEvent(int time, int state)
 	{
 		SubPackageKeySubPackageLogEvent subPackageKeySubPackageLogEvent = new SubPackageKeySubPackageLogEvent();
@@ -718,7 +825,7 @@ public class SubPackageController : UiControllerBase
 		LogReportController.Instance.LogReport(subPackageKeySubPackageLogEvent);
 	}
 
-	// Token: 0x06016B14 RID: 92948 RVA: 0x005C00F0 File Offset: 0x005BE2F0
+	// Token: 0x0601453C RID: 83260 RVA: 0x005EC50C File Offset: 0x005EA70C
 	public void ReportSubPackageDownLoadLogEvent(int subPackageId, int state, ResourceDiffUpdater update)
 	{
 		SubPackageDownLoadLogEvent subPackageDownLoadLogEvent = new SubPackageDownLoadLogEvent();
@@ -735,7 +842,7 @@ public class SubPackageController : UiControllerBase
 		LogReportController.Instance.LogReport(subPackageDownLoadLogEvent);
 	}
 
-	// Token: 0x06016B15 RID: 92949 RVA: 0x005C01E8 File Offset: 0x005BE3E8
+	// Token: 0x0601453D RID: 83261 RVA: 0x005EC604 File Offset: 0x005EA804
 	public void ReportSubPackageOutOfSpaceLogEvent(int subPackageId, long requiredSpace, long remainingSpace)
 	{
 		SubPackageOutOfSpaceLogEvent subPackageOutOfSpaceLogEvent = new SubPackageOutOfSpaceLogEvent();
@@ -749,7 +856,7 @@ public class SubPackageController : UiControllerBase
 		LogReportController.Instance.LogReport(subPackageOutOfSpaceLogEvent);
 	}
 
-	// Token: 0x06016B16 RID: 92950 RVA: 0x005C02A8 File Offset: 0x005BE4A8
+	// Token: 0x0601453E RID: 83262 RVA: 0x005EC6C4 File Offset: 0x005EA8C4
 	public void ReportRecallDownLoadDialogLogEvent(int recallId, long needSize)
 	{
 		this.RecallDownLoadTraceId = new Random().Next(0, 1000000);
@@ -762,7 +869,7 @@ public class SubPackageController : UiControllerBase
 		LogReportController.Instance.LogReport(recallDownLoadDialogLogEvent);
 	}
 
-	// Token: 0x06016B17 RID: 92951 RVA: 0x005C0340 File Offset: 0x005BE540
+	// Token: 0x0601453F RID: 83263 RVA: 0x005EC75C File Offset: 0x005EA95C
 	public void ReportSubPackageClearSpaceLogEvent()
 	{
 		SubPackageClearSpaceLogEvent subPackageClearSpaceLogEvent = new SubPackageClearSpaceLogEvent();
@@ -772,7 +879,7 @@ public class SubPackageController : UiControllerBase
 		LogReportController.Instance.LogReport(subPackageClearSpaceLogEvent);
 	}
 
-	// Token: 0x06016B18 RID: 92952 RVA: 0x005C0390 File Offset: 0x005BE590
+	// Token: 0x06014540 RID: 83264 RVA: 0x005EC7AC File Offset: 0x005EA9AC
 	public void ReportSubPackageClearSpaceFinishLogEvent(bool isAuto)
 	{
 		SubPackageClearSpaceFinishLogEvent subPackageClearSpaceFinishLogEvent = new SubPackageClearSpaceFinishLogEvent();
@@ -782,7 +889,7 @@ public class SubPackageController : UiControllerBase
 		LogReportController.Instance.LogReport(subPackageClearSpaceFinishLogEvent);
 	}
 
-	// Token: 0x06016B19 RID: 92953 RVA: 0x005C03F0 File Offset: 0x005BE5F0
+	// Token: 0x06014541 RID: 83265 RVA: 0x005EC80C File Offset: 0x005EAA0C
 	public void ReportInitialMobileResCleanUpViewLogEvent(int canCleanSpace, int type)
 	{
 		InitialMobileResCleanUpViewLogEvent initialMobileResCleanUpViewLogEvent = new InitialMobileResCleanUpViewLogEvent();
@@ -795,7 +902,7 @@ public class SubPackageController : UiControllerBase
 		LogReportController.Instance.LogReport(initialMobileResCleanUpViewLogEvent);
 	}
 
-	// Token: 0x06016B1A RID: 92954 RVA: 0x005C0474 File Offset: 0x005BE674
+	// Token: 0x06014542 RID: 83266 RVA: 0x005EC890 File Offset: 0x005EAA90
 	public void ReportMobileResCleanUpLogEvent(int selectSpace, List<MobileResCleanUpLogEventContentData> content, int type)
 	{
 		MobileResCleanUpLogEvent mobileResCleanUpLogEvent = new MobileResCleanUpLogEvent();
@@ -809,7 +916,7 @@ public class SubPackageController : UiControllerBase
 		LogReportController.Instance.LogReport(mobileResCleanUpLogEvent);
 	}
 
-	// Token: 0x06016B1B RID: 92955 RVA: 0x005C0500 File Offset: 0x005BE700
+	// Token: 0x06014543 RID: 83267 RVA: 0x005EC91C File Offset: 0x005EAB1C
 	public void ReportMobileResCleanUpFinishLogEvent()
 	{
 		MobileResCleanUpFinishLogEvent mobileResCleanUpFinishLogEvent = new MobileResCleanUpFinishLogEvent();
@@ -820,10 +927,10 @@ public class SubPackageController : UiControllerBase
 		LogReportController.Instance.LogReport(mobileResCleanUpFinishLogEvent);
 	}
 
-	// Token: 0x06016B1C RID: 92956 RVA: 0x005C0574 File Offset: 0x005BE774
+	// Token: 0x06014544 RID: 83268 RVA: 0x005EC990 File Offset: 0x005EAB90
 	public unsafe void ClearSubPackage(List<int> sceneIdList, bool clearVideo)
 	{
-		HashSet<int> clearedCandidates = SubPackageDownLoadModel.Instance.SnapshotRecallIdsWithLocalVideoData();
+		HashSet<int> recallClearedCandidates = SubPackageDownLoadModel.Instance.SnapshotRecallIdsWithLocalVideoData();
 		int num = clearVideo ? ((int)SubPackageDownLoadModel.Instance.GetCanCleanVideoSpace()) : 0;
 		foreach (int id in sceneIdList)
 		{
@@ -856,7 +963,7 @@ public class SubPackageController : UiControllerBase
 		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("sceneIdList", sceneIdList);
 		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("packNameSet", hashSet);
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-		ResourceDiffUpdaterManager.Instance.BlockModule.Delete(hashSet.ToList<string>());
+		ResourceDiffUpdaterManager.Instance.BlockModule.Delete(new List<string>(hashSet));
 		if (clearVideo)
 		{
 			List<int> finishQuestList = QuestNewModel.Instance.GetFinishQuestList();
@@ -869,16 +976,85 @@ public class SubPackageController : UiControllerBase
 					Id = id3
 				});
 			}
+			List<int> recallDynamicIdsByVideoIds = SubPackageDownLoadModel.Instance.GetRecallDynamicIdsByVideoIds(unusedVideos);
+			List<ResourceDiffUpdater> list2 = new List<ResourceDiffUpdater>();
+			if (recallDynamicIdsByVideoIds.Count > 0)
+			{
+				Log instance2 = Log.Instance;
+				ELogModule module2 = ELogModule.SubPackageDownLoad;
+				ELogAuthor author2 = ELogAuthor.LJQ;
+				string message2 = "清理视频前取消回顾视频动态条目下载";
+				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("dynamicIdList", string.Join<int>(",", recallDynamicIdsByVideoIds));
+				instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+				foreach (int id4 in recallDynamicIdsByVideoIds)
+				{
+					foreach (ResourceDiffUpdater resourceDiffUpdater in (SubPackageDownLoadModel.Instance.GetSubPackageDownLoadItemUpdater(id4) ?? new List<ResourceDiffUpdater>()))
+					{
+						if (resourceDiffUpdater.UpdateStatus == EResDownloadStatus.Downloading)
+						{
+							list2.Add(resourceDiffUpdater);
+						}
+					}
+					this.CancelSubPackageDownLoading(id4);
+				}
+			}
+			if (list2.Count > 0)
+			{
+				this.ReportMobileResCleanUpLogEvent(num, list, 2);
+				this.ReportMobileResCleanUpFinishLogEvent();
+				this.DeleteVideosAfterUpdatersStopped(list2, unusedVideos, recallClearedCandidates);
+				return;
+			}
 			ResourceDiffUpdaterManager.Instance.VideoModule.DeleteByVideoIds(unusedVideos);
 		}
 		this.ReportMobileResCleanUpLogEvent(num, list, 2);
 		this.ReportMobileResCleanUpFinishLogEvent();
-		SubPackageDownLoadModel.Instance.RefreshRecallDynamicItemsByStorage(clearedCandidates).Forget();
+		this.RefreshAfterClearVideo(recallClearedCandidates);
+	}
+
+	// Token: 0x06014545 RID: 83269 RVA: 0x005ECD1C File Offset: 0x005EAF1C
+	private void DeleteVideosAfterUpdatersStopped(List<ResourceDiffUpdater> stoppingUpdaterList, HashSet<int> videoIdList, HashSet<int> recallClearedCandidates)
+	{
+		int pendingCount = stoppingUpdaterList.Count;
+		bool isDone = false;
+		TimerHandle timeoutHandle = null;
+		Action<EResDownloadStatus> <>9__2;
+		foreach (ResourceDiffUpdater resourceDiffUpdater in stoppingUpdaterList)
+		{
+			Action<EResDownloadStatus> callback;
+			if ((callback = <>9__2) == null)
+			{
+				callback = (<>9__2 = delegate(EResDownloadStatus _)
+				{
+					int pendingCount = pendingCount;
+					pendingCount--;
+					if (pendingCount <= 0)
+					{
+						base.<DeleteVideosAfterUpdatersStopped>g__DoDelete|0(false);
+					}
+				});
+			}
+			resourceDiffUpdater.AddOnDownloadFinish(callback);
+		}
+		timeoutHandle = TimerSystem.Instance.Delay(delegate(float _)
+		{
+			base.<DeleteVideosAfterUpdatersStopped>g__DoDelete|0(true);
+		}, 3000f, null, null, true, 1f);
+	}
+
+	// Token: 0x06014546 RID: 83270 RVA: 0x005ECDE4 File Offset: 0x005EAFE4
+	private void RefreshAfterClearVideo(HashSet<int> recallClearedCandidates)
+	{
+		SubPackageDownLoadModel instance = SubPackageDownLoadModel.Instance;
+		if (instance != null)
+		{
+			instance.RefreshRecallDynamicItemsByStorage(recallClearedCandidates).Forget();
+		}
 		EventSystem.Instance.Emit(EEventName.OnRefreshSubPackClearData);
 	}
 
-	// Token: 0x17001E38 RID: 7736
-	// (get) Token: 0x06016B1D RID: 92957 RVA: 0x005C07FC File Offset: 0x005BE9FC
+	// Token: 0x17001E90 RID: 7824
+	// (get) Token: 0x06014547 RID: 83271 RVA: 0x005ECE0C File Offset: 0x005EB00C
 	public static SubPackageController Instance
 	{
 		get
@@ -887,7 +1063,7 @@ public class SubPackageController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06016B1E RID: 92958 RVA: 0x005C0803 File Offset: 0x005BEA03
+	// Token: 0x06014548 RID: 83272 RVA: 0x005ECE13 File Offset: 0x005EB013
 	public static SubPackageController GetOrCreateInstance()
 	{
 		if (SubPackageController._Instance == null)
@@ -897,7 +1073,7 @@ public class SubPackageController : UiControllerBase
 		return SubPackageController._Instance;
 	}
 
-	// Token: 0x06016B1F RID: 92959 RVA: 0x005C0817 File Offset: 0x005BEA17
+	// Token: 0x06014549 RID: 83273 RVA: 0x005ECE27 File Offset: 0x005EB027
 	public static bool CreateInstance()
 	{
 		if (SubPackageController._Instance != null)
@@ -908,42 +1084,45 @@ public class SubPackageController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06016B20 RID: 92960 RVA: 0x005C082D File Offset: 0x005BEA2D
+	// Token: 0x0601454A RID: 83274 RVA: 0x005ECE3D File Offset: 0x005EB03D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06016B21 RID: 92961 RVA: 0x005C082F File Offset: 0x005BEA2F
+	// Token: 0x0601454B RID: 83275 RVA: 0x005ECE3F File Offset: 0x005EB03F
 	public static void ResetStaticDefaultValue()
 	{
 		SubPackageController._Instance = null;
 	}
 
-	// Token: 0x06016B22 RID: 92962 RVA: 0x005C0837 File Offset: 0x005BEA37
+	// Token: 0x0601454C RID: 83276 RVA: 0x005ECE47 File Offset: 0x005EB047
 	static SubPackageController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SubPackageController.CreateStaticDefaultValue), new Action(SubPackageController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A856 RID: 43094
+	// Token: 0x0400AC5B RID: 44123
 	public float ENTER_AREA_CD = 10000f;
 
-	// Token: 0x0400A857 RID: 43095
+	// Token: 0x0400AC5C RID: 44124
 	private bool? HaveDeleteUnneededResourceOnInit = new bool?(false);
 
-	// Token: 0x0400A858 RID: 43096
+	// Token: 0x0400AC5D RID: 44125
 	private bool? AgreeUseCell = new bool?(false);
 
-	// Token: 0x0400A859 RID: 43097
+	// Token: 0x0400AC5E RID: 44126
 	private float? NextCanShowTipsTime = new float?(0f);
 
-	// Token: 0x0400A85A RID: 43098
+	// Token: 0x0400AC5F RID: 44127
 	public int RecallDownLoadTraceId = -1;
 
-	// Token: 0x0400A85B RID: 43099
+	// Token: 0x0400AC60 RID: 44128
 	public int MobileResCleanUpTraceId = -1;
 
-	// Token: 0x0400A85C RID: 43100
+	// Token: 0x0400AC61 RID: 44129
+	private const float WAIT_UPDATER_STOP_TIMEOUT_MS = 3000f;
+
+	// Token: 0x0400AC62 RID: 44130
 	[Nullable(2)]
 	private static SubPackageController _Instance;
 }

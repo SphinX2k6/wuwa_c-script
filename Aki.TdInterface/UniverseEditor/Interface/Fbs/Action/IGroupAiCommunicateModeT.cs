@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068A7 RID: 26791
+	// Token: 0x02006F48 RID: 28488
 	public class IGroupAiCommunicateModeT
 	{
-		// Token: 0x1700C6E6 RID: 50918
-		// (get) Token: 0x0602EBB4 RID: 191412 RVA: 0x0065ECB2 File Offset: 0x0065CEB2
-		// (set) Token: 0x0602EBB5 RID: 191413 RVA: 0x0065ECBA File Offset: 0x0065CEBA
+		// Token: 0x1700D0CC RID: 53452
+		// (get) Token: 0x060314EE RID: 201966 RVA: 0x006ADD32 File Offset: 0x006ABF32
+		// (set) Token: 0x060314EF RID: 201967 RVA: 0x006ADD3A File Offset: 0x006ABF3A
 		public EGroupAiCommunicateType Type { get; set; }
 
-		// Token: 0x0602EBB6 RID: 191414 RVA: 0x0065ECC3 File Offset: 0x0065CEC3
+		// Token: 0x060314F0 RID: 201968 RVA: 0x006ADD43 File Offset: 0x006ABF43
 		public IGroupAiCommunicateModeT()
 		{
 			this.Type = EGroupAiCommunicateType.AddTag;

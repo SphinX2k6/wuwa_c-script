@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 {
-	// Token: 0x02004F4F RID: 20303
-	// (Invoke) Token: 0x060340FD RID: 213245
+	// Token: 0x02003F18 RID: 16152
+	// (Invoke) Token: 0x06028F6B RID: 167787
 	public delegate void TLazyConditionResultCallback(bool met, int payloadId);
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A4C RID: 14924
+	// Token: 0x02003E27 RID: 15911
 	public class IBvbCustomSystemVarFloatT
 	{
-		// Token: 0x1700664F RID: 26191
-		// (get) Token: 0x06014372 RID: 82802 RVA: 0x002F450C File Offset: 0x002F270C
-		// (set) Token: 0x06014373 RID: 82803 RVA: 0x002F4514 File Offset: 0x002F2714
+		// Token: 0x17006B7F RID: 27519
+		// (get) Token: 0x0601568E RID: 87694 RVA: 0x003176F8 File Offset: 0x003158F8
+		// (set) Token: 0x0601568F RID: 87695 RVA: 0x00317700 File Offset: 0x00315900
 		public ESystemVarName Type { get; set; }
 
-		// Token: 0x17006650 RID: 26192
-		// (get) Token: 0x06014374 RID: 82804 RVA: 0x002F451D File Offset: 0x002F271D
-		// (set) Token: 0x06014375 RID: 82805 RVA: 0x002F4525 File Offset: 0x002F2725
+		// Token: 0x17006B80 RID: 27520
+		// (get) Token: 0x06015690 RID: 87696 RVA: 0x00317709 File Offset: 0x00315909
+		// (set) Token: 0x06015691 RID: 87697 RVA: 0x00317711 File Offset: 0x00315911
 		public string VarName { get; set; }
 
-		// Token: 0x17006651 RID: 26193
-		// (get) Token: 0x06014376 RID: 82806 RVA: 0x002F452E File Offset: 0x002F272E
-		// (set) Token: 0x06014377 RID: 82807 RVA: 0x002F4536 File Offset: 0x002F2736
+		// Token: 0x17006B81 RID: 27521
+		// (get) Token: 0x06015692 RID: 87698 RVA: 0x0031771A File Offset: 0x0031591A
+		// (set) Token: 0x06015693 RID: 87699 RVA: 0x00317722 File Offset: 0x00315922
 		public string VarParams { get; set; }
 
-		// Token: 0x06014378 RID: 82808 RVA: 0x002F453F File Offset: 0x002F273F
+		// Token: 0x06015694 RID: 87700 RVA: 0x0031772B File Offset: 0x0031592B
 		public IBvbCustomSystemVarFloatT()
 		{
 			this.Type = ESystemVarName.CommonHotFixVar;

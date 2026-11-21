@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C25 RID: 15397
+	// Token: 0x02004031 RID: 16433
 	public struct IHollowTipsActorComponent : IFlatbufferObject
 	{
-		// Token: 0x170069FE RID: 27134
-		// (get) Token: 0x060153EF RID: 87023 RVA: 0x003137EB File Offset: 0x003119EB
+		// Token: 0x17006FA6 RID: 28582
+		// (get) Token: 0x060168E5 RID: 92389 RVA: 0x0033A373 File Offset: 0x00338573
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x060153F0 RID: 87024 RVA: 0x003137F8 File Offset: 0x003119F8
+		// Token: 0x060168E6 RID: 92390 RVA: 0x0033A380 File Offset: 0x00338580
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060153F1 RID: 87025 RVA: 0x00313800 File Offset: 0x00311A00
+		// Token: 0x060168E7 RID: 92391 RVA: 0x0033A388 File Offset: 0x00338588
 		public static IHollowTipsActorComponent GetRootAsIHollowTipsActorComponent(ByteBuffer _bb)
 		{
 			return IHollowTipsActorComponent.GetRootAsIHollowTipsActorComponent(_bb, default(IHollowTipsActorComponent));
 		}
 
-		// Token: 0x060153F2 RID: 87026 RVA: 0x0031381C File Offset: 0x00311A1C
+		// Token: 0x060168E8 RID: 92392 RVA: 0x0033A3A4 File Offset: 0x003385A4
 		public static IHollowTipsActorComponent GetRootAsIHollowTipsActorComponent(ByteBuffer _bb, IHollowTipsActorComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060153F3 RID: 87027 RVA: 0x00313839 File Offset: 0x00311A39
+		// Token: 0x060168E9 RID: 92393 RVA: 0x0033A3C1 File Offset: 0x003385C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060153F4 RID: 87028 RVA: 0x00313848 File Offset: 0x00311A48
+		// Token: 0x060168EA RID: 92394 RVA: 0x0033A3D0 File Offset: 0x003385D0
 		public IHollowTipsActorComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170069FF RID: 27135
-		// (get) Token: 0x060153F5 RID: 87029 RVA: 0x00313858 File Offset: 0x00311A58
+		// Token: 0x17006FA7 RID: 28583
+		// (get) Token: 0x060168EB RID: 92395 RVA: 0x0033A3E0 File Offset: 0x003385E0
 		public IShapeTransform? InnerShapeCompTransform
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A00 RID: 27136
-		// (get) Token: 0x060153F6 RID: 87030 RVA: 0x003138B8 File Offset: 0x00311AB8
+		// Token: 0x17006FA8 RID: 28584
+		// (get) Token: 0x060168EC RID: 92396 RVA: 0x0033A440 File Offset: 0x00338640
 		public IShapeTransform? OuterShapeCompTransform
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x060153F7 RID: 87031 RVA: 0x00313915 File Offset: 0x00311B15
+		// Token: 0x060168ED RID: 92397 RVA: 0x0033A49D File Offset: 0x0033869D
 		public static Offset<IHollowTipsActorComponent> CreateIHollowTipsActorComponent(FlatBufferBuilder builder, Offset<IShapeTransform> InnerShapeCompTransformOffset = default(Offset<IShapeTransform>), Offset<IShapeTransform> OuterShapeCompTransformOffset = default(Offset<IShapeTransform>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IHollowTipsActorComponent.EndIHollowTipsActorComponent(builder);
 		}
 
-		// Token: 0x060153F8 RID: 87032 RVA: 0x00313932 File Offset: 0x00311B32
+		// Token: 0x060168EE RID: 92398 RVA: 0x0033A4BA File Offset: 0x003386BA
 		public static void StartIHollowTipsActorComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060153F9 RID: 87033 RVA: 0x0031393B File Offset: 0x00311B3B
+		// Token: 0x060168EF RID: 92399 RVA: 0x0033A4C3 File Offset: 0x003386C3
 		public static void AddInnerShapeCompTransform(FlatBufferBuilder builder, Offset<IShapeTransform> innerShapeCompTransformOffset)
 		{
 			builder.AddOffset(0, innerShapeCompTransformOffset.Value, 0);
 		}
 
-		// Token: 0x060153FA RID: 87034 RVA: 0x0031394B File Offset: 0x00311B4B
+		// Token: 0x060168F0 RID: 92400 RVA: 0x0033A4D3 File Offset: 0x003386D3
 		public static void AddOuterShapeCompTransform(FlatBufferBuilder builder, Offset<IShapeTransform> outerShapeCompTransformOffset)
 		{
 			builder.AddOffset(1, outerShapeCompTransformOffset.Value, 0);
 		}
 
-		// Token: 0x060153FB RID: 87035 RVA: 0x0031395B File Offset: 0x00311B5B
+		// Token: 0x060168F1 RID: 92401 RVA: 0x0033A4E3 File Offset: 0x003386E3
 		public static Offset<IHollowTipsActorComponent> EndIHollowTipsActorComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IHollowTipsActorComponent>(builder.EndTable());
 		}
 
-		// Token: 0x060153FC RID: 87036 RVA: 0x00313968 File Offset: 0x00311B68
+		// Token: 0x060168F2 RID: 92402 RVA: 0x0033A4F0 File Offset: 0x003386F0
 		public IHollowTipsActorComponentT UnPack()
 		{
 			IHollowTipsActorComponentT hollowTipsActorComponentT = new IHollowTipsActorComponentT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return hollowTipsActorComponentT;
 		}
 
-		// Token: 0x060153FD RID: 87037 RVA: 0x00313984 File Offset: 0x00311B84
+		// Token: 0x060168F3 RID: 92403 RVA: 0x0033A50C File Offset: 0x0033870C
 		public void UnPackTo(IHollowTipsActorComponentT _o)
 		{
 			_o.InnerShapeCompTransform = ((this.InnerShapeCompTransform != null) ? this.InnerShapeCompTransform.Value.UnPack() : null);
 			_o.OuterShapeCompTransform = ((this.OuterShapeCompTransform != null) ? this.OuterShapeCompTransform.Value.UnPack() : null);
 		}
 
-		// Token: 0x060153FE RID: 87038 RVA: 0x003139F0 File Offset: 0x00311BF0
+		// Token: 0x060168F4 RID: 92404 RVA: 0x0033A578 File Offset: 0x00338778
 		public static Offset<IHollowTipsActorComponent> Pack(FlatBufferBuilder builder, IHollowTipsActorComponentT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IHollowTipsActorComponent.CreateIHollowTipsActorComponent(builder, innerShapeCompTransformOffset, outerShapeCompTransformOffset);
 		}
 
-		// Token: 0x0400B219 RID: 45593
+		// Token: 0x0400BBA4 RID: 48036
 		private Table __p;
 	}
 }

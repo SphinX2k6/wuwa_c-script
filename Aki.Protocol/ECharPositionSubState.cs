@@ -3,22 +3,22 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200159D RID: 5533
+	// Token: 0x0200160F RID: 5647
 	public enum ECharPositionSubState
 	{
-		// Token: 0x0400A7ED RID: 42989
+		// Token: 0x0400AC6C RID: 44140
 		[OriginalName("None")]
 		None,
-		// Token: 0x0400A7EE RID: 42990
+		// Token: 0x0400AC6D RID: 44141
 		[OriginalName("WaterSurface")]
 		WaterSurface,
-		// Token: 0x0400A7EF RID: 42991
+		// Token: 0x0400AC6E RID: 44142
 		[OriginalName("WalkOnAir")]
 		WalkOnAir,
-		// Token: 0x0400A7F0 RID: 42992
+		// Token: 0x0400AC6F RID: 44143
 		[OriginalName("FloatingOnAir")]
 		FloatingOnAir,
-		// Token: 0x0400A7F1 RID: 42993
+		// Token: 0x0400AC70 RID: 44144
 		[OriginalName("FloatingOnGround")]
 		FloatingOnGround
 	}

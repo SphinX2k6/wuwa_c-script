@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.View
 {
-	// Token: 0x02004721 RID: 18209
+	// Token: 0x02003651 RID: 13905
 	public class ProgressItem : UiPanelBase
 	{
-		// Token: 0x0602F95C RID: 194908 RVA: 0x00B05830 File Offset: 0x00B03A30
+		// Token: 0x06024122 RID: 147746 RVA: 0x00A35500 File Offset: 0x00A33700
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.WuwaGo.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0602F95D RID: 194909 RVA: 0x00B0589C File Offset: 0x00B03A9C
+		// Token: 0x06024123 RID: 147747 RVA: 0x00A3556C File Offset: 0x00A3376C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ProgressItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.WuwaGo.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F95E RID: 194910 RVA: 0x00B058E0 File Offset: 0x00B03AE0
+		// Token: 0x06024124 RID: 147748 RVA: 0x00A355B0 File Offset: 0x00A337B0
 		public override void SetActive(bool active)
 		{
 			UUIItem item = base.GetItem(0);
@@ -61,19 +61,19 @@ namespace CSharpScript.Game.Module.WuwaGo.View
 			this.LastActive = active;
 		}
 
-		// Token: 0x04019B21 RID: 105249
+		// Token: 0x040141D0 RID: 82384
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x04019B22 RID: 105250
+		// Token: 0x040141D1 RID: 82385
 		private bool LastActive;
 
-		// Token: 0x0200A96E RID: 43374
+		// Token: 0x02009328 RID: 37672
 		private enum EViewComponent
 		{
-			// Token: 0x04033922 RID: 211234
+			// Token: 0x0402E0B2 RID: 188594
 			PnlNml,
-			// Token: 0x04033923 RID: 211235
+			// Token: 0x0402E0B3 RID: 188595
 			PnlActive
 		}
 	}

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Aki.Game.Module.Activity.ActivityContent.Encircle;
+using Aki.Game.Module.Activity.ActivityContent.Tetris.Activity;
 using CSharpScript.Game.InputSetting;
 using CSharpScript.Game.LevelGamePlay.Common;
 using CSharpScript.Game.LevelGamePlay.LevelConditions.Config;
@@ -11,7 +13,6 @@ using CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk;
 using CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl;
 using CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain;
 using CSharpScript.Game.Module.Activity.ActivityContent.DropCatch;
-using CSharpScript.Game.Module.Activity.ActivityContent.Encircle;
 using CSharpScript.Game.Module.Activity.ActivityContent.Fishing;
 using CSharpScript.Game.Module.Activity.ActivityContent.FunPlay;
 using CSharpScript.Game.Module.Activity.ActivityContent.LineCross;
@@ -34,9 +35,9 @@ using CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward;
 using CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity;
 using CSharpScript.Game.Module.Activity.ActivityContent.Roverlike;
 using CSharpScript.Game.Module.Activity.ActivityContent.SpringManor;
-using CSharpScript.Game.Module.Activity.ActivityContent.Tetris;
 using CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp;
 using CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity;
+using CSharpScript.Game.Module.ActivityCondition;
 using CSharpScript.Game.Module.Advice;
 using CSharpScript.Game.Module.Area;
 using CSharpScript.Game.Module.Battle;
@@ -59,6 +60,7 @@ using CSharpScript.Game.Module.Item.Data;
 using CSharpScript.Game.Module.ItemReward;
 using CSharpScript.Game.Module.JoinTeam;
 using CSharpScript.Game.Module.Kurotato;
+using CSharpScript.Game.Module.LinkedItem;
 using CSharpScript.Game.Module.Manufacture.Compose;
 using CSharpScript.Game.Module.Manufacture.Forging;
 using CSharpScript.Game.Module.Map;
@@ -79,7 +81,8 @@ using CSharpScript.Game.Module.Sheriff;
 using CSharpScript.Game.Module.SkillButtonUi;
 using CSharpScript.Game.Module.Skin;
 using CSharpScript.Game.Module.SkipInterface;
-using CSharpScript.Game.Module.UiCameraAnimation;
+using CSharpScript.Game.Module.SolarSchool;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.UiNavigation;
 using CSharpScript.Game.Module.VillageInfr;
 using CSharpScript.Game.Module.Weather;
@@ -89,10 +92,10 @@ using CSharpScript.Game.NewWorld.SceneItem.Manipulate;
 using CSharpScript.Game.Ui;
 using CSharpScript.Game.World.Define;
 
-// Token: 0x02003560 RID: 13664
+// Token: 0x02002AD5 RID: 10965
 public class ConfigRegister
 {
-	// Token: 0x0601DFCB RID: 122827 RVA: 0x0086D120 File Offset: 0x0086B320
+	// Token: 0x0601BCF3 RID: 113907 RVA: 0x00894D80 File Offset: 0x00892F80
 	public static bool CreateInstance()
 	{
 		ConfigRegister.Configs.Clear();
@@ -102,12 +105,6 @@ public class ConfigRegister
 			return false;
 		}
 		ConfigRegister.Configs.Add(AiConfig.Instance);
-		if (!LordGymConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LordGymConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(LordGymConfig.Instance);
 		if (!MailConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MailConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -186,24 +183,24 @@ public class ConfigRegister
 			return false;
 		}
 		ConfigRegister.Configs.Add(MotorcycleMusicPlayerConfig.Instance);
-		if (!LogReportConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LogReportConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(LogReportConfig.Instance);
 		if (!NpcIconConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::NpcIconConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(NpcIconConfig.Instance);
-		if (!BattlePassConfig.CreateInstance())
+		if (!LordGymConfig.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BattlePassConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LordGymConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ConfigRegister.Configs.Add(BattlePassConfig.Instance);
+		ConfigRegister.Configs.Add(LordGymConfig.Instance);
+		if (!PayItemConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PayItemConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(PayItemConfig.Instance);
 		if (!MonthCardConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MonthCardConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -282,36 +279,36 @@ public class ConfigRegister
 			return false;
 		}
 		ConfigRegister.Configs.Add(PlayerInfoConfig.Instance);
-		if (!PayItemConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PayItemConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(PayItemConfig.Instance);
 		if (!FlowConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Plot.Flow.FlowConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(FlowConfig.Instance);
+		if (!BattlePassConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BattlePassConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(BattlePassConfig.Instance);
+		if (!LogReportConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LogReportConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(LogReportConfig.Instance);
 		if (!LoginConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LoginConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(LoginConfig.Instance);
-		if (!LevelUpConfig.CreateInstance())
+		if (!LoadingConfig.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LevelUpConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LoadingConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ConfigRegister.Configs.Add(LevelUpConfig.Instance);
-		if (!FragmentMemoryConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FragmentMemoryConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(FragmentMemoryConfig.Instance);
+		ConfigRegister.Configs.Add(LoadingConfig.Instance);
 		if (!FriendConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FriendConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -390,18 +387,18 @@ public class ConfigRegister
 			return false;
 		}
 		ConfigRegister.Configs.Add(InfrastructureConfig.Instance);
-		if (!LoadingConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LoadingConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(LoadingConfig.Instance);
 		if (!InstanceDungeonConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::InstanceDungeonConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(InstanceDungeonConfig.Instance);
+		if (!InstanceDungeonEntranceConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonEntranceConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(InstanceDungeonEntranceConfig.Instance);
 		if (!InteractionConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Interaction.InteractionConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -414,108 +411,120 @@ public class ConfigRegister
 			return false;
 		}
 		ConfigRegister.Configs.Add(InventoryConfig.Instance);
-		if (!ItemExchangeConfig.CreateInstance())
+		if (!LinkedItemConfig.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ItemExchangeConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.LinkedItem.LinkedItemConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ConfigRegister.Configs.Add(ItemExchangeConfig.Instance);
-		if (!ItemRewardConfig.CreateInstance())
+		ConfigRegister.Configs.Add(LinkedItemConfig.Instance);
+		if (!LevelUpConfig.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.ItemReward.ItemRewardConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LevelUpConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ConfigRegister.Configs.Add(ItemRewardConfig.Instance);
-		if (!GetWayConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::GetWayConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(GetWayConfig.Instance);
-		if (!ItemAccessedFromGiftPathConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Item.Data.ItemAccessedFromGiftPathConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ItemAccessedFromGiftPathConfig.Instance);
-		if (!CSharpScript.Game.Module.Item.ItemConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Item.ItemConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(CSharpScript.Game.Module.Item.ItemConfig.Instance);
-		if (!SpecialItemConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SpecialItemConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(SpecialItemConfig.Instance);
-		if (!JoinTeamConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.JoinTeam.JoinTeamConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(JoinTeamConfig.Instance);
-		if (!KingShipConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::KingShipConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(KingShipConfig.Instance);
-		if (!KurotatoConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Kurotato.KurotatoConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(KurotatoConfig.Instance);
-		if (!LanguageConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LanguageConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(LanguageConfig.Instance);
-		if (!LevelPlayReportConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LevelPlayReportConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(LevelPlayReportConfig.Instance);
+		ConfigRegister.Configs.Add(LevelUpConfig.Instance);
 		if (!LevelPlayConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LevelPlayConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(LevelPlayConfig.Instance);
-		if (!InstanceDungeonEntranceConfig.CreateInstance())
+		if (!LevelPlayReportConfig.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonEntranceConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LevelPlayReportConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ConfigRegister.Configs.Add(InstanceDungeonEntranceConfig.Instance);
-		if (!FormationConfig.CreateInstance())
+		ConfigRegister.Configs.Add(LevelPlayReportConfig.Instance);
+		if (!LanguageConfig.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FormationConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LanguageConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ConfigRegister.Configs.Add(FormationConfig.Instance);
+		ConfigRegister.Configs.Add(LanguageConfig.Instance);
+		if (!KurotatoConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Kurotato.KurotatoConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(KurotatoConfig.Instance);
 		if (!MusicSubtitleConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Plot.MusicSubtitleConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(MusicSubtitleConfig.Instance);
+		if (!KingShipConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::KingShipConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(KingShipConfig.Instance);
+		if (!SpecialItemConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SpecialItemConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(SpecialItemConfig.Instance);
+		if (!CSharpScript.Game.Module.Item.ItemConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Item.ItemConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(CSharpScript.Game.Module.Item.ItemConfig.Instance);
+		if (!ItemAccessedFromGiftPathConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Item.Data.ItemAccessedFromGiftPathConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ItemAccessedFromGiftPathConfig.Instance);
+		if (!GetWayConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::GetWayConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(GetWayConfig.Instance);
+		if (!ItemRewardConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.ItemReward.ItemRewardConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ItemRewardConfig.Instance);
+		if (!ItemExchangeConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ItemExchangeConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ItemExchangeConfig.Instance);
+		if (!JoinTeamConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.JoinTeam.JoinTeamConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(JoinTeamConfig.Instance);
+		if (!PlotCameraTemplateConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Plot.PlotCameraTemplateConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(PlotCameraTemplateConfig.Instance);
 		if (!PlotMontageConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Plot.PlotMontageConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(PlotMontageConfig.Instance);
-		if (!UiCameraAnimationConfig.CreateInstance())
+		if (!PlotTemplate.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.UiCameraAnimation.UiCameraAnimationConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Plot.PlotTemplate 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ConfigRegister.Configs.Add(UiCameraAnimationConfig.Instance);
+		ConfigRegister.Configs.Add(PlotTemplate.Instance);
+		if (!UiCameraConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.UiCamera.UiCameraConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(UiCameraConfig.Instance);
 		if (!UiNavigationConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.UiNavigation.UiNavigationConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -594,114 +603,120 @@ public class ConfigRegister
 			return false;
 		}
 		ConfigRegister.Configs.Add(EntityPhysicsAssetConfig.Instance);
-		if (!TutorialConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TutorialConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(TutorialConfig.Instance);
 		if (!SwimConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SwimConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(SwimConfig.Instance);
-		if (!FaceExpressionConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FaceExpressionConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(FaceExpressionConfig.Instance);
-		if (!ManipulateConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.NewWorld.SceneItem.Manipulate.ManipulateConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ManipulateConfig.Instance);
-		if (!WorldConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::WorldConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(WorldConfig.Instance);
-		if (!RedDotConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RedDotConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(RedDotConfig.Instance);
-		if (!RenderModuleConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RenderModuleConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(RenderModuleConfig.Instance);
-		if (!UiCommonConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Ui.UiCommonConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(UiCommonConfig.Instance);
-		if (!InputDistributeConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Ui.InputDistributeConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(InputDistributeConfig.Instance);
-		if (!ImmersiveMouseConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Ui.ImmersiveMouseConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ImmersiveMouseConfig.Instance);
-		if (!ViewHotKeyConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Ui.ViewHotKeyConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ViewHotKeyConfig.Instance);
-		if (!AiBehaviorTreeConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AiBehaviorTreeConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(AiBehaviorTreeConfig.Instance);
-		if (!AnimalStandbyMontageConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.World.Define.AnimalStandbyMontageConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(AnimalStandbyMontageConfig.Instance);
-		if (!AnsPerformConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AnsPerformConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(AnsPerformConfig.Instance);
-		if (!BubbleConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BubbleConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(BubbleConfig.Instance);
-		if (!CommonBtConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CommonBtConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(CommonBtConfig.Instance);
 		if (!WeaponComponentConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::WeaponComponentConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(WeaponComponentConfig.Instance);
-		if (!PlotCameraTemplateConfig.CreateInstance())
+		if (!FaceExpressionConfig.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Plot.PlotCameraTemplateConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FaceExpressionConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ConfigRegister.Configs.Add(PlotCameraTemplateConfig.Instance);
+		ConfigRegister.Configs.Add(FaceExpressionConfig.Instance);
+		if (!CommonBtConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CommonBtConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(CommonBtConfig.Instance);
+		if (!ChildEntityOwnerConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ChildEntityOwnerConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ChildEntityOwnerConfig.Instance);
+		if (!BubbleConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BubbleConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(BubbleConfig.Instance);
+		if (!AnsPerformConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AnsPerformConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(AnsPerformConfig.Instance);
+		if (!AnimalStandbyMontageConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.World.Define.AnimalStandbyMontageConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(AnimalStandbyMontageConfig.Instance);
+		if (!AiBehaviorTreeConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AiBehaviorTreeConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(AiBehaviorTreeConfig.Instance);
+		if (!TutorialConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TutorialConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(TutorialConfig.Instance);
+		if (!ViewHotKeyConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Ui.ViewHotKeyConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ViewHotKeyConfig.Instance);
+		if (!InputDistributeConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Ui.InputDistributeConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(InputDistributeConfig.Instance);
+		if (!UiCommonConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Ui.UiCommonConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(UiCommonConfig.Instance);
+		if (!RenderModuleConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RenderModuleConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(RenderModuleConfig.Instance);
+		if (!RedDotConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RedDotConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(RedDotConfig.Instance);
+		if (!WorldConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::WorldConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(WorldConfig.Instance);
+		if (!ManipulateConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.NewWorld.SceneItem.Manipulate.ManipulateConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ManipulateConfig.Instance);
+		if (!ImmersiveMouseConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Ui.ImmersiveMouseConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ImmersiveMouseConfig.Instance);
+		if (!FragmentMemoryConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FragmentMemoryConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(FragmentMemoryConfig.Instance);
 		if (!TrapDefenseConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TrapDefenseConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -714,12 +729,6 @@ public class ConfigRegister
 			return false;
 		}
 		ConfigRegister.Configs.Add(TowerClimbConfig.Instance);
-		if (!PlotTemplate.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Plot.PlotTemplate 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(PlotTemplate.Instance);
 		if (!PowerConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PowerConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -774,6 +783,12 @@ public class ConfigRegister
 			return false;
 		}
 		ConfigRegister.Configs.Add(RoguelikeConfig.Instance);
+		if (!RoleTowerConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoleTowerConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(RoleTowerConfig.Instance);
 		if (!RoleDevConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoleDevConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -798,126 +813,132 @@ public class ConfigRegister
 			return false;
 		}
 		ConfigRegister.Configs.Add(RoleConfig.Instance);
-		if (!TowerDayConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TowerDayConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(TowerDayConfig.Instance);
 		if (!RoleResonanceConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoleResonanceConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(RoleResonanceConfig.Instance);
-		if (!UiRoleCameraConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::UiRoleCameraConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(UiRoleCameraConfig.Instance);
-		if (!RouletteConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RouletteConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(RouletteConfig.Instance);
-		if (!SheriffConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Sheriff.SheriffConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(SheriffConfig.Instance);
-		if (!ShipTowerConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ShipTowerConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ShipTowerConfig.Instance);
-		if (!ShopConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ShopConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ShopConfig.Instance);
-		if (!MoonTogetherConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MoonTogetherConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(MoonTogetherConfig.Instance);
-		if (!SignalDecodeConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SignalDecodeConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(SignalDecodeConfig.Instance);
-		if (!SkeletalObserverConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SkeletalObserverConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(SkeletalObserverConfig.Instance);
-		if (!SkillButtonConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.SkillButtonUi.SkillButtonConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(SkillButtonConfig.Instance);
-		if (!SkinConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Skin.SkinConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(SkinConfig.Instance);
-		if (!SkipInterfaceConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.SkipInterface.SkipInterfaceConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(SkipInterfaceConfig.Instance);
-		if (!SubPackageConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SubPackageConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(SubPackageConfig.Instance);
-		if (!SurvivorsRogueConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SurvivorsRogueConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(SurvivorsRogueConfig.Instance);
-		if (!TimeOfDayConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TimeOfDayConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(TimeOfDayConfig.Instance);
 		if (!TrialRoleConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.RoleUi.TrialRoleConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(TrialRoleConfig.Instance);
-		if (!FloroRanchConfig.CreateInstance())
+		if (!UiRoleCameraConfig.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FloroRanchConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::UiRoleCameraConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ConfigRegister.Configs.Add(FloroRanchConfig.Instance);
+		ConfigRegister.Configs.Add(UiRoleCameraConfig.Instance);
+		if (!TimeOfDayConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TimeOfDayConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(TimeOfDayConfig.Instance);
+		if (!SurvivorsRogueConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SurvivorsRogueConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(SurvivorsRogueConfig.Instance);
+		if (!SubPackageConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SubPackageConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(SubPackageConfig.Instance);
+		if (!SolarSchoolConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.SolarSchool.SolarSchoolConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(SolarSchoolConfig.Instance);
+		if (!SkipInterfaceConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.SkipInterface.SkipInterfaceConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(SkipInterfaceConfig.Instance);
+		if (!SkinConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Skin.SkinConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(SkinConfig.Instance);
+		if (!TowerDayConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TowerDayConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(TowerDayConfig.Instance);
+		if (!SkillButtonConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.SkillButtonUi.SkillButtonConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(SkillButtonConfig.Instance);
+		if (!SignalDecodeConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SignalDecodeConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(SignalDecodeConfig.Instance);
+		if (!MoonTogetherConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MoonTogetherConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(MoonTogetherConfig.Instance);
+		if (!ShopConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ShopConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ShopConfig.Instance);
+		if (!ShipTowerConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ShipTowerConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ShipTowerConfig.Instance);
+		if (!SheriffConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Sheriff.SheriffConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(SheriffConfig.Instance);
+		if (!RouletteConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RouletteConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(RouletteConfig.Instance);
+		if (!SkeletalObserverConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SkeletalObserverConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(SkeletalObserverConfig.Instance);
+		if (!EntityOwnerConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::EntityOwnerConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(EntityOwnerConfig.Instance);
+		if (!FormationConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FormationConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(FormationConfig.Instance);
 		if (!FlagChallengeConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.FlagChallenge.FlagChallengeConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(FlagChallengeConfig.Instance);
-		if (!FeedbackRewardConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FeedbackRewardConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(FeedbackRewardConfig.Instance);
 		if (!ActivityDirectTrainConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.ActivityDirectTrainConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -932,7 +953,7 @@ public class ConfigRegister
 		ConfigRegister.Configs.Add(DropCatchConfig.Instance);
 		if (!ActivityEncircleConfig.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.Encircle.ActivityEncircleConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::Aki.Game.Module.Activity.ActivityContent.Encircle.ActivityEncircleConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(ActivityEncircleConfig.Instance);
@@ -1104,18 +1125,18 @@ public class ConfigRegister
 			return false;
 		}
 		ConfigRegister.Configs.Add(BuildingConfig.Instance);
-		if (!NewbieMainConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain.NewbieMainConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(NewbieMainConfig.Instance);
 		if (!DangoBrawlConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.DangoBrawlConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(DangoBrawlConfig.Instance);
+		if (!ActivityDailyAdventureConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityDailyAdventureConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ActivityDailyAdventureConfig.Instance);
 		if (!CyberPunkConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk.CyberPunkConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1188,6 +1209,12 @@ public class ConfigRegister
 			return false;
 		}
 		ConfigRegister.Configs.Add(AchievementConfig.Instance);
+		if (!ActivityConditionConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.ActivityCondition.ActivityConditionConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ActivityConditionConfig.Instance);
 		if (!DrinksConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DrinksConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1206,108 +1233,108 @@ public class ConfigRegister
 			return false;
 		}
 		ConfigRegister.Configs.Add(GolemHackingConfig.Instance);
-		if (!ActivityDailyAdventureConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityDailyAdventureConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ActivityDailyAdventureConfig.Instance);
 		if (!GuessJokerConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::GuessJokerConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(GuessJokerConfig.Instance);
-		if (!ActivityConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ActivityConfig.Instance);
-		if (!AdvanceNoticeConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AdvanceNoticeConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(AdvanceNoticeConfig.Instance);
-		if (!AnniversaryActivityConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.Anniversary.AnniversaryActivityConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(AnniversaryActivityConfig.Instance);
-		if (!ArtemisActivityConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ArtemisActivityConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ArtemisActivityConfig.Instance);
-		if (!AvignonConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AvignonConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(AvignonConfig.Instance);
-		if (!BabelTowerConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BabelTowerConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(BabelTowerConfig.Instance);
-		if (!ActivityBeginnerBookConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityBeginnerBookConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ActivityBeginnerBookConfig.Instance);
-		if (!BeginnerCarnivalConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BeginnerCarnivalConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(BeginnerCarnivalConfig.Instance);
-		if (!ActivityBlackCoastConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityBlackCoastConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ActivityBlackCoastConfig.Instance);
-		if (!BossRushConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BossRushConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(BossRushConfig.Instance);
-		if (!ActivityCollectionConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityCollectionConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ActivityCollectionConfig.Instance);
-		if (!CoopConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.Coop.CoopConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(CoopConfig.Instance);
-		if (!ActivityCorniceMeetingConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityCorniceMeetingConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ActivityCorniceMeetingConfig.Instance);
-		if (!CumulativeShopConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CumulativeShopConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(CumulativeShopConfig.Instance);
 		if (!ActivityRecommendConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityRecommendConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(ActivityRecommendConfig.Instance);
+		if (!CumulativeShopConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CumulativeShopConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(CumulativeShopConfig.Instance);
+		if (!ActivityCorniceMeetingConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityCorniceMeetingConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ActivityCorniceMeetingConfig.Instance);
+		if (!CoopConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.Coop.CoopConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(CoopConfig.Instance);
+		if (!ActivityCollectionConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityCollectionConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ActivityCollectionConfig.Instance);
+		if (!BossRushConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BossRushConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(BossRushConfig.Instance);
+		if (!ActivityBlackCoastConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityBlackCoastConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ActivityBlackCoastConfig.Instance);
+		if (!NewbieMainConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain.NewbieMainConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(NewbieMainConfig.Instance);
+		if (!BeginnerCarnivalConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BeginnerCarnivalConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(BeginnerCarnivalConfig.Instance);
+		if (!BabelTowerConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BabelTowerConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(BabelTowerConfig.Instance);
+		if (!AvignonConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AvignonConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(AvignonConfig.Instance);
+		if (!ArtemisActivityConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ArtemisActivityConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ArtemisActivityConfig.Instance);
+		if (!AnniversaryActivityConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.Anniversary.AnniversaryActivityConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(AnniversaryActivityConfig.Instance);
+		if (!AdvanceNoticeConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AdvanceNoticeConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(AdvanceNoticeConfig.Instance);
+		if (!ActivityConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ActivityConfig.Instance);
+		if (!ActivityBeginnerBookConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityBeginnerBookConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ActivityBeginnerBookConfig.Instance);
 		if (!ActivityNewcomerJourneyConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityNewcomerJourneyConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1410,120 +1437,126 @@ public class ConfigRegister
 			return false;
 		}
 		ConfigRegister.Configs.Add(PropertyIndexConfig.Instance);
-		if (!MoraleBattleConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Battle.MoraleBattleConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(MoraleBattleConfig.Instance);
 		if (!UiResourceConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::UiResourceConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(UiResourceConfig.Instance);
-		if (!FilterConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FilterConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(FilterConfig.Instance);
-		if (!SortConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SortConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(SortConfig.Instance);
-		if (!ConfirmBoxConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ConfirmBoxConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ConfirmBoxConfig.Instance);
-		if (!CookConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Cook.CookConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(CookConfig.Instance);
-		if (!CreateCharacterConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CreateCharacterConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(CreateCharacterConfig.Instance);
-		if (!DailyActivityConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DailyActivityConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(DailyActivityConfig.Instance);
-		if (!DamageUiConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DamageUiConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(DamageUiConfig.Instance);
-		if (!DangoAbyssConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DangoAbyssConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(DangoAbyssConfig.Instance);
-		if (!DangoConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Dango.DangoLogic.DangoConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(DangoConfig.Instance);
-		if (!DreamLinkConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.DreamLink.DreamLinkConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(DreamLinkConfig.Instance);
-		if (!DynamicTabConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DynamicTabConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(DynamicTabConfig.Instance);
-		if (!ErrorCodeConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ErrorCodeConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ErrorCodeConfig.Instance);
-		if (!ExploreLevelConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ExploreLevelConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ExploreLevelConfig.Instance);
-		if (!ExploreProgressConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ExploreProgressConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(ExploreProgressConfig.Instance);
 		if (!UiViewConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::UiViewConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(UiViewConfig.Instance);
+		if (!FilterConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FilterConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(FilterConfig.Instance);
+		if (!FeedbackRewardConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FeedbackRewardConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(FeedbackRewardConfig.Instance);
+		if (!ExploreProgressConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ExploreProgressConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ExploreProgressConfig.Instance);
+		if (!ExploreLevelConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ExploreLevelConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ExploreLevelConfig.Instance);
+		if (!ErrorCodeConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ErrorCodeConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ErrorCodeConfig.Instance);
+		if (!DynamicTabConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DynamicTabConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(DynamicTabConfig.Instance);
+		if (!DreamLinkConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.DreamLink.DreamLinkConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(DreamLinkConfig.Instance);
+		if (!MoraleBattleConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Battle.MoraleBattleConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(MoraleBattleConfig.Instance);
+		if (!DangoConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Dango.DangoLogic.DangoConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(DangoConfig.Instance);
+		if (!DamageUiConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DamageUiConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(DamageUiConfig.Instance);
+		if (!DailyActivityConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DailyActivityConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(DailyActivityConfig.Instance);
+		if (!CreateCharacterConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CreateCharacterConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(CreateCharacterConfig.Instance);
+		if (!CookConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Cook.CookConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(CookConfig.Instance);
+		if (!ConfirmBoxConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ConfirmBoxConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(ConfirmBoxConfig.Instance);
+		if (!SortConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SortConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(SortConfig.Instance);
+		if (!DangoAbyssConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DangoAbyssConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(DangoAbyssConfig.Instance);
+		if (!FloroRanchConfig.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FloroRanchConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ConfigRegister.Configs.Add(FloroRanchConfig.Instance);
 		if (!BattleLinkConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Battle.BattleLinkConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(BattleLinkConfig.Instance);
-		if (!BattleUiConfig.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.BattleUi.BattleUiConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ConfigRegister.Configs.Add(BattleUiConfig.Instance);
 		if (!BattleUiSetConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.BattleUiSet.BattleUiSetConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1668,12 +1701,12 @@ public class ConfigRegister
 			return false;
 		}
 		ConfigRegister.Configs.Add(ActivityUniversalConfig.Instance);
-		if (!EntityOwnerConfig.CreateInstance())
+		if (!BattleUiConfig.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::EntityOwnerConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.BattleUi.BattleUiConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ConfigRegister.Configs.Add(EntityOwnerConfig.Instance);
+		ConfigRegister.Configs.Add(BattleUiConfig.Instance);
 		if (!ActivityTurntableConfig.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityTurntableConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1694,7 +1727,7 @@ public class ConfigRegister
 		ConfigRegister.Configs.Add(ActivityTimePointRewardConfig.Instance);
 		if (!ActivityTetrisConfig.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.Tetris.ActivityTetrisConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::Aki.Game.Module.Activity.ActivityContent.Tetris.Activity.ActivityTetrisConfig 配置创建单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ConfigRegister.Configs.Add(ActivityTetrisConfig.Instance);
@@ -1731,7 +1764,7 @@ public class ConfigRegister
 		return true;
 	}
 
-	// Token: 0x0601DFCC RID: 122828 RVA: 0x00870878 File Offset: 0x0086EA78
+	// Token: 0x0601BCF4 RID: 113908 RVA: 0x008985DC File Offset: 0x008967DC
 	public static bool Init()
 	{
 		for (int i = 0; i < ConfigRegister.Configs.Count; i++)
@@ -1746,7 +1779,7 @@ public class ConfigRegister
 		return true;
 	}
 
-	// Token: 0x0601DFCD RID: 122829 RVA: 0x008708E0 File Offset: 0x0086EAE0
+	// Token: 0x0601BCF5 RID: 113909 RVA: 0x00898644 File Offset: 0x00896844
 	public static bool Clear()
 	{
 		bool result = true;
@@ -1775,6 +1808,6 @@ public class ConfigRegister
 		return result;
 	}
 
-	// Token: 0x0400ECF0 RID: 60656
-	private static List<ConfigBase> Configs = new List<ConfigBase>(272);
+	// Token: 0x0400F1B0 RID: 61872
+	private static List<ConfigBase> Configs = new List<ConfigBase>(277);
 }

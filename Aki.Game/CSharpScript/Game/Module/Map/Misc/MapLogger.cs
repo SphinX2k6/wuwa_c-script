@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.Misc
 {
-	// Token: 0x020054AC RID: 21676
+	// Token: 0x0200448F RID: 17551
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class MapLogger
 	{
-		// Token: 0x0603761B RID: 226843 RVA: 0x00D27788 File Offset: 0x00D25988
+		// Token: 0x0602C571 RID: 181617 RVA: 0x00C77504 File Offset: 0x00C75704
 		public static void Clear()
 		{
 			MapLogger.LogCounterMap.Clear();
 		}
 
-		// Token: 0x0603761C RID: 226844 RVA: 0x00D27794 File Offset: 0x00D25994
+		// Token: 0x0602C572 RID: 181618 RVA: 0x00C77510 File Offset: 0x00C75710
 		public static void Debug(ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Map.Misc
 		{
 		}
 
-		// Token: 0x0603761D RID: 226845 RVA: 0x00D27796 File Offset: 0x00D25996
+		// Token: 0x0602C573 RID: 181619 RVA: 0x00C77512 File Offset: 0x00C75712
 		public static void DebugOnce(object key, ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Map.Misc
 			MapLogger.CountLog(key);
 		}
 
-		// Token: 0x0603761E RID: 226846 RVA: 0x00D277B0 File Offset: 0x00D259B0
+		// Token: 0x0602C574 RID: 181620 RVA: 0x00C7752C File Offset: 0x00C7572C
 		public static void Info(ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Map.Misc
 			Log.Instance.Info(ELogModule.Map, author, message, pairs);
 		}
 
-		// Token: 0x0603761F RID: 226847 RVA: 0x00D277C1 File Offset: 0x00D259C1
+		// Token: 0x0602C575 RID: 181621 RVA: 0x00C7753D File Offset: 0x00C7573D
 		public static void InfoOnce(object key, ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Map.Misc
 			MapLogger.CountLog(key);
 		}
 
-		// Token: 0x06037620 RID: 226848 RVA: 0x00D277DB File Offset: 0x00D259DB
+		// Token: 0x0602C576 RID: 181622 RVA: 0x00C77557 File Offset: 0x00C75757
 		public static void Warn(ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Map.Misc
 			Log.Instance.Warn(ELogModule.Map, author, message, pairs);
 		}
 
-		// Token: 0x06037621 RID: 226849 RVA: 0x00D277EC File Offset: 0x00D259EC
+		// Token: 0x0602C577 RID: 181623 RVA: 0x00C77568 File Offset: 0x00C75768
 		public static void WarnOnce(object key, ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Map.Misc
 			MapLogger.CountLog(key);
 		}
 
-		// Token: 0x06037622 RID: 226850 RVA: 0x00D27806 File Offset: 0x00D25A06
+		// Token: 0x0602C578 RID: 181624 RVA: 0x00C77582 File Offset: 0x00C75782
 		public static void Error(ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Map.Misc
 			Log.Instance.Error(ELogModule.Map, author, message, pairs);
 		}
 
-		// Token: 0x06037623 RID: 226851 RVA: 0x00D27817 File Offset: 0x00D25A17
+		// Token: 0x0602C579 RID: 181625 RVA: 0x00C77593 File Offset: 0x00C75793
 		public static void ErrorOnce(object key, ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -130,21 +130,21 @@ namespace CSharpScript.Game.Module.Map.Misc
 			MapLogger.CountLog(key);
 		}
 
-		// Token: 0x06037624 RID: 226852 RVA: 0x00D27834 File Offset: 0x00D25A34
+		// Token: 0x0602C57A RID: 181626 RVA: 0x00C775B0 File Offset: 0x00C757B0
 		private static bool IsLogExceedsLimit(object key, int limit = 1)
 		{
 			int num;
 			return MapLogger.LogCounterMap.TryGetValue(key, out num) && num >= limit;
 		}
 
-		// Token: 0x06037625 RID: 226853 RVA: 0x00D2785C File Offset: 0x00D25A5C
+		// Token: 0x0602C57B RID: 181627 RVA: 0x00C775D8 File Offset: 0x00C757D8
 		private static void CountLog(object key)
 		{
 			int valueOrDefault = MapLogger.LogCounterMap.GetValueOrDefault(key, 0);
 			MapLogger.LogCounterMap[key] = valueOrDefault + 1;
 		}
 
-		// Token: 0x0401D2C7 RID: 119495
+		// Token: 0x04017D63 RID: 97635
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<object, int> LogCounterMap = new Dictionary<object, int>();
 	}

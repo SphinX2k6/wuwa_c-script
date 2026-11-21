@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041C7 RID: 16839
+	// Token: 0x02004620 RID: 17952
 	public class ITetrisPlayModeMainLineT
 	{
-		// Token: 0x17007767 RID: 30567
-		// (get) Token: 0x06018CDA RID: 101594 RVA: 0x00391D9D File Offset: 0x0038FF9D
-		// (set) Token: 0x06018CDB RID: 101595 RVA: 0x00391DA5 File Offset: 0x0038FFA5
+		// Token: 0x17007D93 RID: 32147
+		// (get) Token: 0x0601A430 RID: 107568 RVA: 0x003BD1F1 File Offset: 0x003BB3F1
+		// (set) Token: 0x0601A431 RID: 107569 RVA: 0x003BD1F9 File Offset: 0x003BB3F9
 		public ETetrisPlayMode Type { get; set; }
 
-		// Token: 0x17007768 RID: 30568
-		// (get) Token: 0x06018CDC RID: 101596 RVA: 0x00391DAE File Offset: 0x0038FFAE
-		// (set) Token: 0x06018CDD RID: 101597 RVA: 0x00391DB6 File Offset: 0x0038FFB6
+		// Token: 0x17007D94 RID: 32148
+		// (get) Token: 0x0601A432 RID: 107570 RVA: 0x003BD202 File Offset: 0x003BB402
+		// (set) Token: 0x0601A433 RID: 107571 RVA: 0x003BD20A File Offset: 0x003BB40A
 		public int EntityId { get; set; }
 
-		// Token: 0x17007769 RID: 30569
-		// (get) Token: 0x06018CDE RID: 101598 RVA: 0x00391DBF File Offset: 0x0038FFBF
-		// (set) Token: 0x06018CDF RID: 101599 RVA: 0x00391DC7 File Offset: 0x0038FFC7
+		// Token: 0x17007D95 RID: 32149
+		// (get) Token: 0x0601A434 RID: 107572 RVA: 0x003BD213 File Offset: 0x003BB413
+		// (set) Token: 0x0601A435 RID: 107573 RVA: 0x003BD21B File Offset: 0x003BB41B
 		public string EntityState { get; set; }
 
-		// Token: 0x1700776A RID: 30570
-		// (get) Token: 0x06018CE0 RID: 101600 RVA: 0x00391DD0 File Offset: 0x0038FFD0
-		// (set) Token: 0x06018CE1 RID: 101601 RVA: 0x00391DD8 File Offset: 0x0038FFD8
+		// Token: 0x17007D96 RID: 32150
+		// (get) Token: 0x0601A436 RID: 107574 RVA: 0x003BD224 File Offset: 0x003BB424
+		// (set) Token: 0x0601A437 RID: 107575 RVA: 0x003BD22C File Offset: 0x003BB42C
 		public int FieldHeight { get; set; }
 
-		// Token: 0x1700776B RID: 30571
-		// (get) Token: 0x06018CE2 RID: 101602 RVA: 0x00391DE1 File Offset: 0x0038FFE1
-		// (set) Token: 0x06018CE3 RID: 101603 RVA: 0x00391DE9 File Offset: 0x0038FFE9
+		// Token: 0x17007D97 RID: 32151
+		// (get) Token: 0x0601A438 RID: 107576 RVA: 0x003BD235 File Offset: 0x003BB435
+		// (set) Token: 0x0601A439 RID: 107577 RVA: 0x003BD23D File Offset: 0x003BB43D
 		public byte NullMask { get; set; }
 
-		// Token: 0x06018CE4 RID: 101604 RVA: 0x00391DF2 File Offset: 0x0038FFF2
+		// Token: 0x0601A43A RID: 107578 RVA: 0x003BD246 File Offset: 0x003BB446
 		public ITetrisPlayModeMainLineT()
 		{
 			this.Type = ETetrisPlayMode.Normal;

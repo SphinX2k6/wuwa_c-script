@@ -9,19 +9,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020017F4 RID: 6132
+// Token: 0x02000CAD RID: 3245
 [NullableContext(2)]
 [Nullable(0)]
 public class CommonItemDropGrid : GridProxyAbstract<TItem>
 {
-	// Token: 0x0600B387 RID: 45959 RVA: 0x00289347 File Offset: 0x00287547
+	// Token: 0x06008771 RID: 34673 RVA: 0x00293A43 File Offset: 0x00291C43
 	[NullableContext(1)]
 	public void Initialize(AActor rootActor)
 	{
 		this.CreateThenShowByActor(rootActor);
 	}
 
-	// Token: 0x0600B388 RID: 45960 RVA: 0x00289350 File Offset: 0x00287550
+	// Token: 0x06008772 RID: 34674 RVA: 0x00293A4C File Offset: 0x00291C4C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -44,7 +44,7 @@ public class CommonItemDropGrid : GridProxyAbstract<TItem>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B389 RID: 45961 RVA: 0x00289418 File Offset: 0x00287618
+	// Token: 0x06008773 RID: 34675 RVA: 0x00293B14 File Offset: 0x00291D14
 	public override void Refresh(TItem data, bool isSelected, int gridIndex)
 	{
 		if (data.Equals(default(TItem)))
@@ -59,7 +59,7 @@ public class CommonItemDropGrid : GridProxyAbstract<TItem>
 		this.RefreshByItemInfo(itemData.ItemId, data.Count, new int?(itemData.IncId));
 	}
 
-	// Token: 0x0600B38A RID: 45962 RVA: 0x00289460 File Offset: 0x00287660
+	// Token: 0x06008774 RID: 34676 RVA: 0x00293B5C File Offset: 0x00291D5C
 	public void RefreshByItemInfo(int configId, int count, int? uniqueId = null)
 	{
 		this.UniqueId = uniqueId.GetValueOrDefault();
@@ -95,7 +95,7 @@ public class CommonItemDropGrid : GridProxyAbstract<TItem>
 		this.SetQualityEffect(this.ItemConfig.QualityId, null);
 	}
 
-	// Token: 0x0600B38B RID: 45963 RVA: 0x00289528 File Offset: 0x00287728
+	// Token: 0x06008775 RID: 34677 RVA: 0x00293C24 File Offset: 0x00291E24
 	public UniTask AsyncRefreshByItemInfo(int configId, int count, int? uniqueId = null)
 	{
 		CommonItemDropGrid.<AsyncRefreshByItemInfo>d__11 <AsyncRefreshByItemInfo>d__;
@@ -109,7 +109,7 @@ public class CommonItemDropGrid : GridProxyAbstract<TItem>
 		return <AsyncRefreshByItemInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B38C RID: 45964 RVA: 0x00289584 File Offset: 0x00287784
+	// Token: 0x06008776 RID: 34678 RVA: 0x00293C80 File Offset: 0x00291E80
 	private void SetQualityEffect(int qualityId, Action loadedCallback = null)
 	{
 		QualityInfo? itemQualityConfig = InventoryConfig.Instance.GetItemQualityConfig(qualityId);
@@ -132,46 +132,46 @@ public class CommonItemDropGrid : GridProxyAbstract<TItem>
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0600B38D RID: 45965 RVA: 0x002895F3 File Offset: 0x002877F3
+	// Token: 0x06008777 RID: 34679 RVA: 0x00293CEF File Offset: 0x00291EEF
 	public override void Clear()
 	{
 		this.ItemConfig = null;
 		this.OnClickedCallback = null;
 	}
 
-	// Token: 0x0600B38E RID: 45966 RVA: 0x00289603 File Offset: 0x00287803
+	// Token: 0x06008778 RID: 34680 RVA: 0x00293CFF File Offset: 0x00291EFF
 	protected override void OnStart()
 	{
 		this.ItemGrid = new SmallItemGrid();
 		this.ItemGrid.Initialize(base.GetItem(1).GetOwner());
 	}
 
-	// Token: 0x0600B38F RID: 45967 RVA: 0x00289627 File Offset: 0x00287827
+	// Token: 0x06008779 RID: 34681 RVA: 0x00293D23 File Offset: 0x00291F23
 	public int GetUniqueId()
 	{
 		return this.UniqueId;
 	}
 
-	// Token: 0x0600B390 RID: 45968 RVA: 0x0028962F File Offset: 0x0028782F
+	// Token: 0x0600877A RID: 34682 RVA: 0x00293D2B File Offset: 0x00291F2B
 	public int GetConfigId()
 	{
 		return this.ConfigId;
 	}
 
-	// Token: 0x0600B391 RID: 45969 RVA: 0x00289637 File Offset: 0x00287837
+	// Token: 0x0600877B RID: 34683 RVA: 0x00293D33 File Offset: 0x00291F33
 	public ItemConfig GetItemConfig()
 	{
 		return this.ItemConfig;
 	}
 
-	// Token: 0x0600B392 RID: 45970 RVA: 0x0028963F File Offset: 0x0028783F
+	// Token: 0x0600877C RID: 34684 RVA: 0x00293D3B File Offset: 0x00291F3B
 	[NullableContext(1)]
 	public void BindOnClicked(Action<CommonItemDropGrid> onClickedCallback)
 	{
 		this.OnClickedCallback = onClickedCallback;
 	}
 
-	// Token: 0x0600B393 RID: 45971 RVA: 0x00289648 File Offset: 0x00287848
+	// Token: 0x0600877D RID: 34685 RVA: 0x00293D44 File Offset: 0x00291F44
 	private void OnItemButtonClicked()
 	{
 		if (this.OnClickedCallback != null)
@@ -180,19 +180,19 @@ public class CommonItemDropGrid : GridProxyAbstract<TItem>
 		}
 	}
 
-	// Token: 0x0400514A RID: 20810
+	// Token: 0x040051F5 RID: 20981
 	private int UniqueId;
 
-	// Token: 0x0400514B RID: 20811
+	// Token: 0x040051F6 RID: 20982
 	private int ConfigId;
 
-	// Token: 0x0400514C RID: 20812
+	// Token: 0x040051F7 RID: 20983
 	public int Count;
 
-	// Token: 0x0400514D RID: 20813
+	// Token: 0x040051F8 RID: 20984
 	private ItemConfig ItemConfig;
 
-	// Token: 0x0400514E RID: 20814
+	// Token: 0x040051F9 RID: 20985
 	[Nullable(new byte[]
 	{
 		2,
@@ -200,18 +200,18 @@ public class CommonItemDropGrid : GridProxyAbstract<TItem>
 	})]
 	private Action<CommonItemDropGrid> OnClickedCallback;
 
-	// Token: 0x0400514F RID: 20815
+	// Token: 0x040051FA RID: 20986
 	private SmallItemGrid ItemGrid;
 
-	// Token: 0x02007DEA RID: 32234
+	// Token: 0x02006F70 RID: 28528
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029359 RID: 168793
+		// Token: 0x04024684 RID: 149124
 		ItemButton,
-		// Token: 0x0402935A RID: 168794
+		// Token: 0x04024685 RID: 149125
 		ItemGridItem,
-		// Token: 0x0402935B RID: 168795
+		// Token: 0x04024686 RID: 149126
 		QualityEffect
 	}
 }

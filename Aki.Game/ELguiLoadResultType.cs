@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020034A1 RID: 13473
+// Token: 0x02002A15 RID: 10773
 public enum ELguiLoadResultType
 {
-	// Token: 0x0400E718 RID: 59160
+	// Token: 0x0400EBCC RID: 60364
 	Success,
-	// Token: 0x0400E719 RID: 59161
+	// Token: 0x0400EBCD RID: 60365
 	Fail
 }

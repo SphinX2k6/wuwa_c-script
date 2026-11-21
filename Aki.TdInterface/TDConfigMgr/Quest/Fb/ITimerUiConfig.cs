@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001427 RID: 5159
+	// Token: 0x0200157F RID: 5503
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITimerUiConfig
 	{
-		// Token: 0x0600755E RID: 30046 RVA: 0x00118676 File Offset: 0x00116876
-		[NullableContext(1)]
+		// Token: 0x06007C23 RID: 31779 RVA: 0x001270C2 File Offset: 0x001252C2
+		[NullableContext(0)]
 		public static ITimerUiConfig Create(ITimerUiConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170026E3 RID: 9955
-		// (get) Token: 0x0600755F RID: 30047 RVA: 0x00118695 File Offset: 0x00116895
+		// Token: 0x170028C7 RID: 10439
+		// (get) Token: 0x06007C24 RID: 31780 RVA: 0x001270E1 File Offset: 0x001252E1
 		public virtual ETimerUiType UiType
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170026E4 RID: 9956
-		// (get) Token: 0x06007560 RID: 30048 RVA: 0x001186A2 File Offset: 0x001168A2
+		// Token: 0x170028C8 RID: 10440
+		// (get) Token: 0x06007C25 RID: 31781 RVA: 0x001270EE File Offset: 0x001252EE
 		public virtual string TidTitle
 		{
 			get
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170026E5 RID: 9957
-		// (get) Token: 0x06007561 RID: 30049 RVA: 0x001186AF File Offset: 0x001168AF
+		// Token: 0x170028C9 RID: 10441
+		// (get) Token: 0x06007C26 RID: 31782 RVA: 0x001270FB File Offset: 0x001252FB
 		public virtual string EdTidTitle
 		{
 			get
@@ -53,7 +53,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040043FD RID: 17405
+		// Token: 0x04004791 RID: 18321
 		private ITimerUiConfig Instance;
 	}
 }

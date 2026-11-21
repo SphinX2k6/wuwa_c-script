@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001BE RID: 446
+	// Token: 0x020001D0 RID: 464
 	public class ConfigDamagePayloadById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000A77 RID: 2679 RVA: 0x00094D2D File Offset: 0x00092F2D
+		// Token: 0x06000AE3 RID: 2787 RVA: 0x0009AC65 File Offset: 0x00098E65
 		static ConfigDamagePayloadById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDamagePayloadById.CreateStaticDefaultValue), new Action(ConfigDamagePayloadById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000A78 RID: 2680 RVA: 0x00094D4C File Offset: 0x00092F4C
+		// Token: 0x06000AE4 RID: 2788 RVA: 0x0009AC84 File Offset: 0x00098E84
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDamagePayloadById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000A79 RID: 2681 RVA: 0x00094DCB File Offset: 0x00092FCB
+		// Token: 0x06000AE5 RID: 2789 RVA: 0x0009AD03 File Offset: 0x00098F03
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDamagePayloadById.LogPair = null;
 			ConfigDamagePayloadById.HandleId = 0;
 		}
 
-		// Token: 0x06000A7A RID: 2682 RVA: 0x00094DD9 File Offset: 0x00092FD9
+		// Token: 0x06000AE6 RID: 2790 RVA: 0x0009AD11 File Offset: 0x00098F11
 		public static void Init()
 		{
 			ConfigDamagePayloadById.HandleId = ConfigCommon.InitDataStatement(ConfigDamagePayloadById.HandleId, "db_damagepayload.db", "select BinData from `DamagePayload` where Id=?");
 		}
 
-		// Token: 0x06000A7B RID: 2683 RVA: 0x00094DF4 File Offset: 0x00092FF4
+		// Token: 0x06000AE7 RID: 2791 RVA: 0x0009AD2C File Offset: 0x00098F2C
 		public static DamagePayload? GetConfig(long p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDamagePayloadById.HandleId, ConfigDamagePayloadById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DamagePayload?(rootAsDamagePayload);
 		}
 
-		// Token: 0x04000C16 RID: 3094
+		// Token: 0x04000C94 RID: 3220
 		private const string DB = "db_damagepayload.db";
 
-		// Token: 0x04000C17 RID: 3095
+		// Token: 0x04000C95 RID: 3221
 		private const string FILE = "j.结算参数.xlsx";
 
-		// Token: 0x04000C18 RID: 3096
+		// Token: 0x04000C96 RID: 3222
 		private const string TABLE = "DamagePayload";
 
-		// Token: 0x04000C19 RID: 3097
+		// Token: 0x04000C97 RID: 3223
 		private const string COMMAND = "select BinData from `DamagePayload` where Id=?";
 
-		// Token: 0x04000C1A RID: 3098
+		// Token: 0x04000C98 RID: 3224
 		private const string KEY_PREFIX = "DamagePayloadById";
 
-		// Token: 0x04000C1B RID: 3099
+		// Token: 0x04000C99 RID: 3225
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000C1C RID: 3100
+		// Token: 0x04000C9A RID: 3226
 		private static int HandleId;
 	}
 }

@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065B4 RID: 26036
+	// Token: 0x02005532 RID: 21810
 	[NullableContext(1)]
 	public interface IPanelComponentData
 	{
-		// Token: 0x1700957E RID: 38270
-		// (get) Token: 0x060414D9 RID: 267481
-		// (set) Token: 0x060414DA RID: 267482
+		// Token: 0x170068E0 RID: 26848
+		// (get) Token: 0x0603619E RID: 221598
+		// (set) Token: 0x0603619F RID: 221599
 		string TitleText { get; set; }
 
-		// Token: 0x1700957F RID: 38271
-		// (get) Token: 0x060414DB RID: 267483
-		// (set) Token: 0x060414DC RID: 267484
+		// Token: 0x170068E1 RID: 26849
+		// (get) Token: 0x060361A0 RID: 221600
+		// (set) Token: 0x060361A1 RID: 221601
 		Func<string> GetCountText { get; set; }
 
-		// Token: 0x17009580 RID: 38272
-		// (get) Token: 0x060414DD RID: 267485
-		// (set) Token: 0x060414DE RID: 267486
+		// Token: 0x170068E2 RID: 26850
+		// (get) Token: 0x060361A2 RID: 221602
+		// (set) Token: 0x060361A3 RID: 221603
 		int HelpBtnId { get; set; }
 
-		// Token: 0x17009581 RID: 38273
-		// (get) Token: 0x060414DF RID: 267487
-		// (set) Token: 0x060414E0 RID: 267488
+		// Token: 0x170068E3 RID: 26851
+		// (get) Token: 0x060361A4 RID: 221604
+		// (set) Token: 0x060361A5 RID: 221605
 		string TimeText { get; set; }
 	}
 }

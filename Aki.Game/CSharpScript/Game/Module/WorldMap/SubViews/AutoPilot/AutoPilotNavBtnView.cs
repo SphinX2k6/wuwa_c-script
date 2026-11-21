@@ -9,24 +9,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.AutoPilot
 {
-	// Token: 0x02004843 RID: 18499
+	// Token: 0x02003774 RID: 14196
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AutoPilotNavBtnView : UiPanelBase
 	{
-		// Token: 0x17007906 RID: 30982
-		// (get) Token: 0x06030683 RID: 198275 RVA: 0x00B3C7EB File Offset: 0x00B3A9EB
-		// (set) Token: 0x06030684 RID: 198276 RVA: 0x00B3C7F3 File Offset: 0x00B3A9F3
+		// Token: 0x17004BC3 RID: 19395
+		// (get) Token: 0x06024E53 RID: 151123 RVA: 0x00A6C9D3 File Offset: 0x00A6ABD3
+		// (set) Token: 0x06024E54 RID: 151124 RVA: 0x00A6C9DB File Offset: 0x00A6ABDB
 		public Action OnBtnClickCallback { get; set; }
 
-		// Token: 0x06030685 RID: 198277 RVA: 0x00B3C7FC File Offset: 0x00B3A9FC
+		// Token: 0x06024E55 RID: 151125 RVA: 0x00A6C9E4 File Offset: 0x00A6ABE4
 		[NullableContext(1)]
 		public AutoPilotNavBtnView(WorldMapSecondaryUiAutoPilotContext context)
 		{
 			this.Context = context;
 		}
 
-		// Token: 0x06030686 RID: 198278 RVA: 0x00B3C80C File Offset: 0x00B3AA0C
+		// Token: 0x06024E56 RID: 151126 RVA: 0x00A6C9F4 File Offset: 0x00A6ABF4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.AutoPilot
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06030687 RID: 198279 RVA: 0x00B3C952 File Offset: 0x00B3AB52
+		// Token: 0x06024E57 RID: 151127 RVA: 0x00A6CB3A File Offset: 0x00A6AD3A
 		private void OnBtnClick()
 		{
 			Action onBtnClickCallback = this.OnBtnClickCallback;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.AutoPilot
 			this.RefreshUi(true, true);
 		}
 
-		// Token: 0x06030688 RID: 198280 RVA: 0x00B3C970 File Offset: 0x00B3AB70
+		// Token: 0x06024E58 RID: 151128 RVA: 0x00A6CB58 File Offset: 0x00A6AD58
 		public void RefreshUi(bool isAutoPilotTracked, bool isInteractive = true)
 		{
 			UUIButtonComponent button = base.GetButton(AutoPilotNavBtnView.EComponents.Button);
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.AutoPilot
 			}
 		}
 
-		// Token: 0x06030689 RID: 198281 RVA: 0x00B3CA08 File Offset: 0x00B3AC08
+		// Token: 0x06024E59 RID: 151129 RVA: 0x00A6CBF0 File Offset: 0x00A6ADF0
 		public bool GetIsInteractive()
 		{
 			if (this.RootItem == null)
@@ -105,30 +105,30 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.AutoPilot
 			return button != null && button.GetSelfInteractive();
 		}
 
-		// Token: 0x0401A057 RID: 106583
+		// Token: 0x0401470B RID: 83723
 		[Nullable(1)]
 		private readonly WorldMapSecondaryUiAutoPilotContext Context;
 
-		// Token: 0x0200AB22 RID: 43810
+		// Token: 0x020094D0 RID: 38096
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04034019 RID: 213017
+			// Token: 0x0402E794 RID: 190356
 			public static readonly int Button = 0;
 
-			// Token: 0x0403401A RID: 213018
+			// Token: 0x0402E795 RID: 190357
 			public static readonly int ButtonText = 1;
 
-			// Token: 0x0403401B RID: 213019
+			// Token: 0x0402E796 RID: 190358
 			public static readonly int RedDot = 2;
 
-			// Token: 0x0403401C RID: 213020
+			// Token: 0x0402E797 RID: 190359
 			public static readonly int Icon = 3;
 
-			// Token: 0x0403401D RID: 213021
+			// Token: 0x0402E798 RID: 190360
 			public static readonly int Tips = 4;
 
-			// Token: 0x0403401E RID: 213022
+			// Token: 0x0402E799 RID: 190361
 			public static readonly int TipsText = 5;
 		}
 	}

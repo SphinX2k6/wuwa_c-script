@@ -3,11 +3,11 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072FB RID: 29435
+	// Token: 0x0200647E RID: 25726
 	[RegisterPhotoCameraComponent(EPhotoCameraComponent.Debug)]
 	public class PhotoCameraDebugComponent : PhotoCameraComponentBase
 	{
-		// Token: 0x060483B4 RID: 295860 RVA: 0x0128E178 File Offset: 0x0128C378
+		// Token: 0x0603E800 RID: 256000 RVA: 0x01230B2C File Offset: 0x0122ED2C
 		protected override void OnTick(float deltaTime)
 		{
 			if (!this.Host.IsDebugEnable)
@@ -39,37 +39,37 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			UKismetSystemLibrary.D_DrawDebugLine(world, pivotVector, worldVector, PhotoCameraDebugComponent.WorldColor, 0f, 1f);
 		}
 
-		// Token: 0x04026291 RID: 156305
+		// Token: 0x0402157C RID: 136572
 		private const float POINT_RADIUS = 8f;
 
-		// Token: 0x04026292 RID: 156306
+		// Token: 0x0402157D RID: 136573
 		private const int SPHERE_SEGMENTS = 12;
 
-		// Token: 0x04026293 RID: 156307
+		// Token: 0x0402157E RID: 136574
 		private const float DRAW_DURATION = 0f;
 
-		// Token: 0x04026294 RID: 156308
+		// Token: 0x0402157F RID: 136575
 		private const float LINE_THICKNESS = 1f;
 
-		// Token: 0x04026295 RID: 156309
+		// Token: 0x04021580 RID: 136576
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor PivotColor = new FLinearColor(1f, 1f, 0f, 1f);
 
-		// Token: 0x04026296 RID: 156310
+		// Token: 0x04021581 RID: 136577
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor DesiredColor = new FLinearColor(0f, 1f, 0f, 1f);
 
-		// Token: 0x04026297 RID: 156311
+		// Token: 0x04021582 RID: 136578
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor WorldColor = new FLinearColor(1f, 0f, 0f, 1f);
 
-		// Token: 0x04026298 RID: 156312
+		// Token: 0x04021583 RID: 136579
 		private readonly FVectorDouble PivotVector = new FVectorDouble();
 
-		// Token: 0x04026299 RID: 156313
+		// Token: 0x04021584 RID: 136580
 		private readonly FVectorDouble DesiredVector = new FVectorDouble();
 
-		// Token: 0x0402629A RID: 156314
+		// Token: 0x04021585 RID: 136581
 		private readonly FVectorDouble WorldVector = new FVectorDouble();
 	}
 }

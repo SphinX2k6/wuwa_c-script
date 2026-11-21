@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B24 RID: 19236
+	// Token: 0x0200500B RID: 20491
 	public class ICheckSceneItemDirectionConditionT
 	{
-		// Token: 0x17008B8A RID: 35722
-		// (get) Token: 0x0601E434 RID: 123956 RVA: 0x0043DF72 File Offset: 0x0043C172
-		// (set) Token: 0x0601E435 RID: 123957 RVA: 0x0043DF7A File Offset: 0x0043C17A
+		// Token: 0x1700929A RID: 37530
+		// (get) Token: 0x0601FFBF RID: 131007 RVA: 0x0047071E File Offset: 0x0046E91E
+		// (set) Token: 0x0601FFC0 RID: 131008 RVA: 0x00470726 File Offset: 0x0046E926
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008B8B RID: 35723
-		// (get) Token: 0x0601E436 RID: 123958 RVA: 0x0043DF83 File Offset: 0x0043C183
-		// (set) Token: 0x0601E437 RID: 123959 RVA: 0x0043DF8B File Offset: 0x0043C18B
+		// Token: 0x1700929B RID: 37531
+		// (get) Token: 0x0601FFC1 RID: 131009 RVA: 0x0047072F File Offset: 0x0046E92F
+		// (set) Token: 0x0601FFC2 RID: 131010 RVA: 0x00470737 File Offset: 0x0046E937
 		public TTargetEntityUnion Target { get; set; }
 
-		// Token: 0x17008B8C RID: 35724
-		// (get) Token: 0x0601E438 RID: 123960 RVA: 0x0043DF94 File Offset: 0x0043C194
-		// (set) Token: 0x0601E439 RID: 123961 RVA: 0x0043DF9C File Offset: 0x0043C19C
+		// Token: 0x1700929C RID: 37532
+		// (get) Token: 0x0601FFC3 RID: 131011 RVA: 0x00470740 File Offset: 0x0046E940
+		// (set) Token: 0x0601FFC4 RID: 131012 RVA: 0x00470748 File Offset: 0x0046E948
 		public string RotatePoint { get; set; }
 
-		// Token: 0x17008B8D RID: 35725
-		// (get) Token: 0x0601E43A RID: 123962 RVA: 0x0043DFA5 File Offset: 0x0043C1A5
-		// (set) Token: 0x0601E43B RID: 123963 RVA: 0x0043DFAD File Offset: 0x0043C1AD
+		// Token: 0x1700929D RID: 37533
+		// (get) Token: 0x0601FFC5 RID: 131013 RVA: 0x00470751 File Offset: 0x0046E951
+		// (set) Token: 0x0601FFC6 RID: 131014 RVA: 0x00470759 File Offset: 0x0046E959
 		public IVectorInfoT Direction { get; set; }
 
-		// Token: 0x17008B8E RID: 35726
-		// (get) Token: 0x0601E43C RID: 123964 RVA: 0x0043DFB6 File Offset: 0x0043C1B6
-		// (set) Token: 0x0601E43D RID: 123965 RVA: 0x0043DFBE File Offset: 0x0043C1BE
+		// Token: 0x1700929E RID: 37534
+		// (get) Token: 0x0601FFC7 RID: 131015 RVA: 0x00470762 File Offset: 0x0046E962
+		// (set) Token: 0x0601FFC8 RID: 131016 RVA: 0x0047076A File Offset: 0x0046E96A
 		public float AngleInterval { get; set; }
 
-		// Token: 0x0601E43E RID: 123966 RVA: 0x0043DFC7 File Offset: 0x0043C1C7
+		// Token: 0x0601FFC9 RID: 131017 RVA: 0x00470773 File Offset: 0x0046E973
 		public ICheckSceneItemDirectionConditionT()
 		{
 			this.Type = ECondition.CompareVar;

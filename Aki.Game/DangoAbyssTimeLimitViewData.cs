@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001A5F RID: 6751
+// Token: 0x02000F1E RID: 3870
 public class DangoAbyssTimeLimitViewData
 {
-	// Token: 0x04005B96 RID: 23446
+	// Token: 0x04005C65 RID: 23653
 	[Nullable(2)]
 	public DangoAbyssActivityData Data;
 }

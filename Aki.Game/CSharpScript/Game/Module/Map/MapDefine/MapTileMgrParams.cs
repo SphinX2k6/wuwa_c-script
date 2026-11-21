@@ -5,62 +5,62 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005581 RID: 21889
+	// Token: 0x02004554 RID: 17748
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MapTileMgrParams
 	{
-		// Token: 0x1700864A RID: 34378
-		// (get) Token: 0x06037CA1 RID: 228513 RVA: 0x00D393FF File Offset: 0x00D375FF
-		// (set) Token: 0x06037CA2 RID: 228514 RVA: 0x00D39407 File Offset: 0x00D37607
+		// Token: 0x170059F3 RID: 23027
+		// (get) Token: 0x0602CB7B RID: 183163 RVA: 0x00C86ED3 File Offset: 0x00C850D3
+		// (set) Token: 0x0602CB7C RID: 183164 RVA: 0x00C86EDB File Offset: 0x00C850DB
 		[Nullable(1)]
 		public UUIItem MapRootItem { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x1700864B RID: 34379
-		// (get) Token: 0x06037CA3 RID: 228515 RVA: 0x00D39410 File Offset: 0x00D37610
-		// (set) Token: 0x06037CA4 RID: 228516 RVA: 0x00D39418 File Offset: 0x00D37618
+		// Token: 0x170059F4 RID: 23028
+		// (get) Token: 0x0602CB7D RID: 183165 RVA: 0x00C86EE4 File Offset: 0x00C850E4
+		// (set) Token: 0x0602CB7E RID: 183166 RVA: 0x00C86EEC File Offset: 0x00C850EC
 		[Nullable(1)]
 		public UUIItem TileContainer { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x1700864C RID: 34380
-		// (get) Token: 0x06037CA5 RID: 228517 RVA: 0x00D39421 File Offset: 0x00D37621
-		// (set) Token: 0x06037CA6 RID: 228518 RVA: 0x00D39429 File Offset: 0x00D37629
+		// Token: 0x170059F5 RID: 23029
+		// (get) Token: 0x0602CB7F RID: 183167 RVA: 0x00C86EF5 File Offset: 0x00C850F5
+		// (set) Token: 0x0602CB80 RID: 183168 RVA: 0x00C86EFD File Offset: 0x00C850FD
 		[Nullable(1)]
 		public UUITexture TileTexture { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x1700864D RID: 34381
-		// (get) Token: 0x06037CA7 RID: 228519 RVA: 0x00D39432 File Offset: 0x00D37632
-		// (set) Token: 0x06037CA8 RID: 228520 RVA: 0x00D3943A File Offset: 0x00D3763A
+		// Token: 0x170059F6 RID: 23030
+		// (get) Token: 0x0602CB81 RID: 183169 RVA: 0x00C86F06 File Offset: 0x00C85106
+		// (set) Token: 0x0602CB82 RID: 183170 RVA: 0x00C86F0E File Offset: 0x00C8510E
 		public UUIItem SubMapContainer { get; set; }
 
-		// Token: 0x1700864E RID: 34382
-		// (get) Token: 0x06037CA9 RID: 228521 RVA: 0x00D39443 File Offset: 0x00D37643
-		// (set) Token: 0x06037CAA RID: 228522 RVA: 0x00D3944B File Offset: 0x00D3764B
+		// Token: 0x170059F7 RID: 23031
+		// (get) Token: 0x0602CB83 RID: 183171 RVA: 0x00C86F17 File Offset: 0x00C85117
+		// (set) Token: 0x0602CB84 RID: 183172 RVA: 0x00C86F1F File Offset: 0x00C8511F
 		public UUITexture SubMapTexture { get; set; }
 
-		// Token: 0x1700864F RID: 34383
-		// (get) Token: 0x06037CAB RID: 228523 RVA: 0x00D39454 File Offset: 0x00D37654
-		// (set) Token: 0x06037CAC RID: 228524 RVA: 0x00D3945C File Offset: 0x00D3765C
+		// Token: 0x170059F8 RID: 23032
+		// (get) Token: 0x0602CB85 RID: 183173 RVA: 0x00C86F28 File Offset: 0x00C85128
+		// (set) Token: 0x0602CB86 RID: 183174 RVA: 0x00C86F30 File Offset: 0x00C85130
 		public EMapType MapType { get; set; }
 
-		// Token: 0x17008650 RID: 34384
-		// (get) Token: 0x06037CAD RID: 228525 RVA: 0x00D39465 File Offset: 0x00D37665
-		// (set) Token: 0x06037CAE RID: 228526 RVA: 0x00D3946D File Offset: 0x00D3766D
+		// Token: 0x170059F9 RID: 23033
+		// (get) Token: 0x0602CB87 RID: 183175 RVA: 0x00C86F39 File Offset: 0x00C85139
+		// (set) Token: 0x0602CB88 RID: 183176 RVA: 0x00C86F41 File Offset: 0x00C85141
 		public int MapId { get; set; }
 
-		// Token: 0x17008651 RID: 34385
-		// (get) Token: 0x06037CAF RID: 228527 RVA: 0x00D39476 File Offset: 0x00D37676
-		// (set) Token: 0x06037CB0 RID: 228528 RVA: 0x00D3947E File Offset: 0x00D3767E
+		// Token: 0x170059FA RID: 23034
+		// (get) Token: 0x0602CB89 RID: 183177 RVA: 0x00C86F4A File Offset: 0x00C8514A
+		// (set) Token: 0x0602CB8A RID: 183178 RVA: 0x00C86F52 File Offset: 0x00C85152
 		public int InstanceDungeonId { get; set; }
 
-		// Token: 0x17008652 RID: 34386
-		// (get) Token: 0x06037CB1 RID: 228529 RVA: 0x00D39487 File Offset: 0x00D37687
-		// (set) Token: 0x06037CB2 RID: 228530 RVA: 0x00D3948F File Offset: 0x00D3768F
+		// Token: 0x170059FB RID: 23035
+		// (get) Token: 0x0602CB8B RID: 183179 RVA: 0x00C86F5B File Offset: 0x00C8515B
+		// (set) Token: 0x0602CB8C RID: 183180 RVA: 0x00C86F63 File Offset: 0x00C85163
 		public int MapVersion { get; set; }
 
-		// Token: 0x17008653 RID: 34387
-		// (get) Token: 0x06037CB3 RID: 228531 RVA: 0x00D39498 File Offset: 0x00D37698
-		// (set) Token: 0x06037CB4 RID: 228532 RVA: 0x00D394A0 File Offset: 0x00D376A0
+		// Token: 0x170059FC RID: 23036
+		// (get) Token: 0x0602CB8D RID: 183181 RVA: 0x00C86F6C File Offset: 0x00C8516C
+		// (set) Token: 0x0602CB8E RID: 183182 RVA: 0x00C86F74 File Offset: 0x00C85174
 		[Nullable(new byte[]
 		{
 			2,
@@ -79,19 +79,19 @@ namespace CSharpScript.Game.Module.Map.MapDefine
 			1
 		})] set; }
 
-		// Token: 0x17008654 RID: 34388
-		// (get) Token: 0x06037CB5 RID: 228533 RVA: 0x00D394A9 File Offset: 0x00D376A9
-		// (set) Token: 0x06037CB6 RID: 228534 RVA: 0x00D394B1 File Offset: 0x00D376B1
+		// Token: 0x170059FD RID: 23037
+		// (get) Token: 0x0602CB8F RID: 183183 RVA: 0x00C86F7D File Offset: 0x00C8517D
+		// (set) Token: 0x0602CB90 RID: 183184 RVA: 0x00C86F85 File Offset: 0x00C85185
 		public UUIItem SubMapMask { get; set; }
 
-		// Token: 0x17008655 RID: 34389
-		// (get) Token: 0x06037CB7 RID: 228535 RVA: 0x00D394BA File Offset: 0x00D376BA
-		// (set) Token: 0x06037CB8 RID: 228536 RVA: 0x00D394C2 File Offset: 0x00D376C2
+		// Token: 0x170059FE RID: 23038
+		// (get) Token: 0x0602CB91 RID: 183185 RVA: 0x00C86F8E File Offset: 0x00C8518E
+		// (set) Token: 0x0602CB92 RID: 183186 RVA: 0x00C86F96 File Offset: 0x00C85196
 		public UUIItem FogUnlockItem { get; set; }
 
-		// Token: 0x17008656 RID: 34390
-		// (get) Token: 0x06037CB9 RID: 228537 RVA: 0x00D394CB File Offset: 0x00D376CB
-		// (set) Token: 0x06037CBA RID: 228538 RVA: 0x00D394D3 File Offset: 0x00D376D3
+		// Token: 0x170059FF RID: 23039
+		// (get) Token: 0x0602CB93 RID: 183187 RVA: 0x00C86F9F File Offset: 0x00C8519F
+		// (set) Token: 0x0602CB94 RID: 183188 RVA: 0x00C86FA7 File Offset: 0x00C851A7
 		public EMapGravityDirection? Gravity { get; set; }
 	}
 }

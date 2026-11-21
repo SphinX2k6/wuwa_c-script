@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D71 RID: 3441
+	// Token: 0x02000E6D RID: 3693
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IPrefabCompTransform
 	{
-		// Token: 0x06004E4E RID: 20046 RVA: 0x000C250E File Offset: 0x000C070E
-		[NullableContext(1)]
+		// Token: 0x06005373 RID: 21363 RVA: 0x000CDD5E File Offset: 0x000CBF5E
+		[NullableContext(0)]
 		public static IPrefabCompTransform Create(IPrefabCompTransform? instance)
 		{
 			if (instance == null)
@@ -23,20 +23,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001929 RID: 6441
-		// (get) Token: 0x06004E4F RID: 20047 RVA: 0x000C252D File Offset: 0x000C072D
-		[Nullable(1)]
+		// Token: 0x17001A94 RID: 6804
+		// (get) Token: 0x06005374 RID: 21364 RVA: 0x000CDD7D File Offset: 0x000CBF7D
+		[Nullable(0)]
 		public virtual string ReferenceActorKey
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.ReferenceActorKey;
 			}
 		}
 
-		// Token: 0x1700192A RID: 6442
-		// (get) Token: 0x06004E50 RID: 20048 RVA: 0x000C253A File Offset: 0x000C073A
+		// Token: 0x17001A95 RID: 6805
+		// (get) Token: 0x06005375 RID: 21365 RVA: 0x000CDD8A File Offset: 0x000CBF8A
 		public virtual IPrefabCompTransformItem Location
 		{
 			get
@@ -51,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700192B RID: 6443
-		// (get) Token: 0x06004E51 RID: 20049 RVA: 0x000C256E File Offset: 0x000C076E
+		// Token: 0x17001A96 RID: 6806
+		// (get) Token: 0x06005376 RID: 21366 RVA: 0x000CDDBE File Offset: 0x000CBFBE
 		public virtual IPrefabCompTransformItem Rotation
 		{
 			get
@@ -67,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700192C RID: 6444
-		// (get) Token: 0x06004E52 RID: 20050 RVA: 0x000C25A2 File Offset: 0x000C07A2
+		// Token: 0x17001A97 RID: 6807
+		// (get) Token: 0x06005377 RID: 21367 RVA: 0x000CDDF2 File Offset: 0x000CBFF2
 		public virtual IPrefabCompTransformItem Scale
 		{
 			get
@@ -83,25 +83,25 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CEA RID: 11498
+		// Token: 0x04002FB0 RID: 12208
 		private IPrefabCompTransform Instance;
 
-		// Token: 0x04002CEB RID: 11499
+		// Token: 0x04002FB1 RID: 12209
 		private IPrefabCompTransformItem _LocationCache;
 
-		// Token: 0x04002CEC RID: 11500
+		// Token: 0x04002FB2 RID: 12210
 		private bool _LocationInited;
 
-		// Token: 0x04002CED RID: 11501
+		// Token: 0x04002FB3 RID: 12211
 		private IPrefabCompTransformItem _RotationCache;
 
-		// Token: 0x04002CEE RID: 11502
+		// Token: 0x04002FB4 RID: 12212
 		private bool _RotationInited;
 
-		// Token: 0x04002CEF RID: 11503
+		// Token: 0x04002FB5 RID: 12213
 		private IPrefabCompTransformItem _ScaleCache;
 
-		// Token: 0x04002CF0 RID: 11504
+		// Token: 0x04002FB6 RID: 12214
 		private bool _ScaleInited;
 	}
 }

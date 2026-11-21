@@ -7,7 +7,7 @@ namespace Aki.Config
 	// Token: 0x02000008 RID: 8
 	public static class ConfigDefine
 	{
-		// Token: 0x06000035 RID: 53 RVA: 0x0005B25C File Offset: 0x0005945C
+		// Token: 0x06000035 RID: 53 RVA: 0x0005EAD8 File Offset: 0x0005CCD8
 		[return: Nullable(2)]
 		public unsafe static string GetLangLocalText(string tableName, int textKey)
 		{
@@ -81,6 +81,12 @@ namespace Aki.Config
 					if (tableName == "OccupationConfig")
 					{
 						return ConfigOccupationConfigLang.GetLocalText(textKey, null);
+					}
+					break;
+				case 17:
+					if (tableName == "AvgLocationChange")
+					{
+						return ConfigAvgLocationChangeLang.GetLocalText(textKey, null);
 					}
 					break;
 				}

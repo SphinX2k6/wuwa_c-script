@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006AD RID: 1709
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200074E RID: 1870
 	public class ISceneTextGuideUi_SetValue
 	{
-		// Token: 0x04001924 RID: 6436
+		// Token: 0x04001B21 RID: 6945
 		public ESceneTextType Type;
 
-		// Token: 0x04001925 RID: 6437
+		// Token: 0x04001B22 RID: 6946
 		public ISceneTextGuideUiScaleConfig ScaleConfig;
 
-		// Token: 0x04001926 RID: 6438
+		// Token: 0x04001B23 RID: 6947
 		public ISceneTextGuideUiContent Content;
 	}
 }

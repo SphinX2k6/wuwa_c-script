@@ -6,16 +6,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200346C RID: 13420
+// Token: 0x020029E0 RID: 10720
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Render/Effect/ClusteredStuff/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Render/Effect/ClusteredStuff/EffectClusteredStuffSettings.EffectClusteredStuffSettings_C")]
 public class EffectClusteredStuffSettings : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17002815 RID: 10261
-	// (get) Token: 0x0601D1B1 RID: 119217 RVA: 0x0081D8C4 File Offset: 0x0081BAC4
-	// (set) Token: 0x0601D1B2 RID: 119218 RVA: 0x0081D8FD File Offset: 0x0081BAFD
+	// Token: 0x17002BB4 RID: 11188
+	// (get) Token: 0x0601AEB9 RID: 110265 RVA: 0x00844BC4 File Offset: 0x00842DC4
+	// (set) Token: 0x0601AEBA RID: 110266 RVA: 0x00844BFD File Offset: 0x00842DFD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UEffectModelBase> EffectDataRef
 	{
@@ -35,9 +35,9 @@ public class EffectClusteredStuffSettings : UPrimaryDataAsset, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x17002816 RID: 10262
-	// (get) Token: 0x0601D1B3 RID: 119219 RVA: 0x0081D922 File Offset: 0x0081BB22
-	// (set) Token: 0x0601D1B4 RID: 119220 RVA: 0x0081D932 File Offset: 0x0081BB32
+	// Token: 0x17002BB5 RID: 11189
+	// (get) Token: 0x0601AEBB RID: 110267 RVA: 0x00844C22 File Offset: 0x00842E22
+	// (set) Token: 0x0601AEBC RID: 110268 RVA: 0x00844C32 File Offset: 0x00842E32
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float DensityChangeSpeed
 	{
@@ -51,9 +51,9 @@ public class EffectClusteredStuffSettings : UPrimaryDataAsset, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x17002817 RID: 10263
-	// (get) Token: 0x0601D1B5 RID: 119221 RVA: 0x0081D943 File Offset: 0x0081BB43
-	// (set) Token: 0x0601D1B6 RID: 119222 RVA: 0x0081D953 File Offset: 0x0081BB53
+	// Token: 0x17002BB6 RID: 11190
+	// (get) Token: 0x0601AEBD RID: 110269 RVA: 0x00844C43 File Offset: 0x00842E43
+	// (set) Token: 0x0601AEBE RID: 110270 RVA: 0x00844C53 File Offset: 0x00842E53
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool AttachToActor
 	{
@@ -67,9 +67,9 @@ public class EffectClusteredStuffSettings : UPrimaryDataAsset, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x17002818 RID: 10264
-	// (get) Token: 0x0601D1B7 RID: 119223 RVA: 0x0081D964 File Offset: 0x0081BB64
-	// (set) Token: 0x0601D1B8 RID: 119224 RVA: 0x0081D978 File Offset: 0x0081BB78
+	// Token: 0x17002BB7 RID: 11191
+	// (get) Token: 0x0601AEBF RID: 110271 RVA: 0x00844C64 File Offset: 0x00842E64
+	// (set) Token: 0x0601AEC0 RID: 110272 RVA: 0x00844C78 File Offset: 0x00842E78
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector AbsoluteWorldPosition
 	{
@@ -83,7 +83,7 @@ public class EffectClusteredStuffSettings : UPrimaryDataAsset, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x0601D1B9 RID: 119225 RVA: 0x0081D98D File Offset: 0x0081BB8D
+	// Token: 0x0601AEC1 RID: 110273 RVA: 0x00844C8D File Offset: 0x00842E8D
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (EffectClusteredStuffSettings._ClassPtr == IntPtr.Zero)
@@ -93,34 +93,34 @@ public class EffectClusteredStuffSettings : UPrimaryDataAsset, IUnrealUObject, I
 		return EffectClusteredStuffSettings._ClassPtr;
 	}
 
-	// Token: 0x0601D1BA RID: 119226 RVA: 0x0081D9B4 File Offset: 0x0081BBB4
+	// Token: 0x0601AEC2 RID: 110274 RVA: 0x00844CB4 File Offset: 0x00842EB4
 	public EffectClusteredStuffSettings() : this(BuiltinUtils.AllocNativeUObject(EffectClusteredStuffSettings.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D1BB RID: 119227 RVA: 0x0081D9DC File Offset: 0x0081BBDC
+	// Token: 0x0601AEC3 RID: 110275 RVA: 0x00844CDC File Offset: 0x00842EDC
 	public EffectClusteredStuffSettings(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(EffectClusteredStuffSettings.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D1BC RID: 119228 RVA: 0x0081DA0F File Offset: 0x0081BC0F
+	// Token: 0x0601AEC4 RID: 110276 RVA: 0x00844D0F File Offset: 0x00842F0F
 	protected EffectClusteredStuffSettings(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400E526 RID: 58662
+	// Token: 0x0400E9DE RID: 59870
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Render/Effect/ClusteredStuff/EffectClusteredStuffSettings.EffectClusteredStuffSettings_C";
 
-	// Token: 0x0400E527 RID: 58663
+	// Token: 0x0400E9DF RID: 59871
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E528 RID: 58664
+	// Token: 0x0400E9E0 RID: 59872
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400E529 RID: 58665
+	// Token: 0x0400E9E1 RID: 59873
 	private static int __PropertyOffset_EffectDataRef;
 
-	// Token: 0x0400E52A RID: 58666
+	// Token: 0x0400E9E2 RID: 59874
 	[Nullable(new byte[]
 	{
 		2,
@@ -128,12 +128,12 @@ public class EffectClusteredStuffSettings : UPrimaryDataAsset, IUnrealUObject, I
 	})]
 	private TSoftObjectPtr<UEffectModelBase> _EffectDataRef;
 
-	// Token: 0x0400E52B RID: 58667
+	// Token: 0x0400E9E3 RID: 59875
 	private static int __PropertyOffset_DensityChangeSpeed;
 
-	// Token: 0x0400E52C RID: 58668
+	// Token: 0x0400E9E4 RID: 59876
 	private static int __PropertyOffset_AttachToActor;
 
-	// Token: 0x0400E52D RID: 58669
+	// Token: 0x0400E9E5 RID: 59877
 	private static int __PropertyOffset_AbsoluteWorldPosition;
 }

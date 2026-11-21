@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D9B RID: 19867
+	// Token: 0x0200529C RID: 21148
 	public enum EEntityUpdateStrategy : byte
 	{
-		// Token: 0x0400D970 RID: 55664
+		// Token: 0x0400E4B4 RID: 58548
 		Custom,
-		// Token: 0x0400D971 RID: 55665
+		// Token: 0x0400E4B5 RID: 58549
 		Low,
-		// Token: 0x0400D972 RID: 55666
+		// Token: 0x0400E4B6 RID: 58550
 		High
 	}
 }

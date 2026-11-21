@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C3B RID: 23611
+	// Token: 0x02004C1B RID: 19483
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengePauseInfo
 	{
-		// Token: 0x0401F0E2 RID: 127202
+		// Token: 0x04019B93 RID: 105363
 		public string IconPath;
 
-		// Token: 0x0401F0E3 RID: 127203
+		// Token: 0x04019B94 RID: 105364
 		public string TitleKey;
 
-		// Token: 0x0401F0E4 RID: 127204
+		// Token: 0x04019B95 RID: 105365
 		public string Content;
 
-		// Token: 0x0401F0E5 RID: 127205
+		// Token: 0x04019B96 RID: 105366
 		public bool ShowLine;
 	}
 }

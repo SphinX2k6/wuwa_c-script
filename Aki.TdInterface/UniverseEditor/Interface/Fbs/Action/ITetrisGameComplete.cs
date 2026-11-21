@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073C7 RID: 29639
+	// Token: 0x02007BAE RID: 31662
 	public struct ITetrisGameComplete : IFlatbufferObject
 	{
-		// Token: 0x1700E11C RID: 57628
-		// (get) Token: 0x06035D4E RID: 220494 RVA: 0x00753FCF File Offset: 0x007521CF
+		// Token: 0x1700ED2C RID: 60716
+		// (get) Token: 0x060390E9 RID: 233705 RVA: 0x007B650F File Offset: 0x007B470F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,50 +16,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035D4F RID: 220495 RVA: 0x00753FDC File Offset: 0x007521DC
+		// Token: 0x060390EA RID: 233706 RVA: 0x007B651C File Offset: 0x007B471C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035D50 RID: 220496 RVA: 0x00753FE4 File Offset: 0x007521E4
+		// Token: 0x060390EB RID: 233707 RVA: 0x007B6524 File Offset: 0x007B4724
 		public static ITetrisGameComplete GetRootAsITetrisGameComplete(ByteBuffer _bb)
 		{
 			return ITetrisGameComplete.GetRootAsITetrisGameComplete(_bb, default(ITetrisGameComplete));
 		}
 
-		// Token: 0x06035D51 RID: 220497 RVA: 0x00754000 File Offset: 0x00752200
+		// Token: 0x060390EC RID: 233708 RVA: 0x007B6540 File Offset: 0x007B4740
 		public static ITetrisGameComplete GetRootAsITetrisGameComplete(ByteBuffer _bb, ITetrisGameComplete obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035D52 RID: 220498 RVA: 0x0075401D File Offset: 0x0075221D
+		// Token: 0x060390ED RID: 233709 RVA: 0x007B655D File Offset: 0x007B475D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035D53 RID: 220499 RVA: 0x0075402C File Offset: 0x0075222C
+		// Token: 0x060390EE RID: 233710 RVA: 0x007B656C File Offset: 0x007B476C
 		public ITetrisGameComplete __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x06035D54 RID: 220500 RVA: 0x0075403C File Offset: 0x0075223C
+		// Token: 0x060390EF RID: 233711 RVA: 0x007B657C File Offset: 0x007B477C
 		public static void StartITetrisGameComplete(FlatBufferBuilder builder)
 		{
 			builder.StartTable(0);
 		}
 
-		// Token: 0x06035D55 RID: 220501 RVA: 0x00754045 File Offset: 0x00752245
+		// Token: 0x060390F0 RID: 233712 RVA: 0x007B6585 File Offset: 0x007B4785
 		public static Offset<ITetrisGameComplete> EndITetrisGameComplete(FlatBufferBuilder builder)
 		{
 			return new Offset<ITetrisGameComplete>(builder.EndTable());
 		}
 
-		// Token: 0x06035D56 RID: 220502 RVA: 0x00754054 File Offset: 0x00752254
+		// Token: 0x060390F1 RID: 233713 RVA: 0x007B6594 File Offset: 0x007B4794
 		public ITetrisGameCompleteT UnPack()
 		{
 			ITetrisGameCompleteT tetrisGameCompleteT = new ITetrisGameCompleteT();
@@ -67,12 +67,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return tetrisGameCompleteT;
 		}
 
-		// Token: 0x06035D57 RID: 220503 RVA: 0x0075406F File Offset: 0x0075226F
+		// Token: 0x060390F2 RID: 233714 RVA: 0x007B65AF File Offset: 0x007B47AF
 		public void UnPackTo(ITetrisGameCompleteT _o)
 		{
 		}
 
-		// Token: 0x06035D58 RID: 220504 RVA: 0x00754074 File Offset: 0x00752274
+		// Token: 0x060390F3 RID: 233715 RVA: 0x007B65B4 File Offset: 0x007B47B4
 		public static Offset<ITetrisGameComplete> Pack(FlatBufferBuilder builder, ITetrisGameCompleteT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITetrisGameComplete.EndITetrisGameComplete(builder);
 		}
 
-		// Token: 0x0401220E RID: 74254
+		// Token: 0x04013227 RID: 78375
 		private Table __p;
 	}
 }

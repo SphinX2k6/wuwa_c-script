@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001577 RID: 5495
+// Token: 0x02000A2F RID: 2607
 public class VersionPreheatSharePanel : UiPanelBase
 {
-	// Token: 0x06009D23 RID: 40227 RVA: 0x002207D0 File Offset: 0x0021E9D0
+	// Token: 0x06007101 RID: 28929 RVA: 0x0022A580 File Offset: 0x00228780
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -25,7 +25,7 @@ public class VersionPreheatSharePanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D24 RID: 40228 RVA: 0x0022087C File Offset: 0x0021EA7C
+	// Token: 0x06007102 RID: 28930 RVA: 0x0022A62C File Offset: 0x0022882C
 	protected override void OnStart()
 	{
 		VersionPreheatShareData versionPreheatShareData = (VersionPreheatShareData)this.OpenParam;
@@ -39,19 +39,19 @@ public class VersionPreheatSharePanel : UiPanelBase
 		base.SetTextureByPath(versionPreheatShareData.PhotoPath, base.GetTexture(0), null, null);
 	}
 
-	// Token: 0x02007BA8 RID: 31656
+	// Token: 0x02006D33 RID: 27955
 	private class EComponents
 	{
-		// Token: 0x04028A77 RID: 166519
+		// Token: 0x04023DB2 RID: 146866
 		public const int Texture = 0;
 
-		// Token: 0x04028A78 RID: 166520
+		// Token: 0x04023DB3 RID: 146867
 		public const int Name = 1;
 
-		// Token: 0x04028A79 RID: 166521
+		// Token: 0x04023DB4 RID: 146868
 		public const int Time = 2;
 
-		// Token: 0x04028A7A RID: 166522
+		// Token: 0x04023DB5 RID: 146869
 		public const int Desc = 3;
 	}
 }

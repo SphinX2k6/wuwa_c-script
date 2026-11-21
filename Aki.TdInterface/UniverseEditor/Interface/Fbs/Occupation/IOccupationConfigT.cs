@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x020043AE RID: 17326
+	// Token: 0x02004810 RID: 18448
 	public class IOccupationConfigT
 	{
-		// Token: 0x17007A7B RID: 31355
-		// (get) Token: 0x06019CDE RID: 105694 RVA: 0x003B1AC4 File Offset: 0x003AFCC4
-		// (set) Token: 0x06019CDF RID: 105695 RVA: 0x003B1ACC File Offset: 0x003AFCCC
+		// Token: 0x170080B0 RID: 32944
+		// (get) Token: 0x0601B46D RID: 111725 RVA: 0x003DD544 File Offset: 0x003DB744
+		// (set) Token: 0x0601B46E RID: 111726 RVA: 0x003DD54C File Offset: 0x003DB74C
 		public string Id { get; set; }
 
-		// Token: 0x17007A7C RID: 31356
-		// (get) Token: 0x06019CE0 RID: 105696 RVA: 0x003B1AD5 File Offset: 0x003AFCD5
-		// (set) Token: 0x06019CE1 RID: 105697 RVA: 0x003B1ADD File Offset: 0x003AFCDD
+		// Token: 0x170080B1 RID: 32945
+		// (get) Token: 0x0601B46F RID: 111727 RVA: 0x003DD555 File Offset: 0x003DB755
+		// (set) Token: 0x0601B470 RID: 111728 RVA: 0x003DD55D File Offset: 0x003DB75D
 		public EOccupationType OccupationType { get; set; }
 
-		// Token: 0x17007A7D RID: 31357
-		// (get) Token: 0x06019CE2 RID: 105698 RVA: 0x003B1AE6 File Offset: 0x003AFCE6
-		// (set) Token: 0x06019CE3 RID: 105699 RVA: 0x003B1AEE File Offset: 0x003AFCEE
+		// Token: 0x170080B2 RID: 32946
+		// (get) Token: 0x0601B471 RID: 111729 RVA: 0x003DD566 File Offset: 0x003DB766
+		// (set) Token: 0x0601B472 RID: 111730 RVA: 0x003DD56E File Offset: 0x003DB76E
 		public string NameStringKey { get; set; }
 
-		// Token: 0x17007A7E RID: 31358
-		// (get) Token: 0x06019CE4 RID: 105700 RVA: 0x003B1AF7 File Offset: 0x003AFCF7
-		// (set) Token: 0x06019CE5 RID: 105701 RVA: 0x003B1AFF File Offset: 0x003AFCFF
+		// Token: 0x170080B3 RID: 32947
+		// (get) Token: 0x0601B473 RID: 111731 RVA: 0x003DD577 File Offset: 0x003DB777
+		// (set) Token: 0x0601B474 RID: 111732 RVA: 0x003DD57F File Offset: 0x003DB77F
 		public string Name { get; set; }
 
-		// Token: 0x17007A7F RID: 31359
-		// (get) Token: 0x06019CE6 RID: 105702 RVA: 0x003B1B08 File Offset: 0x003AFD08
-		// (set) Token: 0x06019CE7 RID: 105703 RVA: 0x003B1B10 File Offset: 0x003AFD10
+		// Token: 0x170080B4 RID: 32948
+		// (get) Token: 0x0601B475 RID: 111733 RVA: 0x003DD588 File Offset: 0x003DB788
+		// (set) Token: 0x0601B476 RID: 111734 RVA: 0x003DD590 File Offset: 0x003DB790
 		public TOccupationDataUnion OccupationData { get; set; }
 
-		// Token: 0x06019CE8 RID: 105704 RVA: 0x003B1B19 File Offset: 0x003AFD19
+		// Token: 0x0601B477 RID: 111735 RVA: 0x003DD599 File Offset: 0x003DB799
 		public IOccupationConfigT()
 		{
 			this.Id = null;

@@ -6,48 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001660 RID: 5728
+	// Token: 0x020002F8 RID: 760
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroAnim.KuroCameraShake")]
 	[UnrealStructLayout(464, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 464)]
 	public class UKuroCameraShake : UMatineeCameraShake, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06014BF6 RID: 84982 RVA: 0x001E82BE File Offset: 0x001E64BE
+		// Token: 0x0600526E RID: 21102 RVA: 0x0007348E File Offset: 0x0007168E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroCameraShake._ClassPtr;
 		}
 
-		// Token: 0x06014BF7 RID: 84983 RVA: 0x001E82CC File Offset: 0x001E64CC
+		// Token: 0x0600526F RID: 21103 RVA: 0x0007349C File Offset: 0x0007169C
 		public UKuroCameraShake() : this(BuiltinUtils.AllocNativeUObject(UKuroCameraShake.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06014BF8 RID: 84984 RVA: 0x001E82F4 File Offset: 0x001E64F4
+		// Token: 0x06005270 RID: 21104 RVA: 0x000734C4 File Offset: 0x000716C4
 		[NullableContext(1)]
 		public UKuroCameraShake(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroCameraShake.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005208 RID: 21000
-		// (get) Token: 0x06014BF9 RID: 84985 RVA: 0x001E8327 File Offset: 0x001E6527
-		// (set) Token: 0x06014BFA RID: 84986 RVA: 0x001E8337 File Offset: 0x001E6537
-		public unsafe EAlphaBlendOption BlendInMode
-		{
-			get
-			{
-				return (EAlphaBlendOption)(*(base.NativePtr + (IntPtr)UKuroCameraShake.__PropertyOffset_BlendInMode));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UKuroCameraShake.__PropertyOffset_BlendInMode) = (byte)value;
-			}
-		}
-
-		// Token: 0x17005209 RID: 21001
-		// (get) Token: 0x06014BFB RID: 84987 RVA: 0x001E8348 File Offset: 0x001E6548
-		// (set) Token: 0x06014BFC RID: 84988 RVA: 0x001E835C File Offset: 0x001E655C
+		// Token: 0x17001062 RID: 4194
+		// (get) Token: 0x06005271 RID: 21105 RVA: 0x000734F7 File Offset: 0x000716F7
+		// (set) Token: 0x06005272 RID: 21106 RVA: 0x0007350B File Offset: 0x0007170B
 		public unsafe UCurveFloat BlendInCustomCurve
 		{
 			get
@@ -60,24 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700520A RID: 21002
-		// (get) Token: 0x06014BFD RID: 84989 RVA: 0x001E8371 File Offset: 0x001E6571
-		// (set) Token: 0x06014BFE RID: 84990 RVA: 0x001E8381 File Offset: 0x001E6581
-		public unsafe EAlphaBlendOption BlendOutMode
-		{
-			get
-			{
-				return (EAlphaBlendOption)(*(base.NativePtr + (IntPtr)UKuroCameraShake.__PropertyOffset_BlendOutMode));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UKuroCameraShake.__PropertyOffset_BlendOutMode) = (byte)value;
-			}
-		}
-
-		// Token: 0x1700520B RID: 21003
-		// (get) Token: 0x06014BFF RID: 84991 RVA: 0x001E8392 File Offset: 0x001E6592
-		// (set) Token: 0x06014C00 RID: 84992 RVA: 0x001E83A6 File Offset: 0x001E65A6
+		// Token: 0x17001063 RID: 4195
+		// (get) Token: 0x06005273 RID: 21107 RVA: 0x00073520 File Offset: 0x00071720
+		// (set) Token: 0x06005274 RID: 21108 RVA: 0x00073534 File Offset: 0x00071734
 		public unsafe UCurveFloat BlendOutCustomCurve
 		{
 			get
@@ -90,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700520C RID: 21004
-		// (get) Token: 0x06014C01 RID: 84993 RVA: 0x001E83BB File Offset: 0x001E65BB
-		// (set) Token: 0x06014C02 RID: 84994 RVA: 0x001E83D4 File Offset: 0x001E65D4
+		// Token: 0x17001064 RID: 4196
+		// (get) Token: 0x06005275 RID: 21109 RVA: 0x00073549 File Offset: 0x00071749
+		// (set) Token: 0x06005276 RID: 21110 RVA: 0x00073562 File Offset: 0x00071762
 		public unsafe bool bIsUseCurveVector
 		{
 			get
@@ -105,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700520D RID: 21005
-		// (get) Token: 0x06014C03 RID: 84995 RVA: 0x001E8404 File Offset: 0x001E6604
-		// (set) Token: 0x06014C04 RID: 84996 RVA: 0x001E8418 File Offset: 0x001E6618
+		// Token: 0x17001065 RID: 4197
+		// (get) Token: 0x06005277 RID: 21111 RVA: 0x00073592 File Offset: 0x00071792
+		// (set) Token: 0x06005278 RID: 21112 RVA: 0x000735A6 File Offset: 0x000717A6
 		public unsafe UCurveVector BlendCurveVector
 		{
 			get
@@ -120,46 +90,40 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014C05 RID: 84997 RVA: 0x001E842D File Offset: 0x001E662D
+		// Token: 0x06005279 RID: 21113 RVA: 0x000735BB File Offset: 0x000717BB
 		static UKuroCameraShake()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroAnim.KuroCameraShake");
 		}
 
-		// Token: 0x06014C06 RID: 84998 RVA: 0x001E843B File Offset: 0x001E663B
+		// Token: 0x0600527A RID: 21114 RVA: 0x000735C9 File Offset: 0x000717C9
 		protected UKuroCameraShake(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400B4F6 RID: 46326
+		// Token: 0x0400218F RID: 8591
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroAnim.KuroCameraShake";
 
-		// Token: 0x0400B4F7 RID: 46327
+		// Token: 0x04002190 RID: 8592
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400B4F8 RID: 46328
+		// Token: 0x04002191 RID: 8593
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400B4F9 RID: 46329
-		internal static int __PropertyOffset_BlendInMode;
-
-		// Token: 0x0400B4FA RID: 46330
+		// Token: 0x04002192 RID: 8594
 		internal static int __PropertyOffset_BlendInCustomCurve;
 
-		// Token: 0x0400B4FB RID: 46331
-		internal static int __PropertyOffset_BlendOutMode;
-
-		// Token: 0x0400B4FC RID: 46332
+		// Token: 0x04002193 RID: 8595
 		internal static int __PropertyOffset_BlendOutCustomCurve;
 
-		// Token: 0x0400B4FD RID: 46333
+		// Token: 0x04002194 RID: 8596
 		internal static int __PropertyOffset_bIsUseCurveVector;
 
-		// Token: 0x0400B4FE RID: 46334
+		// Token: 0x04002195 RID: 8597
 		internal static byte __PropertyMask_bIsUseCurveVector;
 
-		// Token: 0x0400B4FF RID: 46335
+		// Token: 0x04002196 RID: 8598
 		internal static int __PropertyOffset_BlendCurveVector;
 	}
 }

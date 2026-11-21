@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x02005928 RID: 22824
+	// Token: 0x02004901 RID: 18689
 	public interface IGridPos
 	{
-		// Token: 0x17008AE4 RID: 35556
-		// (get) Token: 0x06039FD5 RID: 237525
-		// (set) Token: 0x06039FD6 RID: 237526
+		// Token: 0x17005EB0 RID: 24240
+		// (get) Token: 0x0602EEF8 RID: 192248
+		// (set) Token: 0x0602EEF9 RID: 192249
 		int RowIndex { get; set; }
 
-		// Token: 0x17008AE5 RID: 35557
-		// (get) Token: 0x06039FD7 RID: 237527
-		// (set) Token: 0x06039FD8 RID: 237528
+		// Token: 0x17005EB1 RID: 24241
+		// (get) Token: 0x0602EEFA RID: 192250
+		// (set) Token: 0x0602EEFB RID: 192251
 		int ColIndex { get; set; }
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E91 RID: 24209
+	// Token: 0x020064D4 RID: 25812
 	public class TPhotoTargetCaptureUiUnion
 	{
-		// Token: 0x1700B4DD RID: 46301
-		// (get) Token: 0x0602974E RID: 169806 RVA: 0x005AE352 File Offset: 0x005AC552
-		// (set) Token: 0x0602974F RID: 169807 RVA: 0x005AE35A File Offset: 0x005AC55A
+		// Token: 0x1700BE48 RID: 48712
+		// (get) Token: 0x0602BDF6 RID: 179702 RVA: 0x005F72F6 File Offset: 0x005F54F6
+		// (set) Token: 0x0602BDF7 RID: 179703 RVA: 0x005F72FE File Offset: 0x005F54FE
 		public TPhotoTargetCaptureUi Type { get; set; }
 
-		// Token: 0x1700B4DE RID: 46302
-		// (get) Token: 0x06029750 RID: 169808 RVA: 0x005AE363 File Offset: 0x005AC563
-		// (set) Token: 0x06029751 RID: 169809 RVA: 0x005AE36B File Offset: 0x005AC56B
+		// Token: 0x1700BE49 RID: 48713
+		// (get) Token: 0x0602BDF8 RID: 179704 RVA: 0x005F7307 File Offset: 0x005F5507
+		// (set) Token: 0x0602BDF9 RID: 179705 RVA: 0x005F730F File Offset: 0x005F550F
 		public object Value { get; set; }
 
-		// Token: 0x06029752 RID: 169810 RVA: 0x005AE374 File Offset: 0x005AC574
+		// Token: 0x0602BDFA RID: 179706 RVA: 0x005F7318 File Offset: 0x005F5518
 		public TPhotoTargetCaptureUiUnion()
 		{
 			this.Type = TPhotoTargetCaptureUi.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06029753 RID: 169811 RVA: 0x005AE38A File Offset: 0x005AC58A
+		// Token: 0x0602BDFB RID: 179707 RVA: 0x005F732E File Offset: 0x005F552E
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06029754 RID: 169812 RVA: 0x005AE39C File Offset: 0x005AC59C
+		// Token: 0x0602BDFC RID: 179708 RVA: 0x005F7340 File Offset: 0x005F5540
 		public IPhotoTargetCaptureUiCustomPointsT AsIPhotoTargetCaptureUiCustomPoints()
 		{
 			return this.As<IPhotoTargetCaptureUiCustomPointsT>();
 		}
 
-		// Token: 0x06029755 RID: 169813 RVA: 0x005AE3A4 File Offset: 0x005AC5A4
+		// Token: 0x0602BDFD RID: 179709 RVA: 0x005F7348 File Offset: 0x005F5548
 		public static TPhotoTargetCaptureUiUnion FromIPhotoTargetCaptureUiCustomPoints(IPhotoTargetCaptureUiCustomPointsT _iphototargetcaptureuicustompoints)
 		{
 			return new TPhotoTargetCaptureUiUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029756 RID: 169814 RVA: 0x005AE3B9 File Offset: 0x005AC5B9
+		// Token: 0x0602BDFE RID: 179710 RVA: 0x005F735D File Offset: 0x005F555D
 		public IPhotoTargetCaptureUiEachRequiredPointsT AsIPhotoTargetCaptureUiEachRequiredPoints()
 		{
 			return this.As<IPhotoTargetCaptureUiEachRequiredPointsT>();
 		}
 
-		// Token: 0x06029757 RID: 169815 RVA: 0x005AE3C1 File Offset: 0x005AC5C1
+		// Token: 0x0602BDFF RID: 179711 RVA: 0x005F7365 File Offset: 0x005F5565
 		public static TPhotoTargetCaptureUiUnion FromIPhotoTargetCaptureUiEachRequiredPoints(IPhotoTargetCaptureUiEachRequiredPointsT _iphototargetcaptureuieachrequiredpoints)
 		{
 			return new TPhotoTargetCaptureUiUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029758 RID: 169816 RVA: 0x005AE3D6 File Offset: 0x005AC5D6
+		// Token: 0x0602BE00 RID: 179712 RVA: 0x005F737A File Offset: 0x005F557A
 		public IPhotoTargetCaptureUiEntityZeroT AsIPhotoTargetCaptureUiEntityZero()
 		{
 			return this.As<IPhotoTargetCaptureUiEntityZeroT>();
 		}
 
-		// Token: 0x06029759 RID: 169817 RVA: 0x005AE3DE File Offset: 0x005AC5DE
+		// Token: 0x0602BE01 RID: 179713 RVA: 0x005F7382 File Offset: 0x005F5582
 		public static TPhotoTargetCaptureUiUnion FromIPhotoTargetCaptureUiEntityZero(IPhotoTargetCaptureUiEntityZeroT _iphototargetcaptureuientityzero)
 		{
 			return new TPhotoTargetCaptureUiUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x0602975A RID: 169818 RVA: 0x005AE3F3 File Offset: 0x005AC5F3
+		// Token: 0x0602BE02 RID: 179714 RVA: 0x005F7397 File Offset: 0x005F5597
 		public IPhotoTargetCaptureUiRequiredPointsCenterT AsIPhotoTargetCaptureUiRequiredPointsCenter()
 		{
 			return this.As<IPhotoTargetCaptureUiRequiredPointsCenterT>();
 		}
 
-		// Token: 0x0602975B RID: 169819 RVA: 0x005AE3FB File Offset: 0x005AC5FB
+		// Token: 0x0602BE03 RID: 179715 RVA: 0x005F739F File Offset: 0x005F559F
 		public static TPhotoTargetCaptureUiUnion FromIPhotoTargetCaptureUiRequiredPointsCenter(IPhotoTargetCaptureUiRequiredPointsCenterT _iphototargetcaptureuirequiredpointscenter)
 		{
 			return new TPhotoTargetCaptureUiUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x0602975C RID: 169820 RVA: 0x005AE410 File Offset: 0x005AC610
+		// Token: 0x0602BE04 RID: 179716 RVA: 0x005F73B4 File Offset: 0x005F55B4
 		public static int Pack(FlatBufferBuilder builder, TPhotoTargetCaptureUiUnion _o)
 		{
 			switch (_o.Type)

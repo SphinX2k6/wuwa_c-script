@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 {
-	// Token: 0x02007098 RID: 28824
+	// Token: 0x020062FD RID: 25341
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BehaviorTreeSavedData
 	{
-		// Token: 0x060463C9 RID: 287689 RVA: 0x01192F04 File Offset: 0x01191104
+		// Token: 0x0603D4B4 RID: 251060 RVA: 0x011B6010 File Offset: 0x011B4210
 		public FBtSaveLoadRecordItem GetNextRecord()
 		{
 			if (!this.IsValid())
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			return this.BtRecord.Items.Get(this.UsableIndex);
 		}
 
-		// Token: 0x060463CA RID: 287690 RVA: 0x01192F28 File Offset: 0x01191128
+		// Token: 0x0603D4B5 RID: 251061 RVA: 0x011B6034 File Offset: 0x011B4234
 		public FBtSaveLoadRecordItem ConsumeRecord()
 		{
 			if (!this.IsValid())
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			return items.Get(usableIndex);
 		}
 
-		// Token: 0x060463CB RID: 287691 RVA: 0x01192F60 File Offset: 0x01191160
+		// Token: 0x0603D4B6 RID: 251062 RVA: 0x011B606C File Offset: 0x011B426C
 		public bool IsValid()
 		{
 			FBtSaveLoadRecord btRecord = this.BtRecord;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			return this.Path != "" && num != 0 && this.UsableIndex < num;
 		}
 
-		// Token: 0x060463CC RID: 287692 RVA: 0x01192FA8 File Offset: 0x011911A8
+		// Token: 0x0603D4B7 RID: 251063 RVA: 0x011B60B4 File Offset: 0x011B42B4
 		[NullableContext(1)]
 		public BehaviorTreeSavedData DeepCopy()
 		{
@@ -69,14 +69,14 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			return behaviorTreeSavedData;
 		}
 
-		// Token: 0x04024CE0 RID: 150752
+		// Token: 0x04020832 RID: 133170
 		[Nullable(1)]
 		public string Path = "";
 
-		// Token: 0x04024CE1 RID: 150753
+		// Token: 0x04020833 RID: 133171
 		public FBtSaveLoadRecord BtRecord;
 
-		// Token: 0x04024CE2 RID: 150754
+		// Token: 0x04020834 RID: 133172
 		private int UsableIndex;
 	}
 }

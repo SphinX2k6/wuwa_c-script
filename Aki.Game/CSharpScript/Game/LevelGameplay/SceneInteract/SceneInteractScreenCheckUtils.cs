@@ -4,12 +4,12 @@ using CSharpScript.Game.Camera;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 {
-	// Token: 0x02006A7C RID: 27260
+	// Token: 0x02005BD9 RID: 23513
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneInteractScreenCheckUtils
 	{
-		// Token: 0x06043C1C RID: 277532 RVA: 0x01095EE8 File Offset: 0x010940E8
+		// Token: 0x06039C6A RID: 236650 RVA: 0x0103A728 File Offset: 0x01038928
 		public static bool IsLocationInScreen(Vector location)
 		{
 			if (location == null)
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			return fightCameraLogicComponent.CheckPositionInScreen(SceneInteractScreenCheckUtils.TmpLocation, cameraAdjustController.CheckInScreenMinX, cameraAdjustController.CheckInScreenMaxX, cameraAdjustController.CheckInScreenMinY, cameraAdjustController.CheckInScreenMaxY);
 		}
 
-		// Token: 0x06043C1D RID: 277533 RVA: 0x01095F3A File Offset: 0x0109413A
+		// Token: 0x06039C6B RID: 236651 RVA: 0x0103A77A File Offset: 0x0103897A
 		private static FightCameraLogicComponent GetFightCameraLogicComponent()
 		{
 			FightCamera fightCamera = CameraController.Instance.MainModel.FightCamera;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			return fightCamera.GetComponent<FightCameraLogicComponent>();
 		}
 
-		// Token: 0x0402366E RID: 145006
+		// Token: 0x0401E860 RID: 125024
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TmpLocation = Vector.Create();

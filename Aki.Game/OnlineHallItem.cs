@@ -13,7 +13,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020022EE RID: 8942
+// Token: 0x020017D2 RID: 6098
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -22,13 +22,13 @@ using UnrealEngine;
 })]
 public class OnlineHallItem : GridProxyAbstract<OnlineHallData>
 {
-	// Token: 0x060119DE RID: 72158 RVA: 0x00451ED0 File Offset: 0x004500D0
+	// Token: 0x0600EE76 RID: 61046 RVA: 0x0045EB9C File Offset: 0x0045CD9C
 	public OnlineHallItem(EUiViewName belongView)
 	{
 		this.BelongView = new EUiViewName?(belongView);
 	}
 
-	// Token: 0x060119DF RID: 72159 RVA: 0x00451EE4 File Offset: 0x004500E4
+	// Token: 0x0600EE77 RID: 61047 RVA: 0x0045EBB0 File Offset: 0x0045CDB0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 26;
@@ -99,7 +99,7 @@ public class OnlineHallItem : GridProxyAbstract<OnlineHallData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060119E0 RID: 72160 RVA: 0x004522D8 File Offset: 0x004504D8
+	// Token: 0x0600EE78 RID: 61048 RVA: 0x0045EFA4 File Offset: 0x0045D1A4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		OnlineHallItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -110,7 +110,7 @@ public class OnlineHallItem : GridProxyAbstract<OnlineHallData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060119E1 RID: 72161 RVA: 0x0045231C File Offset: 0x0045051C
+	// Token: 0x0600EE79 RID: 61049 RVA: 0x0045EFE8 File Offset: 0x0045D1E8
 	protected override void OnStart()
 	{
 		base.GetText(1).SetUIActive(false);
@@ -122,7 +122,7 @@ public class OnlineHallItem : GridProxyAbstract<OnlineHallData>
 		this.CountDown = base.GetText(11);
 	}
 
-	// Token: 0x060119E2 RID: 72162 RVA: 0x004523B4 File Offset: 0x004505B4
+	// Token: 0x0600EE7A RID: 61050 RVA: 0x0045F080 File Offset: 0x0045D280
 	protected override void OnBeforeDestroy()
 	{
 		this.OnlineHallData = null;
@@ -140,7 +140,7 @@ public class OnlineHallItem : GridProxyAbstract<OnlineHallData>
 		titleItem.Destroy(null);
 	}
 
-	// Token: 0x060119E3 RID: 72163 RVA: 0x00452408 File Offset: 0x00450608
+	// Token: 0x0600EE7B RID: 61051 RVA: 0x0045F0D4 File Offset: 0x0045D2D4
 	private void UpdateCountDown(float _)
 	{
 		if (this.OnlineHallData == null)
@@ -165,7 +165,7 @@ public class OnlineHallItem : GridProxyAbstract<OnlineHallData>
 		this.CountDownTimer = null;
 	}
 
-	// Token: 0x060119E4 RID: 72164 RVA: 0x004524A0 File Offset: 0x004506A0
+	// Token: 0x0600EE7C RID: 61052 RVA: 0x0045F16C File Offset: 0x0045D36C
 	[NullableContext(1)]
 	public override void Refresh(OnlineHallData data, bool isSelected, int gridIndex)
 	{
@@ -268,7 +268,7 @@ public class OnlineHallItem : GridProxyAbstract<OnlineHallData>
 		this.RefreshPcItem(data);
 	}
 
-	// Token: 0x060119E5 RID: 72165 RVA: 0x00452798 File Offset: 0x00450998
+	// Token: 0x0600EE7D RID: 61053 RVA: 0x0045F464 File Offset: 0x0045D664
 	private void ShowApplyBtn(bool show)
 	{
 		base.GetButton(4).RootUIComp.Get().SetUIActive(show);
@@ -276,7 +276,7 @@ public class OnlineHallItem : GridProxyAbstract<OnlineHallData>
 		base.GetItem(10).SetUIActive(!show);
 	}
 
-	// Token: 0x060119E6 RID: 72166 RVA: 0x004527E0 File Offset: 0x004509E0
+	// Token: 0x0600EE7E RID: 61054 RVA: 0x0045F4AC File Offset: 0x0045D6AC
 	private void OnClickApplyEnterBtn()
 	{
 		if (this.BelongView == EUiViewName.OnlineWorldHallView)
@@ -293,7 +293,7 @@ public class OnlineHallItem : GridProxyAbstract<OnlineHallData>
 		this.CountDownTimer = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.UpdateCountDown), 100f, 1f, null, null, true);
 	}
 
-	// Token: 0x060119E7 RID: 72167 RVA: 0x004528D0 File Offset: 0x00450AD0
+	// Token: 0x0600EE7F RID: 61055 RVA: 0x0045F59C File Offset: 0x0045D79C
 	private void OnClickItemBtn()
 	{
 		OnlineModel.Instance.CachePlayerData = this.OnlineHallData;
@@ -310,7 +310,7 @@ public class OnlineHallItem : GridProxyAbstract<OnlineHallData>
 		});
 	}
 
-	// Token: 0x060119E8 RID: 72168 RVA: 0x00452924 File Offset: 0x00450B24
+	// Token: 0x0600EE80 RID: 61056 RVA: 0x0045F5F0 File Offset: 0x0045D7F0
 	[NullableContext(1)]
 	private void RefreshThirdPartyItem(OnlineHallData data)
 	{
@@ -365,7 +365,7 @@ public class OnlineHallItem : GridProxyAbstract<OnlineHallData>
 		}
 	}
 
-	// Token: 0x060119E9 RID: 72169 RVA: 0x00452A70 File Offset: 0x00450C70
+	// Token: 0x0600EE81 RID: 61057 RVA: 0x0045F73C File Offset: 0x0045D93C
 	[NullableContext(1)]
 	private void RefreshPcItem(OnlineHallData data)
 	{
@@ -405,81 +405,81 @@ public class OnlineHallItem : GridProxyAbstract<OnlineHallData>
 		}
 	}
 
-	// Token: 0x040085BD RID: 34237
+	// Token: 0x040086FB RID: 34555
 	private const int TICK_INTERVAL_TIME = 100;
 
-	// Token: 0x040085BE RID: 34238
+	// Token: 0x040086FC RID: 34556
 	private OnlineHallData OnlineHallData;
 
-	// Token: 0x040085BF RID: 34239
+	// Token: 0x040086FD RID: 34557
 	private EUiViewName? BelongView;
 
-	// Token: 0x040085C0 RID: 34240
+	// Token: 0x040086FE RID: 34558
 	private UUIText CountDown;
 
-	// Token: 0x040085C1 RID: 34241
+	// Token: 0x040086FF RID: 34559
 	private TimerHandle CountDownTimer;
 
-	// Token: 0x040085C2 RID: 34242
+	// Token: 0x04008700 RID: 34560
 	private PlayerTitleItem TitleItem;
 
-	// Token: 0x02008863 RID: 34915
+	// Token: 0x020079E7 RID: 31207
 	[NullableContext(0)]
 	private enum EOnlineHallItem
 	{
-		// Token: 0x0402C511 RID: 181521
+		// Token: 0x04027813 RID: 161811
 		PlayerName,
-		// Token: 0x0402C512 RID: 181522
+		// Token: 0x04027814 RID: 161812
 		TipText,
-		// Token: 0x0402C513 RID: 181523
+		// Token: 0x04027815 RID: 161813
 		Level,
-		// Token: 0x0402C514 RID: 181524
+		// Token: 0x04027816 RID: 161814
 		RoleHead,
-		// Token: 0x0402C515 RID: 181525
+		// Token: 0x04027817 RID: 161815
 		ApplyEnterBtn,
-		// Token: 0x0402C516 RID: 181526
+		// Token: 0x04027818 RID: 161816
 		PlayerCount2,
-		// Token: 0x0402C517 RID: 181527
+		// Token: 0x04027819 RID: 161817
 		PlayerCount3,
-		// Token: 0x0402C518 RID: 181528
+		// Token: 0x0402781A RID: 161818
 		Sign,
-		// Token: 0x0402C519 RID: 181529
+		// Token: 0x0402781B RID: 161819
 		ApplyEnterBtnInteraction,
-		// Token: 0x0402C51A RID: 181530
+		// Token: 0x0402781C RID: 161820
 		ApplyEnterBtnText,
-		// Token: 0x0402C51B RID: 181531
+		// Token: 0x0402781D RID: 161821
 		ApplyCountDown,
-		// Token: 0x0402C51C RID: 181532
+		// Token: 0x0402781E RID: 161822
 		ApplyCountDownText,
-		// Token: 0x0402C51D RID: 181533
+		// Token: 0x0402781F RID: 161823
 		TeamCount,
-		// Token: 0x0402C51E RID: 181534
+		// Token: 0x04027820 RID: 161824
 		TeamItem,
-		// Token: 0x0402C51F RID: 181535
+		// Token: 0x04027821 RID: 161825
 		OperationBtn,
-		// Token: 0x0402C520 RID: 181536
+		// Token: 0x04027822 RID: 161826
 		ExitBtn,
-		// Token: 0x0402C521 RID: 181537
+		// Token: 0x04027823 RID: 161827
 		KickOutBtn,
-		// Token: 0x0402C522 RID: 181538
+		// Token: 0x04027824 RID: 161828
 		PlayerSprite,
-		// Token: 0x0402C523 RID: 181539
+		// Token: 0x04027825 RID: 161829
 		HallItem,
-		// Token: 0x0402C524 RID: 181540
+		// Token: 0x04027826 RID: 161830
 		NetStateSprite,
-		// Token: 0x0402C525 RID: 181541
+		// Token: 0x04027827 RID: 161831
 		SignTeamItem,
-		// Token: 0x0402C526 RID: 181542
+		// Token: 0x04027828 RID: 161832
 		PlayerTextureBg,
-		// Token: 0x0402C527 RID: 181543
+		// Token: 0x04027829 RID: 161833
 		BtnPlayerHead,
-		// Token: 0x0402C528 RID: 181544
+		// Token: 0x0402782A RID: 161834
 		ThirdPartyTexture,
-		// Token: 0x0402C529 RID: 181545
+		// Token: 0x0402782B RID: 161835
 		ThirdPartyText,
-		// Token: 0x0402C52A RID: 181546
+		// Token: 0x0402782C RID: 161836
 		PcItem,
-		// Token: 0x0402C52B RID: 181547
+		// Token: 0x0402782D RID: 161837
 		PlayerTitleItem
 	}
 }

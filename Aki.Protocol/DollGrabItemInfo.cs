@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020003EE RID: 1006
+	// Token: 0x020003D7 RID: 983
 	public sealed class DollGrabItemInfo : IMessage<DollGrabItemInfo>, IMessage, IEquatable<DollGrabItemInfo>, IDeepCloneable<DollGrabItemInfo>, IBufferMessage
 	{
-		// Token: 0x06006183 RID: 24963 RVA: 0x000EB3CD File Offset: 0x000E95CD
+		// Token: 0x06005FF3 RID: 24563 RVA: 0x000E824D File Offset: 0x000E644D
 		[NullableContext(1)]
 		public static DollGrabItemInfo Create()
 		{
 			return new DollGrabItemInfo();
 		}
 
-		// Token: 0x1700122B RID: 4651
-		// (get) Token: 0x06006184 RID: 24964 RVA: 0x000EB3D4 File Offset: 0x000E95D4
+		// Token: 0x170011D6 RID: 4566
+		// (get) Token: 0x06005FF4 RID: 24564 RVA: 0x000E8254 File Offset: 0x000E6454
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<DollGrabItemInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700122C RID: 4652
-		// (get) Token: 0x06006185 RID: 24965 RVA: 0x000EB3DB File Offset: 0x000E95DB
+		// Token: 0x170011D7 RID: 4567
+		// (get) Token: 0x06005FF5 RID: 24565 RVA: 0x000E825B File Offset: 0x000E645B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700122D RID: 4653
-		// (get) Token: 0x06006186 RID: 24966 RVA: 0x000EB3DE File Offset: 0x000E95DE
+		// Token: 0x170011D8 RID: 4568
+		// (get) Token: 0x06005FF6 RID: 24566 RVA: 0x000E825E File Offset: 0x000E645E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006187 RID: 24967 RVA: 0x000EB3E5 File Offset: 0x000E95E5
+		// Token: 0x06005FF7 RID: 24567 RVA: 0x000E8265 File Offset: 0x000E6465
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DollGrabItemInfo()
 		{
 		}
 
-		// Token: 0x06006188 RID: 24968 RVA: 0x000EB3ED File Offset: 0x000E95ED
+		// Token: 0x06005FF8 RID: 24568 RVA: 0x000E826D File Offset: 0x000E646D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DollGrabItemInfo(DollGrabItemInfo other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06006189 RID: 24969 RVA: 0x000EB41E File Offset: 0x000E961E
+		// Token: 0x06005FF9 RID: 24569 RVA: 0x000E829E File Offset: 0x000E649E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DollGrabItemInfo Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new DollGrabItemInfo(this);
 		}
 
-		// Token: 0x1700122E RID: 4654
-		// (get) Token: 0x0600618A RID: 24970 RVA: 0x000EB426 File Offset: 0x000E9626
-		// (set) Token: 0x0600618B RID: 24971 RVA: 0x000EB42E File Offset: 0x000E962E
+		// Token: 0x170011D9 RID: 4569
+		// (get) Token: 0x06005FFA RID: 24570 RVA: 0x000E82A6 File Offset: 0x000E64A6
+		// (set) Token: 0x06005FFB RID: 24571 RVA: 0x000E82AE File Offset: 0x000E64AE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700122F RID: 4655
-		// (get) Token: 0x0600618C RID: 24972 RVA: 0x000EB437 File Offset: 0x000E9637
-		// (set) Token: 0x0600618D RID: 24973 RVA: 0x000EB43F File Offset: 0x000E963F
+		// Token: 0x170011DA RID: 4570
+		// (get) Token: 0x06005FFC RID: 24572 RVA: 0x000E82B7 File Offset: 0x000E64B7
+		// (set) Token: 0x06005FFD RID: 24573 RVA: 0x000E82BF File Offset: 0x000E64BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemCount
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600618E RID: 24974 RVA: 0x000EB448 File Offset: 0x000E9648
+		// Token: 0x06005FFE RID: 24574 RVA: 0x000E82C8 File Offset: 0x000E64C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DollGrabItemInfo);
 		}
 
-		// Token: 0x0600618F RID: 24975 RVA: 0x000EB456 File Offset: 0x000E9656
+		// Token: 0x06005FFF RID: 24575 RVA: 0x000E82D6 File Offset: 0x000E64D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DollGrabItemInfo other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ItemId == other.ItemId && this.ItemCount == other.ItemCount && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06006190 RID: 24976 RVA: 0x000EB494 File Offset: 0x000E9694
+		// Token: 0x06006000 RID: 24576 RVA: 0x000E8314 File Offset: 0x000E6514
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06006191 RID: 24977 RVA: 0x000EB4EC File Offset: 0x000E96EC
+		// Token: 0x06006001 RID: 24577 RVA: 0x000E836C File Offset: 0x000E656C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06006192 RID: 24978 RVA: 0x000EB4F9 File Offset: 0x000E96F9
+		// Token: 0x06006002 RID: 24578 RVA: 0x000E8379 File Offset: 0x000E6579
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06006193 RID: 24979 RVA: 0x000EB504 File Offset: 0x000E9704
+		// Token: 0x06006003 RID: 24579 RVA: 0x000E8384 File Offset: 0x000E6584
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006194 RID: 24980 RVA: 0x000EB55C File Offset: 0x000E975C
+		// Token: 0x06006004 RID: 24580 RVA: 0x000E83DC File Offset: 0x000E65DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06006195 RID: 24981 RVA: 0x000EB5B4 File Offset: 0x000E97B4
+		// Token: 0x06006005 RID: 24581 RVA: 0x000E8434 File Offset: 0x000E6634
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DollGrabItemInfo other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06006196 RID: 24982 RVA: 0x000EB604 File Offset: 0x000E9804
+		// Token: 0x06006006 RID: 24582 RVA: 0x000E8484 File Offset: 0x000E6684
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06006197 RID: 24983 RVA: 0x000EB610 File Offset: 0x000E9810
+		// Token: 0x06006007 RID: 24583 RVA: 0x000E8490 File Offset: 0x000E6690
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -265,22 +265,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040037A0 RID: 14240
+		// Token: 0x0400378D RID: 14221
 		private static readonly MessageParser<DollGrabItemInfo> _parser = new MessageParser<DollGrabItemInfo>(() => new DollGrabItemInfo());
 
-		// Token: 0x040037A1 RID: 14241
+		// Token: 0x0400378E RID: 14222
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040037A2 RID: 14242
+		// Token: 0x0400378F RID: 14223
 		public const int ItemIdFieldNumber = 1;
 
-		// Token: 0x040037A3 RID: 14243
+		// Token: 0x04003790 RID: 14224
 		private int itemId_;
 
-		// Token: 0x040037A4 RID: 14244
+		// Token: 0x04003791 RID: 14225
 		public const int ItemCountFieldNumber = 2;
 
-		// Token: 0x040037A5 RID: 14245
+		// Token: 0x04003792 RID: 14226
 		private int itemCount_;
 	}
 }

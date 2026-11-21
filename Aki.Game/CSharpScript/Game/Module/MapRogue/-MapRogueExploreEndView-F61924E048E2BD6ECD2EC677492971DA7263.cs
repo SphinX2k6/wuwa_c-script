@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055F1 RID: 22001
+	// Token: 0x020045C7 RID: 17863
 	internal enum <MapRogueExploreEndView>F61924E048E2BD6ECD2EC677492971DA72635786124B36376864A06D71679F524__EComponents
 	{
-		// Token: 0x0401D6FF RID: 120575
+		// Token: 0x0401818A RID: 98698
 		CaptionItem,
-		// Token: 0x0401D700 RID: 120576
+		// Token: 0x0401818B RID: 98699
 		ExploreLayout,
-		// Token: 0x0401D701 RID: 120577
+		// Token: 0x0401818C RID: 98700
 		ExploreItem,
-		// Token: 0x0401D702 RID: 120578
+		// Token: 0x0401818D RID: 98701
 		BtnResult,
-		// Token: 0x0401D703 RID: 120579
+		// Token: 0x0401818E RID: 98702
 		BtnSaveFile,
-		// Token: 0x0401D704 RID: 120580
+		// Token: 0x0401818F RID: 98703
 		TxtTitle
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000452 RID: 1106
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004AB RID: 1195
 	public class IImmediateStartCondition : ISpawnMonsterStartCondition
 	{
-		// Token: 0x06001661 RID: 5729 RVA: 0x000452B0 File Offset: 0x000434B0
+		// Token: 0x060017FB RID: 6139 RVA: 0x00048FF8 File Offset: 0x000471F8
 		private IImmediateStartCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001662 RID: 5730 RVA: 0x000452E8 File Offset: 0x000434E8
+		// Token: 0x060017FC RID: 6140 RVA: 0x00049030 File Offset: 0x00047230
 		public static IImmediateStartCondition Create([Nullable(2)] IImmediateStartCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001663 RID: 5731 RVA: 0x000452FB File Offset: 0x000434FB
+		// Token: 0x060017FD RID: 6141 RVA: 0x00049043 File Offset: 0x00047243
 		public static IImmediateStartCondition CreateFromSetValue([Nullable(2)] IImmediateStartCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001664 RID: 5732 RVA: 0x0004530E File Offset: 0x0004350E
+		// Token: 0x060017FE RID: 6142 RVA: 0x00049056 File Offset: 0x00047256
 		public new IImmediateStartCondition_SetValue ToSetValue()
 		{
 			return new IImmediateStartCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000613 RID: 1555
-		// (get) Token: 0x06001665 RID: 5733 RVA: 0x00045321 File Offset: 0x00043521
-		// (set) Token: 0x06001666 RID: 5734 RVA: 0x0004534C File Offset: 0x0004354C
+		// Token: 0x1700067A RID: 1658
+		// (get) Token: 0x060017FF RID: 6143 RVA: 0x00049069 File Offset: 0x00047269
+		// (set) Token: 0x06001800 RID: 6144 RVA: 0x00049094 File Offset: 0x00047294
 		public override ESpawnMonsterStartCondition Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001118 RID: 4376
+		// Token: 0x0400123A RID: 4666
 		[Nullable(2)]
 		protected new IImmediateStartCondition FbInstance;
 
-		// Token: 0x04001119 RID: 4377
+		// Token: 0x0400123B RID: 4667
 		[Nullable(2)]
 		protected new IImmediateStartCondition_SetValue PocoInterface;
 	}

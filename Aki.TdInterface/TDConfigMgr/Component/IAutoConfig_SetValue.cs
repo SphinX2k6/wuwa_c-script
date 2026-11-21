@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001E0 RID: 480
+	// Token: 0x02000207 RID: 519
 	public class IAutoConfig_SetValue
 	{
-		// Token: 0x040008C2 RID: 2242
+		// Token: 0x04000949 RID: 2377
 		public bool IsCircle;
 
-		// Token: 0x040008C3 RID: 2243
+		// Token: 0x0400094A RID: 2378
 		public int Interval;
 	}
 }

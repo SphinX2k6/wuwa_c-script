@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020030BA RID: 12474
+// Token: 0x02002612 RID: 9746
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 })]
 public class TagDisableHandler : DisableHandler<InputFunctionContext>
 {
-	// Token: 0x0601AB75 RID: 109429 RVA: 0x0073269C File Offset: 0x0073089C
+	// Token: 0x06018584 RID: 99716 RVA: 0x00758008 File Offset: 0x00756208
 	protected override bool ShouldStop(InputFunctionContext context)
 	{
 		BaseTagComponent component = context.Entity.GetComponent<BaseTagComponent>();
@@ -31,7 +31,7 @@ public class TagDisableHandler : DisableHandler<InputFunctionContext>
 		}
 	}
 
-	// Token: 0x0601AB77 RID: 109431 RVA: 0x00732714 File Offset: 0x00730914
+	// Token: 0x06018586 RID: 99718 RVA: 0x00758080 File Offset: 0x00756280
 	// Note: this type is marked as 'beforefieldinit'.
 	static TagDisableHandler()
 	{
@@ -53,7 +53,7 @@ public class TagDisableHandler : DisableHandler<InputFunctionContext>
 		TagDisableHandler.MotorcycleParkConstraintTags = array;
 	}
 
-	// Token: 0x0400CE54 RID: 52820
+	// Token: 0x0400D240 RID: 53824
 	[StaticVariableRuleIgnore]
 	private static readonly int[] MotorcycleConstraintTags = new int[]
 	{
@@ -61,7 +61,7 @@ public class TagDisableHandler : DisableHandler<InputFunctionContext>
 		GameplayTagDefine.EGameplayTagId["角色.Common.载具驾驶.摩托.下车"]
 	};
 
-	// Token: 0x0400CE55 RID: 52821
+	// Token: 0x0400D241 RID: 53825
 	[StaticVariableRuleIgnore]
 	private static readonly int[] MotorcycleParkConstraintTags;
 }

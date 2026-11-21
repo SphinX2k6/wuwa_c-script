@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000569 RID: 1385
+	// Token: 0x0200057F RID: 1407
 	public class ConfigMoraleLevelDiffShowById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002083 RID: 8323 RVA: 0x00111297 File Offset: 0x0010F497
+		// Token: 0x06002107 RID: 8455 RVA: 0x001179EB File Offset: 0x00115BEB
 		static ConfigMoraleLevelDiffShowById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMoraleLevelDiffShowById.CreateStaticDefaultValue), new Action(ConfigMoraleLevelDiffShowById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002084 RID: 8324 RVA: 0x001112B8 File Offset: 0x0010F4B8
+		// Token: 0x06002108 RID: 8456 RVA: 0x00117A0C File Offset: 0x00115C0C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMoraleLevelDiffShowById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002085 RID: 8325 RVA: 0x00111337 File Offset: 0x0010F537
+		// Token: 0x06002109 RID: 8457 RVA: 0x00117A8B File Offset: 0x00115C8B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMoraleLevelDiffShowById.LogPair = null;
 			ConfigMoraleLevelDiffShowById.HandleId = 0;
 		}
 
-		// Token: 0x06002086 RID: 8326 RVA: 0x00111345 File Offset: 0x0010F545
+		// Token: 0x0600210A RID: 8458 RVA: 0x00117A99 File Offset: 0x00115C99
 		public static void Init()
 		{
 			ConfigMoraleLevelDiffShowById.HandleId = ConfigCommon.InitDataStatement(ConfigMoraleLevelDiffShowById.HandleId, "db_moraleplay.db", "select BinData from `MoraleLevelDiffShow` where Id=?");
 		}
 
-		// Token: 0x06002087 RID: 8327 RVA: 0x00111360 File Offset: 0x0010F560
+		// Token: 0x0600210B RID: 8459 RVA: 0x00117AB4 File Offset: 0x00115CB4
 		public static MoraleLevelDiffShow? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMoraleLevelDiffShowById.HandleId, ConfigMoraleLevelDiffShowById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MoraleLevelDiffShow?(rootAsMoraleLevelDiffShow);
 		}
 
-		// Token: 0x040025C3 RID: 9667
+		// Token: 0x0400265D RID: 9821
 		private const string DB = "db_moraleplay.db";
 
-		// Token: 0x040025C4 RID: 9668
+		// Token: 0x0400265E RID: 9822
 		private const string FILE = "c.插旗玩法.xlsx";
 
-		// Token: 0x040025C5 RID: 9669
+		// Token: 0x0400265F RID: 9823
 		private const string TABLE = "MoraleLevelDiffShow";
 
-		// Token: 0x040025C6 RID: 9670
+		// Token: 0x04002660 RID: 9824
 		private const string COMMAND = "select BinData from `MoraleLevelDiffShow` where Id=?";
 
-		// Token: 0x040025C7 RID: 9671
+		// Token: 0x04002661 RID: 9825
 		private const string KEY_PREFIX = "MoraleLevelDiffShowById";
 
-		// Token: 0x040025C8 RID: 9672
+		// Token: 0x04002662 RID: 9826
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040025C9 RID: 9673
+		// Token: 0x04002663 RID: 9827
 		private static int HandleId;
 	}
 }

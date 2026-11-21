@@ -3,25 +3,25 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol.Summon
 {
-	// Token: 0x0200167D RID: 5757
+	// Token: 0x020016F9 RID: 5881
 	public enum EPlayerFollower
 	{
-		// Token: 0x0400C1F9 RID: 49657
+		// Token: 0x0400C725 RID: 50981
 		[OriginalName("EPlayerFollowerDefault")]
 		Default,
-		// Token: 0x0400C1FA RID: 49658
+		// Token: 0x0400C726 RID: 50982
 		[OriginalName("EPlayerFollowerExploreSkill")]
 		ExploreSkill,
-		// Token: 0x0400C1FB RID: 49659
+		// Token: 0x0400C727 RID: 50983
 		[OriginalName("EPlayerFollowerAuxiliary")]
 		Auxiliary,
-		// Token: 0x0400C1FC RID: 49660
+		// Token: 0x0400C728 RID: 50984
 		[OriginalName("EPlayerFollowerSpecialItem")]
 		SpecialItem,
-		// Token: 0x0400C1FD RID: 49661
+		// Token: 0x0400C729 RID: 50985
 		[OriginalName("EPlayerFollowerMotor")]
 		Motor,
-		// Token: 0x0400C1FE RID: 49662
+		// Token: 0x0400C72A RID: 50986
 		[OriginalName("EPlayerFollowerMax")]
 		Max
 	}

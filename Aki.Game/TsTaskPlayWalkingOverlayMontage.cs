@@ -12,9 +12,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskPlayWalkingOverlayMontage.TsTaskPlayWalkingOverlayMontage_C")]
 public class TsTaskPlayWalkingOverlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170001CC RID: 460
-	// (get) Token: 0x06000A20 RID: 2592 RVA: 0x00032D33 File Offset: 0x00030F33
-	// (set) Token: 0x06000A21 RID: 2593 RVA: 0x00032D43 File Offset: 0x00030F43
+	// Token: 0x170001CF RID: 463
+	// (get) Token: 0x06000A26 RID: 2598 RVA: 0x00033E83 File Offset: 0x00032083
+	// (set) Token: 0x06000A27 RID: 2599 RVA: 0x00033E93 File Offset: 0x00032093
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float MontageId
 	{
@@ -28,9 +28,9 @@ public class TsTaskPlayWalkingOverlayMontage : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x170001CD RID: 461
-	// (get) Token: 0x06000A22 RID: 2594 RVA: 0x00032D54 File Offset: 0x00030F54
-	// (set) Token: 0x06000A23 RID: 2595 RVA: 0x00032D64 File Offset: 0x00030F64
+	// Token: 0x170001D0 RID: 464
+	// (get) Token: 0x06000A28 RID: 2600 RVA: 0x00033EA4 File Offset: 0x000320A4
+	// (set) Token: 0x06000A29 RID: 2601 RVA: 0x00033EB4 File Offset: 0x000320B4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float LoopDuration
 	{
@@ -44,9 +44,9 @@ public class TsTaskPlayWalkingOverlayMontage : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x170001CE RID: 462
-	// (get) Token: 0x06000A24 RID: 2596 RVA: 0x00032D75 File Offset: 0x00030F75
-	// (set) Token: 0x06000A25 RID: 2597 RVA: 0x00032D85 File Offset: 0x00030F85
+	// Token: 0x170001D1 RID: 465
+	// (get) Token: 0x06000A2A RID: 2602 RVA: 0x00033EC5 File Offset: 0x000320C5
+	// (set) Token: 0x06000A2B RID: 2603 RVA: 0x00033ED5 File Offset: 0x000320D5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int RepeatTimes
 	{
@@ -60,7 +60,7 @@ public class TsTaskPlayWalkingOverlayMontage : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x06000A26 RID: 2598 RVA: 0x00032D96 File Offset: 0x00030F96
+	// Token: 0x06000A2C RID: 2604 RVA: 0x00033EE6 File Offset: 0x000320E6
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -72,30 +72,27 @@ public class TsTaskPlayWalkingOverlayMontage : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x06000A27 RID: 2599 RVA: 0x00032DD4 File Offset: 0x00030FD4
+	// Token: 0x06000A2D RID: 2605 RVA: 0x00033F24 File Offset: 0x00032124
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskPlayWalkingOverlayMontage) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskPlayWalkingOverlayMontage.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000A28 RID: 2600 RVA: 0x00032E70 File Offset: 0x00031070
+	// Token: 0x06000A2E RID: 2606 RVA: 0x00033FD4 File Offset: 0x000321D4
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -129,7 +126,7 @@ public class TsTaskPlayWalkingOverlayMontage : TsTaskAbortImmediatelyBase, IUnre
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000A29 RID: 2601 RVA: 0x00032F58 File Offset: 0x00031158
+	// Token: 0x06000A2F RID: 2607 RVA: 0x000340BC File Offset: 0x000322BC
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskPlayWalkingOverlayMontage._ClassPtr == IntPtr.Zero)
@@ -139,23 +136,23 @@ public class TsTaskPlayWalkingOverlayMontage : TsTaskAbortImmediatelyBase, IUnre
 		return TsTaskPlayWalkingOverlayMontage._ClassPtr;
 	}
 
-	// Token: 0x06000A2A RID: 2602 RVA: 0x00032F7C File Offset: 0x0003117C
+	// Token: 0x06000A30 RID: 2608 RVA: 0x000340E0 File Offset: 0x000322E0
 	public TsTaskPlayWalkingOverlayMontage() : this(BuiltinUtils.AllocNativeUObject(TsTaskPlayWalkingOverlayMontage.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000A2B RID: 2603 RVA: 0x00032FA4 File Offset: 0x000311A4
+	// Token: 0x06000A31 RID: 2609 RVA: 0x00034108 File Offset: 0x00032308
 	[NullableContext(1)]
 	public TsTaskPlayWalkingOverlayMontage(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskPlayWalkingOverlayMontage.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000A2C RID: 2604 RVA: 0x00032FD7 File Offset: 0x000311D7
+	// Token: 0x06000A32 RID: 2610 RVA: 0x0003413B File Offset: 0x0003233B
 	protected TsTaskPlayWalkingOverlayMontage(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000A2D RID: 2605 RVA: 0x00032FE0 File Offset: 0x000311E0
+	// Token: 0x06000A33 RID: 2611 RVA: 0x00034144 File Offset: 0x00032344
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -163,41 +160,41 @@ public class TsTaskPlayWalkingOverlayMontage : TsTaskAbortImmediatelyBase, IUnre
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x040007D0 RID: 2000
+	// Token: 0x040007D8 RID: 2008
 	private bool IsInitTsVariables;
 
-	// Token: 0x040007D1 RID: 2001
+	// Token: 0x040007D9 RID: 2009
 	private int TsMontageId;
 
-	// Token: 0x040007D2 RID: 2002
+	// Token: 0x040007DA RID: 2010
 	private float TsLoopDuration;
 
-	// Token: 0x040007D3 RID: 2003
+	// Token: 0x040007DB RID: 2011
 	private int TsRepeatTimes;
 
-	// Token: 0x040007D4 RID: 2004
+	// Token: 0x040007DC RID: 2012
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x040007D5 RID: 2005
+	// Token: 0x040007DD RID: 2013
 	private int PlayingMontageId;
 
-	// Token: 0x040007D6 RID: 2006
+	// Token: 0x040007DE RID: 2014
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskPlayWalkingOverlayMontage.TsTaskPlayWalkingOverlayMontage_C";
 
-	// Token: 0x040007D7 RID: 2007
+	// Token: 0x040007DF RID: 2015
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040007D8 RID: 2008
+	// Token: 0x040007E0 RID: 2016
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040007D9 RID: 2009
+	// Token: 0x040007E1 RID: 2017
 	private static int __PropertyOffset_MontageId;
 
-	// Token: 0x040007DA RID: 2010
+	// Token: 0x040007E2 RID: 2018
 	private static int __PropertyOffset_LoopDuration;
 
-	// Token: 0x040007DB RID: 2011
+	// Token: 0x040007E3 RID: 2019
 	private static int __PropertyOffset_RepeatTimes;
 }

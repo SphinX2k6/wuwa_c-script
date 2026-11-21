@@ -5,15 +5,15 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059DE RID: 23006
+	// Token: 0x020049B7 RID: 18871
 	public class ReadPhoneMessageBehaviorNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A4F1 RID: 238833 RVA: 0x00DDE700 File Offset: 0x00DDC900
+		// Token: 0x0602F419 RID: 193561 RVA: 0x00D2DF20 File Offset: 0x00D2C120
 		public ReadPhoneMessageBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A4F2 RID: 238834 RVA: 0x00DDE70C File Offset: 0x00DDC90C
+		// Token: 0x0602F41A RID: 193562 RVA: 0x00D2DF2C File Offset: 0x00D2C12C
 		[NullableContext(1)]
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A4F3 RID: 238835 RVA: 0x00DDE75D File Offset: 0x00DDC95D
+		// Token: 0x0602F41B RID: 193563 RVA: 0x00D2DF7D File Offset: 0x00D2C17D
 		protected void OnStart()
 		{
 			this.SubmitFinished = false;
@@ -50,21 +50,21 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A4F4 RID: 238836 RVA: 0x00DDE77F File Offset: 0x00DDC97F
+		// Token: 0x0602F41C RID: 193564 RVA: 0x00D2DF9F File Offset: 0x00D2C19F
 		protected override void AddEventsOnChildQuestStart()
 		{
 			base.AddEventsOnChildQuestStart();
 			EventSystem.Instance.Add<int, int, bool>(EEventName.OnPhoneMsgReadProgressUpdate, new Action<int, int, bool>(this.OnPhoneMsgReadProgressUpdate));
 		}
 
-		// Token: 0x0603A4F5 RID: 238837 RVA: 0x00DDE7A3 File Offset: 0x00DDC9A3
+		// Token: 0x0602F41D RID: 193565 RVA: 0x00D2DFC3 File Offset: 0x00D2C1C3
 		protected override void RemoveEventsOnChildQuestEnd()
 		{
 			base.RemoveEventsOnChildQuestEnd();
 			EventSystem.Instance.Remove<int, int, bool>(EEventName.OnPhoneMsgReadProgressUpdate, new Action<int, int, bool>(this.OnPhoneMsgReadProgressUpdate));
 		}
 
-		// Token: 0x0603A4F6 RID: 238838 RVA: 0x00DDE7C7 File Offset: 0x00DDC9C7
+		// Token: 0x0602F41E RID: 193566 RVA: 0x00D2DFE7 File Offset: 0x00D2C1E7
 		private void OnPhoneMsgReadProgressUpdate(int shortMsgId, int newProgress, bool isFinish)
 		{
 			if (shortMsgId != this.ShortMessageId)
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.SubmitNode(null);
 		}
 
-		// Token: 0x0603A4F7 RID: 238839 RVA: 0x00DDE7EF File Offset: 0x00DDC9EF
+		// Token: 0x0602F41F RID: 193567 RVA: 0x00D2E00F File Offset: 0x00D2C20F
 		protected override void OnAfterSubmit(bool submitSuccess)
 		{
 			base.OnAfterSubmit(submitSuccess);
@@ -92,10 +92,10 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0401E66F RID: 124527
+		// Token: 0x0401910E RID: 102670
 		private bool SubmitFinished;
 
-		// Token: 0x0401E670 RID: 124528
+		// Token: 0x0401910F RID: 102671
 		private int ShortMessageId;
 	}
 }

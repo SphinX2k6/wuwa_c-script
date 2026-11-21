@@ -20,12 +20,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x0200589B RID: 22683
+	// Token: 0x02004873 RID: 18547
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InstanceDungeonInfoItem : UiPanelBase
 	{
-		// Token: 0x06039B63 RID: 236387 RVA: 0x00DB6E78 File Offset: 0x00DB5078
+		// Token: 0x0602EA86 RID: 191110 RVA: 0x00D05D90 File Offset: 0x00D03F90
 		protected unsafe override void OnRegisterComponent()
 		{
 			InstanceDungeonViewModelBase instanceDungeonViewModelBase = this.OpenParam as InstanceDungeonViewModelBase;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039B64 RID: 236388 RVA: 0x00DB6F64 File Offset: 0x00DB5164
+		// Token: 0x0602EA87 RID: 191111 RVA: 0x00D05E7C File Offset: 0x00D0407C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InstanceDungeonInfoItem.<OnBeforeStartAsync>d__25 <OnBeforeStartAsync>d__;
@@ -62,19 +62,19 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039B65 RID: 236389 RVA: 0x00DB6FA7 File Offset: 0x00DB51A7
+		// Token: 0x0602EA88 RID: 191112 RVA: 0x00D05EBF File Offset: 0x00D040BF
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add(EEventName.OnRefreshInstancedRecommendLevel, new Action(this.OnRefreshInstancedRecommendLevel));
 		}
 
-		// Token: 0x06039B66 RID: 236390 RVA: 0x00DB6FC5 File Offset: 0x00DB51C5
+		// Token: 0x0602EA89 RID: 191113 RVA: 0x00D05EDD File Offset: 0x00D040DD
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnRefreshInstancedRecommendLevel, new Action(this.OnRefreshInstancedRecommendLevel));
 		}
 
-		// Token: 0x06039B67 RID: 236391 RVA: 0x00DB6FE3 File Offset: 0x00DB51E3
+		// Token: 0x0602EA8A RID: 191114 RVA: 0x00D05EFB File Offset: 0x00D040FB
 		[NullableContext(1)]
 		public void InitButton(Action onClickBtnSoloCallBack, Action onClickBtnMultipleCallBack, Action onClickBtnTeamCallBack)
 		{
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.InstanceDungeonStartButtonItem.OnClickBtnTeamCallBack = onClickBtnTeamCallBack;
 		}
 
-		// Token: 0x06039B68 RID: 236392 RVA: 0x00DB700C File Offset: 0x00DB520C
+		// Token: 0x0602EA8B RID: 191115 RVA: 0x00D05F24 File Offset: 0x00D04124
 		public UniTask RefreshItem(int instanceId)
 		{
 			InstanceDungeonInfoItem.<RefreshItem>d__29 <RefreshItem>d__;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			return <RefreshItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039B69 RID: 236393 RVA: 0x00DB7058 File Offset: 0x00DB5258
+		// Token: 0x0602EA8C RID: 191116 RVA: 0x00D05F70 File Offset: 0x00D04170
 		[NullableContext(1)]
 		private void UpdateInstanceDungeonBuffItem(InstanceDungeon config, string monsterTips, bool showMonsterPreview)
 		{
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039B6A RID: 236394 RVA: 0x00DB7120 File Offset: 0x00DB5320
+		// Token: 0x0602EA8D RID: 191117 RVA: 0x00D06038 File Offset: 0x00D04238
 		private void UpdateInstanceDungeonEntranceTowerDefenceItem(EDungeonSubType subType)
 		{
 			InstanceDungeonInfoItem.<>c__DisplayClass31_0 CS$<>8__locals1 = new InstanceDungeonInfoItem.<>c__DisplayClass31_0();
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039B6B RID: 236395 RVA: 0x00DB71B4 File Offset: 0x00DB53B4
+		// Token: 0x0602EA8E RID: 191118 RVA: 0x00D060CC File Offset: 0x00D042CC
 		private void UpdateLineItem(EDungeonSubType subType)
 		{
 			InstanceDungeonInfoItem.<>c__DisplayClass32_0 CS$<>8__locals1 = new InstanceDungeonInfoItem.<>c__DisplayClass32_0();
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.LineItem.SetUIActive(true);
 		}
 
-		// Token: 0x06039B6C RID: 236396 RVA: 0x00DB7224 File Offset: 0x00DB5424
+		// Token: 0x0602EA8F RID: 191119 RVA: 0x00D0613C File Offset: 0x00D0433C
 		private void UpdateInstanceDungeonRecommendLevelItem(EDungeonSubType subType)
 		{
 			InstanceDungeonInfoItem.<>c__DisplayClass33_0 CS$<>8__locals1 = new InstanceDungeonInfoItem.<>c__DisplayClass33_0();
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039B6D RID: 236397 RVA: 0x00DB735C File Offset: 0x00DB555C
+		// Token: 0x0602EA90 RID: 191120 RVA: 0x00D06274 File Offset: 0x00D04474
 		private void UpdateInstanceDungeonTimeCountCostItem()
 		{
 			InstanceDungeonInfoItem.<>c__DisplayClass34_0 CS$<>8__locals1 = new InstanceDungeonInfoItem.<>c__DisplayClass34_0();
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039B6E RID: 236398 RVA: 0x00DB749C File Offset: 0x00DB569C
+		// Token: 0x0602EA91 RID: 191121 RVA: 0x00D063B4 File Offset: 0x00D045B4
 		private void UpdateRewardItem()
 		{
 			if (InstanceDungeonEntranceModel.Instance.GetInstanceDungeonReward(this.InstanceId).Item1.Count <= 0)
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039B6F RID: 236399 RVA: 0x00DB7520 File Offset: 0x00DB5720
+		// Token: 0x0602EA92 RID: 191122 RVA: 0x00D06438 File Offset: 0x00D04638
 		private void UpdateBottomTips(EDungeonSubType subType)
 		{
 			InstanceDungeonInfoItem.<>c__DisplayClass36_0 CS$<>8__locals1 = new InstanceDungeonInfoItem.<>c__DisplayClass36_0();
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			});
 		}
 
-		// Token: 0x06039B70 RID: 236400 RVA: 0x00DB7664 File Offset: 0x00DB5864
+		// Token: 0x0602EA93 RID: 191123 RVA: 0x00D0657C File Offset: 0x00D0477C
 		private UniTask LoadInstanceDungeonBottomTipTemplateItem()
 		{
 			InstanceDungeonInfoItem.<LoadInstanceDungeonBottomTipTemplateItem>d__37 <LoadInstanceDungeonBottomTipTemplateItem>d__;
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			return <LoadInstanceDungeonBottomTipTemplateItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039B71 RID: 236401 RVA: 0x00DB76A8 File Offset: 0x00DB58A8
+		// Token: 0x0602EA94 RID: 191124 RVA: 0x00D065C0 File Offset: 0x00D047C0
 		private void InitInstanceDungeonBottomTipLayout()
 		{
 			if (this.InstanceDungeonBottomTipLayout != null)
@@ -441,14 +441,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.InstanceDungeonBottomTipLayout = new GenericLayout<InstanceDungeonBottomTipItem, InstanceDungeonBottomTipItemData>(verticalLayout, new Func<InstanceDungeonBottomTipItem>(this.CreateInstanceDungeonBottomTipItem), null, false, true);
 		}
 
-		// Token: 0x06039B72 RID: 236402 RVA: 0x00DB76E1 File Offset: 0x00DB58E1
+		// Token: 0x0602EA95 RID: 191125 RVA: 0x00D065F9 File Offset: 0x00D047F9
 		[NullableContext(1)]
 		private InstanceDungeonBottomTipItem CreateInstanceDungeonBottomTipItem()
 		{
 			return new InstanceDungeonBottomTipItem();
 		}
 
-		// Token: 0x06039B73 RID: 236403 RVA: 0x00DB76E8 File Offset: 0x00DB58E8
+		// Token: 0x0602EA96 RID: 191126 RVA: 0x00D06600 File Offset: 0x00D04800
 		private void UpdateInstanceDungeonMowingDropDownItem(EDungeonSubType subType)
 		{
 			bool flag = subType == EDungeonSubType.Mowing;
@@ -485,7 +485,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039B74 RID: 236404 RVA: 0x00DB776C File Offset: 0x00DB596C
+		// Token: 0x0602EA97 RID: 191127 RVA: 0x00D06684 File Offset: 0x00D04884
 		public void SetMatchingItemActive(bool isShow)
 		{
 			bool flag = InstanceDungeonEntranceModel.Instance.CheckInstanceUnlock(this.InstanceId);
@@ -502,7 +502,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			instanceDungeonMatchingItem.SetActive(isShow);
 		}
 
-		// Token: 0x06039B75 RID: 236405 RVA: 0x00DB77B4 File Offset: 0x00DB59B4
+		// Token: 0x0602EA98 RID: 191128 RVA: 0x00D066CC File Offset: 0x00D048CC
 		public void UpdateInstanceDungeonLockItemAndCostItem()
 		{
 			bool flag = InstanceDungeonEntranceModel.Instance.GetMatchingState() == EInstanceMatchState.Matching;
@@ -543,7 +543,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039B76 RID: 236406 RVA: 0x00DB7874 File Offset: 0x00DB5A74
+		// Token: 0x0602EA99 RID: 191129 RVA: 0x00D0678C File Offset: 0x00D0498C
 		private void UpdateRogueBlackFlowerItem(InstanceDungeon dungeonConfig)
 		{
 			bool flag = dungeonConfig.InstSubType == 15;
@@ -579,7 +579,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039B77 RID: 236407 RVA: 0x00DB78EC File Offset: 0x00DB5AEC
+		// Token: 0x0602EA9A RID: 191130 RVA: 0x00D06804 File Offset: 0x00D04A04
 		private void UpdatePictureItem(int uid)
 		{
 			InstanceDungeonInfoItem.<>c__DisplayClass44_0 CS$<>8__locals1 = new InstanceDungeonInfoItem.<>c__DisplayClass44_0();
@@ -617,7 +617,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039B78 RID: 236408 RVA: 0x00DB7980 File Offset: 0x00DB5B80
+		// Token: 0x0602EA9B RID: 191131 RVA: 0x00D06898 File Offset: 0x00D04A98
 		private void UpdateDescWidelyItem(int uid)
 		{
 			InstanceDungeonInfoItem.<>c__DisplayClass45_0 CS$<>8__locals1 = new InstanceDungeonInfoItem.<>c__DisplayClass45_0();
@@ -655,7 +655,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039B79 RID: 236409 RVA: 0x00DB7A14 File Offset: 0x00DB5C14
+		// Token: 0x0602EA9C RID: 191132 RVA: 0x00D0692C File Offset: 0x00D04B2C
 		private void UpdateTitleWidelyItem(int uid)
 		{
 			InstanceDungeonInfoItem.<>c__DisplayClass46_0 CS$<>8__locals1 = new InstanceDungeonInfoItem.<>c__DisplayClass46_0();
@@ -693,7 +693,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039B7A RID: 236410 RVA: 0x00DB7AA8 File Offset: 0x00DB5CA8
+		// Token: 0x0602EA9D RID: 191133 RVA: 0x00D069C0 File Offset: 0x00D04BC0
 		private void UpdateScoreListItem(int uid)
 		{
 			InstanceDungeonInfoItem.<>c__DisplayClass47_0 CS$<>8__locals1 = new InstanceDungeonInfoItem.<>c__DisplayClass47_0();
@@ -731,7 +731,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039B7B RID: 236411 RVA: 0x00DB7B3C File Offset: 0x00DB5D3C
+		// Token: 0x0602EA9E RID: 191134 RVA: 0x00D06A54 File Offset: 0x00D04C54
 		private void UpdateRankTimeItem(int instanceId)
 		{
 			if (this.ParentModel.RankItemModel == null)
@@ -768,7 +768,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039B7C RID: 236412 RVA: 0x00DB7BD1 File Offset: 0x00DB5DD1
+		// Token: 0x0602EA9F RID: 191135 RVA: 0x00D06AE9 File Offset: 0x00D04CE9
 		[NullableContext(1)]
 		public void SetLockText(string lockText)
 		{
@@ -776,7 +776,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.InstanceDungeonLockItem.SetLockText(lockText);
 		}
 
-		// Token: 0x06039B7D RID: 236413 RVA: 0x00DB7BEC File Offset: 0x00DB5DEC
+		// Token: 0x0602EAA0 RID: 191136 RVA: 0x00D06B04 File Offset: 0x00D04D04
 		private void OnRefreshInstancedRecommendLevel()
 		{
 			InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(this.InstanceId);
@@ -787,52 +787,52 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.UpdateInstanceDungeonRecommendLevelItem((EDungeonSubType)config.Value.InstSubType);
 		}
 
-		// Token: 0x0401E24E RID: 123470
+		// Token: 0x04018CEB RID: 101611
 		private int InstanceId;
 
-		// Token: 0x0401E24F RID: 123471
+		// Token: 0x04018CEC RID: 101612
 		private InstanceDungeonRightTitleItem InstanceDungeonRightTitleItem;
 
-		// Token: 0x0401E250 RID: 123472
+		// Token: 0x04018CED RID: 101613
 		private InstanceDungeonBuffItem InstanceDungeonBuffItem;
 
-		// Token: 0x0401E251 RID: 123473
+		// Token: 0x04018CEE RID: 101614
 		private InstanceDungeonEntranceTowerDefenceItem InstanceDungeonEntranceTowerDefenceItem;
 
-		// Token: 0x0401E252 RID: 123474
+		// Token: 0x04018CEF RID: 101615
 		private InstanceDungeonRecommendLevelItem InstanceDungeonRecommendLevelItem;
 
-		// Token: 0x0401E253 RID: 123475
+		// Token: 0x04018CF0 RID: 101616
 		private InstanceDungeonCostItem InstanceDungeonCostItem;
 
-		// Token: 0x0401E254 RID: 123476
+		// Token: 0x04018CF1 RID: 101617
 		private InstanceDungeonTimeCountAndCostItem InstanceDungeonTimeCountAndCostItem;
 
-		// Token: 0x0401E255 RID: 123477
+		// Token: 0x04018CF2 RID: 101618
 		private InstanceDungeonEntranceRewardItem InstanceDungeonEntranceRewardItem;
 
-		// Token: 0x0401E256 RID: 123478
+		// Token: 0x04018CF3 RID: 101619
 		private InstanceDungeonMowingDropDownItem InstanceDungeonMowingDropDownItem;
 
-		// Token: 0x0401E257 RID: 123479
+		// Token: 0x04018CF4 RID: 101620
 		private InstanceDungeonStartButtonItem InstanceDungeonStartButtonItem;
 
-		// Token: 0x0401E258 RID: 123480
+		// Token: 0x04018CF5 RID: 101621
 		private InstanceDungeonMatchingItem InstanceDungeonMatchingItem;
 
-		// Token: 0x0401E259 RID: 123481
+		// Token: 0x04018CF6 RID: 101622
 		private InstanceDungeonLockItem InstanceDungeonLockItem;
 
-		// Token: 0x0401E25A RID: 123482
+		// Token: 0x04018CF7 RID: 101623
 		private RoguelikeBlackFlowerInstanceItem RogueBlackFlowerItem;
 
-		// Token: 0x0401E25B RID: 123483
+		// Token: 0x04018CF8 RID: 101624
 		private UUIItem LineItem;
 
-		// Token: 0x0401E25C RID: 123484
+		// Token: 0x04018CF9 RID: 101625
 		private InstanceDungeonBottomTipItem InstanceDungeonBottomTipTemplateItem;
 
-		// Token: 0x0401E25D RID: 123485
+		// Token: 0x04018CFA RID: 101626
 		[Nullable(new byte[]
 		{
 			2,
@@ -841,42 +841,42 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 		})]
 		private GenericLayout<InstanceDungeonBottomTipItem, InstanceDungeonBottomTipItemData> InstanceDungeonBottomTipLayout;
 
-		// Token: 0x0401E25E RID: 123486
+		// Token: 0x04018CFB RID: 101627
 		private InstanceDungeonPicItem InstanceDungeonPicItem;
 
-		// Token: 0x0401E25F RID: 123487
+		// Token: 0x04018CFC RID: 101628
 		private InstanceDungeonDescWidelyItem InstanceDungeonDescWidelyItem;
 
-		// Token: 0x0401E260 RID: 123488
+		// Token: 0x04018CFD RID: 101629
 		private InstanceDungeonTitleWidelyItem InstanceDungeonTitleWidelyItem;
 
-		// Token: 0x0401E261 RID: 123489
+		// Token: 0x04018CFE RID: 101630
 		private InstanceDungeonScoreListItem InstanceDungeonScoreListItem;
 
-		// Token: 0x0401E262 RID: 123490
+		// Token: 0x04018CFF RID: 101631
 		private InstanceDungeonRankTimeItem InstanceDungeonRankTimeItem;
 
-		// Token: 0x0401E263 RID: 123491
+		// Token: 0x04018D00 RID: 101632
 		[Nullable(1)]
 		private List<Func<UniTask>> LoadList = new List<Func<UniTask>>();
 
-		// Token: 0x0401E264 RID: 123492
+		// Token: 0x04018D01 RID: 101633
 		[Nullable(1)]
 		private InstanceDungeonViewModelBase ParentModel;
 
-		// Token: 0x0200BAF4 RID: 47860
+		// Token: 0x0200A50D RID: 42253
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x040387CD RID: 231373
+			// Token: 0x040331CE RID: 209358
 			TopItem,
-			// Token: 0x040387CE RID: 231374
+			// Token: 0x040331CF RID: 209359
 			BottomItem,
-			// Token: 0x040387CF RID: 231375
+			// Token: 0x040331D0 RID: 209360
 			ButtonItem,
-			// Token: 0x040387D0 RID: 231376
+			// Token: 0x040331D1 RID: 209361
 			RewardItem,
-			// Token: 0x040387D1 RID: 231377
+			// Token: 0x040331D2 RID: 209362
 			BottomTipLayout
 		}
 	}

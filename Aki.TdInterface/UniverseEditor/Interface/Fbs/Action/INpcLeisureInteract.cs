@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BBE RID: 27582
+	// Token: 0x02007322 RID: 29474
 	public struct INpcLeisureInteract : IFlatbufferObject
 	{
-		// Token: 0x1700CCFC RID: 52476
-		// (get) Token: 0x06030737 RID: 198455 RVA: 0x0069459E File Offset: 0x0069279E
+		// Token: 0x1700D808 RID: 55304
+		// (get) Token: 0x06033653 RID: 210515 RVA: 0x006EDE9F File Offset: 0x006EC09F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030738 RID: 198456 RVA: 0x006945AB File Offset: 0x006927AB
+		// Token: 0x06033654 RID: 210516 RVA: 0x006EDEAC File Offset: 0x006EC0AC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030739 RID: 198457 RVA: 0x006945B4 File Offset: 0x006927B4
+		// Token: 0x06033655 RID: 210517 RVA: 0x006EDEB4 File Offset: 0x006EC0B4
 		public static INpcLeisureInteract GetRootAsINpcLeisureInteract(ByteBuffer _bb)
 		{
 			return INpcLeisureInteract.GetRootAsINpcLeisureInteract(_bb, default(INpcLeisureInteract));
 		}
 
-		// Token: 0x0603073A RID: 198458 RVA: 0x006945D0 File Offset: 0x006927D0
+		// Token: 0x06033656 RID: 210518 RVA: 0x006EDED0 File Offset: 0x006EC0D0
 		public static INpcLeisureInteract GetRootAsINpcLeisureInteract(ByteBuffer _bb, INpcLeisureInteract obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603073B RID: 198459 RVA: 0x006945ED File Offset: 0x006927ED
+		// Token: 0x06033657 RID: 210519 RVA: 0x006EDEED File Offset: 0x006EC0ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603073C RID: 198460 RVA: 0x006945FC File Offset: 0x006927FC
+		// Token: 0x06033658 RID: 210520 RVA: 0x006EDEFC File Offset: 0x006EC0FC
 		public INpcLeisureInteract __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CCFD RID: 52477
-		// (get) Token: 0x0603073D RID: 198461 RVA: 0x0069460C File Offset: 0x0069280C
+		// Token: 0x1700D809 RID: 55305
+		// (get) Token: 0x06033659 RID: 210521 RVA: 0x006EDF0C File Offset: 0x006EC10C
 		public TNpcLeisureInteractOp OptionType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603073E RID: 198462 RVA: 0x00694648 File Offset: 0x00692848
+		// Token: 0x0603365A RID: 210522 RVA: 0x006EDF48 File Offset: 0x006EC148
 		public TTable? Option<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,31 +73,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0603073F RID: 198463 RVA: 0x0069468C File Offset: 0x0069288C
+		// Token: 0x0603365B RID: 210523 RVA: 0x006EDF8C File Offset: 0x006EC18C
 		public INpcExitCurrentInteract OptionAsINpcExitCurrentInteract()
 		{
 			return this.Option<INpcExitCurrentInteract>().Value;
 		}
 
-		// Token: 0x06030740 RID: 198464 RVA: 0x006946A8 File Offset: 0x006928A8
+		// Token: 0x0603365C RID: 210524 RVA: 0x006EDFA8 File Offset: 0x006EC1A8
 		public INpcSitDown OptionAsINpcSitDown()
 		{
 			return this.Option<INpcSitDown>().Value;
 		}
 
-		// Token: 0x06030741 RID: 198465 RVA: 0x006946C4 File Offset: 0x006928C4
+		// Token: 0x0603365D RID: 210525 RVA: 0x006EDFC4 File Offset: 0x006EC1C4
 		public INpcSwing OptionAsINpcSwing()
 		{
 			return this.Option<INpcSwing>().Value;
 		}
 
-		// Token: 0x06030742 RID: 198466 RVA: 0x006946E0 File Offset: 0x006928E0
+		// Token: 0x0603365E RID: 210526 RVA: 0x006EDFE0 File Offset: 0x006EC1E0
 		public INpcSwingGetUp OptionAsINpcSwingGetUp()
 		{
 			return this.Option<INpcSwingGetUp>().Value;
 		}
 
-		// Token: 0x06030743 RID: 198467 RVA: 0x006946FB File Offset: 0x006928FB
+		// Token: 0x0603365F RID: 210527 RVA: 0x006EDFFB File Offset: 0x006EC1FB
 		public static Offset<INpcLeisureInteract> CreateINpcLeisureInteract(FlatBufferBuilder builder, TNpcLeisureInteractOp Option_type = TNpcLeisureInteractOp.NONE, int OptionOffset = 0)
 		{
 			builder.StartTable(2);
@@ -106,31 +106,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return INpcLeisureInteract.EndINpcLeisureInteract(builder);
 		}
 
-		// Token: 0x06030744 RID: 198468 RVA: 0x00694718 File Offset: 0x00692918
+		// Token: 0x06033660 RID: 210528 RVA: 0x006EE018 File Offset: 0x006EC218
 		public static void StartINpcLeisureInteract(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06030745 RID: 198469 RVA: 0x00694721 File Offset: 0x00692921
+		// Token: 0x06033661 RID: 210529 RVA: 0x006EE021 File Offset: 0x006EC221
 		public static void AddOptionType(FlatBufferBuilder builder, TNpcLeisureInteractOp optionType)
 		{
 			builder.AddByte(0, (byte)optionType, 0);
 		}
 
-		// Token: 0x06030746 RID: 198470 RVA: 0x0069472C File Offset: 0x0069292C
+		// Token: 0x06033662 RID: 210530 RVA: 0x006EE02C File Offset: 0x006EC22C
 		public static void AddOption(FlatBufferBuilder builder, int optionOffset)
 		{
 			builder.AddOffset(1, optionOffset, 0);
 		}
 
-		// Token: 0x06030747 RID: 198471 RVA: 0x00694737 File Offset: 0x00692937
+		// Token: 0x06033663 RID: 210531 RVA: 0x006EE037 File Offset: 0x006EC237
 		public static Offset<INpcLeisureInteract> EndINpcLeisureInteract(FlatBufferBuilder builder)
 		{
 			return new Offset<INpcLeisureInteract>(builder.EndTable());
 		}
 
-		// Token: 0x06030748 RID: 198472 RVA: 0x00694744 File Offset: 0x00692944
+		// Token: 0x06033664 RID: 210532 RVA: 0x006EE044 File Offset: 0x006EC244
 		public INpcLeisureInteractT UnPack()
 		{
 			INpcLeisureInteractT npcLeisureInteractT = new INpcLeisureInteractT();
@@ -138,7 +138,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return npcLeisureInteractT;
 		}
 
-		// Token: 0x06030749 RID: 198473 RVA: 0x00694760 File Offset: 0x00692960
+		// Token: 0x06033665 RID: 210533 RVA: 0x006EE060 File Offset: 0x006EC260
 		public void UnPackTo(INpcLeisureInteractT _o)
 		{
 			_o.Option = new TNpcLeisureInteractOpUnion();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603074A RID: 198474 RVA: 0x00694884 File Offset: 0x00692A84
+		// Token: 0x06033666 RID: 210534 RVA: 0x006EE184 File Offset: 0x006EC384
 		public static Offset<INpcLeisureInteract> Pack(FlatBufferBuilder builder, INpcLeisureInteractT _o)
 		{
 			if (_o == null)
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return INpcLeisureInteract.CreateINpcLeisureInteract(builder, option_type, optionOffset);
 		}
 
-		// Token: 0x04011495 RID: 70805
+		// Token: 0x040123E4 RID: 74724
 		private Table __p;
 	}
 }

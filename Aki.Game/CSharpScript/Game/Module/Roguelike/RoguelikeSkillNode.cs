@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E2D RID: 20013
+	// Token: 0x02003DF6 RID: 15862
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeSkillNode : UiPanelBase
 	{
-		// Token: 0x060339B1 RID: 211377 RVA: 0x00C13268 File Offset: 0x00C11468
+		// Token: 0x0602881C RID: 165916 RVA: 0x00B5C79C File Offset: 0x00B5A99C
 		public RoguelikeSkillNode(UUIItem parent, RogueTalentTree data, UUIItem gridPanelItem)
 		{
 			this.Data = new RogueTalentTree?(data);
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.GridPanelItem = gridPanelItem;
 		}
 
-		// Token: 0x060339B2 RID: 211378 RVA: 0x00C13298 File Offset: 0x00C11498
+		// Token: 0x0602881D RID: 165917 RVA: 0x00B5C7CC File Offset: 0x00B5A9CC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060339B3 RID: 211379 RVA: 0x00C13471 File Offset: 0x00C11671
+		// Token: 0x0602881E RID: 165918 RVA: 0x00B5C9A5 File Offset: 0x00B5ABA5
 		protected void OnToggleStateChange(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -68,14 +68,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060339B4 RID: 211380 RVA: 0x00C13488 File Offset: 0x00C11688
+		// Token: 0x0602881F RID: 165919 RVA: 0x00B5C9BC File Offset: 0x00B5ABBC
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(11).OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChange));
 			base.GetExtendToggle(11).bLockStateOnSelect = true;
 		}
 
-		// Token: 0x060339B5 RID: 211381 RVA: 0x00C134B8 File Offset: 0x00C116B8
+		// Token: 0x06028820 RID: 165920 RVA: 0x00B5C9EC File Offset: 0x00B5ABEC
 		public void Refresh(RogueTalentTree? data = null)
 		{
 			this.Data = ((data != null) ? data : this.Data);
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetSprite(9).SetColor(FColor.FromHex("FFFFFF"));
 		}
 
-		// Token: 0x060339B6 RID: 211382 RVA: 0x00C1392E File Offset: 0x00C11B2E
+		// Token: 0x06028821 RID: 165921 RVA: 0x00B5CE62 File Offset: 0x00B5B062
 		public UUIItem GetOutPosItem(int offset)
 		{
 			if (offset > 0)
@@ -180,67 +180,67 @@ namespace CSharpScript.Game.Module.Roguelike
 			return base.GetItem(4);
 		}
 
-		// Token: 0x060339B7 RID: 211383 RVA: 0x00C1394F File Offset: 0x00C11B4F
+		// Token: 0x06028822 RID: 165922 RVA: 0x00B5CE83 File Offset: 0x00B5B083
 		public void SetToggleState(EToggleState state)
 		{
 			base.GetExtendToggle(11).SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x0401B5F2 RID: 112114
+		// Token: 0x04015FC5 RID: 90053
 		public RogueTalentTree? Data;
 
-		// Token: 0x0401B5F3 RID: 112115
+		// Token: 0x04015FC6 RID: 90054
 		[Nullable(2)]
 		public UUIItem PreItem;
 
-		// Token: 0x0401B5F4 RID: 112116
+		// Token: 0x04015FC7 RID: 90055
 		public List<RoguelikeSkillLine> LineComponentList = new List<RoguelikeSkillLine>();
 
-		// Token: 0x0401B5F5 RID: 112117
+		// Token: 0x04015FC8 RID: 90056
 		[Nullable(2)]
 		public UUIItem GridPanelItem;
 
-		// Token: 0x0200AFDC RID: 45020
+		// Token: 0x02009A0E RID: 39438
 		[NullableContext(0)]
 		public class ERoguelikeSkillNodeDefine
 		{
-			// Token: 0x0403563B RID: 218683
+			// Token: 0x0403006B RID: 196715
 			public const int InPos1 = 0;
 
-			// Token: 0x0403563C RID: 218684
+			// Token: 0x0403006C RID: 196716
 			public const int InPos2 = 1;
 
-			// Token: 0x0403563D RID: 218685
+			// Token: 0x0403006D RID: 196717
 			public const int InPos3 = 2;
 
-			// Token: 0x0403563E RID: 218686
+			// Token: 0x0403006E RID: 196718
 			public const int OutPos1 = 3;
 
-			// Token: 0x0403563F RID: 218687
+			// Token: 0x0403006F RID: 196719
 			public const int OutPos2 = 4;
 
-			// Token: 0x04035640 RID: 218688
+			// Token: 0x04030070 RID: 196720
 			public const int OutPos3 = 5;
 
-			// Token: 0x04035641 RID: 218689
+			// Token: 0x04030071 RID: 196721
 			public const int LockItem = 6;
 
-			// Token: 0x04035642 RID: 218690
+			// Token: 0x04030072 RID: 196722
 			public const int UnlockItem = 7;
 
-			// Token: 0x04035643 RID: 218691
+			// Token: 0x04030073 RID: 196723
 			public const int ActivateItem = 8;
 
-			// Token: 0x04035644 RID: 218692
+			// Token: 0x04030074 RID: 196724
 			public const int SkillIcon = 9;
 
-			// Token: 0x04035645 RID: 218693
+			// Token: 0x04030075 RID: 196725
 			public const int UpItem = 10;
 
-			// Token: 0x04035646 RID: 218694
+			// Token: 0x04030076 RID: 196726
 			public const int Toggle = 11;
 
-			// Token: 0x04035647 RID: 218695
+			// Token: 0x04030077 RID: 196727
 			public const int SpriteLock = 12;
 		}
 	}

@@ -3,15 +3,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049A2 RID: 18850
+	// Token: 0x0200391C RID: 14620
 	public class NavigationGroupRightPrevLinkComponent : NavigationGroupRightPrevComponent
 	{
-		// Token: 0x0603115B RID: 201051 RVA: 0x00B63D6D File Offset: 0x00B61F6D
+		// Token: 0x06025C91 RID: 154769 RVA: 0x00A9ECBD File Offset: 0x00A9CEBD
 		public NavigationGroupRightPrevLinkComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x0603115C RID: 201052 RVA: 0x00B63D78 File Offset: 0x00B61F78
+		// Token: 0x06025C92 RID: 154770 RVA: 0x00A9ECC8 File Offset: 0x00A9CEC8
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

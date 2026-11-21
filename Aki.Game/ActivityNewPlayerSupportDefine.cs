@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020013B7 RID: 5047
+// Token: 0x0200086B RID: 2155
 public static class ActivityNewPlayerSupportDefine
 {
-	// Token: 0x04003EFF RID: 16127
+	// Token: 0x04003F97 RID: 16279
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<int, string> RoleBgColor = new Dictionary<int, string>
@@ -33,30 +33,30 @@ public static class ActivityNewPlayerSupportDefine
 		}
 	};
 
-	// Token: 0x04003F00 RID: 16128
+	// Token: 0x04003F98 RID: 16280
 	public const int TRAIL_ROLE_HELP_ID = 465;
 
-	// Token: 0x04003F01 RID: 16129
+	// Token: 0x04003F99 RID: 16281
 	public const float RECEIVED_TASK_ITEM_ALPHA = 0.6f;
 
-	// Token: 0x04003F02 RID: 16130
+	// Token: 0x04003F9A RID: 16282
 	[Nullable(1)]
 	public const string TRIAL_ROLE_LIST_ITEM_RESOURCE_ID = "TogRoleTrial";
 
-	// Token: 0x04003F03 RID: 16131
+	// Token: 0x04003F9B RID: 16283
 	[StaticVariableRuleIgnore]
 	public static readonly FColor FinishTaskTextColor = FColor.FromHex("6586c1");
 
-	// Token: 0x04003F04 RID: 16132
+	// Token: 0x04003F9C RID: 16284
 	[StaticVariableRuleIgnore]
 	public static readonly FColor NormalTaskTextColor = FColor.FromHex("b6e1ff");
 
-	// Token: 0x02007A2C RID: 31276
+	// Token: 0x02006BB2 RID: 27570
 	public enum ETrialRoleStatus
 	{
-		// Token: 0x0402836D RID: 164717
+		// Token: 0x0402368A RID: 145034
 		Locked,
-		// Token: 0x0402836E RID: 164718
+		// Token: 0x0402368B RID: 145035
 		Unlocked
 	}
 }

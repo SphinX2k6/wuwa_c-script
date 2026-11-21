@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D2B RID: 7467
+// Token: 0x020011ED RID: 4589
 [NullableContext(2)]
 [Nullable(0)]
 public class TrapDefenseMachineSelectSlider : UiPanelBase
 {
-	// Token: 0x0600E22E RID: 57902 RVA: 0x0035212D File Offset: 0x0035032D
+	// Token: 0x0600B64B RID: 46667 RVA: 0x0035DB5D File Offset: 0x0035BD5D
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class TrapDefenseMachineSelectSlider : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600E22F RID: 57903 RVA: 0x00352168 File Offset: 0x00350368
+	// Token: 0x0600B64C RID: 46668 RVA: 0x0035DB98 File Offset: 0x0035BD98
 	protected override void OnStart()
 	{
 		this.Sequence = new UiSequencePlayer(base.GetRootItem());
@@ -32,7 +32,7 @@ public class TrapDefenseMachineSelectSlider : UiPanelBase
 		draggable.OnPointerEndDragCallBack.Bind(new Action<ULGUIPointerEventData>(this.OnTouchSliderEndDrag));
 	}
 
-	// Token: 0x0600E230 RID: 57904 RVA: 0x00352211 File Offset: 0x00350411
+	// Token: 0x0600B64D RID: 46669 RVA: 0x0035DC41 File Offset: 0x0035BE41
 	protected override void OnBeforeDestroy()
 	{
 		if (this.Sequence != null)
@@ -42,7 +42,7 @@ public class TrapDefenseMachineSelectSlider : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E231 RID: 57905 RVA: 0x0035222D File Offset: 0x0035042D
+	// Token: 0x0600B64E RID: 46670 RVA: 0x0035DC5D File Offset: 0x0035BE5D
 	private void OnTouchSliderValueChange(float value)
 	{
 		Action<float> sliderValueChangeNotify = this.SliderValueChangeNotify;
@@ -53,7 +53,7 @@ public class TrapDefenseMachineSelectSlider : UiPanelBase
 		sliderValueChangeNotify(value);
 	}
 
-	// Token: 0x0600E232 RID: 57906 RVA: 0x00352240 File Offset: 0x00350440
+	// Token: 0x0600B64F RID: 46671 RVA: 0x0035DC70 File Offset: 0x0035BE70
 	private void OnTouchSliderPointerDown(ULGUIPointerEventData eventData)
 	{
 		UiSequencePlayer sequence = this.Sequence;
@@ -78,7 +78,7 @@ public class TrapDefenseMachineSelectSlider : UiPanelBase
 		sliderPointerDownNotify();
 	}
 
-	// Token: 0x0600E233 RID: 57907 RVA: 0x003522D0 File Offset: 0x003504D0
+	// Token: 0x0600B650 RID: 46672 RVA: 0x0035DD00 File Offset: 0x0035BF00
 	private void OnTouchSliderDrag(ULGUIPointerEventData eventData)
 	{
 		FVector pointerPosition = eventData.pointerPosition;
@@ -101,7 +101,7 @@ public class TrapDefenseMachineSelectSlider : UiPanelBase
 		this.SetSliderValue((float)num2, true);
 	}
 
-	// Token: 0x0600E234 RID: 57908 RVA: 0x00352394 File Offset: 0x00350594
+	// Token: 0x0600B651 RID: 46673 RVA: 0x0035DDC4 File Offset: 0x0035BFC4
 	private void OnTouchSliderPointerUp(ULGUIPointerEventData eventData)
 	{
 		if (!this.IsNeedEndAnim)
@@ -127,7 +127,7 @@ public class TrapDefenseMachineSelectSlider : UiPanelBase
 		sliderEndDragNotify();
 	}
 
-	// Token: 0x0600E235 RID: 57909 RVA: 0x003523FC File Offset: 0x003505FC
+	// Token: 0x0600B652 RID: 46674 RVA: 0x0035DE2C File Offset: 0x0035C02C
 	private void OnTouchSliderEndDrag(ULGUIPointerEventData eventData)
 	{
 		if (!this.IsNeedEndAnim)
@@ -148,63 +148,63 @@ public class TrapDefenseMachineSelectSlider : UiPanelBase
 		sliderEndDragNotify();
 	}
 
-	// Token: 0x0600E236 RID: 57910 RVA: 0x00352449 File Offset: 0x00350649
+	// Token: 0x0600B653 RID: 46675 RVA: 0x0035DE79 File Offset: 0x0035C079
 	public void SetSliderValue(float value, bool bFireEvent)
 	{
 		this.Slider.SetValue(value, bFireEvent);
 	}
 
-	// Token: 0x0600E237 RID: 57911 RVA: 0x00352458 File Offset: 0x00350658
+	// Token: 0x0600B654 RID: 46676 RVA: 0x0035DE88 File Offset: 0x0035C088
 	public void RefreshSliderMaxValue(float maxValue)
 	{
 		this.Slider.SetMaxValue(maxValue, true, false);
 	}
 
-	// Token: 0x0400689C RID: 26780
+	// Token: 0x0400697B RID: 27003
 	private const float INTERVAL = 0.0225f;
 
-	// Token: 0x0400689D RID: 26781
+	// Token: 0x0400697C RID: 27004
 	protected UiSequencePlayer Sequence;
 
-	// Token: 0x0400689E RID: 26782
+	// Token: 0x0400697D RID: 27005
 	protected double Index;
 
-	// Token: 0x0400689F RID: 26783
+	// Token: 0x0400697E RID: 27006
 	[Nullable(1)]
 	private readonly Vector2D LastDragPos = Vector2D.Create();
 
-	// Token: 0x040068A0 RID: 26784
+	// Token: 0x0400697F RID: 27007
 	[Nullable(1)]
 	private readonly Vector2D CurDragPos = Vector2D.Create();
 
-	// Token: 0x040068A1 RID: 26785
+	// Token: 0x04006980 RID: 27008
 	[Nullable(1)]
 	private readonly Vector2D TempVector2D = Vector2D.Create();
 
-	// Token: 0x040068A2 RID: 26786
+	// Token: 0x04006981 RID: 27009
 	private bool IsNeedEndAnim;
 
-	// Token: 0x040068A3 RID: 26787
+	// Token: 0x04006982 RID: 27010
 	[Nullable(1)]
 	private UUISliderComponent Slider;
 
-	// Token: 0x040068A4 RID: 26788
+	// Token: 0x04006983 RID: 27011
 	public Action SliderPointerDownNotify;
 
-	// Token: 0x040068A5 RID: 26789
+	// Token: 0x04006984 RID: 27012
 	public Action<float> SliderValueChangeNotify;
 
-	// Token: 0x040068A6 RID: 26790
+	// Token: 0x04006985 RID: 27013
 	public Action SliderEndDragNotify;
 
-	// Token: 0x0200832F RID: 33583
+	// Token: 0x020074B8 RID: 29880
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AC8C RID: 175244
+		// Token: 0x04025FB4 RID: 155572
 		public const int TouchSlider = 0;
 
-		// Token: 0x0402AC8D RID: 175245
+		// Token: 0x04025FB5 RID: 155573
 		public const int TouchSliderDrag = 1;
 	}
 }

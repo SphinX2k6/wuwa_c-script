@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002847 RID: 10311
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B1A RID: 11034
 	public class IExecuteTag : IInteractEffect
 	{
-		// Token: 0x0600E493 RID: 58515 RVA: 0x0021A30B File Offset: 0x0021850B
+		// Token: 0x0600F2B8 RID: 62136 RVA: 0x0023716F File Offset: 0x0023536F
 		public static IExecuteTag Create(IExecuteTag? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045C7 RID: 17863
-		// (get) Token: 0x0600E494 RID: 58516 RVA: 0x0021A32A File Offset: 0x0021852A
+		// Token: 0x17004932 RID: 18738
+		// (get) Token: 0x0600F2B9 RID: 62137 RVA: 0x0023718E File Offset: 0x0023538E
 		public override EInteractEffectType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045C8 RID: 17864
-		// (get) Token: 0x0600E495 RID: 58517 RVA: 0x0021A338 File Offset: 0x00218538
+		// Token: 0x17004933 RID: 18739
+		// (get) Token: 0x0600F2BA RID: 62138 RVA: 0x0023719C File Offset: 0x0023539C
 		public override float? DelayTime
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045C9 RID: 17865
-		// (get) Token: 0x0600E496 RID: 58518 RVA: 0x0021A370 File Offset: 0x00218570
+		// Token: 0x17004934 RID: 18740
+		// (get) Token: 0x0600F2BB RID: 62139 RVA: 0x002371D4 File Offset: 0x002353D4
 		public virtual List<int> Tags
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E71 RID: 32369
+		// Token: 0x0400852E RID: 34094
 		private IExecuteTag Instance;
 
-		// Token: 0x04007E72 RID: 32370
+		// Token: 0x0400852F RID: 34095
 		private List<int> _TagsCache;
 
-		// Token: 0x04007E73 RID: 32371
+		// Token: 0x04008530 RID: 34096
 		private bool _TagsInited;
 	}
 }

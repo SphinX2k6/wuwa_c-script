@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A84 RID: 2692
+	// Token: 0x02000B4E RID: 2894
 	public class IInteractScreenDetectShapeCircle : IInteractScreenDetectShapeBase
 	{
-		// Token: 0x06003DE9 RID: 15849 RVA: 0x0009E8EA File Offset: 0x0009CAEA
-		[NullableContext(1)]
+		// Token: 0x06004212 RID: 16914 RVA: 0x000A7EA2 File Offset: 0x000A60A2
 		public static IInteractScreenDetectShapeCircle Create(IInteractScreenDetectShapeCircle? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E9E RID: 3742
-		// (get) Token: 0x06003DEA RID: 15850 RVA: 0x0009E909 File Offset: 0x0009CB09
+		// Token: 0x17000F71 RID: 3953
+		// (get) Token: 0x06004213 RID: 16915 RVA: 0x000A7EC1 File Offset: 0x000A60C1
 		public override EInteractScreenDetectShape Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E9F RID: 3743
-		// (get) Token: 0x06003DEB RID: 15851 RVA: 0x0009E916 File Offset: 0x0009CB16
+		// Token: 0x17000F72 RID: 3954
+		// (get) Token: 0x06004214 RID: 16916 RVA: 0x000A7ECE File Offset: 0x000A60CE
 		public virtual float RadiusRatio
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002273 RID: 8819
+		// Token: 0x0400248F RID: 9359
 		private IInteractScreenDetectShapeCircle Instance;
 	}
 }

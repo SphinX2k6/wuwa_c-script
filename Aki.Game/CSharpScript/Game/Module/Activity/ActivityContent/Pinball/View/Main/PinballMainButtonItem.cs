@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 {
-	// Token: 0x02006330 RID: 25392
+	// Token: 0x020052AE RID: 21166
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PinballMainButtonItem : UiPanelBase
 	{
-		// Token: 0x0603FE1D RID: 261661 RVA: 0x00F74470 File Offset: 0x00F72670
+		// Token: 0x06034ADE RID: 215774 RVA: 0x00EBB3CC File Offset: 0x00EB95CC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FE1E RID: 261662 RVA: 0x00F74538 File Offset: 0x00F72738
+		// Token: 0x06034ADF RID: 215775 RVA: 0x00EBB494 File Offset: 0x00EB9694
 		[NullableContext(1)]
 		public void SetConfigData(IPinballMainButtonConfig config)
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FE1F RID: 261663 RVA: 0x00F745D8 File Offset: 0x00F727D8
+		// Token: 0x06034AE0 RID: 215776 RVA: 0x00EBB534 File Offset: 0x00EB9734
 		public void SetButtonState()
 		{
 			bool flag = FunctionModel.Instance.IsOpen(this.FunctionId);
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			base.SetUiActive(flag && flag2);
 		}
 
-		// Token: 0x0603FE20 RID: 261664 RVA: 0x00F74616 File Offset: 0x00F72816
+		// Token: 0x06034AE1 RID: 215777 RVA: 0x00EBB572 File Offset: 0x00EB9772
 		public void SetProgressText()
 		{
 			if (this.SetTextCallback != null)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			text.SetText("", true);
 		}
 
-		// Token: 0x0603FE21 RID: 261665 RVA: 0x00F7464C File Offset: 0x00F7284C
+		// Token: 0x06034AE2 RID: 215778 RVA: 0x00EBB5A8 File Offset: 0x00EB97A8
 		public void SetRedDot()
 		{
 			if (this.ShowRedDotCallback == null)
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			item2.SetUIActive(this.ShowRedDotCallback());
 		}
 
-		// Token: 0x0603FE22 RID: 261666 RVA: 0x00F7469D File Offset: 0x00F7289D
+		// Token: 0x06034AE3 RID: 215779 RVA: 0x00EBB5F9 File Offset: 0x00EB97F9
 		public void BindRedDot()
 		{
 			if (this.RedDotName != null)
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FE23 RID: 261667 RVA: 0x00F746CA File Offset: 0x00F728CA
+		// Token: 0x06034AE4 RID: 215780 RVA: 0x00EBB626 File Offset: 0x00EB9826
 		public void UnBindRedDot()
 		{
 			if (this.RedDotName != null)
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FE24 RID: 261668 RVA: 0x00F746F6 File Offset: 0x00F728F6
+		// Token: 0x06034AE5 RID: 215781 RVA: 0x00EBB652 File Offset: 0x00EB9852
 		public void Clear()
 		{
 			this.ClickCallBack = null;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x0603FE25 RID: 261669 RVA: 0x00F7471A File Offset: 0x00F7291A
+		// Token: 0x06034AE6 RID: 215782 RVA: 0x00EBB676 File Offset: 0x00EB9876
 		private void ButtonClick()
 		{
 			Action clickCallBack = this.ClickCallBack;
@@ -152,33 +152,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			clickCallBack();
 		}
 
-		// Token: 0x04021533 RID: 136499
+		// Token: 0x0401BE62 RID: 114274
 		private int FunctionId;
 
-		// Token: 0x04021534 RID: 136500
+		// Token: 0x0401BE63 RID: 114275
 		private ERedDotName? RedDotName;
 
-		// Token: 0x04021535 RID: 136501
+		// Token: 0x0401BE64 RID: 114276
 		private Action ClickCallBack;
 
-		// Token: 0x04021536 RID: 136502
+		// Token: 0x0401BE65 RID: 114277
 		private Func<bool> ShowRedDotCallback;
 
-		// Token: 0x04021537 RID: 136503
+		// Token: 0x0401BE66 RID: 114278
 		private Action<UUIText> SetTextCallback;
 
-		// Token: 0x04021538 RID: 136504
+		// Token: 0x0401BE67 RID: 114279
 		private Func<bool> ShowCallback;
 
-		// Token: 0x0200C52A RID: 50474
+		// Token: 0x0200AF11 RID: 44817
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B821 RID: 243745
+			// Token: 0x04036183 RID: 221571
 			Button,
-			// Token: 0x0403B822 RID: 243746
+			// Token: 0x04036184 RID: 221572
 			RedDotItem,
-			// Token: 0x0403B823 RID: 243747
+			// Token: 0x04036185 RID: 221573
 			TxtProgress
 		}
 	}

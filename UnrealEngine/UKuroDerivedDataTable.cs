@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020017F7 RID: 6135
+	// Token: 0x02000368 RID: 872
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroData.KuroDerivedDataTable")]
 	[UnrealStructLayout(488, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 488)]
 	public class UKuroDerivedDataTable : UDataTable, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06016AF7 RID: 92919 RVA: 0x00211BD7 File Offset: 0x0020FDD7
+		// Token: 0x060058BE RID: 22718 RVA: 0x0007D0BF File Offset: 0x0007B2BF
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroDerivedDataTable._ClassPtr;
 		}
 
-		// Token: 0x06016AF8 RID: 92920 RVA: 0x00211BE4 File Offset: 0x0020FDE4
+		// Token: 0x060058BF RID: 22719 RVA: 0x0007D0CC File Offset: 0x0007B2CC
 		public UKuroDerivedDataTable() : this(BuiltinUtils.AllocNativeUObject(UKuroDerivedDataTable.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06016AF9 RID: 92921 RVA: 0x00211C0C File Offset: 0x0020FE0C
+		// Token: 0x060058C0 RID: 22720 RVA: 0x0007D0F4 File Offset: 0x0007B2F4
 		public UKuroDerivedDataTable(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroDerivedDataTable.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005BB2 RID: 23474
-		// (get) Token: 0x06016AFA RID: 92922 RVA: 0x00211C3F File Offset: 0x0020FE3F
-		// (set) Token: 0x06016AFB RID: 92923 RVA: 0x00211C53 File Offset: 0x0020FE53
+		// Token: 0x17001186 RID: 4486
+		// (get) Token: 0x060058C1 RID: 22721 RVA: 0x0007D127 File Offset: 0x0007B327
+		// (set) Token: 0x060058C2 RID: 22722 RVA: 0x0007D13B File Offset: 0x0007B33B
 		[Nullable(2)]
 		public unsafe UDataTable ParentDataTable
 		{
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BB3 RID: 23475
-		// (get) Token: 0x06016AFC RID: 92924 RVA: 0x00211C68 File Offset: 0x0020FE68
-		// (set) Token: 0x06016AFD RID: 92925 RVA: 0x00211CA1 File Offset: 0x0020FEA1
+		// Token: 0x17001187 RID: 4487
+		// (get) Token: 0x060058C3 RID: 22723 RVA: 0x0007D150 File Offset: 0x0007B350
+		// (set) Token: 0x060058C4 RID: 22724 RVA: 0x0007D189 File Offset: 0x0007B389
 		public TSet<string> OverriddenFields
 		{
 			get
@@ -68,9 +68,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BB4 RID: 23476
-		// (get) Token: 0x06016AFE RID: 92926 RVA: 0x00211CB0 File Offset: 0x0020FEB0
-		// (set) Token: 0x06016AFF RID: 92927 RVA: 0x00211CE9 File Offset: 0x0020FEE9
+		// Token: 0x17001188 RID: 4488
+		// (get) Token: 0x060058C5 RID: 22725 RVA: 0x0007D198 File Offset: 0x0007B398
+		// (set) Token: 0x060058C6 RID: 22726 RVA: 0x0007D1D1 File Offset: 0x0007B3D1
 		public TSet<FName> ChildOnlyRows
 		{
 			get
@@ -89,113 +89,113 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06016B00 RID: 92928 RVA: 0x00211CF7 File Offset: 0x0020FEF7
+		// Token: 0x060058C7 RID: 22727 RVA: 0x0007D1DF File Offset: 0x0007B3DF
 		public void UnmarkFieldOverridden(FName RowName, FName PropertyName)
 		{
 			UKuroDerivedDataTable.__UnmarkFieldOverridden_Internal(base.NativePtr, RowName, PropertyName);
 		}
 
-		// Token: 0x06016B01 RID: 92929 RVA: 0x00211D06 File Offset: 0x0020FF06
+		// Token: 0x060058C8 RID: 22728 RVA: 0x0007D1EE File Offset: 0x0007B3EE
 		public void RevertRowToParent(FName RowName)
 		{
 			UKuroDerivedDataTable.__RevertRowToParent_Internal(base.NativePtr, RowName);
 		}
 
-		// Token: 0x06016B02 RID: 92930 RVA: 0x00211D14 File Offset: 0x0020FF14
+		// Token: 0x060058C9 RID: 22729 RVA: 0x0007D1FC File Offset: 0x0007B3FC
 		public void MarkRowFullyOverridden(FName RowName)
 		{
 			UKuroDerivedDataTable.__MarkRowFullyOverridden_Internal(base.NativePtr, RowName);
 		}
 
-		// Token: 0x06016B03 RID: 92931 RVA: 0x00211D22 File Offset: 0x0020FF22
+		// Token: 0x060058CA RID: 22730 RVA: 0x0007D20A File Offset: 0x0007B40A
 		public void MarkFieldOverridden(FName RowName, FName PropertyName)
 		{
 			UKuroDerivedDataTable.__MarkFieldOverridden_Internal(base.NativePtr, RowName, PropertyName);
 		}
 
-		// Token: 0x06016B04 RID: 92932 RVA: 0x00211D31 File Offset: 0x0020FF31
+		// Token: 0x060058CB RID: 22731 RVA: 0x0007D219 File Offset: 0x0007B419
 		public bool IsFieldOverridden(FName RowName, FName PropertyName)
 		{
 			return UKuroDerivedDataTable.__IsFieldOverridden_Internal(base.NativePtr, RowName, PropertyName);
 		}
 
-		// Token: 0x06016B05 RID: 92933 RVA: 0x00211D40 File Offset: 0x0020FF40
+		// Token: 0x060058CC RID: 22732 RVA: 0x0007D228 File Offset: 0x0007B428
 		public bool IsChildOnlyRow(FName RowName)
 		{
 			return UKuroDerivedDataTable.__IsChildOnlyRow_Internal(base.NativePtr, RowName);
 		}
 
-		// Token: 0x06016B06 RID: 92934 RVA: 0x00211D4E File Offset: 0x0020FF4E
+		// Token: 0x060058CD RID: 22733 RVA: 0x0007D236 File Offset: 0x0007B436
 		public bool HasAnyOverrideInRow(FName RowName)
 		{
 			return UKuroDerivedDataTable.__HasAnyOverrideInRow_Internal(base.NativePtr, RowName);
 		}
 
-		// Token: 0x06016B07 RID: 92935 RVA: 0x00211D5C File Offset: 0x0020FF5C
+		// Token: 0x060058CE RID: 22734 RVA: 0x0007D244 File Offset: 0x0007B444
 		public TArray<FName> GetAllResolvedRowNames()
 		{
 			return new TArray<FName>(UKuroDerivedDataTable.__GetAllResolvedRowNames_Internal(base.NativePtr), null);
 		}
 
-		// Token: 0x06016B08 RID: 92936
+		// Token: 0x060058CF RID: 22735
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnmarkFieldOverridden_Internal(IntPtr @this, FName RowName, FName PropertyName);
 
-		// Token: 0x06016B09 RID: 92937
+		// Token: 0x060058D0 RID: 22736
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RevertRowToParent_Internal(IntPtr @this, FName RowName);
 
-		// Token: 0x06016B0A RID: 92938
+		// Token: 0x060058D1 RID: 22737
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MarkRowFullyOverridden_Internal(IntPtr @this, FName RowName);
 
-		// Token: 0x06016B0B RID: 92939
+		// Token: 0x060058D2 RID: 22738
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MarkFieldOverridden_Internal(IntPtr @this, FName RowName, FName PropertyName);
 
-		// Token: 0x06016B0C RID: 92940
+		// Token: 0x060058D3 RID: 22739
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsFieldOverridden_Internal(IntPtr @this, FName RowName, FName PropertyName);
 
-		// Token: 0x06016B0D RID: 92941
+		// Token: 0x060058D4 RID: 22740
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsChildOnlyRow_Internal(IntPtr @this, FName RowName);
 
-		// Token: 0x06016B0E RID: 92942
+		// Token: 0x060058D5 RID: 22741
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasAnyOverrideInRow_Internal(IntPtr @this, FName RowName);
 
-		// Token: 0x06016B0F RID: 92943
+		// Token: 0x060058D6 RID: 22742
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetAllResolvedRowNames_Internal(IntPtr @this);
 
-		// Token: 0x06016B10 RID: 92944 RVA: 0x00211D6F File Offset: 0x0020FF6F
+		// Token: 0x060058D7 RID: 22743 RVA: 0x0007D257 File Offset: 0x0007B457
 		static UKuroDerivedDataTable()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroData.KuroDerivedDataTable");
 		}
 
-		// Token: 0x06016B11 RID: 92945 RVA: 0x00211D7D File Offset: 0x0020FF7D
+		// Token: 0x060058D8 RID: 22744 RVA: 0x0007D265 File Offset: 0x0007B465
 		protected UKuroDerivedDataTable(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C50F RID: 50447
+		// Token: 0x040024A4 RID: 9380
 		public new const string __ObjectPath = "/Script/KuroData.KuroDerivedDataTable";
 
-		// Token: 0x0400C510 RID: 50448
+		// Token: 0x040024A5 RID: 9381
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C511 RID: 50449
+		// Token: 0x040024A6 RID: 9382
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C512 RID: 50450
+		// Token: 0x040024A7 RID: 9383
 		internal static int __PropertyOffset_ParentDataTable;
 
-		// Token: 0x0400C513 RID: 50451
+		// Token: 0x040024A8 RID: 9384
 		internal static int __PropertyOffset_OverriddenFields;
 
-		// Token: 0x0400C514 RID: 50452
+		// Token: 0x040024A9 RID: 9385
 		[Nullable(new byte[]
 		{
 			2,
@@ -203,10 +203,10 @@ namespace UnrealEngine
 		})]
 		private TSet<string> _OverriddenFields;
 
-		// Token: 0x0400C515 RID: 50453
+		// Token: 0x040024AA RID: 9386
 		internal static int __PropertyOffset_ChildOnlyRows;
 
-		// Token: 0x0400C516 RID: 50454
+		// Token: 0x040024AB RID: 9387
 		[Nullable(2)]
 		private TSet<FName> _ChildOnlyRows;
 	}

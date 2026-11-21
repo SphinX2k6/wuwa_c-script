@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005313 RID: 21267
+	// Token: 0x020042E3 RID: 17123
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueResEndingView : UiViewBase
 	{
-		// Token: 0x0603664A RID: 222794 RVA: 0x00CDF0CC File Offset: 0x00CDD2CC
+		// Token: 0x0602B546 RID: 177478 RVA: 0x00C2CA9C File Offset: 0x00C2AC9C
 		public RogueResEndingView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603664B RID: 222795 RVA: 0x00CDF0F8 File Offset: 0x00CDD2F8
+		// Token: 0x0602B547 RID: 177479 RVA: 0x00C2CAC8 File Offset: 0x00C2ACC8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x0603664C RID: 222796 RVA: 0x00CDF258 File Offset: 0x00CDD458
+		// Token: 0x0602B548 RID: 177480 RVA: 0x00C2CC28 File Offset: 0x00C2AE28
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueResEndingView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -56,13 +56,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603664D RID: 222797 RVA: 0x00CDF29B File Offset: 0x00CDD49B
+		// Token: 0x0602B549 RID: 177481 RVA: 0x00C2CC6B File Offset: 0x00C2AE6B
 		protected override void OnStart()
 		{
 			this.SeasonId = (int)this.OpenParam;
 		}
 
-		// Token: 0x0603664E RID: 222798 RVA: 0x00CDF2B0 File Offset: 0x00CDD4B0
+		// Token: 0x0602B54A RID: 177482 RVA: 0x00C2CC80 File Offset: 0x00C2AE80
 		protected override void OnBeforeShow()
 		{
 			int[] endingAwardCount = ActivityPermanentRogueModel.Instance.GetEndingAwardCount(this.SeasonId);
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			item3.SetUIActive(endingCount[0] != 0);
 		}
 
-		// Token: 0x0603664F RID: 222799 RVA: 0x00CDF39B File Offset: 0x00CDD59B
+		// Token: 0x0602B54B RID: 177483 RVA: 0x00C2CD6B File Offset: 0x00C2AF6B
 		protected override void OnBeforeHide()
 		{
 			RogueButtonItemA btnMulti = this.BtnMulti;
@@ -108,14 +108,14 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			btnMulti.UnBindRedDot();
 		}
 
-		// Token: 0x06036650 RID: 222800 RVA: 0x00CDF3AD File Offset: 0x00CDD5AD
+		// Token: 0x0602B54C RID: 177484 RVA: 0x00C2CD7D File Offset: 0x00C2AF7D
 		protected override void OnBeforeDestroy()
 		{
 			this.CaptionItem = null;
 			this.BtnMulti = null;
 		}
 
-		// Token: 0x06036651 RID: 222801 RVA: 0x00CDF3C0 File Offset: 0x00CDD5C0
+		// Token: 0x0602B54D RID: 177485 RVA: 0x00C2CD90 File Offset: 0x00C2AF90
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.PermanentRogueRewardUpdate, new Action(this.OnRefreshAward));
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			base.GetScrollViewWithScrollbar(8).OnScrollValueChange.Bind(new Action<FVector2D>(this.OnScrollValueChanged));
 		}
 
-		// Token: 0x06036652 RID: 222802 RVA: 0x00CDF478 File Offset: 0x00CDD678
+		// Token: 0x0602B54E RID: 177486 RVA: 0x00C2CE48 File Offset: 0x00C2B048
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.PermanentRogueRewardUpdate, new Action(this.OnRefreshAward));
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			base.GetScrollViewWithScrollbar(8).OnScrollValueChange.Unbind();
 		}
 
-		// Token: 0x06036653 RID: 222803 RVA: 0x00CDF517 File Offset: 0x00CDD717
+		// Token: 0x0602B54F RID: 177487 RVA: 0x00C2CEE7 File Offset: 0x00C2B0E7
 		private RogueEndingCollectionItem InitEndingItem()
 		{
 			return new RogueEndingCollectionItem
@@ -146,13 +146,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x06036654 RID: 222804 RVA: 0x00CDF530 File Offset: 0x00CDD730
+		// Token: 0x0602B550 RID: 177488 RVA: 0x00C2CF00 File Offset: 0x00C2B100
 		private void OnClickBack()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06036655 RID: 222805 RVA: 0x00CDF53C File Offset: 0x00CDD73C
+		// Token: 0x0602B551 RID: 177489 RVA: 0x00C2CF0C File Offset: 0x00C2B10C
 		private void OnClickItem(int id)
 		{
 			bool endingIsUnlock = ActivityPermanentRogueModel.Instance.GetEndingIsUnlock(id);
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			UiManager.Instance.OpenView(EUiViewName.RogueResEndingSubView, id, null);
 		}
 
-		// Token: 0x06036656 RID: 222806 RVA: 0x00CDF59E File Offset: 0x00CDD79E
+		// Token: 0x0602B552 RID: 177490 RVA: 0x00C2CF6E File Offset: 0x00C2B16E
 		private void OnClickTask()
 		{
 			UiManager.Instance.OpenView(EUiViewName.ActivityRewardPopUpView, ActivityPermanentRogueModel.Instance.GetEndingAwardViewData(this.SeasonId), delegate(bool success, int viewId)
@@ -180,12 +180,12 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			});
 		}
 
-		// Token: 0x06036657 RID: 222807 RVA: 0x00CDF5CB File Offset: 0x00CDD7CB
+		// Token: 0x0602B553 RID: 177491 RVA: 0x00C2CF9B File Offset: 0x00C2B19B
 		private void OnRefreshAward()
 		{
 		}
 
-		// Token: 0x06036658 RID: 222808 RVA: 0x00CDF5D0 File Offset: 0x00CDD7D0
+		// Token: 0x0602B554 RID: 177492 RVA: 0x00C2CFA0 File Offset: 0x00C2B1A0
 		private void OnClickLeft()
 		{
 			int count = this.EndingRedDotList.Count;
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.EndingScrollView.ScrollTo(itemByIndex3, false);
 		}
 
-		// Token: 0x06036659 RID: 222809 RVA: 0x00CDF674 File Offset: 0x00CDD874
+		// Token: 0x0602B555 RID: 177493 RVA: 0x00C2D044 File Offset: 0x00C2B244
 		private void OnClickRight()
 		{
 			int count = this.EndingRedDotList.Count;
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.EndingScrollView.ScrollTo(itemByIndex3, false);
 		}
 
-		// Token: 0x0603665A RID: 222810 RVA: 0x00CDF716 File Offset: 0x00CDD916
+		// Token: 0x0602B556 RID: 177494 RVA: 0x00C2D0E6 File Offset: 0x00C2B2E6
 		private void OnSizeSliderValueChanged(float value)
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(8);
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.StartFromSlider = true;
 		}
 
-		// Token: 0x0603665B RID: 222811 RVA: 0x00CDF738 File Offset: 0x00CDD938
+		// Token: 0x0602B557 RID: 177495 RVA: 0x00C2D108 File Offset: 0x00C2B308
 		private void OnScrollValueChanged(FVector2D inVector)
 		{
 			float x = inVector.X;
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.RefreshRedDotBtn();
 		}
 
-		// Token: 0x0603665C RID: 222812 RVA: 0x00CDF77C File Offset: 0x00CDD97C
+		// Token: 0x0602B558 RID: 177496 RVA: 0x00C2D14C File Offset: 0x00C2B34C
 		private void RefreshEndingRedDotList()
 		{
 			this.EndingRedDotList.Clear();
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.RefreshRedDotBtn();
 		}
 
-		// Token: 0x0603665D RID: 222813 RVA: 0x00CDF7E4 File Offset: 0x00CDD9E4
+		// Token: 0x0602B559 RID: 177497 RVA: 0x00C2D1B4 File Offset: 0x00C2B3B4
 		private void RefreshEndingScrollChange(int endingId)
 		{
 			int num = this.EndingIdList.IndexOf(endingId);
@@ -272,13 +272,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.EndingScrollView.ScrollTo(itemByIndex, false);
 		}
 
-		// Token: 0x0603665E RID: 222814 RVA: 0x00CDF81D File Offset: 0x00CDDA1D
+		// Token: 0x0602B55A RID: 177498 RVA: 0x00C2D1ED File Offset: 0x00C2B3ED
 		private void OnStartAnimStart(string param)
 		{
 			this.RefreshEnding();
 		}
 
-		// Token: 0x0603665F RID: 222815 RVA: 0x00CDF828 File Offset: 0x00CDDA28
+		// Token: 0x0602B55B RID: 177499 RVA: 0x00C2D1F8 File Offset: 0x00C2B3F8
 		private void RefreshEnding()
 		{
 			for (int i = 0; i < this.EndingIdList.Count; i++)
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			endingScrollView.RefreshByData(this.EndingItemList, new Action(this.RefreshEndingRedDotList), true);
 		}
 
-		// Token: 0x06036660 RID: 222816 RVA: 0x00CDF8DC File Offset: 0x00CDDADC
+		// Token: 0x0602B55C RID: 177500 RVA: 0x00C2D2AC File Offset: 0x00C2B4AC
 		private void RefreshRedDotBtn()
 		{
 			if (this.EndingRedDotList.Count == 0)
@@ -340,21 +340,21 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x0401CBEF RID: 117743
+		// Token: 0x04017625 RID: 95781
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401CBF0 RID: 117744
+		// Token: 0x04017626 RID: 95782
 		[Nullable(2)]
 		private RogueButtonItemA BtnMulti;
 
-		// Token: 0x0401CBF1 RID: 117745
+		// Token: 0x04017627 RID: 95783
 		private const float ROTATION_PARAM = 9f;
 
-		// Token: 0x0401CBF2 RID: 117746
+		// Token: 0x04017628 RID: 95784
 		private const float REDDOT_TOLERANCE = 0.1f;
 
-		// Token: 0x0401CBF3 RID: 117747
+		// Token: 0x04017629 RID: 95785
 		[Nullable(new byte[]
 		{
 			2,
@@ -363,19 +363,19 @@ namespace CSharpScript.Game.Module.PermanentRogue
 		})]
 		private GenericScrollViewNew<RogueEndingCollectionItem, IRogueEndingItemParam> EndingScrollView;
 
-		// Token: 0x0401CBF4 RID: 117748
+		// Token: 0x0401762A RID: 95786
 		private int SeasonId;
 
-		// Token: 0x0401CBF5 RID: 117749
+		// Token: 0x0401762B RID: 95787
 		private List<int> EndingIdList = new List<int>();
 
-		// Token: 0x0401CBF6 RID: 117750
+		// Token: 0x0401762C RID: 95788
 		private readonly List<int> EndingRedDotList = new List<int>();
 
-		// Token: 0x0401CBF7 RID: 117751
+		// Token: 0x0401762D RID: 95789
 		private readonly List<IRogueEndingItemParam> EndingItemList = new List<IRogueEndingItemParam>();
 
-		// Token: 0x0401CBF8 RID: 117752
+		// Token: 0x0401762E RID: 95790
 		private bool StartFromSlider;
 	}
 }

@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Manufacture.Compose;
 using FilterDefine;
 
-// Token: 0x02001837 RID: 6199
+// Token: 0x02000CF0 RID: 3312
 public class ComposeFilter : CommonFilter
 {
-	// Token: 0x0600B5CF RID: 46543 RVA: 0x00291DD0 File Offset: 0x0028FFD0
+	// Token: 0x060089BA RID: 35258 RVA: 0x0029C4F0 File Offset: 0x0029A6F0
 	[NullableContext(1)]
 	protected object GetComposeMenuList(object data, Dictionary<int, string> currentSelectMap)
 	{
@@ -23,7 +23,7 @@ public class ComposeFilter : CommonFilter
 		return 0;
 	}
 
-	// Token: 0x0600B5D0 RID: 46544 RVA: 0x00291E1E File Offset: 0x0029001E
+	// Token: 0x060089BB RID: 35259 RVA: 0x0029C53E File Offset: 0x0029A73E
 	protected override void OnInitFilterMap()
 	{
 		this.FilterMap.Add(FilterDefine.EFilterType.ComposeMenu, new TFilterConfig(this.GetComposeMenuList));

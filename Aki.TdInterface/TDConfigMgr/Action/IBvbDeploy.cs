@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001828 RID: 6184
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020019B3 RID: 6579
 	public class IBvbDeploy : IBvbPlayerOperationType
 	{
-		// Token: 0x060084B5 RID: 33973 RVA: 0x0013BFEC File Offset: 0x0013A1EC
-		[NullableContext(1)]
+		// Token: 0x06008BDB RID: 35803 RVA: 0x0014B7E0 File Offset: 0x001499E0
 		private IBvbDeploy_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060084B6 RID: 33974 RVA: 0x0013C024 File Offset: 0x0013A224
-		[NullableContext(1)]
+		// Token: 0x06008BDC RID: 35804 RVA: 0x0014B818 File Offset: 0x00149A18
 		public static IBvbDeploy Create([Nullable(2)] IBvbDeploy instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060084B7 RID: 33975 RVA: 0x0013C037 File Offset: 0x0013A237
-		[NullableContext(1)]
+		// Token: 0x06008BDD RID: 35805 RVA: 0x0014B82B File Offset: 0x00149A2B
 		public static IBvbDeploy CreateFromSetValue([Nullable(2)] IBvbDeploy_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060084B8 RID: 33976 RVA: 0x0013C04A File Offset: 0x0013A24A
-		[NullableContext(1)]
+		// Token: 0x06008BDE RID: 35806 RVA: 0x0014B83E File Offset: 0x00149A3E
 		public new IBvbDeploy_SetValue ToSetValue()
 		{
 			return new IBvbDeploy_SetValue
@@ -67,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B73 RID: 11123
-		// (get) Token: 0x060084B9 RID: 33977 RVA: 0x0013C081 File Offset: 0x0013A281
-		// (set) Token: 0x060084BA RID: 33978 RVA: 0x0013C0AC File Offset: 0x0013A2AC
+		// Token: 0x17002D6D RID: 11629
+		// (get) Token: 0x06008BDF RID: 35807 RVA: 0x0014B875 File Offset: 0x00149A75
+		// (set) Token: 0x06008BE0 RID: 35808 RVA: 0x0014B8A0 File Offset: 0x00149AA0
 		public override EBvbPlayerOperationType Type
 		{
 			get
@@ -90,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B74 RID: 11124
-		// (get) Token: 0x060084BB RID: 33979 RVA: 0x0013C0BC File Offset: 0x0013A2BC
-		// (set) Token: 0x060084BC RID: 33980 RVA: 0x0013C0F6 File Offset: 0x0013A2F6
+		// Token: 0x17002D6E RID: 11630
+		// (get) Token: 0x06008BE1 RID: 35809 RVA: 0x0014B8B0 File Offset: 0x00149AB0
+		// (set) Token: 0x06008BE2 RID: 35810 RVA: 0x0014B8EA File Offset: 0x00149AEA
 		public virtual int? HandCardIndex
 		{
 			get
@@ -114,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B75 RID: 11125
-		// (get) Token: 0x060084BD RID: 33981 RVA: 0x0013C104 File Offset: 0x0013A304
-		// (set) Token: 0x060084BE RID: 33982 RVA: 0x0013C13E File Offset: 0x0013A33E
+		// Token: 0x17002D6F RID: 11631
+		// (get) Token: 0x06008BE3 RID: 35811 RVA: 0x0014B8F8 File Offset: 0x00149AF8
+		// (set) Token: 0x06008BE4 RID: 35812 RVA: 0x0014B932 File Offset: 0x00149B32
 		public virtual int? BoardPosIndex
 		{
 			get
@@ -138,11 +132,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B76 RID: 11126
-		// (get) Token: 0x060084BF RID: 33983 RVA: 0x0013C14C File Offset: 0x0013A34C
-		// (set) Token: 0x060084C0 RID: 33984 RVA: 0x0013C173 File Offset: 0x0013A373
+		// Token: 0x17002D70 RID: 11632
+		// (get) Token: 0x06008BE5 RID: 35813 RVA: 0x0014B940 File Offset: 0x00149B40
+		// (set) Token: 0x06008BE6 RID: 35814 RVA: 0x0014B967 File Offset: 0x00149B67
+		[Nullable(2)]
 		public virtual List<int> BoardPosIndexList
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -156,16 +152,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.BoardPosIndexList;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().BoardPosIndexList = value;
 			}
 		}
 
-		// Token: 0x040053F2 RID: 21490
+		// Token: 0x0400583E RID: 22590
+		[Nullable(2)]
 		protected new IBvbDeploy FbInstance;
 
-		// Token: 0x040053F3 RID: 21491
+		// Token: 0x0400583F RID: 22591
+		[Nullable(2)]
 		protected new IBvbDeploy_SetValue PocoInterface;
 	}
 }

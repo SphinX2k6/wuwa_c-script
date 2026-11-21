@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B80 RID: 2944
+	// Token: 0x02000C61 RID: 3169
 	public struct CircumFluenceTask : IFlatbufferObject
 	{
-		// Token: 0x17000840 RID: 2112
-		// (get) Token: 0x060055EB RID: 21995 RVA: 0x001F6CC1 File Offset: 0x001F4EC1
+		// Token: 0x17000883 RID: 2179
+		// (get) Token: 0x06005BB9 RID: 23481 RVA: 0x00216A79 File Offset: 0x00214C79
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060055EC RID: 21996 RVA: 0x001F6CCE File Offset: 0x001F4ECE
+		// Token: 0x06005BBA RID: 23482 RVA: 0x00216A86 File Offset: 0x00214C86
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060055ED RID: 21997 RVA: 0x001F6CD8 File Offset: 0x001F4ED8
+		// Token: 0x06005BBB RID: 23483 RVA: 0x00216A90 File Offset: 0x00214C90
 		public static CircumFluenceTask GetRootAsCircumFluenceTask(ByteBuffer _bb)
 		{
 			return CircumFluenceTask.GetRootAsCircumFluenceTask(_bb, default(CircumFluenceTask));
 		}
 
-		// Token: 0x060055EE RID: 21998 RVA: 0x001F6CF4 File Offset: 0x001F4EF4
+		// Token: 0x06005BBC RID: 23484 RVA: 0x00216AAC File Offset: 0x00214CAC
 		public static CircumFluenceTask GetRootAsCircumFluenceTask(ByteBuffer _bb, CircumFluenceTask obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060055EF RID: 21999 RVA: 0x001F6D11 File Offset: 0x001F4F11
+		// Token: 0x06005BBD RID: 23485 RVA: 0x00216AC9 File Offset: 0x00214CC9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060055F0 RID: 22000 RVA: 0x001F6D20 File Offset: 0x001F4F20
+		// Token: 0x06005BBE RID: 23486 RVA: 0x00216AD8 File Offset: 0x00214CD8
 		public CircumFluenceTask __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000841 RID: 2113
-		// (get) Token: 0x060055F1 RID: 22001 RVA: 0x001F6D30 File Offset: 0x001F4F30
+		// Token: 0x17000884 RID: 2180
+		// (get) Token: 0x06005BBF RID: 23487 RVA: 0x00216AE8 File Offset: 0x00214CE8
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000842 RID: 2114
-		// (get) Token: 0x060055F2 RID: 22002 RVA: 0x001F6D6C File Offset: 0x001F4F6C
+		// Token: 0x17000885 RID: 2181
+		// (get) Token: 0x06005BC0 RID: 23488 RVA: 0x00216B24 File Offset: 0x00214D24
 		public int TaskType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000843 RID: 2115
-		// (get) Token: 0x060055F3 RID: 22003 RVA: 0x001F6DA8 File Offset: 0x001F4FA8
+		// Token: 0x17000886 RID: 2182
+		// (get) Token: 0x06005BC1 RID: 23489 RVA: 0x00216B60 File Offset: 0x00214D60
 		public string TargetName
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060055F4 RID: 22004 RVA: 0x001F6DDF File Offset: 0x001F4FDF
+		// Token: 0x06005BC2 RID: 23490 RVA: 0x00216B97 File Offset: 0x00214D97
 		public Span<byte> GetTargetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060055F5 RID: 22005 RVA: 0x001F6DEE File Offset: 0x001F4FEE
+		// Token: 0x06005BC3 RID: 23491 RVA: 0x00216BA6 File Offset: 0x00214DA6
 		public byte[] GetTargetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000844 RID: 2116
-		// (get) Token: 0x060055F6 RID: 22006 RVA: 0x001F6E08 File Offset: 0x001F5008
+		// Token: 0x17000887 RID: 2183
+		// (get) Token: 0x06005BC4 RID: 23492 RVA: 0x00216BC0 File Offset: 0x00214DC0
 		public int TaskSubType
 		{
 			get
@@ -119,8 +119,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000845 RID: 2117
-		// (get) Token: 0x060055F7 RID: 22007 RVA: 0x001F6E48 File Offset: 0x001F5048
+		// Token: 0x17000888 RID: 2184
+		// (get) Token: 0x06005BC5 RID: 23493 RVA: 0x00216C00 File Offset: 0x00214E00
 		public int ExploreType
 		{
 			get
@@ -134,8 +134,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000846 RID: 2118
-		// (get) Token: 0x060055F8 RID: 22008 RVA: 0x001F6E88 File Offset: 0x001F5088
+		// Token: 0x17000889 RID: 2185
+		// (get) Token: 0x06005BC6 RID: 23494 RVA: 0x00216C40 File Offset: 0x00214E40
 		public int TargetReward
 		{
 			get
@@ -149,8 +149,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000847 RID: 2119
-		// (get) Token: 0x060055F9 RID: 22009 RVA: 0x001F6EC8 File Offset: 0x001F50C8
+		// Token: 0x1700088A RID: 2186
+		// (get) Token: 0x06005BC7 RID: 23495 RVA: 0x00216C80 File Offset: 0x00214E80
 		public int TargetFunc
 		{
 			get
@@ -164,7 +164,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004B84 RID: 19332
+		// Token: 0x04005165 RID: 20837
 		private Table __p;
 	}
 }

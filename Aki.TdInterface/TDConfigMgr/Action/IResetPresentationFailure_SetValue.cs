@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DB5 RID: 7605
+	// Token: 0x02001FCC RID: 8140
 	public class IResetPresentationFailure_SetValue
 	{
-		// Token: 0x040061C6 RID: 25030
+		// Token: 0x0400674E RID: 26446
 		public EResetPresentationType Type;
 
-		// Token: 0x040061C7 RID: 25031
+		// Token: 0x0400674F RID: 26447
 		public float Duration;
 
-		// Token: 0x040061C8 RID: 25032
-		[Nullable(1)]
+		// Token: 0x04006750 RID: 26448
 		public List<int> GamePlayCues;
 	}
 }

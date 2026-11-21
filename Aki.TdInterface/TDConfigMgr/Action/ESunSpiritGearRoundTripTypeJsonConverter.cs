@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002440 RID: 9280
+	// Token: 0x020026E1 RID: 9953
 	public class ESunSpiritGearRoundTripTypeJsonConverter : JsonConverter<ESunSpiritGearRoundTripType>
 	{
-		// Token: 0x0600C9A0 RID: 51616 RVA: 0x001D84FC File Offset: 0x001D66FC
+		// Token: 0x0600D650 RID: 54864 RVA: 0x001F23C4 File Offset: 0x001F05C4
 		public override ESunSpiritGearRoundTripType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ESunSpiritGearRoundTripTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C9A1 RID: 51617 RVA: 0x001D8520 File Offset: 0x001D6720
+		// Token: 0x0600D651 RID: 54865 RVA: 0x001F23E8 File Offset: 0x001F05E8
 		public override void Write(Utf8JsonWriter writer, ESunSpiritGearRoundTripType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

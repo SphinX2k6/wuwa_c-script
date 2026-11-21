@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Update
 {
-	// Token: 0x0200008E RID: 142
+	// Token: 0x02000091 RID: 145
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LanguageUpdateManager : Singleton
 	{
-		// Token: 0x0600051B RID: 1307 RVA: 0x0002FB20 File Offset: 0x0002DD20
+		// Token: 0x06000532 RID: 1330 RVA: 0x00031088 File Offset: 0x0002F288
 		public void Init(UObject worldContext)
 		{
 			if (this.Initialized)
@@ -56,13 +56,13 @@ namespace CSharpScript.Launcher.Update
 			this.Initialized = true;
 		}
 
-		// Token: 0x0600051C RID: 1308 RVA: 0x0002FCF4 File Offset: 0x0002DEF4
+		// Token: 0x06000533 RID: 1331 RVA: 0x0003125C File Offset: 0x0002F45C
 		public List<int> GetAllLanguageTypeForAudio()
 		{
 			return this.AllLanguageType;
 		}
 
-		// Token: 0x0600051D RID: 1309 RVA: 0x0002FCFC File Offset: 0x0002DEFC
+		// Token: 0x06000534 RID: 1332 RVA: 0x00031264 File Offset: 0x0002F464
 		public List<LanguageVersionMisc> GetAllLanguagesVersionMisc()
 		{
 			List<LanguageVersionMisc> list = new List<LanguageVersionMisc>();
@@ -73,13 +73,13 @@ namespace CSharpScript.Launcher.Update
 			return list;
 		}
 
-		// Token: 0x0600051E RID: 1310 RVA: 0x0002FD64 File Offset: 0x0002DF64
+		// Token: 0x06000535 RID: 1333 RVA: 0x000312CC File Offset: 0x0002F4CC
 		public LanguageUpdater GetUpdater(string languageCode)
 		{
 			return this.UpdaterMap[languageCode];
 		}
 
-		// Token: 0x0600051F RID: 1311 RVA: 0x0002FD74 File Offset: 0x0002DF74
+		// Token: 0x06000536 RID: 1334 RVA: 0x000312DC File Offset: 0x0002F4DC
 		public void StopAllDownload()
 		{
 			foreach (KeyValuePair<string, LanguageUpdater> keyValuePair in this.UpdaterMap)
@@ -88,8 +88,8 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x170000C0 RID: 192
-		// (get) Token: 0x06000520 RID: 1312 RVA: 0x0002FDCC File Offset: 0x0002DFCC
+		// Token: 0x170000C2 RID: 194
+		// (get) Token: 0x06000537 RID: 1335 RVA: 0x00031334 File Offset: 0x0002F534
 		public static LanguageUpdateManager Instance
 		{
 			get
@@ -103,12 +103,12 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x06000521 RID: 1313 RVA: 0x0002FDEF File Offset: 0x0002DFEF
+		// Token: 0x06000538 RID: 1336 RVA: 0x00031357 File Offset: 0x0002F557
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000522 RID: 1314 RVA: 0x0002FDF1 File Offset: 0x0002DFF1
+		// Token: 0x06000539 RID: 1337 RVA: 0x00031359 File Offset: 0x0002F559
 		public static void ResetStaticDefaultValue()
 		{
 			LanguageUpdateManager instance = LanguageUpdateManager._instance;
@@ -119,22 +119,22 @@ namespace CSharpScript.Launcher.Update
 			LanguageUpdateManager._instance = null;
 		}
 
-		// Token: 0x06000523 RID: 1315 RVA: 0x0002FE0A File Offset: 0x0002E00A
+		// Token: 0x0600053A RID: 1338 RVA: 0x00031372 File Offset: 0x0002F572
 		static LanguageUpdateManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LanguageUpdateManager.CreateStaticDefaultValue), new Action(LanguageUpdateManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040002F5 RID: 757
+		// Token: 0x04000323 RID: 803
 		private bool Initialized;
 
-		// Token: 0x040002F6 RID: 758
+		// Token: 0x04000324 RID: 804
 		private readonly Dictionary<string, LanguageUpdater> UpdaterMap = new Dictionary<string, LanguageUpdater>();
 
-		// Token: 0x040002F7 RID: 759
+		// Token: 0x04000325 RID: 805
 		private readonly List<int> AllLanguageType = new List<int>();
 
-		// Token: 0x040002F8 RID: 760
+		// Token: 0x04000326 RID: 806
 		[Nullable(2)]
 		private static LanguageUpdateManager _instance;
 	}

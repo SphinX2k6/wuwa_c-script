@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001519 RID: 5401
+	// Token: 0x02001672 RID: 5746
 	public class CommonTip2_SetValue
 	{
-		// Token: 0x0400470A RID: 18186
-		[Nullable(1)]
+		// Token: 0x04004AA6 RID: 19110
 		public ICommonTip2PrepareCountdown TipOption;
 	}
 }

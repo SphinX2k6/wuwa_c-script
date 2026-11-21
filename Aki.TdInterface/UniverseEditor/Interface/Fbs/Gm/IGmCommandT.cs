@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x0200465B RID: 18011
+	// Token: 0x02004AC3 RID: 19139
 	public class IGmCommandT
 	{
-		// Token: 0x17007FD4 RID: 32724
-		// (get) Token: 0x0601B4BD RID: 111805 RVA: 0x003E1EFA File Offset: 0x003E00FA
-		// (set) Token: 0x0601B4BE RID: 111806 RVA: 0x003E1F02 File Offset: 0x003E0102
+		// Token: 0x17008615 RID: 34325
+		// (get) Token: 0x0601CC92 RID: 117906 RVA: 0x0040E196 File Offset: 0x0040C396
+		// (set) Token: 0x0601CC93 RID: 117907 RVA: 0x0040E19E File Offset: 0x0040C39E
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x0601B4BF RID: 111807 RVA: 0x003E1F0B File Offset: 0x003E010B
+		// Token: 0x0601CC94 RID: 117908 RVA: 0x0040E1A7 File Offset: 0x0040C3A7
 		public IGmCommandT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002451 RID: 9297
+	// Token: 0x020026F2 RID: 9970
 	public static class ETalkEffectActionTypeExtensions
 	{
-		// Token: 0x0600C9EB RID: 51691 RVA: 0x001DB0E4 File Offset: 0x001D92E4
+		// Token: 0x0600D69B RID: 54939 RVA: 0x001F5154 File Offset: 0x001F3354
 		public static string ToEnumString(this ETalkEffectActionType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9EC RID: 51692 RVA: 0x001DB11C File Offset: 0x001D931C
+		// Token: 0x0600D69C RID: 54940 RVA: 0x001F518C File Offset: 0x001F338C
 		public static ETalkEffectActionType FromString(string name)
 		{
 			ETalkEffectActionType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9ED RID: 51693 RVA: 0x001DB145 File Offset: 0x001D9345
+		// Token: 0x0600D69D RID: 54941 RVA: 0x001F51B5 File Offset: 0x001F33B5
 		public static bool TryFromString(string name, out ETalkEffectActionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C9EE RID: 51694 RVA: 0x001DB17E File Offset: 0x001D937E
+		// Token: 0x0600D69E RID: 54942 RVA: 0x001F51EE File Offset: 0x001F33EE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C9EF RID: 51695 RVA: 0x001DB196 File Offset: 0x001D9396
+		// Token: 0x0600D69F RID: 54943 RVA: 0x001F5206 File Offset: 0x001F3406
 		public static ETalkEffectActionType[] GetValues()
 		{
 			return new ETalkEffectActionType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C9F0 RID: 51696 RVA: 0x001DB1A2 File Offset: 0x001D93A2
+		// Token: 0x0600D6A0 RID: 54944 RVA: 0x001F5212 File Offset: 0x001F3412
 		public static string[] GetNames()
 		{
 			return new string[]

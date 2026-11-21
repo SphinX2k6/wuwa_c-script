@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 {
-	// Token: 0x0200723E RID: 29246
+	// Token: 0x020062F3 RID: 25331
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class SceneItemMoveController : ControllerBase
 	{
-		// Token: 0x06047AD6 RID: 293590 RVA: 0x01258348 File Offset: 0x01256548
+		// Token: 0x0603D438 RID: 250936 RVA: 0x011B0FF8 File Offset: 0x011AF1F8
 		public void AddSceneItemMove(Entity entity, List<IVector> points, bool isLoop, ISceneItemMoveMotionType moveMotion, float? stopTime = null)
 		{
 			SceneItemMoveController.MoveParam moveParam = new SceneItemMoveController.MoveParam();
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.MoveToEndPoint(entity, num);
 		}
 
-		// Token: 0x06047AD7 RID: 293591 RVA: 0x012585B4 File Offset: 0x012567B4
+		// Token: 0x0603D439 RID: 250937 RVA: 0x011B1264 File Offset: 0x011AF464
 		private void MoveToStartPoint(Entity entity, int spliceNum = 1)
 		{
 			SceneItemMoveController.MoveParam moveParam;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			component.AddStopMoveCallbackWithEntity(new Action<Entity>(this.OnStopCallback));
 		}
 
-		// Token: 0x06047AD8 RID: 293592 RVA: 0x0125878C File Offset: 0x0125698C
+		// Token: 0x0603D43A RID: 250938 RVA: 0x011B143C File Offset: 0x011AF63C
 		private void MoveToEndPoint(Entity entity, int spliceNum = 1)
 		{
 			SceneItemMoveController.MoveParam moveParam;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			component.AddStopMoveCallbackWithEntity(new Action<Entity>(this.OnStopCallback));
 		}
 
-		// Token: 0x06047AD9 RID: 293593 RVA: 0x0125897C File Offset: 0x01256B7C
+		// Token: 0x0603D43B RID: 250939 RVA: 0x011B162C File Offset: 0x011AF82C
 		private void MoveToStartCallback(Entity entity)
 		{
 			SceneItemMoveComponent component = entity.GetComponent<SceneItemMoveComponent>();
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.MoveToStartPoint(entity, 1);
 		}
 
-		// Token: 0x06047ADA RID: 293594 RVA: 0x012589CC File Offset: 0x01256BCC
+		// Token: 0x0603D43C RID: 250940 RVA: 0x011B167C File Offset: 0x011AF87C
 		private void MoveToEndCallback(Entity entity)
 		{
 			SceneItemMoveComponent component = entity.GetComponent<SceneItemMoveComponent>();
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.MoveToEndPoint(entity, 1);
 		}
 
-		// Token: 0x06047ADB RID: 293595 RVA: 0x01258A1C File Offset: 0x01256C1C
+		// Token: 0x0603D43D RID: 250941 RVA: 0x011B16CC File Offset: 0x011AF8CC
 		public void OnStopCallback(Entity entity)
 		{
 			SceneItemMoveComponent component = entity.GetComponent<SceneItemMoveComponent>();
@@ -251,8 +251,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.MoveParams.Remove(entity);
 		}
 
-		// Token: 0x17009E45 RID: 40517
-		// (get) Token: 0x06047ADC RID: 293596 RVA: 0x01258A8E File Offset: 0x01256C8E
+		// Token: 0x170073FC RID: 29692
+		// (get) Token: 0x0603D43E RID: 250942 RVA: 0x011B173E File Offset: 0x011AF93E
 		public static SceneItemMoveController Instance
 		{
 			get
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047ADD RID: 293597 RVA: 0x01258A95 File Offset: 0x01256C95
+		// Token: 0x0603D43F RID: 250943 RVA: 0x011B1745 File Offset: 0x011AF945
 		public static SceneItemMoveController GetOrCreateInstance()
 		{
 			if (SceneItemMoveController._Instance == null)
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return SceneItemMoveController._Instance;
 		}
 
-		// Token: 0x06047ADE RID: 293598 RVA: 0x01258AA9 File Offset: 0x01256CA9
+		// Token: 0x0603D440 RID: 250944 RVA: 0x011B1759 File Offset: 0x011AF959
 		public static bool CreateInstance()
 		{
 			if (SceneItemMoveController._Instance != null)
@@ -282,52 +282,52 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return true;
 		}
 
-		// Token: 0x06047ADF RID: 293599 RVA: 0x01258ABF File Offset: 0x01256CBF
+		// Token: 0x0603D441 RID: 250945 RVA: 0x011B176F File Offset: 0x011AF96F
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047AE0 RID: 293600 RVA: 0x01258AC1 File Offset: 0x01256CC1
+		// Token: 0x0603D442 RID: 250946 RVA: 0x011B1771 File Offset: 0x011AF971
 		public static void ResetStaticDefaultValue()
 		{
 			SceneItemMoveController._Instance = null;
 		}
 
-		// Token: 0x06047AE1 RID: 293601 RVA: 0x01258AC9 File Offset: 0x01256CC9
+		// Token: 0x0603D443 RID: 250947 RVA: 0x011B1779 File Offset: 0x011AF979
 		static SceneItemMoveController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneItemMoveController.CreateStaticDefaultValue), new Action(SceneItemMoveController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025B5F RID: 154463
+		// Token: 0x040207CE RID: 133070
 		private readonly Dictionary<Entity, SceneItemMoveController.MoveParam> MoveParams = new Dictionary<Entity, SceneItemMoveController.MoveParam>();
 
-		// Token: 0x04025B60 RID: 154464
+		// Token: 0x040207CF RID: 133071
 		[Nullable(2)]
 		private static SceneItemMoveController _Instance;
 
-		// Token: 0x0200CF8A RID: 53130
+		// Token: 0x0200BB20 RID: 47904
 		[NullableContext(0)]
 		private class MoveParam
 		{
-			// Token: 0x0403E5F0 RID: 255472
+			// Token: 0x04039919 RID: 235801
 			[Nullable(1)]
 			public List<IVector> Points = new List<IVector>();
 
-			// Token: 0x0403E5F1 RID: 255473
+			// Token: 0x0403991A RID: 235802
 			public bool IsLoop;
 
-			// Token: 0x0403E5F2 RID: 255474
+			// Token: 0x0403991B RID: 235803
 			[Nullable(2)]
 			public ISceneItemMoveMotionType MoveMotion;
 
-			// Token: 0x0403E5F3 RID: 255475
+			// Token: 0x0403991C RID: 235804
 			public float? StopTime;
 
-			// Token: 0x0403E5F4 RID: 255476
+			// Token: 0x0403991D RID: 235805
 			public float? Acceleration;
 
-			// Token: 0x0403E5F5 RID: 255477
+			// Token: 0x0403991E RID: 235806
 			public float? MaxSpeed;
 		}
 	}

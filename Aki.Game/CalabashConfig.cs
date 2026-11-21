@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200171F RID: 5919
+// Token: 0x02000BD7 RID: 3031
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class CalabashConfig : ConfigBase
 {
-	// Token: 0x0600AAED RID: 43757 RVA: 0x00266AD8 File Offset: 0x00264CD8
+	// Token: 0x06007ECF RID: 32463 RVA: 0x00270EB0 File Offset: 0x0026F0B0
 	public CalabashLevel? GetCalabashConfigByLevel(int level)
 	{
 		CalabashLevel? config = ConfigCalabashLevelByLevel.GetConfig(level, true);
@@ -26,27 +26,27 @@ public class CalabashConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0600AAEE RID: 43758 RVA: 0x00266B30 File Offset: 0x00264D30
+	// Token: 0x06007ED0 RID: 32464 RVA: 0x00270F08 File Offset: 0x0026F108
 	[NullableContext(2)]
 	public IReadOnlyList<CalabashLevel> GetCalabashConfigList()
 	{
 		return ConfigCalabashLevelAll.GetConfigList(true);
 	}
 
-	// Token: 0x0600AAEF RID: 43759 RVA: 0x00266B38 File Offset: 0x00264D38
+	// Token: 0x06007ED1 RID: 32465 RVA: 0x00270F10 File Offset: 0x0026F110
 	public string GetCalabashQuality(int level)
 	{
 		return this.GetCalabashConfigByLevel(level).Value.QualityDescription;
 	}
 
-	// Token: 0x0600AAF0 RID: 43760 RVA: 0x00266B5C File Offset: 0x00264D5C
+	// Token: 0x06007ED2 RID: 32466 RVA: 0x00270F34 File Offset: 0x0026F134
 	[NullableContext(2)]
 	public IReadOnlyList<CalabashDevelopReward> GetCalabashDevelopList()
 	{
 		return ConfigCalabashDevelopRewardAll.GetConfigList(true);
 	}
 
-	// Token: 0x0600AAF1 RID: 43761 RVA: 0x00266B64 File Offset: 0x00264D64
+	// Token: 0x06007ED3 RID: 32467 RVA: 0x00270F3C File Offset: 0x0026F13C
 	public CalabashDevelopReward? GetCalabashDevelopRewardByMonsterId(int monsterId)
 	{
 		CalabashDevelopReward? config = ConfigCalabashDevelopRewardByMonsterId.GetConfig(monsterId, true);
@@ -62,13 +62,13 @@ public class CalabashConfig : ConfigBase
 		return new CalabashDevelopReward?(config.Value);
 	}
 
-	// Token: 0x0600AAF2 RID: 43762 RVA: 0x00266BC0 File Offset: 0x00264DC0
+	// Token: 0x06007ED4 RID: 32468 RVA: 0x00270F98 File Offset: 0x0026F198
 	public string GetMonsterNameByMonsterId(int monsterId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(ConfigMonsterInfoById.GetConfig(this.GetCalabashDevelopRewardByMonsterId(monsterId).Value.MonsterInfoId, true).Value.Name, null) ?? "";
 	}
 
-	// Token: 0x0600AAF3 RID: 43763 RVA: 0x00266C0C File Offset: 0x00264E0C
+	// Token: 0x06007ED5 RID: 32469 RVA: 0x00270FE4 File Offset: 0x0026F1E4
 	public CalabashDevelopCondition GetCalabashConditionById(int id)
 	{
 		CalabashDevelopCondition? config = ConfigCalabashDevelopConditionById.GetConfig(id, true);
@@ -84,13 +84,13 @@ public class CalabashConfig : ConfigBase
 		return config.Value;
 	}
 
-	// Token: 0x0600AAF4 RID: 43764 RVA: 0x00266C60 File Offset: 0x00264E60
+	// Token: 0x06007ED6 RID: 32470 RVA: 0x00271038 File Offset: 0x0026F238
 	public int GetCalabashConditionExp(int id)
 	{
 		return this.GetCalabashConditionRewardExp(this.GetCalabashConditionById(id));
 	}
 
-	// Token: 0x0600AAF5 RID: 43765 RVA: 0x00266C70 File Offset: 0x00264E70
+	// Token: 0x06007ED7 RID: 32471 RVA: 0x00271048 File Offset: 0x0026F248
 	public int GetCalabashConditionRewardExp(CalabashDevelopCondition config)
 	{
 		Dictionary<int, int> dictionary = config.RewardExp();
@@ -113,7 +113,7 @@ public class CalabashConfig : ConfigBase
 		return result;
 	}
 
-	// Token: 0x0600AAF6 RID: 43766 RVA: 0x00266CC8 File Offset: 0x00264EC8
+	// Token: 0x06007ED8 RID: 32472 RVA: 0x002710A0 File Offset: 0x0026F2A0
 	public int GetCalabashMaxLevel()
 	{
 		IEnumerable<CalabashLevel> calabashConfigList = this.GetCalabashConfigList();
@@ -128,14 +128,14 @@ public class CalabashConfig : ConfigBase
 		return num;
 	}
 
-	// Token: 0x0600AAF7 RID: 43767 RVA: 0x00266D24 File Offset: 0x00264F24
+	// Token: 0x06007ED9 RID: 32473 RVA: 0x002710FC File Offset: 0x0026F2FC
 	public ConditionGroup? GetConditionInfo(int upConditionId)
 	{
 		return ConfigConditionGroupById.GetConfig(upConditionId, true);
 	}
 
-	// Token: 0x17000E0C RID: 3596
-	// (get) Token: 0x0600AAF8 RID: 43768 RVA: 0x00266D30 File Offset: 0x00264F30
+	// Token: 0x17000E2D RID: 3629
+	// (get) Token: 0x06007EDA RID: 32474 RVA: 0x00271108 File Offset: 0x0026F308
 	public int MaxTipCd
 	{
 		get
@@ -144,8 +144,8 @@ public class CalabashConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x17000E0D RID: 3597
-	// (get) Token: 0x0600AAF9 RID: 43769 RVA: 0x00266D50 File Offset: 0x00264F50
+	// Token: 0x17000E2E RID: 3630
+	// (get) Token: 0x06007EDB RID: 32475 RVA: 0x00271128 File Offset: 0x0026F328
 	public int DelayTime
 	{
 		get
@@ -154,28 +154,28 @@ public class CalabashConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600AAFA RID: 43770 RVA: 0x00266D70 File Offset: 0x00264F70
+	// Token: 0x06007EDC RID: 32476 RVA: 0x00271148 File Offset: 0x0026F348
 	public int GetVisionBatchRecoveryMaxCount()
 	{
 		return ConfigCommonParamById.GetIntConfig("PhantomRefiningMaxCount").Value;
 	}
 
-	// Token: 0x0600AAFB RID: 43771 RVA: 0x00266D8F File Offset: 0x00264F8F
+	// Token: 0x06007EDD RID: 32477 RVA: 0x00271167 File Offset: 0x0026F367
 	[NullableContext(2)]
 	public IReadOnlyList<CalabashDevelopReward> GetCalabashRewardListByAreaId(int areaId)
 	{
 		return ConfigCalabashDevelopRewardByInteractAreaId.GetConfigList(areaId, true);
 	}
 
-	// Token: 0x0600AAFC RID: 43772 RVA: 0x00266D98 File Offset: 0x00264F98
+	// Token: 0x06007EDE RID: 32478 RVA: 0x00271170 File Offset: 0x0026F370
 	[NullableContext(2)]
 	public IReadOnlyList<PhantomDirectRefining> GetPhantomDirectRefiningAll()
 	{
 		return ConfigPhantomDirectRefiningAll.GetConfigList(true);
 	}
 
-	// Token: 0x17000E0E RID: 3598
-	// (get) Token: 0x0600AAFD RID: 43773 RVA: 0x00266DA0 File Offset: 0x00264FA0
+	// Token: 0x17000E2F RID: 3631
+	// (get) Token: 0x06007EDF RID: 32479 RVA: 0x00271178 File Offset: 0x0026F378
 	public static CalabashConfig Instance
 	{
 		get
@@ -184,7 +184,7 @@ public class CalabashConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600AAFE RID: 43774 RVA: 0x00266DA7 File Offset: 0x00264FA7
+	// Token: 0x06007EE0 RID: 32480 RVA: 0x0027117F File Offset: 0x0026F37F
 	public static CalabashConfig GetOrCreateInstance()
 	{
 		if (CalabashConfig._Instance == null)
@@ -194,7 +194,7 @@ public class CalabashConfig : ConfigBase
 		return CalabashConfig._Instance;
 	}
 
-	// Token: 0x0600AAFF RID: 43775 RVA: 0x00266DBB File Offset: 0x00264FBB
+	// Token: 0x06007EE1 RID: 32481 RVA: 0x00271193 File Offset: 0x0026F393
 	public static bool CreateInstance()
 	{
 		if (CalabashConfig._Instance != null)
@@ -205,24 +205,24 @@ public class CalabashConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600AB00 RID: 43776 RVA: 0x00266DD1 File Offset: 0x00264FD1
+	// Token: 0x06007EE2 RID: 32482 RVA: 0x002711A9 File Offset: 0x0026F3A9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600AB01 RID: 43777 RVA: 0x00266DD3 File Offset: 0x00264FD3
+	// Token: 0x06007EE3 RID: 32483 RVA: 0x002711AB File Offset: 0x0026F3AB
 	public static void ResetStaticDefaultValue()
 	{
 		CalabashConfig._Instance = null;
 	}
 
-	// Token: 0x0600AB02 RID: 43778 RVA: 0x00266DDB File Offset: 0x00264FDB
+	// Token: 0x06007EE4 RID: 32484 RVA: 0x002711B3 File Offset: 0x0026F3B3
 	static CalabashConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CalabashConfig.CreateStaticDefaultValue), new Action(CalabashConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004D8E RID: 19854
+	// Token: 0x04004E35 RID: 20021
 	[Nullable(2)]
 	private static CalabashConfig _Instance;
 }

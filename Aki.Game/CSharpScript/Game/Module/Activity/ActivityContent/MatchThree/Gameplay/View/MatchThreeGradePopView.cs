@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064DA RID: 25818
+	// Token: 0x02005458 RID: 21592
 	public class MatchThreeGradePopView : UiPanelBase
 	{
-		// Token: 0x06040CDE RID: 265438 RVA: 0x00FB2450 File Offset: 0x00FB0650
+		// Token: 0x060359A2 RID: 219554 RVA: 0x00EF9480 File Offset: 0x00EF7680
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -24,13 +24,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040CDF RID: 265439 RVA: 0x00FB2498 File Offset: 0x00FB0698
+		// Token: 0x060359A3 RID: 219555 RVA: 0x00EF94C8 File Offset: 0x00EF76C8
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06040CE0 RID: 265440 RVA: 0x00FB24AC File Offset: 0x00FB06AC
+		// Token: 0x060359A4 RID: 219556 RVA: 0x00EF94DC File Offset: 0x00EF76DC
 		public void SetContent(ScoreComment comment)
 		{
 			if (string.IsNullOrEmpty(comment.Icon))
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			base.SetTextureByPath(comment.Icon, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x06040CE1 RID: 265441 RVA: 0x00FB24E4 File Offset: 0x00FB06E4
+		// Token: 0x060359A5 RID: 219557 RVA: 0x00EF9514 File Offset: 0x00EF7714
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			MatchThreeGradePopView.<OnShowAsyncImplementImplement>d__5 <OnShowAsyncImplementImplement>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040CE2 RID: 265442 RVA: 0x00FB2528 File Offset: 0x00FB0728
+		// Token: 0x060359A6 RID: 219558 RVA: 0x00EF9558 File Offset: 0x00EF7758
 		protected override UniTask OnBeforeHideAsync()
 		{
 			MatchThreeGradePopView.<OnBeforeHideAsync>d__6 <OnBeforeHideAsync>d__;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040CE3 RID: 265443 RVA: 0x00FB256B File Offset: 0x00FB076B
+		// Token: 0x060359A7 RID: 219559 RVA: 0x00EF959B File Offset: 0x00EF779B
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -73,14 +73,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x04021C2F RID: 138287
+		// Token: 0x0401C560 RID: 116064
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0200C709 RID: 50953
+		// Token: 0x0200B0EF RID: 45295
 		private enum EComponent
 		{
-			// Token: 0x0403C219 RID: 246297
+			// Token: 0x04036B74 RID: 224116
 			TexGrade
 		}
 	}

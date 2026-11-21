@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006114 RID: 24852
+	// Token: 0x02006776 RID: 26486
 	public class IActorVisibilityEffectDefaultT
 	{
-		// Token: 0x1700B72A RID: 46890
-		// (get) Token: 0x0602A773 RID: 173939 RVA: 0x005D96A2 File Offset: 0x005D78A2
-		// (set) Token: 0x0602A774 RID: 173940 RVA: 0x005D96AA File Offset: 0x005D78AA
+		// Token: 0x1700C095 RID: 49301
+		// (get) Token: 0x0602CE54 RID: 183892 RVA: 0x0062364A File Offset: 0x0062184A
+		// (set) Token: 0x0602CE55 RID: 183893 RVA: 0x00623652 File Offset: 0x00621852
 		public EActorVisibilityEffectType Type { get; set; }
 
-		// Token: 0x0602A775 RID: 173941 RVA: 0x005D96B3 File Offset: 0x005D78B3
+		// Token: 0x0602CE56 RID: 183894 RVA: 0x0062365B File Offset: 0x0062185B
 		public IActorVisibilityEffectDefaultT()
 		{
 			this.Type = EActorVisibilityEffectType.Default;

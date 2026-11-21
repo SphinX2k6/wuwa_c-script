@@ -16,8 +16,8 @@ using UnrealEngine.Utils;
 public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
 	// Token: 0x1700009E RID: 158
-	// (get) Token: 0x0600041C RID: 1052 RVA: 0x00013EF1 File Offset: 0x000120F1
-	// (set) Token: 0x0600041D RID: 1053 RVA: 0x00013F05 File Offset: 0x00012105
+	// (get) Token: 0x0600041C RID: 1052 RVA: 0x00014771 File Offset: 0x00012971
+	// (set) Token: 0x0600041D RID: 1053 RVA: 0x00014785 File Offset: 0x00012985
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string FlowListName
 	{
@@ -32,8 +32,8 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 	}
 
 	// Token: 0x1700009F RID: 159
-	// (get) Token: 0x0600041E RID: 1054 RVA: 0x00013F1A File Offset: 0x0001211A
-	// (set) Token: 0x0600041F RID: 1055 RVA: 0x00013F2A File Offset: 0x0001212A
+	// (get) Token: 0x0600041E RID: 1054 RVA: 0x0001479A File Offset: 0x0001299A
+	// (set) Token: 0x0600041F RID: 1055 RVA: 0x000147AA File Offset: 0x000129AA
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int FlowId
 	{
@@ -48,8 +48,8 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 	}
 
 	// Token: 0x170000A0 RID: 160
-	// (get) Token: 0x06000420 RID: 1056 RVA: 0x00013F3B File Offset: 0x0001213B
-	// (set) Token: 0x06000421 RID: 1057 RVA: 0x00013F4B File Offset: 0x0001214B
+	// (get) Token: 0x06000420 RID: 1056 RVA: 0x000147BB File Offset: 0x000129BB
+	// (set) Token: 0x06000421 RID: 1057 RVA: 0x000147CB File Offset: 0x000129CB
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float StateId
 	{
@@ -64,8 +64,8 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 	}
 
 	// Token: 0x170000A1 RID: 161
-	// (get) Token: 0x06000422 RID: 1058 RVA: 0x00013F5C File Offset: 0x0001215C
-	// (set) Token: 0x06000423 RID: 1059 RVA: 0x00013F95 File Offset: 0x00012195
+	// (get) Token: 0x06000422 RID: 1058 RVA: 0x000147DC File Offset: 0x000129DC
+	// (set) Token: 0x06000423 RID: 1059 RVA: 0x00014815 File Offset: 0x00012A15
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<int> PbDataIds
 	{
@@ -86,8 +86,24 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 	}
 
 	// Token: 0x170000A2 RID: 162
-	// (get) Token: 0x06000424 RID: 1060 RVA: 0x00013FA3 File Offset: 0x000121A3
-	// (set) Token: 0x06000425 RID: 1061 RVA: 0x00013FB3 File Offset: 0x000121B3
+	// (get) Token: 0x06000424 RID: 1060 RVA: 0x00014823 File Offset: 0x00012A23
+	// (set) Token: 0x06000425 RID: 1061 RVA: 0x00014833 File Offset: 0x00012A33
+	[UProperty(EPropertyFlags.CPF_None)]
+	public unsafe bool IsRangeFollowEntity
+	{
+		get
+		{
+			return *(base.NativePtr + (IntPtr)TsTaskAddPlayBubble.__PropertyOffset_IsRangeFollowEntity) != 0;
+		}
+		set
+		{
+			*(base.NativePtr + (IntPtr)TsTaskAddPlayBubble.__PropertyOffset_IsRangeFollowEntity) = (value ? 1 : 0);
+		}
+	}
+
+	// Token: 0x170000A3 RID: 163
+	// (get) Token: 0x06000426 RID: 1062 RVA: 0x00014844 File Offset: 0x00012A44
+	// (set) Token: 0x06000427 RID: 1063 RVA: 0x00014854 File Offset: 0x00012A54
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float EnterRadius
 	{
@@ -101,9 +117,9 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x170000A3 RID: 163
-	// (get) Token: 0x06000426 RID: 1062 RVA: 0x00013FC4 File Offset: 0x000121C4
-	// (set) Token: 0x06000427 RID: 1063 RVA: 0x00013FD4 File Offset: 0x000121D4
+	// Token: 0x170000A4 RID: 164
+	// (get) Token: 0x06000428 RID: 1064 RVA: 0x00014865 File Offset: 0x00012A65
+	// (set) Token: 0x06000429 RID: 1065 RVA: 0x00014875 File Offset: 0x00012A75
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float LeaveRadius
 	{
@@ -117,9 +133,9 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x170000A4 RID: 164
-	// (get) Token: 0x06000428 RID: 1064 RVA: 0x00013FE5 File Offset: 0x000121E5
-	// (set) Token: 0x06000429 RID: 1065 RVA: 0x00013FF5 File Offset: 0x000121F5
+	// Token: 0x170000A5 RID: 165
+	// (get) Token: 0x0600042A RID: 1066 RVA: 0x00014886 File Offset: 0x00012A86
+	// (set) Token: 0x0600042B RID: 1067 RVA: 0x00014896 File Offset: 0x00012A96
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float EnterHeight
 	{
@@ -133,9 +149,9 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x170000A5 RID: 165
-	// (get) Token: 0x0600042A RID: 1066 RVA: 0x00014006 File Offset: 0x00012206
-	// (set) Token: 0x0600042B RID: 1067 RVA: 0x00014016 File Offset: 0x00012216
+	// Token: 0x170000A6 RID: 166
+	// (get) Token: 0x0600042C RID: 1068 RVA: 0x000148A7 File Offset: 0x00012AA7
+	// (set) Token: 0x0600042D RID: 1069 RVA: 0x000148B7 File Offset: 0x00012AB7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float LeaveHeight
 	{
@@ -149,7 +165,7 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x0600042C RID: 1068 RVA: 0x00014028 File Offset: 0x00012228
+	// Token: 0x0600042E RID: 1070 RVA: 0x000148C8 File Offset: 0x00012AC8
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -158,6 +174,7 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 			this.TsFlowListName = this.FlowListName;
 			this.TsFlowId = this.FlowId;
 			this.TsStateId = this.StateId;
+			this.TsIsRangeFollowEntity = this.IsRangeFollowEntity;
 			this.TsEnterRadius = this.EnterRadius;
 			this.TsLeaveRadius = this.LeaveRadius;
 			this.TsEnterHeight = this.EnterHeight;
@@ -173,30 +190,27 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x0600042D RID: 1069 RVA: 0x000140E8 File Offset: 0x000122E8
+	// Token: 0x0600042F RID: 1071 RVA: 0x00014994 File Offset: 0x00012B94
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskAddPlayBubble) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskAddPlayBubble.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600042E RID: 1070 RVA: 0x00014184 File Offset: 0x00012384
+	// Token: 0x06000430 RID: 1072 RVA: 0x00014A44 File Offset: 0x00012C44
 	[NullableContext(2)]
 	protected unsafe virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -277,7 +291,7 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x0600042F RID: 1071 RVA: 0x000143C8 File Offset: 0x000125C8
+	// Token: 0x06000431 RID: 1073 RVA: 0x00014C88 File Offset: 0x00012E88
 	private CharacterDynamicFlowData CreateCharacterFlowData()
 	{
 		List<int> list = new List<int>(this.TsPbDataIds);
@@ -308,6 +322,7 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 			EntityIds = list,
 			EnterRadius = ((this.TsEnterRadius != 0f) ? new float?(this.TsEnterRadius) : null),
 			LeaveRadius = ((this.TsLeaveRadius != 0f) ? new float?(this.TsLeaveRadius) : null),
+			IsRangeFollowEntity = new bool?(this.TsIsRangeFollowEntity),
 			TriggerCylinderConfig = ((this.TsLeaveHeight != 0f) ? bubbleRangeCylinderConfig : null),
 			Flow = (IBubbleIndex)flowIndex,
 			WaitTime = new int?(0),
@@ -322,7 +337,7 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		return characterDynamicFlowData;
 	}
 
-	// Token: 0x06000430 RID: 1072 RVA: 0x00014536 File Offset: 0x00012736
+	// Token: 0x06000432 RID: 1074 RVA: 0x00014E07 File Offset: 0x00013007
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskAddPlayBubble._ClassPtr == IntPtr.Zero)
@@ -332,22 +347,22 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		return TsTaskAddPlayBubble._ClassPtr;
 	}
 
-	// Token: 0x06000431 RID: 1073 RVA: 0x0001455C File Offset: 0x0001275C
+	// Token: 0x06000433 RID: 1075 RVA: 0x00014E2C File Offset: 0x0001302C
 	public TsTaskAddPlayBubble() : this(BuiltinUtils.AllocNativeUObject(TsTaskAddPlayBubble.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000432 RID: 1074 RVA: 0x00014584 File Offset: 0x00012784
+	// Token: 0x06000434 RID: 1076 RVA: 0x00014E54 File Offset: 0x00013054
 	public TsTaskAddPlayBubble(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskAddPlayBubble.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000433 RID: 1075 RVA: 0x000145B7 File Offset: 0x000127B7
+	// Token: 0x06000435 RID: 1077 RVA: 0x00014E87 File Offset: 0x00013087
 	protected TsTaskAddPlayBubble(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000434 RID: 1076 RVA: 0x000145D8 File Offset: 0x000127D8
+	// Token: 0x06000436 RID: 1078 RVA: 0x00014EA8 File Offset: 0x000130A8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -372,51 +387,57 @@ public class TsTaskAddPlayBubble : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 	private readonly List<int> TsPbDataIds = new List<int>();
 
 	// Token: 0x040002DC RID: 732
-	private float TsEnterRadius;
+	private bool TsIsRangeFollowEntity;
 
 	// Token: 0x040002DD RID: 733
-	private float TsLeaveRadius;
+	private float TsEnterRadius;
 
 	// Token: 0x040002DE RID: 734
-	protected float TsEnterHeight;
+	private float TsLeaveRadius;
 
 	// Token: 0x040002DF RID: 735
-	protected float TsLeaveHeight;
+	protected float TsEnterHeight;
 
 	// Token: 0x040002E0 RID: 736
-	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/LevelAiTask/TsTaskAddPlayBubble.TsTaskAddPlayBubble_C";
+	protected float TsLeaveHeight;
 
 	// Token: 0x040002E1 RID: 737
-	private static IntPtr _ClassPtr;
+	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/LevelAiTask/TsTaskAddPlayBubble.TsTaskAddPlayBubble_C";
 
 	// Token: 0x040002E2 RID: 738
-	private static IntPtr _ClassDefaultObjectPtr;
+	private static IntPtr _ClassPtr;
 
 	// Token: 0x040002E3 RID: 739
-	private static int __PropertyOffset_FlowListName;
+	private static IntPtr _ClassDefaultObjectPtr;
 
 	// Token: 0x040002E4 RID: 740
-	private static int __PropertyOffset_FlowId;
+	private static int __PropertyOffset_FlowListName;
 
 	// Token: 0x040002E5 RID: 741
-	private static int __PropertyOffset_StateId;
+	private static int __PropertyOffset_FlowId;
 
 	// Token: 0x040002E6 RID: 742
-	private static int __PropertyOffset_PbDataIds;
+	private static int __PropertyOffset_StateId;
 
 	// Token: 0x040002E7 RID: 743
+	private static int __PropertyOffset_PbDataIds;
+
+	// Token: 0x040002E8 RID: 744
 	[Nullable(2)]
 	private TArray<int> _PbDataIds;
 
-	// Token: 0x040002E8 RID: 744
-	private static int __PropertyOffset_EnterRadius;
-
 	// Token: 0x040002E9 RID: 745
-	private static int __PropertyOffset_LeaveRadius;
+	private static int __PropertyOffset_IsRangeFollowEntity;
 
 	// Token: 0x040002EA RID: 746
-	private static int __PropertyOffset_EnterHeight;
+	private static int __PropertyOffset_EnterRadius;
 
 	// Token: 0x040002EB RID: 747
+	private static int __PropertyOffset_LeaveRadius;
+
+	// Token: 0x040002EC RID: 748
+	private static int __PropertyOffset_EnterHeight;
+
+	// Token: 0x040002ED RID: 749
 	private static int __PropertyOffset_LeaveHeight;
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B54 RID: 23380
+	// Token: 0x0200616A RID: 24938
 	public class IWaterStagnationActorConfigT
 	{
-		// Token: 0x1700B095 RID: 45205
-		// (get) Token: 0x06027FDB RID: 163803 RVA: 0x0057F9A2 File Offset: 0x0057DBA2
-		// (set) Token: 0x06027FDC RID: 163804 RVA: 0x0057F9AA File Offset: 0x0057DBAA
+		// Token: 0x1700B9DD RID: 47581
+		// (get) Token: 0x0602A59F RID: 173471 RVA: 0x005C7432 File Offset: 0x005C5632
+		// (set) Token: 0x0602A5A0 RID: 173472 RVA: 0x005C743A File Offset: 0x005C563A
 		public int SeqRefEntity { get; set; }
 
-		// Token: 0x06027FDD RID: 163805 RVA: 0x0057F9B3 File Offset: 0x0057DBB3
+		// Token: 0x0602A5A1 RID: 173473 RVA: 0x005C7443 File Offset: 0x005C5643
 		public IWaterStagnationActorConfigT()
 		{
 			this.SeqRefEntity = 0;

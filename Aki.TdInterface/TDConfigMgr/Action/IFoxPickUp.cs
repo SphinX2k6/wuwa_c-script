@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AB9 RID: 6841
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C58 RID: 7256
 	public class IFoxPickUp : ILeisureInteractType
 	{
-		// Token: 0x060092B0 RID: 37552 RVA: 0x00154E18 File Offset: 0x00153018
+		// Token: 0x06009A48 RID: 39496 RVA: 0x00165238 File Offset: 0x00163438
 		private IFoxPickUp_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060092B1 RID: 37553 RVA: 0x00154E50 File Offset: 0x00153050
+		// Token: 0x06009A49 RID: 39497 RVA: 0x00165270 File Offset: 0x00163470
 		public static IFoxPickUp Create([Nullable(2)] IFoxPickUp instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060092B2 RID: 37554 RVA: 0x00154E63 File Offset: 0x00153063
+		// Token: 0x06009A4A RID: 39498 RVA: 0x00165283 File Offset: 0x00163483
 		public static IFoxPickUp CreateFromSetValue([Nullable(2)] IFoxPickUp_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060092B3 RID: 37555 RVA: 0x00154E76 File Offset: 0x00153076
+		// Token: 0x06009A4B RID: 39499 RVA: 0x00165296 File Offset: 0x00163496
 		public new IFoxPickUp_SetValue ToSetValue()
 		{
 			return new IFoxPickUp_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E98 RID: 11928
-		// (get) Token: 0x060092B4 RID: 37556 RVA: 0x00154EA1 File Offset: 0x001530A1
-		// (set) Token: 0x060092B5 RID: 37557 RVA: 0x00154ECC File Offset: 0x001530CC
+		// Token: 0x170030AD RID: 12461
+		// (get) Token: 0x06009A4C RID: 39500 RVA: 0x001652C1 File Offset: 0x001634C1
+		// (set) Token: 0x06009A4D RID: 39501 RVA: 0x001652EC File Offset: 0x001634EC
 		public override ELeisureInteract Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E99 RID: 11929
-		// (get) Token: 0x060092B6 RID: 37558 RVA: 0x00154EDA File Offset: 0x001530DA
-		// (set) Token: 0x060092B7 RID: 37559 RVA: 0x00154F05 File Offset: 0x00153105
+		// Token: 0x170030AE RID: 12462
+		// (get) Token: 0x06009A4E RID: 39502 RVA: 0x001652FA File Offset: 0x001634FA
+		// (set) Token: 0x06009A4F RID: 39503 RVA: 0x00165325 File Offset: 0x00163525
 		public virtual int DataTableIndex
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E9A RID: 11930
-		// (get) Token: 0x060092B8 RID: 37560 RVA: 0x00154F14 File Offset: 0x00153114
-		// (set) Token: 0x060092B9 RID: 37561 RVA: 0x00154F4E File Offset: 0x0015314E
+		// Token: 0x170030AF RID: 12463
+		// (get) Token: 0x06009A50 RID: 39504 RVA: 0x00165334 File Offset: 0x00163534
+		// (set) Token: 0x06009A51 RID: 39505 RVA: 0x0016536E File Offset: 0x0016356E
 		public virtual bool? MouthOpen
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A49 RID: 23113
+		// Token: 0x04005EC2 RID: 24258
 		[Nullable(2)]
 		protected new IFoxPickUp FbInstance;
 
-		// Token: 0x04005A4A RID: 23114
+		// Token: 0x04005EC3 RID: 24259
 		[Nullable(2)]
 		protected new IFoxPickUp_SetValue PocoInterface;
 	}

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E9D RID: 16029
+	// Token: 0x020042DB RID: 17115
 	public class IInformationBoardTypeT
 	{
-		// Token: 0x17006F4C RID: 28492
-		// (get) Token: 0x06016A22 RID: 92706 RVA: 0x00344F42 File Offset: 0x00343142
-		// (set) Token: 0x06016A23 RID: 92707 RVA: 0x00344F4A File Offset: 0x0034314A
+		// Token: 0x17007539 RID: 30009
+		// (get) Token: 0x0601806F RID: 98415 RVA: 0x0036DECA File Offset: 0x0036C0CA
+		// (set) Token: 0x06018070 RID: 98416 RVA: 0x0036DED2 File Offset: 0x0036C0D2
 		public EInformationBoardType Type { get; set; }
 
-		// Token: 0x06016A24 RID: 92708 RVA: 0x00344F53 File Offset: 0x00343153
+		// Token: 0x06018071 RID: 98417 RVA: 0x0036DEDB File Offset: 0x0036C0DB
 		public IInformationBoardTypeT()
 		{
 			this.Type = EInformationBoardType.DangoAbyss;

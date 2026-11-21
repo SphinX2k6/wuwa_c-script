@@ -7,13 +7,13 @@ using CSharpScript.Game.Manager;
 
 namespace CSharpScript.Game.Module.ComboTimeline.Entry
 {
-	// Token: 0x02005BA1 RID: 23457
+	// Token: 0x02004B81 RID: 19329
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputEntryHandler : IComboTimelineEntryHandler
 	{
-		// Token: 0x17008CE6 RID: 36070
-		// (get) Token: 0x0603B52C RID: 242988 RVA: 0x00E22E87 File Offset: 0x00E21087
+		// Token: 0x170060B8 RID: 24760
+		// (get) Token: 0x06030479 RID: 197753 RVA: 0x00D733D7 File Offset: 0x00D715D7
 		public EShowTimelineType Type
 		{
 			get
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry
 			}
 		}
 
-		// Token: 0x0603B52D RID: 242989 RVA: 0x00E22E8C File Offset: 0x00E2108C
+		// Token: 0x0603047A RID: 197754 RVA: 0x00D733DC File Offset: 0x00D715DC
 		public void StartCapture(IComboTimelineCaptureContext context)
 		{
 			this.InputHandler = new ComboTimelineInputHandler(delegate(EInputAction action)
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry
 			InputController.Instance.AddInputHandler(this.InputHandler);
 		}
 
-		// Token: 0x0603B52E RID: 242990 RVA: 0x00E22EE0 File Offset: 0x00E210E0
+		// Token: 0x0603047B RID: 197755 RVA: 0x00D73430 File Offset: 0x00D71630
 		public void StopCapture()
 		{
 			if (this.InputHandler != null)
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry
 			}
 		}
 
-		// Token: 0x0603B52F RID: 242991 RVA: 0x00E22F04 File Offset: 0x00E21104
+		// Token: 0x0603047C RID: 197756 RVA: 0x00D73454 File Offset: 0x00D71654
 		public unsafe bool Apply(IShowTimelineBase entry, IComboTimelineReplayContext context)
 		{
 			IShowTimelineInput showTimelineInput = (IShowTimelineInput)entry;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry
 			return true;
 		}
 
-		// Token: 0x0603B530 RID: 242992 RVA: 0x00E22FF8 File Offset: 0x00E211F8
+		// Token: 0x0603047D RID: 197757 RVA: 0x00D73548 File Offset: 0x00D71748
 		public string Describe(IShowTimelineBase entry)
 		{
 			IShowTimelineInput showTimelineInput = (IShowTimelineInput)entry;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0603B531 RID: 242993 RVA: 0x00E23074 File Offset: 0x00E21274
+		// Token: 0x0603047E RID: 197758 RVA: 0x00D735C4 File Offset: 0x00D717C4
 		private unsafe void Record(IComboTimelineCaptureContext context, EInputAction action, EShowTimelineInputType inputType)
 		{
 			int num = context.Emit(new IShowTimelineInput
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x0401EEB1 RID: 126641
+		// Token: 0x04019962 RID: 104802
 		[Nullable(2)]
 		private ComboTimelineInputHandler InputHandler;
 	}

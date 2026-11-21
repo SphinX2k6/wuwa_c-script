@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B70 RID: 27504
+	// Token: 0x02005CE8 RID: 23784
 	internal class NotifyData
 	{
-		// Token: 0x0402394A RID: 145738
+		// Token: 0x0401EBEC RID: 125932
 		[Nullable(new byte[]
 		{
 			2,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 		})]
 		public List<AiController> Entities;
 
-		// Token: 0x0402394B RID: 145739
+		// Token: 0x0401EBED RID: 125933
 		[Nullable(2)]
 		public BaseActorComponent Target;
 	}

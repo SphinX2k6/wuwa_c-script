@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000FA5 RID: 4005
+// Token: 0x0200045A RID: 1114
 [NullableContext(1)]
 [Nullable(0)]
 public class FurnitureSceneItemApplyPresetContext : IFurnitureSceneItemApplyPresetContext
 {
-	// Token: 0x17000826 RID: 2086
-	// (get) Token: 0x0600666B RID: 26219 RVA: 0x0014411B File Offset: 0x0014231B
-	// (set) Token: 0x0600666C RID: 26220 RVA: 0x00144123 File Offset: 0x00142323
+	// Token: 0x17000848 RID: 2120
+	// (get) Token: 0x06003A03 RID: 14851 RVA: 0x0014C9AF File Offset: 0x0014ABAF
+	// (set) Token: 0x06003A04 RID: 14852 RVA: 0x0014C9B7 File Offset: 0x0014ABB7
 	public int PresetId { get; set; }
 
-	// Token: 0x17000827 RID: 2087
-	// (get) Token: 0x0600666D RID: 26221 RVA: 0x0014412C File Offset: 0x0014232C
-	// (set) Token: 0x0600666E RID: 26222 RVA: 0x00144134 File Offset: 0x00142334
+	// Token: 0x17000849 RID: 2121
+	// (get) Token: 0x06003A05 RID: 14853 RVA: 0x0014C9C0 File Offset: 0x0014ABC0
+	// (set) Token: 0x06003A06 RID: 14854 RVA: 0x0014C9C8 File Offset: 0x0014ABC8
 	public FurnitureAreaData AreaData { get; set; }
 }

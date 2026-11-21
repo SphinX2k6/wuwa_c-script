@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F8A RID: 16266
+	// Token: 0x020043CB RID: 17355
 	public class IPhotographSubTargetSpecificRoleT
 	{
-		// Token: 0x1700718E RID: 29070
-		// (get) Token: 0x060173B2 RID: 95154 RVA: 0x00359FF9 File Offset: 0x003581F9
-		// (set) Token: 0x060173B3 RID: 95155 RVA: 0x0035A001 File Offset: 0x00358201
+		// Token: 0x1700778C RID: 30604
+		// (get) Token: 0x06018A41 RID: 100929 RVA: 0x00383C11 File Offset: 0x00381E11
+		// (set) Token: 0x06018A42 RID: 100930 RVA: 0x00383C19 File Offset: 0x00381E19
 		public EPhotographSubTargetType Type { get; set; }
 
-		// Token: 0x1700718F RID: 29071
-		// (get) Token: 0x060173B4 RID: 95156 RVA: 0x0035A00A File Offset: 0x0035820A
-		// (set) Token: 0x060173B5 RID: 95157 RVA: 0x0035A012 File Offset: 0x00358212
+		// Token: 0x1700778D RID: 30605
+		// (get) Token: 0x06018A43 RID: 100931 RVA: 0x00383C22 File Offset: 0x00381E22
+		// (set) Token: 0x06018A44 RID: 100932 RVA: 0x00383C2A File Offset: 0x00381E2A
 		public int RoleId { get; set; }
 
-		// Token: 0x17007190 RID: 29072
-		// (get) Token: 0x060173B6 RID: 95158 RVA: 0x0035A01B File Offset: 0x0035821B
-		// (set) Token: 0x060173B7 RID: 95159 RVA: 0x0035A023 File Offset: 0x00358223
+		// Token: 0x1700778E RID: 30606
+		// (get) Token: 0x06018A45 RID: 100933 RVA: 0x00383C33 File Offset: 0x00381E33
+		// (set) Token: 0x06018A46 RID: 100934 RVA: 0x00383C3B File Offset: 0x00381E3B
 		public EOnCameraCheckType OnCameraCheckType { get; set; }
 
-		// Token: 0x17007191 RID: 29073
-		// (get) Token: 0x060173B8 RID: 95160 RVA: 0x0035A02C File Offset: 0x0035822C
-		// (set) Token: 0x060173B9 RID: 95161 RVA: 0x0035A034 File Offset: 0x00358234
+		// Token: 0x1700778F RID: 30607
+		// (get) Token: 0x06018A47 RID: 100935 RVA: 0x00383C44 File Offset: 0x00381E44
+		// (set) Token: 0x06018A48 RID: 100936 RVA: 0x00383C4C File Offset: 0x00381E4C
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17007192 RID: 29074
-		// (get) Token: 0x060173BA RID: 95162 RVA: 0x0035A03D File Offset: 0x0035823D
-		// (set) Token: 0x060173BB RID: 95163 RVA: 0x0035A045 File Offset: 0x00358245
+		// Token: 0x17007790 RID: 30608
+		// (get) Token: 0x06018A49 RID: 100937 RVA: 0x00383C55 File Offset: 0x00381E55
+		// (set) Token: 0x06018A4A RID: 100938 RVA: 0x00383C5D File Offset: 0x00381E5D
 		public byte NullMask { get; set; }
 
-		// Token: 0x060173BC RID: 95164 RVA: 0x0035A04E File Offset: 0x0035824E
+		// Token: 0x06018A4B RID: 100939 RVA: 0x00383C66 File Offset: 0x00381E66
 		public IPhotographSubTargetSpecificRoleT()
 		{
 			this.Type = EPhotographSubTargetType.SpecificRole;

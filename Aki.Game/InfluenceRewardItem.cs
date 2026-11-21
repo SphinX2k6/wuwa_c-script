@@ -9,17 +9,17 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F88 RID: 8072
+// Token: 0x0200144A RID: 5194
 public class InfluenceRewardItem : UiPanelBase
 {
-	// Token: 0x0600FA81 RID: 64129 RVA: 0x003CB30B File Offset: 0x003C950B
+	// Token: 0x0600CEA0 RID: 52896 RVA: 0x003D6E43 File Offset: 0x003D5043
 	[NullableContext(1)]
 	public InfluenceRewardItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600FA82 RID: 64130 RVA: 0x003CB320 File Offset: 0x003C9520
+	// Token: 0x0600CEA1 RID: 52897 RVA: 0x003D6E58 File Offset: 0x003D5058
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -33,13 +33,13 @@ public class InfluenceRewardItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600FA83 RID: 64131 RVA: 0x003CB389 File Offset: 0x003C9589
+	// Token: 0x0600CEA2 RID: 52898 RVA: 0x003D6EC1 File Offset: 0x003D50C1
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayoutNew<CommonItemSimpleGridExFinish>(base.GetLayoutBase(1), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<CommonItemSimpleGridExFinish>(this.InitItem), null);
 	}
 
-	// Token: 0x0600FA84 RID: 64132 RVA: 0x003CB3AC File Offset: 0x003C95AC
+	// Token: 0x0600CEA3 RID: 52899 RVA: 0x003D6EE4 File Offset: 0x003D50E4
 	[NullableContext(1)]
 	private ILayoutItem<CommonItemSimpleGridExFinish> InitItem(object data, UUIItem uiItem, int index)
 	{
@@ -56,14 +56,14 @@ public class InfluenceRewardItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600FA85 RID: 64133 RVA: 0x003CB404 File Offset: 0x003C9604
+	// Token: 0x0600CEA4 RID: 52900 RVA: 0x003D6F3C File Offset: 0x003D513C
 	protected override void OnBeforeDestroy()
 	{
 		this.Layout.ClearChildren();
 		this.Layout = null;
 	}
 
-	// Token: 0x0600FA86 RID: 64134 RVA: 0x003CB418 File Offset: 0x003C9618
+	// Token: 0x0600CEA5 RID: 52901 RVA: 0x003D6F50 File Offset: 0x003D5150
 	public void UpdateItem(IntPair rewardData, bool isReceived)
 	{
 		this.IsReceived = isReceived;
@@ -72,21 +72,21 @@ public class InfluenceRewardItem : UiPanelBase
 		this.Layout.RebuildLayoutByDataNew<ValueTuple<int, int>>(rewardList, null);
 	}
 
-	// Token: 0x0600FA87 RID: 64135 RVA: 0x003CB460 File Offset: 0x003C9660
+	// Token: 0x0600CEA6 RID: 52902 RVA: 0x003D6F98 File Offset: 0x003D5198
 	private void SetRewardTitle(int reputationValue)
 	{
 		UUIText text = base.GetText(0);
 		LguiUtil.Instance.SetLocalText(text, "ReputationReceive", new <>z__ReadOnlySingleElementList<object>(reputationValue));
 	}
 
-	// Token: 0x0600FA88 RID: 64136 RVA: 0x003CB490 File Offset: 0x003C9690
+	// Token: 0x0600CEA7 RID: 52903 RVA: 0x003D6FC8 File Offset: 0x003D51C8
 	public void SetAllReceivedTitle()
 	{
 		UUIText text = base.GetText(0);
 		LguiUtil.Instance.SetLocalText(text, "ReputationAllReceived", Array.Empty<object>());
 	}
 
-	// Token: 0x040074AB RID: 29867
+	// Token: 0x0400758C RID: 30092
 	[Nullable(new byte[]
 	{
 		2,
@@ -94,15 +94,15 @@ public class InfluenceRewardItem : UiPanelBase
 	})]
 	private GenericLayoutNew<CommonItemSimpleGridExFinish> Layout;
 
-	// Token: 0x040074AC RID: 29868
+	// Token: 0x0400758D RID: 30093
 	private bool IsReceived;
 
-	// Token: 0x02008572 RID: 34162
+	// Token: 0x020076F7 RID: 30455
 	private enum EInfluenceRewardItem
 	{
-		// Token: 0x0402B739 RID: 177977
+		// Token: 0x04026A5C RID: 158300
 		Title,
-		// Token: 0x0402B73A RID: 177978
+		// Token: 0x04026A5D RID: 158301
 		Layout
 	}
 }

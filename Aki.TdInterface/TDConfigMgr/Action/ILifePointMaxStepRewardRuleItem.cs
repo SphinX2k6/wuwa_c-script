@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B7E RID: 7038
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D2B RID: 7467
 	public class ILifePointMaxStepRewardRuleItem
 	{
-		// Token: 0x060096BB RID: 38587 RVA: 0x0015C10C File Offset: 0x0015A30C
+		// Token: 0x06009E9D RID: 40605 RVA: 0x0016CCB8 File Offset: 0x0016AEB8
 		private ILifePointMaxStepRewardRuleItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060096BC RID: 38588 RVA: 0x0015C144 File Offset: 0x0015A344
+		// Token: 0x06009E9E RID: 40606 RVA: 0x0016CCF0 File Offset: 0x0016AEF0
 		public static ILifePointMaxStepRewardRuleItem Create([Nullable(2)] ILifePointMaxStepRewardRuleItem instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060096BD RID: 38589 RVA: 0x0015C157 File Offset: 0x0015A357
+		// Token: 0x06009E9F RID: 40607 RVA: 0x0016CD03 File Offset: 0x0016AF03
 		public static ILifePointMaxStepRewardRuleItem CreateFromSetValue([Nullable(2)] ILifePointMaxStepRewardRuleItem_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060096BE RID: 38590 RVA: 0x0015C16A File Offset: 0x0015A36A
+		// Token: 0x06009EA0 RID: 40608 RVA: 0x0016CD16 File Offset: 0x0016AF16
 		public ILifePointMaxStepRewardRuleItem_SetValue ToSetValue()
 		{
 			return new ILifePointMaxStepRewardRuleItem_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F77 RID: 12151
-		// (get) Token: 0x060096BF RID: 38591 RVA: 0x0015C189 File Offset: 0x0015A389
-		// (set) Token: 0x060096C0 RID: 38592 RVA: 0x0015C1B4 File Offset: 0x0015A3B4
+		// Token: 0x1700319C RID: 12700
+		// (get) Token: 0x06009EA1 RID: 40609 RVA: 0x0016CD35 File Offset: 0x0016AF35
+		// (set) Token: 0x06009EA2 RID: 40610 RVA: 0x0016CD60 File Offset: 0x0016AF60
 		public virtual int PaintCount
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F78 RID: 12152
-		// (get) Token: 0x060096C1 RID: 38593 RVA: 0x0015C1C2 File Offset: 0x0015A3C2
-		// (set) Token: 0x060096C2 RID: 38594 RVA: 0x0015C1ED File Offset: 0x0015A3ED
+		// Token: 0x1700319D RID: 12701
+		// (get) Token: 0x06009EA3 RID: 40611 RVA: 0x0016CD6E File Offset: 0x0016AF6E
+		// (set) Token: 0x06009EA4 RID: 40612 RVA: 0x0016CD99 File Offset: 0x0016AF99
 		public virtual int AddStep
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005C20 RID: 23584
+		// Token: 0x040060B9 RID: 24761
 		[Nullable(2)]
 		protected ILifePointMaxStepRewardRuleItem FbInstance;
 
-		// Token: 0x04005C21 RID: 23585
+		// Token: 0x040060BA RID: 24762
 		[Nullable(2)]
 		protected ILifePointMaxStepRewardRuleItem_SetValue PocoInterface;
 	}

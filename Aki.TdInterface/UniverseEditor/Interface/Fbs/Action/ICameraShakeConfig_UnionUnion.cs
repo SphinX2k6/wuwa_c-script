@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062A6 RID: 25254
+	// Token: 0x02006917 RID: 26903
 	public class ICameraShakeConfig_UnionUnion
 	{
-		// Token: 0x1700BC81 RID: 48257
-		// (get) Token: 0x0602BA21 RID: 178721 RVA: 0x00601A11 File Offset: 0x005FFC11
-		// (set) Token: 0x0602BA22 RID: 178722 RVA: 0x00601A19 File Offset: 0x005FFC19
+		// Token: 0x1700C609 RID: 50697
+		// (get) Token: 0x0602E182 RID: 188802 RVA: 0x0064C819 File Offset: 0x0064AA19
+		// (set) Token: 0x0602E183 RID: 188803 RVA: 0x0064C821 File Offset: 0x0064AA21
 		public ICameraShakeConfig_Union Type { get; set; }
 
-		// Token: 0x1700BC82 RID: 48258
-		// (get) Token: 0x0602BA23 RID: 178723 RVA: 0x00601A22 File Offset: 0x005FFC22
-		// (set) Token: 0x0602BA24 RID: 178724 RVA: 0x00601A2A File Offset: 0x005FFC2A
+		// Token: 0x1700C60A RID: 50698
+		// (get) Token: 0x0602E184 RID: 188804 RVA: 0x0064C82A File Offset: 0x0064AA2A
+		// (set) Token: 0x0602E185 RID: 188805 RVA: 0x0064C832 File Offset: 0x0064AA32
 		public object Value { get; set; }
 
-		// Token: 0x0602BA25 RID: 178725 RVA: 0x00601A33 File Offset: 0x005FFC33
+		// Token: 0x0602E186 RID: 188806 RVA: 0x0064C83B File Offset: 0x0064AA3B
 		public ICameraShakeConfig_UnionUnion()
 		{
 			this.Type = ICameraShakeConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602BA26 RID: 178726 RVA: 0x00601A49 File Offset: 0x005FFC49
+		// Token: 0x0602E187 RID: 188807 RVA: 0x0064C851 File Offset: 0x0064AA51
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602BA27 RID: 178727 RVA: 0x00601A5B File Offset: 0x005FFC5B
+		// Token: 0x0602E188 RID: 188808 RVA: 0x0064C863 File Offset: 0x0064AA63
 		public ICameraShakeConfigT AsICameraShakeConfig()
 		{
 			return this.As<ICameraShakeConfigT>();
 		}
 
-		// Token: 0x0602BA28 RID: 178728 RVA: 0x00601A63 File Offset: 0x005FFC63
+		// Token: 0x0602E189 RID: 188809 RVA: 0x0064C86B File Offset: 0x0064AA6B
 		public static ICameraShakeConfig_UnionUnion FromICameraShakeConfig(ICameraShakeConfigT _icamerashakeconfig)
 		{
 			return new ICameraShakeConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602BA29 RID: 178729 RVA: 0x00601A78 File Offset: 0x005FFC78
+		// Token: 0x0602E18A RID: 188810 RVA: 0x0064C880 File Offset: 0x0064AA80
 		public IConstantCameraShakeT AsIConstantCameraShake()
 		{
 			return this.As<IConstantCameraShakeT>();
 		}
 
-		// Token: 0x0602BA2A RID: 178730 RVA: 0x00601A80 File Offset: 0x005FFC80
+		// Token: 0x0602E18B RID: 188811 RVA: 0x0064C888 File Offset: 0x0064AA88
 		public static ICameraShakeConfig_UnionUnion FromIConstantCameraShake(IConstantCameraShakeT _iconstantcamerashake)
 		{
 			return new ICameraShakeConfig_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602BA2B RID: 178731 RVA: 0x00601A95 File Offset: 0x005FFC95
+		// Token: 0x0602E18C RID: 188812 RVA: 0x0064C89D File Offset: 0x0064AA9D
 		public ILinearOverRangeCameraShakeT AsILinearOverRangeCameraShake()
 		{
 			return this.As<ILinearOverRangeCameraShakeT>();
 		}
 
-		// Token: 0x0602BA2C RID: 178732 RVA: 0x00601A9D File Offset: 0x005FFC9D
+		// Token: 0x0602E18D RID: 188813 RVA: 0x0064C8A5 File Offset: 0x0064AAA5
 		public static ICameraShakeConfig_UnionUnion FromILinearOverRangeCameraShake(ILinearOverRangeCameraShakeT _ilinearoverrangecamerashake)
 		{
 			return new ICameraShakeConfig_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602BA2D RID: 178733 RVA: 0x00601AB4 File Offset: 0x005FFCB4
+		// Token: 0x0602E18E RID: 188814 RVA: 0x0064C8BC File Offset: 0x0064AABC
 		public static int Pack(FlatBufferBuilder builder, ICameraShakeConfig_UnionUnion _o)
 		{
 			switch (_o.Type)

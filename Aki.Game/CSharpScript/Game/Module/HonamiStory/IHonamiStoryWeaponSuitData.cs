@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x02005939 RID: 22841
+	// Token: 0x02004912 RID: 18706
 	[NullableContext(2)]
 	public interface IHonamiStoryWeaponSuitData
 	{
-		// Token: 0x17008AF6 RID: 35574
-		// (get) Token: 0x06039FFB RID: 237563
-		// (set) Token: 0x06039FFC RID: 237564
+		// Token: 0x17005EC2 RID: 24258
+		// (get) Token: 0x0602EF1E RID: 192286
+		// (set) Token: 0x0602EF1F RID: 192287
 		int SuitId { get; set; }
 
-		// Token: 0x17008AF7 RID: 35575
-		// (get) Token: 0x06039FFD RID: 237565
-		// (set) Token: 0x06039FFE RID: 237566
+		// Token: 0x17005EC3 RID: 24259
+		// (get) Token: 0x0602EF20 RID: 192288
+		// (set) Token: 0x0602EF21 RID: 192289
 		HonamiStoryRoleEquipData EquipData { get; set; }
 	}
 }

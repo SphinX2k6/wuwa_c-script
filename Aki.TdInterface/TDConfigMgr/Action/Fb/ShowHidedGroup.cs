@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002798 RID: 10136
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A6A RID: 10858
 	public class ShowHidedGroup : ActionParams
 	{
-		// Token: 0x0600E19B RID: 57755 RVA: 0x0021574A File Offset: 0x0021394A
+		// Token: 0x0600EFB9 RID: 61369 RVA: 0x002324DE File Offset: 0x002306DE
 		public static ShowHidedGroup Create(IShowHidedGroup? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700442D RID: 17453
-		// (get) Token: 0x0600E19C RID: 57756 RVA: 0x00215769 File Offset: 0x00213969
+		// Token: 0x17004793 RID: 18323
+		// (get) Token: 0x0600EFBA RID: 61370 RVA: 0x002324FD File Offset: 0x002306FD
 		public virtual string GroupKey
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700442E RID: 17454
-		// (get) Token: 0x0600E19D RID: 57757 RVA: 0x00215776 File Offset: 0x00213976
+		// Token: 0x17004794 RID: 18324
+		// (get) Token: 0x0600EFBB RID: 61371 RVA: 0x0023250A File Offset: 0x0023070A
 		public virtual bool DelayShow
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D1C RID: 32028
+		// Token: 0x040083D2 RID: 33746
 		private IShowHidedGroup Instance;
 	}
 }

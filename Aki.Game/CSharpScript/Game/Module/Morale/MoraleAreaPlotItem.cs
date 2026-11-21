@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x0200539D RID: 21405
+	// Token: 0x02004380 RID: 17280
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MoraleAreaPlotItem : UiPanelBase
 	{
-		// Token: 0x06036AFC RID: 223996 RVA: 0x00CF1854 File Offset: 0x00CEFA54
+		// Token: 0x0602BA42 RID: 178754 RVA: 0x00C408FC File Offset: 0x00C3EAFC
 		[NullableContext(1)]
 		public UniTask Init(UUIItem item, MoraleAreaPlotData plotData)
 		{
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036AFD RID: 223997 RVA: 0x00CF18A8 File Offset: 0x00CEFAA8
+		// Token: 0x0602BA43 RID: 178755 RVA: 0x00C40950 File Offset: 0x00C3EB50
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06036AFE RID: 223998 RVA: 0x00CF1954 File Offset: 0x00CEFB54
+		// Token: 0x0602BA44 RID: 178756 RVA: 0x00C409FC File Offset: 0x00C3EBFC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleAreaPlotItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036AFF RID: 223999 RVA: 0x00CF1997 File Offset: 0x00CEFB97
+		// Token: 0x0602BA45 RID: 178757 RVA: 0x00C40A3F File Offset: 0x00C3EC3F
 		public void SetPlotActive(bool active)
 		{
 			UUIItem item = base.GetItem(0);
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.Morale
 			item.SetUIActive(active);
 		}
 
-		// Token: 0x06036B00 RID: 224000 RVA: 0x00CF19AB File Offset: 0x00CEFBAB
+		// Token: 0x0602BA46 RID: 178758 RVA: 0x00C40A53 File Offset: 0x00C3EC53
 		public void UpdatePlotState()
 		{
 			this.SetPlotActive(this.GetPlotIsActive());
 		}
 
-		// Token: 0x06036B01 RID: 224001 RVA: 0x00CF19BC File Offset: 0x00CEFBBC
+		// Token: 0x0602BA47 RID: 178759 RVA: 0x00C40A64 File Offset: 0x00C3EC64
 		public bool GetPlotIsActive()
 		{
 			int flagId = this.PlotData.FlagId;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Morale
 			return moraleAreaFlagData != null && moraleAreaFlagData.IsActive;
 		}
 
-		// Token: 0x06036B02 RID: 224002 RVA: 0x00CF1A05 File Offset: 0x00CEFC05
+		// Token: 0x0602BA48 RID: 178760 RVA: 0x00C40AAD File Offset: 0x00C3ECAD
 		public void SetPlotLight(bool active)
 		{
 			UUIItem item = base.GetItem(2);
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Morale
 			item.SetUIActive(active);
 		}
 
-		// Token: 0x06036B03 RID: 224003 RVA: 0x00CF1A19 File Offset: 0x00CEFC19
+		// Token: 0x0602BA49 RID: 178761 RVA: 0x00C40AC1 File Offset: 0x00C3ECC1
 		public void SetPlotLightAlpha(float alpha)
 		{
 			UUIItem item = base.GetItem(2);
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Morale
 			item.SetAlpha(alpha);
 		}
 
-		// Token: 0x06036B04 RID: 224004 RVA: 0x00CF1A2D File Offset: 0x00CEFC2D
+		// Token: 0x0602BA4A RID: 178762 RVA: 0x00C40AD5 File Offset: 0x00C3ECD5
 		public void SetPlotNewUnlock(bool active)
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(3);
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Morale
 			uiNiagara.SetUIActive(active);
 		}
 
-		// Token: 0x06036B05 RID: 224005 RVA: 0x00CF1A41 File Offset: 0x00CEFC41
+		// Token: 0x0602BA4B RID: 178763 RVA: 0x00C40AE9 File Offset: 0x00C3ECE9
 		private void PlayEnterEffectStart()
 		{
 			this.SetPlotActive(true);
@@ -128,14 +128,14 @@ namespace CSharpScript.Game.Module.Morale
 			this.SetPlotNewUnlock(false);
 		}
 
-		// Token: 0x06036B06 RID: 224006 RVA: 0x00CF1A64 File Offset: 0x00CEFC64
+		// Token: 0x0602BA4C RID: 178764 RVA: 0x00C40B0C File Offset: 0x00C3ED0C
 		private void PlayEnterTickCallback(float addDeltaTime)
 		{
 			float curveValue = this.GetCurveValue(addDeltaTime, this.EnterConfig);
 			this.SetPlotLightAlpha(curveValue);
 		}
 
-		// Token: 0x06036B07 RID: 224007 RVA: 0x00CF1A86 File Offset: 0x00CEFC86
+		// Token: 0x0602BA4D RID: 178765 RVA: 0x00C40B2E File Offset: 0x00C3ED2E
 		private void PlayLoopEffectStart()
 		{
 			this.SetPlotActive(true);
@@ -144,14 +144,14 @@ namespace CSharpScript.Game.Module.Morale
 			this.SetPlotNewUnlock(false);
 		}
 
-		// Token: 0x06036B08 RID: 224008 RVA: 0x00CF1AA8 File Offset: 0x00CEFCA8
+		// Token: 0x0602BA4E RID: 178766 RVA: 0x00C40B50 File Offset: 0x00C3ED50
 		private void PlayLoopTickCallback(float addDeltaTime)
 		{
 			float curveValue = this.GetCurveValue(addDeltaTime, this.LoopConfig);
 			this.SetPlotLightAlpha(curveValue);
 		}
 
-		// Token: 0x06036B09 RID: 224009 RVA: 0x00CF1ACA File Offset: 0x00CEFCCA
+		// Token: 0x0602BA4F RID: 178767 RVA: 0x00C40B72 File Offset: 0x00C3ED72
 		private void PlayNewUnlockEffectStart()
 		{
 			this.SetPlotActive(true);
@@ -160,14 +160,14 @@ namespace CSharpScript.Game.Module.Morale
 			this.SetPlotNewUnlock(true);
 		}
 
-		// Token: 0x06036B0A RID: 224010 RVA: 0x00CF1AEC File Offset: 0x00CEFCEC
+		// Token: 0x0602BA50 RID: 178768 RVA: 0x00C40B94 File Offset: 0x00C3ED94
 		private float GetCurveTime(UCurveFloat curve)
 		{
 			int num = (curve != null) ? curve.FloatCurve.Keys.Num() : 0;
 			return ((num > 0) ? curve.FloatCurve.Keys.Get(num - 1).Time : 1f) * 1000f;
 		}
 
-		// Token: 0x06036B0B RID: 224011 RVA: 0x00CF1B39 File Offset: 0x00CEFD39
+		// Token: 0x0602BA51 RID: 178769 RVA: 0x00C40BE1 File Offset: 0x00C3EDE1
 		private float GetCurveValue(float time, BP_MoraleEffectConfig_C config)
 		{
 			UCurveFloat ucurveFloat = (config != null) ? config.格子入场曲线 : null;
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Morale
 			return ucurveFloat.GetFloatValue(time / 1000f);
 		}
 
-		// Token: 0x06036B0C RID: 224012 RVA: 0x00CF1B5D File Offset: 0x00CEFD5D
+		// Token: 0x0602BA52 RID: 178770 RVA: 0x00C40C05 File Offset: 0x00C3EE05
 		public void OnTick(float delta)
 		{
 			MoraleTickPromise enterTickPromise = this.EnterTickPromise;
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.Morale
 			loopTickPromise.Tick(delta);
 		}
 
-		// Token: 0x06036B0D RID: 224013 RVA: 0x00CF1B94 File Offset: 0x00CEFD94
+		// Token: 0x0602BA53 RID: 178771 RVA: 0x00C40C3C File Offset: 0x00C3EE3C
 		public UniTask PlayEnterEffect()
 		{
 			MoraleAreaPlotItem.<PlayEnterEffect>d__24 <PlayEnterEffect>d__;
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <PlayEnterEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036B0E RID: 224014 RVA: 0x00CF1BD8 File Offset: 0x00CEFDD8
+		// Token: 0x0602BA54 RID: 178772 RVA: 0x00C40C80 File Offset: 0x00C3EE80
 		public UniTask PlayNewUnlockEffect()
 		{
 			MoraleAreaPlotItem.<PlayNewUnlockEffect>d__25 <PlayNewUnlockEffect>d__;
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <PlayNewUnlockEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036B0F RID: 224015 RVA: 0x00CF1C1C File Offset: 0x00CEFE1C
+		// Token: 0x0602BA55 RID: 178773 RVA: 0x00C40CC4 File Offset: 0x00C3EEC4
 		public UniTask PlayLoopEffect()
 		{
 			MoraleAreaPlotItem.<PlayLoopEffect>d__26 <PlayLoopEffect>d__;
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <PlayLoopEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036B10 RID: 224016 RVA: 0x00CF1C5F File Offset: 0x00CEFE5F
+		// Token: 0x0602BA56 RID: 178774 RVA: 0x00C40D07 File Offset: 0x00C3EF07
 		protected override void OnBeforeDestroy()
 		{
 			MoraleTickPromise enterTickPromise = this.EnterTickPromise;
@@ -253,38 +253,38 @@ namespace CSharpScript.Game.Module.Morale
 			loopTickPromise.Destroy();
 		}
 
-		// Token: 0x0401CE29 RID: 118313
+		// Token: 0x040178C1 RID: 96449
 		[Nullable(1)]
 		public MoraleAreaPlotData PlotData;
 
-		// Token: 0x0401CE2A RID: 118314
+		// Token: 0x040178C2 RID: 96450
 		[Nullable(1)]
 		public BP_MoraleEffectConfig_C EnterConfig;
 
-		// Token: 0x0401CE2B RID: 118315
+		// Token: 0x040178C3 RID: 96451
 		[Nullable(1)]
 		public BP_MoraleEffectConfig_C LoopConfig;
 
-		// Token: 0x0401CE2C RID: 118316
+		// Token: 0x040178C4 RID: 96452
 		public MoraleTickPromise EnterTickPromise;
 
-		// Token: 0x0401CE2D RID: 118317
+		// Token: 0x040178C5 RID: 96453
 		public MoraleTickPromise NewUnlockTickPromise;
 
-		// Token: 0x0401CE2E RID: 118318
+		// Token: 0x040178C6 RID: 96454
 		public MoraleTickPromise LoopTickPromise;
 
-		// Token: 0x0200B610 RID: 46608
+		// Token: 0x0200A048 RID: 41032
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403726B RID: 225899
+			// Token: 0x04031CC0 RID: 203968
 			ItemPlotRoot,
-			// Token: 0x0403726C RID: 225900
+			// Token: 0x04031CC1 RID: 203969
 			SpriteIcon,
-			// Token: 0x0403726D RID: 225901
+			// Token: 0x04031CC2 RID: 203970
 			ItemLight,
-			// Token: 0x0403726E RID: 225902
+			// Token: 0x04031CC3 RID: 203971
 			UiNiagaraNewUnlock
 		}
 	}

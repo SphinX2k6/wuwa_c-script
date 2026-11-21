@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B4B RID: 19275
+	// Token: 0x02005032 RID: 20530
 	public class ICheckTargetAttributeConditionT
 	{
-		// Token: 0x17008BD4 RID: 35796
-		// (get) Token: 0x0601E59F RID: 124319 RVA: 0x00440A55 File Offset: 0x0043EC55
-		// (set) Token: 0x0601E5A0 RID: 124320 RVA: 0x00440A5D File Offset: 0x0043EC5D
+		// Token: 0x170092E4 RID: 37604
+		// (get) Token: 0x0602012D RID: 131373 RVA: 0x004732A1 File Offset: 0x004714A1
+		// (set) Token: 0x0602012E RID: 131374 RVA: 0x004732A9 File Offset: 0x004714A9
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008BD5 RID: 35797
-		// (get) Token: 0x0601E5A1 RID: 124321 RVA: 0x00440A66 File Offset: 0x0043EC66
-		// (set) Token: 0x0601E5A2 RID: 124322 RVA: 0x00440A6E File Offset: 0x0043EC6E
+		// Token: 0x170092E5 RID: 37605
+		// (get) Token: 0x0602012F RID: 131375 RVA: 0x004732B2 File Offset: 0x004714B2
+		// (set) Token: 0x06020130 RID: 131376 RVA: 0x004732BA File Offset: 0x004714BA
 		public IPlayerAttributeT Option { get; set; }
 
-		// Token: 0x17008BD6 RID: 35798
-		// (get) Token: 0x0601E5A3 RID: 124323 RVA: 0x00440A77 File Offset: 0x0043EC77
-		// (set) Token: 0x0601E5A4 RID: 124324 RVA: 0x00440A7F File Offset: 0x0043EC7F
+		// Token: 0x170092E6 RID: 37606
+		// (get) Token: 0x06020131 RID: 131377 RVA: 0x004732C3 File Offset: 0x004714C3
+		// (set) Token: 0x06020132 RID: 131378 RVA: 0x004732CB File Offset: 0x004714CB
 		public TOnlinePlayerConditionTargetUnion OnlinePlayerConditionTargetOption { get; set; }
 
-		// Token: 0x0601E5A5 RID: 124325 RVA: 0x00440A88 File Offset: 0x0043EC88
+		// Token: 0x06020133 RID: 131379 RVA: 0x004732D4 File Offset: 0x004714D4
 		public ICheckTargetAttributeConditionT()
 		{
 			this.Type = ECondition.CompareVar;

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200066E RID: 1646
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200070B RID: 1803
 	public class IRefreshOnDeath : IRefreshConditionBase
 	{
-		// Token: 0x06002336 RID: 9014 RVA: 0x000605AC File Offset: 0x0005E7AC
+		// Token: 0x0600263C RID: 9788 RVA: 0x000672C0 File Offset: 0x000654C0
 		private IRefreshOnDeath_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002337 RID: 9015 RVA: 0x000605E4 File Offset: 0x0005E7E4
+		// Token: 0x0600263D RID: 9789 RVA: 0x000672F8 File Offset: 0x000654F8
 		public static IRefreshOnDeath Create([Nullable(2)] IRefreshOnDeath instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002338 RID: 9016 RVA: 0x000605F7 File Offset: 0x0005E7F7
+		// Token: 0x0600263E RID: 9790 RVA: 0x0006730B File Offset: 0x0006550B
 		public static IRefreshOnDeath CreateFromSetValue([Nullable(2)] IRefreshOnDeath_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002339 RID: 9017 RVA: 0x0006060A File Offset: 0x0005E80A
+		// Token: 0x0600263F RID: 9791 RVA: 0x0006731E File Offset: 0x0006551E
 		public new IRefreshOnDeath_SetValue ToSetValue()
 		{
 			return new IRefreshOnDeath_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000955 RID: 2389
-		// (get) Token: 0x0600233A RID: 9018 RVA: 0x0006061D File Offset: 0x0005E81D
-		// (set) Token: 0x0600233B RID: 9019 RVA: 0x00060648 File Offset: 0x0005E848
+		// Token: 0x17000A0C RID: 2572
+		// (get) Token: 0x06002640 RID: 9792 RVA: 0x00067331 File Offset: 0x00065531
+		// (set) Token: 0x06002641 RID: 9793 RVA: 0x0006735C File Offset: 0x0006555C
 		public override ERewardDropType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400185F RID: 6239
+		// Token: 0x04001A51 RID: 6737
 		[Nullable(2)]
 		protected new IRefreshOnDeath FbInstance;
 
-		// Token: 0x04001860 RID: 6240
+		// Token: 0x04001A52 RID: 6738
 		[Nullable(2)]
 		protected new IRefreshOnDeath_SetValue PocoInterface;
 	}

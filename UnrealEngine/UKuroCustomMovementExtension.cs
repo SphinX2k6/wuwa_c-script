@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000CE8 RID: 3304
+	// Token: 0x02000229 RID: 553
 	[UnrealObjectPath("/Script/Engine.KuroCustomMovementExtension")]
 	[UnrealStructLayout(144, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 144)]
 	public abstract class UKuroCustomMovementExtension : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600AF53 RID: 44883 RVA: 0x000F8B3F File Offset: 0x000F6D3F
+		// Token: 0x06002CC6 RID: 11462 RVA: 0x0003F4A7 File Offset: 0x0003D6A7
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroCustomMovementExtension._ClassPtr;
 		}
 
-		// Token: 0x1700279E RID: 10142
-		// (get) Token: 0x0600AF54 RID: 44884 RVA: 0x000F8B4B File Offset: 0x000F6D4B
-		// (set) Token: 0x0600AF55 RID: 44885 RVA: 0x000F8B5B File Offset: 0x000F6D5B
+		// Token: 0x1700053A RID: 1338
+		// (get) Token: 0x06002CC7 RID: 11463 RVA: 0x0003F4B3 File Offset: 0x0003D6B3
+		// (set) Token: 0x06002CC8 RID: 11464 RVA: 0x0003F4C3 File Offset: 0x0003D6C3
 		public unsafe float MaxIterationTime
 		{
 			get
@@ -32,9 +32,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700279F RID: 10143
-		// (get) Token: 0x0600AF56 RID: 44886 RVA: 0x000F8B6C File Offset: 0x000F6D6C
-		// (set) Token: 0x0600AF57 RID: 44887 RVA: 0x000F8B7C File Offset: 0x000F6D7C
+		// Token: 0x1700053B RID: 1339
+		// (get) Token: 0x06002CC9 RID: 11465 RVA: 0x0003F4D4 File Offset: 0x0003D6D4
+		// (set) Token: 0x06002CCA RID: 11466 RVA: 0x0003F4E4 File Offset: 0x0003D6E4
 		public unsafe int MaxIterationCount
 		{
 			get
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170027A0 RID: 10144
-		// (get) Token: 0x0600AF58 RID: 44888 RVA: 0x000F8B8D File Offset: 0x000F6D8D
-		// (set) Token: 0x0600AF59 RID: 44889 RVA: 0x000F8BA1 File Offset: 0x000F6DA1
+		// Token: 0x1700053C RID: 1340
+		// (get) Token: 0x06002CCB RID: 11467 RVA: 0x0003F4F5 File Offset: 0x0003D6F5
+		// (set) Token: 0x06002CCC RID: 11468 RVA: 0x0003F509 File Offset: 0x0003D709
 		[Nullable(2)]
 		public unsafe UCharacterMovementComponent MovementComponent
 		{
@@ -65,39 +65,39 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600AF5A RID: 44890 RVA: 0x000F8BB6 File Offset: 0x000F6DB6
+		// Token: 0x06002CCD RID: 11469 RVA: 0x0003F51E File Offset: 0x0003D71E
 		static UKuroCustomMovementExtension()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.KuroCustomMovementExtension");
 		}
 
-		// Token: 0x0600AF5B RID: 44891 RVA: 0x000F8BC4 File Offset: 0x000F6DC4
+		// Token: 0x06002CCE RID: 11470 RVA: 0x0003F52C File Offset: 0x0003D72C
 		protected UKuroCustomMovementExtension() : this(BuiltinUtils.AllocNativeUObject(UKuroCustomMovementExtension.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600AF5C RID: 44892 RVA: 0x000F8BEC File Offset: 0x000F6DEC
+		// Token: 0x06002CCF RID: 11471 RVA: 0x0003F554 File Offset: 0x0003D754
 		protected UKuroCustomMovementExtension(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04005BCF RID: 23503
+		// Token: 0x04000E2C RID: 3628
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.KuroCustomMovementExtension";
 
-		// Token: 0x04005BD0 RID: 23504
+		// Token: 0x04000E2D RID: 3629
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04005BD1 RID: 23505
+		// Token: 0x04000E2E RID: 3630
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04005BD2 RID: 23506
+		// Token: 0x04000E2F RID: 3631
 		internal static int __PropertyOffset_MaxIterationTime;
 
-		// Token: 0x04005BD3 RID: 23507
+		// Token: 0x04000E30 RID: 3632
 		internal static int __PropertyOffset_MaxIterationCount;
 
-		// Token: 0x04005BD4 RID: 23508
+		// Token: 0x04000E31 RID: 3633
 		internal static int __PropertyOffset_MovementComponent;
 	}
 }

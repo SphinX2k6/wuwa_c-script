@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x020027EA RID: 10218
+// Token: 0x02001D65 RID: 7525
 public class DropRewardItemData : IDropRewardItemData, IUniversalSmallItemData<ERoleDevItemType>
 {
-	// Token: 0x17001B80 RID: 7040
-	// (get) Token: 0x06014FA2 RID: 85922 RVA: 0x00551254 File Offset: 0x0054F454
-	// (set) Token: 0x06014FA3 RID: 85923 RVA: 0x0055125C File Offset: 0x0054F45C
+	// Token: 0x17001BD8 RID: 7128
+	// (get) Token: 0x060129A2 RID: 76194 RVA: 0x0057BFC4 File Offset: 0x0057A1C4
+	// (set) Token: 0x060129A3 RID: 76195 RVA: 0x0057BFCC File Offset: 0x0057A1CC
 	public ERoleDevItemType Type { get; set; }
 
-	// Token: 0x17001B81 RID: 7041
-	// (get) Token: 0x06014FA4 RID: 85924 RVA: 0x00551265 File Offset: 0x0054F465
-	// (set) Token: 0x06014FA5 RID: 85925 RVA: 0x0055126D File Offset: 0x0054F46D
+	// Token: 0x17001BD9 RID: 7129
+	// (get) Token: 0x060129A4 RID: 76196 RVA: 0x0057BFD5 File Offset: 0x0057A1D5
+	// (set) Token: 0x060129A5 RID: 76197 RVA: 0x0057BFDD File Offset: 0x0057A1DD
 	public int ItemId { get; set; }
 
-	// Token: 0x17001B82 RID: 7042
-	// (get) Token: 0x06014FA6 RID: 85926 RVA: 0x00551276 File Offset: 0x0054F476
-	// (set) Token: 0x06014FA7 RID: 85927 RVA: 0x0055127E File Offset: 0x0054F47E
+	// Token: 0x17001BDA RID: 7130
+	// (get) Token: 0x060129A6 RID: 76198 RVA: 0x0057BFE6 File Offset: 0x0057A1E6
+	// (set) Token: 0x060129A7 RID: 76199 RVA: 0x0057BFEE File Offset: 0x0057A1EE
 	public int Count { get; set; }
 
-	// Token: 0x17001B83 RID: 7043
-	// (get) Token: 0x06014FA8 RID: 85928 RVA: 0x00551287 File Offset: 0x0054F487
-	// (set) Token: 0x06014FA9 RID: 85929 RVA: 0x0055128F File Offset: 0x0054F48F
+	// Token: 0x17001BDB RID: 7131
+	// (get) Token: 0x060129A8 RID: 76200 RVA: 0x0057BFF7 File Offset: 0x0057A1F7
+	// (set) Token: 0x060129A9 RID: 76201 RVA: 0x0057BFFF File Offset: 0x0057A1FF
 	public bool HaveFinish { get; set; }
 }

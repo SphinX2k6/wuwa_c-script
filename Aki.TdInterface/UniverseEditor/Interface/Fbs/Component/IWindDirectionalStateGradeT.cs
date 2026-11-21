@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B7E RID: 23422
+	// Token: 0x02006194 RID: 24980
 	public class IWindDirectionalStateGradeT
 	{
-		// Token: 0x1700B106 RID: 45318
-		// (get) Token: 0x0602818F RID: 164239 RVA: 0x00583159 File Offset: 0x00581359
-		// (set) Token: 0x06028190 RID: 164240 RVA: 0x00583161 File Offset: 0x00581361
+		// Token: 0x1700BA4E RID: 47694
+		// (get) Token: 0x0602A753 RID: 173907 RVA: 0x005CABE9 File Offset: 0x005C8DE9
+		// (set) Token: 0x0602A754 RID: 173908 RVA: 0x005CABF1 File Offset: 0x005C8DF1
 		public string State { get; set; }
 
-		// Token: 0x1700B107 RID: 45319
-		// (get) Token: 0x06028191 RID: 164241 RVA: 0x0058316A File Offset: 0x0058136A
-		// (set) Token: 0x06028192 RID: 164242 RVA: 0x00583172 File Offset: 0x00581372
+		// Token: 0x1700BA4F RID: 47695
+		// (get) Token: 0x0602A755 RID: 173909 RVA: 0x005CABFA File Offset: 0x005C8DFA
+		// (set) Token: 0x0602A756 RID: 173910 RVA: 0x005CAC02 File Offset: 0x005C8E02
 		public float Speed { get; set; }
 
-		// Token: 0x1700B108 RID: 45320
-		// (get) Token: 0x06028193 RID: 164243 RVA: 0x0058317B File Offset: 0x0058137B
-		// (set) Token: 0x06028194 RID: 164244 RVA: 0x00583183 File Offset: 0x00581383
+		// Token: 0x1700BA50 RID: 47696
+		// (get) Token: 0x0602A757 RID: 173911 RVA: 0x005CAC0B File Offset: 0x005C8E0B
+		// (set) Token: 0x0602A758 RID: 173912 RVA: 0x005CAC13 File Offset: 0x005C8E13
 		public float Strength { get; set; }
 
-		// Token: 0x06028195 RID: 164245 RVA: 0x0058318C File Offset: 0x0058138C
+		// Token: 0x0602A759 RID: 173913 RVA: 0x005CAC1C File Offset: 0x005C8E1C
 		public IWindDirectionalStateGradeT()
 		{
 			this.State = null;

@@ -8,13 +8,13 @@ namespace Aki.Config
 	// Token: 0x0200002A RID: 42
 	public class ConfigAbyssRoomById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060000FC RID: 252 RVA: 0x0005F5BB File Offset: 0x0005D7BB
+		// Token: 0x060000FC RID: 252 RVA: 0x00062E5B File Offset: 0x0006105B
 		static ConfigAbyssRoomById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAbyssRoomById.CreateStaticDefaultValue), new Action(ConfigAbyssRoomById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060000FD RID: 253 RVA: 0x0005F5DC File Offset: 0x0005D7DC
+		// Token: 0x060000FD RID: 253 RVA: 0x00062E7C File Offset: 0x0006107C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAbyssRoomById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060000FE RID: 254 RVA: 0x0005F65B File Offset: 0x0005D85B
+		// Token: 0x060000FE RID: 254 RVA: 0x00062EFB File Offset: 0x000610FB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAbyssRoomById.LogPair = null;
 			ConfigAbyssRoomById.HandleId = 0;
 		}
 
-		// Token: 0x060000FF RID: 255 RVA: 0x0005F669 File Offset: 0x0005D869
+		// Token: 0x060000FF RID: 255 RVA: 0x00062F09 File Offset: 0x00061109
 		public static void Init()
 		{
 			ConfigAbyssRoomById.HandleId = ConfigCommon.InitDataStatement(ConfigAbyssRoomById.HandleId, "db_dangoabyss.db", "select BinData from `AbyssRoom` where Id=?");
 		}
 
-		// Token: 0x06000100 RID: 256 RVA: 0x0005F684 File Offset: 0x0005D884
+		// Token: 0x06000100 RID: 256 RVA: 0x00062F24 File Offset: 0x00061124
 		public static AbyssRoom? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAbyssRoomById.HandleId, ConfigAbyssRoomById.LogPair))

@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020017FE RID: 6142
+	// Token: 0x02000370 RID: 880
 	[UnrealObjectPath("/Script/KuroData.TraceSphereElement")]
 	[UnrealStructLayout(240, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 240)]
 	public class UTraceSphereElement : UTraceBaseElement, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06016BD8 RID: 93144 RVA: 0x00212F12 File Offset: 0x00211112
+		// Token: 0x060059AE RID: 22958 RVA: 0x0007E632 File Offset: 0x0007C832
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UTraceSphereElement._ClassPtr;
 		}
 
-		// Token: 0x06016BD9 RID: 93145 RVA: 0x00212F20 File Offset: 0x00211120
+		// Token: 0x060059AF RID: 22959 RVA: 0x0007E640 File Offset: 0x0007C840
 		public UTraceSphereElement() : this(BuiltinUtils.AllocNativeUObject(UTraceSphereElement.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06016BDA RID: 93146 RVA: 0x00212F48 File Offset: 0x00211148
+		// Token: 0x060059B0 RID: 22960 RVA: 0x0007E668 File Offset: 0x0007C868
 		[NullableContext(1)]
 		public UTraceSphereElement(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UTraceSphereElement.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005BF1 RID: 23537
-		// (get) Token: 0x06016BDB RID: 93147 RVA: 0x00212F7B File Offset: 0x0021117B
-		// (set) Token: 0x06016BDC RID: 93148 RVA: 0x00212F8B File Offset: 0x0021118B
+		// Token: 0x170011C5 RID: 4549
+		// (get) Token: 0x060059B1 RID: 22961 RVA: 0x0007E69B File Offset: 0x0007C89B
+		// (set) Token: 0x060059B2 RID: 22962 RVA: 0x0007E6AB File Offset: 0x0007C8AB
 		public unsafe float Radius
 		{
 			get
@@ -43,28 +43,28 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06016BDD RID: 93149 RVA: 0x00212F9C File Offset: 0x0021119C
+		// Token: 0x060059B3 RID: 22963 RVA: 0x0007E6BC File Offset: 0x0007C8BC
 		static UTraceSphereElement()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroData.TraceSphereElement");
 		}
 
-		// Token: 0x06016BDE RID: 93150 RVA: 0x00212FAA File Offset: 0x002111AA
+		// Token: 0x060059B4 RID: 22964 RVA: 0x0007E6CA File Offset: 0x0007C8CA
 		protected UTraceSphereElement(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C57C RID: 50556
+		// Token: 0x04002514 RID: 9492
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroData.TraceSphereElement";
 
-		// Token: 0x0400C57D RID: 50557
+		// Token: 0x04002515 RID: 9493
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C57E RID: 50558
+		// Token: 0x04002516 RID: 9494
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C57F RID: 50559
+		// Token: 0x04002517 RID: 9495
 		internal static int __PropertyOffset_Radius;
 	}
 }

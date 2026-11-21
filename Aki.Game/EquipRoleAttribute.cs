@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020024A1 RID: 9377
+// Token: 0x02001988 RID: 6536
 internal class EquipRoleAttribute : UiPanelBase
 {
-	// Token: 0x06012D3B RID: 77115 RVA: 0x004A5A56 File Offset: 0x004A3C56
+	// Token: 0x060101FC RID: 66044 RVA: 0x004B355E File Offset: 0x004B175E
 	[NullableContext(1)]
 	public EquipRoleAttribute(UUIItem actor)
 	{
 		base.CreateThenShowByActor(actor.GetOwner(), null);
 	}
 
-	// Token: 0x06012D3C RID: 77116 RVA: 0x004A5A6B File Offset: 0x004A3C6B
+	// Token: 0x060101FD RID: 66045 RVA: 0x004B3573 File Offset: 0x004B1773
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +26,7 @@ internal class EquipRoleAttribute : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012D3D RID: 77117 RVA: 0x004A5AA4 File Offset: 0x004A3CA4
+	// Token: 0x060101FE RID: 66046 RVA: 0x004B35AC File Offset: 0x004B17AC
 	[NullableContext(1)]
 	public void Update(PhantomBattleData data)
 	{
@@ -43,18 +42,10 @@ internal class EquipRoleAttribute : UiPanelBase
 			RoleSkin roleSkinConfig = roleSkinData.GetRoleSkinConfig();
 			string tag = "RoleIcon1";
 			string roleSkinConfigParam = ComponentConfig.Instance.GetRoleSkinConfigParam(tag);
-			if (roleSkinConfigParam != null && roleSkinConfigParam != "")
+			string path;
+			if (roleSkinConfigParam != null && roleSkinConfigParam != "" && roleSkinConfig.TryGetMember(roleSkinConfigParam, out path))
 			{
-				RoleSkin roleSkin = roleSkinConfig;
-				PropertyInfo property = roleSkin.GetType().GetProperty(roleSkinConfigParam);
-				if (property != null)
-				{
-					string text = property.GetValue(roleSkin) as string;
-					if (text != null)
-					{
-						base.SetTextureByPath(text, base.GetTexture(0), null, null);
-					}
-				}
+				base.SetTextureByPath(path, base.GetTexture(0), null, null);
 			}
 			string item = RoleConfig.Instance.GetRoleName(roleSkinConfig.Name);
 			IReadOnlyList<MainRoleConfig> allMainRoleConfig = RoleConfig.Instance.GetAllMainRoleConfig();
@@ -78,12 +69,12 @@ internal class EquipRoleAttribute : UiPanelBase
 		}
 	}
 
-	// Token: 0x02008A23 RID: 35363
+	// Token: 0x02007BAD RID: 31661
 	private enum EUnderRoleAttribute
 	{
-		// Token: 0x0402CDB3 RID: 183731
+		// Token: 0x040280D3 RID: 164051
 		RoleTexture,
-		// Token: 0x0402CDB4 RID: 183732
+		// Token: 0x040280D4 RID: 164052
 		RoleText
 	}
 }

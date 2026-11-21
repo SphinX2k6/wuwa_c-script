@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Kurotato.View.Components;
@@ -13,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 {
-	// Token: 0x02005725 RID: 22309
+	// Token: 0x020046FC RID: 18172
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoPopupWeaponDetailView : UiViewBase
 	{
-		// Token: 0x06038B8B RID: 232331 RVA: 0x00D75CA7 File Offset: 0x00D73EA7
+		// Token: 0x0602DA9A RID: 187034 RVA: 0x00CC42DB File Offset: 0x00CC24DB
 		public KurotatoPopupWeaponDetailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038B8C RID: 232332 RVA: 0x00D75CC8 File Offset: 0x00D73EC8
+		// Token: 0x0602DA9B RID: 187035 RVA: 0x00CC42FC File Offset: 0x00CC24FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -56,7 +55,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038B8D RID: 232333 RVA: 0x00D75E38 File Offset: 0x00D74038
+		// Token: 0x0602DA9C RID: 187036 RVA: 0x00CC446C File Offset: 0x00CC266C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoPopupWeaponDetailView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -67,7 +66,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038B8E RID: 232334 RVA: 0x00D75E7C File Offset: 0x00D7407C
+		// Token: 0x0602DA9D RID: 187037 RVA: 0x00CC44B0 File Offset: 0x00CC26B0
 		private UniTask CreateWeaponTipAsync()
 		{
 			KurotatoPopupWeaponDetailView.<CreateWeaponTipAsync>d__9 <CreateWeaponTipAsync>d__;
@@ -78,7 +77,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return <CreateWeaponTipAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038B8F RID: 232335 RVA: 0x00D75EC0 File Offset: 0x00D740C0
+		// Token: 0x0602DA9E RID: 187038 RVA: 0x00CC44F4 File Offset: 0x00CC26F4
 		protected override void OnStart()
 		{
 			this.CreateWeaponScrollList();
@@ -89,7 +88,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.RefreshArrows();
 		}
 
-		// Token: 0x06038B90 RID: 232336 RVA: 0x00D75F03 File Offset: 0x00D74103
+		// Token: 0x0602DA9F RID: 187039 RVA: 0x00CC4537 File Offset: 0x00CC2737
 		private void CreateWeaponScrollList()
 		{
 			this.WeaponScrollList = new GenericScrollViewNew<KurotatoWeaponSmallItemGrid, IKurotatoSmallItemGridData>(base.GetScrollViewWithScrollbar(4), delegate()
@@ -100,25 +99,28 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			}, null, false, null);
 		}
 
-		// Token: 0x06038B91 RID: 232337 RVA: 0x00D75F28 File Offset: 0x00D74128
+		// Token: 0x0602DAA0 RID: 187040 RVA: 0x00CC455C File Offset: 0x00CC275C
 		private void RefreshScrollList()
 		{
-			KurotatoModel modelData = KurotatoModel.Instance;
-			List<IKurotatoSmallItemGridData> data = (from item in this.CardData
-			select new KurotatoSmallItemGridData
+			KurotatoModel instance = KurotatoModel.Instance;
+			List<IKurotatoSmallItemGridData> list = new List<IKurotatoSmallItemGridData>();
+			foreach (KurotatoCardTip kurotatoCardTip in this.CardData)
 			{
-				Type = item.CardType,
-				Id = (item.IsConfigId.GetValueOrDefault() ? item.SelectId : modelData.GetWeaponDataByIncId(item.SelectId).WeaponId),
-				IncId = item.SelectId,
-				Count = 0
-			}).ToList<IKurotatoSmallItemGridData>();
-			this.WeaponScrollList.RefreshByData(data, delegate
+				list.Add(new KurotatoSmallItemGridData
+				{
+					Type = kurotatoCardTip.CardType,
+					Id = (kurotatoCardTip.IsConfigId.GetValueOrDefault() ? kurotatoCardTip.SelectId : instance.GetWeaponDataByIncId(kurotatoCardTip.SelectId).WeaponId),
+					IncId = kurotatoCardTip.SelectId,
+					Count = 0
+				});
+			}
+			this.WeaponScrollList.RefreshByData(list, delegate
 			{
 				this.RefreshItemTip();
 			}, false);
 		}
 
-		// Token: 0x06038B92 RID: 232338 RVA: 0x00D75F84 File Offset: 0x00D74184
+		// Token: 0x0602DAA1 RID: 187041 RVA: 0x00CC4628 File Offset: 0x00CC2828
 		private void RefreshItemTip()
 		{
 			this.Index = Math.Max(0, Math.Min(this.Index, this.CardData.Count - 1));
@@ -146,7 +148,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.RefreshArrows();
 		}
 
-		// Token: 0x06038B93 RID: 232339 RVA: 0x00D7606C File Offset: 0x00D7426C
+		// Token: 0x0602DAA2 RID: 187042 RVA: 0x00CC4710 File Offset: 0x00CC2910
 		private void RefreshArrows()
 		{
 			bool uiactive = this.CardData.Count > 1;
@@ -172,13 +174,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			uuiitem2.SetUIActive(uiactive);
 		}
 
-		// Token: 0x06038B94 RID: 232340 RVA: 0x00D760D2 File Offset: 0x00D742D2
+		// Token: 0x0602DAA3 RID: 187043 RVA: 0x00CC4776 File Offset: 0x00CC2976
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06038B95 RID: 232341 RVA: 0x00D760DB File Offset: 0x00D742DB
+		// Token: 0x0602DAA4 RID: 187044 RVA: 0x00CC477F File Offset: 0x00CC297F
 		private void OnClickLeft()
 		{
 			if (this.CardData.Count <= 1)
@@ -189,7 +191,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.RefreshItemTip();
 		}
 
-		// Token: 0x06038B96 RID: 232342 RVA: 0x00D76118 File Offset: 0x00D74318
+		// Token: 0x0602DAA5 RID: 187045 RVA: 0x00CC47BC File Offset: 0x00CC29BC
 		private void OnClickRight()
 		{
 			if (this.CardData.Count <= 1)
@@ -200,7 +202,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.RefreshItemTip();
 		}
 
-		// Token: 0x06038B97 RID: 232343 RVA: 0x00D76155 File Offset: 0x00D74355
+		// Token: 0x0602DAA6 RID: 187046 RVA: 0x00CC47F9 File Offset: 0x00CC29F9
 		private void OnClickGrid(IKurotatoSmallItemGridData data, EToggleState state, int gridIndex)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -215,20 +217,20 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			}
 		}
 
-		// Token: 0x0401DC36 RID: 121910
+		// Token: 0x040186CC RID: 100044
 		private readonly KurotatoItemInfoTipPanel ItemTip = new KurotatoItemInfoTipPanel();
 
-		// Token: 0x0401DC37 RID: 121911
+		// Token: 0x040186CD RID: 100045
 		private List<KurotatoCardTip> CardData = new List<KurotatoCardTip>();
 
-		// Token: 0x0401DC38 RID: 121912
+		// Token: 0x040186CE RID: 100046
 		private int Index;
 
-		// Token: 0x0401DC39 RID: 121913
+		// Token: 0x040186CF RID: 100047
 		[Nullable(2)]
 		private KurotatoWeaponSmallItemGrid SelectItem;
 
-		// Token: 0x0401DC3A RID: 121914
+		// Token: 0x040186D0 RID: 100048
 		[Nullable(new byte[]
 		{
 			2,
@@ -237,26 +239,26 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 		})]
 		private GenericScrollViewNew<KurotatoWeaponSmallItemGrid, IKurotatoSmallItemGridData> WeaponScrollList;
 
-		// Token: 0x0200B8E1 RID: 47329
+		// Token: 0x0200A303 RID: 41731
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x04037ECB RID: 229067
+			// Token: 0x040328DD RID: 207069
 			public const int BtnClose = 0;
 
-			// Token: 0x04037ECC RID: 229068
+			// Token: 0x040328DE RID: 207070
 			public const int TipItem = 1;
 
-			// Token: 0x04037ECD RID: 229069
+			// Token: 0x040328DF RID: 207071
 			public const int BtnLeft = 2;
 
-			// Token: 0x04037ECE RID: 229070
+			// Token: 0x040328E0 RID: 207072
 			public const int BtnRight = 3;
 
-			// Token: 0x04037ECF RID: 229071
+			// Token: 0x040328E1 RID: 207073
 			public const int ScrollView = 4;
 
-			// Token: 0x04037ED0 RID: 229072
+			// Token: 0x040328E2 RID: 207074
 			public const int ItemGrid = 5;
 		}
 	}

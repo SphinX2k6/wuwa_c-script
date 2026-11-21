@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005D3 RID: 1491
+	// Token: 0x020005EB RID: 1515
 	public class ConfigMowTowerLevelsReById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060022FF RID: 8959 RVA: 0x0011F607 File Offset: 0x0011D807
+		// Token: 0x0600238F RID: 9103 RVA: 0x00126083 File Offset: 0x00124283
 		static ConfigMowTowerLevelsReById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMowTowerLevelsReById.CreateStaticDefaultValue), new Action(ConfigMowTowerLevelsReById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002300 RID: 8960 RVA: 0x0011F628 File Offset: 0x0011D828
+		// Token: 0x06002390 RID: 9104 RVA: 0x001260A4 File Offset: 0x001242A4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMowTowerLevelsReById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002301 RID: 8961 RVA: 0x0011F6A7 File Offset: 0x0011D8A7
+		// Token: 0x06002391 RID: 9105 RVA: 0x00126123 File Offset: 0x00124323
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMowTowerLevelsReById.LogPair = null;
 			ConfigMowTowerLevelsReById.HandleId = 0;
 		}
 
-		// Token: 0x06002302 RID: 8962 RVA: 0x0011F6B5 File Offset: 0x0011D8B5
+		// Token: 0x06002392 RID: 9106 RVA: 0x00126131 File Offset: 0x00124331
 		public static void Init()
 		{
 			ConfigMowTowerLevelsReById.HandleId = ConfigCommon.InitDataStatement(ConfigMowTowerLevelsReById.HandleId, "db_mowtower.db", "select BinData from `MowTowerLevelsRe` where Id=?");
 		}
 
-		// Token: 0x06002303 RID: 8963 RVA: 0x0011F6D0 File Offset: 0x0011D8D0
+		// Token: 0x06002393 RID: 9107 RVA: 0x0012614C File Offset: 0x0012434C
 		public static MowTowerLevelsRe? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMowTowerLevelsReById.HandleId, ConfigMowTowerLevelsReById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MowTowerLevelsRe?(rootAsMowTowerLevelsRe);
 		}
 
-		// Token: 0x040028A9 RID: 10409
+		// Token: 0x04002951 RID: 10577
 		private const string DB = "db_mowtower.db";
 
-		// Token: 0x040028AA RID: 10410
+		// Token: 0x04002952 RID: 10578
 		private const string FILE = "g.割草爬塔活动.xlsx";
 
-		// Token: 0x040028AB RID: 10411
+		// Token: 0x04002953 RID: 10579
 		private const string TABLE = "MowTowerLevelsRe";
 
-		// Token: 0x040028AC RID: 10412
+		// Token: 0x04002954 RID: 10580
 		private const string COMMAND = "select BinData from `MowTowerLevelsRe` where Id=?";
 
-		// Token: 0x040028AD RID: 10413
+		// Token: 0x04002955 RID: 10581
 		private const string KEY_PREFIX = "MowTowerLevelsReById";
 
-		// Token: 0x040028AE RID: 10414
+		// Token: 0x04002956 RID: 10582
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040028AF RID: 10415
+		// Token: 0x04002957 RID: 10583
 		private static int HandleId;
 	}
 }

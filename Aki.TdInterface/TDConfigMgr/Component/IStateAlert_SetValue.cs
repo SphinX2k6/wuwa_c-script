@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000708 RID: 1800
+	// Token: 0x020007A9 RID: 1961
 	public class IStateAlert_SetValue
 	{
-		// Token: 0x04001A35 RID: 6709
-		[Nullable(1)]
+		// Token: 0x04001C34 RID: 7220
 		public string State;
 
-		// Token: 0x04001A36 RID: 6710
+		// Token: 0x04001C35 RID: 7221
 		public int Alert;
 	}
 }

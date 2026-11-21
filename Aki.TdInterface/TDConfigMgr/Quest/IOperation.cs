@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200102F RID: 4143
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200115B RID: 4443
 	public class IOperation
 	{
-		// Token: 0x06005C68 RID: 23656 RVA: 0x000DFCC0 File Offset: 0x000DDEC0
+		// Token: 0x0600624A RID: 25162 RVA: 0x000EC9B8 File Offset: 0x000EABB8
 		private IOperation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005C69 RID: 23657 RVA: 0x000DFCF8 File Offset: 0x000DDEF8
+		// Token: 0x0600624B RID: 25163 RVA: 0x000EC9F0 File Offset: 0x000EABF0
 		public static IOperation Create([Nullable(2)] IOperation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C6A RID: 23658 RVA: 0x000DFD0B File Offset: 0x000DDF0B
+		// Token: 0x0600624C RID: 25164 RVA: 0x000ECA03 File Offset: 0x000EAC03
 		public static IOperation CreateFromSetValue([Nullable(2)] IOperation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C6B RID: 23659 RVA: 0x000DFD1E File Offset: 0x000DDF1E
+		// Token: 0x0600624D RID: 25165 RVA: 0x000ECA16 File Offset: 0x000EAC16
 		public IOperation_SetValue ToSetValue()
 		{
 			return new IOperation_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E6F RID: 7791
-		// (get) Token: 0x06005C6C RID: 23660 RVA: 0x000DFD31 File Offset: 0x000DDF31
-		// (set) Token: 0x06005C6D RID: 23661 RVA: 0x000DFD5C File Offset: 0x000DDF5C
+		// Token: 0x17002019 RID: 8217
+		// (get) Token: 0x0600624E RID: 25166 RVA: 0x000ECA29 File Offset: 0x000EAC29
+		// (set) Token: 0x0600624F RID: 25167 RVA: 0x000ECA54 File Offset: 0x000EAC54
 		public virtual EOperation Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003794 RID: 14228
+		// Token: 0x04003ACF RID: 15055
 		[Nullable(2)]
 		protected IOperation FbInstance;
 
-		// Token: 0x04003795 RID: 14229
+		// Token: 0x04003AD0 RID: 15056
 		[Nullable(2)]
 		protected IOperation_SetValue PocoInterface;
 	}

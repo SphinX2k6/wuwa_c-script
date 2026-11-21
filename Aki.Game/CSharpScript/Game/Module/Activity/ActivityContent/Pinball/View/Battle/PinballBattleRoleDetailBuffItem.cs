@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 {
-	// Token: 0x0200637A RID: 25466
+	// Token: 0x020052F8 RID: 21240
 	[Nullable(new byte[]
 	{
 		0,
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 	})]
 	public class PinballBattleRoleDetailBuffItem : GridProxyAbstract<BuffView>
 	{
-		// Token: 0x060400DB RID: 262363 RVA: 0x00F7FB24 File Offset: 0x00F7DD24
+		// Token: 0x06034D9C RID: 216476 RVA: 0x00EC6A88 File Offset: 0x00EC4C88
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060400DC RID: 262364 RVA: 0x00F7FBD0 File Offset: 0x00F7DDD0
+		// Token: 0x06034D9D RID: 216477 RVA: 0x00EC6B34 File Offset: 0x00EC4D34
 		[NullableContext(1)]
 		public override void Refresh(BuffView data, bool isSelected, int gridIndex)
 		{
@@ -80,16 +80,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0200C595 RID: 50581
+		// Token: 0x0200AF7C RID: 44924
 		private enum EPinballBattleRoleDetailBuffItemComp
 		{
-			// Token: 0x0403BA52 RID: 244306
+			// Token: 0x040363B4 RID: 222132
 			TextTitle,
-			// Token: 0x0403BA53 RID: 244307
+			// Token: 0x040363B5 RID: 222133
 			TextDescription,
-			// Token: 0x0403BA54 RID: 244308
+			// Token: 0x040363B6 RID: 222134
 			SpriteIcon,
-			// Token: 0x0403BA55 RID: 244309
+			// Token: 0x040363B7 RID: 222135
 			TextCount
 		}
 	}

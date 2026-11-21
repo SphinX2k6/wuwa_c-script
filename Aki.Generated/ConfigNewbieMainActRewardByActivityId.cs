@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005EA RID: 1514
+	// Token: 0x02000602 RID: 1538
 	public class ConfigNewbieMainActRewardByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600238B RID: 9099 RVA: 0x001227FC File Offset: 0x001209FC
+		// Token: 0x0600241B RID: 9243 RVA: 0x00129278 File Offset: 0x00127478
 		static ConfigNewbieMainActRewardByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigNewbieMainActRewardByActivityId.CreateStaticDefaultValue), new Action(ConfigNewbieMainActRewardByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600238C RID: 9100 RVA: 0x0012281C File Offset: 0x00120A1C
+		// Token: 0x0600241C RID: 9244 RVA: 0x00129298 File Offset: 0x00127498
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigNewbieMainActRewardByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600238D RID: 9101 RVA: 0x0012289B File Offset: 0x00120A9B
+		// Token: 0x0600241D RID: 9245 RVA: 0x00129317 File Offset: 0x00127517
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigNewbieMainActRewardByActivityId.LogPair = null;
 			ConfigNewbieMainActRewardByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x0600238E RID: 9102 RVA: 0x001228A9 File Offset: 0x00120AA9
+		// Token: 0x0600241E RID: 9246 RVA: 0x00129325 File Offset: 0x00127525
 		public static void Init()
 		{
 			ConfigNewbieMainActRewardByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigNewbieMainActRewardByActivityId.HandleId, "db_newplayersupportactivityv2.db", "select BinData from `NewbieMainActReward` where ActivityId=?");
 		}
 
-		// Token: 0x0600238F RID: 9103 RVA: 0x001228C4 File Offset: 0x00120AC4
+		// Token: 0x0600241F RID: 9247 RVA: 0x00129340 File Offset: 0x00127540
 		[NullableContext(2)]
 		public static IReadOnlyList<NewbieMainActReward> GetConfigList(int p0ActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400294C RID: 10572
+		// Token: 0x040029F4 RID: 10740
 		private const string DB = "db_newplayersupportactivityv2.db";
 
-		// Token: 0x0400294D RID: 10573
+		// Token: 0x040029F5 RID: 10741
 		private const string FILE = "x.新手主线奖励新.xlsx";
 
-		// Token: 0x0400294E RID: 10574
+		// Token: 0x040029F6 RID: 10742
 		private const string TABLE = "NewbieMainActReward";
 
-		// Token: 0x0400294F RID: 10575
+		// Token: 0x040029F7 RID: 10743
 		private const string COMMAND = "select BinData from `NewbieMainActReward` where ActivityId=?";
 
-		// Token: 0x04002950 RID: 10576
+		// Token: 0x040029F8 RID: 10744
 		private const string KEY_PREFIX = "NewbieMainActRewardByActivityId";
 
-		// Token: 0x04002951 RID: 10577
+		// Token: 0x040029F9 RID: 10745
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002952 RID: 10578
+		// Token: 0x040029FA RID: 10746
 		private static int HandleId;
 	}
 }

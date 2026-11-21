@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020012BD RID: 4797
+// Token: 0x02000771 RID: 1905
 [NullableContext(1)]
 [Nullable(0)]
 public class LordGymBossCard : UiPanelBase
 {
-	// Token: 0x060083C9 RID: 33737 RVA: 0x001C0FF0 File Offset: 0x001BF1F0
+	// Token: 0x06005764 RID: 22372 RVA: 0x001C9E4C File Offset: 0x001C804C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class LordGymBossCard : UiPanelBase
 		};
 	}
 
-	// Token: 0x060083CA RID: 33738 RVA: 0x001C10F4 File Offset: 0x001BF2F4
+	// Token: 0x06005765 RID: 22373 RVA: 0x001C9F50 File Offset: 0x001C8150
 	protected override void OnStart()
 	{
 		UUIButtonComponent button = base.GetButton(4);
@@ -52,7 +52,7 @@ public class LordGymBossCard : UiPanelBase
 		this.PageDotLayout = new GenericLayout<LordGymPageDot, int>(base.GetGridLayout(8), new Func<LordGymPageDot>(this.InitPageDot), null, false, true);
 	}
 
-	// Token: 0x060083CB RID: 33739 RVA: 0x001C1222 File Offset: 0x001BF422
+	// Token: 0x06005766 RID: 22374 RVA: 0x001CA07E File Offset: 0x001C827E
 	private void HideSwitchBtn()
 	{
 		UUIItem rightBtn = this.RightBtn;
@@ -68,7 +68,7 @@ public class LordGymBossCard : UiPanelBase
 		leftBtn.SetUIActive(false);
 	}
 
-	// Token: 0x060083CC RID: 33740 RVA: 0x001C1248 File Offset: 0x001BF448
+	// Token: 0x06005767 RID: 22375 RVA: 0x001CA0A4 File Offset: 0x001C82A4
 	public void Refresh(List<int> ids)
 	{
 		if (this.CircleExhibitionView == null || this.PageDotLayout == null)
@@ -107,13 +107,13 @@ public class LordGymBossCard : UiPanelBase
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x060083CD RID: 33741 RVA: 0x001C1303 File Offset: 0x001BF503
+	// Token: 0x06005768 RID: 22376 RVA: 0x001CA15F File Offset: 0x001C835F
 	private LordGymPageDot InitPageDot()
 	{
 		return new LordGymPageDot();
 	}
 
-	// Token: 0x060083CE RID: 33742 RVA: 0x001C130A File Offset: 0x001BF50A
+	// Token: 0x06005769 RID: 22377 RVA: 0x001CA166 File Offset: 0x001C8366
 	private LordGymBossCardItem InitGrid(AActor actor, int index, int showNum)
 	{
 		LordGymBossCardItem lordGymBossCardItem = new LordGymBossCardItem(actor);
@@ -121,7 +121,7 @@ public class LordGymBossCard : UiPanelBase
 		return lordGymBossCardItem;
 	}
 
-	// Token: 0x060083CF RID: 33743 RVA: 0x001C1324 File Offset: 0x001BF524
+	// Token: 0x0600576A RID: 22378 RVA: 0x001CA180 File Offset: 0x001C8380
 	private void OnItemSelected(int index)
 	{
 		GenericLayout<LordGymPageDot, int> pageDotLayout = this.PageDotLayout;
@@ -142,7 +142,7 @@ public class LordGymBossCard : UiPanelBase
 		leftBtn.SetUIActive(true);
 	}
 
-	// Token: 0x060083D0 RID: 33744 RVA: 0x001C135C File Offset: 0x001BF55C
+	// Token: 0x0600576B RID: 22379 RVA: 0x001CA1B8 File Offset: 0x001C83B8
 	private void MoveToLeft()
 	{
 		CircleAttachView<int, LordGymBossCardItem> circleExhibitionView = this.CircleExhibitionView;
@@ -153,7 +153,7 @@ public class LordGymBossCard : UiPanelBase
 		circleExhibitionView.MoveToNextItem(-1);
 	}
 
-	// Token: 0x060083D1 RID: 33745 RVA: 0x001C136F File Offset: 0x001BF56F
+	// Token: 0x0600576C RID: 22380 RVA: 0x001CA1CB File Offset: 0x001C83CB
 	private void MoveToRight()
 	{
 		CircleAttachView<int, LordGymBossCardItem> circleExhibitionView = this.CircleExhibitionView;
@@ -164,20 +164,20 @@ public class LordGymBossCard : UiPanelBase
 		circleExhibitionView.MoveToNextItem(1);
 	}
 
-	// Token: 0x04003B4F RID: 15183
+	// Token: 0x04003BE7 RID: 15335
 	private const int SHOW_GAP = 4;
 
-	// Token: 0x04003B50 RID: 15184
+	// Token: 0x04003BE8 RID: 15336
 	private CircleAttachView<int, LordGymBossCardItem> CircleExhibitionView;
 
-	// Token: 0x04003B51 RID: 15185
+	// Token: 0x04003BE9 RID: 15337
 	private GenericLayout<LordGymPageDot, int> PageDotLayout;
 
-	// Token: 0x04003B52 RID: 15186
+	// Token: 0x04003BEA RID: 15338
 	[Nullable(2)]
 	private UUIItem LeftBtn;
 
-	// Token: 0x04003B53 RID: 15187
+	// Token: 0x04003BEB RID: 15339
 	[Nullable(2)]
 	private UUIItem RightBtn;
 }

@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D6E RID: 19822
+	// Token: 0x0200526D RID: 21101
 	public enum EAttachType : byte
 	{
-		// Token: 0x0400D7EA RID: 55274
+		// Token: 0x0400E324 RID: 58148
 		Actor,
-		// Token: 0x0400D7EB RID: 55275
+		// Token: 0x0400E325 RID: 58149
 		Entity,
-		// Token: 0x0400D7EC RID: 55276
+		// Token: 0x0400E326 RID: 58150
 		Dynamic,
-		// Token: 0x0400D7ED RID: 55277
+		// Token: 0x0400E327 RID: 58151
 		RelativePoint,
-		// Token: 0x0400D7EE RID: 55278
+		// Token: 0x0400E328 RID: 58152
 		Player
 	}
 }

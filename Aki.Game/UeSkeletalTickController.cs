@@ -3,25 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003280 RID: 12928
+// Token: 0x020027F0 RID: 10224
 [NullableContext(1)]
 [Nullable(0)]
 public class UeSkeletalTickController : IStaticVariableResetter
 {
-	// Token: 0x0601BF9E RID: 114590 RVA: 0x007C5765 File Offset: 0x007C3965
+	// Token: 0x06019B90 RID: 105360 RVA: 0x007ECA01 File Offset: 0x007EAC01
 	static UeSkeletalTickController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UeSkeletalTickController.CreateStaticDefaultValue), new Action(UeSkeletalTickController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601BF9F RID: 114591 RVA: 0x007C57A2 File Offset: 0x007C39A2
-	public static void NotifyMovementPredictModeChanged(bool v)
-	{
-		UeSkeletalTickController.MovementPredictModeInternal = v;
-		UeSkeletalTickController.RefreshSkeletalMeshConfig();
-	}
-
-	// Token: 0x0601BFA0 RID: 114592 RVA: 0x007C57B0 File Offset: 0x007C39B0
+	// Token: 0x06019B91 RID: 105361 RVA: 0x007ECA20 File Offset: 0x007EAC20
 	private static void SetSkeletalMeshConfig(UeSkeletalTickManageComponent manager, bool useNewAnimUpdate, bool useKuroParallel, bool useKawaiiParallel)
 	{
 		foreach (USkeletalMeshComponent uskeletalMeshComponent in manager.SkeletalComps)
@@ -33,19 +26,19 @@ public class UeSkeletalTickController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BFA1 RID: 114593 RVA: 0x007C5818 File Offset: 0x007C3A18
+	// Token: 0x06019B92 RID: 105362 RVA: 0x007ECA88 File Offset: 0x007EAC88
 	public static void AddManager(UeSkeletalTickManageComponent manager)
 	{
 		if (manager.TickMode == ESkeletalMeshTickMode.TsProxy)
 		{
 			UeSkeletalTickController.Managers.Add(manager);
-			UeSkeletalTickController.SetSkeletalMeshConfig(manager, UeSkeletalTickController.EnabledNewSkelTickTiming, UeSkeletalTickController.EnabledKuroParallel, UeSkeletalTickController.EnabledKawaiiParallel);
+			UeSkeletalTickController.SetSkeletalMeshConfig(manager, UeTickManageDefine.EnabledNewSkelTickTiming, UeTickManageDefine.EnabledKuroParallel, UeTickManageDefine.EnabledKawaiiParallel);
 			return;
 		}
 		UeSkeletalTickController.NotParallelManagers.Add(manager);
 	}
 
-	// Token: 0x0601BFA2 RID: 114594 RVA: 0x007C5854 File Offset: 0x007C3A54
+	// Token: 0x06019B93 RID: 105363 RVA: 0x007ECAC4 File Offset: 0x007EACC4
 	public static void DeleteManager(UeSkeletalTickManageComponent manager)
 	{
 		UeSkeletalTickController.Managers.Remove(manager);
@@ -59,10 +52,10 @@ public class UeSkeletalTickController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BFA3 RID: 114595 RVA: 0x007C58D4 File Offset: 0x007C3AD4
-	public static void TickManagers(float deltaSeconds)
+	// Token: 0x06019B94 RID: 105364 RVA: 0x007ECB44 File Offset: 0x007EAD44
+	public static void TickManagersStep1(float deltaSeconds)
 	{
-		if (UeSkeletalTickController.EnabledNewSkelTickTiming)
+		if (UeTickManageDefine.EnabledNewSkelTickTiming)
 		{
 			UeSkeletalTickController.TickedManagers.Clear();
 			foreach (UeSkeletalTickManageComponent ueSkeletalTickManageComponent in UeSkeletalTickController.Managers)
@@ -70,7 +63,7 @@ public class UeSkeletalTickController : IStaticVariableResetter
 				if (ueSkeletalTickManageComponent.Active)
 				{
 					UeSkeletalTickController.TickedManagers.Add(ueSkeletalTickManageComponent);
-					ueSkeletalTickManageComponent.ProxyTick(deltaSeconds, true);
+					ueSkeletalTickManageComponent.TickStep1(deltaSeconds, true);
 				}
 			}
 			using (HashSet<UeSkeletalTickManageComponent>.Enumerator enumerator = UeSkeletalTickController.NotParallelManagers.GetEnumerator())
@@ -81,7 +74,7 @@ public class UeSkeletalTickController : IStaticVariableResetter
 					if (ueSkeletalTickManageComponent2.Active)
 					{
 						UeSkeletalTickController.TickedManagers.Add(ueSkeletalTickManageComponent2);
-						ueSkeletalTickManageComponent2.ProxyTick(deltaSeconds, true);
+						ueSkeletalTickManageComponent2.TickStep1(deltaSeconds, true);
 					}
 				}
 				return;
@@ -91,28 +84,31 @@ public class UeSkeletalTickController : IStaticVariableResetter
 		{
 			if (ueSkeletalTickManageComponent3.Active)
 			{
-				ueSkeletalTickManageComponent3.ProxyTick(deltaSeconds, false);
+				ueSkeletalTickManageComponent3.TickStep1(deltaSeconds, false);
 			}
 		}
 		foreach (UeSkeletalTickManageComponent ueSkeletalTickManageComponent4 in UeSkeletalTickController.NotParallelManagers)
 		{
 			if (ueSkeletalTickManageComponent4.Active)
 			{
-				ueSkeletalTickManageComponent4.ProxyTick(deltaSeconds, false);
+				ueSkeletalTickManageComponent4.TickStep1(deltaSeconds, false);
 			}
 		}
 	}
 
-	// Token: 0x0601BFA4 RID: 114596 RVA: 0x007C5A40 File Offset: 0x007C3C40
+	// Token: 0x06019B95 RID: 105365 RVA: 0x007ECCB0 File Offset: 0x007EAEB0
 	public static void TickManagersStep2()
 	{
 		foreach (UeSkeletalTickManageComponent ueSkeletalTickManageComponent in UeSkeletalTickController.TickedManagers)
 		{
-			ueSkeletalTickManageComponent.UnlockEvaluation();
+			if (ueSkeletalTickManageComponent.TickMode == ESkeletalMeshTickMode.TsProxy || ueSkeletalTickManageComponent.TickMode == ESkeletalMeshTickMode.TsProxyMainMeshNotParallel)
+			{
+				ueSkeletalTickManageComponent.UnlockEvaluation();
+			}
 		}
 	}
 
-	// Token: 0x0601BFA5 RID: 114597 RVA: 0x007C5A90 File Offset: 0x007C3C90
+	// Token: 0x06019B96 RID: 105366 RVA: 0x007ECD14 File Offset: 0x007EAF14
 	public static void DealCompleteSkeletalComp()
 	{
 		foreach (UeSkeletalTickManageComponent ueSkeletalTickManageComponent in UeSkeletalTickController.TickedManagers)
@@ -122,7 +118,7 @@ public class UeSkeletalTickController : IStaticVariableResetter
 		UeSkeletalTickController.TickedManagers.Clear();
 	}
 
-	// Token: 0x0601BFA6 RID: 114598 RVA: 0x007C5AEC File Offset: 0x007C3CEC
+	// Token: 0x06019B97 RID: 105367 RVA: 0x007ECD70 File Offset: 0x007EAF70
 	public static void AfterTickManagers(float deltaSeconds)
 	{
 		foreach (UeSkeletalTickManageComponent ueSkeletalTickManageComponent in UeSkeletalTickController.Managers)
@@ -141,152 +137,58 @@ public class UeSkeletalTickController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BFA7 RID: 114599 RVA: 0x007C5B90 File Offset: 0x007C3D90
+	// Token: 0x06019B98 RID: 105368 RVA: 0x007ECE14 File Offset: 0x007EB014
 	public static void RefreshSkeletalMeshConfig()
 	{
 		foreach (UeSkeletalTickManageComponent manager in UeSkeletalTickController.Managers)
 		{
-			UeSkeletalTickController.SetSkeletalMeshConfig(manager, UeSkeletalTickController.EnabledNewSkelTickTiming, UeSkeletalTickController.EnabledKuroParallel, UeSkeletalTickController.EnabledKawaiiParallel);
+			UeSkeletalTickController.SetSkeletalMeshConfig(manager, UeTickManageDefine.EnabledNewSkelTickTiming, UeTickManageDefine.EnabledKuroParallel, UeTickManageDefine.EnabledKawaiiParallel);
 		}
 	}
 
-	// Token: 0x170026A0 RID: 9888
-	// (get) Token: 0x0601BFA8 RID: 114600 RVA: 0x007C5BF0 File Offset: 0x007C3DF0
-	// (set) Token: 0x0601BFA9 RID: 114601 RVA: 0x007C5BF7 File Offset: 0x007C3DF7
-	[StaticVariableRuleIgnore]
-	public static bool EnabledNewSkelTickTiming
-	{
-		get
-		{
-			return UeSkeletalTickController.EnabledNewSkelTickTimingInternal;
-		}
-		set
-		{
-			if (UeSkeletalTickController.EnabledNewSkelTickTimingInternal == value)
-			{
-				return;
-			}
-			UeSkeletalTickController.EnabledNewSkelTickTimingInternal = value;
-			UeSkeletalTickController.RefreshSkeletalMeshConfig();
-		}
-	}
-
-	// Token: 0x170026A1 RID: 9889
-	// (get) Token: 0x0601BFAA RID: 114602 RVA: 0x007C5C0D File Offset: 0x007C3E0D
-	// (set) Token: 0x0601BFAB RID: 114603 RVA: 0x007C5C20 File Offset: 0x007C3E20
-	[StaticVariableRuleIgnore]
-	public static bool EnabledKuroParallel
-	{
-		get
-		{
-			return UeSkeletalTickController.EnabledKuroParallelInternal && !UeSkeletalTickController.MovementPredictModeInternal;
-		}
-		set
-		{
-			if (UeSkeletalTickController.EnabledKuroParallelInternal == value)
-			{
-				return;
-			}
-			UeSkeletalTickController.EnabledKuroParallelInternal = value;
-			UeSkeletalTickController.RefreshSkeletalMeshConfig();
-		}
-	}
-
-	// Token: 0x170026A2 RID: 9890
-	// (get) Token: 0x0601BFAC RID: 114604 RVA: 0x007C5C36 File Offset: 0x007C3E36
-	// (set) Token: 0x0601BFAD RID: 114605 RVA: 0x007C5C3D File Offset: 0x007C3E3D
-	[StaticVariableRuleIgnore]
-	public static bool EnabledKawaiiParallel
-	{
-		get
-		{
-			return UeSkeletalTickController.EnabledKawaiiParallelInternal;
-		}
-		set
-		{
-			if (UeSkeletalTickController.EnabledKawaiiParallelInternal == value)
-			{
-				return;
-			}
-			UeSkeletalTickController.EnabledKawaiiParallelInternal = value;
-			UeSkeletalTickController.RefreshSkeletalMeshConfig();
-		}
-	}
-
-	// Token: 0x170026A3 RID: 9891
-	// (get) Token: 0x0601BFAE RID: 114606 RVA: 0x007C5C53 File Offset: 0x007C3E53
-	// (set) Token: 0x0601BFAF RID: 114607 RVA: 0x007C5C67 File Offset: 0x007C3E67
-	[StaticVariableRuleIgnore]
-	public static bool MainRoleParallel
-	{
-		get
-		{
-			if (!UeSkeletalTickController.IsInit)
-			{
-				UeSkeletalTickController.MainRoleParallel = true;
-			}
-			return UeSkeletalTickController.MainRoleParallelInternal;
-		}
-		set
-		{
-			UeSkeletalTickController.MainRoleParallelInternal = value;
-			UeSkeletalTickController.IsInit = true;
-		}
-	}
-
-	// Token: 0x0601BFB0 RID: 114608 RVA: 0x007C5C75 File Offset: 0x007C3E75
+	// Token: 0x06019B99 RID: 105369 RVA: 0x007ECE74 File Offset: 0x007EB074
 	public static void CreateStaticDefaultValue()
 	{
-		UeSkeletalTickController.EnabledNewSkelTickTimingInternal = true;
-		UeSkeletalTickController.EnabledKuroParallelInternal = true;
-		UeSkeletalTickController.EnabledKawaiiParallelInternal = false;
 		UeSkeletalTickController.Managers = new HashSet<UeSkeletalTickManageComponent>();
 		UeSkeletalTickController.NotParallelManagers = new HashSet<UeSkeletalTickManageComponent>();
 		UeSkeletalTickController.TickedManagers = new List<UeSkeletalTickManageComponent>();
+		Action handler;
+		if ((handler = UeSkeletalTickController.<>O.<0>__RefreshSkeletalMeshConfig) == null)
+		{
+			handler = (UeSkeletalTickController.<>O.<0>__RefreshSkeletalMeshConfig = new Action(UeSkeletalTickController.RefreshSkeletalMeshConfig));
+		}
+		UeTickManageDefine.RegisterConfigChanged(handler);
 	}
 
-	// Token: 0x0601BFB1 RID: 114609 RVA: 0x007C5CA7 File Offset: 0x007C3EA7
+	// Token: 0x06019B9A RID: 105370 RVA: 0x007ECEB4 File Offset: 0x007EB0B4
 	public static void ResetStaticDefaultValue()
 	{
-		UeSkeletalTickController.EnabledKawaiiParallelInternal = false;
-		UeSkeletalTickController.EnabledNewSkelTickTimingInternal = false;
-		UeSkeletalTickController.EnabledKuroParallelInternal = false;
-		UeSkeletalTickController.IsInit = false;
-		UeSkeletalTickController.MainRoleParallelInternal = false;
+		Action handler;
+		if ((handler = UeSkeletalTickController.<>O.<0>__RefreshSkeletalMeshConfig) == null)
+		{
+			handler = (UeSkeletalTickController.<>O.<0>__RefreshSkeletalMeshConfig = new Action(UeSkeletalTickController.RefreshSkeletalMeshConfig));
+		}
+		UeTickManageDefine.UnregisterConfigChanged(handler);
 		UeSkeletalTickController.Managers = null;
 		UeSkeletalTickController.NotParallelManagers = null;
 		UeSkeletalTickController.TickedManagers = null;
 	}
 
-	// Token: 0x0400DD15 RID: 56597
+	// Token: 0x0400E1B7 RID: 57783
 	protected static HashSet<UeSkeletalTickManageComponent> Managers;
 
-	// Token: 0x0400DD16 RID: 56598
+	// Token: 0x0400E1B8 RID: 57784
 	protected static HashSet<UeSkeletalTickManageComponent> NotParallelManagers;
 
-	// Token: 0x0400DD17 RID: 56599
+	// Token: 0x0400E1B9 RID: 57785
 	protected static List<UeSkeletalTickManageComponent> TickedManagers;
 
-	// Token: 0x0400DD18 RID: 56600
-	[StaticVariableRuleIgnore]
-	protected static bool MovementPredictModeInternal = false;
-
-	// Token: 0x0400DD19 RID: 56601
-	private static bool EnabledNewSkelTickTimingInternal;
-
-	// Token: 0x0400DD1A RID: 56602
-	[StaticVariableRuleIgnore]
-	private static bool EnabledKuroParallelInternal = true;
-
-	// Token: 0x0400DD1B RID: 56603
-	[StaticVariableRuleIgnore]
-	private static bool EnabledKawaiiParallelInternal = false;
-
-	// Token: 0x0400DD1C RID: 56604
-	[StaticVariableRuleIgnore]
-	private static bool IsInit = false;
-
-	// Token: 0x0400DD1D RID: 56605
-	[StaticVariableRuleIgnore]
-	private static bool MainRoleParallelInternal = false;
+	// Token: 0x02008963 RID: 35171
+	[CompilerGenerated]
+	private static class <>O
+	{
+		// Token: 0x0402BCDF RID: 179423
+		[Nullable(0)]
+		public static Action <0>__RefreshSkeletalMeshConfig;
+	}
 }

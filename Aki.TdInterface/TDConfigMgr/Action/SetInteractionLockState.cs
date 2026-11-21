@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021BD RID: 8637
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002428 RID: 9256
 	public class SetInteractionLockState : ActionParams
 	{
-		// Token: 0x0600BDB8 RID: 48568 RVA: 0x001B4F0C File Offset: 0x001B310C
+		// Token: 0x0600C972 RID: 51570 RVA: 0x001CC544 File Offset: 0x001CA744
 		private SetInteractionLockState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BDB9 RID: 48569 RVA: 0x001B4F44 File Offset: 0x001B3144
+		// Token: 0x0600C973 RID: 51571 RVA: 0x001CC57C File Offset: 0x001CA77C
 		public static SetInteractionLockState Create([Nullable(2)] SetInteractionLockState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDBA RID: 48570 RVA: 0x001B4F57 File Offset: 0x001B3157
+		// Token: 0x0600C974 RID: 51572 RVA: 0x001CC58F File Offset: 0x001CA78F
 		public static SetInteractionLockState CreateFromSetValue([Nullable(2)] SetInteractionLockState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDBB RID: 48571 RVA: 0x001B4F6A File Offset: 0x001B316A
+		// Token: 0x0600C975 RID: 51573 RVA: 0x001CC5A2 File Offset: 0x001CA7A2
 		public SetInteractionLockState_SetValue ToSetValue()
 		{
 			return new SetInteractionLockState_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039A1 RID: 14753
-		// (get) Token: 0x0600BDBC RID: 48572 RVA: 0x001B4F7D File Offset: 0x001B317D
-		// (set) Token: 0x0600BDBD RID: 48573 RVA: 0x001B4FA8 File Offset: 0x001B31A8
+		// Token: 0x17003C95 RID: 15509
+		// (get) Token: 0x0600C976 RID: 51574 RVA: 0x001CC5B5 File Offset: 0x001CA7B5
+		// (set) Token: 0x0600C977 RID: 51575 RVA: 0x001CC5E0 File Offset: 0x001CA7E0
 		public virtual bool IsLock
 		{
 			get
@@ -78,11 +76,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400713C RID: 28988
+		// Token: 0x04007784 RID: 30596
 		[Nullable(2)]
 		protected new SetInteractionLockState FbInstance;
 
-		// Token: 0x0400713D RID: 28989
+		// Token: 0x04007785 RID: 30597
 		[Nullable(2)]
 		protected SetInteractionLockState_SetValue PocoInterface;
 	}

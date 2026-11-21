@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200055C RID: 1372
+	// Token: 0x02000572 RID: 1394
 	public class ConfigMontageDataById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002035 RID: 8245 RVA: 0x0010F70C File Offset: 0x0010D90C
+		// Token: 0x060020B9 RID: 8377 RVA: 0x00115E60 File Offset: 0x00114060
 		static ConfigMontageDataById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMontageDataById.CreateStaticDefaultValue), new Action(ConfigMontageDataById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002036 RID: 8246 RVA: 0x0010F72C File Offset: 0x0010D92C
+		// Token: 0x060020BA RID: 8378 RVA: 0x00115E80 File Offset: 0x00114080
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMontageDataById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002037 RID: 8247 RVA: 0x0010F7AB File Offset: 0x0010D9AB
+		// Token: 0x060020BB RID: 8379 RVA: 0x00115EFF File Offset: 0x001140FF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMontageDataById.LogPair = null;
 			ConfigMontageDataById.HandleId = 0;
 		}
 
-		// Token: 0x06002038 RID: 8248 RVA: 0x0010F7B9 File Offset: 0x0010D9B9
+		// Token: 0x060020BC RID: 8380 RVA: 0x00115F0D File Offset: 0x0011410D
 		public static void Init()
 		{
 			ConfigMontageDataById.HandleId = ConfigCommon.InitDataStatement(ConfigMontageDataById.HandleId, "db_montagedata.db", "select BinData from `MontageData` where Id=?");
 		}
 
-		// Token: 0x06002039 RID: 8249 RVA: 0x0010F7D4 File Offset: 0x0010D9D4
+		// Token: 0x060020BD RID: 8381 RVA: 0x00115F28 File Offset: 0x00114128
 		public static MontageData? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMontageDataById.HandleId, ConfigMontageDataById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MontageData?(rootAsMontageData);
 		}
 
-		// Token: 0x04002568 RID: 9576
+		// Token: 0x04002602 RID: 9730
 		private const string DB = "db_montagedata.db";
 
-		// Token: 0x04002569 RID: 9577
+		// Token: 0x04002603 RID: 9731
 		private const string FILE = "UniverseEditor/MontageConfig/MontageConfig.csv";
 
-		// Token: 0x0400256A RID: 9578
+		// Token: 0x04002604 RID: 9732
 		private const string TABLE = "MontageData";
 
-		// Token: 0x0400256B RID: 9579
+		// Token: 0x04002605 RID: 9733
 		private const string COMMAND = "select BinData from `MontageData` where Id=?";
 
-		// Token: 0x0400256C RID: 9580
+		// Token: 0x04002606 RID: 9734
 		private const string KEY_PREFIX = "MontageDataById";
 
-		// Token: 0x0400256D RID: 9581
+		// Token: 0x04002607 RID: 9735
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400256E RID: 9582
+		// Token: 0x04002608 RID: 9736
 		private static int HandleId;
 	}
 }

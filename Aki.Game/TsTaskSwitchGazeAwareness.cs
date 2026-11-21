@@ -11,9 +11,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskSwitchGazeAwareness.TsTaskSwitchGazeAwareness_C")]
 public class TsTaskSwitchGazeAwareness : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700020F RID: 527
-	// (get) Token: 0x06000B4B RID: 2891 RVA: 0x00038623 File Offset: 0x00036823
-	// (set) Token: 0x06000B4C RID: 2892 RVA: 0x00038633 File Offset: 0x00036833
+	// Token: 0x17000212 RID: 530
+	// (get) Token: 0x06000B51 RID: 2897 RVA: 0x00039813 File Offset: 0x00037A13
+	// (set) Token: 0x06000B52 RID: 2898 RVA: 0x00039823 File Offset: 0x00037A23
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsEnable
 	{
@@ -27,9 +27,9 @@ public class TsTaskSwitchGazeAwareness : TsTaskAbortImmediatelyBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x17000210 RID: 528
-	// (get) Token: 0x06000B4D RID: 2893 RVA: 0x00038644 File Offset: 0x00036844
-	// (set) Token: 0x06000B4E RID: 2894 RVA: 0x00038654 File Offset: 0x00036854
+	// Token: 0x17000213 RID: 531
+	// (get) Token: 0x06000B53 RID: 2899 RVA: 0x00039834 File Offset: 0x00037A34
+	// (set) Token: 0x06000B54 RID: 2900 RVA: 0x00039844 File Offset: 0x00037A44
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float AwarenessAngle
 	{
@@ -43,9 +43,9 @@ public class TsTaskSwitchGazeAwareness : TsTaskAbortImmediatelyBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x17000211 RID: 529
-	// (get) Token: 0x06000B4F RID: 2895 RVA: 0x00038665 File Offset: 0x00036865
-	// (set) Token: 0x06000B50 RID: 2896 RVA: 0x00038675 File Offset: 0x00036875
+	// Token: 0x17000214 RID: 532
+	// (get) Token: 0x06000B55 RID: 2901 RVA: 0x00039855 File Offset: 0x00037A55
+	// (set) Token: 0x06000B56 RID: 2902 RVA: 0x00039865 File Offset: 0x00037A65
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float AwarenessDistance
 	{
@@ -59,9 +59,9 @@ public class TsTaskSwitchGazeAwareness : TsTaskAbortImmediatelyBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x17000212 RID: 530
-	// (get) Token: 0x06000B51 RID: 2897 RVA: 0x00038686 File Offset: 0x00036886
-	// (set) Token: 0x06000B52 RID: 2898 RVA: 0x00038696 File Offset: 0x00036896
+	// Token: 0x17000215 RID: 533
+	// (get) Token: 0x06000B57 RID: 2903 RVA: 0x00039876 File Offset: 0x00037A76
+	// (set) Token: 0x06000B58 RID: 2904 RVA: 0x00039886 File Offset: 0x00037A86
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float AwarenessHeight
 	{
@@ -75,9 +75,9 @@ public class TsTaskSwitchGazeAwareness : TsTaskAbortImmediatelyBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x17000213 RID: 531
-	// (get) Token: 0x06000B53 RID: 2899 RVA: 0x000386A7 File Offset: 0x000368A7
-	// (set) Token: 0x06000B54 RID: 2900 RVA: 0x000386B7 File Offset: 0x000368B7
+	// Token: 0x17000216 RID: 534
+	// (get) Token: 0x06000B59 RID: 2905 RVA: 0x00039897 File Offset: 0x00037A97
+	// (set) Token: 0x06000B5A RID: 2906 RVA: 0x000398A7 File Offset: 0x00037AA7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float PlayerGazeAngle
 	{
@@ -91,9 +91,9 @@ public class TsTaskSwitchGazeAwareness : TsTaskAbortImmediatelyBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x17000214 RID: 532
-	// (get) Token: 0x06000B55 RID: 2901 RVA: 0x000386C8 File Offset: 0x000368C8
-	// (set) Token: 0x06000B56 RID: 2902 RVA: 0x000386D8 File Offset: 0x000368D8
+	// Token: 0x17000217 RID: 535
+	// (get) Token: 0x06000B5B RID: 2907 RVA: 0x000398B8 File Offset: 0x00037AB8
+	// (set) Token: 0x06000B5C RID: 2908 RVA: 0x000398C8 File Offset: 0x00037AC8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EnableDebugDraw
 	{
@@ -107,7 +107,7 @@ public class TsTaskSwitchGazeAwareness : TsTaskAbortImmediatelyBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x06000B57 RID: 2903 RVA: 0x000386EC File Offset: 0x000368EC
+	// Token: 0x06000B5D RID: 2909 RVA: 0x000398DC File Offset: 0x00037ADC
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -122,30 +122,27 @@ public class TsTaskSwitchGazeAwareness : TsTaskAbortImmediatelyBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x06000B58 RID: 2904 RVA: 0x00038758 File Offset: 0x00036958
+	// Token: 0x06000B5E RID: 2910 RVA: 0x00039948 File Offset: 0x00037B48
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskSwitchGazeAwareness) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskSwitchGazeAwareness.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000B59 RID: 2905 RVA: 0x000387F4 File Offset: 0x000369F4
+	// Token: 0x06000B5F RID: 2911 RVA: 0x000399F8 File Offset: 0x00037BF8
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -187,7 +184,7 @@ public class TsTaskSwitchGazeAwareness : TsTaskAbortImmediatelyBase, IUnrealUObj
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000B5A RID: 2906 RVA: 0x000388D4 File Offset: 0x00036AD4
+	// Token: 0x06000B60 RID: 2912 RVA: 0x00039AD8 File Offset: 0x00037CD8
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskSwitchGazeAwareness._ClassPtr == IntPtr.Zero)
@@ -197,23 +194,23 @@ public class TsTaskSwitchGazeAwareness : TsTaskAbortImmediatelyBase, IUnrealUObj
 		return TsTaskSwitchGazeAwareness._ClassPtr;
 	}
 
-	// Token: 0x06000B5B RID: 2907 RVA: 0x000388F8 File Offset: 0x00036AF8
+	// Token: 0x06000B61 RID: 2913 RVA: 0x00039AFC File Offset: 0x00037CFC
 	public TsTaskSwitchGazeAwareness() : this(BuiltinUtils.AllocNativeUObject(TsTaskSwitchGazeAwareness.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000B5C RID: 2908 RVA: 0x00038920 File Offset: 0x00036B20
+	// Token: 0x06000B62 RID: 2914 RVA: 0x00039B24 File Offset: 0x00037D24
 	[NullableContext(1)]
 	public TsTaskSwitchGazeAwareness(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskSwitchGazeAwareness.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000B5D RID: 2909 RVA: 0x00038953 File Offset: 0x00036B53
+	// Token: 0x06000B63 RID: 2915 RVA: 0x00039B57 File Offset: 0x00037D57
 	protected TsTaskSwitchGazeAwareness(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000B5E RID: 2910 RVA: 0x00038964 File Offset: 0x00036B64
+	// Token: 0x06000B64 RID: 2916 RVA: 0x00039B68 File Offset: 0x00037D68
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -221,52 +218,52 @@ public class TsTaskSwitchGazeAwareness : TsTaskAbortImmediatelyBase, IUnrealUObj
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x040008D2 RID: 2258
+	// Token: 0x040008DA RID: 2266
 	private bool IsInitTsVariables;
 
-	// Token: 0x040008D3 RID: 2259
+	// Token: 0x040008DB RID: 2267
 	private bool TsIsEnable = true;
 
-	// Token: 0x040008D4 RID: 2260
+	// Token: 0x040008DC RID: 2268
 	private float TsAwarenessAngle;
 
-	// Token: 0x040008D5 RID: 2261
+	// Token: 0x040008DD RID: 2269
 	private float TsAwarenessDistance;
 
-	// Token: 0x040008D6 RID: 2262
+	// Token: 0x040008DE RID: 2270
 	private float TsAwarenessHeight;
 
-	// Token: 0x040008D7 RID: 2263
+	// Token: 0x040008DF RID: 2271
 	private float TsPlayerGazeAngle;
 
-	// Token: 0x040008D8 RID: 2264
+	// Token: 0x040008E0 RID: 2272
 	private bool TsEnableDebugDraw;
 
-	// Token: 0x040008D9 RID: 2265
+	// Token: 0x040008E1 RID: 2273
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskSwitchGazeAwareness.TsTaskSwitchGazeAwareness_C";
 
-	// Token: 0x040008DA RID: 2266
+	// Token: 0x040008E2 RID: 2274
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040008DB RID: 2267
+	// Token: 0x040008E3 RID: 2275
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040008DC RID: 2268
+	// Token: 0x040008E4 RID: 2276
 	private static int __PropertyOffset_IsEnable;
 
-	// Token: 0x040008DD RID: 2269
+	// Token: 0x040008E5 RID: 2277
 	private static int __PropertyOffset_AwarenessAngle;
 
-	// Token: 0x040008DE RID: 2270
+	// Token: 0x040008E6 RID: 2278
 	private static int __PropertyOffset_AwarenessDistance;
 
-	// Token: 0x040008DF RID: 2271
+	// Token: 0x040008E7 RID: 2279
 	private static int __PropertyOffset_AwarenessHeight;
 
-	// Token: 0x040008E0 RID: 2272
+	// Token: 0x040008E8 RID: 2280
 	private static int __PropertyOffset_PlayerGazeAngle;
 
-	// Token: 0x040008E1 RID: 2273
+	// Token: 0x040008E9 RID: 2281
 	private static int __PropertyOffset_EnableDebugDraw;
 }

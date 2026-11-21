@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200504C RID: 20556
+	// Token: 0x0200401B RID: 16411
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotCaptionImagePanel : UiPanelBase
 	{
-		// Token: 0x060349C0 RID: 215488 RVA: 0x00C6D93B File Offset: 0x00C6BB3B
+		// Token: 0x060298A2 RID: 170146 RVA: 0x00BBAAAF File Offset: 0x00BB8CAF
 		protected override void OnRegisterComponent()
 		{
 		}
 
-		// Token: 0x060349C1 RID: 215489 RVA: 0x00C6D940 File Offset: 0x00C6BB40
+		// Token: 0x060298A3 RID: 170147 RVA: 0x00BBAAB4 File Offset: 0x00BB8CB4
 		protected override void OnStart()
 		{
 			if (this.RootItem != null)
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349C2 RID: 215490 RVA: 0x00C6D99C File Offset: 0x00C6BB9C
+		// Token: 0x060298A4 RID: 170148 RVA: 0x00BBAB10 File Offset: 0x00BB8D10
 		protected override void OnBeforeDestroy()
 		{
 			foreach (UiSequencePlayer uiSequencePlayer in this.SequencePlayers)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.SequencePlayers.Clear();
 		}
 
-		// Token: 0x060349C3 RID: 215491 RVA: 0x00C6D9F8 File Offset: 0x00C6BBF8
+		// Token: 0x060298A5 RID: 170149 RVA: 0x00BBAB6C File Offset: 0x00BB8D6C
 		public UniTask PlaySequenceAsync(string sequenceName)
 		{
 			PlotCaptionImagePanel.<PlaySequenceAsync>d__4 <PlaySequenceAsync>d__;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <PlaySequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060349C4 RID: 215492 RVA: 0x00C6DA43 File Offset: 0x00C6BC43
+		// Token: 0x060298A6 RID: 170150 RVA: 0x00BBABB7 File Offset: 0x00BB8DB7
 		private UUIItem GetLangPrefabRootItem(AActor actor)
 		{
 			UUILangToPrefabComp uuilangToPrefabComp = ((actor != null) ? actor.GetComponentByClass(UUILangToPrefabComp.StaticClass()) : null) as UUILangToPrefabComp;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return uuilangToPrefabComp.GetRootItem();
 		}
 
-		// Token: 0x0401C09D RID: 114845
+		// Token: 0x04016AC0 RID: 92864
 		[Nullable(1)]
 		private readonly List<UiSequencePlayer> SequencePlayers = new List<UiSequencePlayer>();
 	}

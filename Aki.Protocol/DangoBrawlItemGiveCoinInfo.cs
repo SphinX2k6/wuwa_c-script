@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200035F RID: 863
+	// Token: 0x02000367 RID: 871
 	public sealed class DangoBrawlItemGiveCoinInfo : IMessage<DangoBrawlItemGiveCoinInfo>, IMessage, IEquatable<DangoBrawlItemGiveCoinInfo>, IDeepCloneable<DangoBrawlItemGiveCoinInfo>, IBufferMessage
 	{
-		// Token: 0x06005622 RID: 22050 RVA: 0x000D2900 File Offset: 0x000D0B00
+		// Token: 0x0600570F RID: 22287 RVA: 0x000D4F87 File Offset: 0x000D3187
 		[NullableContext(1)]
 		public static DangoBrawlItemGiveCoinInfo Create()
 		{
 			return new DangoBrawlItemGiveCoinInfo();
 		}
 
-		// Token: 0x17000FCC RID: 4044
-		// (get) Token: 0x06005623 RID: 22051 RVA: 0x000D2907 File Offset: 0x000D0B07
+		// Token: 0x17000FFD RID: 4093
+		// (get) Token: 0x06005710 RID: 22288 RVA: 0x000D4F8E File Offset: 0x000D318E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<DangoBrawlItemGiveCoinInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000FCD RID: 4045
-		// (get) Token: 0x06005624 RID: 22052 RVA: 0x000D290E File Offset: 0x000D0B0E
+		// Token: 0x17000FFE RID: 4094
+		// (get) Token: 0x06005711 RID: 22289 RVA: 0x000D4F95 File Offset: 0x000D3195
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000FCE RID: 4046
-		// (get) Token: 0x06005625 RID: 22053 RVA: 0x000D2911 File Offset: 0x000D0B11
+		// Token: 0x17000FFF RID: 4095
+		// (get) Token: 0x06005712 RID: 22290 RVA: 0x000D4F98 File Offset: 0x000D3198
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005626 RID: 22054 RVA: 0x000D2918 File Offset: 0x000D0B18
+		// Token: 0x06005713 RID: 22291 RVA: 0x000D4F9F File Offset: 0x000D319F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlItemGiveCoinInfo()
 		{
 		}
 
-		// Token: 0x06005627 RID: 22055 RVA: 0x000D2920 File Offset: 0x000D0B20
+		// Token: 0x06005714 RID: 22292 RVA: 0x000D4FA7 File Offset: 0x000D31A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlItemGiveCoinInfo(DangoBrawlItemGiveCoinInfo other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06005628 RID: 22056 RVA: 0x000D2951 File Offset: 0x000D0B51
+		// Token: 0x06005715 RID: 22293 RVA: 0x000D4FD8 File Offset: 0x000D31D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlItemGiveCoinInfo Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new DangoBrawlItemGiveCoinInfo(this);
 		}
 
-		// Token: 0x17000FCF RID: 4047
-		// (get) Token: 0x06005629 RID: 22057 RVA: 0x000D2959 File Offset: 0x000D0B59
-		// (set) Token: 0x0600562A RID: 22058 RVA: 0x000D2961 File Offset: 0x000D0B61
+		// Token: 0x17001000 RID: 4096
+		// (get) Token: 0x06005716 RID: 22294 RVA: 0x000D4FE0 File Offset: 0x000D31E0
+		// (set) Token: 0x06005717 RID: 22295 RVA: 0x000D4FE8 File Offset: 0x000D31E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemUId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000FD0 RID: 4048
-		// (get) Token: 0x0600562B RID: 22059 RVA: 0x000D296A File Offset: 0x000D0B6A
-		// (set) Token: 0x0600562C RID: 22060 RVA: 0x000D2972 File Offset: 0x000D0B72
+		// Token: 0x17001001 RID: 4097
+		// (get) Token: 0x06005718 RID: 22296 RVA: 0x000D4FF1 File Offset: 0x000D31F1
+		// (set) Token: 0x06005719 RID: 22297 RVA: 0x000D4FF9 File Offset: 0x000D31F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Delta
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600562D RID: 22061 RVA: 0x000D297B File Offset: 0x000D0B7B
+		// Token: 0x0600571A RID: 22298 RVA: 0x000D5002 File Offset: 0x000D3202
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DangoBrawlItemGiveCoinInfo);
 		}
 
-		// Token: 0x0600562E RID: 22062 RVA: 0x000D2989 File Offset: 0x000D0B89
+		// Token: 0x0600571B RID: 22299 RVA: 0x000D5010 File Offset: 0x000D3210
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DangoBrawlItemGiveCoinInfo other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ItemUId == other.ItemUId && this.Delta == other.Delta && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600562F RID: 22063 RVA: 0x000D29C8 File Offset: 0x000D0BC8
+		// Token: 0x0600571C RID: 22300 RVA: 0x000D5050 File Offset: 0x000D3250
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005630 RID: 22064 RVA: 0x000D2A20 File Offset: 0x000D0C20
+		// Token: 0x0600571D RID: 22301 RVA: 0x000D50A8 File Offset: 0x000D32A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06005631 RID: 22065 RVA: 0x000D2A2D File Offset: 0x000D0C2D
+		// Token: 0x0600571E RID: 22302 RVA: 0x000D50B5 File Offset: 0x000D32B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06005632 RID: 22066 RVA: 0x000D2A38 File Offset: 0x000D0C38
+		// Token: 0x0600571F RID: 22303 RVA: 0x000D50C0 File Offset: 0x000D32C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005633 RID: 22067 RVA: 0x000D2A90 File Offset: 0x000D0C90
+		// Token: 0x06005720 RID: 22304 RVA: 0x000D5118 File Offset: 0x000D3318
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005634 RID: 22068 RVA: 0x000D2AE8 File Offset: 0x000D0CE8
+		// Token: 0x06005721 RID: 22305 RVA: 0x000D5170 File Offset: 0x000D3370
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DangoBrawlItemGiveCoinInfo other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06005635 RID: 22069 RVA: 0x000D2B38 File Offset: 0x000D0D38
+		// Token: 0x06005722 RID: 22306 RVA: 0x000D51C0 File Offset: 0x000D33C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06005636 RID: 22070 RVA: 0x000D2B44 File Offset: 0x000D0D44
+		// Token: 0x06005723 RID: 22307 RVA: 0x000D51CC File Offset: 0x000D33CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -265,22 +265,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003467 RID: 13415
+		// Token: 0x04003503 RID: 13571
 		private static readonly MessageParser<DangoBrawlItemGiveCoinInfo> _parser = new MessageParser<DangoBrawlItemGiveCoinInfo>(() => new DangoBrawlItemGiveCoinInfo());
 
-		// Token: 0x04003468 RID: 13416
+		// Token: 0x04003504 RID: 13572
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003469 RID: 13417
+		// Token: 0x04003505 RID: 13573
 		public const int ItemUIdFieldNumber = 1;
 
-		// Token: 0x0400346A RID: 13418
+		// Token: 0x04003506 RID: 13574
 		private int itemUId_;
 
-		// Token: 0x0400346B RID: 13419
+		// Token: 0x04003507 RID: 13575
 		public const int DeltaFieldNumber = 2;
 
-		// Token: 0x0400346C RID: 13420
+		// Token: 0x04003508 RID: 13576
 		private int delta_;
 	}
 }

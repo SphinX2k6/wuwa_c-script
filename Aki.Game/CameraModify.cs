@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
 using UnrealEngine;
 
-// Token: 0x0200021C RID: 540
+// Token: 0x02000220 RID: 544
 [NullableContext(2)]
 [Nullable(0)]
 public class CameraModify
 {
-	// Token: 0x060020EE RID: 8430 RVA: 0x000B6570 File Offset: 0x000B4770
+	// Token: 0x0600219C RID: 8604 RVA: 0x000BD890 File Offset: 0x000BBA90
 	[NullableContext(1)]
 	public CameraModify(SCameraModifier_Settings cameraModify)
 	{
@@ -129,187 +129,187 @@ public class CameraModify
 		this.CameraOffsetAdditionalEval = new ConstVectorEvaluator(cameraModify.CameraOffsetAdditional);
 	}
 
-	// Token: 0x04001540 RID: 5440
+	// Token: 0x04001582 RID: 5506
 	[Nullable(1)]
 	public string Name;
 
-	// Token: 0x04001541 RID: 5441
+	// Token: 0x04001583 RID: 5507
 	public float ArmLength;
 
-	// Token: 0x04001542 RID: 5442
+	// Token: 0x04001584 RID: 5508
 	public float ArmLengthAdditional;
 
-	// Token: 0x04001543 RID: 5443
+	// Token: 0x04001585 RID: 5509
 	[Nullable(1)]
 	public Rotator ArmRotation;
 
-	// Token: 0x04001544 RID: 5444
+	// Token: 0x04001586 RID: 5510
 	[Nullable(1)]
 	public Rotator ArmRotationAdditional;
 
-	// Token: 0x04001545 RID: 5445
+	// Token: 0x04001587 RID: 5511
 	public float CameraFov;
 
-	// Token: 0x04001546 RID: 5446
+	// Token: 0x04001588 RID: 5512
 	[Nullable(1)]
 	public Vector CameraOffset;
 
-	// Token: 0x04001547 RID: 5447
+	// Token: 0x04001589 RID: 5513
 	[Nullable(1)]
 	public Vector CameraOffsetAdditional;
 
-	// Token: 0x04001548 RID: 5448
+	// Token: 0x0400158A RID: 5514
 	public bool IsLockInput;
 
-	// Token: 0x04001549 RID: 5449
+	// Token: 0x0400158B RID: 5515
 	public bool IsModifiedArmLength;
 
-	// Token: 0x0400154A RID: 5450
+	// Token: 0x0400158C RID: 5516
 	public bool IsModifiedArmRotation;
 
-	// Token: 0x0400154B RID: 5451
+	// Token: 0x0400158D RID: 5517
 	public bool IsModifiedArmRotationPitch;
 
-	// Token: 0x0400154C RID: 5452
+	// Token: 0x0400158E RID: 5518
 	public bool IsModifiedArmRotationRoll;
 
-	// Token: 0x0400154D RID: 5453
+	// Token: 0x0400158F RID: 5519
 	public bool IsModifiedArmRotationYaw;
 
-	// Token: 0x0400154E RID: 5454
+	// Token: 0x04001590 RID: 5520
 	public bool IsModifiedCameraFov;
 
-	// Token: 0x0400154F RID: 5455
+	// Token: 0x04001591 RID: 5521
 	public bool IsModifiedCameraOffset;
 
-	// Token: 0x04001550 RID: 5456
+	// Token: 0x04001592 RID: 5522
 	public bool IsModifiedCameraOffsetX;
 
-	// Token: 0x04001551 RID: 5457
+	// Token: 0x04001593 RID: 5523
 	public bool IsModifiedCameraOffsetY;
 
-	// Token: 0x04001552 RID: 5458
+	// Token: 0x04001594 RID: 5524
 	public bool IsModifiedCameraOffsetZ;
 
-	// Token: 0x04001553 RID: 5459
+	// Token: 0x04001595 RID: 5525
 	public bool IsModifiedCameraLens;
 
-	// Token: 0x04001554 RID: 5460
+	// Token: 0x04001596 RID: 5526
 	public bool OverrideCameraInput;
 
-	// Token: 0x04001555 RID: 5461
+	// Token: 0x04001597 RID: 5527
 	public bool ResetFinalArmLength;
 
-	// Token: 0x04001556 RID: 5462
+	// Token: 0x04001598 RID: 5528
 	public bool IsResetFinalArmLengthToSpecificValue;
 
-	// Token: 0x04001557 RID: 5463
+	// Token: 0x04001599 RID: 5529
 	public float ResetFinalArmLengthToSpecificValue;
 
-	// Token: 0x04001558 RID: 5464
+	// Token: 0x0400159A RID: 5530
 	public bool IsResetFinalArmLengthToDynamicValue;
 
-	// Token: 0x04001559 RID: 5465
+	// Token: 0x0400159B RID: 5531
 	[Nullable(1)]
 	public List<ResetFinalArmLengthToDynamicValueData> ResetFinalArmLengthToDynamicValueList = new List<ResetFinalArmLengthToDynamicValueData>();
 
-	// Token: 0x0400155A RID: 5466
+	// Token: 0x0400159C RID: 5532
 	public bool ResetFinalArmRotation;
 
-	// Token: 0x0400155B RID: 5467
+	// Token: 0x0400159D RID: 5533
 	public bool IsResetFinalArmRotationToSpecificPitch;
 
-	// Token: 0x0400155C RID: 5468
+	// Token: 0x0400159E RID: 5534
 	public float ResetFinalArmRotationToSpecificPitch;
 
-	// Token: 0x0400155D RID: 5469
+	// Token: 0x0400159F RID: 5535
 	public bool IsResetFinalArmRotationToSpecificYaw;
 
-	// Token: 0x0400155E RID: 5470
+	// Token: 0x040015A0 RID: 5536
 	public float ResetFinalArmRotationToSpecificYaw;
 
-	// Token: 0x0400155F RID: 5471
+	// Token: 0x040015A1 RID: 5537
 	public bool StopModifyOnMontageEnd;
 
-	// Token: 0x04001560 RID: 5472
+	// Token: 0x040015A2 RID: 5538
 	public bool StopModifyOnZoomInput;
 
-	// Token: 0x04001561 RID: 5473
+	// Token: 0x040015A3 RID: 5539
 	public bool IsLerpArmLocation;
 
-	// Token: 0x04001562 RID: 5474
+	// Token: 0x040015A4 RID: 5540
 	public bool IsSwitchModifier;
 
-	// Token: 0x04001563 RID: 5475
+	// Token: 0x040015A5 RID: 5541
 	public bool IsUseArmLengthFloatCurve;
 
-	// Token: 0x04001564 RID: 5476
+	// Token: 0x040015A6 RID: 5542
 	public CurveBase ArmLengthFloatCurve;
 
-	// Token: 0x04001565 RID: 5477
+	// Token: 0x040015A7 RID: 5543
 	public bool IsUseArmRotationFloatCurve;
 
-	// Token: 0x04001566 RID: 5478
+	// Token: 0x040015A8 RID: 5544
 	public CurveBase ArmRotationFloatCurve;
 
-	// Token: 0x04001567 RID: 5479
+	// Token: 0x040015A9 RID: 5545
 	public bool IsUseFovFloatCurve;
 
-	// Token: 0x04001568 RID: 5480
+	// Token: 0x040015AA RID: 5546
 	public CurveBase FovFloatCurve;
 
-	// Token: 0x04001569 RID: 5481
+	// Token: 0x040015AB RID: 5547
 	public bool IsUseLensFloatCurve;
 
-	// Token: 0x0400156A RID: 5482
+	// Token: 0x040015AC RID: 5548
 	public CurveBase LensFloatCurve;
 
-	// Token: 0x0400156B RID: 5483
+	// Token: 0x040015AD RID: 5549
 	public SCameraModifier_Lens CameraLens;
 
-	// Token: 0x0400156C RID: 5484
+	// Token: 0x040015AE RID: 5550
 	public bool IsForcePlayModify;
 
-	// Token: 0x0400156D RID: 5485
+	// Token: 0x040015AF RID: 5551
 	public bool IsUseCameraOffsetFloatCurve;
 
-	// Token: 0x0400156E RID: 5486
+	// Token: 0x040015B0 RID: 5552
 	public CurveBase CameraOffsetFloatCurve;
 
-	// Token: 0x0400156F RID: 5487
+	// Token: 0x040015B1 RID: 5553
 	public bool IsModifiedArmOffset;
 
-	// Token: 0x04001570 RID: 5488
+	// Token: 0x040015B2 RID: 5554
 	[Nullable(1)]
 	public Vector ArmOffset = Vector.Create();
 
-	// Token: 0x04001571 RID: 5489
+	// Token: 0x040015B3 RID: 5555
 	public bool IsUseArmOffsetFloatCurve;
 
-	// Token: 0x04001572 RID: 5490
+	// Token: 0x040015B4 RID: 5556
 	public CurveBase ArmOffsetFloatCurve;
 
-	// Token: 0x04001573 RID: 5491
+	// Token: 0x040015B5 RID: 5557
 	public IModifyParamEvaluator ArmRotationPitchEval;
 
-	// Token: 0x04001574 RID: 5492
+	// Token: 0x040015B6 RID: 5558
 	public IModifyParamEvaluator ArmRotationYawEval;
 
-	// Token: 0x04001575 RID: 5493
+	// Token: 0x040015B7 RID: 5559
 	public IModifyParamEvaluator ArmRotationRollEval;
 
-	// Token: 0x04001576 RID: 5494
+	// Token: 0x040015B8 RID: 5560
 	public IModifyParamEvaluator ArmRotationAdditionalPitchEval;
 
-	// Token: 0x04001577 RID: 5495
+	// Token: 0x040015B9 RID: 5561
 	public IModifyParamEvaluator ArmRotationAdditionalYawEval;
 
-	// Token: 0x04001578 RID: 5496
+	// Token: 0x040015BA RID: 5562
 	public IModifyParamEvaluator ArmRotationAdditionalRollEval;
 
-	// Token: 0x04001579 RID: 5497
+	// Token: 0x040015BB RID: 5563
 	public IVectorParamEvaluator CameraOffsetEval;
 
-	// Token: 0x0400157A RID: 5498
+	// Token: 0x040015BC RID: 5564
 	public IVectorParamEvaluator CameraOffsetAdditionalEval;
 }

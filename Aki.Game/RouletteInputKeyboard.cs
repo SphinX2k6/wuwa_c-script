@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game;
 
-// Token: 0x02002934 RID: 10548
+// Token: 0x02001EAF RID: 7855
 [NullableContext(1)]
 [Nullable(0)]
 public class RouletteInputKeyboard : RouletteInputBase
 {
-	// Token: 0x06015C35 RID: 89141 RVA: 0x0057D2F8 File Offset: 0x0057B4F8
+	// Token: 0x0601363A RID: 79418 RVA: 0x005A8338 File Offset: 0x005A6538
 	[NullableContext(2)]
 	public RouletteInputKeyboard(Vector2D pos = null, ERouletteViewType? rouletteViewType = null, int? touchId = null, float? limit = null) : base(pos, rouletteViewType, null, null)
 	{
 	}
 
-	// Token: 0x06015C36 RID: 89142 RVA: 0x0057D34C File Offset: 0x0057B54C
+	// Token: 0x0601363B RID: 79419 RVA: 0x005A838C File Offset: 0x005A658C
 	public override void OnInit()
 	{
 		if (this.BeginPos == null)
@@ -30,7 +30,7 @@ public class RouletteInputKeyboard : RouletteInputBase
 		this.SubtractVectorPos.Set(0.0, 0.0, 0.0);
 	}
 
-	// Token: 0x06015C37 RID: 89143 RVA: 0x0057D3FC File Offset: 0x0057B5FC
+	// Token: 0x0601363C RID: 79420 RVA: 0x005A843C File Offset: 0x005A663C
 	protected override void InputTick(float delta)
 	{
 		TsCharacterController characterController = Global.CharacterController;
@@ -59,15 +59,15 @@ public class RouletteInputKeyboard : RouletteInputBase
 		this.AreaIndex = AngleCalculator.AngleToAreaIndex((double)this.Angle);
 	}
 
-	// Token: 0x0400A223 RID: 41507
+	// Token: 0x0400A60E RID: 42510
 	private readonly Vector SubtractVectorPos = Vector.Create();
 
-	// Token: 0x0400A224 RID: 41508
+	// Token: 0x0400A60F RID: 42511
 	private readonly Vector BeginVectorPos = Vector.Create();
 
-	// Token: 0x0400A225 RID: 41509
+	// Token: 0x0400A610 RID: 42512
 	private readonly Vector TempVectorPos = Vector.Create();
 
-	// Token: 0x0400A226 RID: 41510
+	// Token: 0x0400A611 RID: 42513
 	private readonly Vector CheckVectorPos = Vector.Create();
 }

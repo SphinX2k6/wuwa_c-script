@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 {
-	// Token: 0x02006DBE RID: 28094
+	// Token: 0x02005F3D RID: 24381
 	public class LevelAiTaskMoveAlong : LevelAiTask
 	{
-		// Token: 0x060448BA RID: 280762 RVA: 0x010E766C File Offset: 0x010E586C
+		// Token: 0x0603AA1E RID: 240158 RVA: 0x01091894 File Offset: 0x0108FA94
 		protected override ELevelAiNodeResult ExecuteTask()
 		{
 			this.MoveComp = base.CreatureDataComponent.Entity.GetComponent<BaseMoveComponent>();
@@ -32,14 +32,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			return ELevelAiNodeResult.InProgress;
 		}
 
-		// Token: 0x060448BB RID: 280763 RVA: 0x010E7726 File Offset: 0x010E5926
+		// Token: 0x0603AA1F RID: 240159 RVA: 0x0109194E File Offset: 0x0108FB4E
 		protected override ELevelAiNodeResult AbortTask()
 		{
 			this.MoveComp.StopMoveNew("LevelAiTaskMoveAlong.AbortTask");
 			return ELevelAiNodeResult.Aborted;
 		}
 
-		// Token: 0x060448BC RID: 280764 RVA: 0x010E7739 File Offset: 0x010E5939
+		// Token: 0x0603AA20 RID: 240160 RVA: 0x01091961 File Offset: 0x0108FB61
 		private void TaskFinishCallBack(ELevelEventState result)
 		{
 			this.MoveComp.StopMoveNew("LevelAiTaskMoveAlong.TaskFinishCallBack");
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			base.FinishLatentTask(ELevelAiNodeResult.Failed);
 		}
 
-		// Token: 0x04023A53 RID: 146003
+		// Token: 0x0401ECF5 RID: 126197
 		[Nullable(new byte[]
 		{
 			2,
@@ -63,13 +63,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 		})]
 		public List<MoveCharacterPoint> PathPoint;
 
-		// Token: 0x04023A54 RID: 146004
+		// Token: 0x0401ECF6 RID: 126198
 		public bool Navigation = true;
 
-		// Token: 0x04023A55 RID: 146005
+		// Token: 0x0401ECF7 RID: 126199
 		public bool ResetAllPoints;
 
-		// Token: 0x04023A56 RID: 146006
+		// Token: 0x0401ECF8 RID: 126200
 		[Nullable(2)]
 		private BaseMoveComponent MoveComp;
 	}

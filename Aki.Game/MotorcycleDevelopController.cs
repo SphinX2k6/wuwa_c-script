@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -11,27 +10,27 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02002248 RID: 8776
+// Token: 0x0200172C RID: 5932
 [NullableContext(2)]
 [Nullable(0)]
 [Controller(0)]
 public class MotorcycleDevelopController : ControllerBase
 {
-	// Token: 0x060111F3 RID: 70131 RVA: 0x0042D8AA File Offset: 0x0042BAAA
+	// Token: 0x0600E689 RID: 59017 RVA: 0x0043A44E File Offset: 0x0043864E
 	protected override bool OnInit()
 	{
 		this.OnRegisterNetEvent();
 		return true;
 	}
 
-	// Token: 0x060111F4 RID: 70132 RVA: 0x0042D8B3 File Offset: 0x0042BAB3
+	// Token: 0x0600E68A RID: 59018 RVA: 0x0043A457 File Offset: 0x00438657
 	protected override bool OnClear()
 	{
 		this.OnUnRegisterNetEvent();
 		return true;
 	}
 
-	// Token: 0x060111F5 RID: 70133 RVA: 0x0042D8BC File Offset: 0x0042BABC
+	// Token: 0x0600E68B RID: 59019 RVA: 0x0043A460 File Offset: 0x00438660
 	protected void OnRegisterNetEvent()
 	{
 		EventSystem.Instance.Add<EFunctionType, bool>(EEventName.OnFunctionOpenSet, new Action<EFunctionType, bool>(this.OnFunctionOpenSet));
@@ -96,7 +95,7 @@ public class MotorcycleDevelopController : ControllerBase
 		instance7.Register(id7, callback7);
 	}
 
-	// Token: 0x060111F6 RID: 70134 RVA: 0x0042DA68 File Offset: 0x0042BC68
+	// Token: 0x0600E68C RID: 59020 RVA: 0x0043A60C File Offset: 0x0043880C
 	protected void OnUnRegisterNetEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnFunctionOpenSet, new Action<EFunctionType, bool>(this.OnFunctionOpenSet));
@@ -112,7 +111,7 @@ public class MotorcycleDevelopController : ControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.MotorLockedTechUpdateNotify);
 	}
 
-	// Token: 0x060111F7 RID: 70135 RVA: 0x0042DB55 File Offset: 0x0042BD55
+	// Token: 0x0600E68D RID: 59021 RVA: 0x0043A6F9 File Offset: 0x004388F9
 	private void OnFunctionOpenSet(EFunctionType functionType, bool isOpen)
 	{
 		if (!isOpen)
@@ -126,7 +125,7 @@ public class MotorcycleDevelopController : ControllerBase
 		}
 	}
 
-	// Token: 0x060111F8 RID: 70136 RVA: 0x0042DB78 File Offset: 0x0042BD78
+	// Token: 0x0600E68E RID: 59022 RVA: 0x0043A71C File Offset: 0x0043891C
 	private void OnFunctionOpenUpdate(EFunctionType functionType, bool isOpen)
 	{
 		if (!isOpen)
@@ -140,7 +139,7 @@ public class MotorcycleDevelopController : ControllerBase
 		}
 	}
 
-	// Token: 0x060111F9 RID: 70137 RVA: 0x0042DB9B File Offset: 0x0042BD9B
+	// Token: 0x0600E68F RID: 59023 RVA: 0x0043A73F File Offset: 0x0043893F
 	[NullableContext(1)]
 	private void OnEnterVehicle(VehiclePassengerInfo info, bool _)
 	{
@@ -154,7 +153,7 @@ public class MotorcycleDevelopController : ControllerBase
 		}
 	}
 
-	// Token: 0x060111FA RID: 70138 RVA: 0x0042DBC7 File Offset: 0x0042BDC7
+	// Token: 0x0600E690 RID: 59024 RVA: 0x0043A76B File Offset: 0x0043896B
 	[NullableContext(1)]
 	private void OnLeaveVehicle(VehiclePassengerInfo info, bool _)
 	{
@@ -168,7 +167,7 @@ public class MotorcycleDevelopController : ControllerBase
 		}
 	}
 
-	// Token: 0x060111FB RID: 70139 RVA: 0x0042DBF4 File Offset: 0x0042BDF4
+	// Token: 0x0600E691 RID: 59025 RVA: 0x0043A798 File Offset: 0x00438998
 	private static void OnMotorDataNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		MotorDataNotify motorDataNotify = (MotorDataNotify)msg;
@@ -176,7 +175,7 @@ public class MotorcycleDevelopController : ControllerBase
 		EventSystem.Instance.Emit(EEventName.MotorDevelopInfoUpdate);
 	}
 
-	// Token: 0x060111FC RID: 70140 RVA: 0x0042DC28 File Offset: 0x0042BE28
+	// Token: 0x0600E692 RID: 59026 RVA: 0x0043A7CC File Offset: 0x004389CC
 	private static void OnMotorExpAddNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		MotorExpAddNotify data = (MotorExpAddNotify)msg;
@@ -185,31 +184,31 @@ public class MotorcycleDevelopController : ControllerBase
 		EventSystem.Instance.Emit(EEventName.MotorDevelopInfoUpdate);
 	}
 
-	// Token: 0x060111FD RID: 70141 RVA: 0x0042DC64 File Offset: 0x0042BE64
+	// Token: 0x0600E693 RID: 59027 RVA: 0x0043A808 File Offset: 0x00438A08
 	private static void OnMotorTaskInfoNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		MotorTaskInfoNotify motorTaskInfoNotify = (MotorTaskInfoNotify)msg;
-		MotorcycleDevelopModel.Instance.UpdateAllTreeTask(motorTaskInfoNotify.TaskTrees.ToArray<MotorTaskTreePb>());
+		MotorcycleDevelopModel.Instance.UpdateAllTreeTask(motorTaskInfoNotify.TaskTrees);
 		EventSystem.Instance.Emit(EEventName.MotorDevelopTaskUpdate);
 	}
 
-	// Token: 0x060111FE RID: 70142 RVA: 0x0042DCA0 File Offset: 0x0042BEA0
+	// Token: 0x0600E694 RID: 59028 RVA: 0x0043A83C File Offset: 0x00438A3C
 	private static void OnMotorTaskUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		MotorTaskUpdateNotify motorTaskUpdateNotify = (MotorTaskUpdateNotify)msg;
-		MotorcycleDevelopModel.Instance.UpdateOneTreeTask(motorTaskUpdateNotify.Task.ToArray<MotorTaskPb>());
+		MotorcycleDevelopModel.Instance.UpdateOneTreeTask(motorTaskUpdateNotify.Task);
 		EventSystem.Instance.Emit(EEventName.MotorDevelopTaskUpdate);
 	}
 
-	// Token: 0x060111FF RID: 70143 RVA: 0x0042DCDC File Offset: 0x0042BEDC
+	// Token: 0x0600E695 RID: 59029 RVA: 0x0043A870 File Offset: 0x00438A70
 	private static void OnMotorTechUnlockNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		MotorTechUnlockNotify motorTechUnlockNotify = (MotorTechUnlockNotify)msg;
-		MotorcycleDevelopModel.Instance.UnlockTechNode(motorTechUnlockNotify.TechId.ToArray<int>());
+		MotorcycleDevelopModel.Instance.UnlockTechNode(motorTechUnlockNotify.TechId);
 		EventSystem.Instance.Emit<bool>(EEventName.MotorDevelopTechTreeUpdate, true);
 	}
 
-	// Token: 0x06011200 RID: 70144 RVA: 0x0042DD18 File Offset: 0x0042BF18
+	// Token: 0x0600E696 RID: 59030 RVA: 0x0043A8A8 File Offset: 0x00438AA8
 	private static void OnMotorTechTreeUnlockNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		MotorTechTreeUnlockNotify motorTechTreeUnlockNotify = (MotorTechTreeUnlockNotify)msg;
@@ -222,14 +221,16 @@ public class MotorcycleDevelopController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011201 RID: 70145 RVA: 0x0042DD70 File Offset: 0x0042BF70
+	// Token: 0x0600E697 RID: 59031 RVA: 0x0043A900 File Offset: 0x00438B00
 	private static void OnMotorLockedTechUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		MotorLockedTechUpdateNotify motorLockedTechUpdateNotify = (MotorLockedTechUpdateNotify)msg;
-		MotorcycleDevelopModel.Instance.UpdateTechNodeList(motorLockedTechUpdateNotify.Tech.ToArray<MotorTechPb>());
+		MotorTechPb[] array = new MotorTechPb[motorLockedTechUpdateNotify.Tech.Count];
+		motorLockedTechUpdateNotify.Tech.CopyTo(array, 0);
+		MotorcycleDevelopModel.Instance.UpdateTechNodeList(array);
 	}
 
-	// Token: 0x06011202 RID: 70146 RVA: 0x0042DD9C File Offset: 0x0042BF9C
+	// Token: 0x0600E698 RID: 59032 RVA: 0x0043A93C File Offset: 0x00438B3C
 	public void RequestMotorInfo()
 	{
 		MotorInfoRequest message = MotorInfoRequest.Create();
@@ -238,7 +239,7 @@ public class MotorcycleDevelopController : ControllerBase
 			MotorInfoResponse motorInfoResponse = (MotorInfoResponse)msg;
 			if (motorInfoResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(motorInfoResponse.ErrorCode, 27754, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(motorInfoResponse.ErrorCode, 22936, null, true, true);
 				return;
 			}
 			MotorcycleDevelopModel.Instance.UpdateMotorInfo(motorInfoResponse.Motor);
@@ -247,7 +248,7 @@ public class MotorcycleDevelopController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06011203 RID: 70147 RVA: 0x0042DDCC File Offset: 0x0042BFCC
+	// Token: 0x0600E699 RID: 59033 RVA: 0x0043A96C File Offset: 0x00438B6C
 	public void RequestMotorTechLevelUp(int techId)
 	{
 		MotorTechLevelUpRequest motorTechLevelUpRequest = MotorTechLevelUpRequest.Create();
@@ -257,7 +258,7 @@ public class MotorcycleDevelopController : ControllerBase
 			MotorTechLevelUpResponse motorTechLevelUpResponse = (MotorTechLevelUpResponse)msg;
 			if (motorTechLevelUpResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(motorTechLevelUpResponse.ErrorCode, 27374, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(motorTechLevelUpResponse.ErrorCode, 15127, null, true, true);
 				return;
 			}
 			MotorcycleDevelopModel.Instance.UpdateOneTechTree(motorTechLevelUpResponse.Tree);
@@ -266,7 +267,7 @@ public class MotorcycleDevelopController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06011204 RID: 70148 RVA: 0x0042DE18 File Offset: 0x0042C018
+	// Token: 0x0600E69A RID: 59034 RVA: 0x0043A9B8 File Offset: 0x00438BB8
 	private static void ShowTechLevelUpTips(int techId)
 	{
 		MotorTechTreeNode techNodeById = MotorcycleDevelopModel.Instance.GetTechNodeById(techId);
@@ -287,7 +288,7 @@ public class MotorcycleDevelopController : ControllerBase
 		RoleLevelUpSuccessController.Instance.OpenSuccessEffectView(data, null);
 	}
 
-	// Token: 0x06011205 RID: 70149 RVA: 0x0042DEBC File Offset: 0x0042C0BC
+	// Token: 0x0600E69B RID: 59035 RVA: 0x0043AA5C File Offset: 0x00438C5C
 	public void RequestMotorTechTreeSwitch(int treeId, Action callBack = null)
 	{
 		MotorTechTreeSwitchRequest motorTechTreeSwitchRequest = MotorTechTreeSwitchRequest.Create();
@@ -297,7 +298,7 @@ public class MotorcycleDevelopController : ControllerBase
 			MotorTechTreeSwitchResponse motorTechTreeSwitchResponse = (MotorTechTreeSwitchResponse)msg;
 			if (motorTechTreeSwitchResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(motorTechTreeSwitchResponse.ErrorCode, 29362, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(motorTechTreeSwitchResponse.ErrorCode, 17554, null, true, true);
 				return;
 			}
 			if (callBack != null)
@@ -309,7 +310,7 @@ public class MotorcycleDevelopController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06011206 RID: 70150 RVA: 0x0042DF00 File Offset: 0x0042C100
+	// Token: 0x0600E69C RID: 59036 RVA: 0x0043AAA0 File Offset: 0x00438CA0
 	public void RequestMotorLevelOneKeyReward()
 	{
 		MotorLevelOneKeyRewardRequest message = MotorLevelOneKeyRewardRequest.Create();
@@ -318,7 +319,7 @@ public class MotorcycleDevelopController : ControllerBase
 			MotorLevelOneKeyRewardResponse motorLevelOneKeyRewardResponse = (MotorLevelOneKeyRewardResponse)msg;
 			if (motorLevelOneKeyRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(motorLevelOneKeyRewardResponse.ErrorCode, 26315, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(motorLevelOneKeyRewardResponse.ErrorCode, 17604, null, true, true);
 				return;
 			}
 			MotorcycleDevelopModel.Instance.UpdateMotorRewardedMaxLevel(motorLevelOneKeyRewardResponse);
@@ -326,7 +327,7 @@ public class MotorcycleDevelopController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06011207 RID: 70151 RVA: 0x0042DF44 File Offset: 0x0042C144
+	// Token: 0x0600E69D RID: 59037 RVA: 0x0043AAE4 File Offset: 0x00438CE4
 	[NullableContext(1)]
 	public void RequestMotorTechTaskOneKeyReward(int[] taskIds)
 	{
@@ -337,12 +338,12 @@ public class MotorcycleDevelopController : ControllerBase
 			MotorTaskOneKeyRewardResponse motorTaskOneKeyRewardResponse = (MotorTaskOneKeyRewardResponse)msg;
 			if (motorTaskOneKeyRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(motorTaskOneKeyRewardResponse.ErrorCode, 26287, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(motorTaskOneKeyRewardResponse.ErrorCode, 26986, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x06011208 RID: 70152 RVA: 0x0042DF93 File Offset: 0x0042C193
+	// Token: 0x0600E69E RID: 59038 RVA: 0x0043AB33 File Offset: 0x00438D33
 	public void OpenMotorTechTreeSwitchView()
 	{
 		if (!this.IsInVehicle)
@@ -352,7 +353,7 @@ public class MotorcycleDevelopController : ControllerBase
 		UiManager.Instance.OpenView(EUiViewName.MotorcycleTechTreeSwitchView, null, null);
 	}
 
-	// Token: 0x06011209 RID: 70153 RVA: 0x0042DFB0 File Offset: 0x0042C1B0
+	// Token: 0x0600E69F RID: 59039 RVA: 0x0043AB50 File Offset: 0x00438D50
 	[NullableContext(0)]
 	public UniTask<bool> OpenRootView()
 	{
@@ -363,7 +364,7 @@ public class MotorcycleDevelopController : ControllerBase
 		return <OpenRootView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601120A RID: 70154 RVA: 0x0042DFEC File Offset: 0x0042C1EC
+	// Token: 0x0600E6A0 RID: 59040 RVA: 0x0043AB8C File Offset: 0x00438D8C
 	public void OpenMotorDevelopTechTreeTabView(int treeType)
 	{
 		MotorDevelopRootData param = new MotorDevelopRootData
@@ -374,8 +375,8 @@ public class MotorcycleDevelopController : ControllerBase
 		UiManager.Instance.OpenView(EUiViewName.MotorcycleRootView, param, null);
 	}
 
-	// Token: 0x170015AF RID: 5551
-	// (get) Token: 0x0601120B RID: 70155 RVA: 0x0042E02C File Offset: 0x0042C22C
+	// Token: 0x170015E6 RID: 5606
+	// (get) Token: 0x0600E6A1 RID: 59041 RVA: 0x0043ABCC File Offset: 0x00438DCC
 	[Nullable(1)]
 	public static MotorcycleDevelopController Instance
 	{
@@ -386,7 +387,7 @@ public class MotorcycleDevelopController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601120C RID: 70156 RVA: 0x0042E033 File Offset: 0x0042C233
+	// Token: 0x0600E6A2 RID: 59042 RVA: 0x0043ABD3 File Offset: 0x00438DD3
 	[NullableContext(1)]
 	public static MotorcycleDevelopController GetOrCreateInstance()
 	{
@@ -397,7 +398,7 @@ public class MotorcycleDevelopController : ControllerBase
 		return MotorcycleDevelopController._Instance;
 	}
 
-	// Token: 0x0601120D RID: 70157 RVA: 0x0042E047 File Offset: 0x0042C247
+	// Token: 0x0600E6A3 RID: 59043 RVA: 0x0043ABE7 File Offset: 0x00438DE7
 	public static bool CreateInstance()
 	{
 		if (MotorcycleDevelopController._Instance != null)
@@ -408,37 +409,37 @@ public class MotorcycleDevelopController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601120E RID: 70158 RVA: 0x0042E05D File Offset: 0x0042C25D
+	// Token: 0x0600E6A4 RID: 59044 RVA: 0x0043ABFD File Offset: 0x00438DFD
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601120F RID: 70159 RVA: 0x0042E05F File Offset: 0x0042C25F
+	// Token: 0x0600E6A5 RID: 59045 RVA: 0x0043ABFF File Offset: 0x00438DFF
 	public static void ResetStaticDefaultValue()
 	{
 		MotorcycleDevelopController._Instance = null;
 	}
 
-	// Token: 0x06011210 RID: 70160 RVA: 0x0042E067 File Offset: 0x0042C267
+	// Token: 0x0600E6A6 RID: 59046 RVA: 0x0043AC07 File Offset: 0x00438E07
 	static MotorcycleDevelopController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MotorcycleDevelopController.CreateStaticDefaultValue), new Action(MotorcycleDevelopController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008257 RID: 33367
+	// Token: 0x04008395 RID: 33685
 	private bool IsInVehicle;
 
-	// Token: 0x04008258 RID: 33368
+	// Token: 0x04008396 RID: 33686
 	private bool IsRequestDevelopInfo;
 
-	// Token: 0x04008259 RID: 33369
+	// Token: 0x04008397 RID: 33687
 	private static MotorcycleDevelopController _Instance;
 
-	// Token: 0x02008786 RID: 34694
+	// Token: 0x0200790F RID: 30991
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402C0CE RID: 180430
+		// Token: 0x040273E6 RID: 160742
 		[Nullable(new byte[]
 		{
 			0,
@@ -447,7 +448,7 @@ public class MotorcycleDevelopController : ControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <0>__OnMotorDataNotify;
 
-		// Token: 0x0402C0CF RID: 180431
+		// Token: 0x040273E7 RID: 160743
 		[Nullable(new byte[]
 		{
 			0,
@@ -456,7 +457,7 @@ public class MotorcycleDevelopController : ControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <1>__OnMotorExpAddNotify;
 
-		// Token: 0x0402C0D0 RID: 180432
+		// Token: 0x040273E8 RID: 160744
 		[Nullable(new byte[]
 		{
 			0,
@@ -465,7 +466,7 @@ public class MotorcycleDevelopController : ControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <2>__OnMotorTaskInfoNotify;
 
-		// Token: 0x0402C0D1 RID: 180433
+		// Token: 0x040273E9 RID: 160745
 		[Nullable(new byte[]
 		{
 			0,
@@ -474,7 +475,7 @@ public class MotorcycleDevelopController : ControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <3>__OnMotorTaskUpdateNotify;
 
-		// Token: 0x0402C0D2 RID: 180434
+		// Token: 0x040273EA RID: 160746
 		[Nullable(new byte[]
 		{
 			0,
@@ -483,7 +484,7 @@ public class MotorcycleDevelopController : ControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <4>__OnMotorTechUnlockNotify;
 
-		// Token: 0x0402C0D3 RID: 180435
+		// Token: 0x040273EB RID: 160747
 		[Nullable(new byte[]
 		{
 			0,
@@ -492,7 +493,7 @@ public class MotorcycleDevelopController : ControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <5>__OnMotorTechTreeUnlockNotify;
 
-		// Token: 0x0402C0D4 RID: 180436
+		// Token: 0x040273EC RID: 160748
 		[Nullable(new byte[]
 		{
 			0,

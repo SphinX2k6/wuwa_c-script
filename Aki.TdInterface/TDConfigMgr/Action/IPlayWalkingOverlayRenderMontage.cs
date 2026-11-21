@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D24 RID: 7460
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F35 RID: 7989
 	public class IPlayWalkingOverlayRenderMontage
 	{
-		// Token: 0x0600A017 RID: 40983 RVA: 0x0016D65C File Offset: 0x0016B85C
+		// Token: 0x0600AA03 RID: 43523 RVA: 0x00181A80 File Offset: 0x0017FC80
 		private IPlayWalkingOverlayRenderMontage_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A018 RID: 40984 RVA: 0x0016D694 File Offset: 0x0016B894
+		// Token: 0x0600AA04 RID: 43524 RVA: 0x00181AB8 File Offset: 0x0017FCB8
 		public static IPlayWalkingOverlayRenderMontage Create([Nullable(2)] IPlayWalkingOverlayRenderMontage instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A019 RID: 40985 RVA: 0x0016D6A7 File Offset: 0x0016B8A7
+		// Token: 0x0600AA05 RID: 43525 RVA: 0x00181ACB File Offset: 0x0017FCCB
 		public static IPlayWalkingOverlayRenderMontage CreateFromSetValue([Nullable(2)] IPlayWalkingOverlayRenderMontage_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A01A RID: 40986 RVA: 0x0016D6BA File Offset: 0x0016B8BA
+		// Token: 0x0600AA06 RID: 43526 RVA: 0x00181ADE File Offset: 0x0017FCDE
 		public IPlayWalkingOverlayRenderMontage_SetValue ToSetValue()
 		{
 			return new IPlayWalkingOverlayRenderMontage_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031AC RID: 12716
-		// (get) Token: 0x0600A01B RID: 40987 RVA: 0x0016D6F1 File Offset: 0x0016B8F1
-		// (set) Token: 0x0600A01C RID: 40988 RVA: 0x0016D71C File Offset: 0x0016B91C
+		// Token: 0x17003440 RID: 13376
+		// (get) Token: 0x0600AA07 RID: 43527 RVA: 0x00181B15 File Offset: 0x0017FD15
+		// (set) Token: 0x0600AA08 RID: 43528 RVA: 0x00181B40 File Offset: 0x0017FD40
 		public virtual int EntityId
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031AD RID: 12717
-		// (get) Token: 0x0600A01D RID: 40989 RVA: 0x0016D72C File Offset: 0x0016B92C
-		// (set) Token: 0x0600A01E RID: 40990 RVA: 0x0016D78D File Offset: 0x0016B98D
+		// Token: 0x17003441 RID: 13377
+		// (get) Token: 0x0600AA09 RID: 43529 RVA: 0x00181B50 File Offset: 0x0017FD50
+		// (set) Token: 0x0600AA0A RID: 43530 RVA: 0x00181BB1 File Offset: 0x0017FDB1
 		public virtual IMontageId OverlapMontageId
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031AE RID: 12718
-		// (get) Token: 0x0600A01F RID: 40991 RVA: 0x0016D7A4 File Offset: 0x0016B9A4
-		// (set) Token: 0x0600A020 RID: 40992 RVA: 0x0016D7DE File Offset: 0x0016B9DE
+		// Token: 0x17003442 RID: 13378
+		// (get) Token: 0x0600AA0B RID: 43531 RVA: 0x00181BC8 File Offset: 0x0017FDC8
+		// (set) Token: 0x0600AA0C RID: 43532 RVA: 0x00181C02 File Offset: 0x0017FE02
 		public virtual float? LoopDuration
 		{
 			get
@@ -139,9 +137,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031AF RID: 12719
-		// (get) Token: 0x0600A021 RID: 40993 RVA: 0x0016D7EC File Offset: 0x0016B9EC
-		// (set) Token: 0x0600A022 RID: 40994 RVA: 0x0016D826 File Offset: 0x0016BA26
+		// Token: 0x17003443 RID: 13379
+		// (get) Token: 0x0600AA0D RID: 43533 RVA: 0x00181C10 File Offset: 0x0017FE10
+		// (set) Token: 0x0600AA0E RID: 43534 RVA: 0x00181C4A File Offset: 0x0017FE4A
 		public virtual int? RepeatTimes
 		{
 			get
@@ -163,18 +161,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006087 RID: 24711
+		// Token: 0x04006603 RID: 26115
 		[Nullable(2)]
 		protected IPlayWalkingOverlayRenderMontage FbInstance;
 
-		// Token: 0x04006088 RID: 24712
+		// Token: 0x04006604 RID: 26116
 		[Nullable(2)]
 		protected IPlayWalkingOverlayRenderMontage_SetValue PocoInterface;
 
-		// Token: 0x04006089 RID: 24713
+		// Token: 0x04006605 RID: 26117
 		private IMontageId _OverlapMontageIdCache;
 
-		// Token: 0x0400608A RID: 24714
+		// Token: 0x04006606 RID: 26118
 		private bool _OverlapMontageIdInited;
 	}
 }

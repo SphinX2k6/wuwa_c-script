@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 
-// Token: 0x02002EF2 RID: 12018
+// Token: 0x02002445 RID: 9285
 [NullableContext(1)]
 [Nullable(0)]
 public class AddBattleFlag : BuffEffect
 {
-	// Token: 0x06019AD7 RID: 105175 RVA: 0x006AE3A2 File Offset: 0x006AC5A2
+	// Token: 0x060173E2 RID: 95202 RVA: 0x006D4680 File Offset: 0x006D2880
 	public AddBattleFlag(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019AD8 RID: 105176 RVA: 0x006AE3E0 File Offset: 0x006AC5E0
+	// Token: 0x060173E3 RID: 95203 RVA: 0x006D46C0 File Offset: 0x006D28C0
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		this.AddBattleFlagType = (EAddBattleFlagType)int.Parse(parameters.ExtraEffectParameters_[0]);
@@ -51,10 +50,11 @@ public class AddBattleFlag : BuffEffect
 				this.ExcludeSkillIds.Add(long.Parse(array3[k]));
 			}
 		}
-		this.IsApplyToVision = (int.Parse(parameters.ExtraEffectParameters_.ElementAtOrDefault(4) ?? "1") == 1);
+		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
+		this.IsApplyToVision = (int.Parse(((extraEffectParameters_.Length > 4) ? extraEffectParameters_[4] : null) ?? "1") == 1);
 	}
 
-	// Token: 0x06019AD9 RID: 105177 RVA: 0x006AE51C File Offset: 0x006AC71C
+	// Token: 0x060173E4 RID: 95204 RVA: 0x006D4808 File Offset: 0x006D2A08
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
@@ -84,7 +84,7 @@ public class AddBattleFlag : BuffEffect
 		return this.BattleFlag;
 	}
 
-	// Token: 0x06019ADA RID: 105178 RVA: 0x006AE55C File Offset: 0x006AC75C
+	// Token: 0x060173E5 RID: 95205 RVA: 0x006D4848 File Offset: 0x006D2A48
 	public override string GetDebugEffectString()
 	{
 		string str = string.Empty;
@@ -103,14 +103,14 @@ public class AddBattleFlag : BuffEffect
 		return "添加战斗标记 " + this.BattleFlag + " 到 " + str;
 	}
 
-	// Token: 0x06019ADB RID: 105179 RVA: 0x006AE5E2 File Offset: 0x006AC7E2
+	// Token: 0x060173E6 RID: 95206 RVA: 0x006D48CE File Offset: 0x006D2ACE
 	protected override bool CheckExecutable()
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
 		return ownerBuffComponent != null && ownerBuffComponent.HasBuffAuthority();
 	}
 
-	// Token: 0x06019ADC RID: 105180 RVA: 0x006AE5F8 File Offset: 0x006AC7F8
+	// Token: 0x060173E7 RID: 95207 RVA: 0x006D48E4 File Offset: 0x006D2AE4
 	private static void ApplyEffectsInner(Entity owner, Skill skill, bool isVision, List<string> battleFlags)
 	{
 		CharacterBuffComponent component = owner.GetComponent<CharacterBuffComponent>();
@@ -180,7 +180,7 @@ public class AddBattleFlag : BuffEffect
 		}
 	}
 
-	// Token: 0x06019ADD RID: 105181 RVA: 0x006AE7A8 File Offset: 0x006AC9A8
+	// Token: 0x060173E8 RID: 95208 RVA: 0x006D4A94 File Offset: 0x006D2C94
 	public static void ApplyEffects(Entity owner, Skill skill)
 	{
 		skill.BattleContext = new SkillBattleContext
@@ -210,22 +210,22 @@ public class AddBattleFlag : BuffEffect
 		int count = battleFlags.Count;
 	}
 
-	// Token: 0x0400C0A2 RID: 49314
+	// Token: 0x0400C443 RID: 50243
 	private EAddBattleFlagType AddBattleFlagType = EAddBattleFlagType.AllSkill;
 
-	// Token: 0x0400C0A3 RID: 49315
+	// Token: 0x0400C444 RID: 50244
 	private long[] SkillIds = Array.Empty<long>();
 
-	// Token: 0x0400C0A4 RID: 49316
+	// Token: 0x0400C445 RID: 50245
 	private int[] SkillGenres = Array.Empty<int>();
 
-	// Token: 0x0400C0A5 RID: 49317
+	// Token: 0x0400C446 RID: 50246
 	[Nullable(2)]
 	private HashSet<long> ExcludeSkillIds;
 
-	// Token: 0x0400C0A6 RID: 49318
+	// Token: 0x0400C447 RID: 50247
 	private bool IsApplyToVision = true;
 
-	// Token: 0x0400C0A7 RID: 49319
+	// Token: 0x0400C448 RID: 50248
 	private string BattleFlag = string.Empty;
 }

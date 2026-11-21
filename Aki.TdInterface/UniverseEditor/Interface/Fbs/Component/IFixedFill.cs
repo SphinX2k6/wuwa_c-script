@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005270 RID: 21104
+	// Token: 0x020057D8 RID: 22488
 	public struct IFixedFill : IFlatbufferObject
 	{
-		// Token: 0x17009A9C RID: 39580
-		// (get) Token: 0x06022573 RID: 140659 RVA: 0x004C29AE File Offset: 0x004C0BAE
+		// Token: 0x1700A298 RID: 41624
+		// (get) Token: 0x06024509 RID: 148745 RVA: 0x004FD472 File Offset: 0x004FB672
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022574 RID: 140660 RVA: 0x004C29BB File Offset: 0x004C0BBB
+		// Token: 0x0602450A RID: 148746 RVA: 0x004FD47F File Offset: 0x004FB67F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022575 RID: 140661 RVA: 0x004C29C4 File Offset: 0x004C0BC4
+		// Token: 0x0602450B RID: 148747 RVA: 0x004FD488 File Offset: 0x004FB688
 		public static IFixedFill GetRootAsIFixedFill(ByteBuffer _bb)
 		{
 			return IFixedFill.GetRootAsIFixedFill(_bb, default(IFixedFill));
 		}
 
-		// Token: 0x06022576 RID: 140662 RVA: 0x004C29E0 File Offset: 0x004C0BE0
+		// Token: 0x0602450C RID: 148748 RVA: 0x004FD4A4 File Offset: 0x004FB6A4
 		public static IFixedFill GetRootAsIFixedFill(ByteBuffer _bb, IFixedFill obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022577 RID: 140663 RVA: 0x004C29FD File Offset: 0x004C0BFD
+		// Token: 0x0602450D RID: 148749 RVA: 0x004FD4C1 File Offset: 0x004FB6C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022578 RID: 140664 RVA: 0x004C2A0C File Offset: 0x004C0C0C
+		// Token: 0x0602450E RID: 148750 RVA: 0x004FD4D0 File Offset: 0x004FB6D0
 		public IFixedFill __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009A9D RID: 39581
-		// (get) Token: 0x06022579 RID: 140665 RVA: 0x004C2A1C File Offset: 0x004C0C1C
+		// Token: 0x1700A299 RID: 41625
+		// (get) Token: 0x0602450F RID: 148751 RVA: 0x004FD4E0 File Offset: 0x004FB6E0
 		public EFillType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009A9E RID: 39582
-		// (get) Token: 0x0602257A RID: 140666 RVA: 0x004C2A58 File Offset: 0x004C0C58
+		// Token: 0x1700A29A RID: 41626
+		// (get) Token: 0x06024510 RID: 148752 RVA: 0x004FD51C File Offset: 0x004FB71C
 		public int ModelId
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009A9F RID: 39583
-		// (get) Token: 0x0602257B RID: 140667 RVA: 0x004C2A94 File Offset: 0x004C0C94
+		// Token: 0x1700A29B RID: 41627
+		// (get) Token: 0x06024511 RID: 148753 RVA: 0x004FD558 File Offset: 0x004FB758
 		public IPieceIndex? Centre
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009AA0 RID: 39584
-		// (get) Token: 0x0602257C RID: 140668 RVA: 0x004C2AF4 File Offset: 0x004C0CF4
+		// Token: 0x1700A29C RID: 41628
+		// (get) Token: 0x06024512 RID: 148754 RVA: 0x004FD5B8 File Offset: 0x004FB7B8
 		public IJigsawConfig? Config
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009AA1 RID: 39585
-		// (get) Token: 0x0602257D RID: 140669 RVA: 0x004C2B54 File Offset: 0x004C0D54
+		// Token: 0x1700A29D RID: 41629
+		// (get) Token: 0x06024513 RID: 148755 RVA: 0x004FD618 File Offset: 0x004FB818
 		public byte NullMask
 		{
 			get
@@ -123,7 +123,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602257E RID: 140670 RVA: 0x004C2B91 File Offset: 0x004C0D91
+		// Token: 0x06024514 RID: 148756 RVA: 0x004FD655 File Offset: 0x004FB855
 		public static Offset<IFixedFill> CreateIFixedFill(FlatBufferBuilder builder, EFillType Type = EFillType.Fixed, int ModelId = 0, Offset<IPieceIndex> CentreOffset = default(Offset<IPieceIndex>), Offset<IJigsawConfig> ConfigOffset = default(Offset<IJigsawConfig>), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -135,49 +135,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFixedFill.EndIFixedFill(builder);
 		}
 
-		// Token: 0x0602257F RID: 140671 RVA: 0x004C2BC5 File Offset: 0x004C0DC5
+		// Token: 0x06024515 RID: 148757 RVA: 0x004FD689 File Offset: 0x004FB889
 		public static void StartIFixedFill(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06022580 RID: 140672 RVA: 0x004C2BCE File Offset: 0x004C0DCE
+		// Token: 0x06024516 RID: 148758 RVA: 0x004FD692 File Offset: 0x004FB892
 		public static void AddType(FlatBufferBuilder builder, EFillType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06022581 RID: 140673 RVA: 0x004C2BD9 File Offset: 0x004C0DD9
+		// Token: 0x06024517 RID: 148759 RVA: 0x004FD69D File Offset: 0x004FB89D
 		public static void AddModelId(FlatBufferBuilder builder, int modelId)
 		{
 			builder.AddInt(1, modelId, 0);
 		}
 
-		// Token: 0x06022582 RID: 140674 RVA: 0x004C2BE4 File Offset: 0x004C0DE4
+		// Token: 0x06024518 RID: 148760 RVA: 0x004FD6A8 File Offset: 0x004FB8A8
 		public static void AddCentre(FlatBufferBuilder builder, Offset<IPieceIndex> centreOffset)
 		{
 			builder.AddOffset(2, centreOffset.Value, 0);
 		}
 
-		// Token: 0x06022583 RID: 140675 RVA: 0x004C2BF4 File Offset: 0x004C0DF4
+		// Token: 0x06024519 RID: 148761 RVA: 0x004FD6B8 File Offset: 0x004FB8B8
 		public static void AddConfig(FlatBufferBuilder builder, Offset<IJigsawConfig> configOffset)
 		{
 			builder.AddOffset(3, configOffset.Value, 0);
 		}
 
-		// Token: 0x06022584 RID: 140676 RVA: 0x004C2C04 File Offset: 0x004C0E04
+		// Token: 0x0602451A RID: 148762 RVA: 0x004FD6C8 File Offset: 0x004FB8C8
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06022585 RID: 140677 RVA: 0x004C2C0F File Offset: 0x004C0E0F
+		// Token: 0x0602451B RID: 148763 RVA: 0x004FD6D3 File Offset: 0x004FB8D3
 		public static Offset<IFixedFill> EndIFixedFill(FlatBufferBuilder builder)
 		{
 			return new Offset<IFixedFill>(builder.EndTable());
 		}
 
-		// Token: 0x06022586 RID: 140678 RVA: 0x004C2C1C File Offset: 0x004C0E1C
+		// Token: 0x0602451C RID: 148764 RVA: 0x004FD6E0 File Offset: 0x004FB8E0
 		public IFixedFillT UnPack()
 		{
 			IFixedFillT fixedFillT = new IFixedFillT();
@@ -185,7 +185,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return fixedFillT;
 		}
 
-		// Token: 0x06022587 RID: 140679 RVA: 0x004C2C38 File Offset: 0x004C0E38
+		// Token: 0x0602451D RID: 148765 RVA: 0x004FD6FC File Offset: 0x004FB8FC
 		public void UnPackTo(IFixedFillT _o)
 		{
 			_o.Type = this.Type;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06022588 RID: 140680 RVA: 0x004C2CC8 File Offset: 0x004C0EC8
+		// Token: 0x0602451E RID: 148766 RVA: 0x004FD78C File Offset: 0x004FB98C
 		public static Offset<IFixedFill> Pack(FlatBufferBuilder builder, IFixedFillT _o)
 		{
 			if (_o == null)
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFixedFill.CreateIFixedFill(builder, _o.Type, _o.ModelId, centreOffset, configOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E3C8 RID: 58312
+		// Token: 0x0400EFCE RID: 61390
 		private Table __p;
 	}
 }

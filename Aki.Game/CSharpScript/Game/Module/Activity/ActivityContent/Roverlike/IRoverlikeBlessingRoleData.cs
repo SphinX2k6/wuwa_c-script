@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060FC RID: 24828
+	// Token: 0x0200507A RID: 20602
 	public interface IRoverlikeBlessingRoleData
 	{
-		// Token: 0x1700915D RID: 37213
-		// (get) Token: 0x0603EC76 RID: 257142
-		// (set) Token: 0x0603EC77 RID: 257143
+		// Token: 0x170064BF RID: 25791
+		// (get) Token: 0x06033938 RID: 211256
+		// (set) Token: 0x06033939 RID: 211257
 		int RoleId { get; set; }
 
-		// Token: 0x1700915E RID: 37214
-		// (get) Token: 0x0603EC78 RID: 257144
-		// (set) Token: 0x0603EC79 RID: 257145
+		// Token: 0x170064C0 RID: 25792
+		// (get) Token: 0x0603393A RID: 211258
+		// (set) Token: 0x0603393B RID: 211259
 		bool IsSelected { get; set; }
 	}
 }

@@ -5,10 +5,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C45 RID: 15429
+	// Token: 0x02004054 RID: 16468
 	public static class ISphereTriggerShapeVerify
 	{
-		// Token: 0x0601551E RID: 87326 RVA: 0x00315C7C File Offset: 0x00313E7C
+		// Token: 0x06016A32 RID: 92722 RVA: 0x0033CB1C File Offset: 0x0033AD1C
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false))
@@ -27,11 +27,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return false;
 		}
 
-		// Token: 0x020078A4 RID: 30884
+		// Token: 0x020080E8 RID: 33000
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013113 RID: 78099
+			// Token: 0x0401416F RID: 82287
 			public static VerifyTableAction <0>__Verify;
 		}
 	}

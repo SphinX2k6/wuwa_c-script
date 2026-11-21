@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A91 RID: 23185
+	// Token: 0x0200609E RID: 24734
 	public class ITimeScheduleComponentT
 	{
-		// Token: 0x1700AEAA RID: 44714
-		// (get) Token: 0x06027804 RID: 161796 RVA: 0x0056F5F9 File Offset: 0x0056D7F9
-		// (set) Token: 0x06027805 RID: 161797 RVA: 0x0056F601 File Offset: 0x0056D801
+		// Token: 0x1700B7E2 RID: 47074
+		// (get) Token: 0x06029D7C RID: 171388 RVA: 0x005B6605 File Offset: 0x005B4805
+		// (set) Token: 0x06029D7D RID: 171389 RVA: 0x005B660D File Offset: 0x005B480D
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700AEAB RID: 44715
-		// (get) Token: 0x06027806 RID: 161798 RVA: 0x0056F60A File Offset: 0x0056D80A
-		// (set) Token: 0x06027807 RID: 161799 RVA: 0x0056F612 File Offset: 0x0056D812
+		// Token: 0x1700B7E3 RID: 47075
+		// (get) Token: 0x06029D7E RID: 171390 RVA: 0x005B6616 File Offset: 0x005B4816
+		// (set) Token: 0x06029D7F RID: 171391 RVA: 0x005B661E File Offset: 0x005B481E
 		public List<ITimeScheduleConfigT> TimeScheduleConfigs { get; set; }
 
-		// Token: 0x1700AEAC RID: 44716
-		// (get) Token: 0x06027808 RID: 161800 RVA: 0x0056F61B File Offset: 0x0056D81B
-		// (set) Token: 0x06027809 RID: 161801 RVA: 0x0056F623 File Offset: 0x0056D823
+		// Token: 0x1700B7E4 RID: 47076
+		// (get) Token: 0x06029D80 RID: 171392 RVA: 0x005B6627 File Offset: 0x005B4827
+		// (set) Token: 0x06029D81 RID: 171393 RVA: 0x005B662F File Offset: 0x005B482F
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602780A RID: 161802 RVA: 0x0056F62C File Offset: 0x0056D82C
+		// Token: 0x06029D82 RID: 171394 RVA: 0x005B6638 File Offset: 0x005B4838
 		public ITimeScheduleComponentT()
 		{
 			this.Disabled = false;

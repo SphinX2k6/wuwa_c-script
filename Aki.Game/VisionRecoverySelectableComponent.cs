@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200195F RID: 6495
+// Token: 0x02000E1C RID: 3612
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class VisionRecoverySelectableComponent<[Nullable(0)] T> : SelectableComponent<T> where T : ItemDataBase
 {
-	// Token: 0x0600BDF1 RID: 48625 RVA: 0x002AF518 File Offset: 0x002AD718
+	// Token: 0x060091F4 RID: 37364 RVA: 0x002BA35C File Offset: 0x002B855C
 	protected override SelectablePropMediumItemGrid InitItem()
 	{
 		SelectablePropVisionRecoveryItemGrid selectablePropVisionRecoveryItemGrid = new SelectablePropVisionRecoveryItemGrid();
@@ -39,7 +39,7 @@ public class VisionRecoverySelectableComponent<[Nullable(0)] T> : SelectableComp
 		return selectablePropVisionRecoveryItemGrid;
 	}
 
-	// Token: 0x0600BDF2 RID: 48626 RVA: 0x002AF580 File Offset: 0x002AD780
+	// Token: 0x060091F5 RID: 37365 RVA: 0x002BA3C4 File Offset: 0x002B85C4
 	[NullableContext(2)]
 	private bool OnRecoveryCanExecuteChange(object data, bool isForceSelected, EToggleState state)
 	{
@@ -47,7 +47,7 @@ public class VisionRecoverySelectableComponent<[Nullable(0)] T> : SelectableComp
 		return (selectablePropData == null || this.GetStackItemData(selectablePropData.IncId) == null) && base.OnCanExecuteChange(data, isForceSelected, state);
 	}
 
-	// Token: 0x0600BDF3 RID: 48627 RVA: 0x002AF5B0 File Offset: 0x002AD7B0
+	// Token: 0x060091F6 RID: 37366 RVA: 0x002BA3F4 File Offset: 0x002B85F4
 	protected override bool CanAddMaterial(SelectablePropData propData, bool isShowTip = false)
 	{
 		PhantomBattleData phantomBattleData = PhantomBattleModel.Instance.GetPhantomBattleData(propData.IncId);
@@ -114,7 +114,7 @@ public class VisionRecoverySelectableComponent<[Nullable(0)] T> : SelectableComp
 		}
 	}
 
-	// Token: 0x0600BDF4 RID: 48628 RVA: 0x002AF71C File Offset: 0x002AD91C
+	// Token: 0x060091F7 RID: 37367 RVA: 0x002BA560 File Offset: 0x002B8760
 	private bool TryClearStackSelection(bool isShortPress, ItemGridBase itemGrid, [Nullable(2)] object data)
 	{
 		SelectablePropData selectablePropData = data as SelectablePropData;
@@ -135,7 +135,7 @@ public class VisionRecoverySelectableComponent<[Nullable(0)] T> : SelectableComp
 		return true;
 	}
 
-	// Token: 0x0600BDF5 RID: 48629 RVA: 0x002AF75C File Offset: 0x002AD95C
+	// Token: 0x060091F8 RID: 37368 RVA: 0x002BA5A0 File Offset: 0x002B87A0
 	private bool TryOpenStackCountPopup(bool isShortPress, ItemGridBase itemGrid, [Nullable(2)] object data)
 	{
 		SelectablePropData propData = data as SelectablePropData;
@@ -184,7 +184,7 @@ public class VisionRecoverySelectableComponent<[Nullable(0)] T> : SelectableComp
 		return true;
 	}
 
-	// Token: 0x0600BDF6 RID: 48630 RVA: 0x002AF8A4 File Offset: 0x002ADAA4
+	// Token: 0x060091F9 RID: 37369 RVA: 0x002BA6E8 File Offset: 0x002B88E8
 	private void SetStackSelectedCount(SelectablePropData propData, ItemGridBase itemGrid, int count)
 	{
 		ISelectedData selectedData = base.GetSelectedData(propData);
@@ -217,7 +217,7 @@ public class VisionRecoverySelectableComponent<[Nullable(0)] T> : SelectableComp
 		base.RefreshSelectFrame(selectablePropMediumItemGrid, count > 0);
 	}
 
-	// Token: 0x0600BDF7 RID: 48631 RVA: 0x002AF93C File Offset: 0x002ADB3C
+	// Token: 0x060091FA RID: 37370 RVA: 0x002BA780 File Offset: 0x002B8980
 	[NullableContext(2)]
 	private PhantomItemData GetStackItemData(int incId)
 	{

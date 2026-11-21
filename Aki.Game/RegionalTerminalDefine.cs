@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02002D71 RID: 11633
+// Token: 0x020022CB RID: 8907
 public static class RegionalTerminalDefine
 {
-	// Token: 0x0400B55E RID: 46430
+	// Token: 0x0400B8D3 RID: 47315
 	public const int PIN_CD_TIME = 1000;
 }

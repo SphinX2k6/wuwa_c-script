@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000907 RID: 2311
+	// Token: 0x020009B0 RID: 2480
 	public class EBulletCreateConditionJsonConverter : JsonConverter<EBulletCreateCondition>
 	{
-		// Token: 0x06003452 RID: 13394 RVA: 0x00085A20 File Offset: 0x00083C20
+		// Token: 0x060037AC RID: 14252 RVA: 0x0008D290 File Offset: 0x0008B490
 		public override EBulletCreateCondition Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EBulletCreateConditionExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003453 RID: 13395 RVA: 0x00085A44 File Offset: 0x00083C44
+		// Token: 0x060037AD RID: 14253 RVA: 0x0008D2B4 File Offset: 0x0008B4B4
 		public override void Write(Utf8JsonWriter writer, EBulletCreateCondition value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

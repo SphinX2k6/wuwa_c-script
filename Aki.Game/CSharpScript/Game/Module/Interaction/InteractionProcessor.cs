@@ -4,38 +4,38 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005846 RID: 22598
+	// Token: 0x0200481E RID: 18462
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class InteractionProcessor
 	{
-		// Token: 0x17008A41 RID: 35393
-		// (get) Token: 0x06039703 RID: 235267 RVA: 0x00DA2043 File Offset: 0x00DA0243
-		// (set) Token: 0x06039704 RID: 235268 RVA: 0x00DA204B File Offset: 0x00DA024B
+		// Token: 0x17005E0A RID: 24074
+		// (get) Token: 0x0602E61A RID: 189978 RVA: 0x00CF0D1B File Offset: 0x00CEEF1B
+		// (set) Token: 0x0602E61B RID: 189979 RVA: 0x00CF0D23 File Offset: 0x00CEEF23
 		private protected EInteractionType InteractionType { protected get; private set; }
 
-		// Token: 0x17008A42 RID: 35394
-		// (get) Token: 0x06039705 RID: 235269 RVA: 0x00DA2054 File Offset: 0x00DA0254
-		// (set) Token: 0x06039706 RID: 235270 RVA: 0x00DA205C File Offset: 0x00DA025C
+		// Token: 0x17005E0B RID: 24075
+		// (get) Token: 0x0602E61C RID: 189980 RVA: 0x00CF0D2C File Offset: 0x00CEEF2C
+		// (set) Token: 0x0602E61D RID: 189981 RVA: 0x00CF0D34 File Offset: 0x00CEEF34
 		protected bool IsPressing { get; set; }
 
-		// Token: 0x17008A43 RID: 35395
-		// (get) Token: 0x06039707 RID: 235271 RVA: 0x00DA2065 File Offset: 0x00DA0265
-		// (set) Token: 0x06039708 RID: 235272 RVA: 0x00DA206D File Offset: 0x00DA026D
+		// Token: 0x17005E0C RID: 24076
+		// (get) Token: 0x0602E61E RID: 189982 RVA: 0x00CF0D3D File Offset: 0x00CEEF3D
+		// (set) Token: 0x0602E61F RID: 189983 RVA: 0x00CF0D45 File Offset: 0x00CEEF45
 		protected bool IsCompleteInternal { get; set; }
 
-		// Token: 0x17008A44 RID: 35396
-		// (get) Token: 0x06039709 RID: 235273 RVA: 0x00DA2076 File Offset: 0x00DA0276
-		// (set) Token: 0x0603970A RID: 235274 RVA: 0x00DA207E File Offset: 0x00DA027E
+		// Token: 0x17005E0D RID: 24077
+		// (get) Token: 0x0602E620 RID: 189984 RVA: 0x00CF0D4E File Offset: 0x00CEEF4E
+		// (set) Token: 0x0602E621 RID: 189985 RVA: 0x00CF0D56 File Offset: 0x00CEEF56
 		private protected int Index { protected get; private set; }
 
-		// Token: 0x17008A45 RID: 35397
-		// (get) Token: 0x0603970B RID: 235275 RVA: 0x00DA2087 File Offset: 0x00DA0287
-		// (set) Token: 0x0603970C RID: 235276 RVA: 0x00DA208F File Offset: 0x00DA028F
+		// Token: 0x17005E0E RID: 24078
+		// (get) Token: 0x0602E622 RID: 189986 RVA: 0x00CF0D5F File Offset: 0x00CEEF5F
+		// (set) Token: 0x0602E623 RID: 189987 RVA: 0x00CF0D67 File Offset: 0x00CEEF67
 		private protected Entity Entity { protected get; private set; }
 
-		// Token: 0x17008A46 RID: 35398
-		// (get) Token: 0x0603970D RID: 235277 RVA: 0x00DA2098 File Offset: 0x00DA0298
+		// Token: 0x17005E0F RID: 24079
+		// (get) Token: 0x0602E624 RID: 189988 RVA: 0x00CF0D70 File Offset: 0x00CEEF70
 		public bool IsLongPressing
 		{
 			get
@@ -44,8 +44,8 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x17008A47 RID: 35399
-		// (get) Token: 0x0603970E RID: 235278 RVA: 0x00DA20AA File Offset: 0x00DA02AA
+		// Token: 0x17005E10 RID: 24080
+		// (get) Token: 0x0602E625 RID: 189989 RVA: 0x00CF0D82 File Offset: 0x00CEEF82
 		public bool IsLongPressType
 		{
 			get
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603970F RID: 235279 RVA: 0x00DA20B5 File Offset: 0x00DA02B5
+		// Token: 0x0602E626 RID: 189990 RVA: 0x00CF0D8D File Offset: 0x00CEEF8D
 		protected InteractionProcessor(Entity entity, int index, EInteractionType type)
 		{
 			this.InteractionType = type;
@@ -62,36 +62,36 @@ namespace CSharpScript.Game.Module.Interaction
 			this.Index = index;
 		}
 
-		// Token: 0x06039710 RID: 235280
+		// Token: 0x0602E627 RID: 189991
 		public abstract void OnPress();
 
-		// Token: 0x06039711 RID: 235281
+		// Token: 0x0602E628 RID: 189992
 		public abstract void OnRelease();
 
-		// Token: 0x06039712 RID: 235282
+		// Token: 0x0602E629 RID: 189993
 		public abstract void OnReset();
 
-		// Token: 0x06039713 RID: 235283 RVA: 0x00DA20D2 File Offset: 0x00DA02D2
+		// Token: 0x0602E62A RID: 189994 RVA: 0x00CF0DAA File Offset: 0x00CEEFAA
 		public bool IsCompleted()
 		{
 			return this.IsCompleteInternal;
 		}
 
-		// Token: 0x06039714 RID: 235284 RVA: 0x00DA20DA File Offset: 0x00DA02DA
+		// Token: 0x0602E62B RID: 189995 RVA: 0x00CF0DB2 File Offset: 0x00CEEFB2
 		public void Reset()
 		{
 			this.IsCompleteInternal = false;
 			this.OnReset();
 		}
 
-		// Token: 0x06039715 RID: 235285 RVA: 0x00DA20E9 File Offset: 0x00DA02E9
+		// Token: 0x0602E62C RID: 189996 RVA: 0x00CF0DC1 File Offset: 0x00CEEFC1
 		[NullableContext(0)]
 		public virtual UniTask<bool> LoadAsset()
 		{
 			return UniTask.FromResult<bool>(true);
 		}
 
-		// Token: 0x06039716 RID: 235286 RVA: 0x00DA20F1 File Offset: 0x00DA02F1
+		// Token: 0x0602E62D RID: 189997 RVA: 0x00CF0DC9 File Offset: 0x00CEEFC9
 		protected void TriggerComplete()
 		{
 			this.IsCompleteInternal = true;

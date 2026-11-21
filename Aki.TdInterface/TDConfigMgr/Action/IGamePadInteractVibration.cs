@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AC3 RID: 6851
+	// Token: 0x02001C6A RID: 7274
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IGamePadInteractVibration
 	{
-		// Token: 0x060092EE RID: 37614 RVA: 0x00155550 File Offset: 0x00153750
-		[NullableContext(1)]
+		// Token: 0x06009AAC RID: 39596 RVA: 0x00165D70 File Offset: 0x00163F70
+		[NullableContext(0)]
 		private IGamePadInteractVibration_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060092EF RID: 37615 RVA: 0x00155588 File Offset: 0x00153788
-		[NullableContext(1)]
+		// Token: 0x06009AAD RID: 39597 RVA: 0x00165DA8 File Offset: 0x00163FA8
+		[NullableContext(0)]
 		public static IGamePadInteractVibration Create([Nullable(2)] IGamePadInteractVibration instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060092F0 RID: 37616 RVA: 0x0015559B File Offset: 0x0015379B
-		[NullableContext(1)]
+		// Token: 0x06009AAE RID: 39598 RVA: 0x00165DBB File Offset: 0x00163FBB
+		[NullableContext(0)]
 		public static IGamePadInteractVibration CreateFromSetValue([Nullable(2)] IGamePadInteractVibration_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060092F1 RID: 37617 RVA: 0x001555AE File Offset: 0x001537AE
-		[NullableContext(1)]
+		// Token: 0x06009AAF RID: 39599 RVA: 0x00165DCE File Offset: 0x00163FCE
+		[NullableContext(0)]
 		public IGamePadInteractVibration_SetValue ToSetValue()
 		{
 			return new IGamePadInteractVibration_SetValue
@@ -64,9 +64,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EA8 RID: 11944
-		// (get) Token: 0x060092F2 RID: 37618 RVA: 0x001555CD File Offset: 0x001537CD
-		// (set) Token: 0x060092F3 RID: 37619 RVA: 0x001555F4 File Offset: 0x001537F4
+		// Token: 0x170030C4 RID: 12484
+		// (get) Token: 0x06009AB0 RID: 39600 RVA: 0x00165DED File Offset: 0x00163FED
+		// (set) Token: 0x06009AB1 RID: 39601 RVA: 0x00165E14 File Offset: 0x00164014
 		public virtual string LongPressingEffect
 		{
 			get
@@ -88,9 +88,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EA9 RID: 11945
-		// (get) Token: 0x060092F4 RID: 37620 RVA: 0x00155602 File Offset: 0x00153802
-		// (set) Token: 0x060092F5 RID: 37621 RVA: 0x00155629 File Offset: 0x00153829
+		// Token: 0x170030C5 RID: 12485
+		// (get) Token: 0x06009AB2 RID: 39602 RVA: 0x00165E22 File Offset: 0x00164022
+		// (set) Token: 0x06009AB3 RID: 39603 RVA: 0x00165E49 File Offset: 0x00164049
 		public virtual string LongPressFinishedEffect
 		{
 			get
@@ -112,10 +112,10 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A65 RID: 23141
+		// Token: 0x04005EEF RID: 24303
 		protected IGamePadInteractVibration FbInstance;
 
-		// Token: 0x04005A66 RID: 23142
+		// Token: 0x04005EF0 RID: 24304
 		protected IGamePadInteractVibration_SetValue PocoInterface;
 	}
 }

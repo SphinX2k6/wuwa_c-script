@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using CSharpScript.Launcher.DiffPatch.Update;
+using CSharpScript.Launcher.Platform;
 using CSharpScript.Launcher.Update.ResourceDiffUpdate;
 using CSharpScript.Launcher.Util;
 
 namespace CSharpScript.Launcher.Ui.HotFix
 {
-	// Token: 0x020000CC RID: 204
+	// Token: 0x020000CF RID: 207
 	public class HotFixChangeTierPopupView : HotFixPopupUiView
 	{
-		// Token: 0x060006B2 RID: 1714 RVA: 0x000384C8 File Offset: 0x000366C8
+		// Token: 0x060006CE RID: 1742 RVA: 0x00039FF8 File Offset: 0x000381F8
 		public void ShowChangeTier(EResUpdateType resDownLoadType, ETier oldTier, ETier newTier)
 		{
 			if (this.IsCalculatingSize)
@@ -35,7 +36,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			}
 		}
 
-		// Token: 0x060006B3 RID: 1715 RVA: 0x00038544 File Offset: 0x00036744
+		// Token: 0x060006CF RID: 1743 RVA: 0x0003A074 File Offset: 0x00038274
 		private unsafe void DoShowChangeTier(EResUpdateType resDownLoadType, ETier oldTier, ETier newTier)
 		{
 			string resourceQualityTierName = HotFixManager.GetResourceQualityTierName(oldTier);
@@ -95,7 +96,11 @@ namespace CSharpScript.Launcher.Ui.HotFix
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("oldTier", oldTier);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("newTier", newTier);
 					instance.Info(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-					LauncherStorageLib.Instance.SetDeviceSaved<EResUpdateType>(ELauncherStorageDeviceKey.SelectedMaxOrMinPackType, resDownLoadType);
+					if (Platform.Instance.IsWindowsOnlyPlatform())
+					{
+						LauncherLog.Instance.Error("HotFixChangeTierPopupView-Windows不应在游戏内切换资源档位或包体类型", default(ReadOnlySpan<ValueTuple<string, object>>));
+					}
+					LauncherPackageStateLib.SetSavedPackageType(newTier, resDownLoadType);
 					LauncherStorageLib.Instance.SetDeviceSaved<ETier>(ELauncherStorageDeviceKey.ResourceQualityTier, newTier);
 					this.SetActive(false);
 					Action<ETier, ETier> applyTierChangeHandler = HotFixManager.ApplyTierChangeHandler;
@@ -109,7 +114,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			base.SetActive(true);
 		}
 
-		// Token: 0x060006B4 RID: 1716 RVA: 0x000386E8 File Offset: 0x000368E8
+		// Token: 0x060006D0 RID: 1744 RVA: 0x0003A218 File Offset: 0x00038418
 		private void CloseAndBackToDownLoad()
 		{
 			base.SetActive(false);
@@ -121,11 +126,11 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			setDownLoadActiveCallBack(true);
 		}
 
-		// Token: 0x04000409 RID: 1033
+		// Token: 0x04000438 RID: 1080
 		[Nullable(2)]
 		public Action<bool> SetDownLoadActiveCallBack;
 
-		// Token: 0x0400040A RID: 1034
+		// Token: 0x04000439 RID: 1081
 		private bool IsCalculatingSize;
 	}
 }

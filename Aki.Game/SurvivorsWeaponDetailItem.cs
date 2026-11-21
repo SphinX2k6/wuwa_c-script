@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002B10 RID: 11024
+// Token: 0x0200208C RID: 8332
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsWeaponDetailItem : GridProxyAbstract<int>
 {
-	// Token: 0x06016E93 RID: 93843 RVA: 0x005D0264 File Offset: 0x005CE464
+	// Token: 0x060148C4 RID: 84164 RVA: 0x005FCDE4 File Offset: 0x005FAFE4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class SurvivorsWeaponDetailItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06016E94 RID: 93844 RVA: 0x005D03E4 File Offset: 0x005CE5E4
+	// Token: 0x060148C5 RID: 84165 RVA: 0x005FCF64 File Offset: 0x005FB164
 	protected override void OnStart()
 	{
 		this.EntryLayout = new GenericLayout<EntryItem, IEntryItemData>(base.GetVerticalLayout(9), new Func<EntryItem>(this.CreateGridProxy), base.GetItem(10).GetOwner() as AUIBaseActor, false, true);
@@ -47,13 +47,13 @@ public class SurvivorsWeaponDetailItem : GridProxyAbstract<int>
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x06016E95 RID: 93845 RVA: 0x005D0453 File Offset: 0x005CE653
+	// Token: 0x060148C6 RID: 84166 RVA: 0x005FCFD3 File Offset: 0x005FB1D3
 	private EntryItem CreateGridProxy()
 	{
 		return new EntryItem();
 	}
 
-	// Token: 0x06016E96 RID: 93846 RVA: 0x005D045A File Offset: 0x005CE65A
+	// Token: 0x060148C7 RID: 84167 RVA: 0x005FCFDA File Offset: 0x005FB1DA
 	public void SetIsCurrentState(bool state)
 	{
 		UUIItem item = base.GetItem(12);
@@ -69,7 +69,7 @@ public class SurvivorsWeaponDetailItem : GridProxyAbstract<int>
 		texture.SetUIActive(state);
 	}
 
-	// Token: 0x06016E97 RID: 93847 RVA: 0x005D0483 File Offset: 0x005CE683
+	// Token: 0x060148C8 RID: 84168 RVA: 0x005FD003 File Offset: 0x005FB203
 	public void SetIsLocked(bool isLocked)
 	{
 		UUIItem item = base.GetItem(14);
@@ -80,13 +80,13 @@ public class SurvivorsWeaponDetailItem : GridProxyAbstract<int>
 		item.SetUIActive(isLocked);
 	}
 
-	// Token: 0x06016E98 RID: 93848 RVA: 0x005D0498 File Offset: 0x005CE698
+	// Token: 0x060148C9 RID: 84169 RVA: 0x005FD018 File Offset: 0x005FB218
 	public override void Refresh(int evolveId, bool isSelected, int gridIndex)
 	{
 		this.RefreshByWeaponEvolveId(evolveId);
 	}
 
-	// Token: 0x06016E99 RID: 93849 RVA: 0x005D04A4 File Offset: 0x005CE6A4
+	// Token: 0x060148CA RID: 84170 RVA: 0x005FD024 File Offset: 0x005FB224
 	public void RefreshByWeaponEvolveId(int weaponEvolveId)
 	{
 		SurvivorsWeaponEvolve? survivorsWeaponEvolve = SurvivorsRogueConfig.Instance.GetSurvivorsWeaponEvolve(weaponEvolveId);
@@ -99,7 +99,7 @@ public class SurvivorsWeaponDetailItem : GridProxyAbstract<int>
 		this.RefreshEntryList(survivorsWeaponEvolve.Value);
 	}
 
-	// Token: 0x06016E9A RID: 93850 RVA: 0x005D05A4 File Offset: 0x005CE7A4
+	// Token: 0x060148CB RID: 84171 RVA: 0x005FD124 File Offset: 0x005FB324
 	private void RefreshEntryList(SurvivorsWeaponEvolve config)
 	{
 		List<IEntryItemData> list = new List<IEntryItemData>();
@@ -139,7 +139,7 @@ public class SurvivorsWeaponDetailItem : GridProxyAbstract<int>
 		this.EntryLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x06016E9B RID: 93851 RVA: 0x005D0714 File Offset: 0x005CE914
+	// Token: 0x060148CC RID: 84172 RVA: 0x005FD294 File Offset: 0x005FB494
 	private void SetColorFromHex(string hex)
 	{
 		FColor color = FColor.FromHex(hex);
@@ -176,7 +176,7 @@ public class SurvivorsWeaponDetailItem : GridProxyAbstract<int>
 		sprite6.SetColor(color);
 	}
 
-	// Token: 0x0400AA4A RID: 43594
+	// Token: 0x0400AE50 RID: 44624
 	[Nullable(new byte[]
 	{
 		2,

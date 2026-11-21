@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076C8 RID: 30408
+	// Token: 0x02007ED6 RID: 32470
 	public enum TFadeBackground : byte
 	{
-		// Token: 0x04012735 RID: 75573
+		// Token: 0x04013787 RID: 79751
 		NONE,
-		// Token: 0x04012736 RID: 75574
+		// Token: 0x04013788 RID: 79752
 		IFadeBackgroundImage,
-		// Token: 0x04012737 RID: 75575
+		// Token: 0x04013789 RID: 79753
 		IFadeBackgroundSpine,
-		// Token: 0x04012738 RID: 75576
+		// Token: 0x0401378A RID: 79754
 		IFadeBackgroundUiPrefab
 	}
 }

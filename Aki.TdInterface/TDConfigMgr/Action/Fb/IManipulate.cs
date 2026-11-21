@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027DE RID: 10206
+	// Token: 0x02002AB1 RID: 10929
 	public class IManipulate : ILeisureInteractType
 	{
-		// Token: 0x0600E2DC RID: 58076 RVA: 0x00217BAC File Offset: 0x00215DAC
-		[NullableContext(1)]
+		// Token: 0x0600F101 RID: 61697 RVA: 0x00234A0F File Offset: 0x00232C0F
 		public static IManipulate Create(IManipulate? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044E2 RID: 17634
-		// (get) Token: 0x0600E2DD RID: 58077 RVA: 0x00217BCB File Offset: 0x00215DCB
+		// Token: 0x1700484D RID: 18509
+		// (get) Token: 0x0600F102 RID: 61698 RVA: 0x00234A2E File Offset: 0x00232C2E
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044E3 RID: 17635
-		// (get) Token: 0x0600E2DE RID: 58078 RVA: 0x00217BD8 File Offset: 0x00215DD8
+		// Token: 0x1700484E RID: 18510
+		// (get) Token: 0x0600F103 RID: 61699 RVA: 0x00234A3B File Offset: 0x00232C3B
 		public virtual int TargetEntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DC0 RID: 32192
+		// Token: 0x0400847D RID: 33917
 		private IManipulate Instance;
 	}
 }

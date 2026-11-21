@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A96 RID: 6806
+// Token: 0x02000F55 RID: 3925
 public class ExploreLevelRewardView : UiViewBase
 {
-	// Token: 0x0600C903 RID: 51459 RVA: 0x002DDB1A File Offset: 0x002DBD1A
+	// Token: 0x06009D14 RID: 40212 RVA: 0x002E8C67 File Offset: 0x002E6E67
 	[NullableContext(1)]
 	public ExploreLevelRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C904 RID: 51460 RVA: 0x002DDB24 File Offset: 0x002DBD24
+	// Token: 0x06009D15 RID: 40213 RVA: 0x002E8C70 File Offset: 0x002E6E70
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -47,7 +47,7 @@ public class ExploreLevelRewardView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C905 RID: 51461 RVA: 0x002DDC50 File Offset: 0x002DBE50
+	// Token: 0x06009D16 RID: 40214 RVA: 0x002E8D9C File Offset: 0x002E6F9C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ExploreLevelRewardView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -58,25 +58,25 @@ public class ExploreLevelRewardView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C906 RID: 51462 RVA: 0x002DDC93 File Offset: 0x002DBE93
+	// Token: 0x06009D17 RID: 40215 RVA: 0x002E8DDF File Offset: 0x002E6FDF
 	protected override void OnBeforeDestroy()
 	{
 		this.RewardItemList = null;
 	}
 
-	// Token: 0x0600C907 RID: 51463 RVA: 0x002DDC9C File Offset: 0x002DBE9C
+	// Token: 0x06009D18 RID: 40216 RVA: 0x002E8DE8 File Offset: 0x002E6FE8
 	protected override void OnAfterDestroy()
 	{
 		EventSystem.Instance.Emit(EEventName.OnExploreRewardShowEnd);
 	}
 
-	// Token: 0x0600C908 RID: 51464 RVA: 0x002DDCAE File Offset: 0x002DBEAE
+	// Token: 0x06009D19 RID: 40217 RVA: 0x002E8DFA File Offset: 0x002E6FFA
 	private void OnClickCloseButton()
 	{
 		UiManager.Instance.CloseView(EUiViewName.ExploreLevelRewardView, null);
 	}
 
-	// Token: 0x04005C8F RID: 23695
+	// Token: 0x04005D5E RID: 23902
 	[Nullable(new byte[]
 	{
 		2,
@@ -84,24 +84,24 @@ public class ExploreLevelRewardView : UiViewBase
 	})]
 	private RewardData<IExploreLevelRewardInfo> RewardData;
 
-	// Token: 0x04005C90 RID: 23696
+	// Token: 0x04005D5F RID: 23903
 	[Nullable(2)]
 	private RewardItemList RewardItemList;
 
-	// Token: 0x02007FF6 RID: 32758
+	// Token: 0x02007185 RID: 29061
 	private enum EChildType
 	{
-		// Token: 0x04029C71 RID: 171121
+		// Token: 0x04024FAB RID: 151467
 		ExploreLevelTexture,
-		// Token: 0x04029C72 RID: 171122
+		// Token: 0x04024FAC RID: 151468
 		ExploreLevelNameText,
-		// Token: 0x04029C73 RID: 171123
+		// Token: 0x04024FAD RID: 151469
 		RewardListItem,
-		// Token: 0x04029C74 RID: 171124
+		// Token: 0x04024FAE RID: 151470
 		CloseButton,
-		// Token: 0x04029C75 RID: 171125
+		// Token: 0x04024FAF RID: 151471
 		CurrentLevelText,
-		// Token: 0x04029C76 RID: 171126
+		// Token: 0x04024FB0 RID: 151472
 		TargetLevelText
 	}
 }

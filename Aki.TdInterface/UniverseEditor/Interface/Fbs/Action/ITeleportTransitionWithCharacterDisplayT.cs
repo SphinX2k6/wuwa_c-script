@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073AD RID: 29613
+	// Token: 0x02007B94 RID: 31636
 	public class ITeleportTransitionWithCharacterDisplayT
 	{
-		// Token: 0x1700E0CC RID: 57548
-		// (get) Token: 0x06035C2B RID: 220203 RVA: 0x0075150C File Offset: 0x0074F70C
-		// (set) Token: 0x06035C2C RID: 220204 RVA: 0x00751514 File Offset: 0x0074F714
+		// Token: 0x1700ECDC RID: 60636
+		// (get) Token: 0x06038FC6 RID: 233414 RVA: 0x007B3A4C File Offset: 0x007B1C4C
+		// (set) Token: 0x06038FC7 RID: 233415 RVA: 0x007B3A54 File Offset: 0x007B1C54
 		public ETeleportTransitionType Type { get; set; }
 
-		// Token: 0x1700E0CD RID: 57549
-		// (get) Token: 0x06035C2D RID: 220205 RVA: 0x0075151D File Offset: 0x0074F71D
-		// (set) Token: 0x06035C2E RID: 220206 RVA: 0x00751525 File Offset: 0x0074F725
+		// Token: 0x1700ECDD RID: 60637
+		// (get) Token: 0x06038FC8 RID: 233416 RVA: 0x007B3A5D File Offset: 0x007B1C5D
+		// (set) Token: 0x06038FC9 RID: 233417 RVA: 0x007B3A65 File Offset: 0x007B1C65
 		public int StyleId { get; set; }
 
-		// Token: 0x06035C2F RID: 220207 RVA: 0x0075152E File Offset: 0x0074F72E
+		// Token: 0x06038FCA RID: 233418 RVA: 0x007B3A6E File Offset: 0x007B1C6E
 		public ITeleportTransitionWithCharacterDisplayT()
 		{
 			this.Type = ETeleportTransitionType.PlayMp4;

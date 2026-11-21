@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000912 RID: 2322
+	// Token: 0x0200095D RID: 2397
 	public class ConfigSheriffClueAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600367F RID: 13951 RVA: 0x0018D6D0 File Offset: 0x0018B8D0
+		// Token: 0x06003841 RID: 14401 RVA: 0x0019A8F0 File Offset: 0x00198AF0
 		static ConfigSheriffClueAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSheriffClueAll.CreateStaticDefaultValue), new Action(ConfigSheriffClueAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003680 RID: 13952 RVA: 0x0018D6F0 File Offset: 0x0018B8F0
+		// Token: 0x06003842 RID: 14402 RVA: 0x0019A910 File Offset: 0x00198B10
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSheriffClueAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003681 RID: 13953 RVA: 0x0018D76F File Offset: 0x0018B96F
+		// Token: 0x06003843 RID: 14403 RVA: 0x0019A98F File Offset: 0x00198B8F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSheriffClueAll.LogPair = null;
 			ConfigSheriffClueAll.HandleId = 0;
 		}
 
-		// Token: 0x06003682 RID: 13954 RVA: 0x0018D77D File Offset: 0x0018B97D
+		// Token: 0x06003844 RID: 14404 RVA: 0x0019A99D File Offset: 0x00198B9D
 		public static void Init()
 		{
 			ConfigSheriffClueAll.HandleId = ConfigCommon.InitDataStatement(ConfigSheriffClueAll.HandleId, "db_sheriff.db", "select BinData from `SheriffClue`");
 		}
 
-		// Token: 0x06003683 RID: 13955 RVA: 0x0018D798 File Offset: 0x0018B998
+		// Token: 0x06003845 RID: 14405 RVA: 0x0019A9B8 File Offset: 0x00198BB8
 		[NullableContext(2)]
 		public static IReadOnlyList<SheriffClue> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003F64 RID: 16228
+		// Token: 0x04004171 RID: 16753
 		private const string DB = "db_sheriff.db";
 
-		// Token: 0x04003F65 RID: 16229
+		// Token: 0x04004172 RID: 16754
 		private const string FILE = "m.明慎台系统.xlsx";
 
-		// Token: 0x04003F66 RID: 16230
+		// Token: 0x04004173 RID: 16755
 		private const string TABLE = "SheriffClue";
 
-		// Token: 0x04003F67 RID: 16231
+		// Token: 0x04004174 RID: 16756
 		private const string COMMAND = "select BinData from `SheriffClue`";
 
-		// Token: 0x04003F68 RID: 16232
+		// Token: 0x04004175 RID: 16757
 		private const string KEY_PREFIX = "SheriffClueAll";
 
-		// Token: 0x04003F69 RID: 16233
+		// Token: 0x04004176 RID: 16758
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003F6A RID: 16234
+		// Token: 0x04004177 RID: 16759
 		private static int HandleId;
 	}
 }

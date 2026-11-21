@@ -4,17 +4,17 @@ using CSharpScript.Game.NewWorld.Character.Common.Component.Explore;
 using CSharpScript.Game.NewWorld.Character.Custom.Components;
 using UnrealEngine;
 
-// Token: 0x02002FCD RID: 12237
+// Token: 0x02002521 RID: 9505
 [NullableContext(1)]
 [Nullable(0)]
 public class GameplayCueMotorcyclePullCollection : GameplayCueBase
 {
-	// Token: 0x06019F15 RID: 106261 RVA: 0x006C94CB File Offset: 0x006C76CB
+	// Token: 0x06017827 RID: 96295 RVA: 0x006EFD9F File Offset: 0x006EDF9F
 	protected override void OnInit()
 	{
 	}
 
-	// Token: 0x06019F16 RID: 106262 RVA: 0x006C94D0 File Offset: 0x006C76D0
+	// Token: 0x06017828 RID: 96296 RVA: 0x006EFDA4 File Offset: 0x006EDFA4
 	public override void OnDisable()
 	{
 		VehicleBuffComponent motorcycleBuffComponent = this.MotorcycleBuffComponent;
@@ -25,7 +25,7 @@ public class GameplayCueMotorcyclePullCollection : GameplayCueBase
 		this.FakePullCollectionFinished = true;
 	}
 
-	// Token: 0x06019F17 RID: 106263 RVA: 0x006C951C File Offset: 0x006C771C
+	// Token: 0x06017829 RID: 96297 RVA: 0x006EFDF0 File Offset: 0x006EDFF0
 	protected override void OnTick(float delta)
 	{
 		if (this.HookItem == null)
@@ -40,7 +40,7 @@ public class GameplayCueMotorcyclePullCollection : GameplayCueBase
 		this.PullCollectionProgressTick(delta);
 	}
 
-	// Token: 0x06019F18 RID: 106264 RVA: 0x006C9540 File Offset: 0x006C7740
+	// Token: 0x0601782A RID: 96298 RVA: 0x006EFE14 File Offset: 0x006EE014
 	private void FakePullCollectionProgressTick(float delta)
 	{
 		if (this.FakePullCollectionFinished)
@@ -92,7 +92,7 @@ public class GameplayCueMotorcyclePullCollection : GameplayCueBase
 		this.PullingTargetLocation.DeepCopy(this.TmpVector);
 	}
 
-	// Token: 0x06019F19 RID: 106265 RVA: 0x006C96D8 File Offset: 0x006C78D8
+	// Token: 0x0601782B RID: 96299 RVA: 0x006EFFAC File Offset: 0x006EE1AC
 	private void PullCollectionProgressTick(float delta)
 	{
 		GrapplingHookPointComponent pullingTarget = this.PullingTarget;
@@ -109,7 +109,7 @@ public class GameplayCueMotorcyclePullCollection : GameplayCueBase
 		this.LastLocation = new FVectorDouble?(fvectorDouble);
 	}
 
-	// Token: 0x06019F1A RID: 106266 RVA: 0x006C973C File Offset: 0x006C793C
+	// Token: 0x0601782C RID: 96300 RVA: 0x006F0010 File Offset: 0x006EE210
 	protected override void OnCreate()
 	{
 		WorldEntity entity = this.EntityHandle.Entity;
@@ -142,7 +142,7 @@ public class GameplayCueMotorcyclePullCollection : GameplayCueBase
 		this.HookItem = GameplayCueHookCommonItem.Spawn(this.ActorInternal, FNameUtil.GetDynamicFName(this.CueConfig.Socket).Value, this.PullingTargetLocation.ToUeVector(false), this.GetResourcePaths(), true);
 	}
 
-	// Token: 0x06019F1B RID: 106267 RVA: 0x006C9880 File Offset: 0x006C7A80
+	// Token: 0x0601782D RID: 96301 RVA: 0x006F0154 File Offset: 0x006EE354
 	private string[] GetResourcePaths()
 	{
 		WorldEntity entity = this.EntityHandle.Entity;
@@ -160,7 +160,7 @@ public class GameplayCueMotorcyclePullCollection : GameplayCueBase
 		return array2;
 	}
 
-	// Token: 0x06019F1C RID: 106268 RVA: 0x006C98EF File Offset: 0x006C7AEF
+	// Token: 0x0601782E RID: 96302 RVA: 0x006F01C3 File Offset: 0x006EE3C3
 	protected override void OnDestroy()
 	{
 		if (this.HookItem != null)
@@ -170,39 +170,39 @@ public class GameplayCueMotorcyclePullCollection : GameplayCueBase
 		}
 	}
 
-	// Token: 0x0400C44F RID: 50255
+	// Token: 0x0400C7F8 RID: 51192
 	[Nullable(2)]
 	private GameplayCueHookCommonItem HookItem;
 
-	// Token: 0x0400C450 RID: 50256
+	// Token: 0x0400C7F9 RID: 51193
 	[Nullable(2)]
 	private GrapplingHookPointComponent PullingTarget;
 
-	// Token: 0x0400C451 RID: 50257
+	// Token: 0x0400C7FA RID: 51194
 	[Nullable(2)]
 	private VehicleBuffComponent MotorcycleBuffComponent;
 
-	// Token: 0x0400C452 RID: 50258
+	// Token: 0x0400C7FB RID: 51195
 	private FVectorDouble? LastLocation;
 
-	// Token: 0x0400C453 RID: 50259
+	// Token: 0x0400C7FC RID: 51196
 	private readonly Vector PullingTargetLocation = Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x0400C454 RID: 50260
+	// Token: 0x0400C7FD RID: 51197
 	private readonly Vector TmpVector = Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x0400C455 RID: 50261
+	// Token: 0x0400C7FE RID: 51198
 	private bool FakePullCollectionProgress;
 
-	// Token: 0x0400C456 RID: 50262
+	// Token: 0x0400C7FF RID: 51199
 	private bool FakePullCollectionFinished;
 
-	// Token: 0x0400C457 RID: 50263
+	// Token: 0x0400C800 RID: 51200
 	private float CurrentMoveSpeed;
 
-	// Token: 0x0400C458 RID: 50264
+	// Token: 0x0400C801 RID: 51201
 	private const float NORMALIZE = 0.01f;
 
-	// Token: 0x0400C459 RID: 50265
+	// Token: 0x0400C802 RID: 51202
 	private const int PULL_COLLECTION_EFFECT_BUFF_ID = 640003034;
 }

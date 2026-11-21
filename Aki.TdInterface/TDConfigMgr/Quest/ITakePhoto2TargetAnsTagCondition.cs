@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001178 RID: 4472
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012B2 RID: 4786
 	public class ITakePhoto2TargetAnsTagCondition
 	{
-		// Token: 0x06006598 RID: 26008 RVA: 0x000F3C68 File Offset: 0x000F1E68
+		// Token: 0x06006BCF RID: 27599 RVA: 0x00101434 File Offset: 0x000FF634
 		private ITakePhoto2TargetAnsTagCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006599 RID: 26009 RVA: 0x000F3CA0 File Offset: 0x000F1EA0
+		// Token: 0x06006BD0 RID: 27600 RVA: 0x0010146C File Offset: 0x000FF66C
 		public static ITakePhoto2TargetAnsTagCondition Create([Nullable(2)] ITakePhoto2TargetAnsTagCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600659A RID: 26010 RVA: 0x000F3CB3 File Offset: 0x000F1EB3
+		// Token: 0x06006BD1 RID: 27601 RVA: 0x0010147F File Offset: 0x000FF67F
 		public static ITakePhoto2TargetAnsTagCondition CreateFromSetValue([Nullable(2)] ITakePhoto2TargetAnsTagCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600659B RID: 26011 RVA: 0x000F3CC6 File Offset: 0x000F1EC6
+		// Token: 0x06006BD2 RID: 27602 RVA: 0x00101492 File Offset: 0x000FF692
 		public ITakePhoto2TargetAnsTagCondition_SetValue ToSetValue()
 		{
 			return new ITakePhoto2TargetAnsTagCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700211D RID: 8477
-		// (get) Token: 0x0600659C RID: 26012 RVA: 0x000F3CD9 File Offset: 0x000F1ED9
-		// (set) Token: 0x0600659D RID: 26013 RVA: 0x000F3D04 File Offset: 0x000F1F04
+		// Token: 0x170022DC RID: 8924
+		// (get) Token: 0x06006BD3 RID: 27603 RVA: 0x001014A5 File Offset: 0x000FF6A5
+		// (set) Token: 0x06006BD4 RID: 27604 RVA: 0x001014D0 File Offset: 0x000FF6D0
 		public virtual string MontageTag
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003CFA RID: 15610
+		// Token: 0x04004062 RID: 16482
 		[Nullable(2)]
 		protected ITakePhoto2TargetAnsTagCondition FbInstance;
 
-		// Token: 0x04003CFB RID: 15611
+		// Token: 0x04004063 RID: 16483
 		[Nullable(2)]
 		protected ITakePhoto2TargetAnsTagCondition_SetValue PocoInterface;
 	}

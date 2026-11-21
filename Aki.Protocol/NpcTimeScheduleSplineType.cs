@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001667 RID: 5735
+	// Token: 0x020016E3 RID: 5859
 	public enum NpcTimeScheduleSplineType
 	{
-		// Token: 0x0400C189 RID: 49545
+		// Token: 0x0400C6B2 RID: 50866
 		[OriginalName("PathSpline")]
 		PathSpline,
-		// Token: 0x0400C18A RID: 49546
+		// Token: 0x0400C6B3 RID: 50867
 		[OriginalName("AiSpline")]
 		AiSpline
 	}

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x020018C4 RID: 6340
+// Token: 0x02000D7D RID: 3453
 public interface IItemInteractionPanelItemInfo
 {
-	// Token: 0x17000F64 RID: 3940
-	// (get) Token: 0x0600BA01 RID: 47617
-	// (set) Token: 0x0600BA02 RID: 47618
+	// Token: 0x17000F87 RID: 3975
+	// (get) Token: 0x06008DEA RID: 36330
+	// (set) Token: 0x06008DEB RID: 36331
 	int ItemConfigId { get; set; }
 
-	// Token: 0x17000F65 RID: 3941
-	// (get) Token: 0x0600BA03 RID: 47619
-	// (set) Token: 0x0600BA04 RID: 47620
+	// Token: 0x17000F88 RID: 3976
+	// (get) Token: 0x06008DEC RID: 36332
+	// (set) Token: 0x06008DED RID: 36333
 	int CurrentCount { get; set; }
 
-	// Token: 0x17000F66 RID: 3942
-	// (get) Token: 0x0600BA05 RID: 47621
-	// (set) Token: 0x0600BA06 RID: 47622
+	// Token: 0x17000F89 RID: 3977
+	// (get) Token: 0x06008DEE RID: 36334
+	// (set) Token: 0x06008DEF RID: 36335
 	int? NeedCount { get; set; }
 }

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CCE RID: 15566
+	// Token: 0x020040E2 RID: 16610
 	public enum ESkillType : byte
 	{
-		// Token: 0x0400B4DF RID: 46303
+		// Token: 0x0400BE85 RID: 48773
 		NormalSkill,
-		// Token: 0x0400B4E0 RID: 46304
+		// Token: 0x0400BE86 RID: 48774
 		VisionSkill,
-		// Token: 0x0400B4E1 RID: 46305
+		// Token: 0x0400BE87 RID: 48775
 		CharacterFightSkill
 	}
 }

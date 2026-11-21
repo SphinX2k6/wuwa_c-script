@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 {
-	// Token: 0x0200535C RID: 21340
+	// Token: 0x0200433F RID: 17215
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 	})]
 	public class RewardItemGrid : GridProxyAbstract<IRewardItemGridData>
 	{
-		// Token: 0x0603684B RID: 223307 RVA: 0x00CE8E44 File Offset: 0x00CE7044
+		// Token: 0x0602B791 RID: 178065 RVA: 0x00C37CCC File Offset: 0x00C35ECC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 			};
 		}
 
-		// Token: 0x0603684C RID: 223308 RVA: 0x00CE8EA0 File Offset: 0x00CE70A0
+		// Token: 0x0602B792 RID: 178066 RVA: 0x00C37D28 File Offset: 0x00C35F28
 		[NullableContext(1)]
 		public override void Refresh(IRewardItemGridData data, bool isSelected, int gridIndex)
 		{
@@ -42,14 +42,14 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0200B5C3 RID: 46531
+		// Token: 0x02009FFC RID: 40956
 		private enum ERewardItemComponents
 		{
-			// Token: 0x040370F3 RID: 225523
+			// Token: 0x04031B4B RID: 203595
 			BtnReward01,
-			// Token: 0x040370F4 RID: 225524
+			// Token: 0x04031B4C RID: 203596
 			TexIcon,
-			// Token: 0x040370F5 RID: 225525
+			// Token: 0x04031B4D RID: 203597
 			TxtNum
 		}
 	}

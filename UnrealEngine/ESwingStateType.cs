@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200164B RID: 5707
+	// Token: 0x020002EB RID: 747
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroAnim.ESwingStateType")]
 	public enum ESwingStateType : byte
 	{
-		// Token: 0x0400B387 RID: 45959
+		// Token: 0x0400206E RID: 8302
 		None,
-		// Token: 0x0400B388 RID: 45960
+		// Token: 0x0400206F RID: 8303
 		EnterSwing,
-		// Token: 0x0400B389 RID: 45961
+		// Token: 0x04002070 RID: 8304
 		LoopSwing,
-		// Token: 0x0400B38A RID: 45962
+		// Token: 0x04002071 RID: 8305
 		LeftLoopSwing,
-		// Token: 0x0400B38B RID: 45963
+		// Token: 0x04002072 RID: 8306
 		ExitSwing,
-		// Token: 0x0400B38C RID: 45964
+		// Token: 0x04002073 RID: 8307
 		ESwingStateType_MAX
 	}
 }

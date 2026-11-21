@@ -4,43 +4,43 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Giant.View
 {
-	// Token: 0x02005982 RID: 22914
+	// Token: 0x0200495B RID: 18779
 	[NullableContext(1)]
 	public interface IGiantNodeScaleData
 	{
-		// Token: 0x17008B44 RID: 35652
-		// (get) Token: 0x0603A250 RID: 238160
-		// (set) Token: 0x0603A251 RID: 238161
+		// Token: 0x17005F11 RID: 24337
+		// (get) Token: 0x0602F176 RID: 192886
+		// (set) Token: 0x0602F177 RID: 192887
 		int NodeIndex { get; set; }
 
-		// Token: 0x17008B45 RID: 35653
-		// (get) Token: 0x0603A252 RID: 238162
-		// (set) Token: 0x0603A253 RID: 238163
+		// Token: 0x17005F12 RID: 24338
+		// (get) Token: 0x0602F178 RID: 192888
+		// (set) Token: 0x0602F179 RID: 192889
 		int Value { get; set; }
 
-		// Token: 0x17008B46 RID: 35654
-		// (get) Token: 0x0603A254 RID: 238164
-		// (set) Token: 0x0603A255 RID: 238165
+		// Token: 0x17005F13 RID: 24339
+		// (get) Token: 0x0602F17A RID: 192890
+		// (set) Token: 0x0602F17B RID: 192891
 		EGiantNodeScaleState State { get; set; }
 
-		// Token: 0x17008B47 RID: 35655
-		// (get) Token: 0x0603A256 RID: 238166
-		// (set) Token: 0x0603A257 RID: 238167
+		// Token: 0x17005F14 RID: 24340
+		// (get) Token: 0x0602F17C RID: 192892
+		// (set) Token: 0x0602F17D RID: 192893
 		bool IsGot { get; set; }
 
-		// Token: 0x17008B48 RID: 35656
-		// (get) Token: 0x0603A258 RID: 238168
-		// (set) Token: 0x0603A259 RID: 238169
+		// Token: 0x17005F15 RID: 24341
+		// (get) Token: 0x0602F17E RID: 192894
+		// (set) Token: 0x0602F17F RID: 192895
 		bool CanClaim { get; set; }
 
-		// Token: 0x17008B49 RID: 35657
-		// (get) Token: 0x0603A25A RID: 238170
-		// (set) Token: 0x0603A25B RID: 238171
+		// Token: 0x17005F16 RID: 24342
+		// (get) Token: 0x0602F180 RID: 192896
+		// (set) Token: 0x0602F181 RID: 192897
 		bool ShowCurrentMark { get; set; }
 
-		// Token: 0x17008B4A RID: 35658
-		// (get) Token: 0x0603A25C RID: 238172
-		// (set) Token: 0x0603A25D RID: 238173
+		// Token: 0x17005F17 RID: 24343
+		// (get) Token: 0x0602F182 RID: 192898
+		// (set) Token: 0x0602F183 RID: 192899
 		Action<int, bool, UUIItem> OnClick { get; set; }
 	}
 }

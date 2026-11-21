@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002003 RID: 8195
+	// Token: 0x0200224A RID: 8778
 	public class ITriggerMotorSkill_SetValue
 	{
-		// Token: 0x04006C9E RID: 27806
+		// Token: 0x040072A1 RID: 29345
 		public EExecClientBattleActionType Type;
 
-		// Token: 0x04006C9F RID: 27807
+		// Token: 0x040072A2 RID: 29346
 		public int MotorSkillId;
 	}
 }

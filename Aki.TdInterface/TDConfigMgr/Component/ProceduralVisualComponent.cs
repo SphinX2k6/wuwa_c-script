@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200085B RID: 2139
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008FE RID: 2302
 	public class ProceduralVisualComponent : IComponentBase
 	{
-		// Token: 0x06002F37 RID: 12087 RVA: 0x00079E40 File Offset: 0x00078040
+		// Token: 0x06003273 RID: 12915 RVA: 0x00081328 File Offset: 0x0007F528
 		private ProceduralVisualComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002F38 RID: 12088 RVA: 0x00079E78 File Offset: 0x00078078
+		// Token: 0x06003274 RID: 12916 RVA: 0x00081360 File Offset: 0x0007F560
 		public static ProceduralVisualComponent Create([Nullable(2)] ProceduralVisualComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F39 RID: 12089 RVA: 0x00079E8B File Offset: 0x0007808B
+		// Token: 0x06003275 RID: 12917 RVA: 0x00081373 File Offset: 0x0007F573
 		public static ProceduralVisualComponent CreateFromSetValue([Nullable(2)] ProceduralVisualComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F3A RID: 12090 RVA: 0x00079E9E File Offset: 0x0007809E
+		// Token: 0x06003276 RID: 12918 RVA: 0x00081386 File Offset: 0x0007F586
 		public new ProceduralVisualComponent_SetValue ToSetValue()
 		{
 			return new ProceduralVisualComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000C76 RID: 3190
-		// (get) Token: 0x06002F3B RID: 12091 RVA: 0x00079ECC File Offset: 0x000780CC
-		// (set) Token: 0x06002F3C RID: 12092 RVA: 0x00079F06 File Offset: 0x00078106
+		// Token: 0x17000D3F RID: 3391
+		// (get) Token: 0x06003277 RID: 12919 RVA: 0x000813B4 File Offset: 0x0007F5B4
+		// (set) Token: 0x06003278 RID: 12920 RVA: 0x000813EE File Offset: 0x0007F5EE
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C77 RID: 3191
-		// (get) Token: 0x06002F3D RID: 12093 RVA: 0x00079F14 File Offset: 0x00078114
-		// (set) Token: 0x06002F3E RID: 12094 RVA: 0x00079F3E File Offset: 0x0007813E
+		// Token: 0x17000D40 RID: 3392
+		// (get) Token: 0x06003279 RID: 12921 RVA: 0x000813FC File Offset: 0x0007F5FC
+		// (set) Token: 0x0600327A RID: 12922 RVA: 0x00081426 File Offset: 0x0007F626
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C78 RID: 3192
-		// (get) Token: 0x06002F3F RID: 12095 RVA: 0x00079F4C File Offset: 0x0007814C
-		// (set) Token: 0x06002F40 RID: 12096 RVA: 0x00079F73 File Offset: 0x00078173
+		// Token: 0x17000D41 RID: 3393
+		// (get) Token: 0x0600327B RID: 12923 RVA: 0x00081434 File Offset: 0x0007F634
+		// (set) Token: 0x0600327C RID: 12924 RVA: 0x0008145B File Offset: 0x0007F65B
 		public virtual List<IProceduralVisualBase> Configs
 		{
 			get
@@ -129,11 +127,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001F2A RID: 7978
+		// Token: 0x0400213C RID: 8508
 		[Nullable(2)]
 		protected new ProceduralVisualComponent FbInstance;
 
-		// Token: 0x04001F2B RID: 7979
+		// Token: 0x0400213D RID: 8509
 		[Nullable(2)]
 		protected new ProceduralVisualComponent_SetValue PocoInterface;
 	}

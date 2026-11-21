@@ -3,35 +3,35 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MovieMode
 {
-	// Token: 0x0200538C RID: 21388
+	// Token: 0x0200436F RID: 17263
 	[RequiredMember]
 	public class UiLayerSafeZone : IUiLayerSafeZone
 	{
-		// Token: 0x1700839B RID: 33691
-		// (get) Token: 0x06036A2E RID: 223790 RVA: 0x00CEE8BB File Offset: 0x00CECABB
-		// (set) Token: 0x06036A2F RID: 223791 RVA: 0x00CEE8C3 File Offset: 0x00CECAC3
+		// Token: 0x17005767 RID: 22375
+		// (get) Token: 0x0602B974 RID: 178548 RVA: 0x00C3D7E3 File Offset: 0x00C3B9E3
+		// (set) Token: 0x0602B975 RID: 178549 RVA: 0x00C3D7EB File Offset: 0x00C3B9EB
 		[RequiredMember]
 		public float StretchLeft { get; set; }
 
-		// Token: 0x1700839C RID: 33692
-		// (get) Token: 0x06036A30 RID: 223792 RVA: 0x00CEE8CC File Offset: 0x00CECACC
-		// (set) Token: 0x06036A31 RID: 223793 RVA: 0x00CEE8D4 File Offset: 0x00CECAD4
+		// Token: 0x17005768 RID: 22376
+		// (get) Token: 0x0602B976 RID: 178550 RVA: 0x00C3D7F4 File Offset: 0x00C3B9F4
+		// (set) Token: 0x0602B977 RID: 178551 RVA: 0x00C3D7FC File Offset: 0x00C3B9FC
 		[RequiredMember]
 		public float StretchRight { get; set; }
 
-		// Token: 0x1700839D RID: 33693
-		// (get) Token: 0x06036A32 RID: 223794 RVA: 0x00CEE8DD File Offset: 0x00CECADD
-		// (set) Token: 0x06036A33 RID: 223795 RVA: 0x00CEE8E5 File Offset: 0x00CECAE5
+		// Token: 0x17005769 RID: 22377
+		// (get) Token: 0x0602B978 RID: 178552 RVA: 0x00C3D805 File Offset: 0x00C3BA05
+		// (set) Token: 0x0602B979 RID: 178553 RVA: 0x00C3D80D File Offset: 0x00C3BA0D
 		[RequiredMember]
 		public float StretchTop { get; set; }
 
-		// Token: 0x1700839E RID: 33694
-		// (get) Token: 0x06036A34 RID: 223796 RVA: 0x00CEE8EE File Offset: 0x00CECAEE
-		// (set) Token: 0x06036A35 RID: 223797 RVA: 0x00CEE8F6 File Offset: 0x00CECAF6
+		// Token: 0x1700576A RID: 22378
+		// (get) Token: 0x0602B97A RID: 178554 RVA: 0x00C3D816 File Offset: 0x00C3BA16
+		// (set) Token: 0x0602B97B RID: 178555 RVA: 0x00C3D81E File Offset: 0x00C3BA1E
 		[RequiredMember]
 		public float StretchBottom { get; set; }
 
-		// Token: 0x06036A36 RID: 223798 RVA: 0x00CEE8FF File Offset: 0x00CECAFF
+		// Token: 0x0602B97C RID: 178556 RVA: 0x00C3D827 File Offset: 0x00C3BA27
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public UiLayerSafeZone()

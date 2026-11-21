@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x020053F4 RID: 21492
+	// Token: 0x020043D7 RID: 17367
 	[NullableContext(1)]
 	public interface IChangeActionInfo
 	{
-		// Token: 0x17008404 RID: 33796
-		// (get) Token: 0x06036F05 RID: 225029
-		// (set) Token: 0x06036F06 RID: 225030
+		// Token: 0x170057D0 RID: 22480
+		// (get) Token: 0x0602BE4D RID: 179789
+		// (set) Token: 0x0602BE4E RID: 179790
 		EInputControllerType InputControllerType { get; set; }
 
-		// Token: 0x17008405 RID: 33797
-		// (get) Token: 0x06036F07 RID: 225031
-		// (set) Token: 0x06036F08 RID: 225032
+		// Token: 0x170057D1 RID: 22481
+		// (get) Token: 0x0602BE4F RID: 179791
+		// (set) Token: 0x0602BE50 RID: 179792
 		KeySettingRowData KeySettingRowData { get; set; }
 
-		// Token: 0x17008406 RID: 33798
-		// (get) Token: 0x06036F09 RID: 225033
-		// (set) Token: 0x06036F0A RID: 225034
+		// Token: 0x170057D2 RID: 22482
+		// (get) Token: 0x0602BE51 RID: 179793
+		// (set) Token: 0x0602BE52 RID: 179794
 		Action<bool> OnConfirmCallback { get; set; }
 	}
 }

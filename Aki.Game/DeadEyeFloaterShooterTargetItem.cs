@@ -10,16 +10,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A7D RID: 6781
+// Token: 0x02000F3C RID: 3900
 public class DeadEyeFloaterShooterTargetItem : CommonMarkItem
 {
-	// Token: 0x0600C7B9 RID: 51129 RVA: 0x002D7C6F File Offset: 0x002D5E6F
+	// Token: 0x06009BC9 RID: 39881 RVA: 0x002E2D8B File Offset: 0x002E0F8B
 	[NullableContext(1)]
 	public DeadEyeFloaterShooterTargetItem(in FVectorDouble TargetLocation, Vector2D AimRange, [Nullable(2)] EntityHandle TargetEntity = null) : base(TargetLocation, null)
 	{
 	}
 
-	// Token: 0x0600C7BA RID: 51130 RVA: 0x002D7C88 File Offset: 0x002D5E88
+	// Token: 0x06009BCA RID: 39882 RVA: 0x002E2DA4 File Offset: 0x002E0FA4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -31,7 +31,7 @@ public class DeadEyeFloaterShooterTargetItem : CommonMarkItem
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600C7BB RID: 51131 RVA: 0x002D7CD0 File Offset: 0x002D5ED0
+	// Token: 0x06009BCB RID: 39883 RVA: 0x002E2DEC File Offset: 0x002E0FEC
 	protected override void OnStart()
 	{
 		this.LockedSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -40,7 +40,7 @@ public class DeadEyeFloaterShooterTargetItem : CommonMarkItem
 		this.IsLockedInner = false;
 	}
 
-	// Token: 0x0600C7BC RID: 51132 RVA: 0x002D7D00 File Offset: 0x002D5F00
+	// Token: 0x06009BCC RID: 39884 RVA: 0x002E2E1C File Offset: 0x002E101C
 	protected override UniTask OnBeforeHideAsync()
 	{
 		DeadEyeFloaterShooterTargetItem.<OnBeforeHideAsync>d__8 <OnBeforeHideAsync>d__;
@@ -51,7 +51,7 @@ public class DeadEyeFloaterShooterTargetItem : CommonMarkItem
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C7BD RID: 51133 RVA: 0x002D7D44 File Offset: 0x002D5F44
+	// Token: 0x06009BCD RID: 39885 RVA: 0x002E2E60 File Offset: 0x002E1060
 	public override void OnTick(float delta)
 	{
 		if (this.RootItem == null || base.IsCreateOrCreating)
@@ -81,7 +81,7 @@ public class DeadEyeFloaterShooterTargetItem : CommonMarkItem
 		base.GetItem(0).SetUIActive(this.IsLocked);
 	}
 
-	// Token: 0x0600C7BE RID: 51134 RVA: 0x002D7E34 File Offset: 0x002D6034
+	// Token: 0x06009BCE RID: 39886 RVA: 0x002E2F50 File Offset: 0x002E1150
 	public UniTask PlayClickSequence()
 	{
 		DeadEyeFloaterShooterTargetItem.<PlayClickSequence>d__10 <PlayClickSequence>d__;
@@ -92,7 +92,7 @@ public class DeadEyeFloaterShooterTargetItem : CommonMarkItem
 		return <PlayClickSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C7BF RID: 51135 RVA: 0x002D7E78 File Offset: 0x002D6078
+	// Token: 0x06009BCF RID: 39887 RVA: 0x002E2F94 File Offset: 0x002E1194
 	private bool CheckIsHover(in FVector2D offset)
 	{
 		double num = this.AimRange.X * 0.5;
@@ -100,7 +100,7 @@ public class DeadEyeFloaterShooterTargetItem : CommonMarkItem
 		return (double)offset.X >= -num && (double)offset.X <= num && (double)offset.Y >= -num2 && (double)offset.Y <= num2;
 	}
 
-	// Token: 0x0600C7C0 RID: 51136 RVA: 0x002D7EE0 File Offset: 0x002D60E0
+	// Token: 0x06009BD0 RID: 39888 RVA: 0x002E2FFC File Offset: 0x002E11FC
 	private void LockTarget()
 	{
 		if (this.IsLocked)
@@ -120,8 +120,8 @@ public class DeadEyeFloaterShooterTargetItem : CommonMarkItem
 		lockedSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x17001064 RID: 4196
-	// (get) Token: 0x0600C7C1 RID: 51137 RVA: 0x002D7F3E File Offset: 0x002D613E
+	// Token: 0x17001089 RID: 4233
+	// (get) Token: 0x06009BD1 RID: 39889 RVA: 0x002E305A File Offset: 0x002E125A
 	public bool IsLocked
 	{
 		get
@@ -130,25 +130,25 @@ public class DeadEyeFloaterShooterTargetItem : CommonMarkItem
 		}
 	}
 
-	// Token: 0x04005C3A RID: 23610
+	// Token: 0x04005D09 RID: 23817
 	private bool IsLockedInner;
 
-	// Token: 0x04005C3B RID: 23611
+	// Token: 0x04005D0A RID: 23818
 	[Nullable(2)]
 	private LevelSequencePlayer LockedSequencePlayer;
 
-	// Token: 0x04005C3C RID: 23612
+	// Token: 0x04005D0B RID: 23819
 	[Nullable(1)]
 	public readonly Vector2D AimRange = AimRange;
 
-	// Token: 0x04005C3D RID: 23613
+	// Token: 0x04005D0C RID: 23820
 	[Nullable(2)]
 	public readonly EntityHandle TargetEntity = TargetEntity;
 
-	// Token: 0x02007FCB RID: 32715
+	// Token: 0x0200715A RID: 29018
 	private class EViewComponent
 	{
-		// Token: 0x04029B8E RID: 170894
+		// Token: 0x04024ECB RID: 151243
 		public const int RootItem = 0;
 	}
 }

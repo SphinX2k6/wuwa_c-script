@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004080 RID: 16512
+	// Token: 0x020044C1 RID: 17601
 	public class IRecallConditionByTemplateT
 	{
-		// Token: 0x17007489 RID: 29833
-		// (get) Token: 0x06018051 RID: 98385 RVA: 0x00377276 File Offset: 0x00375476
-		// (set) Token: 0x06018052 RID: 98386 RVA: 0x0037727E File Offset: 0x0037547E
+		// Token: 0x17007A8B RID: 31371
+		// (get) Token: 0x060196EA RID: 104170 RVA: 0x003A10AE File Offset: 0x0039F2AE
+		// (set) Token: 0x060196EB RID: 104171 RVA: 0x003A10B6 File Offset: 0x0039F2B6
 		public ERecallConditionType Type { get; set; }
 
-		// Token: 0x1700748A RID: 29834
-		// (get) Token: 0x06018053 RID: 98387 RVA: 0x00377287 File Offset: 0x00375487
-		// (set) Token: 0x06018054 RID: 98388 RVA: 0x0037728F File Offset: 0x0037548F
+		// Token: 0x17007A8C RID: 31372
+		// (get) Token: 0x060196EC RID: 104172 RVA: 0x003A10BF File Offset: 0x0039F2BF
+		// (set) Token: 0x060196ED RID: 104173 RVA: 0x003A10C7 File Offset: 0x0039F2C7
 		public ERecallOperation Operation { get; set; }
 
-		// Token: 0x1700748B RID: 29835
-		// (get) Token: 0x06018055 RID: 98389 RVA: 0x00377298 File Offset: 0x00375498
-		// (set) Token: 0x06018056 RID: 98390 RVA: 0x003772A0 File Offset: 0x003754A0
+		// Token: 0x17007A8D RID: 31373
+		// (get) Token: 0x060196EE RID: 104174 RVA: 0x003A10D0 File Offset: 0x0039F2D0
+		// (set) Token: 0x060196EF RID: 104175 RVA: 0x003A10D8 File Offset: 0x0039F2D8
 		public List<string> Templates { get; set; }
 
-		// Token: 0x1700748C RID: 29836
-		// (get) Token: 0x06018057 RID: 98391 RVA: 0x003772A9 File Offset: 0x003754A9
-		// (set) Token: 0x06018058 RID: 98392 RVA: 0x003772B1 File Offset: 0x003754B1
+		// Token: 0x17007A8E RID: 31374
+		// (get) Token: 0x060196F0 RID: 104176 RVA: 0x003A10E1 File Offset: 0x0039F2E1
+		// (set) Token: 0x060196F1 RID: 104177 RVA: 0x003A10E9 File Offset: 0x0039F2E9
 		public List<int> AreaIds { get; set; }
 
-		// Token: 0x06018059 RID: 98393 RVA: 0x003772BA File Offset: 0x003754BA
+		// Token: 0x060196F2 RID: 104178 RVA: 0x003A10F2 File Offset: 0x0039F2F2
 		public IRecallConditionByTemplateT()
 		{
 			this.Type = ERecallConditionType.ByEntityType;

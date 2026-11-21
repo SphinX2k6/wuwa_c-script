@@ -3,20 +3,20 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002960 RID: 10592
+// Token: 0x02001EDB RID: 7899
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ScrollingTipsController : UiControllerBase
 {
-	// Token: 0x06015E65 RID: 89701 RVA: 0x00586614 File Offset: 0x00584814
+	// Token: 0x06013869 RID: 79977 RVA: 0x005B1618 File Offset: 0x005AF818
 	public void ShowTipsById(string id, params object[] parameters)
 	{
 		TableTextArgNew mainTextObj = new TableTextArgNew(TextConfig.Instance.GetTextContentIdById(id), Array.Empty<object>());
 		GenericPromptController.Instance.ShowPromptByItsType<object>(EPromptSubViewType.FloatLinePrompt, mainTextObj, null, parameters, null, null, null, null, null, false, null);
 	}
 
-	// Token: 0x06015E66 RID: 89702 RVA: 0x00586660 File Offset: 0x00584860
+	// Token: 0x0601386A RID: 79978 RVA: 0x005B1664 File Offset: 0x005AF864
 	public void ShowTipsByText(string text)
 	{
 		GenericPromptController.Instance.ShowPromptByItsType<object>(EPromptSubViewType.FloatLinePrompt, null, null, new string[]
@@ -25,15 +25,15 @@ public class ScrollingTipsController : UiControllerBase
 		}, null, null, null, null, null, false, null);
 	}
 
-	// Token: 0x06015E67 RID: 89703 RVA: 0x0058669C File Offset: 0x0058489C
+	// Token: 0x0601386B RID: 79979 RVA: 0x005B16A0 File Offset: 0x005AF8A0
 	public void ShowTipsByTextId(string textId, params object[] parameters)
 	{
 		TableTextArgNew mainTextObj = new TableTextArgNew(textId, Array.Empty<object>());
 		GenericPromptController.Instance.ShowPromptByItsType<object>(EPromptSubViewType.FloatLinePrompt, mainTextObj, null, parameters, null, null, null, null, null, false, null);
 	}
 
-	// Token: 0x17001D83 RID: 7555
-	// (get) Token: 0x06015E68 RID: 89704 RVA: 0x005866DB File Offset: 0x005848DB
+	// Token: 0x17001DDC RID: 7644
+	// (get) Token: 0x0601386C RID: 79980 RVA: 0x005B16DF File Offset: 0x005AF8DF
 	public static ScrollingTipsController Instance
 	{
 		get
@@ -42,7 +42,7 @@ public class ScrollingTipsController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06015E69 RID: 89705 RVA: 0x005866E2 File Offset: 0x005848E2
+	// Token: 0x0601386D RID: 79981 RVA: 0x005B16E6 File Offset: 0x005AF8E6
 	public static ScrollingTipsController GetOrCreateInstance()
 	{
 		if (ScrollingTipsController._Instance == null)
@@ -52,7 +52,7 @@ public class ScrollingTipsController : UiControllerBase
 		return ScrollingTipsController._Instance;
 	}
 
-	// Token: 0x06015E6A RID: 89706 RVA: 0x005866F6 File Offset: 0x005848F6
+	// Token: 0x0601386E RID: 79982 RVA: 0x005B16FA File Offset: 0x005AF8FA
 	public static bool CreateInstance()
 	{
 		if (ScrollingTipsController._Instance != null)
@@ -63,24 +63,24 @@ public class ScrollingTipsController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06015E6B RID: 89707 RVA: 0x0058670C File Offset: 0x0058490C
+	// Token: 0x0601386F RID: 79983 RVA: 0x005B1710 File Offset: 0x005AF910
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06015E6C RID: 89708 RVA: 0x0058670E File Offset: 0x0058490E
+	// Token: 0x06013870 RID: 79984 RVA: 0x005B1712 File Offset: 0x005AF912
 	public static void ResetStaticDefaultValue()
 	{
 		ScrollingTipsController._Instance = null;
 	}
 
-	// Token: 0x06015E6D RID: 89709 RVA: 0x00586716 File Offset: 0x00584916
+	// Token: 0x06013871 RID: 79985 RVA: 0x005B171A File Offset: 0x005AF91A
 	static ScrollingTipsController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ScrollingTipsController.CreateStaticDefaultValue), new Action(ScrollingTipsController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A2FA RID: 41722
+	// Token: 0x0400A6E4 RID: 42724
 	[Nullable(2)]
 	private static ScrollingTipsController _Instance;
 }

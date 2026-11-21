@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Shape;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200528C RID: 21132
+	// Token: 0x020057F4 RID: 22516
 	public class IFollowDecorationChairConfigT
 	{
-		// Token: 0x17009AF3 RID: 39667
-		// (get) Token: 0x060226FE RID: 141054 RVA: 0x004C6535 File Offset: 0x004C4735
-		// (set) Token: 0x060226FF RID: 141055 RVA: 0x004C653D File Offset: 0x004C473D
+		// Token: 0x1700A2F1 RID: 41713
+		// (get) Token: 0x06024698 RID: 149144 RVA: 0x005010A5 File Offset: 0x004FF2A5
+		// (set) Token: 0x06024699 RID: 149145 RVA: 0x005010AD File Offset: 0x004FF2AD
 		public EFollowDecorationType Type { get; set; }
 
-		// Token: 0x17009AF4 RID: 39668
-		// (get) Token: 0x06022700 RID: 141056 RVA: 0x004C6546 File Offset: 0x004C4746
-		// (set) Token: 0x06022701 RID: 141057 RVA: 0x004C654E File Offset: 0x004C474E
+		// Token: 0x1700A2F2 RID: 41714
+		// (get) Token: 0x0602469A RID: 149146 RVA: 0x005010B6 File Offset: 0x004FF2B6
+		// (set) Token: 0x0602469B RID: 149147 RVA: 0x005010BE File Offset: 0x004FF2BE
 		public string Config { get; set; }
 
-		// Token: 0x17009AF5 RID: 39669
-		// (get) Token: 0x06022702 RID: 141058 RVA: 0x004C6557 File Offset: 0x004C4757
-		// (set) Token: 0x06022703 RID: 141059 RVA: 0x004C655F File Offset: 0x004C475F
+		// Token: 0x1700A2F3 RID: 41715
+		// (get) Token: 0x0602469C RID: 149148 RVA: 0x005010C7 File Offset: 0x004FF2C7
+		// (set) Token: 0x0602469D RID: 149149 RVA: 0x005010CF File Offset: 0x004FF2CF
 		public TTriggerShapeUnion CollisionDetectionRange { get; set; }
 
-		// Token: 0x06022704 RID: 141060 RVA: 0x004C6568 File Offset: 0x004C4768
+		// Token: 0x0602469E RID: 149150 RVA: 0x005010D8 File Offset: 0x004FF2D8
 		public IFollowDecorationChairConfigT()
 		{
 			this.Type = EFollowDecorationType.Chair;

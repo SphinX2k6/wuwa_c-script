@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200162D RID: 5677
+	// Token: 0x020016A0 RID: 5792
 	public enum RogueArchiveState
 	{
-		// Token: 0x0400C046 RID: 49222
+		// Token: 0x0400C540 RID: 50496
 		[OriginalName("CantSave")]
 		CantSave,
-		// Token: 0x0400C047 RID: 49223
+		// Token: 0x0400C541 RID: 50497
 		[OriginalName("CanSave")]
 		CanSave,
-		// Token: 0x0400C048 RID: 49224
+		// Token: 0x0400C542 RID: 50498
 		[OriginalName("Saved")]
 		Saved
 	}

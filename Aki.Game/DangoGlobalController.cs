@@ -5,13 +5,13 @@ using AkiClient.Game.Aki.Character.NPC.Tuanzi.CommonConfig;
 using CSharpScript.Game.Camera;
 using UnrealEngine;
 
-// Token: 0x02001A6F RID: 6767
+// Token: 0x02000F2E RID: 3886
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class DangoGlobalController : ControllerBase
 {
-	// Token: 0x0600C742 RID: 51010 RVA: 0x002D610C File Offset: 0x002D430C
+	// Token: 0x06009B52 RID: 39762 RVA: 0x002E11FC File Offset: 0x002DF3FC
 	public void InitGlobalConfig(string configPath, [Nullable(2)] Action<bool> callback = null)
 	{
 		ResourceSystem.Instance.LoadAsync<BP_DangoGlobalConfig_C>(configPath, delegate([Nullable(2)] BP_DangoGlobalConfig_C result, string _)
@@ -41,7 +41,7 @@ public class DangoGlobalController : ControllerBase
 		}, ResourceSystem.EResourceLoadPriority.Default, "Ui.DangoUi");
 	}
 
-	// Token: 0x0600C743 RID: 51011 RVA: 0x002D6148 File Offset: 0x002D4348
+	// Token: 0x06009B53 RID: 39763 RVA: 0x002E1238 File Offset: 0x002DF438
 	public void ApplyDangoMoveCamera(Vector lookAtPosition)
 	{
 		DangoGlobalConfig config = DangoGlobalModel.Instance.Config;
@@ -53,7 +53,7 @@ public class DangoGlobalController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C744 RID: 51012 RVA: 0x002D61C0 File Offset: 0x002D43C0
+	// Token: 0x06009B54 RID: 39764 RVA: 0x002E12B0 File Offset: 0x002DF4B0
 	public void ApplyDangoBeforeMoveCamera(Vector lookAtPosition, [Nullable(2)] Action callback = null)
 	{
 		DangoGlobalConfig config = DangoGlobalModel.Instance.Config;
@@ -101,8 +101,8 @@ public class DangoGlobalController : ControllerBase
 		CameraController.Instance.MainModel.FreeCamera.LogicComponent.ApplyCameraBlend(lookAtPosition, null, (float)beforeMoveCameraArmLength, blendTime, config.BeforeMoveCameraCurve, config.BeforeMoveCameraFov, callback);
 	}
 
-	// Token: 0x17001057 RID: 4183
-	// (get) Token: 0x0600C745 RID: 51013 RVA: 0x002D6343 File Offset: 0x002D4543
+	// Token: 0x1700107C RID: 4220
+	// (get) Token: 0x06009B55 RID: 39765 RVA: 0x002E1433 File Offset: 0x002DF633
 	public static DangoGlobalController Instance
 	{
 		get
@@ -111,7 +111,7 @@ public class DangoGlobalController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C746 RID: 51014 RVA: 0x002D634A File Offset: 0x002D454A
+	// Token: 0x06009B56 RID: 39766 RVA: 0x002E143A File Offset: 0x002DF63A
 	public static DangoGlobalController GetOrCreateInstance()
 	{
 		if (DangoGlobalController._Instance == null)
@@ -121,7 +121,7 @@ public class DangoGlobalController : ControllerBase
 		return DangoGlobalController._Instance;
 	}
 
-	// Token: 0x0600C747 RID: 51015 RVA: 0x002D635E File Offset: 0x002D455E
+	// Token: 0x06009B57 RID: 39767 RVA: 0x002E144E File Offset: 0x002DF64E
 	public static bool CreateInstance()
 	{
 		if (DangoGlobalController._Instance != null)
@@ -132,24 +132,24 @@ public class DangoGlobalController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C748 RID: 51016 RVA: 0x002D6374 File Offset: 0x002D4574
+	// Token: 0x06009B58 RID: 39768 RVA: 0x002E1464 File Offset: 0x002DF664
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C749 RID: 51017 RVA: 0x002D6376 File Offset: 0x002D4576
+	// Token: 0x06009B59 RID: 39769 RVA: 0x002E1466 File Offset: 0x002DF666
 	public static void ResetStaticDefaultValue()
 	{
 		DangoGlobalController._Instance = null;
 	}
 
-	// Token: 0x0600C74A RID: 51018 RVA: 0x002D637E File Offset: 0x002D457E
+	// Token: 0x06009B5A RID: 39770 RVA: 0x002E146E File Offset: 0x002DF66E
 	static DangoGlobalController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DangoGlobalController.CreateStaticDefaultValue), new Action(DangoGlobalController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005BE6 RID: 23526
+	// Token: 0x04005CB5 RID: 23733
 	[Nullable(2)]
 	private static DangoGlobalController _Instance;
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009C9 RID: 2505
+	// Token: 0x02000A9E RID: 2718
 	public class ConfigTeleportTransitionConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003ACA RID: 15050 RVA: 0x001A63AB File Offset: 0x001A45AB
+		// Token: 0x06003FC8 RID: 16328 RVA: 0x001C573F File Offset: 0x001C393F
 		static ConfigTeleportTransitionConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTeleportTransitionConfigById.CreateStaticDefaultValue), new Action(ConfigTeleportTransitionConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003ACB RID: 15051 RVA: 0x001A63CC File Offset: 0x001A45CC
+		// Token: 0x06003FC9 RID: 16329 RVA: 0x001C5760 File Offset: 0x001C3960
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTeleportTransitionConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003ACC RID: 15052 RVA: 0x001A644B File Offset: 0x001A464B
+		// Token: 0x06003FCA RID: 16330 RVA: 0x001C57DF File Offset: 0x001C39DF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTeleportTransitionConfigById.LogPair = null;
 			ConfigTeleportTransitionConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06003ACD RID: 15053 RVA: 0x001A6459 File Offset: 0x001A4659
+		// Token: 0x06003FCB RID: 16331 RVA: 0x001C57ED File Offset: 0x001C39ED
 		public static void Init()
 		{
 			ConfigTeleportTransitionConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigTeleportTransitionConfigById.HandleId, "db_teleporttransitionconfig.db", "select BinData from `TeleportTransitionConfig` where Id = ?");
 		}
 
-		// Token: 0x06003ACE RID: 15054 RVA: 0x001A6474 File Offset: 0x001A4674
+		// Token: 0x06003FCC RID: 16332 RVA: 0x001C5808 File Offset: 0x001C3A08
 		public static TeleportTransitionConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTeleportTransitionConfigById.HandleId, ConfigTeleportTransitionConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TeleportTransitionConfig?(rootAsTeleportTransitionConfig);
 		}
 
-		// Token: 0x04004465 RID: 17509
+		// Token: 0x04004A38 RID: 19000
 		private const string DB = "db_teleporttransitionconfig.db";
 
-		// Token: 0x04004466 RID: 17510
+		// Token: 0x04004A39 RID: 19001
 		private const string FILE = "k.可视化编辑/c.Csv/c.传送过渡效果/*.csv*";
 
-		// Token: 0x04004467 RID: 17511
+		// Token: 0x04004A3A RID: 19002
 		private const string TABLE = "TeleportTransitionConfig";
 
-		// Token: 0x04004468 RID: 17512
+		// Token: 0x04004A3B RID: 19003
 		private const string COMMAND = "select BinData from `TeleportTransitionConfig` where Id = ?";
 
-		// Token: 0x04004469 RID: 17513
+		// Token: 0x04004A3C RID: 19004
 		private const string KEY_PREFIX = "TeleportTransitionConfigById";
 
-		// Token: 0x0400446A RID: 17514
+		// Token: 0x04004A3D RID: 19005
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400446B RID: 17515
+		// Token: 0x04004A3E RID: 19006
 		private static int HandleId;
 	}
 }

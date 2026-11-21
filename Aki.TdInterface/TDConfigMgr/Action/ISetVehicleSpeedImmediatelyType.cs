@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E4E RID: 7758
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002083 RID: 8323
 	public class ISetVehicleSpeedImmediatelyType
 	{
-		// Token: 0x0600A5FD RID: 42493 RVA: 0x00177CC8 File Offset: 0x00175EC8
+		// Token: 0x0600B0B5 RID: 45237 RVA: 0x0018D9C8 File Offset: 0x0018BBC8
 		private ISetVehicleSpeedImmediatelyType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A5FE RID: 42494 RVA: 0x00177D00 File Offset: 0x00175F00
+		// Token: 0x0600B0B6 RID: 45238 RVA: 0x0018DA00 File Offset: 0x0018BC00
 		public static ISetVehicleSpeedImmediatelyType Create([Nullable(2)] ISetVehicleSpeedImmediatelyType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A5FF RID: 42495 RVA: 0x00177D13 File Offset: 0x00175F13
+		// Token: 0x0600B0B7 RID: 45239 RVA: 0x0018DA13 File Offset: 0x0018BC13
 		public static ISetVehicleSpeedImmediatelyType CreateFromSetValue([Nullable(2)] ISetVehicleSpeedImmediatelyType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A600 RID: 42496 RVA: 0x00177D26 File Offset: 0x00175F26
+		// Token: 0x0600B0B8 RID: 45240 RVA: 0x0018DA26 File Offset: 0x0018BC26
 		public ISetVehicleSpeedImmediatelyType_SetValue ToSetValue()
 		{
 			return new ISetVehicleSpeedImmediatelyType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032E0 RID: 13024
-		// (get) Token: 0x0600A601 RID: 42497 RVA: 0x00177D39 File Offset: 0x00175F39
-		// (set) Token: 0x0600A602 RID: 42498 RVA: 0x00177D64 File Offset: 0x00175F64
+		// Token: 0x170035A4 RID: 13732
+		// (get) Token: 0x0600B0B9 RID: 45241 RVA: 0x0018DA39 File Offset: 0x0018BC39
+		// (set) Token: 0x0600B0BA RID: 45242 RVA: 0x0018DA64 File Offset: 0x0018BC64
 		public virtual ESetVehicleSpeedImmediatelyType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006333 RID: 25395
+		// Token: 0x04006917 RID: 26903
 		[Nullable(2)]
 		protected ISetVehicleSpeedImmediatelyType FbInstance;
 
-		// Token: 0x04006334 RID: 25396
+		// Token: 0x04006918 RID: 26904
 		[Nullable(2)]
 		protected ISetVehicleSpeedImmediatelyType_SetValue PocoInterface;
 	}

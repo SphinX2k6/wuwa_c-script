@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E11 RID: 24081
+	// Token: 0x02004DF6 RID: 19958
 	public class SpecialEnergyBarXuanling : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D3CA RID: 250826 RVA: 0x00EC16E8 File Offset: 0x00EBF8E8
+		// Token: 0x06032359 RID: 205657 RVA: 0x00E12C48 File Offset: 0x00E10E48
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D3CB RID: 250827 RVA: 0x00EC18A0 File Offset: 0x00EBFAA0
+		// Token: 0x0603235A RID: 205658 RVA: 0x00E12E00 File Offset: 0x00E11000
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarXuanling.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D3CC RID: 250828 RVA: 0x00EC18E4 File Offset: 0x00EBFAE4
+		// Token: 0x0603235B RID: 205659 RVA: 0x00E12E44 File Offset: 0x00E11044
 		private UniTask InitBarItem()
 		{
 			SpecialEnergyBarXuanling.<InitBarItem>d__13 <InitBarItem>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D3CD RID: 250829 RVA: 0x00EC1928 File Offset: 0x00EBFB28
+		// Token: 0x0603235C RID: 205660 RVA: 0x00E12E88 File Offset: 0x00E11088
 		protected override void AddEvents()
 		{
 			base.AddEvents();
@@ -77,14 +77,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.ListenForAttributeChanged(EAttributeType.SpecialEnergy2, new Action<EAttributeType, float, float>(this.OnSpEnergyChanged));
 		}
 
-		// Token: 0x0603D3CE RID: 250830 RVA: 0x00EC197D File Offset: 0x00EBFB7D
+		// Token: 0x0603235D RID: 205661 RVA: 0x00E12EDD File Offset: 0x00E110DD
 		protected override void RemoveEvents()
 		{
 			base.RemoveEvents();
 			base.RemoveListenAttributeChanged(EAttributeType.SpecialEnergy2, new Action<EAttributeType, float, float>(this.OnSpEnergyChanged));
 		}
 
-		// Token: 0x0603D3CF RID: 250831 RVA: 0x00EC199C File Offset: 0x00EBFB9C
+		// Token: 0x0603235E RID: 205662 RVA: 0x00E12EFC File Offset: 0x00E110FC
 		protected override void OnStart()
 		{
 			base.InitTweenAnim(2);
@@ -102,32 +102,32 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshSpEnergyState(true);
 		}
 
-		// Token: 0x0603D3D0 RID: 250832 RVA: 0x00EC1A07 File Offset: 0x00EBFC07
+		// Token: 0x0603235F RID: 205663 RVA: 0x00E12F67 File Offset: 0x00E11167
 		private void OnSoftSwordTagChanged(int tagId, bool tagExist)
 		{
 			this.SetSwordState(tagExist ? SpecialEnergyBarXuanling.ESwordState.SoftSword : SpecialEnergyBarXuanling.ESwordState.HardSword, false);
 		}
 
-		// Token: 0x0603D3D1 RID: 250833 RVA: 0x00EC1A17 File Offset: 0x00EBFC17
+		// Token: 0x06032360 RID: 205664 RVA: 0x00E12F77 File Offset: 0x00E11177
 		private void OnEnergyEmptyTagChanged(int tagId, bool tagExist)
 		{
 			this.SetEmptyState(tagExist, false);
 		}
 
-		// Token: 0x0603D3D2 RID: 250834 RVA: 0x00EC1A21 File Offset: 0x00EBFC21
+		// Token: 0x06032361 RID: 205665 RVA: 0x00E12F81 File Offset: 0x00E11181
 		private void OnSpEnergyChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.SetSpEnergyState(this.CalcSpEnergyState(newValue), false);
 		}
 
-		// Token: 0x0603D3D3 RID: 250835 RVA: 0x00EC1A34 File Offset: 0x00EBFC34
+		// Token: 0x06032362 RID: 205666 RVA: 0x00E12F94 File Offset: 0x00E11194
 		private void RefreshState(bool isStart = false)
 		{
 			BaseTagComponent tagComponent = this.TagComponent;
 			this.SetSwordState((tagComponent != null && tagComponent.HasTag(SpecialEnergyBarXuanling.SoftSwordTagId)) ? SpecialEnergyBarXuanling.ESwordState.SoftSword : SpecialEnergyBarXuanling.ESwordState.HardSword, isStart);
 		}
 
-		// Token: 0x0603D3D4 RID: 250836 RVA: 0x00EC1A68 File Offset: 0x00EBFC68
+		// Token: 0x06032363 RID: 205667 RVA: 0x00E12FC8 File Offset: 0x00E111C8
 		private void RefreshEmptyState(bool isStart = false)
 		{
 			BaseTagComponent tagComponent = this.TagComponent;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetEmptyState(isEmpty, isStart);
 		}
 
-		// Token: 0x0603D3D5 RID: 250837 RVA: 0x00EC1A98 File Offset: 0x00EBFC98
+		// Token: 0x06032364 RID: 205668 RVA: 0x00E12FF8 File Offset: 0x00E111F8
 		private void RefreshSpEnergyState(bool isStart = false)
 		{
 			BaseAttributeComponent attributeComponent = this.AttributeComponent;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetSpEnergyState(this.CalcSpEnergyState(spEnergy), isStart);
 		}
 
-		// Token: 0x0603D3D6 RID: 250838 RVA: 0x00EC1ACC File Offset: 0x00EBFCCC
+		// Token: 0x06032365 RID: 205669 RVA: 0x00E1302C File Offset: 0x00E1122C
 		private SpecialEnergyBarXuanling.ESpEnergyState CalcSpEnergyState(float spEnergy)
 		{
 			if (spEnergy <= 0f)
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return SpecialEnergyBarXuanling.ESpEnergyState.Half;
 		}
 
-		// Token: 0x0603D3D7 RID: 250839 RVA: 0x00EC1B0C File Offset: 0x00EBFD0C
+		// Token: 0x06032366 RID: 205670 RVA: 0x00E1306C File Offset: 0x00E1126C
 		private void SetSwordState(SpecialEnergyBarXuanling.ESwordState state, bool isStart = false)
 		{
 			if (this.CurSwordState == state && !isStart)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetSpEnergyState(this.CurSpEnergyState, true);
 		}
 
-		// Token: 0x0603D3D8 RID: 250840 RVA: 0x00EC1B5C File Offset: 0x00EBFD5C
+		// Token: 0x06032367 RID: 205671 RVA: 0x00E130BC File Offset: 0x00E112BC
 		private void SetEmptyState(bool isEmpty, bool isStart = false)
 		{
 			if (this.IsEmpty == isEmpty && !isStart)
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.PlayTweenAnim(3);
 		}
 
-		// Token: 0x0603D3D9 RID: 250841 RVA: 0x00EC1B94 File Offset: 0x00EBFD94
+		// Token: 0x06032368 RID: 205672 RVA: 0x00E130F4 File Offset: 0x00E112F4
 		private void SetSpEnergyState(SpecialEnergyBarXuanling.ESpEnergyState state, bool isStart = false)
 		{
 			if (this.CurSpEnergyState == state && !isStart)
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D3DA RID: 250842 RVA: 0x00EC1C86 File Offset: 0x00EBFE86
+		// Token: 0x06032369 RID: 205673 RVA: 0x00E131E6 File Offset: 0x00E113E6
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -271,79 +271,79 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barItem.Tick(delta);
 		}
 
-		// Token: 0x0401FEEF RID: 130799
+		// Token: 0x0401A9B6 RID: 108982
 		[StaticVariableRuleIgnore]
 		private static readonly int SoftSwordTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1XuanlingMd10011.逻辑.副武器"];
 
-		// Token: 0x0401FEF0 RID: 130800
+		// Token: 0x0401A9B7 RID: 108983
 		[StaticVariableRuleIgnore]
 		private static readonly int EnergyEmptyTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1XuanlingMd10011.状态.满特殊能量1"];
 
-		// Token: 0x0401FEF1 RID: 130801
+		// Token: 0x0401A9B8 RID: 108984
 		private const EAttributeType SpEnergyAttrId = EAttributeType.SpecialEnergy2;
 
-		// Token: 0x0401FEF2 RID: 130802
+		// Token: 0x0401A9B9 RID: 108985
 		private const EAttributeType SpEnergyMaxAttrId = EAttributeType.SpecialEnergy2Max;
 
-		// Token: 0x0401FEF3 RID: 130803
+		// Token: 0x0401A9BA RID: 108986
 		[Nullable(2)]
 		private SpecialEnergyBarXuanlingSlot BarItem;
 
-		// Token: 0x0401FEF4 RID: 130804
+		// Token: 0x0401A9BB RID: 108987
 		private bool IsEmpty;
 
-		// Token: 0x0401FEF5 RID: 130805
+		// Token: 0x0401A9BC RID: 108988
 		private SpecialEnergyBarXuanling.ESwordState CurSwordState;
 
-		// Token: 0x0401FEF6 RID: 130806
+		// Token: 0x0401A9BD RID: 108989
 		private SpecialEnergyBarXuanling.ESpEnergyState CurSpEnergyState;
 
-		// Token: 0x0200C17B RID: 49531
+		// Token: 0x0200AB8A RID: 43914
 		private enum EChildType
 		{
-			// Token: 0x0403A762 RID: 239458
+			// Token: 0x04035154 RID: 217428
 			SlotBarItem,
-			// Token: 0x0403A763 RID: 239459
+			// Token: 0x04035155 RID: 217429
 			PnlWing,
-			// Token: 0x0403A764 RID: 239460
+			// Token: 0x04035156 RID: 217430
 			EmptyStart,
-			// Token: 0x0403A765 RID: 239461
+			// Token: 0x04035157 RID: 217431
 			EmptyClose,
-			// Token: 0x0403A766 RID: 239462
+			// Token: 0x04035158 RID: 217432
 			LogicAnimSoft,
-			// Token: 0x0403A767 RID: 239463
+			// Token: 0x04035159 RID: 217433
 			LogicAnimSoftSPZero,
-			// Token: 0x0403A768 RID: 239464
+			// Token: 0x0403515A RID: 217434
 			LogicAnimSoftSPHalf,
-			// Token: 0x0403A769 RID: 239465
+			// Token: 0x0403515B RID: 217435
 			LogicAnimSoftSPFull,
-			// Token: 0x0403A76A RID: 239466
+			// Token: 0x0403515C RID: 217436
 			LogicAnimHard,
-			// Token: 0x0403A76B RID: 239467
+			// Token: 0x0403515D RID: 217437
 			LogicAnimHardZero,
-			// Token: 0x0403A76C RID: 239468
+			// Token: 0x0403515E RID: 217438
 			LogicAnimHardHalf,
-			// Token: 0x0403A76D RID: 239469
+			// Token: 0x0403515F RID: 217439
 			LogicAnimHardFull
 		}
 
-		// Token: 0x0200C17C RID: 49532
+		// Token: 0x0200AB8B RID: 43915
 		private enum ESwordState
 		{
-			// Token: 0x0403A76F RID: 239471
+			// Token: 0x04035161 RID: 217441
 			HardSword,
-			// Token: 0x0403A770 RID: 239472
+			// Token: 0x04035162 RID: 217442
 			SoftSword
 		}
 
-		// Token: 0x0200C17D RID: 49533
+		// Token: 0x0200AB8C RID: 43916
 		private enum ESpEnergyState
 		{
-			// Token: 0x0403A772 RID: 239474
+			// Token: 0x04035164 RID: 217444
 			Zero,
-			// Token: 0x0403A773 RID: 239475
+			// Token: 0x04035165 RID: 217445
 			Half,
-			// Token: 0x0403A774 RID: 239476
+			// Token: 0x04035166 RID: 217446
 			Full
 		}
 	}

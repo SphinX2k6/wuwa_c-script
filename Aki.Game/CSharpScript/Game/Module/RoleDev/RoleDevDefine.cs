@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CD9 RID: 19673
+	// Token: 0x02003C8A RID: 15498
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoleDevDefine : IStaticVariableResetter
 	{
-		// Token: 0x06032C92 RID: 208018 RVA: 0x00BD563B File Offset: 0x00BD383B
+		// Token: 0x06027A46 RID: 162374 RVA: 0x00B1A3D3 File Offset: 0x00B185D3
 		static RoleDevDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RoleDevDefine.CreateStaticDefaultValue), new Action(RoleDevDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06032C93 RID: 208019 RVA: 0x00BD565A File Offset: 0x00BD385A
+		// Token: 0x06027A47 RID: 162375 RVA: 0x00B1A3F2 File Offset: 0x00B185F2
 		public static void ResetStaticDefaultValue()
 		{
 			RoleDevDefine.tabTypeToMainPageMap = null;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.RoleDev
 			RoleDevDefine.skillTabMaterialTypeToSubPageButtonMap = null;
 		}
 
-		// Token: 0x06032C94 RID: 208020 RVA: 0x00BD5674 File Offset: 0x00BD3874
+		// Token: 0x06027A48 RID: 162376 RVA: 0x00B1A40C File Offset: 0x00B1860C
 		public static void CreateStaticDefaultValue()
 		{
 			RoleDevDefine.tabTypeToMainPageMap = new Dictionary<ERoleDevTabType, ERoleDevMainPage>
@@ -97,16 +97,16 @@ namespace CSharpScript.Game.Module.RoleDev
 			};
 		}
 
-		// Token: 0x0401B09D RID: 110749
+		// Token: 0x040159FE RID: 88574
 		public static Dictionary<ERoleDevTabType, ERoleDevMainPage> tabTypeToMainPageMap;
 
-		// Token: 0x0401B09E RID: 110750
+		// Token: 0x040159FF RID: 88575
 		public static Dictionary<EItemMaterialType, ERoleDevSubPageButton> roleTabMaterialTypeToSubPageButtonMap;
 
-		// Token: 0x0401B09F RID: 110751
+		// Token: 0x04015A00 RID: 88576
 		public static Dictionary<EItemMaterialType, ERoleDevSubPageButton> weaponTabMaterialTypeToSubPageButtonMap;
 
-		// Token: 0x0401B0A0 RID: 110752
+		// Token: 0x04015A01 RID: 88577
 		public static Dictionary<EItemMaterialType, ERoleDevSubPageButton> skillTabMaterialTypeToSubPageButtonMap;
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000175 RID: 373
+	// Token: 0x02000185 RID: 389
 	public class ConfigClueContentByGroupId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060008BF RID: 2239 RVA: 0x0008AE29 File Offset: 0x00089029
+		// Token: 0x0600091F RID: 2335 RVA: 0x00090985 File Offset: 0x0008EB85
 		static ConfigClueContentByGroupId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigClueContentByGroupId.CreateStaticDefaultValue), new Action(ConfigClueContentByGroupId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060008C0 RID: 2240 RVA: 0x0008AE48 File Offset: 0x00089048
+		// Token: 0x06000920 RID: 2336 RVA: 0x000909A4 File Offset: 0x0008EBA4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigClueContentByGroupId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060008C1 RID: 2241 RVA: 0x0008AEC7 File Offset: 0x000890C7
+		// Token: 0x06000921 RID: 2337 RVA: 0x00090A23 File Offset: 0x0008EC23
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigClueContentByGroupId.LogPair = null;
 			ConfigClueContentByGroupId.HandleId = 0;
 		}
 
-		// Token: 0x060008C2 RID: 2242 RVA: 0x0008AED5 File Offset: 0x000890D5
+		// Token: 0x06000922 RID: 2338 RVA: 0x00090A31 File Offset: 0x0008EC31
 		public static void Init()
 		{
 			ConfigClueContentByGroupId.HandleId = ConfigCommon.InitDataStatement(ConfigClueContentByGroupId.HandleId, "db_clue.db", "select BinData from `ClueContent` where GroupId=?");
 		}
 
-		// Token: 0x060008C3 RID: 2243 RVA: 0x0008AEF0 File Offset: 0x000890F0
+		// Token: 0x06000923 RID: 2339 RVA: 0x00090A4C File Offset: 0x0008EC4C
 		[NullableContext(2)]
 		public static IReadOnlyList<ClueContent> GetConfigList(int p0GroupId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000A17 RID: 2583
+		// Token: 0x04000A87 RID: 2695
 		private const string DB = "db_clue.db";
 
-		// Token: 0x04000A18 RID: 2584
+		// Token: 0x04000A88 RID: 2696
 		private const string FILE = "x.线索.xlsx";
 
-		// Token: 0x04000A19 RID: 2585
+		// Token: 0x04000A89 RID: 2697
 		private const string TABLE = "ClueContent";
 
-		// Token: 0x04000A1A RID: 2586
+		// Token: 0x04000A8A RID: 2698
 		private const string COMMAND = "select BinData from `ClueContent` where GroupId=?";
 
-		// Token: 0x04000A1B RID: 2587
+		// Token: 0x04000A8B RID: 2699
 		private const string KEY_PREFIX = "ClueContentByGroupId";
 
-		// Token: 0x04000A1C RID: 2588
+		// Token: 0x04000A8C RID: 2700
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000A1D RID: 2589
+		// Token: 0x04000A8D RID: 2701
 		private static int HandleId;
 	}
 }

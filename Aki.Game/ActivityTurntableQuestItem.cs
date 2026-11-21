@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001540 RID: 5440
+// Token: 0x020009F8 RID: 2552
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityTurntableQuestItem : UiPanelBase
 {
-	// Token: 0x06009B82 RID: 39810 RVA: 0x0021A9E4 File Offset: 0x00218BE4
+	// Token: 0x06006F60 RID: 28512 RVA: 0x00224794 File Offset: 0x00222994
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -39,7 +39,7 @@ public class ActivityTurntableQuestItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009B83 RID: 39811 RVA: 0x0021AAF0 File Offset: 0x00218CF0
+	// Token: 0x06006F61 RID: 28513 RVA: 0x002248A0 File Offset: 0x00222AA0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityTurntableQuestItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ public class ActivityTurntableQuestItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009B84 RID: 39812 RVA: 0x0021AB34 File Offset: 0x00218D34
+	// Token: 0x06006F62 RID: 28514 RVA: 0x002248E4 File Offset: 0x00222AE4
 	public void Refresh(bool isFinished, TItem reward, int questId, int activityId)
 	{
 		ItemGridData data = new ItemGridData
@@ -64,31 +64,31 @@ public class ActivityTurntableQuestItem : UiPanelBase
 		this.ActivityId = activityId;
 	}
 
-	// Token: 0x06009B85 RID: 39813 RVA: 0x0021AB8D File Offset: 0x00218D8D
+	// Token: 0x06006F63 RID: 28515 RVA: 0x0022493D File Offset: 0x00222B3D
 	public void SetTitle(string textId, params string[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 	}
 
-	// Token: 0x06009B86 RID: 39814 RVA: 0x0021ABA2 File Offset: 0x00218DA2
+	// Token: 0x06006F64 RID: 28516 RVA: 0x00224952 File Offset: 0x00222B52
 	public void SetTxtById(string textId, params string[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, args);
 	}
 
-	// Token: 0x06009B87 RID: 39815 RVA: 0x0021ABB7 File Offset: 0x00218DB7
+	// Token: 0x06006F65 RID: 28517 RVA: 0x00224967 File Offset: 0x00222B67
 	public void SetTxt(string text)
 	{
 		base.GetText(1).SetText(text, true);
 	}
 
-	// Token: 0x06009B88 RID: 39816 RVA: 0x0021ABC7 File Offset: 0x00218DC7
+	// Token: 0x06006F66 RID: 28518 RVA: 0x00224977 File Offset: 0x00222B77
 	public void SetRedDot(bool bVisible)
 	{
 		base.GetItem(4).SetUIActive(bVisible);
 	}
 
-	// Token: 0x06009B89 RID: 39817 RVA: 0x0021ABD6 File Offset: 0x00218DD6
+	// Token: 0x06006F67 RID: 28519 RVA: 0x00224986 File Offset: 0x00222B86
 	private void OnClickedQuestJump()
 	{
 		if (this.QuestId != 0)
@@ -103,7 +103,7 @@ public class ActivityTurntableQuestItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009B8A RID: 39818 RVA: 0x0021AC0B File Offset: 0x00218E0B
+	// Token: 0x06006F68 RID: 28520 RVA: 0x002249BB File Offset: 0x00222BBB
 	[NullableContext(2)]
 	private ActivityTurntableData GetTurntableData()
 	{
@@ -114,33 +114,33 @@ public class ActivityTurntableQuestItem : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x04004454 RID: 17492
+	// Token: 0x040044FA RID: 17658
 	private int QuestId;
 
-	// Token: 0x04004455 RID: 17493
+	// Token: 0x040044FB RID: 17659
 	private int ActivityId;
 
-	// Token: 0x04004456 RID: 17494
+	// Token: 0x040044FC RID: 17660
 	[Nullable(2)]
 	private ActivitySmallItemGrid RewardItemGrid;
 
-	// Token: 0x02007B74 RID: 31604
+	// Token: 0x02006CFF RID: 27903
 	[NullableContext(0)]
 	private class EQuestComponents
 	{
-		// Token: 0x0402897D RID: 166269
+		// Token: 0x04023CB8 RID: 146616
 		public const int Title = 0;
 
-		// Token: 0x0402897E RID: 166270
+		// Token: 0x04023CB9 RID: 146617
 		public const int Txt = 1;
 
-		// Token: 0x0402897F RID: 166271
+		// Token: 0x04023CBA RID: 146618
 		public const int ItemGrid = 2;
 
-		// Token: 0x04028980 RID: 166272
+		// Token: 0x04023CBB RID: 146619
 		public const int Button = 3;
 
-		// Token: 0x04028981 RID: 166273
+		// Token: 0x04023CBC RID: 146620
 		public const int RedDot = 4;
 	}
 }

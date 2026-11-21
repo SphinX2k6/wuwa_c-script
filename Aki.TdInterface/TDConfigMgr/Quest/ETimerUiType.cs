@@ -2,24 +2,24 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EA4 RID: 3748
+	// Token: 0x02000FBA RID: 4026
 	public enum ETimerUiType
 	{
-		// Token: 0x040031F4 RID: 12788
+		// Token: 0x04003501 RID: 13569
 		Default,
-		// Token: 0x040031F5 RID: 12789
+		// Token: 0x04003502 RID: 13570
 		CountDownChallengeBlackCoast,
-		// Token: 0x040031F6 RID: 12790
+		// Token: 0x04003503 RID: 13571
 		HideUi,
-		// Token: 0x040031F7 RID: 12791
+		// Token: 0x04003504 RID: 13572
 		CountDownChallengeSlashAndTower,
-		// Token: 0x040031F8 RID: 12792
+		// Token: 0x04003505 RID: 13573
 		GreatSwordChallenge,
-		// Token: 0x040031F9 RID: 12793
+		// Token: 0x04003506 RID: 13574
 		StoveCoreFall,
-		// Token: 0x040031FA RID: 12794
+		// Token: 0x04003507 RID: 13575
 		RebeccaChallenge,
-		// Token: 0x040031FB RID: 12795
-		DarkTideShrinkCountDown
+		// Token: 0x04003508 RID: 13576
+		MechaStuntTrack = 8
 	}
 }

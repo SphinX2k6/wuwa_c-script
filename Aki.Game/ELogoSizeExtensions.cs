@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E25 RID: 3621
+// Token: 0x020002DA RID: 730
 public static class ELogoSizeExtensions
 {
-	// Token: 0x060056F6 RID: 22262 RVA: 0x000FA1E4 File Offset: 0x000F83E4
+	// Token: 0x06002A86 RID: 10886 RVA: 0x001019CC File Offset: 0x000FFBCC
 	[NullableContext(1)]
 	public static string ToValue(this ELogoSize size)
 	{

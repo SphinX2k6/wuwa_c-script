@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001096 RID: 4246
+	// Token: 0x02001086 RID: 4230
 	public sealed class RolePassiveSkillInfo : IMessage<RolePassiveSkillInfo>, IMessage, IEquatable<RolePassiveSkillInfo>, IDeepCloneable<RolePassiveSkillInfo>, IBufferMessage
 	{
-		// Token: 0x06016AE4 RID: 92900 RVA: 0x0034C034 File Offset: 0x0034A234
+		// Token: 0x060169FF RID: 92671 RVA: 0x0034A958 File Offset: 0x00348B58
 		[NullableContext(1)]
 		public static RolePassiveSkillInfo Create()
 		{
 			return new RolePassiveSkillInfo();
 		}
 
-		// Token: 0x17004BFB RID: 19451
-		// (get) Token: 0x06016AE5 RID: 92901 RVA: 0x0034C03B File Offset: 0x0034A23B
+		// Token: 0x17004BD1 RID: 19409
+		// (get) Token: 0x06016A00 RID: 92672 RVA: 0x0034A95F File Offset: 0x00348B5F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<RolePassiveSkillInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004BFC RID: 19452
-		// (get) Token: 0x06016AE6 RID: 92902 RVA: 0x0034C042 File Offset: 0x0034A242
+		// Token: 0x17004BD2 RID: 19410
+		// (get) Token: 0x06016A01 RID: 92673 RVA: 0x0034A966 File Offset: 0x00348B66
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004BFD RID: 19453
-		// (get) Token: 0x06016AE7 RID: 92903 RVA: 0x0034C045 File Offset: 0x0034A245
+		// Token: 0x17004BD3 RID: 19411
+		// (get) Token: 0x06016A02 RID: 92674 RVA: 0x0034A969 File Offset: 0x00348B69
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016AE8 RID: 92904 RVA: 0x0034C04C File Offset: 0x0034A24C
+		// Token: 0x06016A03 RID: 92675 RVA: 0x0034A970 File Offset: 0x00348B70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RolePassiveSkillInfo()
 		{
 		}
 
-		// Token: 0x06016AE9 RID: 92905 RVA: 0x0034C05F File Offset: 0x0034A25F
+		// Token: 0x06016A04 RID: 92676 RVA: 0x0034A983 File Offset: 0x00348B83
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RolePassiveSkillInfo(RolePassiveSkillInfo other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06016AEA RID: 92906 RVA: 0x0034C095 File Offset: 0x0034A295
+		// Token: 0x06016A05 RID: 92677 RVA: 0x0034A9B9 File Offset: 0x00348BB9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RolePassiveSkillInfo Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new RolePassiveSkillInfo(this);
 		}
 
-		// Token: 0x17004BFE RID: 19454
-		// (get) Token: 0x06016AEB RID: 92907 RVA: 0x0034C09D File Offset: 0x0034A29D
-		// (set) Token: 0x06016AEC RID: 92908 RVA: 0x0034C0A5 File Offset: 0x0034A2A5
+		// Token: 0x17004BD4 RID: 19412
+		// (get) Token: 0x06016A06 RID: 92678 RVA: 0x0034A9C1 File Offset: 0x00348BC1
+		// (set) Token: 0x06016A07 RID: 92679 RVA: 0x0034A9C9 File Offset: 0x00348BC9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleId
@@ -96,8 +96,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004BFF RID: 19455
-		// (get) Token: 0x06016AED RID: 92909 RVA: 0x0034C0AE File Offset: 0x0034A2AE
+		// Token: 0x17004BD5 RID: 19413
+		// (get) Token: 0x06016A08 RID: 92680 RVA: 0x0034A9D2 File Offset: 0x00348BD2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PassiveSkillInfo> PassiveSkillInfoList
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016AEE RID: 92910 RVA: 0x0034C0B6 File Offset: 0x0034A2B6
+		// Token: 0x06016A09 RID: 92681 RVA: 0x0034A9DA File Offset: 0x00348BDA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RolePassiveSkillInfo);
 		}
 
-		// Token: 0x06016AEF RID: 92911 RVA: 0x0034C0C4 File Offset: 0x0034A2C4
+		// Token: 0x06016A0A RID: 92682 RVA: 0x0034A9E8 File Offset: 0x00348BE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RolePassiveSkillInfo other)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.RoleId == other.RoleId && this.passiveSkillInfoList_.Equals(other.passiveSkillInfoList_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06016AF0 RID: 92912 RVA: 0x0034C114 File Offset: 0x0034A314
+		// Token: 0x06016A0B RID: 92683 RVA: 0x0034AA38 File Offset: 0x00348C38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016AF1 RID: 92913 RVA: 0x0034C161 File Offset: 0x0034A361
+		// Token: 0x06016A0C RID: 92684 RVA: 0x0034AA85 File Offset: 0x00348C85
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06016AF2 RID: 92914 RVA: 0x0034C16E File Offset: 0x0034A36E
+		// Token: 0x06016A0D RID: 92685 RVA: 0x0034AA92 File Offset: 0x00348C92
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -158,7 +158,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06016AF3 RID: 92915 RVA: 0x0034C178 File Offset: 0x0034A378
+		// Token: 0x06016A0E RID: 92686 RVA: 0x0034AA9C File Offset: 0x00348C9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016AF4 RID: 92916 RVA: 0x0034C1C8 File Offset: 0x0034A3C8
+		// Token: 0x06016A0F RID: 92687 RVA: 0x0034AAEC File Offset: 0x00348CEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016AF5 RID: 92917 RVA: 0x0034C21C File Offset: 0x0034A41C
+		// Token: 0x06016A10 RID: 92688 RVA: 0x0034AB40 File Offset: 0x00348D40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RolePassiveSkillInfo other)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06016AF6 RID: 92918 RVA: 0x0034C269 File Offset: 0x0034A469
+		// Token: 0x06016A11 RID: 92689 RVA: 0x0034AB8D File Offset: 0x00348D8D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06016AF7 RID: 92919 RVA: 0x0034C274 File Offset: 0x0034A474
+		// Token: 0x06016A12 RID: 92690 RVA: 0x0034AB98 File Offset: 0x00348D98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -248,25 +248,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008783 RID: 34691
+		// Token: 0x040087AD RID: 34733
 		private static readonly MessageParser<RolePassiveSkillInfo> _parser = new MessageParser<RolePassiveSkillInfo>(() => new RolePassiveSkillInfo());
 
-		// Token: 0x04008784 RID: 34692
+		// Token: 0x040087AE RID: 34734
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008785 RID: 34693
+		// Token: 0x040087AF RID: 34735
 		public const int RoleIdFieldNumber = 1;
 
-		// Token: 0x04008786 RID: 34694
+		// Token: 0x040087B0 RID: 34736
 		private int roleId_;
 
-		// Token: 0x04008787 RID: 34695
+		// Token: 0x040087B1 RID: 34737
 		public const int PassiveSkillInfoListFieldNumber = 2;
 
-		// Token: 0x04008788 RID: 34696
+		// Token: 0x040087B2 RID: 34738
 		private static readonly FieldCodec<PassiveSkillInfo> _repeated_passiveSkillInfoList_codec = FieldCodec.ForMessage<PassiveSkillInfo>(18U, PassiveSkillInfo.Parser);
 
-		// Token: 0x04008789 RID: 34697
+		// Token: 0x040087B3 RID: 34739
 		private readonly RepeatedField<PassiveSkillInfo> passiveSkillInfoList_ = new RepeatedField<PassiveSkillInfo>();
 	}
 }

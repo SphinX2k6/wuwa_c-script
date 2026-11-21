@@ -21,13 +21,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FAC RID: 8108
+// Token: 0x0200146E RID: 5230
 [NullableContext(1)]
 [Nullable(0)]
 public class InteractionHintView : UiTickViewBase
 {
-	// Token: 0x17001352 RID: 4946
-	// (get) Token: 0x0600FC0D RID: 64525 RVA: 0x003D1AA0 File Offset: 0x003CFCA0
+	// Token: 0x1700137E RID: 4990
+	// (get) Token: 0x0600D031 RID: 53297 RVA: 0x003DD67C File Offset: 0x003DB87C
 	[Nullable(new byte[]
 	{
 		2,
@@ -48,8 +48,8 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x17001353 RID: 4947
-	// (get) Token: 0x0600FC0E RID: 64526 RVA: 0x003D1AA8 File Offset: 0x003CFCA8
+	// Token: 0x1700137F RID: 4991
+	// (get) Token: 0x0600D032 RID: 53298 RVA: 0x003DD684 File Offset: 0x003DB884
 	[Nullable(2)]
 	public UUIScrollViewWithScrollbarComponent ScrollViewProp
 	{
@@ -60,14 +60,14 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC0F RID: 64527 RVA: 0x003D1AB0 File Offset: 0x003CFCB0
+	// Token: 0x0600D033 RID: 53299 RVA: 0x003DD68C File Offset: 0x003DB88C
 	public InteractionHintView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x17001354 RID: 4948
-	// (get) Token: 0x0600FC10 RID: 64528 RVA: 0x003D1AE8 File Offset: 0x003CFCE8
-	// (set) Token: 0x0600FC11 RID: 64529 RVA: 0x003D1AF0 File Offset: 0x003CFCF0
+	// Token: 0x17001380 RID: 4992
+	// (get) Token: 0x0600D034 RID: 53300 RVA: 0x003DD6C4 File Offset: 0x003DB8C4
+	// (set) Token: 0x0600D035 RID: 53301 RVA: 0x003DD6CC File Offset: 0x003DB8CC
 	public int SelectedIndex
 	{
 		get
@@ -81,7 +81,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC12 RID: 64530 RVA: 0x003D1B0C File Offset: 0x003CFD0C
+	// Token: 0x0600D036 RID: 53302 RVA: 0x003DD6E8 File Offset: 0x003DB8E8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -110,7 +110,7 @@ public class InteractionHintView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FC13 RID: 64531 RVA: 0x003D1C38 File Offset: 0x003CFE38
+	// Token: 0x0600D037 RID: 53303 RVA: 0x003DD814 File Offset: 0x003DBA14
 	protected override void OnAddEventListener()
 	{
 		this.AddInputEvent();
@@ -122,7 +122,7 @@ public class InteractionHintView : UiTickViewBase
 		BattleUiModel.Instance.ChildViewData.AddCallback(EBattleUiChild.InteractionHint, new Action(this.OnVisibleChanged));
 	}
 
-	// Token: 0x0600FC14 RID: 64532 RVA: 0x003D1CF4 File Offset: 0x003CFEF4
+	// Token: 0x0600D038 RID: 53304 RVA: 0x003DD8D0 File Offset: 0x003DBAD0
 	private void OnInputControllerChange(EInputControllerType eInputControllerType, EInputControllerType inputControllerType)
 	{
 		this.RefreshInteractGuide();
@@ -130,7 +130,7 @@ public class InteractionHintView : UiTickViewBase
 		this.AddInputEvent();
 	}
 
-	// Token: 0x0600FC15 RID: 64533 RVA: 0x003D1D08 File Offset: 0x003CFF08
+	// Token: 0x0600D039 RID: 53305 RVA: 0x003DD8E4 File Offset: 0x003DBAE4
 	private void AddInputEvent()
 	{
 		InputDistributeController.Instance.BindAxis("WheelAxis", new TInputHandle<float>(this.OnInputWheelAxis));
@@ -181,7 +181,7 @@ public class InteractionHintView : UiTickViewBase
 		}, new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 	}
 
-	// Token: 0x0600FC16 RID: 64534 RVA: 0x003D1EB0 File Offset: 0x003D00B0
+	// Token: 0x0600D03A RID: 53306 RVA: 0x003DDA8C File Offset: 0x003DBC8C
 	protected override void OnRemoveEventListener()
 	{
 		this.RemoveInputEvent();
@@ -193,7 +193,7 @@ public class InteractionHintView : UiTickViewBase
 		BattleUiModel.Instance.ChildViewData.RemoveCallback(EBattleUiChild.InteractionHint, new Action(this.OnVisibleChanged));
 	}
 
-	// Token: 0x0600FC17 RID: 64535 RVA: 0x003D1F6C File Offset: 0x003D016C
+	// Token: 0x0600D03B RID: 53307 RVA: 0x003DDB48 File Offset: 0x003DBD48
 	private void RemoveInputEvent()
 	{
 		InputDistributeController.Instance.UnBindAxis("WheelAxis", new TInputHandle<float>(this.OnInputWheelAxis));
@@ -238,13 +238,13 @@ public class InteractionHintView : UiTickViewBase
 		}), new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 	}
 
-	// Token: 0x0600FC18 RID: 64536 RVA: 0x003D20B4 File Offset: 0x003D02B4
+	// Token: 0x0600D03C RID: 53308 RVA: 0x003DDC90 File Offset: 0x003DBE90
 	private void OnVisibleChanged()
 	{
 		this.RefreshVisible();
 	}
 
-	// Token: 0x0600FC19 RID: 64537 RVA: 0x003D20BC File Offset: 0x003D02BC
+	// Token: 0x0600D03D RID: 53309 RVA: 0x003DDC98 File Offset: 0x003DBE98
 	private void RefreshVisible()
 	{
 		bool childVisible = BattleUiModel.Instance.ChildViewData.GetChildVisible(EBattleUiChild.InteractionHint);
@@ -256,7 +256,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC1A RID: 64538 RVA: 0x003D210C File Offset: 0x003D030C
+	// Token: 0x0600D03E RID: 53310 RVA: 0x003DDCE8 File Offset: 0x003DBEE8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		InteractionHintView.<OnBeforeStartAsync>d__62 <OnBeforeStartAsync>d__;
@@ -267,7 +267,7 @@ public class InteractionHintView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FC1B RID: 64539 RVA: 0x003D2150 File Offset: 0x003D0350
+	// Token: 0x0600D03F RID: 53311 RVA: 0x003DDD2C File Offset: 0x003DBF2C
 	protected override UniTask OnShowAsyncImplementImplement()
 	{
 		InteractionHintView.<OnShowAsyncImplementImplement>d__63 <OnShowAsyncImplementImplement>d__;
@@ -278,7 +278,7 @@ public class InteractionHintView : UiTickViewBase
 		return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FC1C RID: 64540 RVA: 0x003D2193 File Offset: 0x003D0393
+	// Token: 0x0600D040 RID: 53312 RVA: 0x003DDD6F File Offset: 0x003DBF6F
 	protected override void OnAfterShow()
 	{
 		this.NewInteractionGuide();
@@ -287,13 +287,13 @@ public class InteractionHintView : UiTickViewBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnInteractViewVisibleChanged, true);
 	}
 
-	// Token: 0x0600FC1D RID: 64541 RVA: 0x003D21BA File Offset: 0x003D03BA
+	// Token: 0x0600D041 RID: 53313 RVA: 0x003DDD96 File Offset: 0x003DBF96
 	private void OnHideInteractView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600FC1E RID: 64542 RVA: 0x003D21C3 File Offset: 0x003D03C3
+	// Token: 0x0600D042 RID: 53314 RVA: 0x003DDD9F File Offset: 0x003DBF9F
 	protected override void OnAfterHide()
 	{
 		this.ExitLongPressButtonMode();
@@ -308,7 +308,7 @@ public class InteractionHintView : UiTickViewBase
 		longPressHud.UnbindEntity();
 	}
 
-	// Token: 0x0600FC1F RID: 64543 RVA: 0x003D21FC File Offset: 0x003D03FC
+	// Token: 0x0600D043 RID: 53315 RVA: 0x003DDDD8 File Offset: 0x003DBFD8
 	private InteractionHint InteractHint()
 	{
 		InteractionHint interactionHint = new InteractionHint();
@@ -319,7 +319,7 @@ public class InteractionHintView : UiTickViewBase
 		return interactionHint;
 	}
 
-	// Token: 0x0600FC20 RID: 64544 RVA: 0x003D2258 File Offset: 0x003D0458
+	// Token: 0x0600D044 RID: 53316 RVA: 0x003DDE34 File Offset: 0x003DC034
 	private void OnHintHover(InteractionHint hint)
 	{
 		this.IsHoverHint = true;
@@ -327,7 +327,7 @@ public class InteractionHintView : UiTickViewBase
 		this.SetSelected(actorIndex, true);
 	}
 
-	// Token: 0x0600FC21 RID: 64545 RVA: 0x003D227B File Offset: 0x003D047B
+	// Token: 0x0600D045 RID: 53317 RVA: 0x003DDE57 File Offset: 0x003DC057
 	private void OnHintUnHover(InteractionHint hint)
 	{
 		this.IsHoverHint = false;
@@ -339,19 +339,19 @@ public class InteractionHintView : UiTickViewBase
 		selectedHint.SetSelected(true);
 	}
 
-	// Token: 0x0600FC22 RID: 64546 RVA: 0x003D2295 File Offset: 0x003D0495
+	// Token: 0x0600D046 RID: 53318 RVA: 0x003DDE71 File Offset: 0x003DC071
 	private void OnPointDownCallback(EToggleState state, int index)
 	{
 		this.HandlePointClick(true, index);
 	}
 
-	// Token: 0x0600FC23 RID: 64547 RVA: 0x003D229F File Offset: 0x003D049F
+	// Token: 0x0600D047 RID: 53319 RVA: 0x003DDE7B File Offset: 0x003DC07B
 	private void OnPointUpCallback(EToggleState state, int index)
 	{
 		this.HandlePointClick(false, index);
 	}
 
-	// Token: 0x0600FC24 RID: 64548 RVA: 0x003D22AC File Offset: 0x003D04AC
+	// Token: 0x0600D048 RID: 53320 RVA: 0x003DDE88 File Offset: 0x003DC088
 	private void HandlePointClick(bool press, int index)
 	{
 		this.IsAutoPicked = false;
@@ -383,7 +383,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC25 RID: 64549 RVA: 0x003D2318 File Offset: 0x003D0518
+	// Token: 0x0600D049 RID: 53321 RVA: 0x003DDEF4 File Offset: 0x003DC0F4
 	private void OnShowMouseCursor(bool bShowMouseCursor)
 	{
 		if (bShowMouseCursor)
@@ -393,7 +393,7 @@ public class InteractionHintView : UiTickViewBase
 		this.IsHoverHint = false;
 	}
 
-	// Token: 0x0600FC26 RID: 64550 RVA: 0x003D2325 File Offset: 0x003D0525
+	// Token: 0x0600D04A RID: 53322 RVA: 0x003DDF01 File Offset: 0x003DC101
 	private void OnClickedAutoPickButton()
 	{
 		if (!Info.Instance.IsInTouch())
@@ -407,7 +407,7 @@ public class InteractionHintView : UiTickViewBase
 		this.AutoInteractAllItem();
 	}
 
-	// Token: 0x0600FC27 RID: 64551 RVA: 0x003D2344 File Offset: 0x003D0544
+	// Token: 0x0600D04B RID: 53323 RVA: 0x003DDF20 File Offset: 0x003DC120
 	private void AutoInteractAllItem()
 	{
 		this.IsAutoPicked = true;
@@ -427,7 +427,7 @@ public class InteractionHintView : UiTickViewBase
 		this.AutoPickUpNext();
 	}
 
-	// Token: 0x0600FC28 RID: 64552 RVA: 0x003D23A6 File Offset: 0x003D05A6
+	// Token: 0x0600D04C RID: 53324 RVA: 0x003DDF82 File Offset: 0x003DC182
 	private void OnInteractDropItemSuccess()
 	{
 		if (!this.IsAutoPicked)
@@ -438,7 +438,7 @@ public class InteractionHintView : UiTickViewBase
 		this.AutoPickUpNext();
 	}
 
-	// Token: 0x0600FC29 RID: 64553 RVA: 0x003D23C0 File Offset: 0x003D05C0
+	// Token: 0x0600D04D RID: 53325 RVA: 0x003DDF9C File Offset: 0x003DC19C
 	private void AutoPickUpNext()
 	{
 		this.CurrentAutoPickUpIndex++;
@@ -474,7 +474,7 @@ public class InteractionHintView : UiTickViewBase
 		this.FinishAutoInteractAllItem();
 	}
 
-	// Token: 0x0600FC2A RID: 64554 RVA: 0x003D24A0 File Offset: 0x003D06A0
+	// Token: 0x0600D04E RID: 53326 RVA: 0x003DE07C File Offset: 0x003DC27C
 	private void FinishAutoInteractAllItem()
 	{
 		this.RefreshInteractTargetEntities();
@@ -482,7 +482,7 @@ public class InteractionHintView : UiTickViewBase
 		this.IsAutoInteract = false;
 	}
 
-	// Token: 0x0600FC2B RID: 64555 RVA: 0x003D24C0 File Offset: 0x003D06C0
+	// Token: 0x0600D04F RID: 53327 RVA: 0x003DE09C File Offset: 0x003DC29C
 	public bool InteractPawn(int index, bool bWaitSequence = false)
 	{
 		if (this.IsExternalInteractIndex(index))
@@ -539,7 +539,7 @@ public class InteractionHintView : UiTickViewBase
 		return true;
 	}
 
-	// Token: 0x0600FC2C RID: 64556 RVA: 0x003D25E8 File Offset: 0x003D07E8
+	// Token: 0x0600D050 RID: 53328 RVA: 0x003DE1C4 File Offset: 0x003DC3C4
 	protected override void OnBeforeDestroy()
 	{
 		this.ExitLongPressButtonMode();
@@ -605,7 +605,7 @@ public class InteractionHintView : UiTickViewBase
 		this.RemoveNextUpdateTimer();
 	}
 
-	// Token: 0x0600FC2D RID: 64557 RVA: 0x003D273F File Offset: 0x003D093F
+	// Token: 0x0600D051 RID: 53329 RVA: 0x003DE31B File Offset: 0x003DC51B
 	private void OnUpdateInteractHintList()
 	{
 		this.IsAutoInteract = false;
@@ -620,7 +620,7 @@ public class InteractionHintView : UiTickViewBase
 		this.NextUpdateTimerId = TimerSystem.Instance.Next(new TTimerAction(this.OnNextRefreshInteractHintList), null, null);
 	}
 
-	// Token: 0x0600FC2E RID: 64558 RVA: 0x003D2778 File Offset: 0x003D0978
+	// Token: 0x0600D052 RID: 53330 RVA: 0x003DE354 File Offset: 0x003DC554
 	private void OnNextRefreshInteractHintList(float delta)
 	{
 		this.RefreshInteractTargetEntities();
@@ -632,7 +632,7 @@ public class InteractionHintView : UiTickViewBase
 		this.NextUpdateTimerId = null;
 	}
 
-	// Token: 0x0600FC2F RID: 64559 RVA: 0x003D27A9 File Offset: 0x003D09A9
+	// Token: 0x0600D053 RID: 53331 RVA: 0x003DE385 File Offset: 0x003DC585
 	private void RemoveNextUpdateTimer()
 	{
 		if (this.NextUpdateTimerId != null && TimerSystem.Instance.Has(this.NextUpdateTimerId))
@@ -642,7 +642,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC30 RID: 64560 RVA: 0x003D27E0 File Offset: 0x003D09E0
+	// Token: 0x0600D054 RID: 53332 RVA: 0x003DE3BC File Offset: 0x003DC5BC
 	private UniTask AsyncRefreshInteractHintList(List<Entity> interactTargetEntities)
 	{
 		InteractionHintView.<AsyncRefreshInteractHintList>d__84 <AsyncRefreshInteractHintList>d__;
@@ -654,7 +654,7 @@ public class InteractionHintView : UiTickViewBase
 		return <AsyncRefreshInteractHintList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FC31 RID: 64561 RVA: 0x003D282C File Offset: 0x003D0A2C
+	// Token: 0x0600D055 RID: 53333 RVA: 0x003DE408 File Offset: 0x003DC608
 	[NullableContext(0)]
 	private UniTask<bool> RefreshInteractionProcessors()
 	{
@@ -666,7 +666,7 @@ public class InteractionHintView : UiTickViewBase
 		return <RefreshInteractionProcessors>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FC32 RID: 64562 RVA: 0x003D2870 File Offset: 0x003D0A70
+	// Token: 0x0600D056 RID: 53334 RVA: 0x003DE44C File Offset: 0x003DC64C
 	private void ResetInteractionProcessors()
 	{
 		if (this.InteractionProcessors == null)
@@ -680,7 +680,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC33 RID: 64563 RVA: 0x003D28A4 File Offset: 0x003D0AA4
+	// Token: 0x0600D057 RID: 53335 RVA: 0x003DE480 File Offset: 0x003DC680
 	private void RefreshInteractTargetEntities()
 	{
 		this.InteractTargetEntities.Clear();
@@ -695,25 +695,25 @@ public class InteractionHintView : UiTickViewBase
 		this.ExternalInteractInfosCache = new List<ExternalInteractInfoInternal>();
 	}
 
-	// Token: 0x0600FC34 RID: 64564 RVA: 0x003D290A File Offset: 0x003D0B0A
+	// Token: 0x0600D058 RID: 53336 RVA: 0x003DE4E6 File Offset: 0x003DC6E6
 	private int RefreshInteractEntities(List<Entity> resultEntities)
 	{
 		return InteractionModel.Instance.RefreshInteractEntities(resultEntities);
 	}
 
-	// Token: 0x0600FC35 RID: 64565 RVA: 0x003D2917 File Offset: 0x003D0B17
+	// Token: 0x0600D059 RID: 53337 RVA: 0x003DE4F3 File Offset: 0x003DC6F3
 	private bool IsExternalInteractIndex(int index)
 	{
 		return index >= this.EntityInteractCount && index < this.GetTotalInteractCount();
 	}
 
-	// Token: 0x0600FC36 RID: 64566 RVA: 0x003D292D File Offset: 0x003D0B2D
+	// Token: 0x0600D05A RID: 53338 RVA: 0x003DE509 File Offset: 0x003DC709
 	private int GetTotalInteractCount()
 	{
 		return this.EntityInteractCount + this.ExternalInteractInfosCache.Count;
 	}
 
-	// Token: 0x0600FC37 RID: 64567 RVA: 0x003D2944 File Offset: 0x003D0B44
+	// Token: 0x0600D05B RID: 53339 RVA: 0x003DE520 File Offset: 0x003DC720
 	[NullableContext(2)]
 	private ExternalInteractInfoInternal GetExternalInfoByIndex(int index)
 	{
@@ -725,7 +725,7 @@ public class InteractionHintView : UiTickViewBase
 		return this.ExternalInteractInfosCache[index2];
 	}
 
-	// Token: 0x0600FC38 RID: 64568 RVA: 0x003D2974 File Offset: 0x003D0B74
+	// Token: 0x0600D05C RID: 53340 RVA: 0x003DE550 File Offset: 0x003DC750
 	private bool TryTriggerExternalInteract(int index)
 	{
 		ExternalInteractInfoInternal externalInfoByIndex = this.GetExternalInfoByIndex(index);
@@ -737,7 +737,7 @@ public class InteractionHintView : UiTickViewBase
 		return true;
 	}
 
-	// Token: 0x0600FC39 RID: 64569 RVA: 0x003D29A0 File Offset: 0x003D0BA0
+	// Token: 0x0600D05D RID: 53341 RVA: 0x003DE57C File Offset: 0x003DC77C
 	private bool IsSingleLongPressScene()
 	{
 		if (this.InteractionProcessors == null || this.InteractionProcessors.Length != 1)
@@ -753,7 +753,7 @@ public class InteractionHintView : UiTickViewBase
 		return longPressInteractionProcessor != null && longPressInteractionProcessor.StyleType.GetValueOrDefault() == ELongPressInteractStyle.TimeBackInteract;
 	}
 
-	// Token: 0x0600FC3A RID: 64570 RVA: 0x003D29F4 File Offset: 0x003D0BF4
+	// Token: 0x0600D05E RID: 53342 RVA: 0x003DE5D0 File Offset: 0x003DC7D0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -769,7 +769,7 @@ public class InteractionHintView : UiTickViewBase
 		return <EnsureLongPressHud>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FC3B RID: 64571 RVA: 0x003D2A38 File Offset: 0x003D0C38
+	// Token: 0x0600D05F RID: 53343 RVA: 0x003DE614 File Offset: 0x003DC814
 	private UniTask RefreshLongPressHud()
 	{
 		InteractionHintView.<RefreshLongPressHud>d__95 <RefreshLongPressHud>d__;
@@ -780,13 +780,13 @@ public class InteractionHintView : UiTickViewBase
 		return <RefreshLongPressHud>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FC3C RID: 64572 RVA: 0x003D2A7B File Offset: 0x003D0C7B
+	// Token: 0x0600D060 RID: 53344 RVA: 0x003DE657 File Offset: 0x003DC857
 	private bool IsSingleLongPressButtonScene()
 	{
 		return this.GetCurrentButtonStyle() != null;
 	}
 
-	// Token: 0x0600FC3D RID: 64573 RVA: 0x003D2A88 File Offset: 0x003D0C88
+	// Token: 0x0600D061 RID: 53345 RVA: 0x003DE664 File Offset: 0x003DC864
 	private ELongPressInteractStyle? GetCurrentButtonStyleType()
 	{
 		if (this.InteractionProcessors == null || this.InteractionProcessors.Length != 1)
@@ -801,7 +801,7 @@ public class InteractionHintView : UiTickViewBase
 		return ((LongPressInteractionProcessor)interactionProcessor).StyleType;
 	}
 
-	// Token: 0x0600FC3E RID: 64574 RVA: 0x003D2AD8 File Offset: 0x003D0CD8
+	// Token: 0x0600D062 RID: 53346 RVA: 0x003DE6B4 File Offset: 0x003DC8B4
 	[NullableContext(2)]
 	private ILongPressButtonStyle GetCurrentButtonStyle()
 	{
@@ -818,19 +818,19 @@ public class InteractionHintView : UiTickViewBase
 		return result;
 	}
 
-	// Token: 0x0600FC3F RID: 64575 RVA: 0x003D2B0F File Offset: 0x003D0D0F
+	// Token: 0x0600D063 RID: 53347 RVA: 0x003DE6EB File Offset: 0x003DC8EB
 	private bool IsLongPressButtonReady()
 	{
 		return this.LongPressButton != null && this.ActiveLongPressButtonProcessor != null && this.InteractionProcessors != null && this.InteractionProcessors.Length != 0 && this.InteractionProcessors[0] == this.ActiveLongPressButtonProcessor;
 	}
 
-	// Token: 0x0600FC40 RID: 64576 RVA: 0x003D2B44 File Offset: 0x003D0D44
+	// Token: 0x0600D064 RID: 53348 RVA: 0x003DE720 File Offset: 0x003DC920
 	private bool CanStartPress()
 	{
 		return !this.IsSingleLongPressButtonScene() || this.IsLongPressButtonReady();
 	}
 
-	// Token: 0x0600FC41 RID: 64577 RVA: 0x003D2B5C File Offset: 0x003D0D5C
+	// Token: 0x0600D065 RID: 53349 RVA: 0x003DE738 File Offset: 0x003DC938
 	private bool HasButtonStyleOption()
 	{
 		if (this.InteractionProcessors == null)
@@ -851,7 +851,7 @@ public class InteractionHintView : UiTickViewBase
 		return false;
 	}
 
-	// Token: 0x0600FC42 RID: 64578 RVA: 0x003D2BBF File Offset: 0x003D0DBF
+	// Token: 0x0600D066 RID: 53350 RVA: 0x003DE79B File Offset: 0x003DC99B
 	private void SetInteractListVisible(bool visible)
 	{
 		UUIItem scrollViewItem = this.ScrollViewItem;
@@ -862,7 +862,7 @@ public class InteractionHintView : UiTickViewBase
 		scrollViewItem.SetUIActive(visible);
 	}
 
-	// Token: 0x0600FC43 RID: 64579 RVA: 0x003D2BD4 File Offset: 0x003D0DD4
+	// Token: 0x0600D067 RID: 53351 RVA: 0x003DE7B0 File Offset: 0x003DC9B0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -891,7 +891,7 @@ public class InteractionHintView : UiTickViewBase
 		return this.CreateLongPressButton(style);
 	}
 
-	// Token: 0x0600FC44 RID: 64580 RVA: 0x003D2C50 File Offset: 0x003D0E50
+	// Token: 0x0600D068 RID: 53352 RVA: 0x003DE82C File Offset: 0x003DCA2C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -908,7 +908,7 @@ public class InteractionHintView : UiTickViewBase
 		return <CreateLongPressButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FC45 RID: 64581 RVA: 0x003D2C9C File Offset: 0x003D0E9C
+	// Token: 0x0600D069 RID: 53353 RVA: 0x003DE878 File Offset: 0x003DCA78
 	private UniTask RefreshLongPressButton([Nullable(new byte[]
 	{
 		0,
@@ -924,7 +924,7 @@ public class InteractionHintView : UiTickViewBase
 		return <RefreshLongPressButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FC46 RID: 64582 RVA: 0x003D2CE8 File Offset: 0x003D0EE8
+	// Token: 0x0600D06A RID: 53354 RVA: 0x003DE8C4 File Offset: 0x003DCAC4
 	private void ExitLongPressButtonMode()
 	{
 		this.LongPressButtonRequestId++;
@@ -943,7 +943,7 @@ public class InteractionHintView : UiTickViewBase
 		this.SetInteractListVisible(true);
 	}
 
-	// Token: 0x0600FC47 RID: 64583 RVA: 0x003D2D39 File Offset: 0x003D0F39
+	// Token: 0x0600D06B RID: 53355 RVA: 0x003DE915 File Offset: 0x003DCB15
 	[NullableContext(2)]
 	private void DiscardStaleLongPressButton(InteractionLongPressButton button)
 	{
@@ -953,7 +953,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC48 RID: 64584 RVA: 0x003D2D4E File Offset: 0x003D0F4E
+	// Token: 0x0600D06C RID: 53356 RVA: 0x003DE92A File Offset: 0x003DCB2A
 	private void ApplySpotProgressSuppression(Entity entity)
 	{
 		if (this.LastSpotSuppressedEntity != null && this.LastSpotSuppressedEntity != entity && this.LastSpotSuppressedEntity.Valid)
@@ -964,7 +964,7 @@ public class InteractionHintView : UiTickViewBase
 		this.LastSpotSuppressedEntity = entity;
 	}
 
-	// Token: 0x0600FC49 RID: 64585 RVA: 0x003D2D8A File Offset: 0x003D0F8A
+	// Token: 0x0600D06D RID: 53357 RVA: 0x003DE966 File Offset: 0x003DCB66
 	private void ClearSpotProgressSuppression()
 	{
 		Entity lastSpotSuppressedEntity = this.LastSpotSuppressedEntity;
@@ -975,7 +975,7 @@ public class InteractionHintView : UiTickViewBase
 		this.LastSpotSuppressedEntity = null;
 	}
 
-	// Token: 0x0600FC4A RID: 64586 RVA: 0x003D2DB4 File Offset: 0x003D0FB4
+	// Token: 0x0600D06E RID: 53358 RVA: 0x003DE990 File Offset: 0x003DCB90
 	private void SetSpotSuppress(Entity entity, bool suppress)
 	{
 		InteractionSpotComponent component = entity.GetComponent<InteractionSpotComponent>();
@@ -986,7 +986,7 @@ public class InteractionHintView : UiTickViewBase
 		component.SetSuppressLongPressProgress(suppress);
 	}
 
-	// Token: 0x0600FC4B RID: 64587 RVA: 0x003D2DC8 File Offset: 0x003D0FC8
+	// Token: 0x0600D06F RID: 53359 RVA: 0x003DE9A4 File Offset: 0x003DCBA4
 	protected override void OnTick(float delta)
 	{
 		if (this.NeedLerp)
@@ -1032,7 +1032,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC4C RID: 64588 RVA: 0x003D2EC0 File Offset: 0x003D10C0
+	// Token: 0x0600D070 RID: 53360 RVA: 0x003DEA9C File Offset: 0x003DCC9C
 	private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
 		if (!this.IsDefaultKeyAllowedForSelected(actionName))
@@ -1055,7 +1055,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC4D RID: 64589 RVA: 0x003D2EF0 File Offset: 0x003D10F0
+	// Token: 0x0600D071 RID: 53361 RVA: 0x003DEACC File Offset: 0x003DCCCC
 	[NullableContext(2)]
 	private string GetCustomTriggerActionNameByIndex(int uiIndex)
 	{
@@ -1090,20 +1090,20 @@ public class InteractionHintView : UiTickViewBase
 		return null;
 	}
 
-	// Token: 0x0600FC4E RID: 64590 RVA: 0x003D2F5D File Offset: 0x003D115D
+	// Token: 0x0600D072 RID: 53362 RVA: 0x003DEB39 File Offset: 0x003DCD39
 	[NullableContext(2)]
 	private string GetSelectedCustomTriggerActionName()
 	{
 		return this.GetCustomTriggerActionNameByIndex(this.SelectedIndex);
 	}
 
-	// Token: 0x0600FC4F RID: 64591 RVA: 0x003D2F6B File Offset: 0x003D116B
+	// Token: 0x0600D073 RID: 53363 RVA: 0x003DEB47 File Offset: 0x003DCD47
 	private EInputAction? GetSelectedCustomTriggerInputAction()
 	{
 		return this.GetCustomTriggerInputActionByIndex(this.SelectedIndex);
 	}
 
-	// Token: 0x0600FC50 RID: 64592 RVA: 0x003D2F7C File Offset: 0x003D117C
+	// Token: 0x0600D074 RID: 53364 RVA: 0x003DEB58 File Offset: 0x003DCD58
 	private EInputAction? GetCustomTriggerInputActionByIndex(int uiIndex)
 	{
 		string customTriggerActionNameByIndex = this.GetCustomTriggerActionNameByIndex(uiIndex);
@@ -1119,13 +1119,13 @@ public class InteractionHintView : UiTickViewBase
 		return currentInputData.GetAction(customTriggerActionNameByIndex);
 	}
 
-	// Token: 0x0600FC51 RID: 64593 RVA: 0x003D2FC1 File Offset: 0x003D11C1
+	// Token: 0x0600D075 RID: 53365 RVA: 0x003DEB9D File Offset: 0x003DCD9D
 	private void OnCustomTriggerPress()
 	{
 		this.PressInteractAction();
 	}
 
-	// Token: 0x0600FC52 RID: 64594 RVA: 0x003D2FC9 File Offset: 0x003D11C9
+	// Token: 0x0600D076 RID: 53366 RVA: 0x003DEBA5 File Offset: 0x003DCDA5
 	private void OnCustomTriggerRelease()
 	{
 		if (this.SelectedHint != null)
@@ -1136,13 +1136,13 @@ public class InteractionHintView : UiTickViewBase
 		this.IsDelayInputRelease = true;
 	}
 
-	// Token: 0x0600FC53 RID: 64595 RVA: 0x003D2FE1 File Offset: 0x003D11E1
+	// Token: 0x0600D077 RID: 53367 RVA: 0x003DEBBD File Offset: 0x003DCDBD
 	private bool IsDefaultKeyAllowedForSelected(string actionName)
 	{
 		return this.GetSelectedCustomTriggerActionName() == null && (actionName == "通用交互" || actionName == "UI键盘F手柄A");
 	}
 
-	// Token: 0x0600FC54 RID: 64596 RVA: 0x003D3008 File Offset: 0x003D1208
+	// Token: 0x0600D078 RID: 53368 RVA: 0x003DEBE4 File Offset: 0x003DCDE4
 	private void PressInteractAction()
 	{
 		this.IsAutoPicked = false;
@@ -1180,13 +1180,13 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC55 RID: 64597 RVA: 0x003D30C5 File Offset: 0x003D12C5
+	// Token: 0x0600D079 RID: 53369 RVA: 0x003DECA1 File Offset: 0x003DCEA1
 	private void OnLongPress(float detal)
 	{
 		this.AutoInteractAllItem();
 	}
 
-	// Token: 0x0600FC56 RID: 64598 RVA: 0x003D30CD File Offset: 0x003D12CD
+	// Token: 0x0600D07A RID: 53370 RVA: 0x003DECA9 File Offset: 0x003DCEA9
 	private void RemoveLongPressDelay()
 	{
 		if (this.LongPressDelayId != null && TimerSystem.Instance.Has(this.LongPressDelayId))
@@ -1196,7 +1196,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC57 RID: 64599 RVA: 0x003D3104 File Offset: 0x003D1304
+	// Token: 0x0600D07B RID: 53371 RVA: 0x003DECE0 File Offset: 0x003DCEE0
 	private void ReleaseInteractAction()
 	{
 		this.RemoveLongPressDelay();
@@ -1236,7 +1236,7 @@ public class InteractionHintView : UiTickViewBase
 		this.SelectedIndex = Math.Min(this.SelectedIndex, val);
 	}
 
-	// Token: 0x0600FC58 RID: 64600 RVA: 0x003D31D1 File Offset: 0x003D13D1
+	// Token: 0x0600D07C RID: 53372 RVA: 0x003DEDAD File Offset: 0x003DCFAD
 	private void OnInputChangeInteractAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
 		if (actionType == InputDistributeDefine.EActionType.Press)
@@ -1245,7 +1245,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC59 RID: 64601 RVA: 0x003D31E3 File Offset: 0x003D13E3
+	// Token: 0x0600D07D RID: 53373 RVA: 0x003DEDBF File Offset: 0x003DCFBF
 	private void OnInputWheelAxis([Nullable(2)] string axisName, float value, InputIdentification inputIdentification)
 	{
 		if (value == 0f)
@@ -1263,7 +1263,7 @@ public class InteractionHintView : UiTickViewBase
 		this.SelectHint(value > 0f);
 	}
 
-	// Token: 0x0600FC5A RID: 64602 RVA: 0x003D3214 File Offset: 0x003D1414
+	// Token: 0x0600D07E RID: 53374 RVA: 0x003DEDF0 File Offset: 0x003DCFF0
 	private void OnInputUp(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
 		if (actionType == InputDistributeDefine.EActionType.Press)
@@ -1272,7 +1272,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC5B RID: 64603 RVA: 0x003D3220 File Offset: 0x003D1420
+	// Token: 0x0600D07F RID: 53375 RVA: 0x003DEDFC File Offset: 0x003DCFFC
 	private void OnInputDown(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
 		if (actionType == InputDistributeDefine.EActionType.Press)
@@ -1281,7 +1281,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC5C RID: 64604 RVA: 0x003D322C File Offset: 0x003D142C
+	// Token: 0x0600D080 RID: 53376 RVA: 0x003DEE08 File Offset: 0x003DD008
 	private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification inputIdentification)
 	{
 		InputDistributeDefine.ETouchType touchType = touchData.TouchType;
@@ -1306,7 +1306,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC5D RID: 64605 RVA: 0x003D3294 File Offset: 0x003D1494
+	// Token: 0x0600D081 RID: 53377 RVA: 0x003DEE70 File Offset: 0x003DD070
 	protected void SelectHint(bool bNext)
 	{
 		int num = this.GetTotalInteractCount() - 1;
@@ -1329,7 +1329,7 @@ public class InteractionHintView : UiTickViewBase
 		this.SetSelected(this.NextIndex, true);
 	}
 
-	// Token: 0x0600FC5E RID: 64606 RVA: 0x003D32F0 File Offset: 0x003D14F0
+	// Token: 0x0600D082 RID: 53378 RVA: 0x003DEECC File Offset: 0x003DD0CC
 	private void SetSelected(int index, bool bCheckRepetitive = true)
 	{
 		if (bCheckRepetitive && index == this.SelectedIndex)
@@ -1378,7 +1378,7 @@ public class InteractionHintView : UiTickViewBase
 		this.ScrollView.ScrollTo(layoutItemByIndex.GetRootItem(), false);
 	}
 
-	// Token: 0x0600FC5F RID: 64607 RVA: 0x003D33F0 File Offset: 0x003D15F0
+	// Token: 0x0600D083 RID: 53379 RVA: 0x003DEFCC File Offset: 0x003DD1CC
 	private void RefreshSelectedLongPressTime()
 	{
 		if (!this.HasAutoPickUpItem())
@@ -1404,7 +1404,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC60 RID: 64608 RVA: 0x003D3434 File Offset: 0x003D1634
+	// Token: 0x0600D084 RID: 53380 RVA: 0x003DF010 File Offset: 0x003DD210
 	private void NewInteractionGuide()
 	{
 		InteractionModel instance = InteractionModel.Instance;
@@ -1448,7 +1448,7 @@ public class InteractionHintView : UiTickViewBase
 		instance.SaveAutoInteractionGuideAppearCount(instance.AutoInteractionGuideAppearCount + 1);
 	}
 
-	// Token: 0x0600FC61 RID: 64609 RVA: 0x003D3508 File Offset: 0x003D1708
+	// Token: 0x0600D085 RID: 53381 RVA: 0x003DF0E4 File Offset: 0x003DD2E4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1464,7 +1464,7 @@ public class InteractionHintView : UiTickViewBase
 		return <NewInteractGuide>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FC62 RID: 64610 RVA: 0x003D354B File Offset: 0x003D174B
+	// Token: 0x0600D086 RID: 53382 RVA: 0x003DF127 File Offset: 0x003DD327
 	private void RefreshInteractGuide()
 	{
 		if (this.InteractionGuide == null)
@@ -1479,7 +1479,7 @@ public class InteractionHintView : UiTickViewBase
 		this.InteractionGuide.Refresh("DesktopAutoPickUpText");
 	}
 
-	// Token: 0x0600FC63 RID: 64611 RVA: 0x003D3584 File Offset: 0x003D1784
+	// Token: 0x0600D087 RID: 53383 RVA: 0x003DF160 File Offset: 0x003DD360
 	private void TryToShowFishTips()
 	{
 		foreach (Entity entity in this.InteractTargetEntities)
@@ -1531,7 +1531,7 @@ public class InteractionHintView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FC64 RID: 64612 RVA: 0x003D36B8 File Offset: 0x003D18B8
+	// Token: 0x0600D088 RID: 53384 RVA: 0x003DF294 File Offset: 0x003DD494
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1550,13 +1550,13 @@ public class InteractionHintView : UiTickViewBase
 		return <NewFishTips>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FC65 RID: 64613 RVA: 0x003D3713 File Offset: 0x003D1913
+	// Token: 0x0600D089 RID: 53385 RVA: 0x003DF2EF File Offset: 0x003DD4EF
 	private bool HasAutoPickUpItem()
 	{
 		return this.AutoPickUpItemCount > 0;
 	}
 
-	// Token: 0x0600FC66 RID: 64614 RVA: 0x003D3720 File Offset: 0x003D1920
+	// Token: 0x0600D08A RID: 53386 RVA: 0x003DF2FC File Offset: 0x003DD4FC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1587,23 +1587,23 @@ public class InteractionHintView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x0600FC67 RID: 64615 RVA: 0x003D37A2 File Offset: 0x003D19A2
+	// Token: 0x0600D08B RID: 53387 RVA: 0x003DF37E File Offset: 0x003DD57E
 	protected override ELayerType OnGetLayer()
 	{
 		return ELayerType.Normal;
 	}
 
-	// Token: 0x04007534 RID: 30004
+	// Token: 0x04007617 RID: 30231
 	private const int LONG_PRESS_SHOW_TIME = 100;
 
-	// Token: 0x04007535 RID: 30005
+	// Token: 0x04007618 RID: 30232
 	[Nullable(2)]
 	private UUIScrollViewWithScrollbarComponent ScrollView;
 
-	// Token: 0x04007536 RID: 30006
+	// Token: 0x04007619 RID: 30233
 	private float ScrollSensitivity;
 
-	// Token: 0x04007537 RID: 30007
+	// Token: 0x0400761A RID: 30234
 	[Nullable(new byte[]
 	{
 		2,
@@ -1612,122 +1612,122 @@ public class InteractionHintView : UiTickViewBase
 	})]
 	private GenericLayout<InteractionHint, Entity> GenericLayout;
 
-	// Token: 0x04007538 RID: 30008
+	// Token: 0x0400761B RID: 30235
 	private int LastLength = 1;
 
-	// Token: 0x04007539 RID: 30009
+	// Token: 0x0400761C RID: 30236
 	private int MaxLength;
 
-	// Token: 0x0400753A RID: 30010
+	// Token: 0x0400761D RID: 30237
 	private float BaseOffsetY;
 
-	// Token: 0x0400753B RID: 30011
+	// Token: 0x0400761E RID: 30238
 	private float TargetOffsetY;
 
-	// Token: 0x0400753C RID: 30012
+	// Token: 0x0400761F RID: 30239
 	private float ItemHeight;
 
-	// Token: 0x0400753D RID: 30013
+	// Token: 0x04007620 RID: 30240
 	private float LerpPassTime = 500f;
 
-	// Token: 0x0400753E RID: 30014
+	// Token: 0x04007621 RID: 30241
 	private int SelectedIndexInternal = -1;
 
-	// Token: 0x0400753F RID: 30015
+	// Token: 0x04007622 RID: 30242
 	private int NextIndex;
 
-	// Token: 0x04007540 RID: 30016
+	// Token: 0x04007623 RID: 30243
 	[Nullable(2)]
 	private UUIItem ScrollViewItem;
 
-	// Token: 0x04007541 RID: 30017
+	// Token: 0x04007624 RID: 30244
 	private readonly List<Entity> InteractTargetEntities = new List<Entity>();
 
-	// Token: 0x04007542 RID: 30018
+	// Token: 0x04007625 RID: 30245
 	private int AutoPickUpItemCount;
 
-	// Token: 0x04007543 RID: 30019
+	// Token: 0x04007626 RID: 30246
 	private bool IsAutoInteract;
 
-	// Token: 0x04007544 RID: 30020
+	// Token: 0x04007627 RID: 30247
 	[Nullable(2)]
 	private TimerHandle LongPressDelayId;
 
-	// Token: 0x04007545 RID: 30021
+	// Token: 0x04007628 RID: 30248
 	[Nullable(2)]
 	private TimerHandle NextUpdateTimerId;
 
-	// Token: 0x04007546 RID: 30022
+	// Token: 0x04007629 RID: 30249
 	[Nullable(2)]
 	private InteractionGuide InteractionGuide;
 
-	// Token: 0x04007547 RID: 30023
+	// Token: 0x0400762A RID: 30250
 	[Nullable(2)]
 	private FishTipItem FishTips;
 
-	// Token: 0x04007548 RID: 30024
+	// Token: 0x0400762B RID: 30251
 	[Nullable(2)]
 	private InteractionLongPressHud LongPressHud;
 
-	// Token: 0x04007549 RID: 30025
+	// Token: 0x0400762C RID: 30252
 	[Nullable(2)]
 	private InteractionLongPressButton LongPressButton;
 
-	// Token: 0x0400754A RID: 30026
+	// Token: 0x0400762D RID: 30253
 	private int LongPressButtonRequestId;
 
-	// Token: 0x0400754B RID: 30027
+	// Token: 0x0400762E RID: 30254
 	private ELongPressInteractStyle? LongPressButtonStyleType;
 
-	// Token: 0x0400754C RID: 30028
+	// Token: 0x0400762F RID: 30255
 	[Nullable(2)]
 	private LongPressInteractionProcessor ActiveLongPressButtonProcessor;
 
-	// Token: 0x0400754D RID: 30029
+	// Token: 0x04007630 RID: 30256
 	[Nullable(2)]
 	private Entity LastSpotSuppressedEntity;
 
-	// Token: 0x0400754E RID: 30030
+	// Token: 0x04007631 RID: 30257
 	private int LongPressTime;
 
-	// Token: 0x0400754F RID: 30031
+	// Token: 0x04007632 RID: 30258
 	private bool IsAutoPicked;
 
-	// Token: 0x04007550 RID: 30032
+	// Token: 0x04007633 RID: 30259
 	private int AutoPickUpIndex;
 
-	// Token: 0x04007551 RID: 30033
+	// Token: 0x04007634 RID: 30260
 	private int CurrentAutoPickUpIndex;
 
-	// Token: 0x04007552 RID: 30034
+	// Token: 0x04007635 RID: 30261
 	private int AutoPickLength;
 
-	// Token: 0x04007553 RID: 30035
+	// Token: 0x04007636 RID: 30262
 	private bool IsTouchAutoPickUpItem;
 
-	// Token: 0x04007554 RID: 30036
+	// Token: 0x04007637 RID: 30263
 	private float OriginalOffsetY;
 
-	// Token: 0x04007555 RID: 30037
+	// Token: 0x04007638 RID: 30264
 	[Nullable(2)]
 	private InteractionHint SelectedHint;
 
-	// Token: 0x04007556 RID: 30038
+	// Token: 0x04007639 RID: 30265
 	private bool IsDelayInputRelease;
 
-	// Token: 0x04007557 RID: 30039
+	// Token: 0x0400763A RID: 30266
 	public bool IsHoverHint;
 
-	// Token: 0x04007558 RID: 30040
+	// Token: 0x0400763B RID: 30267
 	private bool NeedLerp;
 
-	// Token: 0x04007559 RID: 30041
+	// Token: 0x0400763C RID: 30268
 	private bool IsPlayingDisappearSequence;
 
-	// Token: 0x0400755A RID: 30042
+	// Token: 0x0400763D RID: 30269
 	private bool IsPressed;
 
-	// Token: 0x0400755B RID: 30043
+	// Token: 0x0400763E RID: 30270
 	[Nullable(new byte[]
 	{
 		2,
@@ -1735,42 +1735,42 @@ public class InteractionHintView : UiTickViewBase
 	})]
 	private InteractionProcessor[] InteractionProcessors;
 
-	// Token: 0x0400755C RID: 30044
+	// Token: 0x0400763F RID: 30271
 	private List<ExternalInteractInfoInternal> ExternalInteractInfosCache = new List<ExternalInteractInfoInternal>();
 
-	// Token: 0x0400755D RID: 30045
+	// Token: 0x04007640 RID: 30272
 	private int EntityInteractCount;
 
-	// Token: 0x0400755E RID: 30046
+	// Token: 0x04007641 RID: 30273
 	[Nullable(2)]
 	private InputLayerHelper InteractionInputLayerHelper;
 
-	// Token: 0x0400755F RID: 30047
+	// Token: 0x04007642 RID: 30274
 	private bool IsSpecialBindAxis;
 
-	// Token: 0x04007560 RID: 30048
+	// Token: 0x04007643 RID: 30275
 	private bool IsGamepadInput;
 
-	// Token: 0x0200859D RID: 34205
+	// Token: 0x02007721 RID: 30497
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402B800 RID: 178176
+		// Token: 0x04026B21 RID: 158497
 		public const int InteractToggleGroup = 0;
 
-		// Token: 0x0402B801 RID: 178177
+		// Token: 0x04026B22 RID: 158498
 		public const int FirstInteractHint = 1;
 
-		// Token: 0x0402B802 RID: 178178
+		// Token: 0x04026B23 RID: 158499
 		public const int ScrollView = 2;
 
-		// Token: 0x0402B803 RID: 178179
+		// Token: 0x04026B24 RID: 158500
 		public const int ScrollViewItem = 3;
 
-		// Token: 0x0402B804 RID: 178180
+		// Token: 0x04026B25 RID: 158501
 		public const int PickUpButton = 4;
 
-		// Token: 0x0402B805 RID: 178181
+		// Token: 0x04026B26 RID: 158502
 		public const int GuideItem = 5;
 	}
 }

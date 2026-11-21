@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x02002B1D RID: 11037
+// Token: 0x02002099 RID: 8345
 internal enum <SurvivorsRewardTaskItem>F7465E58F81A7BFD5D274B457725C2A93FF1F838FEFF1BCEB350FC388CCD5EAA4__EComponentsSurvivorsRewardTask
 {
-	// Token: 0x0400AA8D RID: 43661
+	// Token: 0x0400AE93 RID: 44691
 	TextName,
-	// Token: 0x0400AA8E RID: 43662
+	// Token: 0x0400AE94 RID: 44692
 	TextProgress,
-	// Token: 0x0400AA8F RID: 43663
+	// Token: 0x0400AE95 RID: 44693
 	ScrollReward,
-	// Token: 0x0400AA90 RID: 43664
+	// Token: 0x0400AE96 RID: 44694
 	ItemReward,
-	// Token: 0x0400AA91 RID: 43665
+	// Token: 0x0400AE97 RID: 44695
 	ButtonGet,
-	// Token: 0x0400AA92 RID: 43666
+	// Token: 0x0400AE98 RID: 44696
 	TextDoing,
-	// Token: 0x0400AA93 RID: 43667
+	// Token: 0x0400AE99 RID: 44697
 	SpriteFinish,
-	// Token: 0x0400AA94 RID: 43668
+	// Token: 0x0400AE9A RID: 44698
 	ItemRedDot,
-	// Token: 0x0400AA95 RID: 43669
+	// Token: 0x0400AE9B RID: 44699
 	ButtonJump
 }

@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D93 RID: 7571
+	// Token: 0x02001FA6 RID: 8102
 	public class IRemainStarWarning_SetValue
 	{
-		// Token: 0x0400617E RID: 24958
+		// Token: 0x040066FF RID: 26367
 		public ECommonTipType Type;
 
-		// Token: 0x0400617F RID: 24959
-		[Nullable(1)]
+		// Token: 0x04006700 RID: 26368
 		public string WarningText;
 	}
 }

@@ -4,50 +4,50 @@ using Aki.UniverseEditor.Interface.Fbs.Actor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200589E RID: 22686
+	// Token: 0x02005EAB RID: 24235
 	public class ISceneActorRefComponentT
 	{
-		// Token: 0x1700A9D2 RID: 43474
-		// (get) Token: 0x06026436 RID: 156726 RVA: 0x0054658A File Offset: 0x0054478A
-		// (set) Token: 0x06026437 RID: 156727 RVA: 0x00546592 File Offset: 0x00544792
+		// Token: 0x1700B302 RID: 45826
+		// (get) Token: 0x06028998 RID: 166296 RVA: 0x0058D0D6 File Offset: 0x0058B2D6
+		// (set) Token: 0x06028999 RID: 166297 RVA: 0x0058D0DE File Offset: 0x0058B2DE
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A9D3 RID: 43475
-		// (get) Token: 0x06026438 RID: 156728 RVA: 0x0054659B File Offset: 0x0054479B
-		// (set) Token: 0x06026439 RID: 156729 RVA: 0x005465A3 File Offset: 0x005447A3
+		// Token: 0x1700B303 RID: 45827
+		// (get) Token: 0x0602899A RID: 166298 RVA: 0x0058D0E7 File Offset: 0x0058B2E7
+		// (set) Token: 0x0602899B RID: 166299 RVA: 0x0058D0EF File Offset: 0x0058B2EF
 		public List<ISceneActorRefGroupT> ActorRefGroups { get; set; }
 
-		// Token: 0x1700A9D4 RID: 43476
-		// (get) Token: 0x0602643A RID: 156730 RVA: 0x005465AC File Offset: 0x005447AC
-		// (set) Token: 0x0602643B RID: 156731 RVA: 0x005465B4 File Offset: 0x005447B4
+		// Token: 0x1700B304 RID: 45828
+		// (get) Token: 0x0602899C RID: 166300 RVA: 0x0058D0F8 File Offset: 0x0058B2F8
+		// (set) Token: 0x0602899D RID: 166301 RVA: 0x0058D100 File Offset: 0x0058B300
 		public List<IActorRefT> VolumesRef { get; set; }
 
-		// Token: 0x1700A9D5 RID: 43477
-		// (get) Token: 0x0602643C RID: 156732 RVA: 0x005465BD File Offset: 0x005447BD
-		// (set) Token: 0x0602643D RID: 156733 RVA: 0x005465C5 File Offset: 0x005447C5
+		// Token: 0x1700B305 RID: 45829
+		// (get) Token: 0x0602899E RID: 166302 RVA: 0x0058D109 File Offset: 0x0058B309
+		// (set) Token: 0x0602899F RID: 166303 RVA: 0x0058D111 File Offset: 0x0058B311
 		public ILiftFloorSeqMarkConfigT LiftFloorSeqMarks { get; set; }
 
-		// Token: 0x1700A9D6 RID: 43478
-		// (get) Token: 0x0602643E RID: 156734 RVA: 0x005465CE File Offset: 0x005447CE
-		// (set) Token: 0x0602643F RID: 156735 RVA: 0x005465D6 File Offset: 0x005447D6
+		// Token: 0x1700B306 RID: 45830
+		// (get) Token: 0x060289A0 RID: 166304 RVA: 0x0058D11A File Offset: 0x0058B31A
+		// (set) Token: 0x060289A1 RID: 166305 RVA: 0x0058D122 File Offset: 0x0058B322
 		public List<IActorRefT> ZoneFollowCameraControllerRef { get; set; }
 
-		// Token: 0x1700A9D7 RID: 43479
-		// (get) Token: 0x06026440 RID: 156736 RVA: 0x005465DF File Offset: 0x005447DF
-		// (set) Token: 0x06026441 RID: 156737 RVA: 0x005465E7 File Offset: 0x005447E7
+		// Token: 0x1700B307 RID: 45831
+		// (get) Token: 0x060289A2 RID: 166306 RVA: 0x0058D12B File Offset: 0x0058B32B
+		// (set) Token: 0x060289A3 RID: 166307 RVA: 0x0058D133 File Offset: 0x0058B333
 		public List<IRefactorActorRef2EntitiesT> RefactorActorRef2Entities { get; set; }
 
-		// Token: 0x1700A9D8 RID: 43480
-		// (get) Token: 0x06026442 RID: 156738 RVA: 0x005465F0 File Offset: 0x005447F0
-		// (set) Token: 0x06026443 RID: 156739 RVA: 0x005465F8 File Offset: 0x005447F8
+		// Token: 0x1700B308 RID: 45832
+		// (get) Token: 0x060289A4 RID: 166308 RVA: 0x0058D13C File Offset: 0x0058B33C
+		// (set) Token: 0x060289A5 RID: 166309 RVA: 0x0058D144 File Offset: 0x0058B344
 		public List<IActorRefT> NoiseWallRefs { get; set; }
 
-		// Token: 0x1700A9D9 RID: 43481
-		// (get) Token: 0x06026444 RID: 156740 RVA: 0x00546601 File Offset: 0x00544801
-		// (set) Token: 0x06026445 RID: 156741 RVA: 0x00546609 File Offset: 0x00544809
+		// Token: 0x1700B309 RID: 45833
+		// (get) Token: 0x060289A6 RID: 166310 RVA: 0x0058D14D File Offset: 0x0058B34D
+		// (set) Token: 0x060289A7 RID: 166311 RVA: 0x0058D155 File Offset: 0x0058B355
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026446 RID: 156742 RVA: 0x00546612 File Offset: 0x00544812
+		// Token: 0x060289A8 RID: 166312 RVA: 0x0058D15E File Offset: 0x0058B35E
 		public ISceneActorRefComponentT()
 		{
 			this.Disabled = false;

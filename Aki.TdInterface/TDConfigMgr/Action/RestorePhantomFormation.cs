@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002169 RID: 8553
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023CA RID: 9162
 	public class RestorePhantomFormation : ActionParams
 	{
-		// Token: 0x0600BC26 RID: 48166 RVA: 0x001B1FA4 File Offset: 0x001B01A4
+		// Token: 0x0600C7B4 RID: 51124 RVA: 0x001C9158 File Offset: 0x001C7358
 		private RestorePhantomFormation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BC27 RID: 48167 RVA: 0x001B1FDC File Offset: 0x001B01DC
+		// Token: 0x0600C7B5 RID: 51125 RVA: 0x001C9190 File Offset: 0x001C7390
 		public static RestorePhantomFormation Create([Nullable(2)] RestorePhantomFormation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC28 RID: 48168 RVA: 0x001B1FEF File Offset: 0x001B01EF
+		// Token: 0x0600C7B6 RID: 51126 RVA: 0x001C91A3 File Offset: 0x001C73A3
 		public static RestorePhantomFormation CreateFromSetValue([Nullable(2)] RestorePhantomFormation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC29 RID: 48169 RVA: 0x001B2002 File Offset: 0x001B0202
+		// Token: 0x0600C7B7 RID: 51127 RVA: 0x001C91B6 File Offset: 0x001C73B6
 		public RestorePhantomFormation_SetValue ToSetValue()
 		{
 			return new RestorePhantomFormation_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003953 RID: 14675
-		// (get) Token: 0x0600BC2A RID: 48170 RVA: 0x001B2024 File Offset: 0x001B0224
-		// (set) Token: 0x0600BC2B RID: 48171 RVA: 0x001B205E File Offset: 0x001B025E
+		// Token: 0x17003C40 RID: 15424
+		// (get) Token: 0x0600C7B8 RID: 51128 RVA: 0x001C91D8 File Offset: 0x001C73D8
+		// (set) Token: 0x0600C7B9 RID: 51129 RVA: 0x001C9212 File Offset: 0x001C7412
 		public virtual int? TeleportEntityId
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003954 RID: 14676
-		// (get) Token: 0x0600BC2C RID: 48172 RVA: 0x001B206C File Offset: 0x001B026C
-		// (set) Token: 0x0600BC2D RID: 48173 RVA: 0x001B20A6 File Offset: 0x001B02A6
+		// Token: 0x17003C41 RID: 15425
+		// (get) Token: 0x0600C7BA RID: 51130 RVA: 0x001C9220 File Offset: 0x001C7420
+		// (set) Token: 0x0600C7BB RID: 51131 RVA: 0x001C925A File Offset: 0x001C745A
 		public virtual bool? RetainPhantom
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007066 RID: 28774
+		// Token: 0x0400769B RID: 30363
 		[Nullable(2)]
 		protected new RestorePhantomFormation FbInstance;
 
-		// Token: 0x04007067 RID: 28775
+		// Token: 0x0400769C RID: 30364
 		[Nullable(2)]
 		protected RestorePhantomFormation_SetValue PocoInterface;
 	}

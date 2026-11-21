@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C97 RID: 3223
+	// Token: 0x02000D79 RID: 3449
 	public class ILevelAIBehaviourBase
 	{
-		// Token: 0x060049B6 RID: 18870 RVA: 0x000B8CCA File Offset: 0x000B6ECA
-		[NullableContext(1)]
+		// Token: 0x06004E64 RID: 20068 RVA: 0x000C36DA File Offset: 0x000C18DA
 		public static ILevelAIBehaviourBase Create(ILevelAIBehaviourBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001645 RID: 5701
-		// (get) Token: 0x060049B7 RID: 18871 RVA: 0x000B8CE9 File Offset: 0x000B6EE9
+		// Token: 0x1700176D RID: 5997
+		// (get) Token: 0x06004E65 RID: 20069 RVA: 0x000C36F9 File Offset: 0x000C18F9
 		public virtual ELevelAIBehaviourType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A1A RID: 10778
+		// Token: 0x04002C94 RID: 11412
 		private ILevelAIBehaviourBase Instance;
 	}
 }

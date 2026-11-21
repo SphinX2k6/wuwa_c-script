@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003397 RID: 13207
+// Token: 0x02002909 RID: 10505
 [NullableContext(1)]
 [Nullable(0)]
 public class RedDotFunctionInventory : RedDotBase
 {
-	// Token: 0x0601CAF0 RID: 117488 RVA: 0x00806FD0 File Offset: 0x008051D0
+	// Token: 0x0601A7E8 RID: 108520 RVA: 0x0082D594 File Offset: 0x0082B794
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<IReadOnlyList<IProto_NormalItem>>(EEventName.OnAddCommonItemList, new Action<IReadOnlyList<IProto_NormalItem>>(this.OnAddCommonItemList));
@@ -18,7 +18,7 @@ public class RedDotFunctionInventory : RedDotBase
 		EventSystem.Instance.Add(EEventName.OnRemoveItemRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CAF1 RID: 117489 RVA: 0x00807050 File Offset: 0x00805250
+	// Token: 0x0601A7E9 RID: 108521 RVA: 0x0082D614 File Offset: 0x0082B814
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAddCommonItemList, new Action<IReadOnlyList<IProto_NormalItem>>(this.OnAddCommonItemList));
@@ -27,25 +27,25 @@ public class RedDotFunctionInventory : RedDotBase
 		EventSystem.Instance.Remove(EEventName.OnRemoveItemRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CAF2 RID: 117490 RVA: 0x008070CD File Offset: 0x008052CD
+	// Token: 0x0601A7EA RID: 108522 RVA: 0x0082D691 File Offset: 0x0082B891
 	private void OnAddCommonItemList(IReadOnlyList<IProto_NormalItem> normalItemList)
 	{
 		base.EventCheck();
 	}
 
-	// Token: 0x0601CAF3 RID: 117491 RVA: 0x008070D5 File Offset: 0x008052D5
+	// Token: 0x0601A7EB RID: 108523 RVA: 0x0082D699 File Offset: 0x0082B899
 	private void OnAddWeaponItemList(IReadOnlyList<WeaponItem> weaponItem, bool bAddFromRole, bool bShowNewTips)
 	{
 		base.EventCheck();
 	}
 
-	// Token: 0x0601CAF4 RID: 117492 RVA: 0x008070DD File Offset: 0x008052DD
+	// Token: 0x0601A7EC RID: 108524 RVA: 0x0082D6A1 File Offset: 0x0082B8A1
 	private void OnAddPhantomItemList(IReadOnlyList<PhantomItem> phantomItemList, bool isCatch)
 	{
 		base.EventCheck();
 	}
 
-	// Token: 0x0601CAF5 RID: 117493 RVA: 0x008070E5 File Offset: 0x008052E5
+	// Token: 0x0601A7ED RID: 108525 RVA: 0x0082D6A9 File Offset: 0x0082B8A9
 	protected override bool OnCheck(int id)
 	{
 		return InventoryModel.Instance.HasRedDot();

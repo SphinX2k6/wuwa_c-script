@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -13,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001637 RID: 5687
+// Token: 0x02000AEF RID: 2799
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityWheelTowerRewardView : UiViewBase
 {
-	// Token: 0x06009FD8 RID: 40920 RVA: 0x002322EB File Offset: 0x002304EB
+	// Token: 0x060073B6 RID: 29622 RVA: 0x0023C137 File Offset: 0x0023A337
 	public ActivityWheelTowerRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009FD9 RID: 40921 RVA: 0x002322F4 File Offset: 0x002304F4
+	// Token: 0x060073B7 RID: 29623 RVA: 0x0023C140 File Offset: 0x0023A340
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -43,7 +42,7 @@ public class ActivityWheelTowerRewardView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009FDA RID: 40922 RVA: 0x002323C0 File Offset: 0x002305C0
+	// Token: 0x060073B8 RID: 29624 RVA: 0x0023C20C File Offset: 0x0023A40C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityWheelTowerRewardView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -54,7 +53,7 @@ public class ActivityWheelTowerRewardView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009FDB RID: 40923 RVA: 0x00232404 File Offset: 0x00230604
+	// Token: 0x060073B9 RID: 29625 RVA: 0x0023C250 File Offset: 0x0023A450
 	protected override void OnStart()
 	{
 		GenericScrollViewNew<ActivityWheelTowerRewardView.RewardTabItem, int> tabScroll = this.TabScroll;
@@ -81,11 +80,12 @@ public class ActivityWheelTowerRewardView : UiViewBase
 		});
 	}
 
-	// Token: 0x06009FDC RID: 40924 RVA: 0x00232450 File Offset: 0x00230650
+	// Token: 0x060073BA RID: 29626 RVA: 0x0023C29C File Offset: 0x0023A49C
 	private void RefreshRewardScroll()
 	{
-		WheelTowerData data = WheelTowerModel.Instance.ActivityData;
-		NewTowerClimbingLevelRecord levelRecord = data.GetLevelRecord(this.IsEndless);
+		ActivityWheelTowerRewardView.<>c__DisplayClass9_0 CS$<>8__locals1 = new ActivityWheelTowerRewardView.<>c__DisplayClass9_0();
+		CS$<>8__locals1.data = WheelTowerModel.Instance.ActivityData;
+		NewTowerClimbingLevelRecord levelRecord = CS$<>8__locals1.data.GetLevelRecord(this.IsEndless);
 		IReadOnlyList<NewTowerScoreReward> rewardConfigListByLevelId = WheelTowerConfig.Instance.GetRewardConfigListByLevelId(levelRecord.LevelId);
 		if (rewardConfigListByLevelId == null)
 		{
@@ -99,20 +99,18 @@ public class ActivityWheelTowerRewardView : UiViewBase
 		}
 		else
 		{
-			List<int> data2 = (from config in rewardConfigListByLevelId
-			orderby base.<RefreshRewardScroll>g__GetPriority|0(config.Id), config.Id
-			select config.Id).ToList<int>();
+			List<int> data = NoLinq.OrderByThenByToList<int, int, int>(NoLinq.SelectToList<NewTowerScoreReward, int>(rewardConfigListByLevelId, (NewTowerScoreReward config) => config.Id), new Func<int, int>(CS$<>8__locals1.<RefreshRewardScroll>g__GetPriority|0), (int id) => id);
 			GenericScrollViewNew<ActivityWheelTowerRewardView.RewardItem, int> rewardScroll2 = this.RewardScroll;
 			if (rewardScroll2 == null)
 			{
 				return;
 			}
-			rewardScroll2.RefreshByData(data2, null, true);
+			rewardScroll2.RefreshByData(data, null, true);
 			return;
 		}
 	}
 
-	// Token: 0x06009FDD RID: 40925 RVA: 0x00232524 File Offset: 0x00230724
+	// Token: 0x060073BB RID: 29627 RVA: 0x0023C366 File Offset: 0x0023A566
 	private ActivityWheelTowerRewardView.RewardTabItem CreateTabItem()
 	{
 		ActivityWheelTowerRewardView.RewardTabItem rewardTabItem = new ActivityWheelTowerRewardView.RewardTabItem();
@@ -120,7 +118,7 @@ public class ActivityWheelTowerRewardView : UiViewBase
 		return rewardTabItem;
 	}
 
-	// Token: 0x06009FDE RID: 40926 RVA: 0x0023253D File Offset: 0x0023073D
+	// Token: 0x060073BC RID: 29628 RVA: 0x0023C37F File Offset: 0x0023A57F
 	private void ToggleCallBack(int diff)
 	{
 		GenericScrollViewNew<ActivityWheelTowerRewardView.RewardTabItem, int> tabScroll = this.TabScroll;
@@ -132,7 +130,7 @@ public class ActivityWheelTowerRewardView : UiViewBase
 		this.RefreshRewardScroll();
 	}
 
-	// Token: 0x06009FDF RID: 40927 RVA: 0x00232562 File Offset: 0x00230762
+	// Token: 0x060073BD RID: 29629 RVA: 0x0023C3A4 File Offset: 0x0023A5A4
 	private ActivityWheelTowerRewardView.RewardItem CreateRewardItem()
 	{
 		ActivityWheelTowerRewardView.RewardItem rewardItem = new ActivityWheelTowerRewardView.RewardItem();
@@ -140,7 +138,7 @@ public class ActivityWheelTowerRewardView : UiViewBase
 		return rewardItem;
 	}
 
-	// Token: 0x06009FE0 RID: 40928 RVA: 0x0023257B File Offset: 0x0023077B
+	// Token: 0x060073BE RID: 29630 RVA: 0x0023C3BD File Offset: 0x0023A5BD
 	private void ReceiveCallback()
 	{
 		WheelTowerController.Instance.RequestTaskReceive(this.IsEndless).ContinueWith(delegate()
@@ -158,7 +156,7 @@ public class ActivityWheelTowerRewardView : UiViewBase
 		});
 	}
 
-	// Token: 0x06009FE1 RID: 40929 RVA: 0x002325A0 File Offset: 0x002307A0
+	// Token: 0x060073BF RID: 29631 RVA: 0x0023C3E4 File Offset: 0x0023A5E4
 	// Note: this type is marked as 'beforefieldinit'.
 	unsafe static ActivityWheelTowerRewardView()
 	{
@@ -173,15 +171,15 @@ public class ActivityWheelTowerRewardView : UiViewBase
 		ActivityWheelTowerRewardView.WheelTowerDiffList = list;
 	}
 
-	// Token: 0x0400489E RID: 18590
+	// Token: 0x04004944 RID: 18756
 	[StaticVariableRuleIgnore]
 	private static readonly List<int> WheelTowerDiffList;
 
-	// Token: 0x0400489F RID: 18591
+	// Token: 0x04004945 RID: 18757
 	[Nullable(2)]
 	private PopupCaptionItem Caption;
 
-	// Token: 0x040048A0 RID: 18592
+	// Token: 0x04004946 RID: 18758
 	[Nullable(new byte[]
 	{
 		2,
@@ -189,7 +187,7 @@ public class ActivityWheelTowerRewardView : UiViewBase
 	})]
 	private GenericScrollViewNew<ActivityWheelTowerRewardView.RewardTabItem, int> TabScroll;
 
-	// Token: 0x040048A1 RID: 18593
+	// Token: 0x04004947 RID: 18759
 	[Nullable(new byte[]
 	{
 		2,
@@ -197,14 +195,14 @@ public class ActivityWheelTowerRewardView : UiViewBase
 	})]
 	private GenericScrollViewNew<ActivityWheelTowerRewardView.RewardItem, int> RewardScroll;
 
-	// Token: 0x040048A2 RID: 18594
+	// Token: 0x04004948 RID: 18760
 	private bool IsEndless;
 
-	// Token: 0x02007BFF RID: 31743
+	// Token: 0x02006D87 RID: 28039
 	[NullableContext(0)]
 	private class RewardTabItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0604981B RID: 301083 RVA: 0x01306C58 File Offset: 0x01304E58
+		// Token: 0x0603FC37 RID: 261175 RVA: 0x012A9F00 File Offset: 0x012A8100
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -229,7 +227,7 @@ public class ActivityWheelTowerRewardView : UiViewBase
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604981C RID: 301084 RVA: 0x01306D40 File Offset: 0x01304F40
+		// Token: 0x0603FC38 RID: 261176 RVA: 0x012A9FE8 File Offset: 0x012A81E8
 		protected override void OnStart()
 		{
 			UUIExtendToggle toggle = base.GetExtendToggle(0);
@@ -237,7 +235,7 @@ public class ActivityWheelTowerRewardView : UiViewBase
 			WheelTowerModel.Instance.ActivityData.RecordReadReward();
 		}
 
-		// Token: 0x0604981D RID: 301085 RVA: 0x01306D8C File Offset: 0x01304F8C
+		// Token: 0x0603FC39 RID: 261177 RVA: 0x012AA034 File Offset: 0x012A8234
 		public override void Refresh(int diff, bool isSelected, int gridIndex)
 		{
 			this.Diff = diff;
@@ -266,14 +264,14 @@ public class ActivityWheelTowerRewardView : UiViewBase
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x0604981E RID: 301086 RVA: 0x01306E3E File Offset: 0x0130503E
+		// Token: 0x0603FC3A RID: 261178 RVA: 0x012AA0E6 File Offset: 0x012A82E6
 		[NullableContext(1)]
 		public void SetToggleClickCallback(Action<int> callback)
 		{
 			this.ToggleClickCallback = callback;
 		}
 
-		// Token: 0x0604981F RID: 301087 RVA: 0x01306E47 File Offset: 0x01305047
+		// Token: 0x0603FC3B RID: 261179 RVA: 0x012AA0EF File Offset: 0x012A82EF
 		public void SetToggleStateForce(bool isSelected, bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -284,13 +282,13 @@ public class ActivityWheelTowerRewardView : UiViewBase
 			extendToggle.SetToggleStateForce(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x06049820 RID: 301088 RVA: 0x01306E64 File Offset: 0x01305064
+		// Token: 0x0603FC3C RID: 261180 RVA: 0x012AA10C File Offset: 0x012A830C
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleStateForce(false, false);
 		}
 
-		// Token: 0x06049821 RID: 301089 RVA: 0x01306E6E File Offset: 0x0130506E
+		// Token: 0x0603FC3D RID: 261181 RVA: 0x012AA116 File Offset: 0x012A8316
 		private void OnClickToggle(EToggleState state)
 		{
 			Action<int> toggleClickCallback = this.ToggleClickCallback;
@@ -301,19 +299,19 @@ public class ActivityWheelTowerRewardView : UiViewBase
 			toggleClickCallback(this.Diff);
 		}
 
-		// Token: 0x04028B8E RID: 166798
+		// Token: 0x04023EC1 RID: 147137
 		private int Diff = -1;
 
-		// Token: 0x04028B8F RID: 166799
+		// Token: 0x04023EC2 RID: 147138
 		[Nullable(2)]
 		private Action<int> ToggleClickCallback;
 	}
 
-	// Token: 0x02007C00 RID: 31744
+	// Token: 0x02006D88 RID: 28040
 	[NullableContext(0)]
 	private class RewardItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06049823 RID: 301091 RVA: 0x01306E98 File Offset: 0x01305098
+		// Token: 0x0603FC3F RID: 261183 RVA: 0x012AA140 File Offset: 0x012A8340
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -344,13 +342,13 @@ public class ActivityWheelTowerRewardView : UiViewBase
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06049824 RID: 301092 RVA: 0x01306FE3 File Offset: 0x013051E3
+		// Token: 0x0603FC40 RID: 261184 RVA: 0x012AA28B File Offset: 0x012A848B
 		protected override void OnStart()
 		{
 			this.RewardLayout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(2), () => new CommonItemSmallItemGrid(), null, false, true);
 		}
 
-		// Token: 0x06049825 RID: 301093 RVA: 0x0130701C File Offset: 0x0130521C
+		// Token: 0x0603FC41 RID: 261185 RVA: 0x012AA2C4 File Offset: 0x012A84C4
 		public override void Refresh(int rewardId, bool isSelected, int gridIndex)
 		{
 			NewTowerScoreReward? rewardConfigById = WheelTowerConfig.Instance.GetRewardConfigById(rewardId);
@@ -390,14 +388,14 @@ public class ActivityWheelTowerRewardView : UiViewBase
 			item2.SetUIActive(!flag && !flag2);
 		}
 
-		// Token: 0x06049826 RID: 301094 RVA: 0x013070F8 File Offset: 0x013052F8
+		// Token: 0x0603FC42 RID: 261186 RVA: 0x012AA3A0 File Offset: 0x012A85A0
 		[NullableContext(1)]
 		public void SetOnClickReceiveCallback(Action callback)
 		{
 			this.OnClickReceiveCallback = callback;
 		}
 
-		// Token: 0x06049827 RID: 301095 RVA: 0x01307101 File Offset: 0x01305301
+		// Token: 0x0603FC43 RID: 261187 RVA: 0x012AA3A9 File Offset: 0x012A85A9
 		private void OnClickReceive()
 		{
 			Action onClickReceiveCallback = this.OnClickReceiveCallback;
@@ -408,7 +406,7 @@ public class ActivityWheelTowerRewardView : UiViewBase
 			onClickReceiveCallback();
 		}
 
-		// Token: 0x04028B90 RID: 166800
+		// Token: 0x04023EC3 RID: 147139
 		[Nullable(new byte[]
 		{
 			2,
@@ -416,7 +414,7 @@ public class ActivityWheelTowerRewardView : UiViewBase
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-		// Token: 0x04028B91 RID: 166801
+		// Token: 0x04023EC4 RID: 147140
 		[Nullable(2)]
 		private Action OnClickReceiveCallback;
 	}

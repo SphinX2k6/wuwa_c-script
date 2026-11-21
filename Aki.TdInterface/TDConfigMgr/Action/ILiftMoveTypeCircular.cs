@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B82 RID: 7042
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D2F RID: 7471
 	public class ILiftMoveTypeCircular : ILiftMoveType
 	{
-		// Token: 0x060096CD RID: 38605 RVA: 0x0015C2C8 File Offset: 0x0015A4C8
+		// Token: 0x06009EAF RID: 40623 RVA: 0x0016CE74 File Offset: 0x0016B074
 		private ILiftMoveTypeCircular_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060096CE RID: 38606 RVA: 0x0015C300 File Offset: 0x0015A500
+		// Token: 0x06009EB0 RID: 40624 RVA: 0x0016CEAC File Offset: 0x0016B0AC
 		public static ILiftMoveTypeCircular Create([Nullable(2)] ILiftMoveTypeCircular instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060096CF RID: 38607 RVA: 0x0015C313 File Offset: 0x0015A513
+		// Token: 0x06009EB1 RID: 40625 RVA: 0x0016CEBF File Offset: 0x0016B0BF
 		public static ILiftMoveTypeCircular CreateFromSetValue([Nullable(2)] ILiftMoveTypeCircular_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060096D0 RID: 38608 RVA: 0x0015C326 File Offset: 0x0015A526
+		// Token: 0x06009EB2 RID: 40626 RVA: 0x0016CED2 File Offset: 0x0016B0D2
 		public new ILiftMoveTypeCircular_SetValue ToSetValue()
 		{
 			return new ILiftMoveTypeCircular_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F7A RID: 12154
-		// (get) Token: 0x060096D1 RID: 38609 RVA: 0x0015C339 File Offset: 0x0015A539
-		// (set) Token: 0x060096D2 RID: 38610 RVA: 0x0015C364 File Offset: 0x0015A564
+		// Token: 0x1700319F RID: 12703
+		// (get) Token: 0x06009EB3 RID: 40627 RVA: 0x0016CEE5 File Offset: 0x0016B0E5
+		// (set) Token: 0x06009EB4 RID: 40628 RVA: 0x0016CF10 File Offset: 0x0016B110
 		public override ELiftMoveType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005C27 RID: 23591
+		// Token: 0x040060C0 RID: 24768
 		[Nullable(2)]
 		protected new ILiftMoveTypeCircular FbInstance;
 
-		// Token: 0x04005C28 RID: 23592
+		// Token: 0x040060C1 RID: 24769
 		[Nullable(2)]
 		protected new ILiftMoveTypeCircular_SetValue PocoInterface;
 	}

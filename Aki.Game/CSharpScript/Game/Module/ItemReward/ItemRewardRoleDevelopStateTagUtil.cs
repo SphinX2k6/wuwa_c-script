@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.RoleUi.RoleDevelop;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057EA RID: 22506
+	// Token: 0x020047C1 RID: 18369
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ItemRewardRoleDevelopStateTagUtil
 	{
-		// Token: 0x0603933F RID: 234303 RVA: 0x00D90F28 File Offset: 0x00D8F128
+		// Token: 0x0602E253 RID: 189011 RVA: 0x00CDFD70 File Offset: 0x00CDDF70
 		private static EItemRequirementState? GetRewardExpItemDevelopUpgradeState(int itemId)
 		{
 			IRoleDevelopExpStateProvider roleDevelopExpStateProvider = RoleDevelopModel.Instance as IRoleDevelopExpStateProvider;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return getExpItemRequirementState(itemId);
 		}
 
-		// Token: 0x06039340 RID: 234304 RVA: 0x00D90F68 File Offset: 0x00D8F168
+		// Token: 0x0602E254 RID: 189012 RVA: 0x00CDFDB0 File Offset: 0x00CDDFB0
 		private static ERoleDevelopStateTagType? ConvertRequirementStateToTagType(EItemRequirementState? state)
 		{
 			if (state != null)
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return null;
 		}
 
-		// Token: 0x06039341 RID: 234305 RVA: 0x00D90FB8 File Offset: 0x00D8F1B8
+		// Token: 0x0602E255 RID: 189013 RVA: 0x00CDFE00 File Offset: 0x00CDE000
 		private static ERoleDevelopStateTagType? GetRewardRoleDevelopStateTagType(RewardItemData rewardItemData)
 		{
 			RoleDevelopModel instance = RoleDevelopModel.Instance;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return new ERoleDevelopStateTagType?(ERoleDevelopStateTagType.Lack);
 		}
 
-		// Token: 0x06039342 RID: 234306 RVA: 0x00D910AC File Offset: 0x00D8F2AC
+		// Token: 0x0602E256 RID: 189014 RVA: 0x00CDFEF4 File Offset: 0x00CDE0F4
 		public static void FillRewardRoleDevelopStateTagType(List<RewardItemData> rewardItemDataList)
 		{
 			RoleDevelopModel instance = RoleDevelopModel.Instance;

@@ -4,15 +4,15 @@ using CSharpScript.Core.Framework;
 
 namespace CSharpScript.Game.Manager
 {
-	// Token: 0x02006946 RID: 26950
+	// Token: 0x02005AA1 RID: 23201
 	public class ModelManager : ModelManagerBase
 	{
-		// Token: 0x04022F97 RID: 143255
+		// Token: 0x0401E181 RID: 123265
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly ModelManager Instance = new ModelManager();
 
-		// Token: 0x04022F98 RID: 143256
+		// Token: 0x0401E182 RID: 123266
 		public bool IsInit = true;
 	}
 }

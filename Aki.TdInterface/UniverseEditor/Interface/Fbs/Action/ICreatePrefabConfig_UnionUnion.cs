@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064EA RID: 25834
+	// Token: 0x02006B55 RID: 27477
 	public class ICreatePrefabConfig_UnionUnion
 	{
-		// Token: 0x1700C02E RID: 49198
-		// (get) Token: 0x0602CD01 RID: 183553 RVA: 0x006286DD File Offset: 0x006268DD
-		// (set) Token: 0x0602CD02 RID: 183554 RVA: 0x006286E5 File Offset: 0x006268E5
+		// Token: 0x1700C9BB RID: 51643
+		// (get) Token: 0x0602F485 RID: 193669 RVA: 0x00674805 File Offset: 0x00672A05
+		// (set) Token: 0x0602F486 RID: 193670 RVA: 0x0067480D File Offset: 0x00672A0D
 		public ICreatePrefabConfig_Union Type { get; set; }
 
-		// Token: 0x1700C02F RID: 49199
-		// (get) Token: 0x0602CD03 RID: 183555 RVA: 0x006286EE File Offset: 0x006268EE
-		// (set) Token: 0x0602CD04 RID: 183556 RVA: 0x006286F6 File Offset: 0x006268F6
+		// Token: 0x1700C9BC RID: 51644
+		// (get) Token: 0x0602F487 RID: 193671 RVA: 0x00674816 File Offset: 0x00672A16
+		// (set) Token: 0x0602F488 RID: 193672 RVA: 0x0067481E File Offset: 0x00672A1E
 		public object Value { get; set; }
 
-		// Token: 0x0602CD05 RID: 183557 RVA: 0x006286FF File Offset: 0x006268FF
+		// Token: 0x0602F489 RID: 193673 RVA: 0x00674827 File Offset: 0x00672A27
 		public ICreatePrefabConfig_UnionUnion()
 		{
 			this.Type = ICreatePrefabConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602CD06 RID: 183558 RVA: 0x00628715 File Offset: 0x00626915
+		// Token: 0x0602F48A RID: 193674 RVA: 0x0067483D File Offset: 0x00672A3D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602CD07 RID: 183559 RVA: 0x00628727 File Offset: 0x00626927
+		// Token: 0x0602F48B RID: 193675 RVA: 0x0067484F File Offset: 0x00672A4F
 		public ICreatePrefabConfigT AsICreatePrefabConfig()
 		{
 			return this.As<ICreatePrefabConfigT>();
 		}
 
-		// Token: 0x0602CD08 RID: 183560 RVA: 0x0062872F File Offset: 0x0062692F
+		// Token: 0x0602F48C RID: 193676 RVA: 0x00674857 File Offset: 0x00672A57
 		public static ICreatePrefabConfig_UnionUnion FromICreatePrefabConfig(ICreatePrefabConfigT _icreateprefabconfig)
 		{
 			return new ICreatePrefabConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602CD09 RID: 183561 RVA: 0x00628744 File Offset: 0x00626944
+		// Token: 0x0602F48D RID: 193677 RVA: 0x0067486C File Offset: 0x00672A6C
 		public IPrefabConfigT AsIPrefabConfig()
 		{
 			return this.As<IPrefabConfigT>();
 		}
 
-		// Token: 0x0602CD0A RID: 183562 RVA: 0x0062874C File Offset: 0x0062694C
+		// Token: 0x0602F48E RID: 193678 RVA: 0x00674874 File Offset: 0x00672A74
 		public static ICreatePrefabConfig_UnionUnion FromIPrefabConfig(IPrefabConfigT _iprefabconfig)
 		{
 			return new ICreatePrefabConfig_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602CD0B RID: 183563 RVA: 0x00628761 File Offset: 0x00626961
+		// Token: 0x0602F48F RID: 193679 RVA: 0x00674889 File Offset: 0x00672A89
 		public IRandomPrefabConfigT AsIRandomPrefabConfig()
 		{
 			return this.As<IRandomPrefabConfigT>();
 		}
 
-		// Token: 0x0602CD0C RID: 183564 RVA: 0x00628769 File Offset: 0x00626969
+		// Token: 0x0602F490 RID: 193680 RVA: 0x00674891 File Offset: 0x00672A91
 		public static ICreatePrefabConfig_UnionUnion FromIRandomPrefabConfig(IRandomPrefabConfigT _irandomprefabconfig)
 		{
 			return new ICreatePrefabConfig_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602CD0D RID: 183565 RVA: 0x0062877E File Offset: 0x0062697E
+		// Token: 0x0602F491 RID: 193681 RVA: 0x006748A6 File Offset: 0x00672AA6
 		public ITowerDungeonPrefabConfigT AsITowerDungeonPrefabConfig()
 		{
 			return this.As<ITowerDungeonPrefabConfigT>();
 		}
 
-		// Token: 0x0602CD0E RID: 183566 RVA: 0x00628786 File Offset: 0x00626986
+		// Token: 0x0602F492 RID: 193682 RVA: 0x006748AE File Offset: 0x00672AAE
 		public static ICreatePrefabConfig_UnionUnion FromITowerDungeonPrefabConfig(ITowerDungeonPrefabConfigT _itowerdungeonprefabconfig)
 		{
 			return new ICreatePrefabConfig_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602CD0F RID: 183567 RVA: 0x0062879B File Offset: 0x0062699B
+		// Token: 0x0602F493 RID: 193683 RVA: 0x006748C3 File Offset: 0x00672AC3
 		public IRoguePrefabConfigT AsIRoguePrefabConfig()
 		{
 			return this.As<IRoguePrefabConfigT>();
 		}
 
-		// Token: 0x0602CD10 RID: 183568 RVA: 0x006287A3 File Offset: 0x006269A3
+		// Token: 0x0602F494 RID: 193684 RVA: 0x006748CB File Offset: 0x00672ACB
 		public static ICreatePrefabConfig_UnionUnion FromIRoguePrefabConfig(IRoguePrefabConfigT _irogueprefabconfig)
 		{
 			return new ICreatePrefabConfig_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602CD11 RID: 183569 RVA: 0x006287B8 File Offset: 0x006269B8
+		// Token: 0x0602F495 RID: 193685 RVA: 0x006748E0 File Offset: 0x00672AE0
 		public ISlashTowerPrefabConfigT AsISlashTowerPrefabConfig()
 		{
 			return this.As<ISlashTowerPrefabConfigT>();
 		}
 
-		// Token: 0x0602CD12 RID: 183570 RVA: 0x006287C0 File Offset: 0x006269C0
+		// Token: 0x0602F496 RID: 193686 RVA: 0x006748E8 File Offset: 0x00672AE8
 		public static ICreatePrefabConfig_UnionUnion FromISlashTowerPrefabConfig(ISlashTowerPrefabConfigT _islashtowerprefabconfig)
 		{
 			return new ICreatePrefabConfig_UnionUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602CD13 RID: 183571 RVA: 0x006287D5 File Offset: 0x006269D5
+		// Token: 0x0602F497 RID: 193687 RVA: 0x006748FD File Offset: 0x00672AFD
 		public IRoleTowerPrefabConfigT AsIRoleTowerPrefabConfig()
 		{
 			return this.As<IRoleTowerPrefabConfigT>();
 		}
 
-		// Token: 0x0602CD14 RID: 183572 RVA: 0x006287DD File Offset: 0x006269DD
+		// Token: 0x0602F498 RID: 193688 RVA: 0x00674905 File Offset: 0x00672B05
 		public static ICreatePrefabConfig_UnionUnion FromIRoleTowerPrefabConfig(IRoleTowerPrefabConfigT _iroletowerprefabconfig)
 		{
 			return new ICreatePrefabConfig_UnionUnion
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602CD15 RID: 183573 RVA: 0x006287F4 File Offset: 0x006269F4
+		// Token: 0x0602F499 RID: 193689 RVA: 0x0067491C File Offset: 0x00672B1C
 		public static int Pack(FlatBufferBuilder builder, ICreatePrefabConfig_UnionUnion _o)
 		{
 			switch (_o.Type)

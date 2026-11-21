@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067B3 RID: 26547
+	// Token: 0x02005703 RID: 22275
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBuffDetailViewOpenData
 	{
-		// Token: 0x0402286A RID: 141418
+		// Token: 0x0401D0C7 RID: 118983
 		public EDangoBrawlBuffDetailSide InitialSide;
 
-		// Token: 0x0402286B RID: 141419
+		// Token: 0x0401D0C8 RID: 118984
 		public EDangoBrawlBuffType JumpBuffType;
 
-		// Token: 0x0402286C RID: 141420
+		// Token: 0x0401D0C9 RID: 118985
 		public int SelectedConfigId;
 
-		// Token: 0x0402286D RID: 141421
+		// Token: 0x0401D0CA RID: 118986
 		public DangoBrawlBuffSideDetailData SelfSide;
 
-		// Token: 0x0402286E RID: 141422
+		// Token: 0x0401D0CB RID: 118987
 		public DangoBrawlBuffSideDetailData OpponentSide;
 	}
 }

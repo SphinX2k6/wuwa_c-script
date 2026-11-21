@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.Input.Structures;
 using CSharpScript.Game.Input;
 
-// Token: 0x020030CA RID: 12490
+// Token: 0x02002622 RID: 9762
 [NullableContext(2)]
 [Nullable(0)]
 public class PanoramicInputLayer : InputLayer
 {
-	// Token: 0x0601ABF4 RID: 109556 RVA: 0x00735A2F File Offset: 0x00733C2F
+	// Token: 0x06018608 RID: 99848 RVA: 0x0075B6CB File Offset: 0x007598CB
 	public void Init()
 	{
 	}
 
-	// Token: 0x0601ABF5 RID: 109557 RVA: 0x00735A31 File Offset: 0x00733C31
+	// Token: 0x06018609 RID: 99849 RVA: 0x0075B6CD File Offset: 0x007598CD
 	public override EInputLayer GetLayerType()
 	{
 		return EInputLayer.Panoramic;
 	}
 
-	// Token: 0x0601ABF6 RID: 109558 RVA: 0x00735A38 File Offset: 0x00733C38
+	// Token: 0x0601860A RID: 99850 RVA: 0x0075B6D4 File Offset: 0x007598D4
 	public override SInputCommand HandleRelease(EInputAction action, float time)
 	{
 		if (action == 13)
@@ -30,7 +30,7 @@ public class PanoramicInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601ABF7 RID: 109559 RVA: 0x00735A75 File Offset: 0x00733C75
+	// Token: 0x0601860B RID: 99851 RVA: 0x0075B711 File Offset: 0x00759911
 	public override SInputCommand HandlePress(EInputAction action, float time)
 	{
 		if (action == 13)
@@ -41,7 +41,7 @@ public class PanoramicInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601ABF8 RID: 109560 RVA: 0x00735A92 File Offset: 0x00733C92
+	// Token: 0x0601860C RID: 99852 RVA: 0x0075B72E File Offset: 0x0075992E
 	public override SInputCommand HandleHold(EInputAction action, float time)
 	{
 		if (action == 13)
@@ -51,20 +51,35 @@ public class PanoramicInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601ABF9 RID: 109561 RVA: 0x00735AA8 File Offset: 0x00733CA8
-	public override bool CheckBlockDispatchEvent(EInputAction action)
+	// Token: 0x0601860D RID: 99853 RVA: 0x0075B744 File Offset: 0x00759944
+	public override bool DispatchPressEvent(EInputAction action, float time)
 	{
-		bool result = false;
 		if (action == 13)
 		{
-			result = true;
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.Panoramic;
+			ELogAuthor author = ELogAuthor.WWJ;
+			string message = "[环视] 忽略DispatchPressEvent事件";
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("action", action);
+			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+			return true;
 		}
-		Log instance = Log.Instance;
-		ELogModule module = ELogModule.Panoramic;
-		ELogAuthor author = ELogAuthor.JYS;
-		string message = "[环视] 忽略DispatchEvent事件";
-		ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("action", action);
-		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-		return result;
+		return false;
+	}
+
+	// Token: 0x0601860E RID: 99854 RVA: 0x0075B790 File Offset: 0x00759990
+	public override bool DispatchReleaseEvent(EInputAction action, float time)
+	{
+		if (action == 13)
+		{
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.Panoramic;
+			ELogAuthor author = ELogAuthor.WWJ;
+			string message = "[环视] 忽略DispatchReleaseEvent事件";
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("action", action);
+			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+			return true;
+		}
+		return false;
 	}
 }

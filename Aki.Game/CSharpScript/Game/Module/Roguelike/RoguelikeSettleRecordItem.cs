@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E26 RID: 20006
+	// Token: 0x02003DEF RID: 15855
 	public class RoguelikeSettleRecordItem : UiPanelBase
 	{
-		// Token: 0x0603397D RID: 211325 RVA: 0x00C11ACB File Offset: 0x00C0FCCB
+		// Token: 0x060287E8 RID: 165864 RVA: 0x00B5AFFF File Offset: 0x00B591FF
 		public RoguelikeSettleRecordItem(ERoguelikeSettleItemType itemType, int num)
 		{
 			this.ItemType = new ERoguelikeSettleItemType?(itemType);
 			this.Count = num;
 		}
 
-		// Token: 0x0603397E RID: 211326 RVA: 0x00C11AE8 File Offset: 0x00C0FCE8
+		// Token: 0x060287E9 RID: 165865 RVA: 0x00B5B01C File Offset: 0x00B5921C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603397F RID: 211327 RVA: 0x00C11B54 File Offset: 0x00C0FD54
+		// Token: 0x060287EA RID: 165866 RVA: 0x00B5B088 File Offset: 0x00B59288
 		protected override void OnStart()
 		{
 			base.GetText(1).SetText(this.Count.ToString(), true);
@@ -54,19 +54,19 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0401B5DF RID: 112095
+		// Token: 0x04015FB2 RID: 90034
 		public ERoguelikeSettleItemType? ItemType;
 
-		// Token: 0x0401B5E0 RID: 112096
+		// Token: 0x04015FB3 RID: 90035
 		public int Count;
 
-		// Token: 0x0200AFCF RID: 45007
+		// Token: 0x02009A01 RID: 39425
 		private class ERoguelikeSettleRecordItemDefine
 		{
-			// Token: 0x040355F9 RID: 218617
+			// Token: 0x04030029 RID: 196649
 			public const int TxtTitle = 0;
 
-			// Token: 0x040355FA RID: 218618
+			// Token: 0x0403002A RID: 196650
 			public const int TxtNum = 1;
 		}
 	}

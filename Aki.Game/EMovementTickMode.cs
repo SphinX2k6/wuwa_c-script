@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x0200327A RID: 12922
+// Token: 0x020027EA RID: 10218
 public enum EMovementTickMode
 {
-	// Token: 0x0400DCE3 RID: 56547
+	// Token: 0x0400E185 RID: 57733
 	None,
-	// Token: 0x0400DCE4 RID: 56548
+	// Token: 0x0400E186 RID: 57734
 	TsProxy,
-	// Token: 0x0400DCE5 RID: 56549
+	// Token: 0x0400E187 RID: 57735
 	TsTakeOver,
-	// Token: 0x0400DCE6 RID: 56550
+	// Token: 0x0400E188 RID: 57736
 	UeUpdate,
-	// Token: 0x0400DCE7 RID: 56551
+	// Token: 0x0400E189 RID: 57737
 	TsProxyNotParallel
 }

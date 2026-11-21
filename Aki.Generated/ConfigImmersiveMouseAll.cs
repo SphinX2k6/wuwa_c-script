@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200041A RID: 1050
+	// Token: 0x02000430 RID: 1072
 	public class ConfigImmersiveMouseAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060018A5 RID: 6309 RVA: 0x000E51B1 File Offset: 0x000E33B1
+		// Token: 0x06001929 RID: 6441 RVA: 0x000EB905 File Offset: 0x000E9B05
 		static ConfigImmersiveMouseAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigImmersiveMouseAll.CreateStaticDefaultValue), new Action(ConfigImmersiveMouseAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060018A6 RID: 6310 RVA: 0x000E51D0 File Offset: 0x000E33D0
+		// Token: 0x0600192A RID: 6442 RVA: 0x000EB924 File Offset: 0x000E9B24
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigImmersiveMouseAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060018A7 RID: 6311 RVA: 0x000E524F File Offset: 0x000E344F
+		// Token: 0x0600192B RID: 6443 RVA: 0x000EB9A3 File Offset: 0x000E9BA3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigImmersiveMouseAll.LogPair = null;
 			ConfigImmersiveMouseAll.HandleId = 0;
 		}
 
-		// Token: 0x060018A8 RID: 6312 RVA: 0x000E525D File Offset: 0x000E345D
+		// Token: 0x0600192C RID: 6444 RVA: 0x000EB9B1 File Offset: 0x000E9BB1
 		public static void Init()
 		{
 			ConfigImmersiveMouseAll.HandleId = ConfigCommon.InitDataStatement(ConfigImmersiveMouseAll.HandleId, "db_input_settings.db", "select BinData from `ImmersiveMouse`");
 		}
 
-		// Token: 0x060018A9 RID: 6313 RVA: 0x000E5278 File Offset: 0x000E3478
+		// Token: 0x0600192D RID: 6445 RVA: 0x000EB9CC File Offset: 0x000E9BCC
 		[NullableContext(2)]
 		public static IReadOnlyList<ImmersiveMouse> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001C9A RID: 7322
+		// Token: 0x04001D34 RID: 7476
 		private const string DB = "db_input_settings.db";
 
-		// Token: 0x04001C9B RID: 7323
+		// Token: 0x04001D35 RID: 7477
 		private const string FILE = "s.输入配置.xlsx";
 
-		// Token: 0x04001C9C RID: 7324
+		// Token: 0x04001D36 RID: 7478
 		private const string TABLE = "ImmersiveMouse";
 
-		// Token: 0x04001C9D RID: 7325
+		// Token: 0x04001D37 RID: 7479
 		private const string COMMAND = "select BinData from `ImmersiveMouse`";
 
-		// Token: 0x04001C9E RID: 7326
+		// Token: 0x04001D38 RID: 7480
 		private const string KEY_PREFIX = "ImmersiveMouseAll";
 
-		// Token: 0x04001C9F RID: 7327
+		// Token: 0x04001D39 RID: 7481
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001CA0 RID: 7328
+		// Token: 0x04001D3A RID: 7482
 		private static int HandleId;
 	}
 }

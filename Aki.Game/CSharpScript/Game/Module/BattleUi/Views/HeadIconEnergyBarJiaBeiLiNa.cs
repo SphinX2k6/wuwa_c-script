@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D39 RID: 23865
+	// Token: 0x02004D1B RID: 19739
 	public class HeadIconEnergyBarJiaBeiLiNa : HeadIconEnergyBarBase
 	{
-		// Token: 0x0603C875 RID: 247925 RVA: 0x00E858EC File Offset: 0x00E83AEC
+		// Token: 0x060317CE RID: 202702 RVA: 0x00DD608C File Offset: 0x00DD428C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C876 RID: 247926 RVA: 0x00E85A1B File Offset: 0x00E83C1B
+		// Token: 0x060317CF RID: 202703 RVA: 0x00DD61BB File Offset: 0x00DD43BB
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBarPercent(true);
 		}
 
-		// Token: 0x0603C877 RID: 247927 RVA: 0x00E85A50 File Offset: 0x00E83C50
+		// Token: 0x060317D0 RID: 202704 RVA: 0x00DD61F0 File Offset: 0x00DD43F0
 		protected override void OnTargetPercentChanged()
 		{
 			float targetPercent = this.PercentMachine.GetTargetPercent();
@@ -56,13 +56,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LastPercent = targetPercent;
 		}
 
-		// Token: 0x0603C878 RID: 247928 RVA: 0x00E85A7F File Offset: 0x00E83C7F
+		// Token: 0x060317D1 RID: 202705 RVA: 0x00DD621F File Offset: 0x00DD441F
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603C879 RID: 247929 RVA: 0x00E85A88 File Offset: 0x00E83C88
+		// Token: 0x060317D2 RID: 202706 RVA: 0x00DD6228 File Offset: 0x00DD4428
 		private void RefreshBarPercent(bool bForce = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetIsFull(curPercent >= 1f, bForce);
 		}
 
-		// Token: 0x0603C87A RID: 247930 RVA: 0x00E85AE8 File Offset: 0x00E83CE8
+		// Token: 0x060317D3 RID: 202707 RVA: 0x00DD6288 File Offset: 0x00DD4488
 		private void PlayAbsorbAni()
 		{
 			if (!this.PlayIncreaseEffect)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.PlayTweenAnim(7);
 		}
 
-		// Token: 0x0603C87B RID: 247931 RVA: 0x00E85B36 File Offset: 0x00E83D36
+		// Token: 0x060317D4 RID: 202708 RVA: 0x00DD62D6 File Offset: 0x00DD44D6
 		private void SetIsFull(bool isFull, bool bForce = false)
 		{
 			if (this.IsFull == isFull && !bForce)
@@ -113,33 +113,33 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.PlayTweenAnim(5);
 		}
 
-		// Token: 0x0401F88D RID: 129165
+		// Token: 0x0401A346 RID: 107334
 		private float LastPercent;
 
-		// Token: 0x0401F88E RID: 129166
+		// Token: 0x0401A347 RID: 107335
 		private float NextAbsorbAniTime;
 
-		// Token: 0x0401F88F RID: 129167
+		// Token: 0x0401A348 RID: 107336
 		private bool IsFull;
 
-		// Token: 0x0200BFD5 RID: 49109
+		// Token: 0x0200A9DB RID: 43483
 		private enum EChildType
 		{
-			// Token: 0x04039DFD RID: 237053
+			// Token: 0x040347BF RID: 214975
 			BarItem,
-			// Token: 0x04039DFE RID: 237054
+			// Token: 0x040347C0 RID: 214976
 			BarSprite,
-			// Token: 0x04039DFF RID: 237055
+			// Token: 0x040347C1 RID: 214977
 			BarLightItem,
-			// Token: 0x04039E00 RID: 237056
+			// Token: 0x040347C2 RID: 214978
 			FullItem,
-			// Token: 0x04039E01 RID: 237057
+			// Token: 0x040347C3 RID: 214979
 			FullBarSprite,
-			// Token: 0x04039E02 RID: 237058
+			// Token: 0x040347C4 RID: 214980
 			AniBurstOut,
-			// Token: 0x04039E03 RID: 237059
+			// Token: 0x040347C5 RID: 214981
 			AniBurstIn,
-			// Token: 0x04039E04 RID: 237060
+			// Token: 0x040347C6 RID: 214982
 			AniAbsorb
 		}
 	}

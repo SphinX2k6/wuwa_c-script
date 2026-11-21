@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200157D RID: 5501
+	// Token: 0x020015F3 RID: 5619
 	public enum EAddEntityType
 	{
-		// Token: 0x0400A6C5 RID: 42693
+		// Token: 0x0400AB52 RID: 43858
 		[OriginalName("SceneInit")]
 		SceneInit,
-		// Token: 0x0400A6C6 RID: 42694
+		// Token: 0x0400AB53 RID: 43859
 		[OriginalName("Normal")]
 		Normal
 	}

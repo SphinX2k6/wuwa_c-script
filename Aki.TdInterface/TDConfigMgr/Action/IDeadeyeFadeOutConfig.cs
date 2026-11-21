@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001976 RID: 6518
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B01 RID: 6913
 	public class IDeadeyeFadeOutConfig
 	{
-		// Token: 0x06008BA1 RID: 35745 RVA: 0x001482A8 File Offset: 0x001464A8
+		// Token: 0x060092D9 RID: 37593 RVA: 0x00157D38 File Offset: 0x00155F38
 		private IDeadeyeFadeOutConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008BA2 RID: 35746 RVA: 0x001482E0 File Offset: 0x001464E0
+		// Token: 0x060092DA RID: 37594 RVA: 0x00157D70 File Offset: 0x00155F70
 		public static IDeadeyeFadeOutConfig Create([Nullable(2)] IDeadeyeFadeOutConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008BA3 RID: 35747 RVA: 0x001482F3 File Offset: 0x001464F3
+		// Token: 0x060092DB RID: 37595 RVA: 0x00157D83 File Offset: 0x00155F83
 		public static IDeadeyeFadeOutConfig CreateFromSetValue([Nullable(2)] IDeadeyeFadeOutConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008BA4 RID: 35748 RVA: 0x00148306 File Offset: 0x00146506
+		// Token: 0x060092DC RID: 37596 RVA: 0x00157D96 File Offset: 0x00155F96
 		public IDeadeyeFadeOutConfig_SetValue ToSetValue()
 		{
 			return new IDeadeyeFadeOutConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CF4 RID: 11508
-		// (get) Token: 0x06008BA5 RID: 35749 RVA: 0x00148319 File Offset: 0x00146519
-		// (set) Token: 0x06008BA6 RID: 35750 RVA: 0x00148348 File Offset: 0x00146548
+		// Token: 0x17002EF7 RID: 12023
+		// (get) Token: 0x060092DD RID: 37597 RVA: 0x00157DA9 File Offset: 0x00155FA9
+		// (set) Token: 0x060092DE RID: 37598 RVA: 0x00157DD8 File Offset: 0x00155FD8
 		public virtual float TransitionTime
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005711 RID: 22289
+		// Token: 0x04005B66 RID: 23398
 		[Nullable(2)]
 		protected IDeadeyeFadeOutConfig FbInstance;
 
-		// Token: 0x04005712 RID: 22290
+		// Token: 0x04005B67 RID: 23399
 		[Nullable(2)]
 		protected IDeadeyeFadeOutConfig_SetValue PocoInterface;
 	}

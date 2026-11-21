@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000581 RID: 1409
+	// Token: 0x02000598 RID: 1432
 	public class ConfigMotorEffectById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002113 RID: 8467 RVA: 0x0011478C File Offset: 0x0011298C
+		// Token: 0x0600219D RID: 8605 RVA: 0x0011B074 File Offset: 0x00119274
 		static ConfigMotorEffectById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMotorEffectById.CreateStaticDefaultValue), new Action(ConfigMotorEffectById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002114 RID: 8468 RVA: 0x001147AC File Offset: 0x001129AC
+		// Token: 0x0600219E RID: 8606 RVA: 0x0011B094 File Offset: 0x00119294
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMotorEffectById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002115 RID: 8469 RVA: 0x0011482B File Offset: 0x00112A2B
+		// Token: 0x0600219F RID: 8607 RVA: 0x0011B113 File Offset: 0x00119313
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMotorEffectById.LogPair = null;
 			ConfigMotorEffectById.HandleId = 0;
 		}
 
-		// Token: 0x06002116 RID: 8470 RVA: 0x00114839 File Offset: 0x00112A39
+		// Token: 0x060021A0 RID: 8608 RVA: 0x0011B121 File Offset: 0x00119321
 		public static void Init()
 		{
 			ConfigMotorEffectById.HandleId = ConfigCommon.InitDataStatement(ConfigMotorEffectById.HandleId, "db_motor.db", "select BinData from `MotorEffect` where Id=?");
 		}
 
-		// Token: 0x06002117 RID: 8471 RVA: 0x00114854 File Offset: 0x00112A54
+		// Token: 0x060021A1 RID: 8609 RVA: 0x0011B13C File Offset: 0x0011933C
 		public static MotorEffect? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMotorEffectById.HandleId, ConfigMotorEffectById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MotorEffect?(rootAsMotorEffect);
 		}
 
-		// Token: 0x0400266B RID: 9835
+		// Token: 0x0400270C RID: 9996
 		private const string DB = "db_motor.db";
 
-		// Token: 0x0400266C RID: 9836
+		// Token: 0x0400270D RID: 9997
 		private const string FILE = "m.摩托车.xlsx";
 
-		// Token: 0x0400266D RID: 9837
+		// Token: 0x0400270E RID: 9998
 		private const string TABLE = "MotorEffect";
 
-		// Token: 0x0400266E RID: 9838
+		// Token: 0x0400270F RID: 9999
 		private const string COMMAND = "select BinData from `MotorEffect` where Id=?";
 
-		// Token: 0x0400266F RID: 9839
+		// Token: 0x04002710 RID: 10000
 		private const string KEY_PREFIX = "MotorEffectById";
 
-		// Token: 0x04002670 RID: 9840
+		// Token: 0x04002711 RID: 10001
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002671 RID: 9841
+		// Token: 0x04002712 RID: 10002
 		private static int HandleId;
 	}
 }

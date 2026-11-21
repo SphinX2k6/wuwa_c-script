@@ -13,14 +13,14 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002205 RID: 8709
+// Token: 0x020016E9 RID: 5865
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class FilterSettingController : UiControllerBase
 {
-	// Token: 0x17001583 RID: 5507
-	// (get) Token: 0x06010EFB RID: 69371 RVA: 0x0041EFB4 File Offset: 0x0041D1B4
+	// Token: 0x170015BA RID: 5562
+	// (get) Token: 0x0600E38E RID: 58254 RVA: 0x0042B958 File Offset: 0x00429B58
 	private float DeadZone
 	{
 		get
@@ -29,8 +29,8 @@ public class FilterSettingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x17001584 RID: 5508
-	// (get) Token: 0x06010EFC RID: 69372 RVA: 0x0041EFD4 File Offset: 0x0041D1D4
+	// Token: 0x170015BB RID: 5563
+	// (get) Token: 0x0600E38F RID: 58255 RVA: 0x0042B978 File Offset: 0x00429B78
 	private float MoveFactor
 	{
 		get
@@ -39,7 +39,7 @@ public class FilterSettingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010EFD RID: 69373 RVA: 0x0041EFF8 File Offset: 0x0041D1F8
+	// Token: 0x0600E390 RID: 58256 RVA: 0x0042B99C File Offset: 0x00429B9C
 	public override bool Clear()
 	{
 		FilterCameraComponent cameraComponent = this.CameraComponent;
@@ -50,7 +50,7 @@ public class FilterSettingController : UiControllerBase
 		return base.Clear();
 	}
 
-	// Token: 0x06010EFE RID: 69374 RVA: 0x0041F011 File Offset: 0x0041D211
+	// Token: 0x0600E391 RID: 58257 RVA: 0x0042B9B5 File Offset: 0x00429BB5
 	protected override bool OnLeaveLevel()
 	{
 		FilterCameraComponent cameraComponent = this.CameraComponent;
@@ -62,7 +62,7 @@ public class FilterSettingController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010EFF RID: 69375 RVA: 0x0041F02C File Offset: 0x0041D22C
+	// Token: 0x0600E392 RID: 58258 RVA: 0x0042B9D0 File Offset: 0x00429BD0
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int>(EEventName.CharOnRoleDead, new Action<int>(this.OnRoleDead));
@@ -73,7 +73,7 @@ public class FilterSettingController : UiControllerBase
 		EventSystem.Instance.Add<PlotResultInfo>(EEventName.PlotNetworkEnd, new Action<PlotResultInfo>(this.HandlePlotNetworkEnd));
 	}
 
-	// Token: 0x06010F00 RID: 69376 RVA: 0x0041F0DC File Offset: 0x0041D2DC
+	// Token: 0x0600E393 RID: 58259 RVA: 0x0042BA80 File Offset: 0x00429C80
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.CharOnRoleDead, new Action<int>(this.OnRoleDead));
@@ -88,7 +88,7 @@ public class FilterSettingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010F01 RID: 69377 RVA: 0x0041F19C File Offset: 0x0041D39C
+	// Token: 0x0600E394 RID: 58260 RVA: 0x0042BB40 File Offset: 0x00429D40
 	private void OnRoleDead(int charId)
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.FilterSettingView))
@@ -97,7 +97,7 @@ public class FilterSettingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010F02 RID: 69378 RVA: 0x0041F1BF File Offset: 0x0041D3BF
+	// Token: 0x0600E395 RID: 58261 RVA: 0x0042BB63 File Offset: 0x00429D63
 	private void HandlePlotNetworkStart()
 	{
 		if (PlotModel.Instance.IsInOverLevel(EPlotLevel.LevelC))
@@ -108,7 +108,7 @@ public class FilterSettingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010F03 RID: 69379 RVA: 0x0041F1FE File Offset: 0x0041D3FE
+	// Token: 0x0600E396 RID: 58262 RVA: 0x0042BBA2 File Offset: 0x00429DA2
 	private void HandlePlotNetworkEnd(PlotResultInfo plotResultInfo)
 	{
 		if (PlotModel.Instance.IsInOverLevel(EPlotLevel.LevelC))
@@ -117,25 +117,25 @@ public class FilterSettingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010F04 RID: 69380 RVA: 0x0041F214 File Offset: 0x0041D414
+	// Token: 0x0600E397 RID: 58263 RVA: 0x0042BBB8 File Offset: 0x00429DB8
 	private void HandleUiSceneLastStepInLoadScene()
 	{
 		this.DisableFilterTemporarily(true);
 	}
 
-	// Token: 0x06010F05 RID: 69381 RVA: 0x0041F21D File Offset: 0x0041D41D
+	// Token: 0x0600E398 RID: 58264 RVA: 0x0042BBC1 File Offset: 0x00429DC1
 	private void HandleUiSceneLastStepInExitScene()
 	{
 		this.DisableFilterTemporarily(false);
 	}
 
-	// Token: 0x06010F06 RID: 69382 RVA: 0x0041F226 File Offset: 0x0041D426
+	// Token: 0x0600E399 RID: 58265 RVA: 0x0042BBCA File Offset: 0x00429DCA
 	private void HandleBackLoginView()
 	{
 		this.SwitchFilter(false);
 	}
 
-	// Token: 0x06010F07 RID: 69383 RVA: 0x0041F230 File Offset: 0x0041D430
+	// Token: 0x0600E39A RID: 58266 RVA: 0x0042BBD4 File Offset: 0x00429DD4
 	[NullableContext(0)]
 	public UniTask<bool> TryOpenExternalPreparedAsync()
 	{
@@ -147,7 +147,7 @@ public class FilterSettingController : UiControllerBase
 		return <TryOpenExternalPreparedAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010F08 RID: 69384 RVA: 0x0041F274 File Offset: 0x0041D474
+	// Token: 0x0600E39B RID: 58267 RVA: 0x0042BC18 File Offset: 0x00429E18
 	[NullableContext(0)]
 	private UniTask<bool> OpenFilterSettingView()
 	{
@@ -159,7 +159,7 @@ public class FilterSettingController : UiControllerBase
 		return <OpenFilterSettingView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010F09 RID: 69385 RVA: 0x0041F2B7 File Offset: 0x0041D4B7
+	// Token: 0x0600E39C RID: 58268 RVA: 0x0042BC5B File Offset: 0x00429E5B
 	public FilterSettingViewModel CreatePhotoFilterViewModel()
 	{
 		this.ViewModel = this.BuildFilterSettingViewModel();
@@ -170,7 +170,7 @@ public class FilterSettingController : UiControllerBase
 		return this.ViewModel;
 	}
 
-	// Token: 0x06010F0A RID: 69386 RVA: 0x0041F2E4 File Offset: 0x0041D4E4
+	// Token: 0x0600E39D RID: 58269 RVA: 0x0042BC88 File Offset: 0x00429E88
 	private FilterSettingViewModel BuildFilterSettingViewModel()
 	{
 		int filterSettingIdCache = MenuModel.Instance.FilterSettingIdCache;
@@ -424,7 +424,7 @@ public class FilterSettingController : UiControllerBase
 		return viewModel;
 	}
 
-	// Token: 0x06010F0B RID: 69387 RVA: 0x0041F5F4 File Offset: 0x0041D7F4
+	// Token: 0x0600E39E RID: 58270 RVA: 0x0042BF98 File Offset: 0x0042A198
 	private bool ResetFilterPoint(FilterSettingViewModel viewModel)
 	{
 		int filterSettingIdCache = MenuModel.Instance.FilterSettingIdCache;
@@ -443,7 +443,7 @@ public class FilterSettingController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010F0C RID: 69388 RVA: 0x0041F66C File Offset: 0x0041D86C
+	// Token: 0x0600E39F RID: 58271 RVA: 0x0042C010 File Offset: 0x0042A210
 	private bool ResetFilterIntensity(FilterSettingViewModel viewModel)
 	{
 		int filterSettingIdCache = MenuModel.Instance.FilterSettingIdCache;
@@ -460,7 +460,7 @@ public class FilterSettingController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010F0D RID: 69389 RVA: 0x0041F6D0 File Offset: 0x0041D8D0
+	// Token: 0x0600E3A0 RID: 58272 RVA: 0x0042C074 File Offset: 0x0042A274
 	private bool ResetFilterSeniorParams(FilterSettingViewModel viewModel)
 	{
 		int filterSettingIdCache = MenuModel.Instance.FilterSettingIdCache;
@@ -484,7 +484,7 @@ public class FilterSettingController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010F0E RID: 69390 RVA: 0x0041F76C File Offset: 0x0041D96C
+	// Token: 0x0600E3A1 RID: 58273 RVA: 0x0042C110 File Offset: 0x0042A310
 	public bool IsFilterParamChanged(EFilterSettingValueIndex typeIndex)
 	{
 		int filterSettingIdCache = MenuModel.Instance.FilterSettingIdCache;
@@ -493,13 +493,13 @@ public class FilterSettingController : UiControllerBase
 		return filterSettingValuesCache != null && filterSettingValuesCache.TryGetValue(filterSettingIdCache, out array) && array != null && typeIndex < (EFilterSettingValueIndex)array.Length && !MathUtils.Instance.IsNearlyEqual((double)array[(int)typeIndex], (double)this.GetFilterDefaultValue(filterSettingIdCache, typeIndex), null);
 	}
 
-	// Token: 0x06010F0F RID: 69391 RVA: 0x0041F7CE File Offset: 0x0041D9CE
+	// Token: 0x0600E3A2 RID: 58274 RVA: 0x0042C172 File Offset: 0x0042A372
 	public bool IsFilterPointChanged()
 	{
 		return this.IsFilterParamChanged(EFilterSettingValueIndex.Horizontal) || this.IsFilterParamChanged(EFilterSettingValueIndex.Vertical);
 	}
 
-	// Token: 0x06010F10 RID: 69392 RVA: 0x0041F7E4 File Offset: 0x0041D9E4
+	// Token: 0x0600E3A3 RID: 58275 RVA: 0x0042C188 File Offset: 0x0042A388
 	public bool IsAnySeniorParamChanged()
 	{
 		int filterSettingIdCache = MenuModel.Instance.FilterSettingIdCache;
@@ -520,7 +520,7 @@ public class FilterSettingController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x06010F11 RID: 69393 RVA: 0x0041F840 File Offset: 0x0041DA40
+	// Token: 0x0600E3A4 RID: 58276 RVA: 0x0042C1E4 File Offset: 0x0042A3E4
 	private void RefreshFilterSettingViewModel(int filterId, FilterSettingViewModel viewModel)
 	{
 		MenuModel.Instance.FilterSettingIdCache = filterId;
@@ -544,7 +544,7 @@ public class FilterSettingController : UiControllerBase
 		viewModel.IsSeniorParamRefresh = true;
 	}
 
-	// Token: 0x06010F12 RID: 69394 RVA: 0x0041F908 File Offset: 0x0041DB08
+	// Token: 0x0600E3A5 RID: 58277 RVA: 0x0042C2AC File Offset: 0x0042A4AC
 	public void ApplyFilterSetting()
 	{
 		int global = LocalStorage.GetGlobal<int>(ELocalStorageGlobalKey.FilterSettingId, 1);
@@ -558,13 +558,13 @@ public class FilterSettingController : UiControllerBase
 		this.SetDefaultFilterSetting();
 	}
 
-	// Token: 0x06010F13 RID: 69395 RVA: 0x0041FA20 File Offset: 0x0041DC20
+	// Token: 0x0600E3A6 RID: 58278 RVA: 0x0042C3C4 File Offset: 0x0042A5C4
 	public void SetDefaultFilterSetting()
 	{
 		UKuroGISystem.SetKuroAdvancedModeScreenFilter(GlobalData.World, ConfigFilterSettingById.GetConfig(1, true).Value.LogicIndex, 0.5f, 0.5f, 1f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f);
 	}
 
-	// Token: 0x06010F14 RID: 69396 RVA: 0x0041FA90 File Offset: 0x0041DC90
+	// Token: 0x0600E3A7 RID: 58279 RVA: 0x0042C434 File Offset: 0x0042A634
 	private void SetFilterValueImp(FilterSettingViewModel viewModel, int filterId, float horizontalNormalized, float verticalNormalized, float intensityNormalized)
 	{
 		Dictionary<int, float[]> filterSettingValuesCache = MenuModel.Instance.FilterSettingValuesCache;
@@ -582,7 +582,7 @@ public class FilterSettingController : UiControllerBase
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06010F15 RID: 69397 RVA: 0x0041FB18 File Offset: 0x0041DD18
+	// Token: 0x0600E3A8 RID: 58280 RVA: 0x0042C4BC File Offset: 0x0042A6BC
 	private unsafe void SetFilterAllValueImp(FilterSettingViewModel viewModel, int filterId, float horizontalNormalized, float verticalNormalized, float intensityNormalized, float sharpenIntensity, float brightness, float contrast, float colorTemperature, float saturation, float bloom, float gamma, float shadowIntensity, float noiseIntensity, float halation)
 	{
 		Log instance = Log.Instance;
@@ -608,7 +608,7 @@ public class FilterSettingController : UiControllerBase
 		UKuroGISystem.SetKuroAdvancedModeScreenFilter(GlobalData.World, ConfigFilterSettingById.GetConfig(filterId, true).Value.LogicIndex, horizontalNormalized, verticalNormalized, intensityNormalized, sharpenIntensity, brightness, contrast, colorTemperature, saturation, bloom, gamma, shadowIntensity, noiseIntensity, halation);
 	}
 
-	// Token: 0x06010F16 RID: 69398 RVA: 0x0041FD30 File Offset: 0x0041DF30
+	// Token: 0x0600E3A9 RID: 58281 RVA: 0x0042C6D4 File Offset: 0x0042A8D4
 	public UniTask CloseViewAndReturnWorld()
 	{
 		FilterSettingController.<CloseViewAndReturnWorld>d__31 <CloseViewAndReturnWorld>d__;
@@ -619,7 +619,7 @@ public class FilterSettingController : UiControllerBase
 		return <CloseViewAndReturnWorld>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010F17 RID: 69399 RVA: 0x0041FD74 File Offset: 0x0041DF74
+	// Token: 0x0600E3AA RID: 58282 RVA: 0x0042C718 File Offset: 0x0042A918
 	public UniTask OpenBlackScreen()
 	{
 		FilterSettingController.<OpenBlackScreen>d__32 <OpenBlackScreen>d__;
@@ -629,7 +629,7 @@ public class FilterSettingController : UiControllerBase
 		return <OpenBlackScreen>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010F18 RID: 69400 RVA: 0x0041FDB0 File Offset: 0x0041DFB0
+	// Token: 0x0600E3AB RID: 58283 RVA: 0x0042C754 File Offset: 0x0042A954
 	public UniTask CloseBlackScreen()
 	{
 		FilterSettingController.<CloseBlackScreen>d__33 <CloseBlackScreen>d__;
@@ -639,7 +639,7 @@ public class FilterSettingController : UiControllerBase
 		return <CloseBlackScreen>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010F19 RID: 69401 RVA: 0x0041FDEB File Offset: 0x0041DFEB
+	// Token: 0x0600E3AC RID: 58284 RVA: 0x0042C78F File Offset: 0x0042A98F
 	public float GetFilterDefaultValue(int filterId, EFilterSettingValueIndex typeIndex)
 	{
 		if (filterId == 1 && typeIndex == EFilterSettingValueIndex.Intensity)
@@ -653,7 +653,7 @@ public class FilterSettingController : UiControllerBase
 		return 0f;
 	}
 
-	// Token: 0x06010F1A RID: 69402 RVA: 0x0041FE0A File Offset: 0x0041E00A
+	// Token: 0x0600E3AD RID: 58285 RVA: 0x0042C7AE File Offset: 0x0042A9AE
 	private void DisableFilterTemporarily(bool isEnter)
 	{
 		if (isEnter)
@@ -666,7 +666,7 @@ public class FilterSettingController : UiControllerBase
 		UKuroSequencePerformanceManager.CloseKuroPerformanceMode();
 	}
 
-	// Token: 0x06010F1B RID: 69403 RVA: 0x0041FE34 File Offset: 0x0041E034
+	// Token: 0x0600E3AE RID: 58286 RVA: 0x0042C7D8 File Offset: 0x0042A9D8
 	public bool IsFilterSettingChange()
 	{
 		int? global = LocalStorage.GetGlobal<int?>(ELocalStorageGlobalKey.FilterSettingId, null);
@@ -704,7 +704,7 @@ public class FilterSettingController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x06010F1C RID: 69404 RVA: 0x0041FEFC File Offset: 0x0041E0FC
+	// Token: 0x0600E3AF RID: 58287 RVA: 0x0042C8A0 File Offset: 0x0042AAA0
 	public void SwitchFilter(bool isOn)
 	{
 		if (isOn)
@@ -715,8 +715,8 @@ public class FilterSettingController : UiControllerBase
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Kuro.KuroEnableScreenFilter 0", null);
 	}
 
-	// Token: 0x17001585 RID: 5509
-	// (get) Token: 0x06010F1D RID: 69405 RVA: 0x0041FF29 File Offset: 0x0041E129
+	// Token: 0x170015BC RID: 5564
+	// (get) Token: 0x0600E3B0 RID: 58288 RVA: 0x0042C8CD File Offset: 0x0042AACD
 	public static FilterSettingController Instance
 	{
 		get
@@ -725,7 +725,7 @@ public class FilterSettingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010F1E RID: 69406 RVA: 0x0041FF30 File Offset: 0x0041E130
+	// Token: 0x0600E3B1 RID: 58289 RVA: 0x0042C8D4 File Offset: 0x0042AAD4
 	public static FilterSettingController GetOrCreateInstance()
 	{
 		if (FilterSettingController._Instance == null)
@@ -735,7 +735,7 @@ public class FilterSettingController : UiControllerBase
 		return FilterSettingController._Instance;
 	}
 
-	// Token: 0x06010F1F RID: 69407 RVA: 0x0041FF44 File Offset: 0x0041E144
+	// Token: 0x0600E3B2 RID: 58290 RVA: 0x0042C8E8 File Offset: 0x0042AAE8
 	public static bool CreateInstance()
 	{
 		if (FilterSettingController._Instance != null)
@@ -746,32 +746,32 @@ public class FilterSettingController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010F20 RID: 69408 RVA: 0x0041FF5A File Offset: 0x0041E15A
+	// Token: 0x0600E3B3 RID: 58291 RVA: 0x0042C8FE File Offset: 0x0042AAFE
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010F21 RID: 69409 RVA: 0x0041FF5C File Offset: 0x0041E15C
+	// Token: 0x0600E3B4 RID: 58292 RVA: 0x0042C900 File Offset: 0x0042AB00
 	public static void ResetStaticDefaultValue()
 	{
 		FilterSettingController._Instance = null;
 	}
 
-	// Token: 0x06010F22 RID: 69410 RVA: 0x0041FF64 File Offset: 0x0041E164
+	// Token: 0x0600E3B5 RID: 58293 RVA: 0x0042C908 File Offset: 0x0042AB08
 	static FilterSettingController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FilterSettingController.CreateStaticDefaultValue), new Action(FilterSettingController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040080CE RID: 32974
+	// Token: 0x0400820C RID: 33292
 	[Nullable(2)]
 	public FilterCameraComponent CameraComponent;
 
-	// Token: 0x040080CF RID: 32975
+	// Token: 0x0400820D RID: 33293
 	[Nullable(2)]
 	private FilterSettingViewModel ViewModel;
 
-	// Token: 0x040080D0 RID: 32976
+	// Token: 0x0400820E RID: 33294
 	[Nullable(2)]
 	private static FilterSettingController _Instance;
 }

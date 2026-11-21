@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A98 RID: 19096
+	// Token: 0x02003A40 RID: 14912
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBuildingUpgradeItem : UiPanelBase
 	{
-		// Token: 0x060317F6 RID: 202742 RVA: 0x00B79260 File Offset: 0x00B77460
+		// Token: 0x06026586 RID: 157062 RVA: 0x00ABD214 File Offset: 0x00ABB414
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060317F7 RID: 202743 RVA: 0x00B793F0 File Offset: 0x00B775F0
+		// Token: 0x06026587 RID: 157063 RVA: 0x00ABD3A4 File Offset: 0x00ABB5A4
 		public bool RefreshButton(TrapDefenseBuildingDevelopItemData data)
 		{
 			this.Data = data;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return flag3;
 		}
 
-		// Token: 0x060317F8 RID: 202744 RVA: 0x00B795AC File Offset: 0x00B777AC
+		// Token: 0x06026588 RID: 157064 RVA: 0x00ABD560 File Offset: 0x00ABB760
 		private void OnClicked()
 		{
 			if (this.OnClickCb != null)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060317F9 RID: 202745 RVA: 0x00B795C4 File Offset: 0x00B777C4
+		// Token: 0x06026589 RID: 157065 RVA: 0x00ABD578 File Offset: 0x00ABB778
 		private void OnClickJump()
 		{
 			if (!this.Data.GetIsUnlock())
@@ -164,38 +164,38 @@ namespace CSharpScript.Game.Module.TrapDefense
 			TrapDefenseModel.Instance.OpenViewTalentTree(param);
 		}
 
-		// Token: 0x0401A763 RID: 108387
+		// Token: 0x040150B5 RID: 86197
 		public Action OnClickCb;
 
-		// Token: 0x0401A764 RID: 108388
+		// Token: 0x040150B6 RID: 86198
 		private TrapDefenseBuildingDevelopItemData Data;
 
-		// Token: 0x0200ABF1 RID: 44017
+		// Token: 0x02009611 RID: 38417
 		[NullableContext(0)]
 		private class EBtnUpgrade
 		{
-			// Token: 0x040343FB RID: 214011
+			// Token: 0x0402EDAC RID: 191916
 			public const int BtnUpgrade = 0;
 
-			// Token: 0x040343FC RID: 214012
+			// Token: 0x0402EDAD RID: 191917
 			public const int TxtCost = 1;
 
-			// Token: 0x040343FD RID: 214013
+			// Token: 0x0402EDAE RID: 191918
 			public const int TxtConfirm = 2;
 
-			// Token: 0x040343FE RID: 214014
+			// Token: 0x0402EDAF RID: 191919
 			public const int PanelLockLayout = 3;
 
-			// Token: 0x040343FF RID: 214015
+			// Token: 0x0402EDB0 RID: 191920
 			public const int PanelMaxLayout = 4;
 
-			// Token: 0x04034400 RID: 214016
+			// Token: 0x0402EDB1 RID: 191921
 			public const int RedDot = 5;
 
-			// Token: 0x04034401 RID: 214017
+			// Token: 0x0402EDB2 RID: 191922
 			public const int BtnJump = 6;
 
-			// Token: 0x04034402 RID: 214018
+			// Token: 0x0402EDB3 RID: 191923
 			public const int TxtLock = 7;
 		}
 	}

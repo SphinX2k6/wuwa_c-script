@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001739 RID: 5945
+	// Token: 0x020018B8 RID: 6328
 	public class GiantToggleModel_SetValue
 	{
-		// Token: 0x0400503D RID: 20541
+		// Token: 0x04005470 RID: 21616
 		public bool IsEnabled;
 	}
 }

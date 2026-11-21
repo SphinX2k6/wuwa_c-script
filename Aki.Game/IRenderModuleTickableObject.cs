@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02003483 RID: 13443
+// Token: 0x020029F7 RID: 10743
 public interface IRenderModuleTickableObject
 {
-	// Token: 0x0601D250 RID: 119376
+	// Token: 0x0601AF58 RID: 110424
 	void Tick(float deltaSecond);
 }

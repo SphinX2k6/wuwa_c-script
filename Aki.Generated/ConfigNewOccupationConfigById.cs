@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005F2 RID: 1522
+	// Token: 0x0200060A RID: 1546
 	public class ConfigNewOccupationConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060023BB RID: 9147 RVA: 0x001238A3 File Offset: 0x00121AA3
+		// Token: 0x0600244B RID: 9291 RVA: 0x0012A31F File Offset: 0x0012851F
 		static ConfigNewOccupationConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigNewOccupationConfigById.CreateStaticDefaultValue), new Action(ConfigNewOccupationConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060023BC RID: 9148 RVA: 0x001238C4 File Offset: 0x00121AC4
+		// Token: 0x0600244C RID: 9292 RVA: 0x0012A340 File Offset: 0x00128540
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigNewOccupationConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060023BD RID: 9149 RVA: 0x00123943 File Offset: 0x00121B43
+		// Token: 0x0600244D RID: 9293 RVA: 0x0012A3BF File Offset: 0x001285BF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigNewOccupationConfigById.LogPair = null;
 			ConfigNewOccupationConfigById.HandleId = 0;
 		}
 
-		// Token: 0x060023BE RID: 9150 RVA: 0x00123951 File Offset: 0x00121B51
+		// Token: 0x0600244E RID: 9294 RVA: 0x0012A3CD File Offset: 0x001285CD
 		public static void Init()
 		{
 			ConfigNewOccupationConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigNewOccupationConfigById.HandleId, "db_new_occupation.db", "select BinData from `NewOccupationConfig` where Id=?");
 		}
 
-		// Token: 0x060023BF RID: 9151 RVA: 0x0012396C File Offset: 0x00121B6C
+		// Token: 0x0600244F RID: 9295 RVA: 0x0012A3E8 File Offset: 0x001285E8
 		public static NewOccupationConfig? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigNewOccupationConfigById.HandleId, ConfigNewOccupationConfigById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new NewOccupationConfig?(rootAsNewOccupationConfig);
 		}
 
-		// Token: 0x04002984 RID: 10628
+		// Token: 0x04002A2C RID: 10796
 		private const string DB = "db_new_occupation.db";
 
-		// Token: 0x04002985 RID: 10629
+		// Token: 0x04002A2D RID: 10797
 		private const string FILE = "UniverseEditor/Occupation/无音区玩法占用_Json_Occupation.csv";
 
-		// Token: 0x04002986 RID: 10630
+		// Token: 0x04002A2E RID: 10798
 		private const string TABLE = "NewOccupationConfig";
 
-		// Token: 0x04002987 RID: 10631
+		// Token: 0x04002A2F RID: 10799
 		private const string COMMAND = "select BinData from `NewOccupationConfig` where Id=?";
 
-		// Token: 0x04002988 RID: 10632
+		// Token: 0x04002A30 RID: 10800
 		private const string KEY_PREFIX = "NewOccupationConfigById";
 
-		// Token: 0x04002989 RID: 10633
+		// Token: 0x04002A31 RID: 10801
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400298A RID: 10634
+		// Token: 0x04002A32 RID: 10802
 		private static int HandleId;
 	}
 }

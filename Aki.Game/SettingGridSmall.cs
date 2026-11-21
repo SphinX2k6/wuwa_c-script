@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Inventory;
 using FilterDefine;
 using UnrealEngine;
 
-// Token: 0x02001FBD RID: 8125
+// Token: 0x0200147F RID: 5247
 public class SettingGridSmall : SettingGridBase
 {
-	// Token: 0x0600FE05 RID: 65029 RVA: 0x003D9E0C File Offset: 0x003D800C
+	// Token: 0x0600D22B RID: 53803 RVA: 0x003E57E8 File Offset: 0x003E39E8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -30,13 +30,13 @@ public class SettingGridSmall : SettingGridBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FE06 RID: 65030 RVA: 0x003D9EB2 File Offset: 0x003D80B2
+	// Token: 0x0600D22C RID: 53804 RVA: 0x003E588E File Offset: 0x003E3A8E
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(1).CanExecuteChange.Bind(new Func<bool>(this.OnCheckCanChange));
 	}
 
-	// Token: 0x0600FE07 RID: 65031 RVA: 0x003D9ED4 File Offset: 0x003D80D4
+	// Token: 0x0600D22D RID: 53805 RVA: 0x003E58B0 File Offset: 0x003E3AB0
 	[NullableContext(1)]
 	public override void Refresh(InventoryDefine.IManageConfigSettingGridData data, bool isSelected, int gridIndex)
 	{
@@ -57,7 +57,7 @@ public class SettingGridSmall : SettingGridBase
 		this.SetNormalState();
 	}
 
-	// Token: 0x0600FE08 RID: 65032 RVA: 0x003D9F4C File Offset: 0x003D814C
+	// Token: 0x0600D22E RID: 53806 RVA: 0x003E5928 File Offset: 0x003E3B28
 	private bool CheckShow()
 	{
 		InventoryDefine.IManageConfigSettingGridData data = this.Data;
@@ -68,7 +68,7 @@ public class SettingGridSmall : SettingGridBase
 		return data.IsEditing || data.IsSelect;
 	}
 
-	// Token: 0x0600FE09 RID: 65033 RVA: 0x003D9F90 File Offset: 0x003D8190
+	// Token: 0x0600D22F RID: 53807 RVA: 0x003E596C File Offset: 0x003E3B6C
 	private void SetNormalState()
 	{
 		InventoryDefine.IManageConfigSettingGridData data = this.Data;
@@ -82,13 +82,13 @@ public class SettingGridSmall : SettingGridBase
 		base.GetText(0).SetText(filterItemData.Content ?? "", true);
 	}
 
-	// Token: 0x0600FE0A RID: 65034 RVA: 0x003DA02E File Offset: 0x003D822E
+	// Token: 0x0600D230 RID: 53808 RVA: 0x003E5A0A File Offset: 0x003E3C0A
 	private bool OnCheckCanChange()
 	{
 		return this.Data != null && this.Data.IsEditing;
 	}
 
-	// Token: 0x0600FE0B RID: 65035 RVA: 0x003DA045 File Offset: 0x003D8245
+	// Token: 0x0600D231 RID: 53809 RVA: 0x003E5A21 File Offset: 0x003E3C21
 	private void OnClickedSwitch(EToggleState state)
 	{
 		if (this.CallbackOnClicked != null)
@@ -97,16 +97,16 @@ public class SettingGridSmall : SettingGridBase
 		}
 	}
 
-	// Token: 0x040075A2 RID: 30114
+	// Token: 0x04007684 RID: 30340
 	[Nullable(2)]
 	private InventoryDefine.IManageConfigSettingGridData Data;
 
-	// Token: 0x020085C6 RID: 34246
+	// Token: 0x02007748 RID: 30536
 	private enum EComponentSmall
 	{
-		// Token: 0x0402B8C7 RID: 178375
+		// Token: 0x04026BCF RID: 158671
 		TextName,
-		// Token: 0x0402B8C8 RID: 178376
+		// Token: 0x04026BD0 RID: 158672
 		BtnSwitch
 	}
 }

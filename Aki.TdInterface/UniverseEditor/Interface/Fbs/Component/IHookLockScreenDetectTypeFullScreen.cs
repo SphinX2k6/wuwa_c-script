@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053D4 RID: 21460
+	// Token: 0x0200595A RID: 22874
 	public struct IHookLockScreenDetectTypeFullScreen : IFlatbufferObject
 	{
-		// Token: 0x17009DE1 RID: 40417
-		// (get) Token: 0x06023379 RID: 144249 RVA: 0x004E0869 File Offset: 0x004DEA69
+		// Token: 0x1700A61B RID: 42523
+		// (get) Token: 0x06025431 RID: 152625 RVA: 0x0051D895 File Offset: 0x0051BA95
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602337A RID: 144250 RVA: 0x004E0876 File Offset: 0x004DEA76
+		// Token: 0x06025432 RID: 152626 RVA: 0x0051D8A2 File Offset: 0x0051BAA2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602337B RID: 144251 RVA: 0x004E0880 File Offset: 0x004DEA80
+		// Token: 0x06025433 RID: 152627 RVA: 0x0051D8AC File Offset: 0x0051BAAC
 		public static IHookLockScreenDetectTypeFullScreen GetRootAsIHookLockScreenDetectTypeFullScreen(ByteBuffer _bb)
 		{
 			return IHookLockScreenDetectTypeFullScreen.GetRootAsIHookLockScreenDetectTypeFullScreen(_bb, default(IHookLockScreenDetectTypeFullScreen));
 		}
 
-		// Token: 0x0602337C RID: 144252 RVA: 0x004E089C File Offset: 0x004DEA9C
+		// Token: 0x06025434 RID: 152628 RVA: 0x0051D8C8 File Offset: 0x0051BAC8
 		public static IHookLockScreenDetectTypeFullScreen GetRootAsIHookLockScreenDetectTypeFullScreen(ByteBuffer _bb, IHookLockScreenDetectTypeFullScreen obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602337D RID: 144253 RVA: 0x004E08B9 File Offset: 0x004DEAB9
+		// Token: 0x06025435 RID: 152629 RVA: 0x0051D8E5 File Offset: 0x0051BAE5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602337E RID: 144254 RVA: 0x004E08C8 File Offset: 0x004DEAC8
+		// Token: 0x06025436 RID: 152630 RVA: 0x0051D8F4 File Offset: 0x0051BAF4
 		public IHookLockScreenDetectTypeFullScreen __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009DE2 RID: 40418
-		// (get) Token: 0x0602337F RID: 144255 RVA: 0x004E08D8 File Offset: 0x004DEAD8
+		// Token: 0x1700A61C RID: 42524
+		// (get) Token: 0x06025437 RID: 152631 RVA: 0x0051D904 File Offset: 0x0051BB04
 		public EHookLockScreenDetectType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023380 RID: 144256 RVA: 0x004E0914 File Offset: 0x004DEB14
+		// Token: 0x06025438 RID: 152632 RVA: 0x0051D940 File Offset: 0x0051BB40
 		public static Offset<IHookLockScreenDetectTypeFullScreen> CreateIHookLockScreenDetectTypeFullScreen(FlatBufferBuilder builder, EHookLockScreenDetectType Type = EHookLockScreenDetectType.CentralEllipse)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHookLockScreenDetectTypeFullScreen.EndIHookLockScreenDetectTypeFullScreen(builder);
 		}
 
-		// Token: 0x06023381 RID: 144257 RVA: 0x004E092A File Offset: 0x004DEB2A
+		// Token: 0x06025439 RID: 152633 RVA: 0x0051D956 File Offset: 0x0051BB56
 		public static void StartIHookLockScreenDetectTypeFullScreen(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06023382 RID: 144258 RVA: 0x004E0933 File Offset: 0x004DEB33
+		// Token: 0x0602543A RID: 152634 RVA: 0x0051D95F File Offset: 0x0051BB5F
 		public static void AddType(FlatBufferBuilder builder, EHookLockScreenDetectType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06023383 RID: 144259 RVA: 0x004E093E File Offset: 0x004DEB3E
+		// Token: 0x0602543B RID: 152635 RVA: 0x0051D96A File Offset: 0x0051BB6A
 		public static Offset<IHookLockScreenDetectTypeFullScreen> EndIHookLockScreenDetectTypeFullScreen(FlatBufferBuilder builder)
 		{
 			return new Offset<IHookLockScreenDetectTypeFullScreen>(builder.EndTable());
 		}
 
-		// Token: 0x06023384 RID: 144260 RVA: 0x004E094C File Offset: 0x004DEB4C
+		// Token: 0x0602543C RID: 152636 RVA: 0x0051D978 File Offset: 0x0051BB78
 		public IHookLockScreenDetectTypeFullScreenT UnPack()
 		{
 			IHookLockScreenDetectTypeFullScreenT hookLockScreenDetectTypeFullScreenT = new IHookLockScreenDetectTypeFullScreenT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return hookLockScreenDetectTypeFullScreenT;
 		}
 
-		// Token: 0x06023385 RID: 144261 RVA: 0x004E0967 File Offset: 0x004DEB67
+		// Token: 0x0602543D RID: 152637 RVA: 0x0051D993 File Offset: 0x0051BB93
 		public void UnPackTo(IHookLockScreenDetectTypeFullScreenT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06023386 RID: 144262 RVA: 0x004E0978 File Offset: 0x004DEB78
+		// Token: 0x0602543E RID: 152638 RVA: 0x0051D9A4 File Offset: 0x0051BBA4
 		public static Offset<IHookLockScreenDetectTypeFullScreen> Pack(FlatBufferBuilder builder, IHookLockScreenDetectTypeFullScreenT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHookLockScreenDetectTypeFullScreen.CreateIHookLockScreenDetectTypeFullScreen(builder, _o.Type);
 		}
 
-		// Token: 0x0400E60A RID: 58890
+		// Token: 0x0400F23B RID: 62011
 		private Table __p;
 	}
 }

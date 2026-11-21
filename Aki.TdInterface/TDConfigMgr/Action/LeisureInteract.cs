@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020C9 RID: 8393
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200231E RID: 8990
 	public class LeisureInteract : ActionParams
 	{
-		// Token: 0x0600B878 RID: 47224 RVA: 0x001AAD38 File Offset: 0x001A8F38
+		// Token: 0x0600C3D0 RID: 50128 RVA: 0x001C1980 File Offset: 0x001BFB80
 		private LeisureInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B879 RID: 47225 RVA: 0x001AAD70 File Offset: 0x001A8F70
+		// Token: 0x0600C3D1 RID: 50129 RVA: 0x001C19B8 File Offset: 0x001BFBB8
 		public static LeisureInteract Create([Nullable(2)] LeisureInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B87A RID: 47226 RVA: 0x001AAD83 File Offset: 0x001A8F83
+		// Token: 0x0600C3D2 RID: 50130 RVA: 0x001C19CB File Offset: 0x001BFBCB
 		public static LeisureInteract CreateFromSetValue([Nullable(2)] LeisureInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B87B RID: 47227 RVA: 0x001AAD96 File Offset: 0x001A8F96
+		// Token: 0x0600C3D3 RID: 50131 RVA: 0x001C19DE File Offset: 0x001BFBDE
 		public LeisureInteract_SetValue ToSetValue()
 		{
 			return new LeisureInteract_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003867 RID: 14439
-		// (get) Token: 0x0600B87C RID: 47228 RVA: 0x001AADB5 File Offset: 0x001A8FB5
-		// (set) Token: 0x0600B87D RID: 47229 RVA: 0x001AADDC File Offset: 0x001A8FDC
+		// Token: 0x17003B4B RID: 15179
+		// (get) Token: 0x0600C3D4 RID: 50132 RVA: 0x001C19FD File Offset: 0x001BFBFD
+		// (set) Token: 0x0600C3D5 RID: 50133 RVA: 0x001C1A24 File Offset: 0x001BFC24
 		public virtual ILeisureInteractType Option
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003868 RID: 14440
-		// (get) Token: 0x0600B87E RID: 47230 RVA: 0x001AADEC File Offset: 0x001A8FEC
-		// (set) Token: 0x0600B87F RID: 47231 RVA: 0x001AAE26 File Offset: 0x001A9026
+		// Token: 0x17003B4C RID: 15180
+		// (get) Token: 0x0600C3D6 RID: 50134 RVA: 0x001C1A34 File Offset: 0x001BFC34
+		// (set) Token: 0x0600C3D7 RID: 50135 RVA: 0x001C1A6E File Offset: 0x001BFC6E
 		public virtual int? SceneEntity
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E8E RID: 28302
+		// Token: 0x040074AC RID: 29868
 		[Nullable(2)]
 		protected new LeisureInteract FbInstance;
 
-		// Token: 0x04006E8F RID: 28303
+		// Token: 0x040074AD RID: 29869
 		[Nullable(2)]
 		protected LeisureInteract_SetValue PocoInterface;
 	}

@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 {
-	// Token: 0x020051E9 RID: 20969
+	// Token: 0x020041B9 RID: 16825
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 	})]
 	public class CardEffectCountComponent : CardComponentBase<ICardEffectCountComponentData>
 	{
-		// Token: 0x06035A4D RID: 219725 RVA: 0x00CB4DE0 File Offset: 0x00CB2FE0
+		// Token: 0x0602A948 RID: 174408 RVA: 0x00C0241C File Offset: 0x00C0061C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,32 +29,32 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			};
 		}
 
-		// Token: 0x06035A4E RID: 219726 RVA: 0x00CB4E3C File Offset: 0x00CB303C
+		// Token: 0x0602A949 RID: 174409 RVA: 0x00C02478 File Offset: 0x00C00678
 		protected override void OnStart()
 		{
 			this.Sequence = new UiSequencePlayer(this.RootItem);
 			this.Layout = new GenericLayout<EffectCountItem, IEffectCountItemData>(base.GetLayoutBase(1), new Func<EffectCountItem>(this.InitEffectCountItem), base.GetItem(2).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x06035A4F RID: 219727 RVA: 0x00CB4E8B File Offset: 0x00CB308B
+		// Token: 0x0602A94A RID: 174410 RVA: 0x00C024C7 File Offset: 0x00C006C7
 		protected override void OnBeforeDestroy()
 		{
 			this.Sequence.Clear();
 		}
 
-		// Token: 0x06035A50 RID: 219728 RVA: 0x00CB4E98 File Offset: 0x00CB3098
+		// Token: 0x0602A94B RID: 174411 RVA: 0x00C024D4 File Offset: 0x00C006D4
 		private EffectCountItem InitEffectCountItem()
 		{
 			return new EffectCountItem();
 		}
 
-		// Token: 0x06035A51 RID: 219729 RVA: 0x00CB4EA0 File Offset: 0x00CB30A0
+		// Token: 0x0602A94C RID: 174412 RVA: 0x00C024DC File Offset: 0x00C006DC
 		private void RefreshEffectCount()
 		{
 			base.GetText(0).SetText(this.Data.EffectCount.ToString() + "/" + this.Data.EffectCountMax.ToString(), true);
 		}
 
-		// Token: 0x06035A52 RID: 219730 RVA: 0x00CB4EEC File Offset: 0x00CB30EC
+		// Token: 0x0602A94D RID: 174413 RVA: 0x00C02528 File Offset: 0x00C00728
 		private UniTask ShowFullEffect()
 		{
 			CardEffectCountComponent.<ShowFullEffect>d__8 <ShowFullEffect>d__;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			return <ShowFullEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035A53 RID: 219731 RVA: 0x00CB4F30 File Offset: 0x00CB3130
+		// Token: 0x0602A94E RID: 174414 RVA: 0x00C0256C File Offset: 0x00C0076C
 		private UniTask ShowAddEffect(int lastEffectCount, int newEffectCount)
 		{
 			CardEffectCountComponent.<ShowAddEffect>d__9 <ShowAddEffect>d__;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			return <ShowAddEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035A54 RID: 219732 RVA: 0x00CB4F84 File Offset: 0x00CB3184
+		// Token: 0x0602A94F RID: 174415 RVA: 0x00C025C0 File Offset: 0x00C007C0
 		private UniTask ShowResetEffect()
 		{
 			CardEffectCountComponent.<ShowResetEffect>d__10 <ShowResetEffect>d__;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			return <ShowResetEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035A55 RID: 219733 RVA: 0x00CB4FC8 File Offset: 0x00CB31C8
+		// Token: 0x0602A950 RID: 174416 RVA: 0x00C02604 File Offset: 0x00C00804
 		private void RefreshEffectCountItemList()
 		{
 			List<IEffectCountItemData> list = new List<IEffectCountItemData>();
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			this.Layout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06035A56 RID: 219734 RVA: 0x00CB5020 File Offset: 0x00CB3220
+		// Token: 0x0602A951 RID: 174417 RVA: 0x00C0265C File Offset: 0x00C0085C
 		public override void Refresh(ICardEffectCountComponentData data)
 		{
 			if (!data.InFight)
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			}
 		}
 
-		// Token: 0x06035A57 RID: 219735 RVA: 0x00CB5074 File Offset: 0x00CB3274
+		// Token: 0x0602A952 RID: 174418 RVA: 0x00C026B0 File Offset: 0x00C008B0
 		public UniTask RefreshEffect(ICardEffectCountComponentData data)
 		{
 			CardEffectCountComponent.<RefreshEffect>d__13 <RefreshEffect>d__;
@@ -135,26 +135,26 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			return <RefreshEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401C76E RID: 116590
+		// Token: 0x040171A3 RID: 94627
 		protected ICardEffectCountComponentData Data;
 
-		// Token: 0x0401C76F RID: 116591
+		// Token: 0x040171A4 RID: 94628
 		protected GenericLayout<EffectCountItem, IEffectCountItemData> Layout;
 
-		// Token: 0x0401C770 RID: 116592
+		// Token: 0x040171A5 RID: 94629
 		protected UiSequencePlayer Sequence;
 
-		// Token: 0x0200B369 RID: 45929
+		// Token: 0x02009DA1 RID: 40353
 		[NullableContext(0)]
 		private static class EComponentDefine
 		{
-			// Token: 0x04036602 RID: 222722
+			// Token: 0x04031055 RID: 200789
 			public const int EffectText = 0;
 
-			// Token: 0x04036603 RID: 222723
+			// Token: 0x04031056 RID: 200790
 			public const int EffectCountLayout = 1;
 
-			// Token: 0x04036604 RID: 222724
+			// Token: 0x04031057 RID: 200791
 			public const int EffectCountItem = 2;
 		}
 	}

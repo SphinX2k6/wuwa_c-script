@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Components.TearItem
 {
-	// Token: 0x020062B2 RID: 25266
+	// Token: 0x02005230 RID: 21040
 	public class PrizeDrawingTearItemDouble : PrizeDrawingTearItemBase
 	{
-		// Token: 0x0603F8BA RID: 260282 RVA: 0x00F5E88C File Offset: 0x00F5CA8C
+		// Token: 0x0603457B RID: 214395 RVA: 0x00EA57E8 File Offset: 0x00EA39E8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F8BB RID: 260283 RVA: 0x00F5EA24 File Offset: 0x00F5CC24
+		// Token: 0x0603457C RID: 214396 RVA: 0x00EA5980 File Offset: 0x00EA3B80
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PrizeDrawingTearItemDouble.<OnBeforeStartAsync>d__1 <OnBeforeStartAsync>d__;

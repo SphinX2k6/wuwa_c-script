@@ -3,38 +3,38 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001108 RID: 4360
+// Token: 0x020005BC RID: 1468
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class AvignonConfig : ConfigBase
 {
-	// Token: 0x060071D1 RID: 29137 RVA: 0x00174B6C File Offset: 0x00172D6C
+	// Token: 0x06004567 RID: 17767 RVA: 0x0017D528 File Offset: 0x0017B728
 	public IReadOnlyList<AvignonStage> GetStageConfigAll()
 	{
 		return ConfigAvignonStageAll.GetConfigList(true) ?? new AvignonStage[0];
 	}
 
-	// Token: 0x060071D2 RID: 29138 RVA: 0x00174B7E File Offset: 0x00172D7E
+	// Token: 0x06004568 RID: 17768 RVA: 0x0017D53A File Offset: 0x0017B73A
 	public AvignonStage? GetStageConfigById(int stageId)
 	{
 		return ConfigAvignonStageById.GetConfig(stageId, true);
 	}
 
-	// Token: 0x060071D3 RID: 29139 RVA: 0x00174B87 File Offset: 0x00172D87
+	// Token: 0x06004569 RID: 17769 RVA: 0x0017D543 File Offset: 0x0017B743
 	public IReadOnlyList<AvignonTask> GetAvignonTaskConfigByStageId(int stageId)
 	{
 		return ConfigAvignonTaskByStageId.GetConfigList(stageId, true);
 	}
 
-	// Token: 0x060071D4 RID: 29140 RVA: 0x00174B90 File Offset: 0x00172D90
+	// Token: 0x0600456A RID: 17770 RVA: 0x0017D54C File Offset: 0x0017B74C
 	public AvignonTask? GetAvignonTaskConfigByTaskId(int taskId)
 	{
 		return ConfigAvignonTaskByTaskId.GetConfig(taskId, true);
 	}
 
-	// Token: 0x1700099B RID: 2459
-	// (get) Token: 0x060071D5 RID: 29141 RVA: 0x00174B99 File Offset: 0x00172D99
+	// Token: 0x170009BB RID: 2491
+	// (get) Token: 0x0600456B RID: 17771 RVA: 0x0017D555 File Offset: 0x0017B755
 	public static AvignonConfig Instance
 	{
 		get
@@ -43,7 +43,7 @@ public class AvignonConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060071D6 RID: 29142 RVA: 0x00174BA0 File Offset: 0x00172DA0
+	// Token: 0x0600456C RID: 17772 RVA: 0x0017D55C File Offset: 0x0017B75C
 	public static AvignonConfig GetOrCreateInstance()
 	{
 		if (AvignonConfig._Instance == null)
@@ -53,7 +53,7 @@ public class AvignonConfig : ConfigBase
 		return AvignonConfig._Instance;
 	}
 
-	// Token: 0x060071D7 RID: 29143 RVA: 0x00174BB4 File Offset: 0x00172DB4
+	// Token: 0x0600456D RID: 17773 RVA: 0x0017D570 File Offset: 0x0017B770
 	public static bool CreateInstance()
 	{
 		if (AvignonConfig._Instance != null)
@@ -64,24 +64,24 @@ public class AvignonConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060071D8 RID: 29144 RVA: 0x00174BCA File Offset: 0x00172DCA
+	// Token: 0x0600456E RID: 17774 RVA: 0x0017D586 File Offset: 0x0017B786
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060071D9 RID: 29145 RVA: 0x00174BCC File Offset: 0x00172DCC
+	// Token: 0x0600456F RID: 17775 RVA: 0x0017D588 File Offset: 0x0017B788
 	public static void ResetStaticDefaultValue()
 	{
 		AvignonConfig._Instance = null;
 	}
 
-	// Token: 0x060071DA RID: 29146 RVA: 0x00174BD4 File Offset: 0x00172DD4
+	// Token: 0x06004570 RID: 17776 RVA: 0x0017D590 File Offset: 0x0017B790
 	static AvignonConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AvignonConfig.CreateStaticDefaultValue), new Action(AvignonConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040034D5 RID: 13525
+	// Token: 0x0400356E RID: 13678
 	[Nullable(2)]
 	private static AvignonConfig _Instance;
 }

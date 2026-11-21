@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005906 RID: 22790
+	// Token: 0x02005F13 RID: 24339
 	public class ISettingSpringDirT
 	{
-		// Token: 0x1700AAD3 RID: 43731
-		// (get) Token: 0x0602683E RID: 157758 RVA: 0x0054E721 File Offset: 0x0054C921
-		// (set) Token: 0x0602683F RID: 157759 RVA: 0x0054E729 File Offset: 0x0054C929
+		// Token: 0x1700B407 RID: 46087
+		// (get) Token: 0x06028DA8 RID: 167336 RVA: 0x0059538D File Offset: 0x0059358D
+		// (set) Token: 0x06028DA9 RID: 167337 RVA: 0x00595395 File Offset: 0x00593595
 		public bool IsSettingDir { get; set; }
 
-		// Token: 0x1700AAD4 RID: 43732
-		// (get) Token: 0x06026840 RID: 157760 RVA: 0x0054E732 File Offset: 0x0054C932
-		// (set) Token: 0x06026841 RID: 157761 RVA: 0x0054E73A File Offset: 0x0054C93A
+		// Token: 0x1700B408 RID: 46088
+		// (get) Token: 0x06028DAA RID: 167338 RVA: 0x0059539E File Offset: 0x0059359E
+		// (set) Token: 0x06028DAB RID: 167339 RVA: 0x005953A6 File Offset: 0x005935A6
 		public bool IsRotator { get; set; }
 
-		// Token: 0x1700AAD5 RID: 43733
-		// (get) Token: 0x06026842 RID: 157762 RVA: 0x0054E743 File Offset: 0x0054C943
-		// (set) Token: 0x06026843 RID: 157763 RVA: 0x0054E74B File Offset: 0x0054C94B
+		// Token: 0x1700B409 RID: 46089
+		// (get) Token: 0x06028DAC RID: 167340 RVA: 0x005953AF File Offset: 0x005935AF
+		// (set) Token: 0x06028DAD RID: 167341 RVA: 0x005953B7 File Offset: 0x005935B7
 		public IVectorInfoT SpringDir { get; set; }
 
-		// Token: 0x06026844 RID: 157764 RVA: 0x0054E754 File Offset: 0x0054C954
+		// Token: 0x06028DAE RID: 167342 RVA: 0x005953C0 File Offset: 0x005935C0
 		public ISettingSpringDirT()
 		{
 			this.IsSettingDir = false;

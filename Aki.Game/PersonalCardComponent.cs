@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -11,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020023CA RID: 9162
+// Token: 0x020018AF RID: 6319
 [NullableContext(1)]
 [Nullable(0)]
 public class PersonalCardComponent : UiPanelBase
 {
-	// Token: 0x06012519 RID: 75033 RVA: 0x00483025 File Offset: 0x00481225
+	// Token: 0x0600F9CB RID: 63947 RVA: 0x00490525 File Offset: 0x0048E725
 	public PersonalCardComponent([Nullable(2)] UUIItem uiItem, bool isPreview, PersonalInfoData personalInfoData)
 	{
 		this.IsPreview = isPreview;
@@ -27,7 +26,7 @@ public class PersonalCardComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601251A RID: 75034 RVA: 0x0048304C File Offset: 0x0048124C
+	// Token: 0x0600F9CC RID: 63948 RVA: 0x0049054C File Offset: 0x0048E74C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,14 +49,14 @@ public class PersonalCardComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601251B RID: 75035 RVA: 0x0048313F File Offset: 0x0048133F
+	// Token: 0x0600F9CD RID: 63949 RVA: 0x0049063F File Offset: 0x0048E83F
 	protected override void OnStart()
 	{
 		this.ScrollView = new LoopScrollView<PersonalCardBaseItem, PersonalCardData>(base.GetLoopScrollViewComponent(0), base.GetItem(1).GetOwner() as AUIBaseActor, new Func<PersonalCardBaseItem>(this.CreateCardItem), false);
 		this.AddEventListener();
 	}
 
-	// Token: 0x0601251C RID: 75036 RVA: 0x00483178 File Offset: 0x00481378
+	// Token: 0x0600F9CE RID: 63950 RVA: 0x00490678 File Offset: 0x0048E878
 	protected override UniTask OnBeforeShowAsyncImplement()
 	{
 		PersonalCardComponent.<OnBeforeShowAsyncImplement>d__9 <OnBeforeShowAsyncImplement>d__;
@@ -68,15 +67,15 @@ public class PersonalCardComponent : UiPanelBase
 		return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601251D RID: 75037 RVA: 0x004831BB File Offset: 0x004813BB
+	// Token: 0x0600F9CF RID: 63951 RVA: 0x004906BB File Offset: 0x0048E8BB
 	protected void OnShowUiTabViewFromToggle()
 	{
 	}
 
-	// Token: 0x0601251E RID: 75038 RVA: 0x004831C0 File Offset: 0x004813C0
+	// Token: 0x0600F9D0 RID: 63952 RVA: 0x004906C0 File Offset: 0x0048E8C0
 	private List<PersonalCardData> GetSortedList()
 	{
-		List<PersonalCardData> list = this.PersonalInfoData.GetCardList(true).ToList<PersonalCardData>();
+		List<PersonalCardData> list = new List<PersonalCardData>(this.PersonalInfoData.GetCardList(true));
 		int num = list.FindIndex(delegate(PersonalCardData data)
 		{
 			int cardId = data.CardId;
@@ -96,25 +95,25 @@ public class PersonalCardComponent : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x0601251F RID: 75039 RVA: 0x0048322E File Offset: 0x0048142E
+	// Token: 0x0600F9D1 RID: 63953 RVA: 0x0049072E File Offset: 0x0048E92E
 	protected void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnCardChange, new Action(this.OnCardChange));
 	}
 
-	// Token: 0x06012520 RID: 75040 RVA: 0x0048324C File Offset: 0x0048144C
+	// Token: 0x0600F9D2 RID: 63954 RVA: 0x0049074C File Offset: 0x0048E94C
 	protected void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnCardChange, new Action(this.OnCardChange));
 	}
 
-	// Token: 0x06012521 RID: 75041 RVA: 0x0048326A File Offset: 0x0048146A
+	// Token: 0x0600F9D3 RID: 63955 RVA: 0x0049076A File Offset: 0x0048E96A
 	public void SetRefreshConfirmBtn(Action<bool, bool> refreshConfirmBtn)
 	{
 		this.RefreshConfirmBtn = refreshConfirmBtn;
 	}
 
-	// Token: 0x06012522 RID: 75042 RVA: 0x00483274 File Offset: 0x00481474
+	// Token: 0x0600F9D4 RID: 63956 RVA: 0x00490774 File Offset: 0x0048E974
 	private void OnCardChange()
 	{
 		if (this.IsPreview)
@@ -129,19 +128,19 @@ public class PersonalCardComponent : UiPanelBase
 		UiNavigationNewController.Instance.SetNavigationFocusForView(this.ScrollView.GetGridByDisplayIndex(0), true, false, false);
 	}
 
-	// Token: 0x06012523 RID: 75043 RVA: 0x004832E0 File Offset: 0x004814E0
+	// Token: 0x0600F9D5 RID: 63957 RVA: 0x004907E0 File Offset: 0x0048E9E0
 	public void OnClickConfirm(int _)
 	{
 		PersonalController.Instance.SendChangeCardRequest(this.CurPersonalCardData.CardId);
 	}
 
-	// Token: 0x06012524 RID: 75044 RVA: 0x004832F7 File Offset: 0x004814F7
+	// Token: 0x0600F9D6 RID: 63958 RVA: 0x004907F7 File Offset: 0x0048E9F7
 	private void OnClickCardPreviewBtn()
 	{
-		ItemController.Instance.OpenItemTipsByItemId(this.CurPersonalCardData.CardId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.CurPersonalCardData.CardId, true, null, false);
 	}
 
-	// Token: 0x06012525 RID: 75045 RVA: 0x00483310 File Offset: 0x00481510
+	// Token: 0x0600F9D7 RID: 63959 RVA: 0x00490811 File Offset: 0x0048EA11
 	private PersonalCardItem CreateCardItem()
 	{
 		PersonalCardItem personalCardItem = new PersonalCardItem();
@@ -149,7 +148,7 @@ public class PersonalCardComponent : UiPanelBase
 		return personalCardItem;
 	}
 
-	// Token: 0x06012526 RID: 75046 RVA: 0x0048332C File Offset: 0x0048152C
+	// Token: 0x0600F9D8 RID: 63960 RVA: 0x0049082C File Offset: 0x0048EA2C
 	private void CardItemToggleClick(int gridIndex, PersonalCardData cardData)
 	{
 		this.CurPersonalCardData = cardData;
@@ -172,7 +171,7 @@ public class PersonalCardComponent : UiPanelBase
 		this.ScrollView.SelectGridProxy(gridIndex, false);
 	}
 
-	// Token: 0x06012527 RID: 75047 RVA: 0x004833BC File Offset: 0x004815BC
+	// Token: 0x0600F9D9 RID: 63961 RVA: 0x004908BC File Offset: 0x0048EABC
 	protected void RefreshCardInfo(PersonalCardData cardData)
 	{
 		BackgroundCard? config = ConfigBackgroundCardById.GetConfig(cardData.CardId, true);
@@ -182,7 +181,7 @@ public class PersonalCardComponent : UiPanelBase
 		base.GetText(5).ShowTextNew(config.Value.Tips);
 	}
 
-	// Token: 0x06012528 RID: 75048 RVA: 0x00483450 File Offset: 0x00481650
+	// Token: 0x0600F9DA RID: 63962 RVA: 0x00490950 File Offset: 0x0048EB50
 	private void RefreshConfirmBtnState(PersonalCardData cardData)
 	{
 		int? curCardId = this.PersonalInfoData.CurCardId;
@@ -200,13 +199,13 @@ public class PersonalCardComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012529 RID: 75049 RVA: 0x004834C4 File Offset: 0x004816C4
+	// Token: 0x0600F9DB RID: 63963 RVA: 0x004909C4 File Offset: 0x0048EBC4
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEventListener();
 	}
 
-	// Token: 0x04008A75 RID: 35445
+	// Token: 0x04008BBC RID: 35772
 	[Nullable(new byte[]
 	{
 		2,
@@ -215,39 +214,39 @@ public class PersonalCardComponent : UiPanelBase
 	})]
 	private LoopScrollView<PersonalCardBaseItem, PersonalCardData> ScrollView;
 
-	// Token: 0x04008A76 RID: 35446
+	// Token: 0x04008BBD RID: 35773
 	private readonly bool IsPreview;
 
-	// Token: 0x04008A77 RID: 35447
+	// Token: 0x04008BBE RID: 35774
 	[Nullable(2)]
 	private PersonalCardData CurPersonalCardData;
 
-	// Token: 0x04008A78 RID: 35448
+	// Token: 0x04008BBF RID: 35775
 	private readonly PersonalInfoData PersonalInfoData;
 
-	// Token: 0x04008A79 RID: 35449
+	// Token: 0x04008BC0 RID: 35776
 	[Nullable(2)]
 	private Action<bool, bool> RefreshConfirmBtn;
 
-	// Token: 0x0200896E RID: 35182
+	// Token: 0x02007AF7 RID: 31479
 	[NullableContext(0)]
 	public enum EPersonalCardComponentDefine
 	{
-		// Token: 0x0402CA93 RID: 182931
+		// Token: 0x04027DAE RID: 163246
 		ScrollView,
-		// Token: 0x0402CA94 RID: 182932
+		// Token: 0x04027DAF RID: 163247
 		PersonalCardItem,
-		// Token: 0x0402CA95 RID: 182933
+		// Token: 0x04027DB0 RID: 163248
 		Texture,
-		// Token: 0x0402CA96 RID: 182934
+		// Token: 0x04027DB1 RID: 163249
 		TitleText,
-		// Token: 0x0402CA97 RID: 182935
+		// Token: 0x04027DB2 RID: 163250
 		DescText,
-		// Token: 0x0402CA98 RID: 182936
+		// Token: 0x04027DB3 RID: 163251
 		TipsText,
-		// Token: 0x0402CA99 RID: 182937
+		// Token: 0x04027DB4 RID: 163252
 		RightItem,
-		// Token: 0x0402CA9A RID: 182938
+		// Token: 0x04027DB5 RID: 163253
 		CardPreviewBtn
 	}
 }

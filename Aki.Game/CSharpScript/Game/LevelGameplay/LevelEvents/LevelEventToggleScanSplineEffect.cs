@@ -5,15 +5,15 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B99 RID: 27545
+	// Token: 0x02005D11 RID: 23825
 	public class LevelEventToggleScanSplineEffect : LevelEventBase
 	{
-		// Token: 0x060442D9 RID: 279257 RVA: 0x010CD2B0 File Offset: 0x010CB4B0
+		// Token: 0x0603A42D RID: 238637 RVA: 0x010770E8 File Offset: 0x010752E8
 		public LevelEventToggleScanSplineEffect(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060442DA RID: 279258 RVA: 0x010CD2BC File Offset: 0x010CB4BC
+		// Token: 0x0603A42E RID: 238638 RVA: 0x010770F4 File Offset: 0x010752F4
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

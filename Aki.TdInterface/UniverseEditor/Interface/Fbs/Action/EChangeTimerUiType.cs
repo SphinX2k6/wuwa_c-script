@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F34 RID: 24372
+	// Token: 0x02006578 RID: 25976
 	public enum EChangeTimerUiType : byte
 	{
-		// Token: 0x0400FC7D RID: 64637
+		// Token: 0x040109F3 RID: 68083
 		None,
-		// Token: 0x0400FC7E RID: 64638
+		// Token: 0x040109F4 RID: 68084
 		GreatSwordChallenge = 4
 	}
 }

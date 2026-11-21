@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025B6 RID: 9654
+// Token: 0x02001AA1 RID: 6817
 public class FightPhotoFilterPanel : FightPhotoTabPanelBase
 {
-	// Token: 0x0601392C RID: 80172 RVA: 0x004E4A18 File Offset: 0x004E2C18
+	// Token: 0x06010E0C RID: 69132 RVA: 0x004F3618 File Offset: 0x004F1818
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class FightPhotoFilterPanel : FightPhotoTabPanelBase
 		};
 	}
 
-	// Token: 0x0601392D RID: 80173 RVA: 0x004E4A88 File Offset: 0x004E2C88
+	// Token: 0x06010E0D RID: 69133 RVA: 0x004F3688 File Offset: 0x004F1888
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FightPhotoFilterPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -33,7 +33,7 @@ public class FightPhotoFilterPanel : FightPhotoTabPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601392E RID: 80174 RVA: 0x004E4ACB File Offset: 0x004E2CCB
+	// Token: 0x06010E0E RID: 69134 RVA: 0x004F36CB File Offset: 0x004F18CB
 	[NullableContext(1)]
 	private FightPhotoOptionItem CreateFilterItem()
 	{
@@ -43,14 +43,14 @@ public class FightPhotoFilterPanel : FightPhotoTabPanelBase
 		};
 	}
 
-	// Token: 0x0601392F RID: 80175 RVA: 0x004E4AE4 File Offset: 0x004E2CE4
+	// Token: 0x06010E0F RID: 69135 RVA: 0x004F36E4 File Offset: 0x004F18E4
 	private void OnToggleClick(FightPhotoOption data)
 	{
 		this.FilterLayout.GetGenericLayout().SelectGridProxyByKey(data.Id, false);
 		PhotographController.SetFightPhotographExtraOption(EFightPhotoExtraOptionType.Filter, data.Id, false);
 	}
 
-	// Token: 0x06013930 RID: 80176 RVA: 0x004E4B14 File Offset: 0x004E2D14
+	// Token: 0x06010E10 RID: 69136 RVA: 0x004F3714 File Offset: 0x004F1914
 	[NullableContext(1)]
 	private void ScrollToSelectedItem(object key)
 	{
@@ -63,7 +63,7 @@ public class FightPhotoFilterPanel : FightPhotoTabPanelBase
 		this.FilterLayout.LateScrollTo(uuiitem, null, false);
 	}
 
-	// Token: 0x040093BF RID: 37823
+	// Token: 0x04009515 RID: 38165
 	[Nullable(new byte[]
 	{
 		2,
@@ -71,16 +71,16 @@ public class FightPhotoFilterPanel : FightPhotoTabPanelBase
 	})]
 	private GenericScrollViewNew<FightPhotoOptionItem, FightPhotoOption> FilterLayout;
 
-	// Token: 0x02008BBC RID: 35772
+	// Token: 0x02007D44 RID: 32068
 	private enum EComponents
 	{
-		// Token: 0x0402D5AF RID: 185775
+		// Token: 0x040288C4 RID: 166084
 		SvFilter,
-		// Token: 0x0402D5B0 RID: 185776
+		// Token: 0x040288C5 RID: 166085
 		TogBattlePhotoFilter,
-		// Token: 0x0402D5B1 RID: 185777
+		// Token: 0x040288C6 RID: 166086
 		SpriteArrowUp,
-		// Token: 0x0402D5B2 RID: 185778
+		// Token: 0x040288C7 RID: 166087
 		SpriteArrowDown
 	}
 }

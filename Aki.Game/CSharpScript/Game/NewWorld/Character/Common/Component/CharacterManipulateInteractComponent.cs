@@ -17,31 +17,31 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070C8 RID: 28872
+	// Token: 0x0200632C RID: 25388
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CharacterManipulateInteractComponent : EntityComponent, IStaticVariableResetter, IManipulateInteractContext
 	{
-		// Token: 0x060466F3 RID: 288499 RVA: 0x011AE9DC File Offset: 0x011ACBDC
+		// Token: 0x0603D7E3 RID: 251875 RVA: 0x011CDE74 File Offset: 0x011CC074
 		static CharacterManipulateInteractComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CharacterManipulateInteractComponent.CreateStaticDefaultValue), new Action(CharacterManipulateInteractComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060466F4 RID: 288500 RVA: 0x011AEA5F File Offset: 0x011ACC5F
+		// Token: 0x0603D7E4 RID: 251876 RVA: 0x011CDEF7 File Offset: 0x011CC0F7
 		public static void CreateStaticDefaultValue()
 		{
 			CharacterManipulateInteractComponent.SkillEnable = false;
 		}
 
-		// Token: 0x060466F5 RID: 288501 RVA: 0x011AEA67 File Offset: 0x011ACC67
+		// Token: 0x0603D7E5 RID: 251877 RVA: 0x011CDEFF File Offset: 0x011CC0FF
 		public static void ResetStaticDefaultValue()
 		{
 			CharacterManipulateInteractComponent.SkillEnable = false;
 		}
 
-		// Token: 0x17009C95 RID: 40085
-		// (get) Token: 0x060466F6 RID: 288502 RVA: 0x011AEA6F File Offset: 0x011ACC6F
+		// Token: 0x170074A2 RID: 29858
+		// (get) Token: 0x0603D7E6 RID: 251878 RVA: 0x011CDF07 File Offset: 0x011CC107
 		[Nullable(1)]
 		public CharacterActorComponent ActorComp
 		{
@@ -52,8 +52,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009C96 RID: 40086
-		// (get) Token: 0x060466F7 RID: 288503 RVA: 0x011AEA77 File Offset: 0x011ACC77
+		// Token: 0x170074A3 RID: 29859
+		// (get) Token: 0x0603D7E7 RID: 251879 RVA: 0x011CDF0F File Offset: 0x011CC10F
 		[Nullable(1)]
 		public BaseTagComponent TagComp
 		{
@@ -64,8 +64,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009C97 RID: 40087
-		// (get) Token: 0x060466F8 RID: 288504 RVA: 0x011AEA7F File Offset: 0x011ACC7F
+		// Token: 0x170074A4 RID: 29860
+		// (get) Token: 0x0603D7E8 RID: 251880 RVA: 0x011CDF17 File Offset: 0x011CC117
 		[Nullable(1)]
 		public CharacterBuffComponent BuffComp
 		{
@@ -76,8 +76,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009C98 RID: 40088
-		// (get) Token: 0x060466F9 RID: 288505 RVA: 0x011AEA87 File Offset: 0x011ACC87
+		// Token: 0x170074A5 RID: 29861
+		// (get) Token: 0x0603D7E9 RID: 251881 RVA: 0x011CDF1F File Offset: 0x011CC11F
 		[Nullable(1)]
 		public CreatureDataComponent CreatureDataComp
 		{
@@ -88,32 +88,32 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009C99 RID: 40089
-		// (get) Token: 0x060466FA RID: 288506 RVA: 0x011AEA8F File Offset: 0x011ACC8F
-		// (set) Token: 0x060466FB RID: 288507 RVA: 0x011AEA97 File Offset: 0x011ACC97
+		// Token: 0x170074A6 RID: 29862
+		// (get) Token: 0x0603D7EA RID: 251882 RVA: 0x011CDF27 File Offset: 0x011CC127
+		// (set) Token: 0x0603D7EB RID: 251883 RVA: 0x011CDF2F File Offset: 0x011CC12F
 		public SceneItemExploreInteractComponent BestTargetInternal { get; set; }
 
-		// Token: 0x17009C9A RID: 40090
-		// (get) Token: 0x060466FC RID: 288508 RVA: 0x011AEAA0 File Offset: 0x011ACCA0
-		// (set) Token: 0x060466FD RID: 288509 RVA: 0x011AEAA8 File Offset: 0x011ACCA8
+		// Token: 0x170074A7 RID: 29863
+		// (get) Token: 0x0603D7EC RID: 251884 RVA: 0x011CDF38 File Offset: 0x011CC138
+		// (set) Token: 0x0603D7ED RID: 251885 RVA: 0x011CDF40 File Offset: 0x011CC140
 		public SceneItemExploreInteractComponent SelectedTargetInternal { get; set; }
 
-		// Token: 0x17009C9B RID: 40091
-		// (get) Token: 0x060466FE RID: 288510 RVA: 0x011AEAB1 File Offset: 0x011ACCB1
-		// (set) Token: 0x060466FF RID: 288511 RVA: 0x011AEAB9 File Offset: 0x011ACCB9
+		// Token: 0x170074A8 RID: 29864
+		// (get) Token: 0x0603D7EE RID: 251886 RVA: 0x011CDF49 File Offset: 0x011CC149
+		// (set) Token: 0x0603D7EF RID: 251887 RVA: 0x011CDF51 File Offset: 0x011CC151
 		public bool CurrentPointLegal { get; set; } = true;
 
-		// Token: 0x17009C9C RID: 40092
-		// (get) Token: 0x06046700 RID: 288512 RVA: 0x011AEAC2 File Offset: 0x011ACCC2
-		// (set) Token: 0x06046701 RID: 288513 RVA: 0x011AEACA File Offset: 0x011ACCCA
+		// Token: 0x170074A9 RID: 29865
+		// (get) Token: 0x0603D7F0 RID: 251888 RVA: 0x011CDF5A File Offset: 0x011CC15A
+		// (set) Token: 0x0603D7F1 RID: 251889 RVA: 0x011CDF62 File Offset: 0x011CC162
 		public string EffectPath { get; set; }
 
-		// Token: 0x17009C9D RID: 40093
-		// (get) Token: 0x06046702 RID: 288514 RVA: 0x011AEAD3 File Offset: 0x011ACCD3
-		// (set) Token: 0x06046703 RID: 288515 RVA: 0x011AEADB File Offset: 0x011ACCDB
+		// Token: 0x170074AA RID: 29866
+		// (get) Token: 0x0603D7F2 RID: 251890 RVA: 0x011CDF6B File Offset: 0x011CC16B
+		// (set) Token: 0x0603D7F3 RID: 251891 RVA: 0x011CDF73 File Offset: 0x011CC173
 		public long? CurBuffId { get; set; }
 
-		// Token: 0x06046704 RID: 288516 RVA: 0x011AEAE4 File Offset: 0x011ACCE4
+		// Token: 0x0603D7F4 RID: 251892 RVA: 0x011CDF7C File Offset: 0x011CC17C
 		private void OnExploreVisionSkillChange()
 		{
 			if (RouletteModel.Instance.CurrentExploreSkillId == 1003)
@@ -144,9 +144,9 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.AddOrRemoveMarkingTag(false, "切换到其他技能，清除目标，并删除对应的Tag", true);
 		}
 
-		// Token: 0x17009C9E RID: 40094
-		// (get) Token: 0x06046705 RID: 288517 RVA: 0x011AEB6E File Offset: 0x011ACD6E
-		// (set) Token: 0x06046706 RID: 288518 RVA: 0x011AEB78 File Offset: 0x011ACD78
+		// Token: 0x170074AB RID: 29867
+		// (get) Token: 0x0603D7F5 RID: 251893 RVA: 0x011CE006 File Offset: 0x011CC206
+		// (set) Token: 0x0603D7F6 RID: 251894 RVA: 0x011CE010 File Offset: 0x011CC210
 		private unsafe SceneItemExploreInteractComponent BestTarget
 		{
 			get
@@ -201,18 +201,18 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009C9F RID: 40095
-		// (get) Token: 0x06046707 RID: 288519 RVA: 0x011AED3B File Offset: 0x011ACF3B
-		// (set) Token: 0x06046708 RID: 288520 RVA: 0x011AED43 File Offset: 0x011ACF43
+		// Token: 0x170074AC RID: 29868
+		// (get) Token: 0x0603D7F7 RID: 251895 RVA: 0x011CE1D3 File Offset: 0x011CC3D3
+		// (set) Token: 0x0603D7F8 RID: 251896 RVA: 0x011CE1DB File Offset: 0x011CC3DB
 		public bool Interacting { get; set; }
 
-		// Token: 0x17009CA0 RID: 40096
-		// (get) Token: 0x06046709 RID: 288521 RVA: 0x011AED4C File Offset: 0x011ACF4C
-		// (set) Token: 0x0604670A RID: 288522 RVA: 0x011AED54 File Offset: 0x011ACF54
+		// Token: 0x170074AD RID: 29869
+		// (get) Token: 0x0603D7F9 RID: 251897 RVA: 0x011CE1E4 File Offset: 0x011CC3E4
+		// (set) Token: 0x0603D7FA RID: 251898 RVA: 0x011CE1EC File Offset: 0x011CC3EC
 		public SceneItemExploreInteractComponent ChooseTargetOnStartSkill { get; set; }
 
-		// Token: 0x17009CA1 RID: 40097
-		// (get) Token: 0x0604670B RID: 288523 RVA: 0x011AED5D File Offset: 0x011ACF5D
+		// Token: 0x170074AE RID: 29870
+		// (get) Token: 0x0603D7FB RID: 251899 RVA: 0x011CE1F5 File Offset: 0x011CC3F5
 		public SceneItemExploreInteractComponent ChooseTargetOnStartSkillProp
 		{
 			get
@@ -221,8 +221,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009CA2 RID: 40098
-		// (get) Token: 0x0604670C RID: 288524 RVA: 0x011AED65 File Offset: 0x011ACF65
+		// Token: 0x170074AF RID: 29871
+		// (get) Token: 0x0603D7FC RID: 251900 RVA: 0x011CE1FD File Offset: 0x011CC3FD
 		public SceneItemExploreInteractComponent BestTargetProp
 		{
 			get
@@ -231,8 +231,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009CA3 RID: 40099
-		// (get) Token: 0x0604670D RID: 288525 RVA: 0x011AED6D File Offset: 0x011ACF6D
+		// Token: 0x170074B0 RID: 29872
+		// (get) Token: 0x0603D7FD RID: 251901 RVA: 0x011CE205 File Offset: 0x011CC405
 		public SceneItemExploreInteractComponent SelectedTargetProp
 		{
 			get
@@ -241,8 +241,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009CA4 RID: 40100
-		// (get) Token: 0x0604670E RID: 288526 RVA: 0x011AED75 File Offset: 0x011ACF75
+		// Token: 0x170074B1 RID: 29873
+		// (get) Token: 0x0603D7FE RID: 251902 RVA: 0x011CE20D File Offset: 0x011CC40D
 		public bool InteractingProp
 		{
 			get
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604670F RID: 288527 RVA: 0x011AED80 File Offset: 0x011ACF80
+		// Token: 0x0603D7FF RID: 251903 RVA: 0x011CE218 File Offset: 0x011CC418
 		protected override bool OnStart()
 		{
 			this.ActorCompInternal = base.Entity.GetComponent<CharacterActorComponent>();
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046710 RID: 288528 RVA: 0x011AEE90 File Offset: 0x011AD090
+		// Token: 0x0603D800 RID: 251904 RVA: 0x011CE328 File Offset: 0x011CC528
 		protected override void OnEnable()
 		{
 			SceneItemExploreInteractComponent bestTarget = this.BestTarget;
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046711 RID: 288529 RVA: 0x011AEEE0 File Offset: 0x011AD0E0
+		// Token: 0x0603D801 RID: 251905 RVA: 0x011CE378 File Offset: 0x011CC578
 		protected override void OnTick(float delta)
 		{
 			if (Global.BaseCharacter != this.ActorComp.Actor)
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			shootSwordInteractHandlerInternal2.Clear();
 		}
 
-		// Token: 0x06046712 RID: 288530 RVA: 0x011AEF74 File Offset: 0x011AD174
+		// Token: 0x0603D802 RID: 251906 RVA: 0x011CE40C File Offset: 0x011CC60C
 		private void RefreshTarget()
 		{
 			if (this.ManipulateInteractModel.InRangePoints.Count <= 0 || this.Interacting)
@@ -402,14 +402,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.AddOrRemoveMarkingTag(true, "搜索到目标且不需要切换技能，添加Tag", true);
 		}
 
-		// Token: 0x06046713 RID: 288531 RVA: 0x011AF238 File Offset: 0x011AD438
+		// Token: 0x0603D803 RID: 251907 RVA: 0x011CE6D0 File Offset: 0x011CC8D0
 		[NullableContext(1)]
 		public bool ProjectWorldLocationToScreenPosition(global::Vector worldLocation)
 		{
 			return this.FightCameraLogicComponent.CheckPositionInScreen(worldLocation, this.FightCameraLogicComponent.CameraAdjustController.CheckInScreenMinX, this.FightCameraLogicComponent.CameraAdjustController.CheckInScreenMaxX, this.FightCameraLogicComponent.CameraAdjustController.CheckInScreenMinY, this.FightCameraLogicComponent.CameraAdjustController.CheckInScreenMaxY);
 		}
 
-		// Token: 0x06046714 RID: 288532 RVA: 0x011AF294 File Offset: 0x011AD494
+		// Token: 0x0603D804 RID: 251908 RVA: 0x011CE72C File Offset: 0x011CC92C
 		private bool InteractConditionsCheck()
 		{
 			if (Global.BaseCharacter != this.ActorComp.Actor)
@@ -427,7 +427,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return !this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["战斗状态.技能限制.禁止探索幻象技能"]) && this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.地面"]);
 		}
 
-		// Token: 0x06046715 RID: 288533 RVA: 0x011AF317 File Offset: 0x011AD517
+		// Token: 0x0603D805 RID: 251909 RVA: 0x011CE7AF File Offset: 0x011CC9AF
 		private bool CheckTargetRoleMatch([Nullable(new byte[]
 		{
 			2,
@@ -441,14 +441,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return SceneTeamController.Instance.IsMatchRoleOption(matchRoleOption);
 		}
 
-		// Token: 0x06046716 RID: 288534 RVA: 0x011AF340 File Offset: 0x011AD540
+		// Token: 0x0603D806 RID: 251910 RVA: 0x011CE7D8 File Offset: 0x011CC9D8
 		private void ClearCurTarget()
 		{
 			this.BestTarget = null;
 			this.NeedAddTag = false;
 		}
 
-		// Token: 0x06046717 RID: 288535 RVA: 0x011AF350 File Offset: 0x011AD550
+		// Token: 0x0603D807 RID: 251911 RVA: 0x011CE7E8 File Offset: 0x011CC9E8
 		protected void InitTraceInfo()
 		{
 			this.SphereTrace = new UTraceSphereElement();
@@ -459,7 +459,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.SphereTrace.Radius = 1f;
 		}
 
-		// Token: 0x06046718 RID: 288536 RVA: 0x011AF3B8 File Offset: 0x011AD5B8
+		// Token: 0x0603D808 RID: 251912 RVA: 0x011CE850 File Offset: 0x011CCA50
 		private void AddEventListener()
 		{
 			BaseTagComponent tagComp = this.TagComp;
@@ -479,7 +479,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			EventSystem.Instance.Add(EEventName.OnChangeSelectedExploreId, new Action(this.OnExploreVisionSkillChange));
 		}
 
-		// Token: 0x06046719 RID: 288537 RVA: 0x011AF48C File Offset: 0x011AD68C
+		// Token: 0x0603D809 RID: 251913 RVA: 0x011CE924 File Offset: 0x011CCB24
 		private void RemoveEventListener()
 		{
 			if (this.TagListener != null)
@@ -501,7 +501,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604671A RID: 288538 RVA: 0x011AF56C File Offset: 0x011AD76C
+		// Token: 0x0603D80A RID: 251914 RVA: 0x011CEA04 File Offset: 0x011CCC04
 		private void OnStartSkillTagChange(int tagId, bool tagExist)
 		{
 			if (tagExist)
@@ -520,13 +520,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604671B RID: 288539 RVA: 0x011AF5BA File Offset: 0x011AD7BA
+		// Token: 0x0603D80B RID: 251915 RVA: 0x011CEA52 File Offset: 0x011CCC52
 		private void OnRagDollUsableTagChange(int tagId, bool tagExist)
 		{
 			this.OnRagDollUsableChange();
 		}
 
-		// Token: 0x0604671C RID: 288540 RVA: 0x011AF5C4 File Offset: 0x011AD7C4
+		// Token: 0x0603D80C RID: 251916 RVA: 0x011CEA5C File Offset: 0x011CCC5C
 		private void OnRagDollUsableChange()
 		{
 			int value = GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.大布偶.技能可用标识"];
@@ -543,7 +543,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.TagComp.RemoveTag(new int?(value));
 		}
 
-		// Token: 0x0604671D RID: 288541 RVA: 0x011AF63C File Offset: 0x011AD83C
+		// Token: 0x0603D80D RID: 251917 RVA: 0x011CEAD4 File Offset: 0x011CCCD4
 		[NullableContext(1)]
 		private unsafe void AddOrRemoveMarkingTag(bool isAdd, string reason, bool needClearTagId = true)
 		{
@@ -608,7 +608,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604671E RID: 288542 RVA: 0x011AF9B2 File Offset: 0x011ADBB2
+		// Token: 0x0603D80E RID: 251918 RVA: 0x011CEE4A File Offset: 0x011CD04A
 		protected override bool OnClear()
 		{
 			ShootSwordInteractHandler shootSwordInteractHandlerInternal = this.ShootSwordInteractHandlerInternal;
@@ -625,61 +625,61 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604671F RID: 288543 RVA: 0x011AF9EF File Offset: 0x011ADBEF
+		// Token: 0x0603D80F RID: 251919 RVA: 0x011CEE87 File Offset: 0x011CD087
 		public bool StartPullGiantInteract()
 		{
 			return this.InteractHandlers[EExploreSkillInteractType.PullGiant].Start();
 		}
 
-		// Token: 0x06046720 RID: 288544 RVA: 0x011AFA02 File Offset: 0x011ADC02
+		// Token: 0x0603D810 RID: 251920 RVA: 0x011CEE9A File Offset: 0x011CD09A
 		public void EndPullGiantInteract()
 		{
 			this.InteractHandlers[EExploreSkillInteractType.PullGiant].End();
 		}
 
-		// Token: 0x06046721 RID: 288545 RVA: 0x011AFA15 File Offset: 0x011ADC15
+		// Token: 0x0603D811 RID: 251921 RVA: 0x011CEEAD File Offset: 0x011CD0AD
 		public bool StartStatueInteract()
 		{
 			return this.InteractHandlers[EExploreSkillInteractType.StatueInteractPoint].Start();
 		}
 
-		// Token: 0x06046722 RID: 288546 RVA: 0x011AFA28 File Offset: 0x011ADC28
+		// Token: 0x0603D812 RID: 251922 RVA: 0x011CEEC0 File Offset: 0x011CD0C0
 		public void EndStatueInteract()
 		{
 			this.InteractHandlers[EExploreSkillInteractType.StatueInteractPoint].End();
 		}
 
-		// Token: 0x06046723 RID: 288547 RVA: 0x011AFA3B File Offset: 0x011ADC3B
+		// Token: 0x0603D813 RID: 251923 RVA: 0x011CEED3 File Offset: 0x011CD0D3
 		public bool StartCustomInteract()
 		{
 			return this.InteractHandlers[EExploreSkillInteractType.Custom].Start();
 		}
 
-		// Token: 0x06046724 RID: 288548 RVA: 0x011AFA4E File Offset: 0x011ADC4E
+		// Token: 0x0603D814 RID: 251924 RVA: 0x011CEEE6 File Offset: 0x011CD0E6
 		public void EndCustomInteract()
 		{
 			this.InteractHandlers[EExploreSkillInteractType.Custom].End();
 		}
 
-		// Token: 0x06046725 RID: 288549 RVA: 0x011AFA61 File Offset: 0x011ADC61
+		// Token: 0x0603D815 RID: 251925 RVA: 0x011CEEF9 File Offset: 0x011CD0F9
 		public void QuantumDiffusionInteract()
 		{
 			this.InteractHandlers[EExploreSkillInteractType.QuantumDiffusion].Start();
 		}
 
-		// Token: 0x06046726 RID: 288550 RVA: 0x011AFA75 File Offset: 0x011ADC75
+		// Token: 0x0603D816 RID: 251926 RVA: 0x011CEF0D File Offset: 0x011CD10D
 		public bool StartMechascoutDragInteract()
 		{
 			return this.InteractHandlers[EExploreSkillInteractType.MechascoutDrag].Start();
 		}
 
-		// Token: 0x06046727 RID: 288551 RVA: 0x011AFA88 File Offset: 0x011ADC88
+		// Token: 0x0603D817 RID: 251927 RVA: 0x011CEF20 File Offset: 0x011CD120
 		public void EndMechascoutDragInteract()
 		{
 			this.InteractHandlers[EExploreSkillInteractType.MechascoutDrag].End();
 		}
 
-		// Token: 0x06046728 RID: 288552 RVA: 0x011AFA9C File Offset: 0x011ADC9C
+		// Token: 0x0603D818 RID: 251928 RVA: 0x011CEF34 File Offset: 0x011CD134
 		public bool CheckBeforeInteract(EExploreSkillInteractType type)
 		{
 			SceneItemExploreInteractComponent bestTargetInternal = this.BestTargetInternal;
@@ -734,7 +734,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046729 RID: 288553 RVA: 0x011AFB9C File Offset: 0x011ADD9C
+		// Token: 0x0603D819 RID: 251929 RVA: 0x011CF034 File Offset: 0x011CD234
 		public void SpawnEffect()
 		{
 			SceneItemExploreInteractComponent selectedTargetInternal = this.SelectedTargetInternal;
@@ -762,7 +762,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			instance.SpawnEffect(world, ftransformDouble, this.EffectPath, "[CharacterManipulateInteractComponent.SpawnEffect]", new EffectContext(new int?(base.Entity.Id), null, false), global::EEffectType.Scene, null, null, null, false, false);
 		}
 
-		// Token: 0x0604672A RID: 288554 RVA: 0x011AFC8C File Offset: 0x011ADE8C
+		// Token: 0x0603D81A RID: 251930 RVA: 0x011CF124 File Offset: 0x011CD324
 		public void RequestInteractAction()
 		{
 			SceneItemExploreInteractComponent selectedTargetInternal = this.SelectedTargetInternal;
@@ -808,7 +808,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}, 0);
 		}
 
-		// Token: 0x0604672B RID: 288555 RVA: 0x011AFD79 File Offset: 0x011ADF79
+		// Token: 0x0603D81B RID: 251931 RVA: 0x011CF211 File Offset: 0x011CD411
 		[NullableContext(1)]
 		public global::Vector GetTargetLocation()
 		{
@@ -816,7 +816,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return ((selectedTargetInternal != null) ? selectedTargetInternal.Location : null) ?? this.BestTarget.Location;
 		}
 
-		// Token: 0x0604672C RID: 288556 RVA: 0x011AFD9C File Offset: 0x011ADF9C
+		// Token: 0x0603D81C RID: 251932 RVA: 0x011CF234 File Offset: 0x011CD434
 		[NullableContext(1)]
 		public void GetShootSwordManipulateInteractActors(TArray<AActor> actors)
 		{
@@ -828,7 +828,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			actors.Empty(true);
 		}
 
-		// Token: 0x0604672D RID: 288557 RVA: 0x011AFDBC File Offset: 0x011ADFBC
+		// Token: 0x0603D81D RID: 251933 RVA: 0x011CF254 File Offset: 0x011CD454
 		private void TryAddOrRemoveTag(int tagId, bool addOrRemove)
 		{
 			if (!this.TagComp.HasTag(tagId) && addOrRemove)
@@ -842,14 +842,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604672E RID: 288558 RVA: 0x011AFE11 File Offset: 0x011AE011
+		// Token: 0x0603D81E RID: 251934 RVA: 0x011CF2A9 File Offset: 0x011CD4A9
 		public void ClearTarget()
 		{
 			this.AddOrRemoveMarkingTag(false, "切换角色时清除Tag", true);
 			this.BestTargetInternal = null;
 		}
 
-		// Token: 0x0604672F RID: 288559 RVA: 0x011AFE28 File Offset: 0x011AE028
+		// Token: 0x0603D81F RID: 251935 RVA: 0x011CF2C0 File Offset: 0x011CD4C0
 		[NullableContext(1)]
 		public void SetDataFromOldRole(EntityHandle oldEntity)
 		{
@@ -858,15 +858,15 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.AddOrRemoveMarkingTag(true, "切换角色时继承目标并加上Tag", true);
 		}
 
-		// Token: 0x06046730 RID: 288560 RVA: 0x011AFE5C File Offset: 0x011AE05C
+		// Token: 0x0603D820 RID: 251936 RVA: 0x011CF2F4 File Offset: 0x011CD4F4
 		public bool CheckCurrentTargetCanInteract()
 		{
 			SceneItemExploreInteractComponent sceneItemExploreInteractComponent = this.ChooseTargetOnStartSkill ?? this.BestTargetInternal;
 			return sceneItemExploreInteractComponent != null && sceneItemExploreInteractComponent.Valid && sceneItemExploreInteractComponent.OnlineTypeCanInteract;
 		}
 
-		// Token: 0x17009CA5 RID: 40101
-		// (get) Token: 0x06046731 RID: 288561 RVA: 0x011AFE93 File Offset: 0x011AE093
+		// Token: 0x170074B2 RID: 29874
+		// (get) Token: 0x0603D821 RID: 251937 RVA: 0x011CF32B File Offset: 0x011CD52B
 		public SceneItemExploreInteractComponent GetCurrentTarget
 		{
 			get
@@ -875,7 +875,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046732 RID: 288562 RVA: 0x011AFEA8 File Offset: 0x011AE0A8
+		// Token: 0x0603D822 RID: 251938 RVA: 0x011CF340 File Offset: 0x011CD540
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -884,196 +884,176 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				return false;
 			}
 			CharacterManipulateInteractComponent characterManipulateInteractComponent = (CharacterManipulateInteractComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorCompInternal"))
+			if (characterManipulateInteractComponent.ActorCompInternal == null)
 			{
-				if (characterManipulateInteractComponent.ActorCompInternal == null)
-				{
-					this.ActorCompInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorCompInternal), "ActorCompInternal"))
-				{
-					return false;
-				}
+				this.ActorCompInternal = null;
 			}
-			if (base.CanResetComponentProperty("TagCompInternal"))
-			{
-				if (characterManipulateInteractComponent.TagCompInternal == null)
-				{
-					this.TagCompInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagCompInternal), "TagCompInternal"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("BuffCompInternal"))
-			{
-				if (characterManipulateInteractComponent.BuffCompInternal == null)
-				{
-					this.BuffCompInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterBuffComponent>(this.BuffCompInternal), "BuffCompInternal"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CreatureDataCompInternal"))
-			{
-				if (characterManipulateInteractComponent.CreatureDataCompInternal == null)
-				{
-					this.CreatureDataCompInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataCompInternal), "CreatureDataCompInternal"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("InteractHandlers") && characterManipulateInteractComponent.InteractHandlers != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EExploreSkillInteractType, IManipulateInteractHandler>>(this.InteractHandlers), "InteractHandlers"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorCompInternal), "ActorCompInternal"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("LegalPoints") && characterManipulateInteractComponent.LegalPoints != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemExploreInteractComponent>(this.LegalPoints), "LegalPoints"))
+			if (characterManipulateInteractComponent.TagCompInternal == null)
+			{
+				this.TagCompInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagCompInternal), "TagCompInternal"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("FightCameraLogicComponent"))
+			if (characterManipulateInteractComponent.BuffCompInternal == null)
 			{
-				if (characterManipulateInteractComponent.FightCameraLogicComponent == null)
-				{
-					this.FightCameraLogicComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FightCameraLogicComponent>(this.FightCameraLogicComponent), "FightCameraLogicComponent"))
-				{
-					return false;
-				}
+				this.BuffCompInternal = null;
 			}
-			if (base.CanResetComponentProperty("SphereTrace"))
-			{
-				if (characterManipulateInteractComponent.SphereTrace == null)
-				{
-					this.SphereTrace = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.SphereTrace), "SphereTrace"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("<BestTargetInternal>k__BackingField"))
-			{
-				if (characterManipulateInteractComponent.BestTargetInternal == null)
-				{
-					this.BestTargetInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemExploreInteractComponent>(this.BestTargetInternal), "<BestTargetInternal>k__BackingField"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("<SelectedTargetInternal>k__BackingField"))
-			{
-				if (characterManipulateInteractComponent.SelectedTargetInternal == null)
-				{
-					this.SelectedTargetInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemExploreInteractComponent>(this.SelectedTargetInternal), "<SelectedTargetInternal>k__BackingField"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("NextPointLegal"))
-			{
-				this.NextPointLegal = characterManipulateInteractComponent.NextPointLegal;
-			}
-			if (base.CanResetComponentProperty("<CurrentPointLegal>k__BackingField"))
-			{
-				this.CurrentPointLegal = characterManipulateInteractComponent.CurrentPointLegal;
-			}
-			if (base.CanResetComponentProperty("<EffectPath>k__BackingField"))
-			{
-				this.EffectPath = characterManipulateInteractComponent.EffectPath;
-			}
-			if (base.CanResetComponentProperty("<CurBuffId>k__BackingField"))
-			{
-				this.CurBuffId = characterManipulateInteractComponent.CurBuffId;
-			}
-			if (base.CanResetComponentProperty("ManipulateInteractModel"))
-			{
-				if (characterManipulateInteractComponent.ManipulateInteractModel == null)
-				{
-					this.ManipulateInteractModel = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ManipulateInteractModel>(this.ManipulateInteractModel), "ManipulateInteractModel"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("NeedAddTag"))
-			{
-				this.NeedAddTag = characterManipulateInteractComponent.NeedAddTag;
-			}
-			if (base.CanResetComponentProperty("PervTagId"))
-			{
-				this.PervTagId = characterManipulateInteractComponent.PervTagId;
-			}
-			if (base.CanResetComponentProperty("MarkTagId"))
-			{
-				this.MarkTagId = characterManipulateInteractComponent.MarkTagId;
-			}
-			if (base.CanResetComponentProperty("ShootSwordInteractHandlerInternal"))
-			{
-				if (characterManipulateInteractComponent.ShootSwordInteractHandlerInternal == null)
-				{
-					this.ShootSwordInteractHandlerInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ShootSwordInteractHandler>(this.ShootSwordInteractHandlerInternal), "ShootSwordInteractHandlerInternal"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("<Interacting>k__BackingField"))
-			{
-				this.Interacting = characterManipulateInteractComponent.Interacting;
-			}
-			if (base.CanResetComponentProperty("TagListener"))
-			{
-				if (characterManipulateInteractComponent.TagListener == null)
-				{
-					this.TagListener = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagListener), "TagListener"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("RagDollTagListeners") && characterManipulateInteractComponent.RagDollTagListeners != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.RagDollTagListeners), "RagDollTagListeners"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffCompInternal), "BuffCompInternal"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("<ChooseTargetOnStartSkill>k__BackingField"))
+			if (characterManipulateInteractComponent.CreatureDataCompInternal == null)
 			{
-				if (characterManipulateInteractComponent.ChooseTargetOnStartSkill == null)
-				{
-					this.ChooseTargetOnStartSkill = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemExploreInteractComponent>(this.ChooseTargetOnStartSkill), "<ChooseTargetOnStartSkill>k__BackingField"))
-				{
-					return false;
-				}
+				this.CreatureDataCompInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataCompInternal), "CreatureDataCompInternal"))
+			{
+				return false;
+			}
+			if (characterManipulateInteractComponent.InteractHandlers != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractHandlers), "InteractHandlers"))
+			{
+				return false;
+			}
+			if (characterManipulateInteractComponent.LegalPoints != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemExploreInteractComponent>(this.LegalPoints), "LegalPoints"))
+			{
+				return false;
+			}
+			if (characterManipulateInteractComponent.FightCameraLogicComponent == null)
+			{
+				this.FightCameraLogicComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FightCameraLogicComponent), "FightCameraLogicComponent"))
+			{
+				return false;
+			}
+			if (characterManipulateInteractComponent.SphereTrace == null)
+			{
+				this.SphereTrace = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SphereTrace), "SphereTrace"))
+			{
+				return false;
+			}
+			if (characterManipulateInteractComponent.BestTargetInternal == null)
+			{
+				this.BestTargetInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BestTargetInternal), "BestTargetInternal"))
+			{
+				return false;
+			}
+			if (characterManipulateInteractComponent.SelectedTargetInternal == null)
+			{
+				this.SelectedTargetInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SelectedTargetInternal), "SelectedTargetInternal"))
+			{
+				return false;
+			}
+			this.NextPointLegal = characterManipulateInteractComponent.NextPointLegal;
+			this.CurrentPointLegal = characterManipulateInteractComponent.CurrentPointLegal;
+			this.EffectPath = characterManipulateInteractComponent.EffectPath;
+			this.CurBuffId = characterManipulateInteractComponent.CurBuffId;
+			if (characterManipulateInteractComponent.ManipulateInteractModel == null)
+			{
+				this.ManipulateInteractModel = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ManipulateInteractModel), "ManipulateInteractModel"))
+			{
+				return false;
+			}
+			this.NeedAddTag = characterManipulateInteractComponent.NeedAddTag;
+			this.PervTagId = characterManipulateInteractComponent.PervTagId;
+			this.MarkTagId = characterManipulateInteractComponent.MarkTagId;
+			if (characterManipulateInteractComponent.ShootSwordInteractHandlerInternal == null)
+			{
+				this.ShootSwordInteractHandlerInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ShootSwordInteractHandlerInternal), "ShootSwordInteractHandlerInternal"))
+			{
+				return false;
+			}
+			this.Interacting = characterManipulateInteractComponent.Interacting;
+			if (characterManipulateInteractComponent.TagListener == null)
+			{
+				this.TagListener = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagListener), "TagListener"))
+			{
+				return false;
+			}
+			if (characterManipulateInteractComponent.RagDollTagListeners != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.RagDollTagListeners), "RagDollTagListeners"))
+			{
+				return false;
+			}
+			if (characterManipulateInteractComponent.ChooseTargetOnStartSkill == null)
+			{
+				this.ChooseTargetOnStartSkill = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ChooseTargetOnStartSkill), "ChooseTargetOnStartSkill"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024E93 RID: 151187
+		// Token: 0x170074B3 RID: 29875
+		// (get) Token: 0x0603D823 RID: 251939 RVA: 0x011CF62A File Offset: 0x011CD82A
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074B4 RID: 29876
+		// (get) Token: 0x0603D824 RID: 251940 RVA: 0x011CF62D File Offset: 0x011CD82D
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074B5 RID: 29877
+		// (get) Token: 0x0603D825 RID: 251941 RVA: 0x011CF630 File Offset: 0x011CD830
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074B6 RID: 29878
+		// (get) Token: 0x0603D826 RID: 251942 RVA: 0x011CF633 File Offset: 0x011CD833
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040209D2 RID: 133586
 		[Nullable(1)]
 		private const string PROFILE_KEY = "CharacterManipulateInteractComponent_RefreshTarget";
 
-		// Token: 0x04024E94 RID: 151188
+		// Token: 0x040209D3 RID: 133587
 		private const int MANIPULATE_VISION_ID = 1003;
 
-		// Token: 0x04024E95 RID: 151189
+		// Token: 0x040209D4 RID: 133588
 		private const int SPHERE_TRACE_RADIUS = 1;
 
-		// Token: 0x04024E96 RID: 151190
+		// Token: 0x040209D5 RID: 133589
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly int[] ragDollUsableTags = new int[]
@@ -1084,57 +1064,57 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.大布偶.破坏坚固岩石可用"]
 		};
 
-		// Token: 0x04024E97 RID: 151191
+		// Token: 0x040209D6 RID: 133590
 		private CharacterActorComponent ActorCompInternal;
 
-		// Token: 0x04024E98 RID: 151192
+		// Token: 0x040209D7 RID: 133591
 		private BaseTagComponent TagCompInternal;
 
-		// Token: 0x04024E99 RID: 151193
+		// Token: 0x040209D8 RID: 133592
 		private CharacterBuffComponent BuffCompInternal;
 
-		// Token: 0x04024E9A RID: 151194
+		// Token: 0x040209D9 RID: 133593
 		private CreatureDataComponent CreatureDataCompInternal;
 
-		// Token: 0x04024E9B RID: 151195
+		// Token: 0x040209DA RID: 133594
 		[Nullable(1)]
 		private readonly Dictionary<EExploreSkillInteractType, IManipulateInteractHandler> InteractHandlers = new Dictionary<EExploreSkillInteractType, IManipulateInteractHandler>();
 
-		// Token: 0x04024E9C RID: 151196
+		// Token: 0x040209DB RID: 133595
 		private static bool SkillEnable = false;
 
-		// Token: 0x04024E9D RID: 151197
+		// Token: 0x040209DC RID: 133596
 		[Nullable(1)]
 		private readonly HashSet<SceneItemExploreInteractComponent> LegalPoints = new HashSet<SceneItemExploreInteractComponent>();
 
-		// Token: 0x04024E9E RID: 151198
+		// Token: 0x040209DD RID: 133597
 		private FightCameraLogicComponent FightCameraLogicComponent;
 
-		// Token: 0x04024E9F RID: 151199
+		// Token: 0x040209DE RID: 133598
 		private UTraceSphereElement SphereTrace;
 
-		// Token: 0x04024EA2 RID: 151202
+		// Token: 0x040209E1 RID: 133601
 		private bool NextPointLegal = true;
 
-		// Token: 0x04024EA6 RID: 151206
+		// Token: 0x040209E5 RID: 133605
 		private ManipulateInteractModel ManipulateInteractModel;
 
-		// Token: 0x04024EA7 RID: 151207
+		// Token: 0x040209E6 RID: 133606
 		private bool NeedAddTag;
 
-		// Token: 0x04024EA8 RID: 151208
+		// Token: 0x040209E7 RID: 133607
 		private int? PervTagId;
 
-		// Token: 0x04024EA9 RID: 151209
+		// Token: 0x040209E8 RID: 133608
 		private int? MarkTagId;
 
-		// Token: 0x04024EAA RID: 151210
+		// Token: 0x040209E9 RID: 133609
 		private ShootSwordInteractHandler ShootSwordInteractHandlerInternal;
 
-		// Token: 0x04024EAC RID: 151212
+		// Token: 0x040209EB RID: 133611
 		private ITagTask TagListener;
 
-		// Token: 0x04024EAD RID: 151213
+		// Token: 0x040209EC RID: 133612
 		[Nullable(1)]
 		private readonly List<ITagTask> RagDollTagListeners = new List<ITagTask>();
 	}

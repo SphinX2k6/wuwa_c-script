@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003A9 RID: 937
+	// Token: 0x020003BF RID: 959
 	public class ConfigGolemCrackById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060015FD RID: 5629 RVA: 0x000D5CA8 File Offset: 0x000D3EA8
+		// Token: 0x06001681 RID: 5761 RVA: 0x000DC3FC File Offset: 0x000DA5FC
 		static ConfigGolemCrackById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGolemCrackById.CreateStaticDefaultValue), new Action(ConfigGolemCrackById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060015FE RID: 5630 RVA: 0x000D5CC8 File Offset: 0x000D3EC8
+		// Token: 0x06001682 RID: 5762 RVA: 0x000DC41C File Offset: 0x000DA61C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGolemCrackById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060015FF RID: 5631 RVA: 0x000D5D47 File Offset: 0x000D3F47
+		// Token: 0x06001683 RID: 5763 RVA: 0x000DC49B File Offset: 0x000DA69B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGolemCrackById.LogPair = null;
 			ConfigGolemCrackById.HandleId = 0;
 		}
 
-		// Token: 0x06001600 RID: 5632 RVA: 0x000D5D55 File Offset: 0x000D3F55
+		// Token: 0x06001684 RID: 5764 RVA: 0x000DC4A9 File Offset: 0x000DA6A9
 		public static void Init()
 		{
 			ConfigGolemCrackById.HandleId = ConfigCommon.InitDataStatement(ConfigGolemCrackById.HandleId, "db_golemcrack.db", "select BinData from `GolemCrack` where Id=?");
 		}
 
-		// Token: 0x06001601 RID: 5633 RVA: 0x000D5D70 File Offset: 0x000D3F70
+		// Token: 0x06001685 RID: 5765 RVA: 0x000DC4C4 File Offset: 0x000DA6C4
 		public static GolemCrack? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGolemCrackById.HandleId, ConfigGolemCrackById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GolemCrack?(rootAsGolemCrack);
 		}
 
-		// Token: 0x04001983 RID: 6531
+		// Token: 0x04001A1D RID: 6685
 		private const string DB = "db_golemcrack.db";
 
-		// Token: 0x04001984 RID: 6532
+		// Token: 0x04001A1E RID: 6686
 		private const string FILE = "m.魔偶骇入.xlsx";
 
-		// Token: 0x04001985 RID: 6533
+		// Token: 0x04001A1F RID: 6687
 		private const string TABLE = "GolemCrack";
 
-		// Token: 0x04001986 RID: 6534
+		// Token: 0x04001A20 RID: 6688
 		private const string COMMAND = "select BinData from `GolemCrack` where Id=?";
 
-		// Token: 0x04001987 RID: 6535
+		// Token: 0x04001A21 RID: 6689
 		private const string KEY_PREFIX = "GolemCrackById";
 
-		// Token: 0x04001988 RID: 6536
+		// Token: 0x04001A22 RID: 6690
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001989 RID: 6537
+		// Token: 0x04001A23 RID: 6691
 		private static int HandleId;
 	}
 }

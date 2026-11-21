@@ -2,50 +2,50 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050FD RID: 20733
+	// Token: 0x02005662 RID: 22114
 	public class IDynamicSpawnMonsterConfigT
 	{
-		// Token: 0x17009708 RID: 38664
-		// (get) Token: 0x0602165A RID: 136794 RVA: 0x004A35A6 File Offset: 0x004A17A6
-		// (set) Token: 0x0602165B RID: 136795 RVA: 0x004A35AE File Offset: 0x004A17AE
+		// Token: 0x17009EF5 RID: 40693
+		// (get) Token: 0x060235AE RID: 144814 RVA: 0x004DD532 File Offset: 0x004DB732
+		// (set) Token: 0x060235AF RID: 144815 RVA: 0x004DD53A File Offset: 0x004DB73A
 		public int Id { get; set; }
 
-		// Token: 0x17009709 RID: 38665
-		// (get) Token: 0x0602165C RID: 136796 RVA: 0x004A35B7 File Offset: 0x004A17B7
-		// (set) Token: 0x0602165D RID: 136797 RVA: 0x004A35BF File Offset: 0x004A17BF
+		// Token: 0x17009EF6 RID: 40694
+		// (get) Token: 0x060235B0 RID: 144816 RVA: 0x004DD543 File Offset: 0x004DB743
+		// (set) Token: 0x060235B1 RID: 144817 RVA: 0x004DD54B File Offset: 0x004DB74B
 		public float DelayTime { get; set; }
 
-		// Token: 0x1700970A RID: 38666
-		// (get) Token: 0x0602165E RID: 136798 RVA: 0x004A35C8 File Offset: 0x004A17C8
-		// (set) Token: 0x0602165F RID: 136799 RVA: 0x004A35D0 File Offset: 0x004A17D0
+		// Token: 0x17009EF7 RID: 40695
+		// (get) Token: 0x060235B2 RID: 144818 RVA: 0x004DD554 File Offset: 0x004DB754
+		// (set) Token: 0x060235B3 RID: 144819 RVA: 0x004DD55C File Offset: 0x004DB75C
 		public TSpawnMonsterCompleteConditionUnion CompleteCondition { get; set; }
 
-		// Token: 0x1700970B RID: 38667
-		// (get) Token: 0x06021660 RID: 136800 RVA: 0x004A35D9 File Offset: 0x004A17D9
-		// (set) Token: 0x06021661 RID: 136801 RVA: 0x004A35E1 File Offset: 0x004A17E1
+		// Token: 0x17009EF8 RID: 40696
+		// (get) Token: 0x060235B4 RID: 144820 RVA: 0x004DD565 File Offset: 0x004DB765
+		// (set) Token: 0x060235B5 RID: 144821 RVA: 0x004DD56D File Offset: 0x004DB76D
 		public ISpawnMonsterPreDependOnPrecedingT PreCondition { get; set; }
 
-		// Token: 0x1700970C RID: 38668
-		// (get) Token: 0x06021662 RID: 136802 RVA: 0x004A35EA File Offset: 0x004A17EA
-		// (set) Token: 0x06021663 RID: 136803 RVA: 0x004A35F2 File Offset: 0x004A17F2
+		// Token: 0x17009EF9 RID: 40697
+		// (get) Token: 0x060235B6 RID: 144822 RVA: 0x004DD576 File Offset: 0x004DB776
+		// (set) Token: 0x060235B7 RID: 144823 RVA: 0x004DD57E File Offset: 0x004DB77E
 		public float Interval { get; set; }
 
-		// Token: 0x1700970D RID: 38669
-		// (get) Token: 0x06021664 RID: 136804 RVA: 0x004A35FB File Offset: 0x004A17FB
-		// (set) Token: 0x06021665 RID: 136805 RVA: 0x004A3603 File Offset: 0x004A1803
+		// Token: 0x17009EFA RID: 40698
+		// (get) Token: 0x060235B8 RID: 144824 RVA: 0x004DD587 File Offset: 0x004DB787
+		// (set) Token: 0x060235B9 RID: 144825 RVA: 0x004DD58F File Offset: 0x004DB78F
 		public IRandomPoolChooseT MonsterChooseType { get; set; }
 
-		// Token: 0x1700970E RID: 38670
-		// (get) Token: 0x06021666 RID: 136806 RVA: 0x004A360C File Offset: 0x004A180C
-		// (set) Token: 0x06021667 RID: 136807 RVA: 0x004A3614 File Offset: 0x004A1814
+		// Token: 0x17009EFB RID: 40699
+		// (get) Token: 0x060235BA RID: 144826 RVA: 0x004DD598 File Offset: 0x004DB798
+		// (set) Token: 0x060235BB RID: 144827 RVA: 0x004DD5A0 File Offset: 0x004DB7A0
 		public ISpawnMonsterPointT PointChooseType { get; set; }
 
-		// Token: 0x1700970F RID: 38671
-		// (get) Token: 0x06021668 RID: 136808 RVA: 0x004A361D File Offset: 0x004A181D
-		// (set) Token: 0x06021669 RID: 136809 RVA: 0x004A3625 File Offset: 0x004A1825
+		// Token: 0x17009EFC RID: 40700
+		// (get) Token: 0x060235BC RID: 144828 RVA: 0x004DD5A9 File Offset: 0x004DB7A9
+		// (set) Token: 0x060235BD RID: 144829 RVA: 0x004DD5B1 File Offset: 0x004DB7B1
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602166A RID: 136810 RVA: 0x004A3630 File Offset: 0x004A1830
+		// Token: 0x060235BE RID: 144830 RVA: 0x004DD5BC File Offset: 0x004DB7BC
 		public IDynamicSpawnMonsterConfigT()
 		{
 			this.Id = 0;

@@ -2,28 +2,28 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001732 RID: 5938
+// Token: 0x02000BEB RID: 3051
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionRefineResultViewParam : IVisionRefineResultViewParam
 {
-	// Token: 0x17000E4A RID: 3658
-	// (get) Token: 0x0600AB9F RID: 43935 RVA: 0x00267DD9 File Offset: 0x00265FD9
-	// (set) Token: 0x0600ABA0 RID: 43936 RVA: 0x00267DE1 File Offset: 0x00265FE1
+	// Token: 0x17000E6D RID: 3693
+	// (get) Token: 0x06007F86 RID: 32646 RVA: 0x002721DB File Offset: 0x002703DB
+	// (set) Token: 0x06007F87 RID: 32647 RVA: 0x002721E3 File Offset: 0x002703E3
 	public PhantomPolishResponse Response { get; set; }
 
-	// Token: 0x17000E4B RID: 3659
-	// (get) Token: 0x0600ABA1 RID: 43937 RVA: 0x00267DEA File Offset: 0x00265FEA
-	// (set) Token: 0x0600ABA2 RID: 43938 RVA: 0x00267DF2 File Offset: 0x00265FF2
+	// Token: 0x17000E6E RID: 3694
+	// (get) Token: 0x06007F88 RID: 32648 RVA: 0x002721EC File Offset: 0x002703EC
+	// (set) Token: 0x06007F89 RID: 32649 RVA: 0x002721F4 File Offset: 0x002703F4
 	public PhantomBatchPolishResponse ResponseBatch { get; set; }
 
-	// Token: 0x17000E4C RID: 3660
-	// (get) Token: 0x0600ABA3 RID: 43939 RVA: 0x00267DFB File Offset: 0x00265FFB
-	// (set) Token: 0x0600ABA4 RID: 43940 RVA: 0x00267E03 File Offset: 0x00266003
+	// Token: 0x17000E6F RID: 3695
+	// (get) Token: 0x06007F8A RID: 32650 RVA: 0x002721FD File Offset: 0x002703FD
+	// (set) Token: 0x06007F8B RID: 32651 RVA: 0x00272205 File Offset: 0x00270405
 	public bool ShowTips { get; set; }
 
-	// Token: 0x17000E4D RID: 3661
-	// (get) Token: 0x0600ABA5 RID: 43941 RVA: 0x00267E0C File Offset: 0x0026600C
-	// (set) Token: 0x0600ABA6 RID: 43942 RVA: 0x00267E14 File Offset: 0x00266014
+	// Token: 0x17000E70 RID: 3696
+	// (get) Token: 0x06007F8C RID: 32652 RVA: 0x0027220E File Offset: 0x0027040E
+	// (set) Token: 0x06007F8D RID: 32653 RVA: 0x00272216 File Offset: 0x00270416
 	public int? PropIndexId { get; set; }
 }

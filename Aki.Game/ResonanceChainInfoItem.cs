@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002898 RID: 10392
+// Token: 0x02001E13 RID: 7699
 [NullableContext(2)]
 [Nullable(0)]
 public class ResonanceChainInfoItem : UiPanelBase
 {
-	// Token: 0x06015702 RID: 87810 RVA: 0x00568610 File Offset: 0x00566810
+	// Token: 0x06013102 RID: 78082 RVA: 0x00593458 File Offset: 0x00591658
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class ResonanceChainInfoItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06015703 RID: 87811 RVA: 0x00568758 File Offset: 0x00566958
+	// Token: 0x06013103 RID: 78083 RVA: 0x005935A0 File Offset: 0x005917A0
 	protected override void OnStart()
 	{
 		this.ConfirmButtonItem = new ButtonItem(base.GetItem(5));
@@ -48,13 +48,13 @@ public class ResonanceChainInfoItem : UiPanelBase
 		TermExplanationController.Instance.RegisterTextHyperlink(base.GetText(2), ETermExplanationViewType.Side, ETermExplanationReportType.RoleDeviceList, ETermExplanationViewAttachDirection.Right, null, null, null, ETermExplanationGroup.Default, 0, ETermExplanationViewStyle.Default);
 	}
 
-	// Token: 0x06015704 RID: 87812 RVA: 0x005687E4 File Offset: 0x005669E4
+	// Token: 0x06013104 RID: 78084 RVA: 0x0059362C File Offset: 0x0059182C
 	protected override void OnBeforeDestroy()
 	{
 		TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(2));
 	}
 
-	// Token: 0x06015705 RID: 87813 RVA: 0x005687F8 File Offset: 0x005669F8
+	// Token: 0x06013105 RID: 78085 RVA: 0x00593640 File Offset: 0x00591840
 	private void OnConfirmButtonClick(int _)
 	{
 		ResonantChain? roleResonanceById = RoleResonanceConfig.Instance.GetRoleResonanceById(this.ResonanceId.Value);
@@ -76,25 +76,25 @@ public class ResonanceChainInfoItem : UiPanelBase
 		ScrollingTipsController.Instance.ShowTipsById("ResonanceItemNotEnough", Array.Empty<object>());
 	}
 
-	// Token: 0x06015706 RID: 87814 RVA: 0x005688C4 File Offset: 0x00566AC4
+	// Token: 0x06013106 RID: 78086 RVA: 0x0059370C File Offset: 0x0059190C
 	private void OnBackButtonClick()
 	{
 		EventSystem.Instance.Emit(EEventName.OnRoleInternalViewQuit);
 	}
 
-	// Token: 0x06015707 RID: 87815 RVA: 0x005688D8 File Offset: 0x00566AD8
+	// Token: 0x06013107 RID: 78087 RVA: 0x00593720 File Offset: 0x00591920
 	public void ShowItem()
 	{
 		this.SequencePlayer.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x06015708 RID: 87816 RVA: 0x00568900 File Offset: 0x00566B00
+	// Token: 0x06013108 RID: 78088 RVA: 0x00593748 File Offset: 0x00591948
 	public void HideItem()
 	{
 		this.SequencePlayer.PlayOrReplaySequenceByName("Close", false, null);
 	}
 
-	// Token: 0x06015709 RID: 87817 RVA: 0x00568928 File Offset: 0x00566B28
+	// Token: 0x06013109 RID: 78089 RVA: 0x00593770 File Offset: 0x00591970
 	public void Refresh(bool isTrial = false)
 	{
 		ResonantChain? roleResonanceById = RoleResonanceConfig.Instance.GetRoleResonanceById(this.ResonanceId.Value);
@@ -147,14 +147,14 @@ public class ResonanceChainInfoItem : UiPanelBase
 					this.NeedItem.BindOnCanExecuteChange((object _1, bool _2, EToggleState _3) => false);
 					this.NeedItem.BindOnExtendToggleClicked(delegate(MediumItemGridExtendCallback _)
 					{
-						ItemController.Instance.OpenItemTipsByItemId(kvp.Key, true, null);
+						ItemController.Instance.OpenItemTipsByItemId(kvp.Key, true, null, false);
 					});
 				}
 			}
 		}
 	}
 
-	// Token: 0x0601570A RID: 87818 RVA: 0x00568C24 File Offset: 0x00566E24
+	// Token: 0x0601310A RID: 78090 RVA: 0x00593A6C File Offset: 0x00591C6C
 	public void Update(int roleId, int resonanceId, bool isTrial = false)
 	{
 		this.RoleId = roleId;
@@ -162,7 +162,7 @@ public class ResonanceChainInfoItem : UiPanelBase
 		this.Refresh(isTrial);
 	}
 
-	// Token: 0x0601570B RID: 87819 RVA: 0x00568C40 File Offset: 0x00566E40
+	// Token: 0x0601310B RID: 78091 RVA: 0x00593A88 File Offset: 0x00591C88
 	private void RefreshResonanceSprite(int index)
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(12, 1);
@@ -173,13 +173,13 @@ public class ResonanceChainInfoItem : UiPanelBase
 		this.SetSpriteByPath(resourcePath, base.GetSprite(11), true, null, null);
 	}
 
-	// Token: 0x0601570C RID: 87820 RVA: 0x00568C99 File Offset: 0x00566E99
+	// Token: 0x0601310C RID: 78092 RVA: 0x00593AE1 File Offset: 0x00591CE1
 	public int? GetResonanceId()
 	{
 		return this.ResonanceId;
 	}
 
-	// Token: 0x0601570D RID: 87821 RVA: 0x00568CA1 File Offset: 0x00566EA1
+	// Token: 0x0601310D RID: 78093 RVA: 0x00593AE9 File Offset: 0x00591CE9
 	[NullableContext(1)]
 	public UUIItem GetUiItemForGuide()
 	{
@@ -197,48 +197,48 @@ public class ResonanceChainInfoItem : UiPanelBase
 		return obj as UUIItem;
 	}
 
-	// Token: 0x04009FE1 RID: 40929
+	// Token: 0x0400A3CA RID: 41930
 	private int RoleId;
 
-	// Token: 0x04009FE2 RID: 40930
+	// Token: 0x0400A3CB RID: 41931
 	private int? ResonanceId;
 
-	// Token: 0x04009FE3 RID: 40931
+	// Token: 0x0400A3CC RID: 41932
 	private ButtonItem ConfirmButtonItem;
 
-	// Token: 0x04009FE4 RID: 40932
+	// Token: 0x0400A3CD RID: 41933
 	private MediumItemGrid NeedItem;
 
-	// Token: 0x04009FE5 RID: 40933
+	// Token: 0x0400A3CE RID: 41934
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x02008E9F RID: 36511
+	// Token: 0x020080E6 RID: 32998
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402E3F2 RID: 189426
+		// Token: 0x04029AEF RID: 170735
 		NameText,
-		// Token: 0x0402E3F3 RID: 189427
+		// Token: 0x04029AF0 RID: 170736
 		DescriptionScrollView,
-		// Token: 0x0402E3F4 RID: 189428
+		// Token: 0x04029AF1 RID: 170737
 		SkillDescriptionText,
-		// Token: 0x0402E3F5 RID: 189429
+		// Token: 0x04029AF2 RID: 170738
 		NeedNode,
-		// Token: 0x0402E3F6 RID: 189430
+		// Token: 0x04029AF3 RID: 170739
 		NeedItem,
-		// Token: 0x0402E3F7 RID: 189431
+		// Token: 0x04029AF4 RID: 170740
 		ConfirmButtonItem,
-		// Token: 0x0402E3F8 RID: 189432
+		// Token: 0x04029AF5 RID: 170741
 		ActivatedItem,
-		// Token: 0x0402E3F9 RID: 189433
+		// Token: 0x04029AF6 RID: 170742
 		FrontItem,
-		// Token: 0x0402E3FA RID: 189434
+		// Token: 0x04029AF7 RID: 170743
 		BgDescriptionText,
-		// Token: 0x0402E3FB RID: 189435
+		// Token: 0x04029AF8 RID: 170744
 		BackButton,
-		// Token: 0x0402E3FC RID: 189436
+		// Token: 0x04029AF9 RID: 170745
 		NeedItemNode,
-		// Token: 0x0402E3FD RID: 189437
+		// Token: 0x04029AFA RID: 170746
 		ResonanceNumSprite
 	}
 }

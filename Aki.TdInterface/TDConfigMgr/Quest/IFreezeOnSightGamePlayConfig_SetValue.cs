@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F9E RID: 3998
+	// Token: 0x020010C8 RID: 4296
 	public class IFreezeOnSightGamePlayConfig_SetValue
 	{
-		// Token: 0x040035C9 RID: 13769
+		// Token: 0x040038FB RID: 14587
 		public ESpecialGamePlayConfigType Type;
 	}
 }

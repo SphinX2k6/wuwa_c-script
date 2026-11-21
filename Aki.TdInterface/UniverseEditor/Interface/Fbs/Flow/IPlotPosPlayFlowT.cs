@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Flow
 {
-	// Token: 0x0200474C RID: 18252
+	// Token: 0x02004BB4 RID: 19380
 	public class IPlotPosPlayFlowT
 	{
-		// Token: 0x170082F6 RID: 33526
-		// (get) Token: 0x0601C183 RID: 115075 RVA: 0x003FB0B7 File Offset: 0x003F92B7
-		// (set) Token: 0x0601C184 RID: 115076 RVA: 0x003FB0BF File Offset: 0x003F92BF
+		// Token: 0x17008937 RID: 35127
+		// (get) Token: 0x0601D958 RID: 121176 RVA: 0x00427353 File Offset: 0x00425553
+		// (set) Token: 0x0601D959 RID: 121177 RVA: 0x0042735B File Offset: 0x0042555B
 		public string Guid { get; set; }
 
-		// Token: 0x170082F7 RID: 33527
-		// (get) Token: 0x0601C185 RID: 115077 RVA: 0x003FB0C8 File Offset: 0x003F92C8
-		// (set) Token: 0x0601C186 RID: 115078 RVA: 0x003FB0D0 File Offset: 0x003F92D0
+		// Token: 0x17008938 RID: 35128
+		// (get) Token: 0x0601D95A RID: 121178 RVA: 0x00427364 File Offset: 0x00425564
+		// (set) Token: 0x0601D95B RID: 121179 RVA: 0x0042736C File Offset: 0x0042556C
 		public IVectorInfoT Pos { get; set; }
 
-		// Token: 0x0601C187 RID: 115079 RVA: 0x003FB0D9 File Offset: 0x003F92D9
+		// Token: 0x0601D95C RID: 121180 RVA: 0x00427375 File Offset: 0x00425575
 		public IPlotPosPlayFlowT()
 		{
 			this.Guid = null;

@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x02002EC9 RID: 11977
+// Token: 0x0200241C RID: 9244
 public enum EPlayerOperationState
 {
-	// Token: 0x0400BF53 RID: 48979
+	// Token: 0x0400C2EE RID: 49902
 	Other,
-	// Token: 0x0400BF54 RID: 48980
+	// Token: 0x0400C2EF RID: 49903
 	Move,
-	// Token: 0x0400BF55 RID: 48981
+	// Token: 0x0400C2F0 RID: 49904
 	Swim,
-	// Token: 0x0400BF56 RID: 48982
+	// Token: 0x0400C2F1 RID: 49905
 	Glide,
-	// Token: 0x0400BF57 RID: 48983
+	// Token: 0x0400C2F2 RID: 49906
 	Climb,
-	// Token: 0x0400BF58 RID: 48984
+	// Token: 0x0400C2F3 RID: 49907
 	Behit,
-	// Token: 0x0400BF59 RID: 48985
+	// Token: 0x0400C2F4 RID: 49908
 	Skill,
-	// Token: 0x0400BF5A RID: 48986
+	// Token: 0x0400C2F5 RID: 49909
 	Dash
 }

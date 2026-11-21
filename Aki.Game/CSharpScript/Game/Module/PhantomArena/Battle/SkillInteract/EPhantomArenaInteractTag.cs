@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 {
-	// Token: 0x02005285 RID: 21125
+	// Token: 0x02004255 RID: 16981
 	public enum EPhantomArenaInteractTag
 	{
-		// Token: 0x0401C9B1 RID: 117169
+		// Token: 0x040173E6 RID: 95206
 		OwnMonster,
-		// Token: 0x0401C9B2 RID: 117170
+		// Token: 0x040173E7 RID: 95207
 		OpponentAreaMonster,
-		// Token: 0x0401C9B3 RID: 117171
+		// Token: 0x040173E8 RID: 95208
 		OwnSkill,
-		// Token: 0x0401C9B4 RID: 117172
+		// Token: 0x040173E9 RID: 95209
 		OwnFiled
 	}
 }

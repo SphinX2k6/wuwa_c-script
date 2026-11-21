@@ -4,14 +4,14 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056EC RID: 22252
+	// Token: 0x020046C3 RID: 18115
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoShopOpenParam : IKurotatoShopOpenParam
 	{
-		// Token: 0x170087D9 RID: 34777
-		// (get) Token: 0x06038992 RID: 231826 RVA: 0x00D70501 File Offset: 0x00D6E701
-		// (set) Token: 0x06038993 RID: 231827 RVA: 0x00D70509 File Offset: 0x00D6E709
+		// Token: 0x17005BA1 RID: 23457
+		// (get) Token: 0x0602D8A2 RID: 186530 RVA: 0x00CBEAE9 File Offset: 0x00CBCCE9
+		// (set) Token: 0x0602D8A3 RID: 186531 RVA: 0x00CBEAF1 File Offset: 0x00CBCCF1
 		public List<int> Items { get; set; }
 	}
 }

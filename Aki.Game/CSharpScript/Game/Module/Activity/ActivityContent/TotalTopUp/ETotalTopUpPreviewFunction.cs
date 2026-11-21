@@ -2,28 +2,28 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F90 RID: 24464
+	// Token: 0x02004F77 RID: 20343
 	public enum ETotalTopUpPreviewFunction
 	{
-		// Token: 0x040206A7 RID: 132775
+		// Token: 0x0401B179 RID: 110969
 		None,
-		// Token: 0x040206A8 RID: 132776
+		// Token: 0x0401B17A RID: 110970
 		RolePreview,
-		// Token: 0x040206A9 RID: 132777
+		// Token: 0x0401B17B RID: 110971
 		WeaponPreview,
-		// Token: 0x040206AA RID: 132778
+		// Token: 0x0401B17C RID: 110972
 		Personalized,
-		// Token: 0x040206AB RID: 132779
+		// Token: 0x0401B17D RID: 110973
 		MotorCustomize,
-		// Token: 0x040206AC RID: 132780
+		// Token: 0x0401B17E RID: 110974
 		Role37,
-		// Token: 0x040206AD RID: 132781
+		// Token: 0x0401B17F RID: 110975
 		Weapon37,
-		// Token: 0x040206AE RID: 132782
+		// Token: 0x0401B180 RID: 110976
 		Crown37,
-		// Token: 0x040206AF RID: 132783
+		// Token: 0x0401B181 RID: 110977
 		SummonPreview,
-		// Token: 0x040206B0 RID: 132784
+		// Token: 0x0401B182 RID: 110978
 		OrnamentPreview
 	}
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000098 RID: 152
+// Token: 0x0200009A RID: 154
 public interface IConditionListener
 {
 }

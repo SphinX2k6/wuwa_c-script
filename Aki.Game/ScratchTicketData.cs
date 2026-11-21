@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020014ED RID: 5357
+// Token: 0x020009A5 RID: 2469
 [NullableContext(1)]
 [Nullable(0)]
 public class ScratchTicketData : ActivityBaseData
 {
-	// Token: 0x06009877 RID: 39031 RVA: 0x0020ECAC File Offset: 0x0020CEAC
+	// Token: 0x06006C51 RID: 27729 RVA: 0x002189E8 File Offset: 0x00216BE8
 	protected override void PhraseEx(ActivityData data)
 	{
 		ScratchCardActivityInfo scratchCardActivityInfo = data.ScratchCardActivityInfo;
@@ -22,13 +21,13 @@ public class ScratchTicketData : ActivityBaseData
 		this.InitData(scratchCardActivityInfo);
 	}
 
-	// Token: 0x06009878 RID: 39032 RVA: 0x0020ECCB File Offset: 0x0020CECB
+	// Token: 0x06006C52 RID: 27730 RVA: 0x00218A07 File Offset: 0x00216C07
 	public override bool NeedSelfControlFirstRedPoint()
 	{
 		return false;
 	}
 
-	// Token: 0x06009879 RID: 39033 RVA: 0x0020ECD0 File Offset: 0x0020CED0
+	// Token: 0x06006C53 RID: 27731 RVA: 0x00218A0A File Offset: 0x00216C0A
 	public void InitData(ScratchCardActivityInfo activityInfo)
 	{
 		this.Config = ActivityScratchTicketConfig.Instance.GetScratchTicketConfig(base.Id);
@@ -36,12 +35,12 @@ public class ScratchTicketData : ActivityBaseData
 		{
 			return;
 		}
-		this.InitRoundData(activityInfo.RoundInfos.ToList<ScratchCardRoundInfo>());
-		this.InitConditionData(activityInfo.ScratchTimeInfos.ToList<ScratchCardTimeInfo>());
+		this.InitRoundData(activityInfo.RoundInfos);
+		this.InitConditionData(activityInfo.ScratchTimeInfos);
 	}
 
-	// Token: 0x0600987A RID: 39034 RVA: 0x0020ED24 File Offset: 0x0020CF24
-	private void InitRoundData(List<ScratchCardRoundInfo> roundInfos)
+	// Token: 0x06006C54 RID: 27732 RVA: 0x00218A48 File Offset: 0x00216C48
+	private void InitRoundData(IEnumerable<ScratchCardRoundInfo> roundInfos)
 	{
 		if (this.RoundDataList.Count > 0)
 		{
@@ -58,7 +57,7 @@ public class ScratchTicketData : ActivityBaseData
 		this.UpdateAllRoundState();
 	}
 
-	// Token: 0x0600987B RID: 39035 RVA: 0x0020EDD0 File Offset: 0x0020CFD0
+	// Token: 0x06006C55 RID: 27733 RVA: 0x00218AEC File Offset: 0x00216CEC
 	public void UpdateAllRoundState()
 	{
 		for (int i = 0; i < this.RoundDataList.Count; i++)
@@ -76,7 +75,7 @@ public class ScratchTicketData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600987C RID: 39036 RVA: 0x0020EE28 File Offset: 0x0020D028
+	// Token: 0x06006C56 RID: 27734 RVA: 0x00218B44 File Offset: 0x00216D44
 	public void UpdateCellReward(int roundId, ScratchCardRewardResponse message)
 	{
 		ScratchTicketRoundData roundDataById = this.GetRoundDataById(roundId);
@@ -84,13 +83,13 @@ public class ScratchTicketData : ActivityBaseData
 		{
 			return;
 		}
-		roundDataById.UpdateCellDataReward(message.OpenIndex.ToDictionary<int, ScratchCardRewardData>());
-		roundDataById.UpdateRemainReward(message.LeftRewardItem.ToDictionary<int, int>());
+		roundDataById.UpdateCellDataReward(message.OpenIndex);
+		roundDataById.UpdateRemainReward(message.LeftRewardItem);
 		this.UpdateAllRoundState();
 	}
 
-	// Token: 0x0600987D RID: 39037 RVA: 0x0020EE6C File Offset: 0x0020D06C
-	private void InitConditionData(List<ScratchCardTimeInfo> conditionInfos)
+	// Token: 0x06006C57 RID: 27735 RVA: 0x00218B7C File Offset: 0x00216D7C
+	private void InitConditionData(IEnumerable<ScratchCardTimeInfo> conditionInfos)
 	{
 		if (this.ConditionDataList.Count > 0)
 		{
@@ -105,7 +104,7 @@ public class ScratchTicketData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600987E RID: 39038 RVA: 0x0020EEE8 File Offset: 0x0020D0E8
+	// Token: 0x06006C58 RID: 27736 RVA: 0x00218BF0 File Offset: 0x00216DF0
 	public void RefreshConditionData(List<ScratchCardTimeInfo> conditionInfos)
 	{
 		foreach (ScratchCardTimeInfo scratchCardTimeInfo in conditionInfos)
@@ -118,7 +117,7 @@ public class ScratchTicketData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600987F RID: 39039 RVA: 0x0020EF48 File Offset: 0x0020D148
+	// Token: 0x06006C59 RID: 27737 RVA: 0x00218C50 File Offset: 0x00216E50
 	public override bool GetExDataRedPointShowState()
 	{
 		if (!this.ActivityHasClick())
@@ -129,32 +128,32 @@ public class ScratchTicketData : ActivityBaseData
 		return this.HasRoundInProgress() && remainCount > 0;
 	}
 
-	// Token: 0x06009880 RID: 39040 RVA: 0x0020EF74 File Offset: 0x0020D174
+	// Token: 0x06006C5A RID: 27738 RVA: 0x00218C7C File Offset: 0x00216E7C
 	protected override bool GetExDataFinishShowState()
 	{
 		return base.GetPreGuideQuestFinishState() && this.IsAllRoundFinish();
 	}
 
-	// Token: 0x06009881 RID: 39041 RVA: 0x0020EF86 File Offset: 0x0020D186
+	// Token: 0x06006C5B RID: 27739 RVA: 0x00218C8E File Offset: 0x00216E8E
 	public bool IsInit()
 	{
 		return this.RoundDataList.Count > 0;
 	}
 
-	// Token: 0x06009882 RID: 39042 RVA: 0x0020EF96 File Offset: 0x0020D196
+	// Token: 0x06006C5C RID: 27740 RVA: 0x00218C9E File Offset: 0x00216E9E
 	public bool ActivityHasClick()
 	{
 		return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 100, 0, 0) == 1;
 	}
 
-	// Token: 0x06009883 RID: 39043 RVA: 0x0020EFB0 File Offset: 0x0020D1B0
+	// Token: 0x06006C5D RID: 27741 RVA: 0x00218CB8 File Offset: 0x00216EB8
 	public void ClickRedDot()
 	{
 		ActivityModel.Instance.SaveActivityData(base.Id, 100, 0, 0, 1);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06009884 RID: 39044 RVA: 0x0020EFE0 File Offset: 0x0020D1E0
+	// Token: 0x06006C5E RID: 27742 RVA: 0x00218CE8 File Offset: 0x00216EE8
 	[NullableContext(2)]
 	private ScratchTicketConditionData GetConditionData(int id)
 	{
@@ -174,13 +173,13 @@ public class ScratchTicketData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x06009885 RID: 39045 RVA: 0x0020F06C File Offset: 0x0020D26C
+	// Token: 0x06006C5F RID: 27743 RVA: 0x00218D74 File Offset: 0x00216F74
 	public ScratchCardActivityRe? GetScratchCardActivityConfig()
 	{
 		return this.Config;
 	}
 
-	// Token: 0x06009886 RID: 39046 RVA: 0x0020F074 File Offset: 0x0020D274
+	// Token: 0x06006C60 RID: 27744 RVA: 0x00218D7C File Offset: 0x00216F7C
 	[NullableContext(2)]
 	public ScratchTicketRoundData GetRoundDataById(int id)
 	{
@@ -194,7 +193,7 @@ public class ScratchTicketData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x06009887 RID: 39047 RVA: 0x0020F0D0 File Offset: 0x0020D2D0
+	// Token: 0x06006C61 RID: 27745 RVA: 0x00218DD8 File Offset: 0x00216FD8
 	public int GetFirstProgressRoundDataIndex()
 	{
 		int count = this.RoundDataList.Count;
@@ -212,7 +211,7 @@ public class ScratchTicketData : ActivityBaseData
 		return count - 1;
 	}
 
-	// Token: 0x06009888 RID: 39048 RVA: 0x0020F114 File Offset: 0x0020D314
+	// Token: 0x06006C62 RID: 27746 RVA: 0x00218E1C File Offset: 0x0021701C
 	public int GetRoundDataIndex(ScratchTicketRoundData roundData)
 	{
 		for (int i = 0; i < this.RoundDataList.Count; i++)
@@ -225,7 +224,7 @@ public class ScratchTicketData : ActivityBaseData
 		return -1;
 	}
 
-	// Token: 0x06009889 RID: 39049 RVA: 0x0020F14C File Offset: 0x0020D34C
+	// Token: 0x06006C63 RID: 27747 RVA: 0x00218E54 File Offset: 0x00217054
 	[NullableContext(2)]
 	public ScratchTicketRoundData GetFirstProgressRoundData()
 	{
@@ -237,19 +236,19 @@ public class ScratchTicketData : ActivityBaseData
 		return this.RoundDataList[firstProgressRoundDataIndex];
 	}
 
-	// Token: 0x0600988A RID: 39050 RVA: 0x0020F172 File Offset: 0x0020D372
+	// Token: 0x06006C64 RID: 27748 RVA: 0x00218E7A File Offset: 0x0021707A
 	public List<ScratchTicketRoundData> GetRoundDataList()
 	{
 		return this.RoundDataList;
 	}
 
-	// Token: 0x0600988B RID: 39051 RVA: 0x0020F17A File Offset: 0x0020D37A
+	// Token: 0x06006C65 RID: 27749 RVA: 0x00218E82 File Offset: 0x00217082
 	public List<ScratchTicketConditionData> GetConditionDataList()
 	{
 		return this.ConditionDataList;
 	}
 
-	// Token: 0x0600988C RID: 39052 RVA: 0x0020F184 File Offset: 0x0020D384
+	// Token: 0x06006C66 RID: 27750 RVA: 0x00218E8C File Offset: 0x0021708C
 	public bool IsAllRoundFinish()
 	{
 		using (List<ScratchTicketRoundData>.Enumerator enumerator = this.RoundDataList.GetEnumerator())
@@ -265,7 +264,7 @@ public class ScratchTicketData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x0600988D RID: 39053 RVA: 0x0020F1E0 File Offset: 0x0020D3E0
+	// Token: 0x06006C67 RID: 27751 RVA: 0x00218EE8 File Offset: 0x002170E8
 	public bool HasRoundInProgress()
 	{
 		using (List<ScratchTicketRoundData>.Enumerator enumerator = this.RoundDataList.GetEnumerator())
@@ -281,28 +280,28 @@ public class ScratchTicketData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600988E RID: 39054 RVA: 0x0020F23C File Offset: 0x0020D43C
+	// Token: 0x06006C68 RID: 27752 RVA: 0x00218F44 File Offset: 0x00217144
 	public int GetRemainCount()
 	{
 		int itemId = this.Config.Value.ItemId;
 		return InventoryModel.Instance.GetCommonItemCount(itemId, 0);
 	}
 
-	// Token: 0x0600988F RID: 39055 RVA: 0x0020F26C File Offset: 0x0020D46C
+	// Token: 0x06006C69 RID: 27753 RVA: 0x00218F74 File Offset: 0x00217174
 	public int GetCostItemId()
 	{
 		return this.Config.Value.ItemId;
 	}
 
-	// Token: 0x04004327 RID: 17191
+	// Token: 0x040043CC RID: 17356
 	private const int SCRATCH_TICKET_RED_DOT_CACHE_KEY = 100;
 
-	// Token: 0x04004328 RID: 17192
+	// Token: 0x040043CD RID: 17357
 	private List<ScratchTicketRoundData> RoundDataList = new List<ScratchTicketRoundData>();
 
-	// Token: 0x04004329 RID: 17193
+	// Token: 0x040043CE RID: 17358
 	private List<ScratchTicketConditionData> ConditionDataList = new List<ScratchTicketConditionData>();
 
-	// Token: 0x0400432A RID: 17194
+	// Token: 0x040043CF RID: 17359
 	private ScratchCardActivityRe? Config;
 }

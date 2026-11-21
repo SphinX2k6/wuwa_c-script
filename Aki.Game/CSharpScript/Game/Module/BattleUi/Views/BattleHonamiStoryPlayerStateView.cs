@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D54 RID: 23892
+	// Token: 0x02004D36 RID: 19766
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleHonamiStoryPlayerStateView : BattleVisibleChildView
 	{
-		// Token: 0x0603CA85 RID: 248453 RVA: 0x00E8F064 File Offset: 0x00E8D264
+		// Token: 0x060319DE RID: 203230 RVA: 0x00DDF818 File Offset: 0x00DDDA18
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CA86 RID: 248454 RVA: 0x00E8F174 File Offset: 0x00E8D374
+		// Token: 0x060319DF RID: 203231 RVA: 0x00DDF928 File Offset: 0x00DDDB28
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleHonamiStoryPlayerStateView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CA87 RID: 248455 RVA: 0x00E8F1B8 File Offset: 0x00E8D3B8
+		// Token: 0x060319E0 RID: 203232 RVA: 0x00DDF96C File Offset: 0x00DDDB6C
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603CA88 RID: 248456 RVA: 0x00E8F22A File Offset: 0x00E8D42A
+		// Token: 0x060319E1 RID: 203233 RVA: 0x00DDF9DE File Offset: 0x00DDDBDE
 		public override void Reset()
 		{
 			this.RemoveEvents();
@@ -82,21 +82,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603CA89 RID: 248457 RVA: 0x00E8F250 File Offset: 0x00E8D450
+		// Token: 0x060319E2 RID: 203234 RVA: 0x00DDFA04 File Offset: 0x00DDDC04
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnHonamiStoryPowerLevelUpdate, new Action<int, int>(this.OnRefreshLevel));
 			EventSystem.Instance.Add(EEventName.OnHonamiStoryPickUpAutoEquip, new Action<int>(this.OnPickUpAutoEquip));
 		}
 
-		// Token: 0x0603CA8A RID: 248458 RVA: 0x00E8F28A File Offset: 0x00E8D48A
+		// Token: 0x060319E3 RID: 203235 RVA: 0x00DDFA3E File Offset: 0x00DDDC3E
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnHonamiStoryPowerLevelUpdate, new Action<int, int>(this.OnRefreshLevel));
 			EventSystem.Instance.Remove(EEventName.OnHonamiStoryPickUpAutoEquip, new Action<int>(this.OnPickUpAutoEquip));
 		}
 
-		// Token: 0x0603CA8B RID: 248459 RVA: 0x00E8F2C4 File Offset: 0x00E8D4C4
+		// Token: 0x060319E4 RID: 203236 RVA: 0x00DDFA78 File Offset: 0x00DDDC78
 		private void OnRefreshLevel(int oldValue, int newValue)
 		{
 			BattleHonamiStoryPlayerLevelView levelView = this.LevelView;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshPlayerRank(newValue, false);
 		}
 
-		// Token: 0x0603CA8C RID: 248460 RVA: 0x00E8F2E4 File Offset: 0x00E8D4E4
+		// Token: 0x060319E5 RID: 203237 RVA: 0x00DDFA98 File Offset: 0x00DDDC98
 		private unsafe void RefreshPlayerRank(int newLevel, bool isInit = false)
 		{
 			int num = -1;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA8D RID: 248461 RVA: 0x00E8F394 File Offset: 0x00E8D594
+		// Token: 0x060319E6 RID: 203238 RVA: 0x00DDFB48 File Offset: 0x00DDDD48
 		private void OnPickUpAutoEquip(int position)
 		{
 			HonamiStoryRoleEquipData roleItemDataByPosition = HonamiStoryModel.Instance.GetRoleItemDataByPosition(position);
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TryShowRoleItem();
 		}
 
-		// Token: 0x0603CA8E RID: 248462 RVA: 0x00E8F49C File Offset: 0x00E8D69C
+		// Token: 0x060319E7 RID: 203239 RVA: 0x00DDFC50 File Offset: 0x00DDDE50
 		private void TryShowRoleItem()
 		{
 			if (this.RoleItemDataQueue.Size == 0)
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA8F RID: 248463 RVA: 0x00E8F5BC File Offset: 0x00E8D7BC
+		// Token: 0x060319E8 RID: 203240 RVA: 0x00DDFD70 File Offset: 0x00DDDF70
 		private void OnRoleItemAfterHide()
 		{
 			int item;
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TryShowRoleItem();
 		}
 
-		// Token: 0x0603CA90 RID: 248464 RVA: 0x00E8F5EA File Offset: 0x00E8D7EA
+		// Token: 0x060319E9 RID: 203241 RVA: 0x00DDFD9E File Offset: 0x00DDDF9E
 		private void PlayRolePanelSequence(bool isExtended)
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -244,52 +244,52 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sequencePlayer2.PlaySequencePurely(isExtended ? "Extended" : "Basics", false, false);
 		}
 
-		// Token: 0x0401F988 RID: 129416
+		// Token: 0x0401A441 RID: 107585
 		private int CurrentRank = -1;
 
-		// Token: 0x0401F989 RID: 129417
+		// Token: 0x0401A442 RID: 107586
 		private readonly List<int> RankLevelList = new List<int>();
 
-		// Token: 0x0401F98A RID: 129418
+		// Token: 0x0401A443 RID: 107587
 		[Nullable(2)]
 		private BattleHonamiStoryPlayerLevelView LevelView;
 
-		// Token: 0x0401F98B RID: 129419
+		// Token: 0x0401A444 RID: 107588
 		private int RoleTipsDuration;
 
-		// Token: 0x0401F98C RID: 129420
+		// Token: 0x0401A445 RID: 107589
 		private readonly List<BattleHonamiStoryRoleItem> RoleItems = new List<BattleHonamiStoryRoleItem>();
 
-		// Token: 0x0401F98D RID: 129421
+		// Token: 0x0401A446 RID: 107590
 		private readonly Queue<HonamiStoryRoleItemData> RoleItemDataQueue = new Queue<HonamiStoryRoleItemData>(4);
 
-		// Token: 0x0401F98E RID: 129422
+		// Token: 0x0401A447 RID: 107591
 		private readonly List<int> WaitingRoleItems = new List<int>();
 
-		// Token: 0x0401F98F RID: 129423
+		// Token: 0x0401A448 RID: 107592
 		private readonly Queue<int> ShowingRoleItemQueue = new Queue<int>(4);
 
-		// Token: 0x0401F990 RID: 129424
+		// Token: 0x0401A449 RID: 107593
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0200C002 RID: 49154
+		// Token: 0x0200AA08 RID: 43528
 		[NullableContext(0)]
 		private enum EComponentType
 		{
-			// Token: 0x04039F03 RID: 237315
+			// Token: 0x040348C5 RID: 215237
 			LevelItem,
-			// Token: 0x04039F04 RID: 237316
+			// Token: 0x040348C6 RID: 215238
 			RolePanel,
-			// Token: 0x04039F05 RID: 237317
+			// Token: 0x040348C7 RID: 215239
 			RoleItem,
-			// Token: 0x04039F06 RID: 237318
+			// Token: 0x040348C8 RID: 215240
 			RankPointA,
-			// Token: 0x04039F07 RID: 237319
+			// Token: 0x040348C9 RID: 215241
 			RankPointB,
-			// Token: 0x04039F08 RID: 237320
+			// Token: 0x040348CA RID: 215242
 			RankPointC,
-			// Token: 0x04039F09 RID: 237321
+			// Token: 0x040348CB RID: 215243
 			RoleItemPanel
 		}
 	}

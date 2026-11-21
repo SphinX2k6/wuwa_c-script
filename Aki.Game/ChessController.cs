@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020011D4 RID: 4564
+// Token: 0x02000688 RID: 1672
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ChessController : ControllerBase
 {
-	// Token: 0x0600799B RID: 31131 RVA: 0x00199DC8 File Offset: 0x00197FC8
+	// Token: 0x06004D32 RID: 19762 RVA: 0x001A2A78 File Offset: 0x001A0C78
 	public UniTask InitChessGameAsync(List<IChessboardPointParams> chessboardPoints, List<IChessItemParams> chessItems, int terminalPointId, EChessMode gameMode = EChessMode.Stackable)
 	{
 		ChessController.<InitChessGameAsync>d__0 <InitChessGameAsync>d__;
@@ -24,7 +24,7 @@ public class ChessController : ControllerBase
 		return <InitChessGameAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600799C RID: 31132 RVA: 0x00199E24 File Offset: 0x00198024
+	// Token: 0x06004D33 RID: 19763 RVA: 0x001A2AD4 File Offset: 0x001A0CD4
 	public UniTask MoveItemToPointAsync(int itemId, int targetPointId, bool isForward = true)
 	{
 		ChessController.<MoveItemToPointAsync>d__1 <MoveItemToPointAsync>d__;
@@ -37,7 +37,7 @@ public class ChessController : ControllerBase
 		return <MoveItemToPointAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600799D RID: 31133 RVA: 0x00199E78 File Offset: 0x00198078
+	// Token: 0x06004D34 RID: 19764 RVA: 0x001A2B28 File Offset: 0x001A0D28
 	public UniTask ChessItemPerformAsync(int itemId, int type)
 	{
 		ChessController.<ChessItemPerformAsync>d__2 <ChessItemPerformAsync>d__;
@@ -49,7 +49,7 @@ public class ChessController : ControllerBase
 		return <ChessItemPerformAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600799E RID: 31134 RVA: 0x00199EC4 File Offset: 0x001980C4
+	// Token: 0x06004D35 RID: 19765 RVA: 0x001A2B74 File Offset: 0x001A0D74
 	public static void TeleportItemToPoint(int itemId, int targetPointId)
 	{
 		ChessItem chessItem = ChessModel.Instance.GetChessItem(itemId);
@@ -68,7 +68,7 @@ public class ChessController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600799F RID: 31135 RVA: 0x00199F2C File Offset: 0x0019812C
+	// Token: 0x06004D36 RID: 19766 RVA: 0x001A2BDC File Offset: 0x001A0DDC
 	public void ChangeItemToMaxPriorityInPoint(int itemId)
 	{
 		ChessItem chessItem = ChessModel.Instance.GetChessItem(itemId);
@@ -83,7 +83,7 @@ public class ChessController : ControllerBase
 		ChessController.AfterUpdateItem();
 	}
 
-	// Token: 0x060079A0 RID: 31136 RVA: 0x00199F60 File Offset: 0x00198160
+	// Token: 0x06004D37 RID: 19767 RVA: 0x001A2C10 File Offset: 0x001A0E10
 	public void BatchTeleportItemsToPointSorted(List<IChessTransmitData> transmitDataList)
 	{
 		IChessManager chessManager = ChessModel.Instance.GetChessManager();
@@ -96,13 +96,13 @@ public class ChessController : ControllerBase
 		ChessController.AfterUpdateItem();
 	}
 
-	// Token: 0x060079A1 RID: 31137 RVA: 0x00199FA7 File Offset: 0x001981A7
+	// Token: 0x06004D38 RID: 19768 RVA: 0x001A2C57 File Offset: 0x001A0E57
 	private static void AfterUpdateItem()
 	{
 		ChessModel.Instance.CacheRankingItemIdList = null;
 	}
 
-	// Token: 0x060079A2 RID: 31138 RVA: 0x00199FB4 File Offset: 0x001981B4
+	// Token: 0x06004D39 RID: 19769 RVA: 0x001A2C64 File Offset: 0x001A0E64
 	public static List<int> GetRankingItemIdList()
 	{
 		int[] cacheRankingItemIdList = ChessModel.Instance.CacheRankingItemIdList;
@@ -156,8 +156,8 @@ public class ChessController : ControllerBase
 		return chessItemIdList;
 	}
 
-	// Token: 0x17000A60 RID: 2656
-	// (get) Token: 0x060079A3 RID: 31139 RVA: 0x0019A04A File Offset: 0x0019824A
+	// Token: 0x17000A80 RID: 2688
+	// (get) Token: 0x06004D3A RID: 19770 RVA: 0x001A2CFA File Offset: 0x001A0EFA
 	public static ChessController Instance
 	{
 		get
@@ -166,7 +166,7 @@ public class ChessController : ControllerBase
 		}
 	}
 
-	// Token: 0x060079A4 RID: 31140 RVA: 0x0019A051 File Offset: 0x00198251
+	// Token: 0x06004D3B RID: 19771 RVA: 0x001A2D01 File Offset: 0x001A0F01
 	public static ChessController GetOrCreateInstance()
 	{
 		if (ChessController._Instance == null)
@@ -176,7 +176,7 @@ public class ChessController : ControllerBase
 		return ChessController._Instance;
 	}
 
-	// Token: 0x060079A5 RID: 31141 RVA: 0x0019A065 File Offset: 0x00198265
+	// Token: 0x06004D3C RID: 19772 RVA: 0x001A2D15 File Offset: 0x001A0F15
 	public static bool CreateInstance()
 	{
 		if (ChessController._Instance != null)
@@ -187,24 +187,24 @@ public class ChessController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060079A6 RID: 31142 RVA: 0x0019A07B File Offset: 0x0019827B
+	// Token: 0x06004D3D RID: 19773 RVA: 0x001A2D2B File Offset: 0x001A0F2B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060079A7 RID: 31143 RVA: 0x0019A07D File Offset: 0x0019827D
+	// Token: 0x06004D3E RID: 19774 RVA: 0x001A2D2D File Offset: 0x001A0F2D
 	public static void ResetStaticDefaultValue()
 	{
 		ChessController._Instance = null;
 	}
 
-	// Token: 0x060079A8 RID: 31144 RVA: 0x0019A085 File Offset: 0x00198285
+	// Token: 0x06004D3F RID: 19775 RVA: 0x001A2D35 File Offset: 0x001A0F35
 	static ChessController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ChessController.CreateStaticDefaultValue), new Action(ChessController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040037E9 RID: 14313
+	// Token: 0x04003882 RID: 14466
 	[Nullable(2)]
 	private static ChessController _Instance;
 }

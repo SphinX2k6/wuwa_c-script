@@ -8,26 +8,26 @@ using CSharpScript.Game.LevelGamePlay.LevelAi.Tasks;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi
 {
-	// Token: 0x02006DB7 RID: 28087
+	// Token: 0x02005F36 RID: 24374
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelAiRegistry : Singleton
 	{
-		// Token: 0x06044888 RID: 280712 RVA: 0x010E6AD0 File Offset: 0x010E4CD0
+		// Token: 0x0603A9EC RID: 240108 RVA: 0x01090CF8 File Offset: 0x0108EEF8
 		protected override bool OnInit()
 		{
 			this.RegisterLevelAi();
 			return true;
 		}
 
-		// Token: 0x06044889 RID: 280713 RVA: 0x010E6AD9 File Offset: 0x010E4CD9
+		// Token: 0x0603A9ED RID: 240109 RVA: 0x01090D01 File Offset: 0x0108EF01
 		public void RegisterLevelAi()
 		{
 			this.RegisterLevelAiTasks();
 			this.RegisterLevelAiDecorators();
 		}
 
-		// Token: 0x0604488A RID: 280714 RVA: 0x010E6AE8 File Offset: 0x010E4CE8
+		// Token: 0x0603A9EE RID: 240110 RVA: 0x01090D10 File Offset: 0x0108EF10
 		private void RegisterLevelAiTasks()
 		{
 			this.TasksMap[EAction.Log] = (() => new LevelAiTaskLog());
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.TasksMap[EAction.NpcLeisureInteract] = (() => new LevelAiTaskLeisureInteract());
 		}
 
-		// Token: 0x0604488B RID: 280715 RVA: 0x010E6C2C File Offset: 0x010E4E2C
+		// Token: 0x0603A9EF RID: 240111 RVA: 0x01090E54 File Offset: 0x0108F054
 		private void RegisterLevelAiDecorators()
 		{
 			this.DecoratorsMap[ECondition.CompareVar] = (() => new LevelAiDecoratorCompareVar());
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.DecoratorsMap[ECondition.CheckChildQuestFinished] = (() => new LevelAiDecoratorQuestStepState());
 		}
 
-		// Token: 0x0604488C RID: 280716 RVA: 0x010E6D98 File Offset: 0x010E4F98
+		// Token: 0x0603A9F0 RID: 240112 RVA: 0x01090FC0 File Offset: 0x0108F1C0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return result;
 		}
 
-		// Token: 0x0604488D RID: 280717 RVA: 0x010E6DB8 File Offset: 0x010E4FB8
+		// Token: 0x0603A9F1 RID: 240113 RVA: 0x01090FE0 File Offset: 0x0108F1E0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -78,8 +78,8 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return result;
 		}
 
-		// Token: 0x170099BB RID: 39355
-		// (get) Token: 0x0604488E RID: 280718 RVA: 0x010E6DD5 File Offset: 0x010E4FD5
+		// Token: 0x17006EBE RID: 28350
+		// (get) Token: 0x0603A9F2 RID: 240114 RVA: 0x01090FFD File Offset: 0x0108F1FD
 		public static LevelAiRegistry Instance
 		{
 			get
@@ -93,12 +93,12 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x0604488F RID: 280719 RVA: 0x010E6DF8 File Offset: 0x010E4FF8
+		// Token: 0x0603A9F3 RID: 240115 RVA: 0x01091020 File Offset: 0x0108F220
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06044890 RID: 280720 RVA: 0x010E6DFA File Offset: 0x010E4FFA
+		// Token: 0x0603A9F4 RID: 240116 RVA: 0x01091022 File Offset: 0x0108F222
 		public static void ResetStaticDefaultValue()
 		{
 			LevelAiRegistry instance = LevelAiRegistry._instance;
@@ -109,19 +109,19 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			LevelAiRegistry._instance = null;
 		}
 
-		// Token: 0x06044891 RID: 280721 RVA: 0x010E6E13 File Offset: 0x010E5013
+		// Token: 0x0603A9F5 RID: 240117 RVA: 0x0109103B File Offset: 0x0108F23B
 		static LevelAiRegistry()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelAiRegistry.CreateStaticDefaultValue), new Action(LevelAiRegistry.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023A3E RID: 145982
+		// Token: 0x0401ECE0 RID: 126176
 		private readonly Dictionary<EAction, Func<LevelAiTask>> TasksMap = new Dictionary<EAction, Func<LevelAiTask>>();
 
-		// Token: 0x04023A3F RID: 145983
+		// Token: 0x0401ECE1 RID: 126177
 		private readonly Dictionary<ECondition, Func<LevelAiDecorator>> DecoratorsMap = new Dictionary<ECondition, Func<LevelAiDecorator>>();
 
-		// Token: 0x04023A40 RID: 145984
+		// Token: 0x0401ECE2 RID: 126178
 		[Nullable(2)]
 		private static LevelAiRegistry _instance;
 	}

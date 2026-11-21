@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007115 RID: 28949
+	// Token: 0x020078E1 RID: 30945
 	public struct ISingleAxisSpringArmSoftZoneConfig : IFlatbufferObject
 	{
-		// Token: 0x1700D730 RID: 55088
-		// (get) Token: 0x06033527 RID: 210215 RVA: 0x006EB233 File Offset: 0x006E9433
+		// Token: 0x1700E313 RID: 58131
+		// (get) Token: 0x060367C9 RID: 223177 RVA: 0x0074B83F File Offset: 0x00749A3F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033528 RID: 210216 RVA: 0x006EB240 File Offset: 0x006E9440
+		// Token: 0x060367CA RID: 223178 RVA: 0x0074B84C File Offset: 0x00749A4C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033529 RID: 210217 RVA: 0x006EB248 File Offset: 0x006E9448
+		// Token: 0x060367CB RID: 223179 RVA: 0x0074B854 File Offset: 0x00749A54
 		public static ISingleAxisSpringArmSoftZoneConfig GetRootAsISingleAxisSpringArmSoftZoneConfig(ByteBuffer _bb)
 		{
 			return ISingleAxisSpringArmSoftZoneConfig.GetRootAsISingleAxisSpringArmSoftZoneConfig(_bb, default(ISingleAxisSpringArmSoftZoneConfig));
 		}
 
-		// Token: 0x0603352A RID: 210218 RVA: 0x006EB264 File Offset: 0x006E9464
+		// Token: 0x060367CC RID: 223180 RVA: 0x0074B870 File Offset: 0x00749A70
 		public static ISingleAxisSpringArmSoftZoneConfig GetRootAsISingleAxisSpringArmSoftZoneConfig(ByteBuffer _bb, ISingleAxisSpringArmSoftZoneConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603352B RID: 210219 RVA: 0x006EB281 File Offset: 0x006E9481
+		// Token: 0x060367CD RID: 223181 RVA: 0x0074B88D File Offset: 0x00749A8D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603352C RID: 210220 RVA: 0x006EB290 File Offset: 0x006E9490
+		// Token: 0x060367CE RID: 223182 RVA: 0x0074B89C File Offset: 0x00749A9C
 		public ISingleAxisSpringArmSoftZoneConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D731 RID: 55089
-		// (get) Token: 0x0603352D RID: 210221 RVA: 0x006EB2A0 File Offset: 0x006E94A0
+		// Token: 0x1700E314 RID: 58132
+		// (get) Token: 0x060367CF RID: 223183 RVA: 0x0074B8AC File Offset: 0x00749AAC
 		public float MaxOffsetDistance
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D732 RID: 55090
-		// (get) Token: 0x0603352E RID: 210222 RVA: 0x006EB2E0 File Offset: 0x006E94E0
+		// Token: 0x1700E315 RID: 58133
+		// (get) Token: 0x060367D0 RID: 223184 RVA: 0x0074B8EC File Offset: 0x00749AEC
 		public float MinOffsetDistance
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D733 RID: 55091
-		// (get) Token: 0x0603352F RID: 210223 RVA: 0x006EB320 File Offset: 0x006E9520
+		// Token: 0x1700E316 RID: 58134
+		// (get) Token: 0x060367D1 RID: 223185 RVA: 0x0074B92C File Offset: 0x00749B2C
 		public float MaxInterpolationSpeed
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D734 RID: 55092
-		// (get) Token: 0x06033530 RID: 210224 RVA: 0x006EB360 File Offset: 0x006E9560
+		// Token: 0x1700E317 RID: 58135
+		// (get) Token: 0x060367D2 RID: 223186 RVA: 0x0074B96C File Offset: 0x00749B6C
 		public float MinInterpolationSpeed
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D735 RID: 55093
-		// (get) Token: 0x06033531 RID: 210225 RVA: 0x006EB3A4 File Offset: 0x006E95A4
+		// Token: 0x1700E318 RID: 58136
+		// (get) Token: 0x060367D3 RID: 223187 RVA: 0x0074B9B0 File Offset: 0x00749BB0
 		public byte NullMask
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033532 RID: 210226 RVA: 0x006EB3E1 File Offset: 0x006E95E1
+		// Token: 0x060367D4 RID: 223188 RVA: 0x0074B9ED File Offset: 0x00749BED
 		public static Offset<ISingleAxisSpringArmSoftZoneConfig> CreateISingleAxisSpringArmSoftZoneConfig(FlatBufferBuilder builder, float MaxOffsetDistance = 0f, float MinOffsetDistance = 0f, float MaxInterpolationSpeed = 0f, float MinInterpolationSpeed = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -134,49 +134,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISingleAxisSpringArmSoftZoneConfig.EndISingleAxisSpringArmSoftZoneConfig(builder);
 		}
 
-		// Token: 0x06033533 RID: 210227 RVA: 0x006EB415 File Offset: 0x006E9615
+		// Token: 0x060367D5 RID: 223189 RVA: 0x0074BA21 File Offset: 0x00749C21
 		public static void StartISingleAxisSpringArmSoftZoneConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06033534 RID: 210228 RVA: 0x006EB41E File Offset: 0x006E961E
+		// Token: 0x060367D6 RID: 223190 RVA: 0x0074BA2A File Offset: 0x00749C2A
 		public static void AddMaxOffsetDistance(FlatBufferBuilder builder, float maxOffsetDistance)
 		{
 			builder.AddFloat(0, maxOffsetDistance, 0.0);
 		}
 
-		// Token: 0x06033535 RID: 210229 RVA: 0x006EB431 File Offset: 0x006E9631
+		// Token: 0x060367D7 RID: 223191 RVA: 0x0074BA3D File Offset: 0x00749C3D
 		public static void AddMinOffsetDistance(FlatBufferBuilder builder, float minOffsetDistance)
 		{
 			builder.AddFloat(1, minOffsetDistance, 0.0);
 		}
 
-		// Token: 0x06033536 RID: 210230 RVA: 0x006EB444 File Offset: 0x006E9644
+		// Token: 0x060367D8 RID: 223192 RVA: 0x0074BA50 File Offset: 0x00749C50
 		public static void AddMaxInterpolationSpeed(FlatBufferBuilder builder, float maxInterpolationSpeed)
 		{
 			builder.AddFloat(2, maxInterpolationSpeed, 0.0);
 		}
 
-		// Token: 0x06033537 RID: 210231 RVA: 0x006EB457 File Offset: 0x006E9657
+		// Token: 0x060367D9 RID: 223193 RVA: 0x0074BA63 File Offset: 0x00749C63
 		public static void AddMinInterpolationSpeed(FlatBufferBuilder builder, float minInterpolationSpeed)
 		{
 			builder.AddFloat(3, minInterpolationSpeed, 0.0);
 		}
 
-		// Token: 0x06033538 RID: 210232 RVA: 0x006EB46A File Offset: 0x006E966A
+		// Token: 0x060367DA RID: 223194 RVA: 0x0074BA76 File Offset: 0x00749C76
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06033539 RID: 210233 RVA: 0x006EB475 File Offset: 0x006E9675
+		// Token: 0x060367DB RID: 223195 RVA: 0x0074BA81 File Offset: 0x00749C81
 		public static Offset<ISingleAxisSpringArmSoftZoneConfig> EndISingleAxisSpringArmSoftZoneConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ISingleAxisSpringArmSoftZoneConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0603353A RID: 210234 RVA: 0x006EB484 File Offset: 0x006E9684
+		// Token: 0x060367DC RID: 223196 RVA: 0x0074BA90 File Offset: 0x00749C90
 		public ISingleAxisSpringArmSoftZoneConfigT UnPack()
 		{
 			ISingleAxisSpringArmSoftZoneConfigT singleAxisSpringArmSoftZoneConfigT = new ISingleAxisSpringArmSoftZoneConfigT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return singleAxisSpringArmSoftZoneConfigT;
 		}
 
-		// Token: 0x0603353B RID: 210235 RVA: 0x006EB49F File Offset: 0x006E969F
+		// Token: 0x060367DD RID: 223197 RVA: 0x0074BAAB File Offset: 0x00749CAB
 		public void UnPackTo(ISingleAxisSpringArmSoftZoneConfigT _o)
 		{
 			_o.MaxOffsetDistance = this.MaxOffsetDistance;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0603353C RID: 210236 RVA: 0x006EB4E0 File Offset: 0x006E96E0
+		// Token: 0x060367DE RID: 223198 RVA: 0x0074BAEC File Offset: 0x00749CEC
 		public static Offset<ISingleAxisSpringArmSoftZoneConfig> Pack(FlatBufferBuilder builder, ISingleAxisSpringArmSoftZoneConfigT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISingleAxisSpringArmSoftZoneConfig.CreateISingleAxisSpringArmSoftZoneConfig(builder, _o.MaxOffsetDistance, _o.MinOffsetDistance, _o.MaxInterpolationSpeed, _o.MinInterpolationSpeed, _o.NullMask);
 		}
 
-		// Token: 0x04011BA4 RID: 72612
+		// Token: 0x04012B92 RID: 76690
 		private Table __p;
 	}
 }

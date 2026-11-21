@@ -9,12 +9,12 @@ using CSharpScript.Game.Module.Audio;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 
-// Token: 0x02002DE3 RID: 11747
+// Token: 0x0200233E RID: 9022
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletStaticFunction
 {
-	// Token: 0x06018A83 RID: 100995 RVA: 0x006522C8 File Offset: 0x006504C8
+	// Token: 0x06016330 RID: 90928 RVA: 0x006783A8 File Offset: 0x006765A8
 	public static UPrimitiveComponent CreateMultipleBoxToFan(AActor bullet, double radius, double angle, FVector vector, FName profileName, HashSet<UPrimitiveComponent> boxArray)
 	{
 		int num;
@@ -81,7 +81,7 @@ public class BulletStaticFunction
 		return uboxComponent;
 	}
 
-	// Token: 0x06018A84 RID: 100996 RVA: 0x006525AC File Offset: 0x006507AC
+	// Token: 0x06016331 RID: 90929 RVA: 0x0067868C File Offset: 0x0067688C
 	public static FVector CompCurveVector(double haveTime, double allTime, UCurveVector curve)
 	{
 		float num = 0f;
@@ -91,7 +91,7 @@ public class BulletStaticFunction
 		return curve.GetVectorValue((float)MathUtils.Instance.RangeClamp(haveTime / num3, 0.0, 1.0, (double)num2, (double)num));
 	}
 
-	// Token: 0x06018A85 RID: 100997 RVA: 0x00652624 File Offset: 0x00650824
+	// Token: 0x06016332 RID: 90930 RVA: 0x00678704 File Offset: 0x00676904
 	public static float CompCurveFloat(float haveTime, float allTime, UCurveFloat curve)
 	{
 		float num = 0f;
@@ -101,7 +101,7 @@ public class BulletStaticFunction
 		return curve.GetFloatValue((float)MathUtils.Instance.RangeClamp((double)(haveTime / num3), 0.0, 1.0, (double)num2, (double)num));
 	}
 
-	// Token: 0x06018A86 RID: 100998 RVA: 0x00652698 File Offset: 0x00650898
+	// Token: 0x06016333 RID: 90931 RVA: 0x00678778 File Offset: 0x00676978
 	public static void DebugDrawRing(double halfHeight, double radiusMin, double radiusMax, Vector location, Vector upVector)
 	{
 		if (radiusMax <= 0.0)
@@ -117,7 +117,7 @@ public class BulletStaticFunction
 		UKismetSystemLibrary.D_DrawDebugCylinder(GlobalData.GameInstance, start, end, (float)radiusMax, 32, new FLinearColor?(BulletStaticFunction.collisionColor), 0f, 0f);
 	}
 
-	// Token: 0x06018A87 RID: 100999 RVA: 0x00652774 File Offset: 0x00650974
+	// Token: 0x06016334 RID: 90932 RVA: 0x00678854 File Offset: 0x00676A54
 	public static void DebugDrawRingWithRotation(double halfHeight, double radiusMin, double radiusMax, Vector location, FQuat rotation)
 	{
 		if (radiusMax <= 0.0)
@@ -138,7 +138,7 @@ public class BulletStaticFunction
 		UKismetSystemLibrary.D_DrawDebugCylinder(GlobalData.GameInstance, vector.ToUeVector(false), vector2.ToUeVector(false), (float)radiusMax, 32, new FLinearColor?(BulletStaticFunction.collisionColor), 0f, 0f);
 	}
 
-	// Token: 0x06018A88 RID: 101000 RVA: 0x00652854 File Offset: 0x00650A54
+	// Token: 0x06016335 RID: 90933 RVA: 0x00678934 File Offset: 0x00676B34
 	public static void DebugDrawSector(double halfHeight, double radius, double angle, Quat quat, Vector location, Vector upVector, FLinearColor? color = null, float? duration = null)
 	{
 		quat.RotateVector(upVector, BulletStaticFunction.TmpVector1);
@@ -184,7 +184,7 @@ public class BulletStaticFunction
 		}
 	}
 
-	// Token: 0x06018A89 RID: 101001 RVA: 0x00652CF8 File Offset: 0x00650EF8
+	// Token: 0x06016336 RID: 90934 RVA: 0x00678DD8 File Offset: 0x00676FD8
 	public static void SpawnHitEffect(BulletInfo bulletInfo, EBulletHitEffect effectType, string reason)
 	{
 		if (bulletInfo.EffectInfo.HandOver)
@@ -198,7 +198,7 @@ public class BulletStaticFunction
 		}
 	}
 
-	// Token: 0x06018A8A RID: 101002 RVA: 0x00652D64 File Offset: 0x00650F64
+	// Token: 0x06016337 RID: 90935 RVA: 0x00678E44 File Offset: 0x00677044
 	public static void BulletHitEffect(BulletInfo bulletInfo, FVectorDouble position)
 	{
 		FName? valueOrNull = bulletInfo.EffectInfo.EffectData.EffectOnHit.GetValueOrNull(EBulletHitEffect.碰撞障碍物触发);
@@ -210,7 +210,7 @@ public class BulletStaticFunction
 		}
 	}
 
-	// Token: 0x06018A8B RID: 101003 RVA: 0x00652DD4 File Offset: 0x00650FD4
+	// Token: 0x06016338 RID: 90936 RVA: 0x00678EB4 File Offset: 0x006770B4
 	public static int PlayBulletEffect(UObject worldContextObject, string path, FTransformDouble transform, BulletInfo bulletInfo, string reason)
 	{
 		EffectContext effectContext = null;
@@ -281,7 +281,7 @@ public class BulletStaticFunction
 		return num;
 	}
 
-	// Token: 0x06018A8C RID: 101004 RVA: 0x00652FE0 File Offset: 0x006511E0
+	// Token: 0x06016339 RID: 90937 RVA: 0x006790C0 File Offset: 0x006772C0
 	public static void DestroyEffect(BulletInfo bulletInfo, bool resetTimeScale = true)
 	{
 		BulletEffectInfo effectInfo = bulletInfo.EffectInfo;
@@ -328,7 +328,7 @@ public class BulletStaticFunction
 		EffectSystem.Instance.StopEffectById(effectInfo.Effect, "[BulletStaticFunction.DestroyEffect] IsFinishAuto=false", true, null);
 	}
 
-	// Token: 0x06018A8D RID: 101005 RVA: 0x0065311B File Offset: 0x0065131B
+	// Token: 0x0601633A RID: 90938 RVA: 0x006791FB File Offset: 0x006773FB
 	public static void SetBulletEffectTimeScale(BulletEffectInfo effectInfo, double newScale, bool ignoreGlobalTimeScale = false)
 	{
 		if (!EffectSystem.Instance.IsValid(effectInfo.Effect))
@@ -338,7 +338,7 @@ public class BulletStaticFunction
 		EffectSystem.Instance.SetTimeScale(effectInfo.Effect, (float)newScale, ignoreGlobalTimeScale);
 	}
 
-	// Token: 0x06018A8E RID: 101006 RVA: 0x00653144 File Offset: 0x00651344
+	// Token: 0x0601633B RID: 90939 RVA: 0x00679224 File Offset: 0x00677424
 	public static void HandOverEffects(BulletInfo oldBulletInfo, BulletInfo newBulletInfo)
 	{
 		BulletEffectInfo effectInfo = oldBulletInfo.EffectInfo;
@@ -351,7 +351,7 @@ public class BulletStaticFunction
 		effectInfo.Effect = 0;
 	}
 
-	// Token: 0x06018A8F RID: 101007 RVA: 0x00653194 File Offset: 0x00651394
+	// Token: 0x0601633C RID: 90940 RVA: 0x00679274 File Offset: 0x00677474
 	public static void HandOverEffectsAfterInitTransform(BulletInfo bulletInfo)
 	{
 		BulletEffectInfo effectInfo = bulletInfo.EffectInfo;
@@ -365,7 +365,7 @@ public class BulletStaticFunction
 		}
 	}
 
-	// Token: 0x06018A90 RID: 101008 RVA: 0x006531E0 File Offset: 0x006513E0
+	// Token: 0x0601633D RID: 90941 RVA: 0x006792C0 File Offset: 0x006774C0
 	public static int GetNiagaraQualityLevel(double configValue)
 	{
 		int num = (int)Math.Min((double)GameSettingsManager.Instance.GetCurrentValue(EFunction.NIAGARAQUALITY, true, true).GetValueOrDefault(), configValue);
@@ -380,7 +380,7 @@ public class BulletStaticFunction
 		return num;
 	}
 
-	// Token: 0x06018A91 RID: 101009 RVA: 0x0065322C File Offset: 0x0065142C
+	// Token: 0x0601633E RID: 90942 RVA: 0x0067930C File Offset: 0x0067750C
 	public static void UpdateEffectQualityLevel(BulletInfo bulletInfo)
 	{
 		BulletEffectInfo effectInfo = bulletInfo.EffectInfo;
@@ -396,38 +396,38 @@ public class BulletStaticFunction
 		}
 	}
 
-	// Token: 0x0400B7B6 RID: 47030
+	// Token: 0x0400BB3C RID: 47932
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor collisionColor = new FLinearColor(255f, 80f, 77f, 1f);
 
-	// Token: 0x0400B7B7 RID: 47031
+	// Token: 0x0400BB3D RID: 47933
 	private const int DRAW_SECTOR_ANGLE_PERIOD = 30;
 
-	// Token: 0x0400B7B8 RID: 47032
+	// Token: 0x0400BB3E RID: 47934
 	[StaticVariableRuleIgnore]
 	private static readonly Vector UpOffset = Vector.Create();
 
-	// Token: 0x0400B7B9 RID: 47033
+	// Token: 0x0400BB3F RID: 47935
 	[StaticVariableRuleIgnore]
 	private static readonly Vector DownOffset = Vector.Create();
 
-	// Token: 0x0400B7BA RID: 47034
+	// Token: 0x0400BB40 RID: 47936
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector1 = Vector.Create();
 
-	// Token: 0x0400B7BB RID: 47035
+	// Token: 0x0400BB41 RID: 47937
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector2 = Vector.Create();
 
-	// Token: 0x0400B7BC RID: 47036
+	// Token: 0x0400BB42 RID: 47938
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector3 = Vector.Create();
 
-	// Token: 0x0400B7BD RID: 47037
+	// Token: 0x0400BB43 RID: 47939
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector4 = Vector.Create();
 
-	// Token: 0x0400B7BE RID: 47038
+	// Token: 0x0400BB44 RID: 47940
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector5 = Vector.Create();
 }

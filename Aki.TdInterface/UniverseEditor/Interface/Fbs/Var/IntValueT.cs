@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003AA6 RID: 15014
+	// Token: 0x02003EA8 RID: 16040
 	public class IntValueT
 	{
-		// Token: 0x170066F3 RID: 26355
-		// (get) Token: 0x0601465A RID: 83546 RVA: 0x002F96EE File Offset: 0x002F78EE
-		// (set) Token: 0x0601465B RID: 83547 RVA: 0x002F96F6 File Offset: 0x002F78F6
+		// Token: 0x17006C8E RID: 27790
+		// (get) Token: 0x06015B00 RID: 88832 RVA: 0x0031F8FA File Offset: 0x0031DAFA
+		// (set) Token: 0x06015B01 RID: 88833 RVA: 0x0031F902 File Offset: 0x0031DB02
 		public int Value { get; set; }
 
-		// Token: 0x0601465C RID: 83548 RVA: 0x002F96FF File Offset: 0x002F78FF
+		// Token: 0x06015B02 RID: 88834 RVA: 0x0031F90B File Offset: 0x0031DB0B
 		public IntValueT()
 		{
 			this.Value = 0;

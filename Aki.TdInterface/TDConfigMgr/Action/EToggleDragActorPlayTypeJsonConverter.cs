@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200247A RID: 9338
+	// Token: 0x0200271B RID: 10011
 	public class EToggleDragActorPlayTypeJsonConverter : JsonConverter<EToggleDragActorPlayType>
 	{
-		// Token: 0x0600CAA5 RID: 51877 RVA: 0x001DD45C File Offset: 0x001DB65C
+		// Token: 0x0600D755 RID: 55125 RVA: 0x001F7510 File Offset: 0x001F5710
 		public override EToggleDragActorPlayType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EToggleDragActorPlayTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600CAA6 RID: 51878 RVA: 0x001DD480 File Offset: 0x001DB680
+		// Token: 0x0600D756 RID: 55126 RVA: 0x001F7534 File Offset: 0x001F5734
 		public override void Write(Utf8JsonWriter writer, EToggleDragActorPlayType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

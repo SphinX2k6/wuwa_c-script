@@ -7,12 +7,12 @@ using CSharpScript.Game.Module;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 
-// Token: 0x020031AF RID: 12719
+// Token: 0x0200271E RID: 10014
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterWeapon
 {
-	// Token: 0x0601B6BF RID: 112319 RVA: 0x007804D6 File Offset: 0x0077E6D6
+	// Token: 0x060191F2 RID: 102898 RVA: 0x007A8856 File Offset: 0x007A6A56
 	public CharacterWeapon(int index, UMeshComponent mesh, [Nullable(2)] UEffectModelBase hideEffectMode, int? entityId = null)
 	{
 		this.Index = index;
@@ -22,7 +22,7 @@ public class CharacterWeapon
 		this.VisibleHelper = new WeaponMeshVisibleHelper(this);
 	}
 
-	// Token: 0x0601B6C0 RID: 112320 RVA: 0x00780512 File Offset: 0x0077E712
+	// Token: 0x060191F3 RID: 102899 RVA: 0x007A8892 File Offset: 0x007A6A92
 	public void Destroy()
 	{
 		this.ReleaseHideEffect();
@@ -32,7 +32,7 @@ public class CharacterWeapon
 		}
 	}
 
-	// Token: 0x0601B6C1 RID: 112321 RVA: 0x00780534 File Offset: 0x0077E734
+	// Token: 0x060191F4 RID: 102900 RVA: 0x007A88B4 File Offset: 0x007A6AB4
 	public void ReleaseHideEffect()
 	{
 		if (EffectSystem.Instance.IsValid(this.WeaponHideEffect))
@@ -42,7 +42,7 @@ public class CharacterWeapon
 		}
 	}
 
-	// Token: 0x0601B6C2 RID: 112322 RVA: 0x0078057C File Offset: 0x0077E77C
+	// Token: 0x060191F5 RID: 102901 RVA: 0x007A88FC File Offset: 0x007A6AFC
 	[NullableContext(2)]
 	public void ShowHideEffect(string effectPath = null)
 	{
@@ -72,7 +72,7 @@ public class CharacterWeapon
 		effectActor.D_K2_SetActorTransform(value, false, ref fhitResult, true);
 	}
 
-	// Token: 0x0601B6C3 RID: 112323 RVA: 0x00780668 File Offset: 0x0077E868
+	// Token: 0x060191F6 RID: 102902 RVA: 0x007A89E8 File Offset: 0x007A6BE8
 	public void SetBuffEffectsHiddenInGame(bool isHidden)
 	{
 		List<int> list = null;
@@ -104,7 +104,7 @@ public class CharacterWeapon
 		}
 	}
 
-	// Token: 0x0601B6C4 RID: 112324 RVA: 0x0078074C File Offset: 0x0077E94C
+	// Token: 0x060191F7 RID: 102903 RVA: 0x007A8ACC File Offset: 0x007A6CCC
 	public void AddBuffEffect(int effectId)
 	{
 		this.WeaponBuffEffects.Add(effectId);
@@ -114,19 +114,19 @@ public class CharacterWeapon
 		}
 	}
 
-	// Token: 0x0601B6C5 RID: 112325 RVA: 0x00780783 File Offset: 0x0077E983
+	// Token: 0x060191F8 RID: 102904 RVA: 0x007A8B03 File Offset: 0x007A6D03
 	public void RemoveBuffEffect(int effectId)
 	{
 		this.WeaponBuffEffects.Remove(effectId);
 	}
 
-	// Token: 0x0601B6C6 RID: 112326 RVA: 0x00780792 File Offset: 0x0077E992
+	// Token: 0x060191F9 RID: 102905 RVA: 0x007A8B12 File Offset: 0x007A6D12
 	public void InitWeaponSceneInteract(int weaponType)
 	{
 		this.SceneInteractWeaponType = weaponType;
 	}
 
-	// Token: 0x0601B6C7 RID: 112327 RVA: 0x0078079C File Offset: 0x0077E99C
+	// Token: 0x060191FA RID: 102906 RVA: 0x007A8B1C File Offset: 0x007A6D1C
 	public void UpdateSceneInteractEnable(bool isWeaponOut)
 	{
 		if (!SceneBattleInteractModel.Instance.Open)
@@ -160,13 +160,13 @@ public class CharacterWeapon
 		}
 	}
 
-	// Token: 0x0601B6C8 RID: 112328 RVA: 0x00780866 File Offset: 0x0077EA66
+	// Token: 0x060191FB RID: 102907 RVA: 0x007A8BE6 File Offset: 0x007A6DE6
 	public void UpdateSelfCenteredState()
 	{
 		this.UpdateHideEffectStateInSelfCentered();
 	}
 
-	// Token: 0x0601B6C9 RID: 112329 RVA: 0x00780870 File Offset: 0x0077EA70
+	// Token: 0x060191FC RID: 102908 RVA: 0x007A8BF0 File Offset: 0x007A6DF0
 	public void UpdateHideEffectStateInSelfCentered()
 	{
 		if (this.EntityId == null || !EffectSystem.Instance.IsValid(this.WeaponHideEffect))
@@ -186,49 +186,49 @@ public class CharacterWeapon
 		EffectSystem.Instance.SetAdditionTimeScale(topForeverTimeScaleConfig.SourceType, this.WeaponHideEffect, topForeverTimeScaleConfig.TimeDilation);
 	}
 
-	// Token: 0x0400D6DB RID: 55003
+	// Token: 0x0400DB62 RID: 56162
 	public FName? NormalSocket;
 
-	// Token: 0x0400D6DC RID: 55004
+	// Token: 0x0400DB63 RID: 56163
 	public FName? BattleSocket;
 
-	// Token: 0x0400D6DD RID: 55005
+	// Token: 0x0400DB64 RID: 56164
 	public int? BattleEffectId;
 
-	// Token: 0x0400D6DE RID: 55006
+	// Token: 0x0400DB65 RID: 56165
 	public FTransformDouble LerpStartTransform;
 
-	// Token: 0x0400D6DF RID: 55007
+	// Token: 0x0400DB66 RID: 56166
 	public FTransformDouble LerpEndTransform;
 
-	// Token: 0x0400D6E0 RID: 55008
+	// Token: 0x0400DB67 RID: 56167
 	public bool WeaponHidden;
 
-	// Token: 0x0400D6E1 RID: 55009
+	// Token: 0x0400DB68 RID: 56168
 	public int WeaponHideEffect;
 
-	// Token: 0x0400D6E2 RID: 55010
+	// Token: 0x0400DB69 RID: 56169
 	public HashSet<int> WeaponBuffEffects = new HashSet<int>();
 
-	// Token: 0x0400D6E3 RID: 55011
+	// Token: 0x0400DB6A RID: 56170
 	public int SceneInteractId;
 
-	// Token: 0x0400D6E4 RID: 55012
+	// Token: 0x0400DB6B RID: 56171
 	public int SceneInteractWeaponType;
 
-	// Token: 0x0400D6E5 RID: 55013
+	// Token: 0x0400DB6C RID: 56172
 	public WeaponMeshVisibleHelper VisibleHelper;
 
-	// Token: 0x0400D6E6 RID: 55014
+	// Token: 0x0400DB6D RID: 56173
 	public int Index;
 
-	// Token: 0x0400D6E7 RID: 55015
+	// Token: 0x0400DB6E RID: 56174
 	public UMeshComponent Mesh;
 
-	// Token: 0x0400D6E8 RID: 55016
+	// Token: 0x0400DB6F RID: 56175
 	[Nullable(2)]
 	public UEffectModelBase HideEffectMode;
 
-	// Token: 0x0400D6E9 RID: 55017
+	// Token: 0x0400DB70 RID: 56176
 	public int? EntityId;
 }

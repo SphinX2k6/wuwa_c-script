@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DC5 RID: 24005
+	// Token: 0x02006402 RID: 25602
 	public class IGiantResponsePlayFlowT
 	{
-		// Token: 0x1700B3BA RID: 46010
-		// (get) Token: 0x0602916A RID: 168298 RVA: 0x005A3E77 File Offset: 0x005A2077
-		// (set) Token: 0x0602916B RID: 168299 RVA: 0x005A3E7F File Offset: 0x005A207F
+		// Token: 0x1700BD20 RID: 48416
+		// (get) Token: 0x0602B7F4 RID: 178164 RVA: 0x005ECBA7 File Offset: 0x005EADA7
+		// (set) Token: 0x0602B7F5 RID: 178165 RVA: 0x005ECBAF File Offset: 0x005EADAF
 		public EGiantResponseType Type { get; set; }
 
-		// Token: 0x1700B3BB RID: 46011
-		// (get) Token: 0x0602916C RID: 168300 RVA: 0x005A3E88 File Offset: 0x005A2088
-		// (set) Token: 0x0602916D RID: 168301 RVA: 0x005A3E90 File Offset: 0x005A2090
+		// Token: 0x1700BD21 RID: 48417
+		// (get) Token: 0x0602B7F6 RID: 178166 RVA: 0x005ECBB8 File Offset: 0x005EADB8
+		// (set) Token: 0x0602B7F7 RID: 178167 RVA: 0x005ECBC0 File Offset: 0x005EADC0
 		public IGiantFlowConfigT FlowConfig { get; set; }
 
-		// Token: 0x0602916E RID: 168302 RVA: 0x005A3E99 File Offset: 0x005A2099
+		// Token: 0x0602B7F8 RID: 178168 RVA: 0x005ECBC9 File Offset: 0x005EADC9
 		public IGiantResponsePlayFlowT()
 		{
 			this.Type = EGiantResponseType.PlayAnimation;

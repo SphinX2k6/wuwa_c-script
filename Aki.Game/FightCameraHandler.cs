@@ -6,10 +6,10 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.Input;
 using UnrealEngine;
 
-// Token: 0x02002554 RID: 9556
+// Token: 0x02001A3F RID: 6719
 public class FightCameraHandler : PhotoCameraHandler
 {
-	// Token: 0x0601341C RID: 78876 RVA: 0x004CA068 File Offset: 0x004C8268
+	// Token: 0x060108FC RID: 67836 RVA: 0x004D8BE8 File Offset: 0x004D6DE8
 	[NullableContext(1)]
 	public void Init(ACameraActor cameraActor)
 	{
@@ -21,27 +21,27 @@ public class FightCameraHandler : PhotoCameraHandler
 		this.MaxFov = ConfigCommonParamById.GetIntConfig("CaptureCollectCameraMaxFov").Value;
 	}
 
-	// Token: 0x0601341D RID: 78877 RVA: 0x004CA0E8 File Offset: 0x004C82E8
+	// Token: 0x060108FD RID: 67837 RVA: 0x004D8C68 File Offset: 0x004D6E68
 	public override void Clear()
 	{
 		CameraController.Instance.MainModel.FightCamera.LogicComponent.DesiredCamera.Fov = this.CameraInitializeFovInner;
 		this.ClearInput();
 	}
 
-	// Token: 0x0601341E RID: 78878 RVA: 0x004CA114 File Offset: 0x004C8314
+	// Token: 0x060108FE RID: 67838 RVA: 0x004D8C94 File Offset: 0x004D6E94
 	public override float GetCameraInitializeFov()
 	{
 		return this.CameraInitializeFovInner;
 	}
 
-	// Token: 0x0601341F RID: 78879 RVA: 0x004CA11C File Offset: 0x004C831C
+	// Token: 0x060108FF RID: 67839 RVA: 0x004D8C9C File Offset: 0x004D6E9C
 	public override void SetFov(float fov)
 	{
 		float fov2 = MathUtils.Instance.Clamp(fov, (float)this.MinFov, (float)this.MaxFov);
 		CameraController.Instance.MainModel.FightCamera.LogicComponent.DesiredCamera.Fov = fov2;
 	}
 
-	// Token: 0x06013420 RID: 78880 RVA: 0x004CA164 File Offset: 0x004C8364
+	// Token: 0x06010900 RID: 67840 RVA: 0x004D8CE4 File Offset: 0x004D6EE4
 	public override void AddPitchInput(float pitch)
 	{
 		if (pitch == 0f)
@@ -60,7 +60,7 @@ public class FightCameraHandler : PhotoCameraHandler
 		this.PitchInput = pitch;
 	}
 
-	// Token: 0x06013421 RID: 78881 RVA: 0x004CA1BC File Offset: 0x004C83BC
+	// Token: 0x06010901 RID: 67841 RVA: 0x004D8D3C File Offset: 0x004D6F3C
 	public override void AddYawInput(float yaw)
 	{
 		if (yaw == 0f)
@@ -70,7 +70,7 @@ public class FightCameraHandler : PhotoCameraHandler
 		this.YawInput = yaw;
 	}
 
-	// Token: 0x06013422 RID: 78882 RVA: 0x004CA1D0 File Offset: 0x004C83D0
+	// Token: 0x06010902 RID: 67842 RVA: 0x004D8D50 File Offset: 0x004D6F50
 	public override void ApplyCameraDelta()
 	{
 		if (this.PitchInput == 0f && this.YawInput == 0f)
@@ -92,7 +92,7 @@ public class FightCameraHandler : PhotoCameraHandler
 		this.YawInput = 0f;
 	}
 
-	// Token: 0x06013423 RID: 78883 RVA: 0x004CA254 File Offset: 0x004C8454
+	// Token: 0x06010903 RID: 67843 RVA: 0x004D8DD4 File Offset: 0x004D6FD4
 	public override void ClearInput()
 	{
 		this.PitchInput = 0f;
@@ -116,24 +116,24 @@ public class FightCameraHandler : PhotoCameraHandler
 		}
 	}
 
-	// Token: 0x04009153 RID: 37203
+	// Token: 0x040092AC RID: 37548
 	private float CameraInitializeFovInner;
 
-	// Token: 0x04009154 RID: 37204
+	// Token: 0x040092AD RID: 37549
 	private int MinFov = 60;
 
-	// Token: 0x04009155 RID: 37205
+	// Token: 0x040092AE RID: 37550
 	private int MaxFov = 90;
 
-	// Token: 0x04009156 RID: 37206
+	// Token: 0x040092AF RID: 37551
 	private float PitchInput;
 
-	// Token: 0x04009157 RID: 37207
+	// Token: 0x040092B0 RID: 37552
 	private float YawInput;
 
-	// Token: 0x04009158 RID: 37208
+	// Token: 0x040092B1 RID: 37553
 	private int SourceMaxPitch;
 
-	// Token: 0x04009159 RID: 37209
+	// Token: 0x040092B2 RID: 37554
 	private int SourceMinPitch;
 }

@@ -5,17 +5,17 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002F44 RID: 12100
+// Token: 0x02002497 RID: 9367
 [NullableContext(1)]
 [Nullable(0)]
 public class TimeScaleEffect : BuffEffect
 {
-	// Token: 0x06019C28 RID: 105512 RVA: 0x006B6ADC File Offset: 0x006B4CDC
+	// Token: 0x06017533 RID: 95539 RVA: 0x006DCE00 File Offset: 0x006DB000
 	public TimeScaleEffect(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C29 RID: 105513 RVA: 0x006B6B04 File Offset: 0x006B4D04
+	// Token: 0x06017534 RID: 95540 RVA: 0x006DCE28 File Offset: 0x006DB028
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -35,20 +35,20 @@ public class TimeScaleEffect : BuffEffect
 		this.CurveId = ((Math.Abs(num % 1f) < 1.1754944E-38f) ? ((int)num) : -1);
 	}
 
-	// Token: 0x06019C2A RID: 105514 RVA: 0x006B6B76 File Offset: 0x006B4D76
+	// Token: 0x06017535 RID: 95541 RVA: 0x006DCE9A File Offset: 0x006DB09A
 	public override void OnCreated()
 	{
 		this.AddTimeScaleByBuff();
 	}
 
-	// Token: 0x06019C2B RID: 105515 RVA: 0x006B6B7E File Offset: 0x006B4D7E
+	// Token: 0x06017536 RID: 95542 RVA: 0x006DCEA2 File Offset: 0x006DB0A2
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C2C RID: 105516 RVA: 0x006B6B81 File Offset: 0x006B4D81
+	// Token: 0x06017537 RID: 95543 RVA: 0x006DCEA5 File Offset: 0x006DB0A5
 	public override void OnRemoved(bool bPremature)
 	{
 		this.Active = false;
@@ -56,19 +56,19 @@ public class TimeScaleEffect : BuffEffect
 		this.CurveDt = null;
 	}
 
-	// Token: 0x06019C2D RID: 105517 RVA: 0x006B6B97 File Offset: 0x006B4D97
+	// Token: 0x06017538 RID: 95544 RVA: 0x006DCEBB File Offset: 0x006DB0BB
 	public void StartTimeScaleEffect()
 	{
 		this.AddTimeScaleByBuff();
 	}
 
-	// Token: 0x06019C2E RID: 105518 RVA: 0x006B6B9F File Offset: 0x006B4D9F
+	// Token: 0x06017539 RID: 95545 RVA: 0x006DCEC3 File Offset: 0x006DB0C3
 	public void StopTimeScaleEffect()
 	{
 		this.RemoveTimeScaleByBuff();
 	}
 
-	// Token: 0x06019C2F RID: 105519 RVA: 0x006B6BA7 File Offset: 0x006B4DA7
+	// Token: 0x0601753A RID: 95546 RVA: 0x006DCECB File Offset: 0x006DB0CB
 	private void AddTimeScaleByBuff()
 	{
 		if (this.CurveId != -1 && this.CurveDt == null)
@@ -87,7 +87,7 @@ public class TimeScaleEffect : BuffEffect
 		this.AddTimeScaleByBuffInner();
 	}
 
-	// Token: 0x06019C30 RID: 105520 RVA: 0x006B6BE4 File Offset: 0x006B4DE4
+	// Token: 0x0601753B RID: 95547 RVA: 0x006DCF08 File Offset: 0x006DB108
 	private void AddTimeScaleByBuffInner()
 	{
 		STimeScale stimeScale = (this.CurveDt != null) ? DataTableUtil.GetDataTableRow<STimeScale>(this.CurveDt, this.CurveId.ToString()) : null;
@@ -108,7 +108,7 @@ public class TimeScaleEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C31 RID: 105521 RVA: 0x006B6D14 File Offset: 0x006B4F14
+	// Token: 0x0601753C RID: 95548 RVA: 0x006DD038 File Offset: 0x006DB238
 	private void RemoveTimeScaleByBuff()
 	{
 		Entity exactOwnerEntity = base.ExactOwnerEntity;
@@ -123,7 +123,7 @@ public class TimeScaleEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C32 RID: 105522 RVA: 0x006B6DC0 File Offset: 0x006B4FC0
+	// Token: 0x0601753D RID: 95549 RVA: 0x006DD0E4 File Offset: 0x006DB2E4
 	private void OnChangeTeam()
 	{
 		List<int> newOrRemoveTeamEntityIds = BaseBuffComponent.GetNewOrRemoveTeamEntityIds(this.TeamEntityIds, true);
@@ -193,7 +193,7 @@ public class TimeScaleEffect : BuffEffect
 		this.TeamEntityIds = BaseBuffComponent.GetCurrentEntityIds();
 	}
 
-	// Token: 0x06019C33 RID: 105523 RVA: 0x006B6F60 File Offset: 0x006B5160
+	// Token: 0x0601753E RID: 95550 RVA: 0x006DD284 File Offset: 0x006DB484
 	public override string GetDebugEffectString()
 	{
 		Entity exactOwnerEntity = base.ExactOwnerEntity;
@@ -218,22 +218,22 @@ public class TimeScaleEffect : BuffEffect
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C230 RID: 49712
+	// Token: 0x0400C5D2 RID: 50642
 	protected int Priority;
 
-	// Token: 0x0400C231 RID: 49713
+	// Token: 0x0400C5D3 RID: 50643
 	protected float Dilation;
 
-	// Token: 0x0400C232 RID: 49714
+	// Token: 0x0400C5D4 RID: 50644
 	protected int CurveId = -1;
 
-	// Token: 0x0400C233 RID: 49715
+	// Token: 0x0400C5D5 RID: 50645
 	[Nullable(2)]
 	protected UDataTable CurveDt;
 
-	// Token: 0x0400C234 RID: 49716
+	// Token: 0x0400C5D6 RID: 50646
 	protected bool Active = true;
 
-	// Token: 0x0400C235 RID: 49717
+	// Token: 0x0400C5D7 RID: 50647
 	private List<int> TeamEntityIds = new List<int>();
 }

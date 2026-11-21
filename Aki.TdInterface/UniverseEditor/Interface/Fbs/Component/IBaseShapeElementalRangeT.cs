@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Shape;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EF0 RID: 20208
+	// Token: 0x02005422 RID: 21538
 	public class IBaseShapeElementalRangeT
 	{
-		// Token: 0x17009152 RID: 37202
-		// (get) Token: 0x0601FE7A RID: 130682 RVA: 0x00470C33 File Offset: 0x0046EE33
-		// (set) Token: 0x0601FE7B RID: 130683 RVA: 0x00470C3B File Offset: 0x0046EE3B
+		// Token: 0x170098D4 RID: 39124
+		// (get) Token: 0x06021BEA RID: 138218 RVA: 0x004A6FC7 File Offset: 0x004A51C7
+		// (set) Token: 0x06021BEB RID: 138219 RVA: 0x004A6FCF File Offset: 0x004A51CF
 		public EElementalRangeType Type { get; set; }
 
-		// Token: 0x17009153 RID: 37203
-		// (get) Token: 0x0601FE7C RID: 130684 RVA: 0x00470C44 File Offset: 0x0046EE44
-		// (set) Token: 0x0601FE7D RID: 130685 RVA: 0x00470C4C File Offset: 0x0046EE4C
+		// Token: 0x170098D5 RID: 39125
+		// (get) Token: 0x06021BEC RID: 138220 RVA: 0x004A6FD8 File Offset: 0x004A51D8
+		// (set) Token: 0x06021BED RID: 138221 RVA: 0x004A6FE0 File Offset: 0x004A51E0
 		public TTriggerShapeUnion Shape { get; set; }
 
-		// Token: 0x0601FE7E RID: 130686 RVA: 0x00470C55 File Offset: 0x0046EE55
+		// Token: 0x06021BEE RID: 138222 RVA: 0x004A6FE9 File Offset: 0x004A51E9
 		public IBaseShapeElementalRangeT()
 		{
 			this.Type = EElementalRangeType.BaseShape;

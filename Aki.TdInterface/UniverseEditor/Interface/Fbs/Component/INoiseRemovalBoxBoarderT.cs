@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005603 RID: 22019
+	// Token: 0x02005BA1 RID: 23457
 	public class INoiseRemovalBoxBoarderT
 	{
-		// Token: 0x1700A2EB RID: 41707
-		// (get) Token: 0x06024891 RID: 149649 RVA: 0x0050ABB0 File Offset: 0x00508DB0
-		// (set) Token: 0x06024892 RID: 149650 RVA: 0x0050ABB8 File Offset: 0x00508DB8
+		// Token: 0x1700AB73 RID: 43891
+		// (get) Token: 0x06026AA1 RID: 158369 RVA: 0x0054B1C8 File Offset: 0x005493C8
+		// (set) Token: 0x06026AA2 RID: 158370 RVA: 0x0054B1D0 File Offset: 0x005493D0
 		public ENoiseRemovalBoarderShape Type { get; set; }
 
-		// Token: 0x1700A2EC RID: 41708
-		// (get) Token: 0x06024893 RID: 149651 RVA: 0x0050ABC1 File Offset: 0x00508DC1
-		// (set) Token: 0x06024894 RID: 149652 RVA: 0x0050ABC9 File Offset: 0x00508DC9
+		// Token: 0x1700AB74 RID: 43892
+		// (get) Token: 0x06026AA3 RID: 158371 RVA: 0x0054B1D9 File Offset: 0x005493D9
+		// (set) Token: 0x06026AA4 RID: 158372 RVA: 0x0054B1E1 File Offset: 0x005493E1
 		public IVectorInfoT BoxExtendPositive { get; set; }
 
-		// Token: 0x1700A2ED RID: 41709
-		// (get) Token: 0x06024895 RID: 149653 RVA: 0x0050ABD2 File Offset: 0x00508DD2
-		// (set) Token: 0x06024896 RID: 149654 RVA: 0x0050ABDA File Offset: 0x00508DDA
+		// Token: 0x1700AB75 RID: 43893
+		// (get) Token: 0x06026AA5 RID: 158373 RVA: 0x0054B1EA File Offset: 0x005493EA
+		// (set) Token: 0x06026AA6 RID: 158374 RVA: 0x0054B1F2 File Offset: 0x005493F2
 		public IVectorInfoT BoxExtendNegative { get; set; }
 
-		// Token: 0x06024897 RID: 149655 RVA: 0x0050ABE3 File Offset: 0x00508DE3
+		// Token: 0x06026AA7 RID: 158375 RVA: 0x0054B1FB File Offset: 0x005493FB
 		public INoiseRemovalBoxBoarderT()
 		{
 			this.Type = ENoiseRemovalBoarderShape.Box;

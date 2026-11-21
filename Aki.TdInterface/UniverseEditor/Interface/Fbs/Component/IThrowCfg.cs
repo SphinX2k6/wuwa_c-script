@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A5E RID: 23134
+	// Token: 0x0200606B RID: 24683
 	public struct IThrowCfg : IFlatbufferObject
 	{
-		// Token: 0x1700AE14 RID: 44564
-		// (get) Token: 0x060275BA RID: 161210 RVA: 0x0056A81D File Offset: 0x00568A1D
+		// Token: 0x1700B74C RID: 46924
+		// (get) Token: 0x06029B32 RID: 170802 RVA: 0x005B1829 File Offset: 0x005AFA29
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060275BB RID: 161211 RVA: 0x0056A82A File Offset: 0x00568A2A
+		// Token: 0x06029B33 RID: 170803 RVA: 0x005B1836 File Offset: 0x005AFA36
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060275BC RID: 161212 RVA: 0x0056A834 File Offset: 0x00568A34
+		// Token: 0x06029B34 RID: 170804 RVA: 0x005B1840 File Offset: 0x005AFA40
 		public static IThrowCfg GetRootAsIThrowCfg(ByteBuffer _bb)
 		{
 			return IThrowCfg.GetRootAsIThrowCfg(_bb, default(IThrowCfg));
 		}
 
-		// Token: 0x060275BD RID: 161213 RVA: 0x0056A850 File Offset: 0x00568A50
+		// Token: 0x06029B35 RID: 170805 RVA: 0x005B185C File Offset: 0x005AFA5C
 		public static IThrowCfg GetRootAsIThrowCfg(ByteBuffer _bb, IThrowCfg obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060275BE RID: 161214 RVA: 0x0056A86D File Offset: 0x00568A6D
+		// Token: 0x06029B36 RID: 170806 RVA: 0x005B1879 File Offset: 0x005AFA79
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060275BF RID: 161215 RVA: 0x0056A87C File Offset: 0x00568A7C
+		// Token: 0x06029B37 RID: 170807 RVA: 0x005B1888 File Offset: 0x005AFA88
 		public IThrowCfg __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AE15 RID: 44565
-		// (get) Token: 0x060275C0 RID: 161216 RVA: 0x0056A88C File Offset: 0x00568A8C
+		// Token: 0x1700B74D RID: 46925
+		// (get) Token: 0x06029B38 RID: 170808 RVA: 0x005B1898 File Offset: 0x005AFA98
 		public TThrowMotion MotionConfigType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060275C1 RID: 161217 RVA: 0x0056A8C8 File Offset: 0x00568AC8
+		// Token: 0x06029B39 RID: 170809 RVA: 0x005B18D4 File Offset: 0x005AFAD4
 		public TTable? MotionConfig<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,37 +73,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060275C2 RID: 161218 RVA: 0x0056A90C File Offset: 0x00568B0C
+		// Token: 0x06029B3A RID: 170810 RVA: 0x005B1918 File Offset: 0x005AFB18
 		public ICircumnutation MotionConfigAsICircumnutation()
 		{
 			return this.MotionConfig<ICircumnutation>().Value;
 		}
 
-		// Token: 0x060275C3 RID: 161219 RVA: 0x0056A928 File Offset: 0x00568B28
+		// Token: 0x06029B3B RID: 170811 RVA: 0x005B1934 File Offset: 0x005AFB34
 		public IProjectileMotion MotionConfigAsIProjectileMotion()
 		{
 			return this.MotionConfig<IProjectileMotion>().Value;
 		}
 
-		// Token: 0x060275C4 RID: 161220 RVA: 0x0056A944 File Offset: 0x00568B44
+		// Token: 0x06029B3C RID: 170812 RVA: 0x005B1950 File Offset: 0x005AFB50
 		public IThrowMotionFreeFall MotionConfigAsIThrowMotionFreeFall()
 		{
 			return this.MotionConfig<IThrowMotionFreeFall>().Value;
 		}
 
-		// Token: 0x060275C5 RID: 161221 RVA: 0x0056A960 File Offset: 0x00568B60
+		// Token: 0x06029B3D RID: 170813 RVA: 0x005B196C File Offset: 0x005AFB6C
 		public IThrowMotionLevitate MotionConfigAsIThrowMotionLevitate()
 		{
 			return this.MotionConfig<IThrowMotionLevitate>().Value;
 		}
 
-		// Token: 0x060275C6 RID: 161222 RVA: 0x0056A97C File Offset: 0x00568B7C
+		// Token: 0x06029B3E RID: 170814 RVA: 0x005B1988 File Offset: 0x005AFB88
 		public IThrowMotionTrackTarget MotionConfigAsIThrowMotionTrackTarget()
 		{
 			return this.MotionConfig<IThrowMotionTrackTarget>().Value;
 		}
 
-		// Token: 0x060275C7 RID: 161223 RVA: 0x0056A997 File Offset: 0x00568B97
+		// Token: 0x06029B3F RID: 170815 RVA: 0x005B19A3 File Offset: 0x005AFBA3
 		public static Offset<IThrowCfg> CreateIThrowCfg(FlatBufferBuilder builder, TThrowMotion MotionConfig_type = TThrowMotion.NONE, int MotionConfigOffset = 0)
 		{
 			builder.StartTable(2);
@@ -112,31 +112,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IThrowCfg.EndIThrowCfg(builder);
 		}
 
-		// Token: 0x060275C8 RID: 161224 RVA: 0x0056A9B4 File Offset: 0x00568BB4
+		// Token: 0x06029B40 RID: 170816 RVA: 0x005B19C0 File Offset: 0x005AFBC0
 		public static void StartIThrowCfg(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060275C9 RID: 161225 RVA: 0x0056A9BD File Offset: 0x00568BBD
+		// Token: 0x06029B41 RID: 170817 RVA: 0x005B19C9 File Offset: 0x005AFBC9
 		public static void AddMotionConfigType(FlatBufferBuilder builder, TThrowMotion motionConfigType)
 		{
 			builder.AddByte(0, (byte)motionConfigType, 0);
 		}
 
-		// Token: 0x060275CA RID: 161226 RVA: 0x0056A9C8 File Offset: 0x00568BC8
+		// Token: 0x06029B42 RID: 170818 RVA: 0x005B19D4 File Offset: 0x005AFBD4
 		public static void AddMotionConfig(FlatBufferBuilder builder, int motionConfigOffset)
 		{
 			builder.AddOffset(1, motionConfigOffset, 0);
 		}
 
-		// Token: 0x060275CB RID: 161227 RVA: 0x0056A9D3 File Offset: 0x00568BD3
+		// Token: 0x06029B43 RID: 170819 RVA: 0x005B19DF File Offset: 0x005AFBDF
 		public static Offset<IThrowCfg> EndIThrowCfg(FlatBufferBuilder builder)
 		{
 			return new Offset<IThrowCfg>(builder.EndTable());
 		}
 
-		// Token: 0x060275CC RID: 161228 RVA: 0x0056A9E0 File Offset: 0x00568BE0
+		// Token: 0x06029B44 RID: 170820 RVA: 0x005B19EC File Offset: 0x005AFBEC
 		public IThrowCfgT UnPack()
 		{
 			IThrowCfgT throwCfgT = new IThrowCfgT();
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return throwCfgT;
 		}
 
-		// Token: 0x060275CD RID: 161229 RVA: 0x0056A9FC File Offset: 0x00568BFC
+		// Token: 0x06029B45 RID: 170821 RVA: 0x005B1A08 File Offset: 0x005AFC08
 		public void UnPackTo(IThrowCfgT _o)
 		{
 			_o.MotionConfig = new TThrowMotionUnion();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060275CE RID: 161230 RVA: 0x0056AB5C File Offset: 0x00568D5C
+		// Token: 0x06029B46 RID: 170822 RVA: 0x005B1B68 File Offset: 0x005AFD68
 		public static Offset<IThrowCfg> Pack(FlatBufferBuilder builder, IThrowCfgT _o)
 		{
 			if (_o == null)
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IThrowCfg.CreateIThrowCfg(builder, motionConfig_type, motionConfigOffset);
 		}
 
-		// Token: 0x0400F0ED RID: 61677
+		// Token: 0x0400FDE4 RID: 64996
 		private Table __p;
 	}
 }

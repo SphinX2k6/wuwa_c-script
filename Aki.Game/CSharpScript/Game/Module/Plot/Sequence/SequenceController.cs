@@ -15,14 +15,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence
 {
-	// Token: 0x02005011 RID: 20497
+	// Token: 0x02003FDB RID: 16347
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class SequenceController : ControllerWithAssistantBase
 	{
-		// Token: 0x17007FF2 RID: 32754
-		// (get) Token: 0x06034736 RID: 214838 RVA: 0x00C5A9B6 File Offset: 0x00C58BB6
+		// Token: 0x170053A7 RID: 21415
+		// (get) Token: 0x060295D9 RID: 169433 RVA: 0x00BA5EB6 File Offset: 0x00BA40B6
 		protected override bool IsTickEvenPausedInternal
 		{
 			get
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x06034737 RID: 214839 RVA: 0x00C5A9B9 File Offset: 0x00C58BB9
+		// Token: 0x060295DA RID: 169434 RVA: 0x00BA5EB9 File Offset: 0x00BA40B9
 		protected override bool OnInit()
 		{
 			bool result = base.OnInit();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return result;
 		}
 
-		// Token: 0x06034738 RID: 214840 RVA: 0x00C5A9D4 File Offset: 0x00C58BD4
+		// Token: 0x060295DB RID: 169435 RVA: 0x00BA5ED4 File Offset: 0x00BA40D4
 		protected override bool OnClear()
 		{
 			if (this.Model != null)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return base.OnClear();
 		}
 
-		// Token: 0x06034739 RID: 214841 RVA: 0x00C5AA20 File Offset: 0x00C58C20
+		// Token: 0x060295DC RID: 169436 RVA: 0x00BA5F20 File Offset: 0x00BA4120
 		protected override void OnTick(float delta)
 		{
 			if (this.Model.PlayOptions != null)
@@ -73,6 +73,15 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 				this.Model.BeginSwitchFrame -= 1f;
 				if (this.Model.BeginSwitchFrame == 0f)
 				{
+					ActorAssistant actorAssistant = this.ActorAssistant;
+					if (actorAssistant != null && actorAssistant.ShouldDelayEndSwitchPose())
+					{
+						this.Model.BeginSwitchFrame = 1f;
+						goto IL_12C;
+					}
+				}
+				if (this.Model.BeginSwitchFrame == 0f)
+				{
 					if (this.ActorAssistant != null)
 					{
 						this.ActorAssistant.EndSwitchPose();
@@ -86,14 +95,16 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 					}
 				}
 			}
+			IL_12C:
 			this.FlushDialogueState();
+			this.RenderAssistant.TickPreStream();
 			if (this.CheckRenderDataPromise != null)
 			{
 				this.CheckSeqStreamingData();
 			}
 		}
 
-		// Token: 0x0603473A RID: 214842 RVA: 0x00C5AB38 File Offset: 0x00C58D38
+		// Token: 0x060295DD RID: 169437 RVA: 0x00BA6078 File Offset: 0x00BA4278
 		protected override void RegisterAssistant()
 		{
 			base.AddAssistant(0, new SequenceAssistant());
@@ -105,8 +116,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			base.AddAssistant(6, new UiAssistant());
 		}
 
-		// Token: 0x17007FF3 RID: 32755
-		// (get) Token: 0x0603473B RID: 214843 RVA: 0x00C5AB99 File Offset: 0x00C58D99
+		// Token: 0x170053A8 RID: 21416
+		// (get) Token: 0x060295DE RID: 169438 RVA: 0x00BA60D9 File Offset: 0x00BA42D9
 		private SequenceAssistant SequenceAssistant
 		{
 			get
@@ -115,8 +126,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x17007FF4 RID: 32756
-		// (get) Token: 0x0603473C RID: 214844 RVA: 0x00C5ABAC File Offset: 0x00C58DAC
+		// Token: 0x170053A9 RID: 21417
+		// (get) Token: 0x060295DF RID: 169439 RVA: 0x00BA60EC File Offset: 0x00BA42EC
 		private ActorAssistant ActorAssistant
 		{
 			get
@@ -125,8 +136,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x17007FF5 RID: 32757
-		// (get) Token: 0x0603473D RID: 214845 RVA: 0x00C5ABBF File Offset: 0x00C58DBF
+		// Token: 0x170053AA RID: 21418
+		// (get) Token: 0x060295E0 RID: 169440 RVA: 0x00BA60FF File Offset: 0x00BA42FF
 		private FunctionAssistant FunctionAssistant
 		{
 			get
@@ -135,8 +146,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x17007FF6 RID: 32758
-		// (get) Token: 0x0603473E RID: 214846 RVA: 0x00C5ABD2 File Offset: 0x00C58DD2
+		// Token: 0x170053AB RID: 21419
+		// (get) Token: 0x060295E1 RID: 169441 RVA: 0x00BA6112 File Offset: 0x00BA4312
 		private CameraAssistant CameraAssistant
 		{
 			get
@@ -145,8 +156,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x17007FF7 RID: 32759
-		// (get) Token: 0x0603473F RID: 214847 RVA: 0x00C5ABE5 File Offset: 0x00C58DE5
+		// Token: 0x170053AC RID: 21420
+		// (get) Token: 0x060295E2 RID: 169442 RVA: 0x00BA6125 File Offset: 0x00BA4325
 		private RenderAssistant RenderAssistant
 		{
 			get
@@ -155,8 +166,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x17007FF8 RID: 32760
-		// (get) Token: 0x06034740 RID: 214848 RVA: 0x00C5ABF8 File Offset: 0x00C58DF8
+		// Token: 0x170053AD RID: 21421
+		// (get) Token: 0x060295E3 RID: 169443 RVA: 0x00BA6138 File Offset: 0x00BA4338
 		private FlowAssistant FlowAssistant
 		{
 			get
@@ -165,8 +176,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x17007FF9 RID: 32761
-		// (get) Token: 0x06034741 RID: 214849 RVA: 0x00C5AC0B File Offset: 0x00C58E0B
+		// Token: 0x170053AE RID: 21422
+		// (get) Token: 0x060295E4 RID: 169444 RVA: 0x00BA614B File Offset: 0x00BA434B
 		private UiAssistant UiAssistant
 		{
 			get
@@ -175,7 +186,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x06034742 RID: 214850 RVA: 0x00C5AC20 File Offset: 0x00C58E20
+		// Token: 0x060295E5 RID: 169445 RVA: 0x00BA6160 File Offset: 0x00BA4360
 		public void Play(PlaySequenceData config, List<string> preLoadMouthKeys, [Nullable(2)] Action<bool> callback = null, bool seamless = false)
 		{
 			if (this.Model != null && this.Model.IsPlaying)
@@ -275,7 +286,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			});
 		}
 
-		// Token: 0x06034743 RID: 214851 RVA: 0x00C5AD4D File Offset: 0x00C58F4D
+		// Token: 0x060295E6 RID: 169446 RVA: 0x00BA628D File Offset: 0x00BA448D
 		public void LoadData(PlaySequenceData config, Action callback)
 		{
 			this.Model.State = ESequenceState.Loading;
@@ -283,7 +294,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			this.SequenceAssistant.LoadNecessaryData(callback);
 		}
 
-		// Token: 0x06034744 RID: 214852 RVA: 0x00C5AD74 File Offset: 0x00C58F74
+		// Token: 0x060295E7 RID: 169447 RVA: 0x00BA62B4 File Offset: 0x00BA44B4
 		public void ManualFinish()
 		{
 			if (this.Model.State == ESequenceState.Null || this.Model.State == ESequenceState.Stopping || this.Model.State == ESequenceState.Ending)
@@ -297,7 +308,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			this.Model.Reset();
 		}
 
-		// Token: 0x06034745 RID: 214853 RVA: 0x00C5ADF0 File Offset: 0x00C58FF0
+		// Token: 0x060295E8 RID: 169448 RVA: 0x00BA6330 File Offset: 0x00BA4530
 		private void Load(Action<bool> callback)
 		{
 			global::Log.Instance.Info(ELogModule.Plot, ELogAuthor.FZX, "[剧情加载等待] Sequence加载-开始", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -386,7 +397,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}).Forget();
 		}
 
-		// Token: 0x06034746 RID: 214854 RVA: 0x00C5AEEC File Offset: 0x00C590EC
+		// Token: 0x060295E9 RID: 169449 RVA: 0x00BA642C File Offset: 0x00BA462C
 		private unsafe void RequestForceStreamSceneActors(CustomPromise<bool> forceStreamPromise)
 		{
 			BP_SequenceData_C sequenceData = this.Model.SequenceData;
@@ -462,7 +473,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x06034747 RID: 214855 RVA: 0x00C5B054 File Offset: 0x00C59254
+		// Token: 0x060295EA RID: 169450 RVA: 0x00BA6594 File Offset: 0x00BA4794
 		private void Setup(Action<bool> callback)
 		{
 			SequenceController.<>c__DisplayClass34_0 CS$<>8__locals1 = new SequenceController.<>c__DisplayClass34_0();
@@ -484,7 +495,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			CS$<>8__locals1.<Setup>g__DoPlay|0();
 		}
 
-		// Token: 0x06034748 RID: 214856 RVA: 0x00C5B0DC File Offset: 0x00C592DC
+		// Token: 0x060295EB RID: 169451 RVA: 0x00BA661C File Offset: 0x00BA481C
 		private void StartPlay(Action<bool> callback)
 		{
 			EventSystem.Instance.Emit<float>(EEventName.PlotSequencePlay, this.Model.SequenceData.相机过渡时间);
@@ -496,7 +507,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			PlotModel.Instance.SeamlessLockState = false;
 		}
 
-		// Token: 0x06034749 RID: 214857 RVA: 0x00C5B154 File Offset: 0x00C59354
+		// Token: 0x060295EC RID: 169452 RVA: 0x00BA6694 File Offset: 0x00BA4894
 		private void ForEachPlaySequence(Action<bool> callback)
 		{
 			this.FlowAssistant.PreEachPlay();
@@ -521,7 +532,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			});
 		}
 
-		// Token: 0x0603474A RID: 214858 RVA: 0x00C5B1C4 File Offset: 0x00C593C4
+		// Token: 0x060295ED RID: 169453 RVA: 0x00BA6704 File Offset: 0x00BA4904
 		private UniTask WaitSubLevelThenContinue(Action<bool> callback)
 		{
 			SequenceController.<WaitSubLevelThenContinue>d__37 <WaitSubLevelThenContinue>d__;
@@ -533,7 +544,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return <WaitSubLevelThenContinue>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603474B RID: 214859 RVA: 0x00C5B210 File Offset: 0x00C59410
+		// Token: 0x060295EE RID: 169454 RVA: 0x00BA6750 File Offset: 0x00BA4950
 		private UniTask CheckSwitchSubLevelWithTimeout()
 		{
 			SequenceController.<CheckSwitchSubLevelWithTimeout>d__38 <CheckSwitchSubLevelWithTimeout>d__;
@@ -543,7 +554,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return <CheckSwitchSubLevelWithTimeout>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603474C RID: 214860 RVA: 0x00C5B24C File Offset: 0x00C5944C
+		// Token: 0x060295EF RID: 169455 RVA: 0x00BA678C File Offset: 0x00BA498C
 		private void StopPlay(Action<bool> callback)
 		{
 			this.Model.State = ESequenceState.Stopping;
@@ -567,7 +578,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			});
 		}
 
-		// Token: 0x0603474D RID: 214861 RVA: 0x00C5B2E4 File Offset: 0x00C594E4
+		// Token: 0x060295F0 RID: 169456 RVA: 0x00BA6824 File Offset: 0x00BA4A24
 		private void EndPlay()
 		{
 			if (this.Model.IsEnding)
@@ -608,7 +619,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			this.Model.State = ESequenceState.Null;
 		}
 
-		// Token: 0x0603474E RID: 214862 RVA: 0x00C5B41B File Offset: 0x00C5961B
+		// Token: 0x060295F1 RID: 169457 RVA: 0x00BA695B File Offset: 0x00BA4B5B
 		private void DoCallback(bool result)
 		{
 			if (this.Model.FinishCallback == null)
@@ -620,8 +631,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			finishCallback(result);
 		}
 
-		// Token: 0x17007FFA RID: 32762
-		// (get) Token: 0x0603474F RID: 214863 RVA: 0x00C5B448 File Offset: 0x00C59648
+		// Token: 0x170053AF RID: 21423
+		// (get) Token: 0x060295F2 RID: 169458 RVA: 0x00BA6988 File Offset: 0x00BA4B88
 		public Event<ESequenceEventName, Delegate> Event
 		{
 			get
@@ -630,57 +641,57 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x06034750 RID: 214864 RVA: 0x00C5B455 File Offset: 0x00C59655
+		// Token: 0x060295F3 RID: 169459 RVA: 0x00BA6995 File Offset: 0x00BA4B95
 		public void SelectOption(int index, int talkItemId)
 		{
 			this.UiAssistant.HandleSelectedOption(index, talkItemId).Forget();
 		}
 
-		// Token: 0x06034751 RID: 214865 RVA: 0x00C5B469 File Offset: 0x00C59669
+		// Token: 0x060295F4 RID: 169460 RVA: 0x00BA69A9 File Offset: 0x00BA4BA9
 		public void FinishSubtitle(int id)
 		{
 			this.UiAssistant.HandlePlotSubtitleEnd(id, true).Forget();
 		}
 
-		// Token: 0x06034752 RID: 214866 RVA: 0x00C5B47D File Offset: 0x00C5967D
+		// Token: 0x060295F5 RID: 169461 RVA: 0x00BA69BD File Offset: 0x00BA4BBD
 		public void JumpToNextSubtitleOrChildSeq()
 		{
 			this.SequenceAssistant.JumpToNextSubtitleOrChildSeq();
 		}
 
-		// Token: 0x06034753 RID: 214867 RVA: 0x00C5B48A File Offset: 0x00C5968A
+		// Token: 0x060295F6 RID: 169462 RVA: 0x00BA69CA File Offset: 0x00BA4BCA
 		public void AccelerateToNextSubtitleOrChildSeq(Action finishCallback)
 		{
 			this.SequenceAssistant.AccelerateToNextSubtitleOrChildSeq(finishCallback);
 		}
 
-		// Token: 0x06034754 RID: 214868 RVA: 0x00C5B498 File Offset: 0x00C59698
+		// Token: 0x060295F7 RID: 169463 RVA: 0x00BA69D8 File Offset: 0x00BA4BD8
 		public void ClearAccelerateCallback()
 		{
 			this.SequenceAssistant.ClearAccelerateCallback();
 		}
 
-		// Token: 0x06034755 RID: 214869 RVA: 0x00C5B4A5 File Offset: 0x00C596A5
+		// Token: 0x060295F8 RID: 169464 RVA: 0x00BA69E5 File Offset: 0x00BA4BE5
 		[NullableContext(2)]
 		public void PauseSequence(string reason = null)
 		{
 			this.SequenceAssistant.PauseSequence(reason);
 		}
 
-		// Token: 0x06034756 RID: 214870 RVA: 0x00C5B4B3 File Offset: 0x00C596B3
+		// Token: 0x060295F9 RID: 169465 RVA: 0x00BA69F3 File Offset: 0x00BA4BF3
 		[NullableContext(2)]
 		public void ResumeSequence(string reason = null, bool? goToNextFrame = null)
 		{
 			this.SequenceAssistant.ResumeSequence(reason, goToNextFrame);
 		}
 
-		// Token: 0x06034757 RID: 214871 RVA: 0x00C5B4C2 File Offset: 0x00C596C2
+		// Token: 0x060295FA RID: 169466 RVA: 0x00BA6A02 File Offset: 0x00BA4C02
 		public void SetNextSequenceIndex(int index)
 		{
 			this.FlowAssistant.SetNextSequenceIndex(index);
 		}
 
-		// Token: 0x06034758 RID: 214872 RVA: 0x00C5B4D0 File Offset: 0x00C596D0
+		// Token: 0x060295FB RID: 169467 RVA: 0x00BA6A10 File Offset: 0x00BA4C10
 		public void CheckSeqStreamingData()
 		{
 			if (this.RenderAssistant.CheckSeqStreamingData())
@@ -689,7 +700,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x06034759 RID: 214873 RVA: 0x00C5B4EC File Offset: 0x00C596EC
+		// Token: 0x060295FC RID: 169468 RVA: 0x00BA6A2C File Offset: 0x00BA4C2C
 		private unsafe void StartCheckRenderDataTimeout(CustomPromise<bool?> promise)
 		{
 			SequenceController.<>c__DisplayClass53_0 CS$<>8__locals1 = new SequenceController.<>c__DisplayClass53_0();
@@ -742,7 +753,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}, (float)this.WaitRenderDataTimeoutMs, null, null, true, 1f);
 		}
 
-		// Token: 0x0603475A RID: 214874 RVA: 0x00C5B5D3 File Offset: 0x00C597D3
+		// Token: 0x060295FD RID: 169469 RVA: 0x00BA6B13 File Offset: 0x00BA4D13
 		private void ClearCheckRenderDataTimeout()
 		{
 			if (this.CheckRenderDataTimeoutHandle != null && TimerSystem.Instance.Has(this.CheckRenderDataTimeoutHandle))
@@ -752,7 +763,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			this.CheckRenderDataTimeoutHandle = null;
 		}
 
-		// Token: 0x0603475B RID: 214875 RVA: 0x00C5B607 File Offset: 0x00C59807
+		// Token: 0x060295FE RID: 169470 RVA: 0x00BA6B47 File Offset: 0x00BA4D47
 		private void FinishCheckRenderDataWait(bool? result)
 		{
 			CustomPromise<bool?> checkRenderDataPromise = this.CheckRenderDataPromise;
@@ -765,19 +776,19 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			checkRenderDataPromise.SetResult(result);
 		}
 
-		// Token: 0x0603475C RID: 214876 RVA: 0x00C5B627 File Offset: 0x00C59827
+		// Token: 0x060295FF RID: 169471 RVA: 0x00BA6B67 File Offset: 0x00BA4D67
 		public void FlushDialogueState()
 		{
 			this.UiAssistant.TriggerAllSubtitle();
 		}
 
-		// Token: 0x0603475D RID: 214877 RVA: 0x00C5B634 File Offset: 0x00C59834
+		// Token: 0x06029600 RID: 169472 RVA: 0x00BA6B74 File Offset: 0x00BA4D74
 		public void TryApplyMouthAnim(string textKey, List<int> characterIdList)
 		{
 			this.ActorAssistant.TryApplyMouthAnim(textKey, characterIdList);
 		}
 
-		// Token: 0x0603475E RID: 214878 RVA: 0x00C5B644 File Offset: 0x00C59844
+		// Token: 0x06029601 RID: 169473 RVA: 0x00BA6B84 File Offset: 0x00BA4D84
 		public void StopMouthAnim()
 		{
 			if (this.ActorAssistant == null)
@@ -788,13 +799,13 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			this.ActorAssistant.StopMouthAnim();
 		}
 
-		// Token: 0x0603475F RID: 214879 RVA: 0x00C5B681 File Offset: 0x00C59881
+		// Token: 0x06029602 RID: 169474 RVA: 0x00BA6BC1 File Offset: 0x00BA4DC1
 		public void RunSequenceFrameEvents(string key)
 		{
 			this.FunctionAssistant.RunSequenceFrameEvents(key);
 		}
 
-		// Token: 0x06034760 RID: 214880 RVA: 0x00C5B690 File Offset: 0x00C59890
+		// Token: 0x06029603 RID: 169475 RVA: 0x00BA6BD0 File Offset: 0x00BA4DD0
 		public void TriggerCutChange()
 		{
 			this.Model.DisableMotionBlurFrame = 2f;
@@ -813,80 +824,80 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x06034761 RID: 214881 RVA: 0x00C5B739 File Offset: 0x00C59939
+		// Token: 0x06029604 RID: 169476 RVA: 0x00BA6C79 File Offset: 0x00BA4E79
 		public void ShowLogo(float time)
 		{
 			this.FunctionAssistant.ShowLogo(time);
 		}
 
-		// Token: 0x06034762 RID: 214882 RVA: 0x00C5B747 File Offset: 0x00C59947
+		// Token: 0x06029605 RID: 169477 RVA: 0x00BA6C87 File Offset: 0x00BA4E87
 		public void OpenUiView(string assetPath, string spineName, bool needLoop = true, bool useFullscreenAdaptAnchor = false)
 		{
 			this.FunctionAssistant.OpenBackgroundImage(assetPath, spineName, needLoop, useFullscreenAdaptAnchor).Forget();
 		}
 
-		// Token: 0x06034763 RID: 214883 RVA: 0x00C5B75E File Offset: 0x00C5995E
+		// Token: 0x06029606 RID: 169478 RVA: 0x00BA6C9E File Offset: 0x00BA4E9E
 		public void OpenUiViewForArray(string assetPath, TArray<SpineThingsInfo> spineArray, bool useFullscreenAdaptAnchor = false)
 		{
 			this.FunctionAssistant.OpenBackgroundImageInArray(assetPath, spineArray, useFullscreenAdaptAnchor).Forget();
 		}
 
-		// Token: 0x06034764 RID: 214884 RVA: 0x00C5B773 File Offset: 0x00C59973
+		// Token: 0x06029607 RID: 169479 RVA: 0x00BA6CB3 File Offset: 0x00BA4EB3
 		public void PlayUiLevelSequence(string seqName)
 		{
 			this.FunctionAssistant.PlayUiLevelSequence(seqName).Forget();
 		}
 
-		// Token: 0x06034765 RID: 214885 RVA: 0x00C5B786 File Offset: 0x00C59986
+		// Token: 0x06029608 RID: 169480 RVA: 0x00BA6CC6 File Offset: 0x00BA4EC6
 		public void CloseUiView()
 		{
 			this.FunctionAssistant.CloseBackgroundImage().Forget();
 		}
 
-		// Token: 0x06034766 RID: 214886 RVA: 0x00C5B798 File Offset: 0x00C59998
+		// Token: 0x06029609 RID: 169481 RVA: 0x00BA6CD8 File Offset: 0x00BA4ED8
 		public void PlaySpineAnim(string spineName, bool needLoop = true)
 		{
 			this.FunctionAssistant.PlaySpineAnim(spineName, needLoop);
 		}
 
-		// Token: 0x06034767 RID: 214887 RVA: 0x00C5B7A7 File Offset: 0x00C599A7
+		// Token: 0x0602960A RID: 169482 RVA: 0x00BA6CE7 File Offset: 0x00BA4EE7
 		public void PlaySpineAnimInArray(TArray<SpineThingsInfo> spineArray)
 		{
 			this.FunctionAssistant.PlaySpineAnimInArray(spineArray);
 		}
 
-		// Token: 0x06034768 RID: 214888 RVA: 0x00C5B7B5 File Offset: 0x00C599B5
+		// Token: 0x0602960B RID: 169483 RVA: 0x00BA6CF5 File Offset: 0x00BA4EF5
 		public void CloseSpineAnim(string spineName)
 		{
 			this.FunctionAssistant.CloseSpineAnimation(spineName);
 		}
 
-		// Token: 0x06034769 RID: 214889 RVA: 0x00C5B7C3 File Offset: 0x00C599C3
+		// Token: 0x0602960C RID: 169484 RVA: 0x00BA6D03 File Offset: 0x00BA4F03
 		public void CloseSpineAnimInArray(TArray<string> spineArray)
 		{
 			this.FunctionAssistant.CloseSpineAnimationInArray(spineArray);
 		}
 
-		// Token: 0x0603476A RID: 214890 RVA: 0x00C5B7D1 File Offset: 0x00C599D1
+		// Token: 0x0602960D RID: 169485 RVA: 0x00BA6D11 File Offset: 0x00BA4F11
 		public void DisableMotionBlurAwhile()
 		{
 			this.Model.DisableMotionBlurFrame = 2f;
 			this.RenderAssistant.SetMotionBlurState(false);
 		}
 
-		// Token: 0x0603476B RID: 214891 RVA: 0x00C5B7EF File Offset: 0x00C599EF
+		// Token: 0x0602960E RID: 169486 RVA: 0x00BA6D2F File Offset: 0x00BA4F2F
 		public void AdditionSeqPlay(ULevelSequence levelSequence, FName componentName, FName boneName, int frame)
 		{
 			this.FunctionAssistant.AdditionSeqPlay(levelSequence, componentName, boneName, frame);
 		}
 
-		// Token: 0x0603476C RID: 214892 RVA: 0x00C5B801 File Offset: 0x00C59A01
+		// Token: 0x0602960F RID: 169487 RVA: 0x00BA6D41 File Offset: 0x00BA4F41
 		public void AdditionSeqEnd()
 		{
 			this.FunctionAssistant.AdditionSeqEnd();
 		}
 
-		// Token: 0x0603476D RID: 214893 RVA: 0x00C5B80E File Offset: 0x00C59A0E
+		// Token: 0x06029610 RID: 169488 RVA: 0x00BA6D4E File Offset: 0x00BA4F4E
 		public void EnableCameraShake(bool bEnable, TSoftClassPtr<UMatineeCameraShake> cameraShakePtr)
 		{
 			if (bEnable)
@@ -897,7 +908,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			this.CameraAssistant.StopCameraShake(cameraShakePtr);
 		}
 
-		// Token: 0x0603476E RID: 214894 RVA: 0x00C5B82C File Offset: 0x00C59A2C
+		// Token: 0x06029611 RID: 169489 RVA: 0x00BA6D6C File Offset: 0x00BA4F6C
 		public string GetCurrentSequenceDebugInfo()
 		{
 			ULevelSequence currentSequence = this.Model.GetCurrentSequence();
@@ -925,8 +936,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x17007FFB RID: 32763
-		// (get) Token: 0x0603476F RID: 214895 RVA: 0x00C5B8D0 File Offset: 0x00C59AD0
+		// Token: 0x170053B0 RID: 21424
+		// (get) Token: 0x06029612 RID: 169490 RVA: 0x00BA6E10 File Offset: 0x00BA5010
 		public static SequenceController Instance
 		{
 			get
@@ -935,7 +946,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x06034770 RID: 214896 RVA: 0x00C5B8D7 File Offset: 0x00C59AD7
+		// Token: 0x06029613 RID: 169491 RVA: 0x00BA6E17 File Offset: 0x00BA5017
 		public static SequenceController GetOrCreateInstance()
 		{
 			if (SequenceController._Instance == null)
@@ -945,7 +956,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return SequenceController._Instance;
 		}
 
-		// Token: 0x06034771 RID: 214897 RVA: 0x00C5B8EB File Offset: 0x00C59AEB
+		// Token: 0x06029614 RID: 169492 RVA: 0x00BA6E2B File Offset: 0x00BA502B
 		public static bool CreateInstance()
 		{
 			if (SequenceController._Instance != null)
@@ -956,75 +967,75 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return true;
 		}
 
-		// Token: 0x06034772 RID: 214898 RVA: 0x00C5B901 File Offset: 0x00C59B01
+		// Token: 0x06029615 RID: 169493 RVA: 0x00BA6E41 File Offset: 0x00BA5041
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06034773 RID: 214899 RVA: 0x00C5B903 File Offset: 0x00C59B03
+		// Token: 0x06029616 RID: 169494 RVA: 0x00BA6E43 File Offset: 0x00BA5043
 		public static void ResetStaticDefaultValue()
 		{
 			SequenceController._Instance = null;
 		}
 
-		// Token: 0x06034774 RID: 214900 RVA: 0x00C5B90B File Offset: 0x00C59B0B
+		// Token: 0x06029617 RID: 169495 RVA: 0x00BA6E4B File Offset: 0x00BA504B
 		static SequenceController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SequenceController.CreateStaticDefaultValue), new Action(SequenceController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BF02 RID: 114434
+		// Token: 0x040168EB RID: 92395
 		[Nullable(2)]
 		private CustomPromise<bool?> CheckRenderDataPromise;
 
-		// Token: 0x0401BF03 RID: 114435
+		// Token: 0x040168EC RID: 92396
 		[Nullable(2)]
 		private CustomPromise<bool> ForceStreamPromise;
 
-		// Token: 0x0401BF04 RID: 114436
+		// Token: 0x040168ED RID: 92397
 		[Nullable(2)]
 		private SequenceModel Model;
 
-		// Token: 0x0401BF05 RID: 114437
+		// Token: 0x040168EE RID: 92398
 		private const int DEFAULT_WAIT_SUB_LEVEL_TIMEOUT_S = 10;
 
-		// Token: 0x0401BF06 RID: 114438
+		// Token: 0x040168EF RID: 92399
 		private const int WAIT_RENDER_DATA_TIMEOUT_S = 40;
 
-		// Token: 0x0401BF07 RID: 114439
+		// Token: 0x040168F0 RID: 92400
 		private readonly int ForceStreamTimeoutMs = 10000;
 
-		// Token: 0x0401BF08 RID: 114440
+		// Token: 0x040168F1 RID: 92401
 		private readonly int WaitRenderDataTimeoutMs = 40000;
 
-		// Token: 0x0401BF09 RID: 114441
+		// Token: 0x040168F2 RID: 92402
 		[Nullable(2)]
 		private TimerHandle CheckRenderDataTimeoutHandle;
 
-		// Token: 0x0401BF0A RID: 114442
+		// Token: 0x040168F3 RID: 92403
 		public bool GmForceCollectExtraTexture;
 
-		// Token: 0x0401BF0B RID: 114443
+		// Token: 0x040168F4 RID: 92404
 		[Nullable(2)]
 		private static SequenceController _Instance;
 
-		// Token: 0x0200B14D RID: 45389
+		// Token: 0x02009B85 RID: 39813
 		[NullableContext(0)]
 		private enum EAssistantType
 		{
-			// Token: 0x04035CCB RID: 220363
+			// Token: 0x04030713 RID: 198419
 			SequenceAssistant,
-			// Token: 0x04035CCC RID: 220364
+			// Token: 0x04030714 RID: 198420
 			ActorAssistant,
-			// Token: 0x04035CCD RID: 220365
+			// Token: 0x04030715 RID: 198421
 			FunctionAssistant,
-			// Token: 0x04035CCE RID: 220366
+			// Token: 0x04030716 RID: 198422
 			CameraAssistant,
-			// Token: 0x04035CCF RID: 220367
+			// Token: 0x04030717 RID: 198423
 			RenderAssistant,
-			// Token: 0x04035CD0 RID: 220368
+			// Token: 0x04030718 RID: 198424
 			FlowAssistant,
-			// Token: 0x04035CD1 RID: 220369
+			// Token: 0x04030719 RID: 198425
 			UiAssistant
 		}
 	}

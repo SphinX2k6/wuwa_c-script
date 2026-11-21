@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000370 RID: 880
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003B9 RID: 953
 	public class IFailureStateTrigger
 	{
-		// Token: 0x06001179 RID: 4473 RVA: 0x0003B008 File Offset: 0x00039208
+		// Token: 0x060012BD RID: 4797 RVA: 0x0003E2EC File Offset: 0x0003C4EC
 		private IFailureStateTrigger_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600117A RID: 4474 RVA: 0x0003B040 File Offset: 0x00039240
+		// Token: 0x060012BE RID: 4798 RVA: 0x0003E324 File Offset: 0x0003C524
 		public static IFailureStateTrigger Create([Nullable(2)] IFailureStateTrigger instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600117B RID: 4475 RVA: 0x0003B053 File Offset: 0x00039253
+		// Token: 0x060012BF RID: 4799 RVA: 0x0003E337 File Offset: 0x0003C537
 		public static IFailureStateTrigger CreateFromSetValue([Nullable(2)] IFailureStateTrigger_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600117C RID: 4476 RVA: 0x0003B066 File Offset: 0x00039266
+		// Token: 0x060012C0 RID: 4800 RVA: 0x0003E34A File Offset: 0x0003C54A
 		public IFailureStateTrigger_SetValue ToSetValue()
 		{
 			return new IFailureStateTrigger_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004F2 RID: 1266
-		// (get) Token: 0x0600117D RID: 4477 RVA: 0x0003B085 File Offset: 0x00039285
-		// (set) Token: 0x0600117E RID: 4478 RVA: 0x0003B0AC File Offset: 0x000392AC
+		// Token: 0x17000546 RID: 1350
+		// (get) Token: 0x060012C1 RID: 4801 RVA: 0x0003E369 File Offset: 0x0003C569
+		// (set) Token: 0x060012C2 RID: 4802 RVA: 0x0003E390 File Offset: 0x0003C590
 		public virtual List<IEntityGroupFailureCondition> FailureConditions
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004F3 RID: 1267
-		// (get) Token: 0x0600117F RID: 4479 RVA: 0x0003B0BC File Offset: 0x000392BC
-		// (set) Token: 0x06001180 RID: 4480 RVA: 0x0003B11D File Offset: 0x0003931D
+		// Token: 0x17000547 RID: 1351
+		// (get) Token: 0x060012C3 RID: 4803 RVA: 0x0003E3A0 File Offset: 0x0003C5A0
+		// (set) Token: 0x060012C4 RID: 4804 RVA: 0x0003E401 File Offset: 0x0003C601
 		public virtual IOperationsAfterEntityGroupFailure FailureOperations
 		{
 			get
@@ -115,18 +113,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E59 RID: 3673
+		// Token: 0x04000F50 RID: 3920
 		[Nullable(2)]
 		protected IFailureStateTrigger FbInstance;
 
-		// Token: 0x04000E5A RID: 3674
+		// Token: 0x04000F51 RID: 3921
 		[Nullable(2)]
 		protected IFailureStateTrigger_SetValue PocoInterface;
 
-		// Token: 0x04000E5B RID: 3675
+		// Token: 0x04000F52 RID: 3922
 		private IOperationsAfterEntityGroupFailure _FailureOperationsCache;
 
-		// Token: 0x04000E5C RID: 3676
+		// Token: 0x04000F53 RID: 3923
 		private bool _FailureOperationsInited;
 	}
 }

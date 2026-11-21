@@ -5,15 +5,15 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch;
 
 namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 {
-	// Token: 0x020049F6 RID: 18934
+	// Token: 0x02003970 RID: 14704
 	public class DangobrawlCancelComponent : DangobrawlHotKeyComponentBase
 	{
-		// Token: 0x0603128A RID: 201354 RVA: 0x00B67259 File Offset: 0x00B65459
+		// Token: 0x06025DC0 RID: 155072 RVA: 0x00AA2215 File Offset: 0x00AA0415
 		public DangobrawlCancelComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x0603128B RID: 201355 RVA: 0x00B67264 File Offset: 0x00B65464
+		// Token: 0x06025DC1 RID: 155073 RVA: 0x00AA2220 File Offset: 0x00AA0420
 		protected override bool ShouldShow()
 		{
 			bool flag = DangobrawlHotKeyComponentBase.InputPlatform.GetValueOrDefault() == EInputPlatform.Gamepad;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 			return flag && flag2;
 		}
 
-		// Token: 0x0603128C RID: 201356 RVA: 0x00B6729A File Offset: 0x00B6549A
+		// Token: 0x06025DC2 RID: 155074 RVA: 0x00AA2256 File Offset: 0x00AA0456
 		protected override void OnRelease(HotKeyMap config)
 		{
 			DangoBrawlTouchController touch = DangobrawlHotKeyComponentBase.Touch;

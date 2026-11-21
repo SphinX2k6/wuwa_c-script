@@ -5,16 +5,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001540 RID: 5440
-	[NullableContext(1)]
-	[Nullable(new byte[]
-	{
-		0,
-		1
-	})]
+	// Token: 0x0200169B RID: 5787
 	public class IFadeBackgroundTypeConverter : JsonConverter<IFadeBackgroundType>
 	{
-		// Token: 0x06007B2E RID: 31534 RVA: 0x00128B4C File Offset: 0x00126D4C
+		// Token: 0x060081FF RID: 33279 RVA: 0x001379E8 File Offset: 0x00135BE8
 		[return: Nullable(2)]
 		public override IFadeBackgroundType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
@@ -61,7 +55,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007B2F RID: 31535 RVA: 0x00128C08 File Offset: 0x00126E08
+		// Token: 0x06008200 RID: 33280 RVA: 0x00137AA4 File Offset: 0x00135CA4
 		public override void Write(Utf8JsonWriter writer, IFadeBackgroundType value, JsonSerializerOptions options)
 		{
 			IFadeBackgroundSpine fadeBackgroundSpine = value as IFadeBackgroundSpine;

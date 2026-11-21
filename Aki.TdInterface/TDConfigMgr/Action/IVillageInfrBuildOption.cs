@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200204B RID: 8267
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002294 RID: 8852
 	public class IVillageInfrBuildOption
 	{
-		// Token: 0x0600B5AA RID: 46506 RVA: 0x001A5AE8 File Offset: 0x001A3CE8
+		// Token: 0x0600C0D0 RID: 49360 RVA: 0x001BC254 File Offset: 0x001BA454
 		private IVillageInfrBuildOption_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B5AB RID: 46507 RVA: 0x001A5B20 File Offset: 0x001A3D20
+		// Token: 0x0600C0D1 RID: 49361 RVA: 0x001BC28C File Offset: 0x001BA48C
 		public static IVillageInfrBuildOption Create([Nullable(2)] IVillageInfrBuildOption instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B5AC RID: 46508 RVA: 0x001A5B33 File Offset: 0x001A3D33
+		// Token: 0x0600C0D2 RID: 49362 RVA: 0x001BC29F File Offset: 0x001BA49F
 		public static IVillageInfrBuildOption CreateFromSetValue([Nullable(2)] IVillageInfrBuildOption_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B5AD RID: 46509 RVA: 0x001A5B46 File Offset: 0x001A3D46
+		// Token: 0x0600C0D3 RID: 49363 RVA: 0x001BC2B2 File Offset: 0x001BA4B2
 		public IVillageInfrBuildOption_SetValue ToSetValue()
 		{
 			return new IVillageInfrBuildOption_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037BD RID: 14269
-		// (get) Token: 0x0600B5AE RID: 46510 RVA: 0x001A5B59 File Offset: 0x001A3D59
-		// (set) Token: 0x0600B5AF RID: 46511 RVA: 0x001A5B84 File Offset: 0x001A3D84
+		// Token: 0x17003A9A RID: 15002
+		// (get) Token: 0x0600C0D4 RID: 49364 RVA: 0x001BC2C5 File Offset: 0x001BA4C5
+		// (set) Token: 0x0600C0D5 RID: 49365 RVA: 0x001BC2F0 File Offset: 0x001BA4F0
 		public virtual EVillageInfrBuildType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D44 RID: 27972
+		// Token: 0x0400734D RID: 29517
 		[Nullable(2)]
 		protected IVillageInfrBuildOption FbInstance;
 
-		// Token: 0x04006D45 RID: 27973
+		// Token: 0x0400734E RID: 29518
 		[Nullable(2)]
 		protected IVillageInfrBuildOption_SetValue PocoInterface;
 	}

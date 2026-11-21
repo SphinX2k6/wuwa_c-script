@@ -11,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002350 RID: 9040
+// Token: 0x02001835 RID: 6197
 [NullableContext(2)]
 [Nullable(0)]
 public class MonthCardView : UiTabViewBase
 {
-	// Token: 0x06011FF3 RID: 73715 RVA: 0x004699E0 File Offset: 0x00467BE0
+	// Token: 0x0600F4A3 RID: 62627 RVA: 0x00476AA8 File Offset: 0x00474CA8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -59,7 +59,7 @@ public class MonthCardView : UiTabViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011FF4 RID: 73716 RVA: 0x00469BF8 File Offset: 0x00467DF8
+	// Token: 0x0600F4A4 RID: 62628 RVA: 0x00476CC0 File Offset: 0x00474EC0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MonthCardView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -70,7 +70,7 @@ public class MonthCardView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011FF5 RID: 73717 RVA: 0x00469C3C File Offset: 0x00467E3C
+	// Token: 0x0600F4A5 RID: 62629 RVA: 0x00476D04 File Offset: 0x00474F04
 	private UniTask BuildRewardItems()
 	{
 		MonthCardView.<BuildRewardItems>d__9 <BuildRewardItems>d__;
@@ -81,14 +81,14 @@ public class MonthCardView : UiTabViewBase
 		return <BuildRewardItems>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011FF6 RID: 73718 RVA: 0x00469C7F File Offset: 0x00467E7F
+	// Token: 0x0600F4A6 RID: 62630 RVA: 0x00476D47 File Offset: 0x00474F47
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView();
 		this.CheckIfNeedShowPlayStationStoreIcon(ESdkDialogResult.No);
 	}
 
-	// Token: 0x06011FF7 RID: 73719 RVA: 0x00469C90 File Offset: 0x00467E90
+	// Token: 0x0600F4A7 RID: 62631 RVA: 0x00476D58 File Offset: 0x00474F58
 	protected override void OnStart()
 	{
 		this.BuyButtonItem = new ButtonAndTextItem(base.GetItem(4));
@@ -111,7 +111,7 @@ public class MonthCardView : UiTabViewBase
 		totalTopUpTagItem.RefreshByGoodsId(42);
 	}
 
-	// Token: 0x06011FF8 RID: 73720 RVA: 0x00469D8C File Offset: 0x00467F8C
+	// Token: 0x0600F4A8 RID: 62632 RVA: 0x00476E54 File Offset: 0x00475054
 	private bool CheckSdkProductInfoConfirmIfCanShow()
 	{
 		if (!PlatformSdkManagerNew.Instance.GetPlatformSdk().NeedConfirmSdkProductInfo())
@@ -131,7 +131,7 @@ public class MonthCardView : UiTabViewBase
 		return false;
 	}
 
-	// Token: 0x06011FF9 RID: 73721 RVA: 0x00469E14 File Offset: 0x00468014
+	// Token: 0x0600F4A9 RID: 62633 RVA: 0x00476EDC File Offset: 0x004750DC
 	private UniTask OpenThirdPartyMessageBox()
 	{
 		MonthCardView.<OpenThirdPartyMessageBox>d__13 <OpenThirdPartyMessageBox>d__;
@@ -141,14 +141,14 @@ public class MonthCardView : UiTabViewBase
 		return <OpenThirdPartyMessageBox>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011FFA RID: 73722 RVA: 0x00469E50 File Offset: 0x00468050
+	// Token: 0x0600F4AA RID: 62634 RVA: 0x00476F18 File Offset: 0x00475118
 	private void RefreshPrice()
 	{
 		PayShopGoods payShopGoodsById = PayGiftModel.Instance.GetPayShopGoodsById(42);
 		base.GetText(3).SetText(payShopGoodsById.GetDirectPriceText(), true);
 	}
 
-	// Token: 0x06011FFB RID: 73723 RVA: 0x00469E80 File Offset: 0x00468080
+	// Token: 0x0600F4AB RID: 62635 RVA: 0x00476F48 File Offset: 0x00475148
 	private void RefreshCloudGameInfo()
 	{
 		PayShopGoods payShopGoodsById = PayGiftModel.Instance.GetPayShopGoodsById(42);
@@ -164,7 +164,7 @@ public class MonthCardView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06011FFC RID: 73724 RVA: 0x00469EDF File Offset: 0x004680DF
+	// Token: 0x0600F4AC RID: 62636 RVA: 0x00476FA7 File Offset: 0x004751A7
 	protected override void OnBeforeHide()
 	{
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
@@ -175,7 +175,7 @@ public class MonthCardView : UiTabViewBase
 		platformSdk.HidePlayStationStoreIcon();
 	}
 
-	// Token: 0x06011FFD RID: 73725 RVA: 0x00469EF5 File Offset: 0x004680F5
+	// Token: 0x0600F4AD RID: 62637 RVA: 0x00476FBD File Offset: 0x004751BD
 	protected override void OnBeforeDestroy()
 	{
 		ButtonAndTextItem buyButtonItem = this.BuyButtonItem;
@@ -186,13 +186,13 @@ public class MonthCardView : UiTabViewBase
 		this.BuyButtonItem = null;
 	}
 
-	// Token: 0x06011FFE RID: 73726 RVA: 0x00469F10 File Offset: 0x00468110
+	// Token: 0x0600F4AE RID: 62638 RVA: 0x00476FD8 File Offset: 0x004751D8
 	private void OnClickedHelpButton()
 	{
 		HelpController.Instance.OpenHelpById(9);
 	}
 
-	// Token: 0x06011FFF RID: 73727 RVA: 0x00469F20 File Offset: 0x00468120
+	// Token: 0x0600F4AF RID: 62639 RVA: 0x00476FE8 File Offset: 0x004751E8
 	private void OnClickedBuyButton()
 	{
 		if (!this.CanBuyMonthCard)
@@ -203,27 +203,27 @@ public class MonthCardView : UiTabViewBase
 		PayGiftController.Instance.SdkPay(payShopGoodsById.GetGoodsData().Id);
 	}
 
-	// Token: 0x06012000 RID: 73728 RVA: 0x00469F58 File Offset: 0x00468158
+	// Token: 0x0600F4B0 RID: 62640 RVA: 0x00477020 File Offset: 0x00475220
 	private void OnReceiveMonthCardData()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x06012001 RID: 73729 RVA: 0x00469F60 File Offset: 0x00468160
+	// Token: 0x0600F4B1 RID: 62641 RVA: 0x00477028 File Offset: 0x00475228
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.ReceiveMonthCardDataEvent, new Action(this.OnReceiveMonthCardData));
 		EventSystem.Instance.Add<ESdkDialogResult>(EEventName.SdkPayEnd, new Action<ESdkDialogResult>(this.CheckIfNeedShowPlayStationStoreIcon));
 	}
 
-	// Token: 0x06012002 RID: 73730 RVA: 0x00469F97 File Offset: 0x00468197
+	// Token: 0x0600F4B2 RID: 62642 RVA: 0x0047705F File Offset: 0x0047525F
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ReceiveMonthCardDataEvent, new Action(this.OnReceiveMonthCardData));
 		EventSystem.Instance.Remove(EEventName.SdkPayEnd, new <>f__AnonymousDelegate2<ESdkDialogResult>(this.CheckIfNeedShowPlayStationStoreIcon));
 	}
 
-	// Token: 0x06012003 RID: 73731 RVA: 0x00469FCE File Offset: 0x004681CE
+	// Token: 0x0600F4B3 RID: 62643 RVA: 0x00477096 File Offset: 0x00475296
 	private void CheckIfNeedShowPlayStationStoreIcon(ESdkDialogResult eSdkDialogResult = ESdkDialogResult.No)
 	{
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
@@ -234,7 +234,7 @@ public class MonthCardView : UiTabViewBase
 		platformSdk.ShowPlayStationStoreIcon(0);
 	}
 
-	// Token: 0x06012004 RID: 73732 RVA: 0x00469FE8 File Offset: 0x004681E8
+	// Token: 0x0600F4B4 RID: 62644 RVA: 0x004770B0 File Offset: 0x004752B0
 	protected override void OnAfterShow()
 	{
 		UiTabSequence tabBehavior = base.GetTabBehavior<UiTabSequence>();
@@ -243,7 +243,7 @@ public class MonthCardView : UiTabViewBase
 		this.QueryProductPriceAndRefresh().Forget();
 	}
 
-	// Token: 0x06012005 RID: 73733 RVA: 0x0046A034 File Offset: 0x00468234
+	// Token: 0x0600F4B5 RID: 62645 RVA: 0x004770FC File Offset: 0x004752FC
 	private UniTask QueryProductPriceAndRefresh()
 	{
 		MonthCardView.<QueryProductPriceAndRefresh>d__25 <QueryProductPriceAndRefresh>d__;
@@ -254,7 +254,7 @@ public class MonthCardView : UiTabViewBase
 		return <QueryProductPriceAndRefresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012006 RID: 73734 RVA: 0x0046A078 File Offset: 0x00468278
+	// Token: 0x0600F4B6 RID: 62646 RVA: 0x00477140 File Offset: 0x00475340
 	private void RefreshRemainDays()
 	{
 		bool flag = MonthCardModel.Instance.GetRemainDays() >= 0;
@@ -271,14 +271,14 @@ public class MonthCardView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012007 RID: 73735 RVA: 0x0046A0D4 File Offset: 0x004682D4
+	// Token: 0x0600F4B7 RID: 62647 RVA: 0x0047719C File Offset: 0x0047539C
 	public void RefreshView()
 	{
 		this.RefreshRemainDays();
 		this.RefreshBuyInfo();
 	}
 
-	// Token: 0x06012008 RID: 73736 RVA: 0x0046A0E4 File Offset: 0x004682E4
+	// Token: 0x0600F4B8 RID: 62648 RVA: 0x004771AC File Offset: 0x004753AC
 	private void RefreshBuyInfo()
 	{
 		bool flag = MonthCardModel.Instance.IsRemainDayInMaxLimit();
@@ -316,60 +316,60 @@ public class MonthCardView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601200A RID: 73738 RVA: 0x0046A193 File Offset: 0x00468393
+	// Token: 0x0600F4BA RID: 62650 RVA: 0x0047725B File Offset: 0x0047545B
 	[CompilerGenerated]
 	internal static void <CheckSdkProductInfoConfirmIfCanShow>g__confirmCallback|12_0()
 	{
 		UiManager.Instance.CloseView(EUiViewName.PayShopRootView, null);
 	}
 
-	// Token: 0x040087F1 RID: 34801
+	// Token: 0x04008934 RID: 35124
 	private ButtonAndTextItem BuyButtonItem;
 
-	// Token: 0x040087F2 RID: 34802
+	// Token: 0x04008935 RID: 35125
 	private GetItemPanel OnceRewardItem;
 
-	// Token: 0x040087F3 RID: 34803
+	// Token: 0x04008936 RID: 35126
 	private GetItemPanel DailyRewardItem;
 
-	// Token: 0x040087F4 RID: 34804
+	// Token: 0x04008937 RID: 35127
 	private TotalTopUpPayAdditiveTagItem TotalTopUpTagItem;
 
-	// Token: 0x040087F5 RID: 34805
+	// Token: 0x04008938 RID: 35128
 	private bool CanBuyMonthCard;
 
-	// Token: 0x040087F6 RID: 34806
+	// Token: 0x04008939 RID: 35129
 	private const int MONTH_CARD_HELP_ID = 9;
 
-	// Token: 0x020088CB RID: 35019
+	// Token: 0x02007A54 RID: 31316
 	[NullableContext(0)]
 	private enum EMonthlyCardComponents
 	{
-		// Token: 0x0402C763 RID: 182115
+		// Token: 0x04027A77 RID: 162423
 		TextReceived,
-		// Token: 0x0402C764 RID: 182116
+		// Token: 0x04027A78 RID: 162424
 		TextRemaining,
-		// Token: 0x0402C765 RID: 182117
+		// Token: 0x04027A79 RID: 162425
 		ButtonHelp,
-		// Token: 0x0402C766 RID: 182118
+		// Token: 0x04027A7A RID: 162426
 		TextPrice,
-		// Token: 0x0402C767 RID: 182119
+		// Token: 0x04027A7B RID: 162427
 		ButtonBuy,
-		// Token: 0x0402C768 RID: 182120
+		// Token: 0x04027A7C RID: 162428
 		OnceRewardItem,
-		// Token: 0x0402C769 RID: 182121
+		// Token: 0x04027A7D RID: 162429
 		DailyRewardItem,
-		// Token: 0x0402C76A RID: 182122
+		// Token: 0x04027A7E RID: 162430
 		TextRepeatBuy,
-		// Token: 0x0402C76B RID: 182123
+		// Token: 0x04027A7F RID: 162431
 		PanelBuyLimit,
-		// Token: 0x0402C76C RID: 182124
+		// Token: 0x04027A80 RID: 162432
 		TextDesc,
-		// Token: 0x0402C76D RID: 182125
+		// Token: 0x04027A81 RID: 162433
 		CloudGameDesc,
-		// Token: 0x0402C76E RID: 182126
+		// Token: 0x04027A82 RID: 162434
 		CloudGameIcon,
-		// Token: 0x0402C76F RID: 182127
+		// Token: 0x04027A83 RID: 162435
 		TotalTopUpTagRoot
 	}
 }

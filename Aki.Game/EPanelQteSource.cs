@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020022FD RID: 8957
+// Token: 0x020017E1 RID: 6113
 public enum EPanelQteSource
 {
-	// Token: 0x04008608 RID: 34312
+	// Token: 0x04008746 RID: 34630
 	AnimNotify,
-	// Token: 0x04008609 RID: 34313
+	// Token: 0x04008747 RID: 34631
 	Buff,
-	// Token: 0x0400860A RID: 34314
+	// Token: 0x04008748 RID: 34632
 	LevelSequence,
-	// Token: 0x0400860B RID: 34315
+	// Token: 0x04008749 RID: 34633
 	LevelEvent
 }

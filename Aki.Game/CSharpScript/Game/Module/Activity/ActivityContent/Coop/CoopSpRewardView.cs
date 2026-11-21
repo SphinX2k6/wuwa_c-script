@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068E4 RID: 26852
+	// Token: 0x02005834 RID: 22580
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CoopSpRewardView : UiViewBase
 	{
-		// Token: 0x06042FD4 RID: 274388 RVA: 0x010514C7 File Offset: 0x0104F6C7
+		// Token: 0x06037B2C RID: 228140 RVA: 0x00F92AEF File Offset: 0x00F90CEF
 		public CoopSpRewardView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06042FD5 RID: 274389 RVA: 0x010514D0 File Offset: 0x0104F6D0
+		// Token: 0x06037B2D RID: 228141 RVA: 0x00F92AF8 File Offset: 0x00F90CF8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042FD6 RID: 274390 RVA: 0x0105154D File Offset: 0x0104F74D
+		// Token: 0x06037B2E RID: 228142 RVA: 0x00F92B75 File Offset: 0x00F90D75
 		protected override void OnStart()
 		{
 			this.ActivityData = (this.OpenParam as CoopActivityData);
@@ -41,27 +41,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.RefreshRewardLayout(true);
 		}
 
-		// Token: 0x06042FD7 RID: 274391 RVA: 0x01051588 File Offset: 0x0104F788
+		// Token: 0x06037B2F RID: 228143 RVA: 0x00F92BB0 File Offset: 0x00F90DB0
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnCoopLevelUpdate, new Action(this.OnDataUpdate));
 			EventSystem.Instance.Add(EEventName.OnCoopSpUpdate, new Action(this.OnDataUpdate));
 		}
 
-		// Token: 0x06042FD8 RID: 274392 RVA: 0x010515C2 File Offset: 0x0104F7C2
+		// Token: 0x06037B30 RID: 228144 RVA: 0x00F92BEA File Offset: 0x00F90DEA
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCoopLevelUpdate, new Action(this.OnDataUpdate));
 			EventSystem.Instance.Remove(EEventName.OnCoopSpUpdate, new Action(this.OnDataUpdate));
 		}
 
-		// Token: 0x06042FD9 RID: 274393 RVA: 0x010515FC File Offset: 0x0104F7FC
+		// Token: 0x06037B31 RID: 228145 RVA: 0x00F92C24 File Offset: 0x00F90E24
 		private void OnDataUpdate()
 		{
 			this.RefreshRewardLayout(false);
 		}
 
-		// Token: 0x06042FDA RID: 274394 RVA: 0x01051605 File Offset: 0x0104F805
+		// Token: 0x06037B32 RID: 228146 RVA: 0x00F92C2D File Offset: 0x00F90E2D
 		private void RefreshRewardLayout(bool isPlayAnim = false)
 		{
 			this.RewardLayout.RefreshByData(this.ActivityData.CoopSpRewardDataList, delegate
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}, isPlayAnim);
 		}
 
-		// Token: 0x06042FDB RID: 274395 RVA: 0x0105162A File Offset: 0x0104F82A
+		// Token: 0x06037B33 RID: 228147 RVA: 0x00F92C52 File Offset: 0x00F90E52
 		private CoopSpRewardItem CreateRewardItem()
 		{
 			return new CoopSpRewardItem
@@ -84,23 +84,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042FDC RID: 274396 RVA: 0x01051643 File Offset: 0x0104F843
+		// Token: 0x06037B34 RID: 228148 RVA: 0x00F92C6B File Offset: 0x00F90E6B
 		private void OnRewardBtnClick()
 		{
 			CoopActivityController.Instance.RequestCoopSpReward(this.ActivityData);
 		}
 
-		// Token: 0x06042FDD RID: 274397 RVA: 0x01051655 File Offset: 0x0104F855
+		// Token: 0x06037B35 RID: 228149 RVA: 0x00F92C7D File Offset: 0x00F90E7D
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04022DF4 RID: 142836
+		// Token: 0x0401D650 RID: 120400
 		[Nullable(2)]
 		private CoopActivityData ActivityData;
 
-		// Token: 0x04022DF5 RID: 142837
+		// Token: 0x0401D651 RID: 120401
 		private GenericScrollViewNew<CoopSpRewardItem, CoopSpRewardData> RewardLayout;
 	}
 }

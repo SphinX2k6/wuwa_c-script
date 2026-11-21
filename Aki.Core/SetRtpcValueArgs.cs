@@ -7,7 +7,7 @@ using UnrealEngine;
 [Nullable(0)]
 public struct SetRtpcValueArgs
 {
-	// Token: 0x060000BD RID: 189 RVA: 0x0000685F File Offset: 0x00004A5F
+	// Token: 0x060000BF RID: 191 RVA: 0x000065D7 File Offset: 0x000047D7
 	public SetRtpcValueArgs(int? TransitionDuration, EAudioFadeCurve? TransitionFadeCurve, AActor Actor)
 	{
 		this.TransitionDuration = TransitionDuration;
@@ -15,12 +15,12 @@ public struct SetRtpcValueArgs
 		this.Actor = Actor;
 	}
 
-	// Token: 0x040000B0 RID: 176
+	// Token: 0x040000B1 RID: 177
 	public int? TransitionDuration;
 
-	// Token: 0x040000B1 RID: 177
+	// Token: 0x040000B2 RID: 178
 	public EAudioFadeCurve? TransitionFadeCurve;
 
-	// Token: 0x040000B2 RID: 178
+	// Token: 0x040000B3 RID: 179
 	public AActor Actor;
 }

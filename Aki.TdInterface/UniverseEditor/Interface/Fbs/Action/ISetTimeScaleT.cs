@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007098 RID: 28824
+	// Token: 0x02007864 RID: 30820
 	public class ISetTimeScaleT
 	{
-		// Token: 0x1700D62D RID: 54829
-		// (get) Token: 0x060330AA RID: 209066 RVA: 0x006E277D File Offset: 0x006E097D
-		// (set) Token: 0x060330AB RID: 209067 RVA: 0x006E2785 File Offset: 0x006E0985
+		// Token: 0x1700E210 RID: 57872
+		// (get) Token: 0x0603634C RID: 222028 RVA: 0x00742D89 File Offset: 0x00740F89
+		// (set) Token: 0x0603634D RID: 222029 RVA: 0x00742D91 File Offset: 0x00740F91
 		public ISetGlobalTimeScaleT Config { get; set; }
 
-		// Token: 0x060330AC RID: 209068 RVA: 0x006E278E File Offset: 0x006E098E
+		// Token: 0x0603634E RID: 222030 RVA: 0x00742D9A File Offset: 0x00740F9A
 		public ISetTimeScaleT()
 		{
 			this.Config = null;

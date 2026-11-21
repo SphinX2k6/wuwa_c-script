@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004238 RID: 16952
+	// Token: 0x02004694 RID: 18068
 	public struct ITrapDefenseSystemConfig : IFlatbufferObject
 	{
-		// Token: 0x1700785B RID: 30811
-		// (get) Token: 0x060190FE RID: 102654 RVA: 0x0039ACA9 File Offset: 0x00398EA9
+		// Token: 0x17007E8C RID: 32396
+		// (get) Token: 0x0601A86A RID: 108650 RVA: 0x003C6381 File Offset: 0x003C4581
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060190FF RID: 102655 RVA: 0x0039ACB6 File Offset: 0x00398EB6
+		// Token: 0x0601A86B RID: 108651 RVA: 0x003C638E File Offset: 0x003C458E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019100 RID: 102656 RVA: 0x0039ACC0 File Offset: 0x00398EC0
+		// Token: 0x0601A86C RID: 108652 RVA: 0x003C6398 File Offset: 0x003C4598
 		public static ITrapDefenseSystemConfig GetRootAsITrapDefenseSystemConfig(ByteBuffer _bb)
 		{
 			return ITrapDefenseSystemConfig.GetRootAsITrapDefenseSystemConfig(_bb, default(ITrapDefenseSystemConfig));
 		}
 
-		// Token: 0x06019101 RID: 102657 RVA: 0x0039ACDC File Offset: 0x00398EDC
+		// Token: 0x0601A86D RID: 108653 RVA: 0x003C63B4 File Offset: 0x003C45B4
 		public static ITrapDefenseSystemConfig GetRootAsITrapDefenseSystemConfig(ByteBuffer _bb, ITrapDefenseSystemConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019102 RID: 102658 RVA: 0x0039ACF9 File Offset: 0x00398EF9
+		// Token: 0x0601A86E RID: 108654 RVA: 0x003C63D1 File Offset: 0x003C45D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019103 RID: 102659 RVA: 0x0039AD08 File Offset: 0x00398F08
+		// Token: 0x0601A86F RID: 108655 RVA: 0x003C63E0 File Offset: 0x003C45E0
 		public ITrapDefenseSystemConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700785C RID: 30812
-		// (get) Token: 0x06019104 RID: 102660 RVA: 0x0039AD18 File Offset: 0x00398F18
+		// Token: 0x17007E8D RID: 32397
+		// (get) Token: 0x0601A870 RID: 108656 RVA: 0x003C63F0 File Offset: 0x003C45F0
 		public EEnableSystemType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700785D RID: 30813
-		// (get) Token: 0x06019105 RID: 102661 RVA: 0x0039AD54 File Offset: 0x00398F54
+		// Token: 0x17007E8E RID: 32398
+		// (get) Token: 0x0601A871 RID: 108657 RVA: 0x003C642C File Offset: 0x003C462C
 		public int TrapDefenseId
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06019106 RID: 102662 RVA: 0x0039AD90 File Offset: 0x00398F90
+		// Token: 0x0601A872 RID: 108658 RVA: 0x003C6468 File Offset: 0x003C4668
 		public ITrapDefenseSystemVar? Vars(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new ITrapDefenseSystemVar?(default(ITrapDefenseSystemVar).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700785E RID: 30814
-		// (get) Token: 0x06019107 RID: 102663 RVA: 0x0039ADF0 File Offset: 0x00398FF0
+		// Token: 0x17007E8F RID: 32399
+		// (get) Token: 0x0601A873 RID: 108659 RVA: 0x003C64C8 File Offset: 0x003C46C8
 		public int VarsLength
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06019108 RID: 102664 RVA: 0x0039AE1B File Offset: 0x0039901B
+		// Token: 0x0601A874 RID: 108660 RVA: 0x003C64F3 File Offset: 0x003C46F3
 		public static Offset<ITrapDefenseSystemConfig> CreateITrapDefenseSystemConfig(FlatBufferBuilder builder, EEnableSystemType Type = EEnableSystemType.GradingSystem, int TrapDefenseId = 0, VectorOffset VarsOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -114,31 +114,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITrapDefenseSystemConfig.EndITrapDefenseSystemConfig(builder);
 		}
 
-		// Token: 0x06019109 RID: 102665 RVA: 0x0039AE3F File Offset: 0x0039903F
+		// Token: 0x0601A875 RID: 108661 RVA: 0x003C6517 File Offset: 0x003C4717
 		public static void StartITrapDefenseSystemConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601910A RID: 102666 RVA: 0x0039AE48 File Offset: 0x00399048
+		// Token: 0x0601A876 RID: 108662 RVA: 0x003C6520 File Offset: 0x003C4720
 		public static void AddType(FlatBufferBuilder builder, EEnableSystemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601910B RID: 102667 RVA: 0x0039AE53 File Offset: 0x00399053
+		// Token: 0x0601A877 RID: 108663 RVA: 0x003C652B File Offset: 0x003C472B
 		public static void AddTrapDefenseId(FlatBufferBuilder builder, int trapDefenseId)
 		{
 			builder.AddInt(1, trapDefenseId, 0);
 		}
 
-		// Token: 0x0601910C RID: 102668 RVA: 0x0039AE5E File Offset: 0x0039905E
+		// Token: 0x0601A878 RID: 108664 RVA: 0x003C6536 File Offset: 0x003C4736
 		public static void AddVars(FlatBufferBuilder builder, VectorOffset varsOffset)
 		{
 			builder.AddOffset(2, varsOffset.Value, 0);
 		}
 
-		// Token: 0x0601910D RID: 102669 RVA: 0x0039AE70 File Offset: 0x00399070
+		// Token: 0x0601A879 RID: 108665 RVA: 0x003C6548 File Offset: 0x003C4748
 		public static VectorOffset CreateVarsVector(FlatBufferBuilder builder, Offset<ITrapDefenseSystemVar>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601910E RID: 102670 RVA: 0x0039AEB0 File Offset: 0x003990B0
+		// Token: 0x0601A87A RID: 108666 RVA: 0x003C6588 File Offset: 0x003C4788
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, Offset<ITrapDefenseSystemVar>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601910F RID: 102671 RVA: 0x0039AECA File Offset: 0x003990CA
+		// Token: 0x0601A87B RID: 108667 RVA: 0x003C65A2 File Offset: 0x003C47A2
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ITrapDefenseSystemVar>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06019110 RID: 102672 RVA: 0x0039AEE8 File Offset: 0x003990E8
+		// Token: 0x0601A87C RID: 108668 RVA: 0x003C65C0 File Offset: 0x003C47C0
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -173,19 +173,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06019111 RID: 102673 RVA: 0x0039AF01 File Offset: 0x00399101
+		// Token: 0x0601A87D RID: 108669 RVA: 0x003C65D9 File Offset: 0x003C47D9
 		public static void StartVarsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06019112 RID: 102674 RVA: 0x0039AF0C File Offset: 0x0039910C
+		// Token: 0x0601A87E RID: 108670 RVA: 0x003C65E4 File Offset: 0x003C47E4
 		public static Offset<ITrapDefenseSystemConfig> EndITrapDefenseSystemConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrapDefenseSystemConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06019113 RID: 102675 RVA: 0x0039AF1C File Offset: 0x0039911C
+		// Token: 0x0601A87F RID: 108671 RVA: 0x003C65F4 File Offset: 0x003C47F4
 		public ITrapDefenseSystemConfigT UnPack()
 		{
 			ITrapDefenseSystemConfigT trapDefenseSystemConfigT = new ITrapDefenseSystemConfigT();
@@ -193,7 +193,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return trapDefenseSystemConfigT;
 		}
 
-		// Token: 0x06019114 RID: 102676 RVA: 0x0039AF38 File Offset: 0x00399138
+		// Token: 0x0601A880 RID: 108672 RVA: 0x003C6610 File Offset: 0x003C4810
 		public void UnPackTo(ITrapDefenseSystemConfigT _o)
 		{
 			_o.Type = this.Type;
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06019115 RID: 102677 RVA: 0x0039AFB0 File Offset: 0x003991B0
+		// Token: 0x0601A881 RID: 108673 RVA: 0x003C6688 File Offset: 0x003C4888
 		public static Offset<ITrapDefenseSystemConfig> Pack(FlatBufferBuilder builder, ITrapDefenseSystemConfigT _o)
 		{
 			if (_o == null)
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITrapDefenseSystemConfig.CreateITrapDefenseSystemConfig(builder, _o.Type, _o.TrapDefenseId, varsOffset);
 		}
 
-		// Token: 0x0400BEBA RID: 48826
+		// Token: 0x0400C8C7 RID: 51399
 		private Table __p;
 	}
 }

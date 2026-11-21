@@ -3,13 +3,13 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E32 RID: 20018
+	// Token: 0x02003DFB RID: 15867
 	public class RogueTokenData
 	{
-		// Token: 0x0401B602 RID: 112130
+		// Token: 0x04015FD5 RID: 90069
 		public bool? IsReceive = new bool?(false);
 
-		// Token: 0x0401B603 RID: 112131
+		// Token: 0x04015FD6 RID: 90070
 		public RogueToken? Config;
 	}
 }

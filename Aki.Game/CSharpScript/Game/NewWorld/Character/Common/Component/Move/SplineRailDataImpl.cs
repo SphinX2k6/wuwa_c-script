@@ -3,32 +3,32 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070EC RID: 28908
+	// Token: 0x0200639C RID: 25500
 	public class SplineRailDataImpl : ISplineRailData, IRailParam
 	{
-		// Token: 0x17009CC1 RID: 40129
-		// (get) Token: 0x06046938 RID: 289080 RVA: 0x011C2874 File Offset: 0x011C0A74
-		// (set) Token: 0x06046939 RID: 289081 RVA: 0x011C287C File Offset: 0x011C0A7C
+		// Token: 0x1700754A RID: 30026
+		// (get) Token: 0x0603DD31 RID: 253233 RVA: 0x011F1A28 File Offset: 0x011EFC28
+		// (set) Token: 0x0603DD32 RID: 253234 RVA: 0x011F1A30 File Offset: 0x011EFC30
 		public ERailMoveType RailType { get; set; }
 
-		// Token: 0x17009CC2 RID: 40130
-		// (get) Token: 0x0604693A RID: 289082 RVA: 0x011C2885 File Offset: 0x011C0A85
-		// (set) Token: 0x0604693B RID: 289083 RVA: 0x011C288D File Offset: 0x011C0A8D
+		// Token: 0x1700754B RID: 30027
+		// (get) Token: 0x0603DD33 RID: 253235 RVA: 0x011F1A39 File Offset: 0x011EFC39
+		// (set) Token: 0x0603DD34 RID: 253236 RVA: 0x011F1A41 File Offset: 0x011EFC41
 		public ERailJumpType JumpType { get; set; }
 
-		// Token: 0x17009CC3 RID: 40131
-		// (get) Token: 0x0604693C RID: 289084 RVA: 0x011C2896 File Offset: 0x011C0A96
-		// (set) Token: 0x0604693D RID: 289085 RVA: 0x011C289E File Offset: 0x011C0A9E
+		// Token: 0x1700754C RID: 30028
+		// (get) Token: 0x0603DD35 RID: 253237 RVA: 0x011F1A4A File Offset: 0x011EFC4A
+		// (set) Token: 0x0603DD36 RID: 253238 RVA: 0x011F1A52 File Offset: 0x011EFC52
 		public int DefaultNextRailId { get; set; }
 
-		// Token: 0x17009CC4 RID: 40132
-		// (get) Token: 0x0604693E RID: 289086 RVA: 0x011C28A7 File Offset: 0x011C0AA7
-		// (set) Token: 0x0604693F RID: 289087 RVA: 0x011C28AF File Offset: 0x011C0AAF
+		// Token: 0x1700754D RID: 30029
+		// (get) Token: 0x0603DD37 RID: 253239 RVA: 0x011F1A5B File Offset: 0x011EFC5B
+		// (set) Token: 0x0603DD38 RID: 253240 RVA: 0x011F1A63 File Offset: 0x011EFC63
 		public ETriggerKey DefaultTriggerKey { get; set; }
 
-		// Token: 0x17009CC5 RID: 40133
-		// (get) Token: 0x06046940 RID: 289088 RVA: 0x011C28B8 File Offset: 0x011C0AB8
-		// (set) Token: 0x06046941 RID: 289089 RVA: 0x011C28C0 File Offset: 0x011C0AC0
+		// Token: 0x1700754E RID: 30030
+		// (get) Token: 0x0603DD39 RID: 253241 RVA: 0x011F1A6C File Offset: 0x011EFC6C
+		// (set) Token: 0x0603DD3A RID: 253242 RVA: 0x011F1A74 File Offset: 0x011EFC74
 		public int RailId { get; set; }
 	}
 }

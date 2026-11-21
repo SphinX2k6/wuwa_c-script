@@ -5,13 +5,13 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interaction.Mode
 {
-	// Token: 0x0200687C RID: 26748
+	// Token: 0x020057CC RID: 22476
 	[NullableContext(1)]
 	[Nullable(0)]
 	public sealed class NormalInteractionMode : IInteractionMode
 	{
-		// Token: 0x170097AB RID: 38827
-		// (get) Token: 0x06042C84 RID: 273540 RVA: 0x010410CD File Offset: 0x0103F2CD
+		// Token: 0x17006AEC RID: 27372
+		// (get) Token: 0x060377DB RID: 227291 RVA: 0x00F825AD File Offset: 0x00F807AD
 		public EInteractionModeKind Kind
 		{
 			get
@@ -20,8 +20,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x170097AC RID: 38828
-		// (get) Token: 0x06042C85 RID: 273541 RVA: 0x010410D0 File Offset: 0x0103F2D0
+		// Token: 0x17006AED RID: 27373
+		// (get) Token: 0x060377DC RID: 227292 RVA: 0x00F825B0 File Offset: 0x00F807B0
 		public bool IsActive
 		{
 			get
@@ -30,8 +30,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x170097AD RID: 38829
-		// (get) Token: 0x06042C86 RID: 273542 RVA: 0x010410D8 File Offset: 0x0103F2D8
+		// Token: 0x17006AEE RID: 27374
+		// (get) Token: 0x060377DD RID: 227293 RVA: 0x00F825B8 File Offset: 0x00F807B8
 		public ICommitStrategy CommitStrategy
 		{
 			get
@@ -40,33 +40,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x06042C87 RID: 273543 RVA: 0x010410E0 File Offset: 0x0103F2E0
+		// Token: 0x060377DE RID: 227294 RVA: 0x00F825C0 File Offset: 0x00F807C0
 		public NormalInteractionMode(ActivityDangoBrawlData data)
 		{
 			this.Data = data;
 			this.Immediate = new ImmediateCommitStrategy(data);
 		}
 
-		// Token: 0x06042C88 RID: 273544 RVA: 0x010410FB File Offset: 0x0103F2FB
+		// Token: 0x060377DF RID: 227295 RVA: 0x00F825DB File Offset: 0x00F807DB
 		public bool AllowInteract(int configId)
 		{
 			return true;
 		}
 
-		// Token: 0x06042C89 RID: 273545 RVA: 0x010410FE File Offset: 0x0103F2FE
+		// Token: 0x060377E0 RID: 227296 RVA: 0x00F825DE File Offset: 0x00F807DE
 		public bool AllowBuyShopSlot()
 		{
 			return true;
 		}
 
-		// Token: 0x06042C8A RID: 273546 RVA: 0x01041101 File Offset: 0x0103F301
+		// Token: 0x060377E1 RID: 227297 RVA: 0x00F825E1 File Offset: 0x00F807E1
 		public bool TryEnter()
 		{
 			this.m_IsActive = true;
 			return true;
 		}
 
-		// Token: 0x06042C8B RID: 273547 RVA: 0x0104110B File Offset: 0x0103F30B
+		// Token: 0x060377E2 RID: 227298 RVA: 0x00F825EB File Offset: 0x00F807EB
 		[NullableContext(0)]
 		public UniTask<bool> TryExit()
 		{
@@ -74,23 +74,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return UniTask.FromResult<bool>(true);
 		}
 
-		// Token: 0x06042C8C RID: 273548 RVA: 0x0104111A File Offset: 0x0103F31A
+		// Token: 0x060377E3 RID: 227299 RVA: 0x00F825FA File Offset: 0x00F807FA
 		public void Discard()
 		{
 		}
 
-		// Token: 0x06042C8D RID: 273549 RVA: 0x0104111C File Offset: 0x0103F31C
+		// Token: 0x060377E4 RID: 227300 RVA: 0x00F825FC File Offset: 0x00F807FC
 		public void EnqueueBagToBench(int uid)
 		{
 		}
 
-		// Token: 0x04022C1F RID: 142367
+		// Token: 0x0401D47C RID: 119932
 		private readonly ActivityDangoBrawlData Data;
 
-		// Token: 0x04022C20 RID: 142368
+		// Token: 0x0401D47D RID: 119933
 		private readonly ImmediateCommitStrategy Immediate;
 
-		// Token: 0x04022C21 RID: 142369
+		// Token: 0x0401D47E RID: 119934
 		private bool m_IsActive;
 	}
 }

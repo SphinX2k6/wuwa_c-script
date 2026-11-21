@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000183 RID: 387
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200019A RID: 410
 	public class GrabComponent : IComponentBase
 	{
-		// Token: 0x06000560 RID: 1376 RVA: 0x00020578 File Offset: 0x0001E778
+		// Token: 0x06000574 RID: 1396 RVA: 0x00021154 File Offset: 0x0001F354
 		private GrabComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000561 RID: 1377 RVA: 0x000205B0 File Offset: 0x0001E7B0
+		// Token: 0x06000575 RID: 1397 RVA: 0x0002118C File Offset: 0x0001F38C
 		public static GrabComponent Create([Nullable(2)] GrabComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000562 RID: 1378 RVA: 0x000205C3 File Offset: 0x0001E7C3
+		// Token: 0x06000576 RID: 1398 RVA: 0x0002119F File Offset: 0x0001F39F
 		public static GrabComponent CreateFromSetValue([Nullable(2)] GrabComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000563 RID: 1379 RVA: 0x000205D8 File Offset: 0x0001E7D8
+		// Token: 0x06000577 RID: 1399 RVA: 0x000211B4 File Offset: 0x0001F3B4
 		public new GrabComponent_SetValue ToSetValue()
 		{
 			return new GrabComponent_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170001C9 RID: 457
-		// (get) Token: 0x06000564 RID: 1380 RVA: 0x00020628 File Offset: 0x0001E828
-		// (set) Token: 0x06000565 RID: 1381 RVA: 0x00020662 File Offset: 0x0001E862
+		// Token: 0x170001D0 RID: 464
+		// (get) Token: 0x06000578 RID: 1400 RVA: 0x00021204 File Offset: 0x0001F404
+		// (set) Token: 0x06000579 RID: 1401 RVA: 0x0002123E File Offset: 0x0001F43E
 		public override bool? Disabled
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001CA RID: 458
-		// (get) Token: 0x06000566 RID: 1382 RVA: 0x00020670 File Offset: 0x0001E870
-		// (set) Token: 0x06000567 RID: 1383 RVA: 0x0002069A File Offset: 0x0001E89A
+		// Token: 0x170001D1 RID: 465
+		// (get) Token: 0x0600057A RID: 1402 RVA: 0x0002124C File Offset: 0x0001F44C
+		// (set) Token: 0x0600057B RID: 1403 RVA: 0x00021276 File Offset: 0x0001F476
 		public override bool? EdIsLocked
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001CB RID: 459
-		// (get) Token: 0x06000568 RID: 1384 RVA: 0x000206A8 File Offset: 0x0001E8A8
-		// (set) Token: 0x06000569 RID: 1385 RVA: 0x00020709 File Offset: 0x0001E909
+		// Token: 0x170001D2 RID: 466
+		// (get) Token: 0x0600057C RID: 1404 RVA: 0x00021284 File Offset: 0x0001F484
+		// (set) Token: 0x0600057D RID: 1405 RVA: 0x000212E5 File Offset: 0x0001F4E5
 		public virtual VectorInfo GrabPos
 		{
 			get
@@ -137,9 +135,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001CC RID: 460
-		// (get) Token: 0x0600056A RID: 1386 RVA: 0x0002071E File Offset: 0x0001E91E
-		// (set) Token: 0x0600056B RID: 1387 RVA: 0x00020749 File Offset: 0x0001E949
+		// Token: 0x170001D3 RID: 467
+		// (get) Token: 0x0600057E RID: 1406 RVA: 0x000212FA File Offset: 0x0001F4FA
+		// (set) Token: 0x0600057F RID: 1407 RVA: 0x00021325 File Offset: 0x0001F525
 		public virtual int ThrowPow
 		{
 			get
@@ -160,9 +158,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001CD RID: 461
-		// (get) Token: 0x0600056C RID: 1388 RVA: 0x00020757 File Offset: 0x0001E957
-		// (set) Token: 0x0600056D RID: 1389 RVA: 0x00020782 File Offset: 0x0001E982
+		// Token: 0x170001D4 RID: 468
+		// (get) Token: 0x06000580 RID: 1408 RVA: 0x00021333 File Offset: 0x0001F533
+		// (set) Token: 0x06000581 RID: 1409 RVA: 0x0002135E File Offset: 0x0001F55E
 		public virtual int ThrowHight
 		{
 			get
@@ -183,18 +181,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000761 RID: 1889
+		// Token: 0x040007B7 RID: 1975
 		[Nullable(2)]
 		protected new GrabComponent FbInstance;
 
-		// Token: 0x04000762 RID: 1890
+		// Token: 0x040007B8 RID: 1976
 		[Nullable(2)]
 		protected new GrabComponent_SetValue PocoInterface;
 
-		// Token: 0x04000763 RID: 1891
+		// Token: 0x040007B9 RID: 1977
 		private VectorInfo _GrabPosCache;
 
-		// Token: 0x04000764 RID: 1892
+		// Token: 0x040007BA RID: 1978
 		private bool _GrabPosInited;
 	}
 }

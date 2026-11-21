@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016C5 RID: 5829
+	// Token: 0x0200183F RID: 6207
 	[EnumExtensions]
 	public enum ETalkEffectType
 	{
-		// Token: 0x04004EB2 RID: 20146
+		// Token: 0x040052D7 RID: 21207
 		Effect
 	}
 }

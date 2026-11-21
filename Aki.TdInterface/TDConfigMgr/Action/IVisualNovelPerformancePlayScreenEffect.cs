@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200208D RID: 8333
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022D8 RID: 8920
 	public class IVisualNovelPerformancePlayScreenEffect : IVisualNovelPerformanceBase
 	{
-		// Token: 0x0600B732 RID: 46898 RVA: 0x001A891C File Offset: 0x001A6B1C
+		// Token: 0x0600C262 RID: 49762 RVA: 0x001BF194 File Offset: 0x001BD394
 		private IVisualNovelPerformancePlayScreenEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B733 RID: 46899 RVA: 0x001A8954 File Offset: 0x001A6B54
+		// Token: 0x0600C263 RID: 49763 RVA: 0x001BF1CC File Offset: 0x001BD3CC
 		public static IVisualNovelPerformancePlayScreenEffect Create([Nullable(2)] IVisualNovelPerformancePlayScreenEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B734 RID: 46900 RVA: 0x001A8967 File Offset: 0x001A6B67
+		// Token: 0x0600C264 RID: 49764 RVA: 0x001BF1DF File Offset: 0x001BD3DF
 		public static IVisualNovelPerformancePlayScreenEffect CreateFromSetValue([Nullable(2)] IVisualNovelPerformancePlayScreenEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,21 +48,20 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B735 RID: 46901 RVA: 0x001A897A File Offset: 0x001A6B7A
+		// Token: 0x0600C265 RID: 49765 RVA: 0x001BF1F2 File Offset: 0x001BD3F2
 		public new IVisualNovelPerformancePlayScreenEffect_SetValue ToSetValue()
 		{
 			return new IVisualNovelPerformancePlayScreenEffect_SetValue
 			{
 				Type = this.Type,
 				StartTime = this.StartTime,
-				ScreenEffectDa = this.ScreenEffectDa,
-				DestroyCountdown = this.DestroyCountdown
+				EffectConfig = this.EffectConfig
 			};
 		}
 
-		// Token: 0x1700381E RID: 14366
-		// (get) Token: 0x0600B736 RID: 46902 RVA: 0x001A89B1 File Offset: 0x001A6BB1
-		// (set) Token: 0x0600B737 RID: 46903 RVA: 0x001A89DC File Offset: 0x001A6BDC
+		// Token: 0x17003AFD RID: 15101
+		// (get) Token: 0x0600C266 RID: 49766 RVA: 0x001BF21D File Offset: 0x001BD41D
+		// (set) Token: 0x0600C267 RID: 49767 RVA: 0x001BF248 File Offset: 0x001BD448
 		public override EVisualNovelPerformanceType Type
 		{
 			get
@@ -85,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700381F RID: 14367
-		// (get) Token: 0x0600B738 RID: 46904 RVA: 0x001A89EC File Offset: 0x001A6BEC
-		// (set) Token: 0x0600B739 RID: 46905 RVA: 0x001A8A26 File Offset: 0x001A6C26
+		// Token: 0x17003AFE RID: 15102
+		// (get) Token: 0x0600C268 RID: 49768 RVA: 0x001BF258 File Offset: 0x001BD458
+		// (set) Token: 0x0600C269 RID: 49769 RVA: 0x001BF292 File Offset: 0x001BD492
 		public override float? StartTime
 		{
 			get
@@ -109,58 +106,35 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003820 RID: 14368
-		// (get) Token: 0x0600B73A RID: 46906 RVA: 0x001A8A34 File Offset: 0x001A6C34
-		// (set) Token: 0x0600B73B RID: 46907 RVA: 0x001A8A5F File Offset: 0x001A6C5F
-		public virtual string ScreenEffectDa
+		// Token: 0x17003AFF RID: 15103
+		// (get) Token: 0x0600C26A RID: 49770 RVA: 0x001BF2A0 File Offset: 0x001BD4A0
+		// (set) Token: 0x0600C26B RID: 49771 RVA: 0x001BF2C7 File Offset: 0x001BD4C7
+		public virtual IVisualNovelPlayScreenEffectConfigBase EffectConfig
 		{
 			get
 			{
 				if (this.FbInstance != null)
 				{
-					return this.FbInstance.ScreenEffectDa;
-				}
-				if (this.PocoInterface == null)
-				{
-					return null;
-				}
-				return this.PocoInterface.ScreenEffectDa;
-			}
-			set
-			{
-				this.GetOrCreatePoco().ScreenEffectDa = value;
-			}
-		}
-
-		// Token: 0x17003821 RID: 14369
-		// (get) Token: 0x0600B73C RID: 46908 RVA: 0x001A8A70 File Offset: 0x001A6C70
-		// (set) Token: 0x0600B73D RID: 46909 RVA: 0x001A8AAA File Offset: 0x001A6CAA
-		public virtual float? DestroyCountdown
-		{
-			get
-			{
-				if (this.FbInstance != null)
-				{
-					return this.FbInstance.DestroyCountdown;
+					return this.FbInstance.EffectConfig;
 				}
 				IVisualNovelPerformancePlayScreenEffect_SetValue pocoInterface = this.PocoInterface;
 				if (pocoInterface == null)
 				{
 					return null;
 				}
-				return pocoInterface.DestroyCountdown;
+				return pocoInterface.EffectConfig;
 			}
 			set
 			{
-				this.GetOrCreatePoco().DestroyCountdown = value;
+				this.GetOrCreatePoco().EffectConfig = value;
 			}
 		}
 
-		// Token: 0x04006E01 RID: 28161
+		// Token: 0x0400740E RID: 29710
 		[Nullable(2)]
 		protected new IVisualNovelPerformancePlayScreenEffect FbInstance;
 
-		// Token: 0x04006E02 RID: 28162
+		// Token: 0x0400740F RID: 29711
 		[Nullable(2)]
 		protected new IVisualNovelPerformancePlayScreenEffect_SetValue PocoInterface;
 	}

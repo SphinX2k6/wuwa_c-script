@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.TDConfigMgr.Action;
@@ -12,15 +11,15 @@ using CSharpScript.Module.InstanceDungeon;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B80 RID: 27520
+	// Token: 0x02005CF8 RID: 23800
 	public class LevelEventSettlementDungeon : LevelEventBase
 	{
-		// Token: 0x06044269 RID: 279145 RVA: 0x010CA6FE File Offset: 0x010C88FE
+		// Token: 0x0603A3BB RID: 238523 RVA: 0x01074372 File Offset: 0x01072572
 		public LevelEventSettlementDungeon(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604426A RID: 279146 RVA: 0x010CA708 File Offset: 0x010C8908
+		// Token: 0x0603A3BC RID: 238524 RVA: 0x0107437C File Offset: 0x0107257C
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -77,26 +76,35 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			string item4 = regressDoubleDropTuple.Item4;
 			string item5 = regressDoubleDropTuple.Item5;
 			bool flag3 = dungeonUpActivity != null && dungeonUpActivity.LeftUpCount > 0;
-			if (!item && FunctionModel.Instance.IsOpen(EFunctionType.PowerMagnificationReward))
+			IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("MultiExchangeInstType");
+			bool flag4 = false;
+			if (intArrayConfig != null)
 			{
-				IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("MultiExchangeInstType");
-				if (intArrayConfig != null && intArrayConfig.Contains(config.Value.InstSubType))
+				for (int i = 0; i < intArrayConfig.Count; i++)
 				{
-					PowerMagnificationRewardPopViewData powerMagnificationRewardPopViewData = new PowerMagnificationRewardPopViewData();
-					powerMagnificationRewardPopViewData.SinglePowerCost = costPower.Value;
-					powerMagnificationRewardPopViewData.RewardCallBack = delegate(int count)
+					if (intArrayConfig[i] == config.Value.InstSubType)
 					{
-						InstanceDungeonController.Instance.GetInstExchangeRewardRequest(count);
-					};
-					PowerMagnificationRewardPopViewData powerMagnificationRewardPopViewData2 = powerMagnificationRewardPopViewData;
-					if (flag3)
-					{
-						powerMagnificationRewardPopViewData2.Tip = dungeonUpActivity.GetFullTip();
+						flag4 = true;
+						break;
 					}
-					UiManager.Instance.OpenView(EUiViewName.PowerMagnificationRewardPopView, powerMagnificationRewardPopViewData2, null);
-					base.FinishExecute(true, false, true);
-					return;
 				}
+			}
+			if (!item && FunctionModel.Instance.IsOpen(EFunctionType.PowerMagnificationReward) && flag4)
+			{
+				PowerMagnificationRewardPopViewData powerMagnificationRewardPopViewData = new PowerMagnificationRewardPopViewData();
+				powerMagnificationRewardPopViewData.SinglePowerCost = costPower.Value;
+				powerMagnificationRewardPopViewData.RewardCallBack = delegate(int count)
+				{
+					InstanceDungeonController.Instance.GetInstExchangeRewardRequest(count);
+				};
+				PowerMagnificationRewardPopViewData powerMagnificationRewardPopViewData2 = powerMagnificationRewardPopViewData;
+				if (flag3)
+				{
+					powerMagnificationRewardPopViewData2.Tip = dungeonUpActivity.GetFullTip();
+				}
+				UiManager.Instance.OpenView(EUiViewName.PowerMagnificationRewardPopView, powerMagnificationRewardPopViewData2, null);
+				base.FinishExecute(true, false, true);
+				return;
 			}
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ReceiveLevelPlayReward);
 			confirmBoxDataNew.ShowPowerItem = true;
@@ -134,7 +142,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0604426B RID: 279147 RVA: 0x010CAA54 File Offset: 0x010C8C54
+		// Token: 0x0603A3BD RID: 238525 RVA: 0x010746EC File Offset: 0x010728EC
 		public void OpenInstanceRewardTimesNotEnoughConfirmBox()
 		{
 			LevelEventSettlementDungeon.<>c__DisplayClass2_0 CS$<>8__locals1 = new LevelEventSettlementDungeon.<>c__DisplayClass2_0();
@@ -154,7 +162,9 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			{
 				if (!CS$<>8__locals1.isMulti.GetValueOrDefault())
 				{
-					InstanceDungeonEntranceController.Instance.RestartInstanceDungeon();
+					InstanceDungeonEntranceController instance2 = InstanceDungeonEntranceController.Instance;
+					bool currentRechallengeInInst = instance2.GetCurrentRechallengeInInst();
+					instance2.RestartInstanceDungeon(currentRechallengeInInst);
 					return;
 				}
 				InstanceDungeonEntranceController.Instance.LeaveInstanceDungeon();

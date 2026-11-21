@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200117E RID: 4478
+	// Token: 0x020012B4 RID: 4788
 	public struct TurntableInfo : IFlatbufferObject
 	{
-		// Token: 0x17003D07 RID: 15623
-		// (get) Token: 0x0600E5C5 RID: 58821 RVA: 0x0033D908 File Offset: 0x0033BB08
+		// Token: 0x1700406B RID: 16491
+		// (get) Token: 0x0600F333 RID: 62259 RVA: 0x00368700 File Offset: 0x00366900
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E5C6 RID: 58822 RVA: 0x0033D915 File Offset: 0x0033BB15
+		// Token: 0x0600F334 RID: 62260 RVA: 0x0036870D File Offset: 0x0036690D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E5C7 RID: 58823 RVA: 0x0033D91C File Offset: 0x0033BB1C
+		// Token: 0x0600F335 RID: 62261 RVA: 0x00368714 File Offset: 0x00366914
 		public static TurntableInfo GetRootAsTurntableInfo(ByteBuffer _bb)
 		{
 			return TurntableInfo.GetRootAsTurntableInfo(_bb, default(TurntableInfo));
 		}
 
-		// Token: 0x0600E5C8 RID: 58824 RVA: 0x0033D938 File Offset: 0x0033BB38
+		// Token: 0x0600F336 RID: 62262 RVA: 0x00368730 File Offset: 0x00366930
 		public static TurntableInfo GetRootAsTurntableInfo(ByteBuffer _bb, TurntableInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E5C9 RID: 58825 RVA: 0x0033D955 File Offset: 0x0033BB55
+		// Token: 0x0600F337 RID: 62263 RVA: 0x0036874D File Offset: 0x0036694D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E5CA RID: 58826 RVA: 0x0033D964 File Offset: 0x0033BB64
+		// Token: 0x0600F338 RID: 62264 RVA: 0x0036875C File Offset: 0x0036695C
 		public TurntableInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003D08 RID: 15624
-		// (get) Token: 0x0600E5CB RID: 58827 RVA: 0x0033D974 File Offset: 0x0033BB74
+		// Token: 0x1700406C RID: 16492
+		// (get) Token: 0x0600F339 RID: 62265 RVA: 0x0036876C File Offset: 0x0036696C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003D09 RID: 15625
-		// (get) Token: 0x0600E5CC RID: 58828 RVA: 0x0033D9B0 File Offset: 0x0033BBB0
+		// Token: 0x1700406D RID: 16493
+		// (get) Token: 0x0600F33A RID: 62266 RVA: 0x003687A8 File Offset: 0x003669A8
 		public int CostItemId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003D0A RID: 15626
-		// (get) Token: 0x0600E5CD RID: 58829 RVA: 0x0033D9EC File Offset: 0x0033BBEC
+		// Token: 0x1700406E RID: 16494
+		// (get) Token: 0x0600F33B RID: 62267 RVA: 0x003687E4 File Offset: 0x003669E4
 		public int CostItemCount
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003D0B RID: 15627
-		// (get) Token: 0x0600E5CE RID: 58830 RVA: 0x0033DA28 File Offset: 0x0033BC28
+		// Token: 0x1700406F RID: 16495
+		// (get) Token: 0x0600F33C RID: 62268 RVA: 0x00368820 File Offset: 0x00366A20
 		public int TurntableType
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x040052C5 RID: 21189
+		// Token: 0x04005908 RID: 22792
 		private Table __p;
 	}
 }

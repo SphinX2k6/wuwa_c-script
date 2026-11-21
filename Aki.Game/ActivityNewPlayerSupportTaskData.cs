@@ -5,19 +5,19 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x020013BA RID: 5050
+// Token: 0x0200086E RID: 2158
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityNewPlayerSupportTaskData
 {
-	// Token: 0x06008E74 RID: 36468 RVA: 0x001EBC96 File Offset: 0x001E9E96
+	// Token: 0x06006209 RID: 25097 RVA: 0x001F47B6 File Offset: 0x001F29B6
 	public ActivityNewPlayerSupportTaskData(int id)
 	{
 		this.Id = id;
 		this.TaskConfig = ActivityNewPlayerSupportConfig.Instance.GetTaskConfig(id);
 	}
 
-	// Token: 0x06008E75 RID: 36469 RVA: 0x001EBCB6 File Offset: 0x001E9EB6
+	// Token: 0x0600620A RID: 25098 RVA: 0x001F47D6 File Offset: 0x001F29D6
 	public void Refresh(ConditionTask taskData)
 	{
 		this.TaskStatus = taskData.Status;
@@ -25,7 +25,7 @@ public class ActivityNewPlayerSupportTaskData
 		this.TaskTarget = taskData.Target;
 	}
 
-	// Token: 0x06008E76 RID: 36470 RVA: 0x001EBCDC File Offset: 0x001E9EDC
+	// Token: 0x0600620B RID: 25099 RVA: 0x001F47FC File Offset: 0x001F29FC
 	public List<TItem> GetRewardList()
 	{
 		int normalDropId = this.TaskConfig.NormalDropId;
@@ -36,13 +36,13 @@ public class ActivityNewPlayerSupportTaskData
 		return CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreviewItemList(normalDropId);
 	}
 
-	// Token: 0x06008E77 RID: 36471 RVA: 0x001EBD10 File Offset: 0x001E9F10
+	// Token: 0x0600620C RID: 25100 RVA: 0x001F4830 File Offset: 0x001F2A30
 	public string GetRewardName()
 	{
 		return this.TaskConfig.RewardName;
 	}
 
-	// Token: 0x06008E78 RID: 36472 RVA: 0x001EBD2C File Offset: 0x001E9F2C
+	// Token: 0x0600620D RID: 25101 RVA: 0x001F484C File Offset: 0x001F2A4C
 	public string GetProgressText()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler;
@@ -61,54 +61,54 @@ public class ActivityNewPlayerSupportTaskData
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06008E79 RID: 36473 RVA: 0x001EBDB1 File Offset: 0x001E9FB1
+	// Token: 0x0600620E RID: 25102 RVA: 0x001F48D1 File Offset: 0x001F2AD1
 	public void SetTaskStatus(ConditionTaskState status)
 	{
 		this.TaskStatus = status;
 	}
 
-	// Token: 0x06008E7A RID: 36474 RVA: 0x001EBDBA File Offset: 0x001E9FBA
+	// Token: 0x0600620F RID: 25103 RVA: 0x001F48DA File Offset: 0x001F2ADA
 	public ConditionTaskState GetTaskStatus()
 	{
 		return this.TaskStatus;
 	}
 
-	// Token: 0x06008E7B RID: 36475 RVA: 0x001EBDC2 File Offset: 0x001E9FC2
+	// Token: 0x06006210 RID: 25104 RVA: 0x001F48E2 File Offset: 0x001F2AE2
 	public int GetTaskTarget()
 	{
 		return this.TaskTarget;
 	}
 
-	// Token: 0x06008E7C RID: 36476 RVA: 0x001EBDCA File Offset: 0x001E9FCA
+	// Token: 0x06006211 RID: 25105 RVA: 0x001F48EA File Offset: 0x001F2AEA
 	public bool CanReceiveReward()
 	{
 		return this.TaskStatus == ConditionTaskState.ConditionTaskFinish;
 	}
 
-	// Token: 0x06008E7D RID: 36477 RVA: 0x001EBDD5 File Offset: 0x001E9FD5
+	// Token: 0x06006212 RID: 25106 RVA: 0x001F48F5 File Offset: 0x001F2AF5
 	public bool IsTaskReceived()
 	{
 		return this.TaskStatus == ConditionTaskState.ConditionTaskTaken;
 	}
 
-	// Token: 0x06008E7E RID: 36478 RVA: 0x001EBDE0 File Offset: 0x001E9FE0
+	// Token: 0x06006213 RID: 25107 RVA: 0x001F4900 File Offset: 0x001F2B00
 	public bool IsTaskRunning()
 	{
 		return this.TaskStatus == ConditionTaskState.ConditionTaskRunning;
 	}
 
-	// Token: 0x04003F0E RID: 16142
+	// Token: 0x04003FA6 RID: 16294
 	public readonly int Id;
 
-	// Token: 0x04003F0F RID: 16143
+	// Token: 0x04003FA7 RID: 16295
 	public readonly NewPlayerSupportTask TaskConfig;
 
-	// Token: 0x04003F10 RID: 16144
+	// Token: 0x04003FA8 RID: 16296
 	private ConditionTaskState TaskStatus;
 
-	// Token: 0x04003F11 RID: 16145
+	// Token: 0x04003FA9 RID: 16297
 	private int TaskCurrent;
 
-	// Token: 0x04003F12 RID: 16146
+	// Token: 0x04003FAA RID: 16298
 	private int TaskTarget;
 }

@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 {
-	// Token: 0x020051AC RID: 20908
+	// Token: 0x0200417C RID: 16764
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 	})]
 	public class CollectBadgeGroupItem : GridProxyAbstract<CollectBadgeGroupData>
 	{
-		// Token: 0x0603588F RID: 219279 RVA: 0x00CAE888 File Offset: 0x00CACA88
+		// Token: 0x0602A78A RID: 173962 RVA: 0x00BFBEC4 File Offset: 0x00BFA0C4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,13 +27,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			};
 		}
 
-		// Token: 0x06035890 RID: 219280 RVA: 0x00CAE8E2 File Offset: 0x00CACAE2
+		// Token: 0x0602A78B RID: 173963 RVA: 0x00BFBF1E File Offset: 0x00BFA11E
 		protected override void OnStart()
 		{
 			this.LayoutBadge = new GenericLayout<CollectBadgeItem, int>(base.GetGridLayout(1), new Func<CollectBadgeItem>(this.CreateBadgeItem), null, false, true);
 		}
 
-		// Token: 0x06035891 RID: 219281 RVA: 0x00CAE905 File Offset: 0x00CACB05
+		// Token: 0x0602A78C RID: 173964 RVA: 0x00BFBF41 File Offset: 0x00BFA141
 		private CollectBadgeItem CreateBadgeItem()
 		{
 			return new CollectBadgeItem
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			};
 		}
 
-		// Token: 0x06035892 RID: 219282 RVA: 0x00CAE930 File Offset: 0x00CACB30
+		// Token: 0x0602A78D RID: 173965 RVA: 0x00BFBF6C File Offset: 0x00BFA16C
 		public override void Refresh(CollectBadgeGroupData data, bool isSelected, int gridIndex)
 		{
 			this.GroupId = data.GroupId;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			this.LayoutBadge.RefreshByData(data.BadgeIdList, null, false);
 		}
 
-		// Token: 0x06035893 RID: 219283 RVA: 0x00CAE98A File Offset: 0x00CACB8A
+		// Token: 0x0602A78E RID: 173966 RVA: 0x00BFBFC6 File Offset: 0x00BFA1C6
 		private void OnClickBadge(int badgeId)
 		{
 			if (this.CallbackClickBadge != null && this.GroupId > 0)
@@ -61,71 +61,71 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			}
 		}
 
-		// Token: 0x06035894 RID: 219284 RVA: 0x00CAE9AA File Offset: 0x00CACBAA
+		// Token: 0x0602A78F RID: 173967 RVA: 0x00BFBFE6 File Offset: 0x00BFA1E6
 		private bool OnCanChange(int badgeId, EToggleState state)
 		{
 			return this.CallbackCanChange != null && this.GroupId > 0 && this.CallbackCanChange(badgeId, state);
 		}
 
-		// Token: 0x06035895 RID: 219285 RVA: 0x00CAE9CC File Offset: 0x00CACBCC
+		// Token: 0x0602A790 RID: 173968 RVA: 0x00BFC008 File Offset: 0x00BFA208
 		public void SetSelect(int badgeId)
 		{
 			this.LayoutBadge.DeselectCurrentGridProxy();
 			this.LayoutBadge.SelectGridProxyByKey(badgeId, false);
 		}
 
-		// Token: 0x06035896 RID: 219286 RVA: 0x00CAE9EB File Offset: 0x00CACBEB
+		// Token: 0x0602A791 RID: 173969 RVA: 0x00BFC027 File Offset: 0x00BFA227
 		public void SetSelectByIndex(int index)
 		{
 			this.LayoutBadge.DeselectCurrentGridProxy();
 			this.LayoutBadge.SelectGridProxy(index, false);
 		}
 
-		// Token: 0x06035897 RID: 219287 RVA: 0x00CAEA05 File Offset: 0x00CACC05
+		// Token: 0x0602A792 RID: 173970 RVA: 0x00BFC041 File Offset: 0x00BFA241
 		public void SetDeselect()
 		{
 			this.LayoutBadge.DeselectCurrentGridProxy();
 		}
 
-		// Token: 0x06035898 RID: 219288 RVA: 0x00CAEA12 File Offset: 0x00CACC12
+		// Token: 0x0602A793 RID: 173971 RVA: 0x00BFC04E File Offset: 0x00BFA24E
 		public override void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x06035899 RID: 219289 RVA: 0x00CAEA14 File Offset: 0x00CACC14
+		// Token: 0x0602A794 RID: 173972 RVA: 0x00BFC050 File Offset: 0x00BFA250
 		public override void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0603589A RID: 219290 RVA: 0x00CAEA16 File Offset: 0x00CACC16
+		// Token: 0x0602A795 RID: 173973 RVA: 0x00BFC052 File Offset: 0x00BFA252
 		public override object GetKey(CollectBadgeGroupData data, int displayIndex)
 		{
 			return this.GroupId;
 		}
 
-		// Token: 0x0401C6C6 RID: 116422
+		// Token: 0x040170FB RID: 94459
 		private int GroupId;
 
-		// Token: 0x0401C6C7 RID: 116423
+		// Token: 0x040170FC RID: 94460
 		private GenericLayout<CollectBadgeItem, int> LayoutBadge;
 
-		// Token: 0x0401C6C8 RID: 116424
+		// Token: 0x040170FD RID: 94461
 		public Action<int, CollectBadgeGroupItem> CallbackClickBadge;
 
-		// Token: 0x0401C6C9 RID: 116425
+		// Token: 0x040170FE RID: 94462
 		public Func<int, EToggleState, bool> CallbackCanChange;
 
-		// Token: 0x0200B333 RID: 45875
+		// Token: 0x02009D6B RID: 40299
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x040364FA RID: 222458
+			// Token: 0x04030F4D RID: 200525
 			public const int TextTypeName = 0;
 
-			// Token: 0x040364FB RID: 222459
+			// Token: 0x04030F4E RID: 200526
 			public const int LayoutBadge = 1;
 
-			// Token: 0x040364FC RID: 222460
+			// Token: 0x04030F4F RID: 200527
 			public const int ItemBadge = 2;
 		}
 	}

@@ -5,11 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BF6 RID: 3062
+	// Token: 0x02000CC6 RID: 3270
 	public class IEntityPackageData
 	{
-		// Token: 0x06004657 RID: 18007 RVA: 0x000B1B4E File Offset: 0x000AFD4E
-		[NullableContext(1)]
+		// Token: 0x06004ABA RID: 19130 RVA: 0x000BBD1A File Offset: 0x000B9F1A
 		public static IEntityPackageData Create(IEntityPackageData? instance)
 		{
 			if (instance == null)
@@ -22,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001428 RID: 5160
-		// (get) Token: 0x06004658 RID: 18008 RVA: 0x000B1B70 File Offset: 0x000AFD70
+		// Token: 0x17001529 RID: 5417
+		// (get) Token: 0x06004ABB RID: 19131 RVA: 0x000BBD3C File Offset: 0x000B9F3C
 		public virtual int? PackagedLevelId
 		{
 			get
@@ -36,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001429 RID: 5161
-		// (get) Token: 0x06004659 RID: 18009 RVA: 0x000B1BA8 File Offset: 0x000AFDA8
+		// Token: 0x1700152A RID: 5418
+		// (get) Token: 0x06004ABC RID: 19132 RVA: 0x000BBD74 File Offset: 0x000B9F74
 		public virtual int? PackageEntityId
 		{
 			get
@@ -50,19 +49,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700142A RID: 5162
-		// (get) Token: 0x0600465A RID: 18010 RVA: 0x000B1BE0 File Offset: 0x000AFDE0
+		// Token: 0x1700152B RID: 5419
+		// (get) Token: 0x06004ABD RID: 19133 RVA: 0x000BBDAC File Offset: 0x000B9FAC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IEntityPackageNode> PackageTree
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -85,18 +84,18 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400280B RID: 10251
+		// Token: 0x04002A57 RID: 10839
 		private IEntityPackageData Instance;
 
-		// Token: 0x0400280C RID: 10252
+		// Token: 0x04002A58 RID: 10840
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IEntityPackageNode> _PackageTreeCache;
 
-		// Token: 0x0400280D RID: 10253
+		// Token: 0x04002A59 RID: 10841
 		private bool _PackageTreeInited;
 	}
 }

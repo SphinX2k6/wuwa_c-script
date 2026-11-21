@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B0F RID: 2831
+	// Token: 0x02000BDD RID: 3037
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IGazeCondition
 	{
-		// Token: 0x06004169 RID: 16745 RVA: 0x000A7F57 File Offset: 0x000A6157
-		[NullableContext(1)]
+		// Token: 0x060045BF RID: 17855 RVA: 0x000B1F82 File Offset: 0x000B0182
+		[NullableContext(0)]
 		public static IGazeCondition Create(IGazeCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001108 RID: 4360
-		// (get) Token: 0x0600416A RID: 16746 RVA: 0x000A7F78 File Offset: 0x000A6178
+		// Token: 0x17001200 RID: 4608
+		// (get) Token: 0x060045C0 RID: 17856 RVA: 0x000B1FA4 File Offset: 0x000B01A4
 		public virtual int? GazeInDistance
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001109 RID: 4361
-		// (get) Token: 0x0600416B RID: 16747 RVA: 0x000A7FAE File Offset: 0x000A61AE
+		// Token: 0x17001201 RID: 4609
+		// (get) Token: 0x060045C1 RID: 17857 RVA: 0x000B1FDA File Offset: 0x000B01DA
 		public virtual IConeTriggerShape ScanRange
 		{
 			get
@@ -54,13 +54,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040024DA RID: 9434
+		// Token: 0x0400271E RID: 10014
 		private IGazeCondition Instance;
 
-		// Token: 0x040024DB RID: 9435
+		// Token: 0x0400271F RID: 10015
 		private IConeTriggerShape _ScanRangeCache;
 
-		// Token: 0x040024DC RID: 9436
+		// Token: 0x04002720 RID: 10016
 		private bool _ScanRangeInited;
 	}
 }

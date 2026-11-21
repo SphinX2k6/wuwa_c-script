@@ -8,17 +8,17 @@ using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017AC RID: 6060
+// Token: 0x02000C65 RID: 3173
 [NullableContext(1)]
 [Nullable(0)]
 public class QuickChatView : UiViewBase
 {
-	// Token: 0x0600B0D9 RID: 45273 RVA: 0x0028097B File Offset: 0x0027EB7B
+	// Token: 0x060084C1 RID: 33985 RVA: 0x0028AF13 File Offset: 0x00289113
 	public QuickChatView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600B0DA RID: 45274 RVA: 0x00280990 File Offset: 0x0027EB90
+	// Token: 0x060084C2 RID: 33986 RVA: 0x0028AF28 File Offset: 0x00289128
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -43,7 +43,7 @@ public class QuickChatView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B0DB RID: 45275 RVA: 0x00280A78 File Offset: 0x0027EC78
+	// Token: 0x060084C3 RID: 33987 RVA: 0x0028B010 File Offset: 0x00289210
 	protected override void OnStart()
 	{
 		this.ChatInputMaxNum = ConfigCommonParamById.GetIntConfig("chat_character").Value;
@@ -55,7 +55,7 @@ public class QuickChatView : UiViewBase
 		this.CreateAllQuackChatText();
 	}
 
-	// Token: 0x0600B0DC RID: 45276 RVA: 0x00280AC4 File Offset: 0x0027ECC4
+	// Token: 0x060084C4 RID: 33988 RVA: 0x0028B05C File Offset: 0x0028925C
 	private void CreateAllQuackChatText()
 	{
 		IReadOnlyList<QuickChat> allQuickChatConfigList = ChatConfig.Instance.GetAllQuickChatConfigList();
@@ -78,7 +78,7 @@ public class QuickChatView : UiViewBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0600B0DD RID: 45277 RVA: 0x00280B8C File Offset: 0x0027ED8C
+	// Token: 0x060084C5 RID: 33989 RVA: 0x0028B124 File Offset: 0x00289324
 	private void OnQuickChatTextClicked(string quickChatString)
 	{
 		ChatRoom joinedChatRoom = ChatModel.Instance.GetJoinedChatRoom();
@@ -106,7 +106,7 @@ public class QuickChatView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600B0DE RID: 45278 RVA: 0x00280C1C File Offset: 0x0027EE1C
+	// Token: 0x060084C6 RID: 33990 RVA: 0x0028B1B4 File Offset: 0x002893B4
 	private void PrivateChatRequest(string text, ChatContentType chatContentType)
 	{
 		if (StringUtils.IsEmpty(text))
@@ -171,19 +171,19 @@ public class QuickChatView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B0DF RID: 45279 RVA: 0x00280D85 File Offset: 0x0027EF85
+	// Token: 0x060084C7 RID: 33991 RVA: 0x0028B31D File Offset: 0x0028951D
 	private void OnClickCloseQuickChatButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600B0E0 RID: 45280 RVA: 0x00280D8E File Offset: 0x0027EF8E
+	// Token: 0x060084C8 RID: 33992 RVA: 0x0028B326 File Offset: 0x00289526
 	protected override void OnBeforeDestroy()
 	{
 		this.DestroyAllQuackChatText();
 	}
 
-	// Token: 0x0600B0E1 RID: 45281 RVA: 0x00280D98 File Offset: 0x0027EF98
+	// Token: 0x060084C9 RID: 33993 RVA: 0x0028B330 File Offset: 0x00289530
 	private void DestroyAllQuackChatText()
 	{
 		foreach (QuickChatText quickChatText in this.QuickChatTextList)
@@ -192,26 +192,26 @@ public class QuickChatView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400503A RID: 20538
+	// Token: 0x040050E4 RID: 20708
 	public int ChatInputMaxNum;
 
-	// Token: 0x0400503B RID: 20539
+	// Token: 0x040050E5 RID: 20709
 	private readonly List<QuickChatText> QuickChatTextList = new List<QuickChatText>();
 
-	// Token: 0x02007DC4 RID: 32196
+	// Token: 0x02006F4A RID: 28490
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x040292C9 RID: 168649
+		// Token: 0x040245F4 RID: 148980
 		public const int QuickChatPanelItem = 0;
 
-		// Token: 0x040292CA RID: 168650
+		// Token: 0x040245F5 RID: 148981
 		public const int CloseQuickChatButton = 1;
 
-		// Token: 0x040292CB RID: 168651
+		// Token: 0x040245F6 RID: 148982
 		public const int QuickChatContentItem = 2;
 
-		// Token: 0x040292CC RID: 168652
+		// Token: 0x040245F7 RID: 148983
 		public const int SourceQuickChatItem = 3;
 	}
 }

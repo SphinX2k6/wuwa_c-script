@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F8C RID: 8076
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021C9 RID: 8649
 	public class ITargetEntityType
 	{
-		// Token: 0x0600B1A6 RID: 45478 RVA: 0x0019E6FC File Offset: 0x0019C8FC
+		// Token: 0x0600BC8A RID: 48266 RVA: 0x001B4790 File Offset: 0x001B2990
 		private ITargetEntityType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B1A7 RID: 45479 RVA: 0x0019E734 File Offset: 0x0019C934
+		// Token: 0x0600BC8B RID: 48267 RVA: 0x001B47C8 File Offset: 0x001B29C8
 		public static ITargetEntityType Create([Nullable(2)] ITargetEntityType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B1A8 RID: 45480 RVA: 0x0019E747 File Offset: 0x0019C947
+		// Token: 0x0600BC8C RID: 48268 RVA: 0x001B47DB File Offset: 0x001B29DB
 		public static ITargetEntityType CreateFromSetValue([Nullable(2)] ITargetEntityType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B1A9 RID: 45481 RVA: 0x0019E75A File Offset: 0x0019C95A
+		// Token: 0x0600BC8D RID: 48269 RVA: 0x001B47EE File Offset: 0x001B29EE
 		public ITargetEntityType_SetValue ToSetValue()
 		{
 			return new ITargetEntityType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036D9 RID: 14041
-		// (get) Token: 0x0600B1AA RID: 45482 RVA: 0x0019E76D File Offset: 0x0019C96D
-		// (set) Token: 0x0600B1AB RID: 45483 RVA: 0x0019E798 File Offset: 0x0019C998
+		// Token: 0x170039A7 RID: 14759
+		// (get) Token: 0x0600BC8E RID: 48270 RVA: 0x001B4801 File Offset: 0x001B2A01
+		// (set) Token: 0x0600BC8F RID: 48271 RVA: 0x001B482C File Offset: 0x001B2A2C
 		public virtual ETargetEntityType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B64 RID: 27492
+		// Token: 0x04007152 RID: 29010
 		[Nullable(2)]
 		protected ITargetEntityType FbInstance;
 
-		// Token: 0x04006B65 RID: 27493
+		// Token: 0x04007153 RID: 29011
 		[Nullable(2)]
 		protected ITargetEntityType_SetValue PocoInterface;
 	}

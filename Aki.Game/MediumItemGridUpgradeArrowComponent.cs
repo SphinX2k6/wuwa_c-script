@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200193F RID: 6463
+// Token: 0x02000DFB RID: 3579
 public class MediumItemGridUpgradeArrowComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BCEA RID: 48362 RVA: 0x002ABD9E File Offset: 0x002A9F9E
+	// Token: 0x060090E5 RID: 37093 RVA: 0x002B686A File Offset: 0x002B4A6A
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_UpgradeArrow";
 	}
 
-	// Token: 0x0600BCEB RID: 48363 RVA: 0x002ABDA8 File Offset: 0x002A9FA8
+	// Token: 0x060090E6 RID: 37094 RVA: 0x002B6874 File Offset: 0x002B4A74
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{

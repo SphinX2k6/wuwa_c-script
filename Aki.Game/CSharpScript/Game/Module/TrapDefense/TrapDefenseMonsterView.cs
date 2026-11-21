@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AC3 RID: 19139
+	// Token: 0x02003A6B RID: 14955
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseMonsterView : UiViewBase
 	{
-		// Token: 0x0603194D RID: 203085 RVA: 0x00B7F2D3 File Offset: 0x00B7D4D3
+		// Token: 0x060266DD RID: 157405 RVA: 0x00AC3287 File Offset: 0x00AC1487
 		public TrapDefenseMonsterView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603194E RID: 203086 RVA: 0x00B7F2F4 File Offset: 0x00B7D4F4
+		// Token: 0x060266DE RID: 157406 RVA: 0x00AC32A8 File Offset: 0x00AC14A8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603194F RID: 203087 RVA: 0x00B7F468 File Offset: 0x00B7D668
+		// Token: 0x060266DF RID: 157407 RVA: 0x00AC341C File Offset: 0x00AC161C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseMonsterView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031950 RID: 203088 RVA: 0x00B7F4AB File Offset: 0x00B7D6AB
+		// Token: 0x060266E0 RID: 157408 RVA: 0x00AC345F File Offset: 0x00AC165F
 		protected override void OnStart()
 		{
 			this.InitTab();
 		}
 
-		// Token: 0x06031951 RID: 203089 RVA: 0x00B7F4B4 File Offset: 0x00B7D6B4
+		// Token: 0x060266E1 RID: 157409 RVA: 0x00AC3468 File Offset: 0x00AC1668
 		public void InitTab()
 		{
 			foreach (KeyValuePair<int, ShipTowerTeamTabItem> keyValuePair in this.TabComponent.GetTabItemMap())
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.TabComponent.SelectToggleByIndex(this.GetJumpTabIndex(), true, true);
 		}
 
-		// Token: 0x06031952 RID: 203090 RVA: 0x00B7F544 File Offset: 0x00B7D744
+		// Token: 0x060266E2 RID: 157410 RVA: 0x00AC34F8 File Offset: 0x00AC16F8
 		public int GetJumpTabIndex()
 		{
 			ETrapDefenseMonsterTabType? jumpTabType = this.ViewModel.JumpTabType;
@@ -104,52 +104,52 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return 0;
 		}
 
-		// Token: 0x06031953 RID: 203091 RVA: 0x00B7F5AB File Offset: 0x00B7D7AB
+		// Token: 0x060266E3 RID: 157411 RVA: 0x00AC355F File Offset: 0x00AC175F
 		protected override void OnAddEventListener()
 		{
 		}
 
-		// Token: 0x06031954 RID: 203092 RVA: 0x00B7F5AD File Offset: 0x00B7D7AD
+		// Token: 0x060266E4 RID: 157412 RVA: 0x00AC3561 File Offset: 0x00AC1761
 		protected override void OnRemoveEventListener()
 		{
 		}
 
-		// Token: 0x06031955 RID: 203093 RVA: 0x00B7F5AF File Offset: 0x00B7D7AF
+		// Token: 0x060266E5 RID: 157413 RVA: 0x00AC3563 File Offset: 0x00AC1763
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x06031956 RID: 203094 RVA: 0x00B7F5B1 File Offset: 0x00B7D7B1
+		// Token: 0x060266E6 RID: 157414 RVA: 0x00AC3565 File Offset: 0x00AC1765
 		protected override void OnBeforeDestroy()
 		{
 			this.ViewModel.OnViewClose();
 		}
 
-		// Token: 0x06031957 RID: 203095 RVA: 0x00B7F5BE File Offset: 0x00B7D7BE
+		// Token: 0x060266E7 RID: 157415 RVA: 0x00AC3572 File Offset: 0x00AC1772
 		protected override void OnAfterDestroy()
 		{
 		}
 
-		// Token: 0x06031958 RID: 203096 RVA: 0x00B7F5C0 File Offset: 0x00B7D7C0
+		// Token: 0x060266E8 RID: 157416 RVA: 0x00AC3574 File Offset: 0x00AC1774
 		public void OnBtnHelp()
 		{
 			int helpIdMonster = TrapDefenseConfig.Instance.GetHelpIdMonster();
 			HelpController.Instance.OpenHelpById(helpIdMonster);
 		}
 
-		// Token: 0x06031959 RID: 203097 RVA: 0x00B7F5E3 File Offset: 0x00B7D7E3
+		// Token: 0x060266E9 RID: 157417 RVA: 0x00AC3597 File Offset: 0x00AC1797
 		public void OnBtnClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603195A RID: 203098 RVA: 0x00B7F5EC File Offset: 0x00B7D7EC
+		// Token: 0x060266EA RID: 157418 RVA: 0x00AC35A0 File Offset: 0x00AC17A0
 		public ShipTowerTeamTabItem CreateTabItem([Nullable(2)] UUIItem item, int? index)
 		{
 			return new ShipTowerTeamTabItem();
 		}
 
-		// Token: 0x0603195B RID: 203099 RVA: 0x00B7F5F4 File Offset: 0x00B7D7F4
+		// Token: 0x060266EB RID: 157419 RVA: 0x00AC35A8 File Offset: 0x00AC17A8
 		public void OnClickTabItem(int index)
 		{
 			ETrapDefenseMonsterTabType tabType = this.TabDataList[index].TabType;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ShowMonsterWaveDynamic();
 		}
 
-		// Token: 0x0603195C RID: 203100 RVA: 0x00B7F628 File Offset: 0x00B7D828
+		// Token: 0x060266EC RID: 157420 RVA: 0x00AC35DC File Offset: 0x00AC17DC
 		public void SetTabItemContentShow(int childType)
 		{
 			foreach (int num in new List<int>
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603195D RID: 203101 RVA: 0x00B7F698 File Offset: 0x00B7D898
+		// Token: 0x060266ED RID: 157421 RVA: 0x00AC364C File Offset: 0x00AC184C
 		public void ShowMonsterType()
 		{
 			this.SetTabItemContentShow(2);
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.PanelMonsterDesc.SetActive(flag);
 		}
 
-		// Token: 0x0603195E RID: 203102 RVA: 0x00B7F710 File Offset: 0x00B7D910
+		// Token: 0x060266EE RID: 157422 RVA: 0x00AC36C4 File Offset: 0x00AC18C4
 		public void ShowMonsterWaveDynamic()
 		{
 			this.ViewModel.GetMonsterTypeDataList(false);
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.PanelMonsterDesc.SetActive(flag);
 		}
 
-		// Token: 0x0603195F RID: 203103 RVA: 0x00B7F778 File Offset: 0x00B7D978
+		// Token: 0x060266EF RID: 157423 RVA: 0x00AC372C File Offset: 0x00AC192C
 		public void ScrollToCheckDynamic(List<TrapDefenseMonsterWaveData> dataList)
 		{
 			if (this.FirstInitWave)
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SetWaveSelectMonsterData(dataList[0], dataList[0].GetMonsterDataList()[0]);
 		}
 
-		// Token: 0x06031960 RID: 203104 RVA: 0x00B7F8AC File Offset: 0x00B7DAAC
+		// Token: 0x060266F0 RID: 157424 RVA: 0x00AC3860 File Offset: 0x00AC1A60
 		public void LateScrollToDynamic(int index)
 		{
 			DynamicScrollView<TrapDefenseMonsterWaveItem, TrapDefenseMonsterWaveDynamicItem, TrapDefenseMonsterWaveData> scrollMonsterWaveDynamic = this.ScrollMonsterWaveDynamic;
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			});
 		}
 
-		// Token: 0x06031961 RID: 203105 RVA: 0x00B7F8E9 File Offset: 0x00B7DAE9
+		// Token: 0x060266F1 RID: 157425 RVA: 0x00AC389D File Offset: 0x00AC1A9D
 		public void SetEmptyInfoVisible(bool visible)
 		{
 			UUIItem item = base.GetItem(8);
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			item.SetUIActive(visible);
 		}
 
-		// Token: 0x06031962 RID: 203106 RVA: 0x00B7F8FD File Offset: 0x00B7DAFD
+		// Token: 0x060266F2 RID: 157426 RVA: 0x00AC38B1 File Offset: 0x00AC1AB1
 		public TrapDefenseMonsterTypeItem CreateItemMonsterType()
 		{
 			return new TrapDefenseMonsterTypeItem
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x06031963 RID: 203107 RVA: 0x00B7F916 File Offset: 0x00B7DB16
+		// Token: 0x060266F3 RID: 157427 RVA: 0x00AC38CA File Offset: 0x00AC1ACA
 		public TrapDefenseMonsterWaveItem CreateItemMonsterWave(TrapDefenseMonsterWaveData data, UUIItem uiItem, int index)
 		{
 			return new TrapDefenseMonsterWaveItem
@@ -292,27 +292,27 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x06031964 RID: 203108 RVA: 0x00B7F92F File Offset: 0x00B7DB2F
+		// Token: 0x060266F4 RID: 157428 RVA: 0x00AC38E3 File Offset: 0x00AC1AE3
 		public void OnSelectMonsterTypeMonster(TrapDefenseMonsterData data)
 		{
 			this.PanelMonsterDesc.UpdateData(data);
 		}
 
-		// Token: 0x06031965 RID: 203109 RVA: 0x00B7F93D File Offset: 0x00B7DB3D
+		// Token: 0x060266F5 RID: 157429 RVA: 0x00AC38F1 File Offset: 0x00AC1AF1
 		public void OnSelectMonsterWaveMonster(TrapDefenseMonsterData data, TrapDefenseMonsterWaveData waveData)
 		{
 			this.SetWaveSelectMonsterData(waveData, data);
 			this.UpdateWaveSelectState();
 		}
 
-		// Token: 0x06031966 RID: 203110 RVA: 0x00B7F94D File Offset: 0x00B7DB4D
+		// Token: 0x060266F6 RID: 157430 RVA: 0x00AC3901 File Offset: 0x00AC1B01
 		public void SetWaveSelectMonsterData(TrapDefenseMonsterWaveData waveData, TrapDefenseMonsterData data)
 		{
 			this.ViewModel.SetWaveSelectMonsterData(waveData, data);
 			this.PanelMonsterDesc.UpdateData(data);
 		}
 
-		// Token: 0x06031967 RID: 203111 RVA: 0x00B7F968 File Offset: 0x00B7DB68
+		// Token: 0x060266F7 RID: 157431 RVA: 0x00AC391C File Offset: 0x00AC1B1C
 		public void UpdateWaveSelectState()
 		{
 			TrapDefenseMonsterWaveItem[] scrollItemItems = this.ScrollMonsterWaveDynamic.GetScrollItemItems();
@@ -322,62 +322,62 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A7D8 RID: 108504
+		// Token: 0x0401512A RID: 86314
 		private bool FirstInitWave = true;
 
-		// Token: 0x0401A7D9 RID: 108505
+		// Token: 0x0401512B RID: 86315
 		public PopupCaptionItem PopupCaption;
 
-		// Token: 0x0401A7DA RID: 108506
+		// Token: 0x0401512C RID: 86316
 		public TabComponent<ShipTowerTeamTabItem> TabComponent;
 
-		// Token: 0x0401A7DB RID: 108507
+		// Token: 0x0401512D RID: 86317
 		public List<ITrapDefenseTab<ETrapDefenseMonsterTabType>> TabDataList;
 
-		// Token: 0x0401A7DC RID: 108508
+		// Token: 0x0401512E RID: 86318
 		public GenericScrollViewNew<TrapDefenseMonsterTypeItem, TrapDefenseMonsterTypeData> ScrollMonsterType;
 
-		// Token: 0x0401A7DD RID: 108509
+		// Token: 0x0401512F RID: 86319
 		public DynamicScrollView<TrapDefenseMonsterWaveItem, TrapDefenseMonsterWaveDynamicItem, TrapDefenseMonsterWaveData> ScrollMonsterWaveDynamic;
 
-		// Token: 0x0401A7DE RID: 108510
+		// Token: 0x04015130 RID: 86320
 		public TrapDefenseMonsterDescPanel PanelMonsterDesc;
 
-		// Token: 0x0401A7DF RID: 108511
+		// Token: 0x04015131 RID: 86321
 		public TrapDefenseMonsterViewModel ViewModel = TrapDefenseModel.Instance.ViewModelMonster;
 
-		// Token: 0x0200AC2C RID: 44076
+		// Token: 0x0200964C RID: 38476
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04034511 RID: 214289
+			// Token: 0x0402EEC2 RID: 192194
 			public const int ItemCaption = 0;
 
-			// Token: 0x04034512 RID: 214290
+			// Token: 0x0402EEC3 RID: 192195
 			public const int ItemTabComponent = 1;
 
-			// Token: 0x04034513 RID: 214291
+			// Token: 0x0402EEC4 RID: 192196
 			public const int ItemRootMonsterType = 2;
 
-			// Token: 0x04034514 RID: 214292
+			// Token: 0x0402EEC5 RID: 192197
 			public const int ScrollMonsterType = 3;
 
-			// Token: 0x04034515 RID: 214293
+			// Token: 0x0402EEC6 RID: 192198
 			public const int ItemMonsterType = 4;
 
-			// Token: 0x04034516 RID: 214294
+			// Token: 0x0402EEC7 RID: 192199
 			public const int ItemRootMonsterWave = 5;
 
-			// Token: 0x04034517 RID: 214295
+			// Token: 0x0402EEC8 RID: 192200
 			public const int ScrollMonsterWave = 6;
 
-			// Token: 0x04034518 RID: 214296
+			// Token: 0x0402EEC9 RID: 192201
 			public const int ItemMonsterWave = 7;
 
-			// Token: 0x04034519 RID: 214297
+			// Token: 0x0402EECA RID: 192202
 			public const int ItemEmptyInfo = 8;
 
-			// Token: 0x0403451A RID: 214298
+			// Token: 0x0402EECB RID: 192203
 			public const int ItemMonsterDesc = 9;
 		}
 	}

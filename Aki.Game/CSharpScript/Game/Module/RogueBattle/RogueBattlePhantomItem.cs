@@ -12,7 +12,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E86 RID: 20102
+	// Token: 0x02003E4F RID: 15951
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattlePhantomItem : GridProxyAbstract<RogueResGainData>
 	{
-		// Token: 0x06033B5C RID: 211804 RVA: 0x00C1CAD0 File Offset: 0x00C1ACD0
+		// Token: 0x060289C7 RID: 166343 RVA: 0x00B65FEC File Offset: 0x00B641EC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B5D RID: 211805 RVA: 0x00C1CBE8 File Offset: 0x00C1ADE8
+		// Token: 0x060289C8 RID: 166344 RVA: 0x00B66104 File Offset: 0x00B64304
 		private void OnClick(EToggleState state)
 		{
 			if (this.SelectCallBack == null)
@@ -58,13 +58,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.SelectCallBack(null);
 		}
 
-		// Token: 0x06033B5E RID: 211806 RVA: 0x00C1CC38 File Offset: 0x00C1AE38
+		// Token: 0x060289C9 RID: 166345 RVA: 0x00B66154 File Offset: 0x00B64354
 		private RogueBattlePhantomAffix CreateAffixItem()
 		{
 			return new RogueBattlePhantomAffix();
 		}
 
-		// Token: 0x06033B5F RID: 211807 RVA: 0x00C1CC40 File Offset: 0x00C1AE40
+		// Token: 0x060289CA RID: 166346 RVA: 0x00B6615C File Offset: 0x00B6435C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattlePhantomItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033B60 RID: 211808 RVA: 0x00C1CC84 File Offset: 0x00C1AE84
+		// Token: 0x060289CB RID: 166347 RVA: 0x00B661A0 File Offset: 0x00B643A0
 		public override void Refresh(RogueResGainData data, bool isSelected, int gridIndex)
 		{
 			RogueBattlePhantomItem.<>c__DisplayClass7_0 CS$<>8__locals1 = new RogueBattlePhantomItem.<>c__DisplayClass7_0();
@@ -119,27 +119,27 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x06033B61 RID: 211809 RVA: 0x00C1CE3E File Offset: 0x00C1B03E
+		// Token: 0x060289CC RID: 166348 RVA: 0x00B6635A File Offset: 0x00B6455A
 		public override void OnSelected(bool fireEvent)
 		{
 			RogueBattleModel.Instance.SelectGainData = this.Data;
 		}
 
-		// Token: 0x06033B62 RID: 211810 RVA: 0x00C1CE50 File Offset: 0x00C1B050
+		// Token: 0x060289CD RID: 166349 RVA: 0x00B6636C File Offset: 0x00B6456C
 		public override void OnDeselected(bool fireEvent)
 		{
 			RogueBattleModel.Instance.SelectGainData = null;
 		}
 
-		// Token: 0x0401B73A RID: 112442
+		// Token: 0x0401610D RID: 90381
 		[Nullable(2)]
 		public Action<int?> SelectCallBack;
 
-		// Token: 0x0401B73B RID: 112443
+		// Token: 0x0401610E RID: 90382
 		[Nullable(2)]
 		public RogueResGainData Data;
 
-		// Token: 0x0401B73C RID: 112444
+		// Token: 0x0401610F RID: 90383
 		[Nullable(new byte[]
 		{
 			2,

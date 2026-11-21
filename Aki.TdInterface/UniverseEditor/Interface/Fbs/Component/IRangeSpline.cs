@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005808 RID: 22536
+	// Token: 0x02005E0F RID: 24079
 	public struct IRangeSpline : IFlatbufferObject
 	{
-		// Token: 0x1700A858 RID: 43096
-		// (get) Token: 0x06025E27 RID: 155175 RVA: 0x0053980E File Offset: 0x00537A0E
+		// Token: 0x1700B17C RID: 45436
+		// (get) Token: 0x06028347 RID: 164679 RVA: 0x0057F99A File Offset: 0x0057DB9A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025E28 RID: 155176 RVA: 0x0053981B File Offset: 0x00537A1B
+		// Token: 0x06028348 RID: 164680 RVA: 0x0057F9A7 File Offset: 0x0057DBA7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025E29 RID: 155177 RVA: 0x00539824 File Offset: 0x00537A24
+		// Token: 0x06028349 RID: 164681 RVA: 0x0057F9B0 File Offset: 0x0057DBB0
 		public static IRangeSpline GetRootAsIRangeSpline(ByteBuffer _bb)
 		{
 			return IRangeSpline.GetRootAsIRangeSpline(_bb, default(IRangeSpline));
 		}
 
-		// Token: 0x06025E2A RID: 155178 RVA: 0x00539840 File Offset: 0x00537A40
+		// Token: 0x0602834A RID: 164682 RVA: 0x0057F9CC File Offset: 0x0057DBCC
 		public static IRangeSpline GetRootAsIRangeSpline(ByteBuffer _bb, IRangeSpline obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025E2B RID: 155179 RVA: 0x0053985D File Offset: 0x00537A5D
+		// Token: 0x0602834B RID: 164683 RVA: 0x0057F9E9 File Offset: 0x0057DBE9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025E2C RID: 155180 RVA: 0x0053986C File Offset: 0x00537A6C
+		// Token: 0x0602834C RID: 164684 RVA: 0x0057F9F8 File Offset: 0x0057DBF8
 		public IRangeSpline __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A859 RID: 43097
-		// (get) Token: 0x06025E2D RID: 155181 RVA: 0x0053987C File Offset: 0x00537A7C
+		// Token: 0x1700B17D RID: 45437
+		// (get) Token: 0x0602834D RID: 164685 RVA: 0x0057FA08 File Offset: 0x0057DC08
 		public ESplineType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A85A RID: 43098
-		// (get) Token: 0x06025E2E RID: 155182 RVA: 0x005398B8 File Offset: 0x00537AB8
+		// Token: 0x1700B17E RID: 45438
+		// (get) Token: 0x0602834E RID: 164686 RVA: 0x0057FA44 File Offset: 0x0057DC44
 		public float Height
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025E2F RID: 155183 RVA: 0x005398F8 File Offset: 0x00537AF8
+		// Token: 0x0602834F RID: 164687 RVA: 0x0057FA84 File Offset: 0x0057DC84
 		public ICommonSplinePoint? Points(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new ICommonSplinePoint?(default(ICommonSplinePoint).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A85B RID: 43099
-		// (get) Token: 0x06025E30 RID: 155184 RVA: 0x00539958 File Offset: 0x00537B58
+		// Token: 0x1700B17F RID: 45439
+		// (get) Token: 0x06028350 RID: 164688 RVA: 0x0057FAE4 File Offset: 0x0057DCE4
 		public int PointsLength
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025E31 RID: 155185 RVA: 0x00539983 File Offset: 0x00537B83
+		// Token: 0x06028351 RID: 164689 RVA: 0x0057FB0F File Offset: 0x0057DD0F
 		public static Offset<IRangeSpline> CreateIRangeSpline(FlatBufferBuilder builder, ESplineType Type = ESplineType.Common, float Height = 0f, VectorOffset PointsOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -114,31 +114,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRangeSpline.EndIRangeSpline(builder);
 		}
 
-		// Token: 0x06025E32 RID: 155186 RVA: 0x005399A7 File Offset: 0x00537BA7
+		// Token: 0x06028352 RID: 164690 RVA: 0x0057FB33 File Offset: 0x0057DD33
 		public static void StartIRangeSpline(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06025E33 RID: 155187 RVA: 0x005399B0 File Offset: 0x00537BB0
+		// Token: 0x06028353 RID: 164691 RVA: 0x0057FB3C File Offset: 0x0057DD3C
 		public static void AddType(FlatBufferBuilder builder, ESplineType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06025E34 RID: 155188 RVA: 0x005399BB File Offset: 0x00537BBB
+		// Token: 0x06028354 RID: 164692 RVA: 0x0057FB47 File Offset: 0x0057DD47
 		public static void AddHeight(FlatBufferBuilder builder, float height)
 		{
 			builder.AddFloat(1, height, 0.0);
 		}
 
-		// Token: 0x06025E35 RID: 155189 RVA: 0x005399CE File Offset: 0x00537BCE
+		// Token: 0x06028355 RID: 164693 RVA: 0x0057FB5A File Offset: 0x0057DD5A
 		public static void AddPoints(FlatBufferBuilder builder, VectorOffset pointsOffset)
 		{
 			builder.AddOffset(2, pointsOffset.Value, 0);
 		}
 
-		// Token: 0x06025E36 RID: 155190 RVA: 0x005399E0 File Offset: 0x00537BE0
+		// Token: 0x06028356 RID: 164694 RVA: 0x0057FB6C File Offset: 0x0057DD6C
 		public static VectorOffset CreatePointsVector(FlatBufferBuilder builder, Offset<ICommonSplinePoint>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025E37 RID: 155191 RVA: 0x00539A20 File Offset: 0x00537C20
+		// Token: 0x06028357 RID: 164695 RVA: 0x0057FBAC File Offset: 0x0057DDAC
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, Offset<ICommonSplinePoint>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025E38 RID: 155192 RVA: 0x00539A3A File Offset: 0x00537C3A
+		// Token: 0x06028358 RID: 164696 RVA: 0x0057FBC6 File Offset: 0x0057DDC6
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ICommonSplinePoint>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025E39 RID: 155193 RVA: 0x00539A58 File Offset: 0x00537C58
+		// Token: 0x06028359 RID: 164697 RVA: 0x0057FBE4 File Offset: 0x0057DDE4
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -173,19 +173,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025E3A RID: 155194 RVA: 0x00539A71 File Offset: 0x00537C71
+		// Token: 0x0602835A RID: 164698 RVA: 0x0057FBFD File Offset: 0x0057DDFD
 		public static void StartPointsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06025E3B RID: 155195 RVA: 0x00539A7C File Offset: 0x00537C7C
+		// Token: 0x0602835B RID: 164699 RVA: 0x0057FC08 File Offset: 0x0057DE08
 		public static Offset<IRangeSpline> EndIRangeSpline(FlatBufferBuilder builder)
 		{
 			return new Offset<IRangeSpline>(builder.EndTable());
 		}
 
-		// Token: 0x06025E3C RID: 155196 RVA: 0x00539A8C File Offset: 0x00537C8C
+		// Token: 0x0602835C RID: 164700 RVA: 0x0057FC18 File Offset: 0x0057DE18
 		public IRangeSplineT UnPack()
 		{
 			IRangeSplineT rangeSplineT = new IRangeSplineT();
@@ -193,7 +193,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return rangeSplineT;
 		}
 
-		// Token: 0x06025E3D RID: 155197 RVA: 0x00539AA8 File Offset: 0x00537CA8
+		// Token: 0x0602835D RID: 164701 RVA: 0x0057FC34 File Offset: 0x0057DE34
 		public void UnPackTo(IRangeSplineT _o)
 		{
 			_o.Type = this.Type;
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025E3E RID: 155198 RVA: 0x00539B20 File Offset: 0x00537D20
+		// Token: 0x0602835E RID: 164702 RVA: 0x0057FCAC File Offset: 0x0057DEAC
 		public static Offset<IRangeSpline> Pack(FlatBufferBuilder builder, IRangeSplineT _o)
 		{
 			if (_o == null)
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRangeSpline.CreateIRangeSpline(builder, _o.Type, _o.Height, pointsOffset);
 		}
 
-		// Token: 0x0400ED05 RID: 60677
+		// Token: 0x0400F9F0 RID: 63984
 		private Table __p;
 	}
 }

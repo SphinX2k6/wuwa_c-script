@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AC7 RID: 2759
+	// Token: 0x02000B91 RID: 2961
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class EntityBatchRefreshComponent : IComponentBase
 	{
-		// Token: 0x06003F85 RID: 16261 RVA: 0x000A240A File Offset: 0x000A060A
-		[NullableContext(1)]
+		// Token: 0x060043AF RID: 17327 RVA: 0x000AB9FE File Offset: 0x000A9BFE
+		[NullableContext(0)]
 		public static EntityBatchRefreshComponent Create(IEntityBatchRefreshComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FB4 RID: 4020
-		// (get) Token: 0x06003F86 RID: 16262 RVA: 0x000A242C File Offset: 0x000A062C
+		// Token: 0x17001088 RID: 4232
+		// (get) Token: 0x060043B0 RID: 17328 RVA: 0x000ABA20 File Offset: 0x000A9C20
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FB5 RID: 4021
-		// (get) Token: 0x06003F87 RID: 16263 RVA: 0x000A2464 File Offset: 0x000A0664
+		// Token: 0x17001089 RID: 4233
+		// (get) Token: 0x060043B1 RID: 17329 RVA: 0x000ABA58 File Offset: 0x000A9C58
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FB6 RID: 4022
-		// (get) Token: 0x06003F88 RID: 16264 RVA: 0x000A247A File Offset: 0x000A067A
+		// Token: 0x1700108A RID: 4234
+		// (get) Token: 0x060043B2 RID: 17330 RVA: 0x000ABA6E File Offset: 0x000A9C6E
 		public virtual IConditionGroup StartCondition
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FB7 RID: 4023
-		// (get) Token: 0x06003F89 RID: 16265 RVA: 0x000A24AE File Offset: 0x000A06AE
+		// Token: 0x1700108B RID: 4235
+		// (get) Token: 0x060043B3 RID: 17331 RVA: 0x000ABAA2 File Offset: 0x000A9CA2
 		public virtual IConditionGroup EndCondition
 		{
 			get
@@ -80,12 +80,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FB8 RID: 4024
-		// (get) Token: 0x06003F8A RID: 16266 RVA: 0x000A24E2 File Offset: 0x000A06E2
-		[Nullable(1)]
+		// Token: 0x1700108C RID: 4236
+		// (get) Token: 0x060043B4 RID: 17332 RVA: 0x000ABAD6 File Offset: 0x000A9CD6
+		[Nullable(0)]
 		public virtual IEntityBatchRefreshMode EntityBatchRefresh
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._EntityBatchRefreshInited)
@@ -98,26 +98,26 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400234C RID: 9036
+		// Token: 0x04002568 RID: 9576
 		private IEntityBatchRefreshComponent Instance;
 
-		// Token: 0x0400234D RID: 9037
+		// Token: 0x04002569 RID: 9577
 		private IConditionGroup _StartConditionCache;
 
-		// Token: 0x0400234E RID: 9038
+		// Token: 0x0400256A RID: 9578
 		private bool _StartConditionInited;
 
-		// Token: 0x0400234F RID: 9039
+		// Token: 0x0400256B RID: 9579
 		private IConditionGroup _EndConditionCache;
 
-		// Token: 0x04002350 RID: 9040
+		// Token: 0x0400256C RID: 9580
 		private bool _EndConditionInited;
 
-		// Token: 0x04002351 RID: 9041
-		[Nullable(1)]
+		// Token: 0x0400256D RID: 9581
+		[Nullable(0)]
 		private IEntityBatchRefreshMode _EntityBatchRefreshCache;
 
-		// Token: 0x04002352 RID: 9042
+		// Token: 0x0400256E RID: 9582
 		private bool _EntityBatchRefreshInited;
 	}
 }

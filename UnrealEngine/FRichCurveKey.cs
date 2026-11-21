@@ -7,14 +7,14 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001091 RID: 4241
+	// Token: 0x02000272 RID: 626
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(28, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 28)]
 	[UnrealObjectPath("/Script/Engine.RichCurveKey")]
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 28)]
 	public struct FRichCurveKey : IEqualityOperators<FRichCurveKey, FRichCurveKey, bool>, IEquatable<FRichCurveKey>, IUnrealScriptStruct
 	{
-		// Token: 0x0600F267 RID: 62055 RVA: 0x00167998 File Offset: 0x00165B98
+		// Token: 0x0600403B RID: 16443 RVA: 0x0005C27C File Offset: 0x0005A47C
 		public FRichCurveKey(TEnumAsByte<ERichCurveInterpMode> InterpMode, TEnumAsByte<ERichCurveTangentMode> TangentMode, TEnumAsByte<ERichCurveTangentWeightMode> TangentWeightMode, float Time, float Value, float ArriveTangent, float ArriveTangentWeight, float LeaveTangent, float LeaveTangentWeight)
 		{
 			this.InterpMode = InterpMode;
@@ -28,25 +28,25 @@ namespace UnrealEngine
 			this.LeaveTangentWeight = LeaveTangentWeight;
 		}
 
-		// Token: 0x0600F268 RID: 62056 RVA: 0x001679EC File Offset: 0x00165BEC
+		// Token: 0x0600403C RID: 16444 RVA: 0x0005C2D0 File Offset: 0x0005A4D0
 		public static bool operator ==(FRichCurveKey left, FRichCurveKey right)
 		{
 			return left.InterpMode == right.InterpMode && left.TangentMode == right.TangentMode && left.TangentWeightMode == right.TangentWeightMode && left.Time == right.Time && left.Value == right.Value && left.ArriveTangent == right.ArriveTangent && left.ArriveTangentWeight == right.ArriveTangentWeight && left.LeaveTangent == right.LeaveTangent && left.LeaveTangentWeight == right.LeaveTangentWeight;
 		}
 
-		// Token: 0x0600F269 RID: 62057 RVA: 0x00167A88 File Offset: 0x00165C88
+		// Token: 0x0600403D RID: 16445 RVA: 0x0005C36C File Offset: 0x0005A56C
 		public static bool operator !=(FRichCurveKey left, FRichCurveKey right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x0600F26A RID: 62058 RVA: 0x00167A94 File Offset: 0x00165C94
+		// Token: 0x0600403E RID: 16446 RVA: 0x0005C378 File Offset: 0x0005A578
 		public bool Equals(FRichCurveKey other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x0600F26B RID: 62059 RVA: 0x00167AA4 File Offset: 0x00165CA4
+		// Token: 0x0600403F RID: 16447 RVA: 0x0005C388 File Offset: 0x0005A588
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -58,7 +58,7 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x0600F26C RID: 62060 RVA: 0x00167ACC File Offset: 0x00165CCC
+		// Token: 0x06004040 RID: 16448 RVA: 0x0005C3B0 File Offset: 0x0005A5B0
 		public override int GetHashCode()
 		{
 			HashCode hashCode = default(HashCode);
@@ -74,52 +74,52 @@ namespace UnrealEngine
 			return hashCode.ToHashCode();
 		}
 
-		// Token: 0x0600F26D RID: 62061 RVA: 0x00167B5D File Offset: 0x00165D5D
+		// Token: 0x06004041 RID: 16449 RVA: 0x0005C441 File Offset: 0x0005A641
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FRichCurveKey._ScriptStructPtr != 0) ? FRichCurveKey._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.RichCurveKey", ref FRichCurveKey._ScriptStructPtr);
 		}
 
-		// Token: 0x0400837F RID: 33663
+		// Token: 0x04001920 RID: 6432
 		[FieldOffset(0)]
 		public TEnumAsByte<ERichCurveInterpMode> InterpMode;
 
-		// Token: 0x04008380 RID: 33664
+		// Token: 0x04001921 RID: 6433
 		[FieldOffset(1)]
 		public TEnumAsByte<ERichCurveTangentMode> TangentMode;
 
-		// Token: 0x04008381 RID: 33665
+		// Token: 0x04001922 RID: 6434
 		[FieldOffset(2)]
 		public TEnumAsByte<ERichCurveTangentWeightMode> TangentWeightMode;
 
-		// Token: 0x04008382 RID: 33666
+		// Token: 0x04001923 RID: 6435
 		[FieldOffset(4)]
 		public float Time;
 
-		// Token: 0x04008383 RID: 33667
+		// Token: 0x04001924 RID: 6436
 		[FieldOffset(8)]
 		public float Value;
 
-		// Token: 0x04008384 RID: 33668
+		// Token: 0x04001925 RID: 6437
 		[FieldOffset(12)]
 		public float ArriveTangent;
 
-		// Token: 0x04008385 RID: 33669
+		// Token: 0x04001926 RID: 6438
 		[FieldOffset(16)]
 		public float ArriveTangentWeight;
 
-		// Token: 0x04008386 RID: 33670
+		// Token: 0x04001927 RID: 6439
 		[FieldOffset(20)]
 		public float LeaveTangent;
 
-		// Token: 0x04008387 RID: 33671
+		// Token: 0x04001928 RID: 6440
 		[FieldOffset(24)]
 		public float LeaveTangentWeight;
 
-		// Token: 0x04008388 RID: 33672
+		// Token: 0x04001929 RID: 6441
 		public const string __ObjectPath = "/Script/Engine.RichCurveKey";
 
-		// Token: 0x04008389 RID: 33673
+		// Token: 0x0400192A RID: 6442
 		private static IntPtr _ScriptStructPtr;
 	}
 }

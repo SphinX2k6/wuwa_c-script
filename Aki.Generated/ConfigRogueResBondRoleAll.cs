@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000834 RID: 2100
+	// Token: 0x02000850 RID: 2128
 	public class ConfigRogueResBondRoleAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600314A RID: 12618 RVA: 0x0017015C File Offset: 0x0016E35C
+		// Token: 0x060031F2 RID: 12786 RVA: 0x00177444 File Offset: 0x00175644
 		static ConfigRogueResBondRoleAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueResBondRoleAll.CreateStaticDefaultValue), new Action(ConfigRogueResBondRoleAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600314B RID: 12619 RVA: 0x0017017C File Offset: 0x0016E37C
+		// Token: 0x060031F3 RID: 12787 RVA: 0x00177464 File Offset: 0x00175664
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueResBondRoleAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600314C RID: 12620 RVA: 0x001701FB File Offset: 0x0016E3FB
+		// Token: 0x060031F4 RID: 12788 RVA: 0x001774E3 File Offset: 0x001756E3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueResBondRoleAll.LogPair = null;
 			ConfigRogueResBondRoleAll.HandleId = 0;
 		}
 
-		// Token: 0x0600314D RID: 12621 RVA: 0x00170209 File Offset: 0x0016E409
+		// Token: 0x060031F5 RID: 12789 RVA: 0x001774F1 File Offset: 0x001756F1
 		public static void Init()
 		{
 			ConfigRogueResBondRoleAll.HandleId = ConfigCommon.InitDataStatement(ConfigRogueResBondRoleAll.HandleId, "db_permanentrogue.db", "select BinData from `RogueResBondRole`");
 		}
 
-		// Token: 0x0600314E RID: 12622 RVA: 0x00170224 File Offset: 0x0016E424
+		// Token: 0x060031F6 RID: 12790 RVA: 0x0017750C File Offset: 0x0017570C
 		[NullableContext(2)]
 		public static IReadOnlyList<RogueResBondRole> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003952 RID: 14674
+		// Token: 0x04003A16 RID: 14870
 		private const string DB = "db_permanentrogue.db";
 
-		// Token: 0x04003953 RID: 14675
+		// Token: 0x04003A17 RID: 14871
 		private const string FILE = "c.常驻肉鸽.xlsx";
 
-		// Token: 0x04003954 RID: 14676
+		// Token: 0x04003A18 RID: 14872
 		private const string TABLE = "RogueResBondRole";
 
-		// Token: 0x04003955 RID: 14677
+		// Token: 0x04003A19 RID: 14873
 		private const string COMMAND = "select BinData from `RogueResBondRole`";
 
-		// Token: 0x04003956 RID: 14678
+		// Token: 0x04003A1A RID: 14874
 		private const string KEY_PREFIX = "RogueResBondRoleAll";
 
-		// Token: 0x04003957 RID: 14679
+		// Token: 0x04003A1B RID: 14875
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003958 RID: 14680
+		// Token: 0x04003A1C RID: 14876
 		private static int HandleId;
 	}
 }

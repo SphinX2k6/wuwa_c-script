@@ -4,36 +4,36 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02001BD8 RID: 7128
+// Token: 0x02001097 RID: 4247
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerViewExtension : IViewExtension
 {
-	// Token: 0x0600D480 RID: 54400 RVA: 0x0030E9C5 File Offset: 0x0030CBC5
+	// Token: 0x0600A892 RID: 43154 RVA: 0x00319B39 File Offset: 0x00317D39
 	public TowerViewExtension(Action refreshEnter)
 	{
 		this.RefreshEnter = refreshEnter;
 	}
 
-	// Token: 0x0600D481 RID: 54401 RVA: 0x0030E9D4 File Offset: 0x0030CBD4
+	// Token: 0x0600A893 RID: 43155 RVA: 0x00319B48 File Offset: 0x00317D48
 	public bool ShouldActivate()
 	{
 		return TowerModel.Instance.IsOpenFloorFormation() || BattleTeamModel.Instance.Context.IsMowingInstance || TowerDefenseController.Instance.CheckInUiFlow();
 	}
 
-	// Token: 0x0600D482 RID: 54402 RVA: 0x0030E9FF File Offset: 0x0030CBFF
+	// Token: 0x0600A894 RID: 43156 RVA: 0x00319B73 File Offset: 0x00317D73
 	public void OnViewStart()
 	{
 		this.Active = true;
 		EventSystem.Instance.Add(EEventName.TowerDefensePhantomChanged, new Action(this.OnPhantomChanged));
 	}
 
-	// Token: 0x0600D483 RID: 54403 RVA: 0x0030EA24 File Offset: 0x0030CC24
+	// Token: 0x0600A895 RID: 43157 RVA: 0x00319B98 File Offset: 0x00317D98
 	public void OnViewRefresh()
 	{
 	}
 
-	// Token: 0x0600D484 RID: 54404 RVA: 0x0030EA26 File Offset: 0x0030CC26
+	// Token: 0x0600A896 RID: 43158 RVA: 0x00319B9A File Offset: 0x00317D9A
 	public void OnDetach()
 	{
 		if (!this.Active)
@@ -44,7 +44,7 @@ public class TowerViewExtension : IViewExtension
 		this.Active = false;
 	}
 
-	// Token: 0x0600D485 RID: 54405 RVA: 0x0030EA54 File Offset: 0x0030CC54
+	// Token: 0x0600A897 RID: 43159 RVA: 0x00319BC8 File Offset: 0x00317DC8
 	public IEnterGateResult ContributeEnterGate()
 	{
 		if (TowerDefenseController.Instance.CheckInUiFlow() && !TowerDefenseController.Instance.CheckAllPhantomsReady())
@@ -60,7 +60,7 @@ public class TowerViewExtension : IViewExtension
 		};
 	}
 
-	// Token: 0x0600D486 RID: 54406 RVA: 0x0030EA88 File Offset: 0x0030CC88
+	// Token: 0x0600A898 RID: 43160 RVA: 0x00319BFC File Offset: 0x00317DFC
 	public void OnClickTowerDetails()
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -72,7 +72,7 @@ public class TowerViewExtension : IViewExtension
 		UiManager.Instance.OpenView(EUiViewName.TowerFloorDetailView, null, null);
 	}
 
-	// Token: 0x0600D487 RID: 54407 RVA: 0x0030EADA File Offset: 0x0030CCDA
+	// Token: 0x0600A899 RID: 43161 RVA: 0x00319C4E File Offset: 0x00317E4E
 	public void OnClickTowerRecommend()
 	{
 		TowerController.Instance.TowerFormationRecommendRequest(TowerModel.Instance.CurrentSelectFloor).ContinueWith(delegate()
@@ -81,15 +81,15 @@ public class TowerViewExtension : IViewExtension
 		});
 	}
 
-	// Token: 0x0600D488 RID: 54408 RVA: 0x0030EB15 File Offset: 0x0030CD15
+	// Token: 0x0600A89A RID: 43162 RVA: 0x00319C89 File Offset: 0x00317E89
 	private void OnPhantomChanged()
 	{
 		this.RefreshEnter();
 	}
 
-	// Token: 0x0400611E RID: 24862
+	// Token: 0x040061ED RID: 25069
 	private bool Active;
 
-	// Token: 0x0400611F RID: 24863
+	// Token: 0x040061EE RID: 25070
 	private readonly Action RefreshEnter;
 }

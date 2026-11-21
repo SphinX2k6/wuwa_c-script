@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E33 RID: 3635
+	// Token: 0x02000F2F RID: 3887
 	public class IStreamingSourceConfig
 	{
-		// Token: 0x0600522E RID: 21038 RVA: 0x000CA7CD File Offset: 0x000C89CD
-		[NullableContext(1)]
+		// Token: 0x06005755 RID: 22357 RVA: 0x000D6095 File Offset: 0x000D4295
 		public static IStreamingSourceConfig Create(IStreamingSourceConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B85 RID: 7045
-		// (get) Token: 0x0600522F RID: 21039 RVA: 0x000CA7EC File Offset: 0x000C89EC
+		// Token: 0x17001CF2 RID: 7410
+		// (get) Token: 0x06005756 RID: 22358 RVA: 0x000D60B4 File Offset: 0x000D42B4
 		public virtual int StreamingSourceTargetEntityId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B86 RID: 7046
-		// (get) Token: 0x06005230 RID: 21040 RVA: 0x000CA7FC File Offset: 0x000C89FC
+		// Token: 0x17001CF3 RID: 7411
+		// (get) Token: 0x06005757 RID: 22359 RVA: 0x000D60C4 File Offset: 0x000D42C4
 		public virtual bool? IsNoRenderStreaming
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F5A RID: 12122
+		// Token: 0x04003222 RID: 12834
 		private IStreamingSourceConfig Instance;
 	}
 }

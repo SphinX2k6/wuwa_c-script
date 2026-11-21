@@ -6,24 +6,24 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Camera;
 using UnrealEngine;
 
-// Token: 0x020001F2 RID: 498
+// Token: 0x020001F6 RID: 502
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraAutoController : CameraControllerBase, ICanGetConfigMapValue
 {
-	// Token: 0x06001F62 RID: 8034 RVA: 0x0009C1D0 File Offset: 0x0009A3D0
+	// Token: 0x06002011 RID: 8209 RVA: 0x000A359C File Offset: 0x000A179C
 	public CameraAutoController(FightCameraLogicComponent camera) : base(camera)
 	{
 	}
 
-	// Token: 0x06001F63 RID: 8035 RVA: 0x0009C226 File Offset: 0x0009A426
+	// Token: 0x06002012 RID: 8210 RVA: 0x000A35F2 File Offset: 0x000A17F2
 	public override string Name()
 	{
 		return "AutoController";
 	}
 
-	// Token: 0x06001F64 RID: 8036 RVA: 0x0009C230 File Offset: 0x0009A430
+	// Token: 0x06002013 RID: 8211 RVA: 0x000A35FC File Offset: 0x000A17FC
 	protected override void OnInit()
 	{
 		base.SetConfigMap(EFightCameraAuto.目标比角色更靠近镜头时额外臂长, "AutoCameraArmLengthWhenTargetNearer");
@@ -62,7 +62,7 @@ public class CameraAutoController : CameraControllerBase, ICanGetConfigMapValue
 		base.RegisterPairConfigKey(EFightCameraAuto.额外臂垂直偏移与目标最小高度差_目标高度差_, EFightCameraAuto.额外臂垂直偏移与目标最大高度差_目标高度差_, true);
 	}
 
-	// Token: 0x06001F65 RID: 8037 RVA: 0x0009C4A9 File Offset: 0x0009A6A9
+	// Token: 0x06002014 RID: 8212 RVA: 0x000A3875 File Offset: 0x000A1A75
 	protected override void OnEnable()
 	{
 		this.DesiredOffsetHeight = 0f;
@@ -70,25 +70,25 @@ public class CameraAutoController : CameraControllerBase, ICanGetConfigMapValue
 		this.Camera.CameraSidestepController.Lock(this);
 	}
 
-	// Token: 0x06001F66 RID: 8038 RVA: 0x0009C4D2 File Offset: 0x0009A6D2
+	// Token: 0x06002015 RID: 8213 RVA: 0x000A389E File Offset: 0x000A1A9E
 	protected override void OnDisable()
 	{
 		this.Camera.CameraSidestepController.Unlock(this);
 	}
 
-	// Token: 0x06001F67 RID: 8039 RVA: 0x0009C4E5 File Offset: 0x0009A6E5
+	// Token: 0x06002016 RID: 8214 RVA: 0x000A38B1 File Offset: 0x000A1AB1
 	public void EnableForce(object control)
 	{
 		this.ForceEnableSet.Add(control);
 	}
 
-	// Token: 0x06001F68 RID: 8040 RVA: 0x0009C4F4 File Offset: 0x0009A6F4
+	// Token: 0x06002017 RID: 8215 RVA: 0x000A38C0 File Offset: 0x000A1AC0
 	public void DisableForce(object control)
 	{
 		this.ForceEnableSet.Remove(control);
 	}
 
-	// Token: 0x06001F69 RID: 8041 RVA: 0x0009C504 File Offset: 0x0009A704
+	// Token: 0x06002018 RID: 8216 RVA: 0x000A38D0 File Offset: 0x000A1AD0
 	protected override bool UpdateCustomEnableCondition()
 	{
 		if (this.Camera.TargetEntity == null)
@@ -103,7 +103,7 @@ public class CameraAutoController : CameraControllerBase, ICanGetConfigMapValue
 		return this.IsActivate && this.Camera.CheckPositionInScreen(this.TmpVector, this.CheckAdjustInScreenMinX, this.CheckAdjustInScreenMaxX, this.CheckAdjustInScreenMinY, this.CheckAdjustInScreenMaxY);
 	}
 
-	// Token: 0x06001F6A RID: 8042 RVA: 0x0009C588 File Offset: 0x0009A788
+	// Token: 0x06002019 RID: 8217 RVA: 0x000A3954 File Offset: 0x000A1B54
 	protected override void UpdateInternal(float deltaTime)
 	{
 		if (this.Camera.TargetEntity == null || !this.Camera.IsTargetLocationValid)
@@ -156,7 +156,7 @@ public class CameraAutoController : CameraControllerBase, ICanGetConfigMapValue
 		this.UpdateInterp(deltaTime, true);
 	}
 
-	// Token: 0x06001F6B RID: 8043 RVA: 0x0009C8D8 File Offset: 0x0009AAD8
+	// Token: 0x0600201A RID: 8218 RVA: 0x000A3CA4 File Offset: 0x000A1EA4
 	protected override void UpdateDeactivateInternal(float deltaTime)
 	{
 		this.DesiredAutoCameraArmLengthAddition = 0f;
@@ -164,7 +164,7 @@ public class CameraAutoController : CameraControllerBase, ICanGetConfigMapValue
 		this.UpdateInterp(deltaTime, false);
 	}
 
-	// Token: 0x06001F6C RID: 8044 RVA: 0x0009C8F8 File Offset: 0x0009AAF8
+	// Token: 0x0600201B RID: 8219 RVA: 0x000A3CC4 File Offset: 0x000A1EC4
 	private void UpdateInterp(float deltaTime, bool isAutoCamera)
 	{
 		CameraModify modifySettings = this.Camera.CameraModifyController.ModifySettings;
@@ -179,7 +179,7 @@ public class CameraAutoController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06001F6D RID: 8045 RVA: 0x0009C9AC File Offset: 0x0009ABAC
+	// Token: 0x0600201C RID: 8220 RVA: 0x000A3D78 File Offset: 0x000A1F78
 	private double? GetDistanceToScreenCenter(Vector location)
 	{
 		if (this.Camera.CharacterController == null)
@@ -200,13 +200,13 @@ public class CameraAutoController : CameraControllerBase, ICanGetConfigMapValue
 		return new double?((double)(resultPositionRef.Y / (float)num2));
 	}
 
-	// Token: 0x06001F6E RID: 8046 RVA: 0x0009CA50 File Offset: 0x0009AC50
+	// Token: 0x0600201D RID: 8221 RVA: 0x000A3E1C File Offset: 0x000A201C
 	public override string GetConfigMapValue(int key)
 	{
 		return base.GetConfigMapValue(key);
 	}
 
-	// Token: 0x06001F6F RID: 8047 RVA: 0x0009CA5C File Offset: 0x0009AC5C
+	// Token: 0x0600201E RID: 8222 RVA: 0x000A3E28 File Offset: 0x000A2028
 	[NullableContext(0)]
 	public override bool TryGetMember(string key, out object value)
 	{
@@ -536,7 +536,7 @@ public class CameraAutoController : CameraControllerBase, ICanGetConfigMapValue
 		return base.TryGetMember(key, out value);
 	}
 
-	// Token: 0x06001F70 RID: 8048 RVA: 0x0009D110 File Offset: 0x0009B310
+	// Token: 0x0600201F RID: 8223 RVA: 0x000A44DC File Offset: 0x000A26DC
 	[NullableContext(0)]
 	public override void SetMember(string key, object value)
 	{
@@ -1506,7 +1506,7 @@ public class CameraAutoController : CameraControllerBase, ICanGetConfigMapValue
 		base.SetMember(key, value);
 	}
 
-	// Token: 0x06001F71 RID: 8049 RVA: 0x0009E1D6 File Offset: 0x0009C3D6
+	// Token: 0x06002020 RID: 8224 RVA: 0x000A55A2 File Offset: 0x000A37A2
 	[NullableContext(0)]
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
@@ -1515,118 +1515,118 @@ public class CameraAutoController : CameraControllerBase, ICanGetConfigMapValue
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x04001308 RID: 4872
+	// Token: 0x0400134B RID: 4939
 	public float AutoCameraArmLengthWhenTargetNearer;
 
-	// Token: 0x04001309 RID: 4873
+	// Token: 0x0400134C RID: 4940
 	public float AutoCameraScreenStandardRectangleBottom;
 
-	// Token: 0x0400130A RID: 4874
+	// Token: 0x0400134D RID: 4941
 	public float AutoCameraArmOffsetRateVertical;
 
-	// Token: 0x0400130B RID: 4875
+	// Token: 0x0400134E RID: 4942
 	public float AutoCameraArmPullLagSpeed;
 
-	// Token: 0x0400130C RID: 4876
+	// Token: 0x0400134F RID: 4943
 	public float AutoCameraArmMoveLagSpeed;
 
-	// Token: 0x0400130D RID: 4877
+	// Token: 0x04001350 RID: 4944
 	public float CheckAdjustInScreenMinX;
 
-	// Token: 0x0400130E RID: 4878
+	// Token: 0x04001351 RID: 4945
 	public float CheckAdjustInScreenMaxX;
 
-	// Token: 0x0400130F RID: 4879
+	// Token: 0x04001352 RID: 4946
 	public float CheckAdjustInScreenMinY;
 
-	// Token: 0x04001310 RID: 4880
+	// Token: 0x04001353 RID: 4947
 	public float CheckAdjustInScreenMaxY;
 
-	// Token: 0x04001311 RID: 4881
+	// Token: 0x04001354 RID: 4948
 	public float AutoCameraArmOffsetSpeedVertical;
 
-	// Token: 0x04001312 RID: 4882
+	// Token: 0x04001355 RID: 4949
 	public float ExtraArmLengthMinByDist;
 
-	// Token: 0x04001313 RID: 4883
+	// Token: 0x04001356 RID: 4950
 	public float ExtraArmLengthMaxByDist;
 
-	// Token: 0x04001314 RID: 4884
+	// Token: 0x04001357 RID: 4951
 	public float ExtraArmLengthDist;
 
-	// Token: 0x04001315 RID: 4885
+	// Token: 0x04001358 RID: 4952
 	[Nullable(2)]
 	public CurveBase ExtraArmLengthCurveByDist;
 
-	// Token: 0x04001316 RID: 4886
+	// Token: 0x04001359 RID: 4953
 	public float ExtraArmLengthMinByHeight;
 
-	// Token: 0x04001317 RID: 4887
+	// Token: 0x0400135A RID: 4954
 	public float ExtraArmLengthMaxByHeight;
 
-	// Token: 0x04001318 RID: 4888
+	// Token: 0x0400135B RID: 4955
 	public float ExtraArmLengthHeight;
 
-	// Token: 0x04001319 RID: 4889
+	// Token: 0x0400135C RID: 4956
 	[Nullable(2)]
 	public CurveBase ExtraArmLengthCurveByHeight;
 
-	// Token: 0x0400131A RID: 4890
+	// Token: 0x0400135D RID: 4957
 	public float ExtraArmHorizontalMinByDist;
 
-	// Token: 0x0400131B RID: 4891
+	// Token: 0x0400135E RID: 4958
 	public float ExtraArmHorizontalMaxByDist;
 
-	// Token: 0x0400131C RID: 4892
+	// Token: 0x0400135F RID: 4959
 	public float ExtraArmHorizontalDist;
 
-	// Token: 0x0400131D RID: 4893
+	// Token: 0x04001360 RID: 4960
 	[Nullable(2)]
 	public CurveBase ExtraArmHorizontalCurveByDist;
 
-	// Token: 0x0400131E RID: 4894
+	// Token: 0x04001361 RID: 4961
 	public float ExtraArmVerticalMinByHeight;
 
-	// Token: 0x0400131F RID: 4895
+	// Token: 0x04001362 RID: 4962
 	public float ExtraArmVerticalMaxByHeight;
 
-	// Token: 0x04001320 RID: 4896
+	// Token: 0x04001363 RID: 4963
 	public float ExtraArmVerticalHeightMin;
 
-	// Token: 0x04001321 RID: 4897
+	// Token: 0x04001364 RID: 4964
 	public float ExtraArmVerticalHeightMax;
 
-	// Token: 0x04001322 RID: 4898
+	// Token: 0x04001365 RID: 4965
 	[Nullable(2)]
 	public CurveBase ExtraArmVerticalCurveByHeight;
 
-	// Token: 0x04001323 RID: 4899
+	// Token: 0x04001366 RID: 4966
 	public float CurrentAutoCameraArmLengthAddition;
 
-	// Token: 0x04001324 RID: 4900
+	// Token: 0x04001367 RID: 4967
 	private float DesiredAutoCameraArmLengthAddition;
 
-	// Token: 0x04001325 RID: 4901
+	// Token: 0x04001368 RID: 4968
 	public Vector CurrentAutoCameraArmOffset = Vector.Create();
 
-	// Token: 0x04001326 RID: 4902
+	// Token: 0x04001369 RID: 4969
 	private readonly Vector DesiredAutoCameraArmOffset = Vector.Create();
 
-	// Token: 0x04001327 RID: 4903
+	// Token: 0x0400136A RID: 4970
 	protected float DesiredOffsetHeight;
 
-	// Token: 0x04001328 RID: 4904
+	// Token: 0x0400136B RID: 4971
 	protected float CurrentOffsetHeight;
 
-	// Token: 0x04001329 RID: 4905
+	// Token: 0x0400136C RID: 4972
 	private readonly HashSet<object> ForceEnableSet = new HashSet<object>();
 
-	// Token: 0x0400132A RID: 4906
+	// Token: 0x0400136D RID: 4973
 	protected FVector2D ResultPositionRef = new FVector2D();
 
-	// Token: 0x0400132B RID: 4907
+	// Token: 0x0400136E RID: 4974
 	private readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x0400132C RID: 4908
+	// Token: 0x0400136F RID: 4975
 	private readonly Vector TmpVector2 = Vector.Create();
 }

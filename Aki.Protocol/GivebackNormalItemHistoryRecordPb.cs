@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020006F2 RID: 1778
+	// Token: 0x020006DE RID: 1758
 	public sealed class GivebackNormalItemHistoryRecordPb : IMessage<GivebackNormalItemHistoryRecordPb>, IMessage, IEquatable<GivebackNormalItemHistoryRecordPb>, IDeepCloneable<GivebackNormalItemHistoryRecordPb>, IBufferMessage
 	{
-		// Token: 0x0600A207 RID: 41479 RVA: 0x00187DC7 File Offset: 0x00185FC7
+		// Token: 0x0600A0B1 RID: 41137 RVA: 0x00185393 File Offset: 0x00183593
 		[NullableContext(1)]
 		public static GivebackNormalItemHistoryRecordPb Create()
 		{
 			return new GivebackNormalItemHistoryRecordPb();
 		}
 
-		// Token: 0x1700208D RID: 8333
-		// (get) Token: 0x0600A208 RID: 41480 RVA: 0x00187DCE File Offset: 0x00185FCE
+		// Token: 0x17002043 RID: 8259
+		// (get) Token: 0x0600A0B2 RID: 41138 RVA: 0x0018539A File Offset: 0x0018359A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<GivebackNormalItemHistoryRecordPb> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700208E RID: 8334
-		// (get) Token: 0x0600A209 RID: 41481 RVA: 0x00187DD5 File Offset: 0x00185FD5
+		// Token: 0x17002044 RID: 8260
+		// (get) Token: 0x0600A0B3 RID: 41139 RVA: 0x001853A1 File Offset: 0x001835A1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700208F RID: 8335
-		// (get) Token: 0x0600A20A RID: 41482 RVA: 0x00187DD8 File Offset: 0x00185FD8
+		// Token: 0x17002045 RID: 8261
+		// (get) Token: 0x0600A0B4 RID: 41140 RVA: 0x001853A4 File Offset: 0x001835A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A20B RID: 41483 RVA: 0x00187DDF File Offset: 0x00185FDF
+		// Token: 0x0600A0B5 RID: 41141 RVA: 0x001853AB File Offset: 0x001835AB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GivebackNormalItemHistoryRecordPb()
 		{
 		}
 
-		// Token: 0x0600A20C RID: 41484 RVA: 0x00187DE7 File Offset: 0x00185FE7
+		// Token: 0x0600A0B6 RID: 41142 RVA: 0x001853B3 File Offset: 0x001835B3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GivebackNormalItemHistoryRecordPb(GivebackNormalItemHistoryRecordPb other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600A20D RID: 41485 RVA: 0x00187E24 File Offset: 0x00186024
+		// Token: 0x0600A0B7 RID: 41143 RVA: 0x001853F0 File Offset: 0x001835F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GivebackNormalItemHistoryRecordPb Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new GivebackNormalItemHistoryRecordPb(this);
 		}
 
-		// Token: 0x17002090 RID: 8336
-		// (get) Token: 0x0600A20E RID: 41486 RVA: 0x00187E2C File Offset: 0x0018602C
-		// (set) Token: 0x0600A20F RID: 41487 RVA: 0x00187E34 File Offset: 0x00186034
+		// Token: 0x17002046 RID: 8262
+		// (get) Token: 0x0600A0B8 RID: 41144 RVA: 0x001853F8 File Offset: 0x001835F8
+		// (set) Token: 0x0600A0B9 RID: 41145 RVA: 0x00185400 File Offset: 0x00183600
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemId
@@ -96,9 +96,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002091 RID: 8337
-		// (get) Token: 0x0600A210 RID: 41488 RVA: 0x00187E3D File Offset: 0x0018603D
-		// (set) Token: 0x0600A211 RID: 41489 RVA: 0x00187E45 File Offset: 0x00186045
+		// Token: 0x17002047 RID: 8263
+		// (get) Token: 0x0600A0BA RID: 41146 RVA: 0x00185409 File Offset: 0x00183609
+		// (set) Token: 0x0600A0BB RID: 41147 RVA: 0x00185411 File Offset: 0x00183611
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long HistoryAdd
@@ -113,9 +113,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002092 RID: 8338
-		// (get) Token: 0x0600A212 RID: 41490 RVA: 0x00187E4E File Offset: 0x0018604E
-		// (set) Token: 0x0600A213 RID: 41491 RVA: 0x00187E56 File Offset: 0x00186056
+		// Token: 0x17002048 RID: 8264
+		// (get) Token: 0x0600A0BC RID: 41148 RVA: 0x0018541A File Offset: 0x0018361A
+		// (set) Token: 0x0600A0BD RID: 41149 RVA: 0x00185422 File Offset: 0x00183622
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long HistoryCost
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A214 RID: 41492 RVA: 0x00187E5F File Offset: 0x0018605F
+		// Token: 0x0600A0BE RID: 41150 RVA: 0x0018542B File Offset: 0x0018362B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return this.Equals(other as GivebackNormalItemHistoryRecordPb);
 		}
 
-		// Token: 0x0600A215 RID: 41493 RVA: 0x00187E70 File Offset: 0x00186070
+		// Token: 0x0600A0BF RID: 41151 RVA: 0x0018543C File Offset: 0x0018363C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(GivebackNormalItemHistoryRecordPb other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ItemId == other.ItemId && this.HistoryAdd == other.HistoryAdd && this.HistoryCost == other.HistoryCost && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600A216 RID: 41494 RVA: 0x00187ECC File Offset: 0x001860CC
+		// Token: 0x0600A0C0 RID: 41152 RVA: 0x00185498 File Offset: 0x00183698
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600A217 RID: 41495 RVA: 0x00187F3D File Offset: 0x0018613D
+		// Token: 0x0600A0C1 RID: 41153 RVA: 0x00185509 File Offset: 0x00183709
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -179,7 +179,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600A218 RID: 41496 RVA: 0x00187F4A File Offset: 0x0018614A
+		// Token: 0x0600A0C2 RID: 41154 RVA: 0x00185516 File Offset: 0x00183716
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -187,7 +187,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600A219 RID: 41497 RVA: 0x00187F54 File Offset: 0x00186154
+		// Token: 0x0600A0C3 RID: 41155 RVA: 0x00185520 File Offset: 0x00183720
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A21A RID: 41498 RVA: 0x00187FC8 File Offset: 0x001861C8
+		// Token: 0x0600A0C4 RID: 41156 RVA: 0x00185594 File Offset: 0x00183794
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -238,7 +238,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600A21B RID: 41499 RVA: 0x00188038 File Offset: 0x00186238
+		// Token: 0x0600A0C5 RID: 41157 RVA: 0x00185604 File Offset: 0x00183804
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(GivebackNormalItemHistoryRecordPb other)
@@ -262,7 +262,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600A21C RID: 41500 RVA: 0x0018809C File Offset: 0x0018629C
+		// Token: 0x0600A0C6 RID: 41158 RVA: 0x00185668 File Offset: 0x00183868
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -270,7 +270,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600A21D RID: 41501 RVA: 0x001880A8 File Offset: 0x001862A8
+		// Token: 0x0600A0C7 RID: 41159 RVA: 0x00185674 File Offset: 0x00183874
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -307,28 +307,28 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04004B21 RID: 19233
+		// Token: 0x04004B1A RID: 19226
 		private static readonly MessageParser<GivebackNormalItemHistoryRecordPb> _parser = new MessageParser<GivebackNormalItemHistoryRecordPb>(() => new GivebackNormalItemHistoryRecordPb());
 
-		// Token: 0x04004B22 RID: 19234
+		// Token: 0x04004B1B RID: 19227
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004B23 RID: 19235
+		// Token: 0x04004B1C RID: 19228
 		public const int ItemIdFieldNumber = 1;
 
-		// Token: 0x04004B24 RID: 19236
+		// Token: 0x04004B1D RID: 19229
 		private int itemId_;
 
-		// Token: 0x04004B25 RID: 19237
+		// Token: 0x04004B1E RID: 19230
 		public const int HistoryAddFieldNumber = 2;
 
-		// Token: 0x04004B26 RID: 19238
+		// Token: 0x04004B1F RID: 19231
 		private long historyAdd_;
 
-		// Token: 0x04004B27 RID: 19239
+		// Token: 0x04004B20 RID: 19232
 		public const int HistoryCostFieldNumber = 3;
 
-		// Token: 0x04004B28 RID: 19240
+		// Token: 0x04004B21 RID: 19233
 		private long historyCost_;
 	}
 }

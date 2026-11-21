@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.GeneralLogicTree
 {
-	// Token: 0x020059BA RID: 22970
+	// Token: 0x02004993 RID: 18835
 	public abstract class GeneralLogicTreeNodeExtraInfo
 	{
-		// Token: 0x0401E602 RID: 124418
+		// Token: 0x040190A1 RID: 102561
 		public EExtraInfoType Type;
 	}
 }

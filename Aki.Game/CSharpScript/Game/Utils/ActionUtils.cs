@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Utils
 {
-	// Token: 0x02004544 RID: 17732
+	// Token: 0x0200346C RID: 13420
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActionUtils
 	{
-		// Token: 0x0602DD5D RID: 187741 RVA: 0x00A89390 File Offset: 0x00A87590
+		// Token: 0x0602243F RID: 140351 RVA: 0x009B4AC4 File Offset: 0x009B2CC4
 		public static void CalcCatapultToTargetConfigByGravity(Vector startPos, Vector targetLocation, Vector locationOffset, float heightOffset, float gravityMagnitude, Vector gravityDirect, Vector defaultForward, CatapultToTargetResult @out)
 		{
 			targetLocation.Subtraction(startPos, ActionUtils.TmpVector);
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Utils
 			@out.GravityDirect.DeepCopy(gravityDirect);
 		}
 
-		// Token: 0x0602DD5E RID: 187742 RVA: 0x00A8959C File Offset: 0x00A8779C
+		// Token: 0x06022440 RID: 140352 RVA: 0x009B4CD0 File Offset: 0x009B2ED0
 		public static void CalcCatapultToTargetConfigByTime(Vector startPos, Vector targetLocation, Vector locationOffset, float time1, Vector gravityDirect, Vector defaultForward, CatapultToTargetResult @out)
 		{
 			targetLocation.Subtraction(startPos, ActionUtils.TmpVector);
@@ -68,15 +68,15 @@ namespace CSharpScript.Game.Utils
 			@out.GravityDirect.DeepCopy(gravityDirect);
 		}
 
-		// Token: 0x04018782 RID: 100226
+		// Token: 0x04012DBC RID: 77244
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TmpVector = Vector.Create();
 
-		// Token: 0x04018783 RID: 100227
+		// Token: 0x04012DBD RID: 77245
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TmpVector2 = Vector.Create();
 
-		// Token: 0x04018784 RID: 100228
+		// Token: 0x04012DBE RID: 77246
 		[StaticVariableRuleIgnore]
 		private static readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 	}

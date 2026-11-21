@@ -7,19 +7,19 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.Module.Cursor
 {
-	// Token: 0x02005AEE RID: 23278
+	// Token: 0x02004ACF RID: 19151
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class CursorController : UiControllerBase
 	{
-		// Token: 0x0603AECB RID: 241355 RVA: 0x00E0C67A File Offset: 0x00E0A87A
+		// Token: 0x0602FE3D RID: 196157 RVA: 0x00D5D352 File Offset: 0x00D5B552
 		public void CursorEnterExit(bool isEnter)
 		{
 			this.EnterCurrentCursor(isEnter);
 		}
 
-		// Token: 0x0603AECC RID: 241356 RVA: 0x00E0C684 File Offset: 0x00E0A884
+		// Token: 0x0602FE3E RID: 196158 RVA: 0x00D5D35C File Offset: 0x00D5B55C
 		private void EnterCurrentCursor(bool isEnter)
 		{
 			TsCharacterController characterController = Global.CharacterController;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Cursor
 			characterController.CurrentMouseCursor = EMouseCursor.Default;
 		}
 
-		// Token: 0x0603AECD RID: 241357 RVA: 0x00E0C6B8 File Offset: 0x00E0A8B8
+		// Token: 0x0602FE3F RID: 196159 RVA: 0x00D5D390 File Offset: 0x00D5B590
 		public unsafe void InitMouseByMousePos()
 		{
 			FVector2D slateApplicationCursorPos = UKuroStaticLibrary.GetSlateApplicationCursorPos();
@@ -54,20 +54,12 @@ namespace CSharpScript.Game.Module.Cursor
 			}
 		}
 
-		// Token: 0x0603AECE RID: 241358 RVA: 0x00E0C780 File Offset: 0x00E0A980
+		// Token: 0x0602FE40 RID: 196160 RVA: 0x00D5D458 File Offset: 0x00D5B658
 		public void SetWindowCursorStyle()
 		{
 			if (Info.Instance.IsInKeyBoard())
 			{
-				string text;
-				if (Info.Instance.IsPlayInEditor)
-				{
-					text = "Aki/UI/Module/Cursor/SourceResource";
-				}
-				else
-				{
-					text = "Aki/Cursor";
-				}
+				string text = "Aki/Cursor";
 				FName? dynamicFName = FNameUtil.GetDynamicFName(text + "/CursorNor");
 				FName? dynamicFName2 = FNameUtil.GetDynamicFName(text + "/CursorHi");
 				FName? dynamicFName3 = FNameUtil.GetDynamicFName(text + "/CursorPre");
@@ -81,8 +73,8 @@ namespace CSharpScript.Game.Module.Cursor
 			}
 		}
 
-		// Token: 0x17008C34 RID: 35892
-		// (get) Token: 0x0603AECF RID: 241359 RVA: 0x00E0C861 File Offset: 0x00E0AA61
+		// Token: 0x1700600E RID: 24590
+		// (get) Token: 0x0602FE41 RID: 196161 RVA: 0x00D5D525 File Offset: 0x00D5B725
 		public static CursorController Instance
 		{
 			get
@@ -91,7 +83,7 @@ namespace CSharpScript.Game.Module.Cursor
 			}
 		}
 
-		// Token: 0x0603AED0 RID: 241360 RVA: 0x00E0C868 File Offset: 0x00E0AA68
+		// Token: 0x0602FE42 RID: 196162 RVA: 0x00D5D52C File Offset: 0x00D5B72C
 		public static CursorController GetOrCreateInstance()
 		{
 			if (CursorController._Instance == null)
@@ -101,7 +93,7 @@ namespace CSharpScript.Game.Module.Cursor
 			return CursorController._Instance;
 		}
 
-		// Token: 0x0603AED1 RID: 241361 RVA: 0x00E0C87C File Offset: 0x00E0AA7C
+		// Token: 0x0602FE43 RID: 196163 RVA: 0x00D5D540 File Offset: 0x00D5B740
 		public static bool CreateInstance()
 		{
 			if (CursorController._Instance != null)
@@ -112,24 +104,24 @@ namespace CSharpScript.Game.Module.Cursor
 			return true;
 		}
 
-		// Token: 0x0603AED2 RID: 241362 RVA: 0x00E0C892 File Offset: 0x00E0AA92
+		// Token: 0x0602FE44 RID: 196164 RVA: 0x00D5D556 File Offset: 0x00D5B756
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603AED3 RID: 241363 RVA: 0x00E0C894 File Offset: 0x00E0AA94
+		// Token: 0x0602FE45 RID: 196165 RVA: 0x00D5D558 File Offset: 0x00D5B758
 		public static void ResetStaticDefaultValue()
 		{
 			CursorController._Instance = null;
 		}
 
-		// Token: 0x0603AED4 RID: 241364 RVA: 0x00E0C89C File Offset: 0x00E0AA9C
+		// Token: 0x0602FE46 RID: 196166 RVA: 0x00D5D560 File Offset: 0x00D5B760
 		static CursorController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CursorController.CreateStaticDefaultValue), new Action(CursorController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EC24 RID: 125988
+		// Token: 0x040196E0 RID: 104160
 		[Nullable(2)]
 		private static CursorController _Instance;
 	}

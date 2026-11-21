@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A30 RID: 10800
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D1D RID: 11549
 	public class ISummonVehicle : ISummonEntityType
 	{
-		// Token: 0x0600EDF0 RID: 60912 RVA: 0x0022AB41 File Offset: 0x00228D41
+		// Token: 0x0600FC88 RID: 64648 RVA: 0x002484F5 File Offset: 0x002466F5
 		public static ISummonVehicle Create(ISummonVehicle? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B52 RID: 19282
-		// (get) Token: 0x0600EDF1 RID: 60913 RVA: 0x0022AB60 File Offset: 0x00228D60
+		// Token: 0x17004EFC RID: 20220
+		// (get) Token: 0x0600FC89 RID: 64649 RVA: 0x00248514 File Offset: 0x00246714
 		public override ESummonEntityType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B53 RID: 19283
-		// (get) Token: 0x0600EDF2 RID: 60914 RVA: 0x0022AB6D File Offset: 0x00228D6D
+		// Token: 0x17004EFD RID: 20221
+		// (get) Token: 0x0600FC8A RID: 64650 RVA: 0x00248521 File Offset: 0x00246721
 		public virtual string TemplateId
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B54 RID: 19284
-		// (get) Token: 0x0600EDF3 RID: 60915 RVA: 0x0022AB7A File Offset: 0x00228D7A
+		// Token: 0x17004EFE RID: 20222
+		// (get) Token: 0x0600FC8B RID: 64651 RVA: 0x0024852E File Offset: 0x0024672E
 		public virtual int PositionEntityId
 		{
 			get
@@ -52,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082F4 RID: 33524
+		// Token: 0x040089E7 RID: 35303
 		private ISummonVehicle Instance;
 	}
 }

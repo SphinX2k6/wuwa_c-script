@@ -1,30 +1,30 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x0200107B RID: 4219
+// Token: 0x0200052F RID: 1327
 public interface IFreeCameraConfig
 {
-	// Token: 0x170008CC RID: 2252
-	// (get) Token: 0x06006CFC RID: 27900
+	// Token: 0x170008EC RID: 2284
+	// (get) Token: 0x06004091 RID: 16529
 	FVectorDouble Pos { get; }
 
-	// Token: 0x170008CD RID: 2253
-	// (get) Token: 0x06006CFD RID: 27901
+	// Token: 0x170008ED RID: 2285
+	// (get) Token: 0x06004092 RID: 16530
 	FRotator Rot { get; }
 
-	// Token: 0x170008CE RID: 2254
-	// (get) Token: 0x06006CFE RID: 27902
+	// Token: 0x170008EE RID: 2286
+	// (get) Token: 0x06004093 RID: 16531
 	float Fov { get; }
 
-	// Token: 0x170008CF RID: 2255
-	// (get) Token: 0x06006CFF RID: 27903
+	// Token: 0x170008EF RID: 2287
+	// (get) Token: 0x06004094 RID: 16532
 	float Radius { get; }
 
-	// Token: 0x170008D0 RID: 2256
-	// (get) Token: 0x06006D00 RID: 27904
+	// Token: 0x170008F0 RID: 2288
+	// (get) Token: 0x06004095 RID: 16533
 	float Interval { get; }
 
-	// Token: 0x170008D1 RID: 2257
-	// (get) Token: 0x06006D01 RID: 27905
+	// Token: 0x170008F1 RID: 2289
+	// (get) Token: 0x06004096 RID: 16534
 	float InterpDuration { get; }
 }

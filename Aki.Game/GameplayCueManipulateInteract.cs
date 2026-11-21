@@ -4,22 +4,22 @@ using CSharpScript.Game.NewWorld.Character.Common.Component;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
 using UnrealEngine;
 
-// Token: 0x02002FC8 RID: 12232
+// Token: 0x0200251C RID: 9500
 [NullableContext(2)]
 [Nullable(0)]
 public class GameplayCueManipulateInteract : GameplayCueBase
 {
-	// Token: 0x06019EE4 RID: 106212 RVA: 0x006C8843 File Offset: 0x006C6A43
+	// Token: 0x060177F6 RID: 96246 RVA: 0x006EF117 File Offset: 0x006ED317
 	protected override void OnInit()
 	{
 	}
 
-	// Token: 0x06019EE5 RID: 106213 RVA: 0x006C8845 File Offset: 0x006C6A45
+	// Token: 0x060177F7 RID: 96247 RVA: 0x006EF119 File Offset: 0x006ED319
 	protected override void OnTick(float delta)
 	{
 	}
 
-	// Token: 0x06019EE6 RID: 106214 RVA: 0x006C8848 File Offset: 0x006C6A48
+	// Token: 0x060177F8 RID: 96248 RVA: 0x006EF11C File Offset: 0x006ED31C
 	protected override void OnCreate()
 	{
 		FVectorDouble? targetPosition = this.GetTargetPosition();
@@ -31,7 +31,7 @@ public class GameplayCueManipulateInteract : GameplayCueBase
 		this.HookItem = GameplayCueHookCommonItem.Spawn(this.ActorInternal, FNameUtil.GetDynamicFName(this.CueConfig.Socket).Value, targetPosition.Value, this.CueConfig.Resources(), lineAttach);
 	}
 
-	// Token: 0x06019EE7 RID: 106215 RVA: 0x006C88CA File Offset: 0x006C6ACA
+	// Token: 0x060177F9 RID: 96249 RVA: 0x006EF19E File Offset: 0x006ED39E
 	protected override void OnDestroy()
 	{
 		if (this.HookItem != null)
@@ -41,7 +41,7 @@ public class GameplayCueManipulateInteract : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019EE8 RID: 106216 RVA: 0x006C88E8 File Offset: 0x006C6AE8
+	// Token: 0x060177FA RID: 96250 RVA: 0x006EF1BC File Offset: 0x006ED3BC
 	protected FVectorDouble? GetTargetPosition()
 	{
 		CharacterManipulateInteractComponent interactComponent = this.GetInteractComponent();
@@ -52,7 +52,7 @@ public class GameplayCueManipulateInteract : GameplayCueBase
 		return new FVectorDouble?(interactComponent.GetTargetLocation().ToUeVector(false));
 	}
 
-	// Token: 0x06019EE9 RID: 106217 RVA: 0x006C891C File Offset: 0x006C6B1C
+	// Token: 0x060177FB RID: 96251 RVA: 0x006EF1F0 File Offset: 0x006ED3F0
 	private CharacterManipulateInteractComponent GetInteractComponent()
 	{
 		WorldEntity entity = this.EntityHandle.Entity;
@@ -78,6 +78,6 @@ public class GameplayCueManipulateInteract : GameplayCueBase
 		return entity2.GetComponent<CharacterManipulateInteractComponent>();
 	}
 
-	// Token: 0x0400C444 RID: 50244
+	// Token: 0x0400C7ED RID: 51181
 	private GameplayCueHookCommonItem HookItem;
 }

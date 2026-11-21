@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -10,13 +9,13 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 {
-	// Token: 0x0200620E RID: 25102
+	// Token: 0x0200518C RID: 20876
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class RhythmShipModel : ModelBase
 	{
-		// Token: 0x0603F523 RID: 259363 RVA: 0x00F4CE64 File Offset: 0x00F4B064
+		// Token: 0x060341E4 RID: 213476 RVA: 0x00E93DBC File Offset: 0x00E91FBC
 		protected override bool OnInit()
 		{
 			foreach (int planet in RhythmShipConfig.Instance.GetRhythmShipPlanetIdListByType(2, 0))
@@ -30,8 +29,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return true;
 		}
 
-		// Token: 0x17009242 RID: 37442
-		// (get) Token: 0x0603F524 RID: 259364 RVA: 0x00F4CF1C File Offset: 0x00F4B11C
+		// Token: 0x170065A4 RID: 26020
+		// (get) Token: 0x060341E5 RID: 213477 RVA: 0x00E93E74 File Offset: 0x00E92074
 		[Nullable(2)]
 		public RhythmShipData ActivityData
 		{
@@ -47,13 +46,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}
 		}
 
-		// Token: 0x0603F525 RID: 259365 RVA: 0x00F4CF45 File Offset: 0x00F4B145
+		// Token: 0x060341E6 RID: 213478 RVA: 0x00E93E9D File Offset: 0x00E9209D
 		public void InitLocalCalibrationValue()
 		{
 			this.LocalCalibrationValue = LocalStorage.GetPlayer<int>(ELocalStoragePlayerKey.RhythmShipLocalCalibrationValue, 0);
 		}
 
-		// Token: 0x0603F526 RID: 259366 RVA: 0x00F4CF58 File Offset: 0x00F4B158
+		// Token: 0x060341E7 RID: 213479 RVA: 0x00E93EB0 File Offset: 0x00E920B0
 		public void InitMainLinePlanetInfo(RhythmShipPlanetPb planetInfo)
 		{
 			foreach (RhythmShipLevelPb rhythmShipLevelPb in planetInfo.RhythmShipLevelPb)
@@ -65,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}
 		}
 
-		// Token: 0x0603F527 RID: 259367 RVA: 0x00F4CFE4 File Offset: 0x00F4B1E4
+		// Token: 0x060341E8 RID: 213480 RVA: 0x00E93F3C File Offset: 0x00E9213C
 		public List<int> GetAllCanGetRewardTaskByType(RhythmTaskTypePb type, int tabNumber)
 		{
 			RhythmShipData activityData = this.ActivityData;
@@ -87,7 +86,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return list;
 		}
 
-		// Token: 0x0603F528 RID: 259368 RVA: 0x00F4D09C File Offset: 0x00F4B29C
+		// Token: 0x060341E9 RID: 213481 RVA: 0x00E93FF4 File Offset: 0x00E921F4
 		public bool GetPlanetLevelUnlock(int planetId)
 		{
 			if (this.GetPlanetActivityId(planetId) == 0)
@@ -99,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return activityData != null && (!activityData.PlanetOpenTime.TryGetValue(planetId, out num) || num == 0L || TimeUtil.Instance.GetServerTime() >= (double)num);
 		}
 
-		// Token: 0x0603F529 RID: 259369 RVA: 0x00F4D0EC File Offset: 0x00F4B2EC
+		// Token: 0x060341EA RID: 213482 RVA: 0x00E94044 File Offset: 0x00E92244
 		public bool GetSubLevelIsUnlock(int subLevelId)
 		{
 			RhythmSubLevel? rhythmShipSubLevelById = RhythmShipConfig.Instance.GetRhythmShipSubLevelById(subLevelId);
@@ -131,7 +130,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return false;
 		}
 
-		// Token: 0x0603F52A RID: 259370 RVA: 0x00F4D1BC File Offset: 0x00F4B3BC
+		// Token: 0x060341EB RID: 213483 RVA: 0x00E94114 File Offset: 0x00E92314
 		public bool GetSubLevelHasRank(int subLevelId)
 		{
 			RhythmShipData activityData = this.ActivityData;
@@ -139,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return activityData != null && activityData.SubLevelInfoMap.TryGetValue(subLevelId, out rhythmSubLevelPb) && rhythmSubLevelPb.BestRank > RhythmShipRank.Undefined;
 		}
 
-		// Token: 0x0603F52B RID: 259371 RVA: 0x00F4D1F0 File Offset: 0x00F4B3F0
+		// Token: 0x060341EC RID: 213484 RVA: 0x00E94148 File Offset: 0x00E92348
 		public bool GetLevelIsUnlock(int levelId)
 		{
 			RhythmShipLevel? rhythmShipLevelById = RhythmShipConfig.Instance.GetRhythmShipLevelById(levelId);
@@ -170,7 +169,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return false;
 		}
 
-		// Token: 0x0603F52C RID: 259372 RVA: 0x00F4D29C File Offset: 0x00F4B49C
+		// Token: 0x060341ED RID: 213485 RVA: 0x00E941F4 File Offset: 0x00E923F4
 		public List<IRhythmShipSubLevelRatingData> GetSubLevelRatingInfo(int levelId)
 		{
 			RhythmShipData activityData = this.ActivityData;
@@ -222,7 +221,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return list;
 		}
 
-		// Token: 0x0603F52D RID: 259373 RVA: 0x00F4D4B0 File Offset: 0x00F4B6B0
+		// Token: 0x060341EE RID: 213486 RVA: 0x00E94408 File Offset: 0x00E92608
 		[NullableContext(2)]
 		public IRhythmShipSubLevelRatingData GetSubLevelSelfRatingInfo(int levelId)
 		{
@@ -250,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return result;
 		}
 
-		// Token: 0x0603F52E RID: 259374 RVA: 0x00F4D57C File Offset: 0x00F4B77C
+		// Token: 0x060341EF RID: 213487 RVA: 0x00E944D4 File Offset: 0x00E926D4
 		public string GetTaskProgressString(int type)
 		{
 			RhythmShipData activityData = this.ActivityData;
@@ -271,14 +270,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return num.ToString() + "/" + num2.ToString();
 		}
 
-		// Token: 0x0603F52F RID: 259375 RVA: 0x00F4D618 File Offset: 0x00F4B818
+		// Token: 0x060341F0 RID: 213488 RVA: 0x00E94570 File Offset: 0x00E92770
 		public bool GetCanTaskGetReward(int type)
 		{
 			RhythmShipData activityData = this.ActivityData;
 			return activityData != null && activityData.GetCanTaskGetReward(type);
 		}
 
-		// Token: 0x0603F530 RID: 259376 RVA: 0x00F4D638 File Offset: 0x00F4B838
+		// Token: 0x060341F1 RID: 213489 RVA: 0x00E94590 File Offset: 0x00E92790
 		public bool GetCanTaskTabGetReward(int tabIndex, int type)
 		{
 			RhythmShipData activityData = this.ActivityData;
@@ -299,7 +298,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return false;
 		}
 
-		// Token: 0x0603F531 RID: 259377 RVA: 0x00F4D6D0 File Offset: 0x00F4B8D0
+		// Token: 0x060341F2 RID: 213490 RVA: 0x00E94628 File Offset: 0x00E92828
 		public bool GetLevelRedDotActive(int levelId)
 		{
 			if (this.GetLevelActivityId(levelId) == 0)
@@ -331,7 +330,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return false;
 		}
 
-		// Token: 0x0603F532 RID: 259378 RVA: 0x00F4D780 File Offset: 0x00F4B980
+		// Token: 0x060341F3 RID: 213491 RVA: 0x00E946D8 File Offset: 0x00E928D8
 		public bool GetSubLevelRedDotActive(int subLevelId)
 		{
 			if (this.GetSubLevelActivityId(subLevelId) == 0)
@@ -361,7 +360,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return rhythmShipLevelById != null && this.GetPlanetLevelUnlock(rhythmShipLevelById.Value.Planet);
 		}
 
-		// Token: 0x0603F533 RID: 259379 RVA: 0x00F4D824 File Offset: 0x00F4BA24
+		// Token: 0x060341F4 RID: 213492 RVA: 0x00E9477C File Offset: 0x00E9297C
 		public bool GetPlanetRedDotActive(int planet)
 		{
 			if (this.GetPlanetActivityId(planet) == 0)
@@ -386,7 +385,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return false;
 		}
 
-		// Token: 0x0603F534 RID: 259380 RVA: 0x00F4D8A8 File Offset: 0x00F4BAA8
+		// Token: 0x060341F5 RID: 213493 RVA: 0x00E94800 File Offset: 0x00E92A00
 		public bool GetRoleRedDotActive(int role)
 		{
 			RhythmShipData activityData = this.ActivityData;
@@ -398,7 +397,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return (redDotInfo == null || !redDotInfo.ReadRole.Contains(role)) && activityData.RoleUnlockList.Contains(role);
 		}
 
-		// Token: 0x0603F535 RID: 259381 RVA: 0x00F4D8F0 File Offset: 0x00F4BAF0
+		// Token: 0x060341F6 RID: 213494 RVA: 0x00E94848 File Offset: 0x00E92A48
 		public bool GetAnyRoleRedDotActive()
 		{
 			RhythmShipData activityData = this.ActivityData;
@@ -417,7 +416,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return false;
 		}
 
-		// Token: 0x0603F536 RID: 259382 RVA: 0x00F4D96C File Offset: 0x00F4BB6C
+		// Token: 0x060341F7 RID: 213495 RVA: 0x00E948C4 File Offset: 0x00E92AC4
 		public string GetCurrentPauseTime()
 		{
 			float num = RhythmGameController.Instance.CurrentPlayedTime();
@@ -436,7 +435,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return text + ":" + text2;
 		}
 
-		// Token: 0x0603F537 RID: 259383 RVA: 0x00F4D9E8 File Offset: 0x00F4BBE8
+		// Token: 0x060341F8 RID: 213496 RVA: 0x00E94940 File Offset: 0x00E92B40
 		[NullableContext(2)]
 		public string GetLevelLockTips(int levelId)
 		{
@@ -454,7 +453,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return rhythmShipSubLevelById.GetValueOrDefault().LockTips;
 		}
 
-		// Token: 0x0603F538 RID: 259384 RVA: 0x00F4DA40 File Offset: 0x00F4BC40
+		// Token: 0x060341F9 RID: 213497 RVA: 0x00E94998 File Offset: 0x00E92B98
 		[NullableContext(2)]
 		public string GetPlanetOpenLeftTimeString(int planet)
 		{
@@ -485,7 +484,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			});
 		}
 
-		// Token: 0x0603F539 RID: 259385 RVA: 0x00F4DAB8 File Offset: 0x00F4BCB8
+		// Token: 0x060341FA RID: 213498 RVA: 0x00E94A10 File Offset: 0x00E92C10
 		public bool GetLevelPreQuestFinish(int levelId)
 		{
 			foreach (int questId in this.GetLevelPreQuestIdList(levelId))
@@ -498,7 +497,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return true;
 		}
 
-		// Token: 0x0603F53A RID: 259386 RVA: 0x00F4DB1C File Offset: 0x00F4BD1C
+		// Token: 0x060341FB RID: 213499 RVA: 0x00E94A74 File Offset: 0x00E92C74
 		public int GetLevelUnFinishPreQuestId(int levelId)
 		{
 			foreach (int num in this.GetLevelPreQuestIdList(levelId))
@@ -511,7 +510,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return 0;
 		}
 
-		// Token: 0x0603F53B RID: 259387 RVA: 0x00F4DB80 File Offset: 0x00F4BD80
+		// Token: 0x060341FC RID: 213500 RVA: 0x00E94AD8 File Offset: 0x00E92CD8
 		public List<int> GetLevelPreQuestIdList(int levelId)
 		{
 			RhythmShipLevel? rhythmShipLevelById = RhythmShipConfig.Instance.GetRhythmShipLevelById(levelId);
@@ -520,10 +519,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			{
 				return new List<int>();
 			}
-			return array.ToList<int>();
+			return new List<int>(array);
 		}
 
-		// Token: 0x0603F53C RID: 259388 RVA: 0x00F4DBC4 File Offset: 0x00F4BDC4
+		// Token: 0x060341FD RID: 213501 RVA: 0x00E94B1C File Offset: 0x00E92D1C
 		public bool GetIsInRhythmShipLevel()
 		{
 			int instanceId = CreatureModel.Instance.GetInstanceId();
@@ -531,7 +530,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return config != null && config.Value.InstSubType == 53;
 		}
 
-		// Token: 0x0603F53D RID: 259389 RVA: 0x00F4DC08 File Offset: 0x00F4BE08
+		// Token: 0x060341FE RID: 213502 RVA: 0x00E94B60 File Offset: 0x00E92D60
 		public void TrackLevelPreQuest(int levelId)
 		{
 			int levelUnFinishPreQuestId = this.GetLevelUnFinishPreQuestId(levelId);
@@ -548,7 +547,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}
 		}
 
-		// Token: 0x0603F53E RID: 259390 RVA: 0x00F4DC6C File Offset: 0x00F4BE6C
+		// Token: 0x060341FF RID: 213503 RVA: 0x00E94BC4 File Offset: 0x00E92DC4
 		public int GetSubLevelActivityId(int subLevelId)
 		{
 			RhythmSubLevel? rhythmShipSubLevelById = RhythmShipConfig.Instance.GetRhythmShipSubLevelById(subLevelId);
@@ -559,7 +558,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return this.GetLevelActivityId(rhythmShipSubLevelById.Value.LevelId);
 		}
 
-		// Token: 0x0603F53F RID: 259391 RVA: 0x00F4DCA8 File Offset: 0x00F4BEA8
+		// Token: 0x06034200 RID: 213504 RVA: 0x00E94C00 File Offset: 0x00E92E00
 		public int GetLevelActivityId(int levelId)
 		{
 			RhythmShipLevel? rhythmShipLevelById = RhythmShipConfig.Instance.GetRhythmShipLevelById(levelId);
@@ -570,7 +569,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return this.GetPlanetActivityId(rhythmShipLevelById.Value.Planet);
 		}
 
-		// Token: 0x0603F540 RID: 259392 RVA: 0x00F4DCE4 File Offset: 0x00F4BEE4
+		// Token: 0x06034201 RID: 213505 RVA: 0x00E94C3C File Offset: 0x00E92E3C
 		public int GetPlanetActivityId(int planet)
 		{
 			RhythmShipPlanet? rhythmShipPlanetById = RhythmShipConfig.Instance.GetRhythmShipPlanetById(planet);
@@ -581,7 +580,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return rhythmShipPlanetById.GetValueOrDefault().ActivityId;
 		}
 
-		// Token: 0x0603F541 RID: 259393 RVA: 0x00F4DD17 File Offset: 0x00F4BF17
+		// Token: 0x06034202 RID: 213506 RVA: 0x00E94C6F File Offset: 0x00E92E6F
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -601,7 +600,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return activityData.SubLevelInfoMap;
 		}
 
-		// Token: 0x0603F542 RID: 259394 RVA: 0x00F4DD46 File Offset: 0x00F4BF46
+		// Token: 0x06034203 RID: 213507 RVA: 0x00E94C9E File Offset: 0x00E92E9E
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -621,21 +620,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return activityData.SubLevelInfoMap;
 		}
 
-		// Token: 0x0603F543 RID: 259395 RVA: 0x00F4DD75 File Offset: 0x00F4BF75
+		// Token: 0x06034204 RID: 213508 RVA: 0x00E94CCD File Offset: 0x00E92ECD
 		public void SetLocalCalibrationValue(int value)
 		{
 			this.LocalCalibrationValue = value;
 			LocalStorage.SetPlayer<int>(ELocalStoragePlayerKey.RhythmShipLocalCalibrationValue, value);
 		}
 
-		// Token: 0x0603F544 RID: 259396 RVA: 0x00F4DD8C File Offset: 0x00F4BF8C
+		// Token: 0x06034205 RID: 213509 RVA: 0x00E94CE4 File Offset: 0x00E92EE4
 		public bool GetLocalHavePlayAniByLevelId(int levelId)
 		{
 			HashSet<int> player = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.RhythmShipHavePlayAniLevelId, null);
 			return player != null && player.Contains(levelId);
 		}
 
-		// Token: 0x0603F545 RID: 259397 RVA: 0x00F4DDB4 File Offset: 0x00F4BFB4
+		// Token: 0x06034206 RID: 213510 RVA: 0x00E94D0C File Offset: 0x00E92F0C
 		public void SetLocalHavePlayAniLevelId(int levelId)
 		{
 			HashSet<int> hashSet = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.RhythmShipHavePlayAniLevelId, null) ?? new HashSet<int>();
@@ -643,7 +642,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.RhythmShipHavePlayAniLevelId, hashSet);
 		}
 
-		// Token: 0x0603F546 RID: 259398 RVA: 0x00F4DDEC File Offset: 0x00F4BFEC
+		// Token: 0x06034207 RID: 213511 RVA: 0x00E94D44 File Offset: 0x00E92F44
 		public bool GetCurrentLevelIsMainLine()
 		{
 			if (this.RhythmShipLevelId == 0)
@@ -659,7 +658,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return rhythmShipPlanetById != null && rhythmShipPlanetById.Value.ActivityId <= 0;
 		}
 
-		// Token: 0x0603F547 RID: 259399 RVA: 0x00F4DE5C File Offset: 0x00F4C05C
+		// Token: 0x06034208 RID: 213512 RVA: 0x00E94DB4 File Offset: 0x00E92FB4
 		public List<int> SortTaskItem(List<int> taskList, bool isLimit = false)
 		{
 			Dictionary<int, ConditionTask> taskInfoMap = isLimit ? RhythmShipModel.Instance.ActivityData.LimitTaskInfoMap : RhythmShipModel.Instance.ActivityData.TaskInfoMap;
@@ -674,8 +673,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return taskList;
 		}
 
-		// Token: 0x17009243 RID: 37443
-		// (get) Token: 0x0603F548 RID: 259400 RVA: 0x00F4DEAB File Offset: 0x00F4C0AB
+		// Token: 0x170065A5 RID: 26021
+		// (get) Token: 0x06034209 RID: 213513 RVA: 0x00E94E03 File Offset: 0x00E93003
 		public static RhythmShipModel Instance
 		{
 			get
@@ -684,7 +683,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}
 		}
 
-		// Token: 0x0603F549 RID: 259401 RVA: 0x00F4DEB2 File Offset: 0x00F4C0B2
+		// Token: 0x0603420A RID: 213514 RVA: 0x00E94E0A File Offset: 0x00E9300A
 		public static RhythmShipModel GetOrCreateInstance()
 		{
 			if (RhythmShipModel._Instance == null)
@@ -694,7 +693,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return RhythmShipModel._Instance;
 		}
 
-		// Token: 0x0603F54A RID: 259402 RVA: 0x00F4DEC6 File Offset: 0x00F4C0C6
+		// Token: 0x0603420B RID: 213515 RVA: 0x00E94E1E File Offset: 0x00E9301E
 		public static bool CreateInstance()
 		{
 			if (RhythmShipModel._Instance != null)
@@ -705,51 +704,51 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return true;
 		}
 
-		// Token: 0x0603F54B RID: 259403 RVA: 0x00F4DEDC File Offset: 0x00F4C0DC
+		// Token: 0x0603420C RID: 213516 RVA: 0x00E94E34 File Offset: 0x00E93034
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603F54C RID: 259404 RVA: 0x00F4DEDE File Offset: 0x00F4C0DE
+		// Token: 0x0603420D RID: 213517 RVA: 0x00E94E36 File Offset: 0x00E93036
 		public static void ResetStaticDefaultValue()
 		{
 			RhythmShipModel._Instance = null;
 		}
 
-		// Token: 0x0603F54D RID: 259405 RVA: 0x00F4DEE6 File Offset: 0x00F4C0E6
+		// Token: 0x0603420E RID: 213518 RVA: 0x00E94E3E File Offset: 0x00E9303E
 		static RhythmShipModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RhythmShipModel.CreateStaticDefaultValue), new Action(RhythmShipModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402107A RID: 135290
+		// Token: 0x0401B9A9 RID: 113065
 		public int ActivityId;
 
-		// Token: 0x0402107B RID: 135291
+		// Token: 0x0401B9AA RID: 113066
 		public int RhythmShipLevelId;
 
-		// Token: 0x0402107C RID: 135292
+		// Token: 0x0401B9AB RID: 113067
 		public int RhythmShipSubLevelId;
 
-		// Token: 0x0402107D RID: 135293
+		// Token: 0x0401B9AC RID: 113068
 		public int RhythmShipLevelRole;
 
-		// Token: 0x0402107E RID: 135294
+		// Token: 0x0401B9AD RID: 113069
 		public int LocalCalibrationValue;
 
-		// Token: 0x0402107F RID: 135295
+		// Token: 0x0401B9AE RID: 113070
 		public Dictionary<int, List<int>> LevelSubLevelInfoMap = new Dictionary<int, List<int>>();
 
-		// Token: 0x04021080 RID: 135296
+		// Token: 0x0401B9AF RID: 113071
 		public Dictionary<int, RhythmSubLevelPb> MainLineSubLevelInfoMap = new Dictionary<int, RhythmSubLevelPb>();
 
-		// Token: 0x04021081 RID: 135297
+		// Token: 0x0401B9B0 RID: 113072
 		public Action OpenKeyHelpView = delegate()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RhythmShipSetTipsView, null, null);
 		};
 
-		// Token: 0x04021082 RID: 135298
+		// Token: 0x0401B9B1 RID: 113073
 		[Nullable(2)]
 		private static RhythmShipModel _Instance;
 	}

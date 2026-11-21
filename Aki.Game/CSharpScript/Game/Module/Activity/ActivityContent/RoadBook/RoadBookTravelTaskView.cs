@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061EF RID: 25071
+	// Token: 0x0200516D RID: 20845
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoadBookTravelTaskView : UiViewBase
 	{
-		// Token: 0x0603F44B RID: 259147 RVA: 0x00F49B9B File Offset: 0x00F47D9B
+		// Token: 0x0603410C RID: 213260 RVA: 0x00E90AF3 File Offset: 0x00E8ECF3
 		public RoadBookTravelTaskView(UiViewInfo uiViewInfo) : base(uiViewInfo)
 		{
 		}
 
-		// Token: 0x0603F44C RID: 259148 RVA: 0x00F49BC4 File Offset: 0x00F47DC4
+		// Token: 0x0603410D RID: 213261 RVA: 0x00E90B1C File Offset: 0x00E8ED1C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x0603F44D RID: 259149 RVA: 0x00F49C6C File Offset: 0x00F47E6C
+		// Token: 0x0603410E RID: 213262 RVA: 0x00E90BC4 File Offset: 0x00E8EDC4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoadBookTravelTaskView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -46,27 +46,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F44E RID: 259150 RVA: 0x00F49CAF File Offset: 0x00F47EAF
+		// Token: 0x0603410F RID: 213263 RVA: 0x00E90C07 File Offset: 0x00E8EE07
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.RoadBookTaskRefresh, new Action(this.RefreshCurrent));
 			EventSystem.Instance.Add(EEventName.RoadBookTaskNavigationNext, new Action(this.OnRoadBookTaskNavigationNext));
 		}
 
-		// Token: 0x0603F44F RID: 259151 RVA: 0x00F49CE9 File Offset: 0x00F47EE9
+		// Token: 0x06034110 RID: 213264 RVA: 0x00E90C41 File Offset: 0x00E8EE41
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RoadBookTaskRefresh, new Action(this.RefreshCurrent));
 			EventSystem.Instance.Remove(EEventName.RoadBookTaskNavigationNext, new Action(this.OnRoadBookTaskNavigationNext));
 		}
 
-		// Token: 0x0603F450 RID: 259152 RVA: 0x00F49D23 File Offset: 0x00F47F23
+		// Token: 0x06034111 RID: 213265 RVA: 0x00E90C7B File Offset: 0x00E8EE7B
 		private AreaLayout CreateAreaLayoutItem(AreaLayoutItemData data, UUIItem uiItem, int index)
 		{
 			return new AreaLayout(this.ActivityBaseData);
 		}
 
-		// Token: 0x0603F451 RID: 259153 RVA: 0x00F49D30 File Offset: 0x00F47F30
+		// Token: 0x06034112 RID: 213266 RVA: 0x00E90C88 File Offset: 0x00E8EE88
 		private RoadBookTabDynamicScrollItem CreateTabItem(RoadBookAreaData data, UUIItem uiItem, int index)
 		{
 			RoadBookTabDynamicScrollItem roadBookTabDynamicScrollItem = new RoadBookTabDynamicScrollItem(this.ActivityBaseData);
@@ -75,12 +75,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return roadBookTabDynamicScrollItem;
 		}
 
-		// Token: 0x0603F452 RID: 259154 RVA: 0x00F49D61 File Offset: 0x00F47F61
+		// Token: 0x06034113 RID: 213267 RVA: 0x00E90CB9 File Offset: 0x00E8EEB9
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x0603F453 RID: 259155 RVA: 0x00F49D64 File Offset: 0x00F47F64
+		// Token: 0x06034114 RID: 213268 RVA: 0x00E90CBC File Offset: 0x00E8EEBC
 		protected void OnRoadBookTaskNavigationNext()
 		{
 			AreaLayout scrollItemFromIndex = this.AreaLayoutList.GetScrollItemFromIndex(this.SelectedTabIndex);
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F454 RID: 259156 RVA: 0x00F49DA4 File Offset: 0x00F47FA4
+		// Token: 0x06034115 RID: 213269 RVA: 0x00E90CFC File Offset: 0x00E8EEFC
 		protected void RefreshCurrent()
 		{
 			RewardPanel panelReward = this.PanelReward;
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.AreaLayoutList.RefreshByData(flatData.ToArray(), false, false);
 		}
 
-		// Token: 0x0603F455 RID: 259157 RVA: 0x00F49E50 File Offset: 0x00F48050
+		// Token: 0x06034116 RID: 213270 RVA: 0x00E90DA8 File Offset: 0x00E8EFA8
 		private UniTask Refresh()
 		{
 			RoadBookTravelTaskView.<Refresh>d__21 <Refresh>d__;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <Refresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F456 RID: 259158 RVA: 0x00F49E94 File Offset: 0x00F48094
+		// Token: 0x06034117 RID: 213271 RVA: 0x00E90DEC File Offset: 0x00E8EFEC
 		private List<AreaLayoutItemData> GetFlatData(List<RoadBookAreaData> areaDataList)
 		{
 			List<AreaLayoutItemData> list = new List<AreaLayoutItemData>();
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return list;
 		}
 
-		// Token: 0x0603F457 RID: 259159 RVA: 0x00F49F50 File Offset: 0x00F48150
+		// Token: 0x06034118 RID: 213272 RVA: 0x00E90EA8 File Offset: 0x00E8F0A8
 		private void InitViewRelation(List<AreaLayoutItemData> flatDataList)
 		{
 			this.TabAnchorOffset.Clear();
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.MissionViewHeight = height;
 		}
 
-		// Token: 0x0603F458 RID: 259160 RVA: 0x00F4A061 File Offset: 0x00F48261
+		// Token: 0x06034119 RID: 213273 RVA: 0x00E90FB9 File Offset: 0x00E8F1B9
 		private void SelectTab(int index, bool bOn, bool bFireEvent)
 		{
 			RoadBookTabDynamicScrollItem scrollItemFromIndex = this.TabLayout.GetScrollItemFromIndex(index);
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			scrollItemFromIndex.SetSelected(bOn, bFireEvent);
 		}
 
-		// Token: 0x0603F459 RID: 259161 RVA: 0x00F4A07C File Offset: 0x00F4827C
+		// Token: 0x0603411A RID: 213274 RVA: 0x00E90FD4 File Offset: 0x00E8F1D4
 		private void OnContentUpdate(FVector2D _)
 		{
 			if (this.InitRefresh)
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F45A RID: 259162 RVA: 0x00F4A170 File Offset: 0x00F48370
+		// Token: 0x0603411B RID: 213275 RVA: 0x00E910C8 File Offset: 0x00E8F2C8
 		private int FindTargetTabIndex()
 		{
 			float anchorOffsetY = base.GetUIDynScrollViewComponent(4).ContentUIItem.Get().GetAnchorOffsetY();
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return result;
 		}
 
-		// Token: 0x0603F45B RID: 259163 RVA: 0x00F4A277 File Offset: 0x00F48477
+		// Token: 0x0603411C RID: 213276 RVA: 0x00E911CF File Offset: 0x00E8F3CF
 		private void TabSelectedCallBack(RoadBookAreaData tabData, int index)
 		{
 			if (index != this.SelectedTabIndex)
@@ -263,20 +263,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.TabSelected(index);
 		}
 
-		// Token: 0x0603F45C RID: 259164 RVA: 0x00F4A2AC File Offset: 0x00F484AC
+		// Token: 0x0603411D RID: 213277 RVA: 0x00E91204 File Offset: 0x00E8F404
 		private void TabSelected(int index)
 		{
 			int itemIndex = this.AreaIndex2DynamicTitleIndex[index];
 			base.GetUIDynScrollViewComponent(4).ScrollToItemIndex(itemIndex, true, 0f, false);
 		}
 
-		// Token: 0x0603F45D RID: 259165 RVA: 0x00F4A2DA File Offset: 0x00F484DA
+		// Token: 0x0603411E RID: 213278 RVA: 0x00E91232 File Offset: 0x00E8F432
 		private bool IsSelectedOn(RoadBookAreaData tabData, int index)
 		{
 			return this.SelectedTabIndex == index;
 		}
 
-		// Token: 0x0603F45E RID: 259166 RVA: 0x00F4A2E8 File Offset: 0x00F484E8
+		// Token: 0x0603411F RID: 213279 RVA: 0x00E91240 File Offset: 0x00E8F440
 		public UniTask PlayStartSequence()
 		{
 			RoadBookTravelTaskView.<PlayStartSequence>d__30 <PlayStartSequence>d__;
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <PlayStartSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F45F RID: 259167 RVA: 0x00F4A32C File Offset: 0x00F4852C
+		// Token: 0x06034120 RID: 213280 RVA: 0x00E91284 File Offset: 0x00E8F484
 		public UniTask PlayCloseSequence()
 		{
 			RoadBookTravelTaskView.<PlayCloseSequence>d__31 <PlayCloseSequence>d__;
@@ -298,27 +298,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <PlayCloseSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F460 RID: 259168 RVA: 0x00F4A36F File Offset: 0x00F4856F
+		// Token: 0x06034121 RID: 213281 RVA: 0x00E912C7 File Offset: 0x00E8F4C7
 		private void SetDefault()
 		{
 			this.SelectTab(this.SelectedTabIndex, false, false);
 			this.SelectedTabIndex = -1;
 		}
 
-		// Token: 0x0603F461 RID: 259169 RVA: 0x00F4A388 File Offset: 0x00F48588
+		// Token: 0x06034122 RID: 213282 RVA: 0x00E912E0 File Offset: 0x00E8F4E0
 		private void OnClickHelpBtn()
 		{
 			HelpController.Instance.OpenHelpById(this.ActivityBaseData.LocalConfig.Value.HelpId);
 		}
 
-		// Token: 0x04020FFA RID: 135162
+		// Token: 0x0401B929 RID: 112937
 		[Nullable(2)]
 		private PopupCaptionItem CaptionComponent;
 
-		// Token: 0x04020FFB RID: 135163
+		// Token: 0x0401B92A RID: 112938
 		private ActivityRoadBookData ActivityBaseData;
 
-		// Token: 0x04020FFC RID: 135164
+		// Token: 0x0401B92B RID: 112939
 		[Nullable(new byte[]
 		{
 			2,
@@ -328,11 +328,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 		})]
 		protected DynamicScrollView<AreaLayout, AreaLayoutBaseItem, AreaLayoutItemData> AreaLayoutList;
 
-		// Token: 0x04020FFD RID: 135165
+		// Token: 0x0401B92C RID: 112940
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04020FFE RID: 135166
+		// Token: 0x0401B92D RID: 112941
 		[Nullable(new byte[]
 		{
 			2,
@@ -342,23 +342,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 		})]
 		protected DynamicScrollView<RoadBookTabDynamicScrollItem, RoadBookTabDynamicItem, RoadBookAreaData> TabLayout;
 
-		// Token: 0x04020FFF RID: 135167
+		// Token: 0x0401B92E RID: 112942
 		[Nullable(2)]
 		private RewardPanel PanelReward;
 
-		// Token: 0x04021000 RID: 135168
+		// Token: 0x0401B92F RID: 112943
 		private readonly List<float> TabAnchorOffset = new List<float>();
 
-		// Token: 0x04021001 RID: 135169
+		// Token: 0x0401B930 RID: 112944
 		private int SelectedTabIndex = -1;
 
-		// Token: 0x04021002 RID: 135170
+		// Token: 0x0401B931 RID: 112945
 		private bool InitRefresh;
 
-		// Token: 0x04021003 RID: 135171
+		// Token: 0x0401B932 RID: 112946
 		private float MissionViewHeight;
 
-		// Token: 0x04021004 RID: 135172
+		// Token: 0x0401B933 RID: 112947
 		private List<int> AreaIndex2DynamicTitleIndex = new List<int>();
 	}
 }

@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x020053F5 RID: 21493
+	// Token: 0x020043D8 RID: 17368
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ChangeActionInfo : IChangeActionInfo
 	{
-		// Token: 0x17008407 RID: 33799
-		// (get) Token: 0x06036F0B RID: 225035 RVA: 0x00D04DE1 File Offset: 0x00D02FE1
-		// (set) Token: 0x06036F0C RID: 225036 RVA: 0x00D04DE9 File Offset: 0x00D02FE9
+		// Token: 0x170057D3 RID: 22483
+		// (get) Token: 0x0602BE53 RID: 179795 RVA: 0x00C54225 File Offset: 0x00C52425
+		// (set) Token: 0x0602BE54 RID: 179796 RVA: 0x00C5422D File Offset: 0x00C5242D
 		public EInputControllerType InputControllerType { get; set; }
 
-		// Token: 0x17008408 RID: 33800
-		// (get) Token: 0x06036F0D RID: 225037 RVA: 0x00D04DF2 File Offset: 0x00D02FF2
-		// (set) Token: 0x06036F0E RID: 225038 RVA: 0x00D04DFA File Offset: 0x00D02FFA
+		// Token: 0x170057D4 RID: 22484
+		// (get) Token: 0x0602BE55 RID: 179797 RVA: 0x00C54236 File Offset: 0x00C52436
+		// (set) Token: 0x0602BE56 RID: 179798 RVA: 0x00C5423E File Offset: 0x00C5243E
 		public KeySettingRowData KeySettingRowData { get; set; }
 
-		// Token: 0x17008409 RID: 33801
-		// (get) Token: 0x06036F0F RID: 225039 RVA: 0x00D04E03 File Offset: 0x00D03003
-		// (set) Token: 0x06036F10 RID: 225040 RVA: 0x00D04E0B File Offset: 0x00D0300B
+		// Token: 0x170057D5 RID: 22485
+		// (get) Token: 0x0602BE57 RID: 179799 RVA: 0x00C54247 File Offset: 0x00C52447
+		// (set) Token: 0x0602BE58 RID: 179800 RVA: 0x00C5424F File Offset: 0x00C5244F
 		public Action<bool> OnConfirmCallback { get; set; }
 	}
 }

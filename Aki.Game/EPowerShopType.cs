@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020025F5 RID: 9717
+// Token: 0x02001AE0 RID: 6880
 public enum EPowerShopType
 {
-	// Token: 0x040094F5 RID: 38133
+	// Token: 0x0400964C RID: 38476
 	BuyWithMoney = 6,
-	// Token: 0x040094F6 RID: 38134
+	// Token: 0x0400964D RID: 38477
 	BuyWithItem
 }

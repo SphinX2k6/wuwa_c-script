@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C3A RID: 27706
+	// Token: 0x020073A1 RID: 29601
 	public class IOpenSystemBoardWithReturnT
 	{
-		// Token: 0x1700CE5F RID: 52831
-		// (get) Token: 0x06030CE4 RID: 199908 RVA: 0x006A16A5 File Offset: 0x0069F8A5
-		// (set) Token: 0x06030CE5 RID: 199909 RVA: 0x006A16AD File Offset: 0x0069F8AD
+		// Token: 0x1700D97A RID: 55674
+		// (get) Token: 0x06033C3D RID: 212029 RVA: 0x006FBB65 File Offset: 0x006F9D65
+		// (set) Token: 0x06033C3E RID: 212030 RVA: 0x006FBB6D File Offset: 0x006F9D6D
 		public TOpenSystemBoardWithReturnUnion SystemType { get; set; }
 
-		// Token: 0x06030CE6 RID: 199910 RVA: 0x006A16B6 File Offset: 0x0069F8B6
+		// Token: 0x06033C3F RID: 212031 RVA: 0x006FBB76 File Offset: 0x006F9D76
 		public IOpenSystemBoardWithReturnT()
 		{
 			this.SystemType = null;

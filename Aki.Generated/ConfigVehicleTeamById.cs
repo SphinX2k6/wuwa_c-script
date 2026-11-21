@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A72 RID: 2674
+	// Token: 0x02000B47 RID: 2887
 	public class ConfigVehicleTeamById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003EC0 RID: 16064 RVA: 0x001BCDA0 File Offset: 0x001BAFA0
+		// Token: 0x060043BE RID: 17342 RVA: 0x001DC134 File Offset: 0x001DA334
 		static ConfigVehicleTeamById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigVehicleTeamById.CreateStaticDefaultValue), new Action(ConfigVehicleTeamById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003EC1 RID: 16065 RVA: 0x001BCDC0 File Offset: 0x001BAFC0
+		// Token: 0x060043BF RID: 17343 RVA: 0x001DC154 File Offset: 0x001DA354
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigVehicleTeamById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003EC2 RID: 16066 RVA: 0x001BCE3F File Offset: 0x001BB03F
+		// Token: 0x060043C0 RID: 17344 RVA: 0x001DC1D3 File Offset: 0x001DA3D3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigVehicleTeamById.LogPair = null;
 			ConfigVehicleTeamById.HandleId = 0;
 		}
 
-		// Token: 0x06003EC3 RID: 16067 RVA: 0x001BCE4D File Offset: 0x001BB04D
+		// Token: 0x060043C1 RID: 17345 RVA: 0x001DC1E1 File Offset: 0x001DA3E1
 		public static void Init()
 		{
 			ConfigVehicleTeamById.HandleId = ConfigCommon.InitDataStatement(ConfigVehicleTeamById.HandleId, "db_vehicleteam.db", "select BinData from `VehicleTeam` where Id=?");
 		}
 
-		// Token: 0x06003EC4 RID: 16068 RVA: 0x001BCE68 File Offset: 0x001BB068
+		// Token: 0x060043C2 RID: 17346 RVA: 0x001DC1FC File Offset: 0x001DA3FC
 		public static VehicleTeam? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigVehicleTeamById.HandleId, ConfigVehicleTeamById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new VehicleTeam?(rootAsVehicleTeam);
 		}
 
-		// Token: 0x04004904 RID: 18692
+		// Token: 0x04004ED7 RID: 20183
 		private const string DB = "db_vehicleteam.db";
 
-		// Token: 0x04004905 RID: 18693
+		// Token: 0x04004ED8 RID: 20184
 		private const string FILE = "c.车流.xlsx";
 
-		// Token: 0x04004906 RID: 18694
+		// Token: 0x04004ED9 RID: 20185
 		private const string TABLE = "VehicleTeam";
 
-		// Token: 0x04004907 RID: 18695
+		// Token: 0x04004EDA RID: 20186
 		private const string COMMAND = "select BinData from `VehicleTeam` where Id=?";
 
-		// Token: 0x04004908 RID: 18696
+		// Token: 0x04004EDB RID: 20187
 		private const string KEY_PREFIX = "VehicleTeamById";
 
-		// Token: 0x04004909 RID: 18697
+		// Token: 0x04004EDC RID: 20188
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400490A RID: 18698
+		// Token: 0x04004EDD RID: 20189
 		private static int HandleId;
 	}
 }

@@ -11,13 +11,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020034D7 RID: 13527
+// Token: 0x02002A4B RID: 10827
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class BpActorController : ControllerBase
 {
-	// Token: 0x0601D925 RID: 121125 RVA: 0x00840614 File Offset: 0x0083E814
+	// Token: 0x0601B624 RID: 112164 RVA: 0x00867BB8 File Offset: 0x00865DB8
 	public void SetDebugMediaDisabled(bool disabled)
 	{
 		this.DebugMediaDisabled = disabled;
@@ -39,7 +39,7 @@ public class BpActorController : ControllerBase
 		this.LastActiveMediaActor_Extra = null;
 	}
 
-	// Token: 0x0601D926 RID: 121126 RVA: 0x00840664 File Offset: 0x0083E864
+	// Token: 0x0601B625 RID: 112165 RVA: 0x00867C08 File Offset: 0x00865E08
 	public void SetDebugSpecialMediaDisabled(bool disabled)
 	{
 		this.DebugSpecialMediaDisabled = disabled;
@@ -63,7 +63,7 @@ public class BpActorController : ControllerBase
 		this.PendingReleaseMediaActors_Special.Clear();
 	}
 
-	// Token: 0x0601D927 RID: 121127 RVA: 0x0084073C File Offset: 0x0083E93C
+	// Token: 0x0601B626 RID: 112166 RVA: 0x00867CE0 File Offset: 0x00865EE0
 	public void SetDebugSpecialMediaSingleModeEnabled(bool enabled)
 	{
 		this.DebugSpecialMediaSingleModeEnabled = enabled;
@@ -97,7 +97,7 @@ public class BpActorController : ControllerBase
 		Log.Instance.Info(ELogModule.World, ELogAuthor.CK, "[BpActorController] 已关闭单资源调试模式", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0601D928 RID: 121128 RVA: 0x00840890 File Offset: 0x0083EA90
+	// Token: 0x0601B627 RID: 112167 RVA: 0x00867E34 File Offset: 0x00866034
 	private bool DebugImmediatePlayMedia_Special(MediaPlayForModel_Special_C actor, PDA_MediaPlayDataAsset_C dataAsset, int? pbDataId)
 	{
 		if (this.ActiveResourceGroups.Count > 0)
@@ -123,7 +123,7 @@ public class BpActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D929 RID: 121129 RVA: 0x0084092C File Offset: 0x0083EB2C
+	// Token: 0x0601B628 RID: 112168 RVA: 0x00867ED0 File Offset: 0x008660D0
 	private unsafe bool DebugImmediateStopMedia_Special(MediaPlayForModel_Special_C actor, PDA_MediaPlayDataAsset_C dataAsset, int? pbDataId, BpActorController.EPendingStopReason reason)
 	{
 		BpActorController.ActiveResourceGroup activeResourceGroup;
@@ -148,7 +148,7 @@ public class BpActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D92A RID: 121130 RVA: 0x00840A38 File Offset: 0x0083EC38
+	// Token: 0x0601B629 RID: 112169 RVA: 0x00867FDC File Offset: 0x008661DC
 	protected override bool OnInit()
 	{
 		TArray<FGameBudgetBlueprintGroupConfig> tarray = new TArray<FGameBudgetBlueprintGroupConfig>();
@@ -179,6 +179,9 @@ public class BpActorController : ControllerBase
 		FGameBudgetBlueprintGroupConfig fgameBudgetBlueprintGroupConfig9 = new FGameBudgetBlueprintGroupConfig();
 		fgameBudgetBlueprintGroupConfig9.Group = EGameBudgetBlueprintGroup.SparseGridPhysicsInteractionActor;
 		fgameBudgetBlueprintGroupConfig9.GameBudgetGroupName = FNameUtil.GetDynamicFName("BlueprintTick.SparseGridPhysicsInteractionActor").Value;
+		FGameBudgetBlueprintGroupConfig fgameBudgetBlueprintGroupConfig10 = new FGameBudgetBlueprintGroupConfig();
+		fgameBudgetBlueprintGroupConfig10.Group = EGameBudgetBlueprintGroup.ScreenDecalActor;
+		fgameBudgetBlueprintGroupConfig10.GameBudgetGroupName = FNameUtil.GetDynamicFName("BlueprintTick.ScreenDecalActor").Value;
 		tarray.Add(fgameBudgetBlueprintGroupConfig);
 		tarray.Add(fgameBudgetBlueprintGroupConfig2);
 		tarray.Add(fgameBudgetBlueprintGroupConfig3);
@@ -188,12 +191,13 @@ public class BpActorController : ControllerBase
 		tarray.Add(fgameBudgetBlueprintGroupConfig7);
 		tarray.Add(fgameBudgetBlueprintGroupConfig8);
 		tarray.Add(fgameBudgetBlueprintGroupConfig9);
+		tarray.Add(fgameBudgetBlueprintGroupConfig10);
 		UKuroGameBudgetBlueprintDefine.Initialize(tarray);
 		EventSystem.Instance.Add<int>(EEventName.SetEnvironmentInteraction, new Action<int>(this.OnSetEnvironmentInteraction));
 		return true;
 	}
 
-	// Token: 0x0601D92B RID: 121131 RVA: 0x00840C1E File Offset: 0x0083EE1E
+	// Token: 0x0601B62A RID: 112170 RVA: 0x008681F4 File Offset: 0x008663F4
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.SetEnvironmentInteraction, new Action<int>(this.OnSetEnvironmentInteraction));
@@ -201,7 +205,7 @@ public class BpActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D92C RID: 121132 RVA: 0x00840C44 File Offset: 0x0083EE44
+	// Token: 0x0601B62B RID: 112171 RVA: 0x00868218 File Offset: 0x00866418
 	private void OnSetEnvironmentInteraction(int value)
 	{
 		UKuroGameBudgetSubSystem ukuroGameBudgetSubSystem = USubsystemBlueprintLibrary.GetWorldSubsystem(GlobalData.World, UKuroGameBudgetSubSystem.StaticClass()) as UKuroGameBudgetSubSystem;
@@ -211,7 +215,7 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D92D RID: 121133 RVA: 0x00840C78 File Offset: 0x0083EE78
+	// Token: 0x0601B62C RID: 112172 RVA: 0x0086824C File Offset: 0x0086644C
 	public void RegisterBpActor(FName groupTag, IBPI_SceneBp_C sceneBp)
 	{
 		if (sceneBp == null)
@@ -280,7 +284,7 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D92E RID: 121134 RVA: 0x00840E08 File Offset: 0x0083F008
+	// Token: 0x0601B62D RID: 112173 RVA: 0x008683DC File Offset: 0x008665DC
 	private UniTask LoadSceneCapture3To2Rt(BP_SceneCapture_3To2_C actor)
 	{
 		BpActorController.<LoadSceneCapture3To2Rt>d__47 <LoadSceneCapture3To2Rt>d__;
@@ -291,7 +295,7 @@ public class BpActorController : ControllerBase
 		return <LoadSceneCapture3To2Rt>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D92F RID: 121135 RVA: 0x00840E4C File Offset: 0x0083F04C
+	// Token: 0x0601B62E RID: 112174 RVA: 0x00868420 File Offset: 0x00866620
 	public unsafe void UnregisterBpActor(FName groupTag, IBPI_SceneBp_C sceneBp)
 	{
 		if (sceneBp == null)
@@ -401,7 +405,7 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D930 RID: 121136 RVA: 0x00841164 File Offset: 0x0083F364
+	// Token: 0x0601B62F RID: 112175 RVA: 0x00868738 File Offset: 0x00866938
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -425,13 +429,13 @@ public class BpActorController : ControllerBase
 		return new ValueTuple<bool, bool>(flag, flag2);
 	}
 
-	// Token: 0x0601D931 RID: 121137 RVA: 0x008411BE File Offset: 0x0083F3BE
+	// Token: 0x0601B630 RID: 112176 RVA: 0x00868792 File Offset: 0x00866992
 	private bool CheckDayState()
 	{
 		return TimeOfDayController.Instance.CheckInMinuteSpan(360, 1080);
 	}
 
-	// Token: 0x0601D932 RID: 121138 RVA: 0x008411D4 File Offset: 0x0083F3D4
+	// Token: 0x0601B631 RID: 112177 RVA: 0x008687A8 File Offset: 0x008669A8
 	public void RegisterDayNightActor(IBPI_DayNightEvent_C dayNightBp)
 	{
 		if (!this.DayNightActors.Contains(dayNightBp))
@@ -446,7 +450,7 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D933 RID: 121139 RVA: 0x00841206 File Offset: 0x0083F406
+	// Token: 0x0601B632 RID: 112178 RVA: 0x008687DA File Offset: 0x008669DA
 	public void UnregisterDayNightActor(IBPI_DayNightEvent_C dayNightBp)
 	{
 		if (this.DayNightActors.Contains(dayNightBp))
@@ -455,7 +459,7 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D934 RID: 121140 RVA: 0x00841224 File Offset: 0x0083F424
+	// Token: 0x0601B633 RID: 112179 RVA: 0x008687F8 File Offset: 0x008669F8
 	public unsafe bool PendingPlayMedia_Special(MediaPlayForModel_Special_C actor, int? pbDataId)
 	{
 		if (actor == null || !actor.IsValid())
@@ -534,7 +538,7 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D935 RID: 121141 RVA: 0x008414D8 File Offset: 0x0083F6D8
+	// Token: 0x0601B634 RID: 112180 RVA: 0x00868AAC File Offset: 0x00866CAC
 	public unsafe bool PendingStopMedia_Special(MediaPlayForModel_Special_C actor, int? pbDataId, BpActorController.EPendingStopReason reason = BpActorController.EPendingStopReason.ManualControl)
 	{
 		if (actor == null || !actor.IsValid())
@@ -595,7 +599,7 @@ public class BpActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D936 RID: 121142 RVA: 0x008416DC File Offset: 0x0083F8DC
+	// Token: 0x0601B635 RID: 112181 RVA: 0x00868CB0 File Offset: 0x00866EB0
 	private UniTask TryLoadSpecialMediaActorAsset()
 	{
 		BpActorController.<TryLoadSpecialMediaActorAsset>d__55 <TryLoadSpecialMediaActorAsset>d__;
@@ -606,7 +610,7 @@ public class BpActorController : ControllerBase
 		return <TryLoadSpecialMediaActorAsset>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D937 RID: 121143 RVA: 0x00841720 File Offset: 0x0083F920
+	// Token: 0x0601B636 RID: 112182 RVA: 0x00868CF4 File Offset: 0x00866EF4
 	private void CheckDayNightChange()
 	{
 		if (this.DayNightActors.Count < 0)
@@ -668,14 +672,14 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D938 RID: 121144 RVA: 0x008418CC File Offset: 0x0083FACC
+	// Token: 0x0601B637 RID: 112183 RVA: 0x00868EA0 File Offset: 0x008670A0
 	protected override void OnTick(float delta)
 	{
 		this.CheckMediaActor();
 		this.CheckDayNightChange();
 	}
 
-	// Token: 0x0601D939 RID: 121145 RVA: 0x008418DC File Offset: 0x0083FADC
+	// Token: 0x0601B638 RID: 112184 RVA: 0x00868EB0 File Offset: 0x008670B0
 	private void CheckMediaActor()
 	{
 		if (this.MediaActors.Count > 0 || this.MediaActors_Extra.Count > 0)
@@ -735,7 +739,7 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D93A RID: 121146 RVA: 0x008419DC File Offset: 0x0083FBDC
+	// Token: 0x0601B639 RID: 112185 RVA: 0x00868FB0 File Offset: 0x008671B0
 	private unsafe void HandleMediaActor_Special_OutOfAOI()
 	{
 		Vector cameraLocation = CameraController.Instance.MainModel.CameraLocation;
@@ -775,7 +779,7 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D93B RID: 121147 RVA: 0x00841BD0 File Offset: 0x0083FDD0
+	// Token: 0x0601B63A RID: 112186 RVA: 0x008691A4 File Offset: 0x008673A4
 	private bool CheckMediaActor_Special_InAOI(MediaPlayForModel_Special_C actor)
 	{
 		if (!actor.IsValid())
@@ -792,7 +796,7 @@ public class BpActorController : ControllerBase
 		return aoiRange == 0 || num <= (double)aoiRange;
 	}
 
-	// Token: 0x0601D93C RID: 121148 RVA: 0x00841C28 File Offset: 0x0083FE28
+	// Token: 0x0601B63B RID: 112187 RVA: 0x008691FC File Offset: 0x008673FC
 	private bool HasPendingReleaseMediaResource()
 	{
 		this.TempInvalidReleaseActors.Clear();
@@ -810,7 +814,7 @@ public class BpActorController : ControllerBase
 		return this.PendingReleaseMediaActors_Special.Count > 0;
 	}
 
-	// Token: 0x0601D93D RID: 121149 RVA: 0x00841CF4 File Offset: 0x0083FEF4
+	// Token: 0x0601B63C RID: 112188 RVA: 0x008692C8 File Offset: 0x008674C8
 	private unsafe void ProcessMediaActorOneAction()
 	{
 		if (this.PendingCloseMediaActors_Special.Count > 0)
@@ -919,7 +923,7 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D93E RID: 121150 RVA: 0x00842024 File Offset: 0x00840224
+	// Token: 0x0601B63D RID: 112189 RVA: 0x008695F8 File Offset: 0x008677F8
 	private unsafe bool AllocateToMediaPlayActor(MediaPlayForModel_Special_C actor)
 	{
 		if (this.AvailableMediaPlayerPool.Count == 0 || this.AvailableMediaTexturePool.Count == 0)
@@ -943,7 +947,7 @@ public class BpActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D93F RID: 121151 RVA: 0x00842130 File Offset: 0x00840330
+	// Token: 0x0601B63E RID: 112190 RVA: 0x00869704 File Offset: 0x00867904
 	public unsafe void ReleaseFromMediaPlayActor(IBPI_SceneBp_C sceneBpActor)
 	{
 		MediaPlayForModel_Special_C mediaPlayForModel_Special_C = sceneBpActor as MediaPlayForModel_Special_C;
@@ -990,7 +994,7 @@ public class BpActorController : ControllerBase
 		shareMediaTexture.SetMediaPlayer(null);
 	}
 
-	// Token: 0x0601D940 RID: 121152 RVA: 0x008422A0 File Offset: 0x008404A0
+	// Token: 0x0601B63F RID: 112191 RVA: 0x00869874 File Offset: 0x00867A74
 	private int GetAoiRange(IBPI_SceneBp_C actor)
 	{
 		int result = 0;
@@ -998,7 +1002,7 @@ public class BpActorController : ControllerBase
 		return result;
 	}
 
-	// Token: 0x0601D941 RID: 121153 RVA: 0x008422B8 File Offset: 0x008404B8
+	// Token: 0x0601B640 RID: 112192 RVA: 0x0086988C File Offset: 0x00867A8C
 	private bool GetShouldStopOnHide(IBPI_SceneBp_C actor)
 	{
 		bool result = false;
@@ -1006,7 +1010,7 @@ public class BpActorController : ControllerBase
 		return result;
 	}
 
-	// Token: 0x0601D942 RID: 121154 RVA: 0x008422D0 File Offset: 0x008404D0
+	// Token: 0x0601B641 RID: 112193 RVA: 0x008698A4 File Offset: 0x00867AA4
 	private void CheckMediaActorClose()
 	{
 		if (this.MediaActors.Count > 0)
@@ -1051,7 +1055,7 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D943 RID: 121155 RVA: 0x00842408 File Offset: 0x00840608
+	// Token: 0x0601B642 RID: 112194 RVA: 0x008699DC File Offset: 0x00867BDC
 	private void CheckMediaActorPlay()
 	{
 		if (this.MediaActors.Count > 0)
@@ -1092,7 +1096,7 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D944 RID: 121156 RVA: 0x0084251C File Offset: 0x0084071C
+	// Token: 0x0601B643 RID: 112195 RVA: 0x00869AF0 File Offset: 0x00867CF0
 	private void CheckMediaActorClose_Extra()
 	{
 		if (this.MediaActors_Extra.Count > 0)
@@ -1137,7 +1141,7 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D945 RID: 121157 RVA: 0x00842654 File Offset: 0x00840854
+	// Token: 0x0601B644 RID: 112196 RVA: 0x00869C28 File Offset: 0x00867E28
 	private void CheckMediaActorPlay_Extra()
 	{
 		if (this.MediaActors_Extra.Count > 0)
@@ -1178,8 +1182,8 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x170028DF RID: 10463
-	// (get) Token: 0x0601D946 RID: 121158 RVA: 0x00842768 File Offset: 0x00840968
+	// Token: 0x17002C77 RID: 11383
+	// (get) Token: 0x0601B645 RID: 112197 RVA: 0x00869D3C File Offset: 0x00867F3C
 	public static BpActorController Instance
 	{
 		get
@@ -1188,7 +1192,7 @@ public class BpActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D947 RID: 121159 RVA: 0x0084276F File Offset: 0x0084096F
+	// Token: 0x0601B646 RID: 112198 RVA: 0x00869D43 File Offset: 0x00867F43
 	public static BpActorController GetOrCreateInstance()
 	{
 		if (BpActorController._Instance == null)
@@ -1198,7 +1202,7 @@ public class BpActorController : ControllerBase
 		return BpActorController._Instance;
 	}
 
-	// Token: 0x0601D948 RID: 121160 RVA: 0x00842783 File Offset: 0x00840983
+	// Token: 0x0601B647 RID: 112199 RVA: 0x00869D57 File Offset: 0x00867F57
 	public static bool CreateInstance()
 	{
 		if (BpActorController._Instance != null)
@@ -1209,163 +1213,163 @@ public class BpActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D949 RID: 121161 RVA: 0x00842799 File Offset: 0x00840999
+	// Token: 0x0601B648 RID: 112200 RVA: 0x00869D6D File Offset: 0x00867F6D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601D94A RID: 121162 RVA: 0x0084279B File Offset: 0x0084099B
+	// Token: 0x0601B649 RID: 112201 RVA: 0x00869D6F File Offset: 0x00867F6F
 	public static void ResetStaticDefaultValue()
 	{
 		BpActorController._Instance = null;
 	}
 
-	// Token: 0x0601D94B RID: 121163 RVA: 0x008427A3 File Offset: 0x008409A3
+	// Token: 0x0601B64A RID: 112202 RVA: 0x00869D77 File Offset: 0x00867F77
 	static BpActorController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BpActorController.CreateStaticDefaultValue), new Action(BpActorController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E831 RID: 59441
+	// Token: 0x0400ECE6 RID: 60646
 	private const int AOI_OFFSET = 1000;
 
-	// Token: 0x0400E832 RID: 59442
+	// Token: 0x0400ECE7 RID: 60647
 	private const int MEDIA_ACTOR_TICK_FEQ = 30;
 
-	// Token: 0x0400E833 RID: 59443
+	// Token: 0x0400ECE8 RID: 60648
 	private readonly FName MEDIA_ACTOR_GROUP = new FName("MediaActor");
 
-	// Token: 0x0400E834 RID: 59444
+	// Token: 0x0400ECE9 RID: 60649
 	private const int MEDIA_ACTOR_CHECKFRAME_CLOSE = 10;
 
-	// Token: 0x0400E835 RID: 59445
+	// Token: 0x0400ECEA RID: 60650
 	private const int MEDIA_ACTOR_CHECKFRAME_PLAY = 15;
 
-	// Token: 0x0400E836 RID: 59446
+	// Token: 0x0400ECEB RID: 60651
 	private readonly FName MEDIA_ACTOR_GROUP_EXTRA = new FName("MediaActor_Extra");
 
-	// Token: 0x0400E837 RID: 59447
+	// Token: 0x0400ECEC RID: 60652
 	private const int MEDIA_ACTOR_EXTRA_CHECKFRAME_CLOSE = 20;
 
-	// Token: 0x0400E838 RID: 59448
+	// Token: 0x0400ECED RID: 60653
 	private const int MEDIA_ACTOR_EXTRA_CHECKFRAME_PLAY = 25;
 
-	// Token: 0x0400E839 RID: 59449
+	// Token: 0x0400ECEE RID: 60654
 	private readonly FName MEDIA_ACTOR_GROUP_SPECIAL = new FName("MediaActor_Special");
 
-	// Token: 0x0400E83A RID: 59450
+	// Token: 0x0400ECEF RID: 60655
 	private readonly FName SCENE_CAPTURE_3TO2_GROUP = new FName("SceneCapture_3To2");
 
-	// Token: 0x0400E83B RID: 59451
+	// Token: 0x0400ECF0 RID: 60656
 	private const int MEDIA_ACTOR_SPECIAL_MAX_ACTIVE = 5;
 
-	// Token: 0x0400E83C RID: 59452
+	// Token: 0x0400ECF1 RID: 60657
 	private const int MEDIA_ACTOR_SPECIAL_FRAMES_PER_ACTION = 5;
 
-	// Token: 0x0400E83D RID: 59453
+	// Token: 0x0400ECF2 RID: 60658
 	private const string SpecialMediaActorAssetPoolDAPath = "/Game/Aki/Render/RuntimeBP/SceneViedoPlay/SpecialMediaPlayActorAsset.SpecialMediaPlayActorAsset";
 
-	// Token: 0x0400E83E RID: 59454
+	// Token: 0x0400ECF3 RID: 60659
 	private const int DAY_MINITE_START = 360;
 
-	// Token: 0x0400E83F RID: 59455
+	// Token: 0x0400ECF4 RID: 60660
 	private const int DAY_MINITE_END = 1080;
 
-	// Token: 0x0400E840 RID: 59456
+	// Token: 0x0400ECF5 RID: 60661
 	public bool DebugMediaDisabled;
 
-	// Token: 0x0400E841 RID: 59457
+	// Token: 0x0400ECF6 RID: 60662
 	public bool DebugSpecialMediaDisabled;
 
-	// Token: 0x0400E842 RID: 59458
+	// Token: 0x0400ECF7 RID: 60663
 	public bool DebugSpecialMediaSingleModeEnabled;
 
-	// Token: 0x0400E843 RID: 59459
+	// Token: 0x0400ECF8 RID: 60664
 	[Nullable(2)]
 	private UMediaPlayer DebugFixedMediaPlayer;
 
-	// Token: 0x0400E844 RID: 59460
+	// Token: 0x0400ECF9 RID: 60665
 	[Nullable(2)]
 	private UMediaTexture DebugFixedMediaTexture;
 
-	// Token: 0x0400E845 RID: 59461
+	// Token: 0x0400ECFA RID: 60666
 	private int BpMediaActorTickInternal;
 
-	// Token: 0x0400E846 RID: 59462
+	// Token: 0x0400ECFB RID: 60667
 	private readonly HashSet<IBPI_SceneBp_C> MediaActors = new HashSet<IBPI_SceneBp_C>();
 
-	// Token: 0x0400E847 RID: 59463
+	// Token: 0x0400ECFC RID: 60668
 	[Nullable(2)]
 	private IBPI_SceneBp_C LastActiveMediaActor;
 
-	// Token: 0x0400E848 RID: 59464
+	// Token: 0x0400ECFD RID: 60669
 	private readonly HashSet<IBPI_SceneBp_C> MediaActors_Extra = new HashSet<IBPI_SceneBp_C>();
 
-	// Token: 0x0400E849 RID: 59465
+	// Token: 0x0400ECFE RID: 60670
 	[Nullable(2)]
 	private IBPI_SceneBp_C LastActiveMediaActor_Extra;
 
-	// Token: 0x0400E84A RID: 59466
+	// Token: 0x0400ECFF RID: 60671
 	private readonly HashSet<IBPI_DayNightEvent_C> DayNightActors = new HashSet<IBPI_DayNightEvent_C>();
 
-	// Token: 0x0400E84B RID: 59467
+	// Token: 0x0400ED00 RID: 60672
 	private bool LoadingSpecialActorAsset;
 
-	// Token: 0x0400E84C RID: 59468
+	// Token: 0x0400ED01 RID: 60673
 	private bool SpecialActorAssetLoadCompleted;
 
-	// Token: 0x0400E84D RID: 59469
+	// Token: 0x0400ED02 RID: 60674
 	private readonly List<UMediaPlayer> AvailableMediaPlayerPool = new List<UMediaPlayer>();
 
-	// Token: 0x0400E84E RID: 59470
+	// Token: 0x0400ED03 RID: 60675
 	private readonly List<UMediaTexture> AvailableMediaTexturePool = new List<UMediaTexture>();
 
-	// Token: 0x0400E84F RID: 59471
+	// Token: 0x0400ED04 RID: 60676
 	private readonly HashSet<MediaPlayForModel_Special_C> RegisterMediaActors_Special = new HashSet<MediaPlayForModel_Special_C>();
 
-	// Token: 0x0400E850 RID: 59472
+	// Token: 0x0400ED05 RID: 60677
 	private readonly Dictionary<PDA_MediaPlayDataAsset_C, BpActorController.ActiveResourceGroup> ActiveResourceGroups = new Dictionary<PDA_MediaPlayDataAsset_C, BpActorController.ActiveResourceGroup>();
 
-	// Token: 0x0400E851 RID: 59473
+	// Token: 0x0400ED06 RID: 60678
 	private readonly List<MediaPlayForModel_Special_C> PendingPlayMediaActors_Special = new List<MediaPlayForModel_Special_C>();
 
-	// Token: 0x0400E852 RID: 59474
+	// Token: 0x0400ED07 RID: 60679
 	private readonly List<MediaPlayForModel_Special_C> PendingCloseMediaActors_Special = new List<MediaPlayForModel_Special_C>();
 
-	// Token: 0x0400E853 RID: 59475
+	// Token: 0x0400ED08 RID: 60680
 	private readonly HashSet<MediaPlayForModel_Special_C> PendingReleaseMediaActors_Special = new HashSet<MediaPlayForModel_Special_C>();
 
-	// Token: 0x0400E854 RID: 59476
+	// Token: 0x0400ED09 RID: 60681
 	private int FrameCounter;
 
-	// Token: 0x0400E855 RID: 59477
+	// Token: 0x0400ED0A RID: 60682
 	private bool? IsDayState;
 
-	// Token: 0x0400E856 RID: 59478
+	// Token: 0x0400ED0B RID: 60683
 	private readonly HashSet<IBPI_DayNightEvent_C> PendingRemoveDayNightActors = new HashSet<IBPI_DayNightEvent_C>();
 
-	// Token: 0x0400E857 RID: 59479
+	// Token: 0x0400ED0C RID: 60684
 	private readonly List<MediaPlayForModel_Special_C> TempInvalidReleaseActors = new List<MediaPlayForModel_Special_C>();
 
-	// Token: 0x0400E858 RID: 59480
+	// Token: 0x0400ED0D RID: 60685
 	[Nullable(2)]
 	private static BpActorController _Instance;
 
-	// Token: 0x02009928 RID: 39208
+	// Token: 0x02008B41 RID: 35649
 	[NullableContext(0)]
 	public enum EPendingStopReason
 	{
-		// Token: 0x04030B7B RID: 199547
+		// Token: 0x0402C1FC RID: 180732
 		OutOfAOI,
-		// Token: 0x04030B7C RID: 199548
+		// Token: 0x0402C1FD RID: 180733
 		ManualControl
 	}
 
-	// Token: 0x02009929 RID: 39209
+	// Token: 0x02008B42 RID: 35650
 	[Nullable(0)]
 	internal class ActiveResourceGroup
 	{
-		// Token: 0x0604C616 RID: 312854 RVA: 0x01420278 File Offset: 0x0141E478
+		// Token: 0x06042A81 RID: 273025 RVA: 0x013CAAEF File Offset: 0x013C8CEF
 		public ActiveResourceGroup(UMediaPlayer mediaPlayer, UMediaTexture mediaTexture, HashSet<MediaPlayForModel_Special_C> actors)
 		{
 			this.MediaPlayer = mediaPlayer;
@@ -1373,13 +1377,13 @@ public class BpActorController : ControllerBase
 			this.Actors = actors;
 		}
 
-		// Token: 0x04030B7D RID: 199549
+		// Token: 0x0402C1FE RID: 180734
 		public UMediaPlayer MediaPlayer;
 
-		// Token: 0x04030B7E RID: 199550
+		// Token: 0x0402C1FF RID: 180735
 		public UMediaTexture MediaTexture;
 
-		// Token: 0x04030B7F RID: 199551
+		// Token: 0x0402C200 RID: 180736
 		public HashSet<MediaPlayForModel_Special_C> Actors;
 	}
 }

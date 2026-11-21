@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CB6 RID: 19638
+	// Token: 0x02003C67 RID: 15463
 	public enum ERoleDevItemType
 	{
-		// Token: 0x0401B038 RID: 110648
+		// Token: 0x04015999 RID: 88473
 		Material,
-		// Token: 0x0401B039 RID: 110649
+		// Token: 0x0401599A RID: 88474
 		Reward,
-		// Token: 0x0401B03A RID: 110650
+		// Token: 0x0401599B RID: 88475
 		Monster
 	}
 }

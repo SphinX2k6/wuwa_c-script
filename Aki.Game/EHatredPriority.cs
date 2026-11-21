@@ -3,18 +3,18 @@
 // Token: 0x020000E7 RID: 231
 public enum EHatredPriority
 {
-	// Token: 0x04000AB3 RID: 2739
+	// Token: 0x04000ABB RID: 2747
 	Invalid,
-	// Token: 0x04000AB4 RID: 2740
+	// Token: 0x04000ABC RID: 2748
 	Exclude,
-	// Token: 0x04000AB5 RID: 2741
+	// Token: 0x04000ABD RID: 2749
 	Dead,
-	// Token: 0x04000AB6 RID: 2742
+	// Token: 0x04000ABE RID: 2750
 	LowNet,
-	// Token: 0x04000AB7 RID: 2743
+	// Token: 0x04000ABF RID: 2751
 	Normal,
-	// Token: 0x04000AB8 RID: 2744
+	// Token: 0x04000AC0 RID: 2752
 	SwornHatred,
-	// Token: 0x04000AB9 RID: 2745
+	// Token: 0x04000AC1 RID: 2753
 	Taunt
 }

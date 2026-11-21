@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C61 RID: 27745
+	// Token: 0x02005DDB RID: 24027
 	public enum EQuestStepState
 	{
-		// Token: 0x040239B5 RID: 145845
+		// Token: 0x0401EC57 RID: 126039
 		NotAccept,
-		// Token: 0x040239B6 RID: 145846
+		// Token: 0x0401EC58 RID: 126040
 		Progressing,
-		// Token: 0x040239B7 RID: 145847
+		// Token: 0x0401EC59 RID: 126041
 		Finished
 	}
 }

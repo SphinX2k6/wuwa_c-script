@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 {
-	// Token: 0x02006A94 RID: 27284
+	// Token: 0x02005BF1 RID: 23537
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ExploreInteractSearchStrategy : SceneInteractSearchStrategy
 	{
-		// Token: 0x1700993C RID: 39228
-		// (get) Token: 0x06043C9D RID: 277661 RVA: 0x01097B45 File Offset: 0x01095D45
+		// Token: 0x17006E21 RID: 28193
+		// (get) Token: 0x06039CEB RID: 236779 RVA: 0x0103C399 File Offset: 0x0103A599
 		public override int Priority
 		{
 			get
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 			}
 		}
 
-		// Token: 0x06043C9E RID: 277662 RVA: 0x01097B4C File Offset: 0x01095D4C
+		// Token: 0x06039CEC RID: 236780 RVA: 0x0103C3A0 File Offset: 0x0103A5A0
 		[return: Nullable(2)]
 		public override ISceneInteractPoint SelectBest(IReadOnlyList<ISceneInteractPoint> points, ISceneInteractSearchParams @params)
 		{
@@ -87,13 +87,13 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 			return exploreInteractPoint;
 		}
 
-		// Token: 0x06043C9F RID: 277663 RVA: 0x01097CC0 File Offset: 0x01095EC0
+		// Token: 0x06039CED RID: 236781 RVA: 0x0103C514 File Offset: 0x0103A714
 		public override void Dispose()
 		{
 			this.BlockChecker.Dispose();
 		}
 
-		// Token: 0x06043CA0 RID: 277664 RVA: 0x01097CD0 File Offset: 0x01095ED0
+		// Token: 0x06039CEE RID: 236782 RVA: 0x0103C524 File Offset: 0x0103A724
 		private bool CheckCurrentRoleGate(ISceneInteractSearchParams @params)
 		{
 			EntityHandle currentRoleEntityHandle = @params.CurrentRoleEntityHandle;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 			return component != null && !component.HasTag(GameplayTagDefine.EGameplayTagId["战斗状态.技能限制.禁止探索幻象技能"]) && component.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.地面"]);
 		}
 
-		// Token: 0x06043CA1 RID: 277665 RVA: 0x01097D34 File Offset: 0x01095F34
+		// Token: 0x06039CEF RID: 236783 RVA: 0x0103C588 File Offset: 0x0103A788
 		private bool IsBlocked(ExploreInteractPoint point, ISceneInteractSearchParams @params)
 		{
 			Vector raycastDestLocation = point.GetRaycastDestLocation();
@@ -118,10 +118,10 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 			return this.BlockChecker.IsBlocked(raycastDestLocation, @params, flag, (bool checkResult, UTraceBaseElement element) => point.FilterTraceResult(checkResult, element), flag && SceneInteractDebugDraw.Enabled, null);
 		}
 
-		// Token: 0x040236B2 RID: 145074
+		// Token: 0x0401E8A4 RID: 125092
 		private const string PROFILE_KEY = "ExploreInteractSearchStrategy_SelectBest";
 
-		// Token: 0x040236B3 RID: 145075
+		// Token: 0x0401E8A5 RID: 125093
 		private readonly SphereTraceBlockChecker BlockChecker = new SphereTraceBlockChecker("ExploreInteractSearchStrategy_SelectBest");
 	}
 }

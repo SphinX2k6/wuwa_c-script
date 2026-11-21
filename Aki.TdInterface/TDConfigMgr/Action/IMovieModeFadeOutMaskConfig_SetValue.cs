@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C43 RID: 7235
+	// Token: 0x02001E3A RID: 7738
 	public class IMovieModeFadeOutMaskConfig_SetValue
 	{
-		// Token: 0x04005E4C RID: 24140
+		// Token: 0x04006383 RID: 25475
 		public bool? IsEnableMask;
 
-		// Token: 0x04005E4D RID: 24141
+		// Token: 0x04006384 RID: 25476
 		public float? TransitionTime;
 	}
 }

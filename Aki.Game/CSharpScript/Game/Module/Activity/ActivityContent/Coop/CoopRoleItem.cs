@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068E0 RID: 26848
+	// Token: 0x02005830 RID: 22576
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -15,14 +15,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 	})]
 	public class CoopRoleItem : GridProxyAbstract<CoopRoleData>
 	{
-		// Token: 0x06042FC6 RID: 274374 RVA: 0x0105101E File Offset: 0x0104F21E
+		// Token: 0x06037B1E RID: 228126 RVA: 0x00F92646 File Offset: 0x00F90846
 		[NullableContext(1)]
 		public CoopRoleItem(CoopActivityData activityData)
 		{
 			this.ActivityData = activityData;
 		}
 
-		// Token: 0x06042FC7 RID: 274375 RVA: 0x01051030 File Offset: 0x0104F230
+		// Token: 0x06037B1F RID: 228127 RVA: 0x00F92658 File Offset: 0x00F90858
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,14 +40,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042FC8 RID: 274376 RVA: 0x010510EF File Offset: 0x0104F2EF
+		// Token: 0x06037B20 RID: 228128 RVA: 0x00F92717 File Offset: 0x00F90917
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 			base.GetExtendToggle(0).CanExecuteChange.Bind(() => this.CanExecuteChangeFunc == null || this.CanExecuteChangeFunc(base.GridIndex));
 		}
 
-		// Token: 0x06042FC9 RID: 274377 RVA: 0x0105111F File Offset: 0x0104F31F
+		// Token: 0x06037B21 RID: 228129 RVA: 0x00F92747 File Offset: 0x00F90947
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.SeqPlayer = null;
 		}
 
-		// Token: 0x06042FCA RID: 274378 RVA: 0x01051139 File Offset: 0x0104F339
+		// Token: 0x06037B22 RID: 228130 RVA: 0x00F92761 File Offset: 0x00F90961
 		private void OnTogClick(EToggleState _)
 		{
 			Action<int, CoopRoleData> onTogClickCallBack = this.OnTogClickCallBack;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			onTogClickCallBack(base.GridIndex, this.Data);
 		}
 
-		// Token: 0x06042FCB RID: 274379 RVA: 0x01051158 File Offset: 0x0104F358
+		// Token: 0x06037B23 RID: 228131 RVA: 0x00F92780 File Offset: 0x00F90980
 		[NullableContext(1)]
 		public override void Refresh(CoopRoleData data, bool isSelected, int gridIndex)
 		{
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			base.GetItem(4).SetUIActive(data.IsMaxLevel);
 		}
 
-		// Token: 0x06042FCC RID: 274380 RVA: 0x010511E0 File Offset: 0x0104F3E0
+		// Token: 0x06037B24 RID: 228132 RVA: 0x00F92808 File Offset: 0x00F90A08
 		public override void OnSelected(bool fireEvent)
 		{
 			LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.SetToggleState(true);
 		}
 
-		// Token: 0x06042FCD RID: 274381 RVA: 0x01051215 File Offset: 0x0104F415
+		// Token: 0x06037B25 RID: 228133 RVA: 0x00F9283D File Offset: 0x00F90A3D
 		public override void OnDeselected(bool fireEvent)
 		{
 			LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -107,17 +107,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.SetToggleState(false);
 		}
 
-		// Token: 0x06042FCE RID: 274382 RVA: 0x01051238 File Offset: 0x0104F438
+		// Token: 0x06037B26 RID: 228134 RVA: 0x00F92860 File Offset: 0x00F90A60
 		private void SetToggleState(bool state)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(0).SetToggleState(state2, false, false, false);
 		}
 
-		// Token: 0x04022DE5 RID: 142821
+		// Token: 0x0401D641 RID: 120385
 		public CoopRoleData Data;
 
-		// Token: 0x04022DE6 RID: 142822
+		// Token: 0x0401D642 RID: 120386
 		[Nullable(new byte[]
 		{
 			2,
@@ -125,13 +125,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 		})]
 		public Action<int, CoopRoleData> OnTogClickCallBack;
 
-		// Token: 0x04022DE7 RID: 142823
+		// Token: 0x0401D643 RID: 120387
 		public Func<int, bool> CanExecuteChangeFunc;
 
-		// Token: 0x04022DE8 RID: 142824
+		// Token: 0x0401D644 RID: 120388
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x04022DE9 RID: 142825
+		// Token: 0x0401D645 RID: 120389
 		private readonly CoopActivityData ActivityData;
 	}
 }

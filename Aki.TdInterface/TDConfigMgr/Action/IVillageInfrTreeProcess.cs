@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200204D RID: 8269
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002296 RID: 8854
 	public class IVillageInfrTreeProcess : IVillageInfrBuildOption
 	{
-		// Token: 0x0600B5B2 RID: 46514 RVA: 0x001A5BA4 File Offset: 0x001A3DA4
+		// Token: 0x0600C0D8 RID: 49368 RVA: 0x001BC310 File Offset: 0x001BA510
 		private IVillageInfrTreeProcess_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B5B3 RID: 46515 RVA: 0x001A5BDC File Offset: 0x001A3DDC
+		// Token: 0x0600C0D9 RID: 49369 RVA: 0x001BC348 File Offset: 0x001BA548
 		public static IVillageInfrTreeProcess Create([Nullable(2)] IVillageInfrTreeProcess instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B5B4 RID: 46516 RVA: 0x001A5BEF File Offset: 0x001A3DEF
+		// Token: 0x0600C0DA RID: 49370 RVA: 0x001BC35B File Offset: 0x001BA55B
 		public static IVillageInfrTreeProcess CreateFromSetValue([Nullable(2)] IVillageInfrTreeProcess_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B5B5 RID: 46517 RVA: 0x001A5C02 File Offset: 0x001A3E02
+		// Token: 0x0600C0DB RID: 49371 RVA: 0x001BC36E File Offset: 0x001BA56E
 		public new IVillageInfrTreeProcess_SetValue ToSetValue()
 		{
 			return new IVillageInfrTreeProcess_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037BE RID: 14270
-		// (get) Token: 0x0600B5B6 RID: 46518 RVA: 0x001A5C21 File Offset: 0x001A3E21
-		// (set) Token: 0x0600B5B7 RID: 46519 RVA: 0x001A5C4C File Offset: 0x001A3E4C
+		// Token: 0x17003A9B RID: 15003
+		// (get) Token: 0x0600C0DC RID: 49372 RVA: 0x001BC38D File Offset: 0x001BA58D
+		// (set) Token: 0x0600C0DD RID: 49373 RVA: 0x001BC3B8 File Offset: 0x001BA5B8
 		public override EVillageInfrBuildType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037BF RID: 14271
-		// (get) Token: 0x0600B5B8 RID: 46520 RVA: 0x001A5C5A File Offset: 0x001A3E5A
-		// (set) Token: 0x0600B5B9 RID: 46521 RVA: 0x001A5C85 File Offset: 0x001A3E85
+		// Token: 0x17003A9C RID: 15004
+		// (get) Token: 0x0600C0DE RID: 49374 RVA: 0x001BC3C6 File Offset: 0x001BA5C6
+		// (set) Token: 0x0600C0DF RID: 49375 RVA: 0x001BC3F1 File Offset: 0x001BA5F1
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D47 RID: 27975
+		// Token: 0x04007350 RID: 29520
 		[Nullable(2)]
 		protected new IVillageInfrTreeProcess FbInstance;
 
-		// Token: 0x04006D48 RID: 27976
+		// Token: 0x04007351 RID: 29521
 		[Nullable(2)]
 		protected new IVillageInfrTreeProcess_SetValue PocoInterface;
 	}

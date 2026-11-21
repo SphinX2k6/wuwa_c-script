@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FE6 RID: 28646
+	// Token: 0x020077AF RID: 30639
 	public struct ISetEntityTag : IFlatbufferObject
 	{
-		// Token: 0x1700D4AD RID: 54445
-		// (get) Token: 0x06032A4E RID: 207438 RVA: 0x006D527A File Offset: 0x006D347A
+		// Token: 0x1700E081 RID: 57473
+		// (get) Token: 0x06035CB4 RID: 220340 RVA: 0x00734EBE File Offset: 0x007330BE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032A4F RID: 207439 RVA: 0x006D5287 File Offset: 0x006D3487
+		// Token: 0x06035CB5 RID: 220341 RVA: 0x00734ECB File Offset: 0x007330CB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032A50 RID: 207440 RVA: 0x006D5290 File Offset: 0x006D3490
+		// Token: 0x06035CB6 RID: 220342 RVA: 0x00734ED4 File Offset: 0x007330D4
 		public static ISetEntityTag GetRootAsISetEntityTag(ByteBuffer _bb)
 		{
 			return ISetEntityTag.GetRootAsISetEntityTag(_bb, default(ISetEntityTag));
 		}
 
-		// Token: 0x06032A51 RID: 207441 RVA: 0x006D52AC File Offset: 0x006D34AC
+		// Token: 0x06035CB7 RID: 220343 RVA: 0x00734EF0 File Offset: 0x007330F0
 		public static ISetEntityTag GetRootAsISetEntityTag(ByteBuffer _bb, ISetEntityTag obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032A52 RID: 207442 RVA: 0x006D52C9 File Offset: 0x006D34C9
+		// Token: 0x06035CB8 RID: 220344 RVA: 0x00734F0D File Offset: 0x0073310D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032A53 RID: 207443 RVA: 0x006D52D8 File Offset: 0x006D34D8
+		// Token: 0x06035CB9 RID: 220345 RVA: 0x00734F1C File Offset: 0x0073311C
 		public ISetEntityTag __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D4AE RID: 54446
-		// (get) Token: 0x06032A54 RID: 207444 RVA: 0x006D52E8 File Offset: 0x006D34E8
+		// Token: 0x1700E082 RID: 57474
+		// (get) Token: 0x06035CBA RID: 220346 RVA: 0x00734F2C File Offset: 0x0073312C
 		public int EntityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D4AF RID: 54447
-		// (get) Token: 0x06032A55 RID: 207445 RVA: 0x006D5324 File Offset: 0x006D3524
+		// Token: 0x1700E083 RID: 57475
+		// (get) Token: 0x06035CBB RID: 220347 RVA: 0x00734F68 File Offset: 0x00733168
 		public string GameplayTag
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032A56 RID: 207446 RVA: 0x006D535B File Offset: 0x006D355B
+		// Token: 0x06035CBC RID: 220348 RVA: 0x00734F9F File Offset: 0x0073319F
 		public Span<byte> GetGameplayTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06032A57 RID: 207447 RVA: 0x006D536A File Offset: 0x006D356A
+		// Token: 0x06035CBD RID: 220349 RVA: 0x00734FAE File Offset: 0x007331AE
 		public byte[] GetGameplayTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700D4B0 RID: 54448
-		// (get) Token: 0x06032A58 RID: 207448 RVA: 0x006D5378 File Offset: 0x006D3578
+		// Token: 0x1700E084 RID: 57476
+		// (get) Token: 0x06035CBE RID: 220350 RVA: 0x00734FBC File Offset: 0x007331BC
 		public ESetEntityTagType SetType
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D4B1 RID: 54449
-		// (get) Token: 0x06032A59 RID: 207449 RVA: 0x006D53B4 File Offset: 0x006D35B4
+		// Token: 0x1700E085 RID: 57477
+		// (get) Token: 0x06035CBF RID: 220351 RVA: 0x00734FF8 File Offset: 0x007331F8
 		public float DelayTime
 		{
 			get
@@ -119,8 +119,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D4B2 RID: 54450
-		// (get) Token: 0x06032A5A RID: 207450 RVA: 0x006D53F8 File Offset: 0x006D35F8
+		// Token: 0x1700E086 RID: 57478
+		// (get) Token: 0x06035CC0 RID: 220352 RVA: 0x0073503C File Offset: 0x0073323C
 		public bool BeforeHide
 		{
 			get
@@ -130,8 +130,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D4B3 RID: 54451
-		// (get) Token: 0x06032A5B RID: 207451 RVA: 0x006D5438 File Offset: 0x006D3638
+		// Token: 0x1700E087 RID: 57479
+		// (get) Token: 0x06035CC1 RID: 220353 RVA: 0x0073507C File Offset: 0x0073327C
 		public byte NullMask
 		{
 			get
@@ -145,7 +145,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032A5C RID: 207452 RVA: 0x006D5475 File Offset: 0x006D3675
+		// Token: 0x06035CC2 RID: 220354 RVA: 0x007350B9 File Offset: 0x007332B9
 		public static Offset<ISetEntityTag> CreateISetEntityTag(FlatBufferBuilder builder, int EntityId = 0, StringOffset GameplayTagOffset = default(StringOffset), ESetEntityTagType SetType = ESetEntityTagType.Add, float DelayTime = 0f, bool BeforeHide = false, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -158,55 +158,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetEntityTag.EndISetEntityTag(builder);
 		}
 
-		// Token: 0x06032A5D RID: 207453 RVA: 0x006D54B1 File Offset: 0x006D36B1
+		// Token: 0x06035CC3 RID: 220355 RVA: 0x007350F5 File Offset: 0x007332F5
 		public static void StartISetEntityTag(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06032A5E RID: 207454 RVA: 0x006D54BA File Offset: 0x006D36BA
+		// Token: 0x06035CC4 RID: 220356 RVA: 0x007350FE File Offset: 0x007332FE
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(0, entityId, 0);
 		}
 
-		// Token: 0x06032A5F RID: 207455 RVA: 0x006D54C5 File Offset: 0x006D36C5
+		// Token: 0x06035CC5 RID: 220357 RVA: 0x00735109 File Offset: 0x00733309
 		public static void AddGameplayTag(FlatBufferBuilder builder, StringOffset gameplayTagOffset)
 		{
 			builder.AddOffset(1, gameplayTagOffset.Value, 0);
 		}
 
-		// Token: 0x06032A60 RID: 207456 RVA: 0x006D54D5 File Offset: 0x006D36D5
+		// Token: 0x06035CC6 RID: 220358 RVA: 0x00735119 File Offset: 0x00733319
 		public static void AddSetType(FlatBufferBuilder builder, ESetEntityTagType setType)
 		{
 			builder.AddByte(2, (byte)setType, 0);
 		}
 
-		// Token: 0x06032A61 RID: 207457 RVA: 0x006D54E0 File Offset: 0x006D36E0
+		// Token: 0x06035CC7 RID: 220359 RVA: 0x00735124 File Offset: 0x00733324
 		public static void AddDelayTime(FlatBufferBuilder builder, float delayTime)
 		{
 			builder.AddFloat(3, delayTime, 0.0);
 		}
 
-		// Token: 0x06032A62 RID: 207458 RVA: 0x006D54F3 File Offset: 0x006D36F3
+		// Token: 0x06035CC8 RID: 220360 RVA: 0x00735137 File Offset: 0x00733337
 		public static void AddBeforeHide(FlatBufferBuilder builder, bool beforeHide)
 		{
 			builder.AddBool(4, beforeHide, false);
 		}
 
-		// Token: 0x06032A63 RID: 207459 RVA: 0x006D54FE File Offset: 0x006D36FE
+		// Token: 0x06035CC9 RID: 220361 RVA: 0x00735142 File Offset: 0x00733342
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x06032A64 RID: 207460 RVA: 0x006D5509 File Offset: 0x006D3709
+		// Token: 0x06035CCA RID: 220362 RVA: 0x0073514D File Offset: 0x0073334D
 		public static Offset<ISetEntityTag> EndISetEntityTag(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetEntityTag>(builder.EndTable());
 		}
 
-		// Token: 0x06032A65 RID: 207461 RVA: 0x006D5518 File Offset: 0x006D3718
+		// Token: 0x06035CCB RID: 220363 RVA: 0x0073515C File Offset: 0x0073335C
 		public ISetEntityTagT UnPack()
 		{
 			ISetEntityTagT setEntityTagT = new ISetEntityTagT();
@@ -214,7 +214,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setEntityTagT;
 		}
 
-		// Token: 0x06032A66 RID: 207462 RVA: 0x006D5534 File Offset: 0x006D3734
+		// Token: 0x06035CCC RID: 220364 RVA: 0x00735178 File Offset: 0x00733378
 		public void UnPackTo(ISetEntityTagT _o)
 		{
 			_o.EntityId = this.EntityId;
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06032A67 RID: 207463 RVA: 0x006D558C File Offset: 0x006D378C
+		// Token: 0x06035CCD RID: 220365 RVA: 0x007351D0 File Offset: 0x007333D0
 		public static Offset<ISetEntityTag> Pack(FlatBufferBuilder builder, ISetEntityTagT _o)
 		{
 			if (_o == null)
@@ -236,7 +236,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetEntityTag.CreateISetEntityTag(builder, _o.EntityId, gameplayTagOffset, _o.SetType, _o.DelayTime, _o.BeforeHide, _o.NullMask);
 		}
 
-		// Token: 0x040119F5 RID: 72181
+		// Token: 0x040129DA RID: 76250
 		private Table __p;
 	}
 }

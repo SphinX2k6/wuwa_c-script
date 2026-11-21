@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020013DE RID: 5086
+// Token: 0x02000892 RID: 2194
 public class ActivitySubViewPhantomCollectMonsterItem : UiPanelBase
 {
-	// Token: 0x06008FA5 RID: 36773 RVA: 0x001F093C File Offset: 0x001EEB3C
+	// Token: 0x0600633A RID: 25402 RVA: 0x001F9478 File Offset: 0x001F7678
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -30,7 +30,7 @@ public class ActivitySubViewPhantomCollectMonsterItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008FA6 RID: 36774 RVA: 0x001F0A03 File Offset: 0x001EEC03
+	// Token: 0x0600633B RID: 25403 RVA: 0x001F953F File Offset: 0x001F773F
 	private void OnClickBtnSelf()
 	{
 		if (this.MonsterId != 0)
@@ -39,7 +39,7 @@ public class ActivitySubViewPhantomCollectMonsterItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008FA7 RID: 36775 RVA: 0x001F0A20 File Offset: 0x001EEC20
+	// Token: 0x0600633C RID: 25404 RVA: 0x001F955C File Offset: 0x001F775C
 	public void Refresh(int monsterId)
 	{
 		this.MonsterId = monsterId;
@@ -54,19 +54,19 @@ public class ActivitySubViewPhantomCollectMonsterItem : UiPanelBase
 		base.GetItem(2).SetUIActive(phantomIsUnlock && !CalabashModel.Instance.CheckMonsterIdInRecord(monsterId));
 	}
 
-	// Token: 0x04003F7C RID: 16252
+	// Token: 0x04004014 RID: 16404
 	public int MonsterId;
 
-	// Token: 0x02007A5F RID: 31327
+	// Token: 0x02006BE3 RID: 27619
 	private class EActivitySubViewPhantomCollectMonsterItem
 	{
-		// Token: 0x04028459 RID: 164953
+		// Token: 0x04023773 RID: 145267
 		public const int BtnSelf = 0;
 
-		// Token: 0x0402845A RID: 164954
+		// Token: 0x04023774 RID: 145268
 		public const int TextureMonster = 1;
 
-		// Token: 0x0402845B RID: 164955
+		// Token: 0x04023775 RID: 145269
 		public const int RedDotItem = 2;
 	}
 }

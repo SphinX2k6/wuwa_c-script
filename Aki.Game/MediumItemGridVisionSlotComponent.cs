@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x02001945 RID: 6469
+// Token: 0x02000E02 RID: 3586
 public class MediumItemGridVisionSlotComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BD01 RID: 48385 RVA: 0x002AC204 File Offset: 0x002AA404
+	// Token: 0x06009104 RID: 37124 RVA: 0x002B7048 File Offset: 0x002B5248
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -42,14 +42,14 @@ public class MediumItemGridVisionSlotComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BD02 RID: 48386 RVA: 0x002AC3BB File Offset: 0x002AA5BB
+	// Token: 0x06009105 RID: 37125 RVA: 0x002B71FF File Offset: 0x002B53FF
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemVisionStateA";
 	}
 
-	// Token: 0x0600BD03 RID: 48387 RVA: 0x002AC3C4 File Offset: 0x002AA5C4
+	// Token: 0x06009106 RID: 37126 RVA: 0x002B7208 File Offset: 0x002B5408
 	protected override void OnActivate()
 	{
 		this.SlotSpriteList = new UUISprite[][]
@@ -78,13 +78,13 @@ public class MediumItemGridVisionSlotComponent : MediumItemGridComponent
 		};
 	}
 
-	// Token: 0x0600BD04 RID: 48388 RVA: 0x002AC473 File Offset: 0x002AA673
+	// Token: 0x06009107 RID: 37127 RVA: 0x002B72B7 File Offset: 0x002B54B7
 	protected override void OnDeactivate()
 	{
 		this.SlotSpriteList = new UUISprite[0][];
 	}
 
-	// Token: 0x0600BD05 RID: 48389 RVA: 0x002AC484 File Offset: 0x002AA684
+	// Token: 0x06009108 RID: 37128 RVA: 0x002B72C8 File Offset: 0x002B54C8
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -102,7 +102,7 @@ public class MediumItemGridVisionSlotComponent : MediumItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x0600BD06 RID: 48390 RVA: 0x002AC4D8 File Offset: 0x002AA6D8
+	// Token: 0x06009109 RID: 37129 RVA: 0x002B731C File Offset: 0x002B551C
 	private void SetState(int slotIndex, EMediumItemGridVisionSlotState? state)
 	{
 		if (slotIndex >= this.SlotSpriteList.Length)
@@ -232,65 +232,65 @@ public class MediumItemGridVisionSlotComponent : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x04005549 RID: 21833
+	// Token: 0x040055F6 RID: 22006
 	private const int UNLOCK_AND_HAVE_PROP_INDEX = 0;
 
-	// Token: 0x0400554A RID: 21834
+	// Token: 0x040055F7 RID: 22007
 	private const int UNLOCK_AND_NO_PROP_INDEX = 1;
 
-	// Token: 0x0400554B RID: 21835
+	// Token: 0x040055F8 RID: 22008
 	private const int PREVIEW_UNLOCK_INDEX = 2;
 
-	// Token: 0x0400554C RID: 21836
+	// Token: 0x040055F9 RID: 22009
 	private const int LOCK_INDEX = 3;
 
-	// Token: 0x0400554D RID: 21837
+	// Token: 0x040055FA RID: 22010
 	private const int STATE_COUNT = 4;
 
-	// Token: 0x0400554E RID: 21838
+	// Token: 0x040055FB RID: 22011
 	private const int STATE_SLOT_COUNT = 3;
 
-	// Token: 0x0400554F RID: 21839
+	// Token: 0x040055FC RID: 22012
 	[Nullable(1)]
 	private UUISprite[][] SlotSpriteList = new UUISprite[0][];
 
-	// Token: 0x02007EA6 RID: 32422
+	// Token: 0x02007035 RID: 28725
 	private class EChildType
 	{
-		// Token: 0x0402968C RID: 169612
+		// Token: 0x040249C9 RID: 149961
 		public const int OneStateASprite = 0;
 
-		// Token: 0x0402968D RID: 169613
+		// Token: 0x040249CA RID: 149962
 		public const int OneStateBSprite = 1;
 
-		// Token: 0x0402968E RID: 169614
+		// Token: 0x040249CB RID: 149963
 		public const int OneStateCSprite = 2;
 
-		// Token: 0x0402968F RID: 169615
+		// Token: 0x040249CC RID: 149964
 		public const int OneStateDSprite = 3;
 
-		// Token: 0x04029690 RID: 169616
+		// Token: 0x040249CD RID: 149965
 		public const int TwoStateASprite = 4;
 
-		// Token: 0x04029691 RID: 169617
+		// Token: 0x040249CE RID: 149966
 		public const int TwoStateBSprite = 5;
 
-		// Token: 0x04029692 RID: 169618
+		// Token: 0x040249CF RID: 149967
 		public const int TwoStateCSprite = 6;
 
-		// Token: 0x04029693 RID: 169619
+		// Token: 0x040249D0 RID: 149968
 		public const int TwoStateDSprite = 7;
 
-		// Token: 0x04029694 RID: 169620
+		// Token: 0x040249D1 RID: 149969
 		public const int ThreeStateASprite = 8;
 
-		// Token: 0x04029695 RID: 169621
+		// Token: 0x040249D2 RID: 149970
 		public const int ThreeStateBSprite = 9;
 
-		// Token: 0x04029696 RID: 169622
+		// Token: 0x040249D3 RID: 149971
 		public const int ThreeStateCSprite = 10;
 
-		// Token: 0x04029697 RID: 169623
+		// Token: 0x040249D4 RID: 149972
 		public const int ThreeStateDSprite = 11;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200267E RID: 9854
+	// Token: 0x02002941 RID: 10561
 	public class ClaimLevelPlayReward : ActionParams
 	{
-		// Token: 0x0600DCC7 RID: 56519 RVA: 0x0020D4D6 File Offset: 0x0020B6D6
-		[NullableContext(1)]
+		// Token: 0x0600EA9E RID: 60062 RVA: 0x00229C74 File Offset: 0x00227E74
 		public static ClaimLevelPlayReward Create(IClaimLevelPlayReward? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x04007AAE RID: 31406
+		// Token: 0x0400814B RID: 33099
 		private IClaimLevelPlayReward Instance;
 	}
 }

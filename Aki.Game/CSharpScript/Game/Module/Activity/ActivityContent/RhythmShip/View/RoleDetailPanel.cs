@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006231 RID: 25137
+	// Token: 0x020051AF RID: 20911
 	internal class RoleDetailPanel : UiPanelBase
 	{
-		// Token: 0x0603F608 RID: 259592 RVA: 0x00F5242C File Offset: 0x00F5062C
+		// Token: 0x060342C9 RID: 213705 RVA: 0x00E99388 File Offset: 0x00E97588
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F609 RID: 259593 RVA: 0x00F524E0 File Offset: 0x00F506E0
+		// Token: 0x060342CA RID: 213706 RVA: 0x00E9943C File Offset: 0x00E9763C
 		public void RefreshPanel()
 		{
 			if (RhythmShipModel.Instance.RhythmShipLevelRole <= 0)

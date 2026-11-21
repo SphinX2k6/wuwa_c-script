@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000F63 RID: 3939
+// Token: 0x02000418 RID: 1048
 public class DrinksQTEButton : UiPanelBase
 {
-	// Token: 0x060064D0 RID: 25808 RVA: 0x0013FFE8 File Offset: 0x0013E1E8
+	// Token: 0x06003868 RID: 14440 RVA: 0x00148884 File Offset: 0x00146A84
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,13 +21,13 @@ public class DrinksQTEButton : UiPanelBase
 		};
 	}
 
-	// Token: 0x060064D1 RID: 25809 RVA: 0x0014004F File Offset: 0x0013E24F
+	// Token: 0x06003869 RID: 14441 RVA: 0x001488EB File Offset: 0x00146AEB
 	protected override void OnStart()
 	{
 		this.SetSelfActive(true);
 	}
 
-	// Token: 0x060064D2 RID: 25810 RVA: 0x00140058 File Offset: 0x0013E258
+	// Token: 0x0600386A RID: 14442 RVA: 0x001488F4 File Offset: 0x00146AF4
 	public void SetSelfActive(bool isActive)
 	{
 		UUISprite sprite = base.GetSprite(1);
@@ -44,7 +44,7 @@ public class DrinksQTEButton : UiPanelBase
 		button.SetSelfInteractive(isActive);
 	}
 
-	// Token: 0x060064D3 RID: 25811 RVA: 0x0014008A File Offset: 0x0013E28A
+	// Token: 0x0600386B RID: 14443 RVA: 0x00148926 File Offset: 0x00146B26
 	public void OnTick(float percent)
 	{
 		UUISprite sprite = base.GetSprite(1);
@@ -58,7 +58,7 @@ public class DrinksQTEButton : UiPanelBase
 		}
 	}
 
-	// Token: 0x060064D4 RID: 25812 RVA: 0x001400B7 File Offset: 0x0013E2B7
+	// Token: 0x0600386C RID: 14444 RVA: 0x00148953 File Offset: 0x00146B53
 	public void OnClickedBtn()
 	{
 		if (this.OnClickedCb != null && this.CanClick)
@@ -68,20 +68,20 @@ public class DrinksQTEButton : UiPanelBase
 		}
 	}
 
-	// Token: 0x04002DC3 RID: 11715
+	// Token: 0x04002E5C RID: 11868
 	[Nullable(2)]
 	public Action OnClickedCb;
 
-	// Token: 0x04002DC4 RID: 11716
+	// Token: 0x04002E5D RID: 11869
 	protected bool CanClick;
 
-	// Token: 0x020075B0 RID: 30128
+	// Token: 0x02006744 RID: 26436
 	private static class EBtn
 	{
-		// Token: 0x04026E5F RID: 159327
+		// Token: 0x040221AA RID: 139690
 		public const int Btn = 0;
 
-		// Token: 0x04026E60 RID: 159328
+		// Token: 0x040221AB RID: 139691
 		public const int SpriteBar = 1;
 	}
 }

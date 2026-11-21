@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FFD RID: 8189
+	// Token: 0x02002244 RID: 8772
 	public class ITriggeredEntity_SetValue
 	{
-		// Token: 0x04006C93 RID: 27795
+		// Token: 0x04007295 RID: 29333
 		public ETargetEntityType Type;
 	}
 }

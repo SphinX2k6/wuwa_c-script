@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.AI.StateMachine.Action
 {
-	// Token: 0x02007358 RID: 29528
+	// Token: 0x020064DB RID: 25819
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineActionSendGameplayEvent : AiStateMachineAction
 	{
-		// Token: 0x060486C1 RID: 296641 RVA: 0x012A0F16 File Offset: 0x0129F116
+		// Token: 0x0603EB0F RID: 256783 RVA: 0x01243A10 File Offset: 0x01241C10
 		public AiStateMachineActionSendGameplayEvent(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.Action action) : base(stateMachineNode, action)
 		{
 		}
 
-		// Token: 0x060486C2 RID: 296642 RVA: 0x012A0F20 File Offset: 0x0129F120
+		// Token: 0x0603EB10 RID: 256784 RVA: 0x01243A1C File Offset: 0x01241C1C
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Action action)
 		{
 			CombatStateMachineDefine.Fsm.ActionSendGameplayEvent actionSendGameplayEvent = action.ActionSendGameplayEvent;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.AI.StateMachine.Action
 			return true;
 		}
 
-		// Token: 0x060486C3 RID: 296643 RVA: 0x012A0F54 File Offset: 0x0129F154
+		// Token: 0x0603EB11 RID: 256785 RVA: 0x01243A50 File Offset: 0x01241C50
 		public override void DoAction(long? contextId = null)
 		{
 			FGameplayTag? gameplayTagById = GameplayTagUtils.GetGameplayTagById(this.TagId.GetValueOrDefault());
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.AI.StateMachine.Action
 			abilityComponent.SendGameplayEventToActor(gameplayTagById.Value, null);
 		}
 
-		// Token: 0x060486C4 RID: 296644 RVA: 0x012A0F9E File Offset: 0x0129F19E
+		// Token: 0x0603EB12 RID: 256786 RVA: 0x01243A9A File Offset: 0x01241C9A
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x04026484 RID: 156804
+		// Token: 0x04021772 RID: 137074
 		private int? TagId;
 	}
 }

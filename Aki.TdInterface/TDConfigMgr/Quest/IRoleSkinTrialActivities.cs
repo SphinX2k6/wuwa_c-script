@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010FE RID: 4350
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200122C RID: 4652
 	public class IRoleSkinTrialActivities : IShowUi
 	{
-		// Token: 0x06006262 RID: 25186 RVA: 0x000ED034 File Offset: 0x000EB234
+		// Token: 0x0600685D RID: 26717 RVA: 0x000FA1A8 File Offset: 0x000F83A8
 		private IRoleSkinTrialActivities_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006263 RID: 25187 RVA: 0x000ED06C File Offset: 0x000EB26C
+		// Token: 0x0600685E RID: 26718 RVA: 0x000FA1E0 File Offset: 0x000F83E0
 		public static IRoleSkinTrialActivities Create([Nullable(2)] IRoleSkinTrialActivities instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006264 RID: 25188 RVA: 0x000ED07F File Offset: 0x000EB27F
+		// Token: 0x0600685F RID: 26719 RVA: 0x000FA1F3 File Offset: 0x000F83F3
 		public static IRoleSkinTrialActivities CreateFromSetValue([Nullable(2)] IRoleSkinTrialActivities_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006265 RID: 25189 RVA: 0x000ED092 File Offset: 0x000EB292
+		// Token: 0x06006860 RID: 26720 RVA: 0x000FA206 File Offset: 0x000F8406
 		public new IRoleSkinTrialActivities_SetValue ToSetValue()
 		{
 			return new IRoleSkinTrialActivities_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002038 RID: 8248
-		// (get) Token: 0x06006266 RID: 25190 RVA: 0x000ED0A5 File Offset: 0x000EB2A5
-		// (set) Token: 0x06006267 RID: 25191 RVA: 0x000ED0D0 File Offset: 0x000EB2D0
+		// Token: 0x170021EB RID: 8683
+		// (get) Token: 0x06006861 RID: 26721 RVA: 0x000FA219 File Offset: 0x000F8419
+		// (set) Token: 0x06006862 RID: 26722 RVA: 0x000FA244 File Offset: 0x000F8444
 		public override EShowUiType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B19 RID: 15129
+		// Token: 0x04003E67 RID: 15975
 		[Nullable(2)]
 		protected new IRoleSkinTrialActivities FbInstance;
 
-		// Token: 0x04003B1A RID: 15130
+		// Token: 0x04003E68 RID: 15976
 		[Nullable(2)]
 		protected new IRoleSkinTrialActivities_SetValue PocoInterface;
 	}

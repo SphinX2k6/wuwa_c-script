@@ -7,16 +7,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020032B2 RID: 12978
+// Token: 0x02002823 RID: 10275
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/SceneItem/SimpleBlueprintItem/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/SceneItem/SimpleBlueprintItem/TsSimpleInteractPoint.TsSimpleInteractPoint_C")]
 public class TsSimpleInteractPoint : TsSimpleInteractBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170026D8 RID: 9944
-	// (get) Token: 0x0601C1F9 RID: 115193 RVA: 0x007D4215 File Offset: 0x007D2415
-	// (set) Token: 0x0601C1FA RID: 115194 RVA: 0x007D4225 File Offset: 0x007D2425
+	// Token: 0x170029C5 RID: 10693
+	// (get) Token: 0x06019E3A RID: 106042 RVA: 0x007FB311 File Offset: 0x007F9511
+	// (set) Token: 0x06019E3B RID: 106043 RVA: 0x007FB321 File Offset: 0x007F9521
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool OnWall
 	{
@@ -30,7 +30,7 @@ public class TsSimpleInteractPoint : TsSimpleInteractBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x0601C1FB RID: 115195 RVA: 0x007D4236 File Offset: 0x007D2436
+	// Token: 0x06019E3C RID: 106044 RVA: 0x007FB332 File Offset: 0x007F9532
 	protected override void OnBeginPlay()
 	{
 		this.OutRotator = Rotator.Create();
@@ -38,13 +38,13 @@ public class TsSimpleInteractPoint : TsSimpleInteractBase, IUnrealUObject, IUnre
 		base.OnBeginPlay();
 	}
 
-	// Token: 0x0601C1FC RID: 115196 RVA: 0x007D4254 File Offset: 0x007D2454
+	// Token: 0x06019E3D RID: 106045 RVA: 0x007FB350 File Offset: 0x007F9550
 	protected override bool CheckLegal()
 	{
 		return true;
 	}
 
-	// Token: 0x0601C1FD RID: 115197 RVA: 0x007D4258 File Offset: 0x007D2458
+	// Token: 0x06019E3E RID: 106046 RVA: 0x007FB354 File Offset: 0x007F9554
 	protected override void OnDraw()
 	{
 		FVectorDouble fvectorDouble = base.D_K2_GetActorLocation();
@@ -62,7 +62,7 @@ public class TsSimpleInteractPoint : TsSimpleInteractBase, IUnrealUObject, IUnre
 		UKismetSystemLibrary.D_DrawDebugArrow(this, lineStart2, ftransformDouble.TransformPosition(fvectorDouble2), 20f, TsSimpleInteractPoint.BlueColor, 0.05f, 4f);
 	}
 
-	// Token: 0x0601C1FE RID: 115198 RVA: 0x007D42DC File Offset: 0x007D24DC
+	// Token: 0x06019E3F RID: 106047 RVA: 0x007FB3D8 File Offset: 0x007F95D8
 	protected override void SetText(FVector offset)
 	{
 		base.Text.HorizontalAlignment = EHorizTextAligment.EHTA_Center;
@@ -75,7 +75,7 @@ public class TsSimpleInteractPoint : TsSimpleInteractBase, IUnrealUObject, IUnre
 		text.Text = defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0601C1FF RID: 115199 RVA: 0x007D4354 File Offset: 0x007D2554
+	// Token: 0x06019E40 RID: 106048 RVA: 0x007FB450 File Offset: 0x007F9650
 	protected override SSimpleInteractResult OnGetBestTransform(AActor actor, FVector moveOffset, float halfHeight, float radius)
 	{
 		this.UpdateData();
@@ -134,7 +134,7 @@ public class TsSimpleInteractPoint : TsSimpleInteractBase, IUnrealUObject, IUnre
 		return this.TmpResult;
 	}
 
-	// Token: 0x0601C200 RID: 115200 RVA: 0x007D469F File Offset: 0x007D289F
+	// Token: 0x06019E41 RID: 106049 RVA: 0x007FB79B File Offset: 0x007F999B
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsSimpleInteractPoint._ClassPtr == IntPtr.Zero)
@@ -144,73 +144,73 @@ public class TsSimpleInteractPoint : TsSimpleInteractBase, IUnrealUObject, IUnre
 		return TsSimpleInteractPoint._ClassPtr;
 	}
 
-	// Token: 0x0601C201 RID: 115201 RVA: 0x007D46C4 File Offset: 0x007D28C4
+	// Token: 0x06019E42 RID: 106050 RVA: 0x007FB7C0 File Offset: 0x007F99C0
 	public TsSimpleInteractPoint() : this(BuiltinUtils.AllocNativeUObject(TsSimpleInteractPoint.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601C202 RID: 115202 RVA: 0x007D46EC File Offset: 0x007D28EC
+	// Token: 0x06019E43 RID: 106051 RVA: 0x007FB7E8 File Offset: 0x007F99E8
 	public TsSimpleInteractPoint(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsSimpleInteractPoint.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601C203 RID: 115203 RVA: 0x007D471F File Offset: 0x007D291F
+	// Token: 0x06019E44 RID: 106052 RVA: 0x007FB81B File Offset: 0x007F9A1B
 	protected TsSimpleInteractPoint(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400DE77 RID: 56951
+	// Token: 0x0400E31D RID: 58141
 	private static readonly FLinearColor RedColor = new FLinearColor(1f, 0f, 0f, 1f);
 
-	// Token: 0x0400DE78 RID: 56952
+	// Token: 0x0400E31E RID: 58142
 	private static readonly FLinearColor BlueColor = new FLinearColor(0f, 0f, 1f, 1f);
 
-	// Token: 0x0400DE79 RID: 56953
+	// Token: 0x0400E31F RID: 58143
 	private const float DRAW_TIME = 0.05f;
 
-	// Token: 0x0400DE7A RID: 56954
+	// Token: 0x0400E320 RID: 58144
 	private const float DEFAULT_THICKNESS = 4f;
 
-	// Token: 0x0400DE7B RID: 56955
+	// Token: 0x0400E321 RID: 58145
 	private const float DEFAULT_ARROW_SIZE = 20f;
 
-	// Token: 0x0400DE7C RID: 56956
+	// Token: 0x0400E322 RID: 58146
 	private const float DRAW_LENGTH = 100f;
 
-	// Token: 0x0400DE7D RID: 56957
+	// Token: 0x0400E323 RID: 58147
 	[StaticVariableRuleIgnore]
 	private static readonly Vector ForwardOffset = Vector.Create(100.0, 0.0, 0.0);
 
-	// Token: 0x0400DE7E RID: 56958
+	// Token: 0x0400E324 RID: 58148
 	[StaticVariableRuleIgnore]
 	private static readonly Vector UpOffset = Vector.Create(0.0, 0.0, 100.0);
 
-	// Token: 0x0400DE7F RID: 56959
+	// Token: 0x0400E325 RID: 58149
 	private static readonly FColor TextColor = new FColor(byte.MaxValue, 128, 128, byte.MaxValue);
 
-	// Token: 0x0400DE80 RID: 56960
+	// Token: 0x0400E326 RID: 58150
 	private const float TEXT_SIZE = 80f;
 
-	// Token: 0x0400DE81 RID: 56961
+	// Token: 0x0400E327 RID: 58151
 	private const string PROFILE_KEY = "TsSimpleInteractPoint_GetBestTransform";
 
-	// Token: 0x0400DE82 RID: 56962
+	// Token: 0x0400E328 RID: 58152
 	[Nullable(2)]
 	private Rotator OutRotator;
 
-	// Token: 0x0400DE83 RID: 56963
+	// Token: 0x0400E329 RID: 58153
 	[Nullable(2)]
 	private Vector TmpLocation;
 
-	// Token: 0x0400DE84 RID: 56964
+	// Token: 0x0400E32A RID: 58154
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/SceneItem/SimpleBlueprintItem/TsSimpleInteractPoint.TsSimpleInteractPoint_C";
 
-	// Token: 0x0400DE85 RID: 56965
+	// Token: 0x0400E32B RID: 58155
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400DE86 RID: 56966
+	// Token: 0x0400E32C RID: 58156
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400DE87 RID: 56967
+	// Token: 0x0400E32D RID: 58157
 	private static int __PropertyOffset_OnWall;
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001CB RID: 459
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001EE RID: 494
 	public class IAnsEvent : ISceneItemSeqEventCbType
 	{
-		// Token: 0x06000756 RID: 1878 RVA: 0x00024C50 File Offset: 0x00022E50
+		// Token: 0x060007AA RID: 1962 RVA: 0x00025F54 File Offset: 0x00024154
 		private IAnsEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000757 RID: 1879 RVA: 0x00024C88 File Offset: 0x00022E88
+		// Token: 0x060007AB RID: 1963 RVA: 0x00025F8C File Offset: 0x0002418C
 		public static IAnsEvent Create([Nullable(2)] IAnsEvent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000758 RID: 1880 RVA: 0x00024C9B File Offset: 0x00022E9B
+		// Token: 0x060007AC RID: 1964 RVA: 0x00025F9F File Offset: 0x0002419F
 		public static IAnsEvent CreateFromSetValue([Nullable(2)] IAnsEvent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000759 RID: 1881 RVA: 0x00024CAE File Offset: 0x00022EAE
+		// Token: 0x060007AD RID: 1965 RVA: 0x00025FB2 File Offset: 0x000241B2
 		public new IAnsEvent_SetValue ToSetValue()
 		{
 			return new IAnsEvent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000258 RID: 600
-		// (get) Token: 0x0600075A RID: 1882 RVA: 0x00024CE5 File Offset: 0x00022EE5
-		// (set) Token: 0x0600075B RID: 1883 RVA: 0x00024D10 File Offset: 0x00022F10
+		// Token: 0x1700026D RID: 621
+		// (get) Token: 0x060007AE RID: 1966 RVA: 0x00025FE9 File Offset: 0x000241E9
+		// (set) Token: 0x060007AF RID: 1967 RVA: 0x00026014 File Offset: 0x00024214
 		public override ESceneItemSeqEventCbType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000259 RID: 601
-		// (get) Token: 0x0600075C RID: 1884 RVA: 0x00024D1E File Offset: 0x00022F1E
-		// (set) Token: 0x0600075D RID: 1885 RVA: 0x00024D49 File Offset: 0x00022F49
+		// Token: 0x1700026E RID: 622
+		// (get) Token: 0x060007B0 RID: 1968 RVA: 0x00026022 File Offset: 0x00024222
+		// (set) Token: 0x060007B1 RID: 1969 RVA: 0x0002604D File Offset: 0x0002424D
 		public override string EventName
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700025A RID: 602
-		// (get) Token: 0x0600075E RID: 1886 RVA: 0x00024D58 File Offset: 0x00022F58
-		// (set) Token: 0x0600075F RID: 1887 RVA: 0x00024DB9 File Offset: 0x00022FB9
+		// Token: 0x1700026F RID: 623
+		// (get) Token: 0x060007B2 RID: 1970 RVA: 0x0002605C File Offset: 0x0002425C
+		// (set) Token: 0x060007B3 RID: 1971 RVA: 0x000260BD File Offset: 0x000242BD
 		public override ActionInfo Action
 		{
 			get
@@ -139,9 +137,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700025B RID: 603
-		// (get) Token: 0x06000760 RID: 1888 RVA: 0x00024DCE File Offset: 0x00022FCE
-		// (set) Token: 0x06000761 RID: 1889 RVA: 0x00024DFD File Offset: 0x00022FFD
+		// Token: 0x17000270 RID: 624
+		// (get) Token: 0x060007B4 RID: 1972 RVA: 0x000260D2 File Offset: 0x000242D2
+		// (set) Token: 0x060007B5 RID: 1973 RVA: 0x00026101 File Offset: 0x00024301
 		public virtual float Duration
 		{
 			get
@@ -162,18 +160,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000896 RID: 2198
+		// Token: 0x0400090A RID: 2314
 		[Nullable(2)]
 		protected new IAnsEvent FbInstance;
 
-		// Token: 0x04000897 RID: 2199
+		// Token: 0x0400090B RID: 2315
 		[Nullable(2)]
 		protected new IAnsEvent_SetValue PocoInterface;
 
-		// Token: 0x04000898 RID: 2200
+		// Token: 0x0400090C RID: 2316
 		private ActionInfo _ActionCache;
 
-		// Token: 0x04000899 RID: 2201
+		// Token: 0x0400090D RID: 2317
 		private bool _ActionInited;
 	}
 }

@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x020021F5 RID: 8693
-// (Invoke) Token: 0x06010E9B RID: 69275
+// Token: 0x020016D9 RID: 5849
+// (Invoke) Token: 0x0600E32E RID: 58158
 public delegate bool TPreemptiveIsCompleteMethod();

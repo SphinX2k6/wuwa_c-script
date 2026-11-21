@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 {
-	// Token: 0x02006325 RID: 25381
+	// Token: 0x020052A3 RID: 21155
 	public class PinballPlotSpineItem : UiPanelBase, IPlotAvgCharacterMove
 	{
-		// Token: 0x0603FD7B RID: 261499 RVA: 0x00F71D64 File Offset: 0x00F6FF64
+		// Token: 0x06034A3C RID: 215612 RVA: 0x00EB8CC0 File Offset: 0x00EB6EC0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FD7C RID: 261500 RVA: 0x00F71DD0 File Offset: 0x00F6FFD0
+		// Token: 0x06034A3D RID: 215613 RVA: 0x00EB8D2C File Offset: 0x00EB6F2C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballPlotSpineItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -38,26 +38,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FD7D RID: 261501 RVA: 0x00F71E13 File Offset: 0x00F70013
+		// Token: 0x06034A3E RID: 215614 RVA: 0x00EB8D6F File Offset: 0x00EB6F6F
 		[NullableContext(1)]
 		public void PlayAnimation(string animationName, bool isLoop)
 		{
 			base.GetSpine(0).SetAnimation(0, animationName, isLoop);
 		}
 
-		// Token: 0x0603FD7E RID: 261502 RVA: 0x00F71E25 File Offset: 0x00F70025
+		// Token: 0x06034A3F RID: 215615 RVA: 0x00EB8D81 File Offset: 0x00EB6F81
 		public void SetAnchorOffsetX(float offsetX)
 		{
 			this.GetOriginalItem().SetAnchorOffsetX(offsetX);
 		}
 
-		// Token: 0x0603FD7F RID: 261503 RVA: 0x00F71E33 File Offset: 0x00F70033
+		// Token: 0x06034A40 RID: 215616 RVA: 0x00EB8D8F File Offset: 0x00EB6F8F
 		public void SetAnchorOffsetY(float offsetY)
 		{
 			this.GetOriginalItem().SetAnchorOffsetY(offsetY);
 		}
 
-		// Token: 0x0603FD80 RID: 261504 RVA: 0x00F71E41 File Offset: 0x00F70041
+		// Token: 0x06034A41 RID: 215617 RVA: 0x00EB8D9D File Offset: 0x00EB6F9D
 		public void UpdateSpeakStatus(bool isSpeaking)
 		{
 			if (this.IsSpeaking == isSpeaking)
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.RefreshArrowStatus();
 		}
 
-		// Token: 0x0603FD81 RID: 261505 RVA: 0x00F71E5A File Offset: 0x00F7005A
+		// Token: 0x06034A42 RID: 215618 RVA: 0x00EB8DB6 File Offset: 0x00EB6FB6
 		public void RefreshArrowStatus()
 		{
 			base.GetItem(1).SetUIActive(this.IsSpeaking);
 		}
 
-		// Token: 0x0603FD82 RID: 261506 RVA: 0x00F71E70 File Offset: 0x00F70070
+		// Token: 0x06034A43 RID: 215619 RVA: 0x00EB8DCC File Offset: 0x00EB6FCC
 		public UniTask OnEnterAsync()
 		{
 			PinballPlotSpineItem.<OnEnterAsync>d__10 <OnEnterAsync>d__;
@@ -84,19 +84,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			return <OnEnterAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FD83 RID: 261507 RVA: 0x00F71EAB File Offset: 0x00F700AB
+		// Token: 0x06034A44 RID: 215620 RVA: 0x00EB8E07 File Offset: 0x00EB7007
 		public void SetPosition(float position)
 		{
 			this.SetAnchorOffsetX(position);
 		}
 
-		// Token: 0x0603FD84 RID: 261508 RVA: 0x00F71EB4 File Offset: 0x00F700B4
+		// Token: 0x06034A45 RID: 215621 RVA: 0x00EB8E10 File Offset: 0x00EB7010
 		public float GetPosition()
 		{
 			return this.GetOriginalItem().GetAnchorOffsetX();
 		}
 
-		// Token: 0x0603FD85 RID: 261509 RVA: 0x00F71EC4 File Offset: 0x00F700C4
+		// Token: 0x06034A46 RID: 215622 RVA: 0x00EB8E20 File Offset: 0x00EB7020
 		public UniTask OnExitAsync()
 		{
 			PinballPlotSpineItem.<OnExitAsync>d__13 <OnExitAsync>d__;
@@ -106,18 +106,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			return <OnExitAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x040214FD RID: 136445
+		// Token: 0x0401BE2C RID: 114220
 		private int? TalkerId;
 
-		// Token: 0x040214FE RID: 136446
+		// Token: 0x0401BE2D RID: 114221
 		private bool IsSpeaking;
 
-		// Token: 0x0200C51C RID: 50460
+		// Token: 0x0200AF03 RID: 44803
 		private enum EComponent
 		{
-			// Token: 0x0403B7C5 RID: 243653
+			// Token: 0x04036127 RID: 221479
 			RoleSpine,
-			// Token: 0x0403B7C6 RID: 243654
+			// Token: 0x04036128 RID: 221480
 			ArrowItem
 		}
 	}

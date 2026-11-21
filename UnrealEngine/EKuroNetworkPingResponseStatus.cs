@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019F0 RID: 6640
+	// Token: 0x02000477 RID: 1143
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroNetwork.EKuroNetworkPingResponseStatus")]
 	public enum EKuroNetworkPingResponseStatus : byte
 	{
-		// Token: 0x0400D4ED RID: 54509
+		// Token: 0x04002E52 RID: 11858
 		Success,
-		// Token: 0x0400D4EE RID: 54510
+		// Token: 0x04002E53 RID: 11859
 		Error,
-		// Token: 0x0400D4EF RID: 54511
+		// Token: 0x04002E54 RID: 11860
 		Miss,
-		// Token: 0x0400D4F0 RID: 54512
+		// Token: 0x04002E55 RID: 11861
 		EKuroNetworkPingResponseStatus_MAX
 	}
 }

@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Utils;
 
-// Token: 0x02002FF7 RID: 12279
+// Token: 0x0200254C RID: 9548
 [NullableContext(1)]
 [Nullable(0)]
 public class ShieldTrigger : Trigger
 {
-	// Token: 0x0601A049 RID: 106569 RVA: 0x006D043E File Offset: 0x006CE63E
+	// Token: 0x0601797D RID: 96637 RVA: 0x006F82DA File Offset: 0x006F64DA
 	[NullableContext(2)]
 	public ShieldTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A04A RID: 106570 RVA: 0x006D044F File Offset: 0x006CE64F
+	// Token: 0x0601797E RID: 96638 RVA: 0x006F82EB File Offset: 0x006F64EB
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.TargetType = (ETriggerTargetType)Convert.ToInt32((triggerParams.Length != 0) ? triggerParams[0] : "0");
 	}
 
-	// Token: 0x0601A04B RID: 106571 RVA: 0x006D046C File Offset: 0x006CE66C
+	// Token: 0x0601797F RID: 96639 RVA: 0x006F8308 File Offset: 0x006F6508
 	protected override void OnActive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -31,7 +31,7 @@ public class ShieldTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A04C RID: 106572 RVA: 0x006D04B4 File Offset: 0x006CE6B4
+	// Token: 0x06017980 RID: 96640 RVA: 0x006F8350 File Offset: 0x006F6550
 	protected override void OnInactive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -42,7 +42,7 @@ public class ShieldTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A04D RID: 106573 RVA: 0x006D04FC File Offset: 0x006CE6FC
+	// Token: 0x06017981 RID: 96641 RVA: 0x006F8398 File Offset: 0x006F6598
 	private void OnEvent(Entity victim, float oldShieldValue, float newShieldValue, int updateType, int shieldId)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -58,12 +58,12 @@ public class ShieldTrigger : Trigger
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x0601A04E RID: 106574 RVA: 0x006D0581 File Offset: 0x006CE781
+	// Token: 0x06017982 RID: 96642 RVA: 0x006F841D File Offset: 0x006F661D
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4EA RID: 50410
+	// Token: 0x0400C8B2 RID: 51378
 	protected ETriggerTargetType TargetType;
 }

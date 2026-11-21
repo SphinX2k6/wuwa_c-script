@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002A1 RID: 673
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002E6 RID: 742
 	public class ICyberpunkShareEmptyVehiclePerform : INpcRideInVehiclePerformType
 	{
-		// Token: 0x06000C91 RID: 3217 RVA: 0x000306A4 File Offset: 0x0002E8A4
+		// Token: 0x06000DB5 RID: 3509 RVA: 0x00033494 File Offset: 0x00031694
 		private ICyberpunkShareEmptyVehiclePerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000C92 RID: 3218 RVA: 0x000306DC File Offset: 0x0002E8DC
+		// Token: 0x06000DB6 RID: 3510 RVA: 0x000334CC File Offset: 0x000316CC
 		public static ICyberpunkShareEmptyVehiclePerform Create([Nullable(2)] ICyberpunkShareEmptyVehiclePerform instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C93 RID: 3219 RVA: 0x000306EF File Offset: 0x0002E8EF
+		// Token: 0x06000DB7 RID: 3511 RVA: 0x000334DF File Offset: 0x000316DF
 		public static ICyberpunkShareEmptyVehiclePerform CreateFromSetValue([Nullable(2)] ICyberpunkShareEmptyVehiclePerform_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C94 RID: 3220 RVA: 0x00030702 File Offset: 0x0002E902
+		// Token: 0x06000DB8 RID: 3512 RVA: 0x000334F2 File Offset: 0x000316F2
 		public new ICyberpunkShareEmptyVehiclePerform_SetValue ToSetValue()
 		{
 			return new ICyberpunkShareEmptyVehiclePerform_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003B4 RID: 948
-		// (get) Token: 0x06000C95 RID: 3221 RVA: 0x00030721 File Offset: 0x0002E921
-		// (set) Token: 0x06000C96 RID: 3222 RVA: 0x0003074C File Offset: 0x0002E94C
+		// Token: 0x170003FE RID: 1022
+		// (get) Token: 0x06000DB9 RID: 3513 RVA: 0x00033511 File Offset: 0x00031711
+		// (set) Token: 0x06000DBA RID: 3514 RVA: 0x0003353C File Offset: 0x0003173C
 		public override EVehicleType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003B5 RID: 949
-		// (get) Token: 0x06000C97 RID: 3223 RVA: 0x0003075A File Offset: 0x0002E95A
-		// (set) Token: 0x06000C98 RID: 3224 RVA: 0x00030785 File Offset: 0x0002E985
+		// Token: 0x170003FF RID: 1023
+		// (get) Token: 0x06000DBB RID: 3515 RVA: 0x0003354A File Offset: 0x0003174A
+		// (set) Token: 0x06000DBC RID: 3516 RVA: 0x00033575 File Offset: 0x00031775
 		public override string Montage
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BBB RID: 3003
+		// Token: 0x04000CA0 RID: 3232
 		[Nullable(2)]
 		protected new ICyberpunkShareEmptyVehiclePerform FbInstance;
 
-		// Token: 0x04000BBC RID: 3004
+		// Token: 0x04000CA1 RID: 3233
 		[Nullable(2)]
 		protected new ICyberpunkShareEmptyVehiclePerform_SetValue PocoInterface;
 	}

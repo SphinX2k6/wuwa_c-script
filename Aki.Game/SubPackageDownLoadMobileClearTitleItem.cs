@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002AAC RID: 10924
+// Token: 0x02002028 RID: 8232
 public class SubPackageDownLoadMobileClearTitleItem : UiPanelBase
 {
-	// Token: 0x06016BF4 RID: 93172 RVA: 0x005C59AC File Offset: 0x005C3BAC
+	// Token: 0x06014623 RID: 83491 RVA: 0x005F2440 File Offset: 0x005F0640
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,14 +21,14 @@ public class SubPackageDownLoadMobileClearTitleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016BF5 RID: 93173 RVA: 0x005C5A14 File Offset: 0x005C3C14
+	// Token: 0x06014624 RID: 83492 RVA: 0x005F24A8 File Offset: 0x005F06A8
 	public void RefreshItem(int type)
 	{
 		this.TitleType = type;
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "SubPackageClearTipsTitle_" + SubPackageDefineClearTypeToTipsNumber.clearTypeToTipsNumber[(ESubPackageDownLoadPackageType)this.TitleType].ToString(), Array.Empty<object>());
 	}
 
-	// Token: 0x06016BF6 RID: 93174 RVA: 0x005C5A60 File Offset: 0x005C3C60
+	// Token: 0x06014625 RID: 83493 RVA: 0x005F24F4 File Offset: 0x005F06F4
 	private void OnClickHelpBtn()
 	{
 		if (this.OnClickHelpBtnCallBack != null)
@@ -37,7 +37,7 @@ public class SubPackageDownLoadMobileClearTitleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400A8D5 RID: 43221
+	// Token: 0x0400ACDB RID: 44251
 	[Nullable(new byte[]
 	{
 		2,
@@ -45,16 +45,16 @@ public class SubPackageDownLoadMobileClearTitleItem : UiPanelBase
 	})]
 	public Action<int, UUIItem> OnClickHelpBtnCallBack;
 
-	// Token: 0x0400A8D6 RID: 43222
+	// Token: 0x0400ACDC RID: 44252
 	private int TitleType;
 
-	// Token: 0x020090DC RID: 37084
+	// Token: 0x02008320 RID: 33568
 	private class ESubPackageDownLoadMobileClearTitleItem
 	{
-		// Token: 0x0402EEEC RID: 192236
+		// Token: 0x0402A5F1 RID: 173553
 		public const int Text = 0;
 
-		// Token: 0x0402EEED RID: 192237
+		// Token: 0x0402A5F2 RID: 173554
 		public const int HelpBtn = 1;
 	}
 }

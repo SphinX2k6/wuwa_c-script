@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace ActivityNamespace.MapTravel
 {
-	// Token: 0x020044D2 RID: 17618
+	// Token: 0x02002F5F RID: 12127
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapTravelTabItemBase : UiPanelBase
 	{
-		// Token: 0x0602D658 RID: 185944 RVA: 0x00A3E8C1 File Offset: 0x00A3CAC1
+		// Token: 0x0601CB96 RID: 117654 RVA: 0x008C4521 File Offset: 0x008C2721
 		public MapTravelTabItemBase(ActivityMapTravelData activityBaseData)
 		{
 			this.ActivityBaseData = activityBaseData;
 		}
 
-		// Token: 0x0602D659 RID: 185945 RVA: 0x00A3E8D0 File Offset: 0x00A3CAD0
+		// Token: 0x0601CB97 RID: 117655 RVA: 0x008C4530 File Offset: 0x008C2730
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -45,7 +45,7 @@ namespace ActivityNamespace.MapTravel
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0602D65A RID: 185946 RVA: 0x00A3E9D9 File Offset: 0x00A3CBD9
+		// Token: 0x0601CB98 RID: 117656 RVA: 0x008C4639 File Offset: 0x008C2839
 		private void OnToggleSelectOn(EToggleState _)
 		{
 			if (this.Data != null)
@@ -59,49 +59,49 @@ namespace ActivityNamespace.MapTravel
 			}
 		}
 
-		// Token: 0x0602D65B RID: 185947 RVA: 0x00A3EA00 File Offset: 0x00A3CC00
+		// Token: 0x0601CB99 RID: 117657 RVA: 0x008C4660 File Offset: 0x008C2860
 		public void SetToggleState(bool bOn, bool bFireEvent)
 		{
 			EToggleState state = bOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(0).SetToggleState(state, bFireEvent, false, false);
 		}
 
-		// Token: 0x0602D65C RID: 185948 RVA: 0x00A3EA26 File Offset: 0x00A3CC26
+		// Token: 0x0601CB9A RID: 117658 RVA: 0x008C4686 File Offset: 0x008C2886
 		public virtual void RefreshByData(MapTravelAreaData data, int index)
 		{
 			this.Data = data;
 			this.Index = index;
 		}
 
-		// Token: 0x0401847A RID: 99450
+		// Token: 0x0400F222 RID: 61986
 		protected MapTravelAreaData Data;
 
-		// Token: 0x0401847B RID: 99451
+		// Token: 0x0400F223 RID: 61987
 		protected int Index;
 
-		// Token: 0x0401847C RID: 99452
+		// Token: 0x0400F224 RID: 61988
 		public Action<MapTravelAreaData, int> SelectedCallBack;
 
-		// Token: 0x0401847D RID: 99453
+		// Token: 0x0400F225 RID: 61989
 		protected ActivityMapTravelData ActivityBaseData;
 
-		// Token: 0x0200A718 RID: 42776
+		// Token: 0x02008BEE RID: 35822
 		[NullableContext(0)]
 		protected class ETabComponents
 		{
-			// Token: 0x0403276A RID: 206698
+			// Token: 0x0402C538 RID: 181560
 			public const int Toggle = 0;
 
-			// Token: 0x0403276B RID: 206699
+			// Token: 0x0402C539 RID: 181561
 			public const int Name = 1;
 
-			// Token: 0x0403276C RID: 206700
+			// Token: 0x0402C53A RID: 181562
 			public const int SpriteDone = 2;
 
-			// Token: 0x0403276D RID: 206701
+			// Token: 0x0402C53B RID: 181563
 			public const int SpriteLock = 3;
 
-			// Token: 0x0403276E RID: 206702
+			// Token: 0x0402C53C RID: 181564
 			public const int RedDot = 4;
 		}
 	}

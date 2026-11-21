@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200099C RID: 2460
+	// Token: 0x02000A4F RID: 2639
 	public static class EModelTypeExtensions
 	{
-		// Token: 0x060036EF RID: 14063 RVA: 0x0008EE80 File Offset: 0x0008D080
+		// Token: 0x06003A76 RID: 14966 RVA: 0x00096E30 File Offset: 0x00095030
 		public static string ToEnumString(this EModelType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036F0 RID: 14064 RVA: 0x0008EED4 File Offset: 0x0008D0D4
+		// Token: 0x06003A77 RID: 14967 RVA: 0x00096E84 File Offset: 0x00095084
 		public static EModelType FromString(string name)
 		{
 			EModelType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036F1 RID: 14065 RVA: 0x0008EF00 File Offset: 0x0008D100
+		// Token: 0x06003A78 RID: 14968 RVA: 0x00096EB0 File Offset: 0x000950B0
 		public static bool TryFromString(string name, out EModelType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060036F2 RID: 14066 RVA: 0x0008EF68 File Offset: 0x0008D168
+		// Token: 0x06003A79 RID: 14969 RVA: 0x00096F18 File Offset: 0x00095118
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036F3 RID: 14067 RVA: 0x0008EF90 File Offset: 0x0008D190
+		// Token: 0x06003A7A RID: 14970 RVA: 0x00096F40 File Offset: 0x00095140
 		public static EModelType[] GetValues()
 		{
 			return new EModelType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036F4 RID: 14068 RVA: 0x0008EFA3 File Offset: 0x0008D1A3
+		// Token: 0x06003A7B RID: 14971 RVA: 0x00096F53 File Offset: 0x00095153
 		public static string[] GetNames()
 		{
 			return new string[]

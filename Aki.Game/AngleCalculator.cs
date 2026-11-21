@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002932 RID: 10546
+// Token: 0x02001EAD RID: 7853
 [NullableContext(1)]
 [Nullable(0)]
 public class AngleCalculator : IStaticVariableResetter
 {
-	// Token: 0x06015C21 RID: 89121 RVA: 0x0057D02A File Offset: 0x0057B22A
+	// Token: 0x06013626 RID: 79398 RVA: 0x005A806A File Offset: 0x005A626A
 	static AngleCalculator()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AngleCalculator.CreateStaticDefaultValue), new Action(AngleCalculator.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06015C22 RID: 89122 RVA: 0x0057D049 File Offset: 0x0057B249
+	// Token: 0x06013627 RID: 79399 RVA: 0x005A8089 File Offset: 0x005A6289
 	public static void CreateStaticDefaultValue()
 	{
 		AngleCalculator.AngleList = new double[]
@@ -32,13 +32,13 @@ public class AngleCalculator : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06015C23 RID: 89123 RVA: 0x0057D062 File Offset: 0x0057B262
+	// Token: 0x06013628 RID: 79400 RVA: 0x005A80A2 File Offset: 0x005A62A2
 	public static void ResetStaticDefaultValue()
 	{
 		AngleCalculator.AngleList = null;
 	}
 
-	// Token: 0x06015C24 RID: 89124 RVA: 0x0057D06C File Offset: 0x0057B26C
+	// Token: 0x06013629 RID: 79401 RVA: 0x005A80AC File Offset: 0x005A62AC
 	public static float GetVectorAngle(Vector aVector, Vector bVector)
 	{
 		Vector vector = Vector.Create();
@@ -51,7 +51,7 @@ public class AngleCalculator : IStaticVariableResetter
 		return num;
 	}
 
-	// Token: 0x06015C25 RID: 89125 RVA: 0x0057D0C4 File Offset: 0x0057B2C4
+	// Token: 0x0601362A RID: 79402 RVA: 0x005A8104 File Offset: 0x005A6304
 	public static int AngleToAreaIndex(double angle)
 	{
 		int num = AngleCalculator.AngleList.Length - 2;
@@ -75,7 +75,7 @@ public class AngleCalculator : IStaticVariableResetter
 		return num;
 	}
 
-	// Token: 0x06015C26 RID: 89126 RVA: 0x0057D114 File Offset: 0x0057B314
+	// Token: 0x0601362B RID: 79403 RVA: 0x005A8154 File Offset: 0x005A6354
 	public static Vector2D ConvertLguiPosToScreenPos(double x, double y)
 	{
 		UUIItem uiRootItem = UiLayer.Instance.UiRootItem;
@@ -88,6 +88,6 @@ public class AngleCalculator : IStaticVariableResetter
 		return new Vector2D((double)fvector2D2.X, (double)fvector2D2.Y);
 	}
 
-	// Token: 0x0400A21A RID: 41498
+	// Token: 0x0400A605 RID: 42501
 	public static double[] AngleList;
 }

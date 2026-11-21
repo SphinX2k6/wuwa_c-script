@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 
-// Token: 0x0200024B RID: 587
+// Token: 0x0200024F RID: 591
 [NullableContext(1)]
 [Nullable(0)]
 public class CloudGameDefine : IStaticVariableResetter
 {
-	// Token: 0x060023C1 RID: 9153 RVA: 0x000DAC0D File Offset: 0x000D8E0D
+	// Token: 0x06002479 RID: 9337 RVA: 0x000E1155 File Offset: 0x000DF355
 	static CloudGameDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CloudGameDefine.CreateStaticDefaultValue), new Action(CloudGameDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17000586 RID: 1414
-	// (get) Token: 0x060023C2 RID: 9154 RVA: 0x000DAC2C File Offset: 0x000D8E2C
+	// Token: 0x170005AD RID: 1453
+	// (get) Token: 0x0600247A RID: 9338 RVA: 0x000E1174 File Offset: 0x000DF374
 	public static Regex CloudGamePlatformRegex
 	{
 		get
@@ -24,8 +24,8 @@ public class CloudGameDefine : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17000587 RID: 1415
-	// (get) Token: 0x060023C3 RID: 9155 RVA: 0x000DAC33 File Offset: 0x000D8E33
+	// Token: 0x170005AE RID: 1454
+	// (get) Token: 0x0600247B RID: 9339 RVA: 0x000E117B File Offset: 0x000DF37B
 	public static Regex CloudGameDeviceRegex
 	{
 		get
@@ -34,8 +34,8 @@ public class CloudGameDefine : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17000588 RID: 1416
-	// (get) Token: 0x060023C4 RID: 9156 RVA: 0x000DAC3A File Offset: 0x000D8E3A
+	// Token: 0x170005AF RID: 1455
+	// (get) Token: 0x0600247C RID: 9340 RVA: 0x000E1182 File Offset: 0x000DF382
 	public static Regex CloudGameDpiRegex
 	{
 		get
@@ -44,8 +44,8 @@ public class CloudGameDefine : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17000589 RID: 1417
-	// (get) Token: 0x060023C5 RID: 9157 RVA: 0x000DAC41 File Offset: 0x000D8E41
+	// Token: 0x170005B0 RID: 1456
+	// (get) Token: 0x0600247D RID: 9341 RVA: 0x000E1189 File Offset: 0x000DF389
 	public static Regex CloudGameDeviceScreenResolution
 	{
 		get
@@ -54,8 +54,8 @@ public class CloudGameDefine : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700058A RID: 1418
-	// (get) Token: 0x060023C6 RID: 9158 RVA: 0x000DAC48 File Offset: 0x000D8E48
+	// Token: 0x170005B1 RID: 1457
+	// (get) Token: 0x0600247E RID: 9342 RVA: 0x000E1190 File Offset: 0x000DF390
 	public static Regex CloudGameScreenResolution
 	{
 		get
@@ -64,8 +64,8 @@ public class CloudGameDefine : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700058B RID: 1419
-	// (get) Token: 0x060023C7 RID: 9159 RVA: 0x000DAC4F File Offset: 0x000D8E4F
+	// Token: 0x170005B2 RID: 1458
+	// (get) Token: 0x0600247F RID: 9343 RVA: 0x000E1197 File Offset: 0x000DF397
 	public static Regex CloudGameIsWeb
 	{
 		get
@@ -74,8 +74,8 @@ public class CloudGameDefine : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700058C RID: 1420
-	// (get) Token: 0x060023C8 RID: 9160 RVA: 0x000DAC56 File Offset: 0x000D8E56
+	// Token: 0x170005B3 RID: 1459
+	// (get) Token: 0x06002480 RID: 9344 RVA: 0x000E119E File Offset: 0x000DF39E
 	public static Dictionary<string, float[]> DeviceMarginMap
 	{
 		get
@@ -84,8 +84,8 @@ public class CloudGameDefine : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700058D RID: 1421
-	// (get) Token: 0x060023C9 RID: 9161 RVA: 0x000DAC5D File Offset: 0x000D8E5D
+	// Token: 0x170005B4 RID: 1460
+	// (get) Token: 0x06002481 RID: 9345 RVA: 0x000E11A5 File Offset: 0x000DF3A5
 	public static IReadOnlyList<float> DefaultDeviceMargin
 	{
 		get
@@ -94,7 +94,7 @@ public class CloudGameDefine : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060023CA RID: 9162 RVA: 0x000DAC64 File Offset: 0x000D8E64
+	// Token: 0x06002482 RID: 9346 RVA: 0x000E11AC File Offset: 0x000DF3AC
 	public static void CreateStaticDefaultValue()
 	{
 		CloudGameDefine._cloudGamePlatformRegex = new Regex("-CloudGamePlatform=([^\\s]+)");
@@ -233,7 +233,7 @@ public class CloudGameDefine : IStaticVariableResetter
 		});
 	}
 
-	// Token: 0x060023CB RID: 9163 RVA: 0x000DAECE File Offset: 0x000D90CE
+	// Token: 0x06002483 RID: 9347 RVA: 0x000E1416 File Offset: 0x000DF616
 	public static void ResetStaticDefaultValue()
 	{
 		CloudGameDefine._cloudGamePlatformRegex = null;
@@ -246,34 +246,34 @@ public class CloudGameDefine : IStaticVariableResetter
 		CloudGameDefine._defaultDeviceMargin = null;
 	}
 
-	// Token: 0x04001822 RID: 6178
+	// Token: 0x04001866 RID: 6246
 	[Nullable(2)]
 	private static Regex _cloudGamePlatformRegex;
 
-	// Token: 0x04001823 RID: 6179
+	// Token: 0x04001867 RID: 6247
 	[Nullable(2)]
 	private static Regex _cloudGameDeviceRegex;
 
-	// Token: 0x04001824 RID: 6180
+	// Token: 0x04001868 RID: 6248
 	[Nullable(2)]
 	private static Regex _cloudGameDpiRegex;
 
-	// Token: 0x04001825 RID: 6181
+	// Token: 0x04001869 RID: 6249
 	[Nullable(2)]
 	private static Regex _cloudGameDeviceScreenResolution;
 
-	// Token: 0x04001826 RID: 6182
+	// Token: 0x0400186A RID: 6250
 	[Nullable(2)]
 	private static Regex _cloudGameScreenResolution;
 
-	// Token: 0x04001827 RID: 6183
+	// Token: 0x0400186B RID: 6251
 	[Nullable(2)]
 	private static Regex _cloudGameIsWeb;
 
-	// Token: 0x04001828 RID: 6184
+	// Token: 0x0400186C RID: 6252
 	public const int CLOUD_GAME_DEFAULT_DPI = 180;
 
-	// Token: 0x04001829 RID: 6185
+	// Token: 0x0400186D RID: 6253
 	[Nullable(new byte[]
 	{
 		2,
@@ -282,13 +282,13 @@ public class CloudGameDefine : IStaticVariableResetter
 	})]
 	private static Dictionary<string, float[]> _deviceMarginMap;
 
-	// Token: 0x0400182A RID: 6186
+	// Token: 0x0400186E RID: 6254
 	[Nullable(2)]
 	private static IReadOnlyList<float> _defaultDeviceMargin;
 
-	// Token: 0x0400182B RID: 6187
+	// Token: 0x0400186F RID: 6255
 	public const int CLOUD_GAME_DEFAULT_SCREEN_WIDTH = 1920;
 
-	// Token: 0x0400182C RID: 6188
+	// Token: 0x04001870 RID: 6256
 	public const int CLOUD_GAME_DEFAULT_SCREEN_HEIGHT = 1080;
 }

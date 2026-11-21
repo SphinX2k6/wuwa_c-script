@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200047C RID: 1148
+	// Token: 0x02000492 RID: 1170
 	public class ConfigKujiActivityByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001AF2 RID: 6898 RVA: 0x000F1B1F File Offset: 0x000EFD1F
+		// Token: 0x06001B76 RID: 7030 RVA: 0x000F8273 File Offset: 0x000F6473
 		static ConfigKujiActivityByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigKujiActivityByActivityId.CreateStaticDefaultValue), new Action(ConfigKujiActivityByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001AF3 RID: 6899 RVA: 0x000F1B40 File Offset: 0x000EFD40
+		// Token: 0x06001B77 RID: 7031 RVA: 0x000F8294 File Offset: 0x000F6494
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigKujiActivityByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001AF4 RID: 6900 RVA: 0x000F1BBF File Offset: 0x000EFDBF
+		// Token: 0x06001B78 RID: 7032 RVA: 0x000F8313 File Offset: 0x000F6513
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigKujiActivityByActivityId.LogPair = null;
 			ConfigKujiActivityByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06001AF5 RID: 6901 RVA: 0x000F1BCD File Offset: 0x000EFDCD
+		// Token: 0x06001B79 RID: 7033 RVA: 0x000F8321 File Offset: 0x000F6521
 		public static void Init()
 		{
 			ConfigKujiActivityByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigKujiActivityByActivityId.HandleId, "db_wuwukuji.db", "select BinData from `KujiActivity` where ActivityId=?");
 		}
 
-		// Token: 0x06001AF6 RID: 6902 RVA: 0x000F1BE8 File Offset: 0x000EFDE8
+		// Token: 0x06001B7A RID: 7034 RVA: 0x000F833C File Offset: 0x000F653C
 		public static KujiActivity? GetConfig(int p0ActivityId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigKujiActivityByActivityId.HandleId, ConfigKujiActivityByActivityId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new KujiActivity?(rootAsKujiActivity);
 		}
 
-		// Token: 0x04001F48 RID: 8008
+		// Token: 0x04001FE2 RID: 8162
 		private const string DB = "db_wuwukuji.db";
 
-		// Token: 0x04001F49 RID: 8009
+		// Token: 0x04001FE3 RID: 8163
 		private const string FILE = "w.呜呜一番赏.xlsx";
 
-		// Token: 0x04001F4A RID: 8010
+		// Token: 0x04001FE4 RID: 8164
 		private const string TABLE = "KujiActivity";
 
-		// Token: 0x04001F4B RID: 8011
+		// Token: 0x04001FE5 RID: 8165
 		private const string COMMAND = "select BinData from `KujiActivity` where ActivityId=?";
 
-		// Token: 0x04001F4C RID: 8012
+		// Token: 0x04001FE6 RID: 8166
 		private const string KEY_PREFIX = "KujiActivityByActivityId";
 
-		// Token: 0x04001F4D RID: 8013
+		// Token: 0x04001FE7 RID: 8167
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001F4E RID: 8014
+		// Token: 0x04001FE8 RID: 8168
 		private static int HandleId;
 	}
 }

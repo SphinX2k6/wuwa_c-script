@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057C1 RID: 22465
+	// Token: 0x02005DC8 RID: 24008
 	public class IQteTypeT
 	{
-		// Token: 0x1700A7AD RID: 42925
-		// (get) Token: 0x06025B50 RID: 154448 RVA: 0x005334C0 File Offset: 0x005316C0
-		// (set) Token: 0x06025B51 RID: 154449 RVA: 0x005334C8 File Offset: 0x005316C8
+		// Token: 0x1700B0D1 RID: 45265
+		// (get) Token: 0x06028070 RID: 163952 RVA: 0x0057964C File Offset: 0x0057784C
+		// (set) Token: 0x06028071 RID: 163953 RVA: 0x00579654 File Offset: 0x00577854
 		public EQteType Type { get; set; }
 
-		// Token: 0x1700A7AE RID: 42926
-		// (get) Token: 0x06025B52 RID: 154450 RVA: 0x005334D1 File Offset: 0x005316D1
-		// (set) Token: 0x06025B53 RID: 154451 RVA: 0x005334D9 File Offset: 0x005316D9
+		// Token: 0x1700B0D2 RID: 45266
+		// (get) Token: 0x06028072 RID: 163954 RVA: 0x0057965D File Offset: 0x0057785D
+		// (set) Token: 0x06028073 RID: 163955 RVA: 0x00579665 File Offset: 0x00577865
 		public int QteId { get; set; }
 
-		// Token: 0x06025B54 RID: 154452 RVA: 0x005334E2 File Offset: 0x005316E2
+		// Token: 0x06028074 RID: 163956 RVA: 0x0057966E File Offset: 0x0057786E
 		public IQteTypeT()
 		{
 			this.Type = EQteType.SingleBtn;

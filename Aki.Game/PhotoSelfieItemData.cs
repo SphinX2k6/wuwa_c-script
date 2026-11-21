@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Character.Role.Common.Data.Enum;
 
-// Token: 0x0200255B RID: 9563
+// Token: 0x02001A46 RID: 6726
 [NullableContext(1)]
 [Nullable(0)]
-public class PhotoSelfieItemData
+public class PhotoSelfieItemData : IComparable<PhotoSelfieItemData>
 {
-	// Token: 0x170018E5 RID: 6373
-	// (get) Token: 0x0601349D RID: 79005 RVA: 0x004CC40A File Offset: 0x004CA60A
+	// Token: 0x1700191E RID: 6430
+	// (get) Token: 0x0601097D RID: 67965 RVA: 0x004DAF46 File Offset: 0x004D9146
 	private bool IsMotion
 	{
 		get
@@ -18,8 +18,8 @@ public class PhotoSelfieItemData
 		}
 	}
 
-	// Token: 0x170018E6 RID: 6374
-	// (get) Token: 0x0601349E RID: 79006 RVA: 0x004CC418 File Offset: 0x004CA618
+	// Token: 0x1700191F RID: 6431
+	// (get) Token: 0x0601097E RID: 67966 RVA: 0x004DAF54 File Offset: 0x004D9154
 	public string Icon
 	{
 		get
@@ -28,8 +28,8 @@ public class PhotoSelfieItemData
 		}
 	}
 
-	// Token: 0x170018E7 RID: 6375
-	// (get) Token: 0x0601349F RID: 79007 RVA: 0x004CC478 File Offset: 0x004CA678
+	// Token: 0x17001920 RID: 6432
+	// (get) Token: 0x0601097F RID: 67967 RVA: 0x004DAFB4 File Offset: 0x004D91B4
 	public string Name
 	{
 		get
@@ -38,8 +38,8 @@ public class PhotoSelfieItemData
 		}
 	}
 
-	// Token: 0x170018E8 RID: 6376
-	// (get) Token: 0x060134A0 RID: 79008 RVA: 0x004CC4D8 File Offset: 0x004CA6D8
+	// Token: 0x17001921 RID: 6433
+	// (get) Token: 0x06010980 RID: 67968 RVA: 0x004DB014 File Offset: 0x004D9214
 	public int RelativeItem
 	{
 		get
@@ -48,8 +48,8 @@ public class PhotoSelfieItemData
 		}
 	}
 
-	// Token: 0x170018E9 RID: 6377
-	// (get) Token: 0x060134A1 RID: 79009 RVA: 0x004CC550 File Offset: 0x004CA750
+	// Token: 0x17001922 RID: 6434
+	// (get) Token: 0x06010981 RID: 67969 RVA: 0x004DB08C File Offset: 0x004D928C
 	public bool IsDefault
 	{
 		get
@@ -58,8 +58,8 @@ public class PhotoSelfieItemData
 		}
 	}
 
-	// Token: 0x170018EA RID: 6378
-	// (get) Token: 0x060134A2 RID: 79010 RVA: 0x004CC5C8 File Offset: 0x004CA7C8
+	// Token: 0x17001923 RID: 6435
+	// (get) Token: 0x06010982 RID: 67970 RVA: 0x004DB104 File Offset: 0x004D9304
 	public int MontageConfigDtId
 	{
 		get
@@ -68,8 +68,8 @@ public class PhotoSelfieItemData
 		}
 	}
 
-	// Token: 0x170018EB RID: 6379
-	// (get) Token: 0x060134A3 RID: 79011 RVA: 0x004CC63F File Offset: 0x004CA83F
+	// Token: 0x17001924 RID: 6436
+	// (get) Token: 0x06010983 RID: 67971 RVA: 0x004DB17B File Offset: 0x004D937B
 	public ESelfieMontageType MontageType
 	{
 		get
@@ -82,7 +82,57 @@ public class PhotoSelfieItemData
 		}
 	}
 
-	// Token: 0x060134A4 RID: 79012 RVA: 0x004CC64C File Offset: 0x004CA84C
+	// Token: 0x17001925 RID: 6437
+	// (get) Token: 0x06010984 RID: 67972 RVA: 0x004DB188 File Offset: 0x004D9388
+	public int SortId
+	{
+		get
+		{
+			return (this.IsMotion ? ((this.MotionConfig != null) ? new int?(this.MotionConfig.GetValueOrDefault().SortId) : null) : ((this.ExpressionConfig != null) ? new int?(this.ExpressionConfig.GetValueOrDefault().SortId) : null)).GetValueOrDefault();
+		}
+	}
+
+	// Token: 0x06010985 RID: 67973 RVA: 0x004DB200 File Offset: 0x004D9400
+	public int CompareTo(PhotoSelfieItemData other)
+	{
+		if (this.IsDefault != other.IsDefault)
+		{
+			if (!this.IsDefault)
+			{
+				return 1;
+			}
+			return -1;
+		}
+		else
+		{
+			bool flag = PhotoUnlockAnimPlayer.IsUnlockAnimationUnplayed(this.RelativeItem);
+			bool flag2 = PhotoUnlockAnimPlayer.IsUnlockAnimationUnplayed(other.RelativeItem);
+			if (flag != flag2)
+			{
+				if (!flag)
+				{
+					return 1;
+				}
+				return -1;
+			}
+			else
+			{
+				bool flag3 = PhotoUnlockAnimPlayer.IsUnlockByItem(this.RelativeItem);
+				bool flag4 = PhotoUnlockAnimPlayer.IsUnlockByItem(other.RelativeItem);
+				if (flag3 == flag4)
+				{
+					return this.SortId.CompareTo(other.SortId);
+				}
+				if (!flag3)
+				{
+					return 1;
+				}
+				return -1;
+			}
+		}
+	}
+
+	// Token: 0x06010986 RID: 67974 RVA: 0x004DB282 File Offset: 0x004D9482
 	public static PhotoSelfieItemData FromMotion(PhotoSelfieMontage cfg)
 	{
 		return new PhotoSelfieItemData
@@ -93,7 +143,7 @@ public class PhotoSelfieItemData
 		};
 	}
 
-	// Token: 0x060134A5 RID: 79013 RVA: 0x004CC673 File Offset: 0x004CA873
+	// Token: 0x06010987 RID: 67975 RVA: 0x004DB2A9 File Offset: 0x004D94A9
 	public static PhotoSelfieItemData FromExpression(PhotoExpression cfg)
 	{
 		return new PhotoSelfieItemData
@@ -104,15 +154,15 @@ public class PhotoSelfieItemData
 		};
 	}
 
-	// Token: 0x04009186 RID: 37254
+	// Token: 0x040092DF RID: 37599
 	public int Id;
 
-	// Token: 0x04009187 RID: 37255
+	// Token: 0x040092E0 RID: 37600
 	public EPhotoCharacterSubTabType SubTabType;
 
-	// Token: 0x04009188 RID: 37256
+	// Token: 0x040092E1 RID: 37601
 	public PhotoSelfieMontage? MotionConfig;
 
-	// Token: 0x04009189 RID: 37257
+	// Token: 0x040092E2 RID: 37602
 	public PhotoExpression? ExpressionConfig;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023DD RID: 9181
+	// Token: 0x02002674 RID: 9844
 	public static class EPreloadObjectTypeExtensions
 	{
-		// Token: 0x0600C7E1 RID: 51169 RVA: 0x001D4254 File Offset: 0x001D2454
+		// Token: 0x0600D464 RID: 54372 RVA: 0x001EDA00 File Offset: 0x001EBC00
 		public static string ToEnumString(this EPreloadObjectType value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C7E2 RID: 51170 RVA: 0x001D42B4 File Offset: 0x001D24B4
+		// Token: 0x0600D465 RID: 54373 RVA: 0x001EDA60 File Offset: 0x001EBC60
 		public static EPreloadObjectType FromString(string name)
 		{
 			EPreloadObjectType result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C7E3 RID: 51171 RVA: 0x001D42E0 File Offset: 0x001D24E0
+		// Token: 0x0600D466 RID: 54374 RVA: 0x001EDA8C File Offset: 0x001EBC8C
 		public static bool TryFromString(string name, out EPreloadObjectType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C7E4 RID: 51172 RVA: 0x001D435A File Offset: 0x001D255A
+		// Token: 0x0600D467 RID: 54375 RVA: 0x001EDB06 File Offset: 0x001EBD06
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C7E5 RID: 51173 RVA: 0x001D438A File Offset: 0x001D258A
+		// Token: 0x0600D468 RID: 54376 RVA: 0x001EDB36 File Offset: 0x001EBD36
 		public static EPreloadObjectType[] GetValues()
 		{
 			return new EPreloadObjectType[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C7E6 RID: 51174 RVA: 0x001D439D File Offset: 0x001D259D
+		// Token: 0x0600D469 RID: 54377 RVA: 0x001EDB49 File Offset: 0x001EBD49
 		public static string[] GetNames()
 		{
 			return new string[]

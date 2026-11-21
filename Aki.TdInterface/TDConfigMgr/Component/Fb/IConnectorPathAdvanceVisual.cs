@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D19 RID: 3353
+	// Token: 0x02000E13 RID: 3603
 	public class IConnectorPathAdvanceVisual
 	{
-		// Token: 0x06004C87 RID: 19591 RVA: 0x000BEA1C File Offset: 0x000BCC1C
-		[NullableContext(1)]
+		// Token: 0x060051A1 RID: 20897 RVA: 0x000CA0F0 File Offset: 0x000C82F0
 		public static IConnectorPathAdvanceVisual Create(IConnectorPathAdvanceVisual? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001812 RID: 6162
-		// (get) Token: 0x06004C88 RID: 19592 RVA: 0x000BEA3B File Offset: 0x000BCC3B
+		// Token: 0x17001976 RID: 6518
+		// (get) Token: 0x060051A2 RID: 20898 RVA: 0x000CA10F File Offset: 0x000C830F
 		public virtual EConnectorPathAdvanceVisualType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BCE RID: 11214
+		// Token: 0x04002E8E RID: 11918
 		private IConnectorPathAdvanceVisual Instance;
 	}
 }

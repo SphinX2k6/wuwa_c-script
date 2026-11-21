@@ -5,14 +5,14 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine.Marshal
 {
-	// Token: 0x02002B0E RID: 11022
+	// Token: 0x020008BE RID: 2238
 	internal class UnrealUObjectMarshallingProcessor<[Nullable(2)] T> : IPropertyMarshallingProcessor<!0>
 	{
-		// Token: 0x170099A2 RID: 39330
-		// (get) Token: 0x060284C8 RID: 165064 RVA: 0x003D522A File Offset: 0x003D342A
+		// Token: 0x1700232B RID: 9003
+		// (get) Token: 0x0600BE82 RID: 48770 RVA: 0x00130586 File Offset: 0x0012E786
 		public static int Size { get; } = sizeof(void*);
 
-		// Token: 0x060284C9 RID: 165065 RVA: 0x003D5231 File Offset: 0x003D3431
+		// Token: 0x0600BE83 RID: 48771 RVA: 0x0013058D File Offset: 0x0012E78D
 		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void Write(byte* buffer, ref int offset, [Nullable(1)] in T value)
 		{
@@ -22,7 +22,7 @@ namespace UnrealEngine.Marshal
 			offset += IntPtrHelper.Size;
 		}
 
-		// Token: 0x060284CA RID: 165066 RVA: 0x003D525F File Offset: 0x003D345F
+		// Token: 0x0600BE84 RID: 48772 RVA: 0x001305BB File Offset: 0x0012E7BB
 		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		[return: Nullable(2)]
 		public unsafe static T Read(byte* buffer, ref int offset)
@@ -32,7 +32,7 @@ namespace UnrealEngine.Marshal
 			return (T)((object)BuiltinUtils.GetOrCreateUObjectByNativePointer(nativeObjectPtr));
 		}
 
-		// Token: 0x060284CD RID: 165069 RVA: 0x003D528F File Offset: 0x003D348F
+		// Token: 0x0600BE87 RID: 48775 RVA: 0x001305EB File Offset: 0x0012E7EB
 		unsafe void IPropertyMarshallingProcessor<!0>.Write(byte* buffer, ref int offset, [Nullable(1)] in T value)
 		{
 			UnrealUObjectMarshallingProcessor<T>.Write(buffer, ref offset, value);

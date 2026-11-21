@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000F6E RID: 3950
+// Token: 0x02000423 RID: 1059
 public class DrinksTopStepItem : UiPanelBase
 {
-	// Token: 0x06006509 RID: 25865 RVA: 0x00141428 File Offset: 0x0013F628
+	// Token: 0x060038A1 RID: 14497 RVA: 0x00149CC4 File Offset: 0x00147EC4
 	public DrinksTopStepItem(int step)
 	{
 		this.Step = step;
 		this.StepType = (int)DrinksUtils.GetStepType(this.Step);
 	}
 
-	// Token: 0x170007BF RID: 1983
-	// (get) Token: 0x0600650A RID: 25866 RVA: 0x00141456 File Offset: 0x0013F656
-	// (set) Token: 0x0600650B RID: 25867 RVA: 0x0014145E File Offset: 0x0013F65E
+	// Token: 0x170007E1 RID: 2017
+	// (get) Token: 0x060038A2 RID: 14498 RVA: 0x00149CF2 File Offset: 0x00147EF2
+	// (set) Token: 0x060038A3 RID: 14499 RVA: 0x00149CFA File Offset: 0x00147EFA
 	public int Step { get; set; }
 
-	// Token: 0x0600650C RID: 25868 RVA: 0x00141468 File Offset: 0x0013F668
+	// Token: 0x060038A4 RID: 14500 RVA: 0x00149D04 File Offset: 0x00147F04
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class DrinksTopStepItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600650D RID: 25869 RVA: 0x001414C4 File Offset: 0x0013F6C4
+	// Token: 0x060038A5 RID: 14501 RVA: 0x00149D60 File Offset: 0x00147F60
 	public void UpdateCurState(EDrinksPlayStep curStep)
 	{
 		EToggleState state = (curStep == (EDrinksPlayStep)this.Step || (DrinksUtils.GetStepType((int)curStep) == EDrinksRequireType.Batching && this.StepType == 2)) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -41,7 +41,7 @@ public class DrinksTopStepItem : UiPanelBase
 		this.UpdateStepItem();
 	}
 
-	// Token: 0x0600650E RID: 25870 RVA: 0x00141518 File Offset: 0x0013F718
+	// Token: 0x060038A6 RID: 14502 RVA: 0x00149DB4 File Offset: 0x00147FB4
 	public void UpdateStepItem()
 	{
 		DrinksResultInfo currentPlayData = DrinksModel.Instance.GetCurrentPlayData();
@@ -86,7 +86,7 @@ public class DrinksTopStepItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600650F RID: 25871 RVA: 0x0014167F File Offset: 0x0013F87F
+	// Token: 0x060038A7 RID: 14503 RVA: 0x00149F1B File Offset: 0x0014811B
 	protected void SetEmpty(bool isEmpty)
 	{
 		this.IsEmpty = isEmpty;
@@ -103,22 +103,22 @@ public class DrinksTopStepItem : UiPanelBase
 		texture2.SetUIActive(!isEmpty);
 	}
 
-	// Token: 0x04002DEE RID: 11758
+	// Token: 0x04002E87 RID: 11911
 	protected int StepType = 1;
 
-	// Token: 0x04002DEF RID: 11759
+	// Token: 0x04002E88 RID: 11912
 	protected bool IsEmpty = true;
 
-	// Token: 0x020075B9 RID: 30137
+	// Token: 0x0200674D RID: 26445
 	private static class EItem
 	{
-		// Token: 0x04026E8A RID: 159370
+		// Token: 0x040221D5 RID: 139733
 		public const int Self = 0;
 
-		// Token: 0x04026E8B RID: 159371
+		// Token: 0x040221D6 RID: 139734
 		public const int TexEmpty = 1;
 
-		// Token: 0x04026E8C RID: 159372
+		// Token: 0x040221D7 RID: 139735
 		public const int TexIcon = 2;
 	}
 }

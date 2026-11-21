@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FoxGamePlay
 {
-	// Token: 0x02006E22 RID: 28194
+	// Token: 0x02005FA2 RID: 24482
 	public class FoxFailureTipsView : UiViewBase
 	{
-		// Token: 0x06044BC2 RID: 281538 RVA: 0x010F71FA File Offset: 0x010F53FA
+		// Token: 0x0603AD2B RID: 240939 RVA: 0x010A1736 File Offset: 0x0109F936
 		[NullableContext(1)]
 		public FoxFailureTipsView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06044BC3 RID: 281539 RVA: 0x010F7204 File Offset: 0x010F5404
+		// Token: 0x0603AD2C RID: 240940 RVA: 0x010A1740 File Offset: 0x0109F940
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.FoxGamePlay
 			};
 		}
 
-		// Token: 0x06044BC4 RID: 281540 RVA: 0x010F7255 File Offset: 0x010F5455
+		// Token: 0x0603AD2D RID: 240941 RVA: 0x010A1791 File Offset: 0x0109F991
 		private void OnClickMask()
 		{
 			if (this.IsClosing)
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.LevelGamePlay.FoxGamePlay
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04023C19 RID: 146457
+		// Token: 0x0401EEBC RID: 126652
 		private bool IsClosing;
 
-		// Token: 0x0200CCDA RID: 52442
+		// Token: 0x0200B8CA RID: 47306
 		private enum EChildCom
 		{
-			// Token: 0x0403DC7D RID: 253053
+			// Token: 0x0403909F RID: 233631
 			BtnMask = 1
 		}
 	}

@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roulette.View
 {
-	// Token: 0x02004C95 RID: 19605
+	// Token: 0x02003C46 RID: 15430
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,8 +15,8 @@ namespace CSharpScript.Game.Module.Roulette.View
 	})]
 	public class RouletteAssemblyGridItem : LoopScrollMediumItemGrid<AssemblyGridData>
 	{
-		// Token: 0x17007D06 RID: 32006
-		// (get) Token: 0x06032AB9 RID: 207545 RVA: 0x00BD1C28 File Offset: 0x00BCFE28
+		// Token: 0x170050B0 RID: 20656
+		// (get) Token: 0x0602786C RID: 161900 RVA: 0x00B1688C File Offset: 0x00B14A8C
 		[Nullable(2)]
 		protected new AssemblyGridData Data
 		{
@@ -27,14 +27,14 @@ namespace CSharpScript.Game.Module.Roulette.View
 			}
 		}
 
-		// Token: 0x06032ABA RID: 207546 RVA: 0x00BD1C35 File Offset: 0x00BCFE35
+		// Token: 0x0602786D RID: 161901 RVA: 0x00B16899 File Offset: 0x00B14A99
 		protected override void OnStart()
 		{
 			this.GetItemGridExtendToggle().bLockStateOnSelect = true;
 			base.SetUseFixedAsync(true);
 		}
 
-		// Token: 0x06032ABB RID: 207547 RVA: 0x00BD1C4C File Offset: 0x00BCFE4C
+		// Token: 0x0602786E RID: 161902 RVA: 0x00B168B0 File Offset: 0x00B14AB0
 		protected override void OnRefresh(AssemblyGridData data, bool isSelected, int gridIndex)
 		{
 			PropMediumItemGrid propMediumItemGrid = new PropMediumItemGrid
@@ -112,19 +112,19 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.SetSelected(isSelected, false);
 		}
 
-		// Token: 0x06032ABC RID: 207548 RVA: 0x00BD1E48 File Offset: 0x00BD0048
+		// Token: 0x0602786F RID: 161903 RVA: 0x00B16AAC File Offset: 0x00B14CAC
 		public override void OnSelected(bool fireEvent)
 		{
 			this.GetItemGridExtendToggle().SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x06032ABD RID: 207549 RVA: 0x00BD1E5A File Offset: 0x00BD005A
+		// Token: 0x06027870 RID: 161904 RVA: 0x00B16ABE File Offset: 0x00B14CBE
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.GetItemGridExtendToggle().SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x0401AF94 RID: 110484
+		// Token: 0x040158F1 RID: 88305
 		[StaticVariableRuleIgnore]
 		private static GridRedDotInfo[] gridRedDotInfoList = new GridRedDotInfo[]
 		{

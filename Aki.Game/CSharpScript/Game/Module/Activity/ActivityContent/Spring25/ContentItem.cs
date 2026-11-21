@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 {
-	// Token: 0x020060A0 RID: 24736
+	// Token: 0x0200501E RID: 20510
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,22 +18,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 	})]
 	public class ContentItem : GridProxyAbstract<Spring25InfoContentData>
 	{
-		// Token: 0x17009095 RID: 37013
-		// (get) Token: 0x0603E872 RID: 256114 RVA: 0x00F1CF37 File Offset: 0x00F1B137
-		// (set) Token: 0x0603E873 RID: 256115 RVA: 0x00F1CF3F File Offset: 0x00F1B13F
+		// Token: 0x170063F7 RID: 25591
+		// (get) Token: 0x06033536 RID: 210230 RVA: 0x00E63CFB File Offset: 0x00E61EFB
+		// (set) Token: 0x06033537 RID: 210231 RVA: 0x00E63D03 File Offset: 0x00E61F03
 		private Spring25InfoContentData DataCache { get; set; }
 
-		// Token: 0x17009096 RID: 37014
-		// (get) Token: 0x0603E874 RID: 256116 RVA: 0x00F1CF48 File Offset: 0x00F1B148
-		// (set) Token: 0x0603E875 RID: 256117 RVA: 0x00F1CF50 File Offset: 0x00F1B150
+		// Token: 0x170063F8 RID: 25592
+		// (get) Token: 0x06033538 RID: 210232 RVA: 0x00E63D0C File Offset: 0x00E61F0C
+		// (set) Token: 0x06033539 RID: 210233 RVA: 0x00E63D14 File Offset: 0x00E61F14
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> ItemScrollView { get; set; }
 
-		// Token: 0x17009097 RID: 37015
-		// (get) Token: 0x0603E876 RID: 256118 RVA: 0x00F1CF59 File Offset: 0x00F1B159
-		// (set) Token: 0x0603E877 RID: 256119 RVA: 0x00F1CF61 File Offset: 0x00F1B161
+		// Token: 0x170063F9 RID: 25593
+		// (get) Token: 0x0603353A RID: 210234 RVA: 0x00E63D1D File Offset: 0x00E61F1D
+		// (set) Token: 0x0603353B RID: 210235 RVA: 0x00E63D25 File Offset: 0x00E61F25
 		private ButtonItem ConfirmButtonItem { get; set; }
 
-		// Token: 0x0603E878 RID: 256120 RVA: 0x00F1CF6C File Offset: 0x00F1B16C
+		// Token: 0x0603353C RID: 210236 RVA: 0x00E63D30 File Offset: 0x00E61F30
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E879 RID: 256121 RVA: 0x00F1D07C File Offset: 0x00F1B27C
+		// Token: 0x0603353D RID: 210237 RVA: 0x00E63E40 File Offset: 0x00E62040
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ContentItem.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E87A RID: 256122 RVA: 0x00F1D0C0 File Offset: 0x00F1B2C0
+		// Token: 0x0603353E RID: 210238 RVA: 0x00E63E84 File Offset: 0x00E62084
 		public override void Refresh(Spring25InfoContentData data, bool isSelected, int gridIndex)
 		{
 			this.DataCache = data;
@@ -104,13 +104,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			item2.SetUIActive(data.CanReward);
 		}
 
-		// Token: 0x0603E87B RID: 256123 RVA: 0x00F1D18B File Offset: 0x00F1B38B
+		// Token: 0x0603353F RID: 210239 RVA: 0x00E63F4F File Offset: 0x00E6214F
 		private CommonItemSmallItemGrid BuildItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x0603E87C RID: 256124 RVA: 0x00F1D192 File Offset: 0x00F1B392
+		// Token: 0x06033540 RID: 210240 RVA: 0x00E63F56 File Offset: 0x00E62156
 		private void HandleOnClick(int index)
 		{
 			Spring25InfoContentData dataCache = this.DataCache;
@@ -130,29 +130,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x0200C2FA RID: 49914
+		// Token: 0x0200ACE5 RID: 44261
 		[NullableContext(0)]
 		private class EContentComponent
 		{
-			// Token: 0x0403AE03 RID: 241155
+			// Token: 0x0403576B RID: 218987
 			public const int ConfirmEItem = 0;
 
-			// Token: 0x0403AE04 RID: 241156
+			// Token: 0x0403576C RID: 218988
 			public const int ConfirmBItem = 1;
 
-			// Token: 0x0403AE05 RID: 241157
+			// Token: 0x0403576D RID: 218989
 			public const int RightText = 2;
 
-			// Token: 0x0403AE06 RID: 241158
+			// Token: 0x0403576E RID: 218990
 			public const int DoneItem = 3;
 
-			// Token: 0x0403AE07 RID: 241159
+			// Token: 0x0403576F RID: 218991
 			public const int NameText = 4;
 
-			// Token: 0x0403AE08 RID: 241160
+			// Token: 0x04035770 RID: 218992
 			public const int NumText = 5;
 
-			// Token: 0x0403AE09 RID: 241161
+			// Token: 0x04035771 RID: 218993
 			public const int ItemScrollView = 6;
 		}
 	}

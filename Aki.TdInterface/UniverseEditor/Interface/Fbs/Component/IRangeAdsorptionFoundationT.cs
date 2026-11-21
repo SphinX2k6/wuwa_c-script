@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057F7 RID: 22519
+	// Token: 0x02005DFE RID: 24062
 	public class IRangeAdsorptionFoundationT
 	{
-		// Token: 0x1700A835 RID: 43061
-		// (get) Token: 0x06025D98 RID: 155032 RVA: 0x00538593 File Offset: 0x00536793
-		// (set) Token: 0x06025D99 RID: 155033 RVA: 0x0053859B File Offset: 0x0053679B
+		// Token: 0x1700B159 RID: 45401
+		// (get) Token: 0x060282B8 RID: 164536 RVA: 0x0057E71F File Offset: 0x0057C91F
+		// (set) Token: 0x060282B9 RID: 164537 RVA: 0x0057E727 File Offset: 0x0057C927
 		public EItemFoundation Type { get; set; }
 
-		// Token: 0x1700A836 RID: 43062
-		// (get) Token: 0x06025D9A RID: 155034 RVA: 0x005385A4 File Offset: 0x005367A4
-		// (set) Token: 0x06025D9B RID: 155035 RVA: 0x005385AC File Offset: 0x005367AC
+		// Token: 0x1700B15A RID: 45402
+		// (get) Token: 0x060282BA RID: 164538 RVA: 0x0057E730 File Offset: 0x0057C930
+		// (set) Token: 0x060282BB RID: 164539 RVA: 0x0057E738 File Offset: 0x0057C938
 		public ICategoryMatchingConditionT Condition { get; set; }
 
-		// Token: 0x1700A837 RID: 43063
-		// (get) Token: 0x06025D9C RID: 155036 RVA: 0x005385B5 File Offset: 0x005367B5
-		// (set) Token: 0x06025D9D RID: 155037 RVA: 0x005385BD File Offset: 0x005367BD
+		// Token: 0x1700B15B RID: 45403
+		// (get) Token: 0x060282BC RID: 164540 RVA: 0x0057E741 File Offset: 0x0057C941
+		// (set) Token: 0x060282BD RID: 164541 RVA: 0x0057E749 File Offset: 0x0057C949
 		public IAdsorptionMatchingAnimationT Animation { get; set; }
 
-		// Token: 0x1700A838 RID: 43064
-		// (get) Token: 0x06025D9E RID: 155038 RVA: 0x005385C6 File Offset: 0x005367C6
-		// (set) Token: 0x06025D9F RID: 155039 RVA: 0x005385CE File Offset: 0x005367CE
+		// Token: 0x1700B15C RID: 45404
+		// (get) Token: 0x060282BE RID: 164542 RVA: 0x0057E752 File Offset: 0x0057C952
+		// (set) Token: 0x060282BF RID: 164543 RVA: 0x0057E75A File Offset: 0x0057C95A
 		public ICategoryMatchingAnimationT CategoryAnimation { get; set; }
 
-		// Token: 0x1700A839 RID: 43065
-		// (get) Token: 0x06025DA0 RID: 155040 RVA: 0x005385D7 File Offset: 0x005367D7
-		// (set) Token: 0x06025DA1 RID: 155041 RVA: 0x005385DF File Offset: 0x005367DF
+		// Token: 0x1700B15D RID: 45405
+		// (get) Token: 0x060282C0 RID: 164544 RVA: 0x0057E763 File Offset: 0x0057C963
+		// (set) Token: 0x060282C1 RID: 164545 RVA: 0x0057E76B File Offset: 0x0057C96B
 		public ICategoryMatchingSucceedT Callback { get; set; }
 
-		// Token: 0x06025DA2 RID: 155042 RVA: 0x005385E8 File Offset: 0x005367E8
+		// Token: 0x060282C2 RID: 164546 RVA: 0x0057E774 File Offset: 0x0057C974
 		public IRangeAdsorptionFoundationT()
 		{
 			this.Type = EItemFoundation.CategoryMatching;

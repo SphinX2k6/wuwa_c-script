@@ -6,16 +6,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020022CD RID: 8909
+// Token: 0x020017B1 RID: 6065
 public class MotorMusicNewMusicTips : UiViewBase
 {
-	// Token: 0x060117E8 RID: 71656 RVA: 0x0044A37A File Offset: 0x0044857A
+	// Token: 0x0600EC7F RID: 60543 RVA: 0x004570A2 File Offset: 0x004552A2
 	[NullableContext(1)]
 	public MotorMusicNewMusicTips(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060117E9 RID: 71657 RVA: 0x0044A390 File Offset: 0x00448590
+	// Token: 0x0600EC80 RID: 60544 RVA: 0x004570B8 File Offset: 0x004552B8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class MotorMusicNewMusicTips : UiViewBase
 		};
 	}
 
-	// Token: 0x060117EA RID: 71658 RVA: 0x0044A3F8 File Offset: 0x004485F8
+	// Token: 0x0600EC81 RID: 60545 RVA: 0x00457120 File Offset: 0x00455320
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorMusicNewMusicTips.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -40,13 +40,13 @@ public class MotorMusicNewMusicTips : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060117EB RID: 71659 RVA: 0x0044A43B File Offset: 0x0044863B
+	// Token: 0x0600EC82 RID: 60546 RVA: 0x00457163 File Offset: 0x00455363
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearTimer();
 	}
 
-	// Token: 0x060117EC RID: 71660 RVA: 0x0044A443 File Offset: 0x00448643
+	// Token: 0x0600EC83 RID: 60547 RVA: 0x0045716B File Offset: 0x0045536B
 	private void ClearTimer()
 	{
 		if (this.CloseTimer != null)
@@ -56,14 +56,14 @@ public class MotorMusicNewMusicTips : UiViewBase
 		}
 	}
 
-	// Token: 0x060117ED RID: 71661 RVA: 0x0044A465 File Offset: 0x00448665
+	// Token: 0x0600EC84 RID: 60548 RVA: 0x0045718D File Offset: 0x0045538D
 	private void OnCloseTimer(float delta)
 	{
 		base.CloseMe(null);
 		this.CloseTimer = null;
 	}
 
-	// Token: 0x060117EE RID: 71662 RVA: 0x0044A475 File Offset: 0x00448675
+	// Token: 0x0600EC85 RID: 60549 RVA: 0x0045719D File Offset: 0x0045539D
 	private void OnClick()
 	{
 		base.CloseMe(null);
@@ -73,21 +73,21 @@ public class MotorMusicNewMusicTips : UiViewBase
 		}, null);
 	}
 
-	// Token: 0x040084D0 RID: 34000
+	// Token: 0x0400860E RID: 34318
 	[Nullable(1)]
 	private List<int> MusicIds = new List<int>();
 
-	// Token: 0x040084D1 RID: 34001
+	// Token: 0x0400860F RID: 34319
 	[Nullable(2)]
 	private TimerHandle CloseTimer;
 
-	// Token: 0x02008848 RID: 34888
+	// Token: 0x020079CC RID: 31180
 	private class EComponents
 	{
-		// Token: 0x0402C481 RID: 181377
+		// Token: 0x04027783 RID: 161667
 		public const int Btn = 0;
 
-		// Token: 0x0402C482 RID: 181378
+		// Token: 0x04027784 RID: 161668
 		public const int Txt = 1;
 	}
 }

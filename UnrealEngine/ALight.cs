@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000D43 RID: 3395
+	// Token: 0x02000235 RID: 565
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.Light")]
-	[UnrealStructLayout(1056, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1056)]
+	[UnrealStructLayout(1064, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1064)]
 	public abstract class ALight : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600B5EC RID: 46572 RVA: 0x001038EE File Offset: 0x00101AEE
+		// Token: 0x06002DC8 RID: 11720 RVA: 0x00040C42 File Offset: 0x0003EE42
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ALight._ClassPtr;
 		}
 
-		// Token: 0x17002998 RID: 10648
-		// (get) Token: 0x0600B5ED RID: 46573 RVA: 0x001038FA File Offset: 0x00101AFA
-		// (set) Token: 0x0600B5EE RID: 46574 RVA: 0x0010390E File Offset: 0x00101B0E
+		// Token: 0x17000579 RID: 1401
+		// (get) Token: 0x06002DC9 RID: 11721 RVA: 0x00040C4E File Offset: 0x0003EE4E
+		// (set) Token: 0x06002DCA RID: 11722 RVA: 0x00040C62 File Offset: 0x0003EE62
 		public unsafe ULightComponent LightComponent
 		{
 			get
@@ -34,9 +34,24 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002999 RID: 10649
-		// (get) Token: 0x0600B5EF RID: 46575 RVA: 0x00103923 File Offset: 0x00101B23
-		// (set) Token: 0x0600B5F0 RID: 46576 RVA: 0x0010393C File Offset: 0x00101B3C
+		// Token: 0x1700057A RID: 1402
+		// (get) Token: 0x06002DCB RID: 11723 RVA: 0x00040C77 File Offset: 0x0003EE77
+		// (set) Token: 0x06002DCC RID: 11724 RVA: 0x00040C87 File Offset: 0x0003EE87
+		public unsafe float KuroGroupFadeInitialIntensity
+		{
+			get
+			{
+				return *(base.NativePtr + (IntPtr)ALight.__PropertyOffset_KuroGroupFadeInitialIntensity);
+			}
+			set
+			{
+				*(base.NativePtr + (IntPtr)ALight.__PropertyOffset_KuroGroupFadeInitialIntensity) = value;
+			}
+		}
+
+		// Token: 0x1700057B RID: 1403
+		// (get) Token: 0x06002DCD RID: 11725 RVA: 0x00040C98 File Offset: 0x0003EE98
+		// (set) Token: 0x06002DCE RID: 11726 RVA: 0x00040CB1 File Offset: 0x0003EEB1
 		public unsafe bool bEnabled
 		{
 			get
@@ -49,169 +64,172 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600B5F1 RID: 46577 RVA: 0x0010396C File Offset: 0x00101B6C
+		// Token: 0x06002DCF RID: 11727 RVA: 0x00040CE1 File Offset: 0x0003EEE1
 		public void ToggleEnabled()
 		{
 			ALight.__ToggleEnabled_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600B5F2 RID: 46578 RVA: 0x00103979 File Offset: 0x00101B79
+		// Token: 0x06002DD0 RID: 11728 RVA: 0x00040CEE File Offset: 0x0003EEEE
 		public void SetLightFunctionScale(FVector NewLightFunctionScale)
 		{
 			ALight.__SetLightFunctionScale_Internal(base.NativePtr, NewLightFunctionScale);
 		}
 
-		// Token: 0x0600B5F3 RID: 46579 RVA: 0x00103987 File Offset: 0x00101B87
+		// Token: 0x06002DD1 RID: 11729 RVA: 0x00040CFC File Offset: 0x0003EEFC
 		public void SetLightFunctionMaterial(UMaterialInterface NewLightFunctionMaterial)
 		{
 			ALight.__SetLightFunctionMaterial_Internal(base.NativePtr, (NewLightFunctionMaterial != null) ? NewLightFunctionMaterial.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600B5F4 RID: 46580 RVA: 0x001039A4 File Offset: 0x00101BA4
+		// Token: 0x06002DD2 RID: 11730 RVA: 0x00040D19 File Offset: 0x0003EF19
 		public void SetLightFunctionFadeDistance(float NewLightFunctionFadeDistance)
 		{
 			ALight.__SetLightFunctionFadeDistance_Internal(base.NativePtr, NewLightFunctionFadeDistance);
 		}
 
-		// Token: 0x0600B5F5 RID: 46581 RVA: 0x001039B2 File Offset: 0x00101BB2
+		// Token: 0x06002DD3 RID: 11731 RVA: 0x00040D27 File Offset: 0x0003EF27
 		public void SetLightColor(FLinearColor NewLightColor)
 		{
 			ALight.__SetLightColor_Internal(base.NativePtr, NewLightColor);
 		}
 
-		// Token: 0x0600B5F6 RID: 46582 RVA: 0x001039C0 File Offset: 0x00101BC0
+		// Token: 0x06002DD4 RID: 11732 RVA: 0x00040D35 File Offset: 0x0003EF35
 		public void SetEnabled(bool bSetEnabled)
 		{
 			ALight.__SetEnabled_Internal(base.NativePtr, bSetEnabled);
 		}
 
-		// Token: 0x0600B5F7 RID: 46583 RVA: 0x001039CE File Offset: 0x00101BCE
+		// Token: 0x06002DD5 RID: 11733 RVA: 0x00040D43 File Offset: 0x0003EF43
 		public void SetCastShadows(bool bNewValue)
 		{
 			ALight.__SetCastShadows_Internal(base.NativePtr, bNewValue);
 		}
 
-		// Token: 0x0600B5F8 RID: 46584 RVA: 0x001039DC File Offset: 0x00101BDC
+		// Token: 0x06002DD6 RID: 11734 RVA: 0x00040D51 File Offset: 0x0003EF51
 		public void SetBrightness(float NewBrightness)
 		{
 			ALight.__SetBrightness_Internal(base.NativePtr, NewBrightness);
 		}
 
-		// Token: 0x0600B5F9 RID: 46585 RVA: 0x001039EA File Offset: 0x00101BEA
+		// Token: 0x06002DD7 RID: 11735 RVA: 0x00040D5F File Offset: 0x0003EF5F
 		public void SetAffectTranslucentLighting(bool bNewValue)
 		{
 			ALight.__SetAffectTranslucentLighting_Internal(base.NativePtr, bNewValue);
 		}
 
-		// Token: 0x0600B5FA RID: 46586 RVA: 0x001039F8 File Offset: 0x00101BF8
+		// Token: 0x06002DD8 RID: 11736 RVA: 0x00040D6D File Offset: 0x0003EF6D
 		public void OnRep_bEnabled()
 		{
 			ALight.__OnRep_bEnabled_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600B5FB RID: 46587 RVA: 0x00103A05 File Offset: 0x00101C05
+		// Token: 0x06002DD9 RID: 11737 RVA: 0x00040D7A File Offset: 0x0003EF7A
 		public bool IsEnabled()
 		{
 			return ALight.__IsEnabled_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600B5FC RID: 46588 RVA: 0x00103A12 File Offset: 0x00101C12
+		// Token: 0x06002DDA RID: 11738 RVA: 0x00040D87 File Offset: 0x0003EF87
 		public FLinearColor GetLightColor()
 		{
 			return ALight.__GetLightColor_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600B5FD RID: 46589 RVA: 0x00103A1F File Offset: 0x00101C1F
+		// Token: 0x06002DDB RID: 11739 RVA: 0x00040D94 File Offset: 0x0003EF94
 		public float GetBrightness()
 		{
 			return ALight.__GetBrightness_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600B5FE RID: 46590
+		// Token: 0x06002DDC RID: 11740
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ToggleEnabled_Internal(IntPtr @this);
 
-		// Token: 0x0600B5FF RID: 46591
+		// Token: 0x06002DDD RID: 11741
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLightFunctionScale_Internal(IntPtr @this, FVector NewLightFunctionScale);
 
-		// Token: 0x0600B600 RID: 46592
+		// Token: 0x06002DDE RID: 11742
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLightFunctionMaterial_Internal(IntPtr @this, IntPtr NewLightFunctionMaterial);
 
-		// Token: 0x0600B601 RID: 46593
+		// Token: 0x06002DDF RID: 11743
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLightFunctionFadeDistance_Internal(IntPtr @this, float NewLightFunctionFadeDistance);
 
-		// Token: 0x0600B602 RID: 46594
+		// Token: 0x06002DE0 RID: 11744
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLightColor_Internal(IntPtr @this, FLinearColor NewLightColor);
 
-		// Token: 0x0600B603 RID: 46595
+		// Token: 0x06002DE1 RID: 11745
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEnabled_Internal(IntPtr @this, bool bSetEnabled);
 
-		// Token: 0x0600B604 RID: 46596
+		// Token: 0x06002DE2 RID: 11746
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCastShadows_Internal(IntPtr @this, bool bNewValue);
 
-		// Token: 0x0600B605 RID: 46597
+		// Token: 0x06002DE3 RID: 11747
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBrightness_Internal(IntPtr @this, float NewBrightness);
 
-		// Token: 0x0600B606 RID: 46598
+		// Token: 0x06002DE4 RID: 11748
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAffectTranslucentLighting_Internal(IntPtr @this, bool bNewValue);
 
-		// Token: 0x0600B607 RID: 46599
+		// Token: 0x06002DE5 RID: 11749
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnRep_bEnabled_Internal(IntPtr @this);
 
-		// Token: 0x0600B608 RID: 46600
+		// Token: 0x06002DE6 RID: 11750
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsEnabled_Internal(IntPtr @this);
 
-		// Token: 0x0600B609 RID: 46601
+		// Token: 0x06002DE7 RID: 11751
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FLinearColor __GetLightColor_Internal(IntPtr @this);
 
-		// Token: 0x0600B60A RID: 46602
+		// Token: 0x06002DE8 RID: 11752
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetBrightness_Internal(IntPtr @this);
 
-		// Token: 0x0600B60B RID: 46603 RVA: 0x00103A2C File Offset: 0x00101C2C
+		// Token: 0x06002DE9 RID: 11753 RVA: 0x00040DA1 File Offset: 0x0003EFA1
 		static ALight()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.Light");
 		}
 
-		// Token: 0x0600B60C RID: 46604 RVA: 0x00103A3C File Offset: 0x00101C3C
+		// Token: 0x06002DEA RID: 11754 RVA: 0x00040DB0 File Offset: 0x0003EFB0
 		protected ALight() : this(BuiltinUtils.AllocNativeUObject(ALight.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600B60D RID: 46605 RVA: 0x00103A64 File Offset: 0x00101C64
+		// Token: 0x06002DEB RID: 11755 RVA: 0x00040DD8 File Offset: 0x0003EFD8
 		protected ALight(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04005F9A RID: 24474
+		// Token: 0x04000EAA RID: 3754
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.Light";
 
-		// Token: 0x04005F9B RID: 24475
+		// Token: 0x04000EAB RID: 3755
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04005F9C RID: 24476
+		// Token: 0x04000EAC RID: 3756
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04005F9D RID: 24477
+		// Token: 0x04000EAD RID: 3757
 		internal static int __PropertyOffset_LightComponent;
 
-		// Token: 0x04005F9E RID: 24478
+		// Token: 0x04000EAE RID: 3758
+		internal static int __PropertyOffset_KuroGroupFadeInitialIntensity;
+
+		// Token: 0x04000EAF RID: 3759
 		internal static int __PropertyOffset_bEnabled;
 
-		// Token: 0x04005F9F RID: 24479
+		// Token: 0x04000EB0 RID: 3760
 		internal static byte __PropertyMask_bEnabled;
 	}
 }

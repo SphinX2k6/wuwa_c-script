@@ -3,35 +3,35 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000145 RID: 325
+	// Token: 0x02000158 RID: 344
 	[EnumExtensions]
 	public enum ESplineType
 	{
-		// Token: 0x04000644 RID: 1604
+		// Token: 0x04000689 RID: 1673
 		Common,
-		// Token: 0x04000645 RID: 1605
+		// Token: 0x0400068A RID: 1674
 		Parkour,
-		// Token: 0x04000646 RID: 1606
+		// Token: 0x0400068B RID: 1675
 		Butterfly,
-		// Token: 0x04000647 RID: 1607
+		// Token: 0x0400068C RID: 1676
 		Effect,
-		// Token: 0x04000648 RID: 1608
+		// Token: 0x0400068D RID: 1677
 		Patrol,
-		// Token: 0x04000649 RID: 1609
+		// Token: 0x0400068E RID: 1678
 		LevelAI,
-		// Token: 0x0400064A RID: 1610
+		// Token: 0x0400068F RID: 1679
 		AirPassage,
-		// Token: 0x0400064B RID: 1611
+		// Token: 0x04000690 RID: 1680
 		ContinuesVariableSpeedMovement,
-		// Token: 0x0400064C RID: 1612
+		// Token: 0x04000691 RID: 1681
 		TimePatrol,
-		// Token: 0x0400064D RID: 1613
+		// Token: 0x04000692 RID: 1682
 		Range,
-		// Token: 0x0400064E RID: 1614
+		// Token: 0x04000693 RID: 1683
 		Way,
-		// Token: 0x0400064F RID: 1615
+		// Token: 0x04000694 RID: 1684
 		MotorSlide,
-		// Token: 0x04000650 RID: 1616
+		// Token: 0x04000695 RID: 1685
 		SwordRiderRail
 	}
 }

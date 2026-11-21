@@ -6,30 +6,30 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EC3 RID: 7875
+	// Token: 0x020005DE RID: 1502
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.KuroMmapConfigLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKuroMmapConfigLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601DE1A RID: 122394 RVA: 0x002C32DC File Offset: 0x002C14DC
+		// Token: 0x060084CE RID: 33998 RVA: 0x000C4FCC File Offset: 0x000C31CC
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroMmapConfigLibrary._ClassPtr;
 		}
 
-		// Token: 0x0601DE1B RID: 122395 RVA: 0x002C32E8 File Offset: 0x002C14E8
+		// Token: 0x060084CF RID: 33999 RVA: 0x000C4FD8 File Offset: 0x000C31D8
 		public UKuroMmapConfigLibrary() : this(BuiltinUtils.AllocNativeUObject(UKuroMmapConfigLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601DE1C RID: 122396 RVA: 0x002C3310 File Offset: 0x002C1510
+		// Token: 0x060084D0 RID: 34000 RVA: 0x000C5000 File Offset: 0x000C3200
 		public UKuroMmapConfigLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroMmapConfigLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0601DE1D RID: 122397 RVA: 0x002C3344 File Offset: 0x002C1544
+		// Token: 0x060084D1 RID: 34001 RVA: 0x000C5034 File Offset: 0x000C3234
 		public unsafe static int UnmapConfig(string InPath, int PakChunkIndex)
 		{
 			FString fstring = FString.AllocTemp(InPath);
@@ -38,11 +38,11 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601DE1E RID: 122398
+		// Token: 0x060084D2 RID: 34002
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int UnmapAllConfigs();
 
-		// Token: 0x0601DE1F RID: 122399 RVA: 0x002C336C File Offset: 0x002C156C
+		// Token: 0x060084D3 RID: 34003 RVA: 0x000C505C File Offset: 0x000C325C
 		public unsafe static bool MapConfig(string InPath, int PakChunkIndex, ref long OutPtr, ref long OutLength)
 		{
 			FString fstring = FString.AllocTemp(InPath);
@@ -59,32 +59,32 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601DE20 RID: 122400
+		// Token: 0x060084D4 RID: 34004
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __UnmapConfig_Internal(in FString InPath, int PakChunkIndex);
 
-		// Token: 0x0601DE21 RID: 122401
+		// Token: 0x060084D5 RID: 34005
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __MapConfig_Internal(in FString InPath, int PakChunkIndex, ref long OutPtr, ref long OutLength);
 
-		// Token: 0x0601DE22 RID: 122402 RVA: 0x002C339F File Offset: 0x002C159F
+		// Token: 0x060084D6 RID: 34006 RVA: 0x000C508F File Offset: 0x000C328F
 		static UKuroMmapConfigLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroUtility.KuroMmapConfigLibrary");
 		}
 
-		// Token: 0x0601DE23 RID: 122403 RVA: 0x002C33AD File Offset: 0x002C15AD
+		// Token: 0x060084D7 RID: 34007 RVA: 0x000C509D File Offset: 0x000C329D
 		protected UKuroMmapConfigLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040102F8 RID: 66296
+		// Token: 0x04003A01 RID: 14849
 		public new const string __ObjectPath = "/Script/KuroUtility.KuroMmapConfigLibrary";
 
-		// Token: 0x040102F9 RID: 66297
+		// Token: 0x04003A02 RID: 14850
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040102FA RID: 66298
+		// Token: 0x04003A03 RID: 14851
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

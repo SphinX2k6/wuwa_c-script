@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A00 RID: 10752
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CED RID: 11501
 	public class SetSpineAnimation : ActionParams
 	{
-		// Token: 0x0600ED4A RID: 60746 RVA: 0x00229AAF File Offset: 0x00227CAF
+		// Token: 0x0600FBE1 RID: 64481 RVA: 0x00247433 File Offset: 0x00245633
 		public static SetSpineAnimation Create(ISetSpineAnimation? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B0C RID: 19212
-		// (get) Token: 0x0600ED4B RID: 60747 RVA: 0x00229ACE File Offset: 0x00227CCE
+		// Token: 0x17004EB5 RID: 20149
+		// (get) Token: 0x0600FBE2 RID: 64482 RVA: 0x00247452 File Offset: 0x00245652
 		public virtual IPlaySpineAnimation Config
 		{
 			get
@@ -38,14 +36,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082A0 RID: 33440
+		// Token: 0x04008991 RID: 35217
 		private ISetSpineAnimation Instance;
 
-		// Token: 0x040082A1 RID: 33441
+		// Token: 0x04008992 RID: 35218
 		[Nullable(2)]
 		private IPlaySpineAnimation _ConfigCache;
 
-		// Token: 0x040082A2 RID: 33442
+		// Token: 0x04008993 RID: 35219
 		private bool _ConfigInited;
 	}
 }

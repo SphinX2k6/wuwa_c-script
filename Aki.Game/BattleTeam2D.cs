@@ -13,7 +13,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BF8 RID: 7160
+// Token: 0x020010B7 RID: 4279
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -24,25 +24,25 @@ using UnrealEngine;
 })]
 public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeamContextValidator, SlotPresenter2D>, IUiViewResource
 {
-	// Token: 0x0600D573 RID: 54643 RVA: 0x00313130 File Offset: 0x00311330
+	// Token: 0x0600A986 RID: 43398 RVA: 0x0031E42C File Offset: 0x0031C62C
 	public BattleTeam2D(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x1700119B RID: 4507
-	// (get) Token: 0x0600D574 RID: 54644 RVA: 0x003131A8 File Offset: 0x003113A8
+	// Token: 0x170011C0 RID: 4544
+	// (get) Token: 0x0600A987 RID: 43399 RVA: 0x0031E4A4 File Offset: 0x0031C6A4
 	protected override BattleTeamDataProvider Provider { get; } = new BattleTeamDataProvider();
 
-	// Token: 0x1700119C RID: 4508
-	// (get) Token: 0x0600D575 RID: 54645 RVA: 0x003131B0 File Offset: 0x003113B0
+	// Token: 0x170011C1 RID: 4545
+	// (get) Token: 0x0600A988 RID: 43400 RVA: 0x0031E4AC File Offset: 0x0031C6AC
 	protected override BattleTeamContextValidator Validator { get; } = new BattleTeamContextValidator();
 
-	// Token: 0x1700119D RID: 4509
-	// (get) Token: 0x0600D576 RID: 54646 RVA: 0x003131B8 File Offset: 0x003113B8
+	// Token: 0x170011C2 RID: 4546
+	// (get) Token: 0x0600A989 RID: 43401 RVA: 0x0031E4B4 File Offset: 0x0031C6B4
 	protected override SlotPresenter2D Presenter { get; } = new SlotPresenter2D();
 
-	// Token: 0x1700119E RID: 4510
-	// (get) Token: 0x0600D577 RID: 54647 RVA: 0x003131C0 File Offset: 0x003113C0
+	// Token: 0x170011C3 RID: 4547
+	// (get) Token: 0x0600A98A RID: 43402 RVA: 0x0031E4BC File Offset: 0x0031C6BC
 	protected override FormationViewKeys Keys { get; } = new FormationViewKeys
 	{
 		Close = 3,
@@ -53,7 +53,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		ConfirmText = 5
 	};
 
-	// Token: 0x0600D578 RID: 54648 RVA: 0x003131C8 File Offset: 0x003113C8
+	// Token: 0x0600A98B RID: 43403 RVA: 0x0031E4C4 File Offset: 0x0031C6C4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 31;
@@ -146,7 +146,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D579 RID: 54649 RVA: 0x00313740 File Offset: 0x00311940
+	// Token: 0x0600A98C RID: 43404 RVA: 0x0031EA3C File Offset: 0x0031CC3C
 	public string GetExtraResourceId([Nullable(2)] object param = null)
 	{
 		int? instanceDungeonId = BattleTeamModel.Instance.Context.InstanceDungeonId;
@@ -161,7 +161,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		return "UiView_BattleTeam";
 	}
 
-	// Token: 0x0600D57A RID: 54650 RVA: 0x003137A0 File Offset: 0x003119A0
+	// Token: 0x0600A98D RID: 43405 RVA: 0x0031EA9C File Offset: 0x0031CC9C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BattleTeam2D.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -172,7 +172,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D57B RID: 54651 RVA: 0x003137E4 File Offset: 0x003119E4
+	// Token: 0x0600A98E RID: 43406 RVA: 0x0031EAE0 File Offset: 0x0031CCE0
 	private void InitViewParam()
 	{
 		IEditBattleTeamViewParam editBattleTeamViewParam = this.OpenParam as IEditBattleTeamViewParam;
@@ -182,7 +182,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		instance.CanUseSpecialTrialRole = this.CanUseSpecialTrailRole;
 	}
 
-	// Token: 0x0600D57C RID: 54652 RVA: 0x00313834 File Offset: 0x00311A34
+	// Token: 0x0600A98F RID: 43407 RVA: 0x0031EB30 File Offset: 0x0031CD30
 	private void RefreshQuickSelectButton()
 	{
 		UUIButtonComponent button = base.GetButton(19);
@@ -204,7 +204,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		button.RootUIComp.Get().SetUIActive(!instance.Context.IsMultiInstanceDungeon);
 	}
 
-	// Token: 0x0600D57D RID: 54653 RVA: 0x003138D0 File Offset: 0x00311AD0
+	// Token: 0x0600A990 RID: 43408 RVA: 0x0031EBCC File Offset: 0x0031CDCC
 	protected override void OnBeforeShow()
 	{
 		this.Presenter.ActivateDragData();
@@ -220,7 +220,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		item.SetUIActive(MultiMotorModel.Instance.CheckInMultiMotorEditFormationState());
 	}
 
-	// Token: 0x0600D57E RID: 54654 RVA: 0x00313928 File Offset: 0x00311B28
+	// Token: 0x0600A991 RID: 43409 RVA: 0x0031EC24 File Offset: 0x0031CE24
 	protected override void OnStart()
 	{
 		if (this.TabComponent != null)
@@ -237,7 +237,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		}
 	}
 
-	// Token: 0x0600D57F RID: 54655 RVA: 0x003139B0 File Offset: 0x00311BB0
+	// Token: 0x0600A992 RID: 43410 RVA: 0x0031ECAC File Offset: 0x0031CEAC
 	protected override void OnBeforeDestroy()
 	{
 		RecommendElementComponent recommendElement = this.RecommendElement;
@@ -280,7 +280,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600D580 RID: 54656 RVA: 0x00313AC8 File Offset: 0x00311CC8
+	// Token: 0x0600A993 RID: 43411 RVA: 0x0031EDC4 File Offset: 0x0031CFC4
 	protected UniTask CreateAllSlotsAsync()
 	{
 		BattleTeam2D.<CreateAllSlotsAsync>d__27 <CreateAllSlotsAsync>d__;
@@ -291,7 +291,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		return <CreateAllSlotsAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D581 RID: 54657 RVA: 0x00313B0B File Offset: 0x00311D0B
+	// Token: 0x0600A994 RID: 43412 RVA: 0x0031EE07 File Offset: 0x0031D007
 	[NullableContext(2)]
 	protected override void OnRefreshRoleView(int[] needRefreshPosition = null)
 	{
@@ -305,7 +305,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		this.UpdateRecommendLevel();
 	}
 
-	// Token: 0x0600D582 RID: 54658 RVA: 0x00313B38 File Offset: 0x00311D38
+	// Token: 0x0600A995 RID: 43413 RVA: 0x0031EE34 File Offset: 0x0031D034
 	[NullableContext(2)]
 	protected override void RefreshAllRoleView(int formationId, int[] needRefreshPosition = null)
 	{
@@ -348,7 +348,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		ViewExtensionRegistry.InvokeViewRefresh(this.ViewExtensions);
 	}
 
-	// Token: 0x0600D583 RID: 54659 RVA: 0x00313C28 File Offset: 0x00311E28
+	// Token: 0x0600A996 RID: 43414 RVA: 0x0031EF24 File Offset: 0x0031D124
 	protected override void RefreshRoleView(int formationId, int position)
 	{
 		IRoleSlotDisplayData roleSlotDisplayData = this.Provider.BuildSlotDisplayData(position);
@@ -360,7 +360,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		this.Presenter.Refresh(position, roleSlotDisplayData);
 	}
 
-	// Token: 0x0600D584 RID: 54660 RVA: 0x00313C68 File Offset: 0x00311E68
+	// Token: 0x0600A997 RID: 43415 RVA: 0x0031EF64 File Offset: 0x0031D164
 	protected override void RefreshConfirmButton()
 	{
 		UUIText text = base.GetText(5);
@@ -392,7 +392,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		uuiitem2.SetUIActive(uiactive2);
 	}
 
-	// Token: 0x0600D585 RID: 54661 RVA: 0x00313D88 File Offset: 0x00311F88
+	// Token: 0x0600A998 RID: 43416 RVA: 0x0031F084 File Offset: 0x0031D284
 	private void RefreshEnterButtonEnable()
 	{
 		this.RefreshTowerDefenceWarningTips();
@@ -450,25 +450,25 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		}
 	}
 
-	// Token: 0x0600D586 RID: 54662 RVA: 0x00313F0C File Offset: 0x0031210C
+	// Token: 0x0600A999 RID: 43417 RVA: 0x0031F208 File Offset: 0x0031D408
 	private void AddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnRefreshBattleRoleSlot, new Action<ERefreshRoleSlotReason>(this.OnRefreshBattleRoleSlot));
 	}
 
-	// Token: 0x0600D587 RID: 54663 RVA: 0x00313F2A File Offset: 0x0031212A
+	// Token: 0x0600A99A RID: 43418 RVA: 0x0031F226 File Offset: 0x0031D426
 	private void RemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRefreshBattleRoleSlot, new Action<ERefreshRoleSlotReason>(this.OnRefreshBattleRoleSlot));
 	}
 
-	// Token: 0x0600D588 RID: 54664 RVA: 0x00313F48 File Offset: 0x00312148
+	// Token: 0x0600A99B RID: 43419 RVA: 0x0031F244 File Offset: 0x0031D444
 	private void OnRefreshBattleRoleSlot(ERefreshRoleSlotReason reason)
 	{
 		this.OnRefreshRoleView(null);
 	}
 
-	// Token: 0x0600D589 RID: 54665 RVA: 0x00313F51 File Offset: 0x00312151
+	// Token: 0x0600A99C RID: 43420 RVA: 0x0031F24D File Offset: 0x0031D44D
 	protected override void OnClickConfirm()
 	{
 		BattleTeamEnterFlow.Execute(new IBattleTeamEnterContext
@@ -481,13 +481,13 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		});
 	}
 
-	// Token: 0x0600D58A RID: 54666 RVA: 0x00313F7B File Offset: 0x0031217B
+	// Token: 0x0600A99D RID: 43421 RVA: 0x0031F277 File Offset: 0x0031D477
 	protected override bool IsAllowClose()
 	{
 		return true;
 	}
 
-	// Token: 0x0600D58B RID: 54667 RVA: 0x00313F80 File Offset: 0x00312180
+	// Token: 0x0600A99E RID: 43422 RVA: 0x0031F27C File Offset: 0x0031D47C
 	protected override void OnClickClose()
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -511,7 +511,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600D58C RID: 54668 RVA: 0x00314050 File Offset: 0x00312250
+	// Token: 0x0600A99F RID: 43423 RVA: 0x0031F34C File Offset: 0x0031D54C
 	protected override void OnClickQuickSelect()
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.QuickRoleSelectView))
@@ -546,7 +546,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		base.SetCloseButtonVisible(false);
 	}
 
-	// Token: 0x0600D58D RID: 54669 RVA: 0x00314178 File Offset: 0x00312378
+	// Token: 0x0600A9A0 RID: 43424 RVA: 0x0031F474 File Offset: 0x0031D674
 	protected override void OnAddRoleButtonClicked(int position)
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -605,7 +605,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		base.SetCloseButtonVisible(false);
 	}
 
-	// Token: 0x0600D58E RID: 54670 RVA: 0x00314300 File Offset: 0x00312500
+	// Token: 0x0600A9A1 RID: 43425 RVA: 0x0031F5FC File Offset: 0x0031D7FC
 	private void OpenTeamSelectView(int position)
 	{
 		if (UiManager.Instance.IsViewShow(EUiViewName.TeamRoleSelectView))
@@ -619,7 +619,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		UiManager.Instance.OpenView(EUiViewName.TeamRoleSelectView, this.GetRoleSelectViewData(), null);
 	}
 
-	// Token: 0x0600D58F RID: 54671 RVA: 0x00314354 File Offset: 0x00312554
+	// Token: 0x0600A9A2 RID: 43426 RVA: 0x0031F650 File Offset: 0x0031D850
 	protected override TeamRoleSelectViewData GetRoleSelectViewData()
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -662,7 +662,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		return teamRoleSelectViewData;
 	}
 
-	// Token: 0x0600D590 RID: 54672 RVA: 0x00314514 File Offset: 0x00312714
+	// Token: 0x0600A9A3 RID: 43427 RVA: 0x0031F810 File Offset: 0x0031DA10
 	protected override void OnEnsureFormation(int roleId)
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -757,7 +757,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		EventSystem.Instance.Emit<ERefreshRoleSlotReason>(EEventName.OnRefreshBattleRoleSlot, ERefreshRoleSlotReason.ClickConfirmTeam);
 	}
 
-	// Token: 0x0600D591 RID: 54673 RVA: 0x00314714 File Offset: 0x00312914
+	// Token: 0x0600A9A4 RID: 43428 RVA: 0x0031FA10 File Offset: 0x0031DC10
 	protected override void OnQuickSelectConfirm(int[] roleIdList)
 	{
 		base.SetCloseButtonVisible(true);
@@ -792,7 +792,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		EventSystem.Instance.Emit<ERefreshRoleSlotReason>(EEventName.OnRefreshBattleRoleSlot, ERefreshRoleSlotReason.ClickConfirmTeam);
 	}
 
-	// Token: 0x0600D592 RID: 54674 RVA: 0x003147F8 File Offset: 0x003129F8
+	// Token: 0x0600A9A5 RID: 43429 RVA: 0x0031FAF4 File Offset: 0x0031DCF4
 	private void OnRoleSelectionHideFinished()
 	{
 		base.SetCloseButtonVisible(true);
@@ -804,13 +804,13 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		}
 	}
 
-	// Token: 0x0600D593 RID: 54675 RVA: 0x00314850 File Offset: 0x00312A50
+	// Token: 0x0600A9A6 RID: 43430 RVA: 0x0031FB4C File Offset: 0x0031DD4C
 	private void OnCloseSelectedRoleView()
 	{
 		base.SetCloseButtonVisible(true);
 	}
 
-	// Token: 0x0600D594 RID: 54676 RVA: 0x0031485C File Offset: 0x00312A5C
+	// Token: 0x0600A9A7 RID: 43431 RVA: 0x0031FB58 File Offset: 0x0031DD58
 	private void ExchangeRoleCallBack(int position1, int position2, int roleId1, int roleId2)
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -847,7 +847,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		});
 	}
 
-	// Token: 0x0600D595 RID: 54677 RVA: 0x003148D9 File Offset: 0x00312AD9
+	// Token: 0x0600A9A8 RID: 43432 RVA: 0x0031FBD5 File Offset: 0x0031DDD5
 	private void OnAddPlayerButtonClicked()
 	{
 		MultiPlayerViewExtension multiPlayerExt = this.MultiPlayerExt;
@@ -858,7 +858,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		multiPlayerExt.OnClickAddPlayer();
 	}
 
-	// Token: 0x0600D596 RID: 54678 RVA: 0x003148EB File Offset: 0x00312AEB
+	// Token: 0x0600A9A9 RID: 43433 RVA: 0x0031FBE7 File Offset: 0x0031DDE7
 	private void OnInviteButtonClicked()
 	{
 		MultiPlayerViewExtension multiPlayerExt = this.MultiPlayerExt;
@@ -869,7 +869,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		multiPlayerExt.OnClickInvite();
 	}
 
-	// Token: 0x0600D597 RID: 54679 RVA: 0x003148FD File Offset: 0x00312AFD
+	// Token: 0x0600A9AA RID: 43434 RVA: 0x0031FBF9 File Offset: 0x0031DDF9
 	private void OnClickChat()
 	{
 		MultiPlayerViewExtension multiPlayerExt = this.MultiPlayerExt;
@@ -880,7 +880,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		multiPlayerExt.OnClickChat();
 	}
 
-	// Token: 0x0600D598 RID: 54680 RVA: 0x0031490F File Offset: 0x00312B0F
+	// Token: 0x0600A9AB RID: 43435 RVA: 0x0031FC0B File Offset: 0x0031DE0B
 	private void OnClickTowerDetailsBtn()
 	{
 		TowerViewExtension towerExt = this.TowerExt;
@@ -891,7 +891,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		towerExt.OnClickTowerDetails();
 	}
 
-	// Token: 0x0600D599 RID: 54681 RVA: 0x00314921 File Offset: 0x00312B21
+	// Token: 0x0600A9AC RID: 43436 RVA: 0x0031FC1D File Offset: 0x0031DE1D
 	private void OnClickTowerRecommendBtn()
 	{
 		TowerViewExtension towerExt = this.TowerExt;
@@ -902,7 +902,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		towerExt.OnClickTowerRecommend();
 	}
 
-	// Token: 0x0600D59A RID: 54682 RVA: 0x00314933 File Offset: 0x00312B33
+	// Token: 0x0600A9AD RID: 43437 RVA: 0x0031FC2F File Offset: 0x0031DE2F
 	private EFilterSortGroupId GetUseWay()
 	{
 		if (TowerModel.Instance.IsOpenFloorFormation())
@@ -916,7 +916,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		return EFilterSortGroupId.EditBattleTeam;
 	}
 
-	// Token: 0x0600D59B RID: 54683 RVA: 0x00314954 File Offset: 0x00312B54
+	// Token: 0x0600A9AE RID: 43438 RVA: 0x0031FC50 File Offset: 0x0031DE50
 	private bool IfNeedHideMultiFormationTab()
 	{
 		BattleTeamDungeonContext context = BattleTeamModel.Instance.Context;
@@ -929,13 +929,13 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		return GameModeModel.Instance.IsMulti || fightFormation == null || !fightFormation.Value.ChooseRole;
 	}
 
-	// Token: 0x0600D59C RID: 54684 RVA: 0x003149C2 File Offset: 0x00312BC2
+	// Token: 0x0600A9AF RID: 43439 RVA: 0x0031FCBE File Offset: 0x0031DEBE
 	protected override bool IsCurrentTab(int formationId)
 	{
 		return false;
 	}
 
-	// Token: 0x0600D59D RID: 54685 RVA: 0x003149C8 File Offset: 0x00312BC8
+	// Token: 0x0600A9B0 RID: 43440 RVA: 0x0031FCC4 File Offset: 0x0031DEC4
 	protected override void OnFormationButtonClicked(int index)
 	{
 		if (this.IsTabInit)
@@ -988,7 +988,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		EventSystem.Instance.Emit<ERefreshRoleSlotReason>(EEventName.OnRefreshBattleRoleSlot, ERefreshRoleSlotReason.ChangeTeamOffline);
 	}
 
-	// Token: 0x0600D59E RID: 54686 RVA: 0x00314B1C File Offset: 0x00312D1C
+	// Token: 0x0600A9B1 RID: 43441 RVA: 0x0031FE18 File Offset: 0x0031E018
 	private void RefreshTitle(bool isInTower)
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -1037,7 +1037,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		recommendElement.RefreshElements(elementList);
 	}
 
-	// Token: 0x0600D59F RID: 54687 RVA: 0x00314C6B File Offset: 0x00312E6B
+	// Token: 0x0600A9B2 RID: 43442 RVA: 0x0031FF67 File Offset: 0x0031E167
 	private void UpdateRecommendLevel()
 	{
 		RecommendElementComponent recommendElement = this.RecommendElement;
@@ -1048,7 +1048,7 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		recommendElement.UpdateRecommendLevel(this.CanShowLowLevelTips());
 	}
 
-	// Token: 0x0600D5A0 RID: 54688 RVA: 0x00314C84 File Offset: 0x00312E84
+	// Token: 0x0600A9B3 RID: 43443 RVA: 0x0031FF80 File Offset: 0x0031E180
 	private void RefreshTowerDefenceWarningTips()
 	{
 		UUISprite sprite = base.GetSprite(31);
@@ -1069,13 +1069,13 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		}
 	}
 
-	// Token: 0x0600D5A1 RID: 54689 RVA: 0x00314CE3 File Offset: 0x00312EE3
+	// Token: 0x0600A9B4 RID: 43444 RVA: 0x0031FFDF File Offset: 0x0031E1DF
 	private bool CanShowLowLevelTips()
 	{
 		return !TowerDefenseController.Instance.CheckInUiFlow() || !TowerDefenseController.Instance.CheckNeedSurvivalWarning();
 	}
 
-	// Token: 0x0600D5A2 RID: 54690 RVA: 0x00314D00 File Offset: 0x00312F00
+	// Token: 0x0600A9B5 RID: 43445 RVA: 0x0031FFFC File Offset: 0x0031E1FC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1132,89 +1132,89 @@ public class BattleTeam2D : FormationViewBase<BattleTeamDataProvider, BattleTeam
 		return formationRoleSlot2.GetGuideUiItemAndUiItemForShowEx(configParams);
 	}
 
-	// Token: 0x040061C2 RID: 25026
+	// Token: 0x04006294 RID: 25236
 	private bool IsTabInit;
 
-	// Token: 0x040061C3 RID: 25027
+	// Token: 0x04006295 RID: 25237
 	[Nullable(2)]
 	private RecommendElementComponent RecommendElement;
 
-	// Token: 0x040061C4 RID: 25028
+	// Token: 0x04006296 RID: 25238
 	[Nullable(2)]
 	private MultiPlayerViewExtension MultiPlayerExt;
 
-	// Token: 0x040061C5 RID: 25029
+	// Token: 0x04006297 RID: 25239
 	[Nullable(2)]
 	private TowerViewExtension TowerExt;
 
-	// Token: 0x040061C6 RID: 25030
+	// Token: 0x04006298 RID: 25240
 	private List<IViewExtension> ViewExtensions = new List<IViewExtension>();
 
-	// Token: 0x02008196 RID: 33174
+	// Token: 0x02007322 RID: 29474
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402A475 RID: 173173
+		// Token: 0x040257A3 RID: 153507
 		RoleSlot1,
-		// Token: 0x0402A476 RID: 173174
+		// Token: 0x040257A4 RID: 153508
 		RoleSlot2,
-		// Token: 0x0402A477 RID: 173175
+		// Token: 0x040257A5 RID: 153509
 		RoleSlot3,
-		// Token: 0x0402A478 RID: 173176
+		// Token: 0x040257A6 RID: 153510
 		CloseButton,
-		// Token: 0x0402A479 RID: 173177
+		// Token: 0x040257A7 RID: 153511
 		EnterButton,
-		// Token: 0x0402A47A RID: 173178
+		// Token: 0x040257A8 RID: 153512
 		EnterButtonText,
-		// Token: 0x0402A47B RID: 173179
+		// Token: 0x040257A9 RID: 153513
 		AddPlayerButton,
-		// Token: 0x0402A47C RID: 173180
+		// Token: 0x040257AA RID: 153514
 		InviteButton,
-		// Token: 0x0402A47D RID: 173181
+		// Token: 0x040257AB RID: 153515
 		ChatButton,
-		// Token: 0x0402A47E RID: 173182
+		// Token: 0x040257AC RID: 153516
 		ChatInfoItem,
-		// Token: 0x0402A47F RID: 173183
+		// Token: 0x040257AD RID: 153517
 		ChatInfoText,
-		// Token: 0x0402A480 RID: 173184
+		// Token: 0x040257AE RID: 153518
 		TabComponent,
-		// Token: 0x0402A481 RID: 173185
+		// Token: 0x040257AF RID: 153519
 		TabItem,
-		// Token: 0x0402A482 RID: 173186
+		// Token: 0x040257B0 RID: 153520
 		TowerItem,
-		// Token: 0x0402A483 RID: 173187
+		// Token: 0x040257B1 RID: 153521
 		TowerDetailsBtn,
-		// Token: 0x0402A484 RID: 173188
+		// Token: 0x040257B2 RID: 153522
 		TowerRecommendBtn,
-		// Token: 0x0402A485 RID: 173189
+		// Token: 0x040257B3 RID: 153523
 		BattleTitleText,
-		// Token: 0x0402A486 RID: 173190
+		// Token: 0x040257B4 RID: 153524
 		BattleIcon,
-		// Token: 0x0402A487 RID: 173191
+		// Token: 0x040257B5 RID: 153525
 		TitleText,
-		// Token: 0x0402A488 RID: 173192
+		// Token: 0x040257B6 RID: 153526
 		QuickSelectButton,
-		// Token: 0x0402A489 RID: 173193
+		// Token: 0x040257B7 RID: 153527
 		ElementContent,
-		// Token: 0x0402A48A RID: 173194
+		// Token: 0x040257B8 RID: 153528
 		ElementItem,
-		// Token: 0x0402A48B RID: 173195
+		// Token: 0x040257B9 RID: 153529
 		RecommendElementItem,
-		// Token: 0x0402A48C RID: 173196
+		// Token: 0x040257BA RID: 153530
 		LowLevelItem,
-		// Token: 0x0402A48D RID: 173197
+		// Token: 0x040257BB RID: 153531
 		TitleItem,
-		// Token: 0x0402A48E RID: 173198
+		// Token: 0x040257BC RID: 153532
 		DragItem,
-		// Token: 0x0402A48F RID: 173199
+		// Token: 0x040257BD RID: 153533
 		DragRoleItem,
-		// Token: 0x0402A490 RID: 173200
+		// Token: 0x040257BE RID: 153534
 		BtnTipsItem,
-		// Token: 0x0402A491 RID: 173201
+		// Token: 0x040257BF RID: 153535
 		LoadingItem,
-		// Token: 0x0402A492 RID: 173202
+		// Token: 0x040257C0 RID: 153536
 		WarningTipsSprite = 31,
-		// Token: 0x0402A493 RID: 173203
+		// Token: 0x040257C1 RID: 153537
 		WarningTipsText
 	}
 }

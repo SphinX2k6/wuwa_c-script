@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EBD RID: 3773
+	// Token: 0x02000FD3 RID: 4051
 	public class IAddTimeStateCondition_SetValue
 	{
-		// Token: 0x04003271 RID: 12913
-		[Nullable(1)]
+		// Token: 0x0400357E RID: 13694
 		public IEntityStateCondition Condition;
 
-		// Token: 0x04003272 RID: 12914
+		// Token: 0x0400357F RID: 13695
 		public int AddTime;
 	}
 }

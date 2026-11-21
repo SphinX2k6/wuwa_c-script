@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015ED RID: 5613
+	// Token: 0x0200165F RID: 5727
 	public enum SimpleCombatEntityDieReason
 	{
-		// Token: 0x0400BDF4 RID: 48628
+		// Token: 0x0400C2E8 RID: 49896
 		[OriginalName("HpZero")]
 		HpZero,
-		// Token: 0x0400BDF5 RID: 48629
+		// Token: 0x0400C2E9 RID: 49897
 		[OriginalName("ReachInstEndpoint")]
 		ReachInstEndpoint
 	}

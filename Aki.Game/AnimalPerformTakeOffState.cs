@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002E2F RID: 11823
+// Token: 0x0200238B RID: 9099
 public class AnimalPerformTakeOffState : AnimalPerformStateBase
 {
-	// Token: 0x06018E6C RID: 101996 RVA: 0x0066B3D5 File Offset: 0x006695D5
+	// Token: 0x06016739 RID: 91961 RVA: 0x006912C5 File Offset: 0x0068F4C5
 	[NullableContext(1)]
 	public AnimalPerformTakeOffState(Entity owner, EAnimalPerformState state, [Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ public class AnimalPerformTakeOffState : AnimalPerformStateBase
 	{
 	}
 
-	// Token: 0x06018E6D RID: 101997 RVA: 0x0066B3E0 File Offset: 0x006695E0
+	// Token: 0x0601673A RID: 91962 RVA: 0x006912D0 File Offset: 0x0068F4D0
 	protected override void OnEnter(EAnimalPerformState? lastState)
 	{
 		if (this.EcologicalInterface == null)
@@ -33,7 +33,7 @@ public class AnimalPerformTakeOffState : AnimalPerformStateBase
 		this.ActionTime = actionTime;
 	}
 
-	// Token: 0x06018E6E RID: 101998 RVA: 0x0066B43E File Offset: 0x0066963E
+	// Token: 0x0601673B RID: 91963 RVA: 0x0069132E File Offset: 0x0068F52E
 	protected override void OnExit(EAnimalPerformState nextState)
 	{
 		if (this.EcologicalInterface == null)

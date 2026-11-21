@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200073E RID: 1854
+	// Token: 0x02000124 RID: 292
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/CoreUObject.InterpCurveTwoVectors")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FInterpCurveTwoVectors : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06006290 RID: 25232 RVA: 0x0008D6D8 File Offset: 0x0008B8D8
+		// Token: 0x060011EF RID: 4591 RVA: 0x0001C6AB File Offset: 0x0001A8AB
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FInterpCurveTwoVectors._ScriptStructPtr != 0) ? FInterpCurveTwoVectors._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.InterpCurveTwoVectors", ref FInterpCurveTwoVectors._ScriptStructPtr);
 		}
 
-		// Token: 0x17001793 RID: 6035
-		// (get) Token: 0x06006291 RID: 25233 RVA: 0x0008D6FC File Offset: 0x0008B8FC
-		// (set) Token: 0x06006292 RID: 25234 RVA: 0x0008D73F File Offset: 0x0008B93F
+		// Token: 0x170001C4 RID: 452
+		// (get) Token: 0x060011F0 RID: 4592 RVA: 0x0001C6D0 File Offset: 0x0001A8D0
+		// (set) Token: 0x060011F1 RID: 4593 RVA: 0x0001C713 File Offset: 0x0001A913
 		public TArray<FInterpCurvePointTwoVectors> Points
 		{
 			get
@@ -39,9 +39,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001794 RID: 6036
-		// (get) Token: 0x06006293 RID: 25235 RVA: 0x0008D74D File Offset: 0x0008B94D
-		// (set) Token: 0x06006294 RID: 25236 RVA: 0x0008D75D File Offset: 0x0008B95D
+		// Token: 0x170001C5 RID: 453
+		// (get) Token: 0x060011F2 RID: 4594 RVA: 0x0001C721 File Offset: 0x0001A921
+		// (set) Token: 0x060011F3 RID: 4595 RVA: 0x0001C731 File Offset: 0x0001A931
 		public unsafe bool bIsLooped
 		{
 			get
@@ -54,9 +54,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001795 RID: 6037
-		// (get) Token: 0x06006295 RID: 25237 RVA: 0x0008D76E File Offset: 0x0008B96E
-		// (set) Token: 0x06006296 RID: 25238 RVA: 0x0008D77E File Offset: 0x0008B97E
+		// Token: 0x170001C6 RID: 454
+		// (get) Token: 0x060011F4 RID: 4596 RVA: 0x0001C742 File Offset: 0x0001A942
+		// (set) Token: 0x060011F5 RID: 4597 RVA: 0x0001C752 File Offset: 0x0001A952
 		public unsafe float LoopKeyOffset
 		{
 			get
@@ -69,65 +69,57 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06006297 RID: 25239 RVA: 0x0008D78F File Offset: 0x0008B98F
+		// Token: 0x060011F6 RID: 4598 RVA: 0x0001C763 File Offset: 0x0001A963
 		public FInterpCurveTwoVectors()
 		{
 		}
 
-		// Token: 0x06006298 RID: 25240 RVA: 0x0008D797 File Offset: 0x0008B997
-		public FInterpCurveTwoVectors(TArray<FInterpCurvePointTwoVectors> Points, bool bIsLooped, float LoopKeyOffset)
-		{
-			this.Points = Points;
-			this.bIsLooped = bIsLooped;
-			this.LoopKeyOffset = LoopKeyOffset;
-		}
-
-		// Token: 0x06006299 RID: 25241 RVA: 0x0008D7B4 File Offset: 0x0008B9B4
+		// Token: 0x060011F7 RID: 4599 RVA: 0x0001C76B File Offset: 0x0001A96B
 		protected override IntPtr GetUStructPtr()
 		{
 			return FInterpCurveTwoVectors.StaticStruct();
 		}
 
-		// Token: 0x0600629A RID: 25242 RVA: 0x0008D7C0 File Offset: 0x0008B9C0
+		// Token: 0x060011F8 RID: 4600 RVA: 0x0001C777 File Offset: 0x0001A977
 		[NullableContext(2)]
 		public FInterpCurveTwoVectors(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600629B RID: 25243 RVA: 0x0008D7CA File Offset: 0x0008B9CA
+		// Token: 0x060011F9 RID: 4601 RVA: 0x0001C781 File Offset: 0x0001A981
 		public FInterpCurveTwoVectors(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600629C RID: 25244 RVA: 0x0008D7D5 File Offset: 0x0008B9D5
+		// Token: 0x060011FA RID: 4602 RVA: 0x0001C78C File Offset: 0x0001A98C
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FInterpCurveTwoVectors(Pointer, false, true);
 		}
 
-		// Token: 0x0600629D RID: 25245 RVA: 0x0008D7DF File Offset: 0x0008B9DF
+		// Token: 0x060011FB RID: 4603 RVA: 0x0001C796 File Offset: 0x0001A996
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FInterpCurveTwoVectors(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04002F22 RID: 12066
+		// Token: 0x04000558 RID: 1368
 		public const string __ObjectPath = "/Script/CoreUObject.InterpCurveTwoVectors";
 
-		// Token: 0x04002F23 RID: 12067
+		// Token: 0x04000559 RID: 1369
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04002F24 RID: 12068
+		// Token: 0x0400055A RID: 1370
 		internal static int __PropertyOffset_Points;
 
-		// Token: 0x04002F25 RID: 12069
+		// Token: 0x0400055B RID: 1371
 		[Nullable(2)]
 		private TArray<FInterpCurvePointTwoVectors> _Points;
 
-		// Token: 0x04002F26 RID: 12070
+		// Token: 0x0400055C RID: 1372
 		internal static int __PropertyOffset_bIsLooped;
 
-		// Token: 0x04002F27 RID: 12071
+		// Token: 0x0400055D RID: 1373
 		internal static int __PropertyOffset_LoopKeyOffset;
 	}
 }

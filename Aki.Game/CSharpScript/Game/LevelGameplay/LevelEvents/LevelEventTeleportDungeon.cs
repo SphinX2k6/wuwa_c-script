@@ -14,24 +14,24 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006BA2 RID: 27554
+	// Token: 0x02005D1A RID: 23834
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventTeleportDungeon : LevelEventBase
 	{
-		// Token: 0x060442F3 RID: 279283 RVA: 0x010CDF2F File Offset: 0x010CC12F
+		// Token: 0x0603A447 RID: 238663 RVA: 0x01077D67 File Offset: 0x01075F67
 		public LevelEventTeleportDungeon(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060442F4 RID: 279284 RVA: 0x010CDF38 File Offset: 0x010CC138
+		// Token: 0x0603A448 RID: 238664 RVA: 0x01077D70 File Offset: 0x01075F70
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			global::Log.Instance.Info(ELogModule.InstanceDungeon, ELogAuthor.WLJ, "[LevelEventTeleportDungeon]ExecuteInGm", default(ReadOnlySpan<ValueTuple<string, object>>));
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060442F5 RID: 279285 RVA: 0x010CDF6C File Offset: 0x010CC16C
+		// Token: 0x0603A449 RID: 238665 RVA: 0x01077DA4 File Offset: 0x01075FA4
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			SundryModel instance = SundryModel.Instance;
@@ -78,11 +78,12 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 				ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.TeleportDungeonConfirm);
 				confirmBoxDataNew.FunctionMap[2] = delegate()
 				{
-					int dungeonId2 = @params.DungeonId;
-					InstanceDungeonEntranceModel.Instance.InstanceId = dungeonId2;
+					InstanceDungeonEntranceModel.Instance.InstanceId = @params.DungeonId;
+					this.SetBanMapSound(@params);
 				};
 				confirmBoxDataNew.FunctionMap[1] = delegate()
 				{
+					InstanceDungeonEntranceModel.Instance.IsBanMapSound = false;
 					ConfirmBoxController.Instance.CloseConfirmBoxView();
 					this.RequestFinish();
 				};
@@ -107,15 +108,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.TeleportDungeon(@params);
 		}
 
-		// Token: 0x060442F6 RID: 279286 RVA: 0x010CE168 File Offset: 0x010CC368
+		// Token: 0x0603A44A RID: 238666 RVA: 0x01077FA0 File Offset: 0x010761A0
 		private void TeleportDungeon(TeleportDungeon @params)
 		{
 			int dungeonId = @params.DungeonId;
 			int instanceId = InstanceDungeonEntranceModel.Instance.InstanceId;
 			InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(instanceId);
-			TransitionOptionPb transitionOption = this.ParseTransitionOptionParamToPb(@params);
-			InstanceDungeonEntranceModel.Instance.TransitionOption = transitionOption;
-			InstanceDungeonEntranceModel.Instance.InstanceId = dungeonId;
+			this.PrepareTeleport(@params);
 			bool flag = InstanceDungeonConfig.Instance.GetConfig(dungeonId).Value.InstType == 1;
 			if (config.Value.InstType == 1)
 			{
@@ -139,7 +138,32 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060442F7 RID: 279287 RVA: 0x010CE224 File Offset: 0x010CC424
+		// Token: 0x0603A44B RID: 238667 RVA: 0x01078044 File Offset: 0x01076244
+		private void SetBanMapSound(TeleportDungeon @params)
+		{
+			InstanceDungeonEntranceModel instance = InstanceDungeonEntranceModel.Instance;
+			bool isBanMapSound;
+			if (@params.IsBanMapSound.GetValueOrDefault())
+			{
+				ITeleportTransitionType transitionOption = @params.TransitionOption;
+				isBanMapSound = (transitionOption != null && transitionOption.Type == ETeleportTransitionType.FadeInScreen);
+			}
+			else
+			{
+				isBanMapSound = false;
+			}
+			instance.IsBanMapSound = isBanMapSound;
+		}
+
+		// Token: 0x0603A44C RID: 238668 RVA: 0x01078083 File Offset: 0x01076283
+		private void PrepareTeleport(TeleportDungeon @params)
+		{
+			InstanceDungeonEntranceModel.Instance.TransitionOption = this.ParseTransitionOptionParamToPb(@params);
+			this.SetBanMapSound(@params);
+			InstanceDungeonEntranceModel.Instance.InstanceId = @params.DungeonId;
+		}
+
+		// Token: 0x0603A44D RID: 238669 RVA: 0x010780B0 File Offset: 0x010762B0
 		private void EnterDungeon(bool isRegroup, int dungeonId, int? posEntityId = null)
 		{
 			if (isRegroup)
@@ -151,13 +175,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.RequestFinish();
 		}
 
-		// Token: 0x060442F8 RID: 279288 RVA: 0x010CE26E File Offset: 0x010CC46E
+		// Token: 0x0603A44E RID: 238670 RVA: 0x010780FA File Offset: 0x010762FA
 		private void RequestFinish()
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060442F9 RID: 279289 RVA: 0x010CE279 File Offset: 0x010CC479
+		// Token: 0x0603A44F RID: 238671 RVA: 0x01078105 File Offset: 0x01076305
 		protected override void OnReset()
 		{
 			if (EventSystem.Instance.Has(EEventName.EnterInstanceDungeon, new Action(this.RequestFinish)))
@@ -166,7 +190,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060442FA RID: 279290 RVA: 0x010CE2B4 File Offset: 0x010CC4B4
+		// Token: 0x0603A450 RID: 238672 RVA: 0x01078140 File Offset: 0x01076340
 		[NullableContext(2)]
 		private TransitionOptionPb ParseTransitionOptionParamToPb(TeleportDungeon @params)
 		{

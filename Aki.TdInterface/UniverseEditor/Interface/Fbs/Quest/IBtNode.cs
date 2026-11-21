@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D3A RID: 15674
+	// Token: 0x02004151 RID: 16721
 	public struct IBtNode : IFlatbufferObject
 	{
-		// Token: 0x17006B7E RID: 27518
-		// (get) Token: 0x06015A59 RID: 88665 RVA: 0x0031FC21 File Offset: 0x0031DE21
+		// Token: 0x17007138 RID: 28984
+		// (get) Token: 0x06016F91 RID: 94097 RVA: 0x00346E99 File Offset: 0x00345099
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015A5A RID: 88666 RVA: 0x0031FC2E File Offset: 0x0031DE2E
+		// Token: 0x06016F92 RID: 94098 RVA: 0x00346EA6 File Offset: 0x003450A6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015A5B RID: 88667 RVA: 0x0031FC38 File Offset: 0x0031DE38
+		// Token: 0x06016F93 RID: 94099 RVA: 0x00346EB0 File Offset: 0x003450B0
 		public static IBtNode GetRootAsIBtNode(ByteBuffer _bb)
 		{
 			return IBtNode.GetRootAsIBtNode(_bb, default(IBtNode));
 		}
 
-		// Token: 0x06015A5C RID: 88668 RVA: 0x0031FC54 File Offset: 0x0031DE54
+		// Token: 0x06016F94 RID: 94100 RVA: 0x00346ECC File Offset: 0x003450CC
 		public static IBtNode GetRootAsIBtNode(ByteBuffer _bb, IBtNode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015A5D RID: 88669 RVA: 0x0031FC71 File Offset: 0x0031DE71
+		// Token: 0x06016F95 RID: 94101 RVA: 0x00346EE9 File Offset: 0x003450E9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015A5E RID: 88670 RVA: 0x0031FC80 File Offset: 0x0031DE80
+		// Token: 0x06016F96 RID: 94102 RVA: 0x00346EF8 File Offset: 0x003450F8
 		public IBtNode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006B7F RID: 27519
-		// (get) Token: 0x06015A5F RID: 88671 RVA: 0x0031FC90 File Offset: 0x0031DE90
+		// Token: 0x17007139 RID: 28985
+		// (get) Token: 0x06016F97 RID: 94103 RVA: 0x00346F08 File Offset: 0x00345108
 		public EBtNode Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006B80 RID: 27520
-		// (get) Token: 0x06015A60 RID: 88672 RVA: 0x0031FCCC File Offset: 0x0031DECC
+		// Token: 0x1700713A RID: 28986
+		// (get) Token: 0x06016F98 RID: 94104 RVA: 0x00346F44 File Offset: 0x00345144
 		public int Id
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006B81 RID: 27521
-		// (get) Token: 0x06015A61 RID: 88673 RVA: 0x0031FD08 File Offset: 0x0031DF08
+		// Token: 0x1700713B RID: 28987
+		// (get) Token: 0x06016F99 RID: 94105 RVA: 0x00346F80 File Offset: 0x00345180
 		public string Desc
 		{
 			get
@@ -93,20 +93,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015A62 RID: 88674 RVA: 0x0031FD3F File Offset: 0x0031DF3F
+		// Token: 0x06016F9A RID: 94106 RVA: 0x00346FB7 File Offset: 0x003451B7
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06015A63 RID: 88675 RVA: 0x0031FD4E File Offset: 0x0031DF4E
+		// Token: 0x06016F9B RID: 94107 RVA: 0x00346FC6 File Offset: 0x003451C6
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x17006B82 RID: 27522
-		// (get) Token: 0x06015A64 RID: 88676 RVA: 0x0031FD5C File Offset: 0x0031DF5C
+		// Token: 0x1700713C RID: 28988
+		// (get) Token: 0x06016F9C RID: 94108 RVA: 0x00346FD4 File Offset: 0x003451D4
 		public IFixProcessor? FixProcessor
 		{
 			get
@@ -120,8 +120,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006B83 RID: 27523
-		// (get) Token: 0x06015A65 RID: 88677 RVA: 0x0031FDBC File Offset: 0x0031DFBC
+		// Token: 0x1700713D RID: 28989
+		// (get) Token: 0x06016F9D RID: 94109 RVA: 0x00347034 File Offset: 0x00345234
 		public bool _FoldedForTree
 		{
 			get
@@ -131,8 +131,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006B84 RID: 27524
-		// (get) Token: 0x06015A66 RID: 88678 RVA: 0x0031FDFC File Offset: 0x0031DFFC
+		// Token: 0x1700713E RID: 28990
+		// (get) Token: 0x06016F9E RID: 94110 RVA: 0x00347074 File Offset: 0x00345274
 		public bool Disabled
 		{
 			get
@@ -142,8 +142,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006B85 RID: 27525
-		// (get) Token: 0x06015A67 RID: 88679 RVA: 0x0031FE3C File Offset: 0x0031E03C
+		// Token: 0x1700713F RID: 28991
+		// (get) Token: 0x06016F9F RID: 94111 RVA: 0x003470B4 File Offset: 0x003452B4
 		public byte NullMask
 		{
 			get
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015A68 RID: 88680 RVA: 0x0031FE7C File Offset: 0x0031E07C
+		// Token: 0x06016FA0 RID: 94112 RVA: 0x003470F4 File Offset: 0x003452F4
 		public static Offset<IBtNode> CreateIBtNode(FlatBufferBuilder builder, EBtNode Type = EBtNode.Start, int Id = 0, StringOffset DescOffset = default(StringOffset), Offset<IFixProcessor> FixProcessorOffset = default(Offset<IFixProcessor>), bool _foldedForTree = false, bool Disabled = false, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -171,61 +171,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IBtNode.EndIBtNode(builder);
 		}
 
-		// Token: 0x06015A69 RID: 88681 RVA: 0x0031FECB File Offset: 0x0031E0CB
+		// Token: 0x06016FA1 RID: 94113 RVA: 0x00347143 File Offset: 0x00345343
 		public static void StartIBtNode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x06015A6A RID: 88682 RVA: 0x0031FED4 File Offset: 0x0031E0D4
+		// Token: 0x06016FA2 RID: 94114 RVA: 0x0034714C File Offset: 0x0034534C
 		public static void AddType(FlatBufferBuilder builder, EBtNode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015A6B RID: 88683 RVA: 0x0031FEDF File Offset: 0x0031E0DF
+		// Token: 0x06016FA3 RID: 94115 RVA: 0x00347157 File Offset: 0x00345357
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x06015A6C RID: 88684 RVA: 0x0031FEEA File Offset: 0x0031E0EA
+		// Token: 0x06016FA4 RID: 94116 RVA: 0x00347162 File Offset: 0x00345362
 		public static void AddDesc(FlatBufferBuilder builder, StringOffset descOffset)
 		{
 			builder.AddOffset(2, descOffset.Value, 0);
 		}
 
-		// Token: 0x06015A6D RID: 88685 RVA: 0x0031FEFA File Offset: 0x0031E0FA
+		// Token: 0x06016FA5 RID: 94117 RVA: 0x00347172 File Offset: 0x00345372
 		public static void AddFixProcessor(FlatBufferBuilder builder, Offset<IFixProcessor> fixProcessorOffset)
 		{
 			builder.AddOffset(3, fixProcessorOffset.Value, 0);
 		}
 
-		// Token: 0x06015A6E RID: 88686 RVA: 0x0031FF0A File Offset: 0x0031E10A
+		// Token: 0x06016FA6 RID: 94118 RVA: 0x00347182 File Offset: 0x00345382
 		public static void Add_FoldedForTree(FlatBufferBuilder builder, bool _FoldedForTree)
 		{
 			builder.AddBool(4, _FoldedForTree, false);
 		}
 
-		// Token: 0x06015A6F RID: 88687 RVA: 0x0031FF15 File Offset: 0x0031E115
+		// Token: 0x06016FA7 RID: 94119 RVA: 0x0034718D File Offset: 0x0034538D
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(5, disabled, false);
 		}
 
-		// Token: 0x06015A70 RID: 88688 RVA: 0x0031FF20 File Offset: 0x0031E120
+		// Token: 0x06016FA8 RID: 94120 RVA: 0x00347198 File Offset: 0x00345398
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x06015A71 RID: 88689 RVA: 0x0031FF2B File Offset: 0x0031E12B
+		// Token: 0x06016FA9 RID: 94121 RVA: 0x003471A3 File Offset: 0x003453A3
 		public static Offset<IBtNode> EndIBtNode(FlatBufferBuilder builder)
 		{
 			return new Offset<IBtNode>(builder.EndTable());
 		}
 
-		// Token: 0x06015A72 RID: 88690 RVA: 0x0031FF38 File Offset: 0x0031E138
+		// Token: 0x06016FAA RID: 94122 RVA: 0x003471B0 File Offset: 0x003453B0
 		public IBtNodeT UnPack()
 		{
 			IBtNodeT btNodeT = new IBtNodeT();
@@ -233,7 +233,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return btNodeT;
 		}
 
-		// Token: 0x06015A73 RID: 88691 RVA: 0x0031FF54 File Offset: 0x0031E154
+		// Token: 0x06016FAB RID: 94123 RVA: 0x003471CC File Offset: 0x003453CC
 		public void UnPackTo(IBtNodeT _o)
 		{
 			_o.Type = this.Type;
@@ -245,7 +245,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06015A74 RID: 88692 RVA: 0x0031FFD8 File Offset: 0x0031E1D8
+		// Token: 0x06016FAC RID: 94124 RVA: 0x00347250 File Offset: 0x00345450
 		public static Offset<IBtNode> Pack(FlatBufferBuilder builder, IBtNodeT _o)
 		{
 			if (_o == null)
@@ -257,7 +257,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IBtNode.CreateIBtNode(builder, _o.Type, _o.Id, descOffset, fixProcessorOffset, _o._FoldedForTree, _o.Disabled, _o.NullMask);
 		}
 
-		// Token: 0x0400B5F9 RID: 46585
+		// Token: 0x0400BFA6 RID: 49062
 		private Table __p;
 	}
 }

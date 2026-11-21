@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002375 RID: 9077
+// Token: 0x0200185A RID: 6234
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 {
-	// Token: 0x06012214 RID: 74260 RVA: 0x00474074 File Offset: 0x00472274
+	// Token: 0x0600F6C4 RID: 63172 RVA: 0x004811F4 File Offset: 0x0047F3F4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,7 +50,7 @@ public class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 		};
 	}
 
-	// Token: 0x06012215 RID: 74261 RVA: 0x004742A0 File Offset: 0x004724A0
+	// Token: 0x0600F6C5 RID: 63173 RVA: 0x00481420 File Offset: 0x0047F620
 	private void OnClickBuyButton()
 	{
 		List<PayShopGoods> allData = this.CurrentShopSkinData.AllData;
@@ -67,7 +67,7 @@ public class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 		UiManager.Instance.OpenView(EUiViewName.SkinBuyDetailView, skinBuyDetailViewData, null);
 	}
 
-	// Token: 0x06012216 RID: 74262 RVA: 0x0047431C File Offset: 0x0047251C
+	// Token: 0x0600F6C6 RID: 63174 RVA: 0x0048149C File Offset: 0x0047F69C
 	public override void Refresh(SkinItemContentData data, bool isSelected, int gridIndex)
 	{
 		ShopSkinData shopSkinData = data.ShopSkinData;
@@ -91,7 +91,7 @@ public class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 		this.RefreshCouponItem(shopSkinData);
 	}
 
-	// Token: 0x06012217 RID: 74263 RVA: 0x004743B0 File Offset: 0x004725B0
+	// Token: 0x0600F6C7 RID: 63175 RVA: 0x00481530 File Offset: 0x0047F730
 	private void RefreshEffectItem(ShopSkinData data)
 	{
 		bool uiactive = data.GetRoleSkinData().GetSuitWeaponSkinId() > 0;
@@ -99,35 +99,35 @@ public class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 		base.GetItem(16).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06012218 RID: 74264 RVA: 0x004743E8 File Offset: 0x004725E8
+	// Token: 0x0600F6C8 RID: 63176 RVA: 0x00481568 File Offset: 0x0047F768
 	private void RefreshRedDotState(ShopSkinData data)
 	{
 		bool ifNeedRemind = data.GetCurrentGoodsData().GetIfNeedRemind();
 		base.GetItem(13).SetUIActive(ifNeedRemind);
 	}
 
-	// Token: 0x06012219 RID: 74265 RVA: 0x00474410 File Offset: 0x00472610
+	// Token: 0x0600F6C9 RID: 63177 RVA: 0x00481590 File Offset: 0x0047F790
 	private void RefreshBuyLimitItemState(ShopSkinData data)
 	{
 		bool ifCanBuy = data.GetIfCanBuy();
 		base.GetItem(11).SetUIActive(ifCanBuy);
 	}
 
-	// Token: 0x0601221A RID: 74266 RVA: 0x00474434 File Offset: 0x00472634
+	// Token: 0x0600F6CA RID: 63178 RVA: 0x004815B4 File Offset: 0x0047F7B4
 	private void RefreshFinishBuyItemState(ShopSkinData data)
 	{
 		bool uiactive = !data.GetIfCanBuy();
 		base.GetItem(12).SetUIActive(uiactive);
 	}
 
-	// Token: 0x0601221B RID: 74267 RVA: 0x0047445C File Offset: 0x0047265C
+	// Token: 0x0600F6CB RID: 63179 RVA: 0x004815DC File Offset: 0x0047F7DC
 	private void RefreshRoleTexture(ShopSkinData data)
 	{
 		string payShopPreviewRoleTexturePath = data.GetPayShopPreviewRoleTexturePath();
 		base.SetTextureByPath(payShopPreviewRoleTexturePath, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x0601221C RID: 74268 RVA: 0x00474488 File Offset: 0x00472688
+	// Token: 0x0600F6CC RID: 63180 RVA: 0x00481608 File Offset: 0x0047F808
 	private void RefreshWeaponTexture(ShopSkinData data)
 	{
 		string payShopPreviewBuyRoleSuitWeaponTexturePath = data.GetPayShopPreviewBuyRoleSuitWeaponTexturePath();
@@ -149,7 +149,7 @@ public class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 		texture2.SetUIActive(false);
 	}
 
-	// Token: 0x0601221D RID: 74269 RVA: 0x004744E8 File Offset: 0x004726E8
+	// Token: 0x0600F6CD RID: 63181 RVA: 0x00481668 File Offset: 0x0047F868
 	[NullableContext(2)]
 	private void RefreshSourcePriceText(ShopSkinData data)
 	{
@@ -173,7 +173,7 @@ public class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 		base.GetText(6).SetText("<s>" + originalPrice.ToString() + "</s>", true);
 	}
 
-	// Token: 0x0601221E RID: 74270 RVA: 0x0047457C File Offset: 0x0047277C
+	// Token: 0x0600F6CE RID: 63182 RVA: 0x004816FC File Offset: 0x0047F8FC
 	[NullableContext(2)]
 	private void RefreshNowPriceText(ShopSkinData data)
 	{
@@ -192,7 +192,7 @@ public class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 		base.GetText(5).SetText(nowPrice.ToString(), true);
 	}
 
-	// Token: 0x0601221F RID: 74271 RVA: 0x004745E0 File Offset: 0x004727E0
+	// Token: 0x0600F6CF RID: 63183 RVA: 0x00481760 File Offset: 0x0047F960
 	[NullableContext(2)]
 	private void RefreshBuyItemIcon(ShopSkinData data)
 	{
@@ -210,21 +210,21 @@ public class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 		}
 	}
 
-	// Token: 0x06012220 RID: 74272 RVA: 0x00474640 File Offset: 0x00472840
+	// Token: 0x0600F6D0 RID: 63184 RVA: 0x004817C0 File Offset: 0x0047F9C0
 	private void RefreshBuyLimitText(ShopSkinData data)
 	{
 		string shopTipsText = data.GetPayShopGoods().GetShopTipsText();
 		base.GetText(3).SetText(shopTipsText, true);
 	}
 
-	// Token: 0x06012221 RID: 74273 RVA: 0x00474668 File Offset: 0x00472868
+	// Token: 0x0600F6D1 RID: 63185 RVA: 0x004817E8 File Offset: 0x0047F9E8
 	private void RefreshSubNameText(ShopSkinData data)
 	{
 		string titleName = data.GetRoleSkinData().GetTitleName();
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), titleName, Array.Empty<object>());
 	}
 
-	// Token: 0x06012222 RID: 74274 RVA: 0x00474698 File Offset: 0x00472898
+	// Token: 0x0600F6D2 RID: 63186 RVA: 0x00481818 File Offset: 0x0047FA18
 	[NullableContext(2)]
 	private void RefreshDiscountTimeText(ShopSkinData data)
 	{
@@ -254,7 +254,7 @@ public class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 		}
 	}
 
-	// Token: 0x06012223 RID: 74275 RVA: 0x00474734 File Offset: 0x00472934
+	// Token: 0x0600F6D3 RID: 63187 RVA: 0x004818B4 File Offset: 0x0047FAB4
 	[NullableContext(2)]
 	private void RefreshDiscountText(ShopSkinData data)
 	{
@@ -268,7 +268,7 @@ public class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 		base.GetText(8).SetText(discountText, true);
 	}
 
-	// Token: 0x06012224 RID: 74276 RVA: 0x00474780 File Offset: 0x00472980
+	// Token: 0x0600F6D4 RID: 63188 RVA: 0x00481900 File Offset: 0x0047FB00
 	[NullableContext(2)]
 	private void RefreshTextureBg(ShopSkinData data)
 	{
@@ -282,7 +282,7 @@ public class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 		base.SetTextureByPath(resourcePath, base.GetTexture(14), null, null);
 	}
 
-	// Token: 0x06012225 RID: 74277 RVA: 0x004747E4 File Offset: 0x004729E4
+	// Token: 0x0600F6D5 RID: 63189 RVA: 0x00481964 File Offset: 0x0047FB64
 	[NullableContext(2)]
 	private void RefreshTextureTopBg(ShopSkinData data)
 	{
@@ -296,7 +296,7 @@ public class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 		base.SetTextureByPath(resourcePath, base.GetTexture(15), null, null);
 	}
 
-	// Token: 0x06012226 RID: 74278 RVA: 0x00474848 File Offset: 0x00472A48
+	// Token: 0x0600F6D6 RID: 63190 RVA: 0x004819C8 File Offset: 0x0047FBC8
 	[NullableContext(2)]
 	private void RefreshCouponItem(ShopSkinData data)
 	{
@@ -321,60 +321,60 @@ public class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 		base.SetTextureByPath(availableCouponItem.GetConfig().As<ItemInfo>().Value.IconSmall, base.GetTexture(20), null, null);
 	}
 
-	// Token: 0x04008918 RID: 35096
+	// Token: 0x04008A5D RID: 35421
 	[Nullable(2)]
 	private SkinItemContentData CurrentShopSkinData;
 
-	// Token: 0x04008919 RID: 35097
+	// Token: 0x04008A5E RID: 35422
 	private int CurrentIndex;
 
-	// Token: 0x02008912 RID: 35090
+	// Token: 0x02007A9C RID: 31388
 	[NullableContext(0)]
 	private enum ESkinItemComponent
 	{
-		// Token: 0x0402C8A4 RID: 182436
+		// Token: 0x04027BBC RID: 162748
 		BuyButton,
-		// Token: 0x0402C8A5 RID: 182437
+		// Token: 0x04027BBD RID: 162749
 		RoleTexture,
-		// Token: 0x0402C8A6 RID: 182438
+		// Token: 0x04027BBE RID: 162750
 		TextureWeapon,
-		// Token: 0x0402C8A7 RID: 182439
+		// Token: 0x04027BBF RID: 162751
 		BuyLimitText,
-		// Token: 0x0402C8A8 RID: 182440
+		// Token: 0x04027BC0 RID: 162752
 		SubNameText,
-		// Token: 0x0402C8A9 RID: 182441
+		// Token: 0x04027BC1 RID: 162753
 		NowPrice,
-		// Token: 0x0402C8AA RID: 182442
+		// Token: 0x04027BC2 RID: 162754
 		BeforePrice,
-		// Token: 0x0402C8AB RID: 182443
+		// Token: 0x04027BC3 RID: 162755
 		DiscountItem,
-		// Token: 0x0402C8AC RID: 182444
+		// Token: 0x04027BC4 RID: 162756
 		DiscountText,
-		// Token: 0x0402C8AD RID: 182445
+		// Token: 0x04027BC5 RID: 162757
 		TimeText,
-		// Token: 0x0402C8AE RID: 182446
+		// Token: 0x04027BC6 RID: 162758
 		BuyItemIcon,
-		// Token: 0x0402C8AF RID: 182447
+		// Token: 0x04027BC7 RID: 162759
 		LimitBuyItem,
-		// Token: 0x0402C8B0 RID: 182448
+		// Token: 0x04027BC8 RID: 162760
 		FinishBuyItem,
-		// Token: 0x0402C8B1 RID: 182449
+		// Token: 0x04027BC9 RID: 162761
 		NewItem,
-		// Token: 0x0402C8B2 RID: 182450
+		// Token: 0x04027BCA RID: 162762
 		TextureBg,
-		// Token: 0x0402C8B3 RID: 182451
+		// Token: 0x04027BCB RID: 162763
 		TextureTopBg,
-		// Token: 0x0402C8B4 RID: 182452
+		// Token: 0x04027BCC RID: 162764
 		EffectBItem,
-		// Token: 0x0402C8B5 RID: 182453
+		// Token: 0x04027BCD RID: 162765
 		EffectAItem,
-		// Token: 0x0402C8B6 RID: 182454
+		// Token: 0x04027BCE RID: 162766
 		ItemCoupon,
-		// Token: 0x0402C8B7 RID: 182455
+		// Token: 0x04027BCF RID: 162767
 		TextCoupon,
-		// Token: 0x0402C8B8 RID: 182456
+		// Token: 0x04027BD0 RID: 162768
 		TextureCoupon,
-		// Token: 0x0402C8B9 RID: 182457
+		// Token: 0x04027BD1 RID: 162769
 		DiscountTextRootItem = 24
 	}
 }

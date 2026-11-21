@@ -1,31 +1,31 @@
 ﻿using System;
 using Aki.Config;
 
-// Token: 0x020022C3 RID: 8899
+// Token: 0x020017A7 RID: 6055
 public interface IAlbumUiData
 {
-	// Token: 0x17001636 RID: 5686
-	// (get) Token: 0x06011796 RID: 71574
-	// (set) Token: 0x06011797 RID: 71575
+	// Token: 0x1700166D RID: 5741
+	// (get) Token: 0x0600EC2D RID: 60461
+	// (set) Token: 0x0600EC2E RID: 60462
 	int Id { get; set; }
 
-	// Token: 0x17001637 RID: 5687
-	// (get) Token: 0x06011798 RID: 71576
-	// (set) Token: 0x06011799 RID: 71577
+	// Token: 0x1700166E RID: 5742
+	// (get) Token: 0x0600EC2F RID: 60463
+	// (set) Token: 0x0600EC30 RID: 60464
 	PhonographAlbum Config { get; set; }
 
-	// Token: 0x17001638 RID: 5688
-	// (get) Token: 0x0601179A RID: 71578
-	// (set) Token: 0x0601179B RID: 71579
+	// Token: 0x1700166F RID: 5743
+	// (get) Token: 0x0600EC31 RID: 60465
+	// (set) Token: 0x0600EC32 RID: 60466
 	int UnlockMusicNum { get; set; }
 
-	// Token: 0x17001639 RID: 5689
-	// (get) Token: 0x0601179C RID: 71580
-	// (set) Token: 0x0601179D RID: 71581
+	// Token: 0x17001670 RID: 5744
+	// (get) Token: 0x0600EC33 RID: 60467
+	// (set) Token: 0x0600EC34 RID: 60468
 	int AllMusicNum { get; set; }
 
-	// Token: 0x1700163A RID: 5690
-	// (get) Token: 0x0601179E RID: 71582
-	// (set) Token: 0x0601179F RID: 71583
+	// Token: 0x17001671 RID: 5745
+	// (get) Token: 0x0600EC35 RID: 60469
+	// (set) Token: 0x0600EC36 RID: 60470
 	bool? IsSelected { get; set; }
 }

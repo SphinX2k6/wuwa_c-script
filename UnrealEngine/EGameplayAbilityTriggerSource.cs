@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001338 RID: 4920
+	// Token: 0x020002BF RID: 703
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/GameplayAbilities.EGameplayAbilityTriggerSource")]
 	public enum EGameplayAbilityTriggerSource
 	{
-		// Token: 0x04009ABA RID: 39610
+		// Token: 0x04001EB6 RID: 7862
 		GameplayEvent,
-		// Token: 0x04009ABB RID: 39611
+		// Token: 0x04001EB7 RID: 7863
 		OwnedTagAdded,
-		// Token: 0x04009ABC RID: 39612
+		// Token: 0x04001EB8 RID: 7864
 		OwnedTagPresent,
-		// Token: 0x04009ABD RID: 39613
+		// Token: 0x04001EB9 RID: 7865
 		EGameplayAbilityTriggerSource_MAX
 	}
 }

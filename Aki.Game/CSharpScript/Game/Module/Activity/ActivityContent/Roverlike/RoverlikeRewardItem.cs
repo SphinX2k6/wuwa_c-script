@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200613D RID: 24893
+	// Token: 0x020050BB RID: 20667
 	public class RoverlikeRewardItem : UiPanelBase
 	{
-		// Token: 0x0603EEDA RID: 257754 RVA: 0x00F3335C File Offset: 0x00F3155C
+		// Token: 0x06033B9A RID: 211866 RVA: 0x00E7A23C File Offset: 0x00E7843C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EEDB RID: 257755 RVA: 0x00F333E8 File Offset: 0x00F315E8
+		// Token: 0x06033B9B RID: 211867 RVA: 0x00E7A2C8 File Offset: 0x00E784C8
 		[NullableContext(1)]
 		public void Refresh(IRoverlikeSettleRewardItemData data)
 		{
@@ -35,16 +35,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.GetText(2).SetText(data.Num.ToString(), true);
 		}
 
-		// Token: 0x0200C399 RID: 50073
+		// Token: 0x0200AD80 RID: 44416
 		private class EComponents
 		{
-			// Token: 0x0403B061 RID: 241761
+			// Token: 0x040359C2 RID: 219586
 			public const int TexIcon = 0;
 
-			// Token: 0x0403B062 RID: 241762
+			// Token: 0x040359C3 RID: 219587
 			public const int TxtTitle = 1;
 
-			// Token: 0x0403B063 RID: 241763
+			// Token: 0x040359C4 RID: 219588
 			public const int TxtNum = 2;
 		}
 	}

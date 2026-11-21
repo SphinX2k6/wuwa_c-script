@@ -6,7 +6,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x02002D45 RID: 11589
+// Token: 0x0200229F RID: 8863
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,8 +15,8 @@ using UnrealEngine;
 })]
 public class WeeklyRogueTokenGrid : LoopScrollMediumItemGrid<RogueWeeklyEntry>
 {
-	// Token: 0x170020D7 RID: 8407
-	// (get) Token: 0x060185A1 RID: 99745 RVA: 0x006331C3 File Offset: 0x006313C3
+	// Token: 0x17002132 RID: 8498
+	// (get) Token: 0x06015E43 RID: 89667 RVA: 0x006591D3 File Offset: 0x006573D3
 	public new RogueWeeklyEntry Data
 	{
 		get
@@ -25,13 +25,13 @@ public class WeeklyRogueTokenGrid : LoopScrollMediumItemGrid<RogueWeeklyEntry>
 		}
 	}
 
-	// Token: 0x060185A2 RID: 99746 RVA: 0x006331D0 File Offset: 0x006313D0
+	// Token: 0x06015E44 RID: 89668 RVA: 0x006591E0 File Offset: 0x006573E0
 	protected override void OnStart()
 	{
 		base.SetUseFixedAsync(true);
 	}
 
-	// Token: 0x060185A3 RID: 99747 RVA: 0x006331DC File Offset: 0x006313DC
+	// Token: 0x06015E45 RID: 89669 RVA: 0x006591EC File Offset: 0x006573EC
 	[NullableContext(1)]
 	protected override void OnRefresh(RogueWeeklyEntry data, bool isSelected, int gridIndex)
 	{
@@ -76,7 +76,7 @@ public class WeeklyRogueTokenGrid : LoopScrollMediumItemGrid<RogueWeeklyEntry>
 		base.SetComponentVisible(component, bVisible);
 	}
 
-	// Token: 0x060185A4 RID: 99748 RVA: 0x00633352 File Offset: 0x00631552
+	// Token: 0x06015E46 RID: 89670 RVA: 0x00659362 File Offset: 0x00657562
 	protected override void OnExtendToggleStateChanged(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -85,7 +85,7 @@ public class WeeklyRogueTokenGrid : LoopScrollMediumItemGrid<RogueWeeklyEntry>
 		}
 	}
 
-	// Token: 0x060185A5 RID: 99749 RVA: 0x00633360 File Offset: 0x00631560
+	// Token: 0x06015E47 RID: 89671 RVA: 0x00659370 File Offset: 0x00657570
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, false);
@@ -97,7 +97,7 @@ public class WeeklyRogueTokenGrid : LoopScrollMediumItemGrid<RogueWeeklyEntry>
 		UiNavigationNewController.Instance.SetNavigationFocusForView(this.GetItemGridExtendToggle().RootUIComp, false, false, false);
 	}
 
-	// Token: 0x060185A6 RID: 99750 RVA: 0x006333C2 File Offset: 0x006315C2
+	// Token: 0x06015E48 RID: 89672 RVA: 0x006593D2 File Offset: 0x006575D2
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, false);

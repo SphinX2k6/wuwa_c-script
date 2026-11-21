@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E27 RID: 24103
+	// Token: 0x02004E0C RID: 19980
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarPointItem : UiPanelBase
 	{
-		// Token: 0x0603D4BA RID: 251066 RVA: 0x00EC5A9A File Offset: 0x00EC3C9A
+		// Token: 0x06032449 RID: 205897 RVA: 0x00E16FFA File Offset: 0x00E151FA
 		public void InitPrefabInfo(int pointNum, float pointWidth, bool leftToRight = true)
 		{
 			this.TotalPointNum = pointNum;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LeftToRight = leftToRight;
 		}
 
-		// Token: 0x0603D4BB RID: 251067 RVA: 0x00EC5AB4 File Offset: 0x00EC3CB4
+		// Token: 0x0603244A RID: 205898 RVA: 0x00E17014 File Offset: 0x00E15214
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D4BC RID: 251068 RVA: 0x00EC5B68 File Offset: 0x00EC3D68
+		// Token: 0x0603244B RID: 205899 RVA: 0x00E170C8 File Offset: 0x00E152C8
 		protected override void OnStart()
 		{
 			for (int i = 0; i < 3; i++)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D4BD RID: 251069 RVA: 0x00EC5BB0 File Offset: 0x00EC3DB0
+		// Token: 0x0603244C RID: 205900 RVA: 0x00E17110 File Offset: 0x00E15310
 		public void SetFullEffectColor(in FLinearColor color, bool isMorph = false)
 		{
 			base.GetUiNiagara(1).SetNiagaraVarLinearColor("Color", color);
@@ -65,13 +65,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetUiNiagara(1).SetNiagaraVarFloat("Shift", isMorph > false);
 		}
 
-		// Token: 0x0603D4BE RID: 251070 RVA: 0x00EC5C6C File Offset: 0x00EC3E6C
+		// Token: 0x0603244D RID: 205901 RVA: 0x00E171CC File Offset: 0x00E153CC
 		public void SetEffectBasePercent(float value)
 		{
 			this.SetEffectBasePercents(value, new float?(value), 0, null);
 		}
 
-		// Token: 0x0603D4BF RID: 251071 RVA: 0x00EC5C90 File Offset: 0x00EC3E90
+		// Token: 0x0603244E RID: 205902 RVA: 0x00E171F0 File Offset: 0x00E153F0
 		public void SetEffectBasePercents(float fullEffectPercent, float? fullBgEffectPercent = null, int fullEffectPointNum = 0, int? fullBgEffectPointNum = null)
 		{
 			this.FullEffectBasePercent = fullEffectPercent;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetUiNiagara(2).SetNiagaraVarFloat("Dissolve", this.FullBgEffectBasePercent);
 		}
 
-		// Token: 0x0603D4C0 RID: 251072 RVA: 0x00EC5CF8 File Offset: 0x00EC3EF8
+		// Token: 0x0603244F RID: 205903 RVA: 0x00E17258 File Offset: 0x00E15458
 		public void UpdatePercent(float percent, bool playPointEffect = true, int pointEffectOffsetNum = 0)
 		{
 			int num = this.TotalPointNum - pointEffectOffsetNum;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurNum = num2;
 		}
 
-		// Token: 0x0603D4C1 RID: 251073 RVA: 0x00EC5E96 File Offset: 0x00EC4096
+		// Token: 0x06032450 RID: 205904 RVA: 0x00E173F6 File Offset: 0x00E155F6
 		public void UpdatePercentWithVisible(float percent, bool visible, bool changeVisible, bool isStart)
 		{
 			if (changeVisible || isStart)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D4C2 RID: 251074 RVA: 0x00EC5EC0 File Offset: 0x00EC40C0
+		// Token: 0x06032451 RID: 205905 RVA: 0x00E17420 File Offset: 0x00E15620
 		public void UpdateLeftRightPercent(float leftPercent, float rightPercent)
 		{
 			int num = (int)Math.Ceiling((double)(leftPercent * (float)this.TotalPointNum));
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetUiNiagara(2).SetNiagaraVarFloat("Dissolve", value);
 		}
 
-		// Token: 0x0603D4C3 RID: 251075 RVA: 0x00EC5F58 File Offset: 0x00EC4158
+		// Token: 0x06032452 RID: 205906 RVA: 0x00E174B8 File Offset: 0x00E156B8
 		private SpecialEnergyBarPointEffectInfo GetNextPointEffect()
 		{
 			SpecialEnergyBarPointEffectInfo result = this.PointEffectInfoList[this.NextPointEffectIndex];
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return result;
 		}
 
-		// Token: 0x0603D4C4 RID: 251076 RVA: 0x00EC5F8C File Offset: 0x00EC418C
+		// Token: 0x06032453 RID: 205907 RVA: 0x00E174EC File Offset: 0x00E156EC
 		public void Tick(float delta)
 		{
 			if (!this.IsAnyEffectPlaying)
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D4C5 RID: 251077 RVA: 0x00EC6020 File Offset: 0x00EC4220
+		// Token: 0x06032454 RID: 205908 RVA: 0x00E17580 File Offset: 0x00E15780
 		public void ReplaceFullEffect(UNiagaraSystem niagara)
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(1);
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			uiNiagara.SetNiagaraSystem(niagara);
 		}
 
-		// Token: 0x0603D4C6 RID: 251078 RVA: 0x00EC6050 File Offset: 0x00EC4250
+		// Token: 0x06032455 RID: 205909 RVA: 0x00E175B0 File Offset: 0x00E157B0
 		public void ResetFullEffect()
 		{
 			if (this.DefaultFullEffectNiagara != null)
@@ -213,72 +213,72 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D4C7 RID: 251079 RVA: 0x00EC6073 File Offset: 0x00EC4273
+		// Token: 0x06032456 RID: 205910 RVA: 0x00E175D3 File Offset: 0x00E157D3
 		protected override void OnBeforeDestroy()
 		{
 			this.ResetFullEffect();
 		}
 
-		// Token: 0x0401FF73 RID: 130931
+		// Token: 0x0401AA3A RID: 109114
 		private const int POINT_EFFECT_NUM = 3;
 
-		// Token: 0x0401FF74 RID: 130932
+		// Token: 0x0401AA3B RID: 109115
 		private const double EFFECT_DURATION = 500.0;
 
-		// Token: 0x0401FF75 RID: 130933
+		// Token: 0x0401AA3C RID: 109116
 		private int TotalPointNum = 1;
 
-		// Token: 0x0401FF76 RID: 130934
+		// Token: 0x0401AA3D RID: 109117
 		private float PointWidth;
 
-		// Token: 0x0401FF77 RID: 130935
+		// Token: 0x0401AA3E RID: 109118
 		private bool LeftToRight = true;
 
-		// Token: 0x0401FF78 RID: 130936
+		// Token: 0x0401AA3F RID: 109119
 		private int CurNum;
 
-		// Token: 0x0401FF79 RID: 130937
+		// Token: 0x0401AA40 RID: 109120
 		private int LeftNum;
 
-		// Token: 0x0401FF7A RID: 130938
+		// Token: 0x0401AA41 RID: 109121
 		private int RightNum;
 
-		// Token: 0x0401FF7B RID: 130939
+		// Token: 0x0401AA42 RID: 109122
 		private readonly List<SpecialEnergyBarPointEffectInfo> PointEffectInfoList = new List<SpecialEnergyBarPointEffectInfo>();
 
-		// Token: 0x0401FF7C RID: 130940
+		// Token: 0x0401AA43 RID: 109123
 		private int NextPointEffectIndex;
 
-		// Token: 0x0401FF7D RID: 130941
+		// Token: 0x0401AA44 RID: 109124
 		private bool IsAnyEffectPlaying;
 
-		// Token: 0x0401FF7E RID: 130942
+		// Token: 0x0401AA45 RID: 109125
 		private float FullEffectBasePercent = 1f;
 
-		// Token: 0x0401FF7F RID: 130943
+		// Token: 0x0401AA46 RID: 109126
 		private float FullBgEffectBasePercent = 1f;
 
-		// Token: 0x0401FF80 RID: 130944
+		// Token: 0x0401AA47 RID: 109127
 		private int FullEffectPointNum;
 
-		// Token: 0x0401FF81 RID: 130945
+		// Token: 0x0401AA48 RID: 109128
 		private int FullBgEffectPointNum;
 
-		// Token: 0x0401FF82 RID: 130946
+		// Token: 0x0401AA49 RID: 109129
 		[Nullable(2)]
 		private UNiagaraSystem DefaultFullEffectNiagara;
 
-		// Token: 0x0200C1A7 RID: 49575
+		// Token: 0x0200ABB6 RID: 43958
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A847 RID: 239687
+			// Token: 0x04035239 RID: 217657
 			EffectMaskItem,
-			// Token: 0x0403A848 RID: 239688
+			// Token: 0x0403523A RID: 217658
 			FullEffect,
-			// Token: 0x0403A849 RID: 239689
+			// Token: 0x0403523B RID: 217659
 			FullBgEffect,
-			// Token: 0x0403A84A RID: 239690
+			// Token: 0x0403523C RID: 217660
 			PointEffect1
 		}
 	}

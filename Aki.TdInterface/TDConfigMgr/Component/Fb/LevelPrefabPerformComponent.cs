@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D72 RID: 3442
+	// Token: 0x02000E6E RID: 3694
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelPrefabPerformComponent : IComponentBase
 	{
-		// Token: 0x06004E54 RID: 20052 RVA: 0x000C25DE File Offset: 0x000C07DE
-		[NullableContext(1)]
+		// Token: 0x06005379 RID: 21369 RVA: 0x000CDE2E File Offset: 0x000CC02E
+		[NullableContext(0)]
 		public static LevelPrefabPerformComponent Create(ILevelPrefabPerformComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700192D RID: 6445
-		// (get) Token: 0x06004E55 RID: 20053 RVA: 0x000C2600 File Offset: 0x000C0800
+		// Token: 0x17001A98 RID: 6808
+		// (get) Token: 0x0600537A RID: 21370 RVA: 0x000CDE50 File Offset: 0x000CC050
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700192E RID: 6446
-		// (get) Token: 0x06004E56 RID: 20054 RVA: 0x000C2638 File Offset: 0x000C0838
+		// Token: 0x17001A99 RID: 6809
+		// (get) Token: 0x0600537B RID: 21371 RVA: 0x000CDE88 File Offset: 0x000CC088
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,19 +48,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700192F RID: 6447
-		// (get) Token: 0x06004E57 RID: 20055 RVA: 0x000C2650 File Offset: 0x000C0850
+		// Token: 0x17001A9A RID: 6810
+		// (get) Token: 0x0600537C RID: 21372 RVA: 0x000CDEA0 File Offset: 0x000CC0A0
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ITowardEntityConfig> TowardEntity
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -83,8 +83,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001930 RID: 6448
-		// (get) Token: 0x06004E58 RID: 20056 RVA: 0x000C26CA File Offset: 0x000C08CA
+		// Token: 0x17001A9B RID: 6811
+		// (get) Token: 0x0600537D RID: 21373 RVA: 0x000CDF1A File Offset: 0x000CC11A
 		public virtual ILevelPrefabParamsConfig PrefabParams
 		{
 			get
@@ -99,19 +99,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001931 RID: 6449
-		// (get) Token: 0x06004E59 RID: 20057 RVA: 0x000C2700 File Offset: 0x000C0900
+		// Token: 0x17001A9C RID: 6812
+		// (get) Token: 0x0600537E RID: 21374 RVA: 0x000CDF50 File Offset: 0x000CC150
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IPrefabCompTransform> CompTransform
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -134,35 +134,35 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CF1 RID: 11505
+		// Token: 0x04002FB7 RID: 12215
 		private ILevelPrefabPerformComponent Instance;
 
-		// Token: 0x04002CF2 RID: 11506
+		// Token: 0x04002FB8 RID: 12216
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ITowardEntityConfig> _TowardEntityCache;
 
-		// Token: 0x04002CF3 RID: 11507
+		// Token: 0x04002FB9 RID: 12217
 		private bool _TowardEntityInited;
 
-		// Token: 0x04002CF4 RID: 11508
+		// Token: 0x04002FBA RID: 12218
 		private ILevelPrefabParamsConfig _PrefabParamsCache;
 
-		// Token: 0x04002CF5 RID: 11509
+		// Token: 0x04002FBB RID: 12219
 		private bool _PrefabParamsInited;
 
-		// Token: 0x04002CF6 RID: 11510
+		// Token: 0x04002FBC RID: 12220
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IPrefabCompTransform> _CompTransformCache;
 
-		// Token: 0x04002CF7 RID: 11511
+		// Token: 0x04002FBD RID: 12221
 		private bool _CompTransformInited;
 	}
 }

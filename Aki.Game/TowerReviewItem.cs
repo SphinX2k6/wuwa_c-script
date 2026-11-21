@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002C02 RID: 11266
+// Token: 0x0200217D RID: 8573
 public class TowerReviewItem : GridProxyAbstract<int>
 {
-	// Token: 0x06017667 RID: 95847 RVA: 0x005F5310 File Offset: 0x005F3510
+	// Token: 0x06015098 RID: 86168 RVA: 0x00621E38 File Offset: 0x00620038
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,7 +22,7 @@ public class TowerReviewItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06017668 RID: 95848 RVA: 0x005F537C File Offset: 0x005F357C
+	// Token: 0x06015099 RID: 86169 RVA: 0x00621EA4 File Offset: 0x006200A4
 	public override void Refresh(int towerId, bool isSelected, int gridIndex)
 	{
 		TowerConfig value = TowerClimbConfig.Instance.GetTowerInfo(towerId).Value;
@@ -31,12 +31,12 @@ public class TowerReviewItem : GridProxyAbstract<int>
 		base.GetText(1).SetText(areaStars.ToString(), true);
 	}
 
-	// Token: 0x020091C9 RID: 37321
+	// Token: 0x0200840C RID: 33804
 	private enum EChildType
 	{
-		// Token: 0x0402F2BD RID: 193213
+		// Token: 0x0402A9BE RID: 174526
 		TowerNameText,
-		// Token: 0x0402F2BE RID: 193214
+		// Token: 0x0402A9BF RID: 174527
 		StarNumberText
 	}
 }

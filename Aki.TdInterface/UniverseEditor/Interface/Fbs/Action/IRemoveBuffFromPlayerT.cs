@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E3E RID: 28222
+	// Token: 0x020075BC RID: 30140
 	public class IRemoveBuffFromPlayerT
 	{
-		// Token: 0x1700D24E RID: 53838
-		// (get) Token: 0x06031DF8 RID: 204280 RVA: 0x006BFD85 File Offset: 0x006BDF85
-		// (set) Token: 0x06031DF9 RID: 204281 RVA: 0x006BFD8D File Offset: 0x006BDF8D
+		// Token: 0x1700DD9D RID: 56733
+		// (get) Token: 0x06034E0E RID: 216590 RVA: 0x0071B70D File Offset: 0x0071990D
+		// (set) Token: 0x06034E0F RID: 216591 RVA: 0x0071B715 File Offset: 0x00719915
 		public List<long> BuffIds { get; set; }
 
-		// Token: 0x06031DFA RID: 204282 RVA: 0x006BFD96 File Offset: 0x006BDF96
+		// Token: 0x06034E10 RID: 216592 RVA: 0x0071B71E File Offset: 0x0071991E
 		public IRemoveBuffFromPlayerT()
 		{
 			this.BuffIds = null;

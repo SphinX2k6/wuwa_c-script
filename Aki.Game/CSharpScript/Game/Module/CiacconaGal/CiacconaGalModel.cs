@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BBE RID: 23486
+	// Token: 0x02004B9E RID: 19358
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Model(0)]
 	public class CiacconaGalModel : ModelBase
 	{
-		// Token: 0x17008CFE RID: 36094
-		// (get) Token: 0x0603B613 RID: 243219 RVA: 0x00E29CEB File Offset: 0x00E27EEB
+		// Token: 0x170060D0 RID: 24784
+		// (get) Token: 0x06030560 RID: 197984 RVA: 0x00D7A037 File Offset: 0x00D78237
 		public CiacconaGalActivityData ActivityData
 		{
 			get
@@ -23,7 +22,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B614 RID: 243220 RVA: 0x00E29D02 File Offset: 0x00E27F02
+		// Token: 0x06030561 RID: 197985 RVA: 0x00D7A04E File Offset: 0x00D7824E
 		protected override bool OnClear()
 		{
 			this.IsCurStepDataListDirty = false;
@@ -34,7 +33,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return true;
 		}
 
-		// Token: 0x0603B615 RID: 243221 RVA: 0x00E29D30 File Offset: 0x00E27F30
+		// Token: 0x06030562 RID: 197986 RVA: 0x00D7A07C File Offset: 0x00D7827C
 		[NullableContext(0)]
 		[return: Nullable(2)]
 		private TData GetOrCreateData<[Nullable(1)] TData, TConfig>(int id, [Nullable(new byte[]
@@ -44,79 +43,49 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			1
 		})] Func<TConfig, TData> ctor) where TData : class where TConfig : struct
 		{
-			string name = typeof(TData).Name;
 			TConfig? tconfig = null;
-			if (name != null)
+			Type typeFromHandle = typeof(TData);
+			if (typeFromHandle == typeof(CiacconaGalChapterData))
 			{
-				switch (name.Length)
-				{
-				case 19:
-					if (name == "CiacconaGalStepData")
-					{
-						tconfig = (ConfigCiacconaGalStepById.GetConfig(id, true) as TConfig?);
-					}
-					break;
-				case 21:
-				{
-					char c = name[11];
-					if (c != 'C')
-					{
-						if (c != 'E')
-						{
-							if (c == 'R')
-							{
-								if (name == "CiacconaGalRewardData")
-								{
-									tconfig = (ConfigCiacconaActivityRewardById.GetConfig(id, true) as TConfig?);
-								}
-							}
-						}
-						else if (name == "CiacconaGalEndingData")
-						{
-							tconfig = (ConfigCiacconaGalEndingById.GetConfig(id, true) as TConfig?);
-						}
-					}
-					else if (name == "CiacconaGalChoiceData")
-					{
-						tconfig = (ConfigCiacconaGalChoiceById.GetConfig(id, true) as TConfig?);
-					}
-					break;
-				}
-				case 22:
-					if (name == "CiacconaGalChapterData")
-					{
-						tconfig = (ConfigCiacconaGalChapterById.GetConfig(id, true) as TConfig?);
-					}
-					break;
-				case 23:
-					if (name == "CiacconaGalActivityData")
-					{
-						tconfig = (ConfigCiacconaActivityConfigById.GetConfig(id, true) as TConfig?);
-					}
-					break;
-				case 24:
-					if (name == "CiacconaGalSubEndingData")
-					{
-						tconfig = (ConfigCiacconaGalSubEndingById.GetConfig(id, true) as TConfig?);
-					}
-					break;
-				case 26:
-					if (name == "CiacconaGalChapterSlotData")
-					{
-						tconfig = (ConfigCiacconaChapterSlotById.GetConfig(id, true) as TConfig?);
-					}
-					break;
-				}
+				tconfig = (ConfigCiacconaGalChapterById.GetConfig(id, true) as TConfig?);
+			}
+			else if (typeFromHandle == typeof(CiacconaGalEndingData))
+			{
+				tconfig = (ConfigCiacconaGalEndingById.GetConfig(id, true) as TConfig?);
+			}
+			else if (typeFromHandle == typeof(CiacconaGalSubEndingData))
+			{
+				tconfig = (ConfigCiacconaGalSubEndingById.GetConfig(id, true) as TConfig?);
+			}
+			else if (typeFromHandle == typeof(CiacconaGalStepData))
+			{
+				tconfig = (ConfigCiacconaGalStepById.GetConfig(id, true) as TConfig?);
+			}
+			else if (typeFromHandle == typeof(CiacconaGalChoiceData))
+			{
+				tconfig = (ConfigCiacconaGalChoiceById.GetConfig(id, true) as TConfig?);
+			}
+			else if (typeFromHandle == typeof(CiacconaGalChapterSlotData))
+			{
+				tconfig = (ConfigCiacconaChapterSlotById.GetConfig(id, true) as TConfig?);
+			}
+			else if (typeFromHandle == typeof(CiacconaGalActivityData))
+			{
+				tconfig = (ConfigCiacconaActivityConfigById.GetConfig(id, true) as TConfig?);
+			}
+			else if (typeFromHandle == typeof(CiacconaGalRewardData))
+			{
+				tconfig = (ConfigCiacconaActivityRewardById.GetConfig(id, true) as TConfig?);
 			}
 			if (tconfig == null)
 			{
 				return default(TData);
 			}
 			Dictionary<int, object> dictionary;
-			if (!this.DataMap.TryGetValue(name, out dictionary))
+			if (!this.DataMap.TryGetValue(typeFromHandle, out dictionary))
 			{
 				dictionary = new Dictionary<int, object>();
-				this.DataMap.Add(name, dictionary);
+				this.DataMap.Add(typeFromHandle, dictionary);
 			}
 			object obj;
 			if (!dictionary.TryGetValue(id, out obj))
@@ -127,7 +96,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return obj as TData;
 		}
 
-		// Token: 0x0603B616 RID: 243222 RVA: 0x00E29F8C File Offset: 0x00E2818C
+		// Token: 0x06030563 RID: 197987 RVA: 0x00D7A268 File Offset: 0x00D78468
 		[NullableContext(1)]
 		public void UpdateByServerActivityData(ActivityData data, int activityId)
 		{
@@ -137,18 +106,18 @@ namespace CSharpScript.Game.Module.CiacconaGal
 				Log.Instance.Error(ELogModule.CiacconaGal, ELogAuthor.HYF, "夏空活动服务器数据异常", default(ReadOnlySpan<ValueTuple<string, object>>));
 				return;
 			}
-			this.UpdateAllChapterData(ciacconaActivityPbData.ChapterDatas.ToArray<CiacconaChapterPbData>());
-			this.UpdateAllEndingData(ciacconaActivityPbData.ActivityResultDatas.ToArray<CiacconaActivityResultPbData>());
-			this.UpdateProgressRewardData(ciacconaActivityPbData.ScheduleRewardDatas.ToArray<CiacconaScheduleRewardPbData>());
+			this.UpdateAllChapterData(ciacconaActivityPbData.ChapterDatas);
+			this.UpdateAllEndingData(ciacconaActivityPbData.ActivityResultDatas);
+			this.UpdateProgressRewardData(ciacconaActivityPbData.ScheduleRewardDatas);
 			this.ActivityDataInternal = this.GetActivityDataById(activityId);
 			this.ActivityDataInternal.UpdateByServerData(ciacconaActivityPbData);
 			this.ActivityDataInternal.UpdateEndTime(data.EndShowTime);
 			this.DataUpdateMask = -1;
 		}
 
-		// Token: 0x0603B617 RID: 243223 RVA: 0x00E2A028 File Offset: 0x00E28228
+		// Token: 0x06030564 RID: 197988 RVA: 0x00D7A2F4 File Offset: 0x00D784F4
 		[NullableContext(1)]
-		public void UpdateAllChapterData(CiacconaChapterPbData[] dataList)
+		public void UpdateAllChapterData(IReadOnlyList<CiacconaChapterPbData> dataList)
 		{
 			foreach (CiacconaChapterPbData ciacconaChapterPbData in dataList)
 			{
@@ -165,9 +134,9 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.DataUpdateMask |= 1;
 		}
 
-		// Token: 0x0603B618 RID: 243224 RVA: 0x00E2A10C File Offset: 0x00E2830C
+		// Token: 0x06030565 RID: 197989 RVA: 0x00D7A3F4 File Offset: 0x00D785F4
 		[NullableContext(1)]
-		public void UpdateAllEndingData(CiacconaActivityResultPbData[] dataList)
+		public void UpdateAllEndingData(IReadOnlyList<CiacconaActivityResultPbData> dataList)
 		{
 			foreach (CiacconaActivityResultPbData ciacconaActivityResultPbData in dataList)
 			{
@@ -176,9 +145,9 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.DataUpdateMask |= 8;
 		}
 
-		// Token: 0x0603B619 RID: 243225 RVA: 0x00E2A150 File Offset: 0x00E28350
+		// Token: 0x06030566 RID: 197990 RVA: 0x00D7A458 File Offset: 0x00D78658
 		[NullableContext(1)]
-		public void UpdateProgressRewardData(CiacconaScheduleRewardPbData[] dataList)
+		public void UpdateProgressRewardData(IReadOnlyList<CiacconaScheduleRewardPbData> dataList)
 		{
 			foreach (CiacconaScheduleRewardPbData ciacconaScheduleRewardPbData in dataList)
 			{
@@ -187,7 +156,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.DataUpdateMask |= 4;
 		}
 
-		// Token: 0x0603B61A RID: 243226 RVA: 0x00E2A191 File Offset: 0x00E28391
+		// Token: 0x06030567 RID: 197991 RVA: 0x00D7A4BC File Offset: 0x00D786BC
 		public void UpdateInspirationData(CiacconaInspirationPbData data)
 		{
 			if (data == null)
@@ -202,7 +171,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.DataUpdateMask |= 2;
 		}
 
-		// Token: 0x0603B61B RID: 243227 RVA: 0x00E2A1B7 File Offset: 0x00E283B7
+		// Token: 0x06030568 RID: 197992 RVA: 0x00D7A4E2 File Offset: 0x00D786E2
 		[NullableContext(1)]
 		public void UpdateActivityState(CiacconaActivityStateUnlockUpdateNotify data)
 		{
@@ -214,72 +183,69 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.DataUpdateMask |= 16;
 		}
 
-		// Token: 0x0603B61C RID: 243228 RVA: 0x00E2A1DA File Offset: 0x00E283DA
+		// Token: 0x06030569 RID: 197993 RVA: 0x00D7A505 File Offset: 0x00D78705
 		public CiacconaGalChapterData GetChapterDataById(int id)
 		{
 			return this.GetOrCreateData<CiacconaGalChapterData, CiacconaGalChapter>(id, (CiacconaGalChapter config) => new CiacconaGalChapterData(config));
 		}
 
-		// Token: 0x0603B61D RID: 243229 RVA: 0x00E2A202 File Offset: 0x00E28402
+		// Token: 0x0603056A RID: 197994 RVA: 0x00D7A52D File Offset: 0x00D7872D
 		public CiacconaGalChoiceData GetChoiceDataById(int id)
 		{
 			return this.GetOrCreateData<CiacconaGalChoiceData, CiacconaGalChoice>(id, (CiacconaGalChoice config) => new CiacconaGalChoiceData(config));
 		}
 
-		// Token: 0x0603B61E RID: 243230 RVA: 0x00E2A22A File Offset: 0x00E2842A
+		// Token: 0x0603056B RID: 197995 RVA: 0x00D7A555 File Offset: 0x00D78755
 		public CiacconaGalEndingData GetEndingDataById(int id)
 		{
 			return this.GetOrCreateData<CiacconaGalEndingData, CiacconaGalEnding>(id, (CiacconaGalEnding config) => new CiacconaGalEndingData(config));
 		}
 
-		// Token: 0x0603B61F RID: 243231 RVA: 0x00E2A252 File Offset: 0x00E28452
+		// Token: 0x0603056C RID: 197996 RVA: 0x00D7A57D File Offset: 0x00D7877D
 		public CiacconaGalStepData GetStepDataById(int id)
 		{
 			return this.GetOrCreateData<CiacconaGalStepData, CiacconaGalStep>(id, (CiacconaGalStep config) => new CiacconaGalStepData(config));
 		}
 
-		// Token: 0x0603B620 RID: 243232 RVA: 0x00E2A27A File Offset: 0x00E2847A
+		// Token: 0x0603056D RID: 197997 RVA: 0x00D7A5A5 File Offset: 0x00D787A5
 		[NullableContext(1)]
 		public CiacconaGalEndingData[] GetAllEndingDataList()
 		{
-			return (from config in ConfigCiacconaGalEndingAll.GetConfigList(true)
-			select this.GetOrCreateData<CiacconaGalEndingData, CiacconaGalEnding>(config.Id, (CiacconaGalEnding config) => new CiacconaGalEndingData(config))).ToArray<CiacconaGalEndingData>();
+			return NoLinq.SelectToArray<CiacconaGalEnding, CiacconaGalEndingData>(ConfigCiacconaGalEndingAll.GetConfigList(true), (CiacconaGalEnding cfg) => this.GetOrCreateData<CiacconaGalEndingData, CiacconaGalEnding>(cfg.Id, (CiacconaGalEnding config) => new CiacconaGalEndingData(config)));
 		}
 
-		// Token: 0x0603B621 RID: 243233 RVA: 0x00E2A298 File Offset: 0x00E28498
+		// Token: 0x0603056E RID: 197998 RVA: 0x00D7A5BE File Offset: 0x00D787BE
 		public CiacconaGalSubEndingData GetSubEndingDataById(int id)
 		{
 			return this.GetOrCreateData<CiacconaGalSubEndingData, CiacconaGalSubEnding>(id, (CiacconaGalSubEnding config) => new CiacconaGalSubEndingData(config));
 		}
 
-		// Token: 0x0603B622 RID: 243234 RVA: 0x00E2A2C0 File Offset: 0x00E284C0
+		// Token: 0x0603056F RID: 197999 RVA: 0x00D7A5E6 File Offset: 0x00D787E6
 		public CiacconaGalChapterSlotData GetChapterSlotDataById(int id)
 		{
 			return this.GetOrCreateData<CiacconaGalChapterSlotData, CiacconaChapterSlot>(id, (CiacconaChapterSlot config) => new CiacconaGalChapterSlotData(config));
 		}
 
-		// Token: 0x0603B623 RID: 243235 RVA: 0x00E2A2E8 File Offset: 0x00E284E8
+		// Token: 0x06030570 RID: 198000 RVA: 0x00D7A60E File Offset: 0x00D7880E
 		public CiacconaGalActivityData GetActivityDataById(int id)
 		{
 			return this.GetOrCreateData<CiacconaGalActivityData, CiacconaActivityConfig>(id, (CiacconaActivityConfig config) => new CiacconaGalActivityData(config));
 		}
 
-		// Token: 0x0603B624 RID: 243236 RVA: 0x00E2A310 File Offset: 0x00E28510
+		// Token: 0x06030571 RID: 198001 RVA: 0x00D7A636 File Offset: 0x00D78836
 		public CiacconaGalRewardData GetRewardDataById(int id)
 		{
 			return this.GetOrCreateData<CiacconaGalRewardData, CiacconaActivityReward>(id, (CiacconaActivityReward config) => new CiacconaGalRewardData(config));
 		}
 
-		// Token: 0x0603B625 RID: 243237 RVA: 0x00E2A338 File Offset: 0x00E28538
+		// Token: 0x06030572 RID: 198002 RVA: 0x00D7A660 File Offset: 0x00D78860
 		[NullableContext(1)]
 		public CiacconaGalRewardData[] GetAllRewardDataByActivityId(int activityId)
 		{
-			return (from config in ConfigCiacconaActivityRewardAll.GetConfigList(true)
-			where config.ActivityId == activityId
-			select this.GetOrCreateData<CiacconaGalRewardData, CiacconaActivityReward>(config.Id, (CiacconaActivityReward config) => new CiacconaGalRewardData(config))).ToArray<CiacconaGalRewardData>();
+			return NoLinq.WhereSelectToArray<CiacconaActivityReward, CiacconaGalRewardData>(ConfigCiacconaActivityRewardAll.GetConfigList(true), (CiacconaActivityReward cfg) => cfg.ActivityId == activityId, (CiacconaActivityReward cfg) => this.GetOrCreateData<CiacconaGalRewardData, CiacconaActivityReward>(cfg.Id, (CiacconaActivityReward config) => new CiacconaGalRewardData(config)));
 		}
 
-		// Token: 0x0603B626 RID: 243238 RVA: 0x00E2A388 File Offset: 0x00E28588
+		// Token: 0x06030573 RID: 198003 RVA: 0x00D7A6A4 File Offset: 0x00D788A4
 		public CiacconaGalChapterData GetChapterDataBySubEndingId(int subEndingId)
 		{
 			if (this.ActivityData == null)
@@ -290,7 +256,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			{
 				CiacconaGalChapterSlotData chapterSlotDataById = this.GetChapterSlotDataById(id);
 				CiacconaGalChapterData chapterDataById = this.GetChapterDataById(chapterSlotDataById.ChapterId);
-				if (chapterDataById.SubEndingIds.Contains(subEndingId))
+				if (Array.IndexOf<int>(chapterDataById.SubEndingIds, subEndingId) >= 0)
 				{
 					return chapterDataById;
 				}
@@ -298,7 +264,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return null;
 		}
 
-		// Token: 0x0603B627 RID: 243239 RVA: 0x00E2A3E6 File Offset: 0x00E285E6
+		// Token: 0x06030574 RID: 198004 RVA: 0x00D7A704 File Offset: 0x00D78904
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -310,32 +276,22 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			{
 				return null;
 			}
-			return this.ActivityData.SlotIds.Select(delegate(int slotId)
-			{
-				CiacconaGalChapterSlotData chapterSlotDataById = this.GetChapterSlotDataById(slotId);
-				return this.GetChapterDataById(chapterSlotDataById.ChapterId);
-			}).ToList<CiacconaGalChapterData>();
-		}
-
-		// Token: 0x0603B628 RID: 243240 RVA: 0x00E2A413 File Offset: 0x00E28613
-		public bool HasAnyProgressReward()
-		{
-			return this.GetAllRewardDataByActivityId(this.ActivityData.Id).Any((CiacconaGalRewardData rewardData) => rewardData.CanReceive && !rewardData.IsReceived);
-		}
-
-		// Token: 0x0603B629 RID: 243241 RVA: 0x00E2A44A File Offset: 0x00E2864A
-		public bool HasAnyEndingReward()
-		{
-			return this.GetAllEndingDataList().Any((CiacconaGalEndingData endingData) => endingData.IsFinished && !endingData.IsRewarded);
-		}
-
-		// Token: 0x0603B62A RID: 243242 RVA: 0x00E2A478 File Offset: 0x00E28678
-		public bool HasAnySubEndingReward()
-		{
-			foreach (int id in this.ActivityData.SlotIds)
+			int[] slotIds = this.ActivityData.SlotIds;
+			List<CiacconaGalChapterData> list = new List<CiacconaGalChapterData>();
+			foreach (int id in slotIds)
 			{
 				CiacconaGalChapterSlotData chapterSlotDataById = this.GetChapterSlotDataById(id);
-				if (this.GetChapterDataById(chapterSlotDataById.ChapterId).SubEndingIds.Select(new Func<int, CiacconaGalSubEndingData>(this.GetSubEndingDataById)).Any((CiacconaGalSubEndingData subEndingData) => subEndingData.IsFinished && !subEndingData.IsRewarded))
+				list.Add(this.GetChapterDataById(chapterSlotDataById.ChapterId));
+			}
+			return list;
+		}
+
+		// Token: 0x06030575 RID: 198005 RVA: 0x00D7A75C File Offset: 0x00D7895C
+		public bool HasAnyProgressReward()
+		{
+			foreach (CiacconaGalRewardData ciacconaGalRewardData in this.GetAllRewardDataByActivityId(this.ActivityData.Id))
+			{
+				if (ciacconaGalRewardData.CanReceive && !ciacconaGalRewardData.IsReceived)
 				{
 					return true;
 				}
@@ -343,21 +299,69 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return false;
 		}
 
-		// Token: 0x0603B62B RID: 243243 RVA: 0x00E2A4F8 File Offset: 0x00E286F8
-		public bool HasAnySubEndingRewardByChapterId(int chapterId)
+		// Token: 0x06030576 RID: 198006 RVA: 0x00D7A7A0 File Offset: 0x00D789A0
+		public bool HasAnyEndingReward()
 		{
-			return this.GetChapterDataById(chapterId).SubEndingIds.Select(new Func<int, CiacconaGalSubEndingData>(this.GetSubEndingDataById)).Any((CiacconaGalSubEndingData subEndingData) => subEndingData.IsFinished && !subEndingData.IsRewarded);
+			foreach (CiacconaGalEndingData ciacconaGalEndingData in this.GetAllEndingDataList())
+			{
+				if (ciacconaGalEndingData.IsFinished && !ciacconaGalEndingData.IsRewarded)
+				{
+					return true;
+				}
+			}
+			return false;
 		}
 
-		// Token: 0x0603B62C RID: 243244 RVA: 0x00E2A548 File Offset: 0x00E28748
+		// Token: 0x06030577 RID: 198007 RVA: 0x00D7A7DC File Offset: 0x00D789DC
+		public bool HasAnySubEndingReward()
+		{
+			foreach (int id in this.ActivityData.SlotIds)
+			{
+				CiacconaGalChapterSlotData chapterSlotDataById = this.GetChapterSlotDataById(id);
+				foreach (int id2 in this.GetChapterDataById(chapterSlotDataById.ChapterId).SubEndingIds)
+				{
+					CiacconaGalSubEndingData subEndingDataById = this.GetSubEndingDataById(id2);
+					if (subEndingDataById.IsFinished && !subEndingDataById.IsRewarded)
+					{
+						return true;
+					}
+				}
+			}
+			return false;
+		}
+
+		// Token: 0x06030578 RID: 198008 RVA: 0x00D7A85C File Offset: 0x00D78A5C
+		public bool HasAnySubEndingRewardByChapterId(int chapterId)
+		{
+			foreach (int id in this.GetChapterDataById(chapterId).SubEndingIds)
+			{
+				CiacconaGalSubEndingData subEndingDataById = this.GetSubEndingDataById(id);
+				if (subEndingDataById.IsFinished && !subEndingDataById.IsRewarded)
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+
+		// Token: 0x06030579 RID: 198009 RVA: 0x00D7A8A4 File Offset: 0x00D78AA4
 		[NullableContext(0)]
 		public ValueTuple<int, int> GetEndingProgress()
 		{
 			CiacconaGalEndingData[] allEndingDataList = this.GetAllEndingDataList();
-			return new ValueTuple<int, int>(allEndingDataList.Count((CiacconaGalEndingData endingData) => endingData.IsFinished), allEndingDataList.Length);
+			int num = 0;
+			CiacconaGalEndingData[] array = allEndingDataList;
+			for (int i = 0; i < array.Length; i++)
+			{
+				if (array[i].IsFinished)
+				{
+					num++;
+				}
+			}
+			return new ValueTuple<int, int>(num, allEndingDataList.Length);
 		}
 
-		// Token: 0x0603B62D RID: 243245 RVA: 0x00E2A58C File Offset: 0x00E2878C
+		// Token: 0x0603057A RID: 198010 RVA: 0x00D7A8E4 File Offset: 0x00D78AE4
 		public bool HasAllRewardReceived()
 		{
 			CiacconaGalEndingData[] allEndingDataList = this.GetAllEndingDataList();
@@ -371,21 +375,18 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			foreach (int id in this.ActivityData.SlotIds)
 			{
 				CiacconaGalChapterSlotData chapterSlotDataById = this.GetChapterSlotDataById(id);
-				using (IEnumerator<CiacconaGalSubEndingData> enumerator = this.GetChapterDataById(chapterSlotDataById.ChapterId).SubEndingIds.Select(new Func<int, CiacconaGalSubEndingData>(this.GetSubEndingDataById)).GetEnumerator())
+				foreach (int id2 in this.GetChapterDataById(chapterSlotDataById.ChapterId).SubEndingIds)
 				{
-					while (enumerator.MoveNext())
+					if (!this.GetSubEndingDataById(id2).IsRewarded)
 					{
-						if (!enumerator.Current.IsRewarded)
-						{
-							return false;
-						}
+						return false;
 					}
 				}
 			}
 			return true;
 		}
 
-		// Token: 0x0603B62E RID: 243246 RVA: 0x00E2A64C File Offset: 0x00E2884C
+		// Token: 0x0603057B RID: 198011 RVA: 0x00D7A97C File Offset: 0x00D78B7C
 		[NullableContext(0)]
 		public ValueTuple<int, int> GetSubEndingProgress()
 		{
@@ -395,29 +396,44 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			foreach (int id in slotIds)
 			{
 				CiacconaGalChapterSlotData chapterSlotDataById = this.GetChapterSlotDataById(id);
-				CiacconaGalSubEndingData[] array2 = this.GetChapterDataById(chapterSlotDataById.ChapterId).SubEndingIds.Select(new Func<int, CiacconaGalSubEndingData>(this.GetSubEndingDataById)).ToArray<CiacconaGalSubEndingData>();
-				num += array2.Count((CiacconaGalSubEndingData subEndingData) => subEndingData.IsFinished);
-				num2 += array2.Length;
+				foreach (int id2 in this.GetChapterDataById(chapterSlotDataById.ChapterId).SubEndingIds)
+				{
+					CiacconaGalSubEndingData subEndingDataById = this.GetSubEndingDataById(id2);
+					num2++;
+					if (subEndingDataById.IsFinished)
+					{
+						num++;
+					}
+				}
 			}
 			return new ValueTuple<int, int>(num, num2);
 		}
 
-		// Token: 0x0603B62F RID: 243247 RVA: 0x00E2A6E8 File Offset: 0x00E288E8
+		// Token: 0x0603057C RID: 198012 RVA: 0x00D7AA04 File Offset: 0x00D78C04
 		[NullableContext(0)]
 		public ValueTuple<int, int> GetProgressRewardProgress()
 		{
 			CiacconaGalRewardData[] allRewardDataByActivityId = this.GetAllRewardDataByActivityId(this.ActivityData.Id);
-			return new ValueTuple<int, int>(allRewardDataByActivityId.Count((CiacconaGalRewardData rewardData) => rewardData.CanReceive), allRewardDataByActivityId.Length);
+			int num = 0;
+			CiacconaGalRewardData[] array = allRewardDataByActivityId;
+			for (int i = 0; i < array.Length; i++)
+			{
+				if (array[i].CanReceive)
+				{
+					num++;
+				}
+			}
+			return new ValueTuple<int, int>(num, allRewardDataByActivityId.Length);
 		}
 
-		// Token: 0x0603B630 RID: 243248 RVA: 0x00E2A734 File Offset: 0x00E28934
+		// Token: 0x0603057D RID: 198013 RVA: 0x00D7AA4C File Offset: 0x00D78C4C
 		[NullableContext(1)]
 		public CiacconaGalStepData[] GetCurStepDataList()
 		{
 			return this.CurStepDataList.ToArray();
 		}
 
-		// Token: 0x0603B631 RID: 243249 RVA: 0x00E2A744 File Offset: 0x00E28944
+		// Token: 0x0603057E RID: 198014 RVA: 0x00D7AA5C File Offset: 0x00D78C5C
 		public bool TryPushCurStepDataById(int id)
 		{
 			CiacconaGalStepData stepDataById = this.GetStepDataById(id);
@@ -429,7 +445,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return false;
 		}
 
-		// Token: 0x0603B632 RID: 243250 RVA: 0x00E2A766 File Offset: 0x00E28966
+		// Token: 0x0603057F RID: 198015 RVA: 0x00D7AA7E File Offset: 0x00D78C7E
 		[NullableContext(1)]
 		public void PushCurStepData(CiacconaGalStepData stepData)
 		{
@@ -437,7 +453,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.CurStepDataList.Add(stepData);
 		}
 
-		// Token: 0x0603B633 RID: 243251 RVA: 0x00E2A77C File Offset: 0x00E2897C
+		// Token: 0x06030580 RID: 198016 RVA: 0x00D7AA94 File Offset: 0x00D78C94
 		public CiacconaGalStepData PopCurStepData()
 		{
 			this.IsCurStepDataListDirty = true;
@@ -450,15 +466,15 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return null;
 		}
 
-		// Token: 0x0603B634 RID: 243252 RVA: 0x00E2A7D0 File Offset: 0x00E289D0
+		// Token: 0x06030581 RID: 198017 RVA: 0x00D7AAE8 File Offset: 0x00D78CE8
 		public void ClearCurStepData()
 		{
 			this.IsCurStepDataListDirty = true;
 			this.CurStepDataList.Clear();
 		}
 
-		// Token: 0x17008CFF RID: 36095
-		// (get) Token: 0x0603B635 RID: 243253 RVA: 0x00E2A7E4 File Offset: 0x00E289E4
+		// Token: 0x170060D1 RID: 24785
+		// (get) Token: 0x06030582 RID: 198018 RVA: 0x00D7AAFC File Offset: 0x00D78CFC
 		[Nullable(1)]
 		public static CiacconaGalModel Instance
 		{
@@ -469,7 +485,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B636 RID: 243254 RVA: 0x00E2A7EB File Offset: 0x00E289EB
+		// Token: 0x06030583 RID: 198019 RVA: 0x00D7AB03 File Offset: 0x00D78D03
 		[NullableContext(1)]
 		public static CiacconaGalModel GetOrCreateInstance()
 		{
@@ -480,7 +496,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return CiacconaGalModel._Instance;
 		}
 
-		// Token: 0x0603B637 RID: 243255 RVA: 0x00E2A7FF File Offset: 0x00E289FF
+		// Token: 0x06030584 RID: 198020 RVA: 0x00D7AB17 File Offset: 0x00D78D17
 		public static bool CreateInstance()
 		{
 			if (CiacconaGalModel._Instance != null)
@@ -491,41 +507,41 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return true;
 		}
 
-		// Token: 0x0603B638 RID: 243256 RVA: 0x00E2A815 File Offset: 0x00E28A15
+		// Token: 0x06030585 RID: 198021 RVA: 0x00D7AB2D File Offset: 0x00D78D2D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603B639 RID: 243257 RVA: 0x00E2A817 File Offset: 0x00E28A17
+		// Token: 0x06030586 RID: 198022 RVA: 0x00D7AB2F File Offset: 0x00D78D2F
 		public static void ResetStaticDefaultValue()
 		{
 			CiacconaGalModel._Instance = null;
 		}
 
-		// Token: 0x0603B63A RID: 243258 RVA: 0x00E2A81F File Offset: 0x00E28A1F
+		// Token: 0x06030587 RID: 198023 RVA: 0x00D7AB37 File Offset: 0x00D78D37
 		static CiacconaGalModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CiacconaGalModel.CreateStaticDefaultValue), new Action(CiacconaGalModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EF51 RID: 126801
+		// Token: 0x04019A02 RID: 104962
 		[Nullable(1)]
-		private readonly Dictionary<string, Dictionary<int, object>> DataMap = new Dictionary<string, Dictionary<int, object>>();
+		private readonly Dictionary<Type, Dictionary<int, object>> DataMap = new Dictionary<Type, Dictionary<int, object>>();
 
-		// Token: 0x0401EF52 RID: 126802
+		// Token: 0x04019A03 RID: 104963
 		[Nullable(1)]
 		private readonly List<CiacconaGalStepData> CurStepDataList = new List<CiacconaGalStepData>();
 
-		// Token: 0x0401EF53 RID: 126803
+		// Token: 0x04019A04 RID: 104964
 		private CiacconaGalActivityData ActivityDataInternal;
 
-		// Token: 0x0401EF54 RID: 126804
+		// Token: 0x04019A05 RID: 104965
 		public int DataUpdateMask;
 
-		// Token: 0x0401EF55 RID: 126805
+		// Token: 0x04019A06 RID: 104966
 		public bool IsCurStepDataListDirty;
 
-		// Token: 0x0401EF56 RID: 126806
+		// Token: 0x04019A07 RID: 104967
 		private static CiacconaGalModel _Instance;
 	}
 }

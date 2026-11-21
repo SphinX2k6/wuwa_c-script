@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000B7B RID: 2939
+	// Token: 0x02000201 RID: 513
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EStreamingSourcePriority")]
 	public enum EStreamingSourcePriority : byte
 	{
-		// Token: 0x040050EE RID: 20718
+		// Token: 0x04000CC3 RID: 3267
 		Highest,
-		// Token: 0x040050EF RID: 20719
+		// Token: 0x04000CC4 RID: 3268
 		High = 64,
-		// Token: 0x040050F0 RID: 20720
+		// Token: 0x04000CC5 RID: 3269
 		Normal = 128,
-		// Token: 0x040050F1 RID: 20721
+		// Token: 0x04000CC6 RID: 3270
 		Low = 192,
-		// Token: 0x040050F2 RID: 20722
+		// Token: 0x04000CC7 RID: 3271
 		Lowest = 255,
-		// Token: 0x040050F3 RID: 20723
+		// Token: 0x04000CC8 RID: 3272
 		Default = 128
 	}
 }

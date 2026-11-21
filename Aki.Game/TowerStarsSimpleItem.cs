@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002C09 RID: 11273
+// Token: 0x02002184 RID: 8580
 public class TowerStarsSimpleItem : GridProxyAbstract<bool>
 {
-	// Token: 0x0601768E RID: 95886 RVA: 0x005F5FF8 File Offset: 0x005F41F8
+	// Token: 0x060150BF RID: 86207 RVA: 0x00622B1C File Offset: 0x00620D1C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -19,16 +19,16 @@ public class TowerStarsSimpleItem : GridProxyAbstract<bool>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601768F RID: 95887 RVA: 0x005F6040 File Offset: 0x005F4240
+	// Token: 0x060150C0 RID: 86208 RVA: 0x00622B64 File Offset: 0x00620D64
 	public override void Refresh(bool data, bool isSelected, int gridIndex)
 	{
 		base.GetItem(0).SetUIActive(data);
 	}
 
-	// Token: 0x020091D4 RID: 37332
+	// Token: 0x02008417 RID: 33815
 	private enum EChildType
 	{
-		// Token: 0x0402F2E4 RID: 193252
+		// Token: 0x0402A9E5 RID: 174565
 		StarItem
 	}
 }

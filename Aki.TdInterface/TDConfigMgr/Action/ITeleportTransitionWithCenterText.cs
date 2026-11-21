@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FA8 RID: 8104
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021EB RID: 8683
 	public class ITeleportTransitionWithCenterText : ITeleportTransitionType
 	{
-		// Token: 0x0600B236 RID: 45622 RVA: 0x0019F638 File Offset: 0x0019D838
+		// Token: 0x0600BD3A RID: 48442 RVA: 0x001B59E8 File Offset: 0x001B3BE8
 		private ITeleportTransitionWithCenterText_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B237 RID: 45623 RVA: 0x0019F670 File Offset: 0x0019D870
+		// Token: 0x0600BD3B RID: 48443 RVA: 0x001B5A20 File Offset: 0x001B3C20
 		public static ITeleportTransitionWithCenterText Create([Nullable(2)] ITeleportTransitionWithCenterText instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B238 RID: 45624 RVA: 0x0019F683 File Offset: 0x0019D883
+		// Token: 0x0600BD3C RID: 48444 RVA: 0x001B5A33 File Offset: 0x001B3C33
 		public static ITeleportTransitionWithCenterText CreateFromSetValue([Nullable(2)] ITeleportTransitionWithCenterText_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B239 RID: 45625 RVA: 0x0019F696 File Offset: 0x0019D896
+		// Token: 0x0600BD3D RID: 48445 RVA: 0x001B5A46 File Offset: 0x001B3C46
 		public new ITeleportTransitionWithCenterText_SetValue ToSetValue()
 		{
 			return new ITeleportTransitionWithCenterText_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036F7 RID: 14071
-		// (get) Token: 0x0600B23A RID: 45626 RVA: 0x0019F6B5 File Offset: 0x0019D8B5
-		// (set) Token: 0x0600B23B RID: 45627 RVA: 0x0019F6E0 File Offset: 0x0019D8E0
+		// Token: 0x170039CC RID: 14796
+		// (get) Token: 0x0600BD3E RID: 48446 RVA: 0x001B5A65 File Offset: 0x001B3C65
+		// (set) Token: 0x0600BD3F RID: 48447 RVA: 0x001B5A90 File Offset: 0x001B3C90
 		public override ETeleportTransitionType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036F8 RID: 14072
-		// (get) Token: 0x0600B23C RID: 45628 RVA: 0x0019F6F0 File Offset: 0x0019D8F0
-		// (set) Token: 0x0600B23D RID: 45629 RVA: 0x0019F751 File Offset: 0x0019D951
+		// Token: 0x170039CD RID: 14797
+		// (get) Token: 0x0600BD40 RID: 48448 RVA: 0x001B5AA0 File Offset: 0x001B3CA0
+		// (set) Token: 0x0600BD41 RID: 48449 RVA: 0x001B5B01 File Offset: 0x001B3D01
 		public virtual PlayFlow CenterTextFlow
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006BA2 RID: 27554
+		// Token: 0x0400719D RID: 29085
 		[Nullable(2)]
 		protected new ITeleportTransitionWithCenterText FbInstance;
 
-		// Token: 0x04006BA3 RID: 27555
+		// Token: 0x0400719E RID: 29086
 		[Nullable(2)]
 		protected new ITeleportTransitionWithCenterText_SetValue PocoInterface;
 
-		// Token: 0x04006BA4 RID: 27556
+		// Token: 0x0400719F RID: 29087
 		private PlayFlow _CenterTextFlowCache;
 
-		// Token: 0x04006BA5 RID: 27557
+		// Token: 0x040071A0 RID: 29088
 		private bool _CenterTextFlowInited;
 	}
 }

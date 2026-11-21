@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x0200498F RID: 18831
+	// Token: 0x02004E46 RID: 20038
 	public class ICheckBvbChallengeStateT
 	{
-		// Token: 0x17008808 RID: 34824
-		// (get) Token: 0x0601D5D8 RID: 120280 RVA: 0x00423D42 File Offset: 0x00421F42
-		// (set) Token: 0x0601D5D9 RID: 120281 RVA: 0x00423D4A File Offset: 0x00421F4A
+		// Token: 0x17008EC3 RID: 36547
+		// (get) Token: 0x0601EFFD RID: 126973 RVA: 0x004541F6 File Offset: 0x004523F6
+		// (set) Token: 0x0601EFFE RID: 126974 RVA: 0x004541FE File Offset: 0x004523FE
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008809 RID: 34825
-		// (get) Token: 0x0601D5DA RID: 120282 RVA: 0x00423D53 File Offset: 0x00421F53
-		// (set) Token: 0x0601D5DB RID: 120283 RVA: 0x00423D5B File Offset: 0x00421F5B
+		// Token: 0x17008EC4 RID: 36548
+		// (get) Token: 0x0601EFFF RID: 126975 RVA: 0x00454207 File Offset: 0x00452407
+		// (set) Token: 0x0601F000 RID: 126976 RVA: 0x0045420F File Offset: 0x0045240F
 		public int ChallengeId { get; set; }
 
-		// Token: 0x1700880A RID: 34826
-		// (get) Token: 0x0601D5DC RID: 120284 RVA: 0x00423D64 File Offset: 0x00421F64
-		// (set) Token: 0x0601D5DD RID: 120285 RVA: 0x00423D6C File Offset: 0x00421F6C
+		// Token: 0x17008EC5 RID: 36549
+		// (get) Token: 0x0601F001 RID: 126977 RVA: 0x00454218 File Offset: 0x00452418
+		// (set) Token: 0x0601F002 RID: 126978 RVA: 0x00454220 File Offset: 0x00452420
 		public EBvbChallengeStateType ChallengeState { get; set; }
 
-		// Token: 0x0601D5DE RID: 120286 RVA: 0x00423D75 File Offset: 0x00421F75
+		// Token: 0x0601F003 RID: 126979 RVA: 0x00454229 File Offset: 0x00452429
 		public ICheckBvbChallengeStateT()
 		{
 			this.Type = ECondition.CompareVar;

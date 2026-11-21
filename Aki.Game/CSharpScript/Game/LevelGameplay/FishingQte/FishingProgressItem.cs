@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E37 RID: 28215
+	// Token: 0x02005FB8 RID: 24504
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FishingProgressItem : UiPanelBase
 	{
-		// Token: 0x06044C99 RID: 281753 RVA: 0x010F937C File Offset: 0x010F757C
+		// Token: 0x0603AE26 RID: 241190 RVA: 0x010A38FC File Offset: 0x010A1AFC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06044C9A RID: 281754 RVA: 0x010F9448 File Offset: 0x010F7648
+		// Token: 0x0603AE27 RID: 241191 RVA: 0x010A39C8 File Offset: 0x010A1BC8
 		[NullableContext(1)]
 		public void Init(IFishingQteConfig config, FishingQteGameInfo gameInfo)
 		{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.AnimTime = Math.Max((float)config.HitColdTime, 100f);
 		}
 
-		// Token: 0x06044C9B RID: 281755 RVA: 0x010F946F File Offset: 0x010F766F
+		// Token: 0x0603AE28 RID: 241192 RVA: 0x010A39EF File Offset: 0x010A1BEF
 		protected override void OnStart()
 		{
 			this.PanelProgressItem = base.GetItem(1);
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.PanelProgressAnimItem = base.GetItem(2);
 		}
 
-		// Token: 0x06044C9C RID: 281756 RVA: 0x010F94A5 File Offset: 0x010F76A5
+		// Token: 0x0603AE29 RID: 241193 RVA: 0x010A3A25 File Offset: 0x010A1C25
 		protected override void OnBeforeDestroy()
 		{
 			this.PanelProgressItem = null;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.PanelProgressAnimItem = null;
 		}
 
-		// Token: 0x06044C9D RID: 281757 RVA: 0x010F94BC File Offset: 0x010F76BC
+		// Token: 0x0603AE2A RID: 241194 RVA: 0x010A3A3C File Offset: 0x010A1C3C
 		public void OnTick(float delta)
 		{
 			float currentProgress = this.GetCurrentProgress();
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.RefreshProgress(currentProgress);
 		}
 
-		// Token: 0x06044C9E RID: 281758 RVA: 0x010F94E0 File Offset: 0x010F76E0
+		// Token: 0x0603AE2B RID: 241195 RVA: 0x010A3A60 File Offset: 0x010A1C60
 		private void RefreshProgress(float progress)
 		{
 			double value = Math.Ceiling((double)(progress * 100f));
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			panelProgressFrameItem2.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x06044C9F RID: 281759 RVA: 0x010F95A8 File Offset: 0x010F77A8
+		// Token: 0x0603AE2C RID: 241196 RVA: 0x010A3B28 File Offset: 0x010A1D28
 		private void RefreshAnimProgress(float currentProgress, float delta)
 		{
 			float alpha = currentProgress;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			panelProgressAnimItem.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x06044CA0 RID: 281760 RVA: 0x010F9660 File Offset: 0x010F7860
+		// Token: 0x0603AE2D RID: 241197 RVA: 0x010A3BE0 File Offset: 0x010A1DE0
 		private float GetCurrentProgress()
 		{
 			float currentScore = this.GameInfo.CurrentScore;
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return MathUtils.Instance.Clamp(currentScore / (float)maxScore, 0f, 1f);
 		}
 
-		// Token: 0x06044CA1 RID: 281761 RVA: 0x010F969D File Offset: 0x010F789D
+		// Token: 0x0603AE2E RID: 241198 RVA: 0x010A3C1D File Offset: 0x010A1E1D
 		public void StartAnimProgress()
 		{
 			this.AnimStartProgress = this.GetCurrentProgress();
@@ -142,79 +142,79 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.InAnim = true;
 		}
 
-		// Token: 0x06044CA2 RID: 281762 RVA: 0x010F96BD File Offset: 0x010F78BD
+		// Token: 0x0603AE2F RID: 241199 RVA: 0x010A3C3D File Offset: 0x010A1E3D
 		public void EnterNextRound()
 		{
 			this.AnimStartProgress = 0f;
 		}
 
-		// Token: 0x04023C8B RID: 146571
+		// Token: 0x0401EF40 RID: 126784
 		private const float PROGRESS_START_ANGLE = -77f;
 
-		// Token: 0x04023C8C RID: 146572
+		// Token: 0x0401EF41 RID: 126785
 		private const float PROGRESS_END_ANGLE = 0f;
 
-		// Token: 0x04023C8D RID: 146573
+		// Token: 0x0401EF42 RID: 126786
 		private const float PAUSE_TIME = 0f;
 
-		// Token: 0x04023C8E RID: 146574
+		// Token: 0x0401EF43 RID: 126787
 		private const float MIN_ANIM_TIME = 100f;
 
-		// Token: 0x04023C8F RID: 146575
+		// Token: 0x0401EF44 RID: 126788
 		protected IFishingQteConfig GameConfig;
 
-		// Token: 0x04023C90 RID: 146576
+		// Token: 0x0401EF45 RID: 126789
 		protected FishingQteGameInfo GameInfo;
 
-		// Token: 0x04023C91 RID: 146577
+		// Token: 0x0401EF46 RID: 126790
 		[Nullable(1)]
 		private Rotator CurrentRotator = Rotator.Create();
 
-		// Token: 0x04023C92 RID: 146578
+		// Token: 0x0401EF47 RID: 126791
 		[Nullable(1)]
 		private Rotator AnimRotator = Rotator.Create();
 
-		// Token: 0x04023C93 RID: 146579
+		// Token: 0x0401EF48 RID: 126792
 		private UUIItem PanelProgressItem;
 
-		// Token: 0x04023C94 RID: 146580
+		// Token: 0x0401EF49 RID: 126793
 		private UUIItem PanelProgressFrameItem;
 
-		// Token: 0x04023C95 RID: 146581
+		// Token: 0x0401EF4A RID: 126794
 		private UUIItem PanelProgressFrameItem2;
 
-		// Token: 0x04023C96 RID: 146582
+		// Token: 0x0401EF4B RID: 126795
 		private UUIItem PanelProgressAnimItem;
 
-		// Token: 0x04023C97 RID: 146583
+		// Token: 0x0401EF4C RID: 126796
 		private bool InAnim;
 
-		// Token: 0x04023C98 RID: 146584
+		// Token: 0x0401EF4D RID: 126797
 		private float CurrentAnimTime;
 
-		// Token: 0x04023C99 RID: 146585
+		// Token: 0x0401EF4E RID: 126798
 		private float AnimStartProgress;
 
-		// Token: 0x04023C9A RID: 146586
+		// Token: 0x0401EF4F RID: 126799
 		private float AnimTime;
 
-		// Token: 0x0200CCE8 RID: 52456
+		// Token: 0x0200B8D8 RID: 47320
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403DCB5 RID: 253109
+			// Token: 0x040390D7 RID: 233687
 			public const int TxtProgress = 0;
 
-			// Token: 0x0403DCB6 RID: 253110
+			// Token: 0x040390D8 RID: 233688
 			public const int PanelProgress = 1;
 
-			// Token: 0x0403DCB7 RID: 253111
+			// Token: 0x040390D9 RID: 233689
 			public const int PanelProgressAnim = 2;
 
-			// Token: 0x0403DCB8 RID: 253112
+			// Token: 0x040390DA RID: 233690
 			public const int PanelProgressFrame = 3;
 
-			// Token: 0x0403DCB9 RID: 253113
+			// Token: 0x040390DB RID: 233691
 			public const int PanelProgressFrame2 = 4;
 		}
 	}

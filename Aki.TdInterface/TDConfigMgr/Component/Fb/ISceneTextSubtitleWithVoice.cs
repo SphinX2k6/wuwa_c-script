@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D20 RID: 3360
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E1A RID: 3610
 	public class ISceneTextSubtitleWithVoice : ISceneTextTypeBase
 	{
-		// Token: 0x06004CAD RID: 19629 RVA: 0x000BEF35 File Offset: 0x000BD135
+		// Token: 0x060051C7 RID: 20935 RVA: 0x000CA609 File Offset: 0x000C8809
 		public static ISceneTextSubtitleWithVoice Create(ISceneTextSubtitleWithVoice? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700182A RID: 6186
-		// (get) Token: 0x06004CAE RID: 19630 RVA: 0x000BEF54 File Offset: 0x000BD154
+		// Token: 0x1700198E RID: 6542
+		// (get) Token: 0x060051C8 RID: 20936 RVA: 0x000CA628 File Offset: 0x000C8828
 		public override ESceneTextType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700182B RID: 6187
-		// (get) Token: 0x06004CAF RID: 19631 RVA: 0x000BEF61 File Offset: 0x000BD161
+		// Token: 0x1700198F RID: 6543
+		// (get) Token: 0x060051C9 RID: 20937 RVA: 0x000CA635 File Offset: 0x000C8835
 		public virtual PlayFlow Content
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700182C RID: 6188
-		// (get) Token: 0x06004CB0 RID: 19632 RVA: 0x000BEF95 File Offset: 0x000BD195
+		// Token: 0x17001990 RID: 6544
+		// (get) Token: 0x060051CA RID: 20938 RVA: 0x000CA669 File Offset: 0x000C8869
 		public virtual int FontSize
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700182D RID: 6189
-		// (get) Token: 0x06004CB1 RID: 19633 RVA: 0x000BEFA2 File Offset: 0x000BD1A2
+		// Token: 0x17001991 RID: 6545
+		// (get) Token: 0x060051CB RID: 20939 RVA: 0x000CA676 File Offset: 0x000C8876
 		public virtual float BoxWidth
 		{
 			get
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700182E RID: 6190
-		// (get) Token: 0x06004CB2 RID: 19634 RVA: 0x000BEFAF File Offset: 0x000BD1AF
+		// Token: 0x17001992 RID: 6546
+		// (get) Token: 0x060051CC RID: 20940 RVA: 0x000CA683 File Offset: 0x000C8883
 		public virtual float BoxHeight
 		{
 			get
@@ -79,8 +77,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700182F RID: 6191
-		// (get) Token: 0x06004CB3 RID: 19635 RVA: 0x000BEFBC File Offset: 0x000BD1BC
+		// Token: 0x17001993 RID: 6547
+		// (get) Token: 0x060051CD RID: 20941 RVA: 0x000CA690 File Offset: 0x000C8890
 		public virtual float? Duration
 		{
 			get
@@ -93,8 +91,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001830 RID: 6192
-		// (get) Token: 0x06004CB4 RID: 19636 RVA: 0x000BEFF4 File Offset: 0x000BD1F4
+		// Token: 0x17001994 RID: 6548
+		// (get) Token: 0x060051CE RID: 20942 RVA: 0x000CA6C8 File Offset: 0x000C88C8
 		public virtual bool? AutoHide
 		{
 			get
@@ -107,14 +105,42 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BE5 RID: 11237
+		// Token: 0x17001995 RID: 6549
+		// (get) Token: 0x060051CF RID: 20943 RVA: 0x000CA700 File Offset: 0x000C8900
+		public virtual ESceneTextFadeInEffect? FadeInEffect
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 4) == 0)
+				{
+					return null;
+				}
+				return new ESceneTextFadeInEffect?((ESceneTextFadeInEffect)this.Instance.FadeInEffect);
+			}
+		}
+
+		// Token: 0x17001996 RID: 6550
+		// (get) Token: 0x060051D0 RID: 20944 RVA: 0x000CA738 File Offset: 0x000C8938
+		public virtual ESceneTextFadeOutEffect? FadeOutEffect
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 8) == 0)
+				{
+					return null;
+				}
+				return new ESceneTextFadeOutEffect?((ESceneTextFadeOutEffect)this.Instance.FadeOutEffect);
+			}
+		}
+
+		// Token: 0x04002EA5 RID: 11941
 		private ISceneTextSubtitleWithVoice Instance;
 
-		// Token: 0x04002BE6 RID: 11238
+		// Token: 0x04002EA6 RID: 11942
 		[Nullable(2)]
 		private PlayFlow _ContentCache;
 
-		// Token: 0x04002BE7 RID: 11239
+		// Token: 0x04002EA7 RID: 11943
 		private bool _ContentInited;
 	}
 }

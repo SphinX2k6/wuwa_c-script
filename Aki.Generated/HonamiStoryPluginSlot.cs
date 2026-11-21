@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D44 RID: 3396
+	// Token: 0x02000E29 RID: 3625
 	public struct HonamiStoryPluginSlot : IFlatbufferObject
 	{
-		// Token: 0x17001800 RID: 6144
-		// (get) Token: 0x060080B3 RID: 32947 RVA: 0x002590D4 File Offset: 0x002572D4
+		// Token: 0x17001863 RID: 6243
+		// (get) Token: 0x060086CD RID: 34509 RVA: 0x002778D0 File Offset: 0x00275AD0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060080B4 RID: 32948 RVA: 0x002590E1 File Offset: 0x002572E1
+		// Token: 0x060086CE RID: 34510 RVA: 0x002778DD File Offset: 0x00275ADD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060080B5 RID: 32949 RVA: 0x002590E8 File Offset: 0x002572E8
+		// Token: 0x060086CF RID: 34511 RVA: 0x002778E4 File Offset: 0x00275AE4
 		public static HonamiStoryPluginSlot GetRootAsHonamiStoryPluginSlot(ByteBuffer _bb)
 		{
 			return HonamiStoryPluginSlot.GetRootAsHonamiStoryPluginSlot(_bb, default(HonamiStoryPluginSlot));
 		}
 
-		// Token: 0x060080B6 RID: 32950 RVA: 0x00259104 File Offset: 0x00257304
+		// Token: 0x060086D0 RID: 34512 RVA: 0x00277900 File Offset: 0x00275B00
 		public static HonamiStoryPluginSlot GetRootAsHonamiStoryPluginSlot(ByteBuffer _bb, HonamiStoryPluginSlot obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060080B7 RID: 32951 RVA: 0x00259121 File Offset: 0x00257321
+		// Token: 0x060086D1 RID: 34513 RVA: 0x0027791D File Offset: 0x00275B1D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060080B8 RID: 32952 RVA: 0x00259130 File Offset: 0x00257330
+		// Token: 0x060086D2 RID: 34514 RVA: 0x0027792C File Offset: 0x00275B2C
 		public HonamiStoryPluginSlot __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001801 RID: 6145
-		// (get) Token: 0x060080B9 RID: 32953 RVA: 0x00259140 File Offset: 0x00257340
+		// Token: 0x17001864 RID: 6244
+		// (get) Token: 0x060086D3 RID: 34515 RVA: 0x0027793C File Offset: 0x00275B3C
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001802 RID: 6146
-		// (get) Token: 0x060080BA RID: 32954 RVA: 0x0025917C File Offset: 0x0025737C
+		// Token: 0x17001865 RID: 6245
+		// (get) Token: 0x060086D4 RID: 34516 RVA: 0x00277978 File Offset: 0x00275B78
 		public int ActivityId
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001803 RID: 6147
-		// (get) Token: 0x060080BB RID: 32955 RVA: 0x002591B8 File Offset: 0x002573B8
+		// Token: 0x17001866 RID: 6246
+		// (get) Token: 0x060086D5 RID: 34517 RVA: 0x002779B4 File Offset: 0x00275BB4
 		public int SlotPos
 		{
 			get
@@ -96,7 +96,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060080BC RID: 32956 RVA: 0x002591F4 File Offset: 0x002573F4
+		// Token: 0x060086D6 RID: 34518 RVA: 0x002779F0 File Offset: 0x00275BF0
 		public DicIntInt? ConsumeItems(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -107,8 +107,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17001804 RID: 6148
-		// (get) Token: 0x060080BD RID: 32957 RVA: 0x00259258 File Offset: 0x00257458
+		// Token: 0x17001867 RID: 6247
+		// (get) Token: 0x060086D7 RID: 34519 RVA: 0x00277A54 File Offset: 0x00275C54
 		public int ConsumeItemsLength
 		{
 			get
@@ -122,24 +122,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060080BE RID: 32958 RVA: 0x00259284 File Offset: 0x00257484
+		// Token: 0x060086D8 RID: 34520 RVA: 0x00277A80 File Offset: 0x00275C80
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用ConsumeItemsFrozenDict()缓存字典，遍历请使用ConsumeItemsIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> ConsumeItems()
+		public Dictionary<int, int> ConsumeItems()
 		{
 			return this.ConsumeItemsIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x060080BF RID: 32959 RVA: 0x002592DA File Offset: 0x002574DA
+		// Token: 0x060086D9 RID: 34521 RVA: 0x00277AD6 File Offset: 0x00275CD6
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> ConsumeItemsIter()
+		public IEnumerable<DicIntInt> ConsumeItemsIter()
 		{
 			HonamiStoryPluginSlot.<ConsumeItemsIter>d__18 <ConsumeItemsIter>d__ = new HonamiStoryPluginSlot.<ConsumeItemsIter>d__18(-2);
 			<ConsumeItemsIter>d__.<>3__<>4__this = this;
 			return <ConsumeItemsIter>d__;
 		}
 
-		// Token: 0x060080C0 RID: 32960 RVA: 0x002592F0 File Offset: 0x002574F0
+		// Token: 0x060086DA RID: 34522 RVA: 0x00277AEC File Offset: 0x00275CEC
 		public int? GetConsumeItems(int key)
 		{
 			this.EnsureConsumeItemsCacheIfNeeded();
@@ -151,7 +150,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x060080C1 RID: 32961 RVA: 0x00259324 File Offset: 0x00257524
+		// Token: 0x060086DB RID: 34523 RVA: 0x00277B20 File Offset: 0x00275D20
 		private void EnsureConsumeItemsCacheIfNeeded()
 		{
 			if (this.ConsumeItemsCache != null)
@@ -161,18 +160,18 @@ namespace Aki.Config
 			this.ConsumeItemsCache = this.ConsumeItemsIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x060080C2 RID: 32962 RVA: 0x0025938A File Offset: 0x0025758A
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetConsumeItemsFrozenDict(int key)
+		// Token: 0x060086DC RID: 34524 RVA: 0x00277B86 File Offset: 0x00275D86
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetConsumeItemsFrozenDict()
 		{
 			this.EnsureConsumeItemsCacheIfNeeded();
 			return this.ConsumeItemsCache;
 		}
 
-		// Token: 0x04004DBF RID: 19903
+		// Token: 0x040053A4 RID: 21412
 		private Table __p;
 
-		// Token: 0x04004DC0 RID: 19904
+		// Token: 0x040053A5 RID: 21413
 		[Nullable(2)]
 		private FrozenDictionary<int, int> ConsumeItemsCache;
 	}

@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200101D RID: 4125
+// Token: 0x020004D1 RID: 1233
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerCheckCardAction : GuessJokerActionBase
 {
-	// Token: 0x06006A05 RID: 27141 RVA: 0x0015400E File Offset: 0x0015220E
+	// Token: 0x06003D9A RID: 15770 RVA: 0x0015C936 File Offset: 0x0015AB36
 	public GuessJokerCheckCardAction(List<int> cardIdList)
 	{
 		this.CardIdList = cardIdList;
 	}
 
-	// Token: 0x06006A06 RID: 27142 RVA: 0x00154020 File Offset: 0x00152220
+	// Token: 0x06003D9B RID: 15771 RVA: 0x0015C948 File Offset: 0x0015AB48
 	protected override void OnStart()
 	{
 		GuessJokerGamePlayView gamePlayView = GuessJokerGamePlayModel.Instance.GetGamePlayView();
@@ -88,6 +88,6 @@ public class GuessJokerCheckCardAction : GuessJokerActionBase
 		processNext();
 	}
 
-	// Token: 0x040030DA RID: 12506
+	// Token: 0x04003173 RID: 12659
 	private readonly List<int> CardIdList;
 }

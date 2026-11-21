@@ -2,38 +2,38 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001791 RID: 6033
+// Token: 0x02000C4A RID: 3146
 [NullableContext(1)]
 [Nullable(0)]
 public class ChatRowSaveInfo : IChatRowSaveInfo
 {
-	// Token: 0x17000E8D RID: 3725
-	// (get) Token: 0x0600AF85 RID: 44933 RVA: 0x0027A912 File Offset: 0x00278B12
-	// (set) Token: 0x0600AF86 RID: 44934 RVA: 0x0027A91A File Offset: 0x00278B1A
+	// Token: 0x17000EB0 RID: 3760
+	// (get) Token: 0x0600836D RID: 33645 RVA: 0x00284D96 File Offset: 0x00282F96
+	// (set) Token: 0x0600836E RID: 33646 RVA: 0x00284D9E File Offset: 0x00282F9E
 	public ChatContentType ChatContentType { get; set; }
 
-	// Token: 0x17000E8E RID: 3726
-	// (get) Token: 0x0600AF87 RID: 44935 RVA: 0x0027A923 File Offset: 0x00278B23
-	// (set) Token: 0x0600AF88 RID: 44936 RVA: 0x0027A92B File Offset: 0x00278B2B
+	// Token: 0x17000EB1 RID: 3761
+	// (get) Token: 0x0600836F RID: 33647 RVA: 0x00284DA7 File Offset: 0x00282FA7
+	// (set) Token: 0x06008370 RID: 33648 RVA: 0x00284DAF File Offset: 0x00282FAF
 	public string Content { get; set; }
 
-	// Token: 0x17000E8F RID: 3727
-	// (get) Token: 0x0600AF89 RID: 44937 RVA: 0x0027A934 File Offset: 0x00278B34
-	// (set) Token: 0x0600AF8A RID: 44938 RVA: 0x0027A93C File Offset: 0x00278B3C
+	// Token: 0x17000EB2 RID: 3762
+	// (get) Token: 0x06008371 RID: 33649 RVA: 0x00284DB8 File Offset: 0x00282FB8
+	// (set) Token: 0x06008372 RID: 33650 RVA: 0x00284DC0 File Offset: 0x00282FC0
 	public string MsgId { get; set; }
 
-	// Token: 0x17000E90 RID: 3728
-	// (get) Token: 0x0600AF8B RID: 44939 RVA: 0x0027A945 File Offset: 0x00278B45
-	// (set) Token: 0x0600AF8C RID: 44940 RVA: 0x0027A94D File Offset: 0x00278B4D
+	// Token: 0x17000EB3 RID: 3763
+	// (get) Token: 0x06008373 RID: 33651 RVA: 0x00284DC9 File Offset: 0x00282FC9
+	// (set) Token: 0x06008374 RID: 33652 RVA: 0x00284DD1 File Offset: 0x00282FD1
 	public bool OfflineMsg { get; set; }
 
-	// Token: 0x17000E91 RID: 3729
-	// (get) Token: 0x0600AF8D RID: 44941 RVA: 0x0027A956 File Offset: 0x00278B56
-	// (set) Token: 0x0600AF8E RID: 44942 RVA: 0x0027A95E File Offset: 0x00278B5E
+	// Token: 0x17000EB4 RID: 3764
+	// (get) Token: 0x06008375 RID: 33653 RVA: 0x00284DDA File Offset: 0x00282FDA
+	// (set) Token: 0x06008376 RID: 33654 RVA: 0x00284DE2 File Offset: 0x00282FE2
 	public int SenderUid { get; set; }
 
-	// Token: 0x17000E92 RID: 3730
-	// (get) Token: 0x0600AF8F RID: 44943 RVA: 0x0027A967 File Offset: 0x00278B67
-	// (set) Token: 0x0600AF90 RID: 44944 RVA: 0x0027A96F File Offset: 0x00278B6F
+	// Token: 0x17000EB5 RID: 3765
+	// (get) Token: 0x06008377 RID: 33655 RVA: 0x00284DEB File Offset: 0x00282FEB
+	// (set) Token: 0x06008378 RID: 33656 RVA: 0x00284DF3 File Offset: 0x00282FF3
 	public long UtcTime { get; set; }
 }

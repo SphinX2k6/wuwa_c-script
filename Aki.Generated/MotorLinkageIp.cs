@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E59 RID: 3673
+	// Token: 0x02000F3E RID: 3902
 	public struct MotorLinkageIp : IFlatbufferObject
 	{
-		// Token: 0x17002195 RID: 8597
-		// (get) Token: 0x06009A7F RID: 39551 RVA: 0x002939D9 File Offset: 0x00291BD9
+		// Token: 0x170021FA RID: 8698
+		// (get) Token: 0x0600A09F RID: 41119 RVA: 0x002B13FD File Offset: 0x002AF5FD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009A80 RID: 39552 RVA: 0x002939E6 File Offset: 0x00291BE6
+		// Token: 0x0600A0A0 RID: 41120 RVA: 0x002B140A File Offset: 0x002AF60A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009A81 RID: 39553 RVA: 0x002939F0 File Offset: 0x00291BF0
+		// Token: 0x0600A0A1 RID: 41121 RVA: 0x002B1414 File Offset: 0x002AF614
 		public static MotorLinkageIp GetRootAsMotorLinkageIp(ByteBuffer _bb)
 		{
 			return MotorLinkageIp.GetRootAsMotorLinkageIp(_bb, default(MotorLinkageIp));
 		}
 
-		// Token: 0x06009A82 RID: 39554 RVA: 0x00293A0C File Offset: 0x00291C0C
+		// Token: 0x0600A0A2 RID: 41122 RVA: 0x002B1430 File Offset: 0x002AF630
 		public static MotorLinkageIp GetRootAsMotorLinkageIp(ByteBuffer _bb, MotorLinkageIp obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009A83 RID: 39555 RVA: 0x00293A29 File Offset: 0x00291C29
+		// Token: 0x0600A0A3 RID: 41123 RVA: 0x002B144D File Offset: 0x002AF64D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009A84 RID: 39556 RVA: 0x00293A38 File Offset: 0x00291C38
+		// Token: 0x0600A0A4 RID: 41124 RVA: 0x002B145C File Offset: 0x002AF65C
 		public MotorLinkageIp __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002196 RID: 8598
-		// (get) Token: 0x06009A85 RID: 39557 RVA: 0x00293A48 File Offset: 0x00291C48
+		// Token: 0x170021FB RID: 8699
+		// (get) Token: 0x0600A0A5 RID: 41125 RVA: 0x002B146C File Offset: 0x002AF66C
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002197 RID: 8599
-		// (get) Token: 0x06009A86 RID: 39558 RVA: 0x00293A84 File Offset: 0x00291C84
+		// Token: 0x170021FC RID: 8700
+		// (get) Token: 0x0600A0A6 RID: 41126 RVA: 0x002B14A8 File Offset: 0x002AF6A8
 		public int Sort
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002198 RID: 8600
-		// (get) Token: 0x06009A87 RID: 39559 RVA: 0x00293AC0 File Offset: 0x00291CC0
+		// Token: 0x170021FD RID: 8701
+		// (get) Token: 0x0600A0A7 RID: 41127 RVA: 0x002B14E4 File Offset: 0x002AF6E4
 		public string IpName
 		{
 			get
@@ -94,19 +94,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009A88 RID: 39560 RVA: 0x00293AF7 File Offset: 0x00291CF7
+		// Token: 0x0600A0A8 RID: 41128 RVA: 0x002B151B File Offset: 0x002AF71B
 		public Span<byte> GetIpNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06009A89 RID: 39561 RVA: 0x00293B06 File Offset: 0x00291D06
+		// Token: 0x0600A0A9 RID: 41129 RVA: 0x002B152A File Offset: 0x002AF72A
 		public byte[] GetIpNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06009A8A RID: 39562 RVA: 0x00293B20 File Offset: 0x00291D20
+		// Token: 0x0600A0AA RID: 41130 RVA: 0x002B1544 File Offset: 0x002AF744
 		public int IpStickerList(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -117,8 +117,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002199 RID: 8601
-		// (get) Token: 0x06009A8B RID: 39563 RVA: 0x00293B60 File Offset: 0x00291D60
+		// Token: 0x170021FE RID: 8702
+		// (get) Token: 0x0600A0AB RID: 41131 RVA: 0x002B1584 File Offset: 0x002AF784
 		public int IpStickerListLength
 		{
 			get
@@ -132,20 +132,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009A8C RID: 39564 RVA: 0x00293B8C File Offset: 0x00291D8C
+		// Token: 0x0600A0AC RID: 41132 RVA: 0x002B15B0 File Offset: 0x002AF7B0
 		public Span<int> GetIpStickerListBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06009A8D RID: 39565 RVA: 0x00293B9C File Offset: 0x00291D9C
+		// Token: 0x0600A0AD RID: 41133 RVA: 0x002B15C0 File Offset: 0x002AF7C0
 		public int[] GetIpStickerListArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x1700219A RID: 8602
-		// (get) Token: 0x06009A8E RID: 39566 RVA: 0x00293BB4 File Offset: 0x00291DB4
+		// Token: 0x170021FF RID: 8703
+		// (get) Token: 0x0600A0AE RID: 41134 RVA: 0x002B15D8 File Offset: 0x002AF7D8
 		public string BackgroundPath
 		{
 			get
@@ -159,20 +159,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009A8F RID: 39567 RVA: 0x00293BEC File Offset: 0x00291DEC
+		// Token: 0x0600A0AF RID: 41135 RVA: 0x002B1610 File Offset: 0x002AF810
 		public Span<byte> GetBackgroundPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06009A90 RID: 39568 RVA: 0x00293BFC File Offset: 0x00291DFC
+		// Token: 0x0600A0B0 RID: 41136 RVA: 0x002B1620 File Offset: 0x002AF820
 		public byte[] GetBackgroundPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700219B RID: 8603
-		// (get) Token: 0x06009A91 RID: 39569 RVA: 0x00293C14 File Offset: 0x00291E14
+		// Token: 0x17002200 RID: 8704
+		// (get) Token: 0x0600A0B1 RID: 41137 RVA: 0x002B1638 File Offset: 0x002AF838
 		public string StickerIcon
 		{
 			get
@@ -186,20 +186,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009A92 RID: 39570 RVA: 0x00293C4C File Offset: 0x00291E4C
+		// Token: 0x0600A0B2 RID: 41138 RVA: 0x002B1670 File Offset: 0x002AF870
 		public Span<byte> GetStickerIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x06009A93 RID: 39571 RVA: 0x00293C5C File Offset: 0x00291E5C
+		// Token: 0x0600A0B3 RID: 41139 RVA: 0x002B1680 File Offset: 0x002AF880
 		public byte[] GetStickerIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700219C RID: 8604
-		// (get) Token: 0x06009A94 RID: 39572 RVA: 0x00293C74 File Offset: 0x00291E74
+		// Token: 0x17002201 RID: 8705
+		// (get) Token: 0x0600A0B4 RID: 41140 RVA: 0x002B1698 File Offset: 0x002AF898
 		public string Background
 		{
 			get
@@ -213,20 +213,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009A95 RID: 39573 RVA: 0x00293CAC File Offset: 0x00291EAC
+		// Token: 0x0600A0B5 RID: 41141 RVA: 0x002B16D0 File Offset: 0x002AF8D0
 		public Span<byte> GetBackgroundBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x06009A96 RID: 39574 RVA: 0x00293CBC File Offset: 0x00291EBC
+		// Token: 0x0600A0B6 RID: 41142 RVA: 0x002B16E0 File Offset: 0x002AF8E0
 		public byte[] GetBackgroundArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700219D RID: 8605
-		// (get) Token: 0x06009A97 RID: 39575 RVA: 0x00293CD4 File Offset: 0x00291ED4
+		// Token: 0x17002202 RID: 8706
+		// (get) Token: 0x0600A0B7 RID: 41143 RVA: 0x002B16F8 File Offset: 0x002AF8F8
 		public string LinkageImage
 		{
 			get
@@ -240,37 +240,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009A98 RID: 39576 RVA: 0x00293D0C File Offset: 0x00291F0C
+		// Token: 0x0600A0B8 RID: 41144 RVA: 0x002B1730 File Offset: 0x002AF930
 		public Span<byte> GetLinkageImageBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x06009A99 RID: 39577 RVA: 0x00293D1C File Offset: 0x00291F1C
+		// Token: 0x0600A0B9 RID: 41145 RVA: 0x002B1740 File Offset: 0x002AF940
 		public byte[] GetLinkageImageArray()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06009A9A RID: 39578 RVA: 0x00293D34 File Offset: 0x00291F34
+		// Token: 0x0600A0BA RID: 41146 RVA: 0x002B1758 File Offset: 0x002AF958
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用IpStickerListIter()或GetIpStickerListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] IpStickerList()
+		public int[] IpStickerList()
 		{
-			MotorLinkageIp motorLinkageIp = this;
-			return motorLinkageIp.GetIpStickerListArray() ?? Array.Empty<int>();
+			return this.GetIpStickerListArray();
 		}
 
-		// Token: 0x06009A9B RID: 39579 RVA: 0x00293D58 File Offset: 0x00291F58
+		// Token: 0x0600A0BB RID: 41147 RVA: 0x002B1760 File Offset: 0x002AF960
 		[NullableContext(1)]
-		public readonly IEnumerable<int> IpStickerListIter()
+		public IEnumerable<int> IpStickerListIter()
 		{
 			MotorLinkageIp.<IpStickerListIter>d__38 <IpStickerListIter>d__ = new MotorLinkageIp.<IpStickerListIter>d__38(-2);
 			<IpStickerListIter>d__.<>3__<>4__this = this;
 			return <IpStickerListIter>d__;
 		}
 
-		// Token: 0x04004F02 RID: 20226
+		// Token: 0x040054E7 RID: 21735
 		private Table __p;
 	}
 }

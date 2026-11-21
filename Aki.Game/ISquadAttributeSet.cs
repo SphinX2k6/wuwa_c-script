@@ -1,12 +1,12 @@
 ﻿using System;
 using Aki.Protocol;
 
-// Token: 0x02003296 RID: 12950
+// Token: 0x02002807 RID: 10247
 public interface ISquadAttributeSet
 {
-	// Token: 0x0601C09D RID: 114845
+	// Token: 0x06019CCB RID: 105675
 	float GetBaseValue(ESquadAttributeType attrId);
 
-	// Token: 0x0601C09E RID: 114846
+	// Token: 0x06019CCC RID: 105676
 	float GetCurrentValue(ESquadAttributeType attrId);
 }

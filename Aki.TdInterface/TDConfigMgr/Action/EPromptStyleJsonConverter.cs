@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023E2 RID: 9186
+	// Token: 0x02002679 RID: 9849
 	public class EPromptStyleJsonConverter : JsonConverter<EPromptStyle>
 	{
-		// Token: 0x0600C7F9 RID: 51193 RVA: 0x001D4634 File Offset: 0x001D2834
+		// Token: 0x0600D47C RID: 54396 RVA: 0x001EDDE0 File Offset: 0x001EBFE0
 		public override EPromptStyle Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EPromptStyleExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C7FA RID: 51194 RVA: 0x001D4658 File Offset: 0x001D2858
+		// Token: 0x0600D47D RID: 54397 RVA: 0x001EDE04 File Offset: 0x001EC004
 		public override void Write(Utf8JsonWriter writer, EPromptStyle value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

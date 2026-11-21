@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001259 RID: 4697
+	// Token: 0x02001399 RID: 5017
 	public class EMotorFightSystemVarJsonConverter : JsonConverter<EMotorFightSystemVar>
 	{
-		// Token: 0x06006A39 RID: 27193 RVA: 0x000FEAF8 File Offset: 0x000FCCF8
+		// Token: 0x0600708C RID: 28812 RVA: 0x0010C724 File Offset: 0x0010A924
 		public override EMotorFightSystemVar Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return EMotorFightSystemVarExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006A3A RID: 27194 RVA: 0x000FEB1C File Offset: 0x000FCD1C
+		// Token: 0x0600708D RID: 28813 RVA: 0x0010C748 File Offset: 0x0010A948
 		public override void Write(Utf8JsonWriter writer, EMotorFightSystemVar value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

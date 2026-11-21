@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Teleport;
 using UnrealEngine;
 
-// Token: 0x02003096 RID: 12438
+// Token: 0x020025ED RID: 9709
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterWalkOnAirComponent : EntityComponent
 {
-	// Token: 0x0601A94C RID: 108876 RVA: 0x00722008 File Offset: 0x00720208
+	// Token: 0x06018341 RID: 99137 RVA: 0x00748024 File Offset: 0x00746224
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -32,7 +31,7 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A94D RID: 108877 RVA: 0x00722094 File Offset: 0x00720294
+	// Token: 0x06018342 RID: 99138 RVA: 0x007480B0 File Offset: 0x007462B0
 	private void RegisterEvent()
 	{
 		this.OnWalkOnAirTagNewOrRemove = this.TagComp.ListenForTagAddOrRemove(new int?(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.空中行走"]), new BaseTagComponent.TTagSwitchedCallback(this.OnStateTagsChanged), null);
@@ -44,7 +43,7 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		EventSystem.Instance.Add<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete));
 	}
 
-	// Token: 0x0601A94E RID: 108878 RVA: 0x007221B9 File Offset: 0x007203B9
+	// Token: 0x06018343 RID: 99139 RVA: 0x007481D5 File Offset: 0x007463D5
 	private void OnDoSkill(int tagId, bool tagExists)
 	{
 		if (tagExists && this.IsWalkOnAir)
@@ -53,7 +52,7 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A94F RID: 108879 RVA: 0x007221D0 File Offset: 0x007203D0
+	// Token: 0x06018344 RID: 99140 RVA: 0x007481EC File Offset: 0x007463EC
 	private void UnregisterEvent()
 	{
 		ITagTask onWalkOnAirTagNewOrRemove = this.OnWalkOnAirTagNewOrRemove;
@@ -77,7 +76,7 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		EventSystem.Instance.Remove<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete));
 	}
 
-	// Token: 0x0601A950 RID: 108880 RVA: 0x00722292 File Offset: 0x00720492
+	// Token: 0x06018345 RID: 99141 RVA: 0x007482AE File Offset: 0x007464AE
 	private void OnStateTagsChanged(int tagId, bool tagExists)
 	{
 		this.IsActive = tagExists;
@@ -87,7 +86,7 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A951 RID: 108881 RVA: 0x007222AA File Offset: 0x007204AA
+	// Token: 0x06018346 RID: 99142 RVA: 0x007482C6 File Offset: 0x007464C6
 	private void OnForegroundTagsChanged(int tagId, bool tagExists)
 	{
 		if (!tagExists)
@@ -96,7 +95,7 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A952 RID: 108882 RVA: 0x007222B6 File Offset: 0x007204B6
+	// Token: 0x06018347 RID: 99143 RVA: 0x007482D2 File Offset: 0x007464D2
 	private void OnPositionStateChanged(ECharPositionState oldPositionState, ECharPositionState newPositionState)
 	{
 		if (newPositionState == ECharPositionState.Ground && this.IsWalkOnAir)
@@ -105,7 +104,7 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A953 RID: 108883 RVA: 0x007222D0 File Offset: 0x007204D0
+	// Token: 0x06018348 RID: 99144 RVA: 0x007482EC File Offset: 0x007464EC
 	[NullableContext(1)]
 	private void OnStateInherit(Entity other, bool notInheritMoveAndAnim)
 	{
@@ -120,7 +119,7 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A954 RID: 108884 RVA: 0x0072231E File Offset: 0x0072051E
+	// Token: 0x06018349 RID: 99145 RVA: 0x0074833A File Offset: 0x0074653A
 	private void OnTeleportComplete(TeleportContext teleportContext)
 	{
 		if (!this.IsActive || !this.IsWalkOnAir)
@@ -130,7 +129,7 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		this.StateComp.SetPositionSubState(ECharPositionSubState.WalkOnAir, false);
 	}
 
-	// Token: 0x0601A955 RID: 108885 RVA: 0x00722340 File Offset: 0x00720540
+	// Token: 0x0601834A RID: 99146 RVA: 0x0074835C File Offset: 0x0074655C
 	private void OnCharacterMovementModeChanged(int charId, EMovementMode prevMovementMode, EMovementMode newMovementMode, byte prevCustomMode, byte newCustomMode)
 	{
 		if (!this.IsActive || this.ChangeStateFrame >= Time.Instance.Frame)
@@ -158,7 +157,7 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A956 RID: 108886 RVA: 0x00722434 File Offset: 0x00720634
+	// Token: 0x0601834B RID: 99147 RVA: 0x00748450 File Offset: 0x00746650
 	private void CreateOneAirFloor(int index)
 	{
 		AActor aactor = ActorSystem.Instance.Get(AActor.StaticClass(), MathUtils.Instance.DefaultTransformDouble, null, true);
@@ -184,7 +183,7 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		this.BoxComp[index] = uboxComponent;
 	}
 
-	// Token: 0x0601A957 RID: 108887 RVA: 0x00722528 File Offset: 0x00720728
+	// Token: 0x0601834C RID: 99148 RVA: 0x00748544 File Offset: 0x00746744
 	private void CreateAirFloor()
 	{
 		if (this.AirFloor.Count > 0)
@@ -193,21 +192,27 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		}
 		this.ValidAirFloorIndex = 0;
 		this.CreateOneAirFloor(0);
-		UBoxComponent uboxComponent = this.BoxComp.ElementAtOrDefault(0);
-		if (uboxComponent != null)
+		if (this.BoxComp.Count > 0)
 		{
-			uboxComponent.SetCollisionEnabled(ECollisionEnabled.QueryOnly);
+			UBoxComponent uboxComponent = this.BoxComp[0];
+			if (uboxComponent != null)
+			{
+				uboxComponent.SetCollisionEnabled(ECollisionEnabled.QueryOnly);
+			}
 		}
 		this.CreateOneAirFloor(1);
-		UBoxComponent uboxComponent2 = this.BoxComp.ElementAtOrDefault(1);
-		if (uboxComponent2 == null)
+		if (this.BoxComp.Count > 1)
 		{
-			return;
+			UBoxComponent uboxComponent2 = this.BoxComp[1];
+			if (uboxComponent2 == null)
+			{
+				return;
+			}
+			uboxComponent2.SetCollisionEnabled(ECollisionEnabled.NoCollision);
 		}
-		uboxComponent2.SetCollisionEnabled(ECollisionEnabled.NoCollision);
 	}
 
-	// Token: 0x0601A958 RID: 108888 RVA: 0x00722588 File Offset: 0x00720788
+	// Token: 0x0601834D RID: 99149 RVA: 0x007485C0 File Offset: 0x007467C0
 	private void SetIsWalkOnAir(bool bStart)
 	{
 		if (bStart == this.IsWalkOnAir)
@@ -222,23 +227,29 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		if (bStart)
 		{
 			this.UpdateAirFloorPos(false);
-			UBoxComponent uboxComponent = this.BoxComp.ElementAtOrDefault(this.ValidAirFloorIndex);
-			if (uboxComponent != null)
+			if (this.ValidAirFloorIndex >= 0 && this.ValidAirFloorIndex < this.BoxComp.Count)
 			{
-				uboxComponent.SetCollisionEnabled(ECollisionEnabled.QueryOnly);
+				UBoxComponent uboxComponent = this.BoxComp[this.ValidAirFloorIndex];
+				if (uboxComponent != null)
+				{
+					uboxComponent.SetCollisionEnabled(ECollisionEnabled.QueryOnly);
+				}
 			}
 			this.StateComp.SetPositionSubState(ECharPositionSubState.WalkOnAir, false);
 			return;
 		}
-		UBoxComponent uboxComponent2 = this.BoxComp.ElementAtOrDefault(this.ValidAirFloorIndex);
-		if (uboxComponent2 != null)
+		if (this.ValidAirFloorIndex >= 0 && this.ValidAirFloorIndex < this.BoxComp.Count)
 		{
-			uboxComponent2.SetCollisionEnabled(ECollisionEnabled.NoCollision);
+			UBoxComponent uboxComponent2 = this.BoxComp[this.ValidAirFloorIndex];
+			if (uboxComponent2 != null)
+			{
+				uboxComponent2.SetCollisionEnabled(ECollisionEnabled.NoCollision);
+			}
 		}
 		this.StateComp.SetPositionSubState(ECharPositionSubState.None, false);
 	}
 
-	// Token: 0x0601A959 RID: 108889 RVA: 0x00722610 File Offset: 0x00720810
+	// Token: 0x0601834E RID: 99150 RVA: 0x00748680 File Offset: 0x00746880
 	private void UpdateAirFloorPos(bool bUseRecordHeight = false)
 	{
 		Vector floorLocation = this.ActorComp.FloorLocation;
@@ -255,32 +266,41 @@ public class CharacterWalkOnAirComponent : EntityComponent
 			this.AirFloorHeight = floorLocation.DotProduct(gravityDirectForActor);
 		}
 		FHitResult fhitResult = new FHitResult();
-		AActor aactor = this.AirFloor.ElementAtOrDefault(this.ValidAirFloorIndex);
-		if (aactor == null)
+		if (this.ValidAirFloorIndex >= 0 && this.ValidAirFloorIndex < this.AirFloor.Count)
 		{
-			return;
+			AActor aactor = this.AirFloor[this.ValidAirFloorIndex];
+			if (aactor == null)
+			{
+				return;
+			}
+			aactor.D_K2_SetActorLocationAndRotation(floorLocation.ToUeVector(false), this.ActorComp.ActorRotation, false, ref fhitResult, false);
 		}
-		aactor.D_K2_SetActorLocationAndRotation(floorLocation.ToUeVector(false), this.ActorComp.ActorRotation, false, ref fhitResult, false);
 	}
 
-	// Token: 0x0601A95A RID: 108890 RVA: 0x007226D4 File Offset: 0x007208D4
+	// Token: 0x0601834F RID: 99151 RVA: 0x00748760 File Offset: 0x00746960
 	private void SwitchAirFloor()
 	{
-		UBoxComponent uboxComponent = this.BoxComp.ElementAtOrDefault(this.ValidAirFloorIndex);
-		if (uboxComponent != null)
+		if (this.ValidAirFloorIndex >= 0 && this.ValidAirFloorIndex < this.BoxComp.Count)
 		{
-			uboxComponent.SetCollisionEnabled(ECollisionEnabled.NoCollision);
+			UBoxComponent uboxComponent = this.BoxComp[this.ValidAirFloorIndex];
+			if (uboxComponent != null)
+			{
+				uboxComponent.SetCollisionEnabled(ECollisionEnabled.NoCollision);
+			}
 		}
 		this.ValidAirFloorIndex ^= 1;
-		UBoxComponent uboxComponent2 = this.BoxComp.ElementAtOrDefault(this.ValidAirFloorIndex);
-		if (uboxComponent2 == null)
+		if (this.ValidAirFloorIndex >= 0 && this.ValidAirFloorIndex < this.BoxComp.Count)
 		{
-			return;
+			UBoxComponent uboxComponent2 = this.BoxComp[this.ValidAirFloorIndex];
+			if (uboxComponent2 == null)
+			{
+				return;
+			}
+			uboxComponent2.SetCollisionEnabled(ECollisionEnabled.QueryOnly);
 		}
-		uboxComponent2.SetCollisionEnabled(ECollisionEnabled.QueryOnly);
 	}
 
-	// Token: 0x0601A95B RID: 108891 RVA: 0x00722728 File Offset: 0x00720928
+	// Token: 0x06018350 RID: 99152 RVA: 0x007487EC File Offset: 0x007469EC
 	protected override void OnTick(float delta)
 	{
 		if (!this.IsWalkOnAir)
@@ -303,14 +323,14 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A95C RID: 108892 RVA: 0x007227C6 File Offset: 0x007209C6
+	// Token: 0x06018351 RID: 99153 RVA: 0x0074888A File Offset: 0x00746A8A
 	protected override bool OnEnd()
 	{
 		this.UnregisterEvent();
 		return true;
 	}
 
-	// Token: 0x0601A95D RID: 108893 RVA: 0x007227D0 File Offset: 0x007209D0
+	// Token: 0x06018352 RID: 99154 RVA: 0x00748894 File Offset: 0x00746A94
 	protected override bool OnClear()
 	{
 		foreach (AActor actor in this.AirFloor)
@@ -322,7 +342,7 @@ public class CharacterWalkOnAirComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A95E RID: 108894 RVA: 0x00722848 File Offset: 0x00720A48
+	// Token: 0x06018353 RID: 99155 RVA: 0x0074890C File Offset: 0x00746B0C
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -331,192 +351,190 @@ public class CharacterWalkOnAirComponent : EntityComponent
 			return false;
 		}
 		CharacterWalkOnAirComponent characterWalkOnAirComponent = (CharacterWalkOnAirComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterWalkOnAirComponent.ActorComp == null)
 		{
-			if (characterWalkOnAirComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("TagComp"))
-		{
-			if (characterWalkOnAirComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OnWalkOnAirTagNewOrRemove"))
-		{
-			if (characterWalkOnAirComponent.OnWalkOnAirTagNewOrRemove == null)
-			{
-				this.OnWalkOnAirTagNewOrRemove = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnWalkOnAirTagNewOrRemove), "OnWalkOnAirTagNewOrRemove"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OnForegroundTagNewOrRemove"))
-		{
-			if (characterWalkOnAirComponent.OnForegroundTagNewOrRemove == null)
-			{
-				this.OnForegroundTagNewOrRemove = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnForegroundTagNewOrRemove), "OnForegroundTagNewOrRemove"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OnSkillTagNewOrRemove"))
-		{
-			if (characterWalkOnAirComponent.OnSkillTagNewOrRemove == null)
-			{
-				this.OnSkillTagNewOrRemove = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnSkillTagNewOrRemove), "OnSkillTagNewOrRemove"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsActive"))
-		{
-			this.IsActive = characterWalkOnAirComponent.IsActive;
-		}
-		if (base.CanResetComponentProperty("IsWalkOnAir"))
-		{
-			this.IsWalkOnAir = characterWalkOnAirComponent.IsWalkOnAir;
-		}
-		if (base.CanResetComponentProperty("AirFloor"))
-		{
-			if (characterWalkOnAirComponent.AirFloor == null)
-			{
-				this.AirFloor = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<AActor>>(this.AirFloor), "AirFloor"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BoxComp"))
-		{
-			if (characterWalkOnAirComponent.BoxComp == null)
-			{
-				this.BoxComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<UBoxComponent>>(this.BoxComp), "BoxComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ValidAirFloorIndex"))
-		{
-			this.ValidAirFloorIndex = characterWalkOnAirComponent.ValidAirFloorIndex;
-		}
-		if (base.CanResetComponentProperty("AirFloorPos") && characterWalkOnAirComponent.AirFloorPos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.AirFloorPos), "AirFloorPos"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("AirFloorHeight"))
+		if (characterWalkOnAirComponent.TagComp == null)
 		{
-			this.AirFloorHeight = characterWalkOnAirComponent.AirFloorHeight;
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("BaseCharacter"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
-			if (characterWalkOnAirComponent.BaseCharacter == null)
-			{
-				this.BaseCharacter = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsBaseCharacter>(this.BaseCharacter), "BaseCharacter"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("StateComp"))
+		if (characterWalkOnAirComponent.OnWalkOnAirTagNewOrRemove == null)
 		{
-			if (characterWalkOnAirComponent.StateComp == null)
-			{
-				this.StateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.StateComp), "StateComp"))
-			{
-				return false;
-			}
+			this.OnWalkOnAirTagNewOrRemove = null;
 		}
-		if (base.CanResetComponentProperty("ChangeStateFrame"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnWalkOnAirTagNewOrRemove), "OnWalkOnAirTagNewOrRemove"))
 		{
-			this.ChangeStateFrame = characterWalkOnAirComponent.ChangeStateFrame;
+			return false;
 		}
+		if (characterWalkOnAirComponent.OnForegroundTagNewOrRemove == null)
+		{
+			this.OnForegroundTagNewOrRemove = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnForegroundTagNewOrRemove), "OnForegroundTagNewOrRemove"))
+		{
+			return false;
+		}
+		if (characterWalkOnAirComponent.OnSkillTagNewOrRemove == null)
+		{
+			this.OnSkillTagNewOrRemove = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnSkillTagNewOrRemove), "OnSkillTagNewOrRemove"))
+		{
+			return false;
+		}
+		this.IsActive = characterWalkOnAirComponent.IsActive;
+		this.IsWalkOnAir = characterWalkOnAirComponent.IsWalkOnAir;
+		if (characterWalkOnAirComponent.AirFloor == null)
+		{
+			this.AirFloor = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AirFloor), "AirFloor"))
+		{
+			return false;
+		}
+		if (characterWalkOnAirComponent.BoxComp == null)
+		{
+			this.BoxComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BoxComp), "BoxComp"))
+		{
+			return false;
+		}
+		this.ValidAirFloorIndex = characterWalkOnAirComponent.ValidAirFloorIndex;
+		if (characterWalkOnAirComponent.AirFloorPos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.AirFloorPos), "AirFloorPos"))
+		{
+			return false;
+		}
+		this.AirFloorHeight = characterWalkOnAirComponent.AirFloorHeight;
+		if (characterWalkOnAirComponent.BaseCharacter == null)
+		{
+			this.BaseCharacter = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BaseCharacter), "BaseCharacter"))
+		{
+			return false;
+		}
+		if (characterWalkOnAirComponent.StateComp == null)
+		{
+			this.StateComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
+		{
+			return false;
+		}
+		this.ChangeStateFrame = characterWalkOnAirComponent.ChangeStateFrame;
 		return true;
 	}
 
-	// Token: 0x0400CC82 RID: 52354
+	// Token: 0x170025F8 RID: 9720
+	// (get) Token: 0x06018354 RID: 99156 RVA: 0x00748B0D File Offset: 0x00746D0D
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025F9 RID: 9721
+	// (get) Token: 0x06018355 RID: 99157 RVA: 0x00748B10 File Offset: 0x00746D10
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025FA RID: 9722
+	// (get) Token: 0x06018356 RID: 99158 RVA: 0x00748B13 File Offset: 0x00746D13
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025FB RID: 9723
+	// (get) Token: 0x06018357 RID: 99159 RVA: 0x00748B16 File Offset: 0x00746D16
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D065 RID: 53349
 	private const int STRENGTH_THREADHOLD = 10;
 
-	// Token: 0x0400CC83 RID: 52355
+	// Token: 0x0400D066 RID: 53350
 	private const int FRAME_INTERNAL = 2;
 
-	// Token: 0x0400CC84 RID: 52356
+	// Token: 0x0400D067 RID: 53351
 	private const int BOX_LENGTH = 200;
 
-	// Token: 0x0400CC85 RID: 52357
+	// Token: 0x0400D068 RID: 53352
 	private const int SWITCH_DISTANCE_SQUARE = 22500;
 
-	// Token: 0x0400CC86 RID: 52358
+	// Token: 0x0400D069 RID: 53353
 	private static readonly FVectorDouble DefaultBoxExtent = new FVectorDouble(200.0, 200.0, 1.0);
 
-	// Token: 0x0400CC87 RID: 52359
+	// Token: 0x0400D06A RID: 53354
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CC88 RID: 52360
+	// Token: 0x0400D06B RID: 53355
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400CC89 RID: 52361
+	// Token: 0x0400D06C RID: 53356
 	private ITagTask OnWalkOnAirTagNewOrRemove;
 
-	// Token: 0x0400CC8A RID: 52362
+	// Token: 0x0400D06D RID: 53357
 	private ITagTask OnForegroundTagNewOrRemove;
 
-	// Token: 0x0400CC8B RID: 52363
+	// Token: 0x0400D06E RID: 53358
 	private ITagTask OnSkillTagNewOrRemove;
 
-	// Token: 0x0400CC8C RID: 52364
+	// Token: 0x0400D06F RID: 53359
 	private bool IsActive;
 
-	// Token: 0x0400CC8D RID: 52365
+	// Token: 0x0400D070 RID: 53360
 	private bool IsWalkOnAir;
 
-	// Token: 0x0400CC8E RID: 52366
+	// Token: 0x0400D071 RID: 53361
 	[Nullable(1)]
 	private List<AActor> AirFloor = new List<AActor>();
 
-	// Token: 0x0400CC8F RID: 52367
+	// Token: 0x0400D072 RID: 53362
 	[Nullable(1)]
 	private List<UBoxComponent> BoxComp = new List<UBoxComponent>();
 
-	// Token: 0x0400CC90 RID: 52368
+	// Token: 0x0400D073 RID: 53363
 	private int ValidAirFloorIndex;
 
-	// Token: 0x0400CC91 RID: 52369
+	// Token: 0x0400D074 RID: 53364
 	[Nullable(1)]
 	private readonly Vector AirFloorPos = Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x0400CC92 RID: 52370
+	// Token: 0x0400D075 RID: 53365
 	private double AirFloorHeight;
 
-	// Token: 0x0400CC93 RID: 52371
+	// Token: 0x0400D076 RID: 53366
 	private TsBaseCharacter BaseCharacter;
 
-	// Token: 0x0400CC94 RID: 52372
+	// Token: 0x0400D077 RID: 53367
 	private CharacterUnifiedStateComponent StateComp;
 
-	// Token: 0x0400CC95 RID: 52373
+	// Token: 0x0400D078 RID: 53368
 	private int ChangeStateFrame;
 }

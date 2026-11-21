@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000961 RID: 2401
+	// Token: 0x02000950 RID: 2384
 	[NetMessage(EMessageId.LordGymInfoResponse)]
 	public sealed class LordGymInfoResponse : IMessage<LordGymInfoResponse>, IMessage, IEquatable<LordGymInfoResponse>, IDeepCloneable<LordGymInfoResponse>, IBufferMessage
 	{
-		// Token: 0x0600D383 RID: 54147 RVA: 0x001F277E File Offset: 0x001F097E
+		// Token: 0x0600D269 RID: 53865 RVA: 0x001F059A File Offset: 0x001EE79A
 		[NullableContext(1)]
 		public static LordGymInfoResponse Create()
 		{
 			return new LordGymInfoResponse();
 		}
 
-		// Token: 0x17002AD3 RID: 10963
-		// (get) Token: 0x0600D384 RID: 54148 RVA: 0x001F2785 File Offset: 0x001F0985
+		// Token: 0x17002A95 RID: 10901
+		// (get) Token: 0x0600D26A RID: 53866 RVA: 0x001F05A1 File Offset: 0x001EE7A1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002AD4 RID: 10964
-		// (get) Token: 0x0600D385 RID: 54149 RVA: 0x001F2788 File Offset: 0x001F0988
+		// Token: 0x17002A96 RID: 10902
+		// (get) Token: 0x0600D26B RID: 53867 RVA: 0x001F05A4 File Offset: 0x001EE7A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D386 RID: 54150 RVA: 0x001F278F File Offset: 0x001F098F
+		// Token: 0x0600D26C RID: 53868 RVA: 0x001F05AB File Offset: 0x001EE7AB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LordGymInfoResponse()
 		{
 		}
 
-		// Token: 0x0600D387 RID: 54151 RVA: 0x001F27D0 File Offset: 0x001F09D0
+		// Token: 0x0600D26D RID: 53869 RVA: 0x001F05EC File Offset: 0x001EE7EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LordGymInfoResponse(LordGymInfoResponse other) : this()
@@ -63,7 +63,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600D388 RID: 54152 RVA: 0x001F2849 File Offset: 0x001F0A49
+		// Token: 0x0600D26E RID: 53870 RVA: 0x001F0665 File Offset: 0x001EE865
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LordGymInfoResponse Clone()
@@ -71,8 +71,8 @@ namespace Aki.Protocol
 			return new LordGymInfoResponse(this);
 		}
 
-		// Token: 0x17002AD5 RID: 10965
-		// (get) Token: 0x0600D389 RID: 54153 RVA: 0x001F2851 File Offset: 0x001F0A51
+		// Token: 0x17002A97 RID: 10903
+		// (get) Token: 0x0600D26F RID: 53871 RVA: 0x001F066D File Offset: 0x001EE86D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockLoadGymIds
@@ -83,8 +83,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002AD6 RID: 10966
-		// (get) Token: 0x0600D38A RID: 54154 RVA: 0x001F2859 File Offset: 0x001F0A59
+		// Token: 0x17002A98 RID: 10904
+		// (get) Token: 0x0600D270 RID: 53872 RVA: 0x001F0675 File Offset: 0x001EE875
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> ReadLoadGymIds
@@ -95,8 +95,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002AD7 RID: 10967
-		// (get) Token: 0x0600D38B RID: 54155 RVA: 0x001F2861 File Offset: 0x001F0A61
+		// Token: 0x17002A99 RID: 10905
+		// (get) Token: 0x0600D271 RID: 53873 RVA: 0x001F067D File Offset: 0x001EE87D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<LordGymPassRecord> LordGymPassRecords
@@ -107,8 +107,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002AD8 RID: 10968
-		// (get) Token: 0x0600D38C RID: 54156 RVA: 0x001F2869 File Offset: 0x001F0A69
+		// Token: 0x17002A9A RID: 10906
+		// (get) Token: 0x0600D272 RID: 53874 RVA: 0x001F0685 File Offset: 0x001EE885
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<LordGymEntranceInfo> EntranceInfos
@@ -119,8 +119,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002AD9 RID: 10969
-		// (get) Token: 0x0600D38D RID: 54157 RVA: 0x001F2871 File Offset: 0x001F0A71
+		// Token: 0x17002A9B RID: 10907
+		// (get) Token: 0x0600D273 RID: 53875 RVA: 0x001F068D File Offset: 0x001EE88D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<LordGymGroupInfo> LordGymGroupInfos
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D38E RID: 54158 RVA: 0x001F2879 File Offset: 0x001F0A79
+		// Token: 0x0600D274 RID: 53876 RVA: 0x001F0695 File Offset: 0x001EE895
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return this.Equals(other as LordGymInfoResponse);
 		}
 
-		// Token: 0x0600D38F RID: 54159 RVA: 0x001F2888 File Offset: 0x001F0A88
+		// Token: 0x0600D275 RID: 53877 RVA: 0x001F06A4 File Offset: 0x001EE8A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(LordGymInfoResponse other)
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.unlockLoadGymIds_.Equals(other.unlockLoadGymIds_) && this.readLoadGymIds_.Equals(other.readLoadGymIds_) && this.lordGymPassRecords_.Equals(other.lordGymPassRecords_) && this.entranceInfos_.Equals(other.entranceInfos_) && this.lordGymGroupInfos_.Equals(other.lordGymGroupInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600D390 RID: 54160 RVA: 0x001F291C File Offset: 0x001F0B1C
+		// Token: 0x0600D276 RID: 53878 RVA: 0x001F0738 File Offset: 0x001EE938
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D391 RID: 54161 RVA: 0x001F2988 File Offset: 0x001F0B88
+		// Token: 0x0600D277 RID: 53879 RVA: 0x001F07A4 File Offset: 0x001EE9A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -173,7 +173,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600D392 RID: 54162 RVA: 0x001F2995 File Offset: 0x001F0B95
+		// Token: 0x0600D278 RID: 53880 RVA: 0x001F07B1 File Offset: 0x001EE9B1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -181,23 +181,23 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600D393 RID: 54163 RVA: 0x001F29A0 File Offset: 0x001F0BA0
+		// Token: 0x0600D279 RID: 53881 RVA: 0x001F07BC File Offset: 0x001EE9BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.lordGymGroupInfos_.WriteTo(ref output, LordGymInfoResponse._repeated_lordGymGroupInfos_codec);
-			this.readLoadGymIds_.WriteTo(ref output, LordGymInfoResponse._repeated_readLoadGymIds_codec);
 			this.entranceInfos_.WriteTo(ref output, LordGymInfoResponse._repeated_entranceInfos_codec);
-			this.lordGymPassRecords_.WriteTo(ref output, LordGymInfoResponse._repeated_lordGymPassRecords_codec);
+			this.readLoadGymIds_.WriteTo(ref output, LordGymInfoResponse._repeated_readLoadGymIds_codec);
+			this.lordGymGroupInfos_.WriteTo(ref output, LordGymInfoResponse._repeated_lordGymGroupInfos_codec);
 			this.unlockLoadGymIds_.WriteTo(ref output, LordGymInfoResponse._repeated_unlockLoadGymIds_codec);
+			this.lordGymPassRecords_.WriteTo(ref output, LordGymInfoResponse._repeated_lordGymPassRecords_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0600D394 RID: 54164 RVA: 0x001F2A18 File Offset: 0x001F0C18
+		// Token: 0x0600D27A RID: 53882 RVA: 0x001F0834 File Offset: 0x001EEA34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -215,7 +215,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D395 RID: 54165 RVA: 0x001F2AA0 File Offset: 0x001F0CA0
+		// Token: 0x0600D27B RID: 53883 RVA: 0x001F08BC File Offset: 0x001EEABC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(LordGymInfoResponse other)
@@ -232,7 +232,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600D396 RID: 54166 RVA: 0x001F2B1D File Offset: 0x001F0D1D
+		// Token: 0x0600D27C RID: 53884 RVA: 0x001F0939 File Offset: 0x001EEB39
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -240,7 +240,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600D397 RID: 54167 RVA: 0x001F2B28 File Offset: 0x001F0D28
+		// Token: 0x0600D27D RID: 53885 RVA: 0x001F0944 File Offset: 0x001EEB44
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -252,87 +252,93 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 34U)
+				if (num > 90U)
 				{
-					if (num == 10U)
+					if (num <= 104U)
 					{
-						this.lordGymGroupInfos_.AddEntriesFrom(ref input, LordGymInfoResponse._repeated_lordGymGroupInfos_codec);
-						continue;
+						if (num == 98U)
+						{
+							this.lordGymGroupInfos_.AddEntriesFrom(ref input, LordGymInfoResponse._repeated_lordGymGroupInfos_codec);
+							continue;
+						}
+						if (num != 104U)
+						{
+							goto IL_3D;
+						}
 					}
-					if (num == 32U || num == 34U)
+					else if (num != 106U)
 					{
-						this.readLoadGymIds_.AddEntriesFrom(ref input, LordGymInfoResponse._repeated_readLoadGymIds_codec);
-						continue;
-					}
-				}
-				else if (num <= 98U)
-				{
-					if (num == 50U)
-					{
-						this.entranceInfos_.AddEntriesFrom(ref input, LordGymInfoResponse._repeated_entranceInfos_codec);
-						continue;
-					}
-					if (num == 98U)
-					{
+						if (num != 122U)
+						{
+							goto IL_3D;
+						}
 						this.lordGymPassRecords_.AddEntriesFrom(ref input, LordGymInfoResponse._repeated_lordGymPassRecords_codec);
 						continue;
 					}
-				}
-				else if (num == 120U || num == 122U)
-				{
 					this.unlockLoadGymIds_.AddEntriesFrom(ref input, LordGymInfoResponse._repeated_unlockLoadGymIds_codec);
 					continue;
 				}
+				if (num == 42U)
+				{
+					this.entranceInfos_.AddEntriesFrom(ref input, LordGymInfoResponse._repeated_entranceInfos_codec);
+					continue;
+				}
+				if (num == 88U || num == 90U)
+				{
+					this.readLoadGymIds_.AddEntriesFrom(ref input, LordGymInfoResponse._repeated_readLoadGymIds_codec);
+					continue;
+				}
+				IL_3D:
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x040058D8 RID: 22744
+		// Token: 0x040058E1 RID: 22753
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040058D9 RID: 22745
-		public const int UnlockLoadGymIdsFieldNumber = 15;
-
-		// Token: 0x040058DA RID: 22746
-		private static readonly FieldCodec<int> _repeated_unlockLoadGymIds_codec = FieldCodec.ForInt32(122U);
-
-		// Token: 0x040058DB RID: 22747
-		private readonly RepeatedField<int> unlockLoadGymIds_ = new RepeatedField<int>();
-
-		// Token: 0x040058DC RID: 22748
-		public const int ReadLoadGymIdsFieldNumber = 4;
-
-		// Token: 0x040058DD RID: 22749
-		private static readonly FieldCodec<int> _repeated_readLoadGymIds_codec = FieldCodec.ForInt32(34U);
-
-		// Token: 0x040058DE RID: 22750
-		private readonly RepeatedField<int> readLoadGymIds_ = new RepeatedField<int>();
-
-		// Token: 0x040058DF RID: 22751
-		public const int LordGymPassRecordsFieldNumber = 12;
-
-		// Token: 0x040058E0 RID: 22752
-		private static readonly FieldCodec<LordGymPassRecord> _repeated_lordGymPassRecords_codec = FieldCodec.ForMessage<LordGymPassRecord>(98U, LordGymPassRecord.Parser);
-
-		// Token: 0x040058E1 RID: 22753
-		private readonly RepeatedField<LordGymPassRecord> lordGymPassRecords_ = new RepeatedField<LordGymPassRecord>();
-
 		// Token: 0x040058E2 RID: 22754
-		public const int EntranceInfosFieldNumber = 6;
+		public const int UnlockLoadGymIdsFieldNumber = 13;
 
 		// Token: 0x040058E3 RID: 22755
-		private static readonly FieldCodec<LordGymEntranceInfo> _repeated_entranceInfos_codec = FieldCodec.ForMessage<LordGymEntranceInfo>(50U, LordGymEntranceInfo.Parser);
+		private static readonly FieldCodec<int> _repeated_unlockLoadGymIds_codec = FieldCodec.ForInt32(106U);
 
 		// Token: 0x040058E4 RID: 22756
-		private readonly RepeatedField<LordGymEntranceInfo> entranceInfos_ = new RepeatedField<LordGymEntranceInfo>();
+		private readonly RepeatedField<int> unlockLoadGymIds_ = new RepeatedField<int>();
 
 		// Token: 0x040058E5 RID: 22757
-		public const int LordGymGroupInfosFieldNumber = 1;
+		public const int ReadLoadGymIdsFieldNumber = 11;
 
 		// Token: 0x040058E6 RID: 22758
-		private static readonly FieldCodec<LordGymGroupInfo> _repeated_lordGymGroupInfos_codec = FieldCodec.ForMessage<LordGymGroupInfo>(10U, LordGymGroupInfo.Parser);
+		private static readonly FieldCodec<int> _repeated_readLoadGymIds_codec = FieldCodec.ForInt32(90U);
 
 		// Token: 0x040058E7 RID: 22759
+		private readonly RepeatedField<int> readLoadGymIds_ = new RepeatedField<int>();
+
+		// Token: 0x040058E8 RID: 22760
+		public const int LordGymPassRecordsFieldNumber = 15;
+
+		// Token: 0x040058E9 RID: 22761
+		private static readonly FieldCodec<LordGymPassRecord> _repeated_lordGymPassRecords_codec = FieldCodec.ForMessage<LordGymPassRecord>(122U, LordGymPassRecord.Parser);
+
+		// Token: 0x040058EA RID: 22762
+		private readonly RepeatedField<LordGymPassRecord> lordGymPassRecords_ = new RepeatedField<LordGymPassRecord>();
+
+		// Token: 0x040058EB RID: 22763
+		public const int EntranceInfosFieldNumber = 5;
+
+		// Token: 0x040058EC RID: 22764
+		private static readonly FieldCodec<LordGymEntranceInfo> _repeated_entranceInfos_codec = FieldCodec.ForMessage<LordGymEntranceInfo>(42U, LordGymEntranceInfo.Parser);
+
+		// Token: 0x040058ED RID: 22765
+		private readonly RepeatedField<LordGymEntranceInfo> entranceInfos_ = new RepeatedField<LordGymEntranceInfo>();
+
+		// Token: 0x040058EE RID: 22766
+		public const int LordGymGroupInfosFieldNumber = 12;
+
+		// Token: 0x040058EF RID: 22767
+		private static readonly FieldCodec<LordGymGroupInfo> _repeated_lordGymGroupInfos_codec = FieldCodec.ForMessage<LordGymGroupInfo>(98U, LordGymGroupInfo.Parser);
+
+		// Token: 0x040058F0 RID: 22768
 		private readonly RepeatedField<LordGymGroupInfo> lordGymGroupInfos_ = new RepeatedField<LordGymGroupInfo>();
 	}
 }

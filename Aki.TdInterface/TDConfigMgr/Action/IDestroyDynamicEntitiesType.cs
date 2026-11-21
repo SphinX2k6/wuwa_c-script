@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200198A RID: 6538
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B11 RID: 6929
 	public class IDestroyDynamicEntitiesType
 	{
-		// Token: 0x06008BF9 RID: 35833 RVA: 0x00148BE4 File Offset: 0x00146DE4
+		// Token: 0x0600931D RID: 37661 RVA: 0x001583F4 File Offset: 0x001565F4
 		private IDestroyDynamicEntitiesType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008BFA RID: 35834 RVA: 0x00148C1C File Offset: 0x00146E1C
+		// Token: 0x0600931E RID: 37662 RVA: 0x0015842C File Offset: 0x0015662C
 		public static IDestroyDynamicEntitiesType Create([Nullable(2)] IDestroyDynamicEntitiesType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008BFB RID: 35835 RVA: 0x00148C2F File Offset: 0x00146E2F
+		// Token: 0x0600931F RID: 37663 RVA: 0x0015843F File Offset: 0x0015663F
 		public static IDestroyDynamicEntitiesType CreateFromSetValue([Nullable(2)] IDestroyDynamicEntitiesType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008BFC RID: 35836 RVA: 0x00148C42 File Offset: 0x00146E42
+		// Token: 0x06009320 RID: 37664 RVA: 0x00158452 File Offset: 0x00156652
 		public IDestroyDynamicEntitiesType_SetValue ToSetValue()
 		{
 			return new IDestroyDynamicEntitiesType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D02 RID: 11522
-		// (get) Token: 0x06008BFD RID: 35837 RVA: 0x00148C55 File Offset: 0x00146E55
-		// (set) Token: 0x06008BFE RID: 35838 RVA: 0x00148C80 File Offset: 0x00146E80
+		// Token: 0x17002F01 RID: 12033
+		// (get) Token: 0x06009321 RID: 37665 RVA: 0x00158465 File Offset: 0x00156665
+		// (set) Token: 0x06009322 RID: 37666 RVA: 0x00158490 File Offset: 0x00156690
 		public virtual EDynamicEntityType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005739 RID: 22329
+		// Token: 0x04005B82 RID: 23426
 		[Nullable(2)]
 		protected IDestroyDynamicEntitiesType FbInstance;
 
-		// Token: 0x0400573A RID: 22330
+		// Token: 0x04005B83 RID: 23427
 		[Nullable(2)]
 		protected IDestroyDynamicEntitiesType_SetValue PocoInterface;
 	}

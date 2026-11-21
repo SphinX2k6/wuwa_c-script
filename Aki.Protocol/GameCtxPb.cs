@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020006A4 RID: 1700
+	// Token: 0x02000690 RID: 1680
 	public sealed class GameCtxPb : IMessage<GameCtxPb>, IMessage, IEquatable<GameCtxPb>, IDeepCloneable<GameCtxPb>, IBufferMessage
 	{
-		// Token: 0x06009B8A RID: 39818 RVA: 0x001771D1 File Offset: 0x001753D1
+		// Token: 0x06009A34 RID: 39476 RVA: 0x00174798 File Offset: 0x00172998
 		[NullableContext(1)]
 		public static GameCtxPb Create()
 		{
 			return new GameCtxPb();
 		}
 
-		// Token: 0x17001F1F RID: 7967
-		// (get) Token: 0x06009B8B RID: 39819 RVA: 0x001771D8 File Offset: 0x001753D8
+		// Token: 0x17001ED5 RID: 7893
+		// (get) Token: 0x06009A35 RID: 39477 RVA: 0x0017479F File Offset: 0x0017299F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F20 RID: 7968
-		// (get) Token: 0x06009B8C RID: 39820 RVA: 0x001771DB File Offset: 0x001753DB
+		// Token: 0x17001ED6 RID: 7894
+		// (get) Token: 0x06009A36 RID: 39478 RVA: 0x001747A2 File Offset: 0x001729A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009B8D RID: 39821 RVA: 0x001771E2 File Offset: 0x001753E2
+		// Token: 0x06009A37 RID: 39479 RVA: 0x001747A9 File Offset: 0x001729A9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GameCtxPb()
 		{
 		}
 
-		// Token: 0x06009B8E RID: 39822 RVA: 0x001771EC File Offset: 0x001753EC
+		// Token: 0x06009A38 RID: 39480 RVA: 0x001747B4 File Offset: 0x001729B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GameCtxPb(GameCtxPb other) : this()
@@ -298,7 +298,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06009B8F RID: 39823 RVA: 0x001779A0 File Offset: 0x00175BA0
+		// Token: 0x06009A39 RID: 39481 RVA: 0x00174F68 File Offset: 0x00173168
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GameCtxPb Clone()
@@ -306,9 +306,9 @@ namespace Aki.Protocol
 			return new GameCtxPb(this);
 		}
 
-		// Token: 0x17001F21 RID: 7969
-		// (get) Token: 0x06009B90 RID: 39824 RVA: 0x001779A8 File Offset: 0x00175BA8
-		// (set) Token: 0x06009B91 RID: 39825 RVA: 0x001779B0 File Offset: 0x00175BB0
+		// Token: 0x17001ED7 RID: 7895
+		// (get) Token: 0x06009A3A RID: 39482 RVA: 0x00174F70 File Offset: 0x00173170
+		// (set) Token: 0x06009A3B RID: 39483 RVA: 0x00174F78 File Offset: 0x00173178
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GameCtxType CtxType
@@ -323,9 +323,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F22 RID: 7970
-		// (get) Token: 0x06009B92 RID: 39826 RVA: 0x001779B9 File Offset: 0x00175BB9
-		// (set) Token: 0x06009B93 RID: 39827 RVA: 0x001779D1 File Offset: 0x00175BD1
+		// Token: 0x17001ED8 RID: 7896
+		// (get) Token: 0x06009A3C RID: 39484 RVA: 0x00174F81 File Offset: 0x00173181
+		// (set) Token: 0x06009A3D RID: 39485 RVA: 0x00174F99 File Offset: 0x00173199
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BehaviorTreeCtxPb BehaviorTree
@@ -345,9 +345,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F23 RID: 7971
-		// (get) Token: 0x06009B94 RID: 39828 RVA: 0x001779E7 File Offset: 0x00175BE7
-		// (set) Token: 0x06009B95 RID: 39829 RVA: 0x001779FF File Offset: 0x00175BFF
+		// Token: 0x17001ED9 RID: 7897
+		// (get) Token: 0x06009A3E RID: 39486 RVA: 0x00174FAF File Offset: 0x001731AF
+		// (set) Token: 0x06009A3F RID: 39487 RVA: 0x00174FC7 File Offset: 0x001731C7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityCtxPb Entity
@@ -367,9 +367,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F24 RID: 7972
-		// (get) Token: 0x06009B96 RID: 39830 RVA: 0x00177A15 File Offset: 0x00175C15
-		// (set) Token: 0x06009B97 RID: 39831 RVA: 0x00177A2D File Offset: 0x00175C2D
+		// Token: 0x17001EDA RID: 7898
+		// (get) Token: 0x06009A40 RID: 39488 RVA: 0x00174FDD File Offset: 0x001731DD
+		// (set) Token: 0x06009A41 RID: 39489 RVA: 0x00174FF5 File Offset: 0x001731F5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NormalInteractCtxPb NormalInteract
@@ -389,9 +389,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F25 RID: 7973
-		// (get) Token: 0x06009B98 RID: 39832 RVA: 0x00177A43 File Offset: 0x00175C43
-		// (set) Token: 0x06009B99 RID: 39833 RVA: 0x00177A5B File Offset: 0x00175C5B
+		// Token: 0x17001EDB RID: 7899
+		// (get) Token: 0x06009A42 RID: 39490 RVA: 0x0017500B File Offset: 0x0017320B
+		// (set) Token: 0x06009A43 RID: 39491 RVA: 0x00175023 File Offset: 0x00173223
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DynamicInteractCtxPb DynamicInteract
@@ -411,9 +411,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F26 RID: 7974
-		// (get) Token: 0x06009B9A RID: 39834 RVA: 0x00177A71 File Offset: 0x00175C71
-		// (set) Token: 0x06009B9B RID: 39835 RVA: 0x00177A89 File Offset: 0x00175C89
+		// Token: 0x17001EDC RID: 7900
+		// (get) Token: 0x06009A44 RID: 39492 RVA: 0x00175039 File Offset: 0x00173239
+		// (set) Token: 0x06009A45 RID: 39493 RVA: 0x00175051 File Offset: 0x00173251
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RandomInteractCtxPb RandomInteract
@@ -433,9 +433,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F27 RID: 7975
-		// (get) Token: 0x06009B9C RID: 39836 RVA: 0x00177A9F File Offset: 0x00175C9F
-		// (set) Token: 0x06009B9D RID: 39837 RVA: 0x00177AB7 File Offset: 0x00175CB7
+		// Token: 0x17001EDD RID: 7901
+		// (get) Token: 0x06009A46 RID: 39494 RVA: 0x00175067 File Offset: 0x00173267
+		// (set) Token: 0x06009A47 RID: 39495 RVA: 0x0017507F File Offset: 0x0017327F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public StateChangeActionCtxPb StateChangeAction
@@ -455,9 +455,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F28 RID: 7976
-		// (get) Token: 0x06009B9E RID: 39838 RVA: 0x00177ACD File Offset: 0x00175CCD
-		// (set) Token: 0x06009B9F RID: 39839 RVA: 0x00177AE5 File Offset: 0x00175CE5
+		// Token: 0x17001EDE RID: 7902
+		// (get) Token: 0x06009A48 RID: 39496 RVA: 0x00175095 File Offset: 0x00173295
+		// (set) Token: 0x06009A49 RID: 39497 RVA: 0x001750AD File Offset: 0x001732AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityGroupActionCtxPb EntityGroupAction
@@ -477,9 +477,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F29 RID: 7977
-		// (get) Token: 0x06009BA0 RID: 39840 RVA: 0x00177AFB File Offset: 0x00175CFB
-		// (set) Token: 0x06009BA1 RID: 39841 RVA: 0x00177B14 File Offset: 0x00175D14
+		// Token: 0x17001EDF RID: 7903
+		// (get) Token: 0x06009A4A RID: 39498 RVA: 0x001750C3 File Offset: 0x001732C3
+		// (set) Token: 0x06009A4B RID: 39499 RVA: 0x001750DC File Offset: 0x001732DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityTriggerCtxPb EntityTrigger
@@ -499,9 +499,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F2A RID: 7978
-		// (get) Token: 0x06009BA2 RID: 39842 RVA: 0x00177B2B File Offset: 0x00175D2B
-		// (set) Token: 0x06009BA3 RID: 39843 RVA: 0x00177B44 File Offset: 0x00175D44
+		// Token: 0x17001EE0 RID: 7904
+		// (get) Token: 0x06009A4C RID: 39500 RVA: 0x001750F3 File Offset: 0x001732F3
+		// (set) Token: 0x06009A4D RID: 39501 RVA: 0x0017510C File Offset: 0x0017330C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityLeaveTriggerCtxPb EntityLeaveTriggerCtx
@@ -521,9 +521,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F2B RID: 7979
-		// (get) Token: 0x06009BA4 RID: 39844 RVA: 0x00177B5B File Offset: 0x00175D5B
-		// (set) Token: 0x06009BA5 RID: 39845 RVA: 0x00177B74 File Offset: 0x00175D74
+		// Token: 0x17001EE1 RID: 7905
+		// (get) Token: 0x06009A4E RID: 39502 RVA: 0x00175123 File Offset: 0x00173323
+		// (set) Token: 0x06009A4F RID: 39503 RVA: 0x0017513C File Offset: 0x0017333C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityDestructibleCtxPb EntityDestructible
@@ -543,9 +543,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F2C RID: 7980
-		// (get) Token: 0x06009BA6 RID: 39846 RVA: 0x00177B8B File Offset: 0x00175D8B
-		// (set) Token: 0x06009BA7 RID: 39847 RVA: 0x00177BA4 File Offset: 0x00175DA4
+		// Token: 0x17001EE2 RID: 7906
+		// (get) Token: 0x06009A50 RID: 39504 RVA: 0x00175153 File Offset: 0x00173353
+		// (set) Token: 0x06009A51 RID: 39505 RVA: 0x0017516C File Offset: 0x0017336C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityTimelineTrackCtxPb EntityTimelineTrack
@@ -565,9 +565,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F2D RID: 7981
-		// (get) Token: 0x06009BA8 RID: 39848 RVA: 0x00177BBB File Offset: 0x00175DBB
-		// (set) Token: 0x06009BA9 RID: 39849 RVA: 0x00177BD4 File Offset: 0x00175DD4
+		// Token: 0x17001EE3 RID: 7907
+		// (get) Token: 0x06009A52 RID: 39506 RVA: 0x00175183 File Offset: 0x00173383
+		// (set) Token: 0x06009A53 RID: 39507 RVA: 0x0017519C File Offset: 0x0017339C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LevelPlayOpenActionCtxPb LevelPlayOpenAction
@@ -587,9 +587,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F2E RID: 7982
-		// (get) Token: 0x06009BAA RID: 39850 RVA: 0x00177BEB File Offset: 0x00175DEB
-		// (set) Token: 0x06009BAB RID: 39851 RVA: 0x00177C04 File Offset: 0x00175E04
+		// Token: 0x17001EE4 RID: 7908
+		// (get) Token: 0x06009A54 RID: 39508 RVA: 0x001751B3 File Offset: 0x001733B3
+		// (set) Token: 0x06009A55 RID: 39509 RVA: 0x001751CC File Offset: 0x001733CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LevelPlayRewardActionCtxPb LevelPlayRewardAction
@@ -609,9 +609,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F2F RID: 7983
-		// (get) Token: 0x06009BAC RID: 39852 RVA: 0x00177C1B File Offset: 0x00175E1B
-		// (set) Token: 0x06009BAD RID: 39853 RVA: 0x00177C34 File Offset: 0x00175E34
+		// Token: 0x17001EE5 RID: 7909
+		// (get) Token: 0x06009A56 RID: 39510 RVA: 0x001751E3 File Offset: 0x001733E3
+		// (set) Token: 0x06009A57 RID: 39511 RVA: 0x001751FC File Offset: 0x001733FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestActiveActionCtxPb QuestActiveAction
@@ -631,9 +631,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F30 RID: 7984
-		// (get) Token: 0x06009BAE RID: 39854 RVA: 0x00177C4B File Offset: 0x00175E4B
-		// (set) Token: 0x06009BAF RID: 39855 RVA: 0x00177C64 File Offset: 0x00175E64
+		// Token: 0x17001EE6 RID: 7910
+		// (get) Token: 0x06009A58 RID: 39512 RVA: 0x00175213 File Offset: 0x00173413
+		// (set) Token: 0x06009A59 RID: 39513 RVA: 0x0017522C File Offset: 0x0017342C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestAcceptActionCtxPb QuestAcceptAction
@@ -653,9 +653,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F31 RID: 7985
-		// (get) Token: 0x06009BB0 RID: 39856 RVA: 0x00177C7B File Offset: 0x00175E7B
-		// (set) Token: 0x06009BB1 RID: 39857 RVA: 0x00177C94 File Offset: 0x00175E94
+		// Token: 0x17001EE7 RID: 7911
+		// (get) Token: 0x06009A5A RID: 39514 RVA: 0x00175243 File Offset: 0x00173443
+		// (set) Token: 0x06009A5B RID: 39515 RVA: 0x0017525C File Offset: 0x0017345C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestFinishActionCtxPb QuestFinishAction
@@ -675,9 +675,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F32 RID: 7986
-		// (get) Token: 0x06009BB2 RID: 39858 RVA: 0x00177CAB File Offset: 0x00175EAB
-		// (set) Token: 0x06009BB3 RID: 39859 RVA: 0x00177CC4 File Offset: 0x00175EC4
+		// Token: 0x17001EE8 RID: 7912
+		// (get) Token: 0x06009A5C RID: 39516 RVA: 0x00175273 File Offset: 0x00173473
+		// (set) Token: 0x06009A5D RID: 39517 RVA: 0x0017528C File Offset: 0x0017348C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ChildQuestNodeEnterActionCtxPb ChildQuestNodeEnterAction
@@ -697,9 +697,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F33 RID: 7987
-		// (get) Token: 0x06009BB4 RID: 39860 RVA: 0x00177CDB File Offset: 0x00175EDB
-		// (set) Token: 0x06009BB5 RID: 39861 RVA: 0x00177CF4 File Offset: 0x00175EF4
+		// Token: 0x17001EE9 RID: 7913
+		// (get) Token: 0x06009A5E RID: 39518 RVA: 0x001752A3 File Offset: 0x001734A3
+		// (set) Token: 0x06009A5F RID: 39519 RVA: 0x001752BC File Offset: 0x001734BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ChildQuestNodeFinishActionCtxPb ChildQuestNodeFinishAction
@@ -719,9 +719,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F34 RID: 7988
-		// (get) Token: 0x06009BB6 RID: 39862 RVA: 0x00177D0B File Offset: 0x00175F0B
-		// (set) Token: 0x06009BB7 RID: 39863 RVA: 0x00177D24 File Offset: 0x00175F24
+		// Token: 0x17001EEA RID: 7914
+		// (get) Token: 0x06009A60 RID: 39520 RVA: 0x001752D3 File Offset: 0x001734D3
+		// (set) Token: 0x06009A61 RID: 39521 RVA: 0x001752EC File Offset: 0x001734EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SuccessNodeActionCtxPb SuccessNodeAction
@@ -741,9 +741,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F35 RID: 7989
-		// (get) Token: 0x06009BB8 RID: 39864 RVA: 0x00177D3B File Offset: 0x00175F3B
-		// (set) Token: 0x06009BB9 RID: 39865 RVA: 0x00177D54 File Offset: 0x00175F54
+		// Token: 0x17001EEB RID: 7915
+		// (get) Token: 0x06009A62 RID: 39522 RVA: 0x00175303 File Offset: 0x00173503
+		// (set) Token: 0x06009A63 RID: 39523 RVA: 0x0017531C File Offset: 0x0017351C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FailedNodeActionCtxPb FailedNodeAction
@@ -763,9 +763,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F36 RID: 7990
-		// (get) Token: 0x06009BBA RID: 39866 RVA: 0x00177D6B File Offset: 0x00175F6B
-		// (set) Token: 0x06009BBB RID: 39867 RVA: 0x00177D84 File Offset: 0x00175F84
+		// Token: 0x17001EEC RID: 7916
+		// (get) Token: 0x06009A64 RID: 39524 RVA: 0x00175333 File Offset: 0x00173533
+		// (set) Token: 0x06009A65 RID: 39525 RVA: 0x0017534C File Offset: 0x0017354C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CompositionEnterActionCtxPb CompositionEnterAction
@@ -785,9 +785,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F37 RID: 7991
-		// (get) Token: 0x06009BBC RID: 39868 RVA: 0x00177D9B File Offset: 0x00175F9B
-		// (set) Token: 0x06009BBD RID: 39869 RVA: 0x00177DB4 File Offset: 0x00175FB4
+		// Token: 0x17001EED RID: 7917
+		// (get) Token: 0x06009A66 RID: 39526 RVA: 0x00175363 File Offset: 0x00173563
+		// (set) Token: 0x06009A67 RID: 39527 RVA: 0x0017537C File Offset: 0x0017357C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityConditionListeningActionCtxPb EntityConditionListeningAction
@@ -807,9 +807,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F38 RID: 7992
-		// (get) Token: 0x06009BBE RID: 39870 RVA: 0x00177DCB File Offset: 0x00175FCB
-		// (set) Token: 0x06009BBF RID: 39871 RVA: 0x00177DE4 File Offset: 0x00175FE4
+		// Token: 0x17001EEE RID: 7918
+		// (get) Token: 0x06009A68 RID: 39528 RVA: 0x00175393 File Offset: 0x00173593
+		// (set) Token: 0x06009A69 RID: 39529 RVA: 0x001753AC File Offset: 0x001735AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayFlowChildQuestNodeCtxPb PlayFlowChildQuestNode
@@ -829,9 +829,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F39 RID: 7993
-		// (get) Token: 0x06009BC0 RID: 39872 RVA: 0x00177DFB File Offset: 0x00175FFB
-		// (set) Token: 0x06009BC1 RID: 39873 RVA: 0x00177E14 File Offset: 0x00176014
+		// Token: 0x17001EEF RID: 7919
+		// (get) Token: 0x06009A6A RID: 39530 RVA: 0x001753C3 File Offset: 0x001735C3
+		// (set) Token: 0x06009A6B RID: 39531 RVA: 0x001753DC File Offset: 0x001735DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HandInItemChildQuestNodeCtxPb HandInItemChildQuestNode
@@ -851,9 +851,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F3A RID: 7994
-		// (get) Token: 0x06009BC2 RID: 39874 RVA: 0x00177E2B File Offset: 0x0017602B
-		// (set) Token: 0x06009BC3 RID: 39875 RVA: 0x00177E44 File Offset: 0x00176044
+		// Token: 0x17001EF0 RID: 7920
+		// (get) Token: 0x06009A6C RID: 39532 RVA: 0x001753F3 File Offset: 0x001735F3
+		// (set) Token: 0x06009A6D RID: 39533 RVA: 0x0017540C File Offset: 0x0017360C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DoInteractChildQuestNodeCtxPb DoInteractChildQuestNode
@@ -873,9 +873,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F3B RID: 7995
-		// (get) Token: 0x06009BC4 RID: 39876 RVA: 0x00177E5B File Offset: 0x0017605B
-		// (set) Token: 0x06009BC5 RID: 39877 RVA: 0x00177E74 File Offset: 0x00176074
+		// Token: 0x17001EF1 RID: 7921
+		// (get) Token: 0x06009A6E RID: 39534 RVA: 0x00175423 File Offset: 0x00173623
+		// (set) Token: 0x06009A6F RID: 39535 RVA: 0x0017543C File Offset: 0x0017363C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActionGroupNodeActionCtxPb ActionGroupNodeAction
@@ -895,9 +895,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F3C RID: 7996
-		// (get) Token: 0x06009BC6 RID: 39878 RVA: 0x00177E8B File Offset: 0x0017608B
-		// (set) Token: 0x06009BC7 RID: 39879 RVA: 0x00177EA4 File Offset: 0x001760A4
+		// Token: 0x17001EF2 RID: 7922
+		// (get) Token: 0x06009A70 RID: 39536 RVA: 0x00175453 File Offset: 0x00173653
+		// (set) Token: 0x06009A71 RID: 39537 RVA: 0x0017546C File Offset: 0x0017366C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ExploreSkillPullGiantCtxPb ExploreSkillPullGiantAction
@@ -917,9 +917,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F3D RID: 7997
-		// (get) Token: 0x06009BC8 RID: 39880 RVA: 0x00177EBB File Offset: 0x001760BB
-		// (set) Token: 0x06009BC9 RID: 39881 RVA: 0x00177ED4 File Offset: 0x001760D4
+		// Token: 0x17001EF3 RID: 7923
+		// (get) Token: 0x06009A72 RID: 39538 RVA: 0x00175483 File Offset: 0x00173683
+		// (set) Token: 0x06009A73 RID: 39539 RVA: 0x0017549C File Offset: 0x0017369C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LevelPlayCtxPb LevelPlay
@@ -939,9 +939,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F3E RID: 7998
-		// (get) Token: 0x06009BCA RID: 39882 RVA: 0x00177EEB File Offset: 0x001760EB
-		// (set) Token: 0x06009BCB RID: 39883 RVA: 0x00177F04 File Offset: 0x00176104
+		// Token: 0x17001EF4 RID: 7924
+		// (get) Token: 0x06009A74 RID: 39540 RVA: 0x001754B3 File Offset: 0x001736B3
+		// (set) Token: 0x06009A75 RID: 39541 RVA: 0x001754CC File Offset: 0x001736CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GmLevelActionCtxPb GmLevelAction
@@ -961,9 +961,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F3F RID: 7999
-		// (get) Token: 0x06009BCC RID: 39884 RVA: 0x00177F1B File Offset: 0x0017611B
-		// (set) Token: 0x06009BCD RID: 39885 RVA: 0x00177F34 File Offset: 0x00176134
+		// Token: 0x17001EF5 RID: 7925
+		// (get) Token: 0x06009A76 RID: 39542 RVA: 0x001754E3 File Offset: 0x001736E3
+		// (set) Token: 0x06009A77 RID: 39543 RVA: 0x001754FC File Offset: 0x001736FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneItemLifeCycleComponentCreateCtxPb LifeCycleCreateAction
@@ -983,9 +983,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F40 RID: 8000
-		// (get) Token: 0x06009BCE RID: 39886 RVA: 0x00177F4B File Offset: 0x0017614B
-		// (set) Token: 0x06009BCF RID: 39887 RVA: 0x00177F64 File Offset: 0x00176164
+		// Token: 0x17001EF6 RID: 7926
+		// (get) Token: 0x06009A78 RID: 39544 RVA: 0x00175513 File Offset: 0x00173713
+		// (set) Token: 0x06009A79 RID: 39545 RVA: 0x0017552C File Offset: 0x0017372C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneItemLifeCycleComponentDestroyCtxPb LifeCycleDestroyAction
@@ -1005,9 +1005,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F41 RID: 8001
-		// (get) Token: 0x06009BD0 RID: 39888 RVA: 0x00177F7B File Offset: 0x0017617B
-		// (set) Token: 0x06009BD1 RID: 39889 RVA: 0x00177F94 File Offset: 0x00176194
+		// Token: 0x17001EF7 RID: 7927
+		// (get) Token: 0x06009A7A RID: 39546 RVA: 0x00175543 File Offset: 0x00173743
+		// (set) Token: 0x06009A7B RID: 39547 RVA: 0x0017555C File Offset: 0x0017375C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlowActionCtxPb FlowAction
@@ -1027,9 +1027,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F42 RID: 8002
-		// (get) Token: 0x06009BD2 RID: 39890 RVA: 0x00177FAB File Offset: 0x001761AB
-		// (set) Token: 0x06009BD3 RID: 39891 RVA: 0x00177FC4 File Offset: 0x001761C4
+		// Token: 0x17001EF8 RID: 7928
+		// (get) Token: 0x06009A7C RID: 39548 RVA: 0x00175573 File Offset: 0x00173773
+		// (set) Token: 0x06009A7D RID: 39549 RVA: 0x0017558C File Offset: 0x0017378C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DailyQuestTerminateActionCtxPb DailyQuestTerminateAction
@@ -1049,9 +1049,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F43 RID: 8003
-		// (get) Token: 0x06009BD4 RID: 39892 RVA: 0x00177FDB File Offset: 0x001761DB
-		// (set) Token: 0x06009BD5 RID: 39893 RVA: 0x00177FF4 File Offset: 0x001761F4
+		// Token: 0x17001EF9 RID: 7929
+		// (get) Token: 0x06009A7E RID: 39550 RVA: 0x001755A3 File Offset: 0x001737A3
+		// (set) Token: 0x06009A7F RID: 39551 RVA: 0x001755BC File Offset: 0x001737BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityBeamReceiveCtxPb EntityBeamReceiveAction
@@ -1071,9 +1071,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F44 RID: 8004
-		// (get) Token: 0x06009BD6 RID: 39894 RVA: 0x0017800B File Offset: 0x0017620B
-		// (set) Token: 0x06009BD7 RID: 39895 RVA: 0x00178024 File Offset: 0x00176224
+		// Token: 0x17001EFA RID: 7930
+		// (get) Token: 0x06009A80 RID: 39552 RVA: 0x001755D3 File Offset: 0x001737D3
+		// (set) Token: 0x06009A81 RID: 39553 RVA: 0x001755EC File Offset: 0x001737EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityGroupFailureActionCtxPb EntityGroupFailureAction
@@ -1093,9 +1093,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F45 RID: 8005
-		// (get) Token: 0x06009BD8 RID: 39896 RVA: 0x0017803B File Offset: 0x0017623B
-		// (set) Token: 0x06009BD9 RID: 39897 RVA: 0x00178054 File Offset: 0x00176254
+		// Token: 0x17001EFB RID: 7931
+		// (get) Token: 0x06009A82 RID: 39554 RVA: 0x00175603 File Offset: 0x00173803
+		// (set) Token: 0x06009A83 RID: 39555 RVA: 0x0017561C File Offset: 0x0017381C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public StateChangeConditionActionCtxPb StateChangeConditionAction
@@ -1115,9 +1115,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F46 RID: 8006
-		// (get) Token: 0x06009BDA RID: 39898 RVA: 0x0017806B File Offset: 0x0017626B
-		// (set) Token: 0x06009BDB RID: 39899 RVA: 0x00178084 File Offset: 0x00176284
+		// Token: 0x17001EFC RID: 7932
+		// (get) Token: 0x06009A84 RID: 39556 RVA: 0x00175633 File Offset: 0x00173833
+		// (set) Token: 0x06009A85 RID: 39557 RVA: 0x0017564C File Offset: 0x0017384C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlowStartTeleportCtxPb FlowStartTeleport
@@ -1137,9 +1137,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F47 RID: 8007
-		// (get) Token: 0x06009BDC RID: 39900 RVA: 0x0017809B File Offset: 0x0017629B
-		// (set) Token: 0x06009BDD RID: 39901 RVA: 0x001780B4 File Offset: 0x001762B4
+		// Token: 0x17001EFD RID: 7933
+		// (get) Token: 0x06009A86 RID: 39558 RVA: 0x00175663 File Offset: 0x00173863
+		// (set) Token: 0x06009A87 RID: 39559 RVA: 0x0017567C File Offset: 0x0017387C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LeaveInstEscActionCtxPb LeaveInstEscAction
@@ -1159,9 +1159,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F48 RID: 8008
-		// (get) Token: 0x06009BDE RID: 39902 RVA: 0x001780CB File Offset: 0x001762CB
-		// (set) Token: 0x06009BDF RID: 39903 RVA: 0x001780E4 File Offset: 0x001762E4
+		// Token: 0x17001EFE RID: 7934
+		// (get) Token: 0x06009A88 RID: 39560 RVA: 0x00175693 File Offset: 0x00173893
+		// (set) Token: 0x06009A89 RID: 39561 RVA: 0x001756AC File Offset: 0x001738AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrampleActiveCtxPb TrampleActive
@@ -1181,9 +1181,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F49 RID: 8009
-		// (get) Token: 0x06009BE0 RID: 39904 RVA: 0x001780FB File Offset: 0x001762FB
-		// (set) Token: 0x06009BE1 RID: 39905 RVA: 0x00178114 File Offset: 0x00176314
+		// Token: 0x17001EFF RID: 7935
+		// (get) Token: 0x06009A8A RID: 39562 RVA: 0x001756C3 File Offset: 0x001738C3
+		// (set) Token: 0x06009A8B RID: 39563 RVA: 0x001756DC File Offset: 0x001738DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrampleDeActiveCtxPb TrampleDeActive
@@ -1203,9 +1203,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F4A RID: 8010
-		// (get) Token: 0x06009BE2 RID: 39906 RVA: 0x0017812B File Offset: 0x0017632B
-		// (set) Token: 0x06009BE3 RID: 39907 RVA: 0x00178144 File Offset: 0x00176344
+		// Token: 0x17001F00 RID: 7936
+		// (get) Token: 0x06009A8C RID: 39564 RVA: 0x001756F3 File Offset: 0x001738F3
+		// (set) Token: 0x06009A8D RID: 39565 RVA: 0x0017570C File Offset: 0x0017390C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RenjuCompleteActionCtxPb RenjuCompleteAction
@@ -1225,9 +1225,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F4B RID: 8011
-		// (get) Token: 0x06009BE4 RID: 39908 RVA: 0x0017815B File Offset: 0x0017635B
-		// (set) Token: 0x06009BE5 RID: 39909 RVA: 0x00178174 File Offset: 0x00176374
+		// Token: 0x17001F01 RID: 7937
+		// (get) Token: 0x06009A8E RID: 39566 RVA: 0x00175723 File Offset: 0x00173923
+		// (set) Token: 0x06009A8F RID: 39567 RVA: 0x0017573C File Offset: 0x0017393C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public JigsawFoundationMatchedActionCtxPb JigsawFoundationMatchedAction
@@ -1247,9 +1247,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F4C RID: 8012
-		// (get) Token: 0x06009BE6 RID: 39910 RVA: 0x0017818B File Offset: 0x0017638B
-		// (set) Token: 0x06009BE7 RID: 39911 RVA: 0x001781A4 File Offset: 0x001763A4
+		// Token: 0x17001F02 RID: 7938
+		// (get) Token: 0x06009A90 RID: 39568 RVA: 0x00175753 File Offset: 0x00173953
+		// (set) Token: 0x06009A91 RID: 39569 RVA: 0x0017576C File Offset: 0x0017396C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public JigsawFoundationUnMatchedActionCtxPb JigsawFoundationUnMatchedActionCtx
@@ -1269,9 +1269,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F4D RID: 8013
-		// (get) Token: 0x06009BE8 RID: 39912 RVA: 0x001781BB File Offset: 0x001763BB
-		// (set) Token: 0x06009BE9 RID: 39913 RVA: 0x001781D4 File Offset: 0x001763D4
+		// Token: 0x17001F03 RID: 7939
+		// (get) Token: 0x06009A92 RID: 39570 RVA: 0x00175783 File Offset: 0x00173983
+		// (set) Token: 0x06009A93 RID: 39571 RVA: 0x0017579C File Offset: 0x0017399C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HookLockPointActionCtxPb HookLockPointAction
@@ -1291,9 +1291,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F4E RID: 8014
-		// (get) Token: 0x06009BEA RID: 39914 RVA: 0x001781EB File Offset: 0x001763EB
-		// (set) Token: 0x06009BEB RID: 39915 RVA: 0x00178204 File Offset: 0x00176404
+		// Token: 0x17001F04 RID: 7940
+		// (get) Token: 0x06009A94 RID: 39572 RVA: 0x001757B3 File Offset: 0x001739B3
+		// (set) Token: 0x06009A95 RID: 39573 RVA: 0x001757CC File Offset: 0x001739CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ClientTriggerActionCtxPb ClientTriggerAction
@@ -1313,9 +1313,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F4F RID: 8015
-		// (get) Token: 0x06009BEC RID: 39916 RVA: 0x0017821B File Offset: 0x0017641B
-		// (set) Token: 0x06009BED RID: 39917 RVA: 0x00178234 File Offset: 0x00176434
+		// Token: 0x17001F05 RID: 7941
+		// (get) Token: 0x06009A96 RID: 39574 RVA: 0x001757E3 File Offset: 0x001739E3
+		// (set) Token: 0x06009A97 RID: 39575 RVA: 0x001757FC File Offset: 0x001739FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ExploreSkillCustomCtxPb ExploreSkillCustomAction
@@ -1335,9 +1335,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F50 RID: 8016
-		// (get) Token: 0x06009BEE RID: 39918 RVA: 0x0017824B File Offset: 0x0017644B
-		// (set) Token: 0x06009BEF RID: 39919 RVA: 0x00178264 File Offset: 0x00176464
+		// Token: 0x17001F06 RID: 7942
+		// (get) Token: 0x06009A98 RID: 39576 RVA: 0x00175813 File Offset: 0x00173A13
+		// (set) Token: 0x06009A99 RID: 39577 RVA: 0x0017582C File Offset: 0x00173A2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public JigsawFoundationMatchedConditionActionCtxPb JigsawFoundationMatchedConditionAction
@@ -1357,9 +1357,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F51 RID: 8017
-		// (get) Token: 0x06009BF0 RID: 39920 RVA: 0x0017827B File Offset: 0x0017647B
-		// (set) Token: 0x06009BF1 RID: 39921 RVA: 0x00178294 File Offset: 0x00176494
+		// Token: 0x17001F07 RID: 7943
+		// (get) Token: 0x06009A9A RID: 39578 RVA: 0x00175843 File Offset: 0x00173A43
+		// (set) Token: 0x06009A9B RID: 39579 RVA: 0x0017585C File Offset: 0x00173A5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LevelPlayDestroyActionCtxPb LevelPlayDestroyAction
@@ -1379,9 +1379,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F52 RID: 8018
-		// (get) Token: 0x06009BF2 RID: 39922 RVA: 0x001782AB File Offset: 0x001764AB
-		// (set) Token: 0x06009BF3 RID: 39923 RVA: 0x001782C4 File Offset: 0x001764C4
+		// Token: 0x17001F08 RID: 7944
+		// (get) Token: 0x06009A9C RID: 39580 RVA: 0x00175873 File Offset: 0x00173A73
+		// (set) Token: 0x06009A9D RID: 39581 RVA: 0x0017588C File Offset: 0x00173A8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TemplateSpawnerActionCtxPb TemplateSpawnerAction
@@ -1401,9 +1401,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F53 RID: 8019
-		// (get) Token: 0x06009BF4 RID: 39924 RVA: 0x001782DB File Offset: 0x001764DB
-		// (set) Token: 0x06009BF5 RID: 39925 RVA: 0x001782F4 File Offset: 0x001764F4
+		// Token: 0x17001F09 RID: 7945
+		// (get) Token: 0x06009A9E RID: 39582 RVA: 0x001758A3 File Offset: 0x00173AA3
+		// (set) Token: 0x06009A9F RID: 39583 RVA: 0x001758BC File Offset: 0x00173ABC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestDestroyActionCtxPb QuestDestroyAction
@@ -1423,9 +1423,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F54 RID: 8020
-		// (get) Token: 0x06009BF6 RID: 39926 RVA: 0x0017830B File Offset: 0x0017650B
-		// (set) Token: 0x06009BF7 RID: 39927 RVA: 0x00178324 File Offset: 0x00176524
+		// Token: 0x17001F0A RID: 7946
+		// (get) Token: 0x06009AA0 RID: 39584 RVA: 0x001758D3 File Offset: 0x00173AD3
+		// (set) Token: 0x06009AA1 RID: 39585 RVA: 0x001758EC File Offset: 0x00173AEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CompositionConditionEnterActionCtxPb CompositionConditionEnterAction
@@ -1445,9 +1445,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F55 RID: 8021
-		// (get) Token: 0x06009BF8 RID: 39928 RVA: 0x0017833B File Offset: 0x0017653B
-		// (set) Token: 0x06009BF9 RID: 39929 RVA: 0x00178354 File Offset: 0x00176554
+		// Token: 0x17001F0B RID: 7947
+		// (get) Token: 0x06009AA2 RID: 39586 RVA: 0x00175903 File Offset: 0x00173B03
+		// (set) Token: 0x06009AA3 RID: 39587 RVA: 0x0017591C File Offset: 0x00173B1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TargetGearHitPartCtxPb TargetGearHitPartCtxAction
@@ -1467,9 +1467,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F56 RID: 8022
-		// (get) Token: 0x06009BFA RID: 39930 RVA: 0x0017836B File Offset: 0x0017656B
-		// (set) Token: 0x06009BFB RID: 39931 RVA: 0x00178384 File Offset: 0x00176584
+		// Token: 0x17001F0C RID: 7948
+		// (get) Token: 0x06009AA4 RID: 39588 RVA: 0x00175933 File Offset: 0x00173B33
+		// (set) Token: 0x06009AA5 RID: 39589 RVA: 0x0017594C File Offset: 0x00173B4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GlobalFixCtxPb GlobalFix
@@ -1489,9 +1489,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F57 RID: 8023
-		// (get) Token: 0x06009BFC RID: 39932 RVA: 0x0017839B File Offset: 0x0017659B
-		// (set) Token: 0x06009BFD RID: 39933 RVA: 0x001783B4 File Offset: 0x001765B4
+		// Token: 0x17001F0D RID: 7949
+		// (get) Token: 0x06009AA6 RID: 39590 RVA: 0x00175963 File Offset: 0x00173B63
+		// (set) Token: 0x06009AA7 RID: 39591 RVA: 0x0017597C File Offset: 0x00173B7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public StuckCheckCtxPb StuckCheckCtxPb
@@ -1511,9 +1511,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F58 RID: 8024
-		// (get) Token: 0x06009BFE RID: 39934 RVA: 0x001783CB File Offset: 0x001765CB
-		// (set) Token: 0x06009BFF RID: 39935 RVA: 0x001783E4 File Offset: 0x001765E4
+		// Token: 0x17001F0E RID: 7950
+		// (get) Token: 0x06009AA8 RID: 39592 RVA: 0x00175993 File Offset: 0x00173B93
+		// (set) Token: 0x06009AA9 RID: 39593 RVA: 0x001759AC File Offset: 0x00173BAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityAfterConditionActionCtxPb AfterConditionActionCtxPb
@@ -1533,9 +1533,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F59 RID: 8025
-		// (get) Token: 0x06009C00 RID: 39936 RVA: 0x001783FB File Offset: 0x001765FB
-		// (set) Token: 0x06009C01 RID: 39937 RVA: 0x00178414 File Offset: 0x00176614
+		// Token: 0x17001F0F RID: 7951
+		// (get) Token: 0x06009AAA RID: 39594 RVA: 0x001759C3 File Offset: 0x00173BC3
+		// (set) Token: 0x06009AAB RID: 39595 RVA: 0x001759DC File Offset: 0x00173BDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorSliderCtxPb MotorSliderCtxPb
@@ -1555,9 +1555,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F5A RID: 8026
-		// (get) Token: 0x06009C02 RID: 39938 RVA: 0x0017842B File Offset: 0x0017662B
-		// (set) Token: 0x06009C03 RID: 39939 RVA: 0x00178444 File Offset: 0x00176644
+		// Token: 0x17001F10 RID: 7952
+		// (get) Token: 0x06009AAC RID: 39596 RVA: 0x001759F3 File Offset: 0x00173BF3
+		// (set) Token: 0x06009AAD RID: 39597 RVA: 0x00175A0C File Offset: 0x00173C0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RollBlockGamePlayActionCtxPb RollBlockGamePlayActionCtxPb
@@ -1577,9 +1577,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F5B RID: 8027
-		// (get) Token: 0x06009C04 RID: 39940 RVA: 0x0017845B File Offset: 0x0017665B
-		// (set) Token: 0x06009C05 RID: 39941 RVA: 0x00178474 File Offset: 0x00176674
+		// Token: 0x17001F11 RID: 7953
+		// (get) Token: 0x06009AAE RID: 39598 RVA: 0x00175A23 File Offset: 0x00173C23
+		// (set) Token: 0x06009AAF RID: 39599 RVA: 0x00175A3C File Offset: 0x00173C3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransferCtxPb TransferCtxPb
@@ -1599,9 +1599,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F5C RID: 8028
-		// (get) Token: 0x06009C06 RID: 39942 RVA: 0x0017848B File Offset: 0x0017668B
-		// (set) Token: 0x06009C07 RID: 39943 RVA: 0x001784A4 File Offset: 0x001766A4
+		// Token: 0x17001F12 RID: 7954
+		// (get) Token: 0x06009AB0 RID: 39600 RVA: 0x00175A53 File Offset: 0x00173C53
+		// (set) Token: 0x06009AB1 RID: 39601 RVA: 0x00175A6C File Offset: 0x00173C6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DynamicEntityRewardCtxPb DynamicEntityRewardCtxPb
@@ -1621,9 +1621,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F5D RID: 8029
-		// (get) Token: 0x06009C08 RID: 39944 RVA: 0x001784BB File Offset: 0x001766BB
-		// (set) Token: 0x06009C09 RID: 39945 RVA: 0x001784D4 File Offset: 0x001766D4
+		// Token: 0x17001F13 RID: 7955
+		// (get) Token: 0x06009AB2 RID: 39602 RVA: 0x00175A83 File Offset: 0x00173C83
+		// (set) Token: 0x06009AB3 RID: 39603 RVA: 0x00175A9C File Offset: 0x00173C9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BeamCastHitPlayerActionCtxPb BeamCastHitPlayerActionCtxPb
@@ -1643,9 +1643,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F5E RID: 8030
-		// (get) Token: 0x06009C0A RID: 39946 RVA: 0x001784EB File Offset: 0x001766EB
-		// (set) Token: 0x06009C0B RID: 39947 RVA: 0x00178504 File Offset: 0x00176704
+		// Token: 0x17001F14 RID: 7956
+		// (get) Token: 0x06009AB4 RID: 39604 RVA: 0x00175AB3 File Offset: 0x00173CB3
+		// (set) Token: 0x06009AB5 RID: 39605 RVA: 0x00175ACC File Offset: 0x00173CCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ExploreSkillActionCtxPb ExploreSkillAction
@@ -1665,9 +1665,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F5F RID: 8031
-		// (get) Token: 0x06009C0C RID: 39948 RVA: 0x0017851B File Offset: 0x0017671B
-		// (set) Token: 0x06009C0D RID: 39949 RVA: 0x00178534 File Offset: 0x00176734
+		// Token: 0x17001F15 RID: 7957
+		// (get) Token: 0x06009AB6 RID: 39606 RVA: 0x00175AE3 File Offset: 0x00173CE3
+		// (set) Token: 0x06009AB7 RID: 39607 RVA: 0x00175AFC File Offset: 0x00173CFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayEnterOrExitPollutionRangeCtxPb PollutionRangeAction
@@ -1687,9 +1687,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F60 RID: 8032
-		// (get) Token: 0x06009C0E RID: 39950 RVA: 0x0017854B File Offset: 0x0017674B
-		// (set) Token: 0x06009C0F RID: 39951 RVA: 0x00178564 File Offset: 0x00176764
+		// Token: 0x17001F16 RID: 7958
+		// (get) Token: 0x06009AB8 RID: 39608 RVA: 0x00175B13 File Offset: 0x00173D13
+		// (set) Token: 0x06009AB9 RID: 39609 RVA: 0x00175B2C File Offset: 0x00173D2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityQuickHackSkillCtxPb EntityQuickHackSkillAction
@@ -1709,9 +1709,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F61 RID: 8033
-		// (get) Token: 0x06009C10 RID: 39952 RVA: 0x0017857B File Offset: 0x0017677B
-		// (set) Token: 0x06009C11 RID: 39953 RVA: 0x00178594 File Offset: 0x00176794
+		// Token: 0x17001F17 RID: 7959
+		// (get) Token: 0x06009ABA RID: 39610 RVA: 0x00175B43 File Offset: 0x00173D43
+		// (set) Token: 0x06009ABB RID: 39611 RVA: 0x00175B5C File Offset: 0x00173D5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RecallQuestActiveActionCtxPb RecallQuestActiveAction
@@ -1731,9 +1731,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F62 RID: 8034
-		// (get) Token: 0x06009C12 RID: 39954 RVA: 0x001785AB File Offset: 0x001767AB
-		// (set) Token: 0x06009C13 RID: 39955 RVA: 0x001785C4 File Offset: 0x001767C4
+		// Token: 0x17001F18 RID: 7960
+		// (get) Token: 0x06009ABC RID: 39612 RVA: 0x00175B73 File Offset: 0x00173D73
+		// (set) Token: 0x06009ABD RID: 39613 RVA: 0x00175B8C File Offset: 0x00173D8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RecallQuestAcceptActionCtxPb RecallQuestAcceptAction
@@ -1753,9 +1753,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F63 RID: 8035
-		// (get) Token: 0x06009C14 RID: 39956 RVA: 0x001785DB File Offset: 0x001767DB
-		// (set) Token: 0x06009C15 RID: 39957 RVA: 0x001785F4 File Offset: 0x001767F4
+		// Token: 0x17001F19 RID: 7961
+		// (get) Token: 0x06009ABE RID: 39614 RVA: 0x00175BA3 File Offset: 0x00173DA3
+		// (set) Token: 0x06009ABF RID: 39615 RVA: 0x00175BBC File Offset: 0x00173DBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RecallQuestFinishActionCtxPb RecallQuestFinishAction
@@ -1775,9 +1775,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F64 RID: 8036
-		// (get) Token: 0x06009C16 RID: 39958 RVA: 0x0017860B File Offset: 0x0017680B
-		// (set) Token: 0x06009C17 RID: 39959 RVA: 0x00178624 File Offset: 0x00176824
+		// Token: 0x17001F1A RID: 7962
+		// (get) Token: 0x06009AC0 RID: 39616 RVA: 0x00175BD3 File Offset: 0x00173DD3
+		// (set) Token: 0x06009AC1 RID: 39617 RVA: 0x00175BEC File Offset: 0x00173DEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RecallQuestDestroyActionCtxPb RecallQuestDestroyAction
@@ -1797,9 +1797,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F65 RID: 8037
-		// (get) Token: 0x06009C18 RID: 39960 RVA: 0x0017863B File Offset: 0x0017683B
-		// (set) Token: 0x06009C19 RID: 39961 RVA: 0x00178657 File Offset: 0x00176857
+		// Token: 0x17001F1B RID: 7963
+		// (get) Token: 0x06009AC2 RID: 39618 RVA: 0x00175C03 File Offset: 0x00173E03
+		// (set) Token: 0x06009AC3 RID: 39619 RVA: 0x00175C1F File Offset: 0x00173E1F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EdDebugEnterActionCtxPb EdDebugEnterAction
@@ -1819,9 +1819,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F66 RID: 8038
-		// (get) Token: 0x06009C1A RID: 39962 RVA: 0x00178671 File Offset: 0x00176871
-		// (set) Token: 0x06009C1B RID: 39963 RVA: 0x0017868D File Offset: 0x0017688D
+		// Token: 0x17001F1C RID: 7964
+		// (get) Token: 0x06009AC4 RID: 39620 RVA: 0x00175C39 File Offset: 0x00173E39
+		// (set) Token: 0x06009AC5 RID: 39621 RVA: 0x00175C55 File Offset: 0x00173E55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CasketTriggerCtxPb CasketTrigger
@@ -1841,9 +1841,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F67 RID: 8039
-		// (get) Token: 0x06009C1C RID: 39964 RVA: 0x001786A7 File Offset: 0x001768A7
-		// (set) Token: 0x06009C1D RID: 39965 RVA: 0x001786C3 File Offset: 0x001768C3
+		// Token: 0x17001F1D RID: 7965
+		// (get) Token: 0x06009AC6 RID: 39622 RVA: 0x00175C6F File Offset: 0x00173E6F
+		// (set) Token: 0x06009AC7 RID: 39623 RVA: 0x00175C8B File Offset: 0x00173E8B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FoundationOperateActionCtxPb FoundationOperateAction
@@ -1863,9 +1863,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F68 RID: 8040
-		// (get) Token: 0x06009C1E RID: 39966 RVA: 0x001786DD File Offset: 0x001768DD
-		// (set) Token: 0x06009C1F RID: 39967 RVA: 0x001786F9 File Offset: 0x001768F9
+		// Token: 0x17001F1E RID: 7966
+		// (get) Token: 0x06009AC8 RID: 39624 RVA: 0x00175CA5 File Offset: 0x00173EA5
+		// (set) Token: 0x06009AC9 RID: 39625 RVA: 0x00175CC1 File Offset: 0x00173EC1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TargetGearActionByHitTypeCtxPb TargetGearActionByHitTypeAction
@@ -1885,9 +1885,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F69 RID: 8041
-		// (get) Token: 0x06009C20 RID: 39968 RVA: 0x00178713 File Offset: 0x00176913
-		// (set) Token: 0x06009C21 RID: 39969 RVA: 0x0017872F File Offset: 0x0017692F
+		// Token: 0x17001F1F RID: 7967
+		// (get) Token: 0x06009ACA RID: 39626 RVA: 0x00175CDB File Offset: 0x00173EDB
+		// (set) Token: 0x06009ACB RID: 39627 RVA: 0x00175CF7 File Offset: 0x00173EF7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LongPressInteractActionCtxPb LongPressInteractActionCtxPb
@@ -1907,8 +1907,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001F6A RID: 8042
-		// (get) Token: 0x06009C22 RID: 39970 RVA: 0x00178749 File Offset: 0x00176949
+		// Token: 0x17001F20 RID: 7968
+		// (get) Token: 0x06009ACC RID: 39628 RVA: 0x00175D11 File Offset: 0x00173F11
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GameCtxPb.CtxInfoOneofCase CtxInfoCase
@@ -1919,7 +1919,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009C23 RID: 39971 RVA: 0x00178751 File Offset: 0x00176951
+		// Token: 0x06009ACD RID: 39629 RVA: 0x00175D19 File Offset: 0x00173F19
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearCtxInfo()
@@ -1928,7 +1928,7 @@ namespace Aki.Protocol
 			this.ctxInfo_ = null;
 		}
 
-		// Token: 0x06009C24 RID: 39972 RVA: 0x00178761 File Offset: 0x00176961
+		// Token: 0x06009ACE RID: 39630 RVA: 0x00175D29 File Offset: 0x00173F29
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -1936,7 +1936,7 @@ namespace Aki.Protocol
 			return this.Equals(other as GameCtxPb);
 		}
 
-		// Token: 0x06009C25 RID: 39973 RVA: 0x00178770 File Offset: 0x00176970
+		// Token: 0x06009ACF RID: 39631 RVA: 0x00175D38 File Offset: 0x00173F38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(GameCtxPb other)
@@ -1944,7 +1944,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.CtxType == other.CtxType && object.Equals(this.BehaviorTree, other.BehaviorTree) && object.Equals(this.Entity, other.Entity) && object.Equals(this.NormalInteract, other.NormalInteract) && object.Equals(this.DynamicInteract, other.DynamicInteract) && object.Equals(this.RandomInteract, other.RandomInteract) && object.Equals(this.StateChangeAction, other.StateChangeAction) && object.Equals(this.EntityGroupAction, other.EntityGroupAction) && object.Equals(this.EntityTrigger, other.EntityTrigger) && object.Equals(this.EntityLeaveTriggerCtx, other.EntityLeaveTriggerCtx) && object.Equals(this.EntityDestructible, other.EntityDestructible) && object.Equals(this.EntityTimelineTrack, other.EntityTimelineTrack) && object.Equals(this.LevelPlayOpenAction, other.LevelPlayOpenAction) && object.Equals(this.LevelPlayRewardAction, other.LevelPlayRewardAction) && object.Equals(this.QuestActiveAction, other.QuestActiveAction) && object.Equals(this.QuestAcceptAction, other.QuestAcceptAction) && object.Equals(this.QuestFinishAction, other.QuestFinishAction) && object.Equals(this.ChildQuestNodeEnterAction, other.ChildQuestNodeEnterAction) && object.Equals(this.ChildQuestNodeFinishAction, other.ChildQuestNodeFinishAction) && object.Equals(this.SuccessNodeAction, other.SuccessNodeAction) && object.Equals(this.FailedNodeAction, other.FailedNodeAction) && object.Equals(this.CompositionEnterAction, other.CompositionEnterAction) && object.Equals(this.EntityConditionListeningAction, other.EntityConditionListeningAction) && object.Equals(this.PlayFlowChildQuestNode, other.PlayFlowChildQuestNode) && object.Equals(this.HandInItemChildQuestNode, other.HandInItemChildQuestNode) && object.Equals(this.DoInteractChildQuestNode, other.DoInteractChildQuestNode) && object.Equals(this.ActionGroupNodeAction, other.ActionGroupNodeAction) && object.Equals(this.ExploreSkillPullGiantAction, other.ExploreSkillPullGiantAction) && object.Equals(this.LevelPlay, other.LevelPlay) && object.Equals(this.GmLevelAction, other.GmLevelAction) && object.Equals(this.LifeCycleCreateAction, other.LifeCycleCreateAction) && object.Equals(this.LifeCycleDestroyAction, other.LifeCycleDestroyAction) && object.Equals(this.FlowAction, other.FlowAction) && object.Equals(this.DailyQuestTerminateAction, other.DailyQuestTerminateAction) && object.Equals(this.EntityBeamReceiveAction, other.EntityBeamReceiveAction) && object.Equals(this.EntityGroupFailureAction, other.EntityGroupFailureAction) && object.Equals(this.StateChangeConditionAction, other.StateChangeConditionAction) && object.Equals(this.FlowStartTeleport, other.FlowStartTeleport) && object.Equals(this.LeaveInstEscAction, other.LeaveInstEscAction) && object.Equals(this.TrampleActive, other.TrampleActive) && object.Equals(this.TrampleDeActive, other.TrampleDeActive) && object.Equals(this.RenjuCompleteAction, other.RenjuCompleteAction) && object.Equals(this.JigsawFoundationMatchedAction, other.JigsawFoundationMatchedAction) && object.Equals(this.JigsawFoundationUnMatchedActionCtx, other.JigsawFoundationUnMatchedActionCtx) && object.Equals(this.HookLockPointAction, other.HookLockPointAction) && object.Equals(this.ClientTriggerAction, other.ClientTriggerAction) && object.Equals(this.ExploreSkillCustomAction, other.ExploreSkillCustomAction) && object.Equals(this.JigsawFoundationMatchedConditionAction, other.JigsawFoundationMatchedConditionAction) && object.Equals(this.LevelPlayDestroyAction, other.LevelPlayDestroyAction) && object.Equals(this.TemplateSpawnerAction, other.TemplateSpawnerAction) && object.Equals(this.QuestDestroyAction, other.QuestDestroyAction) && object.Equals(this.CompositionConditionEnterAction, other.CompositionConditionEnterAction) && object.Equals(this.TargetGearHitPartCtxAction, other.TargetGearHitPartCtxAction) && object.Equals(this.GlobalFix, other.GlobalFix) && object.Equals(this.StuckCheckCtxPb, other.StuckCheckCtxPb) && object.Equals(this.AfterConditionActionCtxPb, other.AfterConditionActionCtxPb) && object.Equals(this.MotorSliderCtxPb, other.MotorSliderCtxPb) && object.Equals(this.RollBlockGamePlayActionCtxPb, other.RollBlockGamePlayActionCtxPb) && object.Equals(this.TransferCtxPb, other.TransferCtxPb) && object.Equals(this.DynamicEntityRewardCtxPb, other.DynamicEntityRewardCtxPb) && object.Equals(this.BeamCastHitPlayerActionCtxPb, other.BeamCastHitPlayerActionCtxPb) && object.Equals(this.ExploreSkillAction, other.ExploreSkillAction) && object.Equals(this.PollutionRangeAction, other.PollutionRangeAction) && object.Equals(this.EntityQuickHackSkillAction, other.EntityQuickHackSkillAction) && object.Equals(this.RecallQuestActiveAction, other.RecallQuestActiveAction) && object.Equals(this.RecallQuestAcceptAction, other.RecallQuestAcceptAction) && object.Equals(this.RecallQuestFinishAction, other.RecallQuestFinishAction) && object.Equals(this.RecallQuestDestroyAction, other.RecallQuestDestroyAction) && object.Equals(this.EdDebugEnterAction, other.EdDebugEnterAction) && object.Equals(this.CasketTrigger, other.CasketTrigger) && object.Equals(this.FoundationOperateAction, other.FoundationOperateAction) && object.Equals(this.TargetGearActionByHitTypeAction, other.TargetGearActionByHitTypeAction) && object.Equals(this.LongPressInteractActionCtxPb, other.LongPressInteractActionCtxPb) && this.CtxInfoCase == other.CtxInfoCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06009C26 RID: 39974 RVA: 0x00178DA4 File Offset: 0x00176FA4
+		// Token: 0x06009AD0 RID: 39632 RVA: 0x0017636C File Offset: 0x0017456C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -2250,7 +2250,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06009C27 RID: 39975 RVA: 0x001794BA File Offset: 0x001776BA
+		// Token: 0x06009AD1 RID: 39633 RVA: 0x00176A82 File Offset: 0x00174C82
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -2258,7 +2258,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06009C28 RID: 39976 RVA: 0x001794C7 File Offset: 0x001776C7
+		// Token: 0x06009AD2 RID: 39634 RVA: 0x00176A8F File Offset: 0x00174C8F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -2266,7 +2266,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06009C29 RID: 39977 RVA: 0x001794D0 File Offset: 0x001776D0
+		// Token: 0x06009AD3 RID: 39635 RVA: 0x00176A98 File Offset: 0x00174C98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -2642,7 +2642,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009C2A RID: 39978 RVA: 0x00179E88 File Offset: 0x00178088
+		// Token: 0x06009AD4 RID: 39636 RVA: 0x00177450 File Offset: 0x00175650
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -2947,7 +2947,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06009C2B RID: 39979 RVA: 0x0017A620 File Offset: 0x00178820
+		// Token: 0x06009AD5 RID: 39637 RVA: 0x00177BE8 File Offset: 0x00175DE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(GameCtxPb other)
@@ -3492,7 +3492,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06009C2C RID: 39980 RVA: 0x0017B341 File Offset: 0x00179541
+		// Token: 0x06009AD6 RID: 39638 RVA: 0x00178909 File Offset: 0x00176B09
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -3500,7 +3500,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06009C2D RID: 39981 RVA: 0x0017B34C File Offset: 0x0017954C
+		// Token: 0x06009AD7 RID: 39639 RVA: 0x00178914 File Offset: 0x00176B14
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -4454,385 +4454,385 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04004968 RID: 18792
+		// Token: 0x04004961 RID: 18785
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004969 RID: 18793
+		// Token: 0x04004962 RID: 18786
 		public const int CtxTypeFieldNumber = 1;
 
-		// Token: 0x0400496A RID: 18794
+		// Token: 0x04004963 RID: 18787
 		private GameCtxType ctxType_;
 
-		// Token: 0x0400496B RID: 18795
+		// Token: 0x04004964 RID: 18788
 		public const int BehaviorTreeFieldNumber = 2;
 
-		// Token: 0x0400496C RID: 18796
+		// Token: 0x04004965 RID: 18789
 		public const int EntityFieldNumber = 3;
 
-		// Token: 0x0400496D RID: 18797
+		// Token: 0x04004966 RID: 18790
 		public const int NormalInteractFieldNumber = 4;
 
-		// Token: 0x0400496E RID: 18798
+		// Token: 0x04004967 RID: 18791
 		public const int DynamicInteractFieldNumber = 5;
 
-		// Token: 0x0400496F RID: 18799
+		// Token: 0x04004968 RID: 18792
 		public const int RandomInteractFieldNumber = 6;
 
-		// Token: 0x04004970 RID: 18800
+		// Token: 0x04004969 RID: 18793
 		public const int StateChangeActionFieldNumber = 7;
 
-		// Token: 0x04004971 RID: 18801
+		// Token: 0x0400496A RID: 18794
 		public const int EntityGroupActionFieldNumber = 8;
 
-		// Token: 0x04004972 RID: 18802
+		// Token: 0x0400496B RID: 18795
 		public const int EntityTriggerFieldNumber = 9;
 
-		// Token: 0x04004973 RID: 18803
+		// Token: 0x0400496C RID: 18796
 		public const int EntityLeaveTriggerCtxFieldNumber = 10;
 
-		// Token: 0x04004974 RID: 18804
+		// Token: 0x0400496D RID: 18797
 		public const int EntityDestructibleFieldNumber = 11;
 
-		// Token: 0x04004975 RID: 18805
+		// Token: 0x0400496E RID: 18798
 		public const int EntityTimelineTrackFieldNumber = 12;
 
-		// Token: 0x04004976 RID: 18806
+		// Token: 0x0400496F RID: 18799
 		public const int LevelPlayOpenActionFieldNumber = 13;
 
-		// Token: 0x04004977 RID: 18807
+		// Token: 0x04004970 RID: 18800
 		public const int LevelPlayRewardActionFieldNumber = 14;
 
-		// Token: 0x04004978 RID: 18808
+		// Token: 0x04004971 RID: 18801
 		public const int QuestActiveActionFieldNumber = 15;
 
-		// Token: 0x04004979 RID: 18809
+		// Token: 0x04004972 RID: 18802
 		public const int QuestAcceptActionFieldNumber = 16;
 
-		// Token: 0x0400497A RID: 18810
+		// Token: 0x04004973 RID: 18803
 		public const int QuestFinishActionFieldNumber = 17;
 
-		// Token: 0x0400497B RID: 18811
+		// Token: 0x04004974 RID: 18804
 		public const int ChildQuestNodeEnterActionFieldNumber = 18;
 
-		// Token: 0x0400497C RID: 18812
+		// Token: 0x04004975 RID: 18805
 		public const int ChildQuestNodeFinishActionFieldNumber = 19;
 
-		// Token: 0x0400497D RID: 18813
+		// Token: 0x04004976 RID: 18806
 		public const int SuccessNodeActionFieldNumber = 20;
 
-		// Token: 0x0400497E RID: 18814
+		// Token: 0x04004977 RID: 18807
 		public const int FailedNodeActionFieldNumber = 21;
 
-		// Token: 0x0400497F RID: 18815
+		// Token: 0x04004978 RID: 18808
 		public const int CompositionEnterActionFieldNumber = 22;
 
-		// Token: 0x04004980 RID: 18816
+		// Token: 0x04004979 RID: 18809
 		public const int EntityConditionListeningActionFieldNumber = 23;
 
-		// Token: 0x04004981 RID: 18817
+		// Token: 0x0400497A RID: 18810
 		public const int PlayFlowChildQuestNodeFieldNumber = 24;
 
-		// Token: 0x04004982 RID: 18818
+		// Token: 0x0400497B RID: 18811
 		public const int HandInItemChildQuestNodeFieldNumber = 25;
 
-		// Token: 0x04004983 RID: 18819
+		// Token: 0x0400497C RID: 18812
 		public const int DoInteractChildQuestNodeFieldNumber = 26;
 
-		// Token: 0x04004984 RID: 18820
+		// Token: 0x0400497D RID: 18813
 		public const int ActionGroupNodeActionFieldNumber = 27;
 
-		// Token: 0x04004985 RID: 18821
+		// Token: 0x0400497E RID: 18814
 		public const int ExploreSkillPullGiantActionFieldNumber = 28;
 
-		// Token: 0x04004986 RID: 18822
+		// Token: 0x0400497F RID: 18815
 		public const int LevelPlayFieldNumber = 29;
 
-		// Token: 0x04004987 RID: 18823
+		// Token: 0x04004980 RID: 18816
 		public const int GmLevelActionFieldNumber = 30;
 
-		// Token: 0x04004988 RID: 18824
+		// Token: 0x04004981 RID: 18817
 		public const int LifeCycleCreateActionFieldNumber = 31;
 
-		// Token: 0x04004989 RID: 18825
+		// Token: 0x04004982 RID: 18818
 		public const int LifeCycleDestroyActionFieldNumber = 32;
 
-		// Token: 0x0400498A RID: 18826
+		// Token: 0x04004983 RID: 18819
 		public const int FlowActionFieldNumber = 33;
 
-		// Token: 0x0400498B RID: 18827
+		// Token: 0x04004984 RID: 18820
 		public const int DailyQuestTerminateActionFieldNumber = 34;
 
-		// Token: 0x0400498C RID: 18828
+		// Token: 0x04004985 RID: 18821
 		public const int EntityBeamReceiveActionFieldNumber = 35;
 
-		// Token: 0x0400498D RID: 18829
+		// Token: 0x04004986 RID: 18822
 		public const int EntityGroupFailureActionFieldNumber = 36;
 
-		// Token: 0x0400498E RID: 18830
+		// Token: 0x04004987 RID: 18823
 		public const int StateChangeConditionActionFieldNumber = 37;
 
-		// Token: 0x0400498F RID: 18831
+		// Token: 0x04004988 RID: 18824
 		public const int FlowStartTeleportFieldNumber = 38;
 
-		// Token: 0x04004990 RID: 18832
+		// Token: 0x04004989 RID: 18825
 		public const int LeaveInstEscActionFieldNumber = 39;
 
-		// Token: 0x04004991 RID: 18833
+		// Token: 0x0400498A RID: 18826
 		public const int TrampleActiveFieldNumber = 40;
 
-		// Token: 0x04004992 RID: 18834
+		// Token: 0x0400498B RID: 18827
 		public const int TrampleDeActiveFieldNumber = 41;
 
-		// Token: 0x04004993 RID: 18835
+		// Token: 0x0400498C RID: 18828
 		public const int RenjuCompleteActionFieldNumber = 42;
 
-		// Token: 0x04004994 RID: 18836
+		// Token: 0x0400498D RID: 18829
 		public const int JigsawFoundationMatchedActionFieldNumber = 43;
 
-		// Token: 0x04004995 RID: 18837
+		// Token: 0x0400498E RID: 18830
 		public const int JigsawFoundationUnMatchedActionCtxFieldNumber = 44;
 
-		// Token: 0x04004996 RID: 18838
+		// Token: 0x0400498F RID: 18831
 		public const int HookLockPointActionFieldNumber = 45;
 
-		// Token: 0x04004997 RID: 18839
+		// Token: 0x04004990 RID: 18832
 		public const int ClientTriggerActionFieldNumber = 46;
 
-		// Token: 0x04004998 RID: 18840
+		// Token: 0x04004991 RID: 18833
 		public const int ExploreSkillCustomActionFieldNumber = 47;
 
-		// Token: 0x04004999 RID: 18841
+		// Token: 0x04004992 RID: 18834
 		public const int JigsawFoundationMatchedConditionActionFieldNumber = 48;
 
-		// Token: 0x0400499A RID: 18842
+		// Token: 0x04004993 RID: 18835
 		public const int LevelPlayDestroyActionFieldNumber = 49;
 
-		// Token: 0x0400499B RID: 18843
+		// Token: 0x04004994 RID: 18836
 		public const int TemplateSpawnerActionFieldNumber = 50;
 
-		// Token: 0x0400499C RID: 18844
+		// Token: 0x04004995 RID: 18837
 		public const int QuestDestroyActionFieldNumber = 51;
 
-		// Token: 0x0400499D RID: 18845
+		// Token: 0x04004996 RID: 18838
 		public const int CompositionConditionEnterActionFieldNumber = 52;
 
-		// Token: 0x0400499E RID: 18846
+		// Token: 0x04004997 RID: 18839
 		public const int TargetGearHitPartCtxActionFieldNumber = 53;
 
-		// Token: 0x0400499F RID: 18847
+		// Token: 0x04004998 RID: 18840
 		public const int GlobalFixFieldNumber = 54;
 
-		// Token: 0x040049A0 RID: 18848
+		// Token: 0x04004999 RID: 18841
 		public const int StuckCheckCtxPbFieldNumber = 55;
 
-		// Token: 0x040049A1 RID: 18849
+		// Token: 0x0400499A RID: 18842
 		public const int AfterConditionActionCtxPbFieldNumber = 56;
 
-		// Token: 0x040049A2 RID: 18850
+		// Token: 0x0400499B RID: 18843
 		public const int MotorSliderCtxPbFieldNumber = 58;
 
-		// Token: 0x040049A3 RID: 18851
+		// Token: 0x0400499C RID: 18844
 		public const int RollBlockGamePlayActionCtxPbFieldNumber = 59;
 
-		// Token: 0x040049A4 RID: 18852
+		// Token: 0x0400499D RID: 18845
 		public const int TransferCtxPbFieldNumber = 60;
 
-		// Token: 0x040049A5 RID: 18853
+		// Token: 0x0400499E RID: 18846
 		public const int DynamicEntityRewardCtxPbFieldNumber = 61;
 
-		// Token: 0x040049A6 RID: 18854
+		// Token: 0x0400499F RID: 18847
 		public const int BeamCastHitPlayerActionCtxPbFieldNumber = 62;
 
-		// Token: 0x040049A7 RID: 18855
+		// Token: 0x040049A0 RID: 18848
 		public const int ExploreSkillActionFieldNumber = 63;
 
-		// Token: 0x040049A8 RID: 18856
+		// Token: 0x040049A1 RID: 18849
 		public const int PollutionRangeActionFieldNumber = 64;
 
-		// Token: 0x040049A9 RID: 18857
+		// Token: 0x040049A2 RID: 18850
 		public const int EntityQuickHackSkillActionFieldNumber = 65;
 
-		// Token: 0x040049AA RID: 18858
+		// Token: 0x040049A3 RID: 18851
 		public const int RecallQuestActiveActionFieldNumber = 66;
 
-		// Token: 0x040049AB RID: 18859
+		// Token: 0x040049A4 RID: 18852
 		public const int RecallQuestAcceptActionFieldNumber = 67;
 
-		// Token: 0x040049AC RID: 18860
+		// Token: 0x040049A5 RID: 18853
 		public const int RecallQuestFinishActionFieldNumber = 68;
 
-		// Token: 0x040049AD RID: 18861
+		// Token: 0x040049A6 RID: 18854
 		public const int RecallQuestDestroyActionFieldNumber = 69;
 
-		// Token: 0x040049AE RID: 18862
+		// Token: 0x040049A7 RID: 18855
 		public const int EdDebugEnterActionFieldNumber = 3401;
 
-		// Token: 0x040049AF RID: 18863
+		// Token: 0x040049A8 RID: 18856
 		public const int CasketTriggerFieldNumber = 3501;
 
-		// Token: 0x040049B0 RID: 18864
+		// Token: 0x040049A9 RID: 18857
 		public const int FoundationOperateActionFieldNumber = 3502;
 
-		// Token: 0x040049B1 RID: 18865
+		// Token: 0x040049AA RID: 18858
 		public const int TargetGearActionByHitTypeActionFieldNumber = 3701;
 
-		// Token: 0x040049B2 RID: 18866
+		// Token: 0x040049AB RID: 18859
 		public const int LongPressInteractActionCtxPbFieldNumber = 3702;
 
-		// Token: 0x040049B3 RID: 18867
+		// Token: 0x040049AC RID: 18860
 		private object ctxInfo_;
 
-		// Token: 0x040049B4 RID: 18868
+		// Token: 0x040049AD RID: 18861
 		private GameCtxPb.CtxInfoOneofCase ctxInfoCase_;
 
-		// Token: 0x020017C7 RID: 6087
+		// Token: 0x0200183F RID: 6207
 		public enum CtxInfoOneofCase
 		{
-			// Token: 0x0400C713 RID: 50963
+			// Token: 0x0400CC3E RID: 52286
 			None,
-			// Token: 0x0400C714 RID: 50964
+			// Token: 0x0400CC3F RID: 52287
 			BehaviorTree = 2,
-			// Token: 0x0400C715 RID: 50965
+			// Token: 0x0400CC40 RID: 52288
 			Entity,
-			// Token: 0x0400C716 RID: 50966
+			// Token: 0x0400CC41 RID: 52289
 			NormalInteract,
-			// Token: 0x0400C717 RID: 50967
+			// Token: 0x0400CC42 RID: 52290
 			DynamicInteract,
-			// Token: 0x0400C718 RID: 50968
+			// Token: 0x0400CC43 RID: 52291
 			RandomInteract,
-			// Token: 0x0400C719 RID: 50969
+			// Token: 0x0400CC44 RID: 52292
 			StateChangeAction,
-			// Token: 0x0400C71A RID: 50970
+			// Token: 0x0400CC45 RID: 52293
 			EntityGroupAction,
-			// Token: 0x0400C71B RID: 50971
+			// Token: 0x0400CC46 RID: 52294
 			EntityTrigger,
-			// Token: 0x0400C71C RID: 50972
+			// Token: 0x0400CC47 RID: 52295
 			EntityLeaveTriggerCtx,
-			// Token: 0x0400C71D RID: 50973
+			// Token: 0x0400CC48 RID: 52296
 			EntityDestructible,
-			// Token: 0x0400C71E RID: 50974
+			// Token: 0x0400CC49 RID: 52297
 			EntityTimelineTrack,
-			// Token: 0x0400C71F RID: 50975
+			// Token: 0x0400CC4A RID: 52298
 			LevelPlayOpenAction,
-			// Token: 0x0400C720 RID: 50976
+			// Token: 0x0400CC4B RID: 52299
 			LevelPlayRewardAction,
-			// Token: 0x0400C721 RID: 50977
+			// Token: 0x0400CC4C RID: 52300
 			QuestActiveAction,
-			// Token: 0x0400C722 RID: 50978
+			// Token: 0x0400CC4D RID: 52301
 			QuestAcceptAction,
-			// Token: 0x0400C723 RID: 50979
+			// Token: 0x0400CC4E RID: 52302
 			QuestFinishAction,
-			// Token: 0x0400C724 RID: 50980
+			// Token: 0x0400CC4F RID: 52303
 			ChildQuestNodeEnterAction,
-			// Token: 0x0400C725 RID: 50981
+			// Token: 0x0400CC50 RID: 52304
 			ChildQuestNodeFinishAction,
-			// Token: 0x0400C726 RID: 50982
+			// Token: 0x0400CC51 RID: 52305
 			SuccessNodeAction,
-			// Token: 0x0400C727 RID: 50983
+			// Token: 0x0400CC52 RID: 52306
 			FailedNodeAction,
-			// Token: 0x0400C728 RID: 50984
+			// Token: 0x0400CC53 RID: 52307
 			CompositionEnterAction,
-			// Token: 0x0400C729 RID: 50985
+			// Token: 0x0400CC54 RID: 52308
 			EntityConditionListeningAction,
-			// Token: 0x0400C72A RID: 50986
+			// Token: 0x0400CC55 RID: 52309
 			PlayFlowChildQuestNode,
-			// Token: 0x0400C72B RID: 50987
+			// Token: 0x0400CC56 RID: 52310
 			HandInItemChildQuestNode,
-			// Token: 0x0400C72C RID: 50988
+			// Token: 0x0400CC57 RID: 52311
 			DoInteractChildQuestNode,
-			// Token: 0x0400C72D RID: 50989
+			// Token: 0x0400CC58 RID: 52312
 			ActionGroupNodeAction,
-			// Token: 0x0400C72E RID: 50990
+			// Token: 0x0400CC59 RID: 52313
 			ExploreSkillPullGiantAction,
-			// Token: 0x0400C72F RID: 50991
+			// Token: 0x0400CC5A RID: 52314
 			LevelPlay,
-			// Token: 0x0400C730 RID: 50992
+			// Token: 0x0400CC5B RID: 52315
 			GmLevelAction,
-			// Token: 0x0400C731 RID: 50993
+			// Token: 0x0400CC5C RID: 52316
 			LifeCycleCreateAction,
-			// Token: 0x0400C732 RID: 50994
+			// Token: 0x0400CC5D RID: 52317
 			LifeCycleDestroyAction,
-			// Token: 0x0400C733 RID: 50995
+			// Token: 0x0400CC5E RID: 52318
 			FlowAction,
-			// Token: 0x0400C734 RID: 50996
+			// Token: 0x0400CC5F RID: 52319
 			DailyQuestTerminateAction,
-			// Token: 0x0400C735 RID: 50997
+			// Token: 0x0400CC60 RID: 52320
 			EntityBeamReceiveAction,
-			// Token: 0x0400C736 RID: 50998
+			// Token: 0x0400CC61 RID: 52321
 			EntityGroupFailureAction,
-			// Token: 0x0400C737 RID: 50999
+			// Token: 0x0400CC62 RID: 52322
 			StateChangeConditionAction,
-			// Token: 0x0400C738 RID: 51000
+			// Token: 0x0400CC63 RID: 52323
 			FlowStartTeleport,
-			// Token: 0x0400C739 RID: 51001
+			// Token: 0x0400CC64 RID: 52324
 			LeaveInstEscAction,
-			// Token: 0x0400C73A RID: 51002
+			// Token: 0x0400CC65 RID: 52325
 			TrampleActive,
-			// Token: 0x0400C73B RID: 51003
+			// Token: 0x0400CC66 RID: 52326
 			TrampleDeActive,
-			// Token: 0x0400C73C RID: 51004
+			// Token: 0x0400CC67 RID: 52327
 			RenjuCompleteAction,
-			// Token: 0x0400C73D RID: 51005
+			// Token: 0x0400CC68 RID: 52328
 			JigsawFoundationMatchedAction,
-			// Token: 0x0400C73E RID: 51006
+			// Token: 0x0400CC69 RID: 52329
 			JigsawFoundationUnMatchedActionCtx,
-			// Token: 0x0400C73F RID: 51007
+			// Token: 0x0400CC6A RID: 52330
 			HookLockPointAction,
-			// Token: 0x0400C740 RID: 51008
+			// Token: 0x0400CC6B RID: 52331
 			ClientTriggerAction,
-			// Token: 0x0400C741 RID: 51009
+			// Token: 0x0400CC6C RID: 52332
 			ExploreSkillCustomAction,
-			// Token: 0x0400C742 RID: 51010
+			// Token: 0x0400CC6D RID: 52333
 			JigsawFoundationMatchedConditionAction,
-			// Token: 0x0400C743 RID: 51011
+			// Token: 0x0400CC6E RID: 52334
 			LevelPlayDestroyAction,
-			// Token: 0x0400C744 RID: 51012
+			// Token: 0x0400CC6F RID: 52335
 			TemplateSpawnerAction,
-			// Token: 0x0400C745 RID: 51013
+			// Token: 0x0400CC70 RID: 52336
 			QuestDestroyAction,
-			// Token: 0x0400C746 RID: 51014
+			// Token: 0x0400CC71 RID: 52337
 			CompositionConditionEnterAction,
-			// Token: 0x0400C747 RID: 51015
+			// Token: 0x0400CC72 RID: 52338
 			TargetGearHitPartCtxAction,
-			// Token: 0x0400C748 RID: 51016
+			// Token: 0x0400CC73 RID: 52339
 			GlobalFix,
-			// Token: 0x0400C749 RID: 51017
+			// Token: 0x0400CC74 RID: 52340
 			StuckCheckCtxPb,
-			// Token: 0x0400C74A RID: 51018
+			// Token: 0x0400CC75 RID: 52341
 			AfterConditionActionCtxPb,
-			// Token: 0x0400C74B RID: 51019
+			// Token: 0x0400CC76 RID: 52342
 			MotorSliderCtxPb = 58,
-			// Token: 0x0400C74C RID: 51020
+			// Token: 0x0400CC77 RID: 52343
 			RollBlockGamePlayActionCtxPb,
-			// Token: 0x0400C74D RID: 51021
+			// Token: 0x0400CC78 RID: 52344
 			TransferCtxPb,
-			// Token: 0x0400C74E RID: 51022
+			// Token: 0x0400CC79 RID: 52345
 			DynamicEntityRewardCtxPb,
-			// Token: 0x0400C74F RID: 51023
+			// Token: 0x0400CC7A RID: 52346
 			BeamCastHitPlayerActionCtxPb,
-			// Token: 0x0400C750 RID: 51024
+			// Token: 0x0400CC7B RID: 52347
 			ExploreSkillAction,
-			// Token: 0x0400C751 RID: 51025
+			// Token: 0x0400CC7C RID: 52348
 			PollutionRangeAction,
-			// Token: 0x0400C752 RID: 51026
+			// Token: 0x0400CC7D RID: 52349
 			EntityQuickHackSkillAction,
-			// Token: 0x0400C753 RID: 51027
+			// Token: 0x0400CC7E RID: 52350
 			RecallQuestActiveAction,
-			// Token: 0x0400C754 RID: 51028
+			// Token: 0x0400CC7F RID: 52351
 			RecallQuestAcceptAction,
-			// Token: 0x0400C755 RID: 51029
+			// Token: 0x0400CC80 RID: 52352
 			RecallQuestFinishAction,
-			// Token: 0x0400C756 RID: 51030
+			// Token: 0x0400CC81 RID: 52353
 			RecallQuestDestroyAction,
-			// Token: 0x0400C757 RID: 51031
+			// Token: 0x0400CC82 RID: 52354
 			EdDebugEnterAction = 3401,
-			// Token: 0x0400C758 RID: 51032
+			// Token: 0x0400CC83 RID: 52355
 			CasketTrigger = 3501,
-			// Token: 0x0400C759 RID: 51033
+			// Token: 0x0400CC84 RID: 52356
 			FoundationOperateAction,
-			// Token: 0x0400C75A RID: 51034
+			// Token: 0x0400CC85 RID: 52357
 			TargetGearActionByHitTypeAction = 3701,
-			// Token: 0x0400C75B RID: 51035
+			// Token: 0x0400CC86 RID: 52358
 			LongPressInteractActionCtxPb
 		}
 	}

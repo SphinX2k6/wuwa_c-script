@@ -3,35 +3,34 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000D3 RID: 211
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020000DB RID: 219
 	public class ElementalWellComponent_SetValue
 	{
-		// Token: 0x0400049F RID: 1183
+		// Token: 0x040004C3 RID: 1219
 		public bool? Disabled;
 
-		// Token: 0x040004A0 RID: 1184
+		// Token: 0x040004C4 RID: 1220
 		public bool? EdIsLocked;
 
-		// Token: 0x040004A1 RID: 1185
+		// Token: 0x040004C5 RID: 1221
 		public EElementalWellEntryType WellType;
 
-		// Token: 0x040004A2 RID: 1186
-		[Nullable(1)]
+		// Token: 0x040004C6 RID: 1222
 		public IWellStreamingRenderConfig StreamingRenderConfig;
 
-		// Token: 0x040004A3 RID: 1187
-		[Nullable(1)]
+		// Token: 0x040004C7 RID: 1223
 		public IStreamingWaitConfig StreamWaitConfig;
 
-		// Token: 0x040004A4 RID: 1188
+		// Token: 0x040004C8 RID: 1224
+		[Nullable(2)]
 		public string StreamingFinishedToState;
 
-		// Token: 0x040004A5 RID: 1189
+		// Token: 0x040004C9 RID: 1225
+		[Nullable(2)]
 		public string LeaveRangeToState;
 
-		// Token: 0x040004A6 RID: 1190
+		// Token: 0x040004CA RID: 1226
+		[Nullable(2)]
 		public string PrefabBindPointKey;
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002F1 RID: 753
+	// Token: 0x02000306 RID: 774
 	public class ConfigFishingTechEffectByType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060011AB RID: 4523 RVA: 0x000BD588 File Offset: 0x000BB788
+		// Token: 0x06001229 RID: 4649 RVA: 0x000C3A94 File Offset: 0x000C1C94
 		static ConfigFishingTechEffectByType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFishingTechEffectByType.CreateStaticDefaultValue), new Action(ConfigFishingTechEffectByType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060011AC RID: 4524 RVA: 0x000BD5A8 File Offset: 0x000BB7A8
+		// Token: 0x0600122A RID: 4650 RVA: 0x000C3AB4 File Offset: 0x000C1CB4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFishingTechEffectByType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060011AD RID: 4525 RVA: 0x000BD627 File Offset: 0x000BB827
+		// Token: 0x0600122B RID: 4651 RVA: 0x000C3B33 File Offset: 0x000C1D33
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFishingTechEffectByType.LogPair = null;
 			ConfigFishingTechEffectByType.HandleId = 0;
 		}
 
-		// Token: 0x060011AE RID: 4526 RVA: 0x000BD635 File Offset: 0x000BB835
+		// Token: 0x0600122C RID: 4652 RVA: 0x000C3B41 File Offset: 0x000C1D41
 		public static void Init()
 		{
 			ConfigFishingTechEffectByType.HandleId = ConfigCommon.InitDataStatement(ConfigFishingTechEffectByType.HandleId, "db_fishing.db", "select BinData from `FishingTechEffect` where Type=?");
 		}
 
-		// Token: 0x060011AF RID: 4527 RVA: 0x000BD650 File Offset: 0x000BB850
+		// Token: 0x0600122D RID: 4653 RVA: 0x000C3B5C File Offset: 0x000C1D5C
 		[NullableContext(2)]
 		public static IReadOnlyList<FishingTechEffect> GetConfigList(int p0Type, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400147B RID: 5243
+		// Token: 0x0400150E RID: 5390
 		private const string DB = "db_fishing.db";
 
-		// Token: 0x0400147C RID: 5244
+		// Token: 0x0400150F RID: 5391
 		private const string FILE = "b.捕鱼船坞.xlsx";
 
-		// Token: 0x0400147D RID: 5245
+		// Token: 0x04001510 RID: 5392
 		private const string TABLE = "FishingTechEffect";
 
-		// Token: 0x0400147E RID: 5246
+		// Token: 0x04001511 RID: 5393
 		private const string COMMAND = "select BinData from `FishingTechEffect` where Type=?";
 
-		// Token: 0x0400147F RID: 5247
+		// Token: 0x04001512 RID: 5394
 		private const string KEY_PREFIX = "FishingTechEffectByType";
 
-		// Token: 0x04001480 RID: 5248
+		// Token: 0x04001513 RID: 5395
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001481 RID: 5249
+		// Token: 0x04001514 RID: 5396
 		private static int HandleId;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A08 RID: 2568
+	// Token: 0x02000ACD RID: 2765
 	public static class ESearchlightRotateAxisExtensions
 	{
-		// Token: 0x060038D5 RID: 14549 RVA: 0x00092EBC File Offset: 0x000910BC
+		// Token: 0x06003CAD RID: 15533 RVA: 0x0009B7AC File Offset: 0x000999AC
 		public static string ToEnumString(this ESearchlightRotateAxis value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038D6 RID: 14550 RVA: 0x00092EF4 File Offset: 0x000910F4
+		// Token: 0x06003CAE RID: 15534 RVA: 0x0009B7E4 File Offset: 0x000999E4
 		public static ESearchlightRotateAxis FromString(string name)
 		{
 			ESearchlightRotateAxis result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038D7 RID: 14551 RVA: 0x00092F1D File Offset: 0x0009111D
+		// Token: 0x06003CAF RID: 15535 RVA: 0x0009B80D File Offset: 0x00099A0D
 		public static bool TryFromString(string name, out ESearchlightRotateAxis value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060038D8 RID: 14552 RVA: 0x00092F56 File Offset: 0x00091156
+		// Token: 0x06003CB0 RID: 15536 RVA: 0x0009B846 File Offset: 0x00099A46
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060038D9 RID: 14553 RVA: 0x00092F6E File Offset: 0x0009116E
+		// Token: 0x06003CB1 RID: 15537 RVA: 0x0009B85E File Offset: 0x00099A5E
 		public static ESearchlightRotateAxis[] GetValues()
 		{
 			return new ESearchlightRotateAxis[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060038DA RID: 14554 RVA: 0x00092F7A File Offset: 0x0009117A
+		// Token: 0x06003CB2 RID: 15538 RVA: 0x0009B86A File Offset: 0x00099A6A
 		public static string[] GetNames()
 		{
 			return new string[]

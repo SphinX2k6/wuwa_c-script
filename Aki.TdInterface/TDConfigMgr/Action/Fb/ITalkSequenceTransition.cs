@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025AF RID: 9647
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200285E RID: 10334
 	public class ITalkSequenceTransition
 	{
-		// Token: 0x0600D904 RID: 55556 RVA: 0x0020616E File Offset: 0x0020436E
+		// Token: 0x0600E67E RID: 59006 RVA: 0x00221E42 File Offset: 0x00220042
 		public static ITalkSequenceTransition Create(ITalkSequenceTransition? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F68 RID: 16232
-		// (get) Token: 0x0600D905 RID: 55557 RVA: 0x0020618D File Offset: 0x0020438D
+		// Token: 0x17004270 RID: 17008
+		// (get) Token: 0x0600E67F RID: 59007 RVA: 0x00221E61 File Offset: 0x00220061
 		public virtual string OptionText
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F69 RID: 16233
-		// (get) Token: 0x0600D906 RID: 55558 RVA: 0x0020619A File Offset: 0x0020439A
+		// Token: 0x17004271 RID: 17009
+		// (get) Token: 0x0600E680 RID: 59008 RVA: 0x00221E6E File Offset: 0x0022006E
 		public virtual string OptionTextKey
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F6A RID: 16234
-		// (get) Token: 0x0600D907 RID: 55559 RVA: 0x002061A7 File Offset: 0x002043A7
+		// Token: 0x17004272 RID: 17010
+		// (get) Token: 0x0600E681 RID: 59009 RVA: 0x00221E7B File Offset: 0x0022007B
 		public virtual int NextSequenceIndex
 		{
 			get
@@ -52,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400788D RID: 30861
+		// Token: 0x04007EF4 RID: 32500
 		private ITalkSequenceTransition Instance;
 	}
 }

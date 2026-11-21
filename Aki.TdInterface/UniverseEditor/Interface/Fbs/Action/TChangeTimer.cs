@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007665 RID: 30309
+	// Token: 0x02007E73 RID: 32371
 	public enum TChangeTimer : byte
 	{
-		// Token: 0x04012638 RID: 75320
+		// Token: 0x04013682 RID: 79490
 		NONE,
-		// Token: 0x04012639 RID: 75321
+		// Token: 0x04013683 RID: 79491
 		IAddTime,
-		// Token: 0x0401263A RID: 75322
+		// Token: 0x04013684 RID: 79492
 		IReduceTime,
-		// Token: 0x0401263B RID: 75323
+		// Token: 0x04013685 RID: 79493
 		ISetTime
 	}
 }

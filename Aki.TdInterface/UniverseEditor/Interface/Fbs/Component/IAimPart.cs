@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E83 RID: 20099
+	// Token: 0x02005394 RID: 21396
 	public struct IAimPart : IFlatbufferObject
 	{
-		// Token: 0x17008FFE RID: 36862
-		// (get) Token: 0x0601F990 RID: 129424 RVA: 0x00466B5C File Offset: 0x00464D5C
+		// Token: 0x17009737 RID: 38711
+		// (get) Token: 0x060215DB RID: 136667 RVA: 0x0049AB74 File Offset: 0x00498D74
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F991 RID: 129425 RVA: 0x00466B69 File Offset: 0x00464D69
+		// Token: 0x060215DC RID: 136668 RVA: 0x0049AB81 File Offset: 0x00498D81
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F992 RID: 129426 RVA: 0x00466B70 File Offset: 0x00464D70
+		// Token: 0x060215DD RID: 136669 RVA: 0x0049AB88 File Offset: 0x00498D88
 		public static IAimPart GetRootAsIAimPart(ByteBuffer _bb)
 		{
 			return IAimPart.GetRootAsIAimPart(_bb, default(IAimPart));
 		}
 
-		// Token: 0x0601F993 RID: 129427 RVA: 0x00466B8C File Offset: 0x00464D8C
+		// Token: 0x060215DE RID: 136670 RVA: 0x0049ABA4 File Offset: 0x00498DA4
 		public static IAimPart GetRootAsIAimPart(ByteBuffer _bb, IAimPart obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F994 RID: 129428 RVA: 0x00466BA9 File Offset: 0x00464DA9
+		// Token: 0x060215DF RID: 136671 RVA: 0x0049ABC1 File Offset: 0x00498DC1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F995 RID: 129429 RVA: 0x00466BB8 File Offset: 0x00464DB8
+		// Token: 0x060215E0 RID: 136672 RVA: 0x0049ABD0 File Offset: 0x00498DD0
 		public IAimPart __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008FFF RID: 36863
-		// (get) Token: 0x0601F996 RID: 129430 RVA: 0x00466BC8 File Offset: 0x00464DC8
+		// Token: 0x17009738 RID: 38712
+		// (get) Token: 0x060215E1 RID: 136673 RVA: 0x0049ABE0 File Offset: 0x00498DE0
 		public string BoneName
 		{
 			get
@@ -63,20 +63,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F997 RID: 129431 RVA: 0x00466BFF File Offset: 0x00464DFF
+		// Token: 0x060215E2 RID: 136674 RVA: 0x0049AC17 File Offset: 0x00498E17
 		public Span<byte> GetBoneNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0601F998 RID: 129432 RVA: 0x00466C0E File Offset: 0x00464E0E
+		// Token: 0x060215E3 RID: 136675 RVA: 0x0049AC26 File Offset: 0x00498E26
 		public byte[] GetBoneNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x17009000 RID: 36864
-		// (get) Token: 0x0601F999 RID: 129433 RVA: 0x00466C1C File Offset: 0x00464E1C
+		// Token: 0x17009739 RID: 38713
+		// (get) Token: 0x060215E4 RID: 136676 RVA: 0x0049AC34 File Offset: 0x00498E34
 		public IVectorInfo? Offset
 		{
 			get
@@ -90,8 +90,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009001 RID: 36865
-		// (get) Token: 0x0601F99A RID: 129434 RVA: 0x00466C7C File Offset: 0x00464E7C
+		// Token: 0x1700973A RID: 38714
+		// (get) Token: 0x060215E5 RID: 136677 RVA: 0x0049AC94 File Offset: 0x00498E94
 		public int RadiusIn
 		{
 			get
@@ -105,8 +105,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009002 RID: 36866
-		// (get) Token: 0x0601F99B RID: 129435 RVA: 0x00466CB8 File Offset: 0x00464EB8
+		// Token: 0x1700973B RID: 38715
+		// (get) Token: 0x060215E6 RID: 136678 RVA: 0x0049ACD0 File Offset: 0x00498ED0
 		public int RadiusOut
 		{
 			get
@@ -120,8 +120,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009003 RID: 36867
-		// (get) Token: 0x0601F99C RID: 129436 RVA: 0x00466CF8 File Offset: 0x00464EF8
+		// Token: 0x1700973C RID: 38716
+		// (get) Token: 0x060215E7 RID: 136679 RVA: 0x0049AD10 File Offset: 0x00498F10
 		public int RadiusOutOnStart
 		{
 			get
@@ -135,8 +135,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009004 RID: 36868
-		// (get) Token: 0x0601F99D RID: 129437 RVA: 0x00466D38 File Offset: 0x00464F38
+		// Token: 0x1700973D RID: 38717
+		// (get) Token: 0x060215E8 RID: 136680 RVA: 0x0049AD50 File Offset: 0x00498F50
 		public float MobileCorrect
 		{
 			get
@@ -150,8 +150,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009005 RID: 36869
-		// (get) Token: 0x0601F99E RID: 129438 RVA: 0x00466D7C File Offset: 0x00464F7C
+		// Token: 0x1700973E RID: 38718
+		// (get) Token: 0x060215E9 RID: 136681 RVA: 0x0049AD94 File Offset: 0x00498F94
 		public float GamePadCorrect
 		{
 			get
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F99F RID: 129439 RVA: 0x00466DC0 File Offset: 0x00464FC0
+		// Token: 0x060215EA RID: 136682 RVA: 0x0049ADD8 File Offset: 0x00498FD8
 		public static Offset<IAimPart> CreateIAimPart(FlatBufferBuilder builder, StringOffset BoneNameOffset = default(StringOffset), Offset<IVectorInfo> OffsetOffset = default(Offset<IVectorInfo>), int RadiusIn = 0, int RadiusOut = 0, int RadiusOutOnStart = 0, float MobileCorrect = 0f, float GamePadCorrect = 0f)
 		{
 			builder.StartTable(7);
@@ -179,61 +179,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAimPart.EndIAimPart(builder);
 		}
 
-		// Token: 0x0601F9A0 RID: 129440 RVA: 0x00466E0F File Offset: 0x0046500F
+		// Token: 0x060215EB RID: 136683 RVA: 0x0049AE27 File Offset: 0x00499027
 		public static void StartIAimPart(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x0601F9A1 RID: 129441 RVA: 0x00466E18 File Offset: 0x00465018
+		// Token: 0x060215EC RID: 136684 RVA: 0x0049AE30 File Offset: 0x00499030
 		public static void AddBoneName(FlatBufferBuilder builder, StringOffset boneNameOffset)
 		{
 			builder.AddOffset(0, boneNameOffset.Value, 0);
 		}
 
-		// Token: 0x0601F9A2 RID: 129442 RVA: 0x00466E28 File Offset: 0x00465028
+		// Token: 0x060215ED RID: 136685 RVA: 0x0049AE40 File Offset: 0x00499040
 		public static void AddOffset(FlatBufferBuilder builder, Offset<IVectorInfo> offsetOffset)
 		{
 			builder.AddOffset(1, offsetOffset.Value, 0);
 		}
 
-		// Token: 0x0601F9A3 RID: 129443 RVA: 0x00466E38 File Offset: 0x00465038
+		// Token: 0x060215EE RID: 136686 RVA: 0x0049AE50 File Offset: 0x00499050
 		public static void AddRadiusIn(FlatBufferBuilder builder, int radiusIn)
 		{
 			builder.AddInt(2, radiusIn, 0);
 		}
 
-		// Token: 0x0601F9A4 RID: 129444 RVA: 0x00466E43 File Offset: 0x00465043
+		// Token: 0x060215EF RID: 136687 RVA: 0x0049AE5B File Offset: 0x0049905B
 		public static void AddRadiusOut(FlatBufferBuilder builder, int radiusOut)
 		{
 			builder.AddInt(3, radiusOut, 0);
 		}
 
-		// Token: 0x0601F9A5 RID: 129445 RVA: 0x00466E4E File Offset: 0x0046504E
+		// Token: 0x060215F0 RID: 136688 RVA: 0x0049AE66 File Offset: 0x00499066
 		public static void AddRadiusOutOnStart(FlatBufferBuilder builder, int radiusOutOnStart)
 		{
 			builder.AddInt(4, radiusOutOnStart, 0);
 		}
 
-		// Token: 0x0601F9A6 RID: 129446 RVA: 0x00466E59 File Offset: 0x00465059
+		// Token: 0x060215F1 RID: 136689 RVA: 0x0049AE71 File Offset: 0x00499071
 		public static void AddMobileCorrect(FlatBufferBuilder builder, float mobileCorrect)
 		{
 			builder.AddFloat(5, mobileCorrect, 0.0);
 		}
 
-		// Token: 0x0601F9A7 RID: 129447 RVA: 0x00466E6C File Offset: 0x0046506C
+		// Token: 0x060215F2 RID: 136690 RVA: 0x0049AE84 File Offset: 0x00499084
 		public static void AddGamePadCorrect(FlatBufferBuilder builder, float gamePadCorrect)
 		{
 			builder.AddFloat(6, gamePadCorrect, 0.0);
 		}
 
-		// Token: 0x0601F9A8 RID: 129448 RVA: 0x00466E7F File Offset: 0x0046507F
+		// Token: 0x060215F3 RID: 136691 RVA: 0x0049AE97 File Offset: 0x00499097
 		public static Offset<IAimPart> EndIAimPart(FlatBufferBuilder builder)
 		{
 			return new Offset<IAimPart>(builder.EndTable());
 		}
 
-		// Token: 0x0601F9A9 RID: 129449 RVA: 0x00466E8C File Offset: 0x0046508C
+		// Token: 0x060215F4 RID: 136692 RVA: 0x0049AEA4 File Offset: 0x004990A4
 		public IAimPartT UnPack()
 		{
 			IAimPartT aimPartT = new IAimPartT();
@@ -241,7 +241,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return aimPartT;
 		}
 
-		// Token: 0x0601F9AA RID: 129450 RVA: 0x00466EA8 File Offset: 0x004650A8
+		// Token: 0x060215F5 RID: 136693 RVA: 0x0049AEC0 File Offset: 0x004990C0
 		public void UnPackTo(IAimPartT _o)
 		{
 			_o.BoneName = this.BoneName;
@@ -253,7 +253,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.GamePadCorrect = this.GamePadCorrect;
 		}
 
-		// Token: 0x0601F9AB RID: 129451 RVA: 0x00466F2C File Offset: 0x0046512C
+		// Token: 0x060215F6 RID: 136694 RVA: 0x0049AF44 File Offset: 0x00499144
 		public static Offset<IAimPart> Pack(FlatBufferBuilder builder, IAimPartT _o)
 		{
 			if (_o == null)
@@ -265,7 +265,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAimPart.CreateIAimPart(builder, boneNameOffset, offsetOffset, _o.RadiusIn, _o.RadiusOut, _o.RadiusOutOnStart, _o.MobileCorrect, _o.GamePadCorrect);
 		}
 
-		// Token: 0x0400DC42 RID: 56386
+		// Token: 0x0400E7BC RID: 59324
 		private Table __p;
 	}
 }

@@ -5,46 +5,41 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 {
-	// Token: 0x0200552D RID: 21805
+	// Token: 0x02004500 RID: 17664
 	[NullableContext(1)]
 	public interface IMarkItemComponentContext
 	{
-		// Token: 0x170085AC RID: 34220
-		// (get) Token: 0x06037AA9 RID: 228009
-		// (set) Token: 0x06037AAA RID: 228010
-		MarkItemEntity MarkItemEntity { get; set; }
-
-		// Token: 0x170085AD RID: 34221
-		// (get) Token: 0x06037AAB RID: 228011
-		// (set) Token: 0x06037AAC RID: 228012
+		// Token: 0x17005948 RID: 22856
+		// (get) Token: 0x0602C979 RID: 182649
+		// (set) Token: 0x0602C97A RID: 182650
 		UUISprite TopRightIconSprite { get; set; }
 
-		// Token: 0x170085AE RID: 34222
-		// (get) Token: 0x06037AAD RID: 228013
-		// (set) Token: 0x06037AAE RID: 228014
+		// Token: 0x17005949 RID: 22857
+		// (get) Token: 0x0602C97B RID: 182651
+		// (set) Token: 0x0602C97C RID: 182652
 		TSetSpriteByPathAction SetSpriteByPathAction { get; set; }
 
-		// Token: 0x170085AF RID: 34223
-		// (get) Token: 0x06037AAF RID: 228015
-		// (set) Token: 0x06037AB0 RID: 228016
+		// Token: 0x1700594A RID: 22858
+		// (get) Token: 0x0602C97D RID: 182653
+		// (set) Token: 0x0602C97E RID: 182654
 		UUIItem MarkComponentContainer { get; set; }
 
-		// Token: 0x170085B0 RID: 34224
-		// (get) Token: 0x06037AB1 RID: 228017
-		// (set) Token: 0x06037AB2 RID: 228018
+		// Token: 0x1700594B RID: 22859
+		// (get) Token: 0x0602C97F RID: 182655
+		// (set) Token: 0x0602C980 RID: 182656
 		UUIItem MarkParentItem { get; set; }
 
-		// Token: 0x170085B1 RID: 34225
-		// (get) Token: 0x06037AB3 RID: 228019
-		// (set) Token: 0x06037AB4 RID: 228020
+		// Token: 0x1700594C RID: 22860
+		// (get) Token: 0x0602C981 RID: 182657
+		// (set) Token: 0x0602C982 RID: 182658
 		UUIItem MarkRootItem { get; set; }
 
-		// Token: 0x170085B2 RID: 34226
-		// (get) Token: 0x06037AB5 RID: 228021
-		// (set) Token: 0x06037AB6 RID: 228022
+		// Token: 0x1700594D RID: 22861
+		// (get) Token: 0x0602C983 RID: 182659
+		// (set) Token: 0x0602C984 RID: 182660
 		MarkItem MarkItem { get; set; }
 
-		// Token: 0x06037AB7 RID: 228023
+		// Token: 0x0602C985 RID: 182661
 		bool CanExecuteComponentLogic();
 	}
 }

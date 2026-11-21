@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E41 RID: 7745
+	// Token: 0x02002076 RID: 8310
 	public class ISetResetPosition_SetValue
 	{
-		// Token: 0x04006313 RID: 25363
+		// Token: 0x040068F7 RID: 26871
 		public ESetTeleControlType Type;
 
-		// Token: 0x04006314 RID: 25364
+		// Token: 0x040068F8 RID: 26872
 		public int EntityId;
 
-		// Token: 0x04006315 RID: 25365
+		// Token: 0x040068F9 RID: 26873
 		public int PositionEntityId;
 	}
 }

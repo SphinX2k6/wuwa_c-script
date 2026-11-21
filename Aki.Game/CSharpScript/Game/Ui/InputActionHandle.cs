@@ -3,53 +3,53 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004672 RID: 18034
+	// Token: 0x020035A3 RID: 13731
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputActionHandle : InputDistributeHandle<InputDistributeDefine.EActionType>
 	{
-		// Token: 0x0602E896 RID: 190614 RVA: 0x00AC6441 File Offset: 0x00AC4641
+		// Token: 0x06022FE0 RID: 143328 RVA: 0x009F3FA1 File Offset: 0x009F21A1
 		public InputActionHandle(string inputDistributeTag, string name) : base(inputDistributeTag, name)
 		{
 		}
 
-		// Token: 0x0602E897 RID: 190615 RVA: 0x00AC644B File Offset: 0x00AC464B
+		// Token: 0x06022FE1 RID: 143329 RVA: 0x009F3FAB File Offset: 0x009F21AB
 		public void SetIsPress(bool value)
 		{
 			this.IsPress = value;
 		}
 
-		// Token: 0x0602E898 RID: 190616 RVA: 0x00AC6454 File Offset: 0x00AC4654
+		// Token: 0x06022FE2 RID: 143330 RVA: 0x009F3FB4 File Offset: 0x009F21B4
 		public bool GetIsPress()
 		{
 			return this.IsPress;
 		}
 
-		// Token: 0x0602E899 RID: 190617 RVA: 0x00AC645C File Offset: 0x00AC465C
+		// Token: 0x06022FE3 RID: 143331 RVA: 0x009F3FBC File Offset: 0x009F21BC
 		public void BindAction(TInputHandle<InputDistributeDefine.EActionType> actionCallback)
 		{
 			base.Bind(actionCallback);
 		}
 
-		// Token: 0x0602E89A RID: 190618 RVA: 0x00AC6465 File Offset: 0x00AC4665
+		// Token: 0x06022FE4 RID: 143332 RVA: 0x009F3FC5 File Offset: 0x009F21C5
 		public void UnBindAction(TInputHandle<InputDistributeDefine.EActionType> actionCallback)
 		{
 			base.UnBind(actionCallback);
 		}
 
-		// Token: 0x0602E89B RID: 190619 RVA: 0x00AC646E File Offset: 0x00AC466E
+		// Token: 0x06022FE5 RID: 143333 RVA: 0x009F3FCE File Offset: 0x009F21CE
 		public void BindActionIgnoreLimit(TInputHandle<InputDistributeDefine.EActionType> actionCallback)
 		{
 			base.BindIgnoreLimit(actionCallback);
 		}
 
-		// Token: 0x0602E89C RID: 190620 RVA: 0x00AC6477 File Offset: 0x00AC4677
+		// Token: 0x06022FE6 RID: 143334 RVA: 0x009F3FD7 File Offset: 0x009F21D7
 		public void UnBindActionIgnoreLimit(TInputHandle<InputDistributeDefine.EActionType> actionCallback)
 		{
 			base.UnBindIgnoreLimit(actionCallback);
 		}
 
-		// Token: 0x0602E89D RID: 190621 RVA: 0x00AC6480 File Offset: 0x00AC4680
+		// Token: 0x06022FE7 RID: 143335 RVA: 0x009F3FE0 File Offset: 0x009F21E0
 		public void InputAction(bool bPress)
 		{
 			if (bPress)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Ui
 			this.IsPressTriggerAction = bPress;
 		}
 
-		// Token: 0x0602E89E RID: 190622 RVA: 0x00AC649C File Offset: 0x00AC469C
+		// Token: 0x06022FE8 RID: 143336 RVA: 0x009F3FFC File Offset: 0x009F21FC
 		public void InputActionIgnoreLimit(bool bPress)
 		{
 			if (bPress)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Ui
 			base.CallIgnoreLimit(InputDistributeDefine.EActionType.Release);
 		}
 
-		// Token: 0x0602E89F RID: 190623 RVA: 0x00AC64B0 File Offset: 0x00AC46B0
+		// Token: 0x06022FE9 RID: 143337 RVA: 0x009F4010 File Offset: 0x009F2210
 		public void TryReleaseActionIfLimitInputDistributeTag()
 		{
 			if (!this.IsPressTriggerAction)
@@ -84,10 +84,10 @@ namespace CSharpScript.Game.Ui
 			this.InputAction(false);
 		}
 
-		// Token: 0x04019514 RID: 103700
+		// Token: 0x04013BBB RID: 80827
 		private bool IsPress;
 
-		// Token: 0x04019515 RID: 103701
+		// Token: 0x04013BBC RID: 80828
 		private bool IsPressTriggerAction;
 	}
 }

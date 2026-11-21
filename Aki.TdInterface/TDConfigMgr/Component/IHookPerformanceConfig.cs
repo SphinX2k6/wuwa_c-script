@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000444 RID: 1092
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200049D RID: 1181
 	public class IHookPerformanceConfig
 	{
-		// Token: 0x0600160B RID: 5643 RVA: 0x00044690 File Offset: 0x00042890
+		// Token: 0x060017A5 RID: 6053 RVA: 0x000483D8 File Offset: 0x000465D8
 		private IHookPerformanceConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600160C RID: 5644 RVA: 0x000446C8 File Offset: 0x000428C8
+		// Token: 0x060017A6 RID: 6054 RVA: 0x00048410 File Offset: 0x00046610
 		public static IHookPerformanceConfig Create([Nullable(2)] IHookPerformanceConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600160D RID: 5645 RVA: 0x000446DB File Offset: 0x000428DB
+		// Token: 0x060017A7 RID: 6055 RVA: 0x00048423 File Offset: 0x00046623
 		public static IHookPerformanceConfig CreateFromSetValue([Nullable(2)] IHookPerformanceConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600160E RID: 5646 RVA: 0x000446EE File Offset: 0x000428EE
+		// Token: 0x060017A8 RID: 6056 RVA: 0x00048436 File Offset: 0x00046636
 		public IHookPerformanceConfig_SetValue ToSetValue()
 		{
 			return new IHookPerformanceConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005FD RID: 1533
-		// (get) Token: 0x0600160F RID: 5647 RVA: 0x00044704 File Offset: 0x00042904
-		// (set) Token: 0x06001610 RID: 5648 RVA: 0x0004473E File Offset: 0x0004293E
+		// Token: 0x17000664 RID: 1636
+		// (get) Token: 0x060017A9 RID: 6057 RVA: 0x0004844C File Offset: 0x0004664C
+		// (set) Token: 0x060017AA RID: 6058 RVA: 0x00048486 File Offset: 0x00046686
 		public virtual long? HookEffectBuffId
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040010E6 RID: 4326
+		// Token: 0x04001208 RID: 4616
 		[Nullable(2)]
 		protected IHookPerformanceConfig FbInstance;
 
-		// Token: 0x040010E7 RID: 4327
+		// Token: 0x04001209 RID: 4617
 		[Nullable(2)]
 		protected IHookPerformanceConfig_SetValue PocoInterface;
 	}

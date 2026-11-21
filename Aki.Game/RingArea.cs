@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02001100 RID: 4352
+// Token: 0x020005B4 RID: 1460
 public class RingArea
 {
-	// Token: 0x0600716B RID: 29035 RVA: 0x00172898 File Offset: 0x00170A98
+	// Token: 0x06004501 RID: 17665 RVA: 0x0017B254 File Offset: 0x00179454
 	public RingArea(int startCellIndex, int endCellIndex, EArrowDirection arrowDirection)
 	{
 		this.StartCellIndex = startCellIndex;
@@ -11,7 +11,7 @@ public class RingArea
 		this.ArrowDirection = arrowDirection;
 	}
 
-	// Token: 0x0600716C RID: 29036 RVA: 0x001728B8 File Offset: 0x00170AB8
+	// Token: 0x06004502 RID: 17666 RVA: 0x0017B274 File Offset: 0x00179474
 	public void OnArrowDirectionReverse()
 	{
 		EArrowDirection arrowDirection = this.ArrowDirection;
@@ -27,12 +27,12 @@ public class RingArea
 		this.ArrowDirection = EArrowDirection.Clockwise;
 	}
 
-	// Token: 0x040034A0 RID: 13472
+	// Token: 0x04003539 RID: 13625
 	public int StartCellIndex;
 
-	// Token: 0x040034A1 RID: 13473
+	// Token: 0x0400353A RID: 13626
 	public int EndCellIndex;
 
-	// Token: 0x040034A2 RID: 13474
+	// Token: 0x0400353B RID: 13627
 	public EArrowDirection ArrowDirection;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021FE RID: 8702
+	// Token: 0x02002469 RID: 9321
 	public class SheriffUnlockProgress_SetValue
 	{
-		// Token: 0x040071EB RID: 29163
+		// Token: 0x04007834 RID: 30772
 		public int ProgressId;
 	}
 }

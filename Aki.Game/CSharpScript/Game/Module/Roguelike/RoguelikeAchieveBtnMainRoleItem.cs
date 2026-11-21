@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -9,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DA8 RID: 19880
+	// Token: 0x02003D71 RID: 15729
 	public class RoguelikeAchieveBtnMainRoleItem : UiPanelBase
 	{
-		// Token: 0x06033570 RID: 210288 RVA: 0x00BFCB08 File Offset: 0x00BFAD08
+		// Token: 0x060283DD RID: 164829 RVA: 0x00B4602C File Offset: 0x00B4422C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -28,17 +27,17 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033571 RID: 210289 RVA: 0x00BFCB92 File Offset: 0x00BFAD92
+		// Token: 0x060283DE RID: 164830 RVA: 0x00B460B6 File Offset: 0x00B442B6
 		protected override void OnStart()
 		{
 			this.SetEmptyState(true);
 		}
 
-		// Token: 0x06033572 RID: 210290 RVA: 0x00BFCB9C File Offset: 0x00BFAD9C
+		// Token: 0x060283DF RID: 164831 RVA: 0x00B460C0 File Offset: 0x00B442C0
 		[NullableContext(2)]
 		public void Refresh(RogueArchiveInfoData archiveInfoData)
 		{
-			int num = (archiveInfoData != null) ? archiveInfoData.RoleIds.ElementAtOrDefault(0) : 0;
+			int num = (archiveInfoData != null && archiveInfoData.RoleIds.Count > 0) ? archiveInfoData.RoleIds[0] : 0;
 			if (num <= 0)
 			{
 				this.SetEmptyState(true);
@@ -57,23 +56,23 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.SetEmptyState(false);
 		}
 
-		// Token: 0x06033573 RID: 210291 RVA: 0x00BFCC52 File Offset: 0x00BFAE52
+		// Token: 0x060283E0 RID: 164832 RVA: 0x00B46184 File Offset: 0x00B44384
 		private void SetEmptyState(bool isEmpty)
 		{
 			base.GetItem(1).SetUIActive(isEmpty);
 			base.GetTexture(2).SetUIActive(!isEmpty);
 		}
 
-		// Token: 0x0200AF23 RID: 44835
+		// Token: 0x02009958 RID: 39256
 		private class EComponents
 		{
-			// Token: 0x040352FE RID: 217854
+			// Token: 0x0402FD33 RID: 195891
 			public const int BtnMainRole = 0;
 
-			// Token: 0x040352FF RID: 217855
+			// Token: 0x0402FD34 RID: 195892
 			public const int PnlEmpty = 1;
 
-			// Token: 0x04035300 RID: 217856
+			// Token: 0x0402FD35 RID: 195893
 			public const int TexMainRoleAvatar = 2;
 		}
 	}

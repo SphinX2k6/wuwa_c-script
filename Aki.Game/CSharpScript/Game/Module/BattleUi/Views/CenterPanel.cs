@@ -16,12 +16,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CB9 RID: 23737
+	// Token: 0x02004C9B RID: 19611
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CenterPanel : BattleChildViewPanel
 	{
-		// Token: 0x0603BFB3 RID: 245683 RVA: 0x00E563C0 File Offset: 0x00E545C0
+		// Token: 0x06030F06 RID: 200454 RVA: 0x00DA6A68 File Offset: 0x00DA4C68
 		protected unsafe override void OnRegisterComponent()
 		{
 			EOperationType operationType = base.GetOperationType();
@@ -60,14 +60,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFB4 RID: 245684 RVA: 0x00E5651C File Offset: 0x00E5471C
+		// Token: 0x06030F07 RID: 200455 RVA: 0x00DA6BC4 File Offset: 0x00DA4DC4
 		public override void InitializeTemp()
 		{
 			this.OnBattleHudVisibleChanged();
 			this.CurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
 		}
 
-		// Token: 0x0603BFB5 RID: 245685 RVA: 0x00E56534 File Offset: 0x00E54734
+		// Token: 0x06030F08 RID: 200456 RVA: 0x00DA6BDC File Offset: 0x00DA4DDC
 		public override UniTask InitializeAsync()
 		{
 			CenterPanel.<InitializeAsync>d__30 <InitializeAsync>d__;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BFB6 RID: 245686 RVA: 0x00E56578 File Offset: 0x00E54778
+		// Token: 0x06030F09 RID: 200457 RVA: 0x00DA6C20 File Offset: 0x00DA4E20
 		protected override void OnShowBattleChildViewPanel(bool isFirst)
 		{
 			Joystick joystick = this.Joystick;
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			quickHackMarksView.OnShowBattleChildViewPanel();
 		}
 
-		// Token: 0x0603BFB7 RID: 245687 RVA: 0x00E565E0 File Offset: 0x00E547E0
+		// Token: 0x06030F0A RID: 200458 RVA: 0x00DA6C88 File Offset: 0x00DA4E88
 		protected override void OnHideBattleChildViewPanel()
 		{
 			Joystick joystick = this.Joystick;
@@ -136,12 +136,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			motorcycleControlTopPanel.OnHideBattleChildViewPanel();
 		}
 
-		// Token: 0x0603BFB8 RID: 245688 RVA: 0x00E56630 File Offset: 0x00E54830
+		// Token: 0x06030F0B RID: 200459 RVA: 0x00DA6CD8 File Offset: 0x00DA4ED8
 		public void SetEventVisible(bool value)
 		{
 		}
 
-		// Token: 0x0603BFB9 RID: 245689 RVA: 0x00E56634 File Offset: 0x00E54834
+		// Token: 0x06030F0C RID: 200460 RVA: 0x00DA6CDC File Offset: 0x00DA4EDC
 		public override void Reset()
 		{
 			this.TrackedMarksView = null;
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603BFBA RID: 245690 RVA: 0x00E56734 File Offset: 0x00E54934
+		// Token: 0x06030F0D RID: 200461 RVA: 0x00DA6DDC File Offset: 0x00DA4FDC
 		protected override void AddEvents()
 		{
 			EventSystem.Instance.Add<int, int>(EEventName.BattleUiCurRoleDataChanged, new Action<int, int>(this.OnChangeRoleCompleted));
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ChildViewData.AddCallback(EBattleUiChild.BattleHud, new Action(this.OnBattleHudVisibleChanged));
 		}
 
-		// Token: 0x0603BFBB RID: 245691 RVA: 0x00E56890 File Offset: 0x00E54A90
+		// Token: 0x06030F0E RID: 200462 RVA: 0x00DA6F38 File Offset: 0x00DA5138
 		protected override void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiCurRoleDataChanged, new Action<int, int>(this.OnChangeRoleCompleted));
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ChildViewData.RemoveCallback(EBattleUiChild.BattleHud, new Action(this.OnBattleHudVisibleChanged));
 		}
 
-		// Token: 0x0603BFBC RID: 245692 RVA: 0x00E569EC File Offset: 0x00E54BEC
+		// Token: 0x06030F0F RID: 200463 RVA: 0x00DA7094 File Offset: 0x00DA5294
 		public override void OnTickBattleChildViewPanel(float delta)
 		{
 			Joystick joystick = this.Joystick;
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			breakWeaknessPanel.Tick(delta);
 		}
 
-		// Token: 0x0603BFBD RID: 245693 RVA: 0x00E56A88 File Offset: 0x00E54C88
+		// Token: 0x06030F10 RID: 200464 RVA: 0x00DA7130 File Offset: 0x00DA5330
 		public override void OnAfterTickBattleChildViewPanel(float delta)
 		{
 			TrackedMarksView trackedMarksView = this.TrackedMarksView;
@@ -291,13 +291,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			quickHackMarksView.Update();
 		}
 
-		// Token: 0x0603BFBE RID: 245694 RVA: 0x00E56ADA File Offset: 0x00E54CDA
+		// Token: 0x06030F11 RID: 200465 RVA: 0x00DA7182 File Offset: 0x00DA5382
 		private void OnExploreComponentTargetChanged()
 		{
 			this.UpdateHookPointMarker();
 		}
 
-		// Token: 0x0603BFBF RID: 245695 RVA: 0x00E56AE4 File Offset: 0x00E54CE4
+		// Token: 0x06030F12 RID: 200466 RVA: 0x00DA718C File Offset: 0x00DA538C
 		private void OnBattleHudVisibleChanged()
 		{
 			bool childVisible = this.ChildViewData.GetChildVisible(EBattleUiChild.BattleHud);
@@ -310,13 +310,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			alterMarksView.OnBattleHudVisibleChanged(childVisible);
 		}
 
-		// Token: 0x0603BFC0 RID: 245696 RVA: 0x00E56B1D File Offset: 0x00E54D1D
+		// Token: 0x06030F13 RID: 200467 RVA: 0x00DA71C5 File Offset: 0x00DA53C5
 		private void OnEnableGrapplingHookMark(bool isEnable)
 		{
 			this.ForceHideHookPointMaker = !isEnable;
 		}
 
-		// Token: 0x0603BFC1 RID: 245697 RVA: 0x00E56B2C File Offset: 0x00E54D2C
+		// Token: 0x06030F14 RID: 200468 RVA: 0x00DA71D4 File Offset: 0x00DA53D4
 		private void OnRouletteViewVisibleChanged(bool bVisible)
 		{
 			UUIItem item = base.GetItem(2);
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0603BFC2 RID: 245698 RVA: 0x00E56B7C File Offset: 0x00E54D7C
+		// Token: 0x06030F15 RID: 200469 RVA: 0x00DA7224 File Offset: 0x00DA5424
 		private void OnEnterOrExitExecutionRange(bool isEnter, int entityId, ECustomOptionType? optionType)
 		{
 			if (isEnter)
@@ -380,7 +380,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFC3 RID: 245699 RVA: 0x00E56C56 File Offset: 0x00E54E56
+		// Token: 0x06030F16 RID: 200470 RVA: 0x00DA72FE File Offset: 0x00DA54FE
 		private void OnGmOnlyShowJoyStick(bool isVisible)
 		{
 			base.GetItem(0).SetUIActive(isVisible);
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(2).SetUIActive(isVisible);
 		}
 
-		// Token: 0x0603BFC4 RID: 245700 RVA: 0x00E56C80 File Offset: 0x00E54E80
+		// Token: 0x06030F17 RID: 200471 RVA: 0x00DA7328 File Offset: 0x00DA5528
 		[NullableContext(1)]
 		private void CreateHookPointMaker(Vector targetLocation)
 		{
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HookPointMakerPanel = new GrapplingHookPoint(targetLocation, battleViewUnit);
 		}
 
-		// Token: 0x0603BFC5 RID: 245701 RVA: 0x00E56CC4 File Offset: 0x00E54EC4
+		// Token: 0x06030F18 RID: 200472 RVA: 0x00DA736C File Offset: 0x00DA556C
 		private void RemoveHookPointMaker()
 		{
 			if (this.HookPointMakerPanel == null)
@@ -414,7 +414,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HookPointMakerPanel = null;
 		}
 
-		// Token: 0x0603BFC6 RID: 245702 RVA: 0x00E56CE4 File Offset: 0x00E54EE4
+		// Token: 0x06030F19 RID: 200473 RVA: 0x00DA738C File Offset: 0x00DA558C
 		private void UpdateHookPointPosition()
 		{
 			if (this.HookPointMakerPanel == null)
@@ -435,7 +435,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFC7 RID: 245703 RVA: 0x00E56D4C File Offset: 0x00E54F4C
+		// Token: 0x06030F1A RID: 200474 RVA: 0x00DA73F4 File Offset: 0x00DA55F4
 		private void UpdateHookPointMarker()
 		{
 			BaseExploreComponent activeExploreComponent = CharacterExploreModel.Instance.GetActiveExploreComponent();
@@ -474,7 +474,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFC8 RID: 245704 RVA: 0x00E56DCC File Offset: 0x00E54FCC
+		// Token: 0x06030F1B RID: 200475 RVA: 0x00DA7474 File Offset: 0x00DA5674
 		public UUIItem GetExecutionItem()
 		{
 			ExecutionPanel executionPanel = this.ExecutionPanel;
@@ -485,7 +485,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return executionPanel.GetExecutionItem();
 		}
 
-		// Token: 0x0603BFC9 RID: 245705 RVA: 0x00E56DE0 File Offset: 0x00E54FE0
+		// Token: 0x06030F1C RID: 200476 RVA: 0x00DA7488 File Offset: 0x00DA5688
 		private void GrapplingHookPointAfterTick()
 		{
 			if (this.HookPointMakerPanel == null)
@@ -507,7 +507,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HookPointMakerPanel.DisableMarker();
 		}
 
-		// Token: 0x0603BFCA RID: 245706 RVA: 0x00E56E4C File Offset: 0x00E5504C
+		// Token: 0x06030F1D RID: 200477 RVA: 0x00DA74F4 File Offset: 0x00DA56F4
 		private UniTask NewTrackedMarksView()
 		{
 			CenterPanel.<NewTrackedMarksView>d__51 <NewTrackedMarksView>d__;
@@ -518,7 +518,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewTrackedMarksView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BFCB RID: 245707 RVA: 0x00E56E90 File Offset: 0x00E55090
+		// Token: 0x06030F1E RID: 200478 RVA: 0x00DA7538 File Offset: 0x00DA5738
 		private UniTask NewScanTrackedMarksView()
 		{
 			CenterPanel.<NewScanTrackedMarksView>d__52 <NewScanTrackedMarksView>d__;
@@ -529,7 +529,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewScanTrackedMarksView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BFCC RID: 245708 RVA: 0x00E56ED4 File Offset: 0x00E550D4
+		// Token: 0x06030F1F RID: 200479 RVA: 0x00DA757C File Offset: 0x00DA577C
 		private UniTask NewAlterMarksView()
 		{
 			CenterPanel.<NewAlterMarksView>d__53 <NewAlterMarksView>d__;
@@ -540,7 +540,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewAlterMarksView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BFCD RID: 245709 RVA: 0x00E56F18 File Offset: 0x00E55118
+		// Token: 0x06030F20 RID: 200480 RVA: 0x00DA75C0 File Offset: 0x00DA57C0
 		private UniTask NewAutoPilotTrackedMarksView()
 		{
 			CenterPanel.<NewAutoPilotTrackedMarksView>d__54 <NewAutoPilotTrackedMarksView>d__;
@@ -551,7 +551,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewAutoPilotTrackedMarksView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BFCE RID: 245710 RVA: 0x00E56F5C File Offset: 0x00E5515C
+		// Token: 0x06030F21 RID: 200481 RVA: 0x00DA7604 File Offset: 0x00DA5804
 		private UniTask NewQuickHackMarksView()
 		{
 			CenterPanel.<NewQuickHackMarksView>d__55 <NewQuickHackMarksView>d__;
@@ -562,7 +562,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewQuickHackMarksView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BFCF RID: 245711 RVA: 0x00E56FA0 File Offset: 0x00E551A0
+		// Token: 0x06030F22 RID: 200482 RVA: 0x00DA7648 File Offset: 0x00DA5848
 		private UniTask NewJoysticks()
 		{
 			CenterPanel.<NewJoysticks>d__56 <NewJoysticks>d__;
@@ -573,7 +573,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewJoysticks>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BFD0 RID: 245712 RVA: 0x00E56FE4 File Offset: 0x00E551E4
+		// Token: 0x06030F23 RID: 200483 RVA: 0x00DA768C File Offset: 0x00DA588C
 		private void RefreshJoystick()
 		{
 			EntityHandle currentEntity = this.CurrentEntity;
@@ -637,7 +637,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFD1 RID: 245713 RVA: 0x00E57138 File Offset: 0x00E55338
+		// Token: 0x06030F24 RID: 200484 RVA: 0x00DA77E0 File Offset: 0x00DA59E0
 		private void RefreshJoystickEnable()
 		{
 			BattleUiMotorcycleData motorcycleData = BattleUiModel.Instance.MotorcycleData;
@@ -663,7 +663,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFD2 RID: 245714 RVA: 0x00E5718C File Offset: 0x00E5538C
+		// Token: 0x06030F25 RID: 200485 RVA: 0x00DA7834 File Offset: 0x00DA5A34
 		private void OnChangeRoleCompleted(int i, int i1)
 		{
 			BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -677,20 +677,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			breakWeaknessPanel.ChangeRole();
 		}
 
-		// Token: 0x0603BFD3 RID: 245715 RVA: 0x00E571C6 File Offset: 0x00E553C6
+		// Token: 0x06030F26 RID: 200486 RVA: 0x00DA786E File Offset: 0x00DA5A6E
 		private void OnMotorcycleStateChanged(bool b)
 		{
 			this.RefreshMotorcycleControl();
 			this.RefreshJoystickEnable();
 		}
 
-		// Token: 0x0603BFD4 RID: 245716 RVA: 0x00E571D4 File Offset: 0x00E553D4
+		// Token: 0x06030F27 RID: 200487 RVA: 0x00DA787C File Offset: 0x00DA5A7C
 		private void RefreshMotorcycleControl()
 		{
 			this.RefreshMotorcycleControlWithCache();
 		}
 
-		// Token: 0x0603BFD5 RID: 245717 RVA: 0x00E571DC File Offset: 0x00E553DC
+		// Token: 0x06030F28 RID: 200488 RVA: 0x00DA7884 File Offset: 0x00DA5A84
 		private void RefreshMotorcycleControlWithCache()
 		{
 			bool isDriving = BattleUiModel.Instance.MotorcycleData.IsDriving;
@@ -811,7 +811,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFD6 RID: 245718 RVA: 0x00E5749A File Offset: 0x00E5569A
+		// Token: 0x06030F29 RID: 200489 RVA: 0x00DA7B42 File Offset: 0x00DA5D42
 		private void OnSetBattleUiChildCacheState(EBattleUiChildCacheType cacheType, bool needCache)
 		{
 			if (cacheType == EBattleUiChildCacheType.Motorcycle)
@@ -820,7 +820,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFD7 RID: 245719 RVA: 0x00E574A8 File Offset: 0x00E556A8
+		// Token: 0x06030F2A RID: 200490 RVA: 0x00DA7B50 File Offset: 0x00DA5D50
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -841,7 +841,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return null;
 		}
 
-		// Token: 0x0603BFD8 RID: 245720 RVA: 0x00E574FC File Offset: 0x00E556FC
+		// Token: 0x06030F2B RID: 200491 RVA: 0x00DA7BA4 File Offset: 0x00DA5DA4
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -877,13 +877,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return null;
 		}
 
-		// Token: 0x0603BFD9 RID: 245721 RVA: 0x00E57576 File Offset: 0x00E55776
+		// Token: 0x06030F2C RID: 200492 RVA: 0x00DA7C1E File Offset: 0x00DA5E1E
 		private void OnSlideControlVisibleChanged(bool visible)
 		{
 			this.RefreshSlideControlItem();
 		}
 
-		// Token: 0x0603BFDA RID: 245722 RVA: 0x00E57580 File Offset: 0x00E55780
+		// Token: 0x06030F2D RID: 200493 RVA: 0x00DA7C28 File Offset: 0x00DA5E28
 		private void RefreshSlideControlItem()
 		{
 			if (BattleUiModel.Instance.SlideControlData.GetVisible())
@@ -902,139 +902,139 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFDB RID: 245723 RVA: 0x00E575EF File Offset: 0x00E557EF
+		// Token: 0x06030F2E RID: 200494 RVA: 0x00DA7C97 File Offset: 0x00DA5E97
 		private void OnMotorcycleRoundJoystickChanged(bool b)
 		{
 			this.RefreshJoystickEnable();
 		}
 
-		// Token: 0x0603BFDC RID: 245724 RVA: 0x00E575F7 File Offset: 0x00E557F7
+		// Token: 0x06030F2F RID: 200495 RVA: 0x00DA7C9F File Offset: 0x00DA5E9F
 		private void OnAutoPilotTrackMarkVisibleChanged(bool visible)
 		{
 			base.GetItem(0).SetUIActive(visible);
 		}
 
-		// Token: 0x0401F4C5 RID: 128197
+		// Token: 0x04019F7E RID: 106366
 		[StaticVariableRuleIgnore]
 		private static int ForbidMoveTagId = GameplayTagDefine.EGameplayTagId["战斗状态.输入限制.禁止移动"];
 
-		// Token: 0x0401F4C6 RID: 128198
+		// Token: 0x04019F7F RID: 106367
 		private TrackedMarksView TrackedMarksView;
 
-		// Token: 0x0401F4C7 RID: 128199
+		// Token: 0x04019F80 RID: 106368
 		private ScanTrackedMarksView ScanTrackedMarksView;
 
-		// Token: 0x0401F4C8 RID: 128200
+		// Token: 0x04019F81 RID: 106369
 		private AlterMarksView AlterMarksView;
 
-		// Token: 0x0401F4C9 RID: 128201
+		// Token: 0x04019F82 RID: 106370
 		private AutoPilotTrackedMarksView AutoPilotTrackedMarksView;
 
-		// Token: 0x0401F4CA RID: 128202
+		// Token: 0x04019F83 RID: 106371
 		private QuickHackMarksView QuickHackMarksView;
 
-		// Token: 0x0401F4CB RID: 128203
+		// Token: 0x04019F84 RID: 106372
 		private Joystick Joystick;
 
-		// Token: 0x0401F4CC RID: 128204
+		// Token: 0x04019F85 RID: 106373
 		private GrapplingHookPoint HookPointMakerPanel;
 
-		// Token: 0x0401F4CD RID: 128205
+		// Token: 0x04019F86 RID: 106374
 		private ExecutionPanel ExecutionPanel;
 
-		// Token: 0x0401F4CE RID: 128206
+		// Token: 0x04019F87 RID: 106375
 		private BreakWeaknessPanel BreakWeaknessPanel;
 
-		// Token: 0x0401F4CF RID: 128207
+		// Token: 0x04019F88 RID: 106376
 		private MotorcycleControlPanelBase MotorcycleControlPanel;
 
-		// Token: 0x0401F4D0 RID: 128208
+		// Token: 0x04019F89 RID: 106377
 		private MotorcycleControlTopPanel MotorcycleControlTopPanel;
 
-		// Token: 0x0401F4D1 RID: 128209
+		// Token: 0x04019F8A RID: 106378
 		private MotorcycleControlHudPanel MotorcycleControlHudPanel;
 
-		// Token: 0x0401F4D2 RID: 128210
+		// Token: 0x04019F8B RID: 106379
 		private BattleSkillSlideControlItem SlideControlComponent;
 
-		// Token: 0x0401F4D3 RID: 128211
+		// Token: 0x04019F8C RID: 106380
 		private IBattleUiCenterPanelOtherMovePanel OtherMovePanel;
 
-		// Token: 0x0401F4D4 RID: 128212
+		// Token: 0x04019F8D RID: 106381
 		private EntityHandle CurrentEntity;
 
-		// Token: 0x0401F4D5 RID: 128213
+		// Token: 0x04019F8E RID: 106382
 		[Nullable(1)]
 		private readonly List<Entity> EntityList = new List<Entity>();
 
-		// Token: 0x0401F4D6 RID: 128214
+		// Token: 0x04019F8F RID: 106383
 		private int JoystickType;
 
-		// Token: 0x0401F4D7 RID: 128215
+		// Token: 0x04019F90 RID: 106384
 		private bool ForceHideHookPointMaker;
 
-		// Token: 0x0401F4D8 RID: 128216
+		// Token: 0x04019F91 RID: 106385
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat BattleViewTickStatsObject1 = Stat.Create("[BattleView]CenterPanelTick1", "", "");
 
-		// Token: 0x0401F4D9 RID: 128217
+		// Token: 0x04019F92 RID: 106386
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat BattleViewTickStatsObject2 = Stat.Create("[BattleView]CenterPanelTick2", "", "");
 
-		// Token: 0x0401F4DA RID: 128218
+		// Token: 0x04019F93 RID: 106387
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat BattleViewTickStatsObject5 = Stat.Create("[BattleView]CenterPanelTick5", "", "");
 
-		// Token: 0x0401F4DB RID: 128219
+		// Token: 0x04019F94 RID: 106388
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat BattleViewTickStatsObject6 = Stat.Create("[BattleView]CenterPanelTick6", "", "");
 
-		// Token: 0x0401F4DC RID: 128220
+		// Token: 0x04019F95 RID: 106389
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat BattleViewTickStatsObject7 = Stat.Create("[BattleView]CenterPanelTick7", "", "");
 
-		// Token: 0x0401F4DD RID: 128221
+		// Token: 0x04019F96 RID: 106390
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat BattleViewTickStatsObject8 = Stat.Create("[BattleView]CenterPanelTick8", "", "");
 
-		// Token: 0x0401F4DE RID: 128222
+		// Token: 0x04019F97 RID: 106391
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat BattleViewTickStatsObject9 = Stat.Create("[BattleView]CenterPanelTick9", "", "");
 
-		// Token: 0x0200BE9E RID: 48798
+		// Token: 0x0200A8A4 RID: 43172
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x040397BE RID: 235454
+			// Token: 0x0403417F RID: 213375
 			TrackItem,
-			// Token: 0x040397BF RID: 235455
+			// Token: 0x04034180 RID: 213376
 			AlterCursorItem,
-			// Token: 0x040397C0 RID: 235456
+			// Token: 0x04034181 RID: 213377
 			PanelMask,
-			// Token: 0x040397C1 RID: 235457
+			// Token: 0x04034182 RID: 213378
 			JoystickItem,
-			// Token: 0x040397C2 RID: 235458
+			// Token: 0x04034183 RID: 213379
 			BreakWeaknessItem
 		}
 
-		// Token: 0x0200BE9F RID: 48799
+		// Token: 0x0200A8A5 RID: 43173
 		[NullableContext(0)]
 		private enum EJoystickType
 		{
-			// Token: 0x040397C4 RID: 235460
+			// Token: 0x04034185 RID: 213381
 			NormalJoyStick,
-			// Token: 0x040397C5 RID: 235461
+			// Token: 0x04034186 RID: 213382
 			UpDownButton,
-			// Token: 0x040397C6 RID: 235462
+			// Token: 0x04034187 RID: 213383
 			None,
-			// Token: 0x040397C7 RID: 235463
+			// Token: 0x04034188 RID: 213384
 			StaticJoystick
 		}
 	}

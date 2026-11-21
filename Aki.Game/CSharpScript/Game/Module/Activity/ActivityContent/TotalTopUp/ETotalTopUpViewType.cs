@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F8D RID: 24461
+	// Token: 0x02004F74 RID: 20340
 	public enum ETotalTopUpViewType
 	{
-		// Token: 0x0402069F RID: 132767
+		// Token: 0x0401B171 RID: 110961
 		Origin,
-		// Token: 0x040206A0 RID: 132768
+		// Token: 0x0401B172 RID: 110962
 		Activity37
 	}
 }

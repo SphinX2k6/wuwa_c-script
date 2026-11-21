@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D08 RID: 3336
+	// Token: 0x02000DED RID: 3565
 	public struct GmTypeInfo : IFlatbufferObject
 	{
-		// Token: 0x170015E4 RID: 5604
-		// (get) Token: 0x06007B4F RID: 31567 RVA: 0x0024CFE9 File Offset: 0x0024B1E9
+		// Token: 0x17001645 RID: 5701
+		// (get) Token: 0x06008167 RID: 33127 RVA: 0x0026BB39 File Offset: 0x00269D39
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007B50 RID: 31568 RVA: 0x0024CFF6 File Offset: 0x0024B1F6
+		// Token: 0x06008168 RID: 33128 RVA: 0x0026BB46 File Offset: 0x00269D46
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007B51 RID: 31569 RVA: 0x0024D000 File Offset: 0x0024B200
+		// Token: 0x06008169 RID: 33129 RVA: 0x0026BB50 File Offset: 0x00269D50
 		public static GmTypeInfo GetRootAsGmTypeInfo(ByteBuffer _bb)
 		{
 			return GmTypeInfo.GetRootAsGmTypeInfo(_bb, default(GmTypeInfo));
 		}
 
-		// Token: 0x06007B52 RID: 31570 RVA: 0x0024D01C File Offset: 0x0024B21C
+		// Token: 0x0600816A RID: 33130 RVA: 0x0026BB6C File Offset: 0x00269D6C
 		public static GmTypeInfo GetRootAsGmTypeInfo(ByteBuffer _bb, GmTypeInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007B53 RID: 31571 RVA: 0x0024D039 File Offset: 0x0024B239
+		// Token: 0x0600816B RID: 33131 RVA: 0x0026BB89 File Offset: 0x00269D89
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007B54 RID: 31572 RVA: 0x0024D048 File Offset: 0x0024B248
+		// Token: 0x0600816C RID: 33132 RVA: 0x0026BB98 File Offset: 0x00269D98
 		public GmTypeInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170015E5 RID: 5605
-		// (get) Token: 0x06007B55 RID: 31573 RVA: 0x0024D058 File Offset: 0x0024B258
+		// Token: 0x17001646 RID: 5702
+		// (get) Token: 0x0600816D RID: 33133 RVA: 0x0026BBA8 File Offset: 0x00269DA8
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170015E6 RID: 5606
-		// (get) Token: 0x06007B56 RID: 31574 RVA: 0x0024D094 File Offset: 0x0024B294
+		// Token: 0x17001647 RID: 5703
+		// (get) Token: 0x0600816E RID: 33134 RVA: 0x0026BBE4 File Offset: 0x00269DE4
 		public string Name
 		{
 			get
@@ -80,19 +80,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007B57 RID: 31575 RVA: 0x0024D0CB File Offset: 0x0024B2CB
+		// Token: 0x0600816F RID: 33135 RVA: 0x0026BC1B File Offset: 0x00269E1B
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06007B58 RID: 31576 RVA: 0x0024D0DA File Offset: 0x0024B2DA
+		// Token: 0x06008170 RID: 33136 RVA: 0x0026BC2A File Offset: 0x00269E2A
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06007B59 RID: 31577 RVA: 0x0024D0F4 File Offset: 0x0024B2F4
+		// Token: 0x06008171 RID: 33137 RVA: 0x0026BC44 File Offset: 0x00269E44
 		public string KeyWords(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -103,8 +103,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170015E7 RID: 5607
-		// (get) Token: 0x06007B5A RID: 31578 RVA: 0x0024D130 File Offset: 0x0024B330
+		// Token: 0x17001648 RID: 5704
+		// (get) Token: 0x06008172 RID: 33138 RVA: 0x0026BC80 File Offset: 0x00269E80
 		public int KeyWordsLength
 		{
 			get
@@ -118,7 +118,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007B5B RID: 31579 RVA: 0x0024D15C File Offset: 0x0024B35C
+		// Token: 0x06008173 RID: 33139 RVA: 0x0026BCAC File Offset: 0x00269EAC
 		public int GmOrderConfigList(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -129,8 +129,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170015E8 RID: 5608
-		// (get) Token: 0x06007B5C RID: 31580 RVA: 0x0024D19C File Offset: 0x0024B39C
+		// Token: 0x17001649 RID: 5705
+		// (get) Token: 0x06008174 RID: 33140 RVA: 0x0026BCEC File Offset: 0x00269EEC
 		public int GmOrderConfigListLength
 		{
 			get
@@ -144,54 +144,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007B5D RID: 31581 RVA: 0x0024D1C8 File Offset: 0x0024B3C8
+		// Token: 0x06008175 RID: 33141 RVA: 0x0026BD18 File Offset: 0x00269F18
 		public Span<int> GetGmOrderConfigListBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06007B5E RID: 31582 RVA: 0x0024D1D8 File Offset: 0x0024B3D8
+		// Token: 0x06008176 RID: 33142 RVA: 0x0026BD28 File Offset: 0x00269F28
 		public int[] GetGmOrderConfigListArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06007B5F RID: 31583 RVA: 0x0024D1F0 File Offset: 0x0024B3F0
+		// Token: 0x06008177 RID: 33143 RVA: 0x0026BD40 File Offset: 0x00269F40
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用GmOrderConfigListIter()或GetGmOrderConfigListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] GmOrderConfigList()
+		public int[] GmOrderConfigList()
 		{
-			GmTypeInfo gmTypeInfo = this;
-			return gmTypeInfo.GetGmOrderConfigListArray() ?? Array.Empty<int>();
+			return this.GetGmOrderConfigListArray();
 		}
 
-		// Token: 0x06007B60 RID: 31584 RVA: 0x0024D214 File Offset: 0x0024B414
+		// Token: 0x06008178 RID: 33144 RVA: 0x0026BD48 File Offset: 0x00269F48
 		[NullableContext(1)]
-		public readonly IEnumerable<int> GmOrderConfigListIter()
+		public IEnumerable<int> GmOrderConfigListIter()
 		{
 			GmTypeInfo.<GmOrderConfigListIter>d__23 <GmOrderConfigListIter>d__ = new GmTypeInfo.<GmOrderConfigListIter>d__23(-2);
 			<GmOrderConfigListIter>d__.<>3__<>4__this = this;
 			return <GmOrderConfigListIter>d__;
 		}
 
-		// Token: 0x06007B61 RID: 31585 RVA: 0x0024D229 File Offset: 0x0024B429
+		// Token: 0x06008179 RID: 33145 RVA: 0x0026BD5D File Offset: 0x00269F5D
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用KeyWordsIter()或GetKeyWordsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] KeyWords()
+		public string[] KeyWords()
 		{
 			return this.KeyWordsIter().ToArray<string>();
 		}
 
-		// Token: 0x06007B62 RID: 31586 RVA: 0x0024D236 File Offset: 0x0024B436
+		// Token: 0x0600817A RID: 33146 RVA: 0x0026BD6A File Offset: 0x00269F6A
 		[NullableContext(1)]
-		public readonly IEnumerable<string> KeyWordsIter()
+		public IEnumerable<string> KeyWordsIter()
 		{
 			GmTypeInfo.<KeyWordsIter>d__25 <KeyWordsIter>d__ = new GmTypeInfo.<KeyWordsIter>d__25(-2);
 			<KeyWordsIter>d__.<>3__<>4__this = this;
 			return <KeyWordsIter>d__;
 		}
 
-		// Token: 0x04004D7E RID: 19838
+		// Token: 0x04005363 RID: 21347
 		private Table __p;
 	}
 }

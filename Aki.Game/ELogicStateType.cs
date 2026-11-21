@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002EEB RID: 12011
+// Token: 0x0200243E RID: 9278
 public enum ELogicStateType
 {
-	// Token: 0x0400C05C RID: 49244
+	// Token: 0x0400C3F7 RID: 50167
 	CharPositionState,
-	// Token: 0x0400C05D RID: 49245
+	// Token: 0x0400C3F8 RID: 50168
 	CharMoveState,
-	// Token: 0x0400C05E RID: 49246
+	// Token: 0x0400C3F9 RID: 50169
 	CharDirectionState,
-	// Token: 0x0400C05F RID: 49247
+	// Token: 0x0400C3FA RID: 50170
 	CharPositionSubState
 }

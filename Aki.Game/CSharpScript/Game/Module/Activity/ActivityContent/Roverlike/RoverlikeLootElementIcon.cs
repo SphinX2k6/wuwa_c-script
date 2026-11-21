@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200616A RID: 24938
+	// Token: 0x020050E8 RID: 20712
 	public class RoverlikeLootElementIcon : UiPanelBase
 	{
-		// Token: 0x0603F0A5 RID: 258213 RVA: 0x00F3BBC0 File Offset: 0x00F39DC0
+		// Token: 0x06033D65 RID: 212325 RVA: 0x00E82A94 File Offset: 0x00E80C94
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F0A6 RID: 258214 RVA: 0x00F3BC4C File Offset: 0x00F39E4C
+		// Token: 0x06033D66 RID: 212326 RVA: 0x00E82B20 File Offset: 0x00E80D20
 		[NullableContext(1)]
 		public void Refresh(string elementIcon)
 		{
@@ -34,16 +34,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.SetTextureByPath(elementIcon, texture, null, null);
 		}
 
-		// Token: 0x0200C3D0 RID: 50128
+		// Token: 0x0200ADB7 RID: 44471
 		private class ERoverlikeLootElementIcon
 		{
-			// Token: 0x0403B16B RID: 242027
+			// Token: 0x04035ACC RID: 219852
 			public const int SprElementBg = 0;
 
-			// Token: 0x0403B16C RID: 242028
+			// Token: 0x04035ACD RID: 219853
 			public const int TxtElementIcon = 1;
 
-			// Token: 0x0403B16D RID: 242029
+			// Token: 0x04035ACE RID: 219854
 			public const int PnlItem = 2;
 		}
 	}

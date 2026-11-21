@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DC6 RID: 24006
+	// Token: 0x02004DAA RID: 19882
 	public class SpecialEnergyBarMotorcycle : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D009 RID: 249865 RVA: 0x00EAAA98 File Offset: 0x00EA8C98
+		// Token: 0x06031F80 RID: 204672 RVA: 0x00DFB974 File Offset: 0x00DF9B74
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D00A RID: 249866 RVA: 0x00EAAB22 File Offset: 0x00EA8D22
+		// Token: 0x06031F81 RID: 204673 RVA: 0x00DFB9FE File Offset: 0x00DF9BFE
 		[NullableContext(1)]
 		public void InitMotorcycleData(EntityHandle entityHandle, SpecialEnergyBarInfo config)
 		{
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.InitKeyEnableTag();
 		}
 
-		// Token: 0x0603D00B RID: 249867 RVA: 0x00EAAB60 File Offset: 0x00EA8D60
+		// Token: 0x06031F82 RID: 204674 RVA: 0x00DFBA3C File Offset: 0x00DF9C3C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarMotorcycle.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D00C RID: 249868 RVA: 0x00EAABA4 File Offset: 0x00EA8DA4
+		// Token: 0x06031F83 RID: 204675 RVA: 0x00DFBA80 File Offset: 0x00DF9C80
 		protected UniTask InitBarItem()
 		{
 			SpecialEnergyBarMotorcycle.<InitBarItem>d__9 <InitBarItem>d__;
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D00D RID: 249869 RVA: 0x00EAABE7 File Offset: 0x00EA8DE7
+		// Token: 0x06031F84 RID: 204676 RVA: 0x00DFBAC3 File Offset: 0x00DF9CC3
 		protected override void OnInitData()
 		{
 			this.CountMax = (int)this.Config.ExtraFloatParams[0];
 		}
 
-		// Token: 0x0603D00E RID: 249870 RVA: 0x00EAAC04 File Offset: 0x00EA8E04
+		// Token: 0x06031F85 RID: 204677 RVA: 0x00DFBAE0 File Offset: 0x00DF9CE0
 		protected override void OnStart()
 		{
 			int tagCount = this.TagComponent.GetTagCount(SpecialEnergyBarMotorcycle.CountTag);
@@ -75,21 +75,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnStart();
 		}
 
-		// Token: 0x0603D00F RID: 249871 RVA: 0x00EAAC47 File Offset: 0x00EA8E47
+		// Token: 0x06031F86 RID: 204678 RVA: 0x00DFBB23 File Offset: 0x00DF9D23
 		protected override void AddEvents()
 		{
 			base.AddEvents();
 			base.ListenForTagCountChanged(SpecialEnergyBarMotorcycle.CountTag, new BaseTagComponent.TTagChangedCallback(this.OnCountTagChange));
 		}
 
-		// Token: 0x0603D010 RID: 249872 RVA: 0x00EAAC66 File Offset: 0x00EA8E66
+		// Token: 0x06031F87 RID: 204679 RVA: 0x00DFBB42 File Offset: 0x00DF9D42
 		private void OnCountTagChange(int count, int tagId, int exactTagId, int oldCount)
 		{
 			this.PercentMachine.SetTargetPercent(MathF.Min(1f, (float)count / (float)this.CountMax));
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D011 RID: 249873 RVA: 0x00EAAC8E File Offset: 0x00EA8E8E
+		// Token: 0x06031F88 RID: 204680 RVA: 0x00DFBB6A File Offset: 0x00DF9D6A
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -101,13 +101,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barItem.Tick(delta);
 		}
 
-		// Token: 0x0603D012 RID: 249874 RVA: 0x00EAACA8 File Offset: 0x00EA8EA8
+		// Token: 0x06031F89 RID: 204681 RVA: 0x00DFBB84 File Offset: 0x00DF9D84
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D013 RID: 249875 RVA: 0x00EAACB4 File Offset: 0x00EA8EB4
+		// Token: 0x06031F8A RID: 204682 RVA: 0x00DFBB90 File Offset: 0x00DF9D90
 		protected void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetFullState(keyEnable, isStart);
 		}
 
-		// Token: 0x0603D014 RID: 249876 RVA: 0x00EAACF0 File Offset: 0x00EA8EF0
+		// Token: 0x06031F8B RID: 204683 RVA: 0x00DFBBCC File Offset: 0x00DF9DCC
 		private void SetFullState(bool isFull, bool isStart = false)
 		{
 			if (this.IsFull == isFull && !isStart)
@@ -132,32 +132,32 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(1).SetUIActive(!isFull);
 		}
 
-		// Token: 0x0401FC82 RID: 130178
+		// Token: 0x0401A73F RID: 108351
 		[StaticVariableRuleIgnore]
 		private static readonly int CountTag = GameplayTagDefine.EGameplayTagId["关卡.沙虫BOSS战.脉冲炮子弹"];
 
-		// Token: 0x0401FC83 RID: 130179
+		// Token: 0x0401A740 RID: 108352
 		[Nullable(2)]
 		private EntityHandle EntityHandle;
 
-		// Token: 0x0401FC84 RID: 130180
+		// Token: 0x0401A741 RID: 108353
 		[Nullable(2)]
 		private SpecialEnergyBarMotorcycleSlot BarItem;
 
-		// Token: 0x0401FC85 RID: 130181
+		// Token: 0x0401A742 RID: 108354
 		private bool IsFull;
 
-		// Token: 0x0401FC86 RID: 130182
+		// Token: 0x0401A743 RID: 108355
 		private int CountMax = 100;
 
-		// Token: 0x0200C0CB RID: 49355
+		// Token: 0x0200AAD4 RID: 43732
 		private enum EChildType
 		{
-			// Token: 0x0403A2AD RID: 238253
+			// Token: 0x04034C7F RID: 216191
 			SlotBarItem,
-			// Token: 0x0403A2AE RID: 238254
+			// Token: 0x04034C80 RID: 216192
 			NormalItem,
-			// Token: 0x0403A2AF RID: 238255
+			// Token: 0x04034C81 RID: 216193
 			FullItem
 		}
 	}

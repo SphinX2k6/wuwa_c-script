@@ -9,14 +9,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x0200532C RID: 21292
+	// Token: 0x020042FC RID: 17148
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueResSkillGridPanel : UiPanelBase, IGridProxy<List<RogueResTalentTree>>
 	{
-		// Token: 0x17008326 RID: 33574
-		// (get) Token: 0x06036702 RID: 222978 RVA: 0x00CE3402 File Offset: 0x00CE1602
-		// (set) Token: 0x06036703 RID: 222979 RVA: 0x00CE340A File Offset: 0x00CE160A
+		// Token: 0x170056E6 RID: 22246
+		// (get) Token: 0x0602B5FE RID: 177662 RVA: 0x00C30DD2 File Offset: 0x00C2EFD2
+		// (set) Token: 0x0602B5FF RID: 177663 RVA: 0x00C30DDA File Offset: 0x00C2EFDA
 		[Nullable(new byte[]
 		{
 			2,
@@ -38,17 +38,17 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			1
 		})] set; }
 
-		// Token: 0x17008327 RID: 33575
-		// (get) Token: 0x06036704 RID: 222980 RVA: 0x00CE3413 File Offset: 0x00CE1613
-		// (set) Token: 0x06036705 RID: 222981 RVA: 0x00CE341B File Offset: 0x00CE161B
+		// Token: 0x170056E7 RID: 22247
+		// (get) Token: 0x0602B600 RID: 177664 RVA: 0x00C30DE3 File Offset: 0x00C2EFE3
+		// (set) Token: 0x0602B601 RID: 177665 RVA: 0x00C30DEB File Offset: 0x00C2EFEB
 		public int GridIndex { get; set; }
 
-		// Token: 0x17008328 RID: 33576
-		// (get) Token: 0x06036706 RID: 222982 RVA: 0x00CE3424 File Offset: 0x00CE1624
-		// (set) Token: 0x06036707 RID: 222983 RVA: 0x00CE342C File Offset: 0x00CE162C
+		// Token: 0x170056E8 RID: 22248
+		// (get) Token: 0x0602B602 RID: 177666 RVA: 0x00C30DF4 File Offset: 0x00C2EFF4
+		// (set) Token: 0x0602B603 RID: 177667 RVA: 0x00C30DFC File Offset: 0x00C2EFFC
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x06036708 RID: 222984 RVA: 0x00CE3438 File Offset: 0x00CE1638
+		// Token: 0x0602B604 RID: 177668 RVA: 0x00C30E08 File Offset: 0x00C2F008
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -59,18 +59,18 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x06036709 RID: 222985 RVA: 0x00CE3492 File Offset: 0x00CE1692
+		// Token: 0x0602B605 RID: 177669 RVA: 0x00C30E62 File Offset: 0x00C2F062
 		public RogueResSkillNode GetNodeByPos(int pos)
 		{
 			return this.NodeMap[pos];
 		}
 
-		// Token: 0x0603670A RID: 222986 RVA: 0x00CE34A0 File Offset: 0x00CE16A0
+		// Token: 0x0602B606 RID: 177670 RVA: 0x00C30E70 File Offset: 0x00C2F070
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x0603670B RID: 222987 RVA: 0x00CE34A4 File Offset: 0x00CE16A4
+		// Token: 0x0602B607 RID: 177671 RVA: 0x00C30E74 File Offset: 0x00C2F074
 		public void BuildNode()
 		{
 			foreach (RogueResTalentTree data in this.NodeDataList)
@@ -90,41 +90,41 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x0603670C RID: 222988 RVA: 0x00CE35A8 File Offset: 0x00CE17A8
+		// Token: 0x0602B608 RID: 177672 RVA: 0x00C30F78 File Offset: 0x00C2F178
 		public void Refresh(List<RogueResTalentTree> data, bool isSelected, int gridIndex)
 		{
 			this.NodeDataList = data;
 			this.BuildNode();
 		}
 
-		// Token: 0x0603670D RID: 222989 RVA: 0x00CE35B7 File Offset: 0x00CE17B7
+		// Token: 0x0602B609 RID: 177673 RVA: 0x00C30F87 File Offset: 0x00C2F187
 		public void Clear()
 		{
 		}
 
-		// Token: 0x0603670E RID: 222990 RVA: 0x00CE35B9 File Offset: 0x00CE17B9
+		// Token: 0x0602B60A RID: 177674 RVA: 0x00C30F89 File Offset: 0x00C2F189
 		public void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0603670F RID: 222991 RVA: 0x00CE35BB File Offset: 0x00CE17BB
+		// Token: 0x0602B60B RID: 177675 RVA: 0x00C30F8B File Offset: 0x00C2F18B
 		public void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x06036710 RID: 222992 RVA: 0x00CE35BD File Offset: 0x00CE17BD
+		// Token: 0x0602B60C RID: 177676 RVA: 0x00C30F8D File Offset: 0x00C2F18D
 		public object GetKey(List<RogueResTalentTree> data, int gridIndex)
 		{
 			return this.GridIndex;
 		}
 
-		// Token: 0x0401CC89 RID: 117897
+		// Token: 0x040176BF RID: 95935
 		public List<RogueResSkillNode> NodeMap = new List<RogueResSkillNode>();
 
-		// Token: 0x0401CC8A RID: 117898
+		// Token: 0x040176C0 RID: 95936
 		public List<RogueResTalentTree> NodeDataList = new List<RogueResTalentTree>();
 
-		// Token: 0x0401CC8B RID: 117899
+		// Token: 0x040176C1 RID: 95937
 		private IGridProxy<List<RogueResTalentTree>> GridProxyImplementation;
 	}
 }

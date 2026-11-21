@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EAD RID: 7853
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020E6 RID: 8422
 	public class ISpringArmFixConfig
 	{
-		// Token: 0x0600A7FA RID: 43002 RVA: 0x0017B634 File Offset: 0x00179834
+		// Token: 0x0600B2CA RID: 45770 RVA: 0x001915D4 File Offset: 0x0018F7D4
 		private ISpringArmFixConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A7FB RID: 43003 RVA: 0x0017B66C File Offset: 0x0017986C
+		// Token: 0x0600B2CB RID: 45771 RVA: 0x0019160C File Offset: 0x0018F80C
 		public static ISpringArmFixConfig Create([Nullable(2)] ISpringArmFixConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A7FC RID: 43004 RVA: 0x0017B67F File Offset: 0x0017987F
+		// Token: 0x0600B2CC RID: 45772 RVA: 0x0019161F File Offset: 0x0018F81F
 		public static ISpringArmFixConfig CreateFromSetValue([Nullable(2)] ISpringArmFixConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A7FD RID: 43005 RVA: 0x0017B692 File Offset: 0x00179892
+		// Token: 0x0600B2CD RID: 45773 RVA: 0x00191632 File Offset: 0x0018F832
 		public ISpringArmFixConfig_SetValue ToSetValue()
 		{
 			return new ISpringArmFixConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003351 RID: 13137
-		// (get) Token: 0x0600A7FE RID: 43006 RVA: 0x0017B6C0 File Offset: 0x001798C0
-		// (set) Token: 0x0600A7FF RID: 43007 RVA: 0x0017B6FA File Offset: 0x001798FA
+		// Token: 0x1700361B RID: 13851
+		// (get) Token: 0x0600B2CE RID: 45774 RVA: 0x00191660 File Offset: 0x0018F860
+		// (set) Token: 0x0600B2CF RID: 45775 RVA: 0x0019169A File Offset: 0x0018F89A
 		public virtual bool? LeftRightFix
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003352 RID: 13138
-		// (get) Token: 0x0600A800 RID: 43008 RVA: 0x0017B708 File Offset: 0x00179908
-		// (set) Token: 0x0600A801 RID: 43009 RVA: 0x0017B742 File Offset: 0x00179942
+		// Token: 0x1700361C RID: 13852
+		// (get) Token: 0x0600B2D0 RID: 45776 RVA: 0x001916A8 File Offset: 0x0018F8A8
+		// (set) Token: 0x0600B2D1 RID: 45777 RVA: 0x001916E2 File Offset: 0x0018F8E2
 		public virtual bool? ForwardBackFix
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003353 RID: 13139
-		// (get) Token: 0x0600A802 RID: 43010 RVA: 0x0017B750 File Offset: 0x00179950
-		// (set) Token: 0x0600A803 RID: 43011 RVA: 0x0017B78A File Offset: 0x0017998A
+		// Token: 0x1700361D RID: 13853
+		// (get) Token: 0x0600B2D2 RID: 45778 RVA: 0x001916F0 File Offset: 0x0018F8F0
+		// (set) Token: 0x0600B2D3 RID: 45779 RVA: 0x0019172A File Offset: 0x0018F92A
 		public virtual bool? UpDownFix
 		{
 			get
@@ -133,11 +131,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400641C RID: 25628
+		// Token: 0x04006A0A RID: 27146
 		[Nullable(2)]
 		protected ISpringArmFixConfig FbInstance;
 
-		// Token: 0x0400641D RID: 25629
+		// Token: 0x04006A0B RID: 27147
 		[Nullable(2)]
 		protected ISpringArmFixConfig_SetValue PocoInterface;
 	}

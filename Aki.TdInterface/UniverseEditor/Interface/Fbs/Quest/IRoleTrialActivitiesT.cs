@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040E9 RID: 16617
+	// Token: 0x0200452A RID: 17706
 	public class IRoleTrialActivitiesT
 	{
-		// Token: 0x17007522 RID: 29986
-		// (get) Token: 0x0601837B RID: 99195 RVA: 0x0037CBDE File Offset: 0x0037ADDE
-		// (set) Token: 0x0601837C RID: 99196 RVA: 0x0037CBE6 File Offset: 0x0037ADE6
+		// Token: 0x17007B28 RID: 31528
+		// (get) Token: 0x06019A1C RID: 104988 RVA: 0x003A6B2E File Offset: 0x003A4D2E
+		// (set) Token: 0x06019A1D RID: 104989 RVA: 0x003A6B36 File Offset: 0x003A4D36
 		public EShowUiType Type { get; set; }
 
-		// Token: 0x0601837D RID: 99197 RVA: 0x0037CBEF File Offset: 0x0037ADEF
+		// Token: 0x06019A1E RID: 104990 RVA: 0x003A6B3F File Offset: 0x003A4D3F
 		public IRoleTrialActivitiesT()
 		{
 			this.Type = EShowUiType.All;

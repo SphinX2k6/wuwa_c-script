@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BE6 RID: 23526
+	// Token: 0x02004BC6 RID: 19398
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CiacconaGalChapterEntryView : UiViewBase
 	{
-		// Token: 0x0603B77F RID: 243583 RVA: 0x00E2E896 File Offset: 0x00E2CA96
+		// Token: 0x060306CA RID: 198346 RVA: 0x00D7EBA6 File Offset: 0x00D7CDA6
 		public CiacconaGalChapterEntryView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B780 RID: 243584 RVA: 0x00E2E8A0 File Offset: 0x00E2CAA0
+		// Token: 0x060306CB RID: 198347 RVA: 0x00D7EBB0 File Offset: 0x00D7CDB0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B781 RID: 243585 RVA: 0x00E2E990 File Offset: 0x00E2CB90
+		// Token: 0x060306CC RID: 198348 RVA: 0x00D7ECA0 File Offset: 0x00D7CEA0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CiacconaGalChapterEntryView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B782 RID: 243586 RVA: 0x00E2E9D3 File Offset: 0x00E2CBD3
+		// Token: 0x060306CD RID: 198349 RVA: 0x00D7ECE3 File Offset: 0x00D7CEE3
 		protected override void OnBeforeShow()
 		{
 			this.RefreshView();
 		}
 
-		// Token: 0x0603B783 RID: 243587 RVA: 0x00E2E9DC File Offset: 0x00E2CBDC
+		// Token: 0x060306CE RID: 198350 RVA: 0x00D7ECEC File Offset: 0x00D7CEEC
 		private void RefreshView()
 		{
 			this.Data = (this.OpenParam as CiacconaGalActivityData);
@@ -92,25 +92,25 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			ciacconaProgressRewardItem.SetProgressText(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x0603B784 RID: 243588 RVA: 0x00E2EB28 File Offset: 0x00E2CD28
+		// Token: 0x060306CF RID: 198351 RVA: 0x00D7EE38 File Offset: 0x00D7D038
 		private CiacconaGalChapterEntryItem GetChapterEntryItem()
 		{
 			return new CiacconaGalChapterEntryItem();
 		}
 
-		// Token: 0x0603B785 RID: 243589 RVA: 0x00E2EB2F File Offset: 0x00E2CD2F
+		// Token: 0x060306D0 RID: 198352 RVA: 0x00D7EE3F File Offset: 0x00D7D03F
 		private void OnEndingRewardClick()
 		{
 			CiacconaGalController.Instance.OpenEndingView();
 		}
 
-		// Token: 0x0603B786 RID: 243590 RVA: 0x00E2EB3B File Offset: 0x00E2CD3B
+		// Token: 0x060306D1 RID: 198353 RVA: 0x00D7EE4B File Offset: 0x00D7D04B
 		private void OnProgressRewardClick()
 		{
 			CiacconaGalController.Instance.OpenRewardViewByActivityId(this.Data.Id);
 		}
 
-		// Token: 0x0603B787 RID: 243591 RVA: 0x00E2EB54 File Offset: 0x00E2CD54
+		// Token: 0x060306D2 RID: 198354 RVA: 0x00D7EE64 File Offset: 0x00D7D064
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -135,44 +135,44 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			};
 		}
 
-		// Token: 0x0401EFBA RID: 126906
+		// Token: 0x04019A6B RID: 105067
 		private PopupCaptionItem Caption;
 
-		// Token: 0x0401EFBB RID: 126907
+		// Token: 0x04019A6C RID: 105068
 		private GenericLayout<CiacconaGalChapterEntryItem, CiacconaGalChapterSlotData> LayoutChapter;
 
-		// Token: 0x0401EFBC RID: 126908
+		// Token: 0x04019A6D RID: 105069
 		private CiacconaTitleInspirationItem CiacconaTitleItem;
 
-		// Token: 0x0401EFBD RID: 126909
+		// Token: 0x04019A6E RID: 105070
 		private CiacconaGalRewardButtonItem CiacconaEndingRewardItem;
 
-		// Token: 0x0401EFBE RID: 126910
+		// Token: 0x04019A6F RID: 105071
 		private CiacconaGalRewardButtonItem CiacconaProgressRewardItem;
 
-		// Token: 0x0401EFBF RID: 126911
+		// Token: 0x04019A70 RID: 105072
 		private CiacconaGalActivityData Data;
 
-		// Token: 0x0200BDCB RID: 48587
+		// Token: 0x0200A7D3 RID: 42963
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040393A7 RID: 234407
+			// Token: 0x04033D6A RID: 212330
 			public const int ItemCaption = 0;
 
-			// Token: 0x040393A8 RID: 234408
+			// Token: 0x04033D6B RID: 212331
 			public const int LayoutChapter = 1;
 
-			// Token: 0x040393A9 RID: 234409
+			// Token: 0x04033D6C RID: 212332
 			public const int ItemChapter = 2;
 
-			// Token: 0x040393AA RID: 234410
+			// Token: 0x04033D6D RID: 212333
 			public const int ItemEndingReward = 3;
 
-			// Token: 0x040393AB RID: 234411
+			// Token: 0x04033D6E RID: 212334
 			public const int ItemProgressReward = 4;
 
-			// Token: 0x040393AC RID: 234412
+			// Token: 0x04033D6F RID: 212335
 			public const int TextTitle = 5;
 		}
 	}

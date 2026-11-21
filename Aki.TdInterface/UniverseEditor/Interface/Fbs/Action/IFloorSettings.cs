@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067E9 RID: 26601
+	// Token: 0x02006E69 RID: 28265
 	public struct IFloorSettings : IFlatbufferObject
 	{
-		// Token: 0x1700C56A RID: 50538
-		// (get) Token: 0x0602E4EF RID: 189679 RVA: 0x00652775 File Offset: 0x00650975
+		// Token: 0x1700CF20 RID: 53024
+		// (get) Token: 0x06030D35 RID: 199989 RVA: 0x0069FEB9 File Offset: 0x0069E0B9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E4F0 RID: 189680 RVA: 0x00652782 File Offset: 0x00650982
+		// Token: 0x06030D36 RID: 199990 RVA: 0x0069FEC6 File Offset: 0x0069E0C6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E4F1 RID: 189681 RVA: 0x0065278C File Offset: 0x0065098C
+		// Token: 0x06030D37 RID: 199991 RVA: 0x0069FED0 File Offset: 0x0069E0D0
 		public static IFloorSettings GetRootAsIFloorSettings(ByteBuffer _bb)
 		{
 			return IFloorSettings.GetRootAsIFloorSettings(_bb, default(IFloorSettings));
 		}
 
-		// Token: 0x0602E4F2 RID: 189682 RVA: 0x006527A8 File Offset: 0x006509A8
+		// Token: 0x06030D38 RID: 199992 RVA: 0x0069FEEC File Offset: 0x0069E0EC
 		public static IFloorSettings GetRootAsIFloorSettings(ByteBuffer _bb, IFloorSettings obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E4F3 RID: 189683 RVA: 0x006527C5 File Offset: 0x006509C5
+		// Token: 0x06030D39 RID: 199993 RVA: 0x0069FF09 File Offset: 0x0069E109
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E4F4 RID: 189684 RVA: 0x006527D4 File Offset: 0x006509D4
+		// Token: 0x06030D3A RID: 199994 RVA: 0x0069FF18 File Offset: 0x0069E118
 		public IFloorSettings __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C56B RID: 50539
-		// (get) Token: 0x0602E4F5 RID: 189685 RVA: 0x006527E4 File Offset: 0x006509E4
+		// Token: 0x1700CF21 RID: 53025
+		// (get) Token: 0x06030D3B RID: 199995 RVA: 0x0069FF28 File Offset: 0x0069E128
 		public string MeshPath
 		{
 			get
@@ -63,20 +63,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E4F6 RID: 189686 RVA: 0x0065281B File Offset: 0x00650A1B
+		// Token: 0x06030D3C RID: 199996 RVA: 0x0069FF5F File Offset: 0x0069E15F
 		public Span<byte> GetMeshPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0602E4F7 RID: 189687 RVA: 0x0065282A File Offset: 0x00650A2A
+		// Token: 0x06030D3D RID: 199997 RVA: 0x0069FF6E File Offset: 0x0069E16E
 		public byte[] GetMeshPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700C56C RID: 50540
-		// (get) Token: 0x0602E4F8 RID: 189688 RVA: 0x00652838 File Offset: 0x00650A38
+		// Token: 0x1700CF22 RID: 53026
+		// (get) Token: 0x06030D3E RID: 199998 RVA: 0x0069FF7C File Offset: 0x0069E17C
 		public string MaterialPath
 		{
 			get
@@ -90,20 +90,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E4F9 RID: 189689 RVA: 0x0065286F File Offset: 0x00650A6F
+		// Token: 0x06030D3F RID: 199999 RVA: 0x0069FFB3 File Offset: 0x0069E1B3
 		public Span<byte> GetMaterialPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602E4FA RID: 189690 RVA: 0x0065287E File Offset: 0x00650A7E
+		// Token: 0x06030D40 RID: 200000 RVA: 0x0069FFC2 File Offset: 0x0069E1C2
 		public byte[] GetMaterialPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700C56D RID: 50541
-		// (get) Token: 0x0602E4FB RID: 189691 RVA: 0x0065288C File Offset: 0x00650A8C
+		// Token: 0x1700CF23 RID: 53027
+		// (get) Token: 0x06030D41 RID: 200001 RVA: 0x0069FFD0 File Offset: 0x0069E1D0
 		public IVector2? Scale
 		{
 			get
@@ -117,8 +117,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C56E RID: 50542
-		// (get) Token: 0x0602E4FC RID: 189692 RVA: 0x006528EC File Offset: 0x00650AEC
+		// Token: 0x1700CF24 RID: 53028
+		// (get) Token: 0x06030D42 RID: 200002 RVA: 0x006A0030 File Offset: 0x0069E230
 		public float ShowTime
 		{
 			get
@@ -132,8 +132,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C56F RID: 50543
-		// (get) Token: 0x0602E4FD RID: 189693 RVA: 0x00652930 File Offset: 0x00650B30
+		// Token: 0x1700CF25 RID: 53029
+		// (get) Token: 0x06030D43 RID: 200003 RVA: 0x006A0074 File Offset: 0x0069E274
 		public float DisappearTime
 		{
 			get
@@ -147,7 +147,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E4FE RID: 189694 RVA: 0x00652971 File Offset: 0x00650B71
+		// Token: 0x06030D44 RID: 200004 RVA: 0x006A00B5 File Offset: 0x0069E2B5
 		public static Offset<IFloorSettings> CreateIFloorSettings(FlatBufferBuilder builder, StringOffset MeshPathOffset = default(StringOffset), StringOffset MaterialPathOffset = default(StringOffset), Offset<IVector2> ScaleOffset = default(Offset<IVector2>), float ShowTime = 0f, float DisappearTime = 0f)
 		{
 			builder.StartTable(5);
@@ -159,49 +159,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFloorSettings.EndIFloorSettings(builder);
 		}
 
-		// Token: 0x0602E4FF RID: 189695 RVA: 0x006529A5 File Offset: 0x00650BA5
+		// Token: 0x06030D45 RID: 200005 RVA: 0x006A00E9 File Offset: 0x0069E2E9
 		public static void StartIFloorSettings(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602E500 RID: 189696 RVA: 0x006529AE File Offset: 0x00650BAE
+		// Token: 0x06030D46 RID: 200006 RVA: 0x006A00F2 File Offset: 0x0069E2F2
 		public static void AddMeshPath(FlatBufferBuilder builder, StringOffset meshPathOffset)
 		{
 			builder.AddOffset(0, meshPathOffset.Value, 0);
 		}
 
-		// Token: 0x0602E501 RID: 189697 RVA: 0x006529BE File Offset: 0x00650BBE
+		// Token: 0x06030D47 RID: 200007 RVA: 0x006A0102 File Offset: 0x0069E302
 		public static void AddMaterialPath(FlatBufferBuilder builder, StringOffset materialPathOffset)
 		{
 			builder.AddOffset(1, materialPathOffset.Value, 0);
 		}
 
-		// Token: 0x0602E502 RID: 189698 RVA: 0x006529CE File Offset: 0x00650BCE
+		// Token: 0x06030D48 RID: 200008 RVA: 0x006A0112 File Offset: 0x0069E312
 		public static void AddScale(FlatBufferBuilder builder, Offset<IVector2> scaleOffset)
 		{
 			builder.AddOffset(2, scaleOffset.Value, 0);
 		}
 
-		// Token: 0x0602E503 RID: 189699 RVA: 0x006529DE File Offset: 0x00650BDE
+		// Token: 0x06030D49 RID: 200009 RVA: 0x006A0122 File Offset: 0x0069E322
 		public static void AddShowTime(FlatBufferBuilder builder, float showTime)
 		{
 			builder.AddFloat(3, showTime, 0.0);
 		}
 
-		// Token: 0x0602E504 RID: 189700 RVA: 0x006529F1 File Offset: 0x00650BF1
+		// Token: 0x06030D4A RID: 200010 RVA: 0x006A0135 File Offset: 0x0069E335
 		public static void AddDisappearTime(FlatBufferBuilder builder, float disappearTime)
 		{
 			builder.AddFloat(4, disappearTime, 0.0);
 		}
 
-		// Token: 0x0602E505 RID: 189701 RVA: 0x00652A04 File Offset: 0x00650C04
+		// Token: 0x06030D4B RID: 200011 RVA: 0x006A0148 File Offset: 0x0069E348
 		public static Offset<IFloorSettings> EndIFloorSettings(FlatBufferBuilder builder)
 		{
 			return new Offset<IFloorSettings>(builder.EndTable());
 		}
 
-		// Token: 0x0602E506 RID: 189702 RVA: 0x00652A14 File Offset: 0x00650C14
+		// Token: 0x06030D4C RID: 200012 RVA: 0x006A0158 File Offset: 0x0069E358
 		public IFloorSettingsT UnPack()
 		{
 			IFloorSettingsT floorSettingsT = new IFloorSettingsT();
@@ -209,7 +209,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return floorSettingsT;
 		}
 
-		// Token: 0x0602E507 RID: 189703 RVA: 0x00652A30 File Offset: 0x00650C30
+		// Token: 0x06030D4D RID: 200013 RVA: 0x006A0174 File Offset: 0x0069E374
 		public void UnPackTo(IFloorSettingsT _o)
 		{
 			_o.MeshPath = this.MeshPath;
@@ -219,7 +219,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.DisappearTime = this.DisappearTime;
 		}
 
-		// Token: 0x0602E508 RID: 189704 RVA: 0x00652A9C File Offset: 0x00650C9C
+		// Token: 0x06030D4E RID: 200014 RVA: 0x006A01E0 File Offset: 0x0069E3E0
 		public static Offset<IFloorSettings> Pack(FlatBufferBuilder builder, IFloorSettingsT _o)
 		{
 			if (_o == null)
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFloorSettings.CreateIFloorSettings(builder, meshPathOffset, materialPathOffset, scaleOffset, _o.ShowTime, _o.DisappearTime);
 		}
 
-		// Token: 0x04010F01 RID: 69377
+		// Token: 0x04011D33 RID: 73011
 		private Table __p;
 	}
 }

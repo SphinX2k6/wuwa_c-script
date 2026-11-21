@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002BF9 RID: 11257
+// Token: 0x02002174 RID: 8564
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class TowerFormationTeamTabItem : GridProxyAbstract<string>
 {
-	// Token: 0x0601761F RID: 95775 RVA: 0x005F3268 File Offset: 0x005F1468
+	// Token: 0x06015050 RID: 86096 RVA: 0x0061FDA4 File Offset: 0x0061DFA4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -36,7 +36,7 @@ public class TowerFormationTeamTabItem : GridProxyAbstract<string>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06017620 RID: 95776 RVA: 0x005F332F File Offset: 0x005F152F
+	// Token: 0x06015051 RID: 86097 RVA: 0x0061FE6B File Offset: 0x0061E06B
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(2);
@@ -47,7 +47,7 @@ public class TowerFormationTeamTabItem : GridProxyAbstract<string>
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x06017621 RID: 95777 RVA: 0x005F3343 File Offset: 0x005F1543
+	// Token: 0x06015052 RID: 86098 RVA: 0x0061FE7F File Offset: 0x0061E07F
 	[NullableContext(1)]
 	public override void Refresh(string data, bool isSelected, int gridIndex)
 	{
@@ -55,7 +55,7 @@ public class TowerFormationTeamTabItem : GridProxyAbstract<string>
 		this.SetToggleState(isSelected);
 	}
 
-	// Token: 0x06017622 RID: 95778 RVA: 0x005F3359 File Offset: 0x005F1559
+	// Token: 0x06015053 RID: 86099 RVA: 0x0061FE95 File Offset: 0x0061E095
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true);
@@ -67,13 +67,13 @@ public class TowerFormationTeamTabItem : GridProxyAbstract<string>
 		onSelectCallback(base.GridIndex);
 	}
 
-	// Token: 0x06017623 RID: 95779 RVA: 0x005F3378 File Offset: 0x005F1578
+	// Token: 0x06015054 RID: 86100 RVA: 0x0061FEB4 File Offset: 0x0061E0B4
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false);
 	}
 
-	// Token: 0x06017624 RID: 95780 RVA: 0x005F3381 File Offset: 0x005F1581
+	// Token: 0x06015055 RID: 86101 RVA: 0x0061FEBD File Offset: 0x0061E0BD
 	private void SetToggleState(bool isOn)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -84,7 +84,7 @@ public class TowerFormationTeamTabItem : GridProxyAbstract<string>
 		extendToggle.SetToggleStateForce(isOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06017625 RID: 95781 RVA: 0x005F339E File Offset: 0x005F159E
+	// Token: 0x06015056 RID: 86102 RVA: 0x0061FEDA File Offset: 0x0061E0DA
 	private void OnToggle(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -99,18 +99,18 @@ public class TowerFormationTeamTabItem : GridProxyAbstract<string>
 		scrollViewDelegate.SelectGridProxy(base.GridIndex, base.DisplayIndex, true);
 	}
 
-	// Token: 0x0400AEF6 RID: 44790
+	// Token: 0x0400B2FB RID: 45819
 	[Nullable(2)]
 	public Action<int> OnSelectCallback;
 
-	// Token: 0x020091BD RID: 37309
+	// Token: 0x02008400 RID: 33792
 	private enum EChildType
 	{
-		// Token: 0x0402F26A RID: 193130
+		// Token: 0x0402A96B RID: 174443
 		Toggle,
-		// Token: 0x0402F26B RID: 193131
+		// Token: 0x0402A96C RID: 174444
 		Text,
-		// Token: 0x0402F26C RID: 193132
+		// Token: 0x0402A96D RID: 174445
 		RedDotItem
 	}
 }

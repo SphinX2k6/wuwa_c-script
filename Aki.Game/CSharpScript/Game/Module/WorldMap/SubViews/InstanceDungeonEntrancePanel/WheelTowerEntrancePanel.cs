@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePanel
 {
-	// Token: 0x02004815 RID: 18453
+	// Token: 0x02003746 RID: 14150
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WheelTowerEntrancePanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x06030515 RID: 197909 RVA: 0x00B36778 File Offset: 0x00B34978
+		// Token: 0x06024CE5 RID: 150757 RVA: 0x00A666EC File Offset: 0x00A648EC
 		public override string GetResourceId()
 		{
 			return "UiView_Map_Tower_Tip_Prefab";
 		}
 
-		// Token: 0x06030516 RID: 197910 RVA: 0x00B36780 File Offset: 0x00B34980
+		// Token: 0x06024CE6 RID: 150758 RVA: 0x00A666F4 File Offset: 0x00A648F4
 		protected override void OnStart()
 		{
 			UUIVerticalLayout verticalLayout = base.GetVerticalLayout(5);
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			base.OnStart();
 		}
 
-		// Token: 0x06030517 RID: 197911 RVA: 0x00B367F3 File Offset: 0x00B349F3
+		// Token: 0x06024CE7 RID: 150759 RVA: 0x00A66767 File Offset: 0x00A64967
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x06030518 RID: 197912 RVA: 0x00B36824 File Offset: 0x00B34A24
+		// Token: 0x06024CE8 RID: 150760 RVA: 0x00A66798 File Offset: 0x00A64998
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -82,14 +82,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x06030519 RID: 197913 RVA: 0x00B368E7 File Offset: 0x00B34AE7
+		// Token: 0x06024CE9 RID: 150761 RVA: 0x00A6685B File Offset: 0x00A64A5B
 		private void OnSecondRefresh()
 		{
 			this.RefreshDifficult();
 			this.RefreshTime();
 		}
 
-		// Token: 0x0603051A RID: 197914 RVA: 0x00B368F8 File Offset: 0x00B34AF8
+		// Token: 0x06024CEA RID: 150762 RVA: 0x00A6686C File Offset: 0x00A64A6C
 		private void RefreshDifficult()
 		{
 			WheelTowerModel instance = WheelTowerModel.Instance;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			instanceDungeonCostTip2.SetRightText(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x0603051B RID: 197915 RVA: 0x00B36A14 File Offset: 0x00B34C14
+		// Token: 0x06024CEB RID: 150763 RVA: 0x00A66988 File Offset: 0x00A64B88
 		private void RefreshTime()
 		{
 			CommonDefine.ICountDown seasonCountDownData = WheelTowerModel.Instance.GetSeasonCountDownData();
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			instanceDungeonCostTip.SetHelpButtonVisible(false);
 		}
 
-		// Token: 0x0603051C RID: 197916 RVA: 0x00B36A88 File Offset: 0x00B34C88
+		// Token: 0x06024CEC RID: 150764 RVA: 0x00A669FC File Offset: 0x00A64BFC
 		protected override void OnCloseWorldMapSecondaryUi()
 		{
 			TipsListView instanceCostTipView = this.InstanceCostTipView;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			this.ClearTimer();
 		}
 
-		// Token: 0x0603051D RID: 197917 RVA: 0x00B36AA1 File Offset: 0x00B34CA1
+		// Token: 0x06024CED RID: 150765 RVA: 0x00A66A15 File Offset: 0x00A64C15
 		private void ClearTimer()
 		{
 			if (this.TimerId != null && TimerSystem.Instance.Has(this.TimerId))
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x0603051E RID: 197918 RVA: 0x00B36AD5 File Offset: 0x00B34CD5
+		// Token: 0x06024CEE RID: 150766 RVA: 0x00A66A49 File Offset: 0x00A64C49
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearTimer();
@@ -169,32 +169,32 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x04019FFD RID: 106493
+		// Token: 0x040146B1 RID: 83633
 		private const string TIME_KEY = "time";
 
-		// Token: 0x04019FFE RID: 106494
+		// Token: 0x040146B2 RID: 83634
 		private const string NORMAL_KEY = "normal";
 
-		// Token: 0x04019FFF RID: 106495
+		// Token: 0x040146B3 RID: 83635
 		private const string ENDLESS_KEY = "endless";
 
-		// Token: 0x0401A000 RID: 106496
+		// Token: 0x040146B4 RID: 83636
 		[Nullable(2)]
 		private TipsListView InstanceCostTipView;
 
-		// Token: 0x0401A001 RID: 106497
+		// Token: 0x040146B5 RID: 83637
 		[Nullable(2)]
 		protected RewardItemBar RewardsView;
 
-		// Token: 0x0401A002 RID: 106498
+		// Token: 0x040146B6 RID: 83638
 		[Nullable(2)]
 		private TimerHandle TimerId;
 
-		// Token: 0x0200AAE5 RID: 43749
+		// Token: 0x02009496 RID: 38038
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F6A RID: 212842
+			// Token: 0x0402E6ED RID: 190189
 			public const int WheelTowerEntrancePanel = 0;
 		}
 	}

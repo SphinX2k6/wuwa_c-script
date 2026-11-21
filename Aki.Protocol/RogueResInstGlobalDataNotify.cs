@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000FEB RID: 4075
+	// Token: 0x02000FDB RID: 4059
 	[NetMessage(EMessageId.RogueResInstGlobalDataNotify)]
 	public sealed class RogueResInstGlobalDataNotify : IMessage<RogueResInstGlobalDataNotify>, IMessage, IEquatable<RogueResInstGlobalDataNotify>, IDeepCloneable<RogueResInstGlobalDataNotify>, IBufferMessage
 	{
-		// Token: 0x06015C7D RID: 89213 RVA: 0x00329967 File Offset: 0x00327B67
+		// Token: 0x06015B98 RID: 88984 RVA: 0x003282B3 File Offset: 0x003264B3
 		[NullableContext(1)]
 		public static RogueResInstGlobalDataNotify Create()
 		{
 			return new RogueResInstGlobalDataNotify();
 		}
 
-		// Token: 0x170048AF RID: 18607
-		// (get) Token: 0x06015C7E RID: 89214 RVA: 0x0032996E File Offset: 0x00327B6E
+		// Token: 0x17004885 RID: 18565
+		// (get) Token: 0x06015B99 RID: 88985 RVA: 0x003282BA File Offset: 0x003264BA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048B0 RID: 18608
-		// (get) Token: 0x06015C7F RID: 89215 RVA: 0x00329971 File Offset: 0x00327B71
+		// Token: 0x17004886 RID: 18566
+		// (get) Token: 0x06015B9A RID: 88986 RVA: 0x003282BD File Offset: 0x003264BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015C80 RID: 89216 RVA: 0x00329978 File Offset: 0x00327B78
+		// Token: 0x06015B9B RID: 88987 RVA: 0x003282C4 File Offset: 0x003264C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResInstGlobalDataNotify()
 		{
 		}
 
-		// Token: 0x06015C81 RID: 89217 RVA: 0x00329998 File Offset: 0x00327B98
+		// Token: 0x06015B9C RID: 88988 RVA: 0x003282E4 File Offset: 0x003264E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResInstGlobalDataNotify(RogueResInstGlobalDataNotify other) : this()
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06015C82 RID: 89218 RVA: 0x00329AF2 File Offset: 0x00327CF2
+		// Token: 0x06015B9D RID: 88989 RVA: 0x0032843E File Offset: 0x0032663E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResInstGlobalDataNotify Clone()
@@ -87,9 +87,9 @@ namespace Aki.Protocol
 			return new RogueResInstGlobalDataNotify(this);
 		}
 
-		// Token: 0x170048B1 RID: 18609
-		// (get) Token: 0x06015C83 RID: 89219 RVA: 0x00329AFA File Offset: 0x00327CFA
-		// (set) Token: 0x06015C84 RID: 89220 RVA: 0x00329B02 File Offset: 0x00327D02
+		// Token: 0x17004887 RID: 18567
+		// (get) Token: 0x06015B9E RID: 88990 RVA: 0x00328446 File Offset: 0x00326646
+		// (set) Token: 0x06015B9F RID: 88991 RVA: 0x0032844E File Offset: 0x0032664E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int InstId
@@ -104,9 +104,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048B2 RID: 18610
-		// (get) Token: 0x06015C85 RID: 89221 RVA: 0x00329B0B File Offset: 0x00327D0B
-		// (set) Token: 0x06015C86 RID: 89222 RVA: 0x00329B13 File Offset: 0x00327D13
+		// Token: 0x17004888 RID: 18568
+		// (get) Token: 0x06015BA0 RID: 88992 RVA: 0x00328457 File Offset: 0x00326657
+		// (set) Token: 0x06015BA1 RID: 88993 RVA: 0x0032845F File Offset: 0x0032665F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RandomSeedId
@@ -121,8 +121,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048B3 RID: 18611
-		// (get) Token: 0x06015C87 RID: 89223 RVA: 0x00329B1C File Offset: 0x00327D1C
+		// Token: 0x17004889 RID: 18569
+		// (get) Token: 0x06015BA2 RID: 88994 RVA: 0x00328468 File Offset: 0x00326668
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RogueResGridData> RogueResGridDatas
@@ -133,9 +133,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048B4 RID: 18612
-		// (get) Token: 0x06015C88 RID: 89224 RVA: 0x00329B24 File Offset: 0x00327D24
-		// (set) Token: 0x06015C89 RID: 89225 RVA: 0x00329B2C File Offset: 0x00327D2C
+		// Token: 0x1700488A RID: 18570
+		// (get) Token: 0x06015BA3 RID: 88995 RVA: 0x00328470 File Offset: 0x00326670
+		// (set) Token: 0x06015BA4 RID: 88996 RVA: 0x00328478 File Offset: 0x00326678
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Index
@@ -150,9 +150,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048B5 RID: 18613
-		// (get) Token: 0x06015C8A RID: 89226 RVA: 0x00329B35 File Offset: 0x00327D35
-		// (set) Token: 0x06015C8B RID: 89227 RVA: 0x00329B3D File Offset: 0x00327D3D
+		// Token: 0x1700488B RID: 18571
+		// (get) Token: 0x06015BA5 RID: 88997 RVA: 0x00328481 File Offset: 0x00326681
+		// (set) Token: 0x06015BA6 RID: 88998 RVA: 0x00328489 File Offset: 0x00326689
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool InBattle
@@ -167,9 +167,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048B6 RID: 18614
-		// (get) Token: 0x06015C8C RID: 89228 RVA: 0x00329B46 File Offset: 0x00327D46
-		// (set) Token: 0x06015C8D RID: 89229 RVA: 0x00329B4E File Offset: 0x00327D4E
+		// Token: 0x1700488C RID: 18572
+		// (get) Token: 0x06015BA7 RID: 88999 RVA: 0x00328492 File Offset: 0x00326692
+		// (set) Token: 0x06015BA8 RID: 89000 RVA: 0x0032849A File Offset: 0x0032669A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Fov
@@ -184,9 +184,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048B7 RID: 18615
-		// (get) Token: 0x06015C8E RID: 89230 RVA: 0x00329B57 File Offset: 0x00327D57
-		// (set) Token: 0x06015C8F RID: 89231 RVA: 0x00329B5F File Offset: 0x00327D5F
+		// Token: 0x1700488D RID: 18573
+		// (get) Token: 0x06015BA9 RID: 89001 RVA: 0x003284A3 File Offset: 0x003266A3
+		// (set) Token: 0x06015BAA RID: 89002 RVA: 0x003284AB File Offset: 0x003266AB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Mood
@@ -201,9 +201,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048B8 RID: 18616
-		// (get) Token: 0x06015C90 RID: 89232 RVA: 0x00329B68 File Offset: 0x00327D68
-		// (set) Token: 0x06015C91 RID: 89233 RVA: 0x00329B70 File Offset: 0x00327D70
+		// Token: 0x1700488E RID: 18574
+		// (get) Token: 0x06015BAB RID: 89003 RVA: 0x003284B4 File Offset: 0x003266B4
+		// (set) Token: 0x06015BAC RID: 89004 RVA: 0x003284BC File Offset: 0x003266BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MoodRuleId
@@ -218,9 +218,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048B9 RID: 18617
-		// (get) Token: 0x06015C92 RID: 89234 RVA: 0x00329B79 File Offset: 0x00327D79
-		// (set) Token: 0x06015C93 RID: 89235 RVA: 0x00329B81 File Offset: 0x00327D81
+		// Token: 0x1700488F RID: 18575
+		// (get) Token: 0x06015BAD RID: 89005 RVA: 0x003284C5 File Offset: 0x003266C5
+		// (set) Token: 0x06015BAE RID: 89006 RVA: 0x003284CD File Offset: 0x003266CD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleMaxStar
@@ -235,9 +235,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048BA RID: 18618
-		// (get) Token: 0x06015C94 RID: 89236 RVA: 0x00329B8A File Offset: 0x00327D8A
-		// (set) Token: 0x06015C95 RID: 89237 RVA: 0x00329B92 File Offset: 0x00327D92
+		// Token: 0x17004890 RID: 18576
+		// (get) Token: 0x06015BAF RID: 89007 RVA: 0x003284D6 File Offset: 0x003266D6
+		// (set) Token: 0x06015BB0 RID: 89008 RVA: 0x003284DE File Offset: 0x003266DE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleLevel
@@ -252,9 +252,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048BB RID: 18619
-		// (get) Token: 0x06015C96 RID: 89238 RVA: 0x00329B9B File Offset: 0x00327D9B
-		// (set) Token: 0x06015C97 RID: 89239 RVA: 0x00329BA3 File Offset: 0x00327DA3
+		// Token: 0x17004891 RID: 18577
+		// (get) Token: 0x06015BB1 RID: 89009 RVA: 0x003284E7 File Offset: 0x003266E7
+		// (set) Token: 0x06015BB2 RID: 89010 RVA: 0x003284EF File Offset: 0x003266EF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int GoldItem
@@ -269,9 +269,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048BC RID: 18620
-		// (get) Token: 0x06015C98 RID: 89240 RVA: 0x00329BAC File Offset: 0x00327DAC
-		// (set) Token: 0x06015C99 RID: 89241 RVA: 0x00329BB4 File Offset: 0x00327DB4
+		// Token: 0x17004892 RID: 18578
+		// (get) Token: 0x06015BB3 RID: 89011 RVA: 0x003284F8 File Offset: 0x003266F8
+		// (set) Token: 0x06015BB4 RID: 89012 RVA: 0x00328500 File Offset: 0x00326700
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Columns
@@ -286,9 +286,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048BD RID: 18621
-		// (get) Token: 0x06015C9A RID: 89242 RVA: 0x00329BBD File Offset: 0x00327DBD
-		// (set) Token: 0x06015C9B RID: 89243 RVA: 0x00329BC5 File Offset: 0x00327DC5
+		// Token: 0x17004893 RID: 18579
+		// (get) Token: 0x06015BB5 RID: 89013 RVA: 0x00328509 File Offset: 0x00326709
+		// (set) Token: 0x06015BB6 RID: 89014 RVA: 0x00328511 File Offset: 0x00326711
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Rows
@@ -303,9 +303,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048BE RID: 18622
-		// (get) Token: 0x06015C9C RID: 89244 RVA: 0x00329BCE File Offset: 0x00327DCE
-		// (set) Token: 0x06015C9D RID: 89245 RVA: 0x00329BD6 File Offset: 0x00327DD6
+		// Token: 0x17004894 RID: 18580
+		// (get) Token: 0x06015BB7 RID: 89015 RVA: 0x0032851A File Offset: 0x0032671A
+		// (set) Token: 0x06015BB8 RID: 89016 RVA: 0x00328522 File Offset: 0x00326722
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ShowType
@@ -320,9 +320,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048BF RID: 18623
-		// (get) Token: 0x06015C9E RID: 89246 RVA: 0x00329BDF File Offset: 0x00327DDF
-		// (set) Token: 0x06015C9F RID: 89247 RVA: 0x00329BE7 File Offset: 0x00327DE7
+		// Token: 0x17004895 RID: 18581
+		// (get) Token: 0x06015BB9 RID: 89017 RVA: 0x0032852B File Offset: 0x0032672B
+		// (set) Token: 0x06015BBA RID: 89018 RVA: 0x00328533 File Offset: 0x00326733
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MaxMood
@@ -337,9 +337,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048C0 RID: 18624
-		// (get) Token: 0x06015CA0 RID: 89248 RVA: 0x00329BF0 File Offset: 0x00327DF0
-		// (set) Token: 0x06015CA1 RID: 89249 RVA: 0x00329BF8 File Offset: 0x00327DF8
+		// Token: 0x17004896 RID: 18582
+		// (get) Token: 0x06015BBB RID: 89019 RVA: 0x0032853C File Offset: 0x0032673C
+		// (set) Token: 0x06015BBC RID: 89020 RVA: 0x00328544 File Offset: 0x00326744
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MinMood
@@ -354,9 +354,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048C1 RID: 18625
-		// (get) Token: 0x06015CA2 RID: 89250 RVA: 0x00329C01 File Offset: 0x00327E01
-		// (set) Token: 0x06015CA3 RID: 89251 RVA: 0x00329C09 File Offset: 0x00327E09
+		// Token: 0x17004897 RID: 18583
+		// (get) Token: 0x06015BBD RID: 89021 RVA: 0x0032854D File Offset: 0x0032674D
+		// (set) Token: 0x06015BBE RID: 89022 RVA: 0x00328555 File Offset: 0x00326755
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TeamLevel
@@ -371,8 +371,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048C2 RID: 18626
-		// (get) Token: 0x06015CA4 RID: 89252 RVA: 0x00329C12 File Offset: 0x00327E12
+		// Token: 0x17004898 RID: 18584
+		// (get) Token: 0x06015BBF RID: 89023 RVA: 0x0032855E File Offset: 0x0032675E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RogueResFormation> RogueResFormations
@@ -383,9 +383,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048C3 RID: 18627
-		// (get) Token: 0x06015CA5 RID: 89253 RVA: 0x00329C1A File Offset: 0x00327E1A
-		// (set) Token: 0x06015CA6 RID: 89254 RVA: 0x00329C22 File Offset: 0x00327E22
+		// Token: 0x17004899 RID: 18585
+		// (get) Token: 0x06015BC0 RID: 89024 RVA: 0x00328566 File Offset: 0x00326766
+		// (set) Token: 0x06015BC1 RID: 89025 RVA: 0x0032856E File Offset: 0x0032676E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResOpDataNotify RogueResOpDataNotify
@@ -400,9 +400,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048C4 RID: 18628
-		// (get) Token: 0x06015CA7 RID: 89255 RVA: 0x00329C2B File Offset: 0x00327E2B
-		// (set) Token: 0x06015CA8 RID: 89256 RVA: 0x00329C33 File Offset: 0x00327E33
+		// Token: 0x1700489A RID: 18586
+		// (get) Token: 0x06015BC2 RID: 89026 RVA: 0x00328577 File Offset: 0x00326777
+		// (set) Token: 0x06015BC3 RID: 89027 RVA: 0x0032857F File Offset: 0x0032677F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResInstOptionsNotify RogueResInstOptionsNotify
@@ -417,9 +417,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048C5 RID: 18629
-		// (get) Token: 0x06015CA9 RID: 89257 RVA: 0x00329C3C File Offset: 0x00327E3C
-		// (set) Token: 0x06015CAA RID: 89258 RVA: 0x00329C44 File Offset: 0x00327E44
+		// Token: 0x1700489B RID: 18587
+		// (get) Token: 0x06015BC4 RID: 89028 RVA: 0x00328588 File Offset: 0x00326788
+		// (set) Token: 0x06015BC5 RID: 89029 RVA: 0x00328590 File Offset: 0x00326790
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResGainDataTotalNotify RogueResGainDataTotalNotify
@@ -434,7 +434,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015CAB RID: 89259 RVA: 0x00329C4D File Offset: 0x00327E4D
+		// Token: 0x06015BC6 RID: 89030 RVA: 0x00328599 File Offset: 0x00326799
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -442,7 +442,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RogueResInstGlobalDataNotify);
 		}
 
-		// Token: 0x06015CAC RID: 89260 RVA: 0x00329C5C File Offset: 0x00327E5C
+		// Token: 0x06015BC7 RID: 89031 RVA: 0x003285A8 File Offset: 0x003267A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RogueResInstGlobalDataNotify other)
@@ -450,7 +450,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.InstId == other.InstId && this.RandomSeedId == other.RandomSeedId && this.rogueResGridDatas_.Equals(other.rogueResGridDatas_) && this.Index == other.Index && this.InBattle == other.InBattle && this.Fov == other.Fov && this.Mood == other.Mood && this.MoodRuleId == other.MoodRuleId && this.RoleMaxStar == other.RoleMaxStar && this.RoleLevel == other.RoleLevel && this.GoldItem == other.GoldItem && this.Columns == other.Columns && this.Rows == other.Rows && this.ShowType == other.ShowType && this.MaxMood == other.MaxMood && this.MinMood == other.MinMood && this.TeamLevel == other.TeamLevel && this.rogueResFormations_.Equals(other.rogueResFormations_) && object.Equals(this.RogueResOpDataNotify, other.RogueResOpDataNotify) && object.Equals(this.RogueResInstOptionsNotify, other.RogueResInstOptionsNotify) && object.Equals(this.RogueResGainDataTotalNotify, other.RogueResGainDataTotalNotify) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06015CAD RID: 89261 RVA: 0x00329DF0 File Offset: 0x00327FF0
+		// Token: 0x06015BC8 RID: 89032 RVA: 0x0032873C File Offset: 0x0032693C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -541,7 +541,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015CAE RID: 89262 RVA: 0x0032A004 File Offset: 0x00328204
+		// Token: 0x06015BC9 RID: 89033 RVA: 0x00328950 File Offset: 0x00326B50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -549,7 +549,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06015CAF RID: 89263 RVA: 0x0032A011 File Offset: 0x00328211
+		// Token: 0x06015BCA RID: 89034 RVA: 0x0032895D File Offset: 0x00326B5D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -557,115 +557,115 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06015CB0 RID: 89264 RVA: 0x0032A01C File Offset: 0x0032821C
+		// Token: 0x06015BCB RID: 89035 RVA: 0x00328968 File Offset: 0x00326B68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.rogueResGainDataTotalNotify_ != null)
+			if (this.Fov != 0)
 			{
-				output.WriteRawTag(202, 1);
-				output.WriteMessage(this.RogueResGainDataTotalNotify);
+				output.WriteRawTag(16);
+				output.WriteInt32(this.Fov);
 			}
-			if (this.InstId != 0)
+			if (this.MinMood != 0)
 			{
-				output.WriteRawTag(160, 2);
-				output.WriteInt32(this.InstId);
-			}
-			this.rogueResGridDatas_.WriteTo(ref output, RogueResInstGlobalDataNotify._repeated_rogueResGridDatas_codec);
-			if (this.rogueResOpDataNotify_ != null)
-			{
-				output.WriteRawTag(234, 2);
-				output.WriteMessage(this.RogueResOpDataNotify);
+				output.WriteRawTag(80);
+				output.WriteInt32(this.MinMood);
 			}
 			if (this.Rows != 0)
 			{
-				output.WriteRawTag(240, 3);
+				output.WriteRawTag(152, 3);
 				output.WriteInt32(this.Rows);
+			}
+			this.rogueResGridDatas_.WriteTo(ref output, RogueResInstGlobalDataNotify._repeated_rogueResGridDatas_codec);
+			if (this.InBattle)
+			{
+				output.WriteRawTag(192, 3);
+				output.WriteBool(this.InBattle);
+			}
+			if (this.GoldItem != 0)
+			{
+				output.WriteRawTag(216, 3);
+				output.WriteInt32(this.GoldItem);
+			}
+			if (this.MaxMood != 0)
+			{
+				output.WriteRawTag(208, 5);
+				output.WriteInt32(this.MaxMood);
 			}
 			if (this.ShowType != 0)
 			{
-				output.WriteRawTag(152, 4);
+				output.WriteRawTag(232, 5);
 				output.WriteInt32(this.ShowType);
-			}
-			if (this.Fov != 0)
-			{
-				output.WriteRawTag(176, 4);
-				output.WriteInt32(this.Fov);
 			}
 			if (this.Index != 0)
 			{
-				output.WriteRawTag(200, 5);
+				output.WriteRawTag(248, 5);
 				output.WriteInt32(this.Index);
+			}
+			if (this.RoleLevel != 0)
+			{
+				output.WriteRawTag(128, 6);
+				output.WriteInt32(this.RoleLevel);
+			}
+			if (this.Columns != 0)
+			{
+				output.WriteRawTag(224, 6);
+				output.WriteInt32(this.Columns);
 			}
 			if (this.RandomSeedId != 0)
 			{
-				output.WriteRawTag(128, 6);
+				output.WriteRawTag(216, 7);
 				output.WriteInt32(this.RandomSeedId);
+			}
+			if (this.Mood != 0)
+			{
+				output.WriteRawTag(240, 7);
+				output.WriteInt32(this.Mood);
+			}
+			if (this.rogueResGainDataTotalNotify_ != null)
+			{
+				output.WriteRawTag(138, 8);
+				output.WriteMessage(this.RogueResGainDataTotalNotify);
 			}
 			if (this.MoodRuleId != 0)
 			{
-				output.WriteRawTag(216, 7);
+				output.WriteRawTag(168, 9);
 				output.WriteInt32(this.MoodRuleId);
 			}
 			if (this.RoleMaxStar != 0)
 			{
-				output.WriteRawTag(176, 9);
+				output.WriteRawTag(192, 10);
 				output.WriteInt32(this.RoleMaxStar);
-			}
-			if (this.rogueResInstOptionsNotify_ != null)
-			{
-				output.WriteRawTag(162, 10);
-				output.WriteMessage(this.RogueResInstOptionsNotify);
-			}
-			if (this.MaxMood != 0)
-			{
-				output.WriteRawTag(136, 11);
-				output.WriteInt32(this.MaxMood);
-			}
-			if (this.GoldItem != 0)
-			{
-				output.WriteRawTag(184, 11);
-				output.WriteInt32(this.GoldItem);
-			}
-			this.rogueResFormations_.WriteTo(ref output, RogueResInstGlobalDataNotify._repeated_rogueResFormations_codec);
-			if (this.RoleLevel != 0)
-			{
-				output.WriteRawTag(128, 12);
-				output.WriteInt32(this.RoleLevel);
-			}
-			if (this.InBattle)
-			{
-				output.WriteRawTag(144, 12);
-				output.WriteBool(this.InBattle);
-			}
-			if (this.MinMood != 0)
-			{
-				output.WriteRawTag(240, 12);
-				output.WriteInt32(this.MinMood);
 			}
 			if (this.TeamLevel != 0)
 			{
-				output.WriteRawTag(200, 13);
+				output.WriteRawTag(200, 11);
 				output.WriteInt32(this.TeamLevel);
 			}
-			if (this.Columns != 0)
+			if (this.InstId != 0)
 			{
-				output.WriteRawTag(240, 13);
-				output.WriteInt32(this.Columns);
+				output.WriteRawTag(168, 12);
+				output.WriteInt32(this.InstId);
 			}
-			if (this.Mood != 0)
+			if (this.rogueResInstOptionsNotify_ != null)
 			{
-				output.WriteRawTag(200, 15);
-				output.WriteInt32(this.Mood);
+				output.WriteRawTag(226, 12);
+				output.WriteMessage(this.RogueResInstOptionsNotify);
 			}
+			if (this.rogueResOpDataNotify_ != null)
+			{
+				output.WriteRawTag(138, 13);
+				output.WriteMessage(this.RogueResOpDataNotify);
+			}
+			this.rogueResFormations_.WriteTo(ref output, RogueResInstGlobalDataNotify._repeated_rogueResFormations_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06015CB1 RID: 89265 RVA: 0x0032A2CC File Offset: 0x003284CC
+		// Token: 0x06015BCC RID: 89036 RVA: 0x00328C0C File Offset: 0x00326E0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -690,7 +690,7 @@ namespace Aki.Protocol
 			}
 			if (this.Fov != 0)
 			{
-				num += 2 + CodedOutputStream.ComputeInt32Size(this.Fov);
+				num += 1 + CodedOutputStream.ComputeInt32Size(this.Fov);
 			}
 			if (this.Mood != 0)
 			{
@@ -730,7 +730,7 @@ namespace Aki.Protocol
 			}
 			if (this.MinMood != 0)
 			{
-				num += 2 + CodedOutputStream.ComputeInt32Size(this.MinMood);
+				num += 1 + CodedOutputStream.ComputeInt32Size(this.MinMood);
 			}
 			if (this.TeamLevel != 0)
 			{
@@ -756,7 +756,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015CB2 RID: 89266 RVA: 0x0032A4D4 File Offset: 0x003286D4
+		// Token: 0x06015BCD RID: 89037 RVA: 0x00328E14 File Offset: 0x00327014
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RogueResInstGlobalDataNotify other)
@@ -858,7 +858,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06015CB3 RID: 89267 RVA: 0x0032A6E2 File Offset: 0x003288E2
+		// Token: 0x06015BCE RID: 89038 RVA: 0x00329022 File Offset: 0x00327222
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -866,7 +866,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06015CB4 RID: 89268 RVA: 0x0032A6EC File Offset: 0x003288EC
+		// Token: 0x06015BCF RID: 89039 RVA: 0x0032902C File Offset: 0x0032722C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -878,153 +878,153 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 984U)
+				if (num <= 768U)
 				{
-					if (num <= 496U)
+					if (num <= 448U)
 					{
-						if (num <= 288U)
+						if (num <= 80U)
 						{
-							if (num == 202U)
+							if (num == 16U)
 							{
-								if (this.rogueResGainDataTotalNotify_ == null)
-								{
-									this.RogueResGainDataTotalNotify = new RogueResGainDataTotalNotify();
-								}
-								input.ReadMessage(this.RogueResGainDataTotalNotify);
+								this.Fov = input.ReadInt32();
 								continue;
 							}
-							if (num == 288U)
+							if (num == 80U)
 							{
-								this.InstId = input.ReadInt32();
+								this.MinMood = input.ReadInt32();
 								continue;
 							}
 						}
 						else
 						{
-							if (num == 330U)
-							{
-								this.rogueResGridDatas_.AddEntriesFrom(ref input, RogueResInstGlobalDataNotify._repeated_rogueResGridDatas_codec);
-								continue;
-							}
-							if (num == 362U)
-							{
-								if (this.rogueResOpDataNotify_ == null)
-								{
-									this.RogueResOpDataNotify = new RogueResOpDataNotify();
-								}
-								input.ReadMessage(this.RogueResOpDataNotify);
-								continue;
-							}
-							if (num == 496U)
+							if (num == 408U)
 							{
 								this.Rows = input.ReadInt32();
 								continue;
 							}
+							if (num == 426U)
+							{
+								this.rogueResGridDatas_.AddEntriesFrom(ref input, RogueResInstGlobalDataNotify._repeated_rogueResGridDatas_codec);
+								continue;
+							}
+							if (num == 448U)
+							{
+								this.InBattle = input.ReadBool();
+								continue;
+							}
 						}
 					}
-					else if (num <= 560U)
+					else if (num <= 720U)
 					{
-						if (num == 536U)
+						if (num == 472U)
 						{
-							this.ShowType = input.ReadInt32();
+							this.GoldItem = input.ReadInt32();
 							continue;
 						}
-						if (num == 560U)
+						if (num == 720U)
 						{
-							this.Fov = input.ReadInt32();
+							this.MaxMood = input.ReadInt32();
 							continue;
 						}
 					}
 					else
 					{
-						if (num == 712U)
+						if (num == 744U)
+						{
+							this.ShowType = input.ReadInt32();
+							continue;
+						}
+						if (num == 760U)
 						{
 							this.Index = input.ReadInt32();
 							continue;
 						}
 						if (num == 768U)
 						{
-							this.RandomSeedId = input.ReadInt32();
+							this.RoleLevel = input.ReadInt32();
+							continue;
+						}
+					}
+				}
+				else if (num <= 1192U)
+				{
+					if (num <= 984U)
+					{
+						if (num == 864U)
+						{
+							this.Columns = input.ReadInt32();
 							continue;
 						}
 						if (num == 984U)
+						{
+							this.RandomSeedId = input.ReadInt32();
+							continue;
+						}
+					}
+					else
+					{
+						if (num == 1008U)
+						{
+							this.Mood = input.ReadInt32();
+							continue;
+						}
+						if (num == 1034U)
+						{
+							if (this.rogueResGainDataTotalNotify_ == null)
+							{
+								this.RogueResGainDataTotalNotify = new RogueResGainDataTotalNotify();
+							}
+							input.ReadMessage(this.RogueResGainDataTotalNotify);
+							continue;
+						}
+						if (num == 1192U)
 						{
 							this.MoodRuleId = input.ReadInt32();
 							continue;
 						}
 					}
 				}
-				else if (num <= 1514U)
+				else if (num <= 1576U)
 				{
-					if (num <= 1314U)
+					if (num == 1344U)
 					{
-						if (num == 1200U)
-						{
-							this.RoleMaxStar = input.ReadInt32();
-							continue;
-						}
-						if (num == 1314U)
-						{
-							if (this.rogueResInstOptionsNotify_ == null)
-							{
-								this.RogueResInstOptionsNotify = new RogueResInstOptionsNotify();
-							}
-							input.ReadMessage(this.RogueResInstOptionsNotify);
-							continue;
-						}
-					}
-					else
-					{
-						if (num == 1416U)
-						{
-							this.MaxMood = input.ReadInt32();
-							continue;
-						}
-						if (num == 1464U)
-						{
-							this.GoldItem = input.ReadInt32();
-							continue;
-						}
-						if (num == 1514U)
-						{
-							this.rogueResFormations_.AddEntriesFrom(ref input, RogueResInstGlobalDataNotify._repeated_rogueResFormations_codec);
-							continue;
-						}
-					}
-				}
-				else if (num <= 1648U)
-				{
-					if (num == 1536U)
-					{
-						this.RoleLevel = input.ReadInt32();
+						this.RoleMaxStar = input.ReadInt32();
 						continue;
 					}
-					if (num == 1552U)
+					if (num == 1480U)
 					{
-						this.InBattle = input.ReadBool();
+						this.TeamLevel = input.ReadInt32();
 						continue;
 					}
-					if (num == 1648U)
+					if (num == 1576U)
 					{
-						this.MinMood = input.ReadInt32();
+						this.InstId = input.ReadInt32();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 1736U)
+					if (num == 1634U)
 					{
-						this.TeamLevel = input.ReadInt32();
+						if (this.rogueResInstOptionsNotify_ == null)
+						{
+							this.RogueResInstOptionsNotify = new RogueResInstOptionsNotify();
+						}
+						input.ReadMessage(this.RogueResInstOptionsNotify);
 						continue;
 					}
-					if (num == 1776U)
+					if (num == 1674U)
 					{
-						this.Columns = input.ReadInt32();
+						if (this.rogueResOpDataNotify_ == null)
+						{
+							this.RogueResOpDataNotify = new RogueResOpDataNotify();
+						}
+						input.ReadMessage(this.RogueResOpDataNotify);
 						continue;
 					}
-					if (num == 1992U)
+					if (num == 1890U)
 					{
-						this.Mood = input.ReadInt32();
+						this.rogueResFormations_.AddEntriesFrom(ref input, RogueResInstGlobalDataNotify._repeated_rogueResFormations_codec);
 						continue;
 					}
 				}
@@ -1032,139 +1032,139 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040082AE RID: 33454
+		// Token: 0x040082D8 RID: 33496
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040082AF RID: 33455
-		public const int InstIdFieldNumber = 36;
-
-		// Token: 0x040082B0 RID: 33456
-		private int instId_;
-
-		// Token: 0x040082B1 RID: 33457
-		public const int RandomSeedIdFieldNumber = 96;
-
-		// Token: 0x040082B2 RID: 33458
-		private int randomSeedId_;
-
-		// Token: 0x040082B3 RID: 33459
-		public const int RogueResGridDatasFieldNumber = 41;
-
-		// Token: 0x040082B4 RID: 33460
-		private static readonly FieldCodec<RogueResGridData> _repeated_rogueResGridDatas_codec = FieldCodec.ForMessage<RogueResGridData>(330U, RogueResGridData.Parser);
-
-		// Token: 0x040082B5 RID: 33461
-		private readonly RepeatedField<RogueResGridData> rogueResGridDatas_ = new RepeatedField<RogueResGridData>();
-
-		// Token: 0x040082B6 RID: 33462
-		public const int IndexFieldNumber = 89;
-
-		// Token: 0x040082B7 RID: 33463
-		private int index_;
-
-		// Token: 0x040082B8 RID: 33464
-		public const int InBattleFieldNumber = 194;
-
-		// Token: 0x040082B9 RID: 33465
-		private bool inBattle_;
-
-		// Token: 0x040082BA RID: 33466
-		public const int FovFieldNumber = 70;
-
-		// Token: 0x040082BB RID: 33467
-		private int fov_;
-
-		// Token: 0x040082BC RID: 33468
-		public const int MoodFieldNumber = 249;
-
-		// Token: 0x040082BD RID: 33469
-		private int mood_;
-
-		// Token: 0x040082BE RID: 33470
-		public const int MoodRuleIdFieldNumber = 123;
-
-		// Token: 0x040082BF RID: 33471
-		private int moodRuleId_;
-
-		// Token: 0x040082C0 RID: 33472
-		public const int RoleMaxStarFieldNumber = 150;
-
-		// Token: 0x040082C1 RID: 33473
-		private int roleMaxStar_;
-
-		// Token: 0x040082C2 RID: 33474
-		public const int RoleLevelFieldNumber = 192;
-
-		// Token: 0x040082C3 RID: 33475
-		private int roleLevel_;
-
-		// Token: 0x040082C4 RID: 33476
-		public const int GoldItemFieldNumber = 183;
-
-		// Token: 0x040082C5 RID: 33477
-		private int goldItem_;
-
-		// Token: 0x040082C6 RID: 33478
-		public const int ColumnsFieldNumber = 222;
-
-		// Token: 0x040082C7 RID: 33479
-		private int columns_;
-
-		// Token: 0x040082C8 RID: 33480
-		public const int RowsFieldNumber = 62;
-
-		// Token: 0x040082C9 RID: 33481
-		private int rows_;
-
-		// Token: 0x040082CA RID: 33482
-		public const int ShowTypeFieldNumber = 67;
-
-		// Token: 0x040082CB RID: 33483
-		private int showType_;
-
-		// Token: 0x040082CC RID: 33484
-		public const int MaxMoodFieldNumber = 177;
-
-		// Token: 0x040082CD RID: 33485
-		private int maxMood_;
-
-		// Token: 0x040082CE RID: 33486
-		public const int MinMoodFieldNumber = 206;
-
-		// Token: 0x040082CF RID: 33487
-		private int minMood_;
-
-		// Token: 0x040082D0 RID: 33488
-		public const int TeamLevelFieldNumber = 217;
-
-		// Token: 0x040082D1 RID: 33489
-		private int teamLevel_;
-
-		// Token: 0x040082D2 RID: 33490
-		public const int RogueResFormationsFieldNumber = 189;
-
-		// Token: 0x040082D3 RID: 33491
-		private static readonly FieldCodec<RogueResFormation> _repeated_rogueResFormations_codec = FieldCodec.ForMessage<RogueResFormation>(1514U, RogueResFormation.Parser);
-
-		// Token: 0x040082D4 RID: 33492
-		private readonly RepeatedField<RogueResFormation> rogueResFormations_ = new RepeatedField<RogueResFormation>();
-
-		// Token: 0x040082D5 RID: 33493
-		public const int RogueResOpDataNotifyFieldNumber = 45;
-
-		// Token: 0x040082D6 RID: 33494
-		private RogueResOpDataNotify rogueResOpDataNotify_;
-
-		// Token: 0x040082D7 RID: 33495
-		public const int RogueResInstOptionsNotifyFieldNumber = 164;
-
-		// Token: 0x040082D8 RID: 33496
-		private RogueResInstOptionsNotify rogueResInstOptionsNotify_;
-
 		// Token: 0x040082D9 RID: 33497
-		public const int RogueResGainDataTotalNotifyFieldNumber = 25;
+		public const int InstIdFieldNumber = 197;
 
 		// Token: 0x040082DA RID: 33498
+		private int instId_;
+
+		// Token: 0x040082DB RID: 33499
+		public const int RandomSeedIdFieldNumber = 123;
+
+		// Token: 0x040082DC RID: 33500
+		private int randomSeedId_;
+
+		// Token: 0x040082DD RID: 33501
+		public const int RogueResGridDatasFieldNumber = 53;
+
+		// Token: 0x040082DE RID: 33502
+		private static readonly FieldCodec<RogueResGridData> _repeated_rogueResGridDatas_codec = FieldCodec.ForMessage<RogueResGridData>(426U, RogueResGridData.Parser);
+
+		// Token: 0x040082DF RID: 33503
+		private readonly RepeatedField<RogueResGridData> rogueResGridDatas_ = new RepeatedField<RogueResGridData>();
+
+		// Token: 0x040082E0 RID: 33504
+		public const int IndexFieldNumber = 95;
+
+		// Token: 0x040082E1 RID: 33505
+		private int index_;
+
+		// Token: 0x040082E2 RID: 33506
+		public const int InBattleFieldNumber = 56;
+
+		// Token: 0x040082E3 RID: 33507
+		private bool inBattle_;
+
+		// Token: 0x040082E4 RID: 33508
+		public const int FovFieldNumber = 2;
+
+		// Token: 0x040082E5 RID: 33509
+		private int fov_;
+
+		// Token: 0x040082E6 RID: 33510
+		public const int MoodFieldNumber = 126;
+
+		// Token: 0x040082E7 RID: 33511
+		private int mood_;
+
+		// Token: 0x040082E8 RID: 33512
+		public const int MoodRuleIdFieldNumber = 149;
+
+		// Token: 0x040082E9 RID: 33513
+		private int moodRuleId_;
+
+		// Token: 0x040082EA RID: 33514
+		public const int RoleMaxStarFieldNumber = 168;
+
+		// Token: 0x040082EB RID: 33515
+		private int roleMaxStar_;
+
+		// Token: 0x040082EC RID: 33516
+		public const int RoleLevelFieldNumber = 96;
+
+		// Token: 0x040082ED RID: 33517
+		private int roleLevel_;
+
+		// Token: 0x040082EE RID: 33518
+		public const int GoldItemFieldNumber = 59;
+
+		// Token: 0x040082EF RID: 33519
+		private int goldItem_;
+
+		// Token: 0x040082F0 RID: 33520
+		public const int ColumnsFieldNumber = 108;
+
+		// Token: 0x040082F1 RID: 33521
+		private int columns_;
+
+		// Token: 0x040082F2 RID: 33522
+		public const int RowsFieldNumber = 51;
+
+		// Token: 0x040082F3 RID: 33523
+		private int rows_;
+
+		// Token: 0x040082F4 RID: 33524
+		public const int ShowTypeFieldNumber = 93;
+
+		// Token: 0x040082F5 RID: 33525
+		private int showType_;
+
+		// Token: 0x040082F6 RID: 33526
+		public const int MaxMoodFieldNumber = 90;
+
+		// Token: 0x040082F7 RID: 33527
+		private int maxMood_;
+
+		// Token: 0x040082F8 RID: 33528
+		public const int MinMoodFieldNumber = 10;
+
+		// Token: 0x040082F9 RID: 33529
+		private int minMood_;
+
+		// Token: 0x040082FA RID: 33530
+		public const int TeamLevelFieldNumber = 185;
+
+		// Token: 0x040082FB RID: 33531
+		private int teamLevel_;
+
+		// Token: 0x040082FC RID: 33532
+		public const int RogueResFormationsFieldNumber = 236;
+
+		// Token: 0x040082FD RID: 33533
+		private static readonly FieldCodec<RogueResFormation> _repeated_rogueResFormations_codec = FieldCodec.ForMessage<RogueResFormation>(1890U, RogueResFormation.Parser);
+
+		// Token: 0x040082FE RID: 33534
+		private readonly RepeatedField<RogueResFormation> rogueResFormations_ = new RepeatedField<RogueResFormation>();
+
+		// Token: 0x040082FF RID: 33535
+		public const int RogueResOpDataNotifyFieldNumber = 209;
+
+		// Token: 0x04008300 RID: 33536
+		private RogueResOpDataNotify rogueResOpDataNotify_;
+
+		// Token: 0x04008301 RID: 33537
+		public const int RogueResInstOptionsNotifyFieldNumber = 204;
+
+		// Token: 0x04008302 RID: 33538
+		private RogueResInstOptionsNotify rogueResInstOptionsNotify_;
+
+		// Token: 0x04008303 RID: 33539
+		public const int RogueResGainDataTotalNotifyFieldNumber = 129;
+
+		// Token: 0x04008304 RID: 33540
 		private RogueResGainDataTotalNotify rogueResGainDataTotalNotify_;
 	}
 }

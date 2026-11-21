@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000ABB RID: 2747
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B85 RID: 2949
 	public class RefreshComponent : IComponentBase
 	{
-		// Token: 0x06003F4C RID: 16204 RVA: 0x000A1BF5 File Offset: 0x0009FDF5
+		// Token: 0x06004376 RID: 17270 RVA: 0x000AB1E9 File Offset: 0x000A93E9
 		public static RefreshComponent Create(IRefreshComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F93 RID: 3987
-		// (get) Token: 0x06003F4D RID: 16205 RVA: 0x000A1C14 File Offset: 0x0009FE14
+		// Token: 0x17001067 RID: 4199
+		// (get) Token: 0x06004377 RID: 17271 RVA: 0x000AB208 File Offset: 0x000A9408
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F94 RID: 3988
-		// (get) Token: 0x06003F4E RID: 16206 RVA: 0x000A1C4C File Offset: 0x0009FE4C
+		// Token: 0x17001068 RID: 4200
+		// (get) Token: 0x06004378 RID: 17272 RVA: 0x000AB240 File Offset: 0x000A9440
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F95 RID: 3989
-		// (get) Token: 0x06003F4F RID: 16207 RVA: 0x000A1C62 File Offset: 0x0009FE62
+		// Token: 0x17001069 RID: 4201
+		// (get) Token: 0x06004379 RID: 17273 RVA: 0x000AB256 File Offset: 0x000A9456
 		public virtual IRefreshRule RefreshRule
 		{
 			get
@@ -62,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F96 RID: 3990
-		// (get) Token: 0x06003F50 RID: 16208 RVA: 0x000A1C94 File Offset: 0x0009FE94
+		// Token: 0x1700106A RID: 4202
+		// (get) Token: 0x0600437A RID: 17274 RVA: 0x000AB288 File Offset: 0x000A9488
 		public virtual bool? IsDisableRefreshAfterDroppingReward
 		{
 			get
@@ -76,8 +73,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F97 RID: 3991
-		// (get) Token: 0x06003F51 RID: 16209 RVA: 0x000A1CCC File Offset: 0x0009FECC
+		// Token: 0x1700106B RID: 4203
+		// (get) Token: 0x0600437B RID: 17275 RVA: 0x000AB2C0 File Offset: 0x000A94C0
 		public virtual bool? IsResetOnDungeonRestart
 		{
 			get
@@ -90,13 +87,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002328 RID: 9000
+		// Token: 0x04002544 RID: 9540
 		private IRefreshComponent Instance;
 
-		// Token: 0x04002329 RID: 9001
+		// Token: 0x04002545 RID: 9541
 		private IRefreshRule _RefreshRuleCache;
 
-		// Token: 0x0400232A RID: 9002
+		// Token: 0x04002546 RID: 9542
 		private bool _RefreshRuleInited;
 	}
 }

@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x02005522 RID: 21794
+	// Token: 0x020044F5 RID: 17653
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffQuestMarkItemView : ConfigMarkItemView
 	{
-		// Token: 0x06037A65 RID: 227941 RVA: 0x00D35A7A File Offset: 0x00D33C7A
+		// Token: 0x0602C935 RID: 182581 RVA: 0x00C83886 File Offset: 0x00C81A86
 		public SheriffQuestMarkItemView(SheriffQuestMarkItem holder) : base(holder)
 		{
 		}
 
-		// Token: 0x06037A66 RID: 227942 RVA: 0x00D35AA0 File Offset: 0x00D33CA0
+		// Token: 0x0602C936 RID: 182582 RVA: 0x00C838AC File Offset: 0x00C81AAC
 		protected override void OnViewRefresh()
 		{
 			base.OnViewRefresh();
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A67 RID: 227943 RVA: 0x00D35B98 File Offset: 0x00D33D98
+		// Token: 0x0602C937 RID: 182583 RVA: 0x00C839A4 File Offset: 0x00C81BA4
 		protected override void OnSafeUpdate(Vector playerLocation, bool bDragging = false, bool bIsScale = false)
 		{
 			float num = WorldMapModel.Instance.MapScale * 100f;
@@ -57,10 +57,10 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			base.MarkItemNameHandle.SetVisible(visible);
 		}
 
-		// Token: 0x0401D429 RID: 119849
+		// Token: 0x04017EAC RID: 97964
 		private static readonly int FONT_SIZE = 36;
 
-		// Token: 0x0401D42A RID: 119850
+		// Token: 0x04017EAD RID: 97965
 		private readonly Vector2D NameAnchorOffset = new Vector2D(0.0, -60.0);
 	}
 }

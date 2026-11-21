@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002351 RID: 9041
+// Token: 0x02001836 RID: 6198
 internal class GetItemPanel : UiPanelBase
 {
-	// Token: 0x0601200B RID: 73739 RVA: 0x0046A1A8 File Offset: 0x004683A8
+	// Token: 0x0600F4BB RID: 62651 RVA: 0x00477270 File Offset: 0x00475470
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -31,23 +31,23 @@ internal class GetItemPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601200C RID: 73740 RVA: 0x0046A26F File Offset: 0x0046846F
+	// Token: 0x0600F4BC RID: 62652 RVA: 0x00477337 File Offset: 0x00475537
 	protected override void OnStart()
 	{
 		base.GetTexture(1).SetUIActive(false);
 	}
 
-	// Token: 0x0601200D RID: 73741 RVA: 0x0046A27E File Offset: 0x0046847E
+	// Token: 0x0600F4BD RID: 62653 RVA: 0x00477346 File Offset: 0x00475546
 	private void OnItemButtonClick()
 	{
 		if (this.ItemId == 0)
 		{
 			return;
 		}
-		ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null, false);
 	}
 
-	// Token: 0x0601200E RID: 73742 RVA: 0x0046A29C File Offset: 0x0046849C
+	// Token: 0x0600F4BE RID: 62654 RVA: 0x00477364 File Offset: 0x00475564
 	public void Refresh(int itemId, int count)
 	{
 		this.ItemId = itemId;
@@ -60,17 +60,17 @@ internal class GetItemPanel : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(text, "Text_RoleCount_Text", new <>z__ReadOnlySingleElementList<object>(count.ToString()));
 	}
 
-	// Token: 0x040087F7 RID: 34807
+	// Token: 0x0400893A RID: 35130
 	private int ItemId;
 
-	// Token: 0x020088D0 RID: 35024
+	// Token: 0x02007A59 RID: 31321
 	private enum EGetItemPanelComponents
 	{
-		// Token: 0x0402C780 RID: 182144
+		// Token: 0x04027A94 RID: 162452
 		ButtonReward,
-		// Token: 0x0402C781 RID: 182145
+		// Token: 0x04027A95 RID: 162453
 		TextureIcon,
-		// Token: 0x0402C782 RID: 182146
+		// Token: 0x04027A96 RID: 162454
 		TextNum
 	}
 }

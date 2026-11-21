@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003C8D RID: 15501
+	// Token: 0x0200409F RID: 16543
 	public enum EAtomicProcess : byte
 	{
-		// Token: 0x0400B300 RID: 45824
+		// Token: 0x0400BC97 RID: 48279
 		StoveCoreFall
 	}
 }

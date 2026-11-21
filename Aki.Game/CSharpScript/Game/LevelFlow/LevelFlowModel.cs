@@ -7,26 +7,26 @@ using CSharpScript.Game.LevelFlow.Section;
 
 namespace CSharpScript.Game.LevelFlow
 {
-	// Token: 0x02006F6A RID: 28522
+	// Token: 0x020060EB RID: 24811
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowModel : ModelBase
 	{
-		// Token: 0x0604561D RID: 284189 RVA: 0x0112CDC7 File Offset: 0x0112AFC7
+		// Token: 0x0603B7CB RID: 243659 RVA: 0x010D6BCB File Offset: 0x010D4DCB
 		public void InitTaskTreeInfo(long treeIncId, int treeNodeId)
 		{
 			this.TreeIncIdInternal = treeIncId;
 			this.TreeNodeIdInternal = treeNodeId;
 		}
 
-		// Token: 0x0604561E RID: 284190 RVA: 0x0112CDD7 File Offset: 0x0112AFD7
+		// Token: 0x0603B7CC RID: 243660 RVA: 0x010D6BDB File Offset: 0x010D4DDB
 		public void InitTiTanLevelFlowInfo()
 		{
 			this.SectionData = new LevelFlowTiTanData();
 			this.SectionData.Init();
 		}
 
-		// Token: 0x0604561F RID: 284191 RVA: 0x0112CDF0 File Offset: 0x0112AFF0
+		// Token: 0x0603B7CD RID: 243661 RVA: 0x010D6BF4 File Offset: 0x010D4DF4
 		public void StartLevelFlow(int index)
 		{
 			if (this.SectionData.GetCapacity() <= 0)
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelFlow
 			this.ExecuteSection(section);
 		}
 
-		// Token: 0x06045620 RID: 284192 RVA: 0x0112CE40 File Offset: 0x0112B040
+		// Token: 0x0603B7CE RID: 243662 RVA: 0x010D6C44 File Offset: 0x010D4E44
 		public void OnTick(float delta)
 		{
 			if (this.CurrentSection == null)
@@ -58,14 +58,14 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		}
 
-		// Token: 0x06045621 RID: 284193 RVA: 0x0112CEA8 File Offset: 0x0112B0A8
+		// Token: 0x0603B7CF RID: 243663 RVA: 0x010D6CAC File Offset: 0x010D4EAC
 		private void ExecuteSection(LevelFlowSection section)
 		{
 			section.BindCompleteCallBack(new Action<LevelFlowSection, bool>(this.OnSectionComplete));
 			section.Enter();
 		}
 
-		// Token: 0x06045622 RID: 284194 RVA: 0x0112CEC4 File Offset: 0x0112B0C4
+		// Token: 0x0603B7D0 RID: 243664 RVA: 0x010D6CC8 File Offset: 0x010D4EC8
 		public void ResetLevelFlow(bool isEnd = false)
 		{
 			this.IsEndInternal = isEnd;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.LevelFlow
 			this.DynamicActionSet.Clear();
 		}
 
-		// Token: 0x06045623 RID: 284195 RVA: 0x0112CF50 File Offset: 0x0112B150
+		// Token: 0x0603B7D1 RID: 243665 RVA: 0x010D6D54 File Offset: 0x010D4F54
 		public void RollBackLevelFlow(Action<bool> rollbackCompleteCallBack)
 		{
 			if (this.CurrentSection == null)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.LevelFlow
 			this.ResetLevelFlow(true);
 		}
 
-		// Token: 0x06045624 RID: 284196 RVA: 0x0112CF70 File Offset: 0x0112B170
+		// Token: 0x0603B7D2 RID: 243666 RVA: 0x010D6D74 File Offset: 0x010D4F74
 		public void PushDynamicAction(LevelFlowActionBase action)
 		{
 			if (this.IsEnd)
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.LevelFlow
 			action.Execute();
 		}
 
-		// Token: 0x06045625 RID: 284197 RVA: 0x0112CFAC File Offset: 0x0112B1AC
+		// Token: 0x0603B7D3 RID: 243667 RVA: 0x010D6DB0 File Offset: 0x010D4FB0
 		private void OnSectionComplete(LevelFlowSection section, bool isSuccess)
 		{
 			if (!isSuccess)
@@ -147,14 +147,14 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		}
 
-		// Token: 0x06045626 RID: 284198 RVA: 0x0112D067 File Offset: 0x0112B267
+		// Token: 0x0603B7D4 RID: 243668 RVA: 0x010D6E6B File Offset: 0x010D506B
 		private void End()
 		{
 			this.CurrentSection = null;
 			LevelFlowResourceManager.Release();
 		}
 
-		// Token: 0x06045627 RID: 284199 RVA: 0x0112D078 File Offset: 0x0112B278
+		// Token: 0x0603B7D5 RID: 243669 RVA: 0x010D6E7C File Offset: 0x010D507C
 		private void OnSectionResetComplete(LevelFlowSection section, bool isSuccess)
 		{
 			if (this.IsEndInternal)
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.LevelFlow
 			this.CurrentSection.Enter();
 		}
 
-		// Token: 0x06045628 RID: 284200 RVA: 0x0112D10E File Offset: 0x0112B30E
+		// Token: 0x0603B7D6 RID: 243670 RVA: 0x010D6F12 File Offset: 0x010D5112
 		private void OnDynamicActionComplete(LevelFlowActionBase action, bool isSuccess)
 		{
 			if (!isSuccess)
@@ -191,8 +191,8 @@ namespace CSharpScript.Game.LevelFlow
 			this.DynamicActionSet.Remove(action);
 		}
 
-		// Token: 0x17009B6A RID: 39786
-		// (get) Token: 0x06045629 RID: 284201 RVA: 0x0112D121 File Offset: 0x0112B321
+		// Token: 0x170070A9 RID: 28841
+		// (get) Token: 0x0603B7D7 RID: 243671 RVA: 0x010D6F25 File Offset: 0x010D5125
 		public long TreeIncId
 		{
 			get
@@ -201,8 +201,8 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		}
 
-		// Token: 0x17009B6B RID: 39787
-		// (get) Token: 0x0604562A RID: 284202 RVA: 0x0112D129 File Offset: 0x0112B329
+		// Token: 0x170070AA RID: 28842
+		// (get) Token: 0x0603B7D8 RID: 243672 RVA: 0x010D6F2D File Offset: 0x010D512D
 		public int TreeNodeId
 		{
 			get
@@ -211,8 +211,8 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		}
 
-		// Token: 0x17009B6C RID: 39788
-		// (get) Token: 0x0604562B RID: 284203 RVA: 0x0112D131 File Offset: 0x0112B331
+		// Token: 0x170070AB RID: 28843
+		// (get) Token: 0x0603B7D9 RID: 243673 RVA: 0x010D6F35 File Offset: 0x010D5135
 		public bool IsEnd
 		{
 			get
@@ -221,8 +221,8 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		}
 
-		// Token: 0x17009B6D RID: 39789
-		// (get) Token: 0x0604562C RID: 284204 RVA: 0x0112D139 File Offset: 0x0112B339
+		// Token: 0x170070AC RID: 28844
+		// (get) Token: 0x0603B7DA RID: 243674 RVA: 0x010D6F3D File Offset: 0x010D513D
 		public static LevelFlowModel Instance
 		{
 			get
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		}
 
-		// Token: 0x0604562D RID: 284205 RVA: 0x0112D140 File Offset: 0x0112B340
+		// Token: 0x0603B7DB RID: 243675 RVA: 0x010D6F44 File Offset: 0x010D5144
 		public static LevelFlowModel GetOrCreateInstance()
 		{
 			if (LevelFlowModel._Instance == null)
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.LevelFlow
 			return LevelFlowModel._Instance;
 		}
 
-		// Token: 0x0604562E RID: 284206 RVA: 0x0112D154 File Offset: 0x0112B354
+		// Token: 0x0603B7DC RID: 243676 RVA: 0x010D6F58 File Offset: 0x010D5158
 		public static bool CreateInstance()
 		{
 			if (LevelFlowModel._Instance != null)
@@ -252,57 +252,57 @@ namespace CSharpScript.Game.LevelFlow
 			return true;
 		}
 
-		// Token: 0x0604562F RID: 284207 RVA: 0x0112D16A File Offset: 0x0112B36A
+		// Token: 0x0603B7DD RID: 243677 RVA: 0x010D6F6E File Offset: 0x010D516E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06045630 RID: 284208 RVA: 0x0112D16C File Offset: 0x0112B36C
+		// Token: 0x0603B7DE RID: 243678 RVA: 0x010D6F70 File Offset: 0x010D5170
 		public static void ResetStaticDefaultValue()
 		{
 			LevelFlowModel._Instance = null;
 		}
 
-		// Token: 0x06045631 RID: 284209 RVA: 0x0112D174 File Offset: 0x0112B374
+		// Token: 0x0603B7DF RID: 243679 RVA: 0x010D6F78 File Offset: 0x010D5178
 		static LevelFlowModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelFlowModel.CreateStaticDefaultValue), new Action(LevelFlowModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402432E RID: 148270
+		// Token: 0x0401F5E3 RID: 128483
 		public bool IsDebug;
 
-		// Token: 0x0402432F RID: 148271
+		// Token: 0x0401F5E4 RID: 128484
 		public bool IsIgnoreForceMove;
 
-		// Token: 0x04024330 RID: 148272
+		// Token: 0x0401F5E5 RID: 128485
 		private long TreeIncIdInternal;
 
-		// Token: 0x04024331 RID: 148273
+		// Token: 0x0401F5E6 RID: 128486
 		private int TreeNodeIdInternal;
 
-		// Token: 0x04024332 RID: 148274
+		// Token: 0x0401F5E7 RID: 128487
 		[Nullable(2)]
 		private LevelFlowData SectionData;
 
-		// Token: 0x04024333 RID: 148275
+		// Token: 0x0401F5E8 RID: 128488
 		private int CurrentSectionIndex;
 
-		// Token: 0x04024334 RID: 148276
+		// Token: 0x0401F5E9 RID: 128489
 		[Nullable(2)]
 		private LevelFlowSection CurrentSection;
 
-		// Token: 0x04024335 RID: 148277
+		// Token: 0x0401F5EA RID: 128490
 		private bool IsEndInternal;
 
-		// Token: 0x04024336 RID: 148278
+		// Token: 0x0401F5EB RID: 128491
 		private readonly HashSet<LevelFlowActionBase> DynamicActionSet = new HashSet<LevelFlowActionBase>();
 
-		// Token: 0x04024337 RID: 148279
+		// Token: 0x0401F5EC RID: 128492
 		[Nullable(2)]
 		private Action<bool> RollbackCompleteCallBack;
 
-		// Token: 0x04024338 RID: 148280
+		// Token: 0x0401F5ED RID: 128493
 		[Nullable(2)]
 		private static LevelFlowModel _Instance;
 	}

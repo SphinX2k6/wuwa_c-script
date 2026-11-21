@@ -7,10 +7,10 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Item;
 using UnrealEngine;
 
-// Token: 0x020011C6 RID: 4550
+// Token: 0x0200067A RID: 1658
 public class MoonCelebrationAwardSubView : ActivitySubViewBase
 {
-	// Token: 0x06007928 RID: 31016 RVA: 0x001984E0 File Offset: 0x001966E0
+	// Token: 0x06004CBF RID: 19647 RVA: 0x001A1190 File Offset: 0x0019F390
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -55,25 +55,25 @@ public class MoonCelebrationAwardSubView : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007929 RID: 31017 RVA: 0x0019871A File Offset: 0x0019691A
+	// Token: 0x06004CC0 RID: 19648 RVA: 0x001A13CA File Offset: 0x0019F5CA
 	protected override void OnSetData()
 	{
 		this.ActivityTimePointRewardData = (this.ActivityBaseData as ActivityTimePointRewardData);
 	}
 
-	// Token: 0x0600792A RID: 31018 RVA: 0x0019872D File Offset: 0x0019692D
+	// Token: 0x06004CC1 RID: 19649 RVA: 0x001A13DD File Offset: 0x0019F5DD
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x0600792B RID: 31019 RVA: 0x0019874B File Offset: 0x0019694B
+	// Token: 0x06004CC2 RID: 19650 RVA: 0x001A13FB File Offset: 0x0019F5FB
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x0600792C RID: 31020 RVA: 0x00198769 File Offset: 0x00196969
+	// Token: 0x06004CC3 RID: 19651 RVA: 0x001A1419 File Offset: 0x0019F619
 	protected override void OnStart()
 	{
 		base.GetText(10).SetText(this.ActivityBaseData.GetTitle(), true);
@@ -82,7 +82,7 @@ public class MoonCelebrationAwardSubView : ActivitySubViewBase
 		this.RefreshRewardState();
 	}
 
-	// Token: 0x0600792D RID: 31021 RVA: 0x00198798 File Offset: 0x00196998
+	// Token: 0x06004CC4 RID: 19652 RVA: 0x001A1448 File Offset: 0x0019F648
 	private void RefreshRewardItem()
 	{
 		List<TimePointRewardData> rewardDataList = this.ActivityTimePointRewardData.GetRewardDataList();
@@ -112,7 +112,7 @@ public class MoonCelebrationAwardSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600792E RID: 31022 RVA: 0x001988E8 File Offset: 0x00196AE8
+	// Token: 0x06004CC5 RID: 19653 RVA: 0x001A1598 File Offset: 0x0019F798
 	private void RefreshRewardState()
 	{
 		List<TimePointRewardData> rewardDataList = this.ActivityTimePointRewardData.GetRewardDataList();
@@ -142,7 +142,7 @@ public class MoonCelebrationAwardSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600792F RID: 31023 RVA: 0x00198A00 File Offset: 0x00196C00
+	// Token: 0x06004CC6 RID: 19654 RVA: 0x001A16B0 File Offset: 0x0019F8B0
 	private void OnClickRewardAllBtn()
 	{
 		List<TimePointRewardData> rewardDataList = this.ActivityTimePointRewardData.GetRewardDataList();
@@ -153,19 +153,19 @@ public class MoonCelebrationAwardSubView : ActivitySubViewBase
 		ActivityTimePointRewardController.Instance.GetRewardById(this.ActivityTimePointRewardData.Id, rewardDataList[0].Id);
 	}
 
-	// Token: 0x06007930 RID: 31024 RVA: 0x00198A4A File Offset: 0x00196C4A
+	// Token: 0x06004CC7 RID: 19655 RVA: 0x001A16FA File Offset: 0x0019F8FA
 	private void OnRewardItemClickBtnA()
 	{
-		ItemController.Instance.OpenItemTipsByItemId(this.ItemDataIdA, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ItemDataIdA, true, null, false);
 	}
 
-	// Token: 0x06007931 RID: 31025 RVA: 0x00198A5E File Offset: 0x00196C5E
+	// Token: 0x06004CC8 RID: 19656 RVA: 0x001A170F File Offset: 0x0019F90F
 	private void OnRewardItemClickBtnB()
 	{
-		ItemController.Instance.OpenItemTipsByItemId(this.ItemDataIdB, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ItemDataIdB, true, null, false);
 	}
 
-	// Token: 0x06007932 RID: 31026 RVA: 0x00198A74 File Offset: 0x00196C74
+	// Token: 0x06004CC9 RID: 19657 RVA: 0x001A1724 File Offset: 0x0019F924
 	private void SetTimeText(double leftTime)
 	{
 		double num = leftTime * TimeUtil.Instance.Millisecond;
@@ -252,7 +252,7 @@ public class MoonCelebrationAwardSubView : ActivitySubViewBase
 		instance4.SetLocalTextNew(text4, textStringId4, new <>z__ReadOnlySingleElementList<object>(defaultInterpolatedStringHandler.ToStringAndClear()));
 	}
 
-	// Token: 0x06007933 RID: 31027 RVA: 0x00198D4A File Offset: 0x00196F4A
+	// Token: 0x06004CCA RID: 19658 RVA: 0x001A19FA File Offset: 0x0019FBFA
 	private void OnRefreshCommonActivityRedDot(int id)
 	{
 		if (this.ActivityBaseData.Id != id)
@@ -263,7 +263,7 @@ public class MoonCelebrationAwardSubView : ActivitySubViewBase
 		this.RefreshRewardState();
 	}
 
-	// Token: 0x06007934 RID: 31028 RVA: 0x00198D68 File Offset: 0x00196F68
+	// Token: 0x06004CCB RID: 19659 RVA: 0x001A1A18 File Offset: 0x0019FC18
 	private void RefreshTimeTitle()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = ActivityModel.Instance.GetTimeVisibleAndRemainTime(this.ActivityTimePointRewardData, null);
@@ -276,60 +276,60 @@ public class MoonCelebrationAwardSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007935 RID: 31029 RVA: 0x00198DB1 File Offset: 0x00196FB1
+	// Token: 0x06004CCC RID: 19660 RVA: 0x001A1A61 File Offset: 0x0019FC61
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshRewardState();
 		this.RefreshTimeTitle();
 	}
 
-	// Token: 0x040037B0 RID: 14256
+	// Token: 0x04003849 RID: 14409
 	[Nullable(2)]
 	protected ActivityTimePointRewardData ActivityTimePointRewardData;
 
-	// Token: 0x040037B1 RID: 14257
+	// Token: 0x0400384A RID: 14410
 	private int ItemDataIdA;
 
-	// Token: 0x040037B2 RID: 14258
+	// Token: 0x0400384B RID: 14411
 	private int ItemDataIdB;
 
-	// Token: 0x020077B4 RID: 30644
+	// Token: 0x0200693F RID: 26943
 	private class EComponentDefine
 	{
-		// Token: 0x04027778 RID: 161656
+		// Token: 0x04022AAA RID: 141994
 		public const int GetBtn = 0;
 
-		// Token: 0x04027779 RID: 161657
+		// Token: 0x04022AAB RID: 141995
 		public const int GetText = 1;
 
-		// Token: 0x0402777A RID: 161658
+		// Token: 0x04022AAC RID: 141996
 		public const int TimeText = 2;
 
-		// Token: 0x0402777B RID: 161659
+		// Token: 0x04022AAD RID: 141997
 		public const int TitleTimeText = 3;
 
-		// Token: 0x0402777C RID: 161660
+		// Token: 0x04022AAE RID: 141998
 		public const int RewardBtnA = 4;
 
-		// Token: 0x0402777D RID: 161661
+		// Token: 0x04022AAF RID: 141999
 		public const int ItemACountText = 5;
 
-		// Token: 0x0402777E RID: 161662
+		// Token: 0x04022AB0 RID: 142000
 		public const int RewardBtnB = 6;
 
-		// Token: 0x0402777F RID: 161663
+		// Token: 0x04022AB1 RID: 142001
 		public const int ItemBCountText = 7;
 
-		// Token: 0x04027780 RID: 161664
+		// Token: 0x04022AB2 RID: 142002
 		public const int ItemATexture = 8;
 
-		// Token: 0x04027781 RID: 161665
+		// Token: 0x04022AB3 RID: 142003
 		public const int ItemBTexture = 9;
 
-		// Token: 0x04027782 RID: 161666
+		// Token: 0x04022AB4 RID: 142004
 		public const int TitleText = 10;
 
-		// Token: 0x04027783 RID: 161667
+		// Token: 0x04022AB5 RID: 142005
 		public const int TipsItem = 11;
 	}
 }

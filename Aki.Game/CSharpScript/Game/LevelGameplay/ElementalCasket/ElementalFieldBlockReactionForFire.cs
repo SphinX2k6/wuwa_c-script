@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E81 RID: 28289
+	// Token: 0x02006002 RID: 24578
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ElementalFieldBlockReactionForFire : IElementalFieldReaction
 	{
-		// Token: 0x06044F1B RID: 282395 RVA: 0x01108864 File Offset: 0x01106A64
+		// Token: 0x0603B0CB RID: 241867 RVA: 0x010B2DCC File Offset: 0x010B0FCC
 		private bool CanAffect(EntityHandle detector, EntityHandle target)
 		{
 			if (!target.Valid)
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return FormationDataController.Instance.GetPlayerEntity(playerId) == target.Entity;
 		}
 
-		// Token: 0x06044F1C RID: 282396 RVA: 0x01108899 File Offset: 0x01106A99
+		// Token: 0x0603B0CC RID: 241868 RVA: 0x010B2E01 File Offset: 0x010B1001
 		public void ExecuteEnter(EntityHandle detector, EntityHandle target)
 		{
 			if (this.RequestedTargets.Contains(target.Id) || !this.CanAffect(detector, target))
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RequestedTargets.Add(target.Id);
 		}
 
-		// Token: 0x06044F1D RID: 282397 RVA: 0x011088D5 File Offset: 0x01106AD5
+		// Token: 0x0603B0CD RID: 241869 RVA: 0x010B2E3D File Offset: 0x010B103D
 		public void ExecuteLeave(EntityHandle detector, EntityHandle target)
 		{
 			if (!this.RequestedTargets.Contains(target.Id))
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RequestedTargets.Remove(target.Id);
 		}
 
-		// Token: 0x04023E5C RID: 147036
+		// Token: 0x0401F114 RID: 127252
 		private readonly HashSet<int> RequestedTargets = new HashSet<int>();
 	}
 }

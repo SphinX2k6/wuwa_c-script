@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012B8 RID: 4792
+	// Token: 0x020013FE RID: 5118
 	public static class EVisionSystemQuestTypeExtensions
 	{
-		// Token: 0x06006BE3 RID: 27619 RVA: 0x00103AFC File Offset: 0x00101CFC
+		// Token: 0x06007251 RID: 29265 RVA: 0x00111AC4 File Offset: 0x0010FCC4
 		public static string ToEnumString(this EVisionSystemQuestType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BE4 RID: 27620 RVA: 0x00103B44 File Offset: 0x00101D44
+		// Token: 0x06007252 RID: 29266 RVA: 0x00111B0C File Offset: 0x0010FD0C
 		public static EVisionSystemQuestType FromString(string name)
 		{
 			EVisionSystemQuestType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BE5 RID: 27621 RVA: 0x00103B70 File Offset: 0x00101D70
+		// Token: 0x06007253 RID: 29267 RVA: 0x00111B38 File Offset: 0x0010FD38
 		public static bool TryFromString(string name, out EVisionSystemQuestType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006BE6 RID: 27622 RVA: 0x00103BC6 File Offset: 0x00101DC6
+		// Token: 0x06007254 RID: 29268 RVA: 0x00111B8E File Offset: 0x0010FD8E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006BE7 RID: 27623 RVA: 0x00103BE6 File Offset: 0x00101DE6
+		// Token: 0x06007255 RID: 29269 RVA: 0x00111BAE File Offset: 0x0010FDAE
 		public static EVisionSystemQuestType[] GetValues()
 		{
 			return new EVisionSystemQuestType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006BE8 RID: 27624 RVA: 0x00103BF6 File Offset: 0x00101DF6
+		// Token: 0x06007256 RID: 29270 RVA: 0x00111BBE File Offset: 0x0010FDBE
 		public static string[] GetNames()
 		{
 			return new string[]

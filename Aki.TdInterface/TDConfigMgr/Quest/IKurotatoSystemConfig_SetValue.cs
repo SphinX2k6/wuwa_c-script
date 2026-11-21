@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FEA RID: 4074
+	// Token: 0x02001116 RID: 4374
 	public class IKurotatoSystemConfig_SetValue
 	{
-		// Token: 0x04003693 RID: 13971
+		// Token: 0x040039CB RID: 14795
 		public EEnableSystemType Type;
 
-		// Token: 0x04003694 RID: 13972
-		[Nullable(1)]
+		// Token: 0x040039CC RID: 14796
 		public List<IKurotatoSystemVar> Vars;
 	}
 }

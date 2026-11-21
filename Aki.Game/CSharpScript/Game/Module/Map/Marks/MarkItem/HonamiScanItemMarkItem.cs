@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,33 +13,30 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054E8 RID: 21736
+	// Token: 0x020044BB RID: 17595
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HonamiScanItemMarkItem : ServerMarkItem
 	{
-		// Token: 0x060377F1 RID: 227313 RVA: 0x00D2E143 File Offset: 0x00D2C343
+		// Token: 0x0602C6AE RID: 181934 RVA: 0x00C7C23A File Offset: 0x00C7A43A
 		public HonamiScanItemMarkItem(DynamicMarkCreateInfo markPointInfo, UUIItem parent, EMapType mapType, float markScale) : base(markPointInfo, parent, mapType, markScale)
 		{
 		}
 
-		// Token: 0x060377F2 RID: 227314 RVA: 0x00D2E150 File Offset: 0x00D2C350
+		// Token: 0x0602C6AF RID: 181935 RVA: 0x00C7C247 File Offset: 0x00C7A447
 		protected override void OnInitialize()
 		{
 			base.OnInitialize();
-			DynamicMarkCreateInfo serverMarkInfo = this.ServerMarkInfo;
-			base.SetTrackData(serverMarkInfo.TrackTarget);
-			int configId = 157012;
+			base.SetTrackData(this.ServerMarkInfo.TrackTarget);
 			this.InitWhiteList();
-			this.SetConfigId(configId);
+			this.SetConfigId(157012);
 			this.UpdateVisibleRelativeState();
 			this.InitIcon();
-			this.UpdateGamePlayState();
 			this.RefreshSubMapState();
 		}
 
-		// Token: 0x17008542 RID: 34114
-		// (get) Token: 0x060377F3 RID: 227315 RVA: 0x00D2E1A1 File Offset: 0x00D2C3A1
+		// Token: 0x170058D1 RID: 22737
+		// (get) Token: 0x0602C6B0 RID: 181936 RVA: 0x00C7C283 File Offset: 0x00C7A483
 		public override int? InstanceDungeonId
 		{
 			get
@@ -48,32 +45,37 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x060377F4 RID: 227316 RVA: 0x00D2E1AE File Offset: 0x00D2C3AE
+		// Token: 0x0602C6B1 RID: 181937 RVA: 0x00C7C290 File Offset: 0x00C7A490
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.HonamiScanItemMarkItemView;
 		}
 
-		// Token: 0x060377F5 RID: 227317 RVA: 0x00D2E1B2 File Offset: 0x00D2C3B2
+		// Token: 0x0602C6B2 RID: 181938 RVA: 0x00C7C294 File Offset: 0x00C7A494
 		[PreserveBaseOverrides]
 		protected new virtual HonamiScanItemMarkItemView CreateView()
 		{
 			return new HonamiScanItemMarkItemView(this);
 		}
 
-		// Token: 0x060377F6 RID: 227318 RVA: 0x00D2E1BA File Offset: 0x00D2C3BA
+		// Token: 0x0602C6B3 RID: 181939 RVA: 0x00C7C29C File Offset: 0x00C7A49C
 		public void SetConfigId(int configId)
 		{
 			this.OnSetConfigId(configId);
 		}
 
-		// Token: 0x060377F7 RID: 227319 RVA: 0x00D2E1C4 File Offset: 0x00D2C3C4
+		// Token: 0x0602C6B4 RID: 181940 RVA: 0x00C7C2A8 File Offset: 0x00C7A4A8
 		public void OnSetConfigId(int configId)
 		{
 			MapMark value = MapConfig.Instance.GetConfigMark(configId).Value;
+			int[] array = new int[value.ShowRangeLength];
+			for (int i = 0; i < array.Length; i++)
+			{
+				array[i] = value.ShowRange(i);
+			}
 			this.OnAfterSetConfigId(new MarkItemData
 			{
-				ShowRange = value.ShowRange(),
+				ShowRange = array,
 				MarkPic = value.UnlockMarkPic,
 				ShowPriority = new int?(value.ShowPriority),
 				Scale = new float?(value.Scale),
@@ -81,7 +83,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			});
 		}
 
-		// Token: 0x060377F8 RID: 227320 RVA: 0x00D2E240 File Offset: 0x00D2C440
+		// Token: 0x0602C6B5 RID: 181941 RVA: 0x00C7C344 File Offset: 0x00C7A544
 		[NullableContext(2)]
 		protected override void OnAfterSetConfigId(IMarkItemData markData)
 		{
@@ -93,26 +95,34 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 					this.MaxShowScale = (float)markData.ShowRange[1];
 				}
 				this.InitIcon();
-				if (markData.ShowPriority.GetValueOrDefault() != 0)
-				{
-					base.ShowPriority = markData.ShowPriority.Value;
-				}
+				base.ShowPriority = markData.ShowPriority.GetValueOrDefault();
 				base.ConfigScale = markData.Scale.GetValueOrDefault(1f);
 				base.CornerScale = markData.CornerScale.GetValueOrDefault(1f);
 			}
 		}
 
-		// Token: 0x060377F9 RID: 227321 RVA: 0x00D2E2D5 File Offset: 0x00D2C4D5
+		// Token: 0x0602C6B6 RID: 181942 RVA: 0x00C7C3C8 File Offset: 0x00C7A5C8
 		private void InitWhiteList()
 		{
 			if (base.EntityConfigId == 0)
 			{
 				return;
 			}
-			this.InWhiteList = HonamiStoryConfig.Instance.GetHonamiScanItemWhileListIds().Contains(base.EntityConfigId);
+			this._inWhiteList = false;
+			using (IEnumerator<int> enumerator = HonamiStoryConfig.Instance.GetHonamiScanItemWhileListIds().GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (enumerator.Current == base.EntityConfigId)
+					{
+						this._inWhiteList = true;
+						break;
+					}
+				}
+			}
 		}
 
-		// Token: 0x060377FA RID: 227322 RVA: 0x00D2E2FB File Offset: 0x00D2C4FB
+		// Token: 0x0602C6B7 RID: 181943 RVA: 0x00C7C434 File Offset: 0x00C7A634
 		protected override void OnUpdate(global::Vector playerLocation)
 		{
 			base.OnUpdate(playerLocation);
@@ -122,7 +132,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x060377FB RID: 227323 RVA: 0x00D2E314 File Offset: 0x00D2C514
+		// Token: 0x0602C6B8 RID: 181944 RVA: 0x00C7C44C File Offset: 0x00C7A64C
 		private void InitIcon()
 		{
 			HonamiStoryMapMark? honamiMapMarkById = HonamiStoryConfig.Instance.GetHonamiMapMarkById((int)this.GetHonamiMarkCategory());
@@ -130,15 +140,15 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			{
 				this.IconPath = UiResourceConfig.Instance.GetResourcePath(honamiMapMarkById.Value.MarkIconResourceId);
 			}
-			HonamiScanItemMarkItemView innerView = this.InnerView;
-			if (innerView == null)
+			MarkItemView view = base.View;
+			if (view == null)
 			{
 				return;
 			}
-			innerView.OnIconPathChanged(this.IconPath);
+			view.OnIconPathChanged(this.IconPath);
 		}
 
-		// Token: 0x060377FC RID: 227324 RVA: 0x00D2E370 File Offset: 0x00D2C570
+		// Token: 0x0602C6B9 RID: 181945 RVA: 0x00C7C4A8 File Offset: 0x00C7A6A8
 		public override string GetTitleText()
 		{
 			HonamiStoryMapMark? honamiMapMarkById = HonamiStoryConfig.Instance.GetHonamiMapMarkById((int)this.GetHonamiMarkCategory());
@@ -149,14 +159,14 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return "";
 		}
 
-		// Token: 0x060377FD RID: 227325 RVA: 0x00D2E3B8 File Offset: 0x00D2C5B8
+		// Token: 0x0602C6BA RID: 181946 RVA: 0x00C7C4F0 File Offset: 0x00C7A6F0
 		public override int GetMultiMapId()
 		{
 			if (base.EntityConfigId == 0)
 			{
 				return 0;
 			}
-			if (!this.InWhiteList)
+			if (!this._inWhiteList)
 			{
 				return 0;
 			}
@@ -168,13 +178,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return 0;
 		}
 
-		// Token: 0x060377FE RID: 227326 RVA: 0x00D2E404 File Offset: 0x00D2C604
+		// Token: 0x0602C6BB RID: 181947 RVA: 0x00C7C53C File Offset: 0x00C7A73C
 		public override bool LocateInGround()
 		{
 			return this.GetMultiMapId() == 0;
 		}
 
-		// Token: 0x060377FF RID: 227327 RVA: 0x00D2E410 File Offset: 0x00D2C610
+		// Token: 0x0602C6BC RID: 181948 RVA: 0x00C7C548 File Offset: 0x00C7A748
 		public string GetDescriptionText()
 		{
 			HonamiStoryMapMark? honamiMapMarkById = HonamiStoryConfig.Instance.GetHonamiMapMarkById((int)this.GetHonamiMarkCategory());
@@ -185,7 +195,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return "";
 		}
 
-		// Token: 0x06037800 RID: 227328 RVA: 0x00D2E44C File Offset: 0x00D2C64C
+		// Token: 0x0602C6BD RID: 181949 RVA: 0x00C7C584 File Offset: 0x00C7A784
 		public EHonamiStoryMapMarkType GetHonamiMarkCategory()
 		{
 			DynamicMarkCreateInfo serverMarkInfo = this.ServerMarkInfo;
@@ -212,39 +222,31 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return EHonamiStoryMapMarkType.ScanMachine;
 		}
 
-		// Token: 0x06037801 RID: 227329 RVA: 0x00D2E4C8 File Offset: 0x00D2C6C8
-		private void UpdateGamePlayState()
+		// Token: 0x0602C6BE RID: 181950 RVA: 0x00C7C5FF File Offset: 0x00C7A7FF
+		protected override bool IsGamePlayFinishRaw()
 		{
-			DynamicMarkCreateInfo serverMarkInfo = this.ServerMarkInfo;
-			base.MarkItemEntity.GamePlay.GamePlayState = ((serverMarkInfo.ServerMarkState == MarkState.MarkComplete) ? EMarkGamePlayState.Finish : EMarkGamePlayState.Lock);
+			return this.ServerMarkInfo.ServerMarkState == MarkState.MarkComplete;
 		}
 
-		// Token: 0x06037802 RID: 227330 RVA: 0x00D2E4F9 File Offset: 0x00D2C6F9
+		// Token: 0x0602C6BF RID: 181951 RVA: 0x00C7C60F File Offset: 0x00C7A80F
 		private void RefreshSubMapSelectState()
 		{
 			base.IsSelectThisFloor = this.GetIsSelectThisFloor();
 		}
 
-		// Token: 0x06037803 RID: 227331 RVA: 0x00D2E507 File Offset: 0x00D2C707
+		// Token: 0x0602C6C0 RID: 181952 RVA: 0x00C7C61D File Offset: 0x00C7A81D
 		public void RefreshSubMapState()
 		{
 			this.RefreshSubMapSelectState();
-			HonamiScanItemMarkItemView innerView = this.InnerView;
-			if (innerView == null)
+			MarkItemView view = base.View;
+			if (view == null)
 			{
 				return;
 			}
-			innerView.OnIconPathChanged(this.IconPath);
+			view.OnIconPathChanged(this.IconPath);
 		}
 
-		// Token: 0x0401D3A1 RID: 119713
-		[Nullable(2)]
-		public HonamiScanItemMarkItemView InnerView;
-
-		// Token: 0x0401D3A2 RID: 119714
-		public bool IsDirty;
-
-		// Token: 0x0401D3A3 RID: 119715
-		private bool InWhiteList;
+		// Token: 0x04017E1D RID: 97821
+		private bool _inWhiteList;
 	}
 }

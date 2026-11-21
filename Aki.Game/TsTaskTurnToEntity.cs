@@ -15,9 +15,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/LevelAiTask/TsTaskTurnToEntity.TsTaskTurnToEntity_C")]
 public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170000D3 RID: 211
-	// (get) Token: 0x06000525 RID: 1317 RVA: 0x00018A85 File Offset: 0x00016C85
-	// (set) Token: 0x06000526 RID: 1318 RVA: 0x00018A95 File Offset: 0x00016C95
+	// Token: 0x170000D5 RID: 213
+	// (get) Token: 0x06000529 RID: 1321 RVA: 0x000194C9 File Offset: 0x000176C9
+	// (set) Token: 0x0600052A RID: 1322 RVA: 0x000194D9 File Offset: 0x000176D9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int TurnMode
 	{
@@ -31,9 +31,9 @@ public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x170000D4 RID: 212
-	// (get) Token: 0x06000527 RID: 1319 RVA: 0x00018AA6 File Offset: 0x00016CA6
-	// (set) Token: 0x06000528 RID: 1320 RVA: 0x00018AB6 File Offset: 0x00016CB6
+	// Token: 0x170000D6 RID: 214
+	// (get) Token: 0x0600052B RID: 1323 RVA: 0x000194EA File Offset: 0x000176EA
+	// (set) Token: 0x0600052C RID: 1324 RVA: 0x000194FA File Offset: 0x000176FA
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int TargetEntityId
 	{
@@ -47,9 +47,9 @@ public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x170000D5 RID: 213
-	// (get) Token: 0x06000529 RID: 1321 RVA: 0x00018AC7 File Offset: 0x00016CC7
-	// (set) Token: 0x0600052A RID: 1322 RVA: 0x00018ADB File Offset: 0x00016CDB
+	// Token: 0x170000D7 RID: 215
+	// (get) Token: 0x0600052D RID: 1325 RVA: 0x0001950B File Offset: 0x0001770B
+	// (set) Token: 0x0600052E RID: 1326 RVA: 0x0001951F File Offset: 0x0001771F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector TargetPos
 	{
@@ -63,9 +63,9 @@ public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x170000D6 RID: 214
-	// (get) Token: 0x0600052B RID: 1323 RVA: 0x00018AF0 File Offset: 0x00016CF0
-	// (set) Token: 0x0600052C RID: 1324 RVA: 0x00018B00 File Offset: 0x00016D00
+	// Token: 0x170000D8 RID: 216
+	// (get) Token: 0x0600052F RID: 1327 RVA: 0x00019534 File Offset: 0x00017734
+	// (set) Token: 0x06000530 RID: 1328 RVA: 0x00019544 File Offset: 0x00017744
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float TurnSpeed
 	{
@@ -79,9 +79,9 @@ public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x170000D7 RID: 215
-	// (get) Token: 0x0600052D RID: 1325 RVA: 0x00018B11 File Offset: 0x00016D11
-	// (set) Token: 0x0600052E RID: 1326 RVA: 0x00018B21 File Offset: 0x00016D21
+	// Token: 0x170000D9 RID: 217
+	// (get) Token: 0x06000531 RID: 1329 RVA: 0x00019555 File Offset: 0x00017755
+	// (set) Token: 0x06000532 RID: 1330 RVA: 0x00019565 File Offset: 0x00017765
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool UseLookAtForSmallAngle
 	{
@@ -95,7 +95,7 @@ public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x0600052F RID: 1327 RVA: 0x00018B34 File Offset: 0x00016D34
+	// Token: 0x06000533 RID: 1331 RVA: 0x00019578 File Offset: 0x00017778
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -109,29 +109,26 @@ public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06000530 RID: 1328 RVA: 0x00018BB8 File Offset: 0x00016DB8
+	// Token: 0x06000534 RID: 1332 RVA: 0x000195FC File Offset: 0x000177FC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskTurnToEntity) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskTurnToEntity.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000531 RID: 1329 RVA: 0x00018C54 File Offset: 0x00016E54
+	// Token: 0x06000535 RID: 1333 RVA: 0x000196AC File Offset: 0x000178AC
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
 		this.InitTsVariables();
@@ -196,30 +193,27 @@ public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06000532 RID: 1330 RVA: 0x00018E68 File Offset: 0x00017068
+	// Token: 0x06000536 RID: 1334 RVA: 0x000198C0 File Offset: 0x00017AC0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskTurnToEntity) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskTurnToEntity.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000533 RID: 1331 RVA: 0x00018F08 File Offset: 0x00017108
+	// Token: 0x06000537 RID: 1335 RVA: 0x00019978 File Offset: 0x00017B78
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
 		if (GravityUtils.Instance.GetAngleOffsetFromCurrentToInputAbs(this.Character) < 3f)
@@ -229,7 +223,7 @@ public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06000534 RID: 1332 RVA: 0x00018F58 File Offset: 0x00017158
+	// Token: 0x06000538 RID: 1336 RVA: 0x000199C8 File Offset: 0x00017BC8
 	protected override void OnClear()
 	{
 		this.Character = null;
@@ -237,7 +231,7 @@ public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		this.SightTarget = null;
 	}
 
-	// Token: 0x06000535 RID: 1333 RVA: 0x00018F74 File Offset: 0x00017174
+	// Token: 0x06000539 RID: 1337 RVA: 0x000199E4 File Offset: 0x00017BE4
 	[NullableContext(1)]
 	private bool GetTurnToPosition(Vector outPosition)
 	{
@@ -278,7 +272,7 @@ public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return true;
 	}
 
-	// Token: 0x06000536 RID: 1334 RVA: 0x00019074 File Offset: 0x00017274
+	// Token: 0x0600053A RID: 1338 RVA: 0x00019AE4 File Offset: 0x00017CE4
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskTurnToEntity._ClassPtr == IntPtr.Zero)
@@ -288,23 +282,23 @@ public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return TsTaskTurnToEntity._ClassPtr;
 	}
 
-	// Token: 0x06000537 RID: 1335 RVA: 0x00019098 File Offset: 0x00017298
+	// Token: 0x0600053B RID: 1339 RVA: 0x00019B08 File Offset: 0x00017D08
 	public TsTaskTurnToEntity() : this(BuiltinUtils.AllocNativeUObject(TsTaskTurnToEntity.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000538 RID: 1336 RVA: 0x000190C0 File Offset: 0x000172C0
+	// Token: 0x0600053C RID: 1340 RVA: 0x00019B30 File Offset: 0x00017D30
 	[NullableContext(1)]
 	public TsTaskTurnToEntity(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskTurnToEntity.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000539 RID: 1337 RVA: 0x000190F3 File Offset: 0x000172F3
+	// Token: 0x0600053D RID: 1341 RVA: 0x00019B63 File Offset: 0x00017D63
 	protected TsTaskTurnToEntity(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600053A RID: 1338 RVA: 0x00019108 File Offset: 0x00017308
+	// Token: 0x0600053E RID: 1342 RVA: 0x00019B78 File Offset: 0x00017D78
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -313,7 +307,7 @@ public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0600053B RID: 1339 RVA: 0x00019138 File Offset: 0x00017338
+	// Token: 0x0600053F RID: 1343 RVA: 0x00019BA8 File Offset: 0x00017DA8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -322,34 +316,34 @@ public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		this.ReceiveTickAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x040003AC RID: 940
+	// Token: 0x040003B0 RID: 944
 	private const float TOLERANCE = 3f;
 
-	// Token: 0x040003AD RID: 941
+	// Token: 0x040003B1 RID: 945
 	private int TsTurnMode;
 
-	// Token: 0x040003AE RID: 942
+	// Token: 0x040003B2 RID: 946
 	private int TsTargetEntityId;
 
-	// Token: 0x040003AF RID: 943
+	// Token: 0x040003B3 RID: 947
 	private Vector TsTargetPos;
 
-	// Token: 0x040003B0 RID: 944
+	// Token: 0x040003B4 RID: 948
 	private float TsTurnSpeed = 180f;
 
-	// Token: 0x040003B1 RID: 945
+	// Token: 0x040003B5 RID: 949
 	private bool TsUseLookAtForSmallAngle;
 
-	// Token: 0x040003B2 RID: 946
+	// Token: 0x040003B6 RID: 950
 	private CharacterActorComponent Character;
 
-	// Token: 0x040003B3 RID: 947
+	// Token: 0x040003B7 RID: 951
 	private EMovementMode MovementMode;
 
-	// Token: 0x040003B4 RID: 948
+	// Token: 0x040003B8 RID: 952
 	private bool IsInitTsVariables;
 
-	// Token: 0x040003B5 RID: 949
+	// Token: 0x040003B9 RID: 953
 	[Nullable(new byte[]
 	{
 		0,
@@ -359,28 +353,28 @@ public class TsTaskTurnToEntity : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 	})]
 	private OneOf<BaseActorComponent, Vector, AActor>? SightTarget;
 
-	// Token: 0x040003B6 RID: 950
+	// Token: 0x040003BA RID: 954
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/LevelAiTask/TsTaskTurnToEntity.TsTaskTurnToEntity_C";
 
-	// Token: 0x040003B7 RID: 951
+	// Token: 0x040003BB RID: 955
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040003B8 RID: 952
+	// Token: 0x040003BC RID: 956
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040003B9 RID: 953
+	// Token: 0x040003BD RID: 957
 	private static int __PropertyOffset_TurnMode;
 
-	// Token: 0x040003BA RID: 954
+	// Token: 0x040003BE RID: 958
 	private static int __PropertyOffset_TargetEntityId;
 
-	// Token: 0x040003BB RID: 955
+	// Token: 0x040003BF RID: 959
 	private static int __PropertyOffset_TargetPos;
 
-	// Token: 0x040003BC RID: 956
+	// Token: 0x040003C0 RID: 960
 	private static int __PropertyOffset_TurnSpeed;
 
-	// Token: 0x040003BD RID: 957
+	// Token: 0x040003C1 RID: 961
 	private static int __PropertyOffset_UseLookAtForSmallAngle;
 }

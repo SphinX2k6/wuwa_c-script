@@ -3,50 +3,50 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 {
-	// Token: 0x02004373 RID: 17267
+	// Token: 0x020047D5 RID: 18389
 	public class IPerformerAiProbabilityT
 	{
-		// Token: 0x170079E5 RID: 31205
-		// (get) Token: 0x06019A26 RID: 104998 RVA: 0x003AB670 File Offset: 0x003A9870
-		// (set) Token: 0x06019A27 RID: 104999 RVA: 0x003AB678 File Offset: 0x003A9878
+		// Token: 0x1700801A RID: 32794
+		// (get) Token: 0x0601B1B4 RID: 111028 RVA: 0x003D7098 File Offset: 0x003D5298
+		// (set) Token: 0x0601B1B5 RID: 111029 RVA: 0x003D70A0 File Offset: 0x003D52A0
 		public EPerformerAiNodeType Type { get; set; }
 
-		// Token: 0x170079E6 RID: 31206
-		// (get) Token: 0x06019A28 RID: 105000 RVA: 0x003AB681 File Offset: 0x003A9881
-		// (set) Token: 0x06019A29 RID: 105001 RVA: 0x003AB689 File Offset: 0x003A9889
+		// Token: 0x1700801B RID: 32795
+		// (get) Token: 0x0601B1B6 RID: 111030 RVA: 0x003D70A9 File Offset: 0x003D52A9
+		// (set) Token: 0x0601B1B7 RID: 111031 RVA: 0x003D70B1 File Offset: 0x003D52B1
 		public int Id { get; set; }
 
-		// Token: 0x170079E7 RID: 31207
-		// (get) Token: 0x06019A2A RID: 105002 RVA: 0x003AB692 File Offset: 0x003A9892
-		// (set) Token: 0x06019A2B RID: 105003 RVA: 0x003AB69A File Offset: 0x003A989A
+		// Token: 0x1700801C RID: 32796
+		// (get) Token: 0x0601B1B8 RID: 111032 RVA: 0x003D70BA File Offset: 0x003D52BA
+		// (set) Token: 0x0601B1B9 RID: 111033 RVA: 0x003D70C2 File Offset: 0x003D52C2
 		public string Desc { get; set; }
 
-		// Token: 0x170079E8 RID: 31208
-		// (get) Token: 0x06019A2C RID: 105004 RVA: 0x003AB6A3 File Offset: 0x003A98A3
-		// (set) Token: 0x06019A2D RID: 105005 RVA: 0x003AB6AB File Offset: 0x003A98AB
+		// Token: 0x1700801D RID: 32797
+		// (get) Token: 0x0601B1BA RID: 111034 RVA: 0x003D70CB File Offset: 0x003D52CB
+		// (set) Token: 0x0601B1BB RID: 111035 RVA: 0x003D70D3 File Offset: 0x003D52D3
 		public List<TPerformerAiDecoratorUnion> Decorators { get; set; }
 
-		// Token: 0x170079E9 RID: 31209
-		// (get) Token: 0x06019A2E RID: 105006 RVA: 0x003AB6B4 File Offset: 0x003A98B4
-		// (set) Token: 0x06019A2F RID: 105007 RVA: 0x003AB6BC File Offset: 0x003A98BC
+		// Token: 0x1700801E RID: 32798
+		// (get) Token: 0x0601B1BC RID: 111036 RVA: 0x003D70DC File Offset: 0x003D52DC
+		// (set) Token: 0x0601B1BD RID: 111037 RVA: 0x003D70E4 File Offset: 0x003D52E4
 		public bool _FoldedForTree { get; set; }
 
-		// Token: 0x170079EA RID: 31210
-		// (get) Token: 0x06019A30 RID: 105008 RVA: 0x003AB6C5 File Offset: 0x003A98C5
-		// (set) Token: 0x06019A31 RID: 105009 RVA: 0x003AB6CD File Offset: 0x003A98CD
+		// Token: 0x1700801F RID: 32799
+		// (get) Token: 0x0601B1BE RID: 111038 RVA: 0x003D70ED File Offset: 0x003D52ED
+		// (set) Token: 0x0601B1BF RID: 111039 RVA: 0x003D70F5 File Offset: 0x003D52F5
 		public List<TPerformerAiNodeUnion> Children { get; set; }
 
-		// Token: 0x170079EB RID: 31211
-		// (get) Token: 0x06019A32 RID: 105010 RVA: 0x003AB6D6 File Offset: 0x003A98D6
-		// (set) Token: 0x06019A33 RID: 105011 RVA: 0x003AB6DE File Offset: 0x003A98DE
+		// Token: 0x17008020 RID: 32800
+		// (get) Token: 0x0601B1C0 RID: 111040 RVA: 0x003D70FE File Offset: 0x003D52FE
+		// (set) Token: 0x0601B1C1 RID: 111041 RVA: 0x003D7106 File Offset: 0x003D5306
 		public List<float> RandomWeights { get; set; }
 
-		// Token: 0x170079EC RID: 31212
-		// (get) Token: 0x06019A34 RID: 105012 RVA: 0x003AB6E7 File Offset: 0x003A98E7
-		// (set) Token: 0x06019A35 RID: 105013 RVA: 0x003AB6EF File Offset: 0x003A98EF
+		// Token: 0x17008021 RID: 32801
+		// (get) Token: 0x0601B1C2 RID: 111042 RVA: 0x003D710F File Offset: 0x003D530F
+		// (set) Token: 0x0601B1C3 RID: 111043 RVA: 0x003D7117 File Offset: 0x003D5317
 		public byte NullMask { get; set; }
 
-		// Token: 0x06019A36 RID: 105014 RVA: 0x003AB6F8 File Offset: 0x003A98F8
+		// Token: 0x0601B1C4 RID: 111044 RVA: 0x003D7120 File Offset: 0x003D5320
 		public IPerformerAiProbabilityT()
 		{
 			this.Type = EPerformerAiNodeType.Start;

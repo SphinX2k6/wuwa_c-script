@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001466 RID: 5222
+// Token: 0x0200091A RID: 2330
 public struct IActivityRegressMainViewOpenData
 {
-	// Token: 0x17000CDA RID: 3290
-	// (get) Token: 0x06009378 RID: 37752 RVA: 0x001FB636 File Offset: 0x001F9836
-	// (set) Token: 0x06009379 RID: 37753 RVA: 0x001FB63E File Offset: 0x001F983E
+	// Token: 0x17000CFA RID: 3322
+	// (get) Token: 0x0600670D RID: 26381 RVA: 0x0020443E File Offset: 0x0020263E
+	// (set) Token: 0x0600670E RID: 26382 RVA: 0x00204446 File Offset: 0x00202646
 	public EActivityMainSubViewNewType SubView { readonly get; set; }
 
-	// Token: 0x17000CDB RID: 3291
-	// (get) Token: 0x0600937A RID: 37754 RVA: 0x001FB647 File Offset: 0x001F9847
-	// (set) Token: 0x0600937B RID: 37755 RVA: 0x001FB64F File Offset: 0x001F984F
+	// Token: 0x17000CFB RID: 3323
+	// (get) Token: 0x0600670F RID: 26383 RVA: 0x0020444F File Offset: 0x0020264F
+	// (set) Token: 0x06006710 RID: 26384 RVA: 0x00204457 File Offset: 0x00202657
 	public EActivityRegressMainViewOpenDataType OpenType { readonly get; set; }
 }

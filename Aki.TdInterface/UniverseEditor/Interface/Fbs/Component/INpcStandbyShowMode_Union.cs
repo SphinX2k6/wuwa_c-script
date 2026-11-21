@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005665 RID: 22117
+	// Token: 0x02005C06 RID: 23558
 	public enum INpcStandbyShowMode_Union : byte
 	{
-		// Token: 0x0400EA22 RID: 59938
+		// Token: 0x0400F68B RID: 63115
 		NONE,
-		// Token: 0x0400EA23 RID: 59939
+		// Token: 0x0400F68C RID: 63116
 		INpcStandbyShowMode,
-		// Token: 0x0400EA24 RID: 59940
+		// Token: 0x0400F68D RID: 63117
 		INpcStandbyShowFinitely,
-		// Token: 0x0400EA25 RID: 59941
+		// Token: 0x0400F68E RID: 63118
 		INpcStandbyShowLooply,
-		// Token: 0x0400EA26 RID: 59942
+		// Token: 0x0400F68F RID: 63119
 		INpcStandbySit
 	}
 }

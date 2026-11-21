@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010A1 RID: 4257
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011CF RID: 4559
 	public class IQuestScheduleDistanceValue : IQuestScheduleType
 	{
-		// Token: 0x0600600C RID: 24588 RVA: 0x000E874C File Offset: 0x000E694C
+		// Token: 0x06006605 RID: 26117 RVA: 0x000F586C File Offset: 0x000F3A6C
 		private IQuestScheduleDistanceValue_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600600D RID: 24589 RVA: 0x000E8784 File Offset: 0x000E6984
+		// Token: 0x06006606 RID: 26118 RVA: 0x000F58A4 File Offset: 0x000F3AA4
 		public static IQuestScheduleDistanceValue Create([Nullable(2)] IQuestScheduleDistanceValue instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600600E RID: 24590 RVA: 0x000E8797 File Offset: 0x000E6997
+		// Token: 0x06006607 RID: 26119 RVA: 0x000F58B7 File Offset: 0x000F3AB7
 		public static IQuestScheduleDistanceValue CreateFromSetValue([Nullable(2)] IQuestScheduleDistanceValue_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600600F RID: 24591 RVA: 0x000E87AA File Offset: 0x000E69AA
+		// Token: 0x06006608 RID: 26120 RVA: 0x000F58CA File Offset: 0x000F3ACA
 		public new IQuestScheduleDistanceValue_SetValue ToSetValue()
 		{
 			return new IQuestScheduleDistanceValue_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F98 RID: 8088
-		// (get) Token: 0x06006010 RID: 24592 RVA: 0x000E87D5 File Offset: 0x000E69D5
-		// (set) Token: 0x06006011 RID: 24593 RVA: 0x000E8800 File Offset: 0x000E6A00
+		// Token: 0x1700214A RID: 8522
+		// (get) Token: 0x06006609 RID: 26121 RVA: 0x000F58F5 File Offset: 0x000F3AF5
+		// (set) Token: 0x0600660A RID: 26122 RVA: 0x000F5920 File Offset: 0x000F3B20
 		public override EQuestScheduleType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F99 RID: 8089
-		// (get) Token: 0x06006012 RID: 24594 RVA: 0x000E8810 File Offset: 0x000E6A10
-		// (set) Token: 0x06006013 RID: 24595 RVA: 0x000E8871 File Offset: 0x000E6A71
+		// Token: 0x1700214B RID: 8523
+		// (get) Token: 0x0600660B RID: 26123 RVA: 0x000F5930 File Offset: 0x000F3B30
+		// (set) Token: 0x0600660C RID: 26124 RVA: 0x000F5991 File Offset: 0x000F3B91
 		public virtual Aki.TDConfigMgr.Action.PosA Pos
 		{
 			get
@@ -116,9 +114,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F9A RID: 8090
-		// (get) Token: 0x06006014 RID: 24596 RVA: 0x000E8886 File Offset: 0x000E6A86
-		// (set) Token: 0x06006015 RID: 24597 RVA: 0x000E88B1 File Offset: 0x000E6AB1
+		// Token: 0x1700214C RID: 8524
+		// (get) Token: 0x0600660D RID: 26125 RVA: 0x000F59A6 File Offset: 0x000F3BA6
+		// (set) Token: 0x0600660E RID: 26126 RVA: 0x000F59D1 File Offset: 0x000F3BD1
 		public virtual EDistanceMeasureMode DistanceMeasureMode
 		{
 			get
@@ -139,18 +137,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040039ED RID: 14829
+		// Token: 0x04003D3A RID: 15674
 		[Nullable(2)]
 		protected new IQuestScheduleDistanceValue FbInstance;
 
-		// Token: 0x040039EE RID: 14830
+		// Token: 0x04003D3B RID: 15675
 		[Nullable(2)]
 		protected new IQuestScheduleDistanceValue_SetValue PocoInterface;
 
-		// Token: 0x040039EF RID: 14831
+		// Token: 0x04003D3C RID: 15676
 		private Aki.TDConfigMgr.Action.PosA _PosCache;
 
-		// Token: 0x040039F0 RID: 14832
+		// Token: 0x04003D3D RID: 15677
 		private bool _PosInited;
 	}
 }

@@ -2,15 +2,15 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D8D RID: 11661
+// Token: 0x020022E7 RID: 8935
 public class BulletActionInfoAttachActor : BulletActionInfoBase
 {
-	// Token: 0x060187F7 RID: 100343 RVA: 0x0063C937 File Offset: 0x0063AB37
+	// Token: 0x06016099 RID: 90265 RVA: 0x0066266F File Offset: 0x0066086F
 	public BulletActionInfoAttachActor(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x060187F8 RID: 100344 RVA: 0x0063C940 File Offset: 0x0063AB40
+	// Token: 0x0601609A RID: 90266 RVA: 0x00662678 File Offset: 0x00660878
 	public override void Clear()
 	{
 		this.IsParentActor = false;
@@ -24,31 +24,31 @@ public class BulletActionInfoAttachActor : BulletActionInfoBase
 		this.RelativeRotation = null;
 	}
 
-	// Token: 0x0400B5B0 RID: 46512
+	// Token: 0x0400B925 RID: 47397
 	public bool IsParentActor;
 
-	// Token: 0x0400B5B1 RID: 46513
+	// Token: 0x0400B926 RID: 47398
 	[Nullable(2)]
 	public AActor Actor;
 
-	// Token: 0x0400B5B2 RID: 46514
+	// Token: 0x0400B927 RID: 47399
 	public FName? SocketName;
 
-	// Token: 0x0400B5B3 RID: 46515
+	// Token: 0x0400B928 RID: 47400
 	public EAttachmentRule? LocationRule;
 
-	// Token: 0x0400B5B4 RID: 46516
+	// Token: 0x0400B929 RID: 47401
 	public EAttachmentRule? RotationRule;
 
-	// Token: 0x0400B5B5 RID: 46517
+	// Token: 0x0400B92A RID: 47402
 	public EAttachmentRule? ScaleRule;
 
-	// Token: 0x0400B5B6 RID: 46518
+	// Token: 0x0400B92B RID: 47403
 	public bool WeldSimulatedBodies;
 
-	// Token: 0x0400B5B7 RID: 46519
+	// Token: 0x0400B92C RID: 47404
 	public FVectorDouble? RelativeLocation;
 
-	// Token: 0x0400B5B8 RID: 46520
+	// Token: 0x0400B92D RID: 47405
 	public FRotator? RelativeRotation;
 }

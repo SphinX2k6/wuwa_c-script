@@ -5,17 +5,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x02005507 RID: 21767
+	// Token: 0x020044DA RID: 17626
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DynamicConfigMarkItemView : MarkItemView
 	{
-		// Token: 0x060379A5 RID: 227749 RVA: 0x00D336C6 File Offset: 0x00D318C6
+		// Token: 0x0602C873 RID: 182387 RVA: 0x00C815B0 File Offset: 0x00C7F7B0
 		public DynamicConfigMarkItemView(DynamicConfigMarkItem holder) : base(holder)
 		{
 		}
 
-		// Token: 0x060379A6 RID: 227750 RVA: 0x00D336D0 File Offset: 0x00D318D0
+		// Token: 0x0602C874 RID: 182388 RVA: 0x00C815BC File Offset: 0x00C7F7BC
 		public override void OnIconPathChanged(string iconPath)
 		{
 			UUISprite sprite = base.GetSprite(1);

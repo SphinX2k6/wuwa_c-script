@@ -6,12 +6,12 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.Module.ItemDeliver
 {
-	// Token: 0x02005810 RID: 22544
+	// Token: 0x020047E7 RID: 18407
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DeliverData
 	{
-		// Token: 0x060394D1 RID: 234705 RVA: 0x00D9716C File Offset: 0x00D9536C
+		// Token: 0x0602E3E5 RID: 189413 RVA: 0x00CE5FFC File Offset: 0x00CE41FC
 		[NullableContext(2)]
 		public DeliverData([Nullable(1)] string npcName, string titleTextId = null, string descriptionTextId = null, GeneralContext content = null)
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.ItemDeliver
 			this.DescriptionTextId = descriptionTextId;
 		}
 
-		// Token: 0x060394D2 RID: 234706 RVA: 0x00D971A7 File Offset: 0x00D953A7
+		// Token: 0x0602E3E6 RID: 189414 RVA: 0x00CE6037 File Offset: 0x00CE4237
 		public void Clear()
 		{
 			this.Context = null;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.ItemDeliver
 			this.DescriptionTextId = "";
 		}
 
-		// Token: 0x060394D3 RID: 234707 RVA: 0x00D971D4 File Offset: 0x00D953D4
+		// Token: 0x0602E3E7 RID: 189415 RVA: 0x00CE6064 File Offset: 0x00CE4264
 		[return: Nullable(2)]
 		public DeliverSlotData AddSlotData(List<int> itemIdList, int needCount, EHandInItemType handInType)
 		{
@@ -44,13 +44,13 @@ namespace CSharpScript.Game.Module.ItemDeliver
 			return deliverSlotData;
 		}
 
-		// Token: 0x060394D4 RID: 234708 RVA: 0x00D9720A File Offset: 0x00D9540A
+		// Token: 0x0602E3E8 RID: 189416 RVA: 0x00CE609A File Offset: 0x00CE429A
 		public List<DeliverSlotData> GetSlotDataList()
 		{
 			return this.SlotDataList;
 		}
 
-		// Token: 0x060394D5 RID: 234709 RVA: 0x00D97214 File Offset: 0x00D95414
+		// Token: 0x0602E3E9 RID: 189417 RVA: 0x00CE60A4 File Offset: 0x00CE42A4
 		public bool IsSlotEnough(int itemConfigId)
 		{
 			foreach (DeliverSlotData deliverSlotData in this.SlotDataList)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.ItemDeliver
 			return false;
 		}
 
-		// Token: 0x060394D6 RID: 234710 RVA: 0x00D97280 File Offset: 0x00D95480
+		// Token: 0x0602E3EA RID: 189418 RVA: 0x00CE6110 File Offset: 0x00CE4310
 		public bool HasEmptySlot()
 		{
 			using (List<DeliverSlotData>.Enumerator enumerator = this.SlotDataList.GetEnumerator())
@@ -79,21 +79,21 @@ namespace CSharpScript.Game.Module.ItemDeliver
 			return false;
 		}
 
-		// Token: 0x0401DF6A RID: 122730
+		// Token: 0x04018A01 RID: 100865
 		[Nullable(2)]
 		public GeneralContext Context;
 
-		// Token: 0x0401DF6B RID: 122731
+		// Token: 0x04018A02 RID: 100866
 		private readonly List<DeliverSlotData> SlotDataList = new List<DeliverSlotData>();
 
-		// Token: 0x0401DF6C RID: 122732
+		// Token: 0x04018A03 RID: 100867
 		public string NpcName = "";
 
-		// Token: 0x0401DF6D RID: 122733
+		// Token: 0x04018A04 RID: 100868
 		[Nullable(2)]
 		public string TitleTextId;
 
-		// Token: 0x0401DF6E RID: 122734
+		// Token: 0x04018A05 RID: 100869
 		[Nullable(2)]
 		public string DescriptionTextId;
 	}

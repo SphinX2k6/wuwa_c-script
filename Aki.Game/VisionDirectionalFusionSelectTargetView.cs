@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001756 RID: 5974
+// Token: 0x02000C0F RID: 3087
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionDirectionalFusionSelectTargetView : UiViewBase
 {
-	// Token: 0x0600ACD5 RID: 44245 RVA: 0x0026D931 File Offset: 0x0026BB31
+	// Token: 0x060080BC RID: 32956 RVA: 0x00277DAD File Offset: 0x00275FAD
 	public VisionDirectionalFusionSelectTargetView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600ACD6 RID: 44246 RVA: 0x0026D93C File Offset: 0x0026BB3C
+	// Token: 0x060080BD RID: 32957 RVA: 0x00277DB8 File Offset: 0x00275FB8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class VisionDirectionalFusionSelectTargetView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600ACD7 RID: 44247 RVA: 0x0026D9A4 File Offset: 0x0026BBA4
+	// Token: 0x060080BE RID: 32958 RVA: 0x00277E20 File Offset: 0x00276020
 	protected override void OnStart()
 	{
 		this.GirdLayout = new GenericLayout<SelectTargetItem, int>(base.GetGridLayout(2), new Func<SelectTargetItem>(this.InitGird), null, false, true);
@@ -61,7 +61,7 @@ public class VisionDirectionalFusionSelectTargetView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x0600ACD8 RID: 44248 RVA: 0x0026DA68 File Offset: 0x0026BC68
+	// Token: 0x060080BF RID: 32959 RVA: 0x00277EE4 File Offset: 0x002760E4
 	private SelectTargetItem InitGird()
 	{
 		return new SelectTargetItem
@@ -70,20 +70,20 @@ public class VisionDirectionalFusionSelectTargetView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600ACD9 RID: 44249 RVA: 0x0026DA81 File Offset: 0x0026BC81
+	// Token: 0x060080C0 RID: 32960 RVA: 0x00277EFD File Offset: 0x002760FD
 	private void RefreshButton()
 	{
 		base.GetButton(1).SetSelfInteractive(this.CurrentSelectFetter > 0);
 	}
 
-	// Token: 0x0600ACDA RID: 44250 RVA: 0x0026DA98 File Offset: 0x0026BC98
+	// Token: 0x060080C1 RID: 32961 RVA: 0x00277F14 File Offset: 0x00276114
 	private void OnClickRightBtn()
 	{
 		CalabashModel.Instance.SetDirectionalFusionTargetFetter(this.CurrentSelectFetter);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600ACDB RID: 44251 RVA: 0x0026DAB4 File Offset: 0x0026BCB4
+	// Token: 0x060080C2 RID: 32962 RVA: 0x00277F30 File Offset: 0x00276130
 	private void OnClickGirdToggle(int fetter, UUIExtendToggle toggle)
 	{
 		if (fetter <= 0)
@@ -107,7 +107,7 @@ public class VisionDirectionalFusionSelectTargetView : UiViewBase
 		this.RefreshButton();
 	}
 
-	// Token: 0x04004EA0 RID: 20128
+	// Token: 0x04004F49 RID: 20297
 	[Nullable(new byte[]
 	{
 		2,
@@ -115,22 +115,22 @@ public class VisionDirectionalFusionSelectTargetView : UiViewBase
 	})]
 	private GenericLayout<SelectTargetItem, int> GirdLayout;
 
-	// Token: 0x04004EA1 RID: 20129
+	// Token: 0x04004F4A RID: 20298
 	private int CurrentSelectFetter;
 
-	// Token: 0x04004EA2 RID: 20130
+	// Token: 0x04004F4B RID: 20299
 	[Nullable(2)]
 	private UUIExtendToggle CurrentSelectToggle;
 
-	// Token: 0x02007D39 RID: 32057
+	// Token: 0x02006EBF RID: 28351
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029012 RID: 167954
+		// Token: 0x0402433D RID: 148285
 		LeftBtn,
-		// Token: 0x04029013 RID: 167955
+		// Token: 0x0402433E RID: 148286
 		RightBtn,
-		// Token: 0x04029014 RID: 167956
+		// Token: 0x0402433F RID: 148287
 		GirdLayout
 	}
 }

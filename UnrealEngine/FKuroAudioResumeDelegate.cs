@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200169A RID: 5786
+	// Token: 0x02000314 RID: 788
 	public sealed class FKuroAudioResumeDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06014FAD RID: 85933 RVA: 0x001ED5DA File Offset: 0x001EB7DA
+		// Token: 0x0600538E RID: 21390 RVA: 0x00074CEA File Offset: 0x00072EEA
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroAudioResumeDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06014FAE RID: 85934 RVA: 0x001ED5E6 File Offset: 0x001EB7E6
+		// Token: 0x0600538F RID: 21391 RVA: 0x00074CF6 File Offset: 0x00072EF6
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroAudioResumeDelegate._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FKuroAudioResumeDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06014FAF RID: 85935 RVA: 0x001ED609 File Offset: 0x001EB809
+		// Token: 0x06005390 RID: 21392 RVA: 0x00074D19 File Offset: 0x00072F19
 		public FKuroAudioResumeDelegate()
 		{
 		}
 
-		// Token: 0x06014FB0 RID: 85936 RVA: 0x001ED611 File Offset: 0x001EB811
+		// Token: 0x06005391 RID: 21393 RVA: 0x00074D21 File Offset: 0x00072F21
 		[NullableContext(2)]
 		public FKuroAudioResumeDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06014FB1 RID: 85937 RVA: 0x001ED61B File Offset: 0x001EB81B
+		// Token: 0x06005392 RID: 21394 RVA: 0x00074D2B File Offset: 0x00072F2B
 		public FKuroAudioResumeDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06014FB2 RID: 85938 RVA: 0x001ED626 File Offset: 0x001EB826
+		// Token: 0x06005393 RID: 21395 RVA: 0x00074D36 File Offset: 0x00072F36
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06014FB3 RID: 85939 RVA: 0x001ED658 File Offset: 0x001EB858
+		// Token: 0x06005394 RID: 21396 RVA: 0x00074D68 File Offset: 0x00072F68
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FKuroAudioResumeDelegate.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FKuroAudioResumeDelegate.RegisterId);
 		}
 
-		// Token: 0x06014FB4 RID: 85940 RVA: 0x001ED692 File Offset: 0x001EB892
+		// Token: 0x06005395 RID: 21397 RVA: 0x00074DA2 File Offset: 0x00072FA2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x06014FB5 RID: 85941 RVA: 0x001ED6A0 File Offset: 0x001EB8A0
+		// Token: 0x06005396 RID: 21398 RVA: 0x00074DB0 File Offset: 0x00072FB0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x0400B6DA RID: 46810
+		// Token: 0x0400222C RID: 8748
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400B6DB RID: 46811
+		// Token: 0x0400222D RID: 8749
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroAudio.KuroAudioResumeDelegate__DelegateSignature";
 
-		// Token: 0x0400B6DC RID: 46812
+		// Token: 0x0400222E RID: 8750
 		private static int RegisterId;
 
-		// Token: 0x02002EDF RID: 11999
+		// Token: 0x02000A18 RID: 2584
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040169FD RID: 92669
+			// Token: 0x040059D8 RID: 23000
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

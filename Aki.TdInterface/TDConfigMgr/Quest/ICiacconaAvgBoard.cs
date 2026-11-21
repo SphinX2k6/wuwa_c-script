@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F10 RID: 3856
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001026 RID: 4134
 	public class ICiacconaAvgBoard : IShowUi
 	{
-		// Token: 0x06005542 RID: 21826 RVA: 0x000D10F8 File Offset: 0x000CF2F8
+		// Token: 0x06005ABE RID: 23230 RVA: 0x000DD2A0 File Offset: 0x000DB4A0
 		private ICiacconaAvgBoard_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005543 RID: 21827 RVA: 0x000D1130 File Offset: 0x000CF330
+		// Token: 0x06005ABF RID: 23231 RVA: 0x000DD2D8 File Offset: 0x000DB4D8
 		public static ICiacconaAvgBoard Create([Nullable(2)] ICiacconaAvgBoard instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005544 RID: 21828 RVA: 0x000D1143 File Offset: 0x000CF343
+		// Token: 0x06005AC0 RID: 23232 RVA: 0x000DD2EB File Offset: 0x000DB4EB
 		public static ICiacconaAvgBoard CreateFromSetValue([Nullable(2)] ICiacconaAvgBoard_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005545 RID: 21829 RVA: 0x000D1156 File Offset: 0x000CF356
+		// Token: 0x06005AC1 RID: 23233 RVA: 0x000DD2FE File Offset: 0x000DB4FE
 		public new ICiacconaAvgBoard_SetValue ToSetValue()
 		{
 			return new ICiacconaAvgBoard_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C8A RID: 7306
-		// (get) Token: 0x06005546 RID: 21830 RVA: 0x000D1175 File Offset: 0x000CF375
-		// (set) Token: 0x06005547 RID: 21831 RVA: 0x000D11A0 File Offset: 0x000CF3A0
+		// Token: 0x17001E22 RID: 7714
+		// (get) Token: 0x06005AC2 RID: 23234 RVA: 0x000DD31D File Offset: 0x000DB51D
+		// (set) Token: 0x06005AC3 RID: 23235 RVA: 0x000DD348 File Offset: 0x000DB548
 		public override EShowUiType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C8B RID: 7307
-		// (get) Token: 0x06005548 RID: 21832 RVA: 0x000D11B0 File Offset: 0x000CF3B0
-		// (set) Token: 0x06005549 RID: 21833 RVA: 0x000D11EA File Offset: 0x000CF3EA
+		// Token: 0x17001E23 RID: 7715
+		// (get) Token: 0x06005AC4 RID: 23236 RVA: 0x000DD358 File Offset: 0x000DB558
+		// (set) Token: 0x06005AC5 RID: 23237 RVA: 0x000DD392 File Offset: 0x000DB592
 		public virtual int? EndingId
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400339D RID: 13213
+		// Token: 0x040036AA RID: 13994
 		[Nullable(2)]
 		protected new ICiacconaAvgBoard FbInstance;
 
-		// Token: 0x0400339E RID: 13214
+		// Token: 0x040036AB RID: 13995
 		[Nullable(2)]
 		protected new ICiacconaAvgBoard_SetValue PocoInterface;
 	}

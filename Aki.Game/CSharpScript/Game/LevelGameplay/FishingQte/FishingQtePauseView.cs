@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E34 RID: 28212
+	// Token: 0x02005FB5 RID: 24501
 	public class FishingQtePauseView : UiViewBase
 	{
-		// Token: 0x06044C68 RID: 281704 RVA: 0x010F863D File Offset: 0x010F683D
+		// Token: 0x0603ADF5 RID: 241141 RVA: 0x010A2BAD File Offset: 0x010A0DAD
 		[NullableContext(1)]
 		public FishingQtePauseView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06044C69 RID: 281705 RVA: 0x010F8648 File Offset: 0x010F6848
+		// Token: 0x0603ADF6 RID: 241142 RVA: 0x010A2BB8 File Offset: 0x010A0DB8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -44,12 +44,12 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06044C6A RID: 281706 RVA: 0x010F8755 File Offset: 0x010F6955
+		// Token: 0x0603ADF7 RID: 241143 RVA: 0x010A2CC5 File Offset: 0x010A0EC5
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06044C6B RID: 281707 RVA: 0x010F8757 File Offset: 0x010F6957
+		// Token: 0x0603ADF8 RID: 241144 RVA: 0x010A2CC7 File Offset: 0x010A0EC7
 		private void OnButtonExitClicked()
 		{
 			FishingController.Instance.ShowConfirmBoxAndRequestFishingExit(delegate(bool success)
@@ -61,29 +61,29 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			});
 		}
 
-		// Token: 0x06044C6C RID: 281708 RVA: 0x010F876F File Offset: 0x010F696F
+		// Token: 0x0603ADF9 RID: 241145 RVA: 0x010A2CDF File Offset: 0x010A0EDF
 		private void OnButtonCabinClicked()
 		{
 			FishingController.Instance.OpenDockyardWareHouseView(true);
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06044C6D RID: 281709 RVA: 0x010F8783 File Offset: 0x010F6983
+		// Token: 0x0603ADFA RID: 241146 RVA: 0x010A2CF3 File Offset: 0x010A0EF3
 		private void OnButtonResumeClicked()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0200CCDF RID: 52447
+		// Token: 0x0200B8CF RID: 47311
 		private class EComponents
 		{
-			// Token: 0x0403DC8B RID: 253067
+			// Token: 0x040390AD RID: 233645
 			public const int ButtonExit = 0;
 
-			// Token: 0x0403DC8C RID: 253068
+			// Token: 0x040390AE RID: 233646
 			public const int ButtonCabin = 1;
 
-			// Token: 0x0403DC8D RID: 253069
+			// Token: 0x040390AF RID: 233647
 			public const int ButtonResume = 2;
 		}
 	}

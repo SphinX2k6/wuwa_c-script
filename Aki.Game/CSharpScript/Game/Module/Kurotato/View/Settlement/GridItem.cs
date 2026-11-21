@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 {
-	// Token: 0x0200572B RID: 22315
+	// Token: 0x02004702 RID: 18178
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 	})]
 	internal class GridItem : SyncGridProxyAbstract<GridItemCellData>
 	{
-		// Token: 0x06038BC3 RID: 232387 RVA: 0x00D773A0 File Offset: 0x00D755A0
+		// Token: 0x0602DAD3 RID: 187091 RVA: 0x00CC5A4C File Offset: 0x00CC3C4C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038BC4 RID: 232388 RVA: 0x00D77409 File Offset: 0x00D75609
+		// Token: 0x0602DAD4 RID: 187092 RVA: 0x00CC5AB5 File Offset: 0x00CC3CB5
 		protected override void OnStart()
 		{
 			this.GridItemInner.CreateThenShowByActor(base.GetItem(1).GetOwner());
 		}
 
-		// Token: 0x06038BC5 RID: 232389 RVA: 0x00D77424 File Offset: 0x00D75624
+		// Token: 0x0602DAD5 RID: 187093 RVA: 0x00CC5AD0 File Offset: 0x00CC3CD0
 		public override void Refresh(GridItemCellData data)
 		{
 			this.Data = data;
@@ -62,24 +62,24 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			});
 		}
 
-		// Token: 0x0401DC49 RID: 121929
+		// Token: 0x040186DF RID: 100063
 		public GridItemCellData Data;
 
-		// Token: 0x0401DC4A RID: 121930
+		// Token: 0x040186E0 RID: 100064
 		private readonly KurotatoWeaponSmallItemGrid GridItemInner = new KurotatoWeaponSmallItemGrid(false);
 
-		// Token: 0x0401DC4B RID: 121931
+		// Token: 0x040186E1 RID: 100065
 		[Nullable(2)]
 		private Action OnClick;
 
-		// Token: 0x0200B8F5 RID: 47349
+		// Token: 0x0200A316 RID: 41750
 		[NullableContext(0)]
 		private class EGridComp
 		{
-			// Token: 0x04037F18 RID: 229144
+			// Token: 0x04032928 RID: 207144
 			public const int SpriteEmpty = 0;
 
-			// Token: 0x04037F19 RID: 229145
+			// Token: 0x04032929 RID: 207145
 			public const int GridItem = 1;
 		}
 	}

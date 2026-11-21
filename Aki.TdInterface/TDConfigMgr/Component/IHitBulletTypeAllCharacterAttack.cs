@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000410 RID: 1040
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000469 RID: 1129
 	public class IHitBulletTypeAllCharacterAttack : IHitBulletType
 	{
-		// Token: 0x060014FD RID: 5373 RVA: 0x0004254C File Offset: 0x0004074C
+		// Token: 0x06001697 RID: 5783 RVA: 0x00046294 File Offset: 0x00044494
 		private IHitBulletTypeAllCharacterAttack_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060014FE RID: 5374 RVA: 0x00042584 File Offset: 0x00040784
+		// Token: 0x06001698 RID: 5784 RVA: 0x000462CC File Offset: 0x000444CC
 		public static IHitBulletTypeAllCharacterAttack Create([Nullable(2)] IHitBulletTypeAllCharacterAttack instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014FF RID: 5375 RVA: 0x00042597 File Offset: 0x00040797
+		// Token: 0x06001699 RID: 5785 RVA: 0x000462DF File Offset: 0x000444DF
 		public static IHitBulletTypeAllCharacterAttack CreateFromSetValue([Nullable(2)] IHitBulletTypeAllCharacterAttack_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001500 RID: 5376 RVA: 0x000425AA File Offset: 0x000407AA
+		// Token: 0x0600169A RID: 5786 RVA: 0x000462F2 File Offset: 0x000444F2
 		public new IHitBulletTypeAllCharacterAttack_SetValue ToSetValue()
 		{
 			return new IHitBulletTypeAllCharacterAttack_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005C4 RID: 1476
-		// (get) Token: 0x06001501 RID: 5377 RVA: 0x000425BD File Offset: 0x000407BD
-		// (set) Token: 0x06001502 RID: 5378 RVA: 0x000425E8 File Offset: 0x000407E8
+		// Token: 0x1700062B RID: 1579
+		// (get) Token: 0x0600169B RID: 5787 RVA: 0x00046305 File Offset: 0x00044505
+		// (set) Token: 0x0600169C RID: 5788 RVA: 0x00046330 File Offset: 0x00044530
 		public override EHitBulletType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001059 RID: 4185
+		// Token: 0x0400117B RID: 4475
 		[Nullable(2)]
 		protected new IHitBulletTypeAllCharacterAttack FbInstance;
 
-		// Token: 0x0400105A RID: 4186
+		// Token: 0x0400117C RID: 4476
 		[Nullable(2)]
 		protected new IHitBulletTypeAllCharacterAttack_SetValue PocoInterface;
 	}

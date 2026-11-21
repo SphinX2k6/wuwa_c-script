@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CFF RID: 3327
+	// Token: 0x02000DF7 RID: 3575
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IDynamicPortal : IPortalMode
 	{
-		// Token: 0x06004BF4 RID: 19444 RVA: 0x000BD756 File Offset: 0x000BB956
-		[NullableContext(1)]
+		// Token: 0x06005102 RID: 20738 RVA: 0x000C8C86 File Offset: 0x000C6E86
+		[NullableContext(0)]
 		public static IDynamicPortal Create(IDynamicPortal? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170017B3 RID: 6067
-		// (get) Token: 0x06004BF5 RID: 19445 RVA: 0x000BD775 File Offset: 0x000BB975
+		// Token: 0x1700190F RID: 6415
+		// (get) Token: 0x06005103 RID: 20739 RVA: 0x000C8CA5 File Offset: 0x000C6EA5
 		public override EPortalType Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017B4 RID: 6068
-		// (get) Token: 0x06004BF6 RID: 19446 RVA: 0x000BD782 File Offset: 0x000BB982
+		// Token: 0x17001910 RID: 6416
+		// (get) Token: 0x06005104 RID: 20740 RVA: 0x000C8CB2 File Offset: 0x000C6EB2
 		public override EPortalModel PortalModel
 		{
 			get
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017B5 RID: 6069
-		// (get) Token: 0x06004BF7 RID: 19447 RVA: 0x000BD78F File Offset: 0x000BB98F
+		// Token: 0x17001911 RID: 6417
+		// (get) Token: 0x06005105 RID: 20741 RVA: 0x000C8CBF File Offset: 0x000C6EBF
 		public override IPortalRenderConfig RenderConfig
 		{
 			get
@@ -59,13 +59,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B6C RID: 11116
+		// Token: 0x04002E26 RID: 11814
 		private IDynamicPortal Instance;
 
-		// Token: 0x04002B6D RID: 11117
+		// Token: 0x04002E27 RID: 11815
 		private IPortalRenderConfig _RenderConfigCache;
 
-		// Token: 0x04002B6E RID: 11118
+		// Token: 0x04002E28 RID: 11816
 		private bool _RenderConfigInited;
 	}
 }

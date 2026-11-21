@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002ACB RID: 10955
+// Token: 0x02002047 RID: 8263
 public class SurvivorsRogueCardComponentLvDesc : SurvivorsRogueCardComponent
 {
-	// Token: 0x06016CBA RID: 93370 RVA: 0x005C9D9C File Offset: 0x005C7F9C
+	// Token: 0x060146EB RID: 83691 RVA: 0x005F68F0 File Offset: 0x005F4AF0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -15,20 +15,20 @@ public class SurvivorsRogueCardComponentLvDesc : SurvivorsRogueCardComponent
 		};
 	}
 
-	// Token: 0x06016CBB RID: 93371 RVA: 0x005C9DBF File Offset: 0x005C7FBF
+	// Token: 0x060146EC RID: 83692 RVA: 0x005F6913 File Offset: 0x005F4B13
 	[NullableContext(2)]
 	protected override string OnGetResourceId()
 	{
 		return "UiItem_SurvivorsCardTips";
 	}
 
-	// Token: 0x06016CBC RID: 93372 RVA: 0x005C9DC6 File Offset: 0x005C7FC6
+	// Token: 0x060146ED RID: 83693 RVA: 0x005F691A File Offset: 0x005F4B1A
 	public override ECardMountPos GetLayoutLevel()
 	{
 		return ECardMountPos.Bottom;
 	}
 
-	// Token: 0x06016CBD RID: 93373 RVA: 0x005C9DCC File Offset: 0x005C7FCC
+	// Token: 0x060146EE RID: 83694 RVA: 0x005F6920 File Offset: 0x005F4B20
 	protected override void OnRefresh([Nullable(new byte[]
 	{
 		1,
@@ -62,7 +62,7 @@ public class SurvivorsRogueCardComponentLvDesc : SurvivorsRogueCardComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x06016CBE RID: 93374 RVA: 0x005C9E7E File Offset: 0x005C807E
+	// Token: 0x060146EF RID: 83695 RVA: 0x005F69D2 File Offset: 0x005F4BD2
 	[NullableContext(1)]
 	public void SetText(string txtId, params string[] args)
 	{

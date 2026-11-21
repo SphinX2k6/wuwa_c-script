@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000811 RID: 2065
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008B4 RID: 2228
 	public class IWuWaGoPressureTrigger : IWuWaGoEntityBase
 	{
-		// Token: 0x06002CD5 RID: 11477 RVA: 0x000743D8 File Offset: 0x000725D8
+		// Token: 0x06003005 RID: 12293 RVA: 0x0007B73C File Offset: 0x0007993C
 		private IWuWaGoPressureTrigger_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002CD6 RID: 11478 RVA: 0x00074410 File Offset: 0x00072610
+		// Token: 0x06003006 RID: 12294 RVA: 0x0007B774 File Offset: 0x00079974
 		public static IWuWaGoPressureTrigger Create([Nullable(2)] IWuWaGoPressureTrigger instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002CD7 RID: 11479 RVA: 0x00074423 File Offset: 0x00072623
+		// Token: 0x06003007 RID: 12295 RVA: 0x0007B787 File Offset: 0x00079987
 		public static IWuWaGoPressureTrigger CreateFromSetValue([Nullable(2)] IWuWaGoPressureTrigger_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002CD8 RID: 11480 RVA: 0x00074436 File Offset: 0x00072636
+		// Token: 0x06003008 RID: 12296 RVA: 0x0007B79A File Offset: 0x0007999A
 		public new IWuWaGoPressureTrigger_SetValue ToSetValue()
 		{
 			return new IWuWaGoPressureTrigger_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BB4 RID: 2996
-		// (get) Token: 0x06002CD9 RID: 11481 RVA: 0x0007446D File Offset: 0x0007266D
-		// (set) Token: 0x06002CDA RID: 11482 RVA: 0x00074498 File Offset: 0x00072698
+		// Token: 0x17000C77 RID: 3191
+		// (get) Token: 0x06003009 RID: 12297 RVA: 0x0007B7D1 File Offset: 0x000799D1
+		// (set) Token: 0x0600300A RID: 12298 RVA: 0x0007B7FC File Offset: 0x000799FC
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BB5 RID: 2997
-		// (get) Token: 0x06002CDB RID: 11483 RVA: 0x000744A8 File Offset: 0x000726A8
-		// (set) Token: 0x06002CDC RID: 11484 RVA: 0x00074509 File Offset: 0x00072709
+		// Token: 0x17000C78 RID: 3192
+		// (get) Token: 0x0600300B RID: 12299 RVA: 0x0007B80C File Offset: 0x00079A0C
+		// (set) Token: 0x0600300C RID: 12300 RVA: 0x0007B86D File Offset: 0x00079A6D
 		public virtual IWuWaGoGridLinkData LinkData
 		{
 			get
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BB6 RID: 2998
-		// (get) Token: 0x06002CDD RID: 11485 RVA: 0x00074520 File Offset: 0x00072720
-		// (set) Token: 0x06002CDE RID: 11486 RVA: 0x000745B3 File Offset: 0x000727B3
+		// Token: 0x17000C79 RID: 3193
+		// (get) Token: 0x0600300D RID: 12301 RVA: 0x0007B884 File Offset: 0x00079A84
+		// (set) Token: 0x0600300E RID: 12302 RVA: 0x0007B917 File Offset: 0x00079B17
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> EnterActionList
 		{
 			get
@@ -156,9 +154,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BB7 RID: 2999
-		// (get) Token: 0x06002CDF RID: 11487 RVA: 0x000745C8 File Offset: 0x000727C8
-		// (set) Token: 0x06002CE0 RID: 11488 RVA: 0x0007465B File Offset: 0x0007285B
+		// Token: 0x17000C7A RID: 3194
+		// (get) Token: 0x0600300F RID: 12303 RVA: 0x0007B92C File Offset: 0x00079B2C
+		// (set) Token: 0x06003010 RID: 12304 RVA: 0x0007B9BF File Offset: 0x00079BBF
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> ExitActionList
 		{
 			get
@@ -194,30 +192,30 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001DAA RID: 7594
+		// Token: 0x04001FB6 RID: 8118
 		[Nullable(2)]
 		protected new IWuWaGoPressureTrigger FbInstance;
 
-		// Token: 0x04001DAB RID: 7595
+		// Token: 0x04001FB7 RID: 8119
 		[Nullable(2)]
 		protected new IWuWaGoPressureTrigger_SetValue PocoInterface;
 
-		// Token: 0x04001DAC RID: 7596
+		// Token: 0x04001FB8 RID: 8120
 		private IWuWaGoGridLinkData _LinkDataCache;
 
-		// Token: 0x04001DAD RID: 7597
+		// Token: 0x04001FB9 RID: 8121
 		private bool _LinkDataInited;
 
-		// Token: 0x04001DAE RID: 7598
+		// Token: 0x04001FBA RID: 8122
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _EnterActionListCache;
 
-		// Token: 0x04001DAF RID: 7599
+		// Token: 0x04001FBB RID: 8123
 		private bool _EnterActionListInited;
 
-		// Token: 0x04001DB0 RID: 7600
+		// Token: 0x04001FBC RID: 8124
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ExitActionListCache;
 
-		// Token: 0x04001DB1 RID: 7601
+		// Token: 0x04001FBD RID: 8125
 		private bool _ExitActionListInited;
 	}
 }

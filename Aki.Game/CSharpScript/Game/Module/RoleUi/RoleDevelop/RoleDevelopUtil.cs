@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,6 +11,7 @@ using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Map;
 using CSharpScript.Game.Module.Map.MapDefine;
+using CSharpScript.Game.Module.RoleUi.RoleDevelop.Data;
 using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.WorldMap;
 using CSharpScript.Game.Ui;
@@ -19,12 +19,12 @@ using CSharpScript.Module.InstanceDungeon;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D34 RID: 19764
+	// Token: 0x02003CF3 RID: 15603
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopUtil
 	{
-		// Token: 0x060330EA RID: 209130 RVA: 0x00BE4850 File Offset: 0x00BE2A50
+		// Token: 0x06027EDB RID: 163547 RVA: 0x00B2A448 File Offset: 0x00B28648
 		public static bool IsHotRoleDevelopValid(int roleProspectId)
 		{
 			if (!RoleDevelopUtil.IsHotRole(roleProspectId))
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return (typeId != 1 || RoleDevelopUtil.IsRoleInProspectTime(roleProspectId)) && typeId != 0 && typeId != 4;
 		}
 
-		// Token: 0x060330EB RID: 209131 RVA: 0x00BE4890 File Offset: 0x00BE2A90
+		// Token: 0x06027EDC RID: 163548 RVA: 0x00B2A488 File Offset: 0x00B28688
 		public static RoleDevCultivateProject? GetCultivateProject(int roleId)
 		{
 			int? cultivateProjectId = RoleDevelopUtil.GetCultivateProjectId(roleId);
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return RoleDevConfig.Instance.GetCultivateProjectConfig(cultivateProjectId.Value);
 		}
 
-		// Token: 0x060330EC RID: 209132 RVA: 0x00BE48C8 File Offset: 0x00BE2AC8
+		// Token: 0x06027EDD RID: 163549 RVA: 0x00B2A4C0 File Offset: 0x00B286C0
 		public static int? GetCultivateProjectId(int roleId)
 		{
 			RoleDevProject? roleDevProjectConfig = RoleDevConfig.Instance.GetRoleDevProjectConfig(roleId);
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return new int?(projectGroupArray[currentProjectNum]);
 		}
 
-		// Token: 0x060330ED RID: 209133 RVA: 0x00BE4910 File Offset: 0x00BE2B10
+		// Token: 0x06027EDE RID: 163550 RVA: 0x00B2A508 File Offset: 0x00B28708
 		public static int GetCurrentProjectNum()
 		{
 			int originWorldLevel = WorldLevelModel.Instance.OriginWorldLevel;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return 0;
 		}
 
-		// Token: 0x060330EE RID: 209134 RVA: 0x00BE49AC File Offset: 0x00BE2BAC
+		// Token: 0x06027EDF RID: 163551 RVA: 0x00B2A5A4 File Offset: 0x00B287A4
 		public static bool CheckIsAllNeedItemsEnough(List<RoleDevelopNeedItem> needItems)
 		{
 			foreach (RoleDevelopNeedItem roleDevelopNeedItem in needItems)
@@ -100,13 +100,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return true;
 		}
 
-		// Token: 0x060330EF RID: 209135 RVA: 0x00BE4A24 File Offset: 0x00BE2C24
+		// Token: 0x06027EE0 RID: 163552 RVA: 0x00B2A61C File Offset: 0x00B2881C
 		public static bool IsUnknownItem(int itemId)
 		{
 			return itemId == RoleDevConfig.Instance.GetRoleDevStaticConfig().Value.UnknownItemId;
 		}
 
-		// Token: 0x060330F0 RID: 209136 RVA: 0x00BE4A50 File Offset: 0x00BE2C50
+		// Token: 0x06027EE1 RID: 163553 RVA: 0x00B2A648 File Offset: 0x00B28848
 		public static bool CheckIsAllNeedItemsEnoughOrCanBeFilled(List<RoleDevelopNeedItem> needItems)
 		{
 			if (RoleDevelopUtil.CheckIsItemsHaveUnknownMaterial(needItems))
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return true;
 		}
 
-		// Token: 0x060330F1 RID: 209137 RVA: 0x00BE4AC0 File Offset: 0x00BE2CC0
+		// Token: 0x06027EE2 RID: 163554 RVA: 0x00B2A6B8 File Offset: 0x00B288B8
 		public static bool CheckIsItemsHaveUnknownMaterial(List<RoleDevelopNeedItem> items)
 		{
 			using (List<RoleDevelopNeedItem>.Enumerator enumerator = items.GetEnumerator())
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return false;
 		}
 
-		// Token: 0x060330F2 RID: 209138 RVA: 0x00BE4B1C File Offset: 0x00BE2D1C
+		// Token: 0x06027EE3 RID: 163555 RVA: 0x00B2A714 File Offset: 0x00B28914
 		public static List<RoleDevelopNeedItem> SortItemsByQuality(List<RoleDevelopNeedItem> items)
 		{
 			items.Sort(delegate(RoleDevelopNeedItem a, RoleDevelopNeedItem b)
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return items;
 		}
 
-		// Token: 0x060330F3 RID: 209139 RVA: 0x00BE4B44 File Offset: 0x00BE2D44
+		// Token: 0x06027EE4 RID: 163556 RVA: 0x00B2A73C File Offset: 0x00B2893C
 		public static List<RoleDevelopNeedItem> CalcUpgradeNeedItems(int totalExp, List<RoleDevelopNeedItem> sortedExpItems, Func<int, int> getItemExp)
 		{
 			if (totalExp <= 0 || sortedExpItems.Count == 0)
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return list;
 		}
 
-		// Token: 0x060330F4 RID: 209140 RVA: 0x00BE4CB8 File Offset: 0x00BE2EB8
+		// Token: 0x06027EE5 RID: 163557 RVA: 0x00B2A8B0 File Offset: 0x00B28AB0
 		public static List<RoleDevelopItemGroup> BuildGroupItemDataByNeedItems(List<RoleDevelopNeedItem> needItems, bool useSubGroup = false, bool sortByType = true, bool excludeSatisfied = false)
 		{
 			Dictionary<string, RoleDevelopItemGroup> dictionary = new Dictionary<string, RoleDevelopItemGroup>();
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return list2;
 		}
 
-		// Token: 0x060330F5 RID: 209141 RVA: 0x00BE4F9C File Offset: 0x00BE319C
+		// Token: 0x06027EE6 RID: 163558 RVA: 0x00B2AB94 File Offset: 0x00B28D94
 		private static void AddItemToGroup(Dictionary<string, RoleDevelopItemGroup> groupMap, string groupKey, EItemMaterialType itemType, RoleDevelopNeedItem item)
 		{
 			RoleDevelopItemGroup roleDevelopItemGroup;
@@ -326,13 +326,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			roleDevelopItemGroup.Items.Add(item);
 		}
 
-		// Token: 0x060330F6 RID: 209142 RVA: 0x00BE504C File Offset: 0x00BE324C
+		// Token: 0x06027EE7 RID: 163559 RVA: 0x00B2AC44 File Offset: 0x00B28E44
 		public static bool IsHotRole(int roleId)
 		{
 			return RoleDevConfig.Instance.HasRoleDevProsListConfig(roleId);
 		}
 
-		// Token: 0x060330F7 RID: 209143 RVA: 0x00BE505C File Offset: 0x00BE325C
+		// Token: 0x06027EE8 RID: 163560 RVA: 0x00B2AC54 File Offset: 0x00B28E54
 		public static bool IsRoleInProspectTime(int roleId)
 		{
 			if (!RoleDevelopUtil.IsHotRole(roleId))
@@ -350,19 +350,19 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return serverTime >= (double)prospectBeginTime && serverTime <= (double)prospectEndTime;
 		}
 
-		// Token: 0x060330F8 RID: 209144 RVA: 0x00BE50B1 File Offset: 0x00BE32B1
+		// Token: 0x06027EE9 RID: 163561 RVA: 0x00B2ACA9 File Offset: 0x00B28EA9
 		public static bool IsProspectRole(int roleId)
 		{
 			return RoleDevelopUtil.IsHotRole(roleId) && RoleDevConfig.Instance.GetRoleDevProsListConfig(roleId).TypeId == 1;
 		}
 
-		// Token: 0x060330F9 RID: 209145 RVA: 0x00BE50D0 File Offset: 0x00BE32D0
+		// Token: 0x06027EEA RID: 163562 RVA: 0x00B2ACC8 File Offset: 0x00B28EC8
 		public static bool IsProspectRoleValid(int roleId)
 		{
 			return RoleDevelopUtil.IsHotRole(roleId) && RoleDevConfig.Instance.GetRoleDevProsListConfig(roleId).TypeId == 1 && RoleDevelopUtil.IsRoleInProspectTime(roleId);
 		}
 
-		// Token: 0x060330FA RID: 209146 RVA: 0x00BE50F8 File Offset: 0x00BE32F8
+		// Token: 0x06027EEB RID: 163563 RVA: 0x00B2ACF0 File Offset: 0x00B28EF0
 		public static bool IsAnyProspectRole(int roleId)
 		{
 			if (!RoleDevelopUtil.IsHotRole(roleId))
@@ -373,55 +373,55 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return typeId == 1 || (typeId == 2 && RoleDevelopUtil.IsRoleInProspectTime(roleId));
 		}
 
-		// Token: 0x060330FB RID: 209147 RVA: 0x00BE5132 File Offset: 0x00BE3332
+		// Token: 0x06027EEC RID: 163564 RVA: 0x00B2AD2A File Offset: 0x00B28F2A
 		public static bool IsCurrentVersionProspectRole(int roleId)
 		{
 			return RoleDevelopUtil.IsHotRole(roleId) && RoleDevConfig.Instance.GetRoleDevProsListConfig(roleId).TypeId == 2;
 		}
 
-		// Token: 0x060330FC RID: 209148 RVA: 0x00BE5151 File Offset: 0x00BE3351
+		// Token: 0x06027EED RID: 163565 RVA: 0x00B2AD49 File Offset: 0x00B28F49
 		public static bool IsCurrentVersionProspectRoleInProspect(int roleId)
 		{
 			return RoleDevelopUtil.IsHotRole(roleId) && RoleDevConfig.Instance.GetRoleDevProsListConfig(roleId).TypeId == 2 && RoleDevelopUtil.IsRoleInProspectTime(roleId);
 		}
 
-		// Token: 0x060330FD RID: 209149 RVA: 0x00BE5178 File Offset: 0x00BE3378
+		// Token: 0x06027EEE RID: 163566 RVA: 0x00B2AD70 File Offset: 0x00B28F70
 		public static bool IsCurrentVersionProspectRoleGachaValid(int roleId)
 		{
 			return RoleDevelopUtil.IsHotRole(roleId) && RoleDevConfig.Instance.GetRoleDevProsListConfig(roleId).TypeId == 2 && RoleDevelopUtil.GetHotRoleGachaId(roleId, true) != null;
 		}
 
-		// Token: 0x060330FE RID: 209150 RVA: 0x00BE51B3 File Offset: 0x00BE33B3
+		// Token: 0x06027EEF RID: 163567 RVA: 0x00B2ADAB File Offset: 0x00B28FAB
 		public static bool IsCurrentVersionProspectRoleValid(int roleId)
 		{
 			return RoleDevelopUtil.IsCurrentVersionProspectRoleInProspect(roleId) || RoleDevelopUtil.IsCurrentVersionProspectRoleGachaValid(roleId);
 		}
 
-		// Token: 0x060330FF RID: 209151 RVA: 0x00BE51C5 File Offset: 0x00BE33C5
+		// Token: 0x06027EF0 RID: 163568 RVA: 0x00B2ADBD File Offset: 0x00B28FBD
 		public static bool IsReturningRole(int roleId)
 		{
 			return RoleDevelopUtil.IsHotRole(roleId) && RoleDevConfig.Instance.GetRoleDevProsListConfig(roleId).TypeId == 3;
 		}
 
-		// Token: 0x06033100 RID: 209152 RVA: 0x00BE51E4 File Offset: 0x00BE33E4
+		// Token: 0x06027EF1 RID: 163569 RVA: 0x00B2ADDC File Offset: 0x00B28FDC
 		public static bool IsReturningRoleInProspect(int roleId)
 		{
 			return RoleDevelopUtil.IsHotRole(roleId) && RoleDevConfig.Instance.GetRoleDevProsListConfig(roleId).TypeId == 3 && RoleDevelopUtil.IsRoleInProspectTime(roleId);
 		}
 
-		// Token: 0x06033101 RID: 209153 RVA: 0x00BE520C File Offset: 0x00BE340C
+		// Token: 0x06027EF2 RID: 163570 RVA: 0x00B2AE04 File Offset: 0x00B29004
 		public static bool IsReturningRoleGachaValid(int roleId)
 		{
 			return RoleDevelopUtil.IsHotRole(roleId) && RoleDevConfig.Instance.GetRoleDevProsListConfig(roleId).TypeId == 3 && RoleDevelopUtil.GetHotRoleGachaId(roleId, true) != null;
 		}
 
-		// Token: 0x06033102 RID: 209154 RVA: 0x00BE5247 File Offset: 0x00BE3447
+		// Token: 0x06027EF3 RID: 163571 RVA: 0x00B2AE3F File Offset: 0x00B2903F
 		public static bool IsReturningRoleValid(int roleId)
 		{
 			return RoleDevelopUtil.IsReturningRoleInProspect(roleId) || RoleDevelopUtil.IsReturningRoleGachaValid(roleId);
 		}
 
-		// Token: 0x06033103 RID: 209155 RVA: 0x00BE525C File Offset: 0x00BE345C
+		// Token: 0x06027EF4 RID: 163572 RVA: 0x00B2AE54 File Offset: 0x00B29054
 		public static int? GetHotRoleGachaId(int id, bool checkValid = false)
 		{
 			if (!RoleDevelopUtil.IsHotRole(id))
@@ -436,7 +436,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return new int?(gachaId);
 		}
 
-		// Token: 0x06033104 RID: 209156 RVA: 0x00BE52A8 File Offset: 0x00BE34A8
+		// Token: 0x06027EF5 RID: 163573 RVA: 0x00B2AEA0 File Offset: 0x00B290A0
 		public static List<int> GetHotRoleSpecialGachaIds(int id, bool checkValid = false)
 		{
 			List<int> list = new List<int>();
@@ -454,7 +454,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return list;
 		}
 
-		// Token: 0x06033105 RID: 209157 RVA: 0x00BE532C File Offset: 0x00BE352C
+		// Token: 0x06027EF6 RID: 163574 RVA: 0x00B2AF24 File Offset: 0x00B29124
 		public static List<int> GetHotRoleGachaIds(int id, bool checkValid = false)
 		{
 			List<int> list = new List<int>();
@@ -468,13 +468,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return list;
 		}
 
-		// Token: 0x06033106 RID: 209158 RVA: 0x00BE536D File Offset: 0x00BE356D
+		// Token: 0x06027EF7 RID: 163575 RVA: 0x00B2AF65 File Offset: 0x00B29165
 		public static bool IsGachaValid(int gachaId)
 		{
 			return GachaModel.Instance.CheckGachaValidByGachaId(gachaId);
 		}
 
-		// Token: 0x06033107 RID: 209159 RVA: 0x00BE537A File Offset: 0x00BE357A
+		// Token: 0x06027EF8 RID: 163576 RVA: 0x00B2AF72 File Offset: 0x00B29172
 		public static List<int> GetHotWeaponGachaIds(int id, bool checkValid = false)
 		{
 			if (!RoleDevelopUtil.IsHotRole(id))
@@ -488,7 +488,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return RoleDevelopUtil.GetHotRoleGachaIds(id, checkValid);
 		}
 
-		// Token: 0x06033108 RID: 209160 RVA: 0x00BE53AC File Offset: 0x00BE35AC
+		// Token: 0x06027EF9 RID: 163577 RVA: 0x00B2AFA4 File Offset: 0x00B291A4
 		public static void OpenWeaponReplaceView(int roleId, int weaponIncId)
 		{
 			RoleViewViewModel roleViewViewModel = new RoleViewViewModel(roleId, !UiSceneManager.Instance.HasRoleSystemRoleActor(), ERoleViewSource.Normal);
@@ -509,7 +509,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			RoleController.Instance.OpenRoleViewByViewModel(EUiViewName.WeaponReplaceView, roleViewViewModel);
 		}
 
-		// Token: 0x06033109 RID: 209161 RVA: 0x00BE5438 File Offset: 0x00BE3638
+		// Token: 0x06027EFA RID: 163578 RVA: 0x00B2B030 File Offset: 0x00B29230
 		public static int GetDefaultRecommendPlanId(int roleId)
 		{
 			List<VisionFetterRecommendInfo> roleFetterRecommendInfo = VisionRecommendModel.Instance.GetRoleFetterRecommendInfo(roleId);
@@ -521,7 +521,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return roleFetterRecommendInfo[0].GetPlanId();
 		}
 
-		// Token: 0x0603310A RID: 209162 RVA: 0x00BE546C File Offset: 0x00BE366C
+		// Token: 0x06027EFB RID: 163579 RVA: 0x00B2B064 File Offset: 0x00B29264
 		public static List<int> GetDefaultRecommendFetterGroupIdList(int roleId)
 		{
 			List<int> list = new List<int>();
@@ -534,7 +534,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			VisionFetterRecommendInfo visionFetterRecommendInfo = roleFetterRecommendInfo[0];
 			int recommendFetterGroupId = visionFetterRecommendInfo.GetRecommendFetterGroupId();
 			EFetterGroupType fetterType = visionFetterRecommendInfo.GetFetterType();
-			if (RoleDevConfig.Instance.GetRoleDevStaticConfig().Value.GetPhantomSpecialGroupListArray().Contains(recommendFetterGroupId))
+			if (NoLinq.Contains<int>(RoleDevConfig.Instance.GetRoleDevStaticConfig().Value.GetPhantomSpecialGroupListBytes(), recommendFetterGroupId))
 			{
 				foreach (IVisionFetterCount visionFetterCount in visionFetterRecommendInfo.GetFetterCountList())
 				{
@@ -565,14 +565,14 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return list;
 		}
 
-		// Token: 0x0603310B RID: 209163 RVA: 0x00BE559C File Offset: 0x00BE379C
+		// Token: 0x06027EFC RID: 163580 RVA: 0x00B2B194 File Offset: 0x00B29394
 		public static List<VisionFetterRecommendInfo> SortVisionFetterRecommendInfo(List<VisionFetterRecommendInfo> recommendInfo)
 		{
 			recommendInfo.Sort((VisionFetterRecommendInfo a, VisionFetterRecommendInfo b) => b.GetUsage() - a.GetUsage());
 			return recommendInfo;
 		}
 
-		// Token: 0x0603310C RID: 209164 RVA: 0x00BE55C4 File Offset: 0x00BE37C4
+		// Token: 0x06027EFD RID: 163581 RVA: 0x00B2B1BC File Offset: 0x00B293BC
 		public static List<RoleDevelopPhantomSuitData> CreatePhantomSuitDataList(int id, List<VisionFetterRecommendInfo> recommendInfo, int recommendPlanId, int? recommendFirstVisionMonsterId = null)
 		{
 			List<RoleDevelopPhantomSuitData> list = new List<RoleDevelopPhantomSuitData>();
@@ -606,7 +606,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			}
 			int recommendFetterGroupId = visionFetterRecommendInfo.GetRecommendFetterGroupId();
 			EFetterGroupType fetterType = visionFetterRecommendInfo.GetFetterType();
-			if (RoleDevConfig.Instance.GetRoleDevStaticConfig().Value.GetPhantomSpecialGroupListArray().Contains(recommendFetterGroupId))
+			if (NoLinq.Contains<int>(RoleDevConfig.Instance.GetRoleDevStaticConfig().Value.GetPhantomSpecialGroupListBytes(), recommendFetterGroupId))
 			{
 				foreach (IVisionFetterCount visionFetterCount in visionFetterRecommendInfo.GetFetterCountList())
 				{
@@ -655,7 +655,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return list;
 		}
 
-		// Token: 0x0603310D RID: 209165 RVA: 0x00BE57D0 File Offset: 0x00BE39D0
+		// Token: 0x06027EFE RID: 163582 RVA: 0x00B2B3C8 File Offset: 0x00B295C8
 		public static RoleDevelopPhantomVisionSuitItemData CreateFetterGroupVisionSuitItem(int fetterGroupId, int roleId, int firstVisionMonsterId)
 		{
 			Aki.Config.PhantomItem phantomItem = PhantomBattleConfig.Instance.GetPhantomItemByMonsterId(firstVisionMonsterId)[0];
@@ -683,7 +683,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			};
 		}
 
-		// Token: 0x0603310E RID: 209166 RVA: 0x00BE588C File Offset: 0x00BE3A8C
+		// Token: 0x06027EFF RID: 163583 RVA: 0x00B2B484 File Offset: 0x00B29684
 		public static RoleDevelopPhantomVisionSuitItemData CreateDungeonVisionSuitItem(int dungeonId, int roleId)
 		{
 			if (dungeonId == 0)
@@ -715,7 +715,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			};
 		}
 
-		// Token: 0x0603310F RID: 209167 RVA: 0x00BE5974 File Offset: 0x00BE3B74
+		// Token: 0x06027F00 RID: 163584 RVA: 0x00B2B56C File Offset: 0x00B2976C
 		private static List<DropRewardItemData> GetDungeonDropRewards(SilentAreaDetection conf)
 		{
 			List<DropRewardItemData> list = new List<DropRewardItemData>();
@@ -740,7 +740,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return list;
 		}
 
-		// Token: 0x06033110 RID: 209168 RVA: 0x00BE5A4C File Offset: 0x00BE3C4C
+		// Token: 0x06027F01 RID: 163585 RVA: 0x00B2B644 File Offset: 0x00B29844
 		public static Dictionary<EItemMaterialType, int> ConvertSkillItemJumpTypes(List<IntArray> skillItemJumpTypes)
 		{
 			Dictionary<EItemMaterialType, int> dictionary = new Dictionary<EItemMaterialType, int>();
@@ -756,7 +756,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return dictionary;
 		}
 
-		// Token: 0x06033111 RID: 209169 RVA: 0x00BE5AC4 File Offset: 0x00BE3CC4
+		// Token: 0x06027F02 RID: 163586 RVA: 0x00B2B6BC File Offset: 0x00B298BC
 		public static bool HandleItemJump(int roleId, RoleDevelopItemGroup groupItem)
 		{
 			Dictionary<EItemMaterialType, int> dictionary;
@@ -802,7 +802,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return false;
 		}
 
-		// Token: 0x06033112 RID: 209170 RVA: 0x00BE5C44 File Offset: 0x00BE3E44
+		// Token: 0x06027F03 RID: 163587 RVA: 0x00B2B83C File Offset: 0x00B29A3C
 		public static bool HandlePathJump(List<int> ids, int itemId)
 		{
 			foreach (int num in ids)
@@ -816,7 +816,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return false;
 		}
 
-		// Token: 0x06033113 RID: 209171 RVA: 0x00BE5CA8 File Offset: 0x00BE3EA8
+		// Token: 0x06027F04 RID: 163588 RVA: 0x00B2B8A0 File Offset: 0x00B29AA0
 		public static bool CheckAccessPathUnlocked(int accessPathId)
 		{
 			SkipInterfaceConfig instance = SkipInterfaceConfig.Instance;
@@ -824,7 +824,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return accessPath == null || accessPath.Value.SkipName != 2 || RoleDevelopUtil.CheckDungeonAccessUnlocked(accessPath.Value);
 		}
 
-		// Token: 0x06033114 RID: 209172 RVA: 0x00BE5CFC File Offset: 0x00BE3EFC
+		// Token: 0x06027F05 RID: 163589 RVA: 0x00B2B8F4 File Offset: 0x00B29AF4
 		public static bool CheckDungeonAccessUnlocked(AccessPath config)
 		{
 			int id = int.Parse(config.Val1);
@@ -848,7 +848,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return flag && flag2;
 		}
 
-		// Token: 0x06033115 RID: 209173 RVA: 0x00BE5E08 File Offset: 0x00BE4008
+		// Token: 0x06027F06 RID: 163590 RVA: 0x00B2BA00 File Offset: 0x00B29C00
 		public static bool HandleSilentDetectionJump(List<int> ids, int priorityIndex)
 		{
 			if (ids == null || ids.Count == 0)
@@ -877,7 +877,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return RoleDevelopUtil.TryJumpSingleSilentAreaDetection(ids[ids.Count - 1], true);
 		}
 
-		// Token: 0x06033116 RID: 209174 RVA: 0x00BE5EC0 File Offset: 0x00BE40C0
+		// Token: 0x06027F07 RID: 163591 RVA: 0x00B2BAB8 File Offset: 0x00B29CB8
 		public static bool HandleDungeonDetectionJump(List<int> ids, int priorityIndex)
 		{
 			if (ids == null || ids.Count == 0)
@@ -906,7 +906,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return RoleDevelopUtil.TryJumpSingleDungeonDetection(ids[ids.Count - 1], true);
 		}
 
-		// Token: 0x06033117 RID: 209175 RVA: 0x00BE5F78 File Offset: 0x00BE4178
+		// Token: 0x06027F08 RID: 163592 RVA: 0x00B2BB70 File Offset: 0x00B29D70
 		private static bool TryPreOpenDetectionJump(int detectionId, ESoundAreaDataType soundAreaType, int preOpenId)
 		{
 			if (OnlineModel.Instance.GetIsTeamModel())
@@ -922,7 +922,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return true;
 		}
 
-		// Token: 0x06033118 RID: 209176 RVA: 0x00BE5FE0 File Offset: 0x00BE41E0
+		// Token: 0x06027F09 RID: 163593 RVA: 0x00B2BBD8 File Offset: 0x00B29DD8
 		private static bool FocalDetectionMark(int markId)
 		{
 			MapMark? configMark = MapConfig.Instance.GetConfigMark(markId);
@@ -934,7 +934,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			return true;
 		}
 
-		// Token: 0x06033119 RID: 209177 RVA: 0x00BE6020 File Offset: 0x00BE4220
+		// Token: 0x06027F0A RID: 163594 RVA: 0x00B2BC18 File Offset: 0x00B29E18
 		private static bool TryJumpSingleDungeonDetection(int detectionConfId, bool skipUnlockCheck = false)
 		{
 			if (detectionConfId == 0)
@@ -999,7 +999,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			}
 		}
 
-		// Token: 0x0603311A RID: 209178 RVA: 0x00BE61B0 File Offset: 0x00BE43B0
+		// Token: 0x06027F0B RID: 163595 RVA: 0x00B2BDA8 File Offset: 0x00B29FA8
 		private static bool TryJumpSingleSilentAreaDetection(int detectionConfId, bool skipUnlockCheck = false)
 		{
 			if (detectionConfId == 0)
@@ -1047,14 +1047,14 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			}
 		}
 
-		// Token: 0x0603311B RID: 209179 RVA: 0x00BE62CC File Offset: 0x00BE44CC
+		// Token: 0x06027F0C RID: 163596 RVA: 0x00B2BEC4 File Offset: 0x00B2A0C4
 		public static bool IsDungeonShowDouble(EDungeonType dungeonType)
 		{
 			ActivityDoubleRewardData adventureUpActivity = ActivityDoubleRewardController.Instance.GetAdventureUpActivity(dungeonType);
 			return (adventureUpActivity != null && adventureUpActivity.LeftUpCount > 0) || ActivityRegressModel.Instance.IsHasDoubleDrop(dungeonType);
 		}
 
-		// Token: 0x0603311C RID: 209180 RVA: 0x00BE6304 File Offset: 0x00BE4504
+		// Token: 0x06027F0D RID: 163597 RVA: 0x00B2BEFC File Offset: 0x00B2A0FC
 		public static List<EDungeonType> GetDungeonTypesByItemDetection(List<RoleDevelopNeedItem> items)
 		{
 			HashSet<EDungeonType> hashSet = new HashSet<EDungeonType>();
@@ -1094,7 +1094,255 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 					}
 				}
 			}
-			return hashSet.ToList<EDungeonType>();
+			return new List<EDungeonType>(hashSet);
+		}
+
+		// Token: 0x06027F0E RID: 163598 RVA: 0x00B2C050 File Offset: 0x00B2A250
+		public static ERoleDevelopRoleState GetRoleState(int roleId)
+		{
+			RoleDevelopData roleDevelopData = RoleDevelopModel.Instance.GetRoleDevelopData(roleId);
+			if (roleDevelopData == null)
+			{
+				return ERoleDevelopRoleState.Complete;
+			}
+			RoleDevelopRoleBaseData developRoleData = roleDevelopData.GetDevelopRoleData();
+			if (developRoleData.GetRoleLevel() < developRoleData.GetRoleTargetLevel())
+			{
+				return ERoleDevelopRoleState.LevelNotEnough;
+			}
+			return ERoleDevelopRoleState.Complete;
+		}
+
+		// Token: 0x06027F0F RID: 163599 RVA: 0x00B2C088 File Offset: 0x00B2A288
+		public static ERoleDevelopWeaponState GetWeaponState(int roleId)
+		{
+			RoleDevelopData roleDevelopData = RoleDevelopModel.Instance.GetRoleDevelopData(roleId);
+			if (roleDevelopData == null)
+			{
+				return ERoleDevelopWeaponState.Complete;
+			}
+			RoleDevelopRoleBaseData developRoleData = roleDevelopData.GetDevelopRoleData();
+			WeaponInstance weaponInstance = developRoleData.GetWeaponInstance();
+			if (weaponInstance == null)
+			{
+				return ERoleDevelopWeaponState.NotEquipped;
+			}
+			int weaponQualityThreshold = RoleDevConfig.Instance.GetRoleDevStaticConfig().Value.WeaponQualityThreshold;
+			if (weaponInstance.GetItemConfig().QualityId < weaponQualityThreshold)
+			{
+				return ERoleDevelopWeaponState.QualityLow;
+			}
+			if (developRoleData.GetWeaponLevel() < developRoleData.GetWeaponTargetLevel())
+			{
+				return ERoleDevelopWeaponState.LevelNotEnough;
+			}
+			return ERoleDevelopWeaponState.Complete;
+		}
+
+		// Token: 0x06027F10 RID: 163600 RVA: 0x00B2C0FC File Offset: 0x00B2A2FC
+		public static ERoleDevelopPhantomState GetPhantomState(int roleId)
+		{
+			RoleDevCulProjectConfig value = RoleDevConfig.Instance.GetRoleDevStaticConfig().Value;
+			int phantomNumThreshold = value.PhantomNumThreshold;
+			int phantomQualityThreshold = value.PhantomQualityThreshold;
+			int phantomLevelThreshold = value.PhantomLevelThreshold;
+			List<int> incrIdList = PhantomBattleModel.Instance.GetBattleDataById(roleId).GetIncrIdList();
+			List<PhantomBattleData> list = new List<PhantomBattleData>();
+			foreach (int num in incrIdList)
+			{
+				if (num > 0)
+				{
+					PhantomBattleData phantomBattleData = PhantomBattleModel.Instance.GetPhantomBattleData(num);
+					if (phantomBattleData != null)
+					{
+						list.Add(phantomBattleData);
+					}
+				}
+			}
+			int num2 = (phantomNumThreshold > 0) ? phantomNumThreshold : incrIdList.Count;
+			if (list.Count < num2)
+			{
+				return ERoleDevelopPhantomState.CountNotEnough;
+			}
+			if (RoleDevelopUtil.GetFetterTriggerCount(list) < 5)
+			{
+				return ERoleDevelopPhantomState.FetterNotTriggered;
+			}
+			using (List<PhantomBattleData>.Enumerator enumerator2 = list.GetEnumerator())
+			{
+				while (enumerator2.MoveNext())
+				{
+					if (enumerator2.Current.GetQuality() < phantomQualityThreshold)
+					{
+						return ERoleDevelopPhantomState.QualityLow;
+					}
+				}
+			}
+			foreach (PhantomBattleData phantomBattleData2 in list)
+			{
+				int num3 = (phantomLevelThreshold > 0) ? phantomLevelThreshold : phantomBattleData2.GetLevelLimit();
+				if (phantomBattleData2.GetPhantomLevel() < num3)
+				{
+					return ERoleDevelopPhantomState.LevelNotEnough;
+				}
+			}
+			foreach (PhantomBattleData phantomBattleData3 in list)
+			{
+				if (phantomBattleData3.GetIfHaveUnIdentifySubProp() || phantomBattleData3.GetIfHaveLockSubProp())
+				{
+					return ERoleDevelopPhantomState.SubPropLocked;
+				}
+			}
+			return ERoleDevelopPhantomState.Complete;
+		}
+
+		// Token: 0x06027F11 RID: 163601 RVA: 0x00B2C2C8 File Offset: 0x00B2A4C8
+		public static ERoleDevelopSkillState GetSkillState(int roleId)
+		{
+			RoleDevelopData roleDevelopData = RoleDevelopModel.Instance.GetRoleDevelopData(roleId);
+			if (roleDevelopData == null)
+			{
+				return ERoleDevelopSkillState.Complete;
+			}
+			if (!roleDevelopData.GetProjectData().IsSkillPlanFinished())
+			{
+				return ERoleDevelopSkillState.PlanNotFinished;
+			}
+			return ERoleDevelopSkillState.Complete;
+		}
+
+		// Token: 0x06027F12 RID: 163602 RVA: 0x00B2C2F8 File Offset: 0x00B2A4F8
+		public static ERoleDevelopCategoryHintType GetCategoryHintType(int roleId, ERoleDevelopCategoryType categoryType)
+		{
+			RoleDevelopData roleDevelopData = RoleDevelopModel.Instance.GetRoleDevelopData(roleId);
+			if (roleDevelopData == null)
+			{
+				return ERoleDevelopCategoryHintType.None;
+			}
+			return RoleDevelopUtil.GetCategoryHintType(roleDevelopData.GetProjectData(), categoryType);
+		}
+
+		// Token: 0x06027F13 RID: 163603 RVA: 0x00B2C322 File Offset: 0x00B2A522
+		public static ERoleDevelopCategoryHintType GetCategoryHintType(RoleDevelopProjectBaseData projectData, ERoleDevelopCategoryType categoryType)
+		{
+			if (projectData.IsShowFinishHint(categoryType))
+			{
+				return ERoleDevelopCategoryHintType.Finish;
+			}
+			if (projectData.IsShowUpgradeHint(categoryType))
+			{
+				return ERoleDevelopCategoryHintType.Upgrade;
+			}
+			if (projectData.IsShowCanImproveHint(categoryType))
+			{
+				return ERoleDevelopCategoryHintType.CanImprove;
+			}
+			return ERoleDevelopCategoryHintType.None;
+		}
+
+		// Token: 0x06027F14 RID: 163604 RVA: 0x00B2C348 File Offset: 0x00B2A548
+		public static bool IsKeyPropertyReached(int roleId)
+		{
+			bool roleDevelopData = RoleDevelopModel.Instance.GetRoleDevelopData(roleId) != null;
+			RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(roleId);
+			if (!roleDevelopData || roleInstanceById == null)
+			{
+				return false;
+			}
+			RoleDevProject? roleDevProjectConfig = RoleDevConfig.Instance.GetRoleDevProjectConfig(roleId);
+			if (roleDevProjectConfig == null)
+			{
+				return false;
+			}
+			int keyProperty = roleDevProjectConfig.Value.KeyProperty;
+			return keyProperty != 0 && roleInstanceById.GetAttributeData().GetAttrValueById(keyProperty) >= roleDevProjectConfig.Value.PropertyValue(1);
+		}
+
+		// Token: 0x06027F15 RID: 163605 RVA: 0x00B2C3C0 File Offset: 0x00B2A5C0
+		public static ERoleDevelopItemState GetItemState(int roleId)
+		{
+			RoleDevelopData roleDevelopData = RoleDevelopModel.Instance.GetRoleDevelopData(roleId);
+			if (roleDevelopData == null)
+			{
+				return ERoleDevelopItemState.Enough;
+			}
+			List<RoleDevelopNeedItem> list = RoleDevelopUtil.GetAllDevelopNeedItems(roleDevelopData.GetProjectData());
+			if (RoleDevelopUtil.IsAnyProspectRole(roleId))
+			{
+				int unknownItemId = RoleDevConfig.Instance.GetRoleDevStaticConfig().Value.UnknownItemId;
+				list = list.FindAll((RoleDevelopNeedItem item) => item.ItemId != unknownItemId);
+			}
+			if (!RoleDevelopUtil.CheckIsAllNeedItemsEnough(list))
+			{
+				return ERoleDevelopItemState.NotEnough;
+			}
+			return ERoleDevelopItemState.Enough;
+		}
+
+		// Token: 0x06027F16 RID: 163606 RVA: 0x00B2C438 File Offset: 0x00B2A638
+		public static List<RoleDevelopNeedItem> GetAllDevelopNeedItems(RoleDevelopProjectBaseData projectData)
+		{
+			List<RoleDevelopNeedItem> list = new List<RoleDevelopNeedItem>();
+			list.AddRange(projectData.GetRoleUpgradeNeedItems());
+			list.AddRange(projectData.GetRoleBreachNeedItems());
+			list.AddRange(projectData.GetWeaponUpgradeNeedItems());
+			list.AddRange(projectData.GetWeaponBreachNeedItems());
+			list.AddRange(projectData.GetSkillPlanNeedItems());
+			Dictionary<int, int> dictionary = new Dictionary<int, int>();
+			foreach (RoleDevelopNeedItem roleDevelopNeedItem in list)
+			{
+				int num;
+				dictionary.TryGetValue(roleDevelopNeedItem.ItemId, out num);
+				dictionary[roleDevelopNeedItem.ItemId] = num + roleDevelopNeedItem.Count;
+			}
+			List<RoleDevelopNeedItem> list2 = new List<RoleDevelopNeedItem>();
+			foreach (KeyValuePair<int, int> keyValuePair in dictionary)
+			{
+				int num2;
+				int num3;
+				keyValuePair.Deconstruct(out num2, out num3);
+				int itemId = num2;
+				int count = num3;
+				list2.Add(new RoleDevelopNeedItem
+				{
+					ItemId = itemId,
+					Count = count
+				});
+			}
+			return list2;
+		}
+
+		// Token: 0x06027F17 RID: 163607 RVA: 0x00B2C558 File Offset: 0x00B2A758
+		private static int GetFetterTriggerCount(List<PhantomBattleData> phantomDataList)
+		{
+			Dictionary<int, int> dictionary = PhantomDataBase.CalculateFetterByPhantomBattleData(new List<PhantomDataBase>(phantomDataList));
+			if (dictionary == null)
+			{
+				return 0;
+			}
+			int num = 0;
+			foreach (KeyValuePair<int, int> keyValuePair in dictionary)
+			{
+				int num2;
+				int num3;
+				keyValuePair.Deconstruct(out num2, out num3);
+				int groupId = num2;
+				int num4 = num3;
+				Dictionary<int, int> fetterGroupFetterDataById = PhantomBattleConfig.Instance.GetFetterGroupFetterDataById(groupId);
+				if (fetterGroupFetterDataById != null)
+				{
+					int num5 = 0;
+					foreach (int num6 in fetterGroupFetterDataById.Keys)
+					{
+						if (num6 <= num4 && num6 > num5)
+						{
+							num5 = num6;
+						}
+					}
+					num += num5;
+				}
+			}
+			return num;
 		}
 	}
 }

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 {
-	// Token: 0x02007200 RID: 29184
+	// Token: 0x020062B5 RID: 25269
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ElevatorNormalMoveStrategy : ElevatorMoveStrategyBase
 	{
-		// Token: 0x060476D7 RID: 292567 RVA: 0x0122F7F8 File Offset: 0x0122D9F8
+		// Token: 0x0603CFDF RID: 249823 RVA: 0x011893BC File Offset: 0x011875BC
 		private void ResetMoveMode(ELiftMoveType moveType)
 		{
 			this.MoveType = moveType;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.PathMoveDuration = 0f;
 		}
 
-		// Token: 0x060476D8 RID: 292568 RVA: 0x0122F854 File Offset: 0x0122DA54
+		// Token: 0x0603CFE0 RID: 249824 RVA: 0x01189418 File Offset: 0x01187618
 		private Vector GetEndLocation()
 		{
 			if (this.MoveType != ELiftMoveType.Teleport)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return this.EndPosition;
 		}
 
-		// Token: 0x060476D9 RID: 292569 RVA: 0x0122F884 File Offset: 0x0122DA84
+		// Token: 0x0603CFE1 RID: 249825 RVA: 0x01189448 File Offset: 0x01187648
 		private void NormalMoveFinish(Action onMoveArrived)
 		{
 			Vector endLocation = this.GetEndLocation();
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			onMoveArrived();
 		}
 
-		// Token: 0x060476DA RID: 292570 RVA: 0x0122F8E8 File Offset: 0x0122DAE8
+		// Token: 0x0603CFE2 RID: 249826 RVA: 0x011894AC File Offset: 0x011876AC
 		private unsafe void InitEndLocation()
 		{
 			this.StartPosition.DeepCopy(this.HoverPoints[this.Ctx.CurFloor - 1]);
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.MoveSize = (float)this.MoveVector.Size();
 		}
 
-		// Token: 0x060476DB RID: 292571 RVA: 0x0122FB88 File Offset: 0x0122DD88
+		// Token: 0x0603CFE3 RID: 249827 RVA: 0x0118974C File Offset: 0x0118794C
 		private void InitVelocity()
 		{
 			if (this.MoveType == ELiftMoveType.CustomSpeed)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.ItemAcceleration.DeepCopy(this.GetComplexMoveAcceleration());
 		}
 
-		// Token: 0x060476DC RID: 292572 RVA: 0x0122FC40 File Offset: 0x0122DE40
+		// Token: 0x0603CFE4 RID: 249828 RVA: 0x01189804 File Offset: 0x01187A04
 		private void UpdateComplexMoveVelocity()
 		{
 			Vector startPosition = this.StartPosition;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x060476DD RID: 292573 RVA: 0x0122FD76 File Offset: 0x0122DF76
+		// Token: 0x0603CFE5 RID: 249829 RVA: 0x0118993A File Offset: 0x01187B3A
 		private void UpdateVelocity()
 		{
 			if (this.Ctx.UniformMovement.GetValueOrDefault() || this.MoveType == ELiftMoveType.CustomSpeed)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.UpdateComplexMoveVelocity();
 		}
 
-		// Token: 0x060476DE RID: 292574 RVA: 0x0122FD9C File Offset: 0x0122DF9C
+		// Token: 0x0603CFE6 RID: 249830 RVA: 0x01189960 File Offset: 0x01187B60
 		private void UpdateLocation(float deltaSeconds)
 		{
 			if (this.FixedDeltaTime == 0f || MathF.Abs(deltaSeconds - this.FixedDeltaTime) > 10f)
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			actorComp.SetActorLocation(this.TempLocation.ToUeVector(false), "unknown", true);
 		}
 
-		// Token: 0x060476DF RID: 292575 RVA: 0x0122FFB4 File Offset: 0x0122E1B4
+		// Token: 0x0603CFE7 RID: 249831 RVA: 0x01189B78 File Offset: 0x01187D78
 		private Vector GetSimpleMoveVelocity()
 		{
 			this.EndPosition.Subtraction(this.StartPosition, this.TempVector);
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return this.TempVector;
 		}
 
-		// Token: 0x060476E0 RID: 292576 RVA: 0x01230018 File Offset: 0x0122E218
+		// Token: 0x0603CFE8 RID: 249832 RVA: 0x01189BDC File Offset: 0x01187DDC
 		private Vector GetComplexMoveAcceleration()
 		{
 			Vector startPosition = this.StartPosition;
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return this.TempVector;
 		}
 
-		// Token: 0x060476E1 RID: 292577 RVA: 0x012300A8 File Offset: 0x0122E2A8
+		// Token: 0x0603CFE9 RID: 249833 RVA: 0x01189C6C File Offset: 0x01187E6C
 		private void TryEmitTeleportEvent(Func<bool> canEmitEvent, Func<Vector> getLocation, string gamePlayTagName, Action<bool> setEventFlag)
 		{
 			if (!canEmitEvent())
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			setEventFlag(false);
 		}
 
-		// Token: 0x060476E2 RID: 292578 RVA: 0x01230168 File Offset: 0x0122E368
+		// Token: 0x0603CFEA RID: 249834 RVA: 0x01189D2C File Offset: 0x01187F2C
 		public override void InitFromConfig(LiftComponent config, ElevatorContext ctx, float initLocationX, float initLocationY, float initLocationZ)
 		{
 			this.Ctx = ctx;
@@ -250,31 +250,31 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x060476E3 RID: 292579 RVA: 0x01230278 File Offset: 0x0122E478
+		// Token: 0x0603CFEB RID: 249835 RVA: 0x01189E3C File Offset: 0x0118803C
 		public override void OnInit()
 		{
 		}
 
-		// Token: 0x060476E4 RID: 292580 RVA: 0x0123027A File Offset: 0x0122E47A
+		// Token: 0x0603CFEC RID: 249836 RVA: 0x01189E3E File Offset: 0x0118803E
 		public override void OnStart(Action tryStartAutoRun)
 		{
 			tryStartAutoRun();
 		}
 
-		// Token: 0x060476E5 RID: 292581 RVA: 0x01230282 File Offset: 0x0122E482
+		// Token: 0x0603CFED RID: 249837 RVA: 0x01189E46 File Offset: 0x01188046
 		public override void OnClear()
 		{
 			base.OnClear();
 		}
 
-		// Token: 0x060476E6 RID: 292582 RVA: 0x0123028A File Offset: 0x0122E48A
+		// Token: 0x0603CFEE RID: 249838 RVA: 0x01189E4E File Offset: 0x0118804E
 		public override void OnEnterMovePhase()
 		{
 			this.InitEndLocation();
 			this.InitVelocity();
 		}
 
-		// Token: 0x060476E7 RID: 292583 RVA: 0x01230298 File Offset: 0x0122E498
+		// Token: 0x0603CFEF RID: 249839 RVA: 0x01189E5C File Offset: 0x0118805C
 		public override void TickMove(float deltaSeconds)
 		{
 			this.UpdateVelocity();
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			});
 		}
 
-		// Token: 0x060476E8 RID: 292584 RVA: 0x01230310 File Offset: 0x0122E510
+		// Token: 0x0603CFF0 RID: 249840 RVA: 0x01189ED4 File Offset: 0x011880D4
 		public override void CheckAndFinishMove(Action onMoveArrived)
 		{
 			Vector endLocation = this.GetEndLocation();
@@ -307,13 +307,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.NormalMoveFinish(onMoveArrived);
 		}
 
-		// Token: 0x060476E9 RID: 292585 RVA: 0x01230383 File Offset: 0x0122E583
+		// Token: 0x0603CFF1 RID: 249841 RVA: 0x01189F47 File Offset: 0x01188147
 		public override int GetFloorCount()
 		{
 			return this.HoverPoints.Count;
 		}
 
-		// Token: 0x060476EA RID: 292586 RVA: 0x01230390 File Offset: 0x0122E590
+		// Token: 0x0603CFF2 RID: 249842 RVA: 0x01189F54 File Offset: 0x01188154
 		public override float GetMoveDuration()
 		{
 			this.StartPosition.Subtraction(this.EndPosition, this.TempVector);
@@ -342,32 +342,32 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return 1000f;
 		}
 
-		// Token: 0x060476EB RID: 292587 RVA: 0x0123046F File Offset: 0x0122E66F
+		// Token: 0x0603CFF3 RID: 249843 RVA: 0x0118A033 File Offset: 0x01188233
 		public ELiftMoveType GetMoveType()
 		{
 			return this.MoveType;
 		}
 
-		// Token: 0x060476EC RID: 292588 RVA: 0x01230477 File Offset: 0x0122E677
+		// Token: 0x0603CFF4 RID: 249844 RVA: 0x0118A03B File Offset: 0x0118823B
 		[NullableContext(2)]
 		public Vector GetTeleportEndPosition()
 		{
 			return this.TeleportEndPosition;
 		}
 
-		// Token: 0x060476ED RID: 292589 RVA: 0x0123047F File Offset: 0x0122E67F
+		// Token: 0x0603CFF5 RID: 249845 RVA: 0x0118A043 File Offset: 0x01188243
 		public void SetPathMoveStartTimeStamp(float timeStamp)
 		{
 			this.PathMoveStartTimeStamp = timeStamp;
 		}
 
-		// Token: 0x060476EE RID: 292590 RVA: 0x01230488 File Offset: 0x0122E688
+		// Token: 0x0603CFF6 RID: 249846 RVA: 0x0118A04C File Offset: 0x0118824C
 		public void StartMoveByDefault()
 		{
 			this.ResetMoveMode(ELiftMoveType.Default);
 		}
 
-		// Token: 0x060476EF RID: 292591 RVA: 0x01230491 File Offset: 0x0122E691
+		// Token: 0x0603CFF7 RID: 249847 RVA: 0x0118A055 File Offset: 0x01188255
 		public void StartMoveByTeleport(float startOffset, float endOffset, bool needEmitEvent, float startEventOffset)
 		{
 			this.ResetMoveMode(ELiftMoveType.Teleport);
@@ -379,7 +379,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.StartEventOffset = startEventOffset;
 		}
 
-		// Token: 0x060476F0 RID: 292592 RVA: 0x012304C5 File Offset: 0x0122E6C5
+		// Token: 0x0603CFF8 RID: 249848 RVA: 0x0118A089 File Offset: 0x01188289
 		public void StartMoveByCurve(string curveName, float duration)
 		{
 			this.ResetMoveMode(ELiftMoveType.CustomSpeed);
@@ -390,104 +390,104 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.PathMoveDuration = duration;
 		}
 
-		// Token: 0x04025907 RID: 153863
+		// Token: 0x04020576 RID: 132470
 		private const int MIN_SPEED = 1;
 
-		// Token: 0x04025908 RID: 153864
+		// Token: 0x04020577 RID: 132471
 		private const int MTOCM = 100;
 
-		// Token: 0x04025909 RID: 153865
+		// Token: 0x04020578 RID: 132472
 		private const int NEGATIVEONE = -1;
 
-		// Token: 0x0402590A RID: 153866
+		// Token: 0x04020579 RID: 132473
 		private const int FOUR = 4;
 
-		// Token: 0x0402590B RID: 153867
+		// Token: 0x0402057A RID: 132474
 		private const int THOUSAND = 1000;
 
-		// Token: 0x0402590C RID: 153868
+		// Token: 0x0402057B RID: 132475
 		private const float NORMALIZE = 0.01f;
 
-		// Token: 0x0402590D RID: 153869
+		// Token: 0x0402057C RID: 132476
 		private const int DELTATIMECHANGEVALUE = 10;
 
-		// Token: 0x0402590E RID: 153870
+		// Token: 0x0402057D RID: 132477
 		private const float ACCELERATETIMERADIO = 1.5f;
 
-		// Token: 0x0402590F RID: 153871
+		// Token: 0x0402057E RID: 132478
 		private readonly Vector EndPosition = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x04025910 RID: 153872
+		// Token: 0x0402057F RID: 132479
 		private readonly List<Vector> HoverPoints = new List<Vector>();
 
-		// Token: 0x04025911 RID: 153873
+		// Token: 0x04020580 RID: 132480
 		private readonly Vector ItemAcceleration = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x04025912 RID: 153874
+		// Token: 0x04020581 RID: 132481
 		private readonly Vector ItemVelocity = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x04025913 RID: 153875
+		// Token: 0x04020582 RID: 132482
 		private readonly Vector MaxVelocity = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x04025914 RID: 153876
+		// Token: 0x04020583 RID: 132483
 		private readonly Vector MinVelocity = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x04025915 RID: 153877
+		// Token: 0x04020584 RID: 132484
 		private readonly Vector MoveVector = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x04025916 RID: 153878
+		// Token: 0x04020585 RID: 132485
 		private readonly Vector StartPosition = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x04025917 RID: 153879
+		// Token: 0x04020586 RID: 132486
 		private readonly Vector TeleportEndPosition = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x04025918 RID: 153880
+		// Token: 0x04020587 RID: 132487
 		private readonly Vector TeleportStartEventPosition = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x04025919 RID: 153881
+		// Token: 0x04020588 RID: 132488
 		private readonly Vector TeleportStartPosition = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0402591A RID: 153882
+		// Token: 0x04020589 RID: 132489
 		private readonly Vector TempLocation = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0402591B RID: 153883
+		// Token: 0x0402058A RID: 132490
 		private readonly Vector TempVector = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0402591C RID: 153884
+		// Token: 0x0402058B RID: 132491
 		private float EndOffset;
 
-		// Token: 0x0402591D RID: 153885
+		// Token: 0x0402058C RID: 132492
 		private bool EndTeleportEventFlag;
 
-		// Token: 0x0402591E RID: 153886
+		// Token: 0x0402058D RID: 132493
 		private float FixedDeltaTime;
 
-		// Token: 0x0402591F RID: 153887
+		// Token: 0x0402058E RID: 132494
 		private float MoveSize;
 
-		// Token: 0x04025920 RID: 153888
+		// Token: 0x0402058F RID: 132495
 		private ELiftMoveType MoveType;
 
-		// Token: 0x04025921 RID: 153889
+		// Token: 0x04020590 RID: 132496
 		private bool NeedEmitTeleportEvent;
 
-		// Token: 0x04025922 RID: 153890
+		// Token: 0x04020591 RID: 132497
 		private float StartEventOffset;
 
-		// Token: 0x04025923 RID: 153891
+		// Token: 0x04020592 RID: 132498
 		private float StartOffset;
 
-		// Token: 0x04025924 RID: 153892
+		// Token: 0x04020593 RID: 132499
 		private bool StartTeleportEventFlag;
 
-		// Token: 0x04025925 RID: 153893
+		// Token: 0x04020594 RID: 132500
 		[Nullable(2)]
 		private UCurveFloat PathMoveCurve;
 
-		// Token: 0x04025926 RID: 153894
+		// Token: 0x04020595 RID: 132501
 		private float PathMoveStartTimeStamp;
 
-		// Token: 0x04025927 RID: 153895
+		// Token: 0x04020596 RID: 132502
 		private float PathMoveDuration;
 	}
 }

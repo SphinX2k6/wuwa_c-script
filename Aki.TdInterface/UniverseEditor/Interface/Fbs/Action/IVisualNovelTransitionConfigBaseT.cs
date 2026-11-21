@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075E1 RID: 30177
+	// Token: 0x02007DEF RID: 32239
 	public class IVisualNovelTransitionConfigBaseT
 	{
-		// Token: 0x1700E543 RID: 58691
-		// (get) Token: 0x06036F8C RID: 225164 RVA: 0x00775B52 File Offset: 0x00773D52
-		// (set) Token: 0x06036F8D RID: 225165 RVA: 0x00775B5A File Offset: 0x00773D5A
+		// Token: 0x1700F181 RID: 61825
+		// (get) Token: 0x0603A431 RID: 238641 RVA: 0x007D9C4E File Offset: 0x007D7E4E
+		// (set) Token: 0x0603A432 RID: 238642 RVA: 0x007D9C56 File Offset: 0x007D7E56
 		public EVisualNovelTransitionType Type { get; set; }
 
-		// Token: 0x06036F8E RID: 225166 RVA: 0x00775B63 File Offset: 0x00773D63
+		// Token: 0x0603A433 RID: 238643 RVA: 0x007D9C5F File Offset: 0x007D7E5F
 		public IVisualNovelTransitionConfigBaseT()
 		{
 			this.Type = EVisualNovelTransitionType.Location;

@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x020034B2 RID: 13490
+// Token: 0x02002A26 RID: 10790
 public enum ECurveType
 {
-	// Token: 0x0400E771 RID: 59249
+	// Token: 0x0400EC25 RID: 60453
 	Linear,
-	// Token: 0x0400E772 RID: 59250
+	// Token: 0x0400EC26 RID: 60454
 	Cubic,
-	// Token: 0x0400E773 RID: 59251
+	// Token: 0x0400EC27 RID: 60455
 	CubicWithStartSlope,
-	// Token: 0x0400E774 RID: 59252
+	// Token: 0x0400EC28 RID: 60456
 	Squared,
-	// Token: 0x0400E775 RID: 59253
+	// Token: 0x0400EC29 RID: 60457
 	Power,
-	// Token: 0x0400E776 RID: 59254
+	// Token: 0x0400EC2A RID: 60458
 	Power2
 }

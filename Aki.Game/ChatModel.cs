@@ -1,26 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Personal;
 
-// Token: 0x02001796 RID: 6038
+// Token: 0x02000C4F RID: 3151
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ChatModel : ModelBase
 {
-	// Token: 0x0600AFC4 RID: 44996 RVA: 0x0027AA5C File Offset: 0x00278C5C
+	// Token: 0x060083AC RID: 33708 RVA: 0x00284EE0 File Offset: 0x002830E0
 	protected override bool OnInit()
 	{
 		this.ShowTimeDifferent = ConfigCommonParamById.GetIntConfig("ShowTimeDifferent").Value;
 		return true;
 	}
 
-	// Token: 0x0600AFC5 RID: 44997 RVA: 0x0027AA84 File Offset: 0x00278C84
+	// Token: 0x060083AD RID: 33709 RVA: 0x00284F08 File Offset: 0x00283108
 	protected override bool OnClear()
 	{
 		foreach (PrivateChatRoom privateChatRoom in this.PrivateChatRoomMap.Values)
@@ -35,7 +34,7 @@ public class ChatModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600AFC6 RID: 44998 RVA: 0x0027AB08 File Offset: 0x00278D08
+	// Token: 0x060083AE RID: 33710 RVA: 0x00284F8C File Offset: 0x0028318C
 	public ChatPlayerData AddChatPlayerData(int playerId)
 	{
 		ChatPlayerData chatPlayerData = new ChatPlayerData(playerId);
@@ -43,7 +42,7 @@ public class ChatModel : ModelBase
 		return chatPlayerData;
 	}
 
-	// Token: 0x0600AFC7 RID: 44999 RVA: 0x0027AB2C File Offset: 0x00278D2C
+	// Token: 0x060083AF RID: 33711 RVA: 0x00284FB0 File Offset: 0x002831B0
 	[NullableContext(2)]
 	public ChatPlayerData GetChatPlayerData(int playerId)
 	{
@@ -52,7 +51,7 @@ public class ChatModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600AFC8 RID: 45000 RVA: 0x0027AB4C File Offset: 0x00278D4C
+	// Token: 0x060083B0 RID: 33712 RVA: 0x00284FD0 File Offset: 0x002831D0
 	[NullableContext(2)]
 	public void RefreshChatPlayerData(int playerId, int? playerIcon = null, string playerName = null, int? playerTitleId = null, int? playerTitleExParam = null)
 	{
@@ -85,13 +84,13 @@ public class ChatModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AFC9 RID: 45001 RVA: 0x0027AC05 File Offset: 0x00278E05
+	// Token: 0x060083B1 RID: 33713 RVA: 0x00285089 File Offset: 0x00283289
 	public void ClearChatPlayerData()
 	{
 		this.ChatPlayerDataMap.Clear();
 	}
 
-	// Token: 0x0600AFCA RID: 45002 RVA: 0x0027AC14 File Offset: 0x00278E14
+	// Token: 0x060083B2 RID: 33714 RVA: 0x00285098 File Offset: 0x00283298
 	public void AddChatContent(ChatRoom chatRoom, string contentUniqueId, int senderPlayerId, string chatContentText, ChatContentType chatContentType, ChatChannelNoticeType noticeType, bool isOfflineMassage, double timeStamp, double lastTimeStamp, [Nullable(2)] string senderPlayerName = null, int? senderPlayerIcon = null, [Nullable(2)] string thirdOnlineId = null, [Nullable(2)] string thirdAvoidId = null)
 	{
 		ChatContentData p = chatRoom.AddChatContent(contentUniqueId, senderPlayerId, chatContentText, chatContentType, noticeType, isOfflineMassage, timeStamp, lastTimeStamp, senderPlayerName, senderPlayerIcon, thirdOnlineId, thirdAvoidId);
@@ -125,7 +124,7 @@ public class ChatModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnRefreshChatRedDot);
 	}
 
-	// Token: 0x0600AFCB RID: 45003 RVA: 0x0027ACDC File Offset: 0x00278EDC
+	// Token: 0x060083B3 RID: 33715 RVA: 0x00285160 File Offset: 0x00283360
 	private void ClearAllCreateTime()
 	{
 		foreach (PrivateChatRoom privateChatRoom in this.PrivateChatRoomMap.Values)
@@ -134,7 +133,7 @@ public class ChatModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AFCC RID: 45004 RVA: 0x0027AD34 File Offset: 0x00278F34
+	// Token: 0x060083B4 RID: 33716 RVA: 0x002851B8 File Offset: 0x002833B8
 	public unsafe void RequestPrivateRoomLocalHistory(PrivateChatRoom chatRoom)
 	{
 		int uniqueId = chatRoom.GetUniqueId();
@@ -149,7 +148,7 @@ public class ChatModel : ModelBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0600AFCD RID: 45005 RVA: 0x0027ADAC File Offset: 0x00278FAC
+	// Token: 0x060083B5 RID: 33717 RVA: 0x00285230 File Offset: 0x00283430
 	public void AddChatRowData(int senderPlayerId, string chatContentText, ChatContentType chatContentType, bool isOfflineMassage, EChatRoomType contentChatRoomType, double timeStamp, int? targetPlayerId = null, [Nullable(2)] string senderPlayerName = null, int? senderPlayerIcon = null, bool bCheckLength = true)
 	{
 		this.PushChatRowData(senderPlayerId, chatContentText, chatContentType, isOfflineMassage, contentChatRoomType, timeStamp, targetPlayerId, senderPlayerName, senderPlayerIcon);
@@ -159,13 +158,13 @@ public class ChatModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AFCE RID: 45006 RVA: 0x0027ADE7 File Offset: 0x00278FE7
+	// Token: 0x060083B6 RID: 33718 RVA: 0x0028526B File Offset: 0x0028346B
 	public void SortChatRowData()
 	{
 		this.ChatRowDataList.Sort((ChatRowData a, ChatRowData b) => (int)(a.TimeStamp - b.TimeStamp));
 	}
 
-	// Token: 0x0600AFCF RID: 45007 RVA: 0x0027AE14 File Offset: 0x00279014
+	// Token: 0x060083B7 RID: 33719 RVA: 0x00285298 File Offset: 0x00283498
 	public void ClampChatRowDataListLength()
 	{
 		int count = this.ChatRowDataList.Count;
@@ -173,11 +172,16 @@ public class ChatModel : ModelBase
 		{
 			return;
 		}
-		int count2 = Math.Max(count - 10, 0);
-		this.ChatRowDataList = this.ChatRowDataList.Skip(count2).ToList<ChatRowData>();
+		int num = Math.Max(count - 10, 0);
+		List<ChatRowData> list = new List<ChatRowData>(count - num);
+		for (int i = num; i < this.ChatRowDataList.Count; i++)
+		{
+			list.Add(this.ChatRowDataList[i]);
+		}
+		this.ChatRowDataList = list;
 	}
 
-	// Token: 0x0600AFD0 RID: 45008 RVA: 0x0027AE58 File Offset: 0x00279058
+	// Token: 0x060083B8 RID: 33720 RVA: 0x002852FC File Offset: 0x002834FC
 	public void DeletePrivateChat(int playerId)
 	{
 		Log instance = Log.Instance;
@@ -197,7 +201,7 @@ public class ChatModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AFD1 RID: 45009 RVA: 0x0027AEE4 File Offset: 0x002790E4
+	// Token: 0x060083B9 RID: 33721 RVA: 0x00285388 File Offset: 0x00283588
 	public void DeleteTeamChat()
 	{
 		Log.Instance.Info(ELogModule.Chat, ELogAuthor.LJQ, "[ChatDebug]删除主界面队伍聊天数据", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -212,7 +216,7 @@ public class ChatModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AFD2 RID: 45010 RVA: 0x0027AF54 File Offset: 0x00279154
+	// Token: 0x060083BA RID: 33722 RVA: 0x002853F8 File Offset: 0x002835F8
 	public void SetTeamChatRowDataVisible(bool bVisible)
 	{
 		foreach (ChatRowData chatRowData in this.ChatRowDataList)
@@ -225,7 +229,7 @@ public class ChatModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AFD3 RID: 45011 RVA: 0x0027AFB8 File Offset: 0x002791B8
+	// Token: 0x060083BB RID: 33723 RVA: 0x0028545C File Offset: 0x0028365C
 	private void PushChatRowData(int senderPlayerId, string chatContentText, ChatContentType chatContentType, bool isOfflineMassage, EChatRoomType contentChatRoomType, double timeStamp, int? targetPlayerId = null, [Nullable(2)] string senderPlayerName = null, int? senderPlayerIcon = null)
 	{
 		OnlineTeamData currentTeamListById = OnlineModel.Instance.GetCurrentTeamListById(senderPlayerId);
@@ -237,13 +241,13 @@ public class ChatModel : ModelBase
 		EventSystem.Instance.Emit<ChatRowData>(EEventName.OnPushChatRowData, chatRowData);
 	}
 
-	// Token: 0x0600AFD4 RID: 45012 RVA: 0x0027B02E File Offset: 0x0027922E
+	// Token: 0x060083BC RID: 33724 RVA: 0x002854D2 File Offset: 0x002836D2
 	public void ClearChatRowData()
 	{
 		this.ChatRowDataList.Clear();
 	}
 
-	// Token: 0x0600AFD5 RID: 45013 RVA: 0x0027B03C File Offset: 0x0027923C
+	// Token: 0x060083BD RID: 33725 RVA: 0x002854E0 File Offset: 0x002836E0
 	public unsafe void RemoveChatRowDataByChatRoomType(params EChatRoomType[] chatRoomType)
 	{
 		Log instance = Log.Instance;
@@ -266,7 +270,7 @@ public class ChatModel : ModelBase
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("Content", chatRowData.Content);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("TimeStamp", chatRowData.TimeStamp);
 			instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
-			if (chatRoomType.Contains(chatRowData.ContentChatRoomType))
+			if (Array.IndexOf<EChatRoomType>(chatRoomType, chatRowData.ContentChatRoomType) >= 0)
 			{
 				list.Add(i);
 			}
@@ -285,7 +289,7 @@ public class ChatModel : ModelBase
 		instance3.Info(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 2));
 	}
 
-	// Token: 0x0600AFD6 RID: 45014 RVA: 0x0027B1F0 File Offset: 0x002793F0
+	// Token: 0x060083BE RID: 33726 RVA: 0x00285694 File Offset: 0x00283894
 	private void ShiftChatRowData()
 	{
 		ChatRowData p = this.ChatRowDataList[0];
@@ -293,13 +297,13 @@ public class ChatModel : ModelBase
 		EventSystem.Instance.Emit<ChatRowData>(EEventName.OnPopChatRowData, p);
 	}
 
-	// Token: 0x0600AFD7 RID: 45015 RVA: 0x0027B227 File Offset: 0x00279427
+	// Token: 0x060083BF RID: 33727 RVA: 0x002856CB File Offset: 0x002838CB
 	public IReadOnlyList<ChatRowData> GetChatRowDataList()
 	{
 		return this.ChatRowDataList;
 	}
 
-	// Token: 0x0600AFD8 RID: 45016 RVA: 0x0027B230 File Offset: 0x00279430
+	// Token: 0x060083C0 RID: 33728 RVA: 0x002856D4 File Offset: 0x002838D4
 	public bool HasOfflineMassage()
 	{
 		using (List<ChatRowData>.Enumerator enumerator = this.ChatRowDataList.GetEnumerator())
@@ -315,7 +319,7 @@ public class ChatModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600AFD9 RID: 45017 RVA: 0x0027B28C File Offset: 0x0027948C
+	// Token: 0x060083C1 RID: 33729 RVA: 0x00285730 File Offset: 0x00283930
 	public void AddPrivateHistoryChatContent(PrivateChatRoom chatRoom, List<ChatContentProto> chatContents)
 	{
 		List<IChatHistory> list = new List<IChatHistory>();
@@ -344,8 +348,8 @@ public class ChatModel : ModelBase
 		EventSystem.Instance.Emit<ChatRoom>(EEventName.OnAddHistoryChatContentCompleted, chatRoom);
 	}
 
-	// Token: 0x0600AFDA RID: 45018 RVA: 0x0027B3B0 File Offset: 0x002795B0
-	public void AddTeamHistoryChatContent(TeamChatRoomBase chatRoom, List<ChannelChatMessageInfo> chatContents)
+	// Token: 0x060083C2 RID: 33730 RVA: 0x00285854 File Offset: 0x00283A54
+	public void AddTeamHistoryChatContent(TeamChatRoomBase chatRoom, IEnumerable<ChannelChatMessageInfo> chatContents)
 	{
 		List<IChatHistory> list = new List<IChatHistory>();
 		foreach (ChannelChatMessageInfo channelChatMessageInfo in chatContents)
@@ -367,7 +371,7 @@ public class ChatModel : ModelBase
 		EventSystem.Instance.Emit<ChatRoom>(EEventName.OnAddHistoryChatContentCompleted, chatRoom);
 	}
 
-	// Token: 0x0600AFDB RID: 45019 RVA: 0x0027B494 File Offset: 0x00279694
+	// Token: 0x060083C3 RID: 33731 RVA: 0x00285934 File Offset: 0x00283B34
 	public void JoinChatRoom(ChatRoom chatRoom)
 	{
 		this.SetChatRoomRedDot(chatRoom, false);
@@ -409,13 +413,13 @@ public class ChatModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnRefreshChatRedDot);
 	}
 
-	// Token: 0x0600AFDC RID: 45020 RVA: 0x0027B572 File Offset: 0x00279772
+	// Token: 0x060083C4 RID: 33732 RVA: 0x00285A12 File Offset: 0x00283C12
 	public void LeaveCurrentChatRoom()
 	{
 		this.CurrentChatRoom = null;
 	}
 
-	// Token: 0x0600AFDD RID: 45021 RVA: 0x0027B57C File Offset: 0x0027977C
+	// Token: 0x060083C5 RID: 33733 RVA: 0x00285A1C File Offset: 0x00283C1C
 	public void RemovePrivateChatRoom(int targetPlayerId)
 	{
 		PrivateChatRoom privateChatRoom = this.CurrentChatRoom as PrivateChatRoom;
@@ -439,7 +443,7 @@ public class ChatModel : ModelBase
 		EventSystem.Instance.Emit<int>(EEventName.OnRemovePrivateChatRoom, targetPlayerId);
 	}
 
-	// Token: 0x0600AFDE RID: 45022 RVA: 0x0027B608 File Offset: 0x00279808
+	// Token: 0x060083C6 RID: 33734 RVA: 0x00285AA8 File Offset: 0x00283CA8
 	public void ClosePrivateChatRoom(int targetPlayerId)
 	{
 		PrivateChatRoom privateChatRoom = this.CurrentChatRoom as PrivateChatRoom;
@@ -462,7 +466,7 @@ public class ChatModel : ModelBase
 		EventSystem.Instance.Emit<int>(EEventName.OnClosePrivateChatRoom, targetPlayerId);
 	}
 
-	// Token: 0x0600AFDF RID: 45023 RVA: 0x0027B688 File Offset: 0x00279888
+	// Token: 0x060083C7 RID: 33735 RVA: 0x00285B28 File Offset: 0x00283D28
 	public void RequestOpenPrivateChatRoom(PrivateChatRoom privateChatRoom)
 	{
 		if (privateChatRoom.GetIsOpen())
@@ -482,7 +486,7 @@ public class ChatModel : ModelBase
 		EventSystem.Instance.Emit<ChatRoom>(EEventName.OnOpenChatRoom, privateChatRoom);
 	}
 
-	// Token: 0x0600AFE0 RID: 45024 RVA: 0x0027B700 File Offset: 0x00279900
+	// Token: 0x060083C8 RID: 33736 RVA: 0x00285BA0 File Offset: 0x00283DA0
 	public void RequestOpenChatRoom(ChatRoom chatRoom)
 	{
 		if (chatRoom.GetIsOpen())
@@ -495,7 +499,7 @@ public class ChatModel : ModelBase
 		EventSystem.Instance.Emit<ChatRoom>(EEventName.OnOpenChatRoom, chatRoom);
 	}
 
-	// Token: 0x0600AFE1 RID: 45025 RVA: 0x0027B754 File Offset: 0x00279954
+	// Token: 0x060083C9 RID: 33737 RVA: 0x00285BF4 File Offset: 0x00283DF4
 	public void SetChatRoomRedDot(ChatRoom chatRoom, bool bVisible)
 	{
 		if (chatRoom == null)
@@ -532,14 +536,14 @@ public class ChatModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AFE2 RID: 45026 RVA: 0x0027B80A File Offset: 0x00279A0A
+	// Token: 0x060083CA RID: 33738 RVA: 0x00285CAA File Offset: 0x00283EAA
 	[NullableContext(2)]
 	public ChatRoom GetJoinedChatRoom()
 	{
 		return this.CurrentChatRoom;
 	}
 
-	// Token: 0x0600AFE3 RID: 45027 RVA: 0x0027B814 File Offset: 0x00279A14
+	// Token: 0x060083CB RID: 33739 RVA: 0x00285CB4 File Offset: 0x00283EB4
 	public bool HasRedDot()
 	{
 		using (Dictionary<int, PrivateChatRoom>.ValueCollection.Enumerator enumerator = this.PrivateChatRoomMap.Values.GetEnumerator())
@@ -561,7 +565,7 @@ public class ChatModel : ModelBase
 		return worldChatRoom != null && worldChatRoom.GetIsShowRedDot();
 	}
 
-	// Token: 0x0600AFE4 RID: 45028 RVA: 0x0027B8A0 File Offset: 0x00279AA0
+	// Token: 0x060083CC RID: 33740 RVA: 0x00285D40 File Offset: 0x00283F40
 	public PrivateChatRoom TryGetPrivateChatRoom(int targetPlayerId)
 	{
 		PrivateChatRoom privateChatRoom = this.GetPrivateChatRoom(targetPlayerId);
@@ -572,7 +576,7 @@ public class ChatModel : ModelBase
 		return privateChatRoom;
 	}
 
-	// Token: 0x0600AFE5 RID: 45029 RVA: 0x0027B8C4 File Offset: 0x00279AC4
+	// Token: 0x060083CD RID: 33741 RVA: 0x00285D64 File Offset: 0x00283F64
 	public PrivateChatRoom NewPrivateChatRoom(int targetPlayerId)
 	{
 		PrivateChatRoom privateChatRoom = new PrivateChatRoom(targetPlayerId, 1);
@@ -581,21 +585,21 @@ public class ChatModel : ModelBase
 		return privateChatRoom;
 	}
 
-	// Token: 0x0600AFE6 RID: 45030 RVA: 0x0027B8F8 File Offset: 0x00279AF8
+	// Token: 0x060083CE RID: 33742 RVA: 0x00285D98 File Offset: 0x00283F98
 	public TeamChatRoom NewTeamChatRoom()
 	{
 		this.TeamChatRoom = new TeamChatRoom(2);
 		return this.TeamChatRoom;
 	}
 
-	// Token: 0x0600AFE7 RID: 45031 RVA: 0x0027B90C File Offset: 0x00279B0C
+	// Token: 0x060083CF RID: 33743 RVA: 0x00285DAC File Offset: 0x00283FAC
 	public WorldChatRoom NewWorldChatRoom()
 	{
 		this.WorldChatRoom = new WorldChatRoom(2);
 		return this.WorldChatRoom;
 	}
 
-	// Token: 0x0600AFE8 RID: 45032 RVA: 0x0027B920 File Offset: 0x00279B20
+	// Token: 0x060083D0 RID: 33744 RVA: 0x00285DC0 File Offset: 0x00283FC0
 	public void SelectedPrivateChatFriend(int targetPlayerId)
 	{
 		PrivateChatRoom privateChatRoom = this.TryGetPrivateChatRoom(targetPlayerId);
@@ -606,7 +610,7 @@ public class ChatModel : ModelBase
 		this.JoinChatRoom(privateChatRoom);
 	}
 
-	// Token: 0x0600AFE9 RID: 45033 RVA: 0x0027B948 File Offset: 0x00279B48
+	// Token: 0x060083D1 RID: 33745 RVA: 0x00285DE8 File Offset: 0x00283FE8
 	[NullableContext(2)]
 	public PrivateChatRoom GetPrivateChatRoom(int targetPlayerId)
 	{
@@ -615,35 +619,35 @@ public class ChatModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600AFEA RID: 45034 RVA: 0x0027B965 File Offset: 0x00279B65
+	// Token: 0x060083D2 RID: 33746 RVA: 0x00285E05 File Offset: 0x00284005
 	[NullableContext(2)]
 	public TeamChatRoom GetTeamChatRoom()
 	{
 		return this.TeamChatRoom;
 	}
 
-	// Token: 0x0600AFEB RID: 45035 RVA: 0x0027B96D File Offset: 0x00279B6D
+	// Token: 0x060083D3 RID: 33747 RVA: 0x00285E0D File Offset: 0x0028400D
 	[NullableContext(2)]
 	public void SetTeamChatRoom(TeamChatRoom teamChatRoom)
 	{
 		this.TeamChatRoom = teamChatRoom;
 	}
 
-	// Token: 0x0600AFEC RID: 45036 RVA: 0x0027B976 File Offset: 0x00279B76
+	// Token: 0x060083D4 RID: 33748 RVA: 0x00285E16 File Offset: 0x00284016
 	[NullableContext(2)]
 	public WorldChatRoom GetWorldChatRoom()
 	{
 		return this.WorldChatRoom;
 	}
 
-	// Token: 0x0600AFED RID: 45037 RVA: 0x0027B97E File Offset: 0x00279B7E
+	// Token: 0x060083D5 RID: 33749 RVA: 0x00285E1E File Offset: 0x0028401E
 	[NullableContext(2)]
 	public void SetWorldChatRoom(WorldChatRoom worldChatRoom)
 	{
 		this.WorldChatRoom = worldChatRoom;
 	}
 
-	// Token: 0x0600AFEE RID: 45038 RVA: 0x0027B988 File Offset: 0x00279B88
+	// Token: 0x060083D6 RID: 33750 RVA: 0x00285E28 File Offset: 0x00284028
 	public List<ChatRoom> GetAllSortedChatRoom()
 	{
 		List<ChatRoom> list = new List<ChatRoom>();
@@ -686,21 +690,21 @@ public class ChatModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600AFEF RID: 45039 RVA: 0x0027BA48 File Offset: 0x00279C48
+	// Token: 0x060083D7 RID: 33751 RVA: 0x00285EE8 File Offset: 0x002840E8
 	public bool IsInPrivateChatRoom(int playerId)
 	{
 		PrivateChatRoom privateChatRoom = this.GetPrivateChatRoom(playerId);
 		return privateChatRoom != null && privateChatRoom.GetIsOpen();
 	}
 
-	// Token: 0x0600AFF0 RID: 45040 RVA: 0x0027BA68 File Offset: 0x00279C68
+	// Token: 0x060083D8 RID: 33752 RVA: 0x00285F08 File Offset: 0x00284108
 	public void AddMutePlayer(int playerId)
 	{
 		this.MutePlayerIdList.Add(playerId);
 		EventSystem.Instance.Emit<int>(EEventName.OnAddMutePlayer, playerId);
 	}
 
-	// Token: 0x0600AFF1 RID: 45041 RVA: 0x0027BA88 File Offset: 0x00279C88
+	// Token: 0x060083D9 RID: 33753 RVA: 0x00285F28 File Offset: 0x00284128
 	public void RemoveMutePlayer(int playerId)
 	{
 		int num = this.MutePlayerIdList.IndexOf(playerId);
@@ -712,20 +716,20 @@ public class ChatModel : ModelBase
 		EventSystem.Instance.Emit<int>(EEventName.OnRemoveMutePlayer, playerId);
 	}
 
-	// Token: 0x0600AFF2 RID: 45042 RVA: 0x0027BAC4 File Offset: 0x00279CC4
+	// Token: 0x060083DA RID: 33754 RVA: 0x00285F64 File Offset: 0x00284164
 	public void ClearAllMutePlayer()
 	{
 		this.MutePlayerIdList.Clear();
 	}
 
-	// Token: 0x0600AFF3 RID: 45043 RVA: 0x0027BAD1 File Offset: 0x00279CD1
+	// Token: 0x060083DB RID: 33755 RVA: 0x00285F71 File Offset: 0x00284171
 	public bool IsInMute(int playerId)
 	{
 		return this.MutePlayerIdList.IndexOf(playerId) >= 0;
 	}
 
-	// Token: 0x17000EAB RID: 3755
-	// (get) Token: 0x0600AFF4 RID: 45044 RVA: 0x0027BAE5 File Offset: 0x00279CE5
+	// Token: 0x17000ECE RID: 3790
+	// (get) Token: 0x060083DC RID: 33756 RVA: 0x00285F85 File Offset: 0x00284185
 	public static ChatModel Instance
 	{
 		get
@@ -734,7 +738,7 @@ public class ChatModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AFF5 RID: 45045 RVA: 0x0027BAEC File Offset: 0x00279CEC
+	// Token: 0x060083DD RID: 33757 RVA: 0x00285F8C File Offset: 0x0028418C
 	public static ChatModel GetOrCreateInstance()
 	{
 		if (ChatModel._Instance == null)
@@ -744,7 +748,7 @@ public class ChatModel : ModelBase
 		return ChatModel._Instance;
 	}
 
-	// Token: 0x0600AFF6 RID: 45046 RVA: 0x0027BB00 File Offset: 0x00279D00
+	// Token: 0x060083DE RID: 33758 RVA: 0x00285FA0 File Offset: 0x002841A0
 	public static bool CreateInstance()
 	{
 		if (ChatModel._Instance != null)
@@ -755,57 +759,57 @@ public class ChatModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600AFF7 RID: 45047 RVA: 0x0027BB16 File Offset: 0x00279D16
+	// Token: 0x060083DF RID: 33759 RVA: 0x00285FB6 File Offset: 0x002841B6
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600AFF8 RID: 45048 RVA: 0x0027BB18 File Offset: 0x00279D18
+	// Token: 0x060083E0 RID: 33760 RVA: 0x00285FB8 File Offset: 0x002841B8
 	public static void ResetStaticDefaultValue()
 	{
 		ChatModel._Instance = null;
 	}
 
-	// Token: 0x0600AFF9 RID: 45049 RVA: 0x0027BB20 File Offset: 0x00279D20
+	// Token: 0x060083E1 RID: 33761 RVA: 0x00285FC0 File Offset: 0x002841C0
 	static ChatModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ChatModel.CreateStaticDefaultValue), new Action(ChatModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004FDE RID: 20446
+	// Token: 0x04005088 RID: 20616
 	private readonly Dictionary<int, ChatPlayerData> ChatPlayerDataMap = new Dictionary<int, ChatPlayerData>();
 
-	// Token: 0x04004FDF RID: 20447
+	// Token: 0x04005089 RID: 20617
 	private List<ChatRowData> ChatRowDataList = new List<ChatRowData>();
 
-	// Token: 0x04004FE0 RID: 20448
+	// Token: 0x0400508A RID: 20618
 	private int ChatRowDataUniqueId;
 
-	// Token: 0x04004FE1 RID: 20449
+	// Token: 0x0400508B RID: 20619
 	private readonly Dictionary<int, PrivateChatRoom> PrivateChatRoomMap = new Dictionary<int, PrivateChatRoom>();
 
-	// Token: 0x04004FE2 RID: 20450
+	// Token: 0x0400508C RID: 20620
 	[Nullable(2)]
 	private TeamChatRoom TeamChatRoom;
 
-	// Token: 0x04004FE3 RID: 20451
+	// Token: 0x0400508D RID: 20621
 	[Nullable(2)]
 	private WorldChatRoom WorldChatRoom;
 
-	// Token: 0x04004FE4 RID: 20452
+	// Token: 0x0400508E RID: 20622
 	[Nullable(2)]
 	private ChatRoom CurrentChatRoom;
 
-	// Token: 0x04004FE5 RID: 20453
+	// Token: 0x0400508F RID: 20623
 	private readonly List<int> MutePlayerIdList = new List<int>();
 
-	// Token: 0x04004FE6 RID: 20454
+	// Token: 0x04005090 RID: 20624
 	public bool IsOpenedChatView;
 
-	// Token: 0x04004FE7 RID: 20455
+	// Token: 0x04005091 RID: 20625
 	public int ShowTimeDifferent;
 
-	// Token: 0x04004FE8 RID: 20456
+	// Token: 0x04005092 RID: 20626
 	[Nullable(2)]
 	private static ChatModel _Instance;
 }

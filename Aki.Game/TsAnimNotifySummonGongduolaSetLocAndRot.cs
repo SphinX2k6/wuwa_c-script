@@ -7,37 +7,33 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001DC RID: 476
+// Token: 0x020001E0 RID: 480
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifySummonGongduolaSetLocAndRot.TsAnimNotifySummonGongduolaSetLocAndRot_C")]
 public class TsAnimNotifySummonGongduolaSetLocAndRot : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06001DA0 RID: 7584 RVA: 0x000952D0 File Offset: 0x000934D0
+	// Token: 0x06001E3D RID: 7741 RVA: 0x0009C248 File Offset: 0x0009A448
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifySummonGongduolaSetLocAndRot) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), TsAnimNotifySummonGongduolaSetLocAndRot.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001DA1 RID: 7585 RVA: 0x00095370 File Offset: 0x00093570
+	// Token: 0x06001E3E RID: 7742 RVA: 0x0009C300 File Offset: 0x0009A500
 	[NullableContext(2)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -91,7 +87,7 @@ public class TsAnimNotifySummonGongduolaSetLocAndRot : TsAnimNotifyBase, IUnreal
 		return true;
 	}
 
-	// Token: 0x06001DA2 RID: 7586 RVA: 0x000954EE File Offset: 0x000936EE
+	// Token: 0x06001E3F RID: 7743 RVA: 0x0009C47E File Offset: 0x0009A67E
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifySummonGongduolaSetLocAndRot._ClassPtr == IntPtr.Zero)
@@ -101,23 +97,23 @@ public class TsAnimNotifySummonGongduolaSetLocAndRot : TsAnimNotifyBase, IUnreal
 		return TsAnimNotifySummonGongduolaSetLocAndRot._ClassPtr;
 	}
 
-	// Token: 0x06001DA3 RID: 7587 RVA: 0x00095514 File Offset: 0x00093714
+	// Token: 0x06001E40 RID: 7744 RVA: 0x0009C4A4 File Offset: 0x0009A6A4
 	public TsAnimNotifySummonGongduolaSetLocAndRot() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifySummonGongduolaSetLocAndRot.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001DA4 RID: 7588 RVA: 0x0009553C File Offset: 0x0009373C
+	// Token: 0x06001E41 RID: 7745 RVA: 0x0009C4CC File Offset: 0x0009A6CC
 	[NullableContext(1)]
 	public TsAnimNotifySummonGongduolaSetLocAndRot(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifySummonGongduolaSetLocAndRot.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001DA5 RID: 7589 RVA: 0x0009556F File Offset: 0x0009376F
+	// Token: 0x06001E42 RID: 7746 RVA: 0x0009C4FF File Offset: 0x0009A6FF
 	protected TsAnimNotifySummonGongduolaSetLocAndRot(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001DA6 RID: 7590 RVA: 0x00095578 File Offset: 0x00093778
+	// Token: 0x06001E43 RID: 7747 RVA: 0x0009C508 File Offset: 0x0009A708
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -125,13 +121,13 @@ public class TsAnimNotifySummonGongduolaSetLocAndRot : TsAnimNotifyBase, IUnreal
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x04001262 RID: 4706
+	// Token: 0x040012A5 RID: 4773
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifySummonGongduolaSetLocAndRot.TsAnimNotifySummonGongduolaSetLocAndRot_C";
 
-	// Token: 0x04001263 RID: 4707
+	// Token: 0x040012A6 RID: 4774
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04001264 RID: 4708
+	// Token: 0x040012A7 RID: 4775
 	private static IntPtr _ClassDefaultObjectPtr;
 }

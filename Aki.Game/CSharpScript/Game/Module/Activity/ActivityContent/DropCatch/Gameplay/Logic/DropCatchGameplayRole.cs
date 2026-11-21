@@ -5,14 +5,14 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006738 RID: 26424
+	// Token: 0x02005688 RID: 22152
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchGameplayRole : IRoleInstance
 	{
-		// Token: 0x17009659 RID: 38489
-		// (get) Token: 0x06041F2C RID: 270124 RVA: 0x00FFF857 File Offset: 0x00FFDA57
-		// (set) Token: 0x06041F2D RID: 270125 RVA: 0x00FFF860 File Offset: 0x00FFDA60
+		// Token: 0x17006998 RID: 27032
+		// (get) Token: 0x06036A78 RID: 223864 RVA: 0x00F40C07 File Offset: 0x00F3EE07
+		// (set) Token: 0x06036A79 RID: 223865 RVA: 0x00F40C10 File Offset: 0x00F3EE10
 		protected float Energy
 		{
 			get
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041F2E RID: 270126 RVA: 0x00FFF8E8 File Offset: 0x00FFDAE8
+		// Token: 0x06036A7A RID: 223866 RVA: 0x00F40C98 File Offset: 0x00F3EE98
 		private EDropCatchRoleSkillState ComputeSkillStateByEnergy(float energy, float maxEnergy)
 		{
 			if (energy == 0f)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041F2F RID: 270127 RVA: 0x00FFF918 File Offset: 0x00FFDB18
+		// Token: 0x06036A7B RID: 223867 RVA: 0x00F40CC8 File Offset: 0x00F3EEC8
 		public void Init(IDropCatchRoleParams @params)
 		{
 			this.Context = @params.Context;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.UpdateBounds();
 		}
 
-		// Token: 0x06041F30 RID: 270128 RVA: 0x00FFFBE7 File Offset: 0x00FFDDE7
+		// Token: 0x06036A7C RID: 223868 RVA: 0x00F40F97 File Offset: 0x00F3F197
 		public void OnReadyTick(float deltaTime)
 		{
 			this.UpdateDirection();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.UpdateAnimationState();
 		}
 
-		// Token: 0x06041F31 RID: 270129 RVA: 0x00FFFBFC File Offset: 0x00FFDDFC
+		// Token: 0x06036A7D RID: 223869 RVA: 0x00F40FAC File Offset: 0x00F3F1AC
 		public void OnTick(float deltaTime)
 		{
 			this.UpdateDirection();
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.UpdateAnimationState();
 		}
 
-		// Token: 0x06041F32 RID: 270130 RVA: 0x00FFFC25 File Offset: 0x00FFDE25
+		// Token: 0x06036A7E RID: 223870 RVA: 0x00F40FD5 File Offset: 0x00F3F1D5
 		protected void UpdateDirection()
 		{
 			this.MoveDirection = this.Context.GetGameplayInputMgr().Get(EDropCatchGameplayInputChannel.MoveDirection, EDropCatchRoleDirection.None);
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041F33 RID: 270131 RVA: 0x00FFFC54 File Offset: 0x00FFDE54
+		// Token: 0x06036A7F RID: 223871 RVA: 0x00F41004 File Offset: 0x00F3F204
 		protected void UpdatePosition(float deltaTime)
 		{
 			this.RolePos.X = MathUtils.Instance.Clamp(this.RolePos.X + (double)(this.Speed.GetFinalValue() * (float)this.MoveDirection * deltaTime), this.Context.GetGameplayArea().MinX + (double)this.MaxOffsetX, this.Context.GetGameplayArea().MaxX - (double)this.MaxOffsetX);
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			roleView.UpdateRolePos(this.RolePos);
 		}
 
-		// Token: 0x06041F34 RID: 270132 RVA: 0x00FFFCF4 File Offset: 0x00FFDEF4
+		// Token: 0x06036A80 RID: 223872 RVA: 0x00F410A4 File Offset: 0x00F3F2A4
 		protected void UpdateAnimationState()
 		{
 			bool flag = this.MoveDirection > EDropCatchRoleDirection.None;
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041F35 RID: 270133 RVA: 0x00FFFD60 File Offset: 0x00FFDF60
+		// Token: 0x06036A81 RID: 223873 RVA: 0x00F41110 File Offset: 0x00F3F310
 		protected void UpdateBounds()
 		{
 			this.RoleBoundCenter.Set(this.RolePos.X + this.RoleBoundsOffset.X, this.RolePos.Y + this.RoleBoundsOffset.Y);
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			DropCatchGameplayHelper.CalculateBounds(this.BowlBoundCenter, this.BowlSize, this.BowlBounds);
 		}
 
-		// Token: 0x06041F36 RID: 270134 RVA: 0x00FFFE0D File Offset: 0x00FFE00D
+		// Token: 0x06036A82 RID: 223874 RVA: 0x00F411BD File Offset: 0x00F3F3BD
 		protected void UpdateEnergy(float deltaTime)
 		{
 			if (this.SkillState == EDropCatchRoleSkillState.InSkill)
@@ -217,19 +217,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.AddEnergy((float)((double)(this.EnergySelfRecover * deltaTime) * TimeUtil.Instance.Millisecond), false);
 		}
 
-		// Token: 0x06041F37 RID: 270135 RVA: 0x00FFFE3C File Offset: 0x00FFE03C
+		// Token: 0x06036A83 RID: 223875 RVA: 0x00F411EC File Offset: 0x00F3F3EC
 		public IDropCatchBounds GetBowlBounds()
 		{
 			return this.BowlBounds;
 		}
 
-		// Token: 0x06041F38 RID: 270136 RVA: 0x00FFFE44 File Offset: 0x00FFE044
+		// Token: 0x06036A84 RID: 223876 RVA: 0x00F411F4 File Offset: 0x00F3F3F4
 		public IDropCatchBounds GetRoleBounds()
 		{
 			return this.RoleBounds;
 		}
 
-		// Token: 0x06041F39 RID: 270137 RVA: 0x00FFFE4C File Offset: 0x00FFE04C
+		// Token: 0x06036A85 RID: 223877 RVA: 0x00F411FC File Offset: 0x00F3F3FC
 		public void AddEnergy(float energy, bool calRate)
 		{
 			float num = energy;
@@ -242,13 +242,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.Energy = MathUtils.Instance.Clamp(this.Energy + num, 0f, this.MaxEnergy);
 		}
 
-		// Token: 0x06041F3A RID: 270138 RVA: 0x00FFFEBA File Offset: 0x00FFE0BA
+		// Token: 0x06036A86 RID: 223878 RVA: 0x00F4126A File Offset: 0x00F3F46A
 		public void FullEnergy()
 		{
 			this.Energy = this.MaxEnergy;
 		}
 
-		// Token: 0x06041F3B RID: 270139 RVA: 0x00FFFEC8 File Offset: 0x00FFE0C8
+		// Token: 0x06036A87 RID: 223879 RVA: 0x00F41278 File Offset: 0x00F3F478
 		protected void ConsumeEnergy(float deltaTime)
 		{
 			if (this.SkillState != EDropCatchRoleSkillState.InSkill)
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.Energy = Math.Max(0f, this.Energy - (float)num2);
 		}
 
-		// Token: 0x06041F3C RID: 270140 RVA: 0x00FFFF43 File Offset: 0x00FFE143
+		// Token: 0x06036A88 RID: 223880 RVA: 0x00F412F3 File Offset: 0x00F3F4F3
 		public void UseSkill()
 		{
 			this.SkillStartTime = this.Context.GetGameplayTimeMgr().GetTime();
@@ -274,12 +274,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.OnSkillStart();
 		}
 
-		// Token: 0x06041F3D RID: 270141 RVA: 0x00FFFF83 File Offset: 0x00FFE183
+		// Token: 0x06036A89 RID: 223881 RVA: 0x00F41333 File Offset: 0x00F3F533
 		protected virtual void OnSkillStart()
 		{
 		}
 
-		// Token: 0x06041F3E RID: 270142 RVA: 0x00FFFF88 File Offset: 0x00FFE188
+		// Token: 0x06036A8A RID: 223882 RVA: 0x00F41338 File Offset: 0x00F3F538
 		private void EndSkill()
 		{
 			if (this.SkillState != EDropCatchRoleSkillState.InSkill)
@@ -297,12 +297,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.OnSkillEnd();
 		}
 
-		// Token: 0x06041F3F RID: 270143 RVA: 0x00FFFFE2 File Offset: 0x00FFE1E2
+		// Token: 0x06036A8B RID: 223883 RVA: 0x00F41392 File Offset: 0x00F3F592
 		protected virtual void OnSkillEnd()
 		{
 		}
 
-		// Token: 0x06041F40 RID: 270144 RVA: 0x00FFFFE4 File Offset: 0x00FFE1E4
+		// Token: 0x06036A8C RID: 223884 RVA: 0x00F41394 File Offset: 0x00F3F594
 		public void AddShield(float time)
 		{
 			this.ShieldTime = time * (float)TimeUtil.Instance.InverseMillisecond;
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06041F41 RID: 270145 RVA: 0x01000064 File Offset: 0x00FFE264
+		// Token: 0x06036A8D RID: 223885 RVA: 0x00F41414 File Offset: 0x00F3F614
 		public void RemoveShield()
 		{
 			this.ShieldTime = 0f;
@@ -347,7 +347,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			Log.Instance.Info(ELogModule.DropCatch, ELogAuthor.CB, "移除护盾", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06041F42 RID: 270146 RVA: 0x010000CC File Offset: 0x00FFE2CC
+		// Token: 0x06036A8E RID: 223886 RVA: 0x00F4147C File Offset: 0x00F3F67C
 		public void UpdateShieldTime(float deltaTime)
 		{
 			if (this.ShieldTime <= 0f)
@@ -364,167 +364,167 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041F43 RID: 270147 RVA: 0x0100010A File Offset: 0x00FFE30A
+		// Token: 0x06036A8F RID: 223887 RVA: 0x00F414BA File Offset: 0x00F3F6BA
 		public bool IsInShield()
 		{
 			return this.ShieldTime > 0f;
 		}
 
-		// Token: 0x06041F44 RID: 270148 RVA: 0x01000119 File Offset: 0x00FFE319
+		// Token: 0x06036A90 RID: 223888 RVA: 0x00F414C9 File Offset: 0x00F3F6C9
 		public EDropCatchRoleSkillState GetSkillState()
 		{
 			return this.SkillState;
 		}
 
-		// Token: 0x06041F45 RID: 270149 RVA: 0x01000121 File Offset: 0x00FFE321
+		// Token: 0x06036A91 RID: 223889 RVA: 0x00F414D1 File Offset: 0x00F3F6D1
 		public int GetRoleId()
 		{
 			return this.RoleId;
 		}
 
-		// Token: 0x06041F46 RID: 270150 RVA: 0x01000129 File Offset: 0x00FFE329
+		// Token: 0x06036A92 RID: 223890 RVA: 0x00F414D9 File Offset: 0x00F3F6D9
 		public float GetEnergy()
 		{
 			return this.Energy;
 		}
 
-		// Token: 0x06041F47 RID: 270151 RVA: 0x01000131 File Offset: 0x00FFE331
+		// Token: 0x06036A93 RID: 223891 RVA: 0x00F414E1 File Offset: 0x00F3F6E1
 		public float GetMaxEnergy()
 		{
 			return this.MaxEnergy;
 		}
 
-		// Token: 0x06041F48 RID: 270152 RVA: 0x01000139 File Offset: 0x00FFE339
+		// Token: 0x06036A94 RID: 223892 RVA: 0x00F414E9 File Offset: 0x00F3F6E9
 		public Vector2D GetRolePos()
 		{
 			return this.RolePos;
 		}
 
-		// Token: 0x06041F49 RID: 270153 RVA: 0x01000141 File Offset: 0x00FFE341
+		// Token: 0x06036A95 RID: 223893 RVA: 0x00F414F1 File Offset: 0x00F3F6F1
 		public DropCatchGameplayAttribute GetSpeedAttr()
 		{
 			return this.Speed;
 		}
 
-		// Token: 0x06041F4A RID: 270154 RVA: 0x0100014C File Offset: 0x00FFE34C
+		// Token: 0x06036A96 RID: 223894 RVA: 0x00F414FC File Offset: 0x00F3F6FC
 		public Vector2D GetFloatEffPos()
 		{
 			this.FloatEffPos.Set(this.RolePos.X, this.RolePos.Y + this.RoleSize.Y / 2.0 + this.BowlSize.Y);
 			return this.FloatEffPos;
 		}
 
-		// Token: 0x06041F4B RID: 270155 RVA: 0x010001A2 File Offset: 0x00FFE3A2
+		// Token: 0x06036A97 RID: 223895 RVA: 0x00F41552 File Offset: 0x00F3F752
 		public float GetEnergyGetRate()
 		{
 			return this.EnergyGetRate;
 		}
 
-		// Token: 0x06041F4C RID: 270156 RVA: 0x010001AA File Offset: 0x00FFE3AA
+		// Token: 0x06036A98 RID: 223896 RVA: 0x00F4155A File Offset: 0x00F3F75A
 		public float GetEnergySelfRecover()
 		{
 			return this.EnergySelfRecover;
 		}
 
-		// Token: 0x06041F4D RID: 270157 RVA: 0x010001B2 File Offset: 0x00FFE3B2
+		// Token: 0x06036A99 RID: 223897 RVA: 0x00F41562 File Offset: 0x00F3F762
 		public float GetSkillReduceEnergy()
 		{
 			return this.SkillReduceEnergy;
 		}
 
-		// Token: 0x06041F4E RID: 270158 RVA: 0x010001BA File Offset: 0x00FFE3BA
+		// Token: 0x06036A9A RID: 223898 RVA: 0x00F4156A File Offset: 0x00F3F76A
 		public float GetSkillReduceEnergyRateInterval()
 		{
 			return this.SkillReduceEnergyRateInterval;
 		}
 
-		// Token: 0x06041F4F RID: 270159 RVA: 0x010001C2 File Offset: 0x00FFE3C2
+		// Token: 0x06036A9B RID: 223899 RVA: 0x00F41572 File Offset: 0x00F3F772
 		public float GetSkillReduceEnergyRate()
 		{
 			return this.SkillReduceEnergyRate;
 		}
 
-		// Token: 0x06041F50 RID: 270160 RVA: 0x010001CA File Offset: 0x00FFE3CA
+		// Token: 0x06036A9C RID: 223900 RVA: 0x00F4157A File Offset: 0x00F3F77A
 		public float GetShieldTime()
 		{
 			return this.ShieldTime;
 		}
 
-		// Token: 0x06041F51 RID: 270161 RVA: 0x010001D2 File Offset: 0x00FFE3D2
+		// Token: 0x06036A9D RID: 223901 RVA: 0x00F41582 File Offset: 0x00F3F782
 		public EDropCatchRoleAnimState GetAnimState()
 		{
 			return this.AnimState;
 		}
 
-		// Token: 0x06041F52 RID: 270162 RVA: 0x010001DA File Offset: 0x00FFE3DA
+		// Token: 0x06036A9E RID: 223902 RVA: 0x00F4158A File Offset: 0x00F3F78A
 		public Vector2D GetRoleSize()
 		{
 			return this.RoleSize;
 		}
 
-		// Token: 0x06041F53 RID: 270163 RVA: 0x010001E2 File Offset: 0x00FFE3E2
+		// Token: 0x06036A9F RID: 223903 RVA: 0x00F41592 File Offset: 0x00F3F792
 		public Vector2D GetBowlSize()
 		{
 			return this.BowlSize;
 		}
 
-		// Token: 0x040225C2 RID: 140738
+		// Token: 0x0401CE1B RID: 118299
 		protected Vector2D RolePos = Vector2D.Create();
 
-		// Token: 0x040225C3 RID: 140739
+		// Token: 0x0401CE1C RID: 118300
 		protected Vector2D RoleBoundCenter = Vector2D.Create();
 
-		// Token: 0x040225C4 RID: 140740
+		// Token: 0x0401CE1D RID: 118301
 		protected Vector2D BowlBoundCenter = Vector2D.Create();
 
-		// Token: 0x040225C5 RID: 140741
+		// Token: 0x0401CE1E RID: 118302
 		protected Vector2D RoleSize = Vector2D.Create();
 
-		// Token: 0x040225C6 RID: 140742
+		// Token: 0x0401CE1F RID: 118303
 		protected Vector2D BowlSize = Vector2D.Create();
 
-		// Token: 0x040225C7 RID: 140743
+		// Token: 0x0401CE20 RID: 118304
 		protected Vector2D RoleBoundsOffset = Vector2D.Create();
 
-		// Token: 0x040225C8 RID: 140744
+		// Token: 0x0401CE21 RID: 118305
 		protected Vector2D BowlBoundsOffset = Vector2D.Create();
 
-		// Token: 0x040225C9 RID: 140745
+		// Token: 0x0401CE22 RID: 118306
 		protected int RoleId;
 
-		// Token: 0x040225CA RID: 140746
+		// Token: 0x0401CE23 RID: 118307
 		protected EDropCatchRoleAnimState AnimState = EDropCatchRoleAnimState.IdleBowlRight;
 
-		// Token: 0x040225CB RID: 140747
+		// Token: 0x0401CE24 RID: 118308
 		protected EDropCatchRoleSkillState SkillState;
 
-		// Token: 0x040225CC RID: 140748
+		// Token: 0x0401CE25 RID: 118309
 		protected DropCatchGameplayAttribute Speed;
 
-		// Token: 0x040225CD RID: 140749
+		// Token: 0x0401CE26 RID: 118310
 		protected float EnergyInner;
 
-		// Token: 0x040225CE RID: 140750
+		// Token: 0x0401CE27 RID: 118311
 		protected float MaxEnergy;
 
-		// Token: 0x040225CF RID: 140751
+		// Token: 0x0401CE28 RID: 118312
 		protected float EnergyGetRate;
 
-		// Token: 0x040225D0 RID: 140752
+		// Token: 0x0401CE29 RID: 118313
 		protected float EnergySelfRecover;
 
-		// Token: 0x040225D1 RID: 140753
+		// Token: 0x0401CE2A RID: 118314
 		protected float SkillReduceEnergy;
 
-		// Token: 0x040225D2 RID: 140754
+		// Token: 0x0401CE2B RID: 118315
 		protected float SkillReduceEnergyRateInterval;
 
-		// Token: 0x040225D3 RID: 140755
+		// Token: 0x0401CE2C RID: 118316
 		protected float SkillReduceEnergyRate;
 
-		// Token: 0x040225D4 RID: 140756
+		// Token: 0x0401CE2D RID: 118317
 		protected float SkillStartTime;
 
-		// Token: 0x040225D5 RID: 140757
+		// Token: 0x0401CE2E RID: 118318
 		protected readonly IDropCatchBounds BowlBounds = new IDropCatchBounds
 		{
 			Left = 0.0,
@@ -533,7 +533,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			Bottom = 0.0
 		};
 
-		// Token: 0x040225D6 RID: 140758
+		// Token: 0x0401CE2F RID: 118319
 		protected readonly IDropCatchBounds RoleBounds = new IDropCatchBounds
 		{
 			Left = 0.0,
@@ -542,22 +542,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			Bottom = 0.0
 		};
 
-		// Token: 0x040225D7 RID: 140759
+		// Token: 0x0401CE30 RID: 118320
 		protected EDropCatchRoleDirection MoveDirection;
 
-		// Token: 0x040225D8 RID: 140760
+		// Token: 0x0401CE31 RID: 118321
 		protected EDropCatchRoleDirection FacingDirection = EDropCatchRoleDirection.Right;
 
-		// Token: 0x040225D9 RID: 140761
+		// Token: 0x0401CE32 RID: 118322
 		protected float MaxOffsetX;
 
-		// Token: 0x040225DA RID: 140762
+		// Token: 0x0401CE33 RID: 118323
 		protected float ShieldTime;
 
-		// Token: 0x040225DB RID: 140763
+		// Token: 0x0401CE34 RID: 118324
 		protected IGameplayLogicContext Context;
 
-		// Token: 0x040225DC RID: 140764
+		// Token: 0x0401CE35 RID: 118325
 		protected Vector2D FloatEffPos = Vector2D.Create();
 	}
 }

@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AC0 RID: 2752
+	// Token: 0x02000B95 RID: 2965
 	public struct ActionMapping : IFlatbufferObject
 	{
 		// Token: 0x170000FC RID: 252
-		// (get) Token: 0x0600429E RID: 17054 RVA: 0x001CA4E4 File Offset: 0x001C86E4
+		// (get) Token: 0x0600479C RID: 18332 RVA: 0x001E9728 File Offset: 0x001E7928
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,31 +20,31 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600429F RID: 17055 RVA: 0x001CA4F1 File Offset: 0x001C86F1
+		// Token: 0x0600479D RID: 18333 RVA: 0x001E9735 File Offset: 0x001E7935
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060042A0 RID: 17056 RVA: 0x001CA4F8 File Offset: 0x001C86F8
+		// Token: 0x0600479E RID: 18334 RVA: 0x001E973C File Offset: 0x001E793C
 		public static ActionMapping GetRootAsActionMapping(ByteBuffer _bb)
 		{
 			return ActionMapping.GetRootAsActionMapping(_bb, default(ActionMapping));
 		}
 
-		// Token: 0x060042A1 RID: 17057 RVA: 0x001CA514 File Offset: 0x001C8714
+		// Token: 0x0600479F RID: 18335 RVA: 0x001E9758 File Offset: 0x001E7958
 		public static ActionMapping GetRootAsActionMapping(ByteBuffer _bb, ActionMapping obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060042A2 RID: 17058 RVA: 0x001CA531 File Offset: 0x001C8731
+		// Token: 0x060047A0 RID: 18336 RVA: 0x001E9775 File Offset: 0x001E7975
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060042A3 RID: 17059 RVA: 0x001CA540 File Offset: 0x001C8740
+		// Token: 0x060047A1 RID: 18337 RVA: 0x001E9784 File Offset: 0x001E7984
 		public ActionMapping __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
@@ -52,7 +52,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000FD RID: 253
-		// (get) Token: 0x060042A4 RID: 17060 RVA: 0x001CA550 File Offset: 0x001C8750
+		// (get) Token: 0x060047A2 RID: 18338 RVA: 0x001E9794 File Offset: 0x001E7994
 		public int Id
 		{
 			get
@@ -67,7 +67,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000FE RID: 254
-		// (get) Token: 0x060042A5 RID: 17061 RVA: 0x001CA58C File Offset: 0x001C878C
+		// (get) Token: 0x060047A3 RID: 18339 RVA: 0x001E97D0 File Offset: 0x001E79D0
 		public string ActionName
 		{
 			get
@@ -81,20 +81,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060042A6 RID: 17062 RVA: 0x001CA5C3 File Offset: 0x001C87C3
+		// Token: 0x060047A4 RID: 18340 RVA: 0x001E9807 File Offset: 0x001E7A07
 		public Span<byte> GetActionNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060042A7 RID: 17063 RVA: 0x001CA5D2 File Offset: 0x001C87D2
+		// Token: 0x060047A5 RID: 18341 RVA: 0x001E9816 File Offset: 0x001E7A16
 		public byte[] GetActionNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
 		// Token: 0x170000FF RID: 255
-		// (get) Token: 0x060042A8 RID: 17064 RVA: 0x001CA5EC File Offset: 0x001C87EC
+		// (get) Token: 0x060047A6 RID: 18342 RVA: 0x001E9830 File Offset: 0x001E7A30
 		public int ActionType
 		{
 			get
@@ -109,7 +109,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x17000100 RID: 256
-		// (get) Token: 0x060042A9 RID: 17065 RVA: 0x001CA628 File Offset: 0x001C8828
+		// (get) Token: 0x060047A7 RID: 18343 RVA: 0x001E986C File Offset: 0x001E7A6C
 		public string InputTag
 		{
 			get
@@ -123,20 +123,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060042AA RID: 17066 RVA: 0x001CA660 File Offset: 0x001C8860
+		// Token: 0x060047A8 RID: 18344 RVA: 0x001E98A4 File Offset: 0x001E7AA4
 		public Span<byte> GetInputTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x060042AB RID: 17067 RVA: 0x001CA670 File Offset: 0x001C8870
+		// Token: 0x060047A9 RID: 18345 RVA: 0x001E98B4 File Offset: 0x001E7AB4
 		public byte[] GetInputTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
 		// Token: 0x17000101 RID: 257
-		// (get) Token: 0x060042AC RID: 17068 RVA: 0x001CA688 File Offset: 0x001C8888
+		// (get) Token: 0x060047AA RID: 18346 RVA: 0x001E98CC File Offset: 0x001E7ACC
 		public int ExclusiveType
 		{
 			get
@@ -150,7 +150,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060042AD RID: 17069 RVA: 0x001CA6C8 File Offset: 0x001C88C8
+		// Token: 0x060047AB RID: 18347 RVA: 0x001E990C File Offset: 0x001E7B0C
 		public string PcKeys(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -162,7 +162,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x17000102 RID: 258
-		// (get) Token: 0x060042AE RID: 17070 RVA: 0x001CA704 File Offset: 0x001C8904
+		// (get) Token: 0x060047AC RID: 18348 RVA: 0x001E9948 File Offset: 0x001E7B48
 		public int PcKeysLength
 		{
 			get
@@ -176,7 +176,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060042AF RID: 17071 RVA: 0x001CA730 File Offset: 0x001C8930
+		// Token: 0x060047AD RID: 18349 RVA: 0x001E9974 File Offset: 0x001E7B74
 		public string FrancePcKeys(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -188,7 +188,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x17000103 RID: 259
-		// (get) Token: 0x060042B0 RID: 17072 RVA: 0x001CA76C File Offset: 0x001C896C
+		// (get) Token: 0x060047AE RID: 18350 RVA: 0x001E99B0 File Offset: 0x001E7BB0
 		public int FrancePcKeysLength
 		{
 			get
@@ -202,7 +202,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060042B1 RID: 17073 RVA: 0x001CA798 File Offset: 0x001C8998
+		// Token: 0x060047AF RID: 18351 RVA: 0x001E99DC File Offset: 0x001E7BDC
 		public string ThaiPcKeys(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -214,7 +214,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x17000104 RID: 260
-		// (get) Token: 0x060042B2 RID: 17074 RVA: 0x001CA7D4 File Offset: 0x001C89D4
+		// (get) Token: 0x060047B0 RID: 18352 RVA: 0x001E9A18 File Offset: 0x001E7C18
 		public int ThaiPcKeysLength
 		{
 			get
@@ -228,7 +228,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060042B3 RID: 17075 RVA: 0x001CA800 File Offset: 0x001C8A00
+		// Token: 0x060047B1 RID: 18353 RVA: 0x001E9A44 File Offset: 0x001E7C44
 		public string GamepadKeys(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -240,7 +240,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x17000105 RID: 261
-		// (get) Token: 0x060042B4 RID: 17076 RVA: 0x001CA83C File Offset: 0x001C8A3C
+		// (get) Token: 0x060047B2 RID: 18354 RVA: 0x001E9A80 File Offset: 0x001E7C80
 		public int GamepadKeysLength
 		{
 			get
@@ -255,7 +255,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x17000106 RID: 262
-		// (get) Token: 0x060042B5 RID: 17077 RVA: 0x001CA868 File Offset: 0x001C8A68
+		// (get) Token: 0x060047B3 RID: 18355 RVA: 0x001E9AAC File Offset: 0x001E7CAC
 		public string MobileIconPath
 		{
 			get
@@ -269,20 +269,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060042B6 RID: 17078 RVA: 0x001CA8A0 File Offset: 0x001C8AA0
+		// Token: 0x060047B4 RID: 18356 RVA: 0x001E9AE4 File Offset: 0x001E7CE4
 		public Span<byte> GetMobileIconPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x060042B7 RID: 17079 RVA: 0x001CA8B0 File Offset: 0x001C8AB0
+		// Token: 0x060047B5 RID: 18357 RVA: 0x001E9AF4 File Offset: 0x001E7CF4
 		public byte[] GetMobileIconPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(22) ?? Array.Empty<byte>();
 		}
 
 		// Token: 0x17000107 RID: 263
-		// (get) Token: 0x060042B8 RID: 17080 RVA: 0x001CA8C8 File Offset: 0x001C8AC8
+		// (get) Token: 0x060047B6 RID: 18358 RVA: 0x001E9B0C File Offset: 0x001E7D0C
 		public string DisplayName
 		{
 			get
@@ -296,20 +296,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060042B9 RID: 17081 RVA: 0x001CA900 File Offset: 0x001C8B00
+		// Token: 0x060047B7 RID: 18359 RVA: 0x001E9B44 File Offset: 0x001E7D44
 		public Span<byte> GetDisplayNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(24, 1);
 		}
 
-		// Token: 0x060042BA RID: 17082 RVA: 0x001CA910 File Offset: 0x001C8B10
+		// Token: 0x060047B8 RID: 18360 RVA: 0x001E9B54 File Offset: 0x001E7D54
 		public byte[] GetDisplayNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(24) ?? Array.Empty<byte>();
 		}
 
 		// Token: 0x17000108 RID: 264
-		// (get) Token: 0x060042BB RID: 17083 RVA: 0x001CA928 File Offset: 0x001C8B28
+		// (get) Token: 0x060047B9 RID: 18361 RVA: 0x001E9B6C File Offset: 0x001E7D6C
 		public bool IsIdleAction
 		{
 			get
@@ -319,7 +319,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060042BC RID: 17084 RVA: 0x001CA968 File Offset: 0x001C8B68
+		// Token: 0x060047BA RID: 18362 RVA: 0x001E9BAC File Offset: 0x001E7DAC
 		public DicIntInt? KeyboardVersionMap(int j)
 		{
 			int num = this.__p.__offset(28);
@@ -331,7 +331,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x17000109 RID: 265
-		// (get) Token: 0x060042BD RID: 17085 RVA: 0x001CA9CC File Offset: 0x001C8BCC
+		// (get) Token: 0x060047BB RID: 18363 RVA: 0x001E9C10 File Offset: 0x001E7E10
 		public int KeyboardVersionMapLength
 		{
 			get
@@ -345,7 +345,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060042BE RID: 17086 RVA: 0x001CA9F8 File Offset: 0x001C8BF8
+		// Token: 0x060047BC RID: 18364 RVA: 0x001E9C3C File Offset: 0x001E7E3C
 		public DicIntInt? GamepadVersionMap(int j)
 		{
 			int num = this.__p.__offset(30);
@@ -357,7 +357,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x1700010A RID: 266
-		// (get) Token: 0x060042BF RID: 17087 RVA: 0x001CAA5C File Offset: 0x001C8C5C
+		// (get) Token: 0x060047BD RID: 18365 RVA: 0x001E9CA0 File Offset: 0x001E7EA0
 		public int GamepadVersionMapLength
 		{
 			get
@@ -371,109 +371,103 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060042C0 RID: 17088 RVA: 0x001CAA88 File Offset: 0x001C8C88
+		// Token: 0x060047BE RID: 18366 RVA: 0x001E9CCC File Offset: 0x001E7ECC
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用FrancePcKeysIter()或GetFrancePcKeysBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] FrancePcKeys()
+		public string[] FrancePcKeys()
 		{
 			return this.FrancePcKeysIter().ToArray<string>();
 		}
 
-		// Token: 0x060042C1 RID: 17089 RVA: 0x001CAA95 File Offset: 0x001C8C95
+		// Token: 0x060047BF RID: 18367 RVA: 0x001E9CD9 File Offset: 0x001E7ED9
 		[NullableContext(1)]
-		public readonly IEnumerable<string> FrancePcKeysIter()
+		public IEnumerable<string> FrancePcKeysIter()
 		{
 			ActionMapping.<FrancePcKeysIter>d__51 <FrancePcKeysIter>d__ = new ActionMapping.<FrancePcKeysIter>d__51(-2);
 			<FrancePcKeysIter>d__.<>3__<>4__this = this;
 			return <FrancePcKeysIter>d__;
 		}
 
-		// Token: 0x060042C2 RID: 17090 RVA: 0x001CAAAA File Offset: 0x001C8CAA
+		// Token: 0x060047C0 RID: 18368 RVA: 0x001E9CEE File Offset: 0x001E7EEE
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用GamepadKeysIter()或GetGamepadKeysBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] GamepadKeys()
+		public string[] GamepadKeys()
 		{
 			return this.GamepadKeysIter().ToArray<string>();
 		}
 
-		// Token: 0x060042C3 RID: 17091 RVA: 0x001CAAB7 File Offset: 0x001C8CB7
+		// Token: 0x060047C1 RID: 18369 RVA: 0x001E9CFB File Offset: 0x001E7EFB
 		[NullableContext(1)]
-		public readonly IEnumerable<string> GamepadKeysIter()
+		public IEnumerable<string> GamepadKeysIter()
 		{
 			ActionMapping.<GamepadKeysIter>d__53 <GamepadKeysIter>d__ = new ActionMapping.<GamepadKeysIter>d__53(-2);
 			<GamepadKeysIter>d__.<>3__<>4__this = this;
 			return <GamepadKeysIter>d__;
 		}
 
-		// Token: 0x060042C4 RID: 17092 RVA: 0x001CAACC File Offset: 0x001C8CCC
+		// Token: 0x060047C2 RID: 18370 RVA: 0x001E9D10 File Offset: 0x001E7F10
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用GamepadVersionMapFrozenDict()缓存字典，遍历请使用GamepadVersionMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> GamepadVersionMap()
+		public Dictionary<int, int> GamepadVersionMap()
 		{
 			return this.GamepadVersionMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x060042C5 RID: 17093 RVA: 0x001CAB22 File Offset: 0x001C8D22
+		// Token: 0x060047C3 RID: 18371 RVA: 0x001E9D66 File Offset: 0x001E7F66
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> GamepadVersionMapIter()
+		public IEnumerable<DicIntInt> GamepadVersionMapIter()
 		{
 			ActionMapping.<GamepadVersionMapIter>d__55 <GamepadVersionMapIter>d__ = new ActionMapping.<GamepadVersionMapIter>d__55(-2);
 			<GamepadVersionMapIter>d__.<>3__<>4__this = this;
 			return <GamepadVersionMapIter>d__;
 		}
 
-		// Token: 0x060042C6 RID: 17094 RVA: 0x001CAB38 File Offset: 0x001C8D38
+		// Token: 0x060047C4 RID: 18372 RVA: 0x001E9D7C File Offset: 0x001E7F7C
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用KeyboardVersionMapFrozenDict()缓存字典，遍历请使用KeyboardVersionMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> KeyboardVersionMap()
+		public Dictionary<int, int> KeyboardVersionMap()
 		{
 			return this.KeyboardVersionMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x060042C7 RID: 17095 RVA: 0x001CAB8E File Offset: 0x001C8D8E
+		// Token: 0x060047C5 RID: 18373 RVA: 0x001E9DD2 File Offset: 0x001E7FD2
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> KeyboardVersionMapIter()
+		public IEnumerable<DicIntInt> KeyboardVersionMapIter()
 		{
 			ActionMapping.<KeyboardVersionMapIter>d__57 <KeyboardVersionMapIter>d__ = new ActionMapping.<KeyboardVersionMapIter>d__57(-2);
 			<KeyboardVersionMapIter>d__.<>3__<>4__this = this;
 			return <KeyboardVersionMapIter>d__;
 		}
 
-		// Token: 0x060042C8 RID: 17096 RVA: 0x001CABA3 File Offset: 0x001C8DA3
+		// Token: 0x060047C6 RID: 18374 RVA: 0x001E9DE7 File Offset: 0x001E7FE7
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PcKeysIter()或GetPcKeysBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] PcKeys()
+		public string[] PcKeys()
 		{
 			return this.PcKeysIter().ToArray<string>();
 		}
 
-		// Token: 0x060042C9 RID: 17097 RVA: 0x001CABB0 File Offset: 0x001C8DB0
+		// Token: 0x060047C7 RID: 18375 RVA: 0x001E9DF4 File Offset: 0x001E7FF4
 		[NullableContext(1)]
-		public readonly IEnumerable<string> PcKeysIter()
+		public IEnumerable<string> PcKeysIter()
 		{
 			ActionMapping.<PcKeysIter>d__59 <PcKeysIter>d__ = new ActionMapping.<PcKeysIter>d__59(-2);
 			<PcKeysIter>d__.<>3__<>4__this = this;
 			return <PcKeysIter>d__;
 		}
 
-		// Token: 0x060042CA RID: 17098 RVA: 0x001CABC5 File Offset: 0x001C8DC5
+		// Token: 0x060047C8 RID: 18376 RVA: 0x001E9E09 File Offset: 0x001E8009
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ThaiPcKeysIter()或GetThaiPcKeysBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] ThaiPcKeys()
+		public string[] ThaiPcKeys()
 		{
 			return this.ThaiPcKeysIter().ToArray<string>();
 		}
 
-		// Token: 0x060042CB RID: 17099 RVA: 0x001CABD2 File Offset: 0x001C8DD2
+		// Token: 0x060047C9 RID: 18377 RVA: 0x001E9E16 File Offset: 0x001E8016
 		[NullableContext(1)]
-		public readonly IEnumerable<string> ThaiPcKeysIter()
+		public IEnumerable<string> ThaiPcKeysIter()
 		{
 			ActionMapping.<ThaiPcKeysIter>d__61 <ThaiPcKeysIter>d__ = new ActionMapping.<ThaiPcKeysIter>d__61(-2);
 			<ThaiPcKeysIter>d__.<>3__<>4__this = this;
 			return <ThaiPcKeysIter>d__;
 		}
 
-		// Token: 0x060042CC RID: 17100 RVA: 0x001CABE8 File Offset: 0x001C8DE8
+		// Token: 0x060047CA RID: 18378 RVA: 0x001E9E2C File Offset: 0x001E802C
 		public int? GetGamepadVersionMap(int key)
 		{
 			this.EnsureGamepadVersionMapCacheIfNeeded();
@@ -485,7 +479,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x060042CD RID: 17101 RVA: 0x001CAC1C File Offset: 0x001C8E1C
+		// Token: 0x060047CB RID: 18379 RVA: 0x001E9E60 File Offset: 0x001E8060
 		public int? GetKeyboardVersionMap(int key)
 		{
 			this.EnsureKeyboardVersionMapCacheIfNeeded();
@@ -497,7 +491,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x060042CE RID: 17102 RVA: 0x001CAC50 File Offset: 0x001C8E50
+		// Token: 0x060047CC RID: 18380 RVA: 0x001E9E94 File Offset: 0x001E8094
 		private void EnsureGamepadVersionMapCacheIfNeeded()
 		{
 			if (this.GamepadVersionMapCache != null)
@@ -507,7 +501,7 @@ namespace Aki.Config
 			this.GamepadVersionMapCache = this.GamepadVersionMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x060042CF RID: 17103 RVA: 0x001CACB8 File Offset: 0x001C8EB8
+		// Token: 0x060047CD RID: 18381 RVA: 0x001E9EFC File Offset: 0x001E80FC
 		private void EnsureKeyboardVersionMapCacheIfNeeded()
 		{
 			if (this.KeyboardVersionMapCache != null)
@@ -517,30 +511,30 @@ namespace Aki.Config
 			this.KeyboardVersionMapCache = this.KeyboardVersionMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x060042D0 RID: 17104 RVA: 0x001CAD1E File Offset: 0x001C8F1E
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetGamepadVersionMapFrozenDict(int key)
+		// Token: 0x060047CE RID: 18382 RVA: 0x001E9F62 File Offset: 0x001E8162
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetGamepadVersionMapFrozenDict()
 		{
 			this.EnsureGamepadVersionMapCacheIfNeeded();
 			return this.GamepadVersionMapCache;
 		}
 
-		// Token: 0x060042D1 RID: 17105 RVA: 0x001CAD2C File Offset: 0x001C8F2C
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetKeyboardVersionMapFrozenDict(int key)
+		// Token: 0x060047CF RID: 18383 RVA: 0x001E9F70 File Offset: 0x001E8170
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetKeyboardVersionMapFrozenDict()
 		{
 			this.EnsureKeyboardVersionMapCacheIfNeeded();
 			return this.KeyboardVersionMapCache;
 		}
 
-		// Token: 0x04004A9A RID: 19098
+		// Token: 0x0400506D RID: 20589
 		private Table __p;
 
-		// Token: 0x04004A9B RID: 19099
+		// Token: 0x0400506E RID: 20590
 		[Nullable(2)]
 		private FrozenDictionary<int, int> GamepadVersionMapCache;
 
-		// Token: 0x04004A9C RID: 19100
+		// Token: 0x0400506F RID: 20591
 		[Nullable(2)]
 		private FrozenDictionary<int, int> KeyboardVersionMapCache;
 	}

@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x020044FD RID: 17661
+	// Token: 0x0200341F RID: 13343
 	public class BooleanNode : IAstNode, IBooleanNode
 	{
-		// Token: 0x170073CA RID: 29642
-		// (get) Token: 0x0602D79F RID: 186271 RVA: 0x00A43B41 File Offset: 0x00A41D41
-		// (set) Token: 0x0602D7A0 RID: 186272 RVA: 0x00A43B49 File Offset: 0x00A41D49
+		// Token: 0x17004682 RID: 18050
+		// (get) Token: 0x06021E6F RID: 138863 RVA: 0x0096F951 File Offset: 0x0096DB51
+		// (set) Token: 0x06021E70 RID: 138864 RVA: 0x0096F959 File Offset: 0x0096DB59
 		public EAstNodeType NodeType { get; set; }
 
-		// Token: 0x170073CB RID: 29643
-		// (get) Token: 0x0602D7A1 RID: 186273 RVA: 0x00A43B52 File Offset: 0x00A41D52
-		// (set) Token: 0x0602D7A2 RID: 186274 RVA: 0x00A43B5A File Offset: 0x00A41D5A
+		// Token: 0x17004683 RID: 18051
+		// (get) Token: 0x06021E71 RID: 138865 RVA: 0x0096F962 File Offset: 0x0096DB62
+		// (set) Token: 0x06021E72 RID: 138866 RVA: 0x0096F96A File Offset: 0x0096DB6A
 		public bool Value { get; set; }
 	}
 }

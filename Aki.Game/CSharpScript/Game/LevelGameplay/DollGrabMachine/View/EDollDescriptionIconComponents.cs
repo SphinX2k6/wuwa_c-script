@@ -2,30 +2,30 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EF6 RID: 28406
+	// Token: 0x02006076 RID: 24694
 	internal enum EDollDescriptionIconComponents
 	{
-		// Token: 0x04024076 RID: 147574
+		// Token: 0x0401F329 RID: 127785
 		SprQuality,
-		// Token: 0x04024077 RID: 147575
+		// Token: 0x0401F32A RID: 127786
 		TexIcon,
-		// Token: 0x04024078 RID: 147576
+		// Token: 0x0401F32B RID: 127787
 		PnlText,
-		// Token: 0x04024079 RID: 147577
+		// Token: 0x0401F32C RID: 127788
 		TxtName,
-		// Token: 0x0402407A RID: 147578
+		// Token: 0x0401F32D RID: 127789
 		SprTxBg,
-		// Token: 0x0402407B RID: 147579
+		// Token: 0x0401F32E RID: 127790
 		PnlAdditionBottom,
-		// Token: 0x0402407C RID: 147580
+		// Token: 0x0401F32F RID: 127791
 		PnlAddition,
-		// Token: 0x0402407D RID: 147581
+		// Token: 0x0401F330 RID: 127792
 		ItemBase,
-		// Token: 0x0402407E RID: 147582
+		// Token: 0x0401F331 RID: 127793
 		SprSkinQuality,
-		// Token: 0x0402407F RID: 147583
+		// Token: 0x0401F332 RID: 127794
 		PnlAdditionBottomA,
-		// Token: 0x04024080 RID: 147584
+		// Token: 0x0401F333 RID: 127795
 		AniLoop
 	}
 }

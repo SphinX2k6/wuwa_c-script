@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002D7C RID: 11644
+// Token: 0x020022D6 RID: 8918
 [NullableContext(1)]
 [Nullable(0)]
 public static class WorldMapUtil
 {
-	// Token: 0x060187AB RID: 100267 RVA: 0x0063AA24 File Offset: 0x00638C24
+	// Token: 0x0601604D RID: 90189 RVA: 0x00660A3C File Offset: 0x0065EC3C
 	public static Vector2D GetViewportSize()
 	{
 		if (!ObjectUtils.IsValid(UiLayer.Instance.UiRootItem))
@@ -17,7 +17,7 @@ public static class WorldMapUtil
 		return Vector2D.Create((double)UiLayer.Instance.UiRootItem.GetWidth(), (double)UiLayer.Instance.UiRootItem.GetHeight());
 	}
 
-	// Token: 0x060187AC RID: 100268 RVA: 0x0063AA62 File Offset: 0x00638C62
+	// Token: 0x0601604E RID: 90190 RVA: 0x00660A7A File Offset: 0x0065EC7A
 	public static Vector2D GetViewportSizeByPool()
 	{
 		if (!ObjectUtils.IsValid(UiLayer.Instance.UiRootItem))

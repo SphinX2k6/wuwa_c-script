@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C99 RID: 23705
+	// Token: 0x02004C7B RID: 19579
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiMotorcycleData
 	{
-		// Token: 0x0603BE25 RID: 245285 RVA: 0x00E4E9A8 File Offset: 0x00E4CBA8
+		// Token: 0x06030D78 RID: 200056 RVA: 0x00D9F030 File Offset: 0x00D9D230
 		public void Init()
 		{
 			this.CurOperationType = Info.Instance.OperationType;
 		}
 
-		// Token: 0x0603BE26 RID: 245286 RVA: 0x00E4E9BA File Offset: 0x00E4CBBA
+		// Token: 0x06030D79 RID: 200057 RVA: 0x00D9F042 File Offset: 0x00D9D242
 		public void Clear()
 		{
 			if (this.IsDriving)
@@ -33,9 +33,9 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.IsMotorSoaring = false;
 		}
 
-		// Token: 0x17008DE7 RID: 36327
-		// (get) Token: 0x0603BE27 RID: 245287 RVA: 0x00E4E9E2 File Offset: 0x00E4CBE2
-		// (set) Token: 0x0603BE28 RID: 245288 RVA: 0x00E4E9EA File Offset: 0x00E4CBEA
+		// Token: 0x170061B9 RID: 25017
+		// (get) Token: 0x06030D7A RID: 200058 RVA: 0x00D9F06A File Offset: 0x00D9D26A
+		// (set) Token: 0x06030D7B RID: 200059 RVA: 0x00D9F072 File Offset: 0x00D9D272
 		public bool IsDriving
 		{
 			get
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE29 RID: 245289 RVA: 0x00E4EA03 File Offset: 0x00E4CC03
+		// Token: 0x06030D7C RID: 200060 RVA: 0x00D9F08B File Offset: 0x00D9D28B
 		private void EnableNextTick()
 		{
 			if (this.NextTickTimerId != null)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.NextTickTimerId = TimerSystem.Instance.Next(new TTimerAction(this.NextTick), BattleUiMotorcycleData.NextTickStat, null);
 		}
 
-		// Token: 0x0603BE2A RID: 245290 RVA: 0x00E4EA30 File Offset: 0x00E4CC30
+		// Token: 0x06030D7D RID: 200061 RVA: 0x00D9F0B8 File Offset: 0x00D9D2B8
 		private void ClearNextTick()
 		{
 			if (this.NextTickTimerId != null)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE2B RID: 245291 RVA: 0x00E4EA64 File Offset: 0x00E4CC64
+		// Token: 0x06030D7E RID: 200062 RVA: 0x00D9F0EC File Offset: 0x00D9D2EC
 		private void NextTick(float delta)
 		{
 			this.NextTickTimerId = null;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE2C RID: 245292 RVA: 0x00E4EB40 File Offset: 0x00E4CD40
+		// Token: 0x06030D7F RID: 200063 RVA: 0x00D9F1C8 File Offset: 0x00D9D3C8
 		public void EnterVehicle(VehiclePassengerInfo info)
 		{
 			Entity passengerEntity = info.PassengerEntity;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.RefreshEnterOrLeaveVehicle();
 		}
 
-		// Token: 0x0603BE2D RID: 245293 RVA: 0x00E4EBB7 File Offset: 0x00E4CDB7
+		// Token: 0x06030D80 RID: 200064 RVA: 0x00D9F23F File Offset: 0x00D9D43F
 		public void LeaveVehicle(VehiclePassengerInfo info)
 		{
 			if (!this.IsDriving)
@@ -123,14 +123,14 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.RefreshEnterOrLeaveVehicle();
 		}
 
-		// Token: 0x0603BE2E RID: 245294 RVA: 0x00E4EBC8 File Offset: 0x00E4CDC8
+		// Token: 0x06030D81 RID: 200065 RVA: 0x00D9F250 File Offset: 0x00D9D450
 		public void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 		{
 			this.CurRoleEntityHandle = newEntityHandle;
 			this.RefreshEnterOrLeaveVehicle();
 		}
 
-		// Token: 0x0603BE2F RID: 245295 RVA: 0x00E4EBD8 File Offset: 0x00E4CDD8
+		// Token: 0x06030D82 RID: 200066 RVA: 0x00D9F260 File Offset: 0x00D9D460
 		private void RefreshEnterOrLeaveVehicle()
 		{
 			EntityHandle curRoleEntityHandle = this.CurRoleEntityHandle;
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.OnEnterVehicle(num);
 		}
 
-		// Token: 0x0603BE30 RID: 245296 RVA: 0x00E4EC54 File Offset: 0x00E4CE54
+		// Token: 0x06030D83 RID: 200067 RVA: 0x00D9F2DC File Offset: 0x00D9D4DC
 		private void OnEnterVehicle(int motorcycleEntityId)
 		{
 			if (this.MotorcycleEntityId == motorcycleEntityId)
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.ListenMotorSoaring();
 		}
 
-		// Token: 0x0603BE31 RID: 245297 RVA: 0x00E4EDE8 File Offset: 0x00E4CFE8
+		// Token: 0x06030D84 RID: 200068 RVA: 0x00D9F470 File Offset: 0x00D9D670
 		private void OnLeaveVehicle()
 		{
 			if (!this.IsDriving)
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.IsDriving = false;
 		}
 
-		// Token: 0x0603BE32 RID: 245298 RVA: 0x00E4EE8C File Offset: 0x00E4D08C
+		// Token: 0x06030D85 RID: 200069 RVA: 0x00D9F514 File Offset: 0x00D9D714
 		private void ListenForTagAddOrRemove(BaseTagComponent tagComponent, int tagId, BaseTagComponent.TTagSwitchedCallback callback)
 		{
 			ITagTask tagTask = tagComponent.ListenForTagAddOrRemove(new int?(tagId), callback, null);
@@ -225,34 +225,34 @@ namespace CSharpScript.Game.Module.BattleUi
 			callback(tagId, tagComponent.HasTag(tagId));
 		}
 
-		// Token: 0x0603BE33 RID: 245299 RVA: 0x00E4EEC5 File Offset: 0x00E4D0C5
+		// Token: 0x06030D86 RID: 200070 RVA: 0x00D9F54D File Offset: 0x00D9D74D
 		private void OnNitrogenTagChange(int tagId, bool tagExists)
 		{
 			this.HasNitrogenTag = tagExists;
 			this.RefreshHudColorState();
 		}
 
-		// Token: 0x0603BE34 RID: 245300 RVA: 0x00E4EED4 File Offset: 0x00E4D0D4
+		// Token: 0x06030D87 RID: 200071 RVA: 0x00D9F55C File Offset: 0x00D9D75C
 		private void OnParkourTagChange(int tagId, bool tagExists)
 		{
 			this.HasParkourTag = tagExists;
 			this.RefreshHudColorState();
 		}
 
-		// Token: 0x0603BE35 RID: 245301 RVA: 0x00E4EEE3 File Offset: 0x00E4D0E3
+		// Token: 0x06030D88 RID: 200072 RVA: 0x00D9F56B File Offset: 0x00D9D76B
 		private void OnFirstPersonTagChange(int tagId, bool tagExists)
 		{
 			this.HasFirstPersonTag = tagExists;
 		}
 
-		// Token: 0x0603BE36 RID: 245302 RVA: 0x00E4EEEC File Offset: 0x00E4D0EC
+		// Token: 0x06030D89 RID: 200073 RVA: 0x00D9F574 File Offset: 0x00D9D774
 		private void OnHideHudTagChange(int tagId, bool tagExists)
 		{
 			this.HasHideHudTag = tagExists;
 			this.SetHudVisible(!this.HasHideHudTag, "HideHudTag");
 		}
 
-		// Token: 0x0603BE37 RID: 245303 RVA: 0x00E4EF09 File Offset: 0x00E4D109
+		// Token: 0x06030D8A RID: 200074 RVA: 0x00D9F591 File Offset: 0x00D9D791
 		private void OnFlyTagChanged(int tagId, bool tagExists)
 		{
 			if (!tagExists && Info.Instance.IsInGamepad())
@@ -262,19 +262,19 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit<int, bool>(EEventName.BattleUiMotorcycleFlyTagChanged, tagId, tagExists);
 		}
 
-		// Token: 0x0603BE38 RID: 245304 RVA: 0x00E4EF47 File Offset: 0x00E4D147
+		// Token: 0x06030D8B RID: 200075 RVA: 0x00D9F5CF File Offset: 0x00D9D7CF
 		private void OnMotorcycleTagChanged(int tagId, bool tagExists)
 		{
 			EventSystem.Instance.Emit<int, bool>(EEventName.BattleUiMotorcycleFlyTagChanged, tagId, tagExists);
 		}
 
-		// Token: 0x0603BE39 RID: 245305 RVA: 0x00E4EF5B File Offset: 0x00E4D15B
+		// Token: 0x06030D8C RID: 200076 RVA: 0x00D9F5E3 File Offset: 0x00D9D7E3
 		private void OnMotorcycleCannonTagChanged(int tagId, bool tagExists)
 		{
 			EventSystem.Instance.Emit<int, bool>(EEventName.BattleUiMotorcycleCannonTagChanged, tagId, tagExists);
 		}
 
-		// Token: 0x0603BE3A RID: 245306 RVA: 0x00E4EF70 File Offset: 0x00E4D170
+		// Token: 0x06030D8D RID: 200077 RVA: 0x00D9F5F8 File Offset: 0x00D9D7F8
 		private void RefreshHudColorState()
 		{
 			EMotorcycleHudColorState hudColorState = this.HudColorState;
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE3B RID: 245307 RVA: 0x00E4EFD2 File Offset: 0x00E4D1D2
+		// Token: 0x06030D8E RID: 200078 RVA: 0x00D9F65A File Offset: 0x00D9D85A
 		public void ShowTypeChange(EOperationType last, EOperationType now)
 		{
 			if (now == EOperationType.None)
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.CurOperationType = now;
 		}
 
-		// Token: 0x0603BE3C RID: 245308 RVA: 0x00E4F007 File Offset: 0x00E4D207
+		// Token: 0x06030D8F RID: 200079 RVA: 0x00D9F68F File Offset: 0x00D9D88F
 		private void RefreshChildVisible(bool bVisible)
 		{
 			if (this.CurOperationType == EOperationType.Pad)
@@ -331,9 +331,9 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x17008DE8 RID: 36328
-		// (get) Token: 0x0603BE3D RID: 245309 RVA: 0x00E4F03F File Offset: 0x00E4D23F
-		// (set) Token: 0x0603BE3E RID: 245310 RVA: 0x00E4F047 File Offset: 0x00E4D247
+		// Token: 0x170061BA RID: 25018
+		// (get) Token: 0x06030D90 RID: 200080 RVA: 0x00D9F6C7 File Offset: 0x00D9D8C7
+		// (set) Token: 0x06030D91 RID: 200081 RVA: 0x00D9F6CF File Offset: 0x00D9D8CF
 		public bool IsShowBulletJumpLeftClick
 		{
 			get
@@ -351,20 +351,20 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE3F RID: 245311 RVA: 0x00E4F06A File Offset: 0x00E4D26A
+		// Token: 0x06030D92 RID: 200082 RVA: 0x00D9F6F2 File Offset: 0x00D9D8F2
 		public void SetIsDynamicJoystick(bool isDynamicJoystick)
 		{
 			this.IsDynamicJoystick = isDynamicJoystick;
 			EventSystem.Instance.Emit<bool>(EEventName.OnSetMotorcycleJoystickMode, isDynamicJoystick);
 		}
 
-		// Token: 0x0603BE40 RID: 245312 RVA: 0x00E4F084 File Offset: 0x00E4D284
+		// Token: 0x06030D93 RID: 200083 RVA: 0x00D9F70C File Offset: 0x00D9D90C
 		public bool GetIsDynamicJoystick()
 		{
 			return this.IsDynamicJoystick;
 		}
 
-		// Token: 0x0603BE41 RID: 245313 RVA: 0x00E4F08C File Offset: 0x00E4D28C
+		// Token: 0x06030D94 RID: 200084 RVA: 0x00D9F714 File Offset: 0x00D9D914
 		public void SetIsRoundJoystick(bool isRoundJoystick)
 		{
 			if (this.IsRoundJoystick == isRoundJoystick)
@@ -384,13 +384,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit<bool>(EEventName.OnMotorcycleRoundJoystickChanged, isRoundJoystick);
 		}
 
-		// Token: 0x0603BE42 RID: 245314 RVA: 0x00E4F0DA File Offset: 0x00E4D2DA
+		// Token: 0x06030D95 RID: 200085 RVA: 0x00D9F762 File Offset: 0x00D9D962
 		public bool GetIsRoundJoystick()
 		{
 			return this.IsRoundJoystick;
 		}
 
-		// Token: 0x0603BE43 RID: 245315 RVA: 0x00E4F0E2 File Offset: 0x00E4D2E2
+		// Token: 0x06030D96 RID: 200086 RVA: 0x00D9F76A File Offset: 0x00D9D96A
 		public void SetIsRoundJoystickButtonLayout(bool isRoundJoystickButtonLayout)
 		{
 			if (this.IsRoundJoystickButtonLayout == isRoundJoystickButtonLayout)
@@ -402,15 +402,15 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit<bool>(EEventName.OnMotorcycleRoundJoystickChanged, this.IsRoundJoystick);
 		}
 
-		// Token: 0x0603BE44 RID: 245316 RVA: 0x00E4F116 File Offset: 0x00E4D316
+		// Token: 0x06030D97 RID: 200087 RVA: 0x00D9F79E File Offset: 0x00D9D99E
 		public bool GetIsRoundJoystickButtonLayout()
 		{
 			return this.IsRoundJoystickButtonLayout;
 		}
 
-		// Token: 0x17008DE9 RID: 36329
-		// (get) Token: 0x0603BE45 RID: 245317 RVA: 0x00E4F11E File Offset: 0x00E4D31E
-		// (set) Token: 0x0603BE46 RID: 245318 RVA: 0x00E4F126 File Offset: 0x00E4D326
+		// Token: 0x170061BB RID: 25019
+		// (get) Token: 0x06030D98 RID: 200088 RVA: 0x00D9F7A6 File Offset: 0x00D9D9A6
+		// (set) Token: 0x06030D99 RID: 200089 RVA: 0x00D9F7AE File Offset: 0x00D9D9AE
 		public bool AutoAcceleratorSettingEnable
 		{
 			get
@@ -428,9 +428,9 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x17008DEA RID: 36330
-		// (get) Token: 0x0603BE47 RID: 245319 RVA: 0x00E4F14A File Offset: 0x00E4D34A
-		// (set) Token: 0x0603BE48 RID: 245320 RVA: 0x00E4F152 File Offset: 0x00E4D352
+		// Token: 0x170061BC RID: 25020
+		// (get) Token: 0x06030D9A RID: 200090 RVA: 0x00D9F7D2 File Offset: 0x00D9D9D2
+		// (set) Token: 0x06030D9B RID: 200091 RVA: 0x00D9F7DA File Offset: 0x00D9D9DA
 		public bool AutoNitrogenSettingEnable
 		{
 			get
@@ -448,9 +448,9 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x17008DEB RID: 36331
-		// (get) Token: 0x0603BE49 RID: 245321 RVA: 0x00E4F176 File Offset: 0x00E4D376
-		// (set) Token: 0x0603BE4A RID: 245322 RVA: 0x00E4F17E File Offset: 0x00E4D37E
+		// Token: 0x170061BD RID: 25021
+		// (get) Token: 0x06030D9C RID: 200092 RVA: 0x00D9F7FE File Offset: 0x00D9D9FE
+		// (set) Token: 0x06030D9D RID: 200093 RVA: 0x00D9F806 File Offset: 0x00D9DA06
 		public bool DriftAcceleratorSettingEnable
 		{
 			get
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE4B RID: 245323 RVA: 0x00E4F1A4 File Offset: 0x00E4D3A4
+		// Token: 0x06030D9E RID: 200094 RVA: 0x00D9F82C File Offset: 0x00D9DA2C
 		public void SetHudVisible(bool bVisible, string reason)
 		{
 			bool flag = this.HideHudReasonSet.Count <= 0;
@@ -487,19 +487,19 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE4C RID: 245324 RVA: 0x00E4F207 File Offset: 0x00E4D407
+		// Token: 0x06030D9F RID: 200095 RVA: 0x00D9F88F File Offset: 0x00D9DA8F
 		public bool GetHudVisible()
 		{
 			return this.HideHudReasonSet.Count <= 0;
 		}
 
-		// Token: 0x0603BE4D RID: 245325 RVA: 0x00E4F21A File Offset: 0x00E4D41A
+		// Token: 0x06030DA0 RID: 200096 RVA: 0x00D9F8A2 File Offset: 0x00D9DAA2
 		public bool IsInFirstPersonMode()
 		{
 			return this.HasFirstPersonTag;
 		}
 
-		// Token: 0x0603BE4E RID: 245326 RVA: 0x00E4F222 File Offset: 0x00E4D422
+		// Token: 0x06030DA1 RID: 200097 RVA: 0x00D9F8AA File Offset: 0x00D9DAAA
 		public void SetNeedCacheUi(bool isNeedCache)
 		{
 			if (this.IsNeedCacheUi == isNeedCache)
@@ -510,12 +510,12 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit<EBattleUiChildCacheType, bool>(EEventName.OnSetBattleUiChildCacheState, EBattleUiChildCacheType.Motorcycle, isNeedCache);
 		}
 
-		// Token: 0x17008DEC RID: 36332
-		// (get) Token: 0x0603BE4F RID: 245327 RVA: 0x00E4F247 File Offset: 0x00E4D447
-		// (set) Token: 0x0603BE50 RID: 245328 RVA: 0x00E4F24F File Offset: 0x00E4D44F
+		// Token: 0x170061BE RID: 25022
+		// (get) Token: 0x06030DA2 RID: 200098 RVA: 0x00D9F8CF File Offset: 0x00D9DACF
+		// (set) Token: 0x06030DA3 RID: 200099 RVA: 0x00D9F8D7 File Offset: 0x00D9DAD7
 		public bool IsMotorSoaring { get; set; }
 
-		// Token: 0x0603BE51 RID: 245329 RVA: 0x00E4F258 File Offset: 0x00E4D458
+		// Token: 0x06030DA4 RID: 200100 RVA: 0x00D9F8E0 File Offset: 0x00D9DAE0
 		private void ListenMotorSoaring()
 		{
 			EntityHandle motorcycleEntityHandle = this.MotorcycleEntityHandle;
@@ -527,7 +527,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE52 RID: 245330 RVA: 0x00E4F2B4 File Offset: 0x00E4D4B4
+		// Token: 0x06030DA5 RID: 200101 RVA: 0x00D9F93C File Offset: 0x00D9DB3C
 		private void UnListenMotorSoaring()
 		{
 			this.IsMotorSoaring = false;
@@ -538,13 +538,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE53 RID: 245331 RVA: 0x00E4F31F File Offset: 0x00E4D51F
+		// Token: 0x06030DA6 RID: 200102 RVA: 0x00D9F9A7 File Offset: 0x00D9DBA7
 		private void MotorSubStateModeChange(EMotorSubState newValue, EMotorSubState oldValue)
 		{
 			this.IsMotorSoaring = (newValue == EMotorSubState.Soaring);
 		}
 
-		// Token: 0x0401F3BE RID: 127934
+		// Token: 0x04019E77 RID: 106103
 		[StaticVariableRuleIgnore]
 		private static readonly EBattleUiChild[] PadHideChildren = new EBattleUiChild[]
 		{
@@ -552,7 +552,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			EBattleUiChild.Joystick
 		};
 
-		// Token: 0x0401F3BF RID: 127935
+		// Token: 0x04019E78 RID: 106104
 		[StaticVariableRuleIgnore]
 		private static readonly EBattleUiChild[] PadHideChildrenInRoundJoystick = new EBattleUiChild[]
 		{
@@ -560,7 +560,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			EBattleUiChild.MotorcycleMobileJoystick
 		};
 
-		// Token: 0x0401F3C0 RID: 127936
+		// Token: 0x04019E79 RID: 106105
 		[StaticVariableRuleIgnore]
 		private static readonly int[] NitrogenTagIds = new int[]
 		{
@@ -569,105 +569,105 @@ namespace CSharpScript.Game.Module.BattleUi
 			GameplayTagDefine.EGameplayTagId["载具.摩托.移动.翱翔冲刺.玩家输入"]
 		};
 
-		// Token: 0x0401F3C1 RID: 127937
+		// Token: 0x04019E7A RID: 106106
 		[StaticVariableRuleIgnore]
 		private static readonly int ParkourTagId = GameplayTagDefine.EGameplayTagId["载具.摩托.移动.高速行驶"];
 
-		// Token: 0x0401F3C2 RID: 127938
+		// Token: 0x04019E7B RID: 106107
 		[StaticVariableRuleIgnore]
 		private static readonly int FirstPersonTagId = GameplayTagDefine.EGameplayTagId["载具.摩托.第一人称"];
 
-		// Token: 0x0401F3C3 RID: 127939
+		// Token: 0x04019E7C RID: 106108
 		[StaticVariableRuleIgnore]
 		private static readonly int HideHudTag = GameplayTagDefine.EGameplayTagId["载具.摩托.功能开关.禁用HUD界面"];
 
-		// Token: 0x0401F3C4 RID: 127940
+		// Token: 0x04019E7D RID: 106109
 		[StaticVariableRuleIgnore]
 		private static readonly Stat NextTickStat = Stat.Create("BattleUiMotorcycleDataNextTick", "", "");
 
-		// Token: 0x0401F3C5 RID: 127941
+		// Token: 0x04019E7E RID: 106110
 		private bool IsDrivingInternal;
 
-		// Token: 0x0401F3C6 RID: 127942
+		// Token: 0x04019E7F RID: 106111
 		public bool LastDriving;
 
-		// Token: 0x0401F3C7 RID: 127943
+		// Token: 0x04019E80 RID: 106112
 		[Nullable(2)]
 		private TimerHandle NextTickTimerId;
 
-		// Token: 0x0401F3C8 RID: 127944
+		// Token: 0x04019E81 RID: 106113
 		private EOperationType CurOperationType;
 
-		// Token: 0x0401F3C9 RID: 127945
+		// Token: 0x04019E82 RID: 106114
 		private bool IsShowBulletJumpLeftClickInternal = true;
 
-		// Token: 0x0401F3CA RID: 127946
+		// Token: 0x04019E83 RID: 106115
 		private bool IsDynamicJoystick;
 
-		// Token: 0x0401F3CB RID: 127947
+		// Token: 0x04019E84 RID: 106116
 		private bool IsRoundJoystick;
 
-		// Token: 0x0401F3CC RID: 127948
+		// Token: 0x04019E85 RID: 106117
 		private bool IsRoundJoystickButtonLayout;
 
-		// Token: 0x0401F3CD RID: 127949
+		// Token: 0x04019E86 RID: 106118
 		public bool IsPressJoyStick;
 
-		// Token: 0x0401F3CE RID: 127950
+		// Token: 0x04019E87 RID: 106119
 		[Nullable(2)]
 		private EntityHandle CurRoleEntityHandle;
 
-		// Token: 0x0401F3CF RID: 127951
+		// Token: 0x04019E88 RID: 106120
 		public int MotorcycleEntityId;
 
-		// Token: 0x0401F3D0 RID: 127952
+		// Token: 0x04019E89 RID: 106121
 		private int LastMotorcycleEntityId;
 
-		// Token: 0x0401F3D1 RID: 127953
+		// Token: 0x04019E8A RID: 106122
 		[Nullable(2)]
 		public EntityHandle MotorcycleEntityHandle;
 
-		// Token: 0x0401F3D2 RID: 127954
+		// Token: 0x04019E8B RID: 106123
 		[Nullable(2)]
 		public BaseTagComponent MotorcycleTagComponent;
 
-		// Token: 0x0401F3D3 RID: 127955
+		// Token: 0x04019E8C RID: 106124
 		private readonly List<ITagTask> MotorcycleTagTaskList = new List<ITagTask>();
 
-		// Token: 0x0401F3D4 RID: 127956
+		// Token: 0x04019E8D RID: 106125
 		private bool HasNitrogenTag;
 
-		// Token: 0x0401F3D5 RID: 127957
+		// Token: 0x04019E8E RID: 106126
 		private bool HasParkourTag;
 
-		// Token: 0x0401F3D6 RID: 127958
+		// Token: 0x04019E8F RID: 106127
 		private bool HasFirstPersonTag;
 
-		// Token: 0x0401F3D7 RID: 127959
+		// Token: 0x04019E90 RID: 106128
 		private bool HasHideHudTag;
 
-		// Token: 0x0401F3D8 RID: 127960
+		// Token: 0x04019E91 RID: 106129
 		private bool InMotorParkourDungeon;
 
-		// Token: 0x0401F3D9 RID: 127961
+		// Token: 0x04019E92 RID: 106130
 		private bool AutoAcceleratorSettingInternal;
 
-		// Token: 0x0401F3DA RID: 127962
+		// Token: 0x04019E93 RID: 106131
 		private bool AutoNitrogenSettingInternal;
 
-		// Token: 0x0401F3DB RID: 127963
+		// Token: 0x04019E94 RID: 106132
 		private bool DriftAcceleratorSettingInternal;
 
-		// Token: 0x0401F3DC RID: 127964
+		// Token: 0x04019E95 RID: 106133
 		private readonly HashSet<string> HideHudReasonSet = new HashSet<string>();
 
-		// Token: 0x0401F3DD RID: 127965
+		// Token: 0x04019E96 RID: 106134
 		public EMotorcycleHudColorState HudColorState;
 
-		// Token: 0x0401F3DE RID: 127966
+		// Token: 0x04019E97 RID: 106135
 		public bool IsNeedCacheUi;
 
-		// Token: 0x0401F3DF RID: 127967
+		// Token: 0x04019E98 RID: 106136
 		public bool DebugLog;
 	}
 }

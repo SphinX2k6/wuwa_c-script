@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058E8 RID: 22760
+	// Token: 0x02005EF5 RID: 24309
 	public struct ISceneTextSubtitleWithVoice : IFlatbufferObject
 	{
-		// Token: 0x1700AA80 RID: 43648
-		// (get) Token: 0x060266FC RID: 157436 RVA: 0x0054BEF8 File Offset: 0x0054A0F8
+		// Token: 0x1700B3B0 RID: 46000
+		// (get) Token: 0x06028C5E RID: 167006 RVA: 0x00592A44 File Offset: 0x00590C44
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060266FD RID: 157437 RVA: 0x0054BF05 File Offset: 0x0054A105
+		// Token: 0x06028C5F RID: 167007 RVA: 0x00592A51 File Offset: 0x00590C51
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060266FE RID: 157438 RVA: 0x0054BF0C File Offset: 0x0054A10C
+		// Token: 0x06028C60 RID: 167008 RVA: 0x00592A58 File Offset: 0x00590C58
 		public static ISceneTextSubtitleWithVoice GetRootAsISceneTextSubtitleWithVoice(ByteBuffer _bb)
 		{
 			return ISceneTextSubtitleWithVoice.GetRootAsISceneTextSubtitleWithVoice(_bb, default(ISceneTextSubtitleWithVoice));
 		}
 
-		// Token: 0x060266FF RID: 157439 RVA: 0x0054BF28 File Offset: 0x0054A128
+		// Token: 0x06028C61 RID: 167009 RVA: 0x00592A74 File Offset: 0x00590C74
 		public static ISceneTextSubtitleWithVoice GetRootAsISceneTextSubtitleWithVoice(ByteBuffer _bb, ISceneTextSubtitleWithVoice obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026700 RID: 157440 RVA: 0x0054BF45 File Offset: 0x0054A145
+		// Token: 0x06028C62 RID: 167010 RVA: 0x00592A91 File Offset: 0x00590C91
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026701 RID: 157441 RVA: 0x0054BF54 File Offset: 0x0054A154
+		// Token: 0x06028C63 RID: 167011 RVA: 0x00592AA0 File Offset: 0x00590CA0
 		public ISceneTextSubtitleWithVoice __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AA81 RID: 43649
-		// (get) Token: 0x06026702 RID: 157442 RVA: 0x0054BF64 File Offset: 0x0054A164
+		// Token: 0x1700B3B1 RID: 46001
+		// (get) Token: 0x06028C64 RID: 167012 RVA: 0x00592AB0 File Offset: 0x00590CB0
 		public ESceneTextType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AA82 RID: 43650
-		// (get) Token: 0x06026703 RID: 157443 RVA: 0x0054BFA0 File Offset: 0x0054A1A0
+		// Token: 0x1700B3B2 RID: 46002
+		// (get) Token: 0x06028C65 RID: 167013 RVA: 0x00592AEC File Offset: 0x00590CEC
 		public IPlayFlow? Content
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AA83 RID: 43651
-		// (get) Token: 0x06026704 RID: 157444 RVA: 0x0054C000 File Offset: 0x0054A200
+		// Token: 0x1700B3B3 RID: 46003
+		// (get) Token: 0x06028C66 RID: 167014 RVA: 0x00592B4C File Offset: 0x00590D4C
 		public int FontSize
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AA84 RID: 43652
-		// (get) Token: 0x06026705 RID: 157445 RVA: 0x0054C03C File Offset: 0x0054A23C
+		// Token: 0x1700B3B4 RID: 46004
+		// (get) Token: 0x06028C67 RID: 167015 RVA: 0x00592B88 File Offset: 0x00590D88
 		public float BoxWidth
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AA85 RID: 43653
-		// (get) Token: 0x06026706 RID: 157446 RVA: 0x0054C080 File Offset: 0x0054A280
+		// Token: 0x1700B3B5 RID: 46005
+		// (get) Token: 0x06028C68 RID: 167016 RVA: 0x00592BCC File Offset: 0x00590DCC
 		public float BoxHeight
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AA86 RID: 43654
-		// (get) Token: 0x06026707 RID: 157447 RVA: 0x0054C0C4 File Offset: 0x0054A2C4
+		// Token: 0x1700B3B6 RID: 46006
+		// (get) Token: 0x06028C69 RID: 167017 RVA: 0x00592C10 File Offset: 0x00590E10
 		public float Duration
 		{
 			get
@@ -138,8 +138,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AA87 RID: 43655
-		// (get) Token: 0x06026708 RID: 157448 RVA: 0x0054C108 File Offset: 0x0054A308
+		// Token: 0x1700B3B7 RID: 46007
+		// (get) Token: 0x06028C6A RID: 167018 RVA: 0x00592C54 File Offset: 0x00590E54
 		public bool AutoHide
 		{
 			get
@@ -149,13 +149,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AA88 RID: 43656
-		// (get) Token: 0x06026709 RID: 157449 RVA: 0x0054C148 File Offset: 0x0054A348
-		public byte NullMask
+		// Token: 0x1700B3B8 RID: 46008
+		// (get) Token: 0x06028C6B RID: 167019 RVA: 0x00592C94 File Offset: 0x00590E94
+		public ESceneTextFadeInEffect FadeInEffect
 		{
 			get
 			{
 				int num = this.__p.__offset(18);
+				if (num == 0)
+				{
+					return ESceneTextFadeInEffect.None;
+				}
+				return (ESceneTextFadeInEffect)this.__p.bb.Get(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x1700B3B9 RID: 46009
+		// (get) Token: 0x06028C6C RID: 167020 RVA: 0x00592CD4 File Offset: 0x00590ED4
+		public ESceneTextFadeOutEffect FadeOutEffect
+		{
+			get
+			{
+				int num = this.__p.__offset(20);
+				if (num == 0)
+				{
+					return ESceneTextFadeOutEffect.None;
+				}
+				return (ESceneTextFadeOutEffect)this.__p.bb.Get(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x1700B3BA RID: 46010
+		// (get) Token: 0x06028C6D RID: 167021 RVA: 0x00592D14 File Offset: 0x00590F14
+		public byte NullMask
+		{
+			get
+			{
+				int num = this.__p.__offset(22);
 				if (num == 0)
 				{
 					return 0;
@@ -164,82 +194,96 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602670A RID: 157450 RVA: 0x0054C188 File Offset: 0x0054A388
-		public static Offset<ISceneTextSubtitleWithVoice> CreateISceneTextSubtitleWithVoice(FlatBufferBuilder builder, ESceneTextType Type = ESceneTextType.SubtitleWithVoice, Offset<IPlayFlow> ContentOffset = default(Offset<IPlayFlow>), int FontSize = 0, float BoxWidth = 0f, float BoxHeight = 0f, float Duration = 0f, bool AutoHide = false, byte NullMask = 0)
+		// Token: 0x06028C6E RID: 167022 RVA: 0x00592D54 File Offset: 0x00590F54
+		public static Offset<ISceneTextSubtitleWithVoice> CreateISceneTextSubtitleWithVoice(FlatBufferBuilder builder, ESceneTextType Type = ESceneTextType.SubtitleWithVoice, Offset<IPlayFlow> ContentOffset = default(Offset<IPlayFlow>), int FontSize = 0, float BoxWidth = 0f, float BoxHeight = 0f, float Duration = 0f, bool AutoHide = false, ESceneTextFadeInEffect FadeInEffect = ESceneTextFadeInEffect.None, ESceneTextFadeOutEffect FadeOutEffect = ESceneTextFadeOutEffect.None, byte NullMask = 0)
 		{
-			builder.StartTable(8);
+			builder.StartTable(10);
 			ISceneTextSubtitleWithVoice.AddDuration(builder, Duration);
 			ISceneTextSubtitleWithVoice.AddBoxHeight(builder, BoxHeight);
 			ISceneTextSubtitleWithVoice.AddBoxWidth(builder, BoxWidth);
 			ISceneTextSubtitleWithVoice.AddFontSize(builder, FontSize);
 			ISceneTextSubtitleWithVoice.AddContent(builder, ContentOffset);
 			ISceneTextSubtitleWithVoice.AddNullMask(builder, NullMask);
+			ISceneTextSubtitleWithVoice.AddFadeOutEffect(builder, FadeOutEffect);
+			ISceneTextSubtitleWithVoice.AddFadeInEffect(builder, FadeInEffect);
 			ISceneTextSubtitleWithVoice.AddAutoHide(builder, AutoHide);
 			ISceneTextSubtitleWithVoice.AddType(builder, Type);
 			return ISceneTextSubtitleWithVoice.EndISceneTextSubtitleWithVoice(builder);
 		}
 
-		// Token: 0x0602670B RID: 157451 RVA: 0x0054C1DF File Offset: 0x0054A3DF
+		// Token: 0x06028C6F RID: 167023 RVA: 0x00592DBC File Offset: 0x00590FBC
 		public static void StartISceneTextSubtitleWithVoice(FlatBufferBuilder builder)
 		{
-			builder.StartTable(8);
+			builder.StartTable(10);
 		}
 
-		// Token: 0x0602670C RID: 157452 RVA: 0x0054C1E8 File Offset: 0x0054A3E8
+		// Token: 0x06028C70 RID: 167024 RVA: 0x00592DC6 File Offset: 0x00590FC6
 		public static void AddType(FlatBufferBuilder builder, ESceneTextType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602670D RID: 157453 RVA: 0x0054C1F3 File Offset: 0x0054A3F3
+		// Token: 0x06028C71 RID: 167025 RVA: 0x00592DD1 File Offset: 0x00590FD1
 		public static void AddContent(FlatBufferBuilder builder, Offset<IPlayFlow> contentOffset)
 		{
 			builder.AddOffset(1, contentOffset.Value, 0);
 		}
 
-		// Token: 0x0602670E RID: 157454 RVA: 0x0054C203 File Offset: 0x0054A403
+		// Token: 0x06028C72 RID: 167026 RVA: 0x00592DE1 File Offset: 0x00590FE1
 		public static void AddFontSize(FlatBufferBuilder builder, int fontSize)
 		{
 			builder.AddInt(2, fontSize, 0);
 		}
 
-		// Token: 0x0602670F RID: 157455 RVA: 0x0054C20E File Offset: 0x0054A40E
+		// Token: 0x06028C73 RID: 167027 RVA: 0x00592DEC File Offset: 0x00590FEC
 		public static void AddBoxWidth(FlatBufferBuilder builder, float boxWidth)
 		{
 			builder.AddFloat(3, boxWidth, 0.0);
 		}
 
-		// Token: 0x06026710 RID: 157456 RVA: 0x0054C221 File Offset: 0x0054A421
+		// Token: 0x06028C74 RID: 167028 RVA: 0x00592DFF File Offset: 0x00590FFF
 		public static void AddBoxHeight(FlatBufferBuilder builder, float boxHeight)
 		{
 			builder.AddFloat(4, boxHeight, 0.0);
 		}
 
-		// Token: 0x06026711 RID: 157457 RVA: 0x0054C234 File Offset: 0x0054A434
+		// Token: 0x06028C75 RID: 167029 RVA: 0x00592E12 File Offset: 0x00591012
 		public static void AddDuration(FlatBufferBuilder builder, float duration)
 		{
 			builder.AddFloat(5, duration, 0.0);
 		}
 
-		// Token: 0x06026712 RID: 157458 RVA: 0x0054C247 File Offset: 0x0054A447
+		// Token: 0x06028C76 RID: 167030 RVA: 0x00592E25 File Offset: 0x00591025
 		public static void AddAutoHide(FlatBufferBuilder builder, bool autoHide)
 		{
 			builder.AddBool(6, autoHide, false);
 		}
 
-		// Token: 0x06026713 RID: 157459 RVA: 0x0054C252 File Offset: 0x0054A452
-		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
+		// Token: 0x06028C77 RID: 167031 RVA: 0x00592E30 File Offset: 0x00591030
+		public static void AddFadeInEffect(FlatBufferBuilder builder, ESceneTextFadeInEffect fadeInEffect)
 		{
-			builder.AddByte(7, nullMask, 0);
+			builder.AddByte(7, (byte)fadeInEffect, 0);
 		}
 
-		// Token: 0x06026714 RID: 157460 RVA: 0x0054C25D File Offset: 0x0054A45D
+		// Token: 0x06028C78 RID: 167032 RVA: 0x00592E3B File Offset: 0x0059103B
+		public static void AddFadeOutEffect(FlatBufferBuilder builder, ESceneTextFadeOutEffect fadeOutEffect)
+		{
+			builder.AddByte(8, (byte)fadeOutEffect, 0);
+		}
+
+		// Token: 0x06028C79 RID: 167033 RVA: 0x00592E46 File Offset: 0x00591046
+		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
+		{
+			builder.AddByte(9, nullMask, 0);
+		}
+
+		// Token: 0x06028C7A RID: 167034 RVA: 0x00592E52 File Offset: 0x00591052
 		public static Offset<ISceneTextSubtitleWithVoice> EndISceneTextSubtitleWithVoice(FlatBufferBuilder builder)
 		{
 			return new Offset<ISceneTextSubtitleWithVoice>(builder.EndTable());
 		}
 
-		// Token: 0x06026715 RID: 157461 RVA: 0x0054C26C File Offset: 0x0054A46C
+		// Token: 0x06028C7B RID: 167035 RVA: 0x00592E60 File Offset: 0x00591060
 		public ISceneTextSubtitleWithVoiceT UnPack()
 		{
 			ISceneTextSubtitleWithVoiceT sceneTextSubtitleWithVoiceT = new ISceneTextSubtitleWithVoiceT();
@@ -247,7 +291,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return sceneTextSubtitleWithVoiceT;
 		}
 
-		// Token: 0x06026716 RID: 157462 RVA: 0x0054C288 File Offset: 0x0054A488
+		// Token: 0x06028C7C RID: 167036 RVA: 0x00592E7C File Offset: 0x0059107C
 		public void UnPackTo(ISceneTextSubtitleWithVoiceT _o)
 		{
 			_o.Type = this.Type;
@@ -257,10 +301,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.BoxHeight = this.BoxHeight;
 			_o.Duration = this.Duration;
 			_o.AutoHide = this.AutoHide;
+			_o.FadeInEffect = this.FadeInEffect;
+			_o.FadeOutEffect = this.FadeOutEffect;
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06026717 RID: 157463 RVA: 0x0054C318 File Offset: 0x0054A518
+		// Token: 0x06028C7D RID: 167037 RVA: 0x00592F24 File Offset: 0x00591124
 		public static Offset<ISceneTextSubtitleWithVoice> Pack(FlatBufferBuilder builder, ISceneTextSubtitleWithVoiceT _o)
 		{
 			if (_o == null)
@@ -268,10 +314,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				return default(Offset<ISceneTextSubtitleWithVoice>);
 			}
 			Offset<IPlayFlow> contentOffset = (_o.Content == null) ? default(Offset<IPlayFlow>) : IPlayFlow.Pack(builder, _o.Content);
-			return ISceneTextSubtitleWithVoice.CreateISceneTextSubtitleWithVoice(builder, _o.Type, contentOffset, _o.FontSize, _o.BoxWidth, _o.BoxHeight, _o.Duration, _o.AutoHide, _o.NullMask);
+			return ISceneTextSubtitleWithVoice.CreateISceneTextSubtitleWithVoice(builder, _o.Type, contentOffset, _o.FontSize, _o.BoxWidth, _o.BoxHeight, _o.Duration, _o.AutoHide, _o.FadeInEffect, _o.FadeOutEffect, _o.NullMask);
 		}
 
-		// Token: 0x0400EE73 RID: 61043
+		// Token: 0x0400FB66 RID: 64358
 		private Table __p;
 	}
 }

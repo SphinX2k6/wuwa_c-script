@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005007 RID: 20487
+	// Token: 0x02005566 RID: 21862
 	public class IConnectorLogicTypeT
 	{
-		// Token: 0x1700947B RID: 38011
-		// (get) Token: 0x06020C4B RID: 134219 RVA: 0x0048E6D7 File Offset: 0x0048C8D7
-		// (set) Token: 0x06020C4C RID: 134220 RVA: 0x0048E6DF File Offset: 0x0048C8DF
+		// Token: 0x17009C5C RID: 40028
+		// (get) Token: 0x06022B6B RID: 142187 RVA: 0x004C8127 File Offset: 0x004C6327
+		// (set) Token: 0x06022B6C RID: 142188 RVA: 0x004C812F File Offset: 0x004C632F
 		public EConnectorLogicType Type { get; set; }
 
-		// Token: 0x1700947C RID: 38012
-		// (get) Token: 0x06020C4D RID: 134221 RVA: 0x0048E6E8 File Offset: 0x0048C8E8
-		// (set) Token: 0x06020C4E RID: 134222 RVA: 0x0048E6F0 File Offset: 0x0048C8F0
+		// Token: 0x17009C5D RID: 40029
+		// (get) Token: 0x06022B6D RID: 142189 RVA: 0x004C8138 File Offset: 0x004C6338
+		// (set) Token: 0x06022B6E RID: 142190 RVA: 0x004C8140 File Offset: 0x004C6340
 		public IConnectorEffectConfigT EffectConfig { get; set; }
 
-		// Token: 0x06020C4F RID: 134223 RVA: 0x0048E6F9 File Offset: 0x0048C8F9
+		// Token: 0x06022B6F RID: 142191 RVA: 0x004C8149 File Offset: 0x004C6349
 		public IConnectorLogicTypeT()
 		{
 			this.Type = EConnectorLogicType.Range;

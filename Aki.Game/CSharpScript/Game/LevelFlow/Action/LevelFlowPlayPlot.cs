@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Plot.Flow;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F93 RID: 28563
+	// Token: 0x02006114 RID: 24852
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowPlayPlot : LevelFlowActionBase
 	{
-		// Token: 0x06045741 RID: 284481 RVA: 0x01139EDC File Offset: 0x011380DC
+		// Token: 0x0603B8EF RID: 243951 RVA: 0x010E3CE0 File Offset: 0x010E1EE0
 		public LevelFlowPlayPlot Init(string flowListName, int flowId, int stateId, [Nullable(2)] GeneralContext context = null, int? flowIncId = null, bool? isAsync = null, bool? isSkip = null, [Nullable(2)] Vector pos = null)
 		{
 			this.FlowListName = flowListName;
@@ -25,39 +25,39 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045742 RID: 284482 RVA: 0x01139F40 File Offset: 0x01138140
+		// Token: 0x0603B8F0 RID: 243952 RVA: 0x010E3D44 File Offset: 0x010E1F44
 		protected override void OnExecute()
 		{
 			FlowController.Instance.StartFlow(this.FlowListName, this.FlowId, this.StateId, this.Context, (long)this.FlowIncId, this.IsServerNotify, this.IsAsync, this.IsSkip, this.Pos);
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x040243D0 RID: 148432
+		// Token: 0x0401F685 RID: 128645
 		private string FlowListName = string.Empty;
 
-		// Token: 0x040243D1 RID: 148433
+		// Token: 0x0401F686 RID: 128646
 		private int FlowId;
 
-		// Token: 0x040243D2 RID: 148434
+		// Token: 0x0401F687 RID: 128647
 		private int StateId;
 
-		// Token: 0x040243D3 RID: 148435
+		// Token: 0x0401F688 RID: 128648
 		[Nullable(2)]
 		private GeneralContext Context;
 
-		// Token: 0x040243D4 RID: 148436
+		// Token: 0x0401F689 RID: 128649
 		private int FlowIncId;
 
-		// Token: 0x040243D5 RID: 148437
+		// Token: 0x0401F68A RID: 128650
 		private bool IsServerNotify;
 
-		// Token: 0x040243D6 RID: 148438
+		// Token: 0x0401F68B RID: 128651
 		private bool IsAsync;
 
-		// Token: 0x040243D7 RID: 148439
+		// Token: 0x0401F68C RID: 128652
 		private bool IsSkip;
 
-		// Token: 0x040243D8 RID: 148440
+		// Token: 0x0401F68D RID: 128653
 		[Nullable(2)]
 		private Vector Pos;
 	}

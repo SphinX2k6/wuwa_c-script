@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007F1 RID: 2033
+	// Token: 0x0200080D RID: 2061
 	public class ConfigRhythmRoleById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002FB8 RID: 12216 RVA: 0x00166FFB File Offset: 0x001651FB
+		// Token: 0x06003060 RID: 12384 RVA: 0x0016E2E3 File Offset: 0x0016C4E3
 		static ConfigRhythmRoleById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRhythmRoleById.CreateStaticDefaultValue), new Action(ConfigRhythmRoleById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002FB9 RID: 12217 RVA: 0x0016701C File Offset: 0x0016521C
+		// Token: 0x06003061 RID: 12385 RVA: 0x0016E304 File Offset: 0x0016C504
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRhythmRoleById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002FBA RID: 12218 RVA: 0x0016709B File Offset: 0x0016529B
+		// Token: 0x06003062 RID: 12386 RVA: 0x0016E383 File Offset: 0x0016C583
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRhythmRoleById.LogPair = null;
 			ConfigRhythmRoleById.HandleId = 0;
 		}
 
-		// Token: 0x06002FBB RID: 12219 RVA: 0x001670A9 File Offset: 0x001652A9
+		// Token: 0x06003063 RID: 12387 RVA: 0x0016E391 File Offset: 0x0016C591
 		public static void Init()
 		{
 			ConfigRhythmRoleById.HandleId = ConfigCommon.InitDataStatement(ConfigRhythmRoleById.HandleId, "db_rhythmship.db", "select BinData from `RhythmRole` where Id=?");
 		}
 
-		// Token: 0x06002FBC RID: 12220 RVA: 0x001670C4 File Offset: 0x001652C4
+		// Token: 0x06003064 RID: 12388 RVA: 0x0016E3AC File Offset: 0x0016C5AC
 		public static RhythmRole? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRhythmRoleById.HandleId, ConfigRhythmRoleById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RhythmRole?(rootAsRhythmRole);
 		}
 
-		// Token: 0x0400377D RID: 14205
+		// Token: 0x04003841 RID: 14401
 		private const string DB = "db_rhythmship.db";
 
-		// Token: 0x0400377E RID: 14206
+		// Token: 0x04003842 RID: 14402
 		private const string FILE = "j.节奏飞船_局外.xlsx";
 
-		// Token: 0x0400377F RID: 14207
+		// Token: 0x04003843 RID: 14403
 		private const string TABLE = "RhythmRole";
 
-		// Token: 0x04003780 RID: 14208
+		// Token: 0x04003844 RID: 14404
 		private const string COMMAND = "select BinData from `RhythmRole` where Id=?";
 
-		// Token: 0x04003781 RID: 14209
+		// Token: 0x04003845 RID: 14405
 		private const string KEY_PREFIX = "RhythmRoleById";
 
-		// Token: 0x04003782 RID: 14210
+		// Token: 0x04003846 RID: 14406
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003783 RID: 14211
+		// Token: 0x04003847 RID: 14407
 		private static int HandleId;
 	}
 }

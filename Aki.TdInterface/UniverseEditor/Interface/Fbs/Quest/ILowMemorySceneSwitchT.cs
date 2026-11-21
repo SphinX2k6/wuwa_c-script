@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F1E RID: 16158
+	// Token: 0x0200435C RID: 17244
 	public class ILowMemorySceneSwitchT
 	{
-		// Token: 0x1700705E RID: 28766
-		// (get) Token: 0x06016F18 RID: 93976 RVA: 0x0034FA0F File Offset: 0x0034DC0F
-		// (set) Token: 0x06016F19 RID: 93977 RVA: 0x0034FA17 File Offset: 0x0034DC17
+		// Token: 0x1700764D RID: 30285
+		// (get) Token: 0x06018570 RID: 99696 RVA: 0x00378C37 File Offset: 0x00376E37
+		// (set) Token: 0x06018571 RID: 99697 RVA: 0x00378C3F File Offset: 0x00376E3F
 		public ESpecialProcess Type { get; set; }
 
-		// Token: 0x1700705F RID: 28767
-		// (get) Token: 0x06016F1A RID: 93978 RVA: 0x0034FA20 File Offset: 0x0034DC20
-		// (set) Token: 0x06016F1B RID: 93979 RVA: 0x0034FA28 File Offset: 0x0034DC28
+		// Token: 0x1700764E RID: 30286
+		// (get) Token: 0x06018572 RID: 99698 RVA: 0x00378C48 File Offset: 0x00376E48
+		// (set) Token: 0x06018573 RID: 99699 RVA: 0x00378C50 File Offset: 0x00376E50
 		public List<TOperationUnion> Operations { get; set; }
 
-		// Token: 0x06016F1C RID: 93980 RVA: 0x0034FA31 File Offset: 0x0034DC31
+		// Token: 0x06018574 RID: 99700 RVA: 0x00378C59 File Offset: 0x00376E59
 		public ILowMemorySceneSwitchT()
 		{
 			this.Type = ESpecialProcess.LowMemorySceneSwitch;

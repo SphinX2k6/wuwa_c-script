@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C25 RID: 3109
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CF8 RID: 3320
 	public class ICollectAnimalConfig : ISpecialAnimalTypeConfig
 	{
-		// Token: 0x06004739 RID: 18233 RVA: 0x000B3588 File Offset: 0x000B1788
+		// Token: 0x06004BA8 RID: 19368 RVA: 0x000BD8C0 File Offset: 0x000BBAC0
 		public static ICollectAnimalConfig Create(ICollectAnimalConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014AC RID: 5292
-		// (get) Token: 0x0600473A RID: 18234 RVA: 0x000B35A7 File Offset: 0x000B17A7
+		// Token: 0x170015B3 RID: 5555
+		// (get) Token: 0x06004BA9 RID: 19369 RVA: 0x000BD8DF File Offset: 0x000BBADF
 		public override ESpecialAnimalType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014AD RID: 5293
-		// (get) Token: 0x0600473B RID: 18235 RVA: 0x000B35B4 File Offset: 0x000B17B4
+		// Token: 0x170015B4 RID: 5556
+		// (get) Token: 0x06004BAA RID: 19370 RVA: 0x000BD8EC File Offset: 0x000BBAEC
 		public virtual List<ICollectAnimalPartsConfig> PartsMap
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400286E RID: 10350
+		// Token: 0x04002AC1 RID: 10945
 		private ICollectAnimalConfig Instance;
 
-		// Token: 0x0400286F RID: 10351
+		// Token: 0x04002AC2 RID: 10946
 		private List<ICollectAnimalPartsConfig> _PartsMapCache;
 
-		// Token: 0x04002870 RID: 10352
+		// Token: 0x04002AC3 RID: 10947
 		private bool _PartsMapInited;
 	}
 }

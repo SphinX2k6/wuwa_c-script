@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.Role.Common.Data.Enum
 {
-	// Token: 0x020040B5 RID: 16565
+	// Token: 0x020032A9 RID: 12969
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/Role/Common/Data/Enum/ESelfieMontageType.ESelfieMontageType")]
 	public enum ESelfieMontageType : byte
 	{
-		// Token: 0x04016279 RID: 90745
+		// Token: 0x04011A32 RID: 72242
 		UpperPerform,
-		// Token: 0x0401627A RID: 90746
+		// Token: 0x04011A33 RID: 72243
 		FacePerform,
-		// Token: 0x0401627B RID: 90747
+		// Token: 0x04011A34 RID: 72244
 		ESelfieMontageType_MAX
 	}
 }

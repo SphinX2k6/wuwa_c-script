@@ -13,25 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x02007225 RID: 29221
+	// Token: 0x020062DA RID: 25306
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemStateAudioComponent : EntityComponent
 	{
-		// Token: 0x17009E33 RID: 40499
-		// (get) Token: 0x06047994 RID: 293268 RVA: 0x0124D2F8 File Offset: 0x0124B4F8
-		[Nullable(new byte[]
+		// Token: 0x170073D4 RID: 29652
+		// (get) Token: 0x0603D2DF RID: 250591 RVA: 0x011A6288 File Offset: 0x011A4488
+		[Nullable(1)]
+		public override Type[] Dependencies
 		{
-			2,
-			1
-		})]
-		public new static Type[] Dependencies
-		{
-			[return: Nullable(new byte[]
-			{
-				2,
-				1
-			})]
+			[NullableContext(1)]
 			get
 			{
 				return new Type[]
@@ -42,7 +34,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047995 RID: 293269 RVA: 0x0124D31C File Offset: 0x0124B51C
+		// Token: 0x0603D2E0 RID: 250592 RVA: 0x011A62AC File Offset: 0x011A44AC
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			EntityStateAudioComponent stateAudioConfig = args.GetP1<CreateEntityData>().GetParam<SceneItemStateAudioComponent>() as EntityStateAudioComponent;
@@ -65,7 +57,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047996 RID: 293270 RVA: 0x0124D3C0 File Offset: 0x0124B5C0
+		// Token: 0x0603D2E1 RID: 250593 RVA: 0x011A6350 File Offset: 0x011A4550
 		protected override bool OnStart()
 		{
 			this.StateComponent = base.Entity.GetComponent<SceneItemStateComponent>();
@@ -116,7 +108,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047997 RID: 293271 RVA: 0x0124D554 File Offset: 0x0124B754
+		// Token: 0x0603D2E2 RID: 250594 RVA: 0x011A64E4 File Offset: 0x011A46E4
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.HasWithTarget(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.UpdateState)))
@@ -156,13 +148,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047998 RID: 293272 RVA: 0x0124D662 File Offset: 0x0124B862
+		// Token: 0x0603D2E3 RID: 250595 RVA: 0x011A65F2 File Offset: 0x011A47F2
 		protected override bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x06047999 RID: 293273 RVA: 0x0124D668 File Offset: 0x0124B868
+		// Token: 0x0603D2E4 RID: 250596 RVA: 0x011A65F8 File Offset: 0x011A47F8
 		private void InitAudioEventMap()
 		{
 			this.StateAkEventMapOnEnter = new Dictionary<int, string>();
@@ -191,7 +183,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604799A RID: 293274 RVA: 0x0124D76C File Offset: 0x0124B96C
+		// Token: 0x0603D2E5 RID: 250597 RVA: 0x011A66FC File Offset: 0x011A48FC
 		private void InitAkComponent()
 		{
 			UAkComponent ueAkComponent = this.UeAkComponent;
@@ -209,7 +201,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.UeAkComponent = AudioSystem.Instance.GetAkComponent(new OneOf<AActor, USceneComponent>(aactor), null, null);
 		}
 
-		// Token: 0x0604799B RID: 293275 RVA: 0x0124D7D8 File Offset: 0x0124B9D8
+		// Token: 0x0603D2E6 RID: 250598 RVA: 0x011A6768 File Offset: 0x011A4968
 		private void PostAkEvent(string eventPath, EAudioUpdateType type)
 		{
 			if (this.AkEventType.Type == EAkEventType.Point)
@@ -248,7 +240,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604799C RID: 293276 RVA: 0x0124D888 File Offset: 0x0124BA88
+		// Token: 0x0603D2E7 RID: 250599 RVA: 0x011A6818 File Offset: 0x011A4A18
 		[NullableContext(1)]
 		private void PostDefaultAkEvent(string eventPath, EAudioUpdateType type)
 		{
@@ -296,7 +288,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604799D RID: 293277 RVA: 0x0124D9A0 File Offset: 0x0124BBA0
+		// Token: 0x0603D2E8 RID: 250600 RVA: 0x011A6930 File Offset: 0x011A4B30
 		[NullableContext(1)]
 		private void PostSinglePointAkEvent(string eventPath, EAudioUpdateType type)
 		{
@@ -340,7 +332,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604799E RID: 293278 RVA: 0x0124DACC File Offset: 0x0124BCCC
+		// Token: 0x0603D2E9 RID: 250601 RVA: 0x011A6A5C File Offset: 0x011A4C5C
 		[NullableContext(1)]
 		private void PostMultiPointAkEvent(string eventPath, EAudioUpdateType type)
 		{
@@ -448,7 +440,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604799F RID: 293279 RVA: 0x0124DEDC File Offset: 0x0124C0DC
+		// Token: 0x0603D2EA RID: 250602 RVA: 0x011A6E6C File Offset: 0x011A506C
 		private void OnPlayerInOutRange(bool isEnter)
 		{
 			if (!this.IsInRange && isEnter)
@@ -489,7 +481,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.IsInRange = isEnter;
 		}
 
-		// Token: 0x060479A0 RID: 293280 RVA: 0x0124E038 File Offset: 0x0124C238
+		// Token: 0x0603D2EB RID: 250603 RVA: 0x011A6FC8 File Offset: 0x011A51C8
 		private void OnPlayerInOutAoi(bool isEnter)
 		{
 			if (isEnter)
@@ -530,7 +522,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060479A1 RID: 293281 RVA: 0x0124E170 File Offset: 0x0124C370
+		// Token: 0x0603D2EC RID: 250604 RVA: 0x011A7100 File Offset: 0x011A5300
 		private void UpdateState(int stateId, bool isReady)
 		{
 			if (this.CurStateTagId == stateId)
@@ -563,7 +555,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060479A2 RID: 293282 RVA: 0x0124E210 File Offset: 0x0124C410
+		// Token: 0x0603D2ED RID: 250605 RVA: 0x011A71A0 File Offset: 0x011A53A0
 		private void OnAkEventCallback(EAkCallbackType callbackType, UAkCallbackInfo callbackInfo)
 		{
 			if (callbackType != EAkCallbackType.Marker)
@@ -588,7 +580,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060479A3 RID: 293283 RVA: 0x0124E2B0 File Offset: 0x0124C4B0
+		// Token: 0x0603D2EE RID: 250606 RVA: 0x011A7240 File Offset: 0x011A5440
 		[NullableContext(1)]
 		private void PostAkFade(IAudioFade akFade)
 		{
@@ -606,7 +598,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060479A4 RID: 293284 RVA: 0x0124E328 File Offset: 0x0124C528
+		// Token: 0x0603D2EF RID: 250607 RVA: 0x011A72B8 File Offset: 0x011A54B8
 		[NullableContext(1)]
 		private void InitAudioBoxConfig(IBoxAkEvent confing)
 		{
@@ -641,7 +633,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.AudioBox = new AudioBox(priority, num.Value, eaudioBoxType.Value);
 		}
 
-		// Token: 0x060479A5 RID: 293285 RVA: 0x0124E3F8 File Offset: 0x0124C5F8
+		// Token: 0x0603D2F0 RID: 250608 RVA: 0x011A7388 File Offset: 0x011A5588
 		public void PostAudioBoxEvent()
 		{
 			if (string.IsNullOrEmpty(this.CurAudioBoxAkEventPath))
@@ -651,7 +643,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			AudioController.Instance.PostEvent(this.CurAudioBoxAkEventPath, null, null, null, null, null, true, "");
 		}
 
-		// Token: 0x060479A6 RID: 293286 RVA: 0x0124E440 File Offset: 0x0124C640
+		// Token: 0x0603D2F1 RID: 250609 RVA: 0x011A73D0 File Offset: 0x011A55D0
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -660,172 +652,154 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemStateAudioComponent sceneItemStateAudioComponent = (SceneItemStateAudioComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (sceneItemStateAudioComponent.CreatureDataComp == null)
 			{
-				if (sceneItemStateAudioComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("StateComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (sceneItemStateAudioComponent.StateComponent == null)
-				{
-					this.StateComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComponent), "StateComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("RefComponent"))
+			if (sceneItemStateAudioComponent.StateComponent == null)
 			{
-				if (sceneItemStateAudioComponent.RefComponent == null)
-				{
-					this.RefComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemReferenceComponent>(this.RefComponent), "RefComponent"))
-				{
-					return false;
-				}
+				this.StateComponent = null;
 			}
-			if (base.CanResetComponentProperty("IsInRange"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComponent), "StateComponent"))
 			{
-				this.IsInRange = sceneItemStateAudioComponent.IsInRange;
+				return false;
 			}
-			if (base.CanResetComponentProperty("StateAudioConfig"))
+			if (sceneItemStateAudioComponent.RefComponent == null)
 			{
-				if (sceneItemStateAudioComponent.StateAudioConfig == null)
-				{
-					this.StateAudioConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityStateAudioComponent>(this.StateAudioConfig), "StateAudioConfig"))
-				{
-					return false;
-				}
+				this.RefComponent = null;
 			}
-			if (base.CanResetComponentProperty("AudioRangeType"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RefComponent), "RefComponent"))
 			{
-				this.AudioRangeType = sceneItemStateAudioComponent.AudioRangeType;
+				return false;
 			}
-			if (base.CanResetComponentProperty("AkEventType"))
+			this.IsInRange = sceneItemStateAudioComponent.IsInRange;
+			if (sceneItemStateAudioComponent.StateAudioConfig == null)
 			{
-				if (sceneItemStateAudioComponent.AkEventType == null)
-				{
-					this.AkEventType = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IAkEventTypeConfig>(this.AkEventType), "AkEventType"))
-				{
-					return false;
-				}
+				this.StateAudioConfig = null;
 			}
-			if (base.CanResetComponentProperty("StateAkEventMapOnEnter"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateAudioConfig), "StateAudioConfig"))
 			{
-				if (sceneItemStateAudioComponent.StateAkEventMapOnEnter == null)
-				{
-					this.StateAkEventMapOnEnter = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, string>>(this.StateAkEventMapOnEnter), "StateAkEventMapOnEnter"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("StateAkEventMapOnLeave"))
+			this.AudioRangeType = sceneItemStateAudioComponent.AudioRangeType;
+			if (sceneItemStateAudioComponent.AkEventType == null)
 			{
-				if (sceneItemStateAudioComponent.StateAkEventMapOnLeave == null)
-				{
-					this.StateAkEventMapOnLeave = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, string>>(this.StateAkEventMapOnLeave), "StateAkEventMapOnLeave"))
-				{
-					return false;
-				}
+				this.AkEventType = null;
 			}
-			if (base.CanResetComponentProperty("StateAudioFadeConfigMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AkEventType), "AkEventType"))
 			{
-				if (sceneItemStateAudioComponent.StateAudioFadeConfigMap == null)
-				{
-					this.StateAudioFadeConfigMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, IAudioFade>>(this.StateAudioFadeConfigMap), "StateAudioFadeConfigMap"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("StateStopMotorcycleRadioMap"))
+			if (sceneItemStateAudioComponent.StateAkEventMapOnEnter == null)
 			{
-				if (sceneItemStateAudioComponent.StateStopMotorcycleRadioMap == null)
-				{
-					this.StateStopMotorcycleRadioMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, bool>>(this.StateStopMotorcycleRadioMap), "StateStopMotorcycleRadioMap"))
-				{
-					return false;
-				}
+				this.StateAkEventMapOnEnter = null;
 			}
-			if (base.CanResetComponentProperty("UeAkComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateAkEventMapOnEnter), "StateAkEventMapOnEnter"))
 			{
-				if (sceneItemStateAudioComponent.UeAkComponent == null)
-				{
-					this.UeAkComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAkComponent>(this.UeAkComponent), "UeAkComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("AudioBox"))
+			if (sceneItemStateAudioComponent.StateAkEventMapOnLeave == null)
 			{
-				if (sceneItemStateAudioComponent.AudioBox == null)
-				{
-					this.AudioBox = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AudioBox>(this.AudioBox), "AudioBox"))
-				{
-					return false;
-				}
+				this.StateAkEventMapOnLeave = null;
 			}
-			if (base.CanResetComponentProperty("CurAudioBoxAkEventPath"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateAkEventMapOnLeave), "StateAkEventMapOnLeave"))
 			{
-				this.CurAudioBoxAkEventPath = sceneItemStateAudioComponent.CurAudioBoxAkEventPath;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurStateTagId"))
+			if (sceneItemStateAudioComponent.StateAudioFadeConfigMap == null)
 			{
-				this.CurStateTagId = sceneItemStateAudioComponent.CurStateTagId;
+				this.StateAudioFadeConfigMap = null;
 			}
-			if (base.CanResetComponentProperty("FadeHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateAudioFadeConfigMap), "StateAudioFadeConfigMap"))
 			{
-				this.FadeHandle = sceneItemStateAudioComponent.FadeHandle;
+				return false;
 			}
+			if (sceneItemStateAudioComponent.StateStopMotorcycleRadioMap == null)
+			{
+				this.StateStopMotorcycleRadioMap = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateStopMotorcycleRadioMap), "StateStopMotorcycleRadioMap"))
+			{
+				return false;
+			}
+			if (sceneItemStateAudioComponent.UeAkComponent == null)
+			{
+				this.UeAkComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UeAkComponent), "UeAkComponent"))
+			{
+				return false;
+			}
+			if (sceneItemStateAudioComponent.AudioBox == null)
+			{
+				this.AudioBox = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AudioBox), "AudioBox"))
+			{
+				return false;
+			}
+			this.CurAudioBoxAkEventPath = sceneItemStateAudioComponent.CurAudioBoxAkEventPath;
+			this.CurStateTagId = sceneItemStateAudioComponent.CurStateTagId;
+			this.FadeHandle = sceneItemStateAudioComponent.FadeHandle;
 			return true;
 		}
 
-		// Token: 0x04025AB2 RID: 154290
+		// Token: 0x170073D5 RID: 29653
+		// (get) Token: 0x0603D2F2 RID: 250610 RVA: 0x011A7605 File Offset: 0x011A5805
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073D6 RID: 29654
+		// (get) Token: 0x0603D2F3 RID: 250611 RVA: 0x011A7608 File Offset: 0x011A5808
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073D7 RID: 29655
+		// (get) Token: 0x0603D2F4 RID: 250612 RVA: 0x011A760B File Offset: 0x011A580B
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020721 RID: 132897
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04025AB3 RID: 154291
+		// Token: 0x04020722 RID: 132898
 		private SceneItemStateComponent StateComponent;
 
-		// Token: 0x04025AB4 RID: 154292
+		// Token: 0x04020723 RID: 132899
 		private SceneItemReferenceComponent RefComponent;
 
-		// Token: 0x04025AB5 RID: 154293
+		// Token: 0x04020724 RID: 132900
 		private bool IsInRange;
 
-		// Token: 0x04025AB6 RID: 154294
+		// Token: 0x04020725 RID: 132901
 		private EntityStateAudioComponent StateAudioConfig;
 
-		// Token: 0x04025AB7 RID: 154295
+		// Token: 0x04020726 RID: 132902
 		private EAudioRangeType AudioRangeType = EAudioRangeType.AOI;
 
-		// Token: 0x04025AB8 RID: 154296
+		// Token: 0x04020727 RID: 132903
 		private IAkEventTypeConfig AkEventType;
 
-		// Token: 0x04025AB9 RID: 154297
+		// Token: 0x04020728 RID: 132904
 		[Nullable(new byte[]
 		{
 			2,
@@ -833,7 +807,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 		})]
 		private Dictionary<int, string> StateAkEventMapOnEnter;
 
-		// Token: 0x04025ABA RID: 154298
+		// Token: 0x04020729 RID: 132905
 		[Nullable(new byte[]
 		{
 			2,
@@ -841,7 +815,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 		})]
 		private Dictionary<int, string> StateAkEventMapOnLeave;
 
-		// Token: 0x04025ABB RID: 154299
+		// Token: 0x0402072A RID: 132906
 		[Nullable(new byte[]
 		{
 			2,
@@ -849,22 +823,22 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 		})]
 		private Dictionary<int, IAudioFade> StateAudioFadeConfigMap;
 
-		// Token: 0x04025ABC RID: 154300
+		// Token: 0x0402072B RID: 132907
 		private Dictionary<int, bool> StateStopMotorcycleRadioMap;
 
-		// Token: 0x04025ABD RID: 154301
+		// Token: 0x0402072C RID: 132908
 		private UAkComponent UeAkComponent;
 
-		// Token: 0x04025ABE RID: 154302
+		// Token: 0x0402072D RID: 132909
 		private AudioBox AudioBox;
 
-		// Token: 0x04025ABF RID: 154303
+		// Token: 0x0402072E RID: 132910
 		private string CurAudioBoxAkEventPath;
 
-		// Token: 0x04025AC0 RID: 154304
+		// Token: 0x0402072F RID: 132911
 		private int CurStateTagId;
 
-		// Token: 0x04025AC1 RID: 154305
+		// Token: 0x04020730 RID: 132912
 		private int FadeHandle;
 	}
 }

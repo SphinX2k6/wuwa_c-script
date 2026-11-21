@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200276E RID: 10094
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A40 RID: 10816
 	public class TeleportDungeonPos : ActionParams
 	{
-		// Token: 0x0600E0CB RID: 57547 RVA: 0x00213859 File Offset: 0x00211A59
+		// Token: 0x0600EEE9 RID: 61161 RVA: 0x002305ED File Offset: 0x0022E7ED
 		public static TeleportDungeonPos Create(ITeleportDungeonPos? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043B1 RID: 17329
-		// (get) Token: 0x0600E0CC RID: 57548 RVA: 0x00213878 File Offset: 0x00211A78
+		// Token: 0x17004717 RID: 18199
+		// (get) Token: 0x0600EEEA RID: 61162 RVA: 0x0023060C File Offset: 0x0022E80C
 		public virtual int DungeonId
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043B2 RID: 17330
-		// (get) Token: 0x0600E0CD RID: 57549 RVA: 0x00213885 File Offset: 0x00211A85
+		// Token: 0x17004718 RID: 18200
+		// (get) Token: 0x0600EEEB RID: 61163 RVA: 0x00230619 File Offset: 0x0022E819
 		public virtual VectorInfo TeleportPos
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C7A RID: 31866
+		// Token: 0x04008330 RID: 33584
 		private ITeleportDungeonPos Instance;
 
-		// Token: 0x04007C7B RID: 31867
+		// Token: 0x04008331 RID: 33585
 		[Nullable(2)]
 		private VectorInfo _TeleportPosCache;
 
-		// Token: 0x04007C7C RID: 31868
+		// Token: 0x04008332 RID: 33586
 		private bool _TeleportPosInited;
 	}
 }

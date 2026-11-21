@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D58 RID: 11608
+// Token: 0x020022B2 RID: 8882
 public class WeeklyRogueSettleView : UiViewBase
 {
-	// Token: 0x0601864F RID: 99919 RVA: 0x006362E3 File Offset: 0x006344E3
+	// Token: 0x06015EF1 RID: 89841 RVA: 0x0065C2F3 File Offset: 0x0065A4F3
 	[NullableContext(1)]
 	public WeeklyRogueSettleView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06018650 RID: 99920 RVA: 0x006362EC File Offset: 0x006344EC
+	// Token: 0x06015EF2 RID: 89842 RVA: 0x0065C2FC File Offset: 0x0065A4FC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class WeeklyRogueSettleView : UiViewBase
 		};
 	}
 
-	// Token: 0x06018651 RID: 99921 RVA: 0x00636374 File Offset: 0x00634574
+	// Token: 0x06015EF3 RID: 89843 RVA: 0x0065C384 File Offset: 0x0065A584
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeeklyRogueSettleView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -41,20 +41,20 @@ public class WeeklyRogueSettleView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018652 RID: 99922 RVA: 0x006363B7 File Offset: 0x006345B7
+	// Token: 0x06015EF4 RID: 89844 RVA: 0x0065C3C7 File Offset: 0x0065A5C7
 	protected override void OnBeforeShow()
 	{
 		this.InitAutoLeaveTimer();
 		this.RefreshTitle();
 	}
 
-	// Token: 0x06018653 RID: 99923 RVA: 0x006363C5 File Offset: 0x006345C5
+	// Token: 0x06015EF5 RID: 89845 RVA: 0x0065C3D5 File Offset: 0x0065A5D5
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearAutoLeaveTimer();
 	}
 
-	// Token: 0x06018654 RID: 99924 RVA: 0x006363D0 File Offset: 0x006345D0
+	// Token: 0x06015EF6 RID: 89846 RVA: 0x0065C3E0 File Offset: 0x0065A5E0
 	protected void RefreshTitle()
 	{
 		if (this.Data == null)
@@ -71,7 +71,7 @@ public class WeeklyRogueSettleView : UiViewBase
 		base.PlaySequence("Success", null, false);
 	}
 
-	// Token: 0x06018655 RID: 99925 RVA: 0x00636423 File Offset: 0x00634623
+	// Token: 0x06015EF7 RID: 89847 RVA: 0x0065C433 File Offset: 0x0065A633
 	private void ClearAutoLeaveTimer()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.AutoLeaveTimerId))
@@ -81,7 +81,7 @@ public class WeeklyRogueSettleView : UiViewBase
 		this.AutoLeaveTimerId = null;
 	}
 
-	// Token: 0x06018656 RID: 99926 RVA: 0x0063644F File Offset: 0x0063464F
+	// Token: 0x06015EF8 RID: 89848 RVA: 0x0065C45F File Offset: 0x0065A65F
 	private void OnClickBtnLeave()
 	{
 		WeeklyRogueController instance = WeeklyRogueController.Instance;
@@ -98,7 +98,7 @@ public class WeeklyRogueSettleView : UiViewBase
 		});
 	}
 
-	// Token: 0x06018657 RID: 99927 RVA: 0x00636488 File Offset: 0x00634688
+	// Token: 0x06015EF9 RID: 89849 RVA: 0x0065C498 File Offset: 0x0065A698
 	private void InitAutoLeaveTimer()
 	{
 		int leftSecondToAutoLeave = 31;
@@ -122,7 +122,7 @@ public class WeeklyRogueSettleView : UiViewBase
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x06018658 RID: 99928 RVA: 0x006364D4 File Offset: 0x006346D4
+	// Token: 0x06015EFA RID: 89850 RVA: 0x0065C4E4 File Offset: 0x0065A6E4
 	private UniTask InitButtonAsync()
 	{
 		WeeklyRogueSettleView.<InitButtonAsync>d__16 <InitButtonAsync>d__;
@@ -133,7 +133,7 @@ public class WeeklyRogueSettleView : UiViewBase
 		return <InitButtonAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018659 RID: 99929 RVA: 0x00636518 File Offset: 0x00634718
+	// Token: 0x06015EFB RID: 89851 RVA: 0x0065C528 File Offset: 0x0065A728
 	[NullableContext(1)]
 	private UniTask CreateButton(UUIItem uiItem, WeeklyRogueSettleView.EButtons buttonIndex, Action clickFunction)
 	{
@@ -147,10 +147,10 @@ public class WeeklyRogueSettleView : UiViewBase
 		return <CreateButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400B4F8 RID: 46328
+	// Token: 0x0400B86D RID: 47213
 	private const int LEAVETIME = 30;
 
-	// Token: 0x0400B4F9 RID: 46329
+	// Token: 0x0400B86E RID: 47214
 	[Nullable(new byte[]
 	{
 		2,
@@ -158,39 +158,39 @@ public class WeeklyRogueSettleView : UiViewBase
 	})]
 	protected Dictionary<int, ActivityCorniceMeetingButton> ButtonMap;
 
-	// Token: 0x0400B4FA RID: 46330
+	// Token: 0x0400B86F RID: 47215
 	[Nullable(2)]
 	private TimerHandle AutoLeaveTimerId;
 
-	// Token: 0x0400B4FB RID: 46331
+	// Token: 0x0400B870 RID: 47216
 	[Nullable(2)]
 	protected RogueWeeklyResultNotify Data;
 
-	// Token: 0x0400B4FC RID: 46332
+	// Token: 0x0400B871 RID: 47217
 	[Nullable(2)]
 	protected WeeklyRogueSettleInfoPanel InfoPanel;
 
-	// Token: 0x020092F4 RID: 37620
+	// Token: 0x0200851B RID: 34075
 	private enum EComponents
 	{
-		// Token: 0x0402F7F6 RID: 194550
+		// Token: 0x0402AE7E RID: 175742
 		TxtTitle = 1,
-		// Token: 0x0402F7F7 RID: 194551
+		// Token: 0x0402AE7F RID: 175743
 		TextureIcon,
-		// Token: 0x0402F7F8 RID: 194552
+		// Token: 0x0402AE80 RID: 175744
 		ButtonHorizontalItem = 4,
-		// Token: 0x0402F7F9 RID: 194553
+		// Token: 0x0402AE81 RID: 175745
 		ButtonItem,
-		// Token: 0x0402F7FA RID: 194554
+		// Token: 0x0402AE82 RID: 175746
 		Content = 20
 	}
 
-	// Token: 0x020092F5 RID: 37621
+	// Token: 0x0200851C RID: 34076
 	private enum EButtons
 	{
-		// Token: 0x0402F7FC RID: 194556
+		// Token: 0x0402AE84 RID: 175748
 		LeftButton,
-		// Token: 0x0402F7FD RID: 194557
+		// Token: 0x0402AE85 RID: 175749
 		RightButton
 	}
 }

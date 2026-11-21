@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003FA RID: 1018
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000453 RID: 1107
 	public class IGroupAiPatrol : IGroupAiMode
 	{
-		// Token: 0x0600147F RID: 5247 RVA: 0x00041664 File Offset: 0x0003F864
+		// Token: 0x06001619 RID: 5657 RVA: 0x000453AC File Offset: 0x000435AC
 		private IGroupAiPatrol_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001480 RID: 5248 RVA: 0x0004169C File Offset: 0x0003F89C
+		// Token: 0x0600161A RID: 5658 RVA: 0x000453E4 File Offset: 0x000435E4
 		public static IGroupAiPatrol Create([Nullable(2)] IGroupAiPatrol instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001481 RID: 5249 RVA: 0x000416AF File Offset: 0x0003F8AF
+		// Token: 0x0600161B RID: 5659 RVA: 0x000453F7 File Offset: 0x000435F7
 		public static IGroupAiPatrol CreateFromSetValue([Nullable(2)] IGroupAiPatrol_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001482 RID: 5250 RVA: 0x000416C4 File Offset: 0x0003F8C4
+		// Token: 0x0600161C RID: 5660 RVA: 0x0004540C File Offset: 0x0004360C
 		public new IGroupAiPatrol_SetValue ToSetValue()
 		{
 			return new IGroupAiPatrol_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005A6 RID: 1446
-		// (get) Token: 0x06001483 RID: 5251 RVA: 0x0004172A File Offset: 0x0003F92A
-		// (set) Token: 0x06001484 RID: 5252 RVA: 0x00041755 File Offset: 0x0003F955
+		// Token: 0x1700060D RID: 1549
+		// (get) Token: 0x0600161D RID: 5661 RVA: 0x00045472 File Offset: 0x00043672
+		// (set) Token: 0x0600161E RID: 5662 RVA: 0x0004549D File Offset: 0x0004369D
 		public override EGroupAiMode Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005A7 RID: 1447
-		// (get) Token: 0x06001485 RID: 5253 RVA: 0x00041763 File Offset: 0x0003F963
-		// (set) Token: 0x06001486 RID: 5254 RVA: 0x0004178E File Offset: 0x0003F98E
+		// Token: 0x1700060E RID: 1550
+		// (get) Token: 0x0600161F RID: 5663 RVA: 0x000454AB File Offset: 0x000436AB
+		// (set) Token: 0x06001620 RID: 5664 RVA: 0x000454D6 File Offset: 0x000436D6
 		public virtual int Leader
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005A8 RID: 1448
-		// (get) Token: 0x06001487 RID: 5255 RVA: 0x0004179C File Offset: 0x0003F99C
-		// (set) Token: 0x06001488 RID: 5256 RVA: 0x000417C7 File Offset: 0x0003F9C7
+		// Token: 0x1700060F RID: 1551
+		// (get) Token: 0x06001621 RID: 5665 RVA: 0x000454E4 File Offset: 0x000436E4
+		// (set) Token: 0x06001622 RID: 5666 RVA: 0x0004550F File Offset: 0x0004370F
 		public virtual int SplineEntityId
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005A9 RID: 1449
-		// (get) Token: 0x06001489 RID: 5257 RVA: 0x000417D8 File Offset: 0x0003F9D8
-		// (set) Token: 0x0600148A RID: 5258 RVA: 0x00041812 File Offset: 0x0003FA12
+		// Token: 0x17000610 RID: 1552
+		// (get) Token: 0x06001623 RID: 5667 RVA: 0x00045520 File Offset: 0x00043720
+		// (set) Token: 0x06001624 RID: 5668 RVA: 0x0004555A File Offset: 0x0004375A
 		public virtual int? PlayerPlaceholderEntityId
 		{
 			get
@@ -158,9 +156,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005AA RID: 1450
-		// (get) Token: 0x0600148B RID: 5259 RVA: 0x00041820 File Offset: 0x0003FA20
-		// (set) Token: 0x0600148C RID: 5260 RVA: 0x0004185A File Offset: 0x0003FA5A
+		// Token: 0x17000611 RID: 1553
+		// (get) Token: 0x06001625 RID: 5669 RVA: 0x00045568 File Offset: 0x00043768
+		// (set) Token: 0x06001626 RID: 5670 RVA: 0x000455A2 File Offset: 0x000437A2
 		public virtual EGroupAiFormationBasis? FormationBasis
 		{
 			get
@@ -182,9 +180,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005AB RID: 1451
-		// (get) Token: 0x0600148D RID: 5261 RVA: 0x00041868 File Offset: 0x0003FA68
-		// (set) Token: 0x0600148E RID: 5262 RVA: 0x000418A2 File Offset: 0x0003FAA2
+		// Token: 0x17000612 RID: 1554
+		// (get) Token: 0x06001627 RID: 5671 RVA: 0x000455B0 File Offset: 0x000437B0
+		// (set) Token: 0x06001628 RID: 5672 RVA: 0x000455EA File Offset: 0x000437EA
 		public virtual bool? IsPreciseFormation
 		{
 			get
@@ -206,9 +204,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005AC RID: 1452
-		// (get) Token: 0x0600148F RID: 5263 RVA: 0x000418B0 File Offset: 0x0003FAB0
-		// (set) Token: 0x06001490 RID: 5264 RVA: 0x00041911 File Offset: 0x0003FB11
+		// Token: 0x17000613 RID: 1555
+		// (get) Token: 0x06001629 RID: 5673 RVA: 0x000455F8 File Offset: 0x000437F8
+		// (set) Token: 0x0600162A RID: 5674 RVA: 0x00045659 File Offset: 0x00043859
 		[Nullable(2)]
 		public virtual IGroupAiEcologyGameplayAbp EcologyGameplayAbp
 		{
@@ -239,18 +237,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001019 RID: 4121
+		// Token: 0x0400113B RID: 4411
 		[Nullable(2)]
 		protected new IGroupAiPatrol FbInstance;
 
-		// Token: 0x0400101A RID: 4122
+		// Token: 0x0400113C RID: 4412
 		[Nullable(2)]
 		protected new IGroupAiPatrol_SetValue PocoInterface;
 
-		// Token: 0x0400101B RID: 4123
+		// Token: 0x0400113D RID: 4413
 		private IGroupAiEcologyGameplayAbp _EcologyGameplayAbpCache;
 
-		// Token: 0x0400101C RID: 4124
+		// Token: 0x0400113E RID: 4414
 		private bool _EcologyGameplayAbpInited;
 	}
 }

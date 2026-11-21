@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001694 RID: 5780
+	// Token: 0x0200030F RID: 783
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroAudio.KuroAmbientSoundComponent")]
 	[UnrealStructLayout(656, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 656)]
 	public class UKuroAmbientSoundComponent : USceneComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06014F5E RID: 85854 RVA: 0x001ED017 File Offset: 0x001EB217
+		// Token: 0x06005347 RID: 21319 RVA: 0x000747E7 File Offset: 0x000729E7
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroAmbientSoundComponent._ClassPtr;
 		}
 
-		// Token: 0x06014F5F RID: 85855 RVA: 0x001ED024 File Offset: 0x001EB224
+		// Token: 0x06005348 RID: 21320 RVA: 0x000747F4 File Offset: 0x000729F4
 		public UKuroAmbientSoundComponent() : this(BuiltinUtils.AllocNativeUObject(UKuroAmbientSoundComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06014F60 RID: 85856 RVA: 0x001ED04C File Offset: 0x001EB24C
+		// Token: 0x06005349 RID: 21321 RVA: 0x0007481C File Offset: 0x00072A1C
 		public UKuroAmbientSoundComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroAmbientSoundComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005308 RID: 21256
-		// (get) Token: 0x06014F61 RID: 85857 RVA: 0x001ED07F File Offset: 0x001EB27F
-		// (set) Token: 0x06014F62 RID: 85858 RVA: 0x001ED093 File Offset: 0x001EB293
+		// Token: 0x1700108B RID: 4235
+		// (get) Token: 0x0600534A RID: 21322 RVA: 0x0007484F File Offset: 0x00072A4F
+		// (set) Token: 0x0600534B RID: 21323 RVA: 0x00074863 File Offset: 0x00072A63
 		[Nullable(2)]
 		public unsafe UAkAudioEvent AudioEvent
 		{
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005309 RID: 21257
-		// (get) Token: 0x06014F63 RID: 85859 RVA: 0x001ED0A8 File Offset: 0x001EB2A8
-		// (set) Token: 0x06014F64 RID: 85860 RVA: 0x001ED0B8 File Offset: 0x001EB2B8
+		// Token: 0x1700108C RID: 4236
+		// (get) Token: 0x0600534C RID: 21324 RVA: 0x00074878 File Offset: 0x00072A78
+		// (set) Token: 0x0600534D RID: 21325 RVA: 0x00074888 File Offset: 0x00072A88
 		public unsafe bool bAutoPlay
 		{
 			get
@@ -62,9 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700530A RID: 21258
-		// (get) Token: 0x06014F65 RID: 85861 RVA: 0x001ED0C9 File Offset: 0x001EB2C9
-		// (set) Token: 0x06014F66 RID: 85862 RVA: 0x001ED0D9 File Offset: 0x001EB2D9
+		// Token: 0x1700108D RID: 4237
+		// (get) Token: 0x0600534E RID: 21326 RVA: 0x00074899 File Offset: 0x00072A99
+		// (set) Token: 0x0600534F RID: 21327 RVA: 0x000748A9 File Offset: 0x00072AA9
 		public unsafe float AttenuationScalingFactor
 		{
 			get
@@ -77,9 +77,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700530B RID: 21259
-		// (get) Token: 0x06014F67 RID: 85863 RVA: 0x001ED0EC File Offset: 0x001EB2EC
-		// (set) Token: 0x06014F68 RID: 85864 RVA: 0x001ED125 File Offset: 0x001EB325
+		// Token: 0x1700108E RID: 4238
+		// (get) Token: 0x06005350 RID: 21328 RVA: 0x000748BC File Offset: 0x00072ABC
+		// (set) Token: 0x06005351 RID: 21329 RVA: 0x000748F5 File Offset: 0x00072AF5
 		public TArray<FTransform> SoundPositions
 		{
 			get
@@ -98,69 +98,69 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014F69 RID: 85865 RVA: 0x001ED133 File Offset: 0x001EB333
+		// Token: 0x06005352 RID: 21330 RVA: 0x00074903 File Offset: 0x00072B03
 		public void StopSound()
 		{
 			UKuroAmbientSoundComponent.__StopSound_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06014F6A RID: 85866 RVA: 0x001ED140 File Offset: 0x001EB340
+		// Token: 0x06005353 RID: 21331 RVA: 0x00074910 File Offset: 0x00072B10
 		public void PlaySound()
 		{
 			UKuroAmbientSoundComponent.__PlaySound_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06014F6B RID: 85867 RVA: 0x001ED14D File Offset: 0x001EB34D
+		// Token: 0x06005354 RID: 21332 RVA: 0x0007491D File Offset: 0x00072B1D
 		public bool IsPlaying()
 		{
 			return UKuroAmbientSoundComponent.__IsPlaying_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06014F6C RID: 85868
+		// Token: 0x06005355 RID: 21333
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StopSound_Internal(IntPtr @this);
 
-		// Token: 0x06014F6D RID: 85869
+		// Token: 0x06005356 RID: 21334
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PlaySound_Internal(IntPtr @this);
 
-		// Token: 0x06014F6E RID: 85870
+		// Token: 0x06005357 RID: 21335
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsPlaying_Internal(IntPtr @this);
 
-		// Token: 0x06014F6F RID: 85871 RVA: 0x001ED15A File Offset: 0x001EB35A
+		// Token: 0x06005358 RID: 21336 RVA: 0x0007492A File Offset: 0x00072B2A
 		static UKuroAmbientSoundComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroAudio.KuroAmbientSoundComponent");
 		}
 
-		// Token: 0x06014F70 RID: 85872 RVA: 0x001ED168 File Offset: 0x001EB368
+		// Token: 0x06005359 RID: 21337 RVA: 0x00074938 File Offset: 0x00072B38
 		protected UKuroAmbientSoundComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400B6BE RID: 46782
+		// Token: 0x04002214 RID: 8724
 		public new const string __ObjectPath = "/Script/KuroAudio.KuroAmbientSoundComponent";
 
-		// Token: 0x0400B6BF RID: 46783
+		// Token: 0x04002215 RID: 8725
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400B6C0 RID: 46784
+		// Token: 0x04002216 RID: 8726
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400B6C1 RID: 46785
+		// Token: 0x04002217 RID: 8727
 		internal static int __PropertyOffset_AudioEvent;
 
-		// Token: 0x0400B6C2 RID: 46786
+		// Token: 0x04002218 RID: 8728
 		internal static int __PropertyOffset_bAutoPlay;
 
-		// Token: 0x0400B6C3 RID: 46787
+		// Token: 0x04002219 RID: 8729
 		internal static int __PropertyOffset_AttenuationScalingFactor;
 
-		// Token: 0x0400B6C4 RID: 46788
+		// Token: 0x0400221A RID: 8730
 		internal static int __PropertyOffset_SoundPositions;
 
-		// Token: 0x0400B6C5 RID: 46789
+		// Token: 0x0400221B RID: 8731
 		[Nullable(2)]
 		private TArray<FTransform> _SoundPositions;
 	}

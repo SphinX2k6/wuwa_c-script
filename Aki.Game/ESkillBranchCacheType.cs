@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x020027CF RID: 10191
+// Token: 0x02001D4A RID: 7498
 public enum ESkillBranchCacheType
 {
-	// Token: 0x04009D7D RID: 40317
+	// Token: 0x0400A166 RID: 41318
 	Normal,
-	// Token: 0x04009D7E RID: 40318
+	// Token: 0x0400A167 RID: 41319
 	Tower,
-	// Token: 0x04009D7F RID: 40319
+	// Token: 0x0400A168 RID: 41320
 	Mowing,
-	// Token: 0x04009D80 RID: 40320
+	// Token: 0x0400A169 RID: 41321
 	ShipTower,
-	// Token: 0x04009D81 RID: 40321
+	// Token: 0x0400A16A RID: 41322
 	WheelTower,
-	// Token: 0x04009D82 RID: 40322
+	// Token: 0x0400A16B RID: 41323
 	WheeTowerLoading,
-	// Token: 0x04009D83 RID: 40323
+	// Token: 0x0400A16C RID: 41324
 	BossPiling,
-	// Token: 0x04009D84 RID: 40324
+	// Token: 0x0400A16D RID: 41325
 	BabelTower,
-	// Token: 0x04009D85 RID: 40325
+	// Token: 0x0400A16E RID: 41326
 	FarmGold
 }

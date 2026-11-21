@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020019AB RID: 6571
+// Token: 0x02000E69 RID: 3689
 [NullableContext(1)]
 [Nullable(0)]
 public class SpineAnimationQueue
 {
-	// Token: 0x0600BFA6 RID: 49062 RVA: 0x002B41B7 File Offset: 0x002B23B7
+	// Token: 0x060093B0 RID: 37808 RVA: 0x002BF147 File Offset: 0x002BD347
 	public SpineAnimationQueue(USpineSkeletonAnimationComponent spine)
 	{
 		this.Spine = spine;
 	}
 
-	// Token: 0x0600BFA7 RID: 49063 RVA: 0x002B41C8 File Offset: 0x002B23C8
+	// Token: 0x060093B1 RID: 37809 RVA: 0x002BF158 File Offset: 0x002BD358
 	public void PushAnimation(int layerIndex, string animationName, bool loop)
 	{
 		if (this.Spine == null)
@@ -44,7 +44,7 @@ public class SpineAnimationQueue
 		trackEntry.AnimationComplete.Add(new Action<UTrackEntry>(this.OnAnimationCompleted));
 	}
 
-	// Token: 0x0600BFA8 RID: 49064 RVA: 0x002B4254 File Offset: 0x002B2454
+	// Token: 0x060093B2 RID: 37810 RVA: 0x002BF1E4 File Offset: 0x002BD3E4
 	private void OnAnimationCompleted(UTrackEntry _)
 	{
 		this.TrackEntry = null;
@@ -63,7 +63,7 @@ public class SpineAnimationQueue
 		}
 	}
 
-	// Token: 0x04005632 RID: 22066
+	// Token: 0x040056E4 RID: 22244
 	[Nullable(new byte[]
 	{
 		2,
@@ -71,10 +71,10 @@ public class SpineAnimationQueue
 	})]
 	private List<ISpineAnimationQueueParam> AnimationQueue;
 
-	// Token: 0x04005633 RID: 22067
+	// Token: 0x040056E5 RID: 22245
 	[Nullable(2)]
 	private UTrackEntry TrackEntry;
 
-	// Token: 0x04005634 RID: 22068
+	// Token: 0x040056E6 RID: 22246
 	private readonly USpineSkeletonAnimationComponent Spine;
 }

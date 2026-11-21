@@ -3,50 +3,50 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050A3 RID: 20643
+	// Token: 0x02005608 RID: 22024
 	public class IDollGrabMachineComponentT
 	{
-		// Token: 0x170095FA RID: 38394
-		// (get) Token: 0x06021275 RID: 135797 RVA: 0x0049B585 File Offset: 0x00499785
-		// (set) Token: 0x06021276 RID: 135798 RVA: 0x0049B58D File Offset: 0x0049978D
+		// Token: 0x17009DE7 RID: 40423
+		// (get) Token: 0x060231C9 RID: 143817 RVA: 0x004D5511 File Offset: 0x004D3711
+		// (set) Token: 0x060231CA RID: 143818 RVA: 0x004D5519 File Offset: 0x004D3719
 		public bool Disabled { get; set; }
 
-		// Token: 0x170095FB RID: 38395
-		// (get) Token: 0x06021277 RID: 135799 RVA: 0x0049B596 File Offset: 0x00499796
-		// (set) Token: 0x06021278 RID: 135800 RVA: 0x0049B59E File Offset: 0x0049979E
+		// Token: 0x17009DE8 RID: 40424
+		// (get) Token: 0x060231CB RID: 143819 RVA: 0x004D5522 File Offset: 0x004D3722
+		// (set) Token: 0x060231CC RID: 143820 RVA: 0x004D552A File Offset: 0x004D372A
 		public EDollGrabShowcaseBelongType BelongType { get; set; }
 
-		// Token: 0x170095FC RID: 38396
-		// (get) Token: 0x06021279 RID: 135801 RVA: 0x0049B5A7 File Offset: 0x004997A7
-		// (set) Token: 0x0602127A RID: 135802 RVA: 0x0049B5AF File Offset: 0x004997AF
+		// Token: 0x17009DE9 RID: 40425
+		// (get) Token: 0x060231CD RID: 143821 RVA: 0x004D5533 File Offset: 0x004D3733
+		// (set) Token: 0x060231CE RID: 143822 RVA: 0x004D553B File Offset: 0x004D373B
 		public float TimeLimit { get; set; }
 
-		// Token: 0x170095FD RID: 38397
-		// (get) Token: 0x0602127B RID: 135803 RVA: 0x0049B5B8 File Offset: 0x004997B8
-		// (set) Token: 0x0602127C RID: 135804 RVA: 0x0049B5C0 File Offset: 0x004997C0
+		// Token: 0x17009DEA RID: 40426
+		// (get) Token: 0x060231CF RID: 143823 RVA: 0x004D5544 File Offset: 0x004D3744
+		// (set) Token: 0x060231D0 RID: 143824 RVA: 0x004D554C File Offset: 0x004D374C
 		public float PlayCost { get; set; }
 
-		// Token: 0x170095FE RID: 38398
-		// (get) Token: 0x0602127D RID: 135805 RVA: 0x0049B5C9 File Offset: 0x004997C9
-		// (set) Token: 0x0602127E RID: 135806 RVA: 0x0049B5D1 File Offset: 0x004997D1
+		// Token: 0x17009DEB RID: 40427
+		// (get) Token: 0x060231D1 RID: 143825 RVA: 0x004D5555 File Offset: 0x004D3755
+		// (set) Token: 0x060231D2 RID: 143826 RVA: 0x004D555D File Offset: 0x004D375D
 		public List<IDollGrabItemT> Items { get; set; }
 
-		// Token: 0x170095FF RID: 38399
-		// (get) Token: 0x0602127F RID: 135807 RVA: 0x0049B5DA File Offset: 0x004997DA
-		// (set) Token: 0x06021280 RID: 135808 RVA: 0x0049B5E2 File Offset: 0x004997E2
+		// Token: 0x17009DEC RID: 40428
+		// (get) Token: 0x060231D3 RID: 143827 RVA: 0x004D5566 File Offset: 0x004D3766
+		// (set) Token: 0x060231D4 RID: 143828 RVA: 0x004D556E File Offset: 0x004D376E
 		public IDollGrabInfiniteModeDataT InfiniteModeData { get; set; }
 
-		// Token: 0x17009600 RID: 38400
-		// (get) Token: 0x06021281 RID: 135809 RVA: 0x0049B5EB File Offset: 0x004997EB
-		// (set) Token: 0x06021282 RID: 135810 RVA: 0x0049B5F3 File Offset: 0x004997F3
+		// Token: 0x17009DED RID: 40429
+		// (get) Token: 0x060231D5 RID: 143829 RVA: 0x004D5577 File Offset: 0x004D3777
+		// (set) Token: 0x060231D6 RID: 143830 RVA: 0x004D557F File Offset: 0x004D377F
 		public string AkEvent { get; set; }
 
-		// Token: 0x17009601 RID: 38401
-		// (get) Token: 0x06021283 RID: 135811 RVA: 0x0049B5FC File Offset: 0x004997FC
-		// (set) Token: 0x06021284 RID: 135812 RVA: 0x0049B604 File Offset: 0x00499804
+		// Token: 0x17009DEE RID: 40430
+		// (get) Token: 0x060231D7 RID: 143831 RVA: 0x004D5588 File Offset: 0x004D3788
+		// (set) Token: 0x060231D8 RID: 143832 RVA: 0x004D5590 File Offset: 0x004D3790
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021285 RID: 135813 RVA: 0x0049B610 File Offset: 0x00499810
+		// Token: 0x060231D9 RID: 143833 RVA: 0x004D559C File Offset: 0x004D379C
 		public IDollGrabMachineComponentT()
 		{
 			this.Disabled = false;

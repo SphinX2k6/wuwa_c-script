@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D2C RID: 23852
+	// Token: 0x02004D0E RID: 19726
 	public abstract class FormationExtraButton : BattleChildView
 	{
-		// Token: 0x0603C7D4 RID: 247764 RVA: 0x00E83183 File Offset: 0x00E81383
+		// Token: 0x0603172D RID: 202541 RVA: 0x00DD3923 File Offset: 0x00DD1B23
 		[NullableContext(1)]
 		public virtual void InitHandle(FormationUnitNodeHandle handle)
 		{
 			this.Handle = handle;
 		}
 
-		// Token: 0x0603C7D5 RID: 247765 RVA: 0x00E8318C File Offset: 0x00E8138C
+		// Token: 0x0603172E RID: 202542 RVA: 0x00DD392C File Offset: 0x00DD1B2C
 		public virtual void SetVisible(bool visibility)
 		{
 			this.SetActive(visibility);
@@ -25,12 +25,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			handle.SetNodeVisible(visibility);
 		}
 
-		// Token: 0x0603C7D6 RID: 247766 RVA: 0x00E831A6 File Offset: 0x00E813A6
+		// Token: 0x0603172F RID: 202543 RVA: 0x00DD3946 File Offset: 0x00DD1B46
 		public virtual void Tick(float delta)
 		{
 		}
 
-		// Token: 0x0401F854 RID: 129108
+		// Token: 0x0401A30D RID: 107277
 		[Nullable(2)]
 		protected FormationUnitNodeHandle Handle;
 	}

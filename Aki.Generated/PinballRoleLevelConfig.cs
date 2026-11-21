@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F37 RID: 3895
+	// Token: 0x0200101C RID: 4124
 	public struct PinballRoleLevelConfig : IFlatbufferObject
 	{
-		// Token: 0x170029D2 RID: 10706
-		// (get) Token: 0x0600B044 RID: 45124 RVA: 0x002C4C5D File Offset: 0x002C2E5D
+		// Token: 0x17002A38 RID: 10808
+		// (get) Token: 0x0600B665 RID: 46693 RVA: 0x002E15BA File Offset: 0x002DF7BA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B045 RID: 45125 RVA: 0x002C4C6A File Offset: 0x002C2E6A
+		// Token: 0x0600B666 RID: 46694 RVA: 0x002E15C7 File Offset: 0x002DF7C7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B046 RID: 45126 RVA: 0x002C4C74 File Offset: 0x002C2E74
+		// Token: 0x0600B667 RID: 46695 RVA: 0x002E15D0 File Offset: 0x002DF7D0
 		public static PinballRoleLevelConfig GetRootAsPinballRoleLevelConfig(ByteBuffer _bb)
 		{
 			return PinballRoleLevelConfig.GetRootAsPinballRoleLevelConfig(_bb, default(PinballRoleLevelConfig));
 		}
 
-		// Token: 0x0600B047 RID: 45127 RVA: 0x002C4C90 File Offset: 0x002C2E90
+		// Token: 0x0600B668 RID: 46696 RVA: 0x002E15EC File Offset: 0x002DF7EC
 		public static PinballRoleLevelConfig GetRootAsPinballRoleLevelConfig(ByteBuffer _bb, PinballRoleLevelConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B048 RID: 45128 RVA: 0x002C4CAD File Offset: 0x002C2EAD
+		// Token: 0x0600B669 RID: 46697 RVA: 0x002E1609 File Offset: 0x002DF809
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B049 RID: 45129 RVA: 0x002C4CBC File Offset: 0x002C2EBC
+		// Token: 0x0600B66A RID: 46698 RVA: 0x002E1618 File Offset: 0x002DF818
 		public PinballRoleLevelConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170029D3 RID: 10707
-		// (get) Token: 0x0600B04A RID: 45130 RVA: 0x002C4CCC File Offset: 0x002C2ECC
+		// Token: 0x17002A39 RID: 10809
+		// (get) Token: 0x0600B66B RID: 46699 RVA: 0x002E1628 File Offset: 0x002DF828
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170029D4 RID: 10708
-		// (get) Token: 0x0600B04B RID: 45131 RVA: 0x002C4D08 File Offset: 0x002C2F08
+		// Token: 0x17002A3A RID: 10810
+		// (get) Token: 0x0600B66C RID: 46700 RVA: 0x002E1664 File Offset: 0x002DF864
 		public int GroupId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170029D5 RID: 10709
-		// (get) Token: 0x0600B04C RID: 45132 RVA: 0x002C4D44 File Offset: 0x002C2F44
+		// Token: 0x17002A3B RID: 10811
+		// (get) Token: 0x0600B66D RID: 46701 RVA: 0x002E16A0 File Offset: 0x002DF8A0
 		public int Level
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170029D6 RID: 10710
-		// (get) Token: 0x0600B04D RID: 45133 RVA: 0x002C4D80 File Offset: 0x002C2F80
+		// Token: 0x17002A3C RID: 10812
+		// (get) Token: 0x0600B66E RID: 46702 RVA: 0x002E16DC File Offset: 0x002DF8DC
 		public int Consume
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170029D7 RID: 10711
-		// (get) Token: 0x0600B04E RID: 45134 RVA: 0x002C4DC0 File Offset: 0x002C2FC0
+		// Token: 0x17002A3D RID: 10813
+		// (get) Token: 0x0600B66F RID: 46703 RVA: 0x002E171C File Offset: 0x002DF91C
 		public int Prop
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005001 RID: 20481
+		// Token: 0x040055E6 RID: 21990
 		private Table __p;
 	}
 }

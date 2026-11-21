@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E06 RID: 3590
+	// Token: 0x02000F02 RID: 3842
 	public class IWuWaGoEntityBase
 	{
-		// Token: 0x06005147 RID: 20807 RVA: 0x000C88CD File Offset: 0x000C6ACD
-		[NullableContext(1)]
+		// Token: 0x0600566E RID: 22126 RVA: 0x000D4195 File Offset: 0x000D2395
 		public static IWuWaGoEntityBase Create(IWuWaGoEntityBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AF8 RID: 6904
-		// (get) Token: 0x06005148 RID: 20808 RVA: 0x000C88EC File Offset: 0x000C6AEC
+		// Token: 0x17001C65 RID: 7269
+		// (get) Token: 0x0600566F RID: 22127 RVA: 0x000D41B4 File Offset: 0x000D23B4
 		public virtual EWuWaGoEntityType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EC7 RID: 11975
+		// Token: 0x0400318F RID: 12687
 		private IWuWaGoEntityBase Instance;
 	}
 }

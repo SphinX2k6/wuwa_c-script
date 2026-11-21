@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001DB5 RID: 7605
+// Token: 0x02001277 RID: 4727
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class GreatSwordTrialLevelItem : GridProxyAbstract<TrialSubChallenge>
 {
-	// Token: 0x0600E6CB RID: 59083 RVA: 0x00365EBC File Offset: 0x003640BC
+	// Token: 0x0600BAE9 RID: 47849 RVA: 0x00371B1C File Offset: 0x0036FD1C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class GreatSwordTrialLevelItem : GridProxyAbstract<TrialSubChallenge>
 		};
 	}
 
-	// Token: 0x0600E6CC RID: 59084 RVA: 0x00365F94 File Offset: 0x00364194
+	// Token: 0x0600BAEA RID: 47850 RVA: 0x00371BF4 File Offset: 0x0036FDF4
 	public override void Refresh(TrialSubChallenge data, bool isSelected, int gridIndex)
 	{
 		this.LevelIndex = gridIndex;
@@ -53,13 +53,13 @@ public class GreatSwordTrialLevelItem : GridProxyAbstract<TrialSubChallenge>
 		this.RefreshStyleByIndex(data, gridIndex);
 	}
 
-	// Token: 0x0600E6CD RID: 59085 RVA: 0x00366007 File Offset: 0x00364207
+	// Token: 0x0600BAEB RID: 47851 RVA: 0x00371C67 File Offset: 0x0036FE67
 	public override object GetKey(TrialSubChallenge data, int gridIndex)
 	{
 		return gridIndex;
 	}
 
-	// Token: 0x0600E6CE RID: 59086 RVA: 0x00366010 File Offset: 0x00364210
+	// Token: 0x0600BAEC RID: 47852 RVA: 0x00371C70 File Offset: 0x0036FE70
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GreatSwordTrialLevelItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -70,13 +70,13 @@ public class GreatSwordTrialLevelItem : GridProxyAbstract<TrialSubChallenge>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E6CF RID: 59087 RVA: 0x00366053 File Offset: 0x00364253
+	// Token: 0x0600BAED RID: 47853 RVA: 0x00371CB3 File Offset: 0x0036FEB3
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.OnCanExecuteChange));
 	}
 
-	// Token: 0x0600E6D0 RID: 59088 RVA: 0x00366074 File Offset: 0x00364274
+	// Token: 0x0600BAEE RID: 47854 RVA: 0x00371CD4 File Offset: 0x0036FED4
 	private void RefreshStyleByIndex(TrialSubChallenge data, int levelIndex)
 	{
 		BlackSwordUIAsset? config = ConfigBlackSwordUIAssetById.GetConfig(data.Config.UIConfigId, true);
@@ -103,7 +103,7 @@ public class GreatSwordTrialLevelItem : GridProxyAbstract<TrialSubChallenge>
 		}
 	}
 
-	// Token: 0x0600E6D1 RID: 59089 RVA: 0x003661B7 File Offset: 0x003643B7
+	// Token: 0x0600BAEF RID: 47855 RVA: 0x00371E17 File Offset: 0x00370017
 	public void SetToggleState(EToggleState state)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -114,7 +114,7 @@ public class GreatSwordTrialLevelItem : GridProxyAbstract<TrialSubChallenge>
 		extendToggle.SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0600E6D2 RID: 59090 RVA: 0x003661CF File Offset: 0x003643CF
+	// Token: 0x0600BAF0 RID: 47856 RVA: 0x00371E2F File Offset: 0x0037002F
 	public EToggleState GetToggleState()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -125,7 +125,7 @@ public class GreatSwordTrialLevelItem : GridProxyAbstract<TrialSubChallenge>
 		return extendToggle.GetToggleState();
 	}
 
-	// Token: 0x0600E6D3 RID: 59091 RVA: 0x003661E3 File Offset: 0x003643E3
+	// Token: 0x0600BAF1 RID: 47857 RVA: 0x00371E43 File Offset: 0x00370043
 	protected void OnClickToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -139,20 +139,20 @@ public class GreatSwordTrialLevelItem : GridProxyAbstract<TrialSubChallenge>
 		}
 	}
 
-	// Token: 0x0600E6D4 RID: 59092 RVA: 0x003661FF File Offset: 0x003643FF
+	// Token: 0x0600BAF2 RID: 47858 RVA: 0x00371E5F File Offset: 0x0037005F
 	private bool OnCanExecuteChange()
 	{
 		return this.CanClickCallBack != null && this.CanClickCallBack(this.LevelIndex);
 	}
 
-	// Token: 0x04006AD0 RID: 27344
+	// Token: 0x04006BB1 RID: 27569
 	public int LevelIndex;
 
-	// Token: 0x04006AD1 RID: 27345
+	// Token: 0x04006BB2 RID: 27570
 	[Nullable(2)]
 	public Action<int> OnClickToggleCallBack;
 
-	// Token: 0x04006AD2 RID: 27346
+	// Token: 0x04006BB3 RID: 27571
 	[Nullable(2)]
 	public Func<int, bool> CanClickCallBack;
 }

@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.KeySettingsView
 {
-	// Token: 0x0200545F RID: 21599
+	// Token: 0x02004442 RID: 17474
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ChangeModeTipsView : UiViewBase
 	{
-		// Token: 0x06037211 RID: 225809 RVA: 0x00D11426 File Offset: 0x00D0F626
+		// Token: 0x0602C15A RID: 180570 RVA: 0x00C6083E File Offset: 0x00C5EA3E
 		public ChangeModeTipsView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06037212 RID: 225810 RVA: 0x00D11448 File Offset: 0x00D0F648
+		// Token: 0x0602C15B RID: 180571 RVA: 0x00C60860 File Offset: 0x00C5EA60
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			};
 		}
 
-		// Token: 0x06037213 RID: 225811 RVA: 0x00D1157C File Offset: 0x00D0F77C
+		// Token: 0x0602C15C RID: 180572 RVA: 0x00C60994 File Offset: 0x00C5EB94
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ChangeModeTipsView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037214 RID: 225812 RVA: 0x00D115BF File Offset: 0x00D0F7BF
+		// Token: 0x0602C15D RID: 180573 RVA: 0x00C609D7 File Offset: 0x00C5EBD7
 		protected override void OnStart()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x06037215 RID: 225813 RVA: 0x00D115C7 File Offset: 0x00D0F7C7
+		// Token: 0x0602C15E RID: 180574 RVA: 0x00C609DF File Offset: 0x00C5EBDF
 		protected override void OnBeforeDestroy()
 		{
 			this.CaptionItem = null;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			this.ChangeModeRowViewList.Clear();
 		}
 
-		// Token: 0x06037216 RID: 225814 RVA: 0x00D115E2 File Offset: 0x00D0F7E2
+		// Token: 0x0602C15F RID: 180575 RVA: 0x00C609FA File Offset: 0x00C5EBFA
 		private void Refresh()
 		{
 			this.RefreshGroupName();
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			this.RefreshRowView();
 		}
 
-		// Token: 0x06037217 RID: 225815 RVA: 0x00D115FC File Offset: 0x00D0F7FC
+		// Token: 0x0602C160 RID: 180576 RVA: 0x00C60A14 File Offset: 0x00C5EC14
 		private void RefreshGroupName()
 		{
 			if (this.ChangeKeyModeData == null)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), changeKeyModeGroupData.GroupName, Array.Empty<object>());
 		}
 
-		// Token: 0x06037218 RID: 225816 RVA: 0x00D1164C File Offset: 0x00D0F84C
+		// Token: 0x0602C161 RID: 180577 RVA: 0x00C60A64 File Offset: 0x00C5EC64
 		private void RefreshDefaultSelected()
 		{
 			ChangeModeRowView selectedRowView = this.SelectedRowView;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			}
 		}
 
-		// Token: 0x06037219 RID: 225817 RVA: 0x00D116C0 File Offset: 0x00D0F8C0
+		// Token: 0x0602C162 RID: 180578 RVA: 0x00C60AD8 File Offset: 0x00C5ECD8
 		public void RefreshLeftAndRightButtonEnable()
 		{
 			if (this.ChangeKeyModeData == null)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			}
 		}
 
-		// Token: 0x0603721A RID: 225818 RVA: 0x00D1172C File Offset: 0x00D0F92C
+		// Token: 0x0602C163 RID: 180579 RVA: 0x00C60B44 File Offset: 0x00C5ED44
 		public void RefreshRowView()
 		{
 			if (this.ChangeKeyModeData == null)
@@ -158,13 +158,13 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			}
 		}
 
-		// Token: 0x0603721B RID: 225819 RVA: 0x00D11794 File Offset: 0x00D0F994
+		// Token: 0x0602C164 RID: 180580 RVA: 0x00C60BAC File Offset: 0x00C5EDAC
 		private void OnCloseButtonClicked()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603721C RID: 225820 RVA: 0x00D1179D File Offset: 0x00D0F99D
+		// Token: 0x0602C165 RID: 180581 RVA: 0x00C60BB5 File Offset: 0x00C5EDB5
 		private void OnConfirmButtonClicked()
 		{
 			ChangeModeRowView selectedRowView = this.SelectedRowView;
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603721D RID: 225821 RVA: 0x00D117DC File Offset: 0x00D0F9DC
+		// Token: 0x0602C166 RID: 180582 RVA: 0x00C60BF4 File Offset: 0x00C5EDF4
 		private void OnLeftButtonClicked()
 		{
 			int num = Math.Max(this.GroupIndex - 1, 0);
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			this.Refresh();
 		}
 
-		// Token: 0x0603721E RID: 225822 RVA: 0x00D11810 File Offset: 0x00D0FA10
+		// Token: 0x0602C167 RID: 180583 RVA: 0x00C60C28 File Offset: 0x00C5EE28
 		private void OnRightButtonClicked()
 		{
 			int maxGroupIndex = this.ChangeKeyModeData.GetMaxGroupIndex();
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			this.Refresh();
 		}
 
-		// Token: 0x0603721F RID: 225823 RVA: 0x00D11850 File Offset: 0x00D0FA50
+		// Token: 0x0602C168 RID: 180584 RVA: 0x00C60C68 File Offset: 0x00C5EE68
 		private void OnSelectedRowView(ChangeModeRowView changeModeRowView)
 		{
 			ChangeKeyModeRowData changeKeyModeRowData = changeModeRowView.ChangeKeyModeRowData;
@@ -222,28 +222,28 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			this.EditRowIndexMap[this.GroupIndex] = changeKeyModeRowData.Index;
 		}
 
-		// Token: 0x0401D163 RID: 119139
+		// Token: 0x04017BFC RID: 97276
 		[Nullable(2)]
 		private ChangeKeyModeData ChangeKeyModeData;
 
-		// Token: 0x0401D164 RID: 119140
+		// Token: 0x04017BFD RID: 97277
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401D165 RID: 119141
+		// Token: 0x04017BFE RID: 97278
 		private int GroupIndex;
 
-		// Token: 0x0401D166 RID: 119142
+		// Token: 0x04017BFF RID: 97279
 		private readonly Dictionary<int, int> EditRowIndexMap = new Dictionary<int, int>();
 
-		// Token: 0x0401D167 RID: 119143
+		// Token: 0x04017C00 RID: 97280
 		private readonly List<ChangeModeRowView> ChangeModeRowViewList = new List<ChangeModeRowView>();
 
-		// Token: 0x0401D168 RID: 119144
+		// Token: 0x04017C01 RID: 97281
 		[Nullable(2)]
 		private ChangeModeRowView SelectedRowView;
 
-		// Token: 0x0401D169 RID: 119145
+		// Token: 0x04017C02 RID: 97282
 		[Nullable(new byte[]
 		{
 			2,
@@ -251,35 +251,35 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 		})]
 		private Action<Dictionary<int, int>> OnConfirmCallback;
 
-		// Token: 0x0200B6D4 RID: 46804
+		// Token: 0x0200A10C RID: 41228
 		[NullableContext(0)]
 		public class EChildType
 		{
-			// Token: 0x04037636 RID: 226870
+			// Token: 0x0403208B RID: 204939
 			public const int CaptionItem = 0;
 
-			// Token: 0x04037637 RID: 226871
+			// Token: 0x0403208C RID: 204940
 			public const int GroupNameText = 1;
 
-			// Token: 0x04037638 RID: 226872
+			// Token: 0x0403208D RID: 204941
 			public const int LeftButton = 2;
 
-			// Token: 0x04037639 RID: 226873
+			// Token: 0x0403208E RID: 204942
 			public const int LeftButtonInteractionGroup = 3;
 
-			// Token: 0x0403763A RID: 226874
+			// Token: 0x0403208F RID: 204943
 			public const int RightButton = 4;
 
-			// Token: 0x0403763B RID: 226875
+			// Token: 0x04032090 RID: 204944
 			public const int RightButtonInteractionGroup = 5;
 
-			// Token: 0x0403763C RID: 226876
+			// Token: 0x04032091 RID: 204945
 			public const int RowVerticalItem = 6;
 
-			// Token: 0x0403763D RID: 226877
+			// Token: 0x04032092 RID: 204946
 			public const int ChangeModeRowItem = 7;
 
-			// Token: 0x0403763E RID: 226878
+			// Token: 0x04032093 RID: 204947
 			public const int ConfirmButton = 8;
 		}
 	}

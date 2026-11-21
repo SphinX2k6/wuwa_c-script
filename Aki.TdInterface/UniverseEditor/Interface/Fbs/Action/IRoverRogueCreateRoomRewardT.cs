@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F0A RID: 28426
+	// Token: 0x02007691 RID: 30353
 	public class IRoverRogueCreateRoomRewardT
 	{
-		// Token: 0x1700D35E RID: 54110
-		// (get) Token: 0x06032398 RID: 205720 RVA: 0x006C9252 File Offset: 0x006C7452
-		// (set) Token: 0x06032399 RID: 205721 RVA: 0x006C925A File Offset: 0x006C745A
+		// Token: 0x1700DEBA RID: 57018
+		// (get) Token: 0x060353F0 RID: 218096 RVA: 0x007251BA File Offset: 0x007233BA
+		// (set) Token: 0x060353F1 RID: 218097 RVA: 0x007251C2 File Offset: 0x007233C2
 		public int RewardType { get; set; }
 
-		// Token: 0x0603239A RID: 205722 RVA: 0x006C9263 File Offset: 0x006C7463
+		// Token: 0x060353F2 RID: 218098 RVA: 0x007251CB File Offset: 0x007233CB
 		public IRoverRogueCreateRoomRewardT()
 		{
 			this.RewardType = 0;

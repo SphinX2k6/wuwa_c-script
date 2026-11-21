@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060F5 RID: 24821
+	// Token: 0x02005073 RID: 20595
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,13 +17,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeBlessingSuitItem : GridProxyAbstract<IRoverlikeBlessingSuitData>
 	{
-		// Token: 0x0603EC51 RID: 257105 RVA: 0x00F296B9 File Offset: 0x00F278B9
+		// Token: 0x06033913 RID: 211219 RVA: 0x00E704CD File Offset: 0x00E6E6CD
 		public void BindOnSuitClick(Action<IRoverlikeBlessingSuitData> callback)
 		{
 			this.OnSuitClick = callback;
 		}
 
-		// Token: 0x0603EC52 RID: 257106 RVA: 0x00F296C4 File Offset: 0x00F278C4
+		// Token: 0x06033914 RID: 211220 RVA: 0x00E704D8 File Offset: 0x00E6E6D8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603EC53 RID: 257107 RVA: 0x00F297F0 File Offset: 0x00F279F0
+		// Token: 0x06033915 RID: 211221 RVA: 0x00E70604 File Offset: 0x00E6E804
 		public override void Refresh(IRoverlikeBlessingSuitData data, bool isSelected, int gridIndex)
 		{
 			this.CurrentData = data;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshSkillLayout(data.BlessingIdList);
 		}
 
-		// Token: 0x0603EC54 RID: 257108 RVA: 0x00F298B9 File Offset: 0x00F27AB9
+		// Token: 0x06033916 RID: 211222 RVA: 0x00E706CD File Offset: 0x00E6E8CD
 		private void OnBtnRoleClick()
 		{
 			if (this.CurrentData != null)
@@ -84,31 +84,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EC55 RID: 257109 RVA: 0x00F298D9 File Offset: 0x00F27AD9
+		// Token: 0x06033917 RID: 211223 RVA: 0x00E706ED File Offset: 0x00E6E8ED
 		private RoverlikeBlessingSuitBlessItem CreateSkillItem()
 		{
 			return new RoverlikeBlessingSuitBlessItem();
 		}
 
-		// Token: 0x0603EC56 RID: 257110 RVA: 0x00F298E0 File Offset: 0x00F27AE0
+		// Token: 0x06033918 RID: 211224 RVA: 0x00E706F4 File Offset: 0x00E6E8F4
 		private void RefreshSkillLayout(List<int> blessingIdList)
 		{
 			this.SkillLayout.RefreshByData(blessingIdList, null, false);
 		}
 
-		// Token: 0x0603EC57 RID: 257111 RVA: 0x00F298F0 File Offset: 0x00F27AF0
+		// Token: 0x06033919 RID: 211225 RVA: 0x00E70704 File Offset: 0x00E6E904
 		protected override void OnStart()
 		{
 			this.SkillLayout = new GenericLayout<RoverlikeBlessingSuitBlessItem, int>(base.GetHorizontalLayout(3), new Func<RoverlikeBlessingSuitBlessItem>(this.CreateSkillItem), null, false, true);
 		}
 
-		// Token: 0x0603EC58 RID: 257112 RVA: 0x00F29913 File Offset: 0x00F27B13
+		// Token: 0x0603391A RID: 211226 RVA: 0x00E70727 File Offset: 0x00E6E927
 		protected override void OnBeforeDestroy()
 		{
 			this.OnSuitClick = null;
 		}
 
-		// Token: 0x04020CCC RID: 134348
+		// Token: 0x0401B5F9 RID: 112121
 		[Nullable(new byte[]
 		{
 			2,
@@ -116,11 +116,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeBlessingSuitBlessItem, int> SkillLayout;
 
-		// Token: 0x04020CCD RID: 134349
+		// Token: 0x0401B5FA RID: 112122
 		[Nullable(2)]
 		private IRoverlikeBlessingSuitData CurrentData;
 
-		// Token: 0x04020CCE RID: 134350
+		// Token: 0x0401B5FB RID: 112123
 		[Nullable(new byte[]
 		{
 			2,
@@ -128,26 +128,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private Action<IRoverlikeBlessingSuitData> OnSuitClick;
 
-		// Token: 0x0200C352 RID: 50002
+		// Token: 0x0200AD3A RID: 44346
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403AF36 RID: 241462
+			// Token: 0x0403589B RID: 219291
 			public const int BtnRole = 0;
 
-			// Token: 0x0403AF37 RID: 241463
+			// Token: 0x0403589C RID: 219292
 			public const int TxtRoleName = 1;
 
-			// Token: 0x0403AF38 RID: 241464
+			// Token: 0x0403589D RID: 219293
 			public const int TexRole = 2;
 
-			// Token: 0x0403AF39 RID: 241465
+			// Token: 0x0403589E RID: 219294
 			public const int SkillLayout = 3;
 
-			// Token: 0x0403AF3A RID: 241466
+			// Token: 0x0403589F RID: 219295
 			public const int SkillItem = 4;
 
-			// Token: 0x0403AF3B RID: 241467
+			// Token: 0x040358A0 RID: 219296
 			public const int TexIconType = 5;
 		}
 	}

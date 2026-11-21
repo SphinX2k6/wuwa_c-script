@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C52 RID: 3154
+	// Token: 0x02000D2B RID: 3371
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IContinuesVariableSpeedSplinePoint : IBaseSplinePointType
 	{
-		// Token: 0x06004840 RID: 18496 RVA: 0x000B59D1 File Offset: 0x000B3BD1
-		[NullableContext(1)]
+		// Token: 0x06004CC5 RID: 19653 RVA: 0x000BFFC5 File Offset: 0x000BE1C5
+		[NullableContext(0)]
 		public static IContinuesVariableSpeedSplinePoint Create(IContinuesVariableSpeedSplinePoint? instance)
 		{
 			if (instance == null)
@@ -25,12 +25,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001559 RID: 5465
-		// (get) Token: 0x06004841 RID: 18497 RVA: 0x000B59F0 File Offset: 0x000B3BF0
-		[Nullable(1)]
+		// Token: 0x1700166A RID: 5738
+		// (get) Token: 0x06004CC6 RID: 19654 RVA: 0x000BFFE4 File Offset: 0x000BE1E4
+		[Nullable(0)]
 		public override VectorInfo Position
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._PositionInited)
@@ -43,12 +43,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700155A RID: 5466
-		// (get) Token: 0x06004842 RID: 18498 RVA: 0x000B5A24 File Offset: 0x000B3C24
-		[Nullable(1)]
+		// Token: 0x1700166B RID: 5739
+		// (get) Token: 0x06004CC7 RID: 19655 RVA: 0x000C0018 File Offset: 0x000BE218
+		[Nullable(0)]
 		public override VectorInfo ArriveTangent
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ArriveTangentInited)
@@ -61,12 +61,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700155B RID: 5467
-		// (get) Token: 0x06004843 RID: 18499 RVA: 0x000B5A58 File Offset: 0x000B3C58
-		[Nullable(1)]
+		// Token: 0x1700166C RID: 5740
+		// (get) Token: 0x06004CC8 RID: 19656 RVA: 0x000C004C File Offset: 0x000BE24C
+		[Nullable(0)]
 		public override VectorInfo LeaveTangent
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._LeaveTangentInited)
@@ -79,8 +79,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700155C RID: 5468
-		// (get) Token: 0x06004844 RID: 18500 RVA: 0x000B5A8C File Offset: 0x000B3C8C
+		// Token: 0x1700166D RID: 5741
+		// (get) Token: 0x06004CC9 RID: 19657 RVA: 0x000C0080 File Offset: 0x000BE280
 		public override ESplineLine LineType
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700155D RID: 5469
-		// (get) Token: 0x06004845 RID: 18501 RVA: 0x000B5A99 File Offset: 0x000B3C99
+		// Token: 0x1700166E RID: 5742
+		// (get) Token: 0x06004CCA RID: 19658 RVA: 0x000C008D File Offset: 0x000BE28D
 		public override VectorInfo Rotation
 		{
 			get
@@ -105,8 +105,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700155E RID: 5470
-		// (get) Token: 0x06004846 RID: 18502 RVA: 0x000B5ACD File Offset: 0x000B3CCD
+		// Token: 0x1700166F RID: 5743
+		// (get) Token: 0x06004CCB RID: 19659 RVA: 0x000C00C1 File Offset: 0x000BE2C1
 		public virtual ITimePathConfig IntervalTimePathConfig
 		{
 			get
@@ -121,19 +121,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700155F RID: 5471
-		// (get) Token: 0x06004847 RID: 18503 RVA: 0x000B5B04 File Offset: 0x000B3D04
+		// Token: 0x17001670 RID: 5744
+		// (get) Token: 0x06004CCC RID: 19660 RVA: 0x000C00F8 File Offset: 0x000BE2F8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IConditionAction> ConditionActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -156,8 +156,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001560 RID: 5472
-		// (get) Token: 0x06004848 RID: 18504 RVA: 0x000B5B80 File Offset: 0x000B3D80
+		// Token: 0x17001671 RID: 5745
+		// (get) Token: 0x06004CCD RID: 19661 RVA: 0x000C0174 File Offset: 0x000BE374
 		public virtual float? KeepSpeed
 		{
 			get
@@ -170,48 +170,48 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002921 RID: 10529
+		// Token: 0x04002B82 RID: 11138
 		private IContinuesVariableSpeedSplinePoint Instance;
 
-		// Token: 0x04002922 RID: 10530
+		// Token: 0x04002B83 RID: 11139
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04002923 RID: 10531
+		// Token: 0x04002B84 RID: 11140
 		private bool _PositionInited;
 
-		// Token: 0x04002924 RID: 10532
+		// Token: 0x04002B85 RID: 11141
 		private VectorInfo _ArriveTangentCache;
 
-		// Token: 0x04002925 RID: 10533
+		// Token: 0x04002B86 RID: 11142
 		private bool _ArriveTangentInited;
 
-		// Token: 0x04002926 RID: 10534
+		// Token: 0x04002B87 RID: 11143
 		private VectorInfo _LeaveTangentCache;
 
-		// Token: 0x04002927 RID: 10535
+		// Token: 0x04002B88 RID: 11144
 		private bool _LeaveTangentInited;
 
-		// Token: 0x04002928 RID: 10536
+		// Token: 0x04002B89 RID: 11145
 		private VectorInfo _RotationCache;
 
-		// Token: 0x04002929 RID: 10537
+		// Token: 0x04002B8A RID: 11146
 		private bool _RotationInited;
 
-		// Token: 0x0400292A RID: 10538
+		// Token: 0x04002B8B RID: 11147
 		private ITimePathConfig _IntervalTimePathConfigCache;
 
-		// Token: 0x0400292B RID: 10539
+		// Token: 0x04002B8C RID: 11148
 		private bool _IntervalTimePathConfigInited;
 
-		// Token: 0x0400292C RID: 10540
+		// Token: 0x04002B8D RID: 11149
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IConditionAction> _ConditionActionsCache;
 
-		// Token: 0x0400292D RID: 10541
+		// Token: 0x04002B8E RID: 11150
 		private bool _ConditionActionsInited;
 	}
 }

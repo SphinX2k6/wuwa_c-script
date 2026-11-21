@@ -4,7 +4,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 
 namespace CSharpScript.Game.Module.HandBook
 {
-	// Token: 0x02005957 RID: 22871
+	// Token: 0x02004930 RID: 18736
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,7 +13,7 @@ namespace CSharpScript.Game.Module.HandBook
 	})]
 	public class HandBookRoleMediumItemGird : LoopScrollMediumItemGrid<RoleDataBase>
 	{
-		// Token: 0x0603A070 RID: 237680 RVA: 0x00DCB054 File Offset: 0x00DC9254
+		// Token: 0x0602EF93 RID: 192403 RVA: 0x00D1A308 File Offset: 0x00D18508
 		protected override void OnRefresh(RoleDataBase data, bool isSelected, int gridIndex)
 		{
 			bool flag = false;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.HandBook
 			this.SetSelected(isSelected, false);
 		}
 
-		// Token: 0x0603A071 RID: 237681 RVA: 0x00DCB11C File Offset: 0x00DC931C
+		// Token: 0x0602EF94 RID: 192404 RVA: 0x00D1A3D0 File Offset: 0x00D185D0
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.HandBook
 			}
 		}
 
-		// Token: 0x0603A072 RID: 237682 RVA: 0x00DCB160 File Offset: 0x00DC9360
+		// Token: 0x0602EF95 RID: 192405 RVA: 0x00D1A414 File Offset: 0x00D18614
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, true);

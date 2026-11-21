@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029D5 RID: 10709
+// Token: 0x02001F50 RID: 8016
 public class ShipTowerStageItemBase : UiPanelBase
 {
-	// Token: 0x06016310 RID: 90896 RVA: 0x0059CEF4 File Offset: 0x0059B0F4
+	// Token: 0x06013D16 RID: 81174 RVA: 0x005C7EAC File Offset: 0x005C60AC
 	[NullableContext(1)]
 	public UniTask Init(UUIItem item, int data)
 	{
@@ -23,7 +23,7 @@ public class ShipTowerStageItemBase : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016311 RID: 90897 RVA: 0x0059CF48 File Offset: 0x0059B148
+	// Token: 0x06013D17 RID: 81175 RVA: 0x005C7F00 File Offset: 0x005C6100
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class ShipTowerStageItemBase : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016312 RID: 90898 RVA: 0x0059CFB0 File Offset: 0x0059B1B0
+	// Token: 0x06013D18 RID: 81176 RVA: 0x005C7F68 File Offset: 0x005C6168
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerStageItemBase.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -48,13 +48,13 @@ public class ShipTowerStageItemBase : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016313 RID: 90899 RVA: 0x0059CFF3 File Offset: 0x0059B1F3
+	// Token: 0x06013D19 RID: 81177 RVA: 0x005C7FAB File Offset: 0x005C61AB
 	public void UpdateData()
 	{
 		this.StageItem.UpdateData();
 	}
 
-	// Token: 0x06016314 RID: 90900 RVA: 0x0059D000 File Offset: 0x0059B200
+	// Token: 0x06013D1A RID: 81178 RVA: 0x005C7FB8 File Offset: 0x005C61B8
 	protected void OnClickBtnEnter()
 	{
 		ShipTowerStageData stageDataById = ShipTowerModel.Instance.GetStageDataById(this.ItemDataId);
@@ -65,7 +65,7 @@ public class ShipTowerStageItemBase : UiPanelBase
 		stageDataById.OpenViewStageDesc();
 	}
 
-	// Token: 0x06016315 RID: 90901 RVA: 0x0059D01C File Offset: 0x0059B21C
+	// Token: 0x06013D1B RID: 81179 RVA: 0x005C7FD4 File Offset: 0x005C61D4
 	public void SetClickEnable(bool enable)
 	{
 		UUIButtonComponent button = base.GetButton(1);
@@ -76,20 +76,20 @@ public class ShipTowerStageItemBase : UiPanelBase
 		button.SetSelfInteractive(enable);
 	}
 
-	// Token: 0x0400A534 RID: 42292
+	// Token: 0x0400A91E RID: 43294
 	[Nullable(2)]
 	protected ShipTowerStageItem StageItem;
 
-	// Token: 0x0400A535 RID: 42293
+	// Token: 0x0400A91F RID: 43295
 	protected int ItemDataId;
 
-	// Token: 0x02009000 RID: 36864
+	// Token: 0x02008247 RID: 33351
 	private static class EChildTypeBase
 	{
-		// Token: 0x0402EA10 RID: 190992
+		// Token: 0x0402A108 RID: 172296
 		public const int ItemBase = 0;
 
-		// Token: 0x0402EA11 RID: 190993
+		// Token: 0x0402A109 RID: 172297
 		public const int BtnEnter = 1;
 	}
 }

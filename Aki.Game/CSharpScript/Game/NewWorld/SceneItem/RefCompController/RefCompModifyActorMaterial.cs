@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 {
-	// Token: 0x020071B8 RID: 29112
+	// Token: 0x0200626D RID: 25197
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RefCompModifyActorMaterial : RefCompControllerBase
 	{
-		// Token: 0x060473E8 RID: 291816 RVA: 0x0121D5C6 File Offset: 0x0121B7C6
+		// Token: 0x0603CCE3 RID: 249059 RVA: 0x011774D2 File Offset: 0x011756D2
 		public RefCompModifyActorMaterial(Entity entity, long creatureDataId, int pbDataId) : base(entity, creatureDataId, pbDataId)
 		{
 		}
 
-		// Token: 0x17009DBA RID: 40378
-		// (get) Token: 0x060473E9 RID: 291817 RVA: 0x0121D5D1 File Offset: 0x0121B7D1
+		// Token: 0x1700730A RID: 29450
+		// (get) Token: 0x0603CCE4 RID: 249060 RVA: 0x011774DD File Offset: 0x011756DD
 		public override RefCompDefine.ERefCompControllerType Type
 		{
 			get
@@ -32,8 +32,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x17009DBB RID: 40379
-		// (get) Token: 0x060473EA RID: 291818 RVA: 0x0121D5D4 File Offset: 0x0121B7D4
+		// Token: 0x1700730B RID: 29451
+		// (get) Token: 0x0603CCE5 RID: 249061 RVA: 0x011774E0 File Offset: 0x011756E0
 		private Dictionary<int, List<RefCompModifyActorMaterial.ActorMaterialParamBySplineProgress>> ActorMaterialParamBySplineProgressMap
 		{
 			get
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473EB RID: 291819 RVA: 0x0121D5EF File Offset: 0x0121B7EF
+		// Token: 0x0603CCE6 RID: 249062 RVA: 0x011774FB File Offset: 0x011756FB
 		public override void OnEnd()
 		{
 			base.OnEnd();
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473EC RID: 291820 RVA: 0x0121D628 File Offset: 0x0121B828
+		// Token: 0x0603CCE7 RID: 249063 RVA: 0x01177534 File Offset: 0x01175734
 		protected override void OnTick(float delta)
 		{
 			base.OnTick(delta);
 		}
 
-		// Token: 0x060473ED RID: 291821 RVA: 0x0121D634 File Offset: 0x0121B834
+		// Token: 0x0603CCE8 RID: 249064 RVA: 0x01177540 File Offset: 0x01175740
 		private unsafe void TickActorMaterialParamBySplineProgress(float delta)
 		{
 			if (this.ActorMaterialParamBySplineProgressMapInternal != null && this.ActorMaterialParamBySplineProgressMapInternal.Count > 0)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473EE RID: 291822 RVA: 0x0121D824 File Offset: 0x0121BA24
+		// Token: 0x0603CCE9 RID: 249065 RVA: 0x01177730 File Offset: 0x01175930
 		public void HandleActorMaterial(ModifyActorMaterial inConfig)
 		{
 			EModifyActorMaterialType type = inConfig.Config.Type;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.ChangeMPC(changeActorMPC.MpcData);
 		}
 
-		// Token: 0x060473EF RID: 291823 RVA: 0x0121D87C File Offset: 0x0121BA7C
+		// Token: 0x0603CCEA RID: 249066 RVA: 0x01177788 File Offset: 0x01175988
 		public bool HandleModifyActorMaterialParamBySplineProgress(ModifyActorMaterialParamBySplineProgress inConfig)
 		{
 			EModifyActorMaterialParamBySplineProgressType type = inConfig.Config.Type;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return this.EnterModifyActorMaterialParamBySplineProgress(inConfig.Config as IModifyActorMaterialParamBySplineProgressEnterSpline, RefCompModifyActorMaterial.ESplineProgress.PlayerLocation);
 		}
 
-		// Token: 0x060473F0 RID: 291824 RVA: 0x0121D8C4 File Offset: 0x0121BAC4
+		// Token: 0x0603CCEB RID: 249067 RVA: 0x011777D0 File Offset: 0x011759D0
 		private unsafe bool EnterModifyActorMaterialParamBySplineProgress(IModifyActorMaterialParamBySplineProgressEnterSpline config, RefCompModifyActorMaterial.ESplineProgress splineProgressType = RefCompModifyActorMaterial.ESplineProgress.PlayerLocation)
 		{
 			int? num = null;
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return true;
 		}
 
-		// Token: 0x060473F1 RID: 291825 RVA: 0x0121DD14 File Offset: 0x0121BF14
+		// Token: 0x0603CCEC RID: 249068 RVA: 0x01177C20 File Offset: 0x01175E20
 		private bool ExitModifyActorMaterialParamBySplineProgress(IModifyActorMaterialParamBySplineProgressExitSpline config)
 		{
 			if (this.ActorMaterialParamBySplineProgressMapInternal != null && this.ActorMaterialParamBySplineProgressMapInternal.Remove(config.SplineEntityId) && this.SplineProgressTimerHandle != null && this.ActorMaterialParamBySplineProgressMapInternal.Count == 0)
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return false;
 		}
 
-		// Token: 0x060473F2 RID: 291826 RVA: 0x0121DD6C File Offset: 0x0121BF6C
+		// Token: 0x0603CCED RID: 249069 RVA: 0x01177C78 File Offset: 0x01175E78
 		public static float GetSplineProgressValue(USplineComponent splineComp, RefCompModifyActorMaterial.ESplineProgress splineProgressType)
 		{
 			if (splineComp == null || !splineComp.IsValid())
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return distanceAlongSplineAtSplineInputKey / splineLength;
 		}
 
-		// Token: 0x060473F3 RID: 291827 RVA: 0x0121DEC8 File Offset: 0x0121C0C8
+		// Token: 0x0603CCEE RID: 249070 RVA: 0x01177DD4 File Offset: 0x01175FD4
 		private void ChangeMaterial(string inMaterialPath, List<IActorRef> inRefs)
 		{
 			if (string.IsNullOrEmpty(inMaterialPath) || inMaterialPath == "None")
@@ -410,7 +410,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x060473F4 RID: 291828 RVA: 0x0121DF88 File Offset: 0x0121C188
+		// Token: 0x0603CCEF RID: 249071 RVA: 0x01177E94 File Offset: 0x01176094
 		private void ChangeMPC(string inPath)
 		{
 			if (string.IsNullOrEmpty(inPath) || inPath == "None")
@@ -428,7 +428,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x060473F5 RID: 291829 RVA: 0x0121DFF8 File Offset: 0x0121C1F8
+		// Token: 0x0603CCF0 RID: 249072 RVA: 0x01177F04 File Offset: 0x01176104
 		public void ResetActorMaterialClearMap()
 		{
 			Dictionary<string, bool> actorMaterialClearMap = this.ActorMaterialClearMap;
@@ -439,7 +439,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			actorMaterialClearMap.Clear();
 		}
 
-		// Token: 0x0402577D RID: 153469
+		// Token: 0x040203EC RID: 132076
 		[Nullable(new byte[]
 		{
 			2,
@@ -448,7 +448,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 		})]
 		private Dictionary<string, List<int>> ActorMaterialRefMap;
 
-		// Token: 0x0402577E RID: 153470
+		// Token: 0x040203ED RID: 132077
 		[Nullable(new byte[]
 		{
 			2,
@@ -456,7 +456,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 		})]
 		private Dictionary<string, bool> ActorMaterialClearMap;
 
-		// Token: 0x0402577F RID: 153471
+		// Token: 0x040203EE RID: 132078
 		[Nullable(new byte[]
 		{
 			2,
@@ -465,48 +465,48 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 		})]
 		private Dictionary<int, List<RefCompModifyActorMaterial.ActorMaterialParamBySplineProgress>> ActorMaterialParamBySplineProgressMapInternal;
 
-		// Token: 0x04025780 RID: 153472
+		// Token: 0x040203EF RID: 132079
 		[Nullable(2)]
 		private TimerHandle SplineProgressTimerHandle;
 
-		// Token: 0x0200CF18 RID: 53016
+		// Token: 0x0200BAAD RID: 47789
 		[Nullable(0)]
 		[RequiredMember]
 		private class ActorMaterialParamBySplineProgress
 		{
-			// Token: 0x06052036 RID: 335926 RVA: 0x01649485 File Offset: 0x01647685
+			// Token: 0x060487E0 RID: 296928 RVA: 0x0161B5AD File Offset: 0x016197AD
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public ActorMaterialParamBySplineProgress()
 			{
 			}
 
-			// Token: 0x0403E470 RID: 255088
+			// Token: 0x04039795 RID: 235413
 			[RequiredMember]
 			public RefCompModifyActorMaterial.ESplineProgress SplineProgressType;
 
-			// Token: 0x0403E471 RID: 255089
+			// Token: 0x04039796 RID: 235414
 			[RequiredMember]
 			public USplineComponent SplineComp;
 
-			// Token: 0x0403E472 RID: 255090
+			// Token: 0x04039797 RID: 235415
 			[RequiredMember]
 			public UMaterialInstanceDynamic TargetMaterialInstanceDynamic;
 
-			// Token: 0x0403E473 RID: 255091
+			// Token: 0x04039798 RID: 235416
 			[RequiredMember]
 			public FName MaterialParamName;
 		}
 
-		// Token: 0x0200CF19 RID: 53017
+		// Token: 0x0200BAAE RID: 47790
 		[NullableContext(0)]
 		public enum ESplineProgress
 		{
-			// Token: 0x0403E475 RID: 255093
+			// Token: 0x0403979A RID: 235418
 			PlayerLocation,
-			// Token: 0x0403E476 RID: 255094
+			// Token: 0x0403979B RID: 235419
 			VehicleLocation,
-			// Token: 0x0403E477 RID: 255095
+			// Token: 0x0403979C RID: 235420
 			SpecificEntityLocation
 		}
 	}

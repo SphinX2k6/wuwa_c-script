@@ -6,18 +6,18 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.RecallQuest.Model
 {
-	// Token: 0x02004F20 RID: 20256
+	// Token: 0x02003EE9 RID: 16105
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RecallInventoryDataProxy : InventoryDataProxy
 	{
-		// Token: 0x06033EFE RID: 212734 RVA: 0x00C2C6E9 File Offset: 0x00C2A8E9
+		// Token: 0x06028D69 RID: 167273 RVA: 0x00B75D5D File Offset: 0x00B73F5D
 		public RecallInventoryDataProxy(RecallInventoryData data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x06033EFF RID: 212735 RVA: 0x00C2C6F8 File Offset: 0x00C2A8F8
+		// Token: 0x06028D6A RID: 167274 RVA: 0x00B75D6C File Offset: 0x00B73F6C
 		public override List<ItemMainType> GetOpenIdMainTypeConfig()
 		{
 			HashSet<InventoryDefine.EItemMainTypeId> availableMainTypes = this.Data.GetAvailableMainTypes();
@@ -34,37 +34,37 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return list;
 		}
 
-		// Token: 0x06033F00 RID: 212736 RVA: 0x00C2C7A4 File Offset: 0x00C2A9A4
+		// Token: 0x06028D6B RID: 167275 RVA: 0x00B75E18 File Offset: 0x00B74018
 		public override HashSet<ItemDataBase> GetItemDataBaseByMainType(InventoryDefine.EItemMainTypeId mainType)
 		{
 			return this.Data.GetItemDataBaseSetByMainType(mainType);
 		}
 
-		// Token: 0x06033F01 RID: 212737 RVA: 0x00C2C7B2 File Offset: 0x00C2A9B2
+		// Token: 0x06028D6C RID: 167276 RVA: 0x00B75E26 File Offset: 0x00B74026
 		public override int GetInventoryItemGridCountByMainType(InventoryDefine.EItemMainTypeId mainType)
 		{
 			return 0;
 		}
 
-		// Token: 0x06033F02 RID: 212738 RVA: 0x00C2C7B5 File Offset: 0x00C2A9B5
+		// Token: 0x06028D6D RID: 167277 RVA: 0x00B75E29 File Offset: 0x00B74029
 		public override bool SupportShowCurrency()
 		{
 			return false;
 		}
 
-		// Token: 0x06033F03 RID: 212739 RVA: 0x00C2C7B8 File Offset: 0x00C2A9B8
+		// Token: 0x06028D6E RID: 167278 RVA: 0x00B75E2C File Offset: 0x00B7402C
 		public override int GetItemCountByConfigId(int itemConfigId, int uniqueId)
 		{
 			return this.Data.GetCount(itemConfigId);
 		}
 
-		// Token: 0x06033F04 RID: 212740 RVA: 0x00C2C7C6 File Offset: 0x00C2A9C6
+		// Token: 0x06028D6F RID: 167279 RVA: 0x00B75E3A File Offset: 0x00B7403A
 		public override int GetCommonItemCount(int configId, int uniqueId)
 		{
 			return this.Data.GetCount(configId);
 		}
 
-		// Token: 0x0401B98C RID: 113036
+		// Token: 0x0401635F RID: 90975
 		private readonly RecallInventoryData Data;
 	}
 }

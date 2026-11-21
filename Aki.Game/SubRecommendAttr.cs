@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020024B2 RID: 9394
+// Token: 0x02001999 RID: 6553
 [NullableContext(1)]
 [Nullable(0)]
 internal class SubRecommendAttr : UiPanelBase
 {
-	// Token: 0x06012DB5 RID: 77237 RVA: 0x004A8098 File Offset: 0x004A6298
+	// Token: 0x06010275 RID: 66165 RVA: 0x004B5C4C File Offset: 0x004B3E4C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,19 +25,19 @@ internal class SubRecommendAttr : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012DB6 RID: 77238 RVA: 0x004A8115 File Offset: 0x004A6315
+	// Token: 0x06010276 RID: 66166 RVA: 0x004B5CC9 File Offset: 0x004B3EC9
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<AttrContent, RecommendItemData>(base.GetVerticalLayout(0), new Func<AttrContent>(this.InitItem), null, false, true);
 	}
 
-	// Token: 0x06012DB7 RID: 77239 RVA: 0x004A8138 File Offset: 0x004A6338
+	// Token: 0x06010277 RID: 66167 RVA: 0x004B5CEC File Offset: 0x004B3EEC
 	private AttrContent InitItem()
 	{
 		return new AttrContent();
 	}
 
-	// Token: 0x06012DB8 RID: 77240 RVA: 0x004A813F File Offset: 0x004A633F
+	// Token: 0x06010278 RID: 66168 RVA: 0x004B5CF3 File Offset: 0x004B3EF3
 	private void OnClickToggleAll(EToggleState state)
 	{
 		Action<EToggleState> onToggleAllCallback = this.OnToggleAllCallback;
@@ -48,7 +48,7 @@ internal class SubRecommendAttr : UiPanelBase
 		onToggleAllCallback(state);
 	}
 
-	// Token: 0x06012DB9 RID: 77241 RVA: 0x004A8152 File Offset: 0x004A6352
+	// Token: 0x06010279 RID: 66169 RVA: 0x004B5D06 File Offset: 0x004B3F06
 	public void SetToggleAllState(bool isAllSelected)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(2);
@@ -59,7 +59,7 @@ internal class SubRecommendAttr : UiPanelBase
 		extendToggle.SetToggleState(isAllSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06012DBA RID: 77242 RVA: 0x004A8170 File Offset: 0x004A6370
+	// Token: 0x0601027A RID: 66170 RVA: 0x004B5D24 File Offset: 0x004B3F24
 	public void Refresh(List<RecommendItemData> data)
 	{
 		GenericLayout<AttrContent, RecommendItemData> layout = this.Layout;
@@ -70,7 +70,7 @@ internal class SubRecommendAttr : UiPanelBase
 		layout.RefreshByData(data, null, false);
 	}
 
-	// Token: 0x04008E07 RID: 36359
+	// Token: 0x04008F51 RID: 36689
 	[Nullable(new byte[]
 	{
 		2,
@@ -79,7 +79,7 @@ internal class SubRecommendAttr : UiPanelBase
 	})]
 	private GenericLayout<AttrContent, RecommendItemData> Layout;
 
-	// Token: 0x04008E08 RID: 36360
+	// Token: 0x04008F52 RID: 36690
 	[Nullable(2)]
 	public Action<EToggleState> OnToggleAllCallback;
 }

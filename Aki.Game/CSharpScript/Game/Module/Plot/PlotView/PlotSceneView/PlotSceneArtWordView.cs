@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 {
-	// Token: 0x02005076 RID: 20598
+	// Token: 0x02004046 RID: 16454
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotSceneArtWordView : SceneUiView
 	{
-		// Token: 0x06034C45 RID: 216133 RVA: 0x00C7C4C0 File Offset: 0x00C7A6C0
+		// Token: 0x06029B3A RID: 170810 RVA: 0x00BC9898 File Offset: 0x00BC7A98
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034C46 RID: 216134 RVA: 0x00C7C58C File Offset: 0x00C7A78C
+		// Token: 0x06029B3B RID: 170811 RVA: 0x00BC9964 File Offset: 0x00BC7B64
 		protected override UniTask OnBeforeShowAsyncImplementImplement()
 		{
 			PlotSceneArtWordView.<OnBeforeShowAsyncImplementImplement>d__10 <OnBeforeShowAsyncImplementImplement>d__;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 			return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034C47 RID: 216135 RVA: 0x00C7C5D0 File Offset: 0x00C7A7D0
+		// Token: 0x06029B3C RID: 170812 RVA: 0x00BC99A8 File Offset: 0x00BC7BA8
 		protected override void OnBeforeShow()
 		{
 			AActor rootActor = base.GetRootActor();
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 			}
 		}
 
-		// Token: 0x06034C48 RID: 216136 RVA: 0x00C7C660 File Offset: 0x00C7A860
+		// Token: 0x06029B3D RID: 170813 RVA: 0x00BC9A38 File Offset: 0x00BC7C38
 		protected override void OnAfterShow()
 		{
 			UUIItem uuiitem = this.MultiLine ? base.GetItem(2) : base.GetItem(1);
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 			textSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x06034C49 RID: 216137 RVA: 0x00C7C6B4 File Offset: 0x00C7A8B4
+		// Token: 0x06029B3E RID: 170814 RVA: 0x00BC9A8C File Offset: 0x00BC7C8C
 		protected override UniTask OnBeforeHideAsync()
 		{
 			PlotSceneArtWordView.<OnBeforeHideAsync>d__13 <OnBeforeHideAsync>d__;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034C4A RID: 216138 RVA: 0x00C7C6F8 File Offset: 0x00C7A8F8
+		// Token: 0x06029B3F RID: 170815 RVA: 0x00BC9AD0 File Offset: 0x00BC7CD0
 		protected override void OnBeforeDestroy()
 		{
 			this.SpaceMarkWatcher.Stop();
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 			this.TextSequencePlayer = null;
 		}
 
-		// Token: 0x06034C4B RID: 216139 RVA: 0x00C7C778 File Offset: 0x00C7A978
+		// Token: 0x06029B40 RID: 170816 RVA: 0x00BC9B50 File Offset: 0x00BC7D50
 		private UniTask InitText()
 		{
 			PlotSceneArtWordView.<InitText>d__15 <InitText>d__;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 			return <InitText>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034C4C RID: 216140 RVA: 0x00C7C7BC File Offset: 0x00C7A9BC
+		// Token: 0x06029B41 RID: 170817 RVA: 0x00BC9B94 File Offset: 0x00BC7D94
 		[NullableContext(2)]
 		private void ScaleTemplateWidth(UUIItem template, ref float? baseWidth, float scale)
 		{
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 			template.SetWidth(baseWidth.Value * scale);
 		}
 
-		// Token: 0x06034C4D RID: 216141 RVA: 0x00C7C800 File Offset: 0x00C7AA00
+		// Token: 0x06029B42 RID: 170818 RVA: 0x00BC9BD8 File Offset: 0x00BC7DD8
 		private void ApplyLayoutSpacing(UUIItem layout, float scale)
 		{
 			AActor owner = layout.GetOwner();
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 			uuihorizontalLayout.SetSpacing(this.BaseLayoutSpacing.Value * scale);
 		}
 
-		// Token: 0x06034C4E RID: 216142 RVA: 0x00C7C894 File Offset: 0x00C7AA94
+		// Token: 0x06029B43 RID: 170819 RVA: 0x00BC9C6C File Offset: 0x00BC7E6C
 		private UniTask ClearLinePanelsAsync()
 		{
 			PlotSceneArtWordView.<ClearLinePanelsAsync>d__18 <ClearLinePanelsAsync>d__;
@@ -165,44 +165,44 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 			return <ClearLinePanelsAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401C1E2 RID: 115170
+		// Token: 0x04016C0D RID: 93197
 		[Nullable(2)]
 		private LevelSequencePlayer TextSequencePlayer;
 
-		// Token: 0x0401C1E3 RID: 115171
+		// Token: 0x04016C0E RID: 93198
 		private readonly List<PlotSceneArtWordTextPanel> LinePanels = new List<PlotSceneArtWordTextPanel>();
 
-		// Token: 0x0401C1E4 RID: 115172
+		// Token: 0x04016C0F RID: 93199
 		private bool MultiLine;
 
-		// Token: 0x0401C1E5 RID: 115173
+		// Token: 0x04016C10 RID: 93200
 		private FloatingSubtitle3D? Config;
 
-		// Token: 0x0401C1E6 RID: 115174
+		// Token: 0x04016C11 RID: 93201
 		private float? BaseLayoutSpacing;
 
-		// Token: 0x0401C1E7 RID: 115175
+		// Token: 0x04016C12 RID: 93202
 		private float? BaseTemplateWidthA;
 
-		// Token: 0x0401C1E8 RID: 115176
+		// Token: 0x04016C13 RID: 93203
 		private float? BaseTemplateWidthB;
 
-		// Token: 0x0401C1E9 RID: 115177
+		// Token: 0x04016C14 RID: 93204
 		private readonly FloatingSubtitleSpaceMarkWatcher SpaceMarkWatcher = new FloatingSubtitleSpaceMarkWatcher();
 
-		// Token: 0x0200B213 RID: 45587
+		// Token: 0x02009C4C RID: 40012
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04035FDB RID: 221147
+			// Token: 0x04030A2F RID: 199215
 			TxtName,
-			// Token: 0x04035FDC RID: 221148
+			// Token: 0x04030A30 RID: 199216
 			PnlName,
-			// Token: 0x04035FDD RID: 221149
+			// Token: 0x04030A31 RID: 199217
 			PnlLayout,
-			// Token: 0x04035FDE RID: 221150
+			// Token: 0x04030A32 RID: 199218
 			PnlNameA,
-			// Token: 0x04035FDF RID: 221151
+			// Token: 0x04030A33 RID: 199219
 			PnlNameB
 		}
 	}

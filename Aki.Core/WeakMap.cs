@@ -2,12 +2,12 @@
 using System.Runtime;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000063 RID: 99
+// Token: 0x02000065 RID: 101
 [NullableContext(1)]
 [Nullable(0)]
 public class WeakMap<TKey, [Nullable(2)] TValue> where TKey : class
 {
-	// Token: 0x060002EB RID: 747 RVA: 0x00010205 File Offset: 0x0000E405
+	// Token: 0x06000326 RID: 806 RVA: 0x00010FED File Offset: 0x0000F1ED
 	public WeakMap()
 	{
 		this.Buckets = new int[8];
@@ -15,7 +15,7 @@ public class WeakMap<TKey, [Nullable(2)] TValue> where TKey : class
 		Array.Fill<int>(this.Buckets, -1);
 	}
 
-	// Token: 0x060002EC RID: 748 RVA: 0x00010238 File Offset: 0x0000E438
+	// Token: 0x06000327 RID: 807 RVA: 0x00011020 File Offset: 0x0000F220
 	protected override void Finalize()
 	{
 		try
@@ -34,7 +34,7 @@ public class WeakMap<TKey, [Nullable(2)] TValue> where TKey : class
 		}
 	}
 
-	// Token: 0x060002ED RID: 749 RVA: 0x000102A0 File Offset: 0x0000E4A0
+	// Token: 0x06000328 RID: 808 RVA: 0x00011088 File Offset: 0x0000F288
 	public void Set(TKey key, TValue value)
 	{
 		int hashCode = RuntimeHelpers.GetHashCode(key);
@@ -57,7 +57,7 @@ public class WeakMap<TKey, [Nullable(2)] TValue> where TKey : class
 		this.Buckets[num3] = num;
 	}
 
-	// Token: 0x060002EE RID: 750 RVA: 0x00010378 File Offset: 0x0000E578
+	// Token: 0x06000329 RID: 809 RVA: 0x00011160 File Offset: 0x0000F360
 	public bool TryGetValue(TKey key, out TValue value)
 	{
 		int hashCode = RuntimeHelpers.GetHashCode(key);
@@ -80,14 +80,14 @@ public class WeakMap<TKey, [Nullable(2)] TValue> where TKey : class
 		return false;
 	}
 
-	// Token: 0x060002EF RID: 751 RVA: 0x0001040C File Offset: 0x0000E60C
+	// Token: 0x0600032A RID: 810 RVA: 0x000111F4 File Offset: 0x0000F3F4
 	public bool Has(TKey key)
 	{
 		TValue tvalue;
 		return this.TryGetValue(key, out tvalue);
 	}
 
-	// Token: 0x060002F0 RID: 752 RVA: 0x00010424 File Offset: 0x0000E624
+	// Token: 0x0600032B RID: 811 RVA: 0x0001120C File Offset: 0x0000F40C
 	public bool Remove(TKey key)
 	{
 		int hashCode = RuntimeHelpers.GetHashCode(key);
@@ -120,7 +120,7 @@ public class WeakMap<TKey, [Nullable(2)] TValue> where TKey : class
 		return false;
 	}
 
-	// Token: 0x060002F1 RID: 753 RVA: 0x000104FC File Offset: 0x0000E6FC
+	// Token: 0x0600032C RID: 812 RVA: 0x000112E4 File Offset: 0x0000F4E4
 	public void Clear()
 	{
 		for (int i = 0; i < this.Count; i++)
@@ -138,13 +138,13 @@ public class WeakMap<TKey, [Nullable(2)] TValue> where TKey : class
 		this.FreeCount = 0;
 	}
 
-	// Token: 0x060002F2 RID: 754 RVA: 0x0001056C File Offset: 0x0000E76C
+	// Token: 0x0600032D RID: 813 RVA: 0x00011354 File Offset: 0x0000F554
 	public void TrimExcess()
 	{
 		this.Reindex(this.Entries.Length);
 	}
 
-	// Token: 0x060002F3 RID: 755 RVA: 0x0001057C File Offset: 0x0000E77C
+	// Token: 0x0600032E RID: 814 RVA: 0x00011364 File Offset: 0x0000F564
 	private int TakeSlot()
 	{
 		if (this.FreeList < 0 && this.Count >= this.Entries.Length)
@@ -167,7 +167,7 @@ public class WeakMap<TKey, [Nullable(2)] TValue> where TKey : class
 		return count;
 	}
 
-	// Token: 0x060002F4 RID: 756 RVA: 0x0001061C File Offset: 0x0000E81C
+	// Token: 0x0600032F RID: 815 RVA: 0x00011404 File Offset: 0x0000F604
 	private void Reindex(int capacity)
 	{
 		if (capacity != this.Entries.Length)
@@ -201,13 +201,13 @@ public class WeakMap<TKey, [Nullable(2)] TValue> where TKey : class
 		}
 	}
 
-	// Token: 0x04000215 RID: 533
+	// Token: 0x0400022B RID: 555
 	private const int InitialCapacity = 8;
 
-	// Token: 0x04000216 RID: 534
+	// Token: 0x0400022C RID: 556
 	private int[] Buckets;
 
-	// Token: 0x04000217 RID: 535
+	// Token: 0x0400022D RID: 557
 	[Nullable(new byte[]
 	{
 		1,
@@ -217,26 +217,26 @@ public class WeakMap<TKey, [Nullable(2)] TValue> where TKey : class
 	})]
 	private WeakMap<TKey, TValue>.Entry[] Entries;
 
-	// Token: 0x04000218 RID: 536
+	// Token: 0x0400022E RID: 558
 	private int Count;
 
-	// Token: 0x04000219 RID: 537
+	// Token: 0x0400022F RID: 559
 	private int FreeList = -1;
 
-	// Token: 0x0400021A RID: 538
+	// Token: 0x04000230 RID: 560
 	private int FreeCount;
 
-	// Token: 0x02000198 RID: 408
+	// Token: 0x020001A2 RID: 418
 	[NullableContext(0)]
 	private struct Entry
 	{
-		// Token: 0x040007C1 RID: 1985
+		// Token: 0x040007E1 RID: 2017
 		public DependentHandle Handle;
 
-		// Token: 0x040007C2 RID: 1986
+		// Token: 0x040007E2 RID: 2018
 		public int HashCode;
 
-		// Token: 0x040007C3 RID: 1987
+		// Token: 0x040007E3 RID: 2019
 		public int Next;
 	}
 }

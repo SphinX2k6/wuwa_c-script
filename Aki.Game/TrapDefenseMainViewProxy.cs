@@ -14,13 +14,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D49 RID: 7497
+// Token: 0x0200120B RID: 4619
 [NullableContext(1)]
 [Nullable(0)]
 public class TrapDefenseMainViewProxy : GameMainViewProxy
 {
-	// Token: 0x17001225 RID: 4645
-	// (get) Token: 0x0600E34E RID: 58190 RVA: 0x003566F8 File Offset: 0x003548F8
+	// Token: 0x1700124F RID: 4687
+	// (get) Token: 0x0600B76B RID: 46955 RVA: 0x00362128 File Offset: 0x00360328
 	protected override EBattleUiCommonChildVisibleReason? BattleUiCommonChildVisibleReason
 	{
 		get
@@ -29,14 +29,14 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600E34F RID: 58191 RVA: 0x00356700 File Offset: 0x00354900
+	// Token: 0x0600B76C RID: 46956 RVA: 0x00362130 File Offset: 0x00360330
 	public TrapDefenseMainViewProxy()
 	{
 		this.InterfaceLogic = new TrapDefenseInterfaceLogic(this);
 		this.TouchUiEditGroup = new ECommonTouchUiEditGroup?(ECommonTouchUiEditGroup.TrapDefenseMain);
 	}
 
-	// Token: 0x0600E350 RID: 58192 RVA: 0x00356720 File Offset: 0x00354920
+	// Token: 0x0600B76D RID: 46957 RVA: 0x00362150 File Offset: 0x00360350
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TrapDefenseMainViewProxy.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -47,13 +47,13 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E351 RID: 58193 RVA: 0x00356763 File Offset: 0x00354963
+	// Token: 0x0600B76E RID: 46958 RVA: 0x00362193 File Offset: 0x00360393
 	protected override void OnStart()
 	{
 		this.WarningDistance = (float)TrapDefenseConfig.Instance.GetTrapDefenseWarningDistance();
 	}
 
-	// Token: 0x0600E352 RID: 58194 RVA: 0x00356778 File Offset: 0x00354978
+	// Token: 0x0600B76F RID: 46959 RVA: 0x003621A8 File Offset: 0x003603A8
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.TowerDefenseEventStepUpdate, new Action<ETowerDefenseEventProcessStatus>(this.OnStepUpdate));
@@ -66,7 +66,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		EventSystem.Instance.Add(EEventName.TrapDefenseOnSlotUpdate, new Action(this.OnSlotInfoUpdate));
 	}
 
-	// Token: 0x0600E353 RID: 58195 RVA: 0x00356868 File Offset: 0x00354A68
+	// Token: 0x0600B770 RID: 46960 RVA: 0x00362298 File Offset: 0x00360498
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.TowerDefenseEventStepUpdate, new Action<ETowerDefenseEventProcessStatus>(this.OnStepUpdate));
@@ -79,7 +79,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		EventSystem.Instance.Remove(EEventName.TrapDefenseOnSlotUpdate, new Action(this.OnSlotInfoUpdate));
 	}
 
-	// Token: 0x0600E354 RID: 58196 RVA: 0x00356958 File Offset: 0x00354B58
+	// Token: 0x0600B771 RID: 46961 RVA: 0x00362388 File Offset: 0x00360588
 	protected override void OnBeforeShow(bool isFirstShow)
 	{
 		if (isFirstShow)
@@ -101,14 +101,14 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600E355 RID: 58197 RVA: 0x003569A8 File Offset: 0x00354BA8
+	// Token: 0x0600B772 RID: 46962 RVA: 0x003623D8 File Offset: 0x003605D8
 	protected override void OnTick(float delta)
 	{
 		FKSC_MiniMapContext[] entityPositions = KuroSimpleCombatController.Instance.GetEntityPositions();
 		this.UpdateHpPanelWarning(entityPositions);
 	}
 
-	// Token: 0x0600E356 RID: 58198 RVA: 0x003569C8 File Offset: 0x00354BC8
+	// Token: 0x0600B773 RID: 46963 RVA: 0x003623F8 File Offset: 0x003605F8
 	private void UpdateHpPanelWarning([Nullable(new byte[]
 	{
 		2,
@@ -130,7 +130,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		this.CampsiteHpPanel.SetWarningItemActive(warningItemActive);
 	}
 
-	// Token: 0x0600E357 RID: 58199 RVA: 0x00356A10 File Offset: 0x00354C10
+	// Token: 0x0600B774 RID: 46964 RVA: 0x00362440 File Offset: 0x00360640
 	protected override void OnRouletteViewVisibleChangedInner(bool visible)
 	{
 		if (Info.Instance.IsInTouch())
@@ -149,7 +149,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600E358 RID: 58200 RVA: 0x00356A68 File Offset: 0x00354C68
+	// Token: 0x0600B775 RID: 46965 RVA: 0x00362498 File Offset: 0x00360698
 	private UniTask CreateMiniMap()
 	{
 		TrapDefenseMainViewProxy.<CreateMiniMap>d__24 <CreateMiniMap>d__;
@@ -160,7 +160,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		return <CreateMiniMap>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E359 RID: 58201 RVA: 0x00356AAC File Offset: 0x00354CAC
+	// Token: 0x0600B776 RID: 46966 RVA: 0x003624DC File Offset: 0x003606DC
 	private UniTask CreateMissionPanel()
 	{
 		TrapDefenseMainViewProxy.<CreateMissionPanel>d__25 <CreateMissionPanel>d__;
@@ -171,7 +171,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		return <CreateMissionPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E35A RID: 58202 RVA: 0x00356AF0 File Offset: 0x00354CF0
+	// Token: 0x0600B777 RID: 46967 RVA: 0x00362520 File Offset: 0x00360720
 	private UniTask CreateMachineSelectPanel()
 	{
 		TrapDefenseMainViewProxy.<CreateMachineSelectPanel>d__26 <CreateMachineSelectPanel>d__;
@@ -182,7 +182,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		return <CreateMachineSelectPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E35B RID: 58203 RVA: 0x00356B34 File Offset: 0x00354D34
+	// Token: 0x0600B778 RID: 46968 RVA: 0x00362564 File Offset: 0x00360764
 	private UniTask CreatePreparationPanel()
 	{
 		TrapDefenseMainViewProxy.<CreatePreparationPanel>d__27 <CreatePreparationPanel>d__;
@@ -193,7 +193,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		return <CreatePreparationPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E35C RID: 58204 RVA: 0x00356B78 File Offset: 0x00354D78
+	// Token: 0x0600B779 RID: 46969 RVA: 0x003625A8 File Offset: 0x003607A8
 	private UniTask CreateFunctionalPanel()
 	{
 		TrapDefenseMainViewProxy.<CreateFunctionalPanel>d__28 <CreateFunctionalPanel>d__;
@@ -204,7 +204,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		return <CreateFunctionalPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E35D RID: 58205 RVA: 0x00356BBC File Offset: 0x00354DBC
+	// Token: 0x0600B77A RID: 46970 RVA: 0x003625EC File Offset: 0x003607EC
 	private UniTask CreateCampsiteHpPanel()
 	{
 		TrapDefenseMainViewProxy.<CreateCampsiteHpPanel>d__29 <CreateCampsiteHpPanel>d__;
@@ -215,7 +215,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		return <CreateCampsiteHpPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E35E RID: 58206 RVA: 0x00356C00 File Offset: 0x00354E00
+	// Token: 0x0600B77B RID: 46971 RVA: 0x00362630 File Offset: 0x00360830
 	private UniTask CreateBuildTipsPanel()
 	{
 		TrapDefenseMainViewProxy.<CreateBuildTipsPanel>d__30 <CreateBuildTipsPanel>d__;
@@ -226,7 +226,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		return <CreateBuildTipsPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E35F RID: 58207 RVA: 0x00356C44 File Offset: 0x00354E44
+	// Token: 0x0600B77C RID: 46972 RVA: 0x00362674 File Offset: 0x00360874
 	private UniTask CreateComboPanel()
 	{
 		TrapDefenseMainViewProxy.<CreateComboPanel>d__31 <CreateComboPanel>d__;
@@ -237,7 +237,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		return <CreateComboPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E360 RID: 58208 RVA: 0x00356C88 File Offset: 0x00354E88
+	// Token: 0x0600B77D RID: 46973 RVA: 0x003626B8 File Offset: 0x003608B8
 	private UniTask CreateMobileSkillPanel()
 	{
 		TrapDefenseMainViewProxy.<CreateMobileSkillPanel>d__32 <CreateMobileSkillPanel>d__;
@@ -248,7 +248,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		return <CreateMobileSkillPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E361 RID: 58209 RVA: 0x00356CCC File Offset: 0x00354ECC
+	// Token: 0x0600B77E RID: 46974 RVA: 0x003626FC File Offset: 0x003608FC
 	private UniTask CreateDesktopSkillPanel()
 	{
 		TrapDefenseMainViewProxy.<CreateDesktopSkillPanel>d__33 <CreateDesktopSkillPanel>d__;
@@ -259,7 +259,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		return <CreateDesktopSkillPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E362 RID: 58210 RVA: 0x00356D10 File Offset: 0x00354F10
+	// Token: 0x0600B77F RID: 46975 RVA: 0x00362740 File Offset: 0x00360940
 	private UniTask CreateMobileSkillPanelInner()
 	{
 		TrapDefenseMainViewProxy.<CreateMobileSkillPanelInner>d__34 <CreateMobileSkillPanelInner>d__;
@@ -270,7 +270,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		return <CreateMobileSkillPanelInner>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E363 RID: 58211 RVA: 0x00356D54 File Offset: 0x00354F54
+	// Token: 0x0600B780 RID: 46976 RVA: 0x00362784 File Offset: 0x00360984
 	private UniTask CreateDesktopSkillPanelInner()
 	{
 		TrapDefenseMainViewProxy.<CreateDesktopSkillPanelInner>d__35 <CreateDesktopSkillPanelInner>d__;
@@ -281,7 +281,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		return <CreateDesktopSkillPanelInner>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E364 RID: 58212 RVA: 0x00356D98 File Offset: 0x00354F98
+	// Token: 0x0600B781 RID: 46977 RVA: 0x003627C8 File Offset: 0x003609C8
 	private UniTask CreateMachineTipsPanel()
 	{
 		TrapDefenseMainViewProxy.<CreateMachineTipsPanel>d__36 <CreateMachineTipsPanel>d__;
@@ -292,7 +292,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		return <CreateMachineTipsPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E365 RID: 58213 RVA: 0x00356DDB File Offset: 0x00354FDB
+	// Token: 0x0600B782 RID: 46978 RVA: 0x0036280B File Offset: 0x00360A0B
 	private void ShowShopOpenTips()
 	{
 		if (TrapDefenseModel.Instance.BattleData.IsShopOpen)
@@ -306,7 +306,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		this.PreparationPanel.ShowBattleChildViewPanel();
 	}
 
-	// Token: 0x0600E366 RID: 58214 RVA: 0x00356E10 File Offset: 0x00355010
+	// Token: 0x0600B783 RID: 46979 RVA: 0x00362840 File Offset: 0x00360A40
 	private void ShowMonsterEnhancedTips()
 	{
 		TrapDefenseWave? currentBatchData = TrapDefenseModel.Instance.GetCurrentBatchData();
@@ -324,7 +324,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600E367 RID: 58215 RVA: 0x00356EA0 File Offset: 0x003550A0
+	// Token: 0x0600B784 RID: 46980 RVA: 0x003628D0 File Offset: 0x00360AD0
 	private void HideMonsterEnhancedTips()
 	{
 		TrapDefenseWave? currentBatchData = TrapDefenseModel.Instance.GetCurrentBatchData();
@@ -334,7 +334,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600E368 RID: 58216 RVA: 0x00356EE4 File Offset: 0x003550E4
+	// Token: 0x0600B785 RID: 46981 RVA: 0x00362914 File Offset: 0x00360B14
 	private void OnStepUpdate(ETowerDefenseEventProcessStatus status)
 	{
 		if (status == ETowerDefenseEventProcessStatus.Ready)
@@ -356,7 +356,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		this.MachineSelectPanel.OnTowerDefenseStepUpdate(status);
 	}
 
-	// Token: 0x0600E369 RID: 58217 RVA: 0x00356F4A File Offset: 0x0035514A
+	// Token: 0x0600B786 RID: 46982 RVA: 0x0036297A File Offset: 0x00360B7A
 	private void OnNotifyType(ETrapDefenseBuildTipsType type)
 	{
 		this.BuildTipsPanel.SetTipsType(type);
@@ -368,7 +368,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		mobileSkillPanel.RefreshButtonByTipsType(type);
 	}
 
-	// Token: 0x0600E36A RID: 58218 RVA: 0x00356F69 File Offset: 0x00355169
+	// Token: 0x0600B787 RID: 46983 RVA: 0x00362999 File Offset: 0x00360B99
 	private void OnOrganChange(int? recyclePrice)
 	{
 		if (recyclePrice != null)
@@ -383,19 +383,19 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600E36B RID: 58219 RVA: 0x00356F9D File Offset: 0x0035519D
+	// Token: 0x0600B788 RID: 46984 RVA: 0x003629CD File Offset: 0x00360BCD
 	private void OnComboNumChange(int num)
 	{
 		this.ComboPanel.RefreshComboNum(num);
 	}
 
-	// Token: 0x0600E36C RID: 58220 RVA: 0x00356FAB File Offset: 0x003551AB
+	// Token: 0x0600B789 RID: 46985 RVA: 0x003629DB File Offset: 0x00360BDB
 	private void OnTrapDefenseActivityDataUpdate()
 	{
 		this.FunctionalPanel.UpdateBdSumState();
 	}
 
-	// Token: 0x0600E36D RID: 58221 RVA: 0x00356FB8 File Offset: 0x003551B8
+	// Token: 0x0600B78A RID: 46986 RVA: 0x003629E8 File Offset: 0x00360BE8
 	private void OnTrapFollowerSkillCd(int proxyId, float _)
 	{
 		TrapDefenseMachineSelectPanel machineSelectPanel = this.MachineSelectPanel;
@@ -411,7 +411,7 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		mobileSkillPanel.RefreshMachineCdState();
 	}
 
-	// Token: 0x0600E36E RID: 58222 RVA: 0x00356FDC File Offset: 0x003551DC
+	// Token: 0x0600B78B RID: 46987 RVA: 0x00362A0C File Offset: 0x00360C0C
 	private void OnPlotViewChange(EUiViewName viewName, bool isShow)
 	{
 		if (viewName == EUiViewName.PlotViewHUD)
@@ -420,56 +420,56 @@ public class TrapDefenseMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600E36F RID: 58223 RVA: 0x00356FF7 File Offset: 0x003551F7
+	// Token: 0x0600B78C RID: 46988 RVA: 0x00362A27 File Offset: 0x00360C27
 	private void OnSlotInfoUpdate()
 	{
 		this.MachineSelectPanel.RefreshSlotState();
 	}
 
-	// Token: 0x0600E370 RID: 58224 RVA: 0x00357004 File Offset: 0x00355204
+	// Token: 0x0600B78D RID: 46989 RVA: 0x00362A34 File Offset: 0x00360C34
 	public void RefreshSelectPanel()
 	{
 		this.MachineSelectPanel.RefreshMachineState();
 	}
 
-	// Token: 0x040068F4 RID: 26868
+	// Token: 0x040069D3 RID: 27091
 	private readonly TrapDefenseInterfaceLogic InterfaceLogic;
 
-	// Token: 0x040068F5 RID: 26869
+	// Token: 0x040069D4 RID: 27092
 	public TrapDefenseMiniMapPanel MiniMap;
 
-	// Token: 0x040068F6 RID: 26870
+	// Token: 0x040069D5 RID: 27093
 	public TrapDefenseMissionPanel MissionPanel;
 
-	// Token: 0x040068F7 RID: 26871
+	// Token: 0x040069D6 RID: 27094
 	public TrapDefenseMachineSelectPanel MachineSelectPanel;
 
-	// Token: 0x040068F8 RID: 26872
+	// Token: 0x040069D7 RID: 27095
 	public TrapDefensePreparationPanel PreparationPanel;
 
-	// Token: 0x040068F9 RID: 26873
+	// Token: 0x040069D8 RID: 27096
 	public TrapDefenseFunctionalPanel FunctionalPanel;
 
-	// Token: 0x040068FA RID: 26874
+	// Token: 0x040069D9 RID: 27097
 	public TrapDefenseCampsiteHpPanel CampsiteHpPanel;
 
-	// Token: 0x040068FB RID: 26875
+	// Token: 0x040069DA RID: 27098
 	public TrapDefenseBuildTipsPanel BuildTipsPanel;
 
-	// Token: 0x040068FC RID: 26876
+	// Token: 0x040069DB RID: 27099
 	public TrapDefenseComboPanel ComboPanel;
 
-	// Token: 0x040068FD RID: 26877
+	// Token: 0x040069DC RID: 27100
 	[Nullable(2)]
 	public TrapDefenseMobileSkillPanel MobileSkillPanel;
 
-	// Token: 0x040068FE RID: 26878
+	// Token: 0x040069DD RID: 27101
 	[Nullable(2)]
 	public TrapDefenseDesktopSkillPanel DesktopSkillPanel;
 
-	// Token: 0x040068FF RID: 26879
+	// Token: 0x040069DE RID: 27102
 	public TrapDefenseMachineTipsPanel MachineTipsPanel;
 
-	// Token: 0x04006900 RID: 26880
+	// Token: 0x040069DF RID: 27103
 	private float WarningDistance;
 }

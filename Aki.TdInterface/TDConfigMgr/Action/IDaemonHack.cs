@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001962 RID: 6498
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AED RID: 6893
 	public class IDaemonHack : IUiGame
 	{
-		// Token: 0x06008B35 RID: 35637 RVA: 0x00147774 File Offset: 0x00145974
+		// Token: 0x0600926B RID: 37483 RVA: 0x001571B0 File Offset: 0x001553B0
 		private IDaemonHack_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008B36 RID: 35638 RVA: 0x001477AC File Offset: 0x001459AC
+		// Token: 0x0600926C RID: 37484 RVA: 0x001571E8 File Offset: 0x001553E8
 		public static IDaemonHack Create([Nullable(2)] IDaemonHack instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B37 RID: 35639 RVA: 0x001477BF File Offset: 0x001459BF
+		// Token: 0x0600926D RID: 37485 RVA: 0x001571FB File Offset: 0x001553FB
 		public static IDaemonHack CreateFromSetValue([Nullable(2)] IDaemonHack_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B38 RID: 35640 RVA: 0x001477D2 File Offset: 0x001459D2
+		// Token: 0x0600926E RID: 37486 RVA: 0x0015720E File Offset: 0x0015540E
 		public new IDaemonHack_SetValue ToSetValue()
 		{
 			return new IDaemonHack_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CDC RID: 11484
-		// (get) Token: 0x06008B39 RID: 35641 RVA: 0x001477FD File Offset: 0x001459FD
-		// (set) Token: 0x06008B3A RID: 35642 RVA: 0x00147828 File Offset: 0x00145A28
+		// Token: 0x17002EDE RID: 11998
+		// (get) Token: 0x0600926F RID: 37487 RVA: 0x00157239 File Offset: 0x00155439
+		// (set) Token: 0x06009270 RID: 37488 RVA: 0x00157264 File Offset: 0x00155464
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CDD RID: 11485
-		// (get) Token: 0x06008B3B RID: 35643 RVA: 0x00147836 File Offset: 0x00145A36
-		// (set) Token: 0x06008B3C RID: 35644 RVA: 0x0014785D File Offset: 0x00145A5D
+		// Token: 0x17002EDF RID: 11999
+		// (get) Token: 0x06009271 RID: 37489 RVA: 0x00157272 File Offset: 0x00155472
+		// (set) Token: 0x06009272 RID: 37490 RVA: 0x00157299 File Offset: 0x00155499
 		public virtual List<int> Ids
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CDE RID: 11486
-		// (get) Token: 0x06008B3D RID: 35645 RVA: 0x0014786C File Offset: 0x00145A6C
-		// (set) Token: 0x06008B3E RID: 35646 RVA: 0x001478A6 File Offset: 0x00145AA6
+		// Token: 0x17002EE0 RID: 12000
+		// (get) Token: 0x06009273 RID: 37491 RVA: 0x001572A8 File Offset: 0x001554A8
+		// (set) Token: 0x06009274 RID: 37492 RVA: 0x001572E2 File Offset: 0x001554E2
 		public virtual bool? FinishOnClose
 		{
 			get
@@ -133,11 +131,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040056E5 RID: 22245
+		// Token: 0x04005B39 RID: 23353
 		[Nullable(2)]
 		protected new IDaemonHack FbInstance;
 
-		// Token: 0x040056E6 RID: 22246
+		// Token: 0x04005B3A RID: 23354
 		[Nullable(2)]
 		protected new IDaemonHack_SetValue PocoInterface;
 	}

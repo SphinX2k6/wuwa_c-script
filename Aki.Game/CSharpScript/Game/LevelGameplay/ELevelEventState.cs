@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x020069AF RID: 27055
+	// Token: 0x02005B0B RID: 23307
 	public enum ELevelEventState
 	{
-		// Token: 0x040231F0 RID: 143856
+		// Token: 0x0401E3DF RID: 123871
 		Running,
-		// Token: 0x040231F1 RID: 143857
+		// Token: 0x0401E3E0 RID: 123872
 		Success,
-		// Token: 0x040231F2 RID: 143858
+		// Token: 0x0401E3E1 RID: 123873
 		Failure,
-		// Token: 0x040231F3 RID: 143859
+		// Token: 0x0401E3E2 RID: 123874
 		Error
 	}
 }

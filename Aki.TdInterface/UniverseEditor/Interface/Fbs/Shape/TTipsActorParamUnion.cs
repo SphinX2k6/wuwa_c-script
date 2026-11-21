@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C7D RID: 15485
+	// Token: 0x0200408F RID: 16527
 	public class TTipsActorParamUnion
 	{
-		// Token: 0x17006AC2 RID: 27330
-		// (get) Token: 0x060156F3 RID: 87795 RVA: 0x00318FFC File Offset: 0x003171FC
-		// (set) Token: 0x060156F4 RID: 87796 RVA: 0x00319004 File Offset: 0x00317204
+		// Token: 0x1700707C RID: 28796
+		// (get) Token: 0x06016C27 RID: 93223 RVA: 0x003401E8 File Offset: 0x0033E3E8
+		// (set) Token: 0x06016C28 RID: 93224 RVA: 0x003401F0 File Offset: 0x0033E3F0
 		public TTipsActorParam Type { get; set; }
 
-		// Token: 0x17006AC3 RID: 27331
-		// (get) Token: 0x060156F5 RID: 87797 RVA: 0x0031900D File Offset: 0x0031720D
-		// (set) Token: 0x060156F6 RID: 87798 RVA: 0x00319015 File Offset: 0x00317215
+		// Token: 0x1700707D RID: 28797
+		// (get) Token: 0x06016C29 RID: 93225 RVA: 0x003401F9 File Offset: 0x0033E3F9
+		// (set) Token: 0x06016C2A RID: 93226 RVA: 0x00340201 File Offset: 0x0033E401
 		public object Value { get; set; }
 
-		// Token: 0x060156F7 RID: 87799 RVA: 0x0031901E File Offset: 0x0031721E
+		// Token: 0x06016C2B RID: 93227 RVA: 0x0034020A File Offset: 0x0033E40A
 		public TTipsActorParamUnion()
 		{
 			this.Type = TTipsActorParam.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060156F8 RID: 87800 RVA: 0x00319034 File Offset: 0x00317234
+		// Token: 0x06016C2C RID: 93228 RVA: 0x00340220 File Offset: 0x0033E420
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060156F9 RID: 87801 RVA: 0x00319046 File Offset: 0x00317246
+		// Token: 0x06016C2D RID: 93229 RVA: 0x00340232 File Offset: 0x0033E432
 		public IBottomAlignSemiBoxTipsActorT AsIBottomAlignSemiBoxTipsActor()
 		{
 			return this.As<IBottomAlignSemiBoxTipsActorT>();
 		}
 
-		// Token: 0x060156FA RID: 87802 RVA: 0x0031904E File Offset: 0x0031724E
+		// Token: 0x06016C2E RID: 93230 RVA: 0x0034023A File Offset: 0x0033E43A
 		public static TTipsActorParamUnion FromIBottomAlignSemiBoxTipsActor(IBottomAlignSemiBoxTipsActorT _ibottomalignsemiboxtipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x060156FB RID: 87803 RVA: 0x00319063 File Offset: 0x00317263
+		// Token: 0x06016C2F RID: 93231 RVA: 0x0034024F File Offset: 0x0033E44F
 		public IBoxTipsActorT AsIBoxTipsActor()
 		{
 			return this.As<IBoxTipsActorT>();
 		}
 
-		// Token: 0x060156FC RID: 87804 RVA: 0x0031906B File Offset: 0x0031726B
+		// Token: 0x06016C30 RID: 93232 RVA: 0x00340257 File Offset: 0x0033E457
 		public static TTipsActorParamUnion FromIBoxTipsActor(IBoxTipsActorT _iboxtipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x060156FD RID: 87805 RVA: 0x00319080 File Offset: 0x00317280
+		// Token: 0x06016C31 RID: 93233 RVA: 0x0034026C File Offset: 0x0033E46C
 		public IConeTipsActorT AsIConeTipsActor()
 		{
 			return this.As<IConeTipsActorT>();
 		}
 
-		// Token: 0x060156FE RID: 87806 RVA: 0x00319088 File Offset: 0x00317288
+		// Token: 0x06016C32 RID: 93234 RVA: 0x00340274 File Offset: 0x0033E474
 		public static TTipsActorParamUnion FromIConeTipsActor(IConeTipsActorT _iconetipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x060156FF RID: 87807 RVA: 0x0031909D File Offset: 0x0031729D
+		// Token: 0x06016C33 RID: 93235 RVA: 0x00340289 File Offset: 0x0033E489
 		public ICylinderSectorTipsActorT AsICylinderSectorTipsActor()
 		{
 			return this.As<ICylinderSectorTipsActorT>();
 		}
 
-		// Token: 0x06015700 RID: 87808 RVA: 0x003190A5 File Offset: 0x003172A5
+		// Token: 0x06016C34 RID: 93236 RVA: 0x00340291 File Offset: 0x0033E491
 		public static TTipsActorParamUnion FromICylinderSectorTipsActor(ICylinderSectorTipsActorT _icylindersectortipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015701 RID: 87809 RVA: 0x003190BA File Offset: 0x003172BA
+		// Token: 0x06016C35 RID: 93237 RVA: 0x003402A6 File Offset: 0x0033E4A6
 		public ICylinderTipsActorT AsICylinderTipsActor()
 		{
 			return this.As<ICylinderTipsActorT>();
 		}
 
-		// Token: 0x06015702 RID: 87810 RVA: 0x003190C2 File Offset: 0x003172C2
+		// Token: 0x06016C36 RID: 93238 RVA: 0x003402AE File Offset: 0x0033E4AE
 		public static TTipsActorParamUnion FromICylinderTipsActor(ICylinderTipsActorT _icylindertipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015703 RID: 87811 RVA: 0x003190D7 File Offset: 0x003172D7
+		// Token: 0x06016C37 RID: 93239 RVA: 0x003402C3 File Offset: 0x0033E4C3
 		public IGraphLineTipsActorT AsIGraphLineTipsActor()
 		{
 			return this.As<IGraphLineTipsActorT>();
 		}
 
-		// Token: 0x06015704 RID: 87812 RVA: 0x003190DF File Offset: 0x003172DF
+		// Token: 0x06016C38 RID: 93240 RVA: 0x003402CB File Offset: 0x0033E4CB
 		public static TTipsActorParamUnion FromIGraphLineTipsActor(IGraphLineTipsActorT _igraphlinetipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015705 RID: 87813 RVA: 0x003190F4 File Offset: 0x003172F4
+		// Token: 0x06016C39 RID: 93241 RVA: 0x003402E0 File Offset: 0x0033E4E0
 		public IGraphPointTipsActorT AsIGraphPointTipsActor()
 		{
 			return this.As<IGraphPointTipsActorT>();
 		}
 
-		// Token: 0x06015706 RID: 87814 RVA: 0x003190FC File Offset: 0x003172FC
+		// Token: 0x06016C3A RID: 93242 RVA: 0x003402E8 File Offset: 0x0033E4E8
 		public static TTipsActorParamUnion FromIGraphPointTipsActor(IGraphPointTipsActorT _igraphpointtipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015707 RID: 87815 RVA: 0x00319111 File Offset: 0x00317311
+		// Token: 0x06016C3B RID: 93243 RVA: 0x003402FD File Offset: 0x0033E4FD
 		public IHollowCylinderTipsActorT AsIHollowCylinderTipsActor()
 		{
 			return this.As<IHollowCylinderTipsActorT>();
 		}
 
-		// Token: 0x06015708 RID: 87816 RVA: 0x00319119 File Offset: 0x00317319
+		// Token: 0x06016C3C RID: 93244 RVA: 0x00340305 File Offset: 0x0033E505
 		public static TTipsActorParamUnion FromIHollowCylinderTipsActor(IHollowCylinderTipsActorT _ihollowcylindertipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015709 RID: 87817 RVA: 0x0031912E File Offset: 0x0031732E
+		// Token: 0x06016C3D RID: 93245 RVA: 0x0034031A File Offset: 0x0033E51A
 		public IHollowSphereTipsActorT AsIHollowSphereTipsActor()
 		{
 			return this.As<IHollowSphereTipsActorT>();
 		}
 
-		// Token: 0x0601570A RID: 87818 RVA: 0x00319136 File Offset: 0x00317336
+		// Token: 0x06016C3E RID: 93246 RVA: 0x00340322 File Offset: 0x0033E522
 		public static TTipsActorParamUnion FromIHollowSphereTipsActor(IHollowSphereTipsActorT _ihollowspheretipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -173,13 +173,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x0601570B RID: 87819 RVA: 0x0031914C File Offset: 0x0031734C
+		// Token: 0x06016C3F RID: 93247 RVA: 0x00340338 File Offset: 0x0033E538
 		public ILaserTipsActorT AsILaserTipsActor()
 		{
 			return this.As<ILaserTipsActorT>();
 		}
 
-		// Token: 0x0601570C RID: 87820 RVA: 0x00319154 File Offset: 0x00317354
+		// Token: 0x06016C40 RID: 93248 RVA: 0x00340340 File Offset: 0x0033E540
 		public static TTipsActorParamUnion FromILaserTipsActor(ILaserTipsActorT _ilasertipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -189,13 +189,29 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x0601570D RID: 87821 RVA: 0x0031916A File Offset: 0x0031736A
+		// Token: 0x06016C41 RID: 93249 RVA: 0x00340356 File Offset: 0x0033E556
+		public INoiseBubbleTipsActorT AsINoiseBubbleTipsActor()
+		{
+			return this.As<INoiseBubbleTipsActorT>();
+		}
+
+		// Token: 0x06016C42 RID: 93250 RVA: 0x0034035E File Offset: 0x0033E55E
+		public static TTipsActorParamUnion FromINoiseBubbleTipsActor(INoiseBubbleTipsActorT _inoisebubbletipsactor)
+		{
+			return new TTipsActorParamUnion
+			{
+				Type = TTipsActorParam.INoiseBubbleTipsActor,
+				Value = _inoisebubbletipsactor
+			};
+		}
+
+		// Token: 0x06016C43 RID: 93251 RVA: 0x00340374 File Offset: 0x0033E574
 		public ISectorTipsActorT AsISectorTipsActor()
 		{
 			return this.As<ISectorTipsActorT>();
 		}
 
-		// Token: 0x0601570E RID: 87822 RVA: 0x00319172 File Offset: 0x00317372
+		// Token: 0x06016C44 RID: 93252 RVA: 0x0034037C File Offset: 0x0033E57C
 		public static TTipsActorParamUnion FromISectorTipsActor(ISectorTipsActorT _isectortipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -205,13 +221,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x0601570F RID: 87823 RVA: 0x00319188 File Offset: 0x00317388
+		// Token: 0x06016C45 RID: 93253 RVA: 0x00340392 File Offset: 0x0033E592
 		public ISphereTipsActorT AsISphereTipsActor()
 		{
 			return this.As<ISphereTipsActorT>();
 		}
 
-		// Token: 0x06015710 RID: 87824 RVA: 0x00319190 File Offset: 0x00317390
+		// Token: 0x06016C46 RID: 93254 RVA: 0x0034039A File Offset: 0x0033E59A
 		public static TTipsActorParamUnion FromISphereTipsActor(ISphereTipsActorT _ispheretipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -221,13 +237,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015711 RID: 87825 RVA: 0x003191A6 File Offset: 0x003173A6
+		// Token: 0x06016C47 RID: 93255 RVA: 0x003403B0 File Offset: 0x0033E5B0
 		public ISplineEffectTipsActorT AsISplineEffectTipsActor()
 		{
 			return this.As<ISplineEffectTipsActorT>();
 		}
 
-		// Token: 0x06015712 RID: 87826 RVA: 0x003191AE File Offset: 0x003173AE
+		// Token: 0x06016C48 RID: 93256 RVA: 0x003403B8 File Offset: 0x0033E5B8
 		public static TTipsActorParamUnion FromISplineEffectTipsActor(ISplineEffectTipsActorT _isplineeffecttipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -237,13 +253,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015713 RID: 87827 RVA: 0x003191C4 File Offset: 0x003173C4
+		// Token: 0x06016C49 RID: 93257 RVA: 0x003403CE File Offset: 0x0033E5CE
 		public ISplineTipsActorT AsISplineTipsActor()
 		{
 			return this.As<ISplineTipsActorT>();
 		}
 
-		// Token: 0x06015714 RID: 87828 RVA: 0x003191CC File Offset: 0x003173CC
+		// Token: 0x06016C4A RID: 93258 RVA: 0x003403D6 File Offset: 0x0033E5D6
 		public static TTipsActorParamUnion FromISplineTipsActor(ISplineTipsActorT _isplinetipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -253,13 +269,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015715 RID: 87829 RVA: 0x003191E2 File Offset: 0x003173E2
+		// Token: 0x06016C4B RID: 93259 RVA: 0x003403EC File Offset: 0x0033E5EC
 		public ISpotlightTipsActorT AsISpotlightTipsActor()
 		{
 			return this.As<ISpotlightTipsActorT>();
 		}
 
-		// Token: 0x06015716 RID: 87830 RVA: 0x003191EA File Offset: 0x003173EA
+		// Token: 0x06016C4C RID: 93260 RVA: 0x003403F4 File Offset: 0x0033E5F4
 		public static TTipsActorParamUnion FromISpotlightTipsActor(ISpotlightTipsActorT _ispotlighttipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -269,13 +285,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015717 RID: 87831 RVA: 0x00319200 File Offset: 0x00317400
+		// Token: 0x06016C4D RID: 93261 RVA: 0x0034040A File Offset: 0x0033E60A
 		public ITargetPointTipsActorT AsITargetPointTipsActor()
 		{
 			return this.As<ITargetPointTipsActorT>();
 		}
 
-		// Token: 0x06015718 RID: 87832 RVA: 0x00319208 File Offset: 0x00317408
+		// Token: 0x06016C4E RID: 93262 RVA: 0x00340412 File Offset: 0x0033E612
 		public static TTipsActorParamUnion FromITargetPointTipsActor(ITargetPointTipsActorT _itargetpointtipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -285,13 +301,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015719 RID: 87833 RVA: 0x0031921E File Offset: 0x0031741E
+		// Token: 0x06016C4F RID: 93263 RVA: 0x00340428 File Offset: 0x0033E628
 		public ITrackTipsActorT AsITrackTipsActor()
 		{
 			return this.As<ITrackTipsActorT>();
 		}
 
-		// Token: 0x0601571A RID: 87834 RVA: 0x00319226 File Offset: 0x00317426
+		// Token: 0x06016C50 RID: 93264 RVA: 0x00340430 File Offset: 0x0033E630
 		public static TTipsActorParamUnion FromITrackTipsActor(ITrackTipsActorT _itracktipsactor)
 		{
 			return new TTipsActorParamUnion
@@ -301,7 +317,23 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x0601571B RID: 87835 RVA: 0x0031923C File Offset: 0x0031743C
+		// Token: 0x06016C51 RID: 93265 RVA: 0x00340446 File Offset: 0x0033E646
+		public ITurntableConnectorTipsActorT AsITurntableConnectorTipsActor()
+		{
+			return this.As<ITurntableConnectorTipsActorT>();
+		}
+
+		// Token: 0x06016C52 RID: 93266 RVA: 0x0034044E File Offset: 0x0033E64E
+		public static TTipsActorParamUnion FromITurntableConnectorTipsActor(ITurntableConnectorTipsActorT _iturntableconnectortipsactor)
+		{
+			return new TTipsActorParamUnion
+			{
+				Type = TTipsActorParam.ITurntableConnectorTipsActor,
+				Value = _iturntableconnectortipsactor
+			};
+		}
+
+		// Token: 0x06016C53 RID: 93267 RVA: 0x00340464 File Offset: 0x0033E664
 		public static int Pack(FlatBufferBuilder builder, TTipsActorParamUnion _o)
 		{
 			switch (_o.Type)
@@ -326,6 +358,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 				return IHollowSphereTipsActor.Pack(builder, _o.AsIHollowSphereTipsActor()).Value;
 			case TTipsActorParam.ILaserTipsActor:
 				return ILaserTipsActor.Pack(builder, _o.AsILaserTipsActor()).Value;
+			case TTipsActorParam.INoiseBubbleTipsActor:
+				return INoiseBubbleTipsActor.Pack(builder, _o.AsINoiseBubbleTipsActor()).Value;
 			case TTipsActorParam.ISectorTipsActor:
 				return ISectorTipsActor.Pack(builder, _o.AsISectorTipsActor()).Value;
 			case TTipsActorParam.ISphereTipsActor:
@@ -340,6 +374,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 				return ITargetPointTipsActor.Pack(builder, _o.AsITargetPointTipsActor()).Value;
 			case TTipsActorParam.ITrackTipsActor:
 				return ITrackTipsActor.Pack(builder, _o.AsITrackTipsActor()).Value;
+			case TTipsActorParam.ITurntableConnectorTipsActor:
+				return ITurntableConnectorTipsActor.Pack(builder, _o.AsITurntableConnectorTipsActor()).Value;
 			default:
 				return 0;
 			}

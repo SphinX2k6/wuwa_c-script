@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024C5 RID: 9413
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200276A RID: 10090
 	public class IEntityActionContext : IActionContextType
 	{
-		// Token: 0x0600D258 RID: 53848 RVA: 0x001F379B File Offset: 0x001F199B
+		// Token: 0x0600DFAD RID: 57261 RVA: 0x0020EFF7 File Offset: 0x0020D1F7
 		public static IEntityActionContext Create(IEntityActionContext? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003A90 RID: 14992
-		// (get) Token: 0x0600D259 RID: 53849 RVA: 0x001F37BA File Offset: 0x001F19BA
+		// Token: 0x17003D87 RID: 15751
+		// (get) Token: 0x0600DFAE RID: 57262 RVA: 0x0020F016 File Offset: 0x0020D216
 		public new virtual string Type
 		{
 			get
@@ -32,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400736D RID: 29549
+		// Token: 0x040079BA RID: 31162
 		private IEntityActionContext Instance;
 	}
 }

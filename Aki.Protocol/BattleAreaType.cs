@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200160C RID: 5644
+	// Token: 0x0200167F RID: 5759
 	public enum BattleAreaType
 	{
-		// Token: 0x0400BF9A RID: 49050
+		// Token: 0x0400C494 RID: 50324
 		[OriginalName("Retrieve")]
 		Retrieve,
-		// Token: 0x0400BF9B RID: 49051
+		// Token: 0x0400C495 RID: 50325
 		[OriginalName("Area")]
 		Area
 	}

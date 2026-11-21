@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.BattleUi;
 
-// Token: 0x0200306C RID: 12396
+// Token: 0x020025C3 RID: 9667
 [NullableContext(2)]
 [Nullable(0)]
 public class InputContinuously
 {
-	// Token: 0x0601A6A4 RID: 108196 RVA: 0x0070B281 File Offset: 0x00709481
+	// Token: 0x0601805F RID: 98399 RVA: 0x00731A77 File Offset: 0x0072FC77
 	[NullableContext(1)]
 	public InputContinuously(BaseTagComponent tagComp, BaseBuffComponent buffComp)
 	{
@@ -17,7 +17,7 @@ public class InputContinuously
 		this.BuffComp = buffComp;
 	}
 
-	// Token: 0x0601A6A5 RID: 108197 RVA: 0x0070B298 File Offset: 0x00709498
+	// Token: 0x06018060 RID: 98400 RVA: 0x00731A90 File Offset: 0x0072FC90
 	public void InitConfig()
 	{
 		this.Duration = (float)ConfigCommonParamById.GetIntConfig("ConstantSprintEnterTime").Value;
@@ -44,7 +44,7 @@ public class InputContinuously
 		}
 	}
 
-	// Token: 0x0601A6A6 RID: 108198 RVA: 0x0070B390 File Offset: 0x00709590
+	// Token: 0x06018061 RID: 98401 RVA: 0x00731B88 File Offset: 0x0072FD88
 	public bool GetAutoMovingState()
 	{
 		BattleUiFormationData formationData = BattleUiModel.Instance.FormationData;
@@ -56,14 +56,14 @@ public class InputContinuously
 		return flag;
 	}
 
-	// Token: 0x0601A6A7 RID: 108199 RVA: 0x0070B3D6 File Offset: 0x007095D6
+	// Token: 0x06018062 RID: 98402 RVA: 0x00731BCE File Offset: 0x0072FDCE
 	public bool CheckTagAndBuff()
 	{
 		BaseTagComponent tagComp = this.TagComp;
 		return tagComp != null && tagComp.HasTag(GameplayTagDefine.EGameplayTagId["功能.功能制作.保持持续奔跑"]) && this.CheckForbiddenTagAndBuff();
 	}
 
-	// Token: 0x0601A6A8 RID: 108200 RVA: 0x0070B406 File Offset: 0x00709606
+	// Token: 0x06018063 RID: 98403 RVA: 0x00731BFE File Offset: 0x0072FDFE
 	public void SetAutoMovingState(bool value, bool start = false)
 	{
 		this.StartEnter = start;
@@ -71,7 +71,7 @@ public class InputContinuously
 		this.UpdateAutoMovingTag(value);
 	}
 
-	// Token: 0x0601A6A9 RID: 108201 RVA: 0x0070B41D File Offset: 0x0070961D
+	// Token: 0x06018064 RID: 98404 RVA: 0x00731C15 File Offset: 0x0072FE15
 	public void AddTimeAccumulation(float delta)
 	{
 		if (!this.CheckForbiddenTagAndBuff())
@@ -83,14 +83,14 @@ public class InputContinuously
 		this.AccumulationTime += delta;
 	}
 
-	// Token: 0x0601A6AA RID: 108202 RVA: 0x0070B44A File Offset: 0x0070964A
+	// Token: 0x06018065 RID: 98405 RVA: 0x00731C42 File Offset: 0x0072FE42
 	public void ClearTimeAccumulation()
 	{
 		this.CurrentTime = 0f;
 		this.AccumulationTime = 0f;
 	}
 
-	// Token: 0x0601A6AB RID: 108203 RVA: 0x0070B462 File Offset: 0x00709662
+	// Token: 0x06018066 RID: 98406 RVA: 0x00731C5A File Offset: 0x0072FE5A
 	public void ResetAutoMovingState(string context = null)
 	{
 		this.ClearTimeAccumulation();
@@ -98,7 +98,7 @@ public class InputContinuously
 		string.IsNullOrEmpty(context);
 	}
 
-	// Token: 0x0601A6AC RID: 108204 RVA: 0x0070B479 File Offset: 0x00709679
+	// Token: 0x06018067 RID: 98407 RVA: 0x00731C71 File Offset: 0x0072FE71
 	[NullableContext(1)]
 	public void DeepCopy(InputContinuously other)
 	{
@@ -108,37 +108,37 @@ public class InputContinuously
 		this.SetAutoMovingState(other.GetAutoMovingState(), false);
 	}
 
-	// Token: 0x0601A6AD RID: 108205 RVA: 0x0070B4AC File Offset: 0x007096AC
+	// Token: 0x06018068 RID: 98408 RVA: 0x00731CA4 File Offset: 0x0072FEA4
 	public bool IsStartEnter()
 	{
 		return this.StartEnter;
 	}
 
-	// Token: 0x0601A6AE RID: 108206 RVA: 0x0070B4B4 File Offset: 0x007096B4
+	// Token: 0x06018069 RID: 98409 RVA: 0x00731CAC File Offset: 0x0072FEAC
 	public void ClearStartEnter()
 	{
 		this.StartEnter = false;
 	}
 
-	// Token: 0x0601A6AF RID: 108207 RVA: 0x0070B4BD File Offset: 0x007096BD
+	// Token: 0x0601806A RID: 98410 RVA: 0x00731CB5 File Offset: 0x0072FEB5
 	public bool CheckTimeDuration()
 	{
 		return this.AccumulationTime > this.Duration;
 	}
 
-	// Token: 0x0601A6B0 RID: 108208 RVA: 0x0070B4CD File Offset: 0x007096CD
+	// Token: 0x0601806B RID: 98411 RVA: 0x00731CC5 File Offset: 0x0072FEC5
 	public float GetCurrentTime()
 	{
 		return this.CurrentTime;
 	}
 
-	// Token: 0x0601A6B1 RID: 108209 RVA: 0x0070B4D5 File Offset: 0x007096D5
+	// Token: 0x0601806C RID: 98412 RVA: 0x00731CCD File Offset: 0x0072FECD
 	public float GetDuration()
 	{
 		return this.Duration;
 	}
 
-	// Token: 0x0601A6B2 RID: 108210 RVA: 0x0070B4E0 File Offset: 0x007096E0
+	// Token: 0x0601806D RID: 98413 RVA: 0x00731CD8 File Offset: 0x0072FED8
 	private bool CheckForbiddenTagAndBuff()
 	{
 		if (this.BuffList != null && this.BuffList.Length != 0)
@@ -168,7 +168,7 @@ public class InputContinuously
 		return true;
 	}
 
-	// Token: 0x0601A6B3 RID: 108211 RVA: 0x0070B578 File Offset: 0x00709778
+	// Token: 0x0601806E RID: 98414 RVA: 0x00731D70 File Offset: 0x0072FF70
 	private void UpdateAutoMovingTag(bool value)
 	{
 		if (value)
@@ -198,42 +198,42 @@ public class InputContinuously
 		}
 	}
 
-	// Token: 0x0400CA62 RID: 51810
+	// Token: 0x0400CE3C RID: 52796
 	private bool LastState;
 
-	// Token: 0x0400CA63 RID: 51811
+	// Token: 0x0400CE3D RID: 52797
 	private bool StartEnter;
 
-	// Token: 0x0400CA64 RID: 51812
+	// Token: 0x0400CE3E RID: 52798
 	private float CurrentTime;
 
-	// Token: 0x0400CA65 RID: 51813
+	// Token: 0x0400CE3F RID: 52799
 	private float AccumulationTime;
 
-	// Token: 0x0400CA66 RID: 51814
+	// Token: 0x0400CE40 RID: 52800
 	public float InAirTime;
 
-	// Token: 0x0400CA67 RID: 51815
+	// Token: 0x0400CE41 RID: 52801
 	public float InDelayExitTime;
 
-	// Token: 0x0400CA68 RID: 51816
+	// Token: 0x0400CE42 RID: 52802
 	private float Duration;
 
-	// Token: 0x0400CA69 RID: 51817
+	// Token: 0x0400CE43 RID: 52803
 	public float AutoGlideTime;
 
-	// Token: 0x0400CA6A RID: 51818
+	// Token: 0x0400CE44 RID: 52804
 	public float DelayExitTime;
 
-	// Token: 0x0400CA6B RID: 51819
+	// Token: 0x0400CE45 RID: 52805
 	private int[] BuffList;
 
-	// Token: 0x0400CA6C RID: 51820
+	// Token: 0x0400CE46 RID: 52806
 	private int[] TagList;
 
-	// Token: 0x0400CA6D RID: 51821
+	// Token: 0x0400CE47 RID: 52807
 	private readonly BaseTagComponent TagComp;
 
-	// Token: 0x0400CA6E RID: 51822
+	// Token: 0x0400CE48 RID: 52808
 	private readonly BaseBuffComponent BuffComp;
 }

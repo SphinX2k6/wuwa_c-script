@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007577 RID: 30071
+	// Token: 0x02007D6D RID: 32109
 	public struct IVisualNovelDate : IFlatbufferObject
 	{
-		// Token: 0x1700E414 RID: 58388
-		// (get) Token: 0x06036B4E RID: 224078 RVA: 0x0076DA5A File Offset: 0x0076BC5A
+		// Token: 0x1700F044 RID: 61508
+		// (get) Token: 0x06039F76 RID: 237430 RVA: 0x007D1000 File Offset: 0x007CF200
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036B4F RID: 224079 RVA: 0x0076DA67 File Offset: 0x0076BC67
+		// Token: 0x06039F77 RID: 237431 RVA: 0x007D100D File Offset: 0x007CF20D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036B50 RID: 224080 RVA: 0x0076DA70 File Offset: 0x0076BC70
+		// Token: 0x06039F78 RID: 237432 RVA: 0x007D1014 File Offset: 0x007CF214
 		public static IVisualNovelDate GetRootAsIVisualNovelDate(ByteBuffer _bb)
 		{
 			return IVisualNovelDate.GetRootAsIVisualNovelDate(_bb, default(IVisualNovelDate));
 		}
 
-		// Token: 0x06036B51 RID: 224081 RVA: 0x0076DA8C File Offset: 0x0076BC8C
+		// Token: 0x06039F79 RID: 237433 RVA: 0x007D1030 File Offset: 0x007CF230
 		public static IVisualNovelDate GetRootAsIVisualNovelDate(ByteBuffer _bb, IVisualNovelDate obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036B52 RID: 224082 RVA: 0x0076DAA9 File Offset: 0x0076BCA9
+		// Token: 0x06039F7A RID: 237434 RVA: 0x007D104D File Offset: 0x007CF24D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036B53 RID: 224083 RVA: 0x0076DAB8 File Offset: 0x0076BCB8
+		// Token: 0x06039F7B RID: 237435 RVA: 0x007D105C File Offset: 0x007CF25C
 		public IVisualNovelDate __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E415 RID: 58389
-		// (get) Token: 0x06036B54 RID: 224084 RVA: 0x0076DAC8 File Offset: 0x0076BCC8
+		// Token: 0x1700F045 RID: 61509
+		// (get) Token: 0x06039F7C RID: 237436 RVA: 0x007D106C File Offset: 0x007CF26C
 		public int Month
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E416 RID: 58390
-		// (get) Token: 0x06036B55 RID: 224085 RVA: 0x0076DB04 File Offset: 0x0076BD04
+		// Token: 0x1700F046 RID: 61510
+		// (get) Token: 0x06039F7D RID: 237437 RVA: 0x007D10A8 File Offset: 0x007CF2A8
 		public int Day
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036B56 RID: 224086 RVA: 0x0076DB40 File Offset: 0x0076BD40
+		// Token: 0x06039F7E RID: 237438 RVA: 0x007D10E4 File Offset: 0x007CF2E4
 		public static Offset<IVisualNovelDate> CreateIVisualNovelDate(FlatBufferBuilder builder, int Month = 0, int Day = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelDate.EndIVisualNovelDate(builder);
 		}
 
-		// Token: 0x06036B57 RID: 224087 RVA: 0x0076DB5D File Offset: 0x0076BD5D
+		// Token: 0x06039F7F RID: 237439 RVA: 0x007D1101 File Offset: 0x007CF301
 		public static void StartIVisualNovelDate(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06036B58 RID: 224088 RVA: 0x0076DB66 File Offset: 0x0076BD66
+		// Token: 0x06039F80 RID: 237440 RVA: 0x007D110A File Offset: 0x007CF30A
 		public static void AddMonth(FlatBufferBuilder builder, int month)
 		{
 			builder.AddInt(0, month, 0);
 		}
 
-		// Token: 0x06036B59 RID: 224089 RVA: 0x0076DB71 File Offset: 0x0076BD71
+		// Token: 0x06039F81 RID: 237441 RVA: 0x007D1115 File Offset: 0x007CF315
 		public static void AddDay(FlatBufferBuilder builder, int day)
 		{
 			builder.AddInt(1, day, 0);
 		}
 
-		// Token: 0x06036B5A RID: 224090 RVA: 0x0076DB7C File Offset: 0x0076BD7C
+		// Token: 0x06039F82 RID: 237442 RVA: 0x007D1120 File Offset: 0x007CF320
 		public static Offset<IVisualNovelDate> EndIVisualNovelDate(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisualNovelDate>(builder.EndTable());
 		}
 
-		// Token: 0x06036B5B RID: 224091 RVA: 0x0076DB8C File Offset: 0x0076BD8C
+		// Token: 0x06039F83 RID: 237443 RVA: 0x007D1130 File Offset: 0x007CF330
 		public IVisualNovelDateT UnPack()
 		{
 			IVisualNovelDateT visualNovelDateT = new IVisualNovelDateT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return visualNovelDateT;
 		}
 
-		// Token: 0x06036B5C RID: 224092 RVA: 0x0076DBA7 File Offset: 0x0076BDA7
+		// Token: 0x06039F84 RID: 237444 RVA: 0x007D114B File Offset: 0x007CF34B
 		public void UnPackTo(IVisualNovelDateT _o)
 		{
 			_o.Month = this.Month;
 			_o.Day = this.Day;
 		}
 
-		// Token: 0x06036B5D RID: 224093 RVA: 0x0076DBC4 File Offset: 0x0076BDC4
+		// Token: 0x06039F85 RID: 237445 RVA: 0x007D1168 File Offset: 0x007CF368
 		public static Offset<IVisualNovelDate> Pack(FlatBufferBuilder builder, IVisualNovelDateT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelDate.CreateIVisualNovelDate(builder, _o.Month, _o.Day);
 		}
 
-		// Token: 0x0401247B RID: 74875
+		// Token: 0x040134AF RID: 79023
 		private Table __p;
 	}
 }

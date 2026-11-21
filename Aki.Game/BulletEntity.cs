@@ -2,34 +2,34 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.World.Define;
 
-// Token: 0x02002DEF RID: 11759
+// Token: 0x0200234A RID: 9034
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletEntity : Entity
 {
-	// Token: 0x06018B14 RID: 101140 RVA: 0x006579E3 File Offset: 0x00655BE3
+	// Token: 0x060163C9 RID: 91081 RVA: 0x0067DA65 File Offset: 0x0067BC65
 	public BulletEntity(int id, int index) : base(id, index)
 	{
 	}
 
-	// Token: 0x170021BF RID: 8639
-	// (get) Token: 0x06018B15 RID: 101141 RVA: 0x006579FF File Offset: 0x00655BFF
+	// Token: 0x17002223 RID: 8739
+	// (get) Token: 0x060163CA RID: 91082 RVA: 0x0067DA81 File Offset: 0x0067BC81
 	public override bool UsePool { get; } = 1;
 
-	// Token: 0x06018B16 RID: 101142 RVA: 0x00657A07 File Offset: 0x00655C07
+	// Token: 0x060163CB RID: 91083 RVA: 0x0067DA89 File Offset: 0x0067BC89
 	protected override TsGameBudgetGroupConfig StaticGameBudgetConfig()
 	{
 		return new TsGameBudgetGroupConfig(GameBudgetAllocatorConfigCreator.Instance.TsAlwaysTickConfig);
 	}
 
-	// Token: 0x06018B17 RID: 101143 RVA: 0x00657A18 File Offset: 0x00655C18
+	// Token: 0x060163CC RID: 91084 RVA: 0x0067DA9A File Offset: 0x0067BC9A
 	public BulletInfo GetBulletInfo()
 	{
 		return this.Info;
 	}
 
-	// Token: 0x170021C0 RID: 8640
-	// (get) Token: 0x06018B18 RID: 101144 RVA: 0x00657A20 File Offset: 0x00655C20
+	// Token: 0x17002224 RID: 8740
+	// (get) Token: 0x060163CD RID: 91085 RVA: 0x0067DAA2 File Offset: 0x0067BCA2
 	public BulletDataMain Data
 	{
 		get
@@ -38,8 +38,8 @@ public class BulletEntity : Entity
 		}
 	}
 
-	// Token: 0x170021C1 RID: 8641
-	// (get) Token: 0x06018B19 RID: 101145 RVA: 0x00657A2D File Offset: 0x00655C2D
+	// Token: 0x17002225 RID: 8741
+	// (get) Token: 0x060163CE RID: 91086 RVA: 0x0067DAAF File Offset: 0x0067BCAF
 	public Entity BulletOwner
 	{
 		get
@@ -48,8 +48,8 @@ public class BulletEntity : Entity
 		}
 	}
 
-	// Token: 0x170021C2 RID: 8642
-	// (get) Token: 0x06018B1A RID: 101146 RVA: 0x00657A3F File Offset: 0x00655C3F
+	// Token: 0x17002226 RID: 8742
+	// (get) Token: 0x060163CF RID: 91087 RVA: 0x0067DAC1 File Offset: 0x0067BCC1
 	public bool NeedDestroy
 	{
 		get
@@ -58,7 +58,7 @@ public class BulletEntity : Entity
 		}
 	}
 
-	// Token: 0x06018B1B RID: 101147 RVA: 0x00657A4C File Offset: 0x00655C4C
+	// Token: 0x060163D0 RID: 91088 RVA: 0x0067DAD0 File Offset: 0x0067BCD0
 	[NullableContext(2)]
 	protected override bool OnCreate(IEntityArgs args = null)
 	{
@@ -74,21 +74,21 @@ public class BulletEntity : Entity
 		return true;
 	}
 
-	// Token: 0x06018B1C RID: 101148 RVA: 0x00657A93 File Offset: 0x00655C93
+	// Token: 0x060163D1 RID: 91089 RVA: 0x0067DB17 File Offset: 0x0067BD17
 	protected override bool OnStart()
 	{
 		base.SetTimeDilation(Time.Instance.TimeDilation);
 		return true;
 	}
 
-	// Token: 0x06018B1D RID: 101149 RVA: 0x00657AA6 File Offset: 0x00655CA6
+	// Token: 0x060163D2 RID: 91090 RVA: 0x0067DB2A File Offset: 0x0067BD2A
 	protected override bool OnClear()
 	{
 		this.Info.Clear();
 		return true;
 	}
 
-	// Token: 0x06018B1E RID: 101150 RVA: 0x00657AB4 File Offset: 0x00655CB4
+	// Token: 0x060163D3 RID: 91091 RVA: 0x0067DB38 File Offset: 0x0067BD38
 	[NullableContext(2)]
 	public override bool Respawn(IEntityArgs args = null)
 	{
@@ -96,6 +96,6 @@ public class BulletEntity : Entity
 		return base.Respawn(args);
 	}
 
-	// Token: 0x0400B822 RID: 47138
+	// Token: 0x0400BBA8 RID: 48040
 	private readonly BulletInfo Info = new BulletInfo();
 }

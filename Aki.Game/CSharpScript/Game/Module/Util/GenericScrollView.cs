@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048D8 RID: 18648
+	// Token: 0x0200384F RID: 14415
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GenericScrollView<[Nullable(0)] TItem> where TItem : UiPanelBase
 	{
-		// Token: 0x1700798B RID: 31115
-		// (get) Token: 0x06030BD6 RID: 199638 RVA: 0x00B516CA File Offset: 0x00B4F8CA
+		// Token: 0x17004CF3 RID: 19699
+		// (get) Token: 0x06025702 RID: 153346 RVA: 0x00A8C4F6 File Offset: 0x00A8A6F6
 		[Nullable(2)]
 		public UUIItem TempOriginalItem
 		{
@@ -29,8 +29,8 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x1700798C RID: 31116
-		// (get) Token: 0x06030BD7 RID: 199639 RVA: 0x00B516E0 File Offset: 0x00B4F8E0
+		// Token: 0x17004CF4 RID: 19700
+		// (get) Token: 0x06025703 RID: 153347 RVA: 0x00A8C50C File Offset: 0x00A8A70C
 		public bool IsExpand
 		{
 			get
@@ -45,8 +45,8 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x1700798D RID: 31117
-		// (get) Token: 0x06030BD8 RID: 199640 RVA: 0x00B51763 File Offset: 0x00B4F963
+		// Token: 0x17004CF5 RID: 19701
+		// (get) Token: 0x06025704 RID: 153348 RVA: 0x00A8C58F File Offset: 0x00A8A78F
 		[Nullable(new byte[]
 		{
 			0,
@@ -65,8 +65,8 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x1700798E RID: 31118
-		// (get) Token: 0x06030BD9 RID: 199641 RVA: 0x00B51770 File Offset: 0x00B4F970
+		// Token: 0x17004CF6 RID: 19702
+		// (get) Token: 0x06025705 RID: 153349 RVA: 0x00A8C59C File Offset: 0x00A8A79C
 		public float ScrollWidth
 		{
 			get
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030BDA RID: 199642 RVA: 0x00B51798 File Offset: 0x00B4F998
+		// Token: 0x06025706 RID: 153350 RVA: 0x00A8C5C4 File Offset: 0x00A8A7C4
 		public GenericScrollView(UUIScrollViewWithScrollbarComponent scrollView, TLayoutRefresh<TItem> refreshFunction, [Nullable(2)] UUIItem originalItem = null)
 		{
 			this.TargetScroll = scrollView;
@@ -83,69 +83,69 @@ namespace CSharpScript.Game.Module.Util
 			this.GenericLayout.SetScrollView(scrollView);
 		}
 
-		// Token: 0x06030BDB RID: 199643 RVA: 0x00B517EA File Offset: 0x00B4F9EA
+		// Token: 0x06025707 RID: 153351 RVA: 0x00A8C616 File Offset: 0x00A8A816
 		[NullableContext(2)]
 		public void RefreshByData<T>([Nullable(new byte[]
 		{
 			2,
 			1
-		})] List<T> data, int? length = null)
+		})] IReadOnlyList<T> data, int? length = null)
 		{
 			this.GenericLayout.RebuildLayoutByDataNew<T>(data, length);
 		}
 
-		// Token: 0x06030BDC RID: 199644 RVA: 0x00B517F9 File Offset: 0x00B4F9F9
+		// Token: 0x06025708 RID: 153352 RVA: 0x00A8C625 File Offset: 0x00A8A825
 		public void ClearChildren()
 		{
 			this.GenericLayout.ClearChildren();
 			this.TargetScroll.OnScrollValueChange.Unbind();
 		}
 
-		// Token: 0x06030BDD RID: 199645 RVA: 0x00B51816 File Offset: 0x00B4FA16
+		// Token: 0x06025709 RID: 153353 RVA: 0x00A8C642 File Offset: 0x00A8A842
 		public void SetHorizontalScrollEnable(bool enable)
 		{
 			this.TargetScroll.SetHorizontal(enable);
 		}
 
-		// Token: 0x06030BDE RID: 199646 RVA: 0x00B51824 File Offset: 0x00B4FA24
+		// Token: 0x0602570A RID: 153354 RVA: 0x00A8C650 File Offset: 0x00A8A850
 		public void SetVerticalScrollEnable(bool enable)
 		{
 			this.TargetScroll.SetVertical(enable);
 		}
 
-		// Token: 0x06030BDF RID: 199647 RVA: 0x00B51832 File Offset: 0x00B4FA32
+		// Token: 0x0602570B RID: 153355 RVA: 0x00A8C65E File Offset: 0x00A8A85E
 		[NullableContext(2)]
 		public UUIItem GetItemByIndex(int index)
 		{
 			return this.GenericLayout.GetItemByIndex(index);
 		}
 
-		// Token: 0x06030BE0 RID: 199648 RVA: 0x00B51840 File Offset: 0x00B4FA40
+		// Token: 0x0602570C RID: 153356 RVA: 0x00A8C66C File Offset: 0x00A8A86C
 		[return: Nullable(2)]
 		public TItem GetScrollItemByKey(object key)
 		{
 			return this.GenericLayout.GetLayoutItemByKey(key);
 		}
 
-		// Token: 0x06030BE1 RID: 199649 RVA: 0x00B5184E File Offset: 0x00B4FA4E
+		// Token: 0x0602570D RID: 153357 RVA: 0x00A8C67A File Offset: 0x00A8A87A
 		public Dictionary<object, TItem> GetScrollItemMap()
 		{
 			return this.GenericLayout.GetLayoutItemMap();
 		}
 
-		// Token: 0x06030BE2 RID: 199650 RVA: 0x00B5185B File Offset: 0x00B4FA5B
+		// Token: 0x0602570E RID: 153358 RVA: 0x00A8C687 File Offset: 0x00A8A887
 		public List<TItem> GetScrollItemList()
 		{
 			return this.GenericLayout.GetLayoutItemList();
 		}
 
-		// Token: 0x06030BE3 RID: 199651 RVA: 0x00B51868 File Offset: 0x00B4FA68
+		// Token: 0x0602570F RID: 153359 RVA: 0x00A8C694 File Offset: 0x00A8A894
 		public void ScrollTo(UUIItem uiItem)
 		{
 			this.TargetScroll.ScrollTo(uiItem, false);
 		}
 
-		// Token: 0x06030BE4 RID: 199652 RVA: 0x00B51878 File Offset: 0x00B4FA78
+		// Token: 0x06025710 RID: 153360 RVA: 0x00A8C6A4 File Offset: 0x00A8A8A4
 		public void ScrollToLeft(object key)
 		{
 			TItem layoutItemByKey = this.GenericLayout.GetLayoutItemByKey(key);
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Util
 			this.TargetScroll.ScrollToLeft(ref fvector2D, layoutItemByKey.GetRootItem(), false);
 		}
 
-		// Token: 0x06030BE5 RID: 199653 RVA: 0x00B518D8 File Offset: 0x00B4FAD8
+		// Token: 0x06025711 RID: 153361 RVA: 0x00A8C704 File Offset: 0x00A8A904
 		public void ScrollToRight(object key)
 		{
 			TItem layoutItemByKey = this.GenericLayout.GetLayoutItemByKey(key);
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.Util
 			this.TargetScroll.ScrollToRight(ref fvector2D, layoutItemByKey.GetRootItem(), false);
 		}
 
-		// Token: 0x06030BE6 RID: 199654 RVA: 0x00B51938 File Offset: 0x00B4FB38
+		// Token: 0x06025712 RID: 153362 RVA: 0x00A8C764 File Offset: 0x00A8A964
 		public void ScrollToTop(object key)
 		{
 			TItem layoutItemByKey = this.GenericLayout.GetLayoutItemByKey(key);
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Util
 			this.TargetScroll.ScrollToTop(ref fvector2D, layoutItemByKey.GetRootItem(), false);
 		}
 
-		// Token: 0x06030BE7 RID: 199655 RVA: 0x00B51998 File Offset: 0x00B4FB98
+		// Token: 0x06025713 RID: 153363 RVA: 0x00A8C7C4 File Offset: 0x00A8A9C4
 		public void ScrollToBottom(object key)
 		{
 			TItem layoutItemByKey = this.GenericLayout.GetLayoutItemByKey(key);
@@ -181,31 +181,31 @@ namespace CSharpScript.Game.Module.Util
 			this.TargetScroll.ScrollToBottom(ref fvector2D, layoutItemByKey.GetRootItem(), false);
 		}
 
-		// Token: 0x06030BE8 RID: 199656 RVA: 0x00B519F8 File Offset: 0x00B4FBF8
+		// Token: 0x06025714 RID: 153364 RVA: 0x00A8C824 File Offset: 0x00A8AA24
 		public void SetActive(bool bActive)
 		{
 			this.TargetScroll.RootUIComp.Get().SetUIActive(bActive);
 		}
 
-		// Token: 0x06030BE9 RID: 199657 RVA: 0x00B51A1E File Offset: 0x00B4FC1E
+		// Token: 0x06025715 RID: 153365 RVA: 0x00A8C84A File Offset: 0x00A8AA4A
 		public void BindScrollValueChange(Action<FVector2D> callback)
 		{
 			this.TargetScroll.OnScrollValueChange.Bind(callback);
 		}
 
-		// Token: 0x06030BEA RID: 199658 RVA: 0x00B51A31 File Offset: 0x00B4FC31
+		// Token: 0x06025716 RID: 153366 RVA: 0x00A8C85D File Offset: 0x00A8AA5D
 		public void BindLateUpdate(Action<float> callBack)
 		{
 			this.GenericLayout.BindLateUpdate(callBack);
 		}
 
-		// Token: 0x06030BEB RID: 199659 RVA: 0x00B51A3F File Offset: 0x00B4FC3F
+		// Token: 0x06025717 RID: 153367 RVA: 0x00A8C86B File Offset: 0x00A8AA6B
 		public void UnBindLateUpdate()
 		{
 			this.GenericLayout.UnBindLateUpdate();
 		}
 
-		// Token: 0x06030BEC RID: 199660 RVA: 0x00B51A4C File Offset: 0x00B4FC4C
+		// Token: 0x06025718 RID: 153368 RVA: 0x00A8C878 File Offset: 0x00A8AA78
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -216,11 +216,11 @@ namespace CSharpScript.Game.Module.Util
 			return this.GenericLayout;
 		}
 
-		// Token: 0x0401A2DC RID: 107228
+		// Token: 0x04014B4F RID: 84815
 		[Nullable(2)]
 		private readonly UUIScrollViewWithScrollbarComponent TargetScroll;
 
-		// Token: 0x0401A2DD RID: 107229
+		// Token: 0x04014B50 RID: 84816
 		[Nullable(new byte[]
 		{
 			2,

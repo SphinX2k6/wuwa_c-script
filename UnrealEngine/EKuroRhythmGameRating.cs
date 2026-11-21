@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C42 RID: 7234
+	// Token: 0x020004FC RID: 1276
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroRhythmGame.EKuroRhythmGameRating")]
 	public enum EKuroRhythmGameRating : byte
 	{
-		// Token: 0x0400F12C RID: 61740
+		// Token: 0x04003283 RID: 12931
 		Perfect,
-		// Token: 0x0400F12D RID: 61741
+		// Token: 0x04003284 RID: 12932
 		Great,
-		// Token: 0x0400F12E RID: 61742
+		// Token: 0x04003285 RID: 12933
 		Good,
-		// Token: 0x0400F12F RID: 61743
+		// Token: 0x04003286 RID: 12934
 		Bad,
-		// Token: 0x0400F130 RID: 61744
+		// Token: 0x04003287 RID: 12935
 		Miss,
-		// Token: 0x0400F131 RID: 61745
+		// Token: 0x04003288 RID: 12936
 		EKuroRhythmGameRating_MAX
 	}
 }

@@ -1,42 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using Google.Protobuf.Collections;
 
-// Token: 0x02001398 RID: 5016
+// Token: 0x0200084C RID: 2124
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityNewbieCourseV2Data : ActivityBaseData
 {
-	// Token: 0x06008CAB RID: 36011 RVA: 0x001E2950 File Offset: 0x001E0B50
+	// Token: 0x06006044 RID: 24644 RVA: 0x001EB6E7 File Offset: 0x001E98E7
 	protected override void OnInit(ActivityData data)
 	{
 		this.UpdateProtocolBeginOpenTime(data);
 	}
 
-	// Token: 0x06008CAC RID: 36012 RVA: 0x001E295C File Offset: 0x001E0B5C
+	// Token: 0x06006045 RID: 24645 RVA: 0x001EB6F0 File Offset: 0x001E98F0
 	protected override void PhraseEx(ActivityData data)
 	{
 		this.UpdateProtocolBeginOpenTime(data);
 		this.ReceivedSet.Clear();
 		NewbieCourseV2ActivityPb newbieCourseV2ActivityPb = data.NewbieCourseV2ActivityPb;
-		int[] array;
-		if (newbieCourseV2ActivityPb == null)
-		{
-			array = null;
-		}
-		else
-		{
-			RepeatedField<int> hadTakeReward = newbieCourseV2ActivityPb.HadTakeReward;
-			array = ((hadTakeReward != null) ? hadTakeReward.ToArray<int>() : null);
-		}
-		this.SetReceiveData(array ?? Array.Empty<int>());
+		RepeatedField<int> repeatedField = (newbieCourseV2ActivityPb != null) ? newbieCourseV2ActivityPb.HadTakeReward : null;
+		this.SetReceiveData((repeatedField == null) ? new List<int>() : new List<int>(repeatedField));
 	}
 
-	// Token: 0x06008CAD RID: 36013 RVA: 0x001E29AC File Offset: 0x001E0BAC
+	// Token: 0x06006046 RID: 24646 RVA: 0x001EB738 File Offset: 0x001E9938
 	private void UpdateProtocolBeginOpenTime(ActivityData data)
 	{
 		NewbieCourseV2ActivityPb newbieCourseV2ActivityPb = data.NewbieCourseV2ActivityPb;
@@ -53,19 +43,19 @@ public class ActivityNewbieCourseV2Data : ActivityBaseData
 		this.ProtocolBeginOpenTime = 0L;
 	}
 
-	// Token: 0x06008CAE RID: 36014 RVA: 0x001E2A01 File Offset: 0x001E0C01
+	// Token: 0x06006047 RID: 24647 RVA: 0x001EB78D File Offset: 0x001E998D
 	public override long GetProtocolBeginOpenTime()
 	{
 		return this.ProtocolBeginOpenTime;
 	}
 
-	// Token: 0x06008CAF RID: 36015 RVA: 0x001E2A09 File Offset: 0x001E0C09
+	// Token: 0x06006048 RID: 24648 RVA: 0x001EB795 File Offset: 0x001E9995
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.CheckHasCanReceive();
 	}
 
-	// Token: 0x06008CB0 RID: 36016 RVA: 0x001E2A14 File Offset: 0x001E0C14
+	// Token: 0x06006049 RID: 24649 RVA: 0x001EB7A0 File Offset: 0x001E99A0
 	protected override bool GetExDataFinishShowState()
 	{
 		IReadOnlyList<NewbieCourseV2> configList = ActivityNewbieCourseV2Config.Instance.GetConfigList(base.Id);
@@ -83,8 +73,8 @@ public class ActivityNewbieCourseV2Data : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x06008CB1 RID: 36017 RVA: 0x001E2A88 File Offset: 0x001E0C88
-	public void SetReceiveData(int[] receivedList)
+	// Token: 0x0600604A RID: 24650 RVA: 0x001EB814 File Offset: 0x001E9A14
+	public void SetReceiveData(IReadOnlyList<int> receivedList)
 	{
 		this.ReceivedSet.Clear();
 		foreach (int item in receivedList)
@@ -93,13 +83,13 @@ public class ActivityNewbieCourseV2Data : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06008CB2 RID: 36018 RVA: 0x001E2AC1 File Offset: 0x001E0CC1
+	// Token: 0x0600604B RID: 24651 RVA: 0x001EB870 File Offset: 0x001E9A70
 	public void AddReceivedData(int level)
 	{
 		this.ReceivedSet.Add(level);
 	}
 
-	// Token: 0x06008CB3 RID: 36019 RVA: 0x001E2AD0 File Offset: 0x001E0CD0
+	// Token: 0x0600604C RID: 24652 RVA: 0x001EB880 File Offset: 0x001E9A80
 	public ENewbieCourseV2ItemState GetRewardState(int targetLevel)
 	{
 		int? playerLevel = PlayerInfoModel.Instance.GetPlayerLevel();
@@ -114,7 +104,7 @@ public class ActivityNewbieCourseV2Data : ActivityBaseData
 		return ENewbieCourseV2ItemState.CanReceive;
 	}
 
-	// Token: 0x06008CB4 RID: 36020 RVA: 0x001E2B14 File Offset: 0x001E0D14
+	// Token: 0x0600604D RID: 24653 RVA: 0x001EB8C4 File Offset: 0x001E9AC4
 	private bool CheckHasCanReceive()
 	{
 		foreach (NewbieCourseV2 newbieCourseV in ActivityNewbieCourseV2Config.Instance.GetConfigList(base.Id))
@@ -127,9 +117,9 @@ public class ActivityNewbieCourseV2Data : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x04003E65 RID: 15973
+	// Token: 0x04003EFD RID: 16125
 	private readonly HashSet<int> ReceivedSet = new HashSet<int>();
 
-	// Token: 0x04003E66 RID: 15974
+	// Token: 0x04003EFE RID: 16126
 	private long ProtocolBeginOpenTime;
 }

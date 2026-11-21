@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000F44 RID: 3908
+	// Token: 0x02000F34 RID: 3892
 	public sealed class RhythmResultPayload : IMessage<RhythmResultPayload>, IMessage, IEquatable<RhythmResultPayload>, IDeepCloneable<RhythmResultPayload>, IBufferMessage
 	{
-		// Token: 0x06014E83 RID: 85635 RVA: 0x00308645 File Offset: 0x00306845
+		// Token: 0x06014D9E RID: 85406 RVA: 0x00306F89 File Offset: 0x00305189
 		[NullableContext(1)]
 		public static RhythmResultPayload Create()
 		{
 			return new RhythmResultPayload();
 		}
 
-		// Token: 0x17004584 RID: 17796
-		// (get) Token: 0x06014E84 RID: 85636 RVA: 0x0030864C File Offset: 0x0030684C
+		// Token: 0x1700455A RID: 17754
+		// (get) Token: 0x06014D9F RID: 85407 RVA: 0x00306F90 File Offset: 0x00305190
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004585 RID: 17797
-		// (get) Token: 0x06014E85 RID: 85637 RVA: 0x0030864F File Offset: 0x0030684F
+		// Token: 0x1700455B RID: 17755
+		// (get) Token: 0x06014DA0 RID: 85408 RVA: 0x00306F93 File Offset: 0x00305193
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014E86 RID: 85638 RVA: 0x00308656 File Offset: 0x00306856
+		// Token: 0x06014DA1 RID: 85409 RVA: 0x00306F9A File Offset: 0x0030519A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmResultPayload()
 		{
 		}
 
-		// Token: 0x06014E87 RID: 85639 RVA: 0x0030866C File Offset: 0x0030686C
+		// Token: 0x06014DA2 RID: 85410 RVA: 0x00306FB0 File Offset: 0x003051B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmResultPayload(RhythmResultPayload other) : this()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06014E88 RID: 85640 RVA: 0x003086F5 File Offset: 0x003068F5
+		// Token: 0x06014DA3 RID: 85411 RVA: 0x00307039 File Offset: 0x00305239
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmResultPayload Clone()
@@ -73,9 +73,9 @@ namespace Aki.Protocol
 			return new RhythmResultPayload(this);
 		}
 
-		// Token: 0x17004586 RID: 17798
-		// (get) Token: 0x06014E89 RID: 85641 RVA: 0x003086FD File Offset: 0x003068FD
-		// (set) Token: 0x06014E8A RID: 85642 RVA: 0x00308705 File Offset: 0x00306905
+		// Token: 0x1700455C RID: 17756
+		// (get) Token: 0x06014DA4 RID: 85412 RVA: 0x00307041 File Offset: 0x00305241
+		// (set) Token: 0x06014DA5 RID: 85413 RVA: 0x00307049 File Offset: 0x00305249
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Score
@@ -90,9 +90,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004587 RID: 17799
-		// (get) Token: 0x06014E8B RID: 85643 RVA: 0x0030870E File Offset: 0x0030690E
-		// (set) Token: 0x06014E8C RID: 85644 RVA: 0x00308716 File Offset: 0x00306916
+		// Token: 0x1700455D RID: 17757
+		// (get) Token: 0x06014DA6 RID: 85414 RVA: 0x00307052 File Offset: 0x00305252
+		// (set) Token: 0x06014DA7 RID: 85415 RVA: 0x0030705A File Offset: 0x0030525A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Accuracy
@@ -107,8 +107,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004588 RID: 17800
-		// (get) Token: 0x06014E8D RID: 85645 RVA: 0x0030871F File Offset: 0x0030691F
+		// Token: 0x1700455E RID: 17758
+		// (get) Token: 0x06014DA8 RID: 85416 RVA: 0x00307063 File Offset: 0x00305263
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> JudgementCount
@@ -119,9 +119,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004589 RID: 17801
-		// (get) Token: 0x06014E8E RID: 85646 RVA: 0x00308727 File Offset: 0x00306927
-		// (set) Token: 0x06014E8F RID: 85647 RVA: 0x0030872F File Offset: 0x0030692F
+		// Token: 0x1700455F RID: 17759
+		// (get) Token: 0x06014DA9 RID: 85417 RVA: 0x0030706B File Offset: 0x0030526B
+		// (set) Token: 0x06014DAA RID: 85418 RVA: 0x00307073 File Offset: 0x00305273
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MaxCombo
@@ -136,9 +136,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700458A RID: 17802
-		// (get) Token: 0x06014E90 RID: 85648 RVA: 0x00308738 File Offset: 0x00306938
-		// (set) Token: 0x06014E91 RID: 85649 RVA: 0x00308740 File Offset: 0x00306940
+		// Token: 0x17004560 RID: 17760
+		// (get) Token: 0x06014DAB RID: 85419 RVA: 0x0030707C File Offset: 0x0030527C
+		// (set) Token: 0x06014DAC RID: 85420 RVA: 0x00307084 File Offset: 0x00305284
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Completion
@@ -153,9 +153,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700458B RID: 17803
-		// (get) Token: 0x06014E92 RID: 85650 RVA: 0x00308749 File Offset: 0x00306949
-		// (set) Token: 0x06014E93 RID: 85651 RVA: 0x00308751 File Offset: 0x00306951
+		// Token: 0x17004561 RID: 17761
+		// (get) Token: 0x06014DAD RID: 85421 RVA: 0x0030708D File Offset: 0x0030528D
+		// (set) Token: 0x06014DAE RID: 85422 RVA: 0x00307095 File Offset: 0x00305295
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmShipRank Rank
@@ -170,9 +170,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700458C RID: 17804
-		// (get) Token: 0x06014E94 RID: 85652 RVA: 0x0030875A File Offset: 0x0030695A
-		// (set) Token: 0x06014E95 RID: 85653 RVA: 0x00308762 File Offset: 0x00306962
+		// Token: 0x17004562 RID: 17762
+		// (get) Token: 0x06014DAF RID: 85423 RVA: 0x0030709E File Offset: 0x0030529E
+		// (set) Token: 0x06014DB0 RID: 85424 RVA: 0x003070A6 File Offset: 0x003052A6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CostSecond
@@ -187,9 +187,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700458D RID: 17805
-		// (get) Token: 0x06014E96 RID: 85654 RVA: 0x0030876B File Offset: 0x0030696B
-		// (set) Token: 0x06014E97 RID: 85655 RVA: 0x00308773 File Offset: 0x00306973
+		// Token: 0x17004563 RID: 17763
+		// (get) Token: 0x06014DB1 RID: 85425 RVA: 0x003070AF File Offset: 0x003052AF
+		// (set) Token: 0x06014DB2 RID: 85426 RVA: 0x003070B7 File Offset: 0x003052B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int FeverCount
@@ -204,7 +204,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014E98 RID: 85656 RVA: 0x0030877C File Offset: 0x0030697C
+		// Token: 0x06014DB3 RID: 85427 RVA: 0x003070C0 File Offset: 0x003052C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -212,7 +212,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RhythmResultPayload);
 		}
 
-		// Token: 0x06014E99 RID: 85657 RVA: 0x0030878C File Offset: 0x0030698C
+		// Token: 0x06014DB4 RID: 85428 RVA: 0x003070D0 File Offset: 0x003052D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RhythmResultPayload other)
@@ -220,7 +220,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Score == other.Score && this.Accuracy == other.Accuracy && this.judgementCount_.Equals(other.judgementCount_) && this.MaxCombo == other.MaxCombo && this.Completion == other.Completion && this.Rank == other.Rank && this.CostSecond == other.CostSecond && this.FeverCount == other.FeverCount && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06014E9A RID: 85658 RVA: 0x0030883C File Offset: 0x00306A3C
+		// Token: 0x06014DB5 RID: 85429 RVA: 0x00307180 File Offset: 0x00305380
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -262,7 +262,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06014E9B RID: 85659 RVA: 0x00308925 File Offset: 0x00306B25
+		// Token: 0x06014DB6 RID: 85430 RVA: 0x00307269 File Offset: 0x00305469
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -270,7 +270,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06014E9C RID: 85660 RVA: 0x00308932 File Offset: 0x00306B32
+		// Token: 0x06014DB7 RID: 85431 RVA: 0x00307276 File Offset: 0x00305476
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -278,7 +278,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06014E9D RID: 85661 RVA: 0x0030893C File Offset: 0x00306B3C
+		// Token: 0x06014DB8 RID: 85432 RVA: 0x00307280 File Offset: 0x00305480
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -325,7 +325,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014E9E RID: 85662 RVA: 0x00308A34 File Offset: 0x00306C34
+		// Token: 0x06014DB9 RID: 85433 RVA: 0x00307378 File Offset: 0x00305578
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -367,7 +367,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06014E9F RID: 85663 RVA: 0x00308B18 File Offset: 0x00306D18
+		// Token: 0x06014DBA RID: 85434 RVA: 0x0030745C File Offset: 0x0030565C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RhythmResultPayload other)
@@ -408,7 +408,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06014EA0 RID: 85664 RVA: 0x00308BDD File Offset: 0x00306DDD
+		// Token: 0x06014DBB RID: 85435 RVA: 0x00307521 File Offset: 0x00305721
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -416,7 +416,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06014EA1 RID: 85665 RVA: 0x00308BE8 File Offset: 0x00306DE8
+		// Token: 0x06014DBC RID: 85436 RVA: 0x0030752C File Offset: 0x0030572C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -484,58 +484,58 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007E12 RID: 32274
+		// Token: 0x04007E3C RID: 32316
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007E13 RID: 32275
+		// Token: 0x04007E3D RID: 32317
 		public const int ScoreFieldNumber = 2;
 
-		// Token: 0x04007E14 RID: 32276
+		// Token: 0x04007E3E RID: 32318
 		private int score_;
 
-		// Token: 0x04007E15 RID: 32277
+		// Token: 0x04007E3F RID: 32319
 		public const int AccuracyFieldNumber = 3;
 
-		// Token: 0x04007E16 RID: 32278
+		// Token: 0x04007E40 RID: 32320
 		private int accuracy_;
 
-		// Token: 0x04007E17 RID: 32279
+		// Token: 0x04007E41 RID: 32321
 		public const int JudgementCountFieldNumber = 4;
 
-		// Token: 0x04007E18 RID: 32280
+		// Token: 0x04007E42 RID: 32322
 		private static readonly FieldCodec<int> _repeated_judgementCount_codec = FieldCodec.ForInt32(34U);
 
-		// Token: 0x04007E19 RID: 32281
+		// Token: 0x04007E43 RID: 32323
 		private readonly RepeatedField<int> judgementCount_ = new RepeatedField<int>();
 
-		// Token: 0x04007E1A RID: 32282
+		// Token: 0x04007E44 RID: 32324
 		public const int MaxComboFieldNumber = 5;
 
-		// Token: 0x04007E1B RID: 32283
+		// Token: 0x04007E45 RID: 32325
 		private int maxCombo_;
 
-		// Token: 0x04007E1C RID: 32284
+		// Token: 0x04007E46 RID: 32326
 		public const int CompletionFieldNumber = 6;
 
-		// Token: 0x04007E1D RID: 32285
+		// Token: 0x04007E47 RID: 32327
 		private int completion_;
 
-		// Token: 0x04007E1E RID: 32286
+		// Token: 0x04007E48 RID: 32328
 		public const int RankFieldNumber = 7;
 
-		// Token: 0x04007E1F RID: 32287
+		// Token: 0x04007E49 RID: 32329
 		private RhythmShipRank rank_;
 
-		// Token: 0x04007E20 RID: 32288
+		// Token: 0x04007E4A RID: 32330
 		public const int CostSecondFieldNumber = 8;
 
-		// Token: 0x04007E21 RID: 32289
+		// Token: 0x04007E4B RID: 32331
 		private int costSecond_;
 
-		// Token: 0x04007E22 RID: 32290
+		// Token: 0x04007E4C RID: 32332
 		public const int FeverCountFieldNumber = 9;
 
-		// Token: 0x04007E23 RID: 32291
+		// Token: 0x04007E4D RID: 32333
 		private int feverCount_;
 	}
 }

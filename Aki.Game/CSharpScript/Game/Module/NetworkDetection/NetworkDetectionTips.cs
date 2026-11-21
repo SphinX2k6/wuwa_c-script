@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.NetworkDetection
 {
-	// Token: 0x02005365 RID: 21349
+	// Token: 0x02004348 RID: 17224
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NetworkDetectionTips : UiPanelBase
 	{
-		// Token: 0x060368A2 RID: 223394 RVA: 0x00CE9C50 File Offset: 0x00CE7E50
+		// Token: 0x0602B7E8 RID: 178152 RVA: 0x00C38AD8 File Offset: 0x00C36CD8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,13 +26,13 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060368A3 RID: 223395 RVA: 0x00CE9CB9 File Offset: 0x00CE7EB9
+		// Token: 0x0602B7E9 RID: 178153 RVA: 0x00C38B41 File Offset: 0x00C36D41
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x060368A4 RID: 223396 RVA: 0x00CE9CCC File Offset: 0x00CE7ECC
+		// Token: 0x0602B7EA RID: 178154 RVA: 0x00C38B54 File Offset: 0x00C36D54
 		protected override void OnAfterShow()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			sequencePlayer.PlaySequence("Loop", false, null);
 		}
 
-		// Token: 0x060368A5 RID: 223397 RVA: 0x00CE9CF8 File Offset: 0x00CE7EF8
+		// Token: 0x0602B7EB RID: 178155 RVA: 0x00C38B80 File Offset: 0x00C36D80
 		public void SetTextureIconActive(bool active)
 		{
 			UUITexture texture = base.GetTexture(1);
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			texture.SetUIActive(active);
 		}
 
-		// Token: 0x060368A6 RID: 223398 RVA: 0x00CE9D0C File Offset: 0x00CE7F0C
+		// Token: 0x0602B7EC RID: 178156 RVA: 0x00C38B94 File Offset: 0x00C36D94
 		public void SetTipsText(string text)
 		{
 			UUIText text2 = base.GetText(0);
@@ -65,19 +65,19 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			text2.SetText(text, true);
 		}
 
-		// Token: 0x060368A7 RID: 223399 RVA: 0x00CE9D21 File Offset: 0x00CE7F21
+		// Token: 0x0602B7ED RID: 178157 RVA: 0x00C38BA9 File Offset: 0x00C36DA9
 		public void SetTipsLocalText(string textKey)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textKey, Array.Empty<object>());
 		}
 
-		// Token: 0x060368A8 RID: 223400 RVA: 0x00CE9D3A File Offset: 0x00CE7F3A
+		// Token: 0x0602B7EE RID: 178158 RVA: 0x00C38BC2 File Offset: 0x00C36DC2
 		protected override void OnAfterHide()
 		{
 			this.RemoveTipTimer();
 		}
 
-		// Token: 0x060368A9 RID: 223401 RVA: 0x00CE9D44 File Offset: 0x00CE7F44
+		// Token: 0x0602B7EF RID: 178159 RVA: 0x00C38BCC File Offset: 0x00C36DCC
 		public void ShowTip(string textKey)
 		{
 			this.SetTipsLocalText(textKey);
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			}, (float)TimeUtil.Instance.InverseMillisecond, null, null, true, 1f);
 		}
 
-		// Token: 0x060368AA RID: 223402 RVA: 0x00CE9D94 File Offset: 0x00CE7F94
+		// Token: 0x0602B7F0 RID: 178160 RVA: 0x00C38C1C File Offset: 0x00C36E1C
 		private void RemoveTipTimer()
 		{
 			if (this.TipTimerHandle != null && TimerSystem.GameplayTimeInstance.Has(this.TipTimerHandle))
@@ -98,21 +98,21 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			}
 		}
 
-		// Token: 0x0401CD60 RID: 118112
+		// Token: 0x040177F4 RID: 96244
 		[Nullable(2)]
 		private TimerHandle TipTimerHandle;
 
-		// Token: 0x0401CD61 RID: 118113
+		// Token: 0x040177F5 RID: 96245
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0200B5CD RID: 46541
+		// Token: 0x0200A006 RID: 40966
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04037127 RID: 225575
+			// Token: 0x04031B7F RID: 203647
 			TxtTips,
-			// Token: 0x04037128 RID: 225576
+			// Token: 0x04031B80 RID: 203648
 			TexIcon
 		}
 	}

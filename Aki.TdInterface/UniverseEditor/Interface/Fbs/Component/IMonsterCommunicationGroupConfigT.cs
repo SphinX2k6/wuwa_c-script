@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005570 RID: 21872
+	// Token: 0x02005B0E RID: 23310
 	public class IMonsterCommunicationGroupConfigT
 	{
-		// Token: 0x1700A192 RID: 41362
-		// (get) Token: 0x060242EB RID: 148203 RVA: 0x004FF36E File Offset: 0x004FD56E
-		// (set) Token: 0x060242EC RID: 148204 RVA: 0x004FF376 File Offset: 0x004FD576
+		// Token: 0x1700AA15 RID: 43541
+		// (get) Token: 0x060264D8 RID: 156888 RVA: 0x0053F26A File Offset: 0x0053D46A
+		// (set) Token: 0x060264D9 RID: 156889 RVA: 0x0053F272 File Offset: 0x0053D472
 		public int GroupId { get; set; }
 
-		// Token: 0x060242ED RID: 148205 RVA: 0x004FF37F File Offset: 0x004FD57F
+		// Token: 0x060264DA RID: 156890 RVA: 0x0053F27B File Offset: 0x0053D47B
 		public IMonsterCommunicationGroupConfigT()
 		{
 			this.GroupId = 0;

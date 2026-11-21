@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000264 RID: 612
+	// Token: 0x02000278 RID: 632
 	public class ConfigElementReactionMatrixAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000E5C RID: 3676 RVA: 0x000AA9C0 File Offset: 0x000A8BC0
+		// Token: 0x06000ED4 RID: 3796 RVA: 0x000B0C84 File Offset: 0x000AEE84
 		static ConfigElementReactionMatrixAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigElementReactionMatrixAll.CreateStaticDefaultValue), new Action(ConfigElementReactionMatrixAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000E5D RID: 3677 RVA: 0x000AA9E0 File Offset: 0x000A8BE0
+		// Token: 0x06000ED5 RID: 3797 RVA: 0x000B0CA4 File Offset: 0x000AEEA4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigElementReactionMatrixAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000E5E RID: 3678 RVA: 0x000AAA5F File Offset: 0x000A8C5F
+		// Token: 0x06000ED6 RID: 3798 RVA: 0x000B0D23 File Offset: 0x000AEF23
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigElementReactionMatrixAll.LogPair = null;
 			ConfigElementReactionMatrixAll.HandleId = 0;
 		}
 
-		// Token: 0x06000E5F RID: 3679 RVA: 0x000AAA6D File Offset: 0x000A8C6D
+		// Token: 0x06000ED7 RID: 3799 RVA: 0x000B0D31 File Offset: 0x000AEF31
 		public static void Init()
 		{
 			ConfigElementReactionMatrixAll.HandleId = ConfigCommon.InitDataStatement(ConfigElementReactionMatrixAll.HandleId, "db_element_info.db", "select BinData from `ElementReactionMatrix`");
 		}
 
-		// Token: 0x06000E60 RID: 3680 RVA: 0x000AAA88 File Offset: 0x000A8C88
+		// Token: 0x06000ED8 RID: 3800 RVA: 0x000B0D4C File Offset: 0x000AEF4C
 		[NullableContext(2)]
 		public static IReadOnlyList<ElementReactionMatrix> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040010A0 RID: 4256
+		// Token: 0x0400112C RID: 4396
 		private const string DB = "db_element_info.db";
 
-		// Token: 0x040010A1 RID: 4257
+		// Token: 0x0400112D RID: 4397
 		private const string FILE = "y.元素属性.xlsx";
 
-		// Token: 0x040010A2 RID: 4258
+		// Token: 0x0400112E RID: 4398
 		private const string TABLE = "ElementReactionMatrix";
 
-		// Token: 0x040010A3 RID: 4259
+		// Token: 0x0400112F RID: 4399
 		private const string COMMAND = "select BinData from `ElementReactionMatrix`";
 
-		// Token: 0x040010A4 RID: 4260
+		// Token: 0x04001130 RID: 4400
 		private const string KEY_PREFIX = "ElementReactionMatrixAll";
 
-		// Token: 0x040010A5 RID: 4261
+		// Token: 0x04001131 RID: 4401
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040010A6 RID: 4262
+		// Token: 0x04001132 RID: 4402
 		private static int HandleId;
 	}
 }

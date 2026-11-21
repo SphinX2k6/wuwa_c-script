@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x0200429D RID: 17053
+	// Token: 0x020032F9 RID: 13049
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/ECaughtDirectionType.ECaughtDirectionType")]
 	public enum ECaughtDirectionType : byte
 	{
-		// Token: 0x040172F2 RID: 94962
+		// Token: 0x04011FF4 RID: 73716
 		CaughtDirection,
-		// Token: 0x040172F3 RID: 94963
+		// Token: 0x04011FF5 RID: 73717
 		BoxDirection,
-		// Token: 0x040172F4 RID: 94964
+		// Token: 0x04011FF6 RID: 73718
 		SpeedDirection,
-		// Token: 0x040172F5 RID: 94965
+		// Token: 0x04011FF7 RID: 73719
 		None,
-		// Token: 0x040172F6 RID: 94966
+		// Token: 0x04011FF8 RID: 73720
 		ECaughtDirectionType_MAX
 	}
 }

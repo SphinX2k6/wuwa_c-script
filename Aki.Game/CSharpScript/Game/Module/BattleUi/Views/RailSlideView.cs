@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DAB RID: 23979
+	// Token: 0x02004D8F RID: 19855
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RailSlideView : UiTickViewBase
 	{
-		// Token: 0x0603CE48 RID: 249416 RVA: 0x00EA0BDF File Offset: 0x00E9EDDF
+		// Token: 0x06031DBF RID: 204223 RVA: 0x00DF1A8B File Offset: 0x00DEFC8B
 		public RailSlideView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603CE49 RID: 249417 RVA: 0x00EA0C00 File Offset: 0x00E9EE00
+		// Token: 0x06031DC0 RID: 204224 RVA: 0x00DF1AAC File Offset: 0x00DEFCAC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CE4A RID: 249418 RVA: 0x00EA0C6C File Offset: 0x00E9EE6C
+		// Token: 0x06031DC1 RID: 204225 RVA: 0x00DF1B18 File Offset: 0x00DEFD18
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RailSlideView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CE4B RID: 249419 RVA: 0x00EA0CAF File Offset: 0x00E9EEAF
+		// Token: 0x06031DC2 RID: 204226 RVA: 0x00DF1B5B File Offset: 0x00DEFD5B
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -55,19 +55,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add<int, int>(EEventName.BattleUiCurRoleDataChanged, new Action<int, int>(this.OnBattleUiCurRoleDataChanged));
 		}
 
-		// Token: 0x0603CE4C RID: 249420 RVA: 0x00EA0CD9 File Offset: 0x00E9EED9
+		// Token: 0x06031DC3 RID: 204227 RVA: 0x00DF1B85 File Offset: 0x00DEFD85
 		protected override void OnBeforeShow()
 		{
 			BattleUiModel.Instance.ChildViewData.SetChildVisible(EBattleUiVisibleReason.RoleSpecialState, EBattleUiChild.Joystick, false, true, 0);
 		}
 
-		// Token: 0x0603CE4D RID: 249421 RVA: 0x00EA0CF2 File Offset: 0x00E9EEF2
+		// Token: 0x06031DC4 RID: 204228 RVA: 0x00DF1B9E File Offset: 0x00DEFD9E
 		protected override void OnAfterHide()
 		{
 			BattleUiModel.Instance.ChildViewData.SetChildVisible(EBattleUiVisibleReason.RoleSpecialState, EBattleUiChild.Joystick, true, true, 0);
 		}
 
-		// Token: 0x0603CE4E RID: 249422 RVA: 0x00EA0D0C File Offset: 0x00E9EF0C
+		// Token: 0x06031DC5 RID: 204229 RVA: 0x00DF1BB8 File Offset: 0x00DEFDB8
 		public UniTask NewAllSkillItems()
 		{
 			RailSlideView.<NewAllSkillItems>d__15 <NewAllSkillItems>d__;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewAllSkillItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CE4F RID: 249423 RVA: 0x00EA0D50 File Offset: 0x00E9EF50
+		// Token: 0x06031DC6 RID: 204230 RVA: 0x00DF1BFC File Offset: 0x00DEFDFC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewSkillItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CE50 RID: 249424 RVA: 0x00EA0DA4 File Offset: 0x00E9EFA4
+		// Token: 0x06031DC7 RID: 204231 RVA: 0x00DF1C50 File Offset: 0x00DEFE50
 		private void RefreshAllSkillItems()
 		{
 			this.SkillItemList[0].RefreshByMoveType(EInputAxis.MoveRight, -1f, false);
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SkillItemList[1].RefreshKeyByActionName(RailSlideView.ActionNameList[1]);
 		}
 
-		// Token: 0x0603CE51 RID: 249425 RVA: 0x00EA0E19 File Offset: 0x00E9F019
+		// Token: 0x06031DC8 RID: 204232 RVA: 0x00DF1CC5 File Offset: 0x00DEFEC5
 		protected override void OnAddEventListener()
 		{
 			if (!Info.Instance.IsInTouch())
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CE52 RID: 249426 RVA: 0x00EA0E42 File Offset: 0x00E9F042
+		// Token: 0x06031DC9 RID: 204233 RVA: 0x00DF1CEE File Offset: 0x00DEFEEE
 		protected override void OnRemoveEventListener()
 		{
 			if (!Info.Instance.IsInTouch())
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CE53 RID: 249427 RVA: 0x00EA0E6C File Offset: 0x00E9F06C
+		// Token: 0x06031DCA RID: 204234 RVA: 0x00DF1D18 File Offset: 0x00DEFF18
 		protected override void OnBeforeDestroy()
 		{
 			foreach (MoveSkillItem moveSkillItem in this.SkillItemList)
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.BattleUiCurRoleDataChanged, new Action<int, int>(this.OnBattleUiCurRoleDataChanged));
 		}
 
-		// Token: 0x0603CE54 RID: 249428 RVA: 0x00EA0EEC File Offset: 0x00E9F0EC
+		// Token: 0x06031DCB RID: 204235 RVA: 0x00DF1D98 File Offset: 0x00DEFF98
 		private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (actionType != InputDistributeDefine.EActionType.Press)
@@ -152,13 +152,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CE55 RID: 249429 RVA: 0x00EA0F31 File Offset: 0x00E9F131
+		// Token: 0x06031DCC RID: 204236 RVA: 0x00DF1DDD File Offset: 0x00DEFFDD
 		private void OnBattleUiCurRoleDataChanged(int i, int i1)
 		{
 			this.RefreshRoleData();
 		}
 
-		// Token: 0x0603CE56 RID: 249430 RVA: 0x00EA0F3C File Offset: 0x00E9F13C
+		// Token: 0x06031DCD RID: 204237 RVA: 0x00DF1DE8 File Offset: 0x00DEFFE8
 		private void RefreshRoleData()
 		{
 			BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEntityEvents();
 		}
 
-		// Token: 0x0603CE57 RID: 249431 RVA: 0x00EA0F74 File Offset: 0x00E9F174
+		// Token: 0x06031DCE RID: 204238 RVA: 0x00DF1E20 File Offset: 0x00DF0020
 		private void AddEntityEvents()
 		{
 			if (this.RoleData == null)
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ListenForTagAddOrRemove(gameplayTagComponent, RailSlideView.ForbidMoveTagId, new BaseTagComponent.TTagSwitchedCallback(this.OnForbidMoveTagIdChanged), true);
 		}
 
-		// Token: 0x0603CE58 RID: 249432 RVA: 0x00EA0FE8 File Offset: 0x00E9F1E8
+		// Token: 0x06031DCF RID: 204239 RVA: 0x00DF1E94 File Offset: 0x00DF0094
 		private void RemoveEntityEvents()
 		{
 			foreach (ITagTask tagTask in this.TagTaskList)
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RoleData = null;
 		}
 
-		// Token: 0x0603CE59 RID: 249433 RVA: 0x00EA104C File Offset: 0x00E9F24C
+		// Token: 0x06031DD0 RID: 204240 RVA: 0x00DF1EF8 File Offset: 0x00DF00F8
 		private void ListenForTagAddOrRemove(BaseTagComponent tagComponent, int tagId, BaseTagComponent.TTagSwitchedCallback callback, bool checkExistImmediately = false)
 		{
 			if (checkExistImmediately && tagComponent.HasTag(tagId))
@@ -213,26 +213,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CE5A RID: 249434 RVA: 0x00EA108C File Offset: 0x00E9F28C
+		// Token: 0x06031DD1 RID: 204241 RVA: 0x00DF1F38 File Offset: 0x00DF0138
 		private void OnEnableTag1Changed(int tagId, bool tagExist)
 		{
 			this.SkillItemList[0].SetCustomDynamicEffectId(tagExist ? 1003 : 0);
 		}
 
-		// Token: 0x0603CE5B RID: 249435 RVA: 0x00EA10AA File Offset: 0x00E9F2AA
+		// Token: 0x06031DD2 RID: 204242 RVA: 0x00DF1F56 File Offset: 0x00DF0156
 		private void OnEnableTag2Changed(int tagId, bool tagExist)
 		{
 			this.SkillItemList[1].SetCustomDynamicEffectId(tagExist ? 1003 : 0);
 		}
 
-		// Token: 0x0603CE5C RID: 249436 RVA: 0x00EA10C8 File Offset: 0x00E9F2C8
+		// Token: 0x06031DD3 RID: 204243 RVA: 0x00DF1F74 File Offset: 0x00DF0174
 		private void OnForbidMoveTagIdChanged(int tagId, bool tagExist)
 		{
 			this.SkillItemList[0].SetUiActive(!tagExist);
 			this.SkillItemList[1].SetUiActive(!tagExist);
 		}
 
-		// Token: 0x0603CE5D RID: 249437 RVA: 0x00EA10F4 File Offset: 0x00E9F2F4
+		// Token: 0x06031DD4 RID: 204244 RVA: 0x00DF1FA0 File Offset: 0x00DF01A0
 		protected override void OnTick(float delta)
 		{
 			foreach (MoveSkillItem moveSkillItem in this.SkillItemList)
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FB79 RID: 129913
+		// Token: 0x0401A636 RID: 108086
 		[StaticVariableRuleIgnore]
 		private static readonly string[] ActionNameList = new string[]
 		{
@@ -249,38 +249,38 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			"向右移动"
 		};
 
-		// Token: 0x0401FB7A RID: 129914
+		// Token: 0x0401A637 RID: 108087
 		[StaticVariableRuleIgnore]
 		private static readonly int Tag1 = GameplayTagDefine.EGameplayTagId["关卡.关卡运动.关卡运动类型.滑轨.能够左跳"];
 
-		// Token: 0x0401FB7B RID: 129915
+		// Token: 0x0401A638 RID: 108088
 		[StaticVariableRuleIgnore]
 		private static readonly int Tag2 = GameplayTagDefine.EGameplayTagId["关卡.关卡运动.关卡运动类型.滑轨.能够右跳"];
 
-		// Token: 0x0401FB7C RID: 129916
+		// Token: 0x0401A639 RID: 108089
 		[StaticVariableRuleIgnore]
 		private static readonly int ForbidMoveTagId = GameplayTagDefine.EGameplayTagId["关卡.关卡运动.关卡运动类型.滑轨UI.隐藏跳跃按键"];
 
-		// Token: 0x0401FB7D RID: 129917
+		// Token: 0x0401A63A RID: 108090
 		private const int EFFECT_ID = 1003;
 
-		// Token: 0x0401FB7E RID: 129918
+		// Token: 0x0401A63B RID: 108091
 		private readonly List<MoveSkillItem> SkillItemList = new List<MoveSkillItem>();
 
-		// Token: 0x0401FB7F RID: 129919
+		// Token: 0x0401A63C RID: 108092
 		[Nullable(2)]
 		private BattleUiRoleData RoleData;
 
-		// Token: 0x0401FB80 RID: 129920
+		// Token: 0x0401A63D RID: 108093
 		private readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 
-		// Token: 0x0200C086 RID: 49286
+		// Token: 0x0200AA90 RID: 43664
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A192 RID: 237970
+			// Token: 0x04034B66 RID: 215910
 			Item1,
-			// Token: 0x0403A193 RID: 237971
+			// Token: 0x04034B67 RID: 215911
 			Item2
 		}
 	}

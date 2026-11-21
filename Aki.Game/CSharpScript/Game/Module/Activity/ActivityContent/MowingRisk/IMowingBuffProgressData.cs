@@ -3,48 +3,48 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063B5 RID: 25525
+	// Token: 0x02005333 RID: 21299
 	[NullableContext(1)]
 	public interface IMowingBuffProgressData
 	{
-		// Token: 0x17009385 RID: 37765
-		// (get) Token: 0x06040364 RID: 263012
-		// (set) Token: 0x06040365 RID: 263013
+		// Token: 0x170066E7 RID: 26343
+		// (get) Token: 0x06035025 RID: 217125
+		// (set) Token: 0x06035026 RID: 217126
 		int ArtifactId { get; set; }
 
-		// Token: 0x17009386 RID: 37766
-		// (get) Token: 0x06040366 RID: 263014
-		// (set) Token: 0x06040367 RID: 263015
+		// Token: 0x170066E8 RID: 26344
+		// (get) Token: 0x06035027 RID: 217127
+		// (set) Token: 0x06035028 RID: 217128
 		int CurBasicBuffCount { get; set; }
 
-		// Token: 0x17009387 RID: 37767
-		// (get) Token: 0x06040368 RID: 263016
-		// (set) Token: 0x06040369 RID: 263017
+		// Token: 0x170066E9 RID: 26345
+		// (get) Token: 0x06035029 RID: 217129
+		// (set) Token: 0x0603502A RID: 217130
 		int MaxBasicBuffCount { get; set; }
 
-		// Token: 0x17009388 RID: 37768
-		// (get) Token: 0x0604036A RID: 263018
-		// (set) Token: 0x0604036B RID: 263019
+		// Token: 0x170066EA RID: 26346
+		// (get) Token: 0x0603502B RID: 217131
+		// (set) Token: 0x0603502C RID: 217132
 		string CountTextId { get; set; }
 
-		// Token: 0x17009389 RID: 37769
-		// (get) Token: 0x0604036C RID: 263020
-		// (set) Token: 0x0604036D RID: 263021
+		// Token: 0x170066EB RID: 26347
+		// (get) Token: 0x0603502D RID: 217133
+		// (set) Token: 0x0603502E RID: 217134
 		string[] CountTextArgs { get; set; }
 
-		// Token: 0x1700938A RID: 37770
-		// (get) Token: 0x0604036E RID: 263022
-		// (set) Token: 0x0604036F RID: 263023
+		// Token: 0x170066EC RID: 26348
+		// (get) Token: 0x0603502F RID: 217135
+		// (set) Token: 0x06035030 RID: 217136
 		float ProgressPercentage { get; set; }
 
-		// Token: 0x1700938B RID: 37771
-		// (get) Token: 0x06040370 RID: 263024
-		// (set) Token: 0x06040371 RID: 263025
+		// Token: 0x170066ED RID: 26349
+		// (get) Token: 0x06035031 RID: 217137
+		// (set) Token: 0x06035032 RID: 217138
 		IMowingBuffUnitData[] SuperBuffList { get; set; }
 
-		// Token: 0x1700938C RID: 37772
-		// (get) Token: 0x06040372 RID: 263026
-		// (set) Token: 0x06040373 RID: 263027
+		// Token: 0x170066EE RID: 26350
+		// (get) Token: 0x06035033 RID: 217139
+		// (set) Token: 0x06035034 RID: 217140
 		IMowingBuffIntroduceData IntroduceData { get; set; }
 	}
 }

@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Actor
 {
-	// Token: 0x02005EFB RID: 24315
+	// Token: 0x0200653E RID: 25918
 	public class ILevelRefDataT
 	{
-		// Token: 0x1700B5C8 RID: 46536
-		// (get) Token: 0x06029C3E RID: 171070 RVA: 0x005BB1F4 File Offset: 0x005B93F4
-		// (set) Token: 0x06029C3F RID: 171071 RVA: 0x005BB1FC File Offset: 0x005B93FC
+		// Token: 0x1700BF33 RID: 48947
+		// (get) Token: 0x0602C2F2 RID: 180978 RVA: 0x006046D8 File Offset: 0x006028D8
+		// (set) Token: 0x0602C2F3 RID: 180979 RVA: 0x006046E0 File Offset: 0x006028E0
 		public string LevelPath { get; set; }
 
-		// Token: 0x1700B5C9 RID: 46537
-		// (get) Token: 0x06029C40 RID: 171072 RVA: 0x005BB205 File Offset: 0x005B9405
-		// (set) Token: 0x06029C41 RID: 171073 RVA: 0x005BB20D File Offset: 0x005B940D
+		// Token: 0x1700BF34 RID: 48948
+		// (get) Token: 0x0602C2F4 RID: 180980 RVA: 0x006046E9 File Offset: 0x006028E9
+		// (set) Token: 0x0602C2F5 RID: 180981 RVA: 0x006046F1 File Offset: 0x006028F1
 		public List<IStreamingGroupT> StreamingGroups { get; set; }
 
-		// Token: 0x06029C42 RID: 171074 RVA: 0x005BB216 File Offset: 0x005B9416
+		// Token: 0x0602C2F6 RID: 180982 RVA: 0x006046FA File Offset: 0x006028FA
 		public ILevelRefDataT()
 		{
 			this.LevelPath = null;

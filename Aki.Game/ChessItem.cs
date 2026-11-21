@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020011CD RID: 4557
+// Token: 0x02000681 RID: 1665
 [NullableContext(1)]
 [Nullable(0)]
 public class ChessItem
 {
-	// Token: 0x06007964 RID: 31076 RVA: 0x00199B78 File Offset: 0x00197D78
+	// Token: 0x06004CFB RID: 19707 RVA: 0x001A2828 File Offset: 0x001A0A28
 	public void Init(int id, IChessAgent agent, bool rotationIsForward)
 	{
 		this.Id = id;
@@ -16,18 +16,18 @@ public class ChessItem
 		this.RotationIsForwardInternal = rotationIsForward;
 	}
 
-	// Token: 0x06007965 RID: 31077 RVA: 0x00199B8F File Offset: 0x00197D8F
+	// Token: 0x06004CFC RID: 19708 RVA: 0x001A283F File Offset: 0x001A0A3F
 	public virtual void OnClear()
 	{
 	}
 
-	// Token: 0x06007966 RID: 31078 RVA: 0x00199B91 File Offset: 0x00197D91
+	// Token: 0x06004CFD RID: 19709 RVA: 0x001A2841 File Offset: 0x001A0A41
 	public int GetId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x06007967 RID: 31079 RVA: 0x00199B9C File Offset: 0x00197D9C
+	// Token: 0x06004CFE RID: 19710 RVA: 0x001A284C File Offset: 0x001A0A4C
 	public void SetCurrentPoint(ChessboardPoint point)
 	{
 		ChessboardPoint currentPoint = this.CurrentPoint;
@@ -54,20 +54,20 @@ public class ChessItem
 		}
 	}
 
-	// Token: 0x06007968 RID: 31080 RVA: 0x00199C10 File Offset: 0x00197E10
+	// Token: 0x06004CFF RID: 19711 RVA: 0x001A28C0 File Offset: 0x001A0AC0
 	[NullableContext(2)]
 	public ChessboardPoint GetCurrentPoint()
 	{
 		return this.CurrentPoint;
 	}
 
-	// Token: 0x06007969 RID: 31081 RVA: 0x00199C18 File Offset: 0x00197E18
+	// Token: 0x06004D00 RID: 19712 RVA: 0x001A28C8 File Offset: 0x001A0AC8
 	public int GetReachTerminalTimes()
 	{
 		return this.ReachTerminalTimes;
 	}
 
-	// Token: 0x0600796A RID: 31082 RVA: 0x00199C20 File Offset: 0x00197E20
+	// Token: 0x06004D01 RID: 19713 RVA: 0x001A28D0 File Offset: 0x001A0AD0
 	[NullableContext(2)]
 	public Vector GetLocation()
 	{
@@ -79,13 +79,13 @@ public class ChessItem
 		return agent.GetLocation();
 	}
 
-	// Token: 0x0600796B RID: 31083 RVA: 0x00199C33 File Offset: 0x00197E33
+	// Token: 0x06004D02 RID: 19714 RVA: 0x001A28E3 File Offset: 0x001A0AE3
 	public bool RotationIsForward()
 	{
 		return this.RotationIsForwardInternal;
 	}
 
-	// Token: 0x0600796C RID: 31084 RVA: 0x00199C3C File Offset: 0x00197E3C
+	// Token: 0x06004D03 RID: 19715 RVA: 0x001A28EC File Offset: 0x001A0AEC
 	public virtual UniTask MoveAsync(Vector location, Rotator rotator, bool performIsForward)
 	{
 		ChessItem.<MoveAsync>d__14 <MoveAsync>d__;
@@ -99,7 +99,7 @@ public class ChessItem
 		return <MoveAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600796D RID: 31085 RVA: 0x00199C97 File Offset: 0x00197E97
+	// Token: 0x06004D04 RID: 19716 RVA: 0x001A2947 File Offset: 0x001A0B47
 	public virtual void Teleport(Vector location, Rotator rotator)
 	{
 		if (this.CurrentState != EChessStateType.Idle || this.Agent == null)
@@ -109,7 +109,7 @@ public class ChessItem
 		this.Agent.Teleport(location, rotator);
 	}
 
-	// Token: 0x0600796E RID: 31086 RVA: 0x00199CB8 File Offset: 0x00197EB8
+	// Token: 0x06004D05 RID: 19717 RVA: 0x001A2968 File Offset: 0x001A0B68
 	public virtual UniTask PerformAsync(int type)
 	{
 		ChessItem.<PerformAsync>d__16 <PerformAsync>d__;
@@ -121,23 +121,23 @@ public class ChessItem
 		return <PerformAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x040037DA RID: 14298
+	// Token: 0x04003873 RID: 14451
 	private int Id;
 
-	// Token: 0x040037DB RID: 14299
+	// Token: 0x04003874 RID: 14452
 	protected EChessStateType CurrentState;
 
-	// Token: 0x040037DC RID: 14300
+	// Token: 0x04003875 RID: 14453
 	[Nullable(2)]
 	protected ChessboardPoint CurrentPoint;
 
-	// Token: 0x040037DD RID: 14301
+	// Token: 0x04003876 RID: 14454
 	[Nullable(2)]
 	protected IChessAgent Agent;
 
-	// Token: 0x040037DE RID: 14302
+	// Token: 0x04003877 RID: 14455
 	private int ReachTerminalTimes;
 
-	// Token: 0x040037DF RID: 14303
+	// Token: 0x04003878 RID: 14456
 	private bool RotationIsForwardInternal = true;
 }

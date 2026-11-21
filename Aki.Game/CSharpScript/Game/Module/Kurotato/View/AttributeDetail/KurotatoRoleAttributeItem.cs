@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -9,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.AttributeDetail
 {
-	// Token: 0x02005783 RID: 22403
+	// Token: 0x0200475A RID: 18266
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,9 +17,9 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttributeDetail
 	})]
 	public class KurotatoRoleAttributeItem : GridProxyAbstract<IKurotatoRoleSkillInfo>
 	{
-		// Token: 0x17008878 RID: 34936
-		// (get) Token: 0x06038E8D RID: 233101 RVA: 0x00D867BD File Offset: 0x00D849BD
-		// (set) Token: 0x06038E8E RID: 233102 RVA: 0x00D867C5 File Offset: 0x00D849C5
+		// Token: 0x17005C40 RID: 23616
+		// (get) Token: 0x0602DD9D RID: 187805 RVA: 0x00CD5501 File Offset: 0x00CD3701
+		// (set) Token: 0x0602DD9E RID: 187806 RVA: 0x00CD5509 File Offset: 0x00CD3709
 		[Nullable(new byte[]
 		{
 			2,
@@ -42,13 +41,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttributeDetail
 			1
 		})] set; }
 
-		// Token: 0x06038E8F RID: 233103 RVA: 0x00D867CE File Offset: 0x00D849CE
+		// Token: 0x0602DD9F RID: 187807 RVA: 0x00CD5512 File Offset: 0x00CD3712
 		public override void Refresh(IKurotatoRoleSkillInfo data, bool isSelected, int gridIndex)
 		{
 			this.Update(data);
 		}
 
-		// Token: 0x06038E90 RID: 233104 RVA: 0x00D867D8 File Offset: 0x00D849D8
+		// Token: 0x0602DDA0 RID: 187808 RVA: 0x00CD551C File Offset: 0x00CD371C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -68,14 +67,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttributeDetail
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038E91 RID: 233105 RVA: 0x00D868A4 File Offset: 0x00D84AA4
+		// Token: 0x0602DDA1 RID: 187809 RVA: 0x00CD55E8 File Offset: 0x00CD37E8
 		public void Update(IKurotatoRoleSkillInfo data)
 		{
 			base.GetSprite(0).useChangeColor = (base.GridIndex % 2 == 1);
 			KurotatoProperty value = KurotatoConfig.Instance.GetPropertyById(data.AttrId).Value;
 			base.SetTextureByPath(value.Icon, base.GetTexture(1), null, null);
 			base.GetText(2).ShowTextNew(value.ShowName);
-			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), value.Desc, value.DescParamsIter().ToArray<string>());
+			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), value.Desc, NoLinq.ToArray<string>(value.DescParamsIter()));
 			UUIText text = base.GetText(4);
 			bool valueOrDefault = data.IsLocked.GetValueOrDefault();
 			int num = valueOrDefault ? data.LockedValue.GetValueOrDefault() : data.Value;
@@ -85,19 +84,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttributeDetail
 			KurotatoUtil.ApplyAttrColor(text, rawValue, (baseValue != null) ? new float?((float)baseValue.GetValueOrDefault()) : null, valueOrDefault);
 		}
 
-		// Token: 0x0200B9A5 RID: 47525
+		// Token: 0x0200A3BC RID: 41916
 		[NullableContext(0)]
 		private enum ERoleAttrItemDefine
 		{
-			// Token: 0x0403821B RID: 229915
+			// Token: 0x04032C0D RID: 207885
 			SpriteBg,
-			// Token: 0x0403821C RID: 229916
+			// Token: 0x04032C0E RID: 207886
 			AttrIconTexture,
-			// Token: 0x0403821D RID: 229917
+			// Token: 0x04032C0F RID: 207887
 			AttrNameText,
-			// Token: 0x0403821E RID: 229918
+			// Token: 0x04032C10 RID: 207888
 			TextDescription,
-			// Token: 0x0403821F RID: 229919
+			// Token: 0x04032C11 RID: 207889
 			AttrValue
 		}
 	}

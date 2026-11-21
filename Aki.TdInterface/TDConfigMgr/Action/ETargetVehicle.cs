@@ -3,23 +3,23 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016CD RID: 5837
+	// Token: 0x02001847 RID: 6215
 	[EnumExtensions]
 	public enum ETargetVehicle
 	{
-		// Token: 0x04004EE2 RID: 20194
+		// Token: 0x04005308 RID: 21256
 		Current,
-		// Token: 0x04004EE3 RID: 20195
+		// Token: 0x04005309 RID: 21257
 		Self,
-		// Token: 0x04004EE4 RID: 20196
+		// Token: 0x0400530A RID: 21258
 		Appointed,
-		// Token: 0x04004EE5 RID: 20197
+		// Token: 0x0400530B RID: 21259
 		Triggered,
-		// Token: 0x04004EE6 RID: 20198
+		// Token: 0x0400530C RID: 21260
 		FishingBoat,
-		// Token: 0x04004EE7 RID: 20199
+		// Token: 0x0400530D RID: 21261
 		VehicleTeam,
-		// Token: 0x04004EE8 RID: 20200
+		// Token: 0x0400530E RID: 21262
 		PlayerMotor
 	}
 }

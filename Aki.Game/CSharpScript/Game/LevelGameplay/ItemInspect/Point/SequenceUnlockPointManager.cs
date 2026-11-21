@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Point
 {
-	// Token: 0x02006DF1 RID: 28145
+	// Token: 0x02005F70 RID: 24432
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SequenceUnlockPointManager : ItemInspectPointManager
 	{
-		// Token: 0x06044AAB RID: 281259 RVA: 0x010F3164 File Offset: 0x010F1364
+		// Token: 0x0603AC0F RID: 240655 RVA: 0x0109D3B0 File Offset: 0x0109B5B0
 		public override void Init(ISequenceUnlockPoints config)
 		{
 			foreach (ISequenceInteractStage sequenceInteractStage in config.Stages)
@@ -26,7 +25,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Point
 			}
 		}
 
-		// Token: 0x06044AAC RID: 281260 RVA: 0x010F3218 File Offset: 0x010F1418
+		// Token: 0x0603AC10 RID: 240656 RVA: 0x0109D464 File Offset: 0x0109B664
 		protected override bool IsCurrentStageComplete()
 		{
 			if (this.CurrentStageIndex >= this.PointGroups.Count)
@@ -46,7 +45,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Point
 			return true;
 		}
 
-		// Token: 0x06044AAD RID: 281261 RVA: 0x010F3294 File Offset: 0x010F1494
+		// Token: 0x0603AC11 RID: 240657 RVA: 0x0109D4E0 File Offset: 0x0109B6E0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -54,28 +53,26 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Point
 		})]
 		public override List<IInteractEffect> GetCurrentStageEnterEffects()
 		{
-			ISequenceInteractStage sequenceInteractStage = this.StageConfigs.ElementAtOrDefault(this.CurrentStageIndex);
-			if (sequenceInteractStage == null)
+			if (this.CurrentStageIndex < 0 || this.CurrentStageIndex >= this.StageConfigs.Count)
 			{
 				return null;
 			}
-			return sequenceInteractStage.EnterStageEffects;
+			return this.StageConfigs[this.CurrentStageIndex].EnterStageEffects;
 		}
 
-		// Token: 0x06044AAE RID: 281262 RVA: 0x010F32B4 File Offset: 0x010F14B4
+		// Token: 0x0603AC12 RID: 240658 RVA: 0x0109D518 File Offset: 0x0109B718
 		public override bool ShouldResetAfterCurrentStageEnd()
 		{
-			ISequenceInteractStage sequenceInteractStage = this.StageConfigs.ElementAtOrDefault(this.CurrentStageIndex);
-			return sequenceInteractStage != null && sequenceInteractStage.IsResetAfterStageEnd.GetValueOrDefault();
+			return this.CurrentStageIndex >= 0 && this.CurrentStageIndex < this.StageConfigs.Count && this.StageConfigs[this.CurrentStageIndex].IsResetAfterStageEnd.GetValueOrDefault();
 		}
 
-		// Token: 0x06044AAF RID: 281263 RVA: 0x010F32E5 File Offset: 0x010F14E5
+		// Token: 0x0603AC13 RID: 240659 RVA: 0x0109D561 File Offset: 0x0109B761
 		public override bool HasNextStage()
 		{
 			return this.CurrentStageIndex + 1 < this.PointGroups.Count;
 		}
 
-		// Token: 0x06044AB0 RID: 281264 RVA: 0x010F32FC File Offset: 0x010F14FC
+		// Token: 0x0603AC14 RID: 240660 RVA: 0x0109D578 File Offset: 0x0109B778
 		public override bool AdvanceToNextStage()
 		{
 			if (!this.HasNextStage())
@@ -86,34 +83,32 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Point
 			return true;
 		}
 
-		// Token: 0x06044AB1 RID: 281265 RVA: 0x010F3318 File Offset: 0x010F1518
+		// Token: 0x0603AC15 RID: 240661 RVA: 0x0109D594 File Offset: 0x0109B794
 		public override void ActivateCurrentStage()
 		{
-			List<ItemInspectPoint> list = this.PointGroups.ElementAtOrDefault(this.CurrentStageIndex);
-			if (list == null)
+			if (this.CurrentStageIndex < 0 || this.CurrentStageIndex >= this.PointGroups.Count)
 			{
 				return;
 			}
-			foreach (ItemInspectPoint itemInspectPoint in list)
+			foreach (ItemInspectPoint itemInspectPoint in this.PointGroups[this.CurrentStageIndex])
 			{
 				itemInspectPoint.IsActive = true;
 			}
 		}
 
-		// Token: 0x06044AB2 RID: 281266 RVA: 0x010F337C File Offset: 0x010F157C
+		// Token: 0x0603AC16 RID: 240662 RVA: 0x0109D610 File Offset: 0x0109B810
 		public override EInteractPointInteractionType? GetCurrentStageInteractionType()
 		{
-			List<ItemInspectPoint> list = this.PointGroups.ElementAtOrDefault(this.CurrentStageIndex);
-			if (list == null)
+			if (this.CurrentStageIndex < 0 || this.CurrentStageIndex >= this.PointGroups.Count)
 			{
 				return null;
 			}
-			ItemInspectPoint itemInspectPoint = list.ElementAtOrDefault(0);
-			if (itemInspectPoint == null)
+			List<ItemInspectPoint> list = this.PointGroups[this.CurrentStageIndex];
+			if (list == null || list.Count == 0)
 			{
 				return null;
 			}
-			IInteractPointInteraction interactionConfig = itemInspectPoint.InteractionConfig;
+			IInteractPointInteraction interactionConfig = list[0].InteractionConfig;
 			if (interactionConfig == null)
 			{
 				return null;
@@ -121,15 +116,15 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Point
 			return new EInteractPointInteractionType?(interactionConfig.Type);
 		}
 
-		// Token: 0x06044AB3 RID: 281267 RVA: 0x010F33DC File Offset: 0x010F15DC
+		// Token: 0x0603AC17 RID: 240663 RVA: 0x0109D690 File Offset: 0x0109B890
 		[NullableContext(2)]
 		public override ItemInspectPoint GetCurrentStageDragPoint()
 		{
-			List<ItemInspectPoint> list = this.PointGroups.ElementAtOrDefault(this.CurrentStageIndex);
-			if (list == null)
+			if (this.CurrentStageIndex < 0 || this.CurrentStageIndex >= this.PointGroups.Count)
 			{
 				return null;
 			}
+			List<ItemInspectPoint> list = this.PointGroups[this.CurrentStageIndex];
 			ItemInspectPoint itemInspectPoint = null;
 			foreach (ItemInspectPoint itemInspectPoint2 in list)
 			{
@@ -152,13 +147,13 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Point
 			return itemInspectPoint;
 		}
 
-		// Token: 0x04023B99 RID: 146329
+		// Token: 0x0401EE3B RID: 126523
 		private int CurrentStageIndex;
 
-		// Token: 0x04023B9A RID: 146330
+		// Token: 0x0401EE3C RID: 126524
 		private readonly List<List<ItemInspectPoint>> PointGroups = new List<List<ItemInspectPoint>>();
 
-		// Token: 0x04023B9B RID: 146331
+		// Token: 0x0401EE3D RID: 126525
 		private readonly List<ISequenceInteractStage> StageConfigs = new List<ISequenceInteractStage>();
 	}
 }

@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View
 {
-	// Token: 0x02005C1A RID: 23578
+	// Token: 0x02004BFA RID: 19450
 	public class BossPilingRewardTabItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603B93D RID: 244029 RVA: 0x00E35744 File Offset: 0x00E33944
+		// Token: 0x06030888 RID: 198792 RVA: 0x00D85AA0 File Offset: 0x00D83CA0
 		[NullableContext(1)]
 		public void SetClickCallBack(Action<BossPilingRewardTabItem> callback)
 		{
 			this.ClickCallBack = callback;
 		}
 
-		// Token: 0x0603B93E RID: 244030 RVA: 0x00E35750 File Offset: 0x00E33950
+		// Token: 0x06030889 RID: 198793 RVA: 0x00D85AAC File Offset: 0x00D83CAC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B93F RID: 244031 RVA: 0x00E35838 File Offset: 0x00E33A38
+		// Token: 0x0603088A RID: 198794 RVA: 0x00D85B94 File Offset: 0x00D83D94
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.Id = data;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0603B940 RID: 244032 RVA: 0x00E358D8 File Offset: 0x00E33AD8
+		// Token: 0x0603088B RID: 198795 RVA: 0x00D85C34 File Offset: 0x00D83E34
 		public void RefreshRedDot()
 		{
 			BossPilingActivityData activityData = BossPilingModel.Instance.GetActivityData();
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			item.SetUIActive(activityData.CheckLevelTaskRedDot(this.Id));
 		}
 
-		// Token: 0x0603B941 RID: 244033 RVA: 0x00E3590D File Offset: 0x00E33B0D
+		// Token: 0x0603088C RID: 198796 RVA: 0x00D85C69 File Offset: 0x00D83E69
 		private void OnClickToggle(EToggleState state)
 		{
 			Action<BossPilingRewardTabItem> clickCallBack = this.ClickCallBack;
@@ -93,22 +93,22 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			clickCallBack(this);
 		}
 
-		// Token: 0x0603B942 RID: 244034 RVA: 0x00E35920 File Offset: 0x00E33B20
+		// Token: 0x0603088D RID: 198797 RVA: 0x00D85C7C File Offset: 0x00D83E7C
 		public void SetToggleUnCheck()
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603B943 RID: 244035 RVA: 0x00E35933 File Offset: 0x00E33B33
+		// Token: 0x0603088E RID: 198798 RVA: 0x00D85C8F File Offset: 0x00D83E8F
 		public int GetLevelId()
 		{
 			return this.Id;
 		}
 
-		// Token: 0x0401F054 RID: 127060
+		// Token: 0x04019B05 RID: 105221
 		private int Id;
 
-		// Token: 0x0401F055 RID: 127061
+		// Token: 0x04019B06 RID: 105222
 		[Nullable(new byte[]
 		{
 			2,
@@ -116,16 +116,16 @@ namespace CSharpScript.Game.Module.BossPiling.View
 		})]
 		public Action<BossPilingRewardTabItem> ClickCallBack;
 
-		// Token: 0x0200BE06 RID: 48646
+		// Token: 0x0200A80E RID: 43022
 		private enum ETab
 		{
-			// Token: 0x040394C1 RID: 234689
+			// Token: 0x04033E84 RID: 212612
 			Toggle,
-			// Token: 0x040394C2 RID: 234690
+			// Token: 0x04033E85 RID: 212613
 			Text,
-			// Token: 0x040394C3 RID: 234691
+			// Token: 0x04033E86 RID: 212614
 			Texture,
-			// Token: 0x040394C4 RID: 234692
+			// Token: 0x04033E87 RID: 212615
 			RedDotItem
 		}
 	}

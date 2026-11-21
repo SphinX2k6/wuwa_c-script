@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A4B RID: 27211
+	// Token: 0x0200716D RID: 29037
 	public class ILongPressInteractStyleConfig_UnionUnion
 	{
-		// Token: 0x1700C9E4 RID: 51684
-		// (get) Token: 0x0602FA4C RID: 195148 RVA: 0x0067C284 File Offset: 0x0067A484
-		// (set) Token: 0x0602FA4D RID: 195149 RVA: 0x0067C28C File Offset: 0x0067A48C
+		// Token: 0x1700D48F RID: 54415
+		// (get) Token: 0x06032772 RID: 206706 RVA: 0x006D2344 File Offset: 0x006D0544
+		// (set) Token: 0x06032773 RID: 206707 RVA: 0x006D234C File Offset: 0x006D054C
 		public ILongPressInteractStyleConfig_Union Type { get; set; }
 
-		// Token: 0x1700C9E5 RID: 51685
-		// (get) Token: 0x0602FA4E RID: 195150 RVA: 0x0067C295 File Offset: 0x0067A495
-		// (set) Token: 0x0602FA4F RID: 195151 RVA: 0x0067C29D File Offset: 0x0067A49D
+		// Token: 0x1700D490 RID: 54416
+		// (get) Token: 0x06032774 RID: 206708 RVA: 0x006D2355 File Offset: 0x006D0555
+		// (set) Token: 0x06032775 RID: 206709 RVA: 0x006D235D File Offset: 0x006D055D
 		public object Value { get; set; }
 
-		// Token: 0x0602FA50 RID: 195152 RVA: 0x0067C2A6 File Offset: 0x0067A4A6
+		// Token: 0x06032776 RID: 206710 RVA: 0x006D2366 File Offset: 0x006D0566
 		public ILongPressInteractStyleConfig_UnionUnion()
 		{
 			this.Type = ILongPressInteractStyleConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602FA51 RID: 195153 RVA: 0x0067C2BC File Offset: 0x0067A4BC
+		// Token: 0x06032777 RID: 206711 RVA: 0x006D237C File Offset: 0x006D057C
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602FA52 RID: 195154 RVA: 0x0067C2CE File Offset: 0x0067A4CE
+		// Token: 0x06032778 RID: 206712 RVA: 0x006D238E File Offset: 0x006D058E
 		public ILongPressInteractStyleConfigT AsILongPressInteractStyleConfig()
 		{
 			return this.As<ILongPressInteractStyleConfigT>();
 		}
 
-		// Token: 0x0602FA53 RID: 195155 RVA: 0x0067C2D6 File Offset: 0x0067A4D6
+		// Token: 0x06032779 RID: 206713 RVA: 0x006D2396 File Offset: 0x006D0596
 		public static ILongPressInteractStyleConfig_UnionUnion FromILongPressInteractStyleConfig(ILongPressInteractStyleConfigT _ilongpressinteractstyleconfig)
 		{
 			return new ILongPressInteractStyleConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602FA54 RID: 195156 RVA: 0x0067C2EB File Offset: 0x0067A4EB
+		// Token: 0x0603277A RID: 206714 RVA: 0x006D23AB File Offset: 0x006D05AB
 		public ILongPressInteractStyleConfigDefaultT AsILongPressInteractStyleConfigDefault()
 		{
 			return this.As<ILongPressInteractStyleConfigDefaultT>();
 		}
 
-		// Token: 0x0602FA55 RID: 195157 RVA: 0x0067C2F3 File Offset: 0x0067A4F3
+		// Token: 0x0603277B RID: 206715 RVA: 0x006D23B3 File Offset: 0x006D05B3
 		public static ILongPressInteractStyleConfig_UnionUnion FromILongPressInteractStyleConfigDefault(ILongPressInteractStyleConfigDefaultT _ilongpressinteractstyleconfigdefault)
 		{
 			return new ILongPressInteractStyleConfig_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602FA56 RID: 195158 RVA: 0x0067C308 File Offset: 0x0067A508
+		// Token: 0x0603277C RID: 206716 RVA: 0x006D23C8 File Offset: 0x006D05C8
 		public ILongPressInteractStyleConfigTimeBackInteractT AsILongPressInteractStyleConfigTimeBackInteract()
 		{
 			return this.As<ILongPressInteractStyleConfigTimeBackInteractT>();
 		}
 
-		// Token: 0x0602FA57 RID: 195159 RVA: 0x0067C310 File Offset: 0x0067A510
+		// Token: 0x0603277D RID: 206717 RVA: 0x006D23D0 File Offset: 0x006D05D0
 		public static ILongPressInteractStyleConfig_UnionUnion FromILongPressInteractStyleConfigTimeBackInteract(ILongPressInteractStyleConfigTimeBackInteractT _ilongpressinteractstyleconfigtimebackinteract)
 		{
 			return new ILongPressInteractStyleConfig_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602FA58 RID: 195160 RVA: 0x0067C325 File Offset: 0x0067A525
+		// Token: 0x0603277E RID: 206718 RVA: 0x006D23E5 File Offset: 0x006D05E5
 		public ILongPressInteractStyleSwordRiderT AsILongPressInteractStyleSwordRider()
 		{
 			return this.As<ILongPressInteractStyleSwordRiderT>();
 		}
 
-		// Token: 0x0602FA59 RID: 195161 RVA: 0x0067C32D File Offset: 0x0067A52D
+		// Token: 0x0603277F RID: 206719 RVA: 0x006D23ED File Offset: 0x006D05ED
 		public static ILongPressInteractStyleConfig_UnionUnion FromILongPressInteractStyleSwordRider(ILongPressInteractStyleSwordRiderT _ilongpressinteractstyleswordrider)
 		{
 			return new ILongPressInteractStyleConfig_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602FA5A RID: 195162 RVA: 0x0067C342 File Offset: 0x0067A542
+		// Token: 0x06032780 RID: 206720 RVA: 0x006D2402 File Offset: 0x006D0602
 		public ILongPressInteractStyleCoreFixT AsILongPressInteractStyleCoreFix()
 		{
 			return this.As<ILongPressInteractStyleCoreFixT>();
 		}
 
-		// Token: 0x0602FA5B RID: 195163 RVA: 0x0067C34A File Offset: 0x0067A54A
+		// Token: 0x06032781 RID: 206721 RVA: 0x006D240A File Offset: 0x006D060A
 		public static ILongPressInteractStyleConfig_UnionUnion FromILongPressInteractStyleCoreFix(ILongPressInteractStyleCoreFixT _ilongpressinteractstylecorefix)
 		{
 			return new ILongPressInteractStyleConfig_UnionUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602FA5C RID: 195164 RVA: 0x0067C360 File Offset: 0x0067A560
+		// Token: 0x06032782 RID: 206722 RVA: 0x006D2420 File Offset: 0x006D0620
 		public static int Pack(FlatBufferBuilder builder, ILongPressInteractStyleConfig_UnionUnion _o)
 		{
 			switch (_o.Type)

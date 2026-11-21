@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BE8 RID: 23528
+	// Token: 0x02006201 RID: 25089
 	public enum TAttachTarget : byte
 	{
-		// Token: 0x0400F377 RID: 62327
+		// Token: 0x04010083 RID: 65667
 		NONE,
-		// Token: 0x0400F378 RID: 62328
+		// Token: 0x04010084 RID: 65668
 		IActorAttachTarget,
-		// Token: 0x0400F379 RID: 62329
+		// Token: 0x04010085 RID: 65669
 		IDynamicAttachTarget,
-		// Token: 0x0400F37A RID: 62330
+		// Token: 0x04010086 RID: 65670
 		IEntityAttachTarget,
-		// Token: 0x0400F37B RID: 62331
+		// Token: 0x04010087 RID: 65671
 		IPlayerAttachTarget,
-		// Token: 0x0400F37C RID: 62332
+		// Token: 0x04010088 RID: 65672
 		IPointAttachTarget
 	}
 }

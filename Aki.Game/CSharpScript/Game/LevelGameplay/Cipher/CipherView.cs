@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.Cipher
 {
-	// Token: 0x02006F38 RID: 28472
+	// Token: 0x020060B9 RID: 24761
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CipherView : UiTickViewBase
 	{
-		// Token: 0x06045446 RID: 283718 RVA: 0x011231C3 File Offset: 0x011213C3
+		// Token: 0x0603B5F4 RID: 243188 RVA: 0x010CD16F File Offset: 0x010CB36F
 		public CipherView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06045447 RID: 283719 RVA: 0x011231CC File Offset: 0x011213CC
+		// Token: 0x0603B5F5 RID: 243189 RVA: 0x010CD178 File Offset: 0x010CB378
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -58,14 +58,14 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			this.CanConfirm = true;
 		}
 
-		// Token: 0x06045448 RID: 283720 RVA: 0x01123335 File Offset: 0x01121535
+		// Token: 0x0603B5F6 RID: 243190 RVA: 0x010CD2E1 File Offset: 0x010CB4E1
 		protected override void OnStart()
 		{
 			this.OnKeySelectedHandle = new Action<int, int>(this.KeySelectedHandle);
 			this.PasswordPanel = new GenericLayoutNew<CipherKey>(base.GetHorizontalLayout(2), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<CipherKey>(this.CreateCipherKeyItem), null);
 		}
 
-		// Token: 0x06045449 RID: 283721 RVA: 0x01123368 File Offset: 0x01121568
+		// Token: 0x0603B5F7 RID: 243191 RVA: 0x010CD314 File Offset: 0x010CB514
 		protected override void OnAfterShow()
 		{
 			this.PasswordPanel.RebuildLayoutByDataNew<int>(this.CipherKeyIndexList, null);
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			}
 		}
 
-		// Token: 0x0604544A RID: 283722 RVA: 0x011233A3 File Offset: 0x011215A3
+		// Token: 0x0603B5F8 RID: 243192 RVA: 0x010CD34F File Offset: 0x010CB54F
 		protected override void OnAfterHide()
 		{
 			this.PasswordPanel.ClearChildren();
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			}
 		}
 
-		// Token: 0x0604544B RID: 283723 RVA: 0x011233C8 File Offset: 0x011215C8
+		// Token: 0x0603B5F9 RID: 243193 RVA: 0x010CD374 File Offset: 0x010CB574
 		protected override void OnBeforeDestroy()
 		{
 			if (TimerSystem.Instance.Has(this.CorrectTimerId))
@@ -98,21 +98,21 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			}
 		}
 
-		// Token: 0x0604544C RID: 283724 RVA: 0x0112341B File Offset: 0x0112161B
+		// Token: 0x0603B5FA RID: 243194 RVA: 0x010CD3C7 File Offset: 0x010CB5C7
 		protected override void OnAddEventListener()
 		{
 			base.GetButton(0).OnClickCallBack.Bind(new Action(this.OnCloseClick));
 			base.GetButton(1).OnClickCallBack.Bind(new Action(this.OnConfirmClick));
 		}
 
-		// Token: 0x0604544D RID: 283725 RVA: 0x01123457 File Offset: 0x01121657
+		// Token: 0x0603B5FB RID: 243195 RVA: 0x010CD403 File Offset: 0x010CB603
 		protected override void OnRemoveEventListener()
 		{
 			base.GetButton(0).OnClickCallBack.Unbind();
 			base.GetButton(1).OnClickCallBack.Unbind();
 		}
 
-		// Token: 0x0604544E RID: 283726 RVA: 0x0112347C File Offset: 0x0112167C
+		// Token: 0x0603B5FC RID: 243196 RVA: 0x010CD428 File Offset: 0x010CB628
 		private ILayoutItem<CipherKey> CreateCipherKeyItem(object data, UUIItem uiItem, int index)
 		{
 			CipherKey cipherKey = new CipherKey(uiItem, index);
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			};
 		}
 
-		// Token: 0x0604544F RID: 283727 RVA: 0x011234C1 File Offset: 0x011216C1
+		// Token: 0x0603B5FD RID: 243197 RVA: 0x010CD46D File Offset: 0x010CB66D
 		public void OnCloseClick()
 		{
 			if (!this.CanConfirm)
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			UiManager.Instance.CloseView(EUiViewName.CipherView, null);
 		}
 
-		// Token: 0x06045450 RID: 283728 RVA: 0x011234EC File Offset: 0x011216EC
+		// Token: 0x0603B5FE RID: 243198 RVA: 0x010CD498 File Offset: 0x010CB698
 		public void OnConfirmClick()
 		{
 			if (!this.CanConfirm)
@@ -189,13 +189,13 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			AudioSystem.Instance.PostEvent("ui_cipher_confirm_failure");
 		}
 
-		// Token: 0x06045451 RID: 283729 RVA: 0x0112363C File Offset: 0x0112183C
+		// Token: 0x0603B5FF RID: 243199 RVA: 0x010CD5E8 File Offset: 0x010CB7E8
 		public void TriggerInteraction()
 		{
 			CipherController.Instance.RequestCipherComplete();
 		}
 
-		// Token: 0x06045452 RID: 283730 RVA: 0x01123648 File Offset: 0x01121848
+		// Token: 0x0603B600 RID: 243200 RVA: 0x010CD5F4 File Offset: 0x010CB7F4
 		private void HandleEffect(int inIndex, bool inResult, bool inIsRest)
 		{
 			int num = -1;
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			}
 		}
 
-		// Token: 0x06045453 RID: 283731 RVA: 0x01123720 File Offset: 0x01121920
+		// Token: 0x0603B601 RID: 243201 RVA: 0x010CD6CC File Offset: 0x010CB8CC
 		private void KeySelectedHandle(int index, int value)
 		{
 			float value2 = MathUtils.Instance.RangeClamp((float)value, 0f, 9f, 0.1f, 1.5f);
@@ -258,28 +258,28 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			AudioSystem.Instance.PostEvent("ui_cipher_picker_select");
 		}
 
-		// Token: 0x040241DA RID: 147930
+		// Token: 0x0401F48F RID: 128143
 		private const int WRONG_COLOR = -1;
 
-		// Token: 0x040241DB RID: 147931
+		// Token: 0x0401F490 RID: 128144
 		private const int RIGHT_COLOR = 1;
 
-		// Token: 0x040241DC RID: 147932
+		// Token: 0x0401F491 RID: 128145
 		private const int NORMAL_COLOR = 0;
 
-		// Token: 0x040241DD RID: 147933
+		// Token: 0x0401F492 RID: 128146
 		private const string WPO = "WPO";
 
-		// Token: 0x040241DE RID: 147934
+		// Token: 0x0401F493 RID: 128147
 		private const string COLOR = "TargetTime";
 
-		// Token: 0x040241DF RID: 147935
+		// Token: 0x0401F494 RID: 128148
 		private const string FLAG = "Flag";
 
-		// Token: 0x040241E0 RID: 147936
+		// Token: 0x0401F495 RID: 128149
 		private const int LEN = 4;
 
-		// Token: 0x040241E1 RID: 147937
+		// Token: 0x0401F496 RID: 128150
 		[Nullable(new byte[]
 		{
 			2,
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 		})]
 		private GenericLayoutNew<CipherKey> PasswordPanel;
 
-		// Token: 0x040241E2 RID: 147938
+		// Token: 0x0401F497 RID: 128151
 		[Nullable(new byte[]
 		{
 			2,
@@ -295,48 +295,48 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 		})]
 		private List<CipherKey> CipherKeyList;
 
-		// Token: 0x040241E3 RID: 147939
+		// Token: 0x0401F498 RID: 128152
 		[Nullable(2)]
 		private List<int> CipherKeyIndexList;
 
-		// Token: 0x040241E4 RID: 147940
+		// Token: 0x0401F499 RID: 128153
 		[Nullable(2)]
 		public TimerHandle CorrectTimerId;
 
-		// Token: 0x040241E5 RID: 147941
+		// Token: 0x0401F49A RID: 128154
 		[Nullable(2)]
 		private TimerHandle WrongTimerId;
 
-		// Token: 0x040241E6 RID: 147942
+		// Token: 0x0401F49B RID: 128155
 		private bool CanConfirm;
 
-		// Token: 0x040241E7 RID: 147943
+		// Token: 0x0401F49C RID: 128156
 		[Nullable(2)]
 		protected Action<int, int> OnKeySelectedHandle;
 
-		// Token: 0x0200CD77 RID: 52599
+		// Token: 0x0200B969 RID: 47465
 		[NullableContext(0)]
 		private class ECipherView
 		{
-			// Token: 0x0403DEA9 RID: 253609
+			// Token: 0x040392D8 RID: 234200
 			public const int Close = 0;
 
-			// Token: 0x0403DEAA RID: 253610
+			// Token: 0x040392D9 RID: 234201
 			public const int Confirm = 1;
 
-			// Token: 0x0403DEAB RID: 253611
+			// Token: 0x040392DA RID: 234202
 			public const int PasswordPanel = 2;
 
-			// Token: 0x0403DEAC RID: 253612
+			// Token: 0x040392DB RID: 234203
 			public const int Effect1 = 3;
 
-			// Token: 0x0403DEAD RID: 253613
+			// Token: 0x040392DC RID: 234204
 			public const int Effect2 = 4;
 
-			// Token: 0x0403DEAE RID: 253614
+			// Token: 0x040392DD RID: 234205
 			public const int Effect3 = 5;
 
-			// Token: 0x0403DEAF RID: 253615
+			// Token: 0x040392DE RID: 234206
 			public const int Effect4 = 6;
 		}
 	}

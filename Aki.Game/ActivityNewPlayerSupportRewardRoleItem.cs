@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020013BE RID: 5054
+// Token: 0x02000872 RID: 2162
 public class ActivityNewPlayerSupportRewardRoleItem : GridProxyAbstract<int>
 {
-	// Token: 0x06008E91 RID: 36497 RVA: 0x001EC3AF File Offset: 0x001EA5AF
+	// Token: 0x06006226 RID: 25126 RVA: 0x001F4ECF File Offset: 0x001F30CF
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,7 +18,7 @@ public class ActivityNewPlayerSupportRewardRoleItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06008E92 RID: 36498 RVA: 0x001EC3E8 File Offset: 0x001EA5E8
+	// Token: 0x06006227 RID: 25127 RVA: 0x001F4F08 File Offset: 0x001F3108
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		TrialRoleConfig instance = TrialRoleConfig.Instance;
@@ -32,13 +32,13 @@ public class ActivityNewPlayerSupportRewardRoleItem : GridProxyAbstract<int>
 		this.SetSpriteByPath(resourcePath, base.GetSprite(1), false, null, null);
 	}
 
-	// Token: 0x02007A33 RID: 31283
+	// Token: 0x02006BB9 RID: 27577
 	private static class EComponentType
 	{
-		// Token: 0x0402839B RID: 164763
+		// Token: 0x040236B8 RID: 145080
 		public const int RoleTex = 0;
 
-		// Token: 0x0402839C RID: 164764
+		// Token: 0x040236B9 RID: 145081
 		public const int IconSprite = 1;
 	}
 }

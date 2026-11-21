@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006128 RID: 24872
+	// Token: 0x020050A6 RID: 20646
 	[Nullable(new byte[]
 	{
 		0,
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeRoleAttributeItem : GridProxyAbstract<CSharpScript.Game.Module.Common.AttributeData>
 	{
-		// Token: 0x0603EE0F RID: 257551 RVA: 0x00F2F84C File Offset: 0x00F2DA4C
+		// Token: 0x06033AD1 RID: 211665 RVA: 0x00E76660 File Offset: 0x00E74860
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EE10 RID: 257552 RVA: 0x00F2F93C File Offset: 0x00F2DB3C
+		// Token: 0x06033AD2 RID: 211666 RVA: 0x00E76750 File Offset: 0x00E74950
 		[NullableContext(1)]
 		public override void Refresh(CSharpScript.Game.Module.Common.AttributeData data, bool isSelected, int gridIndex)
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SetBgActive(data.BgActive.GetValueOrDefault());
 		}
 
-		// Token: 0x0603EE11 RID: 257553 RVA: 0x00F2FA44 File Offset: 0x00F2DC44
+		// Token: 0x06033AD3 RID: 211667 RVA: 0x00E76858 File Offset: 0x00E74A58
 		private void SetBgActive(bool bActive)
 		{
 			UUIItem item = base.GetItem(5);
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 		}
 
-		// Token: 0x0603EE12 RID: 257554 RVA: 0x00F2FA74 File Offset: 0x00F2DC74
+		// Token: 0x06033AD4 RID: 211668 RVA: 0x00E76888 File Offset: 0x00E74A88
 		[NullableContext(2)]
 		private string GetPriorityAttributeName(RoverRogueActivity activityConfig, int attrId)
 		{
@@ -106,20 +106,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return null;
 		}
 
-		// Token: 0x0200C381 RID: 50049
+		// Token: 0x0200AD69 RID: 44393
 		private enum EComponents
 		{
-			// Token: 0x0403AFF7 RID: 241655
+			// Token: 0x0403595C RID: 219484
 			TexIcon,
-			// Token: 0x0403AFF8 RID: 241656
+			// Token: 0x0403595D RID: 219485
 			TxtAttributeTxt,
-			// Token: 0x0403AFF9 RID: 241657
+			// Token: 0x0403595E RID: 219486
 			TxtNumber,
-			// Token: 0x0403AFFA RID: 241658
+			// Token: 0x0403595F RID: 219487
 			Sprite1,
-			// Token: 0x0403AFFB RID: 241659
+			// Token: 0x04035960 RID: 219488
 			Sprite2,
-			// Token: 0x0403AFFC RID: 241660
+			// Token: 0x04035961 RID: 219489
 			Bg
 		}
 	}

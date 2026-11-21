@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065EC RID: 26092
+	// Token: 0x0200556A RID: 21866
 	public enum EFishingSkillCheckResult
 	{
-		// Token: 0x040220A0 RID: 139424
+		// Token: 0x0401C9D1 RID: 117201
 		Usable,
-		// Token: 0x040220A1 RID: 139425
+		// Token: 0x0401C9D2 RID: 117202
 		ItemNotEnough,
-		// Token: 0x040220A2 RID: 139426
+		// Token: 0x0401C9D3 RID: 117203
 		SkillInCd,
-		// Token: 0x040220A3 RID: 139427
+		// Token: 0x0401C9D4 RID: 117204
 		TempFishingPointLimit
 	}
 }

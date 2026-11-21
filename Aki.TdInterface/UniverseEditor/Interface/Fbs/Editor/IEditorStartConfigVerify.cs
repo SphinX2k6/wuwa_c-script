@@ -5,10 +5,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004870 RID: 18544
+	// Token: 0x02004CD5 RID: 19669
 	public static class IEditorStartConfigVerify
 	{
-		// Token: 0x0601CDD3 RID: 118227 RVA: 0x00414358 File Offset: 0x00412558
+		// Token: 0x0601E5C4 RID: 124356 RVA: 0x00440C00 File Offset: 0x0043EE00
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyString(tablePos, 4, false) && verifier.VerifyField(tablePos, 6, 1UL, 1UL, false) && verifier.VerifyString(tablePos, 8, false) && verifier.VerifyString(tablePos, 10, false) && verifier.VerifyField(tablePos, 12, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 14, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 16, 1UL, 1UL, false) && verifier.VerifyString(tablePos, 18, false) && verifier.VerifyField(tablePos, 20, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 22, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 24, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 26, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 28, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 30, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 32, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 34, 1UL, 1UL, false) && verifier.VerifyString(tablePos, 36, false) && verifier.VerifyField(tablePos, 38, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 40, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 42, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 44, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 46, 1UL, 1UL, false) && verifier.VerifyString(tablePos, 48, false) && verifier.VerifyField(tablePos, 50, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 52, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 54, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 56, 1UL, 1UL, false) && verifier.VerifyString(tablePos, 58, false) && verifier.VerifyVectorOfStrings(tablePos, 60, false))
@@ -63,23 +63,23 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return false;
 		}
 
-		// Token: 0x02007A10 RID: 31248
+		// Token: 0x02008259 RID: 33369
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040133C9 RID: 78793
+			// Token: 0x04014430 RID: 82992
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x040133CA RID: 78794
+			// Token: 0x04014431 RID: 82993
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x040133CB RID: 78795
+			// Token: 0x04014432 RID: 82994
 			public static VerifyTableAction <2>__Verify;
 
-			// Token: 0x040133CC RID: 78796
+			// Token: 0x04014433 RID: 82995
 			public static VerifyTableAction <3>__Verify;
 
-			// Token: 0x040133CD RID: 78797
+			// Token: 0x04014434 RID: 82996
 			public static VerifyTableAction <4>__Verify;
 		}
 	}

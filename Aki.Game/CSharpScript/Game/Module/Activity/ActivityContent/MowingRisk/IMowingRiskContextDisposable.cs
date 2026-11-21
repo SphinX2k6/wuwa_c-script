@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063B2 RID: 25522
+	// Token: 0x02005330 RID: 21296
 	public interface IMowingRiskContextDisposable
 	{
-		// Token: 0x06040346 RID: 262982
+		// Token: 0x06035007 RID: 217095
 		void Dispose();
 	}
 }

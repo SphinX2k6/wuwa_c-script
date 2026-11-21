@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002A75 RID: 10869
+// Token: 0x02001FF0 RID: 8176
 public class SkipConditionDefine
 {
-	// Token: 0x0400A7D7 RID: 42967
+	// Token: 0x0400ABDB RID: 43995
 	[Nullable(1)]
 	public static readonly Dictionary<ESkipConditionType, ISkipConditionChecker> SkipConditionCheckerMap = new Dictionary<ESkipConditionType, ISkipConditionChecker>
 	{

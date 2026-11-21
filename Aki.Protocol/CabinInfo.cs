@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000218 RID: 536
+	// Token: 0x0200021D RID: 541
 	public sealed class CabinInfo : IMessage<CabinInfo>, IMessage, IEquatable<CabinInfo>, IDeepCloneable<CabinInfo>, IBufferMessage
 	{
-		// Token: 0x06003AC1 RID: 15041 RVA: 0x00092449 File Offset: 0x00090649
+		// Token: 0x06003B66 RID: 15206 RVA: 0x00094061 File Offset: 0x00092261
 		[NullableContext(1)]
 		public static CabinInfo Create()
 		{
 			return new CabinInfo();
 		}
 
-		// Token: 0x170009AF RID: 2479
-		// (get) Token: 0x06003AC2 RID: 15042 RVA: 0x00092450 File Offset: 0x00090650
+		// Token: 0x170009CE RID: 2510
+		// (get) Token: 0x06003B67 RID: 15207 RVA: 0x00094068 File Offset: 0x00092268
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170009B0 RID: 2480
-		// (get) Token: 0x06003AC3 RID: 15043 RVA: 0x00092453 File Offset: 0x00090653
+		// Token: 0x170009CF RID: 2511
+		// (get) Token: 0x06003B68 RID: 15208 RVA: 0x0009406B File Offset: 0x0009226B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003AC4 RID: 15044 RVA: 0x0009245A File Offset: 0x0009065A
+		// Token: 0x06003B69 RID: 15209 RVA: 0x00094072 File Offset: 0x00092272
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CabinInfo()
 		{
 		}
 
-		// Token: 0x06003AC5 RID: 15045 RVA: 0x00092484 File Offset: 0x00090684
+		// Token: 0x06003B6A RID: 15210 RVA: 0x0009409C File Offset: 0x0009229C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CabinInfo(CabinInfo other) : this()
@@ -63,7 +63,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06003AC6 RID: 15046 RVA: 0x000924FF File Offset: 0x000906FF
+		// Token: 0x06003B6B RID: 15211 RVA: 0x00094117 File Offset: 0x00092317
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CabinInfo Clone()
@@ -71,8 +71,8 @@ namespace Aki.Protocol
 			return new CabinInfo(this);
 		}
 
-		// Token: 0x170009B1 RID: 2481
-		// (get) Token: 0x06003AC7 RID: 15047 RVA: 0x00092507 File Offset: 0x00090707
+		// Token: 0x170009D0 RID: 2512
+		// (get) Token: 0x06003B6C RID: 15212 RVA: 0x0009411F File Offset: 0x0009231F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<FishingItemInfo> FishingItems
@@ -83,9 +83,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170009B2 RID: 2482
-		// (get) Token: 0x06003AC8 RID: 15048 RVA: 0x0009250F File Offset: 0x0009070F
-		// (set) Token: 0x06003AC9 RID: 15049 RVA: 0x00092517 File Offset: 0x00090717
+		// Token: 0x170009D1 RID: 2513
+		// (get) Token: 0x06003B6D RID: 15213 RVA: 0x00094127 File Offset: 0x00092327
+		// (set) Token: 0x06003B6E RID: 15214 RVA: 0x0009412F File Offset: 0x0009232F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CabinShape
@@ -100,9 +100,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170009B3 RID: 2483
-		// (get) Token: 0x06003ACA RID: 15050 RVA: 0x00092520 File Offset: 0x00090720
-		// (set) Token: 0x06003ACB RID: 15051 RVA: 0x00092528 File Offset: 0x00090728
+		// Token: 0x170009D2 RID: 2514
+		// (get) Token: 0x06003B6F RID: 15215 RVA: 0x00094138 File Offset: 0x00092338
+		// (set) Token: 0x06003B70 RID: 15216 RVA: 0x00094140 File Offset: 0x00092340
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int QuickSellShape
@@ -117,8 +117,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170009B4 RID: 2484
-		// (get) Token: 0x06003ACC RID: 15052 RVA: 0x00092531 File Offset: 0x00090731
+		// Token: 0x170009D3 RID: 2515
+		// (get) Token: 0x06003B71 RID: 15217 RVA: 0x00094149 File Offset: 0x00092349
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<FishingItemInfo> NetCabinItems
@@ -129,8 +129,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170009B5 RID: 2485
-		// (get) Token: 0x06003ACD RID: 15053 RVA: 0x00092539 File Offset: 0x00090739
+		// Token: 0x170009D4 RID: 2516
+		// (get) Token: 0x06003B72 RID: 15218 RVA: 0x00094151 File Offset: 0x00092351
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<FishingItemInfo> TempCabinItems
@@ -141,9 +141,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170009B6 RID: 2486
-		// (get) Token: 0x06003ACE RID: 15054 RVA: 0x00092541 File Offset: 0x00090741
-		// (set) Token: 0x06003ACF RID: 15055 RVA: 0x00092549 File Offset: 0x00090749
+		// Token: 0x170009D5 RID: 2517
+		// (get) Token: 0x06003B73 RID: 15219 RVA: 0x00094159 File Offset: 0x00092359
+		// (set) Token: 0x06003B74 RID: 15220 RVA: 0x00094161 File Offset: 0x00092361
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int QuickSellRatio
@@ -158,7 +158,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003AD0 RID: 15056 RVA: 0x00092552 File Offset: 0x00090752
+		// Token: 0x06003B75 RID: 15221 RVA: 0x0009416A File Offset: 0x0009236A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -166,7 +166,7 @@ namespace Aki.Protocol
 			return this.Equals(other as CabinInfo);
 		}
 
-		// Token: 0x06003AD1 RID: 15057 RVA: 0x00092560 File Offset: 0x00090760
+		// Token: 0x06003B76 RID: 15222 RVA: 0x00094178 File Offset: 0x00092378
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CabinInfo other)
@@ -174,7 +174,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.fishingItems_.Equals(other.fishingItems_) && this.CabinShape == other.CabinShape && this.QuickSellShape == other.QuickSellShape && this.netCabinItems_.Equals(other.netCabinItems_) && this.tempCabinItems_.Equals(other.tempCabinItems_) && this.QuickSellRatio == other.QuickSellRatio && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06003AD2 RID: 15058 RVA: 0x000925F8 File Offset: 0x000907F8
+		// Token: 0x06003B77 RID: 15223 RVA: 0x00094210 File Offset: 0x00092410
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003AD3 RID: 15059 RVA: 0x00092693 File Offset: 0x00090893
+		// Token: 0x06003B78 RID: 15224 RVA: 0x000942AB File Offset: 0x000924AB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06003AD4 RID: 15060 RVA: 0x000926A0 File Offset: 0x000908A0
+		// Token: 0x06003B79 RID: 15225 RVA: 0x000942B8 File Offset: 0x000924B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06003AD5 RID: 15061 RVA: 0x000926AC File Offset: 0x000908AC
+		// Token: 0x06003B7A RID: 15226 RVA: 0x000942C4 File Offset: 0x000924C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -247,7 +247,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003AD6 RID: 15062 RVA: 0x00092754 File Offset: 0x00090954
+		// Token: 0x06003B7B RID: 15227 RVA: 0x0009436C File Offset: 0x0009256C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -275,7 +275,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003AD7 RID: 15063 RVA: 0x000927FC File Offset: 0x000909FC
+		// Token: 0x06003B7C RID: 15228 RVA: 0x00094414 File Offset: 0x00092614
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CabinInfo other)
@@ -302,7 +302,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06003AD8 RID: 15064 RVA: 0x00092893 File Offset: 0x00090A93
+		// Token: 0x06003B7D RID: 15229 RVA: 0x000944AB File Offset: 0x000926AB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -310,7 +310,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06003AD9 RID: 15065 RVA: 0x0009289C File Offset: 0x00090A9C
+		// Token: 0x06003B7E RID: 15230 RVA: 0x000944B4 File Offset: 0x000926B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -362,52 +362,52 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002BEA RID: 11242
+		// Token: 0x04002C6C RID: 11372
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002BEB RID: 11243
+		// Token: 0x04002C6D RID: 11373
 		public const int FishingItemsFieldNumber = 1;
 
-		// Token: 0x04002BEC RID: 11244
+		// Token: 0x04002C6E RID: 11374
 		private static readonly FieldCodec<FishingItemInfo> _repeated_fishingItems_codec = FieldCodec.ForMessage<FishingItemInfo>(10U, FishingItemInfo.Parser);
 
-		// Token: 0x04002BED RID: 11245
+		// Token: 0x04002C6F RID: 11375
 		private readonly RepeatedField<FishingItemInfo> fishingItems_ = new RepeatedField<FishingItemInfo>();
 
-		// Token: 0x04002BEE RID: 11246
+		// Token: 0x04002C70 RID: 11376
 		public const int CabinShapeFieldNumber = 2;
 
-		// Token: 0x04002BEF RID: 11247
+		// Token: 0x04002C71 RID: 11377
 		private int cabinShape_;
 
-		// Token: 0x04002BF0 RID: 11248
+		// Token: 0x04002C72 RID: 11378
 		public const int QuickSellShapeFieldNumber = 3;
 
-		// Token: 0x04002BF1 RID: 11249
+		// Token: 0x04002C73 RID: 11379
 		private int quickSellShape_;
 
-		// Token: 0x04002BF2 RID: 11250
+		// Token: 0x04002C74 RID: 11380
 		public const int NetCabinItemsFieldNumber = 4;
 
-		// Token: 0x04002BF3 RID: 11251
+		// Token: 0x04002C75 RID: 11381
 		private static readonly FieldCodec<FishingItemInfo> _repeated_netCabinItems_codec = FieldCodec.ForMessage<FishingItemInfo>(34U, FishingItemInfo.Parser);
 
-		// Token: 0x04002BF4 RID: 11252
+		// Token: 0x04002C76 RID: 11382
 		private readonly RepeatedField<FishingItemInfo> netCabinItems_ = new RepeatedField<FishingItemInfo>();
 
-		// Token: 0x04002BF5 RID: 11253
+		// Token: 0x04002C77 RID: 11383
 		public const int TempCabinItemsFieldNumber = 5;
 
-		// Token: 0x04002BF6 RID: 11254
+		// Token: 0x04002C78 RID: 11384
 		private static readonly FieldCodec<FishingItemInfo> _repeated_tempCabinItems_codec = FieldCodec.ForMessage<FishingItemInfo>(42U, FishingItemInfo.Parser);
 
-		// Token: 0x04002BF7 RID: 11255
+		// Token: 0x04002C79 RID: 11385
 		private readonly RepeatedField<FishingItemInfo> tempCabinItems_ = new RepeatedField<FishingItemInfo>();
 
-		// Token: 0x04002BF8 RID: 11256
+		// Token: 0x04002C7A RID: 11386
 		public const int QuickSellRatioFieldNumber = 6;
 
-		// Token: 0x04002BF9 RID: 11257
+		// Token: 0x04002C7B RID: 11387
 		private int quickSellRatio_;
 	}
 }

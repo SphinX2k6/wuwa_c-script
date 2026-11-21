@@ -2,34 +2,34 @@
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x0200532F RID: 21295
+	// Token: 0x020042FF RID: 17151
 	internal enum <RogueResSkillNode>F8590D5953533424007B90B5797F5F6783675CBAC4004C35F8843E480F6A53645__ERogueResSkillNodeDefine
 	{
-		// Token: 0x0401CC93 RID: 117907
+		// Token: 0x040176C9 RID: 95945
 		InPos1,
-		// Token: 0x0401CC94 RID: 117908
+		// Token: 0x040176CA RID: 95946
 		InPos2,
-		// Token: 0x0401CC95 RID: 117909
+		// Token: 0x040176CB RID: 95947
 		InPos3,
-		// Token: 0x0401CC96 RID: 117910
+		// Token: 0x040176CC RID: 95948
 		OutPos1,
-		// Token: 0x0401CC97 RID: 117911
+		// Token: 0x040176CD RID: 95949
 		OutPos2,
-		// Token: 0x0401CC98 RID: 117912
+		// Token: 0x040176CE RID: 95950
 		OutPos3,
-		// Token: 0x0401CC99 RID: 117913
+		// Token: 0x040176CF RID: 95951
 		LockItem,
-		// Token: 0x0401CC9A RID: 117914
+		// Token: 0x040176D0 RID: 95952
 		UnlockItem,
-		// Token: 0x0401CC9B RID: 117915
+		// Token: 0x040176D1 RID: 95953
 		ActivateItem,
-		// Token: 0x0401CC9C RID: 117916
+		// Token: 0x040176D2 RID: 95954
 		SkillIcon,
-		// Token: 0x0401CC9D RID: 117917
+		// Token: 0x040176D3 RID: 95955
 		UpItem,
-		// Token: 0x0401CC9E RID: 117918
+		// Token: 0x040176D4 RID: 95956
 		Toggle,
-		// Token: 0x0401CC9F RID: 117919
+		// Token: 0x040176D5 RID: 95957
 		SpriteLock
 	}
 }

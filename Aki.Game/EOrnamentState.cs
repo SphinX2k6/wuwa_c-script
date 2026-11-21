@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002CB3 RID: 11443
+// Token: 0x0200220C RID: 8716
 internal enum EOrnamentState
 {
-	// Token: 0x0400B23F RID: 45631
+	// Token: 0x0400B5AA RID: 46506
 	Hidden,
-	// Token: 0x0400B240 RID: 45632
+	// Token: 0x0400B5AB RID: 46507
 	Showing
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028D7 RID: 10455
+	// Token: 0x02002BAC RID: 11180
 	public class IPathLineFacingType
 	{
-		// Token: 0x0600E82F RID: 59439 RVA: 0x00221407 File Offset: 0x0021F607
-		[NullableContext(1)]
+		// Token: 0x0600F65E RID: 63070 RVA: 0x0023E387 File Offset: 0x0023C587
 		public static IPathLineFacingType Create(IPathLineFacingType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004843 RID: 18499
-		// (get) Token: 0x0600E830 RID: 59440 RVA: 0x00221426 File Offset: 0x0021F626
+		// Token: 0x17004BB4 RID: 19380
+		// (get) Token: 0x0600F65F RID: 63071 RVA: 0x0023E3A6 File Offset: 0x0023C5A6
 		public virtual EPathLineFacingType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008055 RID: 32853
+		// Token: 0x04008714 RID: 34580
 		private IPathLineFacingType Instance;
 	}
 }

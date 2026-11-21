@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000853 RID: 2131
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008F6 RID: 2294
 	public class PhysicsConstraintComponent : IComponentBase
 	{
-		// Token: 0x06002F01 RID: 12033 RVA: 0x00079718 File Offset: 0x00077918
+		// Token: 0x0600323D RID: 12861 RVA: 0x00080C00 File Offset: 0x0007EE00
 		private PhysicsConstraintComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002F02 RID: 12034 RVA: 0x00079750 File Offset: 0x00077950
+		// Token: 0x0600323E RID: 12862 RVA: 0x00080C38 File Offset: 0x0007EE38
 		public static PhysicsConstraintComponent Create([Nullable(2)] PhysicsConstraintComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F03 RID: 12035 RVA: 0x00079763 File Offset: 0x00077963
+		// Token: 0x0600323F RID: 12863 RVA: 0x00080C4B File Offset: 0x0007EE4B
 		public static PhysicsConstraintComponent CreateFromSetValue([Nullable(2)] PhysicsConstraintComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F04 RID: 12036 RVA: 0x00079778 File Offset: 0x00077978
+		// Token: 0x06003240 RID: 12864 RVA: 0x00080C60 File Offset: 0x0007EE60
 		public new PhysicsConstraintComponent_SetValue ToSetValue()
 		{
 			return new PhysicsConstraintComponent_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000C67 RID: 3175
-		// (get) Token: 0x06002F05 RID: 12037 RVA: 0x000797D4 File Offset: 0x000779D4
-		// (set) Token: 0x06002F06 RID: 12038 RVA: 0x0007980E File Offset: 0x00077A0E
+		// Token: 0x17000D30 RID: 3376
+		// (get) Token: 0x06003241 RID: 12865 RVA: 0x00080CBC File Offset: 0x0007EEBC
+		// (set) Token: 0x06003242 RID: 12866 RVA: 0x00080CF6 File Offset: 0x0007EEF6
 		public override bool? Disabled
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C68 RID: 3176
-		// (get) Token: 0x06002F07 RID: 12039 RVA: 0x0007981C File Offset: 0x00077A1C
-		// (set) Token: 0x06002F08 RID: 12040 RVA: 0x00079846 File Offset: 0x00077A46
+		// Token: 0x17000D31 RID: 3377
+		// (get) Token: 0x06003243 RID: 12867 RVA: 0x00080D04 File Offset: 0x0007EF04
+		// (set) Token: 0x06003244 RID: 12868 RVA: 0x00080D2E File Offset: 0x0007EF2E
 		public override bool? EdIsLocked
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C69 RID: 3177
-		// (get) Token: 0x06002F09 RID: 12041 RVA: 0x00079854 File Offset: 0x00077A54
-		// (set) Token: 0x06002F0A RID: 12042 RVA: 0x0007987F File Offset: 0x00077A7F
+		// Token: 0x17000D32 RID: 3378
+		// (get) Token: 0x06003245 RID: 12869 RVA: 0x00080D3C File Offset: 0x0007EF3C
+		// (set) Token: 0x06003246 RID: 12870 RVA: 0x00080D67 File Offset: 0x0007EF67
 		public virtual string EffectPath
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C6A RID: 3178
-		// (get) Token: 0x06002F0B RID: 12043 RVA: 0x0007988D File Offset: 0x00077A8D
-		// (set) Token: 0x06002F0C RID: 12044 RVA: 0x000798B4 File Offset: 0x00077AB4
+		// Token: 0x17000D33 RID: 3379
+		// (get) Token: 0x06003247 RID: 12871 RVA: 0x00080D75 File Offset: 0x0007EF75
+		// (set) Token: 0x06003248 RID: 12872 RVA: 0x00080D9C File Offset: 0x0007EF9C
 		public virtual IAttachTarget AttachTarget
 		{
 			get
@@ -155,9 +153,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C6B RID: 3179
-		// (get) Token: 0x06002F0D RID: 12045 RVA: 0x000798C4 File Offset: 0x00077AC4
-		// (set) Token: 0x06002F0E RID: 12046 RVA: 0x00079925 File Offset: 0x00077B25
+		// Token: 0x17000D34 RID: 3380
+		// (get) Token: 0x06003249 RID: 12873 RVA: 0x00080DAC File Offset: 0x0007EFAC
+		// (set) Token: 0x0600324A RID: 12874 RVA: 0x00080E0D File Offset: 0x0007F00D
 		public virtual IPhysicsAngularLimit AngularLimit
 		{
 			get
@@ -185,9 +183,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C6C RID: 3180
-		// (get) Token: 0x06002F0F RID: 12047 RVA: 0x0007993C File Offset: 0x00077B3C
-		// (set) Token: 0x06002F10 RID: 12048 RVA: 0x00079976 File Offset: 0x00077B76
+		// Token: 0x17000D35 RID: 3381
+		// (get) Token: 0x0600324B RID: 12875 RVA: 0x00080E24 File Offset: 0x0007F024
+		// (set) Token: 0x0600324C RID: 12876 RVA: 0x00080E5E File Offset: 0x0007F05E
 		public virtual float? DampingCoefficient
 		{
 			get
@@ -209,18 +207,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001F0D RID: 7949
+		// Token: 0x0400211F RID: 8479
 		[Nullable(2)]
 		protected new PhysicsConstraintComponent FbInstance;
 
-		// Token: 0x04001F0E RID: 7950
+		// Token: 0x04002120 RID: 8480
 		[Nullable(2)]
 		protected new PhysicsConstraintComponent_SetValue PocoInterface;
 
-		// Token: 0x04001F0F RID: 7951
+		// Token: 0x04002121 RID: 8481
 		private IPhysicsAngularLimit _AngularLimitCache;
 
-		// Token: 0x04001F10 RID: 7952
+		// Token: 0x04002122 RID: 8482
 		private bool _AngularLimitInited;
 	}
 }

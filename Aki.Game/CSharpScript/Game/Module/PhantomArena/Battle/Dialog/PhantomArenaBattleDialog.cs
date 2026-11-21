@@ -11,25 +11,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Dialog
 {
-	// Token: 0x020052B7 RID: 21175
+	// Token: 0x02004287 RID: 17031
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleDialog : IStaticVariableResetter
 	{
-		// Token: 0x060362A3 RID: 221859 RVA: 0x00CD0838 File Offset: 0x00CCEA38
+		// Token: 0x0602B19E RID: 176542 RVA: 0x00C1DF60 File Offset: 0x00C1C160
 		public PhantomArenaBattleDialog()
 		{
 			this.InitSpeakerId();
 			this.InitLogic();
 		}
 
-		// Token: 0x060362A4 RID: 221860 RVA: 0x00CD0862 File Offset: 0x00CCEA62
+		// Token: 0x0602B19F RID: 176543 RVA: 0x00C1DF8A File Offset: 0x00C1C18A
 		static PhantomArenaBattleDialog()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PhantomArenaBattleDialog.CreateStaticDefaultValue), new Action(PhantomArenaBattleDialog.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060362A5 RID: 221861 RVA: 0x00CD0881 File Offset: 0x00CCEA81
+		// Token: 0x0602B1A0 RID: 176544 RVA: 0x00C1DFA9 File Offset: 0x00C1C1A9
 		public static void CreateStaticDefaultValue()
 		{
 			PhantomArenaBattleDialog.typeMap = new Dictionary<EBvbPlayDialogType, int>
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Dialog
 			};
 		}
 
-		// Token: 0x060362A6 RID: 221862 RVA: 0x00CD08B5 File Offset: 0x00CCEAB5
+		// Token: 0x0602B1A1 RID: 176545 RVA: 0x00C1DFDD File Offset: 0x00C1C1DD
 		public static void ResetStaticDefaultValue()
 		{
 			PhantomArenaBattleDialog.typeMap = null;
 		}
 
-		// Token: 0x060362A7 RID: 221863 RVA: 0x00CD08C0 File Offset: 0x00CCEAC0
+		// Token: 0x0602B1A2 RID: 176546 RVA: 0x00C1DFE8 File Offset: 0x00C1C1E8
 		protected void InitLogic()
 		{
 			CommonFlowTextLogicData<object> data = new CommonFlowTextLogicData<object>
@@ -76,26 +76,26 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Dialog
 			this.Logic.InitData(data);
 		}
 
-		// Token: 0x060362A8 RID: 221864 RVA: 0x00CD0927 File Offset: 0x00CCEB27
+		// Token: 0x0602B1A3 RID: 176547 RVA: 0x00C1E04F File Offset: 0x00C1C24F
 		protected void InitSpeakerId()
 		{
 			this.OwnSpeakId = PhantomArenaConfig.Instance.GetPhantomArenaOwnSpeakerId();
 			this.OpponentSpeakId = PhantomArenaConfig.Instance.GetPhantomArenaOpponentSpeakerId();
 		}
 
-		// Token: 0x060362A9 RID: 221865 RVA: 0x00CD0949 File Offset: 0x00CCEB49
+		// Token: 0x0602B1A4 RID: 176548 RVA: 0x00C1E071 File Offset: 0x00C1C271
 		public void SetOpponentDialogItem(PhantomArenaDialogItem dialogItem)
 		{
 			this.OpponentDialogItem = dialogItem;
 		}
 
-		// Token: 0x060362AA RID: 221866 RVA: 0x00CD0952 File Offset: 0x00CCEB52
+		// Token: 0x0602B1A5 RID: 176549 RVA: 0x00C1E07A File Offset: 0x00C1C27A
 		public void SetOwnDialogItem(PhantomArenaDialogItem dialogItem)
 		{
 			this.OwnDialogItem = dialogItem;
 		}
 
-		// Token: 0x060362AB RID: 221867 RVA: 0x00CD095C File Offset: 0x00CCEB5C
+		// Token: 0x0602B1A6 RID: 176550 RVA: 0x00C1E084 File Offset: 0x00C1C284
 		public unsafe void NotifyDialogType(EBvbPlayDialogType dialogType)
 		{
 			this.TalkData = new List<ITalkItem>();
@@ -147,13 +147,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Dialog
 			this.Logic.PlayFlowText(this.TalkData[this.TalkIndex], null);
 		}
 
-		// Token: 0x060362AC RID: 221868 RVA: 0x00CD0B94 File Offset: 0x00CCED94
+		// Token: 0x0602B1A7 RID: 176551 RVA: 0x00C1E2BC File Offset: 0x00C1C4BC
 		public void Clear()
 		{
 			this.Logic.Clear();
 		}
 
-		// Token: 0x060362AD RID: 221869 RVA: 0x00CD0BA4 File Offset: 0x00CCEDA4
+		// Token: 0x0602B1A8 RID: 176552 RVA: 0x00C1E2CC File Offset: 0x00C1C4CC
 		private unsafe UUIText GetDialogText(ITalkItem talkData)
 		{
 			int? whoId = talkData.WhoId;
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Dialog
 			}
 		}
 
-		// Token: 0x060362AE RID: 221870 RVA: 0x00CD0CA8 File Offset: 0x00CCEEA8
+		// Token: 0x0602B1A9 RID: 176553 RVA: 0x00C1E3D0 File Offset: 0x00C1C5D0
 		private void TextAnimStartDelegate(ITalkItem talkData, object _)
 		{
 			int? whoId = talkData.WhoId;
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Dialog
 			ownDialogItem.SetDialogActive(true);
 		}
 
-		// Token: 0x060362AF RID: 221871 RVA: 0x00CD0D1C File Offset: 0x00CCEF1C
+		// Token: 0x0602B1AA RID: 176554 RVA: 0x00C1E444 File Offset: 0x00C1C644
 		private void TextAnimFinishDelegate(ITalkItem talkData, object _)
 		{
 			int? whoId = talkData.WhoId;
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Dialog
 			this.Logic.PlayFlowText(this.TalkData[this.TalkIndex], this.TalkIndex);
 		}
 
-		// Token: 0x060362B0 RID: 221872 RVA: 0x00CD0DDC File Offset: 0x00CCEFDC
+		// Token: 0x0602B1AB RID: 176555 RVA: 0x00C1E504 File Offset: 0x00C1C704
 		private void ClearDelegate()
 		{
 			PhantomArenaDialogItem ownDialogItem = this.OwnDialogItem;
@@ -271,28 +271,28 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Dialog
 			opponentDialogItem.SetActive(false);
 		}
 
-		// Token: 0x0401CA80 RID: 117376
+		// Token: 0x040174B5 RID: 95413
 		private static Dictionary<EBvbPlayDialogType, int> typeMap;
 
-		// Token: 0x0401CA81 RID: 117377
+		// Token: 0x040174B6 RID: 95414
 		protected PhantomArenaDialogItem OpponentDialogItem;
 
-		// Token: 0x0401CA82 RID: 117378
+		// Token: 0x040174B7 RID: 95415
 		protected PhantomArenaDialogItem OwnDialogItem;
 
-		// Token: 0x0401CA83 RID: 117379
+		// Token: 0x040174B8 RID: 95416
 		protected CommonFlowTextLogic<object> Logic = new CommonFlowTextLogic<object>();
 
-		// Token: 0x0401CA84 RID: 117380
+		// Token: 0x040174B9 RID: 95417
 		protected List<ITalkItem> TalkData = new List<ITalkItem>();
 
-		// Token: 0x0401CA85 RID: 117381
+		// Token: 0x040174BA RID: 95418
 		protected int TalkIndex;
 
-		// Token: 0x0401CA86 RID: 117382
+		// Token: 0x040174BB RID: 95419
 		protected int OwnSpeakId;
 
-		// Token: 0x0401CA87 RID: 117383
+		// Token: 0x040174BC RID: 95420
 		protected int OpponentSpeakId;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000EC RID: 236
+	// Token: 0x020000FB RID: 251
 	public class ConfigBeginnerGuideById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000589 RID: 1417 RVA: 0x00078F8C File Offset: 0x0007718C
+		// Token: 0x060005E3 RID: 1507 RVA: 0x0007E8F0 File Offset: 0x0007CAF0
 		static ConfigBeginnerGuideById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBeginnerGuideById.CreateStaticDefaultValue), new Action(ConfigBeginnerGuideById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600058A RID: 1418 RVA: 0x00078FAC File Offset: 0x000771AC
+		// Token: 0x060005E4 RID: 1508 RVA: 0x0007E910 File Offset: 0x0007CB10
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBeginnerGuideById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600058B RID: 1419 RVA: 0x0007902B File Offset: 0x0007722B
+		// Token: 0x060005E5 RID: 1509 RVA: 0x0007E98F File Offset: 0x0007CB8F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBeginnerGuideById.LogPair = null;
 			ConfigBeginnerGuideById.HandleId = 0;
 		}
 
-		// Token: 0x0600058C RID: 1420 RVA: 0x00079039 File Offset: 0x00077239
+		// Token: 0x060005E6 RID: 1510 RVA: 0x0007E99D File Offset: 0x0007CB9D
 		public static void Init()
 		{
 			ConfigBeginnerGuideById.HandleId = ConfigCommon.InitDataStatement(ConfigBeginnerGuideById.HandleId, "db_beginnerlogreport.db", "select BinData from `BeginnerGuide` where Id=?");
 		}
 
-		// Token: 0x0600058D RID: 1421 RVA: 0x00079054 File Offset: 0x00077254
+		// Token: 0x060005E7 RID: 1511 RVA: 0x0007E9B8 File Offset: 0x0007CBB8
 		public static BeginnerGuide? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBeginnerGuideById.HandleId, ConfigBeginnerGuideById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BeginnerGuide?(rootAsBeginnerGuide);
 		}
 
-		// Token: 0x04000658 RID: 1624
+		// Token: 0x040006C1 RID: 1729
 		private const string DB = "db_beginnerlogreport.db";
 
-		// Token: 0x04000659 RID: 1625
+		// Token: 0x040006C2 RID: 1730
 		private const string FILE = "x.新手打点.xlsx";
 
-		// Token: 0x0400065A RID: 1626
+		// Token: 0x040006C3 RID: 1731
 		private const string TABLE = "BeginnerGuide";
 
-		// Token: 0x0400065B RID: 1627
+		// Token: 0x040006C4 RID: 1732
 		private const string COMMAND = "select BinData from `BeginnerGuide` where Id=?";
 
-		// Token: 0x0400065C RID: 1628
+		// Token: 0x040006C5 RID: 1733
 		private const string KEY_PREFIX = "BeginnerGuideById";
 
-		// Token: 0x0400065D RID: 1629
+		// Token: 0x040006C6 RID: 1734
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400065E RID: 1630
+		// Token: 0x040006C7 RID: 1735
 		private static int HandleId;
 	}
 }

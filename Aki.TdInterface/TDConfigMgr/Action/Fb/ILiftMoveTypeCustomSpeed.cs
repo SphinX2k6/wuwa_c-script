@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002831 RID: 10289
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B04 RID: 11012
 	public class ILiftMoveTypeCustomSpeed : ILiftMoveType
 	{
-		// Token: 0x0600E428 RID: 58408 RVA: 0x00219832 File Offset: 0x00217A32
+		// Token: 0x0600F24D RID: 62029 RVA: 0x00236696 File Offset: 0x00234896
 		public static ILiftMoveTypeCustomSpeed Create(ILiftMoveTypeCustomSpeed? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004588 RID: 17800
-		// (get) Token: 0x0600E429 RID: 58409 RVA: 0x00219851 File Offset: 0x00217A51
+		// Token: 0x170048F3 RID: 18675
+		// (get) Token: 0x0600F24E RID: 62030 RVA: 0x002366B5 File Offset: 0x002348B5
 		public override ELiftMoveType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004589 RID: 17801
-		// (get) Token: 0x0600E42A RID: 58410 RVA: 0x0021985E File Offset: 0x00217A5E
+		// Token: 0x170048F4 RID: 18676
+		// (get) Token: 0x0600F24F RID: 62031 RVA: 0x002366C2 File Offset: 0x002348C2
 		public virtual float TotalTime
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700458A RID: 17802
-		// (get) Token: 0x0600E42B RID: 58411 RVA: 0x0021986B File Offset: 0x00217A6B
+		// Token: 0x170048F5 RID: 18677
+		// (get) Token: 0x0600F250 RID: 62032 RVA: 0x002366CF File Offset: 0x002348CF
 		public virtual string TimePathCurve
 		{
 			get
@@ -52,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E3F RID: 32319
+		// Token: 0x040084FC RID: 34044
 		private ILiftMoveTypeCustomSpeed Instance;
 	}
 }

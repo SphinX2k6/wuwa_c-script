@@ -3,60 +3,60 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005528 RID: 21800
+	// Token: 0x02005AAE RID: 23214
 	public class IMatchTargetChargingDeviceT
 	{
-		// Token: 0x1700A0F7 RID: 41207
-		// (get) Token: 0x0602404B RID: 147531 RVA: 0x004FA333 File Offset: 0x004F8533
-		// (set) Token: 0x0602404C RID: 147532 RVA: 0x004FA33B File Offset: 0x004F853B
+		// Token: 0x1700A931 RID: 43313
+		// (get) Token: 0x06026105 RID: 155909 RVA: 0x00537457 File Offset: 0x00535657
+		// (set) Token: 0x06026106 RID: 155910 RVA: 0x0053745F File Offset: 0x0053565F
 		public EProgressBarControlType Type { get; set; }
 
-		// Token: 0x1700A0F8 RID: 41208
-		// (get) Token: 0x0602404D RID: 147533 RVA: 0x004FA344 File Offset: 0x004F8544
-		// (set) Token: 0x0602404E RID: 147534 RVA: 0x004FA34C File Offset: 0x004F854C
+		// Token: 0x1700A932 RID: 43314
+		// (get) Token: 0x06026107 RID: 155911 RVA: 0x00537468 File Offset: 0x00535668
+		// (set) Token: 0x06026108 RID: 155912 RVA: 0x00537470 File Offset: 0x00535670
 		public int MaxValue { get; set; }
 
-		// Token: 0x1700A0F9 RID: 41209
-		// (get) Token: 0x0602404F RID: 147535 RVA: 0x004FA355 File Offset: 0x004F8555
-		// (set) Token: 0x06024050 RID: 147536 RVA: 0x004FA35D File Offset: 0x004F855D
+		// Token: 0x1700A933 RID: 43315
+		// (get) Token: 0x06026109 RID: 155913 RVA: 0x00537479 File Offset: 0x00535679
+		// (set) Token: 0x0602610A RID: 155914 RVA: 0x00537481 File Offset: 0x00535681
 		public int InitValue { get; set; }
 
-		// Token: 0x1700A0FA RID: 41210
-		// (get) Token: 0x06024051 RID: 147537 RVA: 0x004FA366 File Offset: 0x004F8566
-		// (set) Token: 0x06024052 RID: 147538 RVA: 0x004FA36E File Offset: 0x004F856E
+		// Token: 0x1700A934 RID: 43316
+		// (get) Token: 0x0602610B RID: 155915 RVA: 0x0053748A File Offset: 0x0053568A
+		// (set) Token: 0x0602610C RID: 155916 RVA: 0x00537492 File Offset: 0x00535692
 		public int ProgressPerformanceAttribute { get; set; }
 
-		// Token: 0x1700A0FB RID: 41211
-		// (get) Token: 0x06024053 RID: 147539 RVA: 0x004FA377 File Offset: 0x004F8577
-		// (set) Token: 0x06024054 RID: 147540 RVA: 0x004FA37F File Offset: 0x004F857F
+		// Token: 0x1700A935 RID: 43317
+		// (get) Token: 0x0602610D RID: 155917 RVA: 0x0053749B File Offset: 0x0053569B
+		// (set) Token: 0x0602610E RID: 155918 RVA: 0x005374A3 File Offset: 0x005356A3
 		public IEntityMatchT Match { get; set; }
 
-		// Token: 0x1700A0FC RID: 41212
-		// (get) Token: 0x06024055 RID: 147541 RVA: 0x004FA388 File Offset: 0x004F8588
-		// (set) Token: 0x06024056 RID: 147542 RVA: 0x004FA390 File Offset: 0x004F8590
+		// Token: 0x1700A936 RID: 43318
+		// (get) Token: 0x0602610F RID: 155919 RVA: 0x005374AC File Offset: 0x005356AC
+		// (set) Token: 0x06026110 RID: 155920 RVA: 0x005374B4 File Offset: 0x005356B4
 		public int IncreaseSpeed { get; set; }
 
-		// Token: 0x1700A0FD RID: 41213
-		// (get) Token: 0x06024057 RID: 147543 RVA: 0x004FA399 File Offset: 0x004F8599
-		// (set) Token: 0x06024058 RID: 147544 RVA: 0x004FA3A1 File Offset: 0x004F85A1
+		// Token: 0x1700A937 RID: 43319
+		// (get) Token: 0x06026111 RID: 155921 RVA: 0x005374BD File Offset: 0x005356BD
+		// (set) Token: 0x06026112 RID: 155922 RVA: 0x005374C5 File Offset: 0x005356C5
 		public int DecreaseSpeed { get; set; }
 
-		// Token: 0x1700A0FE RID: 41214
-		// (get) Token: 0x06024059 RID: 147545 RVA: 0x004FA3AA File Offset: 0x004F85AA
-		// (set) Token: 0x0602405A RID: 147546 RVA: 0x004FA3B2 File Offset: 0x004F85B2
+		// Token: 0x1700A938 RID: 43320
+		// (get) Token: 0x06026113 RID: 155923 RVA: 0x005374CE File Offset: 0x005356CE
+		// (set) Token: 0x06026114 RID: 155924 RVA: 0x005374D6 File Offset: 0x005356D6
 		public bool RayCastCheck { get; set; }
 
-		// Token: 0x1700A0FF RID: 41215
-		// (get) Token: 0x0602405B RID: 147547 RVA: 0x004FA3BB File Offset: 0x004F85BB
-		// (set) Token: 0x0602405C RID: 147548 RVA: 0x004FA3C3 File Offset: 0x004F85C3
+		// Token: 0x1700A939 RID: 43321
+		// (get) Token: 0x06026115 RID: 155925 RVA: 0x005374DF File Offset: 0x005356DF
+		// (set) Token: 0x06026116 RID: 155926 RVA: 0x005374E7 File Offset: 0x005356E7
 		public IVectorInfoT RayCastCenter { get; set; }
 
-		// Token: 0x1700A100 RID: 41216
-		// (get) Token: 0x0602405D RID: 147549 RVA: 0x004FA3CC File Offset: 0x004F85CC
-		// (set) Token: 0x0602405E RID: 147550 RVA: 0x004FA3D4 File Offset: 0x004F85D4
+		// Token: 0x1700A93A RID: 43322
+		// (get) Token: 0x06026117 RID: 155927 RVA: 0x005374F0 File Offset: 0x005356F0
+		// (set) Token: 0x06026118 RID: 155928 RVA: 0x005374F8 File Offset: 0x005356F8
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602405F RID: 147551 RVA: 0x004FA3E0 File Offset: 0x004F85E0
+		// Token: 0x06026119 RID: 155929 RVA: 0x00537504 File Offset: 0x00535704
 		public IMatchTargetChargingDeviceT()
 		{
 			this.Type = EProgressBarControlType.CaptureStrategicPoint;

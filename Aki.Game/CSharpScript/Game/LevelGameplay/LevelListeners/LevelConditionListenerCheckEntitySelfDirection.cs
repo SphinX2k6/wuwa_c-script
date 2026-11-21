@@ -4,10 +4,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006ADE RID: 27358
+	// Token: 0x02005C56 RID: 23638
 	public class LevelConditionListenerCheckEntitySelfDirection : LevelListenerBase
 	{
-		// Token: 0x06043F74 RID: 278388 RVA: 0x010ABD23 File Offset: 0x010A9F23
+		// Token: 0x0603A0C6 RID: 237766 RVA: 0x0105559B File Offset: 0x0105379B
 		private void EventHandle()
 		{
 			TListenerCallbackFunc callback = this.Callback;
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			callback(ClientEventContext.Create(EEventName.OnEntitySelfDirectionUpdate, Array.Empty<object>()), Array.Empty<object>());
 		}
 
-		// Token: 0x06043F75 RID: 278389 RVA: 0x010ABD4C File Offset: 0x010A9F4C
+		// Token: 0x0603A0C7 RID: 237767 RVA: 0x010555C4 File Offset: 0x010537C4
 		[NullableContext(1)]
 		protected override void OnListen(object listeningInfo, TListenerCallbackFunc callback, [Nullable(2)] GeneralContext context = null, params object[] otherParams)
 		{
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F76 RID: 278390 RVA: 0x010ABDCD File Offset: 0x010A9FCD
+		// Token: 0x0603A0C8 RID: 237768 RVA: 0x01055645 File Offset: 0x01053845
 		protected override void OnUnListen()
 		{
 			EventSystem.Instance.RemoveAllTargetUseKey(this);

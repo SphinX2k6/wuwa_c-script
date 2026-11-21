@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200321B RID: 12827
+// Token: 0x0200278A RID: 10122
 [NullableContext(1)]
 [Nullable(0)]
 internal class NpcIgnoreCollisionTask : NpcWaitEntityTask
 {
-	// Token: 0x0601BA91 RID: 113297 RVA: 0x0079A155 File Offset: 0x00798355
+	// Token: 0x06019616 RID: 103958 RVA: 0x007C28F1 File Offset: 0x007C0AF1
 	public NpcIgnoreCollisionTask(Entity npcEntity, int pbDataId) : base(npcEntity, pbDataId)
 	{
 	}
 
-	// Token: 0x0601BA92 RID: 113298 RVA: 0x0079A15F File Offset: 0x0079835F
+	// Token: 0x06019617 RID: 103959 RVA: 0x007C28FB File Offset: 0x007C0AFB
 	protected override void Reset(Entity entity)
 	{
 		SceneItemActorComponent component = entity.GetComponent<SceneItemActorComponent>();
@@ -23,14 +23,14 @@ internal class NpcIgnoreCollisionTask : NpcWaitEntityTask
 		this.IgnoreSceneItemCollision(entity, false);
 	}
 
-	// Token: 0x0601BA93 RID: 113299 RVA: 0x0079A181 File Offset: 0x00798381
+	// Token: 0x06019618 RID: 103960 RVA: 0x007C291D File Offset: 0x007C0B1D
 	protected override void Execute(Entity entity)
 	{
 		this.IgnoreSceneItemCollision(entity, true);
 		base.Finish();
 	}
 
-	// Token: 0x0601BA94 RID: 113300 RVA: 0x0079A194 File Offset: 0x00798394
+	// Token: 0x06019619 RID: 103961 RVA: 0x007C2930 File Offset: 0x007C0B30
 	private void IgnoreSceneItemCollision(Entity entity, bool shouldIgnore)
 	{
 		SceneItemActorComponent component = entity.GetComponent<SceneItemActorComponent>();

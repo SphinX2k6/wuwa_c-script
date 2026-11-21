@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E88 RID: 7816
+	// Token: 0x020020BD RID: 8381
 	public class ISlideRailEndType_SetValue
 	{
-		// Token: 0x040063C9 RID: 25545
+		// Token: 0x040069AD RID: 27053
 		public ESlideRailEndType Type;
 	}
 }

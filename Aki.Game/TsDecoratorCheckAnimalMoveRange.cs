@@ -17,32 +17,28 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Decorator/Animal/TsDecoratorCheckAnimalMoveRange.TsDecoratorCheckAnimalMoveRange_C")]
 public class TsDecoratorCheckAnimalMoveRange : UBTDecorator_BlueprintBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0600002D RID: 45 RVA: 0x000023AC File Offset: 0x000005AC
+	// Token: 0x0600002D RID: 45 RVA: 0x000023B0 File Offset: 0x000005B0
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool PerformConditionCheckAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PerformConditionCheckAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDecoratorCheckAnimalMoveRange) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PerformConditionCheckAI"), TsDecoratorCheckAnimalMoveRange.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			return this.PerformConditionCheckAI_Implementation(ownerController, controlledPawn);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr = stackalloc UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0600002E RID: 46 RVA: 0x0000244C File Offset: 0x0000064C
+	// Token: 0x0600002E RID: 46 RVA: 0x00002468 File Offset: 0x00000668
 	[NullableContext(2)]
 	protected virtual bool PerformConditionCheckAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -66,7 +62,7 @@ public class TsDecoratorCheckAnimalMoveRange : UBTDecorator_BlueprintBase, IUnre
 		return this.RangeInfo == null || this.RangeInfo.IsInRange(aiController.CharActorComp.ActorLocationProxy);
 	}
 
-	// Token: 0x0600002F RID: 47 RVA: 0x000024E0 File Offset: 0x000006E0
+	// Token: 0x0600002F RID: 47 RVA: 0x000024FC File Offset: 0x000006FC
 	[NullableContext(1)]
 	private void InitRangeInfo(Entity entity)
 	{
@@ -116,7 +112,7 @@ public class TsDecoratorCheckAnimalMoveRange : UBTDecorator_BlueprintBase, IUnre
 		}
 	}
 
-	// Token: 0x06000030 RID: 48 RVA: 0x00002618 File Offset: 0x00000818
+	// Token: 0x06000030 RID: 48 RVA: 0x00002634 File Offset: 0x00000834
 	[NullableContext(2)]
 	private void SetRangeInfo(ITriggerShape shape, Aki.TDConfigMgr.Action.ITransform transform)
 	{
@@ -137,7 +133,7 @@ public class TsDecoratorCheckAnimalMoveRange : UBTDecorator_BlueprintBase, IUnre
 		this.RangeInfo = new SphereRangeEntityInfo(shape as ISphereTriggerShape, transform);
 	}
 
-	// Token: 0x06000031 RID: 49 RVA: 0x00002660 File Offset: 0x00000860
+	// Token: 0x06000031 RID: 49 RVA: 0x0000267C File Offset: 0x0000087C
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsDecoratorCheckAnimalMoveRange._ClassPtr == IntPtr.Zero)
@@ -147,23 +143,23 @@ public class TsDecoratorCheckAnimalMoveRange : UBTDecorator_BlueprintBase, IUnre
 		return TsDecoratorCheckAnimalMoveRange._ClassPtr;
 	}
 
-	// Token: 0x06000032 RID: 50 RVA: 0x00002684 File Offset: 0x00000884
+	// Token: 0x06000032 RID: 50 RVA: 0x000026A0 File Offset: 0x000008A0
 	public TsDecoratorCheckAnimalMoveRange() : this(BuiltinUtils.AllocNativeUObject(TsDecoratorCheckAnimalMoveRange.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000033 RID: 51 RVA: 0x000026AC File Offset: 0x000008AC
+	// Token: 0x06000033 RID: 51 RVA: 0x000026C8 File Offset: 0x000008C8
 	[NullableContext(1)]
 	public TsDecoratorCheckAnimalMoveRange(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsDecoratorCheckAnimalMoveRange.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000034 RID: 52 RVA: 0x000026DF File Offset: 0x000008DF
+	// Token: 0x06000034 RID: 52 RVA: 0x000026FB File Offset: 0x000008FB
 	protected TsDecoratorCheckAnimalMoveRange(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000035 RID: 53 RVA: 0x000026E8 File Offset: 0x000008E8
+	// Token: 0x06000035 RID: 53 RVA: 0x00002704 File Offset: 0x00000904
 	protected unsafe virtual void __CPPCALL_PerformConditionCheckAI_Implementation(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

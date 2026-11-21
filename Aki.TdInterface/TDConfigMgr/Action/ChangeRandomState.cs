@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014E4 RID: 5348
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200163D RID: 5693
 	public class ChangeRandomState : ActionParams
 	{
-		// Token: 0x060079BA RID: 31162 RVA: 0x00123294 File Offset: 0x00121494
+		// Token: 0x06008087 RID: 32903 RVA: 0x00131EE0 File Offset: 0x001300E0
 		private ChangeRandomState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060079BB RID: 31163 RVA: 0x001232CC File Offset: 0x001214CC
+		// Token: 0x06008088 RID: 32904 RVA: 0x00131F18 File Offset: 0x00130118
 		public static ChangeRandomState Create([Nullable(2)] ChangeRandomState instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060079BC RID: 31164 RVA: 0x001232DF File Offset: 0x001214DF
+		// Token: 0x06008089 RID: 32905 RVA: 0x00131F2B File Offset: 0x0013012B
 		public static ChangeRandomState CreateFromSetValue([Nullable(2)] ChangeRandomState_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060079BD RID: 31165 RVA: 0x001232F2 File Offset: 0x001214F2
+		// Token: 0x0600808A RID: 32906 RVA: 0x00131F3E File Offset: 0x0013013E
 		public ChangeRandomState_SetValue ToSetValue()
 		{
 			return new ChangeRandomState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028BD RID: 10429
-		// (get) Token: 0x060079BE RID: 31166 RVA: 0x00123305 File Offset: 0x00121505
-		// (set) Token: 0x060079BF RID: 31167 RVA: 0x0012332C File Offset: 0x0012152C
+		// Token: 0x17002AA7 RID: 10919
+		// (get) Token: 0x0600808B RID: 32907 RVA: 0x00131F51 File Offset: 0x00130151
+		// (set) Token: 0x0600808C RID: 32908 RVA: 0x00131F78 File Offset: 0x00130178
 		public virtual List<int> StateIds
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400469A RID: 18074
+		// Token: 0x04004A35 RID: 18997
 		[Nullable(2)]
 		protected new ChangeRandomState FbInstance;
 
-		// Token: 0x0400469B RID: 18075
+		// Token: 0x04004A36 RID: 18998
 		[Nullable(2)]
 		protected ChangeRandomState_SetValue PocoInterface;
 	}

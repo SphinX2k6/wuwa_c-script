@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058AD RID: 22701
+	// Token: 0x02005EBA RID: 24250
 	public class ISceneItemAiPatrolByGameTimeT
 	{
-		// Token: 0x1700A9FD RID: 43517
-		// (get) Token: 0x060264D8 RID: 156888 RVA: 0x00547A54 File Offset: 0x00545C54
-		// (set) Token: 0x060264D9 RID: 156889 RVA: 0x00547A5C File Offset: 0x00545C5C
+		// Token: 0x1700B32D RID: 45869
+		// (get) Token: 0x06028A3A RID: 166458 RVA: 0x0058E5A0 File Offset: 0x0058C7A0
+		// (set) Token: 0x06028A3B RID: 166459 RVA: 0x0058E5A8 File Offset: 0x0058C7A8
 		public ESceneItemAiPatrolType Type { get; set; }
 
-		// Token: 0x1700A9FE RID: 43518
-		// (get) Token: 0x060264DA RID: 156890 RVA: 0x00547A65 File Offset: 0x00545C65
-		// (set) Token: 0x060264DB RID: 156891 RVA: 0x00547A6D File Offset: 0x00545C6D
+		// Token: 0x1700B32E RID: 45870
+		// (get) Token: 0x06028A3C RID: 166460 RVA: 0x0058E5B1 File Offset: 0x0058C7B1
+		// (set) Token: 0x06028A3D RID: 166461 RVA: 0x0058E5B9 File Offset: 0x0058C7B9
 		public int Spline { get; set; }
 
-		// Token: 0x060264DC RID: 156892 RVA: 0x00547A76 File Offset: 0x00545C76
+		// Token: 0x06028A3E RID: 166462 RVA: 0x0058E5C2 File Offset: 0x0058C7C2
 		public ISceneItemAiPatrolByGameTimeT()
 		{
 			this.Type = ESceneItemAiPatrolType.ByGameTime;

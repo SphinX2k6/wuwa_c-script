@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002E7 RID: 743
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200032E RID: 814
 	public class IDynamicPortalByBullet : IDynamicPortalCreateMode
 	{
-		// Token: 0x06000E3B RID: 3643 RVA: 0x00033CC0 File Offset: 0x00031EC0
+		// Token: 0x06000F6B RID: 3947 RVA: 0x00036BF4 File Offset: 0x00034DF4
 		private IDynamicPortalByBullet_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000E3C RID: 3644 RVA: 0x00033CF8 File Offset: 0x00031EF8
+		// Token: 0x06000F6C RID: 3948 RVA: 0x00036C2C File Offset: 0x00034E2C
 		public static IDynamicPortalByBullet Create([Nullable(2)] IDynamicPortalByBullet instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000E3D RID: 3645 RVA: 0x00033D0B File Offset: 0x00031F0B
+		// Token: 0x06000F6D RID: 3949 RVA: 0x00036C3F File Offset: 0x00034E3F
 		public static IDynamicPortalByBullet CreateFromSetValue([Nullable(2)] IDynamicPortalByBullet_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000E3E RID: 3646 RVA: 0x00033D20 File Offset: 0x00031F20
+		// Token: 0x06000F6E RID: 3950 RVA: 0x00036C54 File Offset: 0x00034E54
 		public new IDynamicPortalByBullet_SetValue ToSetValue()
 		{
 			return new IDynamicPortalByBullet_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000420 RID: 1056
-		// (get) Token: 0x06000E3F RID: 3647 RVA: 0x00033D86 File Offset: 0x00031F86
-		// (set) Token: 0x06000E40 RID: 3648 RVA: 0x00033DB1 File Offset: 0x00031FB1
+		// Token: 0x1700046D RID: 1133
+		// (get) Token: 0x06000F6F RID: 3951 RVA: 0x00036CBA File Offset: 0x00034EBA
+		// (set) Token: 0x06000F70 RID: 3952 RVA: 0x00036CE5 File Offset: 0x00034EE5
 		public override EDynamicPortalCreateType Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000421 RID: 1057
-		// (get) Token: 0x06000E41 RID: 3649 RVA: 0x00033DC0 File Offset: 0x00031FC0
-		// (set) Token: 0x06000E42 RID: 3650 RVA: 0x00033E21 File Offset: 0x00032021
+		// Token: 0x1700046E RID: 1134
+		// (get) Token: 0x06000F71 RID: 3953 RVA: 0x00036CF4 File Offset: 0x00034EF4
+		// (set) Token: 0x06000F72 RID: 3954 RVA: 0x00036D55 File Offset: 0x00034F55
 		public override IDynamicPortalConfig PortalA
 		{
 			get
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000422 RID: 1058
-		// (get) Token: 0x06000E43 RID: 3651 RVA: 0x00033E38 File Offset: 0x00032038
-		// (set) Token: 0x06000E44 RID: 3652 RVA: 0x00033E99 File Offset: 0x00032099
+		// Token: 0x1700046F RID: 1135
+		// (get) Token: 0x06000F73 RID: 3955 RVA: 0x00036D6C File Offset: 0x00034F6C
+		// (set) Token: 0x06000F74 RID: 3956 RVA: 0x00036DCD File Offset: 0x00034FCD
 		public override IDynamicPortalConfig PortalB
 		{
 			get
@@ -148,9 +146,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000423 RID: 1059
-		// (get) Token: 0x06000E45 RID: 3653 RVA: 0x00033EB0 File Offset: 0x000320B0
-		// (set) Token: 0x06000E46 RID: 3654 RVA: 0x00033EEA File Offset: 0x000320EA
+		// Token: 0x17000470 RID: 1136
+		// (get) Token: 0x06000F75 RID: 3957 RVA: 0x00036DE4 File Offset: 0x00034FE4
+		// (set) Token: 0x06000F76 RID: 3958 RVA: 0x00036E1E File Offset: 0x0003501E
 		public override EPortalModel? InitOpenPortal
 		{
 			get
@@ -172,9 +170,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000424 RID: 1060
-		// (get) Token: 0x06000E47 RID: 3655 RVA: 0x00033EF8 File Offset: 0x000320F8
-		// (set) Token: 0x06000E48 RID: 3656 RVA: 0x00033F59 File Offset: 0x00032159
+		// Token: 0x17000471 RID: 1137
+		// (get) Token: 0x06000F77 RID: 3959 RVA: 0x00036E2C File Offset: 0x0003502C
+		// (set) Token: 0x06000F78 RID: 3960 RVA: 0x00036E8D File Offset: 0x0003508D
 		[Nullable(2)]
 		public override IPortalRenderConfig RenderConfig
 		{
@@ -205,9 +203,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000425 RID: 1061
-		// (get) Token: 0x06000E49 RID: 3657 RVA: 0x00033F70 File Offset: 0x00032170
-		// (set) Token: 0x06000E4A RID: 3658 RVA: 0x00033FD1 File Offset: 0x000321D1
+		// Token: 0x17000472 RID: 1138
+		// (get) Token: 0x06000F79 RID: 3961 RVA: 0x00036EA4 File Offset: 0x000350A4
+		// (set) Token: 0x06000F7A RID: 3962 RVA: 0x00036F05 File Offset: 0x00035105
 		public virtual IDynamicBulletConfig TypeA
 		{
 			get
@@ -235,9 +233,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000426 RID: 1062
-		// (get) Token: 0x06000E4B RID: 3659 RVA: 0x00033FE8 File Offset: 0x000321E8
-		// (set) Token: 0x06000E4C RID: 3660 RVA: 0x00034049 File Offset: 0x00032249
+		// Token: 0x17000473 RID: 1139
+		// (get) Token: 0x06000F7B RID: 3963 RVA: 0x00036F1C File Offset: 0x0003511C
+		// (set) Token: 0x06000F7C RID: 3964 RVA: 0x00036F7D File Offset: 0x0003517D
 		public virtual IDynamicBulletConfig TypeB
 		{
 			get
@@ -265,42 +263,42 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000C9D RID: 3229
+		// Token: 0x04000D87 RID: 3463
 		[Nullable(2)]
 		protected new IDynamicPortalByBullet FbInstance;
 
-		// Token: 0x04000C9E RID: 3230
+		// Token: 0x04000D88 RID: 3464
 		[Nullable(2)]
 		protected new IDynamicPortalByBullet_SetValue PocoInterface;
 
-		// Token: 0x04000C9F RID: 3231
+		// Token: 0x04000D89 RID: 3465
 		private IDynamicPortalConfig _PortalACache;
 
-		// Token: 0x04000CA0 RID: 3232
+		// Token: 0x04000D8A RID: 3466
 		private bool _PortalAInited;
 
-		// Token: 0x04000CA1 RID: 3233
+		// Token: 0x04000D8B RID: 3467
 		private IDynamicPortalConfig _PortalBCache;
 
-		// Token: 0x04000CA2 RID: 3234
+		// Token: 0x04000D8C RID: 3468
 		private bool _PortalBInited;
 
-		// Token: 0x04000CA3 RID: 3235
+		// Token: 0x04000D8D RID: 3469
 		private IPortalRenderConfig _RenderConfigCache;
 
-		// Token: 0x04000CA4 RID: 3236
+		// Token: 0x04000D8E RID: 3470
 		private bool _RenderConfigInited;
 
-		// Token: 0x04000CA5 RID: 3237
+		// Token: 0x04000D8F RID: 3471
 		private IDynamicBulletConfig _TypeACache;
 
-		// Token: 0x04000CA6 RID: 3238
+		// Token: 0x04000D90 RID: 3472
 		private bool _TypeAInited;
 
-		// Token: 0x04000CA7 RID: 3239
+		// Token: 0x04000D91 RID: 3473
 		private IDynamicBulletConfig _TypeBCache;
 
-		// Token: 0x04000CA8 RID: 3240
+		// Token: 0x04000D92 RID: 3474
 		private bool _TypeBInited;
 	}
 }

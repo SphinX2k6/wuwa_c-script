@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026EF RID: 9967
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029B5 RID: 10677
 	public class ExecBattleAction : ActionParams
 	{
-		// Token: 0x0600DE98 RID: 56984 RVA: 0x002105A4 File Offset: 0x0020E7A4
+		// Token: 0x0600EC7F RID: 60543 RVA: 0x0022CEDA File Offset: 0x0022B0DA
 		public static ExecBattleAction Create(IExecBattleAction? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700427C RID: 17020
-		// (get) Token: 0x0600DE99 RID: 56985 RVA: 0x002105C3 File Offset: 0x0020E7C3
+		// Token: 0x170045C3 RID: 17859
+		// (get) Token: 0x0600EC80 RID: 60544 RVA: 0x0022CEF9 File Offset: 0x0022B0F9
 		public virtual IExecBattleActionType BattleOption
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B8F RID: 31631
+		// Token: 0x04008233 RID: 33331
 		private IExecBattleAction Instance;
 
-		// Token: 0x04007B90 RID: 31632
+		// Token: 0x04008234 RID: 33332
 		private IExecBattleActionType _BattleOptionCache;
 
-		// Token: 0x04007B91 RID: 31633
+		// Token: 0x04008235 RID: 33333
 		private bool _BattleOptionInited;
 	}
 }

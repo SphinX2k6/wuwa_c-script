@@ -6,17 +6,17 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.CombatMessage;
 using UnrealEngine;
 
-// Token: 0x02002F27 RID: 12071
+// Token: 0x0200247A RID: 9338
 [NullableContext(1)]
 [Nullable(0)]
 public class ExtraEffectBuffTransfer : BuffEffect
 {
-	// Token: 0x06019B87 RID: 105351 RVA: 0x006B24DC File Offset: 0x006B06DC
+	// Token: 0x06017492 RID: 95378 RVA: 0x006D87F4 File Offset: 0x006D69F4
 	public ExtraEffectBuffTransfer(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019B88 RID: 105352 RVA: 0x006B253C File Offset: 0x006B073C
+	// Token: 0x06017493 RID: 95379 RVA: 0x006D8854 File Offset: 0x006D6A54
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -33,7 +33,7 @@ public class ExtraEffectBuffTransfer : BuffEffect
 		this.AbnormalDamageType = ConfigCommonParamById.GetIntConfig("AbnormalDamageType").GetValueOrDefault(-1);
 	}
 
-	// Token: 0x06019B89 RID: 105353 RVA: 0x006B25F4 File Offset: 0x006B07F4
+	// Token: 0x06017494 RID: 95380 RVA: 0x006D890C File Offset: 0x006D6B0C
 	public override void OnCreated()
 	{
 		Entity ownerEntity = base.OwnerEntity;
@@ -47,7 +47,7 @@ public class ExtraEffectBuffTransfer : BuffEffect
 		}
 	}
 
-	// Token: 0x06019B8A RID: 105354 RVA: 0x006B2678 File Offset: 0x006B0878
+	// Token: 0x06017495 RID: 95381 RVA: 0x006D8990 File Offset: 0x006D6B90
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -70,7 +70,7 @@ public class ExtraEffectBuffTransfer : BuffEffect
 		return new ValueTuple<long?, long?, bool>(null, null, false);
 	}
 
-	// Token: 0x06019B8B RID: 105355 RVA: 0x006B270C File Offset: 0x006B090C
+	// Token: 0x06017496 RID: 95382 RVA: 0x006D8A24 File Offset: 0x006D6C24
 	protected void AddBuff(BaseBuffComponent buffComp, BuffTransferRecord record)
 	{
 		int[] buffStack = record.BuffStack;
@@ -88,7 +88,7 @@ public class ExtraEffectBuffTransfer : BuffEffect
 		record.TransferEntity.Add(buffComp.Entity.Id);
 	}
 
-	// Token: 0x06019B8C RID: 105356 RVA: 0x006B2798 File Offset: 0x006B0998
+	// Token: 0x06017497 RID: 95383 RVA: 0x006D8AB0 File Offset: 0x006D6CB0
 	protected bool GetBuffStack(BaseBuffComponent buffComp)
 	{
 		bool flag = false;
@@ -101,7 +101,7 @@ public class ExtraEffectBuffTransfer : BuffEffect
 		return flag;
 	}
 
-	// Token: 0x06019B8D RID: 105357 RVA: 0x006B27E0 File Offset: 0x006B09E0
+	// Token: 0x06017498 RID: 95384 RVA: 0x006D8AF8 File Offset: 0x006D6CF8
 	protected bool UpdateMaxBuffStack(BaseBuffComponent buffComp, BuffTransferRecord record)
 	{
 		int[] buffStack = record.BuffStack;
@@ -118,7 +118,7 @@ public class ExtraEffectBuffTransfer : BuffEffect
 		return result;
 	}
 
-	// Token: 0x06019B8E RID: 105358 RVA: 0x006B2826 File Offset: 0x006B0A26
+	// Token: 0x06017499 RID: 95385 RVA: 0x006D8B3E File Offset: 0x006D6D3E
 	protected void OnDamageEvent(Entity attacker, Entity victim, RequirementPayload req, DamageResult result, FVectorDouble damagePosition)
 	{
 		if (result.IsTargetKilled)
@@ -128,13 +128,13 @@ public class ExtraEffectBuffTransfer : BuffEffect
 		this.HandleDamageOrKillEvent(attacker, victim, req, result, damagePosition);
 	}
 
-	// Token: 0x06019B8F RID: 105359 RVA: 0x006B283F File Offset: 0x006B0A3F
+	// Token: 0x0601749A RID: 95386 RVA: 0x006D8B57 File Offset: 0x006D6D57
 	protected void OnKillEvent(Entity attacker, Entity victim, RequirementPayload req, DamageResult result, FVectorDouble damagePosition)
 	{
 		this.HandleDamageOrKillEvent(attacker, victim, req, result, damagePosition);
 	}
 
-	// Token: 0x06019B90 RID: 105360 RVA: 0x006B2850 File Offset: 0x006B0A50
+	// Token: 0x0601749B RID: 95387 RVA: 0x006D8B68 File Offset: 0x006D6D68
 	protected void HandleDamageOrKillEvent(Entity attacker, Entity victim, RequirementPayload req, DamageResult result, FVectorDouble damagePosition)
 	{
 		if (!this.CheckAuthority())
@@ -240,7 +240,7 @@ public class ExtraEffectBuffTransfer : BuffEffect
 		}
 	}
 
-	// Token: 0x06019B91 RID: 105361 RVA: 0x006B2B30 File Offset: 0x006B0D30
+	// Token: 0x0601749C RID: 95388 RVA: 0x006D8E48 File Offset: 0x006D7048
 	public override void OnRemoved(bool bPremature)
 	{
 		Entity ownerEntity = base.OwnerEntity;
@@ -254,50 +254,50 @@ public class ExtraEffectBuffTransfer : BuffEffect
 		}
 	}
 
-	// Token: 0x06019B92 RID: 105362 RVA: 0x006B2BB4 File Offset: 0x006B0DB4
+	// Token: 0x0601749D RID: 95389 RVA: 0x006D8ECC File Offset: 0x006D70CC
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019B93 RID: 105363 RVA: 0x006B2BB7 File Offset: 0x006B0DB7
+	// Token: 0x0601749E RID: 95390 RVA: 0x006D8ECF File Offset: 0x006D70CF
 	public override string GetDebugEffectString()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C1CF RID: 49615
+	// Token: 0x0400C571 RID: 50545
 	protected static readonly int MaxRecordCount = 5;
 
-	// Token: 0x0400C1D0 RID: 49616
+	// Token: 0x0400C572 RID: 50546
 	protected int AbnormalDamageType = -1;
 
-	// Token: 0x0400C1D1 RID: 49617
+	// Token: 0x0400C573 RID: 50547
 	protected long[] BuffIds = Array.Empty<long>();
 
-	// Token: 0x0400C1D2 RID: 49618
+	// Token: 0x0400C574 RID: 50548
 	protected int RecordDuration;
 
-	// Token: 0x0400C1D3 RID: 49619
+	// Token: 0x0400C575 RID: 50549
 	protected int EffectInternal;
 
-	// Token: 0x0400C1D4 RID: 49620
+	// Token: 0x0400C576 RID: 50550
 	protected List<BuffTransferRecord> BuffTransferRecords = new List<BuffTransferRecord>();
 
-	// Token: 0x0400C1D5 RID: 49621
+	// Token: 0x0400C577 RID: 50551
 	[Nullable(2)]
 	protected BuffTransferRecord KillRecord;
 
-	// Token: 0x0400C1D6 RID: 49622
+	// Token: 0x0400C578 RID: 50552
 	protected double NextExecutionTime = -1.0;
 
-	// Token: 0x0400C1D7 RID: 49623
+	// Token: 0x0400C579 RID: 50553
 	protected double RecordValidTime = -1.0;
 
-	// Token: 0x0400C1D8 RID: 49624
+	// Token: 0x0400C57A RID: 50554
 	protected int[] BuffStack = Array.Empty<int>();
 
-	// Token: 0x0400C1D9 RID: 49625
+	// Token: 0x0400C57B RID: 50555
 	protected long AbnormalMessageId;
 }

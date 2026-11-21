@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200185E RID: 6238
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019E9 RID: 6633
 	public class ICenterTextShowType
 	{
-		// Token: 0x06008609 RID: 34313 RVA: 0x0013EA28 File Offset: 0x0013CC28
+		// Token: 0x06008D31 RID: 36145 RVA: 0x0014E25C File Offset: 0x0014C45C
 		private ICenterTextShowType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600860A RID: 34314 RVA: 0x0013EA60 File Offset: 0x0013CC60
+		// Token: 0x06008D32 RID: 36146 RVA: 0x0014E294 File Offset: 0x0014C494
 		public static ICenterTextShowType Create([Nullable(2)] ICenterTextShowType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600860B RID: 34315 RVA: 0x0013EA73 File Offset: 0x0013CC73
+		// Token: 0x06008D33 RID: 36147 RVA: 0x0014E2A7 File Offset: 0x0014C4A7
 		public static ICenterTextShowType CreateFromSetValue([Nullable(2)] ICenterTextShowType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600860C RID: 34316 RVA: 0x0013EA86 File Offset: 0x0013CC86
+		// Token: 0x06008D34 RID: 36148 RVA: 0x0014E2BA File Offset: 0x0014C4BA
 		public ICenterTextShowType_SetValue ToSetValue()
 		{
 			return new ICenterTextShowType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002BCC RID: 11212
-		// (get) Token: 0x0600860D RID: 34317 RVA: 0x0013EA99 File Offset: 0x0013CC99
-		// (set) Token: 0x0600860E RID: 34318 RVA: 0x0013EAC4 File Offset: 0x0013CCC4
+		// Token: 0x17002DC7 RID: 11719
+		// (get) Token: 0x06008D35 RID: 36149 RVA: 0x0014E2CD File Offset: 0x0014C4CD
+		// (set) Token: 0x06008D36 RID: 36150 RVA: 0x0014E2F8 File Offset: 0x0014C4F8
 		public virtual ECenterTextShowAnim Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400549D RID: 21661
+		// Token: 0x040058EA RID: 22762
 		[Nullable(2)]
 		protected ICenterTextShowType FbInstance;
 
-		// Token: 0x0400549E RID: 21662
+		// Token: 0x040058EB RID: 22763
 		[Nullable(2)]
 		protected ICenterTextShowType_SetValue PocoInterface;
 	}

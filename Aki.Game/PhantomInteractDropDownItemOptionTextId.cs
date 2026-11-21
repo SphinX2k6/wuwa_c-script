@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002472 RID: 9330
+// Token: 0x02001957 RID: 6487
 public class PhantomInteractDropDownItemOptionTextId : IStaticVariableResetter
 {
-	// Token: 0x06012BA8 RID: 76712 RVA: 0x0049EBB4 File Offset: 0x0049CDB4
+	// Token: 0x06010060 RID: 65632 RVA: 0x004AC320 File Offset: 0x004AA520
 	static PhantomInteractDropDownItemOptionTextId()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhantomInteractDropDownItemOptionTextId.CreateStaticDefaultValue), new Action(PhantomInteractDropDownItemOptionTextId.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06012BA9 RID: 76713 RVA: 0x0049EBD3 File Offset: 0x0049CDD3
+	// Token: 0x06010061 RID: 65633 RVA: 0x004AC33F File Offset: 0x004AA53F
 	public static void CreateStaticDefaultValue()
 	{
 		PhantomInteractDropDownItemOptionTextId.TextIds = new string[]
@@ -21,13 +21,13 @@ public class PhantomInteractDropDownItemOptionTextId : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06012BAA RID: 76714 RVA: 0x0049EBF8 File Offset: 0x0049CDF8
+	// Token: 0x06010062 RID: 65634 RVA: 0x004AC364 File Offset: 0x004AA564
 	public static void ResetStaticDefaultValue()
 	{
 		PhantomInteractDropDownItemOptionTextId.TextIds = null;
 	}
 
-	// Token: 0x04008D0F RID: 36111
+	// Token: 0x04008E56 RID: 36438
 	[Nullable(1)]
 	public static string[] TextIds;
 }

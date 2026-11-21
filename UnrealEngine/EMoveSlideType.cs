@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019DD RID: 6621
+	// Token: 0x0200046A RID: 1130
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroMovement.EMoveSlideType")]
 	public enum EMoveSlideType : byte
 	{
-		// Token: 0x0400D488 RID: 54408
+		// Token: 0x04002DF9 RID: 11769
 		Free,
-		// Token: 0x0400D489 RID: 54409
+		// Token: 0x04002DFA RID: 11770
 		Planar,
-		// Token: 0x0400D48A RID: 54410
+		// Token: 0x04002DFB RID: 11771
 		RemovePositive,
-		// Token: 0x0400D48B RID: 54411
+		// Token: 0x04002DFC RID: 11772
 		NoSlide,
-		// Token: 0x0400D48C RID: 54412
+		// Token: 0x04002DFD RID: 11773
 		EMoveSlideType_MAX
 	}
 }

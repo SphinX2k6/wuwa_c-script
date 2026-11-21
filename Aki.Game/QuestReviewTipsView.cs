@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002687 RID: 9863
+// Token: 0x02001B72 RID: 7026
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestReviewTipsView : UiTickViewBase
 {
-	// Token: 0x06014354 RID: 82772 RVA: 0x0051AD83 File Offset: 0x00518F83
+	// Token: 0x06011836 RID: 71734 RVA: 0x00529ABB File Offset: 0x00527CBB
 	public QuestReviewTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014355 RID: 82773 RVA: 0x0051AD8C File Offset: 0x00518F8C
+	// Token: 0x06011837 RID: 71735 RVA: 0x00529AC4 File Offset: 0x00527CC4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -44,7 +44,7 @@ public class QuestReviewTipsView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014356 RID: 82774 RVA: 0x0051AE98 File Offset: 0x00519098
+	// Token: 0x06011838 RID: 71736 RVA: 0x00529BD0 File Offset: 0x00527DD0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		QuestReviewTipsView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -55,7 +55,7 @@ public class QuestReviewTipsView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014357 RID: 82775 RVA: 0x0051AEDC File Offset: 0x005190DC
+	// Token: 0x06011839 RID: 71737 RVA: 0x00529C14 File Offset: 0x00527E14
 	protected override void OnStart()
 	{
 		IQuestReviewTipsParam questReviewTipsParam = this.OpenParam as IQuestReviewTipsParam;
@@ -68,13 +68,13 @@ public class QuestReviewTipsView : UiTickViewBase
 		this.UiViewSequence.AddSequenceFinishEvent("CloseTips", new Action<string>(this.OnCloseSeqFinish), false);
 	}
 
-	// Token: 0x06014358 RID: 82776 RVA: 0x0051AF94 File Offset: 0x00519194
+	// Token: 0x0601183A RID: 71738 RVA: 0x00529CCC File Offset: 0x00527ECC
 	protected override void OnAfterShow()
 	{
 		this.UiViewSequence.PlaySequence("StartTips", false, null);
 	}
 
-	// Token: 0x06014359 RID: 82777 RVA: 0x0051AFBC File Offset: 0x005191BC
+	// Token: 0x0601183B RID: 71739 RVA: 0x00529CF4 File Offset: 0x00527EF4
 	protected override void OnTick(float delta)
 	{
 		if (this.EntryData == null || !this.StartTick)
@@ -97,7 +97,7 @@ public class QuestReviewTipsView : UiTickViewBase
 		sprite.SetFillAmount(num / this.EntryData.TimerDurationMs);
 	}
 
-	// Token: 0x0601435A RID: 82778 RVA: 0x0051B058 File Offset: 0x00519258
+	// Token: 0x0601183C RID: 71740 RVA: 0x00529D90 File Offset: 0x00527F90
 	private void OnClick()
 	{
 		if (this.EntryData == null)
@@ -108,47 +108,47 @@ public class QuestReviewTipsView : UiTickViewBase
 		this.UiViewSequence.PlaySequence("CloseTips", true, null);
 	}
 
-	// Token: 0x0601435B RID: 82779 RVA: 0x0051B0A0 File Offset: 0x005192A0
+	// Token: 0x0601183D RID: 71741 RVA: 0x00529DD8 File Offset: 0x00527FD8
 	private void OnStartSeqFinish(string _)
 	{
 		this.UiViewSequence.PlaySequence("StartAtOnce", false, null);
 		this.StartTick = true;
 	}
 
-	// Token: 0x0601435C RID: 82780 RVA: 0x0051B0CE File Offset: 0x005192CE
+	// Token: 0x0601183E RID: 71742 RVA: 0x00529E06 File Offset: 0x00528006
 	private void OnCloseSeqFinish(string _)
 	{
 		this.StartTick = false;
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04009817 RID: 38935
+	// Token: 0x0400996F RID: 39279
 	[Nullable(2)]
 	private QuestReviewEntryData EntryData;
 
-	// Token: 0x04009818 RID: 38936
+	// Token: 0x04009970 RID: 39280
 	private float CountDownTime;
 
-	// Token: 0x04009819 RID: 38937
+	// Token: 0x04009971 RID: 39281
 	private bool StartTick;
 
-	// Token: 0x02008CD7 RID: 36055
+	// Token: 0x02007E60 RID: 32352
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402DB3D RID: 187197
+		// Token: 0x04028E54 RID: 167508
 		public const int TextName = 0;
 
-		// Token: 0x0402DB3E RID: 187198
+		// Token: 0x04028E55 RID: 167509
 		public const int SpriteIcon = 1;
 
-		// Token: 0x0402DB3F RID: 187199
+		// Token: 0x04028E56 RID: 167510
 		public const int ButtonTips = 2;
 
-		// Token: 0x0402DB40 RID: 187200
+		// Token: 0x04028E57 RID: 167511
 		public const int SpriteTimeBar = 3;
 
-		// Token: 0x0402DB41 RID: 187201
+		// Token: 0x04028E58 RID: 167512
 		public const int TextTitle = 4;
 	}
 }

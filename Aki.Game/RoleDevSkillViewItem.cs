@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002822 RID: 10274
+// Token: 0x02001D9D RID: 7581
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleDevSkillViewItem : UiPanelBase
 {
-	// Token: 0x06015234 RID: 86580 RVA: 0x00558FF8 File Offset: 0x005571F8
+	// Token: 0x06012C32 RID: 76850 RVA: 0x00583D0C File Offset: 0x00581F0C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,7 +43,7 @@ public class RoleDevSkillViewItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06015235 RID: 86581 RVA: 0x005591B4 File Offset: 0x005573B4
+	// Token: 0x06012C33 RID: 76851 RVA: 0x00583EC8 File Offset: 0x005820C8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleDevSkillViewItem.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -54,14 +54,14 @@ public class RoleDevSkillViewItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015236 RID: 86582 RVA: 0x005591F7 File Offset: 0x005573F7
+	// Token: 0x06012C34 RID: 76852 RVA: 0x00583F0B File Offset: 0x0058210B
 	protected override void OnBeforeCreateImplement()
 	{
 		this.UiViewSequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.UiViewSequence);
 	}
 
-	// Token: 0x06015237 RID: 86583 RVA: 0x00559211 File Offset: 0x00557411
+	// Token: 0x06012C35 RID: 76853 RVA: 0x00583F25 File Offset: 0x00582125
 	public void Refresh(RoleDevSkillViewItemDataBase data)
 	{
 		this.Data = data;
@@ -71,7 +71,7 @@ public class RoleDevSkillViewItem : UiPanelBase
 		this.RefreshButtonStates(data);
 	}
 
-	// Token: 0x06015238 RID: 86584 RVA: 0x00559238 File Offset: 0x00557438
+	// Token: 0x06012C36 RID: 76854 RVA: 0x00583F4C File Offset: 0x0058214C
 	private void HandlePerfectPlan(RoleDevSkillViewItemDataBase data)
 	{
 		bool flag = RoleDevUtils.GetRoleTypeTagByRoleId(data.RoleId) == global::ERoleTypeTag.Forecast;
@@ -107,7 +107,7 @@ public class RoleDevSkillViewItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015239 RID: 86585 RVA: 0x00559394 File Offset: 0x00557594
+	// Token: 0x06012C37 RID: 76855 RVA: 0x005840A8 File Offset: 0x005822A8
 	private void RefreshDetailItems(RoleDevSkillViewItemDataBase data)
 	{
 		List<global::IRoleDevDetailItemData> list = (RoleDevUtils.GetRoleTypeTagByRoleId(data.RoleId) == global::ERoleTypeTag.Forecast || data.IsPerfectPlan || data.ShouldForcePerfectPlan) ? data.PerfectDetailItems : data.NormalDetailItems;
@@ -119,7 +119,7 @@ public class RoleDevSkillViewItem : UiPanelBase
 		base.GetItem(16).SetUIActive(list.Count != 0);
 	}
 
-	// Token: 0x0601523A RID: 86586 RVA: 0x00559400 File Offset: 0x00557600
+	// Token: 0x06012C38 RID: 76856 RVA: 0x00584114 File Offset: 0x00582314
 	private void RefreshButtonStates(RoleDevSkillViewItemDataBase data)
 	{
 		base.GetVerticalLayout(12).RootUIComp.Get().SetUIActive(true);
@@ -190,7 +190,7 @@ public class RoleDevSkillViewItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601523B RID: 86587 RVA: 0x00559560 File Offset: 0x00557760
+	// Token: 0x06012C39 RID: 76857 RVA: 0x00584274 File Offset: 0x00582474
 	private UniTask InitializeSkillSlots()
 	{
 		RoleDevSkillViewItem.<InitializeSkillSlots>d__18 <InitializeSkillSlots>d__;
@@ -201,7 +201,7 @@ public class RoleDevSkillViewItem : UiPanelBase
 		return <InitializeSkillSlots>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601523C RID: 86588 RVA: 0x005595A4 File Offset: 0x005577A4
+	// Token: 0x06012C3A RID: 76858 RVA: 0x005842B8 File Offset: 0x005824B8
 	private UniTask InitializeButtons()
 	{
 		RoleDevSkillViewItem.<InitializeButtons>d__19 <InitializeButtons>d__;
@@ -212,7 +212,7 @@ public class RoleDevSkillViewItem : UiPanelBase
 		return <InitializeButtons>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601523D RID: 86589 RVA: 0x005595E8 File Offset: 0x005577E8
+	// Token: 0x06012C3B RID: 76859 RVA: 0x005842FC File Offset: 0x005824FC
 	private void RefreshSkillSlots(RoleDevSkillViewItemDataBase data)
 	{
 		List<global::ISkillSlotExtendData> skillSlots = data.SkillSlots;
@@ -225,13 +225,13 @@ public class RoleDevSkillViewItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601523E RID: 86590 RVA: 0x0055964F File Offset: 0x0055784F
+	// Token: 0x06012C3C RID: 76860 RVA: 0x00584363 File Offset: 0x00582563
 	private RoleDevDetailItem CreateDetailItem()
 	{
 		return new RoleDevDetailItem();
 	}
 
-	// Token: 0x0601523F RID: 86591 RVA: 0x00559658 File Offset: 0x00557858
+	// Token: 0x06012C3D RID: 76861 RVA: 0x0058436C File Offset: 0x0058256C
 	private void OnClickSwitchState()
 	{
 		if (this.Data != null)
@@ -257,7 +257,7 @@ public class RoleDevSkillViewItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015240 RID: 86592 RVA: 0x005596EC File Offset: 0x005578EC
+	// Token: 0x06012C3E RID: 76862 RVA: 0x00584400 File Offset: 0x00582600
 	private void OnClickBtnJump(int _)
 	{
 		RoleDevSkillViewItemDataBase data = this.Data;
@@ -274,7 +274,7 @@ public class RoleDevSkillViewItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015241 RID: 86593 RVA: 0x00559778 File Offset: 0x00557978
+	// Token: 0x06012C3F RID: 76863 RVA: 0x0058448C File Offset: 0x0058268C
 	private void OnSkillSlotClick(int index)
 	{
 		RoleDevSkillViewItemDataBase data = this.Data;
@@ -292,10 +292,10 @@ public class RoleDevSkillViewItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04009E61 RID: 40545
+	// Token: 0x0400A24A RID: 41546
 	private readonly List<RoleDevSkillSlotItem> SkillSlotItems = new List<RoleDevSkillSlotItem>();
 
-	// Token: 0x04009E62 RID: 40546
+	// Token: 0x0400A24B RID: 41547
 	[Nullable(new byte[]
 	{
 		2,
@@ -304,27 +304,27 @@ public class RoleDevSkillViewItem : UiPanelBase
 	})]
 	private GenericLayout<RoleDevDetailItem, global::IRoleDevDetailItemData> DetailVerticalLayout;
 
-	// Token: 0x04009E63 RID: 40547
+	// Token: 0x0400A24C RID: 41548
 	[Nullable(2)]
 	private RoleDevSkillViewItemDataBase Data;
 
-	// Token: 0x04009E64 RID: 40548
+	// Token: 0x0400A24D RID: 41549
 	[Nullable(2)]
 	private ButtonItem NormalButtonItem;
 
-	// Token: 0x04009E65 RID: 40549
+	// Token: 0x0400A24E RID: 41550
 	[Nullable(2)]
 	private ButtonItem HighLightButtonItem;
 
-	// Token: 0x04009E66 RID: 40550
+	// Token: 0x0400A24F RID: 41551
 	[Nullable(2)]
 	public Action<int> OnClickToggleCallBack;
 
-	// Token: 0x04009E67 RID: 40551
+	// Token: 0x0400A250 RID: 41552
 	[Nullable(2)]
 	public Func<int, bool> CanClickCallBack;
 
-	// Token: 0x04009E68 RID: 40552
+	// Token: 0x0400A251 RID: 41553
 	[Nullable(new byte[]
 	{
 		2,
@@ -332,7 +332,7 @@ public class RoleDevSkillViewItem : UiPanelBase
 	})]
 	public Action<RoleDevSkillViewItemDataBase> OnConfirmCallback;
 
-	// Token: 0x04009E69 RID: 40553
+	// Token: 0x0400A252 RID: 41554
 	[Nullable(new byte[]
 	{
 		2,
@@ -340,47 +340,47 @@ public class RoleDevSkillViewItem : UiPanelBase
 	})]
 	public Action<RoleDevSkillViewItemDataBase> OnPlanChangeCallback;
 
-	// Token: 0x04009E6A RID: 40554
+	// Token: 0x0400A253 RID: 41555
 	[Nullable(2)]
 	public UiBehaviorLevelSequence UiViewSequence;
 
-	// Token: 0x02008E65 RID: 36453
+	// Token: 0x020080AD RID: 32941
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E2F1 RID: 189169
+		// Token: 0x040299ED RID: 170477
 		TxtSwitchState,
-		// Token: 0x0402E2F2 RID: 189170
+		// Token: 0x040299EE RID: 170478
 		BtnSwitchState,
-		// Token: 0x0402E2F3 RID: 189171
+		// Token: 0x040299EF RID: 170479
 		PanelSkillSlot0,
-		// Token: 0x0402E2F4 RID: 189172
+		// Token: 0x040299F0 RID: 170480
 		PanelSkillSlot1,
-		// Token: 0x0402E2F5 RID: 189173
+		// Token: 0x040299F1 RID: 170481
 		PanelSkillSlot2,
-		// Token: 0x0402E2F6 RID: 189174
+		// Token: 0x040299F2 RID: 170482
 		PanelSkillSlot3,
-		// Token: 0x0402E2F7 RID: 189175
+		// Token: 0x040299F3 RID: 170483
 		PanelSkillSlot4,
-		// Token: 0x0402E2F8 RID: 189176
+		// Token: 0x040299F4 RID: 170484
 		PanelItemRight,
-		// Token: 0x0402E2F9 RID: 189177
+		// Token: 0x040299F5 RID: 170485
 		BtnItemJump,
-		// Token: 0x0402E2FA RID: 189178
+		// Token: 0x040299F6 RID: 170486
 		PanelTxtOffset,
-		// Token: 0x0402E2FB RID: 189179
+		// Token: 0x040299F7 RID: 170487
 		BtnItemPerfectJump,
-		// Token: 0x0402E2FC RID: 189180
+		// Token: 0x040299F8 RID: 170488
 		PanelItemRightLine,
-		// Token: 0x0402E2FD RID: 189181
+		// Token: 0x040299F9 RID: 170489
 		PanelItemDetailLayout,
-		// Token: 0x0402E2FE RID: 189182
+		// Token: 0x040299FA RID: 170490
 		PanelItemList,
-		// Token: 0x0402E2FF RID: 189183
+		// Token: 0x040299FB RID: 170491
 		PanelSwitch,
-		// Token: 0x0402E300 RID: 189184
+		// Token: 0x040299FC RID: 170492
 		TxtTitle,
-		// Token: 0x0402E301 RID: 189185
+		// Token: 0x040299FD RID: 170493
 		PanelItemDescription
 	}
 }

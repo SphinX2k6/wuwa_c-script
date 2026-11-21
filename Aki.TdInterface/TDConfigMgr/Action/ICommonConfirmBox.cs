@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200190A RID: 6410
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A91 RID: 6801
 	public class ICommonConfirmBox : IInteractionConfirmBoxType
 	{
-		// Token: 0x0600895B RID: 35163 RVA: 0x001444E4 File Offset: 0x001426E4
+		// Token: 0x06009079 RID: 36985 RVA: 0x00153C6C File Offset: 0x00151E6C
 		private ICommonConfirmBox_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600895C RID: 35164 RVA: 0x0014451C File Offset: 0x0014271C
+		// Token: 0x0600907A RID: 36986 RVA: 0x00153CA4 File Offset: 0x00151EA4
 		public static ICommonConfirmBox Create([Nullable(2)] ICommonConfirmBox instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600895D RID: 35165 RVA: 0x0014452F File Offset: 0x0014272F
+		// Token: 0x0600907B RID: 36987 RVA: 0x00153CB7 File Offset: 0x00151EB7
 		public static ICommonConfirmBox CreateFromSetValue([Nullable(2)] ICommonConfirmBox_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600895E RID: 35166 RVA: 0x00144542 File Offset: 0x00142742
+		// Token: 0x0600907C RID: 36988 RVA: 0x00153CCA File Offset: 0x00151ECA
 		public new ICommonConfirmBox_SetValue ToSetValue()
 		{
 			return new ICommonConfirmBox_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C73 RID: 11379
-		// (get) Token: 0x0600895F RID: 35167 RVA: 0x00144561 File Offset: 0x00142761
-		// (set) Token: 0x06008960 RID: 35168 RVA: 0x0014458C File Offset: 0x0014278C
+		// Token: 0x17002E6F RID: 11887
+		// (get) Token: 0x0600907D RID: 36989 RVA: 0x00153CE9 File Offset: 0x00151EE9
+		// (set) Token: 0x0600907E RID: 36990 RVA: 0x00153D14 File Offset: 0x00151F14
 		public override EInteractionConfirmBoxType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C74 RID: 11380
-		// (get) Token: 0x06008961 RID: 35169 RVA: 0x0014459A File Offset: 0x0014279A
-		// (set) Token: 0x06008962 RID: 35170 RVA: 0x001445C5 File Offset: 0x001427C5
+		// Token: 0x17002E70 RID: 11888
+		// (get) Token: 0x0600907F RID: 36991 RVA: 0x00153D22 File Offset: 0x00151F22
+		// (set) Token: 0x06009080 RID: 36992 RVA: 0x00153D4D File Offset: 0x00151F4D
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005614 RID: 22036
+		// Token: 0x04005A5E RID: 23134
 		[Nullable(2)]
 		protected new ICommonConfirmBox FbInstance;
 
-		// Token: 0x04005615 RID: 22037
+		// Token: 0x04005A5F RID: 23135
 		[Nullable(2)]
 		protected new ICommonConfirmBox_SetValue PocoInterface;
 	}

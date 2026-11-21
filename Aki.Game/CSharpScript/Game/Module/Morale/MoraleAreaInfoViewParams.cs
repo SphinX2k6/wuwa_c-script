@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x0200539B RID: 21403
+	// Token: 0x0200437E RID: 17278
 	public class MoraleAreaInfoViewParams
 	{
-		// Token: 0x0401CE1E RID: 118302
+		// Token: 0x040178B6 RID: 96438
 		public int AreaId;
 
-		// Token: 0x0401CE1F RID: 118303
+		// Token: 0x040178B7 RID: 96439
 		public int? FlagId;
 	}
 }

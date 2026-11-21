@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007419 RID: 29721
+	// Token: 0x02007C0C RID: 31756
 	public class IToggleScanSplineEffect_UnionUnion
 	{
-		// Token: 0x1700E1AE RID: 57774
-		// (get) Token: 0x06035FCF RID: 221135 RVA: 0x007584BD File Offset: 0x007566BD
-		// (set) Token: 0x06035FD0 RID: 221136 RVA: 0x007584C5 File Offset: 0x007566C5
+		// Token: 0x1700EDCB RID: 60875
+		// (get) Token: 0x060393B8 RID: 234424 RVA: 0x007BB1E9 File Offset: 0x007B93E9
+		// (set) Token: 0x060393B9 RID: 234425 RVA: 0x007BB1F1 File Offset: 0x007B93F1
 		public IToggleScanSplineEffect_Union Type { get; set; }
 
-		// Token: 0x1700E1AF RID: 57775
-		// (get) Token: 0x06035FD1 RID: 221137 RVA: 0x007584CE File Offset: 0x007566CE
-		// (set) Token: 0x06035FD2 RID: 221138 RVA: 0x007584D6 File Offset: 0x007566D6
+		// Token: 0x1700EDCC RID: 60876
+		// (get) Token: 0x060393BA RID: 234426 RVA: 0x007BB1FA File Offset: 0x007B93FA
+		// (set) Token: 0x060393BB RID: 234427 RVA: 0x007BB202 File Offset: 0x007B9402
 		public object Value { get; set; }
 
-		// Token: 0x06035FD3 RID: 221139 RVA: 0x007584DF File Offset: 0x007566DF
+		// Token: 0x060393BC RID: 234428 RVA: 0x007BB20B File Offset: 0x007B940B
 		public IToggleScanSplineEffect_UnionUnion()
 		{
 			this.Type = IToggleScanSplineEffect_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06035FD4 RID: 221140 RVA: 0x007584F5 File Offset: 0x007566F5
+		// Token: 0x060393BD RID: 234429 RVA: 0x007BB221 File Offset: 0x007B9421
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06035FD5 RID: 221141 RVA: 0x00758507 File Offset: 0x00756707
+		// Token: 0x060393BE RID: 234430 RVA: 0x007BB233 File Offset: 0x007B9433
 		public IToggleScanSplineEffectT AsIToggleScanSplineEffect()
 		{
 			return this.As<IToggleScanSplineEffectT>();
 		}
 
-		// Token: 0x06035FD6 RID: 221142 RVA: 0x0075850F File Offset: 0x0075670F
+		// Token: 0x060393BF RID: 234431 RVA: 0x007BB23B File Offset: 0x007B943B
 		public static IToggleScanSplineEffect_UnionUnion FromIToggleScanSplineEffect(IToggleScanSplineEffectT _itogglescansplineeffect)
 		{
 			return new IToggleScanSplineEffect_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035FD7 RID: 221143 RVA: 0x00758524 File Offset: 0x00756724
+		// Token: 0x060393C0 RID: 234432 RVA: 0x007BB250 File Offset: 0x007B9450
 		public IOpenTraceSplineT AsIOpenTraceSpline()
 		{
 			return this.As<IOpenTraceSplineT>();
 		}
 
-		// Token: 0x06035FD8 RID: 221144 RVA: 0x0075852C File Offset: 0x0075672C
+		// Token: 0x060393C1 RID: 234433 RVA: 0x007BB258 File Offset: 0x007B9458
 		public static IToggleScanSplineEffect_UnionUnion FromIOpenTraceSpline(IOpenTraceSplineT _iopentracespline)
 		{
 			return new IToggleScanSplineEffect_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035FD9 RID: 221145 RVA: 0x00758541 File Offset: 0x00756741
+		// Token: 0x060393C2 RID: 234434 RVA: 0x007BB26D File Offset: 0x007B946D
 		public ICloseTraceSplineT AsICloseTraceSpline()
 		{
 			return this.As<ICloseTraceSplineT>();
 		}
 
-		// Token: 0x06035FDA RID: 221146 RVA: 0x00758549 File Offset: 0x00756749
+		// Token: 0x060393C3 RID: 234435 RVA: 0x007BB275 File Offset: 0x007B9475
 		public static IToggleScanSplineEffect_UnionUnion FromICloseTraceSpline(ICloseTraceSplineT _iclosetracespline)
 		{
 			return new IToggleScanSplineEffect_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035FDB RID: 221147 RVA: 0x00758560 File Offset: 0x00756760
+		// Token: 0x060393C4 RID: 234436 RVA: 0x007BB28C File Offset: 0x007B948C
 		public static int Pack(FlatBufferBuilder builder, IToggleScanSplineEffect_UnionUnion _o)
 		{
 			switch (_o.Type)

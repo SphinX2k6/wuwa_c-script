@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FAA RID: 16298
+	// Token: 0x020043EB RID: 17387
 	public struct IPlotHandBookNode : IFlatbufferObject
 	{
-		// Token: 0x170071CB RID: 29131
-		// (get) Token: 0x060174AC RID: 95404 RVA: 0x0035BBA4 File Offset: 0x00359DA4
+		// Token: 0x170077C9 RID: 30665
+		// (get) Token: 0x06018B3B RID: 101179 RVA: 0x003857BC File Offset: 0x003839BC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060174AD RID: 95405 RVA: 0x0035BBB1 File Offset: 0x00359DB1
+		// Token: 0x06018B3C RID: 101180 RVA: 0x003857C9 File Offset: 0x003839C9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060174AE RID: 95406 RVA: 0x0035BBB8 File Offset: 0x00359DB8
+		// Token: 0x06018B3D RID: 101181 RVA: 0x003857D0 File Offset: 0x003839D0
 		public static IPlotHandBookNode GetRootAsIPlotHandBookNode(ByteBuffer _bb)
 		{
 			return IPlotHandBookNode.GetRootAsIPlotHandBookNode(_bb, default(IPlotHandBookNode));
 		}
 
-		// Token: 0x060174AF RID: 95407 RVA: 0x0035BBD4 File Offset: 0x00359DD4
+		// Token: 0x06018B3E RID: 101182 RVA: 0x003857EC File Offset: 0x003839EC
 		public static IPlotHandBookNode GetRootAsIPlotHandBookNode(ByteBuffer _bb, IPlotHandBookNode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060174B0 RID: 95408 RVA: 0x0035BBF1 File Offset: 0x00359DF1
+		// Token: 0x06018B3F RID: 101183 RVA: 0x00385809 File Offset: 0x00383A09
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060174B1 RID: 95409 RVA: 0x0035BC00 File Offset: 0x00359E00
+		// Token: 0x06018B40 RID: 101184 RVA: 0x00385818 File Offset: 0x00383A18
 		public IPlotHandBookNode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170071CC RID: 29132
-		// (get) Token: 0x060174B2 RID: 95410 RVA: 0x0035BC10 File Offset: 0x00359E10
+		// Token: 0x170077CA RID: 30666
+		// (get) Token: 0x06018B41 RID: 101185 RVA: 0x00385828 File Offset: 0x00383A28
 		public string TidTip
 		{
 			get
@@ -63,20 +63,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060174B3 RID: 95411 RVA: 0x0035BC47 File Offset: 0x00359E47
+		// Token: 0x06018B42 RID: 101186 RVA: 0x0038585F File Offset: 0x00383A5F
 		public Span<byte> GetTidTipBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x060174B4 RID: 95412 RVA: 0x0035BC56 File Offset: 0x00359E56
+		// Token: 0x06018B43 RID: 101187 RVA: 0x0038586E File Offset: 0x00383A6E
 		public byte[] GetTidTipArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x170071CD RID: 29133
-		// (get) Token: 0x060174B5 RID: 95413 RVA: 0x0035BC64 File Offset: 0x00359E64
+		// Token: 0x170077CB RID: 30667
+		// (get) Token: 0x06018B44 RID: 101188 RVA: 0x0038587C File Offset: 0x00383A7C
 		public IFlowStateIndex? Flow
 		{
 			get
@@ -90,8 +90,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170071CE RID: 29134
-		// (get) Token: 0x060174B6 RID: 95414 RVA: 0x0035BCC4 File Offset: 0x00359EC4
+		// Token: 0x170077CC RID: 30668
+		// (get) Token: 0x06018B45 RID: 101189 RVA: 0x003858DC File Offset: 0x00383ADC
 		public bool IsHideUi
 		{
 			get
@@ -101,7 +101,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060174B7 RID: 95415 RVA: 0x0035BD03 File Offset: 0x00359F03
+		// Token: 0x06018B46 RID: 101190 RVA: 0x0038591B File Offset: 0x00383B1B
 		public static Offset<IPlotHandBookNode> CreateIPlotHandBookNode(FlatBufferBuilder builder, StringOffset TidTipOffset = default(StringOffset), Offset<IFlowStateIndex> FlowOffset = default(Offset<IFlowStateIndex>), bool IsHideUi = false)
 		{
 			builder.StartTable(3);
@@ -111,37 +111,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPlotHandBookNode.EndIPlotHandBookNode(builder);
 		}
 
-		// Token: 0x060174B8 RID: 95416 RVA: 0x0035BD27 File Offset: 0x00359F27
+		// Token: 0x06018B47 RID: 101191 RVA: 0x0038593F File Offset: 0x00383B3F
 		public static void StartIPlotHandBookNode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060174B9 RID: 95417 RVA: 0x0035BD30 File Offset: 0x00359F30
+		// Token: 0x06018B48 RID: 101192 RVA: 0x00385948 File Offset: 0x00383B48
 		public static void AddTidTip(FlatBufferBuilder builder, StringOffset tidTipOffset)
 		{
 			builder.AddOffset(0, tidTipOffset.Value, 0);
 		}
 
-		// Token: 0x060174BA RID: 95418 RVA: 0x0035BD40 File Offset: 0x00359F40
+		// Token: 0x06018B49 RID: 101193 RVA: 0x00385958 File Offset: 0x00383B58
 		public static void AddFlow(FlatBufferBuilder builder, Offset<IFlowStateIndex> flowOffset)
 		{
 			builder.AddOffset(1, flowOffset.Value, 0);
 		}
 
-		// Token: 0x060174BB RID: 95419 RVA: 0x0035BD50 File Offset: 0x00359F50
+		// Token: 0x06018B4A RID: 101194 RVA: 0x00385968 File Offset: 0x00383B68
 		public static void AddIsHideUi(FlatBufferBuilder builder, bool isHideUi)
 		{
 			builder.AddBool(2, isHideUi, false);
 		}
 
-		// Token: 0x060174BC RID: 95420 RVA: 0x0035BD5B File Offset: 0x00359F5B
+		// Token: 0x06018B4B RID: 101195 RVA: 0x00385973 File Offset: 0x00383B73
 		public static Offset<IPlotHandBookNode> EndIPlotHandBookNode(FlatBufferBuilder builder)
 		{
 			return new Offset<IPlotHandBookNode>(builder.EndTable());
 		}
 
-		// Token: 0x060174BD RID: 95421 RVA: 0x0035BD68 File Offset: 0x00359F68
+		// Token: 0x06018B4C RID: 101196 RVA: 0x00385980 File Offset: 0x00383B80
 		public IPlotHandBookNodeT UnPack()
 		{
 			IPlotHandBookNodeT plotHandBookNodeT = new IPlotHandBookNodeT();
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return plotHandBookNodeT;
 		}
 
-		// Token: 0x060174BE RID: 95422 RVA: 0x0035BD84 File Offset: 0x00359F84
+		// Token: 0x06018B4D RID: 101197 RVA: 0x0038599C File Offset: 0x00383B9C
 		public void UnPackTo(IPlotHandBookNodeT _o)
 		{
 			_o.TidTip = this.TidTip;
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.IsHideUi = this.IsHideUi;
 		}
 
-		// Token: 0x060174BF RID: 95423 RVA: 0x0035BDD8 File Offset: 0x00359FD8
+		// Token: 0x06018B4E RID: 101198 RVA: 0x003859F0 File Offset: 0x00383BF0
 		public static Offset<IPlotHandBookNode> Pack(FlatBufferBuilder builder, IPlotHandBookNodeT _o)
 		{
 			if (_o == null)
@@ -169,7 +169,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPlotHandBookNode.CreateIPlotHandBookNode(builder, tidTipOffset, flowOffset, _o.IsHideUi);
 		}
 
-		// Token: 0x0400BA12 RID: 47634
+		// Token: 0x0400C3F7 RID: 50167
 		private Table __p;
 	}
 }

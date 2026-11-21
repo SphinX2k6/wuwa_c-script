@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Data.Level.SplineClimb;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070FD RID: 28925
+	// Token: 0x020063AD RID: 25517
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SplineClimbParams
 	{
-		// Token: 0x060469E4 RID: 289252 RVA: 0x011C4590 File Offset: 0x011C2790
+		// Token: 0x0603DDE0 RID: 253408 RVA: 0x011F36E8 File Offset: 0x011F18E8
 		[NullableContext(2)]
 		public SplineClimbParams(BP_SplineClimbConfig_C asset = null)
 		{
@@ -31,28 +31,28 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.DebugDraw = asset.DebugDraw;
 		}
 
-		// Token: 0x040250E3 RID: 151779
+		// Token: 0x04020D78 RID: 134520
 		public IList<int> Tags = new List<int>();
 
-		// Token: 0x040250E4 RID: 151780
+		// Token: 0x04020D79 RID: 134521
 		public List<long> InterruptSkills = new List<long>();
 
-		// Token: 0x040250E5 RID: 151781
+		// Token: 0x04020D7A RID: 134522
 		public float SampleLength = 200f;
 
-		// Token: 0x040250E6 RID: 151782
+		// Token: 0x04020D7B RID: 134523
 		public double SampleInterval = 50.0;
 
-		// Token: 0x040250E7 RID: 151783
+		// Token: 0x04020D7C RID: 134524
 		public double TraceLength = 1500.0;
 
-		// Token: 0x040250E8 RID: 151784
+		// Token: 0x04020D7D RID: 134525
 		public double TraceStartOffset = -200.0;
 
-		// Token: 0x040250E9 RID: 151785
+		// Token: 0x04020D7E RID: 134526
 		public double ExtraWallRadius = 2.5;
 
-		// Token: 0x040250EA RID: 151786
+		// Token: 0x04020D7F RID: 134527
 		public bool DebugDraw;
 	}
 }

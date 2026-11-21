@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DEF RID: 19951
+	// Token: 0x02003DB8 RID: 15800
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,19 +20,19 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class PhantomSelectItem : GridProxyAbstract<IPhantomSelectItemContextData>
 	{
-		// Token: 0x060337B5 RID: 210869 RVA: 0x00C075C3 File Offset: 0x00C057C3
+		// Token: 0x06028620 RID: 165408 RVA: 0x00B50AD3 File Offset: 0x00B4ECD3
 		public PhantomSelectItem(bool isRaycastTarget = true)
 		{
 			this.IsRaycastTarget = isRaycastTarget;
 		}
 
-		// Token: 0x060337B6 RID: 210870 RVA: 0x00C075E4 File Offset: 0x00C057E4
+		// Token: 0x06028621 RID: 165409 RVA: 0x00B50AF4 File Offset: 0x00B4ECF4
 		public override void Refresh(IPhantomSelectItemContextData data, bool isSelected, int gridIndex)
 		{
 			this.Update(data);
 		}
 
-		// Token: 0x060337B7 RID: 210871 RVA: 0x00C075F0 File Offset: 0x00C057F0
+		// Token: 0x06028622 RID: 165410 RVA: 0x00B50B00 File Offset: 0x00B4ED00
 		public void Update(IPhantomSelectItemContextData data)
 		{
 			RogueGainEntry rogueGainEntry = data.RogueGainEntry;
@@ -45,19 +45,19 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshPanel();
 		}
 
-		// Token: 0x060337B8 RID: 210872 RVA: 0x00C0762C File Offset: 0x00C0582C
+		// Token: 0x06028623 RID: 165411 RVA: 0x00B50B3C File Offset: 0x00B4ED3C
 		public void SetToggleStateChangeCallback(Action<int> callback)
 		{
 			this.ToggleStateChangeCallback = callback;
 		}
 
-		// Token: 0x060337B9 RID: 210873 RVA: 0x00C07635 File Offset: 0x00C05835
+		// Token: 0x06028624 RID: 165412 RVA: 0x00B50B45 File Offset: 0x00B4ED45
 		public void SetToggleUnDetermined()
 		{
 			base.GetExtendToggle(5).SetToggleState(EToggleState.ETT_UnDetermined, false, false, false);
 		}
 
-		// Token: 0x060337BA RID: 210874 RVA: 0x00C07648 File Offset: 0x00C05848
+		// Token: 0x06028625 RID: 165413 RVA: 0x00B50B58 File Offset: 0x00B4ED58
 		public void SetToggleStateForce(bool bSelected)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(5);
@@ -69,27 +69,27 @@ namespace CSharpScript.Game.Module.Roguelike
 			extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060337BB RID: 210875 RVA: 0x00C07678 File Offset: 0x00C05878
+		// Token: 0x06028626 RID: 165414 RVA: 0x00B50B88 File Offset: 0x00B4ED88
 		public void SetToggleRaycastTarget(bool isRaycastTarget)
 		{
 			base.GetExtendToggle(5).RootUIComp.Get().SetBubbleUpToParent(isRaycastTarget);
 			base.GetExtendToggle(5).SetSelfInteractive(isRaycastTarget);
 		}
 
-		// Token: 0x060337BC RID: 210876 RVA: 0x00C076AC File Offset: 0x00C058AC
+		// Token: 0x06028627 RID: 165415 RVA: 0x00B50BBC File Offset: 0x00B4EDBC
 		public bool IsSelect()
 		{
 			return base.GetExtendToggle(5).GetToggleState() == EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x060337BD RID: 210877 RVA: 0x00C076BD File Offset: 0x00C058BD
+		// Token: 0x06028628 RID: 165416 RVA: 0x00B50BCD File Offset: 0x00B4EDCD
 		[NullableContext(2)]
 		public UUIItem GetSubItem()
 		{
 			return base.GetGuideUiItem("0");
 		}
 
-		// Token: 0x060337BE RID: 210878 RVA: 0x00C076CC File Offset: 0x00C058CC
+		// Token: 0x06028629 RID: 165417 RVA: 0x00B50BDC File Offset: 0x00B4EDDC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060337BF RID: 210879 RVA: 0x00C0787C File Offset: 0x00C05A7C
+		// Token: 0x0602862A RID: 165418 RVA: 0x00B50D8C File Offset: 0x00B4EF8C
 		private void SelfBtn(EToggleState state)
 		{
 			Action<int> toggleStateChangeCallback = this.ToggleStateChangeCallback;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			toggleStateChangeCallback(this.RogueGainEntry.ConfigId);
 		}
 
-		// Token: 0x060337C0 RID: 210880 RVA: 0x00C0789C File Offset: 0x00C05A9C
+		// Token: 0x0602862B RID: 165419 RVA: 0x00B50DAC File Offset: 0x00B4EFAC
 		protected override void OnStart()
 		{
 			this.PhantomAttrLayout = new GenericLayout<PhantomAttrItem, IPhantomAttrItemData>(base.GetVerticalLayout(3), new Func<PhantomAttrItem>(this.CreatePhantomAttrItem), null, false, true);
@@ -146,13 +146,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x060337C1 RID: 210881 RVA: 0x00C07904 File Offset: 0x00C05B04
+		// Token: 0x0602862C RID: 165420 RVA: 0x00B50E14 File Offset: 0x00B4F014
 		private PhantomAttrItem CreatePhantomAttrItem()
 		{
 			return new PhantomAttrItem();
 		}
 
-		// Token: 0x060337C2 RID: 210882 RVA: 0x00C0790C File Offset: 0x00C05B0C
+		// Token: 0x0602862D RID: 165421 RVA: 0x00B50E1C File Offset: 0x00B4F01C
 		private bool CanToggleStateChangeInternal()
 		{
 			if (this.CanToggleStateChange != null)
@@ -163,14 +163,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			return true;
 		}
 
-		// Token: 0x060337C3 RID: 210883 RVA: 0x00C0793F File Offset: 0x00C05B3F
+		// Token: 0x0602862E RID: 165422 RVA: 0x00B50E4F File Offset: 0x00B4F04F
 		protected override void OnBeforeDestroy()
 		{
 			this.ToggleStateChangeCallback = null;
 			base.GetExtendToggle(5).CanExecuteChange.Unbind();
 		}
 
-		// Token: 0x060337C4 RID: 210884 RVA: 0x00C07959 File Offset: 0x00C05B59
+		// Token: 0x0602862F RID: 165423 RVA: 0x00B50E69 File Offset: 0x00B4F069
 		public void RefreshPanel()
 		{
 			if (this.RogueGainEntry == null)
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshAffixEntryList();
 		}
 
-		// Token: 0x060337C5 RID: 210885 RVA: 0x00C07970 File Offset: 0x00C05B70
+		// Token: 0x06028630 RID: 165424 RVA: 0x00B50E80 File Offset: 0x00B4F080
 		private void RefreshPhantom()
 		{
 			RoguePokemon? roguePhantomConfig = RoguelikeConfig.Instance.GetRoguePhantomConfig(this.RogueGainEntry.ConfigId);
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060337C6 RID: 210886 RVA: 0x00C07A90 File Offset: 0x00C05C90
+		// Token: 0x06028631 RID: 165425 RVA: 0x00B50FA0 File Offset: 0x00B4F1A0
 		private void RefreshAffixEntryList()
 		{
 			UiAsyncTask task = new UiAsyncTask("PhantomSelectItem.RefreshAffixEntryList", delegate()
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x060337C7 RID: 210887 RVA: 0x00C07AC0 File Offset: 0x00C05CC0
+		// Token: 0x06028632 RID: 165426 RVA: 0x00B50FD0 File Offset: 0x00B4F1D0
 		private List<IPhantomAttrItemData> GetPhantomAttrItemDataList()
 		{
 			RoguelikeInfo roguelikeInfo = this.RoguelikeInfo;
@@ -233,13 +233,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x060337C8 RID: 210888 RVA: 0x00C07B48 File Offset: 0x00C05D48
+		// Token: 0x06028633 RID: 165427 RVA: 0x00B51058 File Offset: 0x00B4F258
 		public void SetUnlockAttrSet(HashSet<long> set)
 		{
 			this.NewUnlockAttrSet = set;
 		}
 
-		// Token: 0x060337C9 RID: 210889 RVA: 0x00C07B54 File Offset: 0x00C05D54
+		// Token: 0x06028634 RID: 165428 RVA: 0x00B51064 File Offset: 0x00B4F264
 		public void PlaySequenceByName(string sequenceName)
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -250,62 +250,62 @@ namespace CSharpScript.Game.Module.Roguelike
 			levelSequencePlayer.PlayOrReplaySequenceByName(sequenceName, false, null);
 		}
 
-		// Token: 0x0401B52B RID: 111915
+		// Token: 0x04015EFE RID: 89854
 		public RogueGainEntry RogueGainEntry;
 
-		// Token: 0x0401B52C RID: 111916
+		// Token: 0x04015EFF RID: 89855
 		public GenericLayout<PhantomAttrItem, IPhantomAttrItemData> PhantomAttrLayout;
 
-		// Token: 0x0401B52D RID: 111917
+		// Token: 0x04015F00 RID: 89856
 		public bool IsRaycastTarget = true;
 
-		// Token: 0x0401B52E RID: 111918
+		// Token: 0x04015F01 RID: 89857
 		public HashSet<long> NewUnlockAttrSet = new HashSet<long>();
 
-		// Token: 0x0401B52F RID: 111919
+		// Token: 0x04015F02 RID: 89858
 		public Func<bool, bool> CanToggleStateChange;
 
-		// Token: 0x0401B530 RID: 111920
+		// Token: 0x04015F03 RID: 89859
 		private RoguelikeInfo RoguelikeInfo;
 
-		// Token: 0x0401B531 RID: 111921
+		// Token: 0x04015F04 RID: 89860
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401B532 RID: 111922
+		// Token: 0x04015F05 RID: 89861
 		private Action<int> ToggleStateChangeCallback;
 
-		// Token: 0x0200AF72 RID: 44914
+		// Token: 0x020099A7 RID: 39335
 		[NullableContext(0)]
 		private class EPhantomSelectItemCom
 		{
-			// Token: 0x0403545D RID: 218205
+			// Token: 0x0402FE90 RID: 196240
 			public const int HeadTexture = 0;
 
-			// Token: 0x0403545E RID: 218206
+			// Token: 0x0402FE91 RID: 196241
 			public const int NameText = 1;
 
-			// Token: 0x0403545F RID: 218207
+			// Token: 0x0402FE92 RID: 196242
 			public const int DescText = 2;
 
-			// Token: 0x04035460 RID: 218208
+			// Token: 0x0402FE93 RID: 196243
 			public const int AttrListLayout = 3;
 
-			// Token: 0x04035461 RID: 218209
+			// Token: 0x0402FE94 RID: 196244
 			public const int AttrItem = 4;
 
-			// Token: 0x04035462 RID: 218210
+			// Token: 0x0402FE95 RID: 196245
 			public const int SelfToggle = 5;
 
-			// Token: 0x04035463 RID: 218211
+			// Token: 0x0402FE96 RID: 196246
 			public const int QualityBg = 6;
 
-			// Token: 0x04035464 RID: 218212
+			// Token: 0x0402FE97 RID: 196247
 			public const int QualityHeadBg = 7;
 
-			// Token: 0x04035465 RID: 218213
+			// Token: 0x0402FE98 RID: 196248
 			public const int AttrViewport = 8;
 
-			// Token: 0x04035466 RID: 218214
+			// Token: 0x0402FE99 RID: 196249
 			public const int AttrContent = 9;
 		}
 	}

@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020017F6 RID: 6134
+	// Token: 0x02000367 RID: 871
 	public sealed class FAsyncTraceDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06016AEE RID: 92910 RVA: 0x00211A57 File Offset: 0x0020FC57
+		// Token: 0x060058B5 RID: 22709 RVA: 0x0007CF40 File Offset: 0x0007B140
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FAsyncTraceDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06016AEF RID: 92911 RVA: 0x00211A63 File Offset: 0x0020FC63
+		// Token: 0x060058B6 RID: 22710 RVA: 0x0007CF4C File Offset: 0x0007B14C
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FAsyncTraceDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FAsyncTraceDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06016AF0 RID: 92912 RVA: 0x00211A86 File Offset: 0x0020FC86
+		// Token: 0x060058B7 RID: 22711 RVA: 0x0007CF6F File Offset: 0x0007B16F
 		public FAsyncTraceDelegate()
 		{
 		}
 
-		// Token: 0x06016AF1 RID: 92913 RVA: 0x00211A8E File Offset: 0x0020FC8E
+		// Token: 0x060058B8 RID: 22712 RVA: 0x0007CF77 File Offset: 0x0007B177
 		[NullableContext(2)]
 		public FAsyncTraceDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06016AF2 RID: 92914 RVA: 0x00211A98 File Offset: 0x0020FC98
+		// Token: 0x060058B9 RID: 22713 RVA: 0x0007CF81 File Offset: 0x0007B181
 		public FAsyncTraceDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06016AF3 RID: 92915 RVA: 0x00211AA3 File Offset: 0x0020FCA3
+		// Token: 0x060058BA RID: 22714 RVA: 0x0007CF8C File Offset: 0x0007B18C
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<bool, UTraceBaseElement, double, double>) ?? ((Action<bool, UTraceBaseElement, double, double>)Delegate.CreateDelegate(typeof(Action<bool, UTraceBaseElement, double, double>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06016AF4 RID: 92916 RVA: 0x00211AD5 File Offset: 0x0020FCD5
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060058BB RID: 22715 RVA: 0x0007CFBE File Offset: 0x0007B1BE
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FAsyncTraceDelegate.RegisterId);
 		}
 
-		// Token: 0x06016AF5 RID: 92917 RVA: 0x00211B10 File Offset: 0x0020FD10
+		// Token: 0x060058BC RID: 22716 RVA: 0x0007CFF8 File Offset: 0x0007B1F8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(bool Result, UTraceBaseElement Element, double Frame, double Index)
 		{
 			FAsyncTraceDelegate.__FAsyncTraceDelegate_DelegateParams* ptr = stackalloc FAsyncTraceDelegate.__FAsyncTraceDelegate_DelegateParams[(UIntPtr)47] + 15L / (long)sizeof(FAsyncTraceDelegate.__FAsyncTraceDelegate_DelegateParams) & -16L;
@@ -83,10 +81,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06016AF6 RID: 92918 RVA: 0x00211B74 File Offset: 0x0020FD74
+		// Token: 0x060058BD RID: 22717 RVA: 0x0007D05C File Offset: 0x0007B25C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool, UTraceBaseElement, double, double> action = target as Action<bool, UTraceBaseElement, double, double>;
@@ -98,43 +95,43 @@ namespace UnrealEngine
 			action(((FAsyncTraceDelegate.__FAsyncTraceDelegate_DelegateParams*)__Parameters)->Result, orCreateUObjectByNativePointer, ((FAsyncTraceDelegate.__FAsyncTraceDelegate_DelegateParams*)__Parameters)->Frame, ((FAsyncTraceDelegate.__FAsyncTraceDelegate_DelegateParams*)__Parameters)->Index);
 		}
 
-		// Token: 0x0400C50C RID: 50444
+		// Token: 0x040024A1 RID: 9377
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400C50D RID: 50445
+		// Token: 0x040024A2 RID: 9378
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroData.AsyncTraceDelegate__DelegateSignature";
 
-		// Token: 0x0400C50E RID: 50446
+		// Token: 0x040024A3 RID: 9379
 		private static int RegisterId;
 
-		// Token: 0x02002F4B RID: 12107
+		// Token: 0x02000A7B RID: 2683
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __FAsyncTraceDelegate_DelegateParams
+		private ref struct __FAsyncTraceDelegate_DelegateParams
 		{
-			// Token: 0x04016AEB RID: 92907
+			// Token: 0x04005AB8 RID: 23224
 			[FieldOffset(0)]
 			public bool Result;
 
-			// Token: 0x04016AEC RID: 92908
+			// Token: 0x04005AB9 RID: 23225
 			[FieldOffset(8)]
 			public IntPtr Element;
 
-			// Token: 0x04016AED RID: 92909
+			// Token: 0x04005ABA RID: 23226
 			[FieldOffset(16)]
 			public double Frame;
 
-			// Token: 0x04016AEE RID: 92910
+			// Token: 0x04005ABB RID: 23227
 			[FieldOffset(24)]
 			public double Index;
 		}
 
-		// Token: 0x02002F4C RID: 12108
+		// Token: 0x02000A7C RID: 2684
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016AEF RID: 92911
+			// Token: 0x04005ABC RID: 23228
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

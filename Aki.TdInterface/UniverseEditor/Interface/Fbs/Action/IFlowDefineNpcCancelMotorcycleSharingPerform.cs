@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067F8 RID: 26616
+	// Token: 0x02006E78 RID: 28280
 	public struct IFlowDefineNpcCancelMotorcycleSharingPerform : IFlatbufferObject
 	{
-		// Token: 0x1700C591 RID: 50577
-		// (get) Token: 0x0602E583 RID: 189827 RVA: 0x00653818 File Offset: 0x00651A18
+		// Token: 0x1700CF47 RID: 53063
+		// (get) Token: 0x06030DC9 RID: 200137 RVA: 0x006A0F5C File Offset: 0x0069F15C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E584 RID: 189828 RVA: 0x00653825 File Offset: 0x00651A25
+		// Token: 0x06030DCA RID: 200138 RVA: 0x006A0F69 File Offset: 0x0069F169
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E585 RID: 189829 RVA: 0x0065382C File Offset: 0x00651A2C
+		// Token: 0x06030DCB RID: 200139 RVA: 0x006A0F70 File Offset: 0x0069F170
 		public static IFlowDefineNpcCancelMotorcycleSharingPerform GetRootAsIFlowDefineNpcCancelMotorcycleSharingPerform(ByteBuffer _bb)
 		{
 			return IFlowDefineNpcCancelMotorcycleSharingPerform.GetRootAsIFlowDefineNpcCancelMotorcycleSharingPerform(_bb, default(IFlowDefineNpcCancelMotorcycleSharingPerform));
 		}
 
-		// Token: 0x0602E586 RID: 189830 RVA: 0x00653848 File Offset: 0x00651A48
+		// Token: 0x06030DCC RID: 200140 RVA: 0x006A0F8C File Offset: 0x0069F18C
 		public static IFlowDefineNpcCancelMotorcycleSharingPerform GetRootAsIFlowDefineNpcCancelMotorcycleSharingPerform(ByteBuffer _bb, IFlowDefineNpcCancelMotorcycleSharingPerform obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E587 RID: 189831 RVA: 0x00653865 File Offset: 0x00651A65
+		// Token: 0x06030DCD RID: 200141 RVA: 0x006A0FA9 File Offset: 0x0069F1A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E588 RID: 189832 RVA: 0x00653874 File Offset: 0x00651A74
+		// Token: 0x06030DCE RID: 200142 RVA: 0x006A0FB8 File Offset: 0x0069F1B8
 		public IFlowDefineNpcCancelMotorcycleSharingPerform __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C592 RID: 50578
-		// (get) Token: 0x0602E589 RID: 189833 RVA: 0x00653884 File Offset: 0x00651A84
+		// Token: 0x1700CF48 RID: 53064
+		// (get) Token: 0x06030DCF RID: 200143 RVA: 0x006A0FC8 File Offset: 0x0069F1C8
 		public ENpcGroupPerformType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C593 RID: 50579
-		// (get) Token: 0x0602E58A RID: 189834 RVA: 0x006538C0 File Offset: 0x00651AC0
+		// Token: 0x1700CF49 RID: 53065
+		// (get) Token: 0x06030DD0 RID: 200144 RVA: 0x006A1004 File Offset: 0x0069F204
 		public string Key
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E58B RID: 189835 RVA: 0x006538F7 File Offset: 0x00651AF7
+		// Token: 0x06030DD1 RID: 200145 RVA: 0x006A103B File Offset: 0x0069F23B
 		public Span<byte> GetKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602E58C RID: 189836 RVA: 0x00653906 File Offset: 0x00651B06
+		// Token: 0x06030DD2 RID: 200146 RVA: 0x006A104A File Offset: 0x0069F24A
 		public byte[] GetKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0602E58D RID: 189837 RVA: 0x00653914 File Offset: 0x00651B14
+		// Token: 0x06030DD3 RID: 200147 RVA: 0x006A1058 File Offset: 0x0069F258
 		public static Offset<IFlowDefineNpcCancelMotorcycleSharingPerform> CreateIFlowDefineNpcCancelMotorcycleSharingPerform(FlatBufferBuilder builder, ENpcGroupPerformType Type = ENpcGroupPerformType.HandInHand, StringOffset KeyOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFlowDefineNpcCancelMotorcycleSharingPerform.EndIFlowDefineNpcCancelMotorcycleSharingPerform(builder);
 		}
 
-		// Token: 0x0602E58E RID: 189838 RVA: 0x00653931 File Offset: 0x00651B31
+		// Token: 0x06030DD4 RID: 200148 RVA: 0x006A1075 File Offset: 0x0069F275
 		public static void StartIFlowDefineNpcCancelMotorcycleSharingPerform(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602E58F RID: 189839 RVA: 0x0065393A File Offset: 0x00651B3A
+		// Token: 0x06030DD5 RID: 200149 RVA: 0x006A107E File Offset: 0x0069F27E
 		public static void AddType(FlatBufferBuilder builder, ENpcGroupPerformType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E590 RID: 189840 RVA: 0x00653945 File Offset: 0x00651B45
+		// Token: 0x06030DD6 RID: 200150 RVA: 0x006A1089 File Offset: 0x0069F289
 		public static void AddKey(FlatBufferBuilder builder, StringOffset keyOffset)
 		{
 			builder.AddOffset(1, keyOffset.Value, 0);
 		}
 
-		// Token: 0x0602E591 RID: 189841 RVA: 0x00653955 File Offset: 0x00651B55
+		// Token: 0x06030DD7 RID: 200151 RVA: 0x006A1099 File Offset: 0x0069F299
 		public static Offset<IFlowDefineNpcCancelMotorcycleSharingPerform> EndIFlowDefineNpcCancelMotorcycleSharingPerform(FlatBufferBuilder builder)
 		{
 			return new Offset<IFlowDefineNpcCancelMotorcycleSharingPerform>(builder.EndTable());
 		}
 
-		// Token: 0x0602E592 RID: 189842 RVA: 0x00653964 File Offset: 0x00651B64
+		// Token: 0x06030DD8 RID: 200152 RVA: 0x006A10A8 File Offset: 0x0069F2A8
 		public IFlowDefineNpcCancelMotorcycleSharingPerformT UnPack()
 		{
 			IFlowDefineNpcCancelMotorcycleSharingPerformT flowDefineNpcCancelMotorcycleSharingPerformT = new IFlowDefineNpcCancelMotorcycleSharingPerformT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return flowDefineNpcCancelMotorcycleSharingPerformT;
 		}
 
-		// Token: 0x0602E593 RID: 189843 RVA: 0x0065397F File Offset: 0x00651B7F
+		// Token: 0x06030DD9 RID: 200153 RVA: 0x006A10C3 File Offset: 0x0069F2C3
 		public void UnPackTo(IFlowDefineNpcCancelMotorcycleSharingPerformT _o)
 		{
 			_o.Type = this.Type;
 			_o.Key = this.Key;
 		}
 
-		// Token: 0x0602E594 RID: 189844 RVA: 0x0065399C File Offset: 0x00651B9C
+		// Token: 0x06030DDA RID: 200154 RVA: 0x006A10E0 File Offset: 0x0069F2E0
 		public static Offset<IFlowDefineNpcCancelMotorcycleSharingPerform> Pack(FlatBufferBuilder builder, IFlowDefineNpcCancelMotorcycleSharingPerformT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFlowDefineNpcCancelMotorcycleSharingPerform.CreateIFlowDefineNpcCancelMotorcycleSharingPerform(builder, _o.Type, keyOffset);
 		}
 
-		// Token: 0x04010F17 RID: 69399
+		// Token: 0x04011D49 RID: 73033
 		private Table __p;
 	}
 }

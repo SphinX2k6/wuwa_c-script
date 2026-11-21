@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Core.Common;
@@ -12,12 +11,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C1A RID: 19482
+	// Token: 0x02003BCB RID: 15307
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SkillButtonUiMotorcycleGamepadData : SkillButtonUiGamepadDataBase
 	{
-		// Token: 0x060326C2 RID: 206530 RVA: 0x00BBE2CC File Offset: 0x00BBC4CC
+		// Token: 0x06027475 RID: 160885 RVA: 0x00B02F10 File Offset: 0x00B01110
 		public override void Init()
 		{
 			this.GamepadDataType = ESkillButtonGamepadDataType.Motorcycle;
@@ -30,14 +29,14 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.RefreshButtonData();
 		}
 
-		// Token: 0x060326C3 RID: 206531 RVA: 0x00BBE318 File Offset: 0x00BBC518
+		// Token: 0x06027476 RID: 160886 RVA: 0x00B02F5C File Offset: 0x00B0115C
 		public override void Clear()
 		{
 			this.ControlCameraByMoveAxis = false;
 			this.ClearInputAxis();
 		}
 
-		// Token: 0x060326C4 RID: 206532 RVA: 0x00BBE328 File Offset: 0x00BBC528
+		// Token: 0x06027477 RID: 160887 RVA: 0x00B02F6C File Offset: 0x00B0116C
 		private void InitAllActionNameList()
 		{
 			foreach (string item in SkillButtonUiMotorcycleGamepadData.actionNameToButtonTypeMap.Keys)
@@ -46,25 +45,25 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326C5 RID: 206533 RVA: 0x00BBE384 File Offset: 0x00BBC584
+		// Token: 0x06027478 RID: 160888 RVA: 0x00B02FC8 File Offset: 0x00B011C8
 		public override IReadOnlyList<string> GetAllActionNameList()
 		{
 			return this.AllActionNameList;
 		}
 
-		// Token: 0x060326C6 RID: 206534 RVA: 0x00BBE38C File Offset: 0x00BBC58C
+		// Token: 0x06027479 RID: 160889 RVA: 0x00B02FD0 File Offset: 0x00B011D0
 		public override IReadOnlyList<string> GetAllAxisNameList()
 		{
 			return SkillButtonUiMotorcycleGamepadData.initAxisNames;
 		}
 
-		// Token: 0x060326C7 RID: 206535 RVA: 0x00BBE393 File Offset: 0x00BBC593
+		// Token: 0x0602747A RID: 160890 RVA: 0x00B02FD7 File Offset: 0x00B011D7
 		private void InitGamepadIcon()
 		{
 			this.NoneIcon = UiResourceConfig.Instance.GetResourcePath("SP_IconXboxNoneIcon");
 		}
 
-		// Token: 0x060326C8 RID: 206536 RVA: 0x00BBE3AC File Offset: 0x00BBC5AC
+		// Token: 0x0602747B RID: 160891 RVA: 0x00B02FF0 File Offset: 0x00B011F0
 		public override void RefreshBaseConfigByUserSetting()
 		{
 			this.CombineButtonKey = EKey.Gamepad_LeftShoulder;
@@ -155,7 +154,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.RefreshCombineButtonVisible();
 		}
 
-		// Token: 0x060326C9 RID: 206537 RVA: 0x00BBE6F4 File Offset: 0x00BBC8F4
+		// Token: 0x0602747C RID: 160892 RVA: 0x00B03338 File Offset: 0x00B01538
 		private void RefreshRouletteKey()
 		{
 			this.RouletteKey = null;
@@ -186,7 +185,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326CA RID: 206538 RVA: 0x00BBE7E4 File Offset: 0x00BBC9E4
+		// Token: 0x0602747D RID: 160893 RVA: 0x00B03428 File Offset: 0x00B01628
 		private void RefreshMusicKey()
 		{
 			this.MusicSubKeyList.Clear();
@@ -214,7 +213,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326CB RID: 206539 RVA: 0x00BBE8D8 File Offset: 0x00BBCAD8
+		// Token: 0x0602747E RID: 160894 RVA: 0x00B0351C File Offset: 0x00B0171C
 		private void RefreshSkillButtonTypeList()
 		{
 			Array.Resize<int>(ref this.MainSkillButtonTypeList, 4);
@@ -240,7 +239,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326CC RID: 206540 RVA: 0x00BBE9BC File Offset: 0x00BBCBBC
+		// Token: 0x0602747F RID: 160895 RVA: 0x00B03600 File Offset: 0x00B01800
 		private void RefreshCombineButtonVisible()
 		{
 			int[] array = this.MainSkillCombineButtonTypeList;
@@ -264,7 +263,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.IsShowCombineButton = false;
 		}
 
-		// Token: 0x060326CD RID: 206541 RVA: 0x00BBEA14 File Offset: 0x00BBCC14
+		// Token: 0x06027480 RID: 160896 RVA: 0x00B03658 File Offset: 0x00B01858
 		private ESkillButtonType GetNormalSkillButtonTypeByIndex(int index, bool isPressCombineButton)
 		{
 			string text = null;
@@ -302,13 +301,13 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326CE RID: 206542 RVA: 0x00BBEAB4 File Offset: 0x00BBCCB4
+		// Token: 0x06027481 RID: 160897 RVA: 0x00B036F8 File Offset: 0x00B018F8
 		public override void RefreshSwitchInteractOpen(bool isInit = false)
 		{
 			this.SwitchInteractData.RefreshSwitchInteractOpen(isInit);
 		}
 
-		// Token: 0x060326CF RID: 206543 RVA: 0x00BBEAC4 File Offset: 0x00BBCCC4
+		// Token: 0x06027482 RID: 160898 RVA: 0x00B03708 File Offset: 0x00B01908
 		public override bool RefreshButtonData()
 		{
 			this.RefreshStateByTag();
@@ -396,7 +395,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return false;
 		}
 
-		// Token: 0x060326D0 RID: 206544 RVA: 0x00BBED4C File Offset: 0x00BBCF4C
+		// Token: 0x06027483 RID: 160899 RVA: 0x00B03990 File Offset: 0x00B01B90
 		private int? GetButtonTypeByIndex(int[] buttonTypeList, int index, bool isSecondButton = false)
 		{
 			int num = buttonTypeList[index];
@@ -407,13 +406,13 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return new int?(0);
 		}
 
-		// Token: 0x060326D1 RID: 206545 RVA: 0x00BBED8A File Offset: 0x00BBCF8A
+		// Token: 0x06027484 RID: 160900 RVA: 0x00B039CE File Offset: 0x00B01BCE
 		private bool CheckSkillButtonVisibleByState(int buttonType, bool isSecondButton = false)
 		{
 			return (this.CurStateTagId == 0 || this.StateButtonTypeList == null || this.StateButtonTypeList.Contains(buttonType)) && (!isSecondButton || SkillButtonUiMotorcycleGamepadData.mainSecondButtonTypeSet.Contains(buttonType));
 		}
 
-		// Token: 0x060326D2 RID: 206546 RVA: 0x00BBEDC0 File Offset: 0x00BBCFC0
+		// Token: 0x06027485 RID: 160901 RVA: 0x00B03A04 File Offset: 0x00B01C04
 		private bool? CheckSkillButtonVisibleByButtonType(int buttonType)
 		{
 			if (buttonType == 0)
@@ -434,7 +433,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return new bool?(behaviorButtonData.IsVisible());
 		}
 
-		// Token: 0x060326D3 RID: 206547 RVA: 0x00BBEE20 File Offset: 0x00BBD020
+		// Token: 0x06027486 RID: 160902 RVA: 0x00B03A64 File Offset: 0x00B01C64
 		private void PushSubSkillButton(int buttonType)
 		{
 			if (this.CurStateTagId != 0)
@@ -459,7 +458,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326D4 RID: 206548 RVA: 0x00BBEE9C File Offset: 0x00BBD09C
+		// Token: 0x06027487 RID: 160903 RVA: 0x00B03AE0 File Offset: 0x00B01CE0
 		private void RefreshStateByTag()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -496,7 +495,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326D5 RID: 206549 RVA: 0x00BBEFEC File Offset: 0x00BBD1EC
+		// Token: 0x06027488 RID: 160904 RVA: 0x00B03C30 File Offset: 0x00B01E30
 		public override int GetButtonTypeByActionName(string actionName)
 		{
 			int result;
@@ -507,7 +506,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return result;
 		}
 
-		// Token: 0x060326D6 RID: 206550 RVA: 0x00BBF00C File Offset: 0x00BBD20C
+		// Token: 0x06027489 RID: 160905 RVA: 0x00B03C50 File Offset: 0x00B01E50
 		public override int GetButtonTypeByAxisName(string axisName, float value)
 		{
 			int[] array;
@@ -522,7 +521,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return array[0];
 		}
 
-		// Token: 0x060326D7 RID: 206551 RVA: 0x00BBF03C File Offset: 0x00BBD23C
+		// Token: 0x0602748A RID: 160906 RVA: 0x00B03C80 File Offset: 0x00B01E80
 		public override void SetIsPressCombineButton(bool value)
 		{
 			if (this.IsPressCombineButton == value)
@@ -533,20 +532,20 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.RefreshButtonData();
 		}
 
-		// Token: 0x060326D8 RID: 206552 RVA: 0x00BBF056 File Offset: 0x00BBD256
+		// Token: 0x0602748B RID: 160907 RVA: 0x00B03C9A File Offset: 0x00B01E9A
 		public override bool GetIsPressCombineButton()
 		{
 			return this.IsPressCombineButton;
 		}
 
-		// Token: 0x060326D9 RID: 206553 RVA: 0x00BBF05E File Offset: 0x00BBD25E
+		// Token: 0x0602748C RID: 160908 RVA: 0x00B03CA2 File Offset: 0x00B01EA2
 		[NullableContext(2)]
 		public BehaviorButtonData GetBehaviorButtonDataByButtonType(EBehaviorType buttonType)
 		{
 			return SkillButtonUiModel.Instance.GetBehaviorButtonDataByButton(buttonType);
 		}
 
-		// Token: 0x060326DA RID: 206554 RVA: 0x00BBF06B File Offset: 0x00BBD26B
+		// Token: 0x0602748D RID: 160909 RVA: 0x00B03CAF File Offset: 0x00B01EAF
 		public override void RefreshSkillButtonData(ESkillButtonRefreshReason refreshReason)
 		{
 			if (refreshReason == ESkillButtonRefreshReason.ChangeRole)
@@ -556,7 +555,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326DB RID: 206555 RVA: 0x00BBF080 File Offset: 0x00BBD280
+		// Token: 0x0602748E RID: 160910 RVA: 0x00B03CC4 File Offset: 0x00B01EC4
 		public override void RefreshInteractBehaviorData()
 		{
 			BehaviorButtonData behaviorButtonDataByButtonType = this.GetBehaviorButtonDataByButtonType(EBehaviorType.Interact);
@@ -569,7 +568,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.SwitchInteractData.SetInteractExist(flag, EGamepadInteractExistReason.InteractView);
 		}
 
-		// Token: 0x060326DC RID: 206556 RVA: 0x00BBF0C0 File Offset: 0x00BBD2C0
+		// Token: 0x0602748F RID: 160911 RVA: 0x00B03D04 File Offset: 0x00B01F04
 		public override void OnActionKeyChanged(string actionName)
 		{
 			if (actionName == "幻象探索选择界面")
@@ -588,7 +587,16 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 				{
 					return;
 				}
-				if (SkillButtonUiMotorcycleGamepadData.initActionNames.Contains(actionName))
+				bool flag = false;
+				for (int i = 0; i < SkillButtonUiMotorcycleGamepadData.initActionNames.Count; i++)
+				{
+					if (SkillButtonUiMotorcycleGamepadData.initActionNames[i] == actionName)
+					{
+						flag = true;
+						break;
+					}
+				}
+				if (flag)
 				{
 					this.ChangeKeyActionInMenuView = true;
 				}
@@ -600,7 +608,16 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 				{
 					return;
 				}
-				if (SkillButtonUiMotorcycleGamepadData.initActionNames.Contains(actionName))
+				bool flag2 = false;
+				for (int j = 0; j < SkillButtonUiMotorcycleGamepadData.initActionNames.Count; j++)
+				{
+					if (SkillButtonUiMotorcycleGamepadData.initActionNames[j] == actionName)
+					{
+						flag2 = true;
+						break;
+					}
+				}
+				if (flag2)
 				{
 					Log.Instance.Error(ELogModule.Battle, ELogAuthor.CFT, "在未知情况下触发了改键", default(ReadOnlySpan<ValueTuple<string, object>>));
 				}
@@ -608,13 +625,13 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326DD RID: 206557 RVA: 0x00BBF15E File Offset: 0x00BBD35E
+		// Token: 0x06027490 RID: 160912 RVA: 0x00B03DEB File Offset: 0x00B01FEB
 		public override void AddChangeKeyReason(EGamepadChangeKeyReason reason)
 		{
 			this.ChangeKeyReasonSet.Add(reason);
 		}
 
-		// Token: 0x060326DE RID: 206558 RVA: 0x00BBF170 File Offset: 0x00BBD370
+		// Token: 0x06027491 RID: 160913 RVA: 0x00B03DFC File Offset: 0x00B01FFC
 		public override void RemoveChangeKeyReason(EGamepadChangeKeyReason reason)
 		{
 			this.ChangeKeyReasonSet.Remove(reason);
@@ -644,37 +661,37 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326DF RID: 206559 RVA: 0x00BBF1DA File Offset: 0x00BBD3DA
+		// Token: 0x06027492 RID: 160914 RVA: 0x00B03E66 File Offset: 0x00B02066
 		public override void AddAllowChangeKeyReason(string reason)
 		{
 			this.AllowChangeKeyReasonSet.Add(reason);
 		}
 
-		// Token: 0x060326E0 RID: 206560 RVA: 0x00BBF1E9 File Offset: 0x00BBD3E9
+		// Token: 0x06027493 RID: 160915 RVA: 0x00B03E75 File Offset: 0x00B02075
 		public override void RemoveAllowChangeKeyReason(string reason)
 		{
 			this.AllowChangeKeyReasonSet.Remove(reason);
 		}
 
-		// Token: 0x060326E1 RID: 206561 RVA: 0x00BBF1F8 File Offset: 0x00BBD3F8
+		// Token: 0x06027494 RID: 160916 RVA: 0x00B03E84 File Offset: 0x00B02084
 		public override void CacheInputAxis(in EInputAxis axis, float value)
 		{
 			this.InputAxisMap[axis] = value;
 		}
 
-		// Token: 0x060326E2 RID: 206562 RVA: 0x00BBF20C File Offset: 0x00BBD40C
+		// Token: 0x06027495 RID: 160917 RVA: 0x00B03E98 File Offset: 0x00B02098
 		public override float GetInputAxis(in EInputAxis axis)
 		{
 			return this.InputAxisMap.GetValueOrDefault(axis, 0f);
 		}
 
-		// Token: 0x060326E3 RID: 206563 RVA: 0x00BBF224 File Offset: 0x00BBD424
+		// Token: 0x06027496 RID: 160918 RVA: 0x00B03EB0 File Offset: 0x00B020B0
 		public override void ClearInputAxis()
 		{
 			this.InputAxisMap.Clear();
 		}
 
-		// Token: 0x060326E5 RID: 206565 RVA: 0x00BBF2A0 File Offset: 0x00BBD4A0
+		// Token: 0x06027498 RID: 160920 RVA: 0x00B03F2C File Offset: 0x00B0212C
 		// Note: this type is marked as 'beforefieldinit'.
 		static SkillButtonUiMotorcycleGamepadData()
 		{
@@ -747,7 +764,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			});
 		}
 
-		// Token: 0x0401AD75 RID: 109941
+		// Token: 0x040156D2 RID: 87762
 		[StaticVariableRuleIgnore]
 		private static readonly string[] mainKeys = new string[]
 		{
@@ -757,10 +774,10 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			EKey.Gamepad_FaceButton_Right
 		};
 
-		// Token: 0x0401AD76 RID: 109942
+		// Token: 0x040156D3 RID: 87763
 		private const int MAIN_HALF_NUM = 4;
 
-		// Token: 0x0401AD77 RID: 109943
+		// Token: 0x040156D4 RID: 87764
 		[StaticVariableRuleIgnore]
 		private static readonly string[] dPadKeys = new string[]
 		{
@@ -770,10 +787,10 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			EKey.Gamepad_DPad_Right
 		};
 
-		// Token: 0x0401AD78 RID: 109944
+		// Token: 0x040156D5 RID: 87765
 		private const int DPAD_KEY_NUM = 4;
 
-		// Token: 0x0401AD79 RID: 109945
+		// Token: 0x040156D6 RID: 87766
 		[StaticVariableRuleIgnore]
 		private static readonly string[] subKeys = new string[]
 		{
@@ -783,83 +800,83 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			EKey.Gamepad_RightShoulder
 		};
 
-		// Token: 0x0401AD7A RID: 109946
+		// Token: 0x040156D7 RID: 87767
 		private const int SUB_KEY_NUM = 3;
 
-		// Token: 0x0401AD7B RID: 109947
+		// Token: 0x040156D8 RID: 87768
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<string, string> axisToActionKey;
 
-		// Token: 0x0401AD7C RID: 109948
+		// Token: 0x040156D9 RID: 87769
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<string, int> actionNameToButtonTypeMap;
 
-		// Token: 0x0401AD7D RID: 109949
+		// Token: 0x040156DA RID: 87770
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<string, int[]> axisNameToButtonTypeMap;
 
-		// Token: 0x0401AD7E RID: 109950
+		// Token: 0x040156DB RID: 87771
 		private static readonly IReadOnlyList<string> initActionNames;
 
-		// Token: 0x0401AD7F RID: 109951
+		// Token: 0x040156DC RID: 87772
 		[StaticVariableRuleIgnore]
 		private static readonly string[] initAxisNames;
 
-		// Token: 0x0401AD80 RID: 109952
+		// Token: 0x040156DD RID: 87773
 		[StaticVariableRuleIgnore]
 		private static readonly HashSet<int> mainSecondButtonTypeSet;
 
-		// Token: 0x0401AD81 RID: 109953
+		// Token: 0x040156DE RID: 87774
 		[StaticVariableRuleIgnore]
 		private static readonly HashSet<int> subButtonTypeSet;
 
-		// Token: 0x0401AD82 RID: 109954
+		// Token: 0x040156DF RID: 87775
 		private static readonly IReadOnlyList<string> musicActionNames;
 
-		// Token: 0x0401AD83 RID: 109955
+		// Token: 0x040156E0 RID: 87776
 		private readonly List<string> AllActionNameList = new List<string>();
 
-		// Token: 0x0401AD84 RID: 109956
+		// Token: 0x040156E1 RID: 87777
 		public readonly HashSet<string> AllowChangeKeyReasonSet = new HashSet<string>();
 
-		// Token: 0x0401AD85 RID: 109957
+		// Token: 0x040156E2 RID: 87778
 		private readonly HashSet<EGamepadChangeKeyReason> ChangeKeyReasonSet = new HashSet<EGamepadChangeKeyReason>();
 
-		// Token: 0x0401AD86 RID: 109958
+		// Token: 0x040156E3 RID: 87779
 		private readonly Dictionary<string, string> ButtonKeyToActionNameMap = new Dictionary<string, string>();
 
-		// Token: 0x0401AD87 RID: 109959
+		// Token: 0x040156E4 RID: 87780
 		private readonly Dictionary<string, string> CombinationKeyToActionNameMap = new Dictionary<string, string>();
 
-		// Token: 0x0401AD88 RID: 109960
+		// Token: 0x040156E5 RID: 87781
 		private readonly Dictionary<string, SkillButtonAxisKey> ButtonKeyToAxisKeyMap = new Dictionary<string, SkillButtonAxisKey>();
 
-		// Token: 0x0401AD89 RID: 109961
+		// Token: 0x040156E6 RID: 87782
 		private bool IsPressCombineButton;
 
-		// Token: 0x0401AD8A RID: 109962
+		// Token: 0x040156E7 RID: 87783
 		public bool IsShowCombineButton;
 
-		// Token: 0x0401AD8B RID: 109963
+		// Token: 0x040156E8 RID: 87784
 		private bool ChangeKeyActionInMenuView;
 
-		// Token: 0x0401AD8C RID: 109964
+		// Token: 0x040156E9 RID: 87785
 		private readonly bool LockRefresh;
 
-		// Token: 0x0401AD8D RID: 109965
+		// Token: 0x040156EA RID: 87786
 		public bool ShootEnable;
 
-		// Token: 0x0401AD8E RID: 109966
+		// Token: 0x040156EB RID: 87787
 		public int CurStateTagId;
 
-		// Token: 0x0401AD8F RID: 109967
+		// Token: 0x040156EC RID: 87788
 		[Nullable(2)]
 		public List<int> StateButtonTypeList;
 
-		// Token: 0x0401AD90 RID: 109968
+		// Token: 0x040156ED RID: 87789
 		private readonly Dictionary<EInputAxis, float> InputAxisMap = new Dictionary<EInputAxis, float>();
 
-		// Token: 0x0401AD91 RID: 109969
+		// Token: 0x040156EE RID: 87790
 		public List<string> MusicSubKeyList = new List<string>();
 	}
 }

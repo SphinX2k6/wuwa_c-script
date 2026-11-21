@@ -5,18 +5,18 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x020014B9 RID: 5305
+// Token: 0x0200096D RID: 2413
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleGiftData : ActivityBaseData
 {
-	// Token: 0x0600965A RID: 38490 RVA: 0x00207605 File Offset: 0x00205805
+	// Token: 0x060069EF RID: 27119 RVA: 0x00210571 File Offset: 0x0020E771
 	protected override void OnInit(ActivityData data)
 	{
 		this.InitConfig();
 	}
 
-	// Token: 0x0600965B RID: 38491 RVA: 0x00207610 File Offset: 0x00205810
+	// Token: 0x060069F0 RID: 27120 RVA: 0x0021057C File Offset: 0x0020E77C
 	private void InitConfig()
 	{
 		if (this.ConfigInitialized)
@@ -37,7 +37,7 @@ public class RoleGiftData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600965C RID: 38492 RVA: 0x002076BC File Offset: 0x002058BC
+	// Token: 0x060069F1 RID: 27121 RVA: 0x00210628 File Offset: 0x0020E828
 	private unsafe void ResolveRoleIdFromDrop(int dropId)
 	{
 		this.RoleIdInternal = 0;
@@ -100,7 +100,7 @@ public class RoleGiftData : ActivityBaseData
 		RoleGiftUtil.Debug(message5, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray5, 2));
 	}
 
-	// Token: 0x0600965D RID: 38493 RVA: 0x00207954 File Offset: 0x00205B54
+	// Token: 0x060069F2 RID: 27122 RVA: 0x002108C0 File Offset: 0x0020EAC0
 	private static int RoleIdToTrialId(int roleId)
 	{
 		GachaTextureInfo? gachaTextureInfo = GachaConfig.Instance.GetGachaTextureInfo(roleId);
@@ -111,37 +111,37 @@ public class RoleGiftData : ActivityBaseData
 		return gachaTextureInfo.GetValueOrDefault().TrialId;
 	}
 
-	// Token: 0x0600965E RID: 38494 RVA: 0x00207987 File Offset: 0x00205B87
+	// Token: 0x060069F3 RID: 27123 RVA: 0x002108F3 File Offset: 0x0020EAF3
 	public int GetDropId()
 	{
 		return this.DropIdInternal;
 	}
 
-	// Token: 0x0600965F RID: 38495 RVA: 0x0020798F File Offset: 0x00205B8F
+	// Token: 0x060069F4 RID: 27124 RVA: 0x002108FB File Offset: 0x0020EAFB
 	public int GetRoleId()
 	{
 		return this.RoleIdInternal;
 	}
 
-	// Token: 0x06009660 RID: 38496 RVA: 0x00207997 File Offset: 0x00205B97
+	// Token: 0x060069F5 RID: 27125 RVA: 0x00210903 File Offset: 0x0020EB03
 	public int GetRoleTrialId()
 	{
 		return this.RoleTrialIdInternal;
 	}
 
-	// Token: 0x06009661 RID: 38497 RVA: 0x0020799F File Offset: 0x00205B9F
+	// Token: 0x060069F6 RID: 27126 RVA: 0x0021090B File Offset: 0x0020EB0B
 	public int GetRoleGiftConfigId()
 	{
 		return this.RoleGiftConfigIdInternal;
 	}
 
-	// Token: 0x06009662 RID: 38498 RVA: 0x002079A7 File Offset: 0x00205BA7
+	// Token: 0x060069F7 RID: 27127 RVA: 0x00210913 File Offset: 0x0020EB13
 	public void SetHadGetReward(bool hadGet)
 	{
 		this.RewardHadGet = hadGet;
 	}
 
-	// Token: 0x06009663 RID: 38499 RVA: 0x002079B0 File Offset: 0x00205BB0
+	// Token: 0x060069F8 RID: 27128 RVA: 0x0021091C File Offset: 0x0020EB1C
 	protected override void PhraseEx(ActivityData data)
 	{
 		RoleGiftActivityData roleGiftActivityData = data.RoleGiftActivityData;
@@ -155,13 +155,13 @@ public class RoleGiftData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06009664 RID: 38500 RVA: 0x00207A06 File Offset: 0x00205C06
+	// Token: 0x060069F9 RID: 27129 RVA: 0x00210972 File Offset: 0x0020EB72
 	public bool GetRewardHadGet()
 	{
 		return this.RewardHadGet;
 	}
 
-	// Token: 0x06009665 RID: 38501 RVA: 0x00207A10 File Offset: 0x00205C10
+	// Token: 0x060069FA RID: 27130 RVA: 0x0021097C File Offset: 0x0020EB7C
 	public unsafe bool CanReceiveReward()
 	{
 		bool flag = base.IsUnLock();
@@ -176,39 +176,39 @@ public class RoleGiftData : ActivityBaseData
 		return flag2;
 	}
 
-	// Token: 0x06009666 RID: 38502 RVA: 0x00207ACD File Offset: 0x00205CCD
+	// Token: 0x060069FB RID: 27131 RVA: 0x00210A39 File Offset: 0x0020EC39
 	public bool NeedSplash()
 	{
 		return this.CanReceiveReward();
 	}
 
-	// Token: 0x06009667 RID: 38503 RVA: 0x00207AD5 File Offset: 0x00205CD5
+	// Token: 0x060069FC RID: 27132 RVA: 0x00210A41 File Offset: 0x0020EC41
 	public override bool GetExDataRedPointShowState()
 	{
 		return !this.RewardHadGet && base.IsUnLock();
 	}
 
-	// Token: 0x06009668 RID: 38504 RVA: 0x00207AE7 File Offset: 0x00205CE7
+	// Token: 0x060069FD RID: 27133 RVA: 0x00210A53 File Offset: 0x0020EC53
 	protected override bool GetExDataFinishShowState()
 	{
 		return this.RewardHadGet;
 	}
 
-	// Token: 0x0400425D RID: 16989
+	// Token: 0x040042F5 RID: 17141
 	private bool RewardHadGet;
 
-	// Token: 0x0400425E RID: 16990
+	// Token: 0x040042F6 RID: 17142
 	private bool ConfigInitialized;
 
-	// Token: 0x0400425F RID: 16991
+	// Token: 0x040042F7 RID: 17143
 	private int DropIdInternal;
 
-	// Token: 0x04004260 RID: 16992
+	// Token: 0x040042F8 RID: 17144
 	private int RoleIdInternal;
 
-	// Token: 0x04004261 RID: 16993
+	// Token: 0x040042F9 RID: 17145
 	private int RoleTrialIdInternal;
 
-	// Token: 0x04004262 RID: 16994
+	// Token: 0x040042FA RID: 17146
 	private int RoleGiftConfigIdInternal;
 }

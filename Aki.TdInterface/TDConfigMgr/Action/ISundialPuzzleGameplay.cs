@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EEF RID: 7919
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002128 RID: 8488
 	public class ISundialPuzzleGameplay : IUiGame
 	{
-		// Token: 0x0600A962 RID: 43362 RVA: 0x0017DF40 File Offset: 0x0017C140
+		// Token: 0x0600B434 RID: 46132 RVA: 0x00193F38 File Offset: 0x00192138
 		private ISundialPuzzleGameplay_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A963 RID: 43363 RVA: 0x0017DF78 File Offset: 0x0017C178
+		// Token: 0x0600B435 RID: 46133 RVA: 0x00193F70 File Offset: 0x00192170
 		public static ISundialPuzzleGameplay Create([Nullable(2)] ISundialPuzzleGameplay instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A964 RID: 43364 RVA: 0x0017DF8B File Offset: 0x0017C18B
+		// Token: 0x0600B436 RID: 46134 RVA: 0x00193F83 File Offset: 0x00192183
 		public static ISundialPuzzleGameplay CreateFromSetValue([Nullable(2)] ISundialPuzzleGameplay_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A965 RID: 43365 RVA: 0x0017DF9E File Offset: 0x0017C19E
+		// Token: 0x0600B437 RID: 46135 RVA: 0x00193F96 File Offset: 0x00192196
 		public new ISundialPuzzleGameplay_SetValue ToSetValue()
 		{
 			return new ISundialPuzzleGameplay_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033A2 RID: 13218
-		// (get) Token: 0x0600A966 RID: 43366 RVA: 0x0017DFB1 File Offset: 0x0017C1B1
-		// (set) Token: 0x0600A967 RID: 43367 RVA: 0x0017DFDC File Offset: 0x0017C1DC
+		// Token: 0x1700366D RID: 13933
+		// (get) Token: 0x0600B438 RID: 46136 RVA: 0x00193FA9 File Offset: 0x001921A9
+		// (set) Token: 0x0600B439 RID: 46137 RVA: 0x00193FD4 File Offset: 0x001921D4
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064C7 RID: 25799
+		// Token: 0x04006AB6 RID: 27318
 		[Nullable(2)]
 		protected new ISundialPuzzleGameplay FbInstance;
 
-		// Token: 0x040064C8 RID: 25800
+		// Token: 0x04006AB7 RID: 27319
 		[Nullable(2)]
 		protected new ISundialPuzzleGameplay_SetValue PocoInterface;
 	}

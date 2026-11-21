@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004620 RID: 17952
+	// Token: 0x02003549 RID: 13641
 	public class UiViewResource : IUiViewResource
 	{
-		// Token: 0x0602E41D RID: 189469 RVA: 0x00AB1E36 File Offset: 0x00AB0036
+		// Token: 0x06022B12 RID: 142098 RVA: 0x009DE52A File Offset: 0x009DC72A
 		[NullableContext(1)]
 		public string GetExtraResourceId([Nullable(2)] object param = null)
 		{

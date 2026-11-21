@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063E6 RID: 25574
+	// Token: 0x02006A66 RID: 27238
 	public class IClientSetPlayerOperationRestrictionT
 	{
-		// Token: 0x1700BE83 RID: 48771
-		// (get) Token: 0x0602C3F1 RID: 181233 RVA: 0x00612CE2 File Offset: 0x00610EE2
-		// (set) Token: 0x0602C3F2 RID: 181234 RVA: 0x00612CEA File Offset: 0x00610EEA
+		// Token: 0x1700C81D RID: 51229
+		// (get) Token: 0x0602EBC7 RID: 191431 RVA: 0x0065EB6E File Offset: 0x0065CD6E
+		// (set) Token: 0x0602EBC8 RID: 191432 RVA: 0x0065EB76 File Offset: 0x0065CD76
 		public EPlayerOperationType Type { get; set; }
 
-		// Token: 0x0602C3F3 RID: 181235 RVA: 0x00612CF3 File Offset: 0x00610EF3
+		// Token: 0x0602EBC9 RID: 191433 RVA: 0x0065EB7F File Offset: 0x0065CD7F
 		public IClientSetPlayerOperationRestrictionT()
 		{
 			this.Type = EPlayerOperationType.EnableAll;

@@ -4,111 +4,139 @@ using System.Runtime.InteropServices;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200007E RID: 126
+	// Token: 0x02000063 RID: 99
+	[NullableContext(1)]
+	[Nullable(0)]
 	public abstract class FMulticastScriptDelegate : UnrealScriptDelegate
 	{
-		// Token: 0x06000E96 RID: 3734
+		// Token: 0x06000A29 RID: 2601
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr AllocMulticastScriptDelegate();
 
-		// Token: 0x06000E97 RID: 3735
+		// Token: 0x06000A2A RID: 2602
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void DeallocMulticastScriptDelegate(IntPtr NativePtr);
 
-		// Token: 0x06000E98 RID: 3736
+		// Token: 0x06000A2B RID: 2603
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void NativeCopy(IntPtr Dest, IntPtr Src);
 
-		// Token: 0x06000E99 RID: 3737
+		// Token: 0x06000A2C RID: 2604
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void NativeMove(IntPtr Dest, IntPtr Src);
 
-		// Token: 0x06000E9A RID: 3738
+		// Token: 0x06000A2D RID: 2605
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public extern bool IsBound();
 
-		// Token: 0x06000E9B RID: 3739
+		// Token: 0x06000A2E RID: 2606
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		protected extern void AddInternal(IntPtr Handle, int Callback);
 
-		// Token: 0x06000E9C RID: 3740
+		// Token: 0x06000A2F RID: 2607
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		protected extern void RemoveInternal();
 
-		// Token: 0x06000E9D RID: 3741
+		// Token: 0x06000A30 RID: 2608
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		protected extern void ClearInternal();
 
-		// Token: 0x06000E9E RID: 3742
+		// Token: 0x06000A31 RID: 2609
+		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		protected unsafe extern void BroadcastInternal(void* Parameters);
 
-		// Token: 0x06000E9F RID: 3743
+		// Token: 0x06000A32 RID: 2610
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern bool IterExistDelegate(IntPtr MulticastDelegatePtr, ref int Iter, out IntPtr Handle, out int IndexToRemove);
 
-		// Token: 0x06000EA0 RID: 3744
+		// Token: 0x06000A33 RID: 2611
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern void RemoveAtIndexInternal(IntPtr MulticastDelegatePtr, int Index);
 
-		// Token: 0x06000EA1 RID: 3745 RVA: 0x00015FBC File Offset: 0x000141BC
-		[NullableContext(1)]
+		// Token: 0x06000A34 RID: 2612 RVA: 0x00010CDC File Offset: 0x0000EEDC
 		protected void Add(Delegate Delegate, int Callback)
 		{
 			if (Delegate == null)
 			{
 				throw new NullReferenceException("Callback is null or possibly fail to convert to acceptable type");
 			}
+			if (FMulticastScriptDelegate.ExistDelegate(base.NativePtr, Delegate))
+			{
+				return;
+			}
 			GCHandle value = GCHandle.Alloc(Delegate);
 			this.AddInternal(GCHandle.ToIntPtr(value), Callback);
 		}
 
-		// Token: 0x06000EA2 RID: 3746 RVA: 0x00015FEC File Offset: 0x000141EC
-		[NullableContext(1)]
+		// Token: 0x06000A35 RID: 2613 RVA: 0x00010D1A File Offset: 0x0000EF1A
 		protected void Remove(Delegate Delegate)
 		{
-			int num = 0;
-			IntPtr nativePtr = base.NativePtr;
-			IntPtr value;
-			int index;
-			while (FMulticastScriptDelegate.IterExistDelegate(nativePtr, ref num, out value, out index))
-			{
-				if (Delegate.Remove(GCHandle.FromIntPtr(value).Target as Delegate, Delegate) == null)
-				{
-					FMulticastScriptDelegate.RemoveAtIndexInternal(nativePtr, index);
-					return;
-				}
-			}
+			FMulticastScriptDelegate.RemoveDelegate(base.NativePtr, Delegate);
 		}
 
-		// Token: 0x06000EA3 RID: 3747 RVA: 0x00016034 File Offset: 0x00014234
+		// Token: 0x06000A36 RID: 2614 RVA: 0x00010D29 File Offset: 0x0000EF29
 		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Clear()
 		{
 			this.ClearInternal();
 		}
 
-		// Token: 0x06000EA4 RID: 3748 RVA: 0x0001603C File Offset: 0x0001423C
+		// Token: 0x06000A37 RID: 2615 RVA: 0x00010D31 File Offset: 0x0000EF31
 		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void ClearScript()
 		{
 			this.RemoveInternal();
 		}
 
-		// Token: 0x06000EA5 RID: 3749 RVA: 0x00016044 File Offset: 0x00014244
+		// Token: 0x06000A38 RID: 2616 RVA: 0x00010D3C File Offset: 0x0000EF3C
+		internal static bool ExistDelegate(IntPtr DelegatePtr, Delegate Delegate)
+		{
+			int num = 0;
+			IntPtr value;
+			int num2;
+			while (FMulticastScriptDelegate.IterExistDelegate(DelegatePtr, ref num, out value, out num2))
+			{
+				Delegate obj = GCHandle.FromIntPtr(value).Target as Delegate;
+				if (Delegate.Equals(obj))
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+
+		// Token: 0x06000A39 RID: 2617 RVA: 0x00010D7C File Offset: 0x0000EF7C
+		internal static bool RemoveDelegate(IntPtr DelegatePtr, Delegate Delegate)
+		{
+			int num = 0;
+			IntPtr value;
+			int index;
+			while (FMulticastScriptDelegate.IterExistDelegate(DelegatePtr, ref num, out value, out index))
+			{
+				if (Delegate.Remove(GCHandle.FromIntPtr(value).Target as Delegate, Delegate) == null)
+				{
+					FMulticastScriptDelegate.RemoveAtIndexInternal(DelegatePtr, index);
+					return true;
+				}
+			}
+			return false;
+		}
+
+		// Token: 0x06000A3A RID: 2618 RVA: 0x00010DBE File Offset: 0x0000EFBE
 		protected override IntPtr AllocNativePtr()
 		{
 			return FMulticastScriptDelegate.AllocMulticastScriptDelegate();
 		}
 
-		// Token: 0x06000EA6 RID: 3750 RVA: 0x0001604B File Offset: 0x0001424B
+		// Token: 0x06000A3B RID: 2619 RVA: 0x00010DC5 File Offset: 0x0000EFC5
 		protected override void DeallocNativePtr()
 		{
 			FMulticastScriptDelegate.DeallocMulticastScriptDelegate(this._NativePtr);
 		}
 
-		// Token: 0x170004B7 RID: 1207
-		// (get) Token: 0x06000EA7 RID: 3751 RVA: 0x00016058 File Offset: 0x00014258
+		// Token: 0x170000BF RID: 191
+		// (get) Token: 0x06000A3C RID: 2620 RVA: 0x00010DD2 File Offset: 0x0000EFD2
 		public override bool AllowMoveAssign
 		{
 			get
@@ -117,14 +145,14 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000EA8 RID: 3752 RVA: 0x0001605B File Offset: 0x0001425B
+		// Token: 0x06000A3D RID: 2621 RVA: 0x00010DD5 File Offset: 0x0000EFD5
 		public override void MoveAssign(IntPtr FromNativePtr)
 		{
 			FMulticastScriptDelegate.NativeMove(this._NativePtr, FromNativePtr);
 		}
 
-		// Token: 0x170004B8 RID: 1208
-		// (get) Token: 0x06000EA9 RID: 3753 RVA: 0x00016069 File Offset: 0x00014269
+		// Token: 0x170000C0 RID: 192
+		// (get) Token: 0x06000A3E RID: 2622 RVA: 0x00010DE3 File Offset: 0x0000EFE3
 		public override bool AllowCopyAssign
 		{
 			get
@@ -133,29 +161,29 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000EAA RID: 3754 RVA: 0x0001606C File Offset: 0x0001426C
+		// Token: 0x06000A3F RID: 2623 RVA: 0x00010DE6 File Offset: 0x0000EFE6
 		public override void CopyAssign(IntPtr FromNativePtr)
 		{
 			FMulticastScriptDelegate.NativeCopy(this._NativePtr, FromNativePtr);
 		}
 
-		// Token: 0x06000EAB RID: 3755 RVA: 0x0001607A File Offset: 0x0001427A
+		// Token: 0x06000A40 RID: 2624 RVA: 0x00010DF4 File Offset: 0x0000EFF4
 		protected FMulticastScriptDelegate()
 		{
 		}
 
-		// Token: 0x06000EAC RID: 3756 RVA: 0x00016082 File Offset: 0x00014282
+		// Token: 0x06000A41 RID: 2625 RVA: 0x00010DFC File Offset: 0x0000EFFC
 		[NullableContext(2)]
 		protected FMulticastScriptDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06000EAD RID: 3757 RVA: 0x0001608C File Offset: 0x0001428C
+		// Token: 0x06000A42 RID: 2626 RVA: 0x00010E06 File Offset: 0x0000F006
 		protected FMulticastScriptDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06000EAE RID: 3758 RVA: 0x00016097 File Offset: 0x00014297
+		// Token: 0x06000A43 RID: 2627 RVA: 0x00010E11 File Offset: 0x0000F011
 		public override void CopyTo(IntPtr DestPtr, UScriptStructStackOnlyPtr NativeUStructPtr = default(UScriptStructStackOnlyPtr))
 		{
 			FMulticastScriptDelegate.NativeCopy(DestPtr, this._NativePtr);

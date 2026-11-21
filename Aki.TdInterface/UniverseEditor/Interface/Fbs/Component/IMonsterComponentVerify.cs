@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005574 RID: 21876
+	// Token: 0x02005B12 RID: 23314
 	public static class IMonsterComponentVerify
 	{
-		// Token: 0x06024336 RID: 148278 RVA: 0x004FFE14 File Offset: 0x004FE014
+		// Token: 0x06026543 RID: 156995 RVA: 0x00540368 File Offset: 0x0053E568
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 6, 4UL, 4UL, false))
@@ -34,15 +34,15 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 						{
 							verifyAction3 = (IMonsterComponentVerify.<>O.<2>__Verify = new VerifyTableAction(IMonsterNpcInteractionEnableConfigVerify.Verify));
 						}
-						if (verifier.VerifyTable(tablePos, offsetId3, verifyAction3, false))
+						if (verifier.VerifyTable(tablePos, offsetId3, verifyAction3, false) && verifier.VerifyVectorOfData(tablePos, 22, 1UL, false))
 						{
-							short offsetId4 = 22;
+							short offsetId4 = 26;
 							VerifyTableAction verifyAction4;
 							if ((verifyAction4 = IMonsterComponentVerify.<>O.<3>__Verify) == null)
 							{
 								verifyAction4 = (IMonsterComponentVerify.<>O.<3>__Verify = new VerifyTableAction(IMonsterCommunicationGroupConfigVerify.Verify));
 							}
-							if (verifier.VerifyTable(tablePos, offsetId4, verifyAction4, false) && verifier.VerifyField(tablePos, 24, 1UL, 1UL, false))
+							if (verifier.VerifyTable(tablePos, offsetId4, verifyAction4, false) && verifier.VerifyVectorOfData(tablePos, 28, 1UL, false) && verifier.VerifyField(tablePos, 30, 1UL, 1UL, false))
 							{
 								return verifier.VerifyTableEnd(tablePos);
 							}
@@ -53,20 +53,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return false;
 		}
 
-		// Token: 0x02007B92 RID: 31634
+		// Token: 0x020083F4 RID: 33780
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401361B RID: 79387
+			// Token: 0x040146AA RID: 83626
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x0401361C RID: 79388
+			// Token: 0x040146AB RID: 83627
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x0401361D RID: 79389
+			// Token: 0x040146AC RID: 83628
 			public static VerifyTableAction <2>__Verify;
 
-			// Token: 0x0401361E RID: 79390
+			// Token: 0x040146AD RID: 83629
 			public static VerifyTableAction <3>__Verify;
 		}
 	}

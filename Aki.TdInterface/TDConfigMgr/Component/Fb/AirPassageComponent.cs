@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D68 RID: 3432
+	// Token: 0x02000E62 RID: 3682
 	public class AirPassageComponent : IComponentBase
 	{
-		// Token: 0x06004E1F RID: 19999 RVA: 0x000C1FE9 File Offset: 0x000C01E9
-		[NullableContext(1)]
+		// Token: 0x0600533B RID: 21307 RVA: 0x000CD72D File Offset: 0x000CB92D
 		public static AirPassageComponent Create(IAirPassageComponent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700190C RID: 6412
-		// (get) Token: 0x06004E20 RID: 20000 RVA: 0x000C2008 File Offset: 0x000C0208
+		// Token: 0x17001A72 RID: 6770
+		// (get) Token: 0x0600533C RID: 21308 RVA: 0x000CD74C File Offset: 0x000CB94C
 		public override bool? Disabled
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700190D RID: 6413
-		// (get) Token: 0x06004E21 RID: 20001 RVA: 0x000C2040 File Offset: 0x000C0240
+		// Token: 0x17001A73 RID: 6771
+		// (get) Token: 0x0600533D RID: 21309 RVA: 0x000CD784 File Offset: 0x000CB984
 		public override bool? EdIsLocked
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CC7 RID: 11463
+		// Token: 0x04002F87 RID: 12167
 		private IAirPassageComponent Instance;
 	}
 }

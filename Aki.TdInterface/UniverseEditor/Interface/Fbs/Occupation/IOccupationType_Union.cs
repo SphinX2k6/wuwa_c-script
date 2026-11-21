@@ -2,24 +2,26 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x020043B9 RID: 17337
+	// Token: 0x0200481B RID: 18459
 	public enum IOccupationType_Union : byte
 	{
-		// Token: 0x0400C1F9 RID: 49657
+		// Token: 0x0400CC19 RID: 52249
 		NONE,
-		// Token: 0x0400C1FA RID: 49658
+		// Token: 0x0400CC1A RID: 52250
 		IOccupationType,
-		// Token: 0x0400C1FB RID: 49659
+		// Token: 0x0400CC1B RID: 52251
 		INpcOccupationData,
-		// Token: 0x0400C1FC RID: 49660
+		// Token: 0x0400CC1C RID: 52252
 		IAreaOccupationData,
-		// Token: 0x0400C1FD RID: 49661
+		// Token: 0x0400CC1D RID: 52253
 		ISilentAreaOccupationData,
-		// Token: 0x0400C1FE RID: 49662
+		// Token: 0x0400CC1E RID: 52254
 		IScreenResourceOccupationData,
-		// Token: 0x0400C1FF RID: 49663
+		// Token: 0x0400CC1F RID: 52255
 		ITimeOccupationData,
-		// Token: 0x0400C200 RID: 49664
-		IClosedSegmentOccupationData
+		// Token: 0x0400CC20 RID: 52256
+		IClosedSegmentOccupationData,
+		// Token: 0x0400CC21 RID: 52257
+		ISeasonRotationOccupationData
 	}
 }

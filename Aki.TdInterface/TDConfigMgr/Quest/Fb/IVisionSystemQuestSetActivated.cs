@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013BE RID: 5054
+	// Token: 0x02001514 RID: 5396
 	public class IVisionSystemQuestSetActivated : IVisionSystemQuestBase
 	{
-		// Token: 0x0600736E RID: 29550 RVA: 0x001150DA File Offset: 0x001132DA
-		[NullableContext(1)]
+		// Token: 0x06007A28 RID: 31272 RVA: 0x00123942 File Offset: 0x00121B42
 		public static IVisionSystemQuestSetActivated Create(IVisionSystemQuestSetActivated? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025C5 RID: 9669
-		// (get) Token: 0x0600736F RID: 29551 RVA: 0x001150F9 File Offset: 0x001132F9
+		// Token: 0x170027A2 RID: 10146
+		// (get) Token: 0x06007A29 RID: 31273 RVA: 0x00123961 File Offset: 0x00121B61
 		public override EVisionSystemQuestType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025C6 RID: 9670
-		// (get) Token: 0x06007370 RID: 29552 RVA: 0x00115106 File Offset: 0x00113306
+		// Token: 0x170027A3 RID: 10147
+		// (get) Token: 0x06007A2A RID: 31274 RVA: 0x0012396E File Offset: 0x00121B6E
 		public virtual EVisionSetType SetType
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040042CE RID: 17102
+		// Token: 0x04004658 RID: 18008
 		private IVisionSystemQuestSetActivated Instance;
 	}
 }

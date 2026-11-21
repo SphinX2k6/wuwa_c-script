@@ -3,10 +3,10 @@ using CSharpScript.Game.Module.BattleUi;
 
 namespace CSharpScript.Game.Input.InputDataTypeCreator
 {
-	// Token: 0x02006FD4 RID: 28628
+	// Token: 0x02006155 RID: 24917
 	public class NormalWorldInputDataTypeCreator : InputDataTypeCreator
 	{
-		// Token: 0x06045A13 RID: 285203 RVA: 0x0114AAEA File Offset: 0x01148CEA
+		// Token: 0x0603BBC4 RID: 244676 RVA: 0x010F48DE File Offset: 0x010F2ADE
 		public override EInputDataType GetInputDataType()
 		{
 			BattleUiMotorcycleData motorcycleData = BattleUiModel.Instance.MotorcycleData;

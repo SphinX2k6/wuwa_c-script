@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DE8 RID: 3560
+	// Token: 0x02000EE4 RID: 3812
 	public class IGameplayDataPersistence
 	{
-		// Token: 0x060050AF RID: 20655 RVA: 0x000C7301 File Offset: 0x000C5501
-		[NullableContext(1)]
+		// Token: 0x060055D6 RID: 21974 RVA: 0x000D2BC9 File Offset: 0x000D0DC9
 		public static IGameplayDataPersistence Create(IGameplayDataPersistence? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A9C RID: 6812
-		// (get) Token: 0x060050B0 RID: 20656 RVA: 0x000C7320 File Offset: 0x000C5520
+		// Token: 0x17001C09 RID: 7177
+		// (get) Token: 0x060055D7 RID: 21975 RVA: 0x000D2BE8 File Offset: 0x000D0DE8
 		public virtual EDataPersistenceGameplayType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E53 RID: 11859
+		// Token: 0x0400311B RID: 12571
 		private IGameplayDataPersistence Instance;
 	}
 }

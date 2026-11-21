@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Inventory.Views
 {
-	// Token: 0x02005839 RID: 22585
+	// Token: 0x02004810 RID: 18448
 	internal class ESwitchComponent
 	{
-		// Token: 0x0401E04C RID: 122956
+		// Token: 0x04018AE5 RID: 101093
 		public const int BtnSwitch = 0;
 
-		// Token: 0x0401E04D RID: 122957
+		// Token: 0x04018AE6 RID: 101094
 		public const int TextSwitch = 1;
 	}
 }

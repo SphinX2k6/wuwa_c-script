@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064BD RID: 25789
+	// Token: 0x02006B28 RID: 27432
 	public class IConditionT
 	{
-		// Token: 0x1700BFE7 RID: 49127
-		// (get) Token: 0x0602CBA8 RID: 183208 RVA: 0x00626033 File Offset: 0x00624233
-		// (set) Token: 0x0602CBA9 RID: 183209 RVA: 0x0062603B File Offset: 0x0062423B
+		// Token: 0x1700C974 RID: 51572
+		// (get) Token: 0x0602F32C RID: 193324 RVA: 0x0067215B File Offset: 0x0067035B
+		// (set) Token: 0x0602F32D RID: 193325 RVA: 0x00672163 File Offset: 0x00670363
 		public TVarValueUnion Var1 { get; set; }
 
-		// Token: 0x1700BFE8 RID: 49128
-		// (get) Token: 0x0602CBAA RID: 183210 RVA: 0x00626044 File Offset: 0x00624244
-		// (set) Token: 0x0602CBAB RID: 183211 RVA: 0x0062604C File Offset: 0x0062424C
+		// Token: 0x1700C975 RID: 51573
+		// (get) Token: 0x0602F32E RID: 193326 RVA: 0x0067216C File Offset: 0x0067036C
+		// (set) Token: 0x0602F32F RID: 193327 RVA: 0x00672174 File Offset: 0x00670374
 		public TVarValueUnion Var2 { get; set; }
 
-		// Token: 0x1700BFE9 RID: 49129
-		// (get) Token: 0x0602CBAC RID: 183212 RVA: 0x00626055 File Offset: 0x00624255
-		// (set) Token: 0x0602CBAD RID: 183213 RVA: 0x0062605D File Offset: 0x0062425D
+		// Token: 0x1700C976 RID: 51574
+		// (get) Token: 0x0602F330 RID: 193328 RVA: 0x0067217D File Offset: 0x0067037D
+		// (set) Token: 0x0602F331 RID: 193329 RVA: 0x00672185 File Offset: 0x00670385
 		public string Compare { get; set; }
 
-		// Token: 0x0602CBAE RID: 183214 RVA: 0x00626066 File Offset: 0x00624266
+		// Token: 0x0602F332 RID: 193330 RVA: 0x0067218E File Offset: 0x0067038E
 		public IConditionT()
 		{
 			this.Var1 = null;

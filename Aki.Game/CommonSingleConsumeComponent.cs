@@ -6,18 +6,18 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001811 RID: 6161
+// Token: 0x02000CCA RID: 3274
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonSingleConsumeComponent : UiPanelBase
 {
-	// Token: 0x0600B4A8 RID: 46248 RVA: 0x0028C365 File Offset: 0x0028A565
+	// Token: 0x06008893 RID: 34963 RVA: 0x00296A85 File Offset: 0x00294C85
 	public CommonSingleConsumeComponent(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600B4A9 RID: 46249 RVA: 0x0028C384 File Offset: 0x0028A584
+	// Token: 0x06008894 RID: 34964 RVA: 0x00296AA4 File Offset: 0x00294CA4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,21 +33,21 @@ public class CommonSingleConsumeComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600B4AA RID: 46250 RVA: 0x0028C44C File Offset: 0x0028A64C
+	// Token: 0x06008895 RID: 34965 RVA: 0x00296B6C File Offset: 0x00294D6C
 	protected override void OnStart()
 	{
 		this.StrengthItem = new ButtonItem(base.GetItem(5));
 		this.ConsumeItem = new ConsumeItem(base.GetItem(4), null);
 	}
 
-	// Token: 0x0600B4AB RID: 46251 RVA: 0x0028C486 File Offset: 0x0028A686
+	// Token: 0x06008896 RID: 34966 RVA: 0x00296BA6 File Offset: 0x00294DA6
 	protected override void OnBeforeDestroy()
 	{
 		this.StrengthItem.Destroy(null);
 		this.StrengthItem = null;
 	}
 
-	// Token: 0x0600B4AC RID: 46252 RVA: 0x0028C49C File Offset: 0x0028A69C
+	// Token: 0x06008897 RID: 34967 RVA: 0x00296BBC File Offset: 0x00294DBC
 	[NullableContext(2)]
 	public void UpdateComponent(int moneyId, int costCount, TCommonSingleConsumeData singleConsumeData)
 	{
@@ -67,7 +67,7 @@ public class CommonSingleConsumeComponent : UiPanelBase
 		base.SetTextureByPath(itemConfigData.Icon, texture, null, null);
 	}
 
-	// Token: 0x0600B4AD RID: 46253 RVA: 0x0028C530 File Offset: 0x0028A730
+	// Token: 0x06008898 RID: 34968 RVA: 0x00296C50 File Offset: 0x00294E50
 	[NullableContext(2)]
 	public void UpdateComponentOnlyConsume(TCommonSingleConsumeData singleConsumeData)
 	{
@@ -81,7 +81,7 @@ public class CommonSingleConsumeComponent : UiPanelBase
 		this.ConsumeItem.UpdateItem(data);
 	}
 
-	// Token: 0x0600B4AE RID: 46254 RVA: 0x0028C574 File Offset: 0x0028A774
+	// Token: 0x06008899 RID: 34969 RVA: 0x00296C94 File Offset: 0x00294E94
 	public void SetMaxState(bool inMax)
 	{
 		base.GetItem(6).SetUIActive(!inMax);
@@ -95,7 +95,7 @@ public class CommonSingleConsumeComponent : UiPanelBase
 		this.StrengthItem.SetLocalText("WeaponResonanceText", Array.Empty<object>());
 	}
 
-	// Token: 0x0600B4AF RID: 46255 RVA: 0x0028C5E0 File Offset: 0x0028A7E0
+	// Token: 0x0600889A RID: 34970 RVA: 0x00296D00 File Offset: 0x00294F00
 	public void SetStrengthFunction(TCommonSingleConsumeFunction strengthFunction)
 	{
 		this.StrengthItem.SetFunction(delegate(int dataId)
@@ -104,13 +104,13 @@ public class CommonSingleConsumeComponent : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600B4B0 RID: 46256 RVA: 0x0028C611 File Offset: 0x0028A811
+	// Token: 0x0600889B RID: 34971 RVA: 0x00296D31 File Offset: 0x00294F31
 	public void SetStrengthItemLocalText(string textId, params object[] args)
 	{
 		this.StrengthItem.SetLocalText(textId, args);
 	}
 
-	// Token: 0x0600B4B1 RID: 46257 RVA: 0x0028C620 File Offset: 0x0028A820
+	// Token: 0x0600889C RID: 34972 RVA: 0x00296D40 File Offset: 0x00294F40
 	public void SetConsumeFunction(TCommonSingleConsumeFunction consumeFunction)
 	{
 		this.ConsumeItem.SetButtonFunction(delegate(int? dataId, int? _)
@@ -119,42 +119,42 @@ public class CommonSingleConsumeComponent : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600B4B2 RID: 46258 RVA: 0x0028C651 File Offset: 0x0028A851
+	// Token: 0x0600889D RID: 34973 RVA: 0x00296D71 File Offset: 0x00294F71
 	public bool GetEnoughMoney()
 	{
 		return this.EnoughMoney;
 	}
 
-	// Token: 0x04005187 RID: 20871
+	// Token: 0x04005232 RID: 21042
 	[Nullable(2)]
 	protected ButtonItem StrengthItem;
 
-	// Token: 0x04005188 RID: 20872
+	// Token: 0x04005233 RID: 21043
 	[Nullable(2)]
 	protected ConsumeItem ConsumeItem;
 
-	// Token: 0x04005189 RID: 20873
+	// Token: 0x04005234 RID: 21044
 	protected bool EnoughMoney = true;
 
-	// Token: 0x02007DFF RID: 32255
+	// Token: 0x02006F85 RID: 28549
 	[NullableContext(0)]
 	private enum ECommonSingleConsumeComponent
 	{
-		// Token: 0x040293BA RID: 168890
+		// Token: 0x040246E5 RID: 149221
 		ConsumeTexture,
-		// Token: 0x040293BB RID: 168891
+		// Token: 0x040246E6 RID: 149222
 		ConsumeText,
-		// Token: 0x040293BC RID: 168892
+		// Token: 0x040246E7 RID: 149223
 		OwnTexture,
-		// Token: 0x040293BD RID: 168893
+		// Token: 0x040246E8 RID: 149224
 		OwnText,
-		// Token: 0x040293BE RID: 168894
+		// Token: 0x040246E9 RID: 149225
 		MaterialItem,
-		// Token: 0x040293BF RID: 168895
+		// Token: 0x040246EA RID: 149226
 		StrengthItem,
-		// Token: 0x040293C0 RID: 168896
+		// Token: 0x040246EB RID: 149227
 		CostRootItem,
-		// Token: 0x040293C1 RID: 168897
+		// Token: 0x040246EC RID: 149228
 		MaterialRootItem
 	}
 }

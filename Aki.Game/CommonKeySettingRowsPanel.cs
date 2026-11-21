@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200202E RID: 8238
+// Token: 0x02001501 RID: 5377
 public class CommonKeySettingRowsPanel : UiPanelBase
 {
-	// Token: 0x060102BE RID: 66238 RVA: 0x003F0643 File Offset: 0x003EE843
+	// Token: 0x0600D726 RID: 55078 RVA: 0x003FCC3B File Offset: 0x003FAE3B
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class CommonKeySettingRowsPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060102BF RID: 66239 RVA: 0x003F067C File Offset: 0x003EE87C
+	// Token: 0x0600D727 RID: 55079 RVA: 0x003FCC74 File Offset: 0x003FAE74
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonKeySettingRowsPanel.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -33,7 +33,7 @@ public class CommonKeySettingRowsPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060102C0 RID: 66240 RVA: 0x003F06C0 File Offset: 0x003EE8C0
+	// Token: 0x0600D728 RID: 55080 RVA: 0x003FCCB8 File Offset: 0x003FAEB8
 	[NullableContext(1)]
 	public void Refresh(List<KeySettingRowData> dataList, CSharpScript.Game.Module.Menu.EInputControllerType inputControllerType)
 	{
@@ -51,24 +51,24 @@ public class CommonKeySettingRowsPanel : UiPanelBase
 		dynamicScrollView.RefreshByData(array, false, false);
 	}
 
-	// Token: 0x060102C1 RID: 66241 RVA: 0x003F0712 File Offset: 0x003EE912
+	// Token: 0x0600D729 RID: 55081 RVA: 0x003FCD0A File Offset: 0x003FAF0A
 	public void StopScroll()
 	{
 		base.GetUIDynScrollViewComponent(0).StopMovement();
 	}
 
-	// Token: 0x060102C2 RID: 66242 RVA: 0x003F0720 File Offset: 0x003EE920
+	// Token: 0x0600D72A RID: 55082 RVA: 0x003FCD18 File Offset: 0x003FAF18
 	[NullableContext(1)]
 	private CommonKeySettingRowContainerItem OnItemCreate(KeySettingRowData data, UUIItem uiItem, int index)
 	{
 		return new CommonKeySettingRowContainerItem();
 	}
 
-	// Token: 0x04007786 RID: 30598
+	// Token: 0x0400786F RID: 30831
 	[Nullable(2)]
 	private KeySettingRowBaseItem KeySettingRowBaseItem;
 
-	// Token: 0x04007787 RID: 30599
+	// Token: 0x04007870 RID: 30832
 	[Nullable(new byte[]
 	{
 		2,
@@ -78,13 +78,13 @@ public class CommonKeySettingRowsPanel : UiPanelBase
 	})]
 	private DynamicScrollView<CommonKeySettingRowContainerItem, KeySettingRowBaseItem, KeySettingRowData> DynamicScrollView;
 
-	// Token: 0x0200862A RID: 34346
+	// Token: 0x020077B1 RID: 30641
 	private static class EChildType
 	{
-		// Token: 0x0402BA8E RID: 178830
+		// Token: 0x04026D9D RID: 159133
 		public const int DynamicScrollView = 0;
 
-		// Token: 0x0402BA8F RID: 178831
+		// Token: 0x04026D9E RID: 159134
 		public const int TemplateItem = 1;
 	}
 }

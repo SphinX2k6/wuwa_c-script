@@ -7,12 +7,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.AI.StateMachine
 {
-	// Token: 0x02007316 RID: 29462
+	// Token: 0x02006499 RID: 25753
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineTransition
 	{
-		// Token: 0x06048509 RID: 296201 RVA: 0x01298FBC File Offset: 0x012971BC
+		// Token: 0x0603E956 RID: 256342 RVA: 0x0123BA3C File Offset: 0x01239C3C
 		public AiStateMachineTransition(AiStateMachineBase node, CombatStateMachineDefine.Fsm.Transition transition)
 		{
 			this.Node = node;
@@ -27,49 +27,49 @@ namespace CSharpScript.Game.AI.StateMachine
 			this.HasTaskFinishCondition = this.Condition.HasTaskFinishCondition;
 		}
 
-		// Token: 0x0604850A RID: 296202 RVA: 0x01299075 File Offset: 0x01297275
+		// Token: 0x0603E957 RID: 256343 RVA: 0x0123BAF5 File Offset: 0x01239CF5
 		public void Enter()
 		{
 			this.Condition.Enter();
 		}
 
-		// Token: 0x0604850B RID: 296203 RVA: 0x01299082 File Offset: 0x01297282
+		// Token: 0x0603E958 RID: 256344 RVA: 0x0123BB02 File Offset: 0x01239D02
 		public void Exit()
 		{
 			this.Condition.Exit();
 		}
 
-		// Token: 0x0604850C RID: 296204 RVA: 0x0129908F File Offset: 0x0129728F
+		// Token: 0x0603E959 RID: 256345 RVA: 0x0123BB0F File Offset: 0x01239D0F
 		public void Tick()
 		{
 			this.Condition.Tick();
 		}
 
-		// Token: 0x0604850D RID: 296205 RVA: 0x0129909C File Offset: 0x0129729C
+		// Token: 0x0603E95A RID: 256346 RVA: 0x0123BB1C File Offset: 0x01239D1C
 		public bool CheckPredictionCondition()
 		{
 			return ((this.TransitionPredictionType.GetValueOrDefault() == CombatStateMachineDefine.Fsm.ETransitionPredictionType.Autonomous && this.Node.ActorComponent.IsAutonomousProxy) || this.TransitionPredictionType.GetValueOrDefault() == CombatStateMachineDefine.Fsm.ETransitionPredictionType.Simulated) && this.Condition.Result;
 		}
 
-		// Token: 0x0604850E RID: 296206 RVA: 0x012990D9 File Offset: 0x012972D9
+		// Token: 0x0603E95B RID: 256347 RVA: 0x0123BB59 File Offset: 0x01239D59
 		public bool CanPrediction()
 		{
 			return (this.TransitionPredictionType.GetValueOrDefault() == CombatStateMachineDefine.Fsm.ETransitionPredictionType.Autonomous && this.Node.ActorComponent.IsAutonomousProxy) || this.TransitionPredictionType.GetValueOrDefault() == CombatStateMachineDefine.Fsm.ETransitionPredictionType.Simulated;
 		}
 
-		// Token: 0x0604850F RID: 296207 RVA: 0x0129910B File Offset: 0x0129730B
+		// Token: 0x0603E95C RID: 256348 RVA: 0x0123BB8B File Offset: 0x01239D8B
 		public bool GetResult()
 		{
 			return this.Condition.Result;
 		}
 
-		// Token: 0x06048510 RID: 296208 RVA: 0x01299118 File Offset: 0x01297318
+		// Token: 0x0603E95D RID: 256349 RVA: 0x0123BB98 File Offset: 0x01239D98
 		public void HandleServerDebugInfo(RepeatedField<bool> conditions)
 		{
 			this.Condition.HandleServerDebugInfo(conditions);
 		}
 
-		// Token: 0x06048511 RID: 296209 RVA: 0x01299126 File Offset: 0x01297326
+		// Token: 0x0603E95E RID: 256350 RVA: 0x0123BBA6 File Offset: 0x01239DA6
 		public void Clear()
 		{
 			this.Condition.Clear();
@@ -79,23 +79,23 @@ namespace CSharpScript.Game.AI.StateMachine
 			this.Conditions = null;
 		}
 
-		// Token: 0x040263B2 RID: 156594
+		// Token: 0x0402169F RID: 136863
 		[Nullable(2)]
 		public AiStateMachineBase Node;
 
-		// Token: 0x040263B3 RID: 156595
+		// Token: 0x040216A0 RID: 136864
 		public int From;
 
-		// Token: 0x040263B4 RID: 156596
+		// Token: 0x040216A1 RID: 136865
 		public int To;
 
-		// Token: 0x040263B5 RID: 156597
+		// Token: 0x040216A2 RID: 136866
 		public CombatStateMachineDefine.Fsm.ETransitionPredictionType? TransitionPredictionType;
 
-		// Token: 0x040263B6 RID: 156598
+		// Token: 0x040216A3 RID: 136867
 		public int Weight;
 
-		// Token: 0x040263B7 RID: 156599
+		// Token: 0x040216A4 RID: 136868
 		[Nullable(new byte[]
 		{
 			2,
@@ -103,11 +103,11 @@ namespace CSharpScript.Game.AI.StateMachine
 		})]
 		public List<CombatStateMachineDefine.Fsm.Condition> ConditionDatas;
 
-		// Token: 0x040263B8 RID: 156600
+		// Token: 0x040216A5 RID: 136869
 		[Nullable(2)]
 		public AiStateMachineCondition Condition;
 
-		// Token: 0x040263B9 RID: 156601
+		// Token: 0x040216A6 RID: 136870
 		[Nullable(new byte[]
 		{
 			2,
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.AI.StateMachine
 		})]
 		public List<AiStateMachineCondition> Conditions;
 
-		// Token: 0x040263BA RID: 156602
+		// Token: 0x040216A7 RID: 136871
 		public bool HasTaskFinishCondition;
 	}
 }

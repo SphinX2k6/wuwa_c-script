@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200264A RID: 9802
+	// Token: 0x0200290A RID: 10506
 	public class FinishDoInteract : ActionParams
 	{
-		// Token: 0x0600DBDA RID: 56282 RVA: 0x0020B814 File Offset: 0x00209A14
-		[NullableContext(1)]
+		// Token: 0x0600E9A8 RID: 59816 RVA: 0x00227FE0 File Offset: 0x002261E0
 		public static FinishDoInteract Create(IFinishDoInteract? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x04007A2E RID: 31278
+		// Token: 0x040080CA RID: 32970
 		private IFinishDoInteract Instance;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005806 RID: 22534
+	// Token: 0x02005E0D RID: 24077
 	public class IRangedRandomT
 	{
-		// Token: 0x1700A856 RID: 43094
-		// (get) Token: 0x06025E21 RID: 155169 RVA: 0x0053979C File Offset: 0x0053799C
-		// (set) Token: 0x06025E22 RID: 155170 RVA: 0x005397A4 File Offset: 0x005379A4
+		// Token: 0x1700B17A RID: 45434
+		// (get) Token: 0x06028341 RID: 164673 RVA: 0x0057F928 File Offset: 0x0057DB28
+		// (set) Token: 0x06028342 RID: 164674 RVA: 0x0057F930 File Offset: 0x0057DB30
 		public float Left { get; set; }
 
-		// Token: 0x1700A857 RID: 43095
-		// (get) Token: 0x06025E23 RID: 155171 RVA: 0x005397AD File Offset: 0x005379AD
-		// (set) Token: 0x06025E24 RID: 155172 RVA: 0x005397B5 File Offset: 0x005379B5
+		// Token: 0x1700B17B RID: 45435
+		// (get) Token: 0x06028343 RID: 164675 RVA: 0x0057F939 File Offset: 0x0057DB39
+		// (set) Token: 0x06028344 RID: 164676 RVA: 0x0057F941 File Offset: 0x0057DB41
 		public float Right { get; set; }
 
-		// Token: 0x06025E25 RID: 155173 RVA: 0x005397BE File Offset: 0x005379BE
+		// Token: 0x06028345 RID: 164677 RVA: 0x0057F94A File Offset: 0x0057DB4A
 		public IRangedRandomT()
 		{
 			this.Left = 0f;

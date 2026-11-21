@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002144 RID: 8516
+// Token: 0x0200161C RID: 5660
 [NullableContext(1)]
 [Nullable(0)]
 public class OnOpenPhoneViewLogEvent : PlayerCommonLogData
 {
-	// Token: 0x170014E9 RID: 5353
-	// (get) Token: 0x06010A06 RID: 68102 RVA: 0x0040BE0F File Offset: 0x0040A00F
-	// (set) Token: 0x06010A07 RID: 68103 RVA: 0x0040BE17 File Offset: 0x0040A017
+	// Token: 0x17001517 RID: 5399
+	// (get) Token: 0x0600DE79 RID: 56953 RVA: 0x00418557 File Offset: 0x00416757
+	// (set) Token: 0x0600DE7A RID: 56954 RVA: 0x0041855F File Offset: 0x0041675F
 	public override string event_id { get; set; } = "1815";
 
-	// Token: 0x04007D90 RID: 32144
+	// Token: 0x04007EA0 RID: 32416
 	public int i_open_way;
 
-	// Token: 0x04007D91 RID: 32145
+	// Token: 0x04007EA1 RID: 32417
 	public int i_reason;
 }

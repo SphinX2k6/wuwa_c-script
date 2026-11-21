@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction
 {
-	// Token: 0x02006F22 RID: 28450
+	// Token: 0x020060A3 RID: 24739
 	public abstract class GameplayAction
 	{
-		// Token: 0x17009B0C RID: 39692
-		// (get) Token: 0x060453B6 RID: 283574 RVA: 0x01121C8E File Offset: 0x0111FE8E
+		// Token: 0x1700704B RID: 28747
+		// (get) Token: 0x0603B564 RID: 243044 RVA: 0x010CBC3A File Offset: 0x010C9E3A
 		protected virtual bool NeedTickInner
 		{
 			get
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction
 			}
 		}
 
-		// Token: 0x060453B7 RID: 283575 RVA: 0x01121C91 File Offset: 0x0111FE91
+		// Token: 0x0603B565 RID: 243045 RVA: 0x010CBC3D File Offset: 0x010C9E3D
 		[NullableContext(1)]
 		public void ExecuteAction(Action onFinish)
 		{
@@ -24,43 +24,43 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction
 			this.OnExecuteAction();
 		}
 
-		// Token: 0x060453B8 RID: 283576 RVA: 0x01121CA0 File Offset: 0x0111FEA0
+		// Token: 0x0603B566 RID: 243046 RVA: 0x010CBC4C File Offset: 0x010C9E4C
 		public bool IsFinish()
 		{
 			return this.IsFinishInner;
 		}
 
-		// Token: 0x060453B9 RID: 283577 RVA: 0x01121CA8 File Offset: 0x0111FEA8
+		// Token: 0x0603B567 RID: 243047 RVA: 0x010CBC54 File Offset: 0x010C9E54
 		public bool IsLoop()
 		{
 			return this.IsLoopInner;
 		}
 
-		// Token: 0x060453BA RID: 283578 RVA: 0x01121CB0 File Offset: 0x0111FEB0
+		// Token: 0x0603B568 RID: 243048 RVA: 0x010CBC5C File Offset: 0x010C9E5C
 		public bool NeedTick()
 		{
 			return this.NeedTickInner;
 		}
 
-		// Token: 0x060453BB RID: 283579 RVA: 0x01121CB8 File Offset: 0x0111FEB8
+		// Token: 0x0603B569 RID: 243049 RVA: 0x010CBC64 File Offset: 0x010C9E64
 		public virtual void TickAction(float delta)
 		{
 		}
 
-		// Token: 0x060453BC RID: 283580 RVA: 0x01121CBA File Offset: 0x0111FEBA
+		// Token: 0x0603B56A RID: 243050 RVA: 0x010CBC66 File Offset: 0x010C9E66
 		public void InterruptAction()
 		{
 			this.OnInterruptAction();
 			this.IsFinishInner = true;
 		}
 
-		// Token: 0x060453BD RID: 283581
+		// Token: 0x0603B56B RID: 243051
 		protected abstract void OnExecuteAction();
 
-		// Token: 0x060453BE RID: 283582
+		// Token: 0x0603B56C RID: 243052
 		protected abstract void OnInterruptAction();
 
-		// Token: 0x060453BF RID: 283583 RVA: 0x01121CC9 File Offset: 0x0111FEC9
+		// Token: 0x0603B56D RID: 243053 RVA: 0x010CBC75 File Offset: 0x010C9E75
 		protected void FinishExecute()
 		{
 			this.IsFinishInner = true;
@@ -72,13 +72,13 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction
 			onActionFinish();
 		}
 
-		// Token: 0x04024189 RID: 147849
+		// Token: 0x0401F43E RID: 128062
 		protected bool IsLoopInner;
 
-		// Token: 0x0402418A RID: 147850
+		// Token: 0x0401F43F RID: 128063
 		private bool IsFinishInner;
 
-		// Token: 0x0402418B RID: 147851
+		// Token: 0x0401F440 RID: 128064
 		[Nullable(2)]
 		private Action OnActionFinish;
 	}

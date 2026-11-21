@@ -4,12 +4,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Util;
 
-// Token: 0x02001A43 RID: 6723
+// Token: 0x02000F02 RID: 3842
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoAbyssItemSmallItemGrid : SmallItemGrid, IGridProxy<AbyssPluginItemInfo>
 {
-	// Token: 0x0600C5BF RID: 50623 RVA: 0x002CE974 File Offset: 0x002CCB74
+	// Token: 0x060099CF RID: 39375 RVA: 0x002D9A88 File Offset: 0x002D7C88
 	public void Refresh(AbyssPluginItemInfo data)
 	{
 		TItemConfig config = data.GetConfig();
@@ -28,9 +28,9 @@ public class DangoAbyssItemSmallItemGrid : SmallItemGrid, IGridProxy<AbyssPlugin
 		base.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x17001054 RID: 4180
-	// (get) Token: 0x0600C5C0 RID: 50624 RVA: 0x002CE9F9 File Offset: 0x002CCBF9
-	// (set) Token: 0x0600C5C1 RID: 50625 RVA: 0x002CEA01 File Offset: 0x002CCC01
+	// Token: 0x17001079 RID: 4217
+	// (get) Token: 0x060099D0 RID: 39376 RVA: 0x002D9B0D File Offset: 0x002D7D0D
+	// (set) Token: 0x060099D1 RID: 39377 RVA: 0x002D9B15 File Offset: 0x002D7D15
 	[Nullable(new byte[]
 	{
 		2,
@@ -52,32 +52,32 @@ public class DangoAbyssItemSmallItemGrid : SmallItemGrid, IGridProxy<AbyssPlugin
 		1
 	})] set; }
 
-	// Token: 0x17001055 RID: 4181
-	// (get) Token: 0x0600C5C2 RID: 50626 RVA: 0x002CEA0A File Offset: 0x002CCC0A
-	// (set) Token: 0x0600C5C3 RID: 50627 RVA: 0x002CEA12 File Offset: 0x002CCC12
+	// Token: 0x1700107A RID: 4218
+	// (get) Token: 0x060099D2 RID: 39378 RVA: 0x002D9B1E File Offset: 0x002D7D1E
+	// (set) Token: 0x060099D3 RID: 39379 RVA: 0x002D9B26 File Offset: 0x002D7D26
 	public int GridIndex { get; set; }
 
-	// Token: 0x17001056 RID: 4182
-	// (get) Token: 0x0600C5C4 RID: 50628 RVA: 0x002CEA1B File Offset: 0x002CCC1B
-	// (set) Token: 0x0600C5C5 RID: 50629 RVA: 0x002CEA23 File Offset: 0x002CCC23
+	// Token: 0x1700107B RID: 4219
+	// (get) Token: 0x060099D4 RID: 39380 RVA: 0x002D9B2F File Offset: 0x002D7D2F
+	// (set) Token: 0x060099D5 RID: 39381 RVA: 0x002D9B37 File Offset: 0x002D7D37
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x0600C5C6 RID: 50630 RVA: 0x002CEA2C File Offset: 0x002CCC2C
+	// Token: 0x060099D6 RID: 39382 RVA: 0x002D9B40 File Offset: 0x002D7D40
 	public void Clear()
 	{
 	}
 
-	// Token: 0x0600C5C7 RID: 50631 RVA: 0x002CEA2E File Offset: 0x002CCC2E
+	// Token: 0x060099D7 RID: 39383 RVA: 0x002D9B42 File Offset: 0x002D7D42
 	public void OnSelected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600C5C8 RID: 50632 RVA: 0x002CEA30 File Offset: 0x002CCC30
+	// Token: 0x060099D8 RID: 39384 RVA: 0x002D9B44 File Offset: 0x002D7D44
 	public void OnDeselected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600C5C9 RID: 50633 RVA: 0x002CEA32 File Offset: 0x002CCC32
+	// Token: 0x060099D9 RID: 39385 RVA: 0x002D9B46 File Offset: 0x002D7D46
 	public object GetKey(AbyssPluginItemInfo data, int gridIndex)
 	{
 		return this.GridIndex;

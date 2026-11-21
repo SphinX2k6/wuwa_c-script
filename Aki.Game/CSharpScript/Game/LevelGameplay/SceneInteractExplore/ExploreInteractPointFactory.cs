@@ -4,7 +4,7 @@ using CSharpScript.Game.LevelGamePlay.SceneInteract;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 {
-	// Token: 0x02006A93 RID: 27283
+	// Token: 0x02005BF0 RID: 23536
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,7 +13,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 	})]
 	public class ExploreInteractPointFactory : SceneInteractPointFactory<ExploreInteractPointContext>
 	{
-		// Token: 0x06043C9B RID: 277659 RVA: 0x01097B35 File Offset: 0x01095D35
+		// Token: 0x06039CE9 RID: 236777 RVA: 0x0103C389 File Offset: 0x0103A589
 		protected override ISceneInteractPoint CreateTyped(ExploreInteractPointContext context)
 		{
 			return new ExploreInteractPoint(context);

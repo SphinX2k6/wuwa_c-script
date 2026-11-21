@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001658 RID: 5720
+	// Token: 0x020017C8 RID: 6088
 	public class EnterMovieCamera_SetValue
 	{
-		// Token: 0x04004CA3 RID: 19619
-		[Nullable(1)]
+		// Token: 0x0400509E RID: 20638
 		public IEnterMovieCameraType MovieCameraConfig;
 	}
 }

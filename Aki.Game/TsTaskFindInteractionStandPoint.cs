@@ -17,9 +17,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskFindInteractionStandPoint.TsTaskFindInteractionStandPoint_C")]
 public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700013F RID: 319
-	// (get) Token: 0x060007D0 RID: 2000 RVA: 0x00026CA1 File Offset: 0x00024EA1
-	// (set) Token: 0x060007D1 RID: 2001 RVA: 0x00026CB1 File Offset: 0x00024EB1
+	// Token: 0x17000141 RID: 321
+	// (get) Token: 0x060007D4 RID: 2004 RVA: 0x00027A79 File Offset: 0x00025C79
+	// (set) Token: 0x060007D5 RID: 2005 RVA: 0x00027A89 File Offset: 0x00025C89
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool CheckObstacle
 	{
@@ -33,9 +33,9 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x17000140 RID: 320
-	// (get) Token: 0x060007D2 RID: 2002 RVA: 0x00026CC2 File Offset: 0x00024EC2
-	// (set) Token: 0x060007D3 RID: 2003 RVA: 0x00026CD2 File Offset: 0x00024ED2
+	// Token: 0x17000142 RID: 322
+	// (get) Token: 0x060007D6 RID: 2006 RVA: 0x00027A9A File Offset: 0x00025C9A
+	// (set) Token: 0x060007D7 RID: 2007 RVA: 0x00027AAA File Offset: 0x00025CAA
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float MaxHeightDiff
 	{
@@ -49,9 +49,9 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x17000141 RID: 321
-	// (get) Token: 0x060007D4 RID: 2004 RVA: 0x00026CE3 File Offset: 0x00024EE3
-	// (set) Token: 0x060007D5 RID: 2005 RVA: 0x00026CF3 File Offset: 0x00024EF3
+	// Token: 0x17000143 RID: 323
+	// (get) Token: 0x060007D8 RID: 2008 RVA: 0x00027ABB File Offset: 0x00025CBB
+	// (set) Token: 0x060007D9 RID: 2009 RVA: 0x00027ACB File Offset: 0x00025CCB
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float ObstacleHeight
 	{
@@ -65,9 +65,9 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x17000142 RID: 322
-	// (get) Token: 0x060007D6 RID: 2006 RVA: 0x00026D04 File Offset: 0x00024F04
-	// (set) Token: 0x060007D7 RID: 2007 RVA: 0x00026D14 File Offset: 0x00024F14
+	// Token: 0x17000144 RID: 324
+	// (get) Token: 0x060007DA RID: 2010 RVA: 0x00027ADC File Offset: 0x00025CDC
+	// (set) Token: 0x060007DB RID: 2011 RVA: 0x00027AEC File Offset: 0x00025CEC
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float FloorDetectRange
 	{
@@ -81,9 +81,9 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x17000143 RID: 323
-	// (get) Token: 0x060007D8 RID: 2008 RVA: 0x00026D25 File Offset: 0x00024F25
-	// (set) Token: 0x060007D9 RID: 2009 RVA: 0x00026D35 File Offset: 0x00024F35
+	// Token: 0x17000145 RID: 325
+	// (get) Token: 0x060007DC RID: 2012 RVA: 0x00027AFD File Offset: 0x00025CFD
+	// (set) Token: 0x060007DD RID: 2013 RVA: 0x00027B0D File Offset: 0x00025D0D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool CheckHeightDiff
 	{
@@ -97,9 +97,9 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x17000144 RID: 324
-	// (get) Token: 0x060007DA RID: 2010 RVA: 0x00026D46 File Offset: 0x00024F46
-	// (set) Token: 0x060007DB RID: 2011 RVA: 0x00026D56 File Offset: 0x00024F56
+	// Token: 0x17000146 RID: 326
+	// (get) Token: 0x060007DE RID: 2014 RVA: 0x00027B1E File Offset: 0x00025D1E
+	// (set) Token: 0x060007DF RID: 2015 RVA: 0x00027B2E File Offset: 0x00025D2E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CapsuleRadiusScaleRate
 	{
@@ -113,9 +113,9 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x17000145 RID: 325
-	// (get) Token: 0x060007DC RID: 2012 RVA: 0x00026D67 File Offset: 0x00024F67
-	// (set) Token: 0x060007DD RID: 2013 RVA: 0x00026D7B File Offset: 0x00024F7B
+	// Token: 0x17000147 RID: 327
+	// (get) Token: 0x060007E0 RID: 2016 RVA: 0x00027B3F File Offset: 0x00025D3F
+	// (set) Token: 0x060007E1 RID: 2017 RVA: 0x00027B53 File Offset: 0x00025D53
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string StandPointKey
 	{
@@ -129,9 +129,9 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x17000146 RID: 326
-	// (get) Token: 0x060007DE RID: 2014 RVA: 0x00026D90 File Offset: 0x00024F90
-	// (set) Token: 0x060007DF RID: 2015 RVA: 0x00026DA4 File Offset: 0x00024FA4
+	// Token: 0x17000148 RID: 328
+	// (get) Token: 0x060007E2 RID: 2018 RVA: 0x00027B68 File Offset: 0x00025D68
+	// (set) Token: 0x060007E3 RID: 2019 RVA: 0x00027B7C File Offset: 0x00025D7C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string InteractionEntityKey
 	{
@@ -145,9 +145,9 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x17000147 RID: 327
-	// (get) Token: 0x060007E0 RID: 2016 RVA: 0x00026DB9 File Offset: 0x00024FB9
-	// (set) Token: 0x060007E1 RID: 2017 RVA: 0x00026DC9 File Offset: 0x00024FC9
+	// Token: 0x17000149 RID: 329
+	// (get) Token: 0x060007E4 RID: 2020 RVA: 0x00027B91 File Offset: 0x00025D91
+	// (set) Token: 0x060007E5 RID: 2021 RVA: 0x00027BA1 File Offset: 0x00025DA1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DebugDraw
 	{
@@ -161,9 +161,9 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x17000148 RID: 328
-	// (get) Token: 0x060007E2 RID: 2018 RVA: 0x00026DDA File Offset: 0x00024FDA
-	// (set) Token: 0x060007E3 RID: 2019 RVA: 0x00026DEA File Offset: 0x00024FEA
+	// Token: 0x1700014A RID: 330
+	// (get) Token: 0x060007E6 RID: 2022 RVA: 0x00027BB2 File Offset: 0x00025DB2
+	// (set) Token: 0x060007E7 RID: 2023 RVA: 0x00027BC2 File Offset: 0x00025DC2
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool CanStandFarther
 	{
@@ -177,7 +177,7 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x060007E4 RID: 2020 RVA: 0x00026DFC File Offset: 0x00024FFC
+	// Token: 0x060007E8 RID: 2024 RVA: 0x00027BD4 File Offset: 0x00025DD4
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -197,30 +197,27 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x060007E5 RID: 2021 RVA: 0x00026EA8 File Offset: 0x000250A8
+	// Token: 0x060007E9 RID: 2025 RVA: 0x00027C80 File Offset: 0x00025E80
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskFindInteractionStandPoint) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskFindInteractionStandPoint.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060007E6 RID: 2022 RVA: 0x00026F44 File Offset: 0x00025144
+	// Token: 0x060007EA RID: 2026 RVA: 0x00027D30 File Offset: 0x00025F30
 	[NullableContext(2)]
 	protected void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -278,7 +275,7 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		base.Finish(true);
 	}
 
-	// Token: 0x060007E7 RID: 2023 RVA: 0x00027078 File Offset: 0x00025278
+	// Token: 0x060007EB RID: 2027 RVA: 0x00027E64 File Offset: 0x00026064
 	private void DrawDebugPoints(CharacterActorComponent character)
 	{
 		UWorld world = GlobalData.World;
@@ -291,7 +288,7 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		UKismetSystemLibrary.D_DrawDebugSphere(world, this.TargetPos.ToUeVector(false), num * 1.2f, segments, new FLinearColor?(ColorUtils.LinearWhite), duration, 0f);
 	}
 
-	// Token: 0x060007E8 RID: 2024 RVA: 0x00027130 File Offset: 0x00025330
+	// Token: 0x060007EC RID: 2028 RVA: 0x00027F1C File Offset: 0x0002611C
 	private bool ResolveNpcAndWriteBlackboard(int ownerEntityId)
 	{
 		int? currentInteractEntityId = InteractionModel.Instance.CurrentInteractEntityId;
@@ -341,7 +338,7 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		return true;
 	}
 
-	// Token: 0x060007E9 RID: 2025 RVA: 0x00027248 File Offset: 0x00025448
+	// Token: 0x060007ED RID: 2029 RVA: 0x00028034 File Offset: 0x00026234
 	private void ComputeStandPoint(CharacterActorComponent character)
 	{
 		this.NpcPos.Subtraction(this.PlayerPos, this.BaseVec);
@@ -373,7 +370,7 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		this.TargetPos.DeepCopy(this.Candidate);
 	}
 
-	// Token: 0x060007EA RID: 2026 RVA: 0x00027450 File Offset: 0x00025650
+	// Token: 0x060007EE RID: 2030 RVA: 0x0002823C File Offset: 0x0002643C
 	private void OffsetPoint(CharacterActorComponent character, int counter, Vector candidate)
 	{
 		bool flag = counter % 2 == 0;
@@ -388,7 +385,7 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		this.MidPoint.Subtraction(this.ScaledPerp, candidate);
 	}
 
-	// Token: 0x060007EB RID: 2027 RVA: 0x000274C0 File Offset: 0x000256C0
+	// Token: 0x060007EF RID: 2031 RVA: 0x000282AC File Offset: 0x000264AC
 	private bool PickStandPointWithObstacle(CharacterActorComponent character)
 	{
 		UTraceSphereElement element = this.Element;
@@ -418,7 +415,7 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		return false;
 	}
 
-	// Token: 0x060007EC RID: 2028 RVA: 0x0002759E File Offset: 0x0002579E
+	// Token: 0x060007F0 RID: 2032 RVA: 0x0002838A File Offset: 0x0002658A
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskFindInteractionStandPoint._ClassPtr == IntPtr.Zero)
@@ -428,22 +425,22 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		return TsTaskFindInteractionStandPoint._ClassPtr;
 	}
 
-	// Token: 0x060007ED RID: 2029 RVA: 0x000275C4 File Offset: 0x000257C4
+	// Token: 0x060007F1 RID: 2033 RVA: 0x000283B0 File Offset: 0x000265B0
 	public TsTaskFindInteractionStandPoint() : this(BuiltinUtils.AllocNativeUObject(TsTaskFindInteractionStandPoint.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060007EE RID: 2030 RVA: 0x000275EC File Offset: 0x000257EC
+	// Token: 0x060007F2 RID: 2034 RVA: 0x000283D8 File Offset: 0x000265D8
 	public TsTaskFindInteractionStandPoint(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskFindInteractionStandPoint.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060007EF RID: 2031 RVA: 0x00027620 File Offset: 0x00025820
+	// Token: 0x060007F3 RID: 2035 RVA: 0x0002840C File Offset: 0x0002660C
 	protected TsTaskFindInteractionStandPoint(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060007F0 RID: 2032 RVA: 0x000276C4 File Offset: 0x000258C4
+	// Token: 0x060007F4 RID: 2036 RVA: 0x000284B0 File Offset: 0x000266B0
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -452,124 +449,124 @@ public class TsTaskFindInteractionStandPoint : TsTaskAbortImmediatelyBase, IUnre
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x040005B7 RID: 1463
+	// Token: 0x040005BB RID: 1467
 	private const double HALF_SQRT3 = 0.8660254;
 
-	// Token: 0x040005B8 RID: 1464
+	// Token: 0x040005BC RID: 1468
 	private const double DEGENERATE_SIDE = 1.0;
 
-	// Token: 0x040005B9 RID: 1465
+	// Token: 0x040005BD RID: 1469
 	private const string PROFILE_KEY = "TsTaskFindInteractionStandPoint";
 
-	// Token: 0x040005BA RID: 1466
+	// Token: 0x040005BE RID: 1470
 	private bool IsInitTsVariables;
 
-	// Token: 0x040005BB RID: 1467
+	// Token: 0x040005BF RID: 1471
 	private bool TsCheckObstacle;
 
-	// Token: 0x040005BC RID: 1468
+	// Token: 0x040005C0 RID: 1472
 	private float TsMaxHeightDiff;
 
-	// Token: 0x040005BD RID: 1469
+	// Token: 0x040005C1 RID: 1473
 	private float TsObstacleHeight;
 
-	// Token: 0x040005BE RID: 1470
+	// Token: 0x040005C2 RID: 1474
 	private float TsFloorDetectRange;
 
-	// Token: 0x040005BF RID: 1471
+	// Token: 0x040005C3 RID: 1475
 	private bool TsCheckHeightDiff;
 
-	// Token: 0x040005C0 RID: 1472
+	// Token: 0x040005C4 RID: 1476
 	private float TsCapsuleRadiusScaleRate;
 
-	// Token: 0x040005C1 RID: 1473
+	// Token: 0x040005C5 RID: 1477
 	private bool TsDebugDraw;
 
-	// Token: 0x040005C2 RID: 1474
+	// Token: 0x040005C6 RID: 1478
 	private bool TsCanStandFarther;
 
-	// Token: 0x040005C3 RID: 1475
+	// Token: 0x040005C7 RID: 1479
 	private string TsStandPointKey = "";
 
-	// Token: 0x040005C4 RID: 1476
+	// Token: 0x040005C8 RID: 1480
 	private string TsInteractionEntityKey = "";
 
-	// Token: 0x040005C5 RID: 1477
+	// Token: 0x040005C9 RID: 1481
 	private readonly Vector PlayerPos = Vector.Create();
 
-	// Token: 0x040005C6 RID: 1478
+	// Token: 0x040005CA RID: 1482
 	private readonly Vector NpcPos = Vector.Create();
 
-	// Token: 0x040005C7 RID: 1479
+	// Token: 0x040005CB RID: 1483
 	private readonly Vector BaseVec = Vector.Create();
 
-	// Token: 0x040005C8 RID: 1480
+	// Token: 0x040005CC RID: 1484
 	private readonly Vector MidPoint = Vector.Create();
 
-	// Token: 0x040005C9 RID: 1481
+	// Token: 0x040005CD RID: 1485
 	private readonly Vector Perp = Vector.Create();
 
-	// Token: 0x040005CA RID: 1482
+	// Token: 0x040005CE RID: 1486
 	private readonly Vector ScaledPerp = Vector.Create();
 
-	// Token: 0x040005CB RID: 1483
+	// Token: 0x040005CF RID: 1487
 	private readonly Vector Candidate = Vector.Create();
 
-	// Token: 0x040005CC RID: 1484
+	// Token: 0x040005D0 RID: 1488
 	private readonly Vector TargetPos = Vector.Create();
 
-	// Token: 0x040005CD RID: 1485
+	// Token: 0x040005D1 RID: 1489
 	[Nullable(2)]
 	private UTraceSphereElement Element;
 
-	// Token: 0x040005CE RID: 1486
+	// Token: 0x040005D2 RID: 1490
 	private readonly Vector TraceHitLocation = Vector.Create();
 
-	// Token: 0x040005CF RID: 1487
+	// Token: 0x040005D3 RID: 1491
 	private readonly Vector TmpStart = Vector.Create();
 
-	// Token: 0x040005D0 RID: 1488
+	// Token: 0x040005D4 RID: 1492
 	private readonly Vector TmpEnd = Vector.Create();
 
-	// Token: 0x040005D1 RID: 1489
+	// Token: 0x040005D5 RID: 1493
 	private double height;
 
-	// Token: 0x040005D2 RID: 1490
+	// Token: 0x040005D6 RID: 1494
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskFindInteractionStandPoint.TsTaskFindInteractionStandPoint_C";
 
-	// Token: 0x040005D3 RID: 1491
+	// Token: 0x040005D7 RID: 1495
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040005D4 RID: 1492
+	// Token: 0x040005D8 RID: 1496
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040005D5 RID: 1493
+	// Token: 0x040005D9 RID: 1497
 	private static int __PropertyOffset_CheckObstacle;
 
-	// Token: 0x040005D6 RID: 1494
+	// Token: 0x040005DA RID: 1498
 	private static int __PropertyOffset_MaxHeightDiff;
 
-	// Token: 0x040005D7 RID: 1495
+	// Token: 0x040005DB RID: 1499
 	private static int __PropertyOffset_ObstacleHeight;
 
-	// Token: 0x040005D8 RID: 1496
+	// Token: 0x040005DC RID: 1500
 	private static int __PropertyOffset_FloorDetectRange;
 
-	// Token: 0x040005D9 RID: 1497
+	// Token: 0x040005DD RID: 1501
 	private static int __PropertyOffset_CheckHeightDiff;
 
-	// Token: 0x040005DA RID: 1498
+	// Token: 0x040005DE RID: 1502
 	private static int __PropertyOffset_CapsuleRadiusScaleRate;
 
-	// Token: 0x040005DB RID: 1499
+	// Token: 0x040005DF RID: 1503
 	private static int __PropertyOffset_StandPointKey;
 
-	// Token: 0x040005DC RID: 1500
+	// Token: 0x040005E0 RID: 1504
 	private static int __PropertyOffset_InteractionEntityKey;
 
-	// Token: 0x040005DD RID: 1501
+	// Token: 0x040005E1 RID: 1505
 	private static int __PropertyOffset_DebugDraw;
 
-	// Token: 0x040005DE RID: 1502
+	// Token: 0x040005E2 RID: 1506
 	private static int __PropertyOffset_CanStandFarther;
 }

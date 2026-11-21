@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002837 RID: 10295
+	// Token: 0x02002B0A RID: 11018
 	public class IInstrumentBoardSize
 	{
-		// Token: 0x0600E445 RID: 58437 RVA: 0x00219AEF File Offset: 0x00217CEF
-		[NullableContext(1)]
+		// Token: 0x0600F26A RID: 62058 RVA: 0x00236953 File Offset: 0x00234B53
 		public static IInstrumentBoardSize Create(IInstrumentBoardSize? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004599 RID: 17817
-		// (get) Token: 0x0600E446 RID: 58438 RVA: 0x00219B0E File Offset: 0x00217D0E
+		// Token: 0x17004904 RID: 18692
+		// (get) Token: 0x0600F26B RID: 62059 RVA: 0x00236972 File Offset: 0x00234B72
 		public virtual int X
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700459A RID: 17818
-		// (get) Token: 0x0600E447 RID: 58439 RVA: 0x00219B1B File Offset: 0x00217D1B
+		// Token: 0x17004905 RID: 18693
+		// (get) Token: 0x0600F26C RID: 62060 RVA: 0x0023697F File Offset: 0x00234B7F
 		public virtual int Y
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E4B RID: 32331
+		// Token: 0x04008508 RID: 34056
 		private IInstrumentBoardSize Instance;
 	}
 }

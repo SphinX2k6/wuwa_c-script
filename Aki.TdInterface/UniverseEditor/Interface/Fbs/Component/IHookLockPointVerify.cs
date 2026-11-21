@@ -7,10 +7,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053CA RID: 21450
+	// Token: 0x02005950 RID: 22864
 	public static class IHookLockPointVerify
 	{
-		// Token: 0x06023346 RID: 144198 RVA: 0x004E017C File Offset: 0x004DE37C
+		// Token: 0x060253FE RID: 152574 RVA: 0x0051D17C File Offset: 0x0051B37C
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false))
@@ -69,7 +69,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 										VerifyTableAction verifyAction7;
 										if ((verifyAction7 = IHookLockPointVerify.<>O.<6>__Verify) == null)
 										{
-											verifyAction7 = (IHookLockPointVerify.<>O.<6>__Verify = new VerifyTableAction(IMotorHookConfigVerify.Verify));
+											verifyAction7 = (IHookLockPointVerify.<>O.<6>__Verify = new VerifyTableAction(IMechHookInteractConfigVerify.Verify));
 										}
 										if (verifier.VerifyTable(tablePos, offsetId5, verifyAction7, false))
 										{
@@ -77,19 +77,28 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 											VerifyTableAction verifyAction8;
 											if ((verifyAction8 = IHookLockPointVerify.<>O.<7>__Verify) == null)
 											{
-												verifyAction8 = (IHookLockPointVerify.<>O.<7>__Verify = new VerifyTableAction(IHookGravityConfigVerify.Verify));
+												verifyAction8 = (IHookLockPointVerify.<>O.<7>__Verify = new VerifyTableAction(IMotorHookConfigVerify.Verify));
 											}
-											if (verifier.VerifyTable(tablePos, offsetId6, verifyAction8, false) && verifier.VerifyField(tablePos, 50, 1UL, 1UL, false))
+											if (verifier.VerifyTable(tablePos, offsetId6, verifyAction8, false))
 											{
-												short offsetId7 = 52;
+												short offsetId7 = 50;
 												VerifyTableAction verifyAction9;
 												if ((verifyAction9 = IHookLockPointVerify.<>O.<8>__Verify) == null)
 												{
-													verifyAction9 = (IHookLockPointVerify.<>O.<8>__Verify = new VerifyTableAction(IHookPerformanceConfigVerify.Verify));
+													verifyAction9 = (IHookLockPointVerify.<>O.<8>__Verify = new VerifyTableAction(IHookGravityConfigVerify.Verify));
 												}
-												if (verifier.VerifyTable(tablePos, offsetId7, verifyAction9, false) && verifier.VerifyField(tablePos, 54, 2UL, 2UL, false))
+												if (verifier.VerifyTable(tablePos, offsetId7, verifyAction9, false) && verifier.VerifyField(tablePos, 52, 1UL, 1UL, false))
 												{
-													return verifier.VerifyTableEnd(tablePos);
+													short offsetId8 = 54;
+													VerifyTableAction verifyAction10;
+													if ((verifyAction10 = IHookLockPointVerify.<>O.<9>__Verify) == null)
+													{
+														verifyAction10 = (IHookLockPointVerify.<>O.<9>__Verify = new VerifyTableAction(IHookPerformanceConfigVerify.Verify));
+													}
+													if (verifier.VerifyTable(tablePos, offsetId8, verifyAction10, false) && verifier.VerifyField(tablePos, 56, 2UL, 2UL, false))
+													{
+														return verifier.VerifyTableEnd(tablePos);
+													}
 												}
 											}
 										}
@@ -103,36 +112,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return false;
 		}
 
-		// Token: 0x02007B5E RID: 31582
+		// Token: 0x020083BD RID: 33725
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040135B7 RID: 79287
+			// Token: 0x0401463C RID: 83516
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x040135B8 RID: 79288
+			// Token: 0x0401463D RID: 83517
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x040135B9 RID: 79289
+			// Token: 0x0401463E RID: 83518
 			public static VerifyTableAction <2>__Verify;
 
-			// Token: 0x040135BA RID: 79290
+			// Token: 0x0401463F RID: 83519
 			public static VerifyTableAction <3>__Verify;
 
-			// Token: 0x040135BB RID: 79291
+			// Token: 0x04014640 RID: 83520
 			public static VerifyUnionAction <4>__Verify;
 
-			// Token: 0x040135BC RID: 79292
+			// Token: 0x04014641 RID: 83521
 			public static VerifyUnionAction <5>__Verify;
 
-			// Token: 0x040135BD RID: 79293
+			// Token: 0x04014642 RID: 83522
 			public static VerifyTableAction <6>__Verify;
 
-			// Token: 0x040135BE RID: 79294
+			// Token: 0x04014643 RID: 83523
 			public static VerifyTableAction <7>__Verify;
 
-			// Token: 0x040135BF RID: 79295
+			// Token: 0x04014644 RID: 83524
 			public static VerifyTableAction <8>__Verify;
+
+			// Token: 0x04014645 RID: 83525
+			public static VerifyTableAction <9>__Verify;
 		}
 	}
 }

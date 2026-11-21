@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015E8 RID: 5608
+	// Token: 0x0200165A RID: 5722
 	public enum InfrV2StatusPb
 	{
-		// Token: 0x0400BDE0 RID: 48608
+		// Token: 0x0400C2D4 RID: 49876
 		[OriginalName("InfrV2StatusLock")]
 		InfrV2StatusLock,
-		// Token: 0x0400BDE1 RID: 48609
+		// Token: 0x0400C2D5 RID: 49877
 		[OriginalName("InfrV2StatusProgress")]
 		InfrV2StatusProgress,
-		// Token: 0x0400BDE2 RID: 48610
+		// Token: 0x0400C2D6 RID: 49878
 		[OriginalName("InfrV2StatusComplete")]
 		InfrV2StatusComplete
 	}

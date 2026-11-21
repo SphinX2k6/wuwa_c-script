@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001047 RID: 4167
+// Token: 0x020004FB RID: 1275
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class GuessJokerConfig : ConfigBase
 {
-	// Token: 0x06006AE2 RID: 27362 RVA: 0x001582BC File Offset: 0x001564BC
+	// Token: 0x06003E77 RID: 15991 RVA: 0x00160BE4 File Offset: 0x0015EDE4
 	public GuessJokerLevel? GetJokerLevelById(int levelId)
 	{
 		GuessJokerLevel? config = ConfigGuessJokerLevelById.GetConfig(levelId, true);
@@ -26,7 +26,7 @@ public class GuessJokerConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06006AE3 RID: 27363 RVA: 0x00158314 File Offset: 0x00156514
+	// Token: 0x06003E78 RID: 15992 RVA: 0x00160C3C File Offset: 0x0015EE3C
 	public IReadOnlyList<GuessJokerLevel> GetJokerLevelList()
 	{
 		IReadOnlyList<GuessJokerLevel> configList = ConfigGuessJokerLevelAll.GetConfigList(true);
@@ -37,7 +37,7 @@ public class GuessJokerConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x06006AE4 RID: 27364 RVA: 0x00158334 File Offset: 0x00156534
+	// Token: 0x06003E79 RID: 15993 RVA: 0x00160C5C File Offset: 0x0015EE5C
 	public List<IGuessJokerNpcAndChairInfo> GetNpcAndChairMatchInfo()
 	{
 		if (this.NpcAndChairMatchInfo.Count > 0)
@@ -62,7 +62,7 @@ public class GuessJokerConfig : ConfigBase
 		return this.NpcAndChairMatchInfo;
 	}
 
-	// Token: 0x06006AE5 RID: 27365 RVA: 0x001583D4 File Offset: 0x001565D4
+	// Token: 0x06003E7A RID: 15994 RVA: 0x00160CFC File Offset: 0x0015EEFC
 	public JokerDeck? GetJokerDeck(int cardId)
 	{
 		JokerDeck? config = ConfigJokerDeckById.GetConfig(cardId, true);
@@ -79,7 +79,7 @@ public class GuessJokerConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06006AE6 RID: 27366 RVA: 0x0015842C File Offset: 0x0015662C
+	// Token: 0x06003E7B RID: 15995 RVA: 0x00160D54 File Offset: 0x0015EF54
 	public GuessJokerLevel? GetJokerLevelByNpcId(int npcId)
 	{
 		IReadOnlyList<GuessJokerLevel> configList = ConfigGuessJokerLevelAll.GetConfigList(true);
@@ -99,7 +99,7 @@ public class GuessJokerConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x06006AE7 RID: 27367 RVA: 0x001584CC File Offset: 0x001566CC
+	// Token: 0x06003E7C RID: 15996 RVA: 0x00160DF4 File Offset: 0x0015EFF4
 	public JokerSkill? GetJokerSkill(int skillId)
 	{
 		JokerSkill? config = ConfigJokerSkillById.GetConfig(skillId, true);
@@ -116,7 +116,7 @@ public class GuessJokerConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06006AE8 RID: 27368 RVA: 0x00158524 File Offset: 0x00156724
+	// Token: 0x06003E7D RID: 15997 RVA: 0x00160E4C File Offset: 0x0015F04C
 	public GuessJokerAiConfig? GetJokerAiConfigByRoleId(int roleId)
 	{
 		GuessJokerAiConfig? config = ConfigGuessJokerAiConfigById.GetConfig(roleId, true);
@@ -133,7 +133,7 @@ public class GuessJokerConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06006AE9 RID: 27369 RVA: 0x0015857C File Offset: 0x0015677C
+	// Token: 0x06003E7E RID: 15998 RVA: 0x00160EA4 File Offset: 0x0015F0A4
 	public GuessJokerAiConfig? GetJokerAiConfigByEntityId(int entityId)
 	{
 		GuessJokerAiConfig? config = ConfigGuessJokerAiConfigByNpcId.GetConfig(entityId, true);
@@ -150,7 +150,7 @@ public class GuessJokerConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06006AEA RID: 27370 RVA: 0x001585D4 File Offset: 0x001567D4
+	// Token: 0x06003E7F RID: 15999 RVA: 0x00160EFC File Offset: 0x0015F0FC
 	public GuessJokerAIPlotConfig? GetJokerAiPlotConfig(EGuessJokerPlayerType playerType, EGuessJokerPlotTiming timing, int extraParam = 0)
 	{
 		int num = (playerType == EGuessJokerPlayerType.Ai) ? GuessJokerGamePlayModel.Instance.GetRoleId() : 0;
@@ -169,7 +169,7 @@ public class GuessJokerConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x06006AEB RID: 27371 RVA: 0x00158670 File Offset: 0x00156870
+	// Token: 0x06003E80 RID: 16000 RVA: 0x00160F98 File Offset: 0x0015F198
 	public GuessJokerPlotConfig? GetJokerPlotConfig(int plotId)
 	{
 		GuessJokerPlotConfig? config = ConfigGuessJokerPlotConfigById.GetConfig(plotId, true);
@@ -186,7 +186,7 @@ public class GuessJokerConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06006AEC RID: 27372 RVA: 0x001586C8 File Offset: 0x001568C8
+	// Token: 0x06003E81 RID: 16001 RVA: 0x00160FF0 File Offset: 0x0015F1F0
 	public GuessJokerParam? GetJokerParam(string key)
 	{
 		GuessJokerParam? config = ConfigGuessJokerParamByKey.GetConfig(key, true);
@@ -203,8 +203,8 @@ public class GuessJokerConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x17000899 RID: 2201
-	// (get) Token: 0x06006AED RID: 27373 RVA: 0x0015871B File Offset: 0x0015691B
+	// Token: 0x170008B9 RID: 2233
+	// (get) Token: 0x06003E82 RID: 16002 RVA: 0x00161043 File Offset: 0x0015F243
 	public static GuessJokerConfig Instance
 	{
 		get
@@ -213,7 +213,7 @@ public class GuessJokerConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06006AEE RID: 27374 RVA: 0x00158722 File Offset: 0x00156922
+	// Token: 0x06003E83 RID: 16003 RVA: 0x0016104A File Offset: 0x0015F24A
 	public static GuessJokerConfig GetOrCreateInstance()
 	{
 		if (GuessJokerConfig._Instance == null)
@@ -223,7 +223,7 @@ public class GuessJokerConfig : ConfigBase
 		return GuessJokerConfig._Instance;
 	}
 
-	// Token: 0x06006AEF RID: 27375 RVA: 0x00158736 File Offset: 0x00156936
+	// Token: 0x06003E84 RID: 16004 RVA: 0x0016105E File Offset: 0x0015F25E
 	public static bool CreateInstance()
 	{
 		if (GuessJokerConfig._Instance != null)
@@ -234,27 +234,27 @@ public class GuessJokerConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06006AF0 RID: 27376 RVA: 0x0015874C File Offset: 0x0015694C
+	// Token: 0x06003E85 RID: 16005 RVA: 0x00161074 File Offset: 0x0015F274
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06006AF1 RID: 27377 RVA: 0x0015874E File Offset: 0x0015694E
+	// Token: 0x06003E86 RID: 16006 RVA: 0x00161076 File Offset: 0x0015F276
 	public static void ResetStaticDefaultValue()
 	{
 		GuessJokerConfig._Instance = null;
 	}
 
-	// Token: 0x06006AF2 RID: 27378 RVA: 0x00158756 File Offset: 0x00156956
+	// Token: 0x06003E87 RID: 16007 RVA: 0x0016107E File Offset: 0x0015F27E
 	static GuessJokerConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GuessJokerConfig.CreateStaticDefaultValue), new Action(GuessJokerConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003137 RID: 12599
+	// Token: 0x040031D0 RID: 12752
 	private List<IGuessJokerNpcAndChairInfo> NpcAndChairMatchInfo = new List<IGuessJokerNpcAndChairInfo>();
 
-	// Token: 0x04003138 RID: 12600
+	// Token: 0x040031D1 RID: 12753
 	[Nullable(2)]
 	private static GuessJokerConfig _Instance;
 }

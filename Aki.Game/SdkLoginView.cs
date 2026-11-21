@@ -6,16 +6,16 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Launcher.Platform.PlatformSdk;
 using UnrealEngine;
 
-// Token: 0x0200296D RID: 10605
+// Token: 0x02001EE8 RID: 7912
 public class SdkLoginView : UiViewBase
 {
-	// Token: 0x06015E94 RID: 89748 RVA: 0x00586CB8 File Offset: 0x00584EB8
+	// Token: 0x06013898 RID: 80024 RVA: 0x005B1CBC File Offset: 0x005AFEBC
 	[NullableContext(1)]
 	public SdkLoginView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06015E95 RID: 89749 RVA: 0x00586CC4 File Offset: 0x00584EC4
+	// Token: 0x06013899 RID: 80025 RVA: 0x005B1CC8 File Offset: 0x005AFEC8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,21 +34,21 @@ public class SdkLoginView : UiViewBase
 		};
 	}
 
-	// Token: 0x06015E96 RID: 89750 RVA: 0x00586DA0 File Offset: 0x00584FA0
+	// Token: 0x0601389A RID: 80026 RVA: 0x005B1DA4 File Offset: 0x005AFFA4
 	protected override void OnAfterShow()
 	{
 		PlatformReportSelectLogin eventData = new PlatformReportSelectLogin();
 		PlatformSdkManagerNew.Instance.GetPlatformSdk().ReportToThirdParty(eventData);
 	}
 
-	// Token: 0x06015E97 RID: 89751 RVA: 0x00586DC3 File Offset: 0x00584FC3
+	// Token: 0x0601389B RID: 80027 RVA: 0x005B1DC7 File Offset: 0x005AFFC7
 	private void OnClickCancelButton()
 	{
 		LoginModel.Instance.SetSdkLoginState(LoginDefine.ESdkLoginState.Logout);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06015E98 RID: 89752 RVA: 0x00586DD8 File Offset: 0x00584FD8
+	// Token: 0x0601389C RID: 80028 RVA: 0x005B1DDC File Offset: 0x005AFFDC
 	private void OnClickCreateButton()
 	{
 		SdkPopUpViewData sdkPopUpViewData = new SdkPopUpViewData();
@@ -82,7 +82,7 @@ public class SdkLoginView : UiViewBase
 		});
 	}
 
-	// Token: 0x06015E99 RID: 89753 RVA: 0x00586E40 File Offset: 0x00585040
+	// Token: 0x0601389D RID: 80029 RVA: 0x005B1E44 File Offset: 0x005B0044
 	private void OnClickLoginButton()
 	{
 		PlatformReportClickOldAccount eventData = new PlatformReportClickOldAccount();
@@ -112,18 +112,18 @@ public class SdkLoginView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.SdkMailView, sdkMailViewData, null);
 	}
 
-	// Token: 0x02008F2D RID: 36653
+	// Token: 0x02008175 RID: 33141
 	private enum EComponent
 	{
-		// Token: 0x0402E68D RID: 190093
+		// Token: 0x04029D8A RID: 171402
 		CancelButton,
-		// Token: 0x0402E68E RID: 190094
+		// Token: 0x04029D8B RID: 171403
 		CreateButton,
-		// Token: 0x0402E68F RID: 190095
+		// Token: 0x04029D8C RID: 171404
 		DescText,
-		// Token: 0x0402E690 RID: 190096
+		// Token: 0x04029D8D RID: 171405
 		VerticalLayout,
-		// Token: 0x0402E691 RID: 190097
+		// Token: 0x04029D8E RID: 171406
 		LoginButton
 	}
 }

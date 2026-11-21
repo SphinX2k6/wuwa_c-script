@@ -7,23 +7,23 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 {
-	// Token: 0x020052DE RID: 21214
+	// Token: 0x020042AE RID: 17070
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LeaveSlotOperation : NpcAiOperation
 	{
-		// Token: 0x17008303 RID: 33539
-		// (get) Token: 0x0603647E RID: 222334 RVA: 0x00CD7365 File Offset: 0x00CD5565
-		// (set) Token: 0x0603647F RID: 222335 RVA: 0x00CD736D File Offset: 0x00CD556D
+		// Token: 0x170056C3 RID: 22211
+		// (get) Token: 0x0602B379 RID: 177017 RVA: 0x00C24A8D File Offset: 0x00C22C8D
+		// (set) Token: 0x0602B37A RID: 177018 RVA: 0x00C24A95 File Offset: 0x00C22C95
 		public NpcPhantomLeaveSlot Info { get; private set; }
 
-		// Token: 0x06036480 RID: 222336 RVA: 0x00CD7376 File Offset: 0x00CD5576
+		// Token: 0x0602B37B RID: 177019 RVA: 0x00C24A9E File Offset: 0x00C22C9E
 		public LeaveSlotOperation(NpcPhantomLeaveSlot info)
 		{
 			this.Info = info;
 		}
 
-		// Token: 0x06036481 RID: 222337 RVA: 0x00CD7388 File Offset: 0x00CD5588
+		// Token: 0x0602B37C RID: 177020 RVA: 0x00C24AB0 File Offset: 0x00C22CB0
 		public override UniTask ExecuteAiOperation(PhantomArenaBattleProxy proxy)
 		{
 			LeaveSlotOperation.<ExecuteAiOperation>d__5 <ExecuteAiOperation>d__;

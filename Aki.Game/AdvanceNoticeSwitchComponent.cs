@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020010DD RID: 4317
+// Token: 0x02000591 RID: 1425
 [NullableContext(1)]
 [Nullable(0)]
 public class AdvanceNoticeSwitchComponent
 {
-	// Token: 0x06007064 RID: 28772 RVA: 0x0016EDD0 File Offset: 0x0016CFD0
+	// Token: 0x060043FA RID: 17402 RVA: 0x0017778C File Offset: 0x0017598C
 	public void Initialize(UUIButtonComponent contentLeftArrowButton, UUIButtonComponent contentRightArrowButton, UUIScrollViewWithScrollbarComponent thumbScrollView, UUIItem thumbTemplateItem)
 	{
 		if (this.IsInitialized)
@@ -24,7 +24,7 @@ public class AdvanceNoticeSwitchComponent
 		this.ThumbScrollView = new GenericScrollViewNew<AdvanceNoticeThumbItem, AdvanceNoticeThumbItemData>(this.ThumbScrollViewComponent, new Func<AdvanceNoticeThumbItem>(this.CreateThumbItem), this.ThumbTemplateItem.GetOwner() as AUIBaseActor, false, null);
 	}
 
-	// Token: 0x06007065 RID: 28773 RVA: 0x0016EE39 File Offset: 0x0016D039
+	// Token: 0x060043FB RID: 17403 RVA: 0x001777F5 File Offset: 0x001759F5
 	private AdvanceNoticeThumbItem CreateThumbItem()
 	{
 		return new AdvanceNoticeThumbItem
@@ -34,7 +34,7 @@ public class AdvanceNoticeSwitchComponent
 		};
 	}
 
-	// Token: 0x06007066 RID: 28774 RVA: 0x0016EE64 File Offset: 0x0016D064
+	// Token: 0x060043FC RID: 17404 RVA: 0x00177820 File Offset: 0x00175A20
 	public void Refresh(AdvanceNoticeViewModel viewModel)
 	{
 		this.ViewModel = viewModel;
@@ -47,7 +47,7 @@ public class AdvanceNoticeSwitchComponent
 		this.RefreshContent();
 	}
 
-	// Token: 0x06007067 RID: 28775 RVA: 0x0016EEA4 File Offset: 0x0016D0A4
+	// Token: 0x060043FD RID: 17405 RVA: 0x00177860 File Offset: 0x00175A60
 	private void LateScrollTo()
 	{
 		UUIScrollViewWithScrollbarComponent thumbScrollViewComponent = this.ThumbScrollViewComponent;
@@ -72,13 +72,13 @@ public class AdvanceNoticeSwitchComponent
 		}
 	}
 
-	// Token: 0x06007068 RID: 28776 RVA: 0x0016EF0B File Offset: 0x0016D10B
+	// Token: 0x060043FE RID: 17406 RVA: 0x001778C7 File Offset: 0x00175AC7
 	public void RefreshContent()
 	{
 		this.RefreshContentArrowActive();
 	}
 
-	// Token: 0x06007069 RID: 28777 RVA: 0x0016EF14 File Offset: 0x0016D114
+	// Token: 0x060043FF RID: 17407 RVA: 0x001778D0 File Offset: 0x00175AD0
 	public void DataCheck()
 	{
 		if (this.ViewModel == null)
@@ -92,7 +92,7 @@ public class AdvanceNoticeSwitchComponent
 		}
 	}
 
-	// Token: 0x0600706A RID: 28778 RVA: 0x0016EF61 File Offset: 0x0016D161
+	// Token: 0x06004400 RID: 17408 RVA: 0x0017791D File Offset: 0x00175B1D
 	private void OnThumbItemClicked(AdvanceNoticeThumbItemData data, int gridIndex)
 	{
 		if (!this.TabIdCheck(data.TabId))
@@ -108,19 +108,19 @@ public class AdvanceNoticeSwitchComponent
 		viewModel.ClickTabLogEvent();
 	}
 
-	// Token: 0x0600706B RID: 28779 RVA: 0x0016EF89 File Offset: 0x0016D189
+	// Token: 0x06004401 RID: 17409 RVA: 0x00177945 File Offset: 0x00175B45
 	private bool CanThumbItemToggleChange(AdvanceNoticeThumbItemData data, int gridIndex)
 	{
 		return this.TabIdCheck(data.TabId);
 	}
 
-	// Token: 0x0600706C RID: 28780 RVA: 0x0016EF97 File Offset: 0x0016D197
+	// Token: 0x06004402 RID: 17410 RVA: 0x00177953 File Offset: 0x00175B53
 	private bool TabIdCheck(int tabId)
 	{
 		return tabId == this.ViewModel.TabId;
 	}
 
-	// Token: 0x0600706D RID: 28781 RVA: 0x0016EFA8 File Offset: 0x0016D1A8
+	// Token: 0x06004403 RID: 17411 RVA: 0x00177964 File Offset: 0x00175B64
 	public void SelectThumb(int gridIndex)
 	{
 		if (this.ViewModel == null || !this.CheckIndexInRange(gridIndex))
@@ -157,7 +157,7 @@ public class AdvanceNoticeSwitchComponent
 		this.ViewModel.OnSwitchSubTab(gridIndex);
 	}
 
-	// Token: 0x0600706E RID: 28782 RVA: 0x0016F058 File Offset: 0x0016D258
+	// Token: 0x06004404 RID: 17412 RVA: 0x00177A14 File Offset: 0x00175C14
 	public void SelectPreviousThumb()
 	{
 		if (this.ViewModel == null)
@@ -167,7 +167,7 @@ public class AdvanceNoticeSwitchComponent
 		this.SelectThumb(this.ViewModel.CurrentSubTabIndex - 1);
 	}
 
-	// Token: 0x0600706F RID: 28783 RVA: 0x0016F076 File Offset: 0x0016D276
+	// Token: 0x06004405 RID: 17413 RVA: 0x00177A32 File Offset: 0x00175C32
 	public void SelectNextThumb()
 	{
 		if (this.ViewModel == null)
@@ -177,13 +177,13 @@ public class AdvanceNoticeSwitchComponent
 		this.SelectThumb(this.ViewModel.CurrentSubTabIndex + 1);
 	}
 
-	// Token: 0x06007070 RID: 28784 RVA: 0x0016F094 File Offset: 0x0016D294
+	// Token: 0x06004406 RID: 17414 RVA: 0x00177A50 File Offset: 0x00175C50
 	public bool CheckIndexInRange(int index)
 	{
 		return index >= 0 && index < this.ViewModel.AdvanceNoticeThumbItemDataList.Count;
 	}
 
-	// Token: 0x06007071 RID: 28785 RVA: 0x0016F0B0 File Offset: 0x0016D2B0
+	// Token: 0x06004407 RID: 17415 RVA: 0x00177A6C File Offset: 0x00175C6C
 	public void RefreshContentArrowActive()
 	{
 		if (this.ViewModel == null)
@@ -195,27 +195,27 @@ public class AdvanceNoticeSwitchComponent
 		this.ContentRightArrowButton.RootUIComp.Get().SetUIActive(this.ViewModel.CurrentSubTabIndex < count - 1);
 	}
 
-	// Token: 0x04003421 RID: 13345
+	// Token: 0x040034BA RID: 13498
 	[Nullable(2)]
 	private AdvanceNoticeViewModel ViewModel;
 
-	// Token: 0x04003422 RID: 13346
+	// Token: 0x040034BB RID: 13499
 	[Nullable(2)]
 	private UUIButtonComponent ContentLeftArrowButton;
 
-	// Token: 0x04003423 RID: 13347
+	// Token: 0x040034BC RID: 13500
 	[Nullable(2)]
 	private UUIButtonComponent ContentRightArrowButton;
 
-	// Token: 0x04003424 RID: 13348
+	// Token: 0x040034BD RID: 13501
 	[Nullable(2)]
 	private UUIScrollViewWithScrollbarComponent ThumbScrollViewComponent;
 
-	// Token: 0x04003425 RID: 13349
+	// Token: 0x040034BE RID: 13502
 	[Nullable(2)]
 	private UUIItem ThumbTemplateItem;
 
-	// Token: 0x04003426 RID: 13350
+	// Token: 0x040034BF RID: 13503
 	[Nullable(new byte[]
 	{
 		2,
@@ -224,6 +224,6 @@ public class AdvanceNoticeSwitchComponent
 	})]
 	private GenericScrollViewNew<AdvanceNoticeThumbItem, AdvanceNoticeThumbItemData> ThumbScrollView;
 
-	// Token: 0x04003427 RID: 13351
+	// Token: 0x040034C0 RID: 13504
 	private bool IsInitialized;
 }

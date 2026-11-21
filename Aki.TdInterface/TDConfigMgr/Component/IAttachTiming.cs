@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001D1 RID: 465
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001F4 RID: 500
 	public class IAttachTiming
 	{
-		// Token: 0x06000774 RID: 1908 RVA: 0x00024F94 File Offset: 0x00023194
+		// Token: 0x060007C8 RID: 1992 RVA: 0x00026298 File Offset: 0x00024498
 		private IAttachTiming_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000775 RID: 1909 RVA: 0x00024FCC File Offset: 0x000231CC
+		// Token: 0x060007C9 RID: 1993 RVA: 0x000262D0 File Offset: 0x000244D0
 		public static IAttachTiming Create([Nullable(2)] IAttachTiming instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000776 RID: 1910 RVA: 0x00024FDF File Offset: 0x000231DF
+		// Token: 0x060007CA RID: 1994 RVA: 0x000262E3 File Offset: 0x000244E3
 		public static IAttachTiming CreateFromSetValue([Nullable(2)] IAttachTiming_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000777 RID: 1911 RVA: 0x00024FF2 File Offset: 0x000231F2
+		// Token: 0x060007CB RID: 1995 RVA: 0x000262F6 File Offset: 0x000244F6
 		public IAttachTiming_SetValue ToSetValue()
 		{
 			return new IAttachTiming_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700025E RID: 606
-		// (get) Token: 0x06000778 RID: 1912 RVA: 0x00025005 File Offset: 0x00023205
-		// (set) Token: 0x06000779 RID: 1913 RVA: 0x00025030 File Offset: 0x00023230
+		// Token: 0x17000273 RID: 627
+		// (get) Token: 0x060007CC RID: 1996 RVA: 0x00026309 File Offset: 0x00024509
+		// (set) Token: 0x060007CD RID: 1997 RVA: 0x00026334 File Offset: 0x00024534
 		public virtual EAttachTimingType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008A4 RID: 2212
+		// Token: 0x04000918 RID: 2328
 		[Nullable(2)]
 		protected IAttachTiming FbInstance;
 
-		// Token: 0x040008A5 RID: 2213
+		// Token: 0x04000919 RID: 2329
 		[Nullable(2)]
 		protected IAttachTiming_SetValue PocoInterface;
 	}

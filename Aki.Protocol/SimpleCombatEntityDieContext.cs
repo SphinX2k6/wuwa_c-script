@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001224 RID: 4644
+	// Token: 0x02001260 RID: 4704
 	public sealed class SimpleCombatEntityDieContext : IMessage<SimpleCombatEntityDieContext>, IMessage, IEquatable<SimpleCombatEntityDieContext>, IDeepCloneable<SimpleCombatEntityDieContext>, IBufferMessage
 	{
-		// Token: 0x06018BE5 RID: 101349 RVA: 0x00399046 File Offset: 0x00397246
+		// Token: 0x060191BF RID: 102847 RVA: 0x003A8EEF File Offset: 0x003A70EF
 		[NullableContext(1)]
 		public static SimpleCombatEntityDieContext Create()
 		{
 			return new SimpleCombatEntityDieContext();
 		}
 
-		// Token: 0x1700535D RID: 21341
-		// (get) Token: 0x06018BE6 RID: 101350 RVA: 0x0039904D File Offset: 0x0039724D
+		// Token: 0x170054DA RID: 21722
+		// (get) Token: 0x060191C0 RID: 102848 RVA: 0x003A8EF6 File Offset: 0x003A70F6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<SimpleCombatEntityDieContext> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700535E RID: 21342
-		// (get) Token: 0x06018BE7 RID: 101351 RVA: 0x00399054 File Offset: 0x00397254
+		// Token: 0x170054DB RID: 21723
+		// (get) Token: 0x060191C1 RID: 102849 RVA: 0x003A8EFD File Offset: 0x003A70FD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700535F RID: 21343
-		// (get) Token: 0x06018BE8 RID: 101352 RVA: 0x00399057 File Offset: 0x00397257
+		// Token: 0x170054DC RID: 21724
+		// (get) Token: 0x060191C2 RID: 102850 RVA: 0x003A8F00 File Offset: 0x003A7100
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018BE9 RID: 101353 RVA: 0x0039905E File Offset: 0x0039725E
+		// Token: 0x060191C3 RID: 102851 RVA: 0x003A8F07 File Offset: 0x003A7107
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SimpleCombatEntityDieContext()
 		{
 		}
 
-		// Token: 0x06018BEA RID: 101354 RVA: 0x00399068 File Offset: 0x00397268
+		// Token: 0x060191C4 RID: 102852 RVA: 0x003A8F10 File Offset: 0x003A7110
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SimpleCombatEntityDieContext(SimpleCombatEntityDieContext other) : this()
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06018BEB RID: 101355 RVA: 0x00399279 File Offset: 0x00397479
+		// Token: 0x060191C5 RID: 102853 RVA: 0x003A9121 File Offset: 0x003A7321
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SimpleCombatEntityDieContext Clone()
@@ -134,9 +134,9 @@ namespace Aki.Protocol
 			return new SimpleCombatEntityDieContext(this);
 		}
 
-		// Token: 0x17005360 RID: 21344
-		// (get) Token: 0x06018BEC RID: 101356 RVA: 0x00399281 File Offset: 0x00397481
-		// (set) Token: 0x06018BED RID: 101357 RVA: 0x00399289 File Offset: 0x00397489
+		// Token: 0x170054DD RID: 21725
+		// (get) Token: 0x060191C6 RID: 102854 RVA: 0x003A9129 File Offset: 0x003A7329
+		// (set) Token: 0x060191C7 RID: 102855 RVA: 0x003A9131 File Offset: 0x003A7331
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Vector DiePos
@@ -151,9 +151,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005361 RID: 21345
-		// (get) Token: 0x06018BEE RID: 101358 RVA: 0x00399292 File Offset: 0x00397492
-		// (set) Token: 0x06018BEF RID: 101359 RVA: 0x003992AA File Offset: 0x003974AA
+		// Token: 0x170054DE RID: 21726
+		// (get) Token: 0x060191C8 RID: 102856 RVA: 0x003A913A File Offset: 0x003A733A
+		// (set) Token: 0x060191C9 RID: 102857 RVA: 0x003A9152 File Offset: 0x003A7352
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseTrapKillCtxPb TrapDefenseTrapKillCtx
@@ -173,9 +173,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005362 RID: 21346
-		// (get) Token: 0x06018BF0 RID: 101360 RVA: 0x003992C0 File Offset: 0x003974C0
-		// (set) Token: 0x06018BF1 RID: 101361 RVA: 0x003992D8 File Offset: 0x003974D8
+		// Token: 0x170054DF RID: 21727
+		// (get) Token: 0x060191CA RID: 102858 RVA: 0x003A9168 File Offset: 0x003A7368
+		// (set) Token: 0x060191CB RID: 102859 RVA: 0x003A9180 File Offset: 0x003A7380
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseTrapSelfDestructCtxPb TrapDefenseTrapSelfDestructCtx
@@ -195,9 +195,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005363 RID: 21347
-		// (get) Token: 0x06018BF2 RID: 101362 RVA: 0x003992EE File Offset: 0x003974EE
-		// (set) Token: 0x06018BF3 RID: 101363 RVA: 0x00399306 File Offset: 0x00397506
+		// Token: 0x170054E0 RID: 21728
+		// (get) Token: 0x060191CC RID: 102860 RVA: 0x003A9196 File Offset: 0x003A7396
+		// (set) Token: 0x060191CD RID: 102861 RVA: 0x003A91AE File Offset: 0x003A73AE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseGoldenCoinAbosorbedCtxPb TrapDefenseGoldenCoinAbosorbedCtx
@@ -217,9 +217,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005364 RID: 21348
-		// (get) Token: 0x06018BF4 RID: 101364 RVA: 0x0039931C File Offset: 0x0039751C
-		// (set) Token: 0x06018BF5 RID: 101365 RVA: 0x00399334 File Offset: 0x00397534
+		// Token: 0x170054E1 RID: 21729
+		// (get) Token: 0x060191CE RID: 102862 RVA: 0x003A91C4 File Offset: 0x003A73C4
+		// (set) Token: 0x060191CF RID: 102863 RVA: 0x003A91DC File Offset: 0x003A73DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseReachInstEndpointCtxPb TrapDefenseReachInstEndpointCtx
@@ -239,9 +239,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005365 RID: 21349
-		// (get) Token: 0x06018BF6 RID: 101366 RVA: 0x0039934A File Offset: 0x0039754A
-		// (set) Token: 0x06018BF7 RID: 101367 RVA: 0x00399362 File Offset: 0x00397562
+		// Token: 0x170054E2 RID: 21730
+		// (get) Token: 0x060191D0 RID: 102864 RVA: 0x003A91F2 File Offset: 0x003A73F2
+		// (set) Token: 0x060191D1 RID: 102865 RVA: 0x003A920A File Offset: 0x003A740A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseEnvironmentalKillCtxPb TrapDefenseEnvironmentalKillCtx
@@ -261,9 +261,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005366 RID: 21350
-		// (get) Token: 0x06018BF8 RID: 101368 RVA: 0x00399378 File Offset: 0x00397578
-		// (set) Token: 0x06018BF9 RID: 101369 RVA: 0x00399390 File Offset: 0x00397590
+		// Token: 0x170054E3 RID: 21731
+		// (get) Token: 0x060191D2 RID: 102866 RVA: 0x003A9220 File Offset: 0x003A7420
+		// (set) Token: 0x060191D3 RID: 102867 RVA: 0x003A9238 File Offset: 0x003A7438
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseMonsterKilledCtxPb TrapDefenseMonsterKilledCtx
@@ -283,9 +283,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005367 RID: 21351
-		// (get) Token: 0x06018BFA RID: 101370 RVA: 0x003993A6 File Offset: 0x003975A6
-		// (set) Token: 0x06018BFB RID: 101371 RVA: 0x003993BF File Offset: 0x003975BF
+		// Token: 0x170054E4 RID: 21732
+		// (get) Token: 0x060191D4 RID: 102868 RVA: 0x003A924E File Offset: 0x003A744E
+		// (set) Token: 0x060191D5 RID: 102869 RVA: 0x003A9267 File Offset: 0x003A7467
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseSpcecialCellDestructCtxPb TrapDefenseSpcecialCellDestructCtx
@@ -305,9 +305,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005368 RID: 21352
-		// (get) Token: 0x06018BFC RID: 101372 RVA: 0x003993D6 File Offset: 0x003975D6
-		// (set) Token: 0x06018BFD RID: 101373 RVA: 0x003993EF File Offset: 0x003975EF
+		// Token: 0x170054E5 RID: 21733
+		// (get) Token: 0x060191D6 RID: 102870 RVA: 0x003A927E File Offset: 0x003A747E
+		// (set) Token: 0x060191D7 RID: 102871 RVA: 0x003A9297 File Offset: 0x003A7497
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SurvivorsMonsterKilledCtxPb SurvivorsMonsterKilledCtx
@@ -327,9 +327,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005369 RID: 21353
-		// (get) Token: 0x06018BFE RID: 101374 RVA: 0x00399406 File Offset: 0x00397606
-		// (set) Token: 0x06018BFF RID: 101375 RVA: 0x0039941F File Offset: 0x0039761F
+		// Token: 0x170054E6 RID: 21734
+		// (get) Token: 0x060191D8 RID: 102872 RVA: 0x003A92AE File Offset: 0x003A74AE
+		// (set) Token: 0x060191D9 RID: 102873 RVA: 0x003A92C7 File Offset: 0x003A74C7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SurvivorsGoldenCoinAbosorbedCtxPb SurvivorsGoldenCoinAbosorbedCtx
@@ -349,9 +349,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700536A RID: 21354
-		// (get) Token: 0x06018C00 RID: 101376 RVA: 0x00399436 File Offset: 0x00397636
-		// (set) Token: 0x06018C01 RID: 101377 RVA: 0x0039944F File Offset: 0x0039764F
+		// Token: 0x170054E7 RID: 21735
+		// (get) Token: 0x060191DA RID: 102874 RVA: 0x003A92DE File Offset: 0x003A74DE
+		// (set) Token: 0x060191DB RID: 102875 RVA: 0x003A92F7 File Offset: 0x003A74F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SurvivorsRoleKilledCtxPb SurvivorsRoleKilledCtx
@@ -371,9 +371,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700536B RID: 21355
-		// (get) Token: 0x06018C02 RID: 101378 RVA: 0x00399466 File Offset: 0x00397666
-		// (set) Token: 0x06018C03 RID: 101379 RVA: 0x0039947F File Offset: 0x0039767F
+		// Token: 0x170054E8 RID: 21736
+		// (get) Token: 0x060191DC RID: 102876 RVA: 0x003A930E File Offset: 0x003A750E
+		// (set) Token: 0x060191DD RID: 102877 RVA: 0x003A9327 File Offset: 0x003A7527
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoMonsterKilledCtxPb KurotatoMonsterKilledCtxPb
@@ -393,9 +393,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700536C RID: 21356
-		// (get) Token: 0x06018C04 RID: 101380 RVA: 0x00399496 File Offset: 0x00397696
-		// (set) Token: 0x06018C05 RID: 101381 RVA: 0x003994AF File Offset: 0x003976AF
+		// Token: 0x170054E9 RID: 21737
+		// (get) Token: 0x060191DE RID: 102878 RVA: 0x003A933E File Offset: 0x003A753E
+		// (set) Token: 0x060191DF RID: 102879 RVA: 0x003A9357 File Offset: 0x003A7557
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoDropAbsorbedCtxPb KurotatoDropAbsorbedCtxPb
@@ -415,9 +415,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700536D RID: 21357
-		// (get) Token: 0x06018C06 RID: 101382 RVA: 0x003994C6 File Offset: 0x003976C6
-		// (set) Token: 0x06018C07 RID: 101383 RVA: 0x003994DF File Offset: 0x003976DF
+		// Token: 0x170054EA RID: 21738
+		// (get) Token: 0x060191E0 RID: 102880 RVA: 0x003A936E File Offset: 0x003A756E
+		// (set) Token: 0x060191E1 RID: 102881 RVA: 0x003A9387 File Offset: 0x003A7587
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoRoleKilledCtxPb KurotatoRoleKilledCtxPb
@@ -437,9 +437,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700536E RID: 21358
-		// (get) Token: 0x06018C08 RID: 101384 RVA: 0x003994F6 File Offset: 0x003976F6
-		// (set) Token: 0x06018C09 RID: 101385 RVA: 0x0039950F File Offset: 0x0039770F
+		// Token: 0x170054EB RID: 21739
+		// (get) Token: 0x060191E2 RID: 102882 RVA: 0x003A939E File Offset: 0x003A759E
+		// (set) Token: 0x060191E3 RID: 102883 RVA: 0x003A93B7 File Offset: 0x003A75B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoStructureKilledCtxPb KurotatoStructureKilledCtxPb
@@ -459,9 +459,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700536F RID: 21359
-		// (get) Token: 0x06018C0A RID: 101386 RVA: 0x00399526 File Offset: 0x00397726
-		// (set) Token: 0x06018C0B RID: 101387 RVA: 0x0039953F File Offset: 0x0039773F
+		// Token: 0x170054EC RID: 21740
+		// (get) Token: 0x060191E4 RID: 102884 RVA: 0x003A93CE File Offset: 0x003A75CE
+		// (set) Token: 0x060191E5 RID: 102885 RVA: 0x003A93E7 File Offset: 0x003A75E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballMonsterKilledCtxPb PinballMonsterKilledCtx
@@ -481,9 +481,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005370 RID: 21360
-		// (get) Token: 0x06018C0C RID: 101388 RVA: 0x00399556 File Offset: 0x00397756
-		// (set) Token: 0x06018C0D RID: 101389 RVA: 0x0039956F File Offset: 0x0039776F
+		// Token: 0x170054ED RID: 21741
+		// (get) Token: 0x060191E6 RID: 102886 RVA: 0x003A93FE File Offset: 0x003A75FE
+		// (set) Token: 0x060191E7 RID: 102887 RVA: 0x003A9417 File Offset: 0x003A7617
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballEntityKilledCtxPb PinballEntityKilledCtx
@@ -503,9 +503,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005371 RID: 21361
-		// (get) Token: 0x06018C0E RID: 101390 RVA: 0x00399586 File Offset: 0x00397786
-		// (set) Token: 0x06018C0F RID: 101391 RVA: 0x0039959F File Offset: 0x0039779F
+		// Token: 0x170054EE RID: 21742
+		// (get) Token: 0x060191E8 RID: 102888 RVA: 0x003A942E File Offset: 0x003A762E
+		// (set) Token: 0x060191E9 RID: 102889 RVA: 0x003A9447 File Offset: 0x003A7647
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GPUMonsterKilledCtxPb GPUMonsterKilledCtx
@@ -525,9 +525,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005372 RID: 21362
-		// (get) Token: 0x06018C10 RID: 101392 RVA: 0x003995B6 File Offset: 0x003977B6
-		// (set) Token: 0x06018C11 RID: 101393 RVA: 0x003995CF File Offset: 0x003977CF
+		// Token: 0x170054EF RID: 21743
+		// (get) Token: 0x060191EA RID: 102890 RVA: 0x003A945E File Offset: 0x003A765E
+		// (set) Token: 0x060191EB RID: 102891 RVA: 0x003A9477 File Offset: 0x003A7677
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GPURoleKilledCtxPb GPURoleKilledCtx
@@ -547,8 +547,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005373 RID: 21363
-		// (get) Token: 0x06018C12 RID: 101394 RVA: 0x003995E6 File Offset: 0x003977E6
+		// Token: 0x170054F0 RID: 21744
+		// (get) Token: 0x060191EC RID: 102892 RVA: 0x003A948E File Offset: 0x003A768E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SimpleCombatEntityDieContext.ContextOneofCase ContextCase
@@ -559,7 +559,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018C13 RID: 101395 RVA: 0x003995EE File Offset: 0x003977EE
+		// Token: 0x060191ED RID: 102893 RVA: 0x003A9496 File Offset: 0x003A7696
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearContext()
@@ -568,7 +568,7 @@ namespace Aki.Protocol
 			this.context_ = null;
 		}
 
-		// Token: 0x06018C14 RID: 101396 RVA: 0x003995FE File Offset: 0x003977FE
+		// Token: 0x060191EE RID: 102894 RVA: 0x003A94A6 File Offset: 0x003A76A6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -576,7 +576,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SimpleCombatEntityDieContext);
 		}
 
-		// Token: 0x06018C15 RID: 101397 RVA: 0x0039960C File Offset: 0x0039780C
+		// Token: 0x060191EF RID: 102895 RVA: 0x003A94B4 File Offset: 0x003A76B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SimpleCombatEntityDieContext other)
@@ -584,7 +584,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.DiePos, other.DiePos) && object.Equals(this.TrapDefenseTrapKillCtx, other.TrapDefenseTrapKillCtx) && object.Equals(this.TrapDefenseTrapSelfDestructCtx, other.TrapDefenseTrapSelfDestructCtx) && object.Equals(this.TrapDefenseGoldenCoinAbosorbedCtx, other.TrapDefenseGoldenCoinAbosorbedCtx) && object.Equals(this.TrapDefenseReachInstEndpointCtx, other.TrapDefenseReachInstEndpointCtx) && object.Equals(this.TrapDefenseEnvironmentalKillCtx, other.TrapDefenseEnvironmentalKillCtx) && object.Equals(this.TrapDefenseMonsterKilledCtx, other.TrapDefenseMonsterKilledCtx) && object.Equals(this.TrapDefenseSpcecialCellDestructCtx, other.TrapDefenseSpcecialCellDestructCtx) && object.Equals(this.SurvivorsMonsterKilledCtx, other.SurvivorsMonsterKilledCtx) && object.Equals(this.SurvivorsGoldenCoinAbosorbedCtx, other.SurvivorsGoldenCoinAbosorbedCtx) && object.Equals(this.SurvivorsRoleKilledCtx, other.SurvivorsRoleKilledCtx) && object.Equals(this.KurotatoMonsterKilledCtxPb, other.KurotatoMonsterKilledCtxPb) && object.Equals(this.KurotatoDropAbsorbedCtxPb, other.KurotatoDropAbsorbedCtxPb) && object.Equals(this.KurotatoRoleKilledCtxPb, other.KurotatoRoleKilledCtxPb) && object.Equals(this.KurotatoStructureKilledCtxPb, other.KurotatoStructureKilledCtxPb) && object.Equals(this.PinballMonsterKilledCtx, other.PinballMonsterKilledCtx) && object.Equals(this.PinballEntityKilledCtx, other.PinballEntityKilledCtx) && object.Equals(this.GPUMonsterKilledCtx, other.GPUMonsterKilledCtx) && object.Equals(this.GPURoleKilledCtx, other.GPURoleKilledCtx) && this.ContextCase == other.ContextCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06018C16 RID: 101398 RVA: 0x003997D4 File Offset: 0x003979D4
+		// Token: 0x060191F0 RID: 102896 RVA: 0x003A967C File Offset: 0x003A787C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -674,7 +674,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018C17 RID: 101399 RVA: 0x003999C3 File Offset: 0x00397BC3
+		// Token: 0x060191F1 RID: 102897 RVA: 0x003A986B File Offset: 0x003A7A6B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -682,7 +682,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06018C18 RID: 101400 RVA: 0x003999D0 File Offset: 0x00397BD0
+		// Token: 0x060191F2 RID: 102898 RVA: 0x003A9878 File Offset: 0x003A7A78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -690,7 +690,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06018C19 RID: 101401 RVA: 0x003999DC File Offset: 0x00397BDC
+		// Token: 0x060191F3 RID: 102899 RVA: 0x003A9884 File Offset: 0x003A7A84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -796,7 +796,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018C1A RID: 101402 RVA: 0x00399C44 File Offset: 0x00397E44
+		// Token: 0x060191F4 RID: 102900 RVA: 0x003A9AEC File Offset: 0x003A7CEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -885,7 +885,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018C1B RID: 101403 RVA: 0x00399E50 File Offset: 0x00398050
+		// Token: 0x060191F5 RID: 102901 RVA: 0x003A9CF8 File Offset: 0x003A7EF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SimpleCombatEntityDieContext other)
@@ -1034,7 +1034,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06018C1C RID: 101404 RVA: 0x0039A1D4 File Offset: 0x003983D4
+		// Token: 0x060191F6 RID: 102902 RVA: 0x003AA07C File Offset: 0x003A827C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -1042,7 +1042,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06018C1D RID: 101405 RVA: 0x0039A1E0 File Offset: 0x003983E0
+		// Token: 0x060191F7 RID: 102903 RVA: 0x003AA088 File Offset: 0x003A8288
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -1298,118 +1298,118 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009209 RID: 37385
+		// Token: 0x040094BA RID: 38074
 		private static readonly MessageParser<SimpleCombatEntityDieContext> _parser = new MessageParser<SimpleCombatEntityDieContext>(() => new SimpleCombatEntityDieContext());
 
-		// Token: 0x0400920A RID: 37386
+		// Token: 0x040094BB RID: 38075
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400920B RID: 37387
+		// Token: 0x040094BC RID: 38076
 		public const int DiePosFieldNumber = 1;
 
-		// Token: 0x0400920C RID: 37388
+		// Token: 0x040094BD RID: 38077
 		private Vector diePos_;
 
-		// Token: 0x0400920D RID: 37389
+		// Token: 0x040094BE RID: 38078
 		public const int TrapDefenseTrapKillCtxFieldNumber = 3;
 
-		// Token: 0x0400920E RID: 37390
+		// Token: 0x040094BF RID: 38079
 		public const int TrapDefenseTrapSelfDestructCtxFieldNumber = 4;
 
-		// Token: 0x0400920F RID: 37391
+		// Token: 0x040094C0 RID: 38080
 		public const int TrapDefenseGoldenCoinAbosorbedCtxFieldNumber = 5;
 
-		// Token: 0x04009210 RID: 37392
+		// Token: 0x040094C1 RID: 38081
 		public const int TrapDefenseReachInstEndpointCtxFieldNumber = 6;
 
-		// Token: 0x04009211 RID: 37393
+		// Token: 0x040094C2 RID: 38082
 		public const int TrapDefenseEnvironmentalKillCtxFieldNumber = 7;
 
-		// Token: 0x04009212 RID: 37394
+		// Token: 0x040094C3 RID: 38083
 		public const int TrapDefenseMonsterKilledCtxFieldNumber = 8;
 
-		// Token: 0x04009213 RID: 37395
+		// Token: 0x040094C4 RID: 38084
 		public const int TrapDefenseSpcecialCellDestructCtxFieldNumber = 9;
 
-		// Token: 0x04009214 RID: 37396
+		// Token: 0x040094C5 RID: 38085
 		public const int SurvivorsMonsterKilledCtxFieldNumber = 10;
 
-		// Token: 0x04009215 RID: 37397
+		// Token: 0x040094C6 RID: 38086
 		public const int SurvivorsGoldenCoinAbosorbedCtxFieldNumber = 11;
 
-		// Token: 0x04009216 RID: 37398
+		// Token: 0x040094C7 RID: 38087
 		public const int SurvivorsRoleKilledCtxFieldNumber = 12;
 
-		// Token: 0x04009217 RID: 37399
+		// Token: 0x040094C8 RID: 38088
 		public const int KurotatoMonsterKilledCtxPbFieldNumber = 13;
 
-		// Token: 0x04009218 RID: 37400
+		// Token: 0x040094C9 RID: 38089
 		public const int KurotatoDropAbsorbedCtxPbFieldNumber = 14;
 
-		// Token: 0x04009219 RID: 37401
+		// Token: 0x040094CA RID: 38090
 		public const int KurotatoRoleKilledCtxPbFieldNumber = 15;
 
-		// Token: 0x0400921A RID: 37402
+		// Token: 0x040094CB RID: 38091
 		public const int KurotatoStructureKilledCtxPbFieldNumber = 18;
 
-		// Token: 0x0400921B RID: 37403
+		// Token: 0x040094CC RID: 38092
 		public const int PinballMonsterKilledCtxFieldNumber = 16;
 
-		// Token: 0x0400921C RID: 37404
+		// Token: 0x040094CD RID: 38093
 		public const int PinballEntityKilledCtxFieldNumber = 17;
 
-		// Token: 0x0400921D RID: 37405
+		// Token: 0x040094CE RID: 38094
 		public const int GPUMonsterKilledCtxFieldNumber = 19;
 
-		// Token: 0x0400921E RID: 37406
+		// Token: 0x040094CF RID: 38095
 		public const int GPURoleKilledCtxFieldNumber = 20;
 
-		// Token: 0x0400921F RID: 37407
+		// Token: 0x040094D0 RID: 38096
 		private object context_;
 
-		// Token: 0x04009220 RID: 37408
+		// Token: 0x040094D1 RID: 38097
 		private SimpleCombatEntityDieContext.ContextOneofCase contextCase_;
 
-		// Token: 0x02001995 RID: 6549
+		// Token: 0x02001A21 RID: 6689
 		public enum ContextOneofCase
 		{
-			// Token: 0x0400CA14 RID: 51732
+			// Token: 0x0400CF5F RID: 53087
 			None,
-			// Token: 0x0400CA15 RID: 51733
+			// Token: 0x0400CF60 RID: 53088
 			TrapDefenseTrapKillCtx = 3,
-			// Token: 0x0400CA16 RID: 51734
+			// Token: 0x0400CF61 RID: 53089
 			TrapDefenseTrapSelfDestructCtx,
-			// Token: 0x0400CA17 RID: 51735
+			// Token: 0x0400CF62 RID: 53090
 			TrapDefenseGoldenCoinAbosorbedCtx,
-			// Token: 0x0400CA18 RID: 51736
+			// Token: 0x0400CF63 RID: 53091
 			TrapDefenseReachInstEndpointCtx,
-			// Token: 0x0400CA19 RID: 51737
+			// Token: 0x0400CF64 RID: 53092
 			TrapDefenseEnvironmentalKillCtx,
-			// Token: 0x0400CA1A RID: 51738
+			// Token: 0x0400CF65 RID: 53093
 			TrapDefenseMonsterKilledCtx,
-			// Token: 0x0400CA1B RID: 51739
+			// Token: 0x0400CF66 RID: 53094
 			TrapDefenseSpcecialCellDestructCtx,
-			// Token: 0x0400CA1C RID: 51740
+			// Token: 0x0400CF67 RID: 53095
 			SurvivorsMonsterKilledCtx,
-			// Token: 0x0400CA1D RID: 51741
+			// Token: 0x0400CF68 RID: 53096
 			SurvivorsGoldenCoinAbosorbedCtx,
-			// Token: 0x0400CA1E RID: 51742
+			// Token: 0x0400CF69 RID: 53097
 			SurvivorsRoleKilledCtx,
-			// Token: 0x0400CA1F RID: 51743
+			// Token: 0x0400CF6A RID: 53098
 			KurotatoMonsterKilledCtxPb,
-			// Token: 0x0400CA20 RID: 51744
+			// Token: 0x0400CF6B RID: 53099
 			KurotatoDropAbsorbedCtxPb,
-			// Token: 0x0400CA21 RID: 51745
+			// Token: 0x0400CF6C RID: 53100
 			KurotatoRoleKilledCtxPb,
-			// Token: 0x0400CA22 RID: 51746
+			// Token: 0x0400CF6D RID: 53101
 			KurotatoStructureKilledCtxPb = 18,
-			// Token: 0x0400CA23 RID: 51747
+			// Token: 0x0400CF6E RID: 53102
 			PinballMonsterKilledCtx = 16,
-			// Token: 0x0400CA24 RID: 51748
+			// Token: 0x0400CF6F RID: 53103
 			PinballEntityKilledCtx,
-			// Token: 0x0400CA25 RID: 51749
+			// Token: 0x0400CF70 RID: 53104
 			GPUMonsterKilledCtx = 19,
-			// Token: 0x0400CA26 RID: 51750
+			// Token: 0x0400CF71 RID: 53105
 			GPURoleKilledCtx
 		}
 	}

@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E34 RID: 15924
+	// Token: 0x0200426F RID: 17007
 	public class IFinishDungeonQuestConditionT
 	{
-		// Token: 0x17006E1E RID: 28190
-		// (get) Token: 0x06016531 RID: 91441 RVA: 0x0033916D File Offset: 0x0033736D
-		// (set) Token: 0x06016532 RID: 91442 RVA: 0x00339175 File Offset: 0x00337375
+		// Token: 0x17007404 RID: 29700
+		// (get) Token: 0x06017B5E RID: 97118 RVA: 0x00361D65 File Offset: 0x0035FF65
+		// (set) Token: 0x06017B5F RID: 97119 RVA: 0x00361D6D File Offset: 0x0035FF6D
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x17006E1F RID: 28191
-		// (get) Token: 0x06016533 RID: 91443 RVA: 0x0033917E File Offset: 0x0033737E
-		// (set) Token: 0x06016534 RID: 91444 RVA: 0x00339186 File Offset: 0x00337386
+		// Token: 0x17007405 RID: 29701
+		// (get) Token: 0x06017B60 RID: 97120 RVA: 0x00361D76 File Offset: 0x0035FF76
+		// (set) Token: 0x06017B61 RID: 97121 RVA: 0x00361D7E File Offset: 0x0035FF7E
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x17006E20 RID: 28192
-		// (get) Token: 0x06016535 RID: 91445 RVA: 0x0033918F File Offset: 0x0033738F
-		// (set) Token: 0x06016536 RID: 91446 RVA: 0x00339197 File Offset: 0x00337397
+		// Token: 0x17007406 RID: 29702
+		// (get) Token: 0x06017B62 RID: 97122 RVA: 0x00361D87 File Offset: 0x0035FF87
+		// (set) Token: 0x06017B63 RID: 97123 RVA: 0x00361D8F File Offset: 0x0035FF8F
 		public TDungeonConditionTypeUnion Condition { get; set; }
 
-		// Token: 0x06016537 RID: 91447 RVA: 0x003391A0 File Offset: 0x003373A0
+		// Token: 0x06017B64 RID: 97124 RVA: 0x00361D98 File Offset: 0x0035FF98
 		public IFinishDungeonQuestConditionT()
 		{
 			this.Type = EChildQuest.DoInteract;

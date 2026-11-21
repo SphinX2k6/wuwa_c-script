@@ -6,30 +6,30 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Weapon.Data
 {
-	// Token: 0x02004866 RID: 18534
+	// Token: 0x02003797 RID: 14231
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TWeaponModelTransform
 	{
-		// Token: 0x06030841 RID: 198721 RVA: 0x00B43CFE File Offset: 0x00B41EFE
+		// Token: 0x06025011 RID: 151569 RVA: 0x00A73F12 File Offset: 0x00A72112
 		private TWeaponModelTransform(object value)
 		{
 			this._value = value;
 		}
 
-		// Token: 0x06030842 RID: 198722 RVA: 0x00B43D0D File Offset: 0x00B41F0D
+		// Token: 0x06025012 RID: 151570 RVA: 0x00A73F21 File Offset: 0x00A72121
 		public static implicit operator TWeaponModelTransform(WeaponModelTransform value)
 		{
 			return new TWeaponModelTransform(value);
 		}
 
-		// Token: 0x06030843 RID: 198723 RVA: 0x00B43D1A File Offset: 0x00B41F1A
+		// Token: 0x06025013 RID: 151571 RVA: 0x00A73F2E File Offset: 0x00A7212E
 		public static implicit operator TWeaponModelTransform(SGachaWeaponTransform value)
 		{
 			return new TWeaponModelTransform(value);
 		}
 
-		// Token: 0x06030844 RID: 198724 RVA: 0x00B43D28 File Offset: 0x00B41F28
+		// Token: 0x06025014 RID: 151572 RVA: 0x00A73F3C File Offset: 0x00A7213C
 		public bool ShowScabbard()
 		{
 			object value = this._value;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Weapon.Data
 			return false;
 		}
 
-		// Token: 0x06030845 RID: 198725 RVA: 0x00B43D74 File Offset: 0x00B41F74
+		// Token: 0x06025015 RID: 151573 RVA: 0x00A73F88 File Offset: 0x00A72188
 		public float Size()
 		{
 			object value = this._value;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Weapon.Data
 			return 0f;
 		}
 
-		// Token: 0x06030846 RID: 198726 RVA: 0x00B43DC4 File Offset: 0x00B41FC4
+		// Token: 0x06025016 RID: 151574 RVA: 0x00A73FD8 File Offset: 0x00A721D8
 		public global::Vector Location()
 		{
 			global::Vector vector = new global::Vector();
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Weapon.Data
 			return vector;
 		}
 
-		// Token: 0x06030847 RID: 198727 RVA: 0x00B43E6C File Offset: 0x00B4206C
+		// Token: 0x06025017 RID: 151575 RVA: 0x00A74080 File Offset: 0x00A72280
 		public global::Vector ScabbardOffset()
 		{
 			global::Vector vector = new global::Vector();
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Weapon.Data
 			return vector;
 		}
 
-		// Token: 0x06030848 RID: 198728 RVA: 0x00B43F14 File Offset: 0x00B42114
+		// Token: 0x06025018 RID: 151576 RVA: 0x00A74128 File Offset: 0x00A72328
 		public global::Vector ScabbardRotationOffset()
 		{
 			global::Vector vector = new global::Vector();
@@ -123,14 +123,14 @@ namespace CSharpScript.Game.Module.Weapon.Data
 			return vector;
 		}
 
-		// Token: 0x06030849 RID: 198729 RVA: 0x00B43FBC File Offset: 0x00B421BC
+		// Token: 0x06025019 RID: 151577 RVA: 0x00A741D0 File Offset: 0x00A723D0
 		public bool HasScabbardValue()
 		{
 			global::Vector vector = this.ScabbardRotationOffset();
 			return vector.X != 0.0 || vector.Y != 0.0 || vector.Z != 0.0;
 		}
 
-		// Token: 0x0603084A RID: 198730 RVA: 0x00B44008 File Offset: 0x00B42208
+		// Token: 0x0602501A RID: 151578 RVA: 0x00A7421C File Offset: 0x00A7241C
 		public float RotateTime()
 		{
 			object value = this._value;
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Weapon.Data
 			return 0f;
 		}
 
-		// Token: 0x0603084B RID: 198731 RVA: 0x00B44058 File Offset: 0x00B42258
+		// Token: 0x0602501B RID: 151579 RVA: 0x00A7426C File Offset: 0x00A7246C
 		public global::Vector Rotation()
 		{
 			global::Vector vector = new global::Vector();
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Weapon.Data
 			return vector;
 		}
 
-		// Token: 0x0603084C RID: 198732 RVA: 0x00B44100 File Offset: 0x00B42300
+		// Token: 0x0602501C RID: 151580 RVA: 0x00A74314 File Offset: 0x00A72514
 		public global::Vector AxisRotate()
 		{
 			global::Vector vector = new global::Vector();
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Weapon.Data
 			return vector;
 		}
 
-		// Token: 0x0401A0EB RID: 106731
+		// Token: 0x0401479E RID: 83870
 		private readonly object _value;
 	}
 }

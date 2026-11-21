@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001B22 RID: 6946
+// Token: 0x02000FE1 RID: 4065
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchEntityBase
 {
-	// Token: 0x0600CE2A RID: 52778 RVA: 0x002EEE5F File Offset: 0x002ED05F
+	// Token: 0x0600A23B RID: 41531 RVA: 0x002F9F3F File Offset: 0x002F813F
 	public FloroRanchEntityBase(FloroRanchPlayUnit entityData)
 	{
 		this.EntityId = entityData.PlayIncId;
 		this.EntityType = (EFloroRanchEntityType)entityData.Type;
 	}
 
-	// Token: 0x0600CE2B RID: 52779 RVA: 0x002EEE8C File Offset: 0x002ED08C
+	// Token: 0x0600A23C RID: 41532 RVA: 0x002F9F6C File Offset: 0x002F816C
 	[NullableContext(0)]
 	public unsafe void AddComponent<T>() where T : FloroRanchEntityComponentBase, new()
 	{
@@ -56,7 +56,7 @@ public class FloroRanchEntityBase
 		this.ComponentList[index] = t;
 	}
 
-	// Token: 0x0600CE2C RID: 52780 RVA: 0x002EEFE8 File Offset: 0x002ED1E8
+	// Token: 0x0600A23D RID: 41533 RVA: 0x002FA0C8 File Offset: 0x002F82C8
 	public unsafe void AddComponent(Type componentType, Func<FloroRanchEntityComponentBase> ctor)
 	{
 		int byType = FloroRanchEntityComponentIndexGetter<FloroRanchEntityComponentBase>.GetByType(componentType.Name, false);
@@ -96,7 +96,7 @@ public class FloroRanchEntityBase
 		this.ComponentList[byType] = floroRanchEntityComponentBase;
 	}
 
-	// Token: 0x0600CE2D RID: 52781 RVA: 0x002EF130 File Offset: 0x002ED330
+	// Token: 0x0600A23E RID: 41534 RVA: 0x002FA210 File Offset: 0x002F8410
 	[NullableContext(0)]
 	[return: Nullable(2)]
 	public T GetComponent<T>() where T : FloroRanchEntityComponentBase
@@ -105,7 +105,7 @@ public class FloroRanchEntityBase
 		return this.ComponentList[index] as T;
 	}
 
-	// Token: 0x0600CE2E RID: 52782 RVA: 0x002EF15C File Offset: 0x002ED35C
+	// Token: 0x0600A23F RID: 41535 RVA: 0x002FA23C File Offset: 0x002F843C
 	[NullableContext(0)]
 	[return: Nullable(2)]
 	public unsafe T CheckGetComponent<T>() where T : FloroRanchEntityComponentBase
@@ -126,7 +126,7 @@ public class FloroRanchEntityBase
 		return component;
 	}
 
-	// Token: 0x0600CE2F RID: 52783 RVA: 0x002EF208 File Offset: 0x002ED408
+	// Token: 0x0600A240 RID: 41536 RVA: 0x002FA2E8 File Offset: 0x002F84E8
 	public List<FloroRanchEntityDataBaseComponent> GetDataComponentList()
 	{
 		List<FloroRanchEntityDataBaseComponent> list = new List<FloroRanchEntityDataBaseComponent>();
@@ -144,7 +144,7 @@ public class FloroRanchEntityBase
 		return list;
 	}
 
-	// Token: 0x0600CE30 RID: 52784 RVA: 0x002EF270 File Offset: 0x002ED470
+	// Token: 0x0600A241 RID: 41537 RVA: 0x002FA350 File Offset: 0x002F8550
 	[NullableContext(2)]
 	public unsafe FloroRanchUiItemBaseComponent GetUiItemComponent()
 	{
@@ -171,7 +171,7 @@ public class FloroRanchEntityBase
 		return null;
 	}
 
-	// Token: 0x0600CE31 RID: 52785 RVA: 0x002EF35C File Offset: 0x002ED55C
+	// Token: 0x0600A242 RID: 41538 RVA: 0x002FA43C File Offset: 0x002F863C
 	public void Init()
 	{
 		foreach (FloroRanchEntityComponentBase floroRanchEntityComponentBase in this.ComponentList)
@@ -183,7 +183,7 @@ public class FloroRanchEntityBase
 		}
 	}
 
-	// Token: 0x0600CE32 RID: 52786 RVA: 0x002EF3B4 File Offset: 0x002ED5B4
+	// Token: 0x0600A243 RID: 41539 RVA: 0x002FA494 File Offset: 0x002F8694
 	public void Tick(float deltaTime)
 	{
 		foreach (FloroRanchEntityComponentBase floroRanchEntityComponentBase in this.ComponentList)
@@ -195,7 +195,7 @@ public class FloroRanchEntityBase
 		}
 	}
 
-	// Token: 0x0600CE33 RID: 52787 RVA: 0x002EF40C File Offset: 0x002ED60C
+	// Token: 0x0600A244 RID: 41540 RVA: 0x002FA4EC File Offset: 0x002F86EC
 	public void End()
 	{
 		foreach (FloroRanchEntityComponentBase floroRanchEntityComponentBase in this.ComponentList)
@@ -207,7 +207,7 @@ public class FloroRanchEntityBase
 		}
 	}
 
-	// Token: 0x0600CE34 RID: 52788 RVA: 0x002EF464 File Offset: 0x002ED664
+	// Token: 0x0600A245 RID: 41541 RVA: 0x002FA544 File Offset: 0x002F8744
 	public void RefreshEntityData(FloroRanchPlayUnit entityData)
 	{
 		foreach (FloroRanchEntityDataBaseComponent floroRanchEntityDataBaseComponent in this.GetDataComponentList())
@@ -216,7 +216,7 @@ public class FloroRanchEntityBase
 		}
 	}
 
-	// Token: 0x0600CE35 RID: 52789 RVA: 0x002EF4B8 File Offset: 0x002ED6B8
+	// Token: 0x0600A246 RID: 41542 RVA: 0x002FA598 File Offset: 0x002F8798
 	public int GetPoint()
 	{
 		FloroRanchEntityDataComponent floroRanchEntityDataComponent = this.CheckGetComponent<FloroRanchEntityDataComponent>();
@@ -227,7 +227,7 @@ public class FloroRanchEntityBase
 		return floroRanchEntityDataComponent.Point;
 	}
 
-	// Token: 0x0600CE36 RID: 52790 RVA: 0x002EF4D8 File Offset: 0x002ED6D8
+	// Token: 0x0600A247 RID: 41543 RVA: 0x002FA5B8 File Offset: 0x002F87B8
 	public int GetRarity()
 	{
 		int result = -1;
@@ -254,7 +254,7 @@ public class FloroRanchEntityBase
 		return result;
 	}
 
-	// Token: 0x0600CE37 RID: 52791 RVA: 0x002EF538 File Offset: 0x002ED738
+	// Token: 0x0600A248 RID: 41544 RVA: 0x002FA618 File Offset: 0x002F8818
 	public int GetRace()
 	{
 		int result = -1;
@@ -281,7 +281,7 @@ public class FloroRanchEntityBase
 		return result;
 	}
 
-	// Token: 0x0600CE38 RID: 52792 RVA: 0x002EF598 File Offset: 0x002ED798
+	// Token: 0x0600A249 RID: 41545 RVA: 0x002FA678 File Offset: 0x002F8878
 	public string Info()
 	{
 		List<FloroRanchEntityDataBaseComponent> dataComponentList = this.GetDataComponentList();
@@ -294,7 +294,7 @@ public class FloroRanchEntityBase
 		return string.Join(" ", list);
 	}
 
-	// Token: 0x0600CE39 RID: 52793 RVA: 0x002EF5E4 File Offset: 0x002ED7E4
+	// Token: 0x0600A24A RID: 41546 RVA: 0x002FA6C4 File Offset: 0x002F88C4
 	public string DebugInfo()
 	{
 		List<FloroRanchEntityDataBaseComponent> dataComponentList = this.GetDataComponentList();
@@ -307,7 +307,7 @@ public class FloroRanchEntityBase
 		return "<color=Orange>【" + str + "】</color>";
 	}
 
-	// Token: 0x0600CE3A RID: 52794 RVA: 0x002EF660 File Offset: 0x002ED860
+	// Token: 0x0600A24B RID: 41547 RVA: 0x002FA740 File Offset: 0x002F8940
 	public string DebugUiShowInfo()
 	{
 		List<FloroRanchEntityDataBaseComponent> dataComponentList = this.GetDataComponentList();
@@ -320,13 +320,13 @@ public class FloroRanchEntityBase
 		return "<color=Red>" + str + "</color>";
 	}
 
-	// Token: 0x04005E6E RID: 24174
+	// Token: 0x04005F3D RID: 24381
 	public readonly int EntityId;
 
-	// Token: 0x04005E6F RID: 24175
+	// Token: 0x04005F3E RID: 24382
 	public readonly EFloroRanchEntityType EntityType;
 
-	// Token: 0x04005E70 RID: 24176
+	// Token: 0x04005F3F RID: 24383
 	[Nullable(new byte[]
 	{
 		1,

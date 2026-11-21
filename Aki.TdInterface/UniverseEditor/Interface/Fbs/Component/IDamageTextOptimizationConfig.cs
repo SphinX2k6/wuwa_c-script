@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200506F RID: 20591
+	// Token: 0x020055D1 RID: 21969
 	public struct IDamageTextOptimizationConfig : IFlatbufferObject
 	{
-		// Token: 0x17009560 RID: 38240
-		// (get) Token: 0x06021007 RID: 135175 RVA: 0x00495D8B File Offset: 0x00493F8B
+		// Token: 0x17009D46 RID: 40262
+		// (get) Token: 0x06022F41 RID: 143169 RVA: 0x004CFA3F File Offset: 0x004CDC3F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021008 RID: 135176 RVA: 0x00495D98 File Offset: 0x00493F98
+		// Token: 0x06022F42 RID: 143170 RVA: 0x004CFA4C File Offset: 0x004CDC4C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021009 RID: 135177 RVA: 0x00495DA0 File Offset: 0x00493FA0
+		// Token: 0x06022F43 RID: 143171 RVA: 0x004CFA54 File Offset: 0x004CDC54
 		public static IDamageTextOptimizationConfig GetRootAsIDamageTextOptimizationConfig(ByteBuffer _bb)
 		{
 			return IDamageTextOptimizationConfig.GetRootAsIDamageTextOptimizationConfig(_bb, default(IDamageTextOptimizationConfig));
 		}
 
-		// Token: 0x0602100A RID: 135178 RVA: 0x00495DBC File Offset: 0x00493FBC
+		// Token: 0x06022F44 RID: 143172 RVA: 0x004CFA70 File Offset: 0x004CDC70
 		public static IDamageTextOptimizationConfig GetRootAsIDamageTextOptimizationConfig(ByteBuffer _bb, IDamageTextOptimizationConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602100B RID: 135179 RVA: 0x00495DD9 File Offset: 0x00493FD9
+		// Token: 0x06022F45 RID: 143173 RVA: 0x004CFA8D File Offset: 0x004CDC8D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602100C RID: 135180 RVA: 0x00495DE8 File Offset: 0x00493FE8
+		// Token: 0x06022F46 RID: 143174 RVA: 0x004CFA9C File Offset: 0x004CDC9C
 		public IDamageTextOptimizationConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009561 RID: 38241
-		// (get) Token: 0x0602100D RID: 135181 RVA: 0x00495DF8 File Offset: 0x00493FF8
+		// Token: 0x17009D47 RID: 40263
+		// (get) Token: 0x06022F47 RID: 143175 RVA: 0x004CFAAC File Offset: 0x004CDCAC
 		public EPerformanceOptimizationType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009562 RID: 38242
-		// (get) Token: 0x0602100E RID: 135182 RVA: 0x00495E34 File Offset: 0x00494034
+		// Token: 0x17009D48 RID: 40264
+		// (get) Token: 0x06022F48 RID: 143176 RVA: 0x004CFAE8 File Offset: 0x004CDCE8
 		public bool UseRange
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009563 RID: 38243
-		// (get) Token: 0x0602100F RID: 135183 RVA: 0x00495E74 File Offset: 0x00494074
+		// Token: 0x17009D49 RID: 40265
+		// (get) Token: 0x06022F49 RID: 143177 RVA: 0x004CFB28 File Offset: 0x004CDD28
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021010 RID: 135184 RVA: 0x00495EB0 File Offset: 0x004940B0
+		// Token: 0x06022F4A RID: 143178 RVA: 0x004CFB64 File Offset: 0x004CDD64
 		public static Offset<IDamageTextOptimizationConfig> CreateIDamageTextOptimizationConfig(FlatBufferBuilder builder, EPerformanceOptimizationType Type = EPerformanceOptimizationType.PlaneMovementOptimization, bool UseRange = false, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDamageTextOptimizationConfig.EndIDamageTextOptimizationConfig(builder);
 		}
 
-		// Token: 0x06021011 RID: 135185 RVA: 0x00495ED4 File Offset: 0x004940D4
+		// Token: 0x06022F4B RID: 143179 RVA: 0x004CFB88 File Offset: 0x004CDD88
 		public static void StartIDamageTextOptimizationConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06021012 RID: 135186 RVA: 0x00495EDD File Offset: 0x004940DD
+		// Token: 0x06022F4C RID: 143180 RVA: 0x004CFB91 File Offset: 0x004CDD91
 		public static void AddType(FlatBufferBuilder builder, EPerformanceOptimizationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06021013 RID: 135187 RVA: 0x00495EE8 File Offset: 0x004940E8
+		// Token: 0x06022F4D RID: 143181 RVA: 0x004CFB9C File Offset: 0x004CDD9C
 		public static void AddUseRange(FlatBufferBuilder builder, bool useRange)
 		{
 			builder.AddBool(1, useRange, false);
 		}
 
-		// Token: 0x06021014 RID: 135188 RVA: 0x00495EF3 File Offset: 0x004940F3
+		// Token: 0x06022F4E RID: 143182 RVA: 0x004CFBA7 File Offset: 0x004CDDA7
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06021015 RID: 135189 RVA: 0x00495EFE File Offset: 0x004940FE
+		// Token: 0x06022F4F RID: 143183 RVA: 0x004CFBB2 File Offset: 0x004CDDB2
 		public static Offset<IDamageTextOptimizationConfig> EndIDamageTextOptimizationConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IDamageTextOptimizationConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06021016 RID: 135190 RVA: 0x00495F0C File Offset: 0x0049410C
+		// Token: 0x06022F50 RID: 143184 RVA: 0x004CFBC0 File Offset: 0x004CDDC0
 		public IDamageTextOptimizationConfigT UnPack()
 		{
 			IDamageTextOptimizationConfigT damageTextOptimizationConfigT = new IDamageTextOptimizationConfigT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return damageTextOptimizationConfigT;
 		}
 
-		// Token: 0x06021017 RID: 135191 RVA: 0x00495F27 File Offset: 0x00494127
+		// Token: 0x06022F51 RID: 143185 RVA: 0x004CFBDB File Offset: 0x004CDDDB
 		public void UnPackTo(IDamageTextOptimizationConfigT _o)
 		{
 			_o.Type = this.Type;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06021018 RID: 135192 RVA: 0x00495F50 File Offset: 0x00494150
+		// Token: 0x06022F52 RID: 143186 RVA: 0x004CFC04 File Offset: 0x004CDE04
 		public static Offset<IDamageTextOptimizationConfig> Pack(FlatBufferBuilder builder, IDamageTextOptimizationConfigT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDamageTextOptimizationConfig.CreateIDamageTextOptimizationConfig(builder, _o.Type, _o.UseRange, _o.NullMask);
 		}
 
-		// Token: 0x0400E070 RID: 57456
+		// Token: 0x0400EC69 RID: 60521
 		private Table __p;
 	}
 }

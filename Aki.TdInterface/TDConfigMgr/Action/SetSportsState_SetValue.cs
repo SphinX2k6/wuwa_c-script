@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021DD RID: 8669
+	// Token: 0x02002448 RID: 9288
 	public class SetSportsState_SetValue
 	{
-		// Token: 0x040071AD RID: 29101
-		[Nullable(1)]
+		// Token: 0x040077F6 RID: 30710
 		public ISportConfig Config;
 	}
 }

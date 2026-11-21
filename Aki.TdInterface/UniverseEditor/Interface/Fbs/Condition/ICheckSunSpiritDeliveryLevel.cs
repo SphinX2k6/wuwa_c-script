@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B35 RID: 19253
+	// Token: 0x0200501C RID: 20508
 	public struct ICheckSunSpiritDeliveryLevel : IFlatbufferObject
 	{
-		// Token: 0x17008BAC RID: 35756
-		// (get) Token: 0x0601E4BE RID: 124094 RVA: 0x0043EDA1 File Offset: 0x0043CFA1
+		// Token: 0x170092BC RID: 37564
+		// (get) Token: 0x06020049 RID: 131145 RVA: 0x0047154D File Offset: 0x0046F74D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E4BF RID: 124095 RVA: 0x0043EDAE File Offset: 0x0043CFAE
+		// Token: 0x0602004A RID: 131146 RVA: 0x0047155A File Offset: 0x0046F75A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E4C0 RID: 124096 RVA: 0x0043EDB8 File Offset: 0x0043CFB8
+		// Token: 0x0602004B RID: 131147 RVA: 0x00471564 File Offset: 0x0046F764
 		public static ICheckSunSpiritDeliveryLevel GetRootAsICheckSunSpiritDeliveryLevel(ByteBuffer _bb)
 		{
 			return ICheckSunSpiritDeliveryLevel.GetRootAsICheckSunSpiritDeliveryLevel(_bb, default(ICheckSunSpiritDeliveryLevel));
 		}
 
-		// Token: 0x0601E4C1 RID: 124097 RVA: 0x0043EDD4 File Offset: 0x0043CFD4
+		// Token: 0x0602004C RID: 131148 RVA: 0x00471580 File Offset: 0x0046F780
 		public static ICheckSunSpiritDeliveryLevel GetRootAsICheckSunSpiritDeliveryLevel(ByteBuffer _bb, ICheckSunSpiritDeliveryLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E4C2 RID: 124098 RVA: 0x0043EDF1 File Offset: 0x0043CFF1
+		// Token: 0x0602004D RID: 131149 RVA: 0x0047159D File Offset: 0x0046F79D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E4C3 RID: 124099 RVA: 0x0043EE00 File Offset: 0x0043D000
+		// Token: 0x0602004E RID: 131150 RVA: 0x004715AC File Offset: 0x0046F7AC
 		public ICheckSunSpiritDeliveryLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008BAD RID: 35757
-		// (get) Token: 0x0601E4C4 RID: 124100 RVA: 0x0043EE10 File Offset: 0x0043D010
+		// Token: 0x170092BD RID: 37565
+		// (get) Token: 0x0602004F RID: 131151 RVA: 0x004715BC File Offset: 0x0046F7BC
 		public ECheckSystemStateType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008BAE RID: 35758
-		// (get) Token: 0x0601E4C5 RID: 124101 RVA: 0x0043EE4C File Offset: 0x0043D04C
+		// Token: 0x170092BE RID: 37566
+		// (get) Token: 0x06020050 RID: 131152 RVA: 0x004715F8 File Offset: 0x0046F7F8
 		public int Level
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E4C6 RID: 124102 RVA: 0x0043EE88 File Offset: 0x0043D088
+		// Token: 0x06020051 RID: 131153 RVA: 0x00471634 File Offset: 0x0046F834
 		public static Offset<ICheckSunSpiritDeliveryLevel> CreateICheckSunSpiritDeliveryLevel(FlatBufferBuilder builder, ECheckSystemStateType Type = ECheckSystemStateType.TrackMoonBuilding, int Level = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckSunSpiritDeliveryLevel.EndICheckSunSpiritDeliveryLevel(builder);
 		}
 
-		// Token: 0x0601E4C7 RID: 124103 RVA: 0x0043EEA5 File Offset: 0x0043D0A5
+		// Token: 0x06020052 RID: 131154 RVA: 0x00471651 File Offset: 0x0046F851
 		public static void StartICheckSunSpiritDeliveryLevel(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601E4C8 RID: 124104 RVA: 0x0043EEAE File Offset: 0x0043D0AE
+		// Token: 0x06020053 RID: 131155 RVA: 0x0047165A File Offset: 0x0046F85A
 		public static void AddType(FlatBufferBuilder builder, ECheckSystemStateType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E4C9 RID: 124105 RVA: 0x0043EEB9 File Offset: 0x0043D0B9
+		// Token: 0x06020054 RID: 131156 RVA: 0x00471665 File Offset: 0x0046F865
 		public static void AddLevel(FlatBufferBuilder builder, int level)
 		{
 			builder.AddInt(1, level, 0);
 		}
 
-		// Token: 0x0601E4CA RID: 124106 RVA: 0x0043EEC4 File Offset: 0x0043D0C4
+		// Token: 0x06020055 RID: 131157 RVA: 0x00471670 File Offset: 0x0046F870
 		public static Offset<ICheckSunSpiritDeliveryLevel> EndICheckSunSpiritDeliveryLevel(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckSunSpiritDeliveryLevel>(builder.EndTable());
 		}
 
-		// Token: 0x0601E4CB RID: 124107 RVA: 0x0043EED4 File Offset: 0x0043D0D4
+		// Token: 0x06020056 RID: 131158 RVA: 0x00471680 File Offset: 0x0046F880
 		public ICheckSunSpiritDeliveryLevelT UnPack()
 		{
 			ICheckSunSpiritDeliveryLevelT checkSunSpiritDeliveryLevelT = new ICheckSunSpiritDeliveryLevelT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkSunSpiritDeliveryLevelT;
 		}
 
-		// Token: 0x0601E4CC RID: 124108 RVA: 0x0043EEEF File Offset: 0x0043D0EF
+		// Token: 0x06020057 RID: 131159 RVA: 0x0047169B File Offset: 0x0046F89B
 		public void UnPackTo(ICheckSunSpiritDeliveryLevelT _o)
 		{
 			_o.Type = this.Type;
 			_o.Level = this.Level;
 		}
 
-		// Token: 0x0601E4CD RID: 124109 RVA: 0x0043EF0C File Offset: 0x0043D10C
+		// Token: 0x06020058 RID: 131160 RVA: 0x004716B8 File Offset: 0x0046F8B8
 		public static Offset<ICheckSunSpiritDeliveryLevel> Pack(FlatBufferBuilder builder, ICheckSunSpiritDeliveryLevelT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckSunSpiritDeliveryLevel.CreateICheckSunSpiritDeliveryLevel(builder, _o.Type, _o.Level);
 		}
 
-		// Token: 0x0400D3DB RID: 54235
+		// Token: 0x0400DEDA RID: 57050
 		private Table __p;
 	}
 }

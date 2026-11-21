@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002370 RID: 9072
+// Token: 0x02001855 RID: 6229
 [NullableContext(1)]
 [Nullable(0)]
 public class PayShopRecommendView : UiTabViewBase, IUiTabViewRefresh
 {
-	// Token: 0x060121D5 RID: 74197 RVA: 0x00472EA8 File Offset: 0x004710A8
+	// Token: 0x0600F685 RID: 63109 RVA: 0x00480028 File Offset: 0x0047E228
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class PayShopRecommendView : UiTabViewBase, IUiTabViewRefresh
 		};
 	}
 
-	// Token: 0x060121D6 RID: 74198 RVA: 0x00472F18 File Offset: 0x00471118
+	// Token: 0x0600F686 RID: 63110 RVA: 0x00480098 File Offset: 0x0047E298
 	protected override void OnStart()
 	{
 		this.TabGroup = new TabComponent<PayShopRecommendSwitchItem>(base.GetHorizontalLayout(0).GetRootComponent(), new Func<UUIItem, int?, PayShopRecommendSwitchItem>(this.TabItemProxyCreate), new Action<int>(this.ToggleCallBack), base.GetItem(1));
@@ -37,7 +37,7 @@ public class PayShopRecommendView : UiTabViewBase, IUiTabViewRefresh
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060121D7 RID: 74199 RVA: 0x00472F9C File Offset: 0x0047119C
+	// Token: 0x0600F687 RID: 63111 RVA: 0x0048011C File Offset: 0x0047E31C
 	protected override void OnTickUiTabViewBase(float deltaTime)
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -48,13 +48,13 @@ public class PayShopRecommendView : UiTabViewBase, IUiTabViewRefresh
 		}
 	}
 
-	// Token: 0x060121D8 RID: 74200 RVA: 0x00472FDE File Offset: 0x004711DE
+	// Token: 0x0600F688 RID: 63112 RVA: 0x0048015E File Offset: 0x0047E35E
 	private PayShopRecommendSwitchItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new PayShopRecommendSwitchItem();
 	}
 
-	// Token: 0x060121D9 RID: 74201 RVA: 0x00472FE8 File Offset: 0x004711E8
+	// Token: 0x0600F689 RID: 63113 RVA: 0x00480168 File Offset: 0x0047E368
 	private void ToggleCallBack(int gridIndex)
 	{
 		PayShopRecommendView.RecommendData recommendData = this.TabRecommendData[gridIndex];
@@ -68,25 +68,25 @@ public class PayShopRecommendView : UiTabViewBase, IUiTabViewRefresh
 		LogReportController.Instance.LogReport(onClickPayShopTabLogEvent);
 	}
 
-	// Token: 0x060121DA RID: 74202 RVA: 0x00473069 File Offset: 0x00471269
+	// Token: 0x0600F68A RID: 63114 RVA: 0x004801E9 File Offset: 0x0047E3E9
 	protected override void OnShowUiTabViewFromToggle()
 	{
 		this.RefreshTab();
 	}
 
-	// Token: 0x060121DB RID: 74203 RVA: 0x00473071 File Offset: 0x00471271
+	// Token: 0x0600F68B RID: 63115 RVA: 0x004801F1 File Offset: 0x0047E3F1
 	protected override void OnShowUiTabViewFromView()
 	{
 		this.TabViewComponent.SetCurrentTabViewState(true);
 	}
 
-	// Token: 0x060121DC RID: 74204 RVA: 0x0047307F File Offset: 0x0047127F
+	// Token: 0x0600F68C RID: 63116 RVA: 0x004801FF File Offset: 0x0047E3FF
 	protected override void OnHideUiTabViewBase(bool fromToggle)
 	{
 		this.TabViewComponent.SetCurrentTabViewState(false);
 	}
 
-	// Token: 0x060121DD RID: 74205 RVA: 0x00473090 File Offset: 0x00471290
+	// Token: 0x0600F68D RID: 63117 RVA: 0x00480210 File Offset: 0x0047E410
 	private void RefreshTab()
 	{
 		this.InitRecommendData();
@@ -111,7 +111,7 @@ public class PayShopRecommendView : UiTabViewBase, IUiTabViewRefresh
 		}).Forget();
 	}
 
-	// Token: 0x060121DE RID: 74206 RVA: 0x00473128 File Offset: 0x00471328
+	// Token: 0x0600F68E RID: 63118 RVA: 0x004802A8 File Offset: 0x0047E4A8
 	private void InitRecommendData()
 	{
 		this.TabRecommendData.Clear();
@@ -166,7 +166,7 @@ public class PayShopRecommendView : UiTabViewBase, IUiTabViewRefresh
 		this.TabRecommendData.Sort(new Comparison<PayShopRecommendView.RecommendData>(this.CompareSortListItems));
 	}
 
-	// Token: 0x060121DF RID: 74207 RVA: 0x004732AE File Offset: 0x004714AE
+	// Token: 0x0600F68F RID: 63119 RVA: 0x0048042E File Offset: 0x0047E62E
 	private int CompareSortListItems(PayShopRecommendView.RecommendData a, PayShopRecommendView.RecommendData b)
 	{
 		if (a.HasBought == b.HasBought)
@@ -180,7 +180,7 @@ public class PayShopRecommendView : UiTabViewBase, IUiTabViewRefresh
 		return 1;
 	}
 
-	// Token: 0x060121E0 RID: 74208 RVA: 0x004732DC File Offset: 0x004714DC
+	// Token: 0x0600F690 RID: 63120 RVA: 0x0048045C File Offset: 0x0047E65C
 	protected override void OnAfterShow()
 	{
 		Log instance = Log.Instance;
@@ -191,7 +191,7 @@ public class PayShopRecommendView : UiTabViewBase, IUiTabViewRefresh
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060121E1 RID: 74209 RVA: 0x00473318 File Offset: 0x00471518
+	// Token: 0x0600F691 RID: 63121 RVA: 0x00480498 File Offset: 0x0047E698
 	private UniTask UpdateTabs()
 	{
 		PayShopRecommendView.<UpdateTabs>d__19 <UpdateTabs>d__;
@@ -202,7 +202,7 @@ public class PayShopRecommendView : UiTabViewBase, IUiTabViewRefresh
 		return <UpdateTabs>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060121E2 RID: 74210 RVA: 0x0047335B File Offset: 0x0047155B
+	// Token: 0x0600F692 RID: 63122 RVA: 0x004804DB File Offset: 0x0047E6DB
 	protected override void OnBeforeDestroy()
 	{
 		this.TabGroup.Destroy(null);
@@ -213,14 +213,14 @@ public class PayShopRecommendView : UiTabViewBase, IUiTabViewRefresh
 		}
 	}
 
-	// Token: 0x060121E3 RID: 74211 RVA: 0x00473383 File Offset: 0x00471583
+	// Token: 0x0600F693 RID: 63123 RVA: 0x00480503 File Offset: 0x0047E703
 	[NullableContext(2)]
 	public void RefreshView(object @params)
 	{
 		this.RefreshTab();
 	}
 
-	// Token: 0x040088FF RID: 35071
+	// Token: 0x04008A44 RID: 35396
 	[Nullable(new byte[]
 	{
 		2,
@@ -228,57 +228,57 @@ public class PayShopRecommendView : UiTabViewBase, IUiTabViewRefresh
 	})]
 	protected TabComponent<PayShopRecommendSwitchItem> TabGroup;
 
-	// Token: 0x04008900 RID: 35072
+	// Token: 0x04008A45 RID: 35397
 	[Nullable(2)]
 	protected TabViewComponent<int> TabViewComponent;
 
-	// Token: 0x04008901 RID: 35073
+	// Token: 0x04008A46 RID: 35398
 	protected int CurrentSelectTabId;
 
-	// Token: 0x04008902 RID: 35074
+	// Token: 0x04008A47 RID: 35399
 	private double LastUpdateTime;
 
-	// Token: 0x04008903 RID: 35075
+	// Token: 0x04008A48 RID: 35400
 	private readonly List<PayShopRecommendView.RecommendData> TabRecommendData = new List<PayShopRecommendView.RecommendData>();
 
-	// Token: 0x02008907 RID: 35079
+	// Token: 0x02007A91 RID: 31377
 	[NullableContext(0)]
 	public enum EPayShopRecommendViewDefine
 	{
-		// Token: 0x0402C871 RID: 182385
+		// Token: 0x04027B89 RID: 162697
 		GroupScroller,
-		// Token: 0x0402C872 RID: 182386
+		// Token: 0x04027B8A RID: 162698
 		TabItem,
-		// Token: 0x0402C873 RID: 182387
+		// Token: 0x04027B8B RID: 162699
 		TabPanel,
-		// Token: 0x0402C874 RID: 182388
+		// Token: 0x04027B8C RID: 162700
 		PanelContent
 	}
 
-	// Token: 0x02008908 RID: 35080
+	// Token: 0x02007A92 RID: 31378
 	[Nullable(0)]
 	private class RecommendData
 	{
-		// Token: 0x0402C875 RID: 182389
+		// Token: 0x04027B8D RID: 162701
 		public EUiTabViewName? TabViewName;
 
-		// Token: 0x0402C876 RID: 182390
+		// Token: 0x04027B8E RID: 162702
 		[Nullable(2)]
 		public object Param;
 
-		// Token: 0x0402C877 RID: 182391
+		// Token: 0x04027B8F RID: 162703
 		public string TabName = string.Empty;
 
-		// Token: 0x0402C878 RID: 182392
+		// Token: 0x04027B90 RID: 162704
 		public int Id;
 
-		// Token: 0x0402C879 RID: 182393
+		// Token: 0x04027B91 RID: 162705
 		public int Sort;
 
-		// Token: 0x0402C87A RID: 182394
+		// Token: 0x04027B92 RID: 162706
 		public string TabImage = "";
 
-		// Token: 0x0402C87B RID: 182395
+		// Token: 0x04027B93 RID: 162707
 		public bool HasBought;
 	}
 }

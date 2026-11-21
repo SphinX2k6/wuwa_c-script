@@ -3,26 +3,26 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x0200720F RID: 29199
+	// Token: 0x020062C4 RID: 25284
 	[NullableContext(1)]
 	public interface IKuroLevelPlayPointLight
 	{
-		// Token: 0x17009E1D RID: 40477
-		// (get) Token: 0x060477A0 RID: 292768
-		// (set) Token: 0x060477A1 RID: 292769
+		// Token: 0x17007389 RID: 29577
+		// (get) Token: 0x0603D0B7 RID: 250039
+		// (set) Token: 0x0603D0B8 RID: 250040
 		float Radius { get; set; }
 
-		// Token: 0x17009E1E RID: 40478
-		// (get) Token: 0x060477A2 RID: 292770
-		// (set) Token: 0x060477A3 RID: 292771
+		// Token: 0x1700738A RID: 29578
+		// (get) Token: 0x0603D0B9 RID: 250041
+		// (set) Token: 0x0603D0BA RID: 250042
 		bool IsLit { get; set; }
 
-		// Token: 0x17009E1F RID: 40479
-		// (get) Token: 0x060477A4 RID: 292772
-		// (set) Token: 0x060477A5 RID: 292773
+		// Token: 0x1700738B RID: 29579
+		// (get) Token: 0x0603D0BB RID: 250043
+		// (set) Token: 0x0603D0BC RID: 250044
 		Vector Position { get; set; }
 
-		// Token: 0x060477A6 RID: 292774
+		// Token: 0x0603D0BD RID: 250045
 		bool Equals(IKuroLevelPlayPointLight b);
 	}
 }

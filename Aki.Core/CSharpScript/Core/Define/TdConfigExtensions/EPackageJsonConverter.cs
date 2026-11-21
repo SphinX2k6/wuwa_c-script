@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Core.Define.TdConfigExtensions
 {
-	// Token: 0x02000148 RID: 328
+	// Token: 0x0200014C RID: 332
 	public class EPackageJsonConverter : JsonConverter<EPackage>
 	{
-		// Token: 0x06000B85 RID: 2949 RVA: 0x00037888 File Offset: 0x00035A88
+		// Token: 0x06000BE1 RID: 3041 RVA: 0x00038458 File Offset: 0x00036658
 		public override EPackage Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return EPackageExtensions.FromString(@string);
 		}
 
-		// Token: 0x06000B86 RID: 2950 RVA: 0x000378AC File Offset: 0x00035AAC
+		// Token: 0x06000BE2 RID: 3042 RVA: 0x0003847C File Offset: 0x0003667C
 		public override void Write(Utf8JsonWriter writer, EPackage value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

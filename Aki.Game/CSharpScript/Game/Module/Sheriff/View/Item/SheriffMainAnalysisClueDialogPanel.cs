@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Item
 {
-	// Token: 0x02004C69 RID: 19561
+	// Token: 0x02003C1A RID: 15386
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffMainAnalysisClueDialogPanel : UiPanelBase
 	{
-		// Token: 0x06032912 RID: 207122 RVA: 0x00BC8E14 File Offset: 0x00BC7014
+		// Token: 0x060276C5 RID: 161477 RVA: 0x00B0DA78 File Offset: 0x00B0BC78
 		public SheriffMainAnalysisClueDialogPanel(SheriffMainProxy proxy)
 		{
 			this.Proxy = proxy;
 		}
 
-		// Token: 0x06032913 RID: 207123 RVA: 0x00BC8E24 File Offset: 0x00BC7024
+		// Token: 0x060276C6 RID: 161478 RVA: 0x00B0DA88 File Offset: 0x00B0BC88
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06032914 RID: 207124 RVA: 0x00BC8FD8 File Offset: 0x00BC71D8
+		// Token: 0x060276C7 RID: 161479 RVA: 0x00B0DC3C File Offset: 0x00B0BE3C
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -71,19 +71,19 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			base.SetTextureByPath(resourcePath, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x06032915 RID: 207125 RVA: 0x00BC9064 File Offset: 0x00BC7264
+		// Token: 0x060276C8 RID: 161480 RVA: 0x00B0DCC8 File Offset: 0x00B0BEC8
 		public void RefreshTitleText(string text)
 		{
 			base.GetText(3).ShowTextNew(text);
 		}
 
-		// Token: 0x06032916 RID: 207126 RVA: 0x00BC9073 File Offset: 0x00BC7273
+		// Token: 0x060276C9 RID: 161481 RVA: 0x00B0DCD7 File Offset: 0x00B0BED7
 		public void RefreshDialogText(string text)
 		{
 			base.GetText(4).ShowTextNew(text);
 		}
 
-		// Token: 0x06032917 RID: 207127 RVA: 0x00BC9084 File Offset: 0x00BC7284
+		// Token: 0x060276CA RID: 161482 RVA: 0x00B0DCE8 File Offset: 0x00B0BEE8
 		public void RefreshDialogPanel(EClueState state)
 		{
 			base.GetSprite(8).SetUIActive(state == EClueState.Success);
@@ -112,32 +112,32 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x06032918 RID: 207128 RVA: 0x00BC9158 File Offset: 0x00BC7358
+		// Token: 0x060276CB RID: 161483 RVA: 0x00B0DDBC File Offset: 0x00B0BFBC
 		public void RefreshNextBtnText(bool isEnding)
 		{
 			string textId = isEnding ? "Inference_Desc_21" : "Inference_Desc_12";
 			this.NextBtn.SetLocalTextNew(textId, Array.Empty<object>());
 		}
 
-		// Token: 0x06032919 RID: 207129 RVA: 0x00BC9186 File Offset: 0x00BC7386
+		// Token: 0x060276CC RID: 161484 RVA: 0x00B0DDEA File Offset: 0x00B0BFEA
 		public void SetNextQuestionIdOrEnding(ISheriffQuestionResultJsonConfig config)
 		{
 			this.QuestionConfig = config;
 		}
 
-		// Token: 0x0603291A RID: 207130 RVA: 0x00BC918F File Offset: 0x00BC738F
+		// Token: 0x060276CD RID: 161485 RVA: 0x00B0DDF3 File Offset: 0x00B0BFF3
 		private void OnClickBtnLeft()
 		{
 			this.Proxy.DoAfterAnalysisClueLogic(true, null);
 		}
 
-		// Token: 0x0603291B RID: 207131 RVA: 0x00BC919E File Offset: 0x00BC739E
+		// Token: 0x060276CE RID: 161486 RVA: 0x00B0DE02 File Offset: 0x00B0C002
 		private void OnClickBtnRight(int data)
 		{
 			this.Proxy.DoAfterAnalysisClueLogic(false, this.QuestionConfig);
 		}
 
-		// Token: 0x0603291C RID: 207132 RVA: 0x00BC91B2 File Offset: 0x00BC73B2
+		// Token: 0x060276CF RID: 161487 RVA: 0x00B0DE16 File Offset: 0x00B0C016
 		private void OnClickBtnNextPage()
 		{
 			Action refreshDialogCallback = this.RefreshDialogCallback;
@@ -148,53 +148,53 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			refreshDialogCallback();
 		}
 
-		// Token: 0x0401AE8B RID: 110219
+		// Token: 0x040157E8 RID: 88040
 		protected SheriffMainProxy Proxy;
 
-		// Token: 0x0401AE8C RID: 110220
+		// Token: 0x040157E9 RID: 88041
 		[Nullable(2)]
 		public Action RefreshDialogCallback;
 
-		// Token: 0x0401AE8D RID: 110221
+		// Token: 0x040157EA RID: 88042
 		[Nullable(2)]
 		protected ButtonItem NextBtn;
 
-		// Token: 0x0401AE8E RID: 110222
+		// Token: 0x040157EB RID: 88043
 		[Nullable(2)]
 		protected ISheriffQuestionResultJsonConfig QuestionConfig;
 
-		// Token: 0x0401AE8F RID: 110223
+		// Token: 0x040157EC RID: 88044
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200AE1C RID: 44572
+		// Token: 0x0200983A RID: 38970
 		[NullableContext(0)]
 		private static class EDialogDefine
 		{
-			// Token: 0x04034E0A RID: 216586
+			// Token: 0x0402F7AF RID: 194479
 			public const int TexRole = 0;
 
-			// Token: 0x04034E0B RID: 216587
+			// Token: 0x0402F7B0 RID: 194480
 			public const int BtnNextPage = 1;
 
-			// Token: 0x04034E0C RID: 216588
+			// Token: 0x0402F7B1 RID: 194481
 			public const int PanelTitle = 2;
 
-			// Token: 0x04034E0D RID: 216589
+			// Token: 0x0402F7B2 RID: 194482
 			public const int TxtTitle = 3;
 
-			// Token: 0x04034E0E RID: 216590
+			// Token: 0x0402F7B3 RID: 194483
 			public const int TxtList = 4;
 
-			// Token: 0x04034E0F RID: 216591
+			// Token: 0x0402F7B4 RID: 194484
 			public const int PanelBtn = 5;
 
-			// Token: 0x04034E10 RID: 216592
+			// Token: 0x0402F7B5 RID: 194485
 			public const int BtnLeft = 6;
 
-			// Token: 0x04034E11 RID: 216593
+			// Token: 0x0402F7B6 RID: 194486
 			public const int BtnRight = 7;
 
-			// Token: 0x04034E12 RID: 216594
+			// Token: 0x0402F7B7 RID: 194487
 			public const int SpriteArrow = 8;
 		}
 	}

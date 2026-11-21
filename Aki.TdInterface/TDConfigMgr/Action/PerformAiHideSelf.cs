@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020FA RID: 8442
+	// Token: 0x0200235B RID: 9051
 	public class PerformAiHideSelf : ActionParams
 	{
-		// Token: 0x0600B9C0 RID: 47552 RVA: 0x001AD762 File Offset: 0x001AB962
-		[NullableContext(1)]
+		// Token: 0x0600C54C RID: 50508 RVA: 0x001C48C2 File Offset: 0x001C2AC2
 		public static PerformAiHideSelf Create([Nullable(2)] PerformAiHideSelf instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x04006F40 RID: 28480
+		// Token: 0x04007574 RID: 30068
 		[Nullable(2)]
 		protected new PerformAiHideSelf FbInstance;
 	}

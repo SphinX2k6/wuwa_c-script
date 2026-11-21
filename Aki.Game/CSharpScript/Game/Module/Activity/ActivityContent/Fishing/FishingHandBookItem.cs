@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006613 RID: 26131
+	// Token: 0x02005591 RID: 21905
 	public class FishingHandBookItem : GridProxyAbstract<int>
 	{
-		// Token: 0x060417BF RID: 268223 RVA: 0x00FDC734 File Offset: 0x00FDA934
+		// Token: 0x06036484 RID: 222340 RVA: 0x00F237C0 File Offset: 0x00F219C0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060417C0 RID: 268224 RVA: 0x00FDC860 File Offset: 0x00FDAA60
+		// Token: 0x06036485 RID: 222341 RVA: 0x00F238EC File Offset: 0x00F21AEC
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.ItemId = data;
@@ -76,13 +76,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetItem(3).SetUIActive(false);
 		}
 
-		// Token: 0x060417C1 RID: 268225 RVA: 0x00FDC9E8 File Offset: 0x00FDABE8
+		// Token: 0x06036486 RID: 222342 RVA: 0x00F23A74 File Offset: 0x00F21C74
 		public override void Clear()
 		{
 			EventSystem.Instance.Emit<string>(EEventName.FinishGuideStepByEvent, "FishingHandBookItem");
 		}
 
-		// Token: 0x060417C2 RID: 268226 RVA: 0x00FDC9FF File Offset: 0x00FDABFF
+		// Token: 0x06036487 RID: 222343 RVA: 0x00F23A8B File Offset: 0x00F21C8B
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			Action<int, UUIExtendToggle, int> onClickToggleCallBack = this.OnClickToggleCallBack;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			onClickToggleCallBack(this.ItemId, base.GetExtendToggle(0), base.GridIndex);
 		}
 
-		// Token: 0x060417C3 RID: 268227 RVA: 0x00FDCA24 File Offset: 0x00FDAC24
+		// Token: 0x06036488 RID: 222344 RVA: 0x00F23AB0 File Offset: 0x00F21CB0
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetItem(3).SetUIActive(false);
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, true, false, false);
 		}
 
-		// Token: 0x060417C4 RID: 268228 RVA: 0x00FDCA48 File Offset: 0x00FDAC48
+		// Token: 0x06036489 RID: 222345 RVA: 0x00F23AD4 File Offset: 0x00F21CD4
 		private void SetTextureMaterialActive(bool value)
 		{
 			if (value)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetTexture(4).SetCustomMaterialScalarParameter(FishingDefine.materialProgressName, 0f);
 		}
 
-		// Token: 0x0402213D RID: 139581
+		// Token: 0x0401CA6E RID: 117358
 		[Nullable(new byte[]
 		{
 			2,
@@ -123,28 +123,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		public Action<int, UUIExtendToggle, int> OnClickToggleCallBack;
 
-		// Token: 0x0402213E RID: 139582
+		// Token: 0x0401CA6F RID: 117359
 		private int ItemId;
 
-		// Token: 0x0200C822 RID: 51234
+		// Token: 0x0200B205 RID: 45573
 		private class EComponentDefine
 		{
-			// Token: 0x0403C716 RID: 247574
+			// Token: 0x0403705E RID: 225374
 			public const int Toggle = 0;
 
-			// Token: 0x0403C717 RID: 247575
+			// Token: 0x0403705F RID: 225375
 			public const int ItemSmallItem = 1;
 
-			// Token: 0x0403C718 RID: 247576
+			// Token: 0x04037060 RID: 225376
 			public const int NameText = 2;
 
-			// Token: 0x0403C719 RID: 247577
+			// Token: 0x04037061 RID: 225377
 			public const int NewItem = 3;
 
-			// Token: 0x0403C71A RID: 247578
+			// Token: 0x04037062 RID: 225378
 			public const int FishItemTexture = 4;
 
-			// Token: 0x0403C71B RID: 247579
+			// Token: 0x04037063 RID: 225379
 			public const int QualitySprite = 5;
 		}
 	}

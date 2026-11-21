@@ -9,12 +9,12 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006AEA RID: 27370
+	// Token: 0x02005C62 RID: 23650
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelListenerUtils
 	{
-		// Token: 0x06043FC3 RID: 278467 RVA: 0x010ADA54 File Offset: 0x010ABC54
+		// Token: 0x0603A115 RID: 237845 RVA: 0x010572D0 File Offset: 0x010554D0
 		private static List<FieldInfo> GetAllFields(Type type)
 		{
 			List<FieldInfo> list = new List<FieldInfo>();
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			return list;
 		}
 
-		// Token: 0x06043FC4 RID: 278468 RVA: 0x010ADAD8 File Offset: 0x010ABCD8
+		// Token: 0x0603A116 RID: 237846 RVA: 0x01057354 File Offset: 0x01055554
 		public unsafe static bool ClearListener<[Nullable(0)] T>(T listener, T listenerTemplate) where T : LevelListenerBase
 		{
 			foreach (FieldInfo fieldInfo in LevelListenerUtils.GetAllFields(listener.GetType()))
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			return true;
 		}
 
-		// Token: 0x06043FC5 RID: 278469 RVA: 0x010ADC30 File Offset: 0x010ABE30
+		// Token: 0x0603A117 RID: 237847 RVA: 0x010574AC File Offset: 0x010556AC
 		[NullableContext(2)]
 		private static bool ClearObject(object obj)
 		{

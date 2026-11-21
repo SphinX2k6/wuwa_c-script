@@ -2,8 +2,8 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001DBF RID: 7615
-// (Invoke) Token: 0x0600E76F RID: 59247
+// Token: 0x02001281 RID: 4737
+// (Invoke) Token: 0x0600BB8D RID: 48013
 [return: Nullable(new byte[]
 {
 	2,

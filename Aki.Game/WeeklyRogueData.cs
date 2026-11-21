@@ -5,24 +5,24 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002D5D RID: 11613
+// Token: 0x020022B7 RID: 8887
 [NullableContext(1)]
 [Nullable(0)]
 public class WeeklyRogueData : ActivityBaseData
 {
-	// Token: 0x060186B8 RID: 100024 RVA: 0x00637FA2 File Offset: 0x006361A2
+	// Token: 0x06015F5A RID: 89946 RVA: 0x0065DFB2 File Offset: 0x0065C1B2
 	public override bool GetExDataRedPointShowState()
 	{
 		return false;
 	}
 
-	// Token: 0x060186B9 RID: 100025 RVA: 0x00637FA5 File Offset: 0x006361A5
+	// Token: 0x06015F5B RID: 89947 RVA: 0x0065DFB5 File Offset: 0x0065C1B5
 	public bool GetRogueRedDotState()
 	{
 		return this.CheckIfInShowTime() && (this.HasScoreRewardEnable() || this.HasNewCycle());
 	}
 
-	// Token: 0x060186BA RID: 100026 RVA: 0x00637FC4 File Offset: 0x006361C4
+	// Token: 0x06015F5C RID: 89948 RVA: 0x0065DFD4 File Offset: 0x0065C1D4
 	public bool SaveFirstCheckRedDotState()
 	{
 		if (ActivityModel.Instance.GetActivityCacheData(base.Id, 0, this.CycleId, 0, 0) == 1)
@@ -35,13 +35,13 @@ public class WeeklyRogueData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x060186BB RID: 100027 RVA: 0x00638031 File Offset: 0x00636231
+	// Token: 0x06015F5D RID: 89949 RVA: 0x0065E041 File Offset: 0x0065C241
 	public bool HasNewCycle()
 	{
 		return base.GetPreGuideQuestFinishState() && !this.IsScoreRewardAllReceive() && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, this.CycleId, 0, 0) == 0;
 	}
 
-	// Token: 0x060186BC RID: 100028 RVA: 0x00638064 File Offset: 0x00636264
+	// Token: 0x06015F5E RID: 89950 RVA: 0x0065E074 File Offset: 0x0065C274
 	public bool HasScoreRewardEnable()
 	{
 		if (this.AwardsInfoList == null)
@@ -61,7 +61,7 @@ public class WeeklyRogueData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x060186BD RID: 100029 RVA: 0x006380C8 File Offset: 0x006362C8
+	// Token: 0x06015F5F RID: 89951 RVA: 0x0065E0D8 File Offset: 0x0065C2D8
 	public bool IsScoreRewardAllDone()
 	{
 		if (this.AwardsInfoList == null)
@@ -81,7 +81,7 @@ public class WeeklyRogueData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x060186BE RID: 100030 RVA: 0x0063812C File Offset: 0x0063632C
+	// Token: 0x06015F60 RID: 89952 RVA: 0x0065E13C File Offset: 0x0065C33C
 	public bool IsScoreRewardAllReceive()
 	{
 		if (this.AwardsInfoList == null)
@@ -101,7 +101,7 @@ public class WeeklyRogueData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x060186BF RID: 100031 RVA: 0x00638190 File Offset: 0x00636390
+	// Token: 0x06015F61 RID: 89953 RVA: 0x0065E1A0 File Offset: 0x0065C3A0
 	public void SetScoreRewardState(int id, SignState state)
 	{
 		if (this.AwardsInfoList == null)
@@ -118,7 +118,7 @@ public class WeeklyRogueData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060186C0 RID: 100032 RVA: 0x006381F8 File Offset: 0x006363F8
+	// Token: 0x06015F62 RID: 89954 RVA: 0x0065E208 File Offset: 0x0065C408
 	public EActivityRewardState GetScoreRewardStateById(int id)
 	{
 		RogueWeeklyAward rogueWeeklyAward = null;
@@ -144,7 +144,7 @@ public class WeeklyRogueData : ActivityBaseData
 		return EActivityRewardState.Enable;
 	}
 
-	// Token: 0x060186C1 RID: 100033 RVA: 0x00638278 File Offset: 0x00636478
+	// Token: 0x06015F63 RID: 89955 RVA: 0x0065E288 File Offset: 0x0065C488
 	public RogueWeeklyCycle? GetCycleConfig()
 	{
 		RogueWeeklyCycle? rogueWeeklyCycleConfig = WeeklyRogueConfig.Instance.GetRogueWeeklyCycleConfig(this.CycleId);
@@ -155,13 +155,13 @@ public class WeeklyRogueData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x060186C2 RID: 100034 RVA: 0x006382B5 File Offset: 0x006364B5
+	// Token: 0x06015F64 RID: 89956 RVA: 0x0065E2C5 File Offset: 0x0065C4C5
 	public double GetCycleRemainTime()
 	{
 		return (double)base.EndShowTime - Time.Instance.ServerTimeStamp / 1000.0;
 	}
 
-	// Token: 0x060186C3 RID: 100035 RVA: 0x006382D4 File Offset: 0x006364D4
+	// Token: 0x06015F65 RID: 89957 RVA: 0x0065E2E4 File Offset: 0x0065C4E4
 	public int GetCycleBlackFlowerCost()
 	{
 		if (this.FreeCount > 0)
@@ -215,7 +215,7 @@ public class WeeklyRogueData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x060186C4 RID: 100036 RVA: 0x006383DC File Offset: 0x006365DC
+	// Token: 0x06015F66 RID: 89958 RVA: 0x0065E3EC File Offset: 0x0065C5EC
 	public int GetLvInfo()
 	{
 		RogueWeeklyCycle? cycleConfig = this.GetCycleConfig();
@@ -265,7 +265,7 @@ public class WeeklyRogueData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x060186C5 RID: 100037 RVA: 0x006384D8 File Offset: 0x006366D8
+	// Token: 0x06015F67 RID: 89959 RVA: 0x0065E4E8 File Offset: 0x0065C6E8
 	public int GetScoreRate()
 	{
 		RogueWeeklyCycle? cycleConfig = this.GetCycleConfig();
@@ -276,7 +276,7 @@ public class WeeklyRogueData : ActivityBaseData
 		return (int)Math.Round((double)cycleConfig.Value.ScoreRate / 100.0);
 	}
 
-	// Token: 0x060186C6 RID: 100038 RVA: 0x00638518 File Offset: 0x00636718
+	// Token: 0x06015F68 RID: 89960 RVA: 0x0065E528 File Offset: 0x0065C728
 	public CommonDefine.ICountDown GetCycleCountDownData()
 	{
 		double num = this.GetCycleRemainTime();
@@ -289,7 +289,7 @@ public class WeeklyRogueData : ActivityBaseData
 		return TimeUtil.Instance.GetCountDownDataFormat2(num, new CommonDefine.ETimeType?(value), new CommonDefine.ETimeType?(value2));
 	}
 
-	// Token: 0x060186C7 RID: 100039 RVA: 0x0063859C File Offset: 0x0063679C
+	// Token: 0x06015F69 RID: 89961 RVA: 0x0065E5AC File Offset: 0x0065C7AC
 	public void OnQuestStateChange(int questId, QuestState state)
 	{
 		if (this.LocalConfig == null)
@@ -319,7 +319,7 @@ public class WeeklyRogueData : ActivityBaseData
 		EventSystem.Instance.Emit(EEventName.WeeklyRogueRedDotInfoRefresh);
 	}
 
-	// Token: 0x060186C8 RID: 100040 RVA: 0x00638614 File Offset: 0x00636814
+	// Token: 0x06015F6A RID: 89962 RVA: 0x0065E624 File Offset: 0x0065C824
 	protected override void PhraseEx(ActivityData data)
 	{
 		RogueWeeklyData rogueWeeklyData = data.RogueWeeklyData;
@@ -351,7 +351,7 @@ public class WeeklyRogueData : ActivityBaseData
 		EventSystem.Instance.Emit(EEventName.WeeklyRogueRedDotInfoRefresh);
 	}
 
-	// Token: 0x060186C9 RID: 100041 RVA: 0x00638738 File Offset: 0x00636938
+	// Token: 0x06015F6B RID: 89963 RVA: 0x0065E748 File Offset: 0x0065C948
 	protected override bool GetExDataFinishShowState()
 	{
 		if (!base.IsUnLock())
@@ -379,14 +379,14 @@ public class WeeklyRogueData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x0400B50A RID: 46346
+	// Token: 0x0400B87F RID: 47231
 	public int Score;
 
-	// Token: 0x0400B50B RID: 46347
+	// Token: 0x0400B880 RID: 47232
 	[Nullable(2)]
 	public RogueWeeklyLastInfo LastInstInfo;
 
-	// Token: 0x0400B50C RID: 46348
+	// Token: 0x0400B881 RID: 47233
 	[Nullable(new byte[]
 	{
 		2,
@@ -394,15 +394,15 @@ public class WeeklyRogueData : ActivityBaseData
 	})]
 	public List<RogueWeeklyAward> AwardsInfoList;
 
-	// Token: 0x0400B50D RID: 46349
+	// Token: 0x0400B882 RID: 47234
 	public int CycleId;
 
-	// Token: 0x0400B50E RID: 46350
+	// Token: 0x0400B883 RID: 47235
 	public int WorldLevel;
 
-	// Token: 0x0400B50F RID: 46351
+	// Token: 0x0400B884 RID: 47236
 	public int FreeCount;
 
-	// Token: 0x0400B510 RID: 46352
+	// Token: 0x0400B885 RID: 47237
 	public int FreeCountMax;
 }

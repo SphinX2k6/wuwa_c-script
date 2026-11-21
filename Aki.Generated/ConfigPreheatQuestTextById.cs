@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000759 RID: 1881
+	// Token: 0x02000771 RID: 1905
 	public class ConfigPreheatQuestTextById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002C27 RID: 11303 RVA: 0x00152E8B File Offset: 0x0015108B
+		// Token: 0x06002CB7 RID: 11447 RVA: 0x00159907 File Offset: 0x00157B07
 		static ConfigPreheatQuestTextById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPreheatQuestTextById.CreateStaticDefaultValue), new Action(ConfigPreheatQuestTextById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002C28 RID: 11304 RVA: 0x00152EAC File Offset: 0x001510AC
+		// Token: 0x06002CB8 RID: 11448 RVA: 0x00159928 File Offset: 0x00157B28
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPreheatQuestTextById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002C29 RID: 11305 RVA: 0x00152F2B File Offset: 0x0015112B
+		// Token: 0x06002CB9 RID: 11449 RVA: 0x001599A7 File Offset: 0x00157BA7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPreheatQuestTextById.LogPair = null;
 			ConfigPreheatQuestTextById.HandleId = 0;
 		}
 
-		// Token: 0x06002C2A RID: 11306 RVA: 0x00152F39 File Offset: 0x00151139
+		// Token: 0x06002CBA RID: 11450 RVA: 0x001599B5 File Offset: 0x00157BB5
 		public static void Init()
 		{
 			ConfigPreheatQuestTextById.HandleId = ConfigCommon.InitDataStatement(ConfigPreheatQuestTextById.HandleId, "db_preheat.db", "select BinData from `PreheatQuestText` where Id=?");
 		}
 
-		// Token: 0x06002C2B RID: 11307 RVA: 0x00152F54 File Offset: 0x00151154
+		// Token: 0x06002CBB RID: 11451 RVA: 0x001599D0 File Offset: 0x00157BD0
 		public static PreheatQuestText? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPreheatQuestTextById.HandleId, ConfigPreheatQuestTextById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PreheatQuestText?(rootAsPreheatQuestText);
 		}
 
-		// Token: 0x04003355 RID: 13141
+		// Token: 0x040033FD RID: 13309
 		private const string DB = "db_preheat.db";
 
-		// Token: 0x04003356 RID: 13142
+		// Token: 0x040033FE RID: 13310
 		private const string FILE = "y.预热签到活动.xlsx";
 
-		// Token: 0x04003357 RID: 13143
+		// Token: 0x040033FF RID: 13311
 		private const string TABLE = "PreheatQuestText";
 
-		// Token: 0x04003358 RID: 13144
+		// Token: 0x04003400 RID: 13312
 		private const string COMMAND = "select BinData from `PreheatQuestText` where Id=?";
 
-		// Token: 0x04003359 RID: 13145
+		// Token: 0x04003401 RID: 13313
 		private const string KEY_PREFIX = "PreheatQuestTextById";
 
-		// Token: 0x0400335A RID: 13146
+		// Token: 0x04003402 RID: 13314
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400335B RID: 13147
+		// Token: 0x04003403 RID: 13315
 		private static int HandleId;
 	}
 }

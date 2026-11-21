@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.GameMainView.TrapDefense
 {
-	// Token: 0x020059FF RID: 23039
+	// Token: 0x020049DB RID: 18907
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TrapDefenseCountDownTipsData : ITrapDefenseCountDownTipsData
 	{
-		// Token: 0x17008BAD RID: 35757
-		// (get) Token: 0x0603A60B RID: 239115 RVA: 0x00DE3ECD File Offset: 0x00DE20CD
-		// (set) Token: 0x0603A60C RID: 239116 RVA: 0x00DE3ED5 File Offset: 0x00DE20D5
+		// Token: 0x17005F7B RID: 24443
+		// (get) Token: 0x0602F554 RID: 193876 RVA: 0x00D3441D File Offset: 0x00D3261D
+		// (set) Token: 0x0602F555 RID: 193877 RVA: 0x00D34425 File Offset: 0x00D32625
 		public float CountDownTime { get; set; }
 
-		// Token: 0x17008BAE RID: 35758
-		// (get) Token: 0x0603A60D RID: 239117 RVA: 0x00DE3EDE File Offset: 0x00DE20DE
-		// (set) Token: 0x0603A60E RID: 239118 RVA: 0x00DE3EE6 File Offset: 0x00DE20E6
+		// Token: 0x17005F7C RID: 24444
+		// (get) Token: 0x0602F556 RID: 193878 RVA: 0x00D3442E File Offset: 0x00D3262E
+		// (set) Token: 0x0602F557 RID: 193879 RVA: 0x00D34436 File Offset: 0x00D32636
 		public Action Callback { get; set; }
 	}
 }

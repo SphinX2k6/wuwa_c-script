@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200181A RID: 6170
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019A5 RID: 6565
 	public class IBubbleCylinderConfig
 	{
-		// Token: 0x0600846B RID: 33899 RVA: 0x0013B76C File Offset: 0x0013996C
+		// Token: 0x06008B91 RID: 35729 RVA: 0x0014AF60 File Offset: 0x00149160
 		private IBubbleCylinderConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600846C RID: 33900 RVA: 0x0013B7A4 File Offset: 0x001399A4
+		// Token: 0x06008B92 RID: 35730 RVA: 0x0014AF98 File Offset: 0x00149198
 		public static IBubbleCylinderConfig Create([Nullable(2)] IBubbleCylinderConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600846D RID: 33901 RVA: 0x0013B7B7 File Offset: 0x001399B7
+		// Token: 0x06008B93 RID: 35731 RVA: 0x0014AFAB File Offset: 0x001491AB
 		public static IBubbleCylinderConfig CreateFromSetValue([Nullable(2)] IBubbleCylinderConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600846E RID: 33902 RVA: 0x0013B7CA File Offset: 0x001399CA
+		// Token: 0x06008B94 RID: 35732 RVA: 0x0014AFBE File Offset: 0x001491BE
 		public IBubbleCylinderConfig_SetValue ToSetValue()
 		{
 			return new IBubbleCylinderConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B63 RID: 11107
-		// (get) Token: 0x0600846F RID: 33903 RVA: 0x0013B7E9 File Offset: 0x001399E9
-		// (set) Token: 0x06008470 RID: 33904 RVA: 0x0013B818 File Offset: 0x00139A18
+		// Token: 0x17002D5D RID: 11613
+		// (get) Token: 0x06008B95 RID: 35733 RVA: 0x0014AFDD File Offset: 0x001491DD
+		// (set) Token: 0x06008B96 RID: 35734 RVA: 0x0014B00C File Offset: 0x0014920C
 		public virtual float Radius
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B64 RID: 11108
-		// (get) Token: 0x06008471 RID: 33905 RVA: 0x0013B826 File Offset: 0x00139A26
-		// (set) Token: 0x06008472 RID: 33906 RVA: 0x0013B855 File Offset: 0x00139A55
+		// Token: 0x17002D5E RID: 11614
+		// (get) Token: 0x06008B97 RID: 35735 RVA: 0x0014B01A File Offset: 0x0014921A
+		// (set) Token: 0x06008B98 RID: 35736 RVA: 0x0014B049 File Offset: 0x00149249
 		public virtual float Height
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040053CE RID: 21454
+		// Token: 0x0400581A RID: 22554
 		[Nullable(2)]
 		protected IBubbleCylinderConfig FbInstance;
 
-		// Token: 0x040053CF RID: 21455
+		// Token: 0x0400581B RID: 22555
 		[Nullable(2)]
 		protected IBubbleCylinderConfig_SetValue PocoInterface;
 	}

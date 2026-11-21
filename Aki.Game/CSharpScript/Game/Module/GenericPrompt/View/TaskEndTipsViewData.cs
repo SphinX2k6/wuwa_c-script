@@ -5,17 +5,17 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.GenericPrompt.View
 {
-	// Token: 0x020059AE RID: 22958
+	// Token: 0x02004987 RID: 18823
 	public class TaskEndTipsViewData : UiViewData
 	{
-		// Token: 0x0401E5ED RID: 124397
+		// Token: 0x0401908B RID: 102539
 		public EQuestCommonTipType QuestType;
 
-		// Token: 0x0401E5EE RID: 124398
+		// Token: 0x0401908C RID: 102540
 		[Nullable(1)]
 		public string TipTextKey = "";
 
-		// Token: 0x0401E5EF RID: 124399
+		// Token: 0x0401908D RID: 102541
 		public int? Duration;
 	}
 }

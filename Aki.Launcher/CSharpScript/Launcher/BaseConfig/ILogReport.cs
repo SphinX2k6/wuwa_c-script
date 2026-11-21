@@ -3,15 +3,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x02000263 RID: 611
+	// Token: 0x02000268 RID: 616
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ILogReport
 	{
-		// Token: 0x040009EC RID: 2540
+		// Token: 0x04000A38 RID: 2616
 		public string name;
 
-		// Token: 0x040009ED RID: 2541
+		// Token: 0x04000A39 RID: 2617
 		public string region;
 	}
 }

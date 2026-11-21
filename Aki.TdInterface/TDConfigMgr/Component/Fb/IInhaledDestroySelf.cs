@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D65 RID: 3429
+	// Token: 0x02000E5F RID: 3679
 	public class IInhaledDestroySelf : IInhaledPerResultType
 	{
-		// Token: 0x06004E10 RID: 19984 RVA: 0x000C1E55 File Offset: 0x000C0055
-		[NullableContext(1)]
+		// Token: 0x0600532C RID: 21292 RVA: 0x000CD599 File Offset: 0x000CB799
 		public static IInhaledDestroySelf Create(IInhaledDestroySelf? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001903 RID: 6403
-		// (get) Token: 0x06004E11 RID: 19985 RVA: 0x000C1E74 File Offset: 0x000C0074
+		// Token: 0x17001A69 RID: 6761
+		// (get) Token: 0x0600532D RID: 21293 RVA: 0x000CD5B8 File Offset: 0x000CB7B8
 		public override EInhaledPerResultType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CC0 RID: 11456
+		// Token: 0x04002F80 RID: 12160
 		private IInhaledDestroySelf Instance;
 	}
 }

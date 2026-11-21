@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003031 RID: 12337
+// Token: 0x02002587 RID: 9607
 [NullableContext(2)]
 [Nullable(0)]
 public class OnHitMaterialAction
 {
-	// Token: 0x0601A240 RID: 107072 RVA: 0x006DDCD4 File Offset: 0x006DBED4
+	// Token: 0x06017B9F RID: 97183 RVA: 0x007059DE File Offset: 0x00703BDE
 	[NullableContext(1)]
 	public OnHitMaterialAction(CharRenderingComponent RenderingCompInternal, [Nullable(2)] PawnTimeScaleComponent TimeScaleComp = null)
 	{
@@ -19,8 +19,8 @@ public class OnHitMaterialAction
 		this.TimeScaleComp = TimeScaleComp;
 	}
 
-	// Token: 0x170023F6 RID: 9206
-	// (get) Token: 0x0601A241 RID: 107073 RVA: 0x006DDCF8 File Offset: 0x006DBEF8
+	// Token: 0x170024DA RID: 9434
+	// (get) Token: 0x06017BA0 RID: 97184 RVA: 0x00705A02 File Offset: 0x00703C02
 	public bool IsPlaying
 	{
 		get
@@ -29,8 +29,8 @@ public class OnHitMaterialAction
 		}
 	}
 
-	// Token: 0x170023F7 RID: 9207
-	// (get) Token: 0x0601A242 RID: 107074 RVA: 0x006DDD00 File Offset: 0x006DBF00
+	// Token: 0x170024DB RID: 9435
+	// (get) Token: 0x06017BA1 RID: 97185 RVA: 0x00705A0A File Offset: 0x00703C0A
 	public long BulletId
 	{
 		get
@@ -39,8 +39,8 @@ public class OnHitMaterialAction
 		}
 	}
 
-	// Token: 0x170023F8 RID: 9208
-	// (get) Token: 0x0601A243 RID: 107075 RVA: 0x006DDD08 File Offset: 0x006DBF08
+	// Token: 0x170024DC RID: 9436
+	// (get) Token: 0x06017BA2 RID: 97186 RVA: 0x00705A12 File Offset: 0x00703C12
 	public int AttackerId
 	{
 		get
@@ -49,25 +49,25 @@ public class OnHitMaterialAction
 		}
 	}
 
-	// Token: 0x0601A244 RID: 107076 RVA: 0x006DDD10 File Offset: 0x006DBF10
+	// Token: 0x06017BA3 RID: 97187 RVA: 0x00705A1A File Offset: 0x00703C1A
 	public bool IsDelayFinish()
 	{
 		return this.ElapsedMs >= this.DelayMsInternal;
 	}
 
-	// Token: 0x0601A245 RID: 107077 RVA: 0x006DDD23 File Offset: 0x006DBF23
+	// Token: 0x06017BA4 RID: 97188 RVA: 0x00705A2D File Offset: 0x00703C2D
 	private bool IsFinish()
 	{
 		return (float)this.ElapsedMs > this.DurationMsInternal + (float)this.DelayMsInternal;
 	}
 
-	// Token: 0x0601A246 RID: 107078 RVA: 0x006DDD3C File Offset: 0x006DBF3C
+	// Token: 0x06017BA5 RID: 97189 RVA: 0x00705A46 File Offset: 0x00703C46
 	public bool ComparePriority(long bulletId, int attackerId)
 	{
 		return !this.IsBeginInternal || this.AttackerIdInternal == attackerId || SceneTeamModel.Instance.GetCurrentEntity.Id != this.AttackerIdInternal;
 	}
 
-	// Token: 0x0601A247 RID: 107079 RVA: 0x006DDD70 File Offset: 0x006DBF70
+	// Token: 0x06017BA6 RID: 97190 RVA: 0x00705A78 File Offset: 0x00703C78
 	[NullableContext(1)]
 	public void Start(string pathDp, int delay, long bulletId, int attackerId, [Nullable(2)] string pathPartDp = null)
 	{
@@ -89,7 +89,7 @@ public class OnHitMaterialAction
 		}
 	}
 
-	// Token: 0x0601A248 RID: 107080 RVA: 0x006DDE28 File Offset: 0x006DC028
+	// Token: 0x06017BA7 RID: 97191 RVA: 0x00705B30 File Offset: 0x00703D30
 	[NullableContext(1)]
 	private UniTask StartAsync(int id, string pathDp, [Nullable(2)] string pathPartDp)
 	{
@@ -104,7 +104,7 @@ public class OnHitMaterialAction
 		return <StartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601A249 RID: 107081 RVA: 0x006DDE84 File Offset: 0x006DC084
+	// Token: 0x06017BA8 RID: 97192 RVA: 0x00705B8C File Offset: 0x00703D8C
 	[NullableContext(1)]
 	private UniTask LoadDpAsset(string pathDp, [Nullable(new byte[]
 	{
@@ -122,7 +122,7 @@ public class OnHitMaterialAction
 		return <LoadDpAsset>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601A24A RID: 107082 RVA: 0x006DDED8 File Offset: 0x006DC0D8
+	// Token: 0x06017BA9 RID: 97193 RVA: 0x00705BE0 File Offset: 0x00703DE0
 	private void Loop(float deltaMs)
 	{
 		if (!this.RenderingCompInternal.IsValid())
@@ -147,7 +147,7 @@ public class OnHitMaterialAction
 		}
 	}
 
-	// Token: 0x0601A24B RID: 107083 RVA: 0x006DDF70 File Offset: 0x006DC170
+	// Token: 0x06017BAA RID: 97194 RVA: 0x00705C78 File Offset: 0x00703E78
 	private void RemoveTimer()
 	{
 		if (this.TimerHandle != null)
@@ -157,7 +157,7 @@ public class OnHitMaterialAction
 		this.TimerHandle = null;
 	}
 
-	// Token: 0x0601A24C RID: 107084 RVA: 0x006DDF94 File Offset: 0x006DC194
+	// Token: 0x06017BAB RID: 97195 RVA: 0x00705C9C File Offset: 0x00703E9C
 	private void Play(UObject assetDp, UObject assetPartDp, [Nullable(1)] string reason = "OnHitMaterialAction 开始播放")
 	{
 		this.IsPlayingInternal = true;
@@ -175,7 +175,7 @@ public class OnHitMaterialAction
 		}
 	}
 
-	// Token: 0x0601A24D RID: 107085 RVA: 0x006DDFE0 File Offset: 0x006DC1E0
+	// Token: 0x06017BAC RID: 97196 RVA: 0x00705CE8 File Offset: 0x00703EE8
 	public void Stop(bool force = false)
 	{
 		if (!this.RenderingCompInternal.IsValid())
@@ -198,7 +198,7 @@ public class OnHitMaterialAction
 		this.IsPlayingInternal = false;
 	}
 
-	// Token: 0x0601A24E RID: 107086 RVA: 0x006DE058 File Offset: 0x006DC258
+	// Token: 0x06017BAD RID: 97197 RVA: 0x00705D60 File Offset: 0x00703F60
 	private void Clear()
 	{
 		this.Handle = -1;
@@ -209,7 +209,7 @@ public class OnHitMaterialAction
 		this.RemoveTimer();
 	}
 
-	// Token: 0x0601A24F RID: 107087 RVA: 0x006DE083 File Offset: 0x006DC283
+	// Token: 0x06017BAE RID: 97198 RVA: 0x00705D8B File Offset: 0x00703F8B
 	public void Dispose()
 	{
 		this.Stop(true);
@@ -217,67 +217,67 @@ public class OnHitMaterialAction
 		this.RemoveTimer();
 	}
 
-	// Token: 0x0601A250 RID: 107088 RVA: 0x006DE098 File Offset: 0x006DC298
+	// Token: 0x06017BAF RID: 97199 RVA: 0x00705DA0 File Offset: 0x00703FA0
 	public void End()
 	{
 		this.IsBeginInternal = false;
 	}
 
-	// Token: 0x0400C67E RID: 50814
+	// Token: 0x0400CA4D RID: 51789
 	private const int MILLIONSECOND_PER_SECOND = 1000;
 
-	// Token: 0x0400C67F RID: 50815
+	// Token: 0x0400CA4E RID: 51790
 	private const int SECOND_TO_MILLISECOND = 1000;
 
-	// Token: 0x0400C680 RID: 50816
+	// Token: 0x0400CA4F RID: 51791
 	private TimerHandle TimerHandle;
 
-	// Token: 0x0400C681 RID: 50817
+	// Token: 0x0400CA50 RID: 51792
 	[Nullable(1)]
 	private readonly CharRenderingComponent RenderingCompInternal;
 
-	// Token: 0x0400C682 RID: 50818
+	// Token: 0x0400CA51 RID: 51793
 	private readonly PawnTimeScaleComponent TimeScaleComp;
 
-	// Token: 0x0400C683 RID: 50819
+	// Token: 0x0400CA52 RID: 51794
 	private const int INVALID_HANDLE = -1;
 
-	// Token: 0x0400C684 RID: 50820
+	// Token: 0x0400CA53 RID: 51795
 	private int Handle = -1;
 
-	// Token: 0x0400C685 RID: 50821
+	// Token: 0x0400CA54 RID: 51796
 	private int PartHandle = -1;
 
-	// Token: 0x0400C686 RID: 50822
+	// Token: 0x0400CA55 RID: 51797
 	private string PathDpInternal;
 
-	// Token: 0x0400C687 RID: 50823
+	// Token: 0x0400CA56 RID: 51798
 	private int ElapsedMs;
 
-	// Token: 0x0400C688 RID: 50824
+	// Token: 0x0400CA57 RID: 51799
 	private float DurationMsInternal;
 
-	// Token: 0x0400C689 RID: 50825
+	// Token: 0x0400CA58 RID: 51800
 	private int DelayMsInternal;
 
-	// Token: 0x0400C68A RID: 50826
+	// Token: 0x0400CA59 RID: 51801
 	private bool IsPlayingInternal;
 
-	// Token: 0x0400C68B RID: 50827
+	// Token: 0x0400CA5A RID: 51802
 	private long BulletIdInternal;
 
-	// Token: 0x0400C68C RID: 50828
+	// Token: 0x0400CA5B RID: 51803
 	private int AttackerIdInternal;
 
-	// Token: 0x0400C68D RID: 50829
+	// Token: 0x0400CA5C RID: 51804
 	private UObject AssetDpPreload;
 
-	// Token: 0x0400C68E RID: 50830
+	// Token: 0x0400CA5D RID: 51805
 	private UObject AssetPartDpPreload;
 
-	// Token: 0x0400C68F RID: 50831
+	// Token: 0x0400CA5E RID: 51806
 	private bool IsBeginInternal;
 
-	// Token: 0x0400C690 RID: 50832
+	// Token: 0x0400CA5F RID: 51807
 	private int IdInternal;
 }

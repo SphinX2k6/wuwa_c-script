@@ -9,17 +9,17 @@ using CSharpScript.Game.LevelGamePlay.Parkour;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059DA RID: 23002
+	// Token: 0x020049B3 RID: 18867
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ParkourBehaviorNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A4D6 RID: 238806 RVA: 0x00DDD767 File Offset: 0x00DDB967
+		// Token: 0x0602F3FE RID: 193534 RVA: 0x00D2CF87 File Offset: 0x00D2B187
 		public ParkourBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A4D7 RID: 238807 RVA: 0x00DDD77C File Offset: 0x00DDB97C
+		// Token: 0x0602F3FF RID: 193535 RVA: 0x00D2CF9C File Offset: 0x00D2B19C
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
 			IChildQuestBtNode childQuestBtNode = nodeConfig as IChildQuestBtNode;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A4D8 RID: 238808 RVA: 0x00DDD7DC File Offset: 0x00DDB9DC
+		// Token: 0x0602F400 RID: 193536 RVA: 0x00D2CFFC File Offset: 0x00D2B1FC
 		protected override void OnStart(ENodeStatusUpdateReason reason)
 		{
 			base.OnStart(reason);
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A4D9 RID: 238809 RVA: 0x00DDD830 File Offset: 0x00DDBA30
+		// Token: 0x0602F401 RID: 193537 RVA: 0x00D2D050 File Offset: 0x00D2B250
 		protected override void OnEnd(bool bFinished)
 		{
 			base.OnEnd(bFinished);
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			EventSystem.Instance.Remove<string, IReadOnlyDictionary<int, int>>(EEventName.ParkourFinished, new Action<string, IReadOnlyDictionary<int, int>>(this.HandleFinished));
 		}
 
-		// Token: 0x0603A4DA RID: 238810 RVA: 0x00DDD870 File Offset: 0x00DDBA70
+		// Token: 0x0602F402 RID: 193538 RVA: 0x00D2D090 File Offset: 0x00D2B290
 		private void HandleFinished(string config, IReadOnlyDictionary<int, int> totalScore)
 		{
 			if (string.IsNullOrEmpty(config))
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.SubmitNode(parkourExtraInfo);
 		}
 
-		// Token: 0x0603A4DB RID: 238811 RVA: 0x00DDD8E8 File Offset: 0x00DDBAE8
+		// Token: 0x0602F403 RID: 193539 RVA: 0x00D2D108 File Offset: 0x00D2B308
 		public override string GetCustomTrackText(string textTemplate)
 		{
 			int value = 0;
@@ -121,10 +121,10 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0401E654 RID: 124500
+		// Token: 0x040190F3 RID: 102643
 		private int ParkourId;
 
-		// Token: 0x0401E655 RID: 124501
+		// Token: 0x040190F4 RID: 102644
 		private List<IMatchRoleType> MatchRoleOption = new List<IMatchRoleType>();
 	}
 }

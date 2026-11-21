@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.Manufacture.Forging.View
 {
-	// Token: 0x02005652 RID: 22098
+	// Token: 0x02004628 RID: 17960
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,19 +14,19 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 	})]
 	public class ForgingMediumItemGrid : LoopScrollMediumItemGrid<IWeaponForgingData>
 	{
-		// Token: 0x060382F0 RID: 230128 RVA: 0x00D4FA57 File Offset: 0x00D4DC57
+		// Token: 0x0602D1EE RID: 184814 RVA: 0x00C9D7E3 File Offset: 0x00C9B9E3
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
 		}
 
-		// Token: 0x060382F1 RID: 230129 RVA: 0x00D4FA61 File Offset: 0x00D4DC61
+		// Token: 0x0602D1EF RID: 184815 RVA: 0x00C9D7ED File Offset: 0x00C9B9ED
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x060382F2 RID: 230130 RVA: 0x00D4FA6C File Offset: 0x00D4DC6C
+		// Token: 0x0602D1F0 RID: 184816 RVA: 0x00C9D7F8 File Offset: 0x00C9B9F8
 		protected override void OnRefresh(IWeaponForgingData data, bool isSelected, int gridIndex)
 		{
 			int itemId = data.ItemId;

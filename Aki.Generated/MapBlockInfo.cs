@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DEA RID: 3562
+	// Token: 0x02000ECF RID: 3791
 	public struct MapBlockInfo : IFlatbufferObject
 	{
-		// Token: 0x17001DD8 RID: 7640
-		// (get) Token: 0x060090B8 RID: 37048 RVA: 0x0027D8D4 File Offset: 0x0027BAD4
+		// Token: 0x17001E3C RID: 7740
+		// (get) Token: 0x060096D4 RID: 38612 RVA: 0x0029BB54 File Offset: 0x00299D54
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060090B9 RID: 37049 RVA: 0x0027D8E1 File Offset: 0x0027BAE1
+		// Token: 0x060096D5 RID: 38613 RVA: 0x0029BB61 File Offset: 0x00299D61
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060090BA RID: 37050 RVA: 0x0027D8E8 File Offset: 0x0027BAE8
+		// Token: 0x060096D6 RID: 38614 RVA: 0x0029BB68 File Offset: 0x00299D68
 		public static MapBlockInfo GetRootAsMapBlockInfo(ByteBuffer _bb)
 		{
 			return MapBlockInfo.GetRootAsMapBlockInfo(_bb, default(MapBlockInfo));
 		}
 
-		// Token: 0x060090BB RID: 37051 RVA: 0x0027D904 File Offset: 0x0027BB04
+		// Token: 0x060096D7 RID: 38615 RVA: 0x0029BB84 File Offset: 0x00299D84
 		public static MapBlockInfo GetRootAsMapBlockInfo(ByteBuffer _bb, MapBlockInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060090BC RID: 37052 RVA: 0x0027D921 File Offset: 0x0027BB21
+		// Token: 0x060096D8 RID: 38616 RVA: 0x0029BBA1 File Offset: 0x00299DA1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060090BD RID: 37053 RVA: 0x0027D930 File Offset: 0x0027BB30
+		// Token: 0x060096D9 RID: 38617 RVA: 0x0029BBB0 File Offset: 0x00299DB0
 		public MapBlockInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001DD9 RID: 7641
-		// (get) Token: 0x060090BE RID: 37054 RVA: 0x0027D940 File Offset: 0x0027BB40
+		// Token: 0x17001E3D RID: 7741
+		// (get) Token: 0x060096DA RID: 38618 RVA: 0x0029BBC0 File Offset: 0x00299DC0
 		public int BlockId
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001DDA RID: 7642
-		// (get) Token: 0x060090BF RID: 37055 RVA: 0x0027D97C File Offset: 0x0027BB7C
+		// Token: 0x17001E3E RID: 7742
+		// (get) Token: 0x060096DB RID: 38619 RVA: 0x0029BBFC File Offset: 0x00299DFC
 		public int MapId
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001DDB RID: 7643
-		// (get) Token: 0x060090C0 RID: 37056 RVA: 0x0027D9B8 File Offset: 0x0027BBB8
+		// Token: 0x17001E3F RID: 7743
+		// (get) Token: 0x060096DC RID: 38620 RVA: 0x0029BC38 File Offset: 0x00299E38
 		public string PakName
 		{
 			get
@@ -95,20 +95,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060090C1 RID: 37057 RVA: 0x0027D9EF File Offset: 0x0027BBEF
+		// Token: 0x060096DD RID: 38621 RVA: 0x0029BC6F File Offset: 0x00299E6F
 		public Span<byte> GetPakNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060090C2 RID: 37058 RVA: 0x0027D9FE File Offset: 0x0027BBFE
+		// Token: 0x060096DE RID: 38622 RVA: 0x0029BC7E File Offset: 0x00299E7E
 		public byte[] GetPakNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001DDC RID: 7644
-		// (get) Token: 0x060090C3 RID: 37059 RVA: 0x0027DA18 File Offset: 0x0027BC18
+		// Token: 0x17001E40 RID: 7744
+		// (get) Token: 0x060096DF RID: 38623 RVA: 0x0029BC98 File Offset: 0x00299E98
 		public string BlockDatalayer
 		{
 			get
@@ -122,20 +122,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060090C4 RID: 37060 RVA: 0x0027DA50 File Offset: 0x0027BC50
+		// Token: 0x060096E0 RID: 38624 RVA: 0x0029BCD0 File Offset: 0x00299ED0
 		public Span<byte> GetBlockDatalayerBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x060090C5 RID: 37061 RVA: 0x0027DA60 File Offset: 0x0027BC60
+		// Token: 0x060096E1 RID: 38625 RVA: 0x0029BCE0 File Offset: 0x00299EE0
 		public byte[] GetBlockDatalayerArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001DDD RID: 7645
-		// (get) Token: 0x060090C6 RID: 37062 RVA: 0x0027DA78 File Offset: 0x0027BC78
+		// Token: 0x17001E41 RID: 7745
+		// (get) Token: 0x060096E2 RID: 38626 RVA: 0x0029BCF8 File Offset: 0x00299EF8
 		public string RegionName
 		{
 			get
@@ -149,19 +149,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060090C7 RID: 37063 RVA: 0x0027DAB0 File Offset: 0x0027BCB0
+		// Token: 0x060096E3 RID: 38627 RVA: 0x0029BD30 File Offset: 0x00299F30
 		public Span<byte> GetRegionNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x060090C8 RID: 37064 RVA: 0x0027DAC0 File Offset: 0x0027BCC0
+		// Token: 0x060096E4 RID: 38628 RVA: 0x0029BD40 File Offset: 0x00299F40
 		public byte[] GetRegionNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x060090C9 RID: 37065 RVA: 0x0027DAD8 File Offset: 0x0027BCD8
+		// Token: 0x060096E5 RID: 38629 RVA: 0x0029BD58 File Offset: 0x00299F58
 		public IntVector2D? RegionBoxes(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -172,8 +172,8 @@ namespace Aki.Config
 			return new IntVector2D?(default(IntVector2D).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17001DDE RID: 7646
-		// (get) Token: 0x060090CA RID: 37066 RVA: 0x0027DB3C File Offset: 0x0027BD3C
+		// Token: 0x17001E42 RID: 7746
+		// (get) Token: 0x060096E6 RID: 38630 RVA: 0x0029BDBC File Offset: 0x00299FBC
 		public int RegionBoxesLength
 		{
 			get
@@ -187,24 +187,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060090CB RID: 37067 RVA: 0x0027DB68 File Offset: 0x0027BD68
+		// Token: 0x060096E7 RID: 38631 RVA: 0x0029BDE8 File Offset: 0x00299FE8
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RegionBoxesIter()或GetRegionBoxesBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly IntVector2D[] RegionBoxes()
+		public IntVector2D[] RegionBoxes()
 		{
 			return this.RegionBoxesIter().ToArray<IntVector2D>();
 		}
 
-		// Token: 0x060090CC RID: 37068 RVA: 0x0027DB75 File Offset: 0x0027BD75
+		// Token: 0x060096E8 RID: 38632 RVA: 0x0029BDF5 File Offset: 0x00299FF5
 		[NullableContext(1)]
-		public readonly IEnumerable<IntVector2D> RegionBoxesIter()
+		public IEnumerable<IntVector2D> RegionBoxesIter()
 		{
 			MapBlockInfo.<RegionBoxesIter>d__28 <RegionBoxesIter>d__ = new MapBlockInfo.<RegionBoxesIter>d__28(-2);
 			<RegionBoxesIter>d__.<>3__<>4__this = this;
 			return <RegionBoxesIter>d__;
 		}
 
-		// Token: 0x04004E86 RID: 20102
+		// Token: 0x0400546B RID: 21611
 		private Table __p;
 	}
 }

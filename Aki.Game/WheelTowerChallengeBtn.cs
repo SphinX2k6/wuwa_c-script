@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015BE RID: 5566
+// Token: 0x02000A76 RID: 2678
 public class WheelTowerChallengeBtn : UiPanelBase
 {
-	// Token: 0x06009DE0 RID: 40416 RVA: 0x00224F3C File Offset: 0x0022313C
+	// Token: 0x060071BE RID: 29118 RVA: 0x0022ECEC File Offset: 0x0022CEEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -33,7 +33,7 @@ public class WheelTowerChallengeBtn : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009DE1 RID: 40417 RVA: 0x00225024 File Offset: 0x00223224
+	// Token: 0x060071BF RID: 29119 RVA: 0x0022EDD4 File Offset: 0x0022CFD4
 	public void SetRedDotVisible(bool visible)
 	{
 		UUIItem item = base.GetItem(3);
@@ -44,7 +44,7 @@ public class WheelTowerChallengeBtn : UiPanelBase
 		item.SetUIActive(visible);
 	}
 
-	// Token: 0x06009DE2 RID: 40418 RVA: 0x00225038 File Offset: 0x00223238
+	// Token: 0x060071C0 RID: 29120 RVA: 0x0022EDE8 File Offset: 0x0022CFE8
 	public void SetEnableClick(bool state)
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -55,14 +55,14 @@ public class WheelTowerChallengeBtn : UiPanelBase
 		button.SetSelfInteractive(state);
 	}
 
-	// Token: 0x06009DE3 RID: 40419 RVA: 0x0022504C File Offset: 0x0022324C
+	// Token: 0x060071C1 RID: 29121 RVA: 0x0022EDFC File Offset: 0x0022CFFC
 	[NullableContext(1)]
 	public void SetFunction(Action buttonFunction)
 	{
 		this.ButtonFunction = buttonFunction;
 	}
 
-	// Token: 0x06009DE4 RID: 40420 RVA: 0x00225055 File Offset: 0x00223255
+	// Token: 0x060071C2 RID: 29122 RVA: 0x0022EE05 File Offset: 0x0022D005
 	public void ExecuteButtonFunction()
 	{
 		Action buttonFunction = this.ButtonFunction;
@@ -73,13 +73,13 @@ public class WheelTowerChallengeBtn : UiPanelBase
 		buttonFunction();
 	}
 
-	// Token: 0x06009DE5 RID: 40421 RVA: 0x00225067 File Offset: 0x00223267
+	// Token: 0x060071C3 RID: 29123 RVA: 0x0022EE17 File Offset: 0x0022D017
 	private void ButtonClick()
 	{
 		this.ExecuteButtonFunction();
 	}
 
-	// Token: 0x040045E0 RID: 17888
+	// Token: 0x04004686 RID: 18054
 	[Nullable(2)]
 	private Action ButtonFunction;
 }

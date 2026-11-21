@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000275 RID: 629
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002B8 RID: 696
 	public class IConnectorPathAdvanceInitiator
 	{
-		// Token: 0x06000B7D RID: 2941 RVA: 0x0002E034 File Offset: 0x0002C234
+		// Token: 0x06000C97 RID: 3223 RVA: 0x00030D24 File Offset: 0x0002EF24
 		private IConnectorPathAdvanceInitiator_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000B7E RID: 2942 RVA: 0x0002E06C File Offset: 0x0002C26C
+		// Token: 0x06000C98 RID: 3224 RVA: 0x00030D5C File Offset: 0x0002EF5C
 		public static IConnectorPathAdvanceInitiator Create([Nullable(2)] IConnectorPathAdvanceInitiator instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B7F RID: 2943 RVA: 0x0002E07F File Offset: 0x0002C27F
+		// Token: 0x06000C99 RID: 3225 RVA: 0x00030D6F File Offset: 0x0002EF6F
 		public static IConnectorPathAdvanceInitiator CreateFromSetValue([Nullable(2)] IConnectorPathAdvanceInitiator_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B80 RID: 2944 RVA: 0x0002E094 File Offset: 0x0002C294
+		// Token: 0x06000C9A RID: 3226 RVA: 0x00030D84 File Offset: 0x0002EF84
 		public IConnectorPathAdvanceInitiator_SetValue ToSetValue()
 		{
 			return new IConnectorPathAdvanceInitiator_SetValue
@@ -66,9 +64,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700036C RID: 876
-		// (get) Token: 0x06000B81 RID: 2945 RVA: 0x0002E0FA File Offset: 0x0002C2FA
-		// (set) Token: 0x06000B82 RID: 2946 RVA: 0x0002E125 File Offset: 0x0002C325
+		// Token: 0x170003B4 RID: 948
+		// (get) Token: 0x06000C9B RID: 3227 RVA: 0x00030DEA File Offset: 0x0002EFEA
+		// (set) Token: 0x06000C9C RID: 3228 RVA: 0x00030E15 File Offset: 0x0002F015
 		public virtual string ActiveState
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700036D RID: 877
-		// (get) Token: 0x06000B83 RID: 2947 RVA: 0x0002E133 File Offset: 0x0002C333
-		// (set) Token: 0x06000B84 RID: 2948 RVA: 0x0002E15A File Offset: 0x0002C35A
+		// Token: 0x170003B5 RID: 949
+		// (get) Token: 0x06000C9D RID: 3229 RVA: 0x00030E23 File Offset: 0x0002F023
+		// (set) Token: 0x06000C9E RID: 3230 RVA: 0x00030E4A File Offset: 0x0002F04A
 		public virtual List<int> Paths
 		{
 			get
@@ -113,9 +111,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700036E RID: 878
-		// (get) Token: 0x06000B85 RID: 2949 RVA: 0x0002E168 File Offset: 0x0002C368
-		// (set) Token: 0x06000B86 RID: 2950 RVA: 0x0002E193 File Offset: 0x0002C393
+		// Token: 0x170003B6 RID: 950
+		// (get) Token: 0x06000C9F RID: 3231 RVA: 0x00030E58 File Offset: 0x0002F058
+		// (set) Token: 0x06000CA0 RID: 3232 RVA: 0x00030E83 File Offset: 0x0002F083
 		public virtual int TargetEntity
 		{
 			get
@@ -136,9 +134,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700036F RID: 879
-		// (get) Token: 0x06000B87 RID: 2951 RVA: 0x0002E1A1 File Offset: 0x0002C3A1
-		// (set) Token: 0x06000B88 RID: 2952 RVA: 0x0002E1D0 File Offset: 0x0002C3D0
+		// Token: 0x170003B7 RID: 951
+		// (get) Token: 0x06000CA1 RID: 3233 RVA: 0x00030E91 File Offset: 0x0002F091
+		// (set) Token: 0x06000CA2 RID: 3234 RVA: 0x00030EC0 File Offset: 0x0002F0C0
 		public virtual float AdvanceSpeed
 		{
 			get
@@ -159,9 +157,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000370 RID: 880
-		// (get) Token: 0x06000B89 RID: 2953 RVA: 0x0002E1DE File Offset: 0x0002C3DE
-		// (set) Token: 0x06000B8A RID: 2954 RVA: 0x0002E209 File Offset: 0x0002C409
+		// Token: 0x170003B8 RID: 952
+		// (get) Token: 0x06000CA3 RID: 3235 RVA: 0x00030ECE File Offset: 0x0002F0CE
+		// (set) Token: 0x06000CA4 RID: 3236 RVA: 0x00030EF9 File Offset: 0x0002F0F9
 		public virtual EConnectorPathAdvanceVisualType VisualType
 		{
 			get
@@ -182,9 +180,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000371 RID: 881
-		// (get) Token: 0x06000B8B RID: 2955 RVA: 0x0002E218 File Offset: 0x0002C418
-		// (set) Token: 0x06000B8C RID: 2956 RVA: 0x0002E279 File Offset: 0x0002C479
+		// Token: 0x170003B9 RID: 953
+		// (get) Token: 0x06000CA5 RID: 3237 RVA: 0x00030F08 File Offset: 0x0002F108
+		// (set) Token: 0x06000CA6 RID: 3238 RVA: 0x00030F69 File Offset: 0x0002F169
 		[Nullable(2)]
 		public virtual IConnectorPathAdvanceVasePlantVisual VisualConfig
 		{
@@ -215,20 +213,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000372 RID: 882
-		// (get) Token: 0x06000B8D RID: 2957 RVA: 0x0002E290 File Offset: 0x0002C490
-		// (set) Token: 0x06000B8E RID: 2958 RVA: 0x0002E323 File Offset: 0x0002C523
+		// Token: 0x170003BA RID: 954
+		// (get) Token: 0x06000CA7 RID: 3239 RVA: 0x00030F80 File Offset: 0x0002F180
+		// (set) Token: 0x06000CA8 RID: 3240 RVA: 0x00031013 File Offset: 0x0002F213
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IDynamicEntityMatch> KeepConditions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -259,7 +257,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -268,29 +266,29 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000B17 RID: 2839
+		// Token: 0x04000BF8 RID: 3064
 		[Nullable(2)]
 		protected IConnectorPathAdvanceInitiator FbInstance;
 
-		// Token: 0x04000B18 RID: 2840
+		// Token: 0x04000BF9 RID: 3065
 		[Nullable(2)]
 		protected IConnectorPathAdvanceInitiator_SetValue PocoInterface;
 
-		// Token: 0x04000B19 RID: 2841
+		// Token: 0x04000BFA RID: 3066
 		private IConnectorPathAdvanceVasePlantVisual _VisualConfigCache;
 
-		// Token: 0x04000B1A RID: 2842
+		// Token: 0x04000BFB RID: 3067
 		private bool _VisualConfigInited;
 
-		// Token: 0x04000B1B RID: 2843
+		// Token: 0x04000BFC RID: 3068
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IDynamicEntityMatch> _KeepConditionsCache;
 
-		// Token: 0x04000B1C RID: 2844
+		// Token: 0x04000BFD RID: 3069
 		private bool _KeepConditionsInited;
 	}
 }

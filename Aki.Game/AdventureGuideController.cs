@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -27,23 +26,23 @@ using Google.Protobuf;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x0200168B RID: 5771
+// Token: 0x02000B43 RID: 2883
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class AdventureGuideController : UiControllerBase
 {
-	// Token: 0x0600A3C3 RID: 41923 RVA: 0x00243BFE File Offset: 0x00241DFE
+	// Token: 0x060077A1 RID: 30625 RVA: 0x0024DC66 File Offset: 0x0024BE66
 	protected override bool OnInit()
 	{
 		InputManager.Instance.RegisterOpenViewFunc(EUiViewName.AdventureGuideView, delegate
 		{
-			this.OpenGuideView(null, null, null);
+			this.OpenGuideView(null, null, null, null);
 		});
 		return true;
 	}
 
-	// Token: 0x0600A3C4 RID: 41924 RVA: 0x00243C1C File Offset: 0x00241E1C
+	// Token: 0x060077A2 RID: 30626 RVA: 0x0024DC84 File Offset: 0x0024BE84
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnLoadingNetDataDone, new Action(this.OnDataDone));
@@ -55,7 +54,7 @@ public class AdventureGuideController : UiControllerBase
 		EventSystem.Instance.Add(EEventName.OnLeaveOnlineWorld, new Action(this.OnEnterOrLeaveOnlineWorld));
 	}
 
-	// Token: 0x0600A3C5 RID: 41925 RVA: 0x00243CF0 File Offset: 0x00241EF0
+	// Token: 0x060077A3 RID: 30627 RVA: 0x0024DD58 File Offset: 0x0024BF58
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.OnDataDone));
@@ -67,7 +66,7 @@ public class AdventureGuideController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.OnLeaveOnlineWorld, new Action(this.OnEnterOrLeaveOnlineWorld));
 	}
 
-	// Token: 0x0600A3C6 RID: 41926 RVA: 0x00243DC4 File Offset: 0x00241FC4
+	// Token: 0x060077A4 RID: 30628 RVA: 0x0024DE2C File Offset: 0x0024C02C
 	private void OnMapDetectRemove(EMarkType markType, int markId)
 	{
 		if (markId == AdventureGuideModel.Instance.GetDetectingMonsterMarkId())
@@ -84,7 +83,7 @@ public class AdventureGuideController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A3C7 RID: 41927 RVA: 0x00243E18 File Offset: 0x00242018
+	// Token: 0x060077A5 RID: 30629 RVA: 0x0024DE80 File Offset: 0x0024C080
 	protected void OnTrackMapMark(EMarkType markType, int markId, bool isTrack)
 	{
 		if (isTrack)
@@ -113,7 +112,7 @@ public class AdventureGuideController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A3C8 RID: 41928 RVA: 0x00243E80 File Offset: 0x00242080
+	// Token: 0x060077A6 RID: 30630 RVA: 0x0024DEE8 File Offset: 0x0024C0E8
 	public void EmitRedDotFirstAwardEvent(int id)
 	{
 		SilentAreaDetectionRecord silentAreaDetectData = AdventureGuideModel.Instance.GetSilentAreaDetectData(id);
@@ -124,7 +123,7 @@ public class AdventureGuideController : UiControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RedDotSilentFirstAwardResult, id);
 	}
 
-	// Token: 0x0600A3C9 RID: 41929 RVA: 0x00243ECC File Offset: 0x002420CC
+	// Token: 0x060077A7 RID: 30631 RVA: 0x0024DF34 File Offset: 0x0024C134
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.AdventureUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnAdventureUpdate));
@@ -136,7 +135,7 @@ public class AdventureGuideController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.DetectionPreOpenNotify, new Action<IMessage, Net.CallbackStatus>(this.OnDetectionPreOpenNotify));
 	}
 
-	// Token: 0x0600A3CA RID: 41930 RVA: 0x00243FA0 File Offset: 0x002421A0
+	// Token: 0x060077A8 RID: 30632 RVA: 0x0024E008 File Offset: 0x0024C208
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.AdventureUpdateNotify);
@@ -148,19 +147,19 @@ public class AdventureGuideController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.DetectionPreOpenNotify);
 	}
 
-	// Token: 0x0600A3CB RID: 41931 RVA: 0x0024401D File Offset: 0x0024221D
+	// Token: 0x060077A9 RID: 30633 RVA: 0x0024E085 File Offset: 0x0024C285
 	protected override void OnAddOpenViewCheckFunction()
 	{
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.AdventureGuideView, new Func<EUiViewName, object, bool>(this.CanOpenView), "AdventureGuideController.CanOpenView");
 	}
 
-	// Token: 0x0600A3CC RID: 41932 RVA: 0x0024403F File Offset: 0x0024223F
+	// Token: 0x060077AA RID: 30634 RVA: 0x0024E0A7 File Offset: 0x0024C2A7
 	protected override void OnRemoveOpenViewCheckFunction()
 	{
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.AdventureGuideView, new Func<EUiViewName, object, bool>(this.CanOpenView));
 	}
 
-	// Token: 0x0600A3CD RID: 41933 RVA: 0x0024405C File Offset: 0x0024225C
+	// Token: 0x060077AB RID: 30635 RVA: 0x0024E0C4 File Offset: 0x0024C2C4
 	private bool CanOpenView(EUiViewName viewName, object param)
 	{
 		if (FunctionModel.Instance.IsOpen(10023))
@@ -171,39 +170,56 @@ public class AdventureGuideController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x0600A3CE RID: 41934 RVA: 0x00244088 File Offset: 0x00242288
+	// Token: 0x060077AC RID: 30636 RVA: 0x0024E0F0 File Offset: 0x0024C2F0
 	[NullableContext(2)]
-	public void OpenGuideView(EUiTabViewName? viewName = null, int? param = null, TOpenViewCallBack finishCallback = null)
+	public void OpenGuideView(EUiTabViewName? viewName = null, int? param = null, TOpenViewCallBack finishCallback = null, int? jumpToGridId = null)
 	{
-		if (UiManager.Instance.IsViewShow(EUiViewName.AdventureGuideView))
+		if (!UiManager.Instance.IsViewShow(EUiViewName.AdventureGuideView))
 		{
+			AdventureGuideViewOpenData adventureGuideViewOpenData = new AdventureGuideViewOpenData
+			{
+				OpenTabViewName = viewName,
+				OpenParam = param,
+				JumpToGridId = jumpToGridId
+			};
+			AdventureGuideView adventureGuideView = UiManager.Instance.GetViewByName(EUiViewName.AdventureGuideView) as AdventureGuideView;
+			if (adventureGuideView != null)
+			{
+				adventureGuideView.SetTabViewOpenData(adventureGuideViewOpenData);
+				UiManager.Instance.NormalResetToView(EUiViewName.AdventureGuideView, delegate(bool success)
+				{
+					TOpenViewCallBack finishCallback2 = finishCallback;
+					if (finishCallback2 == null)
+					{
+						return;
+					}
+					finishCallback2(success, 0);
+				}, true);
+				return;
+			}
+			UiManager.Instance.OpenView(EUiViewName.AdventureGuideView, adventureGuideViewOpenData, finishCallback);
+			return;
+		}
+		else
+		{
+			this.CloseItemTipsView();
+			if (jumpToGridId != null)
+			{
+				AdventureGuideViewOpenData p = new AdventureGuideViewOpenData
+				{
+					OpenTabViewName = new EUiTabViewName?(viewName ?? EUiTabViewName.DailyActivityTabView),
+					OpenParam = param,
+					JumpToGridId = jumpToGridId
+				};
+				EventSystem.Instance.Emit<AdventureGuideViewOpenData>(EEventName.SwitchAdventureGuideViewTab, p);
+				return;
+			}
 			EventSystem.Instance.Emit<EUiTabViewName, int?>(EEventName.ChangeChildView, viewName ?? EUiTabViewName.DailyActivityTabView, param);
 			return;
 		}
-		AdventureGuideViewOpenData adventureGuideViewOpenData = new AdventureGuideViewOpenData
-		{
-			OpenTabViewName = viewName,
-			OpenParam = param
-		};
-		AdventureGuideView adventureGuideView = UiManager.Instance.GetViewByName(EUiViewName.AdventureGuideView) as AdventureGuideView;
-		if (adventureGuideView != null)
-		{
-			adventureGuideView.SetTabViewOpenData(adventureGuideViewOpenData);
-			UiManager.Instance.NormalResetToView(EUiViewName.AdventureGuideView, delegate(bool success)
-			{
-				TOpenViewCallBack finishCallback2 = finishCallback;
-				if (finishCallback2 == null)
-				{
-					return;
-				}
-				finishCallback2(success, 0);
-			}, true);
-			return;
-		}
-		UiManager.Instance.OpenView(EUiViewName.AdventureGuideView, adventureGuideViewOpenData, finishCallback);
 	}
 
-	// Token: 0x0600A3CF RID: 41935 RVA: 0x00244141 File Offset: 0x00242341
+	// Token: 0x060077AD RID: 30637 RVA: 0x0024E20A File Offset: 0x0024C40A
 	public void OpenGuideViewWithOpenData(AdventureGuideViewOpenData openData, [Nullable(2)] TOpenViewCallBack finishCallback = null)
 	{
 		if (!UiManager.Instance.IsViewShow(EUiViewName.AdventureGuideView))
@@ -211,21 +227,31 @@ public class AdventureGuideController : UiControllerBase
 			UiManager.Instance.OpenView(EUiViewName.AdventureGuideView, openData, finishCallback);
 			return;
 		}
+		this.CloseItemTipsView();
 		EventSystem.Instance.Emit<AdventureGuideViewOpenData>(EEventName.SwitchAdventureGuideViewTab, openData);
 	}
 
-	// Token: 0x0600A3D0 RID: 41936 RVA: 0x00244174 File Offset: 0x00242374
+	// Token: 0x060077AE RID: 30638 RVA: 0x0024E243 File Offset: 0x0024C443
+	private void CloseItemTipsView()
+	{
+		if (UiManager.Instance.IsViewShow(EUiViewName.ItemTipsView))
+		{
+			UiManager.Instance.CloseView(EUiViewName.ItemTipsView, null);
+		}
+	}
+
+	// Token: 0x060077AF RID: 30639 RVA: 0x0024E266 File Offset: 0x0024C466
 	private void OnDataDone()
 	{
 		AdventureGuideModel.Instance.InitDetectionData();
 	}
 
-	// Token: 0x0600A3D1 RID: 41937 RVA: 0x00244180 File Offset: 0x00242380
+	// Token: 0x060077B0 RID: 30640 RVA: 0x0024E274 File Offset: 0x0024C474
 	private void WorldDoneAndCloseLoading()
 	{
-		ServerStorageUtil.OverrideLocalNumberToServerNumber(ELocalStoragePlayerKey.AdventrueShipTowerSeason, EClientStorageSystemIdType.AdventrueShipTowerSeason);
-		ServerStorageUtil.OverrideLocalNumberToServerNumber(ELocalStoragePlayerKey.AdventrueTower, EClientStorageSystemIdType.AdventrueTower);
-		ServerStorageUtil.OverrideLocalNumberToServerNumber(ELocalStoragePlayerKey.AdventrueWeeklyRogue, EClientStorageSystemIdType.AdventrueWeeklyRogue);
+		ServerStorageUtil.OverrideLocalNumberToServerNumber(ELocalStoragePlayerKey.AdventrueShipTowerSeason, EClientStorageSystemIdType.AdventrueShipTowerSeason, true);
+		ServerStorageUtil.OverrideLocalNumberToServerNumber(ELocalStoragePlayerKey.AdventrueTower, EClientStorageSystemIdType.AdventrueTower, true);
+		ServerStorageUtil.OverrideLocalNumberToServerNumber(ELocalStoragePlayerKey.AdventrueWeeklyRogue, EClientStorageSystemIdType.AdventrueWeeklyRogue, true);
 		ServerStorageSet serverStorageSet = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.DetectionRedDotRecord) as ServerStorageSet;
 		AdventureGuideModel.Instance.DetectionRedDotCache = serverStorageSet;
 		Dictionary<int, bool> player = LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.DetectionRedDotRecord, null);
@@ -242,7 +268,7 @@ public class AdventureGuideController : UiControllerBase
 		this.RequestForAdventureManual().Forget();
 	}
 
-	// Token: 0x0600A3D2 RID: 41938 RVA: 0x00244230 File Offset: 0x00242430
+	// Token: 0x060077B1 RID: 30641 RVA: 0x0024E328 File Offset: 0x0024C528
 	private void OnFunctionOpenUpdate(EFunctionType id, bool isOpen)
 	{
 		if ((id != EFunctionType.ShipTower && id != EFunctionType.NewTower) || !isOpen)
@@ -252,7 +278,7 @@ public class AdventureGuideController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RedDotAdventurePeriodicityTabUpdate);
 	}
 
-	// Token: 0x0600A3D3 RID: 41939 RVA: 0x00244256 File Offset: 0x00242456
+	// Token: 0x060077B2 RID: 30642 RVA: 0x0024E34E File Offset: 0x0024C54E
 	private void OnEnterOrLeaveOnlineWorld()
 	{
 		this.StopTrackCurDetectingDungeon();
@@ -260,19 +286,19 @@ public class AdventureGuideController : UiControllerBase
 		this.StopTrackCurDetectingSilentArea();
 	}
 
-	// Token: 0x0600A3D4 RID: 41940 RVA: 0x0024426A File Offset: 0x0024246A
+	// Token: 0x060077B3 RID: 30643 RVA: 0x0024E362 File Offset: 0x0024C562
 	public void UpdateAdventureNewSoundAreaTabRedDot()
 	{
 		EventSystem.Instance.Emit(EEventName.RedDotNewSoundAreaTabUpdate);
 	}
 
-	// Token: 0x0600A3D5 RID: 41941 RVA: 0x0024427C File Offset: 0x0024247C
+	// Token: 0x060077B4 RID: 30644 RVA: 0x0024E374 File Offset: 0x0024C574
 	public void UpdateAdventureNewChallengeTabRedDot()
 	{
 		EventSystem.Instance.Emit(EEventName.RedDotAdventureChallengeTabUpdate);
 	}
 
-	// Token: 0x0600A3D6 RID: 41942 RVA: 0x00244290 File Offset: 0x00242490
+	// Token: 0x060077B5 RID: 30645 RVA: 0x0024E388 File Offset: 0x0024C588
 	[NullableContext(2)]
 	private void OnAdventureUpdate(IMessage msg, Net.CallbackStatus status)
 	{
@@ -281,12 +307,26 @@ public class AdventureGuideController : UiControllerBase
 		{
 			foreach (AdventureManualData adventureManualData in adventureUpdateNotify.AdventureManualData)
 			{
-				AdventureGuideModel instance = AdventureGuideModel.Instance;
 				RepeatedField<int> unLockChapters = adventureManualData.UnLockChapters;
-				instance.SetUnLockChapters(((unLockChapters != null) ? unLockChapters.ToArray<int>() : null) ?? new int[0]);
-				AdventureGuideModel instance2 = AdventureGuideModel.Instance;
+				int[] array = new int[(unLockChapters != null) ? unLockChapters.Count : 0];
+				if (unLockChapters != null)
+				{
+					for (int i = 0; i < array.Length; i++)
+					{
+						array[i] = unLockChapters[i];
+					}
+				}
+				AdventureGuideModel.Instance.SetUnLockChapters(array);
 				RepeatedField<int> rewardChapters = adventureManualData.RewardChapters;
-				instance2.SetRewardChapters(((rewardChapters != null) ? rewardChapters.ToArray<int>() : null) ?? new int[0]);
+				int[] array2 = new int[(rewardChapters != null) ? rewardChapters.Count : 0];
+				if (rewardChapters != null)
+				{
+					for (int j = 0; j < array2.Length; j++)
+					{
+						array2[j] = rewardChapters[j];
+					}
+				}
+				AdventureGuideModel.Instance.SetRewardChapters(array2);
 				if (adventureManualData.AdventreTask != null)
 				{
 					foreach (AdventreTask adventreTask in adventureManualData.AdventreTask)
@@ -300,7 +340,7 @@ public class AdventureGuideController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RedDotAdventureManualUpdate);
 	}
 
-	// Token: 0x0600A3D7 RID: 41943 RVA: 0x002443C4 File Offset: 0x002425C4
+	// Token: 0x060077B6 RID: 30646 RVA: 0x0024E524 File Offset: 0x0024C724
 	[NullableContext(2)]
 	private void OnMonsterDetectStateUnlock(IMessage msg, Net.CallbackStatus status)
 	{
@@ -308,18 +348,18 @@ public class AdventureGuideController : UiControllerBase
 		AdventureGuideModel.Instance.HandleMonsterDetectLockStatus(updateMonsterUnlockNotify.DetectionUnlocks);
 	}
 
-	// Token: 0x0600A3D8 RID: 41944 RVA: 0x002443E8 File Offset: 0x002425E8
+	// Token: 0x060077B7 RID: 30647 RVA: 0x0024E548 File Offset: 0x0024C748
 	public UniTask RequestForAdventureManual()
 	{
-		AdventureGuideController.<RequestForAdventureManual>d__32 <RequestForAdventureManual>d__;
+		AdventureGuideController.<RequestForAdventureManual>d__33 <RequestForAdventureManual>d__;
 		<RequestForAdventureManual>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<RequestForAdventureManual>d__.<>4__this = this;
 		<RequestForAdventureManual>d__.<>1__state = -1;
-		<RequestForAdventureManual>d__.<>t__builder.Start<AdventureGuideController.<RequestForAdventureManual>d__32>(ref <RequestForAdventureManual>d__);
+		<RequestForAdventureManual>d__.<>t__builder.Start<AdventureGuideController.<RequestForAdventureManual>d__33>(ref <RequestForAdventureManual>d__);
 		return <RequestForAdventureManual>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A3D9 RID: 41945 RVA: 0x0024442B File Offset: 0x0024262B
+	// Token: 0x060077B8 RID: 30648 RVA: 0x0024E58B File Offset: 0x0024C78B
 	[NullableContext(2)]
 	private void HandleAdventureManual(AdventureManualResponse response)
 	{
@@ -328,31 +368,43 @@ public class AdventureGuideController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RedDotSilentFirstAward);
 	}
 
-	// Token: 0x0600A3DA RID: 41946 RVA: 0x00244458 File Offset: 0x00242658
+	// Token: 0x060077B9 RID: 30649 RVA: 0x0024E5B8 File Offset: 0x0024C7B8
 	[NullableContext(2)]
 	private void OnDetectionPreOpenNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		DetectionPreOpenNotify detectionPreOpenNotify = (DetectionPreOpenNotify)msg;
 		if (detectionPreOpenNotify != null)
 		{
-			AdventureGuideModel instance = AdventureGuideModel.Instance;
-			ESoundAreaDataType dataType = ESoundAreaDataType.SilentArea;
 			RepeatedField<PreOpenDetections> preOpenSilenceAreaDetections = detectionPreOpenNotify.PreOpenSilenceAreaDetections;
-			instance.FullUpdateDetectionPreOpenData(dataType, ((preOpenSilenceAreaDetections != null) ? preOpenSilenceAreaDetections.ToArray<PreOpenDetections>() : null) ?? new PreOpenDetections[0]);
-			AdventureGuideModel instance2 = AdventureGuideModel.Instance;
-			ESoundAreaDataType dataType2 = ESoundAreaDataType.Dungeon;
+			PreOpenDetections[] array = new PreOpenDetections[(preOpenSilenceAreaDetections != null) ? preOpenSilenceAreaDetections.Count : 0];
+			if (preOpenSilenceAreaDetections != null)
+			{
+				for (int i = 0; i < array.Length; i++)
+				{
+					array[i] = preOpenSilenceAreaDetections[i];
+				}
+			}
+			AdventureGuideModel.Instance.FullUpdateDetectionPreOpenData(ESoundAreaDataType.SilentArea, array);
 			RepeatedField<PreOpenDetections> preOpenDungeonDetections = detectionPreOpenNotify.PreOpenDungeonDetections;
-			instance2.FullUpdateDetectionPreOpenData(dataType2, ((preOpenDungeonDetections != null) ? preOpenDungeonDetections.ToArray<PreOpenDetections>() : null) ?? new PreOpenDetections[0]);
+			PreOpenDetections[] array2 = new PreOpenDetections[(preOpenDungeonDetections != null) ? preOpenDungeonDetections.Count : 0];
+			if (preOpenDungeonDetections != null)
+			{
+				for (int j = 0; j < array2.Length; j++)
+				{
+					array2[j] = preOpenDungeonDetections[j];
+				}
+			}
+			AdventureGuideModel.Instance.FullUpdateDetectionPreOpenData(ESoundAreaDataType.Dungeon, array2);
 		}
 	}
 
-	// Token: 0x0600A3DB RID: 41947 RVA: 0x002444BD File Offset: 0x002426BD
+	// Token: 0x060077BA RID: 30650 RVA: 0x0024E662 File Offset: 0x0024C862
 	private void RemoveMapMark(EMarkType? markType, int markId)
 	{
 		MapModel.Instance.RemoveMapMark(markType, new int?(markId));
 	}
 
-	// Token: 0x0600A3DC RID: 41948 RVA: 0x002444D0 File Offset: 0x002426D0
+	// Token: 0x060077BB RID: 30651 RVA: 0x0024E678 File Offset: 0x0024C878
 	public void RequestForAdventureManualData(Action<AdventureManualDataResponse> handle)
 	{
 		int? id = PlayerInfoModel.Instance.GetId();
@@ -365,30 +417,30 @@ public class AdventureGuideController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600A3DD RID: 41949 RVA: 0x0024452C File Offset: 0x0024272C
+	// Token: 0x060077BC RID: 30652 RVA: 0x0024E6D4 File Offset: 0x0024C8D4
 	private void HandleAdventureManualDataResponse([Nullable(2)] AdventureManualDataResponse response, Action<AdventureManualDataResponse> handle)
 	{
 	}
 
-	// Token: 0x0600A3DE RID: 41950 RVA: 0x00244530 File Offset: 0x00242730
+	// Token: 0x060077BD RID: 30653 RVA: 0x0024E6D8 File Offset: 0x0024C8D8
 	public UniTask RequestMultiForAdventureReward(int[] ids)
 	{
-		AdventureGuideController.<RequestMultiForAdventureReward>d__38 <RequestMultiForAdventureReward>d__;
+		AdventureGuideController.<RequestMultiForAdventureReward>d__39 <RequestMultiForAdventureReward>d__;
 		<RequestMultiForAdventureReward>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<RequestMultiForAdventureReward>d__.<>4__this = this;
 		<RequestMultiForAdventureReward>d__.ids = ids;
 		<RequestMultiForAdventureReward>d__.<>1__state = -1;
-		<RequestMultiForAdventureReward>d__.<>t__builder.Start<AdventureGuideController.<RequestMultiForAdventureReward>d__38>(ref <RequestMultiForAdventureReward>d__);
+		<RequestMultiForAdventureReward>d__.<>t__builder.Start<AdventureGuideController.<RequestMultiForAdventureReward>d__39>(ref <RequestMultiForAdventureReward>d__);
 		return <RequestMultiForAdventureReward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A3DF RID: 41951 RVA: 0x0024457C File Offset: 0x0024277C
+	// Token: 0x060077BE RID: 30654 RVA: 0x0024E724 File Offset: 0x0024C924
 	[NullableContext(2)]
 	private void OnMultiAdventureRewardResponse(MulGetAdventureRewardResponse response)
 	{
 		if (response == null || response.Code > Aki.Protocol.ErrorCode.Success)
 		{
-			ErrorCodeController.Instance.OpenErrorCodeTipView(response.Code, 15647, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(response.Code, 24375, null, true, true);
 			return;
 		}
 		Log instance = Log.Instance;
@@ -418,18 +470,18 @@ public class AdventureGuideController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RedDotAdventureManualUpdate);
 	}
 
-	// Token: 0x0600A3E0 RID: 41952 RVA: 0x002446BC File Offset: 0x002428BC
+	// Token: 0x060077BF RID: 30655 RVA: 0x0024E864 File Offset: 0x0024CA64
 	public UniTask GetDetectionLabelInfoRequest()
 	{
-		AdventureGuideController.<GetDetectionLabelInfoRequest>d__40 <GetDetectionLabelInfoRequest>d__;
+		AdventureGuideController.<GetDetectionLabelInfoRequest>d__41 <GetDetectionLabelInfoRequest>d__;
 		<GetDetectionLabelInfoRequest>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<GetDetectionLabelInfoRequest>d__.<>4__this = this;
 		<GetDetectionLabelInfoRequest>d__.<>1__state = -1;
-		<GetDetectionLabelInfoRequest>d__.<>t__builder.Start<AdventureGuideController.<GetDetectionLabelInfoRequest>d__40>(ref <GetDetectionLabelInfoRequest>d__);
+		<GetDetectionLabelInfoRequest>d__.<>t__builder.Start<AdventureGuideController.<GetDetectionLabelInfoRequest>d__41>(ref <GetDetectionLabelInfoRequest>d__);
 		return <GetDetectionLabelInfoRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A3E1 RID: 41953 RVA: 0x00244700 File Offset: 0x00242900
+	// Token: 0x060077C0 RID: 30656 RVA: 0x0024E8A8 File Offset: 0x0024CAA8
 	[NullableContext(2)]
 	private void GetDetectionLabelInfoResponse(GetDetectionLabelInfoResponse response)
 	{
@@ -471,7 +523,7 @@ public class AdventureGuideController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A3E2 RID: 41954 RVA: 0x002447D0 File Offset: 0x002429D0
+	// Token: 0x060077C1 RID: 30657 RVA: 0x0024E978 File Offset: 0x0024CB78
 	public unsafe void RequestForDetection(DetectionType type, int[] detectionArr, int confId)
 	{
 		if (this.HardCode(type, confId))
@@ -492,7 +544,7 @@ public class AdventureGuideController : UiControllerBase
 		Net.Instance.Call(ERequestMessageId.GetDetectionTargetRequest, getDetectionTargetRequest, new Action<IMessage, Net.CallbackStatus>(this.HandleDetectResponse), 0);
 	}
 
-	// Token: 0x0600A3E3 RID: 41955 RVA: 0x0024487F File Offset: 0x00242A7F
+	// Token: 0x060077C2 RID: 30658 RVA: 0x0024EA27 File Offset: 0x0024CC27
 	public bool HardCode(DetectionType type, int confId)
 	{
 		this.StopTrackCurDetectingDungeon();
@@ -501,7 +553,7 @@ public class AdventureGuideController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x0600A3E4 RID: 41956 RVA: 0x00244894 File Offset: 0x00242A94
+	// Token: 0x060077C3 RID: 30659 RVA: 0x0024EA3C File Offset: 0x0024CC3C
 	[NullableContext(2)]
 	private global::Vector GetPlayPosition()
 	{
@@ -519,14 +571,14 @@ public class AdventureGuideController : UiControllerBase
 		return characterActorComponent.ActorLocationProxy;
 	}
 
-	// Token: 0x0600A3E5 RID: 41957 RVA: 0x002448D0 File Offset: 0x00242AD0
+	// Token: 0x060077C4 RID: 30660 RVA: 0x0024EA78 File Offset: 0x0024CC78
 	[NullableContext(2)]
 	private void HandleDetectResponse(IMessage msg, Net.CallbackStatus _)
 	{
 		GetDetectionTargetResponse getDetectionTargetResponse = (GetDetectionTargetResponse)msg;
 		if (getDetectionTargetResponse == null || getDetectionTargetResponse.Code > Aki.Protocol.ErrorCode.Success)
 		{
-			ErrorCodeController.Instance.OpenErrorCodeTipView(getDetectionTargetResponse.Code, 19055, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(getDetectionTargetResponse.Code, 24853, null, true, true);
 			return;
 		}
 		if (((getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionTargetDatas : null) == null || getDetectionTargetResponse.DetectionTargetDatas.Count <= 0)
@@ -543,69 +595,61 @@ public class AdventureGuideController : UiControllerBase
 		{
 		case DetectionType.NormalMonster:
 		{
-			AdventureGuideModel instance = AdventureGuideModel.Instance;
-			DetectionTargetData[] array;
-			if (getDetectionTargetResponse == null)
+			RepeatedField<DetectionTargetData> repeatedField = (getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionTargetDatas : null;
+			DetectionTargetData[] array = new DetectionTargetData[(repeatedField != null) ? repeatedField.Count : 0];
+			if (repeatedField != null)
 			{
-				array = null;
+				for (int i = 0; i < array.Length; i++)
+				{
+					array[i] = repeatedField[i];
+				}
 			}
-			else
-			{
-				RepeatedField<DetectionTargetData> detectionTargetDatas = getDetectionTargetResponse.DetectionTargetDatas;
-				array = ((detectionTargetDatas != null) ? detectionTargetDatas.ToArray<DetectionTargetData>() : null);
-			}
-			instance.UpdatePendingMonsterList(array ?? new DetectionTargetData[0], (getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionId : 0, false);
+			AdventureGuideModel.Instance.UpdatePendingMonsterList(array, (getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionId : 0, false);
 			this.TrackNearestMonster((getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionId : 0, playPosition);
 			return;
 		}
 		case DetectionType.Dungeon:
 		{
-			AdventureGuideModel instance2 = AdventureGuideModel.Instance;
-			DetectionTargetData[] array2;
-			if (getDetectionTargetResponse == null)
+			RepeatedField<DetectionTargetData> repeatedField2 = (getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionTargetDatas : null;
+			DetectionTargetData[] array2 = new DetectionTargetData[(repeatedField2 != null) ? repeatedField2.Count : 0];
+			if (repeatedField2 != null)
 			{
-				array2 = null;
+				for (int j = 0; j < array2.Length; j++)
+				{
+					array2[j] = repeatedField2[j];
+				}
 			}
-			else
-			{
-				RepeatedField<DetectionTargetData> detectionTargetDatas2 = getDetectionTargetResponse.DetectionTargetDatas;
-				array2 = ((detectionTargetDatas2 != null) ? detectionTargetDatas2.ToArray<DetectionTargetData>() : null);
-			}
-			instance2.UpdatePendingDungeonList(array2 ?? new DetectionTargetData[0], (getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionId : 0);
+			AdventureGuideModel.Instance.UpdatePendingDungeonList(array2, (getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionId : 0);
 			this.TrackNearestDungeon((getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionId : 0, playPosition);
 			return;
 		}
 		case DetectionType.SilentArea:
 		{
-			AdventureGuideModel instance3 = AdventureGuideModel.Instance;
-			DetectionTargetData[] array3;
-			if (getDetectionTargetResponse == null)
+			RepeatedField<DetectionTargetData> repeatedField3 = (getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionTargetDatas : null;
+			DetectionTargetData[] array3 = new DetectionTargetData[(repeatedField3 != null) ? repeatedField3.Count : 0];
+			if (repeatedField3 != null)
 			{
-				array3 = null;
+				for (int k = 0; k < array3.Length; k++)
+				{
+					array3[k] = repeatedField3[k];
+				}
 			}
-			else
-			{
-				RepeatedField<DetectionTargetData> detectionTargetDatas3 = getDetectionTargetResponse.DetectionTargetDatas;
-				array3 = ((detectionTargetDatas3 != null) ? detectionTargetDatas3.ToArray<DetectionTargetData>() : null);
-			}
-			instance3.UpdatePendingSilentAreaList(array3 ?? new DetectionTargetData[0], (getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionId : 0);
+			AdventureGuideModel.Instance.UpdatePendingSilentAreaList(array3, (getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionId : 0);
 			this.TrackNearestSilentArea((getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionId : 0, playPosition);
 			return;
 		}
 		case DetectionType.Material:
 		{
-			AdventureGuideModel instance4 = AdventureGuideModel.Instance;
-			DetectionTargetData[] array4;
-			if (getDetectionTargetResponse == null)
+			RepeatedField<DetectionTargetData> repeatedField4 = (getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionTargetDatas : null;
+			DetectionTargetData[] array4 = new DetectionTargetData[(repeatedField4 != null) ? repeatedField4.Count : 0];
+			if (repeatedField4 != null)
 			{
-				array4 = null;
+				for (int l = 0; l < array4.Length; l++)
+				{
+					array4[l] = repeatedField4[l];
+				}
 			}
-			else
-			{
-				RepeatedField<DetectionTargetData> detectionTargetDatas4 = getDetectionTargetResponse.DetectionTargetDatas;
-				array4 = ((detectionTargetDatas4 != null) ? detectionTargetDatas4.ToArray<DetectionTargetData>() : null);
-			}
-			instance4.UpdatePendingMonsterList(array4 ?? new DetectionTargetData[0], (getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionId : 0, true);
+			AdventureGuideModel.Instance.UpdatePendingMonsterList(array4, (getDetectionTargetResponse != null) ? getDetectionTargetResponse.DetectionId : 0, true);
 			AdventureGuideController.Instance.TrackNearestMaterial(getDetectionTargetResponse.DetectionId, playPosition);
 			return;
 		}
@@ -614,7 +658,7 @@ public class AdventureGuideController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A3E6 RID: 41958 RVA: 0x00244AB4 File Offset: 0x00242CB4
+	// Token: 0x060077C5 RID: 30661 RVA: 0x0024ECFC File Offset: 0x0024CEFC
 	public void StopTrackCurDetectingMonster()
 	{
 		int detectingMonsterMarkId = AdventureGuideModel.Instance.GetDetectingMonsterMarkId();
@@ -628,7 +672,7 @@ public class AdventureGuideController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A3E7 RID: 41959 RVA: 0x00244AF4 File Offset: 0x00242CF4
+	// Token: 0x060077C6 RID: 30662 RVA: 0x0024ED3C File Offset: 0x0024CF3C
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -690,7 +734,7 @@ public class AdventureGuideController : UiControllerBase
 		return new ValueTuple<int?, int?>(item, item2);
 	}
 
-	// Token: 0x0600A3E8 RID: 41960 RVA: 0x00244CA0 File Offset: 0x00242EA0
+	// Token: 0x060077C7 RID: 30663 RVA: 0x0024EEE8 File Offset: 0x0024D0E8
 	private void TrackNearestMaterial(int detectId, global::Vector playerPosition)
 	{
 		if (detectId != AdventureGuideModel.Instance.GetPendingMonsterConfId())
@@ -719,7 +763,7 @@ public class AdventureGuideController : UiControllerBase
 		this.CancelDetectingRequest();
 	}
 
-	// Token: 0x0600A3E9 RID: 41961 RVA: 0x00244D68 File Offset: 0x00242F68
+	// Token: 0x060077C8 RID: 30664 RVA: 0x0024EFB0 File Offset: 0x0024D1B0
 	private void TrackNearestMonster(int detectId, global::Vector playerPosition)
 	{
 		if (detectId != AdventureGuideModel.Instance.GetPendingMonsterConfId())
@@ -738,7 +782,7 @@ public class AdventureGuideController : UiControllerBase
 		this.CancelDetectingRequest();
 	}
 
-	// Token: 0x0600A3EA RID: 41962 RVA: 0x00244DEC File Offset: 0x00242FEC
+	// Token: 0x060077C9 RID: 30665 RVA: 0x0024F034 File Offset: 0x0024D234
 	public void CancelDetectingRequest()
 	{
 		GetDetectionTargetRequest getDetectionTargetRequest = GetDetectionTargetRequest.Create();
@@ -748,7 +792,7 @@ public class AdventureGuideController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600A3EB RID: 41963 RVA: 0x00244E38 File Offset: 0x00243038
+	// Token: 0x060077CA RID: 30666 RVA: 0x0024F080 File Offset: 0x0024D280
 	public void NormalMonsterManualInfoRequest(int detectionId)
 	{
 		NormalMonsterManualInfoRequest normalMonsterManualInfoRequest = Aki.Protocol.NormalMonsterManualInfoRequest.Create();
@@ -756,14 +800,14 @@ public class AdventureGuideController : UiControllerBase
 		Net.Instance.Call(ERequestMessageId.NormalMonsterManualInfoRequest, normalMonsterManualInfoRequest, new Action<IMessage, Net.CallbackStatus>(this.NormalMonsterManualInfoResponse), 0);
 	}
 
-	// Token: 0x0600A3EC RID: 41964 RVA: 0x00244E70 File Offset: 0x00243070
+	// Token: 0x060077CB RID: 30667 RVA: 0x0024F0B8 File Offset: 0x0024D2B8
 	[NullableContext(2)]
 	private void NormalMonsterManualInfoResponse(IMessage msg, Net.CallbackStatus _)
 	{
 		NormalMonsterManualInfoResponse normalMonsterManualInfoResponse = (NormalMonsterManualInfoResponse)msg;
 		if (normalMonsterManualInfoResponse == null || normalMonsterManualInfoResponse.Code > Aki.Protocol.ErrorCode.Success)
 		{
-			ErrorCodeController.Instance.OpenErrorCodeTipView(normalMonsterManualInfoResponse.Code, 23619, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(normalMonsterManualInfoResponse.Code, 22708, null, true, true);
 		}
 		if (((normalMonsterManualInfoResponse != null) ? normalMonsterManualInfoResponse.DetectionTarget : null) == null || normalMonsterManualInfoResponse.DetectionTarget.Count == 0)
 		{
@@ -772,7 +816,7 @@ public class AdventureGuideController : UiControllerBase
 		AdventureGuideModel.Instance.SetDetectingMonsterRefreshTime(normalMonsterManualInfoResponse.DetectionTarget[0].DetectionId, normalMonsterManualInfoResponse.DetectionTarget[0].RefresherTime);
 	}
 
-	// Token: 0x0600A3ED RID: 41965 RVA: 0x00244EF8 File Offset: 0x002430F8
+	// Token: 0x060077CC RID: 30668 RVA: 0x0024F140 File Offset: 0x0024D340
 	public void StopTrackCurDetectingDungeon()
 	{
 		int detectingDungeonMarkId = AdventureGuideModel.Instance.GetDetectingDungeonMarkId();
@@ -786,7 +830,7 @@ public class AdventureGuideController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A3EE RID: 41966 RVA: 0x00244F44 File Offset: 0x00243144
+	// Token: 0x060077CD RID: 30669 RVA: 0x0024F18C File Offset: 0x0024D38C
 	private void TrackNearestDungeon(int detectId, global::Vector playerPosition)
 	{
 		if (detectId != AdventureGuideModel.Instance.GetPendingDungeonConfId())
@@ -822,7 +866,7 @@ public class AdventureGuideController : UiControllerBase
 		this.CancelDetectingRequest();
 	}
 
-	// Token: 0x0600A3EF RID: 41967 RVA: 0x00245070 File Offset: 0x00243270
+	// Token: 0x060077CE RID: 30670 RVA: 0x0024F2B8 File Offset: 0x0024D4B8
 	public void StopTrackCurDetectingSilentArea()
 	{
 		int detectingSilentAreaMarkId = AdventureGuideModel.Instance.GetDetectingSilentAreaMarkId();
@@ -837,7 +881,7 @@ public class AdventureGuideController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A3F0 RID: 41968 RVA: 0x002450BC File Offset: 0x002432BC
+	// Token: 0x060077CF RID: 30671 RVA: 0x0024F304 File Offset: 0x0024D504
 	[NullableContext(2)]
 	private void OnDetectionTargetChangeNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -849,7 +893,7 @@ public class AdventureGuideController : UiControllerBase
 		this.DeleteMonsterDetectState(detectionTargetChangeNotify.EntityId);
 	}
 
-	// Token: 0x0600A3F1 RID: 41969 RVA: 0x002450FC File Offset: 0x002432FC
+	// Token: 0x060077D0 RID: 30672 RVA: 0x0024F344 File Offset: 0x0024D544
 	[NullableContext(2)]
 	private void OnSilentFirstAwardNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -863,7 +907,7 @@ public class AdventureGuideController : UiControllerBase
 		this.EmitRedDotFirstAwardEvent(slientFirstAwardNotify.Id);
 	}
 
-	// Token: 0x0600A3F2 RID: 41970 RVA: 0x00245144 File Offset: 0x00243344
+	// Token: 0x060077D1 RID: 30673 RVA: 0x0024F38C File Offset: 0x0024D58C
 	[NullableContext(2)]
 	private void AddUnlockedGuideNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -881,7 +925,7 @@ public class AdventureGuideController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A3F3 RID: 41971 RVA: 0x002451B0 File Offset: 0x002433B0
+	// Token: 0x060077D2 RID: 30674 RVA: 0x0024F3F8 File Offset: 0x0024D5F8
 	[NullableContext(2)]
 	private void AddUnlockedDetectionTextNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -899,7 +943,7 @@ public class AdventureGuideController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A3F4 RID: 41972 RVA: 0x0024521C File Offset: 0x0024341C
+	// Token: 0x060077D3 RID: 30675 RVA: 0x0024F464 File Offset: 0x0024D664
 	public void RequestSilentFirstAward(int id, int dropId)
 	{
 		ReceivedSilentFirstAwardRequest receivedSilentFirstAwardRequest = ReceivedSilentFirstAwardRequest.Create();
@@ -909,7 +953,7 @@ public class AdventureGuideController : UiControllerBase
 			ReceivedSilentFirstAwardResponse receivedSilentFirstAwardResponse = (ReceivedSilentFirstAwardResponse)msg;
 			if (receivedSilentFirstAwardResponse == null || receivedSilentFirstAwardResponse.ErrorCode > Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(receivedSilentFirstAwardResponse.ErrorCode, 15246, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(receivedSilentFirstAwardResponse.ErrorCode, 28437, null, true, true);
 				return;
 			}
 			Dictionary<int, int> dropShowInfo = AdventureGuideConfig.Instance.GetDropShowInfo(dropId);
@@ -925,7 +969,7 @@ public class AdventureGuideController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600A3F5 RID: 41973 RVA: 0x00245274 File Offset: 0x00243474
+	// Token: 0x060077D4 RID: 30676 RVA: 0x0024F4BC File Offset: 0x0024D6BC
 	private void TrackNearestSilentArea(int detectId, global::Vector playerPosition)
 	{
 		if (detectId != AdventureGuideModel.Instance.GetPendingSilentAreaConfId())
@@ -972,7 +1016,7 @@ public class AdventureGuideController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A3F6 RID: 41974 RVA: 0x0024542C File Offset: 0x0024362C
+	// Token: 0x060077D5 RID: 30677 RVA: 0x0024F674 File Offset: 0x0024D874
 	public void RequestForChapterReward(int chapter)
 	{
 		GetChapterRewardRequest getChapterRewardRequest = GetChapterRewardRequest.Create();
@@ -980,21 +1024,21 @@ public class AdventureGuideController : UiControllerBase
 		Net.Instance.Call(ERequestMessageId.GetChapterRewardRequest, getChapterRewardRequest, new Action<IMessage, Net.CallbackStatus>(this.HandleChapterRewardResponse), 0);
 	}
 
-	// Token: 0x0600A3F7 RID: 41975 RVA: 0x00245464 File Offset: 0x00243664
+	// Token: 0x060077D6 RID: 30678 RVA: 0x0024F6AC File Offset: 0x0024D8AC
 	[NullableContext(2)]
 	private void HandleChapterRewardResponse(IMessage msg, Net.CallbackStatus _)
 	{
 		GetChapterRewardResponse getChapterRewardResponse = (GetChapterRewardResponse)msg;
 		if (getChapterRewardResponse == null || getChapterRewardResponse.Code > Aki.Protocol.ErrorCode.Success)
 		{
-			ErrorCodeController.Instance.OpenErrorCodeTipView(getChapterRewardResponse.Code, 17302, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(getChapterRewardResponse.Code, 18554, null, true, true);
 			return;
 		}
 		EventSystem.Instance.Emit<int>(EEventName.ChapterRewardReceived, (getChapterRewardResponse != null) ? getChapterRewardResponse.Chapter : 0);
 		EventSystem.Instance.Emit(EEventName.RedDotAdventureManualUpdate);
 	}
 
-	// Token: 0x0600A3F8 RID: 41976 RVA: 0x002454D0 File Offset: 0x002436D0
+	// Token: 0x060077D7 RID: 30679 RVA: 0x0024F718 File Offset: 0x0024D918
 	private void DeleteMonsterDetectState(int target)
 	{
 		AdventureGuideModel.Instance.DeletePendingMonsterList(target);
@@ -1019,12 +1063,18 @@ public class AdventureGuideController : UiControllerBase
 			this.RequestForDetection(DetectionType.Material, Array.Empty<int>(), AdventureGuideModel.Instance.GetPendingMonsterConfId());
 			return;
 		}
-		ScrollingTipsController.Instance.ShowTipsByTextId("MonsterDetection_TodayOver", Array.Empty<object>());
+		int pendingMonsterConfId = AdventureGuideModel.Instance.GetPendingMonsterConfId();
+		MonsterDetectionRecord monsterDetectData = AdventureGuideModel.Instance.GetMonsterDetectData(pendingMonsterConfId);
+		int? num = (monsterDetectData != null) ? new int?(monsterDetectData.Conf.DangerType) : null;
+		if (num.GetValueOrDefault() != 2 && num.GetValueOrDefault() != 3)
+		{
+			ScrollingTipsController.Instance.ShowTipsByTextId("MonsterDetection_TodayOver", Array.Empty<object>());
+		}
 		this.StopTrackCurDetectingMonster();
 		this.CancelDetectingRequest();
 	}
 
-	// Token: 0x0600A3F9 RID: 41977 RVA: 0x002455B0 File Offset: 0x002437B0
+	// Token: 0x060077D8 RID: 30680 RVA: 0x0024F848 File Offset: 0x0024DA48
 	public int[] GetValidMonsterEntityIdsOfDetectConf(MonsterDetection conf)
 	{
 		HashSet<int> allCulledMonsters = AdventureGuideModel.Instance.GetAllCulledMonsters();
@@ -1045,7 +1095,7 @@ public class AdventureGuideController : UiControllerBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600A3FA RID: 41978 RVA: 0x00245650 File Offset: 0x00243850
+	// Token: 0x060077D9 RID: 30681 RVA: 0x0024F8E8 File Offset: 0x0024DAE8
 	private void OnDetectionTarget(int id, int confId, DetectionType type)
 	{
 		this.StopTrackCurDetectingDungeon();
@@ -1166,7 +1216,7 @@ public class AdventureGuideController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A3FB RID: 41979 RVA: 0x00245A68 File Offset: 0x00243C68
+	// Token: 0x060077DA RID: 30682 RVA: 0x0024FD00 File Offset: 0x0024DF00
 	private unsafe bool IsMarkExist(EMarkType? markType, int markId, bool isDynamic = false)
 	{
 		if (markId == 0 || markType == null)
@@ -1193,7 +1243,7 @@ public class AdventureGuideController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x0600A3FC RID: 41980 RVA: 0x00245B08 File Offset: 0x00243D08
+	// Token: 0x060077DB RID: 30683 RVA: 0x0024FDA0 File Offset: 0x0024DFA0
 	public unsafe bool IsMarkUnlock(int markId)
 	{
 		if (markId == 0)
@@ -1229,7 +1279,7 @@ public class AdventureGuideController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A3FD RID: 41981 RVA: 0x00245C54 File Offset: 0x00243E54
+	// Token: 0x060077DC RID: 30684 RVA: 0x0024FEEC File Offset: 0x0024E0EC
 	private int GeneratedTrackMark(IDetectingObj pendingObj, int markConfId, bool alreadyHave, EMarkType type, bool track)
 	{
 		global::Vector inV = new global::Vector
@@ -1267,7 +1317,7 @@ public class AdventureGuideController : UiControllerBase
 		return num;
 	}
 
-	// Token: 0x0600A3FE RID: 41982 RVA: 0x00245D30 File Offset: 0x00243F30
+	// Token: 0x060077DD RID: 30685 RVA: 0x0024FFC8 File Offset: 0x0024E1C8
 	[NullableContext(2)]
 	public InstanceDungeonData GetDungeonData(int entranceId)
 	{
@@ -1286,7 +1336,7 @@ public class AdventureGuideController : UiControllerBase
 		return InstanceDungeonEntranceModel.Instance.GetInstanceData(num);
 	}
 
-	// Token: 0x0600A3FF RID: 41983 RVA: 0x00245DC8 File Offset: 0x00243FC8
+	// Token: 0x060077DE RID: 30686 RVA: 0x00250060 File Offset: 0x0024E260
 	public InstanceDungeon? GetFirstDungeonConf(int entranceId)
 	{
 		InstanceDungeonEntrance? config = InstanceDungeonEntranceConfig.Instance.GetConfig(entranceId);
@@ -1298,7 +1348,7 @@ public class AdventureGuideController : UiControllerBase
 		return InstanceDungeonConfig.Instance.GetConfig(id);
 	}
 
-	// Token: 0x0600A400 RID: 41984 RVA: 0x00245E34 File Offset: 0x00244034
+	// Token: 0x060077DF RID: 30687 RVA: 0x002500CC File Offset: 0x0024E2CC
 	public int GetDungeonMaxCount(int entranceId)
 	{
 		InstanceDungeonEntrance? config = InstanceDungeonEntranceConfig.Instance.GetConfig(entranceId);
@@ -1324,7 +1374,7 @@ public class AdventureGuideController : UiControllerBase
 		return countConfig.Value.EnterCount;
 	}
 
-	// Token: 0x0600A401 RID: 41985 RVA: 0x00245EF4 File Offset: 0x002440F4
+	// Token: 0x060077E0 RID: 30688 RVA: 0x0025018C File Offset: 0x0024E38C
 	[NullableContext(2)]
 	public void JumpToTargetView(EUiTabViewName viewName, int? param = null, Action<bool> finishCallback = null)
 	{
@@ -1336,10 +1386,10 @@ public class AdventureGuideController : UiControllerBase
 				return;
 			}
 			finishCallback2(success);
-		});
+		}, null);
 	}
 
-	// Token: 0x0600A402 RID: 41986 RVA: 0x00245F28 File Offset: 0x00244128
+	// Token: 0x060077E1 RID: 30689 RVA: 0x002501C8 File Offset: 0x0024E3C8
 	[NullableContext(2)]
 	public void TryJumpToTargetViewByMonsterId(int monsterId, Action<bool> finishCallback = null)
 	{
@@ -1351,7 +1401,7 @@ public class AdventureGuideController : UiControllerBase
 		this.JumpToTargetView(EUiTabViewName.MonsterDetectView, new int?(CalabashConfig.Instance.GetCalabashDevelopRewardByMonsterId(monsterId).Value.MonsterProbeId), finishCallback);
 	}
 
-	// Token: 0x0600A403 RID: 41987 RVA: 0x00245F88 File Offset: 0x00244188
+	// Token: 0x060077E2 RID: 30690 RVA: 0x00250228 File Offset: 0x0024E428
 	public string GetMarkAreaText(int markId)
 	{
 		MapMark? config = ConfigMapMarkByMarkId.GetConfig(markId, true);
@@ -1395,7 +1445,7 @@ public class AdventureGuideController : UiControllerBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600A404 RID: 41988 RVA: 0x00246138 File Offset: 0x00244338
+	// Token: 0x060077E3 RID: 30691 RVA: 0x002503D8 File Offset: 0x0024E5D8
 	public ISilentAreaDetectionDynamicData[] GetShowSilentAreasList(int? selectedType = null, int? selectedAreaId = null)
 	{
 		if (AdventureGuideModel.Instance.DetectionSilentAreasDataList.Length == 0)
@@ -1418,44 +1468,44 @@ public class AdventureGuideController : UiControllerBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600A405 RID: 41989 RVA: 0x002461D7 File Offset: 0x002443D7
+	// Token: 0x060077E4 RID: 30692 RVA: 0x00250477 File Offset: 0x0024E677
 	public void RecordAdventureNewSoundAreaTabClick()
 	{
 		AdventureGuideModel.Instance.SetRedDotAdventureNewSoundAreaTabLastUpdateTime((long)TimeUtil.Instance.GetServerTimeStamp());
 		EventSystem.Instance.Emit(EEventName.RedDotNewSoundAreaTabUpdate);
 	}
 
-	// Token: 0x0600A406 RID: 41990 RVA: 0x002461FE File Offset: 0x002443FE
+	// Token: 0x060077E5 RID: 30693 RVA: 0x0025049E File Offset: 0x0024E69E
 	public bool CheckIsAdventureGuideHasRedDot()
 	{
 		return this.CheckCanGetTaskAward() || this.CheckCanGetFirstAward() || this.CheckCanGetDailyActivityAward();
 	}
 
-	// Token: 0x0600A407 RID: 41991 RVA: 0x00246218 File Offset: 0x00244418
+	// Token: 0x060077E6 RID: 30694 RVA: 0x002504B8 File Offset: 0x0024E6B8
 	public bool CheckCanGetDailyActivityAward()
 	{
 		return DailyActivityModel.Instance.CheckIsRewardWaitTake();
 	}
 
-	// Token: 0x0600A408 RID: 41992 RVA: 0x00246224 File Offset: 0x00244424
+	// Token: 0x060077E7 RID: 30695 RVA: 0x002504C4 File Offset: 0x0024E6C4
 	public bool CheckCanGetFirstAward()
 	{
 		return false;
 	}
 
-	// Token: 0x0600A409 RID: 41993 RVA: 0x00246227 File Offset: 0x00244427
+	// Token: 0x060077E8 RID: 30696 RVA: 0x002504C7 File Offset: 0x0024E6C7
 	public bool CheckCanGetFirstAwardById(int id)
 	{
 		return false;
 	}
 
-	// Token: 0x0600A40A RID: 41994 RVA: 0x0024622A File Offset: 0x0024442A
+	// Token: 0x060077E9 RID: 30697 RVA: 0x002504CA File Offset: 0x0024E6CA
 	public bool CheckCanGetFirstAwardByTypeId(int id)
 	{
 		return false;
 	}
 
-	// Token: 0x0600A40B RID: 41995 RVA: 0x00246230 File Offset: 0x00244430
+	// Token: 0x060077EA RID: 30698 RVA: 0x002504D0 File Offset: 0x0024E6D0
 	public bool CheckCanGetTaskAward()
 	{
 		if (!FunctionModel.Instance.IsOpen(10023001))
@@ -1485,7 +1535,7 @@ public class AdventureGuideController : UiControllerBase
 			}
 			int chapterReceivedCount = AdventureGuideModel.Instance.GetChapterReceivedCount(num);
 			int rewardUnlockCount = chapterAdventureConfig.Value.RewardUnlockCount;
-			if (chapterReceivedCount >= rewardUnlockCount && !rewardChaptersList.Contains(num))
+			if (chapterReceivedCount >= rewardUnlockCount && Array.IndexOf<int>(rewardChaptersList, num) < 0)
 			{
 				return true;
 			}
@@ -1493,19 +1543,19 @@ public class AdventureGuideController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x0600A40C RID: 41996 RVA: 0x002462FC File Offset: 0x002444FC
+	// Token: 0x060077EB RID: 30699 RVA: 0x0025059C File Offset: 0x0024E79C
 	public UniTask RequestLevelPlayVarAsync(int instId, int levelPlayId)
 	{
-		AdventureGuideController.<RequestLevelPlayVarAsync>d__85 <RequestLevelPlayVarAsync>d__;
+		AdventureGuideController.<RequestLevelPlayVarAsync>d__86 <RequestLevelPlayVarAsync>d__;
 		<RequestLevelPlayVarAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<RequestLevelPlayVarAsync>d__.instId = instId;
 		<RequestLevelPlayVarAsync>d__.levelPlayId = levelPlayId;
 		<RequestLevelPlayVarAsync>d__.<>1__state = -1;
-		<RequestLevelPlayVarAsync>d__.<>t__builder.Start<AdventureGuideController.<RequestLevelPlayVarAsync>d__85>(ref <RequestLevelPlayVarAsync>d__);
+		<RequestLevelPlayVarAsync>d__.<>t__builder.Start<AdventureGuideController.<RequestLevelPlayVarAsync>d__86>(ref <RequestLevelPlayVarAsync>d__);
 		return <RequestLevelPlayVarAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A40D RID: 41997 RVA: 0x00246348 File Offset: 0x00244548
+	// Token: 0x060077EC RID: 30700 RVA: 0x002505E8 File Offset: 0x0024E7E8
 	public void HandlePreOpenDetectionByPreOpenId(int preOpenId)
 	{
 		PreOpenDetection? preOpenDetectionConfById = AdventureGuideConfig.Instance.GetPreOpenDetectionConfById(preOpenId);
@@ -1517,7 +1567,7 @@ public class AdventureGuideController : UiControllerBase
 		bool flag = false;
 		foreach (EAdventurePreOpenPlayType value in playerType)
 		{
-			if (preOpenDetectionConfById.Value.PlayTypeArray().Contains((int)value))
+			if (Array.IndexOf<int>(preOpenDetectionConfById.Value.PlayTypeArray(), (int)value) >= 0)
 			{
 				flag = true;
 				break;
@@ -1530,7 +1580,7 @@ public class AdventureGuideController : UiControllerBase
 		this.HandlePreOpenDetection(preOpenDetectionConfById.Value.DetectionId, (ESoundAreaDataType)preOpenDetectionConfById.Value.SoundAreaType, preOpenDetectionConfById.Value.Id);
 	}
 
-	// Token: 0x0600A40E RID: 41998 RVA: 0x00246404 File Offset: 0x00244604
+	// Token: 0x060077ED RID: 30701 RVA: 0x002506A4 File Offset: 0x0024E8A4
 	public unsafe void HandlePreOpenDetection(int id, ESoundAreaDataType type, int preOpenId)
 	{
 		PreOpenDetection? preOpenDetectionConf = AdventureGuideModel.Instance.GetPreOpenDetectionConf(id, type, preOpenId);
@@ -1624,7 +1674,7 @@ public class AdventureGuideController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A40F RID: 41999 RVA: 0x002467A8 File Offset: 0x002449A8
+	// Token: 0x060077EE RID: 30702 RVA: 0x00250A48 File Offset: 0x0024EC48
 	public unsafe void HandleRegressDetection(int gachaRoleDevelopInsId)
 	{
 		GachaRoleDevelopIns? gachaRoleDevelopIns = ActivityRegressConfig.Instance.GetGachaRoleDevelopIns(gachaRoleDevelopInsId);
@@ -1685,7 +1735,7 @@ public class AdventureGuideController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A410 RID: 42000 RVA: 0x002469F4 File Offset: 0x00244BF4
+	// Token: 0x060077EF RID: 30703 RVA: 0x00250C94 File Offset: 0x0024EE94
 	public List<EAdventurePreOpenPlayType> GetPlayerType()
 	{
 		List<EAdventurePreOpenPlayType> list = new List<EAdventurePreOpenPlayType>();
@@ -1712,8 +1762,8 @@ public class AdventureGuideController : UiControllerBase
 		return list;
 	}
 
-	// Token: 0x17000DCC RID: 3532
-	// (get) Token: 0x0600A411 RID: 42001 RVA: 0x00246A5D File Offset: 0x00244C5D
+	// Token: 0x17000DED RID: 3565
+	// (get) Token: 0x060077F0 RID: 30704 RVA: 0x00250CFD File Offset: 0x0024EEFD
 	public static AdventureGuideController Instance
 	{
 		get
@@ -1722,7 +1772,7 @@ public class AdventureGuideController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A412 RID: 42002 RVA: 0x00246A64 File Offset: 0x00244C64
+	// Token: 0x060077F1 RID: 30705 RVA: 0x00250D04 File Offset: 0x0024EF04
 	public static AdventureGuideController GetOrCreateInstance()
 	{
 		if (AdventureGuideController._Instance == null)
@@ -1732,7 +1782,7 @@ public class AdventureGuideController : UiControllerBase
 		return AdventureGuideController._Instance;
 	}
 
-	// Token: 0x0600A413 RID: 42003 RVA: 0x00246A78 File Offset: 0x00244C78
+	// Token: 0x060077F2 RID: 30706 RVA: 0x00250D18 File Offset: 0x0024EF18
 	public static bool CreateInstance()
 	{
 		if (AdventureGuideController._Instance != null)
@@ -1743,57 +1793,57 @@ public class AdventureGuideController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A414 RID: 42004 RVA: 0x00246A8E File Offset: 0x00244C8E
+	// Token: 0x060077F3 RID: 30707 RVA: 0x00250D2E File Offset: 0x0024EF2E
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A415 RID: 42005 RVA: 0x00246A90 File Offset: 0x00244C90
+	// Token: 0x060077F4 RID: 30708 RVA: 0x00250D30 File Offset: 0x0024EF30
 	public static void ResetStaticDefaultValue()
 	{
 		AdventureGuideController._Instance = null;
 	}
 
-	// Token: 0x0600A416 RID: 42006 RVA: 0x00246A98 File Offset: 0x00244C98
+	// Token: 0x060077F5 RID: 30709 RVA: 0x00250D38 File Offset: 0x0024EF38
 	static AdventureGuideController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AdventureGuideController.CreateStaticDefaultValue), new Action(AdventureGuideController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004A50 RID: 19024
+	// Token: 0x04004AF7 RID: 19191
 	public const string UNKNOWNTEXT = "Unknown";
 
-	// Token: 0x04004A51 RID: 19025
+	// Token: 0x04004AF8 RID: 19192
 	public const int MAX_INT32_NUMBER = 2147483647;
 
-	// Token: 0x04004A52 RID: 19026
+	// Token: 0x04004AF9 RID: 19193
 	public const string DUNGEON_LOCKED = "DungeonLocked";
 
-	// Token: 0x04004A53 RID: 19027
+	// Token: 0x04004AFA RID: 19194
 	public const string DOING = "Doing";
 
-	// Token: 0x04004A54 RID: 19028
+	// Token: 0x04004AFB RID: 19195
 	public const string UNDISCOVERED = "UnDiscovered";
 
-	// Token: 0x04004A55 RID: 19029
+	// Token: 0x04004AFC RID: 19196
 	public const string DETECT = "Detect";
 
-	// Token: 0x04004A56 RID: 19030
+	// Token: 0x04004AFD RID: 19197
 	public const int HIGHLEVELTEXTID = 3;
 
-	// Token: 0x04004A57 RID: 19031
+	// Token: 0x04004AFE RID: 19198
 	public const int MIDLEVELTEXTID = 2;
 
-	// Token: 0x04004A58 RID: 19032
+	// Token: 0x04004AFF RID: 19199
 	public const int LOWLEVELTEXTID = 1;
 
-	// Token: 0x04004A59 RID: 19033
+	// Token: 0x04004B00 RID: 19200
 	public const string RECEIVED_COUNT = "ReceivedCount";
 
-	// Token: 0x04004A5A RID: 19034
+	// Token: 0x04004B01 RID: 19201
 	public const string REMAINFLUSHTIME = "FlushTimeRemain";
 
-	// Token: 0x04004A5B RID: 19035
+	// Token: 0x04004B02 RID: 19202
 	private readonly HashSet<EMarkType> CheckMarkTypeSet = new HashSet<EMarkType>
 	{
 		EMarkType.FixedSceneGameplay,
@@ -1801,7 +1851,7 @@ public class AdventureGuideController : UiControllerBase
 		EMarkType.CommonGamePlay
 	};
 
-	// Token: 0x04004A5C RID: 19036
+	// Token: 0x04004B03 RID: 19203
 	[Nullable(2)]
 	private static AdventureGuideController _Instance;
 }

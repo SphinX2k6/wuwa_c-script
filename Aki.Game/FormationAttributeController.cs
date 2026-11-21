@@ -7,13 +7,13 @@ using CSharpScript.Core.Framework;
 using CSharpScript.Game.Common.Event;
 using Google.Protobuf;
 
-// Token: 0x02000F03 RID: 3843
+// Token: 0x020003B8 RID: 952
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class FormationAttributeController : ControllerBase
 {
-	// Token: 0x06006067 RID: 24679 RVA: 0x0012CA7C File Offset: 0x0012AC7C
+	// Token: 0x060033FF RID: 13311 RVA: 0x00135380 File Offset: 0x00133580
 	protected override bool OnInit()
 	{
 		this.ConfigList = ConfigFormationPropertyAll.GetConfigList(true);
@@ -22,7 +22,7 @@ public class FormationAttributeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06006068 RID: 24680 RVA: 0x0012CAD0 File Offset: 0x0012ACD0
+	// Token: 0x06003400 RID: 13312 RVA: 0x001353D4 File Offset: 0x001335D4
 	protected override void OnTick(float delta)
 	{
 		if (this.ConfigList == null)
@@ -35,7 +35,7 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x06006069 RID: 24681 RVA: 0x0012CB2C File Offset: 0x0012AD2C
+	// Token: 0x06003401 RID: 13313 RVA: 0x00135430 File Offset: 0x00133630
 	protected override bool OnClear()
 	{
 		this.ClearListeners();
@@ -45,7 +45,7 @@ public class FormationAttributeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600606A RID: 24682 RVA: 0x0012CB5C File Offset: 0x0012AD5C
+	// Token: 0x06003402 RID: 13314 RVA: 0x00135460 File Offset: 0x00133660
 	[NullableContext(2)]
 	public void FormationAttrNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -69,7 +69,7 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600606B RID: 24683 RVA: 0x0012CC30 File Offset: 0x0012AE30
+	// Token: 0x06003403 RID: 13315 RVA: 0x00135534 File Offset: 0x00133734
 	protected void OnFormationAttrChanged(EFormationAttributeId attrId)
 	{
 		FormationAttributeModel model = this.Model;
@@ -90,7 +90,7 @@ public class FormationAttributeController : ControllerBase
 		Net.Instance.Call(ERequestMessageId.FormationAttrRequest, formationAttrRequest, null, 0);
 	}
 
-	// Token: 0x0600606C RID: 24684 RVA: 0x0012CCC8 File Offset: 0x0012AEC8
+	// Token: 0x06003404 RID: 13316 RVA: 0x001355CC File Offset: 0x001337CC
 	public void SetValue(EFormationAttributeId attrId, float value)
 	{
 		if (!this.HasAuthority(attrId))
@@ -106,7 +106,7 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600606D RID: 24685 RVA: 0x0012CD0C File Offset: 0x0012AF0C
+	// Token: 0x06003405 RID: 13317 RVA: 0x00135610 File Offset: 0x00133810
 	public void AddValue(EFormationAttributeId attrId, float value)
 	{
 		if (!this.HasAuthority(attrId))
@@ -116,7 +116,7 @@ public class FormationAttributeController : ControllerBase
 		this.SetValue(attrId, this.Model.GetValue(attrId) + value);
 	}
 
-	// Token: 0x0600606E RID: 24686 RVA: 0x0012CD2D File Offset: 0x0012AF2D
+	// Token: 0x06003406 RID: 13318 RVA: 0x00135631 File Offset: 0x00133831
 	public float GetValue(EFormationAttributeId attrId)
 	{
 		if (this.AttributeCache.ContainsKey(attrId))
@@ -126,13 +126,13 @@ public class FormationAttributeController : ControllerBase
 		return this.Model.GetValue(attrId);
 	}
 
-	// Token: 0x0600606F RID: 24687 RVA: 0x0012CD56 File Offset: 0x0012AF56
+	// Token: 0x06003407 RID: 13319 RVA: 0x0013565A File Offset: 0x0013385A
 	public float GetMax(EFormationAttributeId attrId)
 	{
 		return this.Model.GetMax(attrId);
 	}
 
-	// Token: 0x06006070 RID: 24688 RVA: 0x0012CD64 File Offset: 0x0012AF64
+	// Token: 0x06003408 RID: 13320 RVA: 0x00135668 File Offset: 0x00133868
 	public void AddMaxModifier(string key, EFormationAttributeId attrId, float percent, float offset)
 	{
 		if (!this.MaxModifiers.ContainsKey(attrId))
@@ -147,7 +147,7 @@ public class FormationAttributeController : ControllerBase
 		this.RefreshMax(attrId);
 	}
 
-	// Token: 0x06006071 RID: 24689 RVA: 0x0012CDBD File Offset: 0x0012AFBD
+	// Token: 0x06003409 RID: 13321 RVA: 0x001356C1 File Offset: 0x001338C1
 	public void RemoveMaxModifier(string key, EFormationAttributeId attrId)
 	{
 		if (this.MaxModifiers.ContainsKey(attrId))
@@ -162,25 +162,25 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x06006072 RID: 24690 RVA: 0x0012CDFC File Offset: 0x0012AFFC
+	// Token: 0x0600340A RID: 13322 RVA: 0x00135700 File Offset: 0x00133900
 	public float GetBaseMax(EFormationAttributeId attrId)
 	{
 		return this.Model.GetBaseMax(attrId);
 	}
 
-	// Token: 0x06006073 RID: 24691 RVA: 0x0012CE0A File Offset: 0x0012B00A
+	// Token: 0x0600340B RID: 13323 RVA: 0x0013570E File Offset: 0x0013390E
 	public float GetSpeed(EFormationAttributeId attrId)
 	{
 		return this.Model.GetSpeed(attrId);
 	}
 
-	// Token: 0x06006074 RID: 24692 RVA: 0x0012CE18 File Offset: 0x0012B018
+	// Token: 0x0600340C RID: 13324 RVA: 0x0013571C File Offset: 0x0013391C
 	public float GetRatio(EFormationAttributeId attrId)
 	{
 		return this.GetValue(attrId) / this.GetMax(attrId) * 10000f;
 	}
 
-	// Token: 0x06006075 RID: 24693 RVA: 0x0012CE30 File Offset: 0x0012B030
+	// Token: 0x0600340D RID: 13325 RVA: 0x00135734 File Offset: 0x00133934
 	public void AddSpeedModifier(string key, EFormationAttributeId attrId, EModifierType type, float value, int priority = 100)
 	{
 		if (!this.SpeedModifiers.ContainsKey(attrId))
@@ -196,7 +196,7 @@ public class FormationAttributeController : ControllerBase
 		this.RefreshSpeed(attrId);
 	}
 
-	// Token: 0x06006076 RID: 24694 RVA: 0x0012CE91 File Offset: 0x0012B091
+	// Token: 0x0600340E RID: 13326 RVA: 0x00135795 File Offset: 0x00133995
 	public void RemoveSpeedModifier(string key, EFormationAttributeId attrId)
 	{
 		if (this.SpeedModifiers.ContainsKey(attrId))
@@ -211,7 +211,7 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x06006077 RID: 24695 RVA: 0x0012CED0 File Offset: 0x0012B0D0
+	// Token: 0x0600340F RID: 13327 RVA: 0x001357D4 File Offset: 0x001339D4
 	public int AddBoundsLocker(EFormationAttributeId attrId, IBoundsLocker locker, int lockerHandle)
 	{
 		FormationAttributeModel model = this.Model;
@@ -222,14 +222,14 @@ public class FormationAttributeController : ControllerBase
 		return model.AddBoundsLocker(attrId, locker, lockerHandle);
 	}
 
-	// Token: 0x06006078 RID: 24696 RVA: 0x0012CEE6 File Offset: 0x0012B0E6
+	// Token: 0x06003410 RID: 13328 RVA: 0x001357EA File Offset: 0x001339EA
 	public bool RemoveBoundsLocker(EFormationAttributeId attrId, int lockerHandle)
 	{
 		FormationAttributeModel model = this.Model;
 		return model != null && model.RemoveBoundsLocker(attrId, lockerHandle);
 	}
 
-	// Token: 0x06006079 RID: 24697 RVA: 0x0012CEFC File Offset: 0x0012B0FC
+	// Token: 0x06003411 RID: 13329 RVA: 0x00135800 File Offset: 0x00133A00
 	public void AddPauseLock(string key, float timeScale = 0f)
 	{
 		if (timeScale <= 0f)
@@ -245,7 +245,7 @@ public class FormationAttributeController : ControllerBase
 		this.RefreshAllSpeed();
 	}
 
-	// Token: 0x0600607A RID: 24698 RVA: 0x0012CF61 File Offset: 0x0012B161
+	// Token: 0x06003412 RID: 13330 RVA: 0x00135865 File Offset: 0x00133A65
 	public void RemovePauseLock(string key)
 	{
 		this.PauseLocks.Remove(key);
@@ -253,13 +253,13 @@ public class FormationAttributeController : ControllerBase
 		this.RefreshAllSpeed();
 	}
 
-	// Token: 0x0600607B RID: 24699 RVA: 0x0012CF83 File Offset: 0x0012B183
+	// Token: 0x06003413 RID: 13331 RVA: 0x00135887 File Offset: 0x00133A87
 	public bool IsPaused()
 	{
 		return this.PauseLocks.Count > 0;
 	}
 
-	// Token: 0x0600607C RID: 24700 RVA: 0x0012CF94 File Offset: 0x0012B194
+	// Token: 0x06003414 RID: 13332 RVA: 0x00135898 File Offset: 0x00133A98
 	public float GetPauseRate()
 	{
 		float num = 1f;
@@ -270,13 +270,13 @@ public class FormationAttributeController : ControllerBase
 		return num;
 	}
 
-	// Token: 0x0600607D RID: 24701 RVA: 0x0012CFF4 File Offset: 0x0012B1F4
+	// Token: 0x06003415 RID: 13333 RVA: 0x001358F8 File Offset: 0x00133AF8
 	private bool HasAuthority(EFormationAttributeId attrId)
 	{
 		return attrId == EFormationAttributeId.Strength || attrId == EFormationAttributeId.MigrationStrength || attrId == EFormationAttributeId.MotorcycleStrength || attrId == EFormationAttributeId.MotorcycleSoarStrength || attrId == EFormationAttributeId.LevelQuickHackRam;
 	}
 
-	// Token: 0x0600607E RID: 24702 RVA: 0x0012D010 File Offset: 0x0012B210
+	// Token: 0x06003416 RID: 13334 RVA: 0x00135914 File Offset: 0x00133B14
 	private BaseTagComponent.TTagSwitchedCallback GetCheckTagCallback(EFormationAttributeId attrId)
 	{
 		if (!this.CheckTagCallbacks.ContainsKey(attrId))
@@ -319,7 +319,7 @@ public class FormationAttributeController : ControllerBase
 		return this.CheckTagCallbacks[attrId];
 	}
 
-	// Token: 0x0600607F RID: 24703 RVA: 0x0012D074 File Offset: 0x0012B274
+	// Token: 0x06003417 RID: 13335 RVA: 0x00135978 File Offset: 0x00133B78
 	private void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 	{
 		if (this.ConfigList == null)
@@ -362,8 +362,8 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x17000779 RID: 1913
-	// (get) Token: 0x06006080 RID: 24704 RVA: 0x0012D1F0 File Offset: 0x0012B3F0
+	// Token: 0x1700079B RID: 1947
+	// (get) Token: 0x06003418 RID: 13336 RVA: 0x00135AF4 File Offset: 0x00133CF4
 	[Nullable(2)]
 	public FormationAttributeModel Model
 	{
@@ -374,7 +374,7 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x06006081 RID: 24705 RVA: 0x0012D1F8 File Offset: 0x0012B3F8
+	// Token: 0x06003419 RID: 13337 RVA: 0x00135AFC File Offset: 0x00133CFC
 	protected void OnSetMax(EFormationAttributeId attrId, float newMax, float oldMax)
 	{
 		if (newMax != oldMax && this.MaxListeners.ContainsKey(attrId))
@@ -386,7 +386,7 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x06006082 RID: 24706 RVA: 0x0012D264 File Offset: 0x0012B464
+	// Token: 0x0600341A RID: 13338 RVA: 0x00135B68 File Offset: 0x00133D68
 	protected void RefreshAllSpeed()
 	{
 		if (this.ConfigList != null)
@@ -398,7 +398,7 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x06006083 RID: 24707 RVA: 0x0012D2C0 File Offset: 0x0012B4C0
+	// Token: 0x0600341B RID: 13339 RVA: 0x00135BC4 File Offset: 0x00133DC4
 	protected void RefreshSpeed(EFormationAttributeId attrId)
 	{
 		Dictionary<string, ISpeedModifier> dictionary = this.SpeedModifiers.ContainsKey(attrId) ? this.SpeedModifiers[attrId] : null;
@@ -447,7 +447,7 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x06006084 RID: 24708 RVA: 0x0012D420 File Offset: 0x0012B620
+	// Token: 0x0600341C RID: 13340 RVA: 0x00135D24 File Offset: 0x00133F24
 	protected void RefreshMax(EFormationAttributeId attrId)
 	{
 		Dictionary<string, IMaxModifier> dictionary = this.MaxModifiers.ContainsKey(attrId) ? this.MaxModifiers[attrId] : null;
@@ -474,7 +474,7 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x06006085 RID: 24709 RVA: 0x0012D50C File Offset: 0x0012B70C
+	// Token: 0x0600341D RID: 13341 RVA: 0x00135E10 File Offset: 0x00134010
 	private unsafe void RefreshValue(EFormationAttributeId attrId)
 	{
 		float value = this.Model.GetValue(attrId);
@@ -554,7 +554,7 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x06006086 RID: 24710 RVA: 0x0012D7C8 File Offset: 0x0012B9C8
+	// Token: 0x0600341E RID: 13342 RVA: 0x001360CC File Offset: 0x001342CC
 	private void ClearListeners()
 	{
 		this.ValueListeners.Clear();
@@ -562,7 +562,7 @@ public class FormationAttributeController : ControllerBase
 		this.MaxListeners.Clear();
 	}
 
-	// Token: 0x06006087 RID: 24711 RVA: 0x0012D7EB File Offset: 0x0012B9EB
+	// Token: 0x0600341F RID: 13343 RVA: 0x001360EF File Offset: 0x001342EF
 	public void AddValueListener(EFormationAttributeId attrId, TValueListener listener, [Nullable(2)] string profileLabel = null)
 	{
 		if (!this.ValueListeners.ContainsKey(attrId))
@@ -572,7 +572,7 @@ public class FormationAttributeController : ControllerBase
 		this.ValueListeners[attrId].Add(listener);
 	}
 
-	// Token: 0x06006088 RID: 24712 RVA: 0x0012D81F File Offset: 0x0012BA1F
+	// Token: 0x06003420 RID: 13344 RVA: 0x00136123 File Offset: 0x00134323
 	public void RemoveValueListener(EFormationAttributeId attrId, TValueListener listener)
 	{
 		if (this.ValueListeners.ContainsKey(attrId))
@@ -586,7 +586,7 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x06006089 RID: 24713 RVA: 0x0012D858 File Offset: 0x0012BA58
+	// Token: 0x06003421 RID: 13345 RVA: 0x0013615C File Offset: 0x0013435C
 	public unsafe void AddThresholdListener(EFormationAttributeId attrId, TThresholdListener listener, float maxLimit, float minLimit, [Nullable(2)] string profileLabel = null)
 	{
 		if (maxLimit < minLimit)
@@ -633,7 +633,7 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600608A RID: 24714 RVA: 0x0012D9A8 File Offset: 0x0012BBA8
+	// Token: 0x06003422 RID: 13346 RVA: 0x001362AC File Offset: 0x001344AC
 	public void RemoveThresholdListener(EFormationAttributeId attrId, TThresholdListener listener)
 	{
 		if (!this.ThresholdListeners.ContainsKey(attrId))
@@ -648,7 +648,7 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600608B RID: 24715 RVA: 0x0012D9FC File Offset: 0x0012BBFC
+	// Token: 0x06003423 RID: 13347 RVA: 0x00136300 File Offset: 0x00134500
 	public void AddMaxListener(EFormationAttributeId attrId, TValueListener listener, [Nullable(2)] string profileLabel = null)
 	{
 		if (!this.MaxListeners.ContainsKey(attrId))
@@ -658,7 +658,7 @@ public class FormationAttributeController : ControllerBase
 		this.MaxListeners[attrId].Add(listener);
 	}
 
-	// Token: 0x0600608C RID: 24716 RVA: 0x0012DA30 File Offset: 0x0012BC30
+	// Token: 0x06003424 RID: 13348 RVA: 0x00136334 File Offset: 0x00134534
 	public void RemoveMaxListener(EFormationAttributeId attrId, TValueListener listener)
 	{
 		if (this.MaxListeners.ContainsKey(attrId))
@@ -667,8 +667,8 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x1700077A RID: 1914
-	// (get) Token: 0x0600608D RID: 24717 RVA: 0x0012DA53 File Offset: 0x0012BC53
+	// Token: 0x1700079C RID: 1948
+	// (get) Token: 0x06003425 RID: 13349 RVA: 0x00136357 File Offset: 0x00134557
 	public static FormationAttributeController Instance
 	{
 		get
@@ -677,7 +677,7 @@ public class FormationAttributeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600608E RID: 24718 RVA: 0x0012DA5A File Offset: 0x0012BC5A
+	// Token: 0x06003426 RID: 13350 RVA: 0x0013635E File Offset: 0x0013455E
 	public static FormationAttributeController GetOrCreateInstance()
 	{
 		if (FormationAttributeController._Instance == null)
@@ -687,7 +687,7 @@ public class FormationAttributeController : ControllerBase
 		return FormationAttributeController._Instance;
 	}
 
-	// Token: 0x0600608F RID: 24719 RVA: 0x0012DA6E File Offset: 0x0012BC6E
+	// Token: 0x06003427 RID: 13351 RVA: 0x00136372 File Offset: 0x00134572
 	public static bool CreateInstance()
 	{
 		if (FormationAttributeController._Instance != null)
@@ -698,55 +698,55 @@ public class FormationAttributeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06006090 RID: 24720 RVA: 0x0012DA84 File Offset: 0x0012BC84
+	// Token: 0x06003428 RID: 13352 RVA: 0x00136388 File Offset: 0x00134588
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06006091 RID: 24721 RVA: 0x0012DA86 File Offset: 0x0012BC86
+	// Token: 0x06003429 RID: 13353 RVA: 0x0013638A File Offset: 0x0013458A
 	public static void ResetStaticDefaultValue()
 	{
 		FormationAttributeController._Instance = null;
 	}
 
-	// Token: 0x06006092 RID: 24722 RVA: 0x0012DA8E File Offset: 0x0012BC8E
+	// Token: 0x0600342A RID: 13354 RVA: 0x00136392 File Offset: 0x00134592
 	static FormationAttributeController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FormationAttributeController.CreateStaticDefaultValue), new Action(FormationAttributeController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002C08 RID: 11272
+	// Token: 0x04002CA1 RID: 11425
 	[Nullable(2)]
 	protected IReadOnlyList<FormationProperty> ConfigList;
 
-	// Token: 0x04002C09 RID: 11273
+	// Token: 0x04002CA2 RID: 11426
 	public Dictionary<EFormationAttributeId, Dictionary<string, ISpeedModifier>> SpeedModifiers = new Dictionary<EFormationAttributeId, Dictionary<string, ISpeedModifier>>();
 
-	// Token: 0x04002C0A RID: 11274
+	// Token: 0x04002CA3 RID: 11427
 	public Dictionary<EFormationAttributeId, Dictionary<string, IMaxModifier>> MaxModifiers = new Dictionary<EFormationAttributeId, Dictionary<string, IMaxModifier>>();
 
-	// Token: 0x04002C0B RID: 11275
+	// Token: 0x04002CA4 RID: 11428
 	protected HashSet<string> PauseLocks = new HashSet<string>();
 
-	// Token: 0x04002C0C RID: 11276
+	// Token: 0x04002CA5 RID: 11429
 	protected readonly Dictionary<string, float> PauseRateLocks = new Dictionary<string, float>();
 
-	// Token: 0x04002C0D RID: 11277
+	// Token: 0x04002CA6 RID: 11430
 	private readonly Dictionary<EFormationAttributeId, BaseTagComponent.TTagSwitchedCallback> CheckTagCallbacks = new Dictionary<EFormationAttributeId, BaseTagComponent.TTagSwitchedCallback>();
 
-	// Token: 0x04002C0E RID: 11278
+	// Token: 0x04002CA7 RID: 11431
 	private readonly Dictionary<EFormationAttributeId, float> AttributeCache = new Dictionary<EFormationAttributeId, float>();
 
-	// Token: 0x04002C0F RID: 11279
+	// Token: 0x04002CA8 RID: 11432
 	private readonly Dictionary<EFormationAttributeId, HashSet<TValueListener>> ValueListeners = new Dictionary<EFormationAttributeId, HashSet<TValueListener>>();
 
-	// Token: 0x04002C10 RID: 11280
+	// Token: 0x04002CA9 RID: 11433
 	private readonly Dictionary<EFormationAttributeId, List<IThresholdListenerInfo>> ThresholdListeners = new Dictionary<EFormationAttributeId, List<IThresholdListenerInfo>>();
 
-	// Token: 0x04002C11 RID: 11281
+	// Token: 0x04002CAA RID: 11434
 	private readonly Dictionary<EFormationAttributeId, HashSet<TValueListener>> MaxListeners = new Dictionary<EFormationAttributeId, HashSet<TValueListener>>();
 
-	// Token: 0x04002C12 RID: 11282
+	// Token: 0x04002CAB RID: 11435
 	[Nullable(2)]
 	private static FormationAttributeController _Instance;
 }

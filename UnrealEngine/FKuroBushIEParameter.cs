@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200199F RID: 6559
+	// Token: 0x0200044D RID: 1101
 	[UnrealObjectPath("/Script/KuroInteractionEffect.KuroBushIEParameter")]
 	[UnrealStructLayout(64, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 64)]
 	public class FKuroBushIEParameter : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06018605 RID: 99845 RVA: 0x0023EFFF File Offset: 0x0023D1FF
+		// Token: 0x06006A38 RID: 27192 RVA: 0x0009AEB7 File Offset: 0x000990B7
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroBushIEParameter._ScriptStructPtr != 0) ? FKuroBushIEParameter._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroInteractionEffect.KuroBushIEParameter", ref FKuroBushIEParameter._ScriptStructPtr);
 		}
 
-		// Token: 0x1700614A RID: 24906
-		// (get) Token: 0x06018606 RID: 99846 RVA: 0x0023F023 File Offset: 0x0023D223
-		// (set) Token: 0x06018607 RID: 99847 RVA: 0x0023F033 File Offset: 0x0023D233
+		// Token: 0x17001512 RID: 5394
+		// (get) Token: 0x06006A39 RID: 27193 RVA: 0x0009AEDB File Offset: 0x000990DB
+		// (set) Token: 0x06006A3A RID: 27194 RVA: 0x0009AEEB File Offset: 0x000990EB
 		public unsafe float SpawnCountScale
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700614B RID: 24907
-		// (get) Token: 0x06018608 RID: 99848 RVA: 0x0023F044 File Offset: 0x0023D244
-		// (set) Token: 0x06018609 RID: 99849 RVA: 0x0023F054 File Offset: 0x0023D254
+		// Token: 0x17001513 RID: 5395
+		// (get) Token: 0x06006A3B RID: 27195 RVA: 0x0009AEFC File Offset: 0x000990FC
+		// (set) Token: 0x06006A3C RID: 27196 RVA: 0x0009AF0C File Offset: 0x0009910C
 		public unsafe float SpawnSizeScale
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700614C RID: 24908
-		// (get) Token: 0x0601860A RID: 99850 RVA: 0x0023F065 File Offset: 0x0023D265
-		// (set) Token: 0x0601860B RID: 99851 RVA: 0x0023F079 File Offset: 0x0023D279
+		// Token: 0x17001514 RID: 5396
+		// (get) Token: 0x06006A3D RID: 27197 RVA: 0x0009AF1D File Offset: 0x0009911D
+		// (set) Token: 0x06006A3E RID: 27198 RVA: 0x0009AF31 File Offset: 0x00099131
 		public unsafe FVector SpawnBoxExtent
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700614D RID: 24909
-		// (get) Token: 0x0601860C RID: 99852 RVA: 0x0023F08E File Offset: 0x0023D28E
-		// (set) Token: 0x0601860D RID: 99853 RVA: 0x0023F0A2 File Offset: 0x0023D2A2
+		// Token: 0x17001515 RID: 5397
+		// (get) Token: 0x06006A3F RID: 27199 RVA: 0x0009AF46 File Offset: 0x00099146
+		// (set) Token: 0x06006A40 RID: 27200 RVA: 0x0009AF5A File Offset: 0x0009915A
 		public unsafe FVector SpawnBoxOffset
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700614E RID: 24910
-		// (get) Token: 0x0601860E RID: 99854 RVA: 0x0023F0B7 File Offset: 0x0023D2B7
-		// (set) Token: 0x0601860F RID: 99855 RVA: 0x0023F0C7 File Offset: 0x0023D2C7
+		// Token: 0x17001516 RID: 5398
+		// (get) Token: 0x06006A41 RID: 27201 RVA: 0x0009AF6F File Offset: 0x0009916F
+		// (set) Token: 0x06006A42 RID: 27202 RVA: 0x0009AF7F File Offset: 0x0009917F
 		public unsafe int UVIndexBegin
 		{
 			get
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700614F RID: 24911
-		// (get) Token: 0x06018610 RID: 99856 RVA: 0x0023F0D8 File Offset: 0x0023D2D8
-		// (set) Token: 0x06018611 RID: 99857 RVA: 0x0023F0E8 File Offset: 0x0023D2E8
+		// Token: 0x17001517 RID: 5399
+		// (get) Token: 0x06006A43 RID: 27203 RVA: 0x0009AF90 File Offset: 0x00099190
+		// (set) Token: 0x06006A44 RID: 27204 RVA: 0x0009AFA0 File Offset: 0x000991A0
 		public unsafe int UVIndexEnd
 		{
 			get
@@ -106,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006150 RID: 24912
-		// (get) Token: 0x06018612 RID: 99858 RVA: 0x0023F0F9 File Offset: 0x0023D2F9
-		// (set) Token: 0x06018613 RID: 99859 RVA: 0x0023F109 File Offset: 0x0023D309
+		// Token: 0x17001518 RID: 5400
+		// (get) Token: 0x06006A45 RID: 27205 RVA: 0x0009AFB1 File Offset: 0x000991B1
+		// (set) Token: 0x06006A46 RID: 27206 RVA: 0x0009AFC1 File Offset: 0x000991C1
 		public unsafe float SoaringSpawnSizeScale
 		{
 			get
@@ -121,9 +121,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006151 RID: 24913
-		// (get) Token: 0x06018614 RID: 99860 RVA: 0x0023F11A File Offset: 0x0023D31A
-		// (set) Token: 0x06018615 RID: 99861 RVA: 0x0023F12A File Offset: 0x0023D32A
+		// Token: 0x17001519 RID: 5401
+		// (get) Token: 0x06006A47 RID: 27207 RVA: 0x0009AFD2 File Offset: 0x000991D2
+		// (set) Token: 0x06006A48 RID: 27208 RVA: 0x0009AFE2 File Offset: 0x000991E2
 		public unsafe float SoaringSpawnCountScale
 		{
 			get
@@ -136,9 +136,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006152 RID: 24914
-		// (get) Token: 0x06018616 RID: 99862 RVA: 0x0023F13B File Offset: 0x0023D33B
-		// (set) Token: 0x06018617 RID: 99863 RVA: 0x0023F14B File Offset: 0x0023D34B
+		// Token: 0x1700151A RID: 5402
+		// (get) Token: 0x06006A49 RID: 27209 RVA: 0x0009AFF3 File Offset: 0x000991F3
+		// (set) Token: 0x06006A4A RID: 27210 RVA: 0x0009B003 File Offset: 0x00099203
 		public unsafe float SoaringSpeedScale
 		{
 			get
@@ -151,9 +151,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006153 RID: 24915
-		// (get) Token: 0x06018618 RID: 99864 RVA: 0x0023F15C File Offset: 0x0023D35C
-		// (set) Token: 0x06018619 RID: 99865 RVA: 0x0023F16C File Offset: 0x0023D36C
+		// Token: 0x1700151B RID: 5403
+		// (get) Token: 0x06006A4B RID: 27211 RVA: 0x0009B014 File Offset: 0x00099214
+		// (set) Token: 0x06006A4C RID: 27212 RVA: 0x0009B024 File Offset: 0x00099224
 		public unsafe float SoaringLifeTimeScale
 		{
 			get
@@ -166,9 +166,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006154 RID: 24916
-		// (get) Token: 0x0601861A RID: 99866 RVA: 0x0023F17D File Offset: 0x0023D37D
-		// (set) Token: 0x0601861B RID: 99867 RVA: 0x0023F18D File Offset: 0x0023D38D
+		// Token: 0x1700151C RID: 5404
+		// (get) Token: 0x06006A4D RID: 27213 RVA: 0x0009B035 File Offset: 0x00099235
+		// (set) Token: 0x06006A4E RID: 27214 RVA: 0x0009B045 File Offset: 0x00099245
 		public unsafe int TreeEffectTypeIndex
 		{
 			get
@@ -181,9 +181,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006155 RID: 24917
-		// (get) Token: 0x0601861C RID: 99868 RVA: 0x0023F19E File Offset: 0x0023D39E
-		// (set) Token: 0x0601861D RID: 99869 RVA: 0x0023F1AE File Offset: 0x0023D3AE
+		// Token: 0x1700151D RID: 5405
+		// (get) Token: 0x06006A4F RID: 27215 RVA: 0x0009B056 File Offset: 0x00099256
+		// (set) Token: 0x06006A50 RID: 27216 RVA: 0x0009B066 File Offset: 0x00099266
 		public unsafe int BushEffectTypeIndex
 		{
 			get
@@ -196,100 +196,83 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601861E RID: 99870 RVA: 0x0023F1BF File Offset: 0x0023D3BF
+		// Token: 0x06006A51 RID: 27217 RVA: 0x0009B077 File Offset: 0x00099277
 		public FKuroBushIEParameter()
 		{
 		}
 
-		// Token: 0x0601861F RID: 99871 RVA: 0x0023F1C8 File Offset: 0x0023D3C8
-		public FKuroBushIEParameter(float SpawnCountScale, float SpawnSizeScale, FVector SpawnBoxExtent, FVector SpawnBoxOffset, int UVIndexBegin, int UVIndexEnd, float SoaringSpawnSizeScale, float SoaringSpawnCountScale, float SoaringSpeedScale, float SoaringLifeTimeScale, int TreeEffectTypeIndex, int BushEffectTypeIndex)
-		{
-			this.SpawnCountScale = SpawnCountScale;
-			this.SpawnSizeScale = SpawnSizeScale;
-			this.SpawnBoxExtent = SpawnBoxExtent;
-			this.SpawnBoxOffset = SpawnBoxOffset;
-			this.UVIndexBegin = UVIndexBegin;
-			this.UVIndexEnd = UVIndexEnd;
-			this.SoaringSpawnSizeScale = SoaringSpawnSizeScale;
-			this.SoaringSpawnCountScale = SoaringSpawnCountScale;
-			this.SoaringSpeedScale = SoaringSpeedScale;
-			this.SoaringLifeTimeScale = SoaringLifeTimeScale;
-			this.TreeEffectTypeIndex = TreeEffectTypeIndex;
-			this.BushEffectTypeIndex = BushEffectTypeIndex;
-		}
-
-		// Token: 0x06018620 RID: 99872 RVA: 0x0023F238 File Offset: 0x0023D438
+		// Token: 0x06006A52 RID: 27218 RVA: 0x0009B07F File Offset: 0x0009927F
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroBushIEParameter.StaticStruct();
 		}
 
-		// Token: 0x06018621 RID: 99873 RVA: 0x0023F244 File Offset: 0x0023D444
+		// Token: 0x06006A53 RID: 27219 RVA: 0x0009B08B File Offset: 0x0009928B
 		[NullableContext(2)]
 		public FKuroBushIEParameter(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018622 RID: 99874 RVA: 0x0023F24E File Offset: 0x0023D44E
+		// Token: 0x06006A54 RID: 27220 RVA: 0x0009B095 File Offset: 0x00099295
 		public FKuroBushIEParameter(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018623 RID: 99875 RVA: 0x0023F259 File Offset: 0x0023D459
+		// Token: 0x06006A55 RID: 27221 RVA: 0x0009B0A0 File Offset: 0x000992A0
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroBushIEParameter(Pointer, false, true);
 		}
 
-		// Token: 0x06018624 RID: 99876 RVA: 0x0023F263 File Offset: 0x0023D463
+		// Token: 0x06006A56 RID: 27222 RVA: 0x0009B0AA File Offset: 0x000992AA
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroBushIEParameter(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400D2D9 RID: 53977
+		// Token: 0x04002D0B RID: 11531
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroInteractionEffect.KuroBushIEParameter";
 
-		// Token: 0x0400D2DA RID: 53978
+		// Token: 0x04002D0C RID: 11532
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400D2DB RID: 53979
+		// Token: 0x04002D0D RID: 11533
 		internal static int __PropertyOffset_SpawnCountScale;
 
-		// Token: 0x0400D2DC RID: 53980
+		// Token: 0x04002D0E RID: 11534
 		internal static int __PropertyOffset_SpawnSizeScale;
 
-		// Token: 0x0400D2DD RID: 53981
+		// Token: 0x04002D0F RID: 11535
 		internal static int __PropertyOffset_SpawnBoxExtent;
 
-		// Token: 0x0400D2DE RID: 53982
+		// Token: 0x04002D10 RID: 11536
 		internal static int __PropertyOffset_SpawnBoxOffset;
 
-		// Token: 0x0400D2DF RID: 53983
+		// Token: 0x04002D11 RID: 11537
 		internal static int __PropertyOffset_UVIndexBegin;
 
-		// Token: 0x0400D2E0 RID: 53984
+		// Token: 0x04002D12 RID: 11538
 		internal static int __PropertyOffset_UVIndexEnd;
 
-		// Token: 0x0400D2E1 RID: 53985
+		// Token: 0x04002D13 RID: 11539
 		internal static int __PropertyOffset_SoaringSpawnSizeScale;
 
-		// Token: 0x0400D2E2 RID: 53986
+		// Token: 0x04002D14 RID: 11540
 		internal static int __PropertyOffset_SoaringSpawnCountScale;
 
-		// Token: 0x0400D2E3 RID: 53987
+		// Token: 0x04002D15 RID: 11541
 		internal static int __PropertyOffset_SoaringSpeedScale;
 
-		// Token: 0x0400D2E4 RID: 53988
+		// Token: 0x04002D16 RID: 11542
 		internal static int __PropertyOffset_SoaringLifeTimeScale;
 
-		// Token: 0x0400D2E5 RID: 53989
+		// Token: 0x04002D17 RID: 11543
 		internal static int __PropertyOffset_TreeEffectTypeIndex;
 
-		// Token: 0x0400D2E6 RID: 53990
+		// Token: 0x04002D18 RID: 11544
 		internal static int __PropertyOffset_BushEffectTypeIndex;
 	}
 }

@@ -6,22 +6,22 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Module.InstanceDungeon;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020021B0 RID: 8624
+// Token: 0x02001694 RID: 5780
 public class LordGymSecondDifficultySelectView : LordGymDifficultySelectView
 {
-	// Token: 0x06010C6D RID: 68717 RVA: 0x00413272 File Offset: 0x00411472
+	// Token: 0x0600E0FE RID: 57598 RVA: 0x0041FB5A File Offset: 0x0041DD5A
 	[NullableContext(1)]
 	public LordGymSecondDifficultySelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010C6E RID: 68718 RVA: 0x0041327B File Offset: 0x0041147B
+	// Token: 0x0600E0FF RID: 57599 RVA: 0x0041FB63 File Offset: 0x0041DD63
 	protected override void OnStart()
 	{
 		this.AddHomeBtnExitDungeonCallback();
 	}
 
-	// Token: 0x06010C6F RID: 68719 RVA: 0x00413283 File Offset: 0x00411483
+	// Token: 0x0600E100 RID: 57600 RVA: 0x0041FB6B File Offset: 0x0041DD6B
 	private void AddHomeBtnExitDungeonCallback()
 	{
 		UiBehaviourHomeBtn uiBehaviourHomeBtn = this.UiBehaviourHomeBtn;
@@ -39,7 +39,7 @@ public class LordGymSecondDifficultySelectView : LordGymDifficultySelectView
 		});
 	}
 
-	// Token: 0x06010C70 RID: 68720 RVA: 0x004132B4 File Offset: 0x004114B4
+	// Token: 0x0600E101 RID: 57601 RVA: 0x0041FB9C File Offset: 0x0041DD9C
 	protected override void OnStartChallenge()
 	{
 		if (!LordGymModel.Instance.LastChallengeEntryFromGuide)
@@ -68,7 +68,7 @@ public class LordGymSecondDifficultySelectView : LordGymDifficultySelectView
 		InstanceDungeonEntranceController.Instance.ContinueEntranceFlow();
 	}
 
-	// Token: 0x06010C71 RID: 68721 RVA: 0x0041336C File Offset: 0x0041156C
+	// Token: 0x0600E102 RID: 57602 RVA: 0x0041FC54 File Offset: 0x0041DE54
 	protected override void OnCloseBtnClick()
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.LordGymSecondBossSelectView) || UiManager.Instance.IsViewHide(EUiViewName.LordGymSecondBossSelectView))

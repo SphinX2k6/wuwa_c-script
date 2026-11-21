@@ -3,40 +3,40 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C14 RID: 15380
+	// Token: 0x02004020 RID: 16416
 	public class IGraphLineTipsActorT
 	{
-		// Token: 0x170069C3 RID: 27075
-		// (get) Token: 0x0601533B RID: 86843 RVA: 0x0031236E File Offset: 0x0031056E
-		// (set) Token: 0x0601533C RID: 86844 RVA: 0x00312376 File Offset: 0x00310576
+		// Token: 0x17006F6B RID: 28523
+		// (get) Token: 0x06016831 RID: 92209 RVA: 0x00338EF6 File Offset: 0x003370F6
+		// (set) Token: 0x06016832 RID: 92210 RVA: 0x00338EFE File Offset: 0x003370FE
 		public ETipsActorType Type { get; set; }
 
-		// Token: 0x170069C4 RID: 27076
-		// (get) Token: 0x0601533D RID: 86845 RVA: 0x0031237F File Offset: 0x0031057F
-		// (set) Token: 0x0601533E RID: 86846 RVA: 0x00312387 File Offset: 0x00310587
+		// Token: 0x17006F6C RID: 28524
+		// (get) Token: 0x06016833 RID: 92211 RVA: 0x00338F07 File Offset: 0x00337107
+		// (set) Token: 0x06016834 RID: 92212 RVA: 0x00338F0F File Offset: 0x0033710F
 		public ETipsActorColorType ColorType { get; set; }
 
-		// Token: 0x170069C5 RID: 27077
-		// (get) Token: 0x0601533F RID: 86847 RVA: 0x00312390 File Offset: 0x00310590
-		// (set) Token: 0x06015340 RID: 86848 RVA: 0x00312398 File Offset: 0x00310598
+		// Token: 0x17006F6D RID: 28525
+		// (get) Token: 0x06016835 RID: 92213 RVA: 0x00338F18 File Offset: 0x00337118
+		// (set) Token: 0x06016836 RID: 92214 RVA: 0x00338F20 File Offset: 0x00337120
 		public IVectorInfoT Start { get; set; }
 
-		// Token: 0x170069C6 RID: 27078
-		// (get) Token: 0x06015341 RID: 86849 RVA: 0x003123A1 File Offset: 0x003105A1
-		// (set) Token: 0x06015342 RID: 86850 RVA: 0x003123A9 File Offset: 0x003105A9
+		// Token: 0x17006F6E RID: 28526
+		// (get) Token: 0x06016837 RID: 92215 RVA: 0x00338F29 File Offset: 0x00337129
+		// (set) Token: 0x06016838 RID: 92216 RVA: 0x00338F31 File Offset: 0x00337131
 		public IVectorInfoT End { get; set; }
 
-		// Token: 0x170069C7 RID: 27079
-		// (get) Token: 0x06015343 RID: 86851 RVA: 0x003123B2 File Offset: 0x003105B2
-		// (set) Token: 0x06015344 RID: 86852 RVA: 0x003123BA File Offset: 0x003105BA
+		// Token: 0x17006F6F RID: 28527
+		// (get) Token: 0x06016839 RID: 92217 RVA: 0x00338F3A File Offset: 0x0033713A
+		// (set) Token: 0x0601683A RID: 92218 RVA: 0x00338F42 File Offset: 0x00337142
 		public float Thickness { get; set; }
 
-		// Token: 0x170069C8 RID: 27080
-		// (get) Token: 0x06015345 RID: 86853 RVA: 0x003123C3 File Offset: 0x003105C3
-		// (set) Token: 0x06015346 RID: 86854 RVA: 0x003123CB File Offset: 0x003105CB
+		// Token: 0x17006F70 RID: 28528
+		// (get) Token: 0x0601683B RID: 92219 RVA: 0x00338F4B File Offset: 0x0033714B
+		// (set) Token: 0x0601683C RID: 92220 RVA: 0x00338F53 File Offset: 0x00337153
 		public byte NullMask { get; set; }
 
-		// Token: 0x06015347 RID: 86855 RVA: 0x003123D4 File Offset: 0x003105D4
+		// Token: 0x0601683D RID: 92221 RVA: 0x00338F5C File Offset: 0x0033715C
 		public IGraphLineTipsActorT()
 		{
 			this.Type = ETipsActorType.Sphere;

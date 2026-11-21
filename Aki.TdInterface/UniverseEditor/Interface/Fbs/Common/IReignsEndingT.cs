@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E52 RID: 24146
+	// Token: 0x02006492 RID: 25746
 	public class IReignsEndingT
 	{
-		// Token: 0x1700B48F RID: 46223
-		// (get) Token: 0x06029597 RID: 169367 RVA: 0x005AB44C File Offset: 0x005A964C
-		// (set) Token: 0x06029598 RID: 169368 RVA: 0x005AB454 File Offset: 0x005A9654
+		// Token: 0x1700BDF8 RID: 48632
+		// (get) Token: 0x0602BC33 RID: 179251 RVA: 0x005F42F4 File Offset: 0x005F24F4
+		// (set) Token: 0x0602BC34 RID: 179252 RVA: 0x005F42FC File Offset: 0x005F24FC
 		public bool IsSuccess { get; set; }
 
-		// Token: 0x1700B490 RID: 46224
-		// (get) Token: 0x06029599 RID: 169369 RVA: 0x005AB45D File Offset: 0x005A965D
-		// (set) Token: 0x0602959A RID: 169370 RVA: 0x005AB465 File Offset: 0x005A9665
+		// Token: 0x1700BDF9 RID: 48633
+		// (get) Token: 0x0602BC35 RID: 179253 RVA: 0x005F4305 File Offset: 0x005F2505
+		// (set) Token: 0x0602BC36 RID: 179254 RVA: 0x005F430D File Offset: 0x005F250D
 		public IReignsEndingConditionT Conditions { get; set; }
 
-		// Token: 0x1700B491 RID: 46225
-		// (get) Token: 0x0602959B RID: 169371 RVA: 0x005AB46E File Offset: 0x005A966E
-		// (set) Token: 0x0602959C RID: 169372 RVA: 0x005AB476 File Offset: 0x005A9676
+		// Token: 0x1700BDFA RID: 48634
+		// (get) Token: 0x0602BC37 RID: 179255 RVA: 0x005F4316 File Offset: 0x005F2516
+		// (set) Token: 0x0602BC38 RID: 179256 RVA: 0x005F431E File Offset: 0x005F251E
 		public int CardId { get; set; }
 
-		// Token: 0x1700B492 RID: 46226
-		// (get) Token: 0x0602959D RID: 169373 RVA: 0x005AB47F File Offset: 0x005A967F
-		// (set) Token: 0x0602959E RID: 169374 RVA: 0x005AB487 File Offset: 0x005A9687
+		// Token: 0x1700BDFB RID: 48635
+		// (get) Token: 0x0602BC39 RID: 179257 RVA: 0x005F4327 File Offset: 0x005F2527
+		// (set) Token: 0x0602BC3A RID: 179258 RVA: 0x005F432F File Offset: 0x005F252F
 		public List<int> CardIds { get; set; }
 
-		// Token: 0x0602959F RID: 169375 RVA: 0x005AB490 File Offset: 0x005A9690
+		// Token: 0x0602BC3B RID: 179259 RVA: 0x005F4338 File Offset: 0x005F2538
 		public IReignsEndingT()
 		{
 			this.IsSuccess = false;

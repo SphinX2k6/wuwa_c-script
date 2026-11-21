@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007691 RID: 30353
+	// Token: 0x02007E9C RID: 32412
 	public static class TCommonTipOptionVerify
 	{
-		// Token: 0x060373BF RID: 226239 RVA: 0x0077C2D8 File Offset: 0x0077A4D8
+		// Token: 0x0603A862 RID: 239714 RVA: 0x007E03D8 File Offset: 0x007DE5D8
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -61,51 +61,66 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				result = IFlipperTipVerify.Verify(verifier, tablePos);
 				break;
 			case 17:
-				result = IGreatSwordChallengeVerify.Verify(verifier, tablePos);
+				result = IFrequencyDetectionTipVerify.Verify(verifier, tablePos);
 				break;
 			case 18:
-				result = IMoraleAreaTipVerify.Verify(verifier, tablePos);
+				result = IGreatSwordChallengeVerify.Verify(verifier, tablePos);
 				break;
 			case 19:
-				result = INightmareLordTipVerify.Verify(verifier, tablePos);
+				result = IMoraleAreaTipVerify.Verify(verifier, tablePos);
 				break;
 			case 20:
-				result = INightmareSpawnPointTipVerify.Verify(verifier, tablePos);
+				result = INightmareLordTipVerify.Verify(verifier, tablePos);
 				break;
 			case 21:
-				result = IPhotographicTipVerify.Verify(verifier, tablePos);
+				result = INightmareSpawnPointTipVerify.Verify(verifier, tablePos);
 				break;
 			case 22:
-				result = IPunishReportVerify.Verify(verifier, tablePos);
+				result = IPhotographicTipVerify.Verify(verifier, tablePos);
 				break;
 			case 23:
-				result = IRemainStarWarningVerify.Verify(verifier, tablePos);
+				result = IPunishReportVerify.Verify(verifier, tablePos);
 				break;
 			case 24:
-				result = ISheriffCashSettlementVerify.Verify(verifier, tablePos);
+				result = IRedNameMonsterTipVerify.Verify(verifier, tablePos);
 				break;
 			case 25:
-				result = ISheriffCriminalArrestedVerify.Verify(verifier, tablePos);
+				result = IRemainStarWarningVerify.Verify(verifier, tablePos);
 				break;
 			case 26:
-				result = ISheriffStartTrackVerify.Verify(verifier, tablePos);
+				result = IRoleTowerStrongEnemyWarningVerify.Verify(verifier, tablePos);
 				break;
 			case 27:
-				result = ISlashAndTowerTipVerify.Verify(verifier, tablePos);
+				result = ISheriffCashSettlementVerify.Verify(verifier, tablePos);
 				break;
 			case 28:
-				result = ISwordIntentTipVerify.Verify(verifier, tablePos);
+				result = ISheriffCriminalArrestedVerify.Verify(verifier, tablePos);
 				break;
 			case 29:
-				result = ITrapDefenseTipVerify.Verify(verifier, tablePos);
+				result = ISheriffStartTrackVerify.Verify(verifier, tablePos);
 				break;
 			case 30:
-				result = IVisionSettlementHardTipVerify.Verify(verifier, tablePos);
+				result = ISlashAndTowerTipVerify.Verify(verifier, tablePos);
 				break;
 			case 31:
-				result = IVisionSettlementTipVerify.Verify(verifier, tablePos);
+				result = ISwordIntentTipVerify.Verify(verifier, tablePos);
 				break;
 			case 32:
+				result = ITeachAutoShowEndVerify.Verify(verifier, tablePos);
+				break;
+			case 33:
+				result = ITeachAutoShowStartVerify.Verify(verifier, tablePos);
+				break;
+			case 34:
+				result = ITrapDefenseTipVerify.Verify(verifier, tablePos);
+				break;
+			case 35:
+				result = IVisionSettlementHardTipVerify.Verify(verifier, tablePos);
+				break;
+			case 36:
+				result = IVisionSettlementTipVerify.Verify(verifier, tablePos);
+				break;
+			case 37:
 				result = IWhiteCatWarningVerify.Verify(verifier, tablePos);
 				break;
 			default:

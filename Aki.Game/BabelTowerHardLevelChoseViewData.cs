@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001146 RID: 4422
+// Token: 0x020005FA RID: 1530
 public class BabelTowerHardLevelChoseViewData : IBabelTowerHardLevelChoseViewData
 {
-	// Token: 0x17000A29 RID: 2601
-	// (get) Token: 0x06007430 RID: 29744 RVA: 0x0017BD41 File Offset: 0x00179F41
-	// (set) Token: 0x06007431 RID: 29745 RVA: 0x0017BD49 File Offset: 0x00179F49
+	// Token: 0x17000A49 RID: 2633
+	// (get) Token: 0x060047C7 RID: 18375 RVA: 0x0018488F File Offset: 0x00182A8F
+	// (set) Token: 0x060047C8 RID: 18376 RVA: 0x00184897 File Offset: 0x00182A97
 	public bool IfReturnToBabelTowerMainView { get; set; }
 
-	// Token: 0x17000A2A RID: 2602
-	// (get) Token: 0x06007432 RID: 29746 RVA: 0x0017BD52 File Offset: 0x00179F52
-	// (set) Token: 0x06007433 RID: 29747 RVA: 0x0017BD5A File Offset: 0x00179F5A
+	// Token: 0x17000A4A RID: 2634
+	// (get) Token: 0x060047C9 RID: 18377 RVA: 0x001848A0 File Offset: 0x00182AA0
+	// (set) Token: 0x060047CA RID: 18378 RVA: 0x001848A8 File Offset: 0x00182AA8
 	public bool IfLeaveInstanceDungeonWhenMainViewClose { get; set; }
 }

@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200157F RID: 5503
+// Token: 0x02000A37 RID: 2615
 public class WheelTowerCoverRecordResetScoreItem : UiPanelBase
 {
-	// Token: 0x06009D3E RID: 40254 RVA: 0x00221218 File Offset: 0x0021F418
+	// Token: 0x0600711C RID: 28956 RVA: 0x0022AFC8 File Offset: 0x002291C8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -30,7 +30,7 @@ public class WheelTowerCoverRecordResetScoreItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D3F RID: 40255 RVA: 0x002212E4 File Offset: 0x0021F4E4
+	// Token: 0x0600711D RID: 28957 RVA: 0x0022B094 File Offset: 0x00229294
 	[NullableContext(1)]
 	public void Refresh(IWheelTowerCoverRecordData oldData, IWheelTowerCoverRecordData newData)
 	{

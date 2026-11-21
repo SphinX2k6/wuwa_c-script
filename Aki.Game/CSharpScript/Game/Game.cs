@@ -10,6 +10,7 @@ using CSharpScript.Game.InputSetting;
 using CSharpScript.Game.Manager;
 using CSharpScript.Game.Module.CombatMessage;
 using CSharpScript.Game.Module.Plot;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.TickScore;
 using CSharpScript.Game.Ui;
 using CSharpScript.Game.World.Controller;
@@ -22,12 +23,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game
 {
-	// Token: 0x02004522 RID: 17698
+	// Token: 0x02003447 RID: 13383
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Game : Singleton
 	{
-		// Token: 0x0602DB70 RID: 187248 RVA: 0x00A81290 File Offset: 0x00A7F490
+		// Token: 0x06022235 RID: 139829 RVA: 0x009AC4B8 File Offset: 0x009AA6B8
 		[NullableContext(0)]
 		public UniTask<bool> Start([Nullable(1)] UGameInstance gameInstance)
 		{
@@ -40,7 +41,7 @@ namespace CSharpScript.Game
 			return <Start>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DB71 RID: 187249 RVA: 0x00A812DC File Offset: 0x00A7F4DC
+		// Token: 0x06022236 RID: 139830 RVA: 0x009AC504 File Offset: 0x009AA704
 		[NullableContext(0)]
 		public UniTask<bool> ModuleStart()
 		{
@@ -51,7 +52,7 @@ namespace CSharpScript.Game
 			return <ModuleStart>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DB72 RID: 187250 RVA: 0x00A81318 File Offset: 0x00A7F518
+		// Token: 0x06022237 RID: 139831 RVA: 0x009AC540 File Offset: 0x009AA740
 		public void TickerStart()
 		{
 			Core.Instance.RegisterPreTick(delegate(float _)
@@ -68,7 +69,7 @@ namespace CSharpScript.Game
 			Heartbeat.Instance.RegisterTick();
 		}
 
-		// Token: 0x0602DB73 RID: 187251 RVA: 0x00A81424 File Offset: 0x00A7F624
+		// Token: 0x06022238 RID: 139832 RVA: 0x009AC64C File Offset: 0x009AA84C
 		public void Shutdown()
 		{
 			JitProfile.StopProfileAsync();
@@ -118,61 +119,61 @@ namespace CSharpScript.Game
 			Log.Instance.Info(ELogModule.Game, ELogAuthor.WLJ, "Game.Shutdown AsyncUtil.DestroyEnvironment Finished", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0602DB74 RID: 187252 RVA: 0x00A8171F File Offset: 0x00A7F91F
+		// Token: 0x06022239 RID: 139833 RVA: 0x009AC947 File Offset: 0x009AAB47
 		private void DoLeaveLevel()
 		{
 			this.LeaveLevel();
 		}
 
-		// Token: 0x0602DB75 RID: 187253 RVA: 0x00A81727 File Offset: 0x00A7F927
+		// Token: 0x0602223A RID: 139834 RVA: 0x009AC94F File Offset: 0x009AAB4F
 		private void ReconnectClearData()
 		{
 			this.Shutdown();
 		}
 
-		// Token: 0x0602DB76 RID: 187254 RVA: 0x00A8172F File Offset: 0x00A7F92F
+		// Token: 0x0602223B RID: 139835 RVA: 0x009AC957 File Offset: 0x009AAB57
 		private void ClearPatch()
 		{
 			this.Shutdown();
 		}
 
-		// Token: 0x0602DB77 RID: 187255 RVA: 0x00A81737 File Offset: 0x00A7F937
+		// Token: 0x0602223C RID: 139836 RVA: 0x009AC95F File Offset: 0x009AAB5F
 		private void OnPreEndPIE()
 		{
 			EventSystem.Instance.Emit(EEventName.OnPreEndPIE);
 			this.Shutdown();
 		}
 
-		// Token: 0x0602DB78 RID: 187256 RVA: 0x00A81750 File Offset: 0x00A7F950
+		// Token: 0x0602223D RID: 139837 RVA: 0x009AC978 File Offset: 0x009AAB78
 		public void LockLoad()
 		{
 			Log.Instance.Info(ELogModule.Game, ELogAuthor.TL, "[Game.EndTravelMap] SetActorPermanentExtraStatic true", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0602DB79 RID: 187257 RVA: 0x00A8177C File Offset: 0x00A7F97C
+		// Token: 0x0602223E RID: 139838 RVA: 0x009AC9A4 File Offset: 0x009AABA4
 		public void UnlockLoad()
 		{
 			Log.Instance.Info(ELogModule.Game, ELogAuthor.TL, "[Game.EndTravelMap] SetActorPermanentExtraStatic false", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0602DB7A RID: 187258 RVA: 0x00A817A5 File Offset: 0x00A7F9A5
+		// Token: 0x0602223F RID: 139839 RVA: 0x009AC9CD File Offset: 0x009AABCD
 		private void BeforeTravelMap()
 		{
 		}
 
-		// Token: 0x0602DB7B RID: 187259 RVA: 0x00A817A7 File Offset: 0x00A7F9A7
+		// Token: 0x06022240 RID: 139840 RVA: 0x009AC9CF File Offset: 0x009AABCF
 		private void EndTravelMap()
 		{
 			this.UnlockLoad();
 		}
 
-		// Token: 0x0602DB7C RID: 187260 RVA: 0x00A817AF File Offset: 0x00A7F9AF
+		// Token: 0x06022241 RID: 139841 RVA: 0x009AC9D7 File Offset: 0x009AABD7
 		private void OnClearScene()
 		{
 			this.ClearSceneAsync();
 		}
 
-		// Token: 0x0602DB7D RID: 187261 RVA: 0x00A817B8 File Offset: 0x00A7F9B8
+		// Token: 0x06022242 RID: 139842 RVA: 0x009AC9E0 File Offset: 0x009AABE0
 		[NullableContext(0)]
 		private UniTask<bool> ClearSceneAsync()
 		{
@@ -184,7 +185,7 @@ namespace CSharpScript.Game
 			return <ClearSceneAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DB7E RID: 187262 RVA: 0x00A817FC File Offset: 0x00A7F9FC
+		// Token: 0x06022243 RID: 139843 RVA: 0x009ACA24 File Offset: 0x009AAC24
 		private void ClearControllerAndModel()
 		{
 			GameModeModel instance = GameModeModel.Instance;
@@ -221,7 +222,7 @@ namespace CSharpScript.Game
 			}
 		}
 
-		// Token: 0x0602DB7F RID: 187263 RVA: 0x00A818B8 File Offset: 0x00A7FAB8
+		// Token: 0x06022244 RID: 139844 RVA: 0x009ACAE0 File Offset: 0x009AACE0
 		private void LeaveLevel()
 		{
 			Log.Instance.Info(ELogModule.World, ELogAuthor.LFJW, "[Game.LeaveLevel] LeaveLevel", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -241,7 +242,7 @@ namespace CSharpScript.Game
 			}
 		}
 
-		// Token: 0x0602DB80 RID: 187264 RVA: 0x00A81934 File Offset: 0x00A7FB34
+		// Token: 0x06022245 RID: 139845 RVA: 0x009ACB5C File Offset: 0x009AAD5C
 		private unsafe void TickManager(global::ITickable tickTarget, float delta)
 		{
 			try
@@ -262,7 +263,7 @@ namespace CSharpScript.Game
 			}
 		}
 
-		// Token: 0x0602DB81 RID: 187265 RVA: 0x00A819C0 File Offset: 0x00A7FBC0
+		// Token: 0x06022246 RID: 139846 RVA: 0x009ACBE8 File Offset: 0x009AADE8
 		private unsafe void TickManager(CSharpScript.Launcher.Framework.ITickable tickTarget, float delta)
 		{
 			try
@@ -283,7 +284,7 @@ namespace CSharpScript.Game
 			}
 		}
 
-		// Token: 0x0602DB82 RID: 187266 RVA: 0x00A81A4C File Offset: 0x00A7FC4C
+		// Token: 0x06022247 RID: 139847 RVA: 0x009ACC74 File Offset: 0x009AAE74
 		public void TickPriority2(float delta)
 		{
 			if (Core.Instance.ForbiddenTickPriority)
@@ -296,16 +297,16 @@ namespace CSharpScript.Game
 			}
 			PlotController.Instance.TickPriority2(delta);
 			HoldingHandsController.Instance.TickPriority2((double)delta);
-			if (UeSkeletalTickController.EnabledNewSkelTickTiming && !UeMovementTickController.MovementPredictMode)
+			if (UeTickManageDefine.EnabledNewSkelTickTiming && !UeTickManageDefine.MovementPredictMode)
 			{
-				UeSkeletalTickController.TickManagers(delta * 0.001f);
+				UeSkeletalTickController.TickManagersStep1(delta * 0.001f);
 			}
 			CombatMessageController.Instance.TickPriority1(delta);
 			VehiclePathMoveController.Instance.TickPriority1(delta);
 			ComponentForceTickController.Instance.MoveTickPriority1(delta);
 		}
 
-		// Token: 0x0602DB83 RID: 187267 RVA: 0x00A81AC8 File Offset: 0x00A7FCC8
+		// Token: 0x06022248 RID: 139848 RVA: 0x009ACCF0 File Offset: 0x009AAEF0
 		public void TickPriority1(float delta)
 		{
 			if (!Core.Instance.ForbiddenTickPriority)
@@ -314,26 +315,26 @@ namespace CSharpScript.Game
 				{
 					UeMovementTickController.TickManagersPriority1(delta);
 				}
-				if (!UeMovementTickController.MovementPredictMode)
+				if (!UeTickManageDefine.MovementPredictMode)
 				{
 					UeSkeletalTickController.TickManagersStep2();
 				}
 				else
 				{
-					UeSkeletalTickController.TickManagers(delta * 0.001f);
+					UeSkeletalTickController.TickManagersStep1(delta * 0.001f);
 				}
 				TickSystem.Instance.SetTickFunctionCompletionCallbackInMainThread(ETickingGroup.TG_PrePhysics, 1);
 				return;
 			}
-			if (!UeMovementTickController.MovementPredictMode)
+			if (!UeTickManageDefine.MovementPredictMode)
 			{
 				UeSkeletalTickController.TickManagersStep2();
 				return;
 			}
-			UeSkeletalTickController.TickManagers(delta * 0.001f);
+			UeSkeletalTickController.TickManagersStep1(delta * 0.001f);
 		}
 
-		// Token: 0x0602DB84 RID: 187268 RVA: 0x00A81B34 File Offset: 0x00A7FD34
+		// Token: 0x06022249 RID: 139849 RVA: 0x009ACD5C File Offset: 0x009AAF5C
 		private void Tick(float delta)
 		{
 			if (Core.Instance.ForbiddenTickPriority && !TickSystem.Instance.IsPaused)
@@ -341,13 +342,13 @@ namespace CSharpScript.Game
 				VehiclePathMoveController.Instance.TickPriority1(delta);
 				ComponentForceTickController.Instance.MoveTickPriority1(delta);
 			}
-			if (!TickSystem.Instance.IsPaused && !UeSkeletalTickController.EnabledNewSkelTickTiming)
+			if (!TickSystem.Instance.IsPaused && !UeTickManageDefine.EnabledNewSkelTickTiming)
 			{
-				UeSkeletalTickController.TickManagers(delta * 0.001f);
+				UeSkeletalTickController.TickManagersStep1(delta * 0.001f);
 			}
 			this.TickManager(UiManager.Instance, delta);
 			this.TickManager(UiSceneManager.Instance, delta);
-			this.TickManager(UiCameraAnimationManager.Instance, delta);
+			this.TickManager(UiCameraModel.Instance, delta);
 			this.TickManager(RedDotSystem.Instance, delta);
 			ControllerManager.Instance.Tick(delta);
 			this.TickManager(EffectSystem.Instance, delta);
@@ -365,14 +366,14 @@ namespace CSharpScript.Game
 			ResourceSystem.Instance.UpdateDelayCallback(true);
 		}
 
-		// Token: 0x0602DB85 RID: 187269 RVA: 0x00A81C39 File Offset: 0x00A7FE39
+		// Token: 0x0602224A RID: 139850 RVA: 0x009ACE61 File Offset: 0x009AB061
 		public void AfterTickPriority1(float delta)
 		{
 			Time.Instance.AfterTickPriority1(delta);
 			UeSkeletalTickController.DealCompleteSkeletalComp();
 		}
 
-		// Token: 0x0602DB86 RID: 187270 RVA: 0x00A81C4C File Offset: 0x00A7FE4C
+		// Token: 0x0602224B RID: 139851 RVA: 0x009ACE74 File Offset: 0x009AB074
 		public void AfterTick(float delta)
 		{
 			if (!TickSystem.Instance.IsPaused)
@@ -387,7 +388,7 @@ namespace CSharpScript.Game
 			GameModeController.Instance.AfterTick(delta);
 		}
 
-		// Token: 0x0602DB87 RID: 187271 RVA: 0x00A81CB3 File Offset: 0x00A7FEB3
+		// Token: 0x0602224C RID: 139852 RVA: 0x009ACEDB File Offset: 0x009AB0DB
 		public void AfterCameraTick(float delta)
 		{
 			UiManager.Instance.AfterTick(delta);
@@ -397,7 +398,7 @@ namespace CSharpScript.Game
 			}
 		}
 
-		// Token: 0x0602DB88 RID: 187272 RVA: 0x00A81CD8 File Offset: 0x00A7FED8
+		// Token: 0x0602224D RID: 139853 RVA: 0x009ACF00 File Offset: 0x009AB100
 		private UniTask InitEditorMetricsModule()
 		{
 			Game.<InitEditorMetricsModule>d__30 <InitEditorMetricsModule>d__;
@@ -407,14 +408,14 @@ namespace CSharpScript.Game
 			return <InitEditorMetricsModule>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DB89 RID: 187273 RVA: 0x00A81D13 File Offset: 0x00A7FF13
+		// Token: 0x0602224E RID: 139854 RVA: 0x009ACF3B File Offset: 0x009AB13B
 		private void CustomCommandProcessor(string command)
 		{
 			EventSystem.Instance.Emit<string>(EEventName.RunGm, command);
 		}
 
-		// Token: 0x17007509 RID: 29961
-		// (get) Token: 0x0602DB8A RID: 187274 RVA: 0x00A81D26 File Offset: 0x00A7FF26
+		// Token: 0x170047BC RID: 18364
+		// (get) Token: 0x0602224F RID: 139855 RVA: 0x009ACF4E File Offset: 0x009AB14E
 		public static Game Instance
 		{
 			get
@@ -428,12 +429,12 @@ namespace CSharpScript.Game
 			}
 		}
 
-		// Token: 0x0602DB8B RID: 187275 RVA: 0x00A81D49 File Offset: 0x00A7FF49
+		// Token: 0x06022250 RID: 139856 RVA: 0x009ACF71 File Offset: 0x009AB171
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DB8C RID: 187276 RVA: 0x00A81D4B File Offset: 0x00A7FF4B
+		// Token: 0x06022251 RID: 139857 RVA: 0x009ACF73 File Offset: 0x009AB173
 		public static void ResetStaticDefaultValue()
 		{
 			Game instance = Game._instance;
@@ -444,32 +445,32 @@ namespace CSharpScript.Game
 			Game._instance = null;
 		}
 
-		// Token: 0x0602DB8D RID: 187277 RVA: 0x00A81D64 File Offset: 0x00A7FF64
+		// Token: 0x06022252 RID: 139858 RVA: 0x009ACF8C File Offset: 0x009AB18C
 		static Game()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(Game.CreateStaticDefaultValue), new Action(Game.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401868D RID: 99981
+		// Token: 0x04012CB1 RID: 76977
 		private readonly Stat UiStatsObject = Stat.Create("UI", "", "");
 
-		// Token: 0x0401868E RID: 99982
+		// Token: 0x04012CB2 RID: 76978
 		private readonly Stat EffectStatsObject = Stat.Create("Effect", "", "");
 
-		// Token: 0x0401868F RID: 99983
+		// Token: 0x04012CB3 RID: 76979
 		private readonly Stat OtherStatsObject = Stat.Create("Other", "", "");
 
-		// Token: 0x04018690 RID: 99984
+		// Token: 0x04012CB4 RID: 76980
 		private readonly Stat TickScoreStatsObject = Stat.Create("TickScore", "", "");
 
-		// Token: 0x04018691 RID: 99985
+		// Token: 0x04012CB5 RID: 76981
 		[Nullable(2)]
 		private FProcessCustomCommandDelegate CustomCommandProcessorDelegate;
 
-		// Token: 0x04018692 RID: 99986
+		// Token: 0x04012CB6 RID: 76982
 		private readonly bool UseStatConsoleCommand = true;
 
-		// Token: 0x04018693 RID: 99987
+		// Token: 0x04012CB7 RID: 76983
 		[Nullable(2)]
 		private static Game _instance;
 	}

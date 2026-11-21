@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004915 RID: 18709
+	// Token: 0x0200388C RID: 14476
 	public class NavigationInventoryItemGridToggle : NavigationToggle
 	{
-		// Token: 0x06030E34 RID: 200244 RVA: 0x00B5A3B8 File Offset: 0x00B585B8
+		// Token: 0x06025961 RID: 153953 RVA: 0x00A95228 File Offset: 0x00A93428
 		[NullableContext(1)]
 		public NavigationInventoryItemGridToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030E35 RID: 200245 RVA: 0x00B5A3C4 File Offset: 0x00B585C4
+		// Token: 0x06025962 RID: 153954 RVA: 0x00A95234 File Offset: 0x00A93434
 		protected override void OnStart()
 		{
 			SpecialPanelHandleBase panelHandle = this.PanelHandle;

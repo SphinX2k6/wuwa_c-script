@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 {
-	// Token: 0x02003B41 RID: 15169
+	// Token: 0x020030BC RID: 12476
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Scene/Interaction/BP_InteractionMaterialController.BP_InteractionMaterialController_C")]
 	[UnrealStructLayout(1136, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1136)]
 	public class BP_InteractionMaterialController_C : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060218E8 RID: 137448 RVA: 0x008EF7E8 File Offset: 0x008ED9E8
+		// Token: 0x0601DFA7 RID: 122791 RVA: 0x009079B3 File Offset: 0x00905BB3
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_InteractionMaterialController_C._ClassPtr == IntPtr.Zero)
@@ -25,67 +25,67 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			return BP_InteractionMaterialController_C._ClassPtr;
 		}
 
-		// Token: 0x060218E9 RID: 137449 RVA: 0x008EF80C File Offset: 0x008EDA0C
+		// Token: 0x0601DFA8 RID: 122792 RVA: 0x009079D8 File Offset: 0x00905BD8
 		public BP_InteractionMaterialController_C() : this(BuiltinUtils.AllocNativeUObject(BP_InteractionMaterialController_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060218EA RID: 137450 RVA: 0x008EF834 File Offset: 0x008EDA34
+		// Token: 0x0601DFA9 RID: 122793 RVA: 0x00907A00 File Offset: 0x00905C00
 		public BP_InteractionMaterialController_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_InteractionMaterialController_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17003730 RID: 14128
-		// (get) Token: 0x060218EB RID: 137451 RVA: 0x008EF867 File Offset: 0x008EDA67
-		// (set) Token: 0x060218EC RID: 137452 RVA: 0x008EF87B File Offset: 0x008EDA7B
+		// Token: 0x17003164 RID: 12644
+		// (get) Token: 0x0601DFAA RID: 122794 RVA: 0x00907A33 File Offset: 0x00905C33
+		// (set) Token: 0x0601DFAB RID: 122795 RVA: 0x00907A47 File Offset: 0x00905C47
 		[Nullable(2)]
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_InteractionMaterialController_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_InteractionMaterialController_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_InteractionMaterialController_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_InteractionMaterialController_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17003731 RID: 14129
-		// (get) Token: 0x060218ED RID: 137453 RVA: 0x008EF890 File Offset: 0x008EDA90
-		// (set) Token: 0x060218EE RID: 137454 RVA: 0x008EF8A0 File Offset: 0x008EDAA0
+		// Token: 0x17003165 RID: 12645
+		// (get) Token: 0x0601DFAC RID: 122796 RVA: 0x00907A5C File Offset: 0x00905C5C
+		// (set) Token: 0x0601DFAD RID: 122797 RVA: 0x00907A6C File Offset: 0x00905C6C
 		public unsafe float Float
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_Float);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_Float) = value;
 			}
 		}
 
-		// Token: 0x17003732 RID: 14130
-		// (get) Token: 0x060218EF RID: 137455 RVA: 0x008EF8B1 File Offset: 0x008EDAB1
-		// (set) Token: 0x060218F0 RID: 137456 RVA: 0x008EF8C5 File Offset: 0x008EDAC5
+		// Token: 0x17003166 RID: 12646
+		// (get) Token: 0x0601DFAE RID: 122798 RVA: 0x00907A7D File Offset: 0x00905C7D
+		// (set) Token: 0x0601DFAF RID: 122799 RVA: 0x00907A91 File Offset: 0x00905C91
 		public unsafe string ScalarName
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_3)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_ScalarName)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_3)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_ScalarName)), value);
 			}
 		}
 
-		// Token: 0x17003733 RID: 14131
-		// (get) Token: 0x060218F1 RID: 137457 RVA: 0x008EF8DC File Offset: 0x008EDADC
-		// (set) Token: 0x060218F2 RID: 137458 RVA: 0x008EF915 File Offset: 0x008EDB15
+		// Token: 0x17003167 RID: 12647
+		// (get) Token: 0x0601DFB0 RID: 122800 RVA: 0x00907AA8 File Offset: 0x00905CA8
+		// (set) Token: 0x0601DFB1 RID: 122801 RVA: 0x00907AE1 File Offset: 0x00905CE1
 		public TArray<AActor> Actor
 		{
 			get
@@ -94,7 +94,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				TArray<AActor> result;
 				if ((result = this._Actor) == null)
 				{
-					result = (this._Actor = new TArray<AActor>(base.NativePtr + (IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_4, this));
+					result = (this._Actor = new TArray<AActor>(base.NativePtr + (IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_Actor, this));
 				}
 				return result;
 			}
@@ -104,39 +104,38 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			}
 		}
 
-		// Token: 0x17003734 RID: 14132
-		// (get) Token: 0x060218F3 RID: 137459 RVA: 0x008EF923 File Offset: 0x008EDB23
-		// (set) Token: 0x060218F4 RID: 137460 RVA: 0x008EF937 File Offset: 0x008EDB37
+		// Token: 0x17003168 RID: 12648
+		// (get) Token: 0x0601DFB2 RID: 122802 RVA: 0x00907AEF File Offset: 0x00905CEF
+		// (set) Token: 0x0601DFB3 RID: 122803 RVA: 0x00907B03 File Offset: 0x00905D03
 		public unsafe string VectorName
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_5)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_VectorName)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_5)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_VectorName)), value);
 			}
 		}
 
-		// Token: 0x17003735 RID: 14133
-		// (get) Token: 0x060218F5 RID: 137461 RVA: 0x008EF94C File Offset: 0x008EDB4C
-		// (set) Token: 0x060218F6 RID: 137462 RVA: 0x008EF960 File Offset: 0x008EDB60
+		// Token: 0x17003169 RID: 12649
+		// (get) Token: 0x0601DFB4 RID: 122804 RVA: 0x00907B18 File Offset: 0x00905D18
+		// (set) Token: 0x0601DFB5 RID: 122805 RVA: 0x00907B2C File Offset: 0x00905D2C
 		public unsafe FLinearColor Vector
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_Vector);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_InteractionMaterialController_C.__PropertyOffset_Vector) = value;
 			}
 		}
 
-		// Token: 0x060218F7 RID: 137463 RVA: 0x008EF978 File Offset: 0x008EDB78
+		// Token: 0x0601DFB6 RID: 122806 RVA: 0x00907B44 File Offset: 0x00905D44
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void ChangeVectorParameter(FLinearColor VectorParameter, string VectorParameterName)
 		{
 			BP_InteractionMaterialController_C.__ChangeVectorParameter_FunctionParams* ptr = stackalloc BP_InteractionMaterialController_C.__ChangeVectorParameter_FunctionParams[(UIntPtr)119] + 15L / (long)sizeof(BP_InteractionMaterialController_C.__ChangeVectorParameter_FunctionParams) & -16L;
@@ -147,9 +146,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			UnrealReflectionUtils.DestroyStruct(BP_InteractionMaterialController_C.__ChangeVectorParameter_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060218F8 RID: 137464 RVA: 0x008EF9DC File Offset: 0x008EDBDC
+		// Token: 0x0601DFB7 RID: 122807 RVA: 0x00907BA8 File Offset: 0x00905DA8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void ChangeScalarParameter(float FloatParameter, string FloatParameterName)
 		{
 			BP_InteractionMaterialController_C.__ChangeScalarParameter_FunctionParams* ptr = stackalloc BP_InteractionMaterialController_C.__ChangeScalarParameter_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(BP_InteractionMaterialController_C.__ChangeScalarParameter_FunctionParams) & -16L;
@@ -160,65 +158,61 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			UnrealReflectionUtils.DestroyStruct(BP_InteractionMaterialController_C.__ChangeScalarParameter_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060218F9 RID: 137465 RVA: 0x008EFA40 File Offset: 0x008EDC40
+		// Token: 0x0601DFB8 RID: 122808 RVA: 0x00907C0C File Offset: 0x00905E0C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void ForEach()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InteractionMaterialController_C.__ForEach_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060218FA RID: 137466 RVA: 0x008EFA54 File Offset: 0x008EDC54
+		// Token: 0x0601DFB9 RID: 122809 RVA: 0x00907C20 File Offset: 0x00905E20
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void Test()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InteractionMaterialController_C.__Test_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060218FB RID: 137467 RVA: 0x008EFA68 File Offset: 0x008EDC68
+		// Token: 0x0601DFBA RID: 122810 RVA: 0x00907C34 File Offset: 0x00905E34
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InteractionMaterialController_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060218FC RID: 137468 RVA: 0x008EFA7C File Offset: 0x008EDC7C
+		// Token: 0x0601DFBB RID: 122811 RVA: 0x00907C48 File Offset: 0x00905E48
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_InteractionMaterialController_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_InteractionMaterialController_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060218FD RID: 137469 RVA: 0x008EFA91 File Offset: 0x008EDC91
+		// Token: 0x0601DFBC RID: 122812 RVA: 0x00907C5C File Offset: 0x00905E5C
 		protected BP_InteractionMaterialController_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040105B9 RID: 67001
+		// Token: 0x0400FD72 RID: 64882
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Scene/Interaction/BP_InteractionMaterialController.BP_InteractionMaterialController_C";
 
-		// Token: 0x040105BA RID: 67002
+		// Token: 0x0400FD73 RID: 64883
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040105BB RID: 67003
+		// Token: 0x0400FD74 RID: 64884
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040105BC RID: 67004
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FD75 RID: 64885
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x040105BD RID: 67005
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400FD76 RID: 64886
+		internal static int __PropertyOffset_Float;
 
-		// Token: 0x040105BE RID: 67006
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400FD77 RID: 64887
+		internal static int __PropertyOffset_ScalarName;
 
-		// Token: 0x040105BF RID: 67007
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400FD78 RID: 64888
+		internal static int __PropertyOffset_Actor;
 
-		// Token: 0x040105C0 RID: 67008
+		// Token: 0x0400FD79 RID: 64889
 		[Nullable(new byte[]
 		{
 			2,
@@ -226,53 +220,53 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 		})]
 		private TArray<AActor> _Actor;
 
-		// Token: 0x040105C1 RID: 67009
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400FD7A RID: 64890
+		internal static int __PropertyOffset_VectorName;
 
-		// Token: 0x040105C2 RID: 67010
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400FD7B RID: 64891
+		internal static int __PropertyOffset_Vector;
 
-		// Token: 0x040105C3 RID: 67011
+		// Token: 0x0400FD7C RID: 64892
 		private static IntPtr __ChangeVectorParameter_NativeFunctionPtr;
 
-		// Token: 0x040105C4 RID: 67012
+		// Token: 0x0400FD7D RID: 64893
 		private static IntPtr __ChangeScalarParameter_NativeFunctionPtr;
 
-		// Token: 0x040105C5 RID: 67013
+		// Token: 0x0400FD7E RID: 64894
 		private static IntPtr __ForEach_NativeFunctionPtr;
 
-		// Token: 0x040105C6 RID: 67014
+		// Token: 0x0400FD7F RID: 64895
 		private static IntPtr __Test_NativeFunctionPtr;
 
-		// Token: 0x040105C7 RID: 67015
+		// Token: 0x0400FD80 RID: 64896
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x02009CA9 RID: 40105
+		// Token: 0x02008DFD RID: 36349
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 104)]
 		protected ref struct __ChangeVectorParameter_FunctionParams
 		{
-			// Token: 0x04031374 RID: 201588
+			// Token: 0x0402CA23 RID: 182819
 			[FieldOffset(0)]
 			public FLinearColor VectorParameter;
 
-			// Token: 0x04031375 RID: 201589
+			// Token: 0x0402CA24 RID: 182820
 			[FieldOffset(16)]
 			public FString VectorParameterName;
 		}
 
-		// Token: 0x02009CAA RID: 40106
+		// Token: 0x02008DFE RID: 36350
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __ChangeScalarParameter_FunctionParams
 		{
-			// Token: 0x04031376 RID: 201590
+			// Token: 0x0402CA25 RID: 182821
 			[FieldOffset(0)]
 			public float FloatParameter;
 
-			// Token: 0x04031377 RID: 201591
+			// Token: 0x0402CA26 RID: 182822
 			[FieldOffset(8)]
 			public FString FloatParameterName;
 		}

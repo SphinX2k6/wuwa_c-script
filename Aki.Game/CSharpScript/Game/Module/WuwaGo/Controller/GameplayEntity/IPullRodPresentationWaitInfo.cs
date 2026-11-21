@@ -4,20 +4,20 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 {
-	// Token: 0x02004775 RID: 18293
+	// Token: 0x020036A6 RID: 13990
 	[NullableContext(1)]
 	public interface IPullRodPresentationWaitInfo
 	{
-		// Token: 0x1700776F RID: 30575
-		// (get) Token: 0x0602FD35 RID: 195893
+		// Token: 0x17004A2B RID: 18987
+		// (get) Token: 0x060244FF RID: 148735
 		SceneInteractionActor SceneActor { get; }
 
-		// Token: 0x17007770 RID: 30576
-		// (get) Token: 0x0602FD36 RID: 195894
+		// Token: 0x17004A2C RID: 18988
+		// (get) Token: 0x06024500 RID: 148736
 		ULevelSequence Sequence { get; }
 
-		// Token: 0x17007771 RID: 30577
-		// (get) Token: 0x0602FD37 RID: 195895
+		// Token: 0x17004A2D RID: 18989
+		// (get) Token: 0x06024501 RID: 148737
 		float PlayRate { get; }
 	}
 }

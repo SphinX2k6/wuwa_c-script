@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004624 RID: 17956
+	// Token: 0x02004A8C RID: 19084
 	public enum EGmSubType : byte
 	{
-		// Token: 0x0400C78E RID: 51086
+		// Token: 0x0400D1BD RID: 53693
 		Process,
-		// Token: 0x0400C78F RID: 51087
+		// Token: 0x0400D1BE RID: 53694
 		Attributes,
-		// Token: 0x0400C790 RID: 51088
+		// Token: 0x0400D1BF RID: 53695
 		System,
-		// Token: 0x0400C791 RID: 51089
+		// Token: 0x0400D1C0 RID: 53696
 		Ability,
-		// Token: 0x0400C792 RID: 51090
+		// Token: 0x0400D1C1 RID: 53697
 		Action,
-		// Token: 0x0400C793 RID: 51091
+		// Token: 0x0400D1C2 RID: 53698
 		Flow
 	}
 }

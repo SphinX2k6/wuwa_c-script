@@ -12,7 +12,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200283A RID: 10298
+// Token: 0x02001DB5 RID: 7605
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -21,7 +21,7 @@ using UnrealEngine;
 })]
 public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBase>
 {
-	// Token: 0x060153BF RID: 86975 RVA: 0x0055DB80 File Offset: 0x0055BD80
+	// Token: 0x06012DBD RID: 77245 RVA: 0x005888DC File Offset: 0x00586ADC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -47,7 +47,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		};
 	}
 
-	// Token: 0x060153C0 RID: 86976 RVA: 0x0055DCF8 File Offset: 0x0055BEF8
+	// Token: 0x06012DBE RID: 77246 RVA: 0x00588A54 File Offset: 0x00586C54
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleDevWeaponDevItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -58,7 +58,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060153C1 RID: 86977 RVA: 0x0055DD3C File Offset: 0x0055BF3C
+	// Token: 0x06012DBF RID: 77247 RVA: 0x00588A98 File Offset: 0x00586C98
 	private void OnClickedGrid(MediumItemGridExtendCallback _)
 	{
 		if (this.Data == null)
@@ -74,16 +74,16 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 			ItemController.Instance.OpenItemTipsByItemUid(valueOrDefault, num.Value, true, null);
 			return;
 		}
-		ItemController.Instance.OpenItemTipsByItemId(num.GetValueOrDefault(), true, null);
+		ItemController.Instance.OpenItemTipsByItemId(num.GetValueOrDefault(), true, null, false);
 	}
 
-	// Token: 0x060153C2 RID: 86978 RVA: 0x0055DDD0 File Offset: 0x0055BFD0
+	// Token: 0x06012DC0 RID: 77248 RVA: 0x00588B2D File Offset: 0x00586D2D
 	public override void Refresh(RoleDevWeaponDevItemDataBase data, bool isSelected, int gridIndex)
 	{
 		this.Refresh(data);
 	}
 
-	// Token: 0x060153C3 RID: 86979 RVA: 0x0055DDD9 File Offset: 0x0055BFD9
+	// Token: 0x06012DC1 RID: 77249 RVA: 0x00588B36 File Offset: 0x00586D36
 	public void Refresh(RoleDevWeaponDevItemDataBase data)
 	{
 		this.Data = data;
@@ -92,7 +92,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		this.RefreshWeaponViewItem(data);
 	}
 
-	// Token: 0x060153C4 RID: 86980 RVA: 0x0055DE04 File Offset: 0x0055C004
+	// Token: 0x06012DC2 RID: 77250 RVA: 0x00588B60 File Offset: 0x00586D60
 	public void RefreshItemGrid(RoleDevWeaponDevItemDataBase data)
 	{
 		int weaponConfigId = data.WeaponConfigId;
@@ -117,7 +117,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		}
 	}
 
-	// Token: 0x060153C5 RID: 86981 RVA: 0x0055DE63 File Offset: 0x0055C063
+	// Token: 0x06012DC3 RID: 77251 RVA: 0x00588BBF File Offset: 0x00586DBF
 	public void RefreshWeaponViewItem(RoleDevWeaponDevItemDataBase data)
 	{
 		this.RefreshWeaponDisplay(data);
@@ -125,7 +125,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		this.DetailVerticalLayout.RefreshByData(data.DetailItems, null, false);
 	}
 
-	// Token: 0x060153C6 RID: 86982 RVA: 0x0055DE88 File Offset: 0x0055C088
+	// Token: 0x06012DC4 RID: 77252 RVA: 0x00588BE4 File Offset: 0x00586DE4
 	private void RefreshWeaponDisplay(RoleDevWeaponDevItemDataBase data)
 	{
 		switch (data.RoleType)
@@ -144,7 +144,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		}
 	}
 
-	// Token: 0x060153C7 RID: 86983 RVA: 0x0055DEC8 File Offset: 0x0055C0C8
+	// Token: 0x06012DC5 RID: 77253 RVA: 0x00588C24 File Offset: 0x00586E24
 	private void RefreshNotObtainedWeapon(RoleDevWeaponDevItemDataBase data)
 	{
 		base.GetItem(12).SetUIActive(false);
@@ -162,7 +162,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		this.SetNotObtainedButtonStates(data);
 	}
 
-	// Token: 0x060153C8 RID: 86984 RVA: 0x0055DF50 File Offset: 0x0055C150
+	// Token: 0x06012DC6 RID: 77254 RVA: 0x00588CAC File Offset: 0x00586EAC
 	private void RefreshObtainedWeapon(RoleDevWeaponDevItemDataBase data)
 	{
 		base.GetItem(12).SetUIActive(true);
@@ -176,7 +176,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		this.SetObtainedButtonStates(data);
 	}
 
-	// Token: 0x060153C9 RID: 86985 RVA: 0x0055DFA8 File Offset: 0x0055C1A8
+	// Token: 0x06012DC7 RID: 77255 RVA: 0x00588D04 File Offset: 0x00586F04
 	private void RefreshForecastWeapon(RoleDevWeaponDevItemDataBase data)
 	{
 		base.GetItem(12).SetUIActive(false);
@@ -194,7 +194,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		this.SetNotObtainedButtonStates(data);
 	}
 
-	// Token: 0x060153CA RID: 86986 RVA: 0x0055E020 File Offset: 0x0055C220
+	// Token: 0x06012DC8 RID: 77256 RVA: 0x00588D7C File Offset: 0x00586F7C
 	private void SetWeaponIconAndName(string iconPath, string weaponName)
 	{
 		this.ItemGrid.SetIconByPath(iconPath);
@@ -203,7 +203,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		this.ItemGrid.SetQuality(null);
 	}
 
-	// Token: 0x060153CB RID: 86987 RVA: 0x0055E070 File Offset: 0x0055C270
+	// Token: 0x06012DC9 RID: 77257 RVA: 0x00588DCC File Offset: 0x00586FCC
 	private void SetNotObtainedButtonStates(RoleDevWeaponDevItemDataBase data)
 	{
 		bool flag = data.RoleType == ERoleDevDataType.Forecast;
@@ -213,7 +213,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		base.GetItem(8).SetUIActive(false);
 	}
 
-	// Token: 0x060153CC RID: 86988 RVA: 0x0055E0CC File Offset: 0x0055C2CC
+	// Token: 0x06012DCA RID: 77258 RVA: 0x00588E28 File Offset: 0x00587028
 	private void ApplyWeaponItemGrid(WeaponConf weaponConfig, RoleDevWeaponDevItemDataBase data)
 	{
 		PropSmallItemGrid parameters = new PropSmallItemGrid
@@ -229,13 +229,13 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		this.ItemGrid.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x060153CD RID: 86989 RVA: 0x0055E12B File Offset: 0x0055C32B
+	// Token: 0x06012DCB RID: 77259 RVA: 0x00588E87 File Offset: 0x00587087
 	private void SetWeaponName(string weaponName)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), weaponName, Array.Empty<object>());
 	}
 
-	// Token: 0x060153CE RID: 86990 RVA: 0x0055E144 File Offset: 0x0055C344
+	// Token: 0x06012DCC RID: 77260 RVA: 0x00588EA0 File Offset: 0x005870A0
 	private void SetObtainedButtonStates(RoleDevWeaponDevItemDataBase data)
 	{
 		base.GetButton(11).RootUIComp.Get().SetUIActive(data.IsCall);
@@ -244,7 +244,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		base.GetItem(0).SetUIActive(isHighQuality);
 	}
 
-	// Token: 0x060153CF RID: 86991 RVA: 0x0055E18C File Offset: 0x0055C38C
+	// Token: 0x06012DCD RID: 77261 RVA: 0x00588EE8 File Offset: 0x005870E8
 	private void RefreshGoalLevelText(RoleDevWeaponDevItemDataBase data)
 	{
 		UUIText text = base.GetText(6);
@@ -262,7 +262,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		text.SetUIActive(!data.WeaponIsMaxLevel);
 	}
 
-	// Token: 0x060153D0 RID: 86992 RVA: 0x0055E204 File Offset: 0x0055C404
+	// Token: 0x06012DCE RID: 77262 RVA: 0x00588F60 File Offset: 0x00587160
 	private void RefreshButtonTexts(RoleDevWeaponDevItemDataBase data)
 	{
 		bool flag = (data.WeaponLevel == data.WeaponGoalUpgradeLevel && !data.WeaponIsMaxLevel) || data.WeaponIsMaxLevel;
@@ -316,13 +316,13 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		highLightButtonItem4.SetFunction(new Action<int>(this.OnClickDevJump));
 	}
 
-	// Token: 0x060153D1 RID: 86993 RVA: 0x0055E300 File Offset: 0x0055C500
+	// Token: 0x06012DCF RID: 77263 RVA: 0x0058905C File Offset: 0x0058725C
 	private RoleDevDetailItem CreateDetailItem()
 	{
 		return new RoleDevDetailItem();
 	}
 
-	// Token: 0x060153D2 RID: 86994 RVA: 0x0055E308 File Offset: 0x0055C508
+	// Token: 0x06012DD0 RID: 77264 RVA: 0x00589064 File Offset: 0x00587264
 	private void OpenWeaponRootView()
 	{
 		WeaponInstance weaponInstanceByRoleId = WeaponModel.Instance.GetWeaponInstanceByRoleId(this.RoleId.Value);
@@ -340,7 +340,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		UiManager.Instance.OpenView(EUiViewName.WeaponRootView, param, null);
 	}
 
-	// Token: 0x060153D3 RID: 86995 RVA: 0x0055E379 File Offset: 0x0055C579
+	// Token: 0x06012DD1 RID: 77265 RVA: 0x005890D5 File Offset: 0x005872D5
 	private void OnClickSwitch()
 	{
 		Action onClickBtnSwitch = this.OnClickBtnSwitch;
@@ -351,7 +351,7 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		onClickBtnSwitch();
 	}
 
-	// Token: 0x060153D4 RID: 86996 RVA: 0x0055E38C File Offset: 0x0055C58C
+	// Token: 0x06012DD2 RID: 77266 RVA: 0x005890E8 File Offset: 0x005872E8
 	private void OnClickDevJump(int _)
 	{
 		bool flag = (this.Data.WeaponLevel == this.Data.WeaponGoalUpgradeLevel && !this.Data.WeaponIsMaxLevel) || this.Data.WeaponIsMaxLevel;
@@ -359,17 +359,17 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 		this.OpenWeaponRootView();
 	}
 
-	// Token: 0x060153D5 RID: 86997 RVA: 0x0055E3F2 File Offset: 0x0055C5F2
+	// Token: 0x06012DD3 RID: 77267 RVA: 0x0058914E File Offset: 0x0058734E
 	private void OnClickCall()
 	{
 		UiManager.Instance.OpenView(EUiViewName.GachaMainView, this.Data.GachaId, null);
 	}
 
-	// Token: 0x04009EAA RID: 40618
+	// Token: 0x0400A293 RID: 41619
 	[Nullable(2)]
 	private SmallItemGrid ItemGrid;
 
-	// Token: 0x04009EAB RID: 40619
+	// Token: 0x0400A294 RID: 41620
 	[Nullable(new byte[]
 	{
 		2,
@@ -378,54 +378,54 @@ public class RoleDevWeaponDevItem : GridProxyAbstract<RoleDevWeaponDevItemDataBa
 	})]
 	private GenericLayout<RoleDevDetailItem, global::IRoleDevDetailItemData> DetailVerticalLayout;
 
-	// Token: 0x04009EAC RID: 40620
+	// Token: 0x0400A295 RID: 41621
 	private int? RoleId;
 
-	// Token: 0x04009EAD RID: 40621
+	// Token: 0x0400A296 RID: 41622
 	[Nullable(2)]
 	private RoleDevWeaponDevItemDataBase Data;
 
-	// Token: 0x04009EAE RID: 40622
+	// Token: 0x0400A297 RID: 41623
 	[Nullable(2)]
 	private ButtonItem NormalButtonItem;
 
-	// Token: 0x04009EAF RID: 40623
+	// Token: 0x0400A298 RID: 41624
 	[Nullable(2)]
 	private ButtonItem HighLightButtonItem;
 
-	// Token: 0x04009EB0 RID: 40624
+	// Token: 0x0400A299 RID: 41625
 	[Nullable(2)]
 	public Action OnClickBtnSwitch;
 
-	// Token: 0x02008E7D RID: 36477
+	// Token: 0x020080C3 RID: 32963
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E361 RID: 189281
+		// Token: 0x04029A5B RID: 170587
 		PanelSwitch,
-		// Token: 0x0402E362 RID: 189282
+		// Token: 0x04029A5C RID: 170588
 		BtnSwitch,
-		// Token: 0x0402E363 RID: 189283
+		// Token: 0x04029A5D RID: 170589
 		PanelWeaponType,
-		// Token: 0x0402E364 RID: 189284
+		// Token: 0x04029A5E RID: 170590
 		IconWeaponType,
-		// Token: 0x0402E365 RID: 189285
+		// Token: 0x04029A5F RID: 170591
 		WeaponItem,
-		// Token: 0x0402E366 RID: 189286
+		// Token: 0x04029A60 RID: 170592
 		TxtWeaponName,
-		// Token: 0x0402E367 RID: 189287
+		// Token: 0x04029A61 RID: 170593
 		TxtGoalLevel,
-		// Token: 0x0402E368 RID: 189288
+		// Token: 0x04029A62 RID: 170594
 		BtnJump,
-		// Token: 0x0402E369 RID: 189289
+		// Token: 0x04029A63 RID: 170595
 		BtnPerfectJump,
-		// Token: 0x0402E36A RID: 189290
+		// Token: 0x04029A64 RID: 170596
 		PanelDetailLayout,
-		// Token: 0x0402E36B RID: 189291
+		// Token: 0x04029A65 RID: 170597
 		PanelDetailItem,
-		// Token: 0x0402E36C RID: 189292
+		// Token: 0x04029A66 RID: 170598
 		BtnCall,
-		// Token: 0x0402E36D RID: 189293
+		// Token: 0x04029A67 RID: 170599
 		RightItem
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004F9 RID: 1273
+	// Token: 0x0200050F RID: 1295
 	public class ConfigLordGymEntranceGroupByMarkId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001DE1 RID: 7649 RVA: 0x00102264 File Offset: 0x00100464
+		// Token: 0x06001E65 RID: 7781 RVA: 0x001089B8 File Offset: 0x00106BB8
 		static ConfigLordGymEntranceGroupByMarkId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLordGymEntranceGroupByMarkId.CreateStaticDefaultValue), new Action(ConfigLordGymEntranceGroupByMarkId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001DE2 RID: 7650 RVA: 0x00102284 File Offset: 0x00100484
+		// Token: 0x06001E66 RID: 7782 RVA: 0x001089D8 File Offset: 0x00106BD8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLordGymEntranceGroupByMarkId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001DE3 RID: 7651 RVA: 0x00102303 File Offset: 0x00100503
+		// Token: 0x06001E67 RID: 7783 RVA: 0x00108A57 File Offset: 0x00106C57
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLordGymEntranceGroupByMarkId.LogPair = null;
 			ConfigLordGymEntranceGroupByMarkId.HandleId = 0;
 		}
 
-		// Token: 0x06001DE4 RID: 7652 RVA: 0x00102311 File Offset: 0x00100511
+		// Token: 0x06001E68 RID: 7784 RVA: 0x00108A65 File Offset: 0x00106C65
 		public static void Init()
 		{
 			ConfigLordGymEntranceGroupByMarkId.HandleId = ConfigCommon.InitDataStatement(ConfigLordGymEntranceGroupByMarkId.HandleId, "db_lordgym.db", "select BinData from `LordGymEntrance` where MarkId=?");
 		}
 
-		// Token: 0x06001DE5 RID: 7653 RVA: 0x0010232C File Offset: 0x0010052C
+		// Token: 0x06001E69 RID: 7785 RVA: 0x00108A80 File Offset: 0x00106C80
 		[NullableContext(2)]
 		public static IReadOnlyList<LordGymEntrance> GetConfigList(int p0MarkId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040022B3 RID: 8883
+		// Token: 0x0400234D RID: 9037
 		private const string DB = "db_lordgym.db";
 
-		// Token: 0x040022B4 RID: 8884
+		// Token: 0x0400234E RID: 9038
 		private const string FILE = "l.领主道馆.xlsx";
 
-		// Token: 0x040022B5 RID: 8885
+		// Token: 0x0400234F RID: 9039
 		private const string TABLE = "LordGymEntrance";
 
-		// Token: 0x040022B6 RID: 8886
+		// Token: 0x04002350 RID: 9040
 		private const string COMMAND = "select BinData from `LordGymEntrance` where MarkId=?";
 
-		// Token: 0x040022B7 RID: 8887
+		// Token: 0x04002351 RID: 9041
 		private const string KEY_PREFIX = "LordGymEntranceGroupByMarkId";
 
-		// Token: 0x040022B8 RID: 8888
+		// Token: 0x04002352 RID: 9042
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040022B9 RID: 8889
+		// Token: 0x04002353 RID: 9043
 		private static int HandleId;
 	}
 }

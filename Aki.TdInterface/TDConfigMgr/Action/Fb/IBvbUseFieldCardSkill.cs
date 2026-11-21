@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A2A RID: 10794
+	// Token: 0x02002D17 RID: 11543
 	public class IBvbUseFieldCardSkill : IBvbPlayerOperationType
 	{
-		// Token: 0x0600EDDC RID: 60892 RVA: 0x0022A9AD File Offset: 0x00228BAD
-		[NullableContext(1)]
+		// Token: 0x0600FC74 RID: 64628 RVA: 0x00248361 File Offset: 0x00246561
 		public static IBvbUseFieldCardSkill Create(IBvbUseFieldCardSkill? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B4A RID: 19274
-		// (get) Token: 0x0600EDDD RID: 60893 RVA: 0x0022A9CC File Offset: 0x00228BCC
+		// Token: 0x17004EF4 RID: 20212
+		// (get) Token: 0x0600FC75 RID: 64629 RVA: 0x00248380 File Offset: 0x00246580
 		public override EBvbPlayerOperationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082EC RID: 33516
+		// Token: 0x040089DF RID: 35295
 		private IBvbUseFieldCardSkill Instance;
 	}
 }

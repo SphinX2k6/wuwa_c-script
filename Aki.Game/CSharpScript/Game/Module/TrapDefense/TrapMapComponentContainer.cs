@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A31 RID: 18993
+	// Token: 0x020039D9 RID: 14809
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapMapComponentContainer
 	{
-		// Token: 0x06031512 RID: 202002 RVA: 0x00B70CBC File Offset: 0x00B6EEBC
+		// Token: 0x060262A2 RID: 156322 RVA: 0x00AB4C30 File Offset: 0x00AB2E30
 		[return: Nullable(2)]
 		public TrapMapComponentBase AddComponent(ETrapDefenseMapComponent componentType, TrapMapEntity parent)
 		{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapMapComponentBase;
 		}
 
-		// Token: 0x06031513 RID: 202003 RVA: 0x00B70CE8 File Offset: 0x00B6EEE8
+		// Token: 0x060262A3 RID: 156323 RVA: 0x00AB4C5C File Offset: 0x00AB2E5C
 		private bool AddInternal(ETrapDefenseMapComponent componentType, TrapMapComponentBase component)
 		{
 			int componentId = component.ComponentId;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return true;
 		}
 
-		// Token: 0x06031514 RID: 202004 RVA: 0x00B70D8C File Offset: 0x00B6EF8C
+		// Token: 0x060262A4 RID: 156324 RVA: 0x00AB4D00 File Offset: 0x00AB2F00
 		[NullableContext(0)]
 		[return: Nullable(2)]
 		public T GetComponent<T>(ETrapDefenseMapComponent componentType) where T : TrapMapComponentBase
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return default(T);
 		}
 
-		// Token: 0x06031515 RID: 202005 RVA: 0x00B70DC0 File Offset: 0x00B6EFC0
+		// Token: 0x060262A5 RID: 156325 RVA: 0x00AB4D34 File Offset: 0x00AB2F34
 		[NullableContext(2)]
 		public TrapMapComponentBase GetComponentById(int componentId)
 		{
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.ComponentIdMap[componentId];
 		}
 
-		// Token: 0x06031516 RID: 202006 RVA: 0x00B70E18 File Offset: 0x00B6F018
+		// Token: 0x060262A6 RID: 156326 RVA: 0x00AB4D8C File Offset: 0x00AB2F8C
 		[return: Nullable(2)]
 		public T GetComponentByFilter<[Nullable(0)] T>(ETrapDefenseMapComponent componentType, Func<T, bool> filterFunc) where T : TrapMapComponentBase
 		{
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return default(T);
 		}
 
-		// Token: 0x06031517 RID: 202007 RVA: 0x00B70E64 File Offset: 0x00B6F064
+		// Token: 0x060262A7 RID: 156327 RVA: 0x00AB4DD8 File Offset: 0x00AB2FD8
 		[NullableContext(0)]
 		[return: Nullable(new byte[]
 		{
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return null;
 		}
 
-		// Token: 0x06031518 RID: 202008 RVA: 0x00B70EB8 File Offset: 0x00B6F0B8
+		// Token: 0x060262A8 RID: 156328 RVA: 0x00AB4E2C File Offset: 0x00AB302C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x06031519 RID: 202009 RVA: 0x00B70F5C File Offset: 0x00B6F15C
+		// Token: 0x060262A9 RID: 156329 RVA: 0x00AB4ED0 File Offset: 0x00AB30D0
 		public void RemoveComponent(ETrapDefenseMapComponent componentType)
 		{
 			List<TrapMapComponentBase> all = this.GetAll(componentType);
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603151A RID: 202010 RVA: 0x00B70FB8 File Offset: 0x00B6F1B8
+		// Token: 0x060262AA RID: 156330 RVA: 0x00AB4F2C File Offset: 0x00AB312C
 		public void RemoveAll()
 		{
 			foreach (KeyValuePair<int, TrapMapComponentBase> keyValuePair in this.ComponentIdMap)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentTypeMap.Clear();
 		}
 
-		// Token: 0x0603151B RID: 202011 RVA: 0x00B71034 File Offset: 0x00B6F234
+		// Token: 0x060262AB RID: 156331 RVA: 0x00AB4FA8 File Offset: 0x00AB31A8
 		public void Init()
 		{
 			foreach (KeyValuePair<int, TrapMapComponentBase> keyValuePair in this.ComponentIdMap)
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603151C RID: 202012 RVA: 0x00B7108C File Offset: 0x00B6F28C
+		// Token: 0x060262AC RID: 156332 RVA: 0x00AB5000 File Offset: 0x00AB3200
 		public void Tick(float delta)
 		{
 			foreach (KeyValuePair<int, TrapMapComponentBase> keyValuePair in this.ComponentIdMap)
@@ -198,10 +198,10 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A5BF RID: 107967
+		// Token: 0x04014F11 RID: 85777
 		private readonly Dictionary<int, TrapMapComponentBase> ComponentIdMap = new Dictionary<int, TrapMapComponentBase>();
 
-		// Token: 0x0401A5C0 RID: 107968
+		// Token: 0x04014F12 RID: 85778
 		private readonly Dictionary<ETrapDefenseMapComponent, List<TrapMapComponentBase>> ComponentTypeMap = new Dictionary<ETrapDefenseMapComponent, List<TrapMapComponentBase>>();
 	}
 }

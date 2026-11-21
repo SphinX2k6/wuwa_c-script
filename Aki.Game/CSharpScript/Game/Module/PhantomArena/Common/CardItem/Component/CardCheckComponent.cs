@@ -5,7 +5,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 {
-	// Token: 0x020051E2 RID: 20962
+	// Token: 0x020041B2 RID: 16818
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 	})]
 	public class CardCheckComponent : CardComponentBase<ICardCheckComponentData>
 	{
-		// Token: 0x06035A28 RID: 219688 RVA: 0x00CB4B44 File Offset: 0x00CB2D44
+		// Token: 0x0602A923 RID: 174371 RVA: 0x00C02180 File Offset: 0x00C00380
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			};
 		}
 
-		// Token: 0x06035A29 RID: 219689 RVA: 0x00CB4BAB File Offset: 0x00CB2DAB
+		// Token: 0x0602A924 RID: 174372 RVA: 0x00C021E7 File Offset: 0x00C003E7
 		public override void Refresh(ICardCheckComponentData data)
 		{
 			this.Data = data;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			this.OnCheckBtnClickInternal = data.OnCheckBtnClick;
 		}
 
-		// Token: 0x06035A2A RID: 219690 RVA: 0x00CB4BC8 File Offset: 0x00CB2DC8
+		// Token: 0x0602A925 RID: 174373 RVA: 0x00C02204 File Offset: 0x00C00404
 		public void RefreshLeftCount()
 		{
 			UUIText text = base.GetText(0);
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x06035A2B RID: 219691 RVA: 0x00CB4C22 File Offset: 0x00CB2E22
+		// Token: 0x0602A926 RID: 174374 RVA: 0x00C0225E File Offset: 0x00C0045E
 		protected void OnCheckBtnClick()
 		{
 			Action onCheckBtnClickInternal = this.OnCheckBtnClickInternal;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			onCheckBtnClickInternal();
 		}
 
-		// Token: 0x06035A2C RID: 219692 RVA: 0x00CB4C34 File Offset: 0x00CB2E34
+		// Token: 0x0602A927 RID: 174375 RVA: 0x00C02270 File Offset: 0x00C00470
 		public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 		{
 			UUIButtonComponent button = base.GetButton(1);
@@ -77,20 +77,20 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			return array;
 		}
 
-		// Token: 0x0401C766 RID: 116582
+		// Token: 0x0401719B RID: 94619
 		protected ICardCheckComponentData Data;
 
-		// Token: 0x0401C767 RID: 116583
+		// Token: 0x0401719C RID: 94620
 		private Action OnCheckBtnClickInternal;
 
-		// Token: 0x0200B368 RID: 45928
+		// Token: 0x02009DA0 RID: 40352
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x04036600 RID: 222720
+			// Token: 0x04031053 RID: 200787
 			public const int CountText = 0;
 
-			// Token: 0x04036601 RID: 222721
+			// Token: 0x04031054 RID: 200788
 			public const int CheckBtn = 1;
 		}
 	}

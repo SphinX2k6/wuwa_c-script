@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006139 RID: 24889
+	// Token: 0x020050B7 RID: 20663
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,18 +15,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeEntrySmallGridItem : LoopScrollSmallItemGrid<IRoverlikeEntrySmallGridData>
 	{
-		// Token: 0x0603EEBE RID: 257726 RVA: 0x00F32B23 File Offset: 0x00F30D23
+		// Token: 0x06033B7E RID: 211838 RVA: 0x00E79A03 File Offset: 0x00E77C03
 		public void BindOnItemClick(Action<IRoverlikeEntrySmallGridData, int> callback)
 		{
 			this.OnItemClick = callback;
 		}
 
-		// Token: 0x0603EEBF RID: 257727 RVA: 0x00F32B2C File Offset: 0x00F30D2C
+		// Token: 0x06033B7F RID: 211839 RVA: 0x00E79A0C File Offset: 0x00E77C0C
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x0603EEC0 RID: 257728 RVA: 0x00F32B30 File Offset: 0x00F30D30
+		// Token: 0x06033B80 RID: 211840 RVA: 0x00E79A10 File Offset: 0x00E77C10
 		protected override void OnRefresh(IRoverlikeEntrySmallGridData data, bool isSelected, int gridIndex)
 		{
 			PropSmallItemGrid propSmallItemGrid = new PropSmallItemGrid
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.Apply<PropSmallItemGrid>(propSmallItemGrid);
 		}
 
-		// Token: 0x0603EEC1 RID: 257729 RVA: 0x00F32B5C File Offset: 0x00F30D5C
+		// Token: 0x06033B81 RID: 211841 RVA: 0x00E79A3C File Offset: 0x00E77C3C
 		protected override void OnExtendToggleStateChanged(EToggleState state)
 		{
 			IRoverlikeEntrySmallGridData roverlikeEntrySmallGridData = this.Data as IRoverlikeEntrySmallGridData;
@@ -52,19 +52,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EEC2 RID: 257730 RVA: 0x00F32B8F File Offset: 0x00F30D8F
+		// Token: 0x06033B82 RID: 211842 RVA: 0x00E79A6F File Offset: 0x00E77C6F
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, true);
 		}
 
-		// Token: 0x0603EEC3 RID: 257731 RVA: 0x00F32B99 File Offset: 0x00F30D99
+		// Token: 0x06033B83 RID: 211843 RVA: 0x00E79A79 File Offset: 0x00E77C79
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, true);
 		}
 
-		// Token: 0x0603EEC4 RID: 257732 RVA: 0x00F32BA4 File Offset: 0x00F30DA4
+		// Token: 0x06033B84 RID: 211844 RVA: 0x00E79A84 File Offset: 0x00E77C84
 		private void FillGridParams(PropSmallItemGrid params_, IRoverlikeEntrySmallGridData data)
 		{
 			RoverRogueGainDataType type = data.Type;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x04020D90 RID: 134544
+		// Token: 0x0401B6BD RID: 112317
 		[Nullable(new byte[]
 		{
 			2,

@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F17 RID: 20247
+	// Token: 0x02005449 RID: 21577
 	public class IBehaviorFlowComponentT
 	{
-		// Token: 0x170091CD RID: 37325
-		// (get) Token: 0x0602003E RID: 131134 RVA: 0x00474A01 File Offset: 0x00472C01
-		// (set) Token: 0x0602003F RID: 131135 RVA: 0x00474A09 File Offset: 0x00472C09
+		// Token: 0x1700994F RID: 39247
+		// (get) Token: 0x06021DAE RID: 138670 RVA: 0x004AAD95 File Offset: 0x004A8F95
+		// (set) Token: 0x06021DAF RID: 138671 RVA: 0x004AAD9D File Offset: 0x004A8F9D
 		public bool Disabled { get; set; }
 
-		// Token: 0x170091CE RID: 37326
-		// (get) Token: 0x06020040 RID: 131136 RVA: 0x00474A12 File Offset: 0x00472C12
-		// (set) Token: 0x06020041 RID: 131137 RVA: 0x00474A1A File Offset: 0x00472C1A
+		// Token: 0x17009950 RID: 39248
+		// (get) Token: 0x06021DB0 RID: 138672 RVA: 0x004AADA6 File Offset: 0x004A8FA6
+		// (set) Token: 0x06021DB1 RID: 138673 RVA: 0x004AADAE File Offset: 0x004A8FAE
 		public bool _Folded { get; set; }
 
-		// Token: 0x170091CF RID: 37327
-		// (get) Token: 0x06020042 RID: 131138 RVA: 0x00474A23 File Offset: 0x00472C23
-		// (set) Token: 0x06020043 RID: 131139 RVA: 0x00474A2B File Offset: 0x00472C2B
+		// Token: 0x17009951 RID: 39249
+		// (get) Token: 0x06021DB2 RID: 138674 RVA: 0x004AADB7 File Offset: 0x004A8FB7
+		// (set) Token: 0x06021DB3 RID: 138675 RVA: 0x004AADBF File Offset: 0x004A8FBF
 		public int InitStateId { get; set; }
 
-		// Token: 0x170091D0 RID: 37328
-		// (get) Token: 0x06020044 RID: 131140 RVA: 0x00474A34 File Offset: 0x00472C34
-		// (set) Token: 0x06020045 RID: 131141 RVA: 0x00474A3C File Offset: 0x00472C3C
+		// Token: 0x17009952 RID: 39250
+		// (get) Token: 0x06021DB4 RID: 138676 RVA: 0x004AADC8 File Offset: 0x004A8FC8
+		// (set) Token: 0x06021DB5 RID: 138677 RVA: 0x004AADD0 File Offset: 0x004A8FD0
 		public IFlowInfoT FlowInfo { get; set; }
 
-		// Token: 0x170091D1 RID: 37329
-		// (get) Token: 0x06020046 RID: 131142 RVA: 0x00474A45 File Offset: 0x00472C45
-		// (set) Token: 0x06020047 RID: 131143 RVA: 0x00474A4D File Offset: 0x00472C4D
+		// Token: 0x17009953 RID: 39251
+		// (get) Token: 0x06021DB6 RID: 138678 RVA: 0x004AADD9 File Offset: 0x004A8FD9
+		// (set) Token: 0x06021DB7 RID: 138679 RVA: 0x004AADE1 File Offset: 0x004A8FE1
 		public byte NullMask { get; set; }
 
-		// Token: 0x06020048 RID: 131144 RVA: 0x00474A56 File Offset: 0x00472C56
+		// Token: 0x06021DB8 RID: 138680 RVA: 0x004AADEA File Offset: 0x004A8FEA
 		public IBehaviorFlowComponentT()
 		{
 			this.Disabled = false;

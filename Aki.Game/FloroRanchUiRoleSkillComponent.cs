@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001B1E RID: 6942
+// Token: 0x02000FDD RID: 4061
 [NullableContext(2)]
 [Nullable(0)]
 [FloroRanchEntityComponent(EFloroRanchEntityComponent.FloroRanchUiRoleSkillComponent)]
 public class FloroRanchUiRoleSkillComponent : FloroRanchUiItemBaseComponent
 {
-	// Token: 0x0600CE04 RID: 52740 RVA: 0x002EE5E8 File Offset: 0x002EC7E8
+	// Token: 0x0600A215 RID: 41493 RVA: 0x002F96C8 File Offset: 0x002F78C8
 	[PreserveBaseOverrides]
 	public new virtual FloroRanchUiRoleSkillItem GetUiItem()
 	{
@@ -25,7 +25,7 @@ public class FloroRanchUiRoleSkillComponent : FloroRanchUiItemBaseComponent
 		return this.UiRoleSkillItem;
 	}
 
-	// Token: 0x0600CE05 RID: 52741 RVA: 0x002EE63C File Offset: 0x002EC83C
+	// Token: 0x0600A216 RID: 41494 RVA: 0x002F971C File Offset: 0x002F791C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -41,7 +41,7 @@ public class FloroRanchUiRoleSkillComponent : FloroRanchUiItemBaseComponent
 		return <PlayShowAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE06 RID: 52742 RVA: 0x002EE680 File Offset: 0x002EC880
+	// Token: 0x0600A217 RID: 41495 RVA: 0x002F9760 File Offset: 0x002F7960
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -57,7 +57,7 @@ public class FloroRanchUiRoleSkillComponent : FloroRanchUiItemBaseComponent
 		return <CreateUiItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE07 RID: 52743 RVA: 0x002EE6C4 File Offset: 0x002EC8C4
+	// Token: 0x0600A218 RID: 41496 RVA: 0x002F97A4 File Offset: 0x002F79A4
 	public override UniTask PlayHideAnim()
 	{
 		FloroRanchUiRoleSkillComponent.<PlayHideAnim>d__4 <PlayHideAnim>d__;
@@ -68,7 +68,7 @@ public class FloroRanchUiRoleSkillComponent : FloroRanchUiItemBaseComponent
 		return <PlayHideAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE08 RID: 52744 RVA: 0x002EE708 File Offset: 0x002EC908
+	// Token: 0x0600A219 RID: 41497 RVA: 0x002F97E8 File Offset: 0x002F79E8
 	public override UniTask PlayNormalAnim()
 	{
 		FloroRanchUiRoleSkillComponent.<PlayNormalAnim>d__5 <PlayNormalAnim>d__;
@@ -79,7 +79,7 @@ public class FloroRanchUiRoleSkillComponent : FloroRanchUiItemBaseComponent
 		return <PlayNormalAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE09 RID: 52745 RVA: 0x002EE74C File Offset: 0x002EC94C
+	// Token: 0x0600A21A RID: 41498 RVA: 0x002F982C File Offset: 0x002F7A2C
 	public override UniTask PlaySkillAnim()
 	{
 		FloroRanchUiRoleSkillComponent.<PlaySkillAnim>d__6 <PlaySkillAnim>d__;
@@ -90,7 +90,7 @@ public class FloroRanchUiRoleSkillComponent : FloroRanchUiItemBaseComponent
 		return <PlaySkillAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE0A RID: 52746 RVA: 0x002EE78F File Offset: 0x002EC98F
+	// Token: 0x0600A21B RID: 41499 RVA: 0x002F986F File Offset: 0x002F7A6F
 	public override void Pause()
 	{
 		if (this.UiRoleSkillItem == null)
@@ -100,7 +100,7 @@ public class FloroRanchUiRoleSkillComponent : FloroRanchUiItemBaseComponent
 		this.UiRoleSkillItem.Pause();
 	}
 
-	// Token: 0x0600CE0B RID: 52747 RVA: 0x002EE7A5 File Offset: 0x002EC9A5
+	// Token: 0x0600A21C RID: 41500 RVA: 0x002F9885 File Offset: 0x002F7A85
 	public override void Resume()
 	{
 		if (this.UiRoleSkillItem == null)
@@ -110,6 +110,6 @@ public class FloroRanchUiRoleSkillComponent : FloroRanchUiItemBaseComponent
 		this.UiRoleSkillItem.Resume();
 	}
 
-	// Token: 0x04005E6A RID: 24170
+	// Token: 0x04005F39 RID: 24377
 	private FloroRanchUiRoleSkillItem UiRoleSkillItem;
 }

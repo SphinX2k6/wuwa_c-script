@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x0200359E RID: 13726
+// Token: 0x02002B13 RID: 11027
 public class __TsDecoratorBlackboardDistanceCompare_InheritProxy : TsDecoratorBlackboardDistanceCompare
 {
-	// Token: 0x0601E075 RID: 122997 RVA: 0x0087E490 File Offset: 0x0087C690
+	// Token: 0x0601BD9D RID: 114077 RVA: 0x008A6524 File Offset: 0x008A4724
 	[NullableContext(1)]
 	public __TsDecoratorBlackboardDistanceCompare_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsDecoratorBlackboardDistanceCompare.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E076 RID: 122998 RVA: 0x0087E4C3 File Offset: 0x0087C6C3
+	// Token: 0x0601BD9E RID: 114078 RVA: 0x008A6557 File Offset: 0x008A4757
 	protected __TsDecoratorBlackboardDistanceCompare_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E077 RID: 122999 RVA: 0x0087E4CC File Offset: 0x0087C6CC
+	// Token: 0x0601BD9F RID: 114079 RVA: 0x008A6560 File Offset: 0x008A4760
 	protected unsafe override void __CPPCALL_PerformConditionCheckAI_Implementation(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

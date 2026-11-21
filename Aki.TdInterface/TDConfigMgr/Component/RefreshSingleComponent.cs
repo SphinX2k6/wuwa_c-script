@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200086D RID: 2157
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000910 RID: 2320
 	public class RefreshSingleComponent : IComponentBase
 	{
-		// Token: 0x06002FCD RID: 12237 RVA: 0x0007B3F4 File Offset: 0x000795F4
+		// Token: 0x06003309 RID: 13065 RVA: 0x000828DC File Offset: 0x00080ADC
 		private RefreshSingleComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002FCE RID: 12238 RVA: 0x0007B42C File Offset: 0x0007962C
+		// Token: 0x0600330A RID: 13066 RVA: 0x00082914 File Offset: 0x00080B14
 		public static RefreshSingleComponent Create([Nullable(2)] RefreshSingleComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002FCF RID: 12239 RVA: 0x0007B43F File Offset: 0x0007963F
+		// Token: 0x0600330B RID: 13067 RVA: 0x00082927 File Offset: 0x00080B27
 		public static RefreshSingleComponent CreateFromSetValue([Nullable(2)] RefreshSingleComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002FD0 RID: 12240 RVA: 0x0007B454 File Offset: 0x00079654
+		// Token: 0x0600330C RID: 13068 RVA: 0x0008293C File Offset: 0x00080B3C
 		public new RefreshSingleComponent_SetValue ToSetValue()
 		{
 			return new RefreshSingleComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000CA6 RID: 3238
-		// (get) Token: 0x06002FD1 RID: 12241 RVA: 0x0007B4A4 File Offset: 0x000796A4
-		// (set) Token: 0x06002FD2 RID: 12242 RVA: 0x0007B4DE File Offset: 0x000796DE
+		// Token: 0x17000D6F RID: 3439
+		// (get) Token: 0x0600330D RID: 13069 RVA: 0x0008298C File Offset: 0x00080B8C
+		// (set) Token: 0x0600330E RID: 13070 RVA: 0x000829C6 File Offset: 0x00080BC6
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CA7 RID: 3239
-		// (get) Token: 0x06002FD3 RID: 12243 RVA: 0x0007B4EC File Offset: 0x000796EC
-		// (set) Token: 0x06002FD4 RID: 12244 RVA: 0x0007B516 File Offset: 0x00079716
+		// Token: 0x17000D70 RID: 3440
+		// (get) Token: 0x0600330F RID: 13071 RVA: 0x000829D4 File Offset: 0x00080BD4
+		// (set) Token: 0x06003310 RID: 13072 RVA: 0x000829FE File Offset: 0x00080BFE
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CA8 RID: 3240
-		// (get) Token: 0x06002FD5 RID: 12245 RVA: 0x0007B524 File Offset: 0x00079724
-		// (set) Token: 0x06002FD6 RID: 12246 RVA: 0x0007B54F File Offset: 0x0007974F
+		// Token: 0x17000D71 RID: 3441
+		// (get) Token: 0x06003311 RID: 13073 RVA: 0x00082A0C File Offset: 0x00080C0C
+		// (set) Token: 0x06003312 RID: 13074 RVA: 0x00082A37 File Offset: 0x00080C37
 		public virtual int RefreshInterval
 		{
 			get
@@ -129,9 +127,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CA9 RID: 3241
-		// (get) Token: 0x06002FD7 RID: 12247 RVA: 0x0007B55D File Offset: 0x0007975D
-		// (set) Token: 0x06002FD8 RID: 12248 RVA: 0x0007B588 File Offset: 0x00079788
+		// Token: 0x17000D72 RID: 3442
+		// (get) Token: 0x06003313 RID: 13075 RVA: 0x00082A45 File Offset: 0x00080C45
+		// (set) Token: 0x06003314 RID: 13076 RVA: 0x00082A70 File Offset: 0x00080C70
 		public virtual bool DelayRefresh
 		{
 			get
@@ -148,9 +146,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CAA RID: 3242
-		// (get) Token: 0x06002FD9 RID: 12249 RVA: 0x0007B596 File Offset: 0x00079796
-		// (set) Token: 0x06002FDA RID: 12250 RVA: 0x0007B5C1 File Offset: 0x000797C1
+		// Token: 0x17000D73 RID: 3443
+		// (get) Token: 0x06003315 RID: 13077 RVA: 0x00082A7E File Offset: 0x00080C7E
+		// (set) Token: 0x06003316 RID: 13078 RVA: 0x00082AA9 File Offset: 0x00080CA9
 		public virtual string TemplateGuid
 		{
 			get
@@ -171,11 +169,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001F82 RID: 8066
+		// Token: 0x04002194 RID: 8596
 		[Nullable(2)]
 		protected new RefreshSingleComponent FbInstance;
 
-		// Token: 0x04001F83 RID: 8067
+		// Token: 0x04002195 RID: 8597
 		[Nullable(2)]
 		protected new RefreshSingleComponent_SetValue PocoInterface;
 	}

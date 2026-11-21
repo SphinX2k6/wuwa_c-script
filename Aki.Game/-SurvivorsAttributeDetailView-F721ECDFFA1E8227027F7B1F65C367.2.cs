@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x02002B36 RID: 11062
+// Token: 0x020020B2 RID: 8370
 internal enum <SurvivorsAttributeDetailView>F721ECDFFA1E8227027F7B1F65C367B064781F83EB497019D4E592B7371447CF2__ERoleAttrItemDefine
 {
-	// Token: 0x0400AAF3 RID: 43763
+	// Token: 0x0400AEF9 RID: 44793
 	ToggleBase,
-	// Token: 0x0400AAF4 RID: 43764
+	// Token: 0x0400AEFA RID: 44794
 	SpriteBase,
-	// Token: 0x0400AAF5 RID: 43765
+	// Token: 0x0400AEFB RID: 44795
 	AttrIconTexture,
-	// Token: 0x0400AAF6 RID: 43766
+	// Token: 0x0400AEFC RID: 44796
 	AttrNameText,
-	// Token: 0x0400AAF7 RID: 43767
+	// Token: 0x0400AEFD RID: 44797
 	AttrBaseValue,
-	// Token: 0x0400AAF8 RID: 43768
+	// Token: 0x0400AEFE RID: 44798
 	AttrAddValue,
-	// Token: 0x0400AAF9 RID: 43769
+	// Token: 0x0400AEFF RID: 44799
 	Arrow,
-	// Token: 0x0400AAFA RID: 43770
+	// Token: 0x0400AF00 RID: 44800
 	PanelDescription,
-	// Token: 0x0400AAFB RID: 43771
+	// Token: 0x0400AF01 RID: 44801
 	TextDescription
 }

@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x02001E0A RID: 7690
-// (Invoke) Token: 0x0600E9E9 RID: 59881
+// Token: 0x020012CC RID: 4812
+// (Invoke) Token: 0x0600BE08 RID: 48648
 public delegate void THandBookPhantomItemToggleFunction(HandBookCommonItemData handBookCommonItemData, int girdIndex);

@@ -6,6 +6,7 @@ using Aki.Protocol;
 using AkiClient.Game.Aki.Character.Role.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.GenericPrompt;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
@@ -14,17 +15,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 {
-	// Token: 0x02004CFC RID: 19708
+	// Token: 0x02003CAE RID: 15534
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleFavorInfoView : UiViewBase
 	{
-		// Token: 0x06032F12 RID: 208658 RVA: 0x00BDF9F9 File Offset: 0x00BDDBF9
+		// Token: 0x06027CED RID: 163053 RVA: 0x00B25301 File Offset: 0x00B23501
 		public RoleFavorInfoView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06032F13 RID: 208659 RVA: 0x00BDFA2C File Offset: 0x00BDDC2C
+		// Token: 0x06027CEE RID: 163054 RVA: 0x00B25334 File Offset: 0x00B23534
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,7 +51,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			};
 		}
 
-		// Token: 0x06032F14 RID: 208660 RVA: 0x00BDFBA0 File Offset: 0x00BDDDA0
+		// Token: 0x06027CEF RID: 163055 RVA: 0x00B254A8 File Offset: 0x00B236A8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleFavorInfoView.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -61,7 +62,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032F15 RID: 208661 RVA: 0x00BDFBE3 File Offset: 0x00BDDDE3
+		// Token: 0x06027CF0 RID: 163056 RVA: 0x00B254EB File Offset: 0x00B236EB
 		protected override void OnBeforeShow()
 		{
 			base.GetItem(13).SetUIActive(true);
@@ -72,7 +73,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			this.RefreshView();
 		}
 
-		// Token: 0x06032F16 RID: 208662 RVA: 0x00BDFC19 File Offset: 0x00BDDE19
+		// Token: 0x06027CF1 RID: 163057 RVA: 0x00B25521 File Offset: 0x00B23721
 		protected override void OnAfterHide()
 		{
 			if (this.SelectedContentData != null && this.SelectedContentData.FavorContentType == EFavorContentType.PreciousItem)
@@ -81,7 +82,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			}
 		}
 
-		// Token: 0x06032F17 RID: 208663 RVA: 0x00BDFC3C File Offset: 0x00BDDE3C
+		// Token: 0x06027CF2 RID: 163058 RVA: 0x00B25544 File Offset: 0x00B23744
 		protected override void OnBeforeDestroy()
 		{
 			if (this.RoleFavorDescComponent != null)
@@ -115,7 +116,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			AudioController.Instance.StopEvent(this.FavorInfoAudioResult, true, null);
 		}
 
-		// Token: 0x06032F18 RID: 208664 RVA: 0x00BDFD02 File Offset: 0x00BDDF02
+		// Token: 0x06027CF3 RID: 163059 RVA: 0x00B2560A File Offset: 0x00B2380A
 		private void RefreshView()
 		{
 			this.UpdateClassifyTitle();
@@ -128,7 +129,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			this.ShowDefaultItem();
 		}
 
-		// Token: 0x06032F19 RID: 208665 RVA: 0x00BDFD2C File Offset: 0x00BDDF2C
+		// Token: 0x06027CF4 RID: 163060 RVA: 0x00B25634 File Offset: 0x00B23834
 		private List<RoleFavorActionClassifyData> GetActionDataList()
 		{
 			List<RoleFavorActionClassifyData> list = new List<RoleFavorActionClassifyData>();
@@ -148,7 +149,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			return list;
 		}
 
-		// Token: 0x06032F1A RID: 208666 RVA: 0x00BDFDB8 File Offset: 0x00BDDFB8
+		// Token: 0x06027CF5 RID: 163061 RVA: 0x00B256C0 File Offset: 0x00B238C0
 		private List<RoleFavorExperienceClassifyData> GetExperienceDataList()
 		{
 			List<RoleFavorExperienceClassifyData> list = new List<RoleFavorExperienceClassifyData>();
@@ -160,7 +161,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			return list;
 		}
 
-		// Token: 0x06032F1B RID: 208667 RVA: 0x00BDFE0C File Offset: 0x00BDE00C
+		// Token: 0x06027CF6 RID: 163062 RVA: 0x00B25714 File Offset: 0x00B23914
 		private List<RoleFavorPreciousItemClassifyData> GetPreciousItemDataList()
 		{
 			List<RoleFavorPreciousItemClassifyData> list = new List<RoleFavorPreciousItemClassifyData>();
@@ -170,7 +171,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			return list;
 		}
 
-		// Token: 0x06032F1C RID: 208668 RVA: 0x00BDFE48 File Offset: 0x00BDE048
+		// Token: 0x06027CF7 RID: 163063 RVA: 0x00B25750 File Offset: 0x00B23950
 		private List<RoleFavorVoiceClassifyData> GetVoiceDataList()
 		{
 			List<RoleFavorVoiceClassifyData> list = new List<RoleFavorVoiceClassifyData>();
@@ -190,7 +191,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			return list;
 		}
 
-		// Token: 0x06032F1D RID: 208669 RVA: 0x00BDFED4 File Offset: 0x00BDE0D4
+		// Token: 0x06027CF8 RID: 163064 RVA: 0x00B257DC File Offset: 0x00B239DC
 		protected EFavorItemStatus GetItemState(RoleFavorContentDataBase contentItemData)
 		{
 			RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(this.RoleId);
@@ -207,7 +208,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			return result;
 		}
 
-		// Token: 0x06032F1E RID: 208670 RVA: 0x00BDFF34 File Offset: 0x00BDE134
+		// Token: 0x06027CF9 RID: 163065 RVA: 0x00B2583C File Offset: 0x00B23A3C
 		private void UpdateClassifyTitle()
 		{
 			string textTableId = null;
@@ -231,7 +232,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			LguiUtil.Instance.SetLocalText(text, textTableId, Array.Empty<object>());
 		}
 
-		// Token: 0x06032F1F RID: 208671 RVA: 0x00BDFFA4 File Offset: 0x00BDE1A4
+		// Token: 0x06027CFA RID: 163066 RVA: 0x00B258AC File Offset: 0x00B23AAC
 		private void UpdateCvPanel(bool isShow)
 		{
 			if (isShow)
@@ -265,7 +266,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x06032F20 RID: 208672 RVA: 0x00BE001C File Offset: 0x00BDE21C
+		// Token: 0x06027CFB RID: 163067 RVA: 0x00B25924 File Offset: 0x00B23B24
 		protected void ShowDefaultItem()
 		{
 			int roleId = RoleModel.Instance.GetRoleInstanceById(this.RoleId).GetRoleId();
@@ -275,7 +276,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			this.ShowItemByData(contentItemData);
 		}
 
-		// Token: 0x06032F21 RID: 208673 RVA: 0x00BE0068 File Offset: 0x00BDE268
+		// Token: 0x06027CFC RID: 163068 RVA: 0x00B25970 File Offset: 0x00B23B70
 		protected void ShowItemByData(RoleFavorContentDataBase contentItemData)
 		{
 			this.HideAllItem();
@@ -292,7 +293,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			}
 		}
 
-		// Token: 0x06032F22 RID: 208674 RVA: 0x00BE00B4 File Offset: 0x00BDE2B4
+		// Token: 0x06027CFD RID: 163069 RVA: 0x00B259BC File Offset: 0x00B23BBC
 		protected void HandleLockItemData()
 		{
 			int configId = this.SelectedContentData.ConfigId;
@@ -350,14 +351,14 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			}
 		}
 
-		// Token: 0x06032F23 RID: 208675 RVA: 0x00BE01D0 File Offset: 0x00BDE3D0
+		// Token: 0x06027CFE RID: 163070 RVA: 0x00B25AD8 File Offset: 0x00B23CD8
 		private void ShowActionItem(RoleFavorActionContentData contentData)
 		{
 			this.UpdateCvPanel(false);
 			this.RoleFavorDescComponent.SetData(contentData, true);
 		}
 
-		// Token: 0x06032F24 RID: 208676 RVA: 0x00BE01E8 File Offset: 0x00BDE3E8
+		// Token: 0x06027CFF RID: 163071 RVA: 0x00B25AF0 File Offset: 0x00B23CF0
 		private void ShowRoleInfoItem(RoleFavorRoleInfoContentData contentData)
 		{
 			this.UpdateCvPanel(true);
@@ -373,13 +374,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			}
 		}
 
-		// Token: 0x06032F25 RID: 208677 RVA: 0x00BE0226 File Offset: 0x00BDE426
+		// Token: 0x06027D00 RID: 163072 RVA: 0x00B25B2E File Offset: 0x00B23D2E
 		private void ShowRoleStoryItem(RoleFavorStoryContentData contentData)
 		{
 			this.RoleFavorDescComponent.SetData(contentData, true);
 		}
 
-		// Token: 0x06032F26 RID: 208678 RVA: 0x00BE0235 File Offset: 0x00BDE435
+		// Token: 0x06027D01 RID: 163073 RVA: 0x00B25B3D File Offset: 0x00B23D3D
 		private void ShowPreciousItem(RoleFavorPreciousItemContentData contentData)
 		{
 			this.UpdateCvPanel(false);
@@ -388,14 +389,14 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			this.RoleFavorPreciousItemComponent.SetLockState(false);
 		}
 
-		// Token: 0x06032F27 RID: 208679 RVA: 0x00BE0264 File Offset: 0x00BDE464
+		// Token: 0x06027D02 RID: 163074 RVA: 0x00B25B6C File Offset: 0x00B23D6C
 		private void ShowVoiceItem(RoleFavorVoiceContentData contentData)
 		{
 			this.UpdateCvPanel(true);
 			this.RoleFavorDescComponent.SetData(contentData, true);
 		}
 
-		// Token: 0x06032F28 RID: 208680 RVA: 0x00BE027C File Offset: 0x00BDE47C
+		// Token: 0x06027D03 RID: 163075 RVA: 0x00B25B84 File Offset: 0x00B23D84
 		protected void ShowLockItem()
 		{
 			this.HideAllItem();
@@ -409,7 +410,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			}
 		}
 
-		// Token: 0x06032F29 RID: 208681 RVA: 0x00BE02DD File Offset: 0x00BDE4DD
+		// Token: 0x06027D04 RID: 163076 RVA: 0x00B25BE5 File Offset: 0x00B23DE5
 		private void HideAllItem()
 		{
 			this.RoleFavorLockComponent.SetComponentActive(false);
@@ -419,7 +420,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			this.RoleFavorPreciousItemComponent.SetComponentActive(false);
 		}
 
-		// Token: 0x06032F2A RID: 208682 RVA: 0x00BE031C File Offset: 0x00BDE51C
+		// Token: 0x06027D05 RID: 163077 RVA: 0x00B25C24 File Offset: 0x00B23E24
 		private void ResetAllRoleFavorContentItemToggle()
 		{
 			int count = this.RoleFavorContentItemList.Count;
@@ -442,7 +443,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			}
 		}
 
-		// Token: 0x06032F2B RID: 208683 RVA: 0x00BE0394 File Offset: 0x00BDE594
+		// Token: 0x06027D06 RID: 163078 RVA: 0x00B25C9C File Offset: 0x00B23E9C
 		protected void ClearVerticalLayout()
 		{
 			if (this.ClassifyVerticalLayout != null)
@@ -451,7 +452,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			}
 		}
 
-		// Token: 0x06032F2C RID: 208684 RVA: 0x00BE03AC File Offset: 0x00BDE5AC
+		// Token: 0x06027D07 RID: 163079 RVA: 0x00B25CB4 File Offset: 0x00B23EB4
 		private void PlayVoice(RoleFavorVoiceContentData contentData, RoleFavorContentItem roleFavorContentItem)
 		{
 			if (roleFavorContentItem.GetCurVoiceState() == EFavorPlayerStatus.Play)
@@ -486,7 +487,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			ScrollingTipsController.Instance.ShowTipsById("FavorVolume", Array.Empty<object>());
 		}
 
-		// Token: 0x06032F2D RID: 208685 RVA: 0x00BE0490 File Offset: 0x00BDE690
+		// Token: 0x06027D08 RID: 163080 RVA: 0x00B25D98 File Offset: 0x00B23F98
 		private void PlayVoiceByConfig(RoleFavorContentItem roleFavorContentItem, FavorWord config)
 		{
 			RoleFavorInfoView.<>c__DisplayClass44_0 CS$<>8__locals1 = new RoleFavorInfoView.<>c__DisplayClass44_0();
@@ -508,7 +509,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			AudioController.Instance.LoadAndAddCallback(this.VoicePath, new Action(CS$<>8__locals1.<PlayVoiceByConfig>g__loadedCallback|0), this.FavorInfoAudioResult);
 		}
 
-		// Token: 0x06032F2E RID: 208686 RVA: 0x00BE053C File Offset: 0x00BDE73C
+		// Token: 0x06027D09 RID: 163081 RVA: 0x00B25E44 File Offset: 0x00B24044
 		private void PlayRoleMontage(RoleFavorActionContentData contentData, RoleFavorContentItem roleFavorContentItem)
 		{
 			Motion configData = contentData.ConfigData;
@@ -526,7 +527,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			this.PlayRoleMontageByConfig(roleFavorContentItem, configData);
 		}
 
-		// Token: 0x06032F2F RID: 208687 RVA: 0x00BE05A8 File Offset: 0x00BDE7A8
+		// Token: 0x06027D0A RID: 163082 RVA: 0x00B25EB0 File Offset: 0x00B240B0
 		private void PlayRoleMontageByConfig(RoleFavorContentItem roleFavorContentItem, Motion config)
 		{
 			ResourceSystem.Instance.LoadAsync<UAnimMontage>(config.AniMontage, delegate([Nullable(2)] UAnimMontage montageObject, string _)
@@ -560,14 +561,14 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			}, 100, this.MemoryTag);
 		}
 
-		// Token: 0x06032F30 RID: 208688 RVA: 0x00BE05E8 File Offset: 0x00BDE7E8
+		// Token: 0x06027D0B RID: 163083 RVA: 0x00B25EF0 File Offset: 0x00B240F0
 		protected void ClearAudio(RoleFavorContentItem roleFavorContentItem)
 		{
 			AudioController.Instance.StopEvent(this.FavorInfoAudioResult, true, null);
 			roleFavorContentItem.EndPlay();
 		}
 
-		// Token: 0x06032F31 RID: 208689 RVA: 0x00BE0618 File Offset: 0x00BDE818
+		// Token: 0x06027D0C RID: 163084 RVA: 0x00B25F20 File Offset: 0x00B24120
 		protected void ClearRoleMontage(RoleFavorContentItem roleFavorContentItem)
 		{
 			TsUiSceneRoleActor roleSystemRoleActor = UiSceneManager.Instance.GetRoleSystemRoleActor();
@@ -592,7 +593,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			roleFavorContentItem.EndPlay();
 		}
 
-		// Token: 0x06032F32 RID: 208690 RVA: 0x00BE06AC File Offset: 0x00BDE8AC
+		// Token: 0x06027D0D RID: 163085 RVA: 0x00B25FB4 File Offset: 0x00B241B4
 		private void InitClassifyItemDataList()
 		{
 			switch (this.FavorTabType)
@@ -614,7 +615,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			}
 		}
 
-		// Token: 0x06032F33 RID: 208691 RVA: 0x00BE0724 File Offset: 0x00BDE924
+		// Token: 0x06027D0E RID: 163086 RVA: 0x00B2602C File Offset: 0x00B2422C
 		private List<RoleFavorClassifyDataBase> ConvertClassifyDataList<[Nullable(0)] T>(List<T> source) where T : RoleFavorClassifyDataBase
 		{
 			List<RoleFavorClassifyDataBase> list = new List<RoleFavorClassifyDataBase>(source.Count);
@@ -625,7 +626,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			return list;
 		}
 
-		// Token: 0x06032F34 RID: 208692 RVA: 0x00BE0764 File Offset: 0x00BDE964
+		// Token: 0x06027D0F RID: 163087 RVA: 0x00B2606C File Offset: 0x00B2426C
 		private void InitRoleFavorContentItemList()
 		{
 			foreach (RoleFavorClassifyItem roleFavorClassifyItem in this.ClassifyVerticalLayout.GetLayoutItemList())
@@ -639,7 +640,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			}
 		}
 
-		// Token: 0x06032F35 RID: 208693 RVA: 0x00BE0818 File Offset: 0x00BDEA18
+		// Token: 0x06027D10 RID: 163088 RVA: 0x00B26120 File Offset: 0x00B24320
 		private void ContentItemToggleFunction(bool isSelect, RoleFavorContentDataBase contentItemData, RoleFavorContentItem roleFavorContentItem)
 		{
 			if (isSelect)
@@ -652,7 +653,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			}
 		}
 
-		// Token: 0x06032F36 RID: 208694 RVA: 0x00BE084C File Offset: 0x00BDEA4C
+		// Token: 0x06027D11 RID: 163089 RVA: 0x00B26154 File Offset: 0x00B24354
 		protected void OnContentItemToggleClick(RoleFavorContentItem roleFavorContentItem, RoleFavorContentDataBase contentItemData)
 		{
 			EFavorItemStatus itemState = this.GetItemState(contentItemData);
@@ -672,7 +673,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			}
 		}
 
-		// Token: 0x06032F37 RID: 208695 RVA: 0x00BE08A8 File Offset: 0x00BDEAA8
+		// Token: 0x06027D12 RID: 163090 RVA: 0x00B261B0 File Offset: 0x00B243B0
 		private void ContentItemButtonFunction(RoleFavorContentDataBase contentItemData, RoleFavorContentItem roleFavorContentItem)
 		{
 			RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(this.RoleId);
@@ -697,27 +698,27 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			}
 		}
 
-		// Token: 0x06032F38 RID: 208696 RVA: 0x00BE093E File Offset: 0x00BDEB3E
+		// Token: 0x06027D13 RID: 163091 RVA: 0x00B26246 File Offset: 0x00B24446
 		private RoleFavorClassifyItem CreateClassifyItem()
 		{
 			return new RoleFavorClassifyItem();
 		}
 
-		// Token: 0x06032F39 RID: 208697 RVA: 0x00BE0945 File Offset: 0x00BDEB45
+		// Token: 0x06027D14 RID: 163092 RVA: 0x00B2624D File Offset: 0x00B2444D
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int, int>(EEventName.UnLockRoleFavorItem, new Action<int, int>(this.RoleFavorUnlock));
-			EventSystem.Instance.Add<UiCameraAnimationDefine.IFinishData>(EEventName.OnPlayCameraAnimationFinish, new Action<UiCameraAnimationDefine.IFinishData>(this.OnCameraFinish));
+			EventSystem.Instance.Add<UiCameraDefine.IFinishData>(EEventName.OnPlayCameraAnimationFinish, new Action<UiCameraDefine.IFinishData>(this.OnCameraFinish));
 		}
 
-		// Token: 0x06032F3A RID: 208698 RVA: 0x00BE097F File Offset: 0x00BDEB7F
+		// Token: 0x06027D15 RID: 163093 RVA: 0x00B26287 File Offset: 0x00B24487
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.UnLockRoleFavorItem, new Action<int, int>(this.RoleFavorUnlock));
-			EventSystem.Instance.Remove(EEventName.OnPlayCameraAnimationFinish, new Action<UiCameraAnimationDefine.IFinishData>(this.OnCameraFinish));
+			EventSystem.Instance.Remove(EEventName.OnPlayCameraAnimationFinish, new Action<UiCameraDefine.IFinishData>(this.OnCameraFinish));
 		}
 
-		// Token: 0x06032F3B RID: 208699 RVA: 0x00BE09BC File Offset: 0x00BDEBBC
+		// Token: 0x06027D16 RID: 163094 RVA: 0x00B262C4 File Offset: 0x00B244C4
 		private void RoleFavorUnlock(int roleId, int unlockId)
 		{
 			if (roleId != this.RoleId)
@@ -735,17 +736,17 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			GenericPromptController.Instance.ShowPromptByCode("30001", Array.Empty<object>());
 		}
 
-		// Token: 0x06032F3C RID: 208700 RVA: 0x00BE0A48 File Offset: 0x00BDEC48
-		private void OnCameraFinish(UiCameraAnimationDefine.IFinishData finishData)
+		// Token: 0x06027D17 RID: 163095 RVA: 0x00B26350 File Offset: 0x00B24550
+		private void OnCameraFinish(UiCameraDefine.IFinishData finishData)
 		{
-			if (finishData.ToHandleData.ViewName != EUiViewName.RoleFavorInfoView)
+			if (finishData.ToHandleData.GetViewName() != EUiViewName.RoleFavorInfoView)
 			{
 				return;
 			}
 			base.GetItem(13).SetUIActive(false);
 		}
 
-		// Token: 0x06032F3D RID: 208701 RVA: 0x00BE0A78 File Offset: 0x00BDEC78
+		// Token: 0x06027D18 RID: 163096 RVA: 0x00B26380 File Offset: 0x00B24580
 		private void OnClickClose()
 		{
 			TsUiSceneRoleActor roleSystemRoleActor = UiSceneManager.Instance.GetRoleSystemRoleActor();
@@ -756,7 +757,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06032F3E RID: 208702 RVA: 0x00BE0AA6 File Offset: 0x00BDECA6
+		// Token: 0x06027D19 RID: 163097 RVA: 0x00B263AE File Offset: 0x00B245AE
 		protected override void OnHandleLoadScene()
 		{
 			TsUiSceneRoleActor roleSystemRoleActor = UiSceneManager.Instance.GetRoleSystemRoleActor();
@@ -778,7 +779,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			obj2.SetTransformByTag("RoleCase");
 		}
 
-		// Token: 0x06032F3F RID: 208703 RVA: 0x00BE0ADC File Offset: 0x00BDECDC
+		// Token: 0x06027D1A RID: 163098 RVA: 0x00B263E4 File Offset: 0x00B245E4
 		private Dictionary<EFavorContentType, IContentHandler> GetContentHandlersMap()
 		{
 			if (this.ContentHandlersMap == null)
@@ -810,7 +811,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			return this.ContentHandlersMap;
 		}
 
-		// Token: 0x0401B191 RID: 110993
+		// Token: 0x04015B16 RID: 88854
 		[Nullable(new byte[]
 		{
 			2,
@@ -819,61 +820,61 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 		})]
 		private GenericLayout<RoleFavorClassifyItem, RoleFavorClassifyDataBase> ClassifyVerticalLayout;
 
-		// Token: 0x0401B192 RID: 110994
+		// Token: 0x04015B17 RID: 88855
 		private List<RoleFavorClassifyDataBase> ClassifyDataList = new List<RoleFavorClassifyDataBase>();
 
-		// Token: 0x0401B193 RID: 110995
+		// Token: 0x04015B18 RID: 88856
 		private readonly List<RoleFavorContentItem> RoleFavorContentItemList = new List<RoleFavorContentItem>();
 
-		// Token: 0x0401B194 RID: 110996
+		// Token: 0x04015B19 RID: 88857
 		[Nullable(2)]
 		private RoleFavorContentDataBase SelectedContentData;
 
-		// Token: 0x0401B195 RID: 110997
+		// Token: 0x04015B1A RID: 88858
 		[Nullable(2)]
 		private RoleFavorContentItem CurSelectedRoleFavorContentItem;
 
-		// Token: 0x0401B196 RID: 110998
+		// Token: 0x04015B1B RID: 88859
 		[Nullable(2)]
 		private RoleFavorContentItem LastSelectedRoleFavorContentItem;
 
-		// Token: 0x0401B197 RID: 110999
+		// Token: 0x04015B1C RID: 88860
 		[Nullable(2)]
 		private string VoicePath;
 
-		// Token: 0x0401B198 RID: 111000
+		// Token: 0x04015B1D RID: 88861
 		private readonly int PlayFlag = 1;
 
-		// Token: 0x0401B199 RID: 111001
+		// Token: 0x04015B1E RID: 88862
 		[Nullable(2)]
 		private RoleFavorDescComponent RoleFavorDescComponent;
 
-		// Token: 0x0401B19A RID: 111002
+		// Token: 0x04015B1F RID: 88863
 		[Nullable(2)]
 		private RoleFavorBaseInfoComponent RoleFavorBaseInfoComponent;
 
-		// Token: 0x0401B19B RID: 111003
+		// Token: 0x04015B20 RID: 88864
 		[Nullable(2)]
 		private RoleFavorPowerInfoComponent RoleFavorPowerInfoComponent;
 
-		// Token: 0x0401B19C RID: 111004
+		// Token: 0x04015B21 RID: 88865
 		[Nullable(2)]
 		private RoleFavorPreciousItemComponent RoleFavorPreciousItemComponent;
 
-		// Token: 0x0401B19D RID: 111005
+		// Token: 0x04015B22 RID: 88866
 		[Nullable(2)]
 		private RoleFavorLockComponent RoleFavorLockComponent;
 
-		// Token: 0x0401B19E RID: 111006
+		// Token: 0x04015B23 RID: 88867
 		private readonly PlayResult FavorInfoAudioResult = new PlayResult();
 
-		// Token: 0x0401B19F RID: 111007
+		// Token: 0x04015B24 RID: 88868
 		private int RoleId;
 
-		// Token: 0x0401B1A0 RID: 111008
+		// Token: 0x04015B25 RID: 88869
 		private EFavorTabType FavorTabType;
 
-		// Token: 0x0401B1A1 RID: 111009
+		// Token: 0x04015B26 RID: 88870
 		[Nullable(new byte[]
 		{
 			2,
@@ -881,37 +882,37 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 		})]
 		private Dictionary<EFavorContentType, IContentHandler> ContentHandlersMap;
 
-		// Token: 0x0200AE8A RID: 44682
+		// Token: 0x020098A8 RID: 39080
 		[NullableContext(0)]
 		private enum ERoleFavorInfoViewDefine
 		{
-			// Token: 0x04034FFC RID: 217084
+			// Token: 0x0402F9A4 RID: 194980
 			CloseButton,
-			// Token: 0x04034FFD RID: 217085
+			// Token: 0x0402F9A5 RID: 194981
 			ClassifyVerticalLayout,
-			// Token: 0x04034FFE RID: 217086
+			// Token: 0x0402F9A6 RID: 194982
 			ClassifyIcon,
-			// Token: 0x04034FFF RID: 217087
+			// Token: 0x0402F9A7 RID: 194983
 			ClassifyText,
-			// Token: 0x04035000 RID: 217088
+			// Token: 0x0402F9A8 RID: 194984
 			NameText,
-			// Token: 0x04035001 RID: 217089
+			// Token: 0x0402F9A9 RID: 194985
 			LockItem,
-			// Token: 0x04035002 RID: 217090
+			// Token: 0x0402F9AA RID: 194986
 			DescItem,
-			// Token: 0x04035003 RID: 217091
+			// Token: 0x0402F9AB RID: 194987
 			BaseInfoItem,
-			// Token: 0x04035004 RID: 217092
+			// Token: 0x0402F9AC RID: 194988
 			PowerInfoItem,
-			// Token: 0x04035005 RID: 217093
+			// Token: 0x0402F9AD RID: 194989
 			PreciousItem,
-			// Token: 0x04035006 RID: 217094
+			// Token: 0x0402F9AE RID: 194990
 			DragItem,
-			// Token: 0x04035007 RID: 217095
+			// Token: 0x0402F9AF RID: 194991
 			CVNameText,
-			// Token: 0x04035008 RID: 217096
+			// Token: 0x0402F9B0 RID: 194992
 			CVPanel,
-			// Token: 0x04035009 RID: 217097
+			// Token: 0x0402F9B1 RID: 194993
 			MaskPanel
 		}
 	}

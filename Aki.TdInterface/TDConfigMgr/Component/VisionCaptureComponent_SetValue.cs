@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008DD RID: 2269
+	// Token: 0x02000982 RID: 2434
 	public class VisionCaptureComponent_SetValue
 	{
-		// Token: 0x040021B6 RID: 8630
+		// Token: 0x040023CD RID: 9165
 		public bool? Disabled;
 
-		// Token: 0x040021B7 RID: 8631
+		// Token: 0x040023CE RID: 9166
 		public bool? EdIsLocked;
 
-		// Token: 0x040021B8 RID: 8632
+		// Token: 0x040023CF RID: 9167
 		public int VisionCaptureId;
 
-		// Token: 0x040021B9 RID: 8633
+		// Token: 0x040023D0 RID: 9168
 		public int? VisionCaptureProb;
 	}
 }

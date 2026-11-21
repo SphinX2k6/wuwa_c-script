@@ -25,17 +25,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AF3 RID: 27379
+	// Token: 0x02005C6B RID: 23659
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelEventAdjustPlayerCamera : LevelEventBase
 	{
-		// Token: 0x06043FF0 RID: 278512 RVA: 0x010AEAD7 File Offset: 0x010ACCD7
+		// Token: 0x0603A142 RID: 237890 RVA: 0x01058353 File Offset: 0x01056553
 		public LevelEventAdjustPlayerCamera(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06043FF1 RID: 278513 RVA: 0x010AEB0C File Offset: 0x010ACD0C
+		// Token: 0x0603A143 RID: 237891 RVA: 0x01058388 File Offset: 0x01056588
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.LoadCurvesAndExecute(adjustPlayerCamera).Forget();
 		}
 
-		// Token: 0x06043FF2 RID: 278514 RVA: 0x010AEBE8 File Offset: 0x010ACDE8
+		// Token: 0x0603A144 RID: 237892 RVA: 0x01058464 File Offset: 0x01056664
 		[NullableContext(1)]
 		private bool CheckNeedWaitAssetLoad(AdjustPlayerCamera @params)
 		{
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return flag2;
 		}
 
-		// Token: 0x06043FF3 RID: 278515 RVA: 0x010AECE0 File Offset: 0x010ACEE0
+		// Token: 0x0603A145 RID: 237893 RVA: 0x0105855C File Offset: 0x0105675C
 		[NullableContext(1)]
 		private UniTask LoadCurvesAndExecute(AdjustPlayerCamera @params)
 		{
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <LoadCurvesAndExecute>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043FF4 RID: 278516 RVA: 0x010AED2C File Offset: 0x010ACF2C
+		// Token: 0x0603A146 RID: 237894 RVA: 0x010585A8 File Offset: 0x010567A8
 		private void ExecuteAfterCurvesLoaded([Nullable(1)] AdjustPlayerCamera @params, UCurveFloat fadeInCurve, UCurveFloat fadeOutCurve, UCurveFloat blendInCurve, UCurveFloat blendOutCurve)
 		{
 			LevelEventAdjustPlayerCamera.<>c__DisplayClass17_0 CS$<>8__locals1 = new LevelEventAdjustPlayerCamera.<>c__DisplayClass17_0();
@@ -327,13 +327,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06043FF5 RID: 278517 RVA: 0x010AF433 File Offset: 0x010AD633
+		// Token: 0x0603A147 RID: 237895 RVA: 0x01058CAF File Offset: 0x01056EAF
 		private bool HasValidCurveAssetPath(string path)
 		{
 			return !string.IsNullOrEmpty(path) && !StringUtils.IsNothing(path);
 		}
 
-		// Token: 0x06043FF6 RID: 278518 RVA: 0x010AF448 File Offset: 0x010AD648
+		// Token: 0x0603A148 RID: 237896 RVA: 0x01058CC4 File Offset: 0x01056EC4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <LoadCurveFloat>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043FF7 RID: 278519 RVA: 0x010AF494 File Offset: 0x010AD694
+		// Token: 0x0603A149 RID: 237897 RVA: 0x01058D10 File Offset: 0x01056F10
 		[NullableContext(1)]
 		private void EnterLockTargetCamera(ICameraLockConfig lockConfig)
 		{
@@ -360,7 +360,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			logicComponent.EnterLockTargetCameraByLocation(location, 100);
 		}
 
-		// Token: 0x06043FF8 RID: 278520 RVA: 0x010AF4F8 File Offset: 0x010AD6F8
+		// Token: 0x0603A14A RID: 237898 RVA: 0x01058D74 File Offset: 0x01056F74
 		private void SetFixedCamera([Nullable(1)] AdjustPlayerCamera @params, UCurveFloat blendInCurve = null, UCurveFloat blendOutCurve = null)
 		{
 			if (@params.Option.Type != EAdjustPlayerCamera.Fixed && @params.Option.Type != EAdjustPlayerCamera.FixedSurveillance)
@@ -493,7 +493,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.CameraModelInstance.SceneCamera.PlayerComponent.EnterFixSceneSubCamera(vector, rotator, @params.Option.Fov, @params.Option.FadeInTime, @params.Option.FadeOutTime, ESceneSubCameraType.Fix, null, new UnrealEngine.EViewTargetBlendFunction?(value3), new float?(value4), new UnrealEngine.EViewTargetBlendFunction?(value5), new float?(value6), new bool?(value), cameraAberrationView, new bool?(value2), fixInputData, "", followConfig, blendInCurve, blendOutCurve, enableInPlotMode, false);
 		}
 
-		// Token: 0x06043FF9 RID: 278521 RVA: 0x010AFB28 File Offset: 0x010ADD28
+		// Token: 0x0603A14B RID: 237899 RVA: 0x010593A4 File Offset: 0x010575A4
 		private bool UpdateCameraHookConfig([Nullable(1)] AdjustPlayerCamera @params, UCurveFloat fadeInCurve, UCurveFloat fadeOutCurve)
 		{
 			CameraConfigController cameraConfigController = this.CameraModelInstance.FightCamera.LogicComponent.CameraConfigController;
@@ -784,7 +784,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x06043FFA RID: 278522 RVA: 0x010B06C4 File Offset: 0x010AE8C4
+		// Token: 0x0603A14C RID: 237900 RVA: 0x01059F40 File Offset: 0x01058140
 		private void ApplySpringArmConfig(ISpringArmFixConfig springArmFix, ISpringArmSoftZoneConfig springArmSoftZoneConfig, OtherAdjustCameraSpringArmSoft leftRightSpringArmSoft = null)
 		{
 			if (springArmFix != null && springArmFix.LeftRightFix != null)
@@ -972,7 +972,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.HookConfig.DefaultConfig.Remove(EFightCameraDefault.弹簧臂中心点上下插值最大速度);
 		}
 
-		// Token: 0x06043FFB RID: 278523 RVA: 0x010B0CB4 File Offset: 0x010AEEB4
+		// Token: 0x0603A14D RID: 237901 RVA: 0x0105A530 File Offset: 0x01058730
 		[NullableContext(1)]
 		private void EnableHookConfig(AdjustPlayerCamera @params, int? extraTagId = null)
 		{
@@ -1008,7 +1008,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06043FFC RID: 278524 RVA: 0x010B0D5C File Offset: 0x010AEF5C
+		// Token: 0x0603A14E RID: 237902 RVA: 0x0105A5D8 File Offset: 0x010587D8
 		protected override void OnUpdateGuarantee()
 		{
 			RestorePlayerCameraAdjustment restorePlayerCameraAdjustment = new RestorePlayerCameraAdjustment();
@@ -1023,7 +1023,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			EventSystem.Instance.Emit<string, GeneralContext, GuaranteeActionInfo, bool?>(EEventName.AddGuaranteeAction, this.Type, this.BaseContext, p, new bool?(true));
 		}
 
-		// Token: 0x06043FFD RID: 278525 RVA: 0x010B0DCC File Offset: 0x010AEFCC
+		// Token: 0x0603A14F RID: 237903 RVA: 0x0105A648 File Offset: 0x01058848
 		[NullableContext(1)]
 		private void CameraMoveFinished(string cameraName)
 		{
@@ -1039,7 +1039,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06043FFE RID: 278526 RVA: 0x010B0E38 File Offset: 0x010AF038
+		// Token: 0x0603A150 RID: 237904 RVA: 0x0105A6B4 File Offset: 0x010588B4
 		private void TryEnterCameraGuide([Nullable(1)] Vector lookAt, float fadeInTime, float stayTime, float fadeOutTime, bool lockCameraInput, Vector endPosition, float? fov, bool ignoreAdjustYaw = false, bool staticCamera = false, float specificArmLength = 0f, bool disableArmOffset = false, Action callback = null, bool forceUsingCameraGuideParameters = false)
 		{
 			if (PanoramicController.Instance.CheckCanEnterCameraGuide())
@@ -1086,7 +1086,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			callback2();
 		}
 
-		// Token: 0x06043FFF RID: 278527 RVA: 0x010B0F10 File Offset: 0x010AF110
+		// Token: 0x0603A151 RID: 237905 RVA: 0x0105A78C File Offset: 0x0105898C
 		private void FixedLookAtCallback()
 		{
 			SceneCamera sceneCamera = this.CameraModelInstance.SceneCamera;
@@ -1138,7 +1138,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.ExitFixedLookAt();
 		}
 
-		// Token: 0x06044000 RID: 278528 RVA: 0x010B10FC File Offset: 0x010AF2FC
+		// Token: 0x0603A152 RID: 237906 RVA: 0x0105A978 File Offset: 0x01058B78
 		private unsafe bool FixedLookAt()
 		{
 			AdjustPlayerCamera @params = this.Params;
@@ -1219,7 +1219,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x06044001 RID: 278529 RVA: 0x010B1440 File Offset: 0x010AF640
+		// Token: 0x0603A153 RID: 237907 RVA: 0x0105ACBC File Offset: 0x01058EBC
 		protected override void OnReset()
 		{
 			this.Params = null;
@@ -1240,7 +1240,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044002 RID: 278530 RVA: 0x010B14CC File Offset: 0x010AF6CC
+		// Token: 0x0603A154 RID: 237908 RVA: 0x0105AD48 File Offset: 0x01058F48
 		private void ExitFixedLookAt()
 		{
 			LevelEventAdjustPlayerCamera.<>c__DisplayClass31_0 CS$<>8__locals1 = new LevelEventAdjustPlayerCamera.<>c__DisplayClass31_0();
@@ -1347,7 +1347,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}, (float)((int)(num5 * 1000f)), null, null, true, 1f);
 		}
 
-		// Token: 0x06044003 RID: 278531 RVA: 0x010B1638 File Offset: 0x010AF838
+		// Token: 0x0603A155 RID: 237909 RVA: 0x0105AEB4 File Offset: 0x010590B4
 		private bool CheckNeedHookConfig()
 		{
 			AdjustPlayerCamera @params = this.Params;
@@ -1364,7 +1364,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return flag || (this.Params.Option.Type != EAdjustPlayerCamera.FixedLookAt && this.Params.Option.Type != EAdjustPlayerCamera.ZoneFollow);
 		}
 
-		// Token: 0x06044004 RID: 278532 RVA: 0x010B1690 File Offset: 0x010AF890
+		// Token: 0x0603A156 RID: 237910 RVA: 0x0105AF0C File Offset: 0x0105910C
 		private void UpdateCameraGravityMode(AdjustPlayerCamera @params)
 		{
 			FightCameraLogicComponent logicComponent = this.CameraModelInstance.FightCamera.LogicComponent;
@@ -1383,7 +1383,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			logicComponent.SetCameraGravityMode(ECameraGravityMode.FixedGravityDirect, vector);
 		}
 
-		// Token: 0x06044005 RID: 278533 RVA: 0x010B16FC File Offset: 0x010AF8FC
+		// Token: 0x0603A157 RID: 237911 RVA: 0x0105AF78 File Offset: 0x01059178
 		private void UpdateCameraCollisionConfig(AdjustPlayerCamera @params)
 		{
 			FightCameraLogicComponent logicComponent = this.CameraModelInstance.FightCamera.LogicComponent;
@@ -1399,7 +1399,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			logicComponent.LockCameraCollision(ECameraCollisionLockType.LevelEventAdjustPlayerCamera);
 		}
 
-		// Token: 0x06044006 RID: 278534 RVA: 0x010B1750 File Offset: 0x010AF950
+		// Token: 0x0603A158 RID: 237912 RVA: 0x0105AFCC File Offset: 0x010591CC
 		private void UpdateCameraNpcDitherConfig(AdjustPlayerCamera @params)
 		{
 			FightCameraLogicComponent logicComponent = this.CameraModelInstance.FightCamera.LogicComponent;
@@ -1415,7 +1415,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			logicComponent.LockCameraNpcDither(ENpcDitherLockType.LevelEventAdjustPlayerCamera);
 		}
 
-		// Token: 0x06044007 RID: 278535 RVA: 0x010B17A4 File Offset: 0x010AF9A4
+		// Token: 0x0603A159 RID: 237913 RVA: 0x0105B020 File Offset: 0x01059220
 		private void RestoreCameraGravityMode()
 		{
 			FightCameraLogicComponent logicComponent = this.CameraModelInstance.FightCamera.LogicComponent;
@@ -1426,7 +1426,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			logicComponent.SetCameraGravityMode(ECameraGravityMode.CameraTargetGravityDirect, null);
 		}
 
-		// Token: 0x06044008 RID: 278536 RVA: 0x010B17C4 File Offset: 0x010AF9C4
+		// Token: 0x0603A15A RID: 237914 RVA: 0x0105B040 File Offset: 0x01059240
 		private unsafe BP_ZoneFollowCameraController_C GetZoneFollowCameraController(int sceneActorRefEntityId)
 		{
 			IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(sceneActorRefEntityId), null);
@@ -1492,7 +1492,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return null;
 		}
 
-		// Token: 0x06044009 RID: 278537 RVA: 0x010B19C0 File Offset: 0x010AFBC0
+		// Token: 0x0603A15B RID: 237915 RVA: 0x0105B23C File Offset: 0x0105943C
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private unsafe AActor GetSceneRefActor(int sceneActorRefEntityId, string pathName)
@@ -1542,47 +1542,47 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return aactor;
 		}
 
-		// Token: 0x04023895 RID: 145557
+		// Token: 0x0401EB37 RID: 125751
 		private const int LOCK_TARGET_CAMERA_PRIORITY = 100;
 
-		// Token: 0x04023896 RID: 145558
+		// Token: 0x0401EB38 RID: 125752
 		private const float IMMEDIATELY_FADE_CAMERA_TIME = 0.1f;
 
-		// Token: 0x04023897 RID: 145559
+		// Token: 0x0401EB39 RID: 125753
 		private static readonly int NoAimGameplayTag = GameplayTagDefine.EGameplayTagId["角色.Common.BUFF通用标识.禁止瞄准模式"];
 
-		// Token: 0x04023898 RID: 145560
+		// Token: 0x0401EB3A RID: 125754
 		private CameraConfig HookConfig;
 
-		// Token: 0x04023899 RID: 145561
+		// Token: 0x0401EB3B RID: 125755
 		[Nullable(1)]
 		private readonly CameraAberrationView CameraAberrationView = new CameraAberrationView();
 
-		// Token: 0x0402389A RID: 145562
+		// Token: 0x0401EB3C RID: 125756
 		[Nullable(1)]
 		private readonly SceneFixInputData SceneFixInputData = new SceneFixInputData();
 
-		// Token: 0x0402389B RID: 145563
+		// Token: 0x0401EB3D RID: 125757
 		[Nullable(1)]
 		private readonly SceneCameraFollowConfig FixedLookAtTargetConfig = new SceneCameraFollowConfig();
 
-		// Token: 0x0402389C RID: 145564
+		// Token: 0x0401EB3E RID: 125758
 		[Nullable(1)]
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x0402389D RID: 145565
+		// Token: 0x0401EB3F RID: 125759
 		private AdjustPlayerCamera Params;
 
-		// Token: 0x0402389E RID: 145566
+		// Token: 0x0401EB40 RID: 125760
 		private CameraModelInstance CameraModelInstance;
 
-		// Token: 0x0402389F RID: 145567
+		// Token: 0x0401EB41 RID: 125761
 		private TimerHandle ExitFixedTimeHandle;
 
-		// Token: 0x040238A0 RID: 145568
+		// Token: 0x0401EB42 RID: 125762
 		private TimerHandle ExitLookAtTimeHandle;
 
-		// Token: 0x040238A1 RID: 145569
+		// Token: 0x0401EB43 RID: 125763
 		private Ticker ExitCameraGuideTicker;
 	}
 }

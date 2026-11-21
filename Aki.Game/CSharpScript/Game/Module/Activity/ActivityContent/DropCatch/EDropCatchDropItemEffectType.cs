@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066AA RID: 26282
+	// Token: 0x020055FA RID: 22010
 	public enum EDropCatchDropItemEffectType
 	{
-		// Token: 0x040223EF RID: 140271
+		// Token: 0x0401CC48 RID: 117832
 		Positive,
-		// Token: 0x040223F0 RID: 140272
+		// Token: 0x0401CC49 RID: 117833
 		Negative
 	}
 }

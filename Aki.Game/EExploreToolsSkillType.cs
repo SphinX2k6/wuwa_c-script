@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002904 RID: 10500
+// Token: 0x02001E7F RID: 7807
 public enum EExploreToolsSkillType
 {
-	// Token: 0x0400A15B RID: 41307
+	// Token: 0x0400A546 RID: 42310
 	探索型 = 1,
-	// Token: 0x0400A15C RID: 41308
+	// Token: 0x0400A547 RID: 42311
 	被动型,
-	// Token: 0x0400A15D RID: 41309
+	// Token: 0x0400A548 RID: 42312
 	道具类型,
-	// Token: 0x0400A15E RID: 41310
+	// Token: 0x0400A549 RID: 42313
 	捕鱼航海,
-	// Token: 0x0400A15F RID: 41311
+	// Token: 0x0400A54A RID: 42314
 	塔防
 }

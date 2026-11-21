@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001436 RID: 5174
+// Token: 0x020008EA RID: 2282
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRegressAdventureView : ActivityRegressMainSubViewBase
 {
-	// Token: 0x0600922C RID: 37420 RVA: 0x001F3B7C File Offset: 0x001F1D7C
+	// Token: 0x060065C1 RID: 26049 RVA: 0x001FC6B8 File Offset: 0x001FA8B8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class ActivityRegressAdventureView : ActivityRegressMainSubViewBase
 		};
 	}
 
-	// Token: 0x0600922D RID: 37421 RVA: 0x001F3C30 File Offset: 0x001F1E30
+	// Token: 0x060065C2 RID: 26050 RVA: 0x001FC76C File Offset: 0x001FA96C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRegressAdventureView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -37,7 +37,7 @@ public class ActivityRegressAdventureView : ActivityRegressMainSubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600922E RID: 37422 RVA: 0x001F3C6C File Offset: 0x001F1E6C
+	// Token: 0x060065C3 RID: 26051 RVA: 0x001FC7A8 File Offset: 0x001FA9A8
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -47,7 +47,7 @@ public class ActivityRegressAdventureView : ActivityRegressMainSubViewBase
 		this.RefreshRolePanelState();
 	}
 
-	// Token: 0x0600922F RID: 37423 RVA: 0x001F3D08 File Offset: 0x001F1F08
+	// Token: 0x060065C4 RID: 26052 RVA: 0x001FC844 File Offset: 0x001FAA44
 	private void RefreshRolePanelState()
 	{
 		List<int> roleList = ActivityRegressModel.Instance.GetGachaPoolUpRole();
@@ -97,7 +97,7 @@ public class ActivityRegressAdventureView : ActivityRegressMainSubViewBase
 		}
 	}
 
-	// Token: 0x06009230 RID: 37424 RVA: 0x001F3DC2 File Offset: 0x001F1FC2
+	// Token: 0x060065C5 RID: 26053 RVA: 0x001FC8FE File Offset: 0x001FAAFE
 	private ActivityRegressAdventureRoleItem InitRoleItem()
 	{
 		return new ActivityRegressAdventureRoleItem
@@ -106,7 +106,7 @@ public class ActivityRegressAdventureView : ActivityRegressMainSubViewBase
 		};
 	}
 
-	// Token: 0x06009231 RID: 37425 RVA: 0x001F3DDB File Offset: 0x001F1FDB
+	// Token: 0x060065C6 RID: 26054 RVA: 0x001FC917 File Offset: 0x001FAB17
 	private ActivityRegressAdventureAdventureItem InitAdventureItem()
 	{
 		return new ActivityRegressAdventureAdventureItem
@@ -115,7 +115,7 @@ public class ActivityRegressAdventureView : ActivityRegressMainSubViewBase
 		};
 	}
 
-	// Token: 0x06009232 RID: 37426 RVA: 0x001F3DF4 File Offset: 0x001F1FF4
+	// Token: 0x060065C7 RID: 26055 RVA: 0x001FC930 File Offset: 0x001FAB30
 	private void OnClickRoleToggleCallBack(int roleId, UUIExtendToggle toggle)
 	{
 		this.RefreshRolePanelState();
@@ -161,14 +161,14 @@ public class ActivityRegressAdventureView : ActivityRegressMainSubViewBase
 		adventureLayout2.RefreshByData(list2, null, true);
 	}
 
-	// Token: 0x040040AB RID: 16555
+	// Token: 0x04004143 RID: 16707
 	private int CurrentSelectRoleId;
 
-	// Token: 0x040040AC RID: 16556
+	// Token: 0x04004144 RID: 16708
 	[Nullable(2)]
 	private UUIExtendToggle CurrentSelectToggle;
 
-	// Token: 0x040040AD RID: 16557
+	// Token: 0x04004145 RID: 16709
 	[Nullable(new byte[]
 	{
 		2,
@@ -176,7 +176,7 @@ public class ActivityRegressAdventureView : ActivityRegressMainSubViewBase
 	})]
 	private GenericLayout<ActivityRegressAdventureRoleItem, int> RoleLayout;
 
-	// Token: 0x040040AE RID: 16558
+	// Token: 0x04004146 RID: 16710
 	[Nullable(new byte[]
 	{
 		2,
@@ -184,7 +184,7 @@ public class ActivityRegressAdventureView : ActivityRegressMainSubViewBase
 	})]
 	private GenericLayout<ActivityRegressAdventureAdventureItem, int> AdventureLayout;
 
-	// Token: 0x040040AF RID: 16559
+	// Token: 0x04004147 RID: 16711
 	[Nullable(new byte[]
 	{
 		2,
@@ -192,29 +192,29 @@ public class ActivityRegressAdventureView : ActivityRegressMainSubViewBase
 	})]
 	private GenericLayout<ActivityRegressAdventureAdventureItem, int> AdventureLayout2;
 
-	// Token: 0x02007A66 RID: 31334
+	// Token: 0x02006BEA RID: 27626
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04028471 RID: 164977
+		// Token: 0x0402378B RID: 145291
 		public const int RoleLayout = 0;
 
-		// Token: 0x04028472 RID: 164978
+		// Token: 0x0402378C RID: 145292
 		public const int RoleItem = 1;
 
-		// Token: 0x04028473 RID: 164979
+		// Token: 0x0402378D RID: 145293
 		public const int AdventureItemLayout = 2;
 
-		// Token: 0x04028474 RID: 164980
+		// Token: 0x0402378E RID: 145294
 		public const int AdventureItem = 3;
 
-		// Token: 0x04028475 RID: 164981
+		// Token: 0x0402378F RID: 145295
 		public const int AdventureItemLayout2 = 4;
 
-		// Token: 0x04028476 RID: 164982
+		// Token: 0x04023790 RID: 145296
 		public const int RoleLayoutItem = 5;
 
-		// Token: 0x04028477 RID: 164983
+		// Token: 0x04023791 RID: 145297
 		public const int LockTipsItem = 6;
 	}
 }

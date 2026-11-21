@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200243F RID: 9279
+	// Token: 0x020026E0 RID: 9952
 	public static class ESunSpiritGearRoundTripTypeExtensions
 	{
-		// Token: 0x0600C99A RID: 51610 RVA: 0x001D8424 File Offset: 0x001D6624
+		// Token: 0x0600D64A RID: 54858 RVA: 0x001F22EC File Offset: 0x001F04EC
 		public static string ToEnumString(this ESunSpiritGearRoundTripType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C99B RID: 51611 RVA: 0x001D845C File Offset: 0x001D665C
+		// Token: 0x0600D64B RID: 54859 RVA: 0x001F2324 File Offset: 0x001F0524
 		public static ESunSpiritGearRoundTripType FromString(string name)
 		{
 			ESunSpiritGearRoundTripType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C99C RID: 51612 RVA: 0x001D8485 File Offset: 0x001D6685
+		// Token: 0x0600D64C RID: 54860 RVA: 0x001F234D File Offset: 0x001F054D
 		public static bool TryFromString(string name, out ESunSpiritGearRoundTripType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C99D RID: 51613 RVA: 0x001D84BE File Offset: 0x001D66BE
+		// Token: 0x0600D64D RID: 54861 RVA: 0x001F2386 File Offset: 0x001F0586
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C99E RID: 51614 RVA: 0x001D84D6 File Offset: 0x001D66D6
+		// Token: 0x0600D64E RID: 54862 RVA: 0x001F239E File Offset: 0x001F059E
 		public static ESunSpiritGearRoundTripType[] GetValues()
 		{
 			return new ESunSpiritGearRoundTripType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C99F RID: 51615 RVA: 0x001D84E2 File Offset: 0x001D66E2
+		// Token: 0x0600D64F RID: 54863 RVA: 0x001F23AA File Offset: 0x001F05AA
 		public static string[] GetNames()
 		{
 			return new string[]

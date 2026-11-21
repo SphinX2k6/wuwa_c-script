@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009B6 RID: 2486
+	// Token: 0x02000A6B RID: 2667
 	public static class ENpcStandbyShowFinitelyPlayModeExtensions
 	{
-		// Token: 0x06003764 RID: 14180 RVA: 0x00090098 File Offset: 0x0008E298
+		// Token: 0x06003AF4 RID: 15092 RVA: 0x000981D0 File Offset: 0x000963D0
 		public static string ToEnumString(this ENpcStandbyShowFinitelyPlayMode value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003765 RID: 14181 RVA: 0x000900D0 File Offset: 0x0008E2D0
+		// Token: 0x06003AF5 RID: 15093 RVA: 0x00098208 File Offset: 0x00096408
 		public static ENpcStandbyShowFinitelyPlayMode FromString(string name)
 		{
 			ENpcStandbyShowFinitelyPlayMode result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003766 RID: 14182 RVA: 0x000900F9 File Offset: 0x0008E2F9
+		// Token: 0x06003AF6 RID: 15094 RVA: 0x00098231 File Offset: 0x00096431
 		public static bool TryFromString(string name, out ENpcStandbyShowFinitelyPlayMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003767 RID: 14183 RVA: 0x00090132 File Offset: 0x0008E332
+		// Token: 0x06003AF7 RID: 15095 RVA: 0x0009826A File Offset: 0x0009646A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003768 RID: 14184 RVA: 0x0009014A File Offset: 0x0008E34A
+		// Token: 0x06003AF8 RID: 15096 RVA: 0x00098282 File Offset: 0x00096482
 		public static ENpcStandbyShowFinitelyPlayMode[] GetValues()
 		{
 			return new ENpcStandbyShowFinitelyPlayMode[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003769 RID: 14185 RVA: 0x00090156 File Offset: 0x0008E356
+		// Token: 0x06003AF9 RID: 15097 RVA: 0x0009828E File Offset: 0x0009648E
 		public static string[] GetNames()
 		{
 			return new string[]

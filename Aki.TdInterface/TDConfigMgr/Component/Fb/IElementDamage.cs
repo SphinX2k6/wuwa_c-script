@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B6A RID: 2922
+	// Token: 0x02000C38 RID: 3128
 	public class IElementDamage
 	{
-		// Token: 0x06004347 RID: 17223 RVA: 0x000AB856 File Offset: 0x000A9A56
-		[NullableContext(1)]
+		// Token: 0x060047A0 RID: 18336 RVA: 0x000B591A File Offset: 0x000B3B1A
 		public static IElementDamage Create(IElementDamage? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001230 RID: 4656
-		// (get) Token: 0x06004348 RID: 17224 RVA: 0x000AB875 File Offset: 0x000A9A75
+		// Token: 0x1700132B RID: 4907
+		// (get) Token: 0x060047A1 RID: 18337 RVA: 0x000B5939 File Offset: 0x000B3B39
 		public virtual int DefaultValue
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001231 RID: 4657
-		// (get) Token: 0x06004349 RID: 17225 RVA: 0x000AB884 File Offset: 0x000A9A84
+		// Token: 0x1700132C RID: 4908
+		// (get) Token: 0x060047A2 RID: 18338 RVA: 0x000B5948 File Offset: 0x000B3B48
 		public virtual int? Physics
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001232 RID: 4658
-		// (get) Token: 0x0600434A RID: 17226 RVA: 0x000AB8BC File Offset: 0x000A9ABC
+		// Token: 0x1700132D RID: 4909
+		// (get) Token: 0x060047A3 RID: 18339 RVA: 0x000B5980 File Offset: 0x000B3B80
 		public virtual int? Ice
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001233 RID: 4659
-		// (get) Token: 0x0600434B RID: 17227 RVA: 0x000AB8F4 File Offset: 0x000A9AF4
+		// Token: 0x1700132E RID: 4910
+		// (get) Token: 0x060047A4 RID: 18340 RVA: 0x000B59B8 File Offset: 0x000B3BB8
 		public virtual int? Fire
 		{
 			get
@@ -73,8 +71,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001234 RID: 4660
-		// (get) Token: 0x0600434C RID: 17228 RVA: 0x000AB92C File Offset: 0x000A9B2C
+		// Token: 0x1700132F RID: 4911
+		// (get) Token: 0x060047A5 RID: 18341 RVA: 0x000B59F0 File Offset: 0x000B3BF0
 		public virtual int? Thunder
 		{
 			get
@@ -87,8 +85,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001235 RID: 4661
-		// (get) Token: 0x0600434D RID: 17229 RVA: 0x000AB964 File Offset: 0x000A9B64
+		// Token: 0x17001330 RID: 4912
+		// (get) Token: 0x060047A6 RID: 18342 RVA: 0x000B5A28 File Offset: 0x000B3C28
 		public virtual int? Wind
 		{
 			get
@@ -101,8 +99,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001236 RID: 4662
-		// (get) Token: 0x0600434E RID: 17230 RVA: 0x000AB99C File Offset: 0x000A9B9C
+		// Token: 0x17001331 RID: 4913
+		// (get) Token: 0x060047A7 RID: 18343 RVA: 0x000B5A60 File Offset: 0x000B3C60
 		public virtual int? Light
 		{
 			get
@@ -115,8 +113,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001237 RID: 4663
-		// (get) Token: 0x0600434F RID: 17231 RVA: 0x000AB9D4 File Offset: 0x000A9BD4
+		// Token: 0x17001332 RID: 4914
+		// (get) Token: 0x060047A8 RID: 18344 RVA: 0x000B5A98 File Offset: 0x000B3C98
 		public virtual int? Dark
 		{
 			get
@@ -129,7 +127,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040025F7 RID: 9719
+		// Token: 0x0400283F RID: 10303
 		private IElementDamage Instance;
 	}
 }

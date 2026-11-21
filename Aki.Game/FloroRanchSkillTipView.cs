@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001B77 RID: 7031
+// Token: 0x02001036 RID: 4150
 public class FloroRanchSkillTipView : UiViewBase
 {
-	// Token: 0x0600D13A RID: 53562 RVA: 0x002FE944 File Offset: 0x002FCB44
+	// Token: 0x0600A54B RID: 42315 RVA: 0x00309A1C File Offset: 0x00307C1C
 	[NullableContext(1)]
 	public FloroRanchSkillTipView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D13B RID: 53563 RVA: 0x002FE950 File Offset: 0x002FCB50
+	// Token: 0x0600A54C RID: 42316 RVA: 0x00309A28 File Offset: 0x00307C28
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -55,7 +55,7 @@ public class FloroRanchSkillTipView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D13C RID: 53564 RVA: 0x002FEB48 File Offset: 0x002FCD48
+	// Token: 0x0600A54D RID: 42317 RVA: 0x00309C20 File Offset: 0x00307E20
 	protected override void OnStart()
 	{
 		TermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -68,7 +68,7 @@ public class FloroRanchSkillTipView : UiViewBase
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x0600D13D RID: 53565 RVA: 0x002FEB90 File Offset: 0x002FCD90
+	// Token: 0x0600A54E RID: 42318 RVA: 0x00309C68 File Offset: 0x00307E68
 	protected override void OnBeforeShow()
 	{
 		this.SkillEntity = (this.OpenParam as FloroRanchEntityBase);
@@ -87,13 +87,13 @@ public class FloroRanchSkillTipView : UiViewBase
 		base.GetButton(10).RootUIComp.Get().SetUIActive(floroRanchRoleSkillDataComponent.CanUseSkill());
 	}
 
-	// Token: 0x0600D13E RID: 53566 RVA: 0x002FECCC File Offset: 0x002FCECC
+	// Token: 0x0600A54F RID: 42319 RVA: 0x00309DA4 File Offset: 0x00307FA4
 	protected override void OnBeforeDestroy()
 	{
 		TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(5));
 	}
 
-	// Token: 0x0600D13F RID: 53567 RVA: 0x002FECE0 File Offset: 0x002FCEE0
+	// Token: 0x0600A550 RID: 42320 RVA: 0x00309DB8 File Offset: 0x00307FB8
 	private void OnUseButtonClick()
 	{
 		if (!FloroRanchGamePlayModel.Instance.CanFsmInsertSkillTask())
@@ -106,13 +106,13 @@ public class FloroRanchSkillTipView : UiViewBase
 		FloroRanchController.Instance.SendFloroRanchExecuteSkillPlayRequest(activityId, subInstanceId, new Action<bool>(this.OnUseSkillFinish));
 	}
 
-	// Token: 0x0600D140 RID: 53568 RVA: 0x002FED3C File Offset: 0x002FCF3C
+	// Token: 0x0600A551 RID: 42321 RVA: 0x00309E14 File Offset: 0x00308014
 	private void OnCloseButtonClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600D141 RID: 53569 RVA: 0x002FED48 File Offset: 0x002FCF48
+	// Token: 0x0600A552 RID: 42322 RVA: 0x00309E20 File Offset: 0x00308020
 	private void OnUseSkillFinish(bool isSuccess)
 	{
 		if (!isSuccess)
@@ -131,44 +131,44 @@ public class FloroRanchSkillTipView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04006005 RID: 24581
+	// Token: 0x040060D4 RID: 24788
 	[Nullable(2)]
 	private FloroRanchEntityBase SkillEntity;
 
-	// Token: 0x020080F8 RID: 33016
+	// Token: 0x02007286 RID: 29318
 	private class EComponent
 	{
-		// Token: 0x0402A155 RID: 172373
+		// Token: 0x04025489 RID: 152713
 		public const int CloseButton = 0;
 
-		// Token: 0x0402A156 RID: 172374
+		// Token: 0x0402548A RID: 152714
 		public const int SkillIcon = 1;
 
-		// Token: 0x0402A157 RID: 172375
+		// Token: 0x0402548B RID: 152715
 		public const int SkillName = 2;
 
-		// Token: 0x0402A158 RID: 172376
+		// Token: 0x0402548C RID: 152716
 		public const int SkillTagSprite = 3;
 
-		// Token: 0x0402A159 RID: 172377
+		// Token: 0x0402548D RID: 152717
 		public const int SkillTagText = 4;
 
-		// Token: 0x0402A15A RID: 172378
+		// Token: 0x0402548E RID: 152718
 		public const int SkillDesc = 5;
 
-		// Token: 0x0402A15B RID: 172379
+		// Token: 0x0402548F RID: 152719
 		public const int RootItem = 6;
 
-		// Token: 0x0402A15C RID: 172380
+		// Token: 0x04025490 RID: 152720
 		public const int UseCountItem = 7;
 
-		// Token: 0x0402A15D RID: 172381
+		// Token: 0x04025491 RID: 152721
 		public const int UseTimeCount = 8;
 
-		// Token: 0x0402A15E RID: 172382
+		// Token: 0x04025492 RID: 152722
 		public const int DepletedItem = 9;
 
-		// Token: 0x0402A15F RID: 172383
+		// Token: 0x04025493 RID: 152723
 		public const int UseButton = 10;
 	}
 }

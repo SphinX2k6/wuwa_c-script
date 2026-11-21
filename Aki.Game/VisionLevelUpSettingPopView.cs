@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020024CE RID: 9422
+// Token: 0x020019B5 RID: 6581
 public class VisionLevelUpSettingPopView : UiViewBase
 {
-	// Token: 0x06012EED RID: 77549 RVA: 0x004AEE65 File Offset: 0x004AD065
+	// Token: 0x060103AC RID: 66476 RVA: 0x004BCA65 File Offset: 0x004BAC65
 	[NullableContext(1)]
 	public VisionLevelUpSettingPopView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06012EEE RID: 77550 RVA: 0x004AEE70 File Offset: 0x004AD070
+	// Token: 0x060103AD RID: 66477 RVA: 0x004BCA70 File Offset: 0x004BAC70
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,56 +40,56 @@ public class VisionLevelUpSettingPopView : UiViewBase
 		};
 	}
 
-	// Token: 0x06012EEF RID: 77551 RVA: 0x004AF003 File Offset: 0x004AD203
+	// Token: 0x060103AE RID: 66478 RVA: 0x004BCC03 File Offset: 0x004BAE03
 	private void OnDisableIdentifyToggleClick(EToggleState toggleState)
 	{
 		this.SetIdentify(EVisionLevelUpIdentify.DisableIdentify);
 	}
 
-	// Token: 0x06012EF0 RID: 77552 RVA: 0x004AF00C File Offset: 0x004AD20C
+	// Token: 0x060103AF RID: 66479 RVA: 0x004BCC0C File Offset: 0x004BAE0C
 	private void OnEnableIdentifyToggleClick(EToggleState toggleState)
 	{
 		this.SetIdentify(EVisionLevelUpIdentify.EnableIdentify);
 	}
 
-	// Token: 0x06012EF1 RID: 77553 RVA: 0x004AF015 File Offset: 0x004AD215
+	// Token: 0x060103B0 RID: 66480 RVA: 0x004BCC15 File Offset: 0x004BAE15
 	private void OnAllInModeToggleClick(EToggleState toggleState)
 	{
 		this.SetPutInMode(EVisionLevelUpMaterialPutInMode.AllIn);
 	}
 
-	// Token: 0x06012EF2 RID: 77554 RVA: 0x004AF01E File Offset: 0x004AD21E
+	// Token: 0x060103B1 RID: 66481 RVA: 0x004BCC1E File Offset: 0x004BAE1E
 	private void OnStepInModeToggleClick(EToggleState toggleState)
 	{
 		this.SetPutInMode(EVisionLevelUpMaterialPutInMode.StepIn);
 	}
 
-	// Token: 0x06012EF3 RID: 77555 RVA: 0x004AF027 File Offset: 0x004AD227
+	// Token: 0x060103B2 RID: 66482 RVA: 0x004BCC27 File Offset: 0x004BAE27
 	private void OnOnlyLevelUpMaterialToggleClick(EToggleState toggleState)
 	{
 		this.SetUseType(EVisionLevelUpMaterialUseType.OnlyLevelUpMaterial);
 	}
 
-	// Token: 0x06012EF4 RID: 77556 RVA: 0x004AF030 File Offset: 0x004AD230
+	// Token: 0x060103B3 RID: 66483 RVA: 0x004BCC30 File Offset: 0x004BAE30
 	private void OnBothLevelUpMaterialAndVisionToggleClick(EToggleState toggleState)
 	{
 		this.SetUseType(EVisionLevelUpMaterialUseType.BothLevelUpMaterialAndVision);
 	}
 
-	// Token: 0x06012EF5 RID: 77557 RVA: 0x004AF039 File Offset: 0x004AD239
+	// Token: 0x060103B4 RID: 66484 RVA: 0x004BCC39 File Offset: 0x004BAE39
 	private void OnCancelButtonClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06012EF6 RID: 77558 RVA: 0x004AF042 File Offset: 0x004AD242
+	// Token: 0x060103B5 RID: 66485 RVA: 0x004BCC42 File Offset: 0x004BAE42
 	private void OnConfirmButtonClick()
 	{
 		this.SaveSetting();
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06012EF7 RID: 77559 RVA: 0x004AF054 File Offset: 0x004AD254
+	// Token: 0x060103B6 RID: 66486 RVA: 0x004BCC54 File Offset: 0x004BAE54
 	protected override void OnStart()
 	{
 		PhantomBattleModel instance = PhantomBattleModel.Instance;
@@ -99,7 +99,7 @@ public class VisionLevelUpSettingPopView : UiViewBase
 		this.Refresh();
 	}
 
-	// Token: 0x06012EF8 RID: 77560 RVA: 0x004AF091 File Offset: 0x004AD291
+	// Token: 0x060103B7 RID: 66487 RVA: 0x004BCC91 File Offset: 0x004BAE91
 	public void Refresh()
 	{
 		this.RefreshPutInModeToggle();
@@ -107,7 +107,7 @@ public class VisionLevelUpSettingPopView : UiViewBase
 		this.RefreshIdentifyToggle();
 	}
 
-	// Token: 0x06012EF9 RID: 77561 RVA: 0x004AF0A8 File Offset: 0x004AD2A8
+	// Token: 0x060103B8 RID: 66488 RVA: 0x004BCCA8 File Offset: 0x004BAEA8
 	public void RefreshUseTypeToggle()
 	{
 		EToggleState? etoggleState = null;
@@ -135,7 +135,7 @@ public class VisionLevelUpSettingPopView : UiViewBase
 		extendToggle2.SetToggleState(etoggleState2.Value, false, false, false);
 	}
 
-	// Token: 0x06012EFA RID: 77562 RVA: 0x004AF128 File Offset: 0x004AD328
+	// Token: 0x060103B9 RID: 66489 RVA: 0x004BCD28 File Offset: 0x004BAF28
 	public void RefreshPutInModeToggle()
 	{
 		EToggleState? etoggleState = null;
@@ -163,7 +163,7 @@ public class VisionLevelUpSettingPopView : UiViewBase
 		extendToggle2.SetToggleState(etoggleState2.Value, false, false, false);
 	}
 
-	// Token: 0x06012EFB RID: 77563 RVA: 0x004AF1A8 File Offset: 0x004AD3A8
+	// Token: 0x060103BA RID: 66490 RVA: 0x004BCDA8 File Offset: 0x004BAFA8
 	public void RefreshIdentifyToggle()
 	{
 		EToggleState? etoggleState = null;
@@ -191,28 +191,28 @@ public class VisionLevelUpSettingPopView : UiViewBase
 		extendToggle2.SetToggleState(etoggleState2.Value, false, false, false);
 	}
 
-	// Token: 0x06012EFC RID: 77564 RVA: 0x004AF228 File Offset: 0x004AD428
+	// Token: 0x060103BB RID: 66491 RVA: 0x004BCE28 File Offset: 0x004BB028
 	protected void SetPutInMode(EVisionLevelUpMaterialPutInMode mode)
 	{
 		this.PutInMode = mode;
 		this.RefreshPutInModeToggle();
 	}
 
-	// Token: 0x06012EFD RID: 77565 RVA: 0x004AF237 File Offset: 0x004AD437
+	// Token: 0x060103BC RID: 66492 RVA: 0x004BCE37 File Offset: 0x004BB037
 	protected void SetUseType(EVisionLevelUpMaterialUseType useType)
 	{
 		this.UseType = useType;
 		this.RefreshUseTypeToggle();
 	}
 
-	// Token: 0x06012EFE RID: 77566 RVA: 0x004AF246 File Offset: 0x004AD446
+	// Token: 0x060103BD RID: 66493 RVA: 0x004BCE46 File Offset: 0x004BB046
 	protected void SetIdentify(EVisionLevelUpIdentify identify)
 	{
 		this.Identify = identify;
 		this.RefreshIdentifyToggle();
 	}
 
-	// Token: 0x06012EFF RID: 77567 RVA: 0x004AF255 File Offset: 0x004AD455
+	// Token: 0x060103BE RID: 66494 RVA: 0x004BCE55 File Offset: 0x004BB055
 	protected void SaveSetting()
 	{
 		PhantomBattleModel instance = PhantomBattleModel.Instance;
@@ -221,33 +221,33 @@ public class VisionLevelUpSettingPopView : UiViewBase
 		instance.SetVisionLevelUpIdentify(this.Identify);
 	}
 
-	// Token: 0x04008EA2 RID: 36514
+	// Token: 0x04008FEC RID: 36844
 	private EVisionLevelUpMaterialPutInMode PutInMode;
 
-	// Token: 0x04008EA3 RID: 36515
+	// Token: 0x04008FED RID: 36845
 	private EVisionLevelUpMaterialUseType UseType;
 
-	// Token: 0x04008EA4 RID: 36516
+	// Token: 0x04008FEE RID: 36846
 	private EVisionLevelUpIdentify Identify;
 
-	// Token: 0x02008A59 RID: 35417
+	// Token: 0x02007BE2 RID: 31714
 	private enum EComponent
 	{
-		// Token: 0x0402CEBD RID: 183997
+		// Token: 0x040281DB RID: 164315
 		AllInModeToggle,
-		// Token: 0x0402CEBE RID: 183998
+		// Token: 0x040281DC RID: 164316
 		StepInModeToggle,
-		// Token: 0x0402CEBF RID: 183999
+		// Token: 0x040281DD RID: 164317
 		OnlyLevelUpMaterialToggle,
-		// Token: 0x0402CEC0 RID: 184000
+		// Token: 0x040281DE RID: 164318
 		BothLevelUpMaterialAndVisionToggle,
-		// Token: 0x0402CEC1 RID: 184001
+		// Token: 0x040281DF RID: 164319
 		CancelButton,
-		// Token: 0x0402CEC2 RID: 184002
+		// Token: 0x040281E0 RID: 164320
 		ConfirmButton,
-		// Token: 0x0402CEC3 RID: 184003
+		// Token: 0x040281E1 RID: 164321
 		DisableIdentifyToggle,
-		// Token: 0x0402CEC4 RID: 184004
+		// Token: 0x040281E2 RID: 164322
 		EnableIdentifyToggle
 	}
 }

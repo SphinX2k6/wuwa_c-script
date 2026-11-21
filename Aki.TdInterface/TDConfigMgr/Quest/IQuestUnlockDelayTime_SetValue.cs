@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010CD RID: 4301
+	// Token: 0x020011FB RID: 4603
 	public class IQuestUnlockDelayTime_SetValue
 	{
-		// Token: 0x04003A78 RID: 14968
+		// Token: 0x04003DC5 RID: 15813
 		public int Day;
 
-		// Token: 0x04003A79 RID: 14969
+		// Token: 0x04003DC6 RID: 15814
 		public int Hour;
 
-		// Token: 0x04003A7A RID: 14970
+		// Token: 0x04003DC7 RID: 15815
 		public int Minute;
 	}
 }

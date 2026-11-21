@@ -5,22 +5,22 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 {
-	// Token: 0x02005F83 RID: 24451
+	// Token: 0x02004F6A RID: 20330
 	public class ActivityUniversalData : ActivityBaseData
 	{
-		// Token: 0x0603E0DA RID: 254170 RVA: 0x00EFB52F File Offset: 0x00EF972F
+		// Token: 0x06033074 RID: 209012 RVA: 0x00E4D1FF File Offset: 0x00E4B3FF
 		[NullableContext(1)]
 		protected override void PhraseEx(ActivityData data)
 		{
 		}
 
-		// Token: 0x0603E0DB RID: 254171 RVA: 0x00EFB531 File Offset: 0x00EF9731
+		// Token: 0x06033075 RID: 209013 RVA: 0x00E4D201 File Offset: 0x00E4B401
 		public override bool NeedSelfControlFirstRedPoint()
 		{
 			return false;
 		}
 
-		// Token: 0x0603E0DC RID: 254172 RVA: 0x00EFB534 File Offset: 0x00EF9734
+		// Token: 0x06033076 RID: 209014 RVA: 0x00E4D204 File Offset: 0x00E4B404
 		public UniversalActivity? GetExtraConfig()
 		{
 			return ActivityUniversalConfig.Instance.GetActivityUniversalConfig(base.Id);

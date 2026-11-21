@@ -4,13 +4,13 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020021FD RID: 8701
+// Token: 0x020016E1 RID: 5857
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class MarqueeController : UiControllerBase
 {
-	// Token: 0x06010EBA RID: 69306 RVA: 0x0041DDC8 File Offset: 0x0041BFC8
+	// Token: 0x0600E34D RID: 58189 RVA: 0x0042A76C File Offset: 0x0042896C
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.LocalStorageInitPlayerId, new Action(this.InitScrollingTimeMap));
@@ -18,7 +18,7 @@ public class MarqueeController : UiControllerBase
 		EventSystem.Instance.Add(EEventName.BeforeLoadMap, new Action(this.CancelCurrentTimer));
 	}
 
-	// Token: 0x06010EBB RID: 69307 RVA: 0x0041DE2C File Offset: 0x0041C02C
+	// Token: 0x0600E34E RID: 58190 RVA: 0x0042A7D0 File Offset: 0x004289D0
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.LocalStorageInitPlayerId, new Action(this.InitScrollingTimeMap));
@@ -26,13 +26,13 @@ public class MarqueeController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.BeforeLoadMap, new Action(this.CancelCurrentTimer));
 	}
 
-	// Token: 0x06010EBC RID: 69308 RVA: 0x0041DE8D File Offset: 0x0041C08D
+	// Token: 0x0600E34F RID: 58191 RVA: 0x0042A831 File Offset: 0x00428A31
 	private void InitScrollingTimeMap()
 	{
 		MarqueeModel.Instance.InitMarqueeStorageDataMap();
 	}
 
-	// Token: 0x06010EBD RID: 69309 RVA: 0x0041DE99 File Offset: 0x0041C099
+	// Token: 0x0600E350 RID: 58192 RVA: 0x0042A83D File Offset: 0x00428A3D
 	private void CancelCurrentTimer()
 	{
 		if (MarqueeModel.Instance.TimerId != null)
@@ -42,7 +42,7 @@ public class MarqueeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010EBE RID: 69310 RVA: 0x0041DEC8 File Offset: 0x0041C0C8
+	// Token: 0x0600E351 RID: 58193 RVA: 0x0042A86C File Offset: 0x00428A6C
 	private void LaunchMarquee()
 	{
 		if (!LoginModel.Instance.IsLoginStatus(LoginDefine.ELoginStatus.EnterGameRet))
@@ -56,7 +56,7 @@ public class MarqueeController : UiControllerBase
 		MarqueeModel.Instance.TimerId = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.GetMarqueeFromUrl), (float)((int)(TimeUtil.Instance.Minute * (double)TimeUtil.Instance.InverseMillisecond - new Random().NextDouble() * 5.0 * (double)TimeUtil.Instance.InverseMillisecond)), 1f, null, null, true);
 	}
 
-	// Token: 0x06010EBF RID: 69311 RVA: 0x0041DF54 File Offset: 0x0041C154
+	// Token: 0x0600E352 RID: 58194 RVA: 0x0042A8F8 File Offset: 0x00428AF8
 	private void GetMarqueeFromUrl(float delta)
 	{
 		string currentLoginServerId = LoginServerModel.Instance.GetCurrentLoginServerId();
@@ -77,7 +77,7 @@ public class MarqueeController : UiControllerBase
 		}, null);
 	}
 
-	// Token: 0x06010EC0 RID: 69312 RVA: 0x0041DFBC File Offset: 0x0041C1BC
+	// Token: 0x0600E353 RID: 58195 RVA: 0x0042A960 File Offset: 0x00428B60
 	public void TestMarquee(string id)
 	{
 		string text = "[{\"contents\":[{\"language\":\"zh-Hans\",\"content\":\"10047跑马灯已上架\"},{\"language\":\"en\",\"content\":\"10047跑马灯已上架\"},{\"language\":\"ja\",\"content\":\"\"},{\"language\":\"ko\",\"content\":\"\"},{\"language\":\"ru\",\"content\":\"\"},{\"language\":\"zh-Hant\",\"content\":\"\"},{\"language\":\"de\",\"content\":\"\"},{\"language\":\"es\",\"content\":\"\"},{\"language\":\"pt\",\"content\":\"\"},{\"language\":\"id\",\"content\":\"\"},{\"language\":\"fr\",\"content\":\"\"},{\"language\":\"vi\",\"content\":\"\"},{\"language\":\"th\",\"content\":\"\"}],\"id\":10048,\"startTimeMs\":1698313421000,\"endTimeMs\":1703148916000,\"timeInterval\":0,\"times\":999,\"platform\":[1,2,3],\"channel\":[\"0\",\"18\"]},{\"contents\":[{\"language\":\"zh-Hans\",\"content\":\"第二条跑马灯5444545454545445454545454\"},{\"language\":\"en\",\"content\":\"en 第二条跑马灯\"},{\"language\":\"ja\",\"content\":\"\"},{\"language\":\"ko\",\"content\":\"\"},{\"language\":\"ru\",\"content\":\"\"},{\"language\":\"zh-Hant\",\"content\":\"\"},{\"language\":\"de\",\"content\":\"\"},{\"language\":\"es\",\"content\":\"\"},{\"language\":\"pt\",\"content\":\"\"},{\"language\":\"id\",\"content\":\"\"},{\"language\":\"fr\",\"content\":\"\"},{\"language\":\"vi\",\"content\":\"\"},{\"language\":\"th\",\"content\":\"\"}],\"id\":{0},\"startTimeMs\":1701846026000,\"endTimeMs\":1708142026000,\"timeInterval\":10,\"times\":2,\"platform\":[1,3],\"channel\":[]}]";
@@ -86,7 +86,7 @@ public class MarqueeController : UiControllerBase
 		this.CloseMarqueeView(true);
 	}
 
-	// Token: 0x06010EC1 RID: 69313 RVA: 0x0041DFF0 File Offset: 0x0041C1F0
+	// Token: 0x0600E354 RID: 58196 RVA: 0x0042A994 File Offset: 0x00428B94
 	private void HandleHttpData(int code, string data)
 	{
 		MarqueeModel instance = MarqueeModel.Instance;
@@ -117,7 +117,7 @@ public class MarqueeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010EC2 RID: 69314 RVA: 0x0041E095 File Offset: 0x0041C295
+	// Token: 0x0600E355 RID: 58197 RVA: 0x0042AA39 File Offset: 0x00428C39
 	public void AddClientMarqueeData(MarqueeData data)
 	{
 		if (!data.IsClientMarquee)
@@ -128,7 +128,7 @@ public class MarqueeController : UiControllerBase
 		this.CheckMarquee();
 	}
 
-	// Token: 0x06010EC3 RID: 69315 RVA: 0x0041E0B1 File Offset: 0x0041C2B1
+	// Token: 0x0600E356 RID: 58198 RVA: 0x0042AA55 File Offset: 0x00428C55
 	private void RemoveServerMarqueeData()
 	{
 		if (UiManager.Instance.IsViewShow(EUiViewName.MarqueeView))
@@ -138,7 +138,7 @@ public class MarqueeController : UiControllerBase
 		MarqueeModel.Instance.RemoveServerMarqueeData();
 	}
 
-	// Token: 0x06010EC4 RID: 69316 RVA: 0x0041E0E0 File Offset: 0x0041C2E0
+	// Token: 0x0600E357 RID: 58199 RVA: 0x0042AA84 File Offset: 0x00428C84
 	public void CloseMarqueeView(bool checkMarquee = true)
 	{
 		MarqueeData curMarquee = MarqueeModel.Instance.CurMarquee;
@@ -171,7 +171,7 @@ public class MarqueeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010EC5 RID: 69317 RVA: 0x0041E1B8 File Offset: 0x0041C3B8
+	// Token: 0x0600E358 RID: 58200 RVA: 0x0042AB5C File Offset: 0x00428D5C
 	private unsafe void CheckMarquee()
 	{
 		if (UiManager.Instance.IsViewShow(EUiViewName.MarqueeView) || UiManager.Instance.IsViewOpen(EUiViewName.MarqueeView))
@@ -201,7 +201,7 @@ public class MarqueeController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.MarqueeView, null, null);
 	}
 
-	// Token: 0x06010EC6 RID: 69318 RVA: 0x0041E2C0 File Offset: 0x0041C4C0
+	// Token: 0x0600E359 RID: 58201 RVA: 0x0042AC64 File Offset: 0x00428E64
 	[NullableContext(2)]
 	public bool CheckCurMarqueeValid(MarqueeData marqueeData)
 	{
@@ -214,8 +214,8 @@ public class MarqueeController : UiControllerBase
 		return serverTime <= marqueeData.EndTime && serverTime >= marqueeData.BeginTime && scrollingTime < marqueeData.ScrollTimes;
 	}
 
-	// Token: 0x1700157E RID: 5502
-	// (get) Token: 0x06010EC7 RID: 69319 RVA: 0x0041E307 File Offset: 0x0041C507
+	// Token: 0x170015B5 RID: 5557
+	// (get) Token: 0x0600E35A RID: 58202 RVA: 0x0042ACAB File Offset: 0x00428EAB
 	public static MarqueeController Instance
 	{
 		get
@@ -224,7 +224,7 @@ public class MarqueeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010EC8 RID: 69320 RVA: 0x0041E30E File Offset: 0x0041C50E
+	// Token: 0x0600E35B RID: 58203 RVA: 0x0042ACB2 File Offset: 0x00428EB2
 	public static MarqueeController GetOrCreateInstance()
 	{
 		if (MarqueeController._Instance == null)
@@ -234,7 +234,7 @@ public class MarqueeController : UiControllerBase
 		return MarqueeController._Instance;
 	}
 
-	// Token: 0x06010EC9 RID: 69321 RVA: 0x0041E322 File Offset: 0x0041C522
+	// Token: 0x0600E35C RID: 58204 RVA: 0x0042ACC6 File Offset: 0x00428EC6
 	public static bool CreateInstance()
 	{
 		if (MarqueeController._Instance != null)
@@ -245,27 +245,27 @@ public class MarqueeController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010ECA RID: 69322 RVA: 0x0041E338 File Offset: 0x0041C538
+	// Token: 0x0600E35D RID: 58205 RVA: 0x0042ACDC File Offset: 0x00428EDC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010ECB RID: 69323 RVA: 0x0041E33A File Offset: 0x0041C53A
+	// Token: 0x0600E35E RID: 58206 RVA: 0x0042ACDE File Offset: 0x00428EDE
 	public static void ResetStaticDefaultValue()
 	{
 		MarqueeController._Instance = null;
 	}
 
-	// Token: 0x06010ECC RID: 69324 RVA: 0x0041E342 File Offset: 0x0041C542
+	// Token: 0x0600E35F RID: 58207 RVA: 0x0042ACE6 File Offset: 0x00428EE6
 	static MarqueeController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MarqueeController.CreateStaticDefaultValue), new Action(MarqueeController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400809B RID: 32923
+	// Token: 0x040081D9 RID: 33241
 	private const int INTERVAL_OFFSET = 5;
 
-	// Token: 0x0400809C RID: 32924
+	// Token: 0x040081DA RID: 33242
 	[Nullable(2)]
 	private static MarqueeController _Instance;
 }

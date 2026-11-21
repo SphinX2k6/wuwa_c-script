@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02003521 RID: 13601
+// Token: 0x02002A96 RID: 10902
 public enum EDisableHLODStreamingType
 {
-	// Token: 0x0400EA4F RID: 59983
+	// Token: 0x0400EF0C RID: 61196
 	GM,
-	// Token: 0x0400EA50 RID: 59984
+	// Token: 0x0400EF0D RID: 61197
 	ChildQuest,
-	// Token: 0x0400EA51 RID: 59985
+	// Token: 0x0400EF0E RID: 61198
 	LowMemoryInit
 }

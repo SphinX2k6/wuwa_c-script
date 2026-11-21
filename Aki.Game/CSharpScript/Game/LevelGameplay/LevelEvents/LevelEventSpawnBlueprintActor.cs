@@ -7,23 +7,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B86 RID: 27526
+	// Token: 0x02005CFE RID: 23806
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventSpawnBlueprintActor : LevelEventBase
 	{
-		// Token: 0x06044276 RID: 279158 RVA: 0x010CAD1D File Offset: 0x010C8F1D
+		// Token: 0x0603A3C8 RID: 238536 RVA: 0x010749B5 File Offset: 0x01072BB5
 		public LevelEventSpawnBlueprintActor(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044277 RID: 279159 RVA: 0x010CAD26 File Offset: 0x010C8F26
+		// Token: 0x0603A3C9 RID: 238537 RVA: 0x010749BE File Offset: 0x01072BBE
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			LevelEventSpawnBlueprintActor.ExecuteNewManually(inParams, context);
 		}
 
-		// Token: 0x06044278 RID: 279160 RVA: 0x010CAD30 File Offset: 0x010C8F30
+		// Token: 0x0603A3CA RID: 238538 RVA: 0x010749C8 File Offset: 0x01072BC8
 		public unsafe static void ExecuteNewManually(ActionParams inParams, [Nullable(2)] GeneralContext context = null)
 		{
 			ActionSpawnBlueprintActor actionSpawnBlueprintActor = inParams as ActionSpawnBlueprintActor;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044279 RID: 279161 RVA: 0x010CADBC File Offset: 0x010C8FBC
+		// Token: 0x0603A3CB RID: 238539 RVA: 0x01074A54 File Offset: 0x01072C54
 		private static UniTask LoadTypeAsync(EBpTypeName name)
 		{
 			LevelEventSpawnBlueprintActor.<LoadTypeAsync>d__3 <LoadTypeAsync>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <LoadTypeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604427A RID: 279162 RVA: 0x010CAE00 File Offset: 0x010C9000
+		// Token: 0x0603A3CC RID: 238540 RVA: 0x01074A98 File Offset: 0x01072C98
 		private static void ApplyRotateParam([Nullable(2)] UKuroFauxPhysicsRotateComponentBase baseRotateComponent, IFauxPhysicsRotateParam rotateParam)
 		{
 			if (baseRotateComponent != null && baseRotateComponent.IsValid())
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604427B RID: 279163 RVA: 0x010CAF30 File Offset: 0x010C9130
+		// Token: 0x0603A3CD RID: 238541 RVA: 0x01074BC8 File Offset: 0x01072DC8
 		private static UniTask SpawnDestructibleStoneTrackTargetWhileRotate(ISpawnDestructibleStoneTrackTargetWhileRotate inParams)
 		{
 			LevelEventSpawnBlueprintActor.<SpawnDestructibleStoneTrackTargetWhileRotate>d__5 <SpawnDestructibleStoneTrackTargetWhileRotate>d__;

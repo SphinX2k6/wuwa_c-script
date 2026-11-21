@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FC1 RID: 8129
+	// Token: 0x02002206 RID: 8710
 	public class ITimeLimitOptionGroup_SetValue
 	{
-		// Token: 0x04006BFA RID: 27642
-		[Nullable(1)]
+		// Token: 0x040071F9 RID: 29177
 		public ITimeLimitOptionGroupDefault Style;
 	}
 }

@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006722 RID: 26402
+	// Token: 0x02005672 RID: 22130
 	public class ModifyRoleSpeedCommand : IDropCatchCommand
 	{
-		// Token: 0x06041EA2 RID: 269986 RVA: 0x00FFCBF4 File Offset: 0x00FFADF4
+		// Token: 0x060369EE RID: 223726 RVA: 0x00F3DFC0 File Offset: 0x00F3C1C0
 		[NullableContext(1)]
 		public void Execute(ICommandContext context, [Nullable(2)] object @params)
 		{

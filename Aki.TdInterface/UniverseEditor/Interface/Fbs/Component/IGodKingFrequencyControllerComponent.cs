@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052F7 RID: 21239
+	// Token: 0x0200587A RID: 22650
 	public struct IGodKingFrequencyControllerComponent : IFlatbufferObject
 	{
-		// Token: 0x17009BE6 RID: 39910
-		// (get) Token: 0x06022ADA RID: 142042 RVA: 0x004CE65C File Offset: 0x004CC85C
+		// Token: 0x1700A417 RID: 42007
+		// (get) Token: 0x06024B74 RID: 150388 RVA: 0x0050B188 File Offset: 0x00509388
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022ADB RID: 142043 RVA: 0x004CE669 File Offset: 0x004CC869
+		// Token: 0x06024B75 RID: 150389 RVA: 0x0050B195 File Offset: 0x00509395
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022ADC RID: 142044 RVA: 0x004CE670 File Offset: 0x004CC870
+		// Token: 0x06024B76 RID: 150390 RVA: 0x0050B19C File Offset: 0x0050939C
 		public static IGodKingFrequencyControllerComponent GetRootAsIGodKingFrequencyControllerComponent(ByteBuffer _bb)
 		{
 			return IGodKingFrequencyControllerComponent.GetRootAsIGodKingFrequencyControllerComponent(_bb, default(IGodKingFrequencyControllerComponent));
 		}
 
-		// Token: 0x06022ADD RID: 142045 RVA: 0x004CE68C File Offset: 0x004CC88C
+		// Token: 0x06024B77 RID: 150391 RVA: 0x0050B1B8 File Offset: 0x005093B8
 		public static IGodKingFrequencyControllerComponent GetRootAsIGodKingFrequencyControllerComponent(ByteBuffer _bb, IGodKingFrequencyControllerComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022ADE RID: 142046 RVA: 0x004CE6A9 File Offset: 0x004CC8A9
+		// Token: 0x06024B78 RID: 150392 RVA: 0x0050B1D5 File Offset: 0x005093D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022ADF RID: 142047 RVA: 0x004CE6B8 File Offset: 0x004CC8B8
+		// Token: 0x06024B79 RID: 150393 RVA: 0x0050B1E4 File Offset: 0x005093E4
 		public IGodKingFrequencyControllerComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009BE7 RID: 39911
-		// (get) Token: 0x06022AE0 RID: 142048 RVA: 0x004CE6C8 File Offset: 0x004CC8C8
+		// Token: 0x1700A418 RID: 42008
+		// (get) Token: 0x06024B7A RID: 150394 RVA: 0x0050B1F4 File Offset: 0x005093F4
 		public bool Disabled
 		{
 			get
@@ -59,7 +59,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022AE1 RID: 142049 RVA: 0x004CE708 File Offset: 0x004CC908
+		// Token: 0x06024B7B RID: 150395 RVA: 0x0050B234 File Offset: 0x00509434
 		public int StatueEntityIdList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -70,8 +70,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17009BE8 RID: 39912
-		// (get) Token: 0x06022AE2 RID: 142050 RVA: 0x004CE748 File Offset: 0x004CC948
+		// Token: 0x1700A419 RID: 42009
+		// (get) Token: 0x06024B7C RID: 150396 RVA: 0x0050B274 File Offset: 0x00509474
 		public int StatueEntityIdListLength
 		{
 			get
@@ -85,20 +85,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022AE3 RID: 142051 RVA: 0x004CE773 File Offset: 0x004CC973
+		// Token: 0x06024B7D RID: 150397 RVA: 0x0050B29F File Offset: 0x0050949F
 		public Span<int> GetStatueEntityIdListBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x06022AE4 RID: 142052 RVA: 0x004CE782 File Offset: 0x004CC982
+		// Token: 0x06024B7E RID: 150398 RVA: 0x0050B2AE File Offset: 0x005094AE
 		public int[] GetStatueEntityIdListArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x17009BE9 RID: 39913
-		// (get) Token: 0x06022AE5 RID: 142053 RVA: 0x004CE790 File Offset: 0x004CC990
+		// Token: 0x1700A41A RID: 42010
+		// (get) Token: 0x06024B7F RID: 150399 RVA: 0x0050B2BC File Offset: 0x005094BC
 		public int InitialAttachStatue
 		{
 			get
@@ -112,8 +112,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BEA RID: 39914
-		// (get) Token: 0x06022AE6 RID: 142054 RVA: 0x004CE7CC File Offset: 0x004CC9CC
+		// Token: 0x1700A41B RID: 42011
+		// (get) Token: 0x06024B80 RID: 150400 RVA: 0x0050B2F8 File Offset: 0x005094F8
 		public int GodKingFrequencyEntity
 		{
 			get
@@ -127,8 +127,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BEB RID: 39915
-		// (get) Token: 0x06022AE7 RID: 142055 RVA: 0x004CE80C File Offset: 0x004CCA0C
+		// Token: 0x1700A41C RID: 42012
+		// (get) Token: 0x06024B81 RID: 150401 RVA: 0x0050B338 File Offset: 0x00509538
 		public string AttachSocket
 		{
 			get
@@ -142,20 +142,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022AE8 RID: 142056 RVA: 0x004CE844 File Offset: 0x004CCA44
+		// Token: 0x06024B82 RID: 150402 RVA: 0x0050B370 File Offset: 0x00509570
 		public Span<byte> GetAttachSocketBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06022AE9 RID: 142057 RVA: 0x004CE854 File Offset: 0x004CCA54
+		// Token: 0x06024B83 RID: 150403 RVA: 0x0050B380 File Offset: 0x00509580
 		public byte[] GetAttachSocketArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x17009BEC RID: 39916
-		// (get) Token: 0x06022AEA RID: 142058 RVA: 0x004CE864 File Offset: 0x004CCA64
+		// Token: 0x1700A41D RID: 42013
+		// (get) Token: 0x06024B84 RID: 150404 RVA: 0x0050B390 File Offset: 0x00509590
 		public float FlySpeed
 		{
 			get
@@ -169,8 +169,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BED RID: 39917
-		// (get) Token: 0x06022AEB RID: 142059 RVA: 0x004CE8A8 File Offset: 0x004CCAA8
+		// Token: 0x1700A41E RID: 42014
+		// (get) Token: 0x06024B85 RID: 150405 RVA: 0x0050B3D4 File Offset: 0x005095D4
 		public float MaxFlyTime
 		{
 			get
@@ -184,8 +184,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BEE RID: 39918
-		// (get) Token: 0x06022AEC RID: 142060 RVA: 0x004CE8EC File Offset: 0x004CCAEC
+		// Token: 0x1700A41F RID: 42015
+		// (get) Token: 0x06024B86 RID: 150406 RVA: 0x0050B418 File Offset: 0x00509618
 		public byte NullMask
 		{
 			get
@@ -199,7 +199,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022AED RID: 142061 RVA: 0x004CE92C File Offset: 0x004CCB2C
+		// Token: 0x06024B87 RID: 150407 RVA: 0x0050B458 File Offset: 0x00509658
 		public static Offset<IGodKingFrequencyControllerComponent> CreateIGodKingFrequencyControllerComponent(FlatBufferBuilder builder, bool Disabled = false, VectorOffset StatueEntityIdListOffset = default(VectorOffset), int InitialAttachStatue = 0, int GodKingFrequencyEntity = 0, StringOffset AttachSocketOffset = default(StringOffset), float FlySpeed = 0f, float MaxFlyTime = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(8);
@@ -214,25 +214,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGodKingFrequencyControllerComponent.EndIGodKingFrequencyControllerComponent(builder);
 		}
 
-		// Token: 0x06022AEE RID: 142062 RVA: 0x004CE983 File Offset: 0x004CCB83
+		// Token: 0x06024B88 RID: 150408 RVA: 0x0050B4AF File Offset: 0x005096AF
 		public static void StartIGodKingFrequencyControllerComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x06022AEF RID: 142063 RVA: 0x004CE98C File Offset: 0x004CCB8C
+		// Token: 0x06024B89 RID: 150409 RVA: 0x0050B4B8 File Offset: 0x005096B8
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06022AF0 RID: 142064 RVA: 0x004CE997 File Offset: 0x004CCB97
+		// Token: 0x06024B8A RID: 150410 RVA: 0x0050B4C3 File Offset: 0x005096C3
 		public static void AddStatueEntityIdList(FlatBufferBuilder builder, VectorOffset statueEntityIdListOffset)
 		{
 			builder.AddOffset(1, statueEntityIdListOffset.Value, 0);
 		}
 
-		// Token: 0x06022AF1 RID: 142065 RVA: 0x004CE9A8 File Offset: 0x004CCBA8
+		// Token: 0x06024B8B RID: 150411 RVA: 0x0050B4D4 File Offset: 0x005096D4
 		public static VectorOffset CreateStatueEntityIdListVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -243,7 +243,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022AF2 RID: 142066 RVA: 0x004CE9DF File Offset: 0x004CCBDF
+		// Token: 0x06024B8C RID: 150412 RVA: 0x0050B50B File Offset: 0x0050970B
 		public static VectorOffset CreateStatueEntityIdListVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -251,7 +251,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022AF3 RID: 142067 RVA: 0x004CE9F9 File Offset: 0x004CCBF9
+		// Token: 0x06024B8D RID: 150413 RVA: 0x0050B525 File Offset: 0x00509725
 		public static VectorOffset CreateStatueEntityIdListVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -259,7 +259,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022AF4 RID: 142068 RVA: 0x004CEA17 File Offset: 0x004CCC17
+		// Token: 0x06024B8E RID: 150414 RVA: 0x0050B543 File Offset: 0x00509743
 		public static VectorOffset CreateStatueEntityIdListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -267,55 +267,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022AF5 RID: 142069 RVA: 0x004CEA30 File Offset: 0x004CCC30
+		// Token: 0x06024B8F RID: 150415 RVA: 0x0050B55C File Offset: 0x0050975C
 		public static void StartStatueEntityIdListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06022AF6 RID: 142070 RVA: 0x004CEA3B File Offset: 0x004CCC3B
+		// Token: 0x06024B90 RID: 150416 RVA: 0x0050B567 File Offset: 0x00509767
 		public static void AddInitialAttachStatue(FlatBufferBuilder builder, int initialAttachStatue)
 		{
 			builder.AddInt(2, initialAttachStatue, 0);
 		}
 
-		// Token: 0x06022AF7 RID: 142071 RVA: 0x004CEA46 File Offset: 0x004CCC46
+		// Token: 0x06024B91 RID: 150417 RVA: 0x0050B572 File Offset: 0x00509772
 		public static void AddGodKingFrequencyEntity(FlatBufferBuilder builder, int godKingFrequencyEntity)
 		{
 			builder.AddInt(3, godKingFrequencyEntity, 0);
 		}
 
-		// Token: 0x06022AF8 RID: 142072 RVA: 0x004CEA51 File Offset: 0x004CCC51
+		// Token: 0x06024B92 RID: 150418 RVA: 0x0050B57D File Offset: 0x0050977D
 		public static void AddAttachSocket(FlatBufferBuilder builder, StringOffset attachSocketOffset)
 		{
 			builder.AddOffset(4, attachSocketOffset.Value, 0);
 		}
 
-		// Token: 0x06022AF9 RID: 142073 RVA: 0x004CEA61 File Offset: 0x004CCC61
+		// Token: 0x06024B93 RID: 150419 RVA: 0x0050B58D File Offset: 0x0050978D
 		public static void AddFlySpeed(FlatBufferBuilder builder, float flySpeed)
 		{
 			builder.AddFloat(5, flySpeed, 0.0);
 		}
 
-		// Token: 0x06022AFA RID: 142074 RVA: 0x004CEA74 File Offset: 0x004CCC74
+		// Token: 0x06024B94 RID: 150420 RVA: 0x0050B5A0 File Offset: 0x005097A0
 		public static void AddMaxFlyTime(FlatBufferBuilder builder, float maxFlyTime)
 		{
 			builder.AddFloat(6, maxFlyTime, 0.0);
 		}
 
-		// Token: 0x06022AFB RID: 142075 RVA: 0x004CEA87 File Offset: 0x004CCC87
+		// Token: 0x06024B95 RID: 150421 RVA: 0x0050B5B3 File Offset: 0x005097B3
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(7, nullMask, 0);
 		}
 
-		// Token: 0x06022AFC RID: 142076 RVA: 0x004CEA92 File Offset: 0x004CCC92
+		// Token: 0x06024B96 RID: 150422 RVA: 0x0050B5BE File Offset: 0x005097BE
 		public static Offset<IGodKingFrequencyControllerComponent> EndIGodKingFrequencyControllerComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IGodKingFrequencyControllerComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06022AFD RID: 142077 RVA: 0x004CEAA0 File Offset: 0x004CCCA0
+		// Token: 0x06024B97 RID: 150423 RVA: 0x0050B5CC File Offset: 0x005097CC
 		public IGodKingFrequencyControllerComponentT UnPack()
 		{
 			IGodKingFrequencyControllerComponentT godKingFrequencyControllerComponentT = new IGodKingFrequencyControllerComponentT();
@@ -323,7 +323,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return godKingFrequencyControllerComponentT;
 		}
 
-		// Token: 0x06022AFE RID: 142078 RVA: 0x004CEABC File Offset: 0x004CCCBC
+		// Token: 0x06024B98 RID: 150424 RVA: 0x0050B5E8 File Offset: 0x005097E8
 		public void UnPackTo(IGodKingFrequencyControllerComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -340,7 +340,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06022AFF RID: 142079 RVA: 0x004CEB4C File Offset: 0x004CCD4C
+		// Token: 0x06024B99 RID: 150425 RVA: 0x0050B678 File Offset: 0x00509878
 		public static Offset<IGodKingFrequencyControllerComponent> Pack(FlatBufferBuilder builder, IGodKingFrequencyControllerComponentT _o)
 		{
 			if (_o == null)
@@ -357,7 +357,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGodKingFrequencyControllerComponent.CreateIGodKingFrequencyControllerComponent(builder, _o.Disabled, statueEntityIdListOffset, _o.InitialAttachStatue, _o.GodKingFrequencyEntity, attachSocketOffset, _o.FlySpeed, _o.MaxFlyTime, _o.NullMask);
 		}
 
-		// Token: 0x0400E49D RID: 58525
+		// Token: 0x0400F0C9 RID: 61641
 		private Table __p;
 	}
 }

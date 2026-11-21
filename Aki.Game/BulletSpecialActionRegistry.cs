@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002DA1 RID: 11681
+// Token: 0x020022FB RID: 8955
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletSpecialActionRegistry : IStaticVariableResetter
 {
-	// Token: 0x06018870 RID: 100464 RVA: 0x00644144 File Offset: 0x00642344
+	// Token: 0x06016115 RID: 90389 RVA: 0x00669F80 File Offset: 0x00668180
 	static BulletSpecialActionRegistry()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BulletSpecialActionRegistry.CreateStaticDefaultValue), new Action(BulletSpecialActionRegistry.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700211F RID: 8479
-	// (get) Token: 0x06018871 RID: 100465 RVA: 0x00644163 File Offset: 0x00642363
+	// Token: 0x1700217A RID: 8570
+	// (get) Token: 0x06016116 RID: 90390 RVA: 0x00669F9F File Offset: 0x0066819F
 	private static Dictionary<int, object> SpecialBulletMap
 	{
 		get
@@ -23,8 +23,8 @@ public class BulletSpecialActionRegistry : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002120 RID: 8480
-	// (get) Token: 0x06018872 RID: 100466 RVA: 0x0064416A File Offset: 0x0064236A
+	// Token: 0x1700217B RID: 8571
+	// (get) Token: 0x06016117 RID: 90391 RVA: 0x00669FA6 File Offset: 0x006681A6
 	private static HashSet<List<BulletActionOverride>> CanonicalArrays
 	{
 		get
@@ -33,8 +33,8 @@ public class BulletSpecialActionRegistry : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002121 RID: 8481
-	// (get) Token: 0x06018873 RID: 100467 RVA: 0x00644171 File Offset: 0x00642371
+	// Token: 0x1700217C RID: 8572
+	// (get) Token: 0x06016118 RID: 90392 RVA: 0x00669FAD File Offset: 0x006681AD
 	private static List<List<BulletActionOverride>> CanonicalSets
 	{
 		get
@@ -43,7 +43,7 @@ public class BulletSpecialActionRegistry : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018874 RID: 100468 RVA: 0x00644178 File Offset: 0x00642378
+	// Token: 0x06016119 RID: 90393 RVA: 0x00669FB4 File Offset: 0x006681B4
 	public static void CreateStaticDefaultValue()
 	{
 		BulletSpecialActionRegistry.SpecialBulletMapInternal = new Dictionary<int, object>();
@@ -51,7 +51,7 @@ public class BulletSpecialActionRegistry : IStaticVariableResetter
 		BulletSpecialActionRegistry.CanonicalSetsInternal = new List<List<BulletActionOverride>>();
 	}
 
-	// Token: 0x06018875 RID: 100469 RVA: 0x00644198 File Offset: 0x00642398
+	// Token: 0x0601611A RID: 90394 RVA: 0x00669FD4 File Offset: 0x006681D4
 	public static void ResetStaticDefaultValue()
 	{
 		BulletSpecialActionRegistry.SpecialBulletMapInternal = null;
@@ -59,7 +59,7 @@ public class BulletSpecialActionRegistry : IStaticVariableResetter
 		BulletSpecialActionRegistry.CanonicalSetsInternal = null;
 	}
 
-	// Token: 0x06018876 RID: 100470 RVA: 0x006441AC File Offset: 0x006423AC
+	// Token: 0x0601611B RID: 90395 RVA: 0x00669FE8 File Offset: 0x006681E8
 	public unsafe static void Register<[Nullable(0)] T>(int modelId, EBulletAction type, bool isPersistentAction, params string[] bulletRowNames) where T : BulletActionBase
 	{
 		if (bulletRowNames.Length == 0)
@@ -80,14 +80,14 @@ public class BulletSpecialActionRegistry : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018877 RID: 100471 RVA: 0x00644247 File Offset: 0x00642447
+	// Token: 0x0601611C RID: 90396 RVA: 0x0066A083 File Offset: 0x00668283
 	[NullableContext(0)]
 	public static void RegisterForAllBullets<T>(int modelId, EBulletAction type, bool isPersistentAction) where T : BulletActionBase
 	{
 		BulletSpecialActionRegistry.AddSlot(modelId, null, BulletSpecialActionRegistry.MakeSlot(type, typeof(T), isPersistentAction));
 	}
 
-	// Token: 0x06018878 RID: 100472 RVA: 0x00644261 File Offset: 0x00642461
+	// Token: 0x0601611D RID: 90397 RVA: 0x0066A09D File Offset: 0x0066829D
 	private static BulletActionOverride MakeSlot(EBulletAction type, Type actionClass, bool isPersistentAction)
 	{
 		return new BulletActionOverride
@@ -98,7 +98,7 @@ public class BulletSpecialActionRegistry : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06018879 RID: 100473 RVA: 0x00644280 File Offset: 0x00642480
+	// Token: 0x0601611E RID: 90398 RVA: 0x0066A0BC File Offset: 0x006682BC
 	private unsafe static void AddSlot(int modelId, [Nullable(2)] string bulletRowName, BulletActionOverride slot)
 	{
 		object obj;
@@ -166,7 +166,7 @@ public class BulletSpecialActionRegistry : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601887A RID: 100474 RVA: 0x006443B4 File Offset: 0x006425B4
+	// Token: 0x0601611F RID: 90399 RVA: 0x0066A1F0 File Offset: 0x006683F0
 	private unsafe static void AppendSlot(List<BulletActionOverride> overrides, BulletActionOverride slot, int modelId, [Nullable(2)] string bulletRowName)
 	{
 		if (BulletSpecialActionRegistry.CanonicalArrays.Contains(overrides))
@@ -204,7 +204,7 @@ public class BulletSpecialActionRegistry : IStaticVariableResetter
 		overrides.Add(slot);
 	}
 
-	// Token: 0x0601887B RID: 100475 RVA: 0x00644530 File Offset: 0x00642730
+	// Token: 0x06016120 RID: 90400 RVA: 0x0066A36C File Offset: 0x0066856C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -241,7 +241,7 @@ public class BulletSpecialActionRegistry : IStaticVariableResetter
 		return list4;
 	}
 
-	// Token: 0x0601887C RID: 100476 RVA: 0x006445A0 File Offset: 0x006427A0
+	// Token: 0x06016121 RID: 90401 RVA: 0x0066A3DC File Offset: 0x006685DC
 	private static List<BulletActionOverride> ToCanonical(List<BulletActionOverride> overrides)
 	{
 		if (BulletSpecialActionRegistry.CanonicalArrays.Contains(overrides))
@@ -261,7 +261,7 @@ public class BulletSpecialActionRegistry : IStaticVariableResetter
 		return overrides;
 	}
 
-	// Token: 0x0601887D RID: 100477 RVA: 0x00644648 File Offset: 0x00642848
+	// Token: 0x06016122 RID: 90402 RVA: 0x0066A484 File Offset: 0x00668684
 	private static bool ContentEquals(List<BulletActionOverride> a, List<BulletActionOverride> b)
 	{
 		if (a.Count != b.Count)
@@ -280,7 +280,7 @@ public class BulletSpecialActionRegistry : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0400B5EA RID: 46570
+	// Token: 0x0400B960 RID: 47456
 	[Nullable(new byte[]
 	{
 		2,
@@ -288,7 +288,7 @@ public class BulletSpecialActionRegistry : IStaticVariableResetter
 	})]
 	private static Dictionary<int, object> SpecialBulletMapInternal;
 
-	// Token: 0x0400B5EB RID: 46571
+	// Token: 0x0400B961 RID: 47457
 	[Nullable(new byte[]
 	{
 		2,
@@ -297,7 +297,7 @@ public class BulletSpecialActionRegistry : IStaticVariableResetter
 	})]
 	private static HashSet<List<BulletActionOverride>> CanonicalArraysInternal;
 
-	// Token: 0x0400B5EC RID: 46572
+	// Token: 0x0400B962 RID: 47458
 	[Nullable(new byte[]
 	{
 		2,

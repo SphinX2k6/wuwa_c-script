@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B39 RID: 6969
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CE8 RID: 7400
 	public class IInstrumentConfig
 	{
-		// Token: 0x06009520 RID: 38176 RVA: 0x00158D60 File Offset: 0x00156F60
+		// Token: 0x06009D0A RID: 40202 RVA: 0x00169A3C File Offset: 0x00167C3C
 		private IInstrumentConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009521 RID: 38177 RVA: 0x00158D98 File Offset: 0x00156F98
+		// Token: 0x06009D0B RID: 40203 RVA: 0x00169A74 File Offset: 0x00167C74
 		public static IInstrumentConfig Create([Nullable(2)] IInstrumentConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009522 RID: 38178 RVA: 0x00158DAB File Offset: 0x00156FAB
+		// Token: 0x06009D0C RID: 40204 RVA: 0x00169A87 File Offset: 0x00167C87
 		public static IInstrumentConfig CreateFromSetValue([Nullable(2)] IInstrumentConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009523 RID: 38179 RVA: 0x00158DBE File Offset: 0x00156FBE
+		// Token: 0x06009D0D RID: 40205 RVA: 0x00169A9A File Offset: 0x00167C9A
 		public IInstrumentConfig_SetValue ToSetValue()
 		{
 			return new IInstrumentConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F10 RID: 12048
-		// (get) Token: 0x06009524 RID: 38180 RVA: 0x00158DE9 File Offset: 0x00156FE9
-		// (set) Token: 0x06009525 RID: 38181 RVA: 0x00158E14 File Offset: 0x00157014
+		// Token: 0x17003136 RID: 12598
+		// (get) Token: 0x06009D0E RID: 40206 RVA: 0x00169AC5 File Offset: 0x00167CC5
+		// (set) Token: 0x06009D0F RID: 40207 RVA: 0x00169AF0 File Offset: 0x00167CF0
 		public virtual int Id
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F11 RID: 12049
-		// (get) Token: 0x06009526 RID: 38182 RVA: 0x00158E22 File Offset: 0x00157022
-		// (set) Token: 0x06009527 RID: 38183 RVA: 0x00158E4D File Offset: 0x0015704D
+		// Token: 0x17003137 RID: 12599
+		// (get) Token: 0x06009D10 RID: 40208 RVA: 0x00169AFE File Offset: 0x00167CFE
+		// (set) Token: 0x06009D11 RID: 40209 RVA: 0x00169B29 File Offset: 0x00167D29
 		public virtual EInstrumentType InstrumentType
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F12 RID: 12050
-		// (get) Token: 0x06009528 RID: 38184 RVA: 0x00158E5C File Offset: 0x0015705C
-		// (set) Token: 0x06009529 RID: 38185 RVA: 0x00158EBD File Offset: 0x001570BD
+		// Token: 0x17003138 RID: 12600
+		// (get) Token: 0x06009D12 RID: 40210 RVA: 0x00169B38 File Offset: 0x00167D38
+		// (set) Token: 0x06009D13 RID: 40211 RVA: 0x00169B99 File Offset: 0x00167D99
 		public virtual IInstrumentKeyConfigs KeyConfigs
 		{
 			get
@@ -137,18 +135,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B47 RID: 23367
+		// Token: 0x04005FE5 RID: 24549
 		[Nullable(2)]
 		protected IInstrumentConfig FbInstance;
 
-		// Token: 0x04005B48 RID: 23368
+		// Token: 0x04005FE6 RID: 24550
 		[Nullable(2)]
 		protected IInstrumentConfig_SetValue PocoInterface;
 
-		// Token: 0x04005B49 RID: 23369
+		// Token: 0x04005FE7 RID: 24551
 		private IInstrumentKeyConfigs _KeyConfigsCache;
 
-		// Token: 0x04005B4A RID: 23370
+		// Token: 0x04005FE8 RID: 24552
 		private bool _KeyConfigsInited;
 	}
 }

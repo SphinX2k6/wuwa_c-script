@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -9,16 +8,16 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001A60 RID: 6752
+// Token: 0x02000F1F RID: 3871
 public class DangoAbyssTimeLimitRewardView : UiViewBase
 {
-	// Token: 0x0600C6CA RID: 50890 RVA: 0x002D3C19 File Offset: 0x002D1E19
+	// Token: 0x06009ADA RID: 39642 RVA: 0x002DED15 File Offset: 0x002DCF15
 	[NullableContext(1)]
 	public DangoAbyssTimeLimitRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C6CB RID: 50891 RVA: 0x002D3C2C File Offset: 0x002D1E2C
+	// Token: 0x06009ADB RID: 39643 RVA: 0x002DED28 File Offset: 0x002DCF28
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -51,38 +50,38 @@ public class DangoAbyssTimeLimitRewardView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C6CC RID: 50892 RVA: 0x002D3D9A File Offset: 0x002D1F9A
-	public override bool GetLoopAudioEventSwitch()
+	// Token: 0x06009ADC RID: 39644 RVA: 0x002DEE96 File Offset: 0x002DD096
+	public override bool GetBgmSwitch()
 	{
 		return !DangoAbyssModel.Instance.CheckIfInSmallWorldInstance();
 	}
 
-	// Token: 0x0600C6CD RID: 50893 RVA: 0x002D3DAC File Offset: 0x002D1FAC
+	// Token: 0x06009ADD RID: 39645 RVA: 0x002DEEA8 File Offset: 0x002DD0A8
 	private void OnClickRewardBtn()
 	{
 		int? abyssLimitRewardRewardId = DangoAbyssConfig.Instance.GetAbyssLimitRewardRewardId();
-		ItemController.Instance.OpenItemTipsByItemId(abyssLimitRewardRewardId.Value, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(abyssLimitRewardRewardId.Value, true, null, false);
 	}
 
-	// Token: 0x0600C6CE RID: 50894 RVA: 0x002D3DD7 File Offset: 0x002D1FD7
+	// Token: 0x06009ADE RID: 39646 RVA: 0x002DEED4 File Offset: 0x002DD0D4
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnAbyssRewardStateUpdate, new Action(this.RefreshRewardLayout));
 	}
 
-	// Token: 0x0600C6CF RID: 50895 RVA: 0x002D3DF5 File Offset: 0x002D1FF5
+	// Token: 0x06009ADF RID: 39647 RVA: 0x002DEEF2 File Offset: 0x002DD0F2
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAbyssRewardStateUpdate, new Action(this.RefreshRewardLayout));
 	}
 
-	// Token: 0x0600C6D0 RID: 50896 RVA: 0x002D3E13 File Offset: 0x002D2013
+	// Token: 0x06009AE0 RID: 39648 RVA: 0x002DEF10 File Offset: 0x002DD110
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600C6D1 RID: 50897 RVA: 0x002D3E1C File Offset: 0x002D201C
+	// Token: 0x06009AE1 RID: 39649 RVA: 0x002DEF1C File Offset: 0x002DD11C
 	protected override void OnStart()
 	{
 		this.CurrentData = (this.OpenParam as DangoAbyssTimeLimitViewData);
@@ -98,7 +97,7 @@ public class DangoAbyssTimeLimitRewardView : UiViewBase
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x0600C6D2 RID: 50898 RVA: 0x002D3EB4 File Offset: 0x002D20B4
+	// Token: 0x06009AE2 RID: 39650 RVA: 0x002DEFB4 File Offset: 0x002DD1B4
 	private void RefreshTimeText()
 	{
 		if (this.CurrentData.Data.CheckInLimitTime())
@@ -111,28 +110,28 @@ public class DangoAbyssTimeLimitRewardView : UiViewBase
 		base.GetText(1).SetUIActive(false);
 	}
 
-	// Token: 0x0600C6D3 RID: 50899 RVA: 0x002D3F10 File Offset: 0x002D2110
+	// Token: 0x06009AE3 RID: 39651 RVA: 0x002DF010 File Offset: 0x002DD210
 	private void RefreshRewardLayout()
 	{
 		IActivityRewardData[] taskActivityRewardDataList = this.CurrentData.Data.GetTaskActivityRewardDataList(1, this.CurrentTabId);
-		this.LoopScrollView.RefreshByData(taskActivityRewardDataList.ToList<IActivityRewardData>(), false, null, true);
+		this.LoopScrollView.RefreshByData(taskActivityRewardDataList, false, null, true);
 	}
 
-	// Token: 0x0600C6D4 RID: 50900 RVA: 0x002D3F4C File Offset: 0x002D214C
+	// Token: 0x06009AE4 RID: 39652 RVA: 0x002DF044 File Offset: 0x002DD244
 	private void RefreshRewardTexture()
 	{
 		string abyssLimitRewardTexture = DangoAbyssConfig.Instance.GetAbyssLimitRewardTexture();
 		base.SetTextureByPath(abyssLimitRewardTexture, base.GetTexture(2), null, null);
 	}
 
-	// Token: 0x0600C6D5 RID: 50901 RVA: 0x002D3F7C File Offset: 0x002D217C
+	// Token: 0x06009AE5 RID: 39653 RVA: 0x002DF074 File Offset: 0x002DD274
 	[NullableContext(1)]
 	private DangoAbyssRewardItem CreateLoopItem()
 	{
 		return new DangoAbyssRewardItem();
 	}
 
-	// Token: 0x0600C6D6 RID: 50902 RVA: 0x002D3F83 File Offset: 0x002D2183
+	// Token: 0x06009AE6 RID: 39654 RVA: 0x002DF07B File Offset: 0x002DD27B
 	protected override void OnBeforeShow()
 	{
 		this.RefreshTimeText();
@@ -140,7 +139,7 @@ public class DangoAbyssTimeLimitRewardView : UiViewBase
 		this.RefreshRewardTexture();
 	}
 
-	// Token: 0x0600C6D7 RID: 50903 RVA: 0x002D3F97 File Offset: 0x002D2197
+	// Token: 0x06009AE7 RID: 39655 RVA: 0x002DF08F File Offset: 0x002DD28F
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TimerHandle != null)
@@ -150,14 +149,14 @@ public class DangoAbyssTimeLimitRewardView : UiViewBase
 		}
 	}
 
-	// Token: 0x04005B97 RID: 23447
+	// Token: 0x04005C66 RID: 23654
 	private int CurrentTabId = 1;
 
-	// Token: 0x04005B98 RID: 23448
+	// Token: 0x04005C67 RID: 23655
 	[Nullable(2)]
 	private DangoAbyssTimeLimitViewData CurrentData;
 
-	// Token: 0x04005B99 RID: 23449
+	// Token: 0x04005C68 RID: 23656
 	[Nullable(new byte[]
 	{
 		2,
@@ -166,32 +165,32 @@ public class DangoAbyssTimeLimitRewardView : UiViewBase
 	})]
 	protected LoopScrollView<DangoAbyssRewardItem, IActivityRewardData> LoopScrollView;
 
-	// Token: 0x04005B9A RID: 23450
+	// Token: 0x04005C69 RID: 23657
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x02007FAE RID: 32686
+	// Token: 0x0200713D RID: 28989
 	private class EComponent
 	{
-		// Token: 0x04029B04 RID: 170756
+		// Token: 0x04024E41 RID: 151105
 		public const int BtnClose = 0;
 
-		// Token: 0x04029B05 RID: 170757
+		// Token: 0x04024E42 RID: 151106
 		public const int RemainTimeText = 1;
 
-		// Token: 0x04029B06 RID: 170758
+		// Token: 0x04024E43 RID: 151107
 		public const int RewardTexture = 2;
 
-		// Token: 0x04029B07 RID: 170759
+		// Token: 0x04024E44 RID: 151108
 		public const int RewardDesc = 3;
 
-		// Token: 0x04029B08 RID: 170760
+		// Token: 0x04024E45 RID: 151109
 		public const int LoopScroller = 4;
 
-		// Token: 0x04029B09 RID: 170761
+		// Token: 0x04024E46 RID: 151110
 		public const int ScrollerItem = 5;
 
-		// Token: 0x04029B0A RID: 170762
+		// Token: 0x04024E47 RID: 151111
 		public const int RewardBtn = 6;
 	}
 }

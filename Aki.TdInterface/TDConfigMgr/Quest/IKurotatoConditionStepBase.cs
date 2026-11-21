@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FD7 RID: 4055
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001103 RID: 4355
 	public class IKurotatoConditionStepBase
 	{
-		// Token: 0x06005A5C RID: 23132 RVA: 0x000DBA74 File Offset: 0x000D9C74
+		// Token: 0x0600603C RID: 24636 RVA: 0x000E86B4 File Offset: 0x000E68B4
 		private IKurotatoConditionStepBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005A5D RID: 23133 RVA: 0x000DBAAC File Offset: 0x000D9CAC
+		// Token: 0x0600603D RID: 24637 RVA: 0x000E86EC File Offset: 0x000E68EC
 		public static IKurotatoConditionStepBase Create([Nullable(2)] IKurotatoConditionStepBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005A5E RID: 23134 RVA: 0x000DBABF File Offset: 0x000D9CBF
+		// Token: 0x0600603E RID: 24638 RVA: 0x000E86FF File Offset: 0x000E68FF
 		public static IKurotatoConditionStepBase CreateFromSetValue([Nullable(2)] IKurotatoConditionStepBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005A5F RID: 23135 RVA: 0x000DBAD2 File Offset: 0x000D9CD2
+		// Token: 0x0600603F RID: 24639 RVA: 0x000E8712 File Offset: 0x000E6912
 		public IKurotatoConditionStepBase_SetValue ToSetValue()
 		{
 			return new IKurotatoConditionStepBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DED RID: 7661
-		// (get) Token: 0x06005A60 RID: 23136 RVA: 0x000DBAE5 File Offset: 0x000D9CE5
-		// (set) Token: 0x06005A61 RID: 23137 RVA: 0x000DBB10 File Offset: 0x000D9D10
+		// Token: 0x17001F96 RID: 8086
+		// (get) Token: 0x06006040 RID: 24640 RVA: 0x000E8725 File Offset: 0x000E6925
+		// (set) Token: 0x06006041 RID: 24641 RVA: 0x000E8750 File Offset: 0x000E6950
 		public virtual EKurotatoConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003674 RID: 13940
+		// Token: 0x040039AC RID: 14764
 		[Nullable(2)]
 		protected IKurotatoConditionStepBase FbInstance;
 
-		// Token: 0x04003675 RID: 13941
+		// Token: 0x040039AD RID: 14765
 		[Nullable(2)]
 		protected IKurotatoConditionStepBase_SetValue PocoInterface;
 	}

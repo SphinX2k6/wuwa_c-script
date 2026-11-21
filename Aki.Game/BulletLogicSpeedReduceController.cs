@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002DDA RID: 11738
+// Token: 0x02002334 RID: 9012
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,14 +11,14 @@ using System.Runtime.CompilerServices;
 })]
 public class BulletLogicSpeedReduceController : BulletLogicController<LogicDataSpeedReduce, object>
 {
-	// Token: 0x06018A4A RID: 100938 RVA: 0x0064EECC File Offset: 0x0064D0CC
+	// Token: 0x060162F2 RID: 90866 RVA: 0x00674CB8 File Offset: 0x00672EB8
 	public BulletLogicSpeedReduceController(LogicDataSpeedReduce bulletLogicBase, Entity bullet) : base(bulletLogicBase, bullet)
 	{
 		this.BulletInfo = this.Bullet.GetBulletInfo();
 		this.Parameter = bulletLogicBase;
 	}
 
-	// Token: 0x06018A4B RID: 100939 RVA: 0x0064EEF0 File Offset: 0x0064D0F0
+	// Token: 0x060162F3 RID: 90867 RVA: 0x00674CDC File Offset: 0x00672EDC
 	[NullableContext(2)]
 	public override void BulletLogicAction(object param = null)
 	{
@@ -63,7 +63,7 @@ public class BulletLogicSpeedReduceController : BulletLogicController<LogicDataS
 		this.BulletInfo.MoveInfo.BulletSpeed = num8.Value;
 	}
 
-	// Token: 0x06018A4C RID: 100940 RVA: 0x0064F1EE File Offset: 0x0064D3EE
+	// Token: 0x060162F4 RID: 90868 RVA: 0x00674FDA File Offset: 0x006731DA
 	[NullableContext(2)]
 	public override void BulletLogicActionOnHitObstacles(object param = null)
 	{
@@ -74,15 +74,15 @@ public class BulletLogicSpeedReduceController : BulletLogicController<LogicDataS
 		this.BulletInfo.MoveInfo.BulletSpeed = 0f;
 	}
 
-	// Token: 0x0400B791 RID: 46993
+	// Token: 0x0400BB0C RID: 47884
 	private const float TOLERANCE = 1E-05f;
 
-	// Token: 0x0400B792 RID: 46994
+	// Token: 0x0400BB0D RID: 47885
 	private const float MIN_WEIGHT = 50f;
 
-	// Token: 0x0400B793 RID: 46995
+	// Token: 0x0400BB0E RID: 47886
 	private readonly LogicDataSpeedReduce Parameter;
 
-	// Token: 0x0400B794 RID: 46996
+	// Token: 0x0400BB0F RID: 47887
 	private readonly BulletInfo BulletInfo;
 }

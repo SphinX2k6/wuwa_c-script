@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Manager
 {
-	// Token: 0x02006947 RID: 26951
+	// Token: 0x02005AA2 RID: 23202
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PakManager : Singleton
 	{
-		// Token: 0x0604327C RID: 275068 RVA: 0x0105E49E File Offset: 0x0105C69E
+		// Token: 0x060392B3 RID: 234163 RVA: 0x0100265D File Offset: 0x0100085D
 		public void Init()
 		{
 			if (this.UpdateCheckTimerId != null)
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Manager
 			this.StartFileSha1CheckTimer();
 		}
 
-		// Token: 0x0604327D RID: 275069 RVA: 0x0105E4E0 File Offset: 0x0105C6E0
+		// Token: 0x060392B4 RID: 234164 RVA: 0x0100269C File Offset: 0x0100089C
 		private void OnPakMounted(string pakFilename)
 		{
 			Log instance = Log.Instance;
@@ -38,14 +38,14 @@ namespace CSharpScript.Game.Manager
 			ConfigMultiTextLang.ClearMultiTextLangStatementIdsAndCache();
 		}
 
-		// Token: 0x0604327E RID: 275070 RVA: 0x0105E51C File Offset: 0x0105C71C
+		// Token: 0x060392B5 RID: 234165 RVA: 0x010026D8 File Offset: 0x010008D8
 		public void TestPakMounted()
 		{
 			Log.Instance.Info(ELogModule.Event, ELogAuthor.LRA, "测试Pak挂载", default(ReadOnlySpan<ValueTuple<string, object>>));
 			UKuroPakMountStatic.MountPak(UKuroLauncherLibrary.GameSavedDir() + "Saved/Paks/pakchunk103-WindowsNoEditor.pak", 9999);
 		}
 
-		// Token: 0x0604327F RID: 275071 RVA: 0x0105E560 File Offset: 0x0105C760
+		// Token: 0x060392B6 RID: 234166 RVA: 0x0100271C File Offset: 0x0100091C
 		private void StartPakKeyCheckTimer()
 		{
 			if (!PakKeyUpdate.Instance.NeedExtPakKeys)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Manager
 			}
 		}
 
-		// Token: 0x06043280 RID: 275072 RVA: 0x0105E5F0 File Offset: 0x0105C7F0
+		// Token: 0x060392B7 RID: 234167 RVA: 0x010027AC File Offset: 0x010009AC
 		private void StartFileSha1CheckTimer()
 		{
 			if (this.FileSha1CheckTimerId != null)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Manager
 			}, 60000f, 1f, null, null, false);
 		}
 
-		// Token: 0x06043281 RID: 275073 RVA: 0x0105E644 File Offset: 0x0105C844
+		// Token: 0x060392B8 RID: 234168 RVA: 0x01002800 File Offset: 0x01000A00
 		private void ProcessingSha1CheckResult()
 		{
 			if (UKuroPakMountStatic.IsSha1CheckWorking())
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Manager
 			}
 		}
 
-		// Token: 0x06043282 RID: 275074 RVA: 0x0105E6F3 File Offset: 0x0105C8F3
+		// Token: 0x060392B9 RID: 234169 RVA: 0x010028AF File Offset: 0x01000AAF
 		private void HandleSha1CheckFailures()
 		{
 			LoginController.Instance.LogLoginProcessLink(LoginDefine.ELoginStatus.PatchVerifyFail, Aki.Protocol.ErrorCode.Success);
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Manager
 			AppUtil.QuitGame("Pak");
 		}
 
-		// Token: 0x06043283 RID: 275075 RVA: 0x0105E716 File Offset: 0x0105C916
+		// Token: 0x060392BA RID: 234170 RVA: 0x010028D2 File Offset: 0x01000AD2
 		public void Clear()
 		{
 			if (this.FileSha1CheckTimerId != null)
@@ -135,8 +135,8 @@ namespace CSharpScript.Game.Manager
 			UKuroPakKeyLibrary.UnbindPakMountedCallback();
 		}
 
-		// Token: 0x170097FB RID: 38907
-		// (get) Token: 0x06043284 RID: 275076 RVA: 0x0105E749 File Offset: 0x0105C949
+		// Token: 0x17006CDB RID: 27867
+		// (get) Token: 0x060392BB RID: 234171 RVA: 0x01002905 File Offset: 0x01000B05
 		public static PakManager Instance
 		{
 			get
@@ -150,12 +150,12 @@ namespace CSharpScript.Game.Manager
 			}
 		}
 
-		// Token: 0x06043285 RID: 275077 RVA: 0x0105E76C File Offset: 0x0105C96C
+		// Token: 0x060392BC RID: 234172 RVA: 0x01002928 File Offset: 0x01000B28
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043286 RID: 275078 RVA: 0x0105E76E File Offset: 0x0105C96E
+		// Token: 0x060392BD RID: 234173 RVA: 0x0100292A File Offset: 0x01000B2A
 		public static void ResetStaticDefaultValue()
 		{
 			PakManager instance = PakManager._instance;
@@ -166,31 +166,31 @@ namespace CSharpScript.Game.Manager
 			PakManager._instance = null;
 		}
 
-		// Token: 0x06043287 RID: 275079 RVA: 0x0105E787 File Offset: 0x0105C987
+		// Token: 0x060392BE RID: 234174 RVA: 0x01002943 File Offset: 0x01000B43
 		static PakManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PakManager.CreateStaticDefaultValue), new Action(PakManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0604328A RID: 275082 RVA: 0x0105E7B6 File Offset: 0x0105C9B6
+		// Token: 0x060392C1 RID: 234177 RVA: 0x01002972 File Offset: 0x01000B72
 		[CompilerGenerated]
 		private void <ProcessingSha1CheckResult>g__ConfirmCallback|8_0()
 		{
 			this.HandleSha1CheckFailures();
 		}
 
-		// Token: 0x04022F99 RID: 143257
+		// Token: 0x0401E183 RID: 123267
 		[Nullable(2)]
 		private TimerHandle UpdateCheckTimerId;
 
-		// Token: 0x04022F9A RID: 143258
+		// Token: 0x0401E184 RID: 123268
 		[Nullable(2)]
 		private TimerHandle FileSha1CheckTimerId;
 
-		// Token: 0x04022F9B RID: 143259
+		// Token: 0x0401E185 RID: 123269
 		private const int FileSha1CheckTimerInterval = 60000;
 
-		// Token: 0x04022F9C RID: 143260
+		// Token: 0x0401E186 RID: 123270
 		[Nullable(2)]
 		private static PakManager _instance;
 	}

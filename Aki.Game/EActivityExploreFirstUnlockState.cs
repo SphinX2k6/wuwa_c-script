@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020012C4 RID: 4804
+// Token: 0x02000778 RID: 1912
 public enum EActivityExploreFirstUnlockState
 {
-	// Token: 0x04003B60 RID: 15200
+	// Token: 0x04003BF8 RID: 15352
 	None,
-	// Token: 0x04003B61 RID: 15201
+	// Token: 0x04003BF9 RID: 15353
 	Set,
-	// Token: 0x04003B62 RID: 15202
+	// Token: 0x04003BFA RID: 15354
 	Done
 }

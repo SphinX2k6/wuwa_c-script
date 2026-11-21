@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002AFA RID: 11002
+// Token: 0x02002076 RID: 8310
 internal enum <SurvivorsAttributeItem>FA1DC3E5D0EF54FB800832563F04F608EF4A6E3F30B26B928EFBAD1458798DF40__EComp
 {
-	// Token: 0x0400A9E3 RID: 43491
+	// Token: 0x0400ADE9 RID: 44521
 	TxtName,
-	// Token: 0x0400A9E4 RID: 43492
+	// Token: 0x0400ADEA RID: 44522
 	TxtValue,
-	// Token: 0x0400A9E5 RID: 43493
+	// Token: 0x0400ADEB RID: 44523
 	TexIcon,
-	// Token: 0x0400A9E6 RID: 43494
+	// Token: 0x0400ADEC RID: 44524
 	SprBg,
-	// Token: 0x0400A9E7 RID: 43495
+	// Token: 0x0400ADED RID: 44525
 	SprGood
 }

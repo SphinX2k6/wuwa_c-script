@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064E1 RID: 25825
+	// Token: 0x0200545F RID: 21599
 	public class MatchThreeScorePopView : UiPanelBase
 	{
-		// Token: 0x06040D4E RID: 265550 RVA: 0x00FB43D8 File Offset: 0x00FB25D8
+		// Token: 0x06035A12 RID: 219666 RVA: 0x00EFB408 File Offset: 0x00EF9608
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040D4F RID: 265551 RVA: 0x00FB4462 File Offset: 0x00FB2662
+		// Token: 0x06035A13 RID: 219667 RVA: 0x00EFB492 File Offset: 0x00EF9692
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.ScoreTween.BindUpdateTween(new Action<int>(this.SetScoreText));
 		}
 
-		// Token: 0x06040D50 RID: 265552 RVA: 0x00FB4498 File Offset: 0x00FB2698
+		// Token: 0x06035A14 RID: 219668 RVA: 0x00EFB4C8 File Offset: 0x00EF96C8
 		public bool SetContent(int score, ScoreComment? comment, int gradeLevel, bool animate)
 		{
 			if (animate && this.DisplayedScore != score)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return result;
 		}
 
-		// Token: 0x06040D51 RID: 265553 RVA: 0x00FB4514 File Offset: 0x00FB2714
+		// Token: 0x06035A15 RID: 219669 RVA: 0x00EFB544 File Offset: 0x00EF9744
 		private void SetScoreText(int value)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 1);
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			text3.SetText(newText, true);
 		}
 
-		// Token: 0x06040D52 RID: 265554 RVA: 0x00FB4584 File Offset: 0x00FB2784
+		// Token: 0x06035A16 RID: 219670 RVA: 0x00EFB5B4 File Offset: 0x00EF97B4
 		private void ApplyCommentColor(ScoreComment? comment)
 		{
 			if (comment == null)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040D53 RID: 265555 RVA: 0x00FB45F8 File Offset: 0x00FB27F8
+		// Token: 0x06035A17 RID: 219671 RVA: 0x00EFB628 File Offset: 0x00EF9828
 		public UniTask PlayGradeSequenceAsync(int gradeLevel)
 		{
 			MatchThreeScorePopView.<PlayGradeSequenceAsync>d__11 <PlayGradeSequenceAsync>d__;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return <PlayGradeSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040D54 RID: 265556 RVA: 0x00FB4643 File Offset: 0x00FB2843
+		// Token: 0x06035A18 RID: 219672 RVA: 0x00EFB673 File Offset: 0x00EF9873
 		[NullableContext(1)]
 		private string GetGradeSequenceName(int gradeLevel)
 		{
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040D55 RID: 265557 RVA: 0x00FB4674 File Offset: 0x00FB2874
+		// Token: 0x06035A19 RID: 219673 RVA: 0x00EFB6A4 File Offset: 0x00EF98A4
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			MatchThreeScorePopView.<OnShowAsyncImplementImplement>d__13 <OnShowAsyncImplementImplement>d__;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040D56 RID: 265558 RVA: 0x00FB46B8 File Offset: 0x00FB28B8
+		// Token: 0x06035A1A RID: 219674 RVA: 0x00EFB6E8 File Offset: 0x00EF98E8
 		protected override UniTask OnBeforeHideAsync()
 		{
 			MatchThreeScorePopView.<OnBeforeHideAsync>d__14 <OnBeforeHideAsync>d__;
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040D57 RID: 265559 RVA: 0x00FB46FB File Offset: 0x00FB28FB
+		// Token: 0x06035A1B RID: 219675 RVA: 0x00EFB72B File Offset: 0x00EF992B
 		protected override void OnBeforeDestroy()
 		{
 			LguiIntTween scoreTween = this.ScoreTween;
@@ -187,31 +187,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x04021C63 RID: 138339
+		// Token: 0x0401C594 RID: 116116
 		private const float ScoreTweenDuration = 0.3f;
 
-		// Token: 0x04021C64 RID: 138340
+		// Token: 0x0401C595 RID: 116117
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04021C65 RID: 138341
+		// Token: 0x0401C596 RID: 116118
 		[Nullable(2)]
 		private LguiIntTween ScoreTween;
 
-		// Token: 0x04021C66 RID: 138342
+		// Token: 0x0401C597 RID: 116119
 		private int DisplayedScore;
 
-		// Token: 0x04021C67 RID: 138343
+		// Token: 0x0401C598 RID: 116120
 		private int CurrentGradeLevel;
 
-		// Token: 0x0200C71D RID: 50973
+		// Token: 0x0200B103 RID: 45315
 		private enum EComponent
 		{
-			// Token: 0x0403C27D RID: 246397
+			// Token: 0x04036BD8 RID: 224216
 			TextOutline,
-			// Token: 0x0403C27E RID: 246398
+			// Token: 0x04036BD9 RID: 224217
 			TextTop,
-			// Token: 0x0403C27F RID: 246399
+			// Token: 0x04036BDA RID: 224218
 			TextBottom
 		}
 	}

@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02002E1D RID: 11805
+// Token: 0x02002379 RID: 9081
 public class BulletEventSystem : BulletSystemBase
 {
-	// Token: 0x06018DD1 RID: 101841 RVA: 0x0066600A File Offset: 0x0066420A
+	// Token: 0x06016693 RID: 91795 RVA: 0x0068C04E File Offset: 0x0068A24E
 	public override void OnTick(float delta)
 	{
 	}

@@ -4,15 +4,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020061A0 RID: 24992
+	// Token: 0x0200511E RID: 20766
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeTalentUnlockViewParam
 	{
-		// Token: 0x04020E8A RID: 134794
+		// Token: 0x0401B7B7 RID: 112567
 		public string DescTextId = "";
 
-		// Token: 0x04020E8B RID: 134795
+		// Token: 0x0401B7B8 RID: 112568
 		public List<string> DescParams = new List<string>();
 	}
 }

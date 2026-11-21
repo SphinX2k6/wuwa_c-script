@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007698 RID: 30360
+	// Token: 0x02007EA3 RID: 32419
 	public struct TCsvCommonBtOverrideData : IFlatbufferObject
 	{
-		// Token: 0x1700E5F9 RID: 58873
-		// (get) Token: 0x060373D8 RID: 226264 RVA: 0x0077C6EA File Offset: 0x0077A8EA
+		// Token: 0x1700F235 RID: 62005
+		// (get) Token: 0x0603A87B RID: 239739 RVA: 0x007E083E File Offset: 0x007DEA3E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060373D9 RID: 226265 RVA: 0x0077C6F7 File Offset: 0x0077A8F7
+		// Token: 0x0603A87C RID: 239740 RVA: 0x007E084B File Offset: 0x007DEA4B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060373DA RID: 226266 RVA: 0x0077C700 File Offset: 0x0077A900
+		// Token: 0x0603A87D RID: 239741 RVA: 0x007E0854 File Offset: 0x007DEA54
 		public static TCsvCommonBtOverrideData GetRootAsTCsvCommonBtOverrideData(ByteBuffer _bb)
 		{
 			return TCsvCommonBtOverrideData.GetRootAsTCsvCommonBtOverrideData(_bb, default(TCsvCommonBtOverrideData));
 		}
 
-		// Token: 0x060373DB RID: 226267 RVA: 0x0077C71C File Offset: 0x0077A91C
+		// Token: 0x0603A87E RID: 239742 RVA: 0x007E0870 File Offset: 0x007DEA70
 		public static TCsvCommonBtOverrideData GetRootAsTCsvCommonBtOverrideData(ByteBuffer _bb, TCsvCommonBtOverrideData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060373DC RID: 226268 RVA: 0x0077C739 File Offset: 0x0077A939
+		// Token: 0x0603A87F RID: 239743 RVA: 0x007E088D File Offset: 0x007DEA8D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060373DD RID: 226269 RVA: 0x0077C748 File Offset: 0x0077A948
+		// Token: 0x0603A880 RID: 239744 RVA: 0x007E089C File Offset: 0x007DEA9C
 		public TCsvCommonBtOverrideData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E5FA RID: 58874
-		// (get) Token: 0x060373DE RID: 226270 RVA: 0x0077C758 File Offset: 0x0077A958
+		// Token: 0x1700F236 RID: 62006
+		// (get) Token: 0x0603A881 RID: 239745 RVA: 0x007E08AC File Offset: 0x007DEAAC
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E5FB RID: 58875
-		// (get) Token: 0x060373DF RID: 226271 RVA: 0x0077C794 File Offset: 0x0077A994
+		// Token: 0x1700F237 RID: 62007
+		// (get) Token: 0x0603A882 RID: 239746 RVA: 0x007E08E8 File Offset: 0x007DEAE8
 		public ICommonBtOverride? Data
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060373E0 RID: 226272 RVA: 0x0077C7F1 File Offset: 0x0077A9F1
+		// Token: 0x0603A883 RID: 239747 RVA: 0x007E0945 File Offset: 0x007DEB45
 		public static Offset<TCsvCommonBtOverrideData> CreateTCsvCommonBtOverrideData(FlatBufferBuilder builder, int Id = 0, Offset<ICommonBtOverride> DataOffset = default(Offset<ICommonBtOverride>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return TCsvCommonBtOverrideData.EndTCsvCommonBtOverrideData(builder);
 		}
 
-		// Token: 0x060373E1 RID: 226273 RVA: 0x0077C80E File Offset: 0x0077AA0E
+		// Token: 0x0603A884 RID: 239748 RVA: 0x007E0962 File Offset: 0x007DEB62
 		public static void StartTCsvCommonBtOverrideData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060373E2 RID: 226274 RVA: 0x0077C817 File Offset: 0x0077AA17
+		// Token: 0x0603A885 RID: 239749 RVA: 0x007E096B File Offset: 0x007DEB6B
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x060373E3 RID: 226275 RVA: 0x0077C822 File Offset: 0x0077AA22
+		// Token: 0x0603A886 RID: 239750 RVA: 0x007E0976 File Offset: 0x007DEB76
 		public static void AddData(FlatBufferBuilder builder, Offset<ICommonBtOverride> dataOffset)
 		{
 			builder.AddOffset(1, dataOffset.Value, 0);
 		}
 
-		// Token: 0x060373E4 RID: 226276 RVA: 0x0077C832 File Offset: 0x0077AA32
+		// Token: 0x0603A887 RID: 239751 RVA: 0x007E0986 File Offset: 0x007DEB86
 		public static Offset<TCsvCommonBtOverrideData> EndTCsvCommonBtOverrideData(FlatBufferBuilder builder)
 		{
 			return new Offset<TCsvCommonBtOverrideData>(builder.EndTable());
 		}
 
-		// Token: 0x060373E5 RID: 226277 RVA: 0x0077C840 File Offset: 0x0077AA40
+		// Token: 0x0603A888 RID: 239752 RVA: 0x007E0994 File Offset: 0x007DEB94
 		public TCsvCommonBtOverrideDataT UnPack()
 		{
 			TCsvCommonBtOverrideDataT tcsvCommonBtOverrideDataT = new TCsvCommonBtOverrideDataT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return tcsvCommonBtOverrideDataT;
 		}
 
-		// Token: 0x060373E6 RID: 226278 RVA: 0x0077C85C File Offset: 0x0077AA5C
+		// Token: 0x0603A889 RID: 239753 RVA: 0x007E09B0 File Offset: 0x007DEBB0
 		public void UnPackTo(TCsvCommonBtOverrideDataT _o)
 		{
 			_o.Id = this.Id;
 			_o.Data = ((this.Data != null) ? this.Data.Value.UnPack() : null);
 		}
 
-		// Token: 0x060373E7 RID: 226279 RVA: 0x0077C8A4 File Offset: 0x0077AAA4
+		// Token: 0x0603A88A RID: 239754 RVA: 0x007E09F8 File Offset: 0x007DEBF8
 		public static Offset<TCsvCommonBtOverrideData> Pack(FlatBufferBuilder builder, TCsvCommonBtOverrideDataT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return TCsvCommonBtOverrideData.CreateTCsvCommonBtOverrideData(builder, _o.Id, dataOffset);
 		}
 
-		// Token: 0x040126C4 RID: 75460
+		// Token: 0x0401370D RID: 79629
 		private Table __p;
 	}
 }

@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A2A RID: 2602
+	// Token: 0x020001D4 RID: 468
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EClientEntityStreamingState")]
 	public enum EClientEntityStreamingState : byte
 	{
-		// Token: 0x0400458E RID: 17806
+		// Token: 0x04000B66 RID: 2918
 		Activate,
-		// Token: 0x0400458F RID: 17807
+		// Token: 0x04000B67 RID: 2919
 		Deactivate,
-		// Token: 0x04004590 RID: 17808
+		// Token: 0x04000B68 RID: 2920
 		EClientEntityStreamingState_MAX
 	}
 }

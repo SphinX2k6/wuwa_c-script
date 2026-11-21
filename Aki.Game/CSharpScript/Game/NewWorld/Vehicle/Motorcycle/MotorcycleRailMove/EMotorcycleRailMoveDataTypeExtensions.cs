@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 {
-	// Token: 0x0200704F RID: 28751
+	// Token: 0x020061D0 RID: 25040
 	public static class EMotorcycleRailMoveDataTypeExtensions
 	{
-		// Token: 0x06045FA2 RID: 286626 RVA: 0x01170D78 File Offset: 0x0116EF78
+		// Token: 0x0603C188 RID: 246152 RVA: 0x0111AB14 File Offset: 0x01118D14
 		public static string ToEnumString(this EMotorcycleRailMoveDataType value)
 		{
 			string result;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return result;
 		}
 
-		// Token: 0x06045FA3 RID: 286627 RVA: 0x01170DE4 File Offset: 0x0116EFE4
+		// Token: 0x0603C189 RID: 246153 RVA: 0x0111AB80 File Offset: 0x01118D80
 		public static EMotorcycleRailMoveDataType FromString(string name)
 		{
 			EMotorcycleRailMoveDataType result;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return result;
 		}
 
-		// Token: 0x06045FA4 RID: 286628 RVA: 0x01170E10 File Offset: 0x0116F010
+		// Token: 0x0603C18A RID: 246154 RVA: 0x0111ABAC File Offset: 0x01118DAC
 		public static bool TryFromString(string name, out EMotorcycleRailMoveDataType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return true;
 		}
 
-		// Token: 0x06045FA5 RID: 286629 RVA: 0x01170E9C File Offset: 0x0116F09C
+		// Token: 0x0603C18B RID: 246155 RVA: 0x0111AC38 File Offset: 0x01118E38
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			};
 		}
 
-		// Token: 0x06045FA6 RID: 286630 RVA: 0x01170ED4 File Offset: 0x0116F0D4
+		// Token: 0x0603C18C RID: 246156 RVA: 0x0111AC70 File Offset: 0x01118E70
 		public static EMotorcycleRailMoveDataType[] GetValues()
 		{
 			return new EMotorcycleRailMoveDataType[]
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			};
 		}
 
-		// Token: 0x06045FA7 RID: 286631 RVA: 0x01170EE7 File Offset: 0x0116F0E7
+		// Token: 0x0603C18D RID: 246157 RVA: 0x0111AC83 File Offset: 0x01118E83
 		public static string[] GetNames()
 		{
 			return new string[]

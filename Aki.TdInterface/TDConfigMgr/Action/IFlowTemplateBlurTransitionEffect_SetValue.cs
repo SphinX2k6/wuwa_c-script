@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A9C RID: 6812
+	// Token: 0x02001C35 RID: 7221
 	public class IFlowTemplateBlurTransitionEffect_SetValue
 	{
-		// Token: 0x04005A02 RID: 23042
+		// Token: 0x04005E72 RID: 24178
 		public EFlowTemplateTransitionEffectType Type;
 
-		// Token: 0x04005A03 RID: 23043
+		// Token: 0x04005E73 RID: 24179
 		public float Aperture;
 
-		// Token: 0x04005A04 RID: 23044
+		// Token: 0x04005E74 RID: 24180
 		public float FadeInTime;
 
-		// Token: 0x04005A05 RID: 23045
+		// Token: 0x04005E75 RID: 24181
 		public float FadeOutTime;
 	}
 }

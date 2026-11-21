@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F2A RID: 28458
+	// Token: 0x020076B1 RID: 30385
 	public struct ISceneActorProjection3dTo2dEvent : IFlatbufferObject
 	{
-		// Token: 0x1700D384 RID: 54148
-		// (get) Token: 0x06032467 RID: 205927 RVA: 0x006CA625 File Offset: 0x006C8825
+		// Token: 0x1700DEE0 RID: 57056
+		// (get) Token: 0x060354BF RID: 218303 RVA: 0x0072658D File Offset: 0x0072478D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032468 RID: 205928 RVA: 0x006CA632 File Offset: 0x006C8832
+		// Token: 0x060354C0 RID: 218304 RVA: 0x0072659A File Offset: 0x0072479A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032469 RID: 205929 RVA: 0x006CA63C File Offset: 0x006C883C
+		// Token: 0x060354C1 RID: 218305 RVA: 0x007265A4 File Offset: 0x007247A4
 		public static ISceneActorProjection3dTo2dEvent GetRootAsISceneActorProjection3dTo2dEvent(ByteBuffer _bb)
 		{
 			return ISceneActorProjection3dTo2dEvent.GetRootAsISceneActorProjection3dTo2dEvent(_bb, default(ISceneActorProjection3dTo2dEvent));
 		}
 
-		// Token: 0x0603246A RID: 205930 RVA: 0x006CA658 File Offset: 0x006C8858
+		// Token: 0x060354C2 RID: 218306 RVA: 0x007265C0 File Offset: 0x007247C0
 		public static ISceneActorProjection3dTo2dEvent GetRootAsISceneActorProjection3dTo2dEvent(ByteBuffer _bb, ISceneActorProjection3dTo2dEvent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603246B RID: 205931 RVA: 0x006CA675 File Offset: 0x006C8875
+		// Token: 0x060354C3 RID: 218307 RVA: 0x007265DD File Offset: 0x007247DD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603246C RID: 205932 RVA: 0x006CA684 File Offset: 0x006C8884
+		// Token: 0x060354C4 RID: 218308 RVA: 0x007265EC File Offset: 0x007247EC
 		public ISceneActorProjection3dTo2dEvent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D385 RID: 54149
-		// (get) Token: 0x0603246D RID: 205933 RVA: 0x006CA694 File Offset: 0x006C8894
+		// Token: 0x1700DEE1 RID: 57057
+		// (get) Token: 0x060354C5 RID: 218309 RVA: 0x007265FC File Offset: 0x007247FC
 		public ESceneActorEventType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D386 RID: 54150
-		// (get) Token: 0x0603246E RID: 205934 RVA: 0x006CA6D0 File Offset: 0x006C88D0
+		// Token: 0x1700DEE2 RID: 57058
+		// (get) Token: 0x060354C6 RID: 218310 RVA: 0x00726638 File Offset: 0x00724838
 		public IActorRef? BpActor
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D387 RID: 54151
-		// (get) Token: 0x0603246F RID: 205935 RVA: 0x006CA730 File Offset: 0x006C8930
+		// Token: 0x1700DEE3 RID: 57059
+		// (get) Token: 0x060354C7 RID: 218311 RVA: 0x00726698 File Offset: 0x00724898
 		public IActorRef? PPVolume
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032470 RID: 205936 RVA: 0x006CA78D File Offset: 0x006C898D
+		// Token: 0x060354C8 RID: 218312 RVA: 0x007266F5 File Offset: 0x007248F5
 		public static Offset<ISceneActorProjection3dTo2dEvent> CreateISceneActorProjection3dTo2dEvent(FlatBufferBuilder builder, ESceneActorEventType Type = ESceneActorEventType.PlayMusicPlants, Offset<IActorRef> BpActorOffset = default(Offset<IActorRef>), Offset<IActorRef> PPVolumeOffset = default(Offset<IActorRef>))
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISceneActorProjection3dTo2dEvent.EndISceneActorProjection3dTo2dEvent(builder);
 		}
 
-		// Token: 0x06032471 RID: 205937 RVA: 0x006CA7B1 File Offset: 0x006C89B1
+		// Token: 0x060354C9 RID: 218313 RVA: 0x00726719 File Offset: 0x00724919
 		public static void StartISceneActorProjection3dTo2dEvent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06032472 RID: 205938 RVA: 0x006CA7BA File Offset: 0x006C89BA
+		// Token: 0x060354CA RID: 218314 RVA: 0x00726722 File Offset: 0x00724922
 		public static void AddType(FlatBufferBuilder builder, ESceneActorEventType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06032473 RID: 205939 RVA: 0x006CA7C5 File Offset: 0x006C89C5
+		// Token: 0x060354CB RID: 218315 RVA: 0x0072672D File Offset: 0x0072492D
 		public static void AddBpActor(FlatBufferBuilder builder, Offset<IActorRef> bpActorOffset)
 		{
 			builder.AddOffset(1, bpActorOffset.Value, 0);
 		}
 
-		// Token: 0x06032474 RID: 205940 RVA: 0x006CA7D5 File Offset: 0x006C89D5
+		// Token: 0x060354CC RID: 218316 RVA: 0x0072673D File Offset: 0x0072493D
 		public static void AddPPVolume(FlatBufferBuilder builder, Offset<IActorRef> pPVolumeOffset)
 		{
 			builder.AddOffset(2, pPVolumeOffset.Value, 0);
 		}
 
-		// Token: 0x06032475 RID: 205941 RVA: 0x006CA7E5 File Offset: 0x006C89E5
+		// Token: 0x060354CD RID: 218317 RVA: 0x0072674D File Offset: 0x0072494D
 		public static Offset<ISceneActorProjection3dTo2dEvent> EndISceneActorProjection3dTo2dEvent(FlatBufferBuilder builder)
 		{
 			return new Offset<ISceneActorProjection3dTo2dEvent>(builder.EndTable());
 		}
 
-		// Token: 0x06032476 RID: 205942 RVA: 0x006CA7F4 File Offset: 0x006C89F4
+		// Token: 0x060354CE RID: 218318 RVA: 0x0072675C File Offset: 0x0072495C
 		public ISceneActorProjection3dTo2dEventT UnPack()
 		{
 			ISceneActorProjection3dTo2dEventT sceneActorProjection3dTo2dEventT = new ISceneActorProjection3dTo2dEventT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return sceneActorProjection3dTo2dEventT;
 		}
 
-		// Token: 0x06032477 RID: 205943 RVA: 0x006CA810 File Offset: 0x006C8A10
+		// Token: 0x060354CF RID: 218319 RVA: 0x00726778 File Offset: 0x00724978
 		public void UnPackTo(ISceneActorProjection3dTo2dEventT _o)
 		{
 			_o.Type = this.Type;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.PPVolume = ((this.PPVolume != null) ? this.PPVolume.Value.UnPack() : null);
 		}
 
-		// Token: 0x06032478 RID: 205944 RVA: 0x006CA888 File Offset: 0x006C8A88
+		// Token: 0x060354D0 RID: 218320 RVA: 0x007267F0 File Offset: 0x007249F0
 		public static Offset<ISceneActorProjection3dTo2dEvent> Pack(FlatBufferBuilder builder, ISceneActorProjection3dTo2dEventT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISceneActorProjection3dTo2dEvent.CreateISceneActorProjection3dTo2dEvent(builder, _o.Type, bpActorOffset, ppvolumeOffset);
 		}
 
-		// Token: 0x04011917 RID: 71959
+		// Token: 0x0401289F RID: 75935
 		private Table __p;
 	}
 }

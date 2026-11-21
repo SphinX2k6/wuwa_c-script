@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02000DC5 RID: 3525
+// Token: 0x02000277 RID: 631
 public interface IPerformanceLimitConfig
 {
-	// Token: 0x170005CB RID: 1483
-	// (get) Token: 0x0600536D RID: 21357
-	// (set) Token: 0x0600536E RID: 21358
+	// Token: 0x170005F1 RID: 1521
+	// (get) Token: 0x060026E1 RID: 9953
+	// (set) Token: 0x060026E2 RID: 9954
 	bool FrameLimit { get; set; }
 
-	// Token: 0x170005CC RID: 1484
-	// (get) Token: 0x0600536F RID: 21359
-	// (set) Token: 0x06005370 RID: 21360
+	// Token: 0x170005F2 RID: 1522
+	// (get) Token: 0x060026E3 RID: 9955
+	// (set) Token: 0x060026E4 RID: 9956
 	bool CacheWorldFrame { get; set; }
 }

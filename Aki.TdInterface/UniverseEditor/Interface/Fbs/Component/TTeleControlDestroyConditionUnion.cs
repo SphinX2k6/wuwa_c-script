@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CBE RID: 23742
+	// Token: 0x020062EF RID: 25327
 	public class TTeleControlDestroyConditionUnion
 	{
-		// Token: 0x1700B25C RID: 45660
-		// (get) Token: 0x06028A43 RID: 166467 RVA: 0x005959BE File Offset: 0x00593BBE
-		// (set) Token: 0x06028A44 RID: 166468 RVA: 0x005959C6 File Offset: 0x00593BC6
+		// Token: 0x1700BBB6 RID: 48054
+		// (get) Token: 0x0602B08B RID: 176267 RVA: 0x005DE132 File Offset: 0x005DC332
+		// (set) Token: 0x0602B08C RID: 176268 RVA: 0x005DE13A File Offset: 0x005DC33A
 		public TTeleControlDestroyCondition Type { get; set; }
 
-		// Token: 0x1700B25D RID: 45661
-		// (get) Token: 0x06028A45 RID: 166469 RVA: 0x005959CF File Offset: 0x00593BCF
-		// (set) Token: 0x06028A46 RID: 166470 RVA: 0x005959D7 File Offset: 0x00593BD7
+		// Token: 0x1700BBB7 RID: 48055
+		// (get) Token: 0x0602B08D RID: 176269 RVA: 0x005DE143 File Offset: 0x005DC343
+		// (set) Token: 0x0602B08E RID: 176270 RVA: 0x005DE14B File Offset: 0x005DC34B
 		public object Value { get; set; }
 
-		// Token: 0x06028A47 RID: 166471 RVA: 0x005959E0 File Offset: 0x00593BE0
+		// Token: 0x0602B08F RID: 176271 RVA: 0x005DE154 File Offset: 0x005DC354
 		public TTeleControlDestroyConditionUnion()
 		{
 			this.Type = TTeleControlDestroyCondition.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028A48 RID: 166472 RVA: 0x005959F6 File Offset: 0x00593BF6
+		// Token: 0x0602B090 RID: 176272 RVA: 0x005DE16A File Offset: 0x005DC36A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028A49 RID: 166473 RVA: 0x00595A08 File Offset: 0x00593C08
+		// Token: 0x0602B091 RID: 176273 RVA: 0x005DE17C File Offset: 0x005DC37C
 		public ICreateBulletDestroyConditionT AsICreateBulletDestroyCondition()
 		{
 			return this.As<ICreateBulletDestroyConditionT>();
 		}
 
-		// Token: 0x06028A4A RID: 166474 RVA: 0x00595A10 File Offset: 0x00593C10
+		// Token: 0x0602B092 RID: 176274 RVA: 0x005DE184 File Offset: 0x005DC384
 		public static TTeleControlDestroyConditionUnion FromICreateBulletDestroyCondition(ICreateBulletDestroyConditionT _icreatebulletdestroycondition)
 		{
 			return new TTeleControlDestroyConditionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028A4B RID: 166475 RVA: 0x00595A25 File Offset: 0x00593C25
+		// Token: 0x0602B093 RID: 176275 RVA: 0x005DE199 File Offset: 0x005DC399
 		public ILetGoDestroyConditionT AsILetGoDestroyCondition()
 		{
 			return this.As<ILetGoDestroyConditionT>();
 		}
 
-		// Token: 0x06028A4C RID: 166476 RVA: 0x00595A2D File Offset: 0x00593C2D
+		// Token: 0x0602B094 RID: 176276 RVA: 0x005DE1A1 File Offset: 0x005DC3A1
 		public static TTeleControlDestroyConditionUnion FromILetGoDestroyCondition(ILetGoDestroyConditionT _iletgodestroycondition)
 		{
 			return new TTeleControlDestroyConditionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028A4D RID: 166477 RVA: 0x00595A42 File Offset: 0x00593C42
+		// Token: 0x0602B095 RID: 176277 RVA: 0x005DE1B6 File Offset: 0x005DC3B6
 		public IThrowDestroyConditionT AsIThrowDestroyCondition()
 		{
 			return this.As<IThrowDestroyConditionT>();
 		}
 
-		// Token: 0x06028A4E RID: 166478 RVA: 0x00595A4A File Offset: 0x00593C4A
+		// Token: 0x0602B096 RID: 176278 RVA: 0x005DE1BE File Offset: 0x005DC3BE
 		public static TTeleControlDestroyConditionUnion FromIThrowDestroyCondition(IThrowDestroyConditionT _ithrowdestroycondition)
 		{
 			return new TTeleControlDestroyConditionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028A4F RID: 166479 RVA: 0x00595A60 File Offset: 0x00593C60
+		// Token: 0x0602B097 RID: 176279 RVA: 0x005DE1D4 File Offset: 0x005DC3D4
 		public static int Pack(FlatBufferBuilder builder, TTeleControlDestroyConditionUnion _o)
 		{
 			switch (_o.Type)

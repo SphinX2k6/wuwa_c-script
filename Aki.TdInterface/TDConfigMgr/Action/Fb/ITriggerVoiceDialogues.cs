@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200284C RID: 10316
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B1F RID: 11039
 	public class ITriggerVoiceDialogues : IInteractEffect
 	{
-		// Token: 0x0600E4AB RID: 58539 RVA: 0x0021A6A4 File Offset: 0x002188A4
+		// Token: 0x0600F2D0 RID: 62160 RVA: 0x00237508 File Offset: 0x00235708
 		public static ITriggerVoiceDialogues Create(ITriggerVoiceDialogues? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045D5 RID: 17877
-		// (get) Token: 0x0600E4AC RID: 58540 RVA: 0x0021A6C3 File Offset: 0x002188C3
+		// Token: 0x17004940 RID: 18752
+		// (get) Token: 0x0600F2D1 RID: 62161 RVA: 0x00237527 File Offset: 0x00235727
 		public override EInteractEffectType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045D6 RID: 17878
-		// (get) Token: 0x0600E4AD RID: 58541 RVA: 0x0021A6D0 File Offset: 0x002188D0
+		// Token: 0x17004941 RID: 18753
+		// (get) Token: 0x0600F2D2 RID: 62162 RVA: 0x00237534 File Offset: 0x00235734
 		public override float? DelayTime
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045D7 RID: 17879
-		// (get) Token: 0x0600E4AE RID: 58542 RVA: 0x0021A706 File Offset: 0x00218906
+		// Token: 0x17004942 RID: 18754
+		// (get) Token: 0x0600F2D3 RID: 62163 RVA: 0x0023756A File Offset: 0x0023576A
 		public virtual PlayFlow Flow
 		{
 			get
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045D8 RID: 17880
-		// (get) Token: 0x0600E4AF RID: 58543 RVA: 0x0021A73C File Offset: 0x0021893C
+		// Token: 0x17004943 RID: 18755
+		// (get) Token: 0x0600F2D4 RID: 62164 RVA: 0x002375A0 File Offset: 0x002357A0
 		public virtual bool? ShowTalker
 		{
 			get
@@ -76,14 +74,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E84 RID: 32388
+		// Token: 0x04008541 RID: 34113
 		private ITriggerVoiceDialogues Instance;
 
-		// Token: 0x04007E85 RID: 32389
+		// Token: 0x04008542 RID: 34114
 		[Nullable(2)]
 		private PlayFlow _FlowCache;
 
-		// Token: 0x04007E86 RID: 32390
+		// Token: 0x04008543 RID: 34115
 		private bool _FlowInited;
 	}
 }

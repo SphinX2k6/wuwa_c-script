@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000905 RID: 2309
+	// Token: 0x02000950 RID: 2384
 	public class ConfigSetAccountAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003631 RID: 13873 RVA: 0x0018BAB1 File Offset: 0x00189CB1
+		// Token: 0x060037F3 RID: 14323 RVA: 0x00198CD1 File Offset: 0x00196ED1
 		static ConfigSetAccountAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSetAccountAll.CreateStaticDefaultValue), new Action(ConfigSetAccountAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003632 RID: 13874 RVA: 0x0018BAD0 File Offset: 0x00189CD0
+		// Token: 0x060037F4 RID: 14324 RVA: 0x00198CF0 File Offset: 0x00196EF0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSetAccountAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003633 RID: 13875 RVA: 0x0018BB4F File Offset: 0x00189D4F
+		// Token: 0x060037F5 RID: 14325 RVA: 0x00198D6F File Offset: 0x00196F6F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSetAccountAll.LogPair = null;
 			ConfigSetAccountAll.HandleId = 0;
 		}
 
-		// Token: 0x06003634 RID: 13876 RVA: 0x0018BB5D File Offset: 0x00189D5D
+		// Token: 0x060037F6 RID: 14326 RVA: 0x00198D7D File Offset: 0x00196F7D
 		public static void Init()
 		{
 			ConfigSetAccountAll.HandleId = ConfigCommon.InitDataStatement(ConfigSetAccountAll.HandleId, "db_platformchannel.db", "select BinData from `SetAccount` where PackageType!=?");
 		}
 
-		// Token: 0x06003635 RID: 13877 RVA: 0x0018BB78 File Offset: 0x00189D78
+		// Token: 0x060037F7 RID: 14327 RVA: 0x00198D98 File Offset: 0x00196F98
 		[NullableContext(2)]
 		public static IReadOnlyList<SetAccount> GetConfigList(int p0PackageType, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003F09 RID: 16137
+		// Token: 0x04004116 RID: 16662
 		private const string DB = "db_platformchannel.db";
 
-		// Token: 0x04003F0A RID: 16138
+		// Token: 0x04004117 RID: 16663
 		private const string FILE = "p.平台渠道.xlsx";
 
-		// Token: 0x04003F0B RID: 16139
+		// Token: 0x04004118 RID: 16664
 		private const string TABLE = "SetAccount";
 
-		// Token: 0x04003F0C RID: 16140
+		// Token: 0x04004119 RID: 16665
 		private const string COMMAND = "select BinData from `SetAccount` where PackageType!=?";
 
-		// Token: 0x04003F0D RID: 16141
+		// Token: 0x0400411A RID: 16666
 		private const string KEY_PREFIX = "SetAccountAll";
 
-		// Token: 0x04003F0E RID: 16142
+		// Token: 0x0400411B RID: 16667
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003F0F RID: 16143
+		// Token: 0x0400411C RID: 16668
 		private static int HandleId;
 	}
 }

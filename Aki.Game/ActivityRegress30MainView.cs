@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001448 RID: 5192
+// Token: 0x020008FC RID: 2300
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivityRegress30MainView : ActivitySubViewBase
 {
-	// Token: 0x0600929B RID: 37531 RVA: 0x001F6D40 File Offset: 0x001F4F40
+	// Token: 0x06006630 RID: 26160 RVA: 0x001FF87C File Offset: 0x001FDA7C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 22;
@@ -94,7 +94,7 @@ public class ActivityRegress30MainView : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600929C RID: 37532 RVA: 0x001F71A4 File Offset: 0x001F53A4
+	// Token: 0x06006631 RID: 26161 RVA: 0x001FFCE0 File Offset: 0x001FDEE0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRegress30MainView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -105,13 +105,13 @@ public class ActivityRegress30MainView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600929D RID: 37533 RVA: 0x001F71E7 File Offset: 0x001F53E7
+	// Token: 0x06006632 RID: 26162 RVA: 0x001FFD23 File Offset: 0x001FDF23
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTitle();
 	}
 
-	// Token: 0x0600929E RID: 37534 RVA: 0x001F71F0 File Offset: 0x001F53F0
+	// Token: 0x06006633 RID: 26163 RVA: 0x001FFD2C File Offset: 0x001FDF2C
 	private void RefreshTitle()
 	{
 		this.TitleComponent.SetActivityBaseData(this.ActivityBaseData);
@@ -124,7 +124,7 @@ public class ActivityRegress30MainView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600929F RID: 37535 RVA: 0x001F7258 File Offset: 0x001F5458
+	// Token: 0x06006634 RID: 26164 RVA: 0x001FFD94 File Offset: 0x001FDF94
 	protected override void OnRefreshView()
 	{
 		base.OnRefreshView();
@@ -161,7 +161,7 @@ public class ActivityRegress30MainView : ActivitySubViewBase
 		this.OnRecallActivityInfoUpdate();
 	}
 
-	// Token: 0x060092A0 RID: 37536 RVA: 0x001F73C0 File Offset: 0x001F55C0
+	// Token: 0x06006635 RID: 26165 RVA: 0x001FFEFC File Offset: 0x001FE0FC
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -175,13 +175,13 @@ public class ActivityRegress30MainView : ActivitySubViewBase
 		EventSystem.Instance.Add(EEventName.RecallActivityInfoUpdate, new Action(this.OnRecallActivityInfoUpdate));
 	}
 
-	// Token: 0x060092A1 RID: 37537 RVA: 0x001F749E File Offset: 0x001F569E
+	// Token: 0x06006636 RID: 26166 RVA: 0x001FFFDA File Offset: 0x001FE1DA
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Emit(EEventName.RecallActivityInfoUpdate);
 	}
 
-	// Token: 0x060092A2 RID: 37538 RVA: 0x001F74B0 File Offset: 0x001F56B0
+	// Token: 0x06006637 RID: 26167 RVA: 0x001FFFEC File Offset: 0x001FE1EC
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -199,13 +199,13 @@ public class ActivityRegress30MainView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060092A3 RID: 37539 RVA: 0x001F7596 File Offset: 0x001F5796
+	// Token: 0x06006638 RID: 26168 RVA: 0x002000D2 File Offset: 0x001FE2D2
 	private void OnRecallActivityInfoUpdate()
 	{
 		base.GetItem(21).SetUIActive(ActivityRegressModel.Instance.DisposableReward);
 	}
 
-	// Token: 0x060092A4 RID: 37540 RVA: 0x001F75B0 File Offset: 0x001F57B0
+	// Token: 0x06006639 RID: 26169 RVA: 0x002000EC File Offset: 0x001FE2EC
 	private void OnClickBattlePassBtn()
 	{
 		IActivityRegressMainViewOpenData activityRegressMainViewOpenData = new IActivityRegressMainViewOpenData
@@ -217,7 +217,7 @@ public class ActivityRegress30MainView : ActivitySubViewBase
 		UiManager.Instance.OpenView(EUiViewName.ActivityRegressMainView, activityRegressMainViewOpenData, null);
 	}
 
-	// Token: 0x060092A5 RID: 37541 RVA: 0x001F75F4 File Offset: 0x001F57F4
+	// Token: 0x0600663A RID: 26170 RVA: 0x00200130 File Offset: 0x001FE330
 	private void OnClickRoleBtnBtn()
 	{
 		ActivityRegressHelper.ReportRecallLog1023New(EReportLogEventNewType.TrialRole);
@@ -225,7 +225,7 @@ public class ActivityRegress30MainView : ActivitySubViewBase
 		ActivityRegressModel.Instance.ActivityData.SetTrialRoleRedDotChecked(true);
 	}
 
-	// Token: 0x060092A6 RID: 37542 RVA: 0x001F762C File Offset: 0x001F582C
+	// Token: 0x0600663B RID: 26171 RVA: 0x00200168 File Offset: 0x001FE368
 	private void OnClickSignBtnBtn()
 	{
 		IActivityRegressMainViewOpenData activityRegressMainViewOpenData = new IActivityRegressMainViewOpenData
@@ -237,14 +237,14 @@ public class ActivityRegress30MainView : ActivitySubViewBase
 		UiManager.Instance.OpenView(EUiViewName.ActivityRegressMainView, activityRegressMainViewOpenData, null);
 	}
 
-	// Token: 0x060092A7 RID: 37543 RVA: 0x001F766F File Offset: 0x001F586F
+	// Token: 0x0600663C RID: 26172 RVA: 0x002001AB File Offset: 0x001FE3AB
 	private void OnClickNewVersionBtnBtn()
 	{
 		ActivityRegressHelper.ReportRecallLog1023New(EReportLogEventNewType.NewVersion);
 		UiManager.Instance.OpenView(EUiViewName.ActivityRegressNewVersionMainView, null, null);
 	}
 
-	// Token: 0x060092A8 RID: 37544 RVA: 0x001F7688 File Offset: 0x001F5888
+	// Token: 0x0600663D RID: 26173 RVA: 0x002001C4 File Offset: 0x001FE3C4
 	private void OnClickCultivateBtnBtn()
 	{
 		IActivityRegressMainViewOpenData activityRegressMainViewOpenData = new IActivityRegressMainViewOpenData
@@ -256,19 +256,19 @@ public class ActivityRegress30MainView : ActivitySubViewBase
 		UiManager.Instance.OpenView(EUiViewName.ActivityRegressMainView, activityRegressMainViewOpenData, null);
 	}
 
-	// Token: 0x060092A9 RID: 37545 RVA: 0x001F76CB File Offset: 0x001F58CB
+	// Token: 0x0600663E RID: 26174 RVA: 0x00200207 File Offset: 0x001FE407
 	private void OnClickStartUpBtnBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.ActivityRegressStartupView, true, null);
 	}
 
-	// Token: 0x060092AA RID: 37546 RVA: 0x001F76E3 File Offset: 0x001F58E3
+	// Token: 0x0600663F RID: 26175 RVA: 0x0020021F File Offset: 0x001FE41F
 	private void OnClickQuestionnaireBtnBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.ActivityRegressQuestionnaireView, null, null);
 	}
 
-	// Token: 0x060092AB RID: 37547 RVA: 0x001F76F6 File Offset: 0x001F58F6
+	// Token: 0x06006640 RID: 26176 RVA: 0x00200232 File Offset: 0x001FE432
 	private void OnClickShopBtnBtn()
 	{
 		SkipTaskManager.RunByConfigId(859201, null);
@@ -276,7 +276,7 @@ public class ActivityRegress30MainView : ActivitySubViewBase
 		ActivityRegressModel.Instance.ActivityData.SetShopRedDotChecked();
 	}
 
-	// Token: 0x060092AC RID: 37548 RVA: 0x001F7718 File Offset: 0x001F5918
+	// Token: 0x06006641 RID: 26177 RVA: 0x00200254 File Offset: 0x001FE454
 	private void OnClickRewardBtn()
 	{
 		ActivityRegressModel.Instance.ActivityData.SetRegressRewardBtnReached();
@@ -302,7 +302,7 @@ public class ActivityRegress30MainView : ActivitySubViewBase
 		this.RewardPopupInternal.Refresh(data);
 	}
 
-	// Token: 0x060092AD RID: 37549 RVA: 0x001F7820 File Offset: 0x001F5A20
+	// Token: 0x06006642 RID: 26178 RVA: 0x0020035C File Offset: 0x001FE55C
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -329,7 +329,7 @@ public class ActivityRegress30MainView : ActivitySubViewBase
 		return list;
 	}
 
-	// Token: 0x060092AE RID: 37550 RVA: 0x001F78F8 File Offset: 0x001F5AF8
+	// Token: 0x06006643 RID: 26179 RVA: 0x00200434 File Offset: 0x001FE634
 	protected override void OnBeforeHide()
 	{
 		base.OnBeforeHide();
@@ -346,86 +346,86 @@ public class ActivityRegress30MainView : ActivitySubViewBase
 		rewardPopupInternal.SetActive(false);
 	}
 
-	// Token: 0x040040FE RID: 16638
+	// Token: 0x04004196 RID: 16790
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x040040FF RID: 16639
+	// Token: 0x04004197 RID: 16791
 	private SignItem SignItemInternal;
 
-	// Token: 0x04004100 RID: 16640
+	// Token: 0x04004198 RID: 16792
 	private ActivityRegressRoleItem ActivityRegressRoleItemInternal;
 
-	// Token: 0x04004101 RID: 16641
+	// Token: 0x04004199 RID: 16793
 	private RegressRewardPopup RewardPopupInternal;
 
-	// Token: 0x02007A7F RID: 31359
+	// Token: 0x02006C03 RID: 27651
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040284E7 RID: 165095
+		// Token: 0x04023801 RID: 145409
 		public const int TitleItem = 0;
 
-		// Token: 0x040284E8 RID: 165096
+		// Token: 0x04023802 RID: 145410
 		public const int BattlePassBtn = 1;
 
-		// Token: 0x040284E9 RID: 165097
+		// Token: 0x04023803 RID: 145411
 		public const int SignBtn = 2;
 
-		// Token: 0x040284EA RID: 165098
+		// Token: 0x04023804 RID: 145412
 		public const int CultivateBtn = 3;
 
-		// Token: 0x040284EB RID: 165099
+		// Token: 0x04023805 RID: 145413
 		public const int NewVersionBtn = 4;
 
-		// Token: 0x040284EC RID: 165100
+		// Token: 0x04023806 RID: 145414
 		public const int RoleBtn = 5;
 
-		// Token: 0x040284ED RID: 165101
+		// Token: 0x04023807 RID: 145415
 		public const int StartUpBtn = 6;
 
-		// Token: 0x040284EE RID: 165102
+		// Token: 0x04023808 RID: 145416
 		public const int QuestionnaireBtn = 7;
 
-		// Token: 0x040284EF RID: 165103
+		// Token: 0x04023809 RID: 145417
 		public const int ShopBtn = 8;
 
-		// Token: 0x040284F0 RID: 165104
+		// Token: 0x0402380A RID: 145418
 		public const int RoleItem = 9;
 
-		// Token: 0x040284F1 RID: 165105
+		// Token: 0x0402380B RID: 145419
 		public const int BpLevelText = 10;
 
-		// Token: 0x040284F2 RID: 165106
+		// Token: 0x0402380C RID: 145420
 		public const int BpMaxText = 11;
 
-		// Token: 0x040284F3 RID: 165107
+		// Token: 0x0402380D RID: 145421
 		public const int SignRedDotItem = 12;
 
-		// Token: 0x040284F4 RID: 165108
+		// Token: 0x0402380E RID: 145422
 		public const int BpRedDotItem = 13;
 
-		// Token: 0x040284F5 RID: 165109
+		// Token: 0x0402380F RID: 145423
 		public const int TrialRoleRedDotItem = 14;
 
-		// Token: 0x040284F6 RID: 165110
+		// Token: 0x04023810 RID: 145424
 		public const int StartViewRedDotItem = 15;
 
-		// Token: 0x040284F7 RID: 165111
+		// Token: 0x04023811 RID: 145425
 		public const int QuestionBtnRedDotRedDotItem = 16;
 
-		// Token: 0x040284F8 RID: 165112
+		// Token: 0x04023812 RID: 145426
 		public const int ShopRedDotItem = 17;
 
-		// Token: 0x040284F9 RID: 165113
+		// Token: 0x04023813 RID: 145427
 		public const int RewardBtn = 18;
 
-		// Token: 0x040284FA RID: 165114
+		// Token: 0x04023814 RID: 145428
 		public const int RewardBtnDotItem = 19;
 
-		// Token: 0x040284FB RID: 165115
+		// Token: 0x04023815 RID: 145429
 		public const int RewardPopup = 20;
 
-		// Token: 0x040284FC RID: 165116
+		// Token: 0x04023816 RID: 145430
 		public const int RewardBtnFinished = 21;
 	}
 }

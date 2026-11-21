@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CBE RID: 3262
+	// Token: 0x02000DA2 RID: 3490
 	public struct FloroRanchUnitType : IFlatbufferObject
 	{
-		// Token: 0x17001381 RID: 4993
-		// (get) Token: 0x06007520 RID: 29984 RVA: 0x0023F58C File Offset: 0x0023D78C
+		// Token: 0x170013DE RID: 5086
+		// (get) Token: 0x06007B2B RID: 31531 RVA: 0x0025E2B8 File Offset: 0x0025C4B8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007521 RID: 29985 RVA: 0x0023F599 File Offset: 0x0023D799
+		// Token: 0x06007B2C RID: 31532 RVA: 0x0025E2C5 File Offset: 0x0025C4C5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007522 RID: 29986 RVA: 0x0023F5A0 File Offset: 0x0023D7A0
+		// Token: 0x06007B2D RID: 31533 RVA: 0x0025E2CC File Offset: 0x0025C4CC
 		public static FloroRanchUnitType GetRootAsFloroRanchUnitType(ByteBuffer _bb)
 		{
 			return FloroRanchUnitType.GetRootAsFloroRanchUnitType(_bb, default(FloroRanchUnitType));
 		}
 
-		// Token: 0x06007523 RID: 29987 RVA: 0x0023F5BC File Offset: 0x0023D7BC
+		// Token: 0x06007B2E RID: 31534 RVA: 0x0025E2E8 File Offset: 0x0025C4E8
 		public static FloroRanchUnitType GetRootAsFloroRanchUnitType(ByteBuffer _bb, FloroRanchUnitType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007524 RID: 29988 RVA: 0x0023F5D9 File Offset: 0x0023D7D9
+		// Token: 0x06007B2F RID: 31535 RVA: 0x0025E305 File Offset: 0x0025C505
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007525 RID: 29989 RVA: 0x0023F5E8 File Offset: 0x0023D7E8
+		// Token: 0x06007B30 RID: 31536 RVA: 0x0025E314 File Offset: 0x0025C514
 		public FloroRanchUnitType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001382 RID: 4994
-		// (get) Token: 0x06007526 RID: 29990 RVA: 0x0023F5F8 File Offset: 0x0023D7F8
+		// Token: 0x170013DF RID: 5087
+		// (get) Token: 0x06007B31 RID: 31537 RVA: 0x0025E324 File Offset: 0x0025C524
 		public int Id
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004D2E RID: 19758
+		// Token: 0x04005312 RID: 21266
 		private Table __p;
 	}
 }

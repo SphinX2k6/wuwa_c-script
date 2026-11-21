@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B4C RID: 6988
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CFB RID: 7419
 	public class IInteractiveItemsFunction : EnableFunction
 	{
-		// Token: 0x06009587 RID: 38279 RVA: 0x00159A58 File Offset: 0x00157C58
+		// Token: 0x06009D71 RID: 40305 RVA: 0x0016A734 File Offset: 0x00168934
 		private IInteractiveItemsFunction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009588 RID: 38280 RVA: 0x00159A90 File Offset: 0x00157C90
+		// Token: 0x06009D72 RID: 40306 RVA: 0x0016A76C File Offset: 0x0016896C
 		public static IInteractiveItemsFunction Create([Nullable(2)] IInteractiveItemsFunction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009589 RID: 38281 RVA: 0x00159AA3 File Offset: 0x00157CA3
+		// Token: 0x06009D73 RID: 40307 RVA: 0x0016A77F File Offset: 0x0016897F
 		public static IInteractiveItemsFunction CreateFromSetValue([Nullable(2)] IInteractiveItemsFunction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600958A RID: 38282 RVA: 0x00159AB6 File Offset: 0x00157CB6
+		// Token: 0x06009D74 RID: 40308 RVA: 0x0016A792 File Offset: 0x00168992
 		public new IInteractiveItemsFunction_SetValue ToSetValue()
 		{
 			return new IInteractiveItemsFunction_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F28 RID: 12072
-		// (get) Token: 0x0600958B RID: 38283 RVA: 0x00159AD5 File Offset: 0x00157CD5
-		// (set) Token: 0x0600958C RID: 38284 RVA: 0x00159B00 File Offset: 0x00157D00
+		// Token: 0x1700314E RID: 12622
+		// (get) Token: 0x06009D75 RID: 40309 RVA: 0x0016A7B1 File Offset: 0x001689B1
+		// (set) Token: 0x06009D76 RID: 40310 RVA: 0x0016A7DC File Offset: 0x001689DC
 		public override EEnableFunctionType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F29 RID: 12073
-		// (get) Token: 0x0600958D RID: 38285 RVA: 0x00159B0E File Offset: 0x00157D0E
-		// (set) Token: 0x0600958E RID: 38286 RVA: 0x00159B39 File Offset: 0x00157D39
+		// Token: 0x1700314F RID: 12623
+		// (get) Token: 0x06009D77 RID: 40311 RVA: 0x0016A7EA File Offset: 0x001689EA
+		// (set) Token: 0x06009D78 RID: 40312 RVA: 0x0016A815 File Offset: 0x00168A15
 		public virtual bool Enable
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B7D RID: 23421
+		// Token: 0x0400601B RID: 24603
 		[Nullable(2)]
 		protected new IInteractiveItemsFunction FbInstance;
 
-		// Token: 0x04005B7E RID: 23422
+		// Token: 0x0400601C RID: 24604
 		[Nullable(2)]
 		protected new IInteractiveItemsFunction_SetValue PocoInterface;
 	}

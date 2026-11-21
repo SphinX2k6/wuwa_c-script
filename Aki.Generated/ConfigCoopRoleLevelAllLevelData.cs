@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001A4 RID: 420
+	// Token: 0x020001B6 RID: 438
 	public class ConfigCoopRoleLevelAllLevelData : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060009DB RID: 2523 RVA: 0x00091318 File Offset: 0x0008F518
+		// Token: 0x06000A47 RID: 2631 RVA: 0x00097250 File Offset: 0x00095450
 		static ConfigCoopRoleLevelAllLevelData()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCoopRoleLevelAllLevelData.CreateStaticDefaultValue), new Action(ConfigCoopRoleLevelAllLevelData.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060009DC RID: 2524 RVA: 0x00091338 File Offset: 0x0008F538
+		// Token: 0x06000A48 RID: 2632 RVA: 0x00097270 File Offset: 0x00095470
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCoopRoleLevelAllLevelData.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060009DD RID: 2525 RVA: 0x000913B7 File Offset: 0x0008F5B7
+		// Token: 0x06000A49 RID: 2633 RVA: 0x000972EF File Offset: 0x000954EF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCoopRoleLevelAllLevelData.LogPair = null;
 			ConfigCoopRoleLevelAllLevelData.HandleId = 0;
 		}
 
-		// Token: 0x060009DE RID: 2526 RVA: 0x000913C5 File Offset: 0x0008F5C5
+		// Token: 0x06000A4A RID: 2634 RVA: 0x000972FD File Offset: 0x000954FD
 		public static void Init()
 		{
 			ConfigCoopRoleLevelAllLevelData.HandleId = ConfigCommon.InitDataStatement(ConfigCoopRoleLevelAllLevelData.HandleId, "db_cooprolelevel.db", "select BinData from `CoopRoleLevel` where ActivityId=? AND CoopRoleId=?");
 		}
 
-		// Token: 0x060009DF RID: 2527 RVA: 0x000913E0 File Offset: 0x0008F5E0
+		// Token: 0x06000A4B RID: 2635 RVA: 0x00097318 File Offset: 0x00095518
 		[NullableContext(2)]
 		public static IReadOnlyList<CoopRoleLevel> GetConfigList(int p0ActivityId, int p1CoopRoleId, bool useCache = true)
 		{
@@ -99,22 +99,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000B60 RID: 2912
+		// Token: 0x04000BDE RID: 3038
 		private const string DB = "db_cooprolelevel.db";
 
-		// Token: 0x04000B61 RID: 2913
+		// Token: 0x04000BDF RID: 3039
 		private const string FILE = "c.3.2coop活动.xlsx";
 
-		// Token: 0x04000B62 RID: 2914
+		// Token: 0x04000BE0 RID: 3040
 		private const string TABLE = "CoopRoleLevel";
 
-		// Token: 0x04000B63 RID: 2915
+		// Token: 0x04000BE1 RID: 3041
 		private const string COMMAND = "select BinData from `CoopRoleLevel` where ActivityId=? AND CoopRoleId=?";
 
-		// Token: 0x04000B64 RID: 2916
+		// Token: 0x04000BE2 RID: 3042
 		private const string KEY_PREFIX = "CoopRoleLevelAllLevelData";
 
-		// Token: 0x04000B65 RID: 2917
+		// Token: 0x04000BE3 RID: 3043
 		[Nullable(new byte[]
 		{
 			2,
@@ -124,7 +124,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000B66 RID: 2918
+		// Token: 0x04000BE4 RID: 3044
 		private static int HandleId;
 	}
 }

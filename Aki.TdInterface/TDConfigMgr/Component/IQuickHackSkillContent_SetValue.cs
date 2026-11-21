@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000643 RID: 1603
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006E0 RID: 1760
 	public class IQuickHackSkillContent_SetValue
 	{
-		// Token: 0x040017CA RID: 6090
+		// Token: 0x040019BC RID: 6588
 		public string EntityState;
 
-		// Token: 0x040017CB RID: 6091
+		// Token: 0x040019BD RID: 6589
 		public List<ActionInfo> Actions;
 	}
 }

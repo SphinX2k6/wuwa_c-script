@@ -3,38 +3,38 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine.Interface
 {
-	// Token: 0x02002B15 RID: 11029
+	// Token: 0x020008C5 RID: 2245
 	[NullableContext(1)]
 	public interface IUnrealStructProxy<[Nullable(2)] T>
 	{
-		// Token: 0x170099A5 RID: 39333
-		// (get) Token: 0x060284D7 RID: 165079
+		// Token: 0x1700232E RID: 9006
+		// (get) Token: 0x0600BE91 RID: 48785
 		IntPtr NativePtr { get; }
 
-		// Token: 0x170099A6 RID: 39334
-		// (get) Token: 0x060284D8 RID: 165080
+		// Token: 0x1700232F RID: 9007
+		// (get) Token: 0x0600BE92 RID: 48786
 		int Size { get; }
 
-		// Token: 0x170099A7 RID: 39335
-		// (get) Token: 0x060284D9 RID: 165081
+		// Token: 0x17002330 RID: 9008
+		// (get) Token: 0x0600BE93 RID: 48787
 		int MinAlignment { get; }
 
-		// Token: 0x060284DA RID: 165082
+		// Token: 0x0600BE94 RID: 48788
 		public abstract static T Create(IntPtr Src);
 
-		// Token: 0x060284DB RID: 165083
+		// Token: 0x0600BE95 RID: 48789
 		public abstract static T Create(IntPtr Src, [Nullable(2)] UnrealObject MemoryOwner);
 
-		// Token: 0x060284DC RID: 165084
+		// Token: 0x0600BE96 RID: 48790
 		public abstract static void NativeConstruct(IntPtr Pointer, int ArrDim = 1);
 
-		// Token: 0x060284DD RID: 165085
+		// Token: 0x0600BE97 RID: 48791
 		public abstract static void NativeDestruct(IntPtr Pointer, int ArrDim = 1);
 
-		// Token: 0x060284DE RID: 165086
+		// Token: 0x0600BE98 RID: 48792
 		public abstract static void NativeCopy(IntPtr Dest, IntPtr Src, int ArrDim = 1);
 
-		// Token: 0x060284DF RID: 165087
+		// Token: 0x0600BE99 RID: 48793
 		public abstract static int NativeFindIndex(IntPtr Pointer, int ArrDim, IntPtr Value);
 	}
 }

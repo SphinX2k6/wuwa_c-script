@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002434 RID: 9268
+// Token: 0x02001919 RID: 6425
 public class PhantomBattleFettersView : UiViewBase
 {
-	// Token: 0x06012964 RID: 76132 RVA: 0x00495872 File Offset: 0x00493A72
+	// Token: 0x0600FE1A RID: 65050 RVA: 0x004A2E3E File Offset: 0x004A103E
 	[NullableContext(1)]
 	public PhantomBattleFettersView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06012965 RID: 76133 RVA: 0x0049587B File Offset: 0x00493A7B
+	// Token: 0x0600FE1B RID: 65051 RVA: 0x004A2E47 File Offset: 0x004A1047
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class PhantomBattleFettersView : UiViewBase
 		};
 	}
 
-	// Token: 0x06012966 RID: 76134 RVA: 0x004958B4 File Offset: 0x00493AB4
+	// Token: 0x0600FE1C RID: 65052 RVA: 0x004A2E80 File Offset: 0x004A1080
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomBattleFettersView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -37,7 +37,7 @@ public class PhantomBattleFettersView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012967 RID: 76135 RVA: 0x004958F7 File Offset: 0x00493AF7
+	// Token: 0x0600FE1D RID: 65053 RVA: 0x004A2EC3 File Offset: 0x004A10C3
 	protected override void OnBeforeShow()
 	{
 		if (this.GroupId > 0)
@@ -47,7 +47,7 @@ public class PhantomBattleFettersView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012968 RID: 76136 RVA: 0x0049591C File Offset: 0x00493B1C
+	// Token: 0x0600FE1E RID: 65054 RVA: 0x004A2EE8 File Offset: 0x004A10E8
 	private void OnFastFilter()
 	{
 		PhantomBattleModel.Instance.CurrentSelectFetterGroupId = this.ViewItem.GetCurrentSelectGroupId();
@@ -62,7 +62,7 @@ public class PhantomBattleFettersView : UiViewBase
 		PhantomUtil.CloseAndOpenVisionEquipmentView(this.ViewInfo.Name, this.RoleId, -1);
 	}
 
-	// Token: 0x06012969 RID: 76137 RVA: 0x00495998 File Offset: 0x00493B98
+	// Token: 0x0600FE1F RID: 65055 RVA: 0x004A2F64 File Offset: 0x004A1164
 	protected override UniTask OnPlayingStartSequenceAsync()
 	{
 		PhantomBattleFettersView.<OnPlayingStartSequenceAsync>d__10 <OnPlayingStartSequenceAsync>d__;
@@ -73,7 +73,7 @@ public class PhantomBattleFettersView : UiViewBase
 		return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601296A RID: 76138 RVA: 0x004959DC File Offset: 0x00493BDC
+	// Token: 0x0600FE20 RID: 65056 RVA: 0x004A2FA8 File Offset: 0x004A11A8
 	protected override UniTask OnPlayingCloseSequenceAsync()
 	{
 		PhantomBattleFettersView.<OnPlayingCloseSequenceAsync>d__11 <OnPlayingCloseSequenceAsync>d__;
@@ -84,26 +84,26 @@ public class PhantomBattleFettersView : UiViewBase
 		return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04008C09 RID: 35849
+	// Token: 0x04008D50 RID: 36176
 	[Nullable(2)]
 	private PhantomBattleFettersViewItem ViewItem;
 
-	// Token: 0x04008C0A RID: 35850
+	// Token: 0x04008D51 RID: 36177
 	[Nullable(2)]
 	private PopupCaptionItem PopupCaptionItem;
 
-	// Token: 0x04008C0B RID: 35851
+	// Token: 0x04008D52 RID: 36178
 	private int RoleId;
 
-	// Token: 0x04008C0C RID: 35852
+	// Token: 0x04008D53 RID: 36179
 	private int GroupId;
 
-	// Token: 0x020089BB RID: 35259
+	// Token: 0x02007B42 RID: 31554
 	private enum EComponent
 	{
-		// Token: 0x0402CC06 RID: 183302
+		// Token: 0x04027F1C RID: 163612
 		CaptionItem,
-		// Token: 0x0402CC07 RID: 183303
+		// Token: 0x04027F1D RID: 163613
 		ViewItem
 	}
 }

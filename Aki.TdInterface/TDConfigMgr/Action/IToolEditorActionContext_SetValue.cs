@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FD3 RID: 8147
+	// Token: 0x0200221A RID: 8730
 	public class IToolEditorActionContext_SetValue
 	{
-		// Token: 0x04006C27 RID: 27687
-		[Nullable(1)]
+		// Token: 0x04007229 RID: 29225
 		public string Type;
 	}
 }

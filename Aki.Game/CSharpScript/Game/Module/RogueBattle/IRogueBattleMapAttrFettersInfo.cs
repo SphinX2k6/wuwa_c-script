@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EC9 RID: 20169
+	// Token: 0x02003E92 RID: 16018
 	public interface IRogueBattleMapAttrFettersInfo
 	{
-		// Token: 0x17007EF9 RID: 32505
-		// (get) Token: 0x06033C84 RID: 212100
-		// (set) Token: 0x06033C85 RID: 212101
+		// Token: 0x170052A9 RID: 21161
+		// (get) Token: 0x06028AEF RID: 166639
+		// (set) Token: 0x06028AF0 RID: 166640
 		int ConfigId { get; set; }
 
-		// Token: 0x17007EFA RID: 32506
-		// (get) Token: 0x06033C86 RID: 212102
-		// (set) Token: 0x06033C87 RID: 212103
+		// Token: 0x170052AA RID: 21162
+		// (get) Token: 0x06028AF1 RID: 166641
+		// (set) Token: 0x06028AF2 RID: 166642
 		bool IsUnlock { get; set; }
 
-		// Token: 0x17007EFB RID: 32507
-		// (get) Token: 0x06033C88 RID: 212104
-		// (set) Token: 0x06033C89 RID: 212105
+		// Token: 0x170052AB RID: 21163
+		// (get) Token: 0x06028AF3 RID: 166643
+		// (set) Token: 0x06028AF4 RID: 166644
 		int Level { get; set; }
 
-		// Token: 0x17007EFC RID: 32508
-		// (get) Token: 0x06033C8A RID: 212106
-		// (set) Token: 0x06033C8B RID: 212107
+		// Token: 0x170052AC RID: 21164
+		// (get) Token: 0x06028AF5 RID: 166645
+		// (set) Token: 0x06028AF6 RID: 166646
 		bool? IsMaxLevel { get; set; }
 	}
 }

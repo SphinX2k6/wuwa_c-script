@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E4B RID: 3659
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F47 RID: 3911
 	public class NoiseRemovalComponent : IComponentBase
 	{
-		// Token: 0x0600529E RID: 21150 RVA: 0x000CB478 File Offset: 0x000C9678
+		// Token: 0x060057C5 RID: 22469 RVA: 0x000D6D40 File Offset: 0x000D4F40
 		public static NoiseRemovalComponent Create(INoiseRemovalComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001BC5 RID: 7109
-		// (get) Token: 0x0600529F RID: 21151 RVA: 0x000CB498 File Offset: 0x000C9698
+		// Token: 0x17001D32 RID: 7474
+		// (get) Token: 0x060057C6 RID: 22470 RVA: 0x000D6D60 File Offset: 0x000D4F60
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BC6 RID: 7110
-		// (get) Token: 0x060052A0 RID: 21152 RVA: 0x000CB4D0 File Offset: 0x000C96D0
+		// Token: 0x17001D33 RID: 7475
+		// (get) Token: 0x060057C7 RID: 22471 RVA: 0x000D6D98 File Offset: 0x000D4F98
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BC7 RID: 7111
-		// (get) Token: 0x060052A1 RID: 21153 RVA: 0x000CB4E8 File Offset: 0x000C96E8
+		// Token: 0x17001D34 RID: 7476
+		// (get) Token: 0x060057C8 RID: 22472 RVA: 0x000D6DB0 File Offset: 0x000D4FB0
 		public virtual List<INoiseRemovalNode> Nodes
 		{
 			get
@@ -68,8 +65,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BC8 RID: 7112
-		// (get) Token: 0x060052A2 RID: 21154 RVA: 0x000CB551 File Offset: 0x000C9751
+		// Token: 0x17001D35 RID: 7477
+		// (get) Token: 0x060057C9 RID: 22473 RVA: 0x000D6E19 File Offset: 0x000D5019
 		public virtual string CompleteState
 		{
 			get
@@ -78,8 +75,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BC9 RID: 7113
-		// (get) Token: 0x060052A3 RID: 21155 RVA: 0x000CB55E File Offset: 0x000C975E
+		// Token: 0x17001D36 RID: 7478
+		// (get) Token: 0x060057CA RID: 22474 RVA: 0x000D6E26 File Offset: 0x000D5026
 		public virtual INoiseRemovalBoarderBase NoiseRemovalBoarder
 		{
 			get
@@ -94,8 +91,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BCA RID: 7114
-		// (get) Token: 0x060052A4 RID: 21156 RVA: 0x000CB590 File Offset: 0x000C9790
+		// Token: 0x17001D37 RID: 7479
+		// (get) Token: 0x060057CB RID: 22475 RVA: 0x000D6E58 File Offset: 0x000D5058
 		public virtual int? RotationAngle
 		{
 			get
@@ -108,19 +105,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F9E RID: 12190
+		// Token: 0x04003266 RID: 12902
 		private INoiseRemovalComponent Instance;
 
-		// Token: 0x04002F9F RID: 12191
+		// Token: 0x04003267 RID: 12903
 		private List<INoiseRemovalNode> _NodesCache;
 
-		// Token: 0x04002FA0 RID: 12192
+		// Token: 0x04003268 RID: 12904
 		private bool _NodesInited;
 
-		// Token: 0x04002FA1 RID: 12193
+		// Token: 0x04003269 RID: 12905
 		private INoiseRemovalBoarderBase _NoiseRemovalBoarderCache;
 
-		// Token: 0x04002FA2 RID: 12194
+		// Token: 0x0400326A RID: 12906
 		private bool _NoiseRemovalBoarderInited;
 	}
 }

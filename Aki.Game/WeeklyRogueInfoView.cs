@@ -6,18 +6,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D4F RID: 11599
+// Token: 0x020022A9 RID: 8873
 [NullableContext(2)]
 [Nullable(0)]
 public class WeeklyRogueInfoView : UiViewBase
 {
-	// Token: 0x060185F6 RID: 99830 RVA: 0x00634740 File Offset: 0x00632940
+	// Token: 0x06015E98 RID: 89752 RVA: 0x0065A750 File Offset: 0x00658950
 	[NullableContext(1)]
 	public WeeklyRogueInfoView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x060185F7 RID: 99831 RVA: 0x0063474C File Offset: 0x0063294C
+	// Token: 0x06015E99 RID: 89753 RVA: 0x0065A75C File Offset: 0x0065895C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,19 +39,19 @@ public class WeeklyRogueInfoView : UiViewBase
 		};
 	}
 
-	// Token: 0x060185F8 RID: 99832 RVA: 0x00634869 File Offset: 0x00632A69
+	// Token: 0x06015E9A RID: 89754 RVA: 0x0065A879 File Offset: 0x00658A79
 	private void OnBtnClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060185F9 RID: 99833 RVA: 0x00634872 File Offset: 0x00632A72
+	// Token: 0x06015E9B RID: 89755 RVA: 0x0065A882 File Offset: 0x00658A82
 	private void OnToggleDesc(EToggleState toggleState)
 	{
 		WeeklyRogueModel.Instance.ChangeDescMode();
 	}
 
-	// Token: 0x060185FA RID: 99834 RVA: 0x00634880 File Offset: 0x00632A80
+	// Token: 0x06015E9C RID: 89756 RVA: 0x0065A890 File Offset: 0x00658A90
 	private void OnToggleRoleInfo(EToggleState toggleState)
 	{
 		base.GetExtendToggle(2).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
@@ -82,7 +82,7 @@ public class WeeklyRogueInfoView : UiViewBase
 		obj2.SetVisible(true);
 	}
 
-	// Token: 0x060185FB RID: 99835 RVA: 0x00634908 File Offset: 0x00632B08
+	// Token: 0x06015E9D RID: 89757 RVA: 0x0065A918 File Offset: 0x00658B18
 	private void OnToggleTokenInfo(EToggleState toggleState)
 	{
 		base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
@@ -113,7 +113,7 @@ public class WeeklyRogueInfoView : UiViewBase
 		obj2.SetVisible(false);
 	}
 
-	// Token: 0x060185FC RID: 99836 RVA: 0x00634990 File Offset: 0x00632B90
+	// Token: 0x06015E9E RID: 89758 RVA: 0x0065A9A0 File Offset: 0x00658BA0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeeklyRogueInfoView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -124,7 +124,7 @@ public class WeeklyRogueInfoView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060185FD RID: 99837 RVA: 0x006349D4 File Offset: 0x00632BD4
+	// Token: 0x06015E9F RID: 89759 RVA: 0x0065A9E4 File Offset: 0x00658BE4
 	protected override void OnHandleLoadScene()
 	{
 		if (this.TsUiSceneRoleActor == null)
@@ -140,39 +140,39 @@ public class WeeklyRogueInfoView : UiViewBase
 		uiModelActorComponent.SetTransformByTag("RoleCase");
 	}
 
-	// Token: 0x060185FE RID: 99838 RVA: 0x00634A20 File Offset: 0x00632C20
+	// Token: 0x06015EA0 RID: 89760 RVA: 0x0065AA30 File Offset: 0x00658C30
 	protected override void OnHandleReleaseScene()
 	{
 		UiSceneManager.Instance.DestroyRoleSystemRoleActor(this.TsUiSceneRoleActor);
 		this.TsUiSceneRoleActor = null;
 	}
 
-	// Token: 0x0400B4DA RID: 46298
+	// Token: 0x0400B84F RID: 47183
 	private WeeklyRogueTeamInfoPanel TeamInfoPanel;
 
-	// Token: 0x0400B4DB RID: 46299
+	// Token: 0x0400B850 RID: 47184
 	private WeeklyRogueTokenInfoPanel TokenInfoPanel;
 
-	// Token: 0x0400B4DC RID: 46300
+	// Token: 0x0400B851 RID: 47185
 	private TsUiSceneRoleActor TsUiSceneRoleActor;
 
-	// Token: 0x020092E1 RID: 37601
+	// Token: 0x02008508 RID: 34056
 	[NullableContext(0)]
 	private enum EWeeklyRogueInfoViewDefine
 	{
-		// Token: 0x0402F798 RID: 194456
+		// Token: 0x0402AE20 RID: 175648
 		BtnClose,
-		// Token: 0x0402F799 RID: 194457
+		// Token: 0x0402AE21 RID: 175649
 		ToggleRoleInfo,
-		// Token: 0x0402F79A RID: 194458
+		// Token: 0x0402AE22 RID: 175650
 		ToggleTokenInfo,
-		// Token: 0x0402F79B RID: 194459
+		// Token: 0x0402AE23 RID: 175651
 		TeamInfoPanel,
-		// Token: 0x0402F79C RID: 194460
+		// Token: 0x0402AE24 RID: 175652
 		TokenInfoPanel,
-		// Token: 0x0402F79D RID: 194461
+		// Token: 0x0402AE25 RID: 175653
 		ToggleDesc,
-		// Token: 0x0402F79E RID: 194462
+		// Token: 0x0402AE26 RID: 175654
 		ToggleText
 	}
 }

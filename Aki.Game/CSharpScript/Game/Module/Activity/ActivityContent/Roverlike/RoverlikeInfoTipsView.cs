@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006147 RID: 24903
+	// Token: 0x020050C5 RID: 20677
 	public class RoverlikeInfoTipsView : UiTickViewBase
 	{
-		// Token: 0x0603EF3B RID: 257851 RVA: 0x00F35192 File Offset: 0x00F33392
+		// Token: 0x06033BFB RID: 211963 RVA: 0x00E7C072 File Offset: 0x00E7A272
 		[NullableContext(1)]
 		public RoverlikeInfoTipsView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603EF3C RID: 257852 RVA: 0x00F3519C File Offset: 0x00F3339C
+		// Token: 0x06033BFC RID: 211964 RVA: 0x00E7C07C File Offset: 0x00E7A27C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EF3D RID: 257853 RVA: 0x00F351E4 File Offset: 0x00F333E4
+		// Token: 0x06033BFD RID: 211965 RVA: 0x00E7C0C4 File Offset: 0x00E7A2C4
 		protected override void OnStart()
 		{
 			if (RoverlikeModel.Instance.IsFloatTextEmpty)
@@ -51,12 +51,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ListSlideControl.DisEnableParentLayout();
 		}
 
-		// Token: 0x0603EF3E RID: 257854 RVA: 0x00F352B3 File Offset: 0x00F334B3
+		// Token: 0x06033BFE RID: 211966 RVA: 0x00E7C193 File Offset: 0x00E7A393
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x0603EF3F RID: 257855 RVA: 0x00F352B5 File Offset: 0x00F334B5
+		// Token: 0x06033BFF RID: 211967 RVA: 0x00E7C195 File Offset: 0x00E7A395
 		protected override void OnTick(float delta)
 		{
 			ListSliderControl<FloatTipsItem> listSlideControl = this.ListSlideControl;
@@ -67,38 +67,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			listSlideControl.Tick(delta);
 		}
 
-		// Token: 0x0603EF40 RID: 257856 RVA: 0x00F352C8 File Offset: 0x00F334C8
+		// Token: 0x06033C00 RID: 211968 RVA: 0x00E7C1A8 File Offset: 0x00E7A3A8
 		[NullableContext(1)]
 		private FloatTipsItem CreateProxyFunction()
 		{
 			return new FloatTipsItem();
 		}
 
-		// Token: 0x0603EF41 RID: 257857 RVA: 0x00F352CF File Offset: 0x00F334CF
+		// Token: 0x06033C01 RID: 211969 RVA: 0x00E7C1AF File Offset: 0x00E7A3AF
 		private bool CheckNext()
 		{
 			return !RoverlikeModel.Instance.IsFloatTextEmpty;
 		}
 
-		// Token: 0x0603EF42 RID: 257858 RVA: 0x00F352DE File Offset: 0x00F334DE
+		// Token: 0x06033C02 RID: 211970 RVA: 0x00E7C1BE File Offset: 0x00E7A3BE
 		private void FinishCallback()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04020DB1 RID: 134577
+		// Token: 0x0401B6DE RID: 112350
 		private const int MAX_LIST_COUNT = 2;
 
-		// Token: 0x04020DB2 RID: 134578
+		// Token: 0x0401B6DF RID: 112351
 		private const int ITEM_INTERVAL_TIME = 200;
 
-		// Token: 0x04020DB3 RID: 134579
+		// Token: 0x0401B6E0 RID: 112352
 		private const int ITEM_SLIDER_TIME = 200;
 
-		// Token: 0x04020DB4 RID: 134580
+		// Token: 0x0401B6E1 RID: 112353
 		private const int ITEM_SHOW_TIME = 1500;
 
-		// Token: 0x04020DB5 RID: 134581
+		// Token: 0x0401B6E2 RID: 112354
 		[Nullable(new byte[]
 		{
 			2,
@@ -106,13 +106,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private ListSliderControl<FloatTipsItem> ListSlideControl;
 
-		// Token: 0x0200C3A4 RID: 50084
+		// Token: 0x0200AD8B RID: 44427
 		private class EComponents
 		{
-			// Token: 0x0403B097 RID: 241815
+			// Token: 0x040359F8 RID: 219640
 			public const int RootItem = 0;
 
-			// Token: 0x0403B098 RID: 241816
+			// Token: 0x040359F9 RID: 219641
 			public const int FloatTipsItem = 1;
 		}
 	}

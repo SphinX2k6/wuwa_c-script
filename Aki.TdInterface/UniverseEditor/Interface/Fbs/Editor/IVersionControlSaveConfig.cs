@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048BF RID: 18623
+	// Token: 0x02004D24 RID: 19748
 	public struct IVersionControlSaveConfig : IFlatbufferObject
 	{
-		// Token: 0x17008717 RID: 34583
-		// (get) Token: 0x0601D172 RID: 119154 RVA: 0x0041B698 File Offset: 0x00419898
+		// Token: 0x17008D5F RID: 36191
+		// (get) Token: 0x0601E95F RID: 125279 RVA: 0x00447E34 File Offset: 0x00446034
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D173 RID: 119155 RVA: 0x0041B6A5 File Offset: 0x004198A5
+		// Token: 0x0601E960 RID: 125280 RVA: 0x00447E41 File Offset: 0x00446041
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D174 RID: 119156 RVA: 0x0041B6AC File Offset: 0x004198AC
+		// Token: 0x0601E961 RID: 125281 RVA: 0x00447E48 File Offset: 0x00446048
 		public static IVersionControlSaveConfig GetRootAsIVersionControlSaveConfig(ByteBuffer _bb)
 		{
 			return IVersionControlSaveConfig.GetRootAsIVersionControlSaveConfig(_bb, default(IVersionControlSaveConfig));
 		}
 
-		// Token: 0x0601D175 RID: 119157 RVA: 0x0041B6C8 File Offset: 0x004198C8
+		// Token: 0x0601E962 RID: 125282 RVA: 0x00447E64 File Offset: 0x00446064
 		public static IVersionControlSaveConfig GetRootAsIVersionControlSaveConfig(ByteBuffer _bb, IVersionControlSaveConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D176 RID: 119158 RVA: 0x0041B6E5 File Offset: 0x004198E5
+		// Token: 0x0601E963 RID: 125283 RVA: 0x00447E81 File Offset: 0x00446081
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D177 RID: 119159 RVA: 0x0041B6F4 File Offset: 0x004198F4
+		// Token: 0x0601E964 RID: 125284 RVA: 0x00447E90 File Offset: 0x00446090
 		public IVersionControlSaveConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008718 RID: 34584
-		// (get) Token: 0x0601D178 RID: 119160 RVA: 0x0041B704 File Offset: 0x00419904
+		// Token: 0x17008D60 RID: 36192
+		// (get) Token: 0x0601E965 RID: 125285 RVA: 0x00447EA0 File Offset: 0x004460A0
 		public bool IsSwarmPassAutoSync
 		{
 			get
@@ -59,7 +59,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D179 RID: 119161 RVA: 0x0041B744 File Offset: 0x00419944
+		// Token: 0x0601E966 RID: 125286 RVA: 0x00447EE0 File Offset: 0x004460E0
 		public ICommitLog? CommitLogs(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -70,8 +70,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return new ICommitLog?(default(ICommitLog).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17008719 RID: 34585
-		// (get) Token: 0x0601D17A RID: 119162 RVA: 0x0041B7A4 File Offset: 0x004199A4
+		// Token: 0x17008D61 RID: 36193
+		// (get) Token: 0x0601E967 RID: 125287 RVA: 0x00447F40 File Offset: 0x00446140
 		public int CommitLogsLength
 		{
 			get
@@ -85,8 +85,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700871A RID: 34586
-		// (get) Token: 0x0601D17B RID: 119163 RVA: 0x0041B7D0 File Offset: 0x004199D0
+		// Token: 0x17008D62 RID: 36194
+		// (get) Token: 0x0601E968 RID: 125288 RVA: 0x00447F6C File Offset: 0x0044616C
 		public string CommitLogInputCache
 		{
 			get
@@ -100,19 +100,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D17C RID: 119164 RVA: 0x0041B807 File Offset: 0x00419A07
+		// Token: 0x0601E969 RID: 125289 RVA: 0x00447FA3 File Offset: 0x004461A3
 		public Span<byte> GetCommitLogInputCacheBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0601D17D RID: 119165 RVA: 0x0041B816 File Offset: 0x00419A16
+		// Token: 0x0601E96A RID: 125290 RVA: 0x00447FB2 File Offset: 0x004461B2
 		public byte[] GetCommitLogInputCacheArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x0601D17E RID: 119166 RVA: 0x0041B824 File Offset: 0x00419A24
+		// Token: 0x0601E96B RID: 125291 RVA: 0x00447FC0 File Offset: 0x004461C0
 		public string IgnoreCols(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -123,8 +123,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700871B RID: 34587
-		// (get) Token: 0x0601D17F RID: 119167 RVA: 0x0041B860 File Offset: 0x00419A60
+		// Token: 0x17008D63 RID: 36195
+		// (get) Token: 0x0601E96C RID: 125292 RVA: 0x00447FFC File Offset: 0x004461FC
 		public int IgnoreColsLength
 		{
 			get
@@ -138,8 +138,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700871C RID: 34588
-		// (get) Token: 0x0601D180 RID: 119168 RVA: 0x0041B88C File Offset: 0x00419A8C
+		// Token: 0x17008D64 RID: 36196
+		// (get) Token: 0x0601E96D RID: 125293 RVA: 0x00448028 File Offset: 0x00446228
 		public bool IsFastScan
 		{
 			get
@@ -149,8 +149,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700871D RID: 34589
-		// (get) Token: 0x0601D181 RID: 119169 RVA: 0x0041B8CC File Offset: 0x00419ACC
+		// Token: 0x17008D65 RID: 36197
+		// (get) Token: 0x0601E96E RID: 125294 RVA: 0x00448068 File Offset: 0x00446268
 		public ISpecificLevelScanData? SpecificLevelScanData
 		{
 			get
@@ -164,8 +164,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700871E RID: 34590
-		// (get) Token: 0x0601D182 RID: 119170 RVA: 0x0041B92C File Offset: 0x00419B2C
+		// Token: 0x17008D66 RID: 36198
+		// (get) Token: 0x0601E96F RID: 125295 RVA: 0x004480C8 File Offset: 0x004462C8
 		public ICustomScanDirectoryData? CustomScanDirectoryData
 		{
 			get
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D183 RID: 119171 RVA: 0x0041B98C File Offset: 0x00419B8C
+		// Token: 0x0601E970 RID: 125296 RVA: 0x00448128 File Offset: 0x00446328
 		public IVersionControlSaveConfig_CommitTasks? CommitTasks(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -190,8 +190,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return new IVersionControlSaveConfig_CommitTasks?(default(IVersionControlSaveConfig_CommitTasks).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700871F RID: 34591
-		// (get) Token: 0x0601D184 RID: 119172 RVA: 0x0041B9F0 File Offset: 0x00419BF0
+		// Token: 0x17008D67 RID: 36199
+		// (get) Token: 0x0601E971 RID: 125297 RVA: 0x0044818C File Offset: 0x0044638C
 		public int CommitTasksLength
 		{
 			get
@@ -205,8 +205,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008720 RID: 34592
-		// (get) Token: 0x0601D185 RID: 119173 RVA: 0x0041BA1C File Offset: 0x00419C1C
+		// Token: 0x17008D68 RID: 36200
+		// (get) Token: 0x0601E972 RID: 125298 RVA: 0x004481B8 File Offset: 0x004463B8
 		public byte NullMask
 		{
 			get
@@ -220,7 +220,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D186 RID: 119174 RVA: 0x0041BA5C File Offset: 0x00419C5C
+		// Token: 0x0601E973 RID: 125299 RVA: 0x004481F8 File Offset: 0x004463F8
 		public static Offset<IVersionControlSaveConfig> CreateIVersionControlSaveConfig(FlatBufferBuilder builder, bool IsSwarmPassAutoSync = false, VectorOffset CommitLogsOffset = default(VectorOffset), StringOffset CommitLogInputCacheOffset = default(StringOffset), VectorOffset IgnoreColsOffset = default(VectorOffset), bool IsFastScan = false, Offset<ISpecificLevelScanData> SpecificLevelScanDataOffset = default(Offset<ISpecificLevelScanData>), Offset<ICustomScanDirectoryData> CustomScanDirectoryDataOffset = default(Offset<ICustomScanDirectoryData>), VectorOffset CommitTasksOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(9);
@@ -236,25 +236,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IVersionControlSaveConfig.EndIVersionControlSaveConfig(builder);
 		}
 
-		// Token: 0x0601D187 RID: 119175 RVA: 0x0041BABC File Offset: 0x00419CBC
+		// Token: 0x0601E974 RID: 125300 RVA: 0x00448258 File Offset: 0x00446458
 		public static void StartIVersionControlSaveConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(9);
 		}
 
-		// Token: 0x0601D188 RID: 119176 RVA: 0x0041BAC6 File Offset: 0x00419CC6
+		// Token: 0x0601E975 RID: 125301 RVA: 0x00448262 File Offset: 0x00446462
 		public static void AddIsSwarmPassAutoSync(FlatBufferBuilder builder, bool isSwarmPassAutoSync)
 		{
 			builder.AddBool(0, isSwarmPassAutoSync, false);
 		}
 
-		// Token: 0x0601D189 RID: 119177 RVA: 0x0041BAD1 File Offset: 0x00419CD1
+		// Token: 0x0601E976 RID: 125302 RVA: 0x0044826D File Offset: 0x0044646D
 		public static void AddCommitLogs(FlatBufferBuilder builder, VectorOffset commitLogsOffset)
 		{
 			builder.AddOffset(1, commitLogsOffset.Value, 0);
 		}
 
-		// Token: 0x0601D18A RID: 119178 RVA: 0x0041BAE4 File Offset: 0x00419CE4
+		// Token: 0x0601E977 RID: 125303 RVA: 0x00448280 File Offset: 0x00446480
 		public static VectorOffset CreateCommitLogsVector(FlatBufferBuilder builder, Offset<ICommitLog>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -265,7 +265,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D18B RID: 119179 RVA: 0x0041BB24 File Offset: 0x00419D24
+		// Token: 0x0601E978 RID: 125304 RVA: 0x004482C0 File Offset: 0x004464C0
 		public static VectorOffset CreateCommitLogsVectorBlock(FlatBufferBuilder builder, Offset<ICommitLog>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -273,7 +273,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D18C RID: 119180 RVA: 0x0041BB3E File Offset: 0x00419D3E
+		// Token: 0x0601E979 RID: 125305 RVA: 0x004482DA File Offset: 0x004464DA
 		public static VectorOffset CreateCommitLogsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ICommitLog>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -281,7 +281,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D18D RID: 119181 RVA: 0x0041BB5C File Offset: 0x00419D5C
+		// Token: 0x0601E97A RID: 125306 RVA: 0x004482F8 File Offset: 0x004464F8
 		public static VectorOffset CreateCommitLogsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -289,25 +289,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D18E RID: 119182 RVA: 0x0041BB75 File Offset: 0x00419D75
+		// Token: 0x0601E97B RID: 125307 RVA: 0x00448311 File Offset: 0x00446511
 		public static void StartCommitLogsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601D18F RID: 119183 RVA: 0x0041BB80 File Offset: 0x00419D80
+		// Token: 0x0601E97C RID: 125308 RVA: 0x0044831C File Offset: 0x0044651C
 		public static void AddCommitLogInputCache(FlatBufferBuilder builder, StringOffset commitLogInputCacheOffset)
 		{
 			builder.AddOffset(2, commitLogInputCacheOffset.Value, 0);
 		}
 
-		// Token: 0x0601D190 RID: 119184 RVA: 0x0041BB90 File Offset: 0x00419D90
+		// Token: 0x0601E97D RID: 125309 RVA: 0x0044832C File Offset: 0x0044652C
 		public static void AddIgnoreCols(FlatBufferBuilder builder, VectorOffset ignoreColsOffset)
 		{
 			builder.AddOffset(3, ignoreColsOffset.Value, 0);
 		}
 
-		// Token: 0x0601D191 RID: 119185 RVA: 0x0041BBA0 File Offset: 0x00419DA0
+		// Token: 0x0601E97E RID: 125310 RVA: 0x0044833C File Offset: 0x0044653C
 		public static VectorOffset CreateIgnoreColsVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -318,7 +318,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D192 RID: 119186 RVA: 0x0041BBE0 File Offset: 0x00419DE0
+		// Token: 0x0601E97F RID: 125311 RVA: 0x0044837C File Offset: 0x0044657C
 		public static VectorOffset CreateIgnoreColsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -326,7 +326,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D193 RID: 119187 RVA: 0x0041BBFA File Offset: 0x00419DFA
+		// Token: 0x0601E980 RID: 125312 RVA: 0x00448396 File Offset: 0x00446596
 		public static VectorOffset CreateIgnoreColsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -334,7 +334,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D194 RID: 119188 RVA: 0x0041BC18 File Offset: 0x00419E18
+		// Token: 0x0601E981 RID: 125313 RVA: 0x004483B4 File Offset: 0x004465B4
 		public static VectorOffset CreateIgnoreColsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -342,37 +342,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D195 RID: 119189 RVA: 0x0041BC31 File Offset: 0x00419E31
+		// Token: 0x0601E982 RID: 125314 RVA: 0x004483CD File Offset: 0x004465CD
 		public static void StartIgnoreColsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601D196 RID: 119190 RVA: 0x0041BC3C File Offset: 0x00419E3C
+		// Token: 0x0601E983 RID: 125315 RVA: 0x004483D8 File Offset: 0x004465D8
 		public static void AddIsFastScan(FlatBufferBuilder builder, bool isFastScan)
 		{
 			builder.AddBool(4, isFastScan, false);
 		}
 
-		// Token: 0x0601D197 RID: 119191 RVA: 0x0041BC47 File Offset: 0x00419E47
+		// Token: 0x0601E984 RID: 125316 RVA: 0x004483E3 File Offset: 0x004465E3
 		public static void AddSpecificLevelScanData(FlatBufferBuilder builder, Offset<ISpecificLevelScanData> specificLevelScanDataOffset)
 		{
 			builder.AddOffset(5, specificLevelScanDataOffset.Value, 0);
 		}
 
-		// Token: 0x0601D198 RID: 119192 RVA: 0x0041BC57 File Offset: 0x00419E57
+		// Token: 0x0601E985 RID: 125317 RVA: 0x004483F3 File Offset: 0x004465F3
 		public static void AddCustomScanDirectoryData(FlatBufferBuilder builder, Offset<ICustomScanDirectoryData> customScanDirectoryDataOffset)
 		{
 			builder.AddOffset(6, customScanDirectoryDataOffset.Value, 0);
 		}
 
-		// Token: 0x0601D199 RID: 119193 RVA: 0x0041BC67 File Offset: 0x00419E67
+		// Token: 0x0601E986 RID: 125318 RVA: 0x00448403 File Offset: 0x00446603
 		public static void AddCommitTasks(FlatBufferBuilder builder, VectorOffset commitTasksOffset)
 		{
 			builder.AddOffset(7, commitTasksOffset.Value, 0);
 		}
 
-		// Token: 0x0601D19A RID: 119194 RVA: 0x0041BC78 File Offset: 0x00419E78
+		// Token: 0x0601E987 RID: 125319 RVA: 0x00448414 File Offset: 0x00446614
 		public static VectorOffset CreateCommitTasksVector(FlatBufferBuilder builder, Offset<IVersionControlSaveConfig_CommitTasks>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -383,7 +383,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D19B RID: 119195 RVA: 0x0041BCB8 File Offset: 0x00419EB8
+		// Token: 0x0601E988 RID: 125320 RVA: 0x00448454 File Offset: 0x00446654
 		public static VectorOffset CreateCommitTasksVectorBlock(FlatBufferBuilder builder, Offset<IVersionControlSaveConfig_CommitTasks>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -391,7 +391,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D19C RID: 119196 RVA: 0x0041BCD2 File Offset: 0x00419ED2
+		// Token: 0x0601E989 RID: 125321 RVA: 0x0044846E File Offset: 0x0044666E
 		public static VectorOffset CreateCommitTasksVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IVersionControlSaveConfig_CommitTasks>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -399,7 +399,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D19D RID: 119197 RVA: 0x0041BCF0 File Offset: 0x00419EF0
+		// Token: 0x0601E98A RID: 125322 RVA: 0x0044848C File Offset: 0x0044668C
 		public static VectorOffset CreateCommitTasksVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -407,25 +407,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D19E RID: 119198 RVA: 0x0041BD09 File Offset: 0x00419F09
+		// Token: 0x0601E98B RID: 125323 RVA: 0x004484A5 File Offset: 0x004466A5
 		public static void StartCommitTasksVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601D19F RID: 119199 RVA: 0x0041BD14 File Offset: 0x00419F14
+		// Token: 0x0601E98C RID: 125324 RVA: 0x004484B0 File Offset: 0x004466B0
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(8, nullMask, 0);
 		}
 
-		// Token: 0x0601D1A0 RID: 119200 RVA: 0x0041BD1F File Offset: 0x00419F1F
+		// Token: 0x0601E98D RID: 125325 RVA: 0x004484BB File Offset: 0x004466BB
 		public static Offset<IVersionControlSaveConfig> EndIVersionControlSaveConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IVersionControlSaveConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601D1A1 RID: 119201 RVA: 0x0041BD2C File Offset: 0x00419F2C
+		// Token: 0x0601E98E RID: 125326 RVA: 0x004484C8 File Offset: 0x004466C8
 		public IVersionControlSaveConfigT UnPack()
 		{
 			IVersionControlSaveConfigT versionControlSaveConfigT = new IVersionControlSaveConfigT();
@@ -433,7 +433,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return versionControlSaveConfigT;
 		}
 
-		// Token: 0x0601D1A2 RID: 119202 RVA: 0x0041BD48 File Offset: 0x00419F48
+		// Token: 0x0601E98F RID: 125327 RVA: 0x004484E4 File Offset: 0x004466E4
 		public void UnPackTo(IVersionControlSaveConfigT _o)
 		{
 			_o.IsSwarmPassAutoSync = this.IsSwarmPassAutoSync;
@@ -459,7 +459,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601D1A3 RID: 119203 RVA: 0x0041BEC4 File Offset: 0x0041A0C4
+		// Token: 0x0601E990 RID: 125328 RVA: 0x00448660 File Offset: 0x00446860
 		public static Offset<IVersionControlSaveConfig> Pack(FlatBufferBuilder builder, IVersionControlSaveConfigT _o)
 		{
 			if (_o == null)
@@ -502,7 +502,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IVersionControlSaveConfig.CreateIVersionControlSaveConfig(builder, _o.IsSwarmPassAutoSync, commitLogsOffset, commitLogInputCacheOffset, ignoreColsOffset, _o.IsFastScan, specificLevelScanDataOffset, customScanDirectoryDataOffset, commitTasksOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400CEB9 RID: 52921
+		// Token: 0x0400D8F2 RID: 55538
 		private Table __p;
 	}
 }

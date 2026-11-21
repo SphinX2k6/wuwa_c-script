@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001202 RID: 4610
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200133E RID: 4926
 	public class IVisionSystemQuestTargetLevel : IVisionSystemQuestBase
 	{
-		// Token: 0x0600689C RID: 26780 RVA: 0x000F9AEC File Offset: 0x000F7CEC
+		// Token: 0x06006EDD RID: 28381 RVA: 0x001073F8 File Offset: 0x001055F8
 		private IVisionSystemQuestTargetLevel_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600689D RID: 26781 RVA: 0x000F9B24 File Offset: 0x000F7D24
+		// Token: 0x06006EDE RID: 28382 RVA: 0x00107430 File Offset: 0x00105630
 		public static IVisionSystemQuestTargetLevel Create([Nullable(2)] IVisionSystemQuestTargetLevel instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600689E RID: 26782 RVA: 0x000F9B37 File Offset: 0x000F7D37
+		// Token: 0x06006EDF RID: 28383 RVA: 0x00107443 File Offset: 0x00105643
 		public static IVisionSystemQuestTargetLevel CreateFromSetValue([Nullable(2)] IVisionSystemQuestTargetLevel_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600689F RID: 26783 RVA: 0x000F9B4A File Offset: 0x000F7D4A
+		// Token: 0x06006EE0 RID: 28384 RVA: 0x00107456 File Offset: 0x00105656
 		public new IVisionSystemQuestTargetLevel_SetValue ToSetValue()
 		{
 			return new IVisionSystemQuestTargetLevel_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021D0 RID: 8656
-		// (get) Token: 0x060068A0 RID: 26784 RVA: 0x000F9B69 File Offset: 0x000F7D69
-		// (set) Token: 0x060068A1 RID: 26785 RVA: 0x000F9B94 File Offset: 0x000F7D94
+		// Token: 0x17002391 RID: 9105
+		// (get) Token: 0x06006EE1 RID: 28385 RVA: 0x00107475 File Offset: 0x00105675
+		// (set) Token: 0x06006EE2 RID: 28386 RVA: 0x001074A0 File Offset: 0x001056A0
 		public override EVisionSystemQuestType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021D1 RID: 8657
-		// (get) Token: 0x060068A2 RID: 26786 RVA: 0x000F9BA2 File Offset: 0x000F7DA2
-		// (set) Token: 0x060068A3 RID: 26787 RVA: 0x000F9BCD File Offset: 0x000F7DCD
+		// Token: 0x17002392 RID: 9106
+		// (get) Token: 0x06006EE3 RID: 28387 RVA: 0x001074AE File Offset: 0x001056AE
+		// (set) Token: 0x06006EE4 RID: 28388 RVA: 0x001074D9 File Offset: 0x001056D9
 		public virtual int TargetLevel
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E9D RID: 16029
+		// Token: 0x0400420B RID: 16907
 		[Nullable(2)]
 		protected new IVisionSystemQuestTargetLevel FbInstance;
 
-		// Token: 0x04003E9E RID: 16030
+		// Token: 0x0400420C RID: 16908
 		[Nullable(2)]
 		protected new IVisionSystemQuestTargetLevel_SetValue PocoInterface;
 	}

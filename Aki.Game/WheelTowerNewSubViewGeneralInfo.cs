@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001623 RID: 5667
+// Token: 0x02000ADB RID: 2779
 internal sealed class WheelTowerNewSubViewGeneralInfo : ActivitySubViewGeneralInfo
 {
-	// Token: 0x06009F86 RID: 40838 RVA: 0x0023020B File Offset: 0x0022E40B
+	// Token: 0x06007364 RID: 29540 RVA: 0x0023A057 File Offset: 0x00238257
 	[return: Nullable(new byte[]
 	{
 		0,

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
@@ -9,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Pawn.Component
 {
-	// Token: 0x02007074 RID: 28788
+	// Token: 0x020061F5 RID: 25077
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PawnTimeScaleComponent : EntityComponent
 	{
-		// Token: 0x06046167 RID: 287079 RVA: 0x0117D598 File Offset: 0x0117B798
+		// Token: 0x0603C36E RID: 246638 RVA: 0x01126E88 File Offset: 0x01125088
 		public static ESourceEffectGroup getSourceEffectGroup(ETimeScaleSourceType sourceType)
 		{
 			foreach (KeyValuePair<ESourceEffectGroup, List<ETimeScaleSourceType>> keyValuePair in PawnTimeScaleComponent.sourceEffectGroup)
@@ -31,7 +30,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return ESourceEffectGroup.LogicAndView;
 		}
 
-		// Token: 0x06046168 RID: 287080 RVA: 0x0117D604 File Offset: 0x0117B804
+		// Token: 0x0603C36F RID: 246639 RVA: 0x01126EF4 File Offset: 0x011250F4
 		public static ETimeScaleSourceGroup getSourceGroup(ETimeScaleSourceType sourceType)
 		{
 			foreach (KeyValuePair<ETimeScaleSourceGroup, List<ETimeScaleSourceType>> keyValuePair in PawnTimeScaleComponent.sourceTypeGroup)
@@ -48,7 +47,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return ETimeScaleSourceGroup.Default;
 		}
 
-		// Token: 0x06046169 RID: 287081 RVA: 0x0117D670 File Offset: 0x0117B870
+		// Token: 0x0603C370 RID: 246640 RVA: 0x01126F60 File Offset: 0x01125160
 		public static int CompareScalePriority(ForeverTimeScale scale1, ForeverTimeScale scale2)
 		{
 			if (scale1.SourceTypeGroup != scale2.SourceTypeGroup)
@@ -66,7 +65,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return scale2.EndTime.CompareTo(scale1.EndTime);
 		}
 
-		// Token: 0x0604616A RID: 287082 RVA: 0x0117D6EC File Offset: 0x0117B8EC
+		// Token: 0x0603C371 RID: 246641 RVA: 0x01126FDC File Offset: 0x011251DC
 		public static int CompareScalePriority(TimeScale scale1, TimeScale scale2)
 		{
 			if (scale1.SourceTypeGroup != scale2.SourceTypeGroup)
@@ -84,7 +83,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return scale2.EndTime.CompareTo(scale1.EndTime);
 		}
 
-		// Token: 0x0604616B RID: 287083 RVA: 0x0117D764 File Offset: 0x0117B964
+		// Token: 0x0603C372 RID: 246642 RVA: 0x01127054 File Offset: 0x01125254
 		protected override bool OnInit()
 		{
 			this.TimeScaleList.Clear();
@@ -97,7 +96,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return true;
 		}
 
-		// Token: 0x0604616C RID: 287084 RVA: 0x0117D7BC File Offset: 0x0117B9BC
+		// Token: 0x0603C373 RID: 246643 RVA: 0x011270AC File Offset: 0x011252AC
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -107,18 +106,18 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return true;
 		}
 
-		// Token: 0x0604616D RID: 287085 RVA: 0x0117D810 File Offset: 0x0117BA10
+		// Token: 0x0603C374 RID: 246644 RVA: 0x01127100 File Offset: 0x01125300
 		protected virtual bool IsTimescaleValid(TimeScale timescale, float currentTime)
 		{
 			return timescale.EndTime > timescale.GetCurrentTime() && !timescale.MarkDelete;
 		}
 
-		// Token: 0x0604616E RID: 287086 RVA: 0x0117D82B File Offset: 0x0117BA2B
+		// Token: 0x0603C375 RID: 246645 RVA: 0x0112711B File Offset: 0x0112531B
 		protected override void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x0604616F RID: 287087 RVA: 0x0117D830 File Offset: 0x0117BA30
+		// Token: 0x0603C376 RID: 246646 RVA: 0x01127120 File Offset: 0x01125320
 		[NullableContext(2)]
 		private int SetTimeScaleInternal(int priority, float timeDilation, UCurveFloat curve, float duration, ETimeScaleSourceType sourceType, bool needAddSceneItemTag = false, bool immuneSelfCenter = false)
 		{
@@ -143,14 +142,14 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return timeScale.Id;
 		}
 
-		// Token: 0x06046170 RID: 287088 RVA: 0x0117D8D0 File Offset: 0x0117BAD0
+		// Token: 0x0603C377 RID: 246647 RVA: 0x011271C0 File Offset: 0x011253C0
 		[NullableContext(2)]
 		public virtual int SetTimeScale(int priority, float timeDilation, UCurveFloat curve, float duration, ETimeScaleSourceType sourceType, bool needAddSceneItemTag = false, bool immuneSelfCenter = false)
 		{
 			return this.SetTimeScaleInternal(priority, timeDilation, curve, duration, sourceType, needAddSceneItemTag, immuneSelfCenter);
 		}
 
-		// Token: 0x06046171 RID: 287089 RVA: 0x0117D8E4 File Offset: 0x0117BAE4
+		// Token: 0x0603C378 RID: 246648 RVA: 0x011271D4 File Offset: 0x011253D4
 		private void RemoveTimeScaleInternal(int id)
 		{
 			TimeScale timeScale;
@@ -160,13 +159,13 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x06046172 RID: 287090 RVA: 0x0117D908 File Offset: 0x0117BB08
+		// Token: 0x0603C379 RID: 246649 RVA: 0x011271F8 File Offset: 0x011253F8
 		public virtual void RemoveTimeScale(int id)
 		{
 			this.RemoveTimeScaleInternal(id);
 		}
 
-		// Token: 0x06046173 RID: 287091 RVA: 0x0117D914 File Offset: 0x0117BB14
+		// Token: 0x0603C37A RID: 246650 RVA: 0x01127204 File Offset: 0x01125404
 		public void RemoveAllTimeScale()
 		{
 			foreach (TimeScale timeScale in this.TimeScaleMap.Values)
@@ -175,7 +174,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x06046174 RID: 287092 RVA: 0x0117D96C File Offset: 0x0117BB6C
+		// Token: 0x0603C37B RID: 246651 RVA: 0x0112725C File Offset: 0x0112545C
 		public virtual int SetForeverTimeScale(ETimeScaleSourceType type, float timeScale, int priority = 0, bool refreshImmediately = false)
 		{
 			ETimeScaleSourceGroup sourceGroup = PawnTimeScaleComponent.getSourceGroup(type);
@@ -199,7 +198,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return foreverTimeScale.Id;
 		}
 
-		// Token: 0x06046175 RID: 287093 RVA: 0x0117D9FC File Offset: 0x0117BBFC
+		// Token: 0x0603C37C RID: 246652 RVA: 0x011272EC File Offset: 0x011254EC
 		public virtual void RemoveForeverTimeScale(int id, bool refreshImmediately = false)
 		{
 			ForeverTimeScale foreverTimeScale;
@@ -214,7 +213,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x06046176 RID: 287094 RVA: 0x0117DA58 File Offset: 0x0117BC58
+		// Token: 0x0603C37D RID: 246653 RVA: 0x01127348 File Offset: 0x01125548
 		public float GetForeverTimeScale(int id)
 		{
 			ForeverTimeScale foreverTimeScale2;
@@ -226,7 +225,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return foreverTimeScale.TimeDilation;
 		}
 
-		// Token: 0x06046177 RID: 287095 RVA: 0x0117DA8C File Offset: 0x0117BC8C
+		// Token: 0x0603C37E RID: 246654 RVA: 0x0112737C File Offset: 0x0112557C
 		[NullableContext(2)]
 		public virtual void SetTimeScaleTicking(bool enable, string reason = null)
 		{
@@ -244,8 +243,8 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x17009C15 RID: 39957
-		// (get) Token: 0x06046178 RID: 287096 RVA: 0x0117DB03 File Offset: 0x0117BD03
+		// Token: 0x170071A7 RID: 29095
+		// (get) Token: 0x0603C37F RID: 246655 RVA: 0x011273F3 File Offset: 0x011255F3
 		public float CurrentTimeScale
 		{
 			get
@@ -254,8 +253,8 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x17009C16 RID: 39958
-		// (get) Token: 0x06046179 RID: 287097 RVA: 0x0117DB0B File Offset: 0x0117BD0B
+		// Token: 0x170071A8 RID: 29096
+		// (get) Token: 0x0603C380 RID: 246656 RVA: 0x011273FB File Offset: 0x011255FB
 		public float FreezeTimeScale
 		{
 			get
@@ -264,20 +263,20 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x0604617A RID: 287098 RVA: 0x0117DB13 File Offset: 0x0117BD13
+		// Token: 0x0603C381 RID: 246657 RVA: 0x01127403 File Offset: 0x01125603
 		[NullableContext(2)]
 		private int SetLocalTimeScale(int priority, float timeDilation, UCurveFloat curve, float duration, ETimeScaleSourceType sourceType, bool needAddSceneItemTag = false, bool immuneSelfCenter = false)
 		{
 			return this.SetTimeScaleInternal(priority, timeDilation, curve, duration, sourceType, needAddSceneItemTag, immuneSelfCenter);
 		}
 
-		// Token: 0x0604617B RID: 287099 RVA: 0x0117DB26 File Offset: 0x0117BD26
+		// Token: 0x0603C382 RID: 246658 RVA: 0x01127416 File Offset: 0x01125616
 		private void ResetLocalTimeScale(int id)
 		{
 			this.RemoveTimeScaleInternal(id);
 		}
 
-		// Token: 0x0604617C RID: 287100 RVA: 0x0117DB30 File Offset: 0x0117BD30
+		// Token: 0x0603C383 RID: 246659 RVA: 0x01127420 File Offset: 0x01125620
 		private void SetKeyedTimeScaleLock(string key, ETimeScaleSourceType sourceType, float scale, bool refreshImmediately = false, bool needImmuneCheck = false)
 		{
 			PawnTimeScaleComponent.KeyedTimeScaleLock keyedTimeScaleLock;
@@ -310,7 +309,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x0604617D RID: 287101 RVA: 0x0117DBE8 File Offset: 0x0117BDE8
+		// Token: 0x0603C384 RID: 246660 RVA: 0x011274D8 File Offset: 0x011256D8
 		private void ResetKeyedTimeScaleLock(string key, bool refreshImmediately = false)
 		{
 			PawnTimeScaleComponent.KeyedTimeScaleLock keyedTimeScaleLock;
@@ -329,7 +328,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x0604617E RID: 287102 RVA: 0x0117DC38 File Offset: 0x0117BE38
+		// Token: 0x0603C385 RID: 246661 RVA: 0x01127528 File Offset: 0x01125728
 		public void AddPauseLock(string key)
 		{
 			this.SetKeyedTimeScaleLock(key, ETimeScaleSourceType.InnerPauseLock, 0f, false, true);
@@ -337,17 +336,19 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			this.PauseLocks[key] = (this.KeyedTimeScaleLocks.TryGetValue(key, out keyedTimeScaleLock) ? keyedTimeScaleLock.Handle : -1);
 		}
 
-		// Token: 0x0604617F RID: 287103 RVA: 0x0117DC7A File Offset: 0x0117BE7A
+		// Token: 0x0603C386 RID: 246662 RVA: 0x0112756A File Offset: 0x0112576A
 		public void RemovePauseLock(string key)
 		{
 			this.ResetKeyedTimeScaleLock(key, false);
 			this.PauseLocks.Remove(key);
 		}
 
-		// Token: 0x06046180 RID: 287104 RVA: 0x0117DC94 File Offset: 0x0117BE94
+		// Token: 0x0603C387 RID: 246663 RVA: 0x01127584 File Offset: 0x01125784
 		public void ImmunePauseLock()
 		{
-			foreach (string key in this.PauseLocks.Keys.ToList<string>())
+			string[] array = new string[this.PauseLocks.Count];
+			this.PauseLocks.Keys.CopyTo(array, 0);
+			foreach (string key in array)
 			{
 				PawnTimeScaleComponent.KeyedTimeScaleLock keyedTimeScaleLock;
 				if (this.KeyedTimeScaleLocks.TryGetValue(key, out keyedTimeScaleLock) && keyedTimeScaleLock.Handle >= 0)
@@ -360,10 +361,12 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x06046181 RID: 287105 RVA: 0x0117DD30 File Offset: 0x0117BF30
+		// Token: 0x0603C388 RID: 246664 RVA: 0x01127614 File Offset: 0x01125814
 		public void ResumePauseLock()
 		{
-			foreach (string key in this.PauseLocks.Keys.ToList<string>())
+			string[] array = new string[this.PauseLocks.Count];
+			this.PauseLocks.Keys.CopyTo(array, 0);
+			foreach (string key in array)
 			{
 				this.SetKeyedTimeScaleLock(key, ETimeScaleSourceType.InnerPauseLock, 0f, false, true);
 				PawnTimeScaleComponent.KeyedTimeScaleLock keyedTimeScaleLock;
@@ -371,13 +374,13 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x06046182 RID: 287106 RVA: 0x0117DDBC File Offset: 0x0117BFBC
+		// Token: 0x0603C389 RID: 246665 RVA: 0x0112768E File Offset: 0x0112588E
 		public bool HasPauseLock()
 		{
 			return this.PauseLocks.Count > 0;
 		}
 
-		// Token: 0x06046183 RID: 287107 RVA: 0x0117DDCC File Offset: 0x0117BFCC
+		// Token: 0x0603C38A RID: 246666 RVA: 0x011276A0 File Offset: 0x011258A0
 		public void AddNormalizeTimeScaleLock(string key, bool refreshImmediately = false)
 		{
 			this.SetKeyedTimeScaleLock(key, ETimeScaleSourceType.InnerNormalizeTimeScaleLock, 1f, refreshImmediately, false);
@@ -385,38 +388,38 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			this.NormalizeTimeScaleLocks[key] = (this.KeyedTimeScaleLocks.TryGetValue(key, out keyedTimeScaleLock) ? keyedTimeScaleLock.Handle : -1);
 		}
 
-		// Token: 0x06046184 RID: 287108 RVA: 0x0117DE0E File Offset: 0x0117C00E
+		// Token: 0x0603C38B RID: 246667 RVA: 0x011276E2 File Offset: 0x011258E2
 		public void RemoveNormalizeTimeScaleLock(string key, bool refreshImmediately = false)
 		{
 			this.ResetKeyedTimeScaleLock(key, refreshImmediately);
 			this.NormalizeTimeScaleLocks.Remove(key);
 		}
 
-		// Token: 0x06046185 RID: 287109 RVA: 0x0117DE25 File Offset: 0x0117C025
+		// Token: 0x0603C38C RID: 246668 RVA: 0x011276F9 File Offset: 0x011258F9
 		public void AddForceTimeScale(float scale, string key, bool refreshImmediately = false, ETimeScaleSourceType sourceType = ETimeScaleSourceType.InnerForceTimeScale)
 		{
 			this.SetKeyedTimeScaleLock(key, sourceType, scale, refreshImmediately, false);
 		}
 
-		// Token: 0x06046186 RID: 287110 RVA: 0x0117DE33 File Offset: 0x0117C033
+		// Token: 0x0603C38D RID: 246669 RVA: 0x01127707 File Offset: 0x01125907
 		public void RemoveForceTimeScale(string key, bool refreshImmediately = false)
 		{
 			this.ResetKeyedTimeScaleLock(key, refreshImmediately);
 		}
 
-		// Token: 0x06046187 RID: 287111 RVA: 0x0117DE3D File Offset: 0x0117C03D
+		// Token: 0x0603C38E RID: 246670 RVA: 0x01127711 File Offset: 0x01125911
 		public void AddDelayLock(string key)
 		{
 			this.AddNormalizeTimeScaleLock(key, false);
 		}
 
-		// Token: 0x06046188 RID: 287112 RVA: 0x0117DE47 File Offset: 0x0117C047
+		// Token: 0x0603C38F RID: 246671 RVA: 0x0112771B File Offset: 0x0112591B
 		public void RemoveDelayLock(string key)
 		{
 			this.RemoveNormalizeTimeScaleLock(key, false);
 		}
 
-		// Token: 0x06046189 RID: 287113 RVA: 0x0117DE54 File Offset: 0x0117C054
+		// Token: 0x0603C390 RID: 246672 RVA: 0x01127728 File Offset: 0x01125928
 		public float GetTopForeverTimeScale(ESourceEffectGroup? effectGroup = null)
 		{
 			ForeverTimeScale topForeverTimeScaleConfig = this.GetTopForeverTimeScaleConfig(effectGroup);
@@ -427,7 +430,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return topForeverTimeScaleConfig.TimeDilation;
 		}
 
-		// Token: 0x0604618A RID: 287114 RVA: 0x0117DE78 File Offset: 0x0117C078
+		// Token: 0x0603C391 RID: 246673 RVA: 0x0112774C File Offset: 0x0112594C
 		[return: Nullable(2)]
 		public ForeverTimeScale GetTopForeverTimeScaleByList(PriorityQueue<ForeverTimeScale> list)
 		{
@@ -448,7 +451,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return null;
 		}
 
-		// Token: 0x0604618B RID: 287115 RVA: 0x0117DEC0 File Offset: 0x0117C0C0
+		// Token: 0x0603C392 RID: 246674 RVA: 0x01127794 File Offset: 0x01125994
 		[NullableContext(2)]
 		public ForeverTimeScale GetTopForeverTimeScaleConfig(ESourceEffectGroup? effectGroup = null)
 		{
@@ -480,7 +483,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x0604618C RID: 287116 RVA: 0x0117DF2C File Offset: 0x0117C12C
+		// Token: 0x0603C393 RID: 246675 RVA: 0x01127800 File Offset: 0x01125A00
 		public string GetDebugString()
 		{
 			string text = "";
@@ -518,7 +521,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return text;
 		}
 
-		// Token: 0x0604618D RID: 287117 RVA: 0x0117E038 File Offset: 0x0117C238
+		// Token: 0x0603C394 RID: 246676 RVA: 0x0112790C File Offset: 0x01125B0C
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -526,98 +529,101 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 				return false;
 			}
 			PawnTimeScaleComponent pawnTimeScaleComponent = (PawnTimeScaleComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (pawnTimeScaleComponent.ActorComp == null)
 			{
-				if (pawnTimeScaleComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("HitComp"))
-			{
-				if (pawnTimeScaleComponent.HitComp == null)
-				{
-					this.HitComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterHitComponent>(this.HitComp), "HitComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TimeScaleInternal"))
-			{
-				this.TimeScaleInternal = pawnTimeScaleComponent.TimeScaleInternal;
-			}
-			if (base.CanResetComponentProperty("DisableHandle"))
-			{
-				this.DisableHandle = pawnTimeScaleComponent.DisableHandle;
-			}
-			if (base.CanResetComponentProperty("FreezeTimeScaleInternal"))
-			{
-				this.FreezeTimeScaleInternal = pawnTimeScaleComponent.FreezeTimeScaleInternal;
-			}
-			if (base.CanResetComponentProperty("BulletHitDiscount"))
-			{
-				this.BulletHitDiscount = pawnTimeScaleComponent.BulletHitDiscount;
-			}
-			if (base.CanResetComponentProperty("TimeScaleList") && pawnTimeScaleComponent.TimeScaleList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<PriorityQueue<TimeScale>>(this.TimeScaleList), "TimeScaleList"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TimeScaleMap") && pawnTimeScaleComponent.TimeScaleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, TimeScale>>(this.TimeScaleMap), "TimeScaleMap"))
+			if (pawnTimeScaleComponent.HitComp == null)
+			{
+				this.HitComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitComp), "HitComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TimeScaleId"))
-			{
-				this.TimeScaleId = pawnTimeScaleComponent.TimeScaleId;
-			}
-			if (base.CanResetComponentProperty("ForeverTimeScaleLogicView") && pawnTimeScaleComponent.ForeverTimeScaleLogicView != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<PriorityQueue<ForeverTimeScale>>(this.ForeverTimeScaleLogicView), "ForeverTimeScaleLogicView"))
-			{
-				return false;
-			}
-			if (base.CanResetComponentProperty("ForeverTimeScaleViewOnly") && pawnTimeScaleComponent.ForeverTimeScaleViewOnly != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<PriorityQueue<ForeverTimeScale>>(this.ForeverTimeScaleViewOnly), "ForeverTimeScaleViewOnly"))
+			this.TimeScaleInternal = pawnTimeScaleComponent.TimeScaleInternal;
+			this.DisableHandle = pawnTimeScaleComponent.DisableHandle;
+			this.FreezeTimeScaleInternal = pawnTimeScaleComponent.FreezeTimeScaleInternal;
+			this.BulletHitDiscount = pawnTimeScaleComponent.BulletHitDiscount;
+			if (pawnTimeScaleComponent.TimeScaleList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimeScaleList), "TimeScaleList"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ForeverTimeScaleMap") && pawnTimeScaleComponent.ForeverTimeScaleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, ForeverTimeScale>>(this.ForeverTimeScaleMap), "ForeverTimeScaleMap"))
+			if (pawnTimeScaleComponent.TimeScaleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimeScaleMap), "TimeScaleMap"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("KeyedTimeScaleLocks") && pawnTimeScaleComponent.KeyedTimeScaleLocks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, PawnTimeScaleComponent.KeyedTimeScaleLock>>(this.KeyedTimeScaleLocks), "KeyedTimeScaleLocks"))
+			this.TimeScaleId = pawnTimeScaleComponent.TimeScaleId;
+			if (pawnTimeScaleComponent.ForeverTimeScaleLogicView != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ForeverTimeScaleLogicView), "ForeverTimeScaleLogicView"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("PauseLocks"))
+			if (pawnTimeScaleComponent.ForeverTimeScaleViewOnly != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ForeverTimeScaleViewOnly), "ForeverTimeScaleViewOnly"))
 			{
-				if (pawnTimeScaleComponent.PauseLocks == null)
-				{
-					this.PauseLocks = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, int>>(this.PauseLocks), "PauseLocks"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("NormalizeTimeScaleLocks"))
+			if (pawnTimeScaleComponent.ForeverTimeScaleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ForeverTimeScaleMap), "ForeverTimeScaleMap"))
 			{
-				if (pawnTimeScaleComponent.NormalizeTimeScaleLocks == null)
-				{
-					this.NormalizeTimeScaleLocks = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, int>>(this.NormalizeTimeScaleLocks), "NormalizeTimeScaleLocks"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (pawnTimeScaleComponent.KeyedTimeScaleLocks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.KeyedTimeScaleLocks), "KeyedTimeScaleLocks"))
+			{
+				return false;
+			}
+			if (pawnTimeScaleComponent.PauseLocks == null)
+			{
+				this.PauseLocks = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PauseLocks), "PauseLocks"))
+			{
+				return false;
+			}
+			if (pawnTimeScaleComponent.NormalizeTimeScaleLocks == null)
+			{
+				this.NormalizeTimeScaleLocks = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.NormalizeTimeScaleLocks), "NormalizeTimeScaleLocks"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x0604618E RID: 287118 RVA: 0x0117E2D0 File Offset: 0x0117C4D0
+		// Token: 0x170071A9 RID: 29097
+		// (get) Token: 0x0603C395 RID: 246677 RVA: 0x01127AE0 File Offset: 0x01125CE0
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071AA RID: 29098
+		// (get) Token: 0x0603C396 RID: 246678 RVA: 0x01127AE3 File Offset: 0x01125CE3
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071AB RID: 29099
+		// (get) Token: 0x0603C397 RID: 246679 RVA: 0x01127AE6 File Offset: 0x01125CE6
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0603C398 RID: 246680 RVA: 0x01127AEC File Offset: 0x01125CEC
 		public PawnTimeScaleComponent()
 		{
 			Comparison<TimeScale> compare;
@@ -647,7 +653,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			base..ctor();
 		}
 
-		// Token: 0x0604618F RID: 287119 RVA: 0x0117E3B4 File Offset: 0x0117C5B4
+		// Token: 0x0603C399 RID: 246681 RVA: 0x01127BD0 File Offset: 0x01125DD0
 		// Note: this type is marked as 'beforefieldinit'.
 		unsafe static PawnTimeScaleComponent()
 		{
@@ -771,86 +777,86 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			PawnTimeScaleComponent.sourceTypeGroup = dictionary2;
 		}
 
-		// Token: 0x04024B6B RID: 150379
+		// Token: 0x0401FE26 RID: 130598
 		private const float LIMIT_SCALE = 0f;
 
-		// Token: 0x04024B6C RID: 150380
+		// Token: 0x0401FE27 RID: 130599
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<ESourceEffectGroup, List<ETimeScaleSourceType>> sourceEffectGroup;
 
-		// Token: 0x04024B6D RID: 150381
+		// Token: 0x0401FE28 RID: 130600
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<ETimeScaleSourceGroup, List<ETimeScaleSourceType>> sourceTypeGroup;
 
-		// Token: 0x04024B6E RID: 150382
+		// Token: 0x0401FE29 RID: 130601
 		[Nullable(2)]
 		protected BaseActorComponent ActorComp;
 
-		// Token: 0x04024B6F RID: 150383
+		// Token: 0x0401FE2A RID: 130602
 		[Nullable(2)]
 		private CharacterHitComponent HitComp;
 
-		// Token: 0x04024B70 RID: 150384
+		// Token: 0x0401FE2B RID: 130603
 		protected float TimeScaleInternal = 1f;
 
-		// Token: 0x04024B71 RID: 150385
+		// Token: 0x0401FE2C RID: 130604
 		protected int? DisableHandle;
 
-		// Token: 0x04024B72 RID: 150386
+		// Token: 0x0401FE2D RID: 130605
 		protected float FreezeTimeScaleInternal = 1f;
 
-		// Token: 0x04024B73 RID: 150387
+		// Token: 0x0401FE2E RID: 130606
 		private float BulletHitDiscount = 1f;
 
-		// Token: 0x04024B74 RID: 150388
+		// Token: 0x0401FE2F RID: 130607
 		protected readonly PriorityQueue<TimeScale> TimeScaleList;
 
-		// Token: 0x04024B75 RID: 150389
+		// Token: 0x0401FE30 RID: 130608
 		protected readonly Dictionary<int, TimeScale> TimeScaleMap;
 
-		// Token: 0x04024B76 RID: 150390
+		// Token: 0x0401FE31 RID: 130609
 		private int TimeScaleId;
 
-		// Token: 0x04024B77 RID: 150391
+		// Token: 0x0401FE32 RID: 130610
 		protected readonly PriorityQueue<ForeverTimeScale> ForeverTimeScaleLogicView;
 
-		// Token: 0x04024B78 RID: 150392
+		// Token: 0x0401FE33 RID: 130611
 		protected readonly PriorityQueue<ForeverTimeScale> ForeverTimeScaleViewOnly;
 
-		// Token: 0x04024B79 RID: 150393
+		// Token: 0x0401FE34 RID: 130612
 		protected readonly Dictionary<int, ForeverTimeScale> ForeverTimeScaleMap;
 
-		// Token: 0x04024B7A RID: 150394
+		// Token: 0x0401FE35 RID: 130613
 		private readonly Dictionary<string, PawnTimeScaleComponent.KeyedTimeScaleLock> KeyedTimeScaleLocks;
 
-		// Token: 0x04024B7B RID: 150395
+		// Token: 0x0401FE36 RID: 130614
 		protected Dictionary<string, int> PauseLocks;
 
-		// Token: 0x04024B7C RID: 150396
+		// Token: 0x0401FE37 RID: 130615
 		protected Dictionary<string, int> NormalizeTimeScaleLocks;
 
-		// Token: 0x0200CE34 RID: 52788
+		// Token: 0x0200BA25 RID: 47653
 		[NullableContext(0)]
 		private class KeyedTimeScaleLock
 		{
-			// Token: 0x0403E1A2 RID: 254370
+			// Token: 0x040395CD RID: 234957
 			public int Handle;
 
-			// Token: 0x0403E1A3 RID: 254371
+			// Token: 0x040395CE RID: 234958
 			public float Scale;
 
-			// Token: 0x0403E1A4 RID: 254372
+			// Token: 0x040395CF RID: 234959
 			public ETimeScaleSourceType SourceType;
 
-			// Token: 0x0403E1A5 RID: 254373
+			// Token: 0x040395D0 RID: 234960
 			public bool NeedImmuneCheck;
 		}
 
-		// Token: 0x0200CE35 RID: 52789
+		// Token: 0x0200BA26 RID: 47654
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403E1A6 RID: 254374
+			// Token: 0x040395D1 RID: 234961
 			[Nullable(new byte[]
 			{
 				0,
@@ -858,7 +864,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			})]
 			public static Comparison<TimeScale> <0>__CompareScalePriority;
 
-			// Token: 0x0403E1A7 RID: 254375
+			// Token: 0x040395D2 RID: 234962
 			[Nullable(new byte[]
 			{
 				0,

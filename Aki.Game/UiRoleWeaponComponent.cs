@@ -6,12 +6,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.RoleUi;
 using UnrealEngine;
 
-// Token: 0x02002CBA RID: 11450
+// Token: 0x02002213 RID: 8723
 [NullableContext(1)]
 [Nullable(0)]
 public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiModelSetDitherEffect, IUiModelSetPlanarReflectionRenderOffset
 {
-	// Token: 0x06017EE0 RID: 98016 RVA: 0x00615CB4 File Offset: 0x00613EB4
+	// Token: 0x06015759 RID: 87897 RVA: 0x0063B970 File Offset: 0x00639B70
 	protected override void OnInit()
 	{
 		this.RoleDataComponent = base.Owner.CheckGetComponent<UiRoleDataComponent>();
@@ -20,7 +20,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		this.AnsControllerComponent = base.Owner.CheckGetComponent<UiModelAnsControllerComponent>();
 	}
 
-	// Token: 0x06017EE1 RID: 98017 RVA: 0x00615D08 File Offset: 0x00613F08
+	// Token: 0x0601575A RID: 87898 RVA: 0x0063B9C4 File Offset: 0x00639BC4
 	protected override void OnStart()
 	{
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnRoleMeshLoadComplete));
@@ -31,10 +31,10 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		{
 			return;
 		}
-		ansControllerComponent.RegisterAnsTrigger("UiWeaponAnsContext", new Action<UiAnsContextBase>(this.OnAnsBegin), new Action<UiAnsContextBase>(this.OnAnsEnd), null, null);
+		ansControllerComponent.RegisterAnsTrigger(typeof(UiWeaponAnsContext), new Action<UiAnsContextBase>(this.OnAnsBegin), new Action<UiAnsContextBase>(this.OnAnsEnd), null, null);
 	}
 
-	// Token: 0x06017EE2 RID: 98018 RVA: 0x00615DAC File Offset: 0x00613FAC
+	// Token: 0x0601575B RID: 87899 RVA: 0x0063BA6C File Offset: 0x00639C6C
 	protected override void OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnRoleMeshLoadComplete));
@@ -46,13 +46,13 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EE3 RID: 98019 RVA: 0x00615E64 File Offset: 0x00614064
+	// Token: 0x0601575C RID: 87900 RVA: 0x0063BB24 File Offset: 0x00639D24
 	public void OnModelDitherEffectChange(float value)
 	{
 		this.SetDitherEffect(value);
 	}
 
-	// Token: 0x06017EE4 RID: 98020 RVA: 0x00615E70 File Offset: 0x00614070
+	// Token: 0x0601575D RID: 87901 RVA: 0x0063BB30 File Offset: 0x00639D30
 	public void OnModelVisibleChange(bool visible)
 	{
 		for (int i = 0; i < this.WeaponStatesOnRole.Count; i++)
@@ -68,7 +68,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EE5 RID: 98021 RVA: 0x00615EB8 File Offset: 0x006140B8
+	// Token: 0x0601575E RID: 87902 RVA: 0x0063BB78 File Offset: 0x00639D78
 	private void TrimWeaponHandles(int targetCount)
 	{
 		for (int i = this.WeaponHandleList.Count - 1; i >= targetCount; i--)
@@ -80,7 +80,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EE6 RID: 98022 RVA: 0x00615F14 File Offset: 0x00614114
+	// Token: 0x0601575F RID: 87903 RVA: 0x0063BBD4 File Offset: 0x00639DD4
 	public void Refresh()
 	{
 		if (this.WeaponData == null)
@@ -119,7 +119,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EE7 RID: 98023 RVA: 0x00616034 File Offset: 0x00614234
+	// Token: 0x06015760 RID: 87904 RVA: 0x0063BCF4 File Offset: 0x00639EF4
 	private void SyncWeaponVisibleWhenLoaded(int weaponIndex)
 	{
 		if (weaponIndex < 0 || weaponIndex >= this.WeaponHandleList.Count)
@@ -138,7 +138,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		UiModelUtil.Instance.SetVisible(model, eweaponState == EWeaponState.Showing);
 	}
 
-	// Token: 0x06017EE8 RID: 98024 RVA: 0x006160B6 File Offset: 0x006142B6
+	// Token: 0x06015761 RID: 87905 RVA: 0x0063BD76 File Offset: 0x00639F76
 	public void OnRoleIdChange()
 	{
 		this.HideAllWeapon(false);
@@ -146,7 +146,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		this.RefreshWeaponByRole();
 	}
 
-	// Token: 0x06017EE9 RID: 98025 RVA: 0x006160CC File Offset: 0x006142CC
+	// Token: 0x06015762 RID: 87906 RVA: 0x0063BD8C File Offset: 0x00639F8C
 	public void RefreshWeaponByRole()
 	{
 		this.RefreshWeaponCase();
@@ -166,13 +166,13 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EEA RID: 98026 RVA: 0x00616140 File Offset: 0x00614340
+	// Token: 0x06015763 RID: 87907 RVA: 0x0063BE00 File Offset: 0x0063A000
 	public void OnRoleMeshLoadComplete()
 	{
 		this.AttachWeaponToRole();
 	}
 
-	// Token: 0x06017EEB RID: 98027 RVA: 0x00616148 File Offset: 0x00614348
+	// Token: 0x06015764 RID: 87908 RVA: 0x0063BE08 File Offset: 0x0063A008
 	public void ShowAllWeapon(bool addMaterialController = false)
 	{
 		for (int i = 0; i < this.WeaponHandleList.Count; i++)
@@ -181,7 +181,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EEC RID: 98028 RVA: 0x00616174 File Offset: 0x00614374
+	// Token: 0x06015765 RID: 87909 RVA: 0x0063BE34 File Offset: 0x0063A034
 	public void HideAllWeapon(bool playEffect = false)
 	{
 		for (int i = 0; i < this.WeaponHandleList.Count; i++)
@@ -190,7 +190,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EED RID: 98029 RVA: 0x006161A0 File Offset: 0x006143A0
+	// Token: 0x06015766 RID: 87910 RVA: 0x0063BE60 File Offset: 0x0063A060
 	public void ResetWeaponStatesOnRole()
 	{
 		for (int i = 0; i < this.WeaponStatesOnRole.Count; i++)
@@ -199,7 +199,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EEE RID: 98030 RVA: 0x006161D0 File Offset: 0x006143D0
+	// Token: 0x06015767 RID: 87911 RVA: 0x0063BE90 File Offset: 0x0063A090
 	public void ShowWeaponByIndex(int index, bool addMaterialController = false)
 	{
 		if (index < 0 || index >= this.WeaponHandleList.Count)
@@ -229,7 +229,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EEF RID: 98031 RVA: 0x00616288 File Offset: 0x00614488
+	// Token: 0x06015768 RID: 87912 RVA: 0x0063BF48 File Offset: 0x0063A148
 	public void HideWeaponByIndex(int index, bool playEffect = false)
 	{
 		if (index < 0 || index >= this.WeaponHandleList.Count)
@@ -259,7 +259,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EF0 RID: 98032 RVA: 0x00616340 File Offset: 0x00614540
+	// Token: 0x06015769 RID: 87913 RVA: 0x0063C000 File Offset: 0x0063A200
 	public void RefreshWeaponCase()
 	{
 		int roleConfigId = this.RoleDataComponent.RoleConfigId;
@@ -277,7 +277,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EF1 RID: 98033 RVA: 0x006163C4 File Offset: 0x006145C4
+	// Token: 0x0601576A RID: 87914 RVA: 0x0063C084 File Offset: 0x0063A284
 	public void RefreshWeaponDa()
 	{
 		if (this.WeaponData == null)
@@ -295,7 +295,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EF2 RID: 98034 RVA: 0x00616450 File Offset: 0x00614650
+	// Token: 0x0601576B RID: 87915 RVA: 0x0063C110 File Offset: 0x0063A310
 	public void AttachWeaponToRole()
 	{
 		if (this.ModelDataComponent.GetModelLoadState() != EUiModelLoadState.LoadComplete)
@@ -329,7 +329,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EF3 RID: 98035 RVA: 0x0061651C File Offset: 0x0061471C
+	// Token: 0x0601576C RID: 87916 RVA: 0x0063C1DC File Offset: 0x0063A3DC
 	private void HangWeaponByIndex(int index, FName? socketName)
 	{
 		if (index < 0 || index >= this.WeaponHandleList.Count)
@@ -356,7 +356,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		actor.K2_AttachToComponent(this.ActorComponent.MainMeshComponent, socketName ?? ((index < this.WeaponSocketNames.Count) ? FNameUtil.GetCheckDynamicFName(this.WeaponSocketNames[index]) : FName.NAME_None), EAttachmentRule.KeepRelative, EAttachmentRule.KeepRelative, EAttachmentRule.KeepRelative, false, true);
 	}
 
-	// Token: 0x06017EF4 RID: 98036 RVA: 0x006165E3 File Offset: 0x006147E3
+	// Token: 0x0601576D RID: 87917 RVA: 0x0063C2A3 File Offset: 0x0063A4A3
 	[NullableContext(2)]
 	public void SetWeaponByWeaponData(WeaponDataBase weaponData, int weaponSkinId)
 	{
@@ -369,7 +369,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		this.Refresh();
 	}
 
-	// Token: 0x06017EF5 RID: 98037 RVA: 0x00616600 File Offset: 0x00614800
+	// Token: 0x0601576E RID: 87918 RVA: 0x0063C2C0 File Offset: 0x0063A4C0
 	public void ReplaceWeaponModel(int[] modelIds, [Nullable(2)] Action loadFinishCallBack = null)
 	{
 		UiRoleWeaponComponent.<>c__DisplayClass32_0 CS$<>8__locals1 = new UiRoleWeaponComponent.<>c__DisplayClass32_0();
@@ -410,13 +410,13 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EF6 RID: 98038 RVA: 0x00616760 File Offset: 0x00614960
+	// Token: 0x0601576F RID: 87919 RVA: 0x0063C420 File Offset: 0x0063A620
 	public bool HasWeapon()
 	{
 		return this.WeaponData != null;
 	}
 
-	// Token: 0x06017EF7 RID: 98039 RVA: 0x0061676C File Offset: 0x0061496C
+	// Token: 0x06015770 RID: 87920 RVA: 0x0063C42C File Offset: 0x0063A62C
 	public void SetWeaponTransformByIndex(int index, FTransform transform)
 	{
 		if (index < 0 || index >= this.WeaponHandleList.Count)
@@ -445,7 +445,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		mainMeshComponent.K2_SetRelativeTransform(transform, false, ref fhitResult, false);
 	}
 
-	// Token: 0x06017EF8 RID: 98040 RVA: 0x006167F8 File Offset: 0x006149F8
+	// Token: 0x06015771 RID: 87921 RVA: 0x0063C4B8 File Offset: 0x0063A6B8
 	public void SetDitherEffect(float ditherRate)
 	{
 		foreach (SkeletalObserverHandle skeletalObserverHandle in this.WeaponHandleList)
@@ -459,7 +459,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EF9 RID: 98041 RVA: 0x00616860 File Offset: 0x00614A60
+	// Token: 0x06015772 RID: 87922 RVA: 0x0063C520 File Offset: 0x0063A720
 	public void OnModelPlanarReflectionRenderOffsetChange(bool enable, FVector? offset)
 	{
 		foreach (SkeletalObserverHandle skeletalObserverHandle in this.WeaponHandleList)
@@ -473,7 +473,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EFA RID: 98042 RVA: 0x006168CC File Offset: 0x00614ACC
+	// Token: 0x06015773 RID: 87923 RVA: 0x0063C58C File Offset: 0x0063A78C
 	[NullableContext(2)]
 	private void ApplyPlanarReflectionRenderOffset(UiModelBase weaponModel)
 	{
@@ -491,13 +491,13 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		uiModelDataComponent.SetPlanarReflectionRenderOffset(flag.Value, modelDataComponent.GetPlanarReflectionRenderOffset());
 	}
 
-	// Token: 0x06017EFB RID: 98043 RVA: 0x00616925 File Offset: 0x00614B25
+	// Token: 0x06015774 RID: 87924 RVA: 0x0063C5E5 File Offset: 0x0063A7E5
 	public int GetWeaponCount()
 	{
 		return this.WeaponCount;
 	}
 
-	// Token: 0x06017EFC RID: 98044 RVA: 0x00616930 File Offset: 0x00614B30
+	// Token: 0x06015775 RID: 87925 RVA: 0x0063C5F0 File Offset: 0x0063A7F0
 	public void OnAnsBegin(UiAnsContextBase ansContext)
 	{
 		UiWeaponAnsContext uiWeaponAnsContext = ansContext as UiWeaponAnsContext;
@@ -518,7 +518,7 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017EFD RID: 98045 RVA: 0x006169C4 File Offset: 0x00614BC4
+	// Token: 0x06015776 RID: 87926 RVA: 0x0063C684 File Offset: 0x0063A884
 	public void OnAnsEnd(UiAnsContextBase ansContext)
 	{
 		UiWeaponAnsContext uiWeaponAnsContext = ansContext as UiWeaponAnsContext;
@@ -535,41 +535,41 @@ public class UiRoleWeaponComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x0400B266 RID: 45670
+	// Token: 0x0400B5D1 RID: 46545
 	[Nullable(2)]
 	private UiModelDataComponent ModelDataComponent;
 
-	// Token: 0x0400B267 RID: 45671
+	// Token: 0x0400B5D2 RID: 46546
 	[Nullable(2)]
 	private UiRoleDataComponent RoleDataComponent;
 
-	// Token: 0x0400B268 RID: 45672
+	// Token: 0x0400B5D3 RID: 46547
 	[Nullable(2)]
 	private UiModelActorComponent ActorComponent;
 
-	// Token: 0x0400B269 RID: 45673
+	// Token: 0x0400B5D4 RID: 46548
 	[Nullable(2)]
 	private UiModelAnsControllerComponent AnsControllerComponent;
 
-	// Token: 0x0400B26A RID: 45674
+	// Token: 0x0400B5D5 RID: 46549
 	[Nullable(2)]
 	private WeaponDataBase WeaponData;
 
-	// Token: 0x0400B26B RID: 45675
+	// Token: 0x0400B5D6 RID: 46550
 	private int WeaponSkinId = -1;
 
-	// Token: 0x0400B26C RID: 45676
+	// Token: 0x0400B5D7 RID: 46551
 	private readonly List<SkeletalObserverHandle> WeaponHandleList = new List<SkeletalObserverHandle>();
 
-	// Token: 0x0400B26D RID: 45677
+	// Token: 0x0400B5D8 RID: 46552
 	private int WeaponCount;
 
-	// Token: 0x0400B26E RID: 45678
+	// Token: 0x0400B5D9 RID: 46553
 	private readonly List<string> WeaponSocketNames = new List<string>();
 
-	// Token: 0x0400B26F RID: 45679
+	// Token: 0x0400B5DA RID: 46554
 	private readonly List<EWeaponState> WeaponStateList = new List<EWeaponState>();
 
-	// Token: 0x0400B270 RID: 45680
+	// Token: 0x0400B5DB RID: 46555
 	private readonly List<bool> WeaponStatesOnRole = new List<bool>();
 }

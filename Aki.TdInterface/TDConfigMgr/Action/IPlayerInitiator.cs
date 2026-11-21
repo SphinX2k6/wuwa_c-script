@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D04 RID: 7428
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F15 RID: 7957
 	public class IPlayerInitiator : INpcGroupPerformInitiatorType
 	{
-		// Token: 0x06009F6F RID: 40815 RVA: 0x0016C398 File Offset: 0x0016A598
+		// Token: 0x0600A959 RID: 43353 RVA: 0x00180738 File Offset: 0x0017E938
 		private IPlayerInitiator_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009F70 RID: 40816 RVA: 0x0016C3D0 File Offset: 0x0016A5D0
+		// Token: 0x0600A95A RID: 43354 RVA: 0x00180770 File Offset: 0x0017E970
 		public static IPlayerInitiator Create([Nullable(2)] IPlayerInitiator instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009F71 RID: 40817 RVA: 0x0016C3E3 File Offset: 0x0016A5E3
+		// Token: 0x0600A95B RID: 43355 RVA: 0x00180783 File Offset: 0x0017E983
 		public static IPlayerInitiator CreateFromSetValue([Nullable(2)] IPlayerInitiator_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009F72 RID: 40818 RVA: 0x0016C3F6 File Offset: 0x0016A5F6
+		// Token: 0x0600A95C RID: 43356 RVA: 0x00180796 File Offset: 0x0017E996
 		public new IPlayerInitiator_SetValue ToSetValue()
 		{
 			return new IPlayerInitiator_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003188 RID: 12680
-		// (get) Token: 0x06009F73 RID: 40819 RVA: 0x0016C409 File Offset: 0x0016A609
-		// (set) Token: 0x06009F74 RID: 40820 RVA: 0x0016C434 File Offset: 0x0016A634
+		// Token: 0x1700341B RID: 13339
+		// (get) Token: 0x0600A95D RID: 43357 RVA: 0x001807A9 File Offset: 0x0017E9A9
+		// (set) Token: 0x0600A95E RID: 43358 RVA: 0x001807D4 File Offset: 0x0017E9D4
 		public override ENpcGroupPerformInitiatorType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400603B RID: 24635
+		// Token: 0x040065B4 RID: 26036
 		[Nullable(2)]
 		protected new IPlayerInitiator FbInstance;
 
-		// Token: 0x0400603C RID: 24636
+		// Token: 0x040065B5 RID: 26037
 		[Nullable(2)]
 		protected new IPlayerInitiator_SetValue PocoInterface;
 	}

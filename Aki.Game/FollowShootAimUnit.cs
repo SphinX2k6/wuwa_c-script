@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001F46 RID: 8006
+// Token: 0x02001408 RID: 5128
 public class FollowShootAimUnit : HudUnitBase
 {
-	// Token: 0x0600F77A RID: 63354 RVA: 0x003BDA38 File Offset: 0x003BBC38
+	// Token: 0x0600CB99 RID: 52121 RVA: 0x003C9524 File Offset: 0x003C7724
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -39,7 +39,7 @@ public class FollowShootAimUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F77B RID: 63355 RVA: 0x003BDBD0 File Offset: 0x003BBDD0
+	// Token: 0x0600CB9A RID: 52122 RVA: 0x003C96BC File Offset: 0x003C78BC
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -51,7 +51,7 @@ public class FollowShootAimUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F77C RID: 63356 RVA: 0x003BDC14 File Offset: 0x003BBE14
+	// Token: 0x0600CB9B RID: 52123 RVA: 0x003C9700 File Offset: 0x003C7900
 	public void RefreshState(bool isYellow, bool bForce = false)
 	{
 		if (this.IsYellowState == isYellow && !bForce)
@@ -67,7 +67,7 @@ public class FollowShootAimUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F77D RID: 63357 RVA: 0x003BDC8C File Offset: 0x003BBE8C
+	// Token: 0x0600CB9C RID: 52124 RVA: 0x003C9778 File Offset: 0x003C7978
 	public void SetIsAimTarget(bool isAimTarget)
 	{
 		if (this.IsAimTarget == isAimTarget)
@@ -85,40 +85,40 @@ public class FollowShootAimUnit : HudUnitBase
 		base.PlayTweenAnim(10);
 	}
 
-	// Token: 0x040072C1 RID: 29377
+	// Token: 0x040073A2 RID: 29602
 	[Nullable(1)]
 	private readonly List<UUIItem> IconList = new List<UUIItem>();
 
-	// Token: 0x040072C2 RID: 29378
+	// Token: 0x040073A3 RID: 29603
 	private bool IsYellowState;
 
-	// Token: 0x040072C3 RID: 29379
+	// Token: 0x040073A4 RID: 29604
 	private bool IsAimTarget;
 
-	// Token: 0x02008535 RID: 34101
+	// Token: 0x020076BA RID: 30394
 	private enum EChildType
 	{
-		// Token: 0x0402B5DF RID: 177631
+		// Token: 0x04026903 RID: 157955
 		AimTexture1,
-		// Token: 0x0402B5E0 RID: 177632
+		// Token: 0x04026904 RID: 157956
 		AimTexture2,
-		// Token: 0x0402B5E1 RID: 177633
+		// Token: 0x04026905 RID: 157957
 		AimTexture3,
-		// Token: 0x0402B5E2 RID: 177634
+		// Token: 0x04026906 RID: 157958
 		AimTexture4,
-		// Token: 0x0402B5E3 RID: 177635
+		// Token: 0x04026907 RID: 157959
 		AimTexture5,
-		// Token: 0x0402B5E4 RID: 177636
+		// Token: 0x04026908 RID: 157960
 		AimTexture6,
-		// Token: 0x0402B5E5 RID: 177637
+		// Token: 0x04026909 RID: 157961
 		AimTexture7,
-		// Token: 0x0402B5E6 RID: 177638
+		// Token: 0x0402690A RID: 157962
 		AimTexture8,
-		// Token: 0x0402B5E7 RID: 177639
+		// Token: 0x0402690B RID: 157963
 		AimTexture9,
-		// Token: 0x0402B5E8 RID: 177640
+		// Token: 0x0402690C RID: 157964
 		AnimStart,
-		// Token: 0x0402B5E9 RID: 177641
+		// Token: 0x0402690D RID: 157965
 		AnimStop
 	}
 }

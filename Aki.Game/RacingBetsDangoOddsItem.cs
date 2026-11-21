@@ -5,7 +5,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002710 RID: 10000
+// Token: 0x02001BFB RID: 7163
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class RacingBetsDangoOddsItem : GridProxyAbstract<IRacingBetsDangoActorData>
 {
-	// Token: 0x060147F6 RID: 83958 RVA: 0x0052D42C File Offset: 0x0052B62C
+	// Token: 0x06011CD8 RID: 72920 RVA: 0x0053C148 File Offset: 0x0053A348
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class RacingBetsDangoOddsItem : GridProxyAbstract<IRacingBetsDangoActorDa
 		};
 	}
 
-	// Token: 0x060147F7 RID: 83959 RVA: 0x0052D4BF File Offset: 0x0052B6BF
+	// Token: 0x06011CD9 RID: 72921 RVA: 0x0053C1DB File Offset: 0x0053A3DB
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -41,13 +41,13 @@ public class RacingBetsDangoOddsItem : GridProxyAbstract<IRacingBetsDangoActorDa
 		extendToggle.CanExecuteChange.Bind(new Func<bool>(this.CanToggleExecuteChange));
 	}
 
-	// Token: 0x060147F8 RID: 83960 RVA: 0x0052D4E3 File Offset: 0x0052B6E3
+	// Token: 0x06011CDA RID: 72922 RVA: 0x0053C1FF File Offset: 0x0053A3FF
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add(EEventName.OnRacingBetsDangoOddsUpdate, new Action(this.OnRacingBetsDangoOddsUpdate));
 	}
 
-	// Token: 0x060147F9 RID: 83961 RVA: 0x0052D504 File Offset: 0x0052B704
+	// Token: 0x06011CDB RID: 72923 RVA: 0x0053C220 File Offset: 0x0053A420
 	public override void Refresh(IRacingBetsDangoActorData data, bool isSelected, int gridIndex)
 	{
 		this.DangoOddsData = data;
@@ -61,13 +61,13 @@ public class RacingBetsDangoOddsItem : GridProxyAbstract<IRacingBetsDangoActorDa
 		this.RefreshSelect(false);
 	}
 
-	// Token: 0x060147FA RID: 83962 RVA: 0x0052D572 File Offset: 0x0052B772
+	// Token: 0x06011CDC RID: 72924 RVA: 0x0053C28E File Offset: 0x0053A48E
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRacingBetsDangoOddsUpdate, new Action(this.OnRacingBetsDangoOddsUpdate));
 	}
 
-	// Token: 0x060147FB RID: 83963 RVA: 0x0052D590 File Offset: 0x0052B790
+	// Token: 0x06011CDD RID: 72925 RVA: 0x0053C2AC File Offset: 0x0053A4AC
 	public void RefreshOddsDango(int dangoId)
 	{
 		UUIItem item = base.GetItem(3);
@@ -78,19 +78,19 @@ public class RacingBetsDangoOddsItem : GridProxyAbstract<IRacingBetsDangoActorDa
 		item.SetUIActive(dangoId == this.DangoOddsData.DangoId);
 	}
 
-	// Token: 0x060147FC RID: 83964 RVA: 0x0052D5B1 File Offset: 0x0052B7B1
+	// Token: 0x06011CDE RID: 72926 RVA: 0x0053C2CD File Offset: 0x0053A4CD
 	public override void OnSelected(bool fireEvent)
 	{
 		this.RefreshSelect(true);
 	}
 
-	// Token: 0x060147FD RID: 83965 RVA: 0x0052D5BA File Offset: 0x0052B7BA
+	// Token: 0x06011CDF RID: 72927 RVA: 0x0053C2D6 File Offset: 0x0053A4D6
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.RefreshSelect(false);
 	}
 
-	// Token: 0x060147FE RID: 83966 RVA: 0x0052D5C3 File Offset: 0x0052B7C3
+	// Token: 0x06011CE0 RID: 72928 RVA: 0x0053C2DF File Offset: 0x0053A4DF
 	private void RefreshSelect(bool isSelected)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -101,13 +101,13 @@ public class RacingBetsDangoOddsItem : GridProxyAbstract<IRacingBetsDangoActorDa
 		extendToggle.SetToggleStateForce(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x060147FF RID: 83967 RVA: 0x0052D5E0 File Offset: 0x0052B7E0
+	// Token: 0x06011CE1 RID: 72929 RVA: 0x0053C2FC File Offset: 0x0053A4FC
 	public void BindClickGearItemCallBack(Action<IRacingBetsDangoActorData> clickDangoOddsItemCallBack)
 	{
 		this.ClickDangoOddsItemCallBack = clickDangoOddsItemCallBack;
 	}
 
-	// Token: 0x06014800 RID: 83968 RVA: 0x0052D5E9 File Offset: 0x0052B7E9
+	// Token: 0x06011CE2 RID: 72930 RVA: 0x0053C305 File Offset: 0x0053A505
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		Action<IRacingBetsDangoActorData> clickDangoOddsItemCallBack = this.ClickDangoOddsItemCallBack;
@@ -118,14 +118,14 @@ public class RacingBetsDangoOddsItem : GridProxyAbstract<IRacingBetsDangoActorDa
 		clickDangoOddsItemCallBack(this.DangoOddsData);
 	}
 
-	// Token: 0x06014801 RID: 83969 RVA: 0x0052D601 File Offset: 0x0052B801
+	// Token: 0x06011CE3 RID: 72931 RVA: 0x0053C31D File Offset: 0x0053A51D
 	private bool CanToggleExecuteChange()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
 		return extendToggle == null || extendToggle.GetToggleState() != EToggleState.ETT_Checked;
 	}
 
-	// Token: 0x06014802 RID: 83970 RVA: 0x0052D61C File Offset: 0x0052B81C
+	// Token: 0x06011CE4 RID: 72932 RVA: 0x0053C338 File Offset: 0x0053A538
 	private void OnRacingBetsDangoOddsUpdate()
 	{
 		UUIText text = base.GetText(1);
@@ -136,10 +136,10 @@ public class RacingBetsDangoOddsItem : GridProxyAbstract<IRacingBetsDangoActorDa
 		text.SetText((this.DangoOddsData.Odds / 100).ToString(), true);
 	}
 
-	// Token: 0x04009A37 RID: 39479
+	// Token: 0x04009B8F RID: 39823
 	private IRacingBetsDangoActorData DangoOddsData;
 
-	// Token: 0x04009A38 RID: 39480
+	// Token: 0x04009B90 RID: 39824
 	[Nullable(new byte[]
 	{
 		2,
@@ -147,17 +147,17 @@ public class RacingBetsDangoOddsItem : GridProxyAbstract<IRacingBetsDangoActorDa
 	})]
 	private Action<IRacingBetsDangoActorData> ClickDangoOddsItemCallBack;
 
-	// Token: 0x02008D5E RID: 36190
+	// Token: 0x02007EE7 RID: 32487
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402DDFA RID: 187898
+		// Token: 0x04029111 RID: 168209
 		Toggle,
-		// Token: 0x0402DDFB RID: 187899
+		// Token: 0x04029112 RID: 168210
 		OddsText,
-		// Token: 0x0402DDFC RID: 187900
+		// Token: 0x04029113 RID: 168211
 		DangoIcon,
-		// Token: 0x0402DDFD RID: 187901
+		// Token: 0x04029114 RID: 168212
 		OddsDangoItem
 	}
 }

@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B02 RID: 2818
+	// Token: 0x02000BCD RID: 3021
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFlyingFeather : IHookInteractType
 	{
-		// Token: 0x060040F7 RID: 16631 RVA: 0x000A6802 File Offset: 0x000A4A02
-		[NullableContext(1)]
+		// Token: 0x06004532 RID: 17714 RVA: 0x000B0336 File Offset: 0x000AE536
+		[NullableContext(0)]
 		public static IFlyingFeather Create(IFlyingFeather? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170010B0 RID: 4272
-		// (get) Token: 0x060040F8 RID: 16632 RVA: 0x000A6821 File Offset: 0x000A4A21
+		// Token: 0x17001193 RID: 4499
+		// (get) Token: 0x06004533 RID: 17715 RVA: 0x000B0355 File Offset: 0x000AE555
 		public override EHookInteractType Type
 		{
 			get
@@ -35,19 +35,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010B1 RID: 4273
-		// (get) Token: 0x060040F9 RID: 16633 RVA: 0x000A6830 File Offset: 0x000A4A30
+		// Token: 0x17001194 RID: 4500
+		// (get) Token: 0x06004534 RID: 17716 RVA: 0x000B0364 File Offset: 0x000AE564
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> HookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -70,19 +70,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010B2 RID: 4274
-		// (get) Token: 0x060040FA RID: 16634 RVA: 0x000A68AC File Offset: 0x000A4AAC
+		// Token: 0x17001195 RID: 4501
+		// (get) Token: 0x06004535 RID: 17717 RVA: 0x000B03E0 File Offset: 0x000AE5E0
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> ExitHookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -105,19 +105,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010B3 RID: 4275
-		// (get) Token: 0x060040FB RID: 16635 RVA: 0x000A6928 File Offset: 0x000A4B28
+		// Token: 0x17001196 RID: 4502
+		// (get) Token: 0x06004536 RID: 17718 RVA: 0x000B045C File Offset: 0x000AE65C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> FinishActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -140,8 +140,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010B4 RID: 4276
-		// (get) Token: 0x060040FC RID: 16636 RVA: 0x000A69A2 File Offset: 0x000A4BA2
+		// Token: 0x17001197 RID: 4503
+		// (get) Token: 0x06004537 RID: 17719 RVA: 0x000B04D6 File Offset: 0x000AE6D6
 		public override IClientHookActionConfig ClientHookActionConfig
 		{
 			get
@@ -156,8 +156,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010B5 RID: 4277
-		// (get) Token: 0x060040FD RID: 16637 RVA: 0x000A69D8 File Offset: 0x000A4BD8
+		// Token: 0x17001198 RID: 4504
+		// (get) Token: 0x06004538 RID: 17720 RVA: 0x000B050C File Offset: 0x000AE70C
 		public virtual int? EntityId
 		{
 			get
@@ -170,46 +170,46 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400247D RID: 9341
+		// Token: 0x040026B0 RID: 9904
 		private IFlyingFeather Instance;
 
-		// Token: 0x0400247E RID: 9342
+		// Token: 0x040026B1 RID: 9905
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _HookActionsCache;
 
-		// Token: 0x0400247F RID: 9343
+		// Token: 0x040026B2 RID: 9906
 		private bool _HookActionsInited;
 
-		// Token: 0x04002480 RID: 9344
+		// Token: 0x040026B3 RID: 9907
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ExitHookActionsCache;
 
-		// Token: 0x04002481 RID: 9345
+		// Token: 0x040026B4 RID: 9908
 		private bool _ExitHookActionsInited;
 
-		// Token: 0x04002482 RID: 9346
+		// Token: 0x040026B5 RID: 9909
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _FinishActionsCache;
 
-		// Token: 0x04002483 RID: 9347
+		// Token: 0x040026B6 RID: 9910
 		private bool _FinishActionsInited;
 
-		// Token: 0x04002484 RID: 9348
+		// Token: 0x040026B7 RID: 9911
 		private IClientHookActionConfig _ClientHookActionConfigCache;
 
-		// Token: 0x04002485 RID: 9349
+		// Token: 0x040026B8 RID: 9912
 		private bool _ClientHookActionConfigInited;
 	}
 }

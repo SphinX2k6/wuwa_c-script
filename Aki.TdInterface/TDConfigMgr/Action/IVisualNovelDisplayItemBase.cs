@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200206B RID: 8299
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022B4 RID: 8884
 	public class IVisualNovelDisplayItemBase
 	{
-		// Token: 0x0600B652 RID: 46674 RVA: 0x001A6C54 File Offset: 0x001A4E54
+		// Token: 0x0600C17E RID: 49534 RVA: 0x001BD4AC File Offset: 0x001BB6AC
 		private IVisualNovelDisplayItemBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B653 RID: 46675 RVA: 0x001A6C8C File Offset: 0x001A4E8C
+		// Token: 0x0600C17F RID: 49535 RVA: 0x001BD4E4 File Offset: 0x001BB6E4
 		public static IVisualNovelDisplayItemBase Create([Nullable(2)] IVisualNovelDisplayItemBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B654 RID: 46676 RVA: 0x001A6C9F File Offset: 0x001A4E9F
+		// Token: 0x0600C180 RID: 49536 RVA: 0x001BD4F7 File Offset: 0x001BB6F7
 		public static IVisualNovelDisplayItemBase CreateFromSetValue([Nullable(2)] IVisualNovelDisplayItemBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B655 RID: 46677 RVA: 0x001A6CB2 File Offset: 0x001A4EB2
+		// Token: 0x0600C181 RID: 49537 RVA: 0x001BD50A File Offset: 0x001BB70A
 		public IVisualNovelDisplayItemBase_SetValue ToSetValue()
 		{
 			return new IVisualNovelDisplayItemBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037E1 RID: 14305
-		// (get) Token: 0x0600B656 RID: 46678 RVA: 0x001A6CC5 File Offset: 0x001A4EC5
-		// (set) Token: 0x0600B657 RID: 46679 RVA: 0x001A6CF0 File Offset: 0x001A4EF0
+		// Token: 0x17003AC1 RID: 15041
+		// (get) Token: 0x0600C182 RID: 49538 RVA: 0x001BD51D File Offset: 0x001BB71D
+		// (set) Token: 0x0600C183 RID: 49539 RVA: 0x001BD548 File Offset: 0x001BB748
 		public virtual EVisualNovelDisplayItemType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D8A RID: 28042
+		// Token: 0x04007396 RID: 29590
 		[Nullable(2)]
 		protected IVisualNovelDisplayItemBase FbInstance;
 
-		// Token: 0x04006D8B RID: 28043
+		// Token: 0x04007397 RID: 29591
 		[Nullable(2)]
 		protected IVisualNovelDisplayItemBase_SetValue PocoInterface;
 	}

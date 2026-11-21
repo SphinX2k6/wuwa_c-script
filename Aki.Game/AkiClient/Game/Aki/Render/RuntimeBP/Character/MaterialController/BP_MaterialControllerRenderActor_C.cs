@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 {
-	// Token: 0x02003E0D RID: 15885
+	// Token: 0x02003125 RID: 12581
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Character/MaterialController/BP_MaterialControllerRenderActor.BP_MaterialControllerRenderActor_C")]
 	[UnrealStructLayout(1064, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1064)]
 	public class BP_MaterialControllerRenderActor_C : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06027CC6 RID: 163014 RVA: 0x0099B75A File Offset: 0x0099995A
+		// Token: 0x0601EED5 RID: 126677 RVA: 0x00921387 File Offset: 0x0091F587
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_MaterialControllerRenderActor_C._ClassPtr == IntPtr.Zero)
@@ -24,84 +24,84 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 			return BP_MaterialControllerRenderActor_C._ClassPtr;
 		}
 
-		// Token: 0x06027CC7 RID: 163015 RVA: 0x0099B780 File Offset: 0x00999980
+		// Token: 0x0601EED6 RID: 126678 RVA: 0x009213AC File Offset: 0x0091F5AC
 		public BP_MaterialControllerRenderActor_C() : this(BuiltinUtils.AllocNativeUObject(BP_MaterialControllerRenderActor_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06027CC8 RID: 163016 RVA: 0x0099B7A8 File Offset: 0x009999A8
+		// Token: 0x0601EED7 RID: 126679 RVA: 0x009213D4 File Offset: 0x0091F5D4
 		[NullableContext(1)]
 		public BP_MaterialControllerRenderActor_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_MaterialControllerRenderActor_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005A1D RID: 23069
-		// (get) Token: 0x06027CC9 RID: 163017 RVA: 0x0099B7DB File Offset: 0x009999DB
-		// (set) Token: 0x06027CCA RID: 163018 RVA: 0x0099B7EF File Offset: 0x009999EF
+		// Token: 0x17003669 RID: 13929
+		// (get) Token: 0x0601EED8 RID: 126680 RVA: 0x00921407 File Offset: 0x0091F607
+		// (set) Token: 0x0601EED9 RID: 126681 RVA: 0x0092141B File Offset: 0x0091F61B
 		public unsafe CharRenderingComponent CharRenderingComponent
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<CharRenderingComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialControllerRenderActor_C.__PropertyOffset_0);
+				return BuiltinUtils.ObjectPropertyGetter<CharRenderingComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialControllerRenderActor_C.__PropertyOffset_CharRenderingComponent);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialControllerRenderActor_C.__PropertyOffset_0, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialControllerRenderActor_C.__PropertyOffset_CharRenderingComponent, value);
 			}
 		}
 
-		// Token: 0x17005A1E RID: 23070
-		// (get) Token: 0x06027CCB RID: 163019 RVA: 0x0099B804 File Offset: 0x00999A04
-		// (set) Token: 0x06027CCC RID: 163020 RVA: 0x0099B818 File Offset: 0x00999A18
+		// Token: 0x1700366A RID: 13930
+		// (get) Token: 0x0601EEDA RID: 126682 RVA: 0x00921430 File Offset: 0x0091F630
+		// (set) Token: 0x0601EEDB RID: 126683 RVA: 0x00921444 File Offset: 0x0091F644
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialControllerRenderActor_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialControllerRenderActor_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialControllerRenderActor_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialControllerRenderActor_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17005A1F RID: 23071
-		// (get) Token: 0x06027CCD RID: 163021 RVA: 0x0099B82D File Offset: 0x00999A2D
-		// (set) Token: 0x06027CCE RID: 163022 RVA: 0x0099B841 File Offset: 0x00999A41
+		// Token: 0x1700366B RID: 13931
+		// (get) Token: 0x0601EEDC RID: 126684 RVA: 0x00921459 File Offset: 0x0091F659
+		// (set) Token: 0x0601EEDD RID: 126685 RVA: 0x0092146D File Offset: 0x0091F66D
 		public unsafe AActor RefActor
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialControllerRenderActor_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialControllerRenderActor_C.__PropertyOffset_RefActor);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialControllerRenderActor_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialControllerRenderActor_C.__PropertyOffset_RefActor, value);
 			}
 		}
 
-		// Token: 0x06027CCF RID: 163023 RVA: 0x0099B856 File Offset: 0x00999A56
+		// Token: 0x0601EEDE RID: 126686 RVA: 0x00921482 File Offset: 0x0091F682
 		protected BP_MaterialControllerRenderActor_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401426C RID: 82540
+		// Token: 0x04010717 RID: 67351
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Character/MaterialController/BP_MaterialControllerRenderActor.BP_MaterialControllerRenderActor_C";
 
-		// Token: 0x0401426D RID: 82541
+		// Token: 0x04010718 RID: 67352
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401426E RID: 82542
+		// Token: 0x04010719 RID: 67353
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401426F RID: 82543
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401071A RID: 67354
+		internal static int __PropertyOffset_CharRenderingComponent;
 
-		// Token: 0x04014270 RID: 82544
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401071B RID: 67355
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x04014271 RID: 82545
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401071C RID: 67356
+		internal static int __PropertyOffset_RefActor;
 	}
 }

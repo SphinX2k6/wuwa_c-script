@@ -4,30 +4,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.KuroSimpleCombat.PB
 {
-	// Token: 0x02006FBB RID: 28603
+	// Token: 0x0200613C RID: 24892
 	[NullableContext(2)]
 	[Nullable(0)]
 	internal class PinballBattleWorldEntityModel
 	{
-		// Token: 0x0402444B RID: 148555
+		// Token: 0x0401F700 RID: 128768
 		public int Uid;
 
-		// Token: 0x0402444C RID: 148556
+		// Token: 0x0401F701 RID: 128769
 		public int CombatId;
 
-		// Token: 0x0402444D RID: 148557
+		// Token: 0x0401F702 RID: 128770
 		public int PropertyId;
 
-		// Token: 0x0402444E RID: 148558
+		// Token: 0x0401F703 RID: 128771
 		public string AssetPath;
 
-		// Token: 0x0402444F RID: 148559
+		// Token: 0x0401F704 RID: 128772
 		public int? SplineId;
 
-		// Token: 0x04024450 RID: 148560
+		// Token: 0x0401F705 RID: 128773
 		public Dictionary<int, int> BuffIdLayers;
 
-		// Token: 0x04024451 RID: 148561
+		// Token: 0x0401F706 RID: 128774
 		public Dictionary<int, int> AttributeMap;
 	}
 }

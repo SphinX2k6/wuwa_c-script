@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FFC RID: 28668
+	// Token: 0x020077C5 RID: 30661
 	public class ISetGlobalTimeScaleType_UnionUnion
 	{
-		// Token: 0x1700D4F2 RID: 54514
-		// (get) Token: 0x06032B50 RID: 207696 RVA: 0x006D785D File Offset: 0x006D5A5D
-		// (set) Token: 0x06032B51 RID: 207697 RVA: 0x006D7865 File Offset: 0x006D5A65
+		// Token: 0x1700E0C6 RID: 57542
+		// (get) Token: 0x06035DB6 RID: 220598 RVA: 0x007374A1 File Offset: 0x007356A1
+		// (set) Token: 0x06035DB7 RID: 220599 RVA: 0x007374A9 File Offset: 0x007356A9
 		public ISetGlobalTimeScaleType_Union Type { get; set; }
 
-		// Token: 0x1700D4F3 RID: 54515
-		// (get) Token: 0x06032B52 RID: 207698 RVA: 0x006D786E File Offset: 0x006D5A6E
-		// (set) Token: 0x06032B53 RID: 207699 RVA: 0x006D7876 File Offset: 0x006D5A76
+		// Token: 0x1700E0C7 RID: 57543
+		// (get) Token: 0x06035DB8 RID: 220600 RVA: 0x007374B2 File Offset: 0x007356B2
+		// (set) Token: 0x06035DB9 RID: 220601 RVA: 0x007374BA File Offset: 0x007356BA
 		public object Value { get; set; }
 
-		// Token: 0x06032B54 RID: 207700 RVA: 0x006D787F File Offset: 0x006D5A7F
+		// Token: 0x06035DBA RID: 220602 RVA: 0x007374C3 File Offset: 0x007356C3
 		public ISetGlobalTimeScaleType_UnionUnion()
 		{
 			this.Type = ISetGlobalTimeScaleType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06032B55 RID: 207701 RVA: 0x006D7895 File Offset: 0x006D5A95
+		// Token: 0x06035DBB RID: 220603 RVA: 0x007374D9 File Offset: 0x007356D9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06032B56 RID: 207702 RVA: 0x006D78A7 File Offset: 0x006D5AA7
+		// Token: 0x06035DBC RID: 220604 RVA: 0x007374EB File Offset: 0x007356EB
 		public ISetGlobalTimeScaleTypeT AsISetGlobalTimeScaleType()
 		{
 			return this.As<ISetGlobalTimeScaleTypeT>();
 		}
 
-		// Token: 0x06032B57 RID: 207703 RVA: 0x006D78AF File Offset: 0x006D5AAF
+		// Token: 0x06035DBD RID: 220605 RVA: 0x007374F3 File Offset: 0x007356F3
 		public static ISetGlobalTimeScaleType_UnionUnion FromISetGlobalTimeScaleType(ISetGlobalTimeScaleTypeT _isetglobaltimescaletype)
 		{
 			return new ISetGlobalTimeScaleType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032B58 RID: 207704 RVA: 0x006D78C4 File Offset: 0x006D5AC4
+		// Token: 0x06035DBE RID: 220606 RVA: 0x00737508 File Offset: 0x00735708
 		public IOpenGlobalTimeScaleT AsIOpenGlobalTimeScale()
 		{
 			return this.As<IOpenGlobalTimeScaleT>();
 		}
 
-		// Token: 0x06032B59 RID: 207705 RVA: 0x006D78CC File Offset: 0x006D5ACC
+		// Token: 0x06035DBF RID: 220607 RVA: 0x00737510 File Offset: 0x00735710
 		public static ISetGlobalTimeScaleType_UnionUnion FromIOpenGlobalTimeScale(IOpenGlobalTimeScaleT _iopenglobaltimescale)
 		{
 			return new ISetGlobalTimeScaleType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032B5A RID: 207706 RVA: 0x006D78E1 File Offset: 0x006D5AE1
+		// Token: 0x06035DC0 RID: 220608 RVA: 0x00737525 File Offset: 0x00735725
 		public ICloseGlobalTimeScaleT AsICloseGlobalTimeScale()
 		{
 			return this.As<ICloseGlobalTimeScaleT>();
 		}
 
-		// Token: 0x06032B5B RID: 207707 RVA: 0x006D78E9 File Offset: 0x006D5AE9
+		// Token: 0x06035DC1 RID: 220609 RVA: 0x0073752D File Offset: 0x0073572D
 		public static ISetGlobalTimeScaleType_UnionUnion FromICloseGlobalTimeScale(ICloseGlobalTimeScaleT _icloseglobaltimescale)
 		{
 			return new ISetGlobalTimeScaleType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032B5C RID: 207708 RVA: 0x006D7900 File Offset: 0x006D5B00
+		// Token: 0x06035DC2 RID: 220610 RVA: 0x00737544 File Offset: 0x00735744
 		public static int Pack(FlatBufferBuilder builder, ISetGlobalTimeScaleType_UnionUnion _o)
 		{
 			switch (_o.Type)

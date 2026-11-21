@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x0200630E RID: 25358
+	// Token: 0x0200528C RID: 21132
 	[Nullable(new byte[]
 	{
 		0,
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 	})]
 	public class PinballRoleClassItem : GridProxyAbstract<IPinballRoleClassItemData>
 	{
-		// Token: 0x0603FCCB RID: 261323 RVA: 0x00F6F9C4 File Offset: 0x00F6DBC4
+		// Token: 0x0603498C RID: 215436 RVA: 0x00EB6920 File Offset: 0x00EB4B20
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FCCC RID: 261324 RVA: 0x00F6FA30 File Offset: 0x00F6DC30
+		// Token: 0x0603498D RID: 215437 RVA: 0x00EB698C File Offset: 0x00EB4B8C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballRoleClassItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FCCD RID: 261325 RVA: 0x00F6FA74 File Offset: 0x00F6DC74
+		// Token: 0x0603498E RID: 215438 RVA: 0x00EB69D0 File Offset: 0x00EB4BD0
 		[NullableContext(1)]
 		public override void Refresh(IPinballRoleClassItemData data, bool isSelected, int gridIndex)
 		{
@@ -55,16 +55,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x040214BD RID: 136381
+		// Token: 0x0401BDEC RID: 114156
 		[Nullable(2)]
 		private PinballRoleClassIconItem ClassIconItem;
 
-		// Token: 0x0200C503 RID: 50435
+		// Token: 0x0200AEEA RID: 44778
 		private enum EComponent
 		{
-			// Token: 0x0403B756 RID: 243542
+			// Token: 0x040360B8 RID: 221368
 			ClassIconItem,
-			// Token: 0x0403B757 RID: 243543
+			// Token: 0x040360B9 RID: 221369
 			NameText
 		}
 	}

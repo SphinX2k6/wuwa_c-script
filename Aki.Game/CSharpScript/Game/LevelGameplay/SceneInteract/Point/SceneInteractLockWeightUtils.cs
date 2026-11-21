@@ -5,12 +5,12 @@ using CSharpScript.Game.Camera;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 {
-	// Token: 0x02006A85 RID: 27269
+	// Token: 0x02005BE2 RID: 23522
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneInteractLockWeightUtils
 	{
-		// Token: 0x06043C4A RID: 277578 RVA: 0x01096384 File Offset: 0x01094584
+		// Token: 0x06039C98 RID: 236696 RVA: 0x0103ABC4 File Offset: 0x01038DC4
 		[NullableContext(2)]
 		public static double GetLockWeight(IExploreSkillSearchTargetCfg config, Vector location, [Nullable(1)] Vector charLoc)
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			return 0.0;
 		}
 
-		// Token: 0x06043C4B RID: 277579 RVA: 0x010963E4 File Offset: 0x010945E4
+		// Token: 0x06039C99 RID: 236697 RVA: 0x0103AC24 File Offset: 0x01038E24
 		public static string BuildLockWeightDebugText([Nullable(2)] IExploreSkillSearchTargetCfg config, [Nullable(2)] Vector location, Vector charLoc)
 		{
 			if (config == null)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			return "未知打分类型 -> W=0";
 		}
 
-		// Token: 0x06043C4C RID: 277580 RVA: 0x0109645C File Offset: 0x0109465C
+		// Token: 0x06039C9A RID: 236698 RVA: 0x0103AC9C File Offset: 0x01038E9C
 		private static double CalcAngleWeight(IAngleWeight lockConfig, [Nullable(2)] Vector location, Vector charLoc)
 		{
 			if (location == null)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			return (double)lockConfig.AngleWeight[num].Weight * SceneInteractLockWeightUtils.CalcDistWeight(dist);
 		}
 
-		// Token: 0x06043C4D RID: 277581 RVA: 0x010964C0 File Offset: 0x010946C0
+		// Token: 0x06039C9B RID: 236699 RVA: 0x0103AD00 File Offset: 0x01038F00
 		private static string BuildAngleWeightDebugText(IAngleWeight lockConfig, [Nullable(2)] Vector location, Vector charLoc)
 		{
 			if (location == null)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			}
 			double num = SceneInteractLockWeightUtils.CalcCameraDot(location, charLoc);
 			double value = Math.Acos(Math.Min(1.0, Math.Max(-1.0, num))) * 57.295780181884766;
-			string value2 = string.Join(",", lockConfig.AngleWeight.ConvertAll<string>(delegate([Nullable(1)] IEntityAngleWeight v)
+			string value2 = string.Join(",", lockConfig.AngleWeight.ConvertAll<string>(delegate(IEntityAngleWeight v)
 			{
 				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler2 = new DefaultInterpolatedStringHandler(2, 2);
 				defaultInterpolatedStringHandler2.AppendFormatted<int>(v.Angle);
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06043C4E RID: 277582 RVA: 0x010966F4 File Offset: 0x010948F4
+		// Token: 0x06039C9C RID: 236700 RVA: 0x0103AF34 File Offset: 0x01039134
 		private static double CalcCameraDot(Vector location, Vector charLoc)
 		{
 			Vector char2SelfDir = SceneInteractLockWeightUtils.Char2SelfDir;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			return Vector.DotProduct(char2SelfDir, cameraDir);
 		}
 
-		// Token: 0x06043C4F RID: 277583 RVA: 0x01096758 File Offset: 0x01094958
+		// Token: 0x06039C9D RID: 236701 RVA: 0x0103AF98 File Offset: 0x01039198
 		private static int MatchAngleIndex(IAngleWeight lockConfig, double dot)
 		{
 			int result = -1;
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			return result;
 		}
 
-		// Token: 0x06043C50 RID: 277584 RVA: 0x010967A1 File Offset: 0x010949A1
+		// Token: 0x06039C9E RID: 236702 RVA: 0x0103AFE1 File Offset: 0x010391E1
 		private static double CalcDistWeight(double dist)
 		{
 			if (60.0 - dist >= 1.0)
@@ -180,14 +180,14 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			return 1.0;
 		}
 
-		// Token: 0x0402367B RID: 145019
+		// Token: 0x0401E86D RID: 125037
 		private const int DEFAULT_MAX_DISTANCE = 60;
 
-		// Token: 0x0402367C RID: 145020
+		// Token: 0x0401E86E RID: 125038
 		[StaticVariableRuleIgnore]
 		private static readonly Vector Char2SelfDir = Vector.Create();
 
-		// Token: 0x0402367D RID: 145021
+		// Token: 0x0401E86F RID: 125039
 		[StaticVariableRuleIgnore]
 		private static readonly Vector CameraDir = Vector.Create();
 	}

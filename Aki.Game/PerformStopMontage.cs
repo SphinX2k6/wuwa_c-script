@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200311E RID: 12574
+// Token: 0x02002679 RID: 9849
 public class PerformStopMontage : PerformActionBase
 {
-	// Token: 0x0601B05F RID: 110687 RVA: 0x00755A44 File Offset: 0x00753C44
+	// Token: 0x06018ABA RID: 101050 RVA: 0x0077BAB0 File Offset: 0x00779CB0
 	public PerformStopMontage() : base(EPerformAction.StopMontage)
 	{
 	}
 
-	// Token: 0x0601B060 RID: 110688 RVA: 0x00755A50 File Offset: 0x00753C50
+	// Token: 0x06018ABB RID: 101051 RVA: 0x0077BABC File Offset: 0x00779CBC
 	protected override void OnExecute()
 	{
 		BaseAnimationComponent component = this.PerformComp.Entity.GetComponent<BaseAnimationComponent>();

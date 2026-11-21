@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02000F09 RID: 3849
+// Token: 0x020003BE RID: 958
 [NullableContext(1)]
 [Nullable(0)]
 public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 {
-	// Token: 0x060060BD RID: 24765 RVA: 0x0012DBD0 File Offset: 0x0012BDD0
+	// Token: 0x06003455 RID: 13397 RVA: 0x001364D4 File Offset: 0x001346D4
 	[NullableContext(2)]
 	public IFormationAttributeConfig GetConfig(EFormationAttributeId attrId)
 	{
@@ -41,7 +41,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		return formationAttributeConfig;
 	}
 
-	// Token: 0x060060BE RID: 24766 RVA: 0x0012DD00 File Offset: 0x0012BF00
+	// Token: 0x06003456 RID: 13398 RVA: 0x00136604 File Offset: 0x00134804
 	protected override bool OnInit()
 	{
 		double worldTime = Time.Instance.WorldTime;
@@ -64,7 +64,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		return true;
 	}
 
-	// Token: 0x060060BF RID: 24767 RVA: 0x0012DDC0 File Offset: 0x0012BFC0
+	// Token: 0x06003457 RID: 13399 RVA: 0x001366C4 File Offset: 0x001348C4
 	protected override bool OnClear()
 	{
 		this.Configs.Clear();
@@ -72,7 +72,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		return true;
 	}
 
-	// Token: 0x060060C0 RID: 24768 RVA: 0x0012DDDC File Offset: 0x0012BFDC
+	// Token: 0x06003458 RID: 13400 RVA: 0x001366E0 File Offset: 0x001348E0
 	public float GetValue(EFormationAttributeId attrId)
 	{
 		IAttributeData data = this.GetData(attrId);
@@ -90,7 +90,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		return this.ClampValue(attrId, (float)((double)data.Value + num2), 0f, data.Max);
 	}
 
-	// Token: 0x060060C1 RID: 24769 RVA: 0x0012DE55 File Offset: 0x0012C055
+	// Token: 0x06003459 RID: 13401 RVA: 0x00136759 File Offset: 0x00134959
 	public float GetMax(EFormationAttributeId attrId)
 	{
 		IAttributeData data = this.GetData(attrId);
@@ -101,7 +101,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		return data.Max;
 	}
 
-	// Token: 0x060060C2 RID: 24770 RVA: 0x0012DE6D File Offset: 0x0012C06D
+	// Token: 0x0600345A RID: 13402 RVA: 0x00136771 File Offset: 0x00134971
 	public float GetBaseMax(EFormationAttributeId attrId)
 	{
 		IAttributeData data = this.GetData(attrId);
@@ -112,7 +112,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		return data.BaseMax;
 	}
 
-	// Token: 0x060060C3 RID: 24771 RVA: 0x0012DE85 File Offset: 0x0012C085
+	// Token: 0x0600345B RID: 13403 RVA: 0x00136789 File Offset: 0x00134989
 	public float GetBaseRate(EFormationAttributeId attrId)
 	{
 		IAttributeData data = this.GetData(attrId);
@@ -123,7 +123,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		return data.BaseSpeed;
 	}
 
-	// Token: 0x060060C4 RID: 24772 RVA: 0x0012DE9D File Offset: 0x0012C09D
+	// Token: 0x0600345C RID: 13404 RVA: 0x001367A1 File Offset: 0x001349A1
 	public float GetSpeed(EFormationAttributeId attrId)
 	{
 		IAttributeData data = this.GetData(attrId);
@@ -134,7 +134,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		return data.Speed;
 	}
 
-	// Token: 0x060060C5 RID: 24773 RVA: 0x0012DEB8 File Offset: 0x0012C0B8
+	// Token: 0x0600345D RID: 13405 RVA: 0x001367BC File Offset: 0x001349BC
 	[NullableContext(2)]
 	public IAttributeData GetData(EFormationAttributeId attrId)
 	{
@@ -151,7 +151,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		return this.AttributeSet[attrId];
 	}
 
-	// Token: 0x060060C6 RID: 24774 RVA: 0x0012DF10 File Offset: 0x0012C110
+	// Token: 0x0600345E RID: 13406 RVA: 0x00136814 File Offset: 0x00134A14
 	public void SetData(EFormationAttributeId attrId, float max, float baseMax, float value, float speed, double timestamp)
 	{
 		IAttributeData data = this.GetData(attrId);
@@ -165,7 +165,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		}
 	}
 
-	// Token: 0x060060C7 RID: 24775 RVA: 0x0012DF50 File Offset: 0x0012C150
+	// Token: 0x0600345F RID: 13407 RVA: 0x00136854 File Offset: 0x00134A54
 	public void SetSpeed(EFormationAttributeId attrId, float newSpeed)
 	{
 		IAttributeData data = this.GetData(attrId);
@@ -178,7 +178,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		}
 	}
 
-	// Token: 0x060060C8 RID: 24776 RVA: 0x0012DF8C File Offset: 0x0012C18C
+	// Token: 0x06003460 RID: 13408 RVA: 0x00136890 File Offset: 0x00134A90
 	public void SetValue(EFormationAttributeId attrId, float newValue)
 	{
 		IAttributeData data = this.GetData(attrId);
@@ -189,7 +189,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		}
 	}
 
-	// Token: 0x060060C9 RID: 24777 RVA: 0x0012DFCC File Offset: 0x0012C1CC
+	// Token: 0x06003461 RID: 13409 RVA: 0x001368D0 File Offset: 0x00134AD0
 	public void SetMax(EFormationAttributeId attrId, float newMax)
 	{
 		if (this.AttributeSet.ContainsKey(attrId))
@@ -202,7 +202,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		}
 	}
 
-	// Token: 0x060060CA RID: 24778 RVA: 0x0012E01C File Offset: 0x0012C21C
+	// Token: 0x06003462 RID: 13410 RVA: 0x00136920 File Offset: 0x00134B20
 	public float ClampValue(EFormationAttributeId attrId, float baseValue, float minValue, float maxValue)
 	{
 		float num = baseValue;
@@ -214,12 +214,12 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 			{
 				if (boundsLocker.LockLowerBounds)
 				{
-					float num3 = boundsLocker.LowerPercent * maxValue + boundsLocker.LowerOffset;
+					float num3 = (float)((double)boundsLocker.LowerPercent * (double)maxValue / 10000.0 + (double)boundsLocker.LowerOffset);
 					num2 = new float?(Math.Max(num2.GetValueOrDefault(num3), num3));
 				}
 				if (boundsLocker.LockUpperBounds)
 				{
-					float val2 = boundsLocker.UpperPercent * maxValue + boundsLocker.UpperOffset;
+					float val2 = (float)((double)boundsLocker.UpperPercent * (double)maxValue / 10000.0 + (double)boundsLocker.UpperOffset);
 					val = Math.Min(val, val2);
 				}
 			}
@@ -232,7 +232,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		return num;
 	}
 
-	// Token: 0x060060CB RID: 24779 RVA: 0x0012E110 File Offset: 0x0012C310
+	// Token: 0x06003463 RID: 13411 RVA: 0x00136A34 File Offset: 0x00134C34
 	public unsafe int AddBoundsLocker(EFormationAttributeId attrId, IBoundsLocker locker, int lockerHandle)
 	{
 		this.SetValue(attrId, this.GetValue(attrId));
@@ -257,7 +257,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		return lockerHandle;
 	}
 
-	// Token: 0x060060CC RID: 24780 RVA: 0x0012E1D4 File Offset: 0x0012C3D4
+	// Token: 0x06003464 RID: 13412 RVA: 0x00136AF8 File Offset: 0x00134CF8
 	public bool RemoveBoundsLocker(EFormationAttributeId attrId, int lockerHandle)
 	{
 		this.SetValue(attrId, this.GetValue(attrId));
@@ -273,14 +273,14 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		return true;
 	}
 
-	// Token: 0x060060CD RID: 24781 RVA: 0x0012E224 File Offset: 0x0012C424
+	// Token: 0x06003465 RID: 13413 RVA: 0x00136B48 File Offset: 0x00134D48
 	public double GetPredictedServerStopTime()
 	{
 		return Time.Instance.ServerCombatStopTime;
 	}
 
-	// Token: 0x1700078D RID: 1933
-	// (get) Token: 0x060060CE RID: 24782 RVA: 0x0012E230 File Offset: 0x0012C430
+	// Token: 0x170007AF RID: 1967
+	// (get) Token: 0x06003466 RID: 13414 RVA: 0x00136B54 File Offset: 0x00134D54
 	public static FormationAttributeModel Instance
 	{
 		get
@@ -289,7 +289,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		}
 	}
 
-	// Token: 0x060060CF RID: 24783 RVA: 0x0012E237 File Offset: 0x0012C437
+	// Token: 0x06003467 RID: 13415 RVA: 0x00136B5B File Offset: 0x00134D5B
 	public static FormationAttributeModel GetOrCreateInstance()
 	{
 		if (FormationAttributeModel._Instance == null)
@@ -299,7 +299,7 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		return FormationAttributeModel._Instance;
 	}
 
-	// Token: 0x060060D0 RID: 24784 RVA: 0x0012E24B File Offset: 0x0012C44B
+	// Token: 0x06003468 RID: 13416 RVA: 0x00136B6F File Offset: 0x00134D6F
 	public static bool CreateInstance()
 	{
 		if (FormationAttributeModel._Instance != null)
@@ -310,33 +310,33 @@ public class FormationAttributeModel : ModelBase, IFormationAttributeModel
 		return true;
 	}
 
-	// Token: 0x060060D1 RID: 24785 RVA: 0x0012E261 File Offset: 0x0012C461
+	// Token: 0x06003469 RID: 13417 RVA: 0x00136B85 File Offset: 0x00134D85
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060060D2 RID: 24786 RVA: 0x0012E263 File Offset: 0x0012C463
+	// Token: 0x0600346A RID: 13418 RVA: 0x00136B87 File Offset: 0x00134D87
 	public static void ResetStaticDefaultValue()
 	{
 		FormationAttributeModel._Instance = null;
 	}
 
-	// Token: 0x060060D3 RID: 24787 RVA: 0x0012E26B File Offset: 0x0012C46B
+	// Token: 0x0600346B RID: 13419 RVA: 0x00136B8F File Offset: 0x00134D8F
 	static FormationAttributeModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FormationAttributeModel.CreateStaticDefaultValue), new Action(FormationAttributeModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002C1C RID: 11292
+	// Token: 0x04002CB5 RID: 11445
 	private readonly Dictionary<EFormationAttributeId, IFormationAttributeConfig> Configs = new Dictionary<EFormationAttributeId, IFormationAttributeConfig>();
 
-	// Token: 0x04002C1D RID: 11293
+	// Token: 0x04002CB6 RID: 11446
 	private readonly Dictionary<EFormationAttributeId, IAttributeData> AttributeSet = new Dictionary<EFormationAttributeId, IAttributeData>();
 
-	// Token: 0x04002C1E RID: 11294
+	// Token: 0x04002CB7 RID: 11447
 	protected readonly Dictionary<EFormationAttributeId, Dictionary<int, IBoundsLocker>> BoundsLockerMap = new Dictionary<EFormationAttributeId, Dictionary<int, IBoundsLocker>>();
 
-	// Token: 0x04002C1F RID: 11295
+	// Token: 0x04002CB8 RID: 11448
 	[Nullable(2)]
 	private static FormationAttributeModel _Instance;
 }

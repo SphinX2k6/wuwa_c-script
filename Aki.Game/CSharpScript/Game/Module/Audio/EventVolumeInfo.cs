@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Audio
 {
-	// Token: 0x02005E91 RID: 24209
+	// Token: 0x02004E76 RID: 20086
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EventVolumeInfo
 	{
-		// Token: 0x0603D96D RID: 252269 RVA: 0x00EDE55A File Offset: 0x00EDC75A
+		// Token: 0x060328FD RID: 207101 RVA: 0x00E2FAEA File Offset: 0x00E2DCEA
 		public EventVolumeInfo(int handle, string eventName, AActor owner)
 		{
 			this.Handle = handle;
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.Owner = owner;
 		}
 
-		// Token: 0x0603D96E RID: 252270 RVA: 0x00EDE58C File Offset: 0x00EDC78C
+		// Token: 0x060328FE RID: 207102 RVA: 0x00E2FB1C File Offset: 0x00E2DD1C
 		public void OnChangeVolume(int volume, RoleVolumeInfo info)
 		{
 			AActor owner = this.Owner;
@@ -34,16 +34,16 @@ namespace CSharpScript.Game.Module.Audio
 			}));
 		}
 
-		// Token: 0x0402023E RID: 131646
+		// Token: 0x0401AD05 RID: 109829
 		public int Volume = -1;
 
-		// Token: 0x0402023F RID: 131647
+		// Token: 0x0401AD06 RID: 109830
 		public int Handle;
 
-		// Token: 0x04020240 RID: 131648
+		// Token: 0x0401AD07 RID: 109831
 		public string Event = "";
 
-		// Token: 0x04020241 RID: 131649
+		// Token: 0x0401AD08 RID: 109832
 		[Nullable(2)]
 		public AActor Owner;
 	}

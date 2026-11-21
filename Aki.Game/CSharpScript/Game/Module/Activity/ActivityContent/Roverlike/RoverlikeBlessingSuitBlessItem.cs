@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060F4 RID: 24820
+	// Token: 0x02005072 RID: 20594
 	public class RoverlikeBlessingSuitBlessItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603EC48 RID: 257096 RVA: 0x00F294CB File Offset: 0x00F276CB
+		// Token: 0x0603390A RID: 211210 RVA: 0x00E702DF File Offset: 0x00E6E4DF
 		[NullableContext(1)]
 		public void BindOnItemClick(Action<int> callback)
 		{
 			this.OnItemClick = callback;
 		}
 
-		// Token: 0x0603EC49 RID: 257097 RVA: 0x00F294D4 File Offset: 0x00F276D4
+		// Token: 0x0603390B RID: 211211 RVA: 0x00E702E8 File Offset: 0x00E6E4E8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -41,12 +41,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603EC4A RID: 257098 RVA: 0x00F2959B File Offset: 0x00F2779B
+		// Token: 0x0603390C RID: 211212 RVA: 0x00E703AF File Offset: 0x00E6E5AF
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x0603EC4B RID: 257099 RVA: 0x00F295A0 File Offset: 0x00F277A0
+		// Token: 0x0603390D RID: 211213 RVA: 0x00E703B4 File Offset: 0x00E6E5B4
 		public override void Refresh(int blessId, bool isSelected, int gridIndex)
 		{
 			this.CurrentBlessId = blessId;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			extendToggle.SetToggleStateForce(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603EC4C RID: 257100 RVA: 0x00F29656 File Offset: 0x00F27856
+		// Token: 0x0603390E RID: 211214 RVA: 0x00E7046A File Offset: 0x00E6E66A
 		private void OnTogBlessingStateChanged(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked && this.CurrentBlessId > 0)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EC4D RID: 257101 RVA: 0x00F2967B File Offset: 0x00F2787B
+		// Token: 0x0603390F RID: 211215 RVA: 0x00E7048F File Offset: 0x00E6E68F
 		public override void OnSelected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(2);
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			extendToggle.SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x0603EC4E RID: 257102 RVA: 0x00F29692 File Offset: 0x00F27892
+		// Token: 0x06033910 RID: 211216 RVA: 0x00E704A6 File Offset: 0x00E6E6A6
 		public override void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(2);
@@ -109,30 +109,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603EC4F RID: 257103 RVA: 0x00F296A9 File Offset: 0x00F278A9
+		// Token: 0x06033911 RID: 211217 RVA: 0x00E704BD File Offset: 0x00E6E6BD
 		[NullableContext(1)]
 		public override object GetKey(int data, int displayIndex)
 		{
 			return data;
 		}
 
-		// Token: 0x04020CCA RID: 134346
+		// Token: 0x0401B5F7 RID: 112119
 		private int CurrentBlessId;
 
-		// Token: 0x04020CCB RID: 134347
+		// Token: 0x0401B5F8 RID: 112120
 		[Nullable(2)]
 		private Action<int> OnItemClick;
 
-		// Token: 0x0200C351 RID: 50001
+		// Token: 0x0200AD39 RID: 44345
 		private class EComponents
 		{
-			// Token: 0x0403AF33 RID: 241459
+			// Token: 0x04035898 RID: 219288
 			public const int SpriteBg = 0;
 
-			// Token: 0x0403AF34 RID: 241460
+			// Token: 0x04035899 RID: 219289
 			public const int SpriteBlessIcon = 1;
 
-			// Token: 0x0403AF35 RID: 241461
+			// Token: 0x0403589A RID: 219290
 			public const int TogBlessing = 2;
 		}
 	}

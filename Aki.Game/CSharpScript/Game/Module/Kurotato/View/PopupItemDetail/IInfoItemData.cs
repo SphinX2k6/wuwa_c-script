@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 {
-	// Token: 0x02005739 RID: 22329
+	// Token: 0x02004710 RID: 18192
 	[NullableContext(1)]
 	public interface IInfoItemData
 	{
-		// Token: 0x17008864 RID: 34916
-		// (get) Token: 0x06038C4C RID: 232524
-		// (set) Token: 0x06038C4D RID: 232525
+		// Token: 0x17005C2C RID: 23596
+		// (get) Token: 0x0602DB5C RID: 187228
+		// (set) Token: 0x0602DB5D RID: 187229
 		int Level { get; set; }
 
-		// Token: 0x17008865 RID: 34917
-		// (get) Token: 0x06038C4E RID: 232526
-		// (set) Token: 0x06038C4F RID: 232527
+		// Token: 0x17005C2D RID: 23597
+		// (get) Token: 0x0602DB5E RID: 187230
+		// (set) Token: 0x0602DB5F RID: 187231
 		string Description { get; set; }
 
-		// Token: 0x17008866 RID: 34918
-		// (get) Token: 0x06038C50 RID: 232528
-		// (set) Token: 0x06038C51 RID: 232529
+		// Token: 0x17005C2E RID: 23598
+		// (get) Token: 0x0602DB60 RID: 187232
+		// (set) Token: 0x0602DB61 RID: 187233
 		int BuildLevel { get; set; }
 
-		// Token: 0x17008867 RID: 34919
-		// (get) Token: 0x06038C52 RID: 232530
-		// (set) Token: 0x06038C53 RID: 232531
+		// Token: 0x17005C2F RID: 23599
+		// (get) Token: 0x0602DB62 RID: 187234
+		// (set) Token: 0x0602DB63 RID: 187235
 		bool IsArrowLevel { get; set; }
 	}
 }

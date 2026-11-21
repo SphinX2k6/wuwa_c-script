@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002D83 RID: 11651
+// Token: 0x020022DD RID: 8925
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletActionCenter
 {
-	// Token: 0x060187C6 RID: 100294 RVA: 0x0063B372 File Offset: 0x00639572
+	// Token: 0x06016068 RID: 90216 RVA: 0x00661382 File Offset: 0x0065F582
 	public void Init()
 	{
 		this.InitActions();
 	}
 
-	// Token: 0x060187C7 RID: 100295 RVA: 0x0063B37C File Offset: 0x0063957C
+	// Token: 0x06016069 RID: 90217 RVA: 0x0066138C File Offset: 0x0065F58C
 	public void Clear()
 	{
 		if (this.VariantCenterMap != null)
@@ -27,7 +27,7 @@ public class BulletActionCenter
 		this.BulletActionContainerList = null;
 	}
 
-	// Token: 0x060187C8 RID: 100296 RVA: 0x0063B3E8 File Offset: 0x006395E8
+	// Token: 0x0601606A RID: 90218 RVA: 0x006613F8 File Offset: 0x0065F5F8
 	private void InitAsVariant(BulletActionCenter baseCenter, List<BulletActionOverride> overrides)
 	{
 		BulletActionContainer[] bulletActionContainerList = baseCenter.BulletActionContainerList;
@@ -41,7 +41,7 @@ public class BulletActionCenter
 		}
 	}
 
-	// Token: 0x060187C9 RID: 100297 RVA: 0x0063B484 File Offset: 0x00639684
+	// Token: 0x0601606B RID: 90219 RVA: 0x00661494 File Offset: 0x0065F694
 	public BulletActionCenter GetVariant(List<BulletActionOverride> overrides)
 	{
 		BulletActionCenter result;
@@ -59,7 +59,7 @@ public class BulletActionCenter
 		return bulletActionCenter;
 	}
 
-	// Token: 0x060187CA RID: 100298 RVA: 0x0063B4DC File Offset: 0x006396DC
+	// Token: 0x0601606C RID: 90220 RVA: 0x006614EC File Offset: 0x0065F6EC
 	private void InitActions()
 	{
 		this.BulletActionContainerList = new BulletActionContainer[20];
@@ -85,7 +85,7 @@ public class BulletActionCenter
 		this.InitAction(EBulletAction.UpdateKfc, typeof(BulletActionInfoSimple), typeof(BulletActionUpdateKfc), true);
 	}
 
-	// Token: 0x060187CB RID: 100299 RVA: 0x0063B734 File Offset: 0x00639934
+	// Token: 0x0601606D RID: 90221 RVA: 0x00661744 File Offset: 0x0065F944
 	private void InitAction(EBulletAction type, Type actionInfoClass, Type actionClass, bool isPersistentAction = false)
 	{
 		if (this.BulletActionContainerList[(int)type] != null)
@@ -97,37 +97,37 @@ public class BulletActionCenter
 		this.BulletActionContainerList[(int)type] = bulletActionContainer;
 	}
 
-	// Token: 0x060187CC RID: 100300 RVA: 0x0063B766 File Offset: 0x00639966
+	// Token: 0x0601606E RID: 90222 RVA: 0x00661776 File Offset: 0x0065F976
 	public BulletActionContainer GetBulletActionContainer(EBulletAction type)
 	{
 		return this.BulletActionContainerList[(int)type];
 	}
 
-	// Token: 0x060187CD RID: 100301 RVA: 0x0063B770 File Offset: 0x00639970
+	// Token: 0x0601606F RID: 90223 RVA: 0x00661780 File Offset: 0x0065F980
 	public BulletActionInfoBase CreateBulletActionInfo(EBulletAction type)
 	{
 		return this.GetBulletActionContainer(type).GetActionInfo();
 	}
 
-	// Token: 0x060187CE RID: 100302 RVA: 0x0063B77E File Offset: 0x0063997E
+	// Token: 0x06016070 RID: 90224 RVA: 0x0066178E File Offset: 0x0065F98E
 	public void RecycleBulletActionInfo(BulletActionInfoBase actionInfo)
 	{
 		this.GetBulletActionContainer(actionInfo.Type).RecycleActionInfo(actionInfo);
 	}
 
-	// Token: 0x060187CF RID: 100303 RVA: 0x0063B792 File Offset: 0x00639992
+	// Token: 0x06016071 RID: 90225 RVA: 0x006617A2 File Offset: 0x0065F9A2
 	public BulletActionBase CreateBulletAction(EBulletAction type)
 	{
 		return this.GetBulletActionContainer(type).GetAction();
 	}
 
-	// Token: 0x060187D0 RID: 100304 RVA: 0x0063B7A0 File Offset: 0x006399A0
+	// Token: 0x06016072 RID: 90226 RVA: 0x006617B0 File Offset: 0x0065F9B0
 	public void RecycleBulletAction(BulletActionBase action)
 	{
 		this.GetBulletActionContainer(action.Type).RecycleAction(action);
 	}
 
-	// Token: 0x0400B57B RID: 46459
+	// Token: 0x0400B8F0 RID: 47344
 	[Nullable(new byte[]
 	{
 		2,
@@ -135,7 +135,7 @@ public class BulletActionCenter
 	})]
 	private BulletActionContainer[] BulletActionContainerList;
 
-	// Token: 0x0400B57C RID: 46460
+	// Token: 0x0400B8F1 RID: 47345
 	[Nullable(new byte[]
 	{
 		2,

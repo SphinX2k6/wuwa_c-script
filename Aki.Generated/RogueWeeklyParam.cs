@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200102D RID: 4141
+	// Token: 0x02001115 RID: 4373
 	public struct RogueWeeklyParam : IFlatbufferObject
 	{
-		// Token: 0x17003190 RID: 12688
-		// (get) Token: 0x0600C62D RID: 50733 RVA: 0x002F4E7C File Offset: 0x002F307C
+		// Token: 0x1700320B RID: 12811
+		// (get) Token: 0x0600CC77 RID: 52343 RVA: 0x00310DA8 File Offset: 0x0030EFA8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C62E RID: 50734 RVA: 0x002F4E89 File Offset: 0x002F3089
+		// Token: 0x0600CC78 RID: 52344 RVA: 0x00310DB5 File Offset: 0x0030EFB5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C62F RID: 50735 RVA: 0x002F4E90 File Offset: 0x002F3090
+		// Token: 0x0600CC79 RID: 52345 RVA: 0x00310DBC File Offset: 0x0030EFBC
 		public static RogueWeeklyParam GetRootAsRogueWeeklyParam(ByteBuffer _bb)
 		{
 			return RogueWeeklyParam.GetRootAsRogueWeeklyParam(_bb, default(RogueWeeklyParam));
 		}
 
-		// Token: 0x0600C630 RID: 50736 RVA: 0x002F4EAC File Offset: 0x002F30AC
+		// Token: 0x0600CC7A RID: 52346 RVA: 0x00310DD8 File Offset: 0x0030EFD8
 		public static RogueWeeklyParam GetRootAsRogueWeeklyParam(ByteBuffer _bb, RogueWeeklyParam obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C631 RID: 50737 RVA: 0x002F4EC9 File Offset: 0x002F30C9
+		// Token: 0x0600CC7B RID: 52347 RVA: 0x00310DF5 File Offset: 0x0030EFF5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C632 RID: 50738 RVA: 0x002F4ED8 File Offset: 0x002F30D8
+		// Token: 0x0600CC7C RID: 52348 RVA: 0x00310E04 File Offset: 0x0030F004
 		public RogueWeeklyParam __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003191 RID: 12689
-		// (get) Token: 0x0600C633 RID: 50739 RVA: 0x002F4EE8 File Offset: 0x002F30E8
+		// Token: 0x1700320C RID: 12812
+		// (get) Token: 0x0600CC7D RID: 52349 RVA: 0x00310E14 File Offset: 0x0030F014
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003192 RID: 12690
-		// (get) Token: 0x0600C634 RID: 50740 RVA: 0x002F4F24 File Offset: 0x002F3124
+		// Token: 0x1700320D RID: 12813
+		// (get) Token: 0x0600CC7E RID: 52350 RVA: 0x00310E50 File Offset: 0x0030F050
 		public string RoguelikeSettleBgS
 		{
 			get
@@ -81,20 +81,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C635 RID: 50741 RVA: 0x002F4F5B File Offset: 0x002F315B
+		// Token: 0x0600CC7F RID: 52351 RVA: 0x00310E87 File Offset: 0x0030F087
 		public Span<byte> GetRoguelikeSettleBgSBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600C636 RID: 50742 RVA: 0x002F4F6A File Offset: 0x002F316A
+		// Token: 0x0600CC80 RID: 52352 RVA: 0x00310E96 File Offset: 0x0030F096
 		public byte[] GetRoguelikeSettleBgSArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003193 RID: 12691
-		// (get) Token: 0x0600C637 RID: 50743 RVA: 0x002F4F84 File Offset: 0x002F3184
+		// Token: 0x1700320E RID: 12814
+		// (get) Token: 0x0600CC81 RID: 52353 RVA: 0x00310EB0 File Offset: 0x0030F0B0
 		public string RoguelikeSettleBgNormal
 		{
 			get
@@ -108,20 +108,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C638 RID: 50744 RVA: 0x002F4FBB File Offset: 0x002F31BB
+		// Token: 0x0600CC82 RID: 52354 RVA: 0x00310EE7 File Offset: 0x0030F0E7
 		public Span<byte> GetRoguelikeSettleBgNormalBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600C639 RID: 50745 RVA: 0x002F4FCA File Offset: 0x002F31CA
+		// Token: 0x0600CC83 RID: 52355 RVA: 0x00310EF6 File Offset: 0x0030F0F6
 		public byte[] GetRoguelikeSettleBgNormalArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003194 RID: 12692
-		// (get) Token: 0x0600C63A RID: 50746 RVA: 0x002F4FE4 File Offset: 0x002F31E4
+		// Token: 0x1700320F RID: 12815
+		// (get) Token: 0x0600CC84 RID: 52356 RVA: 0x00310F10 File Offset: 0x0030F110
 		public string RoguelikeRoomFloatTipsNoHeadIcon
 		{
 			get
@@ -135,20 +135,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C63B RID: 50747 RVA: 0x002F501C File Offset: 0x002F321C
+		// Token: 0x0600CC85 RID: 52357 RVA: 0x00310F48 File Offset: 0x0030F148
 		public Span<byte> GetRoguelikeRoomFloatTipsNoHeadIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600C63C RID: 50748 RVA: 0x002F502C File Offset: 0x002F322C
+		// Token: 0x0600CC86 RID: 52358 RVA: 0x00310F58 File Offset: 0x0030F158
 		public byte[] GetRoguelikeRoomFloatTipsNoHeadIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003195 RID: 12693
-		// (get) Token: 0x0600C63D RID: 50749 RVA: 0x002F5044 File Offset: 0x002F3244
+		// Token: 0x17003210 RID: 12816
+		// (get) Token: 0x0600CC87 RID: 52359 RVA: 0x00310F70 File Offset: 0x0030F170
 		public string RoguelikeRoomFloatTipsSpecialIcon
 		{
 			get
@@ -162,20 +162,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C63E RID: 50750 RVA: 0x002F507C File Offset: 0x002F327C
+		// Token: 0x0600CC88 RID: 52360 RVA: 0x00310FA8 File Offset: 0x0030F1A8
 		public Span<byte> GetRoguelikeRoomFloatTipsSpecialIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600C63F RID: 50751 RVA: 0x002F508C File Offset: 0x002F328C
+		// Token: 0x0600CC89 RID: 52361 RVA: 0x00310FB8 File Offset: 0x0030F1B8
 		public byte[] GetRoguelikeRoomFloatTipsSpecialIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003196 RID: 12694
-		// (get) Token: 0x0600C640 RID: 50752 RVA: 0x002F50A4 File Offset: 0x002F32A4
+		// Token: 0x17003211 RID: 12817
+		// (get) Token: 0x0600CC8A RID: 52362 RVA: 0x00310FD0 File Offset: 0x0030F1D0
 		public int RoguelikeSettleS
 		{
 			get
@@ -189,8 +189,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003197 RID: 12695
-		// (get) Token: 0x0600C641 RID: 50753 RVA: 0x002F50E4 File Offset: 0x002F32E4
+		// Token: 0x17003212 RID: 12818
+		// (get) Token: 0x0600CC8B RID: 52363 RVA: 0x00311010 File Offset: 0x0030F210
 		public int RoguelikeSettleA
 		{
 			get
@@ -204,8 +204,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003198 RID: 12696
-		// (get) Token: 0x0600C642 RID: 50754 RVA: 0x002F5124 File Offset: 0x002F3324
+		// Token: 0x17003213 RID: 12819
+		// (get) Token: 0x0600CC8C RID: 52364 RVA: 0x00311050 File Offset: 0x0030F250
 		public int RoguelikeSettleB
 		{
 			get
@@ -219,8 +219,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003199 RID: 12697
-		// (get) Token: 0x0600C643 RID: 50755 RVA: 0x002F5164 File Offset: 0x002F3364
+		// Token: 0x17003214 RID: 12820
+		// (get) Token: 0x0600CC8D RID: 52365 RVA: 0x00311090 File Offset: 0x0030F290
 		public int RoguelikeSettleC
 		{
 			get
@@ -234,8 +234,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700319A RID: 12698
-		// (get) Token: 0x0600C644 RID: 50756 RVA: 0x002F51A4 File Offset: 0x002F33A4
+		// Token: 0x17003215 RID: 12821
+		// (get) Token: 0x0600CC8E RID: 52366 RVA: 0x003110D0 File Offset: 0x0030F2D0
 		public int PointItem
 		{
 			get
@@ -249,8 +249,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700319B RID: 12699
-		// (get) Token: 0x0600C645 RID: 50757 RVA: 0x002F51E4 File Offset: 0x002F33E4
+		// Token: 0x17003216 RID: 12822
+		// (get) Token: 0x0600CC8F RID: 52367 RVA: 0x00311110 File Offset: 0x0030F310
 		public int PointItemMaxCount
 		{
 			get
@@ -264,8 +264,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700319C RID: 12700
-		// (get) Token: 0x0600C646 RID: 50758 RVA: 0x002F5224 File Offset: 0x002F3424
+		// Token: 0x17003217 RID: 12823
+		// (get) Token: 0x0600CC90 RID: 52368 RVA: 0x00311150 File Offset: 0x0030F350
 		public int TokenItem
 		{
 			get
@@ -279,8 +279,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700319D RID: 12701
-		// (get) Token: 0x0600C647 RID: 50759 RVA: 0x002F5264 File Offset: 0x002F3464
+		// Token: 0x17003218 RID: 12824
+		// (get) Token: 0x0600CC91 RID: 52369 RVA: 0x00311190 File Offset: 0x0030F390
 		public int WeekTokenMaxCount
 		{
 			get
@@ -294,8 +294,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700319E RID: 12702
-		// (get) Token: 0x0600C648 RID: 50760 RVA: 0x002F52A4 File Offset: 0x002F34A4
+		// Token: 0x17003219 RID: 12825
+		// (get) Token: 0x0600CC92 RID: 52370 RVA: 0x003111D0 File Offset: 0x0030F3D0
 		public int InsideCurrency
 		{
 			get
@@ -309,7 +309,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C649 RID: 50761 RVA: 0x002F52E4 File Offset: 0x002F34E4
+		// Token: 0x0600CC93 RID: 52371 RVA: 0x00311210 File Offset: 0x0030F410
 		public int DungeonList(int j)
 		{
 			int num = this.__p.__offset(32);
@@ -320,8 +320,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700319F RID: 12703
-		// (get) Token: 0x0600C64A RID: 50762 RVA: 0x002F5324 File Offset: 0x002F3524
+		// Token: 0x1700321A RID: 12826
+		// (get) Token: 0x0600CC94 RID: 52372 RVA: 0x00311250 File Offset: 0x0030F450
 		public int DungeonListLength
 		{
 			get
@@ -335,19 +335,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C64B RID: 50763 RVA: 0x002F5350 File Offset: 0x002F3550
+		// Token: 0x0600CC95 RID: 52373 RVA: 0x0031127C File Offset: 0x0030F47C
 		public Span<int> GetDungeonListBytes()
 		{
 			return this.__p.__vector_as_span<int>(32, 4);
 		}
 
-		// Token: 0x0600C64C RID: 50764 RVA: 0x002F5360 File Offset: 0x002F3560
+		// Token: 0x0600CC96 RID: 52374 RVA: 0x0031128C File Offset: 0x0030F48C
 		public int[] GetDungeonListArray()
 		{
 			return this.__p.__vector_as_array<int>(32) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600C64D RID: 50765 RVA: 0x002F5378 File Offset: 0x002F3578
+		// Token: 0x0600CC97 RID: 52375 RVA: 0x003112A4 File Offset: 0x0030F4A4
 		public DicIntInt? ValidRoleOpenTimeMap(int j)
 		{
 			int num = this.__p.__offset(34);
@@ -358,8 +358,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170031A0 RID: 12704
-		// (get) Token: 0x0600C64E RID: 50766 RVA: 0x002F53DC File Offset: 0x002F35DC
+		// Token: 0x1700321B RID: 12827
+		// (get) Token: 0x0600CC98 RID: 52376 RVA: 0x00311308 File Offset: 0x0030F508
 		public int ValidRoleOpenTimeMapLength
 		{
 			get
@@ -373,7 +373,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C64F RID: 50767 RVA: 0x002F5408 File Offset: 0x002F3608
+		// Token: 0x0600CC99 RID: 52377 RVA: 0x00311334 File Offset: 0x0030F534
 		public DicIntInt? DungeonRoleOpenTimeMap(int j)
 		{
 			int num = this.__p.__offset(36);
@@ -384,8 +384,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170031A1 RID: 12705
-		// (get) Token: 0x0600C650 RID: 50768 RVA: 0x002F546C File Offset: 0x002F366C
+		// Token: 0x1700321C RID: 12828
+		// (get) Token: 0x0600CC9A RID: 52378 RVA: 0x00311398 File Offset: 0x0030F598
 		public int DungeonRoleOpenTimeMapLength
 		{
 			get
@@ -399,59 +399,55 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C651 RID: 50769 RVA: 0x002F5498 File Offset: 0x002F3698
+		// Token: 0x0600CC9B RID: 52379 RVA: 0x003113C4 File Offset: 0x0030F5C4
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DungeonListIter()或GetDungeonListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] DungeonList()
+		public int[] DungeonList()
 		{
-			RogueWeeklyParam rogueWeeklyParam = this;
-			return rogueWeeklyParam.GetDungeonListArray() ?? Array.Empty<int>();
+			return this.GetDungeonListArray();
 		}
 
-		// Token: 0x0600C652 RID: 50770 RVA: 0x002F54BC File Offset: 0x002F36BC
+		// Token: 0x0600CC9C RID: 52380 RVA: 0x003113CC File Offset: 0x0030F5CC
 		[NullableContext(1)]
-		public readonly IEnumerable<int> DungeonListIter()
+		public IEnumerable<int> DungeonListIter()
 		{
 			RogueWeeklyParam.<DungeonListIter>d__56 <DungeonListIter>d__ = new RogueWeeklyParam.<DungeonListIter>d__56(-2);
 			<DungeonListIter>d__.<>3__<>4__this = this;
 			return <DungeonListIter>d__;
 		}
 
-		// Token: 0x0600C653 RID: 50771 RVA: 0x002F54D4 File Offset: 0x002F36D4
+		// Token: 0x0600CC9D RID: 52381 RVA: 0x003113E4 File Offset: 0x0030F5E4
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用DungeonRoleOpenTimeMapFrozenDict()缓存字典，遍历请使用DungeonRoleOpenTimeMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> DungeonRoleOpenTimeMap()
+		public Dictionary<int, int> DungeonRoleOpenTimeMap()
 		{
 			return this.DungeonRoleOpenTimeMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600C654 RID: 50772 RVA: 0x002F552A File Offset: 0x002F372A
+		// Token: 0x0600CC9E RID: 52382 RVA: 0x0031143A File Offset: 0x0030F63A
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> DungeonRoleOpenTimeMapIter()
+		public IEnumerable<DicIntInt> DungeonRoleOpenTimeMapIter()
 		{
 			RogueWeeklyParam.<DungeonRoleOpenTimeMapIter>d__58 <DungeonRoleOpenTimeMapIter>d__ = new RogueWeeklyParam.<DungeonRoleOpenTimeMapIter>d__58(-2);
 			<DungeonRoleOpenTimeMapIter>d__.<>3__<>4__this = this;
 			return <DungeonRoleOpenTimeMapIter>d__;
 		}
 
-		// Token: 0x0600C655 RID: 50773 RVA: 0x002F5540 File Offset: 0x002F3740
+		// Token: 0x0600CC9F RID: 52383 RVA: 0x00311450 File Offset: 0x0030F650
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用ValidRoleOpenTimeMapFrozenDict()缓存字典，遍历请使用ValidRoleOpenTimeMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> ValidRoleOpenTimeMap()
+		public Dictionary<int, int> ValidRoleOpenTimeMap()
 		{
 			return this.ValidRoleOpenTimeMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600C656 RID: 50774 RVA: 0x002F5596 File Offset: 0x002F3796
+		// Token: 0x0600CCA0 RID: 52384 RVA: 0x003114A6 File Offset: 0x0030F6A6
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> ValidRoleOpenTimeMapIter()
+		public IEnumerable<DicIntInt> ValidRoleOpenTimeMapIter()
 		{
 			RogueWeeklyParam.<ValidRoleOpenTimeMapIter>d__60 <ValidRoleOpenTimeMapIter>d__ = new RogueWeeklyParam.<ValidRoleOpenTimeMapIter>d__60(-2);
 			<ValidRoleOpenTimeMapIter>d__.<>3__<>4__this = this;
 			return <ValidRoleOpenTimeMapIter>d__;
 		}
 
-		// Token: 0x0600C657 RID: 50775 RVA: 0x002F55AC File Offset: 0x002F37AC
+		// Token: 0x0600CCA1 RID: 52385 RVA: 0x003114BC File Offset: 0x0030F6BC
 		public int? GetDungeonRoleOpenTimeMap(int key)
 		{
 			this.EnsureDungeonRoleOpenTimeMapCacheIfNeeded();
@@ -463,7 +459,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600C658 RID: 50776 RVA: 0x002F55E0 File Offset: 0x002F37E0
+		// Token: 0x0600CCA2 RID: 52386 RVA: 0x003114F0 File Offset: 0x0030F6F0
 		public int? GetValidRoleOpenTimeMap(int key)
 		{
 			this.EnsureValidRoleOpenTimeMapCacheIfNeeded();
@@ -475,7 +471,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600C659 RID: 50777 RVA: 0x002F5614 File Offset: 0x002F3814
+		// Token: 0x0600CCA3 RID: 52387 RVA: 0x00311524 File Offset: 0x0030F724
 		private void EnsureDungeonRoleOpenTimeMapCacheIfNeeded()
 		{
 			if (this.DungeonRoleOpenTimeMapCache != null)
@@ -485,7 +481,7 @@ namespace Aki.Config
 			this.DungeonRoleOpenTimeMapCache = this.DungeonRoleOpenTimeMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600C65A RID: 50778 RVA: 0x002F567C File Offset: 0x002F387C
+		// Token: 0x0600CCA4 RID: 52388 RVA: 0x0031158C File Offset: 0x0030F78C
 		private void EnsureValidRoleOpenTimeMapCacheIfNeeded()
 		{
 			if (this.ValidRoleOpenTimeMapCache != null)
@@ -495,30 +491,30 @@ namespace Aki.Config
 			this.ValidRoleOpenTimeMapCache = this.ValidRoleOpenTimeMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600C65B RID: 50779 RVA: 0x002F56E2 File Offset: 0x002F38E2
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetDungeonRoleOpenTimeMapFrozenDict(int key)
+		// Token: 0x0600CCA5 RID: 52389 RVA: 0x003115F2 File Offset: 0x0030F7F2
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetDungeonRoleOpenTimeMapFrozenDict()
 		{
 			this.EnsureDungeonRoleOpenTimeMapCacheIfNeeded();
 			return this.DungeonRoleOpenTimeMapCache;
 		}
 
-		// Token: 0x0600C65C RID: 50780 RVA: 0x002F56F0 File Offset: 0x002F38F0
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetValidRoleOpenTimeMapFrozenDict(int key)
+		// Token: 0x0600CCA6 RID: 52390 RVA: 0x00311600 File Offset: 0x0030F800
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetValidRoleOpenTimeMapFrozenDict()
 		{
 			this.EnsureValidRoleOpenTimeMapCacheIfNeeded();
 			return this.ValidRoleOpenTimeMapCache;
 		}
 
-		// Token: 0x04005123 RID: 20771
+		// Token: 0x0400570B RID: 22283
 		private Table __p;
 
-		// Token: 0x04005124 RID: 20772
+		// Token: 0x0400570C RID: 22284
 		[Nullable(2)]
 		private FrozenDictionary<int, int> DungeonRoleOpenTimeMapCache;
 
-		// Token: 0x04005125 RID: 20773
+		// Token: 0x0400570D RID: 22285
 		[Nullable(2)]
 		private FrozenDictionary<int, int> ValidRoleOpenTimeMapCache;
 	}

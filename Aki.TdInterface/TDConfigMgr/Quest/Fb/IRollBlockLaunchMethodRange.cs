@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001409 RID: 5129
+	// Token: 0x02001560 RID: 5472
 	public class IRollBlockLaunchMethodRange : IRollBlockStartupMethodBase
 	{
-		// Token: 0x0600749F RID: 29855 RVA: 0x00116CFF File Offset: 0x00114EFF
-		[NullableContext(1)]
+		// Token: 0x06007B60 RID: 31584 RVA: 0x001256E3 File Offset: 0x001238E3
 		public static IRollBlockLaunchMethodRange Create(IRollBlockLaunchMethodRange? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002660 RID: 9824
-		// (get) Token: 0x060074A0 RID: 29856 RVA: 0x00116D1E File Offset: 0x00114F1E
+		// Token: 0x17002842 RID: 10306
+		// (get) Token: 0x06007B61 RID: 31585 RVA: 0x00125702 File Offset: 0x00123902
 		public override ERollBlockLaunchMethod Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002661 RID: 9825
-		// (get) Token: 0x060074A1 RID: 29857 RVA: 0x00116D2B File Offset: 0x00114F2B
+		// Token: 0x17002843 RID: 10307
+		// (get) Token: 0x06007B62 RID: 31586 RVA: 0x0012570F File Offset: 0x0012390F
 		public virtual int TargetId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400437D RID: 17277
+		// Token: 0x0400470E RID: 18190
 		private IRollBlockLaunchMethodRange Instance;
 	}
 }

@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 {
-	// Token: 0x020059BC RID: 22972
+	// Token: 0x02004995 RID: 18837
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PunishReportSettlementSuccessItem : UiPanelBase
 	{
-		// Token: 0x0603A3C8 RID: 238536 RVA: 0x00DD7315 File Offset: 0x00DD5515
+		// Token: 0x0602F2EF RID: 193263 RVA: 0x00D267ED File Offset: 0x00D249ED
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 			this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 		}
 
-		// Token: 0x0603A3C9 RID: 238537 RVA: 0x00DD7346 File Offset: 0x00DD5546
+		// Token: 0x0602F2F0 RID: 193264 RVA: 0x00D2681E File Offset: 0x00D24A1E
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 			this.LevelSequencePlayer = null;
 		}
 
-		// Token: 0x0603A3CA RID: 238538 RVA: 0x00DD7360 File Offset: 0x00DD5560
+		// Token: 0x0602F2F1 RID: 193265 RVA: 0x00D26838 File Offset: 0x00D24A38
 		public UniTask ShowTip()
 		{
 			PunishReportSettlementSuccessItem.<ShowTip>d__4 <ShowTip>d__;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 			return <ShowTip>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A3CB RID: 238539 RVA: 0x00DD73A3 File Offset: 0x00DD55A3
+		// Token: 0x0602F2F2 RID: 193266 RVA: 0x00D2687B File Offset: 0x00D24A7B
 		private void OnSequenceClose(string sequenceName)
 		{
 			if (sequenceName == "Start")
@@ -50,11 +50,11 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 			}
 		}
 
-		// Token: 0x0401E604 RID: 124420
+		// Token: 0x040190A3 RID: 102563
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401E605 RID: 124421
+		// Token: 0x040190A4 RID: 102564
 		private readonly CustomPromise<bool> CustomPromise = new CustomPromise<bool>();
 	}
 }

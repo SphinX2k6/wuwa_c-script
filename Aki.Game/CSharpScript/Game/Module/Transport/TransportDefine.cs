@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Transport
 {
-	// Token: 0x02004AF1 RID: 19185
+	// Token: 0x02003A99 RID: 15001
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class TransportDefine
 	{
-		// Token: 0x06031B1E RID: 203550 RVA: 0x00B8A068 File Offset: 0x00B88268
+		// Token: 0x060268AE RID: 157870 RVA: 0x00ACE01C File Offset: 0x00ACC21C
 		public static List<int> getRoadZoneData(int mapId)
 		{
 			List<int> list = new List<int>();
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Transport
 			return list;
 		}
 
-		// Token: 0x06031B1F RID: 203551 RVA: 0x00B8A114 File Offset: 0x00B88314
+		// Token: 0x060268AF RID: 157871 RVA: 0x00ACE0C8 File Offset: 0x00ACC2C8
 		public static ERoadwaySprintProperty getRoadwayAutopilotSprintConfig(UKuroRoadway roadway)
 		{
 			if (roadway != null && roadway.bEnable)

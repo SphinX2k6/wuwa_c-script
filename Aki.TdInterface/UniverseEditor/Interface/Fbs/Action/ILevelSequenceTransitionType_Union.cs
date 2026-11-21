@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020069F3 RID: 27123
+	// Token: 0x020070A3 RID: 28835
 	public enum ILevelSequenceTransitionType_Union : byte
 	{
-		// Token: 0x040111EB RID: 70123
+		// Token: 0x04012055 RID: 73813
 		NONE,
-		// Token: 0x040111EC RID: 70124
+		// Token: 0x04012056 RID: 73814
 		ILevelSequenceTransitionType,
-		// Token: 0x040111ED RID: 70125
+		// Token: 0x04012057 RID: 73815
 		ICameraTransition,
-		// Token: 0x040111EE RID: 70126
+		// Token: 0x04012058 RID: 73816
 		IMaskTransition
 	}
 }

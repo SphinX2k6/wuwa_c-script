@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A86 RID: 10886
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D7A RID: 11642
 	public class FlowDefineNpcGroupPerform : ActionParams
 	{
-		// Token: 0x0600EF3F RID: 61247 RVA: 0x0022CA46 File Offset: 0x0022AC46
+		// Token: 0x0600FDF5 RID: 65013 RVA: 0x0024A752 File Offset: 0x00248952
 		public static FlowDefineNpcGroupPerform Create(IFlowDefineNpcGroupPerform? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BF5 RID: 19445
-		// (get) Token: 0x0600EF40 RID: 61248 RVA: 0x0022CA65 File Offset: 0x0022AC65
+		// Token: 0x17004FAF RID: 20399
+		// (get) Token: 0x0600FDF6 RID: 65014 RVA: 0x0024A771 File Offset: 0x00248971
 		public virtual IFlowDefineNpcGroupPerformType PerformType
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083A2 RID: 33698
+		// Token: 0x04008AA6 RID: 35494
 		private IFlowDefineNpcGroupPerform Instance;
 
-		// Token: 0x040083A3 RID: 33699
+		// Token: 0x04008AA7 RID: 35495
 		private IFlowDefineNpcGroupPerformType _PerformTypeCache;
 
-		// Token: 0x040083A4 RID: 33700
+		// Token: 0x04008AA8 RID: 35496
 		private bool _PerformTypeInited;
 	}
 }

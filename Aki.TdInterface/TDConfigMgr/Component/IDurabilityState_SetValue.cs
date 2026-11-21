@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002D6 RID: 726
+	// Token: 0x0200031D RID: 797
 	public class IDurabilityState_SetValue
 	{
-		// Token: 0x04000C6E RID: 3182
+		// Token: 0x04000D58 RID: 3416
 		public int Durability;
 
-		// Token: 0x04000C6F RID: 3183
-		[Nullable(1)]
+		// Token: 0x04000D59 RID: 3417
 		public string State;
 	}
 }

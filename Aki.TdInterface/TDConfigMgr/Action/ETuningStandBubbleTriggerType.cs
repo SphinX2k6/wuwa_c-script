@@ -3,25 +3,25 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016E8 RID: 5864
+	// Token: 0x02001864 RID: 6244
 	[EnumExtensions]
 	public enum ETuningStandBubbleTriggerType
 	{
-		// Token: 0x04004F4E RID: 20302
+		// Token: 0x0400537B RID: 21371
 		Enter,
-		// Token: 0x04004F4F RID: 20303
+		// Token: 0x0400537C RID: 21372
 		StartLink,
-		// Token: 0x04004F50 RID: 20304
+		// Token: 0x0400537D RID: 21373
 		InvalidLink,
-		// Token: 0x04004F51 RID: 20305
+		// Token: 0x0400537E RID: 21374
 		LinkUp,
-		// Token: 0x04004F52 RID: 20306
+		// Token: 0x0400537F RID: 21375
 		LinkMiss,
-		// Token: 0x04004F53 RID: 20307
+		// Token: 0x04005380 RID: 21376
 		LinkComplete,
-		// Token: 0x04004F54 RID: 20308
+		// Token: 0x04005381 RID: 21377
 		Reset,
-		// Token: 0x04004F55 RID: 20309
+		// Token: 0x04005382 RID: 21378
 		TooLong
 	}
 }

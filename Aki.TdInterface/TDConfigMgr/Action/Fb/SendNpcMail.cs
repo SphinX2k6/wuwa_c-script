@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024F4 RID: 9460
+	// Token: 0x0200279A RID: 10138
 	public class SendNpcMail : ActionParams
 	{
-		// Token: 0x0600D33C RID: 54076 RVA: 0x001F5342 File Offset: 0x001F3542
-		[NullableContext(1)]
+		// Token: 0x0600E098 RID: 57496 RVA: 0x00210D3A File Offset: 0x0020EF3A
 		public static SendNpcMail Create(ISendNpcMail? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B16 RID: 15126
-		// (get) Token: 0x0600D33D RID: 54077 RVA: 0x001F5361 File Offset: 0x001F3561
+		// Token: 0x17003E12 RID: 15890
+		// (get) Token: 0x0600E099 RID: 57497 RVA: 0x00210D59 File Offset: 0x0020EF59
 		public virtual int MailId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073D2 RID: 29650
+		// Token: 0x04007A24 RID: 31268
 		private ISendNpcMail Instance;
 	}
 }

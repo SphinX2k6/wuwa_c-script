@@ -12,6 +12,7 @@ using CSharpScript.Game.LevelGamePlay.ItemInspect;
 using CSharpScript.Game.LevelGamePlay.LevelEvents.SimpleGameplay;
 using CSharpScript.Game.LevelGamePlay.LevelPickControl;
 using CSharpScript.Game.LevelGamePlay.LifePoint;
+using CSharpScript.Game.LevelGamePlay.PianoGameplay;
 using CSharpScript.Game.LevelGamePlay.ProjectPuzzle;
 using CSharpScript.Game.LevelGamePlay.SceneInspection;
 using CSharpScript.Game.LevelGamePlay.SeekTrace;
@@ -27,18 +28,18 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B47 RID: 27463
+	// Token: 0x02005CBF RID: 23743
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventOpenSimpleGameplay : LevelEventBase, ISimpleGameplayOpenHost
 	{
-		// Token: 0x1700998A RID: 39306
-		// (get) Token: 0x0604417E RID: 278910 RVA: 0x010C005F File Offset: 0x010BE25F
-		// (set) Token: 0x0604417F RID: 278911 RVA: 0x010C0067 File Offset: 0x010BE267
+		// Token: 0x17006E8D RID: 28301
+		// (get) Token: 0x0603A2D0 RID: 238288 RVA: 0x01069ADB File Offset: 0x01067CDB
+		// (set) Token: 0x0603A2D1 RID: 238289 RVA: 0x01069AE3 File Offset: 0x01067CE3
 		public GeneralContext Context { get; set; } = new GeneralContext();
 
-		// Token: 0x1700998B RID: 39307
-		// (get) Token: 0x06044180 RID: 278912 RVA: 0x010C0070 File Offset: 0x010BE270
+		// Token: 0x17006E8E RID: 28302
+		// (get) Token: 0x0603A2D2 RID: 238290 RVA: 0x01069AEC File Offset: 0x01067CEC
 		[Nullable(new byte[]
 		{
 			1,
@@ -57,8 +58,8 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x1700998C RID: 39308
-		// (get) Token: 0x06044181 RID: 278913 RVA: 0x010C007E File Offset: 0x010BE27E
+		// Token: 0x17006E8F RID: 28303
+		// (get) Token: 0x0603A2D3 RID: 238291 RVA: 0x01069AFA File Offset: 0x01067CFA
 		[Nullable(new byte[]
 		{
 			1,
@@ -77,8 +78,8 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x1700998D RID: 39309
-		// (get) Token: 0x06044182 RID: 278914 RVA: 0x010C008C File Offset: 0x010BE28C
+		// Token: 0x17006E90 RID: 28304
+		// (get) Token: 0x0603A2D4 RID: 238292 RVA: 0x01069B08 File Offset: 0x01067D08
 		public Action<long> SetCreatureDataId
 		{
 			get
@@ -87,8 +88,8 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x1700998E RID: 39310
-		// (get) Token: 0x06044183 RID: 278915 RVA: 0x010C009A File Offset: 0x010BE29A
+		// Token: 0x17006E91 RID: 28305
+		// (get) Token: 0x0603A2D5 RID: 238293 RVA: 0x01069B16 File Offset: 0x01067D16
 		public Action FinishCallback
 		{
 			get
@@ -97,8 +98,8 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x1700998F RID: 39311
-		// (get) Token: 0x06044184 RID: 278916 RVA: 0x010C00A8 File Offset: 0x010BE2A8
+		// Token: 0x17006E92 RID: 28306
+		// (get) Token: 0x0603A2D6 RID: 238294 RVA: 0x01069B24 File Offset: 0x01067D24
 		public Action<bool> FinishWithResultCallback
 		{
 			get
@@ -107,32 +108,32 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044185 RID: 278917 RVA: 0x010C00B6 File Offset: 0x010BE2B6
+		// Token: 0x0603A2D7 RID: 238295 RVA: 0x01069B32 File Offset: 0x01067D32
 		[NullableContext(2)]
 		private void SetFinishSendSelfEventImpl(string eventName)
 		{
 			this.FinishSendSelfEvent = eventName;
 		}
 
-		// Token: 0x06044186 RID: 278918 RVA: 0x010C00BF File Offset: 0x010BE2BF
+		// Token: 0x0603A2D8 RID: 238296 RVA: 0x01069B3B File Offset: 0x01067D3B
 		[NullableContext(2)]
 		private void SetFailSendSelfEventImpl(string eventName)
 		{
 			this.FailSendSelfEvent = eventName;
 		}
 
-		// Token: 0x06044187 RID: 278919 RVA: 0x010C00C8 File Offset: 0x010BE2C8
+		// Token: 0x0603A2D9 RID: 238297 RVA: 0x01069B44 File Offset: 0x01067D44
 		private void SetCreatureDataIdImpl(long id)
 		{
 			this.CreatureDataId = id;
 		}
 
-		// Token: 0x06044188 RID: 278920 RVA: 0x010C00D1 File Offset: 0x010BE2D1
+		// Token: 0x0603A2DA RID: 238298 RVA: 0x01069B4D File Offset: 0x01067D4D
 		public LevelEventOpenSimpleGameplay(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044189 RID: 278921 RVA: 0x010C00F0 File Offset: 0x010BE2F0
+		// Token: 0x0603A2DB RID: 238299 RVA: 0x01069B6C File Offset: 0x01067D6C
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			OpenSimpleGameplay openSimpleGameplay = inParams as OpenSimpleGameplay;
@@ -447,21 +448,62 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 				IInstrumentQteGameplay instrumentQteGameplay = gameplayConfig as IInstrumentQteGameplay;
 				if (instrumentQteGameplay == null)
 				{
-					return;
-				}
-				MusicalInstrumentQteConfig? config2 = ConfigMusicalInstrumentQteConfigById.GetConfig(instrumentQteGameplay.Id, true);
-				if (config2 != null)
-				{
-					MusicalInstrumentQteConfig valueOrDefault = config2.GetValueOrDefault();
-					MusicalInstrumentController.Instance.Enter(new MusicalInstrumentEnterParam
+					IPlayPianoGameplay playPianoGameplay = gameplayConfig as IPlayPianoGameplay;
+					if (playPianoGameplay == null)
 					{
-						Type = (EInstrumentType)valueOrDefault.InstrumentType,
-						QteId = new int?(valueOrDefault.Id)
-					}).Forget();
+						return;
+					}
+					Entity entity10 = null;
+					EntityContext entityContext2 = context as EntityContext;
+					if (entityContext2 != null && !(context.Type != EGeneralContextType.Entity))
+					{
+						int? num2 = entityContext2.EntityId;
+						if (num2 != null)
+						{
+							int valueOrDefault = num2.GetValueOrDefault();
+							entity10 = EntitySystem.Instance.Get(valueOrDefault);
+							goto IL_B0C;
+						}
+					}
+					TriggerContext triggerContext = context as TriggerContext;
+					if (triggerContext != null && !(context.Type != EGeneralContextType.Trigger))
+					{
+						int? num2 = triggerContext.TriggerEntityId;
+						if (num2 != null)
+						{
+							int valueOrDefault2 = num2.GetValueOrDefault();
+							entity10 = EntitySystem.Instance.Get(valueOrDefault2);
+						}
+					}
+					IL_B0C:
+					if (entity10 == null)
+					{
+						global::Log.Instance.Error(ELogModule.Event, ELogAuthor.FJH, "钢琴玩法开启失败：找不到实体", default(ReadOnlySpan<ValueTuple<string, object>>));
+						return;
+					}
+					CreatureDataComponent component7 = entity10.GetComponent<CreatureDataComponent>();
+					this.CreatureDataId = component7.GetCreatureDataId();
+					this.FinishSendSelfEvent = openSimpleGameplay.FinishSendSelfEvent;
+					this.FailSendSelfEvent = openSimpleGameplay.FailSendSelfEvent;
+					PianoGameplayController.Instance.StartPianoGameplay(component7.GetPbDataId(), playPianoGameplay, this.FinishWithResultCallback);
 					return;
 				}
-				global::Log.Instance.Error(ELogModule.MusicalInstrument, ELogAuthor.CB, "乐器Qte:获取乐器Qte配置失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-				return;
+				else
+				{
+					MusicalInstrumentQteConfig? config2 = ConfigMusicalInstrumentQteConfigById.GetConfig(instrumentQteGameplay.Id, true);
+					if (config2 != null)
+					{
+						MusicalInstrumentQteConfig valueOrDefault3 = config2.GetValueOrDefault();
+						MusicalInstrumentController.Instance.Enter(new MusicalInstrumentEnterParam
+						{
+							Type = (EInstrumentType)valueOrDefault3.InstrumentType,
+							QteId = new int?(valueOrDefault3.Id)
+						}).Forget();
+						return;
+					}
+					global::Log.Instance.Error(ELogModule.MusicalInstrument, ELogAuthor.CB, "乐器Qte:获取乐器Qte配置失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+					return;
+				}
 			}
 			else
 			{
@@ -478,13 +520,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604418A RID: 278922 RVA: 0x010C0B53 File Offset: 0x010BED53
+		// Token: 0x0603A2DC RID: 238300 RVA: 0x0106A6EE File Offset: 0x010688EE
 		private void OpenCipher(string cipherId)
 		{
 			CipherController.Instance.OpenCipherView(cipherId);
 		}
 
-		// Token: 0x0604418B RID: 278923 RVA: 0x010C0B60 File Offset: 0x010BED60
+		// Token: 0x0603A2DD RID: 238301 RVA: 0x0106A6FB File Offset: 0x010688FB
 		private void FinishCallbackImpl()
 		{
 			if (this.FinishSendSelfEvent != null)
@@ -493,7 +535,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604418C RID: 278924 RVA: 0x010C0B7C File Offset: 0x010BED7C
+		// Token: 0x0603A2DE RID: 238302 RVA: 0x0106A718 File Offset: 0x01068918
 		private void FinishWithResultCallbackImpl(bool result)
 		{
 			if (result && this.FinishSendSelfEvent != null)
@@ -508,22 +550,22 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.FailSendSelfEvent = null;
 		}
 
-		// Token: 0x0402391A RID: 145690
+		// Token: 0x0401EBBC RID: 125884
 		[Nullable(2)]
 		private string FinishSendSelfEvent;
 
-		// Token: 0x0402391B RID: 145691
+		// Token: 0x0401EBBD RID: 125885
 		[Nullable(2)]
 		private string FailSendSelfEvent;
 
-		// Token: 0x0402391C RID: 145692
+		// Token: 0x0401EBBE RID: 125886
 		private long CreatureDataId = -1L;
 
-		// Token: 0x0200CBEE RID: 52206
+		// Token: 0x0200B7DE RID: 47070
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403D927 RID: 252199
+			// Token: 0x04038D49 RID: 232777
 			[Nullable(0)]
 			public static Action<EUiViewName> <0>__RegisterOpenViewName;
 		}

@@ -4,29 +4,29 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.QuestNew.Controller
 {
-	// Token: 0x02004F9B RID: 20379
+	// Token: 0x02003F64 RID: 16228
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class QuestStateUpdateData
 	{
-		// Token: 0x17007F69 RID: 32617
-		// (get) Token: 0x060342F1 RID: 213745 RVA: 0x00C405F3 File Offset: 0x00C3E7F3
-		// (set) Token: 0x060342F2 RID: 213746 RVA: 0x00C405FB File Offset: 0x00C3E7FB
+		// Token: 0x17005319 RID: 21273
+		// (get) Token: 0x0602915F RID: 168287 RVA: 0x00B89D9F File Offset: 0x00B87F9F
+		// (set) Token: 0x06029160 RID: 168288 RVA: 0x00B89DA7 File Offset: 0x00B87FA7
 		public int QuestId { get; set; }
 
-		// Token: 0x17007F6A RID: 32618
-		// (get) Token: 0x060342F3 RID: 213747 RVA: 0x00C40604 File Offset: 0x00C3E804
-		// (set) Token: 0x060342F4 RID: 213748 RVA: 0x00C4060C File Offset: 0x00C3E80C
+		// Token: 0x1700531A RID: 21274
+		// (get) Token: 0x06029161 RID: 168289 RVA: 0x00B89DB0 File Offset: 0x00B87FB0
+		// (set) Token: 0x06029162 RID: 168290 RVA: 0x00B89DB8 File Offset: 0x00B87FB8
 		public QuestState State { get; set; }
 
-		// Token: 0x17007F6B RID: 32619
-		// (get) Token: 0x060342F5 RID: 213749 RVA: 0x00C40615 File Offset: 0x00C3E815
-		// (set) Token: 0x060342F6 RID: 213750 RVA: 0x00C4061D File Offset: 0x00C3E81D
+		// Token: 0x1700531B RID: 21275
+		// (get) Token: 0x06029163 RID: 168291 RVA: 0x00B89DC1 File Offset: 0x00B87FC1
+		// (set) Token: 0x06029164 RID: 168292 RVA: 0x00B89DC9 File Offset: 0x00B87FC9
 		public EQuestStatusUpdateReason UpdateReason { get; set; }
 
-		// Token: 0x17007F6C RID: 32620
-		// (get) Token: 0x060342F7 RID: 213751 RVA: 0x00C40626 File Offset: 0x00C3E826
-		// (set) Token: 0x060342F8 RID: 213752 RVA: 0x00C4062E File Offset: 0x00C3E82E
+		// Token: 0x1700531C RID: 21276
+		// (get) Token: 0x06029165 RID: 168293 RVA: 0x00B89DD2 File Offset: 0x00B87FD2
+		// (set) Token: 0x06029166 RID: 168294 RVA: 0x00B89DDA File Offset: 0x00B87FDA
 		public Action OnAfterUpdate { get; set; }
 	}
 }

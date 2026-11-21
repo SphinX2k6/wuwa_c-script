@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x0200354F RID: 13647
+// Token: 0x02002AC4 RID: 10948
 public static class EMapExploreToolUseTipIdExtensions
 {
-	// Token: 0x0601DF8A RID: 122762 RVA: 0x008664C8 File Offset: 0x008646C8
+	// Token: 0x0601BCB2 RID: 113842 RVA: 0x0088E030 File Offset: 0x0088C230
 	public static string ToEnumString(this EMapExploreToolUseTipId value)
 	{
 		string result;
@@ -25,7 +25,7 @@ public static class EMapExploreToolUseTipIdExtensions
 		return result;
 	}
 
-	// Token: 0x0601DF8B RID: 122763 RVA: 0x00866500 File Offset: 0x00864700
+	// Token: 0x0601BCB3 RID: 113843 RVA: 0x0088E068 File Offset: 0x0088C268
 	public static EMapExploreToolUseTipId FromString(string name)
 	{
 		EMapExploreToolUseTipId result;
@@ -36,7 +36,7 @@ public static class EMapExploreToolUseTipIdExtensions
 		return result;
 	}
 
-	// Token: 0x0601DF8C RID: 122764 RVA: 0x00866529 File Offset: 0x00864729
+	// Token: 0x0601BCB4 RID: 113844 RVA: 0x0088E091 File Offset: 0x0088C291
 	public static bool TryFromString(string name, out EMapExploreToolUseTipId value)
 	{
 		if (string.IsNullOrEmpty(name))
@@ -58,7 +58,7 @@ public static class EMapExploreToolUseTipIdExtensions
 		return true;
 	}
 
-	// Token: 0x0601DF8D RID: 122765 RVA: 0x00866562 File Offset: 0x00864762
+	// Token: 0x0601BCB5 RID: 113845 RVA: 0x0088E0CA File Offset: 0x0088C2CA
 	public static string[] GetStringValues()
 	{
 		return new string[]
@@ -68,7 +68,7 @@ public static class EMapExploreToolUseTipIdExtensions
 		};
 	}
 
-	// Token: 0x0601DF8E RID: 122766 RVA: 0x0086657A File Offset: 0x0086477A
+	// Token: 0x0601BCB6 RID: 113846 RVA: 0x0088E0E2 File Offset: 0x0088C2E2
 	public static EMapExploreToolUseTipId[] GetValues()
 	{
 		return new EMapExploreToolUseTipId[]
@@ -78,7 +78,7 @@ public static class EMapExploreToolUseTipIdExtensions
 		};
 	}
 
-	// Token: 0x0601DF8F RID: 122767 RVA: 0x00866586 File Offset: 0x00864786
+	// Token: 0x0601BCB7 RID: 113847 RVA: 0x0088E0EE File Offset: 0x0088C2EE
 	public static string[] GetNames()
 	{
 		return new string[]

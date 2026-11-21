@@ -4,17 +4,17 @@ using Aki.Protocol;
 using AkiClient.Game.Aki.Data.Level.Vehicle;
 using UnrealEngine;
 
-// Token: 0x020032E4 RID: 13028
+// Token: 0x02002856 RID: 10326
 [NullableContext(1)]
 [Nullable(0)]
 public class FishingBoatConfig : GongduolaConfig
 {
-	// Token: 0x0601C580 RID: 116096 RVA: 0x007ED545 File Offset: 0x007EB745
+	// Token: 0x0601A226 RID: 107046 RVA: 0x00813CCD File Offset: 0x00811ECD
 	public FishingBoatConfig(Entity entity, [Nullable(2)] BP_GongduolaConfig_C asset) : base(entity, asset)
 	{
 	}
 
-	// Token: 0x0601C581 RID: 116097 RVA: 0x007ED550 File Offset: 0x007EB750
+	// Token: 0x0601A227 RID: 107047 RVA: 0x00813CD8 File Offset: 0x00811ED8
 	public override VehicleConfig DeepCopy()
 	{
 		FishingBoatConfig fishingBoatConfig = new FishingBoatConfig(this.VehicleEntity, null);
@@ -22,7 +22,7 @@ public class FishingBoatConfig : GongduolaConfig
 		return fishingBoatConfig;
 	}
 
-	// Token: 0x0601C582 RID: 116098 RVA: 0x007ED574 File Offset: 0x007EB774
+	// Token: 0x0601A228 RID: 107048 RVA: 0x00813CFC File Offset: 0x00811EFC
 	public override void SetBaseStateMoveConfig(UKuroVehicleMovementComponent movement)
 	{
 		Entity vehicleEntity = this.VehicleEntity;
@@ -60,7 +60,7 @@ public class FishingBoatConfig : GongduolaConfig
 		movement.StaticRotFriction = this.BaseStaticRotFriction;
 	}
 
-	// Token: 0x0601C583 RID: 116099 RVA: 0x007ED6B8 File Offset: 0x007EB8B8
+	// Token: 0x0601A229 RID: 107049 RVA: 0x00813E40 File Offset: 0x00812040
 	public void RefreshSprintConfig(float sprintMaxSpeedRatio, float sprintExceedLimitDuration, float sprintDuration)
 	{
 		float num = this.RealMaxSpeed * sprintMaxSpeedRatio;
@@ -70,13 +70,13 @@ public class FishingBoatConfig : GongduolaConfig
 		this.SprintBrakeAcceleration = 3000f;
 	}
 
-	// Token: 0x0601C584 RID: 116100 RVA: 0x007ED706 File Offset: 0x007EB906
+	// Token: 0x0601A22A RID: 107050 RVA: 0x00813E8E File Offset: 0x0081208E
 	protected override void DeepCopyInternal(VehicleConfig inOut)
 	{
 		base.DeepCopyInternal(inOut);
 		((FishingBoatConfig)inOut).RealMaxSpeed = this.RealMaxSpeed;
 	}
 
-	// Token: 0x0400E09F RID: 57503
+	// Token: 0x0400E54A RID: 58698
 	private float RealMaxSpeed;
 }

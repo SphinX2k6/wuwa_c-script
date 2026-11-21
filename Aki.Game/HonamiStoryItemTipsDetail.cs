@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EAC RID: 7852
+// Token: 0x0200136E RID: 4974
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryItemTipsDetail : UiPanelBase
 {
-	// Token: 0x0600F169 RID: 61801 RVA: 0x003A1080 File Offset: 0x0039F280
+	// Token: 0x0600C588 RID: 50568 RVA: 0x003ACB88 File Offset: 0x003AAD88
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class HonamiStoryItemTipsDetail : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F16A RID: 61802 RVA: 0x003A1160 File Offset: 0x0039F360
+	// Token: 0x0600C589 RID: 50569 RVA: 0x003ACC68 File Offset: 0x003AAE68
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryItemTipsDetail.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -40,7 +40,7 @@ public class HonamiStoryItemTipsDetail : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F16B RID: 61803 RVA: 0x003A11A4 File Offset: 0x0039F3A4
+	// Token: 0x0600C58A RID: 50570 RVA: 0x003ACCAC File Offset: 0x003AAEAC
 	public void Refresh(HonamiStoryItemDataBase data, EHonamiStoryBackpackType backpackType)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.GetName(), Array.Empty<object>());
@@ -66,14 +66,14 @@ public class HonamiStoryItemTipsDetail : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F16C RID: 61804 RVA: 0x003A1241 File Offset: 0x0039F441
+	// Token: 0x0600C58B RID: 50571 RVA: 0x003ACD49 File Offset: 0x003AAF49
 	public void AddHotKey(UUIItem hotKeyItem)
 	{
 		hotKeyItem.SetUIActive(true);
 		hotKeyItem.SetUIParent(base.GetItem(4), false);
 	}
 
-	// Token: 0x0600F16D RID: 61805 RVA: 0x003A1258 File Offset: 0x0039F458
+	// Token: 0x0600C58C RID: 50572 RVA: 0x003ACD60 File Offset: 0x003AAF60
 	public void SetAutoLocation(UUIItem gridItem)
 	{
 		float x = base.GetText(0).GetTextRenderSize().X;
@@ -86,34 +86,34 @@ public class HonamiStoryItemTipsDetail : UiPanelBase
 		this.RootItem.SetUIWorldLocation(fvector);
 	}
 
-	// Token: 0x04006FAC RID: 28588
+	// Token: 0x0400708D RID: 28813
 	private const int TIPS_OFFSET_WIDTH = 50;
 
-	// Token: 0x04006FAD RID: 28589
+	// Token: 0x0400708E RID: 28814
 	[Nullable(2)]
 	private HonamiStoryWeaponTagItem TagItem;
 
-	// Token: 0x02008480 RID: 33920
+	// Token: 0x02007605 RID: 30213
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x0402B213 RID: 176659
+		// Token: 0x04026537 RID: 156983
 		TxtName,
-		// Token: 0x0402B214 RID: 176660
+		// Token: 0x04026538 RID: 156984
 		TexIcon,
-		// Token: 0x0402B215 RID: 176661
+		// Token: 0x04026539 RID: 156985
 		TxtPrice,
-		// Token: 0x0402B216 RID: 176662
+		// Token: 0x0402653A RID: 156986
 		PnlList,
-		// Token: 0x0402B217 RID: 176663
+		// Token: 0x0402653B RID: 156987
 		PnlKeyDown,
-		// Token: 0x0402B218 RID: 176664
+		// Token: 0x0402653C RID: 156988
 		PnlKeyUp,
-		// Token: 0x0402B219 RID: 176665
+		// Token: 0x0402653D RID: 156989
 		PnlLocalOffsetX,
-		// Token: 0x0402B21A RID: 176666
+		// Token: 0x0402653E RID: 156990
 		PnlCheckOffsetY,
-		// Token: 0x0402B21B RID: 176667
+		// Token: 0x0402653F RID: 156991
 		PnlTypeTabItem
 	}
 }

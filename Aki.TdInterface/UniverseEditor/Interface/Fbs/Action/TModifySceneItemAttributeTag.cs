@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007719 RID: 30489
+	// Token: 0x02007F3F RID: 32575
 	public enum TModifySceneItemAttributeTag : byte
 	{
-		// Token: 0x0401282A RID: 75818
+		// Token: 0x040138B6 RID: 80054
 		NONE,
-		// Token: 0x0401282B RID: 75819
+		// Token: 0x040138B7 RID: 80055
 		IModifySelfSceneItemAttributeTag,
-		// Token: 0x0401282C RID: 75820
+		// Token: 0x040138B8 RID: 80056
 		IModifyTargetSceneItemAttributeTag
 	}
 }

@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.Birthday.View
 {
-	// Token: 0x02005C2D RID: 23597
+	// Token: 0x02004C0D RID: 19469
 	public class BirthdayRewardItem : CommonItemSmallItemGrid
 	{
-		// Token: 0x0603B9BF RID: 244159 RVA: 0x00E38FDC File Offset: 0x00E371DC
+		// Token: 0x0603090A RID: 198922 RVA: 0x00D8934C File Offset: 0x00D8754C
 		protected override void OnRefresh(TItem data, bool isSelected, int gridIndex)
 		{
 			InventoryDefine.IGetItemData itemData = data.ItemData;

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002352 RID: 9042
+	// Token: 0x020025C5 RID: 9669
 	public class EGuideTriggerTypeJsonConverter : JsonConverter<EGuideTriggerType>
 	{
-		// Token: 0x0600C571 RID: 50545 RVA: 0x001CD0F0 File Offset: 0x001CB2F0
+		// Token: 0x0600D152 RID: 53586 RVA: 0x001E52BC File Offset: 0x001E34BC
 		public override EGuideTriggerType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EGuideTriggerTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C572 RID: 50546 RVA: 0x001CD114 File Offset: 0x001CB314
+		// Token: 0x0600D153 RID: 53587 RVA: 0x001E52E0 File Offset: 0x001E34E0
 		public override void Write(Utf8JsonWriter writer, EGuideTriggerType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

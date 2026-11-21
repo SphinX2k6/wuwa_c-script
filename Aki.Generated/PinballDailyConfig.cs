@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F28 RID: 3880
+	// Token: 0x0200100D RID: 4109
 	public struct PinballDailyConfig : IFlatbufferObject
 	{
-		// Token: 0x17002928 RID: 10536
-		// (get) Token: 0x0600AE9B RID: 44699 RVA: 0x002C0F35 File Offset: 0x002BF135
+		// Token: 0x1700298E RID: 10638
+		// (get) Token: 0x0600B4BC RID: 46268 RVA: 0x002DDA56 File Offset: 0x002DBC56
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AE9C RID: 44700 RVA: 0x002C0F42 File Offset: 0x002BF142
+		// Token: 0x0600B4BD RID: 46269 RVA: 0x002DDA63 File Offset: 0x002DBC63
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600AE9D RID: 44701 RVA: 0x002C0F4C File Offset: 0x002BF14C
+		// Token: 0x0600B4BE RID: 46270 RVA: 0x002DDA6C File Offset: 0x002DBC6C
 		public static PinballDailyConfig GetRootAsPinballDailyConfig(ByteBuffer _bb)
 		{
 			return PinballDailyConfig.GetRootAsPinballDailyConfig(_bb, default(PinballDailyConfig));
 		}
 
-		// Token: 0x0600AE9E RID: 44702 RVA: 0x002C0F68 File Offset: 0x002BF168
+		// Token: 0x0600B4BF RID: 46271 RVA: 0x002DDA88 File Offset: 0x002DBC88
 		public static PinballDailyConfig GetRootAsPinballDailyConfig(ByteBuffer _bb, PinballDailyConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600AE9F RID: 44703 RVA: 0x002C0F85 File Offset: 0x002BF185
+		// Token: 0x0600B4C0 RID: 46272 RVA: 0x002DDAA5 File Offset: 0x002DBCA5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600AEA0 RID: 44704 RVA: 0x002C0F94 File Offset: 0x002BF194
+		// Token: 0x0600B4C1 RID: 46273 RVA: 0x002DDAB4 File Offset: 0x002DBCB4
 		public PinballDailyConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002929 RID: 10537
-		// (get) Token: 0x0600AEA1 RID: 44705 RVA: 0x002C0FA4 File Offset: 0x002BF1A4
+		// Token: 0x1700298F RID: 10639
+		// (get) Token: 0x0600B4C2 RID: 46274 RVA: 0x002DDAC4 File Offset: 0x002DBCC4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700292A RID: 10538
-		// (get) Token: 0x0600AEA2 RID: 44706 RVA: 0x002C0FE0 File Offset: 0x002BF1E0
+		// Token: 0x17002990 RID: 10640
+		// (get) Token: 0x0600B4C3 RID: 46275 RVA: 0x002DDB00 File Offset: 0x002DBD00
 		public int LevelCompleteNum
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700292B RID: 10539
-		// (get) Token: 0x0600AEA3 RID: 44707 RVA: 0x002C101C File Offset: 0x002BF21C
+		// Token: 0x17002991 RID: 10641
+		// (get) Token: 0x0600B4C4 RID: 46276 RVA: 0x002DDB3C File Offset: 0x002DBD3C
 		public int DailyClearDropId
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004FF1 RID: 20465
+		// Token: 0x040055D6 RID: 21974
 		private Table __p;
 	}
 }

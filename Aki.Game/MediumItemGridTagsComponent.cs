@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001939 RID: 6457
+// Token: 0x02000DF5 RID: 3573
 [NullableContext(1)]
 [Nullable(0)]
 public class MediumItemGridTagsComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BCD5 RID: 48341 RVA: 0x002ABA0C File Offset: 0x002A9C0C
+	// Token: 0x060090D0 RID: 37072 RVA: 0x002B64D8 File Offset: 0x002B46D8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -24,7 +24,7 @@ public class MediumItemGridTagsComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BCD6 RID: 48342 RVA: 0x002ABA75 File Offset: 0x002A9C75
+	// Token: 0x060090D1 RID: 37073 RVA: 0x002B6541 File Offset: 0x002B4741
 	protected override void OnStart()
 	{
 		UUISprite sprite = base.GetSprite(1);
@@ -35,13 +35,13 @@ public class MediumItemGridTagsComponent : MediumItemGridComponent
 		sprite.SetUIActive(false);
 	}
 
-	// Token: 0x0600BCD7 RID: 48343 RVA: 0x002ABA89 File Offset: 0x002A9C89
+	// Token: 0x060090D2 RID: 37074 RVA: 0x002B6555 File Offset: 0x002B4755
 	protected override string GetResourceId()
 	{
 		return "UiItem_EnemyItemState";
 	}
 
-	// Token: 0x0600BCD8 RID: 48344 RVA: 0x002ABA90 File Offset: 0x002A9C90
+	// Token: 0x060090D3 RID: 37075 RVA: 0x002B655C File Offset: 0x002B475C
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -59,7 +59,7 @@ public class MediumItemGridTagsComponent : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x0600BCD9 RID: 48345 RVA: 0x002ABACC File Offset: 0x002A9CCC
+	// Token: 0x060090D4 RID: 37076 RVA: 0x002B6598 File Offset: 0x002B4798
 	private void UpdateTagList()
 	{
 		for (int i = this.Tags.Length; i < this.SpriteList.Count; i++)
@@ -79,7 +79,7 @@ public class MediumItemGridTagsComponent : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x0600BCDA RID: 48346 RVA: 0x002ABB78 File Offset: 0x002A9D78
+	// Token: 0x060090D5 RID: 37077 RVA: 0x002B6644 File Offset: 0x002B4844
 	private UUISprite GetSpriteItem(int index)
 	{
 		if (index < this.SpriteList.Count)
@@ -97,20 +97,20 @@ public class MediumItemGridTagsComponent : MediumItemGridComponent
 		return uuisprite;
 	}
 
-	// Token: 0x04005546 RID: 21830
+	// Token: 0x040055F3 RID: 22003
 	private readonly List<UUISprite> SpriteList = new List<UUISprite>();
 
-	// Token: 0x04005547 RID: 21831
+	// Token: 0x040055F4 RID: 22004
 	private string[] Tags = new string[0];
 
-	// Token: 0x02007E9E RID: 32414
+	// Token: 0x0200702B RID: 28715
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402967D RID: 169597
+		// Token: 0x040249B5 RID: 149941
 		public const int LayoutIcon = 0;
 
-		// Token: 0x0402967E RID: 169598
+		// Token: 0x040249B6 RID: 149942
 		public const int SpriteIconTemplate = 1;
 	}
 }

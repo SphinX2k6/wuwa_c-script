@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065FE RID: 26110
+	// Token: 0x0200557C RID: 21884
 	public class FishingTechLevelUpItemData : IFishingTechLevelUpItem
 	{
-		// Token: 0x170095E0 RID: 38368
-		// (get) Token: 0x06041716 RID: 268054 RVA: 0x00FD9B17 File Offset: 0x00FD7D17
-		// (set) Token: 0x06041717 RID: 268055 RVA: 0x00FD9B1F File Offset: 0x00FD7D1F
+		// Token: 0x17006942 RID: 26946
+		// (get) Token: 0x060363DB RID: 222171 RVA: 0x00F20B97 File Offset: 0x00F1ED97
+		// (set) Token: 0x060363DC RID: 222172 RVA: 0x00F20B9F File Offset: 0x00F1ED9F
 		public int ItemId { get; set; }
 
-		// Token: 0x170095E1 RID: 38369
-		// (get) Token: 0x06041718 RID: 268056 RVA: 0x00FD9B28 File Offset: 0x00FD7D28
-		// (set) Token: 0x06041719 RID: 268057 RVA: 0x00FD9B30 File Offset: 0x00FD7D30
+		// Token: 0x17006943 RID: 26947
+		// (get) Token: 0x060363DD RID: 222173 RVA: 0x00F20BA8 File Offset: 0x00F1EDA8
+		// (set) Token: 0x060363DE RID: 222174 RVA: 0x00F20BB0 File Offset: 0x00F1EDB0
 		public int ItemNeedNum { get; set; }
 	}
 }

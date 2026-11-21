@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.SunSpiritMove
 {
-	// Token: 0x02006E58 RID: 28248
+	// Token: 0x02005FD9 RID: 24537
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SunSpiritActionManager : GameplayActionManager
 	{
-		// Token: 0x06044D91 RID: 282001 RVA: 0x010FDD88 File Offset: 0x010FBF88
+		// Token: 0x0603AF1E RID: 241438 RVA: 0x010A82E8 File Offset: 0x010A64E8
 		[NullableContext(1)]
 		public void InitByConfig(BP_FindSunSpiritGlobalConfig_C config)
 		{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.SunSpiritMov
 			base.Init(new SunSpiritActionTicker());
 		}
 
-		// Token: 0x06044D92 RID: 282002 RVA: 0x010FDE7B File Offset: 0x010FC07B
+		// Token: 0x0603AF1F RID: 241439 RVA: 0x010A83DB File Offset: 0x010A65DB
 		public override void Clear()
 		{
 			base.Clear();
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.SunSpiritMov
 			this.EndMontage = null;
 		}
 
-		// Token: 0x06044D93 RID: 282003 RVA: 0x010FDEB4 File Offset: 0x010FC0B4
+		// Token: 0x0603AF20 RID: 241440 RVA: 0x010A8414 File Offset: 0x010A6614
 		[NullableContext(1)]
 		public void ExecuteSunSpiritMove(IReadOnlyList<ISunSpiritMoveParams> paramsList, Action onFinish)
 		{
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.SunSpiritMov
 			base.ExecuteActionGroups(list, onFinish);
 		}
 
-		// Token: 0x06044D94 RID: 282004 RVA: 0x010FDF58 File Offset: 0x010FC158
+		// Token: 0x0603AF21 RID: 241441 RVA: 0x010A84B8 File Offset: 0x010A66B8
 		[NullableContext(1)]
 		public void ExecuteSunSpiritFail(EntityHandle entityHandle, Action onFinish)
 		{
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.SunSpiritMov
 			base.ExecuteActionGroups(list, onFinish);
 		}
 
-		// Token: 0x06044D95 RID: 282005 RVA: 0x010FDF9C File Offset: 0x010FC19C
+		// Token: 0x0603AF22 RID: 241442 RVA: 0x010A84FC File Offset: 0x010A66FC
 		[NullableContext(1)]
 		public void ExecuteSunSpiritStopEndMontage(EntityHandle entityHandle)
 		{
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.SunSpiritMov
 			base.ExecuteActionGroups(list, null);
 		}
 
-		// Token: 0x06044D96 RID: 282006 RVA: 0x010FDFE4 File Offset: 0x010FC1E4
+		// Token: 0x0603AF23 RID: 241443 RVA: 0x010A8544 File Offset: 0x010A6744
 		[NullableContext(1)]
 		private List<GameplayActionGroup> CreateMoveActionGroup(ISunSpiritMoveParams @params)
 		{
@@ -154,28 +154,28 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.SunSpiritMov
 			return list;
 		}
 
-		// Token: 0x04023D26 RID: 146726
+		// Token: 0x0401EFDB RID: 126939
 		private UAnimMontage JumpMontage;
 
-		// Token: 0x04023D27 RID: 146727
+		// Token: 0x0401EFDC RID: 126940
 		private IJumpConfig JumpConfig;
 
-		// Token: 0x04023D28 RID: 146728
+		// Token: 0x0401EFDD RID: 126941
 		private UAnimMontage RunMontage;
 
-		// Token: 0x04023D29 RID: 146729
+		// Token: 0x0401EFDE RID: 126942
 		private IRunConfig RunConfig;
 
-		// Token: 0x04023D2A RID: 146730
+		// Token: 0x0401EFDF RID: 126943
 		private int RunWaitNextTime;
 
-		// Token: 0x04023D2B RID: 146731
+		// Token: 0x0401EFE0 RID: 126944
 		private UAnimMontage FailMontage;
 
-		// Token: 0x04023D2C RID: 146732
+		// Token: 0x0401EFE1 RID: 126945
 		private UAnimMontage SuccessMontage;
 
-		// Token: 0x04023D2D RID: 146733
+		// Token: 0x0401EFE2 RID: 126946
 		private UAnimMontage EndMontage;
 	}
 }

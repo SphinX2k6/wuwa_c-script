@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AF5 RID: 2805
+	// Token: 0x02000BCF RID: 3023
 	public struct AiTeamAttack : IFlatbufferObject
 	{
-		// Token: 0x170002AE RID: 686
-		// (get) Token: 0x0600472A RID: 18218 RVA: 0x001D472D File Offset: 0x001D292D
+		// Token: 0x170002C5 RID: 709
+		// (get) Token: 0x06004C71 RID: 19569 RVA: 0x001F40CE File Offset: 0x001F22CE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600472B RID: 18219 RVA: 0x001D473A File Offset: 0x001D293A
+		// Token: 0x06004C72 RID: 19570 RVA: 0x001F40DB File Offset: 0x001F22DB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600472C RID: 18220 RVA: 0x001D4744 File Offset: 0x001D2944
+		// Token: 0x06004C73 RID: 19571 RVA: 0x001F40E4 File Offset: 0x001F22E4
 		public static AiTeamAttack GetRootAsAiTeamAttack(ByteBuffer _bb)
 		{
 			return AiTeamAttack.GetRootAsAiTeamAttack(_bb, default(AiTeamAttack));
 		}
 
-		// Token: 0x0600472D RID: 18221 RVA: 0x001D4760 File Offset: 0x001D2960
+		// Token: 0x06004C74 RID: 19572 RVA: 0x001F4100 File Offset: 0x001F2300
 		public static AiTeamAttack GetRootAsAiTeamAttack(ByteBuffer _bb, AiTeamAttack obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600472E RID: 18222 RVA: 0x001D477D File Offset: 0x001D297D
+		// Token: 0x06004C75 RID: 19573 RVA: 0x001F411D File Offset: 0x001F231D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600472F RID: 18223 RVA: 0x001D478C File Offset: 0x001D298C
+		// Token: 0x06004C76 RID: 19574 RVA: 0x001F412C File Offset: 0x001F232C
 		public AiTeamAttack __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170002AF RID: 687
-		// (get) Token: 0x06004730 RID: 18224 RVA: 0x001D479C File Offset: 0x001D299C
+		// Token: 0x170002C6 RID: 710
+		// (get) Token: 0x06004C77 RID: 19575 RVA: 0x001F413C File Offset: 0x001F233C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170002B0 RID: 688
-		// (get) Token: 0x06004731 RID: 18225 RVA: 0x001D47D8 File Offset: 0x001D29D8
+		// Token: 0x170002C7 RID: 711
+		// (get) Token: 0x06004C78 RID: 19576 RVA: 0x001F4178 File Offset: 0x001F2378
 		public float ExtraWeight
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170002B1 RID: 689
-		// (get) Token: 0x06004732 RID: 18226 RVA: 0x001D4818 File Offset: 0x001D2A18
+		// Token: 0x170002C8 RID: 712
+		// (get) Token: 0x06004C79 RID: 19577 RVA: 0x001F41B8 File Offset: 0x001F23B8
 		public float DistanceCoefficient
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170002B2 RID: 690
-		// (get) Token: 0x06004733 RID: 18227 RVA: 0x001D4858 File Offset: 0x001D2A58
+		// Token: 0x170002C9 RID: 713
+		// (get) Token: 0x06004C7A RID: 19578 RVA: 0x001F41F8 File Offset: 0x001F23F8
 		public float AngleCoefficient
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004AD6 RID: 19158
+		// Token: 0x040050B0 RID: 20656
 		private Table __p;
 	}
 }

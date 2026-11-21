@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003C9A RID: 15514
+	// Token: 0x020040AE RID: 16558
 	public enum EElementCategory : byte
 	{
-		// Token: 0x0400B3B4 RID: 46004
+		// Token: 0x0400BD55 RID: 48469
 		Element0,
-		// Token: 0x0400B3B5 RID: 46005
+		// Token: 0x0400BD56 RID: 48470
 		Element1,
-		// Token: 0x0400B3B6 RID: 46006
+		// Token: 0x0400BD57 RID: 48471
 		Element2,
-		// Token: 0x0400B3B7 RID: 46007
+		// Token: 0x0400BD58 RID: 48472
 		Element3,
-		// Token: 0x0400B3B8 RID: 46008
+		// Token: 0x0400BD59 RID: 48473
 		Element4,
-		// Token: 0x0400B3B9 RID: 46009
+		// Token: 0x0400BD5A RID: 48474
 		Element5,
-		// Token: 0x0400B3BA RID: 46010
+		// Token: 0x0400BD5B RID: 48475
 		Element6
 	}
 }

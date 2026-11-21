@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002332 RID: 9010
+	// Token: 0x020025A3 RID: 9635
 	public class EFadeBackgroundFadeInEffectTypeJsonConverter : JsonConverter<EFadeBackgroundFadeInEffectType>
 	{
-		// Token: 0x0600C4E1 RID: 50401 RVA: 0x001CBE70 File Offset: 0x001CA070
+		// Token: 0x0600D0B9 RID: 53433 RVA: 0x001E3F28 File Offset: 0x001E2128
 		public override EFadeBackgroundFadeInEffectType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EFadeBackgroundFadeInEffectTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C4E2 RID: 50402 RVA: 0x001CBE94 File Offset: 0x001CA094
+		// Token: 0x0600D0BA RID: 53434 RVA: 0x001E3F4C File Offset: 0x001E214C
 		public override void Write(Utf8JsonWriter writer, EFadeBackgroundFadeInEffectType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

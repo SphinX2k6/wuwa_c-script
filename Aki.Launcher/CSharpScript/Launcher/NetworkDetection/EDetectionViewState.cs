@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Launcher.NetworkDetection
 {
-	// Token: 0x020001B8 RID: 440
+	// Token: 0x020001BC RID: 444
 	public enum EDetectionViewState
 	{
-		// Token: 0x0400078B RID: 1931
+		// Token: 0x040007C8 RID: 1992
 		Idle,
-		// Token: 0x0400078C RID: 1932
+		// Token: 0x040007C9 RID: 1993
 		Detecting,
-		// Token: 0x0400078D RID: 1933
+		// Token: 0x040007CA RID: 1994
 		DetectComplete,
-		// Token: 0x0400078E RID: 1934
+		// Token: 0x040007CB RID: 1995
 		Uploading,
-		// Token: 0x0400078F RID: 1935
+		// Token: 0x040007CC RID: 1996
 		UpLoadComplete
 	}
 }

@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EF4 RID: 20212
+	// Token: 0x02003EBD RID: 16061
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattlePhantomSelectView : UiViewBase
 	{
-		// Token: 0x06033DA5 RID: 212389 RVA: 0x00C25826 File Offset: 0x00C23A26
+		// Token: 0x06028C10 RID: 166928 RVA: 0x00B6EDCE File Offset: 0x00B6CFCE
 		public RogueBattlePhantomSelectView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06033DA6 RID: 212390 RVA: 0x00C25830 File Offset: 0x00C23A30
+		// Token: 0x06028C11 RID: 166929 RVA: 0x00B6EDD8 File Offset: 0x00B6CFD8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033DA7 RID: 212391 RVA: 0x00C258C4 File Offset: 0x00C23AC4
+		// Token: 0x06028C12 RID: 166930 RVA: 0x00B6EE6C File Offset: 0x00B6D06C
 		private void OnBtnConfirm()
 		{
 			GenericLayout<RogueBattlePhantomItem, RogueResGainData> phantomLayout = this.PhantomLayout;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}).Forget();
 		}
 
-		// Token: 0x06033DA8 RID: 212392 RVA: 0x00C2592C File Offset: 0x00C23B2C
+		// Token: 0x06028C13 RID: 166931 RVA: 0x00B6EED4 File Offset: 0x00B6D0D4
 		private RogueBattlePhantomItem CreatePhantomItem()
 		{
 			return new RogueBattlePhantomItem
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033DA9 RID: 212393 RVA: 0x00C25948 File Offset: 0x00C23B48
+		// Token: 0x06028C14 RID: 166932 RVA: 0x00B6EEF0 File Offset: 0x00B6D0F0
 		private void OnSelectPhantom(int? index)
 		{
 			if (index == null)
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			phantomLayout2.SelectGridProxy(index.Value, false);
 		}
 
-		// Token: 0x06033DAA RID: 212394 RVA: 0x00C259A4 File Offset: 0x00C23BA4
+		// Token: 0x06028C15 RID: 166933 RVA: 0x00B6EF4C File Offset: 0x00B6D14C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattlePhantomSelectView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401B8CF RID: 112847
+		// Token: 0x040162A2 RID: 90786
 		[Nullable(new byte[]
 		{
 			2,
@@ -102,11 +102,11 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		public GenericLayout<RogueBattlePhantomItem, RogueResGainData> PhantomLayout;
 
-		// Token: 0x0401B8D0 RID: 112848
+		// Token: 0x040162A3 RID: 90787
 		[Nullable(2)]
 		public RogueBattleElementPanel ElementInfoPanel;
 
-		// Token: 0x0401B8D1 RID: 112849
+		// Token: 0x040162A4 RID: 90788
 		[Nullable(2)]
 		public RogueBattleTopPanel CaptionItem;
 	}

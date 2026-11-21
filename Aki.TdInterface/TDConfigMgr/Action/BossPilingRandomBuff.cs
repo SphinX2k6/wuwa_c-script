@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014AE RID: 5294
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001607 RID: 5639
 	public class BossPilingRandomBuff : ActionParams
 	{
-		// Token: 0x0600788C RID: 30860 RVA: 0x00121024 File Offset: 0x0011F224
+		// Token: 0x06007F59 RID: 32601 RVA: 0x0012FC70 File Offset: 0x0012DE70
 		private BossPilingRandomBuff_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600788D RID: 30861 RVA: 0x0012105C File Offset: 0x0011F25C
+		// Token: 0x06007F5A RID: 32602 RVA: 0x0012FCA8 File Offset: 0x0012DEA8
 		public static BossPilingRandomBuff Create([Nullable(2)] BossPilingRandomBuff instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600788E RID: 30862 RVA: 0x0012106F File Offset: 0x0011F26F
+		// Token: 0x06007F5B RID: 32603 RVA: 0x0012FCBB File Offset: 0x0012DEBB
 		public static BossPilingRandomBuff CreateFromSetValue([Nullable(2)] BossPilingRandomBuff_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600788F RID: 30863 RVA: 0x00121082 File Offset: 0x0011F282
+		// Token: 0x06007F5C RID: 32604 RVA: 0x0012FCCE File Offset: 0x0012DECE
 		public BossPilingRandomBuff_SetValue ToSetValue()
 		{
 			return new BossPilingRandomBuff_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002877 RID: 10359
-		// (get) Token: 0x06007890 RID: 30864 RVA: 0x00121095 File Offset: 0x0011F295
-		// (set) Token: 0x06007891 RID: 30865 RVA: 0x001210C0 File Offset: 0x0011F2C0
+		// Token: 0x17002A61 RID: 10849
+		// (get) Token: 0x06007F5D RID: 32605 RVA: 0x0012FCE1 File Offset: 0x0012DEE1
+		// (set) Token: 0x06007F5E RID: 32606 RVA: 0x0012FD0C File Offset: 0x0012DF0C
 		public virtual int BuffPoolId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400460E RID: 17934
+		// Token: 0x040049A9 RID: 18857
 		[Nullable(2)]
 		protected new BossPilingRandomBuff FbInstance;
 
-		// Token: 0x0400460F RID: 17935
+		// Token: 0x040049AA RID: 18858
 		[Nullable(2)]
 		protected BossPilingRandomBuff_SetValue PocoInterface;
 	}

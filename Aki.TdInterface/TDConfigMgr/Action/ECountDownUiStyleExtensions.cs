@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022F1 RID: 8945
+	// Token: 0x02002560 RID: 9568
 	public static class ECountDownUiStyleExtensions
 	{
-		// Token: 0x0600C3BB RID: 50107 RVA: 0x001C96B4 File Offset: 0x001C78B4
+		// Token: 0x0600CF8A RID: 53130 RVA: 0x001E1500 File Offset: 0x001DF700
 		public static string ToEnumString(this ECountDownUiStyle value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C3BC RID: 50108 RVA: 0x001C96FC File Offset: 0x001C78FC
+		// Token: 0x0600CF8B RID: 53131 RVA: 0x001E1548 File Offset: 0x001DF748
 		public static ECountDownUiStyle FromString(string name)
 		{
 			ECountDownUiStyle result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C3BD RID: 50109 RVA: 0x001C9728 File Offset: 0x001C7928
+		// Token: 0x0600CF8C RID: 53132 RVA: 0x001E1574 File Offset: 0x001DF774
 		public static bool TryFromString(string name, out ECountDownUiStyle value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C3BE RID: 50110 RVA: 0x001C977E File Offset: 0x001C797E
+		// Token: 0x0600CF8D RID: 53133 RVA: 0x001E15CA File Offset: 0x001DF7CA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C3BF RID: 50111 RVA: 0x001C979E File Offset: 0x001C799E
+		// Token: 0x0600CF8E RID: 53134 RVA: 0x001E15EA File Offset: 0x001DF7EA
 		public static ECountDownUiStyle[] GetValues()
 		{
 			return new ECountDownUiStyle[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C3C0 RID: 50112 RVA: 0x001C97AE File Offset: 0x001C79AE
+		// Token: 0x0600CF8F RID: 53135 RVA: 0x001E15FA File Offset: 0x001DF7FA
 		public static string[] GetNames()
 		{
 			return new string[]

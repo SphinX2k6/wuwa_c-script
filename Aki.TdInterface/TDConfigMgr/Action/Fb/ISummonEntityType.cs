@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A2F RID: 10799
+	// Token: 0x02002D1C RID: 11548
 	public class ISummonEntityType
 	{
-		// Token: 0x0600EDED RID: 60909 RVA: 0x0022AB0D File Offset: 0x00228D0D
-		[NullableContext(1)]
+		// Token: 0x0600FC85 RID: 64645 RVA: 0x002484C1 File Offset: 0x002466C1
 		public static ISummonEntityType Create(ISummonEntityType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B51 RID: 19281
-		// (get) Token: 0x0600EDEE RID: 60910 RVA: 0x0022AB2C File Offset: 0x00228D2C
+		// Token: 0x17004EFB RID: 20219
+		// (get) Token: 0x0600FC86 RID: 64646 RVA: 0x002484E0 File Offset: 0x002466E0
 		public virtual ESummonEntityType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082F3 RID: 33523
+		// Token: 0x040089E6 RID: 35302
 		private ISummonEntityType Instance;
 	}
 }

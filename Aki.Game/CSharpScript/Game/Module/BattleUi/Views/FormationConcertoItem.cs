@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D25 RID: 23845
+	// Token: 0x02004D07 RID: 19719
 	public class FormationConcertoItem : UiPanelBase
 	{
-		// Token: 0x0603C72A RID: 247594 RVA: 0x00E7ECF8 File Offset: 0x00E7CEF8
+		// Token: 0x06031683 RID: 202371 RVA: 0x00DCF498 File Offset: 0x00DCD698
 		[NullableContext(1)]
 		public FormationConcertoItem(AActor rootActor)
 		{
 			base.CreateThenShowByActor(rootActor, null);
 		}
 
-		// Token: 0x0603C72B RID: 247595 RVA: 0x00E7ED14 File Offset: 0x00E7CF14
+		// Token: 0x06031684 RID: 202372 RVA: 0x00DCF4B4 File Offset: 0x00DCD6B4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C72C RID: 247596 RVA: 0x00E7ED80 File Offset: 0x00E7CF80
+		// Token: 0x06031685 RID: 202373 RVA: 0x00DCF520 File Offset: 0x00DCD720
 		public void RefreshConcertoInfoView(in ElementInfo info, int elementId, FColor color)
 		{
 			UUITexture texture = base.GetTexture(1);
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C72D RID: 247597 RVA: 0x00E7EE00 File Offset: 0x00E7D000
+		// Token: 0x06031686 RID: 202374 RVA: 0x00DCF5A0 File Offset: 0x00DCD7A0
 		public void RefreshConcertoProgress(float progress)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -67,16 +67,16 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sprite.SetFillAmount(progress);
 		}
 
-		// Token: 0x0401F7FB RID: 129019
+		// Token: 0x0401A2B4 RID: 107188
 		[Nullable(1)]
 		private string LastSetIconPath = string.Empty;
 
-		// Token: 0x0200BFAB RID: 49067
+		// Token: 0x0200A9B1 RID: 43441
 		private enum EChildType
 		{
-			// Token: 0x04039D2C RID: 236844
+			// Token: 0x040346EE RID: 214766
 			ProgressSprite,
-			// Token: 0x04039D2D RID: 236845
+			// Token: 0x040346EF RID: 214767
 			ContentTexture
 		}
 	}

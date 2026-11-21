@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E1F RID: 24095
+	// Token: 0x02004E04 RID: 19972
 	public class SpecialEnergyBarMorphCountDown : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D484 RID: 251012 RVA: 0x00EC4D1C File Offset: 0x00EC2F1C
+		// Token: 0x06032413 RID: 205843 RVA: 0x00E1627C File Offset: 0x00E1447C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D485 RID: 251013 RVA: 0x00EC4DE8 File Offset: 0x00EC2FE8
+		// Token: 0x06032414 RID: 205844 RVA: 0x00E16348 File Offset: 0x00E14548
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarMorphCountDown.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D486 RID: 251014 RVA: 0x00EC4E2C File Offset: 0x00EC302C
+		// Token: 0x06032415 RID: 205845 RVA: 0x00E1638C File Offset: 0x00E1458C
 		[NullableContext(1)]
 		protected UniTask InitPointLeftItem(UUIItem pointItem)
 		{
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitPointLeftItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D487 RID: 251015 RVA: 0x00EC4E78 File Offset: 0x00EC3078
+		// Token: 0x06032416 RID: 205846 RVA: 0x00E163D8 File Offset: 0x00E145D8
 		[NullableContext(1)]
 		protected UniTask InitPointRightItem(UUIItem pointItem)
 		{
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitPointRightItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D488 RID: 251016 RVA: 0x00EC4EC4 File Offset: 0x00EC30C4
+		// Token: 0x06032417 RID: 205847 RVA: 0x00E16424 File Offset: 0x00E14624
 		protected override void OnStart()
 		{
 			if (this.Config == null)
@@ -107,25 +107,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBarPercent();
 		}
 
-		// Token: 0x0603D489 RID: 251017 RVA: 0x00EC5005 File Offset: 0x00EC3205
+		// Token: 0x06032418 RID: 205848 RVA: 0x00E16565 File Offset: 0x00E14765
 		protected virtual ValueTuple<float, float> GetEffectBasePercents(float effectBasePercent)
 		{
 			return new ValueTuple<float, float>(effectBasePercent, effectBasePercent);
 		}
 
-		// Token: 0x0603D48A RID: 251018 RVA: 0x00EC500E File Offset: 0x00EC320E
+		// Token: 0x06032419 RID: 205849 RVA: 0x00E1656E File Offset: 0x00E1476E
 		protected virtual ValueTuple<int, int> GetEffectPointNums(int pointNum)
 		{
 			return new ValueTuple<int, int>(pointNum, pointNum);
 		}
 
-		// Token: 0x0603D48B RID: 251019 RVA: 0x00EC5017 File Offset: 0x00EC3217
+		// Token: 0x0603241A RID: 205850 RVA: 0x00E16577 File Offset: 0x00E14777
 		protected virtual int GetUseEffectPointOffsetNum(int pointNum)
 		{
 			return 0;
 		}
 
-		// Token: 0x0603D48C RID: 251020 RVA: 0x00EC501A File Offset: 0x00EC321A
+		// Token: 0x0603241B RID: 205851 RVA: 0x00E1657A File Offset: 0x00E1477A
 		public override void OnChangeVisibleByTagChange(bool visible)
 		{
 			if (visible)
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D48D RID: 251021 RVA: 0x00EC5046 File Offset: 0x00EC3246
+		// Token: 0x0603241C RID: 205852 RVA: 0x00E165A6 File Offset: 0x00E147A6
 		protected override void OnBeforeShow()
 		{
 			if ((byte)this.Config.PrefabType == 9)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D48E RID: 251022 RVA: 0x00EC5080 File Offset: 0x00EC3280
+		// Token: 0x0603241D RID: 205853 RVA: 0x00E165E0 File Offset: 0x00E147E0
 		protected void RefreshBarPercent()
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -156,13 +156,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IconHandle.PlayEndAnim(isPlay);
 		}
 
-		// Token: 0x0603D48F RID: 251023 RVA: 0x00EC50F9 File Offset: 0x00EC32F9
+		// Token: 0x0603241E RID: 205854 RVA: 0x00E16659 File Offset: 0x00E14859
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshBarPercent();
 		}
 
-		// Token: 0x0603D490 RID: 251024 RVA: 0x00EC5104 File Offset: 0x00EC3304
+		// Token: 0x0603241F RID: 205855 RVA: 0x00E16664 File Offset: 0x00E14864
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -183,14 +183,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D491 RID: 251025 RVA: 0x00EC517B File Offset: 0x00EC337B
+		// Token: 0x06032420 RID: 205856 RVA: 0x00E166DB File Offset: 0x00E148DB
 		protected override void OnBeforeDestroy()
 		{
 			base.OnBeforeDestroy();
 			this.IconHandle.OnBeforeDestroy();
 		}
 
-		// Token: 0x0401FF4F RID: 130895
+		// Token: 0x0401AA16 RID: 109078
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly int[] PointNumList = new int[]
@@ -199,45 +199,45 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			20
 		};
 
-		// Token: 0x0401FF50 RID: 130896
+		// Token: 0x0401AA17 RID: 109079
 		private const int TOTAL_NUM = 41;
 
-		// Token: 0x0401FF51 RID: 130897
+		// Token: 0x0401AA18 RID: 109080
 		private const float POINT_WIDTH = 9f;
 
-		// Token: 0x0401FF52 RID: 130898
+		// Token: 0x0401AA19 RID: 109081
 		private const double EFFECT_DURATION = 500.0;
 
-		// Token: 0x0401FF53 RID: 130899
+		// Token: 0x0401AA1A RID: 109082
 		[Nullable(2)]
 		private SpecialEnergyBarPointItem PointLeftItem;
 
-		// Token: 0x0401FF54 RID: 130900
+		// Token: 0x0401AA1B RID: 109083
 		[Nullable(2)]
 		private SpecialEnergyBarPointItem PointRightItem;
 
-		// Token: 0x0401FF55 RID: 130901
+		// Token: 0x0401AA1C RID: 109084
 		[Nullable(1)]
 		private readonly SpecialEnergyBaIconHandle IconHandle = new SpecialEnergyBaIconHandle();
 
-		// Token: 0x0401FF56 RID: 130902
+		// Token: 0x0401AA1D RID: 109085
 		private double StartEffectFinishTime;
 
-		// Token: 0x0401FF57 RID: 130903
+		// Token: 0x0401AA1E RID: 109086
 		private int PointNum;
 
-		// Token: 0x0200C19B RID: 49563
+		// Token: 0x0200ABAA RID: 43946
 		private enum EChildType
 		{
-			// Token: 0x0403A810 RID: 239632
+			// Token: 0x04035202 RID: 217602
 			PointLeftItem,
-			// Token: 0x0403A811 RID: 239633
+			// Token: 0x04035203 RID: 217603
 			PointRightItem,
-			// Token: 0x0403A812 RID: 239634
+			// Token: 0x04035204 RID: 217604
 			IconTexture,
-			// Token: 0x0403A813 RID: 239635
+			// Token: 0x04035205 RID: 217605
 			StartEffect,
-			// Token: 0x0403A814 RID: 239636
+			// Token: 0x04035206 RID: 217606
 			AnimItem
 		}
 	}

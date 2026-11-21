@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EDD RID: 7901
+// Token: 0x0200139F RID: 5023
 public class MascotCollectBookToggleItem : UiPanelBase
 {
-	// Token: 0x0600F31B RID: 62235 RVA: 0x003A9924 File Offset: 0x003A7B24
+	// Token: 0x0600C73A RID: 51002 RVA: 0x003B5420 File Offset: 0x003B3620
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -29,33 +29,33 @@ public class MascotCollectBookToggleItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F31C RID: 62236 RVA: 0x003A99CA File Offset: 0x003A7BCA
+	// Token: 0x0600C73B RID: 51003 RVA: 0x003B54C6 File Offset: 0x003B36C6
 	protected override void OnStart()
 	{
 		base.GetItem(1).SetUIActive(false);
 	}
 
-	// Token: 0x0600F31D RID: 62237 RVA: 0x003A99D9 File Offset: 0x003A7BD9
+	// Token: 0x0600C73C RID: 51004 RVA: 0x003B54D5 File Offset: 0x003B36D5
 	public void SetSelectType(HonamiStoryMascotCollectBookView.EMascotCollectBookType type)
 	{
 		this.SelectType = type;
 		this.RefreshToggleItem(this.SelectType);
 	}
 
-	// Token: 0x0600F31E RID: 62238 RVA: 0x003A99EE File Offset: 0x003A7BEE
+	// Token: 0x0600C73D RID: 51005 RVA: 0x003B54EA File Offset: 0x003B36EA
 	[NullableContext(1)]
 	public void BindToggleCallBack(Action<HonamiStoryMascotCollectBookView.EMascotCollectBookType> callBack)
 	{
 		this.ToggleCallBack = callBack;
 	}
 
-	// Token: 0x0600F31F RID: 62239 RVA: 0x003A99F7 File Offset: 0x003A7BF7
+	// Token: 0x0600C73E RID: 51006 RVA: 0x003B54F3 File Offset: 0x003B36F3
 	public void SetRedDotVisible(bool visible)
 	{
 		base.GetItem(1).SetUIActive(visible);
 	}
 
-	// Token: 0x0600F320 RID: 62240 RVA: 0x003A9A06 File Offset: 0x003A7C06
+	// Token: 0x0600C73F RID: 51007 RVA: 0x003B5502 File Offset: 0x003B3702
 	public void RefreshToggleItem(HonamiStoryMascotCollectBookView.EMascotCollectBookType curSelectType)
 	{
 		if (curSelectType == this.SelectType)
@@ -66,7 +66,7 @@ public class MascotCollectBookToggleItem : UiPanelBase
 		this.OnDeselected();
 	}
 
-	// Token: 0x0600F321 RID: 62241 RVA: 0x003A9A1E File Offset: 0x003A7C1E
+	// Token: 0x0600C740 RID: 51008 RVA: 0x003B551A File Offset: 0x003B371A
 	private void OnToggle(EToggleState toggleState)
 	{
 		Action<HonamiStoryMascotCollectBookView.EMascotCollectBookType> toggleCallBack = this.ToggleCallBack;
@@ -77,22 +77,22 @@ public class MascotCollectBookToggleItem : UiPanelBase
 		toggleCallBack(this.SelectType);
 	}
 
-	// Token: 0x0600F322 RID: 62242 RVA: 0x003A9A36 File Offset: 0x003A7C36
+	// Token: 0x0600C741 RID: 51009 RVA: 0x003B5532 File Offset: 0x003B3732
 	private void OnSelected()
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x0600F323 RID: 62243 RVA: 0x003A9A48 File Offset: 0x003A7C48
+	// Token: 0x0600C742 RID: 51010 RVA: 0x003B5544 File Offset: 0x003B3744
 	private void OnDeselected()
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0400709F RID: 28831
+	// Token: 0x04007180 RID: 29056
 	private HonamiStoryMascotCollectBookView.EMascotCollectBookType SelectType;
 
-	// Token: 0x040070A0 RID: 28832
+	// Token: 0x04007181 RID: 29057
 	[Nullable(2)]
 	private Action<HonamiStoryMascotCollectBookView.EMascotCollectBookType> ToggleCallBack;
 }

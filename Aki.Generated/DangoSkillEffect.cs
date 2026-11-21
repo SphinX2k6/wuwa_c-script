@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BDF RID: 3039
+	// Token: 0x02000CC1 RID: 3265
 	public struct DangoSkillEffect : IFlatbufferObject
 	{
-		// Token: 0x17000C15 RID: 3093
-		// (get) Token: 0x060060D4 RID: 24788 RVA: 0x002106A6 File Offset: 0x0020E8A6
+		// Token: 0x17000C5B RID: 3163
+		// (get) Token: 0x060066AD RID: 26285 RVA: 0x0022FCEE File Offset: 0x0022DEEE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060060D5 RID: 24789 RVA: 0x002106B3 File Offset: 0x0020E8B3
+		// Token: 0x060066AE RID: 26286 RVA: 0x0022FCFB File Offset: 0x0022DEFB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060060D6 RID: 24790 RVA: 0x002106BC File Offset: 0x0020E8BC
+		// Token: 0x060066AF RID: 26287 RVA: 0x0022FD04 File Offset: 0x0022DF04
 		public static DangoSkillEffect GetRootAsDangoSkillEffect(ByteBuffer _bb)
 		{
 			return DangoSkillEffect.GetRootAsDangoSkillEffect(_bb, default(DangoSkillEffect));
 		}
 
-		// Token: 0x060060D7 RID: 24791 RVA: 0x002106D8 File Offset: 0x0020E8D8
+		// Token: 0x060066B0 RID: 26288 RVA: 0x0022FD20 File Offset: 0x0022DF20
 		public static DangoSkillEffect GetRootAsDangoSkillEffect(ByteBuffer _bb, DangoSkillEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060060D8 RID: 24792 RVA: 0x002106F5 File Offset: 0x0020E8F5
+		// Token: 0x060066B1 RID: 26289 RVA: 0x0022FD3D File Offset: 0x0022DF3D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060060D9 RID: 24793 RVA: 0x00210704 File Offset: 0x0020E904
+		// Token: 0x060066B2 RID: 26290 RVA: 0x0022FD4C File Offset: 0x0022DF4C
 		public DangoSkillEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000C16 RID: 3094
-		// (get) Token: 0x060060DA RID: 24794 RVA: 0x00210714 File Offset: 0x0020E914
+		// Token: 0x17000C5C RID: 3164
+		// (get) Token: 0x060066B3 RID: 26291 RVA: 0x0022FD5C File Offset: 0x0022DF5C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000C17 RID: 3095
-		// (get) Token: 0x060060DB RID: 24795 RVA: 0x00210750 File Offset: 0x0020E950
+		// Token: 0x17000C5D RID: 3165
+		// (get) Token: 0x060066B4 RID: 26292 RVA: 0x0022FD98 File Offset: 0x0022DF98
 		public int TrigggerPerformance
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000C18 RID: 3096
-		// (get) Token: 0x060060DC RID: 24796 RVA: 0x0021078C File Offset: 0x0020E98C
+		// Token: 0x17000C5E RID: 3166
+		// (get) Token: 0x060066B5 RID: 26293 RVA: 0x0022FDD4 File Offset: 0x0022DFD4
 		public int Type
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000C19 RID: 3097
-		// (get) Token: 0x060060DD RID: 24797 RVA: 0x002107C8 File Offset: 0x0020E9C8
+		// Token: 0x17000C5F RID: 3167
+		// (get) Token: 0x060066B6 RID: 26294 RVA: 0x0022FE10 File Offset: 0x0022E010
 		public int TrigggerTiming
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000C1A RID: 3098
-		// (get) Token: 0x060060DE RID: 24798 RVA: 0x00210808 File Offset: 0x0020EA08
+		// Token: 0x17000C60 RID: 3168
+		// (get) Token: 0x060066B7 RID: 26295 RVA: 0x0022FE50 File Offset: 0x0022E050
 		public int ShowTime
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000C1B RID: 3099
-		// (get) Token: 0x060060DF RID: 24799 RVA: 0x00210848 File Offset: 0x0020EA48
+		// Token: 0x17000C61 RID: 3169
+		// (get) Token: 0x060066B8 RID: 26296 RVA: 0x0022FE90 File Offset: 0x0022E090
 		public int ParamNum
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000C1C RID: 3100
-		// (get) Token: 0x060060E0 RID: 24800 RVA: 0x00210888 File Offset: 0x0020EA88
+		// Token: 0x17000C62 RID: 3170
+		// (get) Token: 0x060066B9 RID: 26297 RVA: 0x0022FED0 File Offset: 0x0022E0D0
 		public bool NeedPerformance
 		{
 			get
@@ -148,8 +148,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000C1D RID: 3101
-		// (get) Token: 0x060060E1 RID: 24801 RVA: 0x002108C8 File Offset: 0x0020EAC8
+		// Token: 0x17000C63 RID: 3171
+		// (get) Token: 0x060066BA RID: 26298 RVA: 0x0022FF10 File Offset: 0x0022E110
 		public int PerformanceType
 		{
 			get
@@ -163,7 +163,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004C0C RID: 19468
+		// Token: 0x040051EE RID: 20974
 		private Table __p;
 	}
 }

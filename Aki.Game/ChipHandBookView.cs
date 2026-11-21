@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -10,19 +9,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001DD9 RID: 7641
+// Token: 0x0200129B RID: 4763
 [NullableContext(1)]
 [Nullable(0)]
 public class ChipHandBookView : UiViewBase
 {
-	// Token: 0x0600E887 RID: 59527 RVA: 0x00370528 File Offset: 0x0036E728
+	// Token: 0x0600BCA6 RID: 48294 RVA: 0x0037C214 File Offset: 0x0037A414
 	public ChipHandBookView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 		this.HandBookCommonItemDataList = new List<HandBookCommonItemData>();
 		this.ChipHandBookItemList = new List<ChipHandBookItem>();
 	}
 
-	// Token: 0x0600E888 RID: 59528 RVA: 0x00370598 File Offset: 0x0036E798
+	// Token: 0x0600BCA7 RID: 48295 RVA: 0x0037C284 File Offset: 0x0037A484
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -59,7 +58,7 @@ public class ChipHandBookView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600E889 RID: 59529 RVA: 0x0037080E File Offset: 0x0036EA0E
+	// Token: 0x0600BCA8 RID: 48296 RVA: 0x0037C4FA File Offset: 0x0037A6FA
 	protected override void OnStart()
 	{
 		this.InitCommonTabTitle();
@@ -68,20 +67,20 @@ public class ChipHandBookView : UiViewBase
 		this.VoiceProgressText = base.GetText(10);
 	}
 
-	// Token: 0x0600E88A RID: 59530 RVA: 0x00370830 File Offset: 0x0036EA30
+	// Token: 0x0600BCA9 RID: 48297 RVA: 0x0037C51C File Offset: 0x0037A71C
 	private void OnHandBookDataUpdate(EHandBookTabType eHandBookTabType, int i)
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x0600E88B RID: 59531 RVA: 0x00370838 File Offset: 0x0036EA38
+	// Token: 0x0600BCAA RID: 48298 RVA: 0x0037C524 File Offset: 0x0037A724
 	protected void Refresh()
 	{
 		this.InitScrollView();
 		this.RefreshCollectText();
 	}
 
-	// Token: 0x0600E88C RID: 59532 RVA: 0x00370848 File Offset: 0x0036EA48
+	// Token: 0x0600BCAB RID: 48299 RVA: 0x0037C534 File Offset: 0x0037A734
 	protected void OnHandBookRead(EHandBookTabType type, int id)
 	{
 		if (type != EHandBookTabType.Chip)
@@ -95,7 +94,7 @@ public class ChipHandBookView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E88D RID: 59533 RVA: 0x00370884 File Offset: 0x0036EA84
+	// Token: 0x0600BCAC RID: 48300 RVA: 0x0037C570 File Offset: 0x0037A770
 	protected void RefreshLockState(bool isLock)
 	{
 		base.GetText(4).SetUIActive(!isLock);
@@ -115,7 +114,7 @@ public class ChipHandBookView : UiViewBase
 		base.GetItem(20).SetUIActive(!isLock);
 	}
 
-	// Token: 0x0600E88E RID: 59534 RVA: 0x003709AC File Offset: 0x0036EBAC
+	// Token: 0x0600BCAD RID: 48301 RVA: 0x0037C698 File Offset: 0x0037A898
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnHandBookDataInit, new Action(this.Refresh));
@@ -123,7 +122,7 @@ public class ChipHandBookView : UiViewBase
 		EventSystem.Instance.Add(EEventName.OnHandBookRead, new Action<EHandBookTabType, int>(this.OnHandBookRead));
 	}
 
-	// Token: 0x0600E88F RID: 59535 RVA: 0x00370A10 File Offset: 0x0036EC10
+	// Token: 0x0600BCAE RID: 48302 RVA: 0x0037C6FC File Offset: 0x0037A8FC
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnHandBookDataInit, new Action(this.Refresh));
@@ -131,7 +130,7 @@ public class ChipHandBookView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnHandBookRead, new Action<EHandBookTabType, int>(this.OnHandBookRead));
 	}
 
-	// Token: 0x0600E890 RID: 59536 RVA: 0x00370A74 File Offset: 0x0036EC74
+	// Token: 0x0600BCAF RID: 48303 RVA: 0x0037C760 File Offset: 0x0037A960
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ChipHandBookView.<OnBeforeStartAsync>d__29 <OnBeforeStartAsync>d__;
@@ -142,7 +141,7 @@ public class ChipHandBookView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E891 RID: 59537 RVA: 0x00370AB8 File Offset: 0x0036ECB8
+	// Token: 0x0600BCB0 RID: 48304 RVA: 0x0037C7A4 File Offset: 0x0037A9A4
 	public void InitScrollView()
 	{
 		List<ChipType> list = ConfigCommon.ToList<ChipType>(HandBookConfig.Instance.GetChipTypeConfigList());
@@ -172,7 +171,7 @@ public class ChipHandBookView : UiViewBase
 		contentGenericLayout.RefreshByData(data, false, false);
 	}
 
-	// Token: 0x0600E892 RID: 59538 RVA: 0x00370BB4 File Offset: 0x0036EDB4
+	// Token: 0x0600BCB1 RID: 48305 RVA: 0x0037C8A0 File Offset: 0x0037AAA0
 	private ChipHandBookItem InitChipItem(object data, UUIItem uiItem, int index)
 	{
 		ChipHandBookItem chipHandBookItem = new ChipHandBookItem();
@@ -182,7 +181,7 @@ public class ChipHandBookView : UiViewBase
 		return chipHandBookItem;
 	}
 
-	// Token: 0x0600E893 RID: 59539 RVA: 0x00370BF8 File Offset: 0x0036EDF8
+	// Token: 0x0600BCB2 RID: 48306 RVA: 0x0037C8E4 File Offset: 0x0037AAE4
 	private void ChipToggleFunction(int selectId)
 	{
 		this.CurrentSelectChip = selectId;
@@ -213,7 +212,7 @@ public class ChipHandBookView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600E894 RID: 59540 RVA: 0x00370C44 File Offset: 0x0036EE44
+	// Token: 0x0600BCB3 RID: 48307 RVA: 0x0037C930 File Offset: 0x0037AB30
 	private void ChildChipToggleFunction(ChipHandBook chipHandBook, UUIExtendToggle toggle)
 	{
 		this.CurSelectConfig = new ChipHandBook?(chipHandBook);
@@ -270,20 +269,20 @@ public class ChipHandBookView : UiViewBase
 		LguiUtil.Instance.SetLocalText(base.GetText(6), "DateOfAcquisition", new <>z__ReadOnlySingleElementList<object>(flag ? "" : handBookInfo.CreateTime));
 	}
 
-	// Token: 0x0600E895 RID: 59541 RVA: 0x00370EE0 File Offset: 0x0036F0E0
+	// Token: 0x0600BCB4 RID: 48308 RVA: 0x0037CBCC File Offset: 0x0037ADCC
 	protected void RefreshLockText()
 	{
 		string textById = TextConfig.Instance.GetTextById("ChipHandBookLock");
 		base.GetText(15).SetText(textById, true);
 	}
 
-	// Token: 0x0600E896 RID: 59542 RVA: 0x00370F0C File Offset: 0x0036F10C
+	// Token: 0x0600BCB5 RID: 48309 RVA: 0x0037CBF8 File Offset: 0x0037ADF8
 	private int SortIndex(ChipType a, ChipType b)
 	{
 		return a.Id - b.Id;
 	}
 
-	// Token: 0x0600E897 RID: 59543 RVA: 0x00370F20 File Offset: 0x0036F120
+	// Token: 0x0600BCB6 RID: 48310 RVA: 0x0037CC0C File Offset: 0x0037AE0C
 	protected void InitCommonTabTitle()
 	{
 		HandBookEntrance? handBookEntranceConfig = HandBookConfig.Instance.GetHandBookEntranceConfig(EHandBookTabType.Chip);
@@ -293,13 +292,13 @@ public class ChipHandBookView : UiViewBase
 		this.CaptionItem.SetTitleIcon(handBookEntranceConfig.Value.TitleIcon);
 	}
 
-	// Token: 0x0600E898 RID: 59544 RVA: 0x00370F96 File Offset: 0x0036F196
+	// Token: 0x0600BCB7 RID: 48311 RVA: 0x0037CC82 File Offset: 0x0037AE82
 	private void OnClickCloseButton()
 	{
 		UiManager.Instance.CloseView(EUiViewName.ChipHandBookView, null);
 	}
 
-	// Token: 0x0600E899 RID: 59545 RVA: 0x00370FA8 File Offset: 0x0036F1A8
+	// Token: 0x0600BCB8 RID: 48312 RVA: 0x0037CC94 File Offset: 0x0037AE94
 	private void OnClickPlayButton()
 	{
 		base.GetButton(12).RootUIComp.Get().SetUIActive(true);
@@ -312,7 +311,7 @@ public class ChipHandBookView : UiViewBase
 		AudioController.Instance.PostEventByUi(infoDisplayAudio, this.AudioResult, new int?(this.PlayFlag), this.AudioDelegate);
 	}
 
-	// Token: 0x0600E89A RID: 59546 RVA: 0x0037104C File Offset: 0x0036F24C
+	// Token: 0x0600BCB9 RID: 48313 RVA: 0x0037CD38 File Offset: 0x0037AF38
 	private void OnClickStopButton()
 	{
 		base.GetButton(12).RootUIComp.Get().SetUIActive(false);
@@ -327,7 +326,7 @@ public class ChipHandBookView : UiViewBase
 		this.VoiceProgressText.SetText("", true);
 	}
 
-	// Token: 0x0600E89B RID: 59547 RVA: 0x003710D9 File Offset: 0x0036F2D9
+	// Token: 0x0600BCBA RID: 48314 RVA: 0x0037CDC5 File Offset: 0x0037AFC5
 	private void ClearTimerId()
 	{
 		if (this.TimerId != null && this.TimerId.Valid())
@@ -337,7 +336,7 @@ public class ChipHandBookView : UiViewBase
 		this.TimerId = null;
 	}
 
-	// Token: 0x0600E89C RID: 59548 RVA: 0x00371104 File Offset: 0x0036F304
+	// Token: 0x0600BCBB RID: 48315 RVA: 0x0037CDF0 File Offset: 0x0037AFF0
 	private void OnClickTextureButton()
 	{
 		string[] infoDisplayPictures = InfoDisplayModuleConfig.Instance.GetInfoDisplayPictures(this.CurSelectConfig.Value.Id);
@@ -357,11 +356,11 @@ public class ChipHandBookView : UiViewBase
 		handBookPhotoData.NameText = list3;
 		handBookPhotoData.HandBookType = EHandBookTabType.Chip;
 		handBookPhotoData.Index = 0;
-		handBookPhotoData.TextureList = infoDisplayPictures.ToList<string>();
+		handBookPhotoData.TextureList = new List<string>(infoDisplayPictures);
 		UiManager.Instance.OpenView(EUiViewName.HandBookPhotoView, handBookPhotoData, null);
 	}
 
-	// Token: 0x0600E89D RID: 59549 RVA: 0x00371220 File Offset: 0x0036F420
+	// Token: 0x0600BCBC RID: 48316 RVA: 0x0037CF0C File Offset: 0x0037B10C
 	[NullableContext(2)]
 	private void CallBackDuration(EAkCallbackType callbackType, UAkCallbackInfo callbackInfo)
 	{
@@ -386,7 +385,7 @@ public class ChipHandBookView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E89E RID: 59550 RVA: 0x0037128C File Offset: 0x0036F48C
+	// Token: 0x0600BCBD RID: 48317 RVA: 0x0037CF78 File Offset: 0x0037B178
 	protected void SetVoiceProgress(int curSecond, int curMinute, int totalSecond, int totalMinute)
 	{
 		LguiUtil.Instance.SetLocalText(this.VoiceProgressText, "VoiceProgress", new <>z__ReadOnlyArray<object>(new object[]
@@ -398,7 +397,7 @@ public class ChipHandBookView : UiViewBase
 		}));
 	}
 
-	// Token: 0x0600E89F RID: 59551 RVA: 0x003712E6 File Offset: 0x0036F4E6
+	// Token: 0x0600BCBE RID: 48318 RVA: 0x0037CFD2 File Offset: 0x0037B1D2
 	protected string TimeFormat(float time)
 	{
 		if (time >= (float)this.TimeMin)
@@ -408,7 +407,7 @@ public class ChipHandBookView : UiViewBase
 		return "0" + time.ToString();
 	}
 
-	// Token: 0x0600E8A0 RID: 59552 RVA: 0x0037130C File Offset: 0x0036F50C
+	// Token: 0x0600BCBF RID: 48319 RVA: 0x0037CFF8 File Offset: 0x0037B1F8
 	protected void RefreshCollectText()
 	{
 		int[] collectProgress = HandBookController.Instance.GetCollectProgress(EHandBookTabType.Chip);
@@ -419,7 +418,7 @@ public class ChipHandBookView : UiViewBase
 		}));
 	}
 
-	// Token: 0x0600E8A1 RID: 59553 RVA: 0x0037135C File Offset: 0x0036F55C
+	// Token: 0x0600BCC0 RID: 48320 RVA: 0x0037D048 File Offset: 0x0037B248
 	protected override void OnBeforeDestroy()
 	{
 		if (this.ContentGenericLayout != null)
@@ -441,7 +440,7 @@ public class ChipHandBookView : UiViewBase
 		this.CurSelectConfig = null;
 	}
 
-	// Token: 0x0600E8A2 RID: 59554 RVA: 0x003713FC File Offset: 0x0036F5FC
+	// Token: 0x0600BCC1 RID: 48321 RVA: 0x0037D0E8 File Offset: 0x0037B2E8
 	private HandBookChipDynamicData[] BuildContentData()
 	{
 		if (this.CurrentSelectChip == -1)
@@ -476,7 +475,7 @@ public class ChipHandBookView : UiViewBase
 		return list.ToArray();
 	}
 
-	// Token: 0x04006BAA RID: 27562
+	// Token: 0x04006C8B RID: 27787
 	[Nullable(new byte[]
 	{
 		2,
@@ -486,66 +485,66 @@ public class ChipHandBookView : UiViewBase
 	})]
 	private DynamicScrollView<ChipHandBookItem, HandBootChipDynamicItem, HandBookChipDynamicData> ContentGenericLayout;
 
-	// Token: 0x04006BAB RID: 27563
+	// Token: 0x04006C8C RID: 27788
 	[Nullable(2)]
 	private HandBootChipDynamicItem HandBootChipDynamicItem;
 
-	// Token: 0x04006BAC RID: 27564
+	// Token: 0x04006C8D RID: 27789
 	private int CurrentSelectChip = -1;
 
-	// Token: 0x04006BAD RID: 27565
+	// Token: 0x04006C8E RID: 27790
 	private int ScrollToIndex = -1;
 
-	// Token: 0x04006BAE RID: 27566
+	// Token: 0x04006C8F RID: 27791
 	protected List<HandBookCommonItemData> HandBookCommonItemDataList;
 
-	// Token: 0x04006BAF RID: 27567
+	// Token: 0x04006C90 RID: 27792
 	private ChipHandBook? CurSelectConfig;
 
-	// Token: 0x04006BB0 RID: 27568
+	// Token: 0x04006C91 RID: 27793
 	private readonly PlayResult AudioResult = new PlayResult();
 
-	// Token: 0x04006BB1 RID: 27569
+	// Token: 0x04006C92 RID: 27794
 	private readonly int PlayFlag = 8;
 
-	// Token: 0x04006BB2 RID: 27570
+	// Token: 0x04006C93 RID: 27795
 	[Nullable(2)]
 	private FOnAkPostEventCallback AudioDelegate;
 
-	// Token: 0x04006BB3 RID: 27571
+	// Token: 0x04006C94 RID: 27796
 	private readonly int ChangeNum = 1000;
 
-	// Token: 0x04006BB4 RID: 27572
+	// Token: 0x04006C95 RID: 27797
 	[Nullable(2)]
 	private TimerHandle TimerId;
 
-	// Token: 0x04006BB5 RID: 27573
+	// Token: 0x04006C96 RID: 27798
 	private float CurTime;
 
-	// Token: 0x04006BB6 RID: 27574
+	// Token: 0x04006C97 RID: 27799
 	private float TotalTime;
 
-	// Token: 0x04006BB7 RID: 27575
+	// Token: 0x04006C98 RID: 27800
 	private readonly float Interval = 1000f;
 
-	// Token: 0x04006BB8 RID: 27576
+	// Token: 0x04006C99 RID: 27801
 	[Nullable(2)]
 	private UUIText VoiceProgressText;
 
-	// Token: 0x04006BB9 RID: 27577
+	// Token: 0x04006C9A RID: 27802
 	private List<ChipHandBookItem> ChipHandBookItemList;
 
-	// Token: 0x04006BBA RID: 27578
+	// Token: 0x04006C9B RID: 27803
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04006BBB RID: 27579
+	// Token: 0x04006C9C RID: 27804
 	private readonly int TimeHex = 60;
 
-	// Token: 0x04006BBC RID: 27580
+	// Token: 0x04006C9D RID: 27805
 	private readonly int TimeMin = 10;
 
-	// Token: 0x04006BBD RID: 27581
+	// Token: 0x04006C9E RID: 27806
 	[Nullable(2)]
 	private UUIExtendToggle CurrentToggle;
 }

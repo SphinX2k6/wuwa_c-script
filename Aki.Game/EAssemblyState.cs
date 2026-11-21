@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200290B RID: 10507
+// Token: 0x02001E86 RID: 7814
 public enum EAssemblyState
 {
-	// Token: 0x0400A177 RID: 41335
+	// Token: 0x0400A562 RID: 42338
 	RouletteGridChoose,
-	// Token: 0x0400A178 RID: 41336
+	// Token: 0x0400A563 RID: 42339
 	ScrollViewChoose
 }

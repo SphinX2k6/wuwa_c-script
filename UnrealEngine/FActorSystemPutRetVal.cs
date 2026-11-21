@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200188B RID: 6283
+	// Token: 0x020003AF RID: 943
 	public sealed class FActorSystemPutRetVal : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06017274 RID: 94836 RVA: 0x0021BD73 File Offset: 0x00219F73
+		// Token: 0x06005D1F RID: 23839 RVA: 0x00083213 File Offset: 0x00081413
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FActorSystemPutRetVal.StaticFunctionPtr();
 		}
 
-		// Token: 0x06017275 RID: 94837 RVA: 0x0021BD7F File Offset: 0x00219F7F
+		// Token: 0x06005D20 RID: 23840 RVA: 0x0008321F File Offset: 0x0008141F
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FActorSystemPutRetVal._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FActorSystemPutRetVal._FunctionPtr;
 		}
 
-		// Token: 0x06017276 RID: 94838 RVA: 0x0021BDA2 File Offset: 0x00219FA2
+		// Token: 0x06005D21 RID: 23841 RVA: 0x00083242 File Offset: 0x00081442
 		public FActorSystemPutRetVal()
 		{
 		}
 
-		// Token: 0x06017277 RID: 94839 RVA: 0x0021BDAA File Offset: 0x00219FAA
+		// Token: 0x06005D22 RID: 23842 RVA: 0x0008324A File Offset: 0x0008144A
 		[NullableContext(2)]
 		public FActorSystemPutRetVal(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017278 RID: 94840 RVA: 0x0021BDB4 File Offset: 0x00219FB4
+		// Token: 0x06005D23 RID: 23843 RVA: 0x00083254 File Offset: 0x00081454
 		public FActorSystemPutRetVal(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017279 RID: 94841 RVA: 0x0021BDBF File Offset: 0x00219FBF
+		// Token: 0x06005D24 RID: 23844 RVA: 0x0008325F File Offset: 0x0008145F
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<string, AActor, bool>) ?? ((Func<string, AActor, bool>)Delegate.CreateDelegate(typeof(Func<string, AActor, bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601727A RID: 94842 RVA: 0x0021BDF1 File Offset: 0x00219FF1
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06005D25 RID: 23845 RVA: 0x00083291 File Offset: 0x00081491
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -69,10 +68,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FActorSystemPutRetVal.RegisterId);
 		}
 
-		// Token: 0x0601727B RID: 94843 RVA: 0x0021BE2C File Offset: 0x0021A02C
+		// Token: 0x06005D26 RID: 23846 RVA: 0x000832CC File Offset: 0x000814CC
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool Execute(string Reason, [Nullable(2)] AActor Actor)
 		{
 			FActorSystemPutRetVal.__FActorSystemPutRetVal_DelegateParams* ptr = stackalloc FActorSystemPutRetVal.__FActorSystemPutRetVal_DelegateParams[(UIntPtr)47] + 15L / (long)sizeof(FActorSystemPutRetVal.__FActorSystemPutRetVal_DelegateParams) & -16L;
@@ -85,10 +83,9 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x0601727C RID: 94844 RVA: 0x0021BE9C File Offset: 0x0021A09C
+		// Token: 0x06005D27 RID: 23847 RVA: 0x0008333C File Offset: 0x0008153C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<string, AActor, bool> func = target as Func<string, AActor, bool>;
@@ -102,39 +99,39 @@ namespace UnrealEngine
 			((FActorSystemPutRetVal.__FActorSystemPutRetVal_DelegateParams*)__Parameters)->__Result = _Result;
 		}
 
-		// Token: 0x0400C8E9 RID: 51433
+		// Token: 0x040026D2 RID: 9938
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400C8EA RID: 51434
+		// Token: 0x040026D3 RID: 9939
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.ActorSystemPutRetVal__DelegateSignature";
 
-		// Token: 0x0400C8EB RID: 51435
+		// Token: 0x040026D4 RID: 9940
 		private static int RegisterId;
 
-		// Token: 0x02002F87 RID: 12167
+		// Token: 0x02000AAA RID: 2730
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __FActorSystemPutRetVal_DelegateParams
+		private ref struct __FActorSystemPutRetVal_DelegateParams
 		{
-			// Token: 0x04016B48 RID: 93000
+			// Token: 0x04005B05 RID: 23301
 			[FieldOffset(0)]
 			public FString Reason;
 
-			// Token: 0x04016B49 RID: 93001
+			// Token: 0x04005B06 RID: 23302
 			[FieldOffset(16)]
 			public IntPtr Actor;
 
-			// Token: 0x04016B4A RID: 93002
+			// Token: 0x04005B07 RID: 23303
 			[FieldOffset(24)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F88 RID: 12168
+		// Token: 0x02000AAB RID: 2731
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B4B RID: 93003
+			// Token: 0x04005B08 RID: 23304
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

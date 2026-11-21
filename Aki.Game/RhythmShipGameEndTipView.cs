@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200108E RID: 4238
+// Token: 0x02000542 RID: 1346
 [NullableContext(1)]
 [Nullable(0)]
 public class RhythmShipGameEndTipView : UiViewBase
 {
-	// Token: 0x06006E4B RID: 28235 RVA: 0x00167791 File Offset: 0x00165991
+	// Token: 0x060041E0 RID: 16864 RVA: 0x001700C5 File Offset: 0x0016E2C5
 	public RhythmShipGameEndTipView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06006E4C RID: 28236 RVA: 0x001677C8 File Offset: 0x001659C8
+	// Token: 0x060041E1 RID: 16865 RVA: 0x001700FC File Offset: 0x0016E2FC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class RhythmShipGameEndTipView : UiViewBase
 		};
 	}
 
-	// Token: 0x06006E4D RID: 28237 RVA: 0x00167864 File Offset: 0x00165A64
+	// Token: 0x060041E2 RID: 16866 RVA: 0x00170198 File Offset: 0x0016E398
 	protected override void OnBeforeShow()
 	{
 		RhythmShipGameEndTipViewOpenParam rhythmShipGameEndTipViewOpenParam = this.OpenParam as RhythmShipGameEndTipViewOpenParam;
@@ -64,7 +64,7 @@ public class RhythmShipGameEndTipView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), this.AccuracyTextKey, new <>z__ReadOnlySingleElementList<object>(rhythmShipGameEndTipViewOpenParam.Accuracy.ToString()));
 	}
 
-	// Token: 0x06006E4E RID: 28238 RVA: 0x001679C0 File Offset: 0x00165BC0
+	// Token: 0x060041E3 RID: 16867 RVA: 0x001702F4 File Offset: 0x0016E4F4
 	protected override void OnAfterPlayStartSequence()
 	{
 		TimerSystem.Instance.Delay(delegate(float _)
@@ -73,7 +73,7 @@ public class RhythmShipGameEndTipView : UiViewBase
 		}, 500f, null, null, true, 1f);
 	}
 
-	// Token: 0x06006E4F RID: 28239 RVA: 0x001679E8 File Offset: 0x00165BE8
+	// Token: 0x060041E4 RID: 16868 RVA: 0x0017031C File Offset: 0x0016E51C
 	protected override void OnBeforePlayCloseSequence()
 	{
 		RhythmShipGameEndTipViewOpenParam rhythmShipGameEndTipViewOpenParam = this.OpenParam as RhythmShipGameEndTipViewOpenParam;
@@ -83,7 +83,7 @@ public class RhythmShipGameEndTipView : UiViewBase
 		}
 	}
 
-	// Token: 0x06006E50 RID: 28240 RVA: 0x00167A18 File Offset: 0x00165C18
+	// Token: 0x060041E5 RID: 16869 RVA: 0x0017034C File Offset: 0x0016E54C
 	protected override UniTask OnPlayingStartSequenceAsync()
 	{
 		RhythmShipGameEndTipView.<OnPlayingStartSequenceAsync>d__10 <OnPlayingStartSequenceAsync>d__;
@@ -94,33 +94,33 @@ public class RhythmShipGameEndTipView : UiViewBase
 		return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400330E RID: 13070
+	// Token: 0x040033A7 RID: 13223
 	private readonly string FcTextKey = "RhythmStageClear_02";
 
-	// Token: 0x0400330F RID: 13071
+	// Token: 0x040033A8 RID: 13224
 	private readonly string FpTextKey = "RhythmStageClear_03";
 
-	// Token: 0x04003310 RID: 13072
+	// Token: 0x040033A9 RID: 13225
 	private readonly string FinishTextKey = "RhythmStageClear_01";
 
-	// Token: 0x04003311 RID: 13073
+	// Token: 0x040033AA RID: 13226
 	private readonly string AccuracyTextKey = "PrefabTextItem_1492520868_Text";
 
-	// Token: 0x02007683 RID: 30339
+	// Token: 0x02006817 RID: 26647
 	[NullableContext(0)]
 	private enum EViewComponent
 	{
-		// Token: 0x040271AF RID: 160175
+		// Token: 0x040224FA RID: 140538
 		BtnMask,
-		// Token: 0x040271B0 RID: 160176
+		// Token: 0x040224FB RID: 140539
 		TxtTitle,
-		// Token: 0x040271B1 RID: 160177
+		// Token: 0x040224FC RID: 140540
 		TxtAchieve,
-		// Token: 0x040271B2 RID: 160178
+		// Token: 0x040224FD RID: 140541
 		TexLevelBg,
-		// Token: 0x040271B3 RID: 160179
+		// Token: 0x040224FE RID: 140542
 		TexLevelIcon,
-		// Token: 0x040271B4 RID: 160180
+		// Token: 0x040224FF RID: 140543
 		TxtLevel
 	}
 }

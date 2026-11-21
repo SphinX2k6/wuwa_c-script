@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006F0 RID: 1776
+	// Token: 0x02000708 RID: 1800
 	public class ConfigPhotoRoleBodyByRoleIdAndMorph : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060029B0 RID: 10672 RVA: 0x0014515C File Offset: 0x0014335C
+		// Token: 0x06002A40 RID: 10816 RVA: 0x0014BBD8 File Offset: 0x00149DD8
 		static ConfigPhotoRoleBodyByRoleIdAndMorph()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotoRoleBodyByRoleIdAndMorph.CreateStaticDefaultValue), new Action(ConfigPhotoRoleBodyByRoleIdAndMorph.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060029B1 RID: 10673 RVA: 0x0014517C File Offset: 0x0014337C
+		// Token: 0x06002A41 RID: 10817 RVA: 0x0014BBF8 File Offset: 0x00149DF8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotoRoleBodyByRoleIdAndMorph.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060029B2 RID: 10674 RVA: 0x001451FB File Offset: 0x001433FB
+		// Token: 0x06002A42 RID: 10818 RVA: 0x0014BC77 File Offset: 0x00149E77
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotoRoleBodyByRoleIdAndMorph.LogPair = null;
 			ConfigPhotoRoleBodyByRoleIdAndMorph.HandleId = 0;
 		}
 
-		// Token: 0x060029B3 RID: 10675 RVA: 0x00145209 File Offset: 0x00143409
+		// Token: 0x06002A43 RID: 10819 RVA: 0x0014BC85 File Offset: 0x00149E85
 		public static void Init()
 		{
 			ConfigPhotoRoleBodyByRoleIdAndMorph.HandleId = ConfigCommon.InitDataStatement(ConfigPhotoRoleBodyByRoleIdAndMorph.HandleId, "db_photonew.db", "select BinData from `PhotoRoleBody` where RoleId=? AND Morph=?");
 		}
 
-		// Token: 0x060029B4 RID: 10676 RVA: 0x00145224 File Offset: 0x00143424
+		// Token: 0x06002A44 RID: 10820 RVA: 0x0014BCA0 File Offset: 0x00149EA0
 		public static PhotoRoleBody? GetConfig(int p0RoleId, int p1Morph, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhotoRoleBodyByRoleIdAndMorph.HandleId, ConfigPhotoRoleBodyByRoleIdAndMorph.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new PhotoRoleBody?(rootAsPhotoRoleBody);
 		}
 
-		// Token: 0x04003076 RID: 12406
+		// Token: 0x0400311E RID: 12574
 		private const string DB = "db_photonew.db";
 
-		// Token: 0x04003077 RID: 12407
+		// Token: 0x0400311F RID: 12575
 		private const string FILE = "p.拍照新.xlsx";
 
-		// Token: 0x04003078 RID: 12408
+		// Token: 0x04003120 RID: 12576
 		private const string TABLE = "PhotoRoleBody";
 
-		// Token: 0x04003079 RID: 12409
+		// Token: 0x04003121 RID: 12577
 		private const string COMMAND = "select BinData from `PhotoRoleBody` where RoleId=? AND Morph=?";
 
-		// Token: 0x0400307A RID: 12410
+		// Token: 0x04003122 RID: 12578
 		private const string KEY_PREFIX = "PhotoRoleBodyByRoleIdAndMorph";
 
-		// Token: 0x0400307B RID: 12411
+		// Token: 0x04003123 RID: 12579
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400307C RID: 12412
+		// Token: 0x04003124 RID: 12580
 		private static int HandleId;
 	}
 }

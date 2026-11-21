@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200073E RID: 1854
+	// Token: 0x02000756 RID: 1878
 	public class ConfigPlatformIconById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002B84 RID: 11140 RVA: 0x0014F82F File Offset: 0x0014DA2F
+		// Token: 0x06002C14 RID: 11284 RVA: 0x001562AB File Offset: 0x001544AB
 		static ConfigPlatformIconById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPlatformIconById.CreateStaticDefaultValue), new Action(ConfigPlatformIconById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002B85 RID: 11141 RVA: 0x0014F850 File Offset: 0x0014DA50
+		// Token: 0x06002C15 RID: 11285 RVA: 0x001562CC File Offset: 0x001544CC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPlatformIconById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002B86 RID: 11142 RVA: 0x0014F8CF File Offset: 0x0014DACF
+		// Token: 0x06002C16 RID: 11286 RVA: 0x0015634B File Offset: 0x0015454B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPlatformIconById.LogPair = null;
 			ConfigPlatformIconById.HandleId = 0;
 		}
 
-		// Token: 0x06002B87 RID: 11143 RVA: 0x0014F8DD File Offset: 0x0014DADD
+		// Token: 0x06002C17 RID: 11287 RVA: 0x00156359 File Offset: 0x00154559
 		public static void Init()
 		{
 			ConfigPlatformIconById.HandleId = ConfigCommon.InitDataStatement(ConfigPlatformIconById.HandleId, "db_platformicon.db", "select BinData from `PlatformIcon` where Id=?");
 		}
 
-		// Token: 0x06002B88 RID: 11144 RVA: 0x0014F8F8 File Offset: 0x0014DAF8
+		// Token: 0x06002C18 RID: 11288 RVA: 0x00156374 File Offset: 0x00154574
 		public static PlatformIcon? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPlatformIconById.HandleId, ConfigPlatformIconById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PlatformIcon?(rootAsPlatformIcon);
 		}
 
-		// Token: 0x04003298 RID: 12952
+		// Token: 0x04003340 RID: 13120
 		private const string DB = "db_platformicon.db";
 
-		// Token: 0x04003299 RID: 12953
+		// Token: 0x04003341 RID: 13121
 		private const string FILE = "d.多端图标.xlsx";
 
-		// Token: 0x0400329A RID: 12954
+		// Token: 0x04003342 RID: 13122
 		private const string TABLE = "PlatformIcon";
 
-		// Token: 0x0400329B RID: 12955
+		// Token: 0x04003343 RID: 13123
 		private const string COMMAND = "select BinData from `PlatformIcon` where Id=?";
 
-		// Token: 0x0400329C RID: 12956
+		// Token: 0x04003344 RID: 13124
 		private const string KEY_PREFIX = "PlatformIconById";
 
-		// Token: 0x0400329D RID: 12957
+		// Token: 0x04003345 RID: 13125
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400329E RID: 12958
+		// Token: 0x04003346 RID: 13126
 		private static int HandleId;
 	}
 }

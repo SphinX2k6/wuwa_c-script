@@ -1,48 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
 namespace CSharpScript.Game.Module.Skin
 {
-	// Token: 0x02004BDD RID: 19421
+	// Token: 0x02003B87 RID: 15239
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class SkinConfig : ConfigBase
 	{
-		// Token: 0x0603234B RID: 205643 RVA: 0x00BAAA74 File Offset: 0x00BA8C74
+		// Token: 0x060270DC RID: 159964 RVA: 0x00AEED2C File Offset: 0x00AECF2C
 		public WeaponSkin GetWeaponSkinConfig(int id)
 		{
 			return ConfigWeaponSkinById.GetConfig(id, true).Value;
 		}
 
-		// Token: 0x0603234C RID: 205644 RVA: 0x00BAAA90 File Offset: 0x00BA8C90
+		// Token: 0x060270DD RID: 159965 RVA: 0x00AEED48 File Offset: 0x00AECF48
 		public IReadOnlyList<WeaponSkin> GetWeaponSkinConfigListByType(int type)
 		{
 			return ConfigWeaponSkinByType.GetConfigList(type, true);
 		}
 
-		// Token: 0x0603234D RID: 205645 RVA: 0x00BAAA99 File Offset: 0x00BA8C99
+		// Token: 0x060270DE RID: 159966 RVA: 0x00AEED51 File Offset: 0x00AECF51
 		public string GetDefaultWeaponSkinIconPath()
 		{
 			return ConfigCommonParamById.GetStringConfig("OriginalWeaponSkinIcon");
 		}
 
-		// Token: 0x0603234E RID: 205646 RVA: 0x00BAAAA5 File Offset: 0x00BA8CA5
+		// Token: 0x060270DF RID: 159967 RVA: 0x00AEED5D File Offset: 0x00AECF5D
 		public string GetDefaultWeaponSkinName()
 		{
 			return ConfigCommonParamById.GetStringConfig("OriginalWeaponSkinName");
 		}
 
-		// Token: 0x0603234F RID: 205647 RVA: 0x00BAAAB1 File Offset: 0x00BA8CB1
+		// Token: 0x060270E0 RID: 159968 RVA: 0x00AEED69 File Offset: 0x00AECF69
 		public string GetDefaultWeaponSkinDescription()
 		{
 			return ConfigCommonParamById.GetStringConfig("OriginalWeaponSkinDescription");
 		}
 
-		// Token: 0x06032350 RID: 205648 RVA: 0x00BAAABD File Offset: 0x00BA8CBD
+		// Token: 0x060270E1 RID: 159969 RVA: 0x00AEED75 File Offset: 0x00AECF75
 		public string GetDefaultFlySkinIconPath(EFlySkinType skinType)
 		{
 			if (skinType == EFlySkinType.Paragliding)
@@ -56,7 +55,7 @@ namespace CSharpScript.Game.Module.Skin
 			return "";
 		}
 
-		// Token: 0x06032351 RID: 205649 RVA: 0x00BAAAE1 File Offset: 0x00BA8CE1
+		// Token: 0x060270E2 RID: 159970 RVA: 0x00AEED99 File Offset: 0x00AECF99
 		public string GetDefaultFlySkinName(EFlySkinType skinType)
 		{
 			if (skinType == EFlySkinType.Paragliding)
@@ -70,7 +69,7 @@ namespace CSharpScript.Game.Module.Skin
 			return "";
 		}
 
-		// Token: 0x06032352 RID: 205650 RVA: 0x00BAAB05 File Offset: 0x00BA8D05
+		// Token: 0x060270E3 RID: 159971 RVA: 0x00AEEDBD File Offset: 0x00AECFBD
 		public string GetDefaultFlySkinDescription(EFlySkinType skinType)
 		{
 			if (skinType == EFlySkinType.Paragliding)
@@ -84,7 +83,7 @@ namespace CSharpScript.Game.Module.Skin
 			return "";
 		}
 
-		// Token: 0x06032353 RID: 205651 RVA: 0x00BAAB29 File Offset: 0x00BA8D29
+		// Token: 0x060270E4 RID: 159972 RVA: 0x00AEEDE1 File Offset: 0x00AECFE1
 		public string GetDefaultFlySkinTypeDescription(EFlySkinType skinType)
 		{
 			if (skinType == EFlySkinType.Paragliding)
@@ -98,7 +97,7 @@ namespace CSharpScript.Game.Module.Skin
 			return "";
 		}
 
-		// Token: 0x06032354 RID: 205652 RVA: 0x00BAAB4D File Offset: 0x00BA8D4D
+		// Token: 0x060270E5 RID: 159973 RVA: 0x00AEEE05 File Offset: 0x00AED005
 		public string GetDefaultFlySkinStandAnimPath(EFlySkinType skinType)
 		{
 			if (skinType == EFlySkinType.Paragliding)
@@ -112,7 +111,7 @@ namespace CSharpScript.Game.Module.Skin
 			return "";
 		}
 
-		// Token: 0x06032355 RID: 205653 RVA: 0x00BAAB74 File Offset: 0x00BA8D74
+		// Token: 0x060270E6 RID: 159974 RVA: 0x00AEEE2C File Offset: 0x00AED02C
 		public int GetDefaultFlySkinModelId(EFlySkinType skinType)
 		{
 			if (skinType == EFlySkinType.Paragliding)
@@ -126,22 +125,35 @@ namespace CSharpScript.Game.Module.Skin
 			return 0;
 		}
 
-		// Token: 0x06032356 RID: 205654 RVA: 0x00BAABAF File Offset: 0x00BA8DAF
+		// Token: 0x060270E7 RID: 159975 RVA: 0x00AEEE68 File Offset: 0x00AED068
 		[NullableContext(2)]
 		public float[] GetFlySkinModelOffsetTransform(EFlySkinType skinType)
 		{
 			if (skinType == EFlySkinType.Paragliding)
 			{
-				return ConfigCommonParamById.GetFloatArrayConfig("ParaglidingSkinOffsetTransform").ToArray<float>();
+				IReadOnlyList<float> floatArrayConfig = ConfigCommonParamById.GetFloatArrayConfig("ParaglidingSkinOffsetTransform");
+				if (floatArrayConfig != null)
+				{
+					return NoLinq.ToArray<float>(floatArrayConfig);
+				}
+				return null;
 			}
-			if (skinType == EFlySkinType.SoarWing)
+			else
 			{
-				return ConfigCommonParamById.GetFloatArrayConfig("SoarWingSkinOffsetTransform").ToArray<float>();
+				if (skinType != EFlySkinType.SoarWing)
+				{
+					return null;
+				}
+				IReadOnlyList<float> floatArrayConfig2 = ConfigCommonParamById.GetFloatArrayConfig("SoarWingSkinOffsetTransform");
+				if (floatArrayConfig2 != null)
+				{
+					return NoLinq.ToArray<float>(floatArrayConfig2);
+				}
+				return null;
 			}
-			return null;
 		}
 
-		// Token: 0x06032357 RID: 205655 RVA: 0x00BAABD9 File Offset: 0x00BA8DD9
+		// Token: 0x060270E8 RID: 159976 RVA: 0x00AEEEAB File Offset: 0x00AED0AB
 		public string GetFlySkinModelCameraId(EFlySkinType skinType)
 		{
 			if (skinType == EFlySkinType.Paragliding)
@@ -155,7 +167,7 @@ namespace CSharpScript.Game.Module.Skin
 			return "";
 		}
 
-		// Token: 0x06032358 RID: 205656 RVA: 0x00BAABFD File Offset: 0x00BA8DFD
+		// Token: 0x060270E9 RID: 159977 RVA: 0x00AEEECF File Offset: 0x00AED0CF
 		public string GetFlySkinTabName(EFlySkinType skinType)
 		{
 			if (skinType == EFlySkinType.Paragliding)
@@ -169,7 +181,7 @@ namespace CSharpScript.Game.Module.Skin
 			return "";
 		}
 
-		// Token: 0x06032359 RID: 205657 RVA: 0x00BAAC17 File Offset: 0x00BA8E17
+		// Token: 0x060270EA RID: 159978 RVA: 0x00AEEEE9 File Offset: 0x00AED0E9
 		public string GetFlySkinBottomIconResourceId(EFlySkinType skinType)
 		{
 			if (skinType == EFlySkinType.Paragliding)
@@ -183,7 +195,7 @@ namespace CSharpScript.Game.Module.Skin
 			return "";
 		}
 
-		// Token: 0x0603235A RID: 205658 RVA: 0x00BAAC31 File Offset: 0x00BA8E31
+		// Token: 0x060270EB RID: 159979 RVA: 0x00AEEF03 File Offset: 0x00AED103
 		public string GetFlySkinEquipBtnTextId(EFlySkinType skinType, bool canEquip)
 		{
 			if (skinType == EFlySkinType.Paragliding)
@@ -208,7 +220,7 @@ namespace CSharpScript.Game.Module.Skin
 			}
 		}
 
-		// Token: 0x0603235B RID: 205659 RVA: 0x00BAAC5D File Offset: 0x00BA8E5D
+		// Token: 0x060270EC RID: 159980 RVA: 0x00AEEF2F File Offset: 0x00AED12F
 		public string GetFlySkinSpawnEffectId(EFlySkinType skinType)
 		{
 			if (skinType == EFlySkinType.Paragliding)
@@ -222,7 +234,7 @@ namespace CSharpScript.Game.Module.Skin
 			return "";
 		}
 
-		// Token: 0x0603235C RID: 205660 RVA: 0x00BAAC77 File Offset: 0x00BA8E77
+		// Token: 0x060270ED RID: 159981 RVA: 0x00AEEF49 File Offset: 0x00AED149
 		public string GetFlySkinSpawnMaterialController(EFlySkinType skinType)
 		{
 			if (skinType == EFlySkinType.Paragliding)
@@ -236,13 +248,13 @@ namespace CSharpScript.Game.Module.Skin
 			return "";
 		}
 
-		// Token: 0x0603235D RID: 205661 RVA: 0x00BAAC91 File Offset: 0x00BA8E91
+		// Token: 0x060270EE RID: 159982 RVA: 0x00AEEF63 File Offset: 0x00AED163
 		public RoleSkin? GetRoleSkinConfig(int itemId)
 		{
 			return ConfigRoleSkinById.GetConfig(itemId, true);
 		}
 
-		// Token: 0x0603235E RID: 205662 RVA: 0x00BAAC9C File Offset: 0x00BA8E9C
+		// Token: 0x060270EF RID: 159983 RVA: 0x00AEEF6C File Offset: 0x00AED16C
 		[NullableContext(2)]
 		public string GetRoleSkinConfigValueByParam(int itemId, string param, [Nullable(1)] string tag)
 		{
@@ -318,112 +330,112 @@ namespace CSharpScript.Game.Module.Skin
 			return null;
 		}
 
-		// Token: 0x0603235F RID: 205663 RVA: 0x00BAAE3E File Offset: 0x00BA903E
+		// Token: 0x060270F0 RID: 159984 RVA: 0x00AEF10E File Offset: 0x00AED30E
 		[NullableContext(2)]
 		public IReadOnlyList<RoleSkin> GetRoleSkinConfigList(int roleId)
 		{
 			return ConfigRoleSkinByRoleId.GetConfigList(roleId, true);
 		}
 
-		// Token: 0x06032360 RID: 205664 RVA: 0x00BAAE48 File Offset: 0x00BA9048
+		// Token: 0x060270F1 RID: 159985 RVA: 0x00AEF118 File Offset: 0x00AED318
 		public int GetSkinDetailButtonGap()
 		{
 			return ConfigCommonParamById.GetIntConfig("SkinDetailButtonGap").Value;
 		}
 
-		// Token: 0x06032361 RID: 205665 RVA: 0x00BAAE68 File Offset: 0x00BA9068
+		// Token: 0x060270F2 RID: 159986 RVA: 0x00AEF138 File Offset: 0x00AED338
 		public int GetSkinDetailButtonSwitchGap()
 		{
 			return ConfigCommonParamById.GetIntConfig("SkinDetailButtonSwitchGap").Value;
 		}
 
-		// Token: 0x06032362 RID: 205666 RVA: 0x00BAAE87 File Offset: 0x00BA9087
+		// Token: 0x060270F3 RID: 159987 RVA: 0x00AEF157 File Offset: 0x00AED357
 		public RoleSkin? GetSkinConfigByRoleIdAndGroupId(int roleId, int groupId)
 		{
 			return ConfigRoleSkinByRoleIdAndGroupId.GetConfig(roleId, groupId, true);
 		}
 
-		// Token: 0x06032363 RID: 205667 RVA: 0x00BAAE91 File Offset: 0x00BA9091
+		// Token: 0x060270F4 RID: 159988 RVA: 0x00AEF161 File Offset: 0x00AED361
 		public FlySkinConfig? GetFlySkinConfig(int itemId)
 		{
 			return ConfigFlySkinConfigById.GetConfig(itemId, true);
 		}
 
-		// Token: 0x06032364 RID: 205668 RVA: 0x00BAAE9A File Offset: 0x00BA909A
+		// Token: 0x060270F5 RID: 159989 RVA: 0x00AEF16A File Offset: 0x00AED36A
 		public IReadOnlyList<FlySkinConfig> GetFlySkinConfigListByType(EFlySkinType type)
 		{
 			return ConfigFlySkinConfigByType.GetConfigList((int)type, true);
 		}
 
-		// Token: 0x06032365 RID: 205669 RVA: 0x00BAAEA3 File Offset: 0x00BA90A3
+		// Token: 0x060270F6 RID: 159990 RVA: 0x00AEF173 File Offset: 0x00AED373
 		[NullableContext(2)]
 		public IReadOnlyList<RoleSkin> GetSkinGroupList(int skinGroupId)
 		{
 			return ConfigRoleSkinByGroupId.GetConfigList(skinGroupId, true);
 		}
 
-		// Token: 0x06032366 RID: 205670 RVA: 0x00BAAEAC File Offset: 0x00BA90AC
+		// Token: 0x060270F7 RID: 159991 RVA: 0x00AEF17C File Offset: 0x00AED37C
 		public CalabashSkin GetCalabashSkinConfig(int itemId)
 		{
 			return ConfigCalabashSkinById.GetConfig(itemId, true).Value;
 		}
 
-		// Token: 0x06032367 RID: 205671 RVA: 0x00BAAEC8 File Offset: 0x00BA90C8
+		// Token: 0x060270F8 RID: 159992 RVA: 0x00AEF198 File Offset: 0x00AED398
 		public IReadOnlyList<CalabashSkin> GetCalabashSkinConfigList()
 		{
 			return ConfigCalabashSkinAll.GetConfigList(true);
 		}
 
-		// Token: 0x06032368 RID: 205672 RVA: 0x00BAAED0 File Offset: 0x00BA90D0
+		// Token: 0x060270F9 RID: 159993 RVA: 0x00AEF1A0 File Offset: 0x00AED3A0
 		public string GetDefaultCalabashSkinIconPath()
 		{
 			return ConfigCommonParamById.GetStringConfig("OriginalCalabashSkinIcon");
 		}
 
-		// Token: 0x06032369 RID: 205673 RVA: 0x00BAAEDC File Offset: 0x00BA90DC
+		// Token: 0x060270FA RID: 159994 RVA: 0x00AEF1AC File Offset: 0x00AED3AC
 		public string GetDefaultCalabashSkinName()
 		{
 			return ConfigCommonParamById.GetStringConfig("OriginalCalabashSkinName");
 		}
 
-		// Token: 0x0603236A RID: 205674 RVA: 0x00BAAEE8 File Offset: 0x00BA90E8
+		// Token: 0x060270FB RID: 159995 RVA: 0x00AEF1B8 File Offset: 0x00AED3B8
 		public string GetDefaultCalabashSkinDescription()
 		{
 			return ConfigCommonParamById.GetStringConfig("OriginalCalabashSkinDescription");
 		}
 
-		// Token: 0x0603236B RID: 205675 RVA: 0x00BAAEF4 File Offset: 0x00BA90F4
+		// Token: 0x060270FC RID: 159996 RVA: 0x00AEF1C4 File Offset: 0x00AED3C4
 		public CalabashTransform GetCalabashTransformById(int transformId)
 		{
 			return ConfigCalabashTransformById.GetConfig(transformId, true).Value;
 		}
 
-		// Token: 0x0603236C RID: 205676 RVA: 0x00BAAF10 File Offset: 0x00BA9110
+		// Token: 0x060270FD RID: 159997 RVA: 0x00AEF1E0 File Offset: 0x00AED3E0
 		public int GetCalabashSkinFailRequestCd()
 		{
 			return ConfigCommonParamById.GetIntConfig("CalabashSkinFailRequestCd").Value;
 		}
 
-		// Token: 0x0603236D RID: 205677 RVA: 0x00BAAF30 File Offset: 0x00BA9130
+		// Token: 0x060270FE RID: 159998 RVA: 0x00AEF200 File Offset: 0x00AED400
 		public bool GetCalabashSkinNeedStopRotate()
 		{
 			return ConfigCommonParamById.GetBoolConfig("CalabashSkinNeedStopRotate").Value;
 		}
 
-		// Token: 0x0603236E RID: 205678 RVA: 0x00BAAF4F File Offset: 0x00BA914F
+		// Token: 0x060270FF RID: 159999 RVA: 0x00AEF21F File Offset: 0x00AED41F
 		public MotorSkinShow? GetMotorSkinShowConfig(int id)
 		{
 			return ConfigMotorSkinShowById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603236F RID: 205679 RVA: 0x00BAAF58 File Offset: 0x00BA9158
+		// Token: 0x06027100 RID: 160000 RVA: 0x00AEF228 File Offset: 0x00AED428
 		public MotorGiftQuality? GetMotorSkinGiftQualityConfig(int qualityId)
 		{
 			return ConfigMotorGiftQualityByQualityId.GetConfig(qualityId, true);
 		}
 
-		// Token: 0x17007C4E RID: 31822
-		// (get) Token: 0x06032370 RID: 205680 RVA: 0x00BAAF61 File Offset: 0x00BA9161
+		// Token: 0x17004FF8 RID: 20472
+		// (get) Token: 0x06027101 RID: 160001 RVA: 0x00AEF231 File Offset: 0x00AED431
 		public static SkinConfig Instance
 		{
 			get
@@ -432,7 +444,7 @@ namespace CSharpScript.Game.Module.Skin
 			}
 		}
 
-		// Token: 0x06032371 RID: 205681 RVA: 0x00BAAF68 File Offset: 0x00BA9168
+		// Token: 0x06027102 RID: 160002 RVA: 0x00AEF238 File Offset: 0x00AED438
 		public static SkinConfig GetOrCreateInstance()
 		{
 			if (SkinConfig._Instance == null)
@@ -442,7 +454,7 @@ namespace CSharpScript.Game.Module.Skin
 			return SkinConfig._Instance;
 		}
 
-		// Token: 0x06032372 RID: 205682 RVA: 0x00BAAF7C File Offset: 0x00BA917C
+		// Token: 0x06027103 RID: 160003 RVA: 0x00AEF24C File Offset: 0x00AED44C
 		public static bool CreateInstance()
 		{
 			if (SkinConfig._Instance != null)
@@ -453,24 +465,24 @@ namespace CSharpScript.Game.Module.Skin
 			return true;
 		}
 
-		// Token: 0x06032373 RID: 205683 RVA: 0x00BAAF92 File Offset: 0x00BA9192
+		// Token: 0x06027104 RID: 160004 RVA: 0x00AEF262 File Offset: 0x00AED462
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06032374 RID: 205684 RVA: 0x00BAAF94 File Offset: 0x00BA9194
+		// Token: 0x06027105 RID: 160005 RVA: 0x00AEF264 File Offset: 0x00AED464
 		public static void ResetStaticDefaultValue()
 		{
 			SkinConfig._Instance = null;
 		}
 
-		// Token: 0x06032375 RID: 205685 RVA: 0x00BAAF9C File Offset: 0x00BA919C
+		// Token: 0x06027106 RID: 160006 RVA: 0x00AEF26C File Offset: 0x00AED46C
 		static SkinConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SkinConfig.CreateStaticDefaultValue), new Action(SkinConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401AB90 RID: 109456
+		// Token: 0x040154E5 RID: 87269
 		[Nullable(2)]
 		private static SkinConfig _Instance;
 	}

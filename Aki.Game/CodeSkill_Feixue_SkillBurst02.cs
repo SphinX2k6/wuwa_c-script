@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003184 RID: 12676
+// Token: 0x020026F1 RID: 9969
 [NullableContext(1)]
 [Nullable(0)]
 public class CodeSkill_Feixue_SkillBurst02 : CodeSkillBase
 {
-	// Token: 0x0601B443 RID: 111683 RVA: 0x007702FC File Offset: 0x0076E4FC
+	// Token: 0x06018F48 RID: 102216 RVA: 0x00797C60 File Offset: 0x00795E60
 	public CodeSkill_Feixue_SkillBurst02(SpecialSkillBase specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B444 RID: 111684 RVA: 0x00770310 File Offset: 0x0076E510
+	// Token: 0x06018F49 RID: 102217 RVA: 0x00797C74 File Offset: 0x00795E74
 	public override void OnBegin(Skill skill)
 	{
 		this.Phase = CodeSkill_Feixue_SkillBurst02.ESkillBurst02Phase.None;
@@ -32,7 +32,7 @@ public class CodeSkill_Feixue_SkillBurst02 : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B445 RID: 111685 RVA: 0x00770394 File Offset: 0x0076E594
+	// Token: 0x06018F4A RID: 102218 RVA: 0x00797CF8 File Offset: 0x00795EF8
 	public override void OnTick(float delta, Skill skill)
 	{
 		if (this.Phase != CodeSkill_Feixue_SkillBurst02.ESkillBurst02Phase.AirAttack)
@@ -70,7 +70,7 @@ public class CodeSkill_Feixue_SkillBurst02 : CodeSkillBase
 		base.EndSelf(skill);
 	}
 
-	// Token: 0x0601B446 RID: 111686 RVA: 0x0077043C File Offset: 0x0076E63C
+	// Token: 0x06018F4B RID: 102219 RVA: 0x00797DA0 File Offset: 0x00795FA0
 	public override void OnEnd(Skill skill)
 	{
 		CharacterActorComponent component = base.Entity.GetComponent<CharacterActorComponent>();
@@ -94,7 +94,7 @@ public class CodeSkill_Feixue_SkillBurst02 : CodeSkillBase
 		component2.SetForceSpeed(Vector.ZeroVectorProxy);
 	}
 
-	// Token: 0x0601B447 RID: 111687 RVA: 0x00770491 File Offset: 0x0076E691
+	// Token: 0x06018F4C RID: 102220 RVA: 0x00797DF5 File Offset: 0x00795FF5
 	private void OnStartMontageBlendOut(Skill skill, bool isInterrupted)
 	{
 		if (this.Phase != CodeSkill_Feixue_SkillBurst02.ESkillBurst02Phase.Start)
@@ -109,7 +109,7 @@ public class CodeSkill_Feixue_SkillBurst02 : CodeSkillBase
 		this.StartAirAttackMontage(skill);
 	}
 
-	// Token: 0x0601B448 RID: 111688 RVA: 0x007704AF File Offset: 0x0076E6AF
+	// Token: 0x06018F4D RID: 102221 RVA: 0x00797E13 File Offset: 0x00796013
 	private void OnStartMontageEnd(Skill skill, bool isInterrupted)
 	{
 		if (this.Phase != CodeSkill_Feixue_SkillBurst02.ESkillBurst02Phase.Start)
@@ -124,7 +124,7 @@ public class CodeSkill_Feixue_SkillBurst02 : CodeSkillBase
 		this.StartAirAttackMontage(skill);
 	}
 
-	// Token: 0x0601B449 RID: 111689 RVA: 0x007704D0 File Offset: 0x0076E6D0
+	// Token: 0x06018F4E RID: 102222 RVA: 0x00797E34 File Offset: 0x00796034
 	private void StartAirAttackMontage(Skill skill)
 	{
 		this.Phase = CodeSkill_Feixue_SkillBurst02.ESkillBurst02Phase.AirAttack;
@@ -142,7 +142,7 @@ public class CodeSkill_Feixue_SkillBurst02 : CodeSkillBase
 		this.ApplySlamDownVelocity();
 	}
 
-	// Token: 0x0601B44A RID: 111690 RVA: 0x0077053B File Offset: 0x0076E73B
+	// Token: 0x06018F4F RID: 102223 RVA: 0x00797E9F File Offset: 0x0079609F
 	private void OnAirAttackMontageEnd(Skill skill, bool isInterrupted)
 	{
 		if (!isInterrupted)
@@ -156,7 +156,7 @@ public class CodeSkill_Feixue_SkillBurst02 : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B44B RID: 111691 RVA: 0x00770557 File Offset: 0x0076E757
+	// Token: 0x06018F50 RID: 102224 RVA: 0x00797EBB File Offset: 0x007960BB
 	private void OnAirAttackMontageBlendOut(Skill skill, bool isInterrupted)
 	{
 		if (!this.LandAttack)
@@ -165,7 +165,7 @@ public class CodeSkill_Feixue_SkillBurst02 : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B44C RID: 111692 RVA: 0x00770568 File Offset: 0x0076E768
+	// Token: 0x06018F51 RID: 102225 RVA: 0x00797ECC File Offset: 0x007960CC
 	private void StartLandAttackMontage(Skill skill)
 	{
 		this.Phase = CodeSkill_Feixue_SkillBurst02.ESkillBurst02Phase.LandAttack;
@@ -181,7 +181,7 @@ public class CodeSkill_Feixue_SkillBurst02 : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B44D RID: 111693 RVA: 0x007705CC File Offset: 0x0076E7CC
+	// Token: 0x06018F52 RID: 102226 RVA: 0x00797F30 File Offset: 0x00796130
 	private void UpdateBlockTime(Skill skill)
 	{
 		CharacterMoveComponent component = base.Entity.GetComponent<CharacterMoveComponent>();
@@ -210,7 +210,7 @@ public class CodeSkill_Feixue_SkillBurst02 : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B44E RID: 111694 RVA: 0x0077063C File Offset: 0x0076E83C
+	// Token: 0x06018F53 RID: 102227 RVA: 0x00797FA0 File Offset: 0x007961A0
 	private void ApplySlamDownVelocity()
 	{
 		CharacterMoveComponent component = base.Entity.GetComponent<CharacterMoveComponent>();
@@ -223,47 +223,47 @@ public class CodeSkill_Feixue_SkillBurst02 : CodeSkillBase
 		component.SetForceSpeed(this.SlamVelocity);
 	}
 
-	// Token: 0x0400D4D9 RID: 54489
+	// Token: 0x0400D93C RID: 55612
 	private const int START_MONTAGE_INDEX = 0;
 
-	// Token: 0x0400D4DA RID: 54490
+	// Token: 0x0400D93D RID: 55613
 	private const int AIR_ATTACK_MONTAGE_INDEX = 1;
 
-	// Token: 0x0400D4DB RID: 54491
+	// Token: 0x0400D93E RID: 55614
 	private const int LAND_ATTACK_MONTAGE_INDEX = 2;
 
-	// Token: 0x0400D4DC RID: 54492
+	// Token: 0x0400D93F RID: 55615
 	private const float SLAM_DOWN_SPEED = -3500f;
 
-	// Token: 0x0400D4DD RID: 54493
+	// Token: 0x0400D940 RID: 55616
 	private const float MAX_BLOCK_TIME = 1f;
 
-	// Token: 0x0400D4DE RID: 54494
+	// Token: 0x0400D941 RID: 55617
 	private CodeSkill_Feixue_SkillBurst02.ESkillBurst02Phase Phase;
 
-	// Token: 0x0400D4DF RID: 54495
+	// Token: 0x0400D942 RID: 55618
 	private bool LandAttack;
 
-	// Token: 0x0400D4E0 RID: 54496
+	// Token: 0x0400D943 RID: 55619
 	private float BlockTime;
 
-	// Token: 0x0400D4E1 RID: 54497
+	// Token: 0x0400D944 RID: 55620
 	private bool LandCheckDone;
 
-	// Token: 0x0400D4E2 RID: 54498
+	// Token: 0x0400D945 RID: 55621
 	private readonly Vector SlamVelocity = Vector.Create();
 
-	// Token: 0x020096D3 RID: 38611
+	// Token: 0x020088F9 RID: 35065
 	[NullableContext(0)]
 	private enum ESkillBurst02Phase
 	{
-		// Token: 0x04030538 RID: 197944
+		// Token: 0x0402BBCD RID: 179149
 		None,
-		// Token: 0x04030539 RID: 197945
+		// Token: 0x0402BBCE RID: 179150
 		Start,
-		// Token: 0x0403053A RID: 197946
+		// Token: 0x0402BBCF RID: 179151
 		AirAttack,
-		// Token: 0x0403053B RID: 197947
+		// Token: 0x0402BBD0 RID: 179152
 		LandAttack
 	}
 }

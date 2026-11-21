@@ -6,10 +6,10 @@ using Aki.Protocol;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020011FA RID: 4602
+// Token: 0x020006AE RID: 1710
 public class ActivityCorniceMeetingSettleDetailPanel : UiPanelBase
 {
-	// Token: 0x06007B13 RID: 31507 RVA: 0x0019ED7C File Offset: 0x0019CF7C
+	// Token: 0x06004EA9 RID: 20137 RVA: 0x001A7A34 File Offset: 0x001A5C34
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -33,7 +33,7 @@ public class ActivityCorniceMeetingSettleDetailPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007B14 RID: 31508 RVA: 0x0019EE8C File Offset: 0x0019D08C
+	// Token: 0x06004EAA RID: 20138 RVA: 0x001A7B44 File Offset: 0x001A5D44
 	protected override void OnStart()
 	{
 		if (this.Data == null)
@@ -64,32 +64,32 @@ public class ActivityCorniceMeetingSettleDetailPanel : UiPanelBase
 		base.GetItem(6).SetUIActive(false);
 	}
 
-	// Token: 0x0400385B RID: 14427
+	// Token: 0x040038F4 RID: 14580
 	[Nullable(1)]
 	public CorniceChallengeEndNotify Data;
 
-	// Token: 0x020077E1 RID: 30689
+	// Token: 0x0200696C RID: 26988
 	private class EChildComponents
 	{
-		// Token: 0x0402784A RID: 161866
+		// Token: 0x04022B7C RID: 142204
 		public const int TxtScore = 0;
 
-		// Token: 0x0402784B RID: 161867
+		// Token: 0x04022B7D RID: 142205
 		public const int TxtTime = 1;
 
-		// Token: 0x0402784C RID: 161868
+		// Token: 0x04022B7E RID: 142206
 		public const int ScoreNewRecordItem = 2;
 
-		// Token: 0x0402784D RID: 161869
+		// Token: 0x04022B7F RID: 142207
 		public const int TimeNewRecordItem = 3;
 
-		// Token: 0x0402784E RID: 161870
+		// Token: 0x04022B80 RID: 142208
 		public const int ScorePanelItem = 4;
 
-		// Token: 0x0402784F RID: 161871
+		// Token: 0x04022B81 RID: 142209
 		public const int TimePanelItem = 5;
 
-		// Token: 0x04027850 RID: 161872
+		// Token: 0x04022B82 RID: 142210
 		public const int TxtFailTipsItem = 6;
 	}
 }

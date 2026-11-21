@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004BC RID: 1212
+	// Token: 0x020004D2 RID: 1234
 	public class ConfigKurotatoWaveLevelAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001C73 RID: 7283 RVA: 0x000FA0C8 File Offset: 0x000F82C8
+		// Token: 0x06001CF7 RID: 7415 RVA: 0x0010081C File Offset: 0x000FEA1C
 		static ConfigKurotatoWaveLevelAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigKurotatoWaveLevelAll.CreateStaticDefaultValue), new Action(ConfigKurotatoWaveLevelAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001C74 RID: 7284 RVA: 0x000FA0E8 File Offset: 0x000F82E8
+		// Token: 0x06001CF8 RID: 7416 RVA: 0x0010083C File Offset: 0x000FEA3C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigKurotatoWaveLevelAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001C75 RID: 7285 RVA: 0x000FA167 File Offset: 0x000F8367
+		// Token: 0x06001CF9 RID: 7417 RVA: 0x001008BB File Offset: 0x000FEABB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigKurotatoWaveLevelAll.LogPair = null;
 			ConfigKurotatoWaveLevelAll.HandleId = 0;
 		}
 
-		// Token: 0x06001C76 RID: 7286 RVA: 0x000FA175 File Offset: 0x000F8375
+		// Token: 0x06001CFA RID: 7418 RVA: 0x001008C9 File Offset: 0x000FEAC9
 		public static void Init()
 		{
 			ConfigKurotatoWaveLevelAll.HandleId = ConfigCommon.InitDataStatement(ConfigKurotatoWaveLevelAll.HandleId, "db_kurotato.db", "select BinData from `KurotatoWaveLevel`");
 		}
 
-		// Token: 0x06001C77 RID: 7287 RVA: 0x000FA190 File Offset: 0x000F8390
+		// Token: 0x06001CFB RID: 7419 RVA: 0x001008E4 File Offset: 0x000FEAE4
 		[NullableContext(2)]
 		public static IReadOnlyList<KurotatoWaveLevel> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002108 RID: 8456
+		// Token: 0x040021A2 RID: 8610
 		private const string DB = "db_kurotato.db";
 
-		// Token: 0x04002109 RID: 8457
+		// Token: 0x040021A3 RID: 8611
 		private const string FILE = "t.土豆兄弟_关卡.xlsx";
 
-		// Token: 0x0400210A RID: 8458
+		// Token: 0x040021A4 RID: 8612
 		private const string TABLE = "KurotatoWaveLevel";
 
-		// Token: 0x0400210B RID: 8459
+		// Token: 0x040021A5 RID: 8613
 		private const string COMMAND = "select BinData from `KurotatoWaveLevel`";
 
-		// Token: 0x0400210C RID: 8460
+		// Token: 0x040021A6 RID: 8614
 		private const string KEY_PREFIX = "KurotatoWaveLevelAll";
 
-		// Token: 0x0400210D RID: 8461
+		// Token: 0x040021A7 RID: 8615
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400210E RID: 8462
+		// Token: 0x040021A8 RID: 8616
 		private static int HandleId;
 	}
 }

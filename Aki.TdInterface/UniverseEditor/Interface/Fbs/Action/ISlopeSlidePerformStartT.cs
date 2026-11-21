@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200715B RID: 29019
+	// Token: 0x02007927 RID: 31015
 	public class ISlopeSlidePerformStartT
 	{
-		// Token: 0x1700D7A6 RID: 55206
-		// (get) Token: 0x06033746 RID: 210758 RVA: 0x006EECA7 File Offset: 0x006ECEA7
-		// (set) Token: 0x06033747 RID: 210759 RVA: 0x006EECAF File Offset: 0x006ECEAF
+		// Token: 0x1700E38B RID: 58251
+		// (get) Token: 0x060369F0 RID: 223728 RVA: 0x0074F4B3 File Offset: 0x0074D6B3
+		// (set) Token: 0x060369F1 RID: 223729 RVA: 0x0074F4BB File Offset: 0x0074D6BB
 		public ESlidePerformType Type { get; set; }
 
-		// Token: 0x1700D7A7 RID: 55207
-		// (get) Token: 0x06033748 RID: 210760 RVA: 0x006EECB8 File Offset: 0x006ECEB8
-		// (set) Token: 0x06033749 RID: 210761 RVA: 0x006EECC0 File Offset: 0x006ECEC0
+		// Token: 0x1700E38C RID: 58252
+		// (get) Token: 0x060369F2 RID: 223730 RVA: 0x0074F4C4 File Offset: 0x0074D6C4
+		// (set) Token: 0x060369F3 RID: 223731 RVA: 0x0074F4CC File Offset: 0x0074D6CC
 		public string SlopeSlidePerformDaPath { get; set; }
 
-		// Token: 0x0603374A RID: 210762 RVA: 0x006EECC9 File Offset: 0x006ECEC9
+		// Token: 0x060369F4 RID: 223732 RVA: 0x0074F4D5 File Offset: 0x0074D6D5
 		public ISlopeSlidePerformStartT()
 		{
 			this.Type = ESlidePerformType.SlopeSlide;

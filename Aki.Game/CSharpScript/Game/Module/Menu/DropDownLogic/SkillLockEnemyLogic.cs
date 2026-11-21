@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Menu.DropDownLogic
 {
-	// Token: 0x02005474 RID: 21620
+	// Token: 0x02004457 RID: 17495
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SkillLockEnemyLogic : DropDownLogicBase
 	{
-		// Token: 0x060372CF RID: 225999 RVA: 0x00D15EF0 File Offset: 0x00D140F0
+		// Token: 0x0602C218 RID: 180760 RVA: 0x00C65348 File Offset: 0x00C63548
 		public override IReadOnlyList<object> GetDropDownDataList()
 		{
 			List<SkillLockEnemyDropDownData> list = new List<SkillLockEnemyDropDownData>();
@@ -29,13 +29,13 @@ namespace CSharpScript.Game.Module.Menu.DropDownLogic
 			return list;
 		}
 
-		// Token: 0x060372D0 RID: 226000 RVA: 0x00D15F5A File Offset: 0x00D1415A
+		// Token: 0x0602C219 RID: 180761 RVA: 0x00C653B2 File Offset: 0x00C635B2
 		public override TableTextArgNew GetDataTextId(object data, MenuData menuData)
 		{
 			return new TableTextArgNew(((SkillLockEnemyDropDownData)data).TextId, Array.Empty<object>());
 		}
 
-		// Token: 0x060372D1 RID: 226001 RVA: 0x00D15F74 File Offset: 0x00D14174
+		// Token: 0x0602C21A RID: 180762 RVA: 0x00C653CC File Offset: 0x00C635CC
 		public override void TriggerSelectChange(object data, MenuData menuData)
 		{
 			int targetConfig = MenuController.Instance.GetTargetConfig(menuData.FunctionId);
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Menu.DropDownLogic
 			MenuModel.Instance.IsEdited = true;
 		}
 
-		// Token: 0x060372D2 RID: 226002 RVA: 0x00D15FBE File Offset: 0x00D141BE
+		// Token: 0x0602C21B RID: 180763 RVA: 0x00C65416 File Offset: 0x00C63616
 		public override int GetDefaultIndex(MenuData menuData)
 		{
 			return MenuController.Instance.GetTargetConfig(menuData.FunctionId);

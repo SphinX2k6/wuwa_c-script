@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006785 RID: 26501
+	// Token: 0x020056D5 RID: 22229
 	public enum EPlaceResult
 	{
-		// Token: 0x040227E6 RID: 141286
+		// Token: 0x0401D043 RID: 118851
 		Success,
-		// Token: 0x040227E7 RID: 141287
+		// Token: 0x0401D044 RID: 118852
 		Holding,
-		// Token: 0x040227E8 RID: 141288
+		// Token: 0x0401D045 RID: 118853
 		Reject
 	}
 }

@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001301 RID: 4865
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001451 RID: 5201
 	public class IFastReturnEntityPos : IFastReturnPosBase
 	{
-		// Token: 0x06006F12 RID: 28434 RVA: 0x0010C42F File Offset: 0x0010A62F
+		// Token: 0x060075B2 RID: 30130 RVA: 0x0011A99B File Offset: 0x00118B9B
 		public static IFastReturnEntityPos Create(IFastReturnEntityPos? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170022E3 RID: 8931
-		// (get) Token: 0x06006F13 RID: 28435 RVA: 0x0010C44E File Offset: 0x0010A64E
+		// Token: 0x170024B2 RID: 9394
+		// (get) Token: 0x060075B3 RID: 30131 RVA: 0x0011A9BA File Offset: 0x00118BBA
 		public override EFastReturnPosType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022E4 RID: 8932
-		// (get) Token: 0x06006F14 RID: 28436 RVA: 0x0010C45B File Offset: 0x0010A65B
+		// Token: 0x170024B3 RID: 9395
+		// (get) Token: 0x060075B4 RID: 30132 RVA: 0x0011A9C7 File Offset: 0x00118BC7
 		public virtual int EntityId
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022E5 RID: 8933
-		// (get) Token: 0x06006F15 RID: 28437 RVA: 0x0010C468 File Offset: 0x0010A668
+		// Token: 0x170024B4 RID: 9396
+		// (get) Token: 0x060075B5 RID: 30133 RVA: 0x0011A9D4 File Offset: 0x00118BD4
 		public virtual ITeleportTransitionType TransitionOption
 		{
 			get
@@ -59,13 +56,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003FBF RID: 16319
+		// Token: 0x0400433B RID: 17211
 		private IFastReturnEntityPos Instance;
 
-		// Token: 0x04003FC0 RID: 16320
+		// Token: 0x0400433C RID: 17212
 		private ITeleportTransitionType _TransitionOptionCache;
 
-		// Token: 0x04003FC1 RID: 16321
+		// Token: 0x0400433D RID: 17213
 		private bool _TransitionOptionInited;
 	}
 }

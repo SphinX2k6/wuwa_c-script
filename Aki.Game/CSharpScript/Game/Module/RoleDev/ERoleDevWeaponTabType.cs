@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CC8 RID: 19656
+	// Token: 0x02003C79 RID: 15481
 	public enum ERoleDevWeaponTabType
 	{
-		// Token: 0x0401B06B RID: 110699
+		// Token: 0x040159CC RID: 88524
 		None,
-		// Token: 0x0401B06C RID: 110700
+		// Token: 0x040159CD RID: 88525
 		WeaponDev,
-		// Token: 0x0401B06D RID: 110701
+		// Token: 0x040159CE RID: 88526
 		WeaponRecommend
 	}
 }

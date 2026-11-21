@@ -5,7 +5,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001996 RID: 6550
+	// Token: 0x0200044A RID: 1098
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -13,15 +13,15 @@ namespace UnrealEngine
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class FInputModeReply : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601853F RID: 99647 RVA: 0x0023DFF5 File Offset: 0x0023C1F5
+		// Token: 0x060069F6 RID: 27126 RVA: 0x0009A981 File Offset: 0x00098B81
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FInputModeReply._ScriptStructPtr != 0) ? FInputModeReply._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroInput.InputModeReply", ref FInputModeReply._ScriptStructPtr);
 		}
 
-		// Token: 0x17006117 RID: 24855
-		// (get) Token: 0x06018540 RID: 99648 RVA: 0x0023E019 File Offset: 0x0023C219
-		// (set) Token: 0x06018541 RID: 99649 RVA: 0x0023E029 File Offset: 0x0023C229
+		// Token: 0x1700150A RID: 5386
+		// (get) Token: 0x060069F7 RID: 27127 RVA: 0x0009A9A5 File Offset: 0x00098BA5
+		// (set) Token: 0x060069F8 RID: 27128 RVA: 0x0009A9B5 File Offset: 0x00098BB5
 		public unsafe int HandleID
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006118 RID: 24856
-		// (get) Token: 0x06018542 RID: 99650 RVA: 0x0023E03A File Offset: 0x0023C23A
-		// (set) Token: 0x06018543 RID: 99651 RVA: 0x0023E04E File Offset: 0x0023C24E
+		// Token: 0x1700150B RID: 5387
+		// (get) Token: 0x060069F9 RID: 27129 RVA: 0x0009A9C6 File Offset: 0x00098BC6
+		// (set) Token: 0x060069FA RID: 27130 RVA: 0x0009A9DA File Offset: 0x00098BDA
 		public unsafe string Reason
 		{
 			get
@@ -49,24 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006119 RID: 24857
-		// (get) Token: 0x06018544 RID: 99652 RVA: 0x0023E063 File Offset: 0x0023C263
-		// (set) Token: 0x06018545 RID: 99653 RVA: 0x0023E073 File Offset: 0x0023C273
-		public unsafe EInputMode InputModeType
-		{
-			get
-			{
-				return (EInputMode)(*(base.NativePtr + (IntPtr)FInputModeReply.__PropertyOffset_InputModeType));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)FInputModeReply.__PropertyOffset_InputModeType) = (byte)value;
-			}
-		}
-
-		// Token: 0x1700611A RID: 24858
-		// (get) Token: 0x06018546 RID: 99654 RVA: 0x0023E084 File Offset: 0x0023C284
-		// (set) Token: 0x06018547 RID: 99655 RVA: 0x0023E094 File Offset: 0x0023C294
+		// Token: 0x1700150C RID: 5388
+		// (get) Token: 0x060069FB RID: 27131 RVA: 0x0009A9EF File Offset: 0x00098BEF
+		// (set) Token: 0x060069FC RID: 27132 RVA: 0x0009A9FF File Offset: 0x00098BFF
 		public unsafe bool IsLockMouseToViewport
 		{
 			get
@@ -79,9 +64,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700611B RID: 24859
-		// (get) Token: 0x06018548 RID: 99656 RVA: 0x0023E0A5 File Offset: 0x0023C2A5
-		// (set) Token: 0x06018549 RID: 99657 RVA: 0x0023E0B5 File Offset: 0x0023C2B5
+		// Token: 0x1700150D RID: 5389
+		// (get) Token: 0x060069FD RID: 27133 RVA: 0x0009AA10 File Offset: 0x00098C10
+		// (set) Token: 0x060069FE RID: 27134 RVA: 0x0009AA20 File Offset: 0x00098C20
 		public unsafe bool IsHideCursorDuringCapture
 		{
 			get
@@ -94,69 +79,56 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601854A RID: 99658 RVA: 0x0023E0C6 File Offset: 0x0023C2C6
+		// Token: 0x060069FF RID: 27135 RVA: 0x0009AA31 File Offset: 0x00098C31
 		public FInputModeReply()
 		{
 		}
 
-		// Token: 0x0601854B RID: 99659 RVA: 0x0023E0CE File Offset: 0x0023C2CE
-		public FInputModeReply(int HandleID, string Reason, EInputMode InputModeType, bool IsLockMouseToViewport, bool IsHideCursorDuringCapture)
-		{
-			this.HandleID = HandleID;
-			this.Reason = Reason;
-			this.InputModeType = InputModeType;
-			this.IsLockMouseToViewport = IsLockMouseToViewport;
-			this.IsHideCursorDuringCapture = IsHideCursorDuringCapture;
-		}
-
-		// Token: 0x0601854C RID: 99660 RVA: 0x0023E0FB File Offset: 0x0023C2FB
+		// Token: 0x06006A00 RID: 27136 RVA: 0x0009AA39 File Offset: 0x00098C39
 		protected override IntPtr GetUStructPtr()
 		{
 			return FInputModeReply.StaticStruct();
 		}
 
-		// Token: 0x0601854D RID: 99661 RVA: 0x0023E107 File Offset: 0x0023C307
+		// Token: 0x06006A01 RID: 27137 RVA: 0x0009AA45 File Offset: 0x00098C45
 		[NullableContext(2)]
 		public FInputModeReply(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601854E RID: 99662 RVA: 0x0023E111 File Offset: 0x0023C311
+		// Token: 0x06006A02 RID: 27138 RVA: 0x0009AA4F File Offset: 0x00098C4F
 		public FInputModeReply(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601854F RID: 99663 RVA: 0x0023E11C File Offset: 0x0023C31C
+		// Token: 0x06006A03 RID: 27139 RVA: 0x0009AA5A File Offset: 0x00098C5A
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FInputModeReply(Pointer, false, true);
 		}
 
-		// Token: 0x06018550 RID: 99664 RVA: 0x0023E126 File Offset: 0x0023C326
+		// Token: 0x06006A04 RID: 27140 RVA: 0x0009AA64 File Offset: 0x00098C64
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FInputModeReply(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400D28E RID: 53902
+		// Token: 0x04002CFB RID: 11515
 		public const string __ObjectPath = "/Script/KuroInput.InputModeReply";
 
-		// Token: 0x0400D28F RID: 53903
+		// Token: 0x04002CFC RID: 11516
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400D290 RID: 53904
+		// Token: 0x04002CFD RID: 11517
 		internal static int __PropertyOffset_HandleID;
 
-		// Token: 0x0400D291 RID: 53905
+		// Token: 0x04002CFE RID: 11518
 		internal static int __PropertyOffset_Reason;
 
-		// Token: 0x0400D292 RID: 53906
-		internal static int __PropertyOffset_InputModeType;
-
-		// Token: 0x0400D293 RID: 53907
+		// Token: 0x04002CFF RID: 11519
 		internal static int __PropertyOffset_IsLockMouseToViewport;
 
-		// Token: 0x0400D294 RID: 53908
+		// Token: 0x04002D00 RID: 11520
 		internal static int __PropertyOffset_IsHideCursorDuringCapture;
 	}
 }

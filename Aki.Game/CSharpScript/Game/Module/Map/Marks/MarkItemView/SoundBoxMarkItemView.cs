@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x02005523 RID: 21795
+	// Token: 0x020044F6 RID: 17654
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SoundBoxMarkItemView : ServerMarkItemView
 	{
-		// Token: 0x06037A69 RID: 227945 RVA: 0x00D35BE0 File Offset: 0x00D33DE0
+		// Token: 0x0602C939 RID: 182585 RVA: 0x00C839EC File Offset: 0x00C81BEC
 		public SoundBoxMarkItemView(SoundBoxMarkItem holder) : base(holder)
 		{
 		}
 
-		// Token: 0x06037A6A RID: 227946 RVA: 0x00D35BEC File Offset: 0x00D33DEC
+		// Token: 0x0602C93A RID: 182586 RVA: 0x00C839F8 File Offset: 0x00C81BF8
 		protected override UniTask OnCreateAsync()
 		{
 			SoundBoxMarkItemView.<OnCreateAsync>d__3 <OnCreateAsync>d__;
@@ -28,20 +28,20 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037A6B RID: 227947 RVA: 0x00D35C2F File Offset: 0x00D33E2F
+		// Token: 0x0602C93B RID: 182587 RVA: 0x00C83A3B File Offset: 0x00C81C3B
 		protected override void OnStart()
 		{
 			this.RadarEffect.SetUIParent(base.GetRootItem(), false);
 			base.OnStart();
 		}
 
-		// Token: 0x06037A6C RID: 227948 RVA: 0x00D35C49 File Offset: 0x00D33E49
+		// Token: 0x0602C93C RID: 182588 RVA: 0x00C83A55 File Offset: 0x00C81C55
 		protected override void OnViewRefresh()
 		{
 			this.OnIconPathChanged(this.Holder.IconPath);
 		}
 
-		// Token: 0x06037A6D RID: 227949 RVA: 0x00D35C5C File Offset: 0x00D33E5C
+		// Token: 0x0602C93D RID: 182589 RVA: 0x00C83A68 File Offset: 0x00C81C68
 		protected override void OnSafeUpdate(Vector playerLocation, bool bDragging = false, bool bIsScale = false)
 		{
 			int? soundBoxEntityId = ((SoundBoxMarkItem)this.Holder).GetSoundBoxEntityId();
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A6E RID: 227950 RVA: 0x00D35CA0 File Offset: 0x00D33EA0
+		// Token: 0x0602C93E RID: 182590 RVA: 0x00C83AAC File Offset: 0x00C81CAC
 		public void SwitchSleepState(bool isSleep)
 		{
 			if (this.IsSleepState == isSleep)
@@ -69,13 +69,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			base.GetSprite(2).SetUIActive(false);
 		}
 
-		// Token: 0x06037A6F RID: 227951 RVA: 0x00D35D0D File Offset: 0x00D33F0D
+		// Token: 0x0602C93F RID: 182591 RVA: 0x00C83B19 File Offset: 0x00C81D19
 		public override bool GetInteractiveFlag()
 		{
 			return false;
 		}
 
-		// Token: 0x06037A70 RID: 227952 RVA: 0x00D35D10 File Offset: 0x00D33F10
+		// Token: 0x0602C940 RID: 182592 RVA: 0x00C83B1C File Offset: 0x00C81D1C
 		protected override void OnBeforeDestroy()
 		{
 			if (this.RadarEffect != null)
@@ -86,11 +86,11 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0401D42B RID: 119851
+		// Token: 0x04017EAE RID: 97966
 		[Nullable(2)]
 		private UUIItem RadarEffect;
 
-		// Token: 0x0401D42C RID: 119852
+		// Token: 0x04017EAF RID: 97967
 		private bool IsSleepState;
 	}
 }

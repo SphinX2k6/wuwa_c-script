@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001448 RID: 5192
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015A0 RID: 5536
 	public class IPositionRollbackConfig
 	{
-		// Token: 0x06007613 RID: 30227 RVA: 0x0011A115 File Offset: 0x00118315
+		// Token: 0x06007CDB RID: 31963 RVA: 0x00128BE9 File Offset: 0x00126DE9
 		public static IPositionRollbackConfig Create(IPositionRollbackConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002756 RID: 10070
-		// (get) Token: 0x06007614 RID: 30228 RVA: 0x0011A134 File Offset: 0x00118334
+		// Token: 0x1700293D RID: 10557
+		// (get) Token: 0x06007CDC RID: 31964 RVA: 0x00128C08 File Offset: 0x00126E08
 		public virtual VectorInfo CheckPoint
 		{
 			get
@@ -40,8 +38,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002757 RID: 10071
-		// (get) Token: 0x06007615 RID: 30229 RVA: 0x0011A168 File Offset: 0x00118368
+		// Token: 0x1700293E RID: 10558
+		// (get) Token: 0x06007CDD RID: 31965 RVA: 0x00128C3C File Offset: 0x00126E3C
 		public virtual int CheckRange
 		{
 			get
@@ -50,8 +48,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002758 RID: 10072
-		// (get) Token: 0x06007616 RID: 30230 RVA: 0x0011A175 File Offset: 0x00118375
+		// Token: 0x1700293F RID: 10559
+		// (get) Token: 0x06007CDE RID: 31966 RVA: 0x00128C49 File Offset: 0x00126E49
 		public virtual Aki.TDConfigMgr.Action.Fb.PosA Position
 		{
 			get
@@ -66,21 +64,21 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400448C RID: 17548
+		// Token: 0x04004822 RID: 18466
 		private IPositionRollbackConfig Instance;
 
-		// Token: 0x0400448D RID: 17549
+		// Token: 0x04004823 RID: 18467
 		[Nullable(2)]
 		private VectorInfo _CheckPointCache;
 
-		// Token: 0x0400448E RID: 17550
+		// Token: 0x04004824 RID: 18468
 		private bool _CheckPointInited;
 
-		// Token: 0x0400448F RID: 17551
+		// Token: 0x04004825 RID: 18469
 		[Nullable(2)]
 		private Aki.TDConfigMgr.Action.Fb.PosA _PositionCache;
 
-		// Token: 0x04004490 RID: 17552
+		// Token: 0x04004826 RID: 18470
 		private bool _PositionInited;
 	}
 }

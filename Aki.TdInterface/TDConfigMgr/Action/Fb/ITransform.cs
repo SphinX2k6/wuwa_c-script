@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025FB RID: 9723
+	// Token: 0x020028BB RID: 10427
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITransform
 	{
-		// Token: 0x0600DA6F RID: 55919 RVA: 0x00208CFC File Offset: 0x00206EFC
-		[NullableContext(1)]
+		// Token: 0x0600E83C RID: 59452 RVA: 0x00225450 File Offset: 0x00223650
+		[NullableContext(0)]
 		public static ITransform Create(ITransform? instance)
 		{
 			if (instance == null)
@@ -24,12 +24,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700403B RID: 16443
-		// (get) Token: 0x0600DA70 RID: 55920 RVA: 0x00208D1B File Offset: 0x00206F1B
-		[Nullable(1)]
+		// Token: 0x17004374 RID: 17268
+		// (get) Token: 0x0600E83D RID: 59453 RVA: 0x0022546F File Offset: 0x0022366F
+		[Nullable(0)]
 		public virtual VectorInfo Pos
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._PosInited)
@@ -42,8 +42,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700403C RID: 16444
-		// (get) Token: 0x0600DA71 RID: 55921 RVA: 0x00208D4F File Offset: 0x00206F4F
+		// Token: 0x17004375 RID: 17269
+		// (get) Token: 0x0600E83E RID: 59454 RVA: 0x002254A3 File Offset: 0x002236A3
 		public virtual VectorInfo Rot
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700403D RID: 16445
-		// (get) Token: 0x0600DA72 RID: 55922 RVA: 0x00208D83 File Offset: 0x00206F83
+		// Token: 0x17004376 RID: 17270
+		// (get) Token: 0x0600E83F RID: 59455 RVA: 0x002254D7 File Offset: 0x002236D7
 		public virtual VectorInfo Scale
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700403E RID: 16446
-		// (get) Token: 0x0600DA73 RID: 55923 RVA: 0x00208DB8 File Offset: 0x00206FB8
+		// Token: 0x17004377 RID: 17271
+		// (get) Token: 0x0600E840 RID: 59456 RVA: 0x0022550C File Offset: 0x0022370C
 		public virtual bool? _Folded
 		{
 			get
@@ -88,25 +88,25 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007949 RID: 31049
+		// Token: 0x04007FE3 RID: 32739
 		private ITransform Instance;
 
-		// Token: 0x0400794A RID: 31050
+		// Token: 0x04007FE4 RID: 32740
 		private VectorInfo _PosCache;
 
-		// Token: 0x0400794B RID: 31051
+		// Token: 0x04007FE5 RID: 32741
 		private bool _PosInited;
 
-		// Token: 0x0400794C RID: 31052
+		// Token: 0x04007FE6 RID: 32742
 		private VectorInfo _RotCache;
 
-		// Token: 0x0400794D RID: 31053
+		// Token: 0x04007FE7 RID: 32743
 		private bool _RotInited;
 
-		// Token: 0x0400794E RID: 31054
+		// Token: 0x04007FE8 RID: 32744
 		private VectorInfo _ScaleCache;
 
-		// Token: 0x0400794F RID: 31055
+		// Token: 0x04007FE9 RID: 32745
 		private bool _ScaleInited;
 	}
 }

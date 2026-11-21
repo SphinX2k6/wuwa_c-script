@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -11,14 +10,14 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B81 RID: 19329
+	// Token: 0x02003B2B RID: 15147
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SlidingBlocksGameData
 	{
-		// Token: 0x17007C3F RID: 31807
-		// (get) Token: 0x06032168 RID: 205160 RVA: 0x00BA17C0 File Offset: 0x00B9F9C0
-		// (set) Token: 0x06032169 RID: 205161 RVA: 0x00BA17C8 File Offset: 0x00B9F9C8
+		// Token: 0x17004FE9 RID: 20457
+		// (get) Token: 0x06026EF9 RID: 159481 RVA: 0x00AE5950 File Offset: 0x00AE3B50
+		// (set) Token: 0x06026EFA RID: 159482 RVA: 0x00AE5958 File Offset: 0x00AE3B58
 		[Nullable(2)]
 		public Tetromino CurTetromino
 		{
@@ -34,8 +33,8 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x17007C40 RID: 31808
-		// (get) Token: 0x0603216A RID: 205162 RVA: 0x00BA17D1 File Offset: 0x00B9F9D1
+		// Token: 0x17004FEA RID: 20458
+		// (get) Token: 0x06026EFB RID: 159483 RVA: 0x00AE5961 File Offset: 0x00AE3B61
 		public double GridMaxX
 		{
 			get
@@ -44,8 +43,8 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x17007C41 RID: 31809
-		// (get) Token: 0x0603216B RID: 205163 RVA: 0x00BA17E8 File Offset: 0x00B9F9E8
+		// Token: 0x17004FEB RID: 20459
+		// (get) Token: 0x06026EFC RID: 159484 RVA: 0x00AE5978 File Offset: 0x00AE3B78
 		public double GridMinY
 		{
 			get
@@ -58,8 +57,8 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x17007C42 RID: 31810
-		// (get) Token: 0x0603216C RID: 205164 RVA: 0x00BA1812 File Offset: 0x00B9FA12
+		// Token: 0x17004FEC RID: 20460
+		// (get) Token: 0x06026EFD RID: 159485 RVA: 0x00AE59A2 File Offset: 0x00AE3BA2
 		public double GridMaxY
 		{
 			get
@@ -68,13 +67,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x0603216D RID: 205165 RVA: 0x00BA1829 File Offset: 0x00B9FA29
+		// Token: 0x06026EFE RID: 159486 RVA: 0x00AE59B9 File Offset: 0x00AE3BB9
 		public float SingleCellMoveTime()
 		{
 			return (float)TimeUtil.Instance.InverseMillisecond / this.FallSpeed;
 		}
 
-		// Token: 0x0603216E RID: 205166 RVA: 0x00BA1840 File Offset: 0x00B9FA40
+		// Token: 0x06026EFF RID: 159487 RVA: 0x00AE59D0 File Offset: 0x00AE3BD0
 		public void Init(IFinishTetris config, global::Transform originTransform, Bp_Tetris_C setting, GeneralLogicTreeContext context)
 		{
 			this.OriginTransform = originTransform;
@@ -143,7 +142,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			this.AudioData.Init();
 		}
 
-		// Token: 0x0603216F RID: 205167 RVA: 0x00BA1ACC File Offset: 0x00B9FCCC
+		// Token: 0x06026F00 RID: 159488 RVA: 0x00AE5C5C File Offset: 0x00AE3E5C
 		public void Reset()
 		{
 			this.ServerData.Reset();
@@ -169,7 +168,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			this.CubeDestroyEffect = null;
 		}
 
-		// Token: 0x06032170 RID: 205168 RVA: 0x00BA1BE4 File Offset: 0x00B9FDE4
+		// Token: 0x06026F01 RID: 159489 RVA: 0x00AE5D74 File Offset: 0x00AE3F74
 		public bool AddMinoData(double x, double y, Mino minoData, SlidingBlocksDefine.EAddMinoReason reason)
 		{
 			bool flag = this.AddColumnData(x, y, minoData);
@@ -177,7 +176,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return flag && flag2;
 		}
 
-		// Token: 0x06032171 RID: 205169 RVA: 0x00BA1C08 File Offset: 0x00B9FE08
+		// Token: 0x06026F02 RID: 159490 RVA: 0x00AE5D98 File Offset: 0x00AE3F98
 		public bool RemoveMinoData(double x, double y, SlidingBlocksDefine.ERemoveMinoReason reason)
 		{
 			bool flag = this.RemoveColumnData(x, y);
@@ -185,7 +184,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return flag && flag2;
 		}
 
-		// Token: 0x06032172 RID: 205170 RVA: 0x00BA1C2C File Offset: 0x00B9FE2C
+		// Token: 0x06026F03 RID: 159491 RVA: 0x00AE5DBC File Offset: 0x00AE3FBC
 		private bool AddColumnData(double x, double y, Mino minoData)
 		{
 			if (x < 0.0 || x >= this.GridSize.X || y < 0.0 || y >= this.GridSize.Y)
@@ -201,14 +200,14 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return tetrisGridColumn.AddData(y, minoData);
 		}
 
-		// Token: 0x06032173 RID: 205171 RVA: 0x00BA1C9C File Offset: 0x00B9FE9C
+		// Token: 0x06026F04 RID: 159492 RVA: 0x00AE5E2C File Offset: 0x00AE402C
 		private bool RemoveColumnData(double x, double y)
 		{
 			TetrisGridColumn tetrisGridColumn;
 			return this.GridColumns.TryGetValue(x, out tetrisGridColumn) && tetrisGridColumn.RemoveData(y);
 		}
 
-		// Token: 0x06032174 RID: 205172 RVA: 0x00BA1CC4 File Offset: 0x00B9FEC4
+		// Token: 0x06026F05 RID: 159493 RVA: 0x00AE5E54 File Offset: 0x00AE4054
 		private bool AddRowData(double x, double y, Mino minoData)
 		{
 			if (x < 0.0 || x >= this.GridSize.X || y < 0.0 || y >= this.GridSize.Y)
@@ -224,40 +223,42 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return tetrisGridRow.AddData(x, minoData);
 		}
 
-		// Token: 0x06032175 RID: 205173 RVA: 0x00BA1D40 File Offset: 0x00B9FF40
+		// Token: 0x06026F06 RID: 159494 RVA: 0x00AE5ED0 File Offset: 0x00AE40D0
 		private bool RemoveRowData(double x, double y)
 		{
 			TetrisGridRow tetrisGridRow;
 			return this.GridRows.TryGetValue(y, out tetrisGridRow) && tetrisGridRow.RemoveData(x);
 		}
 
-		// Token: 0x06032176 RID: 205174 RVA: 0x00BA1D66 File Offset: 0x00B9FF66
+		// Token: 0x06026F07 RID: 159495 RVA: 0x00AE5EF6 File Offset: 0x00AE40F6
 		public void RemoveTetromino(Tetromino tetromino)
 		{
 			this.WaitRemoveTetrominoList.Add(tetromino);
 		}
 
-		// Token: 0x06032177 RID: 205175 RVA: 0x00BA1D74 File Offset: 0x00B9FF74
+		// Token: 0x06026F08 RID: 159496 RVA: 0x00AE5F04 File Offset: 0x00AE4104
 		public void SetServerData(AvoidBlockRoundInfoNotify notify)
 		{
-			this.ServerData.Init(notify.InstId, notify.HistoryScore, notify.RewardId.ToArray<int>());
+			int[] array = new int[notify.RewardId.Count];
+			notify.RewardId.CopyTo(array, 0);
+			this.ServerData.Init(notify.InstId, notify.HistoryScore, array);
 			string rewardTitleTextKey = this.ServerData.RewardTitleTextKey;
 			if (rewardTitleTextKey == null || StringUtils.IsBlank(rewardTitleTextKey))
 			{
 				return;
 			}
 			this.Targets = new List<ITargetDescribeAndScore>();
-			string[] array = rewardTitleTextKey.Split(';', StringSplitOptions.None);
-			for (int i = 0; i < array.Length; i++)
+			string[] array2 = rewardTitleTextKey.Split(';', StringSplitOptions.None);
+			for (int i = 0; i < array2.Length; i++)
 			{
-				string[] array2 = array[i].Split(',', StringSplitOptions.None);
-				int num = int.Parse(array2[1]);
+				string[] array3 = array2[i].Split(',', StringSplitOptions.None);
+				int num = int.Parse(array3[1]);
 				AvoidBlockReward? config = ConfigAvoidBlockRewardByRewardId.GetConfig(num, true);
 				if (config != null)
 				{
 					TargetDescribeAndScore item = new TargetDescribeAndScore
 					{
-						DescribeTextKey = array2[0],
+						DescribeTextKey = array3[0],
 						RewardId = num,
 						Score = config.Value.TargetScore
 					};
@@ -266,7 +267,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x06032178 RID: 205176 RVA: 0x00BA1E44 File Offset: 0x00BA0044
+		// Token: 0x06026F09 RID: 159497 RVA: 0x00AE5FEC File Offset: 0x00AE41EC
 		public void SetSettlementData(AvoidBlockSettlementNotify notify)
 		{
 			if (this.ServerData == null)
@@ -282,66 +283,66 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x0401AAEF RID: 109295
+		// Token: 0x04015443 RID: 87107
 		[Nullable(2)]
 		public GeneralLogicTreeContext Context;
 
-		// Token: 0x0401AAF0 RID: 109296
+		// Token: 0x04015444 RID: 87108
 		public SlidingBlocksDefine.EGameEndReason GameEndReason;
 
-		// Token: 0x0401AAF1 RID: 109297
+		// Token: 0x04015445 RID: 87109
 		public SlidingBlocksGameServerData ServerData = new SlidingBlocksGameServerData();
 
-		// Token: 0x0401AAF2 RID: 109298
+		// Token: 0x04015446 RID: 87110
 		public SlidingBlocksGameAudioData AudioData = new SlidingBlocksGameAudioData();
 
-		// Token: 0x0401AAF3 RID: 109299
+		// Token: 0x04015447 RID: 87111
 		[Nullable(2)]
 		public global::Transform OriginTransform;
 
-		// Token: 0x0401AAF4 RID: 109300
+		// Token: 0x04015448 RID: 87112
 		public ETetrisPlayMode PlayMode;
 
-		// Token: 0x0401AAF5 RID: 109301
+		// Token: 0x04015449 RID: 87113
 		public ETetrisDirection Direction;
 
-		// Token: 0x0401AAF6 RID: 109302
+		// Token: 0x0401544A RID: 87114
 		public readonly List<ITetrominoConfig> AvailableTetrominoConfigs = new List<ITetrominoConfig>();
 
-		// Token: 0x0401AAF7 RID: 109303
+		// Token: 0x0401544B RID: 87115
 		public int SequenceEntityPbDataId;
 
-		// Token: 0x0401AAF8 RID: 109304
+		// Token: 0x0401544C RID: 87116
 		public string SequenceEntityInitState;
 
-		// Token: 0x0401AAF9 RID: 109305
+		// Token: 0x0401544D RID: 87117
 		public double Time;
 
-		// Token: 0x0401AAFA RID: 109306
+		// Token: 0x0401544E RID: 87118
 		public float FallSpeed;
 
-		// Token: 0x0401AAFB RID: 109307
+		// Token: 0x0401544F RID: 87119
 		public float PrepareTime;
 
-		// Token: 0x0401AAFC RID: 109308
+		// Token: 0x04015450 RID: 87120
 		public float InitPrepareTime;
 
-		// Token: 0x0401AAFD RID: 109309
+		// Token: 0x04015451 RID: 87121
 		public double Score;
 
-		// Token: 0x0401AAFE RID: 109310
+		// Token: 0x04015452 RID: 87122
 		public int SpeedLevel = 1;
 
-		// Token: 0x0401AAFF RID: 109311
+		// Token: 0x04015453 RID: 87123
 		public double SpeedUpTime;
 
-		// Token: 0x0401AB00 RID: 109312
+		// Token: 0x04015454 RID: 87124
 		public readonly Vector2D GridSize = Vector2D.Create();
 
-		// Token: 0x0401AB01 RID: 109313
+		// Token: 0x04015455 RID: 87125
 		public readonly Vector2D PlayerCoord = Vector2D.Create();
 
-		// Token: 0x0401AB02 RID: 109314
+		// Token: 0x04015456 RID: 87126
 		[Nullable(new byte[]
 		{
 			2,
@@ -349,22 +350,22 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 		})]
 		public IReadOnlyList<ITetrisSingleIndexGrid> PresetBlocks;
 
-		// Token: 0x0401AB03 RID: 109315
+		// Token: 0x04015457 RID: 87127
 		public readonly Dictionary<double, TetrisGridColumn> GridColumns = new Dictionary<double, TetrisGridColumn>();
 
-		// Token: 0x0401AB04 RID: 109316
+		// Token: 0x04015458 RID: 87128
 		public readonly Dictionary<double, TetrisGridRow> GridRows = new Dictionary<double, TetrisGridRow>();
 
-		// Token: 0x0401AB05 RID: 109317
+		// Token: 0x04015459 RID: 87129
 		public readonly List<Tetromino> AllTetrominoList = new List<Tetromino>();
 
-		// Token: 0x0401AB06 RID: 109318
+		// Token: 0x0401545A RID: 87130
 		public readonly List<Tetromino> WaitRemoveTetrominoList = new List<Tetromino>();
 
-		// Token: 0x0401AB07 RID: 109319
+		// Token: 0x0401545B RID: 87131
 		public readonly List<Mino> TickMinos = new List<Mino>();
 
-		// Token: 0x0401AB08 RID: 109320
+		// Token: 0x0401545C RID: 87132
 		[Nullable(new byte[]
 		{
 			2,
@@ -372,26 +373,26 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 		})]
 		public List<ITetrominoConfig> CurSpawnTetrominoList;
 
-		// Token: 0x0401AB09 RID: 109321
+		// Token: 0x0401545D RID: 87133
 		public int CurSpawnTetrominoListIndex;
 
-		// Token: 0x0401AB0A RID: 109322
+		// Token: 0x0401545E RID: 87134
 		[Nullable(2)]
 		private Tetromino CurTetrominoInternal;
 
-		// Token: 0x0401AB0B RID: 109323
+		// Token: 0x0401545F RID: 87135
 		public double NextTetrominoSpawnCd;
 
-		// Token: 0x0401AB0C RID: 109324
+		// Token: 0x04015460 RID: 87136
 		public bool IsProcessLineClear;
 
-		// Token: 0x0401AB0D RID: 109325
+		// Token: 0x04015461 RID: 87137
 		public bool MainLineSequenceStart;
 
-		// Token: 0x0401AB0E RID: 109326
+		// Token: 0x04015462 RID: 87138
 		public bool MainLineGameCompleteTriggered;
 
-		// Token: 0x0401AB0F RID: 109327
+		// Token: 0x04015463 RID: 87139
 		[Nullable(new byte[]
 		{
 			2,
@@ -399,20 +400,20 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 		})]
 		public List<ITargetDescribeAndScore> Targets;
 
-		// Token: 0x0401AB10 RID: 109328
+		// Token: 0x04015464 RID: 87140
 		public int AreaLoopEffectHandle;
 
-		// Token: 0x0401AB11 RID: 109329
+		// Token: 0x04015465 RID: 87141
 		public int AreaLoop2EffectHandle;
 
-		// Token: 0x0401AB12 RID: 109330
+		// Token: 0x04015466 RID: 87142
 		public int CharacterOutlineEffectHandle;
 
-		// Token: 0x0401AB13 RID: 109331
+		// Token: 0x04015467 RID: 87143
 		[Nullable(2)]
 		public ItemMaterialControllerActorData CubeDestroyEffect;
 
-		// Token: 0x0401AB14 RID: 109332
+		// Token: 0x04015468 RID: 87144
 		public readonly double GridMinX = 0.5;
 	}
 }

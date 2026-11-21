@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020019CC RID: 6604
+// Token: 0x02000E8B RID: 3723
 public class TipsWeaponItem : UiPanelBase
 {
-	// Token: 0x0600C0CA RID: 49354 RVA: 0x002B7EEC File Offset: 0x002B60EC
+	// Token: 0x060094D7 RID: 38103 RVA: 0x002C2EB8 File Offset: 0x002C10B8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class TipsWeaponItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600C0CB RID: 49355 RVA: 0x002B7F88 File Offset: 0x002B6188
+	// Token: 0x060094D8 RID: 38104 RVA: 0x002C2F54 File Offset: 0x002C1154
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TipsWeaponItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -37,7 +37,7 @@ public class TipsWeaponItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C0CC RID: 49356 RVA: 0x002B7FCC File Offset: 0x002B61CC
+	// Token: 0x060094D9 RID: 38105 RVA: 0x002C2F98 File Offset: 0x002C1198
 	[NullableContext(1)]
 	public void UpdateItem(WeaponConf weaponConfig, int resonanceLevel, string descriptionText)
 	{
@@ -59,7 +59,7 @@ public class TipsWeaponItem : UiPanelBase
 		UiComponentUtil.SetStarActiveNew(this.StarItemList.ToArray(), 0, null, false);
 	}
 
-	// Token: 0x040056B0 RID: 22192
+	// Token: 0x04005762 RID: 22370
 	[Nullable(new byte[]
 	{
 		2,
@@ -67,20 +67,20 @@ public class TipsWeaponItem : UiPanelBase
 	})]
 	private List<CSharpScript.Game.Module.RoleUi.StarItem> StarItemList;
 
-	// Token: 0x02007EF1 RID: 32497
+	// Token: 0x02007080 RID: 28800
 	private enum ETipsWeaponItemDefine
 	{
-		// Token: 0x0402979C RID: 169884
+		// Token: 0x04024AD9 RID: 150233
 		DescribeText = 8,
-		// Token: 0x0402979D RID: 169885
+		// Token: 0x04024ADA RID: 150234
 		ResonanceLevelText = 0,
-		// Token: 0x0402979E RID: 169886
+		// Token: 0x04024ADB RID: 150235
 		ResonanceDescribeText = 7,
-		// Token: 0x0402979F RID: 169887
+		// Token: 0x04024ADC RID: 150236
 		SkillNameText = 1,
-		// Token: 0x040297A0 RID: 169888
+		// Token: 0x04024ADD RID: 150237
 		PanelStar = 3,
-		// Token: 0x040297A1 RID: 169889
+		// Token: 0x04024ADE RID: 150238
 		WeaponLevelText = 2
 	}
 }

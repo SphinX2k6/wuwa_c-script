@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200452B RID: 17707
+	// Token: 0x02004993 RID: 18835
 	public class IMultiplayerRefreshT
 	{
-		// Token: 0x17007D9A RID: 32154
-		// (get) Token: 0x0601AA0B RID: 109067 RVA: 0x003CCFEC File Offset: 0x003CB1EC
-		// (set) Token: 0x0601AA0C RID: 109068 RVA: 0x003CCFF4 File Offset: 0x003CB1F4
+		// Token: 0x170083DB RID: 33755
+		// (get) Token: 0x0601C1E0 RID: 115168 RVA: 0x003F9288 File Offset: 0x003F7488
+		// (set) Token: 0x0601C1E1 RID: 115169 RVA: 0x003F9290 File Offset: 0x003F7490
 		public int CompletedRefreshTime { get; set; }
 
-		// Token: 0x17007D9B RID: 32155
-		// (get) Token: 0x0601AA0D RID: 109069 RVA: 0x003CCFFD File Offset: 0x003CB1FD
-		// (set) Token: 0x0601AA0E RID: 109070 RVA: 0x003CD005 File Offset: 0x003CB205
+		// Token: 0x170083DC RID: 33756
+		// (get) Token: 0x0601C1E2 RID: 115170 RVA: 0x003F9299 File Offset: 0x003F7499
+		// (set) Token: 0x0601C1E3 RID: 115171 RVA: 0x003F92A1 File Offset: 0x003F74A1
 		public int AllPlayerAwardedRefreshTime { get; set; }
 
-		// Token: 0x17007D9C RID: 32156
-		// (get) Token: 0x0601AA0F RID: 109071 RVA: 0x003CD00E File Offset: 0x003CB20E
-		// (set) Token: 0x0601AA10 RID: 109072 RVA: 0x003CD016 File Offset: 0x003CB216
+		// Token: 0x170083DD RID: 33757
+		// (get) Token: 0x0601C1E4 RID: 115172 RVA: 0x003F92AA File Offset: 0x003F74AA
+		// (set) Token: 0x0601C1E5 RID: 115173 RVA: 0x003F92B2 File Offset: 0x003F74B2
 		public int AnyPlayerAwardedRefreshTime { get; set; }
 
-		// Token: 0x17007D9D RID: 32157
-		// (get) Token: 0x0601AA11 RID: 109073 RVA: 0x003CD01F File Offset: 0x003CB21F
-		// (set) Token: 0x0601AA12 RID: 109074 RVA: 0x003CD027 File Offset: 0x003CB227
+		// Token: 0x170083DE RID: 33758
+		// (get) Token: 0x0601C1E6 RID: 115174 RVA: 0x003F92BB File Offset: 0x003F74BB
+		// (set) Token: 0x0601C1E7 RID: 115175 RVA: 0x003F92C3 File Offset: 0x003F74C3
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601AA13 RID: 109075 RVA: 0x003CD030 File Offset: 0x003CB230
+		// Token: 0x0601C1E8 RID: 115176 RVA: 0x003F92CC File Offset: 0x003F74CC
 		public IMultiplayerRefreshT()
 		{
 			this.CompletedRefreshTime = 0;

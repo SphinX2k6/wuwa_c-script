@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 {
-	// Token: 0x020066E9 RID: 26345
+	// Token: 0x02005639 RID: 22073
 	public class DropCatchRoleInfoItem : GridProxyAbstract<float>
 	{
-		// Token: 0x06041D59 RID: 269657 RVA: 0x00FF7370 File Offset: 0x00FF5570
+		// Token: 0x060368A5 RID: 223397 RVA: 0x00F38774 File Offset: 0x00F36974
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,20 +21,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 			};
 		}
 
-		// Token: 0x06041D5A RID: 269658 RVA: 0x00FF73E0 File Offset: 0x00FF55E0
+		// Token: 0x060368A6 RID: 223398 RVA: 0x00F387E4 File Offset: 0x00F369E4
 		protected override void OnStart()
 		{
 			this.ValueLayout = new GenericLayout<DropCatchRoleBarItem, int>(base.GetGridLayout(2), new Func<DropCatchRoleBarItem>(this.InitBarItem), null, false, true);
 		}
 
-		// Token: 0x06041D5B RID: 269659 RVA: 0x00FF7403 File Offset: 0x00FF5603
+		// Token: 0x060368A7 RID: 223399 RVA: 0x00F38807 File Offset: 0x00F36A07
 		[NullableContext(1)]
 		private DropCatchRoleBarItem InitBarItem()
 		{
 			return new DropCatchRoleBarItem();
 		}
 
-		// Token: 0x06041D5C RID: 269660 RVA: 0x00FF740C File Offset: 0x00FF560C
+		// Token: 0x060368A8 RID: 223400 RVA: 0x00F38810 File Offset: 0x00F36A10
 		public override void Refresh(float curValue, bool isSelected, int gridIndex)
 		{
 			List<int> list = new List<int>();
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 			valueLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x040224B0 RID: 140464
+		// Token: 0x0401CD09 RID: 118025
 		[Nullable(new byte[]
 		{
 			2,
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 		})]
 		private GenericLayout<DropCatchRoleBarItem, int> ValueLayout;
 
-		// Token: 0x040224B1 RID: 140465
+		// Token: 0x0401CD0A RID: 118026
 		private const int MAX_ROLE_INFO_VALUE = 5;
 	}
 }

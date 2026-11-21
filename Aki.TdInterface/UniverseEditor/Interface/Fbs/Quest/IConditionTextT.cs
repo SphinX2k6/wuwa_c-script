@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DB9 RID: 15801
+	// Token: 0x020041D0 RID: 16848
 	public class IConditionTextT
 	{
-		// Token: 0x17006D11 RID: 27921
-		// (get) Token: 0x060160B3 RID: 90291 RVA: 0x0033027E File Offset: 0x0032E47E
-		// (set) Token: 0x060160B4 RID: 90292 RVA: 0x00330286 File Offset: 0x0032E486
+		// Token: 0x170072CB RID: 29387
+		// (get) Token: 0x060175EC RID: 95724 RVA: 0x00357606 File Offset: 0x00355806
+		// (set) Token: 0x060175ED RID: 95725 RVA: 0x0035760E File Offset: 0x0035580E
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17006D12 RID: 27922
-		// (get) Token: 0x060160B5 RID: 90293 RVA: 0x0033028F File Offset: 0x0032E48F
-		// (set) Token: 0x060160B6 RID: 90294 RVA: 0x00330297 File Offset: 0x0032E497
+		// Token: 0x170072CC RID: 29388
+		// (get) Token: 0x060175EE RID: 95726 RVA: 0x00357617 File Offset: 0x00355817
+		// (set) Token: 0x060175EF RID: 95727 RVA: 0x0035761F File Offset: 0x0035581F
 		public string TidTitle { get; set; }
 
-		// Token: 0x17006D13 RID: 27923
-		// (get) Token: 0x060160B7 RID: 90295 RVA: 0x003302A0 File Offset: 0x0032E4A0
-		// (set) Token: 0x060160B8 RID: 90296 RVA: 0x003302A8 File Offset: 0x0032E4A8
+		// Token: 0x170072CD RID: 29389
+		// (get) Token: 0x060175F0 RID: 95728 RVA: 0x00357628 File Offset: 0x00355828
+		// (set) Token: 0x060175F1 RID: 95729 RVA: 0x00357630 File Offset: 0x00355830
 		public TQuestScheduleUnion QuestScheduleType { get; set; }
 
-		// Token: 0x17006D14 RID: 27924
-		// (get) Token: 0x060160B9 RID: 90297 RVA: 0x003302B1 File Offset: 0x0032E4B1
-		// (set) Token: 0x060160BA RID: 90298 RVA: 0x003302B9 File Offset: 0x0032E4B9
+		// Token: 0x170072CE RID: 29390
+		// (get) Token: 0x060175F2 RID: 95730 RVA: 0x00357639 File Offset: 0x00355839
+		// (set) Token: 0x060175F3 RID: 95731 RVA: 0x00357641 File Offset: 0x00355841
 		public IProgressBarT ProgressBar { get; set; }
 
-		// Token: 0x060160BB RID: 90299 RVA: 0x003302C2 File Offset: 0x0032E4C2
+		// Token: 0x060175F4 RID: 95732 RVA: 0x0035764A File Offset: 0x0035584A
 		public IConditionTextT()
 		{
 			this.Condition = null;

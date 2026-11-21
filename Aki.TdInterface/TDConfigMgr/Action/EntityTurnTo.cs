@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001662 RID: 5730
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017D2 RID: 6098
 	public class EntityTurnTo : ActionParams
 	{
-		// Token: 0x06007CEB RID: 31979 RVA: 0x0012C108 File Offset: 0x0012A308
+		// Token: 0x060083C9 RID: 33737 RVA: 0x0013B1B4 File Offset: 0x001393B4
 		private EntityTurnTo_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007CEC RID: 31980 RVA: 0x0012C140 File Offset: 0x0012A340
+		// Token: 0x060083CA RID: 33738 RVA: 0x0013B1EC File Offset: 0x001393EC
 		public static EntityTurnTo Create([Nullable(2)] EntityTurnTo instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CED RID: 31981 RVA: 0x0012C153 File Offset: 0x0012A353
+		// Token: 0x060083CB RID: 33739 RVA: 0x0013B1FF File Offset: 0x001393FF
 		public static EntityTurnTo CreateFromSetValue([Nullable(2)] EntityTurnTo_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CEE RID: 31982 RVA: 0x0012C166 File Offset: 0x0012A366
+		// Token: 0x060083CC RID: 33740 RVA: 0x0013B212 File Offset: 0x00139412
 		public EntityTurnTo_SetValue ToSetValue()
 		{
 			return new EntityTurnTo_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700293D RID: 10557
-		// (get) Token: 0x06007CEF RID: 31983 RVA: 0x0012C191 File Offset: 0x0012A391
-		// (set) Token: 0x06007CF0 RID: 31984 RVA: 0x0012C1BC File Offset: 0x0012A3BC
+		// Token: 0x17002B28 RID: 11048
+		// (get) Token: 0x060083CD RID: 33741 RVA: 0x0013B23D File Offset: 0x0013943D
+		// (set) Token: 0x060083CE RID: 33742 RVA: 0x0013B268 File Offset: 0x00139468
 		public virtual int EntityId
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700293E RID: 10558
-		// (get) Token: 0x06007CF1 RID: 31985 RVA: 0x0012C1CA File Offset: 0x0012A3CA
-		// (set) Token: 0x06007CF2 RID: 31986 RVA: 0x0012C1F1 File Offset: 0x0012A3F1
+		// Token: 0x17002B29 RID: 11049
+		// (get) Token: 0x060083CF RID: 33743 RVA: 0x0013B276 File Offset: 0x00139476
+		// (set) Token: 0x060083D0 RID: 33744 RVA: 0x0013B29D File Offset: 0x0013949D
 		public virtual IActorTurnToData Target
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700293F RID: 10559
-		// (get) Token: 0x06007CF3 RID: 31987 RVA: 0x0012C200 File Offset: 0x0012A400
-		// (set) Token: 0x06007CF4 RID: 31988 RVA: 0x0012C23A File Offset: 0x0012A43A
+		// Token: 0x17002B2A RID: 11050
+		// (get) Token: 0x060083D1 RID: 33745 RVA: 0x0013B2AC File Offset: 0x001394AC
+		// (set) Token: 0x060083D2 RID: 33746 RVA: 0x0013B2E6 File Offset: 0x001394E6
 		public virtual bool? UseLookAtForSmallAngle
 		{
 			get
@@ -132,11 +130,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004CC1 RID: 19649
+		// Token: 0x040050BC RID: 20668
 		[Nullable(2)]
 		protected new EntityTurnTo FbInstance;
 
-		// Token: 0x04004CC2 RID: 19650
+		// Token: 0x040050BD RID: 20669
 		[Nullable(2)]
 		protected EntityTurnTo_SetValue PocoInterface;
 	}

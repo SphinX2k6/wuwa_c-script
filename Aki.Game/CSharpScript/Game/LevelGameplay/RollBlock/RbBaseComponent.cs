@@ -5,12 +5,12 @@ using CSharpScript.Game.NewWorld.SceneItem.Jigsaw;
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock
 {
-	// Token: 0x02006A9F RID: 27295
+	// Token: 0x02005BFC RID: 23548
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RbBaseComponent : EntityComponent
 	{
-		// Token: 0x06043CFE RID: 277758 RVA: 0x010991E8 File Offset: 0x010973E8
+		// Token: 0x06039D4C RID: 236876 RVA: 0x0103DA30 File Offset: 0x0103BC30
 		public virtual void RegisterToGameplay(int incId)
 		{
 			this.IncId = new int?(incId);
@@ -18,18 +18,18 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			this.OriginRight = RollBlockController.Instance.GetRightVector(this.IncId.Value);
 		}
 
-		// Token: 0x06043CFF RID: 277759 RVA: 0x01099237 File Offset: 0x01097437
+		// Token: 0x06039D4D RID: 236877 RVA: 0x0103DA7F File Offset: 0x0103BC7F
 		public virtual bool IsMoving()
 		{
 			return false;
 		}
 
-		// Token: 0x06043D00 RID: 277760 RVA: 0x0109923A File Offset: 0x0109743A
+		// Token: 0x06039D4E RID: 236878 RVA: 0x0103DA82 File Offset: 0x0103BC82
 		public virtual void OnActualShow()
 		{
 		}
 
-		// Token: 0x06043D01 RID: 277761 RVA: 0x0109923C File Offset: 0x0109743C
+		// Token: 0x06039D4F RID: 236879 RVA: 0x0103DA84 File Offset: 0x0103BC84
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -37,65 +37,50 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 				return false;
 			}
 			RbBaseComponent rbBaseComponent = (RbBaseComponent)componentTemplate;
-			if (base.CanResetComponentProperty("IncId"))
+			this.IncId = rbBaseComponent.IncId;
+			if (rbBaseComponent.OriginForward == null)
 			{
-				this.IncId = rbBaseComponent.IncId;
+				this.OriginForward = null;
 			}
-			if (base.CanResetComponentProperty("OriginForward"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OriginForward), "OriginForward"))
 			{
-				if (rbBaseComponent.OriginForward == null)
-				{
-					this.OriginForward = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.OriginForward), "OriginForward"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("OriginRight"))
+			if (rbBaseComponent.OriginRight == null)
 			{
-				if (rbBaseComponent.OriginRight == null)
-				{
-					this.OriginRight = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.OriginRight), "OriginRight"))
-				{
-					return false;
-				}
+				this.OriginRight = null;
 			}
-			if (base.CanResetComponentProperty("IsMainController"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OriginRight), "OriginRight"))
 			{
-				this.IsMainController = rbBaseComponent.IsMainController;
+				return false;
 			}
-			if (base.CanResetComponentProperty("OccupiedCellIndex"))
+			this.IsMainController = rbBaseComponent.IsMainController;
+			if (rbBaseComponent.OccupiedCellIndex == null)
 			{
-				if (rbBaseComponent.OccupiedCellIndex == null)
-				{
-					this.OccupiedCellIndex = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<JigsawIndex>>(this.OccupiedCellIndex), "OccupiedCellIndex"))
-				{
-					return false;
-				}
+				this.OccupiedCellIndex = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OccupiedCellIndex), "OccupiedCellIndex"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040236D3 RID: 145107
+		// Token: 0x0401E8C5 RID: 125125
 		public int? IncId;
 
-		// Token: 0x040236D4 RID: 145108
+		// Token: 0x0401E8C6 RID: 125126
 		[Nullable(2)]
 		public Vector OriginForward;
 
-		// Token: 0x040236D5 RID: 145109
+		// Token: 0x0401E8C7 RID: 125127
 		[Nullable(2)]
 		public Vector OriginRight;
 
-		// Token: 0x040236D6 RID: 145110
+		// Token: 0x0401E8C8 RID: 125128
 		public bool IsMainController;
 
-		// Token: 0x040236D7 RID: 145111
+		// Token: 0x0401E8C9 RID: 125129
 		public List<JigsawIndex> OccupiedCellIndex = new List<JigsawIndex>();
 	}
 }

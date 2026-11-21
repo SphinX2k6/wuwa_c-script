@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005FA RID: 1530
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000697 RID: 1687
 	public class IPhysHandleConfig
 	{
-		// Token: 0x06002086 RID: 8326 RVA: 0x0005A808 File Offset: 0x00058A08
+		// Token: 0x0600238C RID: 9100 RVA: 0x0006151C File Offset: 0x0005F71C
 		private IPhysHandleConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002087 RID: 8327 RVA: 0x0005A840 File Offset: 0x00058A40
+		// Token: 0x0600238D RID: 9101 RVA: 0x00061554 File Offset: 0x0005F754
 		public static IPhysHandleConfig Create([Nullable(2)] IPhysHandleConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002088 RID: 8328 RVA: 0x0005A853 File Offset: 0x00058A53
+		// Token: 0x0600238E RID: 9102 RVA: 0x00061567 File Offset: 0x0005F767
 		public static IPhysHandleConfig CreateFromSetValue([Nullable(2)] IPhysHandleConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002089 RID: 8329 RVA: 0x0005A866 File Offset: 0x00058A66
+		// Token: 0x0600238F RID: 9103 RVA: 0x0006157A File Offset: 0x0005F77A
 		public IPhysHandleConfig_SetValue ToSetValue()
 		{
 			return new IPhysHandleConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008AB RID: 2219
-		// (get) Token: 0x0600208A RID: 8330 RVA: 0x0005A89D File Offset: 0x00058A9D
-		// (set) Token: 0x0600208B RID: 8331 RVA: 0x0005A8C8 File Offset: 0x00058AC8
+		// Token: 0x17000962 RID: 2402
+		// (get) Token: 0x06002390 RID: 9104 RVA: 0x000615B1 File Offset: 0x0005F7B1
+		// (set) Token: 0x06002391 RID: 9105 RVA: 0x000615DC File Offset: 0x0005F7DC
 		public virtual int PhysHandleLinearDamping
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008AC RID: 2220
-		// (get) Token: 0x0600208C RID: 8332 RVA: 0x0005A8D6 File Offset: 0x00058AD6
-		// (set) Token: 0x0600208D RID: 8333 RVA: 0x0005A901 File Offset: 0x00058B01
+		// Token: 0x17000963 RID: 2403
+		// (get) Token: 0x06002392 RID: 9106 RVA: 0x000615EA File Offset: 0x0005F7EA
+		// (set) Token: 0x06002393 RID: 9107 RVA: 0x00061615 File Offset: 0x0005F815
 		public virtual int PhysHandleAngularStiffness
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008AD RID: 2221
-		// (get) Token: 0x0600208E RID: 8334 RVA: 0x0005A90F File Offset: 0x00058B0F
-		// (set) Token: 0x0600208F RID: 8335 RVA: 0x0005A93A File Offset: 0x00058B3A
+		// Token: 0x17000964 RID: 2404
+		// (get) Token: 0x06002394 RID: 9108 RVA: 0x00061623 File Offset: 0x0005F823
+		// (set) Token: 0x06002395 RID: 9109 RVA: 0x0006164E File Offset: 0x0005F84E
 		public virtual int PhysHandleLinearStiffness
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008AE RID: 2222
-		// (get) Token: 0x06002090 RID: 8336 RVA: 0x0005A948 File Offset: 0x00058B48
-		// (set) Token: 0x06002091 RID: 8337 RVA: 0x0005A973 File Offset: 0x00058B73
+		// Token: 0x17000965 RID: 2405
+		// (get) Token: 0x06002396 RID: 9110 RVA: 0x0006165C File Offset: 0x0005F85C
+		// (set) Token: 0x06002397 RID: 9111 RVA: 0x00061687 File Offset: 0x0005F887
 		public virtual int PhysHandleAngularDamping
 		{
 			get
@@ -154,11 +152,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040016CF RID: 5839
+		// Token: 0x040018C1 RID: 6337
 		[Nullable(2)]
 		protected IPhysHandleConfig FbInstance;
 
-		// Token: 0x040016D0 RID: 5840
+		// Token: 0x040018C2 RID: 6338
 		[Nullable(2)]
 		protected IPhysHandleConfig_SetValue PocoInterface;
 	}

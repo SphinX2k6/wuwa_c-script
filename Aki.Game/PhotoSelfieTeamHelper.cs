@@ -7,10 +7,10 @@ using CSharpScript.Game.Common.Event;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020025A5 RID: 9637
+// Token: 0x02001A90 RID: 6800
 public static class PhotoSelfieTeamHelper
 {
-	// Token: 0x06013845 RID: 79941 RVA: 0x004E064C File Offset: 0x004DE84C
+	// Token: 0x06010D27 RID: 68903 RVA: 0x004EF180 File Offset: 0x004ED380
 	public static UniTask<bool> EnterSelfPortrait()
 	{
 		PhotoSelfieTeamHelper.<EnterSelfPortrait>d__0 <EnterSelfPortrait>d__;
@@ -20,7 +20,7 @@ public static class PhotoSelfieTeamHelper
 		return <EnterSelfPortrait>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013846 RID: 79942 RVA: 0x004E0688 File Offset: 0x004DE888
+	// Token: 0x06010D28 RID: 68904 RVA: 0x004EF1BC File Offset: 0x004ED3BC
 	public static UniTask<bool> ExitSelfPortrait()
 	{
 		PhotoSelfieTeamHelper.<ExitSelfPortrait>d__1 <ExitSelfPortrait>d__;
@@ -30,7 +30,7 @@ public static class PhotoSelfieTeamHelper
 		return <ExitSelfPortrait>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013847 RID: 79943 RVA: 0x004E06C4 File Offset: 0x004DE8C4
+	// Token: 0x06010D29 RID: 68905 RVA: 0x004EF1F8 File Offset: 0x004ED3F8
 	private static int? GetCurrentRoleId()
 	{
 		PlayerInfoModel instance = PlayerInfoModel.Instance;
@@ -57,7 +57,7 @@ public static class PhotoSelfieTeamHelper
 		return new int?(currentRole.RoleId);
 	}
 
-	// Token: 0x06013848 RID: 79944 RVA: 0x004E0750 File Offset: 0x004DE950
+	// Token: 0x06010D2A RID: 68906 RVA: 0x004EF284 File Offset: 0x004ED484
 	private static UniTask<bool> SendChangeRoleRequest(SelfPortraitOpState state)
 	{
 		PhotoSelfieTeamHelper.<SendChangeRoleRequest>d__3 <SendChangeRoleRequest>d__;
@@ -68,19 +68,19 @@ public static class PhotoSelfieTeamHelper
 		return <SendChangeRoleRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x02008B9C RID: 35740
+	// Token: 0x02007D24 RID: 32036
 	[NullableContext(2)]
 	[Nullable(0)]
 	private class SettleWaiter
 	{
-		// Token: 0x0604B2D4 RID: 307924 RVA: 0x013B4380 File Offset: 0x013B2580
+		// Token: 0x060416A5 RID: 267941 RVA: 0x01357D78 File Offset: 0x01355F78
 		[NullableContext(1)]
 		public SettleWaiter(EntityHandle entityHandle)
 		{
 			this.EntityHandle = entityHandle;
 		}
 
-		// Token: 0x0604B2D5 RID: 307925 RVA: 0x013B438F File Offset: 0x013B258F
+		// Token: 0x060416A6 RID: 267942 RVA: 0x01357D87 File Offset: 0x01355F87
 		public void Start()
 		{
 			if (!PhotographModel.Instance.IsOpenPhotograph)
@@ -98,7 +98,7 @@ public static class PhotoSelfieTeamHelper
 			}, null, null);
 		}
 
-		// Token: 0x0604B2D6 RID: 307926 RVA: 0x013B43C8 File Offset: 0x013B25C8
+		// Token: 0x060416A7 RID: 267943 RVA: 0x01357DC0 File Offset: 0x01355FC0
 		private void RecheckInAirBeforeFinish()
 		{
 			if (this.TryWaitLanding())
@@ -109,7 +109,7 @@ public static class PhotoSelfieTeamHelper
 			this.Finish(null);
 		}
 
-		// Token: 0x0604B2D7 RID: 307927 RVA: 0x013B4404 File Offset: 0x013B2604
+		// Token: 0x060416A8 RID: 267944 RVA: 0x01357DFC File Offset: 0x01355FFC
 		private bool TryWaitLanding()
 		{
 			WorldEntity entity = this.EntityHandle.Entity;
@@ -124,7 +124,7 @@ public static class PhotoSelfieTeamHelper
 			return true;
 		}
 
-		// Token: 0x0604B2D8 RID: 307928 RVA: 0x013B44A7 File Offset: 0x013B26A7
+		// Token: 0x060416A9 RID: 267945 RVA: 0x01357E9F File Offset: 0x0135609F
 		private void OnInAirTagSwitched(int _, bool tagExists)
 		{
 			if (tagExists)
@@ -134,13 +134,13 @@ public static class PhotoSelfieTeamHelper
 			this.Finish("自拍切主角:新角色已落地,解除切换标记");
 		}
 
-		// Token: 0x0604B2D9 RID: 307929 RVA: 0x013B44B8 File Offset: 0x013B26B8
+		// Token: 0x060416AA RID: 267946 RVA: 0x01357EB0 File Offset: 0x013560B0
 		private void OnSettleTimeout(float _)
 		{
 			this.Finish("自拍切主角:等待新角色落地超时");
 		}
 
-		// Token: 0x0604B2DA RID: 307930 RVA: 0x013B44C8 File Offset: 0x013B26C8
+		// Token: 0x060416AB RID: 267947 RVA: 0x01357EC0 File Offset: 0x013560C0
 		private void Finish(string reason = null)
 		{
 			if (this.IsFinished)
@@ -180,30 +180,30 @@ public static class PhotoSelfieTeamHelper
 			PhotographController.Instance.OnSelfPortraitSettleTimeout();
 		}
 
-		// Token: 0x0402D53D RID: 185661
+		// Token: 0x04028852 RID: 165970
 		[Nullable(1)]
 		private readonly EntityHandle EntityHandle;
 
-		// Token: 0x0402D53E RID: 185662
+		// Token: 0x04028853 RID: 165971
 		private bool IsFinished;
 
-		// Token: 0x0402D53F RID: 185663
+		// Token: 0x04028854 RID: 165972
 		private ITagTask TagTask;
 
-		// Token: 0x0402D540 RID: 185664
+		// Token: 0x04028855 RID: 165973
 		private TimerHandle TimeoutHandle;
 	}
 
-	// Token: 0x02008B9D RID: 35741
+	// Token: 0x02007D25 RID: 32037
 	private class ChangeRoleWaiter
 	{
-		// Token: 0x0604B2DC RID: 307932 RVA: 0x013B45EB File Offset: 0x013B27EB
+		// Token: 0x060416AD RID: 267949 RVA: 0x01357FE3 File Offset: 0x013561E3
 		public ChangeRoleWaiter(SelfPortraitOpState state)
 		{
 			this.State = state;
 		}
 
-		// Token: 0x0604B2DD RID: 307933 RVA: 0x013B4605 File Offset: 0x013B2805
+		// Token: 0x060416AE RID: 267950 RVA: 0x01357FFD File Offset: 0x013561FD
 		public UniTask<bool> StartWait()
 		{
 			EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRoleDone));
@@ -211,7 +211,7 @@ public static class PhotoSelfieTeamHelper
 			return this.Promise.Promise;
 		}
 
-		// Token: 0x0604B2DE RID: 307934 RVA: 0x013B4634 File Offset: 0x013B2834
+		// Token: 0x060416AF RID: 267951 RVA: 0x0135802C File Offset: 0x0135622C
 		public void RestartTimeout()
 		{
 			if (this.IsFinished)
@@ -222,7 +222,7 @@ public static class PhotoSelfieTeamHelper
 			this.TimeoutHandle = TimerSystem.Instance.Delay(new TTimerAction(this.OnWaitTimeout), (float)ConfigCommonParamById.GetIntConfig("WAIT_CHANGE_ROLE_TIMEOUT_MS").GetValueOrDefault(60000), null, "PhotoSelfieTeamHelper.ChangeRoleWaiter", true, 1f);
 		}
 
-		// Token: 0x0604B2DF RID: 307935 RVA: 0x013B469C File Offset: 0x013B289C
+		// Token: 0x060416B0 RID: 267952 RVA: 0x01358094 File Offset: 0x01356294
 		public void FinishWait(bool success)
 		{
 			if (this.IsFinished)
@@ -235,7 +235,7 @@ public static class PhotoSelfieTeamHelper
 			this.Promise.SetResult(success);
 		}
 
-		// Token: 0x0604B2E0 RID: 307936 RVA: 0x013B46F4 File Offset: 0x013B28F4
+		// Token: 0x060416B1 RID: 267953 RVA: 0x013580EC File Offset: 0x013562EC
 		[NullableContext(1)]
 		private void OnChangeRoleDone(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle _)
 		{
@@ -263,7 +263,7 @@ public static class PhotoSelfieTeamHelper
 			this.FinishWait(true);
 		}
 
-		// Token: 0x0604B2E1 RID: 307937 RVA: 0x013B4750 File Offset: 0x013B2950
+		// Token: 0x060416B2 RID: 267954 RVA: 0x01358148 File Offset: 0x01356348
 		private void OnWaitTimeout(float _)
 		{
 			if (this.IsFinished)
@@ -280,17 +280,17 @@ public static class PhotoSelfieTeamHelper
 			this.FinishWait(false);
 		}
 
-		// Token: 0x0402D541 RID: 185665
+		// Token: 0x04028856 RID: 165974
 		private readonly SelfPortraitOpState State;
 
-		// Token: 0x0402D542 RID: 185666
+		// Token: 0x04028857 RID: 165975
 		[Nullable(1)]
 		private readonly CustomPromise<bool> Promise = new CustomPromise<bool>();
 
-		// Token: 0x0402D543 RID: 185667
+		// Token: 0x04028858 RID: 165976
 		private bool IsFinished;
 
-		// Token: 0x0402D544 RID: 185668
+		// Token: 0x04028859 RID: 165977
 		[Nullable(2)]
 		private TimerHandle TimeoutHandle;
 	}

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026F9 RID: 9977
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029BF RID: 10687
 	public class IChangeAnimalEmotionBubble : IExecClientBattleActionType
 	{
-		// Token: 0x0600DEBF RID: 57023 RVA: 0x00210998 File Offset: 0x0020EB98
+		// Token: 0x0600ECA7 RID: 60583 RVA: 0x0022D300 File Offset: 0x0022B500
 		public static IChangeAnimalEmotionBubble Create(IChangeAnimalEmotionBubble? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700428F RID: 17039
-		// (get) Token: 0x0600DEC0 RID: 57024 RVA: 0x002109B7 File Offset: 0x0020EBB7
+		// Token: 0x170045D7 RID: 17879
+		// (get) Token: 0x0600ECA8 RID: 60584 RVA: 0x0022D31F File Offset: 0x0022B51F
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004290 RID: 17040
-		// (get) Token: 0x0600DEC1 RID: 57025 RVA: 0x002109C4 File Offset: 0x0020EBC4
+		// Token: 0x170045D8 RID: 17880
+		// (get) Token: 0x0600ECA9 RID: 60585 RVA: 0x0022D32C File Offset: 0x0022B52C
 		public virtual List<int> AnimalEntityIds
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004291 RID: 17041
-		// (get) Token: 0x0600DEC2 RID: 57026 RVA: 0x00210A28 File Offset: 0x0020EC28
+		// Token: 0x170045D9 RID: 17881
+		// (get) Token: 0x0600ECAA RID: 60586 RVA: 0x0022D390 File Offset: 0x0022B590
 		public virtual string MontagePath
 		{
 			get
@@ -64,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004292 RID: 17042
-		// (get) Token: 0x0600DEC3 RID: 57027 RVA: 0x00210A35 File Offset: 0x0020EC35
+		// Token: 0x170045DA RID: 17882
+		// (get) Token: 0x0600ECAB RID: 60587 RVA: 0x0022D39D File Offset: 0x0022B59D
 		public virtual string EmotionName
 		{
 			get
@@ -74,13 +71,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BA3 RID: 31651
+		// Token: 0x04008247 RID: 33351
 		private IChangeAnimalEmotionBubble Instance;
 
-		// Token: 0x04007BA4 RID: 31652
+		// Token: 0x04008248 RID: 33352
 		private List<int> _AnimalEntityIdsCache;
 
-		// Token: 0x04007BA5 RID: 31653
+		// Token: 0x04008249 RID: 33353
 		private bool _AnimalEntityIdsInited;
 	}
 }

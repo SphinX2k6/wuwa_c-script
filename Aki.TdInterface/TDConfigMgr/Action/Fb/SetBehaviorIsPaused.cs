@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025BA RID: 9658
+	// Token: 0x02002869 RID: 10345
 	public class SetBehaviorIsPaused : ActionParams
 	{
-		// Token: 0x0600D943 RID: 55619 RVA: 0x002069D6 File Offset: 0x00204BD6
-		[NullableContext(1)]
+		// Token: 0x0600E6BD RID: 59069 RVA: 0x002226AA File Offset: 0x002208AA
 		public static SetBehaviorIsPaused Create(ISetBehaviorIsPaused? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F91 RID: 16273
-		// (get) Token: 0x0600D944 RID: 55620 RVA: 0x002069F5 File Offset: 0x00204BF5
+		// Token: 0x17004299 RID: 17049
+		// (get) Token: 0x0600E6BE RID: 59070 RVA: 0x002226C9 File Offset: 0x002208C9
 		public virtual bool IsPaused
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078AE RID: 30894
+		// Token: 0x04007F15 RID: 32533
 		private ISetBehaviorIsPaused Instance;
 	}
 }

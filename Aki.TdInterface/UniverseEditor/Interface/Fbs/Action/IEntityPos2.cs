@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066E7 RID: 26343
+	// Token: 0x02006D67 RID: 28007
 	public struct IEntityPos2 : IFlatbufferObject
 	{
-		// Token: 0x1700C3C0 RID: 50112
-		// (get) Token: 0x0602DCD9 RID: 187609 RVA: 0x00643921 File Offset: 0x00641B21
+		// Token: 0x1700CD76 RID: 52598
+		// (get) Token: 0x06030516 RID: 197910 RVA: 0x00690E95 File Offset: 0x0068F095
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DCDA RID: 187610 RVA: 0x0064392E File Offset: 0x00641B2E
+		// Token: 0x06030517 RID: 197911 RVA: 0x00690EA2 File Offset: 0x0068F0A2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DCDB RID: 187611 RVA: 0x00643938 File Offset: 0x00641B38
+		// Token: 0x06030518 RID: 197912 RVA: 0x00690EAC File Offset: 0x0068F0AC
 		public static IEntityPos2 GetRootAsIEntityPos2(ByteBuffer _bb)
 		{
 			return IEntityPos2.GetRootAsIEntityPos2(_bb, default(IEntityPos2));
 		}
 
-		// Token: 0x0602DCDC RID: 187612 RVA: 0x00643954 File Offset: 0x00641B54
+		// Token: 0x06030519 RID: 197913 RVA: 0x00690EC8 File Offset: 0x0068F0C8
 		public static IEntityPos2 GetRootAsIEntityPos2(ByteBuffer _bb, IEntityPos2 obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DCDD RID: 187613 RVA: 0x00643971 File Offset: 0x00641B71
+		// Token: 0x0603051A RID: 197914 RVA: 0x00690EE5 File Offset: 0x0068F0E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DCDE RID: 187614 RVA: 0x00643980 File Offset: 0x00641B80
+		// Token: 0x0603051B RID: 197915 RVA: 0x00690EF4 File Offset: 0x0068F0F4
 		public IEntityPos2 __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C3C1 RID: 50113
-		// (get) Token: 0x0602DCDF RID: 187615 RVA: 0x00643990 File Offset: 0x00641B90
+		// Token: 0x1700CD77 RID: 52599
+		// (get) Token: 0x0603051C RID: 197916 RVA: 0x00690F04 File Offset: 0x0068F104
 		public EPos2 Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C3C2 RID: 50114
-		// (get) Token: 0x0602DCE0 RID: 187616 RVA: 0x006439CC File Offset: 0x00641BCC
+		// Token: 0x1700CD78 RID: 52600
+		// (get) Token: 0x0603051D RID: 197917 RVA: 0x00690F40 File Offset: 0x0068F140
 		public int EntityId
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C3C3 RID: 50115
-		// (get) Token: 0x0602DCE1 RID: 187617 RVA: 0x00643A08 File Offset: 0x00641C08
+		// Token: 0x1700CD79 RID: 52601
+		// (get) Token: 0x0603051E RID: 197918 RVA: 0x00690F7C File Offset: 0x0068F17C
 		public IVectorInfo? Offset
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DCE2 RID: 187618 RVA: 0x00643A65 File Offset: 0x00641C65
+		// Token: 0x0603051F RID: 197919 RVA: 0x00690FD9 File Offset: 0x0068F1D9
 		public static Offset<IEntityPos2> CreateIEntityPos2(FlatBufferBuilder builder, EPos2 Type = EPos2.Player, int EntityId = 0, Offset<IVectorInfo> OffsetOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEntityPos2.EndIEntityPos2(builder);
 		}
 
-		// Token: 0x0602DCE3 RID: 187619 RVA: 0x00643A89 File Offset: 0x00641C89
+		// Token: 0x06030520 RID: 197920 RVA: 0x00690FFD File Offset: 0x0068F1FD
 		public static void StartIEntityPos2(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602DCE4 RID: 187620 RVA: 0x00643A92 File Offset: 0x00641C92
+		// Token: 0x06030521 RID: 197921 RVA: 0x00691006 File Offset: 0x0068F206
 		public static void AddType(FlatBufferBuilder builder, EPos2 type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602DCE5 RID: 187621 RVA: 0x00643A9D File Offset: 0x00641C9D
+		// Token: 0x06030522 RID: 197922 RVA: 0x00691011 File Offset: 0x0068F211
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x0602DCE6 RID: 187622 RVA: 0x00643AA8 File Offset: 0x00641CA8
+		// Token: 0x06030523 RID: 197923 RVA: 0x0069101C File Offset: 0x0068F21C
 		public static void AddOffset(FlatBufferBuilder builder, Offset<IVectorInfo> offsetOffset)
 		{
 			builder.AddOffset(2, offsetOffset.Value, 0);
 		}
 
-		// Token: 0x0602DCE7 RID: 187623 RVA: 0x00643AB8 File Offset: 0x00641CB8
+		// Token: 0x06030524 RID: 197924 RVA: 0x0069102C File Offset: 0x0068F22C
 		public static Offset<IEntityPos2> EndIEntityPos2(FlatBufferBuilder builder)
 		{
 			return new Offset<IEntityPos2>(builder.EndTable());
 		}
 
-		// Token: 0x0602DCE8 RID: 187624 RVA: 0x00643AC8 File Offset: 0x00641CC8
+		// Token: 0x06030525 RID: 197925 RVA: 0x0069103C File Offset: 0x0068F23C
 		public IEntityPos2T UnPack()
 		{
 			IEntityPos2T entityPos2T = new IEntityPos2T();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return entityPos2T;
 		}
 
-		// Token: 0x0602DCE9 RID: 187625 RVA: 0x00643AE4 File Offset: 0x00641CE4
+		// Token: 0x06030526 RID: 197926 RVA: 0x00691058 File Offset: 0x0068F258
 		public void UnPackTo(IEntityPos2T _o)
 		{
 			_o.Type = this.Type;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.Offset = ((this.Offset != null) ? this.Offset.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602DCEA RID: 187626 RVA: 0x00643B38 File Offset: 0x00641D38
+		// Token: 0x06030527 RID: 197927 RVA: 0x006910AC File Offset: 0x0068F2AC
 		public static Offset<IEntityPos2> Pack(FlatBufferBuilder builder, IEntityPos2T _o)
 		{
 			if (_o == null)
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEntityPos2.CreateIEntityPos2(builder, _o.Type, _o.EntityId, offsetOffset);
 		}
 
-		// Token: 0x04010DB9 RID: 69049
+		// Token: 0x04011BE8 RID: 72680
 		private Table __p;
 	}
 }

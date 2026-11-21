@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055DF RID: 21983
+	// Token: 0x02005B7D RID: 23421
 	public class IMovementPointHookT
 	{
-		// Token: 0x1700A2A7 RID: 41639
-		// (get) Token: 0x06024777 RID: 149367 RVA: 0x00508C8C File Offset: 0x00506E8C
-		// (set) Token: 0x06024778 RID: 149368 RVA: 0x00508C94 File Offset: 0x00506E94
+		// Token: 0x1700AB2F RID: 43823
+		// (get) Token: 0x06026984 RID: 158084 RVA: 0x00549204 File Offset: 0x00547404
+		// (set) Token: 0x06026985 RID: 158085 RVA: 0x0054920C File Offset: 0x0054740C
 		public EHookInteractType Type { get; set; }
 
-		// Token: 0x1700A2A8 RID: 41640
-		// (get) Token: 0x06024779 RID: 149369 RVA: 0x00508C9D File Offset: 0x00506E9D
-		// (set) Token: 0x0602477A RID: 149370 RVA: 0x00508CA5 File Offset: 0x00506EA5
+		// Token: 0x1700AB30 RID: 43824
+		// (get) Token: 0x06026986 RID: 158086 RVA: 0x00549215 File Offset: 0x00547415
+		// (set) Token: 0x06026987 RID: 158087 RVA: 0x0054921D File Offset: 0x0054741D
 		public List<IActionInfoT> HookActions { get; set; }
 
-		// Token: 0x1700A2A9 RID: 41641
-		// (get) Token: 0x0602477B RID: 149371 RVA: 0x00508CAE File Offset: 0x00506EAE
-		// (set) Token: 0x0602477C RID: 149372 RVA: 0x00508CB6 File Offset: 0x00506EB6
+		// Token: 0x1700AB31 RID: 43825
+		// (get) Token: 0x06026988 RID: 158088 RVA: 0x00549226 File Offset: 0x00547426
+		// (set) Token: 0x06026989 RID: 158089 RVA: 0x0054922E File Offset: 0x0054742E
 		public List<IActionInfoT> ExitHookActions { get; set; }
 
-		// Token: 0x1700A2AA RID: 41642
-		// (get) Token: 0x0602477D RID: 149373 RVA: 0x00508CBF File Offset: 0x00506EBF
-		// (set) Token: 0x0602477E RID: 149374 RVA: 0x00508CC7 File Offset: 0x00506EC7
+		// Token: 0x1700AB32 RID: 43826
+		// (get) Token: 0x0602698A RID: 158090 RVA: 0x00549237 File Offset: 0x00547437
+		// (set) Token: 0x0602698B RID: 158091 RVA: 0x0054923F File Offset: 0x0054743F
 		public List<IActionInfoT> FinishActions { get; set; }
 
-		// Token: 0x1700A2AB RID: 41643
-		// (get) Token: 0x0602477F RID: 149375 RVA: 0x00508CD0 File Offset: 0x00506ED0
-		// (set) Token: 0x06024780 RID: 149376 RVA: 0x00508CD8 File Offset: 0x00506ED8
+		// Token: 0x1700AB33 RID: 43827
+		// (get) Token: 0x0602698C RID: 158092 RVA: 0x00549248 File Offset: 0x00547448
+		// (set) Token: 0x0602698D RID: 158093 RVA: 0x00549250 File Offset: 0x00547450
 		public IClientHookActionConfigT ClientHookActionConfig { get; set; }
 
-		// Token: 0x1700A2AC RID: 41644
-		// (get) Token: 0x06024781 RID: 149377 RVA: 0x00508CE1 File Offset: 0x00506EE1
-		// (set) Token: 0x06024782 RID: 149378 RVA: 0x00508CE9 File Offset: 0x00506EE9
+		// Token: 0x1700AB34 RID: 43828
+		// (get) Token: 0x0602698E RID: 158094 RVA: 0x00549259 File Offset: 0x00547459
+		// (set) Token: 0x0602698F RID: 158095 RVA: 0x00549261 File Offset: 0x00547461
 		public byte NullMask { get; set; }
 
-		// Token: 0x06024783 RID: 149379 RVA: 0x00508CF2 File Offset: 0x00506EF2
+		// Token: 0x06026990 RID: 158096 RVA: 0x0054926A File Offset: 0x0054746A
 		public IMovementPointHookT()
 		{
 			this.Type = EHookInteractType.FixedPointHook;

@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x0200310D RID: 12557
+// Token: 0x02002668 RID: 9832
 [NullableContext(1)]
 [Nullable(0)]
 public class FreeFollowingDebug
 {
-	// Token: 0x0601AF8B RID: 110475 RVA: 0x0075189A File Offset: 0x0074FA9A
+	// Token: 0x060189DB RID: 100827 RVA: 0x00777A6A File Offset: 0x00775C6A
 	public void Reset(FreeFollowingRuntime runtime)
 	{
 		this.LastState = runtime.State;
@@ -17,7 +17,7 @@ public class FreeFollowingDebug
 		this.LastTargetFound = true;
 	}
 
-	// Token: 0x0601AF8C RID: 110476 RVA: 0x007518CA File Offset: 0x0074FACA
+	// Token: 0x060189DC RID: 100828 RVA: 0x00777A9A File Offset: 0x00775C9A
 	public void RecordTargetResult(bool found, FreeFollowingRuntime runtime)
 	{
 		if (!found)
@@ -27,18 +27,18 @@ public class FreeFollowingDebug
 		this.LastTargetFound = found;
 	}
 
-	// Token: 0x0601AF8D RID: 110477 RVA: 0x007518DD File Offset: 0x0074FADD
+	// Token: 0x060189DD RID: 100829 RVA: 0x00777AAD File Offset: 0x00775CAD
 	public void LogWalkTemporaryPause(FreeFollowingRuntime runtime)
 	{
 	}
 
-	// Token: 0x0601AF8E RID: 110478 RVA: 0x007518DF File Offset: 0x0074FADF
+	// Token: 0x060189DE RID: 100830 RVA: 0x00777AAF File Offset: 0x00775CAF
 	public void DrawCandidate(Vector candidate, bool valid)
 	{
 		FreeFollowingDebug.DrawSphere(candidate, valid ? ColorUtils.LinearWhite : ColorUtils.LinearRed);
 	}
 
-	// Token: 0x0601AF8F RID: 110479 RVA: 0x007518F8 File Offset: 0x0074FAF8
+	// Token: 0x060189DF RID: 100831 RVA: 0x00777AC8 File Offset: 0x00775CC8
 	public void Draw(FreeFollowingRuntime runtime, CharacterActorComponent leader, CharacterActorComponent follower, ECharMoveState? leaderMoveState, ECharMoveState followerMoveState, double followerSpeed, FreeFollowingParams parameters, [Nullable(2)] Vector selectedTarget = null)
 	{
 		EFreeFollowingState state = runtime.State;
@@ -116,7 +116,7 @@ public class FreeFollowingDebug
 		FreeFollowingDebug.DrawCircle(leader, runtime.ActiveStartFollowingRadius, ColorUtils.LinearYellow);
 	}
 
-	// Token: 0x0601AF90 RID: 110480 RVA: 0x00751C7C File Offset: 0x0074FE7C
+	// Token: 0x060189E0 RID: 100832 RVA: 0x00777E4C File Offset: 0x0077604C
 	private void DrawSectorLine(CharacterActorComponent leader, Vector direction, double minDistance, double maxDistance, FLinearColor color)
 	{
 		direction.Multiply(minDistance, this.CacheVector);
@@ -126,54 +126,54 @@ public class FreeFollowingDebug
 		FreeFollowingDebug.DrawLine(this.CacheVector, this.CacheVector2, color);
 	}
 
-	// Token: 0x0601AF91 RID: 110481 RVA: 0x00751CDD File Offset: 0x0074FEDD
+	// Token: 0x060189E1 RID: 100833 RVA: 0x00777EAD File Offset: 0x007760AD
 	private static void DrawSphere(Vector point, FLinearColor color)
 	{
 		UKismetSystemLibrary.D_DrawDebugSphere(GlobalData.World, point.ToUeVector(false), 20f, 10, new FLinearColor?(color), 0f, 0f);
 	}
 
-	// Token: 0x0601AF92 RID: 110482 RVA: 0x00751D07 File Offset: 0x0074FF07
+	// Token: 0x060189E2 RID: 100834 RVA: 0x00777ED7 File Offset: 0x007760D7
 	private static void DrawLine(Vector from, Vector to, FLinearColor color)
 	{
 		UKismetSystemLibrary.D_DrawDebugLine(GlobalData.World, from.ToUeVector(false), to.ToUeVector(false), color, 0f, 0f);
 	}
 
-	// Token: 0x0601AF93 RID: 110483 RVA: 0x00751D2C File Offset: 0x0074FF2C
+	// Token: 0x060189E3 RID: 100835 RVA: 0x00777EFC File Offset: 0x007760FC
 	private static void DrawArrow(Vector from, Vector to, FLinearColor color)
 	{
 		UKismetSystemLibrary.D_DrawDebugArrow(GlobalData.World, from.ToUeVector(false), to.ToUeVector(false), 30f, color, 0f, 2f);
 	}
 
-	// Token: 0x0601AF94 RID: 110484 RVA: 0x00751D58 File Offset: 0x0074FF58
+	// Token: 0x060189E4 RID: 100836 RVA: 0x00777F28 File Offset: 0x00776128
 	private static void DrawCircle(CharacterActorComponent leader, double radius, FLinearColor color)
 	{
 		UKismetSystemLibrary.D_DrawDebugCircle(GlobalData.World, leader.ActorLocationProxy.ToUeVector(false), (float)radius, 30, new FLinearColor?(color), 0f, 2f, new FVectorDouble?(leader.ActorForwardProxy.ToUeVector(false)), new FVectorDouble?(leader.ActorRightProxy.ToUeVector(false)), true);
 	}
 
-	// Token: 0x0400D1A7 RID: 53671
+	// Token: 0x0400D5C8 RID: 54728
 	private readonly Vector Target = Vector.Create();
 
-	// Token: 0x0400D1A8 RID: 53672
+	// Token: 0x0400D5C9 RID: 54729
 	private readonly Vector CacheVector = Vector.Create();
 
-	// Token: 0x0400D1A9 RID: 53673
+	// Token: 0x0400D5CA RID: 54730
 	private readonly Vector CacheVector2 = Vector.Create();
 
-	// Token: 0x0400D1AA RID: 53674
+	// Token: 0x0400D5CB RID: 54731
 	private readonly Vector TempVector = Vector.Create();
 
-	// Token: 0x0400D1AB RID: 53675
+	// Token: 0x0400D5CC RID: 54732
 	private readonly Vector TempVector2 = Vector.Create();
 
-	// Token: 0x0400D1AC RID: 53676
+	// Token: 0x0400D5CD RID: 54733
 	private EFreeFollowingState LastState;
 
-	// Token: 0x0400D1AD RID: 53677
+	// Token: 0x0400D5CE RID: 54734
 	private EFreeFollowingSide LastSide = EFreeFollowingSide.Right;
 
-	// Token: 0x0400D1AE RID: 53678
+	// Token: 0x0400D5CF RID: 54735
 	private double LastSummaryLogTime;
 
-	// Token: 0x0400D1AF RID: 53679
+	// Token: 0x0400D5D0 RID: 54736
 	private bool LastTargetFound = true;
 }

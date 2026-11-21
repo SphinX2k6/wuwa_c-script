@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.Define
 {
-	// Token: 0x0200024A RID: 586
+	// Token: 0x0200024F RID: 591
 	public static class EResTypeExtensions
 	{
-		// Token: 0x06000EBD RID: 3773 RVA: 0x000568E4 File Offset: 0x00054AE4
+		// Token: 0x06000EFE RID: 3838 RVA: 0x00059428 File Offset: 0x00057628
 		public static string ToEnumString(this EResType value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace CSharpScript.Launcher.Define
 			return result;
 		}
 
-		// Token: 0x06000EBE RID: 3774 RVA: 0x00056944 File Offset: 0x00054B44
+		// Token: 0x06000EFF RID: 3839 RVA: 0x00059488 File Offset: 0x00057688
 		public static EResType FromString(string name)
 		{
 			EResType result;
@@ -44,7 +44,7 @@ namespace CSharpScript.Launcher.Define
 			return result;
 		}
 
-		// Token: 0x06000EBF RID: 3775 RVA: 0x00056970 File Offset: 0x00054B70
+		// Token: 0x06000F00 RID: 3840 RVA: 0x000594B4 File Offset: 0x000576B4
 		public static bool TryFromString(string name, out EResType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace CSharpScript.Launcher.Define
 			return true;
 		}
 
-		// Token: 0x06000EC0 RID: 3776 RVA: 0x000569EA File Offset: 0x00054BEA
+		// Token: 0x06000F01 RID: 3841 RVA: 0x0005952E File Offset: 0x0005772E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace CSharpScript.Launcher.Define
 			};
 		}
 
-		// Token: 0x06000EC1 RID: 3777 RVA: 0x00056A1A File Offset: 0x00054C1A
+		// Token: 0x06000F02 RID: 3842 RVA: 0x0005955E File Offset: 0x0005775E
 		public static EResType[] GetValues()
 		{
 			return new EResType[]
@@ -107,7 +107,7 @@ namespace CSharpScript.Launcher.Define
 			};
 		}
 
-		// Token: 0x06000EC2 RID: 3778 RVA: 0x00056A2D File Offset: 0x00054C2D
+		// Token: 0x06000F03 RID: 3843 RVA: 0x00059571 File Offset: 0x00057771
 		public static string[] GetNames()
 		{
 			return new string[]

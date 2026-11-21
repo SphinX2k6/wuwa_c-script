@@ -1,27 +1,27 @@
 ﻿using System;
 
-// Token: 0x020000CA RID: 202
+// Token: 0x020000CC RID: 204
 public class RandomSystem
 {
-	// Token: 0x0600062F RID: 1583 RVA: 0x00020E12 File Offset: 0x0001F012
-	private static float GetRandom()
+	// Token: 0x06000670 RID: 1648 RVA: 0x000212F0 File Offset: 0x0001F4F0
+	private static int GetRandom()
 	{
-		return (float)(new Random().NextDouble() * (double)RandomSystem.RAND_MAX);
+		return Random.Shared.Next();
 	}
 
-	// Token: 0x06000630 RID: 1584 RVA: 0x00020E26 File Offset: 0x0001F026
-	public static float GetRandomInteger()
+	// Token: 0x06000671 RID: 1649 RVA: 0x000212FC File Offset: 0x0001F4FC
+	public static int GetRandomInteger()
 	{
 		return RandomSystem.GetRandom();
 	}
 
-	// Token: 0x06000631 RID: 1585 RVA: 0x00020E2D File Offset: 0x0001F02D
+	// Token: 0x06000672 RID: 1650 RVA: 0x00021303 File Offset: 0x0001F503
 	public static float GetRandomPercent()
 	{
 		return (float)(new Random().NextDouble() * (double)RandomSystem.RAND_PERCENT);
 	}
 
-	// Token: 0x06000632 RID: 1586 RVA: 0x00020E41 File Offset: 0x0001F041
+	// Token: 0x06000673 RID: 1651 RVA: 0x00021317 File Offset: 0x0001F517
 	private static int NextXorShift32(int x)
 	{
 		int num = x ^ x << 13;
@@ -29,21 +29,21 @@ public class RandomSystem
 		return num2 ^ num2 << 5;
 	}
 
-	// Token: 0x06000633 RID: 1587 RVA: 0x00020E52 File Offset: 0x0001F052
+	// Token: 0x06000674 RID: 1652 RVA: 0x00021328 File Offset: 0x0001F528
 	public static int GetNextRandomSeed(int seed, ERandomReason reason)
 	{
 		return RandomSystem.NextXorShift32(seed);
 	}
 
-	// Token: 0x06000634 RID: 1588 RVA: 0x00020E5A File Offset: 0x0001F05A
+	// Token: 0x06000675 RID: 1653 RVA: 0x00021330 File Offset: 0x0001F530
 	public static int IterateRandomSeed(int seed, ERandomReason reason)
 	{
 		return RandomSystem.NextXorShift32(seed);
 	}
 
-	// Token: 0x04000502 RID: 1282
+	// Token: 0x04000510 RID: 1296
 	public static readonly int RAND_MAX = int.MaxValue;
 
-	// Token: 0x04000503 RID: 1283
+	// Token: 0x04000511 RID: 1297
 	public static readonly int RAND_PERCENT = 10000;
 }

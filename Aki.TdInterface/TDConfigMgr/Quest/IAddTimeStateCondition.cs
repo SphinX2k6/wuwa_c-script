@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EBC RID: 3772
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FD2 RID: 4050
 	public class IAddTimeStateCondition
 	{
-		// Token: 0x0600532C RID: 21292 RVA: 0x000CCCDC File Offset: 0x000CAEDC
+		// Token: 0x060058A8 RID: 22696 RVA: 0x000D8E84 File Offset: 0x000D7084
 		private IAddTimeStateCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600532D RID: 21293 RVA: 0x000CCD14 File Offset: 0x000CAF14
+		// Token: 0x060058A9 RID: 22697 RVA: 0x000D8EBC File Offset: 0x000D70BC
 		public static IAddTimeStateCondition Create([Nullable(2)] IAddTimeStateCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600532E RID: 21294 RVA: 0x000CCD27 File Offset: 0x000CAF27
+		// Token: 0x060058AA RID: 22698 RVA: 0x000D8ECF File Offset: 0x000D70CF
 		public static IAddTimeStateCondition CreateFromSetValue([Nullable(2)] IAddTimeStateCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600532F RID: 21295 RVA: 0x000CCD3A File Offset: 0x000CAF3A
+		// Token: 0x060058AB RID: 22699 RVA: 0x000D8EE2 File Offset: 0x000D70E2
 		public IAddTimeStateCondition_SetValue ToSetValue()
 		{
 			return new IAddTimeStateCondition_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001BFB RID: 7163
-		// (get) Token: 0x06005330 RID: 21296 RVA: 0x000CCD5C File Offset: 0x000CAF5C
-		// (set) Token: 0x06005331 RID: 21297 RVA: 0x000CCDBD File Offset: 0x000CAFBD
+		// Token: 0x17001D93 RID: 7571
+		// (get) Token: 0x060058AC RID: 22700 RVA: 0x000D8F04 File Offset: 0x000D7104
+		// (set) Token: 0x060058AD RID: 22701 RVA: 0x000D8F65 File Offset: 0x000D7165
 		public virtual IEntityStateCondition Condition
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BFC RID: 7164
-		// (get) Token: 0x06005332 RID: 21298 RVA: 0x000CCDD2 File Offset: 0x000CAFD2
-		// (set) Token: 0x06005333 RID: 21299 RVA: 0x000CCDFD File Offset: 0x000CAFFD
+		// Token: 0x17001D94 RID: 7572
+		// (get) Token: 0x060058AE RID: 22702 RVA: 0x000D8F7A File Offset: 0x000D717A
+		// (set) Token: 0x060058AF RID: 22703 RVA: 0x000D8FA5 File Offset: 0x000D71A5
 		public virtual int AddTime
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400326D RID: 12909
+		// Token: 0x0400357A RID: 13690
 		[Nullable(2)]
 		protected IAddTimeStateCondition FbInstance;
 
-		// Token: 0x0400326E RID: 12910
+		// Token: 0x0400357B RID: 13691
 		[Nullable(2)]
 		protected IAddTimeStateCondition_SetValue PocoInterface;
 
-		// Token: 0x0400326F RID: 12911
+		// Token: 0x0400357C RID: 13692
 		private IEntityStateCondition _ConditionCache;
 
-		// Token: 0x04003270 RID: 12912
+		// Token: 0x0400357D RID: 13693
 		private bool _ConditionInited;
 	}
 }

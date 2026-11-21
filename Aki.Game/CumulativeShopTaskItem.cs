@@ -8,10 +8,10 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001205 RID: 4613
+// Token: 0x020006B9 RID: 1721
 public class CumulativeShopTaskItem : GridProxyAbstract<int>
 {
-	// Token: 0x06007B82 RID: 31618 RVA: 0x001A0B58 File Offset: 0x0019ED58
+	// Token: 0x06004F18 RID: 20248 RVA: 0x001A9810 File Offset: 0x001A7A10
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,14 +36,14 @@ public class CumulativeShopTaskItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06007B83 RID: 31619 RVA: 0x001A0CB6 File Offset: 0x0019EEB6
+	// Token: 0x06004F19 RID: 20249 RVA: 0x001A996E File Offset: 0x001A7B6E
 	protected override void OnStart()
 	{
 		base.GetItem(8).SetUIActive(false);
 		this.RewardScrollView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(6), new Func<CommonItemSmallItemGrid>(this.CreatePropItem), null, false, null);
 	}
 
-	// Token: 0x06007B84 RID: 31620 RVA: 0x001A0CE8 File Offset: 0x0019EEE8
+	// Token: 0x06004F1A RID: 20250 RVA: 0x001A99A0 File Offset: 0x001A7BA0
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.TaskId = data;
@@ -106,14 +106,14 @@ public class CumulativeShopTaskItem : GridProxyAbstract<int>
 		base.GetItem(10).SetUIActive(false);
 	}
 
-	// Token: 0x06007B85 RID: 31621 RVA: 0x001A0FBD File Offset: 0x0019F1BD
+	// Token: 0x06004F1B RID: 20251 RVA: 0x001A9C75 File Offset: 0x001A7E75
 	[NullableContext(1)]
 	private CommonItemSmallItemGrid CreatePropItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06007B86 RID: 31622 RVA: 0x001A0FC4 File Offset: 0x0019F1C4
+	// Token: 0x06004F1C RID: 20252 RVA: 0x001A9C7C File Offset: 0x001A7E7C
 	private void OnClickGetBtn()
 	{
 		ConsumptiveTask? cumulativeShopTaskConfig = CumulativeShopConfig.Instance.GetCumulativeShopTaskConfig(this.TaskId);
@@ -124,7 +124,7 @@ public class CumulativeShopTaskItem : GridProxyAbstract<int>
 		CumulativeShopController.Instance.ConsumptiveRewardRequest(cumulativeShopTaskConfig.Value.TaskTab);
 	}
 
-	// Token: 0x06007B87 RID: 31623 RVA: 0x001A1005 File Offset: 0x0019F205
+	// Token: 0x06004F1D RID: 20253 RVA: 0x001A9CBD File Offset: 0x001A7EBD
 	private void OnClickGotoBtn()
 	{
 		if (this.SkipId <= 0)
@@ -134,13 +134,13 @@ public class CumulativeShopTaskItem : GridProxyAbstract<int>
 		SkipTaskManager.RunByConfigId(this.SkipId, null);
 	}
 
-	// Token: 0x0400388E RID: 14478
+	// Token: 0x04003927 RID: 14631
 	private int TaskId;
 
-	// Token: 0x0400388F RID: 14479
+	// Token: 0x04003928 RID: 14632
 	private int SkipId;
 
-	// Token: 0x04003890 RID: 14480
+	// Token: 0x04003929 RID: 14633
 	[Nullable(new byte[]
 	{
 		2,

@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Core.Extension;
 using CSharpScript.Game.Module.Skin;
 
-// Token: 0x02002A32 RID: 10802
+// Token: 0x02001FAD RID: 8109
 public class SkinFadeAnimController : IStaticVariableResetter
 {
-	// Token: 0x060167E2 RID: 92130 RVA: 0x005B38E3 File Offset: 0x005B1AE3
+	// Token: 0x060141EB RID: 82411 RVA: 0x005DEA5B File Offset: 0x005DCC5B
 	static SkinFadeAnimController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SkinFadeAnimController.CreateStaticDefaultValue), new Action(SkinFadeAnimController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060167E3 RID: 92131 RVA: 0x005B3904 File Offset: 0x005B1B04
+	// Token: 0x060141EC RID: 82412 RVA: 0x005DEA7C File Offset: 0x005DCC7C
 	public static void CreateStaticDefaultValue()
 	{
 		Dictionary<EModelStateInSkinView, Dictionary<EModelStateInSkinView, ValueTuple<EModelFadeType, ERoleFadeCurveDefine>>> dictionary = new Dictionary<EModelStateInSkinView, Dictionary<EModelStateInSkinView, ValueTuple<EModelFadeType, ERoleFadeCurveDefine>>>();
@@ -38,13 +38,13 @@ public class SkinFadeAnimController : IStaticVariableResetter
 		SkinFadeAnimController.fadeCurveMap = dictionary;
 	}
 
-	// Token: 0x060167E4 RID: 92132 RVA: 0x005B39B7 File Offset: 0x005B1BB7
+	// Token: 0x060141ED RID: 82413 RVA: 0x005DEB2F File Offset: 0x005DCD2F
 	public static void ResetStaticDefaultValue()
 	{
 		SkinFadeAnimController.fadeCurveMap = null;
 	}
 
-	// Token: 0x060167E5 RID: 92133 RVA: 0x005B39C0 File Offset: 0x005B1BC0
+	// Token: 0x060141EE RID: 82414 RVA: 0x005DEB38 File Offset: 0x005DCD38
 	public void ChangeModelState(EModelStateInSkinView? state)
 	{
 		EModelStateInSkinView? modelState = this.ModelState;
@@ -79,7 +79,7 @@ public class SkinFadeAnimController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0400A6FB RID: 42747
+	// Token: 0x0400AAE6 RID: 43750
 	[Nullable(new byte[]
 	{
 		2,
@@ -88,10 +88,10 @@ public class SkinFadeAnimController : IStaticVariableResetter
 	})]
 	private static Dictionary<EModelStateInSkinView, Dictionary<EModelStateInSkinView, ValueTuple<EModelFadeType, ERoleFadeCurveDefine>>> fadeCurveMap;
 
-	// Token: 0x0400A6FC RID: 42748
+	// Token: 0x0400AAE7 RID: 43751
 	[Nullable(2)]
 	public TsUiSceneRoleActor TsUiSceneRoleActor;
 
-	// Token: 0x0400A6FD RID: 42749
+	// Token: 0x0400AAE8 RID: 43752
 	private EModelStateInSkinView? ModelState = new EModelStateInSkinView?(EModelStateInSkinView.ShowRole);
 }

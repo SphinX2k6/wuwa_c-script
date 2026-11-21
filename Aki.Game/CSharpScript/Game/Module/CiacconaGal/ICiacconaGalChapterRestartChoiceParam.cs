@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BE7 RID: 23527
+	// Token: 0x02004BC7 RID: 19399
 	[NullableContext(1)]
 	public interface ICiacconaGalChapterRestartChoiceParam
 	{
-		// Token: 0x17008D64 RID: 36196
-		// (get) Token: 0x0603B789 RID: 243593
-		// (set) Token: 0x0603B78A RID: 243594
+		// Token: 0x17006136 RID: 24886
+		// (get) Token: 0x060306D4 RID: 198356
+		// (set) Token: 0x060306D5 RID: 198357
 		ECiacconaGalChapterRestartChoiceType Type { get; set; }
 
-		// Token: 0x17008D65 RID: 36197
-		// (get) Token: 0x0603B78B RID: 243595
-		// (set) Token: 0x0603B78C RID: 243596
+		// Token: 0x17006137 RID: 24887
+		// (get) Token: 0x060306D6 RID: 198358
+		// (set) Token: 0x060306D7 RID: 198359
 		string Desc { get; set; }
 
-		// Token: 0x17008D66 RID: 36198
-		// (get) Token: 0x0603B78D RID: 243597
-		// (set) Token: 0x0603B78E RID: 243598
+		// Token: 0x17006138 RID: 24888
+		// (get) Token: 0x060306D8 RID: 198360
+		// (set) Token: 0x060306D9 RID: 198361
 		CiacconaGalChapterData ChapterData { get; set; }
 	}
 }

@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002039 RID: 8249
+	// Token: 0x02000679 RID: 1657
 	public sealed class FLGUIDraggableNavigateToNextDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F333 RID: 127795 RVA: 0x002E5338 File Offset: 0x002E3538
+		// Token: 0x0600902F RID: 36911 RVA: 0x000D8528 File Offset: 0x000D6728
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIDraggableNavigateToNextDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F334 RID: 127796 RVA: 0x002E5344 File Offset: 0x002E3544
+		// Token: 0x06009030 RID: 36912 RVA: 0x000D8534 File Offset: 0x000D6734
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIDraggableNavigateToNextDelegate._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FLGUIDraggableNavigateToNextDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F335 RID: 127797 RVA: 0x002E5367 File Offset: 0x002E3567
+		// Token: 0x06009031 RID: 36913 RVA: 0x000D8557 File Offset: 0x000D6757
 		public FLGUIDraggableNavigateToNextDelegate()
 		{
 		}
 
-		// Token: 0x0601F336 RID: 127798 RVA: 0x002E536F File Offset: 0x002E356F
+		// Token: 0x06009032 RID: 36914 RVA: 0x000D855F File Offset: 0x000D675F
 		[NullableContext(2)]
 		public FLGUIDraggableNavigateToNextDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F337 RID: 127799 RVA: 0x002E5379 File Offset: 0x002E3579
+		// Token: 0x06009033 RID: 36915 RVA: 0x000D8569 File Offset: 0x000D6769
 		public FLGUIDraggableNavigateToNextDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F338 RID: 127800 RVA: 0x002E5384 File Offset: 0x002E3584
+		// Token: 0x06009034 RID: 36916 RVA: 0x000D8574 File Offset: 0x000D6774
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F339 RID: 127801 RVA: 0x002E53B6 File Offset: 0x002E35B6
+		// Token: 0x06009035 RID: 36917 RVA: 0x000D85A6 File Offset: 0x000D67A6
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FLGUIDraggableNavigateToNextDelegate.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIDraggableNavigateToNextDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F33A RID: 127802 RVA: 0x002E53F0 File Offset: 0x002E35F0
+		// Token: 0x06009036 RID: 36918 RVA: 0x000D85E0 File Offset: 0x000D67E0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x0601F33B RID: 127803 RVA: 0x002E53FC File Offset: 0x002E35FC
+		// Token: 0x06009037 RID: 36919 RVA: 0x000D85EC File Offset: 0x000D67EC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x04010E2C RID: 69164
+		// Token: 0x04003F04 RID: 16132
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010E2D RID: 69165
+		// Token: 0x04003F05 RID: 16133
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIDraggableNavigateToNextDelegate__DelegateSignature";
 
-		// Token: 0x04010E2E RID: 69166
+		// Token: 0x04003F06 RID: 16134
 		private static int RegisterId;
 
-		// Token: 0x02003444 RID: 13380
+		// Token: 0x02000E87 RID: 3719
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017427 RID: 95271
+			// Token: 0x04006236 RID: 25142
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

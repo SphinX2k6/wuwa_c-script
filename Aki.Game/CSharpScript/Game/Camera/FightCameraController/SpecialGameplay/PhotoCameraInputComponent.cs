@@ -9,13 +9,13 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072FE RID: 29438
+	// Token: 0x02006481 RID: 25729
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RegisterPhotoCameraComponent(EPhotoCameraComponent.Input)]
 	public class PhotoCameraInputComponent : PhotoCameraComponentBase
 	{
-		// Token: 0x060483DA RID: 295898 RVA: 0x0128F694 File Offset: 0x0128D894
+		// Token: 0x0603E826 RID: 256038 RVA: 0x01232048 File Offset: 0x01230248
 		protected override void OnActivate()
 		{
 			this.Context = new PhotoInputContext
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x060483DB RID: 295899 RVA: 0x0128F70C File Offset: 0x0128D90C
+		// Token: 0x0603E827 RID: 256039 RVA: 0x012320C0 File Offset: 0x012302C0
 		protected override void OnDeactivate()
 		{
 			PhotoJoystickOwnerController currentJoystickOwner = PhotographController.Instance.CurrentJoystickOwner;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.ResetSnapshot();
 		}
 
-		// Token: 0x060483DC RID: 295900 RVA: 0x0128F790 File Offset: 0x0128D990
+		// Token: 0x0603E828 RID: 256040 RVA: 0x01232144 File Offset: 0x01230344
 		[NullableContext(2)]
 		protected override void OnCharacterChanged(TsBaseCharacter character)
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x060483DD RID: 295901 RVA: 0x0128F7B4 File Offset: 0x0128D9B4
+		// Token: 0x0603E829 RID: 256041 RVA: 0x01232168 File Offset: 0x01230368
 		protected override void OnTick(float deltaTime)
 		{
 			if (this.CurrentProcessor != null && this.Context != null)
@@ -81,13 +81,13 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.RawSnapshot.Fov = 0f;
 		}
 
-		// Token: 0x060483DE RID: 295902 RVA: 0x0128F85E File Offset: 0x0128DA5E
+		// Token: 0x0603E82A RID: 256042 RVA: 0x01232212 File Offset: 0x01230412
 		public IPhotoInputSnapshot GetSnapshot()
 		{
 			return this.Snapshot;
 		}
 
-		// Token: 0x060483DF RID: 295903 RVA: 0x0128F866 File Offset: 0x0128DA66
+		// Token: 0x0603E82B RID: 256043 RVA: 0x0123221A File Offset: 0x0123041A
 		protected override void OnDestroy()
 		{
 			this.Processors.Clear();
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.Context = null;
 		}
 
-		// Token: 0x060483E0 RID: 295904 RVA: 0x0128F884 File Offset: 0x0128DA84
+		// Token: 0x0603E82C RID: 256044 RVA: 0x01232238 File Offset: 0x01230438
 		protected override void OnModeChangeFinish(PhotoCameraType? prev, PhotoCameraType next)
 		{
 			if (this.Context == null)
@@ -111,14 +111,14 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.ApplyMoveControlByMode(new PhotoCameraType?(next));
 		}
 
-		// Token: 0x060483E1 RID: 295905 RVA: 0x0128F8E0 File Offset: 0x0128DAE0
+		// Token: 0x0603E82D RID: 256045 RVA: 0x01232294 File Offset: 0x01230494
 		private void ApplyMoveControlByMode(PhotoCameraType? mode)
 		{
 			bool flag = PhotoCameraUtil.IsModeAllowCharacterMove(mode) && !PhotoCameraUtil.IsMoveBlocked();
 			InputController.Instance.SetMoveControlEnabled(flag, flag, flag, flag);
 		}
 
-		// Token: 0x060483E2 RID: 295906 RVA: 0x0128F910 File Offset: 0x0128DB10
+		// Token: 0x0603E82E RID: 256046 RVA: 0x012322C4 File Offset: 0x012304C4
 		private PhotoInputProcessorBase GetOrCreateProcessor(PhotoCameraType mode)
 		{
 			PhotoInputProcessorBase photoInputProcessorBase;
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return photoInputProcessorBase;
 		}
 
-		// Token: 0x060483E3 RID: 295907 RVA: 0x0128F972 File Offset: 0x0128DB72
+		// Token: 0x0603E82F RID: 256047 RVA: 0x01232326 File Offset: 0x01230526
 		private void MaskWorldInput()
 		{
 			BattleUiChildViewData childViewData = BattleUiModel.Instance.ChildViewData;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			childViewData.SetChildVisible(EBattleUiVisibleReason.Custom, EBattleUiChild.Joystick, false, true, 0);
 		}
 
-		// Token: 0x060483E4 RID: 295908 RVA: 0x0128F98F File Offset: 0x0128DB8F
+		// Token: 0x0603E830 RID: 256048 RVA: 0x01232343 File Offset: 0x01230543
 		private void UnmaskWorldInput()
 		{
 			InputController.Instance.SetMoveControlEnabled(true, true, true, true);
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			childViewData.SetChildVisible(EBattleUiVisibleReason.Custom, EBattleUiChild.Joystick, true, true, 0);
 		}
 
-		// Token: 0x060483E5 RID: 295909 RVA: 0x0128F9BC File Offset: 0x0128DBBC
+		// Token: 0x0603E831 RID: 256049 RVA: 0x01232370 File Offset: 0x01230570
 		private void BindAxes()
 		{
 			InputDistributeController.Instance.BindAxisIgnoreLimit("PhotoMoveForward", new TInputHandle<float>(this.OnPhotoMoveForward));
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			InputDistributeController.Instance.BindAxisIgnoreLimit("PhotoFov", new TInputHandle<float>(this.OnPhotoFov));
 		}
 
-		// Token: 0x060483E6 RID: 295910 RVA: 0x0128FA88 File Offset: 0x0128DC88
+		// Token: 0x0603E832 RID: 256050 RVA: 0x0123243C File Offset: 0x0123063C
 		private void UnbindAxes()
 		{
 			InputDistributeController.Instance.UnBindAxisIgnoreLimit("PhotoMoveForward", new TInputHandle<float>(this.OnPhotoMoveForward));
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			InputDistributeController.Instance.UnBindAxisIgnoreLimit("PhotoFov", new TInputHandle<float>(this.OnPhotoFov));
 		}
 
-		// Token: 0x060483E7 RID: 295911 RVA: 0x0128FB54 File Offset: 0x0128DD54
+		// Token: 0x0603E833 RID: 256051 RVA: 0x01232508 File Offset: 0x01230708
 		private void OnJoystickOwnerChanged(EPhotoJoystickOwner prev, EPhotoJoystickOwner next)
 		{
 			if (prev == EPhotoJoystickOwner.CameraMove)
@@ -203,14 +203,14 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			InputDistributeModel.Instance.RefreshInputDistributeTag();
 		}
 
-		// Token: 0x060483E8 RID: 295912 RVA: 0x0128FB9D File Offset: 0x0128DD9D
+		// Token: 0x0603E834 RID: 256052 RVA: 0x01232551 File Offset: 0x01230751
 		private void ClearCharacterMoveAxis()
 		{
 			EventSystem.Instance.Emit<string>(EEventName.ClearAxisInputCache, "MoveForward");
 			EventSystem.Instance.Emit<string>(EEventName.ClearAxisInputCache, "MoveRight");
 		}
 
-		// Token: 0x060483E9 RID: 295913 RVA: 0x0128FBCC File Offset: 0x0128DDCC
+		// Token: 0x0603E835 RID: 256053 RVA: 0x01232580 File Offset: 0x01230780
 		private void ResetSnapshot()
 		{
 			this.RawSnapshot.MoveForward = 0f;
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.Snapshot.Fov = 0f;
 		}
 
-		// Token: 0x060483EA RID: 295914 RVA: 0x0128FCB9 File Offset: 0x0128DEB9
+		// Token: 0x0603E836 RID: 256054 RVA: 0x0123266D File Offset: 0x0123086D
 		private void OnPhotoMoveForward(string name, float value, InputIdentification inputIdentification)
 		{
 			if (value == 0f || PhotoCameraUtil.IsCameraMoveBlockedByUi())
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.RawSnapshot.MoveForward = value;
 		}
 
-		// Token: 0x060483EB RID: 295915 RVA: 0x0128FCD7 File Offset: 0x0128DED7
+		// Token: 0x0603E837 RID: 256055 RVA: 0x0123268B File Offset: 0x0123088B
 		private void OnPhotoMoveRight(string name, float value, InputIdentification inputIdentification)
 		{
 			if (value == 0f || PhotoCameraUtil.IsMoveBlocked())
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.RawSnapshot.MoveRight = value;
 		}
 
-		// Token: 0x060483EC RID: 295916 RVA: 0x0128FCF5 File Offset: 0x0128DEF5
+		// Token: 0x0603E838 RID: 256056 RVA: 0x012326A9 File Offset: 0x012308A9
 		private void OnPhotoMoveUp(string name, float value, InputIdentification inputIdentification)
 		{
 			if (value == 0f || PhotoCameraUtil.IsMoveBlocked())
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.RawSnapshot.MoveUp = value;
 		}
 
-		// Token: 0x060483ED RID: 295917 RVA: 0x0128FD13 File Offset: 0x0128DF13
+		// Token: 0x0603E839 RID: 256057 RVA: 0x012326C7 File Offset: 0x012308C7
 		private void OnPhotoPitch(string name, float value, InputIdentification inputIdentification)
 		{
 			if (value == 0f || PhotoCameraUtil.IsInCursorMode())
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.RawSnapshot.Pitch = value;
 		}
 
-		// Token: 0x060483EE RID: 295918 RVA: 0x0128FD31 File Offset: 0x0128DF31
+		// Token: 0x0603E83A RID: 256058 RVA: 0x012326E5 File Offset: 0x012308E5
 		private void OnPhotoYaw(string name, float value, InputIdentification inputIdentification)
 		{
 			if (value == 0f || PhotoCameraUtil.IsInCursorMode())
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.RawSnapshot.Yaw = value;
 		}
 
-		// Token: 0x060483EF RID: 295919 RVA: 0x0128FD4F File Offset: 0x0128DF4F
+		// Token: 0x0603E83B RID: 256059 RVA: 0x01232703 File Offset: 0x01230903
 		private void OnPhotoRoll(string name, float value, InputIdentification inputIdentification)
 		{
 			if (value == 0f || PhotoCameraUtil.IsCameraMoveBlockedByUi())
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.RawSnapshot.Roll = value;
 		}
 
-		// Token: 0x060483F0 RID: 295920 RVA: 0x0128FD6D File Offset: 0x0128DF6D
+		// Token: 0x0603E83C RID: 256060 RVA: 0x01232721 File Offset: 0x01230921
 		private void OnPhotoFov(string name, float value, InputIdentification inputIdentification)
 		{
 			if (value == 0f || PhotoCameraUtil.IsInCursorMode())
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.RawSnapshot.Fov = value;
 		}
 
-		// Token: 0x040262AB RID: 156331
+		// Token: 0x04021596 RID: 136598
 		private readonly IPhotoInputSnapshot RawSnapshot = new PhotoInputSnapshot
 		{
 			MoveForward = 0f,
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			Fov = 0f
 		};
 
-		// Token: 0x040262AC RID: 156332
+		// Token: 0x04021597 RID: 136599
 		private readonly IPhotoInputSnapshot Snapshot = new PhotoInputSnapshot
 		{
 			MoveForward = 0f,
@@ -323,14 +323,14 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			Fov = 0f
 		};
 
-		// Token: 0x040262AD RID: 156333
+		// Token: 0x04021598 RID: 136600
 		private readonly Dictionary<PhotoCameraType, PhotoInputProcessorBase> Processors = new Dictionary<PhotoCameraType, PhotoInputProcessorBase>();
 
-		// Token: 0x040262AE RID: 156334
+		// Token: 0x04021599 RID: 136601
 		[Nullable(2)]
 		private PhotoInputProcessorBase CurrentProcessor;
 
-		// Token: 0x040262AF RID: 156335
+		// Token: 0x0402159A RID: 136602
 		[Nullable(2)]
 		private IPhotoInputContext Context;
 	}

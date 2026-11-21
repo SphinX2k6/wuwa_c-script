@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006128 RID: 24872
+	// Token: 0x0200678D RID: 26509
 	public struct IAddFlowInteractOption : IFlatbufferObject
 	{
-		// Token: 0x1700B74C RID: 46924
-		// (get) Token: 0x0602A835 RID: 174133 RVA: 0x005DABBA File Offset: 0x005D8DBA
+		// Token: 0x1700C0BC RID: 49340
+		// (get) Token: 0x0602CF2E RID: 184110 RVA: 0x00624D95 File Offset: 0x00622F95
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A836 RID: 174134 RVA: 0x005DABC7 File Offset: 0x005D8DC7
+		// Token: 0x0602CF2F RID: 184111 RVA: 0x00624DA2 File Offset: 0x00622FA2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602A837 RID: 174135 RVA: 0x005DABD0 File Offset: 0x005D8DD0
+		// Token: 0x0602CF30 RID: 184112 RVA: 0x00624DAC File Offset: 0x00622FAC
 		public static IAddFlowInteractOption GetRootAsIAddFlowInteractOption(ByteBuffer _bb)
 		{
 			return IAddFlowInteractOption.GetRootAsIAddFlowInteractOption(_bb, default(IAddFlowInteractOption));
 		}
 
-		// Token: 0x0602A838 RID: 174136 RVA: 0x005DABEC File Offset: 0x005D8DEC
+		// Token: 0x0602CF31 RID: 184113 RVA: 0x00624DC8 File Offset: 0x00622FC8
 		public static IAddFlowInteractOption GetRootAsIAddFlowInteractOption(ByteBuffer _bb, IAddFlowInteractOption obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602A839 RID: 174137 RVA: 0x005DAC09 File Offset: 0x005D8E09
+		// Token: 0x0602CF32 RID: 184114 RVA: 0x00624DE5 File Offset: 0x00622FE5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602A83A RID: 174138 RVA: 0x005DAC18 File Offset: 0x005D8E18
+		// Token: 0x0602CF33 RID: 184115 RVA: 0x00624DF4 File Offset: 0x00622FF4
 		public IAddFlowInteractOption __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B74D RID: 46925
-		// (get) Token: 0x0602A83B RID: 174139 RVA: 0x005DAC28 File Offset: 0x005D8E28
+		// Token: 0x1700C0BD RID: 49341
+		// (get) Token: 0x0602CF34 RID: 184116 RVA: 0x00624E04 File Offset: 0x00623004
 		public IInteractOption? Option
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B74E RID: 46926
-		// (get) Token: 0x0602A83C RID: 174140 RVA: 0x005DAC88 File Offset: 0x005D8E88
+		// Token: 0x1700C0BE RID: 49342
+		// (get) Token: 0x0602CF35 RID: 184117 RVA: 0x00624E64 File Offset: 0x00623064
 		public int EntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B74F RID: 46927
-		// (get) Token: 0x0602A83D RID: 174141 RVA: 0x005DACC4 File Offset: 0x005D8EC4
+		// Token: 0x1700C0BF RID: 49343
+		// (get) Token: 0x0602CF36 RID: 184118 RVA: 0x00624EA0 File Offset: 0x006230A0
 		public bool DelayRemoveByQuestEnd
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B750 RID: 46928
-		// (get) Token: 0x0602A83E RID: 174142 RVA: 0x005DAD04 File Offset: 0x005D8F04
+		// Token: 0x1700C0C0 RID: 49344
+		// (get) Token: 0x0602CF37 RID: 184119 RVA: 0x00624EE0 File Offset: 0x006230E0
 		public string InteractToken
 		{
 			get
@@ -103,20 +103,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A83F RID: 174143 RVA: 0x005DAD3C File Offset: 0x005D8F3C
+		// Token: 0x0602CF38 RID: 184120 RVA: 0x00624F18 File Offset: 0x00623118
 		public Span<byte> GetInteractTokenBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0602A840 RID: 174144 RVA: 0x005DAD4C File Offset: 0x005D8F4C
+		// Token: 0x0602CF39 RID: 184121 RVA: 0x00624F28 File Offset: 0x00623128
 		public byte[] GetInteractTokenArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x1700B751 RID: 46929
-		// (get) Token: 0x0602A841 RID: 174145 RVA: 0x005DAD5C File Offset: 0x005D8F5C
+		// Token: 0x1700C0C1 RID: 49345
+		// (get) Token: 0x0602CF3A RID: 184122 RVA: 0x00624F38 File Offset: 0x00623138
 		public byte NullMask
 		{
 			get
@@ -130,7 +130,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A842 RID: 174146 RVA: 0x005DAD99 File Offset: 0x005D8F99
+		// Token: 0x0602CF3B RID: 184123 RVA: 0x00624F75 File Offset: 0x00623175
 		public static Offset<IAddFlowInteractOption> CreateIAddFlowInteractOption(FlatBufferBuilder builder, Offset<IInteractOption> OptionOffset = default(Offset<IInteractOption>), int EntityId = 0, bool DelayRemoveByQuestEnd = false, StringOffset InteractTokenOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -142,49 +142,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAddFlowInteractOption.EndIAddFlowInteractOption(builder);
 		}
 
-		// Token: 0x0602A843 RID: 174147 RVA: 0x005DADCD File Offset: 0x005D8FCD
+		// Token: 0x0602CF3C RID: 184124 RVA: 0x00624FA9 File Offset: 0x006231A9
 		public static void StartIAddFlowInteractOption(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602A844 RID: 174148 RVA: 0x005DADD6 File Offset: 0x005D8FD6
+		// Token: 0x0602CF3D RID: 184125 RVA: 0x00624FB2 File Offset: 0x006231B2
 		public static void AddOption(FlatBufferBuilder builder, Offset<IInteractOption> optionOffset)
 		{
 			builder.AddOffset(0, optionOffset.Value, 0);
 		}
 
-		// Token: 0x0602A845 RID: 174149 RVA: 0x005DADE6 File Offset: 0x005D8FE6
+		// Token: 0x0602CF3E RID: 184126 RVA: 0x00624FC2 File Offset: 0x006231C2
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x0602A846 RID: 174150 RVA: 0x005DADF1 File Offset: 0x005D8FF1
+		// Token: 0x0602CF3F RID: 184127 RVA: 0x00624FCD File Offset: 0x006231CD
 		public static void AddDelayRemoveByQuestEnd(FlatBufferBuilder builder, bool delayRemoveByQuestEnd)
 		{
 			builder.AddBool(2, delayRemoveByQuestEnd, false);
 		}
 
-		// Token: 0x0602A847 RID: 174151 RVA: 0x005DADFC File Offset: 0x005D8FFC
+		// Token: 0x0602CF40 RID: 184128 RVA: 0x00624FD8 File Offset: 0x006231D8
 		public static void AddInteractToken(FlatBufferBuilder builder, StringOffset interactTokenOffset)
 		{
 			builder.AddOffset(3, interactTokenOffset.Value, 0);
 		}
 
-		// Token: 0x0602A848 RID: 174152 RVA: 0x005DAE0C File Offset: 0x005D900C
+		// Token: 0x0602CF41 RID: 184129 RVA: 0x00624FE8 File Offset: 0x006231E8
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0602A849 RID: 174153 RVA: 0x005DAE17 File Offset: 0x005D9017
+		// Token: 0x0602CF42 RID: 184130 RVA: 0x00624FF3 File Offset: 0x006231F3
 		public static Offset<IAddFlowInteractOption> EndIAddFlowInteractOption(FlatBufferBuilder builder)
 		{
 			return new Offset<IAddFlowInteractOption>(builder.EndTable());
 		}
 
-		// Token: 0x0602A84A RID: 174154 RVA: 0x005DAE24 File Offset: 0x005D9024
+		// Token: 0x0602CF43 RID: 184131 RVA: 0x00625000 File Offset: 0x00623200
 		public IAddFlowInteractOptionT UnPack()
 		{
 			IAddFlowInteractOptionT addFlowInteractOptionT = new IAddFlowInteractOptionT();
@@ -192,7 +192,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return addFlowInteractOptionT;
 		}
 
-		// Token: 0x0602A84B RID: 174155 RVA: 0x005DAE40 File Offset: 0x005D9040
+		// Token: 0x0602CF44 RID: 184132 RVA: 0x0062501C File Offset: 0x0062321C
 		public void UnPackTo(IAddFlowInteractOptionT _o)
 		{
 			_o.Option = ((this.Option != null) ? this.Option.Value.UnPack() : null);
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602A84C RID: 174156 RVA: 0x005DAEAC File Offset: 0x005D90AC
+		// Token: 0x0602CF45 RID: 184133 RVA: 0x00625088 File Offset: 0x00623288
 		public static Offset<IAddFlowInteractOption> Pack(FlatBufferBuilder builder, IAddFlowInteractOptionT _o)
 		{
 			if (_o == null)
@@ -214,7 +214,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAddFlowInteractOption.CreateIAddFlowInteractOption(builder, optionOffset, _o.EntityId, _o.DelayRemoveByQuestEnd, interactTokenOffset, _o.NullMask);
 		}
 
-		// Token: 0x040104FA RID: 66810
+		// Token: 0x04011301 RID: 70401
 		private Table __p;
 	}
 }

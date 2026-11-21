@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A4C RID: 19020
+	// Token: 0x02004F12 RID: 20242
 	public class ICheckHoldingHandsCharacterTypeT
 	{
-		// Token: 0x170089B2 RID: 35250
-		// (get) Token: 0x0601DC96 RID: 122006 RVA: 0x0042FFC6 File Offset: 0x0042E1C6
-		// (set) Token: 0x0601DC97 RID: 122007 RVA: 0x0042FFCE File Offset: 0x0042E1CE
+		// Token: 0x1700908E RID: 37006
+		// (get) Token: 0x0601F739 RID: 128825 RVA: 0x00461152 File Offset: 0x0045F352
+		// (set) Token: 0x0601F73A RID: 128826 RVA: 0x0046115A File Offset: 0x0045F35A
 		public ECheckHoldingHandsCharacter Type { get; set; }
 
-		// Token: 0x0601DC98 RID: 122008 RVA: 0x0042FFD7 File Offset: 0x0042E1D7
+		// Token: 0x0601F73B RID: 128827 RVA: 0x00461163 File Offset: 0x0045F363
 		public ICheckHoldingHandsCharacterTypeT()
 		{
 			this.Type = ECheckHoldingHandsCharacter.Player;

@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.AutoAttach;
 using UnrealEngine;
 
-// Token: 0x0200163E RID: 5694
+// Token: 0x02000AF6 RID: 2806
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -14,12 +14,12 @@ using UnrealEngine;
 })]
 internal class RoundTab : AutoAttachItem<RoundTabData>
 {
-	// Token: 0x17000D8B RID: 3467
-	// (get) Token: 0x0600A00E RID: 40974 RVA: 0x0023356F File Offset: 0x0023176F
-	// (set) Token: 0x0600A00F RID: 40975 RVA: 0x00233577 File Offset: 0x00231777
+	// Token: 0x17000DAC RID: 3500
+	// (get) Token: 0x060073EC RID: 29676 RVA: 0x0023D3B3 File Offset: 0x0023B5B3
+	// (set) Token: 0x060073ED RID: 29677 RVA: 0x0023D3BB File Offset: 0x0023B5BB
 	public Action<int> OnClickCallback { get; set; }
 
-	// Token: 0x0600A010 RID: 40976 RVA: 0x00233580 File Offset: 0x00231780
+	// Token: 0x060073EE RID: 29678 RVA: 0x0023D3C4 File Offset: 0x0023B5C4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -44,7 +44,7 @@ internal class RoundTab : AutoAttachItem<RoundTabData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600A011 RID: 40977 RVA: 0x00233668 File Offset: 0x00231868
+	// Token: 0x060073EF RID: 29679 RVA: 0x0023D4AC File Offset: 0x0023B6AC
 	public override void OnSelect()
 	{
 		Action<int> onClickCallback = this.OnClickCallback;
@@ -60,7 +60,7 @@ internal class RoundTab : AutoAttachItem<RoundTabData>
 		extendToggle.SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x0600A012 RID: 40978 RVA: 0x00233696 File Offset: 0x00231896
+	// Token: 0x060073F0 RID: 29680 RVA: 0x0023D4DA File Offset: 0x0023B6DA
 	protected override void OnUnSelect()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -71,7 +71,7 @@ internal class RoundTab : AutoAttachItem<RoundTabData>
 		extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600A013 RID: 40979 RVA: 0x002336AD File Offset: 0x002318AD
+	// Token: 0x060073F1 RID: 29681 RVA: 0x0023D4F1 File Offset: 0x0023B6F1
 	protected override void OnMoveItem()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -82,7 +82,7 @@ internal class RoundTab : AutoAttachItem<RoundTabData>
 		extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600A014 RID: 40980 RVA: 0x002336C4 File Offset: 0x002318C4
+	// Token: 0x060073F2 RID: 29682 RVA: 0x0023D508 File Offset: 0x0023B708
 	protected override void OnRefreshItem(RoundTabData data)
 	{
 		if (data == null)
@@ -155,17 +155,17 @@ internal class RoundTab : AutoAttachItem<RoundTabData>
 		}
 	}
 
-	// Token: 0x0600A015 RID: 40981 RVA: 0x00233819 File Offset: 0x00231A19
+	// Token: 0x060073F3 RID: 29683 RVA: 0x0023D65D File Offset: 0x0023B85D
 	private void OnClickToggle(EToggleState state)
 	{
 		this.OnSelect();
 	}
 
-	// Token: 0x0600A016 RID: 40982 RVA: 0x00233821 File Offset: 0x00231A21
+	// Token: 0x060073F4 RID: 29684 RVA: 0x0023D665 File Offset: 0x0023B865
 	public RoundTab() : base(null)
 	{
 	}
 
-	// Token: 0x040048CE RID: 18638
+	// Token: 0x04004974 RID: 18804
 	private int Round = -1;
 }

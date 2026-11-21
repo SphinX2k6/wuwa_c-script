@@ -4,16 +4,16 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200660D RID: 26125
+	// Token: 0x0200558B RID: 21899
 	public class FishingLoadingView : UiViewBase
 	{
-		// Token: 0x0604178F RID: 268175 RVA: 0x00FDB3E5 File Offset: 0x00FD95E5
+		// Token: 0x06036454 RID: 222292 RVA: 0x00F22465 File Offset: 0x00F20665
 		[NullableContext(1)]
 		public FishingLoadingView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06041790 RID: 268176 RVA: 0x00FDB3F0 File Offset: 0x00FD95F0
+		// Token: 0x06036455 RID: 222293 RVA: 0x00F22470 File Offset: 0x00F20670
 		protected override void OnStart()
 		{
 			bool needOpenDock = (bool)this.OpenParam;

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DE8 RID: 7656
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002001 RID: 8193
 	public class ISceneNewItemSplineStopTarget : INewSplineStopTarget
 	{
-		// Token: 0x0600A3E1 RID: 41953 RVA: 0x00173EB0 File Offset: 0x001720B0
+		// Token: 0x0600ADF7 RID: 44535 RVA: 0x00188708 File Offset: 0x00186908
 		private ISceneNewItemSplineStopTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A3E2 RID: 41954 RVA: 0x00173EE8 File Offset: 0x001720E8
+		// Token: 0x0600ADF8 RID: 44536 RVA: 0x00188740 File Offset: 0x00186940
 		public static ISceneNewItemSplineStopTarget Create([Nullable(2)] ISceneNewItemSplineStopTarget instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A3E3 RID: 41955 RVA: 0x00173EFB File Offset: 0x001720FB
+		// Token: 0x0600ADF9 RID: 44537 RVA: 0x00188753 File Offset: 0x00186953
 		public static ISceneNewItemSplineStopTarget CreateFromSetValue([Nullable(2)] ISceneNewItemSplineStopTarget_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A3E4 RID: 41956 RVA: 0x00173F0E File Offset: 0x0017210E
+		// Token: 0x0600ADFA RID: 44538 RVA: 0x00188766 File Offset: 0x00186966
 		public new ISceneNewItemSplineStopTarget_SetValue ToSetValue()
 		{
 			return new ISceneNewItemSplineStopTarget_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700326B RID: 12907
-		// (get) Token: 0x0600A3E5 RID: 41957 RVA: 0x00173F2D File Offset: 0x0017212D
-		// (set) Token: 0x0600A3E6 RID: 41958 RVA: 0x00173F58 File Offset: 0x00172158
+		// Token: 0x17003508 RID: 13576
+		// (get) Token: 0x0600ADFB RID: 44539 RVA: 0x00188785 File Offset: 0x00186985
+		// (set) Token: 0x0600ADFC RID: 44540 RVA: 0x001887B0 File Offset: 0x001869B0
 		public override ENewSplineMoveTargetType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700326C RID: 12908
-		// (get) Token: 0x0600A3E7 RID: 41959 RVA: 0x00173F66 File Offset: 0x00172166
-		// (set) Token: 0x0600A3E8 RID: 41960 RVA: 0x00173F91 File Offset: 0x00172191
+		// Token: 0x17003509 RID: 13577
+		// (get) Token: 0x0600ADFD RID: 44541 RVA: 0x001887BE File Offset: 0x001869BE
+		// (set) Token: 0x0600ADFE RID: 44542 RVA: 0x001887E9 File Offset: 0x001869E9
 		public virtual int EntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006234 RID: 25140
+		// Token: 0x040067C1 RID: 26561
 		[Nullable(2)]
 		protected new ISceneNewItemSplineStopTarget FbInstance;
 
-		// Token: 0x04006235 RID: 25141
+		// Token: 0x040067C2 RID: 26562
 		[Nullable(2)]
 		protected new ISceneNewItemSplineStopTarget_SetValue PocoInterface;
 	}

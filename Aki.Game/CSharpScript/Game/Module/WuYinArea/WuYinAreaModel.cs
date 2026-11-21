@@ -6,26 +6,26 @@ using CSharpScript.Game.Render;
 
 namespace CSharpScript.Game.Module.WuYinArea
 {
-	// Token: 0x020046F6 RID: 18166
+	// Token: 0x02003626 RID: 13862
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class WuYinAreaModel : ModelBase
 	{
-		// Token: 0x0602F814 RID: 194580 RVA: 0x00B0353D File Offset: 0x00B0173D
+		// Token: 0x06023FDA RID: 147418 RVA: 0x00A3320D File Offset: 0x00A3140D
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x0602F815 RID: 194581 RVA: 0x00B03540 File Offset: 0x00B01740
+		// Token: 0x06023FDB RID: 147419 RVA: 0x00A33210 File Offset: 0x00A31410
 		protected override bool OnClear()
 		{
 			this.WuYinLevelSequenceState.Clear();
 			return true;
 		}
 
-		// Token: 0x0602F816 RID: 194582 RVA: 0x00B03550 File Offset: 0x00B01750
+		// Token: 0x06023FDC RID: 147420 RVA: 0x00A33220 File Offset: 0x00A31420
 		public EWuYinSequencePlayState? GetWuYinLevelSequenceState(string sequenceName)
 		{
 			if (!this.WuYinLevelSequenceState.ContainsKey(sequenceName))
@@ -35,15 +35,15 @@ namespace CSharpScript.Game.Module.WuYinArea
 			return new EWuYinSequencePlayState?(this.WuYinLevelSequenceState[sequenceName]);
 		}
 
-		// Token: 0x0602F817 RID: 194583 RVA: 0x00B03588 File Offset: 0x00B01788
+		// Token: 0x06023FDD RID: 147421 RVA: 0x00A33258 File Offset: 0x00A31458
 		public void PlayWuYinSequence(string sequenceName, string playState)
 		{
 			EWuYinQuState state = (playState == "Play") ? EWuYinQuState.StateFighting1 : EWuYinQuState.StateIdle;
 			RenderModuleController.Instance.SetBattleState(sequenceName, state, false);
 		}
 
-		// Token: 0x1700768C RID: 30348
-		// (get) Token: 0x0602F818 RID: 194584 RVA: 0x00B035B4 File Offset: 0x00B017B4
+		// Token: 0x17004948 RID: 18760
+		// (get) Token: 0x06023FDE RID: 147422 RVA: 0x00A33284 File Offset: 0x00A31484
 		public static WuYinAreaModel Instance
 		{
 			get
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.WuYinArea
 			}
 		}
 
-		// Token: 0x0602F819 RID: 194585 RVA: 0x00B035BB File Offset: 0x00B017BB
+		// Token: 0x06023FDF RID: 147423 RVA: 0x00A3328B File Offset: 0x00A3148B
 		public static WuYinAreaModel GetOrCreateInstance()
 		{
 			if (WuYinAreaModel._Instance == null)
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.WuYinArea
 			return WuYinAreaModel._Instance;
 		}
 
-		// Token: 0x0602F81A RID: 194586 RVA: 0x00B035CF File Offset: 0x00B017CF
+		// Token: 0x06023FE0 RID: 147424 RVA: 0x00A3329F File Offset: 0x00A3149F
 		public static bool CreateInstance()
 		{
 			if (WuYinAreaModel._Instance != null)
@@ -73,27 +73,27 @@ namespace CSharpScript.Game.Module.WuYinArea
 			return true;
 		}
 
-		// Token: 0x0602F81B RID: 194587 RVA: 0x00B035E5 File Offset: 0x00B017E5
+		// Token: 0x06023FE1 RID: 147425 RVA: 0x00A332B5 File Offset: 0x00A314B5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602F81C RID: 194588 RVA: 0x00B035E7 File Offset: 0x00B017E7
+		// Token: 0x06023FE2 RID: 147426 RVA: 0x00A332B7 File Offset: 0x00A314B7
 		public static void ResetStaticDefaultValue()
 		{
 			WuYinAreaModel._Instance = null;
 		}
 
-		// Token: 0x0602F81D RID: 194589 RVA: 0x00B035EF File Offset: 0x00B017EF
+		// Token: 0x06023FE3 RID: 147427 RVA: 0x00A332BF File Offset: 0x00A314BF
 		static WuYinAreaModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WuYinAreaModel.CreateStaticDefaultValue), new Action(WuYinAreaModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04019AA7 RID: 105127
+		// Token: 0x04014156 RID: 82262
 		private readonly Dictionary<string, EWuYinSequencePlayState> WuYinLevelSequenceState = new Dictionary<string, EWuYinSequencePlayState>();
 
-		// Token: 0x04019AA8 RID: 105128
+		// Token: 0x04014157 RID: 82263
 		[Nullable(2)]
 		private static WuYinAreaModel _Instance;
 	}

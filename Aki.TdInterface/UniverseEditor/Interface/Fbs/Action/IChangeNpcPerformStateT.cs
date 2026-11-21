@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200630F RID: 25359
+	// Token: 0x02006980 RID: 27008
 	public class IChangeNpcPerformStateT
 	{
-		// Token: 0x1700BD50 RID: 48464
-		// (get) Token: 0x0602BDBF RID: 179647 RVA: 0x0060808F File Offset: 0x0060628F
-		// (set) Token: 0x0602BDC0 RID: 179648 RVA: 0x00608097 File Offset: 0x00606297
+		// Token: 0x1700C6DA RID: 50906
+		// (get) Token: 0x0602E528 RID: 189736 RVA: 0x0065309B File Offset: 0x0065129B
+		// (set) Token: 0x0602E529 RID: 189737 RVA: 0x006530A3 File Offset: 0x006512A3
 		public int EntityId { get; set; }
 
-		// Token: 0x1700BD51 RID: 48465
-		// (get) Token: 0x0602BDC1 RID: 179649 RVA: 0x006080A0 File Offset: 0x006062A0
-		// (set) Token: 0x0602BDC2 RID: 179650 RVA: 0x006080A8 File Offset: 0x006062A8
+		// Token: 0x1700C6DB RID: 50907
+		// (get) Token: 0x0602E52A RID: 189738 RVA: 0x006530AC File Offset: 0x006512AC
+		// (set) Token: 0x0602E52B RID: 189739 RVA: 0x006530B4 File Offset: 0x006512B4
 		public string State { get; set; }
 
-		// Token: 0x0602BDC3 RID: 179651 RVA: 0x006080B1 File Offset: 0x006062B1
+		// Token: 0x0602E52C RID: 189740 RVA: 0x006530BD File Offset: 0x006512BD
 		public IChangeNpcPerformStateT()
 		{
 			this.EntityId = 0;

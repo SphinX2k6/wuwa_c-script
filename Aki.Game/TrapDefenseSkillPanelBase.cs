@@ -9,19 +9,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D3D RID: 7485
+// Token: 0x020011FF RID: 4607
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class TrapDefenseSkillPanelBase : BattleChildViewPanel
 {
-	// Token: 0x0600E2F4 RID: 58100 RVA: 0x003556E1 File Offset: 0x003538E1
+	// Token: 0x0600B711 RID: 46865 RVA: 0x00361111 File Offset: 0x0035F311
 	protected override void OnStart()
 	{
 		this.RefreshAllBattleSkillItems();
 		this.OnChildStart();
 	}
 
-	// Token: 0x0600E2F5 RID: 58101 RVA: 0x003556F0 File Offset: 0x003538F0
+	// Token: 0x0600B712 RID: 46866 RVA: 0x00361120 File Offset: 0x0035F320
 	protected override void OnAfterShow()
 	{
 		foreach (BattleSkillItem battleSkillItem in this.BattleSkillItemList)
@@ -30,7 +30,7 @@ public abstract class TrapDefenseSkillPanelBase : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2F6 RID: 58102 RVA: 0x00355744 File Offset: 0x00353944
+	// Token: 0x0600B713 RID: 46867 RVA: 0x00361174 File Offset: 0x0035F374
 	protected override void OnShowBattleChildViewPanel(bool isFirst)
 	{
 		foreach (BattleSkillItem battleSkillItem in this.BattleSkillItemList)
@@ -39,7 +39,7 @@ public abstract class TrapDefenseSkillPanelBase : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2F7 RID: 58103 RVA: 0x00355794 File Offset: 0x00353994
+	// Token: 0x0600B714 RID: 46868 RVA: 0x003611C4 File Offset: 0x0035F3C4
 	protected override void OnHideBattleChildViewPanel()
 	{
 		foreach (BattleSkillItem battleSkillItem in this.BattleSkillItemList)
@@ -51,7 +51,7 @@ public abstract class TrapDefenseSkillPanelBase : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2F8 RID: 58104 RVA: 0x003557F0 File Offset: 0x003539F0
+	// Token: 0x0600B715 RID: 46869 RVA: 0x00361220 File Offset: 0x0035F420
 	public override void OnTickBattleChildViewPanel(float delta)
 	{
 		if (!this.Visible)
@@ -64,7 +64,7 @@ public abstract class TrapDefenseSkillPanelBase : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2F9 RID: 58105 RVA: 0x0035584C File Offset: 0x00353A4C
+	// Token: 0x0600B716 RID: 46870 RVA: 0x0036127C File Offset: 0x0035F47C
 	protected override void AddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.TriggerUiTimeDilation, new Action(this.OnChangedTimeScale));
@@ -73,7 +73,7 @@ public abstract class TrapDefenseSkillPanelBase : BattleChildViewPanel
 		EventSystem.Instance.Add<ESkillButtonType>(EEventName.OnSkillButtonCdRefresh, new Action<ESkillButtonType>(this.OnSkillButtonCdRefresh));
 	}
 
-	// Token: 0x0600E2FA RID: 58106 RVA: 0x003558C8 File Offset: 0x00353AC8
+	// Token: 0x0600B717 RID: 46871 RVA: 0x003612F8 File Offset: 0x0035F4F8
 	protected override void RemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.TriggerUiTimeDilation, new Action(this.OnChangedTimeScale));
@@ -82,7 +82,7 @@ public abstract class TrapDefenseSkillPanelBase : BattleChildViewPanel
 		EventSystem.Instance.Remove(EEventName.OnSkillButtonCdRefresh, new Action<ESkillButtonType>(this.OnSkillButtonCdRefresh));
 	}
 
-	// Token: 0x0600E2FB RID: 58107 RVA: 0x00355944 File Offset: 0x00353B44
+	// Token: 0x0600B718 RID: 46872 RVA: 0x00361374 File Offset: 0x0035F574
 	private void OnChangedTimeScale()
 	{
 		foreach (BattleSkillItem battleSkillItem in this.BattleSkillItemList)
@@ -91,7 +91,7 @@ public abstract class TrapDefenseSkillPanelBase : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2FC RID: 58108 RVA: 0x00355994 File Offset: 0x00353B94
+	// Token: 0x0600B719 RID: 46873 RVA: 0x003613C4 File Offset: 0x0035F5C4
 	private void OnPauseGame(int flag)
 	{
 		foreach (BattleSkillItem battleSkillItem in this.BattleSkillItemList)
@@ -100,19 +100,19 @@ public abstract class TrapDefenseSkillPanelBase : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2FD RID: 58109 RVA: 0x003559E8 File Offset: 0x00353BE8
+	// Token: 0x0600B71A RID: 46874 RVA: 0x00361418 File Offset: 0x0035F618
 	private void OnSkillButtonSkillIdRefresh(ESkillButtonType buttonType)
 	{
 		this.RefreshSkillItemByButtonType(buttonType);
 	}
 
-	// Token: 0x0600E2FE RID: 58110 RVA: 0x003559F1 File Offset: 0x00353BF1
+	// Token: 0x0600B71B RID: 46875 RVA: 0x00361421 File Offset: 0x0035F621
 	private void OnSkillButtonCdRefresh(ESkillButtonType buttonType)
 	{
 		this.RefreshSkillItemByButtonType(buttonType);
 	}
 
-	// Token: 0x0600E2FF RID: 58111 RVA: 0x003559FC File Offset: 0x00353BFC
+	// Token: 0x0600B71C RID: 46876 RVA: 0x0036142C File Offset: 0x0035F62C
 	private void RefreshAllBattleSkillItems()
 	{
 		string[] actionNameList = this.GetActionNameList();
@@ -126,7 +126,7 @@ public abstract class TrapDefenseSkillPanelBase : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E300 RID: 58112 RVA: 0x00355A54 File Offset: 0x00353C54
+	// Token: 0x0600B71D RID: 46877 RVA: 0x00361484 File Offset: 0x0035F684
 	private void RefreshSkillItemByButtonType(ESkillButtonType buttonType)
 	{
 		string[] actionNameList = this.GetActionNameList();
@@ -143,7 +143,7 @@ public abstract class TrapDefenseSkillPanelBase : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E301 RID: 58113 RVA: 0x00355AD8 File Offset: 0x00353CD8
+	// Token: 0x0600B71E RID: 46878 RVA: 0x00361508 File Offset: 0x0035F708
 	[return: Dynamic(new bool[]
 	{
 		false,
@@ -167,17 +167,17 @@ public abstract class TrapDefenseSkillPanelBase : BattleChildViewPanel
 		return <NewBattleSkillItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E302 RID: 58114
+	// Token: 0x0600B71F RID: 46879
 	protected abstract string[] GetActionNameList();
 
-	// Token: 0x0600E303 RID: 58115 RVA: 0x00355B33 File Offset: 0x00353D33
+	// Token: 0x0600B720 RID: 46880 RVA: 0x00361563 File Offset: 0x0035F763
 	protected virtual void OnChildStart()
 	{
 	}
 
-	// Token: 0x040068DB RID: 26843
+	// Token: 0x040069BA RID: 27066
 	protected readonly List<BattleSkillItem> BattleSkillItemList = new List<BattleSkillItem>();
 
-	// Token: 0x040068DC RID: 26844
+	// Token: 0x040069BB RID: 27067
 	protected Dictionary<int, TrapDefenseBattleSkillData> DataMap = new Dictionary<int, TrapDefenseBattleSkillData>();
 }

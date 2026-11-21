@@ -4,18 +4,18 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001AE8 RID: 6888
+// Token: 0x02000FA7 RID: 4007
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchSacrificeActionData : FloroRanchActionDataBase
 {
-	// Token: 0x0600CC29 RID: 52265 RVA: 0x002E9737 File Offset: 0x002E7937
+	// Token: 0x0600A03A RID: 41018 RVA: 0x002F48CB File Offset: 0x002F2ACB
 	public FloroRanchSacrificeActionData(FloroRanchUnitActionMsg actionData) : base(actionData)
 	{
 		this.SacrificeData = actionData.SacrificeAction;
 	}
 
-	// Token: 0x0600CC2A RID: 52266 RVA: 0x002E974C File Offset: 0x002E794C
+	// Token: 0x0600A03B RID: 41019 RVA: 0x002F48E0 File Offset: 0x002F2AE0
 	public override UniTask OnExecute()
 	{
 		FloroRanchSacrificeActionData.<OnExecute>d__3 <OnExecute>d__;
@@ -26,7 +26,7 @@ public class FloroRanchSacrificeActionData : FloroRanchActionDataBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CC2B RID: 52267 RVA: 0x002E978F File Offset: 0x002E798F
+	// Token: 0x0600A03C RID: 41020 RVA: 0x002F4923 File Offset: 0x002F2B23
 	protected override void OnExit()
 	{
 		if (this.GroupActionData != null)
@@ -35,9 +35,9 @@ public class FloroRanchSacrificeActionData : FloroRanchActionDataBase
 		}
 	}
 
-	// Token: 0x04005DD8 RID: 24024
+	// Token: 0x04005EA7 RID: 24231
 	private readonly FRSacrifice SacrificeData;
 
-	// Token: 0x04005DD9 RID: 24025
+	// Token: 0x04005EA8 RID: 24232
 	private FloroRanchGroupActionData GroupActionData;
 }

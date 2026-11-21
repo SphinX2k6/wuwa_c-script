@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002770 RID: 10096
+	// Token: 0x02002A42 RID: 10818
 	public class IEaseData
 	{
-		// Token: 0x0600E0D3 RID: 57555 RVA: 0x00213902 File Offset: 0x00211B02
-		[NullableContext(1)]
+		// Token: 0x0600EEF1 RID: 61169 RVA: 0x00230696 File Offset: 0x0022E896
 		public static IEaseData Create(IEaseData? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043B5 RID: 17333
-		// (get) Token: 0x0600E0D4 RID: 57556 RVA: 0x00213921 File Offset: 0x00211B21
+		// Token: 0x1700471B RID: 18203
+		// (get) Token: 0x0600EEF2 RID: 61170 RVA: 0x002306B5 File Offset: 0x0022E8B5
 		public virtual EEaseType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043B6 RID: 17334
-		// (get) Token: 0x0600E0D5 RID: 57557 RVA: 0x0021392E File Offset: 0x00211B2E
+		// Token: 0x1700471C RID: 18204
+		// (get) Token: 0x0600EEF3 RID: 61171 RVA: 0x002306C2 File Offset: 0x0022E8C2
 		public virtual float Duration
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C7E RID: 31870
+		// Token: 0x04008334 RID: 33588
 		private IEaseData Instance;
 	}
 }

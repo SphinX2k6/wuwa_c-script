@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 {
-	// Token: 0x02006A77 RID: 27255
+	// Token: 0x02005BD4 RID: 23508
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneInteractPointManager : Singleton
 	{
-		// Token: 0x17009932 RID: 39218
-		// (get) Token: 0x06043C02 RID: 277506 RVA: 0x0109580C File Offset: 0x01093A0C
+		// Token: 0x17006E17 RID: 28183
+		// (get) Token: 0x06039C50 RID: 236624 RVA: 0x0103A04C File Offset: 0x0103824C
 		public int PointSize
 		{
 			get
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			}
 		}
 
-		// Token: 0x06043C03 RID: 277507 RVA: 0x0109581C File Offset: 0x01093A1C
+		// Token: 0x06039C51 RID: 236625 RVA: 0x0103A05C File Offset: 0x0103825C
 		public void Register(ISceneInteractPointSource source)
 		{
 			if (!this.Sources.Add(source))
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			this.SourcePointIds[source] = list;
 		}
 
-		// Token: 0x06043C04 RID: 277508 RVA: 0x010958C0 File Offset: 0x01093AC0
+		// Token: 0x06039C52 RID: 236626 RVA: 0x0103A100 File Offset: 0x01038300
 		public void Unregister(ISceneInteractPointSource source)
 		{
 			if (!this.Sources.Remove(source))
@@ -66,26 +66,26 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			this.SourcePointIds.Remove(source);
 		}
 
-		// Token: 0x06043C05 RID: 277509 RVA: 0x0109596C File Offset: 0x01093B6C
+		// Token: 0x06039C53 RID: 236627 RVA: 0x0103A1AC File Offset: 0x010383AC
 		public IEnumerable<ISceneInteractPointSource> GetSources()
 		{
 			return this.Sources;
 		}
 
-		// Token: 0x06043C06 RID: 277510 RVA: 0x01095974 File Offset: 0x01093B74
+		// Token: 0x06039C54 RID: 236628 RVA: 0x0103A1B4 File Offset: 0x010383B4
 		public IReadOnlyDictionary<int, ISceneInteractPoint> GetPoints()
 		{
 			return this.Points;
 		}
 
-		// Token: 0x06043C07 RID: 277511 RVA: 0x0109597C File Offset: 0x01093B7C
+		// Token: 0x06039C55 RID: 236629 RVA: 0x0103A1BC File Offset: 0x010383BC
 		[NullableContext(2)]
 		public ISceneInteractPoint GetPoint(int pointId)
 		{
 			return this.Points.GetValueOrDefault(pointId);
 		}
 
-		// Token: 0x06043C08 RID: 277512 RVA: 0x0109598C File Offset: 0x01093B8C
+		// Token: 0x06039C56 RID: 236630 RVA: 0x0103A1CC File Offset: 0x010383CC
 		public int? GetPointId(ISceneInteractPoint point)
 		{
 			int value;
@@ -96,19 +96,19 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			return new int?(value);
 		}
 
-		// Token: 0x06043C09 RID: 277513 RVA: 0x010959B9 File Offset: 0x01093BB9
+		// Token: 0x06039C57 RID: 236631 RVA: 0x0103A1F9 File Offset: 0x010383F9
 		public void AddPointRemovedListener(Action<int> listener)
 		{
 			this.PointRemovedListeners.Add(listener);
 		}
 
-		// Token: 0x06043C0A RID: 277514 RVA: 0x010959C8 File Offset: 0x01093BC8
+		// Token: 0x06039C58 RID: 236632 RVA: 0x0103A208 File Offset: 0x01038408
 		public void RemovePointRemovedListener(Action<int> listener)
 		{
 			this.PointRemovedListeners.Remove(listener);
 		}
 
-		// Token: 0x06043C0B RID: 277515 RVA: 0x010959D8 File Offset: 0x01093BD8
+		// Token: 0x06039C59 RID: 236633 RVA: 0x0103A218 File Offset: 0x01038418
 		public void Clear()
 		{
 			foreach (KeyValuePair<int, ISceneInteractPoint> keyValuePair in this.Points)
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			this.NextPointId = 1;
 		}
 
-		// Token: 0x06043C0C RID: 277516 RVA: 0x01095A80 File Offset: 0x01093C80
+		// Token: 0x06039C5A RID: 236634 RVA: 0x0103A2C0 File Offset: 0x010384C0
 		private void NotifyPointRemoved(int pointId)
 		{
 			foreach (Action<int> action in this.PointRemovedListeners)
@@ -134,8 +134,8 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			}
 		}
 
-		// Token: 0x17009933 RID: 39219
-		// (get) Token: 0x06043C0D RID: 277517 RVA: 0x01095AD4 File Offset: 0x01093CD4
+		// Token: 0x17006E18 RID: 28184
+		// (get) Token: 0x06039C5B RID: 236635 RVA: 0x0103A314 File Offset: 0x01038514
 		public static SceneInteractPointManager Instance
 		{
 			get
@@ -149,12 +149,12 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			}
 		}
 
-		// Token: 0x06043C0E RID: 277518 RVA: 0x01095AF7 File Offset: 0x01093CF7
+		// Token: 0x06039C5C RID: 236636 RVA: 0x0103A337 File Offset: 0x01038537
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043C0F RID: 277519 RVA: 0x01095AF9 File Offset: 0x01093CF9
+		// Token: 0x06039C5D RID: 236637 RVA: 0x0103A339 File Offset: 0x01038539
 		public static void ResetStaticDefaultValue()
 		{
 			SceneInteractPointManager instance = SceneInteractPointManager._instance;
@@ -165,31 +165,31 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			SceneInteractPointManager._instance = null;
 		}
 
-		// Token: 0x06043C10 RID: 277520 RVA: 0x01095B12 File Offset: 0x01093D12
+		// Token: 0x06039C5E RID: 236638 RVA: 0x0103A352 File Offset: 0x01038552
 		static SceneInteractPointManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneInteractPointManager.CreateStaticDefaultValue), new Action(SceneInteractPointManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402365D RID: 144989
+		// Token: 0x0401E84F RID: 125007
 		private int NextPointId = 1;
 
-		// Token: 0x0402365E RID: 144990
+		// Token: 0x0401E850 RID: 125008
 		private readonly HashSet<ISceneInteractPointSource> Sources = new HashSet<ISceneInteractPointSource>();
 
-		// Token: 0x0402365F RID: 144991
+		// Token: 0x0401E851 RID: 125009
 		private readonly Dictionary<int, ISceneInteractPoint> Points = new Dictionary<int, ISceneInteractPoint>();
 
-		// Token: 0x04023660 RID: 144992
+		// Token: 0x0401E852 RID: 125010
 		private WeakMap<ISceneInteractPoint, int> PointIds = new WeakMap<ISceneInteractPoint, int>();
 
-		// Token: 0x04023661 RID: 144993
+		// Token: 0x0401E853 RID: 125011
 		private readonly Dictionary<ISceneInteractPointSource, List<int>> SourcePointIds = new Dictionary<ISceneInteractPointSource, List<int>>();
 
-		// Token: 0x04023662 RID: 144994
+		// Token: 0x0401E854 RID: 125012
 		private readonly HashSet<Action<int>> PointRemovedListeners = new HashSet<Action<int>>();
 
-		// Token: 0x04023663 RID: 144995
+		// Token: 0x0401E855 RID: 125013
 		[Nullable(2)]
 		private static SceneInteractPointManager _instance;
 	}

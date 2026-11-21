@@ -1,33 +1,33 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001424 RID: 5156
+// Token: 0x020008D8 RID: 2264
 [NullableContext(2)]
 [Nullable(0)]
 internal class PinballBattleRoleSkillMaxTipsControllerParam : IPinballBattleRoleSkillMaxTipsParam, IPinballBattleTipsBaseParam
 {
-	// Token: 0x17000C90 RID: 3216
-	// (get) Token: 0x06009167 RID: 37223 RVA: 0x001F2DD6 File Offset: 0x001F0FD6
-	// (set) Token: 0x06009168 RID: 37224 RVA: 0x001F2DDE File Offset: 0x001F0FDE
+	// Token: 0x17000CB0 RID: 3248
+	// (get) Token: 0x060064FC RID: 25852 RVA: 0x001FB912 File Offset: 0x001F9B12
+	// (set) Token: 0x060064FD RID: 25853 RVA: 0x001FB91A File Offset: 0x001F9B1A
 	public int RoleId { get; set; }
 
-	// Token: 0x17000C91 RID: 3217
-	// (get) Token: 0x06009169 RID: 37225 RVA: 0x001F2DE7 File Offset: 0x001F0FE7
-	// (set) Token: 0x0600916A RID: 37226 RVA: 0x001F2DEF File Offset: 0x001F0FEF
+	// Token: 0x17000CB1 RID: 3249
+	// (get) Token: 0x060064FE RID: 25854 RVA: 0x001FB923 File Offset: 0x001F9B23
+	// (set) Token: 0x060064FF RID: 25855 RVA: 0x001FB92B File Offset: 0x001F9B2B
 	public Action CloseCallback { get; set; }
 
-	// Token: 0x17000C92 RID: 3218
-	// (get) Token: 0x0600916B RID: 37227 RVA: 0x001F2DF8 File Offset: 0x001F0FF8
-	// (set) Token: 0x0600916C RID: 37228 RVA: 0x001F2E00 File Offset: 0x001F1000
+	// Token: 0x17000CB2 RID: 3250
+	// (get) Token: 0x06006500 RID: 25856 RVA: 0x001FB934 File Offset: 0x001F9B34
+	// (set) Token: 0x06006501 RID: 25857 RVA: 0x001FB93C File Offset: 0x001F9B3C
 	public bool? AddMask { get; set; }
 
-	// Token: 0x17000C93 RID: 3219
-	// (get) Token: 0x0600916D RID: 37229 RVA: 0x001F2E09 File Offset: 0x001F1009
-	// (set) Token: 0x0600916E RID: 37230 RVA: 0x001F2E11 File Offset: 0x001F1011
+	// Token: 0x17000CB3 RID: 3251
+	// (get) Token: 0x06006502 RID: 25858 RVA: 0x001FB945 File Offset: 0x001F9B45
+	// (set) Token: 0x06006503 RID: 25859 RVA: 0x001FB94D File Offset: 0x001F9B4D
 	public int? CloseTime { get; set; }
 
-	// Token: 0x17000C94 RID: 3220
-	// (get) Token: 0x0600916F RID: 37231 RVA: 0x001F2E1A File Offset: 0x001F101A
-	// (set) Token: 0x06009170 RID: 37232 RVA: 0x001F2E22 File Offset: 0x001F1022
+	// Token: 0x17000CB4 RID: 3252
+	// (get) Token: 0x06006504 RID: 25860 RVA: 0x001FB956 File Offset: 0x001F9B56
+	// (set) Token: 0x06006505 RID: 25861 RVA: 0x001FB95E File Offset: 0x001F9B5E
 	public bool? MoveToBehind { get; set; }
 }

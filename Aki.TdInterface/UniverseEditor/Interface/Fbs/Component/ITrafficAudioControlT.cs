@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AC1 RID: 23233
+	// Token: 0x020060CE RID: 24782
 	public class ITrafficAudioControlT
 	{
-		// Token: 0x1700AEFB RID: 44795
-		// (get) Token: 0x0602797E RID: 162174 RVA: 0x00571FDF File Offset: 0x005701DF
-		// (set) Token: 0x0602797F RID: 162175 RVA: 0x00571FE7 File Offset: 0x005701E7
+		// Token: 0x1700B837 RID: 47159
+		// (get) Token: 0x06029F04 RID: 171780 RVA: 0x005B92C7 File Offset: 0x005B74C7
+		// (set) Token: 0x06029F05 RID: 171781 RVA: 0x005B92CF File Offset: 0x005B74CF
 		public EAudioControlType Type { get; set; }
 
-		// Token: 0x1700AEFC RID: 44796
-		// (get) Token: 0x06027980 RID: 162176 RVA: 0x00571FF0 File Offset: 0x005701F0
-		// (set) Token: 0x06027981 RID: 162177 RVA: 0x00571FF8 File Offset: 0x005701F8
+		// Token: 0x1700B838 RID: 47160
+		// (get) Token: 0x06029F06 RID: 171782 RVA: 0x005B92D8 File Offset: 0x005B74D8
+		// (set) Token: 0x06029F07 RID: 171783 RVA: 0x005B92E0 File Offset: 0x005B74E0
 		public string EngineAudio { get; set; }
 
-		// Token: 0x1700AEFD RID: 44797
-		// (get) Token: 0x06027982 RID: 162178 RVA: 0x00572001 File Offset: 0x00570201
-		// (set) Token: 0x06027983 RID: 162179 RVA: 0x00572009 File Offset: 0x00570209
+		// Token: 0x1700B839 RID: 47161
+		// (get) Token: 0x06029F08 RID: 171784 RVA: 0x005B92E9 File Offset: 0x005B74E9
+		// (set) Token: 0x06029F09 RID: 171785 RVA: 0x005B92F1 File Offset: 0x005B74F1
 		public string BrakingAudio { get; set; }
 
-		// Token: 0x1700AEFE RID: 44798
-		// (get) Token: 0x06027984 RID: 162180 RVA: 0x00572012 File Offset: 0x00570212
-		// (set) Token: 0x06027985 RID: 162181 RVA: 0x0057201A File Offset: 0x0057021A
+		// Token: 0x1700B83A RID: 47162
+		// (get) Token: 0x06029F0A RID: 171786 RVA: 0x005B92FA File Offset: 0x005B74FA
+		// (set) Token: 0x06029F0B RID: 171787 RVA: 0x005B9302 File Offset: 0x005B7502
 		public string BrakingShortAudio { get; set; }
 
-		// Token: 0x1700AEFF RID: 44799
-		// (get) Token: 0x06027986 RID: 162182 RVA: 0x00572023 File Offset: 0x00570223
-		// (set) Token: 0x06027987 RID: 162183 RVA: 0x0057202B File Offset: 0x0057022B
+		// Token: 0x1700B83B RID: 47163
+		// (get) Token: 0x06029F0C RID: 171788 RVA: 0x005B930B File Offset: 0x005B750B
+		// (set) Token: 0x06029F0D RID: 171789 RVA: 0x005B9313 File Offset: 0x005B7513
 		public string HornAudio { get; set; }
 
-		// Token: 0x06027988 RID: 162184 RVA: 0x00572034 File Offset: 0x00570234
+		// Token: 0x06029F0E RID: 171790 RVA: 0x005B931C File Offset: 0x005B751C
 		public ITrafficAudioControlT()
 		{
 			this.Type = EAudioControlType.Gramophone;

@@ -18,14 +18,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 {
-	// Token: 0x02007024 RID: 28708
+	// Token: 0x020061A5 RID: 24997
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleFreezeWaterComponent : EntityComponent
 	{
-		// Token: 0x17009BC0 RID: 39872
-		// (get) Token: 0x06045E03 RID: 286211 RVA: 0x01160D48 File Offset: 0x0115EF48
-		// (set) Token: 0x06045E04 RID: 286212 RVA: 0x01160D50 File Offset: 0x0115EF50
+		// Token: 0x17007110 RID: 28944
+		// (get) Token: 0x0603BFC8 RID: 245704 RVA: 0x0110AFB8 File Offset: 0x011091B8
+		// (set) Token: 0x0603BFC9 RID: 245705 RVA: 0x0110AFC0 File Offset: 0x011091C0
 		private bool InNavWaterArea
 		{
 			get
@@ -131,9 +131,9 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x17009BC1 RID: 39873
-		// (get) Token: 0x06045E05 RID: 286213 RVA: 0x01160EE1 File Offset: 0x0115F0E1
-		// (set) Token: 0x06045E06 RID: 286214 RVA: 0x01160EEC File Offset: 0x0115F0EC
+		// Token: 0x17007111 RID: 28945
+		// (get) Token: 0x0603BFCA RID: 245706 RVA: 0x0110B151 File Offset: 0x01109351
+		// (set) Token: 0x0603BFCB RID: 245707 RVA: 0x0110B15C File Offset: 0x0110935C
 		private bool DetectedWater
 		{
 			get
@@ -217,9 +217,9 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x17009BC2 RID: 39874
-		// (get) Token: 0x06045E07 RID: 286215 RVA: 0x0116102C File Offset: 0x0115F22C
-		public new static Type[] Dependencies
+		// Token: 0x17007112 RID: 28946
+		// (get) Token: 0x0603BFCC RID: 245708 RVA: 0x0110B29C File Offset: 0x0110949C
+		public override Type[] Dependencies
 		{
 			get
 			{
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E08 RID: 286216 RVA: 0x01161080 File Offset: 0x0115F280
+		// Token: 0x0603BFCD RID: 245709 RVA: 0x0110B2F0 File Offset: 0x011094F0
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E09 RID: 286217 RVA: 0x01161268 File Offset: 0x0115F468
+		// Token: 0x0603BFCE RID: 245710 RVA: 0x0110B4D8 File Offset: 0x011096D8
 		protected override bool OnStart()
 		{
 			CreatureDataComponent creatureDataComponent = base.Entity.CheckGetComponent<CreatureDataComponent>();
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E0A RID: 286218 RVA: 0x011614FC File Offset: 0x0115F6FC
+		// Token: 0x0603BFCF RID: 245711 RVA: 0x0110B76C File Offset: 0x0110996C
 		protected override bool OnEnd()
 		{
 			this.FreezeWaterEnterExitHandler = null;
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E0B RID: 286219 RVA: 0x011616B4 File Offset: 0x0115F8B4
+		// Token: 0x0603BFD0 RID: 245712 RVA: 0x0110B924 File Offset: 0x01109B24
 		protected override void OnTick(float delta)
 		{
 			if (!this.IsFunctionOpen())
@@ -500,7 +500,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E0C RID: 286220 RVA: 0x01161A88 File Offset: 0x0115FC88
+		// Token: 0x0603BFD1 RID: 245713 RVA: 0x0110BCF8 File Offset: 0x01109EF8
 		private void MovementTrailCollisionHandler(bool value)
 		{
 			MotorcycleActorComponent actorComp = this.ActorComp;
@@ -534,7 +534,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E0D RID: 286221 RVA: 0x01161B84 File Offset: 0x0115FD84
+		// Token: 0x0603BFD2 RID: 245714 RVA: 0x0110BDF4 File Offset: 0x01109FF4
 		private void MovementTrailCollisionTickHandler(float delta, global::Vector impactPoint, global::Vector impactNormal)
 		{
 			UKuroEnviInteractionComponent interactionComp = this.InteractionComp;
@@ -552,7 +552,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			FKuroWaterDetectedInterfaceHelper.Execute_BroadcastWaterDetectedTick(interactionComp2, delta, waterSurface, fvectorDouble);
 		}
 
-		// Token: 0x06045E0E RID: 286222 RVA: 0x01161C14 File Offset: 0x0115FE14
+		// Token: 0x0603BFD3 RID: 245715 RVA: 0x0110BE84 File Offset: 0x0110A084
 		private void SetPositionByMaterialParameterCollectionHandler(bool value)
 		{
 			if (!value)
@@ -580,7 +580,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E0F RID: 286223 RVA: 0x01161C8C File Offset: 0x0115FE8C
+		// Token: 0x0603BFD4 RID: 245716 RVA: 0x0110BEFC File Offset: 0x0110A0FC
 		private void SetPositionByMaterialParameterCollectionTickHandler(float delta, global::Vector impactPoint, global::Vector impactNormal)
 		{
 			MotorcycleActorComponent actorComp = this.ActorComp;
@@ -610,13 +610,13 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			UKismetMaterialLibrary.SetVectorParameterValue(vehicleOwner2, globalShaderParameters, iceRiderPositionName, flinearColor);
 		}
 
-		// Token: 0x06045E10 RID: 286224 RVA: 0x01161D2A File Offset: 0x0115FF2A
+		// Token: 0x0603BFD5 RID: 245717 RVA: 0x0110BF9A File Offset: 0x0110A19A
 		public void SetIsFunctionOpenOverride(bool? value)
 		{
 			this.IsFunctionOpenOverride = value;
 		}
 
-		// Token: 0x06045E11 RID: 286225 RVA: 0x01161D33 File Offset: 0x0115FF33
+		// Token: 0x0603BFD6 RID: 245718 RVA: 0x0110BFA3 File Offset: 0x0110A1A3
 		private bool IsFunctionOpen()
 		{
 			if (this.IsFunctionOpenOverride != null)
@@ -626,7 +626,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return FunctionModel.Instance.IsOpen(EFunctionType.MotorFreezeWater);
 		}
 
-		// Token: 0x06045E12 RID: 286226 RVA: 0x01161D60 File Offset: 0x0115FF60
+		// Token: 0x0603BFD7 RID: 245719 RVA: 0x0110BFD0 File Offset: 0x0110A1D0
 		private bool CheckWheelHitResultIsWater(int wheelIndex)
 		{
 			this.WheelHitResults[wheelIndex] = null;
@@ -684,7 +684,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E13 RID: 286227 RVA: 0x01161E5D File Offset: 0x0116005D
+		// Token: 0x0603BFD8 RID: 245720 RVA: 0x0110C0CD File Offset: 0x0110A2CD
 		private void OnFreezeWaterEffectTagAddOrRemove(int tagId, bool tagExist)
 		{
 			if (!this.IsFunctionOpen())
@@ -699,7 +699,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.EndSummonedEntityFreezeWaterEffect(tagId);
 		}
 
-		// Token: 0x06045E14 RID: 286228 RVA: 0x01161E7C File Offset: 0x0116007C
+		// Token: 0x0603BFD9 RID: 245721 RVA: 0x0110C0EC File Offset: 0x0110A2EC
 		private void StartSummonedEntityFreezeWaterEffect(int tagId)
 		{
 			EntityHandle summonedEntity = PhantomUtil.GetSummonedEntity(base.Entity, ESummonType.ConcomitantMotorcycle, 1);
@@ -759,7 +759,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E15 RID: 286229 RVA: 0x01162060 File Offset: 0x01160260
+		// Token: 0x0603BFDA RID: 245722 RVA: 0x0110C2D0 File Offset: 0x0110A4D0
 		private void EndSummonedEntityFreezeWaterEffect(int tagId)
 		{
 			List<MotorcycleFreezeWaterComponent.IEffectContext> list;
@@ -784,7 +784,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E16 RID: 286230 RVA: 0x01162124 File Offset: 0x01160324
+		// Token: 0x0603BFDB RID: 245723 RVA: 0x0110C394 File Offset: 0x0110A594
 		protected UniTask CreateFreezeWaterDependencyByTaskGraph()
 		{
 			MotorcycleFreezeWaterComponent.<CreateFreezeWaterDependencyByTaskGraph>d__59 <CreateFreezeWaterDependencyByTaskGraph>d__;
@@ -795,7 +795,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return <CreateFreezeWaterDependencyByTaskGraph>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045E17 RID: 286231 RVA: 0x01162168 File Offset: 0x01160368
+		// Token: 0x0603BFDC RID: 245724 RVA: 0x0110C3D8 File Offset: 0x0110A5D8
 		private static UniTask LoadBlueprintTypeAsync()
 		{
 			MotorcycleFreezeWaterComponent.<LoadBlueprintTypeAsync>d__60 <LoadBlueprintTypeAsync>d__;
@@ -805,7 +805,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return <LoadBlueprintTypeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045E18 RID: 286232 RVA: 0x011621A4 File Offset: 0x011603A4
+		// Token: 0x0603BFDD RID: 245725 RVA: 0x0110C414 File Offset: 0x0110A614
 		private UniTask LoadKuroTrailCollisionAsset<[Nullable(0)] T>(string path) where T : UKuroTrailCollisionAsset
 		{
 			MotorcycleFreezeWaterComponent.<LoadKuroTrailCollisionAsset>d__61<T> <LoadKuroTrailCollisionAsset>d__;
@@ -817,7 +817,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return <LoadKuroTrailCollisionAsset>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045E19 RID: 286233 RVA: 0x011621F0 File Offset: 0x011603F0
+		// Token: 0x0603BFDE RID: 245726 RVA: 0x0110C460 File Offset: 0x0110A660
 		private void CreateFreezeWaterDependency()
 		{
 			if (!this.IsFunctionOpen())
@@ -865,7 +865,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E1A RID: 286234 RVA: 0x01162350 File Offset: 0x01160550
+		// Token: 0x0603BFDF RID: 245727 RVA: 0x0110C5C0 File Offset: 0x0110A7C0
 		private void ClearFreezeWaterEffect()
 		{
 			foreach (int tagId in this.FreezeWaterEffectTagToContexts.Keys)
@@ -874,13 +874,13 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E1B RID: 286235 RVA: 0x011623A8 File Offset: 0x011605A8
+		// Token: 0x0603BFE0 RID: 245728 RVA: 0x0110C618 File Offset: 0x0110A818
 		private void OnMotorcycleWaterAreaChange(bool inArea)
 		{
 			this.InNavWaterArea = inArea;
 		}
 
-		// Token: 0x06045E1C RID: 286236 RVA: 0x011623B4 File Offset: 0x011605B4
+		// Token: 0x0603BFE1 RID: 245729 RVA: 0x0110C624 File Offset: 0x0110A824
 		private void OnVehicleBeenLeaved(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!info.IsDriver)
@@ -904,7 +904,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			freezeWaterPriorityManager.TryExitAll("");
 		}
 
-		// Token: 0x06045E1D RID: 286237 RVA: 0x0116240C File Offset: 0x0116060C
+		// Token: 0x0603BFE2 RID: 245730 RVA: 0x0110C67C File Offset: 0x0110A87C
 		private void OnVehicleBeenEntered(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!info.IsDriver)
@@ -937,7 +937,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.FreezeRunningWaterTagTask = playerTagComponent.ListenForTagAddOrRemove(new int?(MotorcycleFreezeWaterComponent.freezeRunningWaterTag), new BaseTagComponent.TTagSwitchedCallback(this.OnFreezeRunningWaterTagChanged), null);
 		}
 
-		// Token: 0x06045E1E RID: 286238 RVA: 0x011624AC File Offset: 0x011606AC
+		// Token: 0x0603BFE3 RID: 245731 RVA: 0x0110C71C File Offset: 0x0110A91C
 		private void OnFreezeRunningWaterTagChanged(int tagId, bool tagExist)
 		{
 			if (tagId != MotorcycleFreezeWaterComponent.freezeRunningWaterTag)
@@ -975,7 +975,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E1F RID: 286239 RVA: 0x01162515 File Offset: 0x01160715
+		// Token: 0x0603BFE4 RID: 245732 RVA: 0x0110C785 File Offset: 0x0110A985
 		private bool MovementTrailCollisionEnterCallback(ICustomPriorityCallbackParam param)
 		{
 			if (this.IsFunctionOpen() && this.DetectedWater)
@@ -987,7 +987,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E20 RID: 286240 RVA: 0x01162553 File Offset: 0x01160753
+		// Token: 0x0603BFE5 RID: 245733 RVA: 0x0110C7C3 File Offset: 0x0110A9C3
 		private bool MovementTrailCollisionExitCallback(ICustomPriorityCallbackParam param)
 		{
 			this.MovementTrailCollisionHandler(false);
@@ -996,7 +996,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E21 RID: 286241 RVA: 0x0116256C File Offset: 0x0116076C
+		// Token: 0x0603BFE6 RID: 245734 RVA: 0x0110C7DC File Offset: 0x0110A9DC
 		private bool SetPositionByMaterialParameterCollectionEnterCallback(ICustomPriorityCallbackParam param)
 		{
 			if (this.IsFunctionOpen() && FormationDataController.Instance.HasPlayerTag(CreatureModel.Instance.GetPlayerId(), MotorcycleFreezeWaterComponent.freezeRunningWaterTag, false) && this.DetectedWater)
@@ -1008,7 +1008,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E22 RID: 286242 RVA: 0x011625D1 File Offset: 0x011607D1
+		// Token: 0x0603BFE7 RID: 245735 RVA: 0x0110C841 File Offset: 0x0110AA41
 		private bool SetPositionByMaterialParameterCollectionExitCallback(ICustomPriorityCallbackParam param)
 		{
 			this.SetPositionByMaterialParameterCollectionHandler(false);
@@ -1017,7 +1017,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E23 RID: 286243 RVA: 0x011625EC File Offset: 0x011607EC
+		// Token: 0x0603BFE8 RID: 245736 RVA: 0x0110C85C File Offset: 0x0110AA5C
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -1025,287 +1025,251 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				return false;
 			}
 			MotorcycleFreezeWaterComponent motorcycleFreezeWaterComponent = (MotorcycleFreezeWaterComponent)componentTemplate;
-			if (base.CanResetComponentProperty("TraceWaterCapability"))
+			if (motorcycleFreezeWaterComponent.TraceWaterCapability == null)
 			{
-				if (motorcycleFreezeWaterComponent.TraceWaterCapability == null)
-				{
-					this.TraceWaterCapability = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcycleTraceWaterCapability>(this.TraceWaterCapability), "TraceWaterCapability"))
-				{
-					return false;
-				}
+				this.TraceWaterCapability = null;
 			}
-			if (base.CanResetComponentProperty("FreezeWaterRenderCapability1"))
-			{
-				if (motorcycleFreezeWaterComponent.FreezeWaterRenderCapability1 == null)
-				{
-					this.FreezeWaterRenderCapability1 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FreezeWaterRenderCapability>(this.FreezeWaterRenderCapability1), "FreezeWaterRenderCapability1"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MovementTrailCollisionCapability"))
-			{
-				if (motorcycleFreezeWaterComponent.MovementTrailCollisionCapability == null)
-				{
-					this.MovementTrailCollisionCapability = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MovementTrailCollisionCapability>(this.MovementTrailCollisionCapability), "MovementTrailCollisionCapability"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("GameCapabilities") && motorcycleFreezeWaterComponent.GameCapabilities != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<WaterDetectedCapability>>(this.GameCapabilities), "GameCapabilities"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceWaterCapability), "TraceWaterCapability"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (motorcycleFreezeWaterComponent.FreezeWaterRenderCapability1 == null)
 			{
-				if (motorcycleFreezeWaterComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcycleActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.FreezeWaterRenderCapability1 = null;
 			}
-			if (base.CanResetComponentProperty("MoveComp"))
-			{
-				if (motorcycleFreezeWaterComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcycleMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (motorcycleFreezeWaterComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("InteractionComp"))
-			{
-				if (motorcycleFreezeWaterComponent.InteractionComp == null)
-				{
-					this.InteractionComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroEnviInteractionComponent>(this.InteractionComp), "InteractionComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("OriginMotorcycleToKuroWaterCollisionResponse"))
-			{
-				this.OriginMotorcycleToKuroWaterCollisionResponse = motorcycleFreezeWaterComponent.OriginMotorcycleToKuroWaterCollisionResponse;
-			}
-			if (base.CanResetComponentProperty("KuroTrailCollisionAsset"))
-			{
-				if (motorcycleFreezeWaterComponent.KuroTrailCollisionAsset == null)
-				{
-					this.KuroTrailCollisionAsset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroTrailCollisionAsset>(this.KuroTrailCollisionAsset), "KuroTrailCollisionAsset"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("InNavWaterAreaInternal"))
-			{
-				this.InNavWaterAreaInternal = motorcycleFreezeWaterComponent.InNavWaterAreaInternal;
-			}
-			if (base.CanResetComponentProperty("DetectedWaterInternal"))
-			{
-				this.DetectedWaterInternal = motorcycleFreezeWaterComponent.DetectedWaterInternal;
-			}
-			if (base.CanResetComponentProperty("TempWheelHitResults"))
-			{
-				if (motorcycleFreezeWaterComponent.TempWheelHitResults == null)
-				{
-					this.TempWheelHitResults = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, FHitResult>>(this.TempWheelHitResults), "TempWheelHitResults"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("WheelHitResults"))
-			{
-				if (motorcycleFreezeWaterComponent.WheelHitResults == null)
-				{
-					this.WheelHitResults = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, FHitResult>>(this.WheelHitResults), "WheelHitResults"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsAutonomousProxy"))
-			{
-				this.IsAutonomousProxy = motorcycleFreezeWaterComponent.IsAutonomousProxy;
-			}
-			if (base.CanResetComponentProperty("KuroTrailCollisionAssetPath"))
-			{
-				this.KuroTrailCollisionAssetPath = motorcycleFreezeWaterComponent.KuroTrailCollisionAssetPath;
-			}
-			if (base.CanResetComponentProperty("FreezeWaterEffectTagToContexts") && motorcycleFreezeWaterComponent.FreezeWaterEffectTagToContexts != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, List<MotorcycleFreezeWaterComponent.IEffectContext>>>(this.FreezeWaterEffectTagToContexts), "FreezeWaterEffectTagToContexts"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FreezeWaterRenderCapability1), "FreezeWaterRenderCapability1"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TagTasks") && motorcycleFreezeWaterComponent.TagTasks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.TagTasks), "TagTasks"))
+			if (motorcycleFreezeWaterComponent.MovementTrailCollisionCapability == null)
+			{
+				this.MovementTrailCollisionCapability = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MovementTrailCollisionCapability), "MovementTrailCollisionCapability"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("FreezeRunningWaterTagTask"))
+			if (motorcycleFreezeWaterComponent.GameCapabilities != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.GameCapabilities), "GameCapabilities"))
 			{
-				if (motorcycleFreezeWaterComponent.FreezeRunningWaterTagTask == null)
-				{
-					this.FreezeRunningWaterTagTask = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.FreezeRunningWaterTagTask), "FreezeRunningWaterTagTask"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("FreezeWaterPriorityManager"))
+			if (motorcycleFreezeWaterComponent.ActorComp == null)
 			{
-				if (motorcycleFreezeWaterComponent.FreezeWaterPriorityManager == null)
-				{
-					this.FreezeWaterPriorityManager = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CustomPriorityManager<MotorcycleFreezeWaterComponent.EFreezeWaterType>>(this.FreezeWaterPriorityManager), "FreezeWaterPriorityManager"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("IsFunctionOpenOverride"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.IsFunctionOpenOverride = motorcycleFreezeWaterComponent.IsFunctionOpenOverride;
+				return false;
 			}
-			if (base.CanResetComponentProperty("FreezeWaterEnterExitHandler"))
+			if (motorcycleFreezeWaterComponent.MoveComp == null)
 			{
-				if (motorcycleFreezeWaterComponent.FreezeWaterEnterExitHandler == null)
-				{
-					this.FreezeWaterEnterExitHandler = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<bool>>(this.FreezeWaterEnterExitHandler), "FreezeWaterEnterExitHandler"))
-				{
-					return false;
-				}
+				this.MoveComp = null;
 			}
-			if (base.CanResetComponentProperty("FreezeWaterTickHandler"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
-				if (motorcycleFreezeWaterComponent.FreezeWaterTickHandler == null)
-				{
-					this.FreezeWaterTickHandler = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<float, global::Vector, global::Vector>>(this.FreezeWaterTickHandler), "FreezeWaterTickHandler"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("EffectSystemContext"))
+			if (motorcycleFreezeWaterComponent.TagComp == null)
 			{
-				if (motorcycleFreezeWaterComponent.EffectSystemContext == null)
-				{
-					this.EffectSystemContext = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EffectContext>(this.EffectSystemContext), "EffectSystemContext"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("TmpVector"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				if (motorcycleFreezeWaterComponent.TmpVector == null)
-				{
-					this.TmpVector = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector), "TmpVector"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (motorcycleFreezeWaterComponent.InteractionComp == null)
+			{
+				this.InteractionComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractionComp), "InteractionComp"))
+			{
+				return false;
+			}
+			this.OriginMotorcycleToKuroWaterCollisionResponse = motorcycleFreezeWaterComponent.OriginMotorcycleToKuroWaterCollisionResponse;
+			if (motorcycleFreezeWaterComponent.KuroTrailCollisionAsset == null)
+			{
+				this.KuroTrailCollisionAsset = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.KuroTrailCollisionAsset), "KuroTrailCollisionAsset"))
+			{
+				return false;
+			}
+			this.InNavWaterAreaInternal = motorcycleFreezeWaterComponent.InNavWaterAreaInternal;
+			this.DetectedWaterInternal = motorcycleFreezeWaterComponent.DetectedWaterInternal;
+			if (motorcycleFreezeWaterComponent.TempWheelHitResults == null)
+			{
+				this.TempWheelHitResults = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempWheelHitResults), "TempWheelHitResults"))
+			{
+				return false;
+			}
+			if (motorcycleFreezeWaterComponent.WheelHitResults == null)
+			{
+				this.WheelHitResults = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WheelHitResults), "WheelHitResults"))
+			{
+				return false;
+			}
+			this.IsAutonomousProxy = motorcycleFreezeWaterComponent.IsAutonomousProxy;
+			this.KuroTrailCollisionAssetPath = motorcycleFreezeWaterComponent.KuroTrailCollisionAssetPath;
+			if (motorcycleFreezeWaterComponent.FreezeWaterEffectTagToContexts != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.FreezeWaterEffectTagToContexts), "FreezeWaterEffectTagToContexts"))
+			{
+				return false;
+			}
+			if (motorcycleFreezeWaterComponent.TagTasks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagTasks), "TagTasks"))
+			{
+				return false;
+			}
+			if (motorcycleFreezeWaterComponent.FreezeRunningWaterTagTask == null)
+			{
+				this.FreezeRunningWaterTagTask = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FreezeRunningWaterTagTask), "FreezeRunningWaterTagTask"))
+			{
+				return false;
+			}
+			if (motorcycleFreezeWaterComponent.FreezeWaterPriorityManager == null)
+			{
+				this.FreezeWaterPriorityManager = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FreezeWaterPriorityManager), "FreezeWaterPriorityManager"))
+			{
+				return false;
+			}
+			this.IsFunctionOpenOverride = motorcycleFreezeWaterComponent.IsFunctionOpenOverride;
+			if (motorcycleFreezeWaterComponent.FreezeWaterEnterExitHandler == null)
+			{
+				this.FreezeWaterEnterExitHandler = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FreezeWaterEnterExitHandler), "FreezeWaterEnterExitHandler"))
+			{
+				return false;
+			}
+			if (motorcycleFreezeWaterComponent.FreezeWaterTickHandler == null)
+			{
+				this.FreezeWaterTickHandler = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FreezeWaterTickHandler), "FreezeWaterTickHandler"))
+			{
+				return false;
+			}
+			if (motorcycleFreezeWaterComponent.EffectSystemContext == null)
+			{
+				this.EffectSystemContext = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EffectSystemContext), "EffectSystemContext"))
+			{
+				return false;
+			}
+			if (motorcycleFreezeWaterComponent.TmpVector == null)
+			{
+				this.TmpVector = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector), "TmpVector"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x0402487B RID: 149627
+		// Token: 0x17007113 RID: 28947
+		// (get) Token: 0x0603BFE9 RID: 245737 RVA: 0x0110CBDA File Offset: 0x0110ADDA
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007114 RID: 28948
+		// (get) Token: 0x0603BFEA RID: 245738 RVA: 0x0110CBDD File Offset: 0x0110ADDD
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007115 RID: 28949
+		// (get) Token: 0x0603BFEB RID: 245739 RVA: 0x0110CBE0 File Offset: 0x0110ADE0
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FB31 RID: 129841
 		private const string LOAD_BP_TYPE = "LoadBPType";
 
-		// Token: 0x0402487C RID: 149628
+		// Token: 0x0401FB32 RID: 129842
 		private const string LOAD_KURO_TRAIL_COLLISION_ASSET = "LoadKuroTrailCollisionAsset";
 
-		// Token: 0x0402487D RID: 149629
+		// Token: 0x0401FB33 RID: 129843
 		private const string CREATE_DEPENDENCY = "CreateDependency";
 
-		// Token: 0x0402487E RID: 149630
+		// Token: 0x0401FB34 RID: 129844
 		[StaticVariableRuleIgnore]
 		private static int freezeWaterEffectTag = GameplayTagDefine.EGameplayTagId["载具.摩托.移动.冻结水面.特效1"];
 
-		// Token: 0x0402487F RID: 149631
+		// Token: 0x0401FB35 RID: 129845
 		[StaticVariableRuleIgnore]
 		private static int freezeMotorSlideEffectTag = GameplayTagDefine.EGameplayTagId["载具.摩托.移动.冻结水面.特效2"];
 
-		// Token: 0x04024880 RID: 149632
+		// Token: 0x0401FB36 RID: 129846
 		[StaticVariableRuleIgnore]
 		private static int freezeRunningWaterTag = GameplayTagDefine.EGameplayTagId["角色.Common.载具驾驶.摩托.冰面行驶.启用流体冰面"];
 
-		// Token: 0x04024881 RID: 149633
+		// Token: 0x0401FB37 RID: 129847
 		[Nullable(2)]
 		private MotorcycleTraceWaterCapability TraceWaterCapability;
 
-		// Token: 0x04024882 RID: 149634
+		// Token: 0x0401FB38 RID: 129848
 		[Nullable(2)]
 		private FreezeWaterRenderCapability FreezeWaterRenderCapability1;
 
-		// Token: 0x04024883 RID: 149635
+		// Token: 0x0401FB39 RID: 129849
 		[Nullable(2)]
 		private MovementTrailCollisionCapability MovementTrailCollisionCapability;
 
-		// Token: 0x04024884 RID: 149636
+		// Token: 0x0401FB3A RID: 129850
 		private readonly List<WaterDetectedCapability> GameCapabilities = new List<WaterDetectedCapability>();
 
-		// Token: 0x04024885 RID: 149637
+		// Token: 0x0401FB3B RID: 129851
 		[Nullable(2)]
 		private MotorcycleActorComponent ActorComp;
 
-		// Token: 0x04024886 RID: 149638
+		// Token: 0x0401FB3C RID: 129852
 		[Nullable(2)]
 		private MotorcycleMoveComponent MoveComp;
 
-		// Token: 0x04024887 RID: 149639
+		// Token: 0x0401FB3D RID: 129853
 		[Nullable(2)]
 		private BaseTagComponent TagComp;
 
-		// Token: 0x04024888 RID: 149640
+		// Token: 0x0401FB3E RID: 129854
 		[Nullable(2)]
 		private UKuroEnviInteractionComponent InteractionComp;
 
-		// Token: 0x04024889 RID: 149641
+		// Token: 0x0401FB3F RID: 129855
 		private ECollisionResponse? OriginMotorcycleToKuroWaterCollisionResponse;
 
-		// Token: 0x0402488A RID: 149642
+		// Token: 0x0401FB40 RID: 129856
 		[Nullable(2)]
 		protected UKuroTrailCollisionAsset KuroTrailCollisionAsset;
 
-		// Token: 0x0402488B RID: 149643
+		// Token: 0x0401FB41 RID: 129857
 		private bool InNavWaterAreaInternal;
 
-		// Token: 0x0402488C RID: 149644
+		// Token: 0x0401FB42 RID: 129858
 		private bool DetectedWaterInternal;
 
-		// Token: 0x0402488D RID: 149645
+		// Token: 0x0401FB43 RID: 129859
 		[Nullable(new byte[]
 		{
 			2,
@@ -1313,14 +1277,14 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 		})]
 		private Dictionary<int, FHitResult> TempWheelHitResults;
 
-		// Token: 0x0402488E RID: 149646
+		// Token: 0x0401FB44 RID: 129860
 		[Nullable(2)]
 		private Dictionary<int, FHitResult> WheelHitResults;
 
-		// Token: 0x0402488F RID: 149647
+		// Token: 0x0401FB45 RID: 129861
 		private bool IsAutonomousProxy;
 
-		// Token: 0x04024890 RID: 149648
+		// Token: 0x0401FB46 RID: 129862
 		[StaticVariableRuleIgnore]
 		private static readonly MotorcycleFreezeWaterComponent.IEffectConfig[] FreezeWaterEffectConfigs = new MotorcycleFreezeWaterComponent.IEffectConfig[]
 		{
@@ -1336,31 +1300,31 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		};
 
-		// Token: 0x04024891 RID: 149649
+		// Token: 0x0401FB47 RID: 129863
 		private string KuroTrailCollisionAssetPath = "";
 
-		// Token: 0x04024892 RID: 149650
+		// Token: 0x0401FB48 RID: 129864
 		private readonly Dictionary<int, List<MotorcycleFreezeWaterComponent.IEffectContext>> FreezeWaterEffectTagToContexts = new Dictionary<int, List<MotorcycleFreezeWaterComponent.IEffectContext>>();
 
-		// Token: 0x04024893 RID: 149651
+		// Token: 0x0401FB49 RID: 129865
 		private readonly List<ITagTask> TagTasks = new List<ITagTask>();
 
-		// Token: 0x04024894 RID: 149652
+		// Token: 0x0401FB4A RID: 129866
 		[Nullable(2)]
 		private ITagTask FreezeRunningWaterTagTask;
 
-		// Token: 0x04024895 RID: 149653
+		// Token: 0x0401FB4B RID: 129867
 		[Nullable(2)]
 		private CustomPriorityManager<MotorcycleFreezeWaterComponent.EFreezeWaterType> FreezeWaterPriorityManager;
 
-		// Token: 0x04024896 RID: 149654
+		// Token: 0x0401FB4C RID: 129868
 		private bool? IsFunctionOpenOverride;
 
-		// Token: 0x04024897 RID: 149655
+		// Token: 0x0401FB4D RID: 129869
 		[Nullable(2)]
 		private Action<bool> FreezeWaterEnterExitHandler;
 
-		// Token: 0x04024898 RID: 149656
+		// Token: 0x0401FB4E RID: 129870
 		[Nullable(new byte[]
 		{
 			2,
@@ -1369,119 +1333,119 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 		})]
 		private Action<float, global::Vector, global::Vector> FreezeWaterTickHandler;
 
-		// Token: 0x04024899 RID: 149657
+		// Token: 0x0401FB4F RID: 129871
 		[Nullable(2)]
 		private EffectContext EffectSystemContext;
 
-		// Token: 0x0402489A RID: 149658
+		// Token: 0x0401FB50 RID: 129872
 		[StaticVariableRuleIgnore]
 		private global::Vector TmpVector = global::Vector.Create();
 
-		// Token: 0x0200CE13 RID: 52755
+		// Token: 0x0200BA04 RID: 47620
 		public interface IEffectContext
 		{
-			// Token: 0x1700A2A7 RID: 41639
-			// (get) Token: 0x06051DAB RID: 335275
-			// (set) Token: 0x06051DAC RID: 335276
+			// Token: 0x17007A4B RID: 31307
+			// (get) Token: 0x06048614 RID: 296468
+			// (set) Token: 0x06048615 RID: 296469
 			string AssetPath { get; set; }
 
-			// Token: 0x1700A2A8 RID: 41640
-			// (get) Token: 0x06051DAD RID: 335277
-			// (set) Token: 0x06051DAE RID: 335278
+			// Token: 0x17007A4C RID: 31308
+			// (get) Token: 0x06048616 RID: 296470
+			// (set) Token: 0x06048617 RID: 296471
 			string ComponentName { get; set; }
 
-			// Token: 0x1700A2A9 RID: 41641
-			// (get) Token: 0x06051DAF RID: 335279
-			// (set) Token: 0x06051DB0 RID: 335280
+			// Token: 0x17007A4D RID: 31309
+			// (get) Token: 0x06048618 RID: 296472
+			// (set) Token: 0x06048619 RID: 296473
 			FName Socket { get; set; }
 
-			// Token: 0x1700A2AA RID: 41642
-			// (get) Token: 0x06051DB1 RID: 335281
-			// (set) Token: 0x06051DB2 RID: 335282
+			// Token: 0x17007A4E RID: 31310
+			// (get) Token: 0x0604861A RID: 296474
+			// (set) Token: 0x0604861B RID: 296475
 			int? EffectHandleId { get; set; }
 		}
 
-		// Token: 0x0200CE14 RID: 52756
+		// Token: 0x0200BA05 RID: 47621
 		[Nullable(0)]
 		public class EffectContextImpl : MotorcycleFreezeWaterComponent.IEffectContext
 		{
-			// Token: 0x1700A2AB RID: 41643
-			// (get) Token: 0x06051DB3 RID: 335283 RVA: 0x0163E91C File Offset: 0x0163CB1C
-			// (set) Token: 0x06051DB4 RID: 335284 RVA: 0x0163E924 File Offset: 0x0163CB24
+			// Token: 0x17007A4F RID: 31311
+			// (get) Token: 0x0604861C RID: 296476 RVA: 0x01613C3C File Offset: 0x01611E3C
+			// (set) Token: 0x0604861D RID: 296477 RVA: 0x01613C44 File Offset: 0x01611E44
 			public string AssetPath { get; set; }
 
-			// Token: 0x1700A2AC RID: 41644
-			// (get) Token: 0x06051DB5 RID: 335285 RVA: 0x0163E92D File Offset: 0x0163CB2D
-			// (set) Token: 0x06051DB6 RID: 335286 RVA: 0x0163E935 File Offset: 0x0163CB35
+			// Token: 0x17007A50 RID: 31312
+			// (get) Token: 0x0604861E RID: 296478 RVA: 0x01613C4D File Offset: 0x01611E4D
+			// (set) Token: 0x0604861F RID: 296479 RVA: 0x01613C55 File Offset: 0x01611E55
 			public string ComponentName { get; set; }
 
-			// Token: 0x1700A2AD RID: 41645
-			// (get) Token: 0x06051DB7 RID: 335287 RVA: 0x0163E93E File Offset: 0x0163CB3E
-			// (set) Token: 0x06051DB8 RID: 335288 RVA: 0x0163E946 File Offset: 0x0163CB46
+			// Token: 0x17007A51 RID: 31313
+			// (get) Token: 0x06048620 RID: 296480 RVA: 0x01613C5E File Offset: 0x01611E5E
+			// (set) Token: 0x06048621 RID: 296481 RVA: 0x01613C66 File Offset: 0x01611E66
 			public FName Socket { get; set; }
 
-			// Token: 0x1700A2AE RID: 41646
-			// (get) Token: 0x06051DB9 RID: 335289 RVA: 0x0163E94F File Offset: 0x0163CB4F
-			// (set) Token: 0x06051DBA RID: 335290 RVA: 0x0163E957 File Offset: 0x0163CB57
+			// Token: 0x17007A52 RID: 31314
+			// (get) Token: 0x06048622 RID: 296482 RVA: 0x01613C6F File Offset: 0x01611E6F
+			// (set) Token: 0x06048623 RID: 296483 RVA: 0x01613C77 File Offset: 0x01611E77
 			public int? EffectHandleId { get; set; }
 		}
 
-		// Token: 0x0200CE15 RID: 52757
+		// Token: 0x0200BA06 RID: 47622
 		public interface IEffectConfig
 		{
-			// Token: 0x1700A2AF RID: 41647
-			// (get) Token: 0x06051DBC RID: 335292
-			// (set) Token: 0x06051DBD RID: 335293
+			// Token: 0x17007A53 RID: 31315
+			// (get) Token: 0x06048625 RID: 296485
+			// (set) Token: 0x06048626 RID: 296486
 			string Config { get; set; }
 
-			// Token: 0x1700A2B0 RID: 41648
-			// (get) Token: 0x06051DBE RID: 335294
-			// (set) Token: 0x06051DBF RID: 335295
+			// Token: 0x17007A54 RID: 31316
+			// (get) Token: 0x06048627 RID: 296487
+			// (set) Token: 0x06048628 RID: 296488
 			int TagId { get; set; }
 
-			// Token: 0x1700A2B1 RID: 41649
-			// (get) Token: 0x06051DC0 RID: 335296
-			// (set) Token: 0x06051DC1 RID: 335297
+			// Token: 0x17007A55 RID: 31317
+			// (get) Token: 0x06048629 RID: 296489
+			// (set) Token: 0x0604862A RID: 296490
 			[Nullable(2)]
 			string EffectPath { [NullableContext(2)] get; [NullableContext(2)] set; }
 		}
 
-		// Token: 0x0200CE16 RID: 52758
+		// Token: 0x0200BA07 RID: 47623
 		[Nullable(0)]
 		public class EffectConfigImpl : MotorcycleFreezeWaterComponent.IEffectConfig
 		{
-			// Token: 0x1700A2B2 RID: 41650
-			// (get) Token: 0x06051DC2 RID: 335298 RVA: 0x0163E968 File Offset: 0x0163CB68
-			// (set) Token: 0x06051DC3 RID: 335299 RVA: 0x0163E970 File Offset: 0x0163CB70
+			// Token: 0x17007A56 RID: 31318
+			// (get) Token: 0x0604862B RID: 296491 RVA: 0x01613C88 File Offset: 0x01611E88
+			// (set) Token: 0x0604862C RID: 296492 RVA: 0x01613C90 File Offset: 0x01611E90
 			public string Config { get; set; }
 
-			// Token: 0x1700A2B3 RID: 41651
-			// (get) Token: 0x06051DC4 RID: 335300 RVA: 0x0163E979 File Offset: 0x0163CB79
-			// (set) Token: 0x06051DC5 RID: 335301 RVA: 0x0163E981 File Offset: 0x0163CB81
+			// Token: 0x17007A57 RID: 31319
+			// (get) Token: 0x0604862D RID: 296493 RVA: 0x01613C99 File Offset: 0x01611E99
+			// (set) Token: 0x0604862E RID: 296494 RVA: 0x01613CA1 File Offset: 0x01611EA1
 			public int TagId { get; set; }
 
-			// Token: 0x1700A2B4 RID: 41652
-			// (get) Token: 0x06051DC6 RID: 335302 RVA: 0x0163E98A File Offset: 0x0163CB8A
-			// (set) Token: 0x06051DC7 RID: 335303 RVA: 0x0163E992 File Offset: 0x0163CB92
+			// Token: 0x17007A58 RID: 31320
+			// (get) Token: 0x0604862F RID: 296495 RVA: 0x01613CAA File Offset: 0x01611EAA
+			// (set) Token: 0x06048630 RID: 296496 RVA: 0x01613CB2 File Offset: 0x01611EB2
 			[Nullable(2)]
 			public string EffectPath { [NullableContext(2)] get; [NullableContext(2)] set; }
 		}
 
-		// Token: 0x0200CE17 RID: 52759
+		// Token: 0x0200BA08 RID: 47624
 		[NullableContext(0)]
 		public enum EFreezeWaterType
 		{
-			// Token: 0x0403E13B RID: 254267
+			// Token: 0x04039566 RID: 234854
 			SetPositionByMaterialParameterCollection,
-			// Token: 0x0403E13C RID: 254268
+			// Token: 0x04039567 RID: 234855
 			MovementTrailCollision
 		}
 
-		// Token: 0x0200CE19 RID: 52761
+		// Token: 0x0200BA0A RID: 47626
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403E140 RID: 254272
+			// Token: 0x0403956B RID: 234859
 			[Nullable(0)]
 			public static Func<UniTask> <0>__LoadBlueprintTypeAsync;
 		}

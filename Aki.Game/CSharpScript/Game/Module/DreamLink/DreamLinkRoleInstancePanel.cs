@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AA4 RID: 23204
+	// Token: 0x02004A80 RID: 19072
 	public class DreamLinkRoleInstancePanel : UiPanelBase
 	{
-		// Token: 0x0603AC59 RID: 240729 RVA: 0x00DFF7C4 File Offset: 0x00DFD9C4
+		// Token: 0x0602FBA5 RID: 195493 RVA: 0x00D4FD78 File Offset: 0x00D4DF78
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603AC5A RID: 240730 RVA: 0x00DFF850 File Offset: 0x00DFDA50
+		// Token: 0x0602FBA6 RID: 195494 RVA: 0x00D4FE04 File Offset: 0x00D4E004
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DreamLinkRoleInstancePanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AC5B RID: 240731 RVA: 0x00DFF894 File Offset: 0x00DFDA94
+		// Token: 0x0602FBA7 RID: 195495 RVA: 0x00D4FE48 File Offset: 0x00D4E048
 		[NullableContext(1)]
 		public void Refresh(RogueRoleInstData[] dungeonList, int selectIndex)
 		{
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603AC5C RID: 240732 RVA: 0x00DFF8D8 File Offset: 0x00DFDAD8
+		// Token: 0x0602FBA8 RID: 195496 RVA: 0x00D4FE8C File Offset: 0x00D4E08C
 		public FVector2D? GetScreenPositionByIndex(int index)
 		{
 			DreamLinkRoleInstanceItem dreamLinkRoleInstanceItem = this.RoleDungeonItemList[index];
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return null;
 		}
 
-		// Token: 0x0603AC5D RID: 240733 RVA: 0x00DFF910 File Offset: 0x00DFDB10
+		// Token: 0x0602FBA9 RID: 195497 RVA: 0x00D4FEC4 File Offset: 0x00D4E0C4
 		public FVectorDouble? GetLocationByIndex(int index)
 		{
 			DreamLinkRoleInstanceItem dreamLinkRoleInstanceItem = this.RoleDungeonItemList[index];
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return null;
 		}
 
-		// Token: 0x0603AC5E RID: 240734 RVA: 0x00DFF950 File Offset: 0x00DFDB50
+		// Token: 0x0602FBAA RID: 195498 RVA: 0x00D4FF04 File Offset: 0x00D4E104
 		public void SetSelectItem(int index)
 		{
 			for (int i = 0; i < this.RoleDungeonItemList.Count; i++)
@@ -87,20 +87,20 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0401EABD RID: 125629
+		// Token: 0x04019564 RID: 103780
 		[Nullable(1)]
 		private readonly List<DreamLinkRoleInstanceItem> RoleDungeonItemList = new List<DreamLinkRoleInstanceItem>();
 
-		// Token: 0x0200BCD1 RID: 48337
+		// Token: 0x0200A6DA RID: 42714
 		private class EComponentDefine
 		{
-			// Token: 0x04038F3F RID: 233279
+			// Token: 0x0403390A RID: 211210
 			public const int Item1 = 0;
 
-			// Token: 0x04038F40 RID: 233280
+			// Token: 0x0403390B RID: 211211
 			public const int Item2 = 1;
 
-			// Token: 0x04038F41 RID: 233281
+			// Token: 0x0403390C RID: 211212
 			public const int Item3 = 2;
 		}
 	}

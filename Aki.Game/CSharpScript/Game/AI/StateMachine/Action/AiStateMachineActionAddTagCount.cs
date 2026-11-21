@@ -5,17 +5,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Action
 {
-	// Token: 0x0200734D RID: 29517
+	// Token: 0x020064D0 RID: 25808
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineActionAddTagCount : AiStateMachineAction
 	{
-		// Token: 0x0604869D RID: 296605 RVA: 0x012A088D File Offset: 0x0129EA8D
+		// Token: 0x0603EAEA RID: 256746 RVA: 0x01243315 File Offset: 0x01241515
 		public AiStateMachineActionAddTagCount(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.Action action) : base(stateMachineNode, action)
 		{
 		}
 
-		// Token: 0x0604869E RID: 296606 RVA: 0x012A0898 File Offset: 0x0129EA98
+		// Token: 0x0603EAEB RID: 256747 RVA: 0x01243320 File Offset: 0x01241520
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Action action)
 		{
 			CombatStateMachineDefine.Fsm.ActionAddTagCount actionAddTagCount = action.ActionAddTagCount;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.AI.StateMachine.Action
 			return true;
 		}
 
-		// Token: 0x0604869F RID: 296607 RVA: 0x012A08F0 File Offset: 0x0129EAF0
+		// Token: 0x0603EAEC RID: 256748 RVA: 0x01243378 File Offset: 0x01241578
 		public override void DoAction(long? contextId = null)
 		{
 			BaseTagComponent tagComponent = this.Node.TagComponent;
@@ -45,16 +45,16 @@ namespace CSharpScript.Game.AI.StateMachine.Action
 			}
 		}
 
-		// Token: 0x060486A0 RID: 296608 RVA: 0x012A0972 File Offset: 0x0129EB72
+		// Token: 0x0603EAED RID: 256749 RVA: 0x012433FA File Offset: 0x012415FA
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x04026478 RID: 156792
+		// Token: 0x04021765 RID: 137061
 		public int? TagId;
 
-		// Token: 0x04026479 RID: 156793
+		// Token: 0x04021766 RID: 137062
 		public int? Count;
 	}
 }

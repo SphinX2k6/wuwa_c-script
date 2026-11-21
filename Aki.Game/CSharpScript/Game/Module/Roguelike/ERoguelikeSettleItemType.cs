@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E23 RID: 20003
+	// Token: 0x02003DEC RID: 15852
 	public enum ERoguelikeSettleItemType
 	{
-		// Token: 0x0401B5D2 RID: 112082
+		// Token: 0x04015FA5 RID: 90021
 		KillCount,
-		// Token: 0x0401B5D3 RID: 112083
+		// Token: 0x04015FA6 RID: 90022
 		TokenCount,
-		// Token: 0x0401B5D4 RID: 112084
+		// Token: 0x04015FA7 RID: 90023
 		MoneyCount
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052CD RID: 21197
+	// Token: 0x02005838 RID: 22584
 	public struct IFoxJumpPositionOnThisEntity : IFlatbufferObject
 	{
-		// Token: 0x17009B7F RID: 39807
-		// (get) Token: 0x06022947 RID: 141639 RVA: 0x004CB1A7 File Offset: 0x004C93A7
+		// Token: 0x1700A388 RID: 41864
+		// (get) Token: 0x0602490B RID: 149771 RVA: 0x005062A3 File Offset: 0x005044A3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022948 RID: 141640 RVA: 0x004CB1B4 File Offset: 0x004C93B4
+		// Token: 0x0602490C RID: 149772 RVA: 0x005062B0 File Offset: 0x005044B0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022949 RID: 141641 RVA: 0x004CB1BC File Offset: 0x004C93BC
+		// Token: 0x0602490D RID: 149773 RVA: 0x005062B8 File Offset: 0x005044B8
 		public static IFoxJumpPositionOnThisEntity GetRootAsIFoxJumpPositionOnThisEntity(ByteBuffer _bb)
 		{
 			return IFoxJumpPositionOnThisEntity.GetRootAsIFoxJumpPositionOnThisEntity(_bb, default(IFoxJumpPositionOnThisEntity));
 		}
 
-		// Token: 0x0602294A RID: 141642 RVA: 0x004CB1D8 File Offset: 0x004C93D8
+		// Token: 0x0602490E RID: 149774 RVA: 0x005062D4 File Offset: 0x005044D4
 		public static IFoxJumpPositionOnThisEntity GetRootAsIFoxJumpPositionOnThisEntity(ByteBuffer _bb, IFoxJumpPositionOnThisEntity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602294B RID: 141643 RVA: 0x004CB1F5 File Offset: 0x004C93F5
+		// Token: 0x0602490F RID: 149775 RVA: 0x005062F1 File Offset: 0x005044F1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602294C RID: 141644 RVA: 0x004CB204 File Offset: 0x004C9404
+		// Token: 0x06024910 RID: 149776 RVA: 0x00506300 File Offset: 0x00504500
 		public IFoxJumpPositionOnThisEntity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009B80 RID: 39808
-		// (get) Token: 0x0602294D RID: 141645 RVA: 0x004CB214 File Offset: 0x004C9414
+		// Token: 0x1700A389 RID: 41865
+		// (get) Token: 0x06024911 RID: 149777 RVA: 0x00506310 File Offset: 0x00504510
 		public EFoxJumpInteractPointRelationType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B81 RID: 39809
-		// (get) Token: 0x0602294E RID: 141646 RVA: 0x004CB250 File Offset: 0x004C9450
+		// Token: 0x1700A38A RID: 41866
+		// (get) Token: 0x06024912 RID: 149778 RVA: 0x0050634C File Offset: 0x0050454C
 		public IVectorInfo? Offset
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B82 RID: 39810
-		// (get) Token: 0x0602294F RID: 141647 RVA: 0x004CB2B0 File Offset: 0x004C94B0
+		// Token: 0x1700A38B RID: 41867
+		// (get) Token: 0x06024913 RID: 149779 RVA: 0x005063AC File Offset: 0x005045AC
 		public IVectorInfo? RaycastDestOffset
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B83 RID: 39811
-		// (get) Token: 0x06022950 RID: 141648 RVA: 0x004CB310 File Offset: 0x004C9510
+		// Token: 0x1700A38C RID: 41868
+		// (get) Token: 0x06024914 RID: 149780 RVA: 0x0050640C File Offset: 0x0050460C
 		public int SplineEntityId
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B84 RID: 39812
-		// (get) Token: 0x06022951 RID: 141649 RVA: 0x004CB350 File Offset: 0x004C9550
+		// Token: 0x1700A38D RID: 41869
+		// (get) Token: 0x06024915 RID: 149781 RVA: 0x0050644C File Offset: 0x0050464C
 		public byte NullMask
 		{
 			get
@@ -123,7 +123,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022952 RID: 141650 RVA: 0x004CB38D File Offset: 0x004C958D
+		// Token: 0x06024916 RID: 149782 RVA: 0x00506489 File Offset: 0x00504689
 		public static Offset<IFoxJumpPositionOnThisEntity> CreateIFoxJumpPositionOnThisEntity(FlatBufferBuilder builder, EFoxJumpInteractPointRelationType Type = EFoxJumpInteractPointRelationType.ThisEntity, Offset<IVectorInfo> OffsetOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> RaycastDestOffsetOffset = default(Offset<IVectorInfo>), int SplineEntityId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -135,49 +135,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFoxJumpPositionOnThisEntity.EndIFoxJumpPositionOnThisEntity(builder);
 		}
 
-		// Token: 0x06022953 RID: 141651 RVA: 0x004CB3C1 File Offset: 0x004C95C1
+		// Token: 0x06024917 RID: 149783 RVA: 0x005064BD File Offset: 0x005046BD
 		public static void StartIFoxJumpPositionOnThisEntity(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06022954 RID: 141652 RVA: 0x004CB3CA File Offset: 0x004C95CA
+		// Token: 0x06024918 RID: 149784 RVA: 0x005064C6 File Offset: 0x005046C6
 		public static void AddType(FlatBufferBuilder builder, EFoxJumpInteractPointRelationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06022955 RID: 141653 RVA: 0x004CB3D5 File Offset: 0x004C95D5
+		// Token: 0x06024919 RID: 149785 RVA: 0x005064D1 File Offset: 0x005046D1
 		public static void AddOffset(FlatBufferBuilder builder, Offset<IVectorInfo> offsetOffset)
 		{
 			builder.AddOffset(1, offsetOffset.Value, 0);
 		}
 
-		// Token: 0x06022956 RID: 141654 RVA: 0x004CB3E5 File Offset: 0x004C95E5
+		// Token: 0x0602491A RID: 149786 RVA: 0x005064E1 File Offset: 0x005046E1
 		public static void AddRaycastDestOffset(FlatBufferBuilder builder, Offset<IVectorInfo> raycastDestOffsetOffset)
 		{
 			builder.AddOffset(2, raycastDestOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x06022957 RID: 141655 RVA: 0x004CB3F5 File Offset: 0x004C95F5
+		// Token: 0x0602491B RID: 149787 RVA: 0x005064F1 File Offset: 0x005046F1
 		public static void AddSplineEntityId(FlatBufferBuilder builder, int splineEntityId)
 		{
 			builder.AddInt(3, splineEntityId, 0);
 		}
 
-		// Token: 0x06022958 RID: 141656 RVA: 0x004CB400 File Offset: 0x004C9600
+		// Token: 0x0602491C RID: 149788 RVA: 0x005064FC File Offset: 0x005046FC
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06022959 RID: 141657 RVA: 0x004CB40B File Offset: 0x004C960B
+		// Token: 0x0602491D RID: 149789 RVA: 0x00506507 File Offset: 0x00504707
 		public static Offset<IFoxJumpPositionOnThisEntity> EndIFoxJumpPositionOnThisEntity(FlatBufferBuilder builder)
 		{
 			return new Offset<IFoxJumpPositionOnThisEntity>(builder.EndTable());
 		}
 
-		// Token: 0x0602295A RID: 141658 RVA: 0x004CB418 File Offset: 0x004C9618
+		// Token: 0x0602491E RID: 149790 RVA: 0x00506514 File Offset: 0x00504714
 		public IFoxJumpPositionOnThisEntityT UnPack()
 		{
 			IFoxJumpPositionOnThisEntityT foxJumpPositionOnThisEntityT = new IFoxJumpPositionOnThisEntityT();
@@ -185,7 +185,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return foxJumpPositionOnThisEntityT;
 		}
 
-		// Token: 0x0602295B RID: 141659 RVA: 0x004CB434 File Offset: 0x004C9634
+		// Token: 0x0602491F RID: 149791 RVA: 0x00506530 File Offset: 0x00504730
 		public void UnPackTo(IFoxJumpPositionOnThisEntityT _o)
 		{
 			_o.Type = this.Type;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602295C RID: 141660 RVA: 0x004CB4C4 File Offset: 0x004C96C4
+		// Token: 0x06024920 RID: 149792 RVA: 0x005065C0 File Offset: 0x005047C0
 		public static Offset<IFoxJumpPositionOnThisEntity> Pack(FlatBufferBuilder builder, IFoxJumpPositionOnThisEntityT _o)
 		{
 			if (_o == null)
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFoxJumpPositionOnThisEntity.CreateIFoxJumpPositionOnThisEntity(builder, _o.Type, offsetOffset, raycastDestOffsetOffset, _o.SplineEntityId, _o.NullMask);
 		}
 
-		// Token: 0x0400E45E RID: 58462
+		// Token: 0x0400F06B RID: 61547
 		private Table __p;
 	}
 }

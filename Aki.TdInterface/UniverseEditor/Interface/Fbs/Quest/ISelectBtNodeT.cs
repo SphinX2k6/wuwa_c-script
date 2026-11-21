@@ -4,205 +4,205 @@ using Aki.UniverseEditor.Interface.Fbs.FixProcessor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200410A RID: 16650
+	// Token: 0x0200454B RID: 17739
 	public class ISelectBtNodeT
 	{
-		// Token: 0x17007588 RID: 30088
-		// (get) Token: 0x06018509 RID: 99593 RVA: 0x003812B2 File Offset: 0x0037F4B2
-		// (set) Token: 0x0601850A RID: 99594 RVA: 0x003812BA File Offset: 0x0037F4BA
+		// Token: 0x17007B8E RID: 31630
+		// (get) Token: 0x06019BAB RID: 105387 RVA: 0x003AB25E File Offset: 0x003A945E
+		// (set) Token: 0x06019BAC RID: 105388 RVA: 0x003AB266 File Offset: 0x003A9466
 		public EBtNode Type { get; set; }
 
-		// Token: 0x17007589 RID: 30089
-		// (get) Token: 0x0601850B RID: 99595 RVA: 0x003812C3 File Offset: 0x0037F4C3
-		// (set) Token: 0x0601850C RID: 99596 RVA: 0x003812CB File Offset: 0x0037F4CB
+		// Token: 0x17007B8F RID: 31631
+		// (get) Token: 0x06019BAD RID: 105389 RVA: 0x003AB26F File Offset: 0x003A946F
+		// (set) Token: 0x06019BAE RID: 105390 RVA: 0x003AB277 File Offset: 0x003A9477
 		public int Id { get; set; }
 
-		// Token: 0x1700758A RID: 30090
-		// (get) Token: 0x0601850D RID: 99597 RVA: 0x003812D4 File Offset: 0x0037F4D4
-		// (set) Token: 0x0601850E RID: 99598 RVA: 0x003812DC File Offset: 0x0037F4DC
+		// Token: 0x17007B90 RID: 31632
+		// (get) Token: 0x06019BAF RID: 105391 RVA: 0x003AB280 File Offset: 0x003A9480
+		// (set) Token: 0x06019BB0 RID: 105392 RVA: 0x003AB288 File Offset: 0x003A9488
 		public string Desc { get; set; }
 
-		// Token: 0x1700758B RID: 30091
-		// (get) Token: 0x0601850F RID: 99599 RVA: 0x003812E5 File Offset: 0x0037F4E5
-		// (set) Token: 0x06018510 RID: 99600 RVA: 0x003812ED File Offset: 0x0037F4ED
+		// Token: 0x17007B91 RID: 31633
+		// (get) Token: 0x06019BB1 RID: 105393 RVA: 0x003AB291 File Offset: 0x003A9491
+		// (set) Token: 0x06019BB2 RID: 105394 RVA: 0x003AB299 File Offset: 0x003A9499
 		public IFixProcessorT FixProcessor { get; set; }
 
-		// Token: 0x1700758C RID: 30092
-		// (get) Token: 0x06018511 RID: 99601 RVA: 0x003812F6 File Offset: 0x0037F4F6
-		// (set) Token: 0x06018512 RID: 99602 RVA: 0x003812FE File Offset: 0x0037F4FE
+		// Token: 0x17007B92 RID: 31634
+		// (get) Token: 0x06019BB3 RID: 105395 RVA: 0x003AB2A2 File Offset: 0x003A94A2
+		// (set) Token: 0x06019BB4 RID: 105396 RVA: 0x003AB2AA File Offset: 0x003A94AA
 		public bool _FoldedForTree { get; set; }
 
-		// Token: 0x1700758D RID: 30093
-		// (get) Token: 0x06018513 RID: 99603 RVA: 0x00381307 File Offset: 0x0037F507
-		// (set) Token: 0x06018514 RID: 99604 RVA: 0x0038130F File Offset: 0x0037F50F
+		// Token: 0x17007B93 RID: 31635
+		// (get) Token: 0x06019BB5 RID: 105397 RVA: 0x003AB2B3 File Offset: 0x003A94B3
+		// (set) Token: 0x06019BB6 RID: 105398 RVA: 0x003AB2BB File Offset: 0x003A94BB
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700758E RID: 30094
-		// (get) Token: 0x06018515 RID: 99605 RVA: 0x00381318 File Offset: 0x0037F518
-		// (set) Token: 0x06018516 RID: 99606 RVA: 0x00381320 File Offset: 0x0037F520
+		// Token: 0x17007B94 RID: 31636
+		// (get) Token: 0x06019BB7 RID: 105399 RVA: 0x003AB2C4 File Offset: 0x003A94C4
+		// (set) Token: 0x06019BB8 RID: 105400 RVA: 0x003AB2CC File Offset: 0x003A94CC
 		public IQuestScheduleConfigT UIConfig { get; set; }
 
-		// Token: 0x1700758F RID: 30095
-		// (get) Token: 0x06018517 RID: 99607 RVA: 0x00381329 File Offset: 0x0037F529
-		// (set) Token: 0x06018518 RID: 99608 RVA: 0x00381331 File Offset: 0x0037F531
+		// Token: 0x17007B95 RID: 31637
+		// (get) Token: 0x06019BB9 RID: 105401 RVA: 0x003AB2D5 File Offset: 0x003A94D5
+		// (set) Token: 0x06019BBA RID: 105402 RVA: 0x003AB2DD File Offset: 0x003A94DD
 		public IInformationViewConfigT InformationView { get; set; }
 
-		// Token: 0x17007590 RID: 30096
-		// (get) Token: 0x06018519 RID: 99609 RVA: 0x0038133A File Offset: 0x0037F53A
-		// (set) Token: 0x0601851A RID: 99610 RVA: 0x00381342 File Offset: 0x0037F542
+		// Token: 0x17007B96 RID: 31638
+		// (get) Token: 0x06019BBB RID: 105403 RVA: 0x003AB2E6 File Offset: 0x003A94E6
+		// (set) Token: 0x06019BBC RID: 105404 RVA: 0x003AB2EE File Offset: 0x003A94EE
 		public IInformationBoardConfigT InformationBoard { get; set; }
 
-		// Token: 0x17007591 RID: 30097
-		// (get) Token: 0x0601851B RID: 99611 RVA: 0x0038134B File Offset: 0x0037F54B
-		// (set) Token: 0x0601851C RID: 99612 RVA: 0x00381353 File Offset: 0x0037F553
+		// Token: 0x17007B97 RID: 31639
+		// (get) Token: 0x06019BBD RID: 105405 RVA: 0x003AB2F7 File Offset: 0x003A94F7
+		// (set) Token: 0x06019BBE RID: 105406 RVA: 0x003AB2FF File Offset: 0x003A94FF
 		public string TidQuestAliasName { get; set; }
 
-		// Token: 0x17007592 RID: 30098
-		// (get) Token: 0x0601851D RID: 99613 RVA: 0x0038135C File Offset: 0x0037F55C
-		// (set) Token: 0x0601851E RID: 99614 RVA: 0x00381364 File Offset: 0x0037F564
+		// Token: 0x17007B98 RID: 31640
+		// (get) Token: 0x06019BBF RID: 105407 RVA: 0x003AB308 File Offset: 0x003A9508
+		// (set) Token: 0x06019BC0 RID: 105408 RVA: 0x003AB310 File Offset: 0x003A9510
 		public string TidQuestAliasDesc { get; set; }
 
-		// Token: 0x17007593 RID: 30099
-		// (get) Token: 0x0601851F RID: 99615 RVA: 0x0038136D File Offset: 0x0037F56D
-		// (set) Token: 0x06018520 RID: 99616 RVA: 0x00381375 File Offset: 0x0037F575
+		// Token: 0x17007B99 RID: 31641
+		// (get) Token: 0x06019BC1 RID: 105409 RVA: 0x003AB319 File Offset: 0x003A9519
+		// (set) Token: 0x06019BC2 RID: 105410 RVA: 0x003AB321 File Offset: 0x003A9521
 		public int DungeonId { get; set; }
 
-		// Token: 0x17007594 RID: 30100
-		// (get) Token: 0x06018521 RID: 99617 RVA: 0x0038137E File Offset: 0x0037F57E
-		// (set) Token: 0x06018522 RID: 99618 RVA: 0x00381386 File Offset: 0x0037F586
+		// Token: 0x17007B9A RID: 31642
+		// (get) Token: 0x06019BC3 RID: 105411 RVA: 0x003AB32A File Offset: 0x003A952A
+		// (set) Token: 0x06019BC4 RID: 105412 RVA: 0x003AB332 File Offset: 0x003A9532
 		public bool DisableOnline { get; set; }
 
-		// Token: 0x17007595 RID: 30101
-		// (get) Token: 0x06018523 RID: 99619 RVA: 0x0038138F File Offset: 0x0037F58F
-		// (set) Token: 0x06018524 RID: 99620 RVA: 0x00381397 File Offset: 0x0037F597
+		// Token: 0x17007B9B RID: 31643
+		// (get) Token: 0x06019BC5 RID: 105413 RVA: 0x003AB33B File Offset: 0x003A953B
+		// (set) Token: 0x06019BC6 RID: 105414 RVA: 0x003AB343 File Offset: 0x003A9543
 		public ISaveConfigT SaveConfig { get; set; }
 
-		// Token: 0x17007596 RID: 30102
-		// (get) Token: 0x06018525 RID: 99621 RVA: 0x003813A0 File Offset: 0x0037F5A0
-		// (set) Token: 0x06018526 RID: 99622 RVA: 0x003813A8 File Offset: 0x0037F5A8
+		// Token: 0x17007B9C RID: 31644
+		// (get) Token: 0x06019BC7 RID: 105415 RVA: 0x003AB34C File Offset: 0x003A954C
+		// (set) Token: 0x06019BC8 RID: 105416 RVA: 0x003AB354 File Offset: 0x003A9554
 		public IForceClosedRestrictionT ForceClosedRestriction { get; set; }
 
-		// Token: 0x17007597 RID: 30103
-		// (get) Token: 0x06018527 RID: 99623 RVA: 0x003813B1 File Offset: 0x0037F5B1
-		// (set) Token: 0x06018528 RID: 99624 RVA: 0x003813B9 File Offset: 0x0037F5B9
+		// Token: 0x17007B9D RID: 31645
+		// (get) Token: 0x06019BC9 RID: 105417 RVA: 0x003AB35D File Offset: 0x003A955D
+		// (set) Token: 0x06019BCA RID: 105418 RVA: 0x003AB365 File Offset: 0x003A9565
 		public List<string> Occupations { get; set; }
 
-		// Token: 0x17007598 RID: 30104
-		// (get) Token: 0x06018529 RID: 99625 RVA: 0x003813C2 File Offset: 0x0037F5C2
-		// (set) Token: 0x0601852A RID: 99626 RVA: 0x003813CA File Offset: 0x0037F5CA
+		// Token: 0x17007B9E RID: 31646
+		// (get) Token: 0x06019BCB RID: 105419 RVA: 0x003AB36E File Offset: 0x003A956E
+		// (set) Token: 0x06019BCC RID: 105420 RVA: 0x003AB376 File Offset: 0x003A9576
 		public ILogicNodeOccupationT OccupationConfig { get; set; }
 
-		// Token: 0x17007599 RID: 30105
-		// (get) Token: 0x0601852B RID: 99627 RVA: 0x003813D3 File Offset: 0x0037F5D3
-		// (set) Token: 0x0601852C RID: 99628 RVA: 0x003813DB File Offset: 0x0037F5DB
+		// Token: 0x17007B9F RID: 31647
+		// (get) Token: 0x06019BCD RID: 105421 RVA: 0x003AB37F File Offset: 0x003A957F
+		// (set) Token: 0x06019BCE RID: 105422 RVA: 0x003AB387 File Offset: 0x003A9587
 		public bool DisableSwitchOccupation { get; set; }
 
-		// Token: 0x1700759A RID: 30106
-		// (get) Token: 0x0601852D RID: 99629 RVA: 0x003813E4 File Offset: 0x0037F5E4
-		// (set) Token: 0x0601852E RID: 99630 RVA: 0x003813EC File Offset: 0x0037F5EC
+		// Token: 0x17007BA0 RID: 31648
+		// (get) Token: 0x06019BCF RID: 105423 RVA: 0x003AB390 File Offset: 0x003A9590
+		// (set) Token: 0x06019BD0 RID: 105424 RVA: 0x003AB398 File Offset: 0x003A9598
 		public EBudgetCameraType BudgetCameraType { get; set; }
 
-		// Token: 0x1700759B RID: 30107
-		// (get) Token: 0x0601852F RID: 99631 RVA: 0x003813F5 File Offset: 0x0037F5F5
-		// (set) Token: 0x06018530 RID: 99632 RVA: 0x003813FD File Offset: 0x0037F5FD
+		// Token: 0x17007BA1 RID: 31649
+		// (get) Token: 0x06019BD1 RID: 105425 RVA: 0x003AB3A1 File Offset: 0x003A95A1
+		// (set) Token: 0x06019BD2 RID: 105426 RVA: 0x003AB3A9 File Offset: 0x003A95A9
 		public IQuestStatisticsT Statistics { get; set; }
 
-		// Token: 0x1700759C RID: 30108
-		// (get) Token: 0x06018531 RID: 99633 RVA: 0x00381406 File Offset: 0x0037F606
-		// (set) Token: 0x06018532 RID: 99634 RVA: 0x0038140E File Offset: 0x0037F60E
+		// Token: 0x17007BA2 RID: 31650
+		// (get) Token: 0x06019BD3 RID: 105427 RVA: 0x003AB3B2 File Offset: 0x003A95B2
+		// (set) Token: 0x06019BD4 RID: 105428 RVA: 0x003AB3BA File Offset: 0x003A95BA
 		public ETrackViewMode CompositeTrackViewMode { get; set; }
 
-		// Token: 0x1700759D RID: 30109
-		// (get) Token: 0x06018533 RID: 99635 RVA: 0x00381417 File Offset: 0x0037F617
-		// (set) Token: 0x06018534 RID: 99636 RVA: 0x0038141F File Offset: 0x0037F61F
+		// Token: 0x17007BA3 RID: 31651
+		// (get) Token: 0x06019BD5 RID: 105429 RVA: 0x003AB3C3 File Offset: 0x003A95C3
+		// (set) Token: 0x06019BD6 RID: 105430 RVA: 0x003AB3CB File Offset: 0x003A95CB
 		public IQuestRewardConfigT RewardConfig { get; set; }
 
-		// Token: 0x1700759E RID: 30110
-		// (get) Token: 0x06018535 RID: 99637 RVA: 0x00381428 File Offset: 0x0037F628
-		// (set) Token: 0x06018536 RID: 99638 RVA: 0x00381430 File Offset: 0x0037F630
+		// Token: 0x17007BA4 RID: 31652
+		// (get) Token: 0x06019BD7 RID: 105431 RVA: 0x003AB3D4 File Offset: 0x003A95D4
+		// (set) Token: 0x06019BD8 RID: 105432 RVA: 0x003AB3DC File Offset: 0x003A95DC
 		public TSpecialGamePlayConfigUnion SpecialGamePlayConfig { get; set; }
 
-		// Token: 0x1700759F RID: 30111
-		// (get) Token: 0x06018537 RID: 99639 RVA: 0x00381439 File Offset: 0x0037F639
-		// (set) Token: 0x06018538 RID: 99640 RVA: 0x00381441 File Offset: 0x0037F641
+		// Token: 0x17007BA5 RID: 31653
+		// (get) Token: 0x06019BD9 RID: 105433 RVA: 0x003AB3E5 File Offset: 0x003A95E5
+		// (set) Token: 0x06019BDA RID: 105434 RVA: 0x003AB3ED File Offset: 0x003A95ED
 		public TEnableSystemConfigUnion EnableSystem { get; set; }
 
-		// Token: 0x170075A0 RID: 30112
-		// (get) Token: 0x06018539 RID: 99641 RVA: 0x0038144A File Offset: 0x0037F64A
-		// (set) Token: 0x0601853A RID: 99642 RVA: 0x00381452 File Offset: 0x0037F652
+		// Token: 0x17007BA6 RID: 31654
+		// (get) Token: 0x06019BDB RID: 105435 RVA: 0x003AB3F6 File Offset: 0x003A95F6
+		// (set) Token: 0x06019BDC RID: 105436 RVA: 0x003AB3FE File Offset: 0x003A95FE
 		public IWaveConfigT StartWave { get; set; }
 
-		// Token: 0x170075A1 RID: 30113
-		// (get) Token: 0x0601853B RID: 99643 RVA: 0x0038145B File Offset: 0x0037F65B
-		// (set) Token: 0x0601853C RID: 99644 RVA: 0x00381463 File Offset: 0x0037F663
+		// Token: 0x17007BA7 RID: 31655
+		// (get) Token: 0x06019BDD RID: 105437 RVA: 0x003AB407 File Offset: 0x003A9607
+		// (set) Token: 0x06019BDE RID: 105438 RVA: 0x003AB40F File Offset: 0x003A960F
 		public IDisableTrackAnimT DisableTrackAnim { get; set; }
 
-		// Token: 0x170075A2 RID: 30114
-		// (get) Token: 0x0601853D RID: 99645 RVA: 0x0038146C File Offset: 0x0037F66C
-		// (set) Token: 0x0601853E RID: 99646 RVA: 0x00381474 File Offset: 0x0037F674
+		// Token: 0x17007BA8 RID: 31656
+		// (get) Token: 0x06019BDF RID: 105439 RVA: 0x003AB418 File Offset: 0x003A9618
+		// (set) Token: 0x06019BE0 RID: 105440 RVA: 0x003AB420 File Offset: 0x003A9620
 		public bool DisableSwitchGender { get; set; }
 
-		// Token: 0x170075A3 RID: 30115
-		// (get) Token: 0x0601853F RID: 99647 RVA: 0x0038147D File Offset: 0x0037F67D
-		// (set) Token: 0x06018540 RID: 99648 RVA: 0x00381485 File Offset: 0x0037F685
+		// Token: 0x17007BA9 RID: 31657
+		// (get) Token: 0x06019BE1 RID: 105441 RVA: 0x003AB429 File Offset: 0x003A9629
+		// (set) Token: 0x06019BE2 RID: 105442 RVA: 0x003AB431 File Offset: 0x003A9631
 		public bool DisableFocusMode { get; set; }
 
-		// Token: 0x170075A4 RID: 30116
-		// (get) Token: 0x06018541 RID: 99649 RVA: 0x0038148E File Offset: 0x0037F68E
-		// (set) Token: 0x06018542 RID: 99650 RVA: 0x00381496 File Offset: 0x0037F696
+		// Token: 0x17007BAA RID: 31658
+		// (get) Token: 0x06019BE3 RID: 105443 RVA: 0x003AB43A File Offset: 0x003A963A
+		// (set) Token: 0x06019BE4 RID: 105444 RVA: 0x003AB442 File Offset: 0x003A9642
 		public bool DisableSkeletalAnimationCheck { get; set; }
 
-		// Token: 0x170075A5 RID: 30117
-		// (get) Token: 0x06018543 RID: 99651 RVA: 0x0038149F File Offset: 0x0037F69F
-		// (set) Token: 0x06018544 RID: 99652 RVA: 0x003814A7 File Offset: 0x0037F6A7
+		// Token: 0x17007BAB RID: 31659
+		// (get) Token: 0x06019BE5 RID: 105445 RVA: 0x003AB44B File Offset: 0x003A964B
+		// (set) Token: 0x06019BE6 RID: 105446 RVA: 0x003AB453 File Offset: 0x003A9653
 		public ILogicProgramSpecialProcessT LogicProgramSpecialProcess { get; set; }
 
-		// Token: 0x170075A6 RID: 30118
-		// (get) Token: 0x06018545 RID: 99653 RVA: 0x003814B0 File Offset: 0x0037F6B0
-		// (set) Token: 0x06018546 RID: 99654 RVA: 0x003814B8 File Offset: 0x0037F6B8
+		// Token: 0x17007BAC RID: 31660
+		// (get) Token: 0x06019BE7 RID: 105447 RVA: 0x003AB45C File Offset: 0x003A965C
+		// (set) Token: 0x06019BE8 RID: 105448 RVA: 0x003AB464 File Offset: 0x003A9664
 		public IQuestBuffActiveRangeT QuestBuffActiveRange { get; set; }
 
-		// Token: 0x170075A7 RID: 30119
-		// (get) Token: 0x06018547 RID: 99655 RVA: 0x003814C1 File Offset: 0x0037F6C1
-		// (set) Token: 0x06018548 RID: 99656 RVA: 0x003814C9 File Offset: 0x0037F6C9
+		// Token: 0x17007BAD RID: 31661
+		// (get) Token: 0x06019BE9 RID: 105449 RVA: 0x003AB46D File Offset: 0x003A966D
+		// (set) Token: 0x06019BEA RID: 105450 RVA: 0x003AB475 File Offset: 0x003A9675
 		public ISunSpiritProcessT SunSpiritProcess { get; set; }
 
-		// Token: 0x170075A8 RID: 30120
-		// (get) Token: 0x06018549 RID: 99657 RVA: 0x003814D2 File Offset: 0x0037F6D2
-		// (set) Token: 0x0601854A RID: 99658 RVA: 0x003814DA File Offset: 0x0037F6DA
+		// Token: 0x17007BAE RID: 31662
+		// (get) Token: 0x06019BEB RID: 105451 RVA: 0x003AB47E File Offset: 0x003A967E
+		// (set) Token: 0x06019BEC RID: 105452 RVA: 0x003AB486 File Offset: 0x003A9686
 		public ITrackAreaTextT ModifyTrackAreaText { get; set; }
 
-		// Token: 0x170075A9 RID: 30121
-		// (get) Token: 0x0601854B RID: 99659 RVA: 0x003814E3 File Offset: 0x0037F6E3
-		// (set) Token: 0x0601854C RID: 99660 RVA: 0x003814EB File Offset: 0x0037F6EB
+		// Token: 0x17007BAF RID: 31663
+		// (get) Token: 0x06019BED RID: 105453 RVA: 0x003AB48F File Offset: 0x003A968F
+		// (set) Token: 0x06019BEE RID: 105454 RVA: 0x003AB497 File Offset: 0x003A9697
 		public bool DisableGlobalTraffic { get; set; }
 
-		// Token: 0x170075AA RID: 30122
-		// (get) Token: 0x0601854D RID: 99661 RVA: 0x003814F4 File Offset: 0x0037F6F4
-		// (set) Token: 0x0601854E RID: 99662 RVA: 0x003814FC File Offset: 0x0037F6FC
+		// Token: 0x17007BB0 RID: 31664
+		// (get) Token: 0x06019BEF RID: 105455 RVA: 0x003AB4A0 File Offset: 0x003A96A0
+		// (set) Token: 0x06019BF0 RID: 105456 RVA: 0x003AB4A8 File Offset: 0x003A96A8
 		public List<IAreaNameSystemPromptT> DisableSystemPrompt { get; set; }
 
-		// Token: 0x170075AB RID: 30123
-		// (get) Token: 0x0601854F RID: 99663 RVA: 0x00381505 File Offset: 0x0037F705
-		// (set) Token: 0x06018550 RID: 99664 RVA: 0x0038150D File Offset: 0x0037F70D
+		// Token: 0x17007BB1 RID: 31665
+		// (get) Token: 0x06019BF1 RID: 105457 RVA: 0x003AB4B1 File Offset: 0x003A96B1
+		// (set) Token: 0x06019BF2 RID: 105458 RVA: 0x003AB4B9 File Offset: 0x003A96B9
 		public ITrackCustomBoardOnBtLogicNodeT TrackCustomBoard { get; set; }
 
-		// Token: 0x170075AC RID: 30124
-		// (get) Token: 0x06018551 RID: 99665 RVA: 0x00381516 File Offset: 0x0037F716
-		// (set) Token: 0x06018552 RID: 99666 RVA: 0x0038151E File Offset: 0x0037F71E
+		// Token: 0x17007BB2 RID: 31666
+		// (get) Token: 0x06019BF3 RID: 105459 RVA: 0x003AB4C2 File Offset: 0x003A96C2
+		// (set) Token: 0x06019BF4 RID: 105460 RVA: 0x003AB4CA File Offset: 0x003A96CA
 		public List<TBtNodeUnion> Children { get; set; }
 
-		// Token: 0x170075AD RID: 30125
-		// (get) Token: 0x06018553 RID: 99667 RVA: 0x00381527 File Offset: 0x0037F727
-		// (set) Token: 0x06018554 RID: 99668 RVA: 0x0038152F File Offset: 0x0037F72F
+		// Token: 0x17007BB3 RID: 31667
+		// (get) Token: 0x06019BF5 RID: 105461 RVA: 0x003AB4D3 File Offset: 0x003A96D3
+		// (set) Token: 0x06019BF6 RID: 105462 RVA: 0x003AB4DB File Offset: 0x003A96DB
 		public IPerformanceSettingT PerformanceSetting { get; set; }
 
-		// Token: 0x170075AE RID: 30126
-		// (get) Token: 0x06018555 RID: 99669 RVA: 0x00381538 File Offset: 0x0037F738
-		// (set) Token: 0x06018556 RID: 99670 RVA: 0x00381540 File Offset: 0x0037F740
+		// Token: 0x17007BB4 RID: 31668
+		// (get) Token: 0x06019BF7 RID: 105463 RVA: 0x003AB4E4 File Offset: 0x003A96E4
+		// (set) Token: 0x06019BF8 RID: 105464 RVA: 0x003AB4EC File Offset: 0x003A96EC
 		public ushort NullMask { get; set; }
 
-		// Token: 0x06018557 RID: 99671 RVA: 0x0038154C File Offset: 0x0037F74C
+		// Token: 0x06019BF9 RID: 105465 RVA: 0x003AB4F8 File Offset: 0x003A96F8
 		public ISelectBtNodeT()
 		{
 			this.Type = EBtNode.Start;

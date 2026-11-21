@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B76 RID: 2934
+	// Token: 0x02000C57 RID: 3159
 	public struct CiacconaChapterSlot : IFlatbufferObject
 	{
-		// Token: 0x170007EF RID: 2031
-		// (get) Token: 0x06005515 RID: 21781 RVA: 0x001F511C File Offset: 0x001F331C
+		// Token: 0x17000832 RID: 2098
+		// (get) Token: 0x06005AE3 RID: 23267 RVA: 0x00214F2C File Offset: 0x0021312C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005516 RID: 21782 RVA: 0x001F5129 File Offset: 0x001F3329
+		// Token: 0x06005AE4 RID: 23268 RVA: 0x00214F39 File Offset: 0x00213139
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005517 RID: 21783 RVA: 0x001F5130 File Offset: 0x001F3330
+		// Token: 0x06005AE5 RID: 23269 RVA: 0x00214F40 File Offset: 0x00213140
 		public static CiacconaChapterSlot GetRootAsCiacconaChapterSlot(ByteBuffer _bb)
 		{
 			return CiacconaChapterSlot.GetRootAsCiacconaChapterSlot(_bb, default(CiacconaChapterSlot));
 		}
 
-		// Token: 0x06005518 RID: 21784 RVA: 0x001F514C File Offset: 0x001F334C
+		// Token: 0x06005AE6 RID: 23270 RVA: 0x00214F5C File Offset: 0x0021315C
 		public static CiacconaChapterSlot GetRootAsCiacconaChapterSlot(ByteBuffer _bb, CiacconaChapterSlot obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005519 RID: 21785 RVA: 0x001F5169 File Offset: 0x001F3369
+		// Token: 0x06005AE7 RID: 23271 RVA: 0x00214F79 File Offset: 0x00213179
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600551A RID: 21786 RVA: 0x001F5178 File Offset: 0x001F3378
+		// Token: 0x06005AE8 RID: 23272 RVA: 0x00214F88 File Offset: 0x00213188
 		public CiacconaChapterSlot __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170007F0 RID: 2032
-		// (get) Token: 0x0600551B RID: 21787 RVA: 0x001F5188 File Offset: 0x001F3388
+		// Token: 0x17000833 RID: 2099
+		// (get) Token: 0x06005AE9 RID: 23273 RVA: 0x00214F98 File Offset: 0x00213198
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170007F1 RID: 2033
-		// (get) Token: 0x0600551C RID: 21788 RVA: 0x001F51C4 File Offset: 0x001F33C4
+		// Token: 0x17000834 RID: 2100
+		// (get) Token: 0x06005AEA RID: 23274 RVA: 0x00214FD4 File Offset: 0x002131D4
 		public int ChapterId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170007F2 RID: 2034
-		// (get) Token: 0x0600551D RID: 21789 RVA: 0x001F5200 File Offset: 0x001F3400
+		// Token: 0x17000835 RID: 2101
+		// (get) Token: 0x06005AEB RID: 23275 RVA: 0x00215010 File Offset: 0x00213210
 		public int UnlockCondition
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170007F3 RID: 2035
-		// (get) Token: 0x0600551E RID: 21790 RVA: 0x001F523C File Offset: 0x001F343C
+		// Token: 0x17000836 RID: 2102
+		// (get) Token: 0x06005AEC RID: 23276 RVA: 0x0021504C File Offset: 0x0021324C
 		public string SlotImage
 		{
 			get
@@ -107,20 +107,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600551F RID: 21791 RVA: 0x001F5274 File Offset: 0x001F3474
+		// Token: 0x06005AED RID: 23277 RVA: 0x00215084 File Offset: 0x00213284
 		public Span<byte> GetSlotImageBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06005520 RID: 21792 RVA: 0x001F5284 File Offset: 0x001F3484
+		// Token: 0x06005AEE RID: 23278 RVA: 0x00215094 File Offset: 0x00213294
 		public byte[] GetSlotImageArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170007F4 RID: 2036
-		// (get) Token: 0x06005521 RID: 21793 RVA: 0x001F529C File Offset: 0x001F349C
+		// Token: 0x17000837 RID: 2103
+		// (get) Token: 0x06005AEF RID: 23279 RVA: 0x002150AC File Offset: 0x002132AC
 		public string SlotLockImage
 		{
 			get
@@ -134,20 +134,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005522 RID: 21794 RVA: 0x001F52D4 File Offset: 0x001F34D4
+		// Token: 0x06005AF0 RID: 23280 RVA: 0x002150E4 File Offset: 0x002132E4
 		public Span<byte> GetSlotLockImageBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06005523 RID: 21795 RVA: 0x001F52E4 File Offset: 0x001F34E4
+		// Token: 0x06005AF1 RID: 23281 RVA: 0x002150F4 File Offset: 0x002132F4
 		public byte[] GetSlotLockImageArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170007F5 RID: 2037
-		// (get) Token: 0x06005524 RID: 21796 RVA: 0x001F52FC File Offset: 0x001F34FC
+		// Token: 0x17000838 RID: 2104
+		// (get) Token: 0x06005AF2 RID: 23282 RVA: 0x0021510C File Offset: 0x0021330C
 		public string RomanNumberIcon
 		{
 			get
@@ -161,19 +161,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005525 RID: 21797 RVA: 0x001F5334 File Offset: 0x001F3534
+		// Token: 0x06005AF3 RID: 23283 RVA: 0x00215144 File Offset: 0x00213344
 		public Span<byte> GetRomanNumberIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x06005526 RID: 21798 RVA: 0x001F5344 File Offset: 0x001F3544
+		// Token: 0x06005AF4 RID: 23284 RVA: 0x00215154 File Offset: 0x00213354
 		public byte[] GetRomanNumberIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004B7A RID: 19322
+		// Token: 0x0400515B RID: 20827
 		private Table __p;
 	}
 }

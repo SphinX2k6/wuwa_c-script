@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E48 RID: 3656
+	// Token: 0x02000F44 RID: 3908
 	public class INoiseRemovalBoarderBase
 	{
-		// Token: 0x06005292 RID: 21138 RVA: 0x000CB367 File Offset: 0x000C9567
-		[NullableContext(1)]
+		// Token: 0x060057B9 RID: 22457 RVA: 0x000D6C2F File Offset: 0x000D4E2F
 		public static INoiseRemovalBoarderBase Create(INoiseRemovalBoarderBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001BBF RID: 7103
-		// (get) Token: 0x06005293 RID: 21139 RVA: 0x000CB386 File Offset: 0x000C9586
+		// Token: 0x17001D2C RID: 7468
+		// (get) Token: 0x060057BA RID: 22458 RVA: 0x000D6C4E File Offset: 0x000D4E4E
 		public virtual ENoiseRemovalBoarderShape Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F97 RID: 12183
+		// Token: 0x0400325F RID: 12895
 		private INoiseRemovalBoarderBase Instance;
 	}
 }

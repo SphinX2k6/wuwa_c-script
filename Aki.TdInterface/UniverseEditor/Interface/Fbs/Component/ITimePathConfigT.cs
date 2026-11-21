@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A86 RID: 23174
+	// Token: 0x02006093 RID: 24723
 	public class ITimePathConfigT
 	{
-		// Token: 0x1700AE89 RID: 44681
-		// (get) Token: 0x0602778D RID: 161677 RVA: 0x0056E57B File Offset: 0x0056C77B
-		// (set) Token: 0x0602778E RID: 161678 RVA: 0x0056E583 File Offset: 0x0056C783
+		// Token: 0x1700B7C1 RID: 47041
+		// (get) Token: 0x06029D05 RID: 171269 RVA: 0x005B5587 File Offset: 0x005B3787
+		// (set) Token: 0x06029D06 RID: 171270 RVA: 0x005B558F File Offset: 0x005B378F
 		public float TotalTime { get; set; }
 
-		// Token: 0x1700AE8A RID: 44682
-		// (get) Token: 0x0602778F RID: 161679 RVA: 0x0056E58C File Offset: 0x0056C78C
-		// (set) Token: 0x06027790 RID: 161680 RVA: 0x0056E594 File Offset: 0x0056C794
+		// Token: 0x1700B7C2 RID: 47042
+		// (get) Token: 0x06029D07 RID: 171271 RVA: 0x005B5598 File Offset: 0x005B3798
+		// (set) Token: 0x06029D08 RID: 171272 RVA: 0x005B55A0 File Offset: 0x005B37A0
 		public string TimePathCurve { get; set; }
 
-		// Token: 0x06027791 RID: 161681 RVA: 0x0056E59D File Offset: 0x0056C79D
+		// Token: 0x06029D09 RID: 171273 RVA: 0x005B55A9 File Offset: 0x005B37A9
 		public ITimePathConfigT()
 		{
 			this.TotalTime = 0f;

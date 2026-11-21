@@ -7,17 +7,17 @@ using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x0200318C RID: 12684
+// Token: 0x020026F9 RID: 9977
 [NullableContext(1)]
 [Nullable(0)]
 public class SpecialSkillAnimalFox : SpecialSkillBase
 {
-	// Token: 0x0601B4B8 RID: 111800 RVA: 0x00772870 File Offset: 0x00770A70
+	// Token: 0x06018FBD RID: 102333 RVA: 0x0079A1D4 File Offset: 0x007983D4
 	public SpecialSkillAnimalFox(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B4B9 RID: 111801 RVA: 0x00772930 File Offset: 0x00770B30
+	// Token: 0x06018FBE RID: 102334 RVA: 0x0079A294 File Offset: 0x00798494
 	public override void OnStart()
 	{
 		int? intConfig = ConfigCommonParamById.GetIntConfig("HULI_EDGE_TRACE_FORWARD");
@@ -59,14 +59,14 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		inputComp.SetMoveInputOuterRingEnabled(true);
 	}
 
-	// Token: 0x0601B4BA RID: 111802 RVA: 0x00772B02 File Offset: 0x00770D02
+	// Token: 0x06018FBF RID: 102335 RVA: 0x0079A466 File Offset: 0x00798666
 	public override void OnActivate()
 	{
 		this.RefreshEdgeProtection();
 		this.RefreshMovementState();
 	}
 
-	// Token: 0x0601B4BB RID: 111803 RVA: 0x00772B10 File Offset: 0x00770D10
+	// Token: 0x06018FC0 RID: 102336 RVA: 0x0079A474 File Offset: 0x00798674
 	public override void OnEnable()
 	{
 		base.OnEnable();
@@ -74,7 +74,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		this.RefreshMovementState();
 	}
 
-	// Token: 0x0601B4BC RID: 111804 RVA: 0x00772B25 File Offset: 0x00770D25
+	// Token: 0x06018FC1 RID: 102337 RVA: 0x0079A489 File Offset: 0x00798689
 	public override void OnDisable()
 	{
 		this.MoveInputEnabled = false;
@@ -86,7 +86,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		base.OnDisable();
 	}
 
-	// Token: 0x0601B4BD RID: 111805 RVA: 0x00772B48 File Offset: 0x00770D48
+	// Token: 0x06018FC2 RID: 102338 RVA: 0x0079A4AC File Offset: 0x007986AC
 	public override void OnEnd()
 	{
 		this.MoveInputEnabled = false;
@@ -153,7 +153,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		tagComp3.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["幻象.声骸角色.小狐狸.跳跃可用.自由下跳"]));
 	}
 
-	// Token: 0x0601B4BE RID: 111806 RVA: 0x00772CB7 File Offset: 0x00770EB7
+	// Token: 0x06018FC3 RID: 102339 RVA: 0x0079A61B File Offset: 0x0079881B
 	public override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -162,7 +162,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		this.TickMechanismDetect();
 	}
 
-	// Token: 0x0601B4BF RID: 111807 RVA: 0x00772CD4 File Offset: 0x00770ED4
+	// Token: 0x06018FC4 RID: 102340 RVA: 0x0079A638 File Offset: 0x00798838
 	private float GetEdgeCheckInterval()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -187,7 +187,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		return 2f + -1.75f * num2;
 	}
 
-	// Token: 0x0601B4C0 RID: 111808 RVA: 0x00772D6C File Offset: 0x00770F6C
+	// Token: 0x06018FC5 RID: 102341 RVA: 0x0079A6D0 File Offset: 0x007988D0
 	private bool ShouldSkipEdgeDetect()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -214,7 +214,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		return pushBoxCodeFunction != null && pushBoxCodeFunction.IsInPushInteraction;
 	}
 
-	// Token: 0x0601B4C1 RID: 111809 RVA: 0x00772DD4 File Offset: 0x00770FD4
+	// Token: 0x06018FC6 RID: 102342 RVA: 0x0079A738 File Offset: 0x00798938
 	private void TickEdgeDetect()
 	{
 		if (this.ShouldSkipEdgeDetect())
@@ -273,7 +273,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		this.RemoveEdgeTag();
 	}
 
-	// Token: 0x0601B4C2 RID: 111810 RVA: 0x0077306C File Offset: 0x0077126C
+	// Token: 0x06018FC7 RID: 102343 RVA: 0x0079A9D0 File Offset: 0x00798BD0
 	private void SetEdgeTag()
 	{
 		this.HasEdgeJumpTarget = true;
@@ -289,7 +289,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4C3 RID: 111811 RVA: 0x007730CC File Offset: 0x007712CC
+	// Token: 0x06018FC8 RID: 102344 RVA: 0x0079AA30 File Offset: 0x00798C30
 	private void RemoveEdgeTag()
 	{
 		this.HasEdgeJumpTarget = false;
@@ -300,7 +300,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4C4 RID: 111812 RVA: 0x00773124 File Offset: 0x00771324
+	// Token: 0x06018FC9 RID: 102345 RVA: 0x0079AA88 File Offset: 0x00798C88
 	private float GetMechanismCheckInterval()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -325,7 +325,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		return 1f + -0.85f * num2;
 	}
 
-	// Token: 0x0601B4C5 RID: 111813 RVA: 0x007731BC File Offset: 0x007713BC
+	// Token: 0x06018FCA RID: 102346 RVA: 0x0079AB20 File Offset: 0x00798D20
 	private void TickMechanismDetect()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -404,7 +404,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4C6 RID: 111814 RVA: 0x00773358 File Offset: 0x00771558
+	// Token: 0x06018FCB RID: 102347 RVA: 0x0079ACBC File Offset: 0x00798EBC
 	private void OnEnterMechanismRange()
 	{
 		this.SaveWalkModeBeforeFirstGaitRestriction();
@@ -412,14 +412,14 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		this.RefreshGaitRestriction();
 	}
 
-	// Token: 0x0601B4C7 RID: 111815 RVA: 0x0077336D File Offset: 0x0077156D
+	// Token: 0x06018FCC RID: 102348 RVA: 0x0079ACD1 File Offset: 0x00798ED1
 	private void OnExitMechanismRange()
 	{
 		this.MechanismDisableRunActive = false;
 		this.RefreshGaitRestriction();
 	}
 
-	// Token: 0x0601B4C8 RID: 111816 RVA: 0x0077337C File Offset: 0x0077157C
+	// Token: 0x06018FCD RID: 102349 RVA: 0x0079ACE0 File Offset: 0x00798EE0
 	private void TickSpeedReduceByAngle()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -481,7 +481,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4C9 RID: 111817 RVA: 0x0077354C File Offset: 0x0077174C
+	// Token: 0x06018FCE RID: 102350 RVA: 0x0079AEB0 File Offset: 0x007990B0
 	private float GetBaseSpeed()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -521,7 +521,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		return baseMoveComponent.CurrentMovementSettings.WalkSpeed;
 	}
 
-	// Token: 0x0601B4CA RID: 111818 RVA: 0x00773694 File Offset: 0x00771894
+	// Token: 0x06018FCF RID: 102351 RVA: 0x0079AFF8 File Offset: 0x007991F8
 	private void RefreshMovementState()
 	{
 		CharacterUnifiedStateComponent stateComp = this.StateComp;
@@ -612,19 +612,19 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4CB RID: 111819 RVA: 0x00773910 File Offset: 0x00771B10
+	// Token: 0x06018FD0 RID: 102352 RVA: 0x0079B274 File Offset: 0x00799474
 	public void OnPushBoxInteractionStateChanged()
 	{
 		this.RefreshMovementState();
 	}
 
-	// Token: 0x0601B4CC RID: 111820 RVA: 0x00773918 File Offset: 0x00771B18
+	// Token: 0x06018FD1 RID: 102353 RVA: 0x0079B27C File Offset: 0x0079947C
 	private void OnWalkRunChanged(bool lastIsWalk, bool isWalk, bool showUi)
 	{
 		this.RefreshMovementState();
 	}
 
-	// Token: 0x0601B4CD RID: 111821 RVA: 0x00773920 File Offset: 0x00771B20
+	// Token: 0x06018FD2 RID: 102354 RVA: 0x0079B284 File Offset: 0x00799484
 	private void SetEdgeProtectionEnabled(bool enabled)
 	{
 		if (this.HasSetWalkOffLedge == enabled)
@@ -641,26 +641,26 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		this.HasSetWalkOffLedge = enabled;
 	}
 
-	// Token: 0x0601B4CE RID: 111822 RVA: 0x0077395F File Offset: 0x00771B5F
+	// Token: 0x06018FD3 RID: 102355 RVA: 0x0079B2C3 File Offset: 0x007994C3
 	private void RefreshEdgeProtection()
 	{
 		BaseTagComponent tagComp = this.TagComp;
 		this.SetEdgeProtectionEnabled(tagComp == null || !tagComp.HasTag(GameplayTagDefine.EGameplayTagId["幻象.声骸角色.小狐狸.功能开关.禁用边缘保护"]));
 	}
 
-	// Token: 0x0601B4CF RID: 111823 RVA: 0x0077398B File Offset: 0x00771B8B
+	// Token: 0x06018FD4 RID: 102356 RVA: 0x0079B2EF File Offset: 0x007994EF
 	private void OnDisableEdgeProtectionTagChanged(int tagId, bool tagExist)
 	{
 		this.RefreshEdgeProtection();
 	}
 
-	// Token: 0x0601B4D0 RID: 111824 RVA: 0x00773993 File Offset: 0x00771B93
+	// Token: 0x06018FD5 RID: 102357 RVA: 0x0079B2F7 File Offset: 0x007994F7
 	private bool HasAnyGaitRestriction()
 	{
 		return this.MechanismDisableRunActive || this.DisableWalkActive || this.DisableRunActive;
 	}
 
-	// Token: 0x0601B4D1 RID: 111825 RVA: 0x007739AD File Offset: 0x00771BAD
+	// Token: 0x06018FD6 RID: 102358 RVA: 0x0079B311 File Offset: 0x00799511
 	private void SaveWalkModeBeforeFirstGaitRestriction()
 	{
 		if (!this.HasAnyGaitRestriction())
@@ -670,7 +670,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4D2 RID: 111826 RVA: 0x007739D0 File Offset: 0x00771BD0
+	// Token: 0x06018FD7 RID: 102359 RVA: 0x0079B334 File Offset: 0x00799534
 	private bool? GetRestrictedWalkMode()
 	{
 		if (this.MechanismDisableRunActive)
@@ -698,7 +698,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		return null;
 	}
 
-	// Token: 0x0601B4D3 RID: 111827 RVA: 0x00773A5C File Offset: 0x00771C5C
+	// Token: 0x06018FD8 RID: 102360 RVA: 0x0079B3C0 File Offset: 0x007995C0
 	private void RefreshGaitRestriction()
 	{
 		CharacterUnifiedStateComponent stateComp = this.StateComp;
@@ -721,7 +721,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		this.GaitRestrictionLockActive = true;
 	}
 
-	// Token: 0x0601B4D4 RID: 111828 RVA: 0x00773AD8 File Offset: 0x00771CD8
+	// Token: 0x06018FD9 RID: 102361 RVA: 0x0079B43C File Offset: 0x0079963C
 	private void ClearGaitRestrictions()
 	{
 		bool flag = this.HasAnyGaitRestriction() || this.GaitRestrictionLockActive;
@@ -741,7 +741,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		this.SavedIsWalkBeforeGaitRestriction = false;
 	}
 
-	// Token: 0x0601B4D5 RID: 111829 RVA: 0x00773B48 File Offset: 0x00771D48
+	// Token: 0x06018FDA RID: 102362 RVA: 0x0079B4AC File Offset: 0x007996AC
 	private void OnDisableGaitTagChanged(int tagId, bool tagExist)
 	{
 		bool flag = tagId == GameplayTagDefine.EGameplayTagId["幻象.声骸角色.小狐狸.功能开关.禁用奔跑"];
@@ -789,7 +789,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		this.RefreshGaitRestriction();
 	}
 
-	// Token: 0x0601B4D6 RID: 111830 RVA: 0x00773C00 File Offset: 0x00771E00
+	// Token: 0x06018FDB RID: 102363 RVA: 0x0079B564 File Offset: 0x00799764
 	public float TraceJumpGroundZ(global::Vector endPos)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -829,7 +829,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		return (float)endPos.Z;
 	}
 
-	// Token: 0x0601B4D7 RID: 111831 RVA: 0x00773DCC File Offset: 0x00771FCC
+	// Token: 0x06018FDC RID: 102364 RVA: 0x0079B730 File Offset: 0x00799930
 	public void PrepareJumpMovement()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -851,7 +851,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4D8 RID: 111832 RVA: 0x00773E6C File Offset: 0x0077206C
+	// Token: 0x06018FDD RID: 102365 RVA: 0x0079B7D0 File Offset: 0x007999D0
 	public void RestoreJumpMovement()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -868,7 +868,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4D9 RID: 111833 RVA: 0x00773EBC File Offset: 0x007720BC
+	// Token: 0x06018FDE RID: 102366 RVA: 0x0079B820 File Offset: 0x00799A20
 	public void DoJumpLand()
 	{
 		this.RestoreJumpMovement();
@@ -886,7 +886,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4DA RID: 111834 RVA: 0x00773F00 File Offset: 0x00772100
+	// Token: 0x06018FDF RID: 102367 RVA: 0x0079B864 File Offset: 0x00799A64
 	public unsafe void SetPushBoxData(int entityId, int splineEntityId, int collisionRadius, string eventName)
 	{
 		CodeFunctionAnimalFoxPushBox pushBoxCodeFunction = this.PushBoxCodeFunction;
@@ -924,7 +924,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4DB RID: 111835 RVA: 0x00774050 File Offset: 0x00772250
+	// Token: 0x06018FE0 RID: 102368 RVA: 0x0079B9B4 File Offset: 0x00799BB4
 	public void SetPickUpData(int id, bool keepMouthClosed = true)
 	{
 		this.PickUpItemId = id;
@@ -939,21 +939,21 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4DC RID: 111836 RVA: 0x00774078 File Offset: 0x00772278
+	// Token: 0x06018FE1 RID: 102369 RVA: 0x0079B9DC File Offset: 0x00799BDC
 	public void SetJumpTarget(IVector vec)
 	{
 		this.JumpTarget.DeepCopy(vec);
 		this.HasJumpTarget = true;
 	}
 
-	// Token: 0x0601B4DD RID: 111837 RVA: 0x0077408D File Offset: 0x0077228D
+	// Token: 0x06018FE2 RID: 102370 RVA: 0x0079B9F1 File Offset: 0x00799BF1
 	public void ClearJumpTarget()
 	{
 		this.JumpTarget.Reset();
 		this.HasJumpTarget = false;
 	}
 
-	// Token: 0x0601B4DE RID: 111838 RVA: 0x007740A4 File Offset: 0x007722A4
+	// Token: 0x06018FE3 RID: 102371 RVA: 0x0079BA08 File Offset: 0x00799C08
 	public int SetTemporaryJumpTarget(double x, double y, double z)
 	{
 		this.TemporaryJumpTarget.Set(x, y, z);
@@ -963,7 +963,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		return num;
 	}
 
-	// Token: 0x0601B4DF RID: 111839 RVA: 0x007740D8 File Offset: 0x007722D8
+	// Token: 0x06018FE4 RID: 102372 RVA: 0x0079BA3C File Offset: 0x00799C3C
 	public bool TryGetJumpTarget(global::Vector outTarget)
 	{
 		if (this.HasTemporaryJumpTarget)
@@ -980,7 +980,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		return true;
 	}
 
-	// Token: 0x0601B4E0 RID: 111840 RVA: 0x00774158 File Offset: 0x00772358
+	// Token: 0x06018FE5 RID: 102373 RVA: 0x0079BABC File Offset: 0x00799CBC
 	public void ClearTemporaryJumpTarget(int? version = null)
 	{
 		if (version != null)
@@ -996,7 +996,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		this.HasTemporaryJumpTarget = false;
 	}
 
-	// Token: 0x0601B4E1 RID: 111841 RVA: 0x007741A0 File Offset: 0x007723A0
+	// Token: 0x06018FE6 RID: 102374 RVA: 0x0079BB04 File Offset: 0x00799D04
 	public void ClearPushBoxData()
 	{
 		this.PushBoxEntityId = 0;
@@ -1014,7 +1014,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4E2 RID: 111842 RVA: 0x00774210 File Offset: 0x00772410
+	// Token: 0x06018FE7 RID: 102375 RVA: 0x0079BB74 File Offset: 0x00799D74
 	public void SetReversePushData(int splineEntityId, int seqEntityId, string sliderTag, float radius)
 	{
 		this.ReversePushSplineEntityId = splineEntityId;
@@ -1034,7 +1034,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4E3 RID: 111843 RVA: 0x00774294 File Offset: 0x00772494
+	// Token: 0x06018FE8 RID: 102376 RVA: 0x0079BBF8 File Offset: 0x00799DF8
 	public void ClearReversePushData()
 	{
 		this.ReversePushSplineEntityId = 0;
@@ -1052,7 +1052,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4E4 RID: 111844 RVA: 0x007742FA File Offset: 0x007724FA
+	// Token: 0x06018FE9 RID: 102377 RVA: 0x0079BC5E File Offset: 0x00799E5E
 	public void ClearPickUpData()
 	{
 		this.PickUpItemId = 0;
@@ -1064,13 +1064,13 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		foxPickUpAnimNotify.RequestPutDown();
 	}
 
-	// Token: 0x0601B4E5 RID: 111845 RVA: 0x00774313 File Offset: 0x00772513
+	// Token: 0x06018FEA RID: 102378 RVA: 0x0079BC77 File Offset: 0x00799E77
 	private void RefreshMovementStateTagCallback(int tagId, bool tagExist)
 	{
 		this.RefreshMovementState();
 	}
 
-	// Token: 0x0601B4E6 RID: 111846 RVA: 0x0077431C File Offset: 0x0077251C
+	// Token: 0x06018FEB RID: 102379 RVA: 0x0079BC80 File Offset: 0x00799E80
 	private void RegisterTagListeners()
 	{
 		BaseTagComponent tagComp = this.TagComp;
@@ -1091,7 +1091,7 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		this.DisableEdgeProtectionTagListener = ((tagComp8 != null) ? tagComp8.ListenForTagAddOrRemove(new int?(GameplayTagDefine.EGameplayTagId["幻象.声骸角色.小狐狸.功能开关.禁用边缘保护"]), new BaseTagComponent.TTagSwitchedCallback(this.OnDisableEdgeProtectionTagChanged), null) : null);
 	}
 
-	// Token: 0x0601B4E7 RID: 111847 RVA: 0x007744F4 File Offset: 0x007726F4
+	// Token: 0x06018FEC RID: 102380 RVA: 0x0079BE58 File Offset: 0x0079A058
 	private void UnregisterTagListeners()
 	{
 		BaseTagComponent tagComp = this.TagComp;
@@ -1184,231 +1184,231 @@ public class SpecialSkillAnimalFox : SpecialSkillBase
 		this.DisableEdgeProtectionTagListener = null;
 	}
 
-	// Token: 0x0400D52F RID: 54575
+	// Token: 0x0400D992 RID: 55698
 	private const string GROUND_TRACE_PROFILE = "FoxJumpGround";
 
-	// Token: 0x0400D530 RID: 54576
+	// Token: 0x0400D993 RID: 55699
 	private const float DEFAULT_GRAVITY_SCALE = 2f;
 
-	// Token: 0x0400D531 RID: 54577
+	// Token: 0x0400D994 RID: 55700
 	private const float SPEED_REDUCE_ANGLE_THRESHOLD = 60f;
 
-	// Token: 0x0400D532 RID: 54578
+	// Token: 0x0400D995 RID: 55701
 	private const float SPEED_REDUCE_MIN_RATIO = 0.3f;
 
-	// Token: 0x0400D533 RID: 54579
+	// Token: 0x0400D996 RID: 55702
 	private const float SPEED_REDUCE_INTERP_SPEED = 5f;
 
-	// Token: 0x0400D534 RID: 54580
+	// Token: 0x0400D997 RID: 55703
 	private const float EDGE_TRACE_FORWARD_DEFAULT = 250f;
 
-	// Token: 0x0400D535 RID: 54581
+	// Token: 0x0400D998 RID: 55704
 	private const float EDGE_TRACE_DOWN_DEFAULT = 400f;
 
-	// Token: 0x0400D536 RID: 54582
+	// Token: 0x0400D999 RID: 55705
 	private const float EDGE_CLIFF_CHECK_DEPTH_DEFAULT = 150f;
 
-	// Token: 0x0400D537 RID: 54583
+	// Token: 0x0400D99A RID: 55706
 	private static readonly float EDGE_NORMAL_COS_THRESHOLD = (float)Math.Cos(0.5235987901687622);
 
-	// Token: 0x0400D538 RID: 54584
+	// Token: 0x0400D99B RID: 55707
 	private const float EDGE_CHECK_INTERVAL_MAX = 2f;
 
-	// Token: 0x0400D539 RID: 54585
+	// Token: 0x0400D99C RID: 55708
 	private const float EDGE_CHECK_INTERVAL_MIN = 0.25f;
 
-	// Token: 0x0400D53A RID: 54586
+	// Token: 0x0400D99D RID: 55709
 	private const float EDGE_SPEED_THRESHOLD = 100f;
 
-	// Token: 0x0400D53B RID: 54587
+	// Token: 0x0400D99E RID: 55710
 	private const string EDGE_TRACE_PROFILE = "FoxJumpEdge";
 
-	// Token: 0x0400D53C RID: 54588
+	// Token: 0x0400D99F RID: 55711
 	private const float MECHANISM_DETECT_DISTANCE = 100f;
 
-	// Token: 0x0400D53D RID: 54589
+	// Token: 0x0400D9A0 RID: 55712
 	private const float MECHANISM_CHECK_INTERVAL_MAX = 1f;
 
-	// Token: 0x0400D53E RID: 54590
+	// Token: 0x0400D9A1 RID: 55713
 	private const float MECHANISM_CHECK_INTERVAL_MIN = 0.15f;
 
-	// Token: 0x0400D53F RID: 54591
+	// Token: 0x0400D9A2 RID: 55714
 	private const float MECHANISM_SPEED_THRESHOLD = 100f;
 
-	// Token: 0x0400D540 RID: 54592
+	// Token: 0x0400D9A3 RID: 55715
 	private bool HasSetWalkOffLedge;
 
-	// Token: 0x0400D541 RID: 54593
+	// Token: 0x0400D9A4 RID: 55716
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400D542 RID: 54594
+	// Token: 0x0400D9A5 RID: 55717
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D543 RID: 54595
+	// Token: 0x0400D9A6 RID: 55718
 	[Nullable(2)]
 	private CharacterInputComponent InputComp;
 
-	// Token: 0x0400D544 RID: 54596
+	// Token: 0x0400D9A7 RID: 55719
 	private bool MoveInputEnabled = true;
 
-	// Token: 0x0400D545 RID: 54597
+	// Token: 0x0400D9A8 RID: 55720
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent StateComp;
 
-	// Token: 0x0400D546 RID: 54598
+	// Token: 0x0400D9A9 RID: 55721
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400D547 RID: 54599
+	// Token: 0x0400D9AA RID: 55722
 	[Nullable(2)]
 	private CodeAnimNotifyFoxPickUp FoxPickUpAnimNotify;
 
-	// Token: 0x0400D548 RID: 54600
+	// Token: 0x0400D9AB RID: 55723
 	[Nullable(2)]
 	private CodeFunctionAnimalFoxPushBox PushBoxCodeFunction;
 
-	// Token: 0x0400D549 RID: 54601
+	// Token: 0x0400D9AC RID: 55724
 	private float EdgeTraceForward = 250f;
 
-	// Token: 0x0400D54A RID: 54602
+	// Token: 0x0400D9AD RID: 55725
 	private float EdgeTraceDown = 400f;
 
-	// Token: 0x0400D54B RID: 54603
+	// Token: 0x0400D9AE RID: 55726
 	private float EdgeCliffCheckDepth = 150f;
 
-	// Token: 0x0400D54C RID: 54604
+	// Token: 0x0400D9AF RID: 55727
 	private readonly global::Vector EdgeTraceStart = global::Vector.Create();
 
-	// Token: 0x0400D54D RID: 54605
+	// Token: 0x0400D9B0 RID: 55728
 	private readonly global::Vector EdgeTraceEnd = global::Vector.Create();
 
-	// Token: 0x0400D54E RID: 54606
+	// Token: 0x0400D9B1 RID: 55729
 	private readonly global::Vector EdgeHitNormal = global::Vector.Create();
 
-	// Token: 0x0400D54F RID: 54607
+	// Token: 0x0400D9B2 RID: 55730
 	public readonly global::Vector EdgeLandingPoint = global::Vector.Create();
 
-	// Token: 0x0400D550 RID: 54608
+	// Token: 0x0400D9B3 RID: 55731
 	private float EdgeProbeTimer;
 
-	// Token: 0x0400D551 RID: 54609
+	// Token: 0x0400D9B4 RID: 55732
 	public bool HasEdgeJumpTarget;
 
-	// Token: 0x0400D552 RID: 54610
+	// Token: 0x0400D9B5 RID: 55733
 	private float MechanismProbeTimer;
 
-	// Token: 0x0400D553 RID: 54611
+	// Token: 0x0400D9B6 RID: 55734
 	private bool MechanismDisableRunActive;
 
-	// Token: 0x0400D554 RID: 54612
+	// Token: 0x0400D9B7 RID: 55735
 	private readonly List<EntityHandle> MechanismTmpHandles = new List<EntityHandle>();
 
-	// Token: 0x0400D555 RID: 54613
+	// Token: 0x0400D9B8 RID: 55736
 	private float SpeedRatioByAngle = 1f;
 
-	// Token: 0x0400D556 RID: 54614
+	// Token: 0x0400D9B9 RID: 55737
 	private float BaseMaxSpeed;
 
-	// Token: 0x0400D557 RID: 54615
+	// Token: 0x0400D9BA RID: 55738
 	private readonly global::Vector JumpTmpVec = global::Vector.Create();
 
-	// Token: 0x0400D558 RID: 54616
+	// Token: 0x0400D9BB RID: 55739
 	private float JumpSavedGravityScale = 2f;
 
-	// Token: 0x0400D559 RID: 54617
+	// Token: 0x0400D9BC RID: 55740
 	public int PickUpItemId;
 
-	// Token: 0x0400D55A RID: 54618
+	// Token: 0x0400D9BD RID: 55741
 	public int PushBoxEntityId;
 
-	// Token: 0x0400D55B RID: 54619
+	// Token: 0x0400D9BE RID: 55742
 	public int PushBoxSplineEntityId;
 
-	// Token: 0x0400D55C RID: 54620
+	// Token: 0x0400D9BF RID: 55743
 	public int PushBoxCollisionRadius;
 
-	// Token: 0x0400D55D RID: 54621
+	// Token: 0x0400D9C0 RID: 55744
 	public string SendEntityEventOnSplineFinish = "";
 
-	// Token: 0x0400D55E RID: 54622
+	// Token: 0x0400D9C1 RID: 55745
 	public int PushBoxRequestVersion;
 
-	// Token: 0x0400D55F RID: 54623
+	// Token: 0x0400D9C2 RID: 55746
 	public int ReversePushSplineEntityId;
 
-	// Token: 0x0400D560 RID: 54624
+	// Token: 0x0400D9C3 RID: 55747
 	public int ReversePushSeqEntityId;
 
-	// Token: 0x0400D561 RID: 54625
+	// Token: 0x0400D9C4 RID: 55748
 	public string ReversePushSliderTag = "";
 
-	// Token: 0x0400D562 RID: 54626
+	// Token: 0x0400D9C5 RID: 55749
 	public float ReversePushRadius;
 
-	// Token: 0x0400D563 RID: 54627
+	// Token: 0x0400D9C6 RID: 55750
 	public int ReversePushRequestVersion;
 
-	// Token: 0x0400D564 RID: 54628
+	// Token: 0x0400D9C7 RID: 55751
 	public bool HasJumpTarget;
 
-	// Token: 0x0400D565 RID: 54629
+	// Token: 0x0400D9C8 RID: 55752
 	public global::Vector JumpTarget = global::Vector.Create();
 
-	// Token: 0x0400D566 RID: 54630
+	// Token: 0x0400D9C9 RID: 55753
 	private readonly global::Vector TemporaryJumpTarget = global::Vector.Create();
 
-	// Token: 0x0400D567 RID: 54631
+	// Token: 0x0400D9CA RID: 55754
 	private bool HasTemporaryJumpTarget;
 
-	// Token: 0x0400D568 RID: 54632
+	// Token: 0x0400D9CB RID: 55755
 	private int TemporaryJumpTargetVersion;
 
-	// Token: 0x0400D569 RID: 54633
+	// Token: 0x0400D9CC RID: 55756
 	[Nullable(2)]
 	private ITagTask TurnTagListener;
 
-	// Token: 0x0400D56A RID: 54634
+	// Token: 0x0400D9CD RID: 55757
 	[Nullable(2)]
 	private ITagTask WalkSpeedTagListener;
 
-	// Token: 0x0400D56B RID: 54635
+	// Token: 0x0400D9CE RID: 55758
 	[Nullable(2)]
 	private ITagTask RunSpeedTagListener;
 
-	// Token: 0x0400D56C RID: 54636
+	// Token: 0x0400D9CF RID: 55759
 	[Nullable(2)]
 	private ITagTask SprintSpeedTagListener;
 
-	// Token: 0x0400D56D RID: 54637
+	// Token: 0x0400D9D0 RID: 55760
 	[Nullable(2)]
 	private ITagTask PushBoxTagListener;
 
-	// Token: 0x0400D56E RID: 54638
+	// Token: 0x0400D9D1 RID: 55761
 	[Nullable(2)]
 	private ITagTask DisableWalkTagListener;
 
-	// Token: 0x0400D56F RID: 54639
+	// Token: 0x0400D9D2 RID: 55762
 	[Nullable(2)]
 	private ITagTask DisableRunTagListener;
 
-	// Token: 0x0400D570 RID: 54640
+	// Token: 0x0400D9D3 RID: 55763
 	[Nullable(2)]
 	private ITagTask DisableEdgeProtectionTagListener;
 
-	// Token: 0x0400D571 RID: 54641
+	// Token: 0x0400D9D4 RID: 55764
 	private bool DisableWalkActive;
 
-	// Token: 0x0400D572 RID: 54642
+	// Token: 0x0400D9D5 RID: 55765
 	private bool DisableRunActive;
 
-	// Token: 0x0400D573 RID: 54643
+	// Token: 0x0400D9D6 RID: 55766
 	private bool? LastDisableGaitIsDisableRun;
 
-	// Token: 0x0400D574 RID: 54644
+	// Token: 0x0400D9D7 RID: 55767
 	private bool SavedIsWalkBeforeGaitRestriction;
 
-	// Token: 0x0400D575 RID: 54645
+	// Token: 0x0400D9D8 RID: 55768
 	private bool GaitRestrictionLockActive;
 }

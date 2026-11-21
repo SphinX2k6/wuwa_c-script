@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Sequence.Common_Seq.Video.SplitScreen
 {
-	// Token: 0x02003A42 RID: 14914
+	// Token: 0x02003082 RID: 12418
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Sequence/Common_Seq/Video/SplitScreen/BP_SplitScreen.BP_SplitScreen_C")]
 	[UnrealStructLayout(1416, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1416)]
 	public class BP_SplitScreen_C : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601F648 RID: 128584 RVA: 0x008B74D7 File Offset: 0x008B56D7
+		// Token: 0x0601D966 RID: 121190 RVA: 0x008FC3CF File Offset: 0x008FA5CF
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SplitScreen_C._ClassPtr == IntPtr.Zero)
@@ -25,538 +25,536 @@ namespace AkiClient.Game.Aki.Sequence.Common_Seq.Video.SplitScreen
 			return BP_SplitScreen_C._ClassPtr;
 		}
 
-		// Token: 0x0601F649 RID: 128585 RVA: 0x008B74FC File Offset: 0x008B56FC
+		// Token: 0x0601D967 RID: 121191 RVA: 0x008FC3F4 File Offset: 0x008FA5F4
 		public BP_SplitScreen_C() : this(BuiltinUtils.AllocNativeUObject(BP_SplitScreen_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601F64A RID: 128586 RVA: 0x008B7524 File Offset: 0x008B5724
+		// Token: 0x0601D968 RID: 121192 RVA: 0x008FC41C File Offset: 0x008FA61C
 		[NullableContext(1)]
 		public BP_SplitScreen_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SplitScreen_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17002B1C RID: 11036
-		// (get) Token: 0x0601F64B RID: 128587 RVA: 0x008B7557 File Offset: 0x008B5757
-		// (set) Token: 0x0601F64C RID: 128588 RVA: 0x008B756B File Offset: 0x008B576B
+		// Token: 0x17002F8D RID: 12173
+		// (get) Token: 0x0601D969 RID: 121193 RVA: 0x008FC44F File Offset: 0x008FA64F
+		// (set) Token: 0x0601D96A RID: 121194 RVA: 0x008FC463 File Offset: 0x008FA663
 		public unsafe UPointLightComponent PointLight3
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UPointLightComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UPointLightComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_PointLight3);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_PointLight3, value);
 			}
 		}
 
-		// Token: 0x17002B1D RID: 11037
-		// (get) Token: 0x0601F64D RID: 128589 RVA: 0x008B7580 File Offset: 0x008B5780
-		// (set) Token: 0x0601F64E RID: 128590 RVA: 0x008B7594 File Offset: 0x008B5794
+		// Token: 0x17002F8E RID: 12174
+		// (get) Token: 0x0601D96B RID: 121195 RVA: 0x008FC478 File Offset: 0x008FA678
+		// (set) Token: 0x0601D96C RID: 121196 RVA: 0x008FC48C File Offset: 0x008FA68C
 		public unsafe UPointLightComponent PointLight2
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UPointLightComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UPointLightComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_PointLight2);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_PointLight2, value);
 			}
 		}
 
-		// Token: 0x17002B1E RID: 11038
-		// (get) Token: 0x0601F64F RID: 128591 RVA: 0x008B75A9 File Offset: 0x008B57A9
-		// (set) Token: 0x0601F650 RID: 128592 RVA: 0x008B75BD File Offset: 0x008B57BD
+		// Token: 0x17002F8F RID: 12175
+		// (get) Token: 0x0601D96D RID: 121197 RVA: 0x008FC4A1 File Offset: 0x008FA6A1
+		// (set) Token: 0x0601D96E RID: 121198 RVA: 0x008FC4B5 File Offset: 0x008FA6B5
 		public unsafe UPointLightComponent PointLight1
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UPointLightComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<UPointLightComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_PointLight1);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_PointLight1, value);
 			}
 		}
 
-		// Token: 0x17002B1F RID: 11039
-		// (get) Token: 0x0601F651 RID: 128593 RVA: 0x008B75D2 File Offset: 0x008B57D2
-		// (set) Token: 0x0601F652 RID: 128594 RVA: 0x008B75E6 File Offset: 0x008B57E6
+		// Token: 0x17002F90 RID: 12176
+		// (get) Token: 0x0601D96F RID: 121199 RVA: 0x008FC4CA File Offset: 0x008FA6CA
+		// (set) Token: 0x0601D970 RID: 121200 RVA: 0x008FC4DE File Offset: 0x008FA6DE
 		public unsafe UChildActorComponent CharacterActor_3
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UChildActorComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_4);
+				return BuiltinUtils.ObjectPropertyGetter<UChildActorComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_CharacterActor_3);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_4, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_CharacterActor_3, value);
 			}
 		}
 
-		// Token: 0x17002B20 RID: 11040
-		// (get) Token: 0x0601F653 RID: 128595 RVA: 0x008B75FB File Offset: 0x008B57FB
-		// (set) Token: 0x0601F654 RID: 128596 RVA: 0x008B760F File Offset: 0x008B580F
+		// Token: 0x17002F91 RID: 12177
+		// (get) Token: 0x0601D971 RID: 121201 RVA: 0x008FC4F3 File Offset: 0x008FA6F3
+		// (set) Token: 0x0601D972 RID: 121202 RVA: 0x008FC507 File Offset: 0x008FA707
 		public unsafe UChildActorComponent CharacterActor_2
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UChildActorComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<UChildActorComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_CharacterActor_2);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_CharacterActor_2, value);
 			}
 		}
 
-		// Token: 0x17002B21 RID: 11041
-		// (get) Token: 0x0601F655 RID: 128597 RVA: 0x008B7624 File Offset: 0x008B5824
-		// (set) Token: 0x0601F656 RID: 128598 RVA: 0x008B7638 File Offset: 0x008B5838
+		// Token: 0x17002F92 RID: 12178
+		// (get) Token: 0x0601D973 RID: 121203 RVA: 0x008FC51C File Offset: 0x008FA71C
+		// (set) Token: 0x0601D974 RID: 121204 RVA: 0x008FC530 File Offset: 0x008FA730
 		public unsafe UChildActorComponent CharacterActor_1
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UChildActorComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_6);
+				return BuiltinUtils.ObjectPropertyGetter<UChildActorComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_CharacterActor_1);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_6, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_CharacterActor_1, value);
 			}
 		}
 
-		// Token: 0x17002B22 RID: 11042
-		// (get) Token: 0x0601F657 RID: 128599 RVA: 0x008B764D File Offset: 0x008B584D
-		// (set) Token: 0x0601F658 RID: 128600 RVA: 0x008B7661 File Offset: 0x008B5861
+		// Token: 0x17002F93 RID: 12179
+		// (get) Token: 0x0601D975 RID: 121205 RVA: 0x008FC545 File Offset: 0x008FA745
+		// (set) Token: 0x0601D976 RID: 121206 RVA: 0x008FC559 File Offset: 0x008FA759
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_7);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_7, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17002B23 RID: 11043
-		// (get) Token: 0x0601F659 RID: 128601 RVA: 0x008B7676 File Offset: 0x008B5876
-		// (set) Token: 0x0601F65A RID: 128602 RVA: 0x008B768A File Offset: 0x008B588A
+		// Token: 0x17002F94 RID: 12180
+		// (get) Token: 0x0601D977 RID: 121207 RVA: 0x008FC56E File Offset: 0x008FA76E
+		// (set) Token: 0x0601D978 RID: 121208 RVA: 0x008FC582 File Offset: 0x008FA782
 		public unsafe UMaterialParameterCollection MPC
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UMaterialParameterCollection>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_8);
+				return BuiltinUtils.ObjectPropertyGetter<UMaterialParameterCollection>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_MPC);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_8, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_MPC, value);
 			}
 		}
 
-		// Token: 0x17002B24 RID: 11044
-		// (get) Token: 0x0601F65B RID: 128603 RVA: 0x008B769F File Offset: 0x008B589F
-		// (set) Token: 0x0601F65C RID: 128604 RVA: 0x008B76B3 File Offset: 0x008B58B3
+		// Token: 0x17002F95 RID: 12181
+		// (get) Token: 0x0601D979 RID: 121209 RVA: 0x008FC597 File Offset: 0x008FA797
+		// (set) Token: 0x0601D97A RID: 121210 RVA: 0x008FC5AB File Offset: 0x008FA7AB
 		public unsafe FName Angle_LinePosition__LineDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_Angle_LinePosition__LineDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_Angle_LinePosition__LineDistance) = value;
 			}
 		}
 
-		// Token: 0x17002B25 RID: 11045
-		// (get) Token: 0x0601F65D RID: 128605 RVA: 0x008B76C8 File Offset: 0x008B58C8
-		// (set) Token: 0x0601F65E RID: 128606 RVA: 0x008B76D8 File Offset: 0x008B58D8
+		// Token: 0x17002F96 RID: 12182
+		// (get) Token: 0x0601D97B RID: 121211 RVA: 0x008FC5C0 File Offset: 0x008FA7C0
+		// (set) Token: 0x0601D97C RID: 121212 RVA: 0x008FC5D0 File Offset: 0x008FA7D0
 		public unsafe float E_LinkPos_1
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_E_LinkPos_1);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_E_LinkPos_1) = value;
 			}
 		}
 
-		// Token: 0x17002B26 RID: 11046
-		// (get) Token: 0x0601F65F RID: 128607 RVA: 0x008B76E9 File Offset: 0x008B58E9
-		// (set) Token: 0x0601F660 RID: 128608 RVA: 0x008B76F9 File Offset: 0x008B58F9
+		// Token: 0x17002F97 RID: 12183
+		// (get) Token: 0x0601D97D RID: 121213 RVA: 0x008FC5E1 File Offset: 0x008FA7E1
+		// (set) Token: 0x0601D97E RID: 121214 RVA: 0x008FC5F1 File Offset: 0x008FA7F1
 		public unsafe float E_LinkPos_2
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_E_LinkPos_2);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_E_LinkPos_2) = value;
 			}
 		}
 
-		// Token: 0x17002B27 RID: 11047
-		// (get) Token: 0x0601F661 RID: 128609 RVA: 0x008B770A File Offset: 0x008B590A
-		// (set) Token: 0x0601F662 RID: 128610 RVA: 0x008B771A File Offset: 0x008B591A
+		// Token: 0x17002F98 RID: 12184
+		// (get) Token: 0x0601D97F RID: 121215 RVA: 0x008FC602 File Offset: 0x008FA802
+		// (set) Token: 0x0601D980 RID: 121216 RVA: 0x008FC612 File Offset: 0x008FA812
 		public unsafe float E_LinkPos_3
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_E_LinkPos_3);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_E_LinkPos_3) = value;
 			}
 		}
 
-		// Token: 0x17002B28 RID: 11048
-		// (get) Token: 0x0601F663 RID: 128611 RVA: 0x008B772B File Offset: 0x008B592B
-		// (set) Token: 0x0601F664 RID: 128612 RVA: 0x008B773F File Offset: 0x008B593F
+		// Token: 0x17002F99 RID: 12185
+		// (get) Token: 0x0601D981 RID: 121217 RVA: 0x008FC623 File Offset: 0x008FA823
+		// (set) Token: 0x0601D982 RID: 121218 RVA: 0x008FC637 File Offset: 0x008FA837
 		public unsafe FVector PointLight1_Location
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_PointLight1_Location);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_PointLight1_Location) = value;
 			}
 		}
 
-		// Token: 0x17002B29 RID: 11049
-		// (get) Token: 0x0601F665 RID: 128613 RVA: 0x008B7754 File Offset: 0x008B5954
-		// (set) Token: 0x0601F666 RID: 128614 RVA: 0x008B7768 File Offset: 0x008B5968
+		// Token: 0x17002F9A RID: 12186
+		// (get) Token: 0x0601D983 RID: 121219 RVA: 0x008FC64C File Offset: 0x008FA84C
+		// (set) Token: 0x0601D984 RID: 121220 RVA: 0x008FC660 File Offset: 0x008FA860
 		public unsafe FVector PointLight2_Location
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_PointLight2_Location);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_PointLight2_Location) = value;
 			}
 		}
 
-		// Token: 0x17002B2A RID: 11050
-		// (get) Token: 0x0601F667 RID: 128615 RVA: 0x008B777D File Offset: 0x008B597D
-		// (set) Token: 0x0601F668 RID: 128616 RVA: 0x008B7791 File Offset: 0x008B5991
+		// Token: 0x17002F9B RID: 12187
+		// (get) Token: 0x0601D985 RID: 121221 RVA: 0x008FC675 File Offset: 0x008FA875
+		// (set) Token: 0x0601D986 RID: 121222 RVA: 0x008FC689 File Offset: 0x008FA889
 		public unsafe FVector PointLight3_Location
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_PointLight3_Location);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_PointLight3_Location) = value;
 			}
 		}
 
-		// Token: 0x17002B2B RID: 11051
-		// (get) Token: 0x0601F669 RID: 128617 RVA: 0x008B77A6 File Offset: 0x008B59A6
-		// (set) Token: 0x0601F66A RID: 128618 RVA: 0x008B77BA File Offset: 0x008B59BA
+		// Token: 0x17002F9C RID: 12188
+		// (get) Token: 0x0601D987 RID: 121223 RVA: 0x008FC69E File Offset: 0x008FA89E
+		// (set) Token: 0x0601D988 RID: 121224 RVA: 0x008FC6B2 File Offset: 0x008FA8B2
 		public unsafe FLinearColor PointLight1_ToonLightColor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_PointLight1_ToonLightColor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_PointLight1_ToonLightColor) = value;
 			}
 		}
 
-		// Token: 0x17002B2C RID: 11052
-		// (get) Token: 0x0601F66B RID: 128619 RVA: 0x008B77CF File Offset: 0x008B59CF
-		// (set) Token: 0x0601F66C RID: 128620 RVA: 0x008B77E3 File Offset: 0x008B59E3
+		// Token: 0x17002F9D RID: 12189
+		// (get) Token: 0x0601D989 RID: 121225 RVA: 0x008FC6C7 File Offset: 0x008FA8C7
+		// (set) Token: 0x0601D98A RID: 121226 RVA: 0x008FC6DB File Offset: 0x008FA8DB
 		public unsafe FLinearColor PointLight2_ToonLightColor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_17);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_PointLight2_ToonLightColor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_17) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_PointLight2_ToonLightColor) = value;
 			}
 		}
 
-		// Token: 0x17002B2D RID: 11053
-		// (get) Token: 0x0601F66D RID: 128621 RVA: 0x008B77F8 File Offset: 0x008B59F8
-		// (set) Token: 0x0601F66E RID: 128622 RVA: 0x008B780C File Offset: 0x008B5A0C
+		// Token: 0x17002F9E RID: 12190
+		// (get) Token: 0x0601D98B RID: 121227 RVA: 0x008FC6F0 File Offset: 0x008FA8F0
+		// (set) Token: 0x0601D98C RID: 121228 RVA: 0x008FC704 File Offset: 0x008FA904
 		public unsafe FLinearColor PointLight3_ToonLightColor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_PointLight3_ToonLightColor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_PointLight3_ToonLightColor) = value;
 			}
 		}
 
-		// Token: 0x17002B2E RID: 11054
-		// (get) Token: 0x0601F66F RID: 128623 RVA: 0x008B7821 File Offset: 0x008B5A21
-		// (set) Token: 0x0601F670 RID: 128624 RVA: 0x008B7835 File Offset: 0x008B5A35
+		// Token: 0x17002F9F RID: 12191
+		// (get) Token: 0x0601D98D RID: 121229 RVA: 0x008FC719 File Offset: 0x008FA919
+		// (set) Token: 0x0601D98E RID: 121230 RVA: 0x008FC72D File Offset: 0x008FA92D
 		public unsafe FLinearColor EyeLightSimulation_TongKong1
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_19);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_TongKong1);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_19) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_TongKong1) = value;
 			}
 		}
 
-		// Token: 0x17002B2F RID: 11055
-		// (get) Token: 0x0601F671 RID: 128625 RVA: 0x008B784A File Offset: 0x008B5A4A
-		// (set) Token: 0x0601F672 RID: 128626 RVA: 0x008B785E File Offset: 0x008B5A5E
+		// Token: 0x17002FA0 RID: 12192
+		// (get) Token: 0x0601D98F RID: 121231 RVA: 0x008FC742 File Offset: 0x008FA942
+		// (set) Token: 0x0601D990 RID: 121232 RVA: 0x008FC756 File Offset: 0x008FA956
 		public unsafe FLinearColor EyeLightSimulation_TongKong2
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_20);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_TongKong2);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_20) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_TongKong2) = value;
 			}
 		}
 
-		// Token: 0x17002B30 RID: 11056
-		// (get) Token: 0x0601F673 RID: 128627 RVA: 0x008B7873 File Offset: 0x008B5A73
-		// (set) Token: 0x0601F674 RID: 128628 RVA: 0x008B7887 File Offset: 0x008B5A87
+		// Token: 0x17002FA1 RID: 12193
+		// (get) Token: 0x0601D991 RID: 121233 RVA: 0x008FC76B File Offset: 0x008FA96B
+		// (set) Token: 0x0601D992 RID: 121234 RVA: 0x008FC77F File Offset: 0x008FA97F
 		public unsafe FLinearColor EyeLightSimulation_TongKong3
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_21);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_TongKong3);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_21) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_TongKong3) = value;
 			}
 		}
 
-		// Token: 0x17002B31 RID: 11057
-		// (get) Token: 0x0601F675 RID: 128629 RVA: 0x008B789C File Offset: 0x008B5A9C
-		// (set) Token: 0x0601F676 RID: 128630 RVA: 0x008B78B0 File Offset: 0x008B5AB0
+		// Token: 0x17002FA2 RID: 12194
+		// (get) Token: 0x0601D993 RID: 121235 RVA: 0x008FC794 File Offset: 0x008FA994
+		// (set) Token: 0x0601D994 RID: 121236 RVA: 0x008FC7A8 File Offset: 0x008FA9A8
 		public unsafe FLinearColor EyeLightSimulation_YanBai1
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_22);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_YanBai1);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_22) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_YanBai1) = value;
 			}
 		}
 
-		// Token: 0x17002B32 RID: 11058
-		// (get) Token: 0x0601F677 RID: 128631 RVA: 0x008B78C5 File Offset: 0x008B5AC5
-		// (set) Token: 0x0601F678 RID: 128632 RVA: 0x008B78D9 File Offset: 0x008B5AD9
+		// Token: 0x17002FA3 RID: 12195
+		// (get) Token: 0x0601D995 RID: 121237 RVA: 0x008FC7BD File Offset: 0x008FA9BD
+		// (set) Token: 0x0601D996 RID: 121238 RVA: 0x008FC7D1 File Offset: 0x008FA9D1
 		public unsafe FLinearColor EyeLightSimulation_YanBai2
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_23);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_YanBai2);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_23) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_YanBai2) = value;
 			}
 		}
 
-		// Token: 0x17002B33 RID: 11059
-		// (get) Token: 0x0601F679 RID: 128633 RVA: 0x008B78EE File Offset: 0x008B5AEE
-		// (set) Token: 0x0601F67A RID: 128634 RVA: 0x008B7902 File Offset: 0x008B5B02
+		// Token: 0x17002FA4 RID: 12196
+		// (get) Token: 0x0601D997 RID: 121239 RVA: 0x008FC7E6 File Offset: 0x008FA9E6
+		// (set) Token: 0x0601D998 RID: 121240 RVA: 0x008FC7FA File Offset: 0x008FA9FA
 		public unsafe FLinearColor EyeLightSimulation_YanBai3
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_24);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_YanBai3);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_24) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_YanBai3) = value;
 			}
 		}
 
-		// Token: 0x17002B34 RID: 11060
-		// (get) Token: 0x0601F67B RID: 128635 RVA: 0x008B7917 File Offset: 0x008B5B17
-		// (set) Token: 0x0601F67C RID: 128636 RVA: 0x008B792B File Offset: 0x008B5B2B
+		// Token: 0x17002FA5 RID: 12197
+		// (get) Token: 0x0601D999 RID: 121241 RVA: 0x008FC80F File Offset: 0x008FAA0F
+		// (set) Token: 0x0601D99A RID: 121242 RVA: 0x008FC823 File Offset: 0x008FAA23
 		public unsafe FLinearColor EyeLightSimulation_Color1
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_25);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_Color1);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_25) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_Color1) = value;
 			}
 		}
 
-		// Token: 0x17002B35 RID: 11061
-		// (get) Token: 0x0601F67D RID: 128637 RVA: 0x008B7940 File Offset: 0x008B5B40
-		// (set) Token: 0x0601F67E RID: 128638 RVA: 0x008B7954 File Offset: 0x008B5B54
+		// Token: 0x17002FA6 RID: 12198
+		// (get) Token: 0x0601D99B RID: 121243 RVA: 0x008FC838 File Offset: 0x008FAA38
+		// (set) Token: 0x0601D99C RID: 121244 RVA: 0x008FC84C File Offset: 0x008FAA4C
 		public unsafe FLinearColor EyeLightSimulation_Color2
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_26);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_Color2);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_26) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_Color2) = value;
 			}
 		}
 
-		// Token: 0x17002B36 RID: 11062
-		// (get) Token: 0x0601F67F RID: 128639 RVA: 0x008B7969 File Offset: 0x008B5B69
-		// (set) Token: 0x0601F680 RID: 128640 RVA: 0x008B797D File Offset: 0x008B5B7D
+		// Token: 0x17002FA7 RID: 12199
+		// (get) Token: 0x0601D99D RID: 121245 RVA: 0x008FC861 File Offset: 0x008FAA61
+		// (set) Token: 0x0601D99E RID: 121246 RVA: 0x008FC875 File Offset: 0x008FAA75
 		public unsafe FLinearColor EyeLightSimulation_Color3
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_27);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_Color3);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_27) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_EyeLightSimulation_Color3) = value;
 			}
 		}
 
-		// Token: 0x17002B37 RID: 11063
-		// (get) Token: 0x0601F681 RID: 128641 RVA: 0x008B7992 File Offset: 0x008B5B92
-		// (set) Token: 0x0601F682 RID: 128642 RVA: 0x008B79A2 File Offset: 0x008B5BA2
+		// Token: 0x17002FA8 RID: 12200
+		// (get) Token: 0x0601D99F RID: 121247 RVA: 0x008FC88A File Offset: 0x008FAA8A
+		// (set) Token: 0x0601D9A0 RID: 121248 RVA: 0x008FC89A File Offset: 0x008FAA9A
 		public unsafe byte MeshPart
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_28);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_MeshPart);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_28) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_MeshPart) = value;
 			}
 		}
 
-		// Token: 0x17002B38 RID: 11064
-		// (get) Token: 0x0601F683 RID: 128643 RVA: 0x008B79B3 File Offset: 0x008B5BB3
-		// (set) Token: 0x0601F684 RID: 128644 RVA: 0x008B79C3 File Offset: 0x008B5BC3
+		// Token: 0x17002FA9 RID: 12201
+		// (get) Token: 0x0601D9A1 RID: 121249 RVA: 0x008FC8AB File Offset: 0x008FAAAB
+		// (set) Token: 0x0601D9A2 RID: 121250 RVA: 0x008FC8BB File Offset: 0x008FAABB
 		public unsafe int Handle1
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_29);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_Handle1);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_29) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_Handle1) = value;
 			}
 		}
 
-		// Token: 0x17002B39 RID: 11065
-		// (get) Token: 0x0601F685 RID: 128645 RVA: 0x008B79D4 File Offset: 0x008B5BD4
-		// (set) Token: 0x0601F686 RID: 128646 RVA: 0x008B79E4 File Offset: 0x008B5BE4
+		// Token: 0x17002FAA RID: 12202
+		// (get) Token: 0x0601D9A3 RID: 121251 RVA: 0x008FC8CC File Offset: 0x008FAACC
+		// (set) Token: 0x0601D9A4 RID: 121252 RVA: 0x008FC8DC File Offset: 0x008FAADC
 		public unsafe int Handle2
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_30);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_Handle2);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_30) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_Handle2) = value;
 			}
 		}
 
-		// Token: 0x17002B3A RID: 11066
-		// (get) Token: 0x0601F687 RID: 128647 RVA: 0x008B79F5 File Offset: 0x008B5BF5
-		// (set) Token: 0x0601F688 RID: 128648 RVA: 0x008B7A05 File Offset: 0x008B5C05
+		// Token: 0x17002FAB RID: 12203
+		// (get) Token: 0x0601D9A5 RID: 121253 RVA: 0x008FC8ED File Offset: 0x008FAAED
+		// (set) Token: 0x0601D9A6 RID: 121254 RVA: 0x008FC8FD File Offset: 0x008FAAFD
 		public unsafe int Handle3
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_31);
+				return *(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_Handle3);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_31) = value;
+				*(base.NativePtr + (IntPtr)BP_SplitScreen_C.__PropertyOffset_Handle3) = value;
 			}
 		}
 
-		// Token: 0x17002B3B RID: 11067
-		// (get) Token: 0x0601F689 RID: 128649 RVA: 0x008B7A16 File Offset: 0x008B5C16
-		// (set) Token: 0x0601F68A RID: 128650 RVA: 0x008B7A2A File Offset: 0x008B5C2A
+		// Token: 0x17002FAC RID: 12204
+		// (get) Token: 0x0601D9A7 RID: 121255 RVA: 0x008FC90E File Offset: 0x008FAB0E
+		// (set) Token: 0x0601D9A8 RID: 121256 RVA: 0x008FC922 File Offset: 0x008FAB22
 		public unsafe UKuroMaterialControllerComponent KuroMaterialControllerComponent1
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroMaterialControllerComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_32);
+				return BuiltinUtils.ObjectPropertyGetter<UKuroMaterialControllerComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_KuroMaterialControllerComponent1);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_32, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_KuroMaterialControllerComponent1, value);
 			}
 		}
 
-		// Token: 0x17002B3C RID: 11068
-		// (get) Token: 0x0601F68B RID: 128651 RVA: 0x008B7A3F File Offset: 0x008B5C3F
-		// (set) Token: 0x0601F68C RID: 128652 RVA: 0x008B7A53 File Offset: 0x008B5C53
+		// Token: 0x17002FAD RID: 12205
+		// (get) Token: 0x0601D9A9 RID: 121257 RVA: 0x008FC937 File Offset: 0x008FAB37
+		// (set) Token: 0x0601D9AA RID: 121258 RVA: 0x008FC94B File Offset: 0x008FAB4B
 		public unsafe UKuroMaterialControllerComponent KuroMaterialControllerComponent2
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroMaterialControllerComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_33);
+				return BuiltinUtils.ObjectPropertyGetter<UKuroMaterialControllerComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_KuroMaterialControllerComponent2);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_33, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_KuroMaterialControllerComponent2, value);
 			}
 		}
 
-		// Token: 0x17002B3D RID: 11069
-		// (get) Token: 0x0601F68D RID: 128653 RVA: 0x008B7A68 File Offset: 0x008B5C68
-		// (set) Token: 0x0601F68E RID: 128654 RVA: 0x008B7A7C File Offset: 0x008B5C7C
+		// Token: 0x17002FAE RID: 12206
+		// (get) Token: 0x0601D9AB RID: 121259 RVA: 0x008FC960 File Offset: 0x008FAB60
+		// (set) Token: 0x0601D9AC RID: 121260 RVA: 0x008FC974 File Offset: 0x008FAB74
 		public unsafe UKuroMaterialControllerComponent KuroMaterialControllerComponent3
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroMaterialControllerComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_34);
+				return BuiltinUtils.ObjectPropertyGetter<UKuroMaterialControllerComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_KuroMaterialControllerComponent3);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_34, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplitScreen_C.__PropertyOffset_KuroMaterialControllerComponent3, value);
 			}
 		}
 
-		// Token: 0x0601F68F RID: 128655 RVA: 0x008B7A91 File Offset: 0x008B5C91
+		// Token: 0x0601D9AD RID: 121261 RVA: 0x008FC989 File Offset: 0x008FAB89
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void Reset()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_SplitScreen_C.__Reset_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F690 RID: 128656 RVA: 0x008B7AA8 File Offset: 0x008B5CA8
+		// Token: 0x0601D9AE RID: 121262 RVA: 0x008FC9A0 File Offset: 0x008FABA0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void InitKuroMaterialController(UKuroMaterialControllerComponent KuroMaterialControllerComponent, UChildActorComponent CharacterActorComponent, UPointLightComponent PointLightComponent, FVector PointLight_Location, FLinearColor PointLight_ToonLightColor, FLinearColor EyeLightSimulation_TongKong, FLinearColor EyeLightSimulation_YanBai, FLinearColor EyeLightSimulation_Color, float E_LinkPos, bool Channel0, bool Channel1, bool Channel2, ref int returnHandle)
 		{
 			BP_SplitScreen_C.__InitKuroMaterialController_FunctionParams* ptr = stackalloc BP_SplitScreen_C.__InitKuroMaterialController_FunctionParams[(UIntPtr)335] + 15L / (long)sizeof(BP_SplitScreen_C.__InitKuroMaterialController_FunctionParams) & -16L;
@@ -578,41 +576,36 @@ namespace AkiClient.Game.Aki.Sequence.Common_Seq.Video.SplitScreen
 			returnHandle = ptr->returnHandle;
 		}
 
-		// Token: 0x0601F691 RID: 128657 RVA: 0x008B7B86 File Offset: 0x008B5D86
+		// Token: 0x0601D9AF RID: 121263 RVA: 0x008FCA7E File Offset: 0x008FAC7E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void End()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_SplitScreen_C.__End_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F692 RID: 128658 RVA: 0x008B7B9A File Offset: 0x008B5D9A
+		// Token: 0x0601D9B0 RID: 121264 RVA: 0x008FCA92 File Offset: 0x008FAC92
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void Start()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_SplitScreen_C.__Start_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F693 RID: 128659 RVA: 0x008B7BAE File Offset: 0x008B5DAE
+		// Token: 0x0601D9B1 RID: 121265 RVA: 0x008FCAA6 File Offset: 0x008FACA6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_SplitScreen_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F694 RID: 128660 RVA: 0x008B7BC2 File Offset: 0x008B5DC2
+		// Token: 0x0601D9B2 RID: 121266 RVA: 0x008FCABA File Offset: 0x008FACBA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_SplitScreen_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_SplitScreen_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F695 RID: 128661 RVA: 0x008B7BD8 File Offset: 0x008B5DD8
+		// Token: 0x0601D9B3 RID: 121267 RVA: 0x008FCAD0 File Offset: 0x008FACD0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_SplitScreen_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_SplitScreen_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_SplitScreen_C.__ReceiveTick_FunctionParams) & -16L;
@@ -621,218 +614,217 @@ namespace AkiClient.Game.Aki.Sequence.Common_Seq.Video.SplitScreen
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_SplitScreen_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F696 RID: 128662 RVA: 0x008B7C20 File Offset: 0x008B5E20
+		// Token: 0x0601D9B4 RID: 121268 RVA: 0x008FCB18 File Offset: 0x008FAD18
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_SplitScreen_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_SplitScreen_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_SplitScreen_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_SplitScreen_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_SplitScreen_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_SplitScreen_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F697 RID: 128663 RVA: 0x008B7C67 File Offset: 0x008B5E67
+		// Token: 0x0601D9B5 RID: 121269 RVA: 0x008FCB5E File Offset: 0x008FAD5E
 		protected BP_SplitScreen_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400F13B RID: 61755
+		// Token: 0x0400F981 RID: 63873
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Sequence/Common_Seq/Video/SplitScreen/BP_SplitScreen.BP_SplitScreen_C";
 
-		// Token: 0x0400F13C RID: 61756
+		// Token: 0x0400F982 RID: 63874
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400F13D RID: 61757
+		// Token: 0x0400F983 RID: 63875
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400F13E RID: 61758
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400F984 RID: 63876
+		internal static int __PropertyOffset_PointLight3;
 
-		// Token: 0x0400F13F RID: 61759
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400F985 RID: 63877
+		internal static int __PropertyOffset_PointLight2;
 
-		// Token: 0x0400F140 RID: 61760
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400F986 RID: 63878
+		internal static int __PropertyOffset_PointLight1;
 
-		// Token: 0x0400F141 RID: 61761
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400F987 RID: 63879
+		internal static int __PropertyOffset_CharacterActor_3;
 
-		// Token: 0x0400F142 RID: 61762
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400F988 RID: 63880
+		internal static int __PropertyOffset_CharacterActor_2;
 
-		// Token: 0x0400F143 RID: 61763
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400F989 RID: 63881
+		internal static int __PropertyOffset_CharacterActor_1;
 
-		// Token: 0x0400F144 RID: 61764
-		internal static int __PropertyOffset_7;
+		// Token: 0x0400F98A RID: 63882
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x0400F145 RID: 61765
-		internal static int __PropertyOffset_8;
+		// Token: 0x0400F98B RID: 63883
+		internal static int __PropertyOffset_MPC;
 
-		// Token: 0x0400F146 RID: 61766
-		internal static int __PropertyOffset_9;
+		// Token: 0x0400F98C RID: 63884
+		internal static int __PropertyOffset_Angle_LinePosition__LineDistance;
 
-		// Token: 0x0400F147 RID: 61767
-		internal static int __PropertyOffset_10;
+		// Token: 0x0400F98D RID: 63885
+		internal static int __PropertyOffset_E_LinkPos_1;
 
-		// Token: 0x0400F148 RID: 61768
-		internal static int __PropertyOffset_11;
+		// Token: 0x0400F98E RID: 63886
+		internal static int __PropertyOffset_E_LinkPos_2;
 
-		// Token: 0x0400F149 RID: 61769
-		internal static int __PropertyOffset_12;
+		// Token: 0x0400F98F RID: 63887
+		internal static int __PropertyOffset_E_LinkPos_3;
 
-		// Token: 0x0400F14A RID: 61770
-		internal static int __PropertyOffset_13;
+		// Token: 0x0400F990 RID: 63888
+		internal static int __PropertyOffset_PointLight1_Location;
 
-		// Token: 0x0400F14B RID: 61771
-		internal static int __PropertyOffset_14;
+		// Token: 0x0400F991 RID: 63889
+		internal static int __PropertyOffset_PointLight2_Location;
 
-		// Token: 0x0400F14C RID: 61772
-		internal static int __PropertyOffset_15;
+		// Token: 0x0400F992 RID: 63890
+		internal static int __PropertyOffset_PointLight3_Location;
 
-		// Token: 0x0400F14D RID: 61773
-		internal static int __PropertyOffset_16;
+		// Token: 0x0400F993 RID: 63891
+		internal static int __PropertyOffset_PointLight1_ToonLightColor;
 
-		// Token: 0x0400F14E RID: 61774
-		internal static int __PropertyOffset_17;
+		// Token: 0x0400F994 RID: 63892
+		internal static int __PropertyOffset_PointLight2_ToonLightColor;
 
-		// Token: 0x0400F14F RID: 61775
-		internal static int __PropertyOffset_18;
+		// Token: 0x0400F995 RID: 63893
+		internal static int __PropertyOffset_PointLight3_ToonLightColor;
 
-		// Token: 0x0400F150 RID: 61776
-		internal static int __PropertyOffset_19;
+		// Token: 0x0400F996 RID: 63894
+		internal static int __PropertyOffset_EyeLightSimulation_TongKong1;
 
-		// Token: 0x0400F151 RID: 61777
-		internal static int __PropertyOffset_20;
+		// Token: 0x0400F997 RID: 63895
+		internal static int __PropertyOffset_EyeLightSimulation_TongKong2;
 
-		// Token: 0x0400F152 RID: 61778
-		internal static int __PropertyOffset_21;
+		// Token: 0x0400F998 RID: 63896
+		internal static int __PropertyOffset_EyeLightSimulation_TongKong3;
 
-		// Token: 0x0400F153 RID: 61779
-		internal static int __PropertyOffset_22;
+		// Token: 0x0400F999 RID: 63897
+		internal static int __PropertyOffset_EyeLightSimulation_YanBai1;
 
-		// Token: 0x0400F154 RID: 61780
-		internal static int __PropertyOffset_23;
+		// Token: 0x0400F99A RID: 63898
+		internal static int __PropertyOffset_EyeLightSimulation_YanBai2;
 
-		// Token: 0x0400F155 RID: 61781
-		internal static int __PropertyOffset_24;
+		// Token: 0x0400F99B RID: 63899
+		internal static int __PropertyOffset_EyeLightSimulation_YanBai3;
 
-		// Token: 0x0400F156 RID: 61782
-		internal static int __PropertyOffset_25;
+		// Token: 0x0400F99C RID: 63900
+		internal static int __PropertyOffset_EyeLightSimulation_Color1;
 
-		// Token: 0x0400F157 RID: 61783
-		internal static int __PropertyOffset_26;
+		// Token: 0x0400F99D RID: 63901
+		internal static int __PropertyOffset_EyeLightSimulation_Color2;
 
-		// Token: 0x0400F158 RID: 61784
-		internal static int __PropertyOffset_27;
+		// Token: 0x0400F99E RID: 63902
+		internal static int __PropertyOffset_EyeLightSimulation_Color3;
 
-		// Token: 0x0400F159 RID: 61785
-		internal static int __PropertyOffset_28;
+		// Token: 0x0400F99F RID: 63903
+		internal static int __PropertyOffset_MeshPart;
 
-		// Token: 0x0400F15A RID: 61786
-		internal static int __PropertyOffset_29;
+		// Token: 0x0400F9A0 RID: 63904
+		internal static int __PropertyOffset_Handle1;
 
-		// Token: 0x0400F15B RID: 61787
-		internal static int __PropertyOffset_30;
+		// Token: 0x0400F9A1 RID: 63905
+		internal static int __PropertyOffset_Handle2;
 
-		// Token: 0x0400F15C RID: 61788
-		internal static int __PropertyOffset_31;
+		// Token: 0x0400F9A2 RID: 63906
+		internal static int __PropertyOffset_Handle3;
 
-		// Token: 0x0400F15D RID: 61789
-		internal static int __PropertyOffset_32;
+		// Token: 0x0400F9A3 RID: 63907
+		internal static int __PropertyOffset_KuroMaterialControllerComponent1;
 
-		// Token: 0x0400F15E RID: 61790
-		internal static int __PropertyOffset_33;
+		// Token: 0x0400F9A4 RID: 63908
+		internal static int __PropertyOffset_KuroMaterialControllerComponent2;
 
-		// Token: 0x0400F15F RID: 61791
-		internal static int __PropertyOffset_34;
+		// Token: 0x0400F9A5 RID: 63909
+		internal static int __PropertyOffset_KuroMaterialControllerComponent3;
 
-		// Token: 0x0400F160 RID: 61792
+		// Token: 0x0400F9A6 RID: 63910
 		private static IntPtr __Reset_NativeFunctionPtr;
 
-		// Token: 0x0400F161 RID: 61793
+		// Token: 0x0400F9A7 RID: 63911
 		private static IntPtr __InitKuroMaterialController_NativeFunctionPtr;
 
-		// Token: 0x0400F162 RID: 61794
+		// Token: 0x0400F9A8 RID: 63912
 		private static IntPtr __End_NativeFunctionPtr;
 
-		// Token: 0x0400F163 RID: 61795
+		// Token: 0x0400F9A9 RID: 63913
 		private static IntPtr __Start_NativeFunctionPtr;
 
-		// Token: 0x0400F164 RID: 61796
+		// Token: 0x0400F9AA RID: 63914
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x0400F165 RID: 61797
+		// Token: 0x0400F9AB RID: 63915
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x02009AD8 RID: 39640
+		// Token: 0x02008D67 RID: 36199
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 320)]
 		protected ref struct __InitKuroMaterialController_FunctionParams
 		{
-			// Token: 0x04031081 RID: 200833
+			// Token: 0x0402C8F4 RID: 182516
 			[FieldOffset(0)]
 			public IntPtr KuroMaterialControllerComponent;
 
-			// Token: 0x04031082 RID: 200834
+			// Token: 0x0402C8F5 RID: 182517
 			[FieldOffset(8)]
 			public IntPtr CharacterActorComponent;
 
-			// Token: 0x04031083 RID: 200835
+			// Token: 0x0402C8F6 RID: 182518
 			[FieldOffset(16)]
 			public IntPtr PointLightComponent;
 
-			// Token: 0x04031084 RID: 200836
+			// Token: 0x0402C8F7 RID: 182519
 			[FieldOffset(24)]
 			public FVector PointLight_Location;
 
-			// Token: 0x04031085 RID: 200837
+			// Token: 0x0402C8F8 RID: 182520
 			[FieldOffset(36)]
 			public FLinearColor PointLight_ToonLightColor;
 
-			// Token: 0x04031086 RID: 200838
+			// Token: 0x0402C8F9 RID: 182521
 			[FieldOffset(52)]
 			public FLinearColor EyeLightSimulation_TongKong;
 
-			// Token: 0x04031087 RID: 200839
+			// Token: 0x0402C8FA RID: 182522
 			[FieldOffset(68)]
 			public FLinearColor EyeLightSimulation_YanBai;
 
-			// Token: 0x04031088 RID: 200840
+			// Token: 0x0402C8FB RID: 182523
 			[FieldOffset(84)]
 			public FLinearColor EyeLightSimulation_Color;
 
-			// Token: 0x04031089 RID: 200841
+			// Token: 0x0402C8FC RID: 182524
 			[FieldOffset(100)]
 			public float E_LinkPos;
 
-			// Token: 0x0403108A RID: 200842
+			// Token: 0x0402C8FD RID: 182525
 			[FieldOffset(104)]
 			public bool Channel0;
 
-			// Token: 0x0403108B RID: 200843
+			// Token: 0x0402C8FE RID: 182526
 			[FieldOffset(105)]
 			public bool Channel1;
 
-			// Token: 0x0403108C RID: 200844
+			// Token: 0x0402C8FF RID: 182527
 			[FieldOffset(106)]
 			public bool Channel2;
 
-			// Token: 0x0403108D RID: 200845
+			// Token: 0x0402C900 RID: 182528
 			[FieldOffset(108)]
 			public int returnHandle;
 		}
 
-		// Token: 0x02009AD9 RID: 39641
+		// Token: 0x02008D68 RID: 36200
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x0403108E RID: 200846
+			// Token: 0x0402C901 RID: 182529
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

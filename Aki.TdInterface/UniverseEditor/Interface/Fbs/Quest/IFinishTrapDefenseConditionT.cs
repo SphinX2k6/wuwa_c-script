@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E52 RID: 15954
+	// Token: 0x0200428D RID: 17037
 	public class IFinishTrapDefenseConditionT
 	{
-		// Token: 0x17006EA2 RID: 28322
-		// (get) Token: 0x06016741 RID: 91969 RVA: 0x0033F27D File Offset: 0x0033D47D
-		// (set) Token: 0x06016742 RID: 91970 RVA: 0x0033F285 File Offset: 0x0033D485
+		// Token: 0x17007486 RID: 29830
+		// (get) Token: 0x06017D68 RID: 97640 RVA: 0x00367DAD File Offset: 0x00365FAD
+		// (set) Token: 0x06017D69 RID: 97641 RVA: 0x00367DB5 File Offset: 0x00365FB5
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x17006EA3 RID: 28323
-		// (get) Token: 0x06016743 RID: 91971 RVA: 0x0033F28E File Offset: 0x0033D48E
-		// (set) Token: 0x06016744 RID: 91972 RVA: 0x0033F296 File Offset: 0x0033D496
+		// Token: 0x17007487 RID: 29831
+		// (get) Token: 0x06017D6A RID: 97642 RVA: 0x00367DBE File Offset: 0x00365FBE
+		// (set) Token: 0x06017D6B RID: 97643 RVA: 0x00367DC6 File Offset: 0x00365FC6
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x17006EA4 RID: 28324
-		// (get) Token: 0x06016745 RID: 91973 RVA: 0x0033F29F File Offset: 0x0033D49F
-		// (set) Token: 0x06016746 RID: 91974 RVA: 0x0033F2A7 File Offset: 0x0033D4A7
+		// Token: 0x17007488 RID: 29832
+		// (get) Token: 0x06017D6C RID: 97644 RVA: 0x00367DCF File Offset: 0x00365FCF
+		// (set) Token: 0x06017D6D RID: 97645 RVA: 0x00367DD7 File Offset: 0x00365FD7
 		public TTrapDefenseConditionStepUnion Step { get; set; }
 
-		// Token: 0x17006EA5 RID: 28325
-		// (get) Token: 0x06016747 RID: 91975 RVA: 0x0033F2B0 File Offset: 0x0033D4B0
-		// (set) Token: 0x06016748 RID: 91976 RVA: 0x0033F2B8 File Offset: 0x0033D4B8
+		// Token: 0x17007489 RID: 29833
+		// (get) Token: 0x06017D6E RID: 97646 RVA: 0x00367DE0 File Offset: 0x00365FE0
+		// (set) Token: 0x06017D6F RID: 97647 RVA: 0x00367DE8 File Offset: 0x00365FE8
 		public TVarRefUnion Batch { get; set; }
 
-		// Token: 0x17006EA6 RID: 28326
-		// (get) Token: 0x06016749 RID: 91977 RVA: 0x0033F2C1 File Offset: 0x0033D4C1
-		// (set) Token: 0x0601674A RID: 91978 RVA: 0x0033F2C9 File Offset: 0x0033D4C9
+		// Token: 0x1700748A RID: 29834
+		// (get) Token: 0x06017D70 RID: 97648 RVA: 0x00367DF1 File Offset: 0x00365FF1
+		// (set) Token: 0x06017D71 RID: 97649 RVA: 0x00367DF9 File Offset: 0x00365FF9
 		public bool NeedArchive { get; set; }
 
-		// Token: 0x17006EA7 RID: 28327
-		// (get) Token: 0x0601674B RID: 91979 RVA: 0x0033F2D2 File Offset: 0x0033D4D2
-		// (set) Token: 0x0601674C RID: 91980 RVA: 0x0033F2DA File Offset: 0x0033D4DA
+		// Token: 0x1700748B RID: 29835
+		// (get) Token: 0x06017D72 RID: 97650 RVA: 0x00367E02 File Offset: 0x00366002
+		// (set) Token: 0x06017D73 RID: 97651 RVA: 0x00367E0A File Offset: 0x0036600A
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601674D RID: 91981 RVA: 0x0033F2E3 File Offset: 0x0033D4E3
+		// Token: 0x06017D74 RID: 97652 RVA: 0x00367E13 File Offset: 0x00366013
 		public IFinishTrapDefenseConditionT()
 		{
 			this.Type = EChildQuest.DoInteract;

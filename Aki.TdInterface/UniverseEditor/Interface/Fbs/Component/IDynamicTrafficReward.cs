@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005105 RID: 20741
+	// Token: 0x0200566A RID: 22122
 	public struct IDynamicTrafficReward : IFlatbufferObject
 	{
-		// Token: 0x17009720 RID: 38688
-		// (get) Token: 0x060216A4 RID: 136868 RVA: 0x004A3DD3 File Offset: 0x004A1FD3
+		// Token: 0x17009F0D RID: 40717
+		// (get) Token: 0x060235F8 RID: 144888 RVA: 0x004DDD5F File Offset: 0x004DBF5F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060216A5 RID: 136869 RVA: 0x004A3DE0 File Offset: 0x004A1FE0
+		// Token: 0x060235F9 RID: 144889 RVA: 0x004DDD6C File Offset: 0x004DBF6C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060216A6 RID: 136870 RVA: 0x004A3DE8 File Offset: 0x004A1FE8
+		// Token: 0x060235FA RID: 144890 RVA: 0x004DDD74 File Offset: 0x004DBF74
 		public static IDynamicTrafficReward GetRootAsIDynamicTrafficReward(ByteBuffer _bb)
 		{
 			return IDynamicTrafficReward.GetRootAsIDynamicTrafficReward(_bb, default(IDynamicTrafficReward));
 		}
 
-		// Token: 0x060216A7 RID: 136871 RVA: 0x004A3E04 File Offset: 0x004A2004
+		// Token: 0x060235FB RID: 144891 RVA: 0x004DDD90 File Offset: 0x004DBF90
 		public static IDynamicTrafficReward GetRootAsIDynamicTrafficReward(ByteBuffer _bb, IDynamicTrafficReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060216A8 RID: 136872 RVA: 0x004A3E21 File Offset: 0x004A2021
+		// Token: 0x060235FC RID: 144892 RVA: 0x004DDDAD File Offset: 0x004DBFAD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060216A9 RID: 136873 RVA: 0x004A3E30 File Offset: 0x004A2030
+		// Token: 0x060235FD RID: 144893 RVA: 0x004DDDBC File Offset: 0x004DBFBC
 		public IDynamicTrafficReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009721 RID: 38689
-		// (get) Token: 0x060216AA RID: 136874 RVA: 0x004A3E40 File Offset: 0x004A2040
+		// Token: 0x17009F0E RID: 40718
+		// (get) Token: 0x060235FE RID: 144894 RVA: 0x004DDDCC File Offset: 0x004DBFCC
 		public EDynamicEntityRewardType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009722 RID: 38690
-		// (get) Token: 0x060216AB RID: 136875 RVA: 0x004A3E7C File Offset: 0x004A207C
+		// Token: 0x17009F0F RID: 40719
+		// (get) Token: 0x060235FF RID: 144895 RVA: 0x004DDE08 File Offset: 0x004DC008
 		public int RewardId
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060216AC RID: 136876 RVA: 0x004A3EB8 File Offset: 0x004A20B8
+		// Token: 0x06023600 RID: 144896 RVA: 0x004DDE44 File Offset: 0x004DC044
 		public static Offset<IDynamicTrafficReward> CreateIDynamicTrafficReward(FlatBufferBuilder builder, EDynamicEntityRewardType Type = EDynamicEntityRewardType.Traffic, int RewardId = 0)
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDynamicTrafficReward.EndIDynamicTrafficReward(builder);
 		}
 
-		// Token: 0x060216AD RID: 136877 RVA: 0x004A3ED5 File Offset: 0x004A20D5
+		// Token: 0x06023601 RID: 144897 RVA: 0x004DDE61 File Offset: 0x004DC061
 		public static void StartIDynamicTrafficReward(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060216AE RID: 136878 RVA: 0x004A3EDE File Offset: 0x004A20DE
+		// Token: 0x06023602 RID: 144898 RVA: 0x004DDE6A File Offset: 0x004DC06A
 		public static void AddType(FlatBufferBuilder builder, EDynamicEntityRewardType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060216AF RID: 136879 RVA: 0x004A3EE9 File Offset: 0x004A20E9
+		// Token: 0x06023603 RID: 144899 RVA: 0x004DDE75 File Offset: 0x004DC075
 		public static void AddRewardId(FlatBufferBuilder builder, int rewardId)
 		{
 			builder.AddInt(1, rewardId, 0);
 		}
 
-		// Token: 0x060216B0 RID: 136880 RVA: 0x004A3EF4 File Offset: 0x004A20F4
+		// Token: 0x06023604 RID: 144900 RVA: 0x004DDE80 File Offset: 0x004DC080
 		public static Offset<IDynamicTrafficReward> EndIDynamicTrafficReward(FlatBufferBuilder builder)
 		{
 			return new Offset<IDynamicTrafficReward>(builder.EndTable());
 		}
 
-		// Token: 0x060216B1 RID: 136881 RVA: 0x004A3F04 File Offset: 0x004A2104
+		// Token: 0x06023605 RID: 144901 RVA: 0x004DDE90 File Offset: 0x004DC090
 		public IDynamicTrafficRewardT UnPack()
 		{
 			IDynamicTrafficRewardT dynamicTrafficRewardT = new IDynamicTrafficRewardT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return dynamicTrafficRewardT;
 		}
 
-		// Token: 0x060216B2 RID: 136882 RVA: 0x004A3F1F File Offset: 0x004A211F
+		// Token: 0x06023606 RID: 144902 RVA: 0x004DDEAB File Offset: 0x004DC0AB
 		public void UnPackTo(IDynamicTrafficRewardT _o)
 		{
 			_o.Type = this.Type;
 			_o.RewardId = this.RewardId;
 		}
 
-		// Token: 0x060216B3 RID: 136883 RVA: 0x004A3F3C File Offset: 0x004A213C
+		// Token: 0x06023607 RID: 144903 RVA: 0x004DDEC8 File Offset: 0x004DC0C8
 		public static Offset<IDynamicTrafficReward> Pack(FlatBufferBuilder builder, IDynamicTrafficRewardT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDynamicTrafficReward.CreateIDynamicTrafficReward(builder, _o.Type, _o.RewardId);
 		}
 
-		// Token: 0x0400E171 RID: 57713
+		// Token: 0x0400ED6E RID: 60782
 		private Table __p;
 	}
 }

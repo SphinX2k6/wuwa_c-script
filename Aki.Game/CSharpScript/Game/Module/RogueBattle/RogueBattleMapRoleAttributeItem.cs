@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E73 RID: 20083
+	// Token: 0x02003E3C RID: 15932
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueBattleMapRoleAttributeItem : UiPanelBase
 	{
-		// Token: 0x06033B18 RID: 211736 RVA: 0x00C1B1C8 File Offset: 0x00C193C8
+		// Token: 0x06028983 RID: 166275 RVA: 0x00B646EC File Offset: 0x00B628EC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,19 +31,19 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B19 RID: 211737 RVA: 0x00C1B271 File Offset: 0x00C19471
+		// Token: 0x06028984 RID: 166276 RVA: 0x00B64795 File Offset: 0x00B62995
 		public void BindEvent()
 		{
 			EventSystem.Instance.Add(EEventName.RogueResMapSummaryTeamUpdate, new Action<int>(this.OnSelected));
 		}
 
-		// Token: 0x06033B1A RID: 211738 RVA: 0x00C1B28F File Offset: 0x00C1948F
+		// Token: 0x06028985 RID: 166277 RVA: 0x00B647B3 File Offset: 0x00B629B3
 		public void UnbindEvent()
 		{
 			EventSystem.Instance.Remove(EEventName.RogueResMapSummaryTeamUpdate, new Action<int>(this.OnSelected));
 		}
 
-		// Token: 0x06033B1B RID: 211739 RVA: 0x00C1B2B0 File Offset: 0x00C194B0
+		// Token: 0x06028986 RID: 166278 RVA: 0x00B647D4 File Offset: 0x00B629D4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleMapRoleAttributeItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033B1C RID: 211740 RVA: 0x00C1B2F3 File Offset: 0x00C194F3
+		// Token: 0x06028987 RID: 166279 RVA: 0x00B64817 File Offset: 0x00B62A17
 		protected override void OnBeforeDestroy()
 		{
 			this.TopInfo = null;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.BuffInfo = null;
 		}
 
-		// Token: 0x06033B1D RID: 211741 RVA: 0x00C1B30C File Offset: 0x00C1950C
+		// Token: 0x06028988 RID: 166280 RVA: 0x00B64830 File Offset: 0x00B62A30
 		public void Refresh(int roleId)
 		{
 			this.RoleId = roleId;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.BuffInfo.SetUiActive(false);
 		}
 
-		// Token: 0x06033B1E RID: 211742 RVA: 0x00C1B3A4 File Offset: 0x00C195A4
+		// Token: 0x06028989 RID: 166281 RVA: 0x00B648C8 File Offset: 0x00B62AC8
 		private void OnClickConfirm()
 		{
 			if (!RogueBattleModel.Instance.IsRoleGot(this.RoleId))
@@ -111,22 +111,22 @@ namespace CSharpScript.Game.Module.RogueBattle
 			RoleController.Instance.OpenRoleMainView(ERoleAgentType.Preview, this.RoleId, list, new EUiTabViewName?(EUiTabViewName.RoleSkillTabView), null);
 		}
 
-		// Token: 0x06033B1F RID: 211743 RVA: 0x00C1B460 File Offset: 0x00C19660
+		// Token: 0x0602898A RID: 166282 RVA: 0x00B64984 File Offset: 0x00B62B84
 		private void OnSelected(int roleId)
 		{
 			this.Refresh(roleId);
 		}
 
-		// Token: 0x0401B6EA RID: 112362
+		// Token: 0x040160BD RID: 90301
 		private int RoleId;
 
-		// Token: 0x0401B6EB RID: 112363
+		// Token: 0x040160BE RID: 90302
 		private RogueBattleMapRoleAttributeNameItem TopInfo;
 
-		// Token: 0x0401B6EC RID: 112364
+		// Token: 0x040160BF RID: 90303
 		private RogueBattleMapRoleAttributeFettersItem FetterInfo;
 
-		// Token: 0x0401B6ED RID: 112365
+		// Token: 0x040160C0 RID: 90304
 		private RogueBattleMapRoleAttributeBuffsItem BuffInfo;
 	}
 }

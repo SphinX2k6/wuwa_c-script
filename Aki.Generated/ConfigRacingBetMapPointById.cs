@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200079B RID: 1947
+	// Token: 0x020007B5 RID: 1973
 	public class ConfigRacingBetMapPointById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002DB4 RID: 11700 RVA: 0x0015B7E3 File Offset: 0x001599E3
+		// Token: 0x06002E50 RID: 11856 RVA: 0x001626EF File Offset: 0x001608EF
 		static ConfigRacingBetMapPointById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRacingBetMapPointById.CreateStaticDefaultValue), new Action(ConfigRacingBetMapPointById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002DB5 RID: 11701 RVA: 0x0015B804 File Offset: 0x00159A04
+		// Token: 0x06002E51 RID: 11857 RVA: 0x00162710 File Offset: 0x00160910
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRacingBetMapPointById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002DB6 RID: 11702 RVA: 0x0015B883 File Offset: 0x00159A83
+		// Token: 0x06002E52 RID: 11858 RVA: 0x0016278F File Offset: 0x0016098F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRacingBetMapPointById.LogPair = null;
 			ConfigRacingBetMapPointById.HandleId = 0;
 		}
 
-		// Token: 0x06002DB7 RID: 11703 RVA: 0x0015B891 File Offset: 0x00159A91
+		// Token: 0x06002E53 RID: 11859 RVA: 0x0016279D File Offset: 0x0016099D
 		public static void Init()
 		{
 			ConfigRacingBetMapPointById.HandleId = ConfigCommon.InitDataStatement(ConfigRacingBetMapPointById.HandleId, "db_racingbets.db", "select BinData from `RacingBetMapPoint` where Id=?");
 		}
 
-		// Token: 0x06002DB8 RID: 11704 RVA: 0x0015B8AC File Offset: 0x00159AAC
+		// Token: 0x06002E54 RID: 11860 RVA: 0x001627B8 File Offset: 0x001609B8
 		public static RacingBetMapPoint? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRacingBetMapPointById.HandleId, ConfigRacingBetMapPointById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RacingBetMapPoint?(rootAsRacingBetMapPoint);
 		}
 
-		// Token: 0x04003523 RID: 13603
+		// Token: 0x040035D9 RID: 13785
 		private const string DB = "db_racingbets.db";
 
-		// Token: 0x04003524 RID: 13604
+		// Token: 0x040035DA RID: 13786
 		private const string FILE = "q.全服赌马.xlsx";
 
-		// Token: 0x04003525 RID: 13605
+		// Token: 0x040035DB RID: 13787
 		private const string TABLE = "RacingBetMapPoint";
 
-		// Token: 0x04003526 RID: 13606
+		// Token: 0x040035DC RID: 13788
 		private const string COMMAND = "select BinData from `RacingBetMapPoint` where Id=?";
 
-		// Token: 0x04003527 RID: 13607
+		// Token: 0x040035DD RID: 13789
 		private const string KEY_PREFIX = "RacingBetMapPointById";
 
-		// Token: 0x04003528 RID: 13608
+		// Token: 0x040035DE RID: 13790
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003529 RID: 13609
+		// Token: 0x040035DF RID: 13791
 		private static int HandleId;
 	}
 }

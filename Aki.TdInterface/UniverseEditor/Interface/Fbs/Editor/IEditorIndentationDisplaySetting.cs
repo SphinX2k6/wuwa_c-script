@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200485F RID: 18527
+	// Token: 0x02004CC7 RID: 19655
 	public struct IEditorIndentationDisplaySetting : IFlatbufferObject
 	{
-		// Token: 0x17008562 RID: 34146
-		// (get) Token: 0x0601CBCE RID: 117710 RVA: 0x004100BB File Offset: 0x0040E2BB
+		// Token: 0x17008BB1 RID: 35761
+		// (get) Token: 0x0601E3D5 RID: 123861 RVA: 0x0043CB67 File Offset: 0x0043AD67
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CBCF RID: 117711 RVA: 0x004100C8 File Offset: 0x0040E2C8
+		// Token: 0x0601E3D6 RID: 123862 RVA: 0x0043CB74 File Offset: 0x0043AD74
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601CBD0 RID: 117712 RVA: 0x004100D0 File Offset: 0x0040E2D0
+		// Token: 0x0601E3D7 RID: 123863 RVA: 0x0043CB7C File Offset: 0x0043AD7C
 		public static IEditorIndentationDisplaySetting GetRootAsIEditorIndentationDisplaySetting(ByteBuffer _bb)
 		{
 			return IEditorIndentationDisplaySetting.GetRootAsIEditorIndentationDisplaySetting(_bb, default(IEditorIndentationDisplaySetting));
 		}
 
-		// Token: 0x0601CBD1 RID: 117713 RVA: 0x004100EC File Offset: 0x0040E2EC
+		// Token: 0x0601E3D8 RID: 123864 RVA: 0x0043CB98 File Offset: 0x0043AD98
 		public static IEditorIndentationDisplaySetting GetRootAsIEditorIndentationDisplaySetting(ByteBuffer _bb, IEditorIndentationDisplaySetting obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601CBD2 RID: 117714 RVA: 0x00410109 File Offset: 0x0040E309
+		// Token: 0x0601E3D9 RID: 123865 RVA: 0x0043CBB5 File Offset: 0x0043ADB5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601CBD3 RID: 117715 RVA: 0x00410118 File Offset: 0x0040E318
+		// Token: 0x0601E3DA RID: 123866 RVA: 0x0043CBC4 File Offset: 0x0043ADC4
 		public IEditorIndentationDisplaySetting __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008563 RID: 34147
-		// (get) Token: 0x0601CBD4 RID: 117716 RVA: 0x00410128 File Offset: 0x0040E328
+		// Token: 0x17008BB2 RID: 35762
+		// (get) Token: 0x0601E3DB RID: 123867 RVA: 0x0043CBD4 File Offset: 0x0043ADD4
 		public bool EnabledShowStructureIndentLine
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008564 RID: 34148
-		// (get) Token: 0x0601CBD5 RID: 117717 RVA: 0x00410168 File Offset: 0x0040E368
+		// Token: 0x17008BB3 RID: 35763
+		// (get) Token: 0x0601E3DC RID: 123868 RVA: 0x0043CC14 File Offset: 0x0043AE14
 		public bool EnabledShowStructureBlock
 		{
 			get
@@ -69,8 +69,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008565 RID: 34149
-		// (get) Token: 0x0601CBD6 RID: 117718 RVA: 0x004101A8 File Offset: 0x0040E3A8
+		// Token: 0x17008BB4 RID: 35764
+		// (get) Token: 0x0601E3DD RID: 123869 RVA: 0x0043CC54 File Offset: 0x0043AE54
 		public bool EnabledShowArrayElementPrefixLine
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008566 RID: 34150
-		// (get) Token: 0x0601CBD7 RID: 117719 RVA: 0x004101E8 File Offset: 0x0040E3E8
+		// Token: 0x17008BB5 RID: 35765
+		// (get) Token: 0x0601E3DE RID: 123870 RVA: 0x0043CC94 File Offset: 0x0043AE94
 		public float BaseGray
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008567 RID: 34151
-		// (get) Token: 0x0601CBD8 RID: 117720 RVA: 0x0041022C File Offset: 0x0040E42C
+		// Token: 0x17008BB6 RID: 35766
+		// (get) Token: 0x0601E3DF RID: 123871 RVA: 0x0043CCD8 File Offset: 0x0043AED8
 		public float MaxGray
 		{
 			get
@@ -110,8 +110,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008568 RID: 34152
-		// (get) Token: 0x0601CBD9 RID: 117721 RVA: 0x00410270 File Offset: 0x0040E470
+		// Token: 0x17008BB7 RID: 35767
+		// (get) Token: 0x0601E3E0 RID: 123872 RVA: 0x0043CD1C File Offset: 0x0043AF1C
 		public int MaxDepth
 		{
 			get
@@ -125,8 +125,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008569 RID: 34153
-		// (get) Token: 0x0601CBDA RID: 117722 RVA: 0x004102B0 File Offset: 0x0040E4B0
+		// Token: 0x17008BB8 RID: 35768
+		// (get) Token: 0x0601E3E1 RID: 123873 RVA: 0x0043CD5C File Offset: 0x0043AF5C
 		public float SameLevelChangeStrength
 		{
 			get
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CBDB RID: 117723 RVA: 0x004102F4 File Offset: 0x0040E4F4
+		// Token: 0x0601E3E2 RID: 123874 RVA: 0x0043CDA0 File Offset: 0x0043AFA0
 		public static Offset<IEditorIndentationDisplaySetting> CreateIEditorIndentationDisplaySetting(FlatBufferBuilder builder, bool EnabledShowStructureIndentLine = false, bool EnabledShowStructureBlock = false, bool EnabledShowArrayElementPrefixLine = false, float BaseGray = 0f, float MaxGray = 0f, int MaxDepth = 0, float SameLevelChangeStrength = 0f)
 		{
 			builder.StartTable(7);
@@ -154,61 +154,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IEditorIndentationDisplaySetting.EndIEditorIndentationDisplaySetting(builder);
 		}
 
-		// Token: 0x0601CBDC RID: 117724 RVA: 0x00410343 File Offset: 0x0040E543
+		// Token: 0x0601E3E3 RID: 123875 RVA: 0x0043CDEF File Offset: 0x0043AFEF
 		public static void StartIEditorIndentationDisplaySetting(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x0601CBDD RID: 117725 RVA: 0x0041034C File Offset: 0x0040E54C
+		// Token: 0x0601E3E4 RID: 123876 RVA: 0x0043CDF8 File Offset: 0x0043AFF8
 		public static void AddEnabledShowStructureIndentLine(FlatBufferBuilder builder, bool enabledShowStructureIndentLine)
 		{
 			builder.AddBool(0, enabledShowStructureIndentLine, false);
 		}
 
-		// Token: 0x0601CBDE RID: 117726 RVA: 0x00410357 File Offset: 0x0040E557
+		// Token: 0x0601E3E5 RID: 123877 RVA: 0x0043CE03 File Offset: 0x0043B003
 		public static void AddEnabledShowStructureBlock(FlatBufferBuilder builder, bool enabledShowStructureBlock)
 		{
 			builder.AddBool(1, enabledShowStructureBlock, false);
 		}
 
-		// Token: 0x0601CBDF RID: 117727 RVA: 0x00410362 File Offset: 0x0040E562
+		// Token: 0x0601E3E6 RID: 123878 RVA: 0x0043CE0E File Offset: 0x0043B00E
 		public static void AddEnabledShowArrayElementPrefixLine(FlatBufferBuilder builder, bool enabledShowArrayElementPrefixLine)
 		{
 			builder.AddBool(2, enabledShowArrayElementPrefixLine, false);
 		}
 
-		// Token: 0x0601CBE0 RID: 117728 RVA: 0x0041036D File Offset: 0x0040E56D
+		// Token: 0x0601E3E7 RID: 123879 RVA: 0x0043CE19 File Offset: 0x0043B019
 		public static void AddBaseGray(FlatBufferBuilder builder, float baseGray)
 		{
 			builder.AddFloat(3, baseGray, 0.0);
 		}
 
-		// Token: 0x0601CBE1 RID: 117729 RVA: 0x00410380 File Offset: 0x0040E580
+		// Token: 0x0601E3E8 RID: 123880 RVA: 0x0043CE2C File Offset: 0x0043B02C
 		public static void AddMaxGray(FlatBufferBuilder builder, float maxGray)
 		{
 			builder.AddFloat(4, maxGray, 0.0);
 		}
 
-		// Token: 0x0601CBE2 RID: 117730 RVA: 0x00410393 File Offset: 0x0040E593
+		// Token: 0x0601E3E9 RID: 123881 RVA: 0x0043CE3F File Offset: 0x0043B03F
 		public static void AddMaxDepth(FlatBufferBuilder builder, int maxDepth)
 		{
 			builder.AddInt(5, maxDepth, 0);
 		}
 
-		// Token: 0x0601CBE3 RID: 117731 RVA: 0x0041039E File Offset: 0x0040E59E
+		// Token: 0x0601E3EA RID: 123882 RVA: 0x0043CE4A File Offset: 0x0043B04A
 		public static void AddSameLevelChangeStrength(FlatBufferBuilder builder, float sameLevelChangeStrength)
 		{
 			builder.AddFloat(6, sameLevelChangeStrength, 0.0);
 		}
 
-		// Token: 0x0601CBE4 RID: 117732 RVA: 0x004103B1 File Offset: 0x0040E5B1
+		// Token: 0x0601E3EB RID: 123883 RVA: 0x0043CE5D File Offset: 0x0043B05D
 		public static Offset<IEditorIndentationDisplaySetting> EndIEditorIndentationDisplaySetting(FlatBufferBuilder builder)
 		{
 			return new Offset<IEditorIndentationDisplaySetting>(builder.EndTable());
 		}
 
-		// Token: 0x0601CBE5 RID: 117733 RVA: 0x004103C0 File Offset: 0x0040E5C0
+		// Token: 0x0601E3EC RID: 123884 RVA: 0x0043CE6C File Offset: 0x0043B06C
 		public IEditorIndentationDisplaySettingT UnPack()
 		{
 			IEditorIndentationDisplaySettingT editorIndentationDisplaySettingT = new IEditorIndentationDisplaySettingT();
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return editorIndentationDisplaySettingT;
 		}
 
-		// Token: 0x0601CBE6 RID: 117734 RVA: 0x004103DC File Offset: 0x0040E5DC
+		// Token: 0x0601E3ED RID: 123885 RVA: 0x0043CE88 File Offset: 0x0043B088
 		public void UnPackTo(IEditorIndentationDisplaySettingT _o)
 		{
 			_o.EnabledShowStructureIndentLine = this.EnabledShowStructureIndentLine;
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			_o.SameLevelChangeStrength = this.SameLevelChangeStrength;
 		}
 
-		// Token: 0x0601CBE7 RID: 117735 RVA: 0x00410440 File Offset: 0x0040E640
+		// Token: 0x0601E3EE RID: 123886 RVA: 0x0043CEEC File Offset: 0x0043B0EC
 		public static Offset<IEditorIndentationDisplaySetting> Pack(FlatBufferBuilder builder, IEditorIndentationDisplaySettingT _o)
 		{
 			if (_o == null)
@@ -238,7 +238,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IEditorIndentationDisplaySetting.CreateIEditorIndentationDisplaySetting(builder, _o.EnabledShowStructureIndentLine, _o.EnabledShowStructureBlock, _o.EnabledShowArrayElementPrefixLine, _o.BaseGray, _o.MaxGray, _o.MaxDepth, _o.SameLevelChangeStrength);
 		}
 
-		// Token: 0x0400CDC5 RID: 52677
+		// Token: 0x0400D802 RID: 55298
 		private Table __p;
 	}
 }

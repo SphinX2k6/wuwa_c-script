@@ -2,28 +2,28 @@
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 {
-	// Token: 0x020047D8 RID: 18392
+	// Token: 0x02003709 RID: 14089
 	public static class EWorldMapQuickNavigatePanelComponent
 	{
-		// Token: 0x04019F2F RID: 106287
+		// Token: 0x040145E3 RID: 83427
 		public const int DynScrollView = 0;
 
-		// Token: 0x04019F30 RID: 106288
+		// Token: 0x040145E4 RID: 83428
 		public const int PnlItem = 1;
 
-		// Token: 0x04019F31 RID: 106289
+		// Token: 0x040145E5 RID: 83429
 		public const int BtnFunctionA = 2;
 
-		// Token: 0x04019F32 RID: 106290
+		// Token: 0x040145E6 RID: 83430
 		public const int SVLoop = 3;
 
-		// Token: 0x04019F33 RID: 106291
+		// Token: 0x040145E7 RID: 83431
 		public const int QuestPrefab = 4;
 
-		// Token: 0x04019F34 RID: 106292
+		// Token: 0x040145E8 RID: 83432
 		public const int Black = 5;
 
-		// Token: 0x04019F35 RID: 106293
+		// Token: 0x040145E9 RID: 83433
 		public const int HorizontalLayoutBottom = 6;
 	}
 }

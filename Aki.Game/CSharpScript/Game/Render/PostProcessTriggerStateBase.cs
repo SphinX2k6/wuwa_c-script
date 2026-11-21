@@ -4,7 +4,7 @@ using AkiClient.Game.Aki.Render.RuntimeBP.Battle;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045D3 RID: 17875
+	// Token: 0x020034FC RID: 13564
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,7 +13,7 @@ namespace CSharpScript.Game.Render
 	})]
 	public class PostProcessTriggerStateBase : StateBase<PostProcessTrigger, EPostProcessTriggerState>
 	{
-		// Token: 0x0602E136 RID: 188726 RVA: 0x00A9F1A8 File Offset: 0x00A9D3A8
+		// Token: 0x0602282A RID: 141354 RVA: 0x009CB878 File Offset: 0x009C9A78
 		public PostProcessTriggerStateBase(PostProcessTrigger owner, EPostProcessTriggerState state, [Nullable(new byte[]
 		{
 			2,
@@ -22,22 +22,22 @@ namespace CSharpScript.Game.Render
 		{
 		}
 
-		// Token: 0x0602E137 RID: 188727 RVA: 0x00A9F1B3 File Offset: 0x00A9D3B3
+		// Token: 0x0602282B RID: 141355 RVA: 0x009CB883 File Offset: 0x009C9A83
 		protected override void OnEnter(EPostProcessTriggerState? lastState)
 		{
 		}
 
-		// Token: 0x0602E138 RID: 188728 RVA: 0x00A9F1B5 File Offset: 0x00A9D3B5
+		// Token: 0x0602282C RID: 141356 RVA: 0x009CB885 File Offset: 0x009C9A85
 		protected override void OnUpdate(float delta)
 		{
 		}
 
-		// Token: 0x0602E139 RID: 188729 RVA: 0x00A9F1B7 File Offset: 0x00A9D3B7
+		// Token: 0x0602282D RID: 141357 RVA: 0x009CB887 File Offset: 0x009C9A87
 		protected override void OnExit(EPostProcessTriggerState nextState)
 		{
 		}
 
-		// Token: 0x0602E13A RID: 188730 RVA: 0x00A9F1BC File Offset: 0x00A9D3BC
+		// Token: 0x0602282E RID: 141358 RVA: 0x009CB88C File Offset: 0x009C9A8C
 		public double GetTargetDefaultValue()
 		{
 			EWuYinQuState? wuYinQuBattleState = this.Owner.GetWuYinQuBattleState();

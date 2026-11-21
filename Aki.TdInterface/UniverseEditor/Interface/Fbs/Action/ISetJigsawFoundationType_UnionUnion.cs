@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200700E RID: 28686
+	// Token: 0x020077D7 RID: 30679
 	public class ISetJigsawFoundationType_UnionUnion
 	{
-		// Token: 0x1700D509 RID: 54537
-		// (get) Token: 0x06032BD3 RID: 207827 RVA: 0x006D88B5 File Offset: 0x006D6AB5
-		// (set) Token: 0x06032BD4 RID: 207828 RVA: 0x006D88BD File Offset: 0x006D6ABD
+		// Token: 0x1700E0DD RID: 57565
+		// (get) Token: 0x06035E39 RID: 220729 RVA: 0x007384F9 File Offset: 0x007366F9
+		// (set) Token: 0x06035E3A RID: 220730 RVA: 0x00738501 File Offset: 0x00736701
 		public ISetJigsawFoundationType_Union Type { get; set; }
 
-		// Token: 0x1700D50A RID: 54538
-		// (get) Token: 0x06032BD5 RID: 207829 RVA: 0x006D88C6 File Offset: 0x006D6AC6
-		// (set) Token: 0x06032BD6 RID: 207830 RVA: 0x006D88CE File Offset: 0x006D6ACE
+		// Token: 0x1700E0DE RID: 57566
+		// (get) Token: 0x06035E3B RID: 220731 RVA: 0x0073850A File Offset: 0x0073670A
+		// (set) Token: 0x06035E3C RID: 220732 RVA: 0x00738512 File Offset: 0x00736712
 		public object Value { get; set; }
 
-		// Token: 0x06032BD7 RID: 207831 RVA: 0x006D88D7 File Offset: 0x006D6AD7
+		// Token: 0x06035E3D RID: 220733 RVA: 0x0073851B File Offset: 0x0073671B
 		public ISetJigsawFoundationType_UnionUnion()
 		{
 			this.Type = ISetJigsawFoundationType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06032BD8 RID: 207832 RVA: 0x006D88ED File Offset: 0x006D6AED
+		// Token: 0x06035E3E RID: 220734 RVA: 0x00738531 File Offset: 0x00736731
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06032BD9 RID: 207833 RVA: 0x006D88FF File Offset: 0x006D6AFF
+		// Token: 0x06035E3F RID: 220735 RVA: 0x00738543 File Offset: 0x00736743
 		public ISetJigsawFoundationTypeT AsISetJigsawFoundationType()
 		{
 			return this.As<ISetJigsawFoundationTypeT>();
 		}
 
-		// Token: 0x06032BDA RID: 207834 RVA: 0x006D8907 File Offset: 0x006D6B07
+		// Token: 0x06035E40 RID: 220736 RVA: 0x0073854B File Offset: 0x0073674B
 		public static ISetJigsawFoundationType_UnionUnion FromISetJigsawFoundationType(ISetJigsawFoundationTypeT _isetjigsawfoundationtype)
 		{
 			return new ISetJigsawFoundationType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032BDB RID: 207835 RVA: 0x006D891C File Offset: 0x006D6B1C
+		// Token: 0x06035E41 RID: 220737 RVA: 0x00738560 File Offset: 0x00736760
 		public ISetPieceStateT AsISetPieceState()
 		{
 			return this.As<ISetPieceStateT>();
 		}
 
-		// Token: 0x06032BDC RID: 207836 RVA: 0x006D8924 File Offset: 0x006D6B24
+		// Token: 0x06035E42 RID: 220738 RVA: 0x00738568 File Offset: 0x00736768
 		public static ISetJigsawFoundationType_UnionUnion FromISetPieceState(ISetPieceStateT _isetpiecestate)
 		{
 			return new ISetJigsawFoundationType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032BDD RID: 207837 RVA: 0x006D893C File Offset: 0x006D6B3C
+		// Token: 0x06035E43 RID: 220739 RVA: 0x00738580 File Offset: 0x00736780
 		public static int Pack(FlatBufferBuilder builder, ISetJigsawFoundationType_UnionUnion _o)
 		{
 			ISetJigsawFoundationType_Union type = _o.Type;

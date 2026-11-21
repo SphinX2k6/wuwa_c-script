@@ -6,13 +6,13 @@ using CSharpScript.Game.Module.RacingBets;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020026CB RID: 9931
+// Token: 0x02001BB6 RID: 7094
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsBlackHoleTransmitCommand : RacingBetsCommandBase
 {
-	// Token: 0x17001A61 RID: 6753
-	// (get) Token: 0x060145E4 RID: 83428 RVA: 0x005271CA File Offset: 0x005253CA
+	// Token: 0x17001A99 RID: 6809
+	// (get) Token: 0x06011AC6 RID: 72390 RVA: 0x00535F02 File Offset: 0x00534102
 	public override ERacingBetsCommandType CommandType
 	{
 		get
@@ -21,13 +21,13 @@ public class RacingBetsBlackHoleTransmitCommand : RacingBetsCommandBase
 		}
 	}
 
-	// Token: 0x060145E5 RID: 83429 RVA: 0x005271CE File Offset: 0x005253CE
+	// Token: 0x06011AC7 RID: 72391 RVA: 0x00535F06 File Offset: 0x00534106
 	public void Init(RacingBetsDangoActionBlackHoleTransmit transmitAction)
 	{
 		this.TransmitAction = transmitAction;
 	}
 
-	// Token: 0x060145E6 RID: 83430 RVA: 0x005271D8 File Offset: 0x005253D8
+	// Token: 0x06011AC8 RID: 72392 RVA: 0x00535F10 File Offset: 0x00534110
 	public override UniTask OnExecute()
 	{
 		RacingBetsBlackHoleTransmitCommand.<OnExecute>d__4 <OnExecute>d__;
@@ -38,7 +38,7 @@ public class RacingBetsBlackHoleTransmitCommand : RacingBetsCommandBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060145E7 RID: 83431 RVA: 0x0052721C File Offset: 0x0052541C
+	// Token: 0x06011AC9 RID: 72393 RVA: 0x00535F54 File Offset: 0x00534154
 	private UniTask PhaseSink(BaseActorComponent headActorComp, double organZ, [Nullable(2)] Action<float> onProgress = null)
 	{
 		RacingBetsBlackHoleTransmitCommand.<PhaseSink>d__5 <PhaseSink>d__;
@@ -52,7 +52,7 @@ public class RacingBetsBlackHoleTransmitCommand : RacingBetsCommandBase
 		return <PhaseSink>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060145E8 RID: 83432 RVA: 0x00527278 File Offset: 0x00525478
+	// Token: 0x06011ACA RID: 72394 RVA: 0x00535FB0 File Offset: 0x005341B0
 	private UniTask PhaseFall(BaseActorComponent headActorComp, double targetZ)
 	{
 		RacingBetsBlackHoleTransmitCommand.<PhaseFall>d__6 <PhaseFall>d__;
@@ -65,7 +65,7 @@ public class RacingBetsBlackHoleTransmitCommand : RacingBetsCommandBase
 		return <PhaseFall>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060145E9 RID: 83433 RVA: 0x005272CC File Offset: 0x005254CC
+	// Token: 0x06011ACB RID: 72395 RVA: 0x00536004 File Offset: 0x00534204
 	private void OnEffectRefresh(int pointId, float value)
 	{
 		RacingBetsModel instance = RacingBetsModel.Instance;
@@ -78,12 +78,12 @@ public class RacingBetsBlackHoleTransmitCommand : RacingBetsCommandBase
 		EffectSystem.Instance.GetNiagaraComponent(handle).SetNiagaraVariableFloat("Dissolve", value);
 	}
 
-	// Token: 0x060145EA RID: 83434 RVA: 0x0052730E File Offset: 0x0052550E
+	// Token: 0x06011ACC RID: 72396 RVA: 0x00536046 File Offset: 0x00534246
 	public override string LogInfo()
 	{
 		return "RacingBetsBlackHoleTransmitCommand";
 	}
 
-	// Token: 0x04009912 RID: 39186
+	// Token: 0x04009A6A RID: 39530
 	private RacingBetsDangoActionBlackHoleTransmit TransmitAction;
 }

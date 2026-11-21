@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E71 RID: 28273
+	// Token: 0x020075F5 RID: 30197
 	public class IRemoveTrialFollowShooterT
 	{
-		// Token: 0x1700D29B RID: 53915
-		// (get) Token: 0x06031F82 RID: 204674 RVA: 0x006C2696 File Offset: 0x006C0896
-		// (set) Token: 0x06031F83 RID: 204675 RVA: 0x006C269E File Offset: 0x006C089E
+		// Token: 0x1700DDF2 RID: 56818
+		// (get) Token: 0x06034FC2 RID: 217026 RVA: 0x0071E3CA File Offset: 0x0071C5CA
+		// (set) Token: 0x06034FC3 RID: 217027 RVA: 0x0071E3D2 File Offset: 0x0071C5D2
 		public int Id { get; set; }
 
-		// Token: 0x06031F84 RID: 204676 RVA: 0x006C26A7 File Offset: 0x006C08A7
+		// Token: 0x06034FC4 RID: 217028 RVA: 0x0071E3DB File Offset: 0x0071C5DB
 		public IRemoveTrialFollowShooterT()
 		{
 			this.Id = 0;

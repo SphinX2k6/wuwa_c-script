@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067F8 RID: 26616
+	// Token: 0x02005748 RID: 22344
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DangoBrawlViewCost : UiPanelBase
 	{
-		// Token: 0x17009723 RID: 38691
-		// (get) Token: 0x060425FC RID: 271868 RVA: 0x0101E3D3 File Offset: 0x0101C5D3
+		// Token: 0x17006A64 RID: 27236
+		// (get) Token: 0x06037151 RID: 225617 RVA: 0x00F5F917 File Offset: 0x00F5DB17
 		private UUIText TextWeight
 		{
 			get
@@ -23,8 +23,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x17009724 RID: 38692
-		// (get) Token: 0x060425FD RID: 271869 RVA: 0x0101E3DC File Offset: 0x0101C5DC
+		// Token: 0x17006A65 RID: 27237
+		// (get) Token: 0x06037152 RID: 225618 RVA: 0x00F5F920 File Offset: 0x00F5DB20
 		private UUISprite SprWeight
 		{
 			get
@@ -33,8 +33,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x17009725 RID: 38693
-		// (get) Token: 0x060425FE RID: 271870 RVA: 0x0101E3E5 File Offset: 0x0101C5E5
+		// Token: 0x17006A66 RID: 27238
+		// (get) Token: 0x06037153 RID: 225619 RVA: 0x00F5F929 File Offset: 0x00F5DB29
 		private UUISprite SprWeightRed
 		{
 			get
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060425FF RID: 271871 RVA: 0x0101E3F0 File Offset: 0x0101C5F0
+		// Token: 0x06037154 RID: 225620 RVA: 0x00F5F934 File Offset: 0x00F5DB34
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06042600 RID: 271872 RVA: 0x0101E47A File Offset: 0x0101C67A
+		// Token: 0x06037155 RID: 225621 RVA: 0x00F5F9BE File Offset: 0x00F5DBBE
 		public void BindData(int configId)
 		{
 			this.ConfigId = configId;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshView();
 		}
 
-		// Token: 0x06042601 RID: 271873 RVA: 0x0101E49F File Offset: 0x0101C69F
+		// Token: 0x06037156 RID: 225622 RVA: 0x00F5F9E3 File Offset: 0x00F5DBE3
 		public void RefreshView()
 		{
 			if (this.ConfigId <= 0 || this.ItemType != EDangoBrawlItemType.Weapon)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.SetUiActive(true);
 		}
 
-		// Token: 0x06042602 RID: 271874 RVA: 0x0101E4C8 File Offset: 0x0101C6C8
+		// Token: 0x06037157 RID: 225623 RVA: 0x00F5FA0C File Offset: 0x00F5DC0C
 		public void RefreshOverLimitView(bool isOverLimit)
 		{
 			UUIText textWeight = this.TextWeight;
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			sprWeightRed.SetUIActive(isOverLimit);
 		}
 
-		// Token: 0x06042603 RID: 271875 RVA: 0x0101E520 File Offset: 0x0101C720
+		// Token: 0x06037158 RID: 225624 RVA: 0x00F5FA64 File Offset: 0x00F5DC64
 		private void RefreshWeightText()
 		{
 			DangoBrawlItem? dangoBrawlItemById = DangoBrawlConfig.Instance.GetDangoBrawlItemById(this.ConfigId);
@@ -116,21 +116,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			textWeight.SetText(dangoBrawlItemById.Value.Cost.ToString(), true);
 		}
 
-		// Token: 0x040229AE RID: 141742
+		// Token: 0x0401D20B RID: 119307
 		private int ConfigId = -1;
 
-		// Token: 0x040229AF RID: 141743
+		// Token: 0x0401D20C RID: 119308
 		private EDangoBrawlItemType ItemType = EDangoBrawlItemType.Bag;
 
-		// Token: 0x0200C961 RID: 51553
+		// Token: 0x0200B32E RID: 45870
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403CCF0 RID: 249072
+			// Token: 0x040375DD RID: 226781
 			SprWeight,
-			// Token: 0x0403CCF1 RID: 249073
+			// Token: 0x040375DE RID: 226782
 			TextWeight,
-			// Token: 0x0403CCF2 RID: 249074
+			// Token: 0x040375DF RID: 226783
 			SprRedWeight
 		}
 	}

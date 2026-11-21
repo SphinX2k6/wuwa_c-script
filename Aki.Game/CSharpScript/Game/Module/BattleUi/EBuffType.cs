@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C76 RID: 23670
+	// Token: 0x02004C56 RID: 19542
 	public enum EBuffType
 	{
-		// Token: 0x0401F2D3 RID: 127699
+		// Token: 0x04019D87 RID: 105863
 		None,
-		// Token: 0x0401F2D4 RID: 127700
+		// Token: 0x04019D88 RID: 105864
 		Buff,
-		// Token: 0x0401F2D5 RID: 127701
+		// Token: 0x04019D89 RID: 105865
 		DeBuff
 	}
 }

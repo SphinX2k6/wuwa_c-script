@@ -12,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200160E RID: 5646
+// Token: 0x02000AC6 RID: 2758
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerBossHandBookView : UiViewBase
 {
-	// Token: 0x06009EF1 RID: 40689 RVA: 0x0022C22C File Offset: 0x0022A42C
+	// Token: 0x060072CF RID: 29391 RVA: 0x0023605C File Offset: 0x0023425C
 	public WheelTowerBossHandBookView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009EF2 RID: 40690 RVA: 0x0022C27C File Offset: 0x0022A47C
+	// Token: 0x060072D0 RID: 29392 RVA: 0x002360AC File Offset: 0x002342AC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -54,7 +54,7 @@ public class WheelTowerBossHandBookView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009EF3 RID: 40691 RVA: 0x0022C414 File Offset: 0x0022A614
+	// Token: 0x060072D1 RID: 29393 RVA: 0x00236244 File Offset: 0x00234444
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerBossHandBookView.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -65,7 +65,7 @@ public class WheelTowerBossHandBookView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009EF4 RID: 40692 RVA: 0x0022C457 File Offset: 0x0022A657
+	// Token: 0x060072D2 RID: 29394 RVA: 0x00236287 File Offset: 0x00234487
 	private WheelTowerBossHandBookTitleItem CreateTitleItem()
 	{
 		return new WheelTowerBossHandBookTitleItem
@@ -74,7 +74,7 @@ public class WheelTowerBossHandBookView : UiViewBase
 		};
 	}
 
-	// Token: 0x06009EF5 RID: 40693 RVA: 0x0022C470 File Offset: 0x0022A670
+	// Token: 0x060072D3 RID: 29395 RVA: 0x002362A0 File Offset: 0x002344A0
 	private WheelTowerBossHandBookModeItem CreateModeItem()
 	{
 		return new WheelTowerBossHandBookModeItem
@@ -83,13 +83,13 @@ public class WheelTowerBossHandBookView : UiViewBase
 		};
 	}
 
-	// Token: 0x06009EF6 RID: 40694 RVA: 0x0022C489 File Offset: 0x0022A689
+	// Token: 0x060072D4 RID: 29396 RVA: 0x002362B9 File Offset: 0x002344B9
 	private WheelTowerBossHandBookBuffItem CreateBuffItem()
 	{
 		return new WheelTowerBossHandBookBuffItem();
 	}
 
-	// Token: 0x06009EF7 RID: 40695 RVA: 0x0022C490 File Offset: 0x0022A690
+	// Token: 0x060072D5 RID: 29397 RVA: 0x002362C0 File Offset: 0x002344C0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -122,7 +122,7 @@ public class WheelTowerBossHandBookView : UiViewBase
 		return new ValueTuple<List<int>, List<int>>(list, list2);
 	}
 
-	// Token: 0x06009EF8 RID: 40696 RVA: 0x0022C598 File Offset: 0x0022A798
+	// Token: 0x060072D6 RID: 29398 RVA: 0x002363C8 File Offset: 0x002345C8
 	private void InitAllBossIdList()
 	{
 		ValueTuple<List<int>, List<int>> bossHandBookInfoList = this.GetBossHandBookInfoList(false, 1);
@@ -136,7 +136,7 @@ public class WheelTowerBossHandBookView : UiViewBase
 		this.EndlessBossIdList = bossHandBookInfoList2.Item2;
 	}
 
-	// Token: 0x06009EF9 RID: 40697 RVA: 0x0022C614 File Offset: 0x0022A814
+	// Token: 0x060072D7 RID: 29399 RVA: 0x00236444 File Offset: 0x00234644
 	private void UpdateTitleDetailByMode(bool isEndless)
 	{
 		List<int> data = isEndless ? this.EndlessWaveIdList : this.NormalWaveIdList;
@@ -152,7 +152,7 @@ public class WheelTowerBossHandBookView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x06009EFA RID: 40698 RVA: 0x0022C690 File Offset: 0x0022A890
+	// Token: 0x060072D8 RID: 29400 RVA: 0x002364C0 File Offset: 0x002346C0
 	private void UpdateModeDetailByBossId(int bossId)
 	{
 		List<bool> list = new List<bool>();
@@ -175,7 +175,7 @@ public class WheelTowerBossHandBookView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x06009EFB RID: 40699 RVA: 0x0022C718 File Offset: 0x0022A918
+	// Token: 0x060072D9 RID: 29401 RVA: 0x00236548 File Offset: 0x00234748
 	private void UpdateBossInfoDetail(NewTowerWave waveConfig)
 	{
 		WheelTowerBossAttrData attrData = new WheelTowerBossAttrData
@@ -212,7 +212,7 @@ public class WheelTowerBossHandBookView : UiViewBase
 		base.SetTextureByPath(waveConfig.MonsterPortrait, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x06009EFC RID: 40700 RVA: 0x0022C884 File Offset: 0x0022AA84
+	// Token: 0x060072DA RID: 29402 RVA: 0x002366B4 File Offset: 0x002348B4
 	private void OnClickTitle(NewTowerWave? waveConfig, UUIExtendToggle toggle)
 	{
 		if (waveConfig == null)
@@ -253,7 +253,7 @@ public class WheelTowerBossHandBookView : UiViewBase
 		this.IsFirstEnter = false;
 	}
 
-	// Token: 0x06009EFD RID: 40701 RVA: 0x0022C96C File Offset: 0x0022AB6C
+	// Token: 0x060072DB RID: 29403 RVA: 0x0023679C File Offset: 0x0023499C
 	private UniTask PlaySwitchSequenceNextFrameAsync()
 	{
 		WheelTowerBossHandBookView.<PlaySwitchSequenceNextFrameAsync>d__30 <PlaySwitchSequenceNextFrameAsync>d__;
@@ -264,7 +264,7 @@ public class WheelTowerBossHandBookView : UiViewBase
 		return <PlaySwitchSequenceNextFrameAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009EFE RID: 40702 RVA: 0x0022C9B0 File Offset: 0x0022ABB0
+	// Token: 0x060072DC RID: 29404 RVA: 0x002367E0 File Offset: 0x002349E0
 	private void OnClickMode(bool isEndless, UUIExtendToggle toggle, bool fireEvent)
 	{
 		UUIExtendToggle currentModeToggle = this.CurrentModeToggle;
@@ -294,11 +294,11 @@ public class WheelTowerBossHandBookView : UiViewBase
 		item2.SetUIActive(!isEndless);
 	}
 
-	// Token: 0x04004740 RID: 18240
+	// Token: 0x040047E6 RID: 18406
 	[Nullable(2)]
 	private PopupCaptionItem Caption;
 
-	// Token: 0x04004741 RID: 18241
+	// Token: 0x040047E7 RID: 18407
 	[Nullable(new byte[]
 	{
 		2,
@@ -306,7 +306,7 @@ public class WheelTowerBossHandBookView : UiViewBase
 	})]
 	private LoopScrollView<WheelTowerBossHandBookTitleItem, int> TitleScroll;
 
-	// Token: 0x04004742 RID: 18242
+	// Token: 0x040047E8 RID: 18408
 	[Nullable(new byte[]
 	{
 		2,
@@ -314,7 +314,7 @@ public class WheelTowerBossHandBookView : UiViewBase
 	})]
 	private GenericLayout<WheelTowerBossHandBookModeItem, bool> ModeLayout;
 
-	// Token: 0x04004743 RID: 18243
+	// Token: 0x040047E9 RID: 18409
 	[Nullable(new byte[]
 	{
 		2,
@@ -323,49 +323,49 @@ public class WheelTowerBossHandBookView : UiViewBase
 	})]
 	private GenericScrollViewNew<WheelTowerBossHandBookBuffItem, IWheelTowerBossHandBookBuffData> BuffScroll;
 
-	// Token: 0x04004744 RID: 18244
+	// Token: 0x040047EA RID: 18410
 	[Nullable(2)]
 	private WheelTowerBossAttrItem AttrItem;
 
-	// Token: 0x04004745 RID: 18245
+	// Token: 0x040047EB RID: 18411
 	[Nullable(2)]
 	private UUIExtendToggle CurrentTitleToggle;
 
-	// Token: 0x04004746 RID: 18246
+	// Token: 0x040047EC RID: 18412
 	[Nullable(2)]
 	private UUIExtendToggle CurrentModeToggle;
 
-	// Token: 0x04004747 RID: 18247
+	// Token: 0x040047ED RID: 18413
 	[Nullable(2)]
 	private UUIInturnAnimController AnimationController;
 
-	// Token: 0x04004748 RID: 18248
+	// Token: 0x040047EE RID: 18414
 	private bool IsCurEndless;
 
-	// Token: 0x04004749 RID: 18249
+	// Token: 0x040047EF RID: 18415
 	private bool IsForbidPlaySwitch;
 
-	// Token: 0x0400474A RID: 18250
+	// Token: 0x040047F0 RID: 18416
 	private bool IsFirstEnter = true;
 
-	// Token: 0x0400474B RID: 18251
+	// Token: 0x040047F1 RID: 18417
 	private List<int> NormalWaveIdList = new List<int>();
 
-	// Token: 0x0400474C RID: 18252
+	// Token: 0x040047F2 RID: 18418
 	private List<int> EndlessWaveIdList = new List<int>();
 
-	// Token: 0x0400474D RID: 18253
+	// Token: 0x040047F3 RID: 18419
 	private List<int> NormalBossIdList = new List<int>();
 
-	// Token: 0x0400474E RID: 18254
+	// Token: 0x040047F4 RID: 18420
 	private List<int> EndlessBossIdList = new List<int>();
 
-	// Token: 0x0400474F RID: 18255
+	// Token: 0x040047F5 RID: 18421
 	private int SelectedBossId;
 
-	// Token: 0x04004750 RID: 18256
+	// Token: 0x040047F6 RID: 18422
 	private int SelectedBossRound;
 
-	// Token: 0x04004751 RID: 18257
+	// Token: 0x040047F7 RID: 18423
 	private int SelectedTeamRound = -1;
 }

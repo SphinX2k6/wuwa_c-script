@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001426 RID: 5158
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200157E RID: 5502
 	public class IParkourQuestCondition : IQuestCondition
 	{
-		// Token: 0x06007557 RID: 30039 RVA: 0x00118589 File Offset: 0x00116789
+		// Token: 0x06007C1C RID: 31772 RVA: 0x00126FD5 File Offset: 0x001251D5
 		public static IParkourQuestCondition Create(IParkourQuestCondition? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170026DE RID: 9950
-		// (get) Token: 0x06007558 RID: 30040 RVA: 0x001185A8 File Offset: 0x001167A8
+		// Token: 0x170028C2 RID: 10434
+		// (get) Token: 0x06007C1D RID: 31773 RVA: 0x00126FF4 File Offset: 0x001251F4
 		public override EChildQuest Type
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170026DF RID: 9951
-		// (get) Token: 0x06007559 RID: 30041 RVA: 0x001185B5 File Offset: 0x001167B5
+		// Token: 0x170028C3 RID: 10435
+		// (get) Token: 0x06007C1E RID: 31774 RVA: 0x00127001 File Offset: 0x00125201
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -53,8 +51,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170026E0 RID: 9952
-		// (get) Token: 0x0600755A RID: 30042 RVA: 0x001185E9 File Offset: 0x001167E9
+		// Token: 0x170028C4 RID: 10436
+		// (get) Token: 0x06007C1F RID: 31775 RVA: 0x00127035 File Offset: 0x00125235
 		public virtual string Config
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170026E1 RID: 9953
-		// (get) Token: 0x0600755B RID: 30043 RVA: 0x001185F8 File Offset: 0x001167F8
+		// Token: 0x170028C5 RID: 10437
+		// (get) Token: 0x06007C20 RID: 31776 RVA: 0x00127044 File Offset: 0x00125244
 		public virtual int? SplineEntityId
 		{
 			get
@@ -77,19 +75,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170026E2 RID: 9954
-		// (get) Token: 0x0600755C RID: 30044 RVA: 0x0011862E File Offset: 0x0011682E
+		// Token: 0x170028C6 RID: 10438
+		// (get) Token: 0x06007C21 RID: 31777 RVA: 0x0012707A File Offset: 0x0012527A
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMatchRoleType> MatchRoleOption
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -107,25 +105,25 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040043F8 RID: 17400
+		// Token: 0x0400478C RID: 18316
 		private IParkourQuestCondition Instance;
 
-		// Token: 0x040043F9 RID: 17401
+		// Token: 0x0400478D RID: 18317
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040043FA RID: 17402
+		// Token: 0x0400478E RID: 18318
 		private bool _PreConditionsInited;
 
-		// Token: 0x040043FB RID: 17403
+		// Token: 0x0400478F RID: 18319
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMatchRoleType> _MatchRoleOptionCache;
 
-		// Token: 0x040043FC RID: 17404
+		// Token: 0x04004790 RID: 18320
 		private bool _MatchRoleOptionInited;
 	}
 }

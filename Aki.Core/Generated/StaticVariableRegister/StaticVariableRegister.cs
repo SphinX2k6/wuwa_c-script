@@ -11,7 +11,7 @@ namespace Generated.StaticVariableRegister
 	// Token: 0x02000112 RID: 274
 	public static class StaticVariableRegister
 	{
-		// Token: 0x06000A10 RID: 2576 RVA: 0x00033750 File Offset: 0x00031950
+		// Token: 0x06000A61 RID: 2657 RVA: 0x0003412C File Offset: 0x0003232C
 		public static bool CreateAllStaticDefaultValue()
 		{
 			FNameUtil.CreateStaticDefaultValue();
@@ -40,7 +40,7 @@ namespace Generated.StaticVariableRegister
 			return true;
 		}
 
-		// Token: 0x06000A11 RID: 2577 RVA: 0x000337D4 File Offset: 0x000319D4
+		// Token: 0x06000A62 RID: 2658 RVA: 0x000341B0 File Offset: 0x000323B0
 		public static bool ResetAllStaticDefaultValue()
 		{
 			UiTextTranslationUtils.ResetStaticDefaultValue();

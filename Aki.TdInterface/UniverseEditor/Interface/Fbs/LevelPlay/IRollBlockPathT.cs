@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045A6 RID: 17830
+	// Token: 0x02004A0E RID: 18958
 	public class IRollBlockPathT
 	{
-		// Token: 0x17007EBB RID: 32443
-		// (get) Token: 0x0601AF49 RID: 110409 RVA: 0x003D850B File Offset: 0x003D670B
-		// (set) Token: 0x0601AF4A RID: 110410 RVA: 0x003D8513 File Offset: 0x003D6713
+		// Token: 0x170084FC RID: 34044
+		// (get) Token: 0x0601C71E RID: 116510 RVA: 0x004047A7 File Offset: 0x004029A7
+		// (set) Token: 0x0601C71F RID: 116511 RVA: 0x004047AF File Offset: 0x004029AF
 		public float Height { get; set; }
 
-		// Token: 0x17007EBC RID: 32444
-		// (get) Token: 0x0601AF4B RID: 110411 RVA: 0x003D851C File Offset: 0x003D671C
-		// (set) Token: 0x0601AF4C RID: 110412 RVA: 0x003D8524 File Offset: 0x003D6724
+		// Token: 0x170084FD RID: 34045
+		// (get) Token: 0x0601C720 RID: 116512 RVA: 0x004047B8 File Offset: 0x004029B8
+		// (set) Token: 0x0601C721 RID: 116513 RVA: 0x004047C0 File Offset: 0x004029C0
 		public List<IRollBlockPathNodeT> Nodes { get; set; }
 
-		// Token: 0x0601AF4D RID: 110413 RVA: 0x003D852D File Offset: 0x003D672D
+		// Token: 0x0601C722 RID: 116514 RVA: 0x004047C9 File Offset: 0x004029C9
 		public IRollBlockPathT()
 		{
 			this.Height = 0f;

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,18 +11,18 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200657B RID: 25979
+	// Token: 0x020054F9 RID: 21753
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityFishingData : ActivityBaseData
 	{
-		// Token: 0x060411D1 RID: 266705 RVA: 0x00FC7CCB File Offset: 0x00FC5ECB
+		// Token: 0x06035E96 RID: 220822 RVA: 0x00F0ECAB File Offset: 0x00F0CEAB
 		protected override void OnInit(ActivityData data)
 		{
 			this.InitMilestoneReward();
 		}
 
-		// Token: 0x060411D2 RID: 266706 RVA: 0x00FC7CD4 File Offset: 0x00FC5ED4
+		// Token: 0x06035E97 RID: 220823 RVA: 0x00F0ECB4 File Offset: 0x00F0CEB4
 		protected override void PhraseEx(ActivityData data)
 		{
 			FishingActivityInfo fishingActivityInfo = data.FishingActivityInfo;
@@ -33,24 +32,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 			this.LimitTimeRewardOpenTime = fishingActivityInfo.LimitedStartTime;
 			this.LimitTimeRewardEndTime = fishingActivityInfo.LimitedEndTime;
-			this.RefreshLimitTimeTaskDataList(fishingActivityInfo.LimitActivityTasks.ToList<ActivityTask>(), false);
+			this.RefreshLimitTimeTaskDataList(fishingActivityInfo.LimitActivityTasks, false);
 			this.MilestoneRewardItemAccumulate = fishingActivityInfo.MilestoneItemNum;
 			this.RefreshMilestoneReward(fishingActivityInfo.MilestoneRewarded, false);
 		}
 
-		// Token: 0x060411D3 RID: 266707 RVA: 0x00FC7D30 File Offset: 0x00FC5F30
+		// Token: 0x06035E98 RID: 220824 RVA: 0x00F0ED0C File Offset: 0x00F0CF0C
 		public FishingActivity GetActivityConfig()
 		{
 			return FishingConfig.Instance.GetFishingActivityConfig(base.Id).Value;
 		}
 
-		// Token: 0x060411D4 RID: 266708 RVA: 0x00FC7D55 File Offset: 0x00FC5F55
+		// Token: 0x06035E99 RID: 220825 RVA: 0x00F0ED31 File Offset: 0x00F0CF31
 		protected override bool GetExDataFinishShowState()
 		{
 			return FishingModel.Instance.IsAllHandBookRewardTaken();
 		}
 
-		// Token: 0x060411D5 RID: 266709 RVA: 0x00FC7D66 File Offset: 0x00FC5F66
+		// Token: 0x06035E9A RID: 220826 RVA: 0x00F0ED42 File Offset: 0x00F0CF42
 		public override bool GetExDataRedPointShowState()
 		{
 			if (!base.IsUnLock())
@@ -60,31 +59,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return this.GetTimeLimitRedDotState() || this.GetHandBookRedDotState();
 		}
 
-		// Token: 0x060411D6 RID: 266710 RVA: 0x00FC7D8C File Offset: 0x00FC5F8C
+		// Token: 0x06035E9B RID: 220827 RVA: 0x00F0ED68 File Offset: 0x00F0CF68
 		public bool GetButtonRedPointShowState()
 		{
 			return !base.IsUnLock() && this.GetPreOpenFirstCheckRedDotState();
 		}
 
-		// Token: 0x060411D7 RID: 266711 RVA: 0x00FC7D9E File Offset: 0x00FC5F9E
+		// Token: 0x06035E9C RID: 220828 RVA: 0x00F0ED7A File Offset: 0x00F0CF7A
 		public override bool GetExternalButtonRedPointState()
 		{
 			return this.GetButtonRedPointShowState();
 		}
 
-		// Token: 0x060411D8 RID: 266712 RVA: 0x00FC7DA6 File Offset: 0x00FC5FA6
+		// Token: 0x06035E9D RID: 220829 RVA: 0x00F0ED82 File Offset: 0x00F0CF82
 		public void RefreshActivityRedDotState()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x060411D9 RID: 266713 RVA: 0x00FC7DBE File Offset: 0x00FC5FBE
+		// Token: 0x06035E9E RID: 220830 RVA: 0x00F0ED9A File Offset: 0x00F0CF9A
 		public bool GetTimeLimitRedDotState()
 		{
 			return this.IsLimitTimeRewardOn() && (this.GetTimeLimitRewardRedDotState() || this.GetLimitTimeShopRedDotState());
 		}
 
-		// Token: 0x060411DA RID: 266714 RVA: 0x00FC7DDC File Offset: 0x00FC5FDC
+		// Token: 0x06035E9F RID: 220831 RVA: 0x00F0EDB8 File Offset: 0x00F0CFB8
 		public bool GetTimeLimitRewardRedDotState()
 		{
 			IReadOnlyList<FishingActivityGroup> rewardTargetTabList = this.GetRewardTargetTabList();
@@ -99,19 +98,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return this.GetAllAvailableGetMilestoneRewardIds().Length != 0;
 		}
 
-		// Token: 0x060411DB RID: 266715 RVA: 0x00FC7E1C File Offset: 0x00FC601C
+		// Token: 0x06035EA0 RID: 220832 RVA: 0x00F0EDF8 File Offset: 0x00F0CFF8
 		public bool GetHandBookRedDotState()
 		{
 			return FishingModel.Instance.GetHandBookRewardRedDotState();
 		}
 
-		// Token: 0x060411DC RID: 266716 RVA: 0x00FC7E28 File Offset: 0x00FC6028
+		// Token: 0x06035EA1 RID: 220833 RVA: 0x00F0EE04 File Offset: 0x00F0D004
 		public bool GetLimitTimeShopRedDotState()
 		{
 			return PayShopModel.Instance.CheckShopItemCheckFlag(PayShopDefine.EPayShopTabType.FishingLimitTimeReward, 1);
 		}
 
-		// Token: 0x060411DD RID: 266717 RVA: 0x00FC7E3C File Offset: 0x00FC603C
+		// Token: 0x06035EA2 RID: 220834 RVA: 0x00F0EE18 File Offset: 0x00F0D018
 		public bool GetPreOpenFirstCheckRedDotState()
 		{
 			bool flag = base.CanPreOpen();
@@ -119,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return flag && flag2 && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 0, 0, 0) == 0;
 		}
 
-		// Token: 0x060411DE RID: 266718 RVA: 0x00FC7E74 File Offset: 0x00FC6074
+		// Token: 0x06035EA3 RID: 220835 RVA: 0x00F0EE50 File Offset: 0x00F0D050
 		public bool SaveFirstCheckRedDotState(EFishingActivityCheckSaveFlag saveFlag, int id = 0)
 		{
 			if (ActivityModel.Instance.GetActivityCacheData(base.Id, 0, (int)saveFlag, id, 0) == 1)
@@ -131,19 +130,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return false;
 		}
 
-		// Token: 0x060411DF RID: 266719 RVA: 0x00FC7EAC File Offset: 0x00FC60AC
+		// Token: 0x06035EA4 RID: 220836 RVA: 0x00F0EE88 File Offset: 0x00F0D088
 		public IReadOnlyList<FishingActivityGroup> GetRewardTargetTabList()
 		{
 			return FishingConfig.Instance.GetAllFishingActivityGroupConfig();
 		}
 
-		// Token: 0x060411E0 RID: 266720 RVA: 0x00FC7EB8 File Offset: 0x00FC60B8
+		// Token: 0x06035EA5 RID: 220837 RVA: 0x00F0EE94 File Offset: 0x00F0D094
 		public List<UiDynamicTab> GetRewardTabList()
 		{
 			return DynamicTabConfig.Instance.GetViewTabList(EUiViewName.FishingTimeLimitView);
 		}
 
-		// Token: 0x060411E1 RID: 266721 RVA: 0x00FC7ED0 File Offset: 0x00FC60D0
+		// Token: 0x06035EA6 RID: 220838 RVA: 0x00F0EEAC File Offset: 0x00F0D0AC
 		public bool IsLimitTimeRewardOn()
 		{
 			if (!base.IsUnLock())
@@ -154,14 +153,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return serverTime >= (double)this.LimitTimeRewardOpenTime && serverTime <= (double)this.LimitTimeRewardEndTime;
 		}
 
-		// Token: 0x060411E2 RID: 266722 RVA: 0x00FC7F09 File Offset: 0x00FC6109
+		// Token: 0x06035EA7 RID: 220839 RVA: 0x00F0EEE5 File Offset: 0x00F0D0E5
 		public long GetLimitTimeEndTime()
 		{
 			return this.LimitTimeRewardEndTime;
 		}
 
-		// Token: 0x060411E3 RID: 266723 RVA: 0x00FC7F14 File Offset: 0x00FC6114
-		public void RefreshLimitTimeTaskDataList(List<ActivityTask> taskList, bool emitEvent)
+		// Token: 0x06035EA8 RID: 220840 RVA: 0x00F0EEF0 File Offset: 0x00F0D0F0
+		public void RefreshLimitTimeTaskDataList(IEnumerable<ActivityTask> taskList, bool emitEvent)
 		{
 			foreach (ActivityTask task in taskList)
 			{
@@ -174,7 +173,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Emit(EEventName.FishingTimeLimitRewardListRefresh);
 		}
 
-		// Token: 0x060411E4 RID: 266724 RVA: 0x00FC7F78 File Offset: 0x00FC6178
+		// Token: 0x06035EA9 RID: 220841 RVA: 0x00F0EF4C File Offset: 0x00F0D14C
 		private void RefreshLimitTimeTaskData(ActivityTask task)
 		{
 			global::ActivityTaskData activityTaskData;
@@ -204,14 +203,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			activityTaskData.Refresh(task, null);
 		}
 
-		// Token: 0x060411E5 RID: 266725 RVA: 0x00FC805A File Offset: 0x00FC625A
+		// Token: 0x06035EAA RID: 220842 RVA: 0x00F0F02E File Offset: 0x00F0D22E
 		public void SetTimeLimitTaskDone(int taskId)
 		{
 			this.TimeLimitTaskMap[taskId].Status = EActivityTaskState.FinishedAndClaimed;
 			EventSystem.Instance.Emit(EEventName.FishingTimeLimitRewardProgressRefresh);
 		}
 
-		// Token: 0x060411E6 RID: 266726 RVA: 0x00FC8080 File Offset: 0x00FC6280
+		// Token: 0x06035EAB RID: 220843 RVA: 0x00F0F054 File Offset: 0x00F0D254
 		private int SortTaskData(global::ActivityTaskData a, global::ActivityTaskData b)
 		{
 			if (a.Status != b.Status)
@@ -227,7 +226,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return fishingActivityLimitTask.Value.SortId - fishingActivityLimitTask2.Value.SortId;
 		}
 
-		// Token: 0x060411E7 RID: 266727 RVA: 0x00FC8118 File Offset: 0x00FC6318
+		// Token: 0x06035EAC RID: 220844 RVA: 0x00F0F0EC File Offset: 0x00F0D2EC
 		public global::ActivityTaskData[] GetTimeLimitTasksByGroupId(int groupId)
 		{
 			List<global::ActivityTaskData> list = new List<global::ActivityTaskData>();
@@ -239,10 +238,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 					list.Add(this.TimeLimitTaskMap[key]);
 				}
 			}
-			return list.OrderBy((global::ActivityTaskData x) => x, Comparer<global::ActivityTaskData>.Create(new Comparison<global::ActivityTaskData>(this.SortTaskData))).ToArray<global::ActivityTaskData>();
+			list.Sort(Comparer<global::ActivityTaskData>.Create(new Comparison<global::ActivityTaskData>(this.SortTaskData)));
+			return list.ToArray();
 		}
 
-		// Token: 0x060411E8 RID: 266728 RVA: 0x00FC81C4 File Offset: 0x00FC63C4
+		// Token: 0x06035EAD RID: 220845 RVA: 0x00F0F178 File Offset: 0x00F0D378
 		public bool GetTimeLimitTasksRedDotStateByGroupId(int groupId)
 		{
 			global::ActivityTaskData[] timeLimitTasksByGroupId = this.GetTimeLimitTasksByGroupId(groupId);
@@ -256,9 +256,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return false;
 		}
 
-		// Token: 0x1700954D RID: 38221
-		// (get) Token: 0x060411EA RID: 266730 RVA: 0x00FC820D File Offset: 0x00FC640D
-		// (set) Token: 0x060411E9 RID: 266729 RVA: 0x00FC81F4 File Offset: 0x00FC63F4
+		// Token: 0x170068AF RID: 26799
+		// (get) Token: 0x06035EAF RID: 220847 RVA: 0x00F0F1C1 File Offset: 0x00F0D3C1
+		// (set) Token: 0x06035EAE RID: 220846 RVA: 0x00F0F1A8 File Offset: 0x00F0D3A8
 		public int MilestoneRewardItemAccumulate
 		{
 			get
@@ -272,8 +272,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x1700954E RID: 38222
-		// (get) Token: 0x060411EB RID: 266731 RVA: 0x00FC8218 File Offset: 0x00FC6418
+		// Token: 0x170068B0 RID: 26800
+		// (get) Token: 0x06035EB0 RID: 220848 RVA: 0x00F0F1CC File Offset: 0x00F0D3CC
 		public int MilestoneRewardItemId
 		{
 			get
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060411EC RID: 266732 RVA: 0x00FC8234 File Offset: 0x00FC6434
+		// Token: 0x06035EB1 RID: 220849 RVA: 0x00F0F1E8 File Offset: 0x00F0D3E8
 		private void InitMilestoneReward()
 		{
 			this.MilestoneRewardMap.Clear();
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.MilestoneRewardMaxCount = num;
 		}
 
-		// Token: 0x060411ED RID: 266733 RVA: 0x00FC82C8 File Offset: 0x00FC64C8
+		// Token: 0x06035EB2 RID: 220850 RVA: 0x00F0F27C File Offset: 0x00F0D47C
 		public void RefreshMilestoneReward(MapField<int, SignState> rewardStateMap, bool emitEvent)
 		{
 			foreach (int num in rewardStateMap.Keys)
@@ -324,15 +324,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Emit(EEventName.FishingTimeLimitRewardProgressRefresh);
 		}
 
-		// Token: 0x060411EE RID: 266734 RVA: 0x00FC8374 File Offset: 0x00FC6574
+		// Token: 0x06035EB3 RID: 220851 RVA: 0x00F0F328 File Offset: 0x00F0D528
 		public FishingRewardProgressData[] GetAllMilestoneReward()
 		{
-			return (from x in this.MilestoneRewardMap.Values
-			orderby x.Id
-			select x).ToArray<FishingRewardProgressData>();
+			FishingRewardProgressData[] array = NoLinq.ToArray<FishingRewardProgressData>(this.MilestoneRewardMap.Values);
+			Array.Sort<FishingRewardProgressData>(array, (FishingRewardProgressData left, FishingRewardProgressData right) => left.Id.CompareTo(right.Id));
+			return array;
 		}
 
-		// Token: 0x060411EF RID: 266735 RVA: 0x00FC83AC File Offset: 0x00FC65AC
+		// Token: 0x06035EB4 RID: 220852 RVA: 0x00F0F360 File Offset: 0x00F0D560
 		public int[] GetAllAvailableGetMilestoneRewardIds()
 		{
 			List<int> list = new List<int>();
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return list.ToArray();
 		}
 
-		// Token: 0x060411F0 RID: 266736 RVA: 0x00FC8424 File Offset: 0x00FC6624
+		// Token: 0x06035EB5 RID: 220853 RVA: 0x00F0F3D8 File Offset: 0x00F0D5D8
 		public List<PayShopGoods> GetShopDataList()
 		{
 			List<PayShopGoods> payShopTabData = PayShopModel.Instance.GetPayShopTabData(PayShopDefine.EPayShopTabType.FishingLimitTimeReward, 1, true);
@@ -362,7 +362,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return payShopTabData;
 		}
 
-		// Token: 0x060411F1 RID: 266737 RVA: 0x00FC8460 File Offset: 0x00FC6660
+		// Token: 0x06035EB6 RID: 220854 RVA: 0x00F0F414 File Offset: 0x00F0D614
 		public int? GetRecommendQuestLinkId()
 		{
 			FishingActivity activityConfig = this.GetActivityConfig();
@@ -387,32 +387,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return null;
 		}
 
-		// Token: 0x060411F2 RID: 266738 RVA: 0x00FC850C File Offset: 0x00FC670C
+		// Token: 0x06035EB7 RID: 220855 RVA: 0x00F0F4C0 File Offset: 0x00F0D6C0
 		public bool IsRecommendQuestFinished()
 		{
 			int recommendQuestId = this.GetActivityConfig().RecommendQuestId;
 			return QuestNewModel.Instance.CheckQuestFinished(recommendQuestId);
 		}
 
-		// Token: 0x04021EC1 RID: 138945
+		// Token: 0x0401C7F2 RID: 116722
 		private long LimitTimeRewardOpenTime;
 
-		// Token: 0x04021EC2 RID: 138946
+		// Token: 0x0401C7F3 RID: 116723
 		private long LimitTimeRewardEndTime;
 
-		// Token: 0x04021EC3 RID: 138947
+		// Token: 0x0401C7F4 RID: 116724
 		private readonly Dictionary<int, global::ActivityTaskData> TimeLimitTaskMap = new Dictionary<int, global::ActivityTaskData>();
 
-		// Token: 0x04021EC4 RID: 138948
+		// Token: 0x0401C7F5 RID: 116725
 		private readonly Dictionary<int, HashSet<int>> TimeLimitTaskGroupId = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x04021EC5 RID: 138949
+		// Token: 0x0401C7F6 RID: 116726
 		private readonly Dictionary<int, FishingRewardProgressData> MilestoneRewardMap = new Dictionary<int, FishingRewardProgressData>();
 
-		// Token: 0x04021EC6 RID: 138950
+		// Token: 0x0401C7F7 RID: 116727
 		private int MilestoneRewardItemAccumulateInternal;
 
-		// Token: 0x04021EC7 RID: 138951
+		// Token: 0x0401C7F8 RID: 116728
 		public int MilestoneRewardMaxCount;
 	}
 }

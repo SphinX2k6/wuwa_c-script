@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.RoleLangCustomModel
 {
-	// Token: 0x02004D71 RID: 19825
+	// Token: 0x02003D3A RID: 15674
 	public interface IRoleLangCustomLangPackageInfo
 	{
-		// Token: 0x17007E6B RID: 32363
-		// (get) Token: 0x060333D6 RID: 209878
-		// (set) Token: 0x060333D7 RID: 209879
+		// Token: 0x1700521B RID: 21019
+		// (get) Token: 0x06028244 RID: 164420
+		// (set) Token: 0x06028245 RID: 164421
 		int RoleId { get; set; }
 
-		// Token: 0x17007E6C RID: 32364
-		// (get) Token: 0x060333D8 RID: 209880
-		// (set) Token: 0x060333D9 RID: 209881
+		// Token: 0x1700521C RID: 21020
+		// (get) Token: 0x06028246 RID: 164422
+		// (set) Token: 0x06028247 RID: 164423
 		int LangIndex { get; set; }
 	}
 }

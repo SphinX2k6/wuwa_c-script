@@ -3,19 +3,19 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200159D RID: 5533
+	// Token: 0x020016FC RID: 5884
 	[EnumExtensions]
 	public enum EBvbPlayDialogType
 	{
-		// Token: 0x040049A2 RID: 18850
+		// Token: 0x04004D54 RID: 19796
 		DungeonBegin,
-		// Token: 0x040049A3 RID: 18851
+		// Token: 0x04004D55 RID: 19797
 		PlayerBattleWin,
-		// Token: 0x040049A4 RID: 18852
+		// Token: 0x04004D56 RID: 19798
 		PlayerWin,
-		// Token: 0x040049A5 RID: 18853
+		// Token: 0x04004D57 RID: 19799
 		PlayerLose,
-		// Token: 0x040049A6 RID: 18854
+		// Token: 0x04004D58 RID: 19800
 		NewTurnBegin
 	}
 }

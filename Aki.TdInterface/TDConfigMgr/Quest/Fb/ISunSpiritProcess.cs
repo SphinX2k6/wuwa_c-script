@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012F9 RID: 4857
+	// Token: 0x02001449 RID: 5193
 	public class ISunSpiritProcess
 	{
-		// Token: 0x06006EC8 RID: 28360 RVA: 0x0010B945 File Offset: 0x00109B45
-		[NullableContext(1)]
+		// Token: 0x06007568 RID: 30056 RVA: 0x00119EB1 File Offset: 0x001180B1
 		public static ISunSpiritProcess Create(ISunSpiritProcess? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170022A9 RID: 8873
-		// (get) Token: 0x06006EC9 RID: 28361 RVA: 0x0010B964 File Offset: 0x00109B64
+		// Token: 0x17002478 RID: 9336
+		// (get) Token: 0x06007569 RID: 30057 RVA: 0x00119ED0 File Offset: 0x001180D0
 		public virtual int LauncherId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022AA RID: 8874
-		// (get) Token: 0x06006ECA RID: 28362 RVA: 0x0010B974 File Offset: 0x00109B74
+		// Token: 0x17002479 RID: 9337
+		// (get) Token: 0x0600756A RID: 30058 RVA: 0x00119EE0 File Offset: 0x001180E0
 		public virtual bool? IsRecycle
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F85 RID: 16261
+		// Token: 0x04004301 RID: 17153
 		private ISunSpiritProcess Instance;
 	}
 }

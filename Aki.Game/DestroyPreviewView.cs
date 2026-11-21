@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FC6 RID: 8134
+// Token: 0x02001499 RID: 5273
 [NullableContext(1)]
 [Nullable(0)]
 public class DestroyPreviewView : UiViewBase
 {
-	// Token: 0x0600FE68 RID: 65128 RVA: 0x003DC0CC File Offset: 0x003DA2CC
+	// Token: 0x0600D2D0 RID: 53968 RVA: 0x003E86A8 File Offset: 0x003E68A8
 	public DestroyPreviewView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FE69 RID: 65129 RVA: 0x003DC194 File Offset: 0x003DA394
+	// Token: 0x0600D2D1 RID: 53969 RVA: 0x003E8770 File Offset: 0x003E6970
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -41,7 +41,7 @@ public class DestroyPreviewView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600FE6A RID: 65130 RVA: 0x003DC284 File Offset: 0x003DA484
+	// Token: 0x0600D2D2 RID: 53970 RVA: 0x003E8860 File Offset: 0x003E6A60
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DestroyPreviewView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ public class DestroyPreviewView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FE6B RID: 65131 RVA: 0x003DC2C8 File Offset: 0x003DA4C8
+	// Token: 0x0600D2D3 RID: 53971 RVA: 0x003E88A4 File Offset: 0x003E6AA4
 	protected override void OnAfterShow()
 	{
 		if (this.HasResultItem)
@@ -61,13 +61,13 @@ public class DestroyPreviewView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FE6C RID: 65132 RVA: 0x003DC2F7 File Offset: 0x003DA4F7
+	// Token: 0x0600D2D4 RID: 53972 RVA: 0x003E88D3 File Offset: 0x003E6AD3
 	private DestroyPreviewGrid CreateItemGrid()
 	{
 		return new DestroyPreviewGrid();
 	}
 
-	// Token: 0x0600FE6D RID: 65133 RVA: 0x003DC300 File Offset: 0x003DA500
+	// Token: 0x0600D2D5 RID: 53973 RVA: 0x003E88DC File Offset: 0x003E6ADC
 	private void ReSizeLoopScrollView(int itemCount, UUILoopScrollViewComponent loopScrollView)
 	{
 		int num = 630;
@@ -81,7 +81,7 @@ public class DestroyPreviewView : UiViewBase
 		loopScrollView.RootUIComp.Get().SetHeight((float)num2);
 	}
 
-	// Token: 0x0600FE6E RID: 65134 RVA: 0x003DC374 File Offset: 0x003DA574
+	// Token: 0x0600D2D6 RID: 53974 RVA: 0x003E8950 File Offset: 0x003E6B50
 	private void RequestDecomposeItem()
 	{
 		List<DecomposeItemInfo> list = new List<DecomposeItemInfo>();
@@ -96,7 +96,7 @@ public class DestroyPreviewView : UiViewBase
 		InventoryController.Instance.ItemDestructRequest(list.ToArray());
 	}
 
-	// Token: 0x040075B0 RID: 30128
+	// Token: 0x04007699 RID: 30361
 	[Nullable(new byte[]
 	{
 		2,
@@ -104,7 +104,7 @@ public class DestroyPreviewView : UiViewBase
 	})]
 	private LoopScrollView<DestroyPreviewGrid, TItem> OriginScrollView;
 
-	// Token: 0x040075B1 RID: 30129
+	// Token: 0x0400769A RID: 30362
 	[Nullable(new byte[]
 	{
 		2,
@@ -112,30 +112,30 @@ public class DestroyPreviewView : UiViewBase
 	})]
 	private LoopScrollView<DestroyPreviewGrid, TItem> ResultScrollView;
 
-	// Token: 0x040075B2 RID: 30130
+	// Token: 0x0400769B RID: 30363
 	private List<TItem> DestroyItemList = new List<TItem>();
 
-	// Token: 0x040075B3 RID: 30131
+	// Token: 0x0400769C RID: 30364
 	[Nullable(2)]
 	private ButtonItem ButtonLeft;
 
-	// Token: 0x040075B4 RID: 30132
+	// Token: 0x0400769D RID: 30365
 	[Nullable(2)]
 	private ButtonItem ButtonRight;
 
-	// Token: 0x040075B5 RID: 30133
+	// Token: 0x0400769E RID: 30366
 	private bool HasResultItem;
 
-	// Token: 0x040075B6 RID: 30134
+	// Token: 0x0400769F RID: 30367
 	private const int GRID_SIZE = 210;
 
-	// Token: 0x040075B7 RID: 30135
+	// Token: 0x040076A0 RID: 30368
 	private const int GRID_NORMAL_WIDTH_SIZE = 630;
 
-	// Token: 0x040075B8 RID: 30136
+	// Token: 0x040076A1 RID: 30369
 	private const int GRID_NORMAL_HEIGHT_SIZE = 525;
 
-	// Token: 0x040075B9 RID: 30137
+	// Token: 0x040076A2 RID: 30370
 	[Nullable(new byte[]
 	{
 		1,
@@ -152,21 +152,21 @@ public class DestroyPreviewView : UiViewBase
 		new ValueTuple<int, int>(630, 420)
 	};
 
-	// Token: 0x020085D7 RID: 34263
+	// Token: 0x0200775E RID: 30558
 	[NullableContext(0)]
 	private enum EDestroyPreviewNode
 	{
-		// Token: 0x0402B90D RID: 178445
+		// Token: 0x04026C1C RID: 158748
 		LoopScrollViewLeft,
-		// Token: 0x0402B90E RID: 178446
+		// Token: 0x04026C1D RID: 158749
 		LoopScrollViewRight,
-		// Token: 0x0402B90F RID: 178447
+		// Token: 0x04026C1E RID: 158750
 		ItemGrid,
-		// Token: 0x0402B910 RID: 178448
+		// Token: 0x04026C1F RID: 158751
 		TextNone,
-		// Token: 0x0402B911 RID: 178449
+		// Token: 0x04026C20 RID: 158752
 		ButtonLeft,
-		// Token: 0x0402B912 RID: 178450
+		// Token: 0x04026C21 RID: 158753
 		ButtonRight
 	}
 }

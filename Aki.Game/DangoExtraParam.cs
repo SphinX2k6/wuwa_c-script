@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020018E0 RID: 6368
+// Token: 0x02000D99 RID: 3481
 public class DangoExtraParam : IDangoExtraParam
 {
-	// Token: 0x17000F84 RID: 3972
-	// (get) Token: 0x0600BAB1 RID: 47793 RVA: 0x002A4BC1 File Offset: 0x002A2DC1
-	// (set) Token: 0x0600BAB2 RID: 47794 RVA: 0x002A4BC9 File Offset: 0x002A2DC9
+	// Token: 0x17000FA7 RID: 4007
+	// (get) Token: 0x06008E9A RID: 36506 RVA: 0x002AF33D File Offset: 0x002AD53D
+	// (set) Token: 0x06008E9B RID: 36507 RVA: 0x002AF345 File Offset: 0x002AD545
 	public int DangoId { get; set; }
 
-	// Token: 0x17000F85 RID: 3973
-	// (get) Token: 0x0600BAB3 RID: 47795 RVA: 0x002A4BD2 File Offset: 0x002A2DD2
-	// (set) Token: 0x0600BAB4 RID: 47796 RVA: 0x002A4BDA File Offset: 0x002A2DDA
+	// Token: 0x17000FA8 RID: 4008
+	// (get) Token: 0x06008E9C RID: 36508 RVA: 0x002AF34E File Offset: 0x002AD54E
+	// (set) Token: 0x06008E9D RID: 36509 RVA: 0x002AF356 File Offset: 0x002AD556
 	public int SlotIndex { get; set; }
 }

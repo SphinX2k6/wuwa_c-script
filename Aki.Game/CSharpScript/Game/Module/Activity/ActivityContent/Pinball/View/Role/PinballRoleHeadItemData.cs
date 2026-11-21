@@ -3,32 +3,32 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x02006310 RID: 25360
+	// Token: 0x0200528E RID: 21134
 	public class PinballRoleHeadItemData : IPinballRoleHeadItemData
 	{
-		// Token: 0x170092D9 RID: 37593
-		// (get) Token: 0x0603FCD9 RID: 261337 RVA: 0x00F6FACF File Offset: 0x00F6DCCF
-		// (set) Token: 0x0603FCDA RID: 261338 RVA: 0x00F6FAD7 File Offset: 0x00F6DCD7
+		// Token: 0x1700663B RID: 26171
+		// (get) Token: 0x0603499A RID: 215450 RVA: 0x00EB6A2B File Offset: 0x00EB4C2B
+		// (set) Token: 0x0603499B RID: 215451 RVA: 0x00EB6A33 File Offset: 0x00EB4C33
 		public PinballRoleConfig RoleConfig { get; set; }
 
-		// Token: 0x170092DA RID: 37594
-		// (get) Token: 0x0603FCDB RID: 261339 RVA: 0x00F6FAE0 File Offset: 0x00F6DCE0
-		// (set) Token: 0x0603FCDC RID: 261340 RVA: 0x00F6FAE8 File Offset: 0x00F6DCE8
+		// Token: 0x1700663C RID: 26172
+		// (get) Token: 0x0603499C RID: 215452 RVA: 0x00EB6A3C File Offset: 0x00EB4C3C
+		// (set) Token: 0x0603499D RID: 215453 RVA: 0x00EB6A44 File Offset: 0x00EB4C44
 		public bool IsSelected { get; set; }
 
-		// Token: 0x170092DB RID: 37595
-		// (get) Token: 0x0603FCDD RID: 261341 RVA: 0x00F6FAF1 File Offset: 0x00F6DCF1
-		// (set) Token: 0x0603FCDE RID: 261342 RVA: 0x00F6FAF9 File Offset: 0x00F6DCF9
+		// Token: 0x1700663D RID: 26173
+		// (get) Token: 0x0603499E RID: 215454 RVA: 0x00EB6A4D File Offset: 0x00EB4C4D
+		// (set) Token: 0x0603499F RID: 215455 RVA: 0x00EB6A55 File Offset: 0x00EB4C55
 		public bool IsLocked { get; set; }
 
-		// Token: 0x170092DC RID: 37596
-		// (get) Token: 0x0603FCDF RID: 261343 RVA: 0x00F6FB02 File Offset: 0x00F6DD02
-		// (set) Token: 0x0603FCE0 RID: 261344 RVA: 0x00F6FB0A File Offset: 0x00F6DD0A
+		// Token: 0x1700663E RID: 26174
+		// (get) Token: 0x060349A0 RID: 215456 RVA: 0x00EB6A5E File Offset: 0x00EB4C5E
+		// (set) Token: 0x060349A1 RID: 215457 RVA: 0x00EB6A66 File Offset: 0x00EB4C66
 		public bool IsTrail { get; set; }
 
-		// Token: 0x170092DD RID: 37597
-		// (get) Token: 0x0603FCE1 RID: 261345 RVA: 0x00F6FB13 File Offset: 0x00F6DD13
-		// (set) Token: 0x0603FCE2 RID: 261346 RVA: 0x00F6FB1B File Offset: 0x00F6DD1B
+		// Token: 0x1700663F RID: 26175
+		// (get) Token: 0x060349A2 RID: 215458 RVA: 0x00EB6A6F File Offset: 0x00EB4C6F
+		// (set) Token: 0x060349A3 RID: 215459 RVA: 0x00EB6A77 File Offset: 0x00EB4C77
 		public bool NeedRedDot { get; set; }
 	}
 }

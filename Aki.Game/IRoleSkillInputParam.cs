@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020028B6 RID: 10422
+// Token: 0x02001E31 RID: 7729
 public interface IRoleSkillInputParam
 {
-	// Token: 0x17001CD9 RID: 7385
-	// (get) Token: 0x060157E7 RID: 88039
-	// (set) Token: 0x060157E8 RID: 88040
+	// Token: 0x17001D31 RID: 7473
+	// (get) Token: 0x060131E7 RID: 78311
+	// (set) Token: 0x060131E8 RID: 78312
 	int InputId { get; set; }
 
-	// Token: 0x17001CDA RID: 7386
-	// (get) Token: 0x060157E9 RID: 88041
-	// (set) Token: 0x060157EA RID: 88042
+	// Token: 0x17001D32 RID: 7474
+	// (get) Token: 0x060131E9 RID: 78313
+	// (set) Token: 0x060131EA RID: 78314
 	int InputIndex { get; set; }
 }

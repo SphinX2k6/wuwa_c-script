@@ -1,37 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
+using CSharpScript.Core.Common;
 using CSharpScript.Game.Camera;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x020001F6 RID: 502
+// Token: 0x020001FA RID: 506
 [NullableContext(1)]
 [Nullable(0)]
 internal class DtCameraConfig
 {
-	// Token: 0x06001F8A RID: 8074 RVA: 0x000A04D8 File Offset: 0x0009E6D8
+	// Token: 0x06002039 RID: 8249 RVA: 0x000A78AC File Offset: 0x000A5AAC
 	public DtCameraConfig(UDataTable dataTable)
 	{
 	}
 
-	// Token: 0x170004FA RID: 1274
-	// (get) Token: 0x06001F8B RID: 8075 RVA: 0x000A050F File Offset: 0x0009E70F
+	// Token: 0x1700051C RID: 1308
+	// (get) Token: 0x0600203A RID: 8250 RVA: 0x000A78E3 File Offset: 0x000A5AE3
 	public UDataTable DataTable { get; } = dataTable;
 
-	// Token: 0x06001F8C RID: 8076 RVA: 0x000A0518 File Offset: 0x0009E718
-	public unsafe void SetToConfigs(Dictionary<int, CameraConfig> subConfigs, Dictionary<int, CameraConfig> focusConfigs, Dictionary<int, CameraConfig> accompanyConfigs, string platformCheckKey)
+	// Token: 0x0600203B RID: 8251 RVA: 0x000A78EC File Offset: 0x000A5AEC
+	public unsafe void SetToConfigs(Dictionary<int, CameraConfig> subConfigs, Dictionary<int, CameraConfig> focusConfigs, Dictionary<int, CameraConfig> accompanyConfigs)
 	{
 		TArray<SCameraConfig> cameraConfigList = CameraController.Instance.GetCameraConfigList(this.DataTable);
 		int num = cameraConfigList.Num();
 		for (int i = 0; i < num; i++)
 		{
 			CameraConfig cameraConfig = new CameraConfig(cameraConfigList.Get(i));
-			FieldInfo field = typeof(CameraConfig).GetField(platformCheckKey);
-			if (!(field == null) && (bool)field.GetValue(cameraConfig))
+			if (Info.Instance.IsMobilePlatform() ? cameraConfig.MobileValid : cameraConfig.PcValid)
 			{
 				if (cameraConfig.Tag == null || cameraConfig.Tag.Value.TagName == FName.NAME_None)
 				{
@@ -107,13 +106,13 @@ internal class DtCameraConfig
 		}
 	}
 
-	// Token: 0x06001F8D RID: 8077 RVA: 0x000A085C File Offset: 0x0009EA5C
+	// Token: 0x0600203C RID: 8252 RVA: 0x000A7C1E File Offset: 0x000A5E1E
 	[Conditional("DEBUG")]
 	private void PrintToScreen(string content)
 	{
 	}
 
-	// Token: 0x06001F8E RID: 8078 RVA: 0x000A0860 File Offset: 0x0009EA60
+	// Token: 0x0600203D RID: 8253 RVA: 0x000A7C20 File Offset: 0x000A5E20
 	public void RemoveFromConfigs(Dictionary<int, CameraConfig> subConfigs, Dictionary<int, CameraConfig> focusConfigs, Dictionary<int, CameraConfig> accompanyConfigs)
 	{
 		foreach (int key in this.SubValidKeys)
@@ -133,18 +132,18 @@ internal class DtCameraConfig
 		this.AccompanyValidKeys.Clear();
 	}
 
-	// Token: 0x0400137E RID: 4990
+	// Token: 0x040013C1 RID: 5057
 	public int ReferenceCount;
 
-	// Token: 0x0400137F RID: 4991
+	// Token: 0x040013C2 RID: 5058
 	public HashSet<int> SubValidKeys = new HashSet<int>();
 
-	// Token: 0x04001380 RID: 4992
+	// Token: 0x040013C3 RID: 5059
 	public HashSet<int> FocusValidKeys = new HashSet<int>();
 
-	// Token: 0x04001381 RID: 4993
+	// Token: 0x040013C4 RID: 5060
 	public HashSet<int> AccompanyValidKeys = new HashSet<int>();
 
-	// Token: 0x04001382 RID: 4994
+	// Token: 0x040013C5 RID: 5061
 	private readonly bool EnablePrintLogToScreen = true;
 }

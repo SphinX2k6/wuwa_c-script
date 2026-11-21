@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005232 RID: 21042
+	// Token: 0x0200579A RID: 22426
 	public class IFanInteractByFKeyT
 	{
-		// Token: 0x17009A31 RID: 39473
-		// (get) Token: 0x0602239F RID: 140191 RVA: 0x004BF84B File Offset: 0x004BDA4B
-		// (set) Token: 0x060223A0 RID: 140192 RVA: 0x004BF853 File Offset: 0x004BDA53
+		// Token: 0x1700A22D RID: 41517
+		// (get) Token: 0x06024335 RID: 148277 RVA: 0x004FA30F File Offset: 0x004F850F
+		// (set) Token: 0x06024336 RID: 148278 RVA: 0x004FA317 File Offset: 0x004F8517
 		public EFanInteractType Type { get; set; }
 
-		// Token: 0x17009A32 RID: 39474
-		// (get) Token: 0x060223A1 RID: 140193 RVA: 0x004BF85C File Offset: 0x004BDA5C
-		// (set) Token: 0x060223A2 RID: 140194 RVA: 0x004BF864 File Offset: 0x004BDA64
+		// Token: 0x1700A22E RID: 41518
+		// (get) Token: 0x06024337 RID: 148279 RVA: 0x004FA320 File Offset: 0x004F8520
+		// (set) Token: 0x06024338 RID: 148280 RVA: 0x004FA328 File Offset: 0x004F8528
 		public string TidInteractOptionText { get; set; }
 
-		// Token: 0x060223A3 RID: 140195 RVA: 0x004BF86D File Offset: 0x004BDA6D
+		// Token: 0x06024339 RID: 148281 RVA: 0x004FA331 File Offset: 0x004F8531
 		public IFanInteractByFKeyT()
 		{
 			this.Type = EFanInteractType.Hit;

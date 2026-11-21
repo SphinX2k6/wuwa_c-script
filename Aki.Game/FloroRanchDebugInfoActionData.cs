@@ -4,18 +4,18 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001ADF RID: 6879
+// Token: 0x02000F9E RID: 3998
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchDebugInfoActionData : FloroRanchActionDataBase
 {
-	// Token: 0x0600CC0A RID: 52234 RVA: 0x002E90BF File Offset: 0x002E72BF
+	// Token: 0x0600A01B RID: 40987 RVA: 0x002F4253 File Offset: 0x002F2453
 	public FloroRanchDebugInfoActionData(FloroRanchUnitActionMsg actionData) : base(actionData)
 	{
 		this.DebugInfo = actionData.ActionInfo;
 	}
 
-	// Token: 0x0600CC0B RID: 52235 RVA: 0x002E90D4 File Offset: 0x002E72D4
+	// Token: 0x0600A01C RID: 40988 RVA: 0x002F4268 File Offset: 0x002F2468
 	public override UniTask OnExecute()
 	{
 		FloroRanchDebugInfoActionData.<OnExecute>d__2 <OnExecute>d__;
@@ -26,6 +26,6 @@ public class FloroRanchDebugInfoActionData : FloroRanchActionDataBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005DCB RID: 24011
+	// Token: 0x04005E9A RID: 24218
 	private readonly FRDebugActionInfo DebugInfo;
 }

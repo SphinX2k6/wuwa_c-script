@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AAD RID: 23213
+	// Token: 0x02004A89 RID: 19081
 	public class DreamLinkScoreRewardItem : UiPanelBase
 	{
-		// Token: 0x0603ACD7 RID: 240855 RVA: 0x00E02DF1 File Offset: 0x00E00FF1
+		// Token: 0x0602FC23 RID: 195619 RVA: 0x00D533B9 File Offset: 0x00D515B9
 		[NullableContext(1)]
 		public DreamLinkScoreRewardItem(DreamLinkData data)
 		{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.MaxEnergy = this.Data.MaxEnergy;
 		}
 
-		// Token: 0x0603ACD8 RID: 240856 RVA: 0x00E02E18 File Offset: 0x00E01018
+		// Token: 0x0602FC24 RID: 195620 RVA: 0x00D533E0 File Offset: 0x00D515E0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -42,26 +42,26 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603ACD9 RID: 240857 RVA: 0x00E02EDF File Offset: 0x00E010DF
+		// Token: 0x0602FC25 RID: 195621 RVA: 0x00D534A7 File Offset: 0x00D516A7
 		protected override void OnBeforeShow()
 		{
 			EventSystem.Instance.Add(EEventName.RoguelikeCurrencyUpdate, new Action(this.OnDreamLinkRewardRefresh));
 			this.RefreshPerformance();
 		}
 
-		// Token: 0x0603ACDA RID: 240858 RVA: 0x00E02F03 File Offset: 0x00E01103
+		// Token: 0x0602FC26 RID: 195622 RVA: 0x00D534CB File Offset: 0x00D516CB
 		protected override void OnBeforeHide()
 		{
 			EventSystem.Instance.Remove(EEventName.RoguelikeCurrencyUpdate, new Action(this.OnDreamLinkRewardRefresh));
 		}
 
-		// Token: 0x0603ACDB RID: 240859 RVA: 0x00E02F21 File Offset: 0x00E01121
+		// Token: 0x0602FC27 RID: 195623 RVA: 0x00D534E9 File Offset: 0x00D516E9
 		private void OnDreamLinkRewardRefresh()
 		{
 			this.RefreshPerformance();
 		}
 
-		// Token: 0x0603ACDC RID: 240860 RVA: 0x00E02F2C File Offset: 0x00E0112C
+		// Token: 0x0602FC28 RID: 195624 RVA: 0x00D534F4 File Offset: 0x00D516F4
 		public void RefreshPerformance()
 		{
 			int energyItemCount = this.Data.GetEnergyItemCount();
@@ -82,33 +82,33 @@ namespace CSharpScript.Game.Module.DreamLink
 			item.SetUIActive(this.Data.CheckHasEnergyReward());
 		}
 
-		// Token: 0x0603ACDD RID: 240861 RVA: 0x00E02FAE File Offset: 0x00E011AE
+		// Token: 0x0602FC29 RID: 195625 RVA: 0x00D53576 File Offset: 0x00D51776
 		private void OnClickedButton()
 		{
 			this.Data.SaveFirstCheckRedDotState(5, 0);
 			UiManager.Instance.OpenView(EUiViewName.DreamLinkRewardViewEnergy, null, null);
 		}
 
-		// Token: 0x0401EB05 RID: 125701
+		// Token: 0x040195AC RID: 103852
 		private int CurrentEnergy = -1;
 
-		// Token: 0x0401EB06 RID: 125702
+		// Token: 0x040195AD RID: 103853
 		private readonly int MaxEnergy;
 
-		// Token: 0x0401EB07 RID: 125703
+		// Token: 0x040195AE RID: 103854
 		[Nullable(1)]
 		protected readonly DreamLinkData Data;
 
-		// Token: 0x0200BCFA RID: 48378
+		// Token: 0x0200A702 RID: 42754
 		private class EComponents
 		{
-			// Token: 0x04038FE1 RID: 233441
+			// Token: 0x040339AB RID: 211371
 			public const int Button = 0;
 
-			// Token: 0x04038FE2 RID: 233442
+			// Token: 0x040339AC RID: 211372
 			public const int TxtScore = 1;
 
-			// Token: 0x04038FE3 RID: 233443
+			// Token: 0x040339AD RID: 211373
 			public const int RedDot = 2;
 		}
 	}

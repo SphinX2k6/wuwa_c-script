@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001077 RID: 4215
+// Token: 0x0200052B RID: 1323
 public class GuessJokerSelectRoleItem : GridProxyAbstract<int>
 {
-	// Token: 0x06006CE7 RID: 27879 RVA: 0x00160E5C File Offset: 0x0015F05C
+	// Token: 0x0600407C RID: 16508 RVA: 0x00169790 File Offset: 0x00167990
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,8 +27,8 @@ public class GuessJokerSelectRoleItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x170008CB RID: 2251
-	// (get) Token: 0x06006CE8 RID: 27880 RVA: 0x00160F08 File Offset: 0x0015F108
+	// Token: 0x170008EB RID: 2283
+	// (get) Token: 0x0600407D RID: 16509 RVA: 0x0016983C File Offset: 0x00167A3C
 	public int Level
 	{
 		get
@@ -41,7 +41,7 @@ public class GuessJokerSelectRoleItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06006CE9 RID: 27881 RVA: 0x00160F44 File Offset: 0x0015F144
+	// Token: 0x0600407E RID: 16510 RVA: 0x00169878 File Offset: 0x00167A78
 	public override void Refresh(int levelId, bool isSelected, int gridIndex)
 	{
 		this.LevelId = levelId;
@@ -59,7 +59,7 @@ public class GuessJokerSelectRoleItem : GridProxyAbstract<int>
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06006CEA RID: 27882 RVA: 0x00160FCC File Offset: 0x0015F1CC
+	// Token: 0x0600407F RID: 16511 RVA: 0x00169900 File Offset: 0x00167B00
 	public void RefreshRedDot()
 	{
 		SpringManorData activityData = SpringManorModel.Instance.ActivityData;
@@ -82,14 +82,14 @@ public class GuessJokerSelectRoleItem : GridProxyAbstract<int>
 		base.GetSprite(3).SetUIActive(!unlock);
 	}
 
-	// Token: 0x06006CEB RID: 27883 RVA: 0x00161078 File Offset: 0x0015F278
+	// Token: 0x06004080 RID: 16512 RVA: 0x001699AC File Offset: 0x00167BAC
 	[NullableContext(1)]
 	public void BindClickCallBack(Action<GuessJokerSelectRoleItem> clickCallBack)
 	{
 		this.ClickCallBack = clickCallBack;
 	}
 
-	// Token: 0x06006CEC RID: 27884 RVA: 0x00161081 File Offset: 0x0015F281
+	// Token: 0x06004081 RID: 16513 RVA: 0x001699B5 File Offset: 0x00167BB5
 	private void OnClickToggle(EToggleState state)
 	{
 		Action<GuessJokerSelectRoleItem> clickCallBack = this.ClickCallBack;
@@ -100,19 +100,19 @@ public class GuessJokerSelectRoleItem : GridProxyAbstract<int>
 		clickCallBack(this);
 	}
 
-	// Token: 0x06006CED RID: 27885 RVA: 0x00161094 File Offset: 0x0015F294
+	// Token: 0x06004082 RID: 16514 RVA: 0x001699C8 File Offset: 0x00167BC8
 	public override void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06006CEE RID: 27886 RVA: 0x001610A6 File Offset: 0x0015F2A6
+	// Token: 0x06004083 RID: 16515 RVA: 0x001699DA File Offset: 0x00167BDA
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06006CEF RID: 27887 RVA: 0x001610B8 File Offset: 0x0015F2B8
+	// Token: 0x06004084 RID: 16516 RVA: 0x001699EC File Offset: 0x00167BEC
 	[NullableContext(2)]
 	public UUIItem GuideGetToggleItem()
 	{
@@ -124,10 +124,10 @@ public class GuessJokerSelectRoleItem : GridProxyAbstract<int>
 		return extendToggle.RootUIComp.Get();
 	}
 
-	// Token: 0x04003272 RID: 12914
+	// Token: 0x0400330B RID: 13067
 	private int LevelId;
 
-	// Token: 0x04003273 RID: 12915
+	// Token: 0x0400330C RID: 13068
 	[Nullable(new byte[]
 	{
 		2,

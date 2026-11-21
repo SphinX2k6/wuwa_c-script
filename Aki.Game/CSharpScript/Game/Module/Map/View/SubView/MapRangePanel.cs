@@ -13,13 +13,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.View.SubView
 {
-	// Token: 0x0200548B RID: 21643
+	// Token: 0x0200446E RID: 17518
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MapRangePanel
 	{
-		// Token: 0x1700847E RID: 33918
-		// (get) Token: 0x0603745C RID: 226396 RVA: 0x00D1DAD6 File Offset: 0x00D1BCD6
+		// Token: 0x1700584A RID: 22602
+		// (get) Token: 0x0602C3A6 RID: 181158 RVA: 0x00C6D1CA File Offset: 0x00C6B3CA
 		[Nullable(new byte[]
 		{
 			0,
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Map.View.SubView
 			1
 		})] get; }
 
-		// Token: 0x0603745D RID: 226397 RVA: 0x00D1DADE File Offset: 0x00D1BCDE
+		// Token: 0x0602C3A7 RID: 181159 RVA: 0x00C6D1D2 File Offset: 0x00C6B3D2
 		public MapRangePanel([Nullable(new byte[]
 		{
 			0,
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Map.View.SubView
 			EventSystem.Instance.Add(EEventName.HideNavigateMarkRange, new Action(this.EventHideNavigateMarkRange));
 		}
 
-		// Token: 0x0603745E RID: 226398 RVA: 0x00D1DB0C File Offset: 0x00D1BD0C
+		// Token: 0x0602C3A8 RID: 181160 RVA: 0x00C6D200 File Offset: 0x00C6B400
 		private UUIItem GetRootItem()
 		{
 			if (this.Map.IsT1)
@@ -59,8 +59,8 @@ namespace CSharpScript.Game.Module.Map.View.SubView
 			return null;
 		}
 
-		// Token: 0x1700847F RID: 33919
-		// (get) Token: 0x0603745F RID: 226399 RVA: 0x00D1DB64 File Offset: 0x00D1BD64
+		// Token: 0x1700584B RID: 22603
+		// (get) Token: 0x0602C3A9 RID: 181161 RVA: 0x00C6D258 File Offset: 0x00C6B458
 		private int? MapId
 		{
 			get
@@ -77,8 +77,8 @@ namespace CSharpScript.Game.Module.Map.View.SubView
 			}
 		}
 
-		// Token: 0x17008480 RID: 33920
-		// (get) Token: 0x06037460 RID: 226400 RVA: 0x00D1DBCC File Offset: 0x00D1BDCC
+		// Token: 0x1700584C RID: 22604
+		// (get) Token: 0x0602C3AA RID: 181162 RVA: 0x00C6D2C0 File Offset: 0x00C6B4C0
 		private EMapGravityDirection? MapGravity
 		{
 			get
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Map.View.SubView
 			}
 		}
 
-		// Token: 0x06037461 RID: 226401 RVA: 0x00D1DC34 File Offset: 0x00D1BE34
+		// Token: 0x0602C3AB RID: 181163 RVA: 0x00C6D328 File Offset: 0x00C6B528
 		private UniTask InitRangeComponentAsync()
 		{
 			MapRangePanel.<InitRangeComponentAsync>d__14 <InitRangeComponentAsync>d__;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Map.View.SubView
 			return <InitRangeComponentAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037462 RID: 226402 RVA: 0x00D1DC78 File Offset: 0x00D1BE78
+		// Token: 0x0602C3AC RID: 181164 RVA: 0x00C6D36C File Offset: 0x00C6B56C
 		[NullableContext(1)]
 		public UniTask SetRangeComponentShow(Vector2D pos, float? width = null, float? height = null)
 		{
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Map.View.SubView
 			return <SetRangeComponentShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037463 RID: 226403 RVA: 0x00D1DCD4 File Offset: 0x00D1BED4
+		// Token: 0x0602C3AD RID: 181165 RVA: 0x00C6D3C8 File Offset: 0x00C6B5C8
 		public UniTask SetRangeComponentHide(bool isClearInfo = true)
 		{
 			MapRangePanel.<SetRangeComponentHide>d__16 <SetRangeComponentHide>d__;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.Map.View.SubView
 			return <SetRangeComponentHide>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037464 RID: 226404 RVA: 0x00D1DD20 File Offset: 0x00D1BF20
+		// Token: 0x0602C3AE RID: 181166 RVA: 0x00C6D414 File Offset: 0x00C6B614
 		private UniTask WaitRangeComponent()
 		{
 			MapRangePanel.<WaitRangeComponent>d__17 <WaitRangeComponent>d__;
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Map.View.SubView
 			return <WaitRangeComponent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037465 RID: 226405 RVA: 0x00D1DD64 File Offset: 0x00D1BF64
+		// Token: 0x0602C3AF RID: 181167 RVA: 0x00C6D458 File Offset: 0x00C6B658
 		public void CheckExploreMarkRangeInfo()
 		{
 			IMapMarkRangeInfo mapRangeInfo = WorldMapModel.Instance.MapRangeInfo;
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.Map.View.SubView
 			}
 		}
 
-		// Token: 0x06037466 RID: 226406 RVA: 0x00D1DE30 File Offset: 0x00D1C030
+		// Token: 0x0602C3B0 RID: 181168 RVA: 0x00C6D524 File Offset: 0x00C6B724
 		public void MiniMapUpdate()
 		{
 			IMapMarkRangeInfo mapRangeInfo = WorldMapModel.Instance.MapRangeInfo;
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.Map.View.SubView
 			this.SetRangeComponentHide(true).Forget();
 		}
 
-		// Token: 0x06037467 RID: 226407 RVA: 0x00D1DFC4 File Offset: 0x00D1C1C4
+		// Token: 0x0602C3B1 RID: 181169 RVA: 0x00C6D6B8 File Offset: 0x00C6B8B8
 		private bool CheckShowRangeMarkIsDiscover()
 		{
 			NavigateMarkShowRange navigateMarkShowRangeInfo = WorldMapModel.Instance.NavigateMarkShowRangeInfo;
@@ -236,37 +236,36 @@ namespace CSharpScript.Game.Module.Map.View.SubView
 			return LevelPlayReportModel.Instance.IsCommonLevelPlayDiscover(relativeDungeonId, relativeId);
 		}
 
-		// Token: 0x06037468 RID: 226408 RVA: 0x00D1E03C File Offset: 0x00D1C23C
+		// Token: 0x0602C3B2 RID: 181170 RVA: 0x00C6D72E File Offset: 0x00C6B92E
 		public void Destroy()
 		{
 			if (this.RangeComponent != null)
 			{
-				this.RangeComponent.SkipDestroyActor = false;
 				this.RangeComponent.Destroy(null);
 				this.RangeComponent = null;
 			}
 			EventSystem.Instance.Remove(EEventName.HideNavigateMarkRange, new Action(this.EventHideNavigateMarkRange));
 		}
 
-		// Token: 0x06037469 RID: 226409 RVA: 0x00D1E08C File Offset: 0x00D1C28C
+		// Token: 0x0602C3B3 RID: 181171 RVA: 0x00C6D767 File Offset: 0x00C6B967
 		private void EventHideNavigateMarkRange()
 		{
 			this.SetRangeComponentHide(true).Forget();
 		}
 
-		// Token: 0x0401D203 RID: 119299
+		// Token: 0x04017C9C RID: 97436
 		private MarkRangeImageComponent RangeComponent;
 
-		// Token: 0x0401D204 RID: 119300
+		// Token: 0x04017C9D RID: 97437
 		private UniTaskCompletionSource RangeComponentPromise;
 
-		// Token: 0x0401D205 RID: 119301
+		// Token: 0x04017C9E RID: 97438
 		private Vector2D CacheRangePosition;
 
-		// Token: 0x0401D206 RID: 119302
+		// Token: 0x04017C9F RID: 97439
 		private int? CacheMapId;
 
-		// Token: 0x0401D207 RID: 119303
+		// Token: 0x04017CA0 RID: 97440
 		private EMapGravityDirection? CacheGravity;
 	}
 }

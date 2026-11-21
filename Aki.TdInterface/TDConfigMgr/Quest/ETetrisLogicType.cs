@@ -3,65 +3,65 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EA1 RID: 3745
+	// Token: 0x02000FB7 RID: 4023
 	[EnumExtensions]
 	public enum ETetrisLogicType
 	{
-		// Token: 0x040031D0 RID: 12752
+		// Token: 0x040034DD RID: 13533
 		I块,
-		// Token: 0x040031D1 RID: 12753
+		// Token: 0x040034DE RID: 13534
 		J块,
-		// Token: 0x040031D2 RID: 12754
+		// Token: 0x040034DF RID: 13535
 		L块,
-		// Token: 0x040031D3 RID: 12755
+		// Token: 0x040034E0 RID: 13536
 		O块,
-		// Token: 0x040031D4 RID: 12756
+		// Token: 0x040034E1 RID: 13537
 		S块,
-		// Token: 0x040031D5 RID: 12757
+		// Token: 0x040034E2 RID: 13538
 		T块,
-		// Token: 0x040031D6 RID: 12758
+		// Token: 0x040034E3 RID: 13539
 		Z块,
-		// Token: 0x040031D7 RID: 12759
+		// Token: 0x040034E4 RID: 13540
 		五连I块,
-		// Token: 0x040031D8 RID: 12760
+		// Token: 0x040034E5 RID: 13541
 		五连T块,
-		// Token: 0x040031D9 RID: 12761
+		// Token: 0x040034E6 RID: 13542
 		五连U块,
-		// Token: 0x040031DA RID: 12762
+		// Token: 0x040034E7 RID: 13543
 		五连V块,
-		// Token: 0x040031DB RID: 12763
+		// Token: 0x040034E8 RID: 13544
 		五连W块,
-		// Token: 0x040031DC RID: 12764
+		// Token: 0x040034E9 RID: 13545
 		五连X块,
-		// Token: 0x040031DD RID: 12765
+		// Token: 0x040034EA RID: 13546
 		五连F块,
-		// Token: 0x040031DE RID: 12766
+		// Token: 0x040034EB RID: 13547
 		五连F1块,
-		// Token: 0x040031DF RID: 12767
+		// Token: 0x040034EC RID: 13548
 		五连S块,
-		// Token: 0x040031E0 RID: 12768
+		// Token: 0x040034ED RID: 13549
 		五连Z块,
-		// Token: 0x040031E1 RID: 12769
+		// Token: 0x040034EE RID: 13550
 		五连J块,
-		// Token: 0x040031E2 RID: 12770
+		// Token: 0x040034EF RID: 13551
 		五连L块,
-		// Token: 0x040031E3 RID: 12771
+		// Token: 0x040034F0 RID: 13552
 		五连Y块,
-		// Token: 0x040031E4 RID: 12772
+		// Token: 0x040034F1 RID: 13553
 		五连Y1块,
-		// Token: 0x040031E5 RID: 12773
+		// Token: 0x040034F2 RID: 13554
 		五连N块,
-		// Token: 0x040031E6 RID: 12774
+		// Token: 0x040034F3 RID: 13555
 		五连N1块,
-		// Token: 0x040031E7 RID: 12775
+		// Token: 0x040034F4 RID: 13556
 		五连P块,
-		// Token: 0x040031E8 RID: 12776
+		// Token: 0x040034F5 RID: 13557
 		五连Q块,
-		// Token: 0x040031E9 RID: 12777
+		// Token: 0x040034F6 RID: 13558
 		三连I块,
-		// Token: 0x040031EA RID: 12778
+		// Token: 0x040034F7 RID: 13559
 		三连V块,
-		// Token: 0x040031EB RID: 12779
+		// Token: 0x040034F8 RID: 13560
 		二连方块
 	}
 }

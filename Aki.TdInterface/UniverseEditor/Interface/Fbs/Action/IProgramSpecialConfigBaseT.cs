@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DB1 RID: 28081
+	// Token: 0x0200752C RID: 29996
 	public class IProgramSpecialConfigBaseT
 	{
-		// Token: 0x1700D166 RID: 53606
-		// (get) Token: 0x060319A5 RID: 203173 RVA: 0x006B8AD6 File Offset: 0x006B6CD6
-		// (set) Token: 0x060319A6 RID: 203174 RVA: 0x006B8ADE File Offset: 0x006B6CDE
+		// Token: 0x1700DCAE RID: 56494
+		// (get) Token: 0x060349A1 RID: 215457 RVA: 0x007141BE File Offset: 0x007123BE
+		// (set) Token: 0x060349A2 RID: 215458 RVA: 0x007141C6 File Offset: 0x007123C6
 		public EPlayMovieProgramSpecialConfigType Type { get; set; }
 
-		// Token: 0x060319A7 RID: 203175 RVA: 0x006B8AE7 File Offset: 0x006B6CE7
+		// Token: 0x060349A3 RID: 215459 RVA: 0x007141CF File Offset: 0x007123CF
 		public IProgramSpecialConfigBaseT()
 		{
 			this.Type = EPlayMovieProgramSpecialConfigType.Mp4UiReplaceMaterial;

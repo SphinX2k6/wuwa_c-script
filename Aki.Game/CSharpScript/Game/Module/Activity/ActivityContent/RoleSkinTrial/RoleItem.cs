@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 {
-	// Token: 0x020061B7 RID: 25015
+	// Token: 0x02005135 RID: 20789
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,10 +20,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 	})]
 	internal class RoleItem : GridProxyAbstract<RoleItemData>
 	{
-		// Token: 0x0603F2F9 RID: 258809 RVA: 0x00F447A4 File Offset: 0x00F429A4
+		// Token: 0x06033FB9 RID: 212921 RVA: 0x00E8B690 File Offset: 0x00E89890
 		protected unsafe override void OnRegisterComponent()
 		{
-			int num = 6;
+			int num = 7;
 			List<ValueTuple<int, Type>> list = new List<ValueTuple<int, Type>>(num);
 			CollectionsMarshal.SetCount<ValueTuple<int, Type>>(list, num);
 			Span<ValueTuple<int, Type>> span = CollectionsMarshal.AsSpan<ValueTuple<int, Type>>(list);
@@ -39,6 +39,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			*span[num2] = new ValueTuple<int, Type>(4, typeof(UUIItem));
 			num2++;
 			*span[num2] = new ValueTuple<int, Type>(5, typeof(UUITexture));
+			num2++;
+			*span[num2] = new ValueTuple<int, Type>(6, typeof(UUIItem));
 			this.ComponentRegisterInfos = list;
 			num2 = 1;
 			List<ValueTuple<int, Delegate>> list2 = new List<ValueTuple<int, Delegate>>(num2);
@@ -49,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F2FA RID: 258810 RVA: 0x00F448D0 File Offset: 0x00F42AD0
+		// Token: 0x06033FBA RID: 212922 RVA: 0x00E8B7DC File Offset: 0x00E899DC
 		protected override void OnStart()
 		{
 			this.Toggle = base.GetExtendToggle(0);
@@ -61,13 +63,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnStateChange));
 		}
 
-		// Token: 0x0603F2FB RID: 258811 RVA: 0x00F4493A File Offset: 0x00F42B3A
+		// Token: 0x06033FBB RID: 212923 RVA: 0x00E8B846 File Offset: 0x00E89A46
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnStateChange));
 		}
 
-		// Token: 0x0603F2FC RID: 258812 RVA: 0x00F44958 File Offset: 0x00F42B58
+		// Token: 0x06033FBC RID: 212924 RVA: 0x00E8B864 File Offset: 0x00E89A64
 		private void OnStateChange(int id)
 		{
 			RoleItemData data = this.Data;
@@ -77,15 +79,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 				return;
 			}
 			this.RefreshRedDot(this.Data);
+			this.RefreshFinishItem(this.Data.RoleSkinTrialData.GetRewardStateById(this.Data.RoleId) == ChallengeState.Finish);
 		}
 
-		// Token: 0x0603F2FD RID: 258813 RVA: 0x00F449A6 File Offset: 0x00F42BA6
+		// Token: 0x06033FBD RID: 212925 RVA: 0x00E8B8D6 File Offset: 0x00E89AD6
 		private bool CanToggleExecuteChangeInternal()
 		{
 			return this.CanToggleExecuteChange == null || this.CanToggleExecuteChange(this.RoleId);
 		}
 
-		// Token: 0x0603F2FE RID: 258814 RVA: 0x00F449C3 File Offset: 0x00F42BC3
+		// Token: 0x06033FBE RID: 212926 RVA: 0x00E8B8F3 File Offset: 0x00E89AF3
 		private void ToggleCallBackInternal(EToggleState _)
 		{
 			if (this.ToggleCallBack != null)
@@ -94,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			}
 		}
 
-		// Token: 0x0603F2FF RID: 258815 RVA: 0x00F449DE File Offset: 0x00F42BDE
+		// Token: 0x06033FBF RID: 212927 RVA: 0x00E8B910 File Offset: 0x00E89B10
 		public override void Refresh(RoleItemData data, bool isSelected, int gridIndex)
 		{
 			this.RoleId = data.RoleId;
@@ -103,15 +106,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			this.RefreshQualitySprite(this.RoleId);
 			this.RefreshRedDot(data);
 			this.RefreshToggleState(data.SelectState);
+			this.RefreshFinishItem(data.FinishState);
 		}
 
-		// Token: 0x0603F300 RID: 258816 RVA: 0x00F44A1E File Offset: 0x00F42C1E
+		// Token: 0x06033FC0 RID: 212928 RVA: 0x00E8B967 File Offset: 0x00E89B67
 		private void RefreshToggleState(bool selectState)
 		{
 			base.GetExtendToggle(0).SetToggleState(selectState ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603F301 RID: 258817 RVA: 0x00F44A38 File Offset: 0x00F42C38
+		// Token: 0x06033FC1 RID: 212929 RVA: 0x00E8B980 File Offset: 0x00E89B80
+		private void RefreshFinishItem(bool finishState)
+		{
+			base.GetItem(6).SetUIActive(finishState);
+		}
+
+		// Token: 0x06033FC2 RID: 212930 RVA: 0x00E8B990 File Offset: 0x00E89B90
 		private void RefreshRoleIcon(int roleId)
 		{
 			RoleSkinTrialInfo value = RoleSkinTrialConfig.Instance.GetRoleSkinTrialInfoById(roleId).Value;
@@ -122,7 +132,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			}
 		}
 
-		// Token: 0x0603F302 RID: 258818 RVA: 0x00F44A94 File Offset: 0x00F42C94
+		// Token: 0x06033FC3 RID: 212931 RVA: 0x00E8B9EC File Offset: 0x00E89BEC
 		private void RefreshQualitySprite(int roleId)
 		{
 			RoleSkinTrialInfo? roleSkinTrialInfoById = RoleSkinTrialConfig.Instance.GetRoleSkinTrialInfoById(roleId);
@@ -132,7 +142,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			sprite.SetColor(FColor.FromHex(((qualityConfig != null) ? qualityConfig.GetValueOrDefault().RoleTrialQualityColor : null) ?? ""));
 		}
 
-		// Token: 0x0603F303 RID: 258819 RVA: 0x00F44B18 File Offset: 0x00F42D18
+		// Token: 0x06033FC4 RID: 212932 RVA: 0x00E8BA70 File Offset: 0x00E89C70
 		public void RefreshRedDot(RoleItemData data)
 		{
 			int activityId = data.ActivityId;
@@ -142,42 +152,45 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinTrial
 			base.GetItem(4).SetUIActive(rewardStateById == ChallengeState.WaitTakeReward);
 		}
 
-		// Token: 0x04020EE6 RID: 134886
+		// Token: 0x0401B815 RID: 112661
 		protected int RoleId;
 
-		// Token: 0x04020EE7 RID: 134887
+		// Token: 0x0401B816 RID: 112662
 		private RoleItemData Data;
 
-		// Token: 0x04020EE8 RID: 134888
+		// Token: 0x0401B817 RID: 112663
 		protected UUIExtendToggle Toggle;
 
-		// Token: 0x04020EE9 RID: 134889
+		// Token: 0x0401B818 RID: 112664
 		public Func<int, bool> CanToggleExecuteChange;
 
-		// Token: 0x04020EEA RID: 134890
+		// Token: 0x0401B819 RID: 112665
 		public Action<RoleItemData> ToggleCallBack;
 
-		// Token: 0x0200C408 RID: 50184
+		// Token: 0x0200ADEF RID: 44527
 		[NullableContext(0)]
 		private class ERoleComponents
 		{
-			// Token: 0x0403B2BB RID: 242363
+			// Token: 0x04035C1C RID: 220188
 			public const int Toggle = 0;
 
-			// Token: 0x0403B2BC RID: 242364
+			// Token: 0x04035C1D RID: 220189
 			public const int SpriteNormal = 1;
 
-			// Token: 0x0403B2BD RID: 242365
+			// Token: 0x04035C1E RID: 220190
 			public const int SpriteHold = 2;
 
-			// Token: 0x0403B2BE RID: 242366
+			// Token: 0x04035C1F RID: 220191
 			public const int RoleIcon = 3;
 
-			// Token: 0x0403B2BF RID: 242367
+			// Token: 0x04035C20 RID: 220192
 			public const int RedDot = 4;
 
-			// Token: 0x0403B2C0 RID: 242368
+			// Token: 0x04035C21 RID: 220193
 			public const int RoleIconMask = 5;
+
+			// Token: 0x04035C22 RID: 220194
+			public const int FinishItem = 6;
 		}
 	}
 }

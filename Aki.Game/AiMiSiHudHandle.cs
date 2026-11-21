@@ -6,12 +6,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.BattleUi;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02001F28 RID: 7976
+// Token: 0x020013EA RID: 5098
 [NullableContext(1)]
 [Nullable(0)]
 public class AiMiSiHudHandle : HudUnitHandleBase
 {
-	// Token: 0x0600F5A0 RID: 62880 RVA: 0x003B4186 File Offset: 0x003B2386
+	// Token: 0x0600C9BF RID: 51647 RVA: 0x003BFC72 File Offset: 0x003BDE72
 	protected override void OnInitialize()
 	{
 		base.OnInitialize();
@@ -30,7 +30,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		});
 	}
 
-	// Token: 0x0600F5A1 RID: 62881 RVA: 0x003B41BD File Offset: 0x003B23BD
+	// Token: 0x0600C9C0 RID: 51648 RVA: 0x003BFCA9 File Offset: 0x003BDEA9
 	protected override void OnDestroyed()
 	{
 		if (this.HudUnit != null)
@@ -41,19 +41,19 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		this.ClearCurRoleData();
 	}
 
-	// Token: 0x0600F5A2 RID: 62882 RVA: 0x003B41E0 File Offset: 0x003B23E0
+	// Token: 0x0600C9C1 RID: 51649 RVA: 0x003BFCCC File Offset: 0x003BDECC
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.BattleUiCurRoleDataChanged, new Action<int, int>(this.OnChangeRole));
 	}
 
-	// Token: 0x0600F5A3 RID: 62883 RVA: 0x003B41FE File Offset: 0x003B23FE
+	// Token: 0x0600C9C2 RID: 51650 RVA: 0x003BFCEA File Offset: 0x003BDEEA
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<int, int>(EEventName.BattleUiCurRoleDataChanged, new Action<int, int>(this.OnChangeRole));
 	}
 
-	// Token: 0x0600F5A4 RID: 62884 RVA: 0x003B421C File Offset: 0x003B241C
+	// Token: 0x0600C9C3 RID: 51651 RVA: 0x003BFD08 File Offset: 0x003BDF08
 	private void OnChangeRole(int newEntityId, int oldEntityId)
 	{
 		this.RefreshCurRole();
@@ -62,7 +62,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		this.RefreshHp();
 	}
 
-	// Token: 0x0600F5A5 RID: 62885 RVA: 0x003B4238 File Offset: 0x003B2438
+	// Token: 0x0600C9C4 RID: 51652 RVA: 0x003BFD24 File Offset: 0x003BDF24
 	private void RefreshCurRole()
 	{
 		BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -166,7 +166,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		hudUnit3.MarkDataDirty();
 	}
 
-	// Token: 0x0600F5A6 RID: 62886 RVA: 0x003B46AC File Offset: 0x003B28AC
+	// Token: 0x0600C9C5 RID: 51653 RVA: 0x003C0198 File Offset: 0x003BE398
 	private void ClearCurRoleData()
 	{
 		if (this.RoleData != null)
@@ -204,7 +204,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		this.TagTaskList.Clear();
 	}
 
-	// Token: 0x0600F5A7 RID: 62887 RVA: 0x003B47CC File Offset: 0x003B29CC
+	// Token: 0x0600C9C6 RID: 51654 RVA: 0x003C02B8 File Offset: 0x003BE4B8
 	private void RefreshHudVisible()
 	{
 		AiMiSiHudUnit hudUnit = this.HudUnit;
@@ -215,7 +215,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		hudUnit.SetTargetVisible(this.RoleData != null);
 	}
 
-	// Token: 0x0600F5A8 RID: 62888 RVA: 0x003B47E7 File Offset: 0x003B29E7
+	// Token: 0x0600C9C7 RID: 51655 RVA: 0x003C02D3 File Offset: 0x003BE4D3
 	private void OnMechanismTagChanged(int tagId, bool tagExist)
 	{
 		this.Data.IsMechanism = tagExist;
@@ -227,7 +227,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		hudUnit.MarkDataDirty();
 	}
 
-	// Token: 0x0600F5A9 RID: 62889 RVA: 0x003B4805 File Offset: 0x003B2A05
+	// Token: 0x0600C9C8 RID: 51656 RVA: 0x003C02F1 File Offset: 0x003BE4F1
 	private void OnJointTagChanged(int tagId, bool tagExist)
 	{
 		this.Data.IsJoint = tagExist;
@@ -239,7 +239,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		hudUnit.MarkDataDirty();
 	}
 
-	// Token: 0x0600F5AA RID: 62890 RVA: 0x003B4823 File Offset: 0x003B2A23
+	// Token: 0x0600C9C9 RID: 51657 RVA: 0x003C030F File Offset: 0x003BE50F
 	private void OnSpecialJointTagChanged(int tagId, bool tagExist)
 	{
 		this.Data.IsSpecialJoint = tagExist;
@@ -251,7 +251,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		hudUnit.MarkDataDirty();
 	}
 
-	// Token: 0x0600F5AB RID: 62891 RVA: 0x003B4841 File Offset: 0x003B2A41
+	// Token: 0x0600C9CA RID: 51658 RVA: 0x003C032D File Offset: 0x003BE52D
 	private void OnSprintTagChanged(int tagId, bool tagExist)
 	{
 		this.Data.IsSprint = tagExist;
@@ -263,7 +263,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		hudUnit.MarkDataDirty();
 	}
 
-	// Token: 0x0600F5AC RID: 62892 RVA: 0x003B485F File Offset: 0x003B2A5F
+	// Token: 0x0600C9CB RID: 51659 RVA: 0x003C034B File Offset: 0x003BE54B
 	private void OnFightTagChanged(int tagId, bool tagExist)
 	{
 		this.Data.InFight = tagExist;
@@ -275,7 +275,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		hudUnit.MarkDataDirty();
 	}
 
-	// Token: 0x0600F5AD RID: 62893 RVA: 0x003B487D File Offset: 0x003B2A7D
+	// Token: 0x0600C9CC RID: 51660 RVA: 0x003C0369 File Offset: 0x003BE569
 	private void OnModeTagChanged(int tagId, bool tagExist)
 	{
 		this.Data.IsModeOne = tagExist;
@@ -287,7 +287,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		hudUnit.RefreshModeIcon();
 	}
 
-	// Token: 0x0600F5AE RID: 62894 RVA: 0x003B489B File Offset: 0x003B2A9B
+	// Token: 0x0600C9CD RID: 51661 RVA: 0x003C0387 File Offset: 0x003BE587
 	private void OnAirTagChanged(int tagId, bool tagExist)
 	{
 		this.Data.InAir = !tagExist;
@@ -299,7 +299,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		hudUnit.MarkDataDirty();
 	}
 
-	// Token: 0x0600F5AF RID: 62895 RVA: 0x003B48BC File Offset: 0x003B2ABC
+	// Token: 0x0600C9CE RID: 51662 RVA: 0x003C03A8 File Offset: 0x003BE5A8
 	private void OnUltraBuffTagChanged(int tagId, bool tagExist)
 	{
 		this.Data.IsUltraBuff = tagExist;
@@ -311,7 +311,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		hudUnit.MarkDataDirty();
 	}
 
-	// Token: 0x0600F5B0 RID: 62896 RVA: 0x003B48DA File Offset: 0x003B2ADA
+	// Token: 0x0600C9CF RID: 51663 RVA: 0x003C03C6 File Offset: 0x003BE5C6
 	private void OnEmptyEnduranceTagChanged(int tagId, bool tagExist)
 	{
 		this.Data.EmptyEndurance = tagExist;
@@ -323,7 +323,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		hudUnit.MarkDataDirty();
 	}
 
-	// Token: 0x0600F5B1 RID: 62897 RVA: 0x003B48F8 File Offset: 0x003B2AF8
+	// Token: 0x0600C9D0 RID: 51664 RVA: 0x003C03E4 File Offset: 0x003BE5E4
 	private void OnBeHit(global::HitInformation hitData, HitContext hitContext)
 	{
 		AiMiSiHudUnit hudUnit = this.HudUnit;
@@ -334,19 +334,19 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		hudUnit.OnHurt();
 	}
 
-	// Token: 0x0600F5B2 RID: 62898 RVA: 0x003B490A File Offset: 0x003B2B0A
+	// Token: 0x0600C9D1 RID: 51665 RVA: 0x003C03F6 File Offset: 0x003BE5F6
 	private void OnSprintAttributeChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		this.RefreshSprintAttribute();
 	}
 
-	// Token: 0x0600F5B3 RID: 62899 RVA: 0x003B4912 File Offset: 0x003B2B12
+	// Token: 0x0600C9D2 RID: 51666 RVA: 0x003C03FE File Offset: 0x003BE5FE
 	private void OnHpChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		this.RefreshHp();
 	}
 
-	// Token: 0x0600F5B4 RID: 62900 RVA: 0x003B491C File Offset: 0x003B2B1C
+	// Token: 0x0600C9D3 RID: 51667 RVA: 0x003C0408 File Offset: 0x003BE608
 	private void RefreshSprintAttribute()
 	{
 		if (this.HudUnit == null)
@@ -368,7 +368,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F5B5 RID: 62901 RVA: 0x003B4978 File Offset: 0x003B2B78
+	// Token: 0x0600C9D4 RID: 51668 RVA: 0x003C0464 File Offset: 0x003BE664
 	private void RefreshHp()
 	{
 		if (this.HudUnit == null)
@@ -390,7 +390,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		this.HudUnit.SetHpPercent(hpPercent);
 	}
 
-	// Token: 0x0600F5B6 RID: 62902 RVA: 0x003B49D4 File Offset: 0x003B2BD4
+	// Token: 0x0600C9D5 RID: 51669 RVA: 0x003C04C0 File Offset: 0x003BE6C0
 	private void ListenForTagAddOrRemove(int tagId, Action<int, bool> callback)
 	{
 		if (this.TagComponent == null)
@@ -404,7 +404,7 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F5B7 RID: 62903 RVA: 0x003B4A18 File Offset: 0x003B2C18
+	// Token: 0x0600C9D6 RID: 51670 RVA: 0x003C0504 File Offset: 0x003BE704
 	public override void OnInputControllerChanged(EInputControllerType last, EInputControllerType now)
 	{
 		if (this.HudUnit == null)
@@ -418,21 +418,21 @@ public class AiMiSiHudHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x040071AF RID: 29103
+	// Token: 0x04007290 RID: 29328
 	[Nullable(2)]
 	private AiMiSiHudUnit HudUnit;
 
-	// Token: 0x040071B0 RID: 29104
+	// Token: 0x04007291 RID: 29329
 	[Nullable(2)]
 	private BattleUiRoleData RoleData;
 
-	// Token: 0x040071B1 RID: 29105
+	// Token: 0x04007292 RID: 29330
 	[Nullable(2)]
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x040071B2 RID: 29106
+	// Token: 0x04007293 RID: 29331
 	private readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 
-	// Token: 0x040071B3 RID: 29107
+	// Token: 0x04007294 RID: 29332
 	private readonly AiMiSiHudData Data = new AiMiSiHudData();
 }

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.ChessGameplay.StackableChess
 {
-	// Token: 0x020068F7 RID: 26871
+	// Token: 0x02005847 RID: 22599
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class StackableChessboardPoint : ChessboardPoint
 	{
-		// Token: 0x0604304B RID: 274507 RVA: 0x01052C1C File Offset: 0x01050E1C
+		// Token: 0x06037BA3 RID: 228259 RVA: 0x00F94244 File Offset: 0x00F92444
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.ChessGameplay.Stacka
 			return new ValueTuple<Vector, Rotator>(vector, rotator);
 		}
 
-		// Token: 0x0604304C RID: 274508 RVA: 0x01052C68 File Offset: 0x01050E68
+		// Token: 0x06037BA4 RID: 228260 RVA: 0x00F94290 File Offset: 0x00F92490
 		public override void ItemEnter(ChessItem chessItem)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.ChessGameplay.Stacka
 			this.Length += num;
 		}
 
-		// Token: 0x0604304D RID: 274509 RVA: 0x01052D30 File Offset: 0x01050F30
+		// Token: 0x06037BA5 RID: 228261 RVA: 0x00F94358 File Offset: 0x00F92558
 		public override void ItemLeave(ChessItem chessItem)
 		{
 			StackableChessItem stackableChessItem = chessItem as StackableChessItem;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.ChessGameplay.Stacka
 			this.Length = num;
 		}
 
-		// Token: 0x0604304E RID: 274510 RVA: 0x01052DC0 File Offset: 0x01050FC0
+		// Token: 0x06037BA6 RID: 228262 RVA: 0x00F943E8 File Offset: 0x00F925E8
 		public override void ChangeItemToMaxPriority(ChessItem chessItem)
 		{
 			if (this.Length <= 1 || this.HeadItem == null || this.TailItem == null)
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.ChessGameplay.Stacka
 			stackableChessItem2.SetNextItem(nextItem);
 		}
 
-		// Token: 0x0604304F RID: 274511 RVA: 0x01052F1C File Offset: 0x0105111C
+		// Token: 0x06037BA7 RID: 228263 RVA: 0x00F94544 File Offset: 0x00F92744
 		public override int ComparePriority(ChessItem a, ChessItem b)
 		{
 			int id = a.GetId();
@@ -189,13 +189,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.ChessGameplay.Stacka
 			return 0;
 		}
 
-		// Token: 0x06043050 RID: 274512 RVA: 0x01052F70 File Offset: 0x01051170
+		// Token: 0x06037BA8 RID: 228264 RVA: 0x00F94598 File Offset: 0x00F92798
 		public bool HasItem()
 		{
 			return this.Length > 0;
 		}
 
-		// Token: 0x06043051 RID: 274513 RVA: 0x01052F7C File Offset: 0x0105117C
+		// Token: 0x06037BA9 RID: 228265 RVA: 0x00F945A4 File Offset: 0x00F927A4
 		[return: Nullable(2)]
 		public StackableChessItem FindPreviousItem(StackableChessItem targetItem)
 		{
@@ -213,22 +213,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.ChessGameplay.Stacka
 			return null;
 		}
 
-		// Token: 0x06043052 RID: 274514 RVA: 0x01052FBB File Offset: 0x010511BB
+		// Token: 0x06037BAA RID: 228266 RVA: 0x00F945E3 File Offset: 0x00F927E3
 		[NullableContext(2)]
 		public StackableChessItem GetHeadItem()
 		{
 			return this.HeadItem;
 		}
 
-		// Token: 0x04022E37 RID: 142903
+		// Token: 0x0401D693 RID: 120467
 		[Nullable(2)]
 		private StackableChessItem HeadItem;
 
-		// Token: 0x04022E38 RID: 142904
+		// Token: 0x0401D694 RID: 120468
 		[Nullable(2)]
 		private StackableChessItem TailItem;
 
-		// Token: 0x04022E39 RID: 142905
+		// Token: 0x0401D695 RID: 120469
 		private int Length;
 	}
 }

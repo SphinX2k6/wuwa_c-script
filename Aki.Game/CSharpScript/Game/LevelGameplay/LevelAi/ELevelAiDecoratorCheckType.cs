@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi
 {
-	// Token: 0x02006DAA RID: 28074
+	// Token: 0x02005F29 RID: 24361
 	public enum ELevelAiDecoratorCheckType
 	{
-		// Token: 0x04023A00 RID: 145920
+		// Token: 0x0401ECA2 RID: 126114
 		PlanEnter,
-		// Token: 0x04023A01 RID: 145921
+		// Token: 0x0401ECA3 RID: 126115
 		PlanRecheck,
-		// Token: 0x04023A02 RID: 145922
+		// Token: 0x0401ECA4 RID: 126116
 		PlanExecuting
 	}
 }

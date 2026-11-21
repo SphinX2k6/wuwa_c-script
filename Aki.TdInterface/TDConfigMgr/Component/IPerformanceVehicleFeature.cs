@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005F2 RID: 1522
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200068F RID: 1679
 	public class IPerformanceVehicleFeature : IVehicleFeature
 	{
-		// Token: 0x06002054 RID: 8276 RVA: 0x0005A168 File Offset: 0x00058368
+		// Token: 0x06002356 RID: 9046 RVA: 0x00060DE4 File Offset: 0x0005EFE4
 		private IPerformanceVehicleFeature_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002055 RID: 8277 RVA: 0x0005A1A0 File Offset: 0x000583A0
+		// Token: 0x06002357 RID: 9047 RVA: 0x00060E1C File Offset: 0x0005F01C
 		public static IPerformanceVehicleFeature Create([Nullable(2)] IPerformanceVehicleFeature instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002056 RID: 8278 RVA: 0x0005A1B3 File Offset: 0x000583B3
+		// Token: 0x06002358 RID: 9048 RVA: 0x00060E2F File Offset: 0x0005F02F
 		public static IPerformanceVehicleFeature CreateFromSetValue([Nullable(2)] IPerformanceVehicleFeature_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002057 RID: 8279 RVA: 0x0005A1C6 File Offset: 0x000583C6
+		// Token: 0x06002359 RID: 9049 RVA: 0x00060E42 File Offset: 0x0005F042
 		public new IPerformanceVehicleFeature_SetValue ToSetValue()
 		{
 			return new IPerformanceVehicleFeature_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700089E RID: 2206
-		// (get) Token: 0x06002058 RID: 8280 RVA: 0x0005A1E5 File Offset: 0x000583E5
-		// (set) Token: 0x06002059 RID: 8281 RVA: 0x0005A210 File Offset: 0x00058410
+		// Token: 0x17000953 RID: 2387
+		// (get) Token: 0x0600235A RID: 9050 RVA: 0x00060E61 File Offset: 0x0005F061
+		// (set) Token: 0x0600235B RID: 9051 RVA: 0x00060E8C File Offset: 0x0005F08C
 		public override EVehicleFeatureFlag Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700089F RID: 2207
-		// (get) Token: 0x0600205A RID: 8282 RVA: 0x0005A21E File Offset: 0x0005841E
-		// (set) Token: 0x0600205B RID: 8283 RVA: 0x0005A249 File Offset: 0x00058449
+		// Token: 0x17000954 RID: 2388
+		// (get) Token: 0x0600235C RID: 9052 RVA: 0x00060E9A File Offset: 0x0005F09A
+		// (set) Token: 0x0600235D RID: 9053 RVA: 0x00060EC5 File Offset: 0x0005F0C5
 		public virtual string PerformConfig
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040016B2 RID: 5810
+		// Token: 0x040018A2 RID: 6306
 		[Nullable(2)]
 		protected new IPerformanceVehicleFeature FbInstance;
 
-		// Token: 0x040016B3 RID: 5811
+		// Token: 0x040018A3 RID: 6307
 		[Nullable(2)]
 		protected new IPerformanceVehicleFeature_SetValue PocoInterface;
 	}

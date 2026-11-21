@@ -5,19 +5,19 @@ using Aki.Config;
 using CSharpScript.Game.Module.RoleDev;
 using CSharpScript.Game.Module.RoleUi.RoleDevelop;
 
-// Token: 0x0200281C RID: 10268
+// Token: 0x02001D97 RID: 7575
 [NullableContext(1)]
 [Nullable(0)]
 public class ForecastRoleDevSkillData : RoleDevSkillViewItemDataBase
 {
-	// Token: 0x060151B8 RID: 86456 RVA: 0x00557AF0 File Offset: 0x00555CF0
+	// Token: 0x06012BB8 RID: 76728 RVA: 0x005828F0 File Offset: 0x00580AF0
 	protected override void InitByRoleType(int roleId, RoleDevViewModel roleDevViewModel)
 	{
 		this.RoleDevViewModelInternal = roleDevViewModel;
 		this.InitSkillData(roleId);
 	}
 
-	// Token: 0x060151B9 RID: 86457 RVA: 0x00557B00 File Offset: 0x00555D00
+	// Token: 0x06012BB9 RID: 76729 RVA: 0x00582900 File Offset: 0x00580B00
 	private void InitSkillData(int roleId)
 	{
 		IRoleDevProsProjectConfig roleDevProsProjectConfig = RoleDevConfig.Instance.GetRoleDevProsProjectConfig(roleId);
@@ -89,38 +89,38 @@ public class ForecastRoleDevSkillData : RoleDevSkillViewItemDataBase
 		this.PerfectDetailItemsInternal = list2;
 	}
 
-	// Token: 0x060151BA RID: 86458 RVA: 0x00557D5C File Offset: 0x00555F5C
+	// Token: 0x06012BBA RID: 76730 RVA: 0x00582B5C File Offset: 0x00580D5C
 	protected override bool GetIsRoleOwned()
 	{
 		return false;
 	}
 
-	// Token: 0x060151BB RID: 86459 RVA: 0x00557D5F File Offset: 0x00555F5F
+	// Token: 0x06012BBB RID: 76731 RVA: 0x00582B5F File Offset: 0x00580D5F
 	protected override bool GetIsPerfectPlan()
 	{
 		RoleDevViewModel roleDevViewModelInternal = this.RoleDevViewModelInternal;
 		return roleDevViewModelInternal == null || roleDevViewModelInternal.GetRoleSkillPlanState(base.RoleId);
 	}
 
-	// Token: 0x060151BC RID: 86460 RVA: 0x00557D78 File Offset: 0x00555F78
+	// Token: 0x06012BBC RID: 76732 RVA: 0x00582B78 File Offset: 0x00580D78
 	protected override bool GetIsNormalPlanFinished()
 	{
 		return false;
 	}
 
-	// Token: 0x060151BD RID: 86461 RVA: 0x00557D7B File Offset: 0x00555F7B
+	// Token: 0x06012BBD RID: 76733 RVA: 0x00582B7B File Offset: 0x00580D7B
 	protected override bool GetIsPerfectPlanFinished()
 	{
 		return false;
 	}
 
-	// Token: 0x060151BE RID: 86462 RVA: 0x00557D7E File Offset: 0x00555F7E
+	// Token: 0x06012BBE RID: 76734 RVA: 0x00582B7E File Offset: 0x00580D7E
 	protected override List<global::ISkillSlotExtendData> GetSkillSlots()
 	{
 		return this.SkillSlotsInternal;
 	}
 
-	// Token: 0x060151BF RID: 86463 RVA: 0x00557D86 File Offset: 0x00555F86
+	// Token: 0x06012BBF RID: 76735 RVA: 0x00582B86 File Offset: 0x00580D86
 	protected override List<int> GetSkillGoalUpgradeLevel()
 	{
 		return new List<int>
@@ -133,25 +133,25 @@ public class ForecastRoleDevSkillData : RoleDevSkillViewItemDataBase
 		};
 	}
 
-	// Token: 0x060151C0 RID: 86464 RVA: 0x00557DB5 File Offset: 0x00555FB5
+	// Token: 0x06012BC0 RID: 76736 RVA: 0x00582BB5 File Offset: 0x00580DB5
 	protected override List<global::IRoleDevDetailItemData> GetNormalDetailItems()
 	{
 		return this.DetailItemsInternal;
 	}
 
-	// Token: 0x060151C1 RID: 86465 RVA: 0x00557DBD File Offset: 0x00555FBD
+	// Token: 0x06012BC1 RID: 76737 RVA: 0x00582BBD File Offset: 0x00580DBD
 	protected override bool GetIsNormalAllMaterialEnough()
 	{
 		return RoleDevUtils.CheckAllItemsUp(this.DetailItemsInternal);
 	}
 
-	// Token: 0x060151C2 RID: 86466 RVA: 0x00557DCA File Offset: 0x00555FCA
+	// Token: 0x06012BC2 RID: 76738 RVA: 0x00582BCA File Offset: 0x00580DCA
 	protected override bool GetIsUnlockedPerfect()
 	{
 		return true;
 	}
 
-	// Token: 0x060151C3 RID: 86467 RVA: 0x00557DCD File Offset: 0x00555FCD
+	// Token: 0x06012BC3 RID: 76739 RVA: 0x00582BCD File Offset: 0x00580DCD
 	protected override List<int> GetPerfectGoalUpgradeLevel()
 	{
 		return new List<int>
@@ -164,57 +164,57 @@ public class ForecastRoleDevSkillData : RoleDevSkillViewItemDataBase
 		};
 	}
 
-	// Token: 0x060151C4 RID: 86468 RVA: 0x00557DFC File Offset: 0x00555FFC
+	// Token: 0x06012BC4 RID: 76740 RVA: 0x00582BFC File Offset: 0x00580DFC
 	protected override List<global::IRoleDevDetailItemData> GetPerfectDetailItems()
 	{
 		return this.PerfectDetailItemsInternal;
 	}
 
-	// Token: 0x060151C5 RID: 86469 RVA: 0x00557E04 File Offset: 0x00556004
+	// Token: 0x06012BC5 RID: 76741 RVA: 0x00582C04 File Offset: 0x00580E04
 	protected override bool GetIsPerfectMaterialEnough()
 	{
 		return RoleDevUtils.CheckAllItemsUp(this.PerfectDetailItemsInternal);
 	}
 
-	// Token: 0x060151C6 RID: 86470 RVA: 0x00557E11 File Offset: 0x00556011
+	// Token: 0x06012BC6 RID: 76742 RVA: 0x00582C11 File Offset: 0x00580E11
 	protected override bool GetIsBreakthroughLevelLow()
 	{
 		return false;
 	}
 
-	// Token: 0x060151C7 RID: 86471 RVA: 0x00557E14 File Offset: 0x00556014
+	// Token: 0x06012BC7 RID: 76743 RVA: 0x00582C14 File Offset: 0x00580E14
 	protected override bool GetIsHideMaterialList()
 	{
 		return false;
 	}
 
-	// Token: 0x060151C8 RID: 86472 RVA: 0x00557E17 File Offset: 0x00556017
+	// Token: 0x06012BC8 RID: 76744 RVA: 0x00582C17 File Offset: 0x00580E17
 	protected override bool GetIsForecast()
 	{
 		return true;
 	}
 
-	// Token: 0x060151C9 RID: 86473 RVA: 0x00557E1A File Offset: 0x0055601A
+	// Token: 0x06012BC9 RID: 76745 RVA: 0x00582C1A File Offset: 0x00580E1A
 	protected override bool GetShouldForcePerfectPlan()
 	{
 		return true;
 	}
 
-	// Token: 0x060151CA RID: 86474 RVA: 0x00557E1D File Offset: 0x0055601D
+	// Token: 0x06012BCA RID: 76746 RVA: 0x00582C1D File Offset: 0x00580E1D
 	public override void SwitchPlan()
 	{
 	}
 
-	// Token: 0x04009E46 RID: 40518
+	// Token: 0x0400A22F RID: 41519
 	private List<global::ISkillSlotExtendData> SkillSlotsInternal = new List<global::ISkillSlotExtendData>();
 
-	// Token: 0x04009E47 RID: 40519
+	// Token: 0x0400A230 RID: 41520
 	private List<global::IRoleDevDetailItemData> DetailItemsInternal = new List<global::IRoleDevDetailItemData>();
 
-	// Token: 0x04009E48 RID: 40520
+	// Token: 0x0400A231 RID: 41521
 	private List<global::IRoleDevDetailItemData> PerfectDetailItemsInternal = new List<global::IRoleDevDetailItemData>();
 
-	// Token: 0x04009E49 RID: 40521
+	// Token: 0x0400A232 RID: 41522
 	[Nullable(2)]
 	private RoleDevViewModel RoleDevViewModelInternal;
 }

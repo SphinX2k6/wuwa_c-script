@@ -2,25 +2,32 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009C0 RID: 2496
+	// Token: 0x02000A81 RID: 2689
 	public static class EPasserbyNpcSpawnTypeExtensions
 	{
-		// Token: 0x06003791 RID: 14225 RVA: 0x00090874 File Offset: 0x0008EA74
+		// Token: 0x06003B57 RID: 15191 RVA: 0x00098F0C File Offset: 0x0009710C
 		public static string ToEnumString(this EPasserbyNpcSpawnType value)
 		{
 			string result;
-			if (value == EPasserbyNpcSpawnType.FixInterval)
+			if (value != EPasserbyNpcSpawnType.FixInterval)
 			{
-				result = "FixInterval";
+				if (value != EPasserbyNpcSpawnType.OnceOnConditionMet)
+				{
+					result = value.ToString();
+				}
+				else
+				{
+					result = "OnceOnConditionMet";
+				}
 			}
 			else
 			{
-				result = value.ToString();
+				result = "FixInterval";
 			}
 			return result;
 		}
 
-		// Token: 0x06003792 RID: 14226 RVA: 0x0009089C File Offset: 0x0008EA9C
+		// Token: 0x06003B58 RID: 15192 RVA: 0x00098F44 File Offset: 0x00097144
 		public static EPasserbyNpcSpawnType FromString(string name)
 		{
 			EPasserbyNpcSpawnType result;
@@ -31,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003793 RID: 14227 RVA: 0x000908C5 File Offset: 0x0008EAC5
+		// Token: 0x06003B59 RID: 15193 RVA: 0x00098F6D File Offset: 0x0009716D
 		public static bool TryFromString(string name, out EPasserbyNpcSpawnType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -44,31 +51,42 @@ namespace Aki.TDConfigMgr.Component
 				value = EPasserbyNpcSpawnType.FixInterval;
 				return true;
 			}
-			value = EPasserbyNpcSpawnType.FixInterval;
-			return false;
+			if (!(name == "OnceOnConditionMet"))
+			{
+				value = EPasserbyNpcSpawnType.FixInterval;
+				return false;
+			}
+			value = EPasserbyNpcSpawnType.OnceOnConditionMet;
+			return true;
 		}
 
-		// Token: 0x06003794 RID: 14228 RVA: 0x000908EA File Offset: 0x0008EAEA
+		// Token: 0x06003B5A RID: 15194 RVA: 0x00098FA6 File Offset: 0x000971A6
 		public static string[] GetStringValues()
 		{
 			return new string[]
 			{
-				"FixInterval"
+				"FixInterval",
+				"OnceOnConditionMet"
 			};
 		}
 
-		// Token: 0x06003795 RID: 14229 RVA: 0x000908FA File Offset: 0x0008EAFA
+		// Token: 0x06003B5B RID: 15195 RVA: 0x00098FBE File Offset: 0x000971BE
 		public static EPasserbyNpcSpawnType[] GetValues()
 		{
-			return new EPasserbyNpcSpawnType[1];
+			return new EPasserbyNpcSpawnType[]
+			{
+				EPasserbyNpcSpawnType.FixInterval,
+				EPasserbyNpcSpawnType.OnceOnConditionMet
+			};
 		}
 
-		// Token: 0x06003796 RID: 14230 RVA: 0x00090902 File Offset: 0x0008EB02
+		// Token: 0x06003B5C RID: 15196 RVA: 0x00098FCA File Offset: 0x000971CA
 		public static string[] GetNames()
 		{
 			return new string[]
 			{
-				"FixInterval"
+				"FixInterval",
+				"OnceOnConditionMet"
 			};
 		}
 	}

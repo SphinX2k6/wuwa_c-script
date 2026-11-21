@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006321 RID: 25377
+	// Token: 0x02006992 RID: 27026
 	public class IChangeSelfEntityStateT
 	{
-		// Token: 0x1700BD6F RID: 48495
-		// (get) Token: 0x0602BE59 RID: 179801 RVA: 0x0060901D File Offset: 0x0060721D
-		// (set) Token: 0x0602BE5A RID: 179802 RVA: 0x00609025 File Offset: 0x00607225
+		// Token: 0x1700C6F9 RID: 50937
+		// (get) Token: 0x0602E5C2 RID: 189890 RVA: 0x00654029 File Offset: 0x00652229
+		// (set) Token: 0x0602E5C3 RID: 189891 RVA: 0x00654031 File Offset: 0x00652231
 		public string EntityState { get; set; }
 
-		// Token: 0x0602BE5B RID: 179803 RVA: 0x0060902E File Offset: 0x0060722E
+		// Token: 0x0602E5C4 RID: 189892 RVA: 0x0065403A File Offset: 0x0065223A
 		public IChangeSelfEntityStateT()
 		{
 			this.EntityState = null;

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D2B RID: 3371
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E25 RID: 3621
 	public class CharacterConnectorComponent : IComponentBase
 	{
-		// Token: 0x06004CEC RID: 19692 RVA: 0x000BF6DE File Offset: 0x000BD8DE
+		// Token: 0x06005208 RID: 21000 RVA: 0x000CAE22 File Offset: 0x000C9022
 		public static CharacterConnectorComponent Create(ICharacterConnectorComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001853 RID: 6227
-		// (get) Token: 0x06004CED RID: 19693 RVA: 0x000BF700 File Offset: 0x000BD900
+		// Token: 0x170019B9 RID: 6585
+		// (get) Token: 0x06005209 RID: 21001 RVA: 0x000CAE44 File Offset: 0x000C9044
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001854 RID: 6228
-		// (get) Token: 0x06004CEE RID: 19694 RVA: 0x000BF738 File Offset: 0x000BD938
+		// Token: 0x170019BA RID: 6586
+		// (get) Token: 0x0600520A RID: 21002 RVA: 0x000CAE7C File Offset: 0x000C907C
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001855 RID: 6229
-		// (get) Token: 0x06004CEF RID: 19695 RVA: 0x000BF74E File Offset: 0x000BD94E
+		// Token: 0x170019BB RID: 6587
+		// (get) Token: 0x0600520B RID: 21003 RVA: 0x000CAE92 File Offset: 0x000C9092
 		public virtual ICharacterConnectorRange LogicType
 		{
 			get
@@ -62,14 +60,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C0A RID: 11274
+		// Token: 0x04002ECA RID: 11978
 		private ICharacterConnectorComponent Instance;
 
-		// Token: 0x04002C0B RID: 11275
+		// Token: 0x04002ECB RID: 11979
 		[Nullable(2)]
 		private ICharacterConnectorRange _LogicTypeCache;
 
-		// Token: 0x04002C0C RID: 11276
+		// Token: 0x04002ECC RID: 11980
 		private bool _LogicTypeInited;
 	}
 }

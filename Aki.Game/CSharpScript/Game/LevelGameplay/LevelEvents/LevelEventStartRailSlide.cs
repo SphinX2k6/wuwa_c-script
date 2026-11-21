@@ -6,15 +6,15 @@ using CSharpScript.Game.NewWorld.Character.Common.Controller;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B98 RID: 27544
+	// Token: 0x02005D10 RID: 23824
 	public class LevelEventStartRailSlide : LevelEventBase
 	{
-		// Token: 0x060442D7 RID: 279255 RVA: 0x010CD061 File Offset: 0x010CB261
+		// Token: 0x0603A42B RID: 238635 RVA: 0x01076E99 File Offset: 0x01075099
 		public LevelEventStartRailSlide(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060442D8 RID: 279256 RVA: 0x010CD06C File Offset: 0x010CB26C
+		// Token: 0x0603A42C RID: 238636 RVA: 0x01076EA4 File Offset: 0x010750A4
 		[NullableContext(1)]
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

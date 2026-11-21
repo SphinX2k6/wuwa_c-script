@@ -9,39 +9,39 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x0200280F RID: 10255
+// Token: 0x02001D8A RID: 7562
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class RoleDevController : UiControllerBase
 {
-	// Token: 0x060150CD RID: 86221 RVA: 0x00554955 File Offset: 0x00552B55
+	// Token: 0x06012ACD RID: 76493 RVA: 0x0057F755 File Offset: 0x0057D955
 	protected override void OnRegisterNetEvent()
 	{
 	}
 
-	// Token: 0x060150CE RID: 86222 RVA: 0x00554957 File Offset: 0x00552B57
+	// Token: 0x06012ACE RID: 76494 RVA: 0x0057F757 File Offset: 0x0057D957
 	protected override void OnUnRegisterNetEvent()
 	{
 	}
 
-	// Token: 0x060150CF RID: 86223 RVA: 0x00554959 File Offset: 0x00552B59
+	// Token: 0x06012ACF RID: 76495 RVA: 0x0057F759 File Offset: 0x0057D959
 	protected override void OnAddEvents()
 	{
 	}
 
-	// Token: 0x060150D0 RID: 86224 RVA: 0x0055495B File Offset: 0x00552B5B
+	// Token: 0x06012AD0 RID: 76496 RVA: 0x0057F75B File Offset: 0x0057D95B
 	protected override void OnRemoveEvents()
 	{
 	}
 
-	// Token: 0x060150D1 RID: 86225 RVA: 0x0055495D File Offset: 0x00552B5D
+	// Token: 0x06012AD1 RID: 76497 RVA: 0x0057F75D File Offset: 0x0057D95D
 	private void OnLoadingNetDataDone()
 	{
 		this.RequestRoleDevelopConfig(null);
 	}
 
-	// Token: 0x060150D2 RID: 86226 RVA: 0x00554968 File Offset: 0x00552B68
+	// Token: 0x06012AD2 RID: 76498 RVA: 0x0057F768 File Offset: 0x0057D968
 	public UniTask RequestRoleDevelopConfigAndOpenView(int roleId)
 	{
 		RoleDevController.<RequestRoleDevelopConfigAndOpenView>d__5 <RequestRoleDevelopConfigAndOpenView>d__;
@@ -53,13 +53,13 @@ public class RoleDevController : UiControllerBase
 		return <RequestRoleDevelopConfigAndOpenView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060150D3 RID: 86227 RVA: 0x005549B3 File Offset: 0x00552BB3
+	// Token: 0x06012AD3 RID: 76499 RVA: 0x0057F7B3 File Offset: 0x0057D9B3
 	public void OpenRoleDevelopView(int roleId)
 	{
 		UiManager.Instance.OpenView(EUiViewName.RoleDevRootView, roleId, null);
 	}
 
-	// Token: 0x060150D4 RID: 86228 RVA: 0x005549CC File Offset: 0x00552BCC
+	// Token: 0x06012AD4 RID: 76500 RVA: 0x0057F7CC File Offset: 0x0057D9CC
 	[NullableContext(2)]
 	public void RequestRoleDevelopConfig(Action callback = null)
 	{
@@ -99,7 +99,7 @@ public class RoleDevController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060150D5 RID: 86229 RVA: 0x00554A1C File Offset: 0x00552C1C
+	// Token: 0x06012AD5 RID: 76501 RVA: 0x0057F81C File Offset: 0x0057DA1C
 	public void RequestRecordRoleMarkOperation(int roleId)
 	{
 		RoleUpdateDevelopTargetRequest roleUpdateDevelopTargetRequest = RoleUpdateDevelopTargetRequest.Create();
@@ -120,12 +120,12 @@ public class RoleDevController : UiControllerBase
 			}
 			if (roleUpdateDevelopTargetResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(roleUpdateDevelopTargetResponse.ErrorCode, 29361, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(roleUpdateDevelopTargetResponse.ErrorCode, 29614, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x060150D6 RID: 86230 RVA: 0x00554A70 File Offset: 0x00552C70
+	// Token: 0x06012AD6 RID: 76502 RVA: 0x0057F870 File Offset: 0x0057DA70
 	private void HandleRoleUpdateDevelopTargetNotify(RoleUpdateDevelopTargetNotify notify, [Nullable(2)] Net.CallbackStatus _)
 	{
 		int roleId = notify.RoleId;
@@ -136,7 +136,7 @@ public class RoleDevController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RoleDevTargetRoleIdChange);
 	}
 
-	// Token: 0x060150D7 RID: 86231 RVA: 0x00554AA8 File Offset: 0x00552CA8
+	// Token: 0x06012AD7 RID: 76503 RVA: 0x0057F8A8 File Offset: 0x0057DAA8
 	private void HandleRoleDevelopConfigUpdateNotify(RoleDevelopConfigUpdateNotify notify, [Nullable(2)] Net.CallbackStatus _)
 	{
 		RoleDevelopConfigs configs = notify.Configs;
@@ -148,7 +148,7 @@ public class RoleDevController : UiControllerBase
 		RoleDevModel.Instance.UpdateRoleDevConfig(configs);
 	}
 
-	// Token: 0x060150D8 RID: 86232 RVA: 0x00554AEC File Offset: 0x00552CEC
+	// Token: 0x06012AD8 RID: 76504 RVA: 0x0057F8EC File Offset: 0x0057DAEC
 	[NullableContext(2)]
 	private unsafe RoleDevLogEvent BuildRoleDevLogEvent(int roleId, ERoleDevMainPage mainPage, ERoleDevSubPageButton subPage)
 	{
@@ -181,7 +181,7 @@ public class RoleDevController : UiControllerBase
 		return result;
 	}
 
-	// Token: 0x060150D9 RID: 86233 RVA: 0x00554BBC File Offset: 0x00552DBC
+	// Token: 0x06012AD9 RID: 76505 RVA: 0x0057F9BC File Offset: 0x0057DBBC
 	private unsafe CSharpScript.Game.Module.RoleUi.RoleDev.Define.ERoleType GetRoleType(int roleId)
 	{
 		CSharpScript.Game.Module.RoleUi.RoleDev.Define.ERoleType result;
@@ -211,7 +211,7 @@ public class RoleDevController : UiControllerBase
 		return result;
 	}
 
-	// Token: 0x060150DA RID: 86234 RVA: 0x00554C58 File Offset: 0x00552E58
+	// Token: 0x06012ADA RID: 76506 RVA: 0x0057FA58 File Offset: 0x0057DC58
 	public void LogRoleDevPageClick(int roleId, ERoleDevMainPage mainPage)
 	{
 		RoleDevLogEvent roleDevLogEvent = this.BuildRoleDevLogEvent(roleId, mainPage, ERoleDevSubPageButton.None);
@@ -221,7 +221,7 @@ public class RoleDevController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060150DB RID: 86235 RVA: 0x00554C80 File Offset: 0x00552E80
+	// Token: 0x06012ADB RID: 76507 RVA: 0x0057FA80 File Offset: 0x0057DC80
 	public void LogRoleDevSubPageClick(int roleId, ERoleDevMainPage mainPage, ERoleDevSubPageButton subPage)
 	{
 		RoleDevLogEvent roleDevLogEvent = this.BuildRoleDevLogEvent(roleId, mainPage, subPage);
@@ -231,8 +231,8 @@ public class RoleDevController : UiControllerBase
 		}
 	}
 
-	// Token: 0x17001BCF RID: 7119
-	// (get) Token: 0x060150DC RID: 86236 RVA: 0x00554CA5 File Offset: 0x00552EA5
+	// Token: 0x17001C27 RID: 7207
+	// (get) Token: 0x06012ADC RID: 76508 RVA: 0x0057FAA5 File Offset: 0x0057DCA5
 	public static RoleDevController Instance
 	{
 		get
@@ -241,7 +241,7 @@ public class RoleDevController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060150DD RID: 86237 RVA: 0x00554CAC File Offset: 0x00552EAC
+	// Token: 0x06012ADD RID: 76509 RVA: 0x0057FAAC File Offset: 0x0057DCAC
 	public static RoleDevController GetOrCreateInstance()
 	{
 		if (RoleDevController._Instance == null)
@@ -251,7 +251,7 @@ public class RoleDevController : UiControllerBase
 		return RoleDevController._Instance;
 	}
 
-	// Token: 0x060150DE RID: 86238 RVA: 0x00554CC0 File Offset: 0x00552EC0
+	// Token: 0x06012ADE RID: 76510 RVA: 0x0057FAC0 File Offset: 0x0057DCC0
 	public static bool CreateInstance()
 	{
 		if (RoleDevController._Instance != null)
@@ -262,24 +262,24 @@ public class RoleDevController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060150DF RID: 86239 RVA: 0x00554CD6 File Offset: 0x00552ED6
+	// Token: 0x06012ADF RID: 76511 RVA: 0x0057FAD6 File Offset: 0x0057DCD6
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060150E0 RID: 86240 RVA: 0x00554CD8 File Offset: 0x00552ED8
+	// Token: 0x06012AE0 RID: 76512 RVA: 0x0057FAD8 File Offset: 0x0057DCD8
 	public static void ResetStaticDefaultValue()
 	{
 		RoleDevController._Instance = null;
 	}
 
-	// Token: 0x060150E1 RID: 86241 RVA: 0x00554CE0 File Offset: 0x00552EE0
+	// Token: 0x06012AE1 RID: 76513 RVA: 0x0057FAE0 File Offset: 0x0057DCE0
 	static RoleDevController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleDevController.CreateStaticDefaultValue), new Action(RoleDevController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009E2E RID: 40494
+	// Token: 0x0400A217 RID: 41495
 	[Nullable(2)]
 	private static RoleDevController _Instance;
 }

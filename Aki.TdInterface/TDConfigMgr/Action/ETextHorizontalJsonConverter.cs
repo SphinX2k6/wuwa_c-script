@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200246E RID: 9326
+	// Token: 0x0200270F RID: 9999
 	public class ETextHorizontalJsonConverter : JsonConverter<ETextHorizontal>
 	{
-		// Token: 0x0600CA6F RID: 51823 RVA: 0x001DCC6C File Offset: 0x001DAE6C
+		// Token: 0x0600D71F RID: 55071 RVA: 0x001F6D20 File Offset: 0x001F4F20
 		public override ETextHorizontal Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ETextHorizontalExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600CA70 RID: 51824 RVA: 0x001DCC90 File Offset: 0x001DAE90
+		// Token: 0x0600D720 RID: 55072 RVA: 0x001F6D44 File Offset: 0x001F4F44
 		public override void Write(Utf8JsonWriter writer, ETextHorizontal value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

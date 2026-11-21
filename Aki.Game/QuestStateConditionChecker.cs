@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002A71 RID: 10865
+// Token: 0x02001FEC RID: 8172
 public class QuestStateConditionChecker : ISkipConditionChecker
 {
-	// Token: 0x06016A14 RID: 92692 RVA: 0x005BC187 File Offset: 0x005BA387
+	// Token: 0x06014435 RID: 82997 RVA: 0x005E830F File Offset: 0x005E650F
 	[NullableContext(1)]
 	public ISkipCondition<ESkipConditionType> Parse(int[] @params)
 	{
@@ -16,7 +16,7 @@ public class QuestStateConditionChecker : ISkipConditionChecker
 		};
 	}
 
-	// Token: 0x06016A15 RID: 92693 RVA: 0x005BC1A8 File Offset: 0x005BA3A8
+	// Token: 0x06014436 RID: 82998 RVA: 0x005E8330 File Offset: 0x005E6530
 	[NullableContext(1)]
 	public bool Check(int[] @params)
 	{

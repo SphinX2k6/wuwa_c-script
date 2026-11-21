@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015B2 RID: 5554
+	// Token: 0x02001712 RID: 5906
 	public enum EClientTeleportType
 	{
-		// Token: 0x040049F0 RID: 18928
+		// Token: 0x04004DA5 RID: 19877
 		RelativeEntityPos,
-		// Token: 0x040049F1 RID: 18929
+		// Token: 0x04004DA6 RID: 19878
 		ToStreamingTargetPoint
 	}
 }

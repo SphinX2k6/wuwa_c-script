@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004179 RID: 16761
+	// Token: 0x020045C0 RID: 17856
 	public class ITakePhoto2CameraFovConditionT
 	{
-		// Token: 0x170076B0 RID: 30384
-		// (get) Token: 0x060189F5 RID: 100853 RVA: 0x0038BC98 File Offset: 0x00389E98
-		// (set) Token: 0x060189F6 RID: 100854 RVA: 0x0038BCA0 File Offset: 0x00389EA0
+		// Token: 0x17007CC4 RID: 31940
+		// (get) Token: 0x0601A0D7 RID: 106711 RVA: 0x003B65D0 File Offset: 0x003B47D0
+		// (set) Token: 0x0601A0D8 RID: 106712 RVA: 0x003B65D8 File Offset: 0x003B47D8
 		public int MinFov { get; set; }
 
-		// Token: 0x170076B1 RID: 30385
-		// (get) Token: 0x060189F7 RID: 100855 RVA: 0x0038BCA9 File Offset: 0x00389EA9
-		// (set) Token: 0x060189F8 RID: 100856 RVA: 0x0038BCB1 File Offset: 0x00389EB1
+		// Token: 0x17007CC5 RID: 31941
+		// (get) Token: 0x0601A0D9 RID: 106713 RVA: 0x003B65E1 File Offset: 0x003B47E1
+		// (set) Token: 0x0601A0DA RID: 106714 RVA: 0x003B65E9 File Offset: 0x003B47E9
 		public int MaxFov { get; set; }
 
-		// Token: 0x060189F9 RID: 100857 RVA: 0x0038BCBA File Offset: 0x00389EBA
+		// Token: 0x0601A0DB RID: 106715 RVA: 0x003B65F2 File Offset: 0x003B47F2
 		public ITakePhoto2CameraFovConditionT()
 		{
 			this.MinFov = 0;

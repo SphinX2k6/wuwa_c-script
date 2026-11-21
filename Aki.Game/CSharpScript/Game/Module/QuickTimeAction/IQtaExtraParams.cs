@@ -3,20 +3,20 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuickTimeAction
 {
-	// Token: 0x02004F33 RID: 20275
+	// Token: 0x02003EFC RID: 16124
 	public class IQtaExtraParams
 	{
-		// Token: 0x0401B9F3 RID: 113139
+		// Token: 0x040163C8 RID: 91080
 		public long? MessageId;
 
-		// Token: 0x0401B9F4 RID: 113140
+		// Token: 0x040163C9 RID: 91081
 		[Nullable(2)]
 		public EntityHandle EntityHandle;
 
-		// Token: 0x0401B9F5 RID: 113141
+		// Token: 0x040163CA RID: 91082
 		public int? FromSkill;
 
-		// Token: 0x0401B9F6 RID: 113142
+		// Token: 0x040163CB RID: 91083
 		public bool? IsPendingExternalCompletion;
 	}
 }

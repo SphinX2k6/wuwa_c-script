@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D73 RID: 19827
+	// Token: 0x02005272 RID: 21106
 	public enum EBeamLayoutType : byte
 	{
-		// Token: 0x0400D7FD RID: 55293
+		// Token: 0x0400E337 RID: 58167
 		BeamWall
 	}
 }

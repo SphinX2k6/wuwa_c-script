@@ -4,38 +4,38 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060C4 RID: 24772
+	// Token: 0x02005042 RID: 20546
 	[NullableContext(1)]
 	public interface IAbyssRolePanelData : ISolarSpeedRolePanelData
 	{
-		// Token: 0x17009119 RID: 37145
-		// (get) Token: 0x0603EA1A RID: 256538
-		// (set) Token: 0x0603EA1B RID: 256539
+		// Token: 0x1700647B RID: 25723
+		// (get) Token: 0x060336DE RID: 210654
+		// (set) Token: 0x060336DF RID: 210655
 		List<IAbyssDescData> MainDescData { get; set; }
 
-		// Token: 0x1700911A RID: 37146
-		// (get) Token: 0x0603EA1C RID: 256540
-		// (set) Token: 0x0603EA1D RID: 256541
+		// Token: 0x1700647C RID: 25724
+		// (get) Token: 0x060336E0 RID: 210656
+		// (set) Token: 0x060336E1 RID: 210657
 		List<IAbyssDescData> SubDescData { get; set; }
 
-		// Token: 0x1700911B RID: 37147
-		// (get) Token: 0x0603EA1E RID: 256542
-		// (set) Token: 0x0603EA1F RID: 256543
+		// Token: 0x1700647D RID: 25725
+		// (get) Token: 0x060336E2 RID: 210658
+		// (set) Token: 0x060336E3 RID: 210659
 		int LikeCount { get; set; }
 
-		// Token: 0x1700911C RID: 37148
-		// (get) Token: 0x0603EA20 RID: 256544
-		// (set) Token: 0x0603EA21 RID: 256545
+		// Token: 0x1700647E RID: 25726
+		// (get) Token: 0x060336E4 RID: 210660
+		// (set) Token: 0x060336E5 RID: 210661
 		int? PlayerTitle { get; set; }
 
-		// Token: 0x1700911D RID: 37149
-		// (get) Token: 0x0603EA22 RID: 256546
-		// (set) Token: 0x0603EA23 RID: 256547
+		// Token: 0x1700647F RID: 25727
+		// (get) Token: 0x060336E6 RID: 210662
+		// (set) Token: 0x060336E7 RID: 210663
 		int? PlayerTitleStarLevel { get; set; }
 
-		// Token: 0x1700911E RID: 37150
-		// (get) Token: 0x0603EA24 RID: 256548
-		// (set) Token: 0x0603EA25 RID: 256549
+		// Token: 0x17006480 RID: 25728
+		// (get) Token: 0x060336E8 RID: 210664
+		// (set) Token: 0x060336E9 RID: 210665
 		int Sex { get; set; }
 	}
 }

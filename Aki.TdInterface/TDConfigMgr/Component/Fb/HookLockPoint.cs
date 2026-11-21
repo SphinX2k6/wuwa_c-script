@@ -9,13 +9,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B1C RID: 2844
+	// Token: 0x02000BEA RID: 3050
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class HookLockPoint : IComponentBase
 	{
-		// Token: 0x060041A0 RID: 16800 RVA: 0x000A85A2 File Offset: 0x000A67A2
-		[NullableContext(1)]
+		// Token: 0x060045F6 RID: 17910 RVA: 0x000B25CE File Offset: 0x000B07CE
+		[NullableContext(0)]
 		public static HookLockPoint Create(IHookLockPoint? instance)
 		{
 			if (instance == null)
@@ -28,8 +28,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001125 RID: 4389
-		// (get) Token: 0x060041A1 RID: 16801 RVA: 0x000A85C4 File Offset: 0x000A67C4
+		// Token: 0x1700121D RID: 4637
+		// (get) Token: 0x060045F7 RID: 17911 RVA: 0x000B25F0 File Offset: 0x000B07F0
 		public override bool? Disabled
 		{
 			get
@@ -42,8 +42,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001126 RID: 4390
-		// (get) Token: 0x060041A2 RID: 16802 RVA: 0x000A85FC File Offset: 0x000A67FC
+		// Token: 0x1700121E RID: 4638
+		// (get) Token: 0x060045F8 RID: 17912 RVA: 0x000B2628 File Offset: 0x000B0828
 		public override bool? EdIsLocked
 		{
 			get
@@ -52,12 +52,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001127 RID: 4391
-		// (get) Token: 0x060041A3 RID: 16803 RVA: 0x000A8612 File Offset: 0x000A6812
-		[Nullable(1)]
+		// Token: 0x1700121F RID: 4639
+		// (get) Token: 0x060045F9 RID: 17913 RVA: 0x000B263E File Offset: 0x000B083E
+		[Nullable(0)]
 		public virtual ISphereTriggerShape Range
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._RangeInited)
@@ -70,8 +70,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001128 RID: 4392
-		// (get) Token: 0x060041A4 RID: 16804 RVA: 0x000A8648 File Offset: 0x000A6848
+		// Token: 0x17001220 RID: 4640
+		// (get) Token: 0x060045FA RID: 17914 RVA: 0x000B2674 File Offset: 0x000B0874
 		public virtual float? NonInteractiveInnerRadius
 		{
 			get
@@ -84,19 +84,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001129 RID: 4393
-		// (get) Token: 0x060041A5 RID: 16805 RVA: 0x000A867E File Offset: 0x000A687E
+		// Token: 0x17001221 RID: 4641
+		// (get) Token: 0x060045FB RID: 17915 RVA: 0x000B26AA File Offset: 0x000B08AA
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMatchRoleType> MatchRoleOption
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -114,8 +114,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700112A RID: 4394
-		// (get) Token: 0x060041A6 RID: 16806 RVA: 0x000A86C0 File Offset: 0x000A68C0
+		// Token: 0x17001222 RID: 4642
+		// (get) Token: 0x060045FC RID: 17916 RVA: 0x000B26EC File Offset: 0x000B08EC
 		public virtual bool? IgnorePlayCollision
 		{
 			get
@@ -128,8 +128,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700112B RID: 4395
-		// (get) Token: 0x060041A7 RID: 16807 RVA: 0x000A86F8 File Offset: 0x000A68F8
+		// Token: 0x17001223 RID: 4643
+		// (get) Token: 0x060045FD RID: 17917 RVA: 0x000B2724 File Offset: 0x000B0924
 		public virtual bool? UseRangeComponent
 		{
 			get
@@ -142,8 +142,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700112C RID: 4396
-		// (get) Token: 0x060041A8 RID: 16808 RVA: 0x000A872F File Offset: 0x000A692F
+		// Token: 0x17001224 RID: 4644
+		// (get) Token: 0x060045FE RID: 17918 RVA: 0x000B275B File Offset: 0x000B095B
 		public virtual ICameraGaze CameraGaze
 		{
 			get
@@ -158,8 +158,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700112D RID: 4397
-		// (get) Token: 0x060041A9 RID: 16809 RVA: 0x000A8763 File Offset: 0x000A6963
+		// Token: 0x17001225 RID: 4645
+		// (get) Token: 0x060045FF RID: 17919 RVA: 0x000B278F File Offset: 0x000B098F
 		public virtual IGazeNextPointAfterInteract GazeNextPointAfterInteract
 		{
 			get
@@ -174,8 +174,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700112E RID: 4398
-		// (get) Token: 0x060041AA RID: 16810 RVA: 0x000A8797 File Offset: 0x000A6997
+		// Token: 0x17001226 RID: 4646
+		// (get) Token: 0x06004600 RID: 17920 RVA: 0x000B27C3 File Offset: 0x000B09C3
 		public virtual bool InheritSpeed
 		{
 			get
@@ -184,20 +184,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700112F RID: 4399
-		// (get) Token: 0x060041AB RID: 16811 RVA: 0x000A87A4 File Offset: 0x000A69A4
-		[Nullable(1)]
+		// Token: 0x17001227 RID: 4647
+		// (get) Token: 0x06004601 RID: 17921 RVA: 0x000B27D0 File Offset: 0x000B09D0
+		[Nullable(0)]
 		public virtual string NormalEffect
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.NormalEffect;
 			}
 		}
 
-		// Token: 0x17001130 RID: 4400
-		// (get) Token: 0x060041AC RID: 16812 RVA: 0x000A87B4 File Offset: 0x000A69B4
+		// Token: 0x17001228 RID: 4648
+		// (get) Token: 0x06004602 RID: 17922 RVA: 0x000B27E0 File Offset: 0x000B09E0
 		public virtual bool? IsClimb
 		{
 			get
@@ -210,8 +210,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001131 RID: 4401
-		// (get) Token: 0x060041AD RID: 16813 RVA: 0x000A87EC File Offset: 0x000A69EC
+		// Token: 0x17001229 RID: 4649
+		// (get) Token: 0x06004603 RID: 17923 RVA: 0x000B2818 File Offset: 0x000B0A18
 		public virtual int? PlayerStateRestritionId
 		{
 			get
@@ -224,8 +224,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001132 RID: 4402
-		// (get) Token: 0x060041AE RID: 16814 RVA: 0x000A8823 File Offset: 0x000A6A23
+		// Token: 0x1700122A RID: 4650
+		// (get) Token: 0x06004604 RID: 17924 RVA: 0x000B284F File Offset: 0x000B0A4F
 		public virtual IConditionGroup HookEnableCondition
 		{
 			get
@@ -240,8 +240,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001133 RID: 4403
-		// (get) Token: 0x060041AF RID: 16815 RVA: 0x000A8858 File Offset: 0x000A6A58
+		// Token: 0x1700122B RID: 4651
+		// (get) Token: 0x06004605 RID: 17925 RVA: 0x000B2884 File Offset: 0x000B0A84
 		public virtual float? HookLockCd
 		{
 			get
@@ -254,8 +254,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001134 RID: 4404
-		// (get) Token: 0x060041B0 RID: 16816 RVA: 0x000A8894 File Offset: 0x000A6A94
+		// Token: 0x1700122C RID: 4652
+		// (get) Token: 0x06004606 RID: 17926 RVA: 0x000B28C0 File Offset: 0x000B0AC0
 		public virtual bool? IsDestroyedSelf
 		{
 			get
@@ -268,8 +268,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001135 RID: 4405
-		// (get) Token: 0x060041B1 RID: 16817 RVA: 0x000A88D0 File Offset: 0x000A6AD0
+		// Token: 0x1700122D RID: 4653
+		// (get) Token: 0x06004607 RID: 17927 RVA: 0x000B28FC File Offset: 0x000B0AFC
 		public virtual bool? IsHideSelf
 		{
 			get
@@ -282,12 +282,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001136 RID: 4406
-		// (get) Token: 0x060041B2 RID: 16818 RVA: 0x000A890A File Offset: 0x000A6B0A
-		[Nullable(1)]
+		// Token: 0x1700122E RID: 4654
+		// (get) Token: 0x06004608 RID: 17928 RVA: 0x000B2936 File Offset: 0x000B0B36
+		[Nullable(0)]
 		public virtual IHookLockScreenDetectTypeBase ScreenDetectType
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ScreenDetectTypeInited)
@@ -300,12 +300,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001137 RID: 4407
-		// (get) Token: 0x060041B3 RID: 16819 RVA: 0x000A8939 File Offset: 0x000A6B39
-		[Nullable(1)]
+		// Token: 0x1700122F RID: 4655
+		// (get) Token: 0x06004609 RID: 17929 RVA: 0x000B2965 File Offset: 0x000B0B65
+		[Nullable(0)]
 		public virtual IHookInteractType HookInteractConfig
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._HookInteractConfigInited)
@@ -318,8 +318,24 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001138 RID: 4408
-		// (get) Token: 0x060041B4 RID: 16820 RVA: 0x000A8968 File Offset: 0x000A6B68
+		// Token: 0x17001230 RID: 4656
+		// (get) Token: 0x0600460A RID: 17930 RVA: 0x000B2994 File Offset: 0x000B0B94
+		public virtual IMechHookInteractConfig MechHookInteractConfig
+		{
+			get
+			{
+				if (this._MechHookInteractConfigInited)
+				{
+					return this._MechHookInteractConfigCache;
+				}
+				this._MechHookInteractConfigInited = true;
+				this._MechHookInteractConfigCache = IMechHookInteractConfig.Create(this.Instance.MechHookInteractConfig);
+				return this._MechHookInteractConfigCache;
+			}
+		}
+
+		// Token: 0x17001231 RID: 4657
+		// (get) Token: 0x0600460B RID: 17931 RVA: 0x000B29C8 File Offset: 0x000B0BC8
 		public virtual IMotorHookConfig MotorHookConfig
 		{
 			get
@@ -334,8 +350,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001139 RID: 4409
-		// (get) Token: 0x060041B5 RID: 16821 RVA: 0x000A899C File Offset: 0x000A6B9C
+		// Token: 0x17001232 RID: 4658
+		// (get) Token: 0x0600460C RID: 17932 RVA: 0x000B29FC File Offset: 0x000B0BFC
 		public virtual IHookGravityConfig GravityConfig
 		{
 			get
@@ -350,8 +366,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700113A RID: 4410
-		// (get) Token: 0x060041B6 RID: 16822 RVA: 0x000A89D0 File Offset: 0x000A6BD0
+		// Token: 0x17001233 RID: 4659
+		// (get) Token: 0x0600460D RID: 17933 RVA: 0x000B2A30 File Offset: 0x000B0C30
 		public virtual bool? DisableAtCreateStage
 		{
 			get
@@ -364,8 +380,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700113B RID: 4411
-		// (get) Token: 0x060041B7 RID: 16823 RVA: 0x000A8A0A File Offset: 0x000A6C0A
+		// Token: 0x17001234 RID: 4660
+		// (get) Token: 0x0600460E RID: 17934 RVA: 0x000B2A6A File Offset: 0x000B0C6A
 		public virtual IHookPerformanceConfig HookPerformanceConfig
 		{
 			get
@@ -380,74 +396,80 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040024FB RID: 9467
+		// Token: 0x0400273F RID: 10047
 		private IHookLockPoint Instance;
 
-		// Token: 0x040024FC RID: 9468
+		// Token: 0x04002740 RID: 10048
 		private ISphereTriggerShape _RangeCache;
 
-		// Token: 0x040024FD RID: 9469
+		// Token: 0x04002741 RID: 10049
 		private bool _RangeInited;
 
-		// Token: 0x040024FE RID: 9470
+		// Token: 0x04002742 RID: 10050
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMatchRoleType> _MatchRoleOptionCache;
 
-		// Token: 0x040024FF RID: 9471
+		// Token: 0x04002743 RID: 10051
 		private bool _MatchRoleOptionInited;
 
-		// Token: 0x04002500 RID: 9472
+		// Token: 0x04002744 RID: 10052
 		private ICameraGaze _CameraGazeCache;
 
-		// Token: 0x04002501 RID: 9473
+		// Token: 0x04002745 RID: 10053
 		private bool _CameraGazeInited;
 
-		// Token: 0x04002502 RID: 9474
+		// Token: 0x04002746 RID: 10054
 		private IGazeNextPointAfterInteract _GazeNextPointAfterInteractCache;
 
-		// Token: 0x04002503 RID: 9475
+		// Token: 0x04002747 RID: 10055
 		private bool _GazeNextPointAfterInteractInited;
 
-		// Token: 0x04002504 RID: 9476
+		// Token: 0x04002748 RID: 10056
 		private IConditionGroup _HookEnableConditionCache;
 
-		// Token: 0x04002505 RID: 9477
+		// Token: 0x04002749 RID: 10057
 		private bool _HookEnableConditionInited;
 
-		// Token: 0x04002506 RID: 9478
-		[Nullable(1)]
+		// Token: 0x0400274A RID: 10058
+		[Nullable(0)]
 		private IHookLockScreenDetectTypeBase _ScreenDetectTypeCache;
 
-		// Token: 0x04002507 RID: 9479
+		// Token: 0x0400274B RID: 10059
 		private bool _ScreenDetectTypeInited;
 
-		// Token: 0x04002508 RID: 9480
-		[Nullable(1)]
+		// Token: 0x0400274C RID: 10060
+		[Nullable(0)]
 		private IHookInteractType _HookInteractConfigCache;
 
-		// Token: 0x04002509 RID: 9481
+		// Token: 0x0400274D RID: 10061
 		private bool _HookInteractConfigInited;
 
-		// Token: 0x0400250A RID: 9482
+		// Token: 0x0400274E RID: 10062
+		private IMechHookInteractConfig _MechHookInteractConfigCache;
+
+		// Token: 0x0400274F RID: 10063
+		private bool _MechHookInteractConfigInited;
+
+		// Token: 0x04002750 RID: 10064
 		private IMotorHookConfig _MotorHookConfigCache;
 
-		// Token: 0x0400250B RID: 9483
+		// Token: 0x04002751 RID: 10065
 		private bool _MotorHookConfigInited;
 
-		// Token: 0x0400250C RID: 9484
+		// Token: 0x04002752 RID: 10066
 		private IHookGravityConfig _GravityConfigCache;
 
-		// Token: 0x0400250D RID: 9485
+		// Token: 0x04002753 RID: 10067
 		private bool _GravityConfigInited;
 
-		// Token: 0x0400250E RID: 9486
+		// Token: 0x04002754 RID: 10068
 		private IHookPerformanceConfig _HookPerformanceConfigCache;
 
-		// Token: 0x0400250F RID: 9487
+		// Token: 0x04002755 RID: 10069
 		private bool _HookPerformanceConfigInited;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x020047EB RID: 18411
+	// Token: 0x02004C53 RID: 19539
 	public class IMonsterTagDeathEffectDataT
 	{
-		// Token: 0x17008452 RID: 33874
-		// (get) Token: 0x0601C78E RID: 116622 RVA: 0x00407257 File Offset: 0x00405457
-		// (set) Token: 0x0601C78F RID: 116623 RVA: 0x0040725F File Offset: 0x0040545F
+		// Token: 0x17008A9D RID: 35485
+		// (get) Token: 0x0601DF8B RID: 122763 RVA: 0x00433BA7 File Offset: 0x00431DA7
+		// (set) Token: 0x0601DF8C RID: 122764 RVA: 0x00433BAF File Offset: 0x00431DAF
 		public string Tag { get; set; }
 
-		// Token: 0x17008453 RID: 33875
-		// (get) Token: 0x0601C790 RID: 116624 RVA: 0x00407268 File Offset: 0x00405468
-		// (set) Token: 0x0601C791 RID: 116625 RVA: 0x00407270 File Offset: 0x00405470
+		// Token: 0x17008A9E RID: 35486
+		// (get) Token: 0x0601DF8D RID: 122765 RVA: 0x00433BB8 File Offset: 0x00431DB8
+		// (set) Token: 0x0601DF8E RID: 122766 RVA: 0x00433BC0 File Offset: 0x00431DC0
 		public IEffectConfigMonsterDeathT EffectConfig { get; set; }
 
-		// Token: 0x0601C792 RID: 116626 RVA: 0x00407279 File Offset: 0x00405479
+		// Token: 0x0601DF8F RID: 122767 RVA: 0x00433BC9 File Offset: 0x00431DC9
 		public IMonsterTagDeathEffectDataT()
 		{
 			this.Tag = null;

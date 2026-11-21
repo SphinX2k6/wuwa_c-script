@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000F57 RID: 3927
+// Token: 0x0200040C RID: 1036
 public class DrinksBlackMask : UiPanelBase
 {
-	// Token: 0x06006476 RID: 25718 RVA: 0x0013DBC4 File Offset: 0x0013BDC4
+	// Token: 0x0600380E RID: 14350 RVA: 0x00146460 File Offset: 0x00144660
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,7 +16,7 @@ public class DrinksBlackMask : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006477 RID: 25719 RVA: 0x0013DBE7 File Offset: 0x0013BDE7
+	// Token: 0x0600380F RID: 14351 RVA: 0x00146483 File Offset: 0x00144683
 	protected override void OnStart()
 	{
 		UUIText text = base.GetText(0);
@@ -27,7 +27,7 @@ public class DrinksBlackMask : UiPanelBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x06006478 RID: 25720 RVA: 0x0013DBFC File Offset: 0x0013BDFC
+	// Token: 0x06003810 RID: 14352 RVA: 0x00146498 File Offset: 0x00144698
 	public int ShowBackMask(EDrinksPlayStep curStep)
 	{
 		DrinksStepConfig? stepConfig = DrinksConfig.Instance.GetStepConfig(curStep);
@@ -40,16 +40,16 @@ public class DrinksBlackMask : UiPanelBase
 		return stepConfig.Value.PrevMaskEventDelay / 2;
 	}
 
-	// Token: 0x06006479 RID: 25721 RVA: 0x0013DC76 File Offset: 0x0013BE76
+	// Token: 0x06003811 RID: 14353 RVA: 0x00146512 File Offset: 0x00144712
 	protected void HideMask()
 	{
 		base.SetUiActive(false);
 	}
 
-	// Token: 0x020075A2 RID: 30114
+	// Token: 0x02006736 RID: 26422
 	private static class EDefine
 	{
-		// Token: 0x04026E2B RID: 159275
+		// Token: 0x04022176 RID: 139638
 		public const int Txt = 0;
 	}
 }

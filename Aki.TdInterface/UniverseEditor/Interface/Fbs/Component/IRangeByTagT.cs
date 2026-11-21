@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057FA RID: 22522
+	// Token: 0x02005E01 RID: 24065
 	public class IRangeByTagT
 	{
-		// Token: 0x1700A83F RID: 43071
-		// (get) Token: 0x06025DB8 RID: 155064 RVA: 0x00538950 File Offset: 0x00536B50
-		// (set) Token: 0x06025DB9 RID: 155065 RVA: 0x00538958 File Offset: 0x00536B58
+		// Token: 0x1700B163 RID: 45411
+		// (get) Token: 0x060282D8 RID: 164568 RVA: 0x0057EADC File Offset: 0x0057CCDC
+		// (set) Token: 0x060282D9 RID: 164569 RVA: 0x0057EAE4 File Offset: 0x0057CCE4
 		public int Tag { get; set; }
 
-		// Token: 0x1700A840 RID: 43072
-		// (get) Token: 0x06025DBA RID: 155066 RVA: 0x00538961 File Offset: 0x00536B61
-		// (set) Token: 0x06025DBB RID: 155067 RVA: 0x00538969 File Offset: 0x00536B69
+		// Token: 0x1700B164 RID: 45412
+		// (get) Token: 0x060282DA RID: 164570 RVA: 0x0057EAED File Offset: 0x0057CCED
+		// (set) Token: 0x060282DB RID: 164571 RVA: 0x0057EAF5 File Offset: 0x0057CCF5
 		public float Range { get; set; }
 
-		// Token: 0x1700A841 RID: 43073
-		// (get) Token: 0x06025DBC RID: 155068 RVA: 0x00538972 File Offset: 0x00536B72
-		// (set) Token: 0x06025DBD RID: 155069 RVA: 0x0053897A File Offset: 0x00536B7A
+		// Token: 0x1700B165 RID: 45413
+		// (get) Token: 0x060282DC RID: 164572 RVA: 0x0057EAFE File Offset: 0x0057CCFE
+		// (set) Token: 0x060282DD RID: 164573 RVA: 0x0057EB06 File Offset: 0x0057CD06
 		public float ExitRange { get; set; }
 
-		// Token: 0x1700A842 RID: 43074
-		// (get) Token: 0x06025DBE RID: 155070 RVA: 0x00538983 File Offset: 0x00536B83
-		// (set) Token: 0x06025DBF RID: 155071 RVA: 0x0053898B File Offset: 0x00536B8B
+		// Token: 0x1700B166 RID: 45414
+		// (get) Token: 0x060282DE RID: 164574 RVA: 0x0057EB0F File Offset: 0x0057CD0F
+		// (set) Token: 0x060282DF RID: 164575 RVA: 0x0057EB17 File Offset: 0x0057CD17
 		public byte NullMask { get; set; }
 
-		// Token: 0x06025DC0 RID: 155072 RVA: 0x00538994 File Offset: 0x00536B94
+		// Token: 0x060282E0 RID: 164576 RVA: 0x0057EB20 File Offset: 0x0057CD20
 		public IRangeByTagT()
 		{
 			this.Tag = 0;

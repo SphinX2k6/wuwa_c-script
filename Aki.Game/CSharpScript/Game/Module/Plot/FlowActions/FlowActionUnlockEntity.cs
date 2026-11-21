@@ -4,10 +4,10 @@ using CSharpScript.Game.NewWorld.Common.Component;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050DD RID: 20701
+	// Token: 0x020040AD RID: 16557
 	public class FlowActionUnlockEntity : FlowActionBase
 	{
-		// Token: 0x06034F6B RID: 216939 RVA: 0x00C8BE30 File Offset: 0x00C8A030
+		// Token: 0x06029E64 RID: 171620 RVA: 0x00BD9118 File Offset: 0x00BD7318
 		protected unsafe override void OnExecute()
 		{
 			foreach (int num in (this.ActionInfo.Params as UnlockEntity).EntityIds)

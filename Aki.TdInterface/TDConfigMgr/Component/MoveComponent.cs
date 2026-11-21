@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200083F RID: 2111
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008E2 RID: 2274
 	public class MoveComponent : IComponentBase
 	{
-		// Token: 0x06002E49 RID: 11849 RVA: 0x00077B40 File Offset: 0x00075D40
+		// Token: 0x0600317F RID: 12671 RVA: 0x0007EF64 File Offset: 0x0007D164
 		private MoveComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002E4A RID: 11850 RVA: 0x00077B78 File Offset: 0x00075D78
+		// Token: 0x06003180 RID: 12672 RVA: 0x0007EF9C File Offset: 0x0007D19C
 		public static MoveComponent Create([Nullable(2)] MoveComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002E4B RID: 11851 RVA: 0x00077B8B File Offset: 0x00075D8B
+		// Token: 0x06003181 RID: 12673 RVA: 0x0007EFAF File Offset: 0x0007D1AF
 		public static MoveComponent CreateFromSetValue([Nullable(2)] MoveComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002E4C RID: 11852 RVA: 0x00077B9E File Offset: 0x00075D9E
+		// Token: 0x06003182 RID: 12674 RVA: 0x0007EFC2 File Offset: 0x0007D1C2
 		public new MoveComponent_SetValue ToSetValue()
 		{
 			return new MoveComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000C29 RID: 3113
-		// (get) Token: 0x06002E4D RID: 11853 RVA: 0x00077BCC File Offset: 0x00075DCC
-		// (set) Token: 0x06002E4E RID: 11854 RVA: 0x00077C06 File Offset: 0x00075E06
+		// Token: 0x17000CEF RID: 3311
+		// (get) Token: 0x06003183 RID: 12675 RVA: 0x0007EFF0 File Offset: 0x0007D1F0
+		// (set) Token: 0x06003184 RID: 12676 RVA: 0x0007F02A File Offset: 0x0007D22A
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C2A RID: 3114
-		// (get) Token: 0x06002E4F RID: 11855 RVA: 0x00077C14 File Offset: 0x00075E14
-		// (set) Token: 0x06002E50 RID: 11856 RVA: 0x00077C3E File Offset: 0x00075E3E
+		// Token: 0x17000CF0 RID: 3312
+		// (get) Token: 0x06003185 RID: 12677 RVA: 0x0007F038 File Offset: 0x0007D238
+		// (set) Token: 0x06003186 RID: 12678 RVA: 0x0007F062 File Offset: 0x0007D262
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C2B RID: 3115
-		// (get) Token: 0x06002E51 RID: 11857 RVA: 0x00077C4C File Offset: 0x00075E4C
-		// (set) Token: 0x06002E52 RID: 11858 RVA: 0x00077C7B File Offset: 0x00075E7B
+		// Token: 0x17000CF1 RID: 3313
+		// (get) Token: 0x06003187 RID: 12679 RVA: 0x0007F070 File Offset: 0x0007D270
+		// (set) Token: 0x06003188 RID: 12680 RVA: 0x0007F09F File Offset: 0x0007D29F
 		public virtual float InitSpeed
 		{
 			get
@@ -127,11 +125,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001E93 RID: 7827
+		// Token: 0x040020A2 RID: 8354
 		[Nullable(2)]
 		protected new MoveComponent FbInstance;
 
-		// Token: 0x04001E94 RID: 7828
+		// Token: 0x040020A3 RID: 8355
 		[Nullable(2)]
 		protected new MoveComponent_SetValue PocoInterface;
 	}

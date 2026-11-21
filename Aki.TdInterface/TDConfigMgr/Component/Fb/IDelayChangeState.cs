@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AE3 RID: 2787
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000BAD RID: 2989
 	public class IDelayChangeState
 	{
-		// Token: 0x0600402C RID: 16428 RVA: 0x000A3DB9 File Offset: 0x000A1FB9
+		// Token: 0x06004456 RID: 17494 RVA: 0x000AD3AD File Offset: 0x000AB5AD
 		public static IDelayChangeState Create(IDelayChangeState? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001023 RID: 4131
-		// (get) Token: 0x0600402D RID: 16429 RVA: 0x000A3DD8 File Offset: 0x000A1FD8
+		// Token: 0x170010F7 RID: 4343
+		// (get) Token: 0x06004457 RID: 17495 RVA: 0x000AD3CC File Offset: 0x000AB5CC
 		public virtual float Time
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001024 RID: 4132
-		// (get) Token: 0x0600402E RID: 16430 RVA: 0x000A3DE5 File Offset: 0x000A1FE5
+		// Token: 0x170010F8 RID: 4344
+		// (get) Token: 0x06004458 RID: 17496 RVA: 0x000AD3D9 File Offset: 0x000AB5D9
 		public virtual string NewState
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001025 RID: 4133
-		// (get) Token: 0x0600402F RID: 16431 RVA: 0x000A3DF2 File Offset: 0x000A1FF2
+		// Token: 0x170010F9 RID: 4345
+		// (get) Token: 0x06004459 RID: 17497 RVA: 0x000AD3E6 File Offset: 0x000AB5E6
 		[Nullable(2)]
 		public virtual IVarInterval DelayInterval
 		{
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001026 RID: 4134
-		// (get) Token: 0x06004030 RID: 16432 RVA: 0x000A3E28 File Offset: 0x000A2028
+		// Token: 0x170010FA RID: 4346
+		// (get) Token: 0x0600445A RID: 17498 RVA: 0x000AD41C File Offset: 0x000AB61C
 		public virtual bool? WaitActionGroupEnd
 		{
 			get
@@ -75,14 +73,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040023B4 RID: 9140
+		// Token: 0x040025D0 RID: 9680
 		private IDelayChangeState Instance;
 
-		// Token: 0x040023B5 RID: 9141
+		// Token: 0x040025D1 RID: 9681
 		[Nullable(2)]
 		private IVarInterval _DelayIntervalCache;
 
-		// Token: 0x040023B6 RID: 9142
+		// Token: 0x040025D2 RID: 9682
 		private bool _DelayIntervalInited;
 	}
 }

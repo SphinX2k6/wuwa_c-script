@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200260B RID: 9739
+	// Token: 0x020028CB RID: 10443
 	public class IInteractionConfirmBoxType
 	{
-		// Token: 0x0600DAB3 RID: 55987 RVA: 0x0020951D File Offset: 0x0020771D
-		[NullableContext(1)]
+		// Token: 0x0600E880 RID: 59520 RVA: 0x00225C71 File Offset: 0x00223E71
 		public static IInteractionConfirmBoxType Create(IInteractionConfirmBoxType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700405F RID: 16479
-		// (get) Token: 0x0600DAB4 RID: 55988 RVA: 0x0020953C File Offset: 0x0020773C
+		// Token: 0x17004398 RID: 17304
+		// (get) Token: 0x0600E881 RID: 59521 RVA: 0x00225C90 File Offset: 0x00223E90
 		public virtual EInteractionConfirmBoxType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400797B RID: 31099
+		// Token: 0x04008015 RID: 32789
 		private IInteractionConfirmBoxType Instance;
 	}
 }

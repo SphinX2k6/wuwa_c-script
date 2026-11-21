@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050E4 RID: 20708
+	// Token: 0x02005649 RID: 22089
 	public struct IDynamicLevelPlayComponent : IFlatbufferObject
 	{
-		// Token: 0x170096BE RID: 38590
-		// (get) Token: 0x06021553 RID: 136531 RVA: 0x004A10C6 File Offset: 0x0049F2C6
+		// Token: 0x17009EAB RID: 40619
+		// (get) Token: 0x060234A7 RID: 144551 RVA: 0x004DB052 File Offset: 0x004D9252
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021554 RID: 136532 RVA: 0x004A10D3 File Offset: 0x0049F2D3
+		// Token: 0x060234A8 RID: 144552 RVA: 0x004DB05F File Offset: 0x004D925F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021555 RID: 136533 RVA: 0x004A10DC File Offset: 0x0049F2DC
+		// Token: 0x060234A9 RID: 144553 RVA: 0x004DB068 File Offset: 0x004D9268
 		public static IDynamicLevelPlayComponent GetRootAsIDynamicLevelPlayComponent(ByteBuffer _bb)
 		{
 			return IDynamicLevelPlayComponent.GetRootAsIDynamicLevelPlayComponent(_bb, default(IDynamicLevelPlayComponent));
 		}
 
-		// Token: 0x06021556 RID: 136534 RVA: 0x004A10F8 File Offset: 0x0049F2F8
+		// Token: 0x060234AA RID: 144554 RVA: 0x004DB084 File Offset: 0x004D9284
 		public static IDynamicLevelPlayComponent GetRootAsIDynamicLevelPlayComponent(ByteBuffer _bb, IDynamicLevelPlayComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021557 RID: 136535 RVA: 0x004A1115 File Offset: 0x0049F315
+		// Token: 0x060234AB RID: 144555 RVA: 0x004DB0A1 File Offset: 0x004D92A1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021558 RID: 136536 RVA: 0x004A1124 File Offset: 0x0049F324
+		// Token: 0x060234AC RID: 144556 RVA: 0x004DB0B0 File Offset: 0x004D92B0
 		public IDynamicLevelPlayComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170096BF RID: 38591
-		// (get) Token: 0x06021559 RID: 136537 RVA: 0x004A1134 File Offset: 0x0049F334
+		// Token: 0x17009EAC RID: 40620
+		// (get) Token: 0x060234AD RID: 144557 RVA: 0x004DB0C0 File Offset: 0x004D92C0
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170096C0 RID: 38592
-		// (get) Token: 0x0602155A RID: 136538 RVA: 0x004A1174 File Offset: 0x0049F374
+		// Token: 0x17009EAD RID: 40621
+		// (get) Token: 0x060234AE RID: 144558 RVA: 0x004DB100 File Offset: 0x004D9300
 		public int DynamicLevelPlayId
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170096C1 RID: 38593
-		// (get) Token: 0x0602155B RID: 136539 RVA: 0x004A11B0 File Offset: 0x0049F3B0
+		// Token: 0x17009EAE RID: 40622
+		// (get) Token: 0x060234AF RID: 144559 RVA: 0x004DB13C File Offset: 0x004D933C
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602155C RID: 136540 RVA: 0x004A11EC File Offset: 0x0049F3EC
+		// Token: 0x060234B0 RID: 144560 RVA: 0x004DB178 File Offset: 0x004D9378
 		public static Offset<IDynamicLevelPlayComponent> CreateIDynamicLevelPlayComponent(FlatBufferBuilder builder, bool Disabled = false, int DynamicLevelPlayId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDynamicLevelPlayComponent.EndIDynamicLevelPlayComponent(builder);
 		}
 
-		// Token: 0x0602155D RID: 136541 RVA: 0x004A1210 File Offset: 0x0049F410
+		// Token: 0x060234B1 RID: 144561 RVA: 0x004DB19C File Offset: 0x004D939C
 		public static void StartIDynamicLevelPlayComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602155E RID: 136542 RVA: 0x004A1219 File Offset: 0x0049F419
+		// Token: 0x060234B2 RID: 144562 RVA: 0x004DB1A5 File Offset: 0x004D93A5
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x0602155F RID: 136543 RVA: 0x004A1224 File Offset: 0x0049F424
+		// Token: 0x060234B3 RID: 144563 RVA: 0x004DB1B0 File Offset: 0x004D93B0
 		public static void AddDynamicLevelPlayId(FlatBufferBuilder builder, int dynamicLevelPlayId)
 		{
 			builder.AddInt(1, dynamicLevelPlayId, 0);
 		}
 
-		// Token: 0x06021560 RID: 136544 RVA: 0x004A122F File Offset: 0x0049F42F
+		// Token: 0x060234B4 RID: 144564 RVA: 0x004DB1BB File Offset: 0x004D93BB
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06021561 RID: 136545 RVA: 0x004A123A File Offset: 0x0049F43A
+		// Token: 0x060234B5 RID: 144565 RVA: 0x004DB1C6 File Offset: 0x004D93C6
 		public static Offset<IDynamicLevelPlayComponent> EndIDynamicLevelPlayComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IDynamicLevelPlayComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06021562 RID: 136546 RVA: 0x004A1248 File Offset: 0x0049F448
+		// Token: 0x060234B6 RID: 144566 RVA: 0x004DB1D4 File Offset: 0x004D93D4
 		public IDynamicLevelPlayComponentT UnPack()
 		{
 			IDynamicLevelPlayComponentT dynamicLevelPlayComponentT = new IDynamicLevelPlayComponentT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return dynamicLevelPlayComponentT;
 		}
 
-		// Token: 0x06021563 RID: 136547 RVA: 0x004A1263 File Offset: 0x0049F463
+		// Token: 0x060234B7 RID: 144567 RVA: 0x004DB1EF File Offset: 0x004D93EF
 		public void UnPackTo(IDynamicLevelPlayComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06021564 RID: 136548 RVA: 0x004A128C File Offset: 0x0049F48C
+		// Token: 0x060234B8 RID: 144568 RVA: 0x004DB218 File Offset: 0x004D9418
 		public static Offset<IDynamicLevelPlayComponent> Pack(FlatBufferBuilder builder, IDynamicLevelPlayComponentT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDynamicLevelPlayComponent.CreateIDynamicLevelPlayComponent(builder, _o.Disabled, _o.DynamicLevelPlayId, _o.NullMask);
 		}
 
-		// Token: 0x0400E136 RID: 57654
+		// Token: 0x0400ED33 RID: 60723
 		private Table __p;
 	}
 }

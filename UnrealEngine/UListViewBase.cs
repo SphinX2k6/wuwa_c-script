@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002980 RID: 10624
+	// Token: 0x02000862 RID: 2146
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/UMG.ListViewBase")]
 	[UnrealStructLayout(936, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 936)]
 	public abstract class UListViewBase : UWidget, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602751E RID: 161054 RVA: 0x003BF29F File Offset: 0x003BD49F
+		// Token: 0x0600BAB4 RID: 47796 RVA: 0x0012AEE0 File Offset: 0x001290E0
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UListViewBase._ClassPtr;
 		}
 
-		// Token: 0x17009723 RID: 38691
-		// (get) Token: 0x0602751F RID: 161055 RVA: 0x003BF2AB File Offset: 0x003BD4AB
-		// (set) Token: 0x06027520 RID: 161056 RVA: 0x003BF2BF File Offset: 0x003BD4BF
+		// Token: 0x170022AB RID: 8875
+		// (get) Token: 0x0600BAB5 RID: 47797 RVA: 0x0012AEEC File Offset: 0x001290EC
+		// (set) Token: 0x0600BAB6 RID: 47798 RVA: 0x0012AF00 File Offset: 0x00129100
 		[Nullable(new byte[]
 		{
 			0,
@@ -49,9 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009724 RID: 38692
-		// (get) Token: 0x06027521 RID: 161057 RVA: 0x003BF2D4 File Offset: 0x003BD4D4
-		// (set) Token: 0x06027522 RID: 161058 RVA: 0x003BF2E4 File Offset: 0x003BD4E4
+		// Token: 0x170022AC RID: 8876
+		// (get) Token: 0x0600BAB7 RID: 47799 RVA: 0x0012AF15 File Offset: 0x00129115
+		// (set) Token: 0x0600BAB8 RID: 47800 RVA: 0x0012AF25 File Offset: 0x00129125
 		public unsafe float WheelScrollMultiplier
 		{
 			get
@@ -64,9 +64,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009725 RID: 38693
-		// (get) Token: 0x06027523 RID: 161059 RVA: 0x003BF2F5 File Offset: 0x003BD4F5
-		// (set) Token: 0x06027524 RID: 161060 RVA: 0x003BF305 File Offset: 0x003BD505
+		// Token: 0x170022AD RID: 8877
+		// (get) Token: 0x0600BAB9 RID: 47801 RVA: 0x0012AF36 File Offset: 0x00129136
+		// (set) Token: 0x0600BABA RID: 47802 RVA: 0x0012AF46 File Offset: 0x00129146
 		public unsafe bool bEnableScrollAnimation
 		{
 			get
@@ -79,9 +79,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009726 RID: 38694
-		// (get) Token: 0x06027525 RID: 161061 RVA: 0x003BF316 File Offset: 0x003BD516
-		// (set) Token: 0x06027526 RID: 161062 RVA: 0x003BF326 File Offset: 0x003BD526
+		// Token: 0x170022AE RID: 8878
+		// (get) Token: 0x0600BABB RID: 47803 RVA: 0x0012AF57 File Offset: 0x00129157
+		// (set) Token: 0x0600BABC RID: 47804 RVA: 0x0012AF67 File Offset: 0x00129167
 		public unsafe bool bEnableFixedLineOffset
 		{
 			get
@@ -94,9 +94,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009727 RID: 38695
-		// (get) Token: 0x06027527 RID: 161063 RVA: 0x003BF337 File Offset: 0x003BD537
-		// (set) Token: 0x06027528 RID: 161064 RVA: 0x003BF347 File Offset: 0x003BD547
+		// Token: 0x170022AF RID: 8879
+		// (get) Token: 0x0600BABD RID: 47805 RVA: 0x0012AF78 File Offset: 0x00129178
+		// (set) Token: 0x0600BABE RID: 47806 RVA: 0x0012AF88 File Offset: 0x00129188
 		public unsafe float FixedLineScrollOffset
 		{
 			get
@@ -109,9 +109,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009728 RID: 38696
-		// (get) Token: 0x06027529 RID: 161065 RVA: 0x003BF358 File Offset: 0x003BD558
-		// (set) Token: 0x0602752A RID: 161066 RVA: 0x003BF391 File Offset: 0x003BD591
+		// Token: 0x170022B0 RID: 8880
+		// (get) Token: 0x0600BABF RID: 47807 RVA: 0x0012AF9C File Offset: 0x0012919C
+		// (set) Token: 0x0600BAC0 RID: 47808 RVA: 0x0012AFD5 File Offset: 0x001291D5
 		public FOnListEntryGeneratedDynamic BP_OnEntryGenerated
 		{
 			get
@@ -130,9 +130,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009729 RID: 38697
-		// (get) Token: 0x0602752B RID: 161067 RVA: 0x003BF3B4 File Offset: 0x003BD5B4
-		// (set) Token: 0x0602752C RID: 161068 RVA: 0x003BF3ED File Offset: 0x003BD5ED
+		// Token: 0x170022B1 RID: 8881
+		// (get) Token: 0x0600BAC1 RID: 47809 RVA: 0x0012AFF8 File Offset: 0x001291F8
+		// (set) Token: 0x0600BAC2 RID: 47810 RVA: 0x0012B031 File Offset: 0x00129231
 		public FOnListEntryReleasedDynamic BP_OnEntryReleased
 		{
 			get
@@ -151,166 +151,138 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700972A RID: 38698
-		// (get) Token: 0x0602752D RID: 161069 RVA: 0x003BF410 File Offset: 0x003BD610
-		// (set) Token: 0x0602752E RID: 161070 RVA: 0x003BF449 File Offset: 0x003BD649
-		public FUserWidgetPool EntryWidgetPool
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FUserWidgetPool result;
-				if ((result = this._EntryWidgetPool) == null)
-				{
-					result = (this._EntryWidgetPool = new FUserWidgetPool(base.NativePtr + (IntPtr)UListViewBase.__PropertyOffset_EntryWidgetPool, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FUserWidgetPool.StaticStruct(), base.NativePtr + (IntPtr)UListViewBase.__PropertyOffset_EntryWidgetPool, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x0602752F RID: 161071 RVA: 0x003BF46A File Offset: 0x003BD66A
+		// Token: 0x0600BAC3 RID: 47811 RVA: 0x0012B052 File Offset: 0x00129252
 		public void SetWheelScrollMultiplier(float NewWheelScrollMultiplier)
 		{
 			UListViewBase.__SetWheelScrollMultiplier_Internal(base.NativePtr, NewWheelScrollMultiplier);
 		}
 
-		// Token: 0x06027530 RID: 161072 RVA: 0x003BF478 File Offset: 0x003BD678
+		// Token: 0x0600BAC4 RID: 47812 RVA: 0x0012B060 File Offset: 0x00129260
 		public void SetScrollOffset(float InScrollOffset)
 		{
 			UListViewBase.__SetScrollOffset_Internal(base.NativePtr, InScrollOffset);
 		}
 
-		// Token: 0x06027531 RID: 161073 RVA: 0x003BF486 File Offset: 0x003BD686
+		// Token: 0x0600BAC5 RID: 47813 RVA: 0x0012B06E File Offset: 0x0012926E
 		public void SetScrollbarVisibility(ESlateVisibility InVisibility)
 		{
 			UListViewBase.__SetScrollbarVisibility_Internal(base.NativePtr, InVisibility);
 		}
 
-		// Token: 0x06027532 RID: 161074 RVA: 0x003BF494 File Offset: 0x003BD694
+		// Token: 0x0600BAC6 RID: 47814 RVA: 0x0012B07C File Offset: 0x0012927C
 		public void ScrollToTop()
 		{
 			UListViewBase.__ScrollToTop_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027533 RID: 161075 RVA: 0x003BF4A1 File Offset: 0x003BD6A1
+		// Token: 0x0600BAC7 RID: 47815 RVA: 0x0012B089 File Offset: 0x00129289
 		public void ScrollToBottom()
 		{
 			UListViewBase.__ScrollToBottom_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027534 RID: 161076 RVA: 0x003BF4AE File Offset: 0x003BD6AE
+		// Token: 0x0600BAC8 RID: 47816 RVA: 0x0012B096 File Offset: 0x00129296
 		public void RequestRefresh()
 		{
 			UListViewBase.__RequestRefresh_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027535 RID: 161077 RVA: 0x003BF4BB File Offset: 0x003BD6BB
+		// Token: 0x0600BAC9 RID: 47817 RVA: 0x0012B0A3 File Offset: 0x001292A3
 		public void RegenerateAllEntries()
 		{
 			UListViewBase.__RegenerateAllEntries_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027536 RID: 161078 RVA: 0x003BF4C8 File Offset: 0x003BD6C8
+		// Token: 0x0600BACA RID: 47818 RVA: 0x0012B0B0 File Offset: 0x001292B0
 		public TArray<UUserWidget> GetDisplayedEntryWidgets()
 		{
 			return new TArray<UUserWidget>(UListViewBase.__GetDisplayedEntryWidgets_Internal(base.NativePtr), null);
 		}
 
-		// Token: 0x06027537 RID: 161079
+		// Token: 0x0600BACB RID: 47819
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetWheelScrollMultiplier_Internal(IntPtr @this, float NewWheelScrollMultiplier);
 
-		// Token: 0x06027538 RID: 161080
+		// Token: 0x0600BACC RID: 47820
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetScrollOffset_Internal(IntPtr @this, float InScrollOffset);
 
-		// Token: 0x06027539 RID: 161081
+		// Token: 0x0600BACD RID: 47821
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetScrollbarVisibility_Internal(IntPtr @this, ESlateVisibility InVisibility);
 
-		// Token: 0x0602753A RID: 161082
+		// Token: 0x0600BACE RID: 47822
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToTop_Internal(IntPtr @this);
 
-		// Token: 0x0602753B RID: 161083
+		// Token: 0x0600BACF RID: 47823
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToBottom_Internal(IntPtr @this);
 
-		// Token: 0x0602753C RID: 161084
+		// Token: 0x0600BAD0 RID: 47824
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RequestRefresh_Internal(IntPtr @this);
 
-		// Token: 0x0602753D RID: 161085
+		// Token: 0x0600BAD1 RID: 47825
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RegenerateAllEntries_Internal(IntPtr @this);
 
-		// Token: 0x0602753E RID: 161086
+		// Token: 0x0600BAD2 RID: 47826
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetDisplayedEntryWidgets_Internal(IntPtr @this);
 
-		// Token: 0x0602753F RID: 161087 RVA: 0x003BF4DB File Offset: 0x003BD6DB
+		// Token: 0x0600BAD3 RID: 47827 RVA: 0x0012B0C3 File Offset: 0x001292C3
 		static UListViewBase()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/UMG.ListViewBase");
 		}
 
-		// Token: 0x06027540 RID: 161088 RVA: 0x003BF4EC File Offset: 0x003BD6EC
+		// Token: 0x0600BAD4 RID: 47828 RVA: 0x0012B0D4 File Offset: 0x001292D4
 		protected UListViewBase() : this(BuiltinUtils.AllocNativeUObject(UListViewBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06027541 RID: 161089 RVA: 0x003BF514 File Offset: 0x003BD714
+		// Token: 0x0600BAD5 RID: 47829 RVA: 0x0012B0FC File Offset: 0x001292FC
 		protected UListViewBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401597A RID: 88442
+		// Token: 0x040054A8 RID: 21672
 		public new const string __ObjectPath = "/Script/UMG.ListViewBase";
 
-		// Token: 0x0401597B RID: 88443
+		// Token: 0x040054A9 RID: 21673
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401597C RID: 88444
+		// Token: 0x040054AA RID: 21674
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401597D RID: 88445
+		// Token: 0x040054AB RID: 21675
 		internal static int __PropertyOffset_EntryWidgetClass;
 
-		// Token: 0x0401597E RID: 88446
+		// Token: 0x040054AC RID: 21676
 		internal static int __PropertyOffset_WheelScrollMultiplier;
 
-		// Token: 0x0401597F RID: 88447
+		// Token: 0x040054AD RID: 21677
 		internal static int __PropertyOffset_bEnableScrollAnimation;
 
-		// Token: 0x04015980 RID: 88448
+		// Token: 0x040054AE RID: 21678
 		internal static int __PropertyOffset_bEnableFixedLineOffset;
 
-		// Token: 0x04015981 RID: 88449
+		// Token: 0x040054AF RID: 21679
 		internal static int __PropertyOffset_FixedLineScrollOffset;
 
-		// Token: 0x04015982 RID: 88450
+		// Token: 0x040054B0 RID: 21680
 		internal static int __PropertyOffset_BP_OnEntryGenerated;
 
-		// Token: 0x04015983 RID: 88451
+		// Token: 0x040054B1 RID: 21681
 		[Nullable(2)]
 		private FOnListEntryGeneratedDynamic _BP_OnEntryGenerated;
 
-		// Token: 0x04015984 RID: 88452
+		// Token: 0x040054B2 RID: 21682
 		internal static int __PropertyOffset_BP_OnEntryReleased;
 
-		// Token: 0x04015985 RID: 88453
+		// Token: 0x040054B3 RID: 21683
 		[Nullable(2)]
 		private FOnListEntryReleasedDynamic _BP_OnEntryReleased;
-
-		// Token: 0x04015986 RID: 88454
-		internal static int __PropertyOffset_EntryWidgetPool;
-
-		// Token: 0x04015987 RID: 88455
-		[Nullable(2)]
-		private FUserWidgetPool _EntryWidgetPool;
 	}
 }

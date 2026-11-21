@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049C0 RID: 18880
+	// Token: 0x02004E7A RID: 20090
 	public static class ICheckDangoCultivationProgressType_UnionVerify
 	{
-		// Token: 0x0601D79B RID: 120731 RVA: 0x00426E24 File Offset: 0x00425024
+		// Token: 0x0601F1DA RID: 127450 RVA: 0x0045756C File Offset: 0x0045576C
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02002267 RID: 8807
+// Token: 0x0200174B RID: 5963
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleTreeTypeTabItem : CommonTabItemBase
 {
-	// Token: 0x060112F3 RID: 70387 RVA: 0x004302EC File Offset: 0x0042E4EC
+	// Token: 0x0600E789 RID: 59273 RVA: 0x0043CEF8 File Offset: 0x0043B0F8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,14 +28,14 @@ public class MotorcycleTreeTypeTabItem : CommonTabItemBase
 		};
 	}
 
-	// Token: 0x060112F4 RID: 70388 RVA: 0x004303C1 File Offset: 0x0042E5C1
+	// Token: 0x0600E78A RID: 59274 RVA: 0x0043CFCD File Offset: 0x0043B1CD
 	protected override void OnStart()
 	{
 		base.OnStart();
 		this.SeqPlayer = new LevelSequencePlayer(base.GetItem(6));
 	}
 
-	// Token: 0x060112F5 RID: 70389 RVA: 0x004303DC File Offset: 0x0042E5DC
+	// Token: 0x0600E78B RID: 59275 RVA: 0x0043CFE8 File Offset: 0x0043B1E8
 	protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 		MotorcycleTreeTypeTabItemData motorcycleTreeTypeTabItemData = data as MotorcycleTreeTypeTabItemData;
@@ -58,7 +58,7 @@ public class MotorcycleTreeTypeTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x060112F6 RID: 70390 RVA: 0x004304B7 File Offset: 0x0042E6B7
+	// Token: 0x0600E78C RID: 59276 RVA: 0x0043D0C3 File Offset: 0x0043B2C3
 	private void OnClickToggle(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -73,24 +73,24 @@ public class MotorcycleTreeTypeTabItem : CommonTabItemBase
 		base.GetItem(6).SetUIActive(false);
 	}
 
-	// Token: 0x060112F7 RID: 70391 RVA: 0x004304E4 File Offset: 0x0042E6E4
+	// Token: 0x0600E78D RID: 59277 RVA: 0x0043D0F0 File Offset: 0x0043B2F0
 	protected override void OnUpdateTabIcon(string iconPath)
 	{
 	}
 
-	// Token: 0x060112F8 RID: 70392 RVA: 0x004304E6 File Offset: 0x0042E6E6
+	// Token: 0x0600E78E RID: 59278 RVA: 0x0043D0F2 File Offset: 0x0043B2F2
 	protected override void OnSetToggleState(EToggleState state, bool bFire)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(state, bFire, false, true);
 	}
 
-	// Token: 0x060112F9 RID: 70393 RVA: 0x004304F8 File Offset: 0x0042E6F8
+	// Token: 0x0600E78F RID: 59279 RVA: 0x0043D104 File Offset: 0x0043B304
 	protected override UUIExtendToggle GetTabToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x060112FA RID: 70394 RVA: 0x00430504 File Offset: 0x0042E704
+	// Token: 0x0600E790 RID: 59280 RVA: 0x0043D110 File Offset: 0x0043B310
 	public void BindRedDot(ERedDotName redDotName, int treeType)
 	{
 		this.UnBindRedDot();
@@ -100,7 +100,7 @@ public class MotorcycleTreeTypeTabItem : CommonTabItemBase
 		RedDotController.Instance.BindRedDot(redDotName, item, null, treeType);
 	}
 
-	// Token: 0x060112FB RID: 70395 RVA: 0x00430540 File Offset: 0x0042E740
+	// Token: 0x0600E791 RID: 59281 RVA: 0x0043D14C File Offset: 0x0043B34C
 	public void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -111,7 +111,7 @@ public class MotorcycleTreeTypeTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x060112FC RID: 70396 RVA: 0x00430590 File Offset: 0x0042E790
+	// Token: 0x0600E792 RID: 59282 RVA: 0x0043D19C File Offset: 0x0043B39C
 	public void BindNewRedDot(ERedDotName redDotName, int treeType)
 	{
 		this.UnBindNewRedDot();
@@ -121,7 +121,7 @@ public class MotorcycleTreeTypeTabItem : CommonTabItemBase
 		RedDotController.Instance.BindRedDot(redDotName, item, null, treeType);
 	}
 
-	// Token: 0x060112FD RID: 70397 RVA: 0x004305CC File Offset: 0x0042E7CC
+	// Token: 0x0600E793 RID: 59283 RVA: 0x0043D1D8 File Offset: 0x0043B3D8
 	public void UnBindNewRedDot()
 	{
 		if (this.NewRedDotName != null)
@@ -132,45 +132,45 @@ public class MotorcycleTreeTypeTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x040082CB RID: 33483
+	// Token: 0x04008409 RID: 33801
 	private ERedDotName? RedDotName;
 
-	// Token: 0x040082CC RID: 33484
+	// Token: 0x0400840A RID: 33802
 	private ERedDotName? NewRedDotName;
 
-	// Token: 0x040082CD RID: 33485
+	// Token: 0x0400840B RID: 33803
 	private int TreeType;
 
-	// Token: 0x040082CE RID: 33486
+	// Token: 0x0400840C RID: 33804
 	private int NewTreeType;
 
-	// Token: 0x040082CF RID: 33487
+	// Token: 0x0400840D RID: 33805
 	[Nullable(2)]
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x0200878D RID: 34701
+	// Token: 0x02007916 RID: 30998
 	[NullableContext(0)]
 	private class EMotorTreeTypeTabItemComponent
 	{
-		// Token: 0x0402C0E9 RID: 180457
+		// Token: 0x04027401 RID: 160769
 		public const int TogItem = 0;
 
-		// Token: 0x0402C0EA RID: 180458
+		// Token: 0x04027402 RID: 160770
 		public const int TexIcon = 1;
 
-		// Token: 0x0402C0EB RID: 180459
+		// Token: 0x04027403 RID: 160771
 		public const int TxtName = 2;
 
-		// Token: 0x0402C0EC RID: 180460
+		// Token: 0x04027404 RID: 160772
 		public const int FinishItem = 3;
 
-		// Token: 0x0402C0ED RID: 180461
+		// Token: 0x04027405 RID: 160773
 		public const int RedDotItem = 4;
 
-		// Token: 0x0402C0EE RID: 180462
+		// Token: 0x04027406 RID: 160774
 		public const int NewItem = 5;
 
-		// Token: 0x0402C0EF RID: 180463
+		// Token: 0x04027407 RID: 160775
 		public const int NewSeqItem = 6;
 	}
 }

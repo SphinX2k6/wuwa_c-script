@@ -3,30 +3,30 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C5F RID: 11359
+// Token: 0x020021B8 RID: 8632
 public class UiSceneDangoActorManager : IStaticVariableResetter
 {
-	// Token: 0x06017B6E RID: 97134 RVA: 0x00607735 File Offset: 0x00605935
+	// Token: 0x060153E2 RID: 87010 RVA: 0x0062D1F9 File Offset: 0x0062B3F9
 	static UiSceneDangoActorManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiSceneDangoActorManager.CreateStaticDefaultValue), new Action(UiSceneDangoActorManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06017B6F RID: 97135 RVA: 0x00607754 File Offset: 0x00605954
+	// Token: 0x060153E3 RID: 87011 RVA: 0x0062D218 File Offset: 0x0062B418
 	public static void CreateStaticDefaultValue()
 	{
 		UiSceneDangoActorManager.CreateIndex = 0;
 		UiSceneDangoActorManager.UiSceneDangoActorMap = new Dictionary<int, TsUiSceneDangoActor>();
 	}
 
-	// Token: 0x06017B70 RID: 97136 RVA: 0x00607766 File Offset: 0x00605966
+	// Token: 0x060153E4 RID: 87012 RVA: 0x0062D22A File Offset: 0x0062B42A
 	public static void ResetStaticDefaultValue()
 	{
 		UiSceneDangoActorManager.CreateIndex = 0;
 		UiSceneDangoActorManager.UiSceneDangoActorMap = null;
 	}
 
-	// Token: 0x06017B71 RID: 97137 RVA: 0x00607774 File Offset: 0x00605974
+	// Token: 0x060153E5 RID: 87013 RVA: 0x0062D238 File Offset: 0x0062B438
 	[NullableContext(1)]
 	public static TsUiSceneDangoActor CreateUiSceneDangoActor(EUiModelUseWay useWay)
 	{
@@ -37,7 +37,7 @@ public class UiSceneDangoActorManager : IStaticVariableResetter
 		return tsUiSceneDangoActor;
 	}
 
-	// Token: 0x06017B72 RID: 97138 RVA: 0x006077C4 File Offset: 0x006059C4
+	// Token: 0x060153E6 RID: 87014 RVA: 0x0062D288 File Offset: 0x0062B488
 	public static bool DestroyUiSceneDangoActor(int index)
 	{
 		TsUiSceneDangoActor tsUiSceneDangoActor;
@@ -49,7 +49,7 @@ public class UiSceneDangoActorManager : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x06017B73 RID: 97139 RVA: 0x006077F4 File Offset: 0x006059F4
+	// Token: 0x060153E7 RID: 87015 RVA: 0x0062D2B8 File Offset: 0x0062B4B8
 	public static void SetAllActorVisible(bool visible)
 	{
 		foreach (TsUiSceneDangoActor tsUiSceneDangoActor in UiSceneDangoActorManager.UiSceneDangoActorMap.Values)
@@ -62,7 +62,7 @@ public class UiSceneDangoActorManager : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06017B74 RID: 97140 RVA: 0x0060785C File Offset: 0x00605A5C
+	// Token: 0x060153E8 RID: 87016 RVA: 0x0062D320 File Offset: 0x0062B520
 	public static void ClearAllUiSceneDangoActor()
 	{
 		foreach (TsUiSceneDangoActor tsUiSceneDangoActor in UiSceneDangoActorManager.UiSceneDangoActorMap.Values)
@@ -72,10 +72,10 @@ public class UiSceneDangoActorManager : IStaticVariableResetter
 		UiSceneDangoActorManager.UiSceneDangoActorMap.Clear();
 	}
 
-	// Token: 0x0400B0AD RID: 45229
+	// Token: 0x0400B419 RID: 46105
 	private static int CreateIndex;
 
-	// Token: 0x0400B0AE RID: 45230
+	// Token: 0x0400B41A RID: 46106
 	[Nullable(new byte[]
 	{
 		2,

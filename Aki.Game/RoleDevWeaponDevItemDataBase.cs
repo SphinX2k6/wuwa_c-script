@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleDev;
 
-// Token: 0x02002832 RID: 10290
+// Token: 0x02001DAD RID: 7597
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class RoleDevWeaponDevItemDataBase
 {
-	// Token: 0x06015349 RID: 86857 RVA: 0x0055CC76 File Offset: 0x0055AE76
+	// Token: 0x06012D47 RID: 77127 RVA: 0x005879D2 File Offset: 0x00585BD2
 	public void InitByRoleId(int roleId, ERoleDevDataType roleType)
 	{
 		this.RoleIdInternal = roleId;
@@ -16,11 +16,11 @@ public abstract class RoleDevWeaponDevItemDataBase
 		this.InitByRoleType(roleId);
 	}
 
-	// Token: 0x0601534A RID: 86858
+	// Token: 0x06012D48 RID: 77128
 	protected abstract void InitByRoleType(int roleId);
 
-	// Token: 0x17001C15 RID: 7189
-	// (get) Token: 0x0601534B RID: 86859 RVA: 0x0055CC8D File Offset: 0x0055AE8D
+	// Token: 0x17001C6D RID: 7277
+	// (get) Token: 0x06012D49 RID: 77129 RVA: 0x005879E9 File Offset: 0x00585BE9
 	public int RoleId
 	{
 		get
@@ -29,8 +29,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C16 RID: 7190
-	// (get) Token: 0x0601534C RID: 86860 RVA: 0x0055CC95 File Offset: 0x0055AE95
+	// Token: 0x17001C6E RID: 7278
+	// (get) Token: 0x06012D4A RID: 77130 RVA: 0x005879F1 File Offset: 0x00585BF1
 	public ERoleDevDataType RoleType
 	{
 		get
@@ -39,44 +39,44 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x0601534D RID: 86861
+	// Token: 0x06012D4B RID: 77131
 	protected abstract int GetWeaponLevel();
 
-	// Token: 0x0601534E RID: 86862
+	// Token: 0x06012D4C RID: 77132
 	protected abstract int GetWeaponBreachLevel();
 
-	// Token: 0x0601534F RID: 86863
+	// Token: 0x06012D4D RID: 77133
 	protected abstract int GetWeaponGoalUpgradeLevel();
 
-	// Token: 0x06015350 RID: 86864
+	// Token: 0x06012D4E RID: 77134
 	protected abstract int GetWeaponGoalBreakLevel();
 
-	// Token: 0x06015351 RID: 86865
+	// Token: 0x06012D4F RID: 77135
 	protected abstract List<global::IRoleDevDetailItemData> GetDetailItems();
 
-	// Token: 0x06015352 RID: 86866
+	// Token: 0x06012D50 RID: 77136
 	protected abstract string GetWeaponName();
 
-	// Token: 0x06015353 RID: 86867
+	// Token: 0x06012D51 RID: 77137
 	protected abstract bool GetIsCanUpgrade();
 
-	// Token: 0x06015354 RID: 86868
+	// Token: 0x06012D52 RID: 77138
 	protected abstract bool GetIsCanBreach();
 
-	// Token: 0x06015355 RID: 86869
+	// Token: 0x06012D53 RID: 77139
 	protected abstract bool GetIsCall();
 
-	// Token: 0x06015356 RID: 86870
+	// Token: 0x06012D54 RID: 77140
 	protected abstract int GetGachaId();
 
-	// Token: 0x06015357 RID: 86871
+	// Token: 0x06012D55 RID: 77141
 	protected abstract int GetWeaponConfigId();
 
-	// Token: 0x06015358 RID: 86872
+	// Token: 0x06012D56 RID: 77142
 	protected abstract bool GetIsHighQuality();
 
-	// Token: 0x17001C17 RID: 7191
-	// (get) Token: 0x06015359 RID: 86873 RVA: 0x0055CC9D File Offset: 0x0055AE9D
+	// Token: 0x17001C6F RID: 7279
+	// (get) Token: 0x06012D57 RID: 77143 RVA: 0x005879F9 File Offset: 0x00585BF9
 	public int WeaponLevel
 	{
 		get
@@ -85,8 +85,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C18 RID: 7192
-	// (get) Token: 0x0601535A RID: 86874 RVA: 0x0055CCA5 File Offset: 0x0055AEA5
+	// Token: 0x17001C70 RID: 7280
+	// (get) Token: 0x06012D58 RID: 77144 RVA: 0x00587A01 File Offset: 0x00585C01
 	public int WeaponBreachLevel
 	{
 		get
@@ -95,8 +95,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C19 RID: 7193
-	// (get) Token: 0x0601535B RID: 86875 RVA: 0x0055CCAD File Offset: 0x0055AEAD
+	// Token: 0x17001C71 RID: 7281
+	// (get) Token: 0x06012D59 RID: 77145 RVA: 0x00587A09 File Offset: 0x00585C09
 	public int WeaponGoalUpgradeLevel
 	{
 		get
@@ -105,8 +105,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C1A RID: 7194
-	// (get) Token: 0x0601535C RID: 86876 RVA: 0x0055CCB5 File Offset: 0x0055AEB5
+	// Token: 0x17001C72 RID: 7282
+	// (get) Token: 0x06012D5A RID: 77146 RVA: 0x00587A11 File Offset: 0x00585C11
 	public int WeaponGoalBreakLevel
 	{
 		get
@@ -115,8 +115,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C1B RID: 7195
-	// (get) Token: 0x0601535D RID: 86877 RVA: 0x0055CCBD File Offset: 0x0055AEBD
+	// Token: 0x17001C73 RID: 7283
+	// (get) Token: 0x06012D5B RID: 77147 RVA: 0x00587A19 File Offset: 0x00585C19
 	public List<global::IRoleDevDetailItemData> DetailItems
 	{
 		get
@@ -125,8 +125,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C1C RID: 7196
-	// (get) Token: 0x0601535E RID: 86878 RVA: 0x0055CCC5 File Offset: 0x0055AEC5
+	// Token: 0x17001C74 RID: 7284
+	// (get) Token: 0x06012D5C RID: 77148 RVA: 0x00587A21 File Offset: 0x00585C21
 	public string WeaponName
 	{
 		get
@@ -135,8 +135,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C1D RID: 7197
-	// (get) Token: 0x0601535F RID: 86879 RVA: 0x0055CCCD File Offset: 0x0055AECD
+	// Token: 0x17001C75 RID: 7285
+	// (get) Token: 0x06012D5D RID: 77149 RVA: 0x00587A29 File Offset: 0x00585C29
 	public bool IsCanUpgrade
 	{
 		get
@@ -145,8 +145,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C1E RID: 7198
-	// (get) Token: 0x06015360 RID: 86880 RVA: 0x0055CCD5 File Offset: 0x0055AED5
+	// Token: 0x17001C76 RID: 7286
+	// (get) Token: 0x06012D5E RID: 77150 RVA: 0x00587A31 File Offset: 0x00585C31
 	public bool IsCanBreach
 	{
 		get
@@ -155,8 +155,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C1F RID: 7199
-	// (get) Token: 0x06015361 RID: 86881 RVA: 0x0055CCDD File Offset: 0x0055AEDD
+	// Token: 0x17001C77 RID: 7287
+	// (get) Token: 0x06012D5F RID: 77151 RVA: 0x00587A39 File Offset: 0x00585C39
 	public bool IsCall
 	{
 		get
@@ -165,8 +165,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C20 RID: 7200
-	// (get) Token: 0x06015362 RID: 86882 RVA: 0x0055CCE5 File Offset: 0x0055AEE5
+	// Token: 0x17001C78 RID: 7288
+	// (get) Token: 0x06012D60 RID: 77152 RVA: 0x00587A41 File Offset: 0x00585C41
 	public int GachaId
 	{
 		get
@@ -175,8 +175,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C21 RID: 7201
-	// (get) Token: 0x06015363 RID: 86883 RVA: 0x0055CCED File Offset: 0x0055AEED
+	// Token: 0x17001C79 RID: 7289
+	// (get) Token: 0x06012D61 RID: 77153 RVA: 0x00587A49 File Offset: 0x00585C49
 	public int WeaponConfigId
 	{
 		get
@@ -185,8 +185,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C22 RID: 7202
-	// (get) Token: 0x06015364 RID: 86884 RVA: 0x0055CCF5 File Offset: 0x0055AEF5
+	// Token: 0x17001C7A RID: 7290
+	// (get) Token: 0x06012D62 RID: 77154 RVA: 0x00587A51 File Offset: 0x00585C51
 	public bool IsHighQuality
 	{
 		get
@@ -195,8 +195,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C23 RID: 7203
-	// (get) Token: 0x06015365 RID: 86885 RVA: 0x0055CCFD File Offset: 0x0055AEFD
+	// Token: 0x17001C7B RID: 7291
+	// (get) Token: 0x06012D63 RID: 77155 RVA: 0x00587A59 File Offset: 0x00585C59
 	public bool IsCanShowUpgradeItem
 	{
 		get
@@ -205,8 +205,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C24 RID: 7204
-	// (get) Token: 0x06015366 RID: 86886 RVA: 0x0055CD0D File Offset: 0x0055AF0D
+	// Token: 0x17001C7C RID: 7292
+	// (get) Token: 0x06012D64 RID: 77156 RVA: 0x00587A69 File Offset: 0x00585C69
 	public bool IsCanShowBreachItem
 	{
 		get
@@ -215,8 +215,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C25 RID: 7205
-	// (get) Token: 0x06015367 RID: 86887 RVA: 0x0055CD1D File Offset: 0x0055AF1D
+	// Token: 0x17001C7D RID: 7293
+	// (get) Token: 0x06012D65 RID: 77157 RVA: 0x00587A79 File Offset: 0x00585C79
 	public bool IsFinish
 	{
 		get
@@ -225,8 +225,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C26 RID: 7206
-	// (get) Token: 0x06015368 RID: 86888 RVA: 0x0055CD32 File Offset: 0x0055AF32
+	// Token: 0x17001C7E RID: 7294
+	// (get) Token: 0x06012D66 RID: 77158 RVA: 0x00587A8E File Offset: 0x00585C8E
 	public bool IsAllMaterialEnough
 	{
 		get
@@ -235,8 +235,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C27 RID: 7207
-	// (get) Token: 0x06015369 RID: 86889 RVA: 0x0055CD3F File Offset: 0x0055AF3F
+	// Token: 0x17001C7F RID: 7295
+	// (get) Token: 0x06012D67 RID: 77159 RVA: 0x00587A9B File Offset: 0x00585C9B
 	public bool IsRoleObtained
 	{
 		get
@@ -245,8 +245,8 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x17001C28 RID: 7208
-	// (get) Token: 0x0601536A RID: 86890 RVA: 0x0055CD4A File Offset: 0x0055AF4A
+	// Token: 0x17001C80 RID: 7296
+	// (get) Token: 0x06012D68 RID: 77160 RVA: 0x00587AA6 File Offset: 0x00585CA6
 	public bool WeaponIsMaxLevel
 	{
 		get
@@ -255,12 +255,12 @@ public abstract class RoleDevWeaponDevItemDataBase
 		}
 	}
 
-	// Token: 0x0601536B RID: 86891
+	// Token: 0x06012D69 RID: 77161
 	protected abstract int GetMaxLevel();
 
-	// Token: 0x04009E9C RID: 40604
+	// Token: 0x0400A285 RID: 41605
 	protected int RoleIdInternal;
 
-	// Token: 0x04009E9D RID: 40605
+	// Token: 0x0400A286 RID: 41606
 	protected ERoleDevDataType RoleTypeInternal;
 }

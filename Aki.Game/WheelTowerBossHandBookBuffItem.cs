@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001587 RID: 5511
+// Token: 0x02000A3F RID: 2623
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class WheelTowerBossHandBookBuffItem : GridProxyAbstract<IWheelTowerBossHandBookBuffData>
 {
-	// Token: 0x06009D56 RID: 40278 RVA: 0x002219A4 File Offset: 0x0021FBA4
+	// Token: 0x06007134 RID: 28980 RVA: 0x0022B754 File Offset: 0x00229954
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -32,13 +32,13 @@ public class WheelTowerBossHandBookBuffItem : GridProxyAbstract<IWheelTowerBossH
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D57 RID: 40279 RVA: 0x00221A2E File Offset: 0x0021FC2E
+	// Token: 0x06007135 RID: 28981 RVA: 0x0022B7DE File Offset: 0x002299DE
 	protected override void OnStart()
 	{
 		this.DescLayout = new GenericLayout<WheelTowerBossHandBookDescItem, IWheelTowerBossHandBookBuffDescData>(base.GetVerticalLayout(1), () => new WheelTowerBossHandBookDescItem(), null, false, true);
 	}
 
-	// Token: 0x06009D58 RID: 40280 RVA: 0x00221A64 File Offset: 0x0021FC64
+	// Token: 0x06007136 RID: 28982 RVA: 0x0022B814 File Offset: 0x00229A14
 	public override void Refresh(IWheelTowerBossHandBookBuffData data, bool isSelected, int gridIndex)
 	{
 		string format = ConfigMultiTextLang.GetLocalTextNew("WheelTower_BossHandBook_BossRound", null) ?? string.Empty;
@@ -64,7 +64,7 @@ public class WheelTowerBossHandBookBuffItem : GridProxyAbstract<IWheelTowerBossH
 		descLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x04004520 RID: 17696
+	// Token: 0x040045C6 RID: 17862
 	[Nullable(new byte[]
 	{
 		2,

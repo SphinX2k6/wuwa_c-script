@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B8D RID: 2957
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C5B RID: 3163
 	public class IPartHitConfig
 	{
-		// Token: 0x060043FC RID: 17404 RVA: 0x000ACE91 File Offset: 0x000AB091
+		// Token: 0x06004855 RID: 18517 RVA: 0x000B6F55 File Offset: 0x000B5155
 		public static IPartHitConfig Create(IPartHitConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700129F RID: 4767
-		// (get) Token: 0x060043FD RID: 17405 RVA: 0x000ACEB0 File Offset: 0x000AB0B0
+		// Token: 0x1700139A RID: 5018
+		// (get) Token: 0x06004856 RID: 18518 RVA: 0x000B6F74 File Offset: 0x000B5174
 		public virtual string PartName
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012A0 RID: 4768
-		// (get) Token: 0x060043FE RID: 17406 RVA: 0x000ACEBD File Offset: 0x000AB0BD
+		// Token: 0x1700139B RID: 5019
+		// (get) Token: 0x06004857 RID: 18519 RVA: 0x000B6F81 File Offset: 0x000B5181
 		public virtual IHitBulletType HitBullets
 		{
 			get
@@ -50,19 +48,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012A1 RID: 4769
-		// (get) Token: 0x060043FF RID: 17407 RVA: 0x000ACEEC File Offset: 0x000AB0EC
+		// Token: 0x1700139C RID: 5020
+		// (get) Token: 0x06004858 RID: 18520 RVA: 0x000B6FB0 File Offset: 0x000B51B0
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -85,24 +83,24 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002658 RID: 9816
+		// Token: 0x040028A0 RID: 10400
 		private IPartHitConfig Instance;
 
-		// Token: 0x04002659 RID: 9817
+		// Token: 0x040028A1 RID: 10401
 		private IHitBulletType _HitBulletsCache;
 
-		// Token: 0x0400265A RID: 9818
+		// Token: 0x040028A2 RID: 10402
 		private bool _HitBulletsInited;
 
-		// Token: 0x0400265B RID: 9819
+		// Token: 0x040028A3 RID: 10403
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x0400265C RID: 9820
+		// Token: 0x040028A4 RID: 10404
 		private bool _ActionsInited;
 	}
 }

@@ -2,44 +2,44 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200303B RID: 12347
+// Token: 0x02002591 RID: 9617
 [NullableContext(2)]
 [Nullable(0)]
 public class TurnParam : ITurnParam, IActionParamMap
 {
-	// Token: 0x1700240C RID: 9228
-	// (get) Token: 0x0601A306 RID: 107270 RVA: 0x006E388B File Offset: 0x006E1A8B
-	// (set) Token: 0x0601A307 RID: 107271 RVA: 0x006E3893 File Offset: 0x006E1A93
+	// Token: 0x170024F8 RID: 9464
+	// (get) Token: 0x06017C70 RID: 97392 RVA: 0x0070B413 File Offset: 0x00709613
+	// (set) Token: 0x06017C71 RID: 97393 RVA: 0x0070B41B File Offset: 0x0070961B
 	public Vector TargetLocation { get; set; }
 
-	// Token: 0x1700240D RID: 9229
-	// (get) Token: 0x0601A308 RID: 107272 RVA: 0x006E389C File Offset: 0x006E1A9C
-	// (set) Token: 0x0601A309 RID: 107273 RVA: 0x006E38A4 File Offset: 0x006E1AA4
+	// Token: 0x170024F9 RID: 9465
+	// (get) Token: 0x06017C72 RID: 97394 RVA: 0x0070B424 File Offset: 0x00709624
+	// (set) Token: 0x06017C73 RID: 97395 RVA: 0x0070B42C File Offset: 0x0070962C
 	public Vector Direction { get; set; }
 
-	// Token: 0x1700240E RID: 9230
-	// (get) Token: 0x0601A30A RID: 107274 RVA: 0x006E38AD File Offset: 0x006E1AAD
-	// (set) Token: 0x0601A30B RID: 107275 RVA: 0x006E38B5 File Offset: 0x006E1AB5
+	// Token: 0x170024FA RID: 9466
+	// (get) Token: 0x06017C74 RID: 97396 RVA: 0x0070B435 File Offset: 0x00709635
+	// (set) Token: 0x06017C75 RID: 97397 RVA: 0x0070B43D File Offset: 0x0070963D
 	public float? TurnSpeed { get; set; }
 
-	// Token: 0x1700240F RID: 9231
-	// (get) Token: 0x0601A30C RID: 107276 RVA: 0x006E38BE File Offset: 0x006E1ABE
-	// (set) Token: 0x0601A30D RID: 107277 RVA: 0x006E38C6 File Offset: 0x006E1AC6
+	// Token: 0x170024FB RID: 9467
+	// (get) Token: 0x06017C76 RID: 97398 RVA: 0x0070B446 File Offset: 0x00709646
+	// (set) Token: 0x06017C77 RID: 97399 RVA: 0x0070B44E File Offset: 0x0070964E
 	public bool? ContainZ { get; set; }
 
-	// Token: 0x17002410 RID: 9232
-	// (get) Token: 0x0601A30E RID: 107278 RVA: 0x006E38CF File Offset: 0x006E1ACF
-	// (set) Token: 0x0601A30F RID: 107279 RVA: 0x006E38D7 File Offset: 0x006E1AD7
+	// Token: 0x170024FC RID: 9468
+	// (get) Token: 0x06017C78 RID: 97400 RVA: 0x0070B457 File Offset: 0x00709657
+	// (set) Token: 0x06017C79 RID: 97401 RVA: 0x0070B45F File Offset: 0x0070965F
 	public float? MinTurnTimeSeconds { get; set; }
 
-	// Token: 0x17002411 RID: 9233
-	// (get) Token: 0x0601A310 RID: 107280 RVA: 0x006E38E0 File Offset: 0x006E1AE0
-	// (set) Token: 0x0601A311 RID: 107281 RVA: 0x006E38E8 File Offset: 0x006E1AE8
+	// Token: 0x170024FD RID: 9469
+	// (get) Token: 0x06017C7A RID: 97402 RVA: 0x0070B468 File Offset: 0x00709668
+	// (set) Token: 0x06017C7B RID: 97403 RVA: 0x0070B470 File Offset: 0x00709670
 	public bool? UseLookAtForThisTurn { get; set; }
 
-	// Token: 0x17002412 RID: 9234
-	// (get) Token: 0x0601A312 RID: 107282 RVA: 0x006E38F1 File Offset: 0x006E1AF1
-	// (set) Token: 0x0601A313 RID: 107283 RVA: 0x006E38F9 File Offset: 0x006E1AF9
+	// Token: 0x170024FE RID: 9470
+	// (get) Token: 0x06017C7C RID: 97404 RVA: 0x0070B479 File Offset: 0x00709679
+	// (set) Token: 0x06017C7D RID: 97405 RVA: 0x0070B481 File Offset: 0x00709681
 	[Nullable(new byte[]
 	{
 		0,

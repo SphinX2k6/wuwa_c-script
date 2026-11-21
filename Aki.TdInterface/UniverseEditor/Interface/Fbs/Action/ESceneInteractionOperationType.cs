@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FEF RID: 24559
+	// Token: 0x02006649 RID: 26185
 	public enum ESceneInteractionOperationType : byte
 	{
-		// Token: 0x0400FFB1 RID: 65457
+		// Token: 0x04010D82 RID: 68994
 		Enable,
-		// Token: 0x0400FFB2 RID: 65458
+		// Token: 0x04010D83 RID: 68995
 		Disable
 	}
 }

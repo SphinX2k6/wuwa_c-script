@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002AE3 RID: 10979
+// Token: 0x0200205F RID: 8287
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueCommandFactory
 {
-	// Token: 0x06016D90 RID: 93584 RVA: 0x005CC5E8 File Offset: 0x005CA7E8
+	// Token: 0x060147C1 RID: 83905 RVA: 0x005F9138 File Offset: 0x005F7338
 	[return: Nullable(2)]
 	public static SurvivorsRogueCommandBase Create(SurvivorsOpData data)
 	{
@@ -79,7 +79,7 @@ public class SurvivorsRogueCommandFactory
 		});
 	}
 
-	// Token: 0x06016D92 RID: 93586 RVA: 0x005CC76C File Offset: 0x005CA96C
+	// Token: 0x060147C3 RID: 83907 RVA: 0x005F92BC File Offset: 0x005F74BC
 	// Note: this type is marked as 'beforefieldinit'.
 	static SurvivorsRogueCommandFactory()
 	{
@@ -94,7 +94,7 @@ public class SurvivorsRogueCommandFactory
 		SurvivorsRogueCommandFactory.TypeCommandClassCtorMap = dictionary;
 	}
 
-	// Token: 0x0400A9BA RID: 43450
+	// Token: 0x0400ADC0 RID: 44480
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<ESurvivorsRogueCommandType, Type> TypeCommandClassCtorMap;
 }

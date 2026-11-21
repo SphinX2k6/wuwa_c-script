@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EBA RID: 3770
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FD0 RID: 4048
 	public class IAddTimeConfig
 	{
-		// Token: 0x06005322 RID: 21282 RVA: 0x000CCB2C File Offset: 0x000CAD2C
+		// Token: 0x0600589E RID: 22686 RVA: 0x000D8CD4 File Offset: 0x000D6ED4
 		private IAddTimeConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005323 RID: 21283 RVA: 0x000CCB64 File Offset: 0x000CAD64
+		// Token: 0x0600589F RID: 22687 RVA: 0x000D8D0C File Offset: 0x000D6F0C
 		public static IAddTimeConfig Create([Nullable(2)] IAddTimeConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005324 RID: 21284 RVA: 0x000CCB77 File Offset: 0x000CAD77
+		// Token: 0x060058A0 RID: 22688 RVA: 0x000D8D1F File Offset: 0x000D6F1F
 		public static IAddTimeConfig CreateFromSetValue([Nullable(2)] IAddTimeConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005325 RID: 21285 RVA: 0x000CCB8A File Offset: 0x000CAD8A
+		// Token: 0x060058A1 RID: 22689 RVA: 0x000D8D32 File Offset: 0x000D6F32
 		public IAddTimeConfig_SetValue ToSetValue()
 		{
 			return new IAddTimeConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001BF9 RID: 7161
-		// (get) Token: 0x06005326 RID: 21286 RVA: 0x000CCBAC File Offset: 0x000CADAC
-		// (set) Token: 0x06005327 RID: 21287 RVA: 0x000CCC0D File Offset: 0x000CAE0D
+		// Token: 0x17001D91 RID: 7569
+		// (get) Token: 0x060058A2 RID: 22690 RVA: 0x000D8D54 File Offset: 0x000D6F54
+		// (set) Token: 0x060058A3 RID: 22691 RVA: 0x000D8DB5 File Offset: 0x000D6FB5
 		[Nullable(2)]
 		public virtual IKillMonster MonsterConfig
 		{
@@ -94,20 +92,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001BFA RID: 7162
-		// (get) Token: 0x06005328 RID: 21288 RVA: 0x000CCC24 File Offset: 0x000CAE24
-		// (set) Token: 0x06005329 RID: 21289 RVA: 0x000CCCB7 File Offset: 0x000CAEB7
+		// Token: 0x17001D92 RID: 7570
+		// (get) Token: 0x060058A4 RID: 22692 RVA: 0x000D8DCC File Offset: 0x000D6FCC
+		// (set) Token: 0x060058A5 RID: 22693 RVA: 0x000D8E5F File Offset: 0x000D705F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IAddTimeStateCondition> StateConfig
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -138,7 +136,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -147,29 +145,29 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003265 RID: 12901
+		// Token: 0x04003572 RID: 13682
 		[Nullable(2)]
 		protected IAddTimeConfig FbInstance;
 
-		// Token: 0x04003266 RID: 12902
+		// Token: 0x04003573 RID: 13683
 		[Nullable(2)]
 		protected IAddTimeConfig_SetValue PocoInterface;
 
-		// Token: 0x04003267 RID: 12903
+		// Token: 0x04003574 RID: 13684
 		private IKillMonster _MonsterConfigCache;
 
-		// Token: 0x04003268 RID: 12904
+		// Token: 0x04003575 RID: 13685
 		private bool _MonsterConfigInited;
 
-		// Token: 0x04003269 RID: 12905
+		// Token: 0x04003576 RID: 13686
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IAddTimeStateCondition> _StateConfigCache;
 
-		// Token: 0x0400326A RID: 12906
+		// Token: 0x04003577 RID: 13687
 		private bool _StateConfigInited;
 	}
 }

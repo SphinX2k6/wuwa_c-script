@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000BF6 RID: 3062
+	// Token: 0x02000BE6 RID: 3046
 	public sealed class PayShopRecommendConfigInfo : IMessage<PayShopRecommendConfigInfo>, IMessage, IEquatable<PayShopRecommendConfigInfo>, IDeepCloneable<PayShopRecommendConfigInfo>, IBufferMessage
 	{
-		// Token: 0x060109CF RID: 68047 RVA: 0x0026E54E File Offset: 0x0026C74E
+		// Token: 0x060108CF RID: 67791 RVA: 0x0026C7E6 File Offset: 0x0026A9E6
 		[NullableContext(1)]
 		public static PayShopRecommendConfigInfo Create()
 		{
 			return new PayShopRecommendConfigInfo();
 		}
 
-		// Token: 0x170036B6 RID: 14006
-		// (get) Token: 0x060109D0 RID: 68048 RVA: 0x0026E555 File Offset: 0x0026C755
+		// Token: 0x1700367F RID: 13951
+		// (get) Token: 0x060108D0 RID: 67792 RVA: 0x0026C7ED File Offset: 0x0026A9ED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<PayShopRecommendConfigInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170036B7 RID: 14007
-		// (get) Token: 0x060109D1 RID: 68049 RVA: 0x0026E55C File Offset: 0x0026C75C
+		// Token: 0x17003680 RID: 13952
+		// (get) Token: 0x060108D1 RID: 67793 RVA: 0x0026C7F4 File Offset: 0x0026A9F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170036B8 RID: 14008
-		// (get) Token: 0x060109D2 RID: 68050 RVA: 0x0026E55F File Offset: 0x0026C75F
+		// Token: 0x17003681 RID: 13953
+		// (get) Token: 0x060108D2 RID: 67794 RVA: 0x0026C7F7 File Offset: 0x0026A9F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060109D3 RID: 68051 RVA: 0x0026E566 File Offset: 0x0026C766
+		// Token: 0x060108D3 RID: 67795 RVA: 0x0026C7FE File Offset: 0x0026A9FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PayShopRecommendConfigInfo()
 		{
 		}
 
-		// Token: 0x060109D4 RID: 68052 RVA: 0x0026E590 File Offset: 0x0026C790
+		// Token: 0x060108D4 RID: 67796 RVA: 0x0026C828 File Offset: 0x0026AA28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PayShopRecommendConfigInfo(PayShopRecommendConfigInfo other) : this()
@@ -76,7 +76,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060109D5 RID: 68053 RVA: 0x0026E614 File Offset: 0x0026C814
+		// Token: 0x060108D5 RID: 67797 RVA: 0x0026C8AC File Offset: 0x0026AAAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PayShopRecommendConfigInfo Clone()
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			return new PayShopRecommendConfigInfo(this);
 		}
 
-		// Token: 0x170036B9 RID: 14009
-		// (get) Token: 0x060109D6 RID: 68054 RVA: 0x0026E61C File Offset: 0x0026C81C
-		// (set) Token: 0x060109D7 RID: 68055 RVA: 0x0026E624 File Offset: 0x0026C824
+		// Token: 0x17003682 RID: 13954
+		// (get) Token: 0x060108D6 RID: 67798 RVA: 0x0026C8B4 File Offset: 0x0026AAB4
+		// (set) Token: 0x060108D7 RID: 67799 RVA: 0x0026C8BC File Offset: 0x0026AABC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Id
@@ -101,9 +101,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170036BA RID: 14010
-		// (get) Token: 0x060109D8 RID: 68056 RVA: 0x0026E62D File Offset: 0x0026C82D
-		// (set) Token: 0x060109D9 RID: 68057 RVA: 0x0026E635 File Offset: 0x0026C835
+		// Token: 0x17003683 RID: 13955
+		// (get) Token: 0x060108D8 RID: 67800 RVA: 0x0026C8C5 File Offset: 0x0026AAC5
+		// (set) Token: 0x060108D9 RID: 67801 RVA: 0x0026C8CD File Offset: 0x0026AACD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RecommendType
@@ -118,9 +118,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170036BB RID: 14011
-		// (get) Token: 0x060109DA RID: 68058 RVA: 0x0026E63E File Offset: 0x0026C83E
-		// (set) Token: 0x060109DB RID: 68059 RVA: 0x0026E646 File Offset: 0x0026C846
+		// Token: 0x17003684 RID: 13956
+		// (get) Token: 0x060108DA RID: 67802 RVA: 0x0026C8D6 File Offset: 0x0026AAD6
+		// (set) Token: 0x060108DB RID: 67803 RVA: 0x0026C8DE File Offset: 0x0026AADE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RecommendId
@@ -135,9 +135,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170036BC RID: 14012
-		// (get) Token: 0x060109DC RID: 68060 RVA: 0x0026E64F File Offset: 0x0026C84F
-		// (set) Token: 0x060109DD RID: 68061 RVA: 0x0026E657 File Offset: 0x0026C857
+		// Token: 0x17003685 RID: 13957
+		// (get) Token: 0x060108DC RID: 67804 RVA: 0x0026C8E7 File Offset: 0x0026AAE7
+		// (set) Token: 0x060108DD RID: 67805 RVA: 0x0026C8EF File Offset: 0x0026AAEF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string TabName
@@ -152,9 +152,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170036BD RID: 14013
-		// (get) Token: 0x060109DE RID: 68062 RVA: 0x0026E66A File Offset: 0x0026C86A
-		// (set) Token: 0x060109DF RID: 68063 RVA: 0x0026E672 File Offset: 0x0026C872
+		// Token: 0x17003686 RID: 13958
+		// (get) Token: 0x060108DE RID: 67806 RVA: 0x0026C902 File Offset: 0x0026AB02
+		// (set) Token: 0x060108DF RID: 67807 RVA: 0x0026C90A File Offset: 0x0026AB0A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string PrefabPath
@@ -169,9 +169,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170036BE RID: 14014
-		// (get) Token: 0x060109E0 RID: 68064 RVA: 0x0026E685 File Offset: 0x0026C885
-		// (set) Token: 0x060109E1 RID: 68065 RVA: 0x0026E68D File Offset: 0x0026C88D
+		// Token: 0x17003687 RID: 13959
+		// (get) Token: 0x060108E0 RID: 67808 RVA: 0x0026C91D File Offset: 0x0026AB1D
+		// (set) Token: 0x060108E1 RID: 67809 RVA: 0x0026C925 File Offset: 0x0026AB25
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Sort
@@ -186,9 +186,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170036BF RID: 14015
-		// (get) Token: 0x060109E2 RID: 68066 RVA: 0x0026E696 File Offset: 0x0026C896
-		// (set) Token: 0x060109E3 RID: 68067 RVA: 0x0026E69E File Offset: 0x0026C89E
+		// Token: 0x17003688 RID: 13960
+		// (get) Token: 0x060108E2 RID: 67810 RVA: 0x0026C92E File Offset: 0x0026AB2E
+		// (set) Token: 0x060108E3 RID: 67811 RVA: 0x0026C936 File Offset: 0x0026AB36
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Show
@@ -203,9 +203,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170036C0 RID: 14016
-		// (get) Token: 0x060109E4 RID: 68068 RVA: 0x0026E6A7 File Offset: 0x0026C8A7
-		// (set) Token: 0x060109E5 RID: 68069 RVA: 0x0026E6AF File Offset: 0x0026C8AF
+		// Token: 0x17003689 RID: 13961
+		// (get) Token: 0x060108E4 RID: 67812 RVA: 0x0026C93F File Offset: 0x0026AB3F
+		// (set) Token: 0x060108E5 RID: 67813 RVA: 0x0026C947 File Offset: 0x0026AB47
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string TabImage
@@ -220,7 +220,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060109E6 RID: 68070 RVA: 0x0026E6C2 File Offset: 0x0026C8C2
+		// Token: 0x060108E6 RID: 67814 RVA: 0x0026C95A File Offset: 0x0026AB5A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PayShopRecommendConfigInfo);
 		}
 
-		// Token: 0x060109E7 RID: 68071 RVA: 0x0026E6D0 File Offset: 0x0026C8D0
+		// Token: 0x060108E7 RID: 67815 RVA: 0x0026C968 File Offset: 0x0026AB68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PayShopRecommendConfigInfo other)
@@ -236,7 +236,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Id == other.Id && this.RecommendType == other.RecommendType && this.RecommendId == other.RecommendId && !(this.TabName != other.TabName) && !(this.PrefabPath != other.PrefabPath) && this.Sort == other.Sort && this.Show == other.Show && !(this.TabImage != other.TabImage) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060109E8 RID: 68072 RVA: 0x0026E788 File Offset: 0x0026C988
+		// Token: 0x060108E8 RID: 67816 RVA: 0x0026CA20 File Offset: 0x0026AC20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -281,7 +281,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060109E9 RID: 68073 RVA: 0x0026E87C File Offset: 0x0026CA7C
+		// Token: 0x060108E9 RID: 67817 RVA: 0x0026CB14 File Offset: 0x0026AD14
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -289,7 +289,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060109EA RID: 68074 RVA: 0x0026E889 File Offset: 0x0026CA89
+		// Token: 0x060108EA RID: 67818 RVA: 0x0026CB21 File Offset: 0x0026AD21
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -297,7 +297,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060109EB RID: 68075 RVA: 0x0026E894 File Offset: 0x0026CA94
+		// Token: 0x060108EB RID: 67819 RVA: 0x0026CB2C File Offset: 0x0026AD2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -348,7 +348,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060109EC RID: 68076 RVA: 0x0026E9A4 File Offset: 0x0026CBA4
+		// Token: 0x060108EC RID: 67820 RVA: 0x0026CC3C File Offset: 0x0026AE3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -393,7 +393,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060109ED RID: 68077 RVA: 0x0026EA90 File Offset: 0x0026CC90
+		// Token: 0x060108ED RID: 67821 RVA: 0x0026CD28 File Offset: 0x0026AF28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PayShopRecommendConfigInfo other)
@@ -437,7 +437,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060109EE RID: 68078 RVA: 0x0026EB67 File Offset: 0x0026CD67
+		// Token: 0x060108EE RID: 67822 RVA: 0x0026CDFF File Offset: 0x0026AFFF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -445,7 +445,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060109EF RID: 68079 RVA: 0x0026EB70 File Offset: 0x0026CD70
+		// Token: 0x060108EF RID: 67823 RVA: 0x0026CE08 File Offset: 0x0026B008
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -516,58 +516,58 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006992 RID: 27026
+		// Token: 0x040069A6 RID: 27046
 		private static readonly MessageParser<PayShopRecommendConfigInfo> _parser = new MessageParser<PayShopRecommendConfigInfo>(() => new PayShopRecommendConfigInfo());
 
-		// Token: 0x04006993 RID: 27027
+		// Token: 0x040069A7 RID: 27047
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006994 RID: 27028
+		// Token: 0x040069A8 RID: 27048
 		public const int IdFieldNumber = 1;
 
-		// Token: 0x04006995 RID: 27029
+		// Token: 0x040069A9 RID: 27049
 		private int id_;
 
-		// Token: 0x04006996 RID: 27030
+		// Token: 0x040069AA RID: 27050
 		public const int RecommendTypeFieldNumber = 2;
 
-		// Token: 0x04006997 RID: 27031
+		// Token: 0x040069AB RID: 27051
 		private int recommendType_;
 
-		// Token: 0x04006998 RID: 27032
+		// Token: 0x040069AC RID: 27052
 		public const int RecommendIdFieldNumber = 3;
 
-		// Token: 0x04006999 RID: 27033
+		// Token: 0x040069AD RID: 27053
 		private int recommendId_;
 
-		// Token: 0x0400699A RID: 27034
+		// Token: 0x040069AE RID: 27054
 		public const int TabNameFieldNumber = 4;
 
-		// Token: 0x0400699B RID: 27035
+		// Token: 0x040069AF RID: 27055
 		private string tabName_ = "";
 
-		// Token: 0x0400699C RID: 27036
+		// Token: 0x040069B0 RID: 27056
 		public const int PrefabPathFieldNumber = 5;
 
-		// Token: 0x0400699D RID: 27037
+		// Token: 0x040069B1 RID: 27057
 		private string prefabPath_ = "";
 
-		// Token: 0x0400699E RID: 27038
+		// Token: 0x040069B2 RID: 27058
 		public const int SortFieldNumber = 6;
 
-		// Token: 0x0400699F RID: 27039
+		// Token: 0x040069B3 RID: 27059
 		private int sort_;
 
-		// Token: 0x040069A0 RID: 27040
+		// Token: 0x040069B4 RID: 27060
 		public const int ShowFieldNumber = 7;
 
-		// Token: 0x040069A1 RID: 27041
+		// Token: 0x040069B5 RID: 27061
 		private bool show_;
 
-		// Token: 0x040069A2 RID: 27042
+		// Token: 0x040069B6 RID: 27062
 		public const int TabImageFieldNumber = 8;
 
-		// Token: 0x040069A3 RID: 27043
+		// Token: 0x040069B7 RID: 27063
 		private string tabImage_ = "";
 	}
 }

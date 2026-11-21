@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004E4 RID: 1252
+	// Token: 0x020004FA RID: 1274
 	public class ConfigLoadingLevelAreaAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001D63 RID: 7523 RVA: 0x000FF59C File Offset: 0x000FD79C
+		// Token: 0x06001DE7 RID: 7655 RVA: 0x00105CF0 File Offset: 0x00103EF0
 		static ConfigLoadingLevelAreaAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLoadingLevelAreaAll.CreateStaticDefaultValue), new Action(ConfigLoadingLevelAreaAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001D64 RID: 7524 RVA: 0x000FF5BC File Offset: 0x000FD7BC
+		// Token: 0x06001DE8 RID: 7656 RVA: 0x00105D10 File Offset: 0x00103F10
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLoadingLevelAreaAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001D65 RID: 7525 RVA: 0x000FF63B File Offset: 0x000FD83B
+		// Token: 0x06001DE9 RID: 7657 RVA: 0x00105D8F File Offset: 0x00103F8F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLoadingLevelAreaAll.LogPair = null;
 			ConfigLoadingLevelAreaAll.HandleId = 0;
 		}
 
-		// Token: 0x06001D66 RID: 7526 RVA: 0x000FF649 File Offset: 0x000FD849
+		// Token: 0x06001DEA RID: 7658 RVA: 0x00105D9D File Offset: 0x00103F9D
 		public static void Init()
 		{
 			ConfigLoadingLevelAreaAll.HandleId = ConfigCommon.InitDataStatement(ConfigLoadingLevelAreaAll.HandleId, "db_loadingtips.db", "select BinData from `LoadingLevelArea`");
 		}
 
-		// Token: 0x06001D67 RID: 7527 RVA: 0x000FF664 File Offset: 0x000FD864
+		// Token: 0x06001DEB RID: 7659 RVA: 0x00105DB8 File Offset: 0x00103FB8
 		[NullableContext(2)]
 		public static IReadOnlyList<LoadingLevelArea> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002220 RID: 8736
+		// Token: 0x040022BA RID: 8890
 		private const string DB = "db_loadingtips.db";
 
-		// Token: 0x04002221 RID: 8737
+		// Token: 0x040022BB RID: 8891
 		private const string FILE = "z.载入提示.xlsx";
 
-		// Token: 0x04002222 RID: 8738
+		// Token: 0x040022BC RID: 8892
 		private const string TABLE = "LoadingLevelArea";
 
-		// Token: 0x04002223 RID: 8739
+		// Token: 0x040022BD RID: 8893
 		private const string COMMAND = "select BinData from `LoadingLevelArea`";
 
-		// Token: 0x04002224 RID: 8740
+		// Token: 0x040022BE RID: 8894
 		private const string KEY_PREFIX = "LoadingLevelAreaAll";
 
-		// Token: 0x04002225 RID: 8741
+		// Token: 0x040022BF RID: 8895
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002226 RID: 8742
+		// Token: 0x040022C0 RID: 8896
 		private static int HandleId;
 	}
 }

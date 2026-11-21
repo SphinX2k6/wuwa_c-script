@@ -6,80 +6,80 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E49 RID: 15945
+	// Token: 0x02004284 RID: 17028
 	public class IFinishRollBlockT
 	{
-		// Token: 0x17006E6B RID: 28267
-		// (get) Token: 0x06016678 RID: 91768 RVA: 0x0033CC08 File Offset: 0x0033AE08
-		// (set) Token: 0x06016679 RID: 91769 RVA: 0x0033CC10 File Offset: 0x0033AE10
+		// Token: 0x1700744F RID: 29775
+		// (get) Token: 0x06017C9F RID: 97439 RVA: 0x00365738 File Offset: 0x00363938
+		// (set) Token: 0x06017CA0 RID: 97440 RVA: 0x00365740 File Offset: 0x00363940
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x17006E6C RID: 28268
-		// (get) Token: 0x0601667A RID: 91770 RVA: 0x0033CC19 File Offset: 0x0033AE19
-		// (set) Token: 0x0601667B RID: 91771 RVA: 0x0033CC21 File Offset: 0x0033AE21
+		// Token: 0x17007450 RID: 29776
+		// (get) Token: 0x06017CA1 RID: 97441 RVA: 0x00365749 File Offset: 0x00363949
+		// (set) Token: 0x06017CA2 RID: 97442 RVA: 0x00365751 File Offset: 0x00363951
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x17006E6D RID: 28269
-		// (get) Token: 0x0601667C RID: 91772 RVA: 0x0033CC2A File Offset: 0x0033AE2A
-		// (set) Token: 0x0601667D RID: 91773 RVA: 0x0033CC32 File Offset: 0x0033AE32
+		// Token: 0x17007451 RID: 29777
+		// (get) Token: 0x06017CA3 RID: 97443 RVA: 0x0036575A File Offset: 0x0036395A
+		// (set) Token: 0x06017CA4 RID: 97444 RVA: 0x00365762 File Offset: 0x00363962
 		public int CenterEntityId { get; set; }
 
-		// Token: 0x17006E6E RID: 28270
-		// (get) Token: 0x0601667E RID: 91774 RVA: 0x0033CC3B File Offset: 0x0033AE3B
-		// (set) Token: 0x0601667F RID: 91775 RVA: 0x0033CC43 File Offset: 0x0033AE43
+		// Token: 0x17007452 RID: 29778
+		// (get) Token: 0x06017CA5 RID: 97445 RVA: 0x0036576B File Offset: 0x0036396B
+		// (set) Token: 0x06017CA6 RID: 97446 RVA: 0x00365773 File Offset: 0x00363973
 		public int InteractEntityId { get; set; }
 
-		// Token: 0x17006E6F RID: 28271
-		// (get) Token: 0x06016680 RID: 91776 RVA: 0x0033CC4C File Offset: 0x0033AE4C
-		// (set) Token: 0x06016681 RID: 91777 RVA: 0x0033CC54 File Offset: 0x0033AE54
+		// Token: 0x17007453 RID: 29779
+		// (get) Token: 0x06017CA7 RID: 97447 RVA: 0x0036577C File Offset: 0x0036397C
+		// (set) Token: 0x06017CA8 RID: 97448 RVA: 0x00365784 File Offset: 0x00363984
 		public List<ERollBlockInteractType> InteractTypes { get; set; }
 
-		// Token: 0x17006E70 RID: 28272
-		// (get) Token: 0x06016682 RID: 91778 RVA: 0x0033CC5D File Offset: 0x0033AE5D
-		// (set) Token: 0x06016683 RID: 91779 RVA: 0x0033CC65 File Offset: 0x0033AE65
+		// Token: 0x17007454 RID: 29780
+		// (get) Token: 0x06017CA9 RID: 97449 RVA: 0x0036578D File Offset: 0x0036398D
+		// (set) Token: 0x06017CAA RID: 97450 RVA: 0x00365795 File Offset: 0x00363995
 		public List<TRollBlockLaunchMethodUnion> LaunchMethod { get; set; }
 
-		// Token: 0x17006E71 RID: 28273
-		// (get) Token: 0x06016684 RID: 91780 RVA: 0x0033CC6E File Offset: 0x0033AE6E
-		// (set) Token: 0x06016685 RID: 91781 RVA: 0x0033CC76 File Offset: 0x0033AE76
+		// Token: 0x17007455 RID: 29781
+		// (get) Token: 0x06017CAB RID: 97451 RVA: 0x0036579E File Offset: 0x0036399E
+		// (set) Token: 0x06017CAC RID: 97452 RVA: 0x003657A6 File Offset: 0x003639A6
 		public int RollBlockGroupId { get; set; }
 
-		// Token: 0x17006E72 RID: 28274
-		// (get) Token: 0x06016686 RID: 91782 RVA: 0x0033CC7F File Offset: 0x0033AE7F
-		// (set) Token: 0x06016687 RID: 91783 RVA: 0x0033CC87 File Offset: 0x0033AE87
+		// Token: 0x17007456 RID: 29782
+		// (get) Token: 0x06017CAD RID: 97453 RVA: 0x003657AF File Offset: 0x003639AF
+		// (set) Token: 0x06017CAE RID: 97454 RVA: 0x003657B7 File Offset: 0x003639B7
 		public int RollBlockTemplateId { get; set; }
 
-		// Token: 0x17006E73 RID: 28275
-		// (get) Token: 0x06016688 RID: 91784 RVA: 0x0033CC90 File Offset: 0x0033AE90
-		// (set) Token: 0x06016689 RID: 91785 RVA: 0x0033CC98 File Offset: 0x0033AE98
+		// Token: 0x17007457 RID: 29783
+		// (get) Token: 0x06017CAF RID: 97455 RVA: 0x003657C0 File Offset: 0x003639C0
+		// (set) Token: 0x06017CB0 RID: 97456 RVA: 0x003657C8 File Offset: 0x003639C8
 		public TVarRefUnion CurrentDifficultyVarRef { get; set; }
 
-		// Token: 0x17006E74 RID: 28276
-		// (get) Token: 0x0601668A RID: 91786 RVA: 0x0033CCA1 File Offset: 0x0033AEA1
-		// (set) Token: 0x0601668B RID: 91787 RVA: 0x0033CCA9 File Offset: 0x0033AEA9
+		// Token: 0x17007458 RID: 29784
+		// (get) Token: 0x06017CB1 RID: 97457 RVA: 0x003657D1 File Offset: 0x003639D1
+		// (set) Token: 0x06017CB2 RID: 97458 RVA: 0x003657D9 File Offset: 0x003639D9
 		public TVarRefUnion AllDifficultyCountVarRef { get; set; }
 
-		// Token: 0x17006E75 RID: 28277
-		// (get) Token: 0x0601668C RID: 91788 RVA: 0x0033CCB2 File Offset: 0x0033AEB2
-		// (set) Token: 0x0601668D RID: 91789 RVA: 0x0033CCBA File Offset: 0x0033AEBA
+		// Token: 0x17007459 RID: 29785
+		// (get) Token: 0x06017CB3 RID: 97459 RVA: 0x003657E2 File Offset: 0x003639E2
+		// (set) Token: 0x06017CB4 RID: 97460 RVA: 0x003657EA File Offset: 0x003639EA
 		public List<IActionInfoT> EnterActions { get; set; }
 
-		// Token: 0x17006E76 RID: 28278
-		// (get) Token: 0x0601668E RID: 91790 RVA: 0x0033CCC3 File Offset: 0x0033AEC3
-		// (set) Token: 0x0601668F RID: 91791 RVA: 0x0033CCCB File Offset: 0x0033AECB
+		// Token: 0x1700745A RID: 29786
+		// (get) Token: 0x06017CB5 RID: 97461 RVA: 0x003657F3 File Offset: 0x003639F3
+		// (set) Token: 0x06017CB6 RID: 97462 RVA: 0x003657FB File Offset: 0x003639FB
 		public List<IActionInfoT> ExitActions { get; set; }
 
-		// Token: 0x17006E77 RID: 28279
-		// (get) Token: 0x06016690 RID: 91792 RVA: 0x0033CCD4 File Offset: 0x0033AED4
-		// (set) Token: 0x06016691 RID: 91793 RVA: 0x0033CCDC File Offset: 0x0033AEDC
+		// Token: 0x1700745B RID: 29787
+		// (get) Token: 0x06017CB7 RID: 97463 RVA: 0x00365804 File Offset: 0x00363A04
+		// (set) Token: 0x06017CB8 RID: 97464 RVA: 0x0036580C File Offset: 0x00363A0C
 		public List<IActionInfoT> CompleteActions { get; set; }
 
-		// Token: 0x17006E78 RID: 28280
-		// (get) Token: 0x06016692 RID: 91794 RVA: 0x0033CCE5 File Offset: 0x0033AEE5
-		// (set) Token: 0x06016693 RID: 91795 RVA: 0x0033CCED File Offset: 0x0033AEED
+		// Token: 0x1700745C RID: 29788
+		// (get) Token: 0x06017CB9 RID: 97465 RVA: 0x00365815 File Offset: 0x00363A15
+		// (set) Token: 0x06017CBA RID: 97466 RVA: 0x0036581D File Offset: 0x00363A1D
 		public byte NullMask { get; set; }
 
-		// Token: 0x06016694 RID: 91796 RVA: 0x0033CCF8 File Offset: 0x0033AEF8
+		// Token: 0x06017CBB RID: 97467 RVA: 0x00365828 File Offset: 0x00363A28
 		public IFinishRollBlockT()
 		{
 			this.Type = EChildQuest.DoInteract;

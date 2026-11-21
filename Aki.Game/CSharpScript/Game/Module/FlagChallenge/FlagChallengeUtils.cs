@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Battle;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A41 RID: 23105
+	// Token: 0x02004A1D RID: 18973
 	public class FlagChallengeUtils
 	{
-		// Token: 0x0603A9AD RID: 240045 RVA: 0x00DF3000 File Offset: 0x00DF1200
+		// Token: 0x0602F8F6 RID: 194806 RVA: 0x00D43584 File Offset: 0x00D41784
 		[NullableContext(1)]
 		public unsafe static string GetDynamicRes(EFlagChallengeUiStyleType style, string baseKey, int index)
 		{
@@ -46,33 +46,33 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return text2;
 		}
 
-		// Token: 0x0603A9AE RID: 240046 RVA: 0x00DF3118 File Offset: 0x00DF1318
+		// Token: 0x0602F8F7 RID: 194807 RVA: 0x00D4369C File Offset: 0x00D4189C
 		public static bool IsInFlagChallengeDungeon()
 		{
 			return FlagChallengeBattleModel.Instance.IsInFlagChallengeDungeon;
 		}
 
-		// Token: 0x0603A9AF RID: 240047 RVA: 0x00DF3124 File Offset: 0x00DF1324
+		// Token: 0x0602F8F8 RID: 194808 RVA: 0x00D436A8 File Offset: 0x00D418A8
 		public static int GetStrongholdActivityId(int strongholdId)
 		{
 			FlagStronghold? strongholdConfig = FlagChallengeConfig.Instance.GetStrongholdConfig(strongholdId);
 			return FlagChallengeConfig.Instance.GetLevelConfig(strongholdConfig.Value.ChallengeLevelId).Value.ActivityId;
 		}
 
-		// Token: 0x0603A9B0 RID: 240048 RVA: 0x00DF3168 File Offset: 0x00DF1368
+		// Token: 0x0602F8F9 RID: 194809 RVA: 0x00D436EC File Offset: 0x00D418EC
 		public static int GetAreaActivityId(int areaId)
 		{
 			FlagChallengeArea? areaConfig = FlagChallengeConfig.Instance.GetAreaConfig(areaId);
 			return FlagChallengeConfig.Instance.GetLevelConfig(areaConfig.Value.LevelId).Value.ActivityId;
 		}
 
-		// Token: 0x0603A9B1 RID: 240049 RVA: 0x00DF31AC File Offset: 0x00DF13AC
+		// Token: 0x0602F8FA RID: 194810 RVA: 0x00D43730 File Offset: 0x00D41930
 		public static int GetLevelActivityId(int levelId)
 		{
 			return FlagChallengeConfig.Instance.GetLevelConfig(levelId).Value.ActivityId;
 		}
 
-		// Token: 0x0603A9B2 RID: 240050 RVA: 0x00DF31D4 File Offset: 0x00DF13D4
+		// Token: 0x0602F8FB RID: 194811 RVA: 0x00D43758 File Offset: 0x00D41958
 		public static int GetBuffActivityId(int buffId)
 		{
 			return FlagChallengeConfig.Instance.GetRoleBuffConfig(buffId).Value.ActivityId;

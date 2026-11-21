@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014B8 RID: 5304
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001611 RID: 5649
 	public class BvbSkipChallenge : ActionParams
 	{
-		// Token: 0x060078BA RID: 30906 RVA: 0x00121490 File Offset: 0x0011F690
+		// Token: 0x06007F87 RID: 32647 RVA: 0x001300DC File Offset: 0x0012E2DC
 		private BvbSkipChallenge_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060078BB RID: 30907 RVA: 0x001214C8 File Offset: 0x0011F6C8
+		// Token: 0x06007F88 RID: 32648 RVA: 0x00130114 File Offset: 0x0012E314
 		public static BvbSkipChallenge Create([Nullable(2)] BvbSkipChallenge instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060078BC RID: 30908 RVA: 0x001214DB File Offset: 0x0011F6DB
+		// Token: 0x06007F89 RID: 32649 RVA: 0x00130127 File Offset: 0x0012E327
 		public static BvbSkipChallenge CreateFromSetValue([Nullable(2)] BvbSkipChallenge_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060078BD RID: 30909 RVA: 0x001214EE File Offset: 0x0011F6EE
+		// Token: 0x06007F8A RID: 32650 RVA: 0x0013013A File Offset: 0x0012E33A
 		public BvbSkipChallenge_SetValue ToSetValue()
 		{
 			return new BvbSkipChallenge_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700287F RID: 10367
-		// (get) Token: 0x060078BE RID: 30910 RVA: 0x00121501 File Offset: 0x0011F701
-		// (set) Token: 0x060078BF RID: 30911 RVA: 0x0012152C File Offset: 0x0011F72C
+		// Token: 0x17002A69 RID: 10857
+		// (get) Token: 0x06007F8B RID: 32651 RVA: 0x0013014D File Offset: 0x0012E34D
+		// (set) Token: 0x06007F8C RID: 32652 RVA: 0x00130178 File Offset: 0x0012E378
 		public virtual int ChallengeId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004620 RID: 17952
+		// Token: 0x040049BB RID: 18875
 		[Nullable(2)]
 		protected new BvbSkipChallenge FbInstance;
 
-		// Token: 0x04004621 RID: 17953
+		// Token: 0x040049BC RID: 18876
 		[Nullable(2)]
 		protected BvbSkipChallenge_SetValue PocoInterface;
 	}

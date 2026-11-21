@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002312 RID: 8978
+// Token: 0x020017F6 RID: 6134
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PanoramicUiDeferController : ControllerBase
 {
-	// Token: 0x06011BCF RID: 72655 RVA: 0x0045DC00 File Offset: 0x0045BE00
+	// Token: 0x0600F06C RID: 61548 RVA: 0x0046A8DC File Offset: 0x00468ADC
 	public void StartDefer()
 	{
 		if (this.Registered)
@@ -39,7 +39,7 @@ public class PanoramicUiDeferController : ControllerBase
 		Log.Instance.Info(ELogModule.Panoramic, ELogAuthor.HYF, "[环视] 开始拦截并延迟其他UI的打开", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06011BD0 RID: 72656 RVA: 0x0045DCF4 File Offset: 0x0045BEF4
+	// Token: 0x0600F06D RID: 61549 RVA: 0x0046A9D0 File Offset: 0x00468BD0
 	public void StopDeferAndReplay()
 	{
 		if (!this.Registered)
@@ -63,7 +63,7 @@ public class PanoramicUiDeferController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011BD1 RID: 72657 RVA: 0x0045DDB0 File Offset: 0x0045BFB0
+	// Token: 0x0600F06E RID: 61550 RVA: 0x0046AA8C File Offset: 0x00468C8C
 	public void ClearWithoutReplay()
 	{
 		if (this.Registered)
@@ -76,21 +76,21 @@ public class PanoramicUiDeferController : ControllerBase
 		this.DeferredNameSet.Clear();
 	}
 
-	// Token: 0x06011BD2 RID: 72658 RVA: 0x0045DE1C File Offset: 0x0045C01C
+	// Token: 0x0600F06F RID: 61551 RVA: 0x0046AAF8 File Offset: 0x00468CF8
 	protected override bool OnClear()
 	{
 		this.ClearWithoutReplay();
 		return base.OnClear();
 	}
 
-	// Token: 0x06011BD3 RID: 72659 RVA: 0x0045DE2A File Offset: 0x0045C02A
+	// Token: 0x0600F070 RID: 61552 RVA: 0x0046AB06 File Offset: 0x00468D06
 	protected override bool OnLeaveLevel()
 	{
 		this.ClearWithoutReplay();
 		return base.OnLeaveLevel();
 	}
 
-	// Token: 0x06011BD4 RID: 72660 RVA: 0x0045DE38 File Offset: 0x0045C038
+	// Token: 0x0600F071 RID: 61553 RVA: 0x0046AB14 File Offset: 0x00468D14
 	[NullableContext(2)]
 	private bool CheckCanOpen(EUiViewName viewName, object param)
 	{
@@ -131,8 +131,8 @@ public class PanoramicUiDeferController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x170016AF RID: 5807
-	// (get) Token: 0x06011BD5 RID: 72661 RVA: 0x0045DF22 File Offset: 0x0045C122
+	// Token: 0x170016E8 RID: 5864
+	// (get) Token: 0x0600F072 RID: 61554 RVA: 0x0046ABFE File Offset: 0x00468DFE
 	public static PanoramicUiDeferController Instance
 	{
 		get
@@ -141,7 +141,7 @@ public class PanoramicUiDeferController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011BD6 RID: 72662 RVA: 0x0045DF29 File Offset: 0x0045C129
+	// Token: 0x0600F073 RID: 61555 RVA: 0x0046AC05 File Offset: 0x00468E05
 	public static PanoramicUiDeferController GetOrCreateInstance()
 	{
 		if (PanoramicUiDeferController._Instance == null)
@@ -151,7 +151,7 @@ public class PanoramicUiDeferController : ControllerBase
 		return PanoramicUiDeferController._Instance;
 	}
 
-	// Token: 0x06011BD7 RID: 72663 RVA: 0x0045DF3D File Offset: 0x0045C13D
+	// Token: 0x0600F074 RID: 61556 RVA: 0x0046AC19 File Offset: 0x00468E19
 	public static bool CreateInstance()
 	{
 		if (PanoramicUiDeferController._Instance != null)
@@ -162,30 +162,30 @@ public class PanoramicUiDeferController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06011BD8 RID: 72664 RVA: 0x0045DF53 File Offset: 0x0045C153
+	// Token: 0x0600F075 RID: 61557 RVA: 0x0046AC2F File Offset: 0x00468E2F
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011BD9 RID: 72665 RVA: 0x0045DF55 File Offset: 0x0045C155
+	// Token: 0x0600F076 RID: 61558 RVA: 0x0046AC31 File Offset: 0x00468E31
 	public static void ResetStaticDefaultValue()
 	{
 		PanoramicUiDeferController._Instance = null;
 	}
 
-	// Token: 0x06011BDA RID: 72666 RVA: 0x0045DF5D File Offset: 0x0045C15D
+	// Token: 0x0600F077 RID: 61559 RVA: 0x0046AC39 File Offset: 0x00468E39
 	static PanoramicUiDeferController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PanoramicUiDeferController.CreateStaticDefaultValue), new Action(PanoramicUiDeferController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400869F RID: 34463
+	// Token: 0x040087DF RID: 34783
 	private readonly HashSet<EUiViewName> WhiteList = new HashSet<EUiViewName>
 	{
 		EUiViewName.PlotViewHUD
 	};
 
-	// Token: 0x040086A0 RID: 34464
+	// Token: 0x040087E0 RID: 34784
 	[TupleElementNames(new string[]
 	{
 		"Name",
@@ -199,16 +199,16 @@ public class PanoramicUiDeferController : ControllerBase
 	})]
 	private readonly List<ValueTuple<EUiViewName, object>> DeferredQueue = new List<ValueTuple<EUiViewName, object>>();
 
-	// Token: 0x040086A1 RID: 34465
+	// Token: 0x040087E1 RID: 34785
 	private readonly HashSet<EUiViewName> DeferredNameSet = new HashSet<EUiViewName>();
 
-	// Token: 0x040086A2 RID: 34466
+	// Token: 0x040087E2 RID: 34786
 	private readonly HashSet<EUiViewName> ReplayWhiteSet = new HashSet<EUiViewName>();
 
-	// Token: 0x040086A3 RID: 34467
+	// Token: 0x040087E3 RID: 34787
 	private bool Registered;
 
-	// Token: 0x040086A4 RID: 34468
+	// Token: 0x040087E4 RID: 34788
 	[Nullable(2)]
 	private static PanoramicUiDeferController _Instance;
 }

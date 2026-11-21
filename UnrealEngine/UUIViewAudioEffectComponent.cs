@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021E0 RID: 8672
+	// Token: 0x0200073C RID: 1852
 	[UnrealObjectPath("/Script/LGUI.UIViewAudioEffectComponent")]
 	[UnrealStructLayout(216, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 216)]
 	public class UUIViewAudioEffectComponent : UActorComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602110C RID: 135436 RVA: 0x0030C2EB File Offset: 0x0030A4EB
+		// Token: 0x0600A183 RID: 41347 RVA: 0x000EEB07 File Offset: 0x000ECD07
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIViewAudioEffectComponent._ClassPtr;
 		}
 
-		// Token: 0x0602110D RID: 135437 RVA: 0x0030C2F8 File Offset: 0x0030A4F8
+		// Token: 0x0600A184 RID: 41348 RVA: 0x000EEB14 File Offset: 0x000ECD14
 		public UUIViewAudioEffectComponent() : this(BuiltinUtils.AllocNativeUObject(UUIViewAudioEffectComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602110E RID: 135438 RVA: 0x0030C320 File Offset: 0x0030A520
+		// Token: 0x0600A185 RID: 41349 RVA: 0x000EEB3C File Offset: 0x000ECD3C
 		[NullableContext(1)]
 		public UUIViewAudioEffectComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIViewAudioEffectComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700810C RID: 33036
-		// (get) Token: 0x0602110F RID: 135439 RVA: 0x0030C353 File Offset: 0x0030A553
-		// (set) Token: 0x06021110 RID: 135440 RVA: 0x0030C363 File Offset: 0x0030A563
+		// Token: 0x17001E16 RID: 7702
+		// (get) Token: 0x0600A186 RID: 41350 RVA: 0x000EEB6F File Offset: 0x000ECD6F
+		// (set) Token: 0x0600A187 RID: 41351 RVA: 0x000EEB7F File Offset: 0x000ECD7F
 		public unsafe bool bAudioCoverEnable
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700810D RID: 33037
-		// (get) Token: 0x06021111 RID: 135441 RVA: 0x0030C374 File Offset: 0x0030A574
-		// (set) Token: 0x06021112 RID: 135442 RVA: 0x0030C384 File Offset: 0x0030A584
+		// Token: 0x17001E17 RID: 7703
+		// (get) Token: 0x0600A188 RID: 41352 RVA: 0x000EEB90 File Offset: 0x000ECD90
+		// (set) Token: 0x0600A189 RID: 41353 RVA: 0x000EEBA0 File Offset: 0x000ECDA0
 		public unsafe float AudioUiAlpha
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700810E RID: 33038
-		// (get) Token: 0x06021113 RID: 135443 RVA: 0x0030C395 File Offset: 0x0030A595
-		// (set) Token: 0x06021114 RID: 135444 RVA: 0x0030C3A5 File Offset: 0x0030A5A5
+		// Token: 0x17001E18 RID: 7704
+		// (get) Token: 0x0600A18A RID: 41354 RVA: 0x000EEBB1 File Offset: 0x000ECDB1
+		// (set) Token: 0x0600A18B RID: 41355 RVA: 0x000EEBC1 File Offset: 0x000ECDC1
 		public unsafe float AudioUiCover
 		{
 			get
@@ -73,34 +73,34 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06021115 RID: 135445 RVA: 0x0030C3B6 File Offset: 0x0030A5B6
+		// Token: 0x0600A18C RID: 41356 RVA: 0x000EEBD2 File Offset: 0x000ECDD2
 		static UUIViewAudioEffectComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIViewAudioEffectComponent");
 		}
 
-		// Token: 0x06021116 RID: 135446 RVA: 0x0030C3C4 File Offset: 0x0030A5C4
+		// Token: 0x0600A18D RID: 41357 RVA: 0x000EEBE0 File Offset: 0x000ECDE0
 		protected UUIViewAudioEffectComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011A3B RID: 72251
+		// Token: 0x04004527 RID: 17703
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UIViewAudioEffectComponent";
 
-		// Token: 0x04011A3C RID: 72252
+		// Token: 0x04004528 RID: 17704
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011A3D RID: 72253
+		// Token: 0x04004529 RID: 17705
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04011A3E RID: 72254
+		// Token: 0x0400452A RID: 17706
 		internal static int __PropertyOffset_bAudioCoverEnable;
 
-		// Token: 0x04011A3F RID: 72255
+		// Token: 0x0400452B RID: 17707
 		internal static int __PropertyOffset_AudioUiAlpha;
 
-		// Token: 0x04011A40 RID: 72256
+		// Token: 0x0400452C RID: 17708
 		internal static int __PropertyOffset_AudioUiCover;
 	}
 }

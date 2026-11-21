@@ -6,13 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AB0 RID: 2736
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000B7A RID: 2938
 	public class DynamicEntityRewardComponent : IComponentBase
 	{
-		// Token: 0x06003F16 RID: 16150 RVA: 0x000A154E File Offset: 0x0009F74E
-		[NullableContext(1)]
+		// Token: 0x06004340 RID: 17216 RVA: 0x000AAB42 File Offset: 0x000A8D42
 		public static DynamicEntityRewardComponent Create(IDynamicEntityRewardComponent? instance)
 		{
 			if (instance == null)
@@ -25,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F73 RID: 3955
-		// (get) Token: 0x06003F17 RID: 16151 RVA: 0x000A1570 File Offset: 0x0009F770
+		// Token: 0x17001047 RID: 4167
+		// (get) Token: 0x06004341 RID: 17217 RVA: 0x000AAB64 File Offset: 0x000A8D64
 		public override bool? Disabled
 		{
 			get
@@ -39,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F74 RID: 3956
-		// (get) Token: 0x06003F18 RID: 16152 RVA: 0x000A15A8 File Offset: 0x0009F7A8
+		// Token: 0x17001048 RID: 4168
+		// (get) Token: 0x06004342 RID: 17218 RVA: 0x000AAB9C File Offset: 0x000A8D9C
 		public override bool? EdIsLocked
 		{
 			get
@@ -49,12 +46,10 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F75 RID: 3957
-		// (get) Token: 0x06003F19 RID: 16153 RVA: 0x000A15BE File Offset: 0x0009F7BE
-		[Nullable(1)]
+		// Token: 0x17001049 RID: 4169
+		// (get) Token: 0x06004343 RID: 17219 RVA: 0x000AABB2 File Offset: 0x000A8DB2
 		public virtual IDynamicTrafficReward RewardType
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._RewardTypeInited)
@@ -67,10 +62,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F76 RID: 3958
-		// (get) Token: 0x06003F1A RID: 16154 RVA: 0x000A15F4 File Offset: 0x0009F7F4
+		// Token: 0x1700104A RID: 4170
+		// (get) Token: 0x06004344 RID: 17220 RVA: 0x000AABE8 File Offset: 0x000A8DE8
+		[Nullable(2)]
 		public virtual List<EClaimDynamicEntityRewardType> ClaimTypes
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._ClaimTypesInited)
@@ -92,19 +89,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F77 RID: 3959
-		// (get) Token: 0x06003F1B RID: 16155 RVA: 0x000A166C File Offset: 0x0009F86C
+		// Token: 0x1700104B RID: 4171
+		// (get) Token: 0x06004345 RID: 17221 RVA: 0x000AAC60 File Offset: 0x000A8E60
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> RewardActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -127,30 +124,32 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002309 RID: 8969
+		// Token: 0x04002525 RID: 9509
 		private IDynamicEntityRewardComponent Instance;
 
-		// Token: 0x0400230A RID: 8970
+		// Token: 0x04002526 RID: 9510
+		[Nullable(2)]
 		private IDynamicTrafficReward _RewardTypeCache;
 
-		// Token: 0x0400230B RID: 8971
+		// Token: 0x04002527 RID: 9511
 		private bool _RewardTypeInited;
 
-		// Token: 0x0400230C RID: 8972
+		// Token: 0x04002528 RID: 9512
+		[Nullable(2)]
 		private List<EClaimDynamicEntityRewardType> _ClaimTypesCache;
 
-		// Token: 0x0400230D RID: 8973
+		// Token: 0x04002529 RID: 9513
 		private bool _ClaimTypesInited;
 
-		// Token: 0x0400230E RID: 8974
+		// Token: 0x0400252A RID: 9514
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _RewardActionsCache;
 
-		// Token: 0x0400230F RID: 8975
+		// Token: 0x0400252B RID: 9515
 		private bool _RewardActionsInited;
 	}
 }

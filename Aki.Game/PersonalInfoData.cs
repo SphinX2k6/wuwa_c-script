@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
+using CSharpScript.Game.Module.LinkedItem;
 
-// Token: 0x020023BA RID: 9146
+// Token: 0x0200189F RID: 6303
 [NullableContext(1)]
 [Nullable(0)]
 public class PersonalInfoData
 {
-	// Token: 0x060124AF RID: 74927 RVA: 0x004814FC File Offset: 0x0047F6FC
+	// Token: 0x0600F961 RID: 63841 RVA: 0x0048E9E4 File Offset: 0x0048CBE4
 	public int GetUnlockCardDataCount()
 	{
 		int num = 0;
@@ -26,12 +26,11 @@ public class PersonalInfoData
 		return num;
 	}
 
-	// Token: 0x060124B0 RID: 74928 RVA: 0x00481558 File Offset: 0x0047F758
+	// Token: 0x0600F962 RID: 63842 RVA: 0x0048EA40 File Offset: 0x0048CC40
 	public PersonalCardData[] GetCardList(bool needShowLockCard)
 	{
-		List<PersonalCardData> list = (from cardData in this.CardDataList.ToList<PersonalCardData>()
-		where needShowLockCard || cardData.IsUnLock
-		select cardData).ToList<PersonalCardData>();
+		List<PersonalCardData> list = new List<PersonalCardData>(this.CardDataList);
+		list.RemoveAll((PersonalCardData cardData) => LinkedItemConfig.Instance.ShouldHide(cardData.CardId, cardData.IsUnLock) || (!needShowLockCard && !cardData.IsUnLock));
 		list.Sort(delegate(PersonalCardData cardDataA, PersonalCardData cardDataB)
 		{
 			if (cardDataA.IsUnLock != cardDataB.IsUnLock)
@@ -49,9 +48,9 @@ public class PersonalInfoData
 		return list.ToArray();
 	}
 
-	// Token: 0x170017BF RID: 6079
-	// (get) Token: 0x060124B1 RID: 74929 RVA: 0x004815BD File Offset: 0x0047F7BD
-	// (set) Token: 0x060124B2 RID: 74930 RVA: 0x004815C5 File Offset: 0x0047F7C5
+	// Token: 0x170017F9 RID: 6137
+	// (get) Token: 0x0600F963 RID: 63843 RVA: 0x0048EAA2 File Offset: 0x0048CCA2
+	// (set) Token: 0x0600F964 RID: 63844 RVA: 0x0048EAAA File Offset: 0x0048CCAA
 	public int Birthday
 	{
 		get
@@ -69,68 +68,68 @@ public class PersonalInfoData
 		}
 	}
 
-	// Token: 0x04008A20 RID: 35360
+	// Token: 0x04008B67 RID: 35687
 	public List<RoleShowEntry> RoleShowList = new List<RoleShowEntry>();
 
-	// Token: 0x04008A21 RID: 35361
+	// Token: 0x04008B68 RID: 35688
 	public List<int> CardShowList = new List<int>();
 
-	// Token: 0x04008A22 RID: 35362
+	// Token: 0x04008B69 RID: 35689
 	public int? CurCardId;
 
-	// Token: 0x04008A23 RID: 35363
+	// Token: 0x04008B6A RID: 35690
 	private int BirthdayInternal;
 
-	// Token: 0x04008A24 RID: 35364
+	// Token: 0x04008B6B RID: 35691
 	public bool IsBirthdayDisplay;
 
-	// Token: 0x04008A25 RID: 35365
+	// Token: 0x04008B6C RID: 35692
 	public List<PersonalCardData> CardDataList = new List<PersonalCardData>();
 
-	// Token: 0x04008A26 RID: 35366
+	// Token: 0x04008B6D RID: 35693
 	public string Signature = "";
 
-	// Token: 0x04008A27 RID: 35367
+	// Token: 0x04008B6E RID: 35694
 	public int? HeadPhotoId;
 
-	// Token: 0x04008A28 RID: 35368
+	// Token: 0x04008B6F RID: 35695
 	public bool IsOtherData;
 
-	// Token: 0x04008A29 RID: 35369
+	// Token: 0x04008B70 RID: 35696
 	public int Level;
 
-	// Token: 0x04008A2A RID: 35370
+	// Token: 0x04008B71 RID: 35697
 	public int WorldLevel;
 
-	// Token: 0x04008A2B RID: 35371
+	// Token: 0x04008B72 RID: 35698
 	public string Name = "";
 
-	// Token: 0x04008A2C RID: 35372
+	// Token: 0x04008B73 RID: 35699
 	public List<PersonalPlayerTitleData> PlayerTitleDataList = new List<PersonalPlayerTitleData>();
 
-	// Token: 0x04008A2D RID: 35373
+	// Token: 0x04008B74 RID: 35700
 	public int? CurPlayerTitleId;
 
-	// Token: 0x04008A2E RID: 35374
+	// Token: 0x04008B75 RID: 35701
 	public int? CurPlayerTitleLevel;
 
-	// Token: 0x04008A2F RID: 35375
+	// Token: 0x04008B76 RID: 35702
 	public int Sex;
 
-	// Token: 0x04008A30 RID: 35376
+	// Token: 0x04008B77 RID: 35703
 	public int PlayerId;
 
-	// Token: 0x04008A31 RID: 35377
+	// Token: 0x04008B78 RID: 35704
 	public int LastModifyNameTime;
 
-	// Token: 0x04008A32 RID: 35378
+	// Token: 0x04008B79 RID: 35705
 	public string ModifyName = "";
 
-	// Token: 0x04008A33 RID: 35379
+	// Token: 0x04008B7A RID: 35706
 	[Nullable(2)]
 	public string ThirdUserId;
 
-	// Token: 0x04008A34 RID: 35380
+	// Token: 0x04008B7B RID: 35707
 	[Nullable(2)]
 	public string ThirdOnlineId;
 }

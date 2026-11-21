@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BC9 RID: 23497
+	// Token: 0x02004BA9 RID: 19369
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CiacconaGalPlayer : Singleton
 	{
-		// Token: 0x17008D00 RID: 36096
-		// (get) Token: 0x0603B65C RID: 243292 RVA: 0x00E2AC38 File Offset: 0x00E28E38
+		// Token: 0x170060D2 RID: 24786
+		// (get) Token: 0x060305A8 RID: 198056 RVA: 0x00D7AF2C File Offset: 0x00D7912C
 		public ECiacconaGalPlayerState StatePendingToSwitch
 		{
 			get
@@ -19,8 +19,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D01 RID: 36097
-		// (get) Token: 0x0603B65D RID: 243293 RVA: 0x00E2AC40 File Offset: 0x00E28E40
+		// Token: 0x170060D3 RID: 24787
+		// (get) Token: 0x060305A9 RID: 198057 RVA: 0x00D7AF34 File Offset: 0x00D79134
 		[Nullable(2)]
 		public ICiacconaGalTextAnimHandler AnimHandler
 		{
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B65E RID: 243294 RVA: 0x00E2AC48 File Offset: 0x00E28E48
+		// Token: 0x060305AA RID: 198058 RVA: 0x00D7AF3C File Offset: 0x00D7913C
 		public CiacconaGalPlayer()
 		{
 			this.StateMachine = new StateMachine<CiacconaGalPlayer, ECiacconaGalPlayerState>(this, null);
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.InternalStepAnimPlayRecordMap = new Dictionary<int, bool>();
 		}
 
-		// Token: 0x0603B65F RID: 243295 RVA: 0x00E2AD00 File Offset: 0x00E28F00
+		// Token: 0x060305AB RID: 198059 RVA: 0x00D7AFF4 File Offset: 0x00D791F4
 		public void AddOnStateChange(Action<ECiacconaGalPlayerState> callback)
 		{
 			this.StateChangeCallbacks.Add(callback);
 		}
 
-		// Token: 0x0603B660 RID: 243296 RVA: 0x00E2AD10 File Offset: 0x00E28F10
+		// Token: 0x060305AC RID: 198060 RVA: 0x00D7B004 File Offset: 0x00D79204
 		public void RemoveOnStateChange(Action<ECiacconaGalPlayerState> callback)
 		{
 			int num = this.StateChangeCallbacks.IndexOf(callback);
@@ -65,32 +65,32 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B661 RID: 243297 RVA: 0x00E2AD3A File Offset: 0x00E28F3A
+		// Token: 0x060305AD RID: 198061 RVA: 0x00D7B02E File Offset: 0x00D7922E
 		public void SetAnimHandler(ICiacconaGalTextAnimHandler handler)
 		{
 			this.InternalAnimHandler = handler;
 		}
 
-		// Token: 0x0603B662 RID: 243298 RVA: 0x00E2AD44 File Offset: 0x00E28F44
+		// Token: 0x060305AE RID: 198062 RVA: 0x00D7B038 File Offset: 0x00D79238
 		public bool HasPlayedStepAnim(int stepId)
 		{
 			bool flag;
 			return this.InternalStepAnimPlayRecordMap.TryGetValue(stepId, out flag) && flag;
 		}
 
-		// Token: 0x0603B663 RID: 243299 RVA: 0x00E2AD64 File Offset: 0x00E28F64
+		// Token: 0x060305AF RID: 198063 RVA: 0x00D7B058 File Offset: 0x00D79258
 		public ECiacconaGalPlayerState GetCurState()
 		{
 			return this.StateMachine.CurrentState.Value;
 		}
 
-		// Token: 0x0603B664 RID: 243300 RVA: 0x00E2AD84 File Offset: 0x00E28F84
+		// Token: 0x060305B0 RID: 198064 RVA: 0x00D7B078 File Offset: 0x00D79278
 		public void TrySwitchToState(ECiacconaGalPlayerState state)
 		{
 			this.InternalStatePendingToSwitch = (int)state;
 		}
 
-		// Token: 0x0603B665 RID: 243301 RVA: 0x00E2AD90 File Offset: 0x00E28F90
+		// Token: 0x060305B1 RID: 198065 RVA: 0x00D7B084 File Offset: 0x00D79284
 		public void SwitchState()
 		{
 			if (this.InternalStatePendingToSwitch == 0)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.StateMachine.Switch((ECiacconaGalPlayerState)this.InternalStatePendingToSwitch);
 		}
 
-		// Token: 0x0603B666 RID: 243302 RVA: 0x00E2AE1D File Offset: 0x00E2901D
+		// Token: 0x060305B2 RID: 198066 RVA: 0x00D7B111 File Offset: 0x00D79311
 		public void ClearStatePendingToSwitchByState(BaseCiacconaGalPlayerState state)
 		{
 			if (state == null)
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.InternalStatePendingToSwitch = 0;
 		}
 
-		// Token: 0x0603B667 RID: 243303 RVA: 0x00E2AE2C File Offset: 0x00E2902C
+		// Token: 0x060305B3 RID: 198067 RVA: 0x00D7B120 File Offset: 0x00D79320
 		public void TryContinue(int toStepId)
 		{
 			if (CiacconaGalModel.Instance.TryPushCurStepDataById(toStepId))
@@ -147,13 +147,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B668 RID: 243304 RVA: 0x00E2AE94 File Offset: 0x00E29094
+		// Token: 0x060305B4 RID: 198068 RVA: 0x00D7B188 File Offset: 0x00D79388
 		public void OnClick(int? id = null)
 		{
 			(this.StateMachine.GetState(this.StateMachine.CurrentState.Value) as BaseCiacconaGalPlayerState).OnClick(id);
 		}
 
-		// Token: 0x0603B669 RID: 243305 RVA: 0x00E2AECC File Offset: 0x00E290CC
+		// Token: 0x060305B5 RID: 198069 RVA: 0x00D7B1C0 File Offset: 0x00D793C0
 		public void NotifyStateChange(ECiacconaGalPlayerState state)
 		{
 			foreach (Action<ECiacconaGalPlayerState> action in this.StateChangeCallbacks)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B66A RID: 243306 RVA: 0x00E2AF20 File Offset: 0x00E29120
+		// Token: 0x060305B6 RID: 198070 RVA: 0x00D7B214 File Offset: 0x00D79414
 		public void Reset()
 		{
 			this.CurHandlingStepId = 0;
@@ -172,14 +172,14 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.InternalStepAnimPlayRecordMap.Clear();
 		}
 
-		// Token: 0x0603B66B RID: 243307 RVA: 0x00E2AF4F File Offset: 0x00E2914F
+		// Token: 0x060305B7 RID: 198071 RVA: 0x00D7B243 File Offset: 0x00D79443
 		public void Release()
 		{
 			this.Reset();
 			this.StateChangeCallbacks.Clear();
 		}
 
-		// Token: 0x0603B66C RID: 243308 RVA: 0x00E2AF64 File Offset: 0x00E29164
+		// Token: 0x060305B8 RID: 198072 RVA: 0x00D7B258 File Offset: 0x00D79458
 		public void OnAnimEnd()
 		{
 			CiacconaGalStepData stepDataById = CiacconaGalModel.Instance.GetStepDataById(this.CurHandlingStepId);
@@ -204,8 +204,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D02 RID: 36098
-		// (get) Token: 0x0603B66D RID: 243309 RVA: 0x00E2AFCB File Offset: 0x00E291CB
+		// Token: 0x170060D4 RID: 24788
+		// (get) Token: 0x060305B9 RID: 198073 RVA: 0x00D7B2BF File Offset: 0x00D794BF
 		public static CiacconaGalPlayer Instance
 		{
 			get
@@ -219,12 +219,12 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B66E RID: 243310 RVA: 0x00E2AFEE File Offset: 0x00E291EE
+		// Token: 0x060305BA RID: 198074 RVA: 0x00D7B2E2 File Offset: 0x00D794E2
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603B66F RID: 243311 RVA: 0x00E2AFF0 File Offset: 0x00E291F0
+		// Token: 0x060305BB RID: 198075 RVA: 0x00D7B2E4 File Offset: 0x00D794E4
 		public static void ResetStaticDefaultValue()
 		{
 			CiacconaGalPlayer instance = CiacconaGalPlayer._instance;
@@ -235,13 +235,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			CiacconaGalPlayer._instance = null;
 		}
 
-		// Token: 0x0603B670 RID: 243312 RVA: 0x00E2B009 File Offset: 0x00E29209
+		// Token: 0x060305BC RID: 198076 RVA: 0x00D7B2FD File Offset: 0x00D794FD
 		static CiacconaGalPlayer()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CiacconaGalPlayer.CreateStaticDefaultValue), new Action(CiacconaGalPlayer.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EF57 RID: 126807
+		// Token: 0x04019A08 RID: 104968
 		[Nullable(new byte[]
 		{
 			2,
@@ -249,26 +249,26 @@ namespace CSharpScript.Game.Module.CiacconaGal
 		})]
 		private readonly StateMachine<CiacconaGalPlayer, ECiacconaGalPlayerState> StateMachine;
 
-		// Token: 0x0401EF58 RID: 126808
+		// Token: 0x04019A09 RID: 104969
 		private readonly List<Action<ECiacconaGalPlayerState>> StateChangeCallbacks;
 
-		// Token: 0x0401EF59 RID: 126809
+		// Token: 0x04019A0A RID: 104970
 		public int CurHandlingStepId;
 
-		// Token: 0x0401EF5A RID: 126810
+		// Token: 0x04019A0B RID: 104971
 		public int CurHandlingChapterId;
 
-		// Token: 0x0401EF5B RID: 126811
+		// Token: 0x04019A0C RID: 104972
 		private int InternalStatePendingToSwitch;
 
-		// Token: 0x0401EF5C RID: 126812
+		// Token: 0x04019A0D RID: 104973
 		[Nullable(2)]
 		private ICiacconaGalTextAnimHandler InternalAnimHandler;
 
-		// Token: 0x0401EF5D RID: 126813
+		// Token: 0x04019A0E RID: 104974
 		private readonly Dictionary<int, bool> InternalStepAnimPlayRecordMap;
 
-		// Token: 0x0401EF5E RID: 126814
+		// Token: 0x04019A0F RID: 104975
 		[Nullable(2)]
 		private static CiacconaGalPlayer _instance;
 	}

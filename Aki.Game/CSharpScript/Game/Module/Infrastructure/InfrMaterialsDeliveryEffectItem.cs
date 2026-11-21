@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x02005918 RID: 22808
+	// Token: 0x020048F1 RID: 18673
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 	})]
 	public class InfrMaterialsDeliveryEffectItem : GridProxyAbstract<string>
 	{
-		// Token: 0x06039EAE RID: 237230 RVA: 0x00DC2A90 File Offset: 0x00DC0C90
+		// Token: 0x0602EDD1 RID: 191953 RVA: 0x00D11D90 File Offset: 0x00D0FF90
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -27,17 +27,17 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039EAF RID: 237231 RVA: 0x00DC2AD8 File Offset: 0x00DC0CD8
+		// Token: 0x0602EDD2 RID: 191954 RVA: 0x00D11DD8 File Offset: 0x00D0FFD8
 		[NullableContext(1)]
 		public override void Refresh(string data, bool isSelected, int gridIndex)
 		{
 			base.GetText(0).SetText(data, true);
 		}
 
-		// Token: 0x0200BB94 RID: 48020
+		// Token: 0x0200A5A4 RID: 42404
 		private class EChildType
 		{
-			// Token: 0x04038A02 RID: 231938
+			// Token: 0x040333EA RID: 209898
 			public const int TextEffect = 0;
 		}
 	}

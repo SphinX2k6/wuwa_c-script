@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027CD RID: 10189
+	// Token: 0x02002AA0 RID: 10912
 	public class ILimitPlayerMouse : ILimitPlayerOption
 	{
-		// Token: 0x0600E288 RID: 57992 RVA: 0x00217356 File Offset: 0x00215556
-		[NullableContext(1)]
+		// Token: 0x0600F0AA RID: 61610 RVA: 0x0023412A File Offset: 0x0023232A
 		public static ILimitPlayerMouse Create(ILimitPlayerMouse? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044B0 RID: 17584
-		// (get) Token: 0x0600E289 RID: 57993 RVA: 0x00217375 File Offset: 0x00215575
+		// Token: 0x17004818 RID: 18456
+		// (get) Token: 0x0600F0AB RID: 61611 RVA: 0x00234149 File Offset: 0x00232349
 		public override ELimitPlayOperation Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D9F RID: 32159
+		// Token: 0x04008456 RID: 33878
 		private ILimitPlayerMouse Instance;
 	}
 }

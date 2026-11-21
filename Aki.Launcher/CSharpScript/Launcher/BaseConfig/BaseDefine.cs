@@ -4,45 +4,45 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x02000270 RID: 624
+	// Token: 0x02000277 RID: 631
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class BaseDefine
 	{
-		// Token: 0x06000F33 RID: 3891 RVA: 0x00058EC6 File Offset: 0x000570C6
+		// Token: 0x06000F7E RID: 3966 RVA: 0x0005BE6D File Offset: 0x0005A06D
 		public static string GetPublicConfigPath()
 		{
 			return UBlueprintPathsLibrary.ProjectConfigDir() + "/Kuro/KuroPublicConfig.ini";
 		}
 
-		// Token: 0x06000F34 RID: 3892 RVA: 0x00058ED7 File Offset: 0x000570D7
+		// Token: 0x06000F7F RID: 3967 RVA: 0x0005BE7E File Offset: 0x0005A07E
 		public static string GetLocalGameDataPath()
 		{
 			return UBlueprintPathsLibrary.ProjectConfigDir() + "../Saved/SaveGames/AkiSaveGame.conf";
 		}
 
-		// Token: 0x04000A12 RID: 2578
+		// Token: 0x04000A60 RID: 2656
 		public const int TRYLIMIT = 10;
 
-		// Token: 0x04000A13 RID: 2579
+		// Token: 0x04000A61 RID: 2657
 		public const string USESDK = "1";
 
-		// Token: 0x04000A14 RID: 2580
+		// Token: 0x04000A62 RID: 2658
 		public const string SDKON = "sdkon";
 
-		// Token: 0x04000A15 RID: 2581
+		// Token: 0x04000A63 RID: 2659
 		public const string SDKOFF = "sdkoff";
 
-		// Token: 0x04000A16 RID: 2582
+		// Token: 0x04000A64 RID: 2660
 		public const string EDITOR = "editor";
 
-		// Token: 0x04000A17 RID: 2583
+		// Token: 0x04000A65 RID: 2661
 		public const string PACK = "pack";
 
-		// Token: 0x04000A18 RID: 2584
+		// Token: 0x04000A66 RID: 2662
 		public const bool TESTCDNON = false;
 
-		// Token: 0x04000A19 RID: 2585
+		// Token: 0x04000A67 RID: 2663
 		public const string TESTNOTICEURL = "";
 	}
 }

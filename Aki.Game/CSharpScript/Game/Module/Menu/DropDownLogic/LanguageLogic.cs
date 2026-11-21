@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
 namespace CSharpScript.Game.Module.Menu.DropDownLogic
 {
-	// Token: 0x02005470 RID: 21616
+	// Token: 0x02004453 RID: 17491
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LanguageLogic : DropDownLogicBase
 	{
-		// Token: 0x060372C2 RID: 225986 RVA: 0x00D15B00 File Offset: 0x00D13D00
+		// Token: 0x0602C20B RID: 180747 RVA: 0x00C64F18 File Offset: 0x00C63118
 		public override IReadOnlyList<object> GetDropDownDataList()
 		{
 			List<global::LanguageDefine> list = new List<global::LanguageDefine>();
@@ -55,17 +54,22 @@ namespace CSharpScript.Game.Module.Menu.DropDownLogic
 			{
 				this.LanguageDefineTypeIndexMap[list[i].LanguageType] = i;
 			}
-			return list.Cast<object>().ToList<object>();
+			List<object> list2 = new List<object>(list.Count);
+			foreach (global::LanguageDefine item in list)
+			{
+				list2.Add(item);
+			}
+			return list2;
 		}
 
-		// Token: 0x060372C3 RID: 225987 RVA: 0x00D15C5C File Offset: 0x00D13E5C
+		// Token: 0x0602C20C RID: 180748 RVA: 0x00C650B4 File Offset: 0x00C632B4
 		public override TableTextArgNew GetDataTextId(object data, MenuData menuData)
 		{
 			global::LanguageDefine languageDefine = (global::LanguageDefine)data;
 			return new TableTextArgNew(menuData.OptionsNameList[languageDefine.LanguageType], Array.Empty<object>());
 		}
 
-		// Token: 0x060372C4 RID: 225988 RVA: 0x00D15C8C File Offset: 0x00D13E8C
+		// Token: 0x0602C20D RID: 180749 RVA: 0x00C650E4 File Offset: 0x00C632E4
 		public unsafe override void TriggerSelectChange(object data, MenuData menuData)
 		{
 			int targetConfig = MenuController.Instance.GetTargetConfig(menuData.FunctionId);
@@ -86,7 +90,7 @@ namespace CSharpScript.Game.Module.Menu.DropDownLogic
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x060372C5 RID: 225989 RVA: 0x00D15D4C File Offset: 0x00D13F4C
+		// Token: 0x0602C20E RID: 180750 RVA: 0x00C651A4 File Offset: 0x00C633A4
 		public override int GetDefaultIndex(MenuData menuData)
 		{
 			int targetConfig = MenuController.Instance.GetTargetConfig(menuData.FunctionId);
@@ -98,7 +102,7 @@ namespace CSharpScript.Game.Module.Menu.DropDownLogic
 			return result;
 		}
 
-		// Token: 0x0401D1A5 RID: 119205
+		// Token: 0x04017C3E RID: 97342
 		private readonly Dictionary<int, int> LanguageDefineTypeIndexMap = new Dictionary<int, int>();
 	}
 }

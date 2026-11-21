@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001671 RID: 5745
+	// Token: 0x020002FE RID: 766
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroAnim.KuroRecordCharacter")]
 	[UnrealStructLayout(1144, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1144)]
 	public class AKuroRecordCharacter : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06014D73 RID: 85363 RVA: 0x001EA510 File Offset: 0x001E8710
+		// Token: 0x060052A1 RID: 21153 RVA: 0x000738C9 File Offset: 0x00071AC9
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKuroRecordCharacter._ClassPtr;
 		}
 
-		// Token: 0x06014D74 RID: 85364 RVA: 0x001EA51C File Offset: 0x001E871C
+		// Token: 0x060052A2 RID: 21154 RVA: 0x000738D8 File Offset: 0x00071AD8
 		public AKuroRecordCharacter() : this(BuiltinUtils.AllocNativeUObject(AKuroRecordCharacter.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06014D75 RID: 85365 RVA: 0x001EA544 File Offset: 0x001E8744
+		// Token: 0x060052A3 RID: 21155 RVA: 0x00073900 File Offset: 0x00071B00
 		[NullableContext(1)]
 		public AKuroRecordCharacter(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKuroRecordCharacter.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700528E RID: 21134
-		// (get) Token: 0x06014D76 RID: 85366 RVA: 0x001EA577 File Offset: 0x001E8777
-		// (set) Token: 0x06014D77 RID: 85367 RVA: 0x001EA58B File Offset: 0x001E878B
+		// Token: 0x1700106E RID: 4206
+		// (get) Token: 0x060052A4 RID: 21156 RVA: 0x00073933 File Offset: 0x00071B33
+		// (set) Token: 0x060052A5 RID: 21157 RVA: 0x00073947 File Offset: 0x00071B47
 		public unsafe USceneComponent MainScene
 		{
 			get
@@ -45,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700528F RID: 21135
-		// (get) Token: 0x06014D78 RID: 85368 RVA: 0x001EA5A0 File Offset: 0x001E87A0
-		// (set) Token: 0x06014D79 RID: 85369 RVA: 0x001EA5B4 File Offset: 0x001E87B4
+		// Token: 0x1700106F RID: 4207
+		// (get) Token: 0x060052A6 RID: 21158 RVA: 0x0007395C File Offset: 0x00071B5C
+		// (set) Token: 0x060052A7 RID: 21159 RVA: 0x00073970 File Offset: 0x00071B70
 		public unsafe USkeletalMeshComponent SubMesh0
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005290 RID: 21136
-		// (get) Token: 0x06014D7A RID: 85370 RVA: 0x001EA5C9 File Offset: 0x001E87C9
-		// (set) Token: 0x06014D7B RID: 85371 RVA: 0x001EA5DD File Offset: 0x001E87DD
+		// Token: 0x17001070 RID: 4208
+		// (get) Token: 0x060052A8 RID: 21160 RVA: 0x00073985 File Offset: 0x00071B85
+		// (set) Token: 0x060052A9 RID: 21161 RVA: 0x00073999 File Offset: 0x00071B99
 		public unsafe USkeletalMeshComponent SubMesh1
 		{
 			get
@@ -75,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005291 RID: 21137
-		// (get) Token: 0x06014D7C RID: 85372 RVA: 0x001EA5F2 File Offset: 0x001E87F2
-		// (set) Token: 0x06014D7D RID: 85373 RVA: 0x001EA606 File Offset: 0x001E8806
+		// Token: 0x17001071 RID: 4209
+		// (get) Token: 0x060052AA RID: 21162 RVA: 0x000739AE File Offset: 0x00071BAE
+		// (set) Token: 0x060052AB RID: 21163 RVA: 0x000739C2 File Offset: 0x00071BC2
 		public unsafe USkeletalMeshComponent SubMesh2
 		{
 			get
@@ -90,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005292 RID: 21138
-		// (get) Token: 0x06014D7E RID: 85374 RVA: 0x001EA61B File Offset: 0x001E881B
-		// (set) Token: 0x06014D7F RID: 85375 RVA: 0x001EA62F File Offset: 0x001E882F
+		// Token: 0x17001072 RID: 4210
+		// (get) Token: 0x060052AC RID: 21164 RVA: 0x000739D7 File Offset: 0x00071BD7
+		// (set) Token: 0x060052AD RID: 21165 RVA: 0x000739EB File Offset: 0x00071BEB
 		public unsafe USkeletalMeshComponent SubMesh3
 		{
 			get
@@ -105,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005293 RID: 21139
-		// (get) Token: 0x06014D80 RID: 85376 RVA: 0x001EA644 File Offset: 0x001E8844
-		// (set) Token: 0x06014D81 RID: 85377 RVA: 0x001EA658 File Offset: 0x001E8858
+		// Token: 0x17001073 RID: 4211
+		// (get) Token: 0x060052AE RID: 21166 RVA: 0x00073A00 File Offset: 0x00071C00
+		// (set) Token: 0x060052AF RID: 21167 RVA: 0x00073A14 File Offset: 0x00071C14
 		public unsafe USkeletalMeshComponent SubMesh4
 		{
 			get
@@ -120,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005294 RID: 21140
-		// (get) Token: 0x06014D82 RID: 85378 RVA: 0x001EA66D File Offset: 0x001E886D
-		// (set) Token: 0x06014D83 RID: 85379 RVA: 0x001EA681 File Offset: 0x001E8881
+		// Token: 0x17001074 RID: 4212
+		// (get) Token: 0x060052B0 RID: 21168 RVA: 0x00073A29 File Offset: 0x00071C29
+		// (set) Token: 0x060052B1 RID: 21169 RVA: 0x00073A3D File Offset: 0x00071C3D
 		public unsafe USkeletalMeshComponent SubMesh5
 		{
 			get
@@ -135,9 +135,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005295 RID: 21141
-		// (get) Token: 0x06014D84 RID: 85380 RVA: 0x001EA696 File Offset: 0x001E8896
-		// (set) Token: 0x06014D85 RID: 85381 RVA: 0x001EA6AA File Offset: 0x001E88AA
+		// Token: 0x17001075 RID: 4213
+		// (get) Token: 0x060052B2 RID: 21170 RVA: 0x00073A52 File Offset: 0x00071C52
+		// (set) Token: 0x060052B3 RID: 21171 RVA: 0x00073A66 File Offset: 0x00071C66
 		public unsafe USkeletalMeshComponent SubMesh6
 		{
 			get
@@ -150,9 +150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005296 RID: 21142
-		// (get) Token: 0x06014D86 RID: 85382 RVA: 0x001EA6BF File Offset: 0x001E88BF
-		// (set) Token: 0x06014D87 RID: 85383 RVA: 0x001EA6D3 File Offset: 0x001E88D3
+		// Token: 0x17001076 RID: 4214
+		// (get) Token: 0x060052B4 RID: 21172 RVA: 0x00073A7B File Offset: 0x00071C7B
+		// (set) Token: 0x060052B5 RID: 21173 RVA: 0x00073A8F File Offset: 0x00071C8F
 		public unsafe USkeletalMeshComponent SubMesh7
 		{
 			get
@@ -165,9 +165,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005297 RID: 21143
-		// (get) Token: 0x06014D88 RID: 85384 RVA: 0x001EA6E8 File Offset: 0x001E88E8
-		// (set) Token: 0x06014D89 RID: 85385 RVA: 0x001EA6FC File Offset: 0x001E88FC
+		// Token: 0x17001077 RID: 4215
+		// (get) Token: 0x060052B6 RID: 21174 RVA: 0x00073AA4 File Offset: 0x00071CA4
+		// (set) Token: 0x060052B7 RID: 21175 RVA: 0x00073AB8 File Offset: 0x00071CB8
 		public unsafe USkeletalMeshComponent SubMesh8
 		{
 			get
@@ -180,9 +180,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005298 RID: 21144
-		// (get) Token: 0x06014D8A RID: 85386 RVA: 0x001EA711 File Offset: 0x001E8911
-		// (set) Token: 0x06014D8B RID: 85387 RVA: 0x001EA725 File Offset: 0x001E8925
+		// Token: 0x17001078 RID: 4216
+		// (get) Token: 0x060052B8 RID: 21176 RVA: 0x00073ACD File Offset: 0x00071CCD
+		// (set) Token: 0x060052B9 RID: 21177 RVA: 0x00073AE1 File Offset: 0x00071CE1
 		public unsafe USkeletalMeshComponent SubMesh9
 		{
 			get
@@ -195,9 +195,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005299 RID: 21145
-		// (get) Token: 0x06014D8C RID: 85388 RVA: 0x001EA73A File Offset: 0x001E893A
-		// (set) Token: 0x06014D8D RID: 85389 RVA: 0x001EA74E File Offset: 0x001E894E
+		// Token: 0x17001079 RID: 4217
+		// (get) Token: 0x060052BA RID: 21178 RVA: 0x00073AF6 File Offset: 0x00071CF6
+		// (set) Token: 0x060052BB RID: 21179 RVA: 0x00073B0A File Offset: 0x00071D0A
 		public unsafe USkeletalMeshComponent SubMesh10
 		{
 			get
@@ -210,9 +210,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700529A RID: 21146
-		// (get) Token: 0x06014D8E RID: 85390 RVA: 0x001EA763 File Offset: 0x001E8963
-		// (set) Token: 0x06014D8F RID: 85391 RVA: 0x001EA777 File Offset: 0x001E8977
+		// Token: 0x1700107A RID: 4218
+		// (get) Token: 0x060052BC RID: 21180 RVA: 0x00073B1F File Offset: 0x00071D1F
+		// (set) Token: 0x060052BD RID: 21181 RVA: 0x00073B33 File Offset: 0x00071D33
 		public unsafe USkeletalMeshComponent SubMesh11
 		{
 			get
@@ -225,64 +225,64 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014D90 RID: 85392 RVA: 0x001EA78C File Offset: 0x001E898C
+		// Token: 0x060052BE RID: 21182 RVA: 0x00073B48 File Offset: 0x00071D48
 		static AKuroRecordCharacter()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroAnim.KuroRecordCharacter");
 		}
 
-		// Token: 0x06014D91 RID: 85393 RVA: 0x001EA79A File Offset: 0x001E899A
+		// Token: 0x060052BF RID: 21183 RVA: 0x00073B56 File Offset: 0x00071D56
 		protected AKuroRecordCharacter(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400B5C1 RID: 46529
+		// Token: 0x040021B1 RID: 8625
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroAnim.KuroRecordCharacter";
 
-		// Token: 0x0400B5C2 RID: 46530
+		// Token: 0x040021B2 RID: 8626
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400B5C3 RID: 46531
+		// Token: 0x040021B3 RID: 8627
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400B5C4 RID: 46532
+		// Token: 0x040021B4 RID: 8628
 		internal static int __PropertyOffset_MainScene;
 
-		// Token: 0x0400B5C5 RID: 46533
+		// Token: 0x040021B5 RID: 8629
 		internal static int __PropertyOffset_SubMesh0;
 
-		// Token: 0x0400B5C6 RID: 46534
+		// Token: 0x040021B6 RID: 8630
 		internal static int __PropertyOffset_SubMesh1;
 
-		// Token: 0x0400B5C7 RID: 46535
+		// Token: 0x040021B7 RID: 8631
 		internal static int __PropertyOffset_SubMesh2;
 
-		// Token: 0x0400B5C8 RID: 46536
+		// Token: 0x040021B8 RID: 8632
 		internal static int __PropertyOffset_SubMesh3;
 
-		// Token: 0x0400B5C9 RID: 46537
+		// Token: 0x040021B9 RID: 8633
 		internal static int __PropertyOffset_SubMesh4;
 
-		// Token: 0x0400B5CA RID: 46538
+		// Token: 0x040021BA RID: 8634
 		internal static int __PropertyOffset_SubMesh5;
 
-		// Token: 0x0400B5CB RID: 46539
+		// Token: 0x040021BB RID: 8635
 		internal static int __PropertyOffset_SubMesh6;
 
-		// Token: 0x0400B5CC RID: 46540
+		// Token: 0x040021BC RID: 8636
 		internal static int __PropertyOffset_SubMesh7;
 
-		// Token: 0x0400B5CD RID: 46541
+		// Token: 0x040021BD RID: 8637
 		internal static int __PropertyOffset_SubMesh8;
 
-		// Token: 0x0400B5CE RID: 46542
+		// Token: 0x040021BE RID: 8638
 		internal static int __PropertyOffset_SubMesh9;
 
-		// Token: 0x0400B5CF RID: 46543
+		// Token: 0x040021BF RID: 8639
 		internal static int __PropertyOffset_SubMesh10;
 
-		// Token: 0x0400B5D0 RID: 46544
+		// Token: 0x040021C0 RID: 8640
 		internal static int __PropertyOffset_SubMesh11;
 	}
 }

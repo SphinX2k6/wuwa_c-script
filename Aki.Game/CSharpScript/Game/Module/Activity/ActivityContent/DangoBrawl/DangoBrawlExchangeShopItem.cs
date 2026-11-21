@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200683D RID: 26685
+	// Token: 0x0200578D RID: 22413
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlExchangeShopItem : UiPanelBase
 	{
-		// Token: 0x060429B0 RID: 272816 RVA: 0x01031848 File Offset: 0x0102FA48
+		// Token: 0x06037504 RID: 226564 RVA: 0x00F72D54 File Offset: 0x00F70F54
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060429B1 RID: 272817 RVA: 0x01031A44 File Offset: 0x0102FC44
+		// Token: 0x06037505 RID: 226565 RVA: 0x00F72F50 File Offset: 0x00F71150
 		public void RefreshByData(DangoBrawlExchangeShopItemProxy data)
 		{
 			this.ItemProxy = data;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshRaycastTarget();
 		}
 
-		// Token: 0x060429B2 RID: 272818 RVA: 0x01031A94 File Offset: 0x0102FC94
+		// Token: 0x06037506 RID: 226566 RVA: 0x00F72FA0 File Offset: 0x00F711A0
 		private void RefreshQualityTexture()
 		{
 			if (this.ItemProxy == null)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.SetTextureByPath(qualityTexturePath, texture, null, null);
 		}
 
-		// Token: 0x060429B3 RID: 272819 RVA: 0x01031AE8 File Offset: 0x0102FCE8
+		// Token: 0x06037507 RID: 226567 RVA: 0x00F72FF4 File Offset: 0x00F711F4
 		private void RefreshItemCost()
 		{
 			UUITexture texture = base.GetTexture(4);
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			text2.SetUIActive(false);
 		}
 
-		// Token: 0x060429B4 RID: 272820 RVA: 0x01031B20 File Offset: 0x0102FD20
+		// Token: 0x06037508 RID: 226568 RVA: 0x00F7302C File Offset: 0x00F7122C
 		private void RefreshItemIcon()
 		{
 			if (this.ItemProxy == null)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060429B5 RID: 272821 RVA: 0x01031B91 File Offset: 0x0102FD91
+		// Token: 0x06037509 RID: 226569 RVA: 0x00F7309D File Offset: 0x00F7129D
 		private void RefreshItemName()
 		{
 			if (this.ItemProxy == null)
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			GameplayShopUtil.SetText(base.GetText(3), this.ItemProxy.ItemNameTextData);
 		}
 
-		// Token: 0x060429B6 RID: 272822 RVA: 0x01031BB4 File Offset: 0x0102FDB4
+		// Token: 0x0603750A RID: 226570 RVA: 0x00F730C0 File Offset: 0x00F712C0
 		private void RefreshSoldOutState()
 		{
 			if (this.ItemProxy == null)
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060429B7 RID: 272823 RVA: 0x01031C10 File Offset: 0x0102FE10
+		// Token: 0x0603750B RID: 226571 RVA: 0x00F7311C File Offset: 0x00F7131C
 		[return: Nullable(2)]
 		private UUIText GetSoldOutLabelText(UUIItem soldOutPanel)
 		{
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return this.FindTextInChildren(soldOutPanel);
 		}
 
-		// Token: 0x060429B8 RID: 272824 RVA: 0x01031C4C File Offset: 0x0102FE4C
+		// Token: 0x0603750C RID: 226572 RVA: 0x00F73158 File Offset: 0x00F71358
 		[return: Nullable(2)]
 		private UUIText FindTextInChildren(UUIItem ui)
 		{
@@ -190,19 +190,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return null;
 		}
 
-		// Token: 0x060429B9 RID: 272825 RVA: 0x01031CB4 File Offset: 0x0102FEB4
+		// Token: 0x0603750D RID: 226573 RVA: 0x00F731C0 File Offset: 0x00F713C0
 		private void RefreshLockState()
 		{
 			base.GetItem(10).SetUIActive(false);
 		}
 
-		// Token: 0x060429BA RID: 272826 RVA: 0x01031CC4 File Offset: 0x0102FEC4
+		// Token: 0x0603750E RID: 226574 RVA: 0x00F731D0 File Offset: 0x00F713D0
 		private void RefreshPurchaseLimit()
 		{
 			base.GetText(2).SetUIActive(false);
 		}
 
-		// Token: 0x060429BB RID: 272827 RVA: 0x01031CD4 File Offset: 0x0102FED4
+		// Token: 0x0603750F RID: 226575 RVA: 0x00F731E0 File Offset: 0x00F713E0
 		private void RefreshDiscount()
 		{
 			if (this.ItemProxy == null)
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060429BC RID: 272828 RVA: 0x01031D38 File Offset: 0x0102FF38
+		// Token: 0x06037510 RID: 226576 RVA: 0x00F73244 File Offset: 0x00F71444
 		private void RefreshNewFlag()
 		{
 			UUIItem item = base.GetItem(12);
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item.SetUIActive(!flag);
 		}
 
-		// Token: 0x060429BD RID: 272829 RVA: 0x01031DA8 File Offset: 0x0102FFA8
+		// Token: 0x06037511 RID: 226577 RVA: 0x00F732B4 File Offset: 0x00F714B4
 		private void RefreshRaycastTarget()
 		{
 			DangoBrawlExchangeShopItemProxy itemProxy = this.ItemProxy;
@@ -258,41 +258,41 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item.SetRaycastTarget(raycastTarget);
 		}
 
-		// Token: 0x04022B2A RID: 142122
+		// Token: 0x0401D387 RID: 119687
 		[Nullable(2)]
 		private DangoBrawlExchangeShopItemProxy ItemProxy;
 
-		// Token: 0x0200CA02 RID: 51714
+		// Token: 0x0200B3CE RID: 46030
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403D0AB RID: 250027
+			// Token: 0x04037994 RID: 227732
 			TexQuality,
-			// Token: 0x0403D0AC RID: 250028
+			// Token: 0x04037995 RID: 227733
 			TexItemIcon,
-			// Token: 0x0403D0AD RID: 250029
+			// Token: 0x04037996 RID: 227734
 			TxtLimitBuyNum,
-			// Token: 0x0403D0AE RID: 250030
+			// Token: 0x04037997 RID: 227735
 			TxtItemName,
-			// Token: 0x0403D0AF RID: 250031
+			// Token: 0x04037998 RID: 227736
 			TexPriceIcon,
-			// Token: 0x0403D0B0 RID: 250032
+			// Token: 0x04037999 RID: 227737
 			TxtPrice,
-			// Token: 0x0403D0B1 RID: 250033
+			// Token: 0x0403799A RID: 227738
 			TxtOriginPrice,
-			// Token: 0x0403D0B2 RID: 250034
+			// Token: 0x0403799B RID: 227739
 			TxtDiscount,
-			// Token: 0x0403D0B3 RID: 250035
+			// Token: 0x0403799C RID: 227740
 			DiscountItem,
-			// Token: 0x0403D0B4 RID: 250036
+			// Token: 0x0403799D RID: 227741
 			SellOutItem,
-			// Token: 0x0403D0B5 RID: 250037
+			// Token: 0x0403799E RID: 227742
 			LockItem,
-			// Token: 0x0403D0B6 RID: 250038
+			// Token: 0x0403799F RID: 227743
 			TxtLockItem,
-			// Token: 0x0403D0B7 RID: 250039
+			// Token: 0x040379A0 RID: 227744
 			NewFlagItem,
-			// Token: 0x0403D0B8 RID: 250040
+			// Token: 0x040379A1 RID: 227745
 			SelfItem
 		}
 	}

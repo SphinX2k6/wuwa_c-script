@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo
 {
-	// Token: 0x02004719 RID: 18201
+	// Token: 0x02003649 RID: 13897
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WuWaGoGlobal : IStaticVariableResetter
 	{
-		// Token: 0x0602F8E7 RID: 194791 RVA: 0x00B03C0A File Offset: 0x00B01E0A
+		// Token: 0x060240AD RID: 147629 RVA: 0x00A338DA File Offset: 0x00A31ADA
 		static WuWaGoGlobal()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WuWaGoGlobal.CreateStaticDefaultValue), new Action(WuWaGoGlobal.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602F8E8 RID: 194792 RVA: 0x00B03C29 File Offset: 0x00B01E29
+		// Token: 0x060240AE RID: 147630 RVA: 0x00A338F9 File Offset: 0x00A31AF9
 		public static void CreateStaticDefaultValue()
 		{
 			WuWaGoGlobal._roleAttackAnimMap = new Dictionary<EWuWaGoRoleType, List<UAnimMontage>>();
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			WuWaGoGlobal._preloadedAudioEvents = new HashSet<string>();
 		}
 
-		// Token: 0x0602F8E9 RID: 194793 RVA: 0x00B03C60 File Offset: 0x00B01E60
+		// Token: 0x060240AF RID: 147631 RVA: 0x00A33930 File Offset: 0x00A31B30
 		public static void ResetStaticDefaultValue()
 		{
 			WuWaGoGlobal.ReleaseAudioEvents();
@@ -47,8 +47,8 @@ namespace CSharpScript.Game.Module.WuwaGo
 			WuWaGoGlobal._preloadedAudioEvents = null;
 		}
 
-		// Token: 0x170076EF RID: 30447
-		// (get) Token: 0x0602F8EA RID: 194794 RVA: 0x00B03CB4 File Offset: 0x00B01EB4
+		// Token: 0x170049AB RID: 18859
+		// (get) Token: 0x060240B0 RID: 147632 RVA: 0x00A33984 File Offset: 0x00A31B84
 		public static BP_WuWaGo_C Setting
 		{
 			get
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			}
 		}
 
-		// Token: 0x0602F8EB RID: 194795 RVA: 0x00B03CF0 File Offset: 0x00B01EF0
+		// Token: 0x060240B1 RID: 147633 RVA: 0x00A339C0 File Offset: 0x00A31BC0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <LoadSettingData>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F8EC RID: 194796 RVA: 0x00B03D2C File Offset: 0x00B01F2C
+		// Token: 0x060240B2 RID: 147634 RVA: 0x00A339FC File Offset: 0x00A31BFC
 		public static void ClearSettingData()
 		{
 			WuWaGoGlobal.ReleaseAudioEvents();
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			WuWaGoGlobal._idleMontage = null;
 		}
 
-		// Token: 0x0602F8ED RID: 194797 RVA: 0x00B03DA4 File Offset: 0x00B01FA4
+		// Token: 0x060240B3 RID: 147635 RVA: 0x00A33A74 File Offset: 0x00A31C74
 		public static string GetRoleClassPath(EWuWaGoRoleType type)
 		{
 			string result = null;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return result;
 		}
 
-		// Token: 0x0602F8EE RID: 194798 RVA: 0x00B03E14 File Offset: 0x00B02014
+		// Token: 0x060240B4 RID: 147636 RVA: 0x00A33AE4 File Offset: 0x00A31CE4
 		public static string GetRoleAnimClassPath(EWuWaGoRoleType type)
 		{
 			string result = null;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return result;
 		}
 
-		// Token: 0x0602F8EF RID: 194799 RVA: 0x00B03E68 File Offset: 0x00B02068
+		// Token: 0x060240B5 RID: 147637 RVA: 0x00A33B38 File Offset: 0x00A31D38
 		public static string GetMonsterAttackRangeEffect(EWuWaGoRoleType type)
 		{
 			string result = null;
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return result;
 		}
 
-		// Token: 0x0602F8F0 RID: 194800 RVA: 0x00B03EBC File Offset: 0x00B020BC
+		// Token: 0x060240B6 RID: 147638 RVA: 0x00A33B8C File Offset: 0x00A31D8C
 		public static string GetAppliqueMaterialPath(EWuWaGoGridLinkType linkType)
 		{
 			if (WuWaGoGlobal.Setting == null)
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return result;
 		}
 
-		// Token: 0x0602F8F1 RID: 194801 RVA: 0x00B03F4B File Offset: 0x00B0214B
+		// Token: 0x060240B7 RID: 147639 RVA: 0x00A33C1B File Offset: 0x00A31E1B
 		[NullableContext(1)]
 		public static List<UAnimMontage> GetRoleAttackAnimations(EWuWaGoRoleType type)
 		{
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return ((roleAttackAnimMap != null) ? roleAttackAnimMap.GetValueOrDefault(type) : null) ?? new List<UAnimMontage>();
 		}
 
-		// Token: 0x0602F8F2 RID: 194802 RVA: 0x00B03F68 File Offset: 0x00B02168
+		// Token: 0x060240B8 RID: 147640 RVA: 0x00A33C38 File Offset: 0x00A31E38
 		[NullableContext(1)]
 		public static List<UAnimMontage> GetRoleDeathAnimations(EWuWaGoRoleType type)
 		{
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return ((roleDeathAnimMap != null) ? roleDeathAnimMap.GetValueOrDefault(type) : null) ?? new List<UAnimMontage>();
 		}
 
-		// Token: 0x0602F8F3 RID: 194803 RVA: 0x00B03F85 File Offset: 0x00B02185
+		// Token: 0x060240B9 RID: 147641 RVA: 0x00A33C55 File Offset: 0x00A31E55
 		[NullableContext(1)]
 		public static List<UAnimMontage> GetRoleBeHitAnimations(EWuWaGoRoleType type)
 		{
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return ((roleBeHitAnimMap != null) ? roleBeHitAnimMap.GetValueOrDefault(type) : null) ?? new List<UAnimMontage>();
 		}
 
-		// Token: 0x0602F8F4 RID: 194804 RVA: 0x00B03FA2 File Offset: 0x00B021A2
+		// Token: 0x060240BA RID: 147642 RVA: 0x00A33C72 File Offset: 0x00A31E72
 		public static UAnimMontage GetRoleClimbMontage(EWuWaGoRoleType type, EWuWaGoClimbMontage action)
 		{
 			Dictionary<EWuWaGoRoleType, Dictionary<EWuWaGoClimbMontage, UAnimMontage>> roleClimbAnimMap = WuWaGoGlobal._roleClimbAnimMap;
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return valueOrDefault.GetValueOrDefault(action);
 		}
 
-		// Token: 0x0602F8F5 RID: 194805 RVA: 0x00B03FC1 File Offset: 0x00B021C1
+		// Token: 0x060240BB RID: 147643 RVA: 0x00A33C91 File Offset: 0x00A31E91
 		public static UAnimMontage GetMainControlPullRodMontageByState(EGameplayEntityState currentState)
 		{
 			if (currentState == EGameplayEntityState.Normal)
@@ -264,25 +264,25 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return WuWaGoGlobal._mainControlPullRodCloseMontage;
 		}
 
-		// Token: 0x0602F8F6 RID: 194806 RVA: 0x00B03FDA File Offset: 0x00B021DA
+		// Token: 0x060240BC RID: 147644 RVA: 0x00A33CAA File Offset: 0x00A31EAA
 		public static UAnimMontage GetSpikeFallMontage()
 		{
 			return WuWaGoGlobal._spikeFallMontage;
 		}
 
-		// Token: 0x0602F8F7 RID: 194807 RVA: 0x00B03FE1 File Offset: 0x00B021E1
+		// Token: 0x060240BD RID: 147645 RVA: 0x00A33CB1 File Offset: 0x00A31EB1
 		public static UAnimMontage GetAlertMontage()
 		{
 			return WuWaGoGlobal._alertMontage;
 		}
 
-		// Token: 0x0602F8F8 RID: 194808 RVA: 0x00B03FE8 File Offset: 0x00B021E8
+		// Token: 0x060240BE RID: 147646 RVA: 0x00A33CB8 File Offset: 0x00A31EB8
 		public static UAnimMontage GetIdleMontage()
 		{
 			return WuWaGoGlobal._idleMontage;
 		}
 
-		// Token: 0x0602F8F9 RID: 194809 RVA: 0x00B03FF0 File Offset: 0x00B021F0
+		// Token: 0x060240BF RID: 147647 RVA: 0x00A33CC0 File Offset: 0x00A31EC0
 		public static string GetAudioEvent(EWuWaGoAudioEventIndex index)
 		{
 			BP_WuWaGo_C setting = WuWaGoGlobal.Setting;
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return WuWaGoGlobal.ParseAudioEventName(tarray.Get((int)index));
 		}
 
-		// Token: 0x0602F8FA RID: 194810 RVA: 0x00B04030 File Offset: 0x00B02230
+		// Token: 0x060240C0 RID: 147648 RVA: 0x00A33D00 File Offset: 0x00A31F00
 		private static UniTask PreloadRoleAnimations()
 		{
 			WuWaGoGlobal.<PreloadRoleAnimations>d__32 <PreloadRoleAnimations>d__;
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <PreloadRoleAnimations>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F8FB RID: 194811 RVA: 0x00B0406C File Offset: 0x00B0226C
+		// Token: 0x060240C1 RID: 147649 RVA: 0x00A33D3C File Offset: 0x00A31F3C
 		private static void PreloadAudioEvents(BP_WuWaGo_C setting)
 		{
 			TArray<string> tarray = (setting != null) ? setting.AudioEvents : null;
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			}
 		}
 
-		// Token: 0x0602F8FC RID: 194812 RVA: 0x00B040DC File Offset: 0x00B022DC
+		// Token: 0x060240C2 RID: 147650 RVA: 0x00A33DAC File Offset: 0x00A31FAC
 		private static void ReleaseAudioEvents()
 		{
 			if (WuWaGoGlobal._preloadedAudioEvents == null)
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			WuWaGoGlobal._preloadedAudioEvents.Clear();
 		}
 
-		// Token: 0x0602F8FD RID: 194813 RVA: 0x00B04144 File Offset: 0x00B02344
+		// Token: 0x060240C3 RID: 147651 RVA: 0x00A33E14 File Offset: 0x00A32014
 		private static string ParseAudioEventName(string source)
 		{
 			if (source == null || StringUtils.IsBlank(source))
@@ -360,7 +360,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return null;
 		}
 
-		// Token: 0x0602F8FE RID: 194814 RVA: 0x00B0417C File Offset: 0x00B0237C
+		// Token: 0x060240C4 RID: 147652 RVA: 0x00A33E4C File Offset: 0x00A3204C
 		[NullableContext(1)]
 		private static UniTask PreloadMainControlPullRodMontages(BP_WuWaGo_C setting)
 		{
@@ -372,7 +372,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <PreloadMainControlPullRodMontages>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F8FF RID: 194815 RVA: 0x00B041C0 File Offset: 0x00B023C0
+		// Token: 0x060240C5 RID: 147653 RVA: 0x00A33E90 File Offset: 0x00A32090
 		[NullableContext(1)]
 		private static UniTask PreloadSpikeFallMontage(BP_WuWaGo_C setting)
 		{
@@ -384,7 +384,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <PreloadSpikeFallMontage>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F900 RID: 194816 RVA: 0x00B04204 File Offset: 0x00B02404
+		// Token: 0x060240C6 RID: 147654 RVA: 0x00A33ED4 File Offset: 0x00A320D4
 		[NullableContext(1)]
 		private static UniTask PreloadAlertMontage(BP_WuWaGo_C setting)
 		{
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <PreloadAlertMontage>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F901 RID: 194817 RVA: 0x00B04248 File Offset: 0x00B02448
+		// Token: 0x060240C7 RID: 147655 RVA: 0x00A33F18 File Offset: 0x00A32118
 		[NullableContext(1)]
 		private static UniTask PreloadIdleMontage(BP_WuWaGo_C setting)
 		{
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <PreloadIdleMontage>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F902 RID: 194818 RVA: 0x00B0428C File Offset: 0x00B0248C
+		// Token: 0x060240C8 RID: 147656 RVA: 0x00A33F5C File Offset: 0x00A3215C
 		[NullableContext(1)]
 		private static UniTask PreloadOneRoleAnim(EWuWaGoRoleType type, SWuWaGoRoleAnim anim)
 		{
@@ -421,7 +421,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <PreloadOneRoleAnim>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F903 RID: 194819 RVA: 0x00B042D8 File Offset: 0x00B024D8
+		// Token: 0x060240C9 RID: 147657 RVA: 0x00A33FA8 File Offset: 0x00A321A8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -443,7 +443,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <LoadMontageArray>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F904 RID: 194820 RVA: 0x00B0431C File Offset: 0x00B0251C
+		// Token: 0x060240CA RID: 147658 RVA: 0x00A33FEC File Offset: 0x00A321EC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -466,7 +466,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <LoadMontageMap>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F905 RID: 194821 RVA: 0x00B04360 File Offset: 0x00B02560
+		// Token: 0x060240CB RID: 147659 RVA: 0x00A34030 File Offset: 0x00A32230
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -482,14 +482,14 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <LoadMontage>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04019B01 RID: 105217
+		// Token: 0x040141B0 RID: 82352
 		[Nullable(1)]
 		private const string SETTING_DA_PATH = "/Game/Aki/Data/Gameplay/WuWaGo/DA_WuWaGo.DA_WuWaGo";
 
-		// Token: 0x04019B02 RID: 105218
+		// Token: 0x040141B1 RID: 82353
 		private static BP_WuWaGo_C _settingDataAsset;
 
-		// Token: 0x04019B03 RID: 105219
+		// Token: 0x040141B2 RID: 82354
 		[Nullable(new byte[]
 		{
 			2,
@@ -498,7 +498,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 		})]
 		private static Dictionary<EWuWaGoRoleType, List<UAnimMontage>> _roleAttackAnimMap;
 
-		// Token: 0x04019B04 RID: 105220
+		// Token: 0x040141B3 RID: 82355
 		[Nullable(new byte[]
 		{
 			2,
@@ -507,7 +507,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 		})]
 		private static Dictionary<EWuWaGoRoleType, List<UAnimMontage>> _roleDeathAnimMap;
 
-		// Token: 0x04019B05 RID: 105221
+		// Token: 0x040141B4 RID: 82356
 		[Nullable(new byte[]
 		{
 			2,
@@ -516,7 +516,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 		})]
 		private static Dictionary<EWuWaGoRoleType, List<UAnimMontage>> _roleBeHitAnimMap;
 
-		// Token: 0x04019B06 RID: 105222
+		// Token: 0x040141B5 RID: 82357
 		[Nullable(new byte[]
 		{
 			2,
@@ -525,22 +525,22 @@ namespace CSharpScript.Game.Module.WuwaGo
 		})]
 		private static Dictionary<EWuWaGoRoleType, Dictionary<EWuWaGoClimbMontage, UAnimMontage>> _roleClimbAnimMap;
 
-		// Token: 0x04019B07 RID: 105223
+		// Token: 0x040141B6 RID: 82358
 		private static UAnimMontage _mainControlPullRodOpenMontage;
 
-		// Token: 0x04019B08 RID: 105224
+		// Token: 0x040141B7 RID: 82359
 		private static UAnimMontage _mainControlPullRodCloseMontage;
 
-		// Token: 0x04019B09 RID: 105225
+		// Token: 0x040141B8 RID: 82360
 		private static UAnimMontage _spikeFallMontage;
 
-		// Token: 0x04019B0A RID: 105226
+		// Token: 0x040141B9 RID: 82361
 		private static UAnimMontage _alertMontage;
 
-		// Token: 0x04019B0B RID: 105227
+		// Token: 0x040141BA RID: 82362
 		private static UAnimMontage _idleMontage;
 
-		// Token: 0x04019B0C RID: 105228
+		// Token: 0x040141BB RID: 82363
 		[Nullable(new byte[]
 		{
 			2,

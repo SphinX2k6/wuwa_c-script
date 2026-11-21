@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E17 RID: 7703
+	// Token: 0x0200204A RID: 8266
 	public class ISetBattleTags_SetValue
 	{
-		// Token: 0x040062A3 RID: 25251
+		// Token: 0x0400687A RID: 26746
 		public EExecBattleActionType Type;
 
-		// Token: 0x040062A4 RID: 25252
-		[Nullable(1)]
+		// Token: 0x0400687B RID: 26747
 		public List<ISetBattleTagConfig> Configs;
 	}
 }

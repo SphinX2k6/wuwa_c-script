@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200480C RID: 18444
+	// Token: 0x02004C74 RID: 19572
 	public enum EEntityAssignPriority : byte
 	{
-		// Token: 0x0400CCDD RID: 52445
+		// Token: 0x0400D717 RID: 55063
 		EntityActor,
-		// Token: 0x0400CCDE RID: 52446
+		// Token: 0x0400D718 RID: 55064
 		EntityEditor
 	}
 }

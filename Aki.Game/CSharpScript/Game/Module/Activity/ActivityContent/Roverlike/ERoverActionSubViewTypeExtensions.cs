@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020061AA RID: 25002
+	// Token: 0x02005128 RID: 20776
 	public static class ERoverActionSubViewTypeExtensions
 	{
-		// Token: 0x0603F253 RID: 258643 RVA: 0x00F411C4 File Offset: 0x00F3F3C4
+		// Token: 0x06033F13 RID: 212755 RVA: 0x00E8808C File Offset: 0x00E8628C
 		public static string ToEnumString(this ERoverActionSubViewType value)
 		{
 			string result;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return result;
 		}
 
-		// Token: 0x0603F254 RID: 258644 RVA: 0x00F4123C File Offset: 0x00F3F43C
+		// Token: 0x06033F14 RID: 212756 RVA: 0x00E88104 File Offset: 0x00E86304
 		public static ERoverActionSubViewType FromString(string name)
 		{
 			ERoverActionSubViewType result;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return result;
 		}
 
-		// Token: 0x0603F255 RID: 258645 RVA: 0x00F41268 File Offset: 0x00F3F468
+		// Token: 0x06033F15 RID: 212757 RVA: 0x00E88130 File Offset: 0x00E86330
 		public static bool TryFromString(string name, out ERoverActionSubViewType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return false;
 		}
 
-		// Token: 0x0603F256 RID: 258646 RVA: 0x00F4136F File Offset: 0x00F3F56F
+		// Token: 0x06033F16 RID: 212758 RVA: 0x00E88237 File Offset: 0x00E86437
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			};
 		}
 
-		// Token: 0x0603F257 RID: 258647 RVA: 0x00F413AF File Offset: 0x00F3F5AF
+		// Token: 0x06033F17 RID: 212759 RVA: 0x00E88277 File Offset: 0x00E86477
 		public static ERoverActionSubViewType[] GetValues()
 		{
 			return new ERoverActionSubViewType[]
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			};
 		}
 
-		// Token: 0x0603F258 RID: 258648 RVA: 0x00F413C2 File Offset: 0x00F3F5C2
+		// Token: 0x06033F18 RID: 212760 RVA: 0x00E8828A File Offset: 0x00E8648A
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -8,12 +8,12 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200715E RID: 29022
+	// Token: 0x02006212 RID: 25106
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DynamicPortalCreatorComponent : EntityComponent
 	{
-		// Token: 0x06046D77 RID: 290167 RVA: 0x011DBBA4 File Offset: 0x011D9DA4
+		// Token: 0x0603C5B7 RID: 247223 RVA: 0x01137934 File Offset: 0x01135B34
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			object param = args.GetP1<CreateEntityData>().GetParam<DynamicPortalCreatorComponent>();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046D78 RID: 290168 RVA: 0x011DBC25 File Offset: 0x011D9E25
+		// Token: 0x0603C5B8 RID: 247224 RVA: 0x011379B5 File Offset: 0x01135BB5
 		protected override bool OnStart()
 		{
 			this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046D79 RID: 290169 RVA: 0x011DBC5C File Offset: 0x011D9E5C
+		// Token: 0x0603C5B9 RID: 247225 RVA: 0x011379EC File Offset: 0x01135BEC
 		protected override void OnActivate()
 		{
 			if (this.Config.Model.Type == EDynamicPortalCreateType.Bullet)
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046D7A RID: 290170 RVA: 0x011DBC76 File Offset: 0x011D9E76
+		// Token: 0x0603C5BA RID: 247226 RVA: 0x01137A06 File Offset: 0x01135C06
 		protected override bool OnEnd()
 		{
 			if (this.Config.Model.Type == EDynamicPortalCreateType.Bullet)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046D7B RID: 290171 RVA: 0x011DBC91 File Offset: 0x011D9E91
+		// Token: 0x0603C5BB RID: 247227 RVA: 0x01137A21 File Offset: 0x01135C21
 		public IPortalRenderConfig GetPortalRenderConfig()
 		{
 			DynamicPortalCreatorComponent config = this.Config;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return config.Model.RenderConfig;
 		}
 
-		// Token: 0x06046D7C RID: 290172 RVA: 0x011DBCA9 File Offset: 0x011D9EA9
+		// Token: 0x0603C5BC RID: 247228 RVA: 0x01137A39 File Offset: 0x01135C39
 		private void AddHitEvent()
 		{
 			if (this.HitComp == null)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.AddWithTarget<global::HitInformation>(this, EEventName.OnSceneItemHitByHitData, new Action<global::HitInformation>(this.OnSceneItemHit));
 		}
 
-		// Token: 0x06046D7D RID: 290173 RVA: 0x011DBCEC File Offset: 0x011D9EEC
+		// Token: 0x0603C5BD RID: 247229 RVA: 0x01137A7C File Offset: 0x01135C7C
 		private void RemoveHitEvent()
 		{
 			if (this.HitComp == null)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046D7E RID: 290174 RVA: 0x011DBD58 File Offset: 0x011D9F58
+		// Token: 0x0603C5BE RID: 247230 RVA: 0x01137AE8 File Offset: 0x01135CE8
 		[NullableContext(1)]
 		private bool HitBulletIdCheck(global::HitInformation hitData)
 		{
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.BulletIds.Contains(bulletId);
 		}
 
-		// Token: 0x06046D7F RID: 290175 RVA: 0x011DBD78 File Offset: 0x011D9F78
+		// Token: 0x0603C5BF RID: 247231 RVA: 0x01137B08 File Offset: 0x01135D08
 		[NullableContext(1)]
 		private void OnSceneItemHit(global::HitInformation hitData)
 		{
@@ -121,11 +121,11 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 						return;
 					}
 				}
-				ErrorCodeController.Instance.OpenErrorCodeTipView(awakeDynamicPortalResponse.ErrorCode, 29309, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(awakeDynamicPortalResponse.ErrorCode, 17133, null, true, true);
 			}, 0);
 		}
 
-		// Token: 0x06046D80 RID: 290176 RVA: 0x011DBE04 File Offset: 0x011DA004
+		// Token: 0x0603C5C0 RID: 247232 RVA: 0x01137B94 File Offset: 0x01135D94
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -134,71 +134,89 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			DynamicPortalCreatorComponent dynamicPortalCreatorComponent = (DynamicPortalCreatorComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (dynamicPortalCreatorComponent.CreatureDataComp == null)
 			{
-				if (dynamicPortalCreatorComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("Config"))
-			{
-				if (dynamicPortalCreatorComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DynamicPortalCreatorComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("HitComp"))
-			{
-				if (dynamicPortalCreatorComponent.HitComp == null)
-				{
-					this.HitComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemHitComponent>(this.HitComp), "HitComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("BulletIds") && dynamicPortalCreatorComponent.BulletIds != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<long>>(this.BulletIds), "BulletIds"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("BulletTypeConfig"))
+			if (dynamicPortalCreatorComponent.Config == null)
 			{
-				if (dynamicPortalCreatorComponent.BulletTypeConfig == null)
-				{
-					this.BulletTypeConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IDynamicPortalByBullet>(this.BulletTypeConfig), "BulletTypeConfig"))
-				{
-					return false;
-				}
+				this.Config = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
+			{
+				return false;
+			}
+			if (dynamicPortalCreatorComponent.HitComp == null)
+			{
+				this.HitComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitComp), "HitComp"))
+			{
+				return false;
+			}
+			if (dynamicPortalCreatorComponent.BulletIds != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BulletIds), "BulletIds"))
+			{
+				return false;
+			}
+			if (dynamicPortalCreatorComponent.BulletTypeConfig == null)
+			{
+				this.BulletTypeConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BulletTypeConfig), "BulletTypeConfig"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040252D7 RID: 152279
+		// Token: 0x170071F3 RID: 29171
+		// (get) Token: 0x0603C5C1 RID: 247233 RVA: 0x01137C82 File Offset: 0x01135E82
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071F4 RID: 29172
+		// (get) Token: 0x0603C5C2 RID: 247234 RVA: 0x01137C85 File Offset: 0x01135E85
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071F5 RID: 29173
+		// (get) Token: 0x0603C5C3 RID: 247235 RVA: 0x01137C88 File Offset: 0x01135E88
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FF3E RID: 130878
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x040252D8 RID: 152280
+		// Token: 0x0401FF3F RID: 130879
 		private DynamicPortalCreatorComponent Config;
 
-		// Token: 0x040252D9 RID: 152281
+		// Token: 0x0401FF40 RID: 130880
 		private SceneItemHitComponent HitComp;
 
-		// Token: 0x040252DA RID: 152282
+		// Token: 0x0401FF41 RID: 130881
 		[Nullable(1)]
 		private readonly List<long> BulletIds = new List<long>();
 
-		// Token: 0x040252DB RID: 152283
+		// Token: 0x0401FF42 RID: 130882
 		private IDynamicPortalByBullet BulletTypeConfig;
 	}
 }

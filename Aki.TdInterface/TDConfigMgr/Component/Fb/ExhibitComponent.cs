@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DD8 RID: 3544
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000ED4 RID: 3796
 	public class ExhibitComponent : IComponentBase
 	{
-		// Token: 0x06005066 RID: 20582 RVA: 0x000C69F4 File Offset: 0x000C4BF4
+		// Token: 0x0600558B RID: 21899 RVA: 0x000D2244 File Offset: 0x000D0444
 		public static ExhibitComponent Create(IExhibitComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A73 RID: 6771
-		// (get) Token: 0x06005067 RID: 20583 RVA: 0x000C6A14 File Offset: 0x000C4C14
+		// Token: 0x17001BDE RID: 7134
+		// (get) Token: 0x0600558C RID: 21900 RVA: 0x000D2264 File Offset: 0x000D0464
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A74 RID: 6772
-		// (get) Token: 0x06005068 RID: 20584 RVA: 0x000C6A4C File Offset: 0x000C4C4C
+		// Token: 0x17001BDF RID: 7135
+		// (get) Token: 0x0600558D RID: 21901 RVA: 0x000D229C File Offset: 0x000D049C
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A75 RID: 6773
-		// (get) Token: 0x06005069 RID: 20585 RVA: 0x000C6A62 File Offset: 0x000C4C62
+		// Token: 0x17001BE0 RID: 7136
+		// (get) Token: 0x0600558E RID: 21902 RVA: 0x000D22B2 File Offset: 0x000D04B2
 		public virtual IExhibitItemType ExhibitConfig
 		{
 			get
@@ -62,13 +59,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E27 RID: 11815
+		// Token: 0x040030ED RID: 12525
 		private IExhibitComponent Instance;
 
-		// Token: 0x04002E28 RID: 11816
+		// Token: 0x040030EE RID: 12526
 		private IExhibitItemType _ExhibitConfigCache;
 
-		// Token: 0x04002E29 RID: 11817
+		// Token: 0x040030EF RID: 12527
 		private bool _ExhibitConfigInited;
 	}
 }

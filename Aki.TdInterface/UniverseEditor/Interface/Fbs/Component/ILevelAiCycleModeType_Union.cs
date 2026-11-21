@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054D0 RID: 21712
+	// Token: 0x02005A56 RID: 23126
 	public enum ILevelAiCycleModeType_Union : byte
 	{
-		// Token: 0x0400E78E RID: 59278
+		// Token: 0x0400F3BF RID: 62399
 		NONE,
-		// Token: 0x0400E78F RID: 59279
+		// Token: 0x0400F3C0 RID: 62400
 		ILevelAiCycleModeType,
-		// Token: 0x0400E790 RID: 59280
+		// Token: 0x0400F3C1 RID: 62401
 		ILevelAiCycleLooply
 	}
 }

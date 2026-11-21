@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200067A RID: 1658
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000719 RID: 1817
 	public class IRenderFlowerBridge : IRenderSpecifiedRangeType
 	{
-		// Token: 0x06002374 RID: 9076 RVA: 0x00060C30 File Offset: 0x0005EE30
+		// Token: 0x06002686 RID: 9862 RVA: 0x00067AF4 File Offset: 0x00065CF4
 		private IRenderFlowerBridge_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002375 RID: 9077 RVA: 0x00060C68 File Offset: 0x0005EE68
+		// Token: 0x06002687 RID: 9863 RVA: 0x00067B2C File Offset: 0x00065D2C
 		public static IRenderFlowerBridge Create([Nullable(2)] IRenderFlowerBridge instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002376 RID: 9078 RVA: 0x00060C7B File Offset: 0x0005EE7B
+		// Token: 0x06002688 RID: 9864 RVA: 0x00067B3F File Offset: 0x00065D3F
 		public static IRenderFlowerBridge CreateFromSetValue([Nullable(2)] IRenderFlowerBridge_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002377 RID: 9079 RVA: 0x00060C8E File Offset: 0x0005EE8E
+		// Token: 0x06002689 RID: 9865 RVA: 0x00067B52 File Offset: 0x00065D52
 		public new IRenderFlowerBridge_SetValue ToSetValue()
 		{
 			return new IRenderFlowerBridge_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000962 RID: 2402
-		// (get) Token: 0x06002378 RID: 9080 RVA: 0x00060CC5 File Offset: 0x0005EEC5
-		// (set) Token: 0x06002379 RID: 9081 RVA: 0x00060CF0 File Offset: 0x0005EEF0
+		// Token: 0x17000A1C RID: 2588
+		// (get) Token: 0x0600268A RID: 9866 RVA: 0x00067B89 File Offset: 0x00065D89
+		// (set) Token: 0x0600268B RID: 9867 RVA: 0x00067BB4 File Offset: 0x00065DB4
 		public override ERenderSpecifiedRangeType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000963 RID: 2403
-		// (get) Token: 0x0600237A RID: 9082 RVA: 0x00060CFE File Offset: 0x0005EEFE
-		// (set) Token: 0x0600237B RID: 9083 RVA: 0x00060D29 File Offset: 0x0005EF29
+		// Token: 0x17000A1D RID: 2589
+		// (get) Token: 0x0600268C RID: 9868 RVA: 0x00067BC2 File Offset: 0x00065DC2
+		// (set) Token: 0x0600268D RID: 9869 RVA: 0x00067BED File Offset: 0x00065DED
 		public virtual int Radius
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000964 RID: 2404
-		// (get) Token: 0x0600237C RID: 9084 RVA: 0x00060D37 File Offset: 0x0005EF37
-		// (set) Token: 0x0600237D RID: 9085 RVA: 0x00060D5E File Offset: 0x0005EF5E
+		// Token: 0x17000A1E RID: 2590
+		// (get) Token: 0x0600268E RID: 9870 RVA: 0x00067BFB File Offset: 0x00065DFB
+		// (set) Token: 0x0600268F RID: 9871 RVA: 0x00067C22 File Offset: 0x00065E22
 		public virtual ITargetEntityType CenterTarget
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000965 RID: 2405
-		// (get) Token: 0x0600237E RID: 9086 RVA: 0x00060D6C File Offset: 0x0005EF6C
-		// (set) Token: 0x0600237F RID: 9087 RVA: 0x00060D97 File Offset: 0x0005EF97
+		// Token: 0x17000A1F RID: 2591
+		// (get) Token: 0x06002690 RID: 9872 RVA: 0x00067C30 File Offset: 0x00065E30
+		// (set) Token: 0x06002691 RID: 9873 RVA: 0x00067C5B File Offset: 0x00065E5B
 		public virtual string AkEvent
 		{
 			get
@@ -156,11 +154,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400187A RID: 6266
+		// Token: 0x04001A73 RID: 6771
 		[Nullable(2)]
 		protected new IRenderFlowerBridge FbInstance;
 
-		// Token: 0x0400187B RID: 6267
+		// Token: 0x04001A74 RID: 6772
 		[Nullable(2)]
 		protected new IRenderFlowerBridge_SetValue PocoInterface;
 	}

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02003255 RID: 12885
+// Token: 0x020027C4 RID: 10180
 public enum ETeamState
 {
-	// Token: 0x0400DB31 RID: 56113
+	// Token: 0x0400DFD0 RID: 57296
 	OnStage,
-	// Token: 0x0400DB32 RID: 56114
+	// Token: 0x0400DFD1 RID: 57297
 	OnStageWithoutControl,
-	// Token: 0x0400DB33 RID: 56115
+	// Token: 0x0400DFD2 RID: 57298
 	UnderStage
 }

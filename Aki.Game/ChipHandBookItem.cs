@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001DD3 RID: 7635
+// Token: 0x02001295 RID: 4757
 [NullableContext(1)]
 [Nullable(0)]
 public class ChipHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookChipDynamicData>
 {
-	// Token: 0x0600E869 RID: 59497 RVA: 0x0036FCD8 File Offset: 0x0036DED8
+	// Token: 0x0600BC88 RID: 48264 RVA: 0x0037B9C4 File Offset: 0x00379BC4
 	public UniTask Init(UUIItem actor)
 	{
 		ChipHandBookItem.<Init>d__4 <Init>d__;
@@ -24,7 +24,7 @@ public class ChipHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookChipDyna
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E86A RID: 59498 RVA: 0x0036FD24 File Offset: 0x0036DF24
+	// Token: 0x0600BC89 RID: 48265 RVA: 0x0037BA10 File Offset: 0x00379C10
 	private UniTask InitChildItem()
 	{
 		ChipHandBookItem.<InitChildItem>d__5 <InitChildItem>d__;
@@ -35,7 +35,7 @@ public class ChipHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookChipDyna
 		return <InitChildItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E86B RID: 59499 RVA: 0x0036FD68 File Offset: 0x0036DF68
+	// Token: 0x0600BC8A RID: 48266 RVA: 0x0037BA54 File Offset: 0x00379C54
 	[return: Nullable(2)]
 	public AUIBaseActor GetUsingItem(HandBookChipDynamicData data)
 	{
@@ -47,13 +47,13 @@ public class ChipHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookChipDyna
 		return base.GetItem(0).GetOwner() as AUIBaseActor;
 	}
 
-	// Token: 0x0600E86C RID: 59500 RVA: 0x0036FDB1 File Offset: 0x0036DFB1
+	// Token: 0x0600BC8B RID: 48267 RVA: 0x0037BA9D File Offset: 0x00379C9D
 	public void ClearItem()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x0600E86D RID: 59501 RVA: 0x0036FDBA File Offset: 0x0036DFBA
+	// Token: 0x0600BC8C RID: 48268 RVA: 0x0037BAA6 File Offset: 0x00379CA6
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -63,7 +63,7 @@ public class ChipHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookChipDyna
 		};
 	}
 
-	// Token: 0x0600E86E RID: 59502 RVA: 0x0036FDF4 File Offset: 0x0036DFF4
+	// Token: 0x0600BC8D RID: 48269 RVA: 0x0037BAE0 File Offset: 0x00379CE0
 	public void Update(HandBookChipDynamicData data, int gridIndex)
 	{
 		HandBookChipDesItem handBookChipDesItem = this.HandBookChipDesItem;
@@ -108,7 +108,7 @@ public class ChipHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookChipDyna
 		handBookChipDesItem3.Refresh(data.HandBookChipConfigId.Value, data.IsShowContent);
 	}
 
-	// Token: 0x0600E86F RID: 59503 RVA: 0x0036FEA8 File Offset: 0x0036E0A8
+	// Token: 0x0600BC8E RID: 48270 RVA: 0x0037BB94 File Offset: 0x00379D94
 	public void RefreshNewState()
 	{
 		HandBookChipToggleItem handBookChipToggleItem = this.HandBookChipToggleItem;
@@ -124,31 +124,31 @@ public class ChipHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookChipDyna
 		handBookChipDesItem.RefreshNewState();
 	}
 
-	// Token: 0x0600E870 RID: 59504 RVA: 0x0036FECB File Offset: 0x0036E0CB
+	// Token: 0x0600BC8F RID: 48271 RVA: 0x0037BBB7 File Offset: 0x00379DB7
 	public void BindChildToggleCallback(TChildChipToggleFunction toggleFunction)
 	{
 		this.OnChildToggleCallback = toggleFunction;
 	}
 
-	// Token: 0x0600E871 RID: 59505 RVA: 0x0036FED4 File Offset: 0x0036E0D4
+	// Token: 0x0600BC90 RID: 48272 RVA: 0x0037BBC0 File Offset: 0x00379DC0
 	public void BindToggleCallback(TChipToggleFunction toggleFunction)
 	{
 		this.OnToggleCallback = toggleFunction;
 	}
 
-	// Token: 0x04006B7B RID: 27515
+	// Token: 0x04006C5C RID: 27740
 	[Nullable(2)]
 	private HandBookChipToggleItem HandBookChipToggleItem;
 
-	// Token: 0x04006B7C RID: 27516
+	// Token: 0x04006C5D RID: 27741
 	[Nullable(2)]
 	private HandBookChipDesItem HandBookChipDesItem;
 
-	// Token: 0x04006B7D RID: 27517
+	// Token: 0x04006C5E RID: 27742
 	[Nullable(2)]
 	private TChipToggleFunction OnToggleCallback;
 
-	// Token: 0x04006B7E RID: 27518
+	// Token: 0x04006C5F RID: 27743
 	[Nullable(2)]
 	private TChildChipToggleFunction OnChildToggleCallback;
 }

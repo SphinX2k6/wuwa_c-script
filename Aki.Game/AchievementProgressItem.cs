@@ -5,18 +5,18 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000F2B RID: 3883
+// Token: 0x020003E0 RID: 992
 [NullableContext(1)]
 [Nullable(0)]
 public class AchievementProgressItem : UiPanelBase
 {
-	// Token: 0x0600626E RID: 25198 RVA: 0x00134240 File Offset: 0x00132440
+	// Token: 0x06003606 RID: 13830 RVA: 0x0013CB68 File Offset: 0x0013AD68
 	public AchievementProgressItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600626F RID: 25199 RVA: 0x00134258 File Offset: 0x00132458
+	// Token: 0x06003607 RID: 13831 RVA: 0x0013CB80 File Offset: 0x0013AD80
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -32,7 +32,7 @@ public class AchievementProgressItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06006270 RID: 25200 RVA: 0x001342E4 File Offset: 0x001324E4
+	// Token: 0x06003608 RID: 13832 RVA: 0x0013CC0C File Offset: 0x0013AE0C
 	public void RefreshGroupState(AchievementGroupData data)
 	{
 		base.GetItem(0).SetUIActive(false);
@@ -51,7 +51,7 @@ public class AchievementProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006271 RID: 25201 RVA: 0x001343AC File Offset: 0x001325AC
+	// Token: 0x06003609 RID: 13833 RVA: 0x0013CCD4 File Offset: 0x0013AED4
 	public void RefreshState(AchievementData data)
 	{
 		base.GetItem(0).SetUIActive(false);
@@ -69,15 +69,15 @@ public class AchievementProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x02007573 RID: 30067
+	// Token: 0x02006707 RID: 26375
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04026D4F RID: 159055
+		// Token: 0x0402209A RID: 139418
 		FinishIcon,
-		// Token: 0x04026D50 RID: 159056
+		// Token: 0x0402209B RID: 139419
 		ProgressingText,
-		// Token: 0x04026D51 RID: 159057
+		// Token: 0x0402209C RID: 139420
 		FinishText
 	}
 }

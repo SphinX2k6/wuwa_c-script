@@ -6,39 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200195C RID: 6492
+	// Token: 0x02000431 RID: 1073
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGAS.BaseCharacter")]
 	[UnrealStructLayout(2016, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2016)]
-	public class ABaseCharacter : ACharacter, IUnrealUObject, IUnrealObject, IAbilitySystemInterface, IUnrealNativeInterface, IUnrealInterface
+	public class ABaseCharacter : ACharacter, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06018208 RID: 98824 RVA: 0x002391D2 File Offset: 0x002373D2
+		// Token: 0x06006809 RID: 26633 RVA: 0x00097FE4 File Offset: 0x000961E4
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ABaseCharacter._ClassPtr;
 		}
 
-		// Token: 0x06018209 RID: 98825 RVA: 0x002391DE File Offset: 0x002373DE
-		int IAbilitySystemInterface.InterfaceOffset()
-		{
-			return ABaseCharacter.__InterfaceOffset_IAbilitySystemInterface;
-		}
-
-		// Token: 0x0601820A RID: 98826 RVA: 0x002391E8 File Offset: 0x002373E8
+		// Token: 0x0600680A RID: 26634 RVA: 0x00097FF0 File Offset: 0x000961F0
 		public ABaseCharacter() : this(BuiltinUtils.AllocNativeUObject(ABaseCharacter.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601820B RID: 98827 RVA: 0x00239210 File Offset: 0x00237410
+		// Token: 0x0600680B RID: 26635 RVA: 0x00098018 File Offset: 0x00096218
 		[NullableContext(1)]
 		public ABaseCharacter(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ABaseCharacter.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170060D0 RID: 24784
-		// (get) Token: 0x0601820C RID: 98828 RVA: 0x00239243 File Offset: 0x00237443
-		// (set) Token: 0x0601820D RID: 98829 RVA: 0x00239257 File Offset: 0x00237457
+		// Token: 0x170014EF RID: 5359
+		// (get) Token: 0x0600680C RID: 26636 RVA: 0x0009804B File Offset: 0x0009624B
+		// (set) Token: 0x0600680D RID: 26637 RVA: 0x0009805F File Offset: 0x0009625F
 		public unsafe FVectorDouble CachedActorLocation
 		{
 			get
@@ -51,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060D1 RID: 24785
-		// (get) Token: 0x0601820E RID: 98830 RVA: 0x0023926C File Offset: 0x0023746C
-		// (set) Token: 0x0601820F RID: 98831 RVA: 0x00239280 File Offset: 0x00237480
+		// Token: 0x170014F0 RID: 5360
+		// (get) Token: 0x0600680E RID: 26638 RVA: 0x00098074 File Offset: 0x00096274
+		// (set) Token: 0x0600680F RID: 26639 RVA: 0x00098088 File Offset: 0x00096288
 		public unsafe FRotator CachedActorRotation
 		{
 			get
@@ -66,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060D2 RID: 24786
-		// (get) Token: 0x06018210 RID: 98832 RVA: 0x00239295 File Offset: 0x00237495
-		// (set) Token: 0x06018211 RID: 98833 RVA: 0x002392A9 File Offset: 0x002374A9
+		// Token: 0x170014F1 RID: 5361
+		// (get) Token: 0x06006810 RID: 26640 RVA: 0x0009809D File Offset: 0x0009629D
+		// (set) Token: 0x06006811 RID: 26641 RVA: 0x000980B1 File Offset: 0x000962B1
 		public unsafe FQuat CachedActorQuat
 		{
 			get
@@ -81,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060D3 RID: 24787
-		// (get) Token: 0x06018212 RID: 98834 RVA: 0x002392BE File Offset: 0x002374BE
-		// (set) Token: 0x06018213 RID: 98835 RVA: 0x002392D2 File Offset: 0x002374D2
+		// Token: 0x170014F2 RID: 5362
+		// (get) Token: 0x06006812 RID: 26642 RVA: 0x000980C6 File Offset: 0x000962C6
+		// (set) Token: 0x06006813 RID: 26643 RVA: 0x000980DA File Offset: 0x000962DA
 		public unsafe FVector CachedActorScale
 		{
 			get
@@ -96,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060D4 RID: 24788
-		// (get) Token: 0x06018214 RID: 98836 RVA: 0x002392E7 File Offset: 0x002374E7
-		// (set) Token: 0x06018215 RID: 98837 RVA: 0x002392FB File Offset: 0x002374FB
+		// Token: 0x170014F3 RID: 5363
+		// (get) Token: 0x06006814 RID: 26644 RVA: 0x000980EF File Offset: 0x000962EF
+		// (set) Token: 0x06006815 RID: 26645 RVA: 0x00098103 File Offset: 0x00096303
 		public unsafe FTransformDouble CachedActorTransform
 		{
 			get
@@ -111,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060D5 RID: 24789
-		// (get) Token: 0x06018216 RID: 98838 RVA: 0x00239310 File Offset: 0x00237510
-		// (set) Token: 0x06018217 RID: 98839 RVA: 0x00239324 File Offset: 0x00237524
+		// Token: 0x170014F4 RID: 5364
+		// (get) Token: 0x06006816 RID: 26646 RVA: 0x00098118 File Offset: 0x00096318
+		// (set) Token: 0x06006817 RID: 26647 RVA: 0x0009812C File Offset: 0x0009632C
 		public unsafe FVector CachedActorUp
 		{
 			get
@@ -126,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060D6 RID: 24790
-		// (get) Token: 0x06018218 RID: 98840 RVA: 0x00239339 File Offset: 0x00237539
-		// (set) Token: 0x06018219 RID: 98841 RVA: 0x0023934D File Offset: 0x0023754D
+		// Token: 0x170014F5 RID: 5365
+		// (get) Token: 0x06006818 RID: 26648 RVA: 0x00098141 File Offset: 0x00096341
+		// (set) Token: 0x06006819 RID: 26649 RVA: 0x00098155 File Offset: 0x00096355
 		public unsafe FVector CachedActorForward
 		{
 			get
@@ -141,9 +135,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060D7 RID: 24791
-		// (get) Token: 0x0601821A RID: 98842 RVA: 0x00239362 File Offset: 0x00237562
-		// (set) Token: 0x0601821B RID: 98843 RVA: 0x00239376 File Offset: 0x00237576
+		// Token: 0x170014F6 RID: 5366
+		// (get) Token: 0x0600681A RID: 26650 RVA: 0x0009816A File Offset: 0x0009636A
+		// (set) Token: 0x0600681B RID: 26651 RVA: 0x0009817E File Offset: 0x0009637E
 		public unsafe FVector CachedActorVelocity
 		{
 			get
@@ -156,9 +150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060D8 RID: 24792
-		// (get) Token: 0x0601821C RID: 98844 RVA: 0x0023938B File Offset: 0x0023758B
-		// (set) Token: 0x0601821D RID: 98845 RVA: 0x0023939B File Offset: 0x0023759B
+		// Token: 0x170014F7 RID: 5367
+		// (get) Token: 0x0600681C RID: 26652 RVA: 0x00098193 File Offset: 0x00096393
+		// (set) Token: 0x0600681D RID: 26653 RVA: 0x000981A3 File Offset: 0x000963A3
 		public unsafe int EntityIdInternal
 		{
 			get
@@ -171,9 +165,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060D9 RID: 24793
-		// (get) Token: 0x0601821E RID: 98846 RVA: 0x002393AC File Offset: 0x002375AC
-		// (set) Token: 0x0601821F RID: 98847 RVA: 0x002393BC File Offset: 0x002375BC
+		// Token: 0x170014F8 RID: 5368
+		// (get) Token: 0x0600681E RID: 26654 RVA: 0x000981B4 File Offset: 0x000963B4
+		// (set) Token: 0x0600681F RID: 26655 RVA: 0x000981C4 File Offset: 0x000963C4
 		public unsafe bool bInitializeAttributes
 		{
 			get
@@ -186,9 +180,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060DA RID: 24794
-		// (get) Token: 0x06018220 RID: 98848 RVA: 0x002393CD File Offset: 0x002375CD
-		// (set) Token: 0x06018221 RID: 98849 RVA: 0x002393E1 File Offset: 0x002375E1
+		// Token: 0x170014F9 RID: 5369
+		// (get) Token: 0x06006820 RID: 26656 RVA: 0x000981D5 File Offset: 0x000963D5
+		// (set) Token: 0x06006821 RID: 26657 RVA: 0x000981E9 File Offset: 0x000963E9
 		public unsafe UBaseAttributeSet AttributeSet
 		{
 			get
@@ -201,9 +195,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060DB RID: 24795
-		// (get) Token: 0x06018222 RID: 98850 RVA: 0x002393F6 File Offset: 0x002375F6
-		// (set) Token: 0x06018223 RID: 98851 RVA: 0x0023940A File Offset: 0x0023760A
+		// Token: 0x170014FA RID: 5370
+		// (get) Token: 0x06006822 RID: 26658 RVA: 0x000981FE File Offset: 0x000963FE
+		// (set) Token: 0x06006823 RID: 26659 RVA: 0x00098212 File Offset: 0x00096412
 		public unsafe UBaseAbilitySystemComponent AbilitySystemComponent
 		{
 			get
@@ -216,7 +210,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06018224 RID: 98852 RVA: 0x00239420 File Offset: 0x00237620
+		// Token: 0x06006824 RID: 26660 RVA: 0x00098228 File Offset: 0x00096428
 		public unsafe bool SetActorTransformExceptSkelMesh(in FTransformDouble NewTransform, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport, bool bIgnoreOverlap)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -224,158 +218,155 @@ namespace UnrealEngine
 			return ABaseCharacter.__SetActorTransformExceptSkelMesh_Internal(base.NativePtr, ptr, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport, bIgnoreOverlap);
 		}
 
-		// Token: 0x06018225 RID: 98853 RVA: 0x0023946A File Offset: 0x0023766A
+		// Token: 0x06006825 RID: 26661 RVA: 0x00098272 File Offset: 0x00096472
 		public bool SetActorLocationAndRotationExceptSkelMesh(in FVectorDouble NewLocation, in FRotator NewRotation, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport, bool bIgnoreOverlap)
 		{
 			return ABaseCharacter.__SetActorLocationAndRotationExceptSkelMesh_Internal(base.NativePtr, NewLocation, NewRotation, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport, bIgnoreOverlap);
 		}
 
-		// Token: 0x06018226 RID: 98854 RVA: 0x0023948F File Offset: 0x0023768F
+		// Token: 0x06006826 RID: 26662 RVA: 0x00098297 File Offset: 0x00096497
 		public void RefreshCachedVelocity()
 		{
 			ABaseCharacter.__RefreshCachedVelocity_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018227 RID: 98855 RVA: 0x0023949C File Offset: 0x0023769C
+		// Token: 0x06006827 RID: 26663 RVA: 0x000982A4 File Offset: 0x000964A4
 		public void RefreshCachedTransform()
 		{
 			ABaseCharacter.__RefreshCachedTransform_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018228 RID: 98856 RVA: 0x002394A9 File Offset: 0x002376A9
+		// Token: 0x06006828 RID: 26664 RVA: 0x000982B1 File Offset: 0x000964B1
 		public void PreInit()
 		{
 			ABaseCharacter.__PreInit_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018229 RID: 98857 RVA: 0x002394B6 File Offset: 0x002376B6
+		// Token: 0x06006829 RID: 26665 RVA: 0x000982BE File Offset: 0x000964BE
 		public void InitializeAttributeSet()
 		{
 			ABaseCharacter.__InitializeAttributeSet_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601822A RID: 98858 RVA: 0x002394C3 File Offset: 0x002376C3
+		// Token: 0x0600682A RID: 26666 RVA: 0x000982CB File Offset: 0x000964CB
 		public void CreateAttribute()
 		{
 			ABaseCharacter.__CreateAttribute_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601822B RID: 98859 RVA: 0x002394D0 File Offset: 0x002376D0
+		// Token: 0x0600682B RID: 26667 RVA: 0x000982D8 File Offset: 0x000964D8
 		public bool ContainsTag(FGameplayTag TagToCheck)
 		{
 			return ABaseCharacter.__ContainsTag_Internal(base.NativePtr, TagToCheck);
 		}
 
-		// Token: 0x0601822C RID: 98860 RVA: 0x002394DE File Offset: 0x002376DE
+		// Token: 0x0600682C RID: 26668 RVA: 0x000982E6 File Offset: 0x000964E6
 		public bool ContainsAnyTag(FGameplayTagContainer TagToCheck)
 		{
 			return ABaseCharacter.__ContainsAnyTag_Internal(base.NativePtr, (TagToCheck ?? new FGameplayTagContainer()).NativePtr);
 		}
 
-		// Token: 0x0601822D RID: 98861 RVA: 0x002394FA File Offset: 0x002376FA
+		// Token: 0x0600682D RID: 26669 RVA: 0x00098302 File Offset: 0x00096502
 		public bool ContainsAllTag(FGameplayTagContainer TagToCheck)
 		{
 			return ABaseCharacter.__ContainsAllTag_Internal(base.NativePtr, (TagToCheck ?? new FGameplayTagContainer()).NativePtr);
 		}
 
-		// Token: 0x0601822E RID: 98862
+		// Token: 0x0600682E RID: 26670
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetActorTransformExceptSkelMesh_Internal(IntPtr @this, in FTransformDouble NewTransform, bool bSweep, IntPtr SweepHitResult, bool bTeleport, bool bIgnoreOverlap);
 
-		// Token: 0x0601822F RID: 98863
+		// Token: 0x0600682F RID: 26671
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetActorLocationAndRotationExceptSkelMesh_Internal(IntPtr @this, in FVectorDouble NewLocation, in FRotator NewRotation, bool bSweep, IntPtr SweepHitResult, bool bTeleport, bool bIgnoreOverlap);
 
-		// Token: 0x06018230 RID: 98864
+		// Token: 0x06006830 RID: 26672
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RefreshCachedVelocity_Internal(IntPtr @this);
 
-		// Token: 0x06018231 RID: 98865
+		// Token: 0x06006831 RID: 26673
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RefreshCachedTransform_Internal(IntPtr @this);
 
-		// Token: 0x06018232 RID: 98866
+		// Token: 0x06006832 RID: 26674
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PreInit_Internal(IntPtr @this);
 
-		// Token: 0x06018233 RID: 98867
+		// Token: 0x06006833 RID: 26675
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InitializeAttributeSet_Internal(IntPtr @this);
 
-		// Token: 0x06018234 RID: 98868
+		// Token: 0x06006834 RID: 26676
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CreateAttribute_Internal(IntPtr @this);
 
-		// Token: 0x06018235 RID: 98869
+		// Token: 0x06006835 RID: 26677
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __ContainsTag_Internal(IntPtr @this, FGameplayTag TagToCheck);
 
-		// Token: 0x06018236 RID: 98870
+		// Token: 0x06006836 RID: 26678
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __ContainsAnyTag_Internal(IntPtr @this, IntPtr TagToCheck);
 
-		// Token: 0x06018237 RID: 98871
+		// Token: 0x06006837 RID: 26679
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __ContainsAllTag_Internal(IntPtr @this, IntPtr TagToCheck);
 
-		// Token: 0x06018238 RID: 98872 RVA: 0x00239516 File Offset: 0x00237716
+		// Token: 0x06006838 RID: 26680 RVA: 0x0009831E File Offset: 0x0009651E
 		static ABaseCharacter()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGAS.BaseCharacter");
 		}
 
-		// Token: 0x06018239 RID: 98873 RVA: 0x00239524 File Offset: 0x00237724
+		// Token: 0x06006839 RID: 26681 RVA: 0x0009832C File Offset: 0x0009652C
 		protected ABaseCharacter(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D170 RID: 53616
-		internal static int __InterfaceOffset_IAbilitySystemInterface;
-
-		// Token: 0x0400D171 RID: 53617
+		// Token: 0x04002C82 RID: 11394
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroGAS.BaseCharacter";
 
-		// Token: 0x0400D172 RID: 53618
+		// Token: 0x04002C83 RID: 11395
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D173 RID: 53619
+		// Token: 0x04002C84 RID: 11396
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400D174 RID: 53620
+		// Token: 0x04002C85 RID: 11397
 		internal static int __PropertyOffset_CachedActorLocation;
 
-		// Token: 0x0400D175 RID: 53621
+		// Token: 0x04002C86 RID: 11398
 		internal static int __PropertyOffset_CachedActorRotation;
 
-		// Token: 0x0400D176 RID: 53622
+		// Token: 0x04002C87 RID: 11399
 		internal static int __PropertyOffset_CachedActorQuat;
 
-		// Token: 0x0400D177 RID: 53623
+		// Token: 0x04002C88 RID: 11400
 		internal static int __PropertyOffset_CachedActorScale;
 
-		// Token: 0x0400D178 RID: 53624
+		// Token: 0x04002C89 RID: 11401
 		internal static int __PropertyOffset_CachedActorTransform;
 
-		// Token: 0x0400D179 RID: 53625
+		// Token: 0x04002C8A RID: 11402
 		internal static int __PropertyOffset_CachedActorUp;
 
-		// Token: 0x0400D17A RID: 53626
+		// Token: 0x04002C8B RID: 11403
 		internal static int __PropertyOffset_CachedActorForward;
 
-		// Token: 0x0400D17B RID: 53627
+		// Token: 0x04002C8C RID: 11404
 		internal static int __PropertyOffset_CachedActorVelocity;
 
-		// Token: 0x0400D17C RID: 53628
+		// Token: 0x04002C8D RID: 11405
 		internal static int __PropertyOffset_EntityIdInternal;
 
-		// Token: 0x0400D17D RID: 53629
+		// Token: 0x04002C8E RID: 11406
 		internal static int __PropertyOffset_bInitializeAttributes;
 
-		// Token: 0x0400D17E RID: 53630
+		// Token: 0x04002C8F RID: 11407
 		internal static int __PropertyOffset_AttributeSet;
 
-		// Token: 0x0400D17F RID: 53631
+		// Token: 0x04002C90 RID: 11408
 		internal static int __PropertyOffset_AbilitySystemComponent;
 	}
 }

@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D2C RID: 3372
+	// Token: 0x02000E26 RID: 3622
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IBulletHitConfig
 	{
-		// Token: 0x06004CF1 RID: 19697 RVA: 0x000BF78A File Offset: 0x000BD98A
-		[NullableContext(1)]
+		// Token: 0x0600520D RID: 21005 RVA: 0x000CAECE File Offset: 0x000C90CE
+		[NullableContext(0)]
 		public static IBulletHitConfig Create(IBulletHitConfig? instance)
 		{
 			if (instance == null)
@@ -23,12 +23,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001856 RID: 6230
-		// (get) Token: 0x06004CF2 RID: 19698 RVA: 0x000BF7A9 File Offset: 0x000BD9A9
-		[Nullable(1)]
+		// Token: 0x170019BC RID: 6588
+		// (get) Token: 0x0600520E RID: 21006 RVA: 0x000CAEED File Offset: 0x000C90ED
+		[Nullable(0)]
 		public virtual IHitBulletType HitBullet
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._HitBulletInited)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001857 RID: 6231
-		// (get) Token: 0x06004CF3 RID: 19699 RVA: 0x000BF7D8 File Offset: 0x000BD9D8
+		// Token: 0x170019BD RID: 6589
+		// (get) Token: 0x0600520F RID: 21007 RVA: 0x000CAF1C File Offset: 0x000C911C
 		public virtual IHitTimeScaleRatio AttackerHitTimeScaleRatio
 		{
 			get
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001858 RID: 6232
-		// (get) Token: 0x06004CF4 RID: 19700 RVA: 0x000BF80C File Offset: 0x000BDA0C
+		// Token: 0x170019BE RID: 6590
+		// (get) Token: 0x06005210 RID: 21008 RVA: 0x000CAF50 File Offset: 0x000C9150
 		public virtual IHitTimeScaleRatio VictimHitTimeScaleRatio
 		{
 			get
@@ -73,26 +73,26 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C0D RID: 11277
+		// Token: 0x04002ECD RID: 11981
 		private IBulletHitConfig Instance;
 
-		// Token: 0x04002C0E RID: 11278
-		[Nullable(1)]
+		// Token: 0x04002ECE RID: 11982
+		[Nullable(0)]
 		private IHitBulletType _HitBulletCache;
 
-		// Token: 0x04002C0F RID: 11279
+		// Token: 0x04002ECF RID: 11983
 		private bool _HitBulletInited;
 
-		// Token: 0x04002C10 RID: 11280
+		// Token: 0x04002ED0 RID: 11984
 		private IHitTimeScaleRatio _AttackerHitTimeScaleRatioCache;
 
-		// Token: 0x04002C11 RID: 11281
+		// Token: 0x04002ED1 RID: 11985
 		private bool _AttackerHitTimeScaleRatioInited;
 
-		// Token: 0x04002C12 RID: 11282
+		// Token: 0x04002ED2 RID: 11986
 		private IHitTimeScaleRatio _VictimHitTimeScaleRatioCache;
 
-		// Token: 0x04002C13 RID: 11283
+		// Token: 0x04002ED3 RID: 11987
 		private bool _VictimHitTimeScaleRatioInited;
 	}
 }

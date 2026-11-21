@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045C5 RID: 17861
+	// Token: 0x020034ED RID: 13549
 	public class EffectModelHelper
 	{
-		// Token: 0x0602E0E6 RID: 188646 RVA: 0x00A9DF8E File Offset: 0x00A9C18E
+		// Token: 0x060227D1 RID: 141265 RVA: 0x009CA256 File Offset: 0x009C8456
 		public static void VectorToRotator(FVector vector, FRotator rotator)
 		{
 			rotator.Pitch = vector.Y;
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Render
 			rotator.Roll = vector.X;
 		}
 
-		// Token: 0x0602E0E7 RID: 188647 RVA: 0x00A9DFB8 File Offset: 0x00A9C1B8
+		// Token: 0x060227D2 RID: 141266 RVA: 0x009CA280 File Offset: 0x009C8480
 		[NullableContext(2)]
 		public unsafe static USceneComponent AddSceneComponent(AActor actor, [Nullable(1)] UClass componentClass, USceneComponent parent, FTransform? transform = null, bool bDeferredFinish = false, UEffectModelBase effectModel = null)
 		{

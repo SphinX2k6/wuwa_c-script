@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200289C RID: 10396
+	// Token: 0x02002B71 RID: 11121
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SetWeatherLockState : ActionParams
 	{
-		// Token: 0x0600E62A RID: 58922 RVA: 0x0021D2D9 File Offset: 0x0021B4D9
-		[NullableContext(1)]
+		// Token: 0x0600F459 RID: 62553 RVA: 0x0023A259 File Offset: 0x00238459
+		[NullableContext(0)]
 		public static SetWeatherLockState Create(ISetWeatherLockState? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170046B4 RID: 18100
-		// (get) Token: 0x0600E62B RID: 58923 RVA: 0x0021D2F8 File Offset: 0x0021B4F8
+		// Token: 0x17004A25 RID: 18981
+		// (get) Token: 0x0600F45A RID: 62554 RVA: 0x0023A278 File Offset: 0x00238478
 		public virtual ELockState LockState
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046B5 RID: 18101
-		// (get) Token: 0x0600E62C RID: 58924 RVA: 0x0021D308 File Offset: 0x0021B508
+		// Token: 0x17004A26 RID: 18982
+		// (get) Token: 0x0600F45B RID: 62555 RVA: 0x0023A288 File Offset: 0x00238488
 		public virtual List<int> AreaIds
 		{
 			get
@@ -59,13 +59,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F40 RID: 32576
+		// Token: 0x040085FF RID: 34303
 		private ISetWeatherLockState Instance;
 
-		// Token: 0x04007F41 RID: 32577
+		// Token: 0x04008600 RID: 34304
 		private List<int> _AreaIdsCache;
 
-		// Token: 0x04007F42 RID: 32578
+		// Token: 0x04008601 RID: 34305
 		private bool _AreaIdsInited;
 	}
 }

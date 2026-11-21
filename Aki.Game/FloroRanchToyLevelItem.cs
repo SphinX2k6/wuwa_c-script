@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001BA8 RID: 7080
+// Token: 0x02001067 RID: 4199
 public class FloroRanchToyLevelItem : UiPanelBase
 {
-	// Token: 0x0600D2CF RID: 53967 RVA: 0x003079B8 File Offset: 0x00305BB8
+	// Token: 0x0600A6E0 RID: 42720 RVA: 0x00312A98 File Offset: 0x00310C98
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -25,7 +25,7 @@ public class FloroRanchToyLevelItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D2D0 RID: 53968 RVA: 0x00307A63 File Offset: 0x00305C63
+	// Token: 0x0600A6E1 RID: 42721 RVA: 0x00312B43 File Offset: 0x00310D43
 	protected override void OnStart()
 	{
 		base.GetItem(0).SetUIActive(false);
@@ -33,7 +33,7 @@ public class FloroRanchToyLevelItem : UiPanelBase
 		base.GetText(2).SetUIActive(false);
 	}
 
-	// Token: 0x0600D2D1 RID: 53969 RVA: 0x00307A8C File Offset: 0x00305C8C
+	// Token: 0x0600A6E2 RID: 42722 RVA: 0x00312B6C File Offset: 0x00310D6C
 	public void Refresh(int level)
 	{
 		if (this.Level == level)
@@ -44,22 +44,22 @@ public class FloroRanchToyLevelItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), "Farm_ToyLevelText", new <>z__ReadOnlySingleElementList<object>(this.Level));
 	}
 
-	// Token: 0x0400609E RID: 24734
+	// Token: 0x0400616D RID: 24941
 	public int Level;
 
-	// Token: 0x0200814B RID: 33099
+	// Token: 0x020072D9 RID: 29401
 	private class EComponentDefine
 	{
-		// Token: 0x0402A338 RID: 172856
+		// Token: 0x0402566C RID: 153196
 		public const int ArrowItem = 0;
 
-		// Token: 0x0402A339 RID: 172857
+		// Token: 0x0402566D RID: 153197
 		public const int UpItem = 1;
 
-		// Token: 0x0402A33A RID: 172858
+		// Token: 0x0402566E RID: 153198
 		public const int UpText = 2;
 
-		// Token: 0x0402A33B RID: 172859
+		// Token: 0x0402566F RID: 153199
 		public const int LevelText = 3;
 	}
 }

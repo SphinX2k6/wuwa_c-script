@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007221 RID: 29217
+	// Token: 0x020079F6 RID: 31222
 	public class ISubScreenTransitionT
 	{
-		// Token: 0x1700D8E5 RID: 55525
-		// (get) Token: 0x06033D4A RID: 212298 RVA: 0x006F99B7 File Offset: 0x006F7BB7
-		// (set) Token: 0x06033D4B RID: 212299 RVA: 0x006F99BF File Offset: 0x006F7BBF
+		// Token: 0x1700E4DE RID: 58590
+		// (get) Token: 0x0603704C RID: 225356 RVA: 0x0075AD17 File Offset: 0x00758F17
+		// (set) Token: 0x0603704D RID: 225357 RVA: 0x0075AD1F File Offset: 0x00758F1F
 		public float TransitionDuration { get; set; }
 
-		// Token: 0x1700D8E6 RID: 55526
-		// (get) Token: 0x06033D4C RID: 212300 RVA: 0x006F99C8 File Offset: 0x006F7BC8
-		// (set) Token: 0x06033D4D RID: 212301 RVA: 0x006F99D0 File Offset: 0x006F7BD0
+		// Token: 0x1700E4DF RID: 58591
+		// (get) Token: 0x0603704E RID: 225358 RVA: 0x0075AD28 File Offset: 0x00758F28
+		// (set) Token: 0x0603704F RID: 225359 RVA: 0x0075AD30 File Offset: 0x00758F30
 		public string TransitionCurve { get; set; }
 
-		// Token: 0x06033D4E RID: 212302 RVA: 0x006F99D9 File Offset: 0x006F7BD9
+		// Token: 0x06037050 RID: 225360 RVA: 0x0075AD39 File Offset: 0x00758F39
 		public ISubScreenTransitionT()
 		{
 			this.TransitionDuration = 0f;

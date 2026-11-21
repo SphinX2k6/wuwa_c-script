@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x020018FE RID: 6398
+// Token: 0x02000DB7 RID: 3511
 public class MediumItemGridAddLevelComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BBAC RID: 48044 RVA: 0x002A8F3C File Offset: 0x002A713C
+	// Token: 0x06008F96 RID: 36758 RVA: 0x002B3698 File Offset: 0x002B1898
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -21,14 +21,14 @@ public class MediumItemGridAddLevelComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BBAD RID: 48045 RVA: 0x002A8FA5 File Offset: 0x002A71A5
+	// Token: 0x06008F97 RID: 36759 RVA: 0x002B3701 File Offset: 0x002B1901
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemRogueRoleType";
 	}
 
-	// Token: 0x0600BBAE RID: 48046 RVA: 0x002A8FAC File Offset: 0x002A71AC
+	// Token: 0x06008F98 RID: 36760 RVA: 0x002B3708 File Offset: 0x002B1908
 	[NullableContext(2)]
 	protected override void OnRefresh(object @params = null)
 	{
@@ -46,13 +46,13 @@ public class MediumItemGridAddLevelComponent : MediumItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x02007E7A RID: 32378
+	// Token: 0x02007001 RID: 28673
 	private class EAddLevelComponentDefine
 	{
-		// Token: 0x04029635 RID: 169525
+		// Token: 0x04024961 RID: 149857
 		public const int TextureIcon = 0;
 
-		// Token: 0x04029636 RID: 169526
+		// Token: 0x04024962 RID: 149858
 		public const int TxtLevel = 1;
 	}
 }

@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001091 RID: 4241
+// Token: 0x02000545 RID: 1349
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ActivityRecommendConfig : ConfigBase
 {
-	// Token: 0x06006E6D RID: 28269 RVA: 0x00168585 File Offset: 0x00166785
+	// Token: 0x06004202 RID: 16898 RVA: 0x00170EB9 File Offset: 0x0016F0B9
 	public ActivityRecommend? GetRecommend(int id)
 	{
 		return ConfigActivityRecommendById.GetConfig(id, true);
 	}
 
-	// Token: 0x06006E6E RID: 28270 RVA: 0x00168590 File Offset: 0x00166790
+	// Token: 0x06004203 RID: 16899 RVA: 0x00170EC4 File Offset: 0x0016F0C4
 	public List<ActivityRecommend> GetRecommendByType(EActivityRecommendType type)
 	{
 		IEnumerable<ActivityRecommend> enumerable = ConfigActivityRecommendAll.GetConfigList(true) ?? new List<ActivityRecommend>();
@@ -30,13 +30,13 @@ public class ActivityRecommendConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x06006E6F RID: 28271 RVA: 0x001685F8 File Offset: 0x001667F8
+	// Token: 0x06004204 RID: 16900 RVA: 0x00170F2C File Offset: 0x0016F12C
 	public IReadOnlyList<ActivityRecommend> GetRecommendListByGroup(int groupId)
 	{
 		return ConfigActivityRecommendByActivityGroup.GetConfigList(groupId, true) ?? new List<ActivityRecommend>();
 	}
 
-	// Token: 0x06006E70 RID: 28272 RVA: 0x0016860C File Offset: 0x0016680C
+	// Token: 0x06004205 RID: 16901 RVA: 0x00170F40 File Offset: 0x0016F140
 	public int GetCurrentGroupId()
 	{
 		if (ConfigActivityRecommendCurrentById.GetConfig(1, true) == null)
@@ -47,14 +47,14 @@ public class ActivityRecommendConfig : ConfigBase
 		return activityRecommendCurrent.GetValueOrDefault().ActivityGroup;
 	}
 
-	// Token: 0x06006E71 RID: 28273 RVA: 0x0016863B File Offset: 0x0016683B
+	// Token: 0x06004206 RID: 16902 RVA: 0x00170F6F File Offset: 0x0016F16F
 	public ActivityRecommendCurrent? GetCurrentRecord(int id)
 	{
 		return ConfigActivityRecommendCurrentById.GetConfig(id, true);
 	}
 
-	// Token: 0x17000924 RID: 2340
-	// (get) Token: 0x06006E72 RID: 28274 RVA: 0x00168644 File Offset: 0x00166844
+	// Token: 0x17000944 RID: 2372
+	// (get) Token: 0x06004207 RID: 16903 RVA: 0x00170F78 File Offset: 0x0016F178
 	public static ActivityRecommendConfig Instance
 	{
 		get
@@ -63,7 +63,7 @@ public class ActivityRecommendConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06006E73 RID: 28275 RVA: 0x0016864B File Offset: 0x0016684B
+	// Token: 0x06004208 RID: 16904 RVA: 0x00170F7F File Offset: 0x0016F17F
 	public static ActivityRecommendConfig GetOrCreateInstance()
 	{
 		if (ActivityRecommendConfig._Instance == null)
@@ -73,7 +73,7 @@ public class ActivityRecommendConfig : ConfigBase
 		return ActivityRecommendConfig._Instance;
 	}
 
-	// Token: 0x06006E74 RID: 28276 RVA: 0x0016865F File Offset: 0x0016685F
+	// Token: 0x06004209 RID: 16905 RVA: 0x00170F93 File Offset: 0x0016F193
 	public static bool CreateInstance()
 	{
 		if (ActivityRecommendConfig._Instance != null)
@@ -84,24 +84,24 @@ public class ActivityRecommendConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06006E75 RID: 28277 RVA: 0x00168675 File Offset: 0x00166875
+	// Token: 0x0600420A RID: 16906 RVA: 0x00170FA9 File Offset: 0x0016F1A9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06006E76 RID: 28278 RVA: 0x00168677 File Offset: 0x00166877
+	// Token: 0x0600420B RID: 16907 RVA: 0x00170FAB File Offset: 0x0016F1AB
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityRecommendConfig._Instance = null;
 	}
 
-	// Token: 0x06006E77 RID: 28279 RVA: 0x0016867F File Offset: 0x0016687F
+	// Token: 0x0600420C RID: 16908 RVA: 0x00170FB3 File Offset: 0x0016F1B3
 	static ActivityRecommendConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityRecommendConfig.CreateStaticDefaultValue), new Action(ActivityRecommendConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003322 RID: 13090
+	// Token: 0x040033BB RID: 13243
 	[Nullable(2)]
 	private static ActivityRecommendConfig _Instance;
 }

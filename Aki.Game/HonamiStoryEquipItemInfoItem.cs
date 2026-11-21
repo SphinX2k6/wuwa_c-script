@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.HonamiStory;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001EF8 RID: 7928
+// Token: 0x020013BA RID: 5050
 [Nullable(new byte[]
 {
 	0,
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class HonamiStoryEquipItemInfoItem : GridProxyAbstract<IHonamiStoryTipsBuffInfo>
 {
-	// Token: 0x0600F409 RID: 62473 RVA: 0x003ADD48 File Offset: 0x003ABF48
+	// Token: 0x0600C828 RID: 51240 RVA: 0x003B983C File Offset: 0x003B7A3C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class HonamiStoryEquipItemInfoItem : GridProxyAbstract<IHonamiStoryTipsBu
 		};
 	}
 
-	// Token: 0x0600F40A RID: 62474 RVA: 0x003ADDFC File Offset: 0x003ABFFC
+	// Token: 0x0600C829 RID: 51241 RVA: 0x003B98F0 File Offset: 0x003B7AF0
 	[NullableContext(1)]
 	public override void Refresh(IHonamiStoryTipsBuffInfo buffInfo, bool isSelected, int gridIndex)
 	{
@@ -82,22 +82,22 @@ public class HonamiStoryEquipItemInfoItem : GridProxyAbstract<IHonamiStoryTipsBu
 		base.GetText(6).SetUIActive(false);
 	}
 
-	// Token: 0x020084F5 RID: 34037
+	// Token: 0x0200767A RID: 30330
 	internal enum EHonamiStoryEquipItemInfoItemComponent
 	{
-		// Token: 0x0402B449 RID: 177225
+		// Token: 0x0402676D RID: 157549
 		TitleText,
-		// Token: 0x0402B44A RID: 177226
+		// Token: 0x0402676E RID: 157550
 		DescText,
-		// Token: 0x0402B44B RID: 177227
+		// Token: 0x0402676F RID: 157551
 		ActiveSprite,
-		// Token: 0x0402B44C RID: 177228
+		// Token: 0x04026770 RID: 157552
 		NonActiveSprite,
-		// Token: 0x0402B44D RID: 177229
+		// Token: 0x04026771 RID: 157553
 		TipSprite,
-		// Token: 0x0402B44E RID: 177230
+		// Token: 0x04026772 RID: 157554
 		SuitActiveItem,
-		// Token: 0x0402B44F RID: 177231
+		// Token: 0x04026773 RID: 157555
 		SuitNumText
 	}
 }

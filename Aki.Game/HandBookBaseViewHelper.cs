@@ -4,12 +4,12 @@ using CSharpScript.Game.Module.Common;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001DE5 RID: 7653
+// Token: 0x020012A7 RID: 4775
 [NullableContext(1)]
 [Nullable(0)]
 public static class HandBookBaseViewHelper
 {
-	// Token: 0x0600E8F0 RID: 59632 RVA: 0x003726B0 File Offset: 0x003708B0
+	// Token: 0x0600BD0F RID: 48399 RVA: 0x0037E3B8 File Offset: 0x0037C5B8
 	public static ILayoutItem<HandBookInfoTextItem> InitInfoItem(object content, UUIItem uiItem, int index)
 	{
 		HandBookInfoTextItem value = new HandBookInfoTextItem((string)content, uiItem);
@@ -20,7 +20,7 @@ public static class HandBookBaseViewHelper
 		};
 	}
 
-	// Token: 0x0600E8F1 RID: 59633 RVA: 0x003726E4 File Offset: 0x003708E4
+	// Token: 0x0600BD10 RID: 48400 RVA: 0x0037E3EC File Offset: 0x0037C5EC
 	public static ILayoutItem<HandBookContentItem> InitContentItem(object data, UUIItem uiItem, int index)
 	{
 		HandBookContentItem value = new HandBookContentItem((HandBookContentItemData)data, uiItem);
@@ -31,7 +31,7 @@ public static class HandBookBaseViewHelper
 		};
 	}
 
-	// Token: 0x0600E8F2 RID: 59634 RVA: 0x00372716 File Offset: 0x00370916
+	// Token: 0x0600BD11 RID: 48401 RVA: 0x0037E41E File Offset: 0x0037C61E
 	public static AttributeItem InitAttributeItem()
 	{
 		return new AttributeItem();

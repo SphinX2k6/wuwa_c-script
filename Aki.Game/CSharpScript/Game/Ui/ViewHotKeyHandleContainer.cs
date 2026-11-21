@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046B7 RID: 18103
+	// Token: 0x020035E8 RID: 13800
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ViewHotKeyHandleContainer
 	{
-		// Token: 0x0602EB08 RID: 191240 RVA: 0x00ACE5F0 File Offset: 0x00ACC7F0
+		// Token: 0x06023254 RID: 143956 RVA: 0x009FCEC4 File Offset: 0x009FB0C4
 		public void Add(ViewHotKeyHandle viewHotKeyHandle)
 		{
 			EUiViewName? viewName = viewHotKeyHandle.ViewName;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB09 RID: 191241 RVA: 0x00ACE678 File Offset: 0x00ACC878
+		// Token: 0x06023255 RID: 143957 RVA: 0x009FCF4C File Offset: 0x009FB14C
 		public void Remove(ViewHotKeyHandle viewHotKeyHandle)
 		{
 			EUiViewName? viewName = viewHotKeyHandle.ViewName;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB0A RID: 191242 RVA: 0x00ACE6E0 File Offset: 0x00ACC8E0
+		// Token: 0x06023256 RID: 143958 RVA: 0x009FCFB4 File Offset: 0x009FB1B4
 		public void Clear()
 		{
 			foreach (List<ViewHotKeyHandle> list in this.ViewNameViewHotKeyHandleMapping.Values)
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Ui
 			this.ViewNameViewHotKeyHandleMapping.Clear();
 		}
 
-		// Token: 0x0602EB0B RID: 191243 RVA: 0x00ACE774 File Offset: 0x00ACC974
+		// Token: 0x06023257 RID: 143959 RVA: 0x009FD048 File Offset: 0x009FB248
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Ui
 			return null;
 		}
 
-		// Token: 0x0602EB0C RID: 191244 RVA: 0x00ACE79C File Offset: 0x00ACC99C
+		// Token: 0x06023258 RID: 143960 RVA: 0x009FD070 File Offset: 0x009FB270
 		public ViewHotKeyHandle[] GetAll()
 		{
 			List<ViewHotKeyHandle> list = new List<ViewHotKeyHandle>();
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Ui
 			return list.ToArray();
 		}
 
-		// Token: 0x0602EB0D RID: 191245 RVA: 0x00ACE834 File Offset: 0x00ACCA34
+		// Token: 0x06023259 RID: 143961 RVA: 0x009FD108 File Offset: 0x009FB308
 		public void ForEach(Action<ViewHotKeyHandle> callback)
 		{
 			foreach (List<ViewHotKeyHandle> list in this.ViewNameViewHotKeyHandleMapping.Values)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB0E RID: 191246 RVA: 0x00ACE8C0 File Offset: 0x00ACCAC0
+		// Token: 0x0602325A RID: 143962 RVA: 0x009FD194 File Offset: 0x009FB394
 		public bool IsDataExist(int configId)
 		{
 			foreach (List<ViewHotKeyHandle> list in this.ViewNameViewHotKeyHandleMapping.Values)
@@ -141,25 +141,25 @@ namespace CSharpScript.Game.Ui
 			return false;
 		}
 
-		// Token: 0x0602EB0F RID: 191247 RVA: 0x00ACE96C File Offset: 0x00ACCB6C
+		// Token: 0x0602325B RID: 143963 RVA: 0x009FD240 File Offset: 0x009FB440
 		public void RegisterOpenViewFunc(EUiViewName viewName, Action @delegate)
 		{
 			this.ViewNameOpenFuncMapping[viewName] = @delegate;
 		}
 
-		// Token: 0x0602EB10 RID: 191248 RVA: 0x00ACE97B File Offset: 0x00ACCB7B
+		// Token: 0x0602325C RID: 143964 RVA: 0x009FD24F File Offset: 0x009FB44F
 		public void RegisterCloseViewFunc(EUiViewName viewName, Action @delegate)
 		{
 			this.ViewNameCloseFuncMapping[viewName] = @delegate;
 		}
 
-		// Token: 0x040196C2 RID: 104130
+		// Token: 0x04013D67 RID: 81255
 		private readonly Dictionary<EUiViewName, List<ViewHotKeyHandle>> ViewNameViewHotKeyHandleMapping = new Dictionary<EUiViewName, List<ViewHotKeyHandle>>();
 
-		// Token: 0x040196C3 RID: 104131
+		// Token: 0x04013D68 RID: 81256
 		private readonly Dictionary<EUiViewName, Action> ViewNameOpenFuncMapping = new Dictionary<EUiViewName, Action>();
 
-		// Token: 0x040196C4 RID: 104132
+		// Token: 0x04013D69 RID: 81257
 		private readonly Dictionary<EUiViewName, Action> ViewNameCloseFuncMapping = new Dictionary<EUiViewName, Action>();
 	}
 }

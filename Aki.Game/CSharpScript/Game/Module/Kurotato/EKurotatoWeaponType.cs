@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056E0 RID: 22240
+	// Token: 0x020046B7 RID: 18103
 	public enum EKurotatoWeaponType
 	{
-		// Token: 0x0401DB61 RID: 121697
+		// Token: 0x040185F7 RID: 99831
 		Melee = 1,
-		// Token: 0x0401DB62 RID: 121698
+		// Token: 0x040185F8 RID: 99832
 		Ranged
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E15 RID: 24085
+	// Token: 0x02006452 RID: 25682
 	public struct IOutAreaBorderDownTimeTextTip : IFlatbufferObject
 	{
-		// Token: 0x1700B437 RID: 46135
-		// (get) Token: 0x060293CC RID: 168908 RVA: 0x005A8293 File Offset: 0x005A6493
+		// Token: 0x1700BD9D RID: 48541
+		// (get) Token: 0x0602BA56 RID: 178774 RVA: 0x005F0FC3 File Offset: 0x005EF1C3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060293CD RID: 168909 RVA: 0x005A82A0 File Offset: 0x005A64A0
+		// Token: 0x0602BA57 RID: 178775 RVA: 0x005F0FD0 File Offset: 0x005EF1D0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060293CE RID: 168910 RVA: 0x005A82A8 File Offset: 0x005A64A8
+		// Token: 0x0602BA58 RID: 178776 RVA: 0x005F0FD8 File Offset: 0x005EF1D8
 		public static IOutAreaBorderDownTimeTextTip GetRootAsIOutAreaBorderDownTimeTextTip(ByteBuffer _bb)
 		{
 			return IOutAreaBorderDownTimeTextTip.GetRootAsIOutAreaBorderDownTimeTextTip(_bb, default(IOutAreaBorderDownTimeTextTip));
 		}
 
-		// Token: 0x060293CF RID: 168911 RVA: 0x005A82C4 File Offset: 0x005A64C4
+		// Token: 0x0602BA59 RID: 178777 RVA: 0x005F0FF4 File Offset: 0x005EF1F4
 		public static IOutAreaBorderDownTimeTextTip GetRootAsIOutAreaBorderDownTimeTextTip(ByteBuffer _bb, IOutAreaBorderDownTimeTextTip obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060293D0 RID: 168912 RVA: 0x005A82E1 File Offset: 0x005A64E1
+		// Token: 0x0602BA5A RID: 178778 RVA: 0x005F1011 File Offset: 0x005EF211
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060293D1 RID: 168913 RVA: 0x005A82F0 File Offset: 0x005A64F0
+		// Token: 0x0602BA5B RID: 178779 RVA: 0x005F1020 File Offset: 0x005EF220
 		public IOutAreaBorderDownTimeTextTip __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B438 RID: 46136
-		// (get) Token: 0x060293D2 RID: 168914 RVA: 0x005A8300 File Offset: 0x005A6500
+		// Token: 0x1700BD9E RID: 48542
+		// (get) Token: 0x0602BA5C RID: 178780 RVA: 0x005F1030 File Offset: 0x005EF230
 		public EOutAreaBorderTipType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060293D3 RID: 168915 RVA: 0x005A833C File Offset: 0x005A653C
+		// Token: 0x0602BA5D RID: 178781 RVA: 0x005F106C File Offset: 0x005EF26C
 		public static Offset<IOutAreaBorderDownTimeTextTip> CreateIOutAreaBorderDownTimeTextTip(FlatBufferBuilder builder, EOutAreaBorderTipType Type = EOutAreaBorderTipType.DownTimeTextTip)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IOutAreaBorderDownTimeTextTip.EndIOutAreaBorderDownTimeTextTip(builder);
 		}
 
-		// Token: 0x060293D4 RID: 168916 RVA: 0x005A8352 File Offset: 0x005A6552
+		// Token: 0x0602BA5E RID: 178782 RVA: 0x005F1082 File Offset: 0x005EF282
 		public static void StartIOutAreaBorderDownTimeTextTip(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060293D5 RID: 168917 RVA: 0x005A835B File Offset: 0x005A655B
+		// Token: 0x0602BA5F RID: 178783 RVA: 0x005F108B File Offset: 0x005EF28B
 		public static void AddType(FlatBufferBuilder builder, EOutAreaBorderTipType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060293D6 RID: 168918 RVA: 0x005A8366 File Offset: 0x005A6566
+		// Token: 0x0602BA60 RID: 178784 RVA: 0x005F1096 File Offset: 0x005EF296
 		public static Offset<IOutAreaBorderDownTimeTextTip> EndIOutAreaBorderDownTimeTextTip(FlatBufferBuilder builder)
 		{
 			return new Offset<IOutAreaBorderDownTimeTextTip>(builder.EndTable());
 		}
 
-		// Token: 0x060293D7 RID: 168919 RVA: 0x005A8374 File Offset: 0x005A6574
+		// Token: 0x0602BA61 RID: 178785 RVA: 0x005F10A4 File Offset: 0x005EF2A4
 		public IOutAreaBorderDownTimeTextTipT UnPack()
 		{
 			IOutAreaBorderDownTimeTextTipT outAreaBorderDownTimeTextTipT = new IOutAreaBorderDownTimeTextTipT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return outAreaBorderDownTimeTextTipT;
 		}
 
-		// Token: 0x060293D8 RID: 168920 RVA: 0x005A838F File Offset: 0x005A658F
+		// Token: 0x0602BA62 RID: 178786 RVA: 0x005F10BF File Offset: 0x005EF2BF
 		public void UnPackTo(IOutAreaBorderDownTimeTextTipT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060293D9 RID: 168921 RVA: 0x005A83A0 File Offset: 0x005A65A0
+		// Token: 0x0602BA63 RID: 178787 RVA: 0x005F10D0 File Offset: 0x005EF2D0
 		public static Offset<IOutAreaBorderDownTimeTextTip> Pack(FlatBufferBuilder builder, IOutAreaBorderDownTimeTextTipT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IOutAreaBorderDownTimeTextTip.CreateIOutAreaBorderDownTimeTextTip(builder, _o.Type);
 		}
 
-		// Token: 0x0400F80B RID: 63499
+		// Token: 0x04010566 RID: 66918
 		private Table __p;
 	}
 }

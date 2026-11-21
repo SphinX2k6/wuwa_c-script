@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
 
-// Token: 0x02000202 RID: 514
+// Token: 0x02000206 RID: 518
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseCameraGravity
 {
-	// Token: 0x06002059 RID: 8281 RVA: 0x000AC897 File Offset: 0x000AAA97
+	// Token: 0x06002107 RID: 8455 RVA: 0x000B3BB7 File Offset: 0x000B1DB7
 	public void Init(CameraGravityController owner, CameraGravityDirectionConfig config)
 	{
 		this.Owner = owner;
@@ -16,40 +16,40 @@ public class BaseCameraGravity
 		this.SetCameraGravityMode();
 	}
 
-	// Token: 0x0600205A RID: 8282 RVA: 0x000AC8C3 File Offset: 0x000AAAC3
+	// Token: 0x06002108 RID: 8456 RVA: 0x000B3BE3 File Offset: 0x000B1DE3
 	protected void InternalSetCameraGravityMode(ECameraGravityMode cameraGravityMode)
 	{
 		this.Owner.SetCurrentCameraGravityMode(cameraGravityMode);
 	}
 
-	// Token: 0x0600205B RID: 8283 RVA: 0x000AC8D1 File Offset: 0x000AAAD1
+	// Token: 0x06002109 RID: 8457 RVA: 0x000B3BF1 File Offset: 0x000B1DF1
 	protected virtual void SetCameraGravityMode()
 	{
 	}
 
-	// Token: 0x0600205C RID: 8284 RVA: 0x000AC8D3 File Offset: 0x000AAAD3
+	// Token: 0x0600210A RID: 8458 RVA: 0x000B3BF3 File Offset: 0x000B1DF3
 	public Vector GravityStartLerpVector()
 	{
 		return this.StartLerpGravityVector;
 	}
 
-	// Token: 0x0600205D RID: 8285 RVA: 0x000AC8DB File Offset: 0x000AAADB
+	// Token: 0x0600210B RID: 8459 RVA: 0x000B3BFB File Offset: 0x000B1DFB
 	public virtual Vector GravityEndLerpVector()
 	{
 		return this.EndLerpGravityVector;
 	}
 
-	// Token: 0x04001447 RID: 5191
+	// Token: 0x04001489 RID: 5257
 	[Nullable(2)]
 	public CameraGravityController Owner;
 
-	// Token: 0x04001448 RID: 5192
+	// Token: 0x0400148A RID: 5258
 	[Nullable(2)]
 	public CameraGravityDirectionConfig CameraGravityConfig;
 
-	// Token: 0x04001449 RID: 5193
+	// Token: 0x0400148B RID: 5259
 	protected readonly Vector StartLerpGravityVector = Vector.Create();
 
-	// Token: 0x0400144A RID: 5194
+	// Token: 0x0400148C RID: 5260
 	protected readonly Vector EndLerpGravityVector = Vector.Create();
 }

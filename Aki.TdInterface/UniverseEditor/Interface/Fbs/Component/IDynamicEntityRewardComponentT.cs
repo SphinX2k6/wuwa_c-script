@@ -4,35 +4,35 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050DC RID: 20700
+	// Token: 0x02005641 RID: 22081
 	public class IDynamicEntityRewardComponentT
 	{
-		// Token: 0x170096B4 RID: 38580
-		// (get) Token: 0x06021529 RID: 136489 RVA: 0x004A0D38 File Offset: 0x0049EF38
-		// (set) Token: 0x0602152A RID: 136490 RVA: 0x004A0D40 File Offset: 0x0049EF40
+		// Token: 0x17009EA1 RID: 40609
+		// (get) Token: 0x0602347D RID: 144509 RVA: 0x004DACC4 File Offset: 0x004D8EC4
+		// (set) Token: 0x0602347E RID: 144510 RVA: 0x004DACCC File Offset: 0x004D8ECC
 		public bool Disabled { get; set; }
 
-		// Token: 0x170096B5 RID: 38581
-		// (get) Token: 0x0602152B RID: 136491 RVA: 0x004A0D49 File Offset: 0x0049EF49
-		// (set) Token: 0x0602152C RID: 136492 RVA: 0x004A0D51 File Offset: 0x0049EF51
+		// Token: 0x17009EA2 RID: 40610
+		// (get) Token: 0x0602347F RID: 144511 RVA: 0x004DACD5 File Offset: 0x004D8ED5
+		// (set) Token: 0x06023480 RID: 144512 RVA: 0x004DACDD File Offset: 0x004D8EDD
 		public IDynamicTrafficRewardT RewardType { get; set; }
 
-		// Token: 0x170096B6 RID: 38582
-		// (get) Token: 0x0602152D RID: 136493 RVA: 0x004A0D5A File Offset: 0x0049EF5A
-		// (set) Token: 0x0602152E RID: 136494 RVA: 0x004A0D62 File Offset: 0x0049EF62
+		// Token: 0x17009EA3 RID: 40611
+		// (get) Token: 0x06023481 RID: 144513 RVA: 0x004DACE6 File Offset: 0x004D8EE6
+		// (set) Token: 0x06023482 RID: 144514 RVA: 0x004DACEE File Offset: 0x004D8EEE
 		public List<EClaimDynamicEntityRewardType> ClaimTypes { get; set; }
 
-		// Token: 0x170096B7 RID: 38583
-		// (get) Token: 0x0602152F RID: 136495 RVA: 0x004A0D6B File Offset: 0x0049EF6B
-		// (set) Token: 0x06021530 RID: 136496 RVA: 0x004A0D73 File Offset: 0x0049EF73
+		// Token: 0x17009EA4 RID: 40612
+		// (get) Token: 0x06023483 RID: 144515 RVA: 0x004DACF7 File Offset: 0x004D8EF7
+		// (set) Token: 0x06023484 RID: 144516 RVA: 0x004DACFF File Offset: 0x004D8EFF
 		public List<IActionInfoT> RewardActions { get; set; }
 
-		// Token: 0x170096B8 RID: 38584
-		// (get) Token: 0x06021531 RID: 136497 RVA: 0x004A0D7C File Offset: 0x0049EF7C
-		// (set) Token: 0x06021532 RID: 136498 RVA: 0x004A0D84 File Offset: 0x0049EF84
+		// Token: 0x17009EA5 RID: 40613
+		// (get) Token: 0x06023485 RID: 144517 RVA: 0x004DAD08 File Offset: 0x004D8F08
+		// (set) Token: 0x06023486 RID: 144518 RVA: 0x004DAD10 File Offset: 0x004D8F10
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021533 RID: 136499 RVA: 0x004A0D8D File Offset: 0x0049EF8D
+		// Token: 0x06023487 RID: 144519 RVA: 0x004DAD19 File Offset: 0x004D8F19
 		public IDynamicEntityRewardComponentT()
 		{
 			this.Disabled = false;

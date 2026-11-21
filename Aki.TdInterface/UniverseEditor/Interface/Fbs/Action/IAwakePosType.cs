@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061D0 RID: 25040
+	// Token: 0x0200683E RID: 26686
 	public struct IAwakePosType : IFlatbufferObject
 	{
-		// Token: 0x1700BAB9 RID: 47801
-		// (get) Token: 0x0602B286 RID: 176774 RVA: 0x005F2FD5 File Offset: 0x005F11D5
+		// Token: 0x1700C43C RID: 50236
+		// (get) Token: 0x0602D9CD RID: 186829 RVA: 0x0063DA49 File Offset: 0x0063BC49
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B287 RID: 176775 RVA: 0x005F2FE2 File Offset: 0x005F11E2
+		// Token: 0x0602D9CE RID: 186830 RVA: 0x0063DA56 File Offset: 0x0063BC56
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B288 RID: 176776 RVA: 0x005F2FEC File Offset: 0x005F11EC
+		// Token: 0x0602D9CF RID: 186831 RVA: 0x0063DA60 File Offset: 0x0063BC60
 		public static IAwakePosType GetRootAsIAwakePosType(ByteBuffer _bb)
 		{
 			return IAwakePosType.GetRootAsIAwakePosType(_bb, default(IAwakePosType));
 		}
 
-		// Token: 0x0602B289 RID: 176777 RVA: 0x005F3008 File Offset: 0x005F1208
+		// Token: 0x0602D9D0 RID: 186832 RVA: 0x0063DA7C File Offset: 0x0063BC7C
 		public static IAwakePosType GetRootAsIAwakePosType(ByteBuffer _bb, IAwakePosType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B28A RID: 176778 RVA: 0x005F3025 File Offset: 0x005F1225
+		// Token: 0x0602D9D1 RID: 186833 RVA: 0x0063DA99 File Offset: 0x0063BC99
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B28B RID: 176779 RVA: 0x005F3034 File Offset: 0x005F1234
+		// Token: 0x0602D9D2 RID: 186834 RVA: 0x0063DAA8 File Offset: 0x0063BCA8
 		public IAwakePosType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BABA RID: 47802
-		// (get) Token: 0x0602B28C RID: 176780 RVA: 0x005F3044 File Offset: 0x005F1244
+		// Token: 0x1700C43D RID: 50237
+		// (get) Token: 0x0602D9D3 RID: 186835 RVA: 0x0063DAB8 File Offset: 0x0063BCB8
 		public EAwakePosType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B28D RID: 176781 RVA: 0x005F3080 File Offset: 0x005F1280
+		// Token: 0x0602D9D4 RID: 186836 RVA: 0x0063DAF4 File Offset: 0x0063BCF4
 		public static Offset<IAwakePosType> CreateIAwakePosType(FlatBufferBuilder builder, EAwakePosType Type = EAwakePosType.TransformVar)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAwakePosType.EndIAwakePosType(builder);
 		}
 
-		// Token: 0x0602B28E RID: 176782 RVA: 0x005F3096 File Offset: 0x005F1296
+		// Token: 0x0602D9D5 RID: 186837 RVA: 0x0063DB0A File Offset: 0x0063BD0A
 		public static void StartIAwakePosType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602B28F RID: 176783 RVA: 0x005F309F File Offset: 0x005F129F
+		// Token: 0x0602D9D6 RID: 186838 RVA: 0x0063DB13 File Offset: 0x0063BD13
 		public static void AddType(FlatBufferBuilder builder, EAwakePosType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602B290 RID: 176784 RVA: 0x005F30AA File Offset: 0x005F12AA
+		// Token: 0x0602D9D7 RID: 186839 RVA: 0x0063DB1E File Offset: 0x0063BD1E
 		public static Offset<IAwakePosType> EndIAwakePosType(FlatBufferBuilder builder)
 		{
 			return new Offset<IAwakePosType>(builder.EndTable());
 		}
 
-		// Token: 0x0602B291 RID: 176785 RVA: 0x005F30B8 File Offset: 0x005F12B8
+		// Token: 0x0602D9D8 RID: 186840 RVA: 0x0063DB2C File Offset: 0x0063BD2C
 		public IAwakePosTypeT UnPack()
 		{
 			IAwakePosTypeT awakePosTypeT = new IAwakePosTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return awakePosTypeT;
 		}
 
-		// Token: 0x0602B292 RID: 176786 RVA: 0x005F30D3 File Offset: 0x005F12D3
+		// Token: 0x0602D9D9 RID: 186841 RVA: 0x0063DB47 File Offset: 0x0063BD47
 		public void UnPackTo(IAwakePosTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602B293 RID: 176787 RVA: 0x005F30E4 File Offset: 0x005F12E4
+		// Token: 0x0602D9DA RID: 186842 RVA: 0x0063DB58 File Offset: 0x0063BD58
 		public static Offset<IAwakePosType> Pack(FlatBufferBuilder builder, IAwakePosTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAwakePosType.CreateIAwakePosType(builder, _o.Type);
 		}
 
-		// Token: 0x040106F9 RID: 67321
+		// Token: 0x0401150B RID: 70923
 		private Table __p;
 	}
 }

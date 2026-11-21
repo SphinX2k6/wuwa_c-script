@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200113A RID: 4410
+	// Token: 0x02001270 RID: 4720
 	public struct TowerDefenceMark : IFlatbufferObject
 	{
-		// Token: 0x17003AD2 RID: 15058
-		// (get) Token: 0x0600DFE4 RID: 57316 RVA: 0x00330400 File Offset: 0x0032E600
+		// Token: 0x17003E36 RID: 15926
+		// (get) Token: 0x0600ED52 RID: 60754 RVA: 0x0035B888 File Offset: 0x00359A88
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DFE5 RID: 57317 RVA: 0x0033040D File Offset: 0x0032E60D
+		// Token: 0x0600ED53 RID: 60755 RVA: 0x0035B895 File Offset: 0x00359A95
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DFE6 RID: 57318 RVA: 0x00330414 File Offset: 0x0032E614
+		// Token: 0x0600ED54 RID: 60756 RVA: 0x0035B89C File Offset: 0x00359A9C
 		public static TowerDefenceMark GetRootAsTowerDefenceMark(ByteBuffer _bb)
 		{
 			return TowerDefenceMark.GetRootAsTowerDefenceMark(_bb, default(TowerDefenceMark));
 		}
 
-		// Token: 0x0600DFE7 RID: 57319 RVA: 0x00330430 File Offset: 0x0032E630
+		// Token: 0x0600ED55 RID: 60757 RVA: 0x0035B8B8 File Offset: 0x00359AB8
 		public static TowerDefenceMark GetRootAsTowerDefenceMark(ByteBuffer _bb, TowerDefenceMark obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DFE8 RID: 57320 RVA: 0x0033044D File Offset: 0x0032E64D
+		// Token: 0x0600ED56 RID: 60758 RVA: 0x0035B8D5 File Offset: 0x00359AD5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DFE9 RID: 57321 RVA: 0x0033045C File Offset: 0x0032E65C
+		// Token: 0x0600ED57 RID: 60759 RVA: 0x0035B8E4 File Offset: 0x00359AE4
 		public TowerDefenceMark __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003AD3 RID: 15059
-		// (get) Token: 0x0600DFEA RID: 57322 RVA: 0x0033046C File Offset: 0x0032E66C
+		// Token: 0x17003E37 RID: 15927
+		// (get) Token: 0x0600ED58 RID: 60760 RVA: 0x0035B8F4 File Offset: 0x00359AF4
 		public int ActivityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003AD4 RID: 15060
-		// (get) Token: 0x0600DFEB RID: 57323 RVA: 0x003304A8 File Offset: 0x0032E6A8
+		// Token: 0x17003E38 RID: 15928
+		// (get) Token: 0x0600ED59 RID: 60761 RVA: 0x0035B930 File Offset: 0x00359B30
 		public int MarkId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0400527B RID: 21115
+		// Token: 0x040058BE RID: 22718
 		private Table __p;
 	}
 }

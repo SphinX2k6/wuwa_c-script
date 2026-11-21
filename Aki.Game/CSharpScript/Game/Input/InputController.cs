@@ -18,19 +18,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Input
 {
-	// Token: 0x02006FC8 RID: 28616
+	// Token: 0x02006149 RID: 24905
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class InputController : ControllerBase
 	{
-		// Token: 0x06045970 RID: 285040 RVA: 0x01147F28 File Offset: 0x01146128
+		// Token: 0x0603BB20 RID: 244512 RVA: 0x010F1D08 File Offset: 0x010EFF08
 		public bool IsAllMoveEnable()
 		{
 			return this.CanMoveFront && this.CanMoveBack && this.CanMoveLeft && this.CanMoveRight;
 		}
 
-		// Token: 0x06045971 RID: 285041 RVA: 0x01147F4C File Offset: 0x0114614C
+		// Token: 0x0603BB21 RID: 244513 RVA: 0x010F1D2C File Offset: 0x010EFF2C
 		public void InitializeEnvironment()
 		{
 			InputDataTypeCreatorFactory.Initialize();
@@ -47,8 +47,8 @@ namespace CSharpScript.Game.Input
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "Kuro.Input.AxisOptimize 0", null);
 		}
 
-		// Token: 0x17009B8F RID: 39823
-		// (get) Token: 0x06045972 RID: 285042 RVA: 0x01147FA1 File Offset: 0x011461A1
+		// Token: 0x170070CF RID: 28879
+		// (get) Token: 0x0603BB22 RID: 244514 RVA: 0x010F1D81 File Offset: 0x010EFF81
 		[Nullable(2)]
 		public InputModel Model
 		{
@@ -59,21 +59,21 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x06045973 RID: 285043 RVA: 0x01147FA8 File Offset: 0x011461A8
+		// Token: 0x0603BB23 RID: 244515 RVA: 0x010F1D88 File Offset: 0x010EFF88
 		protected override bool OnInit()
 		{
 			this.AddEvents();
 			return true;
 		}
 
-		// Token: 0x06045974 RID: 285044 RVA: 0x01147FB1 File Offset: 0x011461B1
+		// Token: 0x0603BB24 RID: 244516 RVA: 0x010F1D91 File Offset: 0x010EFF91
 		protected override bool OnClear()
 		{
 			this.RemoveEvents();
 			return true;
 		}
 
-		// Token: 0x06045975 RID: 285045 RVA: 0x01147FBC File Offset: 0x011461BC
+		// Token: 0x0603BB25 RID: 244517 RVA: 0x010F1D9C File Offset: 0x010EFF9C
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnCloseLoadingView, new Action(this.OnCloseLoadingView));
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Input
 			EventSystem.Instance.Add<string, int?>(EEventName.RefreshInputData, new Action<string, int?>(this.OnRefreshInputData));
 		}
 
-		// Token: 0x06045976 RID: 285046 RVA: 0x01148074 File Offset: 0x01146274
+		// Token: 0x0603BB26 RID: 244518 RVA: 0x010F1E54 File Offset: 0x010F0054
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCloseLoadingView, new Action(this.OnCloseLoadingView));
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Input
 			EventSystem.Instance.Remove(EEventName.RefreshInputData, new Action<string, int?>(this.OnRefreshInputData));
 		}
 
-		// Token: 0x06045977 RID: 285047 RVA: 0x0114812C File Offset: 0x0114632C
+		// Token: 0x0603BB27 RID: 244519 RVA: 0x010F1F0C File Offset: 0x010F010C
 		private void OnInputCameraAxis(string axisName, float value, InputIdentification inputIdentification)
 		{
 			InputModel model = this.Model;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x06045978 RID: 285048 RVA: 0x011481B4 File Offset: 0x011463B4
+		// Token: 0x0603BB28 RID: 244520 RVA: 0x010F1F94 File Offset: 0x010F0194
 		private void OnInputMoveAxis(string axisName, float value, InputIdentification inputIdentification)
 		{
 			InputModel model = this.Model;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Input
 			this.InputAxis(inputAxis.Value, value, false);
 		}
 
-		// Token: 0x06045979 RID: 285049 RVA: 0x011481F8 File Offset: 0x011463F8
+		// Token: 0x0603BB29 RID: 244521 RVA: 0x010F1FD8 File Offset: 0x010F01D8
 		private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			EInputState state = (actionType == InputDistributeDefine.EActionType.Press) ? EInputState.Press : EInputState.Release;
@@ -168,31 +168,31 @@ namespace CSharpScript.Game.Input
 			this.InputAction(inputAction.Value, state);
 		}
 
-		// Token: 0x0604597A RID: 285050 RVA: 0x01148243 File Offset: 0x01146443
+		// Token: 0x0603BB2A RID: 244522 RVA: 0x010F2023 File Offset: 0x010F0223
 		public void BindInputActions(List<string> actionNames)
 		{
 			InputDistributeController.Instance.BindActions(actionNames, new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 		}
 
-		// Token: 0x0604597B RID: 285051 RVA: 0x0114825C File Offset: 0x0114645C
+		// Token: 0x0603BB2B RID: 244523 RVA: 0x010F203C File Offset: 0x010F023C
 		public void UnBindInputActions(List<string> actionNames)
 		{
 			InputDistributeController.Instance.UnBindActions(actionNames, new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 		}
 
-		// Token: 0x0604597C RID: 285052 RVA: 0x01148275 File Offset: 0x01146475
+		// Token: 0x0603BB2C RID: 244524 RVA: 0x010F2055 File Offset: 0x010F0255
 		public void BindInputMoveAxes(List<string> axisNames)
 		{
 			InputDistributeController.Instance.BindAxes(axisNames, new TInputHandle<float>(this.OnInputMoveAxis));
 		}
 
-		// Token: 0x0604597D RID: 285053 RVA: 0x0114828E File Offset: 0x0114648E
+		// Token: 0x0603BB2D RID: 244525 RVA: 0x010F206E File Offset: 0x010F026E
 		public void UnBindInputMoveAxes(List<string> axisNames)
 		{
 			InputDistributeController.Instance.UnBindAxes(axisNames, new TInputHandle<float>(this.OnInputMoveAxis));
 		}
 
-		// Token: 0x0604597E RID: 285054 RVA: 0x011482A8 File Offset: 0x011464A8
+		// Token: 0x0603BB2E RID: 244526 RVA: 0x010F2088 File Offset: 0x010F0288
 		private void OnSequenceNetworkStart(PlotInfo plotInfo)
 		{
 			bool flag = plotInfo.PlotLevel == EPlotLevel.LevelD || plotInfo.PlotLevel == EPlotLevel.LevelE;
@@ -217,21 +217,33 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x0604597F RID: 285055 RVA: 0x0114834C File Offset: 0x0114654C
+		// Token: 0x0603BB2F RID: 244527 RVA: 0x010F212C File Offset: 0x010F032C
 		private void OnCloseLoadingView()
 		{
 			if (Info.Instance.PlatformType == ESourcePlatformType.IOS || Platform.Instance.CloudGamePlatform == ECloudGamePlatform.IOS.ToEnumString() || Platform.Instance.CloudGamePlatform == ECloudGamePlatform.Mac.ToEnumString())
 			{
 				int num = 0;
 				int playerIndex = 0;
-				UKuroStaticLibrary.SetInputKeyDeadZone(Global.CharacterController, playerIndex, new FKey(new FName(EKey.Gamepad_LeftY)), (float)num);
-				UKuroStaticLibrary.SetInputKeyDeadZone(Global.CharacterController, playerIndex, new FKey(new FName(EKey.Gamepad_RightX)), (float)num);
-				UKuroStaticLibrary.SetInputKeyDeadZone(Global.CharacterController, playerIndex, new FKey(new FName(EKey.Gamepad_RightY)), (float)num);
-				UKuroStaticLibrary.SetInputKeyDeadZone(Global.CharacterController, playerIndex, new FKey(new FName(EKey.Gamepad_LeftX)), (float)num);
+				UKuroStaticLibrary.SetInputKeyDeadZone(Global.CharacterController, playerIndex, new FKey
+				{
+					KeyName = new FName(EKey.Gamepad_LeftY)
+				}, (float)num);
+				UKuroStaticLibrary.SetInputKeyDeadZone(Global.CharacterController, playerIndex, new FKey
+				{
+					KeyName = new FName(EKey.Gamepad_RightX)
+				}, (float)num);
+				UKuroStaticLibrary.SetInputKeyDeadZone(Global.CharacterController, playerIndex, new FKey
+				{
+					KeyName = new FName(EKey.Gamepad_RightY)
+				}, (float)num);
+				UKuroStaticLibrary.SetInputKeyDeadZone(Global.CharacterController, playerIndex, new FKey
+				{
+					KeyName = new FName(EKey.Gamepad_LeftX)
+				}, (float)num);
 			}
 		}
 
-		// Token: 0x06045980 RID: 285056 RVA: 0x01148420 File Offset: 0x01146620
+		// Token: 0x0603BB30 RID: 244528 RVA: 0x010F2218 File Offset: 0x010F0418
 		private void OnForceReleaseInput(string reason)
 		{
 			if (!string.IsNullOrEmpty(reason))
@@ -260,7 +272,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x06045981 RID: 285057 RVA: 0x011484D8 File Offset: 0x011466D8
+		// Token: 0x0603BB31 RID: 244529 RVA: 0x010F22D0 File Offset: 0x010F04D0
 		private void ForceClearAxisInput(string reason)
 		{
 			if (reason.Length > 0)
@@ -292,7 +304,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x06045982 RID: 285058 RVA: 0x011485D4 File Offset: 0x011467D4
+		// Token: 0x0603BB32 RID: 244530 RVA: 0x010F23CC File Offset: 0x010F05CC
 		private unsafe void TryUnBindCurrentInputData()
 		{
 			InputModel model = this.Model;
@@ -323,7 +335,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x06045983 RID: 285059 RVA: 0x011486F8 File Offset: 0x011468F8
+		// Token: 0x0603BB33 RID: 244531 RVA: 0x010F24F0 File Offset: 0x010F06F0
 		private unsafe void HandleBindInputData(EInputDataType inputDataType)
 		{
 			InputModel model = this.Model;
@@ -356,7 +368,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x06045984 RID: 285060 RVA: 0x01148834 File Offset: 0x01146A34
+		// Token: 0x0603BB34 RID: 244532 RVA: 0x010F262C File Offset: 0x010F082C
 		private void TryBindInputData(int instanceId)
 		{
 			InstanceDungeonConfig instance = InstanceDungeonConfig.Instance;
@@ -378,20 +390,20 @@ namespace CSharpScript.Game.Input
 			this.HandleBindInputData(inputDataType);
 		}
 
-		// Token: 0x06045985 RID: 285061 RVA: 0x01148895 File Offset: 0x01146A95
+		// Token: 0x0603BB35 RID: 244533 RVA: 0x010F268D File Offset: 0x010F088D
 		private void TryRefreshInputData(int instanceId)
 		{
 			this.TryUnBindCurrentInputData();
 			this.TryBindInputData(instanceId);
 		}
 
-		// Token: 0x06045986 RID: 285062 RVA: 0x011488A4 File Offset: 0x01146AA4
+		// Token: 0x0603BB36 RID: 244534 RVA: 0x010F269C File Offset: 0x010F089C
 		private void OnInstanceChange(int lastInstanceId, int newInstanceId)
 		{
 			this.TryRefreshInputData(newInstanceId);
 		}
 
-		// Token: 0x06045987 RID: 285063 RVA: 0x011488B0 File Offset: 0x01146AB0
+		// Token: 0x0603BB37 RID: 244535 RVA: 0x010F26A8 File Offset: 0x010F08A8
 		private unsafe void OnRefreshInputData(string reason, int? type)
 		{
 			if (type.GetValueOrDefault() == 1)
@@ -424,7 +436,7 @@ namespace CSharpScript.Game.Input
 			this.TryRefreshInputData(instanceId);
 		}
 
-		// Token: 0x06045988 RID: 285064 RVA: 0x01148974 File Offset: 0x01146B74
+		// Token: 0x0603BB38 RID: 244536 RVA: 0x010F276C File Offset: 0x010F096C
 		private void OnInputDistributeTagChanged(IReadOnlyList<InputDistributeTag> inputDistributeTags)
 		{
 			InputDistributeModel instance = InputDistributeModel.Instance;
@@ -449,14 +461,14 @@ namespace CSharpScript.Game.Input
 			model.NextFrameRefreshAxisValues();
 		}
 
-		// Token: 0x06045989 RID: 285065 RVA: 0x01148A2C File Offset: 0x01146C2C
+		// Token: 0x0603BB39 RID: 244537 RVA: 0x010F2824 File Offset: 0x010F0A24
 		public void GmSwitchBattleInputData(EInputDataType inputDataType)
 		{
 			this.TryUnBindCurrentInputData();
 			this.HandleBindInputData(inputDataType);
 		}
 
-		// Token: 0x0604598A RID: 285066 RVA: 0x01148A3C File Offset: 0x01146C3C
+		// Token: 0x0603BB3A RID: 244538 RVA: 0x010F2834 File Offset: 0x010F0A34
 		public void AddInputHandler(IInputHandler handler)
 		{
 			InputModel model = this.Model;
@@ -467,7 +479,7 @@ namespace CSharpScript.Game.Input
 			model.AddInputHandler(handler);
 		}
 
-		// Token: 0x0604598B RID: 285067 RVA: 0x01148A5C File Offset: 0x01146C5C
+		// Token: 0x0603BB3B RID: 244539 RVA: 0x010F2854 File Offset: 0x010F0A54
 		public void RemoveInputHandler(IInputHandler handler)
 		{
 			InputModel model = this.Model;
@@ -478,7 +490,7 @@ namespace CSharpScript.Game.Input
 			model.RemoveInputHandler(handler);
 		}
 
-		// Token: 0x0604598C RID: 285068 RVA: 0x01148A7C File Offset: 0x01146C7C
+		// Token: 0x0603BB3C RID: 244540 RVA: 0x010F2874 File Offset: 0x010F0A74
 		public void InputAction(EInputAction action, EInputState state)
 		{
 			if (EInputAction.锁定目标 == action && !FunctionModel.Instance.IsOpen(10031))
@@ -544,7 +556,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x0604598D RID: 285069 RVA: 0x01148BC8 File Offset: 0x01146DC8
+		// Token: 0x0603BB3D RID: 244541 RVA: 0x010F29C0 File Offset: 0x010F0BC0
 		public void SetMoveControlEnabled(bool bFront, bool bBack, bool bLeft, bool bRight)
 		{
 			this.CanMoveFront = bFront;
@@ -585,7 +597,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x0604598E RID: 285070 RVA: 0x01148CA4 File Offset: 0x01146EA4
+		// Token: 0x0603BB3E RID: 244542 RVA: 0x010F2A9C File Offset: 0x010F0C9C
 		public unsafe void InputAxis(EInputAxis axis, float value, bool autoClear = true)
 		{
 			InputModel model = this.Model;
@@ -655,7 +667,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x0604598F RID: 285071 RVA: 0x01148E14 File Offset: 0x01147014
+		// Token: 0x0603BB3F RID: 244543 RVA: 0x010F2C0C File Offset: 0x010F0E0C
 		public void PreProcessInput(float deltaTime, bool gamePaused)
 		{
 			InputModel model = this.Model;
@@ -670,7 +682,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x06045990 RID: 285072 RVA: 0x01148E54 File Offset: 0x01147054
+		// Token: 0x0603BB40 RID: 244544 RVA: 0x010F2C4C File Offset: 0x010F0E4C
 		public unsafe void PostProcessInput(float deltaTime, bool gamePaused)
 		{
 			InputModel model = this.Model;
@@ -790,7 +802,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x06045991 RID: 285073 RVA: 0x01149218 File Offset: 0x01147418
+		// Token: 0x0603BB41 RID: 244545 RVA: 0x010F3010 File Offset: 0x010F1210
 		public int? QueryCommandPriority(ECommandType commandType)
 		{
 			InputModel model = this.Model;
@@ -801,7 +813,7 @@ namespace CSharpScript.Game.Input
 			return model.QueryCommandPriority(commandType);
 		}
 
-		// Token: 0x06045992 RID: 285074 RVA: 0x01149240 File Offset: 0x01147440
+		// Token: 0x0603BB42 RID: 244546 RVA: 0x010F3038 File Offset: 0x010F1238
 		public bool IsKeyDown(EInputAction action)
 		{
 			InputModel model = this.Model;
@@ -809,7 +821,7 @@ namespace CSharpScript.Game.Input
 			return model != null && model.GetPressTimes().TryGetValue(action, out num) && num != -1f;
 		}
 
-		// Token: 0x06045993 RID: 285075 RVA: 0x01149278 File Offset: 0x01147478
+		// Token: 0x0603BB43 RID: 244547 RVA: 0x010F3070 File Offset: 0x010F1270
 		public float GetKeyDownTime(EInputAction action)
 		{
 			InputModel model = this.Model;
@@ -829,7 +841,7 @@ namespace CSharpScript.Game.Input
 			return 0f;
 		}
 
-		// Token: 0x06045994 RID: 285076 RVA: 0x011492D8 File Offset: 0x011474D8
+		// Token: 0x0603BB44 RID: 244548 RVA: 0x010F30D0 File Offset: 0x010F12D0
 		private float QueryHoldTimeAccumulate(EInputAction action)
 		{
 			InputModel model = this.Model;
@@ -850,7 +862,7 @@ namespace CSharpScript.Game.Input
 			return -1f;
 		}
 
-		// Token: 0x06045995 RID: 285077 RVA: 0x0114932C File Offset: 0x0114752C
+		// Token: 0x0603BB45 RID: 244549 RVA: 0x010F3124 File Offset: 0x010F1324
 		private float InvertDeltaTimeBySelfCenter(float deltaTime)
 		{
 			CharacterModel instance = CharacterModel.Instance;
@@ -858,13 +870,13 @@ namespace CSharpScript.Game.Input
 			return deltaTime * num;
 		}
 
-		// Token: 0x06045996 RID: 285078 RVA: 0x01149352 File Offset: 0x01147552
+		// Token: 0x0603BB46 RID: 244550 RVA: 0x010F314A File Offset: 0x010F134A
 		public void SetForceFeedbackConfig(EGlobalKuroForceFeedbackType feedbackConfig, int globalFeedbackCoef)
 		{
 			ABasePlayerController.SetKuroForceFeedbackConfig(feedbackConfig, globalFeedbackCoef);
 		}
 
-		// Token: 0x06045997 RID: 285079 RVA: 0x0114935C File Offset: 0x0114755C
+		// Token: 0x0603BB47 RID: 244551 RVA: 0x010F3154 File Offset: 0x010F1354
 		public void AddInputLayer(int unitId, InputLayer layer)
 		{
 			layer.UnitId = unitId;
@@ -876,7 +888,7 @@ namespace CSharpScript.Game.Input
 			model.AddInputLayer(unitId, layer);
 		}
 
-		// Token: 0x06045998 RID: 285080 RVA: 0x01149384 File Offset: 0x01147584
+		// Token: 0x0603BB48 RID: 244552 RVA: 0x010F317C File Offset: 0x010F137C
 		public void RemoveInputLayer(InputLayer layer)
 		{
 			InputModel model = this.Model;
@@ -887,7 +899,7 @@ namespace CSharpScript.Game.Input
 			model.RemoveInputLayer(layer);
 		}
 
-		// Token: 0x06045999 RID: 285081 RVA: 0x011493A4 File Offset: 0x011475A4
+		// Token: 0x0603BB49 RID: 244553 RVA: 0x010F319C File Offset: 0x010F139C
 		[NullableContext(2)]
 		public InputLayer CreateInputLayer(EInputLayer layerType)
 		{
@@ -936,7 +948,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x0604599A RID: 285082 RVA: 0x01149464 File Offset: 0x01147664
+		// Token: 0x0603BB4A RID: 244554 RVA: 0x010F325C File Offset: 0x010F145C
 		[NullableContext(2)]
 		public InputLayer GetInputLayer(int unitId, EInputLayer layerType)
 		{
@@ -948,7 +960,7 @@ namespace CSharpScript.Game.Input
 			return model.GetInputLayer(unitId, layerType);
 		}
 
-		// Token: 0x0604599B RID: 285083 RVA: 0x01149488 File Offset: 0x01147688
+		// Token: 0x0603BB4B RID: 244555 RVA: 0x010F3280 File Offset: 0x010F1480
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -964,8 +976,8 @@ namespace CSharpScript.Game.Input
 			return model.GetInputLayers(unitId);
 		}
 
-		// Token: 0x17009B90 RID: 39824
-		// (get) Token: 0x0604599C RID: 285084 RVA: 0x011494A8 File Offset: 0x011476A8
+		// Token: 0x170070D0 RID: 28880
+		// (get) Token: 0x0603BB4C RID: 244556 RVA: 0x010F32A0 File Offset: 0x010F14A0
 		public static InputController Instance
 		{
 			get
@@ -974,7 +986,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x0604599D RID: 285085 RVA: 0x011494AF File Offset: 0x011476AF
+		// Token: 0x0603BB4D RID: 244557 RVA: 0x010F32A7 File Offset: 0x010F14A7
 		public static InputController GetOrCreateInstance()
 		{
 			if (InputController._Instance == null)
@@ -984,7 +996,7 @@ namespace CSharpScript.Game.Input
 			return InputController._Instance;
 		}
 
-		// Token: 0x0604599E RID: 285086 RVA: 0x011494C3 File Offset: 0x011476C3
+		// Token: 0x0603BB4E RID: 244558 RVA: 0x010F32BB File Offset: 0x010F14BB
 		public static bool CreateInstance()
 		{
 			if (InputController._Instance != null)
@@ -995,66 +1007,66 @@ namespace CSharpScript.Game.Input
 			return true;
 		}
 
-		// Token: 0x0604599F RID: 285087 RVA: 0x011494D9 File Offset: 0x011476D9
+		// Token: 0x0603BB4F RID: 244559 RVA: 0x010F32D1 File Offset: 0x010F14D1
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060459A0 RID: 285088 RVA: 0x011494DB File Offset: 0x011476DB
+		// Token: 0x0603BB50 RID: 244560 RVA: 0x010F32D3 File Offset: 0x010F14D3
 		public static void ResetStaticDefaultValue()
 		{
 			InputController._Instance = null;
 		}
 
-		// Token: 0x060459A1 RID: 285089 RVA: 0x011494E3 File Offset: 0x011476E3
+		// Token: 0x0603BB51 RID: 244561 RVA: 0x010F32DB File Offset: 0x010F14DB
 		static InputController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InputController.CreateStaticDefaultValue), new Action(InputController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040244FE RID: 148734
+		// Token: 0x0401F7B3 RID: 128947
 		private const int KEY_RELEASED_TIME = -1;
 
-		// Token: 0x040244FF RID: 148735
+		// Token: 0x0401F7B4 RID: 128948
 		private readonly Stat PostProcessInputStat = Stat.Create("InputController.PostProcessInput", "", "");
 
-		// Token: 0x04024500 RID: 148736
+		// Token: 0x0401F7B5 RID: 128949
 		private readonly Stat HandleInputAxisStat = Stat.Create("InputController.HandleInputAxis", "", "");
 
-		// Token: 0x04024501 RID: 148737
+		// Token: 0x0401F7B6 RID: 128950
 		private readonly Stat HandleHoldStat = Stat.Create("InputController.HandleHold", "", "");
 
-		// Token: 0x04024502 RID: 148738
+		// Token: 0x0401F7B7 RID: 128951
 		private readonly Stat UnBindInputDataStat = Stat.Create("InputController.UnBindInputData", "", "");
 
-		// Token: 0x04024503 RID: 148739
+		// Token: 0x0401F7B8 RID: 128952
 		private readonly Stat HandleBindInputDataStat = Stat.Create("InputController.HandleBindInputData", "", "");
 
-		// Token: 0x04024504 RID: 148740
+		// Token: 0x0401F7B9 RID: 128953
 		private readonly Stat BindInputDataStat = Stat.Create("InputController.BindInputData", "", "");
 
-		// Token: 0x04024505 RID: 148741
+		// Token: 0x0401F7BA RID: 128954
 		private readonly Stat AddViewHotKeyActionByTypeStat = Stat.Create("InputController.AddViewHotKeyActionByType", "", "");
 
-		// Token: 0x04024506 RID: 148742
+		// Token: 0x0401F7BB RID: 128955
 		private readonly Stat SwitchKeysByBindingTypeStat = Stat.Create("InputController.SwitchKeysByBindingType", "", "");
 
-		// Token: 0x04024507 RID: 148743
+		// Token: 0x0401F7BC RID: 128956
 		private bool CanMoveFront = true;
 
-		// Token: 0x04024508 RID: 148744
+		// Token: 0x0401F7BD RID: 128957
 		private bool CanMoveBack = true;
 
-		// Token: 0x04024509 RID: 148745
+		// Token: 0x0401F7BE RID: 128958
 		private bool CanMoveLeft = true;
 
-		// Token: 0x0402450A RID: 148746
+		// Token: 0x0401F7BF RID: 128959
 		private bool CanMoveRight = true;
 
-		// Token: 0x0402450B RID: 148747
+		// Token: 0x0401F7C0 RID: 128960
 		private HashSet<EInputAxis> AutoClearAxisSet = new HashSet<EInputAxis>();
 
-		// Token: 0x0402450C RID: 148748
+		// Token: 0x0401F7C1 RID: 128961
 		[Nullable(2)]
 		private static InputController _Instance;
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020FF RID: 8447
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002360 RID: 9056
 	public class PerformSunSpiritGearRoundTrip : ActionParams
 	{
-		// Token: 0x0600B9D4 RID: 47572 RVA: 0x001AD958 File Offset: 0x001ABB58
+		// Token: 0x0600C560 RID: 50528 RVA: 0x001C4AB8 File Offset: 0x001C2CB8
 		private PerformSunSpiritGearRoundTrip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B9D5 RID: 47573 RVA: 0x001AD990 File Offset: 0x001ABB90
+		// Token: 0x0600C561 RID: 50529 RVA: 0x001C4AF0 File Offset: 0x001C2CF0
 		public static PerformSunSpiritGearRoundTrip Create([Nullable(2)] PerformSunSpiritGearRoundTrip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9D6 RID: 47574 RVA: 0x001AD9A3 File Offset: 0x001ABBA3
+		// Token: 0x0600C562 RID: 50530 RVA: 0x001C4B03 File Offset: 0x001C2D03
 		public static PerformSunSpiritGearRoundTrip CreateFromSetValue([Nullable(2)] PerformSunSpiritGearRoundTrip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9D7 RID: 47575 RVA: 0x001AD9B6 File Offset: 0x001ABBB6
+		// Token: 0x0600C563 RID: 50531 RVA: 0x001C4B16 File Offset: 0x001C2D16
 		public PerformSunSpiritGearRoundTrip_SetValue ToSetValue()
 		{
 			return new PerformSunSpiritGearRoundTrip_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170038C5 RID: 14533
-		// (get) Token: 0x0600B9D8 RID: 47576 RVA: 0x001AD9D5 File Offset: 0x001ABBD5
-		// (set) Token: 0x0600B9D9 RID: 47577 RVA: 0x001ADA00 File Offset: 0x001ABC00
+		// Token: 0x17003BB1 RID: 15281
+		// (get) Token: 0x0600C564 RID: 50532 RVA: 0x001C4B35 File Offset: 0x001C2D35
+		// (set) Token: 0x0600C565 RID: 50533 RVA: 0x001C4B60 File Offset: 0x001C2D60
 		public virtual ESunSpiritGearRoundTripType PerformType
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038C6 RID: 14534
-		// (get) Token: 0x0600B9DA RID: 47578 RVA: 0x001ADA0E File Offset: 0x001ABC0E
-		// (set) Token: 0x0600B9DB RID: 47579 RVA: 0x001ADA39 File Offset: 0x001ABC39
+		// Token: 0x17003BB2 RID: 15282
+		// (get) Token: 0x0600C566 RID: 50534 RVA: 0x001C4B6E File Offset: 0x001C2D6E
+		// (set) Token: 0x0600C567 RID: 50535 RVA: 0x001C4B99 File Offset: 0x001C2D99
 		public virtual int SunSpiritGearId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006F48 RID: 28488
+		// Token: 0x0400757C RID: 30076
 		[Nullable(2)]
 		protected new PerformSunSpiritGearRoundTrip FbInstance;
 
-		// Token: 0x04006F49 RID: 28489
+		// Token: 0x0400757D RID: 30077
 		[Nullable(2)]
 		protected PerformSunSpiritGearRoundTrip_SetValue PocoInterface;
 	}

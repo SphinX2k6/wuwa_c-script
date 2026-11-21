@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200031A RID: 794
+	// Token: 0x02000321 RID: 801
 	public sealed class CrystalMonsterInfoPb : IMessage<CrystalMonsterInfoPb>, IMessage, IEquatable<CrystalMonsterInfoPb>, IDeepCloneable<CrystalMonsterInfoPb>, IBufferMessage
 	{
-		// Token: 0x0600500D RID: 20493 RVA: 0x000C3570 File Offset: 0x000C1770
+		// Token: 0x060050E6 RID: 20710 RVA: 0x000C595F File Offset: 0x000C3B5F
 		[NullableContext(1)]
 		public static CrystalMonsterInfoPb Create()
 		{
 			return new CrystalMonsterInfoPb();
 		}
 
-		// Token: 0x17000E59 RID: 3673
-		// (get) Token: 0x0600500E RID: 20494 RVA: 0x000C3577 File Offset: 0x000C1777
+		// Token: 0x17000E86 RID: 3718
+		// (get) Token: 0x060050E7 RID: 20711 RVA: 0x000C5966 File Offset: 0x000C3B66
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<CrystalMonsterInfoPb> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000E5A RID: 3674
-		// (get) Token: 0x0600500F RID: 20495 RVA: 0x000C357E File Offset: 0x000C177E
+		// Token: 0x17000E87 RID: 3719
+		// (get) Token: 0x060050E8 RID: 20712 RVA: 0x000C596D File Offset: 0x000C3B6D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000E5B RID: 3675
-		// (get) Token: 0x06005010 RID: 20496 RVA: 0x000C3581 File Offset: 0x000C1781
+		// Token: 0x17000E88 RID: 3720
+		// (get) Token: 0x060050E9 RID: 20713 RVA: 0x000C5970 File Offset: 0x000C3B70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005011 RID: 20497 RVA: 0x000C3588 File Offset: 0x000C1788
+		// Token: 0x060050EA RID: 20714 RVA: 0x000C5977 File Offset: 0x000C3B77
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CrystalMonsterInfoPb()
 		{
 		}
 
-		// Token: 0x06005012 RID: 20498 RVA: 0x000C359B File Offset: 0x000C179B
+		// Token: 0x060050EB RID: 20715 RVA: 0x000C598A File Offset: 0x000C3B8A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CrystalMonsterInfoPb(CrystalMonsterInfoPb other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06005013 RID: 20499 RVA: 0x000C35C5 File Offset: 0x000C17C5
+		// Token: 0x060050EC RID: 20716 RVA: 0x000C59B4 File Offset: 0x000C3BB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CrystalMonsterInfoPb Clone()
@@ -78,8 +78,8 @@ namespace Aki.Protocol
 			return new CrystalMonsterInfoPb(this);
 		}
 
-		// Token: 0x17000E5C RID: 3676
-		// (get) Token: 0x06005014 RID: 20500 RVA: 0x000C35CD File Offset: 0x000C17CD
+		// Token: 0x17000E89 RID: 3721
+		// (get) Token: 0x060050ED RID: 20717 RVA: 0x000C59BC File Offset: 0x000C3BBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<CrystalMonsterSlotInfo> SlotInfoList
@@ -90,7 +90,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005015 RID: 20501 RVA: 0x000C35D5 File Offset: 0x000C17D5
+		// Token: 0x060050EE RID: 20718 RVA: 0x000C59C4 File Offset: 0x000C3BC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -98,7 +98,7 @@ namespace Aki.Protocol
 			return this.Equals(other as CrystalMonsterInfoPb);
 		}
 
-		// Token: 0x06005016 RID: 20502 RVA: 0x000C35E3 File Offset: 0x000C17E3
+		// Token: 0x060050EF RID: 20719 RVA: 0x000C59D2 File Offset: 0x000C3BD2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CrystalMonsterInfoPb other)
@@ -106,7 +106,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.slotInfoList_.Equals(other.slotInfoList_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06005017 RID: 20503 RVA: 0x000C3618 File Offset: 0x000C1818
+		// Token: 0x060050F0 RID: 20720 RVA: 0x000C5A08 File Offset: 0x000C3C08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005018 RID: 20504 RVA: 0x000C364C File Offset: 0x000C184C
+		// Token: 0x060050F1 RID: 20721 RVA: 0x000C5A3C File Offset: 0x000C3C3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06005019 RID: 20505 RVA: 0x000C3659 File Offset: 0x000C1859
+		// Token: 0x060050F2 RID: 20722 RVA: 0x000C5A49 File Offset: 0x000C3C49
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600501A RID: 20506 RVA: 0x000C3662 File Offset: 0x000C1862
+		// Token: 0x060050F3 RID: 20723 RVA: 0x000C5A52 File Offset: 0x000C3C52
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600501B RID: 20507 RVA: 0x000C368C File Offset: 0x000C188C
+		// Token: 0x060050F4 RID: 20724 RVA: 0x000C5A7C File Offset: 0x000C3C7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -162,7 +162,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600501C RID: 20508 RVA: 0x000C36C5 File Offset: 0x000C18C5
+		// Token: 0x060050F5 RID: 20725 RVA: 0x000C5AB5 File Offset: 0x000C3CB5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CrystalMonsterInfoPb other)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600501D RID: 20509 RVA: 0x000C36F3 File Offset: 0x000C18F3
+		// Token: 0x060050F6 RID: 20726 RVA: 0x000C5AE3 File Offset: 0x000C3CE3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -183,7 +183,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600501E RID: 20510 RVA: 0x000C36FC File Offset: 0x000C18FC
+		// Token: 0x060050F7 RID: 20727 RVA: 0x000C5AEC File Offset: 0x000C3CEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -206,19 +206,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003248 RID: 12872
+		// Token: 0x040032DF RID: 13023
 		private static readonly MessageParser<CrystalMonsterInfoPb> _parser = new MessageParser<CrystalMonsterInfoPb>(() => new CrystalMonsterInfoPb());
 
-		// Token: 0x04003249 RID: 12873
+		// Token: 0x040032E0 RID: 13024
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400324A RID: 12874
+		// Token: 0x040032E1 RID: 13025
 		public const int SlotInfoListFieldNumber = 1;
 
-		// Token: 0x0400324B RID: 12875
+		// Token: 0x040032E2 RID: 13026
 		private static readonly FieldCodec<CrystalMonsterSlotInfo> _repeated_slotInfoList_codec = FieldCodec.ForMessage<CrystalMonsterSlotInfo>(10U, CrystalMonsterSlotInfo.Parser);
 
-		// Token: 0x0400324C RID: 12876
+		// Token: 0x040032E3 RID: 13027
 		private readonly RepeatedField<CrystalMonsterSlotInfo> slotInfoList_ = new RepeatedField<CrystalMonsterSlotInfo>();
 	}
 }

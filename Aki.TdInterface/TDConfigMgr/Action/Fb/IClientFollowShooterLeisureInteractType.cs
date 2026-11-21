@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002994 RID: 10644
+	// Token: 0x02002C7F RID: 11391
 	public class IClientFollowShooterLeisureInteractType
 	{
-		// Token: 0x0600EBA4 RID: 60324 RVA: 0x00227533 File Offset: 0x00225733
-		[NullableContext(1)]
+		// Token: 0x0600FA2F RID: 64047 RVA: 0x00244DBE File Offset: 0x00242FBE
 		public static IClientFollowShooterLeisureInteractType Create(IClientFollowShooterLeisureInteractType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A3E RID: 19006
-		// (get) Token: 0x0600EBA5 RID: 60325 RVA: 0x00227552 File Offset: 0x00225752
+		// Token: 0x17004DDF RID: 19935
+		// (get) Token: 0x0600FA30 RID: 64048 RVA: 0x00244DDD File Offset: 0x00242FDD
 		public virtual EClientFollowShooterLeisureInteractType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081C6 RID: 33222
+		// Token: 0x040088B1 RID: 34993
 		private IClientFollowShooterLeisureInteractType Instance;
 	}
 }

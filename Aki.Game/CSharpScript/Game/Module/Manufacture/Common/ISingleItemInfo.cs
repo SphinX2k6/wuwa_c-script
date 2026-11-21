@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x02005691 RID: 22161
+	// Token: 0x02004667 RID: 18023
 	public class ISingleItemInfo
 	{
-		// Token: 0x17008788 RID: 34696
-		// (get) Token: 0x06038636 RID: 230966 RVA: 0x00D62AEE File Offset: 0x00D60CEE
-		// (set) Token: 0x06038637 RID: 230967 RVA: 0x00D62AF6 File Offset: 0x00D60CF6
+		// Token: 0x17005B4F RID: 23375
+		// (get) Token: 0x0602D533 RID: 185651 RVA: 0x00CB0C3E File Offset: 0x00CAEE3E
+		// (set) Token: 0x0602D534 RID: 185652 RVA: 0x00CB0C46 File Offset: 0x00CAEE46
 		public int Proto_ItemId { get; set; }
 
-		// Token: 0x17008789 RID: 34697
-		// (get) Token: 0x06038638 RID: 230968 RVA: 0x00D62AFF File Offset: 0x00D60CFF
-		// (set) Token: 0x06038639 RID: 230969 RVA: 0x00D62B07 File Offset: 0x00D60D07
+		// Token: 0x17005B50 RID: 23376
+		// (get) Token: 0x0602D535 RID: 185653 RVA: 0x00CB0C4F File Offset: 0x00CAEE4F
+		// (set) Token: 0x0602D536 RID: 185654 RVA: 0x00CB0C57 File Offset: 0x00CAEE57
 		public int Proto_ItemNum { get; set; }
 
-		// Token: 0x1700878A RID: 34698
-		// (get) Token: 0x0603863A RID: 230970 RVA: 0x00D62B10 File Offset: 0x00D60D10
-		// (set) Token: 0x0603863B RID: 230971 RVA: 0x00D62B18 File Offset: 0x00D60D18
+		// Token: 0x17005B51 RID: 23377
+		// (get) Token: 0x0602D537 RID: 185655 RVA: 0x00CB0C60 File Offset: 0x00CAEE60
+		// (set) Token: 0x0602D538 RID: 185656 RVA: 0x00CB0C68 File Offset: 0x00CAEE68
 		public bool Proto_IsUnlock { get; set; }
 
-		// Token: 0x1700878B RID: 34699
-		// (get) Token: 0x0603863C RID: 230972 RVA: 0x00D62B21 File Offset: 0x00D60D21
-		// (set) Token: 0x0603863D RID: 230973 RVA: 0x00D62B29 File Offset: 0x00D60D29
+		// Token: 0x17005B52 RID: 23378
+		// (get) Token: 0x0602D539 RID: 185657 RVA: 0x00CB0C71 File Offset: 0x00CAEE71
+		// (set) Token: 0x0602D53A RID: 185658 RVA: 0x00CB0C79 File Offset: 0x00CAEE79
 		public bool? IsEmpty { get; set; }
 	}
 }

@@ -8,12 +8,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007A4 RID: 1956
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000845 RID: 2117
 	public class ITriggeredConfig
 	{
-		// Token: 0x06002A62 RID: 10850 RVA: 0x0006F290 File Offset: 0x0006D490
+		// Token: 0x06002D8A RID: 11658 RVA: 0x00076538 File Offset: 0x00074738
 		private ITriggeredConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,7 +26,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002A63 RID: 10851 RVA: 0x0006F2C8 File Offset: 0x0006D4C8
+		// Token: 0x06002D8B RID: 11659 RVA: 0x00076570 File Offset: 0x00074770
 		public static ITriggeredConfig Create([Nullable(2)] ITriggeredConfig instance)
 		{
 			if (instance == null)
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A64 RID: 10852 RVA: 0x0006F2DB File Offset: 0x0006D4DB
+		// Token: 0x06002D8C RID: 11660 RVA: 0x00076583 File Offset: 0x00074783
 		public static ITriggeredConfig CreateFromSetValue([Nullable(2)] ITriggeredConfig_SetValue value)
 		{
 			if (value == null)
@@ -54,7 +52,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A65 RID: 10853 RVA: 0x0006F2EE File Offset: 0x0006D4EE
+		// Token: 0x06002D8D RID: 11661 RVA: 0x00076596 File Offset: 0x00074796
 		public ITriggeredConfig_SetValue ToSetValue()
 		{
 			return new ITriggeredConfig_SetValue
@@ -66,9 +64,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B1D RID: 2845
-		// (get) Token: 0x06002A66 RID: 10854 RVA: 0x0006F328 File Offset: 0x0006D528
-		// (set) Token: 0x06002A67 RID: 10855 RVA: 0x0006F389 File Offset: 0x0006D589
+		// Token: 0x17000BDF RID: 3039
+		// (get) Token: 0x06002D8E RID: 11662 RVA: 0x000765D0 File Offset: 0x000747D0
+		// (set) Token: 0x06002D8F RID: 11663 RVA: 0x00076631 File Offset: 0x00074831
 		[Nullable(2)]
 		public virtual IConditionGroup Condition
 		{
@@ -99,9 +97,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B1E RID: 2846
-		// (get) Token: 0x06002A68 RID: 10856 RVA: 0x0006F3A0 File Offset: 0x0006D5A0
-		// (set) Token: 0x06002A69 RID: 10857 RVA: 0x0006F3DA File Offset: 0x0006D5DA
+		// Token: 0x17000BE0 RID: 3040
+		// (get) Token: 0x06002D90 RID: 11664 RVA: 0x00076648 File Offset: 0x00074848
+		// (set) Token: 0x06002D91 RID: 11665 RVA: 0x00076682 File Offset: 0x00074882
 		public virtual int? MaxTriggerTimes
 		{
 			get
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B1F RID: 2847
-		// (get) Token: 0x06002A6A RID: 10858 RVA: 0x0006F3E8 File Offset: 0x0006D5E8
-		// (set) Token: 0x06002A6B RID: 10859 RVA: 0x0006F47B File Offset: 0x0006D67B
+		// Token: 0x17000BE1 RID: 3041
+		// (get) Token: 0x06002D92 RID: 11666 RVA: 0x00076690 File Offset: 0x00074890
+		// (set) Token: 0x06002D93 RID: 11667 RVA: 0x00076723 File Offset: 0x00074923
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			get
@@ -161,9 +159,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B20 RID: 2848
-		// (get) Token: 0x06002A6C RID: 10860 RVA: 0x0006F490 File Offset: 0x0006D690
-		// (set) Token: 0x06002A6D RID: 10861 RVA: 0x0006F4CA File Offset: 0x0006D6CA
+		// Token: 0x17000BE2 RID: 3042
+		// (get) Token: 0x06002D94 RID: 11668 RVA: 0x00076738 File Offset: 0x00074938
+		// (set) Token: 0x06002D95 RID: 11669 RVA: 0x00076772 File Offset: 0x00074972
 		public virtual bool? OnlineDisableTip
 		{
 			get
@@ -185,24 +183,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C4B RID: 7243
+		// Token: 0x04001E54 RID: 7764
 		[Nullable(2)]
 		protected ITriggeredConfig FbInstance;
 
-		// Token: 0x04001C4C RID: 7244
+		// Token: 0x04001E55 RID: 7765
 		[Nullable(2)]
 		protected ITriggeredConfig_SetValue PocoInterface;
 
-		// Token: 0x04001C4D RID: 7245
+		// Token: 0x04001E56 RID: 7766
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04001C4E RID: 7246
+		// Token: 0x04001E57 RID: 7767
 		private bool _ConditionInited;
 
-		// Token: 0x04001C4F RID: 7247
+		// Token: 0x04001E58 RID: 7768
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x04001C50 RID: 7248
+		// Token: 0x04001E59 RID: 7769
 		private bool _ActionsInited;
 	}
 }

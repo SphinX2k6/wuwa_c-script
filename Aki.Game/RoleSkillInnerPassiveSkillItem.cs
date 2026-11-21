@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x020028B2 RID: 10418
+// Token: 0x02001E2D RID: 7725
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleSkillInnerPassiveSkillItem : RoleSkillTreeSkillItemBase
 {
-	// Token: 0x060157C7 RID: 88007 RVA: 0x0056B388 File Offset: 0x00569588
+	// Token: 0x060131C7 RID: 78279 RVA: 0x005961D0 File Offset: 0x005943D0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -39,95 +39,95 @@ public class RoleSkillInnerPassiveSkillItem : RoleSkillTreeSkillItemBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060157C8 RID: 88008 RVA: 0x0056B4FB File Offset: 0x005696FB
+	// Token: 0x060131C8 RID: 78280 RVA: 0x00596343 File Offset: 0x00594543
 	protected override UUIItem GetSkillIconItem()
 	{
 		return base.GetItem(0);
 	}
 
-	// Token: 0x060157C9 RID: 88009 RVA: 0x0056B504 File Offset: 0x00569704
+	// Token: 0x060131C9 RID: 78281 RVA: 0x0059634C File Offset: 0x0059454C
 	protected override UUIText GetLevelText()
 	{
 		return base.GetText(1);
 	}
 
-	// Token: 0x060157CA RID: 88010 RVA: 0x0056B50D File Offset: 0x0056970D
+	// Token: 0x060131CA RID: 78282 RVA: 0x00596355 File Offset: 0x00594555
 	protected override UUIText GetNameText()
 	{
 		return base.GetText(2);
 	}
 
-	// Token: 0x060157CB RID: 88011 RVA: 0x0056B516 File Offset: 0x00569716
+	// Token: 0x060131CB RID: 78283 RVA: 0x0059635E File Offset: 0x0059455E
 	protected override UUIItem GetStrongArrowUpItem()
 	{
 		return base.GetItem(3);
 	}
 
-	// Token: 0x060157CC RID: 88012 RVA: 0x0056B51F File Offset: 0x0056971F
+	// Token: 0x060131CC RID: 78284 RVA: 0x00596367 File Offset: 0x00594567
 	public override ESkillTreeNodeType? GetType()
 	{
 		return new ESkillTreeNodeType?(ESkillTreeNodeType.InnerPassiveSkill);
 	}
 
-	// Token: 0x060157CD RID: 88013 RVA: 0x0056B527 File Offset: 0x00569727
+	// Token: 0x060131CD RID: 78285 RVA: 0x0059636F File Offset: 0x0059456F
 	protected override UUIItem GetLeftBranchItem()
 	{
 		return base.GetItem(4);
 	}
 
-	// Token: 0x060157CE RID: 88014 RVA: 0x0056B530 File Offset: 0x00569730
+	// Token: 0x060131CE RID: 78286 RVA: 0x00596378 File Offset: 0x00594578
 	protected override UUISprite GetLeftBranchIcon()
 	{
 		return base.GetSprite(5);
 	}
 
-	// Token: 0x060157CF RID: 88015 RVA: 0x0056B539 File Offset: 0x00569739
+	// Token: 0x060131CF RID: 78287 RVA: 0x00596381 File Offset: 0x00594581
 	protected override UUIItem GetRightBranchItem()
 	{
 		return base.GetItem(6);
 	}
 
-	// Token: 0x060157D0 RID: 88016 RVA: 0x0056B542 File Offset: 0x00569742
+	// Token: 0x060131D0 RID: 78288 RVA: 0x0059638A File Offset: 0x0059458A
 	protected override UUISprite GetRightBranchIcon()
 	{
 		return base.GetSprite(7);
 	}
 
-	// Token: 0x060157D1 RID: 88017 RVA: 0x0056B54B File Offset: 0x0056974B
+	// Token: 0x060131D1 RID: 78289 RVA: 0x00596393 File Offset: 0x00594593
 	protected override UUIItem GetShowTagItem()
 	{
 		return base.GetItem(8);
 	}
 
-	// Token: 0x060157D2 RID: 88018 RVA: 0x0056B554 File Offset: 0x00569754
+	// Token: 0x060131D2 RID: 78290 RVA: 0x0059639C File Offset: 0x0059459C
 	protected override UUITexture GetShowTagTex()
 	{
 		return base.GetTexture(9);
 	}
 
-	// Token: 0x02008EB3 RID: 36531
+	// Token: 0x020080FA RID: 33018
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402E452 RID: 189522
+		// Token: 0x04029B4F RID: 170831
 		SkillIconItem,
-		// Token: 0x0402E453 RID: 189523
+		// Token: 0x04029B50 RID: 170832
 		LevelText,
-		// Token: 0x0402E454 RID: 189524
+		// Token: 0x04029B51 RID: 170833
 		NameText,
-		// Token: 0x0402E455 RID: 189525
+		// Token: 0x04029B52 RID: 170834
 		StrongArrowUpItem,
-		// Token: 0x0402E456 RID: 189526
+		// Token: 0x04029B53 RID: 170835
 		LeftBranchItem,
-		// Token: 0x0402E457 RID: 189527
+		// Token: 0x04029B54 RID: 170836
 		LeftBranchIconSprite,
-		// Token: 0x0402E458 RID: 189528
+		// Token: 0x04029B55 RID: 170837
 		RightBranchItem,
-		// Token: 0x0402E459 RID: 189529
+		// Token: 0x04029B56 RID: 170838
 		RightBranchIconSprite,
-		// Token: 0x0402E45A RID: 189530
+		// Token: 0x04029B57 RID: 170839
 		ShowTagItem,
-		// Token: 0x0402E45B RID: 189531
+		// Token: 0x04029B58 RID: 170840
 		ShowTagTex
 	}
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x0200188E RID: 6286
+// Token: 0x02000D47 RID: 3399
 public enum EPinballFormation
 {
-	// Token: 0x04005355 RID: 21333
+	// Token: 0x04005400 RID: 21504
 	Quality = 1
 }

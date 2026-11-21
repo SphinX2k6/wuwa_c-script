@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A2F RID: 23087
+	// Token: 0x0200603C RID: 24636
 	public class ITargetGearGroupFailureConditionT
 	{
-		// Token: 0x1700ADAB RID: 44459
-		// (get) Token: 0x060273FC RID: 160764 RVA: 0x00566ABE File Offset: 0x00564CBE
-		// (set) Token: 0x060273FD RID: 160765 RVA: 0x00566AC6 File Offset: 0x00564CC6
+		// Token: 0x1700B6E3 RID: 46819
+		// (get) Token: 0x06029974 RID: 170356 RVA: 0x005ADA82 File Offset: 0x005ABC82
+		// (set) Token: 0x06029975 RID: 170357 RVA: 0x005ADA8A File Offset: 0x005ABC8A
 		public ETargetGearGroupFailureCondition Type { get; set; }
 
-		// Token: 0x060273FE RID: 160766 RVA: 0x00566ACF File Offset: 0x00564CCF
+		// Token: 0x06029976 RID: 170358 RVA: 0x005ADA93 File Offset: 0x005ABC93
 		public ITargetGearGroupFailureConditionT()
 		{
 			this.Type = ETargetGearGroupFailureCondition.ArbitraryState;

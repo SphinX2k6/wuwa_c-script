@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002DDE RID: 11742
+// Token: 0x02002339 RID: 9017
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class BulletLogicWhirlpool : BulletLogicController<LogicDataWhirlpool, object>
 {
-	// Token: 0x06018A58 RID: 100952 RVA: 0x0064F7E8 File Offset: 0x0064D9E8
+	// Token: 0x06016305 RID: 90885 RVA: 0x00675924 File Offset: 0x00673B24
 	public BulletLogicWhirlpool(LogicDataWhirlpool bulletLogicBase, Entity bullet) : base(bulletLogicBase, bullet)
 	{
 		base.NeedTick = true;
@@ -24,12 +24,12 @@ public class BulletLogicWhirlpool : BulletLogicController<LogicDataWhirlpool, ob
 		this.MoveTime = bulletLogicBase.MoveTime;
 	}
 
-	// Token: 0x06018A59 RID: 100953 RVA: 0x0064F84E File Offset: 0x0064DA4E
+	// Token: 0x06016306 RID: 90886 RVA: 0x0067598A File Offset: 0x00673B8A
 	public override void OnInit()
 	{
 	}
 
-	// Token: 0x06018A5A RID: 100954 RVA: 0x0064F850 File Offset: 0x0064DA50
+	// Token: 0x06016307 RID: 90887 RVA: 0x0067598C File Offset: 0x00673B8C
 	protected override void Update(float deltaTime)
 	{
 		foreach (Entity item in this.BulletInfo.CollisionInfo.CharacterEntityMap.Keys)
@@ -42,7 +42,7 @@ public class BulletLogicWhirlpool : BulletLogicController<LogicDataWhirlpool, ob
 		}
 	}
 
-	// Token: 0x06018A5B RID: 100955 RVA: 0x0064F8FC File Offset: 0x0064DAFC
+	// Token: 0x06016308 RID: 90888 RVA: 0x00675A38 File Offset: 0x00673C38
 	private void UpdateCharacterWhirlpool(Entity characterEntity)
 	{
 		CharacterMoveComponent characterMoveComponent = (characterEntity != null) ? characterEntity.GetComponent<CharacterMoveComponent>() : null;
@@ -71,7 +71,7 @@ public class BulletLogicWhirlpool : BulletLogicController<LogicDataWhirlpool, ob
 		}
 	}
 
-	// Token: 0x06018A5C RID: 100956 RVA: 0x0064FA44 File Offset: 0x0064DC44
+	// Token: 0x06016309 RID: 90889 RVA: 0x00675B80 File Offset: 0x00673D80
 	private void GetToLocation()
 	{
 		if (FNameUtil.IsNothing(this.LogicController.AttackerSocketName))
@@ -84,7 +84,7 @@ public class BulletLogicWhirlpool : BulletLogicController<LogicDataWhirlpool, ob
 		location.FromUeVector(socketLocation);
 	}
 
-	// Token: 0x06018A5D RID: 100957 RVA: 0x0064FAA8 File Offset: 0x0064DCA8
+	// Token: 0x0601630A RID: 90890 RVA: 0x00675BE4 File Offset: 0x00673DE4
 	public override void OnBulletDestroy()
 	{
 		foreach (Entity entity in this.CharacterInArea)
@@ -99,31 +99,31 @@ public class BulletLogicWhirlpool : BulletLogicController<LogicDataWhirlpool, ob
 		this.CharacterInArea.Clear();
 	}
 
-	// Token: 0x0400B79B RID: 47003
+	// Token: 0x0400BB21 RID: 47905
 	private const int DEBUG_SEGMENTS = 10;
 
-	// Token: 0x0400B79C RID: 47004
+	// Token: 0x0400BB22 RID: 47906
 	private const float DEBUG_DURATION = 3f;
 
-	// Token: 0x0400B79D RID: 47005
+	// Token: 0x0400BB23 RID: 47907
 	private const float DEBUG_THICKNESS = 3f;
 
-	// Token: 0x0400B79E RID: 47006
+	// Token: 0x0400BB24 RID: 47908
 	private readonly float WeightLimit;
 
-	// Token: 0x0400B79F RID: 47007
+	// Token: 0x0400BB25 RID: 47909
 	[Nullable(2)]
 	private readonly BulletInfo BulletInfo;
 
-	// Token: 0x0400B7A0 RID: 47008
+	// Token: 0x0400BB26 RID: 47910
 	private readonly int Id;
 
-	// Token: 0x0400B7A1 RID: 47009
+	// Token: 0x0400BB27 RID: 47911
 	private readonly float MoveTime;
 
-	// Token: 0x0400B7A2 RID: 47010
+	// Token: 0x0400BB28 RID: 47912
 	private readonly HashSet<Entity> CharacterInArea = new HashSet<Entity>();
 
-	// Token: 0x0400B7A3 RID: 47011
+	// Token: 0x0400BB29 RID: 47913
 	private readonly Vector Location = Vector.Create();
 }

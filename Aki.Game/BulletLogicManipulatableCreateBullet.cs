@@ -5,7 +5,7 @@ using CSharpScript.Game.NewWorld.Common.Component;
 using CSharpScript.Game.NewWorld.SceneItem;
 using UnrealEngine;
 
-// Token: 0x02002DD3 RID: 11731
+// Token: 0x0200232D RID: 9005
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,13 +15,13 @@ using UnrealEngine;
 })]
 public class BulletLogicManipulatableCreateBullet : BulletLogicController<LogicDataManipulatableCreateBullet, object>
 {
-	// Token: 0x06018A2A RID: 100906 RVA: 0x0064D719 File Offset: 0x0064B919
+	// Token: 0x060162D2 RID: 90834 RVA: 0x006734FD File Offset: 0x006716FD
 	public BulletLogicManipulatableCreateBullet(LogicDataManipulatableCreateBullet bulletLogicBase, Entity bullet) : base(bulletLogicBase, bullet)
 	{
 		this.Parameter = bulletLogicBase;
 	}
 
-	// Token: 0x06018A2B RID: 100907 RVA: 0x0064D72C File Offset: 0x0064B92C
+	// Token: 0x060162D3 RID: 90835 RVA: 0x00673510 File Offset: 0x00671710
 	[NullableContext(2)]
 	public override void BulletLogicActionOnHitObstacles(object param = null)
 	{
@@ -65,7 +65,7 @@ public class BulletLogicManipulatableCreateBullet : BulletLogicController<LogicD
 		}
 	}
 
-	// Token: 0x06018A2C RID: 100908 RVA: 0x0064D8D0 File Offset: 0x0064BAD0
+	// Token: 0x060162D4 RID: 90836 RVA: 0x006736B4 File Offset: 0x006718B4
 	public bool CheckCondition(Entity victim)
 	{
 		LogicDataManipulatableCreateBullet parameter = this.Parameter;
@@ -97,6 +97,6 @@ public class BulletLogicManipulatableCreateBullet : BulletLogicController<LogicD
 		return true;
 	}
 
-	// Token: 0x0400B775 RID: 46965
+	// Token: 0x0400BAF0 RID: 47856
 	private readonly LogicDataManipulatableCreateBullet Parameter;
 }

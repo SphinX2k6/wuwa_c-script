@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E33 RID: 15923
+	// Token: 0x0200426E RID: 17006
 	public struct IFinishDungeonQuestCondition : IFlatbufferObject
 	{
-		// Token: 0x17006E1A RID: 28186
-		// (get) Token: 0x0601651B RID: 91419 RVA: 0x00338DBB File Offset: 0x00336FBB
+		// Token: 0x17007400 RID: 29696
+		// (get) Token: 0x06017B48 RID: 97096 RVA: 0x003619B3 File Offset: 0x0035FBB3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601651C RID: 91420 RVA: 0x00338DC8 File Offset: 0x00336FC8
+		// Token: 0x06017B49 RID: 97097 RVA: 0x003619C0 File Offset: 0x0035FBC0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601651D RID: 91421 RVA: 0x00338DD0 File Offset: 0x00336FD0
+		// Token: 0x06017B4A RID: 97098 RVA: 0x003619C8 File Offset: 0x0035FBC8
 		public static IFinishDungeonQuestCondition GetRootAsIFinishDungeonQuestCondition(ByteBuffer _bb)
 		{
 			return IFinishDungeonQuestCondition.GetRootAsIFinishDungeonQuestCondition(_bb, default(IFinishDungeonQuestCondition));
 		}
 
-		// Token: 0x0601651E RID: 91422 RVA: 0x00338DEC File Offset: 0x00336FEC
+		// Token: 0x06017B4B RID: 97099 RVA: 0x003619E4 File Offset: 0x0035FBE4
 		public static IFinishDungeonQuestCondition GetRootAsIFinishDungeonQuestCondition(ByteBuffer _bb, IFinishDungeonQuestCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601651F RID: 91423 RVA: 0x00338E09 File Offset: 0x00337009
+		// Token: 0x06017B4C RID: 97100 RVA: 0x00361A01 File Offset: 0x0035FC01
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016520 RID: 91424 RVA: 0x00338E18 File Offset: 0x00337018
+		// Token: 0x06017B4D RID: 97101 RVA: 0x00361A10 File Offset: 0x0035FC10
 		public IFinishDungeonQuestCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006E1B RID: 28187
-		// (get) Token: 0x06016521 RID: 91425 RVA: 0x00338E28 File Offset: 0x00337028
+		// Token: 0x17007401 RID: 29697
+		// (get) Token: 0x06017B4E RID: 97102 RVA: 0x00361A20 File Offset: 0x0035FC20
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006E1C RID: 28188
-		// (get) Token: 0x06016522 RID: 91426 RVA: 0x00338E64 File Offset: 0x00337064
+		// Token: 0x17007402 RID: 29698
+		// (get) Token: 0x06017B4F RID: 97103 RVA: 0x00361A5C File Offset: 0x0035FC5C
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006E1D RID: 28189
-		// (get) Token: 0x06016523 RID: 91427 RVA: 0x00338EC4 File Offset: 0x003370C4
+		// Token: 0x17007403 RID: 29699
+		// (get) Token: 0x06017B50 RID: 97104 RVA: 0x00361ABC File Offset: 0x0035FCBC
 		public TDungeonConditionType ConditionType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016524 RID: 91428 RVA: 0x00338F00 File Offset: 0x00337100
+		// Token: 0x06017B51 RID: 97105 RVA: 0x00361AF8 File Offset: 0x0035FCF8
 		public TTable? Condition<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -104,19 +104,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06016525 RID: 91429 RVA: 0x00338F48 File Offset: 0x00337148
+		// Token: 0x06017B52 RID: 97106 RVA: 0x00361B40 File Offset: 0x0035FD40
 		public IDungeonIdCondition ConditionAsIDungeonIdCondition()
 		{
 			return this.Condition<IDungeonIdCondition>().Value;
 		}
 
-		// Token: 0x06016526 RID: 91430 RVA: 0x00338F64 File Offset: 0x00337164
+		// Token: 0x06017B53 RID: 97107 RVA: 0x00361B5C File Offset: 0x0035FD5C
 		public IDungeonSubTypeCondition ConditionAsIDungeonSubTypeCondition()
 		{
 			return this.Condition<IDungeonSubTypeCondition>().Value;
 		}
 
-		// Token: 0x06016527 RID: 91431 RVA: 0x00338F7F File Offset: 0x0033717F
+		// Token: 0x06017B54 RID: 97108 RVA: 0x00361B77 File Offset: 0x0035FD77
 		public static Offset<IFinishDungeonQuestCondition> CreateIFinishDungeonQuestCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), TDungeonConditionType Condition_type = TDungeonConditionType.NONE, int ConditionOffset = 0)
 		{
 			builder.StartTable(4);
@@ -127,43 +127,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IFinishDungeonQuestCondition.EndIFinishDungeonQuestCondition(builder);
 		}
 
-		// Token: 0x06016528 RID: 91432 RVA: 0x00338FAB File Offset: 0x003371AB
+		// Token: 0x06017B55 RID: 97109 RVA: 0x00361BA3 File Offset: 0x0035FDA3
 		public static void StartIFinishDungeonQuestCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06016529 RID: 91433 RVA: 0x00338FB4 File Offset: 0x003371B4
+		// Token: 0x06017B56 RID: 97110 RVA: 0x00361BAC File Offset: 0x0035FDAC
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601652A RID: 91434 RVA: 0x00338FBF File Offset: 0x003371BF
+		// Token: 0x06017B57 RID: 97111 RVA: 0x00361BB7 File Offset: 0x0035FDB7
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x0601652B RID: 91435 RVA: 0x00338FCF File Offset: 0x003371CF
+		// Token: 0x06017B58 RID: 97112 RVA: 0x00361BC7 File Offset: 0x0035FDC7
 		public static void AddConditionType(FlatBufferBuilder builder, TDungeonConditionType conditionType)
 		{
 			builder.AddByte(2, (byte)conditionType, 0);
 		}
 
-		// Token: 0x0601652C RID: 91436 RVA: 0x00338FDA File Offset: 0x003371DA
+		// Token: 0x06017B59 RID: 97113 RVA: 0x00361BD2 File Offset: 0x0035FDD2
 		public static void AddCondition(FlatBufferBuilder builder, int conditionOffset)
 		{
 			builder.AddOffset(3, conditionOffset, 0);
 		}
 
-		// Token: 0x0601652D RID: 91437 RVA: 0x00338FE5 File Offset: 0x003371E5
+		// Token: 0x06017B5A RID: 97114 RVA: 0x00361BDD File Offset: 0x0035FDDD
 		public static Offset<IFinishDungeonQuestCondition> EndIFinishDungeonQuestCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IFinishDungeonQuestCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601652E RID: 91438 RVA: 0x00338FF4 File Offset: 0x003371F4
+		// Token: 0x06017B5B RID: 97115 RVA: 0x00361BEC File Offset: 0x0035FDEC
 		public IFinishDungeonQuestConditionT UnPack()
 		{
 			IFinishDungeonQuestConditionT finishDungeonQuestConditionT = new IFinishDungeonQuestConditionT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return finishDungeonQuestConditionT;
 		}
 
-		// Token: 0x0601652F RID: 91439 RVA: 0x00339010 File Offset: 0x00337210
+		// Token: 0x06017B5C RID: 97116 RVA: 0x00361C08 File Offset: 0x0035FE08
 		public void UnPackTo(IFinishDungeonQuestConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.Condition.Value = ((this.Condition<IDungeonSubTypeCondition>() != null) ? this.Condition<IDungeonSubTypeCondition>().Value.UnPack() : null);
 		}
 
-		// Token: 0x06016530 RID: 91440 RVA: 0x003390F4 File Offset: 0x003372F4
+		// Token: 0x06017B5D RID: 97117 RVA: 0x00361CEC File Offset: 0x0035FEEC
 		public static Offset<IFinishDungeonQuestCondition> Pack(FlatBufferBuilder builder, IFinishDungeonQuestConditionT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IFinishDungeonQuestCondition.CreateIFinishDungeonQuestCondition(builder, _o.Type, preConditionsOffset, condition_type, conditionOffset);
 		}
 
-		// Token: 0x0400B7B9 RID: 47033
+		// Token: 0x0400C191 RID: 49553
 		private Table __p;
 	}
 }

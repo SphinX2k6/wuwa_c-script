@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008D7 RID: 2263
+	// Token: 0x02000922 RID: 2338
 	public class ConfigRougeMiraclecreationById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600351D RID: 13597 RVA: 0x00185958 File Offset: 0x00183B58
+		// Token: 0x060036DF RID: 14047 RVA: 0x00192B78 File Offset: 0x00190D78
 		static ConfigRougeMiraclecreationById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRougeMiraclecreationById.CreateStaticDefaultValue), new Action(ConfigRougeMiraclecreationById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600351E RID: 13598 RVA: 0x00185978 File Offset: 0x00183B78
+		// Token: 0x060036E0 RID: 14048 RVA: 0x00192B98 File Offset: 0x00190D98
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRougeMiraclecreationById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600351F RID: 13599 RVA: 0x001859F7 File Offset: 0x00183BF7
+		// Token: 0x060036E1 RID: 14049 RVA: 0x00192C17 File Offset: 0x00190E17
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRougeMiraclecreationById.LogPair = null;
 			ConfigRougeMiraclecreationById.HandleId = 0;
 		}
 
-		// Token: 0x06003520 RID: 13600 RVA: 0x00185A05 File Offset: 0x00183C05
+		// Token: 0x060036E2 RID: 14050 RVA: 0x00192C25 File Offset: 0x00190E25
 		public static void Init()
 		{
 			ConfigRougeMiraclecreationById.HandleId = ConfigCommon.InitDataStatement(ConfigRougeMiraclecreationById.HandleId, "db_rogue.db", "select BinData from `RougeMiraclecreation` where Id=?");
 		}
 
-		// Token: 0x06003521 RID: 13601 RVA: 0x00185A20 File Offset: 0x00183C20
+		// Token: 0x060036E3 RID: 14051 RVA: 0x00192C40 File Offset: 0x00190E40
 		public static RougeMiraclecreation? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRougeMiraclecreationById.HandleId, ConfigRougeMiraclecreationById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RougeMiraclecreation?(rootAsRougeMiraclecreation);
 		}
 
-		// Token: 0x04003DC7 RID: 15815
+		// Token: 0x04003FD4 RID: 16340
 		private const string DB = "db_rogue.db";
 
-		// Token: 0x04003DC8 RID: 15816
+		// Token: 0x04003FD5 RID: 16341
 		private const string FILE = "r.肉鸽.xlsx";
 
-		// Token: 0x04003DC9 RID: 15817
+		// Token: 0x04003FD6 RID: 16342
 		private const string TABLE = "RougeMiraclecreation";
 
-		// Token: 0x04003DCA RID: 15818
+		// Token: 0x04003FD7 RID: 16343
 		private const string COMMAND = "select BinData from `RougeMiraclecreation` where Id=?";
 
-		// Token: 0x04003DCB RID: 15819
+		// Token: 0x04003FD8 RID: 16344
 		private const string KEY_PREFIX = "RougeMiraclecreationById";
 
-		// Token: 0x04003DCC RID: 15820
+		// Token: 0x04003FD9 RID: 16345
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003DCD RID: 15821
+		// Token: 0x04003FDA RID: 16346
 		private static int HandleId;
 	}
 }

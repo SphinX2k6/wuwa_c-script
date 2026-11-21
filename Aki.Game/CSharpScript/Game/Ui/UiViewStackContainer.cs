@@ -2,24 +2,25 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
+using CSharpScript.Game.Module.UiCamera;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200465E RID: 18014
+	// Token: 0x0200358F RID: 13711
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiViewStackContainer : UiViewContainer
 	{
-		// Token: 0x0602E810 RID: 190480 RVA: 0x00ABEABB File Offset: 0x00ABCCBB
+		// Token: 0x06022F5A RID: 143194 RVA: 0x009EC13B File Offset: 0x009EA33B
 		public UiViewStackContainer(global::Stack<UiViewBase> stack)
 		{
 			this.Stack = stack;
 		}
 
-		// Token: 0x17007606 RID: 30214
-		// (get) Token: 0x0602E811 RID: 190481 RVA: 0x00ABEAF7 File Offset: 0x00ABCCF7
+		// Token: 0x170048C2 RID: 18626
+		// (get) Token: 0x06022F5B RID: 143195 RVA: 0x009EC177 File Offset: 0x009EA377
 		private bool IsLock
 		{
 			get
@@ -28,14 +29,14 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E812 RID: 190482 RVA: 0x00ABEAFF File Offset: 0x00ABCCFF
+		// Token: 0x06022F5C RID: 143196 RVA: 0x009EC17F File Offset: 0x009EA37F
 		private void Lock(string lockReason = "")
 		{
 			this.Operating = true;
 			this.LockOperationPromise = new CustomPromise();
 		}
 
-		// Token: 0x0602E813 RID: 190483 RVA: 0x00ABEB13 File Offset: 0x00ABCD13
+		// Token: 0x06022F5D RID: 143197 RVA: 0x009EC193 File Offset: 0x009EA393
 		private void Unlock(string unlockReason = "", bool needHandlePending = true)
 		{
 			this.Operating = false;
@@ -51,7 +52,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E814 RID: 190484 RVA: 0x00ABEB40 File Offset: 0x00ABCD40
+		// Token: 0x06022F5E RID: 143198 RVA: 0x009EC1C0 File Offset: 0x009EA3C0
 		private void PushView(UiViewBase view)
 		{
 			this.Stack.Push(view);
@@ -65,7 +66,7 @@ namespace CSharpScript.Game.Ui
 			hashSet.Add(view);
 		}
 
-		// Token: 0x0602E815 RID: 190485 RVA: 0x00ABEB90 File Offset: 0x00ABCD90
+		// Token: 0x06022F5F RID: 143199 RVA: 0x009EC210 File Offset: 0x009EA410
 		private void PopView()
 		{
 			UiViewBase uiViewBase = this.Stack.Pop();
@@ -86,7 +87,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E816 RID: 190486 RVA: 0x00ABEC08 File Offset: 0x00ABCE08
+		// Token: 0x06022F60 RID: 143200 RVA: 0x009EC288 File Offset: 0x009EA488
 		private bool DeleteView(UiViewBase view)
 		{
 			EUiViewName name = view.ViewInfo.Name;
@@ -112,7 +113,7 @@ namespace CSharpScript.Game.Ui
 			return flag;
 		}
 
-		// Token: 0x0602E817 RID: 190487 RVA: 0x00ABEC98 File Offset: 0x00ABCE98
+		// Token: 0x06022F61 RID: 143201 RVA: 0x009EC318 File Offset: 0x009EA518
 		private UniTask ProcessViewPending()
 		{
 			UiViewStackContainer.<ProcessViewPending>d__13 <ProcessViewPending>d__;
@@ -123,7 +124,7 @@ namespace CSharpScript.Game.Ui
 			return <ProcessViewPending>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E818 RID: 190488 RVA: 0x00ABECDC File Offset: 0x00ABCEDC
+		// Token: 0x06022F62 RID: 143202 RVA: 0x009EC35C File Offset: 0x009EA55C
 		[NullableContext(0)]
 		public override UniTask<bool> OpenViewAsync([Nullable(1)] UiViewBase view)
 		{
@@ -136,7 +137,7 @@ namespace CSharpScript.Game.Ui
 			return <OpenViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E819 RID: 190489 RVA: 0x00ABED28 File Offset: 0x00ABCF28
+		// Token: 0x06022F63 RID: 143203 RVA: 0x009EC3A8 File Offset: 0x009EA5A8
 		public override UniTask PreOpenViewAsync(UiViewBase view)
 		{
 			UiViewStackContainer.<PreOpenViewAsync>d__15 <PreOpenViewAsync>d__;
@@ -147,7 +148,7 @@ namespace CSharpScript.Game.Ui
 			return <PreOpenViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E81A RID: 190490 RVA: 0x00ABED6C File Offset: 0x00ABCF6C
+		// Token: 0x06022F64 RID: 143204 RVA: 0x009EC3EC File Offset: 0x009EA5EC
 		public override UniTask OpenViewAfterPreOpenedAsync(UiViewBase view)
 		{
 			UiViewStackContainer.<OpenViewAfterPreOpenedAsync>d__16 <OpenViewAfterPreOpenedAsync>d__;
@@ -159,7 +160,7 @@ namespace CSharpScript.Game.Ui
 			return <OpenViewAfterPreOpenedAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E81B RID: 190491 RVA: 0x00ABEDB8 File Offset: 0x00ABCFB8
+		// Token: 0x06022F65 RID: 143205 RVA: 0x009EC438 File Offset: 0x009EA638
 		private UniTask OpenStackViewAsync(UiViewBase view, [Nullable(2)] UiViewBase lastView)
 		{
 			UiViewStackContainer.<OpenStackViewAsync>d__17 <OpenStackViewAsync>d__;
@@ -172,7 +173,7 @@ namespace CSharpScript.Game.Ui
 			return <OpenStackViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E81C RID: 190492 RVA: 0x00ABEE0C File Offset: 0x00ABD00C
+		// Token: 0x06022F66 RID: 143206 RVA: 0x009EC48C File Offset: 0x009EA68C
 		public override UniTask CloseViewAsync(UiViewBase view)
 		{
 			UiViewStackContainer.<CloseViewAsync>d__18 <CloseViewAsync>d__;
@@ -184,7 +185,7 @@ namespace CSharpScript.Game.Ui
 			return <CloseViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E81D RID: 190493 RVA: 0x00ABEE58 File Offset: 0x00ABD058
+		// Token: 0x06022F67 RID: 143207 RVA: 0x009EC4D8 File Offset: 0x009EA6D8
 		public UniTask CloseAndOpenNewAsync(UiViewBase closeView, UiViewBase view)
 		{
 			UiViewStackContainer.<CloseAndOpenNewAsync>d__19 <CloseAndOpenNewAsync>d__;
@@ -197,7 +198,7 @@ namespace CSharpScript.Game.Ui
 			return <CloseAndOpenNewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E81E RID: 190494 RVA: 0x00ABEEAC File Offset: 0x00ABD0AC
+		// Token: 0x06022F68 RID: 143208 RVA: 0x009EC52C File Offset: 0x009EA72C
 		public UniTask ResetToViewAsync(UiViewBase targetView)
 		{
 			UiViewStackContainer.<ResetToViewAsync>d__20 <ResetToViewAsync>d__;
@@ -209,7 +210,7 @@ namespace CSharpScript.Game.Ui
 			return <ResetToViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E81F RID: 190495 RVA: 0x00ABEEF8 File Offset: 0x00ABD0F8
+		// Token: 0x06022F69 RID: 143209 RVA: 0x009EC578 File Offset: 0x009EA778
 		private UniTask CloseViewInternal(UiViewBase view, [Nullable(2)] UiViewBase nextView, bool isCloseAndOpen = false)
 		{
 			UiViewStackContainer.<CloseViewInternal>d__21 <CloseViewInternal>d__;
@@ -223,7 +224,7 @@ namespace CSharpScript.Game.Ui
 			return <CloseViewInternal>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E820 RID: 190496 RVA: 0x00ABEF54 File Offset: 0x00ABD154
+		// Token: 0x06022F6A RID: 143210 RVA: 0x009EC5D4 File Offset: 0x009EA7D4
 		public UniTask CloseHistoryRingViewAsync(EUiViewName viewName)
 		{
 			UiViewStackContainer.<CloseHistoryRingViewAsync>d__22 <CloseHistoryRingViewAsync>d__;
@@ -235,37 +236,61 @@ namespace CSharpScript.Game.Ui
 			return <CloseHistoryRingViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E821 RID: 190497 RVA: 0x00ABEFA0 File Offset: 0x00ABD1A0
-		private void PushCameraHandle(UiViewBase view, bool bBlend = true)
+		// Token: 0x06022F6B RID: 143211 RVA: 0x009EC620 File Offset: 0x009EA820
+		private void PushCameraHandleByOpenView(UiViewBase view, EUiCameraHandleOperationType operationType = EUiCameraHandleOperationType.Blend)
 		{
-			IUiCameraBehavior uiCameraBehavior = view as IUiCameraBehavior;
-			if (uiCameraBehavior != null)
+			IUiViewCameraBehavior uiViewCameraBehavior = view as IUiViewCameraBehavior;
+			if (uiViewCameraBehavior != null)
 			{
-				uiCameraBehavior.PushCameraHandle(view.ViewInfo.Name, view.GetViewId(), bBlend);
+				uiViewCameraBehavior.PushCameraHandleByOpenView(view.ViewInfo.Name, view.GetViewId(), operationType);
 				return;
 			}
-			UiCameraAnimationController.Instance.PushCameraHandle(view.ViewInfo.Name, new int?(view.GetViewId()), bBlend);
+			UiCameraController.Instance.PushCameraHandleByOpenView(view.ViewInfo.Name, view.GetViewId(), operationType);
 		}
 
-		// Token: 0x0602E822 RID: 190498 RVA: 0x00ABEFF4 File Offset: 0x00ABD1F4
-		private void PopCameraHandle(UiViewBase view, UiViewInfo stackTopInfo, bool popOrDelete = true)
+		// Token: 0x06022F6C RID: 143212 RVA: 0x009EC66C File Offset: 0x009EA86C
+		private void PopCameraHandleByCloseView(UiViewBase view, [Nullable(2)] UiViewBase nextView, EUiCameraHandleOperationType operationType)
 		{
-			IUiCameraBehavior uiCameraBehavior = view as IUiCameraBehavior;
-			if (uiCameraBehavior != null)
+			IUiViewCameraBehavior uiViewCameraBehavior = view as IUiViewCameraBehavior;
+			if (uiViewCameraBehavior != null)
 			{
-				uiCameraBehavior.PopCameraHandle(view.ViewInfo.Name, stackTopInfo, view.GetViewId(), popOrDelete);
+				IUiViewCameraBehavior uiViewCameraBehavior2 = uiViewCameraBehavior;
+				EUiViewName name = view.ViewInfo.Name;
+				EUiViewName? nextViewName;
+				if (nextView == null)
+				{
+					nextViewName = null;
+				}
+				else
+				{
+					UiViewInfo viewInfo = nextView.ViewInfo;
+					nextViewName = ((viewInfo != null) ? new EUiViewName?(viewInfo.Name) : null);
+				}
+				uiViewCameraBehavior2.PopCameraHandleByCloseView(name, nextViewName, view.GetViewId(), operationType);
 				return;
 			}
-			UiCameraAnimationController.Instance.PopCameraHandle(view.ViewInfo.Name, stackTopInfo, view.GetViewId(), popOrDelete);
+			UiCameraController instance = UiCameraController.Instance;
+			EUiViewName name2 = view.ViewInfo.Name;
+			EUiViewName? nextViewName2;
+			if (nextView == null)
+			{
+				nextViewName2 = null;
+			}
+			else
+			{
+				UiViewInfo viewInfo2 = nextView.ViewInfo;
+				nextViewName2 = ((viewInfo2 != null) ? new EUiViewName?(viewInfo2.Name) : null);
+			}
+			instance.PopCameraHandleByCloseView(name2, nextViewName2, view.GetViewId(), operationType);
 		}
 
-		// Token: 0x0602E823 RID: 190499 RVA: 0x00ABF042 File Offset: 0x00ABD242
+		// Token: 0x06022F6D RID: 143213 RVA: 0x009EC712 File Offset: 0x009EA912
 		private bool CheckContainerHasSameView(EUiViewName viewName)
 		{
 			return this.NameToViewSetMap.ContainsKey(viewName);
 		}
 
-		// Token: 0x0602E824 RID: 190500 RVA: 0x00ABF050 File Offset: 0x00ABD250
+		// Token: 0x06022F6E RID: 143214 RVA: 0x009EC720 File Offset: 0x009EA920
 		public override void ClearContainer(bool isSeamlessTravel)
 		{
 			List<UiViewBase> list = new List<UiViewBase>();
@@ -285,7 +310,7 @@ namespace CSharpScript.Game.Ui
 			Log.Instance.Info(ELogModule.StackContainer, ELogAuthor.TL, "ClearContainer 清栈", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0602E825 RID: 190501 RVA: 0x00ABF140 File Offset: 0x00ABD340
+		// Token: 0x06022F6F RID: 143215 RVA: 0x009EC810 File Offset: 0x009EAA10
 		public override UniTask BeforeClearContainerAsync(bool isSeamlessTravel)
 		{
 			UiViewStackContainer.<BeforeClearContainerAsync>d__27 <BeforeClearContainerAsync>d__;
@@ -297,7 +322,7 @@ namespace CSharpScript.Game.Ui
 			return <BeforeClearContainerAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E826 RID: 190502 RVA: 0x00ABF18C File Offset: 0x00ABD38C
+		// Token: 0x06022F70 RID: 143216 RVA: 0x009EC85C File Offset: 0x009EAA5C
 		public UniTask HideViewByPlot()
 		{
 			UiViewStackContainer.<HideViewByPlot>d__28 <HideViewByPlot>d__;
@@ -308,7 +333,7 @@ namespace CSharpScript.Game.Ui
 			return <HideViewByPlot>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E827 RID: 190503 RVA: 0x00ABF1D0 File Offset: 0x00ABD3D0
+		// Token: 0x06022F71 RID: 143217 RVA: 0x009EC8A0 File Offset: 0x009EAAA0
 		public UniTask ShowViewByPlot(Func<UniTask> destroyOtherView = null)
 		{
 			UiViewStackContainer.<ShowViewByPlot>d__29 <ShowViewByPlot>d__;
@@ -320,7 +345,7 @@ namespace CSharpScript.Game.Ui
 			return <ShowViewByPlot>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E828 RID: 190504 RVA: 0x00ABF21C File Offset: 0x00ABD41C
+		// Token: 0x06022F72 RID: 143218 RVA: 0x009EC8EC File Offset: 0x009EAAEC
 		public UniTask WaitSwitchToPlotPending()
 		{
 			UiViewStackContainer.<WaitSwitchToPlotPending>d__30 <WaitSwitchToPlotPending>d__;
@@ -331,7 +356,7 @@ namespace CSharpScript.Game.Ui
 			return <WaitSwitchToPlotPending>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E829 RID: 190505 RVA: 0x00ABF25F File Offset: 0x00ABD45F
+		// Token: 0x06022F73 RID: 143219 RVA: 0x009EC92F File Offset: 0x009EAB2F
 		public void TryUnlock()
 		{
 			if (this.Operating)
@@ -340,7 +365,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E82A RID: 190506 RVA: 0x00ABF278 File Offset: 0x00ABD478
+		// Token: 0x06022F74 RID: 143220 RVA: 0x009EC948 File Offset: 0x009EAB48
 		private unsafe UiViewPending AddPendingView(UiViewBase view, EViewPendingType type, [Nullable(2)] UiViewBase nextView = null)
 		{
 			UiViewPending uiViewPending = new UiViewPending(view, type, nextView);
@@ -393,7 +418,7 @@ namespace CSharpScript.Game.Ui
 			return uiViewPending;
 		}
 
-		// Token: 0x0602E82B RID: 190507 RVA: 0x00ABF404 File Offset: 0x00ABD604
+		// Token: 0x06022F75 RID: 143221 RVA: 0x009ECAD4 File Offset: 0x009EACD4
 		private void DeleteDoublyLinkData(DoublyLinkedNode<UiViewBase> node)
 		{
 			if (node == null)
@@ -409,7 +434,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E82C RID: 190508 RVA: 0x00ABF45C File Offset: 0x00ABD65C
+		// Token: 0x06022F76 RID: 143222 RVA: 0x009ECB2C File Offset: 0x009EAD2C
 		private void AddDoubleLinkData(UiViewBase view)
 		{
 			DoublyLinkedNode<UiViewBase> doublyLinkedNode = this.DoublyLinked.Find((DoublyLinkedNode<UiViewBase> node) => node.Element == null || view.ViewInfo.SortIndex < node.Element.ViewInfo.SortIndex);
@@ -432,42 +457,42 @@ namespace CSharpScript.Game.Ui
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E82D RID: 190509 RVA: 0x00ABF51F File Offset: 0x00ABD71F
+		// Token: 0x06022F77 RID: 143223 RVA: 0x009ECBEF File Offset: 0x009EADEF
 		public bool IsViewPendingListEmpty()
 		{
 			return this.ViewPendingList.Count == 0;
 		}
 
-		// Token: 0x0602E82E RID: 190510 RVA: 0x00ABF530 File Offset: 0x00ABD730
+		// Token: 0x06022F78 RID: 143224 RVA: 0x009ECC00 File Offset: 0x009EAE00
 		private bool CheckMainViewAtBottom(UiViewBase view)
 		{
 			return view.ViewInfo.GetContainerLayerType() != ELayerType.Normal || this.Stack.Size >= 1 || (view.ViewInfo.Name == UiModel.Instance.MainViewName || UiModel.Instance.NormalStackBottomWhiteSet.Contains(view.ViewInfo.Name));
 		}
 
-		// Token: 0x04018E3E RID: 101950
+		// Token: 0x04013497 RID: 78999
 		private readonly global::Stack<UiViewBase> Stack;
 
-		// Token: 0x04018E3F RID: 101951
+		// Token: 0x04013498 RID: 79000
 		private readonly Dictionary<EUiViewName, HashSet<UiViewBase>> NameToViewSetMap = new Dictionary<EUiViewName, HashSet<UiViewBase>>();
 
-		// Token: 0x04018E40 RID: 101952
+		// Token: 0x04013499 RID: 79001
 		private bool Operating;
 
-		// Token: 0x04018E41 RID: 101953
+		// Token: 0x0401349A RID: 79002
 		[Nullable(2)]
 		private CustomPromise ResetToViewPromise;
 
-		// Token: 0x04018E42 RID: 101954
+		// Token: 0x0401349B RID: 79003
 		[Nullable(2)]
 		private CustomPromise LockOperationPromise;
 
-		// Token: 0x04018E43 RID: 101955
+		// Token: 0x0401349C RID: 79004
 		private List<UiViewPending> ViewPendingList = new List<UiViewPending>();
 
-		// Token: 0x04018E44 RID: 101956
+		// Token: 0x0401349D RID: 79005
 		private readonly DoublyLinkedList<UiViewBase> DoublyLinked = new DoublyLinkedList<UiViewBase>(null);
 
-		// Token: 0x04018E45 RID: 101957
+		// Token: 0x0401349E RID: 79006
 		private readonly Dictionary<UiViewBase, DoublyLinkedNode<UiViewBase>> DoublyLinkNodeMap = new Dictionary<UiViewBase, DoublyLinkedNode<UiViewBase>>();
 	}
 }

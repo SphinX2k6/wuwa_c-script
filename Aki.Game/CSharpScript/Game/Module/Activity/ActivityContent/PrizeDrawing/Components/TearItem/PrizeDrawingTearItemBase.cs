@@ -5,12 +5,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Components.TearItem
 {
-	// Token: 0x020062AE RID: 25262
+	// Token: 0x0200522C RID: 21036
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PrizeDrawingTearItemBase : UiPanelBase
 	{
-		// Token: 0x0603F8B1 RID: 260273 RVA: 0x00F5E598 File Offset: 0x00F5C798
+		// Token: 0x06034572 RID: 214386 RVA: 0x00EA54F4 File Offset: 0x00EA36F4
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.LevelSequencePlayer.StopCurrentSequence(false, false);
 		}
 
-		// Token: 0x0603F8B2 RID: 260274 RVA: 0x00F5E5E0 File Offset: 0x00F5C7E0
+		// Token: 0x06034573 RID: 214387 RVA: 0x00EA553C File Offset: 0x00EA373C
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			levelSequencePlayer.Clear();
 		}
 
-		// Token: 0x0603F8B3 RID: 260275 RVA: 0x00F5E5F4 File Offset: 0x00F5C7F4
+		// Token: 0x06034574 RID: 214388 RVA: 0x00EA5550 File Offset: 0x00EA3750
 		public void PlayRevelAnimation()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			levelSequencePlayer.PlaySequencePurely("Reveal", false, false, null, null, false);
 		}
 
-		// Token: 0x0603F8B4 RID: 260276 RVA: 0x00F5E623 File Offset: 0x00F5C823
+		// Token: 0x06034575 RID: 214389 RVA: 0x00EA557F File Offset: 0x00EA377F
 		public void SetRewardList(List<IKujiAwardData> rewardList)
 		{
 			this.RewardList = rewardList;
 		}
 
-		// Token: 0x0603F8B5 RID: 260277 RVA: 0x00F5E62C File Offset: 0x00F5C82C
+		// Token: 0x06034576 RID: 214390 RVA: 0x00EA5588 File Offset: 0x00EA3788
 		protected string RareIdToTexPath(int id, bool isNormal = false)
 		{
 			string[] array;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			return UiResourceConfig.Instance.GetResourcePath(resourceId);
 		}
 
-		// Token: 0x040213B2 RID: 136114
+		// Token: 0x0401BCE1 RID: 113889
 		[Nullable(new byte[]
 		{
 			2,
@@ -66,11 +66,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 		})]
 		protected List<IKujiAwardData> RewardList;
 
-		// Token: 0x040213B3 RID: 136115
+		// Token: 0x0401BCE2 RID: 113890
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x040213B4 RID: 136116
+		// Token: 0x0401BCE3 RID: 113891
 		private readonly Dictionary<int, string[]> RareToTexIdMap = new Dictionary<int, string[]>
 		{
 			{

@@ -2,160 +2,160 @@
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001536 RID: 5430
+	// Token: 0x020015AC RID: 5548
 	public enum ECombatNotifyDataMessage
 	{
-		// Token: 0x0400A3DE RID: 41950
-		CreateBulletNotify = 29868,
-		// Token: 0x0400A3DF RID: 41951
-		DestroyBulletNotify = 16776,
-		// Token: 0x0400A3E0 RID: 41952
-		DamageExecuteNotify = 28964,
-		// Token: 0x0400A3E1 RID: 41953
-		ApplyGameplayEffectNotify = 25830,
-		// Token: 0x0400A3E2 RID: 41954
-		RemoveGameplayEffectNotify = 18345,
-		// Token: 0x0400A3E3 RID: 41955
-		HitNotify = 27776,
-		// Token: 0x0400A3E4 RID: 41956
-		SkillNotify = 20156,
-		// Token: 0x0400A3E5 RID: 41957
-		UseSkillNotify = 20528,
-		// Token: 0x0400A3E6 RID: 41958
-		EndSkillNotify = 25131,
-		// Token: 0x0400A3E7 RID: 41959
-		EntityLoadCompleteNotify = 29145,
-		// Token: 0x0400A3E8 RID: 41960
-		PartUpdateNotify = 23036,
-		// Token: 0x0400A3E9 RID: 41961
-		PartComponentInitNotify = 27435,
-		// Token: 0x0400A3EA RID: 41962
-		MaterialNotify = 29636,
-		// Token: 0x0400A3EB RID: 41963
-		GameplayCueNotify = 29715,
-		// Token: 0x0400A3EC RID: 41964
-		EntityIsVisibleNotify = 17405,
-		// Token: 0x0400A3ED RID: 41965
-		SwitchCharacterStateNotify = 15678,
-		// Token: 0x0400A3EE RID: 41966
-		PlayerRebackSceneNotify = 25253,
-		// Token: 0x0400A3EF RID: 41967
-		LogicStateInitNotify = 24779,
-		// Token: 0x0400A3F0 RID: 41968
-		SwitchLogicStateNotify = 19887,
-		// Token: 0x0400A3F1 RID: 41969
-		AttributeChangedNotify = 27832,
-		// Token: 0x0400A3F2 RID: 41970
-		AnimationStateChangedNotify = 15580,
-		// Token: 0x0400A3F3 RID: 41971
-		AnimationStateInitNotify = 27651,
-		// Token: 0x0400A3F4 RID: 41972
-		ModifyBulletParamsNotify = 17666,
-		// Token: 0x0400A3F5 RID: 41973
-		DrownNotify = 26523,
-		// Token: 0x0400A3F6 RID: 41974
-		OrderApplyBuffNotify = 26471,
-		// Token: 0x0400A3F7 RID: 41975
-		OrderRemoveBuffNotify = 17807,
-		// Token: 0x0400A3F8 RID: 41976
-		ActivateBuffNotify = 28221,
-		// Token: 0x0400A3F9 RID: 41977
-		OrderRemoveBuffByTagsNotify = 24520,
-		// Token: 0x0400A3FA RID: 41978
-		AiInformationNotify = 27868,
-		// Token: 0x0400A3FB RID: 41979
-		BattleStateChangeNotify = 22142,
-		// Token: 0x0400A3FC RID: 41980
-		AnimationGameplayTagNotify = 17636,
-		// Token: 0x0400A3FD RID: 41981
-		BoneVisibleChangeNotify = 16295,
-		// Token: 0x0400A3FE RID: 41982
-		AiBlackboardCdNotify = 26627,
-		// Token: 0x0400A3FF RID: 41983
-		CaughtNotify = 17797,
-		// Token: 0x0400A400 RID: 41984
-		EntityStaticHookMoveNotify = 26938,
-		// Token: 0x0400A401 RID: 41985
-		ChangeStateNotify = 21371,
-		// Token: 0x0400A402 RID: 41986
-		ChangeStateConfirmNotify = 20811,
-		// Token: 0x0400A403 RID: 41987
-		BuffStackCountNotify = 29363,
-		// Token: 0x0400A404 RID: 41988
-		MontagePlayNotify = 17788,
-		// Token: 0x0400A405 RID: 41989
-		ANStartNotify = 24660,
-		// Token: 0x0400A406 RID: 41990
-		FsmResetNotify = 16867,
-		// Token: 0x0400A407 RID: 41991
-		DamageRecordNotify = 22979,
-		// Token: 0x0400A408 RID: 41992
-		AiHateNotify = 21698,
-		// Token: 0x0400A409 RID: 41993
-		FsmBlackboardNotify = 18761,
-		// Token: 0x0400A40A RID: 41994
-		CharacterBattleStateChangeNotify = 25768,
-		// Token: 0x0400A40B RID: 41995
-		ApplyBuffS2cRequestNotify = 18641,
-		// Token: 0x0400A40C RID: 41996
-		RemoveBuffS2cRequestNotify = 20022,
-		// Token: 0x0400A40D RID: 41997
-		ActorVisibleNotify = 23346,
-		// Token: 0x0400A40E RID: 41998
-		RecoverPropChangedNotify = 29454,
-		// Token: 0x0400A40F RID: 41999
-		RemoveBuffByIdS2cRequestNotify = 19482,
-		// Token: 0x0400A410 RID: 42000
-		ShieldUpdateNotify = 26592,
-		// Token: 0x0400A411 RID: 42001
-		PlayerBattleStateChangeNotify = 25044,
-		// Token: 0x0400A412 RID: 42002
-		FsmCustomBlackboardNotify = 19239,
-		// Token: 0x0400A413 RID: 42003
-		PassiveSkillAddNotify = 22690,
-		// Token: 0x0400A414 RID: 42004
-		PassiveSkillRemoveNotify = 22034,
-		// Token: 0x0400A415 RID: 42005
-		ExecuteQteNotify = 20131,
-		// Token: 0x0400A416 RID: 42006
-		ModifyEntityCampNotify = 28258,
-		// Token: 0x0400A417 RID: 42007
-		AddCombineEntitiesRelationNotify = 25278,
-		// Token: 0x0400A418 RID: 42008
-		RemoveCombineRelationNotify = 17117,
-		// Token: 0x0400A419 RID: 42009
-		TestDamageRecordNotify = 22542,
-		// Token: 0x0400A41A RID: 42010
-		BuffDurationNotify = 16974,
-		// Token: 0x0400A41B RID: 42011
-		EntityLivingStatusNotify = 23945,
-		// Token: 0x0400A41C RID: 42012
-		NewLinkNotify = 23833,
-		// Token: 0x0400A41D RID: 42013
-		ApplyBuffFailedNotify = 22435,
-		// Token: 0x0400A41E RID: 42014
-		PackAnimChangedNotify = 27418,
-		// Token: 0x0400A41F RID: 42015
-		VisionTriggerNotify = 21314,
-		// Token: 0x0400A420 RID: 42016
-		RemoveBuffByServerIdS2cRequestNotify = 23494,
-		// Token: 0x0400A421 RID: 42017
-		TransformBuffStackNotify = 27991,
-		// Token: 0x0400A422 RID: 42018
-		MotorSummonAndRideNotify = 20643,
-		// Token: 0x0400A423 RID: 42019
-		BulletPatternNotify = 29108,
-		// Token: 0x0400A424 RID: 42020
-		FsmMontageDurationNotify = 20087,
-		// Token: 0x0400A425 RID: 42021
-		SwitchDarkTideWeaponSlotNotify = 18091,
-		// Token: 0x0400A426 RID: 42022
-		CombatValNotify = 28115,
-		// Token: 0x0400A427 RID: 42023
-		CombatValDecayBeginNotify = 19990,
-		// Token: 0x0400A428 RID: 42024
-		SquadPropChangedNotify = 21485,
-		// Token: 0x0400A429 RID: 42025
-		CombatDataMaxNotify = 28947
+		// Token: 0x0400A83B RID: 43067
+		CreateBulletNotify = 15915,
+		// Token: 0x0400A83C RID: 43068
+		DestroyBulletNotify = 16659,
+		// Token: 0x0400A83D RID: 43069
+		DamageExecuteNotify = 28829,
+		// Token: 0x0400A83E RID: 43070
+		ApplyGameplayEffectNotify = 26040,
+		// Token: 0x0400A83F RID: 43071
+		RemoveGameplayEffectNotify = 18172,
+		// Token: 0x0400A840 RID: 43072
+		HitNotify = 20656,
+		// Token: 0x0400A841 RID: 43073
+		SkillNotify = 19915,
+		// Token: 0x0400A842 RID: 43074
+		UseSkillNotify = 19813,
+		// Token: 0x0400A843 RID: 43075
+		EndSkillNotify = 27580,
+		// Token: 0x0400A844 RID: 43076
+		EntityLoadCompleteNotify = 21435,
+		// Token: 0x0400A845 RID: 43077
+		PartUpdateNotify = 24482,
+		// Token: 0x0400A846 RID: 43078
+		PartComponentInitNotify = 25520,
+		// Token: 0x0400A847 RID: 43079
+		MaterialNotify = 26008,
+		// Token: 0x0400A848 RID: 43080
+		GameplayCueNotify = 21307,
+		// Token: 0x0400A849 RID: 43081
+		EntityIsVisibleNotify = 27390,
+		// Token: 0x0400A84A RID: 43082
+		SwitchCharacterStateNotify = 17711,
+		// Token: 0x0400A84B RID: 43083
+		PlayerRebackSceneNotify = 26270,
+		// Token: 0x0400A84C RID: 43084
+		LogicStateInitNotify = 16553,
+		// Token: 0x0400A84D RID: 43085
+		SwitchLogicStateNotify = 25764,
+		// Token: 0x0400A84E RID: 43086
+		AttributeChangedNotify = 26859,
+		// Token: 0x0400A84F RID: 43087
+		AnimationStateChangedNotify = 24252,
+		// Token: 0x0400A850 RID: 43088
+		AnimationStateInitNotify = 23601,
+		// Token: 0x0400A851 RID: 43089
+		ModifyBulletParamsNotify = 28690,
+		// Token: 0x0400A852 RID: 43090
+		DrownNotify = 16564,
+		// Token: 0x0400A853 RID: 43091
+		OrderApplyBuffNotify = 19792,
+		// Token: 0x0400A854 RID: 43092
+		OrderRemoveBuffNotify = 20935,
+		// Token: 0x0400A855 RID: 43093
+		ActivateBuffNotify = 29719,
+		// Token: 0x0400A856 RID: 43094
+		OrderRemoveBuffByTagsNotify = 23871,
+		// Token: 0x0400A857 RID: 43095
+		AiInformationNotify = 26510,
+		// Token: 0x0400A858 RID: 43096
+		BattleStateChangeNotify = 17671,
+		// Token: 0x0400A859 RID: 43097
+		AnimationGameplayTagNotify = 17808,
+		// Token: 0x0400A85A RID: 43098
+		BoneVisibleChangeNotify = 29713,
+		// Token: 0x0400A85B RID: 43099
+		AiBlackboardCdNotify = 26019,
+		// Token: 0x0400A85C RID: 43100
+		CaughtNotify = 29446,
+		// Token: 0x0400A85D RID: 43101
+		EntityStaticHookMoveNotify = 26154,
+		// Token: 0x0400A85E RID: 43102
+		ChangeStateNotify = 19168,
+		// Token: 0x0400A85F RID: 43103
+		ChangeStateConfirmNotify = 27547,
+		// Token: 0x0400A860 RID: 43104
+		BuffStackCountNotify = 19317,
+		// Token: 0x0400A861 RID: 43105
+		MontagePlayNotify = 19227,
+		// Token: 0x0400A862 RID: 43106
+		ANStartNotify = 16944,
+		// Token: 0x0400A863 RID: 43107
+		FsmResetNotify = 28366,
+		// Token: 0x0400A864 RID: 43108
+		DamageRecordNotify = 15583,
+		// Token: 0x0400A865 RID: 43109
+		AiHateNotify = 17752,
+		// Token: 0x0400A866 RID: 43110
+		FsmBlackboardNotify = 21151,
+		// Token: 0x0400A867 RID: 43111
+		CharacterBattleStateChangeNotify = 16199,
+		// Token: 0x0400A868 RID: 43112
+		ApplyBuffS2cRequestNotify = 17614,
+		// Token: 0x0400A869 RID: 43113
+		RemoveBuffS2cRequestNotify = 28392,
+		// Token: 0x0400A86A RID: 43114
+		ActorVisibleNotify = 29002,
+		// Token: 0x0400A86B RID: 43115
+		RecoverPropChangedNotify = 17789,
+		// Token: 0x0400A86C RID: 43116
+		RemoveBuffByIdS2cRequestNotify = 25284,
+		// Token: 0x0400A86D RID: 43117
+		ShieldUpdateNotify = 27866,
+		// Token: 0x0400A86E RID: 43118
+		PlayerBattleStateChangeNotify = 15313,
+		// Token: 0x0400A86F RID: 43119
+		FsmCustomBlackboardNotify = 18543,
+		// Token: 0x0400A870 RID: 43120
+		PassiveSkillAddNotify = 25025,
+		// Token: 0x0400A871 RID: 43121
+		PassiveSkillRemoveNotify = 21248,
+		// Token: 0x0400A872 RID: 43122
+		ExecuteQteNotify = 24112,
+		// Token: 0x0400A873 RID: 43123
+		ModifyEntityCampNotify = 21724,
+		// Token: 0x0400A874 RID: 43124
+		AddCombineEntitiesRelationNotify = 24720,
+		// Token: 0x0400A875 RID: 43125
+		RemoveCombineRelationNotify = 18044,
+		// Token: 0x0400A876 RID: 43126
+		TestDamageRecordNotify = 25211,
+		// Token: 0x0400A877 RID: 43127
+		BuffDurationNotify = 24676,
+		// Token: 0x0400A878 RID: 43128
+		EntityLivingStatusNotify = 24917,
+		// Token: 0x0400A879 RID: 43129
+		NewLinkNotify = 21875,
+		// Token: 0x0400A87A RID: 43130
+		ApplyBuffFailedNotify = 19969,
+		// Token: 0x0400A87B RID: 43131
+		PackAnimChangedNotify = 23124,
+		// Token: 0x0400A87C RID: 43132
+		VisionTriggerNotify = 24819,
+		// Token: 0x0400A87D RID: 43133
+		RemoveBuffByServerIdS2cRequestNotify = 15505,
+		// Token: 0x0400A87E RID: 43134
+		TransformBuffStackNotify = 21805,
+		// Token: 0x0400A87F RID: 43135
+		MotorSummonAndRideNotify = 21704,
+		// Token: 0x0400A880 RID: 43136
+		BulletPatternNotify = 24460,
+		// Token: 0x0400A881 RID: 43137
+		FsmMontageDurationNotify = 24356,
+		// Token: 0x0400A882 RID: 43138
+		CombatValNotify = 18757,
+		// Token: 0x0400A883 RID: 43139
+		CombatValDecayBeginNotify = 27363,
+		// Token: 0x0400A884 RID: 43140
+		SquadPropChangedNotify = 20340,
+		// Token: 0x0400A885 RID: 43141
+		DamageShowNotify = 16964,
+		// Token: 0x0400A886 RID: 43142
+		CombatDataMaxNotify = 27399
 	}
 }

@@ -14,17 +14,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020022F0 RID: 8944
+// Token: 0x020017D4 RID: 6100
 [NullableContext(1)]
 [Nullable(0)]
 public class OnlineHallView : UiTickViewBase
 {
-	// Token: 0x060119F6 RID: 72182 RVA: 0x00452CC3 File Offset: 0x00450EC3
+	// Token: 0x0600EE8E RID: 61070 RVA: 0x0045F98F File Offset: 0x0045DB8F
 	public OnlineHallView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060119F7 RID: 72183 RVA: 0x00452CCC File Offset: 0x00450ECC
+	// Token: 0x0600EE8F RID: 61071 RVA: 0x0045F998 File Offset: 0x0045DB98
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 17;
@@ -81,7 +81,7 @@ public class OnlineHallView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060119F8 RID: 72184 RVA: 0x00452FD4 File Offset: 0x004511D4
+	// Token: 0x0600EE90 RID: 61072 RVA: 0x0045FCA0 File Offset: 0x0045DEA0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		OnlineHallView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -92,7 +92,7 @@ public class OnlineHallView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060119F9 RID: 72185 RVA: 0x00453018 File Offset: 0x00451218
+	// Token: 0x0600EE91 RID: 61073 RVA: 0x0045FCE4 File Offset: 0x0045DEE4
 	protected override void OnStart()
 	{
 		this.InitTitle();
@@ -128,7 +128,7 @@ public class OnlineHallView : UiTickViewBase
 		KuroSdkController.Instance.RefreshOnlineHallActivity();
 	}
 
-	// Token: 0x060119FA RID: 72186 RVA: 0x00453158 File Offset: 0x00451358
+	// Token: 0x0600EE92 RID: 61074 RVA: 0x0045FE24 File Offset: 0x0045E024
 	protected override void OnAfterShow()
 	{
 		this.MatchingCountDown.BindOnStopTimer(() => InstanceDungeonEntranceModel.Instance.GetMatchingState() != EInstanceMatchState.Matching);
@@ -168,7 +168,7 @@ public class OnlineHallView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060119FB RID: 72187 RVA: 0x004531F1 File Offset: 0x004513F1
+	// Token: 0x0600EE93 RID: 61075 RVA: 0x0045FEBD File Offset: 0x0045E0BD
 	protected override void OnBeforeDestroy()
 	{
 		base.GetExtendToggle(2).OnStateChange.Remove(new Action<EToggleState>(this.OnToggleFriendClicked));
@@ -178,7 +178,7 @@ public class OnlineHallView : UiTickViewBase
 		this.RemoveRefreshBtnHandle();
 	}
 
-	// Token: 0x060119FC RID: 72188 RVA: 0x0045322C File Offset: 0x0045142C
+	// Token: 0x0600EE94 RID: 61076 RVA: 0x0045FEF8 File Offset: 0x0045E0F8
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnRefreshPermissionsSetting, new Action(this.OnRefreshPermissionsSetting));
@@ -189,7 +189,7 @@ public class OnlineHallView : UiTickViewBase
 		EventSystem.Instance.Add<int>(EEventName.OnSearchWorld, new Action<int>(this.CallBackSearchWorld));
 	}
 
-	// Token: 0x060119FD RID: 72189 RVA: 0x004532E4 File Offset: 0x004514E4
+	// Token: 0x0600EE95 RID: 61077 RVA: 0x0045FFB0 File Offset: 0x0045E1B0
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRefreshPermissionsSetting, new Action(this.OnRefreshPermissionsSetting));
@@ -200,7 +200,7 @@ public class OnlineHallView : UiTickViewBase
 		EventSystem.Instance.Remove(EEventName.OnSearchWorld, new Action<int>(this.CallBackSearchWorld));
 	}
 
-	// Token: 0x060119FE RID: 72190 RVA: 0x0045339C File Offset: 0x0045159C
+	// Token: 0x0600EE96 RID: 61078 RVA: 0x00460068 File Offset: 0x0045E268
 	private void InitTitle()
 	{
 		if (!OnlineModel.Instance.GetIsTeamModel())
@@ -219,7 +219,7 @@ public class OnlineHallView : UiTickViewBase
 		button.RootUIComp.Get().SetUIActive(isMyTeam);
 	}
 
-	// Token: 0x060119FF RID: 72191 RVA: 0x00453418 File Offset: 0x00451618
+	// Token: 0x0600EE97 RID: 61079 RVA: 0x004600E4 File Offset: 0x0045E2E4
 	private UniTask RefreshTeamTitleText()
 	{
 		OnlineHallView.<RefreshTeamTitleText>d__17 <RefreshTeamTitleText>d__;
@@ -230,7 +230,7 @@ public class OnlineHallView : UiTickViewBase
 		return <RefreshTeamTitleText>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011A00 RID: 72192 RVA: 0x0045345C File Offset: 0x0045165C
+	// Token: 0x0600EE98 RID: 61080 RVA: 0x00460128 File Offset: 0x0045E328
 	private void InitWorldList()
 	{
 		UUILoopScrollViewComponent loopScrollViewComponent = base.GetLoopScrollViewComponent(4);
@@ -244,7 +244,7 @@ public class OnlineHallView : UiTickViewBase
 		this.TeamLoopScroll = new LoopScrollView<OnlineTeamItem, OnlineTeamData>(loopScrollViewComponent, gridActor2, new Func<OnlineTeamItem>(this.ProxyCreateTeamItemFunction), true);
 	}
 
-	// Token: 0x06011A01 RID: 72193 RVA: 0x004534D8 File Offset: 0x004516D8
+	// Token: 0x0600EE99 RID: 61081 RVA: 0x004601A4 File Offset: 0x0045E3A4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -265,7 +265,7 @@ public class OnlineHallView : UiTickViewBase
 		return <GetFinalHallData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011A02 RID: 72194 RVA: 0x0045351B File Offset: 0x0045171B
+	// Token: 0x0600EE9A RID: 61082 RVA: 0x004601E7 File Offset: 0x0045E3E7
 	private void RefreshHallList([Nullable(new byte[]
 	{
 		2,
@@ -275,7 +275,7 @@ public class OnlineHallView : UiTickViewBase
 		this.OnRefreshHallList(data).Forget();
 	}
 
-	// Token: 0x06011A03 RID: 72195 RVA: 0x0045352C File Offset: 0x0045172C
+	// Token: 0x0600EE9B RID: 61083 RVA: 0x004601F8 File Offset: 0x0045E3F8
 	private UniTask OnRefreshHallList([Nullable(new byte[]
 	{
 		2,
@@ -291,7 +291,7 @@ public class OnlineHallView : UiTickViewBase
 		return <OnRefreshHallList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011A04 RID: 72196 RVA: 0x00453578 File Offset: 0x00451778
+	// Token: 0x0600EE9C RID: 61084 RVA: 0x00460244 File Offset: 0x0045E444
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -308,7 +308,7 @@ public class OnlineHallView : UiTickViewBase
 		return <GetFinalTeamData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011A05 RID: 72197 RVA: 0x004535BC File Offset: 0x004517BC
+	// Token: 0x0600EE9D RID: 61085 RVA: 0x00460288 File Offset: 0x0045E488
 	private UniTask FilterHallDataAndRefresh(IReadOnlyList<OnlineTeamData> data)
 	{
 		OnlineHallView.<FilterHallDataAndRefresh>d__23 <FilterHallDataAndRefresh>d__;
@@ -320,31 +320,31 @@ public class OnlineHallView : UiTickViewBase
 		return <FilterHallDataAndRefresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011A06 RID: 72198 RVA: 0x00453607 File Offset: 0x00451807
+	// Token: 0x0600EE9E RID: 61086 RVA: 0x004602D3 File Offset: 0x0045E4D3
 	private void RefreshTeamList(IReadOnlyList<OnlineTeamData> data)
 	{
 		this.FilterHallDataAndRefresh(data).Forget();
 	}
 
-	// Token: 0x06011A07 RID: 72199 RVA: 0x00453615 File Offset: 0x00451815
+	// Token: 0x0600EE9F RID: 61087 RVA: 0x004602E1 File Offset: 0x0045E4E1
 	private void RefreshFilterText()
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(14), OnlineModel.Instance.HallViewIsShowSearching ? "Online_ResetSearch" : "Online_Search", Array.Empty<object>());
 	}
 
-	// Token: 0x06011A08 RID: 72200 RVA: 0x00453646 File Offset: 0x00451846
+	// Token: 0x0600EEA0 RID: 61088 RVA: 0x00460312 File Offset: 0x0045E512
 	private OnlineHallItem ProxyCreateHallItemFunction()
 	{
 		return new OnlineHallItem(this.ViewInfo.Name);
 	}
 
-	// Token: 0x06011A09 RID: 72201 RVA: 0x00453658 File Offset: 0x00451858
+	// Token: 0x0600EEA1 RID: 61089 RVA: 0x00460324 File Offset: 0x0045E524
 	private OnlineTeamItem ProxyCreateTeamItemFunction()
 	{
 		return new OnlineTeamItem();
 	}
 
-	// Token: 0x06011A0A RID: 72202 RVA: 0x00453660 File Offset: 0x00451860
+	// Token: 0x0600EEA2 RID: 61090 RVA: 0x0046032C File Offset: 0x0045E52C
 	private void OnToggleFriendClicked(EToggleState state)
 	{
 		OnlineModel.Instance.HallViewIsShowSearching = false;
@@ -383,19 +383,19 @@ public class OnlineHallView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06011A0B RID: 72203 RVA: 0x00453709 File Offset: 0x00451909
+	// Token: 0x0600EEA3 RID: 61091 RVA: 0x004603D5 File Offset: 0x0045E5D5
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011A0C RID: 72204 RVA: 0x00453712 File Offset: 0x00451912
+	// Token: 0x0600EEA4 RID: 61092 RVA: 0x004603DE File Offset: 0x0045E5DE
 	private void OnClickPermissionBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.OnlineSettingView, null, null);
 	}
 
-	// Token: 0x06011A0D RID: 72205 RVA: 0x00453728 File Offset: 0x00451928
+	// Token: 0x0600EEA5 RID: 61093 RVA: 0x004603F4 File Offset: 0x0045E5F4
 	private void OnRefreshPermissionsSetting()
 	{
 		UUIText text = base.GetText(7);
@@ -404,7 +404,7 @@ public class OnlineHallView : UiTickViewBase
 		KuroSdkController.Instance.RefreshOnlineHallActivity();
 	}
 
-	// Token: 0x06011A0E RID: 72206 RVA: 0x00453775 File Offset: 0x00451975
+	// Token: 0x0600EEA6 RID: 61094 RVA: 0x00460441 File Offset: 0x0045E641
 	private void OnRefreshWorldList()
 	{
 		if (base.GetExtendToggle(2).ToggleState == EToggleState.ETT_Checked)
@@ -415,14 +415,14 @@ public class OnlineHallView : UiTickViewBase
 		this.RefreshHallList(OnlineModel.Instance.StrangerWorld);
 	}
 
-	// Token: 0x06011A0F RID: 72207 RVA: 0x004537A7 File Offset: 0x004519A7
+	// Token: 0x0600EEA7 RID: 61095 RVA: 0x00460473 File Offset: 0x0045E673
 	private void OnRefreshTeamList()
 	{
 		this.RefreshTeamList(OnlineModel.Instance.GetTeamList());
 		this.InitTitle();
 	}
 
-	// Token: 0x06011A10 RID: 72208 RVA: 0x004537C0 File Offset: 0x004519C0
+	// Token: 0x0600EEA8 RID: 61096 RVA: 0x0046048C File Offset: 0x0045E68C
 	private void OnMatchingChange()
 	{
 		EInstanceMatchState matchingState = InstanceDungeonEntranceModel.Instance.GetMatchingState();
@@ -467,7 +467,7 @@ public class OnlineHallView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06011A11 RID: 72209 RVA: 0x00453894 File Offset: 0x00451A94
+	// Token: 0x0600EEA9 RID: 61097 RVA: 0x00460560 File Offset: 0x0045E760
 	private void OnMatchingBegin()
 	{
 		InstanceDungeonMatchingCountDown matchingCountDown = this.MatchingCountDown;
@@ -480,7 +480,7 @@ public class OnlineHallView : UiTickViewBase
 		this.MatchingCountDown.StartTimer();
 	}
 
-	// Token: 0x06011A12 RID: 72210 RVA: 0x004538F8 File Offset: 0x00451AF8
+	// Token: 0x0600EEAA RID: 61098 RVA: 0x004605C4 File Offset: 0x0045E7C4
 	[NullableContext(2)]
 	private void SetClearOrPaste(string _)
 	{
@@ -496,7 +496,7 @@ public class OnlineHallView : UiTickViewBase
 		this.FunctionButtonItem.RefreshSprite("SP_Clear");
 	}
 
-	// Token: 0x06011A13 RID: 72211 RVA: 0x00453948 File Offset: 0x00451B48
+	// Token: 0x0600EEAB RID: 61099 RVA: 0x00460614 File Offset: 0x0045E814
 	private void OnClickClearSearchInputBtn()
 	{
 		UUITextInputComponent inputText = base.GetInputText(12);
@@ -529,7 +529,7 @@ public class OnlineHallView : UiTickViewBase
 		this.SetClearOrPaste(null);
 	}
 
-	// Token: 0x06011A14 RID: 72212 RVA: 0x00453A0C File Offset: 0x00451C0C
+	// Token: 0x0600EEAC RID: 61100 RVA: 0x004606D8 File Offset: 0x0045E8D8
 	private void OnClickSearchConfirmBtn()
 	{
 		if (OnlineModel.Instance.HallViewIsShowSearching)
@@ -551,7 +551,7 @@ public class OnlineHallView : UiTickViewBase
 		GenericPromptController.Instance.ShowPromptByCode("OnlineUserIdIsNull", Array.Empty<object>());
 	}
 
-	// Token: 0x06011A15 RID: 72213 RVA: 0x00453AD4 File Offset: 0x00451CD4
+	// Token: 0x0600EEAD RID: 61101 RVA: 0x004607A0 File Offset: 0x0045E9A0
 	private void OnClickRefreshBtnBtn()
 	{
 		if (this.NextCanClickRefreshBtnLeftTime > 0)
@@ -595,7 +595,7 @@ public class OnlineHallView : UiTickViewBase
 		}).Forget();
 	}
 
-	// Token: 0x06011A16 RID: 72214 RVA: 0x00453BA1 File Offset: 0x00451DA1
+	// Token: 0x0600EEAE RID: 61102 RVA: 0x0046086D File Offset: 0x0045EA6D
 	private void RemoveRefreshBtnHandle()
 	{
 		if (this.RefreshBtnHandle != null)
@@ -605,7 +605,7 @@ public class OnlineHallView : UiTickViewBase
 		this.RefreshBtnHandle = null;
 	}
 
-	// Token: 0x06011A17 RID: 72215 RVA: 0x00453BC4 File Offset: 0x00451DC4
+	// Token: 0x0600EEAF RID: 61103 RVA: 0x00460890 File Offset: 0x0045EA90
 	private void CallBackSearchWorld(int i)
 	{
 		base.GetButton(15).RootUIComp.Get().SetUIActive(false);
@@ -618,10 +618,10 @@ public class OnlineHallView : UiTickViewBase
 		this.RefreshFilterText();
 	}
 
-	// Token: 0x040085C6 RID: 34246
+	// Token: 0x04008704 RID: 34564
 	private const int REFERSH_BTN_CD = 5;
 
-	// Token: 0x040085C7 RID: 34247
+	// Token: 0x04008705 RID: 34565
 	[Nullable(new byte[]
 	{
 		2,
@@ -630,7 +630,7 @@ public class OnlineHallView : UiTickViewBase
 	})]
 	private LoopScrollView<OnlineHallItem, OnlineHallData> HallLoopScroll;
 
-	// Token: 0x040085C8 RID: 34248
+	// Token: 0x04008706 RID: 34566
 	[Nullable(new byte[]
 	{
 		2,
@@ -639,58 +639,58 @@ public class OnlineHallView : UiTickViewBase
 	})]
 	private LoopScrollView<OnlineTeamItem, OnlineTeamData> TeamLoopScroll;
 
-	// Token: 0x040085C9 RID: 34249
+	// Token: 0x04008707 RID: 34567
 	[Nullable(2)]
 	private InstanceDungeonMatchingCountDown MatchingCountDown;
 
-	// Token: 0x040085CA RID: 34250
+	// Token: 0x04008708 RID: 34568
 	[Nullable(2)]
 	private ButtonAndSpriteItem FunctionButtonItem;
 
-	// Token: 0x040085CB RID: 34251
+	// Token: 0x04008709 RID: 34569
 	private int NextCanClickRefreshBtnLeftTime;
 
-	// Token: 0x040085CC RID: 34252
+	// Token: 0x0400870A RID: 34570
 	[Nullable(2)]
 	private TimerHandle RefreshBtnHandle;
 
-	// Token: 0x02008867 RID: 34919
+	// Token: 0x020079EB RID: 31211
 	[NullableContext(0)]
 	private enum EOnlineHallViewComponents
 	{
-		// Token: 0x0402C536 RID: 181558
+		// Token: 0x04027838 RID: 161848
 		BackBtn,
-		// Token: 0x0402C537 RID: 181559
+		// Token: 0x04027839 RID: 161849
 		PermissionsSettingBtn,
-		// Token: 0x0402C538 RID: 181560
+		// Token: 0x0402783A RID: 161850
 		TogFriend,
-		// Token: 0x0402C539 RID: 181561
+		// Token: 0x0402783B RID: 161851
 		FilterBtn,
-		// Token: 0x0402C53A RID: 181562
+		// Token: 0x0402783C RID: 161852
 		OnlineWorldList,
-		// Token: 0x0402C53B RID: 181563
+		// Token: 0x0402783D RID: 161853
 		OnlineWorldListItem,
-		// Token: 0x0402C53C RID: 181564
+		// Token: 0x0402783E RID: 161854
 		EmptyTips,
-		// Token: 0x0402C53D RID: 181565
+		// Token: 0x0402783F RID: 161855
 		SettingText,
-		// Token: 0x0402C53E RID: 181566
+		// Token: 0x04027840 RID: 161856
 		HallTopItem,
-		// Token: 0x0402C53F RID: 181567
+		// Token: 0x04027841 RID: 161857
 		TeamTopItem,
-		// Token: 0x0402C540 RID: 181568
+		// Token: 0x04027842 RID: 161858
 		TeamPlayerNumberText,
-		// Token: 0x0402C541 RID: 181569
+		// Token: 0x04027843 RID: 161859
 		MatchingItem,
-		// Token: 0x0402C542 RID: 181570
+		// Token: 0x04027844 RID: 161860
 		SearchUIDTextInput,
-		// Token: 0x0402C543 RID: 181571
+		// Token: 0x04027845 RID: 161861
 		UIDClearOrPasteBtn,
-		// Token: 0x0402C544 RID: 181572
+		// Token: 0x04027846 RID: 161862
 		FilterText,
-		// Token: 0x0402C545 RID: 181573
+		// Token: 0x04027847 RID: 161863
 		RefreshBtn,
-		// Token: 0x0402C546 RID: 181574
+		// Token: 0x04027848 RID: 161864
 		RefreshBtnText
 	}
 }

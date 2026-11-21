@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CDC RID: 7388
+// Token: 0x0200119E RID: 4510
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleDropBuffGateHeadState : UiPanelBase
 {
-	// Token: 0x0600DFD3 RID: 57299 RVA: 0x00346CD2 File Offset: 0x00344ED2
+	// Token: 0x0600B3F0 RID: 46064 RVA: 0x003526FA File Offset: 0x003508FA
 	protected virtual string GetResourceId()
 	{
 		return "UiItem_WorldPosBuff1";
 	}
 
-	// Token: 0x0600DFD4 RID: 57300 RVA: 0x00346CDC File Offset: 0x00344EDC
+	// Token: 0x0600B3F1 RID: 46065 RVA: 0x00352704 File Offset: 0x00350904
 	[NullableContext(2)]
 	public void CreateHeadStateView([Nullable(1)] USceneComponent parentComponent, IBuffGateDesc buffGateInfo = null, UCurveFloat dropHeadStateScaleCurve = null)
 	{
@@ -29,7 +29,7 @@ public class MotorcycleDropBuffGateHeadState : UiPanelBase
 		this.DropHeadStateScaleCurve = dropHeadStateScaleCurve;
 	}
 
-	// Token: 0x0600DFD5 RID: 57301 RVA: 0x00346D20 File Offset: 0x00344F20
+	// Token: 0x0600B3F2 RID: 46066 RVA: 0x00352748 File Offset: 0x00350948
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class MotorcycleDropBuffGateHeadState : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DFD6 RID: 57302 RVA: 0x00346D7C File Offset: 0x00344F7C
+	// Token: 0x0600B3F3 RID: 46067 RVA: 0x003527A4 File Offset: 0x003509A4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleDropBuffGateHeadState.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -51,13 +51,13 @@ public class MotorcycleDropBuffGateHeadState : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DFD7 RID: 57303 RVA: 0x00346DBF File Offset: 0x00344FBF
+	// Token: 0x0600B3F4 RID: 46068 RVA: 0x003527E7 File Offset: 0x003509E7
 	public void UpdateByHeadInfo(FKSC_HeadHpContext headInfo)
 	{
 		this.UpdateHeadStateLocation(headInfo.Location);
 	}
 
-	// Token: 0x0600DFD8 RID: 57304 RVA: 0x00346DD0 File Offset: 0x00344FD0
+	// Token: 0x0600B3F5 RID: 46069 RVA: 0x003527F8 File Offset: 0x003509F8
 	private void UpdateHeadStateLocation(FVectorDouble location)
 	{
 		if (this.RootItem == null)
@@ -76,7 +76,7 @@ public class MotorcycleDropBuffGateHeadState : UiPanelBase
 		this.RootItem.SetUIItemScale(new FVector(num, num, num));
 	}
 
-	// Token: 0x0600DFD9 RID: 57305 RVA: 0x00346E38 File Offset: 0x00345038
+	// Token: 0x0600B3F6 RID: 46070 RVA: 0x00352860 File Offset: 0x00350A60
 	private float CalculateScaleByDistance(Vector worldLocation)
 	{
 		double num = Vector.DistSquared(CameraController.Instance.MainModel.CameraLocation, worldLocation);
@@ -87,7 +87,7 @@ public class MotorcycleDropBuffGateHeadState : UiPanelBase
 		return this.DropHeadStateScaleCurve.GetFloatValue((float)num);
 	}
 
-	// Token: 0x0600DFDA RID: 57306 RVA: 0x00346E78 File Offset: 0x00345078
+	// Token: 0x0600B3F7 RID: 46071 RVA: 0x003528A0 File Offset: 0x00350AA0
 	protected void RefreshHeadStateRotation()
 	{
 		Rotator cameraRotator = CameraController.Instance.MainModel.CameraRotator;
@@ -100,28 +100,28 @@ public class MotorcycleDropBuffGateHeadState : UiPanelBase
 		rootItem.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x04006704 RID: 26372
+	// Token: 0x040067E3 RID: 26595
 	[Nullable(2)]
 	private IBuffGateDesc BuffGateInfo;
 
-	// Token: 0x04006705 RID: 26373
+	// Token: 0x040067E4 RID: 26596
 	private FVectorDouble? Location;
 
-	// Token: 0x04006706 RID: 26374
+	// Token: 0x040067E5 RID: 26597
 	[Nullable(2)]
 	private UCurveFloat DropHeadStateScaleCurve;
 
-	// Token: 0x020082E3 RID: 33507
+	// Token: 0x0200746C RID: 29804
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AB2E RID: 174894
+		// Token: 0x04025E56 RID: 155222
 		public const int TextureQuality = 0;
 
-		// Token: 0x0402AB2F RID: 174895
+		// Token: 0x04025E57 RID: 155223
 		public const int TextIcon = 1;
 
-		// Token: 0x0402AB30 RID: 174896
+		// Token: 0x04025E58 RID: 155224
 		public const int TextDialogue = 2;
 	}
 }

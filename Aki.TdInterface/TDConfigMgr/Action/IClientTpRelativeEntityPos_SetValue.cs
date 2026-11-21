@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018CD RID: 6349
+	// Token: 0x02001A5E RID: 6750
 	public class IClientTpRelativeEntityPos_SetValue
 	{
-		// Token: 0x0400558B RID: 21899
+		// Token: 0x040059E5 RID: 23013
 		public EClientTeleportType Type;
 
-		// Token: 0x0400558C RID: 21900
+		// Token: 0x040059E6 RID: 23014
 		public int SourcePosEntityId;
 
-		// Token: 0x0400558D RID: 21901
+		// Token: 0x040059E7 RID: 23015
 		public int TargetPosEntityId;
 	}
 }

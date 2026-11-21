@@ -5,56 +5,56 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Plot;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002064 RID: 8292
+// Token: 0x02001537 RID: 5431
 [NullableContext(1)]
 [Nullable(0)]
 public class SceneGameplayItemRewardView : CommonResultView
 {
-	// Token: 0x06010517 RID: 66839 RVA: 0x003FBB6A File Offset: 0x003F9D6A
+	// Token: 0x0600D97F RID: 55679 RVA: 0x00407FB2 File Offset: 0x004061B2
 	public SceneGameplayItemRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010518 RID: 66840 RVA: 0x003FBB73 File Offset: 0x003F9D73
+	// Token: 0x0600D980 RID: 55680 RVA: 0x00407FBB File Offset: 0x004061BB
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<PlotInfo>(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.PlotNetworkStartEvent));
 		EventSystem.Instance.Add<PlotResultInfo>(EEventName.PlotNetworkEnd, new Action<PlotResultInfo>(this.PlotNetworkEndEvent));
 	}
 
-	// Token: 0x06010519 RID: 66841 RVA: 0x003FBBAD File Offset: 0x003F9DAD
+	// Token: 0x0600D981 RID: 55681 RVA: 0x00407FF5 File Offset: 0x004061F5
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<PlotInfo>(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.PlotNetworkStartEvent));
 		EventSystem.Instance.Remove<PlotResultInfo>(EEventName.PlotNetworkEnd, new Action<PlotResultInfo>(this.PlotNetworkEndEvent));
 	}
 
-	// Token: 0x0601051A RID: 66842 RVA: 0x003FBBE7 File Offset: 0x003F9DE7
+	// Token: 0x0600D982 RID: 55682 RVA: 0x0040802F File Offset: 0x0040622F
 	protected override void OnStart()
 	{
 		base.OnStart();
 		this.UpdateView();
 	}
 
-	// Token: 0x0601051B RID: 66843 RVA: 0x003FBBF5 File Offset: 0x003F9DF5
+	// Token: 0x0600D983 RID: 55683 RVA: 0x0040803D File Offset: 0x0040623D
 	private void PlotNetworkStartEvent(PlotInfo info)
 	{
 		this.SetActive(false);
 	}
 
-	// Token: 0x0601051C RID: 66844 RVA: 0x003FBBFE File Offset: 0x003F9DFE
+	// Token: 0x0600D984 RID: 55684 RVA: 0x00408046 File Offset: 0x00406246
 	private void PlotNetworkEndEvent(PlotResultInfo info)
 	{
 		this.SetActive(true);
 	}
 
-	// Token: 0x0601051D RID: 66845 RVA: 0x003FBC07 File Offset: 0x003F9E07
+	// Token: 0x0600D985 RID: 55685 RVA: 0x0040804F File Offset: 0x0040624F
 	private void UpdateView()
 	{
 		this.UpdateRewardPreview();
 	}
 
-	// Token: 0x0601051E RID: 66846 RVA: 0x003FBC10 File Offset: 0x003F9E10
+	// Token: 0x0600D986 RID: 55686 RVA: 0x00408058 File Offset: 0x00406258
 	private void UpdateRewardPreview()
 	{
 		ItemRewardData itemRewardData = ItemHintModel.Instance.ShiftItemRewardListFirst();
@@ -62,14 +62,14 @@ public class SceneGameplayItemRewardView : CommonResultView
 		this.RewardLayout.RebuildLayoutByDataNew<TItem>(data, null);
 	}
 
-	// Token: 0x0601051F RID: 66847 RVA: 0x003FBC5C File Offset: 0x003F9E5C
+	// Token: 0x0600D987 RID: 55687 RVA: 0x004080A4 File Offset: 0x004062A4
 	protected override void SetupButtonFormat()
 	{
 		List<CommonResultButtonData> dataList = this.CreateInstanceDungeonCommonButtonData();
 		base.RefreshButtonList(dataList);
 	}
 
-	// Token: 0x06010520 RID: 66848 RVA: 0x003FBC77 File Offset: 0x003F9E77
+	// Token: 0x0600D988 RID: 55688 RVA: 0x004080BF File Offset: 0x004062BF
 	private List<CommonResultButtonData> CreateInstanceDungeonCommonButtonData()
 	{
 		return new List<CommonResultButtonData>
@@ -78,7 +78,7 @@ public class SceneGameplayItemRewardView : CommonResultView
 		};
 	}
 
-	// Token: 0x06010521 RID: 66849 RVA: 0x003FBC8A File Offset: 0x003F9E8A
+	// Token: 0x0600D989 RID: 55689 RVA: 0x004080D2 File Offset: 0x004062D2
 	private CommonResultButtonData CreateFirstButtonData()
 	{
 		CommonResultButtonData commonResultButtonData = new CommonResultButtonData();
@@ -90,7 +90,7 @@ public class SceneGameplayItemRewardView : CommonResultView
 		return commonResultButtonData;
 	}
 
-	// Token: 0x06010522 RID: 66850 RVA: 0x003FBCC8 File Offset: 0x003F9EC8
+	// Token: 0x0600D98A RID: 55690 RVA: 0x00408110 File Offset: 0x00406310
 	private void OnClickBtnConfirm()
 	{
 		if (UiManager.Instance.IsViewShow(this.ViewInfo.Name))

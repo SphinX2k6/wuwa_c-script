@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.AI.StateMachine.Task
 {
-	// Token: 0x0200731B RID: 29467
+	// Token: 0x0200649E RID: 25758
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineTaskLeaveFight : AiStateMachineTask
 	{
-		// Token: 0x0604853D RID: 296253 RVA: 0x01299960 File Offset: 0x01297B60
+		// Token: 0x0603E98A RID: 256394 RVA: 0x0123C3E0 File Offset: 0x0123A5E0
 		public AiStateMachineTaskLeaveFight(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.Task state) : base(stateMachineNode, state)
 		{
 		}
 
-		// Token: 0x0604853E RID: 296254 RVA: 0x012999AC File Offset: 0x01297BAC
+		// Token: 0x0603E98B RID: 256395 RVA: 0x0123C42C File Offset: 0x0123A62C
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Task task)
 		{
 			this.BlinkTime = task.TaskLeaveFight.BlinkTime;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			return true;
 		}
 
-		// Token: 0x0604853F RID: 296255 RVA: 0x012999E4 File Offset: 0x01297BE4
+		// Token: 0x0603E98C RID: 256396 RVA: 0x0123C464 File Offset: 0x0123A664
 		public override void OnEnter(long? contextId = null)
 		{
 			this.Running = true;
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.SetAiSceneEnable(aiController, false);
 		}
 
-		// Token: 0x06048540 RID: 296256 RVA: 0x01299D60 File Offset: 0x01297F60
+		// Token: 0x0603E98D RID: 256397 RVA: 0x0123C7E0 File Offset: 0x0123A9E0
 		private void SetAiSceneEnable(AiController aiController, bool enable)
 		{
 			AiPerception aiPerception = aiController.AiPerception as AiPerception;
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x06048541 RID: 296257 RVA: 0x01299D83 File Offset: 0x01297F83
+		// Token: 0x0603E98E RID: 256398 RVA: 0x0123C803 File Offset: 0x0123AA03
 		protected override void OnTick(float delta, long? contextId = null)
 		{
 			if (this.Node.AiController == null)
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x06048542 RID: 296258 RVA: 0x01299DA9 File Offset: 0x01297FA9
+		// Token: 0x0603E98F RID: 256399 RVA: 0x0123C829 File Offset: 0x0123AA29
 		private void Finish(bool finish)
 		{
 			if (!this.Running)
@@ -201,11 +201,11 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.Running = false;
 		}
 
-		// Token: 0x06048543 RID: 296259 RVA: 0x01299DC8 File Offset: 0x01297FC8
+		// Token: 0x0603E990 RID: 256400 RVA: 0x0123C848 File Offset: 0x0123AA48
 		public override void OnExit(long? contextId = null)
 		{
 			AiController aiController = this.Node.AiController;
-			aiController.CharActorComp.SetInputDirect(global::Vector.ZeroVectorProxy, false);
+			aiController.CharActorComp.SetInputDirect(global::Vector.ZeroVectorProxy, false, EInputDirectSpace.World);
 			this.SetAiSceneEnable(aiController, true);
 			TsBaseCharacter actor = this.Node.ActorComponent.Actor;
 			if (this.InBlink)
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.ShowMaterialData = null;
 		}
 
-		// Token: 0x06048544 RID: 296260 RVA: 0x01299EE8 File Offset: 0x012980E8
+		// Token: 0x0603E991 RID: 256401 RVA: 0x0123C968 File Offset: 0x0123AB68
 		private void BlinkBegin(CharacterActorComponent actor)
 		{
 			this.InBlink = true;
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.HideMaterialData = new int?(-1);
 		}
 
-		// Token: 0x06048545 RID: 296261 RVA: 0x0129A03C File Offset: 0x0129823C
+		// Token: 0x0603E992 RID: 256402 RVA: 0x0123CABC File Offset: 0x0123ACBC
 		private void BlinkTick(float delta)
 		{
 			this.BlinkElapseTime += delta;
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x06048546 RID: 296262 RVA: 0x0129A098 File Offset: 0x01298298
+		// Token: 0x0603E993 RID: 256403 RVA: 0x0123CB18 File Offset: 0x0123AD18
 		private void BlinkTeleport()
 		{
 			CharacterActorComponent actor = this.Node.ActorComponent;
@@ -363,10 +363,10 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			{
 				this.ShowMaterialData = new int?(-1);
 			}
-			actor.SetInputDirect(global::Vector.ZeroVectorProxy, false);
+			actor.SetInputDirect(global::Vector.ZeroVectorProxy, false, EInputDirectSpace.World);
 		}
 
-		// Token: 0x06048547 RID: 296263 RVA: 0x0129A2E0 File Offset: 0x012984E0
+		// Token: 0x0603E994 RID: 256404 RVA: 0x0123CD60 File Offset: 0x0123AF60
 		private bool BlinkEnd()
 		{
 			CharacterActorComponent actorComponent = this.Node.ActorComponent;
@@ -395,68 +395,68 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			return false;
 		}
 
-		// Token: 0x06048548 RID: 296264 RVA: 0x0129A39C File Offset: 0x0129859C
+		// Token: 0x0603E995 RID: 256405 RVA: 0x0123CE1C File Offset: 0x0123B01C
 		private void ResetAiInfo(CharacterActorComponent actor)
 		{
 			FRotator rotation = this.Node.Entity.GetComponent<CreatureDataComponent>().GetRotation();
 			actor.SetActorRotation(rotation, "脱战节点.重置为基础方法", false);
 		}
 
-		// Token: 0x06048549 RID: 296265 RVA: 0x0129A3CD File Offset: 0x012985CD
+		// Token: 0x0603E996 RID: 256406 RVA: 0x0123CE4D File Offset: 0x0123B04D
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x040263C6 RID: 156614
+		// Token: 0x040216B3 RID: 136883
 		public float BlinkTime;
 
-		// Token: 0x040263C7 RID: 156615
+		// Token: 0x040216B4 RID: 136884
 		public bool UsePatrolPointPriority;
 
-		// Token: 0x040263C8 RID: 156616
+		// Token: 0x040216B5 RID: 136885
 		public float MaxStopTime;
 
-		// Token: 0x040263C9 RID: 156617
+		// Token: 0x040216B6 RID: 136886
 		private readonly global::Vector InitLocation = global::Vector.Create();
 
-		// Token: 0x040263CA RID: 156618
+		// Token: 0x040216B7 RID: 136887
 		private bool InBlink;
 
-		// Token: 0x040263CB RID: 156619
+		// Token: 0x040216B8 RID: 136888
 		private bool Teleported;
 
-		// Token: 0x040263CC RID: 156620
+		// Token: 0x040216B9 RID: 136889
 		private float BlinkElapseTime;
 
-		// Token: 0x040263CD RID: 156621
+		// Token: 0x040216BA RID: 136890
 		private int? ShowMaterialData;
 
-		// Token: 0x040263CE RID: 156622
+		// Token: 0x040216BB RID: 136891
 		private int? HideMaterialData;
 
-		// Token: 0x040263CF RID: 156623
+		// Token: 0x040216BC RID: 136892
 		private int MoveStateActural;
 
-		// Token: 0x040263D0 RID: 156624
+		// Token: 0x040216BD RID: 136893
 		private string TsShowEffectDa = "";
 
-		// Token: 0x040263D1 RID: 156625
+		// Token: 0x040216BE RID: 136894
 		private string TsHideEffectDa = "";
 
-		// Token: 0x040263D2 RID: 156626
+		// Token: 0x040216BF RID: 136895
 		private string TsShowMaterialDa = "";
 
-		// Token: 0x040263D3 RID: 156627
+		// Token: 0x040216C0 RID: 136896
 		private string TsHideMaterialDa = "";
 
-		// Token: 0x040263D4 RID: 156628
+		// Token: 0x040216C1 RID: 136897
 		private bool Running;
 
-		// Token: 0x040263D5 RID: 156629
+		// Token: 0x040216C2 RID: 136898
 		private const float BLINK_TIME = 1000f;
 
-		// Token: 0x040263D6 RID: 156630
+		// Token: 0x040216C3 RID: 136899
 		private const int BLINK_TYPE = 3;
 	}
 }

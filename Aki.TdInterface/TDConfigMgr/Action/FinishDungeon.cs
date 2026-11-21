@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001721 RID: 5921
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200189E RID: 6302
 	public class FinishDungeon : ActionParams
 	{
-		// Token: 0x06007D69 RID: 32105 RVA: 0x0012CEBC File Offset: 0x0012B0BC
+		// Token: 0x06008447 RID: 33863 RVA: 0x0013BF68 File Offset: 0x0013A168
 		private FinishDungeon_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007D6A RID: 32106 RVA: 0x0012CEF4 File Offset: 0x0012B0F4
+		// Token: 0x06008448 RID: 33864 RVA: 0x0013BFA0 File Offset: 0x0013A1A0
 		public static FinishDungeon Create([Nullable(2)] FinishDungeon instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D6B RID: 32107 RVA: 0x0012CF07 File Offset: 0x0012B107
+		// Token: 0x06008449 RID: 33865 RVA: 0x0013BFB3 File Offset: 0x0013A1B3
 		public static FinishDungeon CreateFromSetValue([Nullable(2)] FinishDungeon_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D6C RID: 32108 RVA: 0x0012CF1A File Offset: 0x0012B11A
+		// Token: 0x0600844A RID: 33866 RVA: 0x0013BFC6 File Offset: 0x0013A1C6
 		public FinishDungeon_SetValue ToSetValue()
 		{
 			return new FinishDungeon_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002954 RID: 10580
-		// (get) Token: 0x06007D6D RID: 32109 RVA: 0x0012CF2D File Offset: 0x0012B12D
-		// (set) Token: 0x06007D6E RID: 32110 RVA: 0x0012CF58 File Offset: 0x0012B158
+		// Token: 0x17002B3F RID: 11071
+		// (get) Token: 0x0600844B RID: 33867 RVA: 0x0013BFD9 File Offset: 0x0013A1D9
+		// (set) Token: 0x0600844C RID: 33868 RVA: 0x0013C004 File Offset: 0x0013A204
 		public virtual bool IsSuccess
 		{
 			get
@@ -78,11 +76,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400500C RID: 20492
+		// Token: 0x0400543B RID: 21563
 		[Nullable(2)]
 		protected new FinishDungeon FbInstance;
 
-		// Token: 0x0400500D RID: 20493
+		// Token: 0x0400543C RID: 21564
 		[Nullable(2)]
 		protected FinishDungeon_SetValue PocoInterface;
 	}

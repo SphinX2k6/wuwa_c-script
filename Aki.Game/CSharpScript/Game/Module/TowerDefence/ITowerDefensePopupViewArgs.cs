@@ -4,23 +4,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B41 RID: 19265
+	// Token: 0x02003AE9 RID: 15081
 	[NullableContext(1)]
 	public interface ITowerDefensePopupViewArgs
 	{
-		// Token: 0x17007BC3 RID: 31683
-		// (get) Token: 0x06031E4A RID: 204362
-		// (set) Token: 0x06031E4B RID: 204363
+		// Token: 0x17004F70 RID: 20336
+		// (get) Token: 0x06026BDA RID: 158682
+		// (set) Token: 0x06026BDB RID: 158683
 		string TextTitle { get; set; }
 
-		// Token: 0x17007BC4 RID: 31684
-		// (get) Token: 0x06031E4C RID: 204364
-		// (set) Token: 0x06031E4D RID: 204365
+		// Token: 0x17004F71 RID: 20337
+		// (get) Token: 0x06026BDC RID: 158684
+		// (set) Token: 0x06026BDD RID: 158685
 		string TextTips { get; set; }
 
-		// Token: 0x17007BC5 RID: 31685
-		// (get) Token: 0x06031E4E RID: 204366
-		// (set) Token: 0x06031E4F RID: 204367
+		// Token: 0x17004F72 RID: 20338
+		// (get) Token: 0x06026BDE RID: 158686
+		// (set) Token: 0x06026BDF RID: 158687
 		[Nullable(new byte[]
 		{
 			2,
@@ -36,20 +36,20 @@ namespace CSharpScript.Game.Module.TowerDefence
 			1
 		})] set; }
 
-		// Token: 0x17007BC6 RID: 31686
-		// (get) Token: 0x06031E50 RID: 204368
-		// (set) Token: 0x06031E51 RID: 204369
+		// Token: 0x17004F73 RID: 20339
+		// (get) Token: 0x06026BE0 RID: 158688
+		// (set) Token: 0x06026BE1 RID: 158689
 		string TextContent { get; set; }
 
-		// Token: 0x17007BC7 RID: 31687
-		// (get) Token: 0x06031E52 RID: 204370
-		// (set) Token: 0x06031E53 RID: 204371
+		// Token: 0x17004F74 RID: 20340
+		// (get) Token: 0x06026BE2 RID: 158690
+		// (set) Token: 0x06026BE3 RID: 158691
 		[Nullable(2)]
 		Action ConfirmBack { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17007BC8 RID: 31688
-		// (get) Token: 0x06031E54 RID: 204372
-		// (set) Token: 0x06031E55 RID: 204373
+		// Token: 0x17004F75 RID: 20341
+		// (get) Token: 0x06026BE4 RID: 158692
+		// (set) Token: 0x06026BE5 RID: 158693
 		[Nullable(2)]
 		Action CancelBack { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

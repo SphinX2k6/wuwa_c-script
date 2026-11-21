@@ -3,40 +3,40 @@ using UnrealEngine;
 
 namespace CSharpScript.Core.Model
 {
-	// Token: 0x0200012F RID: 303
+	// Token: 0x02000130 RID: 304
 	public struct FAiSenseObject
 	{
-		// Token: 0x040006B8 RID: 1720
+		// Token: 0x040006C6 RID: 1734
 		public int AiSenseId;
 
-		// Token: 0x040006B9 RID: 1721
+		// Token: 0x040006C7 RID: 1735
 		public FVector2D AiSenseHorizontalAngle;
 
-		// Token: 0x040006BA RID: 1722
+		// Token: 0x040006C8 RID: 1736
 		public FVector2D AiSenseVerticalAngle;
 
-		// Token: 0x040006BB RID: 1723
+		// Token: 0x040006C9 RID: 1737
 		public bool AiSenseCantBeBlock;
 
-		// Token: 0x040006BC RID: 1724
+		// Token: 0x040006CA RID: 1738
 		public int AiSenseBlockType;
 
-		// Token: 0x040006BD RID: 1725
+		// Token: 0x040006CB RID: 1739
 		public bool WithAngleHorizontal;
 
-		// Token: 0x040006BE RID: 1726
+		// Token: 0x040006CC RID: 1740
 		public bool WithAngleVertical;
 
-		// Token: 0x040006BF RID: 1727
+		// Token: 0x040006CD RID: 1741
 		public float SenseDistanceRangeMin;
 
-		// Token: 0x040006C0 RID: 1728
+		// Token: 0x040006CE RID: 1742
 		public float SenseDistanceRangeMax;
 
-		// Token: 0x040006C1 RID: 1729
+		// Token: 0x040006CF RID: 1743
 		public float SquaredWalkSenseRate;
 
-		// Token: 0x040006C2 RID: 1730
+		// Token: 0x040006D0 RID: 1744
 		public float SquaredAirSenseRate;
 	}
 }

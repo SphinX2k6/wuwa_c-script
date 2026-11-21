@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005733 RID: 22323
+	// Token: 0x02005D3A RID: 23866
 	public struct IPhysicsConstraintComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A660 RID: 42592
-		// (get) Token: 0x060255E0 RID: 153056 RVA: 0x00527E64 File Offset: 0x00526064
+		// Token: 0x1700AF84 RID: 44932
+		// (get) Token: 0x06027B00 RID: 162560 RVA: 0x0056DFF0 File Offset: 0x0056C1F0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060255E1 RID: 153057 RVA: 0x00527E71 File Offset: 0x00526071
+		// Token: 0x06027B01 RID: 162561 RVA: 0x0056DFFD File Offset: 0x0056C1FD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060255E2 RID: 153058 RVA: 0x00527E78 File Offset: 0x00526078
+		// Token: 0x06027B02 RID: 162562 RVA: 0x0056E004 File Offset: 0x0056C204
 		public static IPhysicsConstraintComponent GetRootAsIPhysicsConstraintComponent(ByteBuffer _bb)
 		{
 			return IPhysicsConstraintComponent.GetRootAsIPhysicsConstraintComponent(_bb, default(IPhysicsConstraintComponent));
 		}
 
-		// Token: 0x060255E3 RID: 153059 RVA: 0x00527E94 File Offset: 0x00526094
+		// Token: 0x06027B03 RID: 162563 RVA: 0x0056E020 File Offset: 0x0056C220
 		public static IPhysicsConstraintComponent GetRootAsIPhysicsConstraintComponent(ByteBuffer _bb, IPhysicsConstraintComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060255E4 RID: 153060 RVA: 0x00527EB1 File Offset: 0x005260B1
+		// Token: 0x06027B04 RID: 162564 RVA: 0x0056E03D File Offset: 0x0056C23D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060255E5 RID: 153061 RVA: 0x00527EC0 File Offset: 0x005260C0
+		// Token: 0x06027B05 RID: 162565 RVA: 0x0056E04C File Offset: 0x0056C24C
 		public IPhysicsConstraintComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A661 RID: 42593
-		// (get) Token: 0x060255E6 RID: 153062 RVA: 0x00527ED0 File Offset: 0x005260D0
+		// Token: 0x1700AF85 RID: 44933
+		// (get) Token: 0x06027B06 RID: 162566 RVA: 0x0056E05C File Offset: 0x0056C25C
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A662 RID: 42594
-		// (get) Token: 0x060255E7 RID: 153063 RVA: 0x00527F10 File Offset: 0x00526110
+		// Token: 0x1700AF86 RID: 44934
+		// (get) Token: 0x06027B07 RID: 162567 RVA: 0x0056E09C File Offset: 0x0056C29C
 		public string EffectPath
 		{
 			get
@@ -74,20 +74,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060255E8 RID: 153064 RVA: 0x00527F47 File Offset: 0x00526147
+		// Token: 0x06027B08 RID: 162568 RVA: 0x0056E0D3 File Offset: 0x0056C2D3
 		public Span<byte> GetEffectPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060255E9 RID: 153065 RVA: 0x00527F56 File Offset: 0x00526156
+		// Token: 0x06027B09 RID: 162569 RVA: 0x0056E0E2 File Offset: 0x0056C2E2
 		public byte[] GetEffectPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700A663 RID: 42595
-		// (get) Token: 0x060255EA RID: 153066 RVA: 0x00527F64 File Offset: 0x00526164
+		// Token: 0x1700AF87 RID: 44935
+		// (get) Token: 0x06027B0A RID: 162570 RVA: 0x0056E0F0 File Offset: 0x0056C2F0
 		public TPhysicsAttachTarget AttachTargetType
 		{
 			get
@@ -101,7 +101,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060255EB RID: 153067 RVA: 0x00527FA0 File Offset: 0x005261A0
+		// Token: 0x06027B0B RID: 162571 RVA: 0x0056E12C File Offset: 0x0056C32C
 		public TTable? AttachTarget<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -112,38 +112,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060255EC RID: 153068 RVA: 0x00527FE8 File Offset: 0x005261E8
+		// Token: 0x06027B0C RID: 162572 RVA: 0x0056E174 File Offset: 0x0056C374
 		public IActorAttachTarget AttachTargetAsIActorAttachTarget()
 		{
 			return this.AttachTarget<IActorAttachTarget>().Value;
 		}
 
-		// Token: 0x060255ED RID: 153069 RVA: 0x00528004 File Offset: 0x00526204
+		// Token: 0x06027B0D RID: 162573 RVA: 0x0056E190 File Offset: 0x0056C390
 		public IEntityAttachTarget AttachTargetAsIEntityAttachTarget()
 		{
 			return this.AttachTarget<IEntityAttachTarget>().Value;
 		}
 
-		// Token: 0x060255EE RID: 153070 RVA: 0x00528020 File Offset: 0x00526220
+		// Token: 0x06027B0E RID: 162574 RVA: 0x0056E1AC File Offset: 0x0056C3AC
 		public IPointAttachTarget AttachTargetAsIPointAttachTarget()
 		{
 			return this.AttachTarget<IPointAttachTarget>().Value;
 		}
 
-		// Token: 0x060255EF RID: 153071 RVA: 0x0052803C File Offset: 0x0052623C
+		// Token: 0x06027B0F RID: 162575 RVA: 0x0056E1C8 File Offset: 0x0056C3C8
 		public IDynamicAttachTarget AttachTargetAsIDynamicAttachTarget()
 		{
 			return this.AttachTarget<IDynamicAttachTarget>().Value;
 		}
 
-		// Token: 0x060255F0 RID: 153072 RVA: 0x00528058 File Offset: 0x00526258
+		// Token: 0x06027B10 RID: 162576 RVA: 0x0056E1E4 File Offset: 0x0056C3E4
 		public IPlayerAttachTarget AttachTargetAsIPlayerAttachTarget()
 		{
 			return this.AttachTarget<IPlayerAttachTarget>().Value;
 		}
 
-		// Token: 0x1700A664 RID: 42596
-		// (get) Token: 0x060255F1 RID: 153073 RVA: 0x00528074 File Offset: 0x00526274
+		// Token: 0x1700AF88 RID: 44936
+		// (get) Token: 0x06027B11 RID: 162577 RVA: 0x0056E200 File Offset: 0x0056C400
 		public IPhysicsAngularLimit? AngularLimit
 		{
 			get
@@ -157,8 +157,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A665 RID: 42597
-		// (get) Token: 0x060255F2 RID: 153074 RVA: 0x005280D4 File Offset: 0x005262D4
+		// Token: 0x1700AF89 RID: 44937
+		// (get) Token: 0x06027B12 RID: 162578 RVA: 0x0056E260 File Offset: 0x0056C460
 		public float DampingCoefficient
 		{
 			get
@@ -172,8 +172,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A666 RID: 42598
-		// (get) Token: 0x060255F3 RID: 153075 RVA: 0x00528118 File Offset: 0x00526318
+		// Token: 0x1700AF8A RID: 44938
+		// (get) Token: 0x06027B13 RID: 162579 RVA: 0x0056E2A4 File Offset: 0x0056C4A4
 		public byte NullMask
 		{
 			get
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060255F4 RID: 153076 RVA: 0x00528158 File Offset: 0x00526358
+		// Token: 0x06027B14 RID: 162580 RVA: 0x0056E2E4 File Offset: 0x0056C4E4
 		public static Offset<IPhysicsConstraintComponent> CreateIPhysicsConstraintComponent(FlatBufferBuilder builder, bool Disabled = false, StringOffset EffectPathOffset = default(StringOffset), TPhysicsAttachTarget AttachTarget_type = TPhysicsAttachTarget.NONE, int AttachTargetOffset = 0, Offset<IPhysicsAngularLimit> AngularLimitOffset = default(Offset<IPhysicsAngularLimit>), float DampingCoefficient = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -201,61 +201,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPhysicsConstraintComponent.EndIPhysicsConstraintComponent(builder);
 		}
 
-		// Token: 0x060255F5 RID: 153077 RVA: 0x005281A7 File Offset: 0x005263A7
+		// Token: 0x06027B15 RID: 162581 RVA: 0x0056E333 File Offset: 0x0056C533
 		public static void StartIPhysicsConstraintComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x060255F6 RID: 153078 RVA: 0x005281B0 File Offset: 0x005263B0
+		// Token: 0x06027B16 RID: 162582 RVA: 0x0056E33C File Offset: 0x0056C53C
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x060255F7 RID: 153079 RVA: 0x005281BB File Offset: 0x005263BB
+		// Token: 0x06027B17 RID: 162583 RVA: 0x0056E347 File Offset: 0x0056C547
 		public static void AddEffectPath(FlatBufferBuilder builder, StringOffset effectPathOffset)
 		{
 			builder.AddOffset(1, effectPathOffset.Value, 0);
 		}
 
-		// Token: 0x060255F8 RID: 153080 RVA: 0x005281CB File Offset: 0x005263CB
+		// Token: 0x06027B18 RID: 162584 RVA: 0x0056E357 File Offset: 0x0056C557
 		public static void AddAttachTargetType(FlatBufferBuilder builder, TPhysicsAttachTarget attachTargetType)
 		{
 			builder.AddByte(2, (byte)attachTargetType, 0);
 		}
 
-		// Token: 0x060255F9 RID: 153081 RVA: 0x005281D6 File Offset: 0x005263D6
+		// Token: 0x06027B19 RID: 162585 RVA: 0x0056E362 File Offset: 0x0056C562
 		public static void AddAttachTarget(FlatBufferBuilder builder, int attachTargetOffset)
 		{
 			builder.AddOffset(3, attachTargetOffset, 0);
 		}
 
-		// Token: 0x060255FA RID: 153082 RVA: 0x005281E1 File Offset: 0x005263E1
+		// Token: 0x06027B1A RID: 162586 RVA: 0x0056E36D File Offset: 0x0056C56D
 		public static void AddAngularLimit(FlatBufferBuilder builder, Offset<IPhysicsAngularLimit> angularLimitOffset)
 		{
 			builder.AddOffset(4, angularLimitOffset.Value, 0);
 		}
 
-		// Token: 0x060255FB RID: 153083 RVA: 0x005281F1 File Offset: 0x005263F1
+		// Token: 0x06027B1B RID: 162587 RVA: 0x0056E37D File Offset: 0x0056C57D
 		public static void AddDampingCoefficient(FlatBufferBuilder builder, float dampingCoefficient)
 		{
 			builder.AddFloat(5, dampingCoefficient, 0.0);
 		}
 
-		// Token: 0x060255FC RID: 153084 RVA: 0x00528204 File Offset: 0x00526404
+		// Token: 0x06027B1C RID: 162588 RVA: 0x0056E390 File Offset: 0x0056C590
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x060255FD RID: 153085 RVA: 0x0052820F File Offset: 0x0052640F
+		// Token: 0x06027B1D RID: 162589 RVA: 0x0056E39B File Offset: 0x0056C59B
 		public static Offset<IPhysicsConstraintComponent> EndIPhysicsConstraintComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IPhysicsConstraintComponent>(builder.EndTable());
 		}
 
-		// Token: 0x060255FE RID: 153086 RVA: 0x0052821C File Offset: 0x0052641C
+		// Token: 0x06027B1E RID: 162590 RVA: 0x0056E3A8 File Offset: 0x0056C5A8
 		public IPhysicsConstraintComponentT UnPack()
 		{
 			IPhysicsConstraintComponentT physicsConstraintComponentT = new IPhysicsConstraintComponentT();
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return physicsConstraintComponentT;
 		}
 
-		// Token: 0x060255FF RID: 153087 RVA: 0x00528238 File Offset: 0x00526438
+		// Token: 0x06027B1F RID: 162591 RVA: 0x0056E3C4 File Offset: 0x0056C5C4
 		public void UnPackTo(IPhysicsConstraintComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -293,7 +293,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06025600 RID: 153088 RVA: 0x00528408 File Offset: 0x00526608
+		// Token: 0x06027B20 RID: 162592 RVA: 0x0056E594 File Offset: 0x0056C794
 		public static Offset<IPhysicsConstraintComponent> Pack(FlatBufferBuilder builder, IPhysicsConstraintComponentT _o)
 		{
 			if (_o == null)
@@ -307,7 +307,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPhysicsConstraintComponent.CreateIPhysicsConstraintComponent(builder, _o.Disabled, effectPathOffset, attachTarget_type, attachTargetOffset, angularLimitOffset, _o.DampingCoefficient, _o.NullMask);
 		}
 
-		// Token: 0x0400EBB3 RID: 60339
+		// Token: 0x0400F89E RID: 63646
 		private Table __p;
 	}
 }

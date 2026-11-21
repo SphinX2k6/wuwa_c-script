@@ -4,15 +4,15 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Kurotato.Data
 {
-	// Token: 0x02005799 RID: 22425
+	// Token: 0x02004770 RID: 18288
 	public class KurotatoEnemyDetailBookBigItemDataAll : KurotatoEnemyDetailBookBigItemData
 	{
-		// Token: 0x17008884 RID: 34948
-		// (get) Token: 0x06038F92 RID: 233362 RVA: 0x00D8B2F4 File Offset: 0x00D894F4
-		// (set) Token: 0x06038F93 RID: 233363 RVA: 0x00D8B2FC File Offset: 0x00D894FC
+		// Token: 0x17005C4C RID: 23628
+		// (get) Token: 0x0602DEA2 RID: 188066 RVA: 0x00CDA070 File Offset: 0x00CD8270
+		// (set) Token: 0x0602DEA3 RID: 188067 RVA: 0x00CDA078 File Offset: 0x00CD8278
 		public int RiskType { get; set; }
 
-		// Token: 0x06038F94 RID: 233364 RVA: 0x00D8B308 File Offset: 0x00D89508
+		// Token: 0x0602DEA4 RID: 188068 RVA: 0x00CDA084 File Offset: 0x00CD8284
 		public KurotatoEnemyDetailBookBigItemDataAll(int targetLevel, int riskType)
 		{
 			base.TabAllOrWave = EKurotatoEnemyDetailBookTabAllOrWave.All;

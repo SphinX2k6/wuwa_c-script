@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200288D RID: 10381
+	// Token: 0x02002B62 RID: 11106
 	public class TakePlotPhoto : ActionParams
 	{
-		// Token: 0x0600E5F0 RID: 58864 RVA: 0x0021CC07 File Offset: 0x0021AE07
-		[NullableContext(1)]
+		// Token: 0x0600F41F RID: 62495 RVA: 0x00239B87 File Offset: 0x00237D87
 		public static TakePlotPhoto Create(ITakePlotPhoto? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x04007F1F RID: 32543
+		// Token: 0x040085DE RID: 34270
 		private ITakePlotPhoto Instance;
 	}
 }

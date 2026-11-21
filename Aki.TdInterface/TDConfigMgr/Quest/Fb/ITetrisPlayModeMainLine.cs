@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200146A RID: 5226
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015C3 RID: 5571
 	public class ITetrisPlayModeMainLine : ITetrisPlayModeBase
 	{
-		// Token: 0x060076EA RID: 30442 RVA: 0x0011C412 File Offset: 0x0011A612
+		// Token: 0x06007DB8 RID: 32184 RVA: 0x0012B02A File Offset: 0x0012922A
 		public static ITetrisPlayModeMainLine Create(ITetrisPlayModeMainLine? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170027E9 RID: 10217
-		// (get) Token: 0x060076EB RID: 30443 RVA: 0x0011C431 File Offset: 0x0011A631
+		// Token: 0x170029D4 RID: 10708
+		// (get) Token: 0x06007DB9 RID: 32185 RVA: 0x0012B049 File Offset: 0x00129249
 		public override ETetrisPlayMode Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170027EA RID: 10218
-		// (get) Token: 0x060076EC RID: 30444 RVA: 0x0011C43E File Offset: 0x0011A63E
+		// Token: 0x170029D5 RID: 10709
+		// (get) Token: 0x06007DBA RID: 32186 RVA: 0x0012B056 File Offset: 0x00129256
 		public virtual int EntityId
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170027EB RID: 10219
-		// (get) Token: 0x060076ED RID: 30445 RVA: 0x0011C44B File Offset: 0x0011A64B
+		// Token: 0x170029D6 RID: 10710
+		// (get) Token: 0x06007DBB RID: 32187 RVA: 0x0012B063 File Offset: 0x00129263
 		public virtual string EntityState
 		{
 			get
@@ -52,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170027EC RID: 10220
-		// (get) Token: 0x060076EE RID: 30446 RVA: 0x0011C458 File Offset: 0x0011A658
+		// Token: 0x170029D7 RID: 10711
+		// (get) Token: 0x06007DBC RID: 32188 RVA: 0x0012B070 File Offset: 0x00129270
 		public virtual int? FieldHeight
 		{
 			get
@@ -66,7 +63,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004520 RID: 17696
+		// Token: 0x040048BB RID: 18619
 		private ITetrisPlayModeMainLine Instance;
 	}
 }

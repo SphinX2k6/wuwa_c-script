@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BC7 RID: 7111
+// Token: 0x02001086 RID: 4230
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoItem_Tmp_E : UiPanelBase
 {
-	// Token: 0x0600D40E RID: 54286 RVA: 0x0030CB30 File Offset: 0x0030AD30
+	// Token: 0x0600A820 RID: 43040 RVA: 0x00317CA4 File Offset: 0x00315EA4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -44,7 +44,7 @@ public class DangoItem_Tmp_E : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D40F RID: 54287 RVA: 0x0030CC7C File Offset: 0x0030AE7C
+	// Token: 0x0600A821 RID: 43041 RVA: 0x00317DF0 File Offset: 0x00315FF0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoItem_Tmp_E.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -55,7 +55,7 @@ public class DangoItem_Tmp_E : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D410 RID: 54288 RVA: 0x0030CCC0 File Offset: 0x0030AEC0
+	// Token: 0x0600A822 RID: 43042 RVA: 0x00317E34 File Offset: 0x00316034
 	private void OnAddButtonClick()
 	{
 		if (this.CurrentData == null || !this.CurrentData.IfSelf)
@@ -119,18 +119,18 @@ public class DangoItem_Tmp_E : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600D411 RID: 54289 RVA: 0x0030CE85 File Offset: 0x0030B085
+	// Token: 0x0600A823 RID: 43043 RVA: 0x00317FF9 File Offset: 0x003161F9
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x0600D412 RID: 54290 RVA: 0x0030CE87 File Offset: 0x0030B087
+	// Token: 0x0600A824 RID: 43044 RVA: 0x00317FFB File Offset: 0x003161FB
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearRedDot();
 	}
 
-	// Token: 0x0600D413 RID: 54291 RVA: 0x0030CE8F File Offset: 0x0030B08F
+	// Token: 0x0600A825 RID: 43045 RVA: 0x00318003 File Offset: 0x00316203
 	private void ClearRedDot()
 	{
 		if (this.RedDotBindState)
@@ -140,7 +140,7 @@ public class DangoItem_Tmp_E : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600D414 RID: 54292 RVA: 0x0030CEB8 File Offset: 0x0030B0B8
+	// Token: 0x0600A826 RID: 43046 RVA: 0x0031802C File Offset: 0x0031622C
 	public void OnDangoInfoUpdate()
 	{
 		if (this.CurrentData == null)
@@ -157,7 +157,7 @@ public class DangoItem_Tmp_E : UiPanelBase
 		this.RefreshQuality(this.CurrentData);
 	}
 
-	// Token: 0x0600D415 RID: 54293 RVA: 0x0030CF07 File Offset: 0x0030B107
+	// Token: 0x0600A827 RID: 43047 RVA: 0x0031807B File Offset: 0x0031627B
 	public void OnLevelUp(int dangoId, int level)
 	{
 		if (this.CurrentData == null)
@@ -171,7 +171,7 @@ public class DangoItem_Tmp_E : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600D416 RID: 54294 RVA: 0x0030CF38 File Offset: 0x0030B138
+	// Token: 0x0600A828 RID: 43048 RVA: 0x003180AC File Offset: 0x003162AC
 	[NullableContext(2)]
 	public void Refresh(DangoItemData_Tmp data)
 	{
@@ -195,7 +195,7 @@ public class DangoItem_Tmp_E : UiPanelBase
 		base.GetItem(6).SetUIActive(false);
 	}
 
-	// Token: 0x0600D417 RID: 54295 RVA: 0x0030CFAE File Offset: 0x0030B1AE
+	// Token: 0x0600A829 RID: 43049 RVA: 0x00318122 File Offset: 0x00316322
 	private void RefreshAvatarItem(DangoItemData_Tmp data)
 	{
 		if (data.DangoId == 0)
@@ -206,7 +206,7 @@ public class DangoItem_Tmp_E : UiPanelBase
 		base.GetItem(1).SetUIActive(true);
 	}
 
-	// Token: 0x0600D418 RID: 54296 RVA: 0x0030CFD4 File Offset: 0x0030B1D4
+	// Token: 0x0600A82A RID: 43050 RVA: 0x00318148 File Offset: 0x00316348
 	private void RefreshAvatar(DangoItemData_Tmp data)
 	{
 		if (data.DangoId == 0)
@@ -218,7 +218,7 @@ public class DangoItem_Tmp_E : UiPanelBase
 		base.SetTextureByPath(formationIcon, base.GetTexture(3), null, null);
 	}
 
-	// Token: 0x0600D419 RID: 54297 RVA: 0x0030D020 File Offset: 0x0030B220
+	// Token: 0x0600A82B RID: 43051 RVA: 0x00318194 File Offset: 0x00316394
 	private void RefreshQuality(DangoItemData_Tmp data)
 	{
 		DangoCircleQualityData dangoCircleQualityData = new DangoCircleQualityData();
@@ -234,7 +234,7 @@ public class DangoItem_Tmp_E : UiPanelBase
 		this.DangoCircleQualityItem.SetActive(true);
 	}
 
-	// Token: 0x0600D41A RID: 54298 RVA: 0x0030D080 File Offset: 0x0030B280
+	// Token: 0x0600A82C RID: 43052 RVA: 0x003181F4 File Offset: 0x003163F4
 	private void RefreshLevel(DangoItemData_Tmp data)
 	{
 		if (data.DangoId == 0)
@@ -245,41 +245,41 @@ public class DangoItem_Tmp_E : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), "AbyssDango_LV", new <>z__ReadOnlySingleElementList<object>(level.ToString()));
 	}
 
-	// Token: 0x0600D41B RID: 54299 RVA: 0x0030D0C0 File Offset: 0x0030B2C0
+	// Token: 0x0600A82D RID: 43053 RVA: 0x00318234 File Offset: 0x00316434
 	private void RefreshAddButtonState(DangoItemData_Tmp data)
 	{
 		bool uiactive = data.DangoId == 0;
 		base.GetItem(5).SetUIActive(uiactive);
 	}
 
-	// Token: 0x040060F9 RID: 24825
+	// Token: 0x040061C8 RID: 25032
 	[Nullable(2)]
 	private DangoItemData_Tmp CurrentData;
 
-	// Token: 0x040060FA RID: 24826
+	// Token: 0x040061C9 RID: 25033
 	[Nullable(2)]
 	private AbyssDangoCircleQualityItem DangoCircleQualityItem;
 
-	// Token: 0x040060FB RID: 24827
+	// Token: 0x040061CA RID: 25034
 	private bool RedDotBindState;
 
-	// Token: 0x02008182 RID: 33154
+	// Token: 0x02007310 RID: 29456
 	[NullableContext(0)]
 	private enum EDangoComponent
 	{
-		// Token: 0x0402A421 RID: 173089
+		// Token: 0x04025755 RID: 153429
 		QualityItem,
-		// Token: 0x0402A422 RID: 173090
+		// Token: 0x04025756 RID: 153430
 		AvatarItem,
-		// Token: 0x0402A423 RID: 173091
+		// Token: 0x04025757 RID: 153431
 		AddButton,
-		// Token: 0x0402A424 RID: 173092
+		// Token: 0x04025758 RID: 153432
 		AvatarTexture,
-		// Token: 0x0402A425 RID: 173093
+		// Token: 0x04025759 RID: 153433
 		LevelText,
-		// Token: 0x0402A426 RID: 173094
+		// Token: 0x0402575A RID: 153434
 		AddItem,
-		// Token: 0x0402A427 RID: 173095
+		// Token: 0x0402575B RID: 153435
 		RedDot
 	}
 }

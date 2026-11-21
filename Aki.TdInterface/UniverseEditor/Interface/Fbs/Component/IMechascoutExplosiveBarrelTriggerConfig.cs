@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005536 RID: 21814
+	// Token: 0x02005ABC RID: 23228
 	public struct IMechascoutExplosiveBarrelTriggerConfig : IFlatbufferObject
 	{
-		// Token: 0x1700A10E RID: 41230
-		// (get) Token: 0x060240A9 RID: 147625 RVA: 0x004FAB80 File Offset: 0x004F8D80
+		// Token: 0x1700A948 RID: 43336
+		// (get) Token: 0x06026163 RID: 156003 RVA: 0x00537CA4 File Offset: 0x00535EA4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060240AA RID: 147626 RVA: 0x004FAB8D File Offset: 0x004F8D8D
+		// Token: 0x06026164 RID: 156004 RVA: 0x00537CB1 File Offset: 0x00535EB1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060240AB RID: 147627 RVA: 0x004FAB94 File Offset: 0x004F8D94
+		// Token: 0x06026165 RID: 156005 RVA: 0x00537CB8 File Offset: 0x00535EB8
 		public static IMechascoutExplosiveBarrelTriggerConfig GetRootAsIMechascoutExplosiveBarrelTriggerConfig(ByteBuffer _bb)
 		{
 			return IMechascoutExplosiveBarrelTriggerConfig.GetRootAsIMechascoutExplosiveBarrelTriggerConfig(_bb, default(IMechascoutExplosiveBarrelTriggerConfig));
 		}
 
-		// Token: 0x060240AC RID: 147628 RVA: 0x004FABB0 File Offset: 0x004F8DB0
+		// Token: 0x06026166 RID: 156006 RVA: 0x00537CD4 File Offset: 0x00535ED4
 		public static IMechascoutExplosiveBarrelTriggerConfig GetRootAsIMechascoutExplosiveBarrelTriggerConfig(ByteBuffer _bb, IMechascoutExplosiveBarrelTriggerConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060240AD RID: 147629 RVA: 0x004FABCD File Offset: 0x004F8DCD
+		// Token: 0x06026167 RID: 156007 RVA: 0x00537CF1 File Offset: 0x00535EF1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060240AE RID: 147630 RVA: 0x004FABDC File Offset: 0x004F8DDC
+		// Token: 0x06026168 RID: 156008 RVA: 0x00537D00 File Offset: 0x00535F00
 		public IMechascoutExplosiveBarrelTriggerConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A10F RID: 41231
-		// (get) Token: 0x060240AF RID: 147631 RVA: 0x004FABEC File Offset: 0x004F8DEC
+		// Token: 0x1700A949 RID: 43337
+		// (get) Token: 0x06026169 RID: 156009 RVA: 0x00537D10 File Offset: 0x00535F10
 		public ETeleCtrlTriggerType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060240B0 RID: 147632 RVA: 0x004FAC28 File Offset: 0x004F8E28
+		// Token: 0x0602616A RID: 156010 RVA: 0x00537D4C File Offset: 0x00535F4C
 		public static Offset<IMechascoutExplosiveBarrelTriggerConfig> CreateIMechascoutExplosiveBarrelTriggerConfig(FlatBufferBuilder builder, ETeleCtrlTriggerType Type = ETeleCtrlTriggerType.MechascoutJavelin)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMechascoutExplosiveBarrelTriggerConfig.EndIMechascoutExplosiveBarrelTriggerConfig(builder);
 		}
 
-		// Token: 0x060240B1 RID: 147633 RVA: 0x004FAC3E File Offset: 0x004F8E3E
+		// Token: 0x0602616B RID: 156011 RVA: 0x00537D62 File Offset: 0x00535F62
 		public static void StartIMechascoutExplosiveBarrelTriggerConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060240B2 RID: 147634 RVA: 0x004FAC47 File Offset: 0x004F8E47
+		// Token: 0x0602616C RID: 156012 RVA: 0x00537D6B File Offset: 0x00535F6B
 		public static void AddType(FlatBufferBuilder builder, ETeleCtrlTriggerType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060240B3 RID: 147635 RVA: 0x004FAC52 File Offset: 0x004F8E52
+		// Token: 0x0602616D RID: 156013 RVA: 0x00537D76 File Offset: 0x00535F76
 		public static Offset<IMechascoutExplosiveBarrelTriggerConfig> EndIMechascoutExplosiveBarrelTriggerConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IMechascoutExplosiveBarrelTriggerConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060240B4 RID: 147636 RVA: 0x004FAC60 File Offset: 0x004F8E60
+		// Token: 0x0602616E RID: 156014 RVA: 0x00537D84 File Offset: 0x00535F84
 		public IMechascoutExplosiveBarrelTriggerConfigT UnPack()
 		{
 			IMechascoutExplosiveBarrelTriggerConfigT mechascoutExplosiveBarrelTriggerConfigT = new IMechascoutExplosiveBarrelTriggerConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return mechascoutExplosiveBarrelTriggerConfigT;
 		}
 
-		// Token: 0x060240B5 RID: 147637 RVA: 0x004FAC7B File Offset: 0x004F8E7B
+		// Token: 0x0602616F RID: 156015 RVA: 0x00537D9F File Offset: 0x00535F9F
 		public void UnPackTo(IMechascoutExplosiveBarrelTriggerConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060240B6 RID: 147638 RVA: 0x004FAC8C File Offset: 0x004F8E8C
+		// Token: 0x06026170 RID: 156016 RVA: 0x00537DB0 File Offset: 0x00535FB0
 		public static Offset<IMechascoutExplosiveBarrelTriggerConfig> Pack(FlatBufferBuilder builder, IMechascoutExplosiveBarrelTriggerConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMechascoutExplosiveBarrelTriggerConfig.CreateIMechascoutExplosiveBarrelTriggerConfig(builder, _o.Type);
 		}
 
-		// Token: 0x0400E836 RID: 59446
+		// Token: 0x0400F467 RID: 62567
 		private Table __p;
 	}
 }

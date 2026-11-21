@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D75 RID: 7541
+	// Token: 0x02001F86 RID: 8070
 	public class IQiuyuanQinggongExploration4_SetValue
 	{
-		// Token: 0x04006138 RID: 24888
+		// Token: 0x040066B4 RID: 26292
 		public ELeisureInteract Type;
 	}
 }

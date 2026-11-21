@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200065A RID: 1626
+	// Token: 0x02000672 RID: 1650
 	public class ConfigPhantomBattleBadgeGroupByGroupId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600262C RID: 9772 RVA: 0x001317BF File Offset: 0x0012F9BF
+		// Token: 0x060026BC RID: 9916 RVA: 0x0013823B File Offset: 0x0013643B
 		static ConfigPhantomBattleBadgeGroupByGroupId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomBattleBadgeGroupByGroupId.CreateStaticDefaultValue), new Action(ConfigPhantomBattleBadgeGroupByGroupId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600262D RID: 9773 RVA: 0x001317E0 File Offset: 0x0012F9E0
+		// Token: 0x060026BD RID: 9917 RVA: 0x0013825C File Offset: 0x0013645C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomBattleBadgeGroupByGroupId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600262E RID: 9774 RVA: 0x0013185F File Offset: 0x0012FA5F
+		// Token: 0x060026BE RID: 9918 RVA: 0x001382DB File Offset: 0x001364DB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomBattleBadgeGroupByGroupId.LogPair = null;
 			ConfigPhantomBattleBadgeGroupByGroupId.HandleId = 0;
 		}
 
-		// Token: 0x0600262F RID: 9775 RVA: 0x0013186D File Offset: 0x0012FA6D
+		// Token: 0x060026BF RID: 9919 RVA: 0x001382E9 File Offset: 0x001364E9
 		public static void Init()
 		{
 			ConfigPhantomBattleBadgeGroupByGroupId.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomBattleBadgeGroupByGroupId.HandleId, "db_phantombattle.db", "select BinData from `PhantomBattleBadgeGroup` where GroupId=?");
 		}
 
-		// Token: 0x06002630 RID: 9776 RVA: 0x00131888 File Offset: 0x0012FA88
+		// Token: 0x060026C0 RID: 9920 RVA: 0x00138304 File Offset: 0x00136504
 		public static PhantomBattleBadgeGroup? GetConfig(int p0GroupId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomBattleBadgeGroupByGroupId.HandleId, ConfigPhantomBattleBadgeGroupByGroupId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhantomBattleBadgeGroup?(rootAsPhantomBattleBadgeGroup);
 		}
 
-		// Token: 0x04002C5C RID: 11356
+		// Token: 0x04002D04 RID: 11524
 		private const string DB = "db_phantombattle.db";
 
-		// Token: 0x04002C5D RID: 11357
+		// Token: 0x04002D05 RID: 11525
 		private const string FILE = "s.声骸大作战外围.xlsx";
 
-		// Token: 0x04002C5E RID: 11358
+		// Token: 0x04002D06 RID: 11526
 		private const string TABLE = "PhantomBattleBadgeGroup";
 
-		// Token: 0x04002C5F RID: 11359
+		// Token: 0x04002D07 RID: 11527
 		private const string COMMAND = "select BinData from `PhantomBattleBadgeGroup` where GroupId=?";
 
-		// Token: 0x04002C60 RID: 11360
+		// Token: 0x04002D08 RID: 11528
 		private const string KEY_PREFIX = "PhantomBattleBadgeGroupByGroupId";
 
-		// Token: 0x04002C61 RID: 11361
+		// Token: 0x04002D09 RID: 11529
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002C62 RID: 11362
+		// Token: 0x04002D0A RID: 11530
 		private static int HandleId;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005ACF RID: 23247
+	// Token: 0x020060DC RID: 24796
 	public struct ITrampleTipType : IFlatbufferObject
 	{
-		// Token: 0x1700AF35 RID: 44853
-		// (get) Token: 0x06027A4E RID: 162382 RVA: 0x005741BE File Offset: 0x005723BE
+		// Token: 0x1700B871 RID: 47217
+		// (get) Token: 0x06029FD8 RID: 171992 RVA: 0x005BB5EE File Offset: 0x005B97EE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027A4F RID: 162383 RVA: 0x005741CB File Offset: 0x005723CB
+		// Token: 0x06029FD9 RID: 171993 RVA: 0x005BB5FB File Offset: 0x005B97FB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027A50 RID: 162384 RVA: 0x005741D4 File Offset: 0x005723D4
+		// Token: 0x06029FDA RID: 171994 RVA: 0x005BB604 File Offset: 0x005B9804
 		public static ITrampleTipType GetRootAsITrampleTipType(ByteBuffer _bb)
 		{
 			return ITrampleTipType.GetRootAsITrampleTipType(_bb, default(ITrampleTipType));
 		}
 
-		// Token: 0x06027A51 RID: 162385 RVA: 0x005741F0 File Offset: 0x005723F0
+		// Token: 0x06029FDB RID: 171995 RVA: 0x005BB620 File Offset: 0x005B9820
 		public static ITrampleTipType GetRootAsITrampleTipType(ByteBuffer _bb, ITrampleTipType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027A52 RID: 162386 RVA: 0x0057420D File Offset: 0x0057240D
+		// Token: 0x06029FDC RID: 171996 RVA: 0x005BB63D File Offset: 0x005B983D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027A53 RID: 162387 RVA: 0x0057421C File Offset: 0x0057241C
+		// Token: 0x06029FDD RID: 171997 RVA: 0x005BB64C File Offset: 0x005B984C
 		public ITrampleTipType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AF36 RID: 44854
-		// (get) Token: 0x06027A54 RID: 162388 RVA: 0x0057422C File Offset: 0x0057242C
+		// Token: 0x1700B872 RID: 47218
+		// (get) Token: 0x06029FDE RID: 171998 RVA: 0x005BB65C File Offset: 0x005B985C
 		public ETrampleTipType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027A55 RID: 162389 RVA: 0x00574268 File Offset: 0x00572468
+		// Token: 0x06029FDF RID: 171999 RVA: 0x005BB698 File Offset: 0x005B9898
 		public static Offset<ITrampleTipType> CreateITrampleTipType(FlatBufferBuilder builder, ETrampleTipType Type = ETrampleTipType.CountDownTextTip)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITrampleTipType.EndITrampleTipType(builder);
 		}
 
-		// Token: 0x06027A56 RID: 162390 RVA: 0x0057427E File Offset: 0x0057247E
+		// Token: 0x06029FE0 RID: 172000 RVA: 0x005BB6AE File Offset: 0x005B98AE
 		public static void StartITrampleTipType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06027A57 RID: 162391 RVA: 0x00574287 File Offset: 0x00572487
+		// Token: 0x06029FE1 RID: 172001 RVA: 0x005BB6B7 File Offset: 0x005B98B7
 		public static void AddType(FlatBufferBuilder builder, ETrampleTipType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06027A58 RID: 162392 RVA: 0x00574292 File Offset: 0x00572492
+		// Token: 0x06029FE2 RID: 172002 RVA: 0x005BB6C2 File Offset: 0x005B98C2
 		public static Offset<ITrampleTipType> EndITrampleTipType(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrampleTipType>(builder.EndTable());
 		}
 
-		// Token: 0x06027A59 RID: 162393 RVA: 0x005742A0 File Offset: 0x005724A0
+		// Token: 0x06029FE3 RID: 172003 RVA: 0x005BB6D0 File Offset: 0x005B98D0
 		public ITrampleTipTypeT UnPack()
 		{
 			ITrampleTipTypeT trampleTipTypeT = new ITrampleTipTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return trampleTipTypeT;
 		}
 
-		// Token: 0x06027A5A RID: 162394 RVA: 0x005742BB File Offset: 0x005724BB
+		// Token: 0x06029FE4 RID: 172004 RVA: 0x005BB6EB File Offset: 0x005B98EB
 		public void UnPackTo(ITrampleTipTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06027A5B RID: 162395 RVA: 0x005742CC File Offset: 0x005724CC
+		// Token: 0x06029FE5 RID: 172005 RVA: 0x005BB6FC File Offset: 0x005B98FC
 		public static Offset<ITrampleTipType> Pack(FlatBufferBuilder builder, ITrampleTipTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITrampleTipType.CreateITrampleTipType(builder, _o.Type);
 		}
 
-		// Token: 0x0400F1AB RID: 61867
+		// Token: 0x0400FEA4 RID: 65188
 		private Table __p;
 	}
 }

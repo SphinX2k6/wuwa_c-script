@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003200 RID: 12800
+// Token: 0x0200276F RID: 10095
 [NullableContext(1)]
 [Nullable(0)]
 public class NpcVehicleInfo
 {
-	// Token: 0x0601B9C2 RID: 113090 RVA: 0x00794B48 File Offset: 0x00792D48
+	// Token: 0x06019547 RID: 103751 RVA: 0x007BD194 File Offset: 0x007BB394
 	public NpcVehicleInfo(int entityId, int seatCount)
 	{
 		this.VehicleEntityId = entityId;
 		this.SeatCount = seatCount;
 	}
 
-	// Token: 0x0601B9C3 RID: 113091 RVA: 0x00794B6C File Offset: 0x00792D6C
+	// Token: 0x06019548 RID: 103752 RVA: 0x007BD1B8 File Offset: 0x007BB3B8
 	public List<int> RemoveInvalidNpcInfos()
 	{
 		List<int> list = new List<int>();
@@ -31,13 +31,13 @@ public class NpcVehicleInfo
 		return list;
 	}
 
-	// Token: 0x0601B9C4 RID: 113092 RVA: 0x00794BD6 File Offset: 0x00792DD6
+	// Token: 0x06019549 RID: 103753 RVA: 0x007BD222 File Offset: 0x007BB422
 	public bool HasAvailableSeat()
 	{
 		return this.NpcSeatInfoList.Count < this.SeatCount;
 	}
 
-	// Token: 0x0601B9C5 RID: 113093 RVA: 0x00794BEC File Offset: 0x00792DEC
+	// Token: 0x0601954A RID: 103754 RVA: 0x007BD238 File Offset: 0x007BB438
 	public unsafe int? ReserveNpc(int npcEntityId)
 	{
 		NpcSeatInfo npcSeatInfo = this.GetNpcSeatInfo(npcEntityId);
@@ -69,7 +69,7 @@ public class NpcVehicleInfo
 		return new int?(validSeat);
 	}
 
-	// Token: 0x0601B9C6 RID: 113094 RVA: 0x00794CF4 File Offset: 0x00792EF4
+	// Token: 0x0601954B RID: 103755 RVA: 0x007BD340 File Offset: 0x007BB540
 	public unsafe int? UnregisterNpc(int npcEntityId)
 	{
 		int num = this.NpcSeatInfoList.FindIndex((NpcSeatInfo npcInfo) => npcInfo.NpcEntityId == npcEntityId);
@@ -99,7 +99,7 @@ public class NpcVehicleInfo
 		return new int?(seat);
 	}
 
-	// Token: 0x0601B9C7 RID: 113095 RVA: 0x00794E4C File Offset: 0x0079304C
+	// Token: 0x0601954C RID: 103756 RVA: 0x007BD498 File Offset: 0x007BB698
 	public unsafe bool SetNpcRideState(int npcEntityId, ENpcVehicleRideState state)
 	{
 		NpcSeatInfo npcSeatInfo = this.GetNpcSeatInfo(npcEntityId);
@@ -120,7 +120,7 @@ public class NpcVehicleInfo
 		return true;
 	}
 
-	// Token: 0x0601B9C8 RID: 113096 RVA: 0x00794EF3 File Offset: 0x007930F3
+	// Token: 0x0601954D RID: 103757 RVA: 0x007BD53F File Offset: 0x007BB73F
 	public ENpcVehicleRideState GetNpcRideState(int npcEntityId)
 	{
 		NpcSeatInfo npcSeatInfo = this.GetNpcSeatInfo(npcEntityId);
@@ -131,7 +131,7 @@ public class NpcVehicleInfo
 		return npcSeatInfo.RideState;
 	}
 
-	// Token: 0x0601B9C9 RID: 113097 RVA: 0x00794F08 File Offset: 0x00793108
+	// Token: 0x0601954E RID: 103758 RVA: 0x007BD554 File Offset: 0x007BB754
 	public unsafe bool SetNpcTargetSplinePbDataId(int npcEntityId, int splinePbDataId)
 	{
 		NpcSeatInfo npcSeatInfo = this.GetNpcSeatInfo(npcEntityId);
@@ -152,7 +152,7 @@ public class NpcVehicleInfo
 		return true;
 	}
 
-	// Token: 0x0601B9CA RID: 113098 RVA: 0x00794FB4 File Offset: 0x007931B4
+	// Token: 0x0601954F RID: 103759 RVA: 0x007BD600 File Offset: 0x007BB800
 	public int? GetNpcTargetSplinePbDataId(int npcEntityId)
 	{
 		NpcSeatInfo npcSeatInfo = this.GetNpcSeatInfo(npcEntityId);
@@ -163,7 +163,7 @@ public class NpcVehicleInfo
 		return npcSeatInfo.TargetSplinePbDataId;
 	}
 
-	// Token: 0x0601B9CB RID: 113099 RVA: 0x00794FDC File Offset: 0x007931DC
+	// Token: 0x06019550 RID: 103760 RVA: 0x007BD628 File Offset: 0x007BB828
 	public int? GetSeatByNpc(int npcEntityId)
 	{
 		NpcSeatInfo npcSeatInfo = this.GetNpcSeatInfo(npcEntityId);
@@ -174,7 +174,7 @@ public class NpcVehicleInfo
 		return new int?(npcSeatInfo.Seat);
 	}
 
-	// Token: 0x0601B9CC RID: 113100 RVA: 0x00795008 File Offset: 0x00793208
+	// Token: 0x06019551 RID: 103761 RVA: 0x007BD654 File Offset: 0x007BB854
 	public int? GetNpcEntityIdBySplinePbDataId(int splinePbDataId)
 	{
 		if (splinePbDataId == 0)
@@ -194,13 +194,13 @@ public class NpcVehicleInfo
 		return new int?(npcSeatInfo.NpcEntityId);
 	}
 
-	// Token: 0x0601B9CD RID: 113101 RVA: 0x00795063 File Offset: 0x00793263
+	// Token: 0x06019552 RID: 103762 RVA: 0x007BD6AF File Offset: 0x007BB8AF
 	public bool IsMovingToTarget()
 	{
 		return this.NpcSeatInfoList.Exists((NpcSeatInfo npcInfo) => npcInfo.RideState == ENpcVehicleRideState.MoveToTargetPoint);
 	}
 
-	// Token: 0x0601B9CE RID: 113102 RVA: 0x00795090 File Offset: 0x00793290
+	// Token: 0x06019553 RID: 103763 RVA: 0x007BD6DC File Offset: 0x007BB8DC
 	public int? GetAvailableRouteNpcEntityId()
 	{
 		if (this.NpcSeatInfoList.Exists((NpcSeatInfo npcInfo) => npcInfo.RideState == ENpcVehicleRideState.WaitingToDismount))
@@ -224,7 +224,7 @@ public class NpcVehicleInfo
 		return new int?(npcSeatInfo.NpcEntityId);
 	}
 
-	// Token: 0x0601B9CF RID: 113103 RVA: 0x00795118 File Offset: 0x00793318
+	// Token: 0x06019554 RID: 103764 RVA: 0x007BD764 File Offset: 0x007BB964
 	public void GetAllNpcEntityIds(List<int> outList)
 	{
 		outList.Clear();
@@ -234,14 +234,14 @@ public class NpcVehicleInfo
 		}
 	}
 
-	// Token: 0x0601B9D0 RID: 113104 RVA: 0x00795178 File Offset: 0x00793378
+	// Token: 0x06019555 RID: 103765 RVA: 0x007BD7C4 File Offset: 0x007BB9C4
 	[NullableContext(2)]
 	private NpcSeatInfo GetNpcSeatInfo(int npcEntityId)
 	{
 		return this.NpcSeatInfoList.Find((NpcSeatInfo npcInfo) => npcInfo.NpcEntityId == npcEntityId);
 	}
 
-	// Token: 0x0601B9D1 RID: 113105 RVA: 0x007951AC File Offset: 0x007933AC
+	// Token: 0x06019556 RID: 103766 RVA: 0x007BD7F8 File Offset: 0x007BB9F8
 	private int GetValidSeat()
 	{
 		if (!this.HasAvailableSeat())
@@ -261,12 +261,12 @@ public class NpcVehicleInfo
 		return -1;
 	}
 
-	// Token: 0x0400D920 RID: 55584
+	// Token: 0x0400DDBE RID: 56766
 	public int VehicleEntityId;
 
-	// Token: 0x0400D921 RID: 55585
+	// Token: 0x0400DDBF RID: 56767
 	public int SeatCount;
 
-	// Token: 0x0400D922 RID: 55586
+	// Token: 0x0400DDC0 RID: 56768
 	public readonly List<NpcSeatInfo> NpcSeatInfoList = new List<NpcSeatInfo>();
 }

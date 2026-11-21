@@ -3,10 +3,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 {
-	// Token: 0x02005E52 RID: 24146
+	// Token: 0x02004E37 RID: 20023
 	public class BattleUiSpecialRoleDataQingXiao : BattleUiSpecialRoleDataBase
 	{
-		// Token: 0x0603D679 RID: 251513 RVA: 0x00ECFEEC File Offset: 0x00ECE0EC
+		// Token: 0x06032609 RID: 206345 RVA: 0x00E2145C File Offset: 0x00E1F65C
 		protected override void OnInit()
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			}
 		}
 
-		// Token: 0x0603D67A RID: 251514 RVA: 0x00ECFF98 File Offset: 0x00ECE198
+		// Token: 0x0603260A RID: 206346 RVA: 0x00E21508 File Offset: 0x00E1F708
 		protected override void OnClear()
 		{
 			if (!this.IsAutonomousProxy)
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			this.IsAutonomousProxy = false;
 		}
 
-		// Token: 0x0603D67B RID: 251515 RVA: 0x00ECFFFB File Offset: 0x00ECE1FB
+		// Token: 0x0603260B RID: 206347 RVA: 0x00E2156B File Offset: 0x00E1F76B
 		private void OnHudInited()
 		{
 			this.RefreshFlyItem();
 		}
 
-		// Token: 0x0603D67C RID: 251516 RVA: 0x00ED0003 File Offset: 0x00ECE203
+		// Token: 0x0603260C RID: 206348 RVA: 0x00E21573 File Offset: 0x00E1F773
 		public override void OnChangeRole(bool isCurEntity)
 		{
 			if (!this.IsAutonomousProxy)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			this.RefreshFlyItem();
 		}
 
-		// Token: 0x0603D67D RID: 251517 RVA: 0x00ED0014 File Offset: 0x00ECE214
+		// Token: 0x0603260D RID: 206349 RVA: 0x00E21584 File Offset: 0x00E1F784
 		private void OnFlyStrengthTagChanged(int tagId, bool tagExist)
 		{
 			if (!this.IsAutonomousProxy)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			this.RefreshFlyItem();
 		}
 
-		// Token: 0x0603D67E RID: 251518 RVA: 0x00ED002C File Offset: 0x00ECE22C
+		// Token: 0x0603260E RID: 206350 RVA: 0x00E2159C File Offset: 0x00E1F79C
 		private void RefreshFlyItem()
 		{
 			if (!HudUnitManager.Instance.GetIsInitHud())
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			this.AddFlyItem();
 		}
 
-		// Token: 0x0603D67F RID: 251519 RVA: 0x00ED0067 File Offset: 0x00ECE267
+		// Token: 0x0603260F RID: 206351 RVA: 0x00E215D7 File Offset: 0x00E1F7D7
 		private void AddFlyItem()
 		{
 			if (this.HasFlyItem)
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			EventSystem.Instance.Emit<EStrengthItemType>(EEventName.AddStrengthItem, EStrengthItemType.QingXiaoFly);
 		}
 
-		// Token: 0x0603D680 RID: 251520 RVA: 0x00ED008A File Offset: 0x00ECE28A
+		// Token: 0x06032610 RID: 206352 RVA: 0x00E215FA File Offset: 0x00E1F7FA
 		private void RemoveFlyItem()
 		{
 			if (!this.HasFlyItem)
@@ -118,13 +118,13 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			EventSystem.Instance.Emit<EStrengthItemType>(EEventName.RemoveStrengthItem, EStrengthItemType.QingXiaoFly);
 		}
 
-		// Token: 0x040200A4 RID: 131236
+		// Token: 0x0401AB6B RID: 109419
 		private bool IsAutonomousProxy;
 
-		// Token: 0x040200A5 RID: 131237
+		// Token: 0x0401AB6C RID: 109420
 		private bool HasFlyItem;
 
-		// Token: 0x040200A6 RID: 131238
+		// Token: 0x0401AB6D RID: 109421
 		private bool HasFlyItemTag;
 	}
 }

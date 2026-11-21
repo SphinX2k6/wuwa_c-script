@@ -6,10 +6,10 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002AA9 RID: 10921
+// Token: 0x02002025 RID: 8229
 internal class SubPackageDownLoadSubPackageItem : UiPanelBase
 {
-	// Token: 0x06016BCF RID: 93135 RVA: 0x005C48FC File Offset: 0x005C2AFC
+	// Token: 0x060145FE RID: 83454 RVA: 0x005F139C File Offset: 0x005EF59C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,19 +36,19 @@ internal class SubPackageDownLoadSubPackageItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016BD0 RID: 93136 RVA: 0x005C4A8B File Offset: 0x005C2C8B
+	// Token: 0x060145FF RID: 83455 RVA: 0x005F152B File Offset: 0x005EF72B
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Add(EEventName.OnRefreshSubPackDownLoadState, new Action(this.OnRefreshSubPackDownLoadState));
 	}
 
-	// Token: 0x06016BD1 RID: 93137 RVA: 0x005C4AA9 File Offset: 0x005C2CA9
+	// Token: 0x06014600 RID: 83456 RVA: 0x005F1549 File Offset: 0x005EF749
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRefreshSubPackDownLoadState, new Action(this.OnRefreshSubPackDownLoadState));
 	}
 
-	// Token: 0x06016BD2 RID: 93138 RVA: 0x005C4AC8 File Offset: 0x005C2CC8
+	// Token: 0x06014601 RID: 83457 RVA: 0x005F1568 File Offset: 0x005EF768
 	public void RefreshItem(int id, bool isDynamicRecall = false)
 	{
 		this.SubPackageId = id;
@@ -71,7 +71,7 @@ internal class SubPackageDownLoadSubPackageItem : UiPanelBase
 		this.RefreshProgressText();
 	}
 
-	// Token: 0x06016BD3 RID: 93139 RVA: 0x005C4B90 File Offset: 0x005C2D90
+	// Token: 0x06014602 RID: 83458 RVA: 0x005F1630 File Offset: 0x005EF830
 	public void RefreshState()
 	{
 		this.State = SubPackageDownLoadModel.Instance.GetSubPackageDownLoadItemStateById(this.SubPackageId);
@@ -100,7 +100,7 @@ internal class SubPackageDownLoadSubPackageItem : UiPanelBase
 		uuiitem3.SetChangeColor(bUseChangeColor3, fcolor);
 	}
 
-	// Token: 0x06016BD4 RID: 93140 RVA: 0x005C4D1C File Offset: 0x005C2F1C
+	// Token: 0x06014603 RID: 83459 RVA: 0x005F17BC File Offset: 0x005EF9BC
 	private void RefreshProgressText()
 	{
 		UUIText text = base.GetText(1);
@@ -120,7 +120,7 @@ internal class SubPackageDownLoadSubPackageItem : UiPanelBase
 		text.SetText(SubPackageDownLoadModel.Instance.ByteConverter(subPackageHaveDownLoadSpace) + "/" + SubPackageDownLoadModel.Instance.ByteConverter(subPackageSpace), true);
 	}
 
-	// Token: 0x06016BD5 RID: 93141 RVA: 0x005C4DAA File Offset: 0x005C2FAA
+	// Token: 0x06014604 RID: 83460 RVA: 0x005F184A File Offset: 0x005EFA4A
 	public void RefreshDownLoadStateByTime()
 	{
 		if (this.State == ESubPackageDownLoadState.DownLoading)
@@ -129,14 +129,14 @@ internal class SubPackageDownLoadSubPackageItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06016BD6 RID: 93142 RVA: 0x005C4DBB File Offset: 0x005C2FBB
+	// Token: 0x06014605 RID: 83461 RVA: 0x005F185B File Offset: 0x005EFA5B
 	[NullableContext(1)]
 	public UUIItem GetBtnItem()
 	{
 		return base.GetItem(10);
 	}
 
-	// Token: 0x06016BD7 RID: 93143 RVA: 0x005C4DC5 File Offset: 0x005C2FC5
+	// Token: 0x06014606 RID: 83462 RVA: 0x005F1865 File Offset: 0x005EFA65
 	private void OnClickStartBtn()
 	{
 		Action onClickBtn = this.OnClickBtn;
@@ -147,7 +147,7 @@ internal class SubPackageDownLoadSubPackageItem : UiPanelBase
 		SubPackageController.Instance.RestartSubPackageDownLoading(this.SubPackageId, new Action(this.RefreshDownLoadState));
 	}
 
-	// Token: 0x06016BD8 RID: 93144 RVA: 0x005C4DF8 File Offset: 0x005C2FF8
+	// Token: 0x06014607 RID: 83463 RVA: 0x005F1898 File Offset: 0x005EFA98
 	private void OnClickDownLoadBtn()
 	{
 		Action onClickBtn = this.OnClickBtn;
@@ -165,7 +165,7 @@ internal class SubPackageDownLoadSubPackageItem : UiPanelBase
 		}, new Action(this.RefreshDownLoadState));
 	}
 
-	// Token: 0x06016BD9 RID: 93145 RVA: 0x005C4E5E File Offset: 0x005C305E
+	// Token: 0x06014608 RID: 83464 RVA: 0x005F18FE File Offset: 0x005EFAFE
 	private void OnClickStopBtn()
 	{
 		Action onClickBtn = this.OnClickBtn;
@@ -176,7 +176,7 @@ internal class SubPackageDownLoadSubPackageItem : UiPanelBase
 		SubPackageController.Instance.StopSubPackageDownLoading(this.SubPackageId, new Action(this.RefreshDownLoadState));
 	}
 
-	// Token: 0x06016BDA RID: 93146 RVA: 0x005C4E8D File Offset: 0x005C308D
+	// Token: 0x06014609 RID: 83465 RVA: 0x005F192D File Offset: 0x005EFB2D
 	private void OnClickCancelBtn()
 	{
 		Action onClickBtn = this.OnClickBtn;
@@ -188,7 +188,7 @@ internal class SubPackageDownLoadSubPackageItem : UiPanelBase
 		this.RefreshDownLoadState();
 	}
 
-	// Token: 0x06016BDB RID: 93147 RVA: 0x005C4EB6 File Offset: 0x005C30B6
+	// Token: 0x0601460A RID: 83466 RVA: 0x005F1956 File Offset: 0x005EFB56
 	private void OnClickPriorityBtn()
 	{
 		Action onClickBtn = this.OnClickBtn;
@@ -202,13 +202,13 @@ internal class SubPackageDownLoadSubPackageItem : UiPanelBase
 		}, new Action(this.RefreshDownLoadState));
 	}
 
-	// Token: 0x06016BDC RID: 93148 RVA: 0x005C4EF1 File Offset: 0x005C30F1
+	// Token: 0x0601460B RID: 83467 RVA: 0x005F1991 File Offset: 0x005EFB91
 	private void RefreshDownLoadState()
 	{
 		EventSystem.Instance.Emit(EEventName.OnRefreshSubPackDownLoadState);
 	}
 
-	// Token: 0x06016BDD RID: 93149 RVA: 0x005C4F03 File Offset: 0x005C3103
+	// Token: 0x0601460C RID: 83468 RVA: 0x005F19A3 File Offset: 0x005EFBA3
 	private void OnRefreshSubPackDownLoadState()
 	{
 		if (this.SubPackageId == 0)
@@ -219,13 +219,13 @@ internal class SubPackageDownLoadSubPackageItem : UiPanelBase
 		this.RefreshProgressText();
 	}
 
-	// Token: 0x0400A8C7 RID: 43207
+	// Token: 0x0400ACCD RID: 44237
 	[Nullable(2)]
 	public Action OnClickBtn;
 
-	// Token: 0x0400A8C8 RID: 43208
+	// Token: 0x0400ACCE RID: 44238
 	private int SubPackageId;
 
-	// Token: 0x0400A8C9 RID: 43209
+	// Token: 0x0400ACCF RID: 44239
 	private ESubPackageDownLoadState State = ESubPackageDownLoadState.None;
 }

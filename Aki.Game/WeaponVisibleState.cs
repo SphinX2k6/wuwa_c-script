@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x020031B4 RID: 12724
+// Token: 0x02002723 RID: 10019
 public class WeaponVisibleState
 {
-	// Token: 0x170025EB RID: 9707
-	// (get) Token: 0x0601B6DC RID: 112348 RVA: 0x00780C3A File Offset: 0x0077EE3A
-	// (set) Token: 0x0601B6DD RID: 112349 RVA: 0x00780C42 File Offset: 0x0077EE42
+	// Token: 0x170027E8 RID: 10216
+	// (get) Token: 0x0601920F RID: 102927 RVA: 0x007A8FBA File Offset: 0x007A71BA
+	// (set) Token: 0x06019210 RID: 102928 RVA: 0x007A8FC2 File Offset: 0x007A71C2
 	public bool IsHidden { get; set; }
 
-	// Token: 0x170025EC RID: 9708
-	// (get) Token: 0x0601B6DE RID: 112350 RVA: 0x00780C4B File Offset: 0x0077EE4B
-	// (set) Token: 0x0601B6DF RID: 112351 RVA: 0x00780C53 File Offset: 0x0077EE53
+	// Token: 0x170027E9 RID: 10217
+	// (get) Token: 0x06019211 RID: 102929 RVA: 0x007A8FCB File Offset: 0x007A71CB
+	// (set) Token: 0x06019212 RID: 102930 RVA: 0x007A8FD3 File Offset: 0x007A71D3
 	public bool Active { get; set; }
 
-	// Token: 0x170025ED RID: 9709
-	// (get) Token: 0x0601B6E0 RID: 112352 RVA: 0x00780C5C File Offset: 0x0077EE5C
-	// (set) Token: 0x0601B6E1 RID: 112353 RVA: 0x00780C64 File Offset: 0x0077EE64
+	// Token: 0x170027EA RID: 10218
+	// (get) Token: 0x06019213 RID: 102931 RVA: 0x007A8FDC File Offset: 0x007A71DC
+	// (set) Token: 0x06019214 RID: 102932 RVA: 0x007A8FE4 File Offset: 0x007A71E4
 	public int Priority { get; set; }
 
-	// Token: 0x0601B6E2 RID: 112354 RVA: 0x00780C6D File Offset: 0x0077EE6D
+	// Token: 0x06019215 RID: 102933 RVA: 0x007A8FED File Offset: 0x007A71ED
 	public WeaponVisibleState(bool isHidden = false, bool active = true, int priority = 0)
 	{
 		this.IsHidden = isHidden;

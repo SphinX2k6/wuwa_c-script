@@ -15,13 +15,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000E2D RID: 3629
+// Token: 0x020002E2 RID: 738
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class KuroSdkModel : ModelBase
 {
-	// Token: 0x06005717 RID: 22295 RVA: 0x000FA38C File Offset: 0x000F858C
+	// Token: 0x06002AA7 RID: 10919 RVA: 0x00101B74 File Offset: 0x000FFD74
 	public KuroSdkModel()
 	{
 		this.ReportedInitState = false;
@@ -43,7 +43,7 @@ public class KuroSdkModel : ModelBase
 		this.NoticeSign = "1";
 	}
 
-	// Token: 0x06005718 RID: 22296 RVA: 0x000FA450 File Offset: 0x000F8650
+	// Token: 0x06002AA8 RID: 10920 RVA: 0x00101C38 File Offset: 0x000FFE38
 	protected override bool OnInit()
 	{
 		this.CanUseSdk = (UKuroStaticLibrary.IsModuleLoaded("KuroSDK") && BaseConfigController.Instance.GetPublicValue("UseSDK") == "1");
@@ -53,14 +53,14 @@ public class KuroSdkModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06005719 RID: 22297 RVA: 0x000FA4A3 File Offset: 0x000F86A3
+	// Token: 0x06002AA9 RID: 10921 RVA: 0x00101C8B File Offset: 0x000FFE8B
 	public void OnGetSdkBlockUserMap(Dictionary<string, bool> blockUserMap)
 	{
 		this.SdkBlockUserMap = blockUserMap;
 		this.GetSdkBlockUserState = true;
 	}
 
-	// Token: 0x0600571A RID: 22298 RVA: 0x000FA4B4 File Offset: 0x000F86B4
+	// Token: 0x06002AAA RID: 10922 RVA: 0x00101C9C File Offset: 0x000FFE9C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -77,7 +77,7 @@ public class KuroSdkModel : ModelBase
 		return <GetSdkBlockUserMap>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600571B RID: 22299 RVA: 0x000FA4F8 File Offset: 0x000F86F8
+	// Token: 0x06002AAB RID: 10923 RVA: 0x00101CE0 File Offset: 0x000FFEE0
 	private UniTask InitSdkTrophyInfo()
 	{
 		KuroSdkModel.<InitSdkTrophyInfo>d__39 <InitSdkTrophyInfo>d__;
@@ -88,13 +88,13 @@ public class KuroSdkModel : ModelBase
 		return <InitSdkTrophyInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600571C RID: 22300 RVA: 0x000FA53B File Offset: 0x000F873B
+	// Token: 0x06002AAC RID: 10924 RVA: 0x00101D23 File Offset: 0x000FFF23
 	public Dictionary<string, ISdkTrophyInfo> GetSdkTrophyInfo()
 	{
 		return this.SdkTrophyInfoMap;
 	}
 
-	// Token: 0x0600571D RID: 22301 RVA: 0x000FA544 File Offset: 0x000F8744
+	// Token: 0x06002AAD RID: 10925 RVA: 0x00101D2C File Offset: 0x000FFF2C
 	public void InitProgressActivityList()
 	{
 		IReadOnlyList<PlayStationActivityConfig> configList = ConfigPlayStationActivityConfigAll.GetConfigList(true);
@@ -110,7 +110,7 @@ public class KuroSdkModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600571E RID: 22302 RVA: 0x000FA598 File Offset: 0x000F8798
+	// Token: 0x06002AAE RID: 10926 RVA: 0x00101D80 File Offset: 0x000FFF80
 	public void UpdateActivityProgress(int currentFinishQuestId = 0)
 	{
 		bool flag = false;
@@ -132,7 +132,7 @@ public class KuroSdkModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600571F RID: 22303 RVA: 0x000FA5E4 File Offset: 0x000F87E4
+	// Token: 0x06002AAF RID: 10927 RVA: 0x00101DCC File Offset: 0x000FFFCC
 	private bool UpdateStaticActivityProgress()
 	{
 		IReadOnlyList<PlayStationStaticActivity> configList = ConfigPlayStationStaticActivityAll.GetConfigList(true);
@@ -158,15 +158,24 @@ public class KuroSdkModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06005720 RID: 22304 RVA: 0x000FA6AC File Offset: 0x000F88AC
+	// Token: 0x06002AB0 RID: 10928 RVA: 0x00101E94 File Offset: 0x00100094
 	private bool UpdateDynamicActivityProgress(int oldCurrentProgressActivityIndex)
 	{
-		if (this.ProgressActivityList == null)
+		if (this.ProgressActivityList == null || this.ProgressActivityList.Length == 0)
 		{
 			return false;
 		}
-		int num = this.ProgressActivityList.Length;
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
+		if (this.CurrentProgressActivityIndex < 0)
+		{
+			this.CurrentProgressActivityIndex = 0;
+			platformSdk.StartActivity(this.ProgressActivityList[0].ActivityStringId);
+		}
+		if (this.CurrentProgressActivityIndex >= this.ProgressActivityList.Length - 1)
+		{
+			return oldCurrentProgressActivityIndex != this.CurrentProgressActivityIndex;
+		}
+		int num = this.ProgressActivityList.Length;
 		QuestNewModel instance = QuestNewModel.Instance;
 		int num2 = this.CurrentProgressActivityIndex;
 		for (int i = num2 + 1; i < num; i++)
@@ -185,7 +194,7 @@ public class KuroSdkModel : ModelBase
 		return oldCurrentProgressActivityIndex != this.CurrentProgressActivityIndex;
 	}
 
-	// Token: 0x06005721 RID: 22305 RVA: 0x000FA760 File Offset: 0x000F8960
+	// Token: 0x06002AB1 RID: 10929 RVA: 0x00101F94 File Offset: 0x00100194
 	public void UpdateActivityAvailability()
 	{
 		if (this.ProgressActivityList == null || this.CurrentProgressActivityIndex < 0 || this.CurrentProgressActivityIndex >= this.ProgressActivityList.Length)
@@ -219,7 +228,7 @@ public class KuroSdkModel : ModelBase
 		PlatformSdkManagerNew.Instance.GetPlatformSdk().ChangeActivityAvailability(tarray, tarray2);
 	}
 
-	// Token: 0x06005722 RID: 22306 RVA: 0x000FA85C File Offset: 0x000F8A5C
+	// Token: 0x06002AB2 RID: 10930 RVA: 0x00102090 File Offset: 0x00100290
 	public int GetNextProgressActivityQuestId()
 	{
 		if (this.ProgressActivityList == null || this.CurrentProgressActivityIndex < 0 || this.CurrentProgressActivityIndex + 1 >= this.ProgressActivityList.Length)
@@ -229,7 +238,7 @@ public class KuroSdkModel : ModelBase
 		return this.ProgressActivityList[this.CurrentProgressActivityIndex + 1].QuestId;
 	}
 
-	// Token: 0x06005723 RID: 22307 RVA: 0x000FA89C File Offset: 0x000F8A9C
+	// Token: 0x06002AB3 RID: 10931 RVA: 0x001020D0 File Offset: 0x001002D0
 	public void OnQueryProductInfo([Nullable(new byte[]
 	{
 		2,
@@ -254,7 +263,7 @@ public class KuroSdkModel : ModelBase
 		this.QueryPromise = null;
 	}
 
-	// Token: 0x06005724 RID: 22308 RVA: 0x000FA8F4 File Offset: 0x000F8AF4
+	// Token: 0x06002AB4 RID: 10932 RVA: 0x00102128 File Offset: 0x00100328
 	public string GetQueryProductCurrency(string payId)
 	{
 		if (PlatformSdkManagerNew.Instance.IsSdkOn)
@@ -270,7 +279,7 @@ public class KuroSdkModel : ModelBase
 		return "";
 	}
 
-	// Token: 0x06005725 RID: 22309 RVA: 0x000FA964 File Offset: 0x000F8B64
+	// Token: 0x06002AB5 RID: 10933 RVA: 0x00102198 File Offset: 0x00100398
 	public float GetQueryProductPrice(string payId)
 	{
 		if (PlatformSdkManagerNew.Instance.IsSdkOn)
@@ -297,7 +306,7 @@ public class KuroSdkModel : ModelBase
 		}
 	}
 
-	// Token: 0x06005726 RID: 22310 RVA: 0x000FAA3C File Offset: 0x000F8C3C
+	// Token: 0x06002AB6 RID: 10934 RVA: 0x00102270 File Offset: 0x00100470
 	[return: Nullable(2)]
 	public string GetQueryProductShowPrice(string payId)
 	{
@@ -332,7 +341,7 @@ public class KuroSdkModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06005727 RID: 22311 RVA: 0x000FAB4C File Offset: 0x000F8D4C
+	// Token: 0x06002AB7 RID: 10935 RVA: 0x00102380 File Offset: 0x00100580
 	[return: Nullable(2)]
 	public string GetQueryProductName(string payId)
 	{
@@ -345,7 +354,7 @@ public class KuroSdkModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06005728 RID: 22312 RVA: 0x000FAB9C File Offset: 0x000F8D9C
+	// Token: 0x06002AB8 RID: 10936 RVA: 0x001023D0 File Offset: 0x001005D0
 	[return: Nullable(2)]
 	public string GetQueryProductDesc(string payId)
 	{
@@ -358,7 +367,7 @@ public class KuroSdkModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06005729 RID: 22313 RVA: 0x000FABE9 File Offset: 0x000F8DE9
+	// Token: 0x06002AB9 RID: 10937 RVA: 0x0010241D File Offset: 0x0010061D
 	[NullableContext(2)]
 	public FBasicInfo GetBasicInfo()
 	{
@@ -375,14 +384,14 @@ public class KuroSdkModel : ModelBase
 		return this.BaseInfo;
 	}
 
-	// Token: 0x0600572A RID: 22314 RVA: 0x000FAC24 File Offset: 0x000F8E24
+	// Token: 0x06002ABA RID: 10938 RVA: 0x00102458 File Offset: 0x00100658
 	public string GetDeviceFontAsset()
 	{
 		string fontAsset = this.GetFontAsset();
 		return this.GetFontPlatformName(fontAsset);
 	}
 
-	// Token: 0x0600572B RID: 22315 RVA: 0x000FAC40 File Offset: 0x000F8E40
+	// Token: 0x06002ABB RID: 10939 RVA: 0x00102474 File Offset: 0x00100674
 	public string GetFontAsset()
 	{
 		string packageLanguage = LanguageSystem.Instance.PackageLanguage;
@@ -465,7 +474,7 @@ public class KuroSdkModel : ModelBase
 		return "H7GBKHeavy.TTF";
 	}
 
-	// Token: 0x0600572C RID: 22316 RVA: 0x000FADE0 File Offset: 0x000F8FE0
+	// Token: 0x06002ABC RID: 10940 RVA: 0x00102614 File Offset: 0x00100814
 	private string GetFontPlatformName(string source)
 	{
 		if (!Platform.Instance.IsIOSPlatform() && !Platform.Instance.IsMacPlatform())
@@ -495,7 +504,7 @@ public class KuroSdkModel : ModelBase
 		return source;
 	}
 
-	// Token: 0x0600572D RID: 22317 RVA: 0x000FAE68 File Offset: 0x000F9068
+	// Token: 0x06002ABD RID: 10941 RVA: 0x0010269C File Offset: 0x0010089C
 	public string GetCurrentFontName()
 	{
 		string fontAsset = this.GetFontAsset();
@@ -522,7 +531,7 @@ public class KuroSdkModel : ModelBase
 		return "Kanit Medium";
 	}
 
-	// Token: 0x0600572E RID: 22318 RVA: 0x000FAEE4 File Offset: 0x000F90E4
+	// Token: 0x06002ABE RID: 10942 RVA: 0x00102718 File Offset: 0x00100918
 	public void OnSdkFocusChange(bool sdkGetFocusState)
 	{
 		this.SdkGetFocusState = sdkGetFocusState;
@@ -544,13 +553,13 @@ public class KuroSdkModel : ModelBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnSdkFocusStateChange, this.SdkGetFocusState);
 	}
 
-	// Token: 0x0600572F RID: 22319 RVA: 0x000FAF62 File Offset: 0x000F9162
+	// Token: 0x06002ABF RID: 10943 RVA: 0x00102796 File Offset: 0x00100996
 	public bool GetSdkFocusState()
 	{
 		return this.SdkGetFocusState;
 	}
 
-	// Token: 0x06005730 RID: 22320 RVA: 0x000FAF6A File Offset: 0x000F916A
+	// Token: 0x06002AC0 RID: 10944 RVA: 0x0010279E File Offset: 0x0010099E
 	public void SetPlayStationPlayOnlyState(bool state)
 	{
 		this.PlayStationPlayOnlyState = state;
@@ -558,7 +567,7 @@ public class KuroSdkModel : ModelBase
 		EventSystem.Instance.Emit<EFunction>(EEventName.RefreshMenuSetting, EFunction.PlayStationOnly);
 	}
 
-	// Token: 0x06005731 RID: 22321 RVA: 0x000FAF93 File Offset: 0x000F9193
+	// Token: 0x06002AC1 RID: 10945 RVA: 0x001027C7 File Offset: 0x001009C7
 	public void SetXboxPlayOnlyState(bool state)
 	{
 		this.XboxPlayOnlyState = state;
@@ -566,7 +575,7 @@ public class KuroSdkModel : ModelBase
 		EventSystem.Instance.Emit<EFunction>(EEventName.RefreshMenuSetting, EFunction.XboxOnly);
 	}
 
-	// Token: 0x06005732 RID: 22322 RVA: 0x000FAFBC File Offset: 0x000F91BC
+	// Token: 0x06002AC2 RID: 10946 RVA: 0x001027F0 File Offset: 0x001009F0
 	[NullableContext(2)]
 	public string GetSdkPackageId()
 	{
@@ -577,21 +586,21 @@ public class KuroSdkModel : ModelBase
 		return KuroSdkController.Instance.GetPackageId();
 	}
 
-	// Token: 0x06005733 RID: 22323 RVA: 0x000FAFE4 File Offset: 0x000F91E4
+	// Token: 0x06002AC3 RID: 10947 RVA: 0x00102818 File Offset: 0x00100A18
 	[NullableContext(2)]
 	public void SetEntryPointData(PostWebViewEntryPointData data)
 	{
 		this.EntryPointData = data;
 	}
 
-	// Token: 0x06005734 RID: 22324 RVA: 0x000FAFED File Offset: 0x000F91ED
+	// Token: 0x06002AC4 RID: 10948 RVA: 0x00102821 File Offset: 0x00100A21
 	[NullableContext(2)]
 	public PostWebViewEntryPointData GetEntryPointData()
 	{
 		return this.EntryPointData;
 	}
 
-	// Token: 0x06005735 RID: 22325 RVA: 0x000FAFF5 File Offset: 0x000F91F5
+	// Token: 0x06002AC5 RID: 10949 RVA: 0x00102829 File Offset: 0x00100A29
 	[NullableContext(2)]
 	public void SetIntroductionData(IntroductionData data)
 	{
@@ -599,14 +608,14 @@ public class KuroSdkModel : ModelBase
 		this.RefreshIntroductionRedDotState();
 	}
 
-	// Token: 0x06005736 RID: 22326 RVA: 0x000FB004 File Offset: 0x000F9204
+	// Token: 0x06002AC6 RID: 10950 RVA: 0x00102838 File Offset: 0x00100A38
 	[NullableContext(2)]
 	public IntroductionData GetIntroductionData()
 	{
 		return this.IntroductionData;
 	}
 
-	// Token: 0x06005737 RID: 22327 RVA: 0x000FB00C File Offset: 0x000F920C
+	// Token: 0x06002AC7 RID: 10951 RVA: 0x00102840 File Offset: 0x00100A40
 	private void RefreshIntroductionRedDotState()
 	{
 		string s = (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.IntroductionVersion) as ServerStorageString).Get() ?? "";
@@ -623,7 +632,7 @@ public class KuroSdkModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.SdkIntroductionRedPointRefresh);
 	}
 
-	// Token: 0x06005738 RID: 22328 RVA: 0x000FB07C File Offset: 0x000F927C
+	// Token: 0x06002AC8 RID: 10952 RVA: 0x001028B0 File Offset: 0x00100AB0
 	public void SaveCurrentClickIntroductionVersion()
 	{
 		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.IntroductionVersion) as ServerStorageString).Set((this.IntroductionData != null) ? this.IntroductionData.version.ToString() : "");
@@ -631,7 +640,7 @@ public class KuroSdkModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.SdkIntroductionRedPointRefresh);
 	}
 
-	// Token: 0x06005739 RID: 22329 RVA: 0x000FB0D5 File Offset: 0x000F92D5
+	// Token: 0x06002AC9 RID: 10953 RVA: 0x00102909 File Offset: 0x00100B09
 	public int GetNoticePlatformId()
 	{
 		if (Platform.Instance.IsAndroidPlatform())
@@ -653,7 +662,7 @@ public class KuroSdkModel : ModelBase
 		return 1;
 	}
 
-	// Token: 0x0600573A RID: 22330 RVA: 0x000FB110 File Offset: 0x000F9310
+	// Token: 0x06002ACA RID: 10954 RVA: 0x00102944 File Offset: 0x00100B44
 	public NoticeContentData[] FilterCurrentNeedShowNoticeContent(NoticeData source, string roleId)
 	{
 		List<NoticeContentData> list = new List<NoticeContentData>();
@@ -675,7 +684,7 @@ public class KuroSdkModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600573B RID: 22331 RVA: 0x000FB1E8 File Offset: 0x000F93E8
+	// Token: 0x06002ACB RID: 10955 RVA: 0x00102A1C File Offset: 0x00100C1C
 	private bool CheckNoticeContentInValidTime(NoticeContentData data)
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -684,7 +693,7 @@ public class KuroSdkModel : ModelBase
 		return serverTime >= num && serverTime <= num2;
 	}
 
-	// Token: 0x0600573C RID: 22332 RVA: 0x000FB230 File Offset: 0x000F9430
+	// Token: 0x06002ACC RID: 10956 RVA: 0x00102A64 File Offset: 0x00100C64
 	private bool CheckNoticeContentInWhiteList(NoticeContentData data, string roleId)
 	{
 		bool result = true;
@@ -703,7 +712,7 @@ public class KuroSdkModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600573D RID: 22333 RVA: 0x000FB270 File Offset: 0x000F9470
+	// Token: 0x06002ACD RID: 10957 RVA: 0x00102AA4 File Offset: 0x00100CA4
 	private bool CheckNoticeContentInChannel(NoticeContentData data, string channelId)
 	{
 		bool result = true;
@@ -722,7 +731,7 @@ public class KuroSdkModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600573E RID: 22334 RVA: 0x000FB2B0 File Offset: 0x000F94B0
+	// Token: 0x06002ACE RID: 10958 RVA: 0x00102AE4 File Offset: 0x00100CE4
 	private bool CheckNoticeContentInPlatform(NoticeContentData data, int platformId)
 	{
 		bool result = true;
@@ -741,7 +750,7 @@ public class KuroSdkModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600573F RID: 22335 RVA: 0x000FB2E8 File Offset: 0x000F94E8
+	// Token: 0x06002ACF RID: 10959 RVA: 0x00102B1C File Offset: 0x00100D1C
 	public string GetNoticeContentUrl(int currentIndex)
 	{
 		if (KuroSdkModel.Instance.GetEntryPointData() == null)
@@ -756,7 +765,7 @@ public class KuroSdkModel : ModelBase
 		return entryPointData.contentUrl[currentIndex];
 	}
 
-	// Token: 0x06005740 RID: 22336 RVA: 0x000FB330 File Offset: 0x000F9530
+	// Token: 0x06002AD0 RID: 10960 RVA: 0x00102B64 File Offset: 0x00100D64
 	public string GetQueryNoticeReadStateUrl(int currentIndex = 0)
 	{
 		if (KuroSdkModel.Instance.GetEntryPointData() == null)
@@ -778,7 +787,7 @@ public class KuroSdkModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005741 RID: 22337 RVA: 0x000FB3F8 File Offset: 0x000F95F8
+	// Token: 0x06002AD1 RID: 10961 RVA: 0x00102C2C File Offset: 0x00100E2C
 	public string GetEntryPointUrl()
 	{
 		string currentLoginServerId = LoginServerModel.Instance.GetCurrentLoginServerId();
@@ -792,7 +801,7 @@ public class KuroSdkModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005742 RID: 22338 RVA: 0x000FB470 File Offset: 0x000F9670
+	// Token: 0x06002AD2 RID: 10962 RVA: 0x00102CA4 File Offset: 0x00100EA4
 	private string GetNoticePreUrl(int currentIndex = 0)
 	{
 		if (KuroSdkModel.Instance.GetEntryPointData() == null)
@@ -807,7 +816,7 @@ public class KuroSdkModel : ModelBase
 		return entryPointData.h5AppUrl[currentIndex];
 	}
 
-	// Token: 0x06005743 RID: 22339 RVA: 0x000FB4B8 File Offset: 0x000F96B8
+	// Token: 0x06002AD3 RID: 10963 RVA: 0x00102CEC File Offset: 0x00100EEC
 	public string GetPlatformStr()
 	{
 		if (Platform.Instance.IsAndroidPlatform())
@@ -841,7 +850,7 @@ public class KuroSdkModel : ModelBase
 		return "PC";
 	}
 
-	// Token: 0x06005744 RID: 22340 RVA: 0x000FB548 File Offset: 0x000F9748
+	// Token: 0x06002AD4 RID: 10964 RVA: 0x00102D7C File Offset: 0x00100F7C
 	public string GetNoticeUrl(int currentIndex = 0, EOpenNoticeStage stage = EOpenNoticeStage.Normal)
 	{
 		string noticePreUrl = this.GetNoticePreUrl(currentIndex);
@@ -895,7 +904,7 @@ public class KuroSdkModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005745 RID: 22341 RVA: 0x000FB740 File Offset: 0x000F9940
+	// Token: 0x06002AD5 RID: 10965 RVA: 0x00102F74 File Offset: 0x00101174
 	public string GetQueryNoticeRedDotStateUrl(int currentIndex = 0)
 	{
 		if (KuroSdkModel.Instance.GetEntryPointData() == null)
@@ -932,7 +941,7 @@ public class KuroSdkModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005746 RID: 22342 RVA: 0x000FB8B8 File Offset: 0x000F9AB8
+	// Token: 0x06002AD6 RID: 10966 RVA: 0x001030EC File Offset: 0x001012EC
 	private string GetApiUrl(int currentIndex = 0)
 	{
 		PostWebViewEntryPointData entryPointData = KuroSdkModel.Instance.GetEntryPointData();
@@ -948,7 +957,7 @@ public class KuroSdkModel : ModelBase
 		return entryPointData.apiUrl;
 	}
 
-	// Token: 0x06005747 RID: 22343 RVA: 0x000FB914 File Offset: 0x000F9B14
+	// Token: 0x06002AD7 RID: 10967 RVA: 0x00103148 File Offset: 0x00101348
 	public string GetIntroductionVersionUrl()
 	{
 		string text = "";
@@ -970,7 +979,7 @@ public class KuroSdkModel : ModelBase
 		return text + "/introduction/redot.json";
 	}
 
-	// Token: 0x06005748 RID: 22344 RVA: 0x000FB97C File Offset: 0x000F9B7C
+	// Token: 0x06002AD8 RID: 10968 RVA: 0x001031B0 File Offset: 0x001013B0
 	public void OnMatchTeamNotify(MatchTeamInfo matchTeamInfo)
 	{
 		foreach (MatchPlayerInfo matchPlayerInfo in matchTeamInfo.PlayerInfos)
@@ -982,7 +991,7 @@ public class KuroSdkModel : ModelBase
 		}
 	}
 
-	// Token: 0x06005749 RID: 22345 RVA: 0x000FB9E4 File Offset: 0x000F9BE4
+	// Token: 0x06002AD9 RID: 10969 RVA: 0x00103218 File Offset: 0x00101418
 	public void RefreshPlayerChatPermissionByPlayerDetails(PlayerDetails playerDetails)
 	{
 		if (!string.IsNullOrEmpty(playerDetails.XboxUserId))
@@ -991,7 +1000,7 @@ public class KuroSdkModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600574A RID: 22346 RVA: 0x000FBA08 File Offset: 0x000F9C08
+	// Token: 0x06002ADA RID: 10970 RVA: 0x0010323C File Offset: 0x0010143C
 	public void RefreshPlayerChatPermission(int playerId, string userId)
 	{
 		KuroSdkController.Instance.CheckPermission(userId, ESdkPermission.CommunicateUsingText, delegate(bool result)
@@ -1000,13 +1009,13 @@ public class KuroSdkModel : ModelBase
 		});
 	}
 
-	// Token: 0x0600574B RID: 22347 RVA: 0x000FBA41 File Offset: 0x000F9C41
+	// Token: 0x06002ADB RID: 10971 RVA: 0x00103275 File Offset: 0x00101475
 	public bool GetPlayerChatPermission(int playerId)
 	{
 		return this.PlayerChatPermissionMap.GetValueOrDefault(playerId, true);
 	}
 
-	// Token: 0x0600574C RID: 22348 RVA: 0x000FBA50 File Offset: 0x000F9C50
+	// Token: 0x06002ADC RID: 10972 RVA: 0x00103284 File Offset: 0x00101484
 	public EXboxMultiplayerActivityJoinRestriction GetRoomRestriction()
 	{
 		EPlayStationJoinAble gameJoinTypeToPlayStationJoinType = OnlineModel.Instance.GetGameJoinTypeToPlayStationJoinType();
@@ -1030,8 +1039,8 @@ public class KuroSdkModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x1700064E RID: 1614
-	// (get) Token: 0x0600574D RID: 22349 RVA: 0x000FBA85 File Offset: 0x000F9C85
+	// Token: 0x17000672 RID: 1650
+	// (get) Token: 0x06002ADD RID: 10973 RVA: 0x001032B9 File Offset: 0x001014B9
 	public static KuroSdkModel Instance
 	{
 		get
@@ -1040,7 +1049,7 @@ public class KuroSdkModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600574E RID: 22350 RVA: 0x000FBA8C File Offset: 0x000F9C8C
+	// Token: 0x06002ADE RID: 10974 RVA: 0x001032C0 File Offset: 0x001014C0
 	public static KuroSdkModel GetOrCreateInstance()
 	{
 		if (KuroSdkModel._Instance == null)
@@ -1050,7 +1059,7 @@ public class KuroSdkModel : ModelBase
 		return KuroSdkModel._Instance;
 	}
 
-	// Token: 0x0600574F RID: 22351 RVA: 0x000FBAA0 File Offset: 0x000F9CA0
+	// Token: 0x06002ADF RID: 10975 RVA: 0x001032D4 File Offset: 0x001014D4
 	public static bool CreateInstance()
 	{
 		if (KuroSdkModel._Instance != null)
@@ -1061,140 +1070,140 @@ public class KuroSdkModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06005750 RID: 22352 RVA: 0x000FBAB6 File Offset: 0x000F9CB6
+	// Token: 0x06002AE0 RID: 10976 RVA: 0x001032EA File Offset: 0x001014EA
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06005751 RID: 22353 RVA: 0x000FBAB8 File Offset: 0x000F9CB8
+	// Token: 0x06002AE1 RID: 10977 RVA: 0x001032EC File Offset: 0x001014EC
 	public static void ResetStaticDefaultValue()
 	{
 		KuroSdkModel._Instance = null;
 	}
 
-	// Token: 0x06005752 RID: 22354 RVA: 0x000FBAC0 File Offset: 0x000F9CC0
+	// Token: 0x06002AE2 RID: 10978 RVA: 0x001032F4 File Offset: 0x001014F4
 	static KuroSdkModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(KuroSdkModel.CreateStaticDefaultValue), new Action(KuroSdkModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002814 RID: 10260
+	// Token: 0x040028AD RID: 10413
 	private const string LAGUSANSBOLD = "LaguSansBold.otf";
 
-	// Token: 0x04002815 RID: 10261
+	// Token: 0x040028AE RID: 10414
 	private const string MOTOYTA = "MotoyaAporoStdW5.otf";
 
-	// Token: 0x04002816 RID: 10262
+	// Token: 0x040028AF RID: 10415
 	private const string SUITEBOLD = "SUITE-Bold.otf";
 
-	// Token: 0x04002817 RID: 10263
+	// Token: 0x040028B0 RID: 10416
 	private const string H7GBKHEAVY = "H7GBKHeavy.TTF";
 
-	// Token: 0x04002818 RID: 10264
+	// Token: 0x040028B1 RID: 10417
 	private const string KANIT = "Kanit-Medium.ttf";
 
-	// Token: 0x04002819 RID: 10265
+	// Token: 0x040028B2 RID: 10418
 	private const string DEFAULTEMPTY = " ";
 
-	// Token: 0x0400281A RID: 10266
+	// Token: 0x040028B3 RID: 10419
 	public bool ReportedInitState;
 
-	// Token: 0x0400281B RID: 10267
+	// Token: 0x040028B4 RID: 10420
 	[Nullable(2)]
 	private FBasicInfo BaseInfo;
 
-	// Token: 0x0400281C RID: 10268
+	// Token: 0x040028B5 RID: 10421
 	private readonly Dictionary<string, QueryProductSt> QueryProductInfoMap;
 
-	// Token: 0x0400281D RID: 10269
+	// Token: 0x040028B6 RID: 10422
 	private Dictionary<string, ISdkTrophyInfo> SdkTrophyInfoMap;
 
-	// Token: 0x0400281E RID: 10270
+	// Token: 0x040028B7 RID: 10423
 	public bool CanUseSdk;
 
-	// Token: 0x0400281F RID: 10271
+	// Token: 0x040028B8 RID: 10424
 	public string CurrentPayItemName;
 
-	// Token: 0x04002820 RID: 10272
+	// Token: 0x040028B9 RID: 10425
 	public bool SdkGetFocusState;
 
-	// Token: 0x04002821 RID: 10273
+	// Token: 0x040028BA RID: 10426
 	public Dictionary<string, bool> SdkBlockUserMap;
 
-	// Token: 0x04002822 RID: 10274
+	// Token: 0x040028BB RID: 10427
 	private bool GetSdkBlockUserState;
 
-	// Token: 0x04002823 RID: 10275
+	// Token: 0x040028BC RID: 10428
 	public bool PlayStationPlayOnlyState;
 
-	// Token: 0x04002824 RID: 10276
+	// Token: 0x040028BD RID: 10429
 	public bool XboxPlayOnlyState;
 
-	// Token: 0x04002825 RID: 10277
+	// Token: 0x040028BE RID: 10430
 	[Nullable(2)]
 	public string UserId;
 
-	// Token: 0x04002826 RID: 10278
+	// Token: 0x040028BF RID: 10431
 	[Nullable(2)]
 	public string OnlineId;
 
-	// Token: 0x04002827 RID: 10279
+	// Token: 0x040028C0 RID: 10432
 	private int CurrentProgressActivityIndex;
 
-	// Token: 0x04002828 RID: 10280
+	// Token: 0x040028C1 RID: 10433
 	[Nullable(2)]
 	private PlayStationActivityConfig[] ProgressActivityList;
 
-	// Token: 0x04002829 RID: 10281
+	// Token: 0x040028C2 RID: 10434
 	[Nullable(2)]
 	public string AccountId;
 
-	// Token: 0x0400282A RID: 10282
+	// Token: 0x040028C3 RID: 10435
 	public string CurrentPayingOrderId;
 
-	// Token: 0x0400282B RID: 10283
+	// Token: 0x040028C4 RID: 10436
 	public bool NeedOpenReviewState;
 
-	// Token: 0x0400282C RID: 10284
+	// Token: 0x040028C5 RID: 10437
 	public int ReviewDelay;
 
-	// Token: 0x0400282D RID: 10285
+	// Token: 0x040028C6 RID: 10438
 	public int CurrentReviewId;
 
-	// Token: 0x0400282E RID: 10286
+	// Token: 0x040028C7 RID: 10439
 	public bool NeedReviewConfirmBox;
 
-	// Token: 0x0400282F RID: 10287
+	// Token: 0x040028C8 RID: 10440
 	[Nullable(2)]
 	public CustomPromise<bool> QueryPromise;
 
-	// Token: 0x04002830 RID: 10288
+	// Token: 0x040028C9 RID: 10441
 	[Nullable(2)]
 	private PostWebViewEntryPointData EntryPointData;
 
-	// Token: 0x04002831 RID: 10289
+	// Token: 0x040028CA RID: 10442
 	[Nullable(2)]
 	private IntroductionData IntroductionData;
 
-	// Token: 0x04002832 RID: 10290
+	// Token: 0x040028CB RID: 10443
 	public bool NoticeRedDotState;
 
-	// Token: 0x04002833 RID: 10291
+	// Token: 0x040028CC RID: 10444
 	public string NoticeSign;
 
-	// Token: 0x04002834 RID: 10292
+	// Token: 0x040028CD RID: 10445
 	public string GmIntroductionLink = "";
 
-	// Token: 0x04002835 RID: 10293
+	// Token: 0x040028CE RID: 10446
 	public bool IntroductionNoticeState;
 
-	// Token: 0x04002836 RID: 10294
+	// Token: 0x040028CF RID: 10447
 	private readonly List<string> CurrentOpeningStaticActivityList = new List<string>();
 
-	// Token: 0x04002837 RID: 10295
+	// Token: 0x040028D0 RID: 10448
 	private readonly Dictionary<int, bool> PlayerChatPermissionMap = new Dictionary<int, bool>();
 
-	// Token: 0x04002838 RID: 10296
+	// Token: 0x040028D1 RID: 10449
 	[Nullable(2)]
 	private static KuroSdkModel _Instance;
 }

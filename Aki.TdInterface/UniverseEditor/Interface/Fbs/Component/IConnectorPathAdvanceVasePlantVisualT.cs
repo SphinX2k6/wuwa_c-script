@@ -3,45 +3,45 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005013 RID: 20499
+	// Token: 0x02005572 RID: 21874
 	public class IConnectorPathAdvanceVasePlantVisualT
 	{
-		// Token: 0x1700949D RID: 38045
-		// (get) Token: 0x06020CD7 RID: 134359 RVA: 0x0048F911 File Offset: 0x0048DB11
-		// (set) Token: 0x06020CD8 RID: 134360 RVA: 0x0048F919 File Offset: 0x0048DB19
+		// Token: 0x17009C7E RID: 40062
+		// (get) Token: 0x06022BF7 RID: 142327 RVA: 0x004C9361 File Offset: 0x004C7561
+		// (set) Token: 0x06022BF8 RID: 142328 RVA: 0x004C9369 File Offset: 0x004C7569
 		public EConnectorPathAdvanceVisualType Type { get; set; }
 
-		// Token: 0x1700949E RID: 38046
-		// (get) Token: 0x06020CD9 RID: 134361 RVA: 0x0048F922 File Offset: 0x0048DB22
-		// (set) Token: 0x06020CDA RID: 134362 RVA: 0x0048F92A File Offset: 0x0048DB2A
+		// Token: 0x17009C7F RID: 40063
+		// (get) Token: 0x06022BF9 RID: 142329 RVA: 0x004C9372 File Offset: 0x004C7572
+		// (set) Token: 0x06022BFA RID: 142330 RVA: 0x004C937A File Offset: 0x004C757A
 		public float ScatterWidth { get; set; }
 
-		// Token: 0x1700949F RID: 38047
-		// (get) Token: 0x06020CDB RID: 134363 RVA: 0x0048F933 File Offset: 0x0048DB33
-		// (set) Token: 0x06020CDC RID: 134364 RVA: 0x0048F93B File Offset: 0x0048DB3B
+		// Token: 0x17009C80 RID: 40064
+		// (get) Token: 0x06022BFB RID: 142331 RVA: 0x004C9383 File Offset: 0x004C7583
+		// (set) Token: 0x06022BFC RID: 142332 RVA: 0x004C938B File Offset: 0x004C758B
 		public float ScatterDensity { get; set; }
 
-		// Token: 0x170094A0 RID: 38048
-		// (get) Token: 0x06020CDD RID: 134365 RVA: 0x0048F944 File Offset: 0x0048DB44
-		// (set) Token: 0x06020CDE RID: 134366 RVA: 0x0048F94C File Offset: 0x0048DB4C
+		// Token: 0x17009C81 RID: 40065
+		// (get) Token: 0x06022BFD RID: 142333 RVA: 0x004C9394 File Offset: 0x004C7594
+		// (set) Token: 0x06022BFE RID: 142334 RVA: 0x004C939C File Offset: 0x004C759C
 		public float Scale { get; set; }
 
-		// Token: 0x170094A1 RID: 38049
-		// (get) Token: 0x06020CDF RID: 134367 RVA: 0x0048F955 File Offset: 0x0048DB55
-		// (set) Token: 0x06020CE0 RID: 134368 RVA: 0x0048F95D File Offset: 0x0048DB5D
+		// Token: 0x17009C82 RID: 40066
+		// (get) Token: 0x06022BFF RID: 142335 RVA: 0x004C93A5 File Offset: 0x004C75A5
+		// (set) Token: 0x06022C00 RID: 142336 RVA: 0x004C93AD File Offset: 0x004C75AD
 		public bool SnapToSurface { get; set; }
 
-		// Token: 0x170094A2 RID: 38050
-		// (get) Token: 0x06020CE1 RID: 134369 RVA: 0x0048F966 File Offset: 0x0048DB66
-		// (set) Token: 0x06020CE2 RID: 134370 RVA: 0x0048F96E File Offset: 0x0048DB6E
+		// Token: 0x17009C83 RID: 40067
+		// (get) Token: 0x06022C01 RID: 142337 RVA: 0x004C93B6 File Offset: 0x004C75B6
+		// (set) Token: 0x06022C02 RID: 142338 RVA: 0x004C93BE File Offset: 0x004C75BE
 		public List<string> PathRtList { get; set; }
 
-		// Token: 0x170094A3 RID: 38051
-		// (get) Token: 0x06020CE3 RID: 134371 RVA: 0x0048F977 File Offset: 0x0048DB77
-		// (set) Token: 0x06020CE4 RID: 134372 RVA: 0x0048F97F File Offset: 0x0048DB7F
+		// Token: 0x17009C84 RID: 40068
+		// (get) Token: 0x06022C03 RID: 142339 RVA: 0x004C93C7 File Offset: 0x004C75C7
+		// (set) Token: 0x06022C04 RID: 142340 RVA: 0x004C93CF File Offset: 0x004C75CF
 		public byte NullMask { get; set; }
 
-		// Token: 0x06020CE5 RID: 134373 RVA: 0x0048F988 File Offset: 0x0048DB88
+		// Token: 0x06022C05 RID: 142341 RVA: 0x004C93D8 File Offset: 0x004C75D8
 		public IConnectorPathAdvanceVasePlantVisualT()
 		{
 			this.Type = EConnectorPathAdvanceVisualType.VasePlant;

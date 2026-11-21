@@ -13,32 +13,32 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002724 RID: 10020
+// Token: 0x02001C0F RID: 7183
 [NullableContext(2)]
 [Nullable(0)]
 public class RacingBetsActivityView : ActivitySubViewBase
 {
-	// Token: 0x0601488B RID: 84107 RVA: 0x0052F44D File Offset: 0x0052D64D
+	// Token: 0x06011D6D RID: 73069 RVA: 0x0053E169 File Offset: 0x0053C369
 	protected override void OnSetData()
 	{
 		this.RacingBetSeasonData = (this.ActivityBaseData as RacingBetsSeasonData);
 	}
 
-	// Token: 0x0601488C RID: 84108 RVA: 0x0052F460 File Offset: 0x0052D660
+	// Token: 0x06011D6E RID: 73070 RVA: 0x0053E17C File Offset: 0x0053C37C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnRacingBetsPlayerInfoUpdate, new Action(this.RefreshPlayerBetInfo));
 		EventSystem.Instance.Add(EEventName.OnRacingBetsRewardRefresh, new Action(this.RefreshRedDot));
 	}
 
-	// Token: 0x0601488D RID: 84109 RVA: 0x0052F49A File Offset: 0x0052D69A
+	// Token: 0x06011D6F RID: 73071 RVA: 0x0053E1B6 File Offset: 0x0053C3B6
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRacingBetsPlayerInfoUpdate, new Action(this.RefreshPlayerBetInfo));
 		EventSystem.Instance.Remove(EEventName.OnRacingBetsRewardRefresh, new Action(this.RefreshRedDot));
 	}
 
-	// Token: 0x0601488E RID: 84110 RVA: 0x0052F4D4 File Offset: 0x0052D6D4
+	// Token: 0x06011D70 RID: 73072 RVA: 0x0053E1F0 File Offset: 0x0053C3F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 23;
@@ -94,7 +94,7 @@ public class RacingBetsActivityView : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601488F RID: 84111 RVA: 0x0052F804 File Offset: 0x0052DA04
+	// Token: 0x06011D71 RID: 73073 RVA: 0x0053E520 File Offset: 0x0053C720
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RacingBetsActivityView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -105,7 +105,7 @@ public class RacingBetsActivityView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014890 RID: 84112 RVA: 0x0052F848 File Offset: 0x0052DA48
+	// Token: 0x06011D72 RID: 73074 RVA: 0x0053E564 File Offset: 0x0053C764
 	protected override void OnStart()
 	{
 		Activity? localConfig = this.RacingBetSeasonData.LocalConfig;
@@ -139,7 +139,7 @@ public class RacingBetsActivityView : ActivitySubViewBase
 		this.ActivityRewardItem.SetFunction(new Action(this.OnClickActivityRewardItem));
 	}
 
-	// Token: 0x06014891 RID: 84113 RVA: 0x0052F9D1 File Offset: 0x0052DBD1
+	// Token: 0x06011D73 RID: 73075 RVA: 0x0053E6ED File Offset: 0x0053C8ED
 	protected override void OnBeforeShow()
 	{
 		base.GetSpine(6).SetAnimation(0, "start", false).AnimationComplete.Add(delegate(UTrackEntry _)
@@ -148,13 +148,13 @@ public class RacingBetsActivityView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06014892 RID: 84114 RVA: 0x0052F9FC File Offset: 0x0052DBFC
+	// Token: 0x06011D74 RID: 73076 RVA: 0x0053E718 File Offset: 0x0053C918
 	protected override void OnBeforeHide()
 	{
 		base.GetSpine(6).ClearTracks();
 	}
 
-	// Token: 0x06014893 RID: 84115 RVA: 0x0052FA0C File Offset: 0x0052DC0C
+	// Token: 0x06011D75 RID: 73077 RVA: 0x0053E728 File Offset: 0x0053C928
 	protected override void OnRefreshView()
 	{
 		bool flag = this.RacingBetSeasonData.IsUnLock();
@@ -169,32 +169,32 @@ public class RacingBetsActivityView : ActivitySubViewBase
 		this.RefreshPanelInfo();
 	}
 
-	// Token: 0x06014894 RID: 84116 RVA: 0x0052FA90 File Offset: 0x0052DC90
+	// Token: 0x06011D76 RID: 73078 RVA: 0x0053E7AC File Offset: 0x0053C9AC
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshActivityTimerText();
 		this.RefreshPanelInfo();
 	}
 
-	// Token: 0x06014895 RID: 84117 RVA: 0x0052FAA0 File Offset: 0x0052DCA0
+	// Token: 0x06011D77 RID: 73079 RVA: 0x0053E7BC File Offset: 0x0053C9BC
 	private void RefreshActivityTimerText()
 	{
 		string item = this.GetTimeVisibleAndRemainTime().Item2;
 		this.TitleItem.SetTimeTextByText(item);
 	}
 
-	// Token: 0x06014896 RID: 84118 RVA: 0x0052FAC5 File Offset: 0x0052DCC5
+	// Token: 0x06011D78 RID: 73080 RVA: 0x0053E7E1 File Offset: 0x0053C9E1
 	private void RefreshRedDot()
 	{
 		this.FunctionalItem.FunctionButton.SetRedDotVisible(this.RacingBetSeasonData.RedPointShowState);
 	}
 
-	// Token: 0x06014897 RID: 84119 RVA: 0x0052FAE2 File Offset: 0x0052DCE2
+	// Token: 0x06011D79 RID: 73081 RVA: 0x0053E7FE File Offset: 0x0053C9FE
 	private void RefreshPlayerBetInfo()
 	{
 	}
 
-	// Token: 0x06014898 RID: 84120 RVA: 0x0052FAE4 File Offset: 0x0052DCE4
+	// Token: 0x06011D7A RID: 73082 RVA: 0x0053E800 File Offset: 0x0053CA00
 	private void FunctionExecute()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -216,7 +216,7 @@ public class RacingBetsActivityView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06014899 RID: 84121 RVA: 0x0052FB04 File Offset: 0x0052DD04
+	// Token: 0x06011D7B RID: 73083 RVA: 0x0053E820 File Offset: 0x0053CA20
 	private void OnClickActivityRewardItem()
 	{
 		RacingBetsGroupRewardData groupRewardData = this.RacingBetSeasonData.GetGroupRewardData(ERacingBetsRewardType.BetsCount);
@@ -228,7 +228,7 @@ public class RacingBetsActivityView : ActivitySubViewBase
 		}, null);
 	}
 
-	// Token: 0x0601489A RID: 84122 RVA: 0x0052FB50 File Offset: 0x0052DD50
+	// Token: 0x06011D7C RID: 73084 RVA: 0x0053E86C File Offset: 0x0053CA6C
 	private void OnClickActivityInternalRewardItem()
 	{
 		RacingBetsGroupRewardData groupRewardData = this.RacingBetSeasonData.GetGroupRewardData(ERacingBetsRewardType.DailyGameEarn);
@@ -238,7 +238,7 @@ public class RacingBetsActivityView : ActivitySubViewBase
 		}, null);
 	}
 
-	// Token: 0x0601489B RID: 84123 RVA: 0x0052FB88 File Offset: 0x0052DD88
+	// Token: 0x06011D7D RID: 73085 RVA: 0x0053E8A4 File Offset: 0x0053CAA4
 	private void RefreshPanelInfo()
 	{
 		RacingBetsLegMatchData curLegMatchData = this.RacingBetSeasonData.GetCurLegMatchData();
@@ -263,7 +263,7 @@ public class RacingBetsActivityView : ActivitySubViewBase
 		this.RefreshMatchStateInfo(legMatchDataForMatchStateText);
 	}
 
-	// Token: 0x0601489C RID: 84124 RVA: 0x0052FC14 File Offset: 0x0052DE14
+	// Token: 0x06011D7E RID: 73086 RVA: 0x0053E930 File Offset: 0x0053CB30
 	[NullableContext(1)]
 	private void RefreshWinnerInfo(RacingBetsLegMatchData legMatchData)
 	{
@@ -283,7 +283,7 @@ public class RacingBetsActivityView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0601489D RID: 84125 RVA: 0x0052FCD8 File Offset: 0x0052DED8
+	// Token: 0x06011D7F RID: 73087 RVA: 0x0053E9F4 File Offset: 0x0053CBF4
 	[NullableContext(1)]
 	private void RefreshMatchStateInfo(RacingBetsLegMatchData legMatchData)
 	{
@@ -381,16 +381,16 @@ public class RacingBetsActivityView : ActivitySubViewBase
 		base.GetText(11).SetUIActive(!flag2);
 	}
 
-	// Token: 0x04009A69 RID: 39529
+	// Token: 0x04009BC1 RID: 39873
 	private RacingBetsSeasonData RacingBetSeasonData;
 
-	// Token: 0x04009A6A RID: 39530
+	// Token: 0x04009BC2 RID: 39874
 	private ActivityTitleTypeA TitleItem;
 
-	// Token: 0x04009A6B RID: 39531
+	// Token: 0x04009BC3 RID: 39875
 	private ActivityDescriptionTypeA DescriptionItem;
 
-	// Token: 0x04009A6C RID: 39532
+	// Token: 0x04009BC4 RID: 39876
 	[Nullable(new byte[]
 	{
 		2,
@@ -398,92 +398,92 @@ public class RacingBetsActivityView : ActivitySubViewBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListItem;
 
-	// Token: 0x04009A6D RID: 39533
+	// Token: 0x04009BC5 RID: 39877
 	private ActivityFunctionalTypeA FunctionalItem;
 
-	// Token: 0x04009A6E RID: 39534
+	// Token: 0x04009BC6 RID: 39878
 	private ActivityButtonItem ActivityInternalRewardItem;
 
-	// Token: 0x04009A6F RID: 39535
+	// Token: 0x04009BC7 RID: 39879
 	private ActivityButtonItem ActivityRewardItem;
 
-	// Token: 0x04009A70 RID: 39536
+	// Token: 0x04009BC8 RID: 39880
 	private LevelSequencePlayer WinnerSequencePlayer;
 
-	// Token: 0x04009A71 RID: 39537
+	// Token: 0x04009BC9 RID: 39881
 	private bool HasPlayedWinSequence;
 
-	// Token: 0x02008D7B RID: 36219
+	// Token: 0x02007F04 RID: 32516
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402DE78 RID: 188024
+		// Token: 0x0402918F RID: 168335
 		public const int TitleItem = 0;
 
-		// Token: 0x0402DE79 RID: 188025
+		// Token: 0x04029190 RID: 168336
 		public const int DescriptionItem = 1;
 
-		// Token: 0x0402DE7A RID: 188026
+		// Token: 0x04029191 RID: 168337
 		public const int RewardItem = 2;
 
-		// Token: 0x0402DE7B RID: 188027
+		// Token: 0x04029192 RID: 168338
 		public const int FunctionItem = 3;
 
-		// Token: 0x0402DE7C RID: 188028
+		// Token: 0x04029193 RID: 168339
 		public const int ActivityInternalRewardItem = 4;
 
-		// Token: 0x0402DE7D RID: 188029
+		// Token: 0x04029194 RID: 168340
 		public const int ActivityRewardItem = 5;
 
-		// Token: 0x0402DE7E RID: 188030
+		// Token: 0x04029195 RID: 168341
 		public const int SpineActor = 6;
 
-		// Token: 0x0402DE7F RID: 188031
+		// Token: 0x04029196 RID: 168342
 		public const int PanelInfo = 7;
 
-		// Token: 0x0402DE80 RID: 188032
+		// Token: 0x04029197 RID: 168343
 		public const int PanelMatchState = 8;
 
-		// Token: 0x0402DE81 RID: 188033
+		// Token: 0x04029198 RID: 168344
 		public const int MatchStateBgTexture = 9;
 
-		// Token: 0x0402DE82 RID: 188034
+		// Token: 0x04029199 RID: 168345
 		public const int GroupMatchNameText = 10;
 
-		// Token: 0x0402DE83 RID: 188035
+		// Token: 0x0402919A RID: 168346
 		public const int LegMatchNameText = 11;
 
-		// Token: 0x0402DE84 RID: 188036
+		// Token: 0x0402919B RID: 168347
 		public const int NoBetSprite = 12;
 
-		// Token: 0x0402DE85 RID: 188037
+		// Token: 0x0402919C RID: 168348
 		public const int DangoTexture = 13;
 
-		// Token: 0x0402DE86 RID: 188038
+		// Token: 0x0402919D RID: 168349
 		public const int BetStateText = 14;
 
-		// Token: 0x0402DE87 RID: 188039
+		// Token: 0x0402919E RID: 168350
 		public const int NoOneItem = 15;
 
-		// Token: 0x0402DE88 RID: 188040
+		// Token: 0x0402919F RID: 168351
 		public const int RankItem = 16;
 
-		// Token: 0x0402DE89 RID: 188041
+		// Token: 0x040291A0 RID: 168352
 		public const int RankArtText = 17;
 
-		// Token: 0x0402DE8A RID: 188042
+		// Token: 0x040291A1 RID: 168353
 		public const int MatchStateText = 18;
 
-		// Token: 0x0402DE8B RID: 188043
+		// Token: 0x040291A2 RID: 168354
 		public const int PanelWinner = 19;
 
-		// Token: 0x0402DE8C RID: 188044
+		// Token: 0x040291A3 RID: 168355
 		public const int WinnerText = 20;
 
-		// Token: 0x0402DE8D RID: 188045
+		// Token: 0x040291A4 RID: 168356
 		public const int WinnerDangoTexture = 21;
 
-		// Token: 0x0402DE8E RID: 188046
+		// Token: 0x040291A5 RID: 168357
 		public const int PanelRoleWinner = 22;
 	}
 }

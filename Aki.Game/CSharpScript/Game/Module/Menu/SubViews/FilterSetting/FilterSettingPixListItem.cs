@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 {
-	// Token: 0x02005447 RID: 21575
+	// Token: 0x0200442A RID: 17450
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FilterSettingPixListItem : AutoAttachItem<FilterSetting>
 	{
-		// Token: 0x0603715D RID: 225629 RVA: 0x00D0E9C2 File Offset: 0x00D0CBC2
+		// Token: 0x0602C0A6 RID: 180390 RVA: 0x00C5DDDA File Offset: 0x00C5BFDA
 		public FilterSettingPixListItem(AActor uiItem = null) : base(uiItem)
 		{
 		}
 
-		// Token: 0x0603715E RID: 225630 RVA: 0x00D0E9CC File Offset: 0x00D0CBCC
+		// Token: 0x0602C0A7 RID: 180391 RVA: 0x00C5DDE4 File Offset: 0x00C5BFE4
 		public override void OnSelect()
 		{
 			FilterSettingViewModel parentViewModel = this.ParentViewModel;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			extendToggle.RootUIComp.Get().SetUIActive(true);
 		}
 
-		// Token: 0x0603715F RID: 225631 RVA: 0x00D0EA1C File Offset: 0x00D0CC1C
+		// Token: 0x0602C0A8 RID: 180392 RVA: 0x00C5DE34 File Offset: 0x00C5C034
 		protected override void OnUnSelect()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			extendToggle.RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x06037160 RID: 225632 RVA: 0x00D0EA48 File Offset: 0x00D0CC48
+		// Token: 0x0602C0A9 RID: 180393 RVA: 0x00C5DE60 File Offset: 0x00C5C060
 		protected override void OnMoveItem()
 		{
 			float currentMovePercentage = base.GetCurrentMovePercentage();
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			this.RefreshHierarchyIndex(currentMovePercentage);
 		}
 
-		// Token: 0x06037161 RID: 225633 RVA: 0x00D0EA71 File Offset: 0x00D0CC71
+		// Token: 0x0602C0AA RID: 180394 RVA: 0x00C5DE89 File Offset: 0x00C5C089
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			};
 		}
 
-		// Token: 0x06037162 RID: 225634 RVA: 0x00D0EAAC File Offset: 0x00D0CCAC
+		// Token: 0x0602C0AB RID: 180395 RVA: 0x00C5DEC4 File Offset: 0x00C5C0C4
 		protected override void OnRefreshItem(FilterSetting data)
 		{
 			base.TrySetTextureByPath(data.SpritePath, base.GetTexture(0), null, null);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			extendToggle.SetToggleStateForce(state, false, false, false);
 		}
 
-		// Token: 0x06037163 RID: 225635 RVA: 0x00D0EB08 File Offset: 0x00D0CD08
+		// Token: 0x0602C0AC RID: 180396 RVA: 0x00C5DF20 File Offset: 0x00C5C120
 		private void RefreshScaleByCurve(float percentage)
 		{
 			if (this.ScaleCurve != null)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			}
 		}
 
-		// Token: 0x06037164 RID: 225636 RVA: 0x00D0EB40 File Offset: 0x00D0CD40
+		// Token: 0x0602C0AD RID: 180397 RVA: 0x00C5DF58 File Offset: 0x00C5C158
 		private void RefreshAlphaByCurve(float percentage)
 		{
 			if (this.AlphaCurve != null)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			}
 		}
 
-		// Token: 0x06037165 RID: 225637 RVA: 0x00D0EB70 File Offset: 0x00D0CD70
+		// Token: 0x0602C0AE RID: 180398 RVA: 0x00C5DF88 File Offset: 0x00C5C188
 		private void RefreshHierarchyIndex(float percentage)
 		{
 			int num = 2;
@@ -120,28 +120,28 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			}
 		}
 
-		// Token: 0x0401D0FD RID: 119037
+		// Token: 0x04017B96 RID: 97174
 		private const float INDEXQUARTER = 0.25f;
 
-		// Token: 0x0401D0FE RID: 119038
+		// Token: 0x04017B97 RID: 97175
 		private const float INDEXTHREEQUARTER = 0.75f;
 
-		// Token: 0x0401D0FF RID: 119039
+		// Token: 0x04017B98 RID: 97176
 		private const int MAXHIERARCHYINDEX = 2;
 
-		// Token: 0x0401D100 RID: 119040
+		// Token: 0x04017B99 RID: 97177
 		private const int MINHIERARCHYINDEX = 1;
 
-		// Token: 0x0401D101 RID: 119041
+		// Token: 0x04017B9A RID: 97178
 		public FilterSettingViewModel ParentViewModel;
 
-		// Token: 0x0401D102 RID: 119042
+		// Token: 0x04017B9B RID: 97179
 		public UCurveFloat OffsetCurve;
 
-		// Token: 0x0401D103 RID: 119043
+		// Token: 0x04017B9C RID: 97180
 		public UCurveFloat ScaleCurve;
 
-		// Token: 0x0401D104 RID: 119044
+		// Token: 0x04017B9D RID: 97181
 		public UCurveFloat AlphaCurve;
 	}
 }

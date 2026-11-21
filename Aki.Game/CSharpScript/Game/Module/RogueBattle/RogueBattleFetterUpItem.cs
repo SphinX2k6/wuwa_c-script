@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E5D RID: 20061
+	// Token: 0x02003E26 RID: 15910
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -21,7 +20,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleFetterUpItem : GridProxyAbstract<IRogueBattleRoleBondUpdateInfo>
 	{
-		// Token: 0x06033ADB RID: 211675 RVA: 0x00C19908 File Offset: 0x00C17B08
+		// Token: 0x06028946 RID: 166214 RVA: 0x00B62E30 File Offset: 0x00B61030
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,20 +41,20 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033ADC RID: 211676 RVA: 0x00C19A09 File Offset: 0x00C17C09
+		// Token: 0x06028947 RID: 166215 RVA: 0x00B62F31 File Offset: 0x00B61131
 		protected override void OnStart()
 		{
 			this.StarLvLayout = new GenericLayout<MapRogueFetterStarLvItem, IFetterStarLvData>(base.GetHorizontalLayout(7), new Func<MapRogueFetterStarLvItem>(this.OnCreateItem), null, false, true);
 		}
 
-		// Token: 0x06033ADD RID: 211677 RVA: 0x00C19A2C File Offset: 0x00C17C2C
+		// Token: 0x06028948 RID: 166216 RVA: 0x00B62F54 File Offset: 0x00B61154
 		[NullableContext(1)]
 		private MapRogueFetterStarLvItem OnCreateItem()
 		{
 			return new MapRogueFetterStarLvItem();
 		}
 
-		// Token: 0x06033ADE RID: 211678 RVA: 0x00C19A34 File Offset: 0x00C17C34
+		// Token: 0x06028949 RID: 166217 RVA: 0x00B62F5C File Offset: 0x00B6115C
 		[NullableContext(1)]
 		public override void Refresh(IRogueBattleRoleBondUpdateInfo data, bool isSelected, int gridIndex)
 		{
@@ -81,7 +80,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), "RogueRes_FightFormation_RoleLevel", new <>z__ReadOnlySingleElementList<object>(newRoleBondInfo.Level));
 			base.GetText(5).SetText(newRoleBondInfo.CurStar.ToString(), true);
 			List<IFetterStarLvData> list = new List<IFetterStarLvData>();
-			List<DicIntInt> list2 = rogueResBond.Value.StarMapIter().ToList<DicIntInt>();
+			List<DicIntInt> list2 = new List<DicIntInt>(rogueResBond.Value.StarMapIter());
 			list2.Sort((DicIntInt a, DicIntInt b) => a.Key - b.Key);
 			if (list2.Count > 0)
 			{
@@ -108,7 +107,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetItem(4).SetUIActive(false);
 		}
 
-		// Token: 0x06033ADF RID: 211679 RVA: 0x00C19C78 File Offset: 0x00C17E78
+		// Token: 0x0602894A RID: 166218 RVA: 0x00B631A0 File Offset: 0x00B613A0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleFetterUpItem.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -119,13 +118,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033AE0 RID: 211680 RVA: 0x00C19CBB File Offset: 0x00C17EBB
+		// Token: 0x0602894B RID: 166219 RVA: 0x00B631E3 File Offset: 0x00B613E3
 		protected override void OnBeforeHide()
 		{
 			this.RemoveTimer();
 		}
 
-		// Token: 0x06033AE1 RID: 211681 RVA: 0x00C19CC3 File Offset: 0x00C17EC3
+		// Token: 0x0602894C RID: 166220 RVA: 0x00B631EB File Offset: 0x00B613EB
 		public void PlayExpAnimation()
 		{
 			IRogueBattleRoleBondUpdateInfo data = this.Data;
@@ -136,7 +135,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.RemoveTimer();
 		}
 
-		// Token: 0x06033AE2 RID: 211682 RVA: 0x00C19CE8 File Offset: 0x00C17EE8
+		// Token: 0x0602894D RID: 166221 RVA: 0x00B63210 File Offset: 0x00B61410
 		protected void RemoveTimer()
 		{
 			if (this.TimerHandle != null)
@@ -146,7 +145,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033AE3 RID: 211683 RVA: 0x00C19D0C File Offset: 0x00C17F0C
+		// Token: 0x0602894E RID: 166222 RVA: 0x00B63234 File Offset: 0x00B61434
 		private void OnBtnDetail()
 		{
 			IRogueBattleRoleBondUpdateInfo data = this.Data;
@@ -154,16 +153,16 @@ namespace CSharpScript.Game.Module.RogueBattle
 			MapRogueController.Instance.OpenRogueFetterView(fetterId);
 		}
 
-		// Token: 0x0401B699 RID: 112281
+		// Token: 0x0401606C RID: 90220
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0401B69A RID: 112282
+		// Token: 0x0401606D RID: 90221
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401B69B RID: 112283
+		// Token: 0x0401606E RID: 90222
 		private IRogueBattleRoleBondUpdateInfo Data;
 
-		// Token: 0x0401B69C RID: 112284
+		// Token: 0x0401606F RID: 90223
 		[Nullable(new byte[]
 		{
 			2,

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200118A RID: 4490
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012C4 RID: 4804
 	public class ITakePhotoTimeCondition
 	{
-		// Token: 0x060065FC RID: 26108 RVA: 0x000F4978 File Offset: 0x000F2B78
+		// Token: 0x06006C33 RID: 27699 RVA: 0x00102144 File Offset: 0x00100344
 		private ITakePhotoTimeCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060065FD RID: 26109 RVA: 0x000F49B0 File Offset: 0x000F2BB0
+		// Token: 0x06006C34 RID: 27700 RVA: 0x0010217C File Offset: 0x0010037C
 		public static ITakePhotoTimeCondition Create([Nullable(2)] ITakePhotoTimeCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060065FE RID: 26110 RVA: 0x000F49C3 File Offset: 0x000F2BC3
+		// Token: 0x06006C35 RID: 27701 RVA: 0x0010218F File Offset: 0x0010038F
 		public static ITakePhotoTimeCondition CreateFromSetValue([Nullable(2)] ITakePhotoTimeCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060065FF RID: 26111 RVA: 0x000F49D6 File Offset: 0x000F2BD6
+		// Token: 0x06006C36 RID: 27702 RVA: 0x001021A2 File Offset: 0x001003A2
 		public ITakePhotoTimeCondition_SetValue ToSetValue()
 		{
 			return new ITakePhotoTimeCondition_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002134 RID: 8500
-		// (get) Token: 0x06006600 RID: 26112 RVA: 0x000F4A10 File Offset: 0x000F2C10
-		// (set) Token: 0x06006601 RID: 26113 RVA: 0x000F4A71 File Offset: 0x000F2C71
+		// Token: 0x170022F3 RID: 8947
+		// (get) Token: 0x06006C37 RID: 27703 RVA: 0x001021DC File Offset: 0x001003DC
+		// (set) Token: 0x06006C38 RID: 27704 RVA: 0x0010223D File Offset: 0x0010043D
 		public virtual IHourToHour TimeRange
 		{
 			get
@@ -93,9 +91,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002135 RID: 8501
-		// (get) Token: 0x06006602 RID: 26114 RVA: 0x000F4A86 File Offset: 0x000F2C86
-		// (set) Token: 0x06006603 RID: 26115 RVA: 0x000F4AB1 File Offset: 0x000F2CB1
+		// Token: 0x170022F4 RID: 8948
+		// (get) Token: 0x06006C39 RID: 27705 RVA: 0x00102252 File Offset: 0x00100452
+		// (set) Token: 0x06006C3A RID: 27706 RVA: 0x0010227D File Offset: 0x0010047D
 		public virtual ECompare Compare
 		{
 			get
@@ -116,9 +114,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002136 RID: 8502
-		// (get) Token: 0x06006604 RID: 26116 RVA: 0x000F4ABF File Offset: 0x000F2CBF
-		// (set) Token: 0x06006605 RID: 26117 RVA: 0x000F4AEA File Offset: 0x000F2CEA
+		// Token: 0x170022F5 RID: 8949
+		// (get) Token: 0x06006C3B RID: 27707 RVA: 0x0010228B File Offset: 0x0010048B
+		// (set) Token: 0x06006C3C RID: 27708 RVA: 0x001022B6 File Offset: 0x001004B6
 		public virtual string TidDescription
 		{
 			get
@@ -139,9 +137,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002137 RID: 8503
-		// (get) Token: 0x06006606 RID: 26118 RVA: 0x000F4AF8 File Offset: 0x000F2CF8
-		// (set) Token: 0x06006607 RID: 26119 RVA: 0x000F4B0F File Offset: 0x000F2D0F
+		// Token: 0x170022F6 RID: 8950
+		// (get) Token: 0x06006C3D RID: 27709 RVA: 0x001022C4 File Offset: 0x001004C4
+		// (set) Token: 0x06006C3E RID: 27710 RVA: 0x001022DB File Offset: 0x001004DB
 		[Nullable(2)]
 		public virtual string EdTidDescription
 		{
@@ -161,18 +159,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003D37 RID: 15671
+		// Token: 0x0400409F RID: 16543
 		[Nullable(2)]
 		protected ITakePhotoTimeCondition FbInstance;
 
-		// Token: 0x04003D38 RID: 15672
+		// Token: 0x040040A0 RID: 16544
 		[Nullable(2)]
 		protected ITakePhotoTimeCondition_SetValue PocoInterface;
 
-		// Token: 0x04003D39 RID: 15673
+		// Token: 0x040040A1 RID: 16545
 		private IHourToHour _TimeRangeCache;
 
-		// Token: 0x04003D3A RID: 15674
+		// Token: 0x040040A2 RID: 16546
 		private bool _TimeRangeInited;
 	}
 }

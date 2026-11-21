@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200115B RID: 4443
+// Token: 0x0200060F RID: 1551
 public class ComBuffSubComponent : UiPanelBase
 {
-	// Token: 0x0600750A RID: 29962 RVA: 0x00180EA4 File Offset: 0x0017F0A4
+	// Token: 0x060048A1 RID: 18593 RVA: 0x001899D4 File Offset: 0x00187BD4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -32,7 +32,7 @@ public class ComBuffSubComponent : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600750B RID: 29963 RVA: 0x00180F94 File Offset: 0x0017F194
+	// Token: 0x060048A2 RID: 18594 RVA: 0x00189AC4 File Offset: 0x00187CC4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ComBuffSubComponent.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -43,20 +43,20 @@ public class ComBuffSubComponent : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600750C RID: 29964 RVA: 0x00180FD7 File Offset: 0x0017F1D7
+	// Token: 0x060048A3 RID: 18595 RVA: 0x00189B07 File Offset: 0x00187D07
 	protected override void OnStart()
 	{
 		base.SetUiActive(true);
 	}
 
-	// Token: 0x0600750D RID: 29965 RVA: 0x00180FE0 File Offset: 0x0017F1E0
+	// Token: 0x060048A4 RID: 18596 RVA: 0x00189B10 File Offset: 0x00187D10
 	[NullableContext(2)]
 	public UUIExtendToggle GetBuffToggle()
 	{
 		return base.GetExtendToggle(2);
 	}
 
-	// Token: 0x0600750E RID: 29966 RVA: 0x00180FEC File Offset: 0x0017F1EC
+	// Token: 0x060048A5 RID: 18597 RVA: 0x00189B1C File Offset: 0x00187D1C
 	public override void SetActive(bool active)
 	{
 		base.SetUiActive(active);
@@ -68,7 +68,7 @@ public class ComBuffSubComponent : UiPanelBase
 		extendToggle.RootUIComp.Get().SetUIActive(active);
 	}
 
-	// Token: 0x0600750F RID: 29967 RVA: 0x00181020 File Offset: 0x0017F220
+	// Token: 0x060048A6 RID: 18598 RVA: 0x00189B50 File Offset: 0x00187D50
 	public void SetToggleVisible(bool visible)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(2);
@@ -79,7 +79,7 @@ public class ComBuffSubComponent : UiPanelBase
 		extendToggle.RootUIComp.Get().SetUIActive(visible);
 	}
 
-	// Token: 0x06007510 RID: 29968 RVA: 0x0018104C File Offset: 0x0017F24C
+	// Token: 0x060048A7 RID: 18599 RVA: 0x00189B7C File Offset: 0x00187D7C
 	[NullableContext(1)]
 	public void SetTextureByPath(string path)
 	{
@@ -96,7 +96,7 @@ public class ComBuffSubComponent : UiPanelBase
 		imageSettingModule.SetTextureByPathAsync(path, texture, null);
 	}
 
-	// Token: 0x06007511 RID: 29969 RVA: 0x00181078 File Offset: 0x0017F278
+	// Token: 0x060048A8 RID: 18600 RVA: 0x00189BA8 File Offset: 0x00187DA8
 	public void UseChangeColor(bool use)
 	{
 		UUISprite sprite = base.GetSprite(1);
@@ -115,7 +115,7 @@ public class ComBuffSubComponent : UiPanelBase
 		texture.SetChangeColor(use, fcolor);
 	}
 
-	// Token: 0x06007512 RID: 29970 RVA: 0x001810D2 File Offset: 0x0017F2D2
+	// Token: 0x060048A9 RID: 18601 RVA: 0x00189C02 File Offset: 0x00187E02
 	public void SetLockActive(bool active)
 	{
 		UUIItem item = base.GetItem(5);
@@ -126,7 +126,7 @@ public class ComBuffSubComponent : UiPanelBase
 		item.SetUIActive(active);
 	}
 
-	// Token: 0x06007513 RID: 29971 RVA: 0x001810E8 File Offset: 0x0017F2E8
+	// Token: 0x060048AA RID: 18602 RVA: 0x00189C18 File Offset: 0x00187E18
 	public void FlashHighlight()
 	{
 		UUIItem item = base.GetItem(3);
@@ -145,29 +145,29 @@ public class ComBuffSubComponent : UiPanelBase
 		}, 0.15f * (float)TimeUtil.Instance.InverseMillisecond, null, null, true, 1f);
 	}
 
-	// Token: 0x040035D0 RID: 13776
+	// Token: 0x04003669 RID: 13929
 	[Nullable(2)]
 	private UiImageSettingModule ImageSettingModule;
 
-	// Token: 0x02007720 RID: 30496
+	// Token: 0x020068AE RID: 26798
 	private class EComBuffSubComponent
 	{
-		// Token: 0x040274B3 RID: 160947
+		// Token: 0x040227F2 RID: 141298
 		public const int Texture = 0;
 
-		// Token: 0x040274B4 RID: 160948
+		// Token: 0x040227F3 RID: 141299
 		public const int BgSprite = 1;
 
-		// Token: 0x040274B5 RID: 160949
+		// Token: 0x040227F4 RID: 141300
 		public const int Toggle = 2;
 
-		// Token: 0x040274B6 RID: 160950
+		// Token: 0x040227F5 RID: 141301
 		public const int NiaItem = 3;
 
-		// Token: 0x040274B7 RID: 160951
+		// Token: 0x040227F6 RID: 141302
 		public const int DailyItem = 4;
 
-		// Token: 0x040274B8 RID: 160952
+		// Token: 0x040227F7 RID: 141303
 		public const int LockBtn = 5;
 	}
 }

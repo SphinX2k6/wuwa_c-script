@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000264 RID: 612
+// Token: 0x02000268 RID: 616
 [NullableContext(2)]
 public interface IEffectAudioInfo
 {
-	// Token: 0x170005B7 RID: 1463
-	// (get) Token: 0x0600257D RID: 9597
-	// (set) Token: 0x0600257E RID: 9598
+	// Token: 0x170005DE RID: 1502
+	// (get) Token: 0x06002634 RID: 9780
+	// (set) Token: 0x06002635 RID: 9781
 	int ActorUid { get; set; }
 
-	// Token: 0x170005B8 RID: 1464
-	// (get) Token: 0x0600257F RID: 9599
-	// (set) Token: 0x06002580 RID: 9600
+	// Token: 0x170005DF RID: 1503
+	// (get) Token: 0x06002636 RID: 9782
+	// (set) Token: 0x06002637 RID: 9783
 	object EffectActor { get; set; }
 
-	// Token: 0x170005B9 RID: 1465
-	// (get) Token: 0x06002581 RID: 9601
-	// (set) Token: 0x06002582 RID: 9602
+	// Token: 0x170005E0 RID: 1504
+	// (get) Token: 0x06002638 RID: 9784
+	// (set) Token: 0x06002639 RID: 9785
 	bool? IsTransform { get; set; }
 
-	// Token: 0x170005BA RID: 1466
-	// (get) Token: 0x06002583 RID: 9603
-	// (set) Token: 0x06002584 RID: 9604
+	// Token: 0x170005E1 RID: 1505
+	// (get) Token: 0x0600263A RID: 9786
+	// (set) Token: 0x0600263B RID: 9787
 	Action Callback { get; set; }
 }

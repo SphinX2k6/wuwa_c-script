@@ -2,31 +2,31 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200138C RID: 5004
+// Token: 0x02000840 RID: 2112
 [NullableContext(1)]
 [Nullable(0)]
 public class MowingTowerTeamInfo
 {
-	// Token: 0x06008C26 RID: 35878 RVA: 0x001E099B File Offset: 0x001DEB9B
+	// Token: 0x06005FC1 RID: 24513 RVA: 0x001E97EF File Offset: 0x001E79EF
 	[NullableContext(2)]
 	public MowingTowerLevelDetailInfo GetCurrentSelectLevel()
 	{
 		return this.CurrentSelectLevelDetailInfo;
 	}
 
-	// Token: 0x06008C27 RID: 35879 RVA: 0x001E09A3 File Offset: 0x001DEBA3
+	// Token: 0x06005FC2 RID: 24514 RVA: 0x001E97F7 File Offset: 0x001E79F7
 	public List<MowingTowerBuffInfo> GetCurrentSelectBuff()
 	{
 		return this.CurrentSelectBuff;
 	}
 
-	// Token: 0x06008C28 RID: 35880 RVA: 0x001E09AB File Offset: 0x001DEBAB
+	// Token: 0x06005FC3 RID: 24515 RVA: 0x001E97FF File Offset: 0x001E79FF
 	public List<MowingTowerBuffInfo> GetPrepareSelectBuff()
 	{
 		return this.PrepareSelectBuff;
 	}
 
-	// Token: 0x06008C29 RID: 35881 RVA: 0x001E09B3 File Offset: 0x001DEBB3
+	// Token: 0x06005FC4 RID: 24516 RVA: 0x001E9807 File Offset: 0x001E7A07
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -38,13 +38,13 @@ public class MowingTowerTeamInfo
 		return new ValueTuple<List<int>, List<int>>(this.CurrentTeamFirstMembers, this.CurrentTeamLowMembers);
 	}
 
-	// Token: 0x06008C2A RID: 35882 RVA: 0x001E09C6 File Offset: 0x001DEBC6
+	// Token: 0x06005FC5 RID: 24517 RVA: 0x001E981A File Offset: 0x001E7A1A
 	public void SetCurrentSelectLevel(MowingTowerLevelDetailInfo info)
 	{
 		this.CurrentSelectLevelDetailInfo = info;
 	}
 
-	// Token: 0x06008C2B RID: 35883 RVA: 0x001E09D0 File Offset: 0x001DEBD0
+	// Token: 0x06005FC6 RID: 24518 RVA: 0x001E9824 File Offset: 0x001E7A24
 	public void InitLevelBuff(MowingTowerBuffInfo[] buff, MowingTowerBuffInfo[] unlockBuffs)
 	{
 		this.CurrentSelectBuff = new List<MowingTowerBuffInfo>();
@@ -72,7 +72,7 @@ public class MowingTowerTeamInfo
 		}
 	}
 
-	// Token: 0x06008C2C RID: 35884 RVA: 0x001E0A8A File Offset: 0x001DEC8A
+	// Token: 0x06005FC7 RID: 24519 RVA: 0x001E98DE File Offset: 0x001E7ADE
 	[NullableContext(2)]
 	public MowingTowerBuffInfo GetIndexBuff(int index)
 	{
@@ -83,7 +83,7 @@ public class MowingTowerTeamInfo
 		return this.CurrentSelectBuff[index];
 	}
 
-	// Token: 0x06008C2D RID: 35885 RVA: 0x001E0AA8 File Offset: 0x001DECA8
+	// Token: 0x06005FC8 RID: 24520 RVA: 0x001E98FC File Offset: 0x001E7AFC
 	public List<MowingTowerBuffInfo> GetOptionBuff()
 	{
 		List<MowingTowerBuffInfo> list = new List<MowingTowerBuffInfo>();
@@ -101,7 +101,7 @@ public class MowingTowerTeamInfo
 		return list;
 	}
 
-	// Token: 0x06008C2E RID: 35886 RVA: 0x001E0B44 File Offset: 0x001DED44
+	// Token: 0x06005FC9 RID: 24521 RVA: 0x001E9998 File Offset: 0x001E7B98
 	public void InitPrepareSelectBuff()
 	{
 		this.PrepareSelectBuff = new List<MowingTowerBuffInfo>();
@@ -111,20 +111,20 @@ public class MowingTowerTeamInfo
 		}
 	}
 
-	// Token: 0x06008C2F RID: 35887 RVA: 0x001E0BA8 File Offset: 0x001DEDA8
+	// Token: 0x06005FCA RID: 24522 RVA: 0x001E99FC File Offset: 0x001E7BFC
 	public void SetIndexPrepareSelectBuff(int index, MowingTowerBuffInfo buff)
 	{
 		this.PrepareSelectBuff[index] = buff;
 	}
 
-	// Token: 0x06008C30 RID: 35888 RVA: 0x001E0BB7 File Offset: 0x001DEDB7
+	// Token: 0x06005FCB RID: 24523 RVA: 0x001E9A0B File Offset: 0x001E7C0B
 	[NullableContext(2)]
 	public MowingTowerBuffInfo GetIndexPrepareSelectBuff(int index)
 	{
 		return this.PrepareSelectBuff[index];
 	}
 
-	// Token: 0x06008C31 RID: 35889 RVA: 0x001E0BC8 File Offset: 0x001DEDC8
+	// Token: 0x06005FCC RID: 24524 RVA: 0x001E9A1C File Offset: 0x001E7C1C
 	public void SetPrepareSelectBuff(MowingTowerBuffInfo[] buff)
 	{
 		this.PrepareSelectBuff = new List<MowingTowerBuffInfo>();
@@ -134,13 +134,13 @@ public class MowingTowerTeamInfo
 		}
 	}
 
-	// Token: 0x06008C32 RID: 35890 RVA: 0x001E0C00 File Offset: 0x001DEE00
+	// Token: 0x06005FCD RID: 24525 RVA: 0x001E9A54 File Offset: 0x001E7C54
 	public int GetBuffMaxCount()
 	{
 		return this.CurrentSelectBuff.Count;
 	}
 
-	// Token: 0x06008C33 RID: 35891 RVA: 0x001E0C0D File Offset: 0x001DEE0D
+	// Token: 0x06005FCE RID: 24526 RVA: 0x001E9A61 File Offset: 0x001E7C61
 	public void SetIndexTeamMembers(ETeamBelong belong, int index, int roleId)
 	{
 		if (belong == ETeamBelong.FirstPart)
@@ -154,7 +154,7 @@ public class MowingTowerTeamInfo
 		}
 	}
 
-	// Token: 0x06008C34 RID: 35892 RVA: 0x001E0C27 File Offset: 0x001DEE27
+	// Token: 0x06005FCF RID: 24527 RVA: 0x001E9A7B File Offset: 0x001E7C7B
 	public void SetIndexFirstTeamMembers(int index, int roleId)
 	{
 		if (this.CurrentTeamFirstMembers.Count <= index)
@@ -165,7 +165,7 @@ public class MowingTowerTeamInfo
 		this.CurrentTeamFirstMembers[index] = roleId;
 	}
 
-	// Token: 0x06008C35 RID: 35893 RVA: 0x001E0C51 File Offset: 0x001DEE51
+	// Token: 0x06005FD0 RID: 24528 RVA: 0x001E9AA5 File Offset: 0x001E7CA5
 	public void SetIndexLowTeamMembers(int index, int roleId)
 	{
 		if (this.CurrentTeamLowMembers.Count <= index)
@@ -176,7 +176,7 @@ public class MowingTowerTeamInfo
 		this.CurrentTeamLowMembers[index] = roleId;
 	}
 
-	// Token: 0x06008C36 RID: 35894 RVA: 0x001E0C7B File Offset: 0x001DEE7B
+	// Token: 0x06005FD1 RID: 24529 RVA: 0x001E9ACF File Offset: 0x001E7CCF
 	public void ReSortTeamMembers(ETeamBelong belong)
 	{
 		if (belong == ETeamBelong.FirstPart)
@@ -190,7 +190,7 @@ public class MowingTowerTeamInfo
 		}
 	}
 
-	// Token: 0x06008C37 RID: 35895 RVA: 0x001E0C94 File Offset: 0x001DEE94
+	// Token: 0x06005FD2 RID: 24530 RVA: 0x001E9AE8 File Offset: 0x001E7CE8
 	public void ReSortFirstTeamMembers()
 	{
 		List<int> list = new List<int>();
@@ -208,7 +208,7 @@ public class MowingTowerTeamInfo
 		this.CurrentTeamFirstMembers = list;
 	}
 
-	// Token: 0x06008C38 RID: 35896 RVA: 0x001E0D1C File Offset: 0x001DEF1C
+	// Token: 0x06005FD3 RID: 24531 RVA: 0x001E9B70 File Offset: 0x001E7D70
 	public void ReSortLowTeamMembers()
 	{
 		List<int> list = new List<int>();
@@ -226,20 +226,20 @@ public class MowingTowerTeamInfo
 		this.CurrentTeamLowMembers = list;
 	}
 
-	// Token: 0x06008C39 RID: 35897 RVA: 0x001E0DA4 File Offset: 0x001DEFA4
+	// Token: 0x06005FD4 RID: 24532 RVA: 0x001E9BF8 File Offset: 0x001E7DF8
 	public void SetCurrentTeamMembers(int[] firstPartRole, int[] lowPartRole)
 	{
 		this.CurrentTeamFirstMembers = new List<int>(firstPartRole);
 		this.CurrentTeamLowMembers = new List<int>(lowPartRole);
 	}
 
-	// Token: 0x06008C3A RID: 35898 RVA: 0x001E0DC0 File Offset: 0x001DEFC0
+	// Token: 0x06005FD5 RID: 24533 RVA: 0x001E9C14 File Offset: 0x001E7E14
 	public int GetRecommendLevel()
 	{
 		return InstanceDungeonConfig.Instance.GetRecommendLevel(this.LevelInfo.GetConfig().Value.InstIds()[0], WorldLevelModel.Instance.CurWorldLevel);
 	}
 
-	// Token: 0x06008C3B RID: 35899 RVA: 0x001E0E00 File Offset: 0x001DF000
+	// Token: 0x06005FD6 RID: 24534 RVA: 0x001E9C54 File Offset: 0x001E7E54
 	public bool GetIfLevelTooLow()
 	{
 		float num = 0f;
@@ -283,7 +283,7 @@ public class MowingTowerTeamInfo
 		return num4 < (float)this.GetRecommendLevel() && num4 != 0f;
 	}
 
-	// Token: 0x06008C3C RID: 35900 RVA: 0x001E0F78 File Offset: 0x001DF178
+	// Token: 0x06005FD7 RID: 24535 RVA: 0x001E9DCC File Offset: 0x001E7FCC
 	public void Clear()
 	{
 		this.CurrentSelectBuff = new List<MowingTowerBuffInfo>();
@@ -291,29 +291,29 @@ public class MowingTowerTeamInfo
 		this.CurrentTeamLowMembers = new List<int>();
 	}
 
-	// Token: 0x04003E31 RID: 15921
+	// Token: 0x04003EC9 RID: 16073
 	public int ActivityId;
 
-	// Token: 0x04003E32 RID: 15922
+	// Token: 0x04003ECA RID: 16074
 	[Nullable(2)]
 	private MowingTowerLevelDetailInfo CurrentSelectLevelDetailInfo;
 
-	// Token: 0x04003E33 RID: 15923
+	// Token: 0x04003ECB RID: 16075
 	private List<MowingTowerBuffInfo> CurrentSelectBuff = new List<MowingTowerBuffInfo>();
 
-	// Token: 0x04003E34 RID: 15924
+	// Token: 0x04003ECC RID: 16076
 	private readonly List<MowingTowerBuffInfo> CurrentOptionBuff = new List<MowingTowerBuffInfo>();
 
-	// Token: 0x04003E35 RID: 15925
+	// Token: 0x04003ECD RID: 16077
 	private List<MowingTowerBuffInfo> PrepareSelectBuff = new List<MowingTowerBuffInfo>();
 
-	// Token: 0x04003E36 RID: 15926
+	// Token: 0x04003ECE RID: 16078
 	private List<int> CurrentTeamFirstMembers = new List<int>();
 
-	// Token: 0x04003E37 RID: 15927
+	// Token: 0x04003ECF RID: 16079
 	private List<int> CurrentTeamLowMembers = new List<int>();
 
-	// Token: 0x04003E38 RID: 15928
+	// Token: 0x04003ED0 RID: 16080
 	[Nullable(2)]
 	public MowingTowerLevelDetailInfo LevelInfo;
 }

@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C54 RID: 23636
+	// Token: 0x02004C34 RID: 19508
 	public class MoraleOccupiedSuccessView : UiViewBase
 	{
-		// Token: 0x0603BBE2 RID: 244706 RVA: 0x00E44CAA File Offset: 0x00E42EAA
+		// Token: 0x06030B2D RID: 199469 RVA: 0x00D95076 File Offset: 0x00D93276
 		[NullableContext(1)]
 		public MoraleOccupiedSuccessView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603BBE3 RID: 244707 RVA: 0x00E44CB4 File Offset: 0x00E42EB4
+		// Token: 0x06030B2E RID: 199470 RVA: 0x00D95080 File Offset: 0x00D93280
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BBE4 RID: 244708 RVA: 0x00E44D20 File Offset: 0x00E42F20
+		// Token: 0x06030B2F RID: 199471 RVA: 0x00D950EC File Offset: 0x00D932EC
 		protected override void OnStart()
 		{
 			this.LevelText = base.GetArtText(0);
@@ -43,43 +43,43 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BBE5 RID: 244709 RVA: 0x00E44D5F File Offset: 0x00E42F5F
+		// Token: 0x06030B30 RID: 199472 RVA: 0x00D9512B File Offset: 0x00D9332B
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x0603BBE6 RID: 244710 RVA: 0x00E44D61 File Offset: 0x00E42F61
+		// Token: 0x06030B31 RID: 199473 RVA: 0x00D9512D File Offset: 0x00D9332D
 		protected override void OnAfterShow()
 		{
 			this.DelayClose();
 		}
 
-		// Token: 0x0603BBE7 RID: 244711 RVA: 0x00E44D69 File Offset: 0x00E42F69
+		// Token: 0x06030B32 RID: 199474 RVA: 0x00D95135 File Offset: 0x00D93335
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearDelayTimer();
 		}
 
-		// Token: 0x0603BBE8 RID: 244712 RVA: 0x00E44D71 File Offset: 0x00E42F71
+		// Token: 0x06030B33 RID: 199475 RVA: 0x00D9513D File Offset: 0x00D9333D
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<PlotInfo>(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.OnSequenceNetworkStart));
 		}
 
-		// Token: 0x0603BBE9 RID: 244713 RVA: 0x00E44D8F File Offset: 0x00E42F8F
+		// Token: 0x06030B34 RID: 199476 RVA: 0x00D9515B File Offset: 0x00D9335B
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.OnSequenceNetworkStart));
 		}
 
-		// Token: 0x0603BBEA RID: 244714 RVA: 0x00E44DAD File Offset: 0x00E42FAD
+		// Token: 0x06030B35 RID: 199477 RVA: 0x00D95179 File Offset: 0x00D93379
 		[NullableContext(1)]
 		private void OnSequenceNetworkStart(PlotInfo plotInfo)
 		{
 			this.TryCloseMe();
 		}
 
-		// Token: 0x0603BBEB RID: 244715 RVA: 0x00E44DB5 File Offset: 0x00E42FB5
+		// Token: 0x06030B36 RID: 199478 RVA: 0x00D95181 File Offset: 0x00D93381
 		private void TryCloseMe()
 		{
 			if (!base.IsHideOrHiding)
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BBEC RID: 244716 RVA: 0x00E44DC6 File Offset: 0x00E42FC6
+		// Token: 0x06030B37 RID: 199479 RVA: 0x00D95192 File Offset: 0x00D93392
 		private void DelayClose()
 		{
 			this.ClearDelayTimer();
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Battle
 			}, 2000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603BBED RID: 244717 RVA: 0x00E44DF7 File Offset: 0x00E42FF7
+		// Token: 0x06030B38 RID: 199480 RVA: 0x00D951C3 File Offset: 0x00D933C3
 		private void ClearDelayTimer()
 		{
 			if (this.DelayTimer != null)
@@ -109,23 +109,23 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0401F1B8 RID: 127416
+		// Token: 0x04019C69 RID: 105577
 		private const float DELAY_CLOSE_TIME = 2000f;
 
-		// Token: 0x0401F1B9 RID: 127417
+		// Token: 0x04019C6A RID: 105578
 		[Nullable(2)]
 		private UUIArtText LevelText;
 
-		// Token: 0x0401F1BA RID: 127418
+		// Token: 0x04019C6B RID: 105579
 		[Nullable(2)]
 		private TimerHandle DelayTimer;
 
-		// Token: 0x0200BE67 RID: 48743
+		// Token: 0x0200A86D RID: 43117
 		private enum EChildType
 		{
-			// Token: 0x040396B4 RID: 235188
+			// Token: 0x04034075 RID: 213109
 			LevelText,
-			// Token: 0x040396B5 RID: 235189
+			// Token: 0x04034076 RID: 213110
 			TitleText
 		}
 	}

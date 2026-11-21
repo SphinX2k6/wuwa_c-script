@@ -4,31 +4,31 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Core.Container
 {
-	// Token: 0x0200015C RID: 348
+	// Token: 0x02000161 RID: 353
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class Component : IComponent
 	{
-		// Token: 0x17000130 RID: 304
-		// (get) Token: 0x06000BF7 RID: 3063 RVA: 0x0003819F File Offset: 0x0003639F
-		// (set) Token: 0x06000BF8 RID: 3064 RVA: 0x000381A7 File Offset: 0x000363A7
+		// Token: 0x17000143 RID: 323
+		// (get) Token: 0x06000C56 RID: 3158 RVA: 0x00038EE2 File Offset: 0x000370E2
+		// (set) Token: 0x06000C57 RID: 3159 RVA: 0x00038EEA File Offset: 0x000370EA
 		[RequiredMember]
 		public Dictionary<int, int> Degree { get; set; }
 
-		// Token: 0x17000131 RID: 305
-		// (get) Token: 0x06000BF9 RID: 3065 RVA: 0x000381B0 File Offset: 0x000363B0
-		// (set) Token: 0x06000BFA RID: 3066 RVA: 0x000381B8 File Offset: 0x000363B8
+		// Token: 0x17000144 RID: 324
+		// (get) Token: 0x06000C58 RID: 3160 RVA: 0x00038EF3 File Offset: 0x000370F3
+		// (set) Token: 0x06000C59 RID: 3161 RVA: 0x00038EFB File Offset: 0x000370FB
 		[RequiredMember]
 		public Dictionary<int, List<IAdjItem>> Adj { get; set; }
 
-		// Token: 0x17000132 RID: 306
-		// (get) Token: 0x06000BFB RID: 3067 RVA: 0x000381C1 File Offset: 0x000363C1
-		// (set) Token: 0x06000BFC RID: 3068 RVA: 0x000381C9 File Offset: 0x000363C9
+		// Token: 0x17000145 RID: 325
+		// (get) Token: 0x06000C5A RID: 3162 RVA: 0x00038F04 File Offset: 0x00037104
+		// (set) Token: 0x06000C5B RID: 3163 RVA: 0x00038F0C File Offset: 0x0003710C
 		[RequiredMember]
 		public int EdgeCount { get; set; }
 
-		// Token: 0x06000BFD RID: 3069 RVA: 0x000381D2 File Offset: 0x000363D2
+		// Token: 0x06000C5C RID: 3164 RVA: 0x00038F15 File Offset: 0x00037115
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public Component()

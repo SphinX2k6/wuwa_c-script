@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D02 RID: 23810
+	// Token: 0x02006336 RID: 25398
 	public enum EOutAreaBorderEffectType : byte
 	{
-		// Token: 0x0400F671 RID: 63089
+		// Token: 0x040103C0 RID: 66496
 		BuffId
 	}
 }

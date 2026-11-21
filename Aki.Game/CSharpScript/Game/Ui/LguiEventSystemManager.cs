@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046B9 RID: 18105
+	// Token: 0x020035EA RID: 13802
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LguiEventSystemManager : Singleton
 	{
-		// Token: 0x17007663 RID: 30307
-		// (get) Token: 0x0602EB1F RID: 191263 RVA: 0x00ACEAFB File Offset: 0x00ACCCFB
+		// Token: 0x1700491F RID: 18719
+		// (get) Token: 0x0602326B RID: 143979 RVA: 0x009FD3CF File Offset: 0x009FB5CF
 		public ULGUIEventSystem LguiEventSystem
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB20 RID: 191264 RVA: 0x00ACEB10 File Offset: 0x00ACCD10
+		// Token: 0x0602326C RID: 143980 RVA: 0x009FD3E4 File Offset: 0x009FB5E4
 		public UniTask Initialize()
 		{
 			LguiEventSystemManager.<Initialize>d__4 <Initialize>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Ui
 			return <Initialize>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EB21 RID: 191265 RVA: 0x00ACEB53 File Offset: 0x00ACCD53
+		// Token: 0x0602326D RID: 143981 RVA: 0x009FD427 File Offset: 0x009FB627
 		public void Clear()
 		{
 			EventSystem.Instance.Emit(EEventName.DestroyLguiEventSystemActor);
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Ui
 			lguiEventSystemActorInternal.ResetLguiEventSystemActor();
 		}
 
-		// Token: 0x0602EB22 RID: 191266 RVA: 0x00ACEB78 File Offset: 0x00ACCD78
+		// Token: 0x0602326E RID: 143982 RVA: 0x009FD44C File Offset: 0x009FB64C
 		[NullableContext(1)]
 		public void ClickedMouse(string actionName, InputDistributeDefine.EActionType actionType)
 		{
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Ui
 			lguiEventSystemActorInternal.InputTrigger(triggerPress, EMouseButtonType.Right);
 		}
 
-		// Token: 0x0602EB23 RID: 191267 RVA: 0x00ACEBCC File Offset: 0x00ACCDCC
+		// Token: 0x0602326F RID: 143983 RVA: 0x009FD4A0 File Offset: 0x009FB6A0
 		[NullableContext(1)]
 		public void InputNavigation(string actionName, InputDistributeDefine.EActionType actionType)
 		{
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Ui
 			lguiEventSystemActorInternal.InputNavigation(ELGUINavigationDirection.Right, pressOrRelease, false);
 		}
 
-		// Token: 0x0602EB24 RID: 191268 RVA: 0x00ACEC4D File Offset: 0x00ACCE4D
+		// Token: 0x06023270 RID: 143984 RVA: 0x009FD521 File Offset: 0x009FB721
 		public void RefreshCurrentInputModule()
 		{
 			TsLguiEventSystemActor lguiEventSystemActorInternal = this.LguiEventSystemActorInternal;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Ui
 			lguiEventSystemActorInternal.RefreshCurrentInputModule();
 		}
 
-		// Token: 0x0602EB25 RID: 191269 RVA: 0x00ACEC5F File Offset: 0x00ACCE5F
+		// Token: 0x06023271 RID: 143985 RVA: 0x009FD533 File Offset: 0x009FB733
 		[NullableContext(1)]
 		public void InputWheelAxis(string axisName, float value)
 		{
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Ui
 			lguiEventSystemActorInternal.InputScroll(value);
 		}
 
-		// Token: 0x0602EB26 RID: 191270 RVA: 0x00ACEC72 File Offset: 0x00ACCE72
+		// Token: 0x06023272 RID: 143986 RVA: 0x009FD546 File Offset: 0x009FB746
 		public void InputWheelAxisByGamepad(float value)
 		{
 			TsLguiEventSystemActor lguiEventSystemActorInternal = this.LguiEventSystemActorInternal;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Ui
 			lguiEventSystemActorInternal.InputScrollByGamepad(value);
 		}
 
-		// Token: 0x0602EB27 RID: 191271 RVA: 0x00ACEC85 File Offset: 0x00ACCE85
+		// Token: 0x06023273 RID: 143987 RVA: 0x009FD559 File Offset: 0x009FB759
 		public void InputTouchTrigger(bool bTouchPress, int touchId, FVector touchPosition)
 		{
 			TsLguiEventSystemActor lguiEventSystemActorInternal = this.LguiEventSystemActorInternal;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Ui
 			lguiEventSystemActorInternal.InputTouchTrigger(bTouchPress, touchId, touchPosition);
 		}
 
-		// Token: 0x0602EB28 RID: 191272 RVA: 0x00ACEC9A File Offset: 0x00ACCE9A
+		// Token: 0x06023274 RID: 143988 RVA: 0x009FD56E File Offset: 0x009FB76E
 		public void InputLguiTouchMove(int touchId, FVector touchPosition)
 		{
 			TsLguiEventSystemActor lguiEventSystemActorInternal = this.LguiEventSystemActorInternal;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Ui
 			lguiEventSystemActorInternal.InputTouchMove(touchId, touchPosition);
 		}
 
-		// Token: 0x0602EB29 RID: 191273 RVA: 0x00ACECAE File Offset: 0x00ACCEAE
+		// Token: 0x06023275 RID: 143989 RVA: 0x009FD582 File Offset: 0x009FB782
 		public void SetEventDataPrevPosition(float x, float y)
 		{
 			TsLguiEventSystemActor lguiEventSystemActorInternal = this.LguiEventSystemActorInternal;
@@ -171,8 +171,8 @@ namespace CSharpScript.Game.Ui
 			lguiEventSystemActorInternal.SetPrevMousePosition(x, y);
 		}
 
-		// Token: 0x17007664 RID: 30308
-		// (get) Token: 0x0602EB2A RID: 191274 RVA: 0x00ACECC2 File Offset: 0x00ACCEC2
+		// Token: 0x17004920 RID: 18720
+		// (get) Token: 0x06023276 RID: 143990 RVA: 0x009FD596 File Offset: 0x009FB796
 		public TsLguiEventSystemActor LguiEventSystemActor
 		{
 			get
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB2B RID: 191275 RVA: 0x00ACECCA File Offset: 0x00ACCECA
+		// Token: 0x06023277 RID: 143991 RVA: 0x009FD59E File Offset: 0x009FB79E
 		public UUIItem GetNowHitComponent()
 		{
 			TsLguiEventSystemActor lguiEventSystemActorInternal = this.LguiEventSystemActorInternal;
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Ui
 			return lguiEventSystemActorInternal.GetNowHitComponent();
 		}
 
-		// Token: 0x0602EB2C RID: 191276 RVA: 0x00ACECE0 File Offset: 0x00ACCEE0
+		// Token: 0x06023278 RID: 143992 RVA: 0x009FD5B4 File Offset: 0x009FB7B4
 		public string GetNowHitComponentName()
 		{
 			UUIItem nowHitComponent = this.GetNowHitComponent();
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Ui
 			return nowHitComponent.GetDisplayName();
 		}
 
-		// Token: 0x0602EB2D RID: 191277 RVA: 0x00ACECFF File Offset: 0x00ACCEFF
+		// Token: 0x06023279 RID: 143993 RVA: 0x009FD5D3 File Offset: 0x009FB7D3
 		public ULGUIPointerEventData GetPointerEventData(int pointerId, bool createIfNotExist = false)
 		{
 			TsLguiEventSystemActor lguiEventSystemActorInternal = this.LguiEventSystemActorInternal;
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Ui
 			return lguiEventSystemActorInternal.GetPointerEventData((float)pointerId, createIfNotExist);
 		}
 
-		// Token: 0x0602EB2E RID: 191278 RVA: 0x00ACED18 File Offset: 0x00ACCF18
+		// Token: 0x0602327A RID: 143994 RVA: 0x009FD5EC File Offset: 0x009FB7EC
 		public FVector? GetPointerEventDataPosition(int pointerId)
 		{
 			ULGUIPointerEventData pointerEventData = this.GetPointerEventData(pointerId, false);
@@ -225,22 +225,22 @@ namespace CSharpScript.Game.Ui
 			return new FVector?(pointerEventData.pointerPosition);
 		}
 
-		// Token: 0x0602EB2F RID: 191279 RVA: 0x00ACED48 File Offset: 0x00ACCF48
+		// Token: 0x0602327B RID: 143995 RVA: 0x009FD61C File Offset: 0x009FB81C
 		public bool IsPressComponentIsValid(int pointerId)
 		{
 			ULGUIPointerEventData pointerEventData = this.GetPointerEventData(pointerId, false);
 			return pointerEventData != null && pointerEventData.enterComponent != null && pointerEventData.pressComponent != null;
 		}
 
-		// Token: 0x0602EB30 RID: 191280 RVA: 0x00ACED78 File Offset: 0x00ACCF78
+		// Token: 0x0602327C RID: 143996 RVA: 0x009FD64C File Offset: 0x009FB84C
 		public bool IsNowTriggerPressed(int pointerId)
 		{
 			ULGUIPointerEventData pointerEventData = this.GetPointerEventData(pointerId, false);
 			return pointerEventData != null && pointerEventData.nowIsTriggerPressed;
 		}
 
-		// Token: 0x17007665 RID: 30309
-		// (get) Token: 0x0602EB31 RID: 191281 RVA: 0x00ACED99 File Offset: 0x00ACCF99
+		// Token: 0x17004921 RID: 18721
+		// (get) Token: 0x0602327D RID: 143997 RVA: 0x009FD66D File Offset: 0x009FB86D
 		[Nullable(1)]
 		public static LguiEventSystemManager Instance
 		{
@@ -256,12 +256,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB32 RID: 191282 RVA: 0x00ACEDBC File Offset: 0x00ACCFBC
+		// Token: 0x0602327E RID: 143998 RVA: 0x009FD690 File Offset: 0x009FB890
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602EB33 RID: 191283 RVA: 0x00ACEDBE File Offset: 0x00ACCFBE
+		// Token: 0x0602327F RID: 143999 RVA: 0x009FD692 File Offset: 0x009FB892
 		public static void ResetStaticDefaultValue()
 		{
 			LguiEventSystemManager instance = LguiEventSystemManager._instance;
@@ -272,19 +272,19 @@ namespace CSharpScript.Game.Ui
 			LguiEventSystemManager._instance = null;
 		}
 
-		// Token: 0x0602EB34 RID: 191284 RVA: 0x00ACEDD7 File Offset: 0x00ACCFD7
+		// Token: 0x06023280 RID: 144000 RVA: 0x009FD6AB File Offset: 0x009FB8AB
 		static LguiEventSystemManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LguiEventSystemManager.CreateStaticDefaultValue), new Action(LguiEventSystemManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040196C6 RID: 104134
+		// Token: 0x04013D6B RID: 81259
 		private TsLguiEventSystemActor LguiEventSystemActorInternal;
 
-		// Token: 0x040196C7 RID: 104135
+		// Token: 0x04013D6C RID: 81260
 		private bool IsInitializing;
 
-		// Token: 0x040196C8 RID: 104136
+		// Token: 0x04013D6D RID: 81261
 		private static LguiEventSystemManager _instance;
 	}
 }

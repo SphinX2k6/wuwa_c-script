@@ -2,36 +2,36 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006257 RID: 25175
+	// Token: 0x020051D5 RID: 20949
 	internal enum <RhythmShipSubView>F609FA8130BC7AF4DB4B98789FFC74035BF27DBD40FB537B10B27A050C3D890CF__EComponent
 	{
-		// Token: 0x040211E3 RID: 135651
+		// Token: 0x0401BB12 RID: 113426
 		ComActivityTitle,
-		// Token: 0x040211E4 RID: 135652
+		// Token: 0x0401BB13 RID: 113427
 		ComActivityDescription,
-		// Token: 0x040211E5 RID: 135653
+		// Token: 0x0401BB14 RID: 113428
 		ComActivityReward,
-		// Token: 0x040211E6 RID: 135654
+		// Token: 0x0401BB15 RID: 113429
 		ComActivityRogueBottom,
-		// Token: 0x040211E7 RID: 135655
+		// Token: 0x0401BB16 RID: 113430
 		PanelQuestTips2,
-		// Token: 0x040211E8 RID: 135656
+		// Token: 0x0401BB17 RID: 113431
 		TaskLimitBtn,
-		// Token: 0x040211E9 RID: 135657
+		// Token: 0x0401BB18 RID: 113432
 		TaskBtn,
-		// Token: 0x040211EA RID: 135658
+		// Token: 0x0401BB19 RID: 113433
 		TaskLimitText,
-		// Token: 0x040211EB RID: 135659
+		// Token: 0x0401BB1A RID: 113434
 		TaskText,
-		// Token: 0x040211EC RID: 135660
+		// Token: 0x0401BB1B RID: 113435
 		LimitTaskRedDotItem,
-		// Token: 0x040211ED RID: 135661
+		// Token: 0x0401BB1C RID: 113436
 		TaskRedDotItem,
-		// Token: 0x040211EE RID: 135662
+		// Token: 0x0401BB1D RID: 113437
 		TimeLimitItem,
-		// Token: 0x040211EF RID: 135663
+		// Token: 0x0401BB1E RID: 113438
 		TaskItem,
-		// Token: 0x040211F0 RID: 135664
+		// Token: 0x0401BB1F RID: 113439
 		TimeLimitText
 	}
 }

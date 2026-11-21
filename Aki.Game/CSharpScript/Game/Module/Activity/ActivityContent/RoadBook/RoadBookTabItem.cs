@@ -5,17 +5,17 @@ using CSharpScript.Game.Module.Area;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061E4 RID: 25060
+	// Token: 0x02005162 RID: 20834
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoadBookTabItem : RoadBookTabItemBase
 	{
-		// Token: 0x0603F42F RID: 259119 RVA: 0x00F4947E File Offset: 0x00F4767E
+		// Token: 0x060340F0 RID: 213232 RVA: 0x00E903D6 File Offset: 0x00E8E5D6
 		public RoadBookTabItem(ActivityRoadBookData activityBaseData) : base(activityBaseData)
 		{
 		}
 
-		// Token: 0x0603F430 RID: 259120 RVA: 0x00F49488 File Offset: 0x00F47688
+		// Token: 0x060340F1 RID: 213233 RVA: 0x00E903E0 File Offset: 0x00E8E5E0
 		public override void RefreshByData(RoadBookAreaData data, int index)
 		{
 			base.RefreshByData(data, index);

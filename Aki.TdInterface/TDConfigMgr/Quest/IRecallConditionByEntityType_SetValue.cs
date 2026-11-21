@@ -1,24 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010D9 RID: 4313
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001207 RID: 4615
 	public class IRecallConditionByEntityType_SetValue
 	{
-		// Token: 0x04003AB3 RID: 15027
+		// Token: 0x04003E00 RID: 15872
 		public ERecallConditionType Type;
 
-		// Token: 0x04003AB4 RID: 15028
+		// Token: 0x04003E01 RID: 15873
 		public ERecallOperation Operation;
 
-		// Token: 0x04003AB5 RID: 15029
+		// Token: 0x04003E02 RID: 15874
 		public List<string> EntityTypes;
 
-		// Token: 0x04003AB6 RID: 15030
+		// Token: 0x04003E03 RID: 15875
 		public List<int> AreaIds;
 	}
 }

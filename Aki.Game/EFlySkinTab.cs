@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002A4C RID: 10828
+// Token: 0x02001FC7 RID: 8135
 public enum EFlySkinTab
 {
-	// Token: 0x0400A76F RID: 42863
+	// Token: 0x0400AB73 RID: 43891
 	ParaglidingTab,
-	// Token: 0x0400A770 RID: 42864
+	// Token: 0x0400AB74 RID: 43892
 	SoarWingTab
 }

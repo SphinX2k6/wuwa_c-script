@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E85 RID: 3717
+	// Token: 0x02000F98 RID: 3992
 	public enum EQuestSubType
 	{
-		// Token: 0x04003138 RID: 12600
+		// Token: 0x0400343A RID: 13370
 		DangoActivity = 1
 	}
 }

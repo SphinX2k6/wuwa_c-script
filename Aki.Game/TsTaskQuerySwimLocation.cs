@@ -23,8 +23,8 @@ using UnrealEngine.Utils;
 public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
 	// Token: 0x1700008F RID: 143
-	// (get) Token: 0x060003B8 RID: 952 RVA: 0x000118A9 File Offset: 0x0000FAA9
-	// (set) Token: 0x060003B9 RID: 953 RVA: 0x000118B9 File Offset: 0x0000FAB9
+	// (get) Token: 0x060003B8 RID: 952 RVA: 0x00012085 File Offset: 0x00010285
+	// (set) Token: 0x060003B9 RID: 953 RVA: 0x00012095 File Offset: 0x00010295
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Angle
 	{
@@ -39,8 +39,8 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 	}
 
 	// Token: 0x17000090 RID: 144
-	// (get) Token: 0x060003BA RID: 954 RVA: 0x000118CA File Offset: 0x0000FACA
-	// (set) Token: 0x060003BB RID: 955 RVA: 0x000118DA File Offset: 0x0000FADA
+	// (get) Token: 0x060003BA RID: 954 RVA: 0x000120A6 File Offset: 0x000102A6
+	// (set) Token: 0x060003BB RID: 955 RVA: 0x000120B6 File Offset: 0x000102B6
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float InnerDiameter
 	{
@@ -55,8 +55,8 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 	}
 
 	// Token: 0x17000091 RID: 145
-	// (get) Token: 0x060003BC RID: 956 RVA: 0x000118EB File Offset: 0x0000FAEB
-	// (set) Token: 0x060003BD RID: 957 RVA: 0x000118FB File Offset: 0x0000FAFB
+	// (get) Token: 0x060003BC RID: 956 RVA: 0x000120C7 File Offset: 0x000102C7
+	// (set) Token: 0x060003BD RID: 957 RVA: 0x000120D7 File Offset: 0x000102D7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float OuterDiameter
 	{
@@ -71,8 +71,8 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 	}
 
 	// Token: 0x17000092 RID: 146
-	// (get) Token: 0x060003BE RID: 958 RVA: 0x0001190C File Offset: 0x0000FB0C
-	// (set) Token: 0x060003BF RID: 959 RVA: 0x0001191C File Offset: 0x0000FB1C
+	// (get) Token: 0x060003BE RID: 958 RVA: 0x000120E8 File Offset: 0x000102E8
+	// (set) Token: 0x060003BF RID: 959 RVA: 0x000120F8 File Offset: 0x000102F8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DebugMode
 	{
@@ -86,7 +86,7 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		}
 	}
 
-	// Token: 0x060003C0 RID: 960 RVA: 0x00011930 File Offset: 0x0000FB30
+	// Token: 0x060003C0 RID: 960 RVA: 0x0001210C File Offset: 0x0001030C
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -107,30 +107,27 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		}
 	}
 
-	// Token: 0x060003C1 RID: 961 RVA: 0x000119D8 File Offset: 0x0000FBD8
+	// Token: 0x060003C1 RID: 961 RVA: 0x000121B4 File Offset: 0x000103B4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskQuerySwimLocation) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskQuerySwimLocation.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060003C2 RID: 962 RVA: 0x00011A74 File Offset: 0x0000FC74
+	// Token: 0x060003C2 RID: 962 RVA: 0x00012264 File Offset: 0x00010464
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -192,7 +189,7 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		base.Finish(true);
 	}
 
-	// Token: 0x060003C3 RID: 963 RVA: 0x00011D90 File Offset: 0x0000FF90
+	// Token: 0x060003C3 RID: 963 RVA: 0x00012580 File Offset: 0x00010780
 	private bool InitRange(CreatureDataComponent creatureData)
 	{
 		if (this.RangeInited)
@@ -229,7 +226,7 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		return true;
 	}
 
-	// Token: 0x060003C4 RID: 964 RVA: 0x00011EC4 File Offset: 0x000100C4
+	// Token: 0x060003C4 RID: 964 RVA: 0x000126B4 File Offset: 0x000108B4
 	private void InitCenter([Nullable(2)] Aki.TDConfigMgr.Action.ITransform transform, IBoxTriggerShape shape)
 	{
 		if (this.Center == null)
@@ -289,7 +286,7 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		center8.Z = z + (double)((center9 != null) ? center9.Z : null).GetValueOrDefault();
 	}
 
-	// Token: 0x060003C5 RID: 965 RVA: 0x00012038 File Offset: 0x00010238
+	// Token: 0x060003C5 RID: 965 RVA: 0x00012828 File Offset: 0x00010A28
 	private void InitSize([Nullable(2)] Aki.TDConfigMgr.Action.ITransform transform, IBoxTriggerShape shape)
 	{
 		if (this.Size == null)
@@ -349,7 +346,7 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		size9.Z = z * (double)num2.GetValueOrDefault(1f);
 	}
 
-	// Token: 0x060003C6 RID: 966 RVA: 0x000121BC File Offset: 0x000103BC
+	// Token: 0x060003C6 RID: 966 RVA: 0x000129AC File Offset: 0x00010BAC
 	private void InitRotator([Nullable(2)] Aki.TDConfigMgr.Action.ITransform transform, IBoxTriggerShape shape)
 	{
 		if (this.Rotator == null)
@@ -409,7 +406,7 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		rotator9.Roll = roll + num2.GetValueOrDefault();
 	}
 
-	// Token: 0x060003C7 RID: 967 RVA: 0x0001232C File Offset: 0x0001052C
+	// Token: 0x060003C7 RID: 967 RVA: 0x00012B1C File Offset: 0x00010D1C
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -426,7 +423,7 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		return new ValueTuple<double, double>(randomRange * num2 - randomRange2 * num3, randomRange * num3 + randomRange2 * num2);
 	}
 
-	// Token: 0x060003C8 RID: 968 RVA: 0x00012380 File Offset: 0x00010580
+	// Token: 0x060003C8 RID: 968 RVA: 0x00012B70 File Offset: 0x00010D70
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -445,7 +442,7 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		return new ValueTuple<double, double>(num * Math.Cos(randomRange2), num * Math.Sin(randomRange2));
 	}
 
-	// Token: 0x060003C9 RID: 969 RVA: 0x000123F4 File Offset: 0x000105F4
+	// Token: 0x060003C9 RID: 969 RVA: 0x00012BE4 File Offset: 0x00010DE4
 	private bool IsInBoxRange2D(global::Vector point)
 	{
 		this.VectorCache2.DeepCopy(point);
@@ -460,7 +457,7 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		return this.VectorCache2.X > -this.Size.X && this.VectorCache2.X < this.Size.X && this.VectorCache2.Y > -this.Size.Y && this.VectorCache2.Y < this.Size.Y;
 	}
 
-	// Token: 0x060003CA RID: 970 RVA: 0x000124E0 File Offset: 0x000106E0
+	// Token: 0x060003CA RID: 970 RVA: 0x00012CD0 File Offset: 0x00010ED0
 	private void InitTraceElement()
 	{
 		if (this.TraceElement == null)
@@ -487,7 +484,7 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		this.ShallowTraceElement.WorldContextObject = this.GetWorld();
 	}
 
-	// Token: 0x060003CB RID: 971 RVA: 0x00012608 File Offset: 0x00010808
+	// Token: 0x060003CB RID: 971 RVA: 0x00012DF8 File Offset: 0x00010FF8
 	private bool CheckInWater(global::Vector location)
 	{
 		this.VectorCache.DeepCopy(location);
@@ -497,7 +494,7 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		return TraceElementCommon.Instance.LineTrace(this.TraceElement, "TsTaskQuerySwimLocation");
 	}
 
-	// Token: 0x060003CC RID: 972 RVA: 0x00012680 File Offset: 0x00010880
+	// Token: 0x060003CC RID: 972 RVA: 0x00012E70 File Offset: 0x00011070
 	private bool CheckReachable(global::Vector start, global::Vector end)
 	{
 		FName waterCollisionProfileName = RenderConfig.WaterCollisionProfileName;
@@ -522,7 +519,7 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		return true;
 	}
 
-	// Token: 0x060003CD RID: 973 RVA: 0x0001275F File Offset: 0x0001095F
+	// Token: 0x060003CD RID: 973 RVA: 0x00012F4F File Offset: 0x0001114F
 	private void DebugDraw(global::Vector location, FLinearColor color)
 	{
 		if (!GlobalData.IsPlayInEditor || !this.TsDebugMode)
@@ -532,7 +529,7 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		UKismetSystemLibrary.D_DrawDebugSphere(this, location.ToUeVector(false), 30f, 10, new FLinearColor?(color), 1.5f, 0f);
 	}
 
-	// Token: 0x060003CE RID: 974 RVA: 0x00012798 File Offset: 0x00010998
+	// Token: 0x060003CE RID: 974 RVA: 0x00012F88 File Offset: 0x00011188
 	private void DebugDrawRange()
 	{
 		if (!GlobalData.IsPlayInEditor || !this.TsDebugMode || !this.HaveRangeConfig)
@@ -542,7 +539,7 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		UKismetSystemLibrary.D_DrawDebugBox(this, this.Center.ToUeVector(false), this.Size.ToUeVector(false), ColorUtils.LinearGreen, this.Rotator.ToUeRotator(), 1.5f, 0f);
 	}
 
-	// Token: 0x060003CF RID: 975 RVA: 0x000127F5 File Offset: 0x000109F5
+	// Token: 0x060003CF RID: 975 RVA: 0x00012FE5 File Offset: 0x000111E5
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskQuerySwimLocation._ClassPtr == IntPtr.Zero)
@@ -552,22 +549,22 @@ public class TsTaskQuerySwimLocation : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		return TsTaskQuerySwimLocation._ClassPtr;
 	}
 
-	// Token: 0x060003D0 RID: 976 RVA: 0x0001281C File Offset: 0x00010A1C
+	// Token: 0x060003D0 RID: 976 RVA: 0x0001300C File Offset: 0x0001120C
 	public TsTaskQuerySwimLocation() : this(BuiltinUtils.AllocNativeUObject(TsTaskQuerySwimLocation.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060003D1 RID: 977 RVA: 0x00012844 File Offset: 0x00010A44
+	// Token: 0x060003D1 RID: 977 RVA: 0x00013034 File Offset: 0x00011234
 	public TsTaskQuerySwimLocation(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskQuerySwimLocation.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060003D2 RID: 978 RVA: 0x00012877 File Offset: 0x00010A77
+	// Token: 0x060003D2 RID: 978 RVA: 0x00013067 File Offset: 0x00011267
 	protected TsTaskQuerySwimLocation(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060003D3 RID: 979 RVA: 0x00012880 File Offset: 0x00010A80
+	// Token: 0x060003D3 RID: 979 RVA: 0x00013070 File Offset: 0x00011270
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{

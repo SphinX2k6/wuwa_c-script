@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020026BC RID: 9916
+// Token: 0x02001BA7 RID: 7079
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class QuestTreeNodeTargetItem : GridProxyAbstract<IQuestTreeNodeTarget>
 {
-	// Token: 0x0601454A RID: 83274 RVA: 0x00524C44 File Offset: 0x00522E44
+	// Token: 0x06011A2C RID: 72236 RVA: 0x0053397C File Offset: 0x00531B7C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -45,13 +45,13 @@ public class QuestTreeNodeTargetItem : GridProxyAbstract<IQuestTreeNodeTarget>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601454B RID: 83275 RVA: 0x00524D8F File Offset: 0x00522F8F
+	// Token: 0x06011A2D RID: 72237 RVA: 0x00533AC7 File Offset: 0x00531CC7
 	public void SetNode(QuestTreeNodeData node)
 	{
 		this.Node = node;
 	}
 
-	// Token: 0x0601454C RID: 83276 RVA: 0x00524D98 File Offset: 0x00522F98
+	// Token: 0x06011A2E RID: 72238 RVA: 0x00533AD0 File Offset: 0x00531CD0
 	public override void Refresh(IQuestTreeNodeTarget data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -120,7 +120,7 @@ public class QuestTreeNodeTargetItem : GridProxyAbstract<IQuestTreeNodeTarget>
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0601454D RID: 83277 RVA: 0x00524F78 File Offset: 0x00523178
+	// Token: 0x06011A2F RID: 72239 RVA: 0x00533CB0 File Offset: 0x00531EB0
 	private void OnSelfClick(EToggleState _)
 	{
 		if (this.Data.OnGoto != null && !this.Data.IsFinished.GetValueOrDefault())
@@ -143,36 +143,36 @@ public class QuestTreeNodeTargetItem : GridProxyAbstract<IQuestTreeNodeTarget>
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x040098DD RID: 39133
+	// Token: 0x04009A35 RID: 39477
 	private IQuestTreeNodeTarget Data;
 
-	// Token: 0x040098DE RID: 39134
+	// Token: 0x04009A36 RID: 39478
 	[Nullable(2)]
 	private QuestTreeNodeData Node;
 
-	// Token: 0x02008D1A RID: 36122
+	// Token: 0x02007EA3 RID: 32419
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402DCC7 RID: 187591
+		// Token: 0x04028FDE RID: 167902
 		public const int ToggleSelf = 0;
 
-		// Token: 0x0402DCC8 RID: 187592
+		// Token: 0x04028FDF RID: 167903
 		public const int ItemLeftIcon = 1;
 
-		// Token: 0x0402DCC9 RID: 187593
+		// Token: 0x04028FE0 RID: 167904
 		public const int TextDesc = 2;
 
-		// Token: 0x0402DCCA RID: 187594
+		// Token: 0x04028FE1 RID: 167905
 		public const int ItemFinished = 3;
 
-		// Token: 0x0402DCCB RID: 187595
+		// Token: 0x04028FE2 RID: 167906
 		public const int ItemHelp = 4;
 
-		// Token: 0x0402DCCC RID: 187596
+		// Token: 0x04028FE3 RID: 167907
 		public const int ItemGoto = 5;
 
-		// Token: 0x0402DCCD RID: 187597
+		// Token: 0x04028FE4 RID: 167908
 		public const int ItemLock = 6;
 	}
 }

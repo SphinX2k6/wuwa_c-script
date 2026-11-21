@@ -2,13 +2,13 @@
 
 namespace Aki.Common.Proxy
 {
-	// Token: 0x02000025 RID: 37
+	// Token: 0x02000026 RID: 38
 	public interface IStat
 	{
-		// Token: 0x060000F9 RID: 249
+		// Token: 0x06000166 RID: 358
 		void Start();
 
-		// Token: 0x060000FA RID: 250
+		// Token: 0x06000167 RID: 359
 		void Stop();
 	}
 }

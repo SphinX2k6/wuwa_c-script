@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Aki.Game.Module.UiNavigation.UIComponent;
 using CSharpScript.Game.Module.UiNavigation.UIComponent;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
@@ -8,19 +9,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049EC RID: 18924
+	// Token: 0x02003966 RID: 14694
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HotKeyItemFactory : IStaticVariableResetter
 	{
-		// Token: 0x0603124A RID: 201290 RVA: 0x00B65A15 File Offset: 0x00B63C15
+		// Token: 0x06025D80 RID: 155008 RVA: 0x00AA0965 File Offset: 0x00A9EB65
 		static HotKeyItemFactory()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(HotKeyItemFactory.CreateStaticDefaultValue), new Action(HotKeyItemFactory.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x170079DC RID: 31196
-		// (get) Token: 0x0603124B RID: 201291 RVA: 0x00B65A34 File Offset: 0x00B63C34
+		// Token: 0x17004D44 RID: 19780
+		// (get) Token: 0x06025D81 RID: 155009 RVA: 0x00AA0984 File Offset: 0x00A9EB84
 		private static Dictionary<string, Type> HotKeyComponentTypeMap
 		{
 			get
@@ -29,7 +30,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0603124C RID: 201292 RVA: 0x00B65A3C File Offset: 0x00B63C3C
+		// Token: 0x06025D82 RID: 155010 RVA: 0x00AA098C File Offset: 0x00A9EB8C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -47,7 +48,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return <CreateHotKeyItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603124D RID: 201293 RVA: 0x00B65A90 File Offset: 0x00B63C90
+		// Token: 0x06025D83 RID: 155011 RVA: 0x00AA09E0 File Offset: 0x00A9EBE0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -64,7 +65,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return <CreateItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603124E RID: 201294 RVA: 0x00B65ADC File Offset: 0x00B63CDC
+		// Token: 0x06025D84 RID: 155012 RVA: 0x00AA0A2C File Offset: 0x00A9EC2C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -82,7 +83,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return <CreateHotKeyComponent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603124F RID: 201295 RVA: 0x00B65B30 File Offset: 0x00B63D30
+		// Token: 0x06025D85 RID: 155013 RVA: 0x00AA0A80 File Offset: 0x00A9EC80
 		public static void CreateStaticDefaultValue()
 		{
 			HotKeyItemFactory._hotKeyComponentTypeMap = new Dictionary<string, Type>
@@ -180,6 +181,10 @@ namespace CSharpScript.Game.Module.UiNavigation
 					typeof(ClickBtnReleaseComponent)
 				},
 				{
+					"ClickButtonInScrollRelease",
+					typeof(ClickBtnInScrollReleaseComponent)
+				},
+				{
 					"ClickButtonInsideRelease",
 					typeof(ClickBtnInsideReleaseComponent)
 				},
@@ -232,12 +237,20 @@ namespace CSharpScript.Game.Module.UiNavigation
 					typeof(LongTimeToTriggerComponent)
 				},
 				{
+					"LongTimeToTriggerInScroll",
+					typeof(LongTimeToTriggerInScrollComponent)
+				},
+				{
 					"TextInput",
 					typeof(TextInputComponent)
 				},
 				{
 					"TextInputInside",
 					typeof(TextInputInsideComponent)
+				},
+				{
+					"FreeDrag2D",
+					typeof(FreeDrag2DComponent)
 				},
 				{
 					"DraggablePrev",
@@ -702,17 +715,25 @@ namespace CSharpScript.Game.Module.UiNavigation
 				{
 					"DangobrawlOpenItemTips",
 					typeof(DangobrawlOpenItemTipsComponent)
+				},
+				{
+					"TetrisRotate",
+					typeof(TetrisRotateComponent)
+				},
+				{
+					"TetrisPickShape",
+					typeof(TetrisPickShapeComponent)
 				}
 			};
 		}
 
-		// Token: 0x06031250 RID: 201296 RVA: 0x00B667E9 File Offset: 0x00B649E9
+		// Token: 0x06025D86 RID: 155014 RVA: 0x00AA17A2 File Offset: 0x00A9F9A2
 		public static void ResetStaticDefaultValue()
 		{
 			HotKeyItemFactory._hotKeyComponentTypeMap = null;
 		}
 
-		// Token: 0x0401A4DB RID: 107739
+		// Token: 0x04014D4D RID: 85325
 		[Nullable(new byte[]
 		{
 			2,

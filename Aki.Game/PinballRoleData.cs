@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020013E5 RID: 5093
+// Token: 0x02000899 RID: 2201
 public class PinballRoleData : PinballRoleDataBase
 {
-	// Token: 0x06008FC3 RID: 36803 RVA: 0x001F16FD File Offset: 0x001EF8FD
+	// Token: 0x06006358 RID: 25432 RVA: 0x001FA239 File Offset: 0x001F8439
 	public PinballRoleData(int id) : base(id)
 	{
 	}
 
-	// Token: 0x06008FC4 RID: 36804 RVA: 0x001F1706 File Offset: 0x001EF906
+	// Token: 0x06006359 RID: 25433 RVA: 0x001FA242 File Offset: 0x001F8442
 	public override bool IsLocked()
 	{
 		return false;

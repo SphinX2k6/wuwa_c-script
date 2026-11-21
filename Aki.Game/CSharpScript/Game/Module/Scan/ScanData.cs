@@ -8,37 +8,37 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Scan
 {
-	// Token: 0x02004C92 RID: 19602
+	// Token: 0x02003C43 RID: 15427
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class ScanData : IStaticVariableResetter
 	{
-		// Token: 0x06032A9F RID: 207519 RVA: 0x00BD1491 File Offset: 0x00BCF691
+		// Token: 0x06027852 RID: 161874 RVA: 0x00B160F5 File Offset: 0x00B142F5
 		static ScanData()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ScanData.CreateStaticDefaultValue), new Action(ScanData.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06032AA0 RID: 207520 RVA: 0x00BD14CA File Offset: 0x00BCF6CA
+		// Token: 0x06027853 RID: 161875 RVA: 0x00B1612E File Offset: 0x00B1432E
 		public static void CreateStaticDefaultValue()
 		{
 			ScanData.Uid = 0;
 		}
 
-		// Token: 0x06032AA1 RID: 207521 RVA: 0x00BD14D2 File Offset: 0x00BCF6D2
+		// Token: 0x06027854 RID: 161876 RVA: 0x00B16136 File Offset: 0x00B14336
 		public static void ResetStaticDefaultValue()
 		{
 			ScanData.Uid = 0;
 		}
 
-		// Token: 0x06032AA2 RID: 207522 RVA: 0x00BD14DC File Offset: 0x00BCF6DC
+		// Token: 0x06027855 RID: 161877 RVA: 0x00B16140 File Offset: 0x00B14340
 		public ScanData(float scanMaxDistance, float scanInteractionEffectMaxDistance)
 		{
 			this.Id = ScanData.Uid++;
 			this.MaxScanDistance = Math.Max(scanMaxDistance, scanInteractionEffectMaxDistance);
 		}
 
-		// Token: 0x06032AA3 RID: 207523 RVA: 0x00BD1548 File Offset: 0x00BCF748
+		// Token: 0x06027856 RID: 161878 RVA: 0x00B161AC File Offset: 0x00B143AC
 		public void EndScan()
 		{
 			foreach (Entity entity in this.NearbyCharacterEntities)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Scan
 			this.NearbyCharacterEntities.Clear();
 		}
 
-		// Token: 0x06032AA4 RID: 207524 RVA: 0x00BD1604 File Offset: 0x00BCF804
+		// Token: 0x06027857 RID: 161879 RVA: 0x00B16268 File Offset: 0x00B14468
 		public void FindNearbyEntities()
 		{
 			List<EntityHandle> list = new List<EntityHandle>();
@@ -90,13 +90,13 @@ namespace CSharpScript.Game.Module.Scan
 			}
 		}
 
-		// Token: 0x06032AA5 RID: 207525 RVA: 0x00BD1774 File Offset: 0x00BCF974
+		// Token: 0x06027858 RID: 161880 RVA: 0x00B163D8 File Offset: 0x00B145D8
 		public bool IsScanComplete()
 		{
 			return this.CurScanRadius >= this.MaxScanDistance;
 		}
 
-		// Token: 0x06032AA6 RID: 207526 RVA: 0x00BD1788 File Offset: 0x00BCF988
+		// Token: 0x06027859 RID: 161881 RVA: 0x00B163EC File Offset: 0x00B145EC
 		public bool UpdateScanRadius(float timeDilation)
 		{
 			this.CurElapsedTime += timeDilation;
@@ -114,14 +114,14 @@ namespace CSharpScript.Game.Module.Scan
 			return true;
 		}
 
-		// Token: 0x06032AA7 RID: 207527 RVA: 0x00BD1800 File Offset: 0x00BCFA00
+		// Token: 0x0602785A RID: 161882 RVA: 0x00B16464 File Offset: 0x00B14664
 		[NullableContext(2)]
 		private bool IsReadyToProcessEntity(NearbyEntityInfo nearbyEntityInfo)
 		{
 			return nearbyEntityInfo != null && nearbyEntityInfo.Distance <= (double)this.CurScanRadius;
 		}
 
-		// Token: 0x06032AA8 RID: 207528 RVA: 0x00BD181C File Offset: 0x00BCFA1C
+		// Token: 0x0602785B RID: 161883 RVA: 0x00B16480 File Offset: 0x00B14680
 		private void AddScanTagToEntity(Entity entity)
 		{
 			if (entity.GetComponent<CharacterActorComponent>() == null)
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Scan
 			}
 		}
 
-		// Token: 0x06032AA9 RID: 207529 RVA: 0x00BD1890 File Offset: 0x00BCFA90
+		// Token: 0x0602785C RID: 161884 RVA: 0x00B164F4 File Offset: 0x00B146F4
 		public void ProcessNearbyEntities()
 		{
 			while (this.NearbyEntityQueue.Size > 0)
@@ -163,44 +163,44 @@ namespace CSharpScript.Game.Module.Scan
 			}
 		}
 
-		// Token: 0x0401AF81 RID: 110465
+		// Token: 0x040158DE RID: 88286
 		private static int Uid = 0;
 
-		// Token: 0x0401AF82 RID: 110466
+		// Token: 0x040158DF RID: 88287
 		private static readonly int scanCharacterTag = GameplayTagDefine.EGameplayTagId["角色.BaseRole.技能通用标识.扫描感应中"];
 
-		// Token: 0x0401AF83 RID: 110467
+		// Token: 0x040158E0 RID: 88288
 		public int Id;
 
-		// Token: 0x0401AF84 RID: 110468
+		// Token: 0x040158E1 RID: 88289
 		public float MaxScanDistance;
 
-		// Token: 0x0401AF85 RID: 110469
+		// Token: 0x040158E2 RID: 88290
 		[Nullable(2)]
 		public BP_Fx_Scanning_C ScanningEffectActor;
 
-		// Token: 0x0401AF86 RID: 110470
+		// Token: 0x040158E3 RID: 88291
 		public float CurElapsedTime;
 
-		// Token: 0x0401AF87 RID: 110471
+		// Token: 0x040158E4 RID: 88292
 		public float CurScanRadius;
 
-		// Token: 0x0401AF88 RID: 110472
+		// Token: 0x040158E5 RID: 88293
 		public readonly float ScanEndTime = 1.6f;
 
-		// Token: 0x0401AF89 RID: 110473
+		// Token: 0x040158E6 RID: 88294
 		public readonly float ScanRadiusSpace = 200f;
 
-		// Token: 0x0401AF8A RID: 110474
+		// Token: 0x040158E7 RID: 88295
 		public bool HasTarget;
 
-		// Token: 0x0401AF8B RID: 110475
+		// Token: 0x040158E8 RID: 88296
 		public HashSet<Entity> NearbyCharacterEntities = new HashSet<Entity>();
 
-		// Token: 0x0401AF8C RID: 110476
+		// Token: 0x040158E9 RID: 88297
 		private readonly List<NearbyEntityInfo> NearbyEntitiesMap = new List<NearbyEntityInfo>();
 
-		// Token: 0x0401AF8D RID: 110477
+		// Token: 0x040158EA RID: 88298
 		public Queue<NearbyEntityInfo> NearbyEntityQueue = new Queue<NearbyEntityInfo>(4);
 	}
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B87 RID: 19335
+	// Token: 0x0200506E RID: 20590
 	public class ICompareCalabashLevelConditionT
 	{
-		// Token: 0x17008C54 RID: 35924
-		// (get) Token: 0x0601E7A2 RID: 124834 RVA: 0x004444BE File Offset: 0x004426BE
-		// (set) Token: 0x0601E7A3 RID: 124835 RVA: 0x004444C6 File Offset: 0x004426C6
+		// Token: 0x17009364 RID: 37732
+		// (get) Token: 0x06020330 RID: 131888 RVA: 0x00476D0A File Offset: 0x00474F0A
+		// (set) Token: 0x06020331 RID: 131889 RVA: 0x00476D12 File Offset: 0x00474F12
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008C55 RID: 35925
-		// (get) Token: 0x0601E7A4 RID: 124836 RVA: 0x004444CF File Offset: 0x004426CF
-		// (set) Token: 0x0601E7A5 RID: 124837 RVA: 0x004444D7 File Offset: 0x004426D7
+		// Token: 0x17009365 RID: 37733
+		// (get) Token: 0x06020332 RID: 131890 RVA: 0x00476D1B File Offset: 0x00474F1B
+		// (set) Token: 0x06020333 RID: 131891 RVA: 0x00476D23 File Offset: 0x00474F23
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008C56 RID: 35926
-		// (get) Token: 0x0601E7A6 RID: 124838 RVA: 0x004444E0 File Offset: 0x004426E0
-		// (set) Token: 0x0601E7A7 RID: 124839 RVA: 0x004444E8 File Offset: 0x004426E8
+		// Token: 0x17009366 RID: 37734
+		// (get) Token: 0x06020334 RID: 131892 RVA: 0x00476D2C File Offset: 0x00474F2C
+		// (set) Token: 0x06020335 RID: 131893 RVA: 0x00476D34 File Offset: 0x00474F34
 		public int CalabashLevel { get; set; }
 
-		// Token: 0x0601E7A8 RID: 124840 RVA: 0x004444F1 File Offset: 0x004426F1
+		// Token: 0x06020336 RID: 131894 RVA: 0x00476D3D File Offset: 0x00474F3D
 		public ICompareCalabashLevelConditionT()
 		{
 			this.Type = ECondition.CompareVar;

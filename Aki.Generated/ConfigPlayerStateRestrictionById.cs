@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000744 RID: 1860
+	// Token: 0x0200075C RID: 1884
 	public class ConfigPlayerStateRestrictionById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002BA9 RID: 11177 RVA: 0x001505A8 File Offset: 0x0014E7A8
+		// Token: 0x06002C39 RID: 11321 RVA: 0x00157024 File Offset: 0x00155224
 		static ConfigPlayerStateRestrictionById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPlayerStateRestrictionById.CreateStaticDefaultValue), new Action(ConfigPlayerStateRestrictionById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002BAA RID: 11178 RVA: 0x001505C8 File Offset: 0x0014E7C8
+		// Token: 0x06002C3A RID: 11322 RVA: 0x00157044 File Offset: 0x00155244
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPlayerStateRestrictionById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002BAB RID: 11179 RVA: 0x00150647 File Offset: 0x0014E847
+		// Token: 0x06002C3B RID: 11323 RVA: 0x001570C3 File Offset: 0x001552C3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPlayerStateRestrictionById.LogPair = null;
 			ConfigPlayerStateRestrictionById.HandleId = 0;
 		}
 
-		// Token: 0x06002BAC RID: 11180 RVA: 0x00150655 File Offset: 0x0014E855
+		// Token: 0x06002C3C RID: 11324 RVA: 0x001570D1 File Offset: 0x001552D1
 		public static void Init()
 		{
 			ConfigPlayerStateRestrictionById.HandleId = ConfigCommon.InitDataStatement(ConfigPlayerStateRestrictionById.HandleId, "db_playerstaterestriction.db", "select BinData from `PlayerStateRestriction` where Id=?");
 		}
 
-		// Token: 0x06002BAD RID: 11181 RVA: 0x00150670 File Offset: 0x0014E870
+		// Token: 0x06002C3D RID: 11325 RVA: 0x001570EC File Offset: 0x001552EC
 		public static PlayerStateRestriction? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPlayerStateRestrictionById.HandleId, ConfigPlayerStateRestrictionById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PlayerStateRestriction?(rootAsPlayerStateRestriction);
 		}
 
-		// Token: 0x040032C2 RID: 12994
+		// Token: 0x0400336A RID: 13162
 		private const string DB = "db_playerstaterestriction.db";
 
-		// Token: 0x040032C3 RID: 12995
+		// Token: 0x0400336B RID: 13163
 		private const string FILE = "k.可视化编辑/c.Csv/w.玩家状态限制/*.csv*";
 
-		// Token: 0x040032C4 RID: 12996
+		// Token: 0x0400336C RID: 13164
 		private const string TABLE = "PlayerStateRestriction";
 
-		// Token: 0x040032C5 RID: 12997
+		// Token: 0x0400336D RID: 13165
 		private const string COMMAND = "select BinData from `PlayerStateRestriction` where Id=?";
 
-		// Token: 0x040032C6 RID: 12998
+		// Token: 0x0400336E RID: 13166
 		private const string KEY_PREFIX = "PlayerStateRestrictionById";
 
-		// Token: 0x040032C7 RID: 12999
+		// Token: 0x0400336F RID: 13167
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040032C8 RID: 13000
+		// Token: 0x04003370 RID: 13168
 		private static int HandleId;
 	}
 }

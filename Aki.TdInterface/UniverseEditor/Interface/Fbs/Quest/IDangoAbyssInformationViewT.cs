@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DC8 RID: 15816
+	// Token: 0x020041DF RID: 16863
 	public class IDangoAbyssInformationViewT
 	{
-		// Token: 0x17006D2D RID: 27949
-		// (get) Token: 0x06016129 RID: 90409 RVA: 0x00330FB2 File Offset: 0x0032F1B2
-		// (set) Token: 0x0601612A RID: 90410 RVA: 0x00330FBA File Offset: 0x0032F1BA
+		// Token: 0x170072E7 RID: 29415
+		// (get) Token: 0x06017662 RID: 95842 RVA: 0x0035833A File Offset: 0x0035653A
+		// (set) Token: 0x06017663 RID: 95843 RVA: 0x00358342 File Offset: 0x00356542
 		public EInformationViewType Type { get; set; }
 
-		// Token: 0x0601612B RID: 90411 RVA: 0x00330FC3 File Offset: 0x0032F1C3
+		// Token: 0x06017664 RID: 95844 RVA: 0x0035834B File Offset: 0x0035654B
 		public IDangoAbyssInformationViewT()
 		{
 			this.Type = EInformationViewType.LevelPlay;

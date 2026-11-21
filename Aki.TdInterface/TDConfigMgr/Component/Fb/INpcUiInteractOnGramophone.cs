@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BC1 RID: 3009
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C8F RID: 3215
 	public class INpcUiInteractOnGramophone : INpcUiInteractType
 	{
-		// Token: 0x0600450F RID: 17679 RVA: 0x000AF11A File Offset: 0x000AD31A
+		// Token: 0x06004968 RID: 18792 RVA: 0x000B91DE File Offset: 0x000B73DE
 		public static INpcUiInteractOnGramophone Create(INpcUiInteractOnGramophone? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700134A RID: 4938
-		// (get) Token: 0x06004510 RID: 17680 RVA: 0x000AF139 File Offset: 0x000AD339
+		// Token: 0x17001445 RID: 5189
+		// (get) Token: 0x06004969 RID: 18793 RVA: 0x000B91FD File Offset: 0x000B73FD
 		public override ENpcUiInteractType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700134B RID: 4939
-		// (get) Token: 0x06004511 RID: 17681 RVA: 0x000AF146 File Offset: 0x000AD346
+		// Token: 0x17001446 RID: 5190
+		// (get) Token: 0x0600496A RID: 18794 RVA: 0x000B920A File Offset: 0x000B740A
 		public virtual string EnterMontage
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700134C RID: 4940
-		// (get) Token: 0x06004512 RID: 17682 RVA: 0x000AF153 File Offset: 0x000AD353
+		// Token: 0x17001447 RID: 5191
+		// (get) Token: 0x0600496B RID: 18795 RVA: 0x000B9217 File Offset: 0x000B7417
 		public virtual string StandByMontage
 		{
 			get
@@ -53,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700134D RID: 4941
-		// (get) Token: 0x06004513 RID: 17683 RVA: 0x000AF160 File Offset: 0x000AD360
+		// Token: 0x17001448 RID: 5192
+		// (get) Token: 0x0600496C RID: 18796 RVA: 0x000B9224 File Offset: 0x000B7424
 		public virtual string SwitchMusicMontage
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700134E RID: 4942
-		// (get) Token: 0x06004514 RID: 17684 RVA: 0x000AF16D File Offset: 0x000AD36D
+		// Token: 0x17001449 RID: 5193
+		// (get) Token: 0x0600496D RID: 18797 RVA: 0x000B9231 File Offset: 0x000B7431
 		public virtual string ExitMontage
 		{
 			get
@@ -73,8 +71,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700134F RID: 4943
-		// (get) Token: 0x06004515 RID: 17685 RVA: 0x000AF17A File Offset: 0x000AD37A
+		// Token: 0x1700144A RID: 5194
+		// (get) Token: 0x0600496E RID: 18798 RVA: 0x000B923E File Offset: 0x000B743E
 		[Nullable(2)]
 		public virtual PlayFlow EnterFlow
 		{
@@ -91,8 +89,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001350 RID: 4944
-		// (get) Token: 0x06004516 RID: 17686 RVA: 0x000AF1AE File Offset: 0x000AD3AE
+		// Token: 0x1700144B RID: 5195
+		// (get) Token: 0x0600496F RID: 18799 RVA: 0x000B9272 File Offset: 0x000B7472
 		[Nullable(2)]
 		public virtual PlayFlow FailedFlow
 		{
@@ -109,8 +107,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001351 RID: 4945
-		// (get) Token: 0x06004517 RID: 17687 RVA: 0x000AF1E2 File Offset: 0x000AD3E2
+		// Token: 0x1700144C RID: 5196
+		// (get) Token: 0x06004970 RID: 18800 RVA: 0x000B92A6 File Offset: 0x000B74A6
 		[Nullable(2)]
 		public virtual PlayFlow SuccessFlow
 		{
@@ -127,28 +125,28 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400271A RID: 10010
+		// Token: 0x04002962 RID: 10594
 		private INpcUiInteractOnGramophone Instance;
 
-		// Token: 0x0400271B RID: 10011
+		// Token: 0x04002963 RID: 10595
 		[Nullable(2)]
 		private PlayFlow _EnterFlowCache;
 
-		// Token: 0x0400271C RID: 10012
+		// Token: 0x04002964 RID: 10596
 		private bool _EnterFlowInited;
 
-		// Token: 0x0400271D RID: 10013
+		// Token: 0x04002965 RID: 10597
 		[Nullable(2)]
 		private PlayFlow _FailedFlowCache;
 
-		// Token: 0x0400271E RID: 10014
+		// Token: 0x04002966 RID: 10598
 		private bool _FailedFlowInited;
 
-		// Token: 0x0400271F RID: 10015
+		// Token: 0x04002967 RID: 10599
 		[Nullable(2)]
 		private PlayFlow _SuccessFlowCache;
 
-		// Token: 0x04002720 RID: 10016
+		// Token: 0x04002968 RID: 10600
 		private bool _SuccessFlowInited;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006627 RID: 26151
+	// Token: 0x02006C98 RID: 27800
 	public struct IEasterEggTrackingEvent : IFlatbufferObject
 	{
-		// Token: 0x1700C247 RID: 49735
-		// (get) Token: 0x0602D68D RID: 185997 RVA: 0x00638A8A File Offset: 0x00636C8A
+		// Token: 0x1700CBE5 RID: 52197
+		// (get) Token: 0x0602FE5E RID: 196190 RVA: 0x006855F2 File Offset: 0x006837F2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D68E RID: 185998 RVA: 0x00638A97 File Offset: 0x00636C97
+		// Token: 0x0602FE5F RID: 196191 RVA: 0x006855FF File Offset: 0x006837FF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D68F RID: 185999 RVA: 0x00638AA0 File Offset: 0x00636CA0
+		// Token: 0x0602FE60 RID: 196192 RVA: 0x00685608 File Offset: 0x00683808
 		public static IEasterEggTrackingEvent GetRootAsIEasterEggTrackingEvent(ByteBuffer _bb)
 		{
 			return IEasterEggTrackingEvent.GetRootAsIEasterEggTrackingEvent(_bb, default(IEasterEggTrackingEvent));
 		}
 
-		// Token: 0x0602D690 RID: 186000 RVA: 0x00638ABC File Offset: 0x00636CBC
+		// Token: 0x0602FE61 RID: 196193 RVA: 0x00685624 File Offset: 0x00683824
 		public static IEasterEggTrackingEvent GetRootAsIEasterEggTrackingEvent(ByteBuffer _bb, IEasterEggTrackingEvent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D691 RID: 186001 RVA: 0x00638AD9 File Offset: 0x00636CD9
+		// Token: 0x0602FE62 RID: 196194 RVA: 0x00685641 File Offset: 0x00683841
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D692 RID: 186002 RVA: 0x00638AE8 File Offset: 0x00636CE8
+		// Token: 0x0602FE63 RID: 196195 RVA: 0x00685650 File Offset: 0x00683850
 		public IEasterEggTrackingEvent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C248 RID: 49736
-		// (get) Token: 0x0602D693 RID: 186003 RVA: 0x00638AF8 File Offset: 0x00636CF8
+		// Token: 0x1700CBE6 RID: 52198
+		// (get) Token: 0x0602FE64 RID: 196196 RVA: 0x00685660 File Offset: 0x00683860
 		public ETrackingEventType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C249 RID: 49737
-		// (get) Token: 0x0602D694 RID: 186004 RVA: 0x00638B34 File Offset: 0x00636D34
+		// Token: 0x1700CBE7 RID: 52199
+		// (get) Token: 0x0602FE65 RID: 196197 RVA: 0x0068569C File Offset: 0x0068389C
 		public int EasterEggId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D695 RID: 186005 RVA: 0x00638B70 File Offset: 0x00636D70
+		// Token: 0x0602FE66 RID: 196198 RVA: 0x006856D8 File Offset: 0x006838D8
 		public static Offset<IEasterEggTrackingEvent> CreateIEasterEggTrackingEvent(FlatBufferBuilder builder, ETrackingEventType Type = ETrackingEventType.EasterEgg, int EasterEggId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEasterEggTrackingEvent.EndIEasterEggTrackingEvent(builder);
 		}
 
-		// Token: 0x0602D696 RID: 186006 RVA: 0x00638B8D File Offset: 0x00636D8D
+		// Token: 0x0602FE67 RID: 196199 RVA: 0x006856F5 File Offset: 0x006838F5
 		public static void StartIEasterEggTrackingEvent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602D697 RID: 186007 RVA: 0x00638B96 File Offset: 0x00636D96
+		// Token: 0x0602FE68 RID: 196200 RVA: 0x006856FE File Offset: 0x006838FE
 		public static void AddType(FlatBufferBuilder builder, ETrackingEventType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D698 RID: 186008 RVA: 0x00638BA1 File Offset: 0x00636DA1
+		// Token: 0x0602FE69 RID: 196201 RVA: 0x00685709 File Offset: 0x00683909
 		public static void AddEasterEggId(FlatBufferBuilder builder, int easterEggId)
 		{
 			builder.AddInt(1, easterEggId, 0);
 		}
 
-		// Token: 0x0602D699 RID: 186009 RVA: 0x00638BAC File Offset: 0x00636DAC
+		// Token: 0x0602FE6A RID: 196202 RVA: 0x00685714 File Offset: 0x00683914
 		public static Offset<IEasterEggTrackingEvent> EndIEasterEggTrackingEvent(FlatBufferBuilder builder)
 		{
 			return new Offset<IEasterEggTrackingEvent>(builder.EndTable());
 		}
 
-		// Token: 0x0602D69A RID: 186010 RVA: 0x00638BBC File Offset: 0x00636DBC
+		// Token: 0x0602FE6B RID: 196203 RVA: 0x00685724 File Offset: 0x00683924
 		public IEasterEggTrackingEventT UnPack()
 		{
 			IEasterEggTrackingEventT easterEggTrackingEventT = new IEasterEggTrackingEventT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return easterEggTrackingEventT;
 		}
 
-		// Token: 0x0602D69B RID: 186011 RVA: 0x00638BD7 File Offset: 0x00636DD7
+		// Token: 0x0602FE6C RID: 196204 RVA: 0x0068573F File Offset: 0x0068393F
 		public void UnPackTo(IEasterEggTrackingEventT _o)
 		{
 			_o.Type = this.Type;
 			_o.EasterEggId = this.EasterEggId;
 		}
 
-		// Token: 0x0602D69C RID: 186012 RVA: 0x00638BF4 File Offset: 0x00636DF4
+		// Token: 0x0602FE6D RID: 196205 RVA: 0x0068575C File Offset: 0x0068395C
 		public static Offset<IEasterEggTrackingEvent> Pack(FlatBufferBuilder builder, IEasterEggTrackingEventT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEasterEggTrackingEvent.CreateIEasterEggTrackingEvent(builder, _o.Type, _o.EasterEggId);
 		}
 
-		// Token: 0x04010CB7 RID: 68791
+		// Token: 0x04011AD2 RID: 72402
 		private Table __p;
 	}
 }

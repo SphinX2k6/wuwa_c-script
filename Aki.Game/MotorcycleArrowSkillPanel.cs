@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CD2 RID: 7378
+// Token: 0x02001194 RID: 4500
 public class MotorcycleArrowSkillPanel : BattleChildViewPanel
 {
-	// Token: 0x0600DF69 RID: 57193 RVA: 0x003454D1 File Offset: 0x003436D1
+	// Token: 0x0600B386 RID: 45958 RVA: 0x00350EF9 File Offset: 0x0034F0F9
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ public class MotorcycleArrowSkillPanel : BattleChildViewPanel
 		};
 	}
 
-	// Token: 0x0600DF6A RID: 57194 RVA: 0x003454F4 File Offset: 0x003436F4
+	// Token: 0x0600B387 RID: 45959 RVA: 0x00350F1C File Offset: 0x0034F11C
 	public override UniTask InitializeAsync()
 	{
 		MotorcycleArrowSkillPanel.<InitializeAsync>d__4 <InitializeAsync>d__;
@@ -31,19 +31,19 @@ public class MotorcycleArrowSkillPanel : BattleChildViewPanel
 		return <InitializeAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DF6B RID: 57195 RVA: 0x00345537 File Offset: 0x00343737
+	// Token: 0x0600B388 RID: 45960 RVA: 0x00350F5F File Offset: 0x0034F15F
 	protected override void OnShowBattleChildViewPanel(bool isFirst)
 	{
 		this.ActiveSkillItem.RefreshSkillCoolDownOnShow();
 	}
 
-	// Token: 0x0600DF6C RID: 57196 RVA: 0x00345544 File Offset: 0x00343744
+	// Token: 0x0600B389 RID: 45961 RVA: 0x00350F6C File Offset: 0x0034F16C
 	protected override void OnHideBattleChildViewPanel()
 	{
 		this.ActiveSkillItem.TryReleaseButton();
 	}
 
-	// Token: 0x0600DF6D RID: 57197 RVA: 0x00345551 File Offset: 0x00343751
+	// Token: 0x0600B38A RID: 45962 RVA: 0x00350F79 File Offset: 0x0034F179
 	public override void OnTickBattleChildViewPanel(float delta)
 	{
 		if (!this.Visible)
@@ -53,7 +53,7 @@ public class MotorcycleArrowSkillPanel : BattleChildViewPanel
 		this.ActiveSkillItem.Tick(delta);
 	}
 
-	// Token: 0x0600DF6E RID: 57198 RVA: 0x00345568 File Offset: 0x00343768
+	// Token: 0x0600B38B RID: 45963 RVA: 0x00350F90 File Offset: 0x0034F190
 	protected override void AddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.TriggerUiTimeDilation, new Action(this.OnChangedTimeScale));
@@ -63,7 +63,7 @@ public class MotorcycleArrowSkillPanel : BattleChildViewPanel
 		EventSystem.Instance.Add(EEventName.LevelGamePlayPrepareCountDownEnd, new Action(this.OnCountDownEnd));
 	}
 
-	// Token: 0x0600DF6F RID: 57199 RVA: 0x00345600 File Offset: 0x00343800
+	// Token: 0x0600B38C RID: 45964 RVA: 0x00351028 File Offset: 0x0034F228
 	protected override void RemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.TriggerUiTimeDilation, new Action(this.OnChangedTimeScale));
@@ -73,7 +73,7 @@ public class MotorcycleArrowSkillPanel : BattleChildViewPanel
 		EventSystem.Instance.Remove(EEventName.LevelGamePlayPrepareCountDownEnd, new Action(this.OnCountDownEnd));
 	}
 
-	// Token: 0x0600DF70 RID: 57200 RVA: 0x00345698 File Offset: 0x00343898
+	// Token: 0x0600B38D RID: 45965 RVA: 0x003510C0 File Offset: 0x0034F2C0
 	private void OnCountDownEnd()
 	{
 		MotorcycleArrowSubModel motorcycleArrowSubModel = (MotorcycleArrowSubModel)KuroSimpleCombatController.Instance.CurSubModel;
@@ -83,7 +83,7 @@ public class MotorcycleArrowSkillPanel : BattleChildViewPanel
 		this.ActiveSkillItem.RefreshVisible();
 	}
 
-	// Token: 0x0600DF71 RID: 57201 RVA: 0x003456F0 File Offset: 0x003438F0
+	// Token: 0x0600B38E RID: 45966 RVA: 0x00351118 File Offset: 0x0034F318
 	private void OnSkillButtonAttributeRefresh(ESkillButtonType buttonType)
 	{
 		MotorcycleArrowBattleSkillData skillData = this.SkillData;
@@ -107,7 +107,7 @@ public class MotorcycleArrowSkillPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600DF72 RID: 57202 RVA: 0x00345788 File Offset: 0x00343988
+	// Token: 0x0600B38F RID: 45967 RVA: 0x003511B0 File Offset: 0x0034F3B0
 	private void OnKscPlayerCreate()
 	{
 		MotorcycleArrowSubModel motorcycleArrowSubModel = (MotorcycleArrowSubModel)KuroSimpleCombatController.Instance.CurSubModel;
@@ -117,26 +117,26 @@ public class MotorcycleArrowSkillPanel : BattleChildViewPanel
 		this.RefreshActiveSkillItem();
 	}
 
-	// Token: 0x0600DF73 RID: 57203 RVA: 0x003457CC File Offset: 0x003439CC
+	// Token: 0x0600B390 RID: 45968 RVA: 0x003511F4 File Offset: 0x0034F3F4
 	private void RefreshActiveSkillItem()
 	{
 		MotorcycleArrowSubModel motorcycleArrowSubModel = (MotorcycleArrowSubModel)KuroSimpleCombatController.Instance.CurSubModel;
 		this.ActiveSkillItem.Refresh(motorcycleArrowSubModel.GetMotorcycleArrowBattleSkillData());
 	}
 
-	// Token: 0x0600DF74 RID: 57204 RVA: 0x003457FA File Offset: 0x003439FA
+	// Token: 0x0600B391 RID: 45969 RVA: 0x00351222 File Offset: 0x0034F422
 	private void OnChangedTimeScale()
 	{
 		this.ActiveSkillItem.RefreshTimeDilation();
 	}
 
-	// Token: 0x0600DF75 RID: 57205 RVA: 0x00345807 File Offset: 0x00343A07
+	// Token: 0x0600B392 RID: 45970 RVA: 0x0035122F File Offset: 0x0034F42F
 	private void OnPauseGame(int flag)
 	{
 		this.ActiveSkillItem.PauseGame(flag);
 	}
 
-	// Token: 0x0600DF76 RID: 57206 RVA: 0x00345815 File Offset: 0x00343A15
+	// Token: 0x0600B393 RID: 45971 RVA: 0x0035123D File Offset: 0x0034F43D
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -152,18 +152,18 @@ public class MotorcycleArrowSkillPanel : BattleChildViewPanel
 		return activeSkillItem.GetGuideItem();
 	}
 
-	// Token: 0x040066C6 RID: 26310
+	// Token: 0x040067A5 RID: 26533
 	[Nullable(2)]
 	protected BattleSkillItem ActiveSkillItem;
 
-	// Token: 0x040066C7 RID: 26311
+	// Token: 0x040067A6 RID: 26534
 	[Nullable(2)]
 	protected MotorcycleArrowBattleSkillData SkillData;
 
-	// Token: 0x020082D5 RID: 33493
+	// Token: 0x0200745E RID: 29790
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AAFC RID: 174844
+		// Token: 0x04025E24 RID: 155172
 		public const int Skill = 0;
 	}
 }

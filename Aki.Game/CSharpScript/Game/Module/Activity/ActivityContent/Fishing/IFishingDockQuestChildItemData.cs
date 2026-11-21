@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006607 RID: 26119
+	// Token: 0x02005585 RID: 21893
 	[NullableContext(1)]
 	public interface IFishingDockQuestChildItemData
 	{
-		// Token: 0x170095FA RID: 38394
-		// (get) Token: 0x0604175C RID: 268124
-		// (set) Token: 0x0604175D RID: 268125
+		// Token: 0x1700695C RID: 26972
+		// (get) Token: 0x06036421 RID: 222241
+		// (set) Token: 0x06036422 RID: 222242
 		string DesText { get; set; }
 
-		// Token: 0x170095FB RID: 38395
-		// (get) Token: 0x0604175E RID: 268126
-		// (set) Token: 0x0604175F RID: 268127
+		// Token: 0x1700695D RID: 26973
+		// (get) Token: 0x06036423 RID: 222243
+		// (set) Token: 0x06036424 RID: 222244
 		int MaxCount { get; set; }
 
-		// Token: 0x170095FC RID: 38396
-		// (get) Token: 0x06041760 RID: 268128
-		// (set) Token: 0x06041761 RID: 268129
+		// Token: 0x1700695E RID: 26974
+		// (get) Token: 0x06036425 RID: 222245
+		// (set) Token: 0x06036426 RID: 222246
 		int CurrentCount { get; set; }
 	}
 }

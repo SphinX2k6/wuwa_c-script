@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E95 RID: 7829
+	// Token: 0x020005BA RID: 1466
 	public sealed class FDeviceLangChange : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601DC64 RID: 121956 RVA: 0x002C000E File Offset: 0x002BE20E
+		// Token: 0x06008365 RID: 33637 RVA: 0x000C27DA File Offset: 0x000C09DA
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FDeviceLangChange.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601DC65 RID: 121957 RVA: 0x002C001A File Offset: 0x002BE21A
+		// Token: 0x06008366 RID: 33638 RVA: 0x000C27E6 File Offset: 0x000C09E6
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FDeviceLangChange._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FDeviceLangChange._FunctionPtr;
 		}
 
-		// Token: 0x0601DC66 RID: 121958 RVA: 0x002C003D File Offset: 0x002BE23D
+		// Token: 0x06008367 RID: 33639 RVA: 0x000C2809 File Offset: 0x000C0A09
 		public FDeviceLangChange()
 		{
 		}
 
-		// Token: 0x0601DC67 RID: 121959 RVA: 0x002C0045 File Offset: 0x002BE245
+		// Token: 0x06008368 RID: 33640 RVA: 0x000C2811 File Offset: 0x000C0A11
 		[NullableContext(2)]
 		public FDeviceLangChange(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DC68 RID: 121960 RVA: 0x002C004F File Offset: 0x002BE24F
+		// Token: 0x06008369 RID: 33641 RVA: 0x000C281B File Offset: 0x000C0A1B
 		public FDeviceLangChange(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DC69 RID: 121961 RVA: 0x002C005A File Offset: 0x002BE25A
+		// Token: 0x0600836A RID: 33642 RVA: 0x000C2826 File Offset: 0x000C0A26
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601DC6A RID: 121962 RVA: 0x002C008C File Offset: 0x002BE28C
+		// Token: 0x0600836B RID: 33643 RVA: 0x000C2858 File Offset: 0x000C0A58
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FDeviceLangChange.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FDeviceLangChange.RegisterId);
 		}
 
-		// Token: 0x0601DC6B RID: 121963 RVA: 0x002C00C6 File Offset: 0x002BE2C6
+		// Token: 0x0600836C RID: 33644 RVA: 0x000C2892 File Offset: 0x000C0A92
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x0601DC6C RID: 121964 RVA: 0x002C00D4 File Offset: 0x002BE2D4
+		// Token: 0x0600836D RID: 33645 RVA: 0x000C28A0 File Offset: 0x000C0AA0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x040101E1 RID: 66017
+		// Token: 0x04003922 RID: 14626
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040101E2 RID: 66018
+		// Token: 0x04003923 RID: 14627
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.DeviceLangChange__DelegateSignature";
 
-		// Token: 0x040101E3 RID: 66019
+		// Token: 0x04003924 RID: 14628
 		private static int RegisterId;
 
-		// Token: 0x020032E5 RID: 13029
+		// Token: 0x02000D3F RID: 3391
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017195 RID: 94613
+			// Token: 0x04005FDC RID: 24540
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

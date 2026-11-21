@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001506 RID: 5382
+	// Token: 0x0200157C RID: 5500
 	[NetMessage(EMessageId.WeekCardInfoRequest)]
 	public sealed class WeekCardInfoRequest : IMessage<WeekCardInfoRequest>, IMessage, IEquatable<WeekCardInfoRequest>, IDeepCloneable<WeekCardInfoRequest>, IBufferMessage
 	{
-		// Token: 0x0601C72A RID: 116522 RVA: 0x0041BE77 File Offset: 0x0041A077
+		// Token: 0x0601D1F1 RID: 119281 RVA: 0x00437937 File Offset: 0x00435B37
 		[NullableContext(1)]
 		public static WeekCardInfoRequest Create()
 		{
 			return new WeekCardInfoRequest();
 		}
 
-		// Token: 0x17005FE7 RID: 24551
-		// (get) Token: 0x0601C72B RID: 116523 RVA: 0x0041BE7E File Offset: 0x0041A07E
+		// Token: 0x17006288 RID: 25224
+		// (get) Token: 0x0601D1F2 RID: 119282 RVA: 0x0043793E File Offset: 0x00435B3E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005FE8 RID: 24552
-		// (get) Token: 0x0601C72C RID: 116524 RVA: 0x0041BE81 File Offset: 0x0041A081
+		// Token: 0x17006289 RID: 25225
+		// (get) Token: 0x0601D1F3 RID: 119283 RVA: 0x00437941 File Offset: 0x00435B41
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C72D RID: 116525 RVA: 0x0041BE88 File Offset: 0x0041A088
+		// Token: 0x0601D1F4 RID: 119284 RVA: 0x00437948 File Offset: 0x00435B48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeekCardInfoRequest()
 		{
 		}
 
-		// Token: 0x0601C72E RID: 116526 RVA: 0x0041BE9B File Offset: 0x0041A09B
+		// Token: 0x0601D1F5 RID: 119285 RVA: 0x0043795B File Offset: 0x00435B5B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeekCardInfoRequest(WeekCardInfoRequest other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601C72F RID: 116527 RVA: 0x0041BED1 File Offset: 0x0041A0D1
+		// Token: 0x0601D1F6 RID: 119286 RVA: 0x00437991 File Offset: 0x00435B91
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeekCardInfoRequest Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new WeekCardInfoRequest(this);
 		}
 
-		// Token: 0x17005FE9 RID: 24553
-		// (get) Token: 0x0601C730 RID: 116528 RVA: 0x0041BED9 File Offset: 0x0041A0D9
-		// (set) Token: 0x0601C731 RID: 116529 RVA: 0x0041BEE1 File Offset: 0x0041A0E1
+		// Token: 0x1700628A RID: 25226
+		// (get) Token: 0x0601D1F7 RID: 119287 RVA: 0x00437999 File Offset: 0x00435B99
+		// (set) Token: 0x0601D1F8 RID: 119288 RVA: 0x004379A1 File Offset: 0x00435BA1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int WeekCardId
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005FEA RID: 24554
-		// (get) Token: 0x0601C732 RID: 116530 RVA: 0x0041BEEA File Offset: 0x0041A0EA
+		// Token: 0x1700628B RID: 25227
+		// (get) Token: 0x0601D1F9 RID: 119289 RVA: 0x004379AA File Offset: 0x00435BAA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> WeekCardIds
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C733 RID: 116531 RVA: 0x0041BEF2 File Offset: 0x0041A0F2
+		// Token: 0x0601D1FA RID: 119290 RVA: 0x004379B2 File Offset: 0x00435BB2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as WeekCardInfoRequest);
 		}
 
-		// Token: 0x0601C734 RID: 116532 RVA: 0x0041BF00 File Offset: 0x0041A100
+		// Token: 0x0601D1FB RID: 119291 RVA: 0x004379C0 File Offset: 0x00435BC0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(WeekCardInfoRequest other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.WeekCardId == other.WeekCardId && this.weekCardIds_.Equals(other.weekCardIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601C735 RID: 116533 RVA: 0x0041BF50 File Offset: 0x0041A150
+		// Token: 0x0601D1FC RID: 119292 RVA: 0x00437A10 File Offset: 0x00435C10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C736 RID: 116534 RVA: 0x0041BF9D File Offset: 0x0041A19D
+		// Token: 0x0601D1FD RID: 119293 RVA: 0x00437A5D File Offset: 0x00435C5D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601C737 RID: 116535 RVA: 0x0041BFAA File Offset: 0x0041A1AA
+		// Token: 0x0601D1FE RID: 119294 RVA: 0x00437A6A File Offset: 0x00435C6A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,24 +147,24 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601C738 RID: 116536 RVA: 0x0041BFB4 File Offset: 0x0041A1B4
+		// Token: 0x0601D1FF RID: 119295 RVA: 0x00437A74 File Offset: 0x00435C74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.weekCardIds_.WriteTo(ref output, WeekCardInfoRequest._repeated_weekCardIds_codec);
 			if (this.WeekCardId != 0)
 			{
-				output.WriteRawTag(64);
+				output.WriteRawTag(24);
 				output.WriteInt32(this.WeekCardId);
 			}
+			this.weekCardIds_.WriteTo(ref output, WeekCardInfoRequest._repeated_weekCardIds_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0601C739 RID: 116537 RVA: 0x0041C004 File Offset: 0x0041A204
+		// Token: 0x0601D200 RID: 119296 RVA: 0x00437AC4 File Offset: 0x00435CC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C73A RID: 116538 RVA: 0x0041C058 File Offset: 0x0041A258
+		// Token: 0x0601D201 RID: 119297 RVA: 0x00437B18 File Offset: 0x00435D18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(WeekCardInfoRequest other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601C73B RID: 116539 RVA: 0x0041C0A5 File Offset: 0x0041A2A5
+		// Token: 0x0601D202 RID: 119298 RVA: 0x00437B65 File Offset: 0x00435D65
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601C73C RID: 116540 RVA: 0x0041C0B0 File Offset: 0x0041A2B0
+		// Token: 0x0601D203 RID: 119299 RVA: 0x00437B70 File Offset: 0x00435D70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,40 +219,40 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 48U && num != 50U)
+				if (num != 24U)
 				{
-					if (num != 64U)
+					if (num != 80U && num != 82U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.WeekCardId = input.ReadInt32();
+						this.weekCardIds_.AddEntriesFrom(ref input, WeekCardInfoRequest._repeated_weekCardIds_codec);
 					}
 				}
 				else
 				{
-					this.weekCardIds_.AddEntriesFrom(ref input, WeekCardInfoRequest._repeated_weekCardIds_codec);
+					this.WeekCardId = input.ReadInt32();
 				}
 			}
 		}
 
-		// Token: 0x0400A2DC RID: 41692
+		// Token: 0x0400A735 RID: 42805
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400A2DD RID: 41693
-		public const int WeekCardIdFieldNumber = 8;
+		// Token: 0x0400A736 RID: 42806
+		public const int WeekCardIdFieldNumber = 3;
 
-		// Token: 0x0400A2DE RID: 41694
+		// Token: 0x0400A737 RID: 42807
 		private int weekCardId_;
 
-		// Token: 0x0400A2DF RID: 41695
-		public const int WeekCardIdsFieldNumber = 6;
+		// Token: 0x0400A738 RID: 42808
+		public const int WeekCardIdsFieldNumber = 10;
 
-		// Token: 0x0400A2E0 RID: 41696
-		private static readonly FieldCodec<int> _repeated_weekCardIds_codec = FieldCodec.ForInt32(50U);
+		// Token: 0x0400A739 RID: 42809
+		private static readonly FieldCodec<int> _repeated_weekCardIds_codec = FieldCodec.ForInt32(82U);
 
-		// Token: 0x0400A2E1 RID: 41697
+		// Token: 0x0400A73A RID: 42810
 		private readonly RepeatedField<int> weekCardIds_ = new RepeatedField<int>();
 	}
 }

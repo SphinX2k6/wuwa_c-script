@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C0D RID: 11277
+// Token: 0x02002188 RID: 8584
 public class TowerVariationShareView : UiPanelBase
 {
-	// Token: 0x060176A3 RID: 95907 RVA: 0x005F6554 File Offset: 0x005F4754
+	// Token: 0x060150D4 RID: 86228 RVA: 0x00623078 File Offset: 0x00621278
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class TowerVariationShareView : UiPanelBase
 		};
 	}
 
-	// Token: 0x060176A4 RID: 95908 RVA: 0x005F6664 File Offset: 0x005F4864
+	// Token: 0x060150D5 RID: 86229 RVA: 0x00623188 File Offset: 0x00621388
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TowerVariationShareView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ public class TowerVariationShareView : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060176A5 RID: 95909 RVA: 0x005F66A8 File Offset: 0x005F48A8
+	// Token: 0x060150D6 RID: 86230 RVA: 0x006231CC File Offset: 0x006213CC
 	protected override void OnStart()
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "InstanceDungeonTitle_31_CommonText", Array.Empty<object>());
@@ -82,22 +82,22 @@ public class TowerVariationShareView : UiPanelBase
 		base.GetItem(11).SetUIActive(flag);
 	}
 
-	// Token: 0x060176A6 RID: 95910 RVA: 0x005F6962 File Offset: 0x005F4B62
+	// Token: 0x060150D7 RID: 86231 RVA: 0x00623486 File Offset: 0x00621686
 	[NullableContext(1)]
 	private TowerVariationShareTeamItem InitTowerThreeTeamItem()
 	{
 		return new TowerVariationShareTeamItem();
 	}
 
-	// Token: 0x0400AF19 RID: 44825
+	// Token: 0x0400B31E RID: 45854
 	[Nullable(2)]
 	private TowerVariationShareTeamItem TowerOneTeamItem;
 
-	// Token: 0x0400AF1A RID: 44826
+	// Token: 0x0400B31F RID: 45855
 	[Nullable(2)]
 	private TowerVariationShareTeamItem TowerTwoTeamItem;
 
-	// Token: 0x0400AF1B RID: 44827
+	// Token: 0x0400B320 RID: 45856
 	[Nullable(new byte[]
 	{
 		2,
@@ -105,32 +105,32 @@ public class TowerVariationShareView : UiPanelBase
 	})]
 	private GenericLayout<TowerVariationShareTeamItem, int> TowerThreeTeamsLayout;
 
-	// Token: 0x020091D8 RID: 37336
+	// Token: 0x0200841B RID: 33819
 	private enum EComponents
 	{
-		// Token: 0x0402F2F6 RID: 193270
+		// Token: 0x0402A9F7 RID: 174583
 		Icon,
-		// Token: 0x0402F2F7 RID: 193271
+		// Token: 0x0402A9F8 RID: 174584
 		TitleText,
-		// Token: 0x0402F2F8 RID: 193272
+		// Token: 0x0402A9F9 RID: 174585
 		StarNumText,
-		// Token: 0x0402F2F9 RID: 193273
+		// Token: 0x0402A9FA RID: 174586
 		StarMaxNumText,
-		// Token: 0x0402F2FA RID: 193274
+		// Token: 0x0402A9FB RID: 174587
 		TowerOneStarNumText,
-		// Token: 0x0402F2FB RID: 193275
+		// Token: 0x0402A9FC RID: 174588
 		TowerOneTeamItem,
-		// Token: 0x0402F2FC RID: 193276
+		// Token: 0x0402A9FD RID: 174589
 		TowerTwoStarNumText,
-		// Token: 0x0402F2FD RID: 193277
+		// Token: 0x0402A9FE RID: 174590
 		TowerTwoTeamItem,
-		// Token: 0x0402F2FE RID: 193278
+		// Token: 0x0402A9FF RID: 174591
 		TowerThreeStarNumText,
-		// Token: 0x0402F2FF RID: 193279
+		// Token: 0x0402AA00 RID: 174592
 		TowerThreeTeamsLayout,
-		// Token: 0x0402F300 RID: 193280
+		// Token: 0x0402AA01 RID: 174593
 		TowerThreeTeamItem,
-		// Token: 0x0402F301 RID: 193281
+		// Token: 0x0402AA02 RID: 174594
 		TowerThreeEmptyItem
 	}
 }

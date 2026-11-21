@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CBD RID: 3261
+	// Token: 0x02000D9F RID: 3487
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFoxJumpInteractPointRelationType
 	{
-		// Token: 0x06004A92 RID: 19090 RVA: 0x000BA966 File Offset: 0x000B8B66
-		[NullableContext(1)]
+		// Token: 0x06004F40 RID: 20288 RVA: 0x000C5376 File Offset: 0x000C3576
+		[NullableContext(0)]
 		public static IFoxJumpInteractPointRelationType Create(IFoxJumpInteractPointRelationType? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016D5 RID: 5845
-		// (get) Token: 0x06004A93 RID: 19091 RVA: 0x000BA985 File Offset: 0x000B8B85
+		// Token: 0x170017FD RID: 6141
+		// (get) Token: 0x06004F41 RID: 20289 RVA: 0x000C5395 File Offset: 0x000C3595
 		public virtual EFoxJumpInteractPointRelationType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016D6 RID: 5846
-		// (get) Token: 0x06004A94 RID: 19092 RVA: 0x000BA992 File Offset: 0x000B8B92
+		// Token: 0x170017FE RID: 6142
+		// (get) Token: 0x06004F42 RID: 20290 RVA: 0x000C53A2 File Offset: 0x000C35A2
 		public virtual VectorInfo Offset
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016D7 RID: 5847
-		// (get) Token: 0x06004A95 RID: 19093 RVA: 0x000BA9C6 File Offset: 0x000B8BC6
+		// Token: 0x170017FF RID: 6143
+		// (get) Token: 0x06004F43 RID: 20291 RVA: 0x000C53D6 File Offset: 0x000C35D6
 		public virtual VectorInfo RaycastDestOffset
 		{
 			get
@@ -66,19 +66,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A92 RID: 10898
+		// Token: 0x04002D0C RID: 11532
 		private IFoxJumpInteractPointRelationType Instance;
 
-		// Token: 0x04002A93 RID: 10899
+		// Token: 0x04002D0D RID: 11533
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04002A94 RID: 10900
+		// Token: 0x04002D0E RID: 11534
 		private bool _OffsetInited;
 
-		// Token: 0x04002A95 RID: 10901
+		// Token: 0x04002D0F RID: 11535
 		private VectorInfo _RaycastDestOffsetCache;
 
-		// Token: 0x04002A96 RID: 10902
+		// Token: 0x04002D10 RID: 11536
 		private bool _RaycastDestOffsetInited;
 	}
 }

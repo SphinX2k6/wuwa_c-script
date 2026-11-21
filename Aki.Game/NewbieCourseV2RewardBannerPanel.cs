@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200139D RID: 5021
+// Token: 0x02000851 RID: 2129
 public class NewbieCourseV2RewardBannerPanel : UiPanelBase
 {
-	// Token: 0x06008CE5 RID: 36069 RVA: 0x001E3CF0 File Offset: 0x001E1EF0
+	// Token: 0x0600607B RID: 24699 RVA: 0x001EC914 File Offset: 0x001EAB14
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -38,13 +38,13 @@ public class NewbieCourseV2RewardBannerPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008CE6 RID: 36070 RVA: 0x001E3E1A File Offset: 0x001E201A
+	// Token: 0x0600607C RID: 24700 RVA: 0x001ECA3E File Offset: 0x001EAC3E
 	public void SetActivityId(int activityId)
 	{
 		this.ActivityId = activityId;
 	}
 
-	// Token: 0x06008CE7 RID: 36071 RVA: 0x001E3E24 File Offset: 0x001E2024
+	// Token: 0x0600607D RID: 24701 RVA: 0x001ECA48 File Offset: 0x001EAC48
 	public void RefreshWeaponPreviewEntrance()
 	{
 		bool flag = ((this.ActivityId > 0) ? ActivityNewbieCourseV2Config.Instance.GetWeaponPreviewIdsForActivity(this.ActivityId) : Array.Empty<int>()).Length != 0;
@@ -69,7 +69,7 @@ public class NewbieCourseV2RewardBannerPanel : UiPanelBase
 		uuiitem2.SetRaycastTarget(flag);
 	}
 
-	// Token: 0x06008CE8 RID: 36072 RVA: 0x001E3E9C File Offset: 0x001E209C
+	// Token: 0x0600607E RID: 24702 RVA: 0x001ECAC0 File Offset: 0x001EACC0
 	private void OnClickWeaponPreview()
 	{
 		if (this.ActivityId <= 0)
@@ -94,7 +94,7 @@ public class NewbieCourseV2RewardBannerPanel : UiPanelBase
 		UiManager.Instance.OpenView(EUiViewName.WeaponPreviewView, param, null);
 	}
 
-	// Token: 0x06008CE9 RID: 36073 RVA: 0x001E3F08 File Offset: 0x001E2108
+	// Token: 0x0600607F RID: 24703 RVA: 0x001ECB2C File Offset: 0x001EAD2C
 	[NullableContext(1)]
 	private List<WeaponTrialData> BuildWeaponPreviewTrialDataList(IReadOnlyList<int> previewIds)
 	{
@@ -115,28 +115,28 @@ public class NewbieCourseV2RewardBannerPanel : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x04003E7D RID: 15997
+	// Token: 0x04003F15 RID: 16149
 	private int ActivityId;
 
-	// Token: 0x02007A0F RID: 31247
+	// Token: 0x02006B96 RID: 27542
 	private static class ERewardBannerComponents
 	{
-		// Token: 0x040282C5 RID: 164549
+		// Token: 0x040235E6 RID: 144870
 		public const int SprIconLock = 0;
 
-		// Token: 0x040282C6 RID: 164550
+		// Token: 0x040235E7 RID: 144871
 		public const int SprIcon = 1;
 
-		// Token: 0x040282C7 RID: 164551
+		// Token: 0x040235E8 RID: 144872
 		public const int TxtRewardTitle = 2;
 
-		// Token: 0x040282C8 RID: 164552
+		// Token: 0x040235E9 RID: 144873
 		public const int TxtRewardDesc = 3;
 
-		// Token: 0x040282C9 RID: 164553
+		// Token: 0x040235EA RID: 144874
 		public const int RedDot = 4;
 
-		// Token: 0x040282CA RID: 164554
+		// Token: 0x040235EB RID: 144875
 		public const int BtnLookA = 5;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x0200467E RID: 18046
+	// Token: 0x02004AE6 RID: 19174
 	public struct IPlayFlowForGm : IFlatbufferObject
 	{
-		// Token: 0x17008025 RID: 32805
-		// (get) Token: 0x0601B657 RID: 112215 RVA: 0x003E4B9A File Offset: 0x003E2D9A
+		// Token: 0x17008666 RID: 34406
+		// (get) Token: 0x0601CE2C RID: 118316 RVA: 0x00410E36 File Offset: 0x0040F036
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B658 RID: 112216 RVA: 0x003E4BA7 File Offset: 0x003E2DA7
+		// Token: 0x0601CE2D RID: 118317 RVA: 0x00410E43 File Offset: 0x0040F043
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B659 RID: 112217 RVA: 0x003E4BB0 File Offset: 0x003E2DB0
+		// Token: 0x0601CE2E RID: 118318 RVA: 0x00410E4C File Offset: 0x0040F04C
 		public static IPlayFlowForGm GetRootAsIPlayFlowForGm(ByteBuffer _bb)
 		{
 			return IPlayFlowForGm.GetRootAsIPlayFlowForGm(_bb, default(IPlayFlowForGm));
 		}
 
-		// Token: 0x0601B65A RID: 112218 RVA: 0x003E4BCC File Offset: 0x003E2DCC
+		// Token: 0x0601CE2F RID: 118319 RVA: 0x00410E68 File Offset: 0x0040F068
 		public static IPlayFlowForGm GetRootAsIPlayFlowForGm(ByteBuffer _bb, IPlayFlowForGm obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B65B RID: 112219 RVA: 0x003E4BE9 File Offset: 0x003E2DE9
+		// Token: 0x0601CE30 RID: 118320 RVA: 0x00410E85 File Offset: 0x0040F085
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B65C RID: 112220 RVA: 0x003E4BF8 File Offset: 0x003E2DF8
+		// Token: 0x0601CE31 RID: 118321 RVA: 0x00410E94 File Offset: 0x0040F094
 		public IPlayFlowForGm __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008026 RID: 32806
-		// (get) Token: 0x0601B65D RID: 112221 RVA: 0x003E4C08 File Offset: 0x003E2E08
+		// Token: 0x17008667 RID: 34407
+		// (get) Token: 0x0601CE32 RID: 118322 RVA: 0x00410EA4 File Offset: 0x0040F0A4
 		public EGmCommand Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17008027 RID: 32807
-		// (get) Token: 0x0601B65E RID: 112222 RVA: 0x003E4C44 File Offset: 0x003E2E44
+		// Token: 0x17008668 RID: 34408
+		// (get) Token: 0x0601CE33 RID: 118323 RVA: 0x00410EE0 File Offset: 0x0040F0E0
 		public IPlayFlow? Flow
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B65F RID: 112223 RVA: 0x003E4CA1 File Offset: 0x003E2EA1
+		// Token: 0x0601CE34 RID: 118324 RVA: 0x00410F3D File Offset: 0x0040F13D
 		public static Offset<IPlayFlowForGm> CreateIPlayFlowForGm(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode, Offset<IPlayFlow> FlowOffset = default(Offset<IPlayFlow>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IPlayFlowForGm.EndIPlayFlowForGm(builder);
 		}
 
-		// Token: 0x0601B660 RID: 112224 RVA: 0x003E4CBE File Offset: 0x003E2EBE
+		// Token: 0x0601CE35 RID: 118325 RVA: 0x00410F5A File Offset: 0x0040F15A
 		public static void StartIPlayFlowForGm(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601B661 RID: 112225 RVA: 0x003E4CC7 File Offset: 0x003E2EC7
+		// Token: 0x0601CE36 RID: 118326 RVA: 0x00410F63 File Offset: 0x0040F163
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B662 RID: 112226 RVA: 0x003E4CD2 File Offset: 0x003E2ED2
+		// Token: 0x0601CE37 RID: 118327 RVA: 0x00410F6E File Offset: 0x0040F16E
 		public static void AddFlow(FlatBufferBuilder builder, Offset<IPlayFlow> flowOffset)
 		{
 			builder.AddOffset(1, flowOffset.Value, 0);
 		}
 
-		// Token: 0x0601B663 RID: 112227 RVA: 0x003E4CE2 File Offset: 0x003E2EE2
+		// Token: 0x0601CE38 RID: 118328 RVA: 0x00410F7E File Offset: 0x0040F17E
 		public static Offset<IPlayFlowForGm> EndIPlayFlowForGm(FlatBufferBuilder builder)
 		{
 			return new Offset<IPlayFlowForGm>(builder.EndTable());
 		}
 
-		// Token: 0x0601B664 RID: 112228 RVA: 0x003E4CF0 File Offset: 0x003E2EF0
+		// Token: 0x0601CE39 RID: 118329 RVA: 0x00410F8C File Offset: 0x0040F18C
 		public IPlayFlowForGmT UnPack()
 		{
 			IPlayFlowForGmT playFlowForGmT = new IPlayFlowForGmT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return playFlowForGmT;
 		}
 
-		// Token: 0x0601B665 RID: 112229 RVA: 0x003E4D0C File Offset: 0x003E2F0C
+		// Token: 0x0601CE3A RID: 118330 RVA: 0x00410FA8 File Offset: 0x0040F1A8
 		public void UnPackTo(IPlayFlowForGmT _o)
 		{
 			_o.Type = this.Type;
 			_o.Flow = ((this.Flow != null) ? this.Flow.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601B666 RID: 112230 RVA: 0x003E4D54 File Offset: 0x003E2F54
+		// Token: 0x0601CE3B RID: 118331 RVA: 0x00410FF0 File Offset: 0x0040F1F0
 		public static Offset<IPlayFlowForGm> Pack(FlatBufferBuilder builder, IPlayFlowForGmT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IPlayFlowForGm.CreateIPlayFlowForGm(builder, _o.Type, flowOffset);
 		}
 
-		// Token: 0x0400C841 RID: 51265
+		// Token: 0x0400D270 RID: 53872
 		private Table __p;
 	}
 }

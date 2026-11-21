@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001463 RID: 5219
+// Token: 0x02000917 RID: 2327
 public enum EActivityRegressMainViewOpenDataType
 {
-	// Token: 0x04004170 RID: 16752
+	// Token: 0x04004208 RID: 16904
 	Regress,
-	// Token: 0x04004171 RID: 16753
+	// Token: 0x04004209 RID: 16905
 	NewPlayer
 }

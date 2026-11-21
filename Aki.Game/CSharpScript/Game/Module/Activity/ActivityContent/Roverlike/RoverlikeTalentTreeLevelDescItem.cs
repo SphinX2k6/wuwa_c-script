@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020061A2 RID: 24994
+	// Token: 0x02005120 RID: 20768
 	public class RoverlikeTalentTreeLevelDescItem : UiPanelBase
 	{
-		// Token: 0x0603F203 RID: 258563 RVA: 0x00F3F3E4 File Offset: 0x00F3D5E4
+		// Token: 0x06033EC3 RID: 212675 RVA: 0x00E862AC File Offset: 0x00E844AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,27 +25,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F204 RID: 258564 RVA: 0x00F3F44D File Offset: 0x00F3D64D
+		// Token: 0x06033EC4 RID: 212676 RVA: 0x00E86315 File Offset: 0x00E84515
 		[NullableContext(1)]
 		public void SetContent(int level, string descTextId, IReadOnlyList<string> descParams)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), descTextId, descParams.ToArray<string>());
 		}
 
-		// Token: 0x0603F205 RID: 258565 RVA: 0x00F3F467 File Offset: 0x00F3D667
+		// Token: 0x06033EC5 RID: 212677 RVA: 0x00E8632F File Offset: 0x00E8452F
 		[NullableContext(1)]
 		public void SetTitle(string titleTextId)
 		{
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(1), titleTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x0200C3EC RID: 50156
+		// Token: 0x0200ADD3 RID: 44499
 		private class ELevelDescDefine
 		{
-			// Token: 0x0403B1F0 RID: 242160
+			// Token: 0x04035B51 RID: 219985
 			public const int TxtDetail = 0;
 
-			// Token: 0x0403B1F1 RID: 242161
+			// Token: 0x04035B52 RID: 219986
 			public const int TxtTitle = 1;
 		}
 	}

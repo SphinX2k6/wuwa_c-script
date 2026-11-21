@@ -5,28 +5,26 @@ using Aki.Config;
 using Aki.TDConfigMgr.Action;
 using Aki.TDConfigMgr.Quest;
 using Aki.TDConfigMgr.Quest.Fb;
-using Aki.TDConfigMgr.Wrapper.Out;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 using AkiClient.Game.Aki.Data.Gameplay.Tetris;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Common;
 using Google.FlatBuffers;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B83 RID: 19331
+	// Token: 0x02003B2D RID: 15149
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SlidingBlocksUtil : IStaticVariableResetter
 	{
-		// Token: 0x06032192 RID: 205202 RVA: 0x00BA238E File Offset: 0x00BA058E
+		// Token: 0x06026F23 RID: 159523 RVA: 0x00AE6536 File Offset: 0x00AE4736
 		static SlidingBlocksUtil()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SlidingBlocksUtil.CreateStaticDefaultValue), new Action(SlidingBlocksUtil.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06032193 RID: 205203 RVA: 0x00BA23C8 File Offset: 0x00BA05C8
+		// Token: 0x06026F24 RID: 159524 RVA: 0x00AE6570 File Offset: 0x00AE4770
 		[NullableContext(2)]
 		private static Aki.TDConfigMgr.Quest.ITetrisBoard LoadTetrisBoardFromFb(int id)
 		{
@@ -43,7 +41,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return QuestReadHelper.ReadTCsvTetrisBoardData_Data(Aki.UniverseEditor.Interface.Fbs.Quest.TCsvTetrisBoardData.GetRootAsTCsvTetrisBoardData(byteBuffer));
 		}
 
-		// Token: 0x06032194 RID: 205204 RVA: 0x00BA2428 File Offset: 0x00BA0628
+		// Token: 0x06026F25 RID: 159525 RVA: 0x00AE65D0 File Offset: 0x00AE47D0
 		public static string GetCoordKey(double x, double y)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
@@ -53,7 +51,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06032195 RID: 205205 RVA: 0x00BA2464 File Offset: 0x00BA0664
+		// Token: 0x06026F26 RID: 159526 RVA: 0x00AE660C File Offset: 0x00AE480C
 		public static void FillMinoMapByIndexGridConfig(Vector2D gridSize, IReadOnlyList<Aki.TDConfigMgr.Quest.ITetrisSingleIndexGrid> gridsConfig, Action<string, double, double> callback)
 		{
 			foreach (Aki.TDConfigMgr.Quest.ITetrisSingleIndexGrid tetrisSingleIndexGrid in gridsConfig)
@@ -70,7 +68,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x06032196 RID: 205206 RVA: 0x00BA2510 File Offset: 0x00BA0710
+		// Token: 0x06026F27 RID: 159527 RVA: 0x00AE66B8 File Offset: 0x00AE48B8
 		public static void FillMinoMapByGridConfig(IReadOnlyList<Aki.TDConfigMgr.Quest.ITetrisSingleGrid> gridsConfig, float boardSizeX, Action<string, double, double> callback)
 		{
 			int num = 0;
@@ -93,7 +91,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x06032197 RID: 205207 RVA: 0x00BA25AC File Offset: 0x00BA07AC
+		// Token: 0x06026F28 RID: 159528 RVA: 0x00AE6754 File Offset: 0x00AE4954
 		[return: Nullable(2)]
 		public static ITetrominoConfig GetTetrominoConfigByShapeName(string shapeName)
 		{
@@ -102,7 +100,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			{
 				return null;
 			}
-			Aki.TDConfigMgr.Quest.ITetrisBoard tetrisBoard = WrapperSetting.UseFb ? SlidingBlocksUtil.TetrisBoardFbLru.Get(config.Value.Id) : Json.Parse<Aki.TDConfigMgr.Quest.ITetrisBoard>(config.Value.Shape, null);
+			Aki.TDConfigMgr.Quest.ITetrisBoard tetrisBoard = SlidingBlocksUtil.TetrisBoardFbLru.Get(config.Value.Id);
 			if (tetrisBoard == null)
 			{
 				return null;
@@ -115,7 +113,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			};
 		}
 
-		// Token: 0x06032198 RID: 205208 RVA: 0x00BA2644 File Offset: 0x00BA0844
+		// Token: 0x06026F29 RID: 159529 RVA: 0x00AE67D0 File Offset: 0x00AE49D0
 		public static SlidingBlocksDefine.ETetrominoRotateState ConvertToTetrisRotationState(ETetrisRotation config)
 		{
 			SlidingBlocksDefine.ETetrominoRotateState result = SlidingBlocksDefine.ETetrominoRotateState.角度0;
@@ -137,7 +135,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return result;
 		}
 
-		// Token: 0x06032199 RID: 205209 RVA: 0x00BA267C File Offset: 0x00BA087C
+		// Token: 0x06026F2A RID: 159530 RVA: 0x00AE6808 File Offset: 0x00AE4A08
 		[return: Nullable(2)]
 		public static AActor CreateDynamicCube(string styleName, double smoothX, double smoothY, Transform originTransform, [Nullable(2)] UStaticMesh boxMesh)
 		{
@@ -184,13 +182,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return cubeActor;
 		}
 
-		// Token: 0x0603219A RID: 205210 RVA: 0x00BA2846 File Offset: 0x00BA0A46
+		// Token: 0x06026F2B RID: 159531 RVA: 0x00AE69D2 File Offset: 0x00AE4BD2
 		public static bool DestroyCube(AActor cubeActor)
 		{
 			return ActorSystem.Instance.Put("SlidingBlocksUtil.DestroyCube", cubeActor, null);
 		}
 
-		// Token: 0x0603219B RID: 205211 RVA: 0x00BA285C File Offset: 0x00BA0A5C
+		// Token: 0x06026F2C RID: 159532 RVA: 0x00AE69E8 File Offset: 0x00AE4BE8
 		public static global::Vector GetWorldLocationByCoord(double smoothX, double smoothY, Transform originTransform, [Nullable(2)] global::Vector @out = null)
 		{
 			Bp_Tetris_C setting = SlidingBlocksGlobal.Setting;
@@ -208,7 +206,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return vector;
 		}
 
-		// Token: 0x0603219C RID: 205212 RVA: 0x00BA28C8 File Offset: 0x00BA0AC8
+		// Token: 0x06026F2D RID: 159533 RVA: 0x00AE6A54 File Offset: 0x00AE4C54
 		public static Transform GetTransformByCoord(double smoothX, double smoothY, Transform originTransform, [Nullable(2)] Transform @out = null)
 		{
 			Transform transform = @out ?? Transform.Create();
@@ -219,19 +217,19 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return transform;
 		}
 
-		// Token: 0x0603219D RID: 205213 RVA: 0x00BA2918 File Offset: 0x00BA0B18
+		// Token: 0x06026F2E RID: 159534 RVA: 0x00AE6AA4 File Offset: 0x00AE4CA4
 		public static double ConvertConfigCoordToSmooth(double floatCoord)
 		{
 			return floatCoord + 0.5;
 		}
 
-		// Token: 0x0603219E RID: 205214 RVA: 0x00BA2925 File Offset: 0x00BA0B25
+		// Token: 0x06026F2F RID: 159535 RVA: 0x00AE6AB1 File Offset: 0x00AE4CB1
 		public static double StandardSmoothCoordToCellCenter(double floatCoord)
 		{
 			return Math.Floor(floatCoord) + 0.5;
 		}
 
-		// Token: 0x0603219F RID: 205215 RVA: 0x00BA2938 File Offset: 0x00BA0B38
+		// Token: 0x06026F30 RID: 159536 RVA: 0x00AE6AC4 File Offset: 0x00AE4CC4
 		public static double MapToHalfInteger(double x)
 		{
 			double num = x + 0.5;
@@ -243,24 +241,24 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return num2 + 0.5;
 		}
 
-		// Token: 0x060321A0 RID: 205216 RVA: 0x00BA296F File Offset: 0x00BA0B6F
+		// Token: 0x06026F31 RID: 159537 RVA: 0x00AE6AFB File Offset: 0x00AE4CFB
 		public static void CreateStaticDefaultValue()
 		{
 			SlidingBlocksUtil._tempVector = global::Vector.Create();
 		}
 
-		// Token: 0x060321A1 RID: 205217 RVA: 0x00BA297B File Offset: 0x00BA0B7B
+		// Token: 0x06026F32 RID: 159538 RVA: 0x00AE6B07 File Offset: 0x00AE4D07
 		public static void ResetStaticDefaultValue()
 		{
 			SlidingBlocksUtil._tempVector = null;
 			SlidingBlocksUtil.TetrisBoardFbLru.Clear();
 		}
 
-		// Token: 0x0401AB1A RID: 109338
+		// Token: 0x0401546E RID: 87150
 		[Nullable(2)]
 		private static global::Vector _tempVector;
 
-		// Token: 0x0401AB1B RID: 109339
+		// Token: 0x0401546F RID: 87151
 		[StaticVariableRuleIgnore]
 		private static readonly CacheLru<int, Aki.TDConfigMgr.Quest.ITetrisBoard> TetrisBoardFbLru = new CacheLru<int, Aki.TDConfigMgr.Quest.ITetrisBoard>(50, new Func<int, Aki.TDConfigMgr.Quest.ITetrisBoard>(SlidingBlocksUtil.LoadTetrisBoardFromFb));
 	}

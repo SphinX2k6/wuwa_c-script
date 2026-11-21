@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.TDConfigMgr.Action;
@@ -11,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Letter.View
 {
-	// Token: 0x020056CF RID: 22223
+	// Token: 0x020046A6 RID: 18086
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LetterPanel : UiPanelBase
 	{
-		// Token: 0x0603885A RID: 231514 RVA: 0x00D6CFB8 File Offset: 0x00D6B1B8
+		// Token: 0x0602D76A RID: 186218 RVA: 0x00CBB570 File Offset: 0x00CB9770
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -47,7 +46,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603885B RID: 231515 RVA: 0x00D6D104 File Offset: 0x00D6B304
+		// Token: 0x0602D76B RID: 186219 RVA: 0x00CBB6BC File Offset: 0x00CB98BC
 		protected override void OnStart()
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(0);
@@ -62,7 +61,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.RefreshNextHints();
 		}
 
-		// Token: 0x0603885C RID: 231516 RVA: 0x00D6D174 File Offset: 0x00D6B374
+		// Token: 0x0602D76C RID: 186220 RVA: 0x00CBB72C File Offset: 0x00CB992C
 		protected override void OnBeforeDestroy()
 		{
 			this.UnbindNextDragEvents();
@@ -74,7 +73,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.CurrentTalkItem = null;
 		}
 
-		// Token: 0x0603885D RID: 231517 RVA: 0x00D6D1B1 File Offset: 0x00D6B3B1
+		// Token: 0x0602D76D RID: 186221 RVA: 0x00CBB769 File Offset: 0x00CB9969
 		public void SetOnCurrentTalkChanged([Nullable(new byte[]
 		{
 			1,
@@ -84,14 +83,14 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.OnCurrentTalkChangedCallback = callback;
 		}
 
-		// Token: 0x0603885E RID: 231518 RVA: 0x00D6D1BA File Offset: 0x00D6B3BA
+		// Token: 0x0602D76E RID: 186222 RVA: 0x00CBB772 File Offset: 0x00CB9972
 		[NullableContext(1)]
 		public void SetOnLastShowTalkFinished(Action callback)
 		{
 			this.OnLastShowTalkFinishedCallback = callback;
 		}
 
-		// Token: 0x0603885F RID: 231519 RVA: 0x00D6D1C4 File Offset: 0x00D6B3C4
+		// Token: 0x0602D76F RID: 186223 RVA: 0x00CBB77C File Offset: 0x00CB997C
 		public void SetNextButtonVisible(bool visible)
 		{
 			UUIButtonComponent button = base.GetButton(4);
@@ -107,13 +106,13 @@ namespace CSharpScript.Game.Module.Letter.View
 			uuiitem.SetUIActive(visible);
 		}
 
-		// Token: 0x06038860 RID: 231520 RVA: 0x00D6D1F5 File Offset: 0x00D6B3F5
+		// Token: 0x0602D770 RID: 186224 RVA: 0x00CBB7AD File Offset: 0x00CB99AD
 		public void Advance()
 		{
 			this.OnClickNext();
 		}
 
-		// Token: 0x06038861 RID: 231521 RVA: 0x00D6D200 File Offset: 0x00D6B400
+		// Token: 0x0602D771 RID: 186225 RVA: 0x00CBB7B8 File Offset: 0x00CB99B8
 		[NullableContext(1)]
 		public void Initialize(IWriteLetterViewOpenParam openParam)
 		{
@@ -137,7 +136,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.NotifyCurrentTalkChanged(null);
 		}
 
-		// Token: 0x06038862 RID: 231522 RVA: 0x00D6D294 File Offset: 0x00D6B494
+		// Token: 0x0602D772 RID: 186226 RVA: 0x00CBB84C File Offset: 0x00CB9A4C
 		public bool RevealTalkById(int talkId)
 		{
 			ITalkItem talkItem2 = this.TalkItems.Find((ITalkItem talkItem) => talkItem.Id == talkId);
@@ -155,7 +154,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			return true;
 		}
 
-		// Token: 0x06038863 RID: 231523 RVA: 0x00D6D304 File Offset: 0x00D6B504
+		// Token: 0x0602D773 RID: 186227 RVA: 0x00CBB8BC File Offset: 0x00CB9ABC
 		[NullableContext(1)]
 		public void ShowReadOnly(IReadOnlyList<ITalkItem> items, ELetterStyle? letterStyle = null)
 		{
@@ -183,7 +182,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			{
 				this.ApplyStyle(letterStyle.Value);
 			}
-			this.TalkItems = items.ToList<ITalkItem>();
+			this.TalkItems = new List<ITalkItem>(items);
 			this.DisplayedTalkItems.Clear();
 			this.DisplayedTalkIdSet.Clear();
 			this.LastShowTalkTalkIdSet.Clear();
@@ -205,7 +204,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			}, false);
 		}
 
-		// Token: 0x06038864 RID: 231524 RVA: 0x00D6D42C File Offset: 0x00D6B62C
+		// Token: 0x0602D774 RID: 186228 RVA: 0x00CBB9E4 File Offset: 0x00CB9BE4
 		private void ForceCompleteAllContentItems()
 		{
 			GenericScrollViewNew<LetterContentItem, ITalkItem> letterScrollView = this.LetterScrollView;
@@ -220,13 +219,13 @@ namespace CSharpScript.Game.Module.Letter.View
 			}
 		}
 
-		// Token: 0x06038865 RID: 231525 RVA: 0x00D6D490 File Offset: 0x00D6B690
+		// Token: 0x0602D775 RID: 186229 RVA: 0x00CBBA48 File Offset: 0x00CB9C48
 		public ITalkItem GetCurrentTalkItem()
 		{
 			return this.CurrentTalkItem;
 		}
 
-		// Token: 0x06038866 RID: 231526 RVA: 0x00D6D498 File Offset: 0x00D6B698
+		// Token: 0x0602D776 RID: 186230 RVA: 0x00CBBA50 File Offset: 0x00CB9C50
 		public bool IsLastShowTalkCompleted()
 		{
 			if (this.CurrentTalkItem == null)
@@ -237,13 +236,13 @@ namespace CSharpScript.Game.Module.Letter.View
 			return ((options != null) ? options.Count : 0) <= 0 && (this.HasFinishTalkAction(this.CurrentTalkItem) || this.GetNextTalkItemByActionOrOrder(this.CurrentTalkItem) == null);
 		}
 
-		// Token: 0x06038867 RID: 231527 RVA: 0x00D6D4EA File Offset: 0x00D6B6EA
+		// Token: 0x0602D777 RID: 186231 RVA: 0x00CBBAA2 File Offset: 0x00CB9CA2
 		public bool IsAllShowTalkExhausted()
 		{
 			return this.IsLastShowTalkCompleted();
 		}
 
-		// Token: 0x06038868 RID: 231528 RVA: 0x00D6D4F4 File Offset: 0x00D6B6F4
+		// Token: 0x0602D778 RID: 186232 RVA: 0x00CBBAAC File Offset: 0x00CB9CAC
 		public void SkipToFinish()
 		{
 			int num = this.TalkItems.Count * 2 + 4;
@@ -306,7 +305,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			currentContentItem2.ForceComplete();
 		}
 
-		// Token: 0x06038869 RID: 231529 RVA: 0x00D6D5E7 File Offset: 0x00D6B7E7
+		// Token: 0x0602D779 RID: 186233 RVA: 0x00CBBB9F File Offset: 0x00CB9D9F
 		private void ApplyStyle(ELetterStyle letterStyle)
 		{
 			UUIItem item = base.GetItem(2);
@@ -322,7 +321,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			item2.SetUIActive(letterStyle == ELetterStyle.B);
 		}
 
-		// Token: 0x0603886A RID: 231530 RVA: 0x00D6D614 File Offset: 0x00D6B814
+		// Token: 0x0602D77A RID: 186234 RVA: 0x00CBBBCC File Offset: 0x00CB9DCC
 		[NullableContext(1)]
 		private List<ITalkItem> GetTalkItems(IWriteLetterViewOpenParam openParam)
 		{
@@ -352,7 +351,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			return list;
 		}
 
-		// Token: 0x0603886B RID: 231531 RVA: 0x00D6D70C File Offset: 0x00D6B90C
+		// Token: 0x0602D77B RID: 186235 RVA: 0x00CBBCC4 File Offset: 0x00CB9EC4
 		[NullableContext(1)]
 		private void AppendTalkItem(ITalkItem talkItem)
 		{
@@ -377,7 +376,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.TryFocusCurrentTalkItem(talkItem.Id);
 		}
 
-		// Token: 0x0603886C RID: 231532 RVA: 0x00D6D7CC File Offset: 0x00D6B9CC
+		// Token: 0x0602D77C RID: 186236 RVA: 0x00CBBD84 File Offset: 0x00CB9F84
 		private void TryFocusCurrentTalkItem(int talkId)
 		{
 			if (this.LetterScrollView != null)
@@ -398,7 +397,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			}
 		}
 
-		// Token: 0x0603886D RID: 231533 RVA: 0x00D6D844 File Offset: 0x00D6BA44
+		// Token: 0x0602D77D RID: 186237 RVA: 0x00CBBDFC File Offset: 0x00CB9FFC
 		private unsafe void BindLastFinishedIfNeeded()
 		{
 			if (this.LastFinishedFired)
@@ -450,7 +449,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			});
 		}
 
-		// Token: 0x0603886E RID: 231534 RVA: 0x00D6D8E8 File Offset: 0x00D6BAE8
+		// Token: 0x0602D77E RID: 186238 RVA: 0x00CBBEA0 File Offset: 0x00CBA0A0
 		private void TryFireLastFinished()
 		{
 			if (this.LastFinishedFired)
@@ -476,7 +475,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			onLastShowTalkFinishedCallback();
 		}
 
-		// Token: 0x0603886F RID: 231535 RVA: 0x00D6D951 File Offset: 0x00D6BB51
+		// Token: 0x0602D77F RID: 186239 RVA: 0x00CBBF09 File Offset: 0x00CBA109
 		private void NotifyCurrentTalkChanged(ITalkItem talkItem)
 		{
 			Action<ITalkItem> onCurrentTalkChangedCallback = this.OnCurrentTalkChangedCallback;
@@ -487,14 +486,14 @@ namespace CSharpScript.Game.Module.Letter.View
 			onCurrentTalkChangedCallback(talkItem);
 		}
 
-		// Token: 0x06038870 RID: 231536 RVA: 0x00D6D964 File Offset: 0x00D6BB64
+		// Token: 0x0602D780 RID: 186240 RVA: 0x00CBBF1C File Offset: 0x00CBA11C
 		[NullableContext(1)]
 		private LetterContentItem CreateLetterContentItem()
 		{
 			return new LetterContentItem();
 		}
 
-		// Token: 0x06038871 RID: 231537 RVA: 0x00D6D96C File Offset: 0x00D6BB6C
+		// Token: 0x0602D781 RID: 186241 RVA: 0x00CBBF24 File Offset: 0x00CBA124
 		private void BindNextDragEvents()
 		{
 			UUIButtonComponent button = base.GetButton(4);
@@ -520,7 +519,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.NextButtonDragComponent.OnPointerEndDragCallBack.Bind(new Action<ULGUIPointerEventData>(this.OnNextEndDrag));
 		}
 
-		// Token: 0x06038872 RID: 231538 RVA: 0x00D6DA40 File Offset: 0x00D6BC40
+		// Token: 0x0602D782 RID: 186242 RVA: 0x00CBBFF8 File Offset: 0x00CBA1F8
 		private void UnbindNextDragEvents()
 		{
 			if (this.NextButtonDragComponent == null)
@@ -533,7 +532,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.NextButtonDragComponent = null;
 		}
 
-		// Token: 0x06038873 RID: 231539 RVA: 0x00D6DA90 File Offset: 0x00D6BC90
+		// Token: 0x0602D783 RID: 186243 RVA: 0x00CBC048 File Offset: 0x00CBA248
 		private void RefreshNextHints()
 		{
 			this.ClearHintRefreshTimer();
@@ -611,7 +610,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			}
 		}
 
-		// Token: 0x06038874 RID: 231540 RVA: 0x00D6DBCC File Offset: 0x00D6BDCC
+		// Token: 0x0602D784 RID: 186244 RVA: 0x00CBC184 File Offset: 0x00CBA384
 		private void OnClickNext()
 		{
 			if (this.IsDraggingOnNextButton)
@@ -663,24 +662,24 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.RefreshNextHints();
 		}
 
-		// Token: 0x06038875 RID: 231541 RVA: 0x00D6DC9B File Offset: 0x00D6BE9B
+		// Token: 0x0602D785 RID: 186245 RVA: 0x00CBC253 File Offset: 0x00CBA453
 		private void OnNextBeginDrag(ULGUIPointerEventData eventData)
 		{
 			this.IsDraggingOnNextButton = false;
 		}
 
-		// Token: 0x06038876 RID: 231542 RVA: 0x00D6DCA4 File Offset: 0x00D6BEA4
+		// Token: 0x0602D786 RID: 186246 RVA: 0x00CBC25C File Offset: 0x00CBA45C
 		private void OnNextDrag(ULGUIPointerEventData eventData)
 		{
 			this.IsDraggingOnNextButton = true;
 		}
 
-		// Token: 0x06038877 RID: 231543 RVA: 0x00D6DCAD File Offset: 0x00D6BEAD
+		// Token: 0x0602D787 RID: 186247 RVA: 0x00CBC265 File Offset: 0x00CBA465
 		private void OnNextEndDrag(ULGUIPointerEventData eventData)
 		{
 		}
 
-		// Token: 0x06038878 RID: 231544 RVA: 0x00D6DCAF File Offset: 0x00D6BEAF
+		// Token: 0x0602D788 RID: 186248 RVA: 0x00CBC267 File Offset: 0x00CBA467
 		private void ClearHintRefreshTimer()
 		{
 			if (this.HintRefreshTimer == null)
@@ -691,7 +690,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.HintRefreshTimer = null;
 		}
 
-		// Token: 0x06038879 RID: 231545 RVA: 0x00D6DCD4 File Offset: 0x00D6BED4
+		// Token: 0x0602D789 RID: 186249 RVA: 0x00CBC28C File Offset: 0x00CBA48C
 		private ITalkItem GetNextTalkItem(ITalkItem currentTalkItem)
 		{
 			if (currentTalkItem == null)
@@ -713,7 +712,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			}
 		}
 
-		// Token: 0x0603887A RID: 231546 RVA: 0x00D6DD50 File Offset: 0x00D6BF50
+		// Token: 0x0602D78A RID: 186250 RVA: 0x00CBC308 File Offset: 0x00CBA508
 		private ITalkItem GetNextTalkItemByActionOrOrder(ITalkItem currentTalkItem)
 		{
 			if (currentTalkItem == null)
@@ -754,44 +753,44 @@ namespace CSharpScript.Game.Module.Letter.View
 			return null;
 		}
 
-		// Token: 0x0603887B RID: 231547 RVA: 0x00D6DE14 File Offset: 0x00D6C014
+		// Token: 0x0602D78B RID: 186251 RVA: 0x00CBC3CC File Offset: 0x00CBA5CC
 		private bool HasFinishTalkAction(ITalkItem talkItem)
 		{
-			if (talkItem == null)
+			List<ActionInfo> list = (talkItem != null) ? talkItem.Actions : null;
+			if (list == null)
 			{
 				return false;
 			}
-			List<ActionInfo> actions = talkItem.Actions;
-			bool? flag;
-			if (actions == null)
+			using (List<ActionInfo>.Enumerator enumerator = list.GetEnumerator())
 			{
-				flag = null;
+				while (enumerator.MoveNext())
+				{
+					if (enumerator.Current.Name == EAction.FinishTalk)
+					{
+						return true;
+					}
+				}
 			}
-			else
-			{
-				flag = new bool?(actions.Any((ActionInfo action) => action.Name == EAction.FinishTalk));
-			}
-			bool? flag2 = flag;
-			return flag2.GetValueOrDefault();
+			return false;
 		}
 
-		// Token: 0x0401DB0B RID: 121611
+		// Token: 0x040185A1 RID: 99745
 		[Nullable(1)]
 		private List<ITalkItem> TalkItems = new List<ITalkItem>();
 
-		// Token: 0x0401DB0C RID: 121612
+		// Token: 0x040185A2 RID: 99746
 		[Nullable(1)]
 		private readonly HashSet<int> LastShowTalkTalkIdSet = new HashSet<int>();
 
-		// Token: 0x0401DB0D RID: 121613
+		// Token: 0x040185A3 RID: 99747
 		[Nullable(1)]
 		private readonly List<ITalkItem> DisplayedTalkItems = new List<ITalkItem>();
 
-		// Token: 0x0401DB0E RID: 121614
+		// Token: 0x040185A4 RID: 99748
 		[Nullable(1)]
 		private readonly HashSet<int> DisplayedTalkIdSet = new HashSet<int>();
 
-		// Token: 0x0401DB0F RID: 121615
+		// Token: 0x040185A5 RID: 99749
 		[Nullable(new byte[]
 		{
 			2,
@@ -800,47 +799,47 @@ namespace CSharpScript.Game.Module.Letter.View
 		})]
 		private GenericScrollViewNew<LetterContentItem, ITalkItem> LetterScrollView;
 
-		// Token: 0x0401DB10 RID: 121616
+		// Token: 0x040185A6 RID: 99750
 		private ITalkItem CurrentTalkItem;
 
-		// Token: 0x0401DB11 RID: 121617
+		// Token: 0x040185A7 RID: 99751
 		private LetterContentItem CurrentContentItem;
 
-		// Token: 0x0401DB12 RID: 121618
+		// Token: 0x040185A8 RID: 99752
 		private TimerHandle HintRefreshTimer;
 
-		// Token: 0x0401DB13 RID: 121619
+		// Token: 0x040185A9 RID: 99753
 		private UUIDraggableComponent NextButtonDragComponent;
 
-		// Token: 0x0401DB14 RID: 121620
+		// Token: 0x040185AA RID: 99754
 		private bool IsDraggingOnNextButton;
 
-		// Token: 0x0401DB15 RID: 121621
+		// Token: 0x040185AB RID: 99755
 		private Action<ITalkItem> OnCurrentTalkChangedCallback;
 
-		// Token: 0x0401DB16 RID: 121622
+		// Token: 0x040185AC RID: 99756
 		private Action OnLastShowTalkFinishedCallback;
 
-		// Token: 0x0401DB17 RID: 121623
+		// Token: 0x040185AD RID: 99757
 		private bool LastFinishedFired;
 
-		// Token: 0x0200B8A8 RID: 47272
+		// Token: 0x0200A2CF RID: 41679
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x04037E04 RID: 228868
+			// Token: 0x0403281E RID: 206878
 			SvLetterContent,
-			// Token: 0x04037E05 RID: 228869
+			// Token: 0x0403281F RID: 206879
 			TxtLetterContent,
-			// Token: 0x04037E06 RID: 228870
+			// Token: 0x04032820 RID: 206880
 			ItemLetterDecorationA,
-			// Token: 0x04037E07 RID: 228871
+			// Token: 0x04032821 RID: 206881
 			ItemLetterDecorationB,
-			// Token: 0x04037E08 RID: 228872
+			// Token: 0x04032822 RID: 206882
 			BtnNext,
-			// Token: 0x04037E09 RID: 228873
+			// Token: 0x04032823 RID: 206883
 			TxtTypingHint,
-			// Token: 0x04037E0A RID: 228874
+			// Token: 0x04032824 RID: 206884
 			TxtNextHint
 		}
 	}

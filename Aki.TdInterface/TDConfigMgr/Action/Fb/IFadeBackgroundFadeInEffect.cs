@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002688 RID: 9864
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200294B RID: 10571
 	public class IFadeBackgroundFadeInEffect
 	{
-		// Token: 0x0600DCE7 RID: 56551 RVA: 0x0020D79F File Offset: 0x0020B99F
+		// Token: 0x0600EABE RID: 60094 RVA: 0x00229F3F File Offset: 0x0022813F
 		public static IFadeBackgroundFadeInEffect Create(IFadeBackgroundFadeInEffect? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004199 RID: 16793
-		// (get) Token: 0x0600DCE8 RID: 56552 RVA: 0x0020D7BE File Offset: 0x0020B9BE
+		// Token: 0x170044D6 RID: 17622
+		// (get) Token: 0x0600EABF RID: 60095 RVA: 0x00229F5E File Offset: 0x0022815E
 		public virtual IFadeBackgroundFadeInEffectTypeBase FadeInEffect
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ABA RID: 31418
+		// Token: 0x04008157 RID: 33111
 		private IFadeBackgroundFadeInEffect Instance;
 
-		// Token: 0x04007ABB RID: 31419
+		// Token: 0x04008158 RID: 33112
 		private IFadeBackgroundFadeInEffectTypeBase _FadeInEffectCache;
 
-		// Token: 0x04007ABC RID: 31420
+		// Token: 0x04008159 RID: 33113
 		private bool _FadeInEffectInited;
 	}
 }

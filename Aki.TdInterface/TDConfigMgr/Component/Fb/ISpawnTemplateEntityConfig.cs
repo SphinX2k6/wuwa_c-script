@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D87 RID: 3463
+	// Token: 0x02000E83 RID: 3715
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ISpawnTemplateEntityConfig
 	{
-		// Token: 0x06004EC5 RID: 20165 RVA: 0x000C34CD File Offset: 0x000C16CD
-		[NullableContext(1)]
+		// Token: 0x060053EA RID: 21482 RVA: 0x000CED1D File Offset: 0x000CCF1D
+		[NullableContext(0)]
 		public static ISpawnTemplateEntityConfig Create(ISpawnTemplateEntityConfig? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001974 RID: 6516
-		// (get) Token: 0x06004EC6 RID: 20166 RVA: 0x000C34EC File Offset: 0x000C16EC
+		// Token: 0x17001ADF RID: 6879
+		// (get) Token: 0x060053EB RID: 21483 RVA: 0x000CED3C File Offset: 0x000CCF3C
 		public virtual string TemplateBpType
 		{
 			get
@@ -35,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001975 RID: 6517
-		// (get) Token: 0x06004EC7 RID: 20167 RVA: 0x000C34F9 File Offset: 0x000C16F9
+		// Token: 0x17001AE0 RID: 6880
+		// (get) Token: 0x060053EC RID: 21484 RVA: 0x000CED49 File Offset: 0x000CCF49
 		public virtual VectorInfo PosOffset
 		{
 			get
@@ -51,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001976 RID: 6518
-		// (get) Token: 0x06004EC8 RID: 20168 RVA: 0x000C352D File Offset: 0x000C172D
+		// Token: 0x17001AE1 RID: 6881
+		// (get) Token: 0x060053ED RID: 21485 RVA: 0x000CED7D File Offset: 0x000CCF7D
 		public virtual VectorInfo RotOffset
 		{
 			get
@@ -67,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001977 RID: 6519
-		// (get) Token: 0x06004EC9 RID: 20169 RVA: 0x000C3564 File Offset: 0x000C1764
+		// Token: 0x17001AE2 RID: 6882
+		// (get) Token: 0x060053EE RID: 21486 RVA: 0x000CEDB4 File Offset: 0x000CCFB4
 		public virtual List<ETemplateEntityGroupType> GroupTypes
 		{
 			get
@@ -92,25 +92,25 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D34 RID: 11572
+		// Token: 0x04002FFA RID: 12282
 		private ISpawnTemplateEntityConfig Instance;
 
-		// Token: 0x04002D35 RID: 11573
+		// Token: 0x04002FFB RID: 12283
 		private VectorInfo _PosOffsetCache;
 
-		// Token: 0x04002D36 RID: 11574
+		// Token: 0x04002FFC RID: 12284
 		private bool _PosOffsetInited;
 
-		// Token: 0x04002D37 RID: 11575
+		// Token: 0x04002FFD RID: 12285
 		private VectorInfo _RotOffsetCache;
 
-		// Token: 0x04002D38 RID: 11576
+		// Token: 0x04002FFE RID: 12286
 		private bool _RotOffsetInited;
 
-		// Token: 0x04002D39 RID: 11577
+		// Token: 0x04002FFF RID: 12287
 		private List<ETemplateEntityGroupType> _GroupTypesCache;
 
-		// Token: 0x04002D3A RID: 11578
+		// Token: 0x04003000 RID: 12288
 		private bool _GroupTypesInited;
 	}
 }

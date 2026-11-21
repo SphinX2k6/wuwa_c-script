@@ -5,38 +5,36 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004A7 RID: 1191
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000500 RID: 1280
 	public class IJigsawItemMatchedConfig_SetValue
 	{
-		// Token: 0x040011DB RID: 4571
+		// Token: 0x040012FD RID: 4861
 		public IPieceIndex TargetIndex;
 
-		// Token: 0x040011DC RID: 4572
+		// Token: 0x040012FE RID: 4862
 		public List<int> JigsawItemIds;
 
-		// Token: 0x040011DD RID: 4573
+		// Token: 0x040012FF RID: 4863
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> Actions;
 
-		// Token: 0x040011DE RID: 4574
+		// Token: 0x04001300 RID: 4864
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IConditionAction> ConditionActions;
 
-		// Token: 0x040011DF RID: 4575
+		// Token: 0x04001301 RID: 4865
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> UnmatchedActions;
 	}

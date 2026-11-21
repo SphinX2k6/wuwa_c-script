@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A2D RID: 18989
+	// Token: 0x02004EF0 RID: 20208
 	public struct ICheckFollowShooterActive : IFlatbufferObject
 	{
-		// Token: 0x17008974 RID: 35188
-		// (get) Token: 0x0601DB73 RID: 121715 RVA: 0x0042DEC5 File Offset: 0x0042C0C5
+		// Token: 0x17009049 RID: 36937
+		// (get) Token: 0x0601F5FC RID: 128508 RVA: 0x0045EDBD File Offset: 0x0045CFBD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DB74 RID: 121716 RVA: 0x0042DED2 File Offset: 0x0042C0D2
+		// Token: 0x0601F5FD RID: 128509 RVA: 0x0045EDCA File Offset: 0x0045CFCA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DB75 RID: 121717 RVA: 0x0042DEDC File Offset: 0x0042C0DC
+		// Token: 0x0601F5FE RID: 128510 RVA: 0x0045EDD4 File Offset: 0x0045CFD4
 		public static ICheckFollowShooterActive GetRootAsICheckFollowShooterActive(ByteBuffer _bb)
 		{
 			return ICheckFollowShooterActive.GetRootAsICheckFollowShooterActive(_bb, default(ICheckFollowShooterActive));
 		}
 
-		// Token: 0x0601DB76 RID: 121718 RVA: 0x0042DEF8 File Offset: 0x0042C0F8
+		// Token: 0x0601F5FF RID: 128511 RVA: 0x0045EDF0 File Offset: 0x0045CFF0
 		public static ICheckFollowShooterActive GetRootAsICheckFollowShooterActive(ByteBuffer _bb, ICheckFollowShooterActive obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DB77 RID: 121719 RVA: 0x0042DF15 File Offset: 0x0042C115
+		// Token: 0x0601F600 RID: 128512 RVA: 0x0045EE0D File Offset: 0x0045D00D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DB78 RID: 121720 RVA: 0x0042DF24 File Offset: 0x0042C124
+		// Token: 0x0601F601 RID: 128513 RVA: 0x0045EE1C File Offset: 0x0045D01C
 		public ICheckFollowShooterActive __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008975 RID: 35189
-		// (get) Token: 0x0601DB79 RID: 121721 RVA: 0x0042DF34 File Offset: 0x0042C134
+		// Token: 0x1700904A RID: 36938
+		// (get) Token: 0x0601F602 RID: 128514 RVA: 0x0045EE2C File Offset: 0x0045D02C
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008976 RID: 35190
-		// (get) Token: 0x0601DB7A RID: 121722 RVA: 0x0042DF70 File Offset: 0x0042C170
+		// Token: 0x1700904B RID: 36939
+		// (get) Token: 0x0601F603 RID: 128515 RVA: 0x0045EE68 File Offset: 0x0045D068
 		public bool Active
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008977 RID: 35191
-		// (get) Token: 0x0601DB7B RID: 121723 RVA: 0x0042DFB0 File Offset: 0x0042C1B0
+		// Token: 0x1700904C RID: 36940
+		// (get) Token: 0x0601F604 RID: 128516 RVA: 0x0045EEA8 File Offset: 0x0045D0A8
 		public int Id
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DB7C RID: 121724 RVA: 0x0042DFEC File Offset: 0x0042C1EC
+		// Token: 0x0601F605 RID: 128517 RVA: 0x0045EEE4 File Offset: 0x0045D0E4
 		public static Offset<ICheckFollowShooterActive> CreateICheckFollowShooterActive(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, bool Active = false, int Id = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckFollowShooterActive.EndICheckFollowShooterActive(builder);
 		}
 
-		// Token: 0x0601DB7D RID: 121725 RVA: 0x0042E010 File Offset: 0x0042C210
+		// Token: 0x0601F606 RID: 128518 RVA: 0x0045EF08 File Offset: 0x0045D108
 		public static void StartICheckFollowShooterActive(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601DB7E RID: 121726 RVA: 0x0042E019 File Offset: 0x0042C219
+		// Token: 0x0601F607 RID: 128519 RVA: 0x0045EF11 File Offset: 0x0045D111
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DB7F RID: 121727 RVA: 0x0042E024 File Offset: 0x0042C224
+		// Token: 0x0601F608 RID: 128520 RVA: 0x0045EF1C File Offset: 0x0045D11C
 		public static void AddActive(FlatBufferBuilder builder, bool active)
 		{
 			builder.AddBool(1, active, false);
 		}
 
-		// Token: 0x0601DB80 RID: 121728 RVA: 0x0042E02F File Offset: 0x0042C22F
+		// Token: 0x0601F609 RID: 128521 RVA: 0x0045EF27 File Offset: 0x0045D127
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(2, id, 0);
 		}
 
-		// Token: 0x0601DB81 RID: 121729 RVA: 0x0042E03A File Offset: 0x0042C23A
+		// Token: 0x0601F60A RID: 128522 RVA: 0x0045EF32 File Offset: 0x0045D132
 		public static Offset<ICheckFollowShooterActive> EndICheckFollowShooterActive(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckFollowShooterActive>(builder.EndTable());
 		}
 
-		// Token: 0x0601DB82 RID: 121730 RVA: 0x0042E048 File Offset: 0x0042C248
+		// Token: 0x0601F60B RID: 128523 RVA: 0x0045EF40 File Offset: 0x0045D140
 		public ICheckFollowShooterActiveT UnPack()
 		{
 			ICheckFollowShooterActiveT checkFollowShooterActiveT = new ICheckFollowShooterActiveT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkFollowShooterActiveT;
 		}
 
-		// Token: 0x0601DB83 RID: 121731 RVA: 0x0042E063 File Offset: 0x0042C263
+		// Token: 0x0601F60C RID: 128524 RVA: 0x0045EF5B File Offset: 0x0045D15B
 		public void UnPackTo(ICheckFollowShooterActiveT _o)
 		{
 			_o.Type = this.Type;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x0601DB84 RID: 121732 RVA: 0x0042E08C File Offset: 0x0042C28C
+		// Token: 0x0601F60D RID: 128525 RVA: 0x0045EF84 File Offset: 0x0045D184
 		public static Offset<ICheckFollowShooterActive> Pack(FlatBufferBuilder builder, ICheckFollowShooterActiveT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckFollowShooterActive.CreateICheckFollowShooterActive(builder, _o.Type, _o.Active, _o.Id);
 		}
 
-		// Token: 0x0400D27F RID: 53887
+		// Token: 0x0400DD56 RID: 56662
 		private Table __p;
 	}
 }

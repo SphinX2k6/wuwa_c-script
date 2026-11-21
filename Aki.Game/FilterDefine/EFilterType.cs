@@ -2,96 +2,96 @@
 
 namespace FilterDefine
 {
-	// Token: 0x020044CC RID: 17612
+	// Token: 0x02002F59 RID: 12121
 	public enum EFilterType
 	{
-		// Token: 0x0401843D RID: 99389
+		// Token: 0x0400F1E5 RID: 61925
 		Element = 1,
-		// Token: 0x0401843E RID: 99390
+		// Token: 0x0400F1E6 RID: 61926
 		Weapon,
-		// Token: 0x0401843F RID: 99391
+		// Token: 0x0400F1E7 RID: 61927
 		Phantom,
-		// Token: 0x04018440 RID: 99392
+		// Token: 0x0400F1E8 RID: 61928
 		PhantomFetter,
-		// Token: 0x04018441 RID: 99393
+		// Token: 0x0400F1E9 RID: 61929
 		MonsterDetect = 7,
-		// Token: 0x04018442 RID: 99394
+		// Token: 0x0400F1EA RID: 61930
 		SilentAreaDetect,
-		// Token: 0x04018443 RID: 99395
+		// Token: 0x0400F1EB RID: 61931
 		DungeonDetect,
-		// Token: 0x04018444 RID: 99396
+		// Token: 0x0400F1EC RID: 61932
 		CookMenu,
-		// Token: 0x04018445 RID: 99397
+		// Token: 0x0400F1ED RID: 61933
 		CookType,
-		// Token: 0x04018446 RID: 99398
+		// Token: 0x0400F1EE RID: 61934
 		ComposeMenu,
-		// Token: 0x04018447 RID: 99399
+		// Token: 0x0400F1EF RID: 61935
 		ComposeStructureMenu,
-		// Token: 0x04018448 RID: 99400
+		// Token: 0x0400F1F0 RID: 61936
 		PhantomRarity,
-		// Token: 0x04018449 RID: 99401
+		// Token: 0x0400F1F1 RID: 61937
 		PhantomFettersEquip,
-		// Token: 0x0401844A RID: 99402
+		// Token: 0x0400F1F2 RID: 61938
 		PhantomFettersHas,
-		// Token: 0x0401844B RID: 99403
+		// Token: 0x0400F1F3 RID: 61939
 		MonsterType,
-		// Token: 0x0401844C RID: 99404
+		// Token: 0x0400F1F4 RID: 61940
 		VisionRarity1,
-		// Token: 0x0401844D RID: 99405
+		// Token: 0x0400F1F5 RID: 61941
 		VisionRarity2,
-		// Token: 0x0401844E RID: 99406
+		// Token: 0x0400F1F6 RID: 61942
 		VisionRarity3,
-		// Token: 0x0401844F RID: 99407
+		// Token: 0x0400F1F7 RID: 61943
 		VisionRarity4,
-		// Token: 0x04018450 RID: 99408
+		// Token: 0x0400F1F8 RID: 61944
 		ItemQuality,
-		// Token: 0x04018451 RID: 99409
+		// Token: 0x0400F1F9 RID: 61945
 		VisionDestroyCost,
-		// Token: 0x04018452 RID: 99410
+		// Token: 0x0400F1FA RID: 61946
 		VisionDestroyQuality,
-		// Token: 0x04018453 RID: 99411
+		// Token: 0x0400F1FB RID: 61947
 		VisionDestroyFetterGroup,
-		// Token: 0x04018454 RID: 99412
+		// Token: 0x0400F1FC RID: 61948
 		VisionDestroyAttribute,
-		// Token: 0x04018455 RID: 99413
+		// Token: 0x0400F1FD RID: 61949
 		RoleTag,
-		// Token: 0x04018456 RID: 99414
+		// Token: 0x0400F1FE RID: 61950
 		PhantomDeprecate,
-		// Token: 0x04018457 RID: 99415
+		// Token: 0x0400F1FF RID: 61951
 		Attribute,
-		// Token: 0x04018458 RID: 99416
+		// Token: 0x0400F200 RID: 61952
 		FishingTech = 31,
-		// Token: 0x04018459 RID: 99417
+		// Token: 0x0400F201 RID: 61953
 		FishingTime,
-		// Token: 0x0401845A RID: 99418
+		// Token: 0x0400F202 RID: 61954
 		FishingArea,
-		// Token: 0x0401845B RID: 99419
+		// Token: 0x0400F203 RID: 61955
 		FishingType,
-		// Token: 0x0401845C RID: 99420
+		// Token: 0x0400F204 RID: 61956
 		DangoAbyssPluginQuality,
-		// Token: 0x0401845D RID: 99421
+		// Token: 0x0400F205 RID: 61957
 		DangoAbyssPluginProp,
-		// Token: 0x0401845E RID: 99422
+		// Token: 0x0400F206 RID: 61958
 		DangoAbyssPluginTag,
-		// Token: 0x0401845F RID: 99423
+		// Token: 0x0400F207 RID: 61959
 		DangoAbyssPluginEquipState,
-		// Token: 0x04018460 RID: 99424
+		// Token: 0x0400F208 RID: 61960
 		DangoAbyssPluginLockState,
-		// Token: 0x04018461 RID: 99425
+		// Token: 0x0400F209 RID: 61961
 		DangoAbyssPluginDeprecateState,
-		// Token: 0x04018462 RID: 99426
+		// Token: 0x0400F20A RID: 61962
 		PhantomManageFirstMainProp,
-		// Token: 0x04018463 RID: 99427
+		// Token: 0x0400F20B RID: 61963
 		PhantomManageCost,
-		// Token: 0x04018464 RID: 99428
+		// Token: 0x0400F20C RID: 61964
 		PinballRoleBd,
-		// Token: 0x04018465 RID: 99429
+		// Token: 0x0400F20D RID: 61965
 		PinballRoleClass,
-		// Token: 0x04018466 RID: 99430
+		// Token: 0x0400F20E RID: 61966
 		PinballWeaponType,
-		// Token: 0x04018467 RID: 99431
+		// Token: 0x0400F20F RID: 61967
 		PinballWeaponQuality,
-		// Token: 0x04018468 RID: 99432
+		// Token: 0x0400F210 RID: 61968
 		RoleLangCustomType
 	}
 }

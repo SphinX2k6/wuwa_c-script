@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000269 RID: 617
+	// Token: 0x0200026E RID: 622
 	public sealed class ChannelChatMessageInfo : IMessage<ChannelChatMessageInfo>, IMessage, IEquatable<ChannelChatMessageInfo>, IDeepCloneable<ChannelChatMessageInfo>, IBufferMessage
 	{
-		// Token: 0x06004115 RID: 16661 RVA: 0x0009FA0F File Offset: 0x0009DC0F
+		// Token: 0x060041BC RID: 16828 RVA: 0x000A16DF File Offset: 0x0009F8DF
 		[NullableContext(1)]
 		public static ChannelChatMessageInfo Create()
 		{
 			return new ChannelChatMessageInfo();
 		}
 
-		// Token: 0x17000AF5 RID: 2805
-		// (get) Token: 0x06004116 RID: 16662 RVA: 0x0009FA16 File Offset: 0x0009DC16
+		// Token: 0x17000B15 RID: 2837
+		// (get) Token: 0x060041BD RID: 16829 RVA: 0x000A16E6 File Offset: 0x0009F8E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<ChannelChatMessageInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000AF6 RID: 2806
-		// (get) Token: 0x06004117 RID: 16663 RVA: 0x0009FA1D File Offset: 0x0009DC1D
+		// Token: 0x17000B16 RID: 2838
+		// (get) Token: 0x060041BE RID: 16830 RVA: 0x000A16ED File Offset: 0x0009F8ED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000AF7 RID: 2807
-		// (get) Token: 0x06004118 RID: 16664 RVA: 0x0009FA20 File Offset: 0x0009DC20
+		// Token: 0x17000B17 RID: 2839
+		// (get) Token: 0x060041BF RID: 16831 RVA: 0x000A16F0 File Offset: 0x0009F8F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004119 RID: 16665 RVA: 0x0009FA28 File Offset: 0x0009DC28
+		// Token: 0x060041C0 RID: 16832 RVA: 0x000A16F8 File Offset: 0x0009F8F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ChannelChatMessageInfo()
 		{
 		}
 
-		// Token: 0x0600411A RID: 16666 RVA: 0x0009FA80 File Offset: 0x0009DC80
+		// Token: 0x060041C1 RID: 16833 RVA: 0x000A1750 File Offset: 0x0009F950
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ChannelChatMessageInfo(ChannelChatMessageInfo other) : this()
@@ -81,7 +81,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600411B RID: 16667 RVA: 0x0009FB40 File Offset: 0x0009DD40
+		// Token: 0x060041C2 RID: 16834 RVA: 0x000A1810 File Offset: 0x0009FA10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ChannelChatMessageInfo Clone()
@@ -89,9 +89,9 @@ namespace Aki.Protocol
 			return new ChannelChatMessageInfo(this);
 		}
 
-		// Token: 0x17000AF8 RID: 2808
-		// (get) Token: 0x0600411C RID: 16668 RVA: 0x0009FB48 File Offset: 0x0009DD48
-		// (set) Token: 0x0600411D RID: 16669 RVA: 0x0009FB50 File Offset: 0x0009DD50
+		// Token: 0x17000B18 RID: 2840
+		// (get) Token: 0x060041C3 RID: 16835 RVA: 0x000A1818 File Offset: 0x0009FA18
+		// (set) Token: 0x060041C4 RID: 16836 RVA: 0x000A1820 File Offset: 0x0009FA20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SenderId
@@ -106,9 +106,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000AF9 RID: 2809
-		// (get) Token: 0x0600411E RID: 16670 RVA: 0x0009FB59 File Offset: 0x0009DD59
-		// (set) Token: 0x0600411F RID: 16671 RVA: 0x0009FB61 File Offset: 0x0009DD61
+		// Token: 0x17000B19 RID: 2841
+		// (get) Token: 0x060041C5 RID: 16837 RVA: 0x000A1829 File Offset: 0x0009FA29
+		// (set) Token: 0x060041C6 RID: 16838 RVA: 0x000A1831 File Offset: 0x0009FA31
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SenderIcon
@@ -123,9 +123,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000AFA RID: 2810
-		// (get) Token: 0x06004120 RID: 16672 RVA: 0x0009FB6A File Offset: 0x0009DD6A
-		// (set) Token: 0x06004121 RID: 16673 RVA: 0x0009FB72 File Offset: 0x0009DD72
+		// Token: 0x17000B1A RID: 2842
+		// (get) Token: 0x060041C7 RID: 16839 RVA: 0x000A183A File Offset: 0x0009FA3A
+		// (set) Token: 0x060041C8 RID: 16840 RVA: 0x000A1842 File Offset: 0x0009FA42
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string SenderName
@@ -140,9 +140,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000AFB RID: 2811
-		// (get) Token: 0x06004122 RID: 16674 RVA: 0x0009FB85 File Offset: 0x0009DD85
-		// (set) Token: 0x06004123 RID: 16675 RVA: 0x0009FB8D File Offset: 0x0009DD8D
+		// Token: 0x17000B1B RID: 2843
+		// (get) Token: 0x060041C9 RID: 16841 RVA: 0x000A1855 File Offset: 0x0009FA55
+		// (set) Token: 0x060041CA RID: 16842 RVA: 0x000A185D File Offset: 0x0009FA5D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ChatContentType ChatContentType
@@ -157,9 +157,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000AFC RID: 2812
-		// (get) Token: 0x06004124 RID: 16676 RVA: 0x0009FB96 File Offset: 0x0009DD96
-		// (set) Token: 0x06004125 RID: 16677 RVA: 0x0009FB9E File Offset: 0x0009DD9E
+		// Token: 0x17000B1C RID: 2844
+		// (get) Token: 0x060041CB RID: 16843 RVA: 0x000A1866 File Offset: 0x0009FA66
+		// (set) Token: 0x060041CC RID: 16844 RVA: 0x000A186E File Offset: 0x0009FA6E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string Content
@@ -174,9 +174,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000AFD RID: 2813
-		// (get) Token: 0x06004126 RID: 16678 RVA: 0x0009FBB1 File Offset: 0x0009DDB1
-		// (set) Token: 0x06004127 RID: 16679 RVA: 0x0009FBB9 File Offset: 0x0009DDB9
+		// Token: 0x17000B1D RID: 2845
+		// (get) Token: 0x060041CD RID: 16845 RVA: 0x000A1881 File Offset: 0x0009FA81
+		// (set) Token: 0x060041CE RID: 16846 RVA: 0x000A1889 File Offset: 0x0009FA89
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ChatChannelNoticeType NoticeType
@@ -191,9 +191,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000AFE RID: 2814
-		// (get) Token: 0x06004128 RID: 16680 RVA: 0x0009FBC2 File Offset: 0x0009DDC2
-		// (set) Token: 0x06004129 RID: 16681 RVA: 0x0009FBCA File Offset: 0x0009DDCA
+		// Token: 0x17000B1E RID: 2846
+		// (get) Token: 0x060041CF RID: 16847 RVA: 0x000A1892 File Offset: 0x0009FA92
+		// (set) Token: 0x060041D0 RID: 16848 RVA: 0x000A189A File Offset: 0x0009FA9A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long SendTime
@@ -208,9 +208,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000AFF RID: 2815
-		// (get) Token: 0x0600412A RID: 16682 RVA: 0x0009FBD3 File Offset: 0x0009DDD3
-		// (set) Token: 0x0600412B RID: 16683 RVA: 0x0009FBDB File Offset: 0x0009DDDB
+		// Token: 0x17000B1F RID: 2847
+		// (get) Token: 0x060041D1 RID: 16849 RVA: 0x000A18A3 File Offset: 0x0009FAA3
+		// (set) Token: 0x060041D2 RID: 16850 RVA: 0x000A18AB File Offset: 0x0009FAAB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string SenderPsnOnlineId
@@ -225,9 +225,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000B00 RID: 2816
-		// (get) Token: 0x0600412C RID: 16684 RVA: 0x0009FBEE File Offset: 0x0009DDEE
-		// (set) Token: 0x0600412D RID: 16685 RVA: 0x0009FBF6 File Offset: 0x0009DDF6
+		// Token: 0x17000B20 RID: 2848
+		// (get) Token: 0x060041D3 RID: 16851 RVA: 0x000A18BE File Offset: 0x0009FABE
+		// (set) Token: 0x060041D4 RID: 16852 RVA: 0x000A18C6 File Offset: 0x0009FAC6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string SenderPsnAccountId
@@ -242,9 +242,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000B01 RID: 2817
-		// (get) Token: 0x0600412E RID: 16686 RVA: 0x0009FC09 File Offset: 0x0009DE09
-		// (set) Token: 0x0600412F RID: 16687 RVA: 0x0009FC11 File Offset: 0x0009DE11
+		// Token: 0x17000B21 RID: 2849
+		// (get) Token: 0x060041D5 RID: 16853 RVA: 0x000A18D9 File Offset: 0x0009FAD9
+		// (set) Token: 0x060041D6 RID: 16854 RVA: 0x000A18E1 File Offset: 0x0009FAE1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TitleId
@@ -259,9 +259,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000B02 RID: 2818
-		// (get) Token: 0x06004130 RID: 16688 RVA: 0x0009FC1A File Offset: 0x0009DE1A
-		// (set) Token: 0x06004131 RID: 16689 RVA: 0x0009FC22 File Offset: 0x0009DE22
+		// Token: 0x17000B22 RID: 2850
+		// (get) Token: 0x060041D7 RID: 16855 RVA: 0x000A18EA File Offset: 0x0009FAEA
+		// (set) Token: 0x060041D8 RID: 16856 RVA: 0x000A18F2 File Offset: 0x0009FAF2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TitleExtraParam
@@ -276,9 +276,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000B03 RID: 2819
-		// (get) Token: 0x06004132 RID: 16690 RVA: 0x0009FC2B File Offset: 0x0009DE2B
-		// (set) Token: 0x06004133 RID: 16691 RVA: 0x0009FC33 File Offset: 0x0009DE33
+		// Token: 0x17000B23 RID: 2851
+		// (get) Token: 0x060041D9 RID: 16857 RVA: 0x000A18FB File Offset: 0x0009FAFB
+		// (set) Token: 0x060041DA RID: 16858 RVA: 0x000A1903 File Offset: 0x0009FB03
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string SenderXboxOnlineId
@@ -293,9 +293,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000B04 RID: 2820
-		// (get) Token: 0x06004134 RID: 16692 RVA: 0x0009FC46 File Offset: 0x0009DE46
-		// (set) Token: 0x06004135 RID: 16693 RVA: 0x0009FC4E File Offset: 0x0009DE4E
+		// Token: 0x17000B24 RID: 2852
+		// (get) Token: 0x060041DB RID: 16859 RVA: 0x000A1916 File Offset: 0x0009FB16
+		// (set) Token: 0x060041DC RID: 16860 RVA: 0x000A191E File Offset: 0x0009FB1E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string SenderXboxAccountId
@@ -310,7 +310,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004136 RID: 16694 RVA: 0x0009FC61 File Offset: 0x0009DE61
+		// Token: 0x060041DD RID: 16861 RVA: 0x000A1931 File Offset: 0x0009FB31
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -318,7 +318,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ChannelChatMessageInfo);
 		}
 
-		// Token: 0x06004137 RID: 16695 RVA: 0x0009FC70 File Offset: 0x0009DE70
+		// Token: 0x060041DE RID: 16862 RVA: 0x000A1940 File Offset: 0x0009FB40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ChannelChatMessageInfo other)
@@ -326,7 +326,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.SenderId == other.SenderId && this.SenderIcon == other.SenderIcon && !(this.SenderName != other.SenderName) && this.ChatContentType == other.ChatContentType && !(this.Content != other.Content) && this.NoticeType == other.NoticeType && this.SendTime == other.SendTime && !(this.SenderPsnOnlineId != other.SenderPsnOnlineId) && !(this.SenderPsnAccountId != other.SenderPsnAccountId) && this.TitleId == other.TitleId && this.TitleExtraParam == other.TitleExtraParam && !(this.SenderXboxOnlineId != other.SenderXboxOnlineId) && !(this.SenderXboxAccountId != other.SenderXboxAccountId) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06004138 RID: 16696 RVA: 0x0009FD88 File Offset: 0x0009DF88
+		// Token: 0x060041DF RID: 16863 RVA: 0x000A1A58 File Offset: 0x0009FC58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -391,7 +391,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004139 RID: 16697 RVA: 0x0009FF0C File Offset: 0x0009E10C
+		// Token: 0x060041E0 RID: 16864 RVA: 0x000A1BDC File Offset: 0x0009FDDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -399,7 +399,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600413A RID: 16698 RVA: 0x0009FF19 File Offset: 0x0009E119
+		// Token: 0x060041E1 RID: 16865 RVA: 0x000A1BE9 File Offset: 0x0009FDE9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -407,7 +407,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600413B RID: 16699 RVA: 0x0009FF24 File Offset: 0x0009E124
+		// Token: 0x060041E2 RID: 16866 RVA: 0x000A1BF4 File Offset: 0x0009FDF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -483,7 +483,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600413C RID: 16700 RVA: 0x000A00D0 File Offset: 0x0009E2D0
+		// Token: 0x060041E3 RID: 16867 RVA: 0x000A1DA0 File Offset: 0x0009FFA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -548,7 +548,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600413D RID: 16701 RVA: 0x000A024C File Offset: 0x0009E44C
+		// Token: 0x060041E4 RID: 16868 RVA: 0x000A1F1C File Offset: 0x000A011C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ChannelChatMessageInfo other)
@@ -612,7 +612,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600413E RID: 16702 RVA: 0x000A0396 File Offset: 0x0009E596
+		// Token: 0x060041E5 RID: 16869 RVA: 0x000A2066 File Offset: 0x000A0266
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -620,7 +620,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600413F RID: 16703 RVA: 0x000A03A0 File Offset: 0x0009E5A0
+		// Token: 0x060041E6 RID: 16870 RVA: 0x000A2070 File Offset: 0x000A0270
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -719,88 +719,88 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002D8F RID: 11663
+		// Token: 0x04002E13 RID: 11795
 		private static readonly MessageParser<ChannelChatMessageInfo> _parser = new MessageParser<ChannelChatMessageInfo>(() => new ChannelChatMessageInfo());
 
-		// Token: 0x04002D90 RID: 11664
+		// Token: 0x04002E14 RID: 11796
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002D91 RID: 11665
+		// Token: 0x04002E15 RID: 11797
 		public const int SenderIdFieldNumber = 1;
 
-		// Token: 0x04002D92 RID: 11666
+		// Token: 0x04002E16 RID: 11798
 		private int senderId_;
 
-		// Token: 0x04002D93 RID: 11667
+		// Token: 0x04002E17 RID: 11799
 		public const int SenderIconFieldNumber = 2;
 
-		// Token: 0x04002D94 RID: 11668
+		// Token: 0x04002E18 RID: 11800
 		private int senderIcon_;
 
-		// Token: 0x04002D95 RID: 11669
+		// Token: 0x04002E19 RID: 11801
 		public const int SenderNameFieldNumber = 3;
 
-		// Token: 0x04002D96 RID: 11670
+		// Token: 0x04002E1A RID: 11802
 		private string senderName_ = "";
 
-		// Token: 0x04002D97 RID: 11671
+		// Token: 0x04002E1B RID: 11803
 		public const int ChatContentTypeFieldNumber = 4;
 
-		// Token: 0x04002D98 RID: 11672
+		// Token: 0x04002E1C RID: 11804
 		private ChatContentType chatContentType_;
 
-		// Token: 0x04002D99 RID: 11673
+		// Token: 0x04002E1D RID: 11805
 		public const int ContentFieldNumber = 5;
 
-		// Token: 0x04002D9A RID: 11674
+		// Token: 0x04002E1E RID: 11806
 		private string content_ = "";
 
-		// Token: 0x04002D9B RID: 11675
+		// Token: 0x04002E1F RID: 11807
 		public const int NoticeTypeFieldNumber = 6;
 
-		// Token: 0x04002D9C RID: 11676
+		// Token: 0x04002E20 RID: 11808
 		private ChatChannelNoticeType noticeType_;
 
-		// Token: 0x04002D9D RID: 11677
+		// Token: 0x04002E21 RID: 11809
 		public const int SendTimeFieldNumber = 7;
 
-		// Token: 0x04002D9E RID: 11678
+		// Token: 0x04002E22 RID: 11810
 		private long sendTime_;
 
-		// Token: 0x04002D9F RID: 11679
+		// Token: 0x04002E23 RID: 11811
 		public const int SenderPsnOnlineIdFieldNumber = 8;
 
-		// Token: 0x04002DA0 RID: 11680
+		// Token: 0x04002E24 RID: 11812
 		private string senderPsnOnlineId_ = "";
 
-		// Token: 0x04002DA1 RID: 11681
+		// Token: 0x04002E25 RID: 11813
 		public const int SenderPsnAccountIdFieldNumber = 9;
 
-		// Token: 0x04002DA2 RID: 11682
+		// Token: 0x04002E26 RID: 11814
 		private string senderPsnAccountId_ = "";
 
-		// Token: 0x04002DA3 RID: 11683
+		// Token: 0x04002E27 RID: 11815
 		public const int TitleIdFieldNumber = 10;
 
-		// Token: 0x04002DA4 RID: 11684
+		// Token: 0x04002E28 RID: 11816
 		private int titleId_;
 
-		// Token: 0x04002DA5 RID: 11685
+		// Token: 0x04002E29 RID: 11817
 		public const int TitleExtraParamFieldNumber = 11;
 
-		// Token: 0x04002DA6 RID: 11686
+		// Token: 0x04002E2A RID: 11818
 		private int titleExtraParam_;
 
-		// Token: 0x04002DA7 RID: 11687
+		// Token: 0x04002E2B RID: 11819
 		public const int SenderXboxOnlineIdFieldNumber = 12;
 
-		// Token: 0x04002DA8 RID: 11688
+		// Token: 0x04002E2C RID: 11820
 		private string senderXboxOnlineId_ = "";
 
-		// Token: 0x04002DA9 RID: 11689
+		// Token: 0x04002E2D RID: 11821
 		public const int SenderXboxAccountIdFieldNumber = 13;
 
-		// Token: 0x04002DAA RID: 11690
+		// Token: 0x04002E2E RID: 11822
 		private string senderXboxAccountId_ = "";
 	}
 }

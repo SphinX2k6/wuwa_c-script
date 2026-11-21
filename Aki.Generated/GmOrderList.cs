@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D07 RID: 3335
+	// Token: 0x02000DEC RID: 3564
 	public struct GmOrderList : IFlatbufferObject
 	{
-		// Token: 0x170015E0 RID: 5600
-		// (get) Token: 0x06007B41 RID: 31553 RVA: 0x0024CE58 File Offset: 0x0024B058
+		// Token: 0x17001641 RID: 5697
+		// (get) Token: 0x06008159 RID: 33113 RVA: 0x0026B9A8 File Offset: 0x00269BA8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007B42 RID: 31554 RVA: 0x0024CE65 File Offset: 0x0024B065
+		// Token: 0x0600815A RID: 33114 RVA: 0x0026B9B5 File Offset: 0x00269BB5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007B43 RID: 31555 RVA: 0x0024CE6C File Offset: 0x0024B06C
+		// Token: 0x0600815B RID: 33115 RVA: 0x0026B9BC File Offset: 0x00269BBC
 		public static GmOrderList GetRootAsGmOrderList(ByteBuffer _bb)
 		{
 			return GmOrderList.GetRootAsGmOrderList(_bb, default(GmOrderList));
 		}
 
-		// Token: 0x06007B44 RID: 31556 RVA: 0x0024CE88 File Offset: 0x0024B088
+		// Token: 0x0600815C RID: 33116 RVA: 0x0026B9D8 File Offset: 0x00269BD8
 		public static GmOrderList GetRootAsGmOrderList(ByteBuffer _bb, GmOrderList obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007B45 RID: 31557 RVA: 0x0024CEA5 File Offset: 0x0024B0A5
+		// Token: 0x0600815D RID: 33117 RVA: 0x0026B9F5 File Offset: 0x00269BF5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007B46 RID: 31558 RVA: 0x0024CEB4 File Offset: 0x0024B0B4
+		// Token: 0x0600815E RID: 33118 RVA: 0x0026BA04 File Offset: 0x00269C04
 		public GmOrderList __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170015E1 RID: 5601
-		// (get) Token: 0x06007B47 RID: 31559 RVA: 0x0024CEC4 File Offset: 0x0024B0C4
+		// Token: 0x17001642 RID: 5698
+		// (get) Token: 0x0600815F RID: 33119 RVA: 0x0026BA14 File Offset: 0x00269C14
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170015E2 RID: 5602
-		// (get) Token: 0x06007B48 RID: 31560 RVA: 0x0024CF00 File Offset: 0x0024B100
+		// Token: 0x17001643 RID: 5699
+		// (get) Token: 0x06008160 RID: 33120 RVA: 0x0026BA50 File Offset: 0x00269C50
 		public string Name
 		{
 			get
@@ -80,19 +80,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007B49 RID: 31561 RVA: 0x0024CF37 File Offset: 0x0024B137
+		// Token: 0x06008161 RID: 33121 RVA: 0x0026BA87 File Offset: 0x00269C87
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06007B4A RID: 31562 RVA: 0x0024CF46 File Offset: 0x0024B146
+		// Token: 0x06008162 RID: 33122 RVA: 0x0026BA96 File Offset: 0x00269C96
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06007B4B RID: 31563 RVA: 0x0024CF60 File Offset: 0x0024B160
+		// Token: 0x06008163 RID: 33123 RVA: 0x0026BAB0 File Offset: 0x00269CB0
 		public string OrderList(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -103,8 +103,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170015E3 RID: 5603
-		// (get) Token: 0x06007B4C RID: 31564 RVA: 0x0024CF9C File Offset: 0x0024B19C
+		// Token: 0x17001644 RID: 5700
+		// (get) Token: 0x06008164 RID: 33124 RVA: 0x0026BAEC File Offset: 0x00269CEC
 		public int OrderListLength
 		{
 			get
@@ -118,24 +118,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007B4D RID: 31565 RVA: 0x0024CFC7 File Offset: 0x0024B1C7
+		// Token: 0x06008165 RID: 33125 RVA: 0x0026BB17 File Offset: 0x00269D17
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用OrderListIter()或GetOrderListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] OrderList()
+		public string[] OrderList()
 		{
 			return this.OrderListIter().ToArray<string>();
 		}
 
-		// Token: 0x06007B4E RID: 31566 RVA: 0x0024CFD4 File Offset: 0x0024B1D4
+		// Token: 0x06008166 RID: 33126 RVA: 0x0026BB24 File Offset: 0x00269D24
 		[NullableContext(1)]
-		public readonly IEnumerable<string> OrderListIter()
+		public IEnumerable<string> OrderListIter()
 		{
 			GmOrderList.<OrderListIter>d__18 <OrderListIter>d__ = new GmOrderList.<OrderListIter>d__18(-2);
 			<OrderListIter>d__.<>3__<>4__this = this;
 			return <OrderListIter>d__;
 		}
 
-		// Token: 0x04004D7D RID: 19837
+		// Token: 0x04005362 RID: 21346
 		private Table __p;
 	}
 }

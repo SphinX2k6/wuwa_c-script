@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x02000278 RID: 632
+	// Token: 0x0200027F RID: 639
 	public static class EAppTypeExtensions
 	{
-		// Token: 0x06000F59 RID: 3929 RVA: 0x00059918 File Offset: 0x00057B18
+		// Token: 0x06000FA4 RID: 4004 RVA: 0x0005C8BC File Offset: 0x0005AABC
 		public static string ToEnumString(this EAppType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return result;
 		}
 
-		// Token: 0x06000F5A RID: 3930 RVA: 0x00059960 File Offset: 0x00057B60
+		// Token: 0x06000FA5 RID: 4005 RVA: 0x0005C904 File Offset: 0x0005AB04
 		public static EAppType FromString(string name)
 		{
 			EAppType result;
@@ -38,7 +38,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return result;
 		}
 
-		// Token: 0x06000F5B RID: 3931 RVA: 0x0005998C File Offset: 0x00057B8C
+		// Token: 0x06000FA6 RID: 4006 RVA: 0x0005C930 File Offset: 0x0005AB30
 		public static bool TryFromString(string name, out EAppType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return true;
 		}
 
-		// Token: 0x06000F5C RID: 3932 RVA: 0x000599E2 File Offset: 0x00057BE2
+		// Token: 0x06000FA7 RID: 4007 RVA: 0x0005C986 File Offset: 0x0005AB86
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			};
 		}
 
-		// Token: 0x06000F5D RID: 3933 RVA: 0x00059A02 File Offset: 0x00057C02
+		// Token: 0x06000FA8 RID: 4008 RVA: 0x0005C9A6 File Offset: 0x0005ABA6
 		public static EAppType[] GetValues()
 		{
 			return new EAppType[]
@@ -87,7 +87,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			};
 		}
 
-		// Token: 0x06000F5E RID: 3934 RVA: 0x00059A12 File Offset: 0x00057C12
+		// Token: 0x06000FA9 RID: 4009 RVA: 0x0005C9B6 File Offset: 0x0005ABB6
 		public static string[] GetNames()
 		{
 			return new string[]

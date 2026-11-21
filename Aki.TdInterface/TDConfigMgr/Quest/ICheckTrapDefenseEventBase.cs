@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F04 RID: 3844
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200101A RID: 4122
 	public class ICheckTrapDefenseEventBase
 	{
-		// Token: 0x060054C8 RID: 21704 RVA: 0x000CFEF8 File Offset: 0x000CE0F8
+		// Token: 0x06005A44 RID: 23108 RVA: 0x000DC0A0 File Offset: 0x000DA2A0
 		private ICheckTrapDefenseEventBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060054C9 RID: 21705 RVA: 0x000CFF30 File Offset: 0x000CE130
+		// Token: 0x06005A45 RID: 23109 RVA: 0x000DC0D8 File Offset: 0x000DA2D8
 		public static ICheckTrapDefenseEventBase Create([Nullable(2)] ICheckTrapDefenseEventBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060054CA RID: 21706 RVA: 0x000CFF43 File Offset: 0x000CE143
+		// Token: 0x06005A46 RID: 23110 RVA: 0x000DC0EB File Offset: 0x000DA2EB
 		public static ICheckTrapDefenseEventBase CreateFromSetValue([Nullable(2)] ICheckTrapDefenseEventBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060054CB RID: 21707 RVA: 0x000CFF56 File Offset: 0x000CE156
+		// Token: 0x06005A47 RID: 23111 RVA: 0x000DC0FE File Offset: 0x000DA2FE
 		public ICheckTrapDefenseEventBase_SetValue ToSetValue()
 		{
 			return new ICheckTrapDefenseEventBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C5F RID: 7263
-		// (get) Token: 0x060054CC RID: 21708 RVA: 0x000CFF69 File Offset: 0x000CE169
-		// (set) Token: 0x060054CD RID: 21709 RVA: 0x000CFF94 File Offset: 0x000CE194
+		// Token: 0x17001DF7 RID: 7671
+		// (get) Token: 0x06005A48 RID: 23112 RVA: 0x000DC111 File Offset: 0x000DA311
+		// (set) Token: 0x06005A49 RID: 23113 RVA: 0x000DC13C File Offset: 0x000DA33C
 		public virtual ECheckTrapDefenseEvent Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003352 RID: 13138
+		// Token: 0x0400365F RID: 13919
 		[Nullable(2)]
 		protected ICheckTrapDefenseEventBase FbInstance;
 
-		// Token: 0x04003353 RID: 13139
+		// Token: 0x04003660 RID: 13920
 		[Nullable(2)]
 		protected ICheckTrapDefenseEventBase_SetValue PocoInterface;
 	}

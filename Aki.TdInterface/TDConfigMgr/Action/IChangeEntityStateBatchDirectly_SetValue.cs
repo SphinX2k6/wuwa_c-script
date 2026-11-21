@@ -1,27 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200186D RID: 6253
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019F8 RID: 6648
 	public class IChangeEntityStateBatchDirectly_SetValue
 	{
-		// Token: 0x040054BD RID: 21693
+		// Token: 0x0400590A RID: 22794
 		public EChangeEntityState Type;
 
-		// Token: 0x040054BE RID: 21694
+		// Token: 0x0400590B RID: 22795
 		public int EntityId;
 
-		// Token: 0x040054BF RID: 21695
+		// Token: 0x0400590C RID: 22796
 		public List<int> EntityIds;
 
-		// Token: 0x040054C0 RID: 21696
+		// Token: 0x0400590D RID: 22797
 		public string State;
 
-		// Token: 0x040054C1 RID: 21697
+		// Token: 0x0400590E RID: 22798
 		public bool? DelayChange;
 	}
 }

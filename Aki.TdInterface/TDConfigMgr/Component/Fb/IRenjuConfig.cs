@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C90 RID: 3216
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D72 RID: 3442
 	public class IRenjuConfig
 	{
-		// Token: 0x0600498C RID: 18828 RVA: 0x000B843D File Offset: 0x000B663D
+		// Token: 0x06004E3A RID: 20026 RVA: 0x000C2E4D File Offset: 0x000C104D
 		public static IRenjuConfig Create(IRenjuConfig? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001629 RID: 5673
-		// (get) Token: 0x0600498D RID: 18829 RVA: 0x000B845C File Offset: 0x000B665C
+		// Token: 0x17001751 RID: 5969
+		// (get) Token: 0x06004E3B RID: 20027 RVA: 0x000C2E6C File Offset: 0x000C106C
 		public virtual ERenjuController Controller
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700162A RID: 5674
-		// (get) Token: 0x0600498E RID: 18830 RVA: 0x000B8469 File Offset: 0x000B6669
+		// Token: 0x17001752 RID: 5970
+		// (get) Token: 0x06004E3C RID: 20028 RVA: 0x000C2E79 File Offset: 0x000C1079
 		public virtual ERenjuOrder Order
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700162B RID: 5675
-		// (get) Token: 0x0600498F RID: 18831 RVA: 0x000B8476 File Offset: 0x000B6676
+		// Token: 0x17001753 RID: 5971
+		// (get) Token: 0x06004E3D RID: 20029 RVA: 0x000C2E86 File Offset: 0x000C1086
 		public virtual int RenjuCount
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700162C RID: 5676
-		// (get) Token: 0x06004990 RID: 18832 RVA: 0x000B8484 File Offset: 0x000B6684
+		// Token: 0x17001754 RID: 5972
+		// (get) Token: 0x06004E3E RID: 20030 RVA: 0x000C2E94 File Offset: 0x000C1094
 		public virtual List<int> EntityIds
 		{
 			get
@@ -76,19 +74,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700162D RID: 5677
-		// (get) Token: 0x06004991 RID: 18833 RVA: 0x000B84E8 File Offset: 0x000B66E8
+		// Token: 0x17001755 RID: 5973
+		// (get) Token: 0x06004E3F RID: 20031 RVA: 0x000C2EF8 File Offset: 0x000C10F8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -111,24 +109,24 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029F1 RID: 10737
+		// Token: 0x04002C6B RID: 11371
 		private IRenjuConfig Instance;
 
-		// Token: 0x040029F2 RID: 10738
+		// Token: 0x04002C6C RID: 11372
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x040029F3 RID: 10739
+		// Token: 0x04002C6D RID: 11373
 		private bool _EntityIdsInited;
 
-		// Token: 0x040029F4 RID: 10740
+		// Token: 0x04002C6E RID: 11374
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x040029F5 RID: 10741
+		// Token: 0x04002C6F RID: 11375
 		private bool _ActionsInited;
 	}
 }

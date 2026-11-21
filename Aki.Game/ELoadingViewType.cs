@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002072 RID: 8306
+// Token: 0x02001545 RID: 5445
 public enum ELoadingViewType
 {
-	// Token: 0x040078CA RID: 30922
+	// Token: 0x040079B3 RID: 31155
 	Normal,
-	// Token: 0x040078CB RID: 30923
+	// Token: 0x040079B4 RID: 31156
 	Fade
 }

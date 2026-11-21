@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Components
 {
-	// Token: 0x020062A7 RID: 25255
+	// Token: 0x02005225 RID: 21029
 	[NullableContext(2)]
 	[Nullable(0)]
 	internal class GotItem : UiPanelBase
 	{
-		// Token: 0x0603F891 RID: 260241 RVA: 0x00F5D57C File Offset: 0x00F5B77C
+		// Token: 0x06034552 RID: 214354 RVA: 0x00EA44D8 File Offset: 0x00EA26D8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F892 RID: 260242 RVA: 0x00F5D5E5 File Offset: 0x00F5B7E5
+		// Token: 0x06034553 RID: 214355 RVA: 0x00EA4541 File Offset: 0x00EA2741
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			pnlGotItem.SetUIActive(false);
 		}
 
-		// Token: 0x0603F893 RID: 260243 RVA: 0x00F5D623 File Offset: 0x00F5B823
+		// Token: 0x06034554 RID: 214356 RVA: 0x00EA457F File Offset: 0x00EA277F
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			levelSequencePlayer.Clear();
 		}
 
-		// Token: 0x0603F894 RID: 260244 RVA: 0x00F5D635 File Offset: 0x00F5B835
+		// Token: 0x06034555 RID: 214357 RVA: 0x00EA4591 File Offset: 0x00EA2791
 		public void SetIndexText(int index)
 		{
 			UUIText txtItem = this.TxtItem;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			txtItem.SetText((index < 10) ? ("0" + index.ToString()) : index.ToString(), true);
 		}
 
-		// Token: 0x0603F895 RID: 260245 RVA: 0x00F5D668 File Offset: 0x00F5B868
+		// Token: 0x06034556 RID: 214358 RVA: 0x00EA45C4 File Offset: 0x00EA27C4
 		public void RefreshGotState(bool isGot, bool animBanned = false)
 		{
 			UUIItem pnlGotItem = this.PnlGotItem;
@@ -82,13 +82,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			pnlGotItem2.SetUIActive(isGot);
 		}
 
-		// Token: 0x0402136C RID: 136044
+		// Token: 0x0401BC9B RID: 113819
 		private UUIItem PnlGotItem;
 
-		// Token: 0x0402136D RID: 136045
+		// Token: 0x0401BC9C RID: 113820
 		private UUIText TxtItem;
 
-		// Token: 0x0402136E RID: 136046
+		// Token: 0x0401BC9D RID: 113821
 		private LevelSequencePlayer LevelSequencePlayer;
 	}
 }

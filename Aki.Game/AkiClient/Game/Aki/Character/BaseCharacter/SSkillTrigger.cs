@@ -6,37 +6,37 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004336 RID: 17206
+	// Token: 0x0200336D RID: 13165
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/SSkillTrigger.SSkillTrigger")]
 	[UnrealStructLayout(96, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 96)]
 	public class SSkillTrigger : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C9F0 RID: 182768 RVA: 0x00A243E4 File Offset: 0x00A225E4
+		// Token: 0x060216D7 RID: 136919 RVA: 0x009605FE File Offset: 0x0095E7FE
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SSkillTrigger._ScriptStructPtr != 0) ? SSkillTrigger._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SSkillTrigger.SSkillTrigger", ref SSkillTrigger._ScriptStructPtr);
 		}
 
-		// Token: 0x1700703D RID: 28733
-		// (get) Token: 0x0602C9F1 RID: 182769 RVA: 0x00A24408 File Offset: 0x00A22608
-		// (set) Token: 0x0602C9F2 RID: 182770 RVA: 0x00A2441C File Offset: 0x00A2261C
+		// Token: 0x17004466 RID: 17510
+		// (get) Token: 0x060216D8 RID: 136920 RVA: 0x00960622 File Offset: 0x0095E822
+		// (set) Token: 0x060216D9 RID: 136921 RVA: 0x00960636 File Offset: 0x0095E836
 		public unsafe string TriggerType
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_TriggerType)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_TriggerType)), value);
 			}
 		}
 
-		// Token: 0x1700703E RID: 28734
-		// (get) Token: 0x0602C9F3 RID: 182771 RVA: 0x00A24434 File Offset: 0x00A22634
-		// (set) Token: 0x0602C9F4 RID: 182772 RVA: 0x00A24477 File Offset: 0x00A22677
+		// Token: 0x17004467 RID: 17511
+		// (get) Token: 0x060216DA RID: 136922 RVA: 0x0096064C File Offset: 0x0095E84C
+		// (set) Token: 0x060216DB RID: 136923 RVA: 0x0096068F File Offset: 0x0095E88F
 		public TArray<string> TriggerPreset
 		{
 			get
@@ -45,7 +45,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<string> result;
 				if ((result = this._TriggerPreset) == null)
 				{
-					result = (this._TriggerPreset = new TArray<string>(base.NativePtr + (IntPtr)SSkillTrigger.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._TriggerPreset = new TArray<string>(base.NativePtr + (IntPtr)SSkillTrigger.__PropertyOffset_TriggerPreset, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -55,124 +55,113 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x1700703F RID: 28735
-		// (get) Token: 0x0602C9F5 RID: 182773 RVA: 0x00A24485 File Offset: 0x00A22685
-		// (set) Token: 0x0602C9F6 RID: 182774 RVA: 0x00A24499 File Offset: 0x00A22699
+		// Token: 0x17004468 RID: 17512
+		// (get) Token: 0x060216DC RID: 136924 RVA: 0x0096069D File Offset: 0x0095E89D
+		// (set) Token: 0x060216DD RID: 136925 RVA: 0x009606B1 File Offset: 0x0095E8B1
 		public unsafe string TriggerParams
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_2)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_TriggerParams)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_2)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_TriggerParams)), value);
 			}
 		}
 
-		// Token: 0x17007040 RID: 28736
-		// (get) Token: 0x0602C9F7 RID: 182775 RVA: 0x00A244AE File Offset: 0x00A226AE
-		// (set) Token: 0x0602C9F8 RID: 182776 RVA: 0x00A244C2 File Offset: 0x00A226C2
+		// Token: 0x17004469 RID: 17513
+		// (get) Token: 0x060216DE RID: 136926 RVA: 0x009606C6 File Offset: 0x0095E8C6
+		// (set) Token: 0x060216DF RID: 136927 RVA: 0x009606DA File Offset: 0x0095E8DA
 		public unsafe string TriggerFormula
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_3)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_TriggerFormula)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_3)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_TriggerFormula)), value);
 			}
 		}
 
-		// Token: 0x17007041 RID: 28737
-		// (get) Token: 0x0602C9F9 RID: 182777 RVA: 0x00A244D7 File Offset: 0x00A226D7
-		// (set) Token: 0x0602C9FA RID: 182778 RVA: 0x00A244EB File Offset: 0x00A226EB
+		// Token: 0x1700446A RID: 17514
+		// (get) Token: 0x060216E0 RID: 136928 RVA: 0x009606EF File Offset: 0x0095E8EF
+		// (set) Token: 0x060216E1 RID: 136929 RVA: 0x00960703 File Offset: 0x0095E903
 		public unsafe string TriggerTarget
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_4)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_TriggerTarget)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_4)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_TriggerTarget)), value);
 			}
 		}
 
-		// Token: 0x17007042 RID: 28738
-		// (get) Token: 0x0602C9FB RID: 182779 RVA: 0x00A24500 File Offset: 0x00A22700
-		// (set) Token: 0x0602C9FC RID: 182780 RVA: 0x00A24514 File Offset: 0x00A22714
+		// Token: 0x1700446B RID: 17515
+		// (get) Token: 0x060216E2 RID: 136930 RVA: 0x00960718 File Offset: 0x0095E918
+		// (set) Token: 0x060216E3 RID: 136931 RVA: 0x0096072C File Offset: 0x0095E92C
 		public unsafe string TriggerTargetSocket
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_5)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_TriggerTargetSocket)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_5)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SSkillTrigger.__PropertyOffset_TriggerTargetSocket)), value);
 			}
 		}
 
-		// Token: 0x0602C9FD RID: 182781 RVA: 0x00A24529 File Offset: 0x00A22729
+		// Token: 0x060216E4 RID: 136932 RVA: 0x00960741 File Offset: 0x0095E941
 		public SSkillTrigger()
 		{
 		}
 
-		// Token: 0x0602C9FE RID: 182782 RVA: 0x00A24531 File Offset: 0x00A22731
-		public SSkillTrigger(string TriggerType, TArray<string> TriggerPreset, string TriggerParams, string TriggerFormula, string TriggerTarget, string TriggerTargetSocket)
-		{
-			this.TriggerType = TriggerType;
-			this.TriggerPreset = TriggerPreset;
-			this.TriggerParams = TriggerParams;
-			this.TriggerFormula = TriggerFormula;
-			this.TriggerTarget = TriggerTarget;
-			this.TriggerTargetSocket = TriggerTargetSocket;
-		}
-
-		// Token: 0x0602C9FF RID: 182783 RVA: 0x00A24566 File Offset: 0x00A22766
+		// Token: 0x060216E5 RID: 136933 RVA: 0x00960749 File Offset: 0x0095E949
 		protected override IntPtr GetUStructPtr()
 		{
 			return SSkillTrigger.StaticStruct();
 		}
 
-		// Token: 0x0602CA00 RID: 182784 RVA: 0x00A24572 File Offset: 0x00A22772
+		// Token: 0x060216E6 RID: 136934 RVA: 0x00960755 File Offset: 0x0095E955
 		[NullableContext(2)]
 		public SSkillTrigger(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602CA01 RID: 182785 RVA: 0x00A2457C File Offset: 0x00A2277C
+		// Token: 0x060216E7 RID: 136935 RVA: 0x0096075F File Offset: 0x0095E95F
 		public SSkillTrigger(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602CA02 RID: 182786 RVA: 0x00A24587 File Offset: 0x00A22787
+		// Token: 0x060216E8 RID: 136936 RVA: 0x0096076A File Offset: 0x0095E96A
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SSkillTrigger(Pointer, false, true);
 		}
 
-		// Token: 0x0602CA03 RID: 182787 RVA: 0x00A24591 File Offset: 0x00A22791
+		// Token: 0x060216E9 RID: 136937 RVA: 0x00960774 File Offset: 0x0095E974
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SSkillTrigger(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401785C RID: 96348
+		// Token: 0x04012453 RID: 74835
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SSkillTrigger.SSkillTrigger";
 
-		// Token: 0x0401785D RID: 96349
+		// Token: 0x04012454 RID: 74836
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401785E RID: 96350
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012455 RID: 74837
+		internal static int __PropertyOffset_TriggerType;
 
-		// Token: 0x0401785F RID: 96351
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012456 RID: 74838
+		internal static int __PropertyOffset_TriggerPreset;
 
-		// Token: 0x04017860 RID: 96352
+		// Token: 0x04012457 RID: 74839
 		[Nullable(new byte[]
 		{
 			2,
@@ -180,16 +169,16 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 		})]
 		private TArray<string> _TriggerPreset;
 
-		// Token: 0x04017861 RID: 96353
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012458 RID: 74840
+		internal static int __PropertyOffset_TriggerParams;
 
-		// Token: 0x04017862 RID: 96354
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012459 RID: 74841
+		internal static int __PropertyOffset_TriggerFormula;
 
-		// Token: 0x04017863 RID: 96355
-		internal static int __PropertyOffset_4;
+		// Token: 0x0401245A RID: 74842
+		internal static int __PropertyOffset_TriggerTarget;
 
-		// Token: 0x04017864 RID: 96356
-		internal static int __PropertyOffset_5;
+		// Token: 0x0401245B RID: 74843
+		internal static int __PropertyOffset_TriggerTargetSocket;
 	}
 }

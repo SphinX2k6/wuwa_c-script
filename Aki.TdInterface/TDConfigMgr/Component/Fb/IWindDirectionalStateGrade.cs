@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D90 RID: 3472
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E8C RID: 3724
 	public class IWindDirectionalStateGrade
 	{
-		// Token: 0x06004EF5 RID: 20213 RVA: 0x000C3D02 File Offset: 0x000C1F02
+		// Token: 0x0600541A RID: 21530 RVA: 0x000CF552 File Offset: 0x000CD752
 		public static IWindDirectionalStateGrade Create(IWindDirectionalStateGrade? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001992 RID: 6546
-		// (get) Token: 0x06004EF6 RID: 20214 RVA: 0x000C3D21 File Offset: 0x000C1F21
+		// Token: 0x17001AFD RID: 6909
+		// (get) Token: 0x0600541B RID: 21531 RVA: 0x000CF571 File Offset: 0x000CD771
 		public virtual string State
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001993 RID: 6547
-		// (get) Token: 0x06004EF7 RID: 20215 RVA: 0x000C3D2E File Offset: 0x000C1F2E
+		// Token: 0x17001AFE RID: 6910
+		// (get) Token: 0x0600541C RID: 21532 RVA: 0x000CF57E File Offset: 0x000CD77E
 		public virtual float Speed
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001994 RID: 6548
-		// (get) Token: 0x06004EF8 RID: 20216 RVA: 0x000C3D3B File Offset: 0x000C1F3B
+		// Token: 0x17001AFF RID: 6911
+		// (get) Token: 0x0600541D RID: 21533 RVA: 0x000CF58B File Offset: 0x000CD78B
 		public virtual float Strength
 		{
 			get
@@ -52,7 +49,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D63 RID: 11619
+		// Token: 0x04003029 RID: 12329
 		private IWindDirectionalStateGrade Instance;
 	}
 }

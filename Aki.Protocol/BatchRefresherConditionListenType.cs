@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015D6 RID: 5590
+	// Token: 0x02001648 RID: 5704
 	public enum BatchRefresherConditionListenType
 	{
-		// Token: 0x0400BD8C RID: 48524
+		// Token: 0x0400C280 RID: 49792
 		[OriginalName("BatchCreate")]
 		BatchCreate,
-		// Token: 0x0400BD8D RID: 48525
+		// Token: 0x0400C281 RID: 49793
 		[OriginalName("BatchClear")]
 		BatchClear
 	}

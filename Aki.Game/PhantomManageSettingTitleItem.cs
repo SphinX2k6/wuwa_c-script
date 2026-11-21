@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,7 +11,7 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using FilterDefine;
 using UnrealEngine;
 
-// Token: 0x02001FBF RID: 8127
+// Token: 0x02001481 RID: 5249
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -21,25 +20,25 @@ using UnrealEngine;
 })]
 public class PhantomManageSettingTitleItem : GridProxyAbstract<InventoryDefine.IManageConfigTitleItemData>, IStaticVariableResetter
 {
-	// Token: 0x0600FE16 RID: 65046 RVA: 0x003DA401 File Offset: 0x003D8601
+	// Token: 0x0600D23C RID: 53820 RVA: 0x003E5DDD File Offset: 0x003E3FDD
 	static PhantomManageSettingTitleItem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhantomManageSettingTitleItem.CreateStaticDefaultValue), new Action(PhantomManageSettingTitleItem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600FE17 RID: 65047 RVA: 0x003DA420 File Offset: 0x003D8620
+	// Token: 0x0600D23D RID: 53821 RVA: 0x003E5DFC File Offset: 0x003E3FFC
 	public static void CreateStaticDefaultValue()
 	{
 		PhantomManageSettingTitleItem.ViewModel = null;
 	}
 
-	// Token: 0x0600FE18 RID: 65048 RVA: 0x003DA428 File Offset: 0x003D8628
+	// Token: 0x0600D23E RID: 53822 RVA: 0x003E5E04 File Offset: 0x003E4004
 	public static void ResetStaticDefaultValue()
 	{
 		PhantomManageSettingTitleItem.ViewModel = null;
 	}
 
-	// Token: 0x0600FE19 RID: 65049 RVA: 0x003DA430 File Offset: 0x003D8630
+	// Token: 0x0600D23F RID: 53823 RVA: 0x003E5E0C File Offset: 0x003E400C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -53,19 +52,19 @@ public class PhantomManageSettingTitleItem : GridProxyAbstract<InventoryDefine.I
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600FE1A RID: 65050 RVA: 0x003DA499 File Offset: 0x003D8699
+	// Token: 0x0600D240 RID: 53824 RVA: 0x003E5E75 File Offset: 0x003E4075
 	protected override void OnStart()
 	{
 		PhantomManageSettingTitleItem.ViewModel.Bind(new Action<EPhantomManageConfigViewData>(this.OnViewModelUpdate));
 	}
 
-	// Token: 0x0600FE1B RID: 65051 RVA: 0x003DA4B1 File Offset: 0x003D86B1
+	// Token: 0x0600D241 RID: 53825 RVA: 0x003E5E8D File Offset: 0x003E408D
 	protected override void OnBeforeDestroy()
 	{
 		PhantomManageSettingTitleItem.ViewModel.UnBind(new Action<EPhantomManageConfigViewData>(this.OnViewModelUpdate));
 	}
 
-	// Token: 0x0600FE1C RID: 65052 RVA: 0x003DA4C9 File Offset: 0x003D86C9
+	// Token: 0x0600D242 RID: 53826 RVA: 0x003E5EA5 File Offset: 0x003E40A5
 	private void OnViewModelUpdate(EPhantomManageConfigViewData data)
 	{
 		if (data == EPhantomManageConfigViewData.SelectConfig)
@@ -84,7 +83,7 @@ public class PhantomManageSettingTitleItem : GridProxyAbstract<InventoryDefine.I
 		}
 	}
 
-	// Token: 0x0600FE1D RID: 65053 RVA: 0x003DA4FC File Offset: 0x003D86FC
+	// Token: 0x0600D243 RID: 53827 RVA: 0x003E5ED8 File Offset: 0x003E40D8
 	public override UniTask RefreshAsync(InventoryDefine.IManageConfigTitleItemData data, bool isSelected, int gridIndex)
 	{
 		PhantomManageSettingTitleItem.<RefreshAsync>d__12 <RefreshAsync>d__;
@@ -96,7 +95,7 @@ public class PhantomManageSettingTitleItem : GridProxyAbstract<InventoryDefine.I
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FE1E RID: 65054 RVA: 0x003DA548 File Offset: 0x003D8748
+	// Token: 0x0600D244 RID: 53828 RVA: 0x003E5F24 File Offset: 0x003E4124
 	public UniTask RefreshByViewModelAsync()
 	{
 		PhantomManageSettingTitleItem.<RefreshByViewModelAsync>d__13 <RefreshByViewModelAsync>d__;
@@ -107,7 +106,7 @@ public class PhantomManageSettingTitleItem : GridProxyAbstract<InventoryDefine.I
 		return <RefreshByViewModelAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FE1F RID: 65055 RVA: 0x003DA58C File Offset: 0x003D878C
+	// Token: 0x0600D245 RID: 53829 RVA: 0x003E5F68 File Offset: 0x003E4168
 	public override void Refresh(InventoryDefine.IManageConfigTitleItemData data, bool isSelected, int gridIndex)
 	{
 		PhantomManageSettingTitleItem.<>c__DisplayClass14_0 CS$<>8__locals1 = new PhantomManageSettingTitleItem.<>c__DisplayClass14_0();
@@ -127,26 +126,26 @@ public class PhantomManageSettingTitleItem : GridProxyAbstract<InventoryDefine.I
 		base.RunAsyncTask(task).Forget();
 	}
 
-	// Token: 0x0600FE20 RID: 65056 RVA: 0x003DA5E0 File Offset: 0x003D87E0
+	// Token: 0x0600D246 RID: 53830 RVA: 0x003E5FBC File Offset: 0x003E41BC
 	private void RrefreshTitle()
 	{
 		FilterRule? filterRuleConfig = FilterConfig.Instance.GetFilterRuleConfig(this.Data.FilterRuleId);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), filterRuleConfig.Value.Title, Array.Empty<object>());
 	}
 
-	// Token: 0x0600FE21 RID: 65057 RVA: 0x003DA628 File Offset: 0x003D8828
+	// Token: 0x0600D247 RID: 53831 RVA: 0x003E6004 File Offset: 0x003E4204
 	public void RefreshByView()
 	{
 		this.RefreshByViewModelAsync().Forget();
 	}
 
-	// Token: 0x0600FE22 RID: 65058 RVA: 0x003DA635 File Offset: 0x003D8835
+	// Token: 0x0600D248 RID: 53832 RVA: 0x003E6011 File Offset: 0x003E4211
 	public override object GetKey(InventoryDefine.IManageConfigTitleItemData data, int displayIndex)
 	{
 		return data.FilterRuleId;
 	}
 
-	// Token: 0x0600FE23 RID: 65059 RVA: 0x003DA644 File Offset: 0x003D8844
+	// Token: 0x0600D249 RID: 53833 RVA: 0x003E6020 File Offset: 0x003E4220
 	private UniTask InitLayoutAsync(int ruleId)
 	{
 		PhantomManageSettingTitleItem.<InitLayoutAsync>d__18 <InitLayoutAsync>d__;
@@ -158,7 +157,7 @@ public class PhantomManageSettingTitleItem : GridProxyAbstract<InventoryDefine.I
 		return <InitLayoutAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FE24 RID: 65060 RVA: 0x003DA690 File Offset: 0x003D8890
+	// Token: 0x0600D24A RID: 53834 RVA: 0x003E606C File Offset: 0x003E426C
 	private void OnClickedGrid(InventoryDefine.IManageConfigSettingGridData data, bool isAdd)
 	{
 		if (this.GridType == InventoryDefine.ESettingGridType.Small)
@@ -175,7 +174,7 @@ public class PhantomManageSettingTitleItem : GridProxyAbstract<InventoryDefine.I
 		PhantomManageSettingTitleItem.ViewModel.SetEditDataById(data.RuleId, data.Value, false, false);
 	}
 
-	// Token: 0x0600FE25 RID: 65061 RVA: 0x003DA6F4 File Offset: 0x003D88F4
+	// Token: 0x0600D24B RID: 53835 RVA: 0x003E60D0 File Offset: 0x003E42D0
 	private void OnSelectViewConfirm(Dictionary<int, int[]> selection)
 	{
 		foreach (KeyValuePair<int, int[]> keyValuePair in selection)
@@ -184,7 +183,7 @@ public class PhantomManageSettingTitleItem : GridProxyAbstract<InventoryDefine.I
 		}
 	}
 
-	// Token: 0x0600FE26 RID: 65062 RVA: 0x003DA754 File Offset: 0x003D8954
+	// Token: 0x0600D24C RID: 53836 RVA: 0x003E6130 File Offset: 0x003E4330
 	private InventoryDefine.ISelectViewData GetSelectViewData(InventoryDefine.IManageConfigSettingGridData data)
 	{
 		Dictionary<int, int[]> editDataByRuleId = PhantomManageSettingTitleItem.ViewModel.GetEditDataByRuleId(data.RuleId);
@@ -202,7 +201,7 @@ public class PhantomManageSettingTitleItem : GridProxyAbstract<InventoryDefine.I
 		};
 	}
 
-	// Token: 0x0600FE27 RID: 65063 RVA: 0x003DA7E4 File Offset: 0x003D89E4
+	// Token: 0x0600D24D RID: 53837 RVA: 0x003E61C0 File Offset: 0x003E43C0
 	private InventoryDefine.IManageConfigSettingGridData[] GetGridData()
 	{
 		int filterRuleId = this.Data.FilterRuleId;
@@ -215,7 +214,7 @@ public class PhantomManageSettingTitleItem : GridProxyAbstract<InventoryDefine.I
 		int[] array3;
 		if (editDataByRuleId == null || !editState)
 		{
-			array2 = selectConfig.GetValueListByRuleId(filterRuleId).ToArray<int>();
+			array2 = selectConfig.GetValueListByRuleId(filterRuleId);
 		}
 		else if (editDataByRuleId.TryGetValue(filterRuleId, out array3))
 		{
@@ -256,28 +255,28 @@ public class PhantomManageSettingTitleItem : GridProxyAbstract<InventoryDefine.I
 		return list.ToArray();
 	}
 
-	// Token: 0x040075A4 RID: 30116
+	// Token: 0x04007686 RID: 30342
 	[Nullable(2)]
 	private InventoryDefine.IManageConfigTitleItemData Data;
 
-	// Token: 0x040075A5 RID: 30117
+	// Token: 0x04007687 RID: 30343
 	[Nullable(2)]
 	public static PhantomManageConfigViewModel ViewModel;
 
-	// Token: 0x040075A6 RID: 30118
+	// Token: 0x04007688 RID: 30344
 	private InventoryDefine.ESettingGridType GridType = InventoryDefine.ESettingGridType.Small;
 
-	// Token: 0x040075A7 RID: 30119
+	// Token: 0x04007689 RID: 30345
 	[Nullable(2)]
 	private SettingGridLayout ItemLayout;
 
-	// Token: 0x020085C8 RID: 34248
+	// Token: 0x0200774A RID: 30538
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402B8D0 RID: 178384
+		// Token: 0x04026BD8 RID: 158680
 		TextName,
-		// Token: 0x0402B8D1 RID: 178385
+		// Token: 0x04026BD9 RID: 158681
 		LayoutGrid
 	}
 }

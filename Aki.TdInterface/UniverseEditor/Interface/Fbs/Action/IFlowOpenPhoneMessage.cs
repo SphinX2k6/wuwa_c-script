@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200681C RID: 26652
+	// Token: 0x02006E9C RID: 28316
 	public struct IFlowOpenPhoneMessage : IFlatbufferObject
 	{
-		// Token: 0x1700C5F8 RID: 50680
-		// (get) Token: 0x0602E750 RID: 190288 RVA: 0x0065738E File Offset: 0x0065558E
+		// Token: 0x1700CFB2 RID: 53170
+		// (get) Token: 0x06030FAC RID: 200620 RVA: 0x006A4EC8 File Offset: 0x006A30C8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E751 RID: 190289 RVA: 0x0065739B File Offset: 0x0065559B
+		// Token: 0x06030FAD RID: 200621 RVA: 0x006A4ED5 File Offset: 0x006A30D5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E752 RID: 190290 RVA: 0x006573A4 File Offset: 0x006555A4
+		// Token: 0x06030FAE RID: 200622 RVA: 0x006A4EDC File Offset: 0x006A30DC
 		public static IFlowOpenPhoneMessage GetRootAsIFlowOpenPhoneMessage(ByteBuffer _bb)
 		{
 			return IFlowOpenPhoneMessage.GetRootAsIFlowOpenPhoneMessage(_bb, default(IFlowOpenPhoneMessage));
 		}
 
-		// Token: 0x0602E753 RID: 190291 RVA: 0x006573C0 File Offset: 0x006555C0
+		// Token: 0x06030FAF RID: 200623 RVA: 0x006A4EF8 File Offset: 0x006A30F8
 		public static IFlowOpenPhoneMessage GetRootAsIFlowOpenPhoneMessage(ByteBuffer _bb, IFlowOpenPhoneMessage obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E754 RID: 190292 RVA: 0x006573DD File Offset: 0x006555DD
+		// Token: 0x06030FB0 RID: 200624 RVA: 0x006A4F15 File Offset: 0x006A3115
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E755 RID: 190293 RVA: 0x006573EC File Offset: 0x006555EC
+		// Token: 0x06030FB1 RID: 200625 RVA: 0x006A4F24 File Offset: 0x006A3124
 		public IFlowOpenPhoneMessage __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C5F9 RID: 50681
-		// (get) Token: 0x0602E756 RID: 190294 RVA: 0x006573FC File Offset: 0x006555FC
+		// Token: 0x1700CFB3 RID: 53171
+		// (get) Token: 0x06030FB2 RID: 200626 RVA: 0x006A4F34 File Offset: 0x006A3134
 		public EPhoneSystemInteractType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C5FA RID: 50682
-		// (get) Token: 0x0602E757 RID: 190295 RVA: 0x00657438 File Offset: 0x00655638
+		// Token: 0x1700CFB4 RID: 53172
+		// (get) Token: 0x06030FB3 RID: 200627 RVA: 0x006A4F70 File Offset: 0x006A3170
 		public IMessageBoard? PhoneBoardType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E758 RID: 190296 RVA: 0x00657495 File Offset: 0x00655695
+		// Token: 0x06030FB4 RID: 200628 RVA: 0x006A4FCD File Offset: 0x006A31CD
 		public static Offset<IFlowOpenPhoneMessage> CreateIFlowOpenPhoneMessage(FlatBufferBuilder builder, EPhoneSystemInteractType Type = EPhoneSystemInteractType.SendPhoneMessage, Offset<IMessageBoard> PhoneBoardTypeOffset = default(Offset<IMessageBoard>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFlowOpenPhoneMessage.EndIFlowOpenPhoneMessage(builder);
 		}
 
-		// Token: 0x0602E759 RID: 190297 RVA: 0x006574B2 File Offset: 0x006556B2
+		// Token: 0x06030FB5 RID: 200629 RVA: 0x006A4FEA File Offset: 0x006A31EA
 		public static void StartIFlowOpenPhoneMessage(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602E75A RID: 190298 RVA: 0x006574BB File Offset: 0x006556BB
+		// Token: 0x06030FB6 RID: 200630 RVA: 0x006A4FF3 File Offset: 0x006A31F3
 		public static void AddType(FlatBufferBuilder builder, EPhoneSystemInteractType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E75B RID: 190299 RVA: 0x006574C6 File Offset: 0x006556C6
+		// Token: 0x06030FB7 RID: 200631 RVA: 0x006A4FFE File Offset: 0x006A31FE
 		public static void AddPhoneBoardType(FlatBufferBuilder builder, Offset<IMessageBoard> phoneBoardTypeOffset)
 		{
 			builder.AddOffset(1, phoneBoardTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0602E75C RID: 190300 RVA: 0x006574D6 File Offset: 0x006556D6
+		// Token: 0x06030FB8 RID: 200632 RVA: 0x006A500E File Offset: 0x006A320E
 		public static Offset<IFlowOpenPhoneMessage> EndIFlowOpenPhoneMessage(FlatBufferBuilder builder)
 		{
 			return new Offset<IFlowOpenPhoneMessage>(builder.EndTable());
 		}
 
-		// Token: 0x0602E75D RID: 190301 RVA: 0x006574E4 File Offset: 0x006556E4
+		// Token: 0x06030FB9 RID: 200633 RVA: 0x006A501C File Offset: 0x006A321C
 		public IFlowOpenPhoneMessageT UnPack()
 		{
 			IFlowOpenPhoneMessageT flowOpenPhoneMessageT = new IFlowOpenPhoneMessageT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return flowOpenPhoneMessageT;
 		}
 
-		// Token: 0x0602E75E RID: 190302 RVA: 0x00657500 File Offset: 0x00655700
+		// Token: 0x06030FBA RID: 200634 RVA: 0x006A5038 File Offset: 0x006A3238
 		public void UnPackTo(IFlowOpenPhoneMessageT _o)
 		{
 			_o.Type = this.Type;
 			_o.PhoneBoardType = ((this.PhoneBoardType != null) ? this.PhoneBoardType.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602E75F RID: 190303 RVA: 0x00657548 File Offset: 0x00655748
+		// Token: 0x06030FBB RID: 200635 RVA: 0x006A5080 File Offset: 0x006A3280
 		public static Offset<IFlowOpenPhoneMessage> Pack(FlatBufferBuilder builder, IFlowOpenPhoneMessageT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFlowOpenPhoneMessage.CreateIFlowOpenPhoneMessage(builder, _o.Type, phoneBoardTypeOffset);
 		}
 
-		// Token: 0x04010F59 RID: 69465
+		// Token: 0x04011D8D RID: 73101
 		private Table __p;
 	}
 }

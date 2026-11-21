@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D8E RID: 19854
+	// Token: 0x0200528F RID: 21135
 	public enum EDoubleViewSlot : byte
 	{
-		// Token: 0x0400D946 RID: 55622
+		// Token: 0x0400E48A RID: 58506
 		Left,
-		// Token: 0x0400D947 RID: 55623
+		// Token: 0x0400E48B RID: 58507
 		Right
 	}
 }

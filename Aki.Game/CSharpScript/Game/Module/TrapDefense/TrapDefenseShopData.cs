@@ -5,13 +5,13 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A1A RID: 18970
+	// Token: 0x020039C2 RID: 14786
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseShopData
 	{
-		// Token: 0x17007A1D RID: 31261
-		// (get) Token: 0x060313EF RID: 201711 RVA: 0x00B6B9E1 File Offset: 0x00B69BE1
+		// Token: 0x17004DCA RID: 19914
+		// (get) Token: 0x0602617F RID: 156031 RVA: 0x00AAF9DD File Offset: 0x00AADBDD
 		public List<TrapDefenseShopItemData> ItemGoodsList
 		{
 			get
@@ -20,8 +20,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A1E RID: 31262
-		// (get) Token: 0x060313F0 RID: 201712 RVA: 0x00B6B9F3 File Offset: 0x00B69BF3
+		// Token: 0x17004DCB RID: 19915
+		// (get) Token: 0x06026180 RID: 156032 RVA: 0x00AAF9EF File Offset: 0x00AADBEF
 		public List<TrapDefenseShopBuffData> BuffGoodsList
 		{
 			get
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060313F1 RID: 201713 RVA: 0x00B6BA05 File Offset: 0x00B69C05
+		// Token: 0x06026181 RID: 156033 RVA: 0x00AAFA01 File Offset: 0x00AADC01
 		public static TrapDefenseShopData Create()
 		{
 			TrapDefenseShopData trapDefenseShopData = new TrapDefenseShopData();
@@ -38,14 +38,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseShopData;
 		}
 
-		// Token: 0x060313F2 RID: 201714 RVA: 0x00B6BA12 File Offset: 0x00B69C12
+		// Token: 0x06026182 RID: 156034 RVA: 0x00AAFA0E File Offset: 0x00AADC0E
 		public void UpdateByServerData(TrapDefenseShopPanelInfo serverData)
 		{
 			this.ServerDataCache = serverData;
 			this.TryUpdateData();
 		}
 
-		// Token: 0x060313F3 RID: 201715 RVA: 0x00B6BA24 File Offset: 0x00B69C24
+		// Token: 0x06026183 RID: 156035 RVA: 0x00AAFA20 File Offset: 0x00AADC20
 		public void TryUpdateData()
 		{
 			if (this.ServerDataCache == null)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ServerDataCache = null;
 		}
 
-		// Token: 0x060313F4 RID: 201716 RVA: 0x00B6BC80 File Offset: 0x00B69E80
+		// Token: 0x06026184 RID: 156036 RVA: 0x00AAFC7C File Offset: 0x00AADE7C
 		public int SortGoods(ITrapDefenseShopGoods a, ITrapDefenseShopGoods b)
 		{
 			if (a.Disable != b.Disable)
@@ -138,28 +138,28 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060313F5 RID: 201717 RVA: 0x00B6BD5C File Offset: 0x00B69F5C
+		// Token: 0x06026185 RID: 156037 RVA: 0x00AAFD58 File Offset: 0x00AADF58
 		private void Init()
 		{
 		}
 
-		// Token: 0x0401A549 RID: 107849
+		// Token: 0x04014EA0 RID: 85664
 		public Dictionary<int, TrapDefenseShopItemData> ItemGoodsMap = new Dictionary<int, TrapDefenseShopItemData>();
 
-		// Token: 0x0401A54A RID: 107850
+		// Token: 0x04014EA1 RID: 85665
 		public Dictionary<int, TrapDefenseShopBuffData> BuffGoodsMap = new Dictionary<int, TrapDefenseShopBuffData>();
 
-		// Token: 0x0401A54B RID: 107851
+		// Token: 0x04014EA2 RID: 85666
 		[Nullable(2)]
 		public TrapDefenseShopPanelInfo ServerDataCache;
 
-		// Token: 0x0401A54C RID: 107852
+		// Token: 0x04014EA3 RID: 85667
 		public int TotalRefreshCount;
 
-		// Token: 0x0401A54D RID: 107853
+		// Token: 0x04014EA4 RID: 85668
 		public int RemainingRefreshCount;
 
-		// Token: 0x0401A54E RID: 107854
+		// Token: 0x04014EA5 RID: 85669
 		public int RefreshCost;
 	}
 }

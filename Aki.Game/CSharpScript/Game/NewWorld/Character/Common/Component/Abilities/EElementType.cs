@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities
 {
-	// Token: 0x02007128 RID: 28968
+	// Token: 0x02006356 RID: 25430
 	public enum EElementType
 	{
-		// Token: 0x04025239 RID: 152121
+		// Token: 0x04020B19 RID: 133913
 		Physical,
-		// Token: 0x0402523A RID: 152122
+		// Token: 0x04020B1A RID: 133914
 		Ice,
-		// Token: 0x0402523B RID: 152123
+		// Token: 0x04020B1B RID: 133915
 		Fire,
-		// Token: 0x0402523C RID: 152124
+		// Token: 0x04020B1C RID: 133916
 		Thunder,
-		// Token: 0x0402523D RID: 152125
+		// Token: 0x04020B1D RID: 133917
 		Wind,
-		// Token: 0x0402523E RID: 152126
+		// Token: 0x04020B1E RID: 133918
 		Light,
-		// Token: 0x0402523F RID: 152127
+		// Token: 0x04020B1F RID: 133919
 		Dark,
-		// Token: 0x04025240 RID: 152128
+		// Token: 0x04020B20 RID: 133920
 		ElementTypeMax
 	}
 }

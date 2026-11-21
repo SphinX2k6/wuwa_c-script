@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.Views
 {
-	// Token: 0x0200540B RID: 21515
+	// Token: 0x020043EE RID: 17390
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MenuScrollSettingContainerDynItem : UiPanelBase, IDynamicScrollBaseItem<MenuScrollItemData>
 	{
-		// Token: 0x06036FC0 RID: 225216 RVA: 0x00D07054 File Offset: 0x00D05254
+		// Token: 0x0602BF09 RID: 179977 RVA: 0x00C56470 File Offset: 0x00C54670
 		public UniTask Init(UUIItem actor)
 		{
 			MenuScrollSettingContainerDynItem.<Init>d__1 <Init>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036FC1 RID: 225217 RVA: 0x00D070A0 File Offset: 0x00D052A0
+		// Token: 0x0602BF0A RID: 179978 RVA: 0x00C564BC File Offset: 0x00C546BC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			};
 		}
 
-		// Token: 0x06036FC2 RID: 225218 RVA: 0x00D0713C File Offset: 0x00D0533C
+		// Token: 0x0602BF0B RID: 179979 RVA: 0x00C56558 File Offset: 0x00C54758
 		public FVector2D GetItemSize(MenuScrollItemData itemData)
 		{
 			if (this.VectorValue == null)
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			return this.VectorValue.ToUeVector2D(false);
 		}
 
-		// Token: 0x06036FC3 RID: 225219 RVA: 0x00D071AC File Offset: 0x00D053AC
+		// Token: 0x0602BF0C RID: 179980 RVA: 0x00C565C8 File Offset: 0x00C547C8
 		[return: Nullable(2)]
 		private UUIItem GetCurrentTypeUiItem(MenuScrollItemData itemData)
 		{
@@ -84,12 +84,12 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06036FC4 RID: 225220 RVA: 0x00D0721C File Offset: 0x00D0541C
+		// Token: 0x0602BF0D RID: 179981 RVA: 0x00C56638 File Offset: 0x00C54838
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0401D02B RID: 118827
+		// Token: 0x04017AC4 RID: 96964
 		[Nullable(2)]
 		private Vector2D VectorValue;
 	}

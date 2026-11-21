@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F52 RID: 24402
+	// Token: 0x02006596 RID: 26006
 	public enum EDisplayModeInPlayerOp : byte
 	{
-		// Token: 0x0400FCF6 RID: 64758
+		// Token: 0x04010A74 RID: 68212
 		ShowUi,
-		// Token: 0x0400FCF7 RID: 64759
+		// Token: 0x04010A75 RID: 68213
 		HideUi
 	}
 }

@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 {
-	// Token: 0x0200501C RID: 20508
+	// Token: 0x02003FE6 RID: 16358
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,12 +12,12 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 	})]
 	public class SequenceQteDrag : SequenceQteHandleBase<CommonQteDragContext>
 	{
-		// Token: 0x060347CB RID: 214987 RVA: 0x00C5D191 File Offset: 0x00C5B391
+		// Token: 0x0602966E RID: 169582 RVA: 0x00BA86DD File Offset: 0x00BA68DD
 		public SequenceQteDrag(SequenceQteManager qteManager, CommonQteDragContext context) : base(qteManager, context)
 		{
 		}
 
-		// Token: 0x060347CC RID: 214988 RVA: 0x00C5D19C File Offset: 0x00C5B39C
+		// Token: 0x0602966F RID: 169583 RVA: 0x00BA86E8 File Offset: 0x00BA68E8
 		protected override void OnCommonQteFinished()
 		{
 			if (this.Context.IsCheckByRealInput)
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			base.OnCommonQteFinished();
 		}
 
-		// Token: 0x060347CD RID: 214989 RVA: 0x00C5D1ED File Offset: 0x00C5B3ED
+		// Token: 0x06029670 RID: 169584 RVA: 0x00BA8739 File Offset: 0x00BA6939
 		protected override void OnReceiveTick(float delta)
 		{
 			if (this.HasCommonQteFinished)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			this.Progress = this.Context.GetProgress();
 		}
 
-		// Token: 0x060347CE RID: 214990 RVA: 0x00C5D229 File Offset: 0x00C5B429
+		// Token: 0x06029671 RID: 169585 RVA: 0x00BA8775 File Offset: 0x00BA6975
 		protected override void UpdateSequenceQte(float delta)
 		{
 			base.UpdateSequenceQte(delta);

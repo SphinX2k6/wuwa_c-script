@@ -7,37 +7,33 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002D7D RID: 11645
+// Token: 0x020022D7 RID: 8919
 [UClass("/Game/Aki/TypeScript/Game/Module/WuwaGo/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/WuwaGo/AnimNotify/AnimNotifyWuWaGoAttackHit.AnimNotifyWuWaGoAttackHit_C")]
 public class AnimNotifyWuWaGoAttackHit : UKuroAnimNotify, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x060187AD RID: 100269 RVA: 0x0063AAA0 File Offset: 0x00638CA0
+	// Token: 0x0601604F RID: 90191 RVA: 0x00660AB8 File Offset: 0x0065ECB8
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(AnimNotifyWuWaGoAttackHit) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), AnimNotifyWuWaGoAttackHit.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060187AE RID: 100270 RVA: 0x0063AB40 File Offset: 0x00638D40
+	// Token: 0x06016050 RID: 90192 RVA: 0x00660B70 File Offset: 0x0065ED70
 	[NullableContext(2)]
 	protected bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -50,7 +46,7 @@ public class AnimNotifyWuWaGoAttackHit : UKuroAnimNotify, IUnrealUObject, IUnrea
 		return true;
 	}
 
-	// Token: 0x060187AF RID: 100271 RVA: 0x0063AB6E File Offset: 0x00638D6E
+	// Token: 0x06016051 RID: 90193 RVA: 0x00660B9E File Offset: 0x0065ED9E
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (AnimNotifyWuWaGoAttackHit._ClassPtr == IntPtr.Zero)
@@ -60,23 +56,23 @@ public class AnimNotifyWuWaGoAttackHit : UKuroAnimNotify, IUnrealUObject, IUnrea
 		return AnimNotifyWuWaGoAttackHit._ClassPtr;
 	}
 
-	// Token: 0x060187B0 RID: 100272 RVA: 0x0063AB94 File Offset: 0x00638D94
+	// Token: 0x06016052 RID: 90194 RVA: 0x00660BC4 File Offset: 0x0065EDC4
 	public AnimNotifyWuWaGoAttackHit() : this(BuiltinUtils.AllocNativeUObject(AnimNotifyWuWaGoAttackHit.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060187B1 RID: 100273 RVA: 0x0063ABBC File Offset: 0x00638DBC
+	// Token: 0x06016053 RID: 90195 RVA: 0x00660BEC File Offset: 0x0065EDEC
 	[NullableContext(1)]
 	public AnimNotifyWuWaGoAttackHit(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AnimNotifyWuWaGoAttackHit.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060187B2 RID: 100274 RVA: 0x0063ABEF File Offset: 0x00638DEF
+	// Token: 0x06016054 RID: 90196 RVA: 0x00660C1F File Offset: 0x0065EE1F
 	protected AnimNotifyWuWaGoAttackHit(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060187B3 RID: 100275 RVA: 0x0063ABF8 File Offset: 0x00638DF8
+	// Token: 0x06016055 RID: 90197 RVA: 0x00660C28 File Offset: 0x0065EE28
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -84,13 +80,13 @@ public class AnimNotifyWuWaGoAttackHit : UKuroAnimNotify, IUnrealUObject, IUnrea
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0400B571 RID: 46449
+	// Token: 0x0400B8E6 RID: 47334
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/WuwaGo/AnimNotify/AnimNotifyWuWaGoAttackHit.AnimNotifyWuWaGoAttackHit_C";
 
-	// Token: 0x0400B572 RID: 46450
+	// Token: 0x0400B8E7 RID: 47335
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B573 RID: 46451
+	// Token: 0x0400B8E8 RID: 47336
 	private static IntPtr _ClassDefaultObjectPtr;
 }

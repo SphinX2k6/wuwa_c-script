@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DA2 RID: 7586
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001FB9 RID: 8121
 	public class IRenjuChess : IUiGame
 	{
-		// Token: 0x0600A293 RID: 41619 RVA: 0x00171AEC File Offset: 0x0016FCEC
-		[NullableContext(1)]
+		// Token: 0x0600AC9D RID: 44189 RVA: 0x00186214 File Offset: 0x00184414
 		private IRenjuChess_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A294 RID: 41620 RVA: 0x00171B24 File Offset: 0x0016FD24
-		[NullableContext(1)]
+		// Token: 0x0600AC9E RID: 44190 RVA: 0x0018624C File Offset: 0x0018444C
 		public static IRenjuChess Create([Nullable(2)] IRenjuChess instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A295 RID: 41621 RVA: 0x00171B37 File Offset: 0x0016FD37
-		[NullableContext(1)]
+		// Token: 0x0600AC9F RID: 44191 RVA: 0x0018625F File Offset: 0x0018445F
 		public static IRenjuChess CreateFromSetValue([Nullable(2)] IRenjuChess_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A296 RID: 41622 RVA: 0x00171B4A File Offset: 0x0016FD4A
-		[NullableContext(1)]
+		// Token: 0x0600ACA0 RID: 44192 RVA: 0x00186272 File Offset: 0x00184472
 		public new IRenjuChess_SetValue ToSetValue()
 		{
 			return new IRenjuChess_SetValue
@@ -65,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700322D RID: 12845
-		// (get) Token: 0x0600A297 RID: 41623 RVA: 0x00171B75 File Offset: 0x0016FD75
-		// (set) Token: 0x0600A298 RID: 41624 RVA: 0x00171BA0 File Offset: 0x0016FDA0
+		// Token: 0x170034C7 RID: 13511
+		// (get) Token: 0x0600ACA1 RID: 44193 RVA: 0x0018629D File Offset: 0x0018449D
+		// (set) Token: 0x0600ACA2 RID: 44194 RVA: 0x001862C8 File Offset: 0x001844C8
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -88,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700322E RID: 12846
-		// (get) Token: 0x0600A299 RID: 41625 RVA: 0x00171BAE File Offset: 0x0016FDAE
-		// (set) Token: 0x0600A29A RID: 41626 RVA: 0x00171BD9 File Offset: 0x0016FDD9
+		// Token: 0x170034C8 RID: 13512
+		// (get) Token: 0x0600ACA3 RID: 44195 RVA: 0x001862D6 File Offset: 0x001844D6
+		// (set) Token: 0x0600ACA4 RID: 44196 RVA: 0x00186301 File Offset: 0x00184501
 		public virtual int Chessboard
 		{
 			get
@@ -111,11 +105,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700322F RID: 12847
-		// (get) Token: 0x0600A29B RID: 41627 RVA: 0x00171BE7 File Offset: 0x0016FDE7
-		// (set) Token: 0x0600A29C RID: 41628 RVA: 0x00171C0E File Offset: 0x0016FE0E
+		// Token: 0x170034C9 RID: 13513
+		// (get) Token: 0x0600ACA5 RID: 44197 RVA: 0x0018630F File Offset: 0x0018450F
+		// (set) Token: 0x0600ACA6 RID: 44198 RVA: 0x00186336 File Offset: 0x00184536
+		[Nullable(2)]
 		public virtual IAdjustPlayerCameraType CameraConfig
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -129,16 +125,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.CameraConfig;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().CameraConfig = value;
 			}
 		}
 
-		// Token: 0x040061A0 RID: 24992
+		// Token: 0x04006728 RID: 26408
+		[Nullable(2)]
 		protected new IRenjuChess FbInstance;
 
-		// Token: 0x040061A1 RID: 24993
+		// Token: 0x04006729 RID: 26409
+		[Nullable(2)]
 		protected new IRenjuChess_SetValue PocoInterface;
 	}
 }

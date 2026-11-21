@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D2B RID: 19755
+	// Token: 0x02005227 RID: 21031
 	public class TBattleConditionUnion
 	{
-		// Token: 0x17008F37 RID: 36663
-		// (get) Token: 0x0601F5BE RID: 128446 RVA: 0x0045F27A File Offset: 0x0045D47A
-		// (set) Token: 0x0601F5BF RID: 128447 RVA: 0x0045F282 File Offset: 0x0045D482
+		// Token: 0x17009670 RID: 38512
+		// (get) Token: 0x06021205 RID: 135685 RVA: 0x0049320A File Offset: 0x0049140A
+		// (set) Token: 0x06021206 RID: 135686 RVA: 0x00493212 File Offset: 0x00491412
 		public TBattleCondition Type { get; set; }
 
-		// Token: 0x17008F38 RID: 36664
-		// (get) Token: 0x0601F5C0 RID: 128448 RVA: 0x0045F28B File Offset: 0x0045D48B
-		// (set) Token: 0x0601F5C1 RID: 128449 RVA: 0x0045F293 File Offset: 0x0045D493
+		// Token: 0x17009671 RID: 38513
+		// (get) Token: 0x06021207 RID: 135687 RVA: 0x0049321B File Offset: 0x0049141B
+		// (set) Token: 0x06021208 RID: 135688 RVA: 0x00493223 File Offset: 0x00491423
 		public object Value { get; set; }
 
-		// Token: 0x0601F5C2 RID: 128450 RVA: 0x0045F29C File Offset: 0x0045D49C
+		// Token: 0x06021209 RID: 135689 RVA: 0x0049322C File Offset: 0x0049142C
 		public TBattleConditionUnion()
 		{
 			this.Type = TBattleCondition.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F5C3 RID: 128451 RVA: 0x0045F2B2 File Offset: 0x0045D4B2
+		// Token: 0x0602120A RID: 135690 RVA: 0x00493242 File Offset: 0x00491442
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F5C4 RID: 128452 RVA: 0x0045F2C4 File Offset: 0x0045D4C4
+		// Token: 0x0602120B RID: 135691 RVA: 0x00493254 File Offset: 0x00491454
 		public IBattleTagConditionT AsIBattleTagCondition()
 		{
 			return this.As<IBattleTagConditionT>();
 		}
 
-		// Token: 0x0601F5C5 RID: 128453 RVA: 0x0045F2CC File Offset: 0x0045D4CC
+		// Token: 0x0602120C RID: 135692 RVA: 0x0049325C File Offset: 0x0049145C
 		public static TBattleConditionUnion FromIBattleTagCondition(IBattleTagConditionT _ibattletagcondition)
 		{
 			return new TBattleConditionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F5C6 RID: 128454 RVA: 0x0045F2E1 File Offset: 0x0045D4E1
+		// Token: 0x0602120D RID: 135693 RVA: 0x00493271 File Offset: 0x00491471
 		public ICounterAttackConditionT AsICounterAttackCondition()
 		{
 			return this.As<ICounterAttackConditionT>();
 		}
 
-		// Token: 0x0601F5C7 RID: 128455 RVA: 0x0045F2E9 File Offset: 0x0045D4E9
+		// Token: 0x0602120E RID: 135694 RVA: 0x00493279 File Offset: 0x00491479
 		public static TBattleConditionUnion FromICounterAttackCondition(ICounterAttackConditionT _icounterattackcondition)
 		{
 			return new TBattleConditionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F5C8 RID: 128456 RVA: 0x0045F2FE File Offset: 0x0045D4FE
+		// Token: 0x0602120F RID: 135695 RVA: 0x0049328E File Offset: 0x0049148E
 		public IPerfectDodgeConditionT AsIPerfectDodgeCondition()
 		{
 			return this.As<IPerfectDodgeConditionT>();
 		}
 
-		// Token: 0x0601F5C9 RID: 128457 RVA: 0x0045F306 File Offset: 0x0045D506
+		// Token: 0x06021210 RID: 135696 RVA: 0x00493296 File Offset: 0x00491496
 		public static TBattleConditionUnion FromIPerfectDodgeCondition(IPerfectDodgeConditionT _iperfectdodgecondition)
 		{
 			return new TBattleConditionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F5CA RID: 128458 RVA: 0x0045F31C File Offset: 0x0045D51C
+		// Token: 0x06021211 RID: 135697 RVA: 0x004932AC File Offset: 0x004914AC
 		public static int Pack(FlatBufferBuilder builder, TBattleConditionUnion _o)
 		{
 			switch (_o.Type)

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002293 RID: 8851
+	// Token: 0x02002500 RID: 9472
 	public static class EActorVisibilityEffectTypeExtensions
 	{
-		// Token: 0x0600C214 RID: 49684 RVA: 0x001C5A88 File Offset: 0x001C3C88
+		// Token: 0x0600CDDA RID: 52698 RVA: 0x001DD77C File Offset: 0x001DB97C
 		public static string ToEnumString(this EActorVisibilityEffectType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C215 RID: 49685 RVA: 0x001C5AB0 File Offset: 0x001C3CB0
+		// Token: 0x0600CDDB RID: 52699 RVA: 0x001DD7A4 File Offset: 0x001DB9A4
 		public static EActorVisibilityEffectType FromString(string name)
 		{
 			EActorVisibilityEffectType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C216 RID: 49686 RVA: 0x001C5AD9 File Offset: 0x001C3CD9
+		// Token: 0x0600CDDC RID: 52700 RVA: 0x001DD7CD File Offset: 0x001DB9CD
 		public static bool TryFromString(string name, out EActorVisibilityEffectType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C217 RID: 49687 RVA: 0x001C5AFE File Offset: 0x001C3CFE
+		// Token: 0x0600CDDD RID: 52701 RVA: 0x001DD7F2 File Offset: 0x001DB9F2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C218 RID: 49688 RVA: 0x001C5B0E File Offset: 0x001C3D0E
+		// Token: 0x0600CDDE RID: 52702 RVA: 0x001DD802 File Offset: 0x001DBA02
 		public static EActorVisibilityEffectType[] GetValues()
 		{
 			return new EActorVisibilityEffectType[1];
 		}
 
-		// Token: 0x0600C219 RID: 49689 RVA: 0x001C5B16 File Offset: 0x001C3D16
+		// Token: 0x0600CDDF RID: 52703 RVA: 0x001DD80A File Offset: 0x001DBA0A
 		public static string[] GetNames()
 		{
 			return new string[]

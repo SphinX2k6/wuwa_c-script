@@ -3,44 +3,44 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 {
-	// Token: 0x02006F46 RID: 28486
+	// Token: 0x020060C7 RID: 24775
 	[NullableContext(1)]
 	public interface IBrokenRockConfig
 	{
-		// Token: 0x17009B2B RID: 39723
-		// (get) Token: 0x060454A7 RID: 283815
+		// Token: 0x1700706A RID: 28778
+		// (get) Token: 0x0603B655 RID: 243285
 		int Id { get; }
 
-		// Token: 0x17009B2C RID: 39724
-		// (get) Token: 0x060454A8 RID: 283816
+		// Token: 0x1700706B RID: 28779
+		// (get) Token: 0x0603B656 RID: 243286
 		int[] Rings { get; }
 
-		// Token: 0x17009B2D RID: 39725
-		// (get) Token: 0x060454A9 RID: 283817
+		// Token: 0x1700706C RID: 28780
+		// (get) Token: 0x0603B657 RID: 243287
 		int ScoreMax { get; }
 
-		// Token: 0x17009B2E RID: 39726
-		// (get) Token: 0x060454AA RID: 283818
+		// Token: 0x1700706D RID: 28781
+		// (get) Token: 0x0603B658 RID: 243288
 		int ScoreUp { get; }
 
-		// Token: 0x17009B2F RID: 39727
-		// (get) Token: 0x060454AB RID: 283819
+		// Token: 0x1700706E RID: 28782
+		// (get) Token: 0x0603B659 RID: 243289
 		int ScoreDown { get; }
 
-		// Token: 0x17009B30 RID: 39728
-		// (get) Token: 0x060454AC RID: 283820
+		// Token: 0x1700706F RID: 28783
+		// (get) Token: 0x0603B65A RID: 243290
 		int GlobalTime { get; }
 
-		// Token: 0x17009B31 RID: 39729
-		// (get) Token: 0x060454AD RID: 283821
+		// Token: 0x17007070 RID: 28784
+		// (get) Token: 0x0603B65B RID: 243291
 		int NormalSkill { get; }
 
-		// Token: 0x17009B32 RID: 39730
-		// (get) Token: 0x060454AE RID: 283822
+		// Token: 0x17007071 RID: 28785
+		// (get) Token: 0x0603B65C RID: 243292
 		int FinishSkill { get; }
 
-		// Token: 0x17009B33 RID: 39731
-		// (get) Token: 0x060454AF RID: 283823
+		// Token: 0x17007072 RID: 28786
+		// (get) Token: 0x0603B65D RID: 243293
 		string EntityUid { get; }
 	}
 }

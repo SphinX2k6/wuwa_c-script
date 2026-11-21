@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006153 RID: 24915
+	// Token: 0x020067B8 RID: 26552
 	public class IAdjustFixedCameraRotateConfigT
 	{
-		// Token: 0x1700B8D7 RID: 47319
-		// (get) Token: 0x0602AC64 RID: 175204 RVA: 0x005E5908 File Offset: 0x005E3B08
-		// (set) Token: 0x0602AC65 RID: 175205 RVA: 0x005E5910 File Offset: 0x005E3B10
+		// Token: 0x1700C247 RID: 49735
+		// (get) Token: 0x0602D35D RID: 185181 RVA: 0x0062FAE4 File Offset: 0x0062DCE4
+		// (set) Token: 0x0602D35E RID: 185182 RVA: 0x0062FAEC File Offset: 0x0062DCEC
 		public float YawLimitMin { get; set; }
 
-		// Token: 0x1700B8D8 RID: 47320
-		// (get) Token: 0x0602AC66 RID: 175206 RVA: 0x005E5919 File Offset: 0x005E3B19
-		// (set) Token: 0x0602AC67 RID: 175207 RVA: 0x005E5921 File Offset: 0x005E3B21
+		// Token: 0x1700C248 RID: 49736
+		// (get) Token: 0x0602D35F RID: 185183 RVA: 0x0062FAF5 File Offset: 0x0062DCF5
+		// (set) Token: 0x0602D360 RID: 185184 RVA: 0x0062FAFD File Offset: 0x0062DCFD
 		public float YawLimitMax { get; set; }
 
-		// Token: 0x1700B8D9 RID: 47321
-		// (get) Token: 0x0602AC68 RID: 175208 RVA: 0x005E592A File Offset: 0x005E3B2A
-		// (set) Token: 0x0602AC69 RID: 175209 RVA: 0x005E5932 File Offset: 0x005E3B32
+		// Token: 0x1700C249 RID: 49737
+		// (get) Token: 0x0602D361 RID: 185185 RVA: 0x0062FB06 File Offset: 0x0062DD06
+		// (set) Token: 0x0602D362 RID: 185186 RVA: 0x0062FB0E File Offset: 0x0062DD0E
 		public float PitchLimitMin { get; set; }
 
-		// Token: 0x1700B8DA RID: 47322
-		// (get) Token: 0x0602AC6A RID: 175210 RVA: 0x005E593B File Offset: 0x005E3B3B
-		// (set) Token: 0x0602AC6B RID: 175211 RVA: 0x005E5943 File Offset: 0x005E3B43
+		// Token: 0x1700C24A RID: 49738
+		// (get) Token: 0x0602D363 RID: 185187 RVA: 0x0062FB17 File Offset: 0x0062DD17
+		// (set) Token: 0x0602D364 RID: 185188 RVA: 0x0062FB1F File Offset: 0x0062DD1F
 		public float PitchLimitMax { get; set; }
 
-		// Token: 0x1700B8DB RID: 47323
-		// (get) Token: 0x0602AC6C RID: 175212 RVA: 0x005E594C File Offset: 0x005E3B4C
-		// (set) Token: 0x0602AC6D RID: 175213 RVA: 0x005E5954 File Offset: 0x005E3B54
+		// Token: 0x1700C24B RID: 49739
+		// (get) Token: 0x0602D365 RID: 185189 RVA: 0x0062FB28 File Offset: 0x0062DD28
+		// (set) Token: 0x0602D366 RID: 185190 RVA: 0x0062FB30 File Offset: 0x0062DD30
 		public float YawRotateSpeed { get; set; }
 
-		// Token: 0x1700B8DC RID: 47324
-		// (get) Token: 0x0602AC6E RID: 175214 RVA: 0x005E595D File Offset: 0x005E3B5D
-		// (set) Token: 0x0602AC6F RID: 175215 RVA: 0x005E5965 File Offset: 0x005E3B65
+		// Token: 0x1700C24C RID: 49740
+		// (get) Token: 0x0602D367 RID: 185191 RVA: 0x0062FB39 File Offset: 0x0062DD39
+		// (set) Token: 0x0602D368 RID: 185192 RVA: 0x0062FB41 File Offset: 0x0062DD41
 		public float PitchRotateSpeed { get; set; }
 
-		// Token: 0x0602AC70 RID: 175216 RVA: 0x005E5970 File Offset: 0x005E3B70
+		// Token: 0x0602D369 RID: 185193 RVA: 0x0062FB4C File Offset: 0x0062DD4C
 		public IAdjustFixedCameraRotateConfigT()
 		{
 			this.YawLimitMin = 0f;

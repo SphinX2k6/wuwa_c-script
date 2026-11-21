@@ -5,16 +5,16 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 {
-	// Token: 0x02007113 RID: 28947
+	// Token: 0x02006341 RID: 25409
 	public class MechascoutDragInteractHandler : ManipulateInteractHandlerBase
 	{
-		// Token: 0x06046AB9 RID: 289465 RVA: 0x011CA347 File Offset: 0x011C8547
+		// Token: 0x0603D8FE RID: 252158 RVA: 0x011D314B File Offset: 0x011D134B
 		[NullableContext(1)]
 		public MechascoutDragInteractHandler(IManipulateInteractContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06046ABA RID: 289466 RVA: 0x011CA350 File Offset: 0x011C8550
+		// Token: 0x0603D8FF RID: 252159 RVA: 0x011D3154 File Offset: 0x011D1354
 		public override bool Start()
 		{
 			if (!this.Context.CheckBeforeInteract(EExploreSkillInteractType.MechascoutDrag))
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			return true;
 		}
 
-		// Token: 0x06046ABB RID: 289467 RVA: 0x011CA3B6 File Offset: 0x011C85B6
+		// Token: 0x0603D900 RID: 252160 RVA: 0x011D31BA File Offset: 0x011D13BA
 		public override void End()
 		{
 			this.Context.Interacting = false;

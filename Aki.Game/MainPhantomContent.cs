@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024BC RID: 9404
+// Token: 0x020019A3 RID: 6563
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class MainPhantomContent : GridProxyAbstract<IMainPhantomItemData>
 {
-	// Token: 0x06012DD1 RID: 77265 RVA: 0x004A8670 File Offset: 0x004A6870
+	// Token: 0x06010291 RID: 66193 RVA: 0x004B6224 File Offset: 0x004B4424
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class MainPhantomContent : GridProxyAbstract<IMainPhantomItemData>
 		};
 	}
 
-	// Token: 0x06012DD2 RID: 77266 RVA: 0x004A8748 File Offset: 0x004A6948
+	// Token: 0x06010292 RID: 66194 RVA: 0x004B62FC File Offset: 0x004B44FC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MainPhantomContent.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -46,14 +46,14 @@ public class MainPhantomContent : GridProxyAbstract<IMainPhantomItemData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012DD3 RID: 77267 RVA: 0x004A878B File Offset: 0x004A698B
+	// Token: 0x06010293 RID: 66195 RVA: 0x004B633F File Offset: 0x004B453F
 	protected override void OnStart()
 	{
 		base.GetItem(5).SetUIActive(false);
 		base.GetItem(4).SetUIActive(true);
 	}
 
-	// Token: 0x06012DD4 RID: 77268 RVA: 0x004A87A7 File Offset: 0x004A69A7
+	// Token: 0x06010294 RID: 66196 RVA: 0x004B635B File Offset: 0x004B455B
 	private void OnClickTogOption(EToggleState toggleState)
 	{
 		if (this.CurrentData == null)
@@ -66,7 +66,7 @@ public class MainPhantomContent : GridProxyAbstract<IMainPhantomItemData>
 		}
 	}
 
-	// Token: 0x06012DD5 RID: 77269 RVA: 0x004A87D8 File Offset: 0x004A69D8
+	// Token: 0x06010295 RID: 66197 RVA: 0x004B638C File Offset: 0x004B458C
 	[NullableContext(1)]
 	public override void Refresh(IMainPhantomItemData data, bool isSelected, int gridIndex)
 	{
@@ -99,9 +99,9 @@ public class MainPhantomContent : GridProxyAbstract<IMainPhantomItemData>
 		base.GetExtendToggle(0).SetToggleState(flag ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04008E27 RID: 36391
+	// Token: 0x04008F71 RID: 36721
 	private IMainPhantomItemData CurrentData;
 
-	// Token: 0x04008E28 RID: 36392
+	// Token: 0x04008F72 RID: 36722
 	private VisionMainFetterSuitItem VisionMainFetterSuitItem;
 }

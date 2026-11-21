@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000837 RID: 2103
+	// Token: 0x020008DA RID: 2266
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MonsterComponent : IComponentBase
 	{
-		// Token: 0x06002DFD RID: 11773 RVA: 0x00076FBC File Offset: 0x000751BC
-		[NullableContext(1)]
+		// Token: 0x0600312F RID: 12591 RVA: 0x0007E360 File Offset: 0x0007C560
+		[NullableContext(0)]
 		private MonsterComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002DFE RID: 11774 RVA: 0x00076FF4 File Offset: 0x000751F4
-		[NullableContext(1)]
+		// Token: 0x06003130 RID: 12592 RVA: 0x0007E398 File Offset: 0x0007C598
+		[NullableContext(0)]
 		public static MonsterComponent Create([Nullable(2)] MonsterComponent instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002DFF RID: 11775 RVA: 0x00077007 File Offset: 0x00075207
-		[NullableContext(1)]
+		// Token: 0x06003131 RID: 12593 RVA: 0x0007E3AB File Offset: 0x0007C5AB
+		[NullableContext(0)]
 		public static MonsterComponent CreateFromSetValue([Nullable(2)] MonsterComponent_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002E00 RID: 11776 RVA: 0x0007701C File Offset: 0x0007521C
-		[NullableContext(1)]
+		// Token: 0x06003132 RID: 12594 RVA: 0x0007E3C0 File Offset: 0x0007C5C0
+		[NullableContext(0)]
 		public new MonsterComponent_SetValue ToSetValue()
 		{
 			return new MonsterComponent_SetValue
@@ -70,13 +70,15 @@ namespace Aki.TDConfigMgr.Component
 				ShareLifeSubMonsterIds = this.ShareLifeSubMonsterIds,
 				LifeMaxCustomizationId = this.LifeMaxCustomizationId,
 				EnableMonsterNpcInteraction = this.EnableMonsterNpcInteraction,
-				MonsterCommunicationGroup = this.MonsterCommunicationGroup
+				EnableMonsterCombatInteraction = this.EnableMonsterCombatInteraction,
+				MonsterCommunicationGroup = this.MonsterCommunicationGroup,
+				ExtraMovementAbilities = this.ExtraMovementAbilities
 			};
 		}
 
-		// Token: 0x17000C0F RID: 3087
-		// (get) Token: 0x06002E01 RID: 11777 RVA: 0x000770B4 File Offset: 0x000752B4
-		// (set) Token: 0x06002E02 RID: 11778 RVA: 0x000770EE File Offset: 0x000752EE
+		// Token: 0x17000CD3 RID: 3283
+		// (get) Token: 0x06003133 RID: 12595 RVA: 0x0007E470 File Offset: 0x0007C670
+		// (set) Token: 0x06003134 RID: 12596 RVA: 0x0007E4AA File Offset: 0x0007C6AA
 		public override bool? Disabled
 		{
 			get
@@ -98,9 +100,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C10 RID: 3088
-		// (get) Token: 0x06002E03 RID: 11779 RVA: 0x000770FC File Offset: 0x000752FC
-		// (set) Token: 0x06002E04 RID: 11780 RVA: 0x00077126 File Offset: 0x00075326
+		// Token: 0x17000CD4 RID: 3284
+		// (get) Token: 0x06003135 RID: 12597 RVA: 0x0007E4B8 File Offset: 0x0007C6B8
+		// (set) Token: 0x06003136 RID: 12598 RVA: 0x0007E4E2 File Offset: 0x0007C6E2
 		public override bool? EdIsLocked
 		{
 			get
@@ -117,9 +119,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C11 RID: 3089
-		// (get) Token: 0x06002E05 RID: 11781 RVA: 0x00077134 File Offset: 0x00075334
-		// (set) Token: 0x06002E06 RID: 11782 RVA: 0x0007715F File Offset: 0x0007535F
+		// Token: 0x17000CD5 RID: 3285
+		// (get) Token: 0x06003137 RID: 12599 RVA: 0x0007E4F0 File Offset: 0x0007C6F0
+		// (set) Token: 0x06003138 RID: 12600 RVA: 0x0007E51B File Offset: 0x0007C71B
 		public virtual int FightConfigId
 		{
 			get
@@ -140,9 +142,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C12 RID: 3090
-		// (get) Token: 0x06002E07 RID: 11783 RVA: 0x00077170 File Offset: 0x00075370
-		// (set) Token: 0x06002E08 RID: 11784 RVA: 0x000771D1 File Offset: 0x000753D1
+		// Token: 0x17000CD6 RID: 3286
+		// (get) Token: 0x06003139 RID: 12601 RVA: 0x0007E52C File Offset: 0x0007C72C
+		// (set) Token: 0x0600313A RID: 12602 RVA: 0x0007E58D File Offset: 0x0007C78D
 		public virtual IBossStateViewConfig BossViewConfig
 		{
 			get
@@ -170,20 +172,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C13 RID: 3091
-		// (get) Token: 0x06002E09 RID: 11785 RVA: 0x000771E6 File Offset: 0x000753E6
-		// (set) Token: 0x06002E0A RID: 11786 RVA: 0x0007720D File Offset: 0x0007540D
+		// Token: 0x17000CD7 RID: 3287
+		// (get) Token: 0x0600313B RID: 12603 RVA: 0x0007E5A2 File Offset: 0x0007C7A2
+		// (set) Token: 0x0600313C RID: 12604 RVA: 0x0007E5C9 File Offset: 0x0007C7C9
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> InitGasTag
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -201,7 +203,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -209,9 +211,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C14 RID: 3092
-		// (get) Token: 0x06002E0B RID: 11787 RVA: 0x0007721C File Offset: 0x0007541C
-		// (set) Token: 0x06002E0C RID: 11788 RVA: 0x00077256 File Offset: 0x00075456
+		// Token: 0x17000CD8 RID: 3288
+		// (get) Token: 0x0600313D RID: 12605 RVA: 0x0007E5D8 File Offset: 0x0007C7D8
+		// (set) Token: 0x0600313E RID: 12606 RVA: 0x0007E612 File Offset: 0x0007C812
 		public virtual int? SpecialHateAndSenseConfig
 		{
 			get
@@ -233,9 +235,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C15 RID: 3093
-		// (get) Token: 0x06002E0D RID: 11789 RVA: 0x00077264 File Offset: 0x00075464
-		// (set) Token: 0x06002E0E RID: 11790 RVA: 0x000772C5 File Offset: 0x000754C5
+		// Token: 0x17000CD9 RID: 3289
+		// (get) Token: 0x0600313F RID: 12607 RVA: 0x0007E620 File Offset: 0x0007C820
+		// (set) Token: 0x06003140 RID: 12608 RVA: 0x0007E681 File Offset: 0x0007C881
 		public virtual IMonsterPerformConfig PerformConfig
 		{
 			get
@@ -263,9 +265,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C16 RID: 3094
-		// (get) Token: 0x06002E0F RID: 11791 RVA: 0x000772DA File Offset: 0x000754DA
-		// (set) Token: 0x06002E10 RID: 11792 RVA: 0x00077301 File Offset: 0x00075501
+		// Token: 0x17000CDA RID: 3290
+		// (get) Token: 0x06003141 RID: 12609 RVA: 0x0007E696 File Offset: 0x0007C896
+		// (set) Token: 0x06003142 RID: 12610 RVA: 0x0007E6BD File Offset: 0x0007C8BD
 		public virtual List<int> ShareLifeSubMonsterIds
 		{
 			get
@@ -287,9 +289,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C17 RID: 3095
-		// (get) Token: 0x06002E11 RID: 11793 RVA: 0x00077310 File Offset: 0x00075510
-		// (set) Token: 0x06002E12 RID: 11794 RVA: 0x0007734A File Offset: 0x0007554A
+		// Token: 0x17000CDB RID: 3291
+		// (get) Token: 0x06003143 RID: 12611 RVA: 0x0007E6CC File Offset: 0x0007C8CC
+		// (set) Token: 0x06003144 RID: 12612 RVA: 0x0007E706 File Offset: 0x0007C906
 		public virtual int? LifeMaxCustomizationId
 		{
 			get
@@ -311,9 +313,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C18 RID: 3096
-		// (get) Token: 0x06002E13 RID: 11795 RVA: 0x00077358 File Offset: 0x00075558
-		// (set) Token: 0x06002E14 RID: 11796 RVA: 0x000773B9 File Offset: 0x000755B9
+		// Token: 0x17000CDC RID: 3292
+		// (get) Token: 0x06003145 RID: 12613 RVA: 0x0007E714 File Offset: 0x0007C914
+		// (set) Token: 0x06003146 RID: 12614 RVA: 0x0007E775 File Offset: 0x0007C975
 		public virtual IMonsterNpcInteractionEnableConfig EnableMonsterNpcInteraction
 		{
 			get
@@ -341,9 +343,48 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C19 RID: 3097
-		// (get) Token: 0x06002E15 RID: 11797 RVA: 0x000773D0 File Offset: 0x000755D0
-		// (set) Token: 0x06002E16 RID: 11798 RVA: 0x00077431 File Offset: 0x00075631
+		// Token: 0x17000CDD RID: 3293
+		// (get) Token: 0x06003147 RID: 12615 RVA: 0x0007E78A File Offset: 0x0007C98A
+		// (set) Token: 0x06003148 RID: 12616 RVA: 0x0007E7B1 File Offset: 0x0007C9B1
+		[Nullable(new byte[]
+		{
+			2,
+			0
+		})]
+		public virtual List<IMonsterCombatInteractionConfig> EnableMonsterCombatInteraction
+		{
+			[return: Nullable(new byte[]
+			{
+				2,
+				0
+			})]
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.EnableMonsterCombatInteraction;
+				}
+				MonsterComponent_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.EnableMonsterCombatInteraction;
+			}
+			[param: Nullable(new byte[]
+			{
+				2,
+				0
+			})]
+			set
+			{
+				this.GetOrCreatePoco().EnableMonsterCombatInteraction = value;
+			}
+		}
+
+		// Token: 0x17000CDE RID: 3294
+		// (get) Token: 0x06003149 RID: 12617 RVA: 0x0007E7C0 File Offset: 0x0007C9C0
+		// (set) Token: 0x0600314A RID: 12618 RVA: 0x0007E821 File Offset: 0x0007CA21
 		public virtual IMonsterCommunicationGroupConfig MonsterCommunicationGroup
 		{
 			get
@@ -371,38 +412,62 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001E63 RID: 7779
+		// Token: 0x17000CDF RID: 3295
+		// (get) Token: 0x0600314B RID: 12619 RVA: 0x0007E836 File Offset: 0x0007CA36
+		// (set) Token: 0x0600314C RID: 12620 RVA: 0x0007E85D File Offset: 0x0007CA5D
+		public virtual List<EExtraMovementAbility> ExtraMovementAbilities
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.ExtraMovementAbilities;
+				}
+				MonsterComponent_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.ExtraMovementAbilities;
+			}
+			set
+			{
+				this.GetOrCreatePoco().ExtraMovementAbilities = value;
+			}
+		}
+
+		// Token: 0x04002070 RID: 8304
 		protected new MonsterComponent FbInstance;
 
-		// Token: 0x04001E64 RID: 7780
+		// Token: 0x04002071 RID: 8305
 		protected new MonsterComponent_SetValue PocoInterface;
 
-		// Token: 0x04001E65 RID: 7781
-		[Nullable(1)]
+		// Token: 0x04002072 RID: 8306
+		[Nullable(0)]
 		private IBossStateViewConfig _BossViewConfigCache;
 
-		// Token: 0x04001E66 RID: 7782
+		// Token: 0x04002073 RID: 8307
 		private bool _BossViewConfigInited;
 
-		// Token: 0x04001E67 RID: 7783
-		[Nullable(1)]
+		// Token: 0x04002074 RID: 8308
+		[Nullable(0)]
 		private IMonsterPerformConfig _PerformConfigCache;
 
-		// Token: 0x04001E68 RID: 7784
+		// Token: 0x04002075 RID: 8309
 		private bool _PerformConfigInited;
 
-		// Token: 0x04001E69 RID: 7785
-		[Nullable(1)]
+		// Token: 0x04002076 RID: 8310
+		[Nullable(0)]
 		private IMonsterNpcInteractionEnableConfig _EnableMonsterNpcInteractionCache;
 
-		// Token: 0x04001E6A RID: 7786
+		// Token: 0x04002077 RID: 8311
 		private bool _EnableMonsterNpcInteractionInited;
 
-		// Token: 0x04001E6B RID: 7787
-		[Nullable(1)]
+		// Token: 0x04002078 RID: 8312
+		[Nullable(0)]
 		private IMonsterCommunicationGroupConfig _MonsterCommunicationGroupCache;
 
-		// Token: 0x04001E6C RID: 7788
+		// Token: 0x04002079 RID: 8313
 		private bool _MonsterCommunicationGroupInited;
 	}
 }

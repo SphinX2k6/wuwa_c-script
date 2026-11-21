@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Update
 {
-	// Token: 0x02000090 RID: 144
+	// Token: 0x02000093 RID: 147
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PakKeyUpdate : Singleton
 	{
-		// Token: 0x06000526 RID: 1318 RVA: 0x0002FEB4 File Offset: 0x0002E0B4
+		// Token: 0x0600053D RID: 1341 RVA: 0x0003141C File Offset: 0x0002F61C
 		public void Init(AppPathMisc pathMisc)
 		{
 			this.NeedExtPakKeys = UKuroPakKeyLibrary.NeedExtPakKeys();
@@ -23,7 +23,7 @@ namespace CSharpScript.Launcher.Update
 			UKuroPakKeyLibrary.SetLoadCallback(DelegateUtils.ToManualReleaseDelegate<FKuroKeysLoadComplete>(this.LoadCompleteCallbackDelegate));
 		}
 
-		// Token: 0x06000527 RID: 1319 RVA: 0x0002FF25 File Offset: 0x0002E125
+		// Token: 0x0600053E RID: 1342 RVA: 0x0003148D File Offset: 0x0002F68D
 		public void Destroy()
 		{
 			if (this.LoadCompleteCallbackDelegate != null)
@@ -34,7 +34,7 @@ namespace CSharpScript.Launcher.Update
 			UKuroPakKeyLibrary.UnbindLoadCallback();
 		}
 
-		// Token: 0x06000528 RID: 1320 RVA: 0x0002FF48 File Offset: 0x0002E148
+		// Token: 0x0600053F RID: 1343 RVA: 0x000314B0 File Offset: 0x0002F6B0
 		private void Finish(bool isDone)
 		{
 			this.IsUpdating = false;
@@ -51,7 +51,7 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x06000529 RID: 1321 RVA: 0x0002FF98 File Offset: 0x0002E198
+		// Token: 0x06000540 RID: 1344 RVA: 0x00031500 File Offset: 0x0002F700
 		[NullableContext(2)]
 		[return: Nullable(0)]
 		public UniTask<bool> CheckPakKey(Action callback, Action failCallback)
@@ -66,7 +66,7 @@ namespace CSharpScript.Launcher.Update
 			return <CheckPakKey>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600052A RID: 1322 RVA: 0x0002FFEC File Offset: 0x0002E1EC
+		// Token: 0x06000541 RID: 1345 RVA: 0x00031554 File Offset: 0x0002F754
 		[NullableContext(0)]
 		public UniTask<bool> GetKeyListInfo(int urlIndex = 0)
 		{
@@ -79,7 +79,7 @@ namespace CSharpScript.Launcher.Update
 			return <GetKeyListInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600052B RID: 1323 RVA: 0x00030038 File Offset: 0x0002E238
+		// Token: 0x06000542 RID: 1346 RVA: 0x000315A0 File Offset: 0x0002F7A0
 		[NullableContext(0)]
 		private UniTask<bool> GetKeyListConfig()
 		{
@@ -91,7 +91,7 @@ namespace CSharpScript.Launcher.Update
 			return <GetKeyListConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600052C RID: 1324 RVA: 0x0003007C File Offset: 0x0002E27C
+		// Token: 0x06000543 RID: 1347 RVA: 0x000315E4 File Offset: 0x0002F7E4
 		[NullableContext(2)]
 		[return: Nullable(0)]
 		public UniTask<bool> TryDownloadFile(Action callback, Action failCallback)
@@ -106,7 +106,7 @@ namespace CSharpScript.Launcher.Update
 			return <TryDownloadFile>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600052D RID: 1325 RVA: 0x000300CF File Offset: 0x0002E2CF
+		// Token: 0x06000544 RID: 1348 RVA: 0x00031637 File Offset: 0x0002F837
 		private void LoadCompleteCallback(bool success, string tag)
 		{
 			if (this.LoadFileCallbacks.ContainsKey(tag))
@@ -116,7 +116,7 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x0600052E RID: 1326 RVA: 0x00030100 File Offset: 0x0002E300
+		// Token: 0x06000545 RID: 1349 RVA: 0x00031668 File Offset: 0x0002F868
 		[NullableContext(2)]
 		[return: Nullable(0)]
 		public UniTask<bool> CheckVideoPakKey(Action callback, Action failCallback)
@@ -131,7 +131,7 @@ namespace CSharpScript.Launcher.Update
 			return <CheckVideoPakKey>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600052F RID: 1327 RVA: 0x00030154 File Offset: 0x0002E354
+		// Token: 0x06000546 RID: 1350 RVA: 0x000316BC File Offset: 0x0002F8BC
 		[NullableContext(0)]
 		private UniTask<bool> GetVideoKeyListInfo(int urlIndex = 0)
 		{
@@ -144,7 +144,7 @@ namespace CSharpScript.Launcher.Update
 			return <GetVideoKeyListInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000530 RID: 1328 RVA: 0x000301A0 File Offset: 0x0002E3A0
+		// Token: 0x06000547 RID: 1351 RVA: 0x00031708 File Offset: 0x0002F908
 		[NullableContext(2)]
 		[return: Nullable(0)]
 		public UniTask<bool> TryDownloadVideoFile(Action callback, Action failCallback)
@@ -159,7 +159,7 @@ namespace CSharpScript.Launcher.Update
 			return <TryDownloadVideoFile>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000531 RID: 1329 RVA: 0x000301F4 File Offset: 0x0002E3F4
+		// Token: 0x06000548 RID: 1352 RVA: 0x0003175C File Offset: 0x0002F95C
 		private void VideoFinish(bool isDone)
 		{
 			this.IsVideoUpdating = false;
@@ -176,8 +176,8 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x170000C1 RID: 193
-		// (get) Token: 0x06000532 RID: 1330 RVA: 0x00030242 File Offset: 0x0002E442
+		// Token: 0x170000C3 RID: 195
+		// (get) Token: 0x06000549 RID: 1353 RVA: 0x000317AA File Offset: 0x0002F9AA
 		public static PakKeyUpdate Instance
 		{
 			get
@@ -191,12 +191,12 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x06000533 RID: 1331 RVA: 0x00030265 File Offset: 0x0002E465
+		// Token: 0x0600054A RID: 1354 RVA: 0x000317CD File Offset: 0x0002F9CD
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000534 RID: 1332 RVA: 0x00030267 File Offset: 0x0002E467
+		// Token: 0x0600054B RID: 1355 RVA: 0x000317CF File Offset: 0x0002F9CF
 		public static void ResetStaticDefaultValue()
 		{
 			PakKeyUpdate instance = PakKeyUpdate._instance;
@@ -207,77 +207,77 @@ namespace CSharpScript.Launcher.Update
 			PakKeyUpdate._instance = null;
 		}
 
-		// Token: 0x06000535 RID: 1333 RVA: 0x00030280 File Offset: 0x0002E480
+		// Token: 0x0600054C RID: 1356 RVA: 0x000317E8 File Offset: 0x0002F9E8
 		static PakKeyUpdate()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PakKeyUpdate.CreateStaticDefaultValue), new Action(PakKeyUpdate.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04000307 RID: 775
+		// Token: 0x04000335 RID: 821
 		private const int DOWNLOAD_TRY_COUNT = 3;
 
-		// Token: 0x04000308 RID: 776
+		// Token: 0x04000336 RID: 822
 		private const int KEYLIST_TRY_COUNT = 3;
 
-		// Token: 0x04000309 RID: 777
+		// Token: 0x04000337 RID: 823
 		private const int MIN_UPDATE_INTERVAL = 60;
 
-		// Token: 0x0400030A RID: 778
+		// Token: 0x04000338 RID: 824
 		private bool IsUpdating;
 
-		// Token: 0x0400030B RID: 779
+		// Token: 0x04000339 RID: 825
 		private double LastUpdateTime;
 
-		// Token: 0x0400030C RID: 780
+		// Token: 0x0400033A RID: 826
 		public bool NeedExtPakKeys;
 
-		// Token: 0x0400030D RID: 781
+		// Token: 0x0400033B RID: 827
 		public int UpdateCheckInterval = -1;
 
-		// Token: 0x0400030E RID: 782
+		// Token: 0x0400033C RID: 828
 		private int KeyListTryCount;
 
-		// Token: 0x0400030F RID: 783
+		// Token: 0x0400033D RID: 829
 		private string CurDataHash = "";
 
-		// Token: 0x04000310 RID: 784
+		// Token: 0x0400033E RID: 830
 		private string SavePath = "";
 
-		// Token: 0x04000311 RID: 785
+		// Token: 0x0400033F RID: 831
 		[Nullable(2)]
 		private PakListConfig Config;
 
-		// Token: 0x04000312 RID: 786
+		// Token: 0x04000340 RID: 832
 		[Nullable(2)]
 		private Action UpdateCallback;
 
-		// Token: 0x04000313 RID: 787
+		// Token: 0x04000341 RID: 833
 		private int VideoKeyListTryCount;
 
-		// Token: 0x04000314 RID: 788
+		// Token: 0x04000342 RID: 834
 		private bool IsVideoUpdating;
 
-		// Token: 0x04000315 RID: 789
+		// Token: 0x04000343 RID: 835
 		private double LastVideoUpdateTime;
 
-		// Token: 0x04000316 RID: 790
+		// Token: 0x04000344 RID: 836
 		private string VideoSavePath = "";
 
-		// Token: 0x04000317 RID: 791
+		// Token: 0x04000345 RID: 837
 		private string CurVideoDataHash = "";
 
-		// Token: 0x04000318 RID: 792
+		// Token: 0x04000346 RID: 838
 		[Nullable(2)]
 		private PakListConfig VideoConfig;
 
-		// Token: 0x04000319 RID: 793
+		// Token: 0x04000347 RID: 839
 		[Nullable(2)]
 		private Action VideoUpdateCallback;
 
-		// Token: 0x0400031A RID: 794
+		// Token: 0x04000348 RID: 840
 		private readonly Dictionary<string, Action<bool>> LoadFileCallbacks = new Dictionary<string, Action<bool>>();
 
-		// Token: 0x0400031B RID: 795
+		// Token: 0x04000349 RID: 841
 		[Nullable(new byte[]
 		{
 			2,
@@ -285,7 +285,7 @@ namespace CSharpScript.Launcher.Update
 		})]
 		private Action<bool, string> LoadCompleteCallbackDelegate;
 
-		// Token: 0x0400031C RID: 796
+		// Token: 0x0400034A RID: 842
 		[Nullable(2)]
 		private static PakKeyUpdate _instance;
 	}

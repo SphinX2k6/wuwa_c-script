@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200062E RID: 1582
+	// Token: 0x02000646 RID: 1606
 	public class ConfigOpenAndCloseViewHotKeyByActionName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002524 RID: 9508 RVA: 0x0012BAE3 File Offset: 0x00129CE3
+		// Token: 0x060025B4 RID: 9652 RVA: 0x0013255F File Offset: 0x0013075F
 		static ConfigOpenAndCloseViewHotKeyByActionName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigOpenAndCloseViewHotKeyByActionName.CreateStaticDefaultValue), new Action(ConfigOpenAndCloseViewHotKeyByActionName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002525 RID: 9509 RVA: 0x0012BB04 File Offset: 0x00129D04
+		// Token: 0x060025B5 RID: 9653 RVA: 0x00132580 File Offset: 0x00130780
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigOpenAndCloseViewHotKeyByActionName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002526 RID: 9510 RVA: 0x0012BB83 File Offset: 0x00129D83
+		// Token: 0x060025B6 RID: 9654 RVA: 0x001325FF File Offset: 0x001307FF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigOpenAndCloseViewHotKeyByActionName.LogPair = null;
 			ConfigOpenAndCloseViewHotKeyByActionName.HandleId = 0;
 		}
 
-		// Token: 0x06002527 RID: 9511 RVA: 0x0012BB91 File Offset: 0x00129D91
+		// Token: 0x060025B7 RID: 9655 RVA: 0x0013260D File Offset: 0x0013080D
 		public static void Init()
 		{
 			ConfigOpenAndCloseViewHotKeyByActionName.HandleId = ConfigCommon.InitDataStatement(ConfigOpenAndCloseViewHotKeyByActionName.HandleId, "db_input_settings.db", "select BinData from `OpenAndCloseViewHotKey` where ActionName=?");
 		}
 
-		// Token: 0x06002528 RID: 9512 RVA: 0x0012BBAC File Offset: 0x00129DAC
+		// Token: 0x060025B8 RID: 9656 RVA: 0x00132628 File Offset: 0x00130828
 		[return: Nullable(2)]
 		public static IReadOnlyList<OpenAndCloseViewHotKey> GetConfigList(string p0ActionName, bool useCache = true)
 		{
@@ -86,22 +86,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002B28 RID: 11048
+		// Token: 0x04002BD0 RID: 11216
 		private const string DB = "db_input_settings.db";
 
-		// Token: 0x04002B29 RID: 11049
+		// Token: 0x04002BD1 RID: 11217
 		private const string FILE = "s.输入配置.xlsx";
 
-		// Token: 0x04002B2A RID: 11050
+		// Token: 0x04002BD2 RID: 11218
 		private const string TABLE = "OpenAndCloseViewHotKey";
 
-		// Token: 0x04002B2B RID: 11051
+		// Token: 0x04002BD3 RID: 11219
 		private const string COMMAND = "select BinData from `OpenAndCloseViewHotKey` where ActionName=?";
 
-		// Token: 0x04002B2C RID: 11052
+		// Token: 0x04002BD4 RID: 11220
 		private const string KEY_PREFIX = "OpenAndCloseViewHotKeyByActionName";
 
-		// Token: 0x04002B2D RID: 11053
+		// Token: 0x04002BD5 RID: 11221
 		[Nullable(new byte[]
 		{
 			2,
@@ -111,7 +111,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002B2E RID: 11054
+		// Token: 0x04002BD6 RID: 11222
 		private static int HandleId;
 	}
 }

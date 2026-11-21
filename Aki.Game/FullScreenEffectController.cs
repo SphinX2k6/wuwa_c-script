@@ -5,13 +5,13 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001C41 RID: 7233
+// Token: 0x02001100 RID: 4352
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class FullScreenEffectController : UiControllerBase
 {
-	// Token: 0x0600DA1C RID: 55836 RVA: 0x0032ABE8 File Offset: 0x00328DE8
+	// Token: 0x0600AE32 RID: 44594 RVA: 0x00335FE8 File Offset: 0x003341E8
 	public UniTask BeginEffect(string path, int priority)
 	{
 		FullScreenEffectController.<BeginEffect>d__3 <BeginEffect>d__;
@@ -24,7 +24,7 @@ public class FullScreenEffectController : UiControllerBase
 		return <BeginEffect>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DA1D RID: 55837 RVA: 0x0032AC3B File Offset: 0x00328E3B
+	// Token: 0x0600AE33 RID: 44595 RVA: 0x0033603B File Offset: 0x0033423B
 	public void EndEffect(string path)
 	{
 		if (path == this.CurView.Path)
@@ -38,7 +38,7 @@ public class FullScreenEffectController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600DA1E RID: 55838 RVA: 0x0032AC78 File Offset: 0x00328E78
+	// Token: 0x0600AE34 RID: 44596 RVA: 0x00336078 File Offset: 0x00334278
 	public void EndCurView()
 	{
 		if (this.CurView == null)
@@ -58,7 +58,7 @@ public class FullScreenEffectController : UiControllerBase
 		this.CurView.SetEffectVisibility(true, true);
 	}
 
-	// Token: 0x0600DA1F RID: 55839 RVA: 0x0032ACE4 File Offset: 0x00328EE4
+	// Token: 0x0600AE35 RID: 44597 RVA: 0x003360E4 File Offset: 0x003342E4
 	protected override bool OnClear()
 	{
 		this.PathSet.Clear();
@@ -74,7 +74,7 @@ public class FullScreenEffectController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600DA20 RID: 55840 RVA: 0x0032AD3C File Offset: 0x00328F3C
+	// Token: 0x0600AE36 RID: 44598 RVA: 0x0033613C File Offset: 0x0033433C
 	[NullableContext(2)]
 	private FullScreenEffectView GetPreViewTop()
 	{
@@ -94,8 +94,8 @@ public class FullScreenEffectController : UiControllerBase
 		return null;
 	}
 
-	// Token: 0x170011D5 RID: 4565
-	// (get) Token: 0x0600DA21 RID: 55841 RVA: 0x0032AD9A File Offset: 0x00328F9A
+	// Token: 0x170011FB RID: 4603
+	// (get) Token: 0x0600AE37 RID: 44599 RVA: 0x0033619A File Offset: 0x0033439A
 	public static FullScreenEffectController Instance
 	{
 		get
@@ -104,7 +104,7 @@ public class FullScreenEffectController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600DA22 RID: 55842 RVA: 0x0032ADA1 File Offset: 0x00328FA1
+	// Token: 0x0600AE38 RID: 44600 RVA: 0x003361A1 File Offset: 0x003343A1
 	public static FullScreenEffectController GetOrCreateInstance()
 	{
 		if (FullScreenEffectController._Instance == null)
@@ -114,7 +114,7 @@ public class FullScreenEffectController : UiControllerBase
 		return FullScreenEffectController._Instance;
 	}
 
-	// Token: 0x0600DA23 RID: 55843 RVA: 0x0032ADB5 File Offset: 0x00328FB5
+	// Token: 0x0600AE39 RID: 44601 RVA: 0x003361B5 File Offset: 0x003343B5
 	public static bool CreateInstance()
 	{
 		if (FullScreenEffectController._Instance != null)
@@ -125,24 +125,24 @@ public class FullScreenEffectController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600DA24 RID: 55844 RVA: 0x0032ADCB File Offset: 0x00328FCB
+	// Token: 0x0600AE3A RID: 44602 RVA: 0x003361CB File Offset: 0x003343CB
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600DA25 RID: 55845 RVA: 0x0032ADCD File Offset: 0x00328FCD
+	// Token: 0x0600AE3B RID: 44603 RVA: 0x003361CD File Offset: 0x003343CD
 	public static void ResetStaticDefaultValue()
 	{
 		FullScreenEffectController._Instance = null;
 	}
 
-	// Token: 0x0600DA26 RID: 55846 RVA: 0x0032ADD5 File Offset: 0x00328FD5
+	// Token: 0x0600AE3C RID: 44604 RVA: 0x003361D5 File Offset: 0x003343D5
 	static FullScreenEffectController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FullScreenEffectController.CreateStaticDefaultValue), new Action(FullScreenEffectController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600DA27 RID: 55847 RVA: 0x0032ADF4 File Offset: 0x00328FF4
+	// Token: 0x0600AE3D RID: 44605 RVA: 0x003361F4 File Offset: 0x003343F4
 	public FullScreenEffectController()
 	{
 		Comparison<FullScreenEffectView> compare;
@@ -154,25 +154,25 @@ public class FullScreenEffectController : UiControllerBase
 		base..ctor();
 	}
 
-	// Token: 0x0400634F RID: 25423
+	// Token: 0x04006421 RID: 25633
 	[Nullable(2)]
 	private FullScreenEffectView CurView;
 
-	// Token: 0x04006350 RID: 25424
+	// Token: 0x04006422 RID: 25634
 	private readonly HashSet<string> PathSet = new HashSet<string>();
 
-	// Token: 0x04006351 RID: 25425
+	// Token: 0x04006423 RID: 25635
 	private readonly PriorityQueue<FullScreenEffectView> PreView;
 
-	// Token: 0x04006352 RID: 25426
+	// Token: 0x04006424 RID: 25636
 	[Nullable(2)]
 	private static FullScreenEffectController _Instance;
 
-	// Token: 0x0200820C RID: 33292
+	// Token: 0x02007395 RID: 29589
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402A715 RID: 173845
+		// Token: 0x04025A3C RID: 154172
 		[Nullable(new byte[]
 		{
 			0,

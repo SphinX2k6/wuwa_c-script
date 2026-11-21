@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000678 RID: 1656
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000717 RID: 1815
 	public class IRenderFlag
 	{
-		// Token: 0x0600236A RID: 9066 RVA: 0x00060B30 File Offset: 0x0005ED30
+		// Token: 0x0600267C RID: 9852 RVA: 0x000679F4 File Offset: 0x00065BF4
 		private IRenderFlag_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600236B RID: 9067 RVA: 0x00060B68 File Offset: 0x0005ED68
+		// Token: 0x0600267D RID: 9853 RVA: 0x00067A2C File Offset: 0x00065C2C
 		public static IRenderFlag Create([Nullable(2)] IRenderFlag instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600236C RID: 9068 RVA: 0x00060B7B File Offset: 0x0005ED7B
+		// Token: 0x0600267E RID: 9854 RVA: 0x00067A3F File Offset: 0x00065C3F
 		public static IRenderFlag CreateFromSetValue([Nullable(2)] IRenderFlag_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600236D RID: 9069 RVA: 0x00060B8E File Offset: 0x0005ED8E
+		// Token: 0x0600267F RID: 9855 RVA: 0x00067A52 File Offset: 0x00065C52
 		public IRenderFlag_SetValue ToSetValue()
 		{
 			return new IRenderFlag_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000960 RID: 2400
-		// (get) Token: 0x0600236E RID: 9070 RVA: 0x00060BAD File Offset: 0x0005EDAD
-		// (set) Token: 0x0600236F RID: 9071 RVA: 0x00060BD8 File Offset: 0x0005EDD8
+		// Token: 0x17000A1A RID: 2586
+		// (get) Token: 0x06002680 RID: 9856 RVA: 0x00067A71 File Offset: 0x00065C71
+		// (set) Token: 0x06002681 RID: 9857 RVA: 0x00067A9C File Offset: 0x00065C9C
 		public virtual ERenderFlagType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000961 RID: 2401
-		// (get) Token: 0x06002370 RID: 9072 RVA: 0x00060BE6 File Offset: 0x0005EDE6
-		// (set) Token: 0x06002371 RID: 9073 RVA: 0x00060C11 File Offset: 0x0005EE11
+		// Token: 0x17000A1B RID: 2587
+		// (get) Token: 0x06002682 RID: 9858 RVA: 0x00067AAA File Offset: 0x00065CAA
+		// (set) Token: 0x06002683 RID: 9859 RVA: 0x00067AD5 File Offset: 0x00065CD5
 		public virtual bool Enable
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001876 RID: 6262
+		// Token: 0x04001A6F RID: 6767
 		[Nullable(2)]
 		protected IRenderFlag FbInstance;
 
-		// Token: 0x04001877 RID: 6263
+		// Token: 0x04001A70 RID: 6768
 		[Nullable(2)]
 		protected IRenderFlag_SetValue PocoInterface;
 	}

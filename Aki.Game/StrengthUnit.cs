@@ -6,12 +6,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.BattleUi;
 using UnrealEngine;
 
-// Token: 0x02001F56 RID: 8022
+// Token: 0x02001418 RID: 5144
 [NullableContext(1)]
 [Nullable(0)]
 public class StrengthUnit : HudUnitBase
 {
-	// Token: 0x0600F85D RID: 63581 RVA: 0x003C1CBC File Offset: 0x003BFEBC
+	// Token: 0x0600CC7C RID: 52348 RVA: 0x003CD7A8 File Offset: 0x003CB9A8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -29,7 +29,7 @@ public class StrengthUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F85E RID: 63582 RVA: 0x003C1D68 File Offset: 0x003BFF68
+	// Token: 0x0600CC7D RID: 52349 RVA: 0x003CD854 File Offset: 0x003CBA54
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -46,7 +46,7 @@ public class StrengthUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F85F RID: 63583 RVA: 0x003C1DEC File Offset: 0x003BFFEC
+	// Token: 0x0600CC7E RID: 52350 RVA: 0x003CD8D8 File Offset: 0x003CBAD8
 	protected override void OnBeforeDestroy()
 	{
 		this.RoleData = null;
@@ -61,7 +61,7 @@ public class StrengthUnit : HudUnitBase
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600F860 RID: 63584 RVA: 0x003C1E6C File Offset: 0x003C006C
+	// Token: 0x0600CC7F RID: 52351 RVA: 0x003CD958 File Offset: 0x003CBB58
 	[NullableContext(2)]
 	public void RefreshRoleData(BattleUiRoleData roleData)
 	{
@@ -86,7 +86,7 @@ public class StrengthUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F861 RID: 63585 RVA: 0x003C1F04 File Offset: 0x003C0104
+	// Token: 0x0600CC80 RID: 52352 RVA: 0x003CD9F0 File Offset: 0x003CBBF0
 	public void AddStrengthItem(EStrengthItemType strengthItemType)
 	{
 		if (this.Data.EnableStrengthItem(strengthItemType) == null)
@@ -96,7 +96,7 @@ public class StrengthUnit : HudUnitBase
 		this.RefreshStrengthItem();
 	}
 
-	// Token: 0x0600F862 RID: 63586 RVA: 0x003C1F1B File Offset: 0x003C011B
+	// Token: 0x0600CC81 RID: 52353 RVA: 0x003CDA07 File Offset: 0x003CBC07
 	public void RemoveStrengthItem(EStrengthItemType strengthItemType)
 	{
 		if (this.Data.DisableStrengthItem(strengthItemType) == null)
@@ -106,7 +106,7 @@ public class StrengthUnit : HudUnitBase
 		this.RefreshStrengthItem();
 	}
 
-	// Token: 0x0600F863 RID: 63587 RVA: 0x003C1F34 File Offset: 0x003C0134
+	// Token: 0x0600CC82 RID: 52354 RVA: 0x003CDA20 File Offset: 0x003CBC20
 	private void RefreshStrengthItem()
 	{
 		StrengthItemInfo strengthItemInfo = null;
@@ -163,7 +163,7 @@ public class StrengthUnit : HudUnitBase
 		this.SwapPlace(group != 1);
 	}
 
-	// Token: 0x0600F864 RID: 63588 RVA: 0x003C20E4 File Offset: 0x003C02E4
+	// Token: 0x0600CC83 RID: 52355 RVA: 0x003CDBD0 File Offset: 0x003CBDD0
 	public void SwapPlace(bool value)
 	{
 		if (this.IsSwapPlace == value)
@@ -174,13 +174,13 @@ public class StrengthUnit : HudUnitBase
 		this.RefreshItemPlace();
 	}
 
-	// Token: 0x0600F865 RID: 63589 RVA: 0x003C20FD File Offset: 0x003C02FD
+	// Token: 0x0600CC84 RID: 52356 RVA: 0x003CDBE9 File Offset: 0x003CBDE9
 	private void OnItemUiVisibleChanged(bool uiVisible)
 	{
 		this.RefreshItemPlace();
 	}
 
-	// Token: 0x0600F866 RID: 63590 RVA: 0x003C2108 File Offset: 0x003C0308
+	// Token: 0x0600CC85 RID: 52357 RVA: 0x003CDBF4 File Offset: 0x003CBDF4
 	private void RefreshItemPlace()
 	{
 		bool flag = true;
@@ -225,19 +225,19 @@ public class StrengthUnit : HudUnitBase
 		base.PlayTweenAnim(2);
 	}
 
-	// Token: 0x0600F867 RID: 63591 RVA: 0x003C2251 File Offset: 0x003C0451
+	// Token: 0x0600CC86 RID: 52358 RVA: 0x003CDD3D File Offset: 0x003CBF3D
 	public void SetFirstPersonState(bool b)
 	{
 		this.IsFirstPersonView = b;
 	}
 
-	// Token: 0x0600F868 RID: 63592 RVA: 0x003C225A File Offset: 0x003C045A
+	// Token: 0x0600CC87 RID: 52359 RVA: 0x003CDD46 File Offset: 0x003CBF46
 	public void SetOverShoulderState(bool value)
 	{
 		this.IsOverShoulderView = value;
 	}
 
-	// Token: 0x0600F869 RID: 63593 RVA: 0x003C2264 File Offset: 0x003C0464
+	// Token: 0x0600CC88 RID: 52360 RVA: 0x003CDD50 File Offset: 0x003CBF50
 	public override void Tick(float delta)
 	{
 		this.RefreshTargetPosition(delta);
@@ -252,7 +252,7 @@ public class StrengthUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F86A RID: 63594 RVA: 0x003C22C4 File Offset: 0x003C04C4
+	// Token: 0x0600CC89 RID: 52361 RVA: 0x003CDDB0 File Offset: 0x003CBFB0
 	private void RefreshTargetPosition(float delta)
 	{
 		if (!base.GetActive())
@@ -315,7 +315,7 @@ public class StrengthUnit : HudUnitBase
 		base.SetAnchorOffset(this.OffsetX, this.OffsetY);
 	}
 
-	// Token: 0x0600F86B RID: 63595 RVA: 0x003C24D0 File Offset: 0x003C06D0
+	// Token: 0x0600CC8A RID: 52362 RVA: 0x003CDFBC File Offset: 0x003CC1BC
 	private float GetSpeed(float delta, float target, float cur, float lastSpeed)
 	{
 		float num = target - cur;
@@ -337,7 +337,7 @@ public class StrengthUnit : HudUnitBase
 		return (float)MathUtils.Instance.Lerp((double)lastSpeed, (double)num2, 0.5);
 	}
 
-	// Token: 0x0600F86D RID: 63597 RVA: 0x003C2580 File Offset: 0x003C0780
+	// Token: 0x0600CC8C RID: 52364 RVA: 0x003CE06C File Offset: 0x003CC26C
 	// Note: this type is marked as 'beforefieldinit'.
 	static StrengthUnit()
 	{
@@ -346,22 +346,22 @@ public class StrengthUnit : HudUnitBase
 		StrengthUnit.SwapIndex = array;
 	}
 
-	// Token: 0x0400735C RID: 29532
+	// Token: 0x0400743D RID: 29757
 	private const float MaxDeltaTime = 200f;
 
-	// Token: 0x0400735D RID: 29533
+	// Token: 0x0400743E RID: 29758
 	private const float MinDeltaOffset = 0.5f;
 
-	// Token: 0x0400735E RID: 29534
+	// Token: 0x0400743F RID: 29759
 	private const float MaxPosOffset = 500f;
 
-	// Token: 0x0400735F RID: 29535
+	// Token: 0x04007440 RID: 29760
 	private const float ItemOffsetXBase = 157f;
 
-	// Token: 0x04007360 RID: 29536
+	// Token: 0x04007441 RID: 29761
 	private const float ItemOffsetXInterval = 105f;
 
-	// Token: 0x04007361 RID: 29537
+	// Token: 0x04007442 RID: 29762
 	[StaticVariableRuleIgnore]
 	private static readonly int[] NormalIndex = new int[]
 	{
@@ -369,68 +369,68 @@ public class StrengthUnit : HudUnitBase
 		1
 	};
 
-	// Token: 0x04007362 RID: 29538
+	// Token: 0x04007443 RID: 29763
 	[StaticVariableRuleIgnore]
 	private static readonly int[] SwapIndex;
 
-	// Token: 0x04007363 RID: 29539
+	// Token: 0x04007444 RID: 29764
 	private const float FirstPersonOffsetX = 600f;
 
-	// Token: 0x04007364 RID: 29540
+	// Token: 0x04007445 RID: 29765
 	public StrengthUnitData Data = new StrengthUnitData();
 
-	// Token: 0x04007365 RID: 29541
+	// Token: 0x04007446 RID: 29766
 	private readonly Vector2D ScreenPos = new Vector2D();
 
-	// Token: 0x04007366 RID: 29542
+	// Token: 0x04007447 RID: 29767
 	[Nullable(2)]
 	private BattleUiRoleData RoleData;
 
-	// Token: 0x04007367 RID: 29543
+	// Token: 0x04007448 RID: 29768
 	[Nullable(2)]
 	private CharacterActorComponent ActorComponent;
 
-	// Token: 0x04007368 RID: 29544
+	// Token: 0x04007449 RID: 29769
 	private float OffsetX;
 
-	// Token: 0x04007369 RID: 29545
+	// Token: 0x0400744A RID: 29770
 	private float OffsetY;
 
-	// Token: 0x0400736A RID: 29546
+	// Token: 0x0400744B RID: 29771
 	private float SpeedX;
 
-	// Token: 0x0400736B RID: 29547
+	// Token: 0x0400744C RID: 29772
 	private float SpeedY;
 
-	// Token: 0x0400736C RID: 29548
+	// Token: 0x0400744D RID: 29773
 	private readonly List<UUIItem> ItemList = new List<UUIItem>();
 
-	// Token: 0x0400736D RID: 29549
+	// Token: 0x0400744E RID: 29774
 	private bool IsSwapPlace;
 
-	// Token: 0x0400736E RID: 29550
+	// Token: 0x0400744F RID: 29775
 	private readonly EStrengthItemType[] StrengthItemTypeList = new EStrengthItemType[2];
 
-	// Token: 0x0400736F RID: 29551
+	// Token: 0x04007450 RID: 29776
 	private bool IsFirstPersonView;
 
-	// Token: 0x04007370 RID: 29552
+	// Token: 0x04007451 RID: 29777
 	private bool IsOverShoulderView;
 
-	// Token: 0x04007371 RID: 29553
+	// Token: 0x04007452 RID: 29778
 	private readonly float[] OverShoulderViewOffset = new float[2];
 
-	// Token: 0x02008556 RID: 34134
+	// Token: 0x020076DB RID: 30427
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402B68C RID: 177804
+		// Token: 0x040269B0 RID: 158128
 		Item1,
-		// Token: 0x0402B68D RID: 177805
+		// Token: 0x040269B1 RID: 158129
 		Item2,
-		// Token: 0x0402B68E RID: 177806
+		// Token: 0x040269B2 RID: 158130
 		AniSwitchIn,
-		// Token: 0x0402B68F RID: 177807
+		// Token: 0x040269B3 RID: 158131
 		AniSwitchOut
 	}
 }

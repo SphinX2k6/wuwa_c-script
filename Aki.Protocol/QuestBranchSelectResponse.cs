@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000E0A RID: 3594
+	// Token: 0x02000DFA RID: 3578
 	[NetMessage(EMessageId.QuestBranchSelectResponse)]
 	public sealed class QuestBranchSelectResponse : IMessage<QuestBranchSelectResponse>, IMessage, IEquatable<QuestBranchSelectResponse>, IDeepCloneable<QuestBranchSelectResponse>, IBufferMessage
 	{
-		// Token: 0x06013515 RID: 79125 RVA: 0x002CFBBC File Offset: 0x002CDDBC
+		// Token: 0x06013430 RID: 78896 RVA: 0x002CE500 File Offset: 0x002CC700
 		[NullableContext(1)]
 		public static QuestBranchSelectResponse Create()
 		{
 			return new QuestBranchSelectResponse();
 		}
 
-		// Token: 0x17004013 RID: 16403
-		// (get) Token: 0x06013516 RID: 79126 RVA: 0x002CFBC3 File Offset: 0x002CDDC3
+		// Token: 0x17003FE9 RID: 16361
+		// (get) Token: 0x06013431 RID: 78897 RVA: 0x002CE507 File Offset: 0x002CC707
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004014 RID: 16404
-		// (get) Token: 0x06013517 RID: 79127 RVA: 0x002CFBC6 File Offset: 0x002CDDC6
+		// Token: 0x17003FEA RID: 16362
+		// (get) Token: 0x06013432 RID: 78898 RVA: 0x002CE50A File Offset: 0x002CC70A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013518 RID: 79128 RVA: 0x002CFBCD File Offset: 0x002CDDCD
+		// Token: 0x06013433 RID: 78899 RVA: 0x002CE511 File Offset: 0x002CC711
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestBranchSelectResponse()
 		{
 		}
 
-		// Token: 0x06013519 RID: 79129 RVA: 0x002CFBD8 File Offset: 0x002CDDD8
+		// Token: 0x06013434 RID: 78900 RVA: 0x002CE51C File Offset: 0x002CC71C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestBranchSelectResponse(QuestBranchSelectResponse other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601351A RID: 79130 RVA: 0x002CFC24 File Offset: 0x002CDE24
+		// Token: 0x06013435 RID: 78901 RVA: 0x002CE568 File Offset: 0x002CC768
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestBranchSelectResponse Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new QuestBranchSelectResponse(this);
 		}
 
-		// Token: 0x17004015 RID: 16405
-		// (get) Token: 0x0601351B RID: 79131 RVA: 0x002CFC2C File Offset: 0x002CDE2C
-		// (set) Token: 0x0601351C RID: 79132 RVA: 0x002CFC34 File Offset: 0x002CDE34
+		// Token: 0x17003FEB RID: 16363
+		// (get) Token: 0x06013436 RID: 78902 RVA: 0x002CE570 File Offset: 0x002CC770
+		// (set) Token: 0x06013437 RID: 78903 RVA: 0x002CE578 File Offset: 0x002CC778
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004016 RID: 16406
-		// (get) Token: 0x0601351D RID: 79133 RVA: 0x002CFC3D File Offset: 0x002CDE3D
-		// (set) Token: 0x0601351E RID: 79134 RVA: 0x002CFC45 File Offset: 0x002CDE45
+		// Token: 0x17003FEC RID: 16364
+		// (get) Token: 0x06013438 RID: 78904 RVA: 0x002CE581 File Offset: 0x002CC781
+		// (set) Token: 0x06013439 RID: 78905 RVA: 0x002CE589 File Offset: 0x002CC789
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OneQuestBranchPageInfo OneQuestBranchPageInfo
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601351F RID: 79135 RVA: 0x002CFC4E File Offset: 0x002CDE4E
+		// Token: 0x0601343A RID: 78906 RVA: 0x002CE592 File Offset: 0x002CC792
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as QuestBranchSelectResponse);
 		}
 
-		// Token: 0x06013520 RID: 79136 RVA: 0x002CFC5C File Offset: 0x002CDE5C
+		// Token: 0x0601343B RID: 78907 RVA: 0x002CE5A0 File Offset: 0x002CC7A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(QuestBranchSelectResponse other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && object.Equals(this.OneQuestBranchPageInfo, other.OneQuestBranchPageInfo) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06013521 RID: 79137 RVA: 0x002CFCAC File Offset: 0x002CDEAC
+		// Token: 0x0601343C RID: 78908 RVA: 0x002CE5F0 File Offset: 0x002CC7F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013522 RID: 79138 RVA: 0x002CFD07 File Offset: 0x002CDF07
+		// Token: 0x0601343D RID: 78909 RVA: 0x002CE64B File Offset: 0x002CC84B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06013523 RID: 79139 RVA: 0x002CFD14 File Offset: 0x002CDF14
+		// Token: 0x0601343E RID: 78910 RVA: 0x002CE658 File Offset: 0x002CC858
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06013524 RID: 79140 RVA: 0x002CFD20 File Offset: 0x002CDF20
+		// Token: 0x0601343F RID: 78911 RVA: 0x002CE664 File Offset: 0x002CC864
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.oneQuestBranchPageInfo_ != null)
-			{
-				output.WriteRawTag(18);
-				output.WriteMessage(this.OneQuestBranchPageInfo);
-			}
 			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(48);
+				output.WriteRawTag(40);
 				output.WriteEnum((int)this.ErrorCode);
+			}
+			if (this.oneQuestBranchPageInfo_ != null)
+			{
+				output.WriteRawTag(58);
+				output.WriteMessage(this.OneQuestBranchPageInfo);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013525 RID: 79141 RVA: 0x002CFD7C File Offset: 0x002CDF7C
+		// Token: 0x06013440 RID: 78912 RVA: 0x002CE6C0 File Offset: 0x002CC8C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013526 RID: 79142 RVA: 0x002CFDD4 File Offset: 0x002CDFD4
+		// Token: 0x06013441 RID: 78913 RVA: 0x002CE718 File Offset: 0x002CC918
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(QuestBranchSelectResponse other)
@@ -220,7 +220,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06013527 RID: 79143 RVA: 0x002CFE3C File Offset: 0x002CE03C
+		// Token: 0x06013442 RID: 78914 RVA: 0x002CE780 File Offset: 0x002CC980
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06013528 RID: 79144 RVA: 0x002CFE48 File Offset: 0x002CE048
+		// Token: 0x06013443 RID: 78915 RVA: 0x002CE78C File Offset: 0x002CC98C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -240,41 +240,41 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 18U)
+				if (num != 40U)
 				{
-					if (num != 48U)
+					if (num != 58U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.ErrorCode = (ErrorCode)input.ReadEnum();
+						if (this.oneQuestBranchPageInfo_ == null)
+						{
+							this.OneQuestBranchPageInfo = new OneQuestBranchPageInfo();
+						}
+						input.ReadMessage(this.OneQuestBranchPageInfo);
 					}
 				}
 				else
 				{
-					if (this.oneQuestBranchPageInfo_ == null)
-					{
-						this.OneQuestBranchPageInfo = new OneQuestBranchPageInfo();
-					}
-					input.ReadMessage(this.OneQuestBranchPageInfo);
+					this.ErrorCode = (ErrorCode)input.ReadEnum();
 				}
 			}
 		}
 
-		// Token: 0x040076B2 RID: 30386
+		// Token: 0x040076DC RID: 30428
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040076B3 RID: 30387
-		public const int ErrorCodeFieldNumber = 6;
+		// Token: 0x040076DD RID: 30429
+		public const int ErrorCodeFieldNumber = 5;
 
-		// Token: 0x040076B4 RID: 30388
+		// Token: 0x040076DE RID: 30430
 		private ErrorCode errorCode_;
 
-		// Token: 0x040076B5 RID: 30389
-		public const int OneQuestBranchPageInfoFieldNumber = 2;
+		// Token: 0x040076DF RID: 30431
+		public const int OneQuestBranchPageInfoFieldNumber = 7;
 
-		// Token: 0x040076B6 RID: 30390
+		// Token: 0x040076E0 RID: 30432
 		private OneQuestBranchPageInfo oneQuestBranchPageInfo_;
 	}
 }

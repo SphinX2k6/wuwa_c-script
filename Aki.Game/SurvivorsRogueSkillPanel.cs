@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D22 RID: 7458
+// Token: 0x020011E4 RID: 4580
 public class SurvivorsRogueSkillPanel : BattleChildViewPanel
 {
-	// Token: 0x0600E1CA RID: 57802 RVA: 0x00350828 File Offset: 0x0034EA28
+	// Token: 0x0600B5E7 RID: 46567 RVA: 0x0035C258 File Offset: 0x0035A458
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ public class SurvivorsRogueSkillPanel : BattleChildViewPanel
 		};
 	}
 
-	// Token: 0x0600E1CB RID: 57803 RVA: 0x00350864 File Offset: 0x0034EA64
+	// Token: 0x0600B5E8 RID: 46568 RVA: 0x0035C294 File Offset: 0x0035A494
 	public override UniTask InitializeAsync()
 	{
 		SurvivorsRogueSkillPanel.<InitializeAsync>d__4 <InitializeAsync>d__;
@@ -32,46 +32,46 @@ public class SurvivorsRogueSkillPanel : BattleChildViewPanel
 		return <InitializeAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E1CC RID: 57804 RVA: 0x003508A7 File Offset: 0x0034EAA7
+	// Token: 0x0600B5E9 RID: 46569 RVA: 0x0035C2D7 File Offset: 0x0035A4D7
 	protected override void OnStart()
 	{
 		SurvivorsRogueModel.Instance.BattleData.InitBattleSkillData();
 		this.RefreshAllBattleSkillItems();
 	}
 
-	// Token: 0x0600E1CD RID: 57805 RVA: 0x003508BE File Offset: 0x0034EABE
+	// Token: 0x0600B5EA RID: 46570 RVA: 0x0035C2EE File Offset: 0x0035A4EE
 	private void RefreshAllBattleSkillItems()
 	{
 		this.RefreshActiveSkillItem();
 		this.RefreshDodgeSkillItem();
 	}
 
-	// Token: 0x0600E1CE RID: 57806 RVA: 0x003508CC File Offset: 0x0034EACC
+	// Token: 0x0600B5EB RID: 46571 RVA: 0x0035C2FC File Offset: 0x0035A4FC
 	private void RefreshActiveSkillItem()
 	{
 		this.ActiveSkillItem.Refresh(SurvivorsRogueModel.Instance.BattleData.GetBattleSkillData("技能1"));
 	}
 
-	// Token: 0x0600E1CF RID: 57807 RVA: 0x003508ED File Offset: 0x0034EAED
+	// Token: 0x0600B5EC RID: 46572 RVA: 0x0035C31D File Offset: 0x0035A51D
 	private void RefreshDodgeSkillItem()
 	{
 		this.DodgeSkillItem.Refresh(SurvivorsRogueModel.Instance.BattleData.GetBattleSkillData("闪避"));
 	}
 
-	// Token: 0x0600E1D0 RID: 57808 RVA: 0x0035090E File Offset: 0x0034EB0E
+	// Token: 0x0600B5ED RID: 46573 RVA: 0x0035C33E File Offset: 0x0035A53E
 	protected override void OnShowBattleChildViewPanel(bool first)
 	{
 		this.ActiveSkillItem.RefreshSkillCoolDownOnShow();
 	}
 
-	// Token: 0x0600E1D1 RID: 57809 RVA: 0x0035091B File Offset: 0x0034EB1B
+	// Token: 0x0600B5EE RID: 46574 RVA: 0x0035C34B File Offset: 0x0035A54B
 	protected override void OnHideBattleChildViewPanel()
 	{
 		this.ActiveSkillItem.TryReleaseButton();
 		this.DodgeSkillItem.TryReleaseButton();
 	}
 
-	// Token: 0x0600E1D2 RID: 57810 RVA: 0x00350933 File Offset: 0x0034EB33
+	// Token: 0x0600B5EF RID: 46575 RVA: 0x0035C363 File Offset: 0x0035A563
 	public override void OnTickBattleChildViewPanel(float delta)
 	{
 		if (!this.Visible)
@@ -82,7 +82,7 @@ public class SurvivorsRogueSkillPanel : BattleChildViewPanel
 		this.DodgeSkillItem.Tick(delta);
 	}
 
-	// Token: 0x0600E1D3 RID: 57811 RVA: 0x00350958 File Offset: 0x0034EB58
+	// Token: 0x0600B5F0 RID: 46576 RVA: 0x0035C388 File Offset: 0x0035A588
 	protected override void AddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.TriggerUiTimeDilation, new Action(this.OnChangedTimeScale));
@@ -90,7 +90,7 @@ public class SurvivorsRogueSkillPanel : BattleChildViewPanel
 		EventSystem.Instance.Add<ESkillButtonType>(EEventName.OnSkillButtonCdRefresh, new Action<ESkillButtonType>(this.OnSkillButtonCdRefresh));
 	}
 
-	// Token: 0x0600E1D4 RID: 57812 RVA: 0x003509B8 File Offset: 0x0034EBB8
+	// Token: 0x0600B5F1 RID: 46577 RVA: 0x0035C3E8 File Offset: 0x0035A5E8
 	protected override void RemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.TriggerUiTimeDilation, new Action(this.OnChangedTimeScale));
@@ -98,21 +98,21 @@ public class SurvivorsRogueSkillPanel : BattleChildViewPanel
 		EventSystem.Instance.Remove(EEventName.OnSkillButtonCdRefresh, new Action<ESkillButtonType>(this.OnSkillButtonCdRefresh));
 	}
 
-	// Token: 0x0600E1D5 RID: 57813 RVA: 0x00350A16 File Offset: 0x0034EC16
+	// Token: 0x0600B5F2 RID: 46578 RVA: 0x0035C446 File Offset: 0x0035A646
 	private void OnChangedTimeScale()
 	{
 		this.ActiveSkillItem.RefreshTimeDilation();
 		this.DodgeSkillItem.RefreshTimeDilation();
 	}
 
-	// Token: 0x0600E1D6 RID: 57814 RVA: 0x00350A2E File Offset: 0x0034EC2E
+	// Token: 0x0600B5F3 RID: 46579 RVA: 0x0035C45E File Offset: 0x0035A65E
 	private void OnPauseGame(int flag)
 	{
 		this.ActiveSkillItem.PauseGame(flag);
 		this.DodgeSkillItem.PauseGame(flag);
 	}
 
-	// Token: 0x0600E1D7 RID: 57815 RVA: 0x00350A48 File Offset: 0x0034EC48
+	// Token: 0x0600B5F4 RID: 46580 RVA: 0x0035C478 File Offset: 0x0035A678
 	private void OnSkillButtonCdRefresh(ESkillButtonType buttonType)
 	{
 		if (buttonType == ESkillButtonType.技能1)
@@ -126,21 +126,21 @@ public class SurvivorsRogueSkillPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x04006874 RID: 26740
+	// Token: 0x04006953 RID: 26963
 	[Nullable(2)]
 	protected BattleSkillItem ActiveSkillItem;
 
-	// Token: 0x04006875 RID: 26741
+	// Token: 0x04006954 RID: 26964
 	[Nullable(2)]
 	protected BattleSkillItem DodgeSkillItem;
 
-	// Token: 0x0200831C RID: 33564
+	// Token: 0x020074A5 RID: 29861
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AC30 RID: 175152
+		// Token: 0x04025F58 RID: 155480
 		public const int Skill = 0;
 
-		// Token: 0x0402AC31 RID: 175153
+		// Token: 0x04025F59 RID: 155481
 		public const int Dodge = 1;
 	}
 }

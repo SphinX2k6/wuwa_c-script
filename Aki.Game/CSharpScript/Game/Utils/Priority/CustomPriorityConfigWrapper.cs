@@ -3,33 +3,33 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Utils.Priority
 {
-	// Token: 0x02004561 RID: 17761
+	// Token: 0x02003489 RID: 13449
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	internal class CustomPriorityConfigWrapper<[Nullable(0)] T> : ICustomPriorityConfigWrapper<T> where T : struct, Enum
 	{
-		// Token: 0x17007579 RID: 30073
-		// (get) Token: 0x0602DE0C RID: 187916 RVA: 0x00A8C2AB File Offset: 0x00A8A4AB
-		// (set) Token: 0x0602DE0D RID: 187917 RVA: 0x00A8C2B3 File Offset: 0x00A8A4B3
+		// Token: 0x17004830 RID: 18480
+		// (get) Token: 0x060224EE RID: 140526 RVA: 0x009B79C3 File Offset: 0x009B5BC3
+		// (set) Token: 0x060224EF RID: 140527 RVA: 0x009B79CB File Offset: 0x009B5BCB
 		public bool Enable { get; set; }
 
-		// Token: 0x1700757A RID: 30074
-		// (get) Token: 0x0602DE0E RID: 187918 RVA: 0x00A8C2BC File Offset: 0x00A8A4BC
-		// (set) Token: 0x0602DE0F RID: 187919 RVA: 0x00A8C2C4 File Offset: 0x00A8A4C4
+		// Token: 0x17004831 RID: 18481
+		// (get) Token: 0x060224F0 RID: 140528 RVA: 0x009B79D4 File Offset: 0x009B5BD4
+		// (set) Token: 0x060224F1 RID: 140529 RVA: 0x009B79DC File Offset: 0x009B5BDC
 		[Nullable(0)]
 		[RequiredMember]
 		public T Enum { [NullableContext(0)] get; [NullableContext(0)] set; }
 
-		// Token: 0x1700757B RID: 30075
-		// (get) Token: 0x0602DE10 RID: 187920 RVA: 0x00A8C2CD File Offset: 0x00A8A4CD
-		// (set) Token: 0x0602DE11 RID: 187921 RVA: 0x00A8C2D5 File Offset: 0x00A8A4D5
+		// Token: 0x17004832 RID: 18482
+		// (get) Token: 0x060224F2 RID: 140530 RVA: 0x009B79E5 File Offset: 0x009B5BE5
+		// (set) Token: 0x060224F3 RID: 140531 RVA: 0x009B79ED File Offset: 0x009B5BED
 		[RequiredMember]
 		public int Priority { get; set; }
 
-		// Token: 0x1700757C RID: 30076
-		// (get) Token: 0x0602DE12 RID: 187922 RVA: 0x00A8C2DE File Offset: 0x00A8A4DE
-		// (set) Token: 0x0602DE13 RID: 187923 RVA: 0x00A8C2E6 File Offset: 0x00A8A4E6
+		// Token: 0x17004833 RID: 18483
+		// (get) Token: 0x060224F4 RID: 140532 RVA: 0x009B79F6 File Offset: 0x009B5BF6
+		// (set) Token: 0x060224F5 RID: 140533 RVA: 0x009B79FE File Offset: 0x009B5BFE
 		[Nullable(new byte[]
 		{
 			2,
@@ -45,24 +45,24 @@ namespace CSharpScript.Game.Utils.Priority
 			1
 		})] set; }
 
-		// Token: 0x1700757D RID: 30077
-		// (get) Token: 0x0602DE14 RID: 187924 RVA: 0x00A8C2EF File Offset: 0x00A8A4EF
-		// (set) Token: 0x0602DE15 RID: 187925 RVA: 0x00A8C2F7 File Offset: 0x00A8A4F7
+		// Token: 0x17004834 RID: 18484
+		// (get) Token: 0x060224F6 RID: 140534 RVA: 0x009B7A07 File Offset: 0x009B5C07
+		// (set) Token: 0x060224F7 RID: 140535 RVA: 0x009B7A0F File Offset: 0x009B5C0F
 		public bool? EnterReentrant { get; set; }
 
-		// Token: 0x1700757E RID: 30078
-		// (get) Token: 0x0602DE16 RID: 187926 RVA: 0x00A8C300 File Offset: 0x00A8A500
-		// (set) Token: 0x0602DE17 RID: 187927 RVA: 0x00A8C308 File Offset: 0x00A8A508
+		// Token: 0x17004835 RID: 18485
+		// (get) Token: 0x060224F8 RID: 140536 RVA: 0x009B7A18 File Offset: 0x009B5C18
+		// (set) Token: 0x060224F9 RID: 140537 RVA: 0x009B7A20 File Offset: 0x009B5C20
 		public bool? ForceEnterCallback { get; set; }
 
-		// Token: 0x1700757F RID: 30079
-		// (get) Token: 0x0602DE18 RID: 187928 RVA: 0x00A8C311 File Offset: 0x00A8A511
-		// (set) Token: 0x0602DE19 RID: 187929 RVA: 0x00A8C319 File Offset: 0x00A8A519
+		// Token: 0x17004836 RID: 18486
+		// (get) Token: 0x060224FA RID: 140538 RVA: 0x009B7A29 File Offset: 0x009B5C29
+		// (set) Token: 0x060224FB RID: 140539 RVA: 0x009B7A31 File Offset: 0x009B5C31
 		public bool? CheckEnterValid { get; set; }
 
-		// Token: 0x17007580 RID: 30080
-		// (get) Token: 0x0602DE1A RID: 187930 RVA: 0x00A8C322 File Offset: 0x00A8A522
-		// (set) Token: 0x0602DE1B RID: 187931 RVA: 0x00A8C32A File Offset: 0x00A8A52A
+		// Token: 0x17004837 RID: 18487
+		// (get) Token: 0x060224FC RID: 140540 RVA: 0x009B7A3A File Offset: 0x009B5C3A
+		// (set) Token: 0x060224FD RID: 140541 RVA: 0x009B7A42 File Offset: 0x009B5C42
 		[Nullable(new byte[]
 		{
 			2,
@@ -78,29 +78,29 @@ namespace CSharpScript.Game.Utils.Priority
 			1
 		})] set; }
 
-		// Token: 0x17007581 RID: 30081
-		// (get) Token: 0x0602DE1C RID: 187932 RVA: 0x00A8C333 File Offset: 0x00A8A533
-		// (set) Token: 0x0602DE1D RID: 187933 RVA: 0x00A8C33B File Offset: 0x00A8A53B
+		// Token: 0x17004838 RID: 18488
+		// (get) Token: 0x060224FE RID: 140542 RVA: 0x009B7A4B File Offset: 0x009B5C4B
+		// (set) Token: 0x060224FF RID: 140543 RVA: 0x009B7A53 File Offset: 0x009B5C53
 		public bool? ForceExitCallback { get; set; }
 
-		// Token: 0x17007582 RID: 30082
-		// (get) Token: 0x0602DE1E RID: 187934 RVA: 0x00A8C344 File Offset: 0x00A8A544
-		// (set) Token: 0x0602DE1F RID: 187935 RVA: 0x00A8C34C File Offset: 0x00A8A54C
+		// Token: 0x17004839 RID: 18489
+		// (get) Token: 0x06022500 RID: 140544 RVA: 0x009B7A5C File Offset: 0x009B5C5C
+		// (set) Token: 0x06022501 RID: 140545 RVA: 0x009B7A64 File Offset: 0x009B5C64
 		public bool? CheckExitValid { get; set; }
 
-		// Token: 0x17007583 RID: 30083
-		// (get) Token: 0x0602DE20 RID: 187936 RVA: 0x00A8C355 File Offset: 0x00A8A555
-		// (set) Token: 0x0602DE21 RID: 187937 RVA: 0x00A8C35D File Offset: 0x00A8A55D
+		// Token: 0x1700483A RID: 18490
+		// (get) Token: 0x06022502 RID: 140546 RVA: 0x009B7A6D File Offset: 0x009B5C6D
+		// (set) Token: 0x06022503 RID: 140547 RVA: 0x009B7A75 File Offset: 0x009B5C75
 		[RequiredMember]
 		public Func<bool, bool, string, bool> EnterWrapper { get; set; }
 
-		// Token: 0x17007584 RID: 30084
-		// (get) Token: 0x0602DE22 RID: 187938 RVA: 0x00A8C366 File Offset: 0x00A8A566
-		// (set) Token: 0x0602DE23 RID: 187939 RVA: 0x00A8C36E File Offset: 0x00A8A56E
+		// Token: 0x1700483B RID: 18491
+		// (get) Token: 0x06022504 RID: 140548 RVA: 0x009B7A7E File Offset: 0x009B5C7E
+		// (set) Token: 0x06022505 RID: 140549 RVA: 0x009B7A86 File Offset: 0x009B5C86
 		[RequiredMember]
 		public Func<bool, string, bool> ExitWrapper { get; set; }
 
-		// Token: 0x0602DE24 RID: 187940 RVA: 0x00A8C377 File Offset: 0x00A8A577
+		// Token: 0x06022506 RID: 140550 RVA: 0x009B7A8F File Offset: 0x009B5C8F
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public CustomPriorityConfigWrapper()

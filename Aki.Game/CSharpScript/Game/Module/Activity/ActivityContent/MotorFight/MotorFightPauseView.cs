@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200642B RID: 25643
+	// Token: 0x020053A9 RID: 21417
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorFightPauseView : UiViewBase
 	{
-		// Token: 0x06040799 RID: 264089 RVA: 0x00F9A73A File Offset: 0x00F9893A
+		// Token: 0x0603545A RID: 218202 RVA: 0x00EE16DA File Offset: 0x00EDF8DA
 		public MotorFightPauseView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0604079A RID: 264090 RVA: 0x00F9A750 File Offset: 0x00F98950
+		// Token: 0x0603545B RID: 218203 RVA: 0x00EE16F0 File Offset: 0x00EDF8F0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604079B RID: 264091 RVA: 0x00F9A96C File Offset: 0x00F98B6C
+		// Token: 0x0603545C RID: 218204 RVA: 0x00EE190C File Offset: 0x00EDFB0C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorFightPauseView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604079C RID: 264092 RVA: 0x00F9A9B0 File Offset: 0x00F98BB0
+		// Token: 0x0603545D RID: 218205 RVA: 0x00EE1950 File Offset: 0x00EDFB50
 		private int SortItemList(MotorcycleArrowCollectionItemData a, MotorcycleArrowCollectionItemData b)
 		{
 			if (a.Config.Type != b.Config.Type)
@@ -114,13 +114,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x0604079D RID: 264093 RVA: 0x00F9AAA8 File Offset: 0x00F98CA8
+		// Token: 0x0603545E RID: 218206 RVA: 0x00EE1A48 File Offset: 0x00EDFC48
 		private void OnItemClick(MotorcycleArrowCollectionItemData data)
 		{
 			UiManager.Instance.OpenView(EUiViewName.MotorcycleArrowCollectionTipsView, data, null);
 		}
 
-		// Token: 0x0604079E RID: 264094 RVA: 0x00F9AABB File Offset: 0x00F98CBB
+		// Token: 0x0603545F RID: 218207 RVA: 0x00EE1A5B File Offset: 0x00EDFC5B
 		private CollectionGridItemPanel CreateItem()
 		{
 			return new CollectionGridItemPanel
@@ -130,26 +130,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			};
 		}
 
-		// Token: 0x0604079F RID: 264095 RVA: 0x00F9AADB File Offset: 0x00F98CDB
+		// Token: 0x06035460 RID: 218208 RVA: 0x00EE1A7B File Offset: 0x00EDFC7B
 		private MotorFightSummaryAttrItem CreateAttrItem()
 		{
 			return new MotorFightSummaryAttrItem();
 		}
 
-		// Token: 0x060407A0 RID: 264096 RVA: 0x00F9AAE2 File Offset: 0x00F98CE2
+		// Token: 0x06035461 RID: 218209 RVA: 0x00EE1A82 File Offset: 0x00EDFC82
 		private void OnLeaveBtnClick()
 		{
 			MotorFightController.Instance.LeaveInstanceDungeon();
 		}
 
-		// Token: 0x060407A1 RID: 264097 RVA: 0x00F9AAEE File Offset: 0x00F98CEE
+		// Token: 0x06035462 RID: 218210 RVA: 0x00EE1A8E File Offset: 0x00EDFC8E
 		private void OnSettleAndLeaveBtnClick()
 		{
 			MotorFightController.Instance.RequestSettlement(true, null);
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060407A2 RID: 264098 RVA: 0x00F9AB03 File Offset: 0x00F98D03
+		// Token: 0x06035463 RID: 218211 RVA: 0x00EE1AA3 File Offset: 0x00EDFCA3
 		private void OnReChallengeBtnClick()
 		{
 			MotorFightController.Instance.RequestSettlement(false, delegate
@@ -158,32 +158,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			});
 		}
 
-		// Token: 0x060407A3 RID: 264099 RVA: 0x00F9AB2F File Offset: 0x00F98D2F
+		// Token: 0x06035464 RID: 218212 RVA: 0x00EE1ACF File Offset: 0x00EDFCCF
 		private void OnContinueBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060407A4 RID: 264100 RVA: 0x00F9AB38 File Offset: 0x00F98D38
+		// Token: 0x06035465 RID: 218213 RVA: 0x00EE1AD8 File Offset: 0x00EDFCD8
 		private void OnDetailBtnClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MotorFightAttrDetailView, null, null);
 		}
 
-		// Token: 0x060407A5 RID: 264101 RVA: 0x00F9AB4B File Offset: 0x00F98D4B
+		// Token: 0x06035466 RID: 218214 RVA: 0x00EE1AEB File Offset: 0x00EDFCEB
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0402184F RID: 137295
+		// Token: 0x0401C17E RID: 115070
 		public Dictionary<int, Dictionary<int, int>> ItemNumMap = new Dictionary<int, Dictionary<int, int>>();
 
-		// Token: 0x04021850 RID: 137296
+		// Token: 0x0401C17F RID: 115071
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021851 RID: 137297
+		// Token: 0x0401C180 RID: 115072
 		[Nullable(new byte[]
 		{
 			2,
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 		})]
 		private GenericScrollViewNew<CollectionGridItemPanel, MotorcycleArrowCollectionItemData> ItemScrollLayout;
 
-		// Token: 0x04021852 RID: 137298
+		// Token: 0x0401C181 RID: 115073
 		[Nullable(new byte[]
 		{
 			2,
@@ -200,41 +200,41 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 		})]
 		private GenericLayout<MotorFightSummaryAttrItem, EMotorFightAttrShowType> AttrLayout;
 
-		// Token: 0x0200C664 RID: 50788
+		// Token: 0x0200B04B RID: 45131
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403BE4F RID: 245327
+			// Token: 0x040367AC RID: 223148
 			public const int ItemCaption = 0;
 
-			// Token: 0x0403BE50 RID: 245328
+			// Token: 0x040367AD RID: 223149
 			public const int BtnLeave = 1;
 
-			// Token: 0x0403BE51 RID: 245329
+			// Token: 0x040367AE RID: 223150
 			public const int BtnSettleAndLeave = 2;
 
-			// Token: 0x0403BE52 RID: 245330
+			// Token: 0x040367AF RID: 223151
 			public const int BtnReChallenge = 3;
 
-			// Token: 0x0403BE53 RID: 245331
+			// Token: 0x040367B0 RID: 223152
 			public const int BtnContinue = 4;
 
-			// Token: 0x0403BE54 RID: 245332
+			// Token: 0x040367B1 RID: 223153
 			public const int ItemEmptyPanel = 5;
 
-			// Token: 0x0403BE55 RID: 245333
+			// Token: 0x040367B2 RID: 223154
 			public const int ScrollLayoutItem = 6;
 
-			// Token: 0x0403BE56 RID: 245334
+			// Token: 0x040367B3 RID: 223155
 			public const int ItemBase = 7;
 
-			// Token: 0x0403BE57 RID: 245335
+			// Token: 0x040367B4 RID: 223156
 			public const int LayoutAttribute = 8;
 
-			// Token: 0x0403BE58 RID: 245336
+			// Token: 0x040367B5 RID: 223157
 			public const int ItemAttribute = 9;
 
-			// Token: 0x0403BE59 RID: 245337
+			// Token: 0x040367B6 RID: 223158
 			public const int BtnDetail = 10;
 		}
 	}

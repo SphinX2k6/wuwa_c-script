@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000122 RID: 290
+	// Token: 0x02000133 RID: 307
 	[EnumExtensions]
 	public enum EQuickHackAutoCloseType
 	{
-		// Token: 0x040005D4 RID: 1492
+		// Token: 0x04000611 RID: 1553
 		OnSkillSelected,
-		// Token: 0x040005D5 RID: 1493
+		// Token: 0x04000612 RID: 1554
 		OnUploadComplete
 	}
 }

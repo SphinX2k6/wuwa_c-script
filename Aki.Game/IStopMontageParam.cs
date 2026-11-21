@@ -2,38 +2,38 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003013 RID: 12307
+// Token: 0x02002569 RID: 9577
 [NullableContext(2)]
 [Nullable(0)]
 public class IStopMontageParam : IActionParamMap
 {
-	// Token: 0x170023DA RID: 9178
-	// (get) Token: 0x0601A118 RID: 106776 RVA: 0x006D4FD8 File Offset: 0x006D31D8
-	// (set) Token: 0x0601A119 RID: 106777 RVA: 0x006D4FE0 File Offset: 0x006D31E0
+	// Token: 0x170024A8 RID: 9384
+	// (get) Token: 0x06017A60 RID: 96864 RVA: 0x006FCEE0 File Offset: 0x006FB0E0
+	// (set) Token: 0x06017A61 RID: 96865 RVA: 0x006FCEE8 File Offset: 0x006FB0E8
 	public EStopMethod? Method { get; set; }
 
-	// Token: 0x170023DB RID: 9179
-	// (get) Token: 0x0601A11A RID: 106778 RVA: 0x006D4FE9 File Offset: 0x006D31E9
-	// (set) Token: 0x0601A11B RID: 106779 RVA: 0x006D4FF1 File Offset: 0x006D31F1
+	// Token: 0x170024A9 RID: 9385
+	// (get) Token: 0x06017A62 RID: 96866 RVA: 0x006FCEF1 File Offset: 0x006FB0F1
+	// (set) Token: 0x06017A63 RID: 96867 RVA: 0x006FCEF9 File Offset: 0x006FB0F9
 	public UAnimMontage Montage { get; set; }
 
-	// Token: 0x170023DC RID: 9180
-	// (get) Token: 0x0601A11C RID: 106780 RVA: 0x006D4FFA File Offset: 0x006D31FA
-	// (set) Token: 0x0601A11D RID: 106781 RVA: 0x006D5002 File Offset: 0x006D3202
+	// Token: 0x170024AA RID: 9386
+	// (get) Token: 0x06017A64 RID: 96868 RVA: 0x006FCF02 File Offset: 0x006FB102
+	// (set) Token: 0x06017A65 RID: 96869 RVA: 0x006FCF0A File Offset: 0x006FB10A
 	public int? HandleId { get; set; }
 
-	// Token: 0x170023DD RID: 9181
-	// (get) Token: 0x0601A11E RID: 106782 RVA: 0x006D500B File Offset: 0x006D320B
-	// (set) Token: 0x0601A11F RID: 106783 RVA: 0x006D5013 File Offset: 0x006D3213
+	// Token: 0x170024AB RID: 9387
+	// (get) Token: 0x06017A66 RID: 96870 RVA: 0x006FCF13 File Offset: 0x006FB113
+	// (set) Token: 0x06017A67 RID: 96871 RVA: 0x006FCF1B File Offset: 0x006FB11B
 	public float? BlendOutTime { get; set; }
 
-	// Token: 0x170023DE RID: 9182
-	// (get) Token: 0x0601A120 RID: 106784 RVA: 0x006D501C File Offset: 0x006D321C
-	// (set) Token: 0x0601A121 RID: 106785 RVA: 0x006D5024 File Offset: 0x006D3224
+	// Token: 0x170024AC RID: 9388
+	// (get) Token: 0x06017A68 RID: 96872 RVA: 0x006FCF24 File Offset: 0x006FB124
+	// (set) Token: 0x06017A69 RID: 96873 RVA: 0x006FCF2C File Offset: 0x006FB12C
 	public float? Delay { get; set; }
 
-	// Token: 0x170023DF RID: 9183
-	// (get) Token: 0x0601A122 RID: 106786 RVA: 0x006D502D File Offset: 0x006D322D
-	// (set) Token: 0x0601A123 RID: 106787 RVA: 0x006D5035 File Offset: 0x006D3235
+	// Token: 0x170024AD RID: 9389
+	// (get) Token: 0x06017A6A RID: 96874 RVA: 0x006FCF35 File Offset: 0x006FB135
+	// (set) Token: 0x06017A6B RID: 96875 RVA: 0x006FCF3D File Offset: 0x006FB13D
 	public bool? ImmediatelyCallback { get; set; }
 }

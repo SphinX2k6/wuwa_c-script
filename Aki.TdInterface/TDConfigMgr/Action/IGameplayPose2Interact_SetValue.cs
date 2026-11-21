@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ACE RID: 6862
+	// Token: 0x02001C75 RID: 7285
 	public class IGameplayPose2Interact_SetValue
 	{
-		// Token: 0x04005A7B RID: 23163
+		// Token: 0x04005F05 RID: 24325
 		public ELeisureInteract Type;
 	}
 }

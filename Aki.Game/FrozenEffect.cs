@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F46 RID: 12102
+// Token: 0x02002499 RID: 9369
 [NullableContext(1)]
 [Nullable(0)]
 public class FrozenEffect : BuffEffect
 {
-	// Token: 0x06019C3F RID: 105535 RVA: 0x006B7457 File Offset: 0x006B5657
+	// Token: 0x0601754A RID: 95562 RVA: 0x006DD773 File Offset: 0x006DB973
 	public FrozenEffect(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C40 RID: 105536 RVA: 0x006B7474 File Offset: 0x006B5674
+	// Token: 0x0601754B RID: 95563 RVA: 0x006DD790 File Offset: 0x006DB990
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 1);
@@ -24,7 +24,7 @@ public class FrozenEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C41 RID: 105537 RVA: 0x006B74C0 File Offset: 0x006B56C0
+	// Token: 0x0601754C RID: 95564 RVA: 0x006DD7DC File Offset: 0x006DB9DC
 	public override void OnCreated()
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
@@ -54,14 +54,14 @@ public class FrozenEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C42 RID: 105538 RVA: 0x006B7543 File Offset: 0x006B5743
+	// Token: 0x0601754D RID: 95565 RVA: 0x006DD85F File Offset: 0x006DBA5F
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C43 RID: 105539 RVA: 0x006B7548 File Offset: 0x006B5748
+	// Token: 0x0601754E RID: 95566 RVA: 0x006DD864 File Offset: 0x006DBA64
 	public override void OnRemoved(bool bPremature)
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
@@ -86,7 +86,7 @@ public class FrozenEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C44 RID: 105540 RVA: 0x006B75A8 File Offset: 0x006B57A8
+	// Token: 0x0601754F RID: 95567 RVA: 0x006DD8C4 File Offset: 0x006DBAC4
 	public override string GetDebugEffectString()
 	{
 		string str = "冻结";
@@ -105,12 +105,12 @@ public class FrozenEffect : BuffEffect
 		return str + str2;
 	}
 
-	// Token: 0x0400C238 RID: 49720
+	// Token: 0x0400C5DA RID: 50650
 	protected string LockName = "";
 
-	// Token: 0x0400C239 RID: 49721
+	// Token: 0x0400C5DB RID: 50651
 	protected int PanelQteId;
 
-	// Token: 0x0400C23A RID: 49722
+	// Token: 0x0400C5DC RID: 50652
 	protected int PanelQteHandleId;
 }

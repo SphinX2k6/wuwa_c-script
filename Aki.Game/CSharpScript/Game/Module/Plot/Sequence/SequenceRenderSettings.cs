@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence
 {
-	// Token: 0x02005015 RID: 20501
+	// Token: 0x02003FDF RID: 16351
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SequenceRenderSettings : IStaticVariableResetter
 	{
-		// Token: 0x06034780 RID: 214912 RVA: 0x00C5BC4D File Offset: 0x00C59E4D
+		// Token: 0x06029623 RID: 169507 RVA: 0x00BA718D File Offset: 0x00BA538D
 		static SequenceRenderSettings()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SequenceRenderSettings.CreateStaticDefaultValue), new Action(SequenceRenderSettings.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06034781 RID: 214913 RVA: 0x00C5BC6C File Offset: 0x00C59E6C
+		// Token: 0x06029624 RID: 169508 RVA: 0x00BA71AC File Offset: 0x00BA53AC
 		public static void CreateStaticDefaultValue()
 		{
 			SequenceRenderSettings.TextureStreamingPC = new Dictionary<EGameQualitySettingLevel, bool>();
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			SequenceRenderSettings.TextureStreamingPS5 = new Dictionary<EGameQualitySettingLevel, bool>();
 		}
 
-		// Token: 0x06034782 RID: 214914 RVA: 0x00C5BC96 File Offset: 0x00C59E96
+		// Token: 0x06029625 RID: 169509 RVA: 0x00BA71D6 File Offset: 0x00BA53D6
 		public static void ResetStaticDefaultValue()
 		{
 			SequenceRenderSettings.TextureStreamingPC = null;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			SequenceRenderSettings.TextureStreamingPS5 = null;
 		}
 
-		// Token: 0x06034783 RID: 214915 RVA: 0x00C5BCB0 File Offset: 0x00C59EB0
+		// Token: 0x06029626 RID: 169510 RVA: 0x00BA71F0 File Offset: 0x00BA53F0
 		public static void SetupSequenceSetting()
 		{
 			SequenceRenderSettings.TextureStreamingAndroid[EGameQualitySettingLevel.VeryLow] = true;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			SequenceRenderSettings.TextureStreamingPS5[EGameQualitySettingLevel.Highest] = true;
 		}
 
-		// Token: 0x06034784 RID: 214916 RVA: 0x00C5BDE0 File Offset: 0x00C59FE0
+		// Token: 0x06029627 RID: 169511 RVA: 0x00BA7320 File Offset: 0x00BA5520
 		public static bool GetTexureStreamingEnable(EGameQualitySettingLevel level)
 		{
 			if (Info.Instance.IsPcPlatform())
@@ -97,16 +97,16 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x0401BF30 RID: 114480
+		// Token: 0x04016919 RID: 92441
 		private static Dictionary<EGameQualitySettingLevel, bool> TextureStreamingPC;
 
-		// Token: 0x0401BF31 RID: 114481
+		// Token: 0x0401691A RID: 92442
 		private static Dictionary<EGameQualitySettingLevel, bool> TextureStreamingAndroid;
 
-		// Token: 0x0401BF32 RID: 114482
+		// Token: 0x0401691B RID: 92443
 		private static Dictionary<EGameQualitySettingLevel, bool> TextureStreamingIOS;
 
-		// Token: 0x0401BF33 RID: 114483
+		// Token: 0x0401691C RID: 92444
 		private static Dictionary<EGameQualitySettingLevel, bool> TextureStreamingPS5;
 	}
 }

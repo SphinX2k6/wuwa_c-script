@@ -4,23 +4,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046E4 RID: 18148
+	// Token: 0x02003614 RID: 13844
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiTextAdapterProxy
 	{
-		// Token: 0x17007685 RID: 30341
-		// (get) Token: 0x0602ECC2 RID: 191682 RVA: 0x00AD58DE File Offset: 0x00AD3ADE
-		// (set) Token: 0x0602ECC3 RID: 191683 RVA: 0x00AD58E6 File Offset: 0x00AD3AE6
+		// Token: 0x17004941 RID: 18753
+		// (get) Token: 0x060233FD RID: 144381 RVA: 0x00A033B6 File Offset: 0x00A015B6
+		// (set) Token: 0x060233FE RID: 144382 RVA: 0x00A033BE File Offset: 0x00A015BE
 		public UUIText BindText { get; private set; }
 
-		// Token: 0x0602ECC4 RID: 191684 RVA: 0x00AD58EF File Offset: 0x00AD3AEF
+		// Token: 0x060233FF RID: 144383 RVA: 0x00A033C7 File Offset: 0x00A015C7
 		public UiTextAdapterProxy(UUIText bindText)
 		{
 			this.BindText = bindText;
 		}
 
-		// Token: 0x0602ECC5 RID: 191685 RVA: 0x00AD5908 File Offset: 0x00AD3B08
+		// Token: 0x06023400 RID: 144384 RVA: 0x00A033E0 File Offset: 0x00A015E0
 		public void Init()
 		{
 			this.TextItem = (this.BindText.GetOwner() as AUIBaseActor).GetUIItem().GetParentAsUIItem();
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Ui
 			this.StartTick();
 		}
 
-		// Token: 0x0602ECC6 RID: 191686 RVA: 0x00AD5990 File Offset: 0x00AD3B90
+		// Token: 0x06023401 RID: 144385 RVA: 0x00A03468 File Offset: 0x00A01668
 		private FIntPoint GetViewportSize()
 		{
 			APlayerController playerController = Global.PlayerController;
@@ -48,21 +48,21 @@ namespace CSharpScript.Game.Ui
 			};
 		}
 
-		// Token: 0x0602ECC7 RID: 191687 RVA: 0x00AD59CD File Offset: 0x00AD3BCD
+		// Token: 0x06023402 RID: 144386 RVA: 0x00A034A5 File Offset: 0x00A016A5
 		public void SetLocalText(string textStringId, params object[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(this.BindText, textStringId, args);
 			this.CheckAndRefresh();
 		}
 
-		// Token: 0x0602ECC8 RID: 191688 RVA: 0x00AD59E7 File Offset: 0x00AD3BE7
+		// Token: 0x06023403 RID: 144387 RVA: 0x00A034BF File Offset: 0x00A016BF
 		public void SetText(string inText)
 		{
 			this.BindText.SetText(inText, true);
 			this.CheckAndRefresh();
 		}
 
-		// Token: 0x0602ECC9 RID: 191689 RVA: 0x00AD59FC File Offset: 0x00AD3BFC
+		// Token: 0x06023404 RID: 144388 RVA: 0x00A034D4 File Offset: 0x00A016D4
 		private void CheckAndRefresh()
 		{
 			if (this.DelayRefreshTextHeightTimer == null)
@@ -75,14 +75,14 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602ECCA RID: 191690 RVA: 0x00AD5A2F File Offset: 0x00AD3C2F
+		// Token: 0x06023405 RID: 144389 RVA: 0x00A03507 File Offset: 0x00A01707
 		public void StartTick()
 		{
 			this.StopTick();
 			this.Ticker = TickSystem.Instance.Add(new Action<float>(this.OnTick), "UiTextSizeFitter." + this.BindText.GetName(), ETickingGroup.TG_PrePhysics, false, 0, false);
 		}
 
-		// Token: 0x0602ECCB RID: 191691 RVA: 0x00AD5A6C File Offset: 0x00AD3C6C
+		// Token: 0x06023406 RID: 144390 RVA: 0x00A03544 File Offset: 0x00A01744
 		public void StopTick()
 		{
 			if (this.Ticker != null)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602ECCC RID: 191692 RVA: 0x00AD5A93 File Offset: 0x00AD3C93
+		// Token: 0x06023407 RID: 144391 RVA: 0x00A0356B File Offset: 0x00A0176B
 		public void Clear()
 		{
 			this.StopTick();
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602ECCD RID: 191693 RVA: 0x00AD5AD0 File Offset: 0x00AD3CD0
+		// Token: 0x06023408 RID: 144392 RVA: 0x00A035A8 File Offset: 0x00A017A8
 		private void OnTick(float delta)
 		{
 			FIntPoint viewportSize = this.GetViewportSize();
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602ECCE RID: 191694 RVA: 0x00AD5B18 File Offset: 0x00AD3D18
+		// Token: 0x06023409 RID: 144393 RVA: 0x00A035F0 File Offset: 0x00A017F0
 		private void RefreshTextHeight()
 		{
 			if (this.BindText == null || this.TextItem == null)
@@ -179,37 +179,37 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x04019754 RID: 104276
+		// Token: 0x04013DF2 RID: 81394
 		private const int FONT_SIZE = 38;
 
-		// Token: 0x04019755 RID: 104277
+		// Token: 0x04013DF3 RID: 81395
 		private const int DELAY_REFRESH_TIME = 100;
 
-		// Token: 0x04019756 RID: 104278
+		// Token: 0x04013DF4 RID: 81396
 		private float DefaultFontSize;
 
-		// Token: 0x04019757 RID: 104279
+		// Token: 0x04013DF5 RID: 81397
 		public int DefaultToggleItemHeight;
 
-		// Token: 0x04019758 RID: 104280
+		// Token: 0x04013DF6 RID: 81398
 		[Nullable(2)]
 		private UUISizeControlByOther TextSizeControlByOther;
 
-		// Token: 0x04019759 RID: 104281
+		// Token: 0x04013DF7 RID: 81399
 		[Nullable(2)]
 		private Ticker Ticker;
 
-		// Token: 0x0401975A RID: 104282
+		// Token: 0x04013DF8 RID: 81400
 		private FIntPoint CurrentViewportSize;
 
-		// Token: 0x0401975B RID: 104283
+		// Token: 0x04013DF9 RID: 81401
 		private bool IsSingleRow = true;
 
-		// Token: 0x0401975C RID: 104284
+		// Token: 0x04013DFA RID: 81402
 		[Nullable(2)]
 		private TimerHandle DelayRefreshTextHeightTimer;
 
-		// Token: 0x0401975D RID: 104285
+		// Token: 0x04013DFB RID: 81403
 		[Nullable(2)]
 		private UUIItem TextItem;
 	}

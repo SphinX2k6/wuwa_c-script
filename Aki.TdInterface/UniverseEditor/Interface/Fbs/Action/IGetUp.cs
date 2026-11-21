@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200688B RID: 26763
+	// Token: 0x02006F2C RID: 28460
 	public struct IGetUp : IFlatbufferObject
 	{
-		// Token: 0x1700C6BA RID: 50874
-		// (get) Token: 0x0602EAC6 RID: 191174 RVA: 0x0065D342 File Offset: 0x0065B542
+		// Token: 0x1700D0A0 RID: 53408
+		// (get) Token: 0x06031400 RID: 201728 RVA: 0x006AC3C2 File Offset: 0x006AA5C2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EAC7 RID: 191175 RVA: 0x0065D34F File Offset: 0x0065B54F
+		// Token: 0x06031401 RID: 201729 RVA: 0x006AC3CF File Offset: 0x006AA5CF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602EAC8 RID: 191176 RVA: 0x0065D358 File Offset: 0x0065B558
+		// Token: 0x06031402 RID: 201730 RVA: 0x006AC3D8 File Offset: 0x006AA5D8
 		public static IGetUp GetRootAsIGetUp(ByteBuffer _bb)
 		{
 			return IGetUp.GetRootAsIGetUp(_bb, default(IGetUp));
 		}
 
-		// Token: 0x0602EAC9 RID: 191177 RVA: 0x0065D374 File Offset: 0x0065B574
+		// Token: 0x06031403 RID: 201731 RVA: 0x006AC3F4 File Offset: 0x006AA5F4
 		public static IGetUp GetRootAsIGetUp(ByteBuffer _bb, IGetUp obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602EACA RID: 191178 RVA: 0x0065D391 File Offset: 0x0065B591
+		// Token: 0x06031404 RID: 201732 RVA: 0x006AC411 File Offset: 0x006AA611
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602EACB RID: 191179 RVA: 0x0065D3A0 File Offset: 0x0065B5A0
+		// Token: 0x06031405 RID: 201733 RVA: 0x006AC420 File Offset: 0x006AA620
 		public IGetUp __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C6BB RID: 50875
-		// (get) Token: 0x0602EACC RID: 191180 RVA: 0x0065D3B0 File Offset: 0x0065B5B0
+		// Token: 0x1700D0A1 RID: 53409
+		// (get) Token: 0x06031406 RID: 201734 RVA: 0x006AC430 File Offset: 0x006AA630
 		public ELeisureInteract Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EACD RID: 191181 RVA: 0x0065D3EC File Offset: 0x0065B5EC
+		// Token: 0x06031407 RID: 201735 RVA: 0x006AC46C File Offset: 0x006AA66C
 		public static Offset<IGetUp> CreateIGetUp(FlatBufferBuilder builder, ELeisureInteract Type = ELeisureInteract.CustomSkill)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGetUp.EndIGetUp(builder);
 		}
 
-		// Token: 0x0602EACE RID: 191182 RVA: 0x0065D402 File Offset: 0x0065B602
+		// Token: 0x06031408 RID: 201736 RVA: 0x006AC482 File Offset: 0x006AA682
 		public static void StartIGetUp(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602EACF RID: 191183 RVA: 0x0065D40B File Offset: 0x0065B60B
+		// Token: 0x06031409 RID: 201737 RVA: 0x006AC48B File Offset: 0x006AA68B
 		public static void AddType(FlatBufferBuilder builder, ELeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602EAD0 RID: 191184 RVA: 0x0065D416 File Offset: 0x0065B616
+		// Token: 0x0603140A RID: 201738 RVA: 0x006AC496 File Offset: 0x006AA696
 		public static Offset<IGetUp> EndIGetUp(FlatBufferBuilder builder)
 		{
 			return new Offset<IGetUp>(builder.EndTable());
 		}
 
-		// Token: 0x0602EAD1 RID: 191185 RVA: 0x0065D424 File Offset: 0x0065B624
+		// Token: 0x0603140B RID: 201739 RVA: 0x006AC4A4 File Offset: 0x006AA6A4
 		public IGetUpT UnPack()
 		{
 			IGetUpT getUpT = new IGetUpT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return getUpT;
 		}
 
-		// Token: 0x0602EAD2 RID: 191186 RVA: 0x0065D43F File Offset: 0x0065B63F
+		// Token: 0x0603140C RID: 201740 RVA: 0x006AC4BF File Offset: 0x006AA6BF
 		public void UnPackTo(IGetUpT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602EAD3 RID: 191187 RVA: 0x0065D450 File Offset: 0x0065B650
+		// Token: 0x0603140D RID: 201741 RVA: 0x006AC4D0 File Offset: 0x006AA6D0
 		public static Offset<IGetUp> Pack(FlatBufferBuilder builder, IGetUpT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGetUp.CreateIGetUp(builder, _o.Type);
 		}
 
-		// Token: 0x04010FDE RID: 69598
+		// Token: 0x04011E33 RID: 73267
 		private Table __p;
 	}
 }

@@ -5,52 +5,42 @@ using Aki.Config;
 using CSharpScript.Core.Common;
 using UnrealEngine;
 
-// Token: 0x020034F0 RID: 13552
+// Token: 0x02002A64 RID: 10852
 [NullableContext(1)]
 [Nullable(0)]
 public class AiBehaviorTreeConfig : ConfigBase
 {
-	// Token: 0x0601DB74 RID: 121716 RVA: 0x00853F63 File Offset: 0x00852163
+	// Token: 0x0601B882 RID: 112770 RVA: 0x0087C39B File Offset: 0x0087A59B
 	protected override bool OnInit()
 	{
 		this.ConfigDataMap.Clear();
 		return true;
 	}
 
-	// Token: 0x0601DB75 RID: 121717 RVA: 0x00853F71 File Offset: 0x00852171
+	// Token: 0x0601B883 RID: 112771 RVA: 0x0087C3A9 File Offset: 0x0087A5A9
 	protected override bool OnClear()
 	{
 		this.ConfigDataMap.Clear();
 		return true;
 	}
 
-	// Token: 0x0601DB76 RID: 121718 RVA: 0x00853F80 File Offset: 0x00852180
+	// Token: 0x0601B884 RID: 112772 RVA: 0x0087C3B8 File Offset: 0x0087A5B8
 	[NullableContext(2)]
 	public RawAiBehaviorTreeConfigData GetAiBehaviorTreeData(int id)
 	{
-		if (PublicUtil.Instance.UseDbConfig())
+		if (!this.ConfigDataMap.ContainsKey(id))
 		{
-			if (!this.ConfigDataMap.ContainsKey(id))
+			AiBehaviorTree? config = ConfigAiBehaviorTreeById.GetConfig(id, true);
+			if (config == null)
 			{
-				AiBehaviorTree? config = ConfigAiBehaviorTreeById.GetConfig(id, true);
-				if (config == null)
-				{
-					return null;
-				}
-				this.ConfigDataMap[id] = AiBehaviorTreeConfig.FbToAiBehaviorTreeData(config.Value);
+				return null;
 			}
-			return this.ConfigDataMap[id];
+			this.ConfigDataMap[id] = AiBehaviorTreeConfig.FbToAiBehaviorTreeData(config.Value);
 		}
-		this.ParseConfigFromJsonFile();
-		RawAiBehaviorTreeConfigData result;
-		if (this.ConfigDataMap.TryGetValue(id, out result))
-		{
-			return result;
-		}
-		return null;
+		return this.ConfigDataMap[id];
 	}
 
-	// Token: 0x0601DB77 RID: 121719 RVA: 0x00853FF8 File Offset: 0x008521F8
+	// Token: 0x0601B885 RID: 112773 RVA: 0x0087C40C File Offset: 0x0087A60C
 	private static RawAiBehaviorTreeConfigData FbToAiBehaviorTreeData(AiBehaviorTree fb)
 	{
 		return new RawAiBehaviorTreeConfigData
@@ -62,7 +52,7 @@ public class AiBehaviorTreeConfig : ConfigBase
 		};
 	}
 
-	// Token: 0x0601DB78 RID: 121720 RVA: 0x0085405C File Offset: 0x0085225C
+	// Token: 0x0601B886 RID: 112774 RVA: 0x0087C470 File Offset: 0x0087A670
 	private void ParseConfigFromJsonFile()
 	{
 		string configPath = PublicUtil.Instance.GetConfigPath("../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/AiBehaviorTree.json");
@@ -93,8 +83,8 @@ public class AiBehaviorTreeConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x170028F5 RID: 10485
-	// (get) Token: 0x0601DB79 RID: 121721 RVA: 0x00854130 File Offset: 0x00852330
+	// Token: 0x17002C8D RID: 11405
+	// (get) Token: 0x0601B887 RID: 112775 RVA: 0x0087C544 File Offset: 0x0087A744
 	public static AiBehaviorTreeConfig Instance
 	{
 		get
@@ -103,7 +93,7 @@ public class AiBehaviorTreeConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0601DB7A RID: 121722 RVA: 0x00854137 File Offset: 0x00852337
+	// Token: 0x0601B888 RID: 112776 RVA: 0x0087C54B File Offset: 0x0087A74B
 	public static AiBehaviorTreeConfig GetOrCreateInstance()
 	{
 		if (AiBehaviorTreeConfig._Instance == null)
@@ -113,7 +103,7 @@ public class AiBehaviorTreeConfig : ConfigBase
 		return AiBehaviorTreeConfig._Instance;
 	}
 
-	// Token: 0x0601DB7B RID: 121723 RVA: 0x0085414B File Offset: 0x0085234B
+	// Token: 0x0601B889 RID: 112777 RVA: 0x0087C55F File Offset: 0x0087A75F
 	public static bool CreateInstance()
 	{
 		if (AiBehaviorTreeConfig._Instance != null)
@@ -124,27 +114,27 @@ public class AiBehaviorTreeConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601DB7C RID: 121724 RVA: 0x00854161 File Offset: 0x00852361
+	// Token: 0x0601B88A RID: 112778 RVA: 0x0087C575 File Offset: 0x0087A775
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DB7D RID: 121725 RVA: 0x00854163 File Offset: 0x00852363
+	// Token: 0x0601B88B RID: 112779 RVA: 0x0087C577 File Offset: 0x0087A777
 	public static void ResetStaticDefaultValue()
 	{
 		AiBehaviorTreeConfig._Instance = null;
 	}
 
-	// Token: 0x0601DB7E RID: 121726 RVA: 0x0085416B File Offset: 0x0085236B
+	// Token: 0x0601B88C RID: 112780 RVA: 0x0087C57F File Offset: 0x0087A77F
 	static AiBehaviorTreeConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AiBehaviorTreeConfig.CreateStaticDefaultValue), new Action(AiBehaviorTreeConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E932 RID: 59698
+	// Token: 0x0400EDE9 RID: 60905
 	private readonly Dictionary<int, RawAiBehaviorTreeConfigData> ConfigDataMap = new Dictionary<int, RawAiBehaviorTreeConfigData>();
 
-	// Token: 0x0400E933 RID: 59699
+	// Token: 0x0400EDEA RID: 60906
 	[Nullable(2)]
 	private static AiBehaviorTreeConfig _Instance;
 }

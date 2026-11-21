@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EEB RID: 7915
+	// Token: 0x020005F8 RID: 1528
 	public sealed class FOnProgress : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E14C RID: 123212 RVA: 0x002CAADF File Offset: 0x002C8CDF
+		// Token: 0x06008797 RID: 34711 RVA: 0x000CBAE3 File Offset: 0x000C9CE3
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnProgress.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E14D RID: 123213 RVA: 0x002CAAEB File Offset: 0x002C8CEB
+		// Token: 0x06008798 RID: 34712 RVA: 0x000CBAEF File Offset: 0x000C9CEF
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnProgress._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnProgress._FunctionPtr;
 		}
 
-		// Token: 0x0601E14E RID: 123214 RVA: 0x002CAB0E File Offset: 0x002C8D0E
+		// Token: 0x06008799 RID: 34713 RVA: 0x000CBB12 File Offset: 0x000C9D12
 		public FOnProgress()
 		{
 		}
 
-		// Token: 0x0601E14F RID: 123215 RVA: 0x002CAB16 File Offset: 0x002C8D16
+		// Token: 0x0600879A RID: 34714 RVA: 0x000CBB1A File Offset: 0x000C9D1A
 		[NullableContext(2)]
 		public FOnProgress(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E150 RID: 123216 RVA: 0x002CAB20 File Offset: 0x002C8D20
+		// Token: 0x0600879B RID: 34715 RVA: 0x000CBB24 File Offset: 0x000C9D24
 		public FOnProgress(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E151 RID: 123217 RVA: 0x002CAB2B File Offset: 0x002C8D2B
+		// Token: 0x0600879C RID: 34716 RVA: 0x000CBB2F File Offset: 0x000C9D2F
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int, float>) ?? ((Action<int, float>)Delegate.CreateDelegate(typeof(Action<int, float>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E152 RID: 123218 RVA: 0x002CAB5D File Offset: 0x002C8D5D
+		// Token: 0x0600879D RID: 34717 RVA: 0x000CBB61 File Offset: 0x000C9D61
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<int, float> Callback)
 		{
 			if (FOnProgress.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnProgress.RegisterId);
 		}
 
-		// Token: 0x0601E153 RID: 123219 RVA: 0x002CAB98 File Offset: 0x002C8D98
+		// Token: 0x0600879E RID: 34718 RVA: 0x000CBB9C File Offset: 0x000C9D9C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int State, float Rate)
 		{
 			FOnProgress.__FOnProgress_DelegateParams* ptr = stackalloc FOnProgress.__FOnProgress_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnProgress.__FOnProgress_DelegateParams) & -16L;
@@ -77,10 +75,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601E154 RID: 123220 RVA: 0x002CABDC File Offset: 0x002C8DDC
+		// Token: 0x0600879F RID: 34719 RVA: 0x000CBBE0 File Offset: 0x000C9DE0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, float> action = target as Action<int, float>;
@@ -91,35 +88,35 @@ namespace UnrealEngine
 			action(((FOnProgress.__FOnProgress_DelegateParams*)__Parameters)->State, ((FOnProgress.__FOnProgress_DelegateParams*)__Parameters)->Rate);
 		}
 
-		// Token: 0x0401041B RID: 66587
+		// Token: 0x04003AF3 RID: 15091
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0401041C RID: 66588
+		// Token: 0x04003AF4 RID: 15092
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.OnProgress__DelegateSignature";
 
-		// Token: 0x0401041D RID: 66589
+		// Token: 0x04003AF5 RID: 15093
 		private static int RegisterId;
 
-		// Token: 0x020033C1 RID: 13249
+		// Token: 0x02000E0E RID: 3598
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnProgress_DelegateParams
+		private ref struct __FOnProgress_DelegateParams
 		{
-			// Token: 0x04017375 RID: 95093
+			// Token: 0x040061A2 RID: 24994
 			[FieldOffset(0)]
 			public int State;
 
-			// Token: 0x04017376 RID: 95094
+			// Token: 0x040061A3 RID: 24995
 			[FieldOffset(4)]
 			public float Rate;
 		}
 
-		// Token: 0x020033C2 RID: 13250
+		// Token: 0x02000E0F RID: 3599
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017377 RID: 95095
+			// Token: 0x040061A4 RID: 24996
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -17,25 +16,15 @@ using CSharpScript.Game.NewWorld.Character.Common.Component;
 using CSharpScript.Game.NewWorld.Character.Npc.Controller;
 using UnrealEngine;
 
-// Token: 0x02003043 RID: 12355
+// Token: 0x02002599 RID: 9625
 [NullableContext(1)]
 [Nullable(0)]
-public class CharacterAiComponent : EntityComponent, IComponentDependency
+public class CharacterAiComponent : EntityComponent
 {
-	// Token: 0x17002420 RID: 9248
-	// (get) Token: 0x0601A38E RID: 107406 RVA: 0x006E890B File Offset: 0x006E6B0B
-	[Nullable(new byte[]
+	// Token: 0x17002517 RID: 9495
+	// (get) Token: 0x06017D03 RID: 97539 RVA: 0x00710203 File Offset: 0x0070E403
+	public override Type[] Dependencies
 	{
-		2,
-		1
-	})]
-	public static Type[] Dependencies
-	{
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
 		get
 		{
 			return new Type[]
@@ -46,8 +35,8 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x17002421 RID: 9249
-	// (get) Token: 0x0601A38F RID: 107407 RVA: 0x006E892D File Offset: 0x006E6B2D
+	// Token: 0x17002518 RID: 9496
+	// (get) Token: 0x06017D04 RID: 97540 RVA: 0x00710225 File Offset: 0x0070E425
 	public TsAiController TsAiController
 	{
 		get
@@ -56,8 +45,8 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x17002422 RID: 9250
-	// (get) Token: 0x0601A390 RID: 107408 RVA: 0x006E8935 File Offset: 0x006E6B35
+	// Token: 0x17002519 RID: 9497
+	// (get) Token: 0x06017D05 RID: 97541 RVA: 0x0071022D File Offset: 0x0070E42D
 	public AiController AiController
 	{
 		get
@@ -66,7 +55,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A392 RID: 107410 RVA: 0x006E897C File Offset: 0x006E6B7C
+	// Token: 0x06017D07 RID: 97543 RVA: 0x00710274 File Offset: 0x0070E474
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -80,7 +69,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A393 RID: 107411 RVA: 0x006E89CC File Offset: 0x006E6BCC
+	// Token: 0x06017D08 RID: 97544 RVA: 0x007102C4 File Offset: 0x0070E4C4
 	public void CheckAndInitTsAiController()
 	{
 		CharacterActorComponent component = base.Entity.GetComponent<CharacterActorComponent>();
@@ -94,7 +83,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		this.SetUeController(tsAiController, "CheckAndInitTsAiController");
 	}
 
-	// Token: 0x0601A394 RID: 107412 RVA: 0x006E8A24 File Offset: 0x006E6C24
+	// Token: 0x06017D09 RID: 97545 RVA: 0x0071031C File Offset: 0x0070E51C
 	protected unsafe override bool OnInit()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -118,7 +107,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A395 RID: 107413 RVA: 0x006E8B14 File Offset: 0x006E6D14
+	// Token: 0x06017D0A RID: 97546 RVA: 0x0071040C File Offset: 0x0070E60C
 	protected override bool OnStart()
 	{
 		this.AiControllerInternal.SetAiDesignComp(this);
@@ -143,7 +132,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A396 RID: 107414 RVA: 0x006E8C04 File Offset: 0x006E6E04
+	// Token: 0x06017D0B RID: 97547 RVA: 0x007104FC File Offset: 0x0070E6FC
 	protected override void OnPostActivate()
 	{
 		this.IsActivated = true;
@@ -163,7 +152,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		CombatMessageModel.Instance.AnyHateChange = true;
 	}
 
-	// Token: 0x0601A397 RID: 107415 RVA: 0x006E8C56 File Offset: 0x006E6E56
+	// Token: 0x06017D0C RID: 97548 RVA: 0x0071054E File Offset: 0x0070E74E
 	private void OnSkillEnd(int entityId, int skillId)
 	{
 		AiController aiControllerInternal = this.AiControllerInternal;
@@ -174,7 +163,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		aiControllerInternal.OnSkillEnd();
 	}
 
-	// Token: 0x0601A398 RID: 107416 RVA: 0x006E8C68 File Offset: 0x006E6E68
+	// Token: 0x06017D0D RID: 97549 RVA: 0x00710560 File Offset: 0x0070E760
 	private TsAiController SpawnTsAiController(FTransformDouble transform)
 	{
 		TsAiController tsAiController = ActorSystem.Instance.Get(TsAiController.StaticClass(), transform, null, true) as TsAiController;
@@ -187,7 +176,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		return tsAiController;
 	}
 
-	// Token: 0x0601A399 RID: 107417 RVA: 0x006E8CC4 File Offset: 0x006E6EC4
+	// Token: 0x06017D0E RID: 97550 RVA: 0x007105BC File Offset: 0x0070E7BC
 	protected override bool OnEnd()
 	{
 		this.IsActivated = false;
@@ -213,14 +202,14 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A39A RID: 107418 RVA: 0x006E8DD3 File Offset: 0x006E6FD3
+	// Token: 0x06017D0F RID: 97551 RVA: 0x007106CB File Offset: 0x0070E8CB
 	protected override bool OnClear()
 	{
 		this.DisableKeyMap.Clear();
 		return true;
 	}
 
-	// Token: 0x0601A39B RID: 107419 RVA: 0x006E8DE4 File Offset: 0x006E6FE4
+	// Token: 0x06017D10 RID: 97552 RVA: 0x007106DC File Offset: 0x0070E8DC
 	private void GenerateAiConfig()
 	{
 		int num = 0;
@@ -254,7 +243,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A39C RID: 107420 RVA: 0x006E8EB4 File Offset: 0x006E70B4
+	// Token: 0x06017D11 RID: 97553 RVA: 0x007107AC File Offset: 0x0070E9AC
 	protected override void OnTick(float delta)
 	{
 		if (this.ActorComp.CreatureData.GetRemoveState())
@@ -292,7 +281,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A39D RID: 107421 RVA: 0x006E8F88 File Offset: 0x006E7188
+	// Token: 0x06017D12 RID: 97554 RVA: 0x00710880 File Offset: 0x0070EA80
 	public void LoadAiConfigs(int id)
 	{
 		if (id == 0)
@@ -320,7 +309,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		this.LoadUeControllerByConfig();
 	}
 
-	// Token: 0x0601A39E RID: 107422 RVA: 0x006E9038 File Offset: 0x006E7238
+	// Token: 0x06017D13 RID: 97555 RVA: 0x00710930 File Offset: 0x0070EB30
 	private void LoadUeControllerByConfig()
 	{
 		AiBase? baseConfig = this.AiControllerInternal.AiBase;
@@ -375,7 +364,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601A39F RID: 107423 RVA: 0x006E90ED File Offset: 0x006E72ED
+	// Token: 0x06017D14 RID: 97556 RVA: 0x007109E5 File Offset: 0x0070EBE5
 	public void SetAiHateConfig(string configId)
 	{
 		this.CacheAiHateConfigId = configId;
@@ -385,13 +374,13 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3A0 RID: 107424 RVA: 0x006E910A File Offset: 0x006E730A
+	// Token: 0x06017D15 RID: 97557 RVA: 0x00710A02 File Offset: 0x0070EC02
 	public void SetAiTickLock(bool isLock)
 	{
 		this.IsLockAiHate = isLock;
 	}
 
-	// Token: 0x0601A3A1 RID: 107425 RVA: 0x006E9114 File Offset: 0x006E7314
+	// Token: 0x06017D16 RID: 97558 RVA: 0x00710A0C File Offset: 0x0070EC0C
 	private void SetUeController([Nullable(2)] AController controller, string reason = "")
 	{
 		if (this.TsAiControllerInternal == controller)
@@ -465,7 +454,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3A2 RID: 107426 RVA: 0x006E92DC File Offset: 0x006E74DC
+	// Token: 0x06017D17 RID: 97559 RVA: 0x00710BD4 File Offset: 0x0070EDD4
 	private void StartUeController()
 	{
 		CombatLog.Instance.Info(CombatLog.EDebugModule.Ai, base.Entity, "CharacterAiComponent.StartUeController", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -492,7 +481,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		this.UeActorComps.Clear();
 	}
 
-	// Token: 0x0601A3A3 RID: 107427 RVA: 0x006E9398 File Offset: 0x006E7598
+	// Token: 0x06017D18 RID: 97560 RVA: 0x00710C90 File Offset: 0x0070EE90
 	public void RestartBehaviorTree()
 	{
 		if (this.IsAiDriver)
@@ -505,7 +494,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3A4 RID: 107428 RVA: 0x006E93C4 File Offset: 0x006E75C4
+	// Token: 0x06017D19 RID: 97561 RVA: 0x00710CBC File Offset: 0x0070EEBC
 	public unsafe bool EnableAi(string key)
 	{
 		int handle;
@@ -548,7 +537,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A3A5 RID: 107429 RVA: 0x006E94DC File Offset: 0x006E76DC
+	// Token: 0x06017D1A RID: 97562 RVA: 0x00710DD4 File Offset: 0x0070EFD4
 	public unsafe void DisableAi(string key)
 	{
 		if (this.DisableKeyMap.ContainsKey(key))
@@ -600,7 +589,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		aiControllerInternal.SetEnable(false);
 	}
 
-	// Token: 0x0601A3A6 RID: 107430 RVA: 0x006E968F File Offset: 0x006E788F
+	// Token: 0x06017D1B RID: 97563 RVA: 0x00710F87 File Offset: 0x0070F187
 	public void AddOrRemoveAiScene(int aiSenseId, bool enable)
 	{
 		this.CacheExtraAiSense[aiSenseId] = enable;
@@ -610,7 +599,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3A7 RID: 107431 RVA: 0x006E96C0 File Offset: 0x006E78C0
+	// Token: 0x06017D1C RID: 97564 RVA: 0x00710FB8 File Offset: 0x0070F1B8
 	public void SetAllAiSenseEnableWithoutForbidAllSense(bool enable)
 	{
 		this.CacheAllEnableAiSense = enable;
@@ -624,20 +613,20 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3A8 RID: 107432 RVA: 0x006E96FC File Offset: 0x006E78FC
+	// Token: 0x06017D1D RID: 97565 RVA: 0x00710FF4 File Offset: 0x0070F1F4
 	public bool IsEnabled()
 	{
 		return this.DisableKey == null;
 	}
 
-	// Token: 0x0601A3A9 RID: 107433 RVA: 0x006E970C File Offset: 0x006E790C
+	// Token: 0x06017D1E RID: 97566 RVA: 0x00711004 File Offset: 0x0070F204
 	public string DumpDisableAiInfo()
 	{
 		return this.DisableAiHandle.DumpDisableInfo();
 	}
 
-	// Token: 0x17002423 RID: 9251
-	// (get) Token: 0x0601A3AA RID: 107434 RVA: 0x006E971C File Offset: 0x006E791C
+	// Token: 0x1700251A RID: 9498
+	// (get) Token: 0x06017D1F RID: 97567 RVA: 0x00711014 File Offset: 0x0070F214
 	public bool IsAiDriver
 	{
 		get
@@ -659,8 +648,8 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x17002424 RID: 9252
-	// (get) Token: 0x0601A3AB RID: 107435 RVA: 0x006E9775 File Offset: 0x006E7975
+	// Token: 0x1700251B RID: 9499
+	// (get) Token: 0x06017D20 RID: 97568 RVA: 0x0071106D File Offset: 0x0070F26D
 	public bool HasBrain
 	{
 		get
@@ -669,7 +658,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3AC RID: 107436 RVA: 0x006E978C File Offset: 0x006E798C
+	// Token: 0x06017D21 RID: 97569 RVA: 0x00711084 File Offset: 0x0070F284
 	public void RemoveTsAiController()
 	{
 		if (ObjectUtils.IsValid(this.TsAiControllerInternal))
@@ -691,13 +680,13 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		this.RandomNodesInTree.Clear();
 	}
 
-	// Token: 0x0601A3AD RID: 107437 RVA: 0x006E9825 File Offset: 0x006E7A25
+	// Token: 0x06017D22 RID: 97570 RVA: 0x0071111D File Offset: 0x0070F31D
 	public void SetLoadCompletePlayer(int playerId)
 	{
 		this.LoadCompletePlayerSet.Add(playerId);
 	}
 
-	// Token: 0x0601A3AE RID: 107438 RVA: 0x006E9834 File Offset: 0x006E7A34
+	// Token: 0x06017D23 RID: 97571 RVA: 0x0071112C File Offset: 0x0070F32C
 	public bool CheckLoadComplete(Entity target)
 	{
 		if (!GameModeModel.Instance.IsMulti)
@@ -718,13 +707,13 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		return false;
 	}
 
-	// Token: 0x0601A3AF RID: 107439 RVA: 0x006E98A4 File Offset: 0x006E7AA4
+	// Token: 0x06017D24 RID: 97572 RVA: 0x0071119C File Offset: 0x0070F39C
 	public void SetDebugDraw(bool active)
 	{
 		this.IsDebugDraw = active;
 	}
 
-	// Token: 0x0601A3B0 RID: 107440 RVA: 0x006E98B0 File Offset: 0x006E7AB0
+	// Token: 0x06017D25 RID: 97573 RVA: 0x007111A8 File Offset: 0x0070F3A8
 	private void TryInitPendingCommonBt(string path)
 	{
 		if (this.CurrentAiBehaviorTree != path)
@@ -744,7 +733,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		CommonBtRuntimeHelper.Instance.TryInitCommonBehaviorTree(base.Entity, pendingCommonBtOverride);
 	}
 
-	// Token: 0x0601A3B1 RID: 107441 RVA: 0x006E9900 File Offset: 0x006E7B00
+	// Token: 0x06017D26 RID: 97574 RVA: 0x007111F8 File Offset: 0x0070F3F8
 	private unsafe void LoadAndRunBehaviorTree(string path, int loadVersion)
 	{
 		if (string.IsNullOrEmpty(path) || !this.IsActivated || this.TsAiControllerInternal == null)
@@ -859,7 +848,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601A3B2 RID: 107442 RVA: 0x006E9A2C File Offset: 0x006E7C2C
+	// Token: 0x06017D27 RID: 97575 RVA: 0x00711324 File Offset: 0x0070F524
 	private void HandleRealAiStart()
 	{
 		if (this.IsAiReady)
@@ -873,7 +862,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		this.IsAiReady = true;
 	}
 
-	// Token: 0x0601A3B3 RID: 107443 RVA: 0x006E9A48 File Offset: 0x006E7C48
+	// Token: 0x06017D28 RID: 97576 RVA: 0x00711340 File Offset: 0x0070F540
 	public void OnSyncAiInformation(AiControlSwitch switchInfo)
 	{
 		if (base.Entity.IsInit)
@@ -891,7 +880,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		this.AiInformation = switchInfo;
 	}
 
-	// Token: 0x0601A3B4 RID: 107444 RVA: 0x006E9AB4 File Offset: 0x006E7CB4
+	// Token: 0x06017D29 RID: 97577 RVA: 0x007113AC File Offset: 0x0070F5AC
 	private void OnSyncAiInformationInternal(AiControlSwitch switchInfo)
 	{
 		bool flag = switchInfo.PlayerId == CreatureModel.Instance.GetPlayerId();
@@ -948,7 +937,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3B5 RID: 107445 RVA: 0x006E9CC8 File Offset: 0x006E7EC8
+	// Token: 0x06017D2A RID: 97578 RVA: 0x007115C0 File Offset: 0x0070F7C0
 	public void SwitchControl(bool control)
 	{
 		base.Entity.GetComponent<CharacterActorComponent>().SetAutonomous(control, null);
@@ -964,7 +953,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		EventSystem.Instance.EmitWithTarget<bool>(base.Entity, EEventName.CharSwitchControl, control);
 	}
 
-	// Token: 0x0601A3B6 RID: 107446 RVA: 0x006E9D30 File Offset: 0x006E7F30
+	// Token: 0x06017D2B RID: 97579 RVA: 0x00711628 File Offset: 0x0070F828
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.AiHateNotify, true, false)]
 	public static void AiHateNotify(Entity entity, [Nullable(1)] AiHateNotify notify, CombatCommon combatCommon = null)
@@ -981,7 +970,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3B7 RID: 107447 RVA: 0x006E9DC4 File Offset: 0x006E7FC4
+	// Token: 0x06017D2C RID: 97580 RVA: 0x007116BC File Offset: 0x0070F8BC
 	public void TrySetLevelAiController()
 	{
 		AController currentController = this.ActorComp.Actor.GetController();
@@ -1027,7 +1016,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601A3B8 RID: 107448 RVA: 0x006E9E18 File Offset: 0x006E8018
+	// Token: 0x06017D2D RID: 97581 RVA: 0x00711710 File Offset: 0x0070F910
 	private void InitLevelAiClientVar()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -1070,7 +1059,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		EventSystem.Instance.AddWithTarget(base.Entity, EEventName.EntityVarUpdate, new Action<string, VarDefinePb>(this.OnClientVarUpdated));
 	}
 
-	// Token: 0x0601A3B9 RID: 107449 RVA: 0x006E9FE8 File Offset: 0x006E81E8
+	// Token: 0x06017D2E RID: 97582 RVA: 0x007118E0 File Offset: 0x0070FAE0
 	private void OnClientVarUpdated(string key, VarDefinePb value)
 	{
 		if (!this.IsValidClientVar(key, value))
@@ -1096,7 +1085,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3BA RID: 107450 RVA: 0x006EA09C File Offset: 0x006E829C
+	// Token: 0x06017D2F RID: 97583 RVA: 0x00711994 File Offset: 0x0070FB94
 	private bool IsValidClientVar(string key, VarDefinePb value)
 	{
 		Entity entity = base.Entity;
@@ -1139,7 +1128,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		return false;
 	}
 
-	// Token: 0x0601A3BB RID: 107451 RVA: 0x006EA1A0 File Offset: 0x006E83A0
+	// Token: 0x06017D30 RID: 97584 RVA: 0x00711A98 File Offset: 0x0070FC98
 	public bool AddBehaviorTreeBubble(CharacterDynamicFlowData flowData)
 	{
 		if (!DynamicFlowController.Instance.AddDynamicFlow(flowData))
@@ -1150,7 +1139,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A3BC RID: 107452 RVA: 0x006EA1B9 File Offset: 0x006E83B9
+	// Token: 0x06017D31 RID: 97585 RVA: 0x00711AB1 File Offset: 0x0070FCB1
 	public void RemoveBehaviorTreeBubble(CharacterDynamicFlowData flowData)
 	{
 		if (this.BehaviorTreeBubble == flowData)
@@ -1163,7 +1152,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3BD RID: 107453 RVA: 0x006EA1F0 File Offset: 0x006E83F0
+	// Token: 0x06017D32 RID: 97586 RVA: 0x00711AE8 File Offset: 0x0070FCE8
 	public void ClearBehaviorTreeBubble()
 	{
 		CharacterDynamicFlowData behaviorTreeBubble = this.BehaviorTreeBubble;
@@ -1173,7 +1162,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3BE RID: 107454 RVA: 0x006EA210 File Offset: 0x006E8410
+	// Token: 0x06017D33 RID: 97587 RVA: 0x00711B08 File Offset: 0x0070FD08
 	public bool TrySetLevelAIBehaviorTree()
 	{
 		if (!BehaviorTreeDefines.CanUseLevelAiBehaviorTree(base.Entity))
@@ -1191,7 +1180,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A3BF RID: 107455 RVA: 0x006EA28A File Offset: 0x006E848A
+	// Token: 0x06017D34 RID: 97588 RVA: 0x00711B82 File Offset: 0x0070FD82
 	public bool TryInitAndSetLevelAiBehaviorTree()
 	{
 		if (this.TrySetLevelAIBehaviorTree())
@@ -1202,7 +1191,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		return false;
 	}
 
-	// Token: 0x0601A3C0 RID: 107456 RVA: 0x006EA2A0 File Offset: 0x006E84A0
+	// Token: 0x06017D35 RID: 97589 RVA: 0x00711B98 File Offset: 0x0070FD98
 	public void ChangeAiBehaviorTree(string path)
 	{
 		if (string.IsNullOrEmpty(path))
@@ -1223,7 +1212,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3C1 RID: 107457 RVA: 0x006EA2FC File Offset: 0x006E84FC
+	// Token: 0x06017D36 RID: 97590 RVA: 0x00711BF4 File Offset: 0x0070FDF4
 	[NullableContext(2)]
 	public bool ChangeAiBehaviorTreeByCommonBt(ICommonBtOverride overrideData)
 	{
@@ -1237,7 +1226,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A3C2 RID: 107458 RVA: 0x006EA329 File Offset: 0x006E8529
+	// Token: 0x06017D37 RID: 97591 RVA: 0x00711C21 File Offset: 0x0070FE21
 	public void ResetAiBehaviorTree()
 	{
 		this.ClearBehaviorTreeBubble();
@@ -1250,7 +1239,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3C3 RID: 107459 RVA: 0x006EA364 File Offset: 0x006E8564
+	// Token: 0x06017D38 RID: 97592 RVA: 0x00711C5C File Offset: 0x0070FE5C
 	public void ResetRandomNodes([Nullable(2)] string key, TArray<int> newWeights)
 	{
 		UBrainComponent brainComponent = this.BrainComponent;
@@ -1299,7 +1288,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3C4 RID: 107460 RVA: 0x006EA48C File Offset: 0x006E868C
+	// Token: 0x06017D39 RID: 97593 RVA: 0x00711D84 File Offset: 0x0070FF84
 	private void RecursiveFindRandomNodes(UBTNode rootNode, Dictionary<string, HashSet<UBTComposite_Random>> foundNodes)
 	{
 		UBTComposite_Random ubtcomposite_Random = rootNode as UBTComposite_Random;
@@ -1328,7 +1317,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3C5 RID: 107461 RVA: 0x006EA524 File Offset: 0x006E8724
+	// Token: 0x06017D3A RID: 97594 RVA: 0x00711E1C File Offset: 0x0071001C
 	public override void OnEntityWasRecentlyRenderedOnScreenChange(bool wasRecentlyRenderedOnScreen)
 	{
 		TsAiController tsAiController = this.TsAiController;
@@ -1339,7 +1328,7 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		tsAiController.渲染状态改变时(wasRecentlyRenderedOnScreen);
 	}
 
-	// Token: 0x0601A3C6 RID: 107462 RVA: 0x006EA538 File Offset: 0x006E8738
+	// Token: 0x06017D3B RID: 97595 RVA: 0x00711E30 File Offset: 0x00710030
 	public void InitPathMovePoints(MoveCharacterConfig config)
 	{
 		if (config.Points.IsT1)
@@ -1349,14 +1338,14 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 			return;
 		}
 		IList<MoveCharacterPoint> asT = config.Points.AsT2;
-		if (asT.Count<MoveCharacterPoint>() == 1)
+		if (asT.Count == 1)
 		{
 			this.HatredInitLocation.DeepCopy(asT[0].Position);
 			this.PathLineSegments.Clear();
 			return;
 		}
-		bool flag = config.CircleMove.GetValueOrDefault() ? (asT.Count<MoveCharacterPoint>() == this.PathLineSegments.Count<PathLineSegment>()) : (asT.Count<MoveCharacterPoint>() == this.PathLineSegments.Count<PathLineSegment>() + 1);
-		int num = asT.Count<MoveCharacterPoint>() - 1;
+		bool flag = config.CircleMove.GetValueOrDefault() ? (asT.Count == this.PathLineSegments.Count) : (asT.Count == this.PathLineSegments.Count + 1);
+		int num = asT.Count - 1;
 		if (flag)
 		{
 			for (int i = 0; i < num; i++)
@@ -1387,22 +1376,22 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3C7 RID: 107463 RVA: 0x006EA6F0 File Offset: 0x006E88F0
+	// Token: 0x06017D3C RID: 97596 RVA: 0x00711FE8 File Offset: 0x007101E8
 	public bool FindNearestInPathLine(global::Vector point, global::Vector outVect)
 	{
-		if (this.PathLineSegments.Count<PathLineSegment>() == 0)
+		if (this.PathLineSegments.Count == 0)
 		{
 			return false;
 		}
 		double distSquared = 1E+50;
-		for (int i = 0; i < this.PathLineSegments.Count<PathLineSegment>(); i++)
+		for (int i = 0; i < this.PathLineSegments.Count; i++)
 		{
 			distSquared = this.PathLineSegments[i].FindNearestLocation(point, outVect, distSquared);
 		}
 		return true;
 	}
 
-	// Token: 0x0601A3C8 RID: 107464 RVA: 0x006EA744 File Offset: 0x006E8944
+	// Token: 0x06017D3D RID: 97597 RVA: 0x0071203C File Offset: 0x0071023C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1410,213 +1399,220 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 			return false;
 		}
 		CharacterAiComponent characterAiComponent = (CharacterAiComponent)componentTemplate;
-		if (base.CanResetComponentProperty("TsAiControllerInternal"))
+		if (characterAiComponent.TsAiControllerInternal == null)
 		{
-			if (characterAiComponent.TsAiControllerInternal == null)
-			{
-				this.TsAiControllerInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsAiController>(this.TsAiControllerInternal), "TsAiControllerInternal"))
-			{
-				return false;
-			}
+			this.TsAiControllerInternal = null;
 		}
-		if (base.CanResetComponentProperty("AiControllerInternal"))
-		{
-			if (characterAiComponent.AiControllerInternal == null)
-			{
-				this.AiControllerInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AiController>(this.AiControllerInternal), "AiControllerInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DisableKey"))
-		{
-			this.DisableKey = characterAiComponent.DisableKey;
-		}
-		if (base.CanResetComponentProperty("DisableAiHandle"))
-		{
-			if (characterAiComponent.DisableAiHandle == null)
-			{
-				this.DisableAiHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DisableEntityHandle>(this.DisableAiHandle), "DisableAiHandle"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DisableKeyMap") && characterAiComponent.DisableKeyMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, int>>(this.DisableKeyMap), "DisableKeyMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TsAiControllerInternal), "TsAiControllerInternal"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterAiComponent.AiControllerInternal == null)
 		{
-			if (characterAiComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.AiControllerInternal = null;
 		}
-		if (base.CanResetComponentProperty("StateMachineComp"))
-		{
-			if (characterAiComponent.StateMachineComp == null)
-			{
-				this.StateMachineComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterStateMachineNewComponent>(this.StateMachineComp), "StateMachineComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CacheAiHateConfigId"))
-		{
-			this.CacheAiHateConfigId = characterAiComponent.CacheAiHateConfigId;
-		}
-		if (base.CanResetComponentProperty("CacheExtraAiSense") && characterAiComponent.CacheExtraAiSense != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, bool>>(this.CacheExtraAiSense), "CacheExtraAiSense"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AiControllerInternal), "AiControllerInternal"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CacheAllEnableAiSense"))
+		this.DisableKey = characterAiComponent.DisableKey;
+		if (characterAiComponent.DisableAiHandle == null)
 		{
-			this.CacheAllEnableAiSense = characterAiComponent.CacheAllEnableAiSense;
+			this.DisableAiHandle = null;
 		}
-		if (base.CanResetComponentProperty("IsLockAiHate"))
-		{
-			this.IsLockAiHate = characterAiComponent.IsLockAiHate;
-		}
-		if (base.CanResetComponentProperty("BrainComponent"))
-		{
-			if (characterAiComponent.BrainComponent == null)
-			{
-				this.BrainComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UBrainComponent>(this.BrainComponent), "BrainComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("UeActorComps") && characterAiComponent.UeActorComps != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<UActorComponent>>(this.UeActorComps), "UeActorComps"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisableAiHandle), "DisableAiHandle"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LoadCompletePlayerSet") && characterAiComponent.LoadCompletePlayerSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.LoadCompletePlayerSet), "LoadCompletePlayerSet"))
+		if (characterAiComponent.DisableKeyMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisableKeyMap), "DisableKeyMap"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("RandomNodesInTree") && characterAiComponent.RandomNodesInTree != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<UBTNode, Dictionary<string, HashSet<UBTComposite_Random>>>>(this.RandomNodesInTree), "RandomNodesInTree"))
+		if (characterAiComponent.ActorComp == null)
+		{
+			this.ActorComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("IsActivated"))
+		if (characterAiComponent.StateMachineComp == null)
 		{
-			this.IsActivated = characterAiComponent.IsActivated;
+			this.StateMachineComp = null;
 		}
-		if (base.CanResetComponentProperty("IsAiReady"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateMachineComp), "StateMachineComp"))
 		{
-			this.IsAiReady = characterAiComponent.IsAiReady;
+			return false;
 		}
-		if (base.CanResetComponentProperty("ConfigId"))
+		this.CacheAiHateConfigId = characterAiComponent.CacheAiHateConfigId;
+		if (characterAiComponent.CacheExtraAiSense != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheExtraAiSense), "CacheExtraAiSense"))
 		{
-			this.ConfigId = characterAiComponent.ConfigId;
+			return false;
 		}
-		if (base.CanResetComponentProperty("HatredInitLocation"))
+		this.CacheAllEnableAiSense = characterAiComponent.CacheAllEnableAiSense;
+		this.IsLockAiHate = characterAiComponent.IsLockAiHate;
+		if (characterAiComponent.BrainComponent == null)
 		{
-			if (characterAiComponent.HatredInitLocation == null)
-			{
-				this.HatredInitLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.HatredInitLocation), "HatredInitLocation"))
-			{
-				return false;
-			}
+			this.BrainComponent = null;
 		}
-		if (base.CanResetComponentProperty("PathLineSegments"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BrainComponent), "BrainComponent"))
 		{
-			if (characterAiComponent.PathLineSegments == null)
-			{
-				this.PathLineSegments = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<PathLineSegment>>(this.PathLineSegments), "PathLineSegments"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsDebugDraw"))
+		if (characterAiComponent.UeActorComps != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.UeActorComps), "UeActorComps"))
 		{
-			this.IsDebugDraw = characterAiComponent.IsDebugDraw;
+			return false;
 		}
-		if (base.CanResetComponentProperty("CurrentAiBehaviorTree"))
+		if (characterAiComponent.LoadCompletePlayerSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.LoadCompletePlayerSet), "LoadCompletePlayerSet"))
 		{
-			this.CurrentAiBehaviorTree = characterAiComponent.CurrentAiBehaviorTree;
+			return false;
 		}
-		if (base.CanResetComponentProperty("BehaviorTreeLoadVersion"))
+		if (characterAiComponent.RandomNodesInTree != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.RandomNodesInTree), "RandomNodesInTree"))
 		{
-			this.BehaviorTreeLoadVersion = characterAiComponent.BehaviorTreeLoadVersion;
+			return false;
 		}
-		if (base.CanResetComponentProperty("PendingCommonBtOverride"))
+		this.IsActivated = characterAiComponent.IsActivated;
+		this.IsAiReady = characterAiComponent.IsAiReady;
+		this.ConfigId = characterAiComponent.ConfigId;
+		if (characterAiComponent.HatredInitLocation == null)
 		{
-			if (characterAiComponent.PendingCommonBtOverride == null)
-			{
-				this.PendingCommonBtOverride = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ICommonBtOverride>(this.PendingCommonBtOverride), "PendingCommonBtOverride"))
-			{
-				return false;
-			}
+			this.HatredInitLocation = null;
 		}
-		if (base.CanResetComponentProperty("AiInformation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HatredInitLocation), "HatredInitLocation"))
 		{
-			if (characterAiComponent.AiInformation == null)
-			{
-				this.AiInformation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AiControlSwitch>(this.AiInformation), "AiInformation"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("BehaviorTreeBubble"))
+		if (characterAiComponent.PathLineSegments == null)
 		{
-			if (characterAiComponent.BehaviorTreeBubble == null)
-			{
-				this.BehaviorTreeBubble = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterDynamicFlowData>(this.BehaviorTreeBubble), "BehaviorTreeBubble"))
-			{
-				return false;
-			}
+			this.PathLineSegments = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PathLineSegments), "PathLineSegments"))
+		{
+			return false;
+		}
+		this.IsDebugDraw = characterAiComponent.IsDebugDraw;
+		this.CurrentAiBehaviorTree = characterAiComponent.CurrentAiBehaviorTree;
+		this.BehaviorTreeLoadVersion = characterAiComponent.BehaviorTreeLoadVersion;
+		if (characterAiComponent.PendingCommonBtOverride == null)
+		{
+			this.PendingCommonBtOverride = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PendingCommonBtOverride), "PendingCommonBtOverride"))
+		{
+			return false;
+		}
+		if (characterAiComponent.AiInformation == null)
+		{
+			this.AiInformation = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AiInformation), "AiInformation"))
+		{
+			return false;
+		}
+		if (characterAiComponent.BehaviorTreeBubble == null)
+		{
+			this.BehaviorTreeBubble = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BehaviorTreeBubble), "BehaviorTreeBubble"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400C77A RID: 51066
+	// Token: 0x1700251C RID: 9500
+	// (get) Token: 0x06017D3E RID: 97598 RVA: 0x00712357 File Offset: 0x00710557
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700251D RID: 9501
+	// (get) Token: 0x06017D3F RID: 97599 RVA: 0x0071235A File Offset: 0x0071055A
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700251E RID: 9502
+	// (get) Token: 0x06017D40 RID: 97600 RVA: 0x0071235D File Offset: 0x0071055D
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700251F RID: 9503
+	// (get) Token: 0x06017D41 RID: 97601 RVA: 0x00712360 File Offset: 0x00710560
+	public override bool NeedPostActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002520 RID: 9504
+	// (get) Token: 0x06017D42 RID: 97602 RVA: 0x00712363 File Offset: 0x00710563
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002521 RID: 9505
+	// (get) Token: 0x06017D43 RID: 97603 RVA: 0x00712366 File Offset: 0x00710566
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002522 RID: 9506
+	// (get) Token: 0x06017D44 RID: 97604 RVA: 0x00712369 File Offset: 0x00710569
+	public override bool NeedEntityWasRecentlyRenderedOnScreenChangeInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CB54 RID: 52052
 	private const string DEFAULT_LEVELAI_AIC_PATH = "/Game/Aki/AI/AINPC/Common/AIC_CommonNPC.AIC_CommonNPC_C";
 
-	// Token: 0x0400C77B RID: 51067
+	// Token: 0x0400CB55 RID: 52053
 	[StaticVariableRuleIgnore]
 	public static readonly global::Vector TmpVector = global::Vector.Create();
 
-	// Token: 0x0400C77C RID: 51068
+	// Token: 0x0400CB56 RID: 52054
 	[Nullable(2)]
 	private TsAiController TsAiControllerInternal;
 
-	// Token: 0x0400C77D RID: 51069
+	// Token: 0x0400CB57 RID: 52055
 	[Nullable(2)]
 	private AiController AiControllerInternal;
 
-	// Token: 0x0400C77E RID: 51070
+	// Token: 0x0400CB58 RID: 52056
 	private int? DisableKey;
 
-	// Token: 0x0400C77F RID: 51071
+	// Token: 0x0400CB59 RID: 52057
 	[Nullable(2)]
 	public DisableEntityHandle DisableAiHandle;
 
-	// Token: 0x0400C780 RID: 51072
+	// Token: 0x0400CB5A RID: 52058
 	[Nullable(new byte[]
 	{
 		2,
@@ -1624,79 +1620,79 @@ public class CharacterAiComponent : EntityComponent, IComponentDependency
 	})]
 	private readonly Dictionary<string, int> DisableKeyMap = new Dictionary<string, int>();
 
-	// Token: 0x0400C781 RID: 51073
+	// Token: 0x0400CB5B RID: 52059
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400C782 RID: 51074
+	// Token: 0x0400CB5C RID: 52060
 	[Nullable(2)]
 	private CharacterStateMachineNewComponent StateMachineComp;
 
-	// Token: 0x0400C783 RID: 51075
+	// Token: 0x0400CB5D RID: 52061
 	private string CacheAiHateConfigId = "";
 
-	// Token: 0x0400C784 RID: 51076
+	// Token: 0x0400CB5E RID: 52062
 	private readonly Dictionary<int, bool> CacheExtraAiSense = new Dictionary<int, bool>();
 
-	// Token: 0x0400C785 RID: 51077
+	// Token: 0x0400CB5F RID: 52063
 	private bool CacheAllEnableAiSense = true;
 
-	// Token: 0x0400C786 RID: 51078
+	// Token: 0x0400CB60 RID: 52064
 	private bool IsLockAiHate;
 
-	// Token: 0x0400C787 RID: 51079
+	// Token: 0x0400CB61 RID: 52065
 	[Nullable(2)]
 	private UBrainComponent BrainComponent;
 
-	// Token: 0x0400C788 RID: 51080
+	// Token: 0x0400CB62 RID: 52066
 	private readonly List<UActorComponent> UeActorComps = new List<UActorComponent>();
 
-	// Token: 0x0400C789 RID: 51081
+	// Token: 0x0400CB63 RID: 52067
 	private readonly HashSet<int> LoadCompletePlayerSet = new HashSet<int>();
 
-	// Token: 0x0400C78A RID: 51082
+	// Token: 0x0400CB64 RID: 52068
 	private readonly Dictionary<UBTNode, Dictionary<string, HashSet<UBTComposite_Random>>> RandomNodesInTree = new Dictionary<UBTNode, Dictionary<string, HashSet<UBTComposite_Random>>>();
 
-	// Token: 0x0400C78B RID: 51083
+	// Token: 0x0400CB65 RID: 52069
 	private bool IsActivated;
 
-	// Token: 0x0400C78C RID: 51084
+	// Token: 0x0400CB66 RID: 52070
 	private bool IsAiReady;
 
-	// Token: 0x0400C78D RID: 51085
+	// Token: 0x0400CB67 RID: 52071
 	private int ConfigId;
 
-	// Token: 0x0400C78E RID: 51086
+	// Token: 0x0400CB68 RID: 52072
 	public global::Vector HatredInitLocation = global::Vector.Create();
 
-	// Token: 0x0400C78F RID: 51087
+	// Token: 0x0400CB69 RID: 52073
 	private List<PathLineSegment> PathLineSegments = new List<PathLineSegment>();
 
-	// Token: 0x0400C790 RID: 51088
+	// Token: 0x0400CB6A RID: 52074
 	private bool IsDebugDraw;
 
-	// Token: 0x0400C791 RID: 51089
+	// Token: 0x0400CB6B RID: 52075
 	private static readonly Stat SetUeControllerStat = Stat.Create("SetUeController", "", "");
 
-	// Token: 0x0400C792 RID: 51090
+	// Token: 0x0400CB6C RID: 52076
 	private static readonly Stat StartUeControllerStat = Stat.Create("StartUeController", "", "");
 
-	// Token: 0x0400C793 RID: 51091
+	// Token: 0x0400CB6D RID: 52077
 	[Nullable(2)]
 	public string CurrentAiBehaviorTree;
 
-	// Token: 0x0400C794 RID: 51092
+	// Token: 0x0400CB6E RID: 52078
 	private int BehaviorTreeLoadVersion;
 
-	// Token: 0x0400C795 RID: 51093
+	// Token: 0x0400CB6F RID: 52079
 	[Nullable(2)]
 	private ICommonBtOverride PendingCommonBtOverride;
 
-	// Token: 0x0400C796 RID: 51094
+	// Token: 0x0400CB70 RID: 52080
 	[Nullable(2)]
 	private AiControlSwitch AiInformation;
 
-	// Token: 0x0400C797 RID: 51095
+	// Token: 0x0400CB71 RID: 52081
 	[Nullable(2)]
 	private CharacterDynamicFlowData BehaviorTreeBubble;
 }

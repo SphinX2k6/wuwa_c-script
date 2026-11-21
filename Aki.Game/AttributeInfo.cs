@@ -1,48 +1,48 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002887 RID: 10375
+// Token: 0x02001E02 RID: 7682
 [NullableContext(2)]
 [Nullable(0)]
 public class AttributeInfo : IAttributeInfo
 {
-	// Token: 0x17001C91 RID: 7313
-	// (get) Token: 0x060155A3 RID: 87459 RVA: 0x0056342B File Offset: 0x0056162B
-	// (set) Token: 0x060155A4 RID: 87460 RVA: 0x00563433 File Offset: 0x00561633
+	// Token: 0x17001CE9 RID: 7401
+	// (get) Token: 0x06012FA1 RID: 77729 RVA: 0x0058E187 File Offset: 0x0058C387
+	// (set) Token: 0x06012FA2 RID: 77730 RVA: 0x0058E18F File Offset: 0x0058C38F
 	public string Name { get; set; }
 
-	// Token: 0x17001C92 RID: 7314
-	// (get) Token: 0x060155A5 RID: 87461 RVA: 0x0056343C File Offset: 0x0056163C
-	// (set) Token: 0x060155A6 RID: 87462 RVA: 0x00563444 File Offset: 0x00561644
+	// Token: 0x17001CEA RID: 7402
+	// (get) Token: 0x06012FA3 RID: 77731 RVA: 0x0058E198 File Offset: 0x0058C398
+	// (set) Token: 0x06012FA4 RID: 77732 RVA: 0x0058E1A0 File Offset: 0x0058C3A0
 	public string IconPath { get; set; }
 
-	// Token: 0x17001C93 RID: 7315
-	// (get) Token: 0x060155A7 RID: 87463 RVA: 0x0056344D File Offset: 0x0056164D
-	// (set) Token: 0x060155A8 RID: 87464 RVA: 0x00563455 File Offset: 0x00561655
+	// Token: 0x17001CEB RID: 7403
+	// (get) Token: 0x06012FA5 RID: 77733 RVA: 0x0058E1A9 File Offset: 0x0058C3A9
+	// (set) Token: 0x06012FA6 RID: 77734 RVA: 0x0058E1B1 File Offset: 0x0058C3B1
 	public bool? ShowArrow { get; set; }
 
-	// Token: 0x17001C94 RID: 7316
-	// (get) Token: 0x060155A9 RID: 87465 RVA: 0x0056345E File Offset: 0x0056165E
-	// (set) Token: 0x060155AA RID: 87466 RVA: 0x00563466 File Offset: 0x00561666
+	// Token: 0x17001CEC RID: 7404
+	// (get) Token: 0x06012FA7 RID: 77735 RVA: 0x0058E1BA File Offset: 0x0058C3BA
+	// (set) Token: 0x06012FA8 RID: 77736 RVA: 0x0058E1C2 File Offset: 0x0058C3C2
 	public string PreText { get; set; }
 
-	// Token: 0x17001C95 RID: 7317
-	// (get) Token: 0x060155AB RID: 87467 RVA: 0x0056346F File Offset: 0x0056166F
-	// (set) Token: 0x060155AC RID: 87468 RVA: 0x00563477 File Offset: 0x00561677
+	// Token: 0x17001CED RID: 7405
+	// (get) Token: 0x06012FA9 RID: 77737 RVA: 0x0058E1CB File Offset: 0x0058C3CB
+	// (set) Token: 0x06012FAA RID: 77738 RVA: 0x0058E1D3 File Offset: 0x0058C3D3
 	public string CurText { get; set; }
 
-	// Token: 0x17001C96 RID: 7318
-	// (get) Token: 0x060155AD RID: 87469 RVA: 0x00563480 File Offset: 0x00561680
-	// (set) Token: 0x060155AE RID: 87470 RVA: 0x00563488 File Offset: 0x00561688
+	// Token: 0x17001CEE RID: 7406
+	// (get) Token: 0x06012FAB RID: 77739 RVA: 0x0058E1DC File Offset: 0x0058C3DC
+	// (set) Token: 0x06012FAC RID: 77740 RVA: 0x0058E1E4 File Offset: 0x0058C3E4
 	public bool? IsNormalBg { get; set; }
 
-	// Token: 0x17001C97 RID: 7319
-	// (get) Token: 0x060155AF RID: 87471 RVA: 0x00563491 File Offset: 0x00561691
-	// (set) Token: 0x060155B0 RID: 87472 RVA: 0x00563499 File Offset: 0x00561699
+	// Token: 0x17001CEF RID: 7407
+	// (get) Token: 0x06012FAD RID: 77741 RVA: 0x0058E1ED File Offset: 0x0058C3ED
+	// (set) Token: 0x06012FAE RID: 77742 RVA: 0x0058E1F5 File Offset: 0x0058C3F5
 	public bool? InnerShowBg { get; set; }
 
-	// Token: 0x17001C98 RID: 7320
-	// (get) Token: 0x060155B1 RID: 87473 RVA: 0x005634A2 File Offset: 0x005616A2
-	// (set) Token: 0x060155B2 RID: 87474 RVA: 0x005634AA File Offset: 0x005616AA
+	// Token: 0x17001CF0 RID: 7408
+	// (get) Token: 0x06012FAF RID: 77743 RVA: 0x0058E1FE File Offset: 0x0058C3FE
+	// (set) Token: 0x06012FB0 RID: 77744 RVA: 0x0058E206 File Offset: 0x0058C406
 	public bool? IsLine { get; set; }
 }

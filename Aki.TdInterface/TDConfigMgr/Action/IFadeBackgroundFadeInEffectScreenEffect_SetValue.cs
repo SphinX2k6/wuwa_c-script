@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A44 RID: 6724
+	// Token: 0x02001BD9 RID: 7129
 	public class IFadeBackgroundFadeInEffectScreenEffect_SetValue
 	{
-		// Token: 0x040058F6 RID: 22774
+		// Token: 0x04005D5B RID: 23899
 		public EFadeBackgroundFadeInEffectType Type;
 
-		// Token: 0x040058F7 RID: 22775
-		[Nullable(1)]
+		// Token: 0x04005D5C RID: 23900
 		public string ScreenEffect;
 	}
 }

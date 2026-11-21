@@ -6,18 +6,18 @@ using CSharpScript.Game.Module.Menu;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200202D RID: 8237
+// Token: 0x02001500 RID: 5376
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonKeySettingRowKeyItem : UiPanelBase, IKeySettingItem
 {
-	// Token: 0x060102AE RID: 66222 RVA: 0x003F04A7 File Offset: 0x003EE6A7
+	// Token: 0x0600D716 RID: 55062 RVA: 0x003FCA9F File Offset: 0x003FAC9F
 	public CommonKeySettingRowKeyItem()
 	{
 		this.Proxy = new KeySettingItemProxy(this);
 	}
 
-	// Token: 0x060102AF RID: 66223 RVA: 0x003F04BC File Offset: 0x003EE6BC
+	// Token: 0x0600D717 RID: 55063 RVA: 0x003FCAB4 File Offset: 0x003FACB4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,125 +35,125 @@ public class CommonKeySettingRowKeyItem : UiPanelBase, IKeySettingItem
 		};
 	}
 
-	// Token: 0x060102B0 RID: 66224 RVA: 0x003F05B1 File Offset: 0x003EE7B1
+	// Token: 0x0600D718 RID: 55064 RVA: 0x003FCBA9 File Offset: 0x003FADA9
 	protected override void OnStart()
 	{
 		this.Proxy.OnStart();
 	}
 
-	// Token: 0x060102B1 RID: 66225 RVA: 0x003F05BE File Offset: 0x003EE7BE
+	// Token: 0x0600D719 RID: 55065 RVA: 0x003FCBB6 File Offset: 0x003FADB6
 	protected override void OnBeforeDestroy()
 	{
 		this.Proxy.OnBeforeDestroy();
 	}
 
-	// Token: 0x060102B2 RID: 66226 RVA: 0x003F05CB File Offset: 0x003EE7CB
+	// Token: 0x0600D71A RID: 55066 RVA: 0x003FCBC3 File Offset: 0x003FADC3
 	public void Refresh(KeySettingRowData data, CSharpScript.Game.Module.Menu.EInputControllerType inputControllerType)
 	{
 		this.Proxy.Refresh(data, inputControllerType);
 	}
 
-	// Token: 0x060102B3 RID: 66227 RVA: 0x003F05DA File Offset: 0x003EE7DA
+	// Token: 0x0600D71B RID: 55067 RVA: 0x003FCBD2 File Offset: 0x003FADD2
 	public void SetDetailItemVisible(bool visible)
 	{
 		this.Proxy.SetDetailItemVisible(visible);
 	}
 
-	// Token: 0x060102B4 RID: 66228 RVA: 0x003F05E8 File Offset: 0x003EE7E8
+	// Token: 0x0600D71C RID: 55068 RVA: 0x003FCBE0 File Offset: 0x003FADE0
 	public UUIText GetTitleUiText()
 	{
 		return base.GetText(0);
 	}
 
-	// Token: 0x060102B5 RID: 66229 RVA: 0x003F05F1 File Offset: 0x003EE7F1
+	// Token: 0x0600D71D RID: 55069 RVA: 0x003FCBE9 File Offset: 0x003FADE9
 	public UUIExtendToggle GetKeySetToggle()
 	{
 		return base.GetExtendToggle(1);
 	}
 
-	// Token: 0x060102B6 RID: 66230 RVA: 0x003F05FA File Offset: 0x003EE7FA
+	// Token: 0x0600D71E RID: 55070 RVA: 0x003FCBF2 File Offset: 0x003FADF2
 	public UUIText GetKeyNameUiText()
 	{
 		return base.GetText(2);
 	}
 
-	// Token: 0x060102B7 RID: 66231 RVA: 0x003F0603 File Offset: 0x003EE803
+	// Token: 0x0600D71F RID: 55071 RVA: 0x003FCBFB File Offset: 0x003FADFB
 	public UUIItem GetCursorItem()
 	{
 		return base.GetItem(8);
 	}
 
-	// Token: 0x060102B8 RID: 66232 RVA: 0x003F060C File Offset: 0x003EE80C
+	// Token: 0x0600D720 RID: 55072 RVA: 0x003FCC04 File Offset: 0x003FAE04
 	public UUIItem GetDetailUiItem()
 	{
 		return base.GetItem(3);
 	}
 
-	// Token: 0x060102B9 RID: 66233 RVA: 0x003F0615 File Offset: 0x003EE815
+	// Token: 0x0600D721 RID: 55073 RVA: 0x003FCC0D File Offset: 0x003FAE0D
 	public UUIText GetDetailUiText()
 	{
 		return base.GetText(4);
 	}
 
-	// Token: 0x060102BA RID: 66234 RVA: 0x003F061E File Offset: 0x003EE81E
+	// Token: 0x0600D722 RID: 55074 RVA: 0x003FCC16 File Offset: 0x003FAE16
 	public UUISprite GetDetailSprite()
 	{
 		return base.GetSprite(5);
 	}
 
-	// Token: 0x060102BB RID: 66235 RVA: 0x003F0627 File Offset: 0x003EE827
+	// Token: 0x0600D723 RID: 55075 RVA: 0x003FCC1F File Offset: 0x003FAE1F
 	public UUISprite GetLockSprite()
 	{
 		return base.GetSprite(6);
 	}
 
-	// Token: 0x060102BC RID: 66236 RVA: 0x003F0630 File Offset: 0x003EE830
+	// Token: 0x0600D724 RID: 55076 RVA: 0x003FCC28 File Offset: 0x003FAE28
 	public UUISprite GetSelectSprite()
 	{
 		return base.GetSprite(7);
 	}
 
-	// Token: 0x060102BD RID: 66237 RVA: 0x003F0639 File Offset: 0x003EE839
+	// Token: 0x0600D725 RID: 55077 RVA: 0x003FCC31 File Offset: 0x003FAE31
 	public UUIButtonComponent GetCancelButton()
 	{
 		return base.GetButton(9);
 	}
 
-	// Token: 0x04007785 RID: 30597
+	// Token: 0x0400786E RID: 30830
 	private readonly KeySettingItemProxy Proxy;
 
-	// Token: 0x02008629 RID: 34345
+	// Token: 0x020077B0 RID: 30640
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402BA84 RID: 178820
+		// Token: 0x04026D93 RID: 159123
 		public const int TitleText = 0;
 
-		// Token: 0x0402BA85 RID: 178821
+		// Token: 0x04026D94 RID: 159124
 		public const int KeySetToggle = 1;
 
-		// Token: 0x0402BA86 RID: 178822
+		// Token: 0x04026D95 RID: 159125
 		public const int KeyNameText = 2;
 
-		// Token: 0x0402BA87 RID: 178823
+		// Token: 0x04026D96 RID: 159126
 		public const int DetailItem = 3;
 
-		// Token: 0x0402BA88 RID: 178824
+		// Token: 0x04026D97 RID: 159127
 		public const int DetailText = 4;
 
-		// Token: 0x0402BA89 RID: 178825
+		// Token: 0x04026D98 RID: 159128
 		public const int DetailArrowSprite = 5;
 
-		// Token: 0x0402BA8A RID: 178826
+		// Token: 0x04026D99 RID: 159129
 		public const int LockSprite = 6;
 
-		// Token: 0x0402BA8B RID: 178827
+		// Token: 0x04026D9A RID: 159130
 		public const int SelectedSprite = 7;
 
-		// Token: 0x0402BA8C RID: 178828
+		// Token: 0x04026D9B RID: 159131
 		public const int CursorItem = 8;
 
-		// Token: 0x0402BA8D RID: 178829
+		// Token: 0x04026D9C RID: 159132
 		public const int DisableButton = 9;
 	}
 }

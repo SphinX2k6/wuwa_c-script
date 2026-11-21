@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045BD RID: 17853
+	// Token: 0x020034E5 RID: 13541
 	public enum ECharOutlineTestState
 	{
-		// Token: 0x040189C2 RID: 100802
+		// Token: 0x04012FFD RID: 77821
 		Init,
-		// Token: 0x040189C3 RID: 100803
+		// Token: 0x04012FFE RID: 77822
 		Common,
-		// Token: 0x040189C4 RID: 100804
+		// Token: 0x04012FFF RID: 77823
 		OutlineTest
 	}
 }

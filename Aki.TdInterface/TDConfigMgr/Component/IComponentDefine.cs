@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200025E RID: 606
+	// Token: 0x020002A1 RID: 673
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class IComponentDefine
 	{
-		// Token: 0x06000B02 RID: 2818 RVA: 0x0002CBF0 File Offset: 0x0002ADF0
+		// Token: 0x06000C1C RID: 3100 RVA: 0x0002F8E0 File Offset: 0x0002DAE0
 		// Note: this type is marked as 'beforefieldinit'.
 		static IComponentDefine()
 		{
@@ -71,31 +71,31 @@ namespace Aki.TDConfigMgr.Component
 			IComponentDefine.DollGrabShowcaseBelongTypeCnMapper = dictionary9;
 		}
 
-		// Token: 0x04000AB8 RID: 2744
+		// Token: 0x04000B99 RID: 2969
 		public static readonly IReadOnlyDictionary<string, string> entityCategoryConfig;
 
-		// Token: 0x04000AB9 RID: 2745
+		// Token: 0x04000B9A RID: 2970
 		public static readonly IReadOnlyDictionary<string, string> runtimePlatformCnMap;
 
-		// Token: 0x04000ABA RID: 2746
+		// Token: 0x04000B9B RID: 2971
 		public static readonly IReadOnlyDictionary<EStateRepPerfType, string> StateRepPerfType2TagLastPart;
 
-		// Token: 0x04000ABB RID: 2747
+		// Token: 0x04000B9C RID: 2972
 		public static readonly IReadOnlyDictionary<EAoiLayer, bool> AoiLayersValidInGroup;
 
-		// Token: 0x04000ABC RID: 2748
+		// Token: 0x04000B9D RID: 2973
 		public static readonly IReadOnlyDictionary<EAoiLayer, int> AoiXyLayerValues;
 
-		// Token: 0x04000ABD RID: 2749
+		// Token: 0x04000B9E RID: 2974
 		public static readonly IReadOnlyDictionary<AoiZRadius, int> AoizLayerValues;
 
-		// Token: 0x04000ABE RID: 2750
+		// Token: 0x04000B9F RID: 2975
 		public static readonly IReadOnlyDictionary<ERewardType, string> RewardTypeCnMap;
 
-		// Token: 0x04000ABF RID: 2751
+		// Token: 0x04000BA0 RID: 2976
 		public static readonly IReadOnlyDictionary<EPatrolMoveState, string> PatrolMoveStateNameByValue;
 
-		// Token: 0x04000AC0 RID: 2752
+		// Token: 0x04000BA1 RID: 2977
 		public static readonly IReadOnlyDictionary<EDollGrabShowcaseBelongType, string> DollGrabShowcaseBelongTypeCnMapper;
 	}
 }

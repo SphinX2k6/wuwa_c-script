@@ -6,47 +6,47 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020016C5 RID: 5829
+	// Token: 0x02000323 RID: 803
 	[UnrealObjectPath("/Script/KuroBulletCore.BulletActionBase")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 56)]
 	public class UBulletActionBase : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060151B1 RID: 86449 RVA: 0x001F0852 File Offset: 0x001EEA52
+		// Token: 0x06005457 RID: 21591 RVA: 0x0007628A File Offset: 0x0007448A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UBulletActionBase._ClassPtr;
 		}
 
-		// Token: 0x060151B2 RID: 86450 RVA: 0x001F0860 File Offset: 0x001EEA60
+		// Token: 0x06005458 RID: 21592 RVA: 0x00076298 File Offset: 0x00074498
 		public UBulletActionBase() : this(BuiltinUtils.AllocNativeUObject(UBulletActionBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060151B3 RID: 86451 RVA: 0x001F0888 File Offset: 0x001EEA88
+		// Token: 0x06005459 RID: 21593 RVA: 0x000762C0 File Offset: 0x000744C0
 		[NullableContext(1)]
 		public UBulletActionBase(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UBulletActionBase.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x060151B4 RID: 86452 RVA: 0x001F08BB File Offset: 0x001EEABB
+		// Token: 0x0600545A RID: 21594 RVA: 0x000762F3 File Offset: 0x000744F3
 		static UBulletActionBase()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroBulletCore.BulletActionBase");
 		}
 
-		// Token: 0x060151B5 RID: 86453 RVA: 0x001F08C9 File Offset: 0x001EEAC9
+		// Token: 0x0600545B RID: 21595 RVA: 0x00076301 File Offset: 0x00074501
 		protected UBulletActionBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400B7C9 RID: 47049
+		// Token: 0x04002277 RID: 8823
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroBulletCore.BulletActionBase";
 
-		// Token: 0x0400B7CA RID: 47050
+		// Token: 0x04002278 RID: 8824
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400B7CB RID: 47051
+		// Token: 0x04002279 RID: 8825
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

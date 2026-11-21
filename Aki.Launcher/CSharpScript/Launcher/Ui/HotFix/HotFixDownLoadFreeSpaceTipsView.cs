@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Ui.HotFix
 {
-	// Token: 0x020000CD RID: 205
+	// Token: 0x020000D0 RID: 208
 	public class HotFixDownLoadFreeSpaceTipsView : LaunchComponentsAction
 	{
-		// Token: 0x060006B6 RID: 1718 RVA: 0x0003870C File Offset: 0x0003690C
+		// Token: 0x060006D2 RID: 1746 RVA: 0x0003A23C File Offset: 0x0003843C
 		protected override void OnStart()
 		{
 			base.AttachElement<HotFixBtnUiItem>(2).BindClickCallback(new Action(this.OnCancelBtnClick));
@@ -19,7 +19,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			HotFixManager.SetLocalText(base.GetText(8), "Download_DownLoadBtnRetry", Array.Empty<string>());
 		}
 
-		// Token: 0x060006B7 RID: 1719 RVA: 0x0003878C File Offset: 0x0003698C
+		// Token: 0x060006D3 RID: 1747 RVA: 0x0003A2BC File Offset: 0x000384BC
 		private void OnCancelBtnClick()
 		{
 			base.SetActive(false);
@@ -44,7 +44,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			}
 		}
 
-		// Token: 0x060006B8 RID: 1720 RVA: 0x00038848 File Offset: 0x00036A48
+		// Token: 0x060006D4 RID: 1748 RVA: 0x0003A378 File Offset: 0x00038578
 		private void OnConfirmBtnClick()
 		{
 			LauncherLog.Instance.Info("HotFixDownLoadFreeSpaceTipsView ConfirmBtn", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -69,7 +69,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			this.RefreshView();
 		}
 
-		// Token: 0x060006B9 RID: 1721 RVA: 0x000388B4 File Offset: 0x00036AB4
+		// Token: 0x060006D5 RID: 1749 RVA: 0x0003A3E4 File Offset: 0x000385E4
 		protected override void OnShow()
 		{
 			this.RefreshView();
@@ -90,7 +90,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			element.SetText("HotFixSubPackageHaveNoSpaceClear", Array.Empty<string>());
 		}
 
-		// Token: 0x060006BA RID: 1722 RVA: 0x0003896C File Offset: 0x00036B6C
+		// Token: 0x060006D6 RID: 1750 RVA: 0x0003A49C File Offset: 0x0003869C
 		private void RefreshView()
 		{
 			HotFixManager.SetLocalText(base.GetText(0), "DownLoadText_NeedSpace", new string[]
@@ -104,48 +104,48 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			});
 		}
 
-		// Token: 0x0400040B RID: 1035
+		// Token: 0x0400043A RID: 1082
 		private const long MB_SIZE = 1048576L;
 
-		// Token: 0x0400040C RID: 1036
+		// Token: 0x0400043B RID: 1083
 		[Nullable(2)]
 		public Action<bool> SetDownLoadActiveCallBack;
 
-		// Token: 0x0400040D RID: 1037
+		// Token: 0x0400043C RID: 1084
 		[Nullable(2)]
 		public Action<bool, Action> SetClearSubPackagePopActiveCallBack;
 
-		// Token: 0x0400040E RID: 1038
+		// Token: 0x0400043D RID: 1085
 		private long CanClearSpaceSize;
 
-		// Token: 0x02000365 RID: 869
+		// Token: 0x02000370 RID: 880
 		private static class EComponentDefine
 		{
-			// Token: 0x0400116D RID: 4461
+			// Token: 0x040011CF RID: 4559
 			public const int NeedSpaceText = 0;
 
-			// Token: 0x0400116E RID: 4462
+			// Token: 0x040011D0 RID: 4560
 			public const int LeftSpaceText = 1;
 
-			// Token: 0x0400116F RID: 4463
+			// Token: 0x040011D1 RID: 4561
 			public const int CancelBtn = 2;
 
-			// Token: 0x04001170 RID: 4464
+			// Token: 0x040011D2 RID: 4562
 			public const int ConfirmBtn = 3;
 
-			// Token: 0x04001171 RID: 4465
+			// Token: 0x040011D3 RID: 4563
 			public const int BackBtn = 4;
 
-			// Token: 0x04001172 RID: 4466
+			// Token: 0x040011D4 RID: 4564
 			public const int TitleText = 5;
 
-			// Token: 0x04001173 RID: 4467
+			// Token: 0x040011D5 RID: 4565
 			public const int DesText = 6;
 
-			// Token: 0x04001174 RID: 4468
+			// Token: 0x040011D6 RID: 4566
 			public const int CancelText = 7;
 
-			// Token: 0x04001175 RID: 4469
+			// Token: 0x040011D7 RID: 4567
 			public const int ConfirmText = 8;
 		}
 	}

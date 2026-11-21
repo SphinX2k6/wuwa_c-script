@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002B86 RID: 11142
+// Token: 0x02002102 RID: 8450
 public enum ESurvivorsRogueItemType
 {
-	// Token: 0x0400ACC9 RID: 44233
+	// Token: 0x0400B0D0 RID: 45264
 	Normal,
-	// Token: 0x0400ACCA RID: 44234
+	// Token: 0x0400B0D1 RID: 45265
 	Weapon,
-	// Token: 0x0400ACCB RID: 44235
+	// Token: 0x0400B0D2 RID: 45266
 	Character
 }

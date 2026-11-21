@@ -11,16 +11,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AAE RID: 23214
+	// Token: 0x02004A8A RID: 19082
 	public class DreamLinkWhiteCatSettleView : UiViewBase
 	{
-		// Token: 0x0603ACDE RID: 240862 RVA: 0x00E02FCE File Offset: 0x00E011CE
+		// Token: 0x0602FC2A RID: 195626 RVA: 0x00D53596 File Offset: 0x00D51796
 		[NullableContext(1)]
 		public DreamLinkWhiteCatSettleView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603ACDF RID: 240863 RVA: 0x00E02FD8 File Offset: 0x00E011D8
+		// Token: 0x0602FC2B RID: 195627 RVA: 0x00D535A0 File Offset: 0x00D517A0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603ACE0 RID: 240864 RVA: 0x00E030A8 File Offset: 0x00E012A8
+		// Token: 0x0602FC2C RID: 195628 RVA: 0x00D53670 File Offset: 0x00D51870
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DreamLinkWhiteCatSettleView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -51,20 +51,20 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603ACE1 RID: 240865 RVA: 0x00E030EB File Offset: 0x00E012EB
+		// Token: 0x0602FC2D RID: 195629 RVA: 0x00D536B3 File Offset: 0x00D518B3
 		protected override void OnBeforeShow()
 		{
 			this.InitAutoLeaveTimer();
 			this.RefreshTitle();
 		}
 
-		// Token: 0x0603ACE2 RID: 240866 RVA: 0x00E030F9 File Offset: 0x00E012F9
+		// Token: 0x0602FC2E RID: 195630 RVA: 0x00D536C1 File Offset: 0x00D518C1
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearAutoLeaveTimer();
 		}
 
-		// Token: 0x0603ACE3 RID: 240867 RVA: 0x00E03104 File Offset: 0x00E01304
+		// Token: 0x0602FC2F RID: 195631 RVA: 0x00D536CC File Offset: 0x00D518CC
 		protected void RefreshTitle()
 		{
 			if (this.Data == null)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			base.PlaySequence("Success", null, false);
 		}
 
-		// Token: 0x0603ACE4 RID: 240868 RVA: 0x00E03157 File Offset: 0x00E01357
+		// Token: 0x0602FC30 RID: 195632 RVA: 0x00D5371F File Offset: 0x00D5191F
 		private void ClearAutoLeaveTimer()
 		{
 			if (TimerSystem.GameplayTimeInstance.Has(this.AutoLeaveTimerId))
@@ -91,19 +91,19 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.AutoLeaveTimerId = null;
 		}
 
-		// Token: 0x0603ACE5 RID: 240869 RVA: 0x00E03183 File Offset: 0x00E01383
+		// Token: 0x0602FC31 RID: 195633 RVA: 0x00D5374B File Offset: 0x00D5194B
 		private void OnClickContinueButton()
 		{
 			base.CloseMe(delegate(bool success)
 			{
 				if (success)
 				{
-					InstanceDungeonEntranceController.Instance.RestartInstanceDungeon();
+					InstanceDungeonEntranceController.Instance.RestartInstanceDungeon(false);
 				}
 			});
 		}
 
-		// Token: 0x0603ACE6 RID: 240870 RVA: 0x00E031AA File Offset: 0x00E013AA
+		// Token: 0x0602FC32 RID: 195634 RVA: 0x00D53772 File Offset: 0x00D51972
 		private void OnClickBtnLeave()
 		{
 			base.CloseMe(delegate(bool success)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			});
 		}
 
-		// Token: 0x0603ACE7 RID: 240871 RVA: 0x00E031D4 File Offset: 0x00E013D4
+		// Token: 0x0602FC33 RID: 195635 RVA: 0x00D5379C File Offset: 0x00D5199C
 		private void InitAutoLeaveTimer()
 		{
 			int leftSecondToAutoLeave = 31;
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}, 1000f, 1f, null, null, true);
 		}
 
-		// Token: 0x0603ACE8 RID: 240872 RVA: 0x00E03220 File Offset: 0x00E01420
+		// Token: 0x0602FC34 RID: 195636 RVA: 0x00D537E8 File Offset: 0x00D519E8
 		private UniTask InitButtonAsync()
 		{
 			DreamLinkWhiteCatSettleView.<InitButtonAsync>d__17 <InitButtonAsync>d__;
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <InitButtonAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603ACE9 RID: 240873 RVA: 0x00E03264 File Offset: 0x00E01464
+		// Token: 0x0602FC35 RID: 195637 RVA: 0x00D5382C File Offset: 0x00D51A2C
 		[NullableContext(1)]
 		private UniTask CreateButton(UUIItem uiItem, int buttonIndex, Action clickFunction)
 		{
@@ -169,10 +169,10 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <CreateButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401EB08 RID: 125704
+		// Token: 0x040195AF RID: 103855
 		private const int LEAVETIME = 30;
 
-		// Token: 0x0401EB09 RID: 125705
+		// Token: 0x040195B0 RID: 103856
 		[Nullable(new byte[]
 		{
 			2,
@@ -180,44 +180,44 @@ namespace CSharpScript.Game.Module.DreamLink
 		})]
 		protected Dictionary<int, ActivityCorniceMeetingButton> ButtonMap;
 
-		// Token: 0x0401EB0A RID: 125706
+		// Token: 0x040195B1 RID: 103857
 		[Nullable(2)]
 		private TimerHandle AutoLeaveTimerId;
 
-		// Token: 0x0401EB0B RID: 125707
+		// Token: 0x040195B2 RID: 103858
 		[Nullable(2)]
 		protected RogueBossLinkSettleNotify Data;
 
-		// Token: 0x0401EB0C RID: 125708
+		// Token: 0x040195B3 RID: 103859
 		[Nullable(2)]
 		protected DreamLinkWhiteCatSettlePanel RewardExploreTargetReachedList;
 
-		// Token: 0x0200BCFB RID: 48379
+		// Token: 0x0200A703 RID: 42755
 		private class EComponents
 		{
-			// Token: 0x04038FE4 RID: 233444
+			// Token: 0x040339AE RID: 211374
 			public const int TxtTitle = 1;
 
-			// Token: 0x04038FE5 RID: 233445
+			// Token: 0x040339AF RID: 211375
 			public const int TextureIcon = 2;
 
-			// Token: 0x04038FE6 RID: 233446
+			// Token: 0x040339B0 RID: 211376
 			public const int ButtonHorizontalItem = 4;
 
-			// Token: 0x04038FE7 RID: 233447
+			// Token: 0x040339B1 RID: 211377
 			public const int ButtonItem = 5;
 
-			// Token: 0x04038FE8 RID: 233448
+			// Token: 0x040339B2 RID: 211378
 			public const int Content = 20;
 		}
 
-		// Token: 0x0200BCFC RID: 48380
+		// Token: 0x0200A704 RID: 42756
 		private class EButtons
 		{
-			// Token: 0x04038FE9 RID: 233449
+			// Token: 0x040339B3 RID: 211379
 			public const int LeftButton = 0;
 
-			// Token: 0x04038FEA RID: 233450
+			// Token: 0x040339B4 RID: 211380
 			public const int RightButton = 1;
 		}
 	}

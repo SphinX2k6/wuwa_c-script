@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F27 RID: 3879
+// Token: 0x020003DC RID: 988
 [NullableContext(1)]
 [Nullable(0)]
 public class AchievementGroupSmallItem : UiPanelBase, IDynamicScrollItem<AchievementGroupData>
 {
-	// Token: 0x06006235 RID: 25141 RVA: 0x0013309C File Offset: 0x0013129C
+	// Token: 0x060035CD RID: 13773 RVA: 0x0013B9C4 File Offset: 0x00139BC4
 	public UniTask Init(UUIItem actor)
 	{
 		AchievementGroupSmallItem.<Init>d__2 <Init>d__;
@@ -26,19 +26,19 @@ public class AchievementGroupSmallItem : UiPanelBase, IDynamicScrollItem<Achieve
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006236 RID: 25142 RVA: 0x001330E7 File Offset: 0x001312E7
+	// Token: 0x060035CE RID: 13774 RVA: 0x0013BA0F File Offset: 0x00139C0F
 	public void ClearItem()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x06006237 RID: 25143 RVA: 0x001330F0 File Offset: 0x001312F0
+	// Token: 0x060035CF RID: 13775 RVA: 0x0013BA18 File Offset: 0x00139C18
 	public AUIBaseActor GetUsingItem(AchievementGroupData data)
 	{
 		return (AUIBaseActor)base.GetRootItem().GetOwner();
 	}
 
-	// Token: 0x06006238 RID: 25144 RVA: 0x00133102 File Offset: 0x00131302
+	// Token: 0x060035D0 RID: 13776 RVA: 0x0013BA2A File Offset: 0x00139C2A
 	public void Update(AchievementGroupData data, int index)
 	{
 		this.AchievementGroupData = data;
@@ -48,7 +48,7 @@ public class AchievementGroupSmallItem : UiPanelBase, IDynamicScrollItem<Achieve
 		this.RefreshProgress();
 	}
 
-	// Token: 0x06006239 RID: 25145 RVA: 0x00133128 File Offset: 0x00131328
+	// Token: 0x060035D1 RID: 13777 RVA: 0x0013BA50 File Offset: 0x00139C50
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -77,13 +77,13 @@ public class AchievementGroupSmallItem : UiPanelBase, IDynamicScrollItem<Achieve
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600623A RID: 25146 RVA: 0x00133252 File Offset: 0x00131452
+	// Token: 0x060035D2 RID: 13778 RVA: 0x0013BB7A File Offset: 0x00139D7A
 	protected override void OnStart()
 	{
 		this.AddEventListener();
 	}
 
-	// Token: 0x0600623B RID: 25147 RVA: 0x0013325C File Offset: 0x0013145C
+	// Token: 0x060035D3 RID: 13779 RVA: 0x0013BB84 File Offset: 0x00139D84
 	protected void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnAchievementGroupChange, new Action(this.OnAchievementGroupChange));
@@ -91,7 +91,7 @@ public class AchievementGroupSmallItem : UiPanelBase, IDynamicScrollItem<Achieve
 		EventSystem.Instance.Add<int>(EEventName.OnAchievementDataWithIdNotify, new Action<int>(this.OnAchievementDataWithIdNotify));
 	}
 
-	// Token: 0x0600623C RID: 25148 RVA: 0x001332C0 File Offset: 0x001314C0
+	// Token: 0x060035D4 RID: 13780 RVA: 0x0013BBE8 File Offset: 0x00139DE8
 	protected void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAchievementGroupChange, new Action(this.OnAchievementGroupChange));
@@ -99,7 +99,7 @@ public class AchievementGroupSmallItem : UiPanelBase, IDynamicScrollItem<Achieve
 		EventSystem.Instance.Remove(EEventName.OnAchievementDataWithIdNotify, new Action<int>(this.OnAchievementDataWithIdNotify));
 	}
 
-	// Token: 0x0600623D RID: 25149 RVA: 0x00133324 File Offset: 0x00131524
+	// Token: 0x060035D5 RID: 13781 RVA: 0x0013BC4C File Offset: 0x00139E4C
 	private void OnAchievementDataWithIdNotify(int dataId)
 	{
 		int groupId = AchievementModel.Instance.GetAchievementData(dataId).GetGroupId();
@@ -112,7 +112,7 @@ public class AchievementGroupSmallItem : UiPanelBase, IDynamicScrollItem<Achieve
 		}
 	}
 
-	// Token: 0x0600623E RID: 25150 RVA: 0x00133386 File Offset: 0x00131586
+	// Token: 0x060035D6 RID: 13782 RVA: 0x0013BCAE File Offset: 0x00139EAE
 	private void OnAchievementGroupDataNotify(int groupId)
 	{
 		AchievementGroupData achievementGroupData = this.AchievementGroupData;
@@ -123,20 +123,20 @@ public class AchievementGroupSmallItem : UiPanelBase, IDynamicScrollItem<Achieve
 		}
 	}
 
-	// Token: 0x0600623F RID: 25151 RVA: 0x001333B1 File Offset: 0x001315B1
+	// Token: 0x060035D7 RID: 13783 RVA: 0x0013BCD9 File Offset: 0x00139ED9
 	private void OnAchievementGroupChange()
 	{
 		this.RefreshToggleState();
 	}
 
-	// Token: 0x06006240 RID: 25152 RVA: 0x001333B9 File Offset: 0x001315B9
+	// Token: 0x060035D8 RID: 13784 RVA: 0x0013BCE1 File Offset: 0x00139EE1
 	private void OnClickToggle(EToggleState state)
 	{
 		AchievementModel.Instance.CurrentSelectGroup = this.AchievementGroupData;
 		EventSystem.Instance.Emit(EEventName.OnAchievementGroupChange);
 	}
 
-	// Token: 0x06006241 RID: 25153 RVA: 0x001333DC File Offset: 0x001315DC
+	// Token: 0x060035D9 RID: 13785 RVA: 0x0013BD04 File Offset: 0x00139F04
 	private void RefreshToggleState()
 	{
 		if (this.AchievementGroupData == null)
@@ -154,14 +154,14 @@ public class AchievementGroupSmallItem : UiPanelBase, IDynamicScrollItem<Achieve
 		}
 	}
 
-	// Token: 0x06006242 RID: 25154 RVA: 0x00133434 File Offset: 0x00131634
+	// Token: 0x060035DA RID: 13786 RVA: 0x0013BD5C File Offset: 0x00139F5C
 	private void RefreshProgress()
 	{
 		string achievementGroupProgress = this.AchievementGroupData.GetAchievementGroupProgress();
 		base.GetText(3).SetText(achievementGroupProgress, true);
 	}
 
-	// Token: 0x06006243 RID: 25155 RVA: 0x0013345C File Offset: 0x0013165C
+	// Token: 0x060035DB RID: 13787 RVA: 0x0013BD84 File Offset: 0x00139F84
 	private void RefreshDesc(AchievementGroupData data)
 	{
 		base.GetText(0).SetText(data.GetTitle(), true);
@@ -175,13 +175,13 @@ public class AchievementGroupSmallItem : UiPanelBase, IDynamicScrollItem<Achieve
 		item.SetUIActive(data.GetRewards().Count > 0);
 	}
 
-	// Token: 0x06006244 RID: 25156 RVA: 0x001334BA File Offset: 0x001316BA
+	// Token: 0x060035DC RID: 13788 RVA: 0x0013BDE2 File Offset: 0x00139FE2
 	private void RefreshRedPointState(AchievementGroupData data)
 	{
 		base.GetItem(4).SetUIActive(data.SmallItemRedPoint());
 	}
 
-	// Token: 0x06006245 RID: 25157 RVA: 0x001334CE File Offset: 0x001316CE
+	// Token: 0x060035DD RID: 13789 RVA: 0x0013BDF6 File Offset: 0x00139FF6
 	protected override void OnBeforeDestroy()
 	{
 		if (this.AchievementGroupData != null)
@@ -195,11 +195,11 @@ public class AchievementGroupSmallItem : UiPanelBase, IDynamicScrollItem<Achieve
 		this.RemoveEventListener();
 	}
 
-	// Token: 0x04002C9D RID: 11421
+	// Token: 0x04002D36 RID: 11574
 	[Nullable(2)]
 	private AchievementGroupData AchievementGroupData;
 
-	// Token: 0x04002C9E RID: 11422
+	// Token: 0x04002D37 RID: 11575
 	[Nullable(2)]
 	private Vector2D ItemSizeVector;
 }

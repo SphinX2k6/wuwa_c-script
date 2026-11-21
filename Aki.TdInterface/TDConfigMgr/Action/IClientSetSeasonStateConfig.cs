@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018C8 RID: 6344
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A59 RID: 6745
 	public class IClientSetSeasonStateConfig
 	{
-		// Token: 0x06008813 RID: 34835 RVA: 0x001421B0 File Offset: 0x001403B0
+		// Token: 0x06008F5B RID: 36699 RVA: 0x00151D28 File Offset: 0x0014FF28
 		private IClientSetSeasonStateConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008814 RID: 34836 RVA: 0x001421E8 File Offset: 0x001403E8
+		// Token: 0x06008F5C RID: 36700 RVA: 0x00151D60 File Offset: 0x0014FF60
 		public static IClientSetSeasonStateConfig Create([Nullable(2)] IClientSetSeasonStateConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008815 RID: 34837 RVA: 0x001421FB File Offset: 0x001403FB
+		// Token: 0x06008F5D RID: 36701 RVA: 0x00151D73 File Offset: 0x0014FF73
 		public static IClientSetSeasonStateConfig CreateFromSetValue([Nullable(2)] IClientSetSeasonStateConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008816 RID: 34838 RVA: 0x0014220E File Offset: 0x0014040E
+		// Token: 0x06008F5E RID: 36702 RVA: 0x00151D86 File Offset: 0x0014FF86
 		public IClientSetSeasonStateConfig_SetValue ToSetValue()
 		{
 			return new IClientSetSeasonStateConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C32 RID: 11314
-		// (get) Token: 0x06008817 RID: 34839 RVA: 0x00142221 File Offset: 0x00140421
-		// (set) Token: 0x06008818 RID: 34840 RVA: 0x0014224C File Offset: 0x0014044C
+		// Token: 0x17002E34 RID: 11828
+		// (get) Token: 0x06008F5F RID: 36703 RVA: 0x00151D99 File Offset: 0x0014FF99
+		// (set) Token: 0x06008F60 RID: 36704 RVA: 0x00151DC4 File Offset: 0x0014FFC4
 		public virtual EClientSetSeasonStateType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005583 RID: 21891
+		// Token: 0x040059DD RID: 23005
 		[Nullable(2)]
 		protected IClientSetSeasonStateConfig FbInstance;
 
-		// Token: 0x04005584 RID: 21892
+		// Token: 0x040059DE RID: 23006
 		[Nullable(2)]
 		protected IClientSetSeasonStateConfig_SetValue PocoInterface;
 	}

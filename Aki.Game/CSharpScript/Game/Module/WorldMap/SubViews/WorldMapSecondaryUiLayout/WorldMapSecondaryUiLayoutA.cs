@@ -9,8 +9,6 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Map;
 using CSharpScript.Game.Module.Map.Controller;
 using CSharpScript.Game.Module.Map.MapDefine;
-using CSharpScript.Game.Module.Map.Mark;
-using CSharpScript.Game.Module.Map.Mark.Component;
 using CSharpScript.Game.Module.Map.Mark.Misc;
 using CSharpScript.Game.Module.Map.Marks.MarkItem;
 using CSharpScript.Game.Module.Map.Misc;
@@ -24,12 +22,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 {
-	// Token: 0x020047C7 RID: 18375
+	// Token: 0x020036F8 RID: 14072
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WorldMapSecondaryUiLayoutA : WorldMapSecondaryUi
 	{
-		// Token: 0x06030250 RID: 197200 RVA: 0x00B28004 File Offset: 0x00B26204
+		// Token: 0x06024A20 RID: 150048 RVA: 0x00A57E10 File Offset: 0x00A56010
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = WorldMapDefine.SecondaryUiPanelComponentsRegisterInfoA;
@@ -46,18 +44,18 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.BtnBindInfo = list;
 		}
 
-		// Token: 0x06030251 RID: 197201 RVA: 0x00B280A8 File Offset: 0x00B262A8
+		// Token: 0x06024A21 RID: 150049 RVA: 0x00A57EB4 File Offset: 0x00A560B4
 		protected override UniTask OnBeforeStartAsync()
 		{
-			WorldMapSecondaryUiLayoutA.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
+			WorldMapSecondaryUiLayoutA.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
 			<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnBeforeStartAsync>d__.<>4__this = this;
 			<OnBeforeStartAsync>d__.<>1__state = -1;
-			<OnBeforeStartAsync>d__.<>t__builder.Start<WorldMapSecondaryUiLayoutA.<OnBeforeStartAsync>d__10>(ref <OnBeforeStartAsync>d__);
+			<OnBeforeStartAsync>d__.<>t__builder.Start<WorldMapSecondaryUiLayoutA.<OnBeforeStartAsync>d__13>(ref <OnBeforeStartAsync>d__);
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030252 RID: 197202 RVA: 0x00B280EC File Offset: 0x00B262EC
+		// Token: 0x06024A22 RID: 150050 RVA: 0x00A57EF8 File Offset: 0x00A560F8
 		protected override void OnStart()
 		{
 			this.RootItem.SetRaycastTarget(false);
@@ -74,16 +72,18 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			});
 		}
 
-		// Token: 0x06030253 RID: 197203 RVA: 0x00B28150 File Offset: 0x00B26350
+		// Token: 0x06024A23 RID: 150051 RVA: 0x00A57F5C File Offset: 0x00A5615C
 		private void InitContext()
 		{
-			this.LayoutContext = new WorldMapSecondaryUiContext();
-			this.LayoutContext.SetSpriteByPathAction = new TSetSpriteByPathAction(this.SetSpriteByPath);
-			this.LayoutContext.Icon = base.GetSprite(0);
-			this.LayoutContext.Title = base.GetText(1);
-			this.LayoutContext.AreaText = base.GetText(3);
-			this.LayoutContext.AreaIconItem = base.GetItem(22);
-			this.LayoutContext.DescriptionText = base.GetText(4);
+			this.LayoutContext = new WorldMapSecondaryUiContext
+			{
+				SetSpriteByPathAction = new TSetSpriteByPathAction(this.SetSpriteByPath),
+				Icon = base.GetSprite(0),
+				Title = base.GetText(1),
+				AreaText = base.GetText(3),
+				AreaIconItem = base.GetItem(22),
+				DescriptionText = base.GetText(4)
+			};
 			if (this.ConfirmButton != null)
 			{
 				this.LayoutContext.SetConfirmBtnItem(this.ConfirmButton);
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.AutoPilotContext.RefreshPanelCallback = new Action<MarkItem>(this.RefreshPanel);
 		}
 
-		// Token: 0x06030254 RID: 197204 RVA: 0x00B282C8 File Offset: 0x00B264C8
+		// Token: 0x06024A24 RID: 150052 RVA: 0x00A580B4 File Offset: 0x00A562B4
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnMarkTopRightIconUpdate, this.UpdateTopRightIconHandle);
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x06030255 RID: 197205 RVA: 0x00B28354 File Offset: 0x00B26554
+		// Token: 0x06024A25 RID: 150053 RVA: 0x00A58140 File Offset: 0x00A56340
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.GetItem(14).SetUIActive(true);
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x06030256 RID: 197206 RVA: 0x00B284B4 File Offset: 0x00B266B4
+		// Token: 0x06024A26 RID: 150054 RVA: 0x00A582A0 File Offset: 0x00A564A0
 		private void RefreshScrollArrow()
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(55);
@@ -194,21 +194,72 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 				return;
 			}
 			bool flag = !scrollViewWithScrollbar.CheckContentUnderSize();
-			float y = scrollViewWithScrollbar.Progress.Y;
+			float num = scrollViewWithScrollbar.Progress.Y;
+			WorldMapSecondaryUiContext layoutContext = this.LayoutContext;
+			MarkItem markItem = (layoutContext != null) ? layoutContext.MarkItem : null;
+			ValueTuple<EMarkType, int>? valueTuple = (markItem != null) ? new ValueTuple<EMarkType, int>?(new ValueTuple<EMarkType, int>(markItem.MarkType, markItem.MarkId)) : null;
+			ValueTuple<EMarkType, int>? valueTuple2 = valueTuple;
+			ValueTuple<EMarkType, int>? lastScrollMark = this.LastScrollMark;
+			bool flag2 = valueTuple2 != null;
+			bool flag3;
+			if (flag2 != (lastScrollMark != null))
+			{
+				flag3 = true;
+			}
+			else if (!flag2)
+			{
+				flag3 = false;
+			}
+			else
+			{
+				ValueTuple<EMarkType, int> valueOrDefault = valueTuple2.GetValueOrDefault();
+				ValueTuple<EMarkType, int> valueOrDefault2 = lastScrollMark.GetValueOrDefault();
+				flag3 = (valueOrDefault.Item1 != valueOrDefault2.Item1 || valueOrDefault.Item2 != valueOrDefault2.Item2);
+			}
+			if (flag3)
+			{
+				this.LastScrollMark = valueTuple;
+				this.LastScrollProgress = 0f;
+				this.LastContentHeight = -1f;
+			}
+			AUIBaseActor content = scrollViewWithScrollbar.GetContent();
+			float? num2;
+			if (content == null)
+			{
+				num2 = null;
+			}
+			else
+			{
+				UUIItem uiitem = content.GetUIItem();
+				num2 = ((uiitem != null) ? new float?(uiitem.GetHeight()) : null);
+			}
+			float? num3 = num2;
+			float valueOrDefault3 = num3.GetValueOrDefault();
+			if (Math.Abs(valueOrDefault3 - this.LastContentHeight) > 0.0001f)
+			{
+				this.LastContentHeight = valueOrDefault3;
+				scrollViewWithScrollbar.ScrollToEnd();
+				scrollViewWithScrollbar.SetScrollProgress(this.LastScrollProgress);
+				num = this.LastScrollProgress;
+			}
+			if (flag)
+			{
+				this.LastScrollProgress = Math.Clamp(num, 0f, 1f);
+			}
 			UUIItem item = base.GetItem(53);
 			if (item != null)
 			{
-				item.SetUIActive(flag && y > 0.001f);
+				item.SetUIActive(flag && num > 0.001f);
 			}
 			UUIItem item2 = base.GetItem(54);
 			if (item2 == null)
 			{
 				return;
 			}
-			item2.SetUIActive(flag && y < 0.999f);
+			item2.SetUIActive(flag && num < 0.999f);
 		}
 
-		// Token: 0x06030257 RID: 197207 RVA: 0x00B28528 File Offset: 0x00B26728
+		// Token: 0x06024A27 RID: 150055 RVA: 0x00A5845C File Offset: 0x00A5665C
 		protected bool UpdateQuickGoto()
 		{
 			bool flag = MarkUiUtils.IsShowGoto(this.LayoutContext.MarkItem);
@@ -216,7 +267,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			return flag;
 		}
 
-		// Token: 0x06030258 RID: 197208 RVA: 0x00B28550 File Offset: 0x00B26750
+		// Token: 0x06024A28 RID: 150056 RVA: 0x00A58484 File Offset: 0x00A56684
 		protected void UpdateQuickGotoActive(bool showGoto)
 		{
 			MarkItem markItem = this.LayoutContext.MarkItem;
@@ -230,13 +281,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			bool allowTeleportByUi = TeleportModel.Instance.AllowTeleportByUi;
 			bool flag = MarkUiUtils.FindNearbyValidGotoMark(this.Map, markItem) != null || this.IsFastReturnAvailable();
 			button.SetSelfInteractive(allowTeleportByUi && flag);
-			bool isHide = markItem.MarkItemEntity.GamePlay.IsHide;
+			bool flag2 = markItem.IsMarkDisabled();
 			MapTipsActivateTipPanel mapTipsActivateTipPanel = this.MapTipsActivateTipPanel;
 			if (mapTipsActivateTipPanel != null)
 			{
-				mapTipsActivateTipPanel.SetUiActive((!allowTeleportByUi || !flag || isHide) && !HonamiStoryUtil.CheckInHonamiStoryDungeon());
+				mapTipsActivateTipPanel.SetUiActive((!allowTeleportByUi || !flag || flag2) && !HonamiStoryUtil.CheckInHonamiStoryDungeon());
 			}
-			if (isHide)
+			if (flag2)
 			{
 				this.UpdateHidePlayMapTipPanel();
 				return;
@@ -249,82 +300,53 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			mapTipsActivateTipPanel2.SetDistanceTips();
 		}
 
-		// Token: 0x06030259 RID: 197209 RVA: 0x00B2860C File Offset: 0x00B2680C
+		// Token: 0x06024A29 RID: 150057 RVA: 0x00A58533 File Offset: 0x00A56733
 		protected virtual bool IsFastReturnAvailable()
 		{
 			return false;
 		}
 
-		// Token: 0x0603025A RID: 197210 RVA: 0x00B28610 File Offset: 0x00B26810
+		// Token: 0x06024A2A RID: 150058 RVA: 0x00A58538 File Offset: 0x00A56738
 		protected void UpdateHidePlayMapTipPanel()
 		{
 			MarkItem markItem = this.LayoutContext.MarkItem;
-			bool isHide = markItem.MarkItemEntity.GamePlay.IsHide;
+			bool flag = markItem.IsMarkDisabled();
 			MapTipsActivateTipPanel mapTipsActivateTipPanel = this.MapTipsActivateTipPanel;
 			if (mapTipsActivateTipPanel != null)
 			{
-				mapTipsActivateTipPanel.SetUiActive(isHide);
+				mapTipsActivateTipPanel.SetUiActive(flag);
 			}
-			if (isHide)
+			if (flag)
 			{
-				MarkCommonGamePlayStateComponent component = markItem.MarkItemEntity.GetComponent<MarkCommonGamePlayStateComponent>(EMapComponent.MarkCommonGamePlayState);
-				int? num = (component != null) ? component.GetRelativeDungeonId() : null;
-				int? num2 = (component != null) ? component.GetRelativeId() : null;
-				if (component != null && num != null && num2 != null)
+				MapTipsActivateTipPanel mapTipsActivateTipPanel2 = this.MapTipsActivateTipPanel;
+				if (mapTipsActivateTipPanel2 == null)
 				{
-					string hideTip = LevelPlayReportModel.Instance.GetLevelPlayHideReason(num.Value, num2.Value);
-					MapTipsActivateTipPanel mapTipsActivateTipPanel2 = this.MapTipsActivateTipPanel;
-					if (mapTipsActivateTipPanel2 == null)
-					{
-						return;
-					}
-					mapTipsActivateTipPanel2.SetHideTip(hideTip);
 					return;
 				}
-				else
-				{
-					int valueOrDefault = markItem.MarkItemEntity.GetComponent<MarkEntityComponent>(EMapComponent.MarkEntity).EntityId.GetValueOrDefault();
-					string hideTip = MapModel.Instance.GetMarkHideReason(markItem.MapId, valueOrDefault);
-					MapTipsActivateTipPanel mapTipsActivateTipPanel3 = this.MapTipsActivateTipPanel;
-					if (mapTipsActivateTipPanel3 == null)
-					{
-						return;
-					}
-					mapTipsActivateTipPanel3.SetHideTip(hideTip);
-				}
+				mapTipsActivateTipPanel2.SetHideTip(markItem.GetMarkHideReason());
 			}
 		}
 
-		// Token: 0x0603025B RID: 197211 RVA: 0x00B28710 File Offset: 0x00B26910
+		// Token: 0x06024A2B RID: 150059 RVA: 0x00A58584 File Offset: 0x00A56784
 		protected virtual void UpdateEnableFastMoveLayout()
 		{
 			MarkItem markItem = this.LayoutContext.MarkItem;
 			ConfigMarkItem configMarkItem = this.LayoutContext.MarkItem as ConfigMarkItem;
-			IMarkShowState markExtraShowState = MapModel.Instance.GetMarkExtraShowState(markItem.MarkId);
-			bool flag = markExtraShowState == null || markExtraShowState.ShowFlag != MapMarkShowFlag.ShowDisable;
+			bool flag = MapModel.Instance.GetMarkExtraShowState(markItem.MarkId).ShowFlag != MapMarkShowFlag.ShowDisable;
 			bool flag2 = configMarkItem == null || !configMarkItem.IsLocked;
-			bool flag3;
-			if (configMarkItem == null)
-			{
-				flag3 = false;
-			}
-			else
-			{
-				ConfigMarkItem configMarkItem2 = configMarkItem;
-				flag3 = (((configMarkItem2.MarkConfig != null) ? new int?(configMarkItem2.MarkConfig.GetValueOrDefault().EnableQuickTransfer) : null).GetValueOrDefault() == 1);
-			}
-			bool flag4 = flag3;
+			MapMark? mapMark;
+			bool flag3 = configMarkItem != null && ((configMarkItem.MarkConfig != null) ? new int?(mapMark.GetValueOrDefault().EnableQuickTransfer) : null).GetValueOrDefault() == 1;
 			WorldMapSecondaryUiContext layoutContext = this.LayoutContext;
 			if (layoutContext != null)
 			{
-				layoutContext.SetConfirmBtnActive(flag4 && flag2);
+				layoutContext.SetConfirmBtnActive(flag3 && flag2);
 			}
 			ButtonItem confirmButton = this.ConfirmButton;
 			if (confirmButton != null)
 			{
 				confirmButton.SetEnableClick(flag2);
 			}
-			this.UpdateQuickGotoActive(!flag4 || !flag2);
+			this.UpdateQuickGotoActive(!flag3 || !flag2);
 			MapMark? configMark = MapConfig.Instance.GetConfigMark(markItem.MarkId);
 			if (configMark != null && configMark.Value.IsDisableBtnGoto)
 			{
@@ -339,14 +361,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.UpdateTopRightIconActive();
 		}
 
-		// Token: 0x0603025C RID: 197212 RVA: 0x00B28848 File Offset: 0x00B26A48
+		// Token: 0x06024A2C RID: 150060 RVA: 0x00A586B2 File Offset: 0x00A568B2
 		protected void UpdateMarkItemRelativeLayout()
 		{
 			this.UpdateMultiMap();
 			this.UpdateTopRightIconActive();
 		}
 
-		// Token: 0x0603025D RID: 197213 RVA: 0x00B28858 File Offset: 0x00B26A58
+		// Token: 0x06024A2D RID: 150061 RVA: 0x00A586C0 File Offset: 0x00A568C0
 		protected void UpdateMultiMap()
 		{
 			bool flag = this.LayoutContext.MarkItem.ShowSecondaryUiMultiMapIcon();
@@ -358,7 +380,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			}
 		}
 
-		// Token: 0x0603025E RID: 197214 RVA: 0x00B288B4 File Offset: 0x00B26AB4
+		// Token: 0x06024A2E RID: 150062 RVA: 0x00A5871C File Offset: 0x00A5691C
 		protected void UpdateTopRightIconActive()
 		{
 			MarkItem markItem = this.LayoutContext.MarkItem;
@@ -366,15 +388,16 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			{
 				return;
 			}
-			bool active = markItem.MarkItemEntity.ViewLifeCircle.IsChildViewVisible(EMarkViewComponentType.TopRightIcon, false);
-			string topRightIconPath = markItem.MarkItemEntity.Resource.TopRightIconPath;
-			this.UpdateTopRightIcon(active, topRightIconPath);
+			bool showTopRightIcon = markItem.ShowTopRightIcon;
+			string topRightIconPath = markItem.TopRightIconPath;
+			this.UpdateTopRightIcon(showTopRightIcon, topRightIconPath);
 		}
 
-		// Token: 0x0603025F RID: 197215 RVA: 0x00B28900 File Offset: 0x00B26B00
+		// Token: 0x06024A2F RID: 150063 RVA: 0x00A58750 File Offset: 0x00A56950
 		protected void UpdateTopRightIconByTeleportState()
 		{
-			if (!this.LayoutContext.MarkItem.MarkItemEntity.GamePlay.IsDisable)
+			MarkItem markItem = this.LayoutContext.MarkItem;
+			if (!MapModel.Instance.IsMarkDisable(markItem.MarkId, markItem.IsMarkDisabled()))
 			{
 				this.UpdateTopRightIcon(false, null);
 				return;
@@ -383,7 +406,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.UpdateTopRightIcon(true, resourcePath);
 		}
 
-		// Token: 0x06030260 RID: 197216 RVA: 0x00B28950 File Offset: 0x00B26B50
+		// Token: 0x06024A30 RID: 150064 RVA: 0x00A587A8 File Offset: 0x00A569A8
 		protected void UpdateTopRightIcon(bool active, string iconPath = null)
 		{
 			base.GetSprite(24).SetUIActive(active);
@@ -393,13 +416,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			}
 		}
 
-		// Token: 0x06030261 RID: 197217 RVA: 0x00B28990 File Offset: 0x00B26B90
+		// Token: 0x06024A31 RID: 150065 RVA: 0x00A587E8 File Offset: 0x00A569E8
 		protected void UpdateRightDownIconActive()
 		{
 			this.UpdateMultiMapIconActive();
 		}
 
-		// Token: 0x06030262 RID: 197218 RVA: 0x00B28998 File Offset: 0x00B26B98
+		// Token: 0x06024A32 RID: 150066 RVA: 0x00A587F0 File Offset: 0x00A569F0
 		protected void UpdateMultiMapIconActive()
 		{
 			bool flag = this.LayoutContext.MarkItem.ShowSecondaryUiMultiMapIcon();
@@ -412,7 +435,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.UpdateDownStateIcon(flag, null);
 		}
 
-		// Token: 0x06030263 RID: 197219 RVA: 0x00B289DC File Offset: 0x00B26BDC
+		// Token: 0x06024A33 RID: 150067 RVA: 0x00A58834 File Offset: 0x00A56A34
 		protected void UpdateDownStateIcon(bool active, string iconPath = null)
 		{
 			base.GetSprite(23).SetUIActive(active);
@@ -422,7 +445,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			}
 		}
 
-		// Token: 0x06030264 RID: 197220 RVA: 0x00B28A1C File Offset: 0x00B26C1C
+		// Token: 0x06024A34 RID: 150068 RVA: 0x00A58874 File Offset: 0x00A56A74
 		protected bool UpdateDeliveryPropLayout()
 		{
 			MapMark? markConfig = (this.LayoutContext.MarkItem as ConfigMarkItem).MarkConfig;
@@ -450,7 +473,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			return false;
 		}
 
-		// Token: 0x06030265 RID: 197221 RVA: 0x00B28B08 File Offset: 0x00B26D08
+		// Token: 0x06024A35 RID: 150069 RVA: 0x00A58960 File Offset: 0x00A56B60
 		[NullableContext(1)]
 		public void UpdateRewardLayout(int dropId, string titleKey)
 		{
@@ -458,7 +481,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.UpdateRewardLayoutByList(itemListByDropId, titleKey);
 		}
 
-		// Token: 0x06030266 RID: 197222 RVA: 0x00B28B28 File Offset: 0x00B26D28
+		// Token: 0x06024A36 RID: 150070 RVA: 0x00A58980 File Offset: 0x00A56B80
 		[NullableContext(1)]
 		public List<TItem> GetItemListByDropId(int dropId)
 		{
@@ -479,7 +502,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			return list;
 		}
 
-		// Token: 0x06030267 RID: 197223 RVA: 0x00B28BD8 File Offset: 0x00B26DD8
+		// Token: 0x06024A37 RID: 150071 RVA: 0x00A58A30 File Offset: 0x00A56C30
 		[NullableContext(1)]
 		public void UpdateRewardLayoutByList(List<TItem> list, string titleKey)
 		{
@@ -492,40 +515,40 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.DeliveryPropView.Refresh(list);
 		}
 
-		// Token: 0x06030268 RID: 197224 RVA: 0x00B28C21 File Offset: 0x00B26E21
+		// Token: 0x06024A38 RID: 150072 RVA: 0x00A58A79 File Offset: 0x00A56C79
 		protected virtual void OnConfirmBtnClick(int index)
 		{
 			this.HandleTeleportAndTrack();
 		}
 
-		// Token: 0x06030269 RID: 197225 RVA: 0x00B28C29 File Offset: 0x00B26E29
+		// Token: 0x06024A39 RID: 150073 RVA: 0x00A58A81 File Offset: 0x00A56C81
 		protected virtual void OnTrackBtnClick(int index)
 		{
 			this.HandleTrack();
 		}
 
-		// Token: 0x0603026A RID: 197226 RVA: 0x00B28C31 File Offset: 0x00B26E31
+		// Token: 0x06024A3A RID: 150074 RVA: 0x00A58A89 File Offset: 0x00A56C89
 		protected virtual void OnGotoBtnClick(int index)
 		{
 			this.HandleQuickGoto();
 		}
 
-		// Token: 0x0603026B RID: 197227 RVA: 0x00B28C39 File Offset: 0x00B26E39
+		// Token: 0x06024A3B RID: 150075 RVA: 0x00A58A91 File Offset: 0x00A56C91
 		protected virtual void OnDetailBtnClick()
 		{
 		}
 
-		// Token: 0x0603026C RID: 197228 RVA: 0x00B28C3B File Offset: 0x00B26E3B
+		// Token: 0x06024A3C RID: 150076 RVA: 0x00A58A93 File Offset: 0x00A56C93
 		protected virtual void OnStripBtnClick()
 		{
 		}
 
-		// Token: 0x0603026D RID: 197229 RVA: 0x00B28C3D File Offset: 0x00B26E3D
+		// Token: 0x06024A3D RID: 150077 RVA: 0x00A58A95 File Offset: 0x00A56C95
 		protected virtual void OnDelBtnClick()
 		{
 		}
 
-		// Token: 0x0603026E RID: 197230 RVA: 0x00B28C3F File Offset: 0x00B26E3F
+		// Token: 0x06024A3E RID: 150078 RVA: 0x00A58A97 File Offset: 0x00A56C97
 		protected virtual void HandleTeleportAndTrack()
 		{
 			if (this.HandleTeleport())
@@ -535,23 +558,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.HandleTrack();
 		}
 
-		// Token: 0x0603026F RID: 197231 RVA: 0x00B28C50 File Offset: 0x00B26E50
+		// Token: 0x06024A3F RID: 150079 RVA: 0x00A58AA8 File Offset: 0x00A56CA8
 		protected virtual void HandleFastMoveAndTrack()
 		{
 			ConfigMarkItem configMarkItem = this.LayoutContext.MarkItem as ConfigMarkItem;
 			bool flag = configMarkItem == null || !configMarkItem.IsLocked;
-			bool flag2;
-			if (configMarkItem == null)
-			{
-				flag2 = false;
-			}
-			else
-			{
-				ConfigMarkItem configMarkItem2 = configMarkItem;
-				flag2 = (((configMarkItem2.MarkConfig != null) ? new int?(configMarkItem2.MarkConfig.GetValueOrDefault().EnableQuickTransfer) : null).GetValueOrDefault() == 1);
-			}
-			bool flag3 = flag2;
-			if (flag && flag3)
+			MapMark? mapMark;
+			bool flag2 = configMarkItem != null && ((configMarkItem.MarkConfig != null) ? new int?(mapMark.GetValueOrDefault().EnableQuickTransfer) : null).GetValueOrDefault() == 1;
+			if (flag && flag2)
 			{
 				this.HandleTeleportAndTrack();
 				return;
@@ -559,7 +573,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.HandleTrack();
 		}
 
-		// Token: 0x06030270 RID: 197232 RVA: 0x00B28CCC File Offset: 0x00B26ECC
+		// Token: 0x06024A40 RID: 150080 RVA: 0x00A58B28 File Offset: 0x00A56D28
 		protected unsafe virtual bool HandleTeleport()
 		{
 			ConfigMarkItem configMarkItem = this.LayoutContext.MarkItem as ConfigMarkItem;
@@ -577,8 +591,8 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("markId", configMarkItem.MarkId);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("IsTracked", configMarkItem.IsTracked);
 			MapLogger.Debug(author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-			ConfigMarkItem configMarkItem2 = configMarkItem;
-			if (configMarkItem2.MarkConfig != null && configMarkItem2.MarkConfig.GetValueOrDefault().InstanceDungeonId != 0)
+			MapMark? mapMark;
+			if (configMarkItem.MarkConfig != null && mapMark.GetValueOrDefault().InstanceDungeonId != 0)
 			{
 				WorldMapController.Instance.TryEntityTeleport(configMarkItem.MarkConfigId, null);
 			}
@@ -589,7 +603,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			return true;
 		}
 
-		// Token: 0x06030271 RID: 197233 RVA: 0x00B28DA0 File Offset: 0x00B26FA0
+		// Token: 0x06024A41 RID: 150081 RVA: 0x00A58C00 File Offset: 0x00A56E00
 		protected unsafe virtual void HandleTrack()
 		{
 			MarkItem markItem = this.LayoutContext.MarkItem;
@@ -613,7 +627,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			base.Close();
 		}
 
-		// Token: 0x06030272 RID: 197234 RVA: 0x00B28E64 File Offset: 0x00B27064
+		// Token: 0x06024A42 RID: 150082 RVA: 0x00A58CC4 File Offset: 0x00A56EC4
 		protected virtual void HandleQuickGoto()
 		{
 			MarkItem markItem = this.LayoutContext.MarkItem;
@@ -624,7 +638,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			}
 		}
 
-		// Token: 0x06030273 RID: 197235 RVA: 0x00B28EA0 File Offset: 0x00B270A0
+		// Token: 0x06024A43 RID: 150083 RVA: 0x00A58D00 File Offset: 0x00A56F00
 		protected override void OnAfterShowWorldMapSecondaryUi()
 		{
 			WorldMapSecondaryUiAutoPilotContext autoPilotContext = this.AutoPilotContext;
@@ -635,43 +649,53 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			autoPilotContext.UpdateAutoPilotState();
 		}
 
-		// Token: 0x06030274 RID: 197236 RVA: 0x00B28EB2 File Offset: 0x00B270B2
+		// Token: 0x06024A44 RID: 150084 RVA: 0x00A58D12 File Offset: 0x00A56F12
 		private void RefreshPanel(MarkItem markItem)
 		{
 			this.OnRefreshPanel();
 		}
 
-		// Token: 0x06030275 RID: 197237 RVA: 0x00B28EBA File Offset: 0x00B270BA
+		// Token: 0x06024A45 RID: 150085 RVA: 0x00A58D1A File Offset: 0x00A56F1A
 		protected virtual void OnRefreshPanel()
 		{
 			WorldMapSecondaryUiLayoutHelper.UpdateTrackButtonTextWithTrackStyle(this.LayoutContext);
 		}
 
-		// Token: 0x04019EF5 RID: 106229
+		// Token: 0x040145A6 RID: 83366
 		private const float SCROLL_ARROW_TOLERANCE = 0.001f;
 
-		// Token: 0x04019EF6 RID: 106230
+		// Token: 0x040145A7 RID: 83367
 		private ButtonItem ConfirmButton;
 
-		// Token: 0x04019EF7 RID: 106231
+		// Token: 0x040145A8 RID: 83368
 		protected ButtonItem TrackBtn;
 
-		// Token: 0x04019EF8 RID: 106232
+		// Token: 0x040145A9 RID: 83369
 		protected ButtonItem GotoBtn;
 
-		// Token: 0x04019EF9 RID: 106233
+		// Token: 0x040145AA RID: 83370
 		protected MapTipsActivateTipPanel MapTipsActivateTipPanel;
 
-		// Token: 0x04019EFA RID: 106234
+		// Token: 0x040145AB RID: 83371
 		protected MediumItemListPanel DeliveryPropView;
 
-		// Token: 0x04019EFB RID: 106235
+		// Token: 0x040145AC RID: 83372
 		protected WorldMapSecondaryUiAutoPilotContext AutoPilotContext;
 
-		// Token: 0x04019EFC RID: 106236
+		// Token: 0x040145AD RID: 83373
 		protected WorldMapSecondaryUiContext LayoutContext;
 
-		// Token: 0x04019EFD RID: 106237
+		// Token: 0x040145AE RID: 83374
 		private Action UpdateTopRightIconHandle;
+
+		// Token: 0x040145AF RID: 83375
+		[Nullable(0)]
+		private ValueTuple<EMarkType, int>? LastScrollMark;
+
+		// Token: 0x040145B0 RID: 83376
+		private float LastScrollProgress;
+
+		// Token: 0x040145B1 RID: 83377
+		private float LastContentHeight = -1f;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C34 RID: 23604
+	// Token: 0x02006259 RID: 25177
 	public class THitLogicTypeUnion
 	{
-		// Token: 0x1700B200 RID: 45568
-		// (get) Token: 0x06028781 RID: 165761 RVA: 0x0059179E File Offset: 0x0058F99E
-		// (set) Token: 0x06028782 RID: 165762 RVA: 0x005917A6 File Offset: 0x0058F9A6
+		// Token: 0x1700BB52 RID: 47954
+		// (get) Token: 0x0602AD8F RID: 175503 RVA: 0x005D99B6 File Offset: 0x005D7BB6
+		// (set) Token: 0x0602AD90 RID: 175504 RVA: 0x005D99BE File Offset: 0x005D7BBE
 		public THitLogicType Type { get; set; }
 
-		// Token: 0x1700B201 RID: 45569
-		// (get) Token: 0x06028783 RID: 165763 RVA: 0x005917AF File Offset: 0x0058F9AF
-		// (set) Token: 0x06028784 RID: 165764 RVA: 0x005917B7 File Offset: 0x0058F9B7
+		// Token: 0x1700BB53 RID: 47955
+		// (get) Token: 0x0602AD91 RID: 175505 RVA: 0x005D99C7 File Offset: 0x005D7BC7
+		// (set) Token: 0x0602AD92 RID: 175506 RVA: 0x005D99CF File Offset: 0x005D7BCF
 		public object Value { get; set; }
 
-		// Token: 0x06028785 RID: 165765 RVA: 0x005917C0 File Offset: 0x0058F9C0
+		// Token: 0x0602AD93 RID: 175507 RVA: 0x005D99D8 File Offset: 0x005D7BD8
 		public THitLogicTypeUnion()
 		{
 			this.Type = THitLogicType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028786 RID: 165766 RVA: 0x005917D6 File Offset: 0x0058F9D6
+		// Token: 0x0602AD94 RID: 175508 RVA: 0x005D99EE File Offset: 0x005D7BEE
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028787 RID: 165767 RVA: 0x005917E8 File Offset: 0x0058F9E8
+		// Token: 0x0602AD95 RID: 175509 RVA: 0x005D9A00 File Offset: 0x005D7C00
 		public IHitLogicActionByHitTypeT AsIHitLogicActionByHitType()
 		{
 			return this.As<IHitLogicActionByHitTypeT>();
 		}
 
-		// Token: 0x06028788 RID: 165768 RVA: 0x005917F0 File Offset: 0x0058F9F0
+		// Token: 0x0602AD96 RID: 175510 RVA: 0x005D9A08 File Offset: 0x005D7C08
 		public static THitLogicTypeUnion FromIHitLogicActionByHitType(IHitLogicActionByHitTypeT _ihitlogicactionbyhittype)
 		{
 			return new THitLogicTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028789 RID: 165769 RVA: 0x00591805 File Offset: 0x0058FA05
+		// Token: 0x0602AD97 RID: 175511 RVA: 0x005D9A1D File Offset: 0x005D7C1D
 		public IHitLogicChangeByPartHitT AsIHitLogicChangeByPartHit()
 		{
 			return this.As<IHitLogicChangeByPartHitT>();
 		}
 
-		// Token: 0x0602878A RID: 165770 RVA: 0x0059180D File Offset: 0x0058FA0D
+		// Token: 0x0602AD98 RID: 175512 RVA: 0x005D9A25 File Offset: 0x005D7C25
 		public static THitLogicTypeUnion FromIHitLogicChangeByPartHit(IHitLogicChangeByPartHitT _ihitlogicchangebyparthit)
 		{
 			return new THitLogicTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602878B RID: 165771 RVA: 0x00591822 File Offset: 0x0058FA22
+		// Token: 0x0602AD99 RID: 175513 RVA: 0x005D9A3A File Offset: 0x005D7C3A
 		public IHitLogicChangeCountDownStateT AsIHitLogicChangeCountDownState()
 		{
 			return this.As<IHitLogicChangeCountDownStateT>();
 		}
 
-		// Token: 0x0602878C RID: 165772 RVA: 0x0059182A File Offset: 0x0058FA2A
+		// Token: 0x0602AD9A RID: 175514 RVA: 0x005D9A42 File Offset: 0x005D7C42
 		public static THitLogicTypeUnion FromIHitLogicChangeCountDownState(IHitLogicChangeCountDownStateT _ihitlogicchangecountdownstate)
 		{
 			return new THitLogicTypeUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602878D RID: 165773 RVA: 0x0059183F File Offset: 0x0058FA3F
+		// Token: 0x0602AD9B RID: 175515 RVA: 0x005D9A57 File Offset: 0x005D7C57
 		public IHitLogicChangeLockStateT AsIHitLogicChangeLockState()
 		{
 			return this.As<IHitLogicChangeLockStateT>();
 		}
 
-		// Token: 0x0602878E RID: 165774 RVA: 0x00591847 File Offset: 0x0058FA47
+		// Token: 0x0602AD9C RID: 175516 RVA: 0x005D9A5F File Offset: 0x005D7C5F
 		public static THitLogicTypeUnion FromIHitLogicChangeLockState(IHitLogicChangeLockStateT _ihitlogicchangelockstate)
 		{
 			return new THitLogicTypeUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602878F RID: 165775 RVA: 0x0059185C File Offset: 0x0058FA5C
+		// Token: 0x0602AD9D RID: 175517 RVA: 0x005D9A74 File Offset: 0x005D7C74
 		public IHitLogicChangeNextAndLockTargetStateT AsIHitLogicChangeNextAndLockTargetState()
 		{
 			return this.As<IHitLogicChangeNextAndLockTargetStateT>();
 		}
 
-		// Token: 0x06028790 RID: 165776 RVA: 0x00591864 File Offset: 0x0058FA64
+		// Token: 0x0602AD9E RID: 175518 RVA: 0x005D9A7C File Offset: 0x005D7C7C
 		public static THitLogicTypeUnion FromIHitLogicChangeNextAndLockTargetState(IHitLogicChangeNextAndLockTargetStateT _ihitlogicchangenextandlocktargetstate)
 		{
 			return new THitLogicTypeUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028791 RID: 165777 RVA: 0x00591879 File Offset: 0x0058FA79
+		// Token: 0x0602AD9F RID: 175519 RVA: 0x005D9A91 File Offset: 0x005D7C91
 		public IHitLogicChangeNextStateT AsIHitLogicChangeNextState()
 		{
 			return this.As<IHitLogicChangeNextStateT>();
 		}
 
-		// Token: 0x06028792 RID: 165778 RVA: 0x00591881 File Offset: 0x0058FA81
+		// Token: 0x0602ADA0 RID: 175520 RVA: 0x005D9A99 File Offset: 0x005D7C99
 		public static THitLogicTypeUnion FromIHitLogicChangeNextState(IHitLogicChangeNextStateT _ihitlogicchangenextstate)
 		{
 			return new THitLogicTypeUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028793 RID: 165779 RVA: 0x00591896 File Offset: 0x0058FA96
+		// Token: 0x0602ADA1 RID: 175521 RVA: 0x005D9AAE File Offset: 0x005D7CAE
 		public IHitLogicChangeTargetStateT AsIHitLogicChangeTargetState()
 		{
 			return this.As<IHitLogicChangeTargetStateT>();
 		}
 
-		// Token: 0x06028794 RID: 165780 RVA: 0x0059189E File Offset: 0x0058FA9E
+		// Token: 0x0602ADA2 RID: 175522 RVA: 0x005D9AB6 File Offset: 0x005D7CB6
 		public static THitLogicTypeUnion FromIHitLogicChangeTargetState(IHitLogicChangeTargetStateT _ihitlogicchangetargetstate)
 		{
 			return new THitLogicTypeUnion
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028795 RID: 165781 RVA: 0x005918B4 File Offset: 0x0058FAB4
+		// Token: 0x0602ADA3 RID: 175523 RVA: 0x005D9ACC File Offset: 0x005D7CCC
 		public static int Pack(FlatBufferBuilder builder, THitLogicTypeUnion _o)
 		{
 			switch (_o.Type)

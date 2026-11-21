@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C9D RID: 19613
+	// Token: 0x02005196 RID: 20886
 	public struct IPreQuestCondtion : IFlatbufferObject
 	{
-		// Token: 0x17008E68 RID: 36456
-		// (get) Token: 0x0601F1C5 RID: 127429 RVA: 0x00458AB0 File Offset: 0x00456CB0
+		// Token: 0x17009596 RID: 38294
+		// (get) Token: 0x06020DE7 RID: 134631 RVA: 0x0048C600 File Offset: 0x0048A800
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F1C6 RID: 127430 RVA: 0x00458ABD File Offset: 0x00456CBD
+		// Token: 0x06020DE8 RID: 134632 RVA: 0x0048C60D File Offset: 0x0048A80D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F1C7 RID: 127431 RVA: 0x00458AC4 File Offset: 0x00456CC4
+		// Token: 0x06020DE9 RID: 134633 RVA: 0x0048C614 File Offset: 0x0048A814
 		public static IPreQuestCondtion GetRootAsIPreQuestCondtion(ByteBuffer _bb)
 		{
 			return IPreQuestCondtion.GetRootAsIPreQuestCondtion(_bb, default(IPreQuestCondtion));
 		}
 
-		// Token: 0x0601F1C8 RID: 127432 RVA: 0x00458AE0 File Offset: 0x00456CE0
+		// Token: 0x06020DEA RID: 134634 RVA: 0x0048C630 File Offset: 0x0048A830
 		public static IPreQuestCondtion GetRootAsIPreQuestCondtion(ByteBuffer _bb, IPreQuestCondtion obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F1C9 RID: 127433 RVA: 0x00458AFD File Offset: 0x00456CFD
+		// Token: 0x06020DEB RID: 134635 RVA: 0x0048C64D File Offset: 0x0048A84D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F1CA RID: 127434 RVA: 0x00458B0C File Offset: 0x00456D0C
+		// Token: 0x06020DEC RID: 134636 RVA: 0x0048C65C File Offset: 0x0048A85C
 		public IPreQuestCondtion __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008E69 RID: 36457
-		// (get) Token: 0x0601F1CB RID: 127435 RVA: 0x00458B1C File Offset: 0x00456D1C
+		// Token: 0x17009597 RID: 38295
+		// (get) Token: 0x06020DED RID: 134637 RVA: 0x0048C66C File Offset: 0x0048A86C
 		public EAccessQuestCondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008E6A RID: 36458
-		// (get) Token: 0x0601F1CC RID: 127436 RVA: 0x00458B58 File Offset: 0x00456D58
+		// Token: 0x17009598 RID: 38296
+		// (get) Token: 0x06020DEE RID: 134638 RVA: 0x0048C6A8 File Offset: 0x0048A8A8
 		public int PreQuest
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F1CD RID: 127437 RVA: 0x00458B94 File Offset: 0x00456D94
+		// Token: 0x06020DEF RID: 134639 RVA: 0x0048C6E4 File Offset: 0x0048A8E4
 		public static Offset<IPreQuestCondtion> CreateIPreQuestCondtion(FlatBufferBuilder builder, EAccessQuestCondition Type = EAccessQuestCondition.ExploreLevel, int PreQuest = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IPreQuestCondtion.EndIPreQuestCondtion(builder);
 		}
 
-		// Token: 0x0601F1CE RID: 127438 RVA: 0x00458BB1 File Offset: 0x00456DB1
+		// Token: 0x06020DF0 RID: 134640 RVA: 0x0048C701 File Offset: 0x0048A901
 		public static void StartIPreQuestCondtion(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601F1CF RID: 127439 RVA: 0x00458BBA File Offset: 0x00456DBA
+		// Token: 0x06020DF1 RID: 134641 RVA: 0x0048C70A File Offset: 0x0048A90A
 		public static void AddType(FlatBufferBuilder builder, EAccessQuestCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601F1D0 RID: 127440 RVA: 0x00458BC5 File Offset: 0x00456DC5
+		// Token: 0x06020DF2 RID: 134642 RVA: 0x0048C715 File Offset: 0x0048A915
 		public static void AddPreQuest(FlatBufferBuilder builder, int preQuest)
 		{
 			builder.AddInt(1, preQuest, 0);
 		}
 
-		// Token: 0x0601F1D1 RID: 127441 RVA: 0x00458BD0 File Offset: 0x00456DD0
+		// Token: 0x06020DF3 RID: 134643 RVA: 0x0048C720 File Offset: 0x0048A920
 		public static Offset<IPreQuestCondtion> EndIPreQuestCondtion(FlatBufferBuilder builder)
 		{
 			return new Offset<IPreQuestCondtion>(builder.EndTable());
 		}
 
-		// Token: 0x0601F1D2 RID: 127442 RVA: 0x00458BE0 File Offset: 0x00456DE0
+		// Token: 0x06020DF4 RID: 134644 RVA: 0x0048C730 File Offset: 0x0048A930
 		public IPreQuestCondtionT UnPack()
 		{
 			IPreQuestCondtionT preQuestCondtionT = new IPreQuestCondtionT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return preQuestCondtionT;
 		}
 
-		// Token: 0x0601F1D3 RID: 127443 RVA: 0x00458BFB File Offset: 0x00456DFB
+		// Token: 0x06020DF5 RID: 134645 RVA: 0x0048C74B File Offset: 0x0048A94B
 		public void UnPackTo(IPreQuestCondtionT _o)
 		{
 			_o.Type = this.Type;
 			_o.PreQuest = this.PreQuest;
 		}
 
-		// Token: 0x0601F1D4 RID: 127444 RVA: 0x00458C18 File Offset: 0x00456E18
+		// Token: 0x06020DF6 RID: 134646 RVA: 0x0048C768 File Offset: 0x0048A968
 		public static Offset<IPreQuestCondtion> Pack(FlatBufferBuilder builder, IPreQuestCondtionT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IPreQuestCondtion.CreateIPreQuestCondtion(builder, _o.Type, _o.PreQuest);
 		}
 
-		// Token: 0x0400D658 RID: 54872
+		// Token: 0x0400E17F RID: 57727
 		private Table __p;
 	}
 }

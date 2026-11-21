@@ -5,19 +5,19 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002C0A RID: 11274
+// Token: 0x02002185 RID: 8581
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerTitleItem : UiPanelBase
 {
-	// Token: 0x06017691 RID: 95889 RVA: 0x005F6057 File Offset: 0x005F4257
+	// Token: 0x060150C2 RID: 86210 RVA: 0x00622B7B File Offset: 0x00620D7B
 	public TowerTitleItem(UUIItem uiItem, [Nullable(2)] Action onClickBackBtnHandle)
 	{
 		this.OnClickBackBtnHandle = onClickBackBtnHandle;
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x06017692 RID: 95890 RVA: 0x005F6074 File Offset: 0x005F4274
+	// Token: 0x060150C3 RID: 86211 RVA: 0x00622B98 File Offset: 0x00620D98
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -42,18 +42,18 @@ public class TowerTitleItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06017693 RID: 95891 RVA: 0x005F615C File Offset: 0x005F435C
+	// Token: 0x060150C4 RID: 86212 RVA: 0x00622C80 File Offset: 0x00620E80
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06017694 RID: 95892 RVA: 0x005F615E File Offset: 0x005F435E
+	// Token: 0x060150C5 RID: 86213 RVA: 0x00622C82 File Offset: 0x00620E82
 	public void RefreshText(string textId, params string[] arg)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, arg);
 	}
 
-	// Token: 0x06017695 RID: 95893 RVA: 0x005F6173 File Offset: 0x005F4373
+	// Token: 0x060150C6 RID: 86214 RVA: 0x00622C97 File Offset: 0x00620E97
 	public void SetTitleText(string text)
 	{
 		UUIText text2 = base.GetText(1);
@@ -64,7 +64,7 @@ public class TowerTitleItem : UiPanelBase
 		text2.SetText(text, true);
 	}
 
-	// Token: 0x06017696 RID: 95894 RVA: 0x005F6188 File Offset: 0x005F4388
+	// Token: 0x060150C7 RID: 86215 RVA: 0x00622CAC File Offset: 0x00620EAC
 	private void OnClickBackBtn()
 	{
 		Action onClickBackBtnHandle = this.OnClickBackBtnHandle;
@@ -75,27 +75,27 @@ public class TowerTitleItem : UiPanelBase
 		onClickBackBtnHandle();
 	}
 
-	// Token: 0x06017697 RID: 95895 RVA: 0x005F619A File Offset: 0x005F439A
+	// Token: 0x060150C8 RID: 86216 RVA: 0x00622CBE File Offset: 0x00620EBE
 	protected override void OnBeforeDestroy()
 	{
 		this.OnClickBackBtnHandle = null;
 	}
 
-	// Token: 0x0400AF13 RID: 44819
+	// Token: 0x0400B318 RID: 45848
 	[Nullable(2)]
 	private Action OnClickBackBtnHandle;
 
-	// Token: 0x020091D5 RID: 37333
+	// Token: 0x02008418 RID: 33816
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402F2E6 RID: 193254
+		// Token: 0x0402A9E7 RID: 174567
 		TitleSprite,
-		// Token: 0x0402F2E7 RID: 193255
+		// Token: 0x0402A9E8 RID: 174568
 		TitleText,
-		// Token: 0x0402F2E8 RID: 193256
+		// Token: 0x0402A9E9 RID: 174569
 		HelpBtn,
-		// Token: 0x0402F2E9 RID: 193257
+		// Token: 0x0402A9EA RID: 174570
 		BackBtn
 	}
 }

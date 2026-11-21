@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F9F RID: 3999
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010C9 RID: 4297
 	public class IGameDifficultySystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x06005918 RID: 22808 RVA: 0x000D932C File Offset: 0x000D752C
+		// Token: 0x06005EEE RID: 24302 RVA: 0x000E5DEC File Offset: 0x000E3FEC
 		private IGameDifficultySystemConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005919 RID: 22809 RVA: 0x000D9364 File Offset: 0x000D7564
+		// Token: 0x06005EEF RID: 24303 RVA: 0x000E5E24 File Offset: 0x000E4024
 		public static IGameDifficultySystemConfig Create([Nullable(2)] IGameDifficultySystemConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600591A RID: 22810 RVA: 0x000D9377 File Offset: 0x000D7577
+		// Token: 0x06005EF0 RID: 24304 RVA: 0x000E5E37 File Offset: 0x000E4037
 		public static IGameDifficultySystemConfig CreateFromSetValue([Nullable(2)] IGameDifficultySystemConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600591B RID: 22811 RVA: 0x000D938A File Offset: 0x000D758A
+		// Token: 0x06005EF1 RID: 24305 RVA: 0x000E5E4A File Offset: 0x000E404A
 		public new IGameDifficultySystemConfig_SetValue ToSetValue()
 		{
 			return new IGameDifficultySystemConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D9F RID: 7583
-		// (get) Token: 0x0600591C RID: 22812 RVA: 0x000D939D File Offset: 0x000D759D
-		// (set) Token: 0x0600591D RID: 22813 RVA: 0x000D93C8 File Offset: 0x000D75C8
+		// Token: 0x17001F46 RID: 8006
+		// (get) Token: 0x06005EF2 RID: 24306 RVA: 0x000E5E5D File Offset: 0x000E405D
+		// (set) Token: 0x06005EF3 RID: 24307 RVA: 0x000E5E88 File Offset: 0x000E4088
 		public override EEnableSystemType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040035CA RID: 13770
+		// Token: 0x040038FC RID: 14588
 		[Nullable(2)]
 		protected new IGameDifficultySystemConfig FbInstance;
 
-		// Token: 0x040035CB RID: 13771
+		// Token: 0x040038FD RID: 14589
 		[Nullable(2)]
 		protected new IGameDifficultySystemConfig_SetValue PocoInterface;
 	}

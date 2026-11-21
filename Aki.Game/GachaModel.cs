@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,19 +12,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C91 RID: 7313
+// Token: 0x02001150 RID: 4432
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class GachaModel : ModelBase
 {
-	// Token: 0x0600DCB2 RID: 56498 RVA: 0x0033801C File Offset: 0x0033621C
+	// Token: 0x0600B0C8 RID: 45256 RVA: 0x00343540 File Offset: 0x00341740
 	public bool IsLimit(ProtoGachaInfo gachaInfo)
 	{
 		return gachaInfo.BeginTime != 0.0 || gachaInfo.EndTime != 0.0;
 	}
 
-	// Token: 0x0600DCB3 RID: 56499 RVA: 0x00338048 File Offset: 0x00336248
+	// Token: 0x0600B0C9 RID: 45257 RVA: 0x0034356C File Offset: 0x0034176C
 	public bool IsValid(ProtoGachaInfo gachaInfo)
 	{
 		if (!this.IsLimit(gachaInfo))
@@ -36,7 +35,7 @@ public class GachaModel : ModelBase
 		return serverTime >= gachaInfo.BeginTime && (serverTime < gachaInfo.EndTime || gachaInfo.EndTime == 0.0);
 	}
 
-	// Token: 0x0600DCB4 RID: 56500 RVA: 0x00338094 File Offset: 0x00336294
+	// Token: 0x0600B0CA RID: 45258 RVA: 0x003435B8 File Offset: 0x003417B8
 	[NullableContext(2)]
 	public ICommonShowRoleInfo GetCachedGachaInfo()
 	{
@@ -54,7 +53,7 @@ public class GachaModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600DCB5 RID: 56501 RVA: 0x003380F8 File Offset: 0x003362F8
+	// Token: 0x0600B0CB RID: 45259 RVA: 0x0034361C File Offset: 0x0034181C
 	public void CacheGachaInfo(ICommonShowRoleInfo info)
 	{
 		if (this.CachedGachaInfo == null)
@@ -74,9 +73,9 @@ public class GachaModel : ModelBase
 		this.CachedGachaInfo = array;
 	}
 
-	// Token: 0x170011EE RID: 4590
-	// (get) Token: 0x0600DCB6 RID: 56502 RVA: 0x0033815E File Offset: 0x0033635E
-	// (set) Token: 0x0600DCB7 RID: 56503 RVA: 0x00338166 File Offset: 0x00336366
+	// Token: 0x17001214 RID: 4628
+	// (get) Token: 0x0600B0CC RID: 45260 RVA: 0x00343682 File Offset: 0x00341882
+	// (set) Token: 0x0600B0CD RID: 45261 RVA: 0x0034368A File Offset: 0x0034188A
 	public string RecordId
 	{
 		get
@@ -89,9 +88,9 @@ public class GachaModel : ModelBase
 		}
 	}
 
-	// Token: 0x170011EF RID: 4591
-	// (get) Token: 0x0600DCB8 RID: 56504 RVA: 0x0033816F File Offset: 0x0033636F
-	// (set) Token: 0x0600DCB9 RID: 56505 RVA: 0x00338177 File Offset: 0x00336377
+	// Token: 0x17001215 RID: 4629
+	// (get) Token: 0x0600B0CE RID: 45262 RVA: 0x00343693 File Offset: 0x00341893
+	// (set) Token: 0x0600B0CF RID: 45263 RVA: 0x0034369B File Offset: 0x0034189B
 	public bool CanCloseView
 	{
 		get
@@ -104,9 +103,9 @@ public class GachaModel : ModelBase
 		}
 	}
 
-	// Token: 0x170011F0 RID: 4592
-	// (get) Token: 0x0600DCBA RID: 56506 RVA: 0x00338180 File Offset: 0x00336380
-	// (set) Token: 0x0600DCBB RID: 56507 RVA: 0x00338188 File Offset: 0x00336388
+	// Token: 0x17001216 RID: 4630
+	// (get) Token: 0x0600B0D0 RID: 45264 RVA: 0x003436A4 File Offset: 0x003418A4
+	// (set) Token: 0x0600B0D1 RID: 45265 RVA: 0x003436AC File Offset: 0x003418AC
 	public int TodayResultCount
 	{
 		get
@@ -119,8 +118,8 @@ public class GachaModel : ModelBase
 		}
 	}
 
-	// Token: 0x170011F1 RID: 4593
-	// (get) Token: 0x0600DCBC RID: 56508 RVA: 0x00338191 File Offset: 0x00336391
+	// Token: 0x17001217 RID: 4631
+	// (get) Token: 0x0600B0D2 RID: 45266 RVA: 0x003436B5 File Offset: 0x003418B5
 	[Nullable(new byte[]
 	{
 		2,
@@ -139,9 +138,9 @@ public class GachaModel : ModelBase
 		}
 	}
 
-	// Token: 0x170011F2 RID: 4594
-	// (get) Token: 0x0600DCBD RID: 56509 RVA: 0x00338199 File Offset: 0x00336399
-	// (set) Token: 0x0600DCBE RID: 56510 RVA: 0x003381A1 File Offset: 0x003363A1
+	// Token: 0x17001218 RID: 4632
+	// (get) Token: 0x0600B0D3 RID: 45267 RVA: 0x003436BD File Offset: 0x003418BD
+	// (set) Token: 0x0600B0D4 RID: 45268 RVA: 0x003436C5 File Offset: 0x003418C5
 	[Nullable(new byte[]
 	{
 		2,
@@ -169,7 +168,7 @@ public class GachaModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600DCBF RID: 56511 RVA: 0x003381AC File Offset: 0x003363AC
+	// Token: 0x0600B0D5 RID: 45269 RVA: 0x003436D0 File Offset: 0x003418D0
 	public void SetCurGachaResult([Nullable(new byte[]
 	{
 		2,
@@ -263,7 +262,7 @@ public class GachaModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600DCC0 RID: 56512 RVA: 0x003383D4 File Offset: 0x003365D4
+	// Token: 0x0600B0D6 RID: 45270 RVA: 0x003438F8 File Offset: 0x00341AF8
 	[return: Nullable(2)]
 	public ProtoGachaInfo GetGachaInfoByResourceId(string resourceId)
 	{
@@ -280,7 +279,7 @@ public class GachaModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600DCC1 RID: 56513 RVA: 0x00338414 File Offset: 0x00336614
+	// Token: 0x0600B0D7 RID: 45271 RVA: 0x00343938 File Offset: 0x00341B38
 	public bool IsAllDiscountUsedUp(ProtoGachaInfo info)
 	{
 		if (info.GachaDiscountInfos.Length == 0)
@@ -297,7 +296,7 @@ public class GachaModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600DCC2 RID: 56514 RVA: 0x00338458 File Offset: 0x00336658
+	// Token: 0x0600B0D8 RID: 45272 RVA: 0x0034397C File Offset: 0x00341B7C
 	public EffectiveGachaButtonInfo[] GetEffectiveGachaButtons(ProtoGachaInfo info)
 	{
 		List<EffectiveGachaButtonInfo> list = new List<EffectiveGachaButtonInfo>();
@@ -331,11 +330,20 @@ public class GachaModel : ModelBase
 				list.Add(EffectiveGachaButtonInfo.MakePlain(times, consume, null));
 			}
 		}
-		list.Any((EffectiveGachaButtonInfo button) => button.IsDiscount);
+		using (List<EffectiveGachaButtonInfo>.Enumerator enumerator = list.GetEnumerator())
+		{
+			while (enumerator.MoveNext())
+			{
+				if (enumerator.Current.IsDiscount)
+				{
+					break;
+				}
+			}
+		}
 		return list.ToArray();
 	}
 
-	// Token: 0x0600DCC3 RID: 56515 RVA: 0x00338570 File Offset: 0x00336770
+	// Token: 0x0600B0D9 RID: 45273 RVA: 0x00343AB0 File Offset: 0x00341CB0
 	[return: Nullable(2)]
 	public GachaTagInfo GetSelectPoolButtonTag(ProtoGachaInfo info)
 	{
@@ -365,14 +373,14 @@ public class GachaModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600DCC4 RID: 56516 RVA: 0x003385F4 File Offset: 0x003367F4
+	// Token: 0x0600B0DA RID: 45274 RVA: 0x00343B34 File Offset: 0x00341D34
 	protected override bool OnInit()
 	{
 		this.CachedGachaInfo = new ICommonShowRoleInfo[0];
 		return true;
 	}
 
-	// Token: 0x0600DCC5 RID: 56517 RVA: 0x00338604 File Offset: 0x00336804
+	// Token: 0x0600B0DB RID: 45275 RVA: 0x00343B44 File Offset: 0x00341D44
 	protected override bool OnClear()
 	{
 		this.CanCloseView = true;
@@ -388,11 +396,11 @@ public class GachaModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600DCC6 RID: 56518 RVA: 0x00338650 File Offset: 0x00336850
-	public void InitGachaInfoMap(GachaInfo[] gachaInfoArray)
+	// Token: 0x0600B0DC RID: 45276 RVA: 0x00343B90 File Offset: 0x00341D90
+	public void InitGachaInfoMap(IReadOnlyList<GachaInfo> gachaInfoArray)
 	{
-		this.GachaInfoArrayInternal = new ProtoGachaInfo[gachaInfoArray.Length];
-		for (int i = 0; i < gachaInfoArray.Length; i++)
+		this.GachaInfoArrayInternal = new ProtoGachaInfo[gachaInfoArray.Count];
+		for (int i = 0; i < gachaInfoArray.Count; i++)
 		{
 			this.GachaInfoArrayInternal[i] = new ProtoGachaInfo(gachaInfoArray[i]);
 		}
@@ -410,20 +418,20 @@ public class GachaModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600DCC7 RID: 56519 RVA: 0x003386F9 File Offset: 0x003368F9
+	// Token: 0x0600B0DD RID: 45277 RVA: 0x00343C43 File Offset: 0x00341E43
 	public bool CheckGachaValid(ProtoGachaInfo gachaInfo)
 	{
 		return this.IsValid(gachaInfo);
 	}
 
-	// Token: 0x0600DCC8 RID: 56520 RVA: 0x00338704 File Offset: 0x00336904
+	// Token: 0x0600B0DE RID: 45278 RVA: 0x00343C4C File Offset: 0x00341E4C
 	public bool CheckGachaValidByGachaId(int gachaId)
 	{
 		ProtoGachaInfo gachaInfo = this.GetGachaInfo(gachaId);
 		return gachaInfo != null && this.CheckGachaValid(gachaInfo);
 	}
 
-	// Token: 0x0600DCC9 RID: 56521 RVA: 0x00338728 File Offset: 0x00336928
+	// Token: 0x0600B0DF RID: 45279 RVA: 0x00343C70 File Offset: 0x00341E70
 	public GachaPoolData[] GetValidGachaList()
 	{
 		List<GachaPoolData> list = new List<GachaPoolData>();
@@ -445,7 +453,7 @@ public class GachaModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600DCCA RID: 56522 RVA: 0x003387A8 File Offset: 0x003369A8
+	// Token: 0x0600B0E0 RID: 45280 RVA: 0x00343CF0 File Offset: 0x00341EF0
 	[NullableContext(0)]
 	public ValueTuple<bool, EConfirmBoxConfigId?> CheckCountIsEnough([Nullable(1)] ProtoGachaInfo gachaInfo, int count)
 	{
@@ -464,13 +472,13 @@ public class GachaModel : ModelBase
 		return new ValueTuple<bool, EConfirmBoxConfigId?>(true, null);
 	}
 
-	// Token: 0x0600DCCB RID: 56523 RVA: 0x00338838 File Offset: 0x00336A38
+	// Token: 0x0600B0E1 RID: 45281 RVA: 0x00343D80 File Offset: 0x00341F80
 	public bool IsTotalTimesZero(ProtoGachaInfo gachaInfo)
 	{
 		return gachaInfo.TotalLimitTimes > 0 && gachaInfo.TotalTimes >= gachaInfo.TotalLimitTimes;
 	}
 
-	// Token: 0x0600DCCC RID: 56524 RVA: 0x00338858 File Offset: 0x00336A58
+	// Token: 0x0600B0E2 RID: 45282 RVA: 0x00343DA0 File Offset: 0x00341FA0
 	[NullableContext(2)]
 	public ProtoGachaInfo GetGachaInfo(int gachaId)
 	{
@@ -487,7 +495,7 @@ public class GachaModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600DCCD RID: 56525 RVA: 0x00338894 File Offset: 0x00336A94
+	// Token: 0x0600B0E3 RID: 45283 RVA: 0x00343DDC File Offset: 0x00341FDC
 	public bool RecordGachaInfo(ProtoGachaInfo gachaInfo)
 	{
 		if (this.GachaPoolSet != null && !this.GachaPoolSet.Contains(gachaInfo.Id))
@@ -510,7 +518,7 @@ public class GachaModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600DCCE RID: 56526 RVA: 0x00338940 File Offset: 0x00336B40
+	// Token: 0x0600B0E4 RID: 45284 RVA: 0x00343E88 File Offset: 0x00342088
 	public void InitGachaPoolOpenRecord()
 	{
 		this.GachaPoolOpenRecord = (LocalStorage.GetPlayer<int[]>(ELocalStoragePlayerKey.GachaPoolOpenRecord, null) ?? Array.Empty<int>());
@@ -521,7 +529,7 @@ public class GachaModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600DCCF RID: 56527 RVA: 0x00338994 File Offset: 0x00336B94
+	// Token: 0x0600B0E5 RID: 45285 RVA: 0x00343EDC File Offset: 0x003420DC
 	public void UpdateCount(int gachaId, int count, int poolId)
 	{
 		this.CurGachaPoolId = poolId;
@@ -540,7 +548,7 @@ public class GachaModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600DCD0 RID: 56528 RVA: 0x00338A00 File Offset: 0x00336C00
+	// Token: 0x0600B0E6 RID: 45286 RVA: 0x00343F48 File Offset: 0x00342148
 	public bool CheckNewGachaPool()
 	{
 		Log instance = Log.Instance;
@@ -563,13 +571,13 @@ public class GachaModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600DCD1 RID: 56529 RVA: 0x00338A7C File Offset: 0x00336C7C
+	// Token: 0x0600B0E7 RID: 45287 RVA: 0x00343FC4 File Offset: 0x003421C4
 	public bool CheckNewGachaPoolById(int id)
 	{
 		return this.GachaPoolSet != null && !this.GachaPoolSet.Contains(id);
 	}
 
-	// Token: 0x0600DCD2 RID: 56530 RVA: 0x00338A98 File Offset: 0x00336C98
+	// Token: 0x0600B0E8 RID: 45288 RVA: 0x00343FE0 File Offset: 0x003421E0
 	public UniTask PreloadGachaSequence(int[] itemIds)
 	{
 		GachaModel.<PreloadGachaSequence>d__51 <PreloadGachaSequence>d__;
@@ -581,7 +589,7 @@ public class GachaModel : ModelBase
 		return <PreloadGachaSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DCD3 RID: 56531 RVA: 0x00338AE3 File Offset: 0x00336CE3
+	// Token: 0x0600B0E9 RID: 45289 RVA: 0x0034402B File Offset: 0x0034222B
 	[return: Nullable(2)]
 	public ULevelSequence GetLoadedSequence(string path)
 	{
@@ -592,7 +600,7 @@ public class GachaModel : ModelBase
 		return this.SequenceCache[path];
 	}
 
-	// Token: 0x0600DCD4 RID: 56532 RVA: 0x00338B04 File Offset: 0x00336D04
+	// Token: 0x0600B0EA RID: 45290 RVA: 0x0034404C File Offset: 0x0034224C
 	public UniTask PreloadGachaSequenceOne(int itemId)
 	{
 		GachaModel.<PreloadGachaSequenceOne>d__53 <PreloadGachaSequenceOne>d__;
@@ -604,7 +612,7 @@ public class GachaModel : ModelBase
 		return <PreloadGachaSequenceOne>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DCD5 RID: 56533 RVA: 0x00338B50 File Offset: 0x00336D50
+	// Token: 0x0600B0EB RID: 45291 RVA: 0x00344098 File Offset: 0x00342298
 	public bool ShouldUseWeaponGachaAnim()
 	{
 		GachaDefine.EGachaViewType? gachaViewType = GachaConfig.Instance.GetGachaViewType(this.CurGachaPoolId);
@@ -616,7 +624,7 @@ public class GachaModel : ModelBase
 		return gachaViewTypeConfig == null || gachaViewTypeConfig.Value.WeaponUseGachaAnim;
 	}
 
-	// Token: 0x0600DCD6 RID: 56534 RVA: 0x00338BA8 File Offset: 0x00336DA8
+	// Token: 0x0600B0EC RID: 45292 RVA: 0x003440F0 File Offset: 0x003422F0
 	public string GetGachaSequencePath(int itemId)
 	{
 		GachaTextureInfo? gachaTextureInfo = GachaConfig.Instance.GetGachaTextureInfo(itemId);
@@ -632,7 +640,7 @@ public class GachaModel : ModelBase
 		return GachaConfig.Instance.GetGachaSequenceConfigById(gachaTextureInfo.Value.ShowSequence).Value.SequencePath;
 	}
 
-	// Token: 0x0600DCD7 RID: 56535 RVA: 0x00338C3C File Offset: 0x00336E3C
+	// Token: 0x0600B0ED RID: 45293 RVA: 0x00344184 File Offset: 0x00342384
 	public int GetGachaSequenceEndFrame(int itemId)
 	{
 		if (GachaConfig.Instance.GetItemIdType(itemId) != InventoryDefine.EItemDataType.WeaponItem)
@@ -644,7 +652,7 @@ public class GachaModel : ModelBase
 		return GachaConfig.Instance.GetGachaWeaponSeqConfigById(id).Value.BeforeEndFrame;
 	}
 
-	// Token: 0x0600DCD8 RID: 56536 RVA: 0x00338CA0 File Offset: 0x00336EA0
+	// Token: 0x0600B0EE RID: 45294 RVA: 0x003441E8 File Offset: 0x003423E8
 	public void ReleaseLoadGachaSequence()
 	{
 		bool isApplicationLowMemoryDevice = Info.Instance.IsApplicationLowMemoryDevice;
@@ -673,13 +681,13 @@ public class GachaModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600DCD9 RID: 56537 RVA: 0x00338DD8 File Offset: 0x00336FD8
+	// Token: 0x0600B0EF RID: 45295 RVA: 0x00344320 File Offset: 0x00342520
 	public bool IsRolePool(GachaDefine.EGachaViewType type)
 	{
 		return type == GachaDefine.EGachaViewType.NewPlayer || type == GachaDefine.EGachaViewType.RoleCommon || type == GachaDefine.EGachaViewType.RoleUp || type == GachaDefine.EGachaViewType.AnniversaryRole || type == GachaDefine.EGachaViewType.NewPlayerCustom || type == GachaDefine.EGachaViewType.CarnivalRole || type == GachaDefine.EGachaViewType.CyberRole || type == GachaDefine.EGachaViewType.OldCarnivalRole;
 	}
 
-	// Token: 0x0600DCDA RID: 56538 RVA: 0x00338E00 File Offset: 0x00337000
+	// Token: 0x0600B0F0 RID: 45296 RVA: 0x00344348 File Offset: 0x00342548
 	public GachaDefine.EItemQuality GetGachaQuality(int itemId)
 	{
 		InventoryDefine.EItemDataType itemIdType = GachaConfig.Instance.GetItemIdType(itemId);
@@ -708,13 +716,13 @@ public class GachaModel : ModelBase
 		return (GachaDefine.EItemQuality)result;
 	}
 
-	// Token: 0x0600DCDB RID: 56539 RVA: 0x00338EA0 File Offset: 0x003370A0
+	// Token: 0x0600B0F1 RID: 45297 RVA: 0x003443E8 File Offset: 0x003425E8
 	public string GetGachaRecordUrlPrefix()
 	{
 		return BaseConfigController.Instance.GetGachaUrl().GachaRecord;
 	}
 
-	// Token: 0x0600DCDC RID: 56540 RVA: 0x00338EB1 File Offset: 0x003370B1
+	// Token: 0x0600B0F2 RID: 45298 RVA: 0x003443F9 File Offset: 0x003425F9
 	public string GetServerArea()
 	{
 		if (!KuroSdkController.Instance.GetIfGlobalSdk())
@@ -724,8 +732,8 @@ public class GachaModel : ModelBase
 		return "global";
 	}
 
-	// Token: 0x170011F3 RID: 4595
-	// (get) Token: 0x0600DCDD RID: 56541 RVA: 0x00338ECA File Offset: 0x003370CA
+	// Token: 0x17001219 RID: 4633
+	// (get) Token: 0x0600B0F3 RID: 45299 RVA: 0x00344412 File Offset: 0x00342612
 	public static GachaModel Instance
 	{
 		get
@@ -734,7 +742,7 @@ public class GachaModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600DCDE RID: 56542 RVA: 0x00338ED1 File Offset: 0x003370D1
+	// Token: 0x0600B0F4 RID: 45300 RVA: 0x00344419 File Offset: 0x00342619
 	public static GachaModel GetOrCreateInstance()
 	{
 		if (GachaModel._Instance == null)
@@ -744,7 +752,7 @@ public class GachaModel : ModelBase
 		return GachaModel._Instance;
 	}
 
-	// Token: 0x0600DCDF RID: 56543 RVA: 0x00338EE5 File Offset: 0x003370E5
+	// Token: 0x0600B0F5 RID: 45301 RVA: 0x0034442D File Offset: 0x0034262D
 	public static bool CreateInstance()
 	{
 		if (GachaModel._Instance != null)
@@ -755,27 +763,27 @@ public class GachaModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600DCE0 RID: 56544 RVA: 0x00338EFB File Offset: 0x003370FB
+	// Token: 0x0600B0F6 RID: 45302 RVA: 0x00344443 File Offset: 0x00342643
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600DCE1 RID: 56545 RVA: 0x00338EFD File Offset: 0x003370FD
+	// Token: 0x0600B0F7 RID: 45303 RVA: 0x00344445 File Offset: 0x00342645
 	public static void ResetStaticDefaultValue()
 	{
 		GachaModel._Instance = null;
 	}
 
-	// Token: 0x0600DCE2 RID: 56546 RVA: 0x00338F05 File Offset: 0x00337105
+	// Token: 0x0600B0F8 RID: 45304 RVA: 0x0034444D File Offset: 0x0034264D
 	static GachaModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GachaModel.CreateStaticDefaultValue), new Action(GachaModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006535 RID: 25909
+	// Token: 0x04006607 RID: 26119
 	public bool IsCacheShowNewNotify;
 
-	// Token: 0x04006536 RID: 25910
+	// Token: 0x04006608 RID: 26120
 	[Nullable(new byte[]
 	{
 		2,
@@ -783,10 +791,10 @@ public class GachaModel : ModelBase
 	})]
 	private ProtoGachaInfo[] GachaInfoArrayInternal;
 
-	// Token: 0x04006537 RID: 25911
+	// Token: 0x04006609 RID: 26121
 	private int TodayResultCountInternal;
 
-	// Token: 0x04006538 RID: 25912
+	// Token: 0x0400660A RID: 26122
 	[Nullable(new byte[]
 	{
 		2,
@@ -794,21 +802,21 @@ public class GachaModel : ModelBase
 	})]
 	private global::GachaResult[] CurGachaResultInternal;
 
-	// Token: 0x04006539 RID: 25913
+	// Token: 0x0400660B RID: 26123
 	[Nullable(2)]
 	private int[] GachaPoolOpenRecord;
 
-	// Token: 0x0400653A RID: 25914
+	// Token: 0x0400660C RID: 26124
 	[Nullable(2)]
 	private HashSet<int> GachaPoolSet;
 
-	// Token: 0x0400653B RID: 25915
+	// Token: 0x0400660D RID: 26125
 	private bool CanCloseViewInternal = true;
 
-	// Token: 0x0400653C RID: 25916
+	// Token: 0x0400660E RID: 26126
 	private string RecordIdInternal = "";
 
-	// Token: 0x0400653D RID: 25917
+	// Token: 0x0400660F RID: 26127
 	[Nullable(new byte[]
 	{
 		2,
@@ -816,22 +824,22 @@ public class GachaModel : ModelBase
 	})]
 	private ICommonShowRoleInfo[] CachedGachaInfo;
 
-	// Token: 0x0400653E RID: 25918
+	// Token: 0x04006610 RID: 26128
 	private readonly List<int> LoadHandlers = new List<int>();
 
-	// Token: 0x0400653F RID: 25919
+	// Token: 0x04006611 RID: 26129
 	private readonly Dictionary<string, ULevelSequence> SequenceCache = new Dictionary<string, ULevelSequence>();
 
-	// Token: 0x04006540 RID: 25920
+	// Token: 0x04006612 RID: 26130
 	private readonly List<int> UiModelLoadHandlers = new List<int>();
 
-	// Token: 0x04006541 RID: 25921
+	// Token: 0x04006613 RID: 26131
 	private const int WEAPON_DEFAULT_SEQID = 3;
 
-	// Token: 0x04006542 RID: 25922
+	// Token: 0x04006614 RID: 26132
 	private int CurGachaPoolId;
 
-	// Token: 0x04006543 RID: 25923
+	// Token: 0x04006615 RID: 26133
 	[Nullable(2)]
 	private static GachaModel _Instance;
 }

@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E0B RID: 3595
+// Token: 0x020002BE RID: 702
 [NullableContext(1)]
 [Nullable(0)]
 public class GlobalProductContentData
 {
-	// Token: 0x0400279F RID: 10143
+	// Token: 0x04002830 RID: 10288
 	public string local = "";
 
-	// Token: 0x040027A0 RID: 10144
+	// Token: 0x04002831 RID: 10289
 	public string coin = "";
 
-	// Token: 0x040027A1 RID: 10145
+	// Token: 0x04002832 RID: 10290
 	[Nullable(new byte[]
 	{
 		2,
@@ -20,7 +20,7 @@ public class GlobalProductContentData
 	})]
 	public GlobalProductPriceItem[] price;
 
-	// Token: 0x040027A2 RID: 10146
+	// Token: 0x04002833 RID: 10291
 	[Nullable(new byte[]
 	{
 		2,

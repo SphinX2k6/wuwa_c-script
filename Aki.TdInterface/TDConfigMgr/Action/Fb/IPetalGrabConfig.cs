@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028F4 RID: 10484
+	// Token: 0x02002BCC RID: 11212
 	public class IPetalGrabConfig : ISportConfig
 	{
-		// Token: 0x0600E8E2 RID: 59618 RVA: 0x00222A66 File Offset: 0x00220C66
-		[NullableContext(1)]
+		// Token: 0x0600F723 RID: 63267 RVA: 0x0023FC1E File Offset: 0x0023DE1E
 		public static IPetalGrabConfig Create(IPetalGrabConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048BC RID: 18620
-		// (get) Token: 0x0600E8E3 RID: 59619 RVA: 0x00222A85 File Offset: 0x00220C85
+		// Token: 0x17004C39 RID: 19513
+		// (get) Token: 0x0600F724 RID: 63268 RVA: 0x0023FC3D File Offset: 0x0023DE3D
 		public override ESportStateType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048BD RID: 18621
-		// (get) Token: 0x0600E8E4 RID: 59620 RVA: 0x00222A92 File Offset: 0x00220C92
+		// Token: 0x17004C3A RID: 19514
+		// (get) Token: 0x0600F725 RID: 63269 RVA: 0x0023FC4A File Offset: 0x0023DE4A
 		public virtual int FirstGrabEntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008090 RID: 32912
+		// Token: 0x04008754 RID: 34644
 		private IPetalGrabConfig Instance;
 	}
 }

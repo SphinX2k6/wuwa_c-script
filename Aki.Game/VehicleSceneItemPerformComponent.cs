@@ -8,12 +8,12 @@ using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.World.Define;
 using UnrealEngine;
 
-// Token: 0x020032DA RID: 13018
+// Token: 0x0200284C RID: 10316
 [NullableContext(1)]
 [Nullable(0)]
 public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 {
-	// Token: 0x0601C4D3 RID: 115923 RVA: 0x007E688C File Offset: 0x007E4A8C
+	// Token: 0x0601A163 RID: 106851 RVA: 0x0080D0D8 File Offset: 0x0080B2D8
 	protected override bool OnStart()
 	{
 		if (!base.OnStart())
@@ -29,7 +29,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		return ((entityData != null) ? entityData.ComponentsData : null) != null && TdUtils.GetComponent<VehicleComponent>(entityData.ComponentsData, EConfigComponent.VehicleComponent) != null && this.InitVehicleConfig();
 	}
 
-	// Token: 0x0601C4D4 RID: 115924 RVA: 0x007E6928 File Offset: 0x007E4B28
+	// Token: 0x0601A164 RID: 106852 RVA: 0x0080D174 File Offset: 0x0080B374
 	protected override bool OnEnd()
 	{
 		foreach (Entity passengerEntity in this.PassengerTagMap.Keys)
@@ -40,7 +40,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		return true;
 	}
 
-	// Token: 0x0601C4D5 RID: 115925 RVA: 0x007E6988 File Offset: 0x007E4B88
+	// Token: 0x0601A165 RID: 106853 RVA: 0x0080D1D4 File Offset: 0x0080B3D4
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -62,7 +62,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		return true;
 	}
 
-	// Token: 0x0601C4D6 RID: 115926 RVA: 0x007E6A38 File Offset: 0x007E4C38
+	// Token: 0x0601A166 RID: 106854 RVA: 0x0080D284 File Offset: 0x0080B484
 	protected unsafe override void EnterVehiclePerform(VehiclePassengerInfo info)
 	{
 		if (info.PassengerEntity == null)
@@ -97,7 +97,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		this.AddEnterVehicleTagsForPassenger(info.PassengerEntity);
 	}
 
-	// Token: 0x0601C4D7 RID: 115927 RVA: 0x007E6B81 File Offset: 0x007E4D81
+	// Token: 0x0601A167 RID: 106855 RVA: 0x0080D3CD File Offset: 0x0080B5CD
 	protected override void LeaveVehiclePerform(VehiclePassengerInfo info)
 	{
 		if (info.PassengerEntity == null)
@@ -112,7 +112,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C4D8 RID: 115928 RVA: 0x007E6BB8 File Offset: 0x007E4DB8
+	// Token: 0x0601A168 RID: 106856 RVA: 0x0080D404 File Offset: 0x0080B604
 	protected void AddEnterVehicleTagsForVehicle()
 	{
 		if (this.Config == null || this.PassengerInfoMap.Count != 1)
@@ -129,7 +129,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C4D9 RID: 115929 RVA: 0x007E6C38 File Offset: 0x007E4E38
+	// Token: 0x0601A169 RID: 106857 RVA: 0x0080D484 File Offset: 0x0080B684
 	protected void RemoveEnterVehicleTagsForVehicle()
 	{
 		if (this.Config == null || this.PassengerInfoMap.Count != 1)
@@ -146,7 +146,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C4DA RID: 115930 RVA: 0x007E6CB8 File Offset: 0x007E4EB8
+	// Token: 0x0601A16A RID: 106858 RVA: 0x0080D504 File Offset: 0x0080B704
 	protected void AddEnterVehicleTagsForPassenger(Entity passengerEntity)
 	{
 		if (this.Config == null)
@@ -159,7 +159,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C4DB RID: 115931 RVA: 0x007E6D1C File Offset: 0x007E4F1C
+	// Token: 0x0601A16B RID: 106859 RVA: 0x0080D568 File Offset: 0x0080B768
 	public void AddTagForPassenger(Entity passengerEntity, ETagChannel tagChannel, int tagId)
 	{
 		if (passengerEntity == null || !this.PassengerTagMap.ContainsKey(passengerEntity))
@@ -174,7 +174,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		this.PassengerTagMap[passengerEntity].Add(tagId);
 	}
 
-	// Token: 0x0601C4DC RID: 115932 RVA: 0x007E6D5C File Offset: 0x007E4F5C
+	// Token: 0x0601A16C RID: 106860 RVA: 0x0080D5A8 File Offset: 0x0080B7A8
 	public void RemoveTagForPassenger(Entity passengerEntity, ETagChannel tagChannel, int tagId)
 	{
 		if (passengerEntity == null)
@@ -194,7 +194,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		this.PassengerTagMap[passengerEntity].Remove(tagId);
 	}
 
-	// Token: 0x0601C4DD RID: 115933 RVA: 0x007E6DB4 File Offset: 0x007E4FB4
+	// Token: 0x0601A16D RID: 106861 RVA: 0x0080D600 File Offset: 0x0080B800
 	protected void RemoveAllTagsForPassenger(Entity passengerEntity)
 	{
 		if (passengerEntity == null)
@@ -214,7 +214,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		this.PassengerTagMap.Remove(passengerEntity);
 	}
 
-	// Token: 0x0601C4DE RID: 115934 RVA: 0x007E6E34 File Offset: 0x007E5034
+	// Token: 0x0601A16E RID: 106862 RVA: 0x0080D680 File Offset: 0x0080B880
 	private bool CheckPlayerInVehicle()
 	{
 		using (Dictionary<int, VehiclePassengerInfo>.ValueCollection.Enumerator enumerator = this.PassengerInfoMap.Values.GetEnumerator())
@@ -230,7 +230,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		return false;
 	}
 
-	// Token: 0x0601C4DF RID: 115935 RVA: 0x007E6E94 File Offset: 0x007E5094
+	// Token: 0x0601A16F RID: 106863 RVA: 0x0080D6E0 File Offset: 0x0080B8E0
 	private void CheckUpdateFrequency(string reason)
 	{
 		if (this.CheckPlayerInVehicle())
@@ -241,7 +241,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		this.TryLowerTickFrequency(reason);
 	}
 
-	// Token: 0x0601C4E0 RID: 115936 RVA: 0x007E6EB0 File Offset: 0x007E50B0
+	// Token: 0x0601A170 RID: 106864 RVA: 0x0080D6FC File Offset: 0x0080B8FC
 	private unsafe void TryRiseTickFrequency(string reason)
 	{
 		Log instance = Log.Instance;
@@ -261,7 +261,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C4E1 RID: 115937 RVA: 0x007E6F64 File Offset: 0x007E5164
+	// Token: 0x0601A171 RID: 106865 RVA: 0x0080D7B0 File Offset: 0x0080B9B0
 	private unsafe void TryLowerTickFrequency(string reason)
 	{
 		Log instance = Log.Instance;
@@ -281,7 +281,7 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C4E2 RID: 115938 RVA: 0x007E7018 File Offset: 0x007E5218
+	// Token: 0x0601A172 RID: 106866 RVA: 0x0080D864 File Offset: 0x0080BA64
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -289,80 +289,125 @@ public class VehicleSceneItemPerformComponent : BaseVehiclePerformComponent
 			return false;
 		}
 		VehicleSceneItemPerformComponent vehicleSceneItemPerformComponent = (VehicleSceneItemPerformComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (vehicleSceneItemPerformComponent.ActorComp == null)
 		{
-			if (vehicleSceneItemPerformComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("AnimComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (vehicleSceneItemPerformComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("MoveComp"))
+		if (vehicleSceneItemPerformComponent.AnimComp == null)
 		{
-			if (vehicleSceneItemPerformComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("TagComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
-			if (vehicleSceneItemPerformComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PassengerTagMap"))
+		if (vehicleSceneItemPerformComponent.MoveComp == null)
 		{
-			if (vehicleSceneItemPerformComponent.PassengerTagMap == null)
-			{
-				this.PassengerTagMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<Entity, HashSet<int>>>(this.PassengerTagMap), "PassengerTagMap"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
+		{
+			return false;
+		}
+		if (vehicleSceneItemPerformComponent.TagComp == null)
+		{
+			this.TagComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+		{
+			return false;
+		}
+		if (vehicleSceneItemPerformComponent.PassengerTagMap == null)
+		{
+			this.PassengerTagMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PassengerTagMap), "PassengerTagMap"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400E049 RID: 57417
+	// Token: 0x17002A74 RID: 10868
+	// (get) Token: 0x0601A173 RID: 106867 RVA: 0x0080D95B File Offset: 0x0080BB5B
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A75 RID: 10869
+	// (get) Token: 0x0601A174 RID: 106868 RVA: 0x0080D95E File Offset: 0x0080BB5E
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A76 RID: 10870
+	// (get) Token: 0x0601A175 RID: 106869 RVA: 0x0080D961 File Offset: 0x0080BB61
+	public override bool NeedPostActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A77 RID: 10871
+	// (get) Token: 0x0601A176 RID: 106870 RVA: 0x0080D964 File Offset: 0x0080BB64
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A78 RID: 10872
+	// (get) Token: 0x0601A177 RID: 106871 RVA: 0x0080D967 File Offset: 0x0080BB67
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A79 RID: 10873
+	// (get) Token: 0x0601A178 RID: 106872 RVA: 0x0080D96A File Offset: 0x0080BB6A
+	public override bool NeedAfterTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E4F4 RID: 58612
 	[Nullable(2)]
 	protected BaseActorComponent ActorComp;
 
-	// Token: 0x0400E04A RID: 57418
+	// Token: 0x0400E4F5 RID: 58613
 	[Nullable(2)]
 	protected VehicleAnimationComponent AnimComp;
 
-	// Token: 0x0400E04B RID: 57419
+	// Token: 0x0400E4F6 RID: 58614
 	[Nullable(2)]
 	protected VehicleMoveComponent MoveComp;
 
-	// Token: 0x0400E04C RID: 57420
+	// Token: 0x0400E4F7 RID: 58615
 	[Nullable(2)]
 	protected BaseTagComponent TagComp;
 
-	// Token: 0x0400E04D RID: 57421
+	// Token: 0x0400E4F8 RID: 58616
 	protected Dictionary<Entity, HashSet<int>> PassengerTagMap = new Dictionary<Entity, HashSet<int>>();
 }

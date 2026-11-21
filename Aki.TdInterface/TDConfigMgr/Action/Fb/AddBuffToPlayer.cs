@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200264C RID: 9804
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002910 RID: 10512
 	public class AddBuffToPlayer : ActionParams
 	{
-		// Token: 0x0600DBE2 RID: 56290 RVA: 0x0020B9ED File Offset: 0x00209BED
+		// Token: 0x0600E9BE RID: 59838 RVA: 0x002282C5 File Offset: 0x002264C5
 		public static AddBuffToPlayer Create(IAddBuffToPlayer? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700410C RID: 16652
-		// (get) Token: 0x0600DBE3 RID: 56291 RVA: 0x0020BA0C File Offset: 0x00209C0C
+		// Token: 0x1700444C RID: 17484
+		// (get) Token: 0x0600E9BF RID: 59839 RVA: 0x002282E4 File Offset: 0x002264E4
 		public virtual List<long> BuffIds
 		{
 			get
@@ -44,8 +42,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700410D RID: 16653
-		// (get) Token: 0x0600DBE4 RID: 56292 RVA: 0x0020BA70 File Offset: 0x00209C70
+		// Token: 0x1700444D RID: 17485
+		// (get) Token: 0x0600E9C0 RID: 59840 RVA: 0x00228348 File Offset: 0x00226548
 		[Nullable(2)]
 		public virtual List<long> PersistOnDestroyBuffIds
 		{
@@ -71,20 +69,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A36 RID: 31286
+		// Token: 0x040080D8 RID: 32984
 		private IAddBuffToPlayer Instance;
 
-		// Token: 0x04007A37 RID: 31287
+		// Token: 0x040080D9 RID: 32985
 		private List<long> _BuffIdsCache;
 
-		// Token: 0x04007A38 RID: 31288
+		// Token: 0x040080DA RID: 32986
 		private bool _BuffIdsInited;
 
-		// Token: 0x04007A39 RID: 31289
+		// Token: 0x040080DB RID: 32987
 		[Nullable(2)]
 		private List<long> _PersistOnDestroyBuffIdsCache;
 
-		// Token: 0x04007A3A RID: 31290
+		// Token: 0x040080DC RID: 32988
 		private bool _PersistOnDestroyBuffIdsInited;
 	}
 }

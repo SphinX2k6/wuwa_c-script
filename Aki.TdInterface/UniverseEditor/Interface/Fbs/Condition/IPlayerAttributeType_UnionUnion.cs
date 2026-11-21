@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C89 RID: 19593
+	// Token: 0x02005182 RID: 20866
 	public class IPlayerAttributeType_UnionUnion
 	{
-		// Token: 0x17008E46 RID: 36422
-		// (get) Token: 0x0601F12F RID: 127279 RVA: 0x00457BB9 File Offset: 0x00455DB9
-		// (set) Token: 0x0601F130 RID: 127280 RVA: 0x00457BC1 File Offset: 0x00455DC1
+		// Token: 0x17009574 RID: 38260
+		// (get) Token: 0x06020D51 RID: 134481 RVA: 0x0048B709 File Offset: 0x00489909
+		// (set) Token: 0x06020D52 RID: 134482 RVA: 0x0048B711 File Offset: 0x00489911
 		public IPlayerAttributeType_Union Type { get; set; }
 
-		// Token: 0x17008E47 RID: 36423
-		// (get) Token: 0x0601F131 RID: 127281 RVA: 0x00457BCA File Offset: 0x00455DCA
-		// (set) Token: 0x0601F132 RID: 127282 RVA: 0x00457BD2 File Offset: 0x00455DD2
+		// Token: 0x17009575 RID: 38261
+		// (get) Token: 0x06020D53 RID: 134483 RVA: 0x0048B71A File Offset: 0x0048991A
+		// (set) Token: 0x06020D54 RID: 134484 RVA: 0x0048B722 File Offset: 0x00489922
 		public object Value { get; set; }
 
-		// Token: 0x0601F133 RID: 127283 RVA: 0x00457BDB File Offset: 0x00455DDB
+		// Token: 0x06020D55 RID: 134485 RVA: 0x0048B72B File Offset: 0x0048992B
 		public IPlayerAttributeType_UnionUnion()
 		{
 			this.Type = IPlayerAttributeType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F134 RID: 127284 RVA: 0x00457BF1 File Offset: 0x00455DF1
+		// Token: 0x06020D56 RID: 134486 RVA: 0x0048B741 File Offset: 0x00489941
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F135 RID: 127285 RVA: 0x00457C03 File Offset: 0x00455E03
+		// Token: 0x06020D57 RID: 134487 RVA: 0x0048B753 File Offset: 0x00489953
 		public IPlayerAttributeTypeT AsIPlayerAttributeType()
 		{
 			return this.As<IPlayerAttributeTypeT>();
 		}
 
-		// Token: 0x0601F136 RID: 127286 RVA: 0x00457C0B File Offset: 0x00455E0B
+		// Token: 0x06020D58 RID: 134488 RVA: 0x0048B75B File Offset: 0x0048995B
 		public static IPlayerAttributeType_UnionUnion FromIPlayerAttributeType(IPlayerAttributeTypeT _iplayerattributetype)
 		{
 			return new IPlayerAttributeType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F137 RID: 127287 RVA: 0x00457C20 File Offset: 0x00455E20
+		// Token: 0x06020D59 RID: 134489 RVA: 0x0048B770 File Offset: 0x00489970
 		public IHealthAttributeT AsIHealthAttribute()
 		{
 			return this.As<IHealthAttributeT>();
 		}
 
-		// Token: 0x0601F138 RID: 127288 RVA: 0x00457C28 File Offset: 0x00455E28
+		// Token: 0x06020D5A RID: 134490 RVA: 0x0048B778 File Offset: 0x00489978
 		public static IPlayerAttributeType_UnionUnion FromIHealthAttribute(IHealthAttributeT _ihealthattribute)
 		{
 			return new IPlayerAttributeType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F139 RID: 127289 RVA: 0x00457C3D File Offset: 0x00455E3D
+		// Token: 0x06020D5B RID: 134491 RVA: 0x0048B78D File Offset: 0x0048998D
 		public IStabilityPointAttributeT AsIStabilityPointAttribute()
 		{
 			return this.As<IStabilityPointAttributeT>();
 		}
 
-		// Token: 0x0601F13A RID: 127290 RVA: 0x00457C45 File Offset: 0x00455E45
+		// Token: 0x06020D5C RID: 134492 RVA: 0x0048B795 File Offset: 0x00489995
 		public static IPlayerAttributeType_UnionUnion FromIStabilityPointAttribute(IStabilityPointAttributeT _istabilitypointattribute)
 		{
 			return new IPlayerAttributeType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F13B RID: 127291 RVA: 0x00457C5C File Offset: 0x00455E5C
+		// Token: 0x06020D5D RID: 134493 RVA: 0x0048B7AC File Offset: 0x004899AC
 		public static int Pack(FlatBufferBuilder builder, IPlayerAttributeType_UnionUnion _o)
 		{
 			switch (_o.Type)

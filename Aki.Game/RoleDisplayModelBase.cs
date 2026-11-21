@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020027D2 RID: 10194
+// Token: 0x02001D4D RID: 7501
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class RoleDisplayModelBase
 {
-	// Token: 0x17001B44 RID: 6980
-	// (get) Token: 0x06014F22 RID: 85794 RVA: 0x00550D39 File Offset: 0x0054EF39
+	// Token: 0x17001B9C RID: 7068
+	// (get) Token: 0x06012922 RID: 76066 RVA: 0x0057BAA9 File Offset: 0x00579CA9
 	public int Id
 	{
 		get
@@ -16,8 +16,8 @@ public abstract class RoleDisplayModelBase
 		}
 	}
 
-	// Token: 0x17001B45 RID: 6981
-	// (get) Token: 0x06014F23 RID: 85795 RVA: 0x00550D41 File Offset: 0x0054EF41
+	// Token: 0x17001B9D RID: 7069
+	// (get) Token: 0x06012923 RID: 76067 RVA: 0x0057BAB1 File Offset: 0x00579CB1
 	public string Name
 	{
 		get
@@ -26,8 +26,8 @@ public abstract class RoleDisplayModelBase
 		}
 	}
 
-	// Token: 0x17001B46 RID: 6982
-	// (get) Token: 0x06014F24 RID: 85796 RVA: 0x00550D49 File Offset: 0x0054EF49
+	// Token: 0x17001B9E RID: 7070
+	// (get) Token: 0x06012924 RID: 76068 RVA: 0x0057BAB9 File Offset: 0x00579CB9
 	public int SkinId
 	{
 		get
@@ -36,8 +36,8 @@ public abstract class RoleDisplayModelBase
 		}
 	}
 
-	// Token: 0x17001B47 RID: 6983
-	// (get) Token: 0x06014F25 RID: 85797 RVA: 0x00550D51 File Offset: 0x0054EF51
+	// Token: 0x17001B9F RID: 7071
+	// (get) Token: 0x06012925 RID: 76069 RVA: 0x0057BAC1 File Offset: 0x00579CC1
 	public int ElementId
 	{
 		get
@@ -46,8 +46,8 @@ public abstract class RoleDisplayModelBase
 		}
 	}
 
-	// Token: 0x17001B48 RID: 6984
-	// (get) Token: 0x06014F26 RID: 85798 RVA: 0x00550D59 File Offset: 0x0054EF59
+	// Token: 0x17001BA0 RID: 7072
+	// (get) Token: 0x06012926 RID: 76070 RVA: 0x0057BAC9 File Offset: 0x00579CC9
 	public int Level
 	{
 		get
@@ -56,8 +56,8 @@ public abstract class RoleDisplayModelBase
 		}
 	}
 
-	// Token: 0x17001B49 RID: 6985
-	// (get) Token: 0x06014F27 RID: 85799 RVA: 0x00550D61 File Offset: 0x0054EF61
+	// Token: 0x17001BA1 RID: 7073
+	// (get) Token: 0x06012927 RID: 76071 RVA: 0x0057BAD1 File Offset: 0x00579CD1
 	public bool IsInTeam
 	{
 		get
@@ -66,8 +66,8 @@ public abstract class RoleDisplayModelBase
 		}
 	}
 
-	// Token: 0x17001B4A RID: 6986
-	// (get) Token: 0x06014F28 RID: 85800 RVA: 0x00550D69 File Offset: 0x0054EF69
+	// Token: 0x17001BA2 RID: 7074
+	// (get) Token: 0x06012928 RID: 76072 RVA: 0x0057BAD9 File Offset: 0x00579CD9
 	public bool IsTrial
 	{
 		get
@@ -76,8 +76,8 @@ public abstract class RoleDisplayModelBase
 		}
 	}
 
-	// Token: 0x17001B4B RID: 6987
-	// (get) Token: 0x06014F29 RID: 85801 RVA: 0x00550D71 File Offset: 0x0054EF71
+	// Token: 0x17001BA3 RID: 7075
+	// (get) Token: 0x06012929 RID: 76073 RVA: 0x0057BAE1 File Offset: 0x00579CE1
 	public bool IsNew
 	{
 		get
@@ -86,8 +86,8 @@ public abstract class RoleDisplayModelBase
 		}
 	}
 
-	// Token: 0x17001B4C RID: 6988
-	// (get) Token: 0x06014F2A RID: 85802 RVA: 0x00550D79 File Offset: 0x0054EF79
+	// Token: 0x17001BA4 RID: 7076
+	// (get) Token: 0x0601292A RID: 76074 RVA: 0x0057BAE9 File Offset: 0x00579CE9
 	public ERoleTypeTag TypeTag
 	{
 		get
@@ -96,16 +96,16 @@ public abstract class RoleDisplayModelBase
 		}
 	}
 
-	// Token: 0x17001B4D RID: 6989
-	// (get) Token: 0x06014F2B RID: 85803
+	// Token: 0x17001BA5 RID: 7077
+	// (get) Token: 0x0601292B RID: 76075
 	public abstract ERoleDisplaySourceType SourceType { get; }
 
-	// Token: 0x17001B4E RID: 6990
-	// (get) Token: 0x06014F2C RID: 85804
+	// Token: 0x17001BA6 RID: 7078
+	// (get) Token: 0x0601292C RID: 76076
 	[Nullable(2)]
 	public abstract RoleDataBase OriginRoleData { [NullableContext(2)] get; }
 
-	// Token: 0x06014F2D RID: 85805 RVA: 0x00550D84 File Offset: 0x0054EF84
+	// Token: 0x0601292D RID: 76077 RVA: 0x0057BAF4 File Offset: 0x00579CF4
 	protected void InitBase(RoleDisplayModelBaseInitParams param)
 	{
 		this.IdInternal = param.Id;
@@ -119,30 +119,30 @@ public abstract class RoleDisplayModelBase
 		this.TypeTagInternal = param.TypeTag;
 	}
 
-	// Token: 0x04009D8A RID: 40330
+	// Token: 0x0400A173 RID: 41331
 	private int IdInternal;
 
-	// Token: 0x04009D8B RID: 40331
+	// Token: 0x0400A174 RID: 41332
 	private string NameInternal;
 
-	// Token: 0x04009D8C RID: 40332
+	// Token: 0x0400A175 RID: 41333
 	private int SkinIdInternal;
 
-	// Token: 0x04009D8D RID: 40333
+	// Token: 0x0400A176 RID: 41334
 	private int ElementIdInternal;
 
-	// Token: 0x04009D8E RID: 40334
+	// Token: 0x0400A177 RID: 41335
 	private int LevelInternal;
 
-	// Token: 0x04009D8F RID: 40335
+	// Token: 0x0400A178 RID: 41336
 	private bool IsInTeamInternal;
 
-	// Token: 0x04009D90 RID: 40336
+	// Token: 0x0400A179 RID: 41337
 	private bool IsTrialInternal;
 
-	// Token: 0x04009D91 RID: 40337
+	// Token: 0x0400A17A RID: 41338
 	private bool IsNewInternal;
 
-	// Token: 0x04009D92 RID: 40338
+	// Token: 0x0400A17B RID: 41339
 	private ERoleTypeTag TypeTagInternal;
 }

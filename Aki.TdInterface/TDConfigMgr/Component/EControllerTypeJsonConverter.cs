@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000915 RID: 2325
+	// Token: 0x020009C2 RID: 2498
 	public class EControllerTypeJsonConverter : JsonConverter<EControllerType>
 	{
-		// Token: 0x06003491 RID: 13457 RVA: 0x00089ACC File Offset: 0x00087CCC
+		// Token: 0x060037FD RID: 14333 RVA: 0x0009164C File Offset: 0x0008F84C
 		public override EControllerType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EControllerTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003492 RID: 13458 RVA: 0x00089AF0 File Offset: 0x00087CF0
+		// Token: 0x060037FE RID: 14334 RVA: 0x00091670 File Offset: 0x0008F870
 		public override void Write(Utf8JsonWriter writer, EControllerType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

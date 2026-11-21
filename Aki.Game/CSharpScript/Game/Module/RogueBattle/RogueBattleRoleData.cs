@@ -3,65 +3,65 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EDF RID: 20191
+	// Token: 0x02003EA8 RID: 16040
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleRoleData : RoleDataBase
 	{
-		// Token: 0x06033D36 RID: 212278 RVA: 0x00C23513 File Offset: 0x00C21713
+		// Token: 0x06028BA1 RID: 166817 RVA: 0x00B6CA87 File Offset: 0x00B6AC87
 		public RogueBattleRoleData(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06033D37 RID: 212279 RVA: 0x00C2351C File Offset: 0x00C2171C
+		// Token: 0x06028BA2 RID: 166818 RVA: 0x00B6CA90 File Offset: 0x00B6AC90
 		public override bool IsTrialRole()
 		{
 			return false;
 		}
 
-		// Token: 0x06033D38 RID: 212280 RVA: 0x00C2351F File Offset: 0x00C2171F
+		// Token: 0x06028BA3 RID: 166819 RVA: 0x00B6CA93 File Offset: 0x00B6AC93
 		public override string GetName(int? playerId = null)
 		{
 			return this.GetRoleInstanceData().GetName(playerId);
 		}
 
-		// Token: 0x06033D39 RID: 212281 RVA: 0x00C2352D File Offset: 0x00C2172D
+		// Token: 0x06028BA4 RID: 166820 RVA: 0x00B6CAA1 File Offset: 0x00B6ACA1
 		public override int GetRoleId()
 		{
 			return this.Id;
 		}
 
-		// Token: 0x06033D3A RID: 212282 RVA: 0x00C23535 File Offset: 0x00C21735
+		// Token: 0x06028BA5 RID: 166821 RVA: 0x00B6CAA9 File Offset: 0x00B6ACA9
 		public override bool IsOnlineRole()
 		{
 			return false;
 		}
 
-		// Token: 0x06033D3B RID: 212283 RVA: 0x00C23538 File Offset: 0x00C21738
+		// Token: 0x06028BA6 RID: 166822 RVA: 0x00B6CAAC File Offset: 0x00B6ACAC
 		public override bool CanChangeName()
 		{
 			return false;
 		}
 
-		// Token: 0x06033D3C RID: 212284 RVA: 0x00C2353B File Offset: 0x00C2173B
+		// Token: 0x06028BA7 RID: 166823 RVA: 0x00B6CAAF File Offset: 0x00B6ACAF
 		public override int GetRoleCreateTime()
 		{
 			return 0;
 		}
 
-		// Token: 0x06033D3D RID: 212285 RVA: 0x00C2353E File Offset: 0x00C2173E
+		// Token: 0x06028BA8 RID: 166824 RVA: 0x00B6CAB2 File Offset: 0x00B6ACB2
 		public override bool GetIsNew()
 		{
 			return false;
 		}
 
-		// Token: 0x06033D3E RID: 212286 RVA: 0x00C23541 File Offset: 0x00C21741
+		// Token: 0x06028BA9 RID: 166825 RVA: 0x00B6CAB5 File Offset: 0x00B6ACB5
 		public override int GetRoleSkinId()
 		{
 			return this.GetRoleInstanceData().GetRoleSkinId();
 		}
 
-		// Token: 0x06033D3F RID: 212287 RVA: 0x00C2354E File Offset: 0x00C2174E
+		// Token: 0x06028BAA RID: 166826 RVA: 0x00B6CAC2 File Offset: 0x00B6ACC2
 		protected RoleDataBase GetRoleInstanceData()
 		{
 			return RoleModel.Instance.GetRoleDataById(this.GetRoleId(), true);

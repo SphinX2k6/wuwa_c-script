@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200662E RID: 26158
+	// Token: 0x020055AC RID: 21932
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FishingTechSecondaryNodeItem : UiPanelBase
 	{
-		// Token: 0x1700960A RID: 38410
-		// (get) Token: 0x06041931 RID: 268593 RVA: 0x00FE762C File Offset: 0x00FE582C
+		// Token: 0x1700696C RID: 26988
+		// (get) Token: 0x060365F6 RID: 222710 RVA: 0x00F2E6E4 File Offset: 0x00F2C8E4
 		public IFishingTechNode CurrentNode
 		{
 			get
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041932 RID: 268594 RVA: 0x00FE7634 File Offset: 0x00FE5834
+		// Token: 0x060365F7 RID: 222711 RVA: 0x00F2E6EC File Offset: 0x00F2C8EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06041933 RID: 268595 RVA: 0x00FE77A0 File Offset: 0x00FE59A0
+		// Token: 0x060365F8 RID: 222712 RVA: 0x00F2E858 File Offset: 0x00F2CA58
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add<int>(EEventName.OnFishingTechNodeRefresh, new Action<int>(this.OnFishingTechNodeRefresh));
@@ -68,14 +68,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			extendToggle.OnUndeterminedClicked.Add(new Action(this.OnClickToggleOnUndetermined));
 		}
 
-		// Token: 0x06041934 RID: 268596 RVA: 0x00FE77E0 File Offset: 0x00FE59E0
+		// Token: 0x060365F9 RID: 222713 RVA: 0x00F2E898 File Offset: 0x00F2CA98
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnFishingTechNodeRefresh, new Action<int>(this.OnFishingTechNodeRefresh));
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.FishingNormalTechNode, base.GetItem(7), this.Node.ConfigId);
 		}
 
-		// Token: 0x06041935 RID: 268597 RVA: 0x00FE781F File Offset: 0x00FE5A1F
+		// Token: 0x060365FA RID: 222714 RVA: 0x00F2E8D7 File Offset: 0x00F2CAD7
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			Action<IFishingTechNode, UUIExtendToggle> onClickToggleBack = this.OnClickToggleBack;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			onClickToggleBack(this.Node, base.GetExtendToggle(0));
 		}
 
-		// Token: 0x06041936 RID: 268598 RVA: 0x00FE783E File Offset: 0x00FE5A3E
+		// Token: 0x060365FB RID: 222715 RVA: 0x00F2E8F6 File Offset: 0x00F2CAF6
 		private void OnClickToggleOnUndetermined()
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			onClickToggleBack(this.Node, base.GetExtendToggle(0));
 		}
 
-		// Token: 0x06041937 RID: 268599 RVA: 0x00FE7870 File Offset: 0x00FE5A70
+		// Token: 0x060365FC RID: 222716 RVA: 0x00F2E928 File Offset: 0x00F2CB28
 		private void OnFishingTechNodeRefresh(int nodeId)
 		{
 			IFishingTechNode node = this.Node;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Emit<int>(EEventName.OnFishingTechNodeRedDotRefresh, this.Node.ConfigId);
 		}
 
-		// Token: 0x06041938 RID: 268600 RVA: 0x00FE78D4 File Offset: 0x00FE5AD4
+		// Token: 0x060365FD RID: 222717 RVA: 0x00F2E98C File Offset: 0x00F2CB8C
 		[NullableContext(1)]
 		public void RefreshNode(IFishingTechNode node)
 		{
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Emit<int>(EEventName.OnFishingTechNodeRedDotRefresh, this.Node.ConfigId);
 		}
 
-		// Token: 0x06041939 RID: 268601 RVA: 0x00FE79C0 File Offset: 0x00FE5BC0
+		// Token: 0x060365FE RID: 222718 RVA: 0x00F2EA78 File Offset: 0x00F2CC78
 		public void SelectNode()
 		{
 			if (FishingModel.Instance.GetFishingTechUnlock(this.Node.ConfigId))
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			onClickToggleBack(this.Node, base.GetExtendToggle(0));
 		}
 
-		// Token: 0x0604193A RID: 268602 RVA: 0x00FE7A14 File Offset: 0x00FE5C14
+		// Token: 0x060365FF RID: 222719 RVA: 0x00F2EACC File Offset: 0x00F2CCCC
 		private void RefreshStarItem()
 		{
 			int techNodeCurrentLevel = FishingModel.Instance.GetTechNodeCurrentLevel(this.Node.ConfigId);
@@ -168,10 +168,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetItem(4).SetUIActive(techNodeCurrentLevel > 2);
 		}
 
-		// Token: 0x040221D4 RID: 139732
+		// Token: 0x0401CB05 RID: 117509
 		private IFishingTechNode Node;
 
-		// Token: 0x040221D5 RID: 139733
+		// Token: 0x0401CB06 RID: 117510
 		[Nullable(new byte[]
 		{
 			2,
@@ -180,32 +180,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		public Action<IFishingTechNode, UUIExtendToggle> OnClickToggleBack;
 
-		// Token: 0x0200C84B RID: 51275
+		// Token: 0x0200B22D RID: 45613
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C80E RID: 247822
+			// Token: 0x04037153 RID: 225619
 			public const int Toggle = 0;
 
-			// Token: 0x0403C80F RID: 247823
+			// Token: 0x04037154 RID: 225620
 			public const int IconTexture = 1;
 
-			// Token: 0x0403C810 RID: 247824
+			// Token: 0x04037155 RID: 225621
 			public const int StarOneItem = 2;
 
-			// Token: 0x0403C811 RID: 247825
+			// Token: 0x04037156 RID: 225622
 			public const int StarTwoItem = 3;
 
-			// Token: 0x0403C812 RID: 247826
+			// Token: 0x04037157 RID: 225623
 			public const int StarThreeItem = 4;
 
-			// Token: 0x0403C813 RID: 247827
+			// Token: 0x04037158 RID: 225624
 			public const int StarText = 5;
 
-			// Token: 0x0403C814 RID: 247828
+			// Token: 0x04037159 RID: 225625
 			public const int LockItem = 6;
 
-			// Token: 0x0403C815 RID: 247829
+			// Token: 0x0403715A RID: 225626
 			public const int RedDotItem = 7;
 		}
 	}

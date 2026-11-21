@@ -11,25 +11,25 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02001DA6 RID: 7590
+// Token: 0x02001268 RID: 4712
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class GreatSwordController : UiControllerBase
 {
-	// Token: 0x0600E662 RID: 58978 RVA: 0x00364E4E File Offset: 0x0036304E
+	// Token: 0x0600BA80 RID: 47744 RVA: 0x00370AAE File Offset: 0x0036ECAE
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, ELevelPlayState, int>(EEventName.OnLevelPlayCompleteNumberChange, new Action<int, ELevelPlayState, int>(this.OnLevelPlayCompleteNumberChange));
 	}
 
-	// Token: 0x0600E663 RID: 58979 RVA: 0x00364E6C File Offset: 0x0036306C
+	// Token: 0x0600BA81 RID: 47745 RVA: 0x00370ACC File Offset: 0x0036ECCC
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnLevelPlayCompleteNumberChange, new Action<int, ELevelPlayState, int>(this.OnLevelPlayCompleteNumberChange));
 	}
 
-	// Token: 0x0600E664 RID: 58980 RVA: 0x00364E8C File Offset: 0x0036308C
+	// Token: 0x0600BA82 RID: 47746 RVA: 0x00370AEC File Offset: 0x0036ECEC
 	public void RequestGreatSwordInfoAndOpenView(int challengeId, int actionIncId)
 	{
 		if (challengeId == 0 || challengeId <= 0)
@@ -53,7 +53,7 @@ public class GreatSwordController : UiControllerBase
 			}
 			if (blackSwordChallengeInfoResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(blackSwordChallengeInfoResponse.ErrorCode, 21267, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(blackSwordChallengeInfoResponse.ErrorCode, 22114, null, true, true);
 				return;
 			}
 			List<TrialSubChallenge> list = new List<TrialSubChallenge>();
@@ -93,7 +93,7 @@ public class GreatSwordController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600E665 RID: 58981 RVA: 0x00364F24 File Offset: 0x00363124
+	// Token: 0x0600BA83 RID: 47747 RVA: 0x00370B84 File Offset: 0x0036ED84
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -109,7 +109,7 @@ public class GreatSwordController : UiControllerBase
 		return <RequestGreatSwordChallengeMarkItemPanelInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E666 RID: 58982 RVA: 0x00364F68 File Offset: 0x00363168
+	// Token: 0x0600BA84 RID: 47748 RVA: 0x00370BC8 File Offset: 0x0036EDC8
 	public void RequestGreatSwordLevelSelected(int instId, int levelId)
 	{
 		LevelPlayOpenRequest levelPlayOpenRequest = LevelPlayOpenRequest.Create();
@@ -129,11 +129,11 @@ public class GreatSwordController : UiControllerBase
 				return;
 			}
 			GreatSwordChallengeModel.Instance.SetIsStartChallenge(false);
-			ErrorCodeController.Instance.OpenErrorCodeTipView(levelPlayOpenResponse.ErrorCode, 16306, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(levelPlayOpenResponse.ErrorCode, 23577, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x0600E667 RID: 58983 RVA: 0x00364FC4 File Offset: 0x003631C4
+	// Token: 0x0600BA85 RID: 47749 RVA: 0x00370C24 File Offset: 0x0036EE24
 	private void OnLevelPlayCompleteNumberChange(int id, ELevelPlayState state, int completeNumber)
 	{
 		global::LevelPlayInfo levelPlayInfo = LevelPlayModel.Instance.GetLevelPlayInfo(id);
@@ -169,8 +169,8 @@ public class GreatSwordController : UiControllerBase
 		EventSystem.Instance.Emit<IReadOnlyList<ITrialSubChallenge>>(EEventName.GreatSwordLevelRefreshUI, challenge.SubChallenges);
 	}
 
-	// Token: 0x17001260 RID: 4704
-	// (get) Token: 0x0600E668 RID: 58984 RVA: 0x0036508F File Offset: 0x0036328F
+	// Token: 0x1700128A RID: 4746
+	// (get) Token: 0x0600BA86 RID: 47750 RVA: 0x00370CEF File Offset: 0x0036EEEF
 	public static GreatSwordController Instance
 	{
 		get
@@ -179,7 +179,7 @@ public class GreatSwordController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600E669 RID: 58985 RVA: 0x00365096 File Offset: 0x00363296
+	// Token: 0x0600BA87 RID: 47751 RVA: 0x00370CF6 File Offset: 0x0036EEF6
 	public static GreatSwordController GetOrCreateInstance()
 	{
 		if (GreatSwordController._Instance == null)
@@ -189,7 +189,7 @@ public class GreatSwordController : UiControllerBase
 		return GreatSwordController._Instance;
 	}
 
-	// Token: 0x0600E66A RID: 58986 RVA: 0x003650AA File Offset: 0x003632AA
+	// Token: 0x0600BA88 RID: 47752 RVA: 0x00370D0A File Offset: 0x0036EF0A
 	public static bool CreateInstance()
 	{
 		if (GreatSwordController._Instance != null)
@@ -200,24 +200,24 @@ public class GreatSwordController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600E66B RID: 58987 RVA: 0x003650C0 File Offset: 0x003632C0
+	// Token: 0x0600BA89 RID: 47753 RVA: 0x00370D20 File Offset: 0x0036EF20
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600E66C RID: 58988 RVA: 0x003650C2 File Offset: 0x003632C2
+	// Token: 0x0600BA8A RID: 47754 RVA: 0x00370D22 File Offset: 0x0036EF22
 	public static void ResetStaticDefaultValue()
 	{
 		GreatSwordController._Instance = null;
 	}
 
-	// Token: 0x0600E66D RID: 58989 RVA: 0x003650CA File Offset: 0x003632CA
+	// Token: 0x0600BA8B RID: 47755 RVA: 0x00370D2A File Offset: 0x0036EF2A
 	static GreatSwordController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GreatSwordController.CreateStaticDefaultValue), new Action(GreatSwordController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006A96 RID: 27286
+	// Token: 0x04006B77 RID: 27511
 	[Nullable(2)]
 	private static GreatSwordController _Instance;
 }

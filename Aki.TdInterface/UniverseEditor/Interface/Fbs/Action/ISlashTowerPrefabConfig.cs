@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200713C RID: 28988
+	// Token: 0x02007908 RID: 30984
 	public struct ISlashTowerPrefabConfig : IFlatbufferObject
 	{
-		// Token: 0x1700D766 RID: 55142
-		// (get) Token: 0x0603363A RID: 210490 RVA: 0x006ECF71 File Offset: 0x006EB171
+		// Token: 0x1700E349 RID: 58185
+		// (get) Token: 0x060368DC RID: 223452 RVA: 0x0074D57D File Offset: 0x0074B77D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603363B RID: 210491 RVA: 0x006ECF7E File Offset: 0x006EB17E
+		// Token: 0x060368DD RID: 223453 RVA: 0x0074D58A File Offset: 0x0074B78A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603363C RID: 210492 RVA: 0x006ECF88 File Offset: 0x006EB188
+		// Token: 0x060368DE RID: 223454 RVA: 0x0074D594 File Offset: 0x0074B794
 		public static ISlashTowerPrefabConfig GetRootAsISlashTowerPrefabConfig(ByteBuffer _bb)
 		{
 			return ISlashTowerPrefabConfig.GetRootAsISlashTowerPrefabConfig(_bb, default(ISlashTowerPrefabConfig));
 		}
 
-		// Token: 0x0603363D RID: 210493 RVA: 0x006ECFA4 File Offset: 0x006EB1A4
+		// Token: 0x060368DF RID: 223455 RVA: 0x0074D5B0 File Offset: 0x0074B7B0
 		public static ISlashTowerPrefabConfig GetRootAsISlashTowerPrefabConfig(ByteBuffer _bb, ISlashTowerPrefabConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603363E RID: 210494 RVA: 0x006ECFC1 File Offset: 0x006EB1C1
+		// Token: 0x060368E0 RID: 223456 RVA: 0x0074D5CD File Offset: 0x0074B7CD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603363F RID: 210495 RVA: 0x006ECFD0 File Offset: 0x006EB1D0
+		// Token: 0x060368E1 RID: 223457 RVA: 0x0074D5DC File Offset: 0x0074B7DC
 		public ISlashTowerPrefabConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D767 RID: 55143
-		// (get) Token: 0x06033640 RID: 210496 RVA: 0x006ECFE0 File Offset: 0x006EB1E0
+		// Token: 0x1700E34A RID: 58186
+		// (get) Token: 0x060368E2 RID: 223458 RVA: 0x0074D5EC File Offset: 0x0074B7EC
 		public ECreatePrefabType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D768 RID: 55144
-		// (get) Token: 0x06033641 RID: 210497 RVA: 0x006ED01C File Offset: 0x006EB21C
+		// Token: 0x1700E34B RID: 58187
+		// (get) Token: 0x060368E3 RID: 223459 RVA: 0x0074D628 File Offset: 0x0074B828
 		public int Index
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033642 RID: 210498 RVA: 0x006ED058 File Offset: 0x006EB258
+		// Token: 0x060368E4 RID: 223460 RVA: 0x0074D664 File Offset: 0x0074B864
 		public static Offset<ISlashTowerPrefabConfig> CreateISlashTowerPrefabConfig(FlatBufferBuilder builder, ECreatePrefabType Type = ECreatePrefabType.PrefabId, int Index = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISlashTowerPrefabConfig.EndISlashTowerPrefabConfig(builder);
 		}
 
-		// Token: 0x06033643 RID: 210499 RVA: 0x006ED075 File Offset: 0x006EB275
+		// Token: 0x060368E5 RID: 223461 RVA: 0x0074D681 File Offset: 0x0074B881
 		public static void StartISlashTowerPrefabConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06033644 RID: 210500 RVA: 0x006ED07E File Offset: 0x006EB27E
+		// Token: 0x060368E6 RID: 223462 RVA: 0x0074D68A File Offset: 0x0074B88A
 		public static void AddType(FlatBufferBuilder builder, ECreatePrefabType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033645 RID: 210501 RVA: 0x006ED089 File Offset: 0x006EB289
+		// Token: 0x060368E7 RID: 223463 RVA: 0x0074D695 File Offset: 0x0074B895
 		public static void AddIndex(FlatBufferBuilder builder, int index)
 		{
 			builder.AddInt(1, index, 0);
 		}
 
-		// Token: 0x06033646 RID: 210502 RVA: 0x006ED094 File Offset: 0x006EB294
+		// Token: 0x060368E8 RID: 223464 RVA: 0x0074D6A0 File Offset: 0x0074B8A0
 		public static Offset<ISlashTowerPrefabConfig> EndISlashTowerPrefabConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ISlashTowerPrefabConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06033647 RID: 210503 RVA: 0x006ED0A4 File Offset: 0x006EB2A4
+		// Token: 0x060368E9 RID: 223465 RVA: 0x0074D6B0 File Offset: 0x0074B8B0
 		public ISlashTowerPrefabConfigT UnPack()
 		{
 			ISlashTowerPrefabConfigT slashTowerPrefabConfigT = new ISlashTowerPrefabConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return slashTowerPrefabConfigT;
 		}
 
-		// Token: 0x06033648 RID: 210504 RVA: 0x006ED0BF File Offset: 0x006EB2BF
+		// Token: 0x060368EA RID: 223466 RVA: 0x0074D6CB File Offset: 0x0074B8CB
 		public void UnPackTo(ISlashTowerPrefabConfigT _o)
 		{
 			_o.Type = this.Type;
 			_o.Index = this.Index;
 		}
 
-		// Token: 0x06033649 RID: 210505 RVA: 0x006ED0DC File Offset: 0x006EB2DC
+		// Token: 0x060368EB RID: 223467 RVA: 0x0074D6E8 File Offset: 0x0074B8E8
 		public static Offset<ISlashTowerPrefabConfig> Pack(FlatBufferBuilder builder, ISlashTowerPrefabConfigT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISlashTowerPrefabConfig.CreateISlashTowerPrefabConfig(builder, _o.Type, _o.Index);
 		}
 
-		// Token: 0x04011BD7 RID: 72663
+		// Token: 0x04012BC5 RID: 76741
 		private Table __p;
 	}
 }

@@ -7,32 +7,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001289 RID: 4745
+	// Token: 0x020002B3 RID: 691
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.WorldPartitionStreamingSourceComponent")]
 	[UnrealStructLayout(256, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 256)]
 	public class UWorldPartitionStreamingSourceComponent : UActorComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601161C RID: 71196 RVA: 0x001983F0 File Offset: 0x001965F0
+		// Token: 0x06004AC5 RID: 19141 RVA: 0x00068A55 File Offset: 0x00066C55
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UWorldPartitionStreamingSourceComponent._ClassPtr;
 		}
 
-		// Token: 0x0601161D RID: 71197 RVA: 0x001983FC File Offset: 0x001965FC
+		// Token: 0x06004AC6 RID: 19142 RVA: 0x00068A64 File Offset: 0x00066C64
 		public UWorldPartitionStreamingSourceComponent() : this(BuiltinUtils.AllocNativeUObject(UWorldPartitionStreamingSourceComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601161E RID: 71198 RVA: 0x00198424 File Offset: 0x00196624
+		// Token: 0x06004AC7 RID: 19143 RVA: 0x00068A8C File Offset: 0x00066C8C
 		public UWorldPartitionStreamingSourceComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UWorldPartitionStreamingSourceComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170043B8 RID: 17336
-		// (get) Token: 0x0601161F RID: 71199 RVA: 0x00198457 File Offset: 0x00196657
-		// (set) Token: 0x06011620 RID: 71200 RVA: 0x00198467 File Offset: 0x00196667
+		// Token: 0x17000E0A RID: 3594
+		// (get) Token: 0x06004AC8 RID: 19144 RVA: 0x00068ABF File Offset: 0x00066CBF
+		// (set) Token: 0x06004AC9 RID: 19145 RVA: 0x00068ACF File Offset: 0x00066CCF
 		public unsafe EStreamingSourceTargetBehavior TargetBehavior
 		{
 			get
@@ -45,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170043B9 RID: 17337
-		// (get) Token: 0x06011621 RID: 71201 RVA: 0x00198478 File Offset: 0x00196678
-		// (set) Token: 0x06011622 RID: 71202 RVA: 0x00198488 File Offset: 0x00196688
+		// Token: 0x17000E0B RID: 3595
+		// (get) Token: 0x06004ACA RID: 19146 RVA: 0x00068AE0 File Offset: 0x00066CE0
+		// (set) Token: 0x06004ACB RID: 19147 RVA: 0x00068AF0 File Offset: 0x00066CF0
 		public unsafe EStreamingSourceDisableBehavior DisableBehavior
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170043BA RID: 17338
-		// (get) Token: 0x06011623 RID: 71203 RVA: 0x0019849C File Offset: 0x0019669C
-		// (set) Token: 0x06011624 RID: 71204 RVA: 0x001984D5 File Offset: 0x001966D5
+		// Token: 0x17000E0C RID: 3596
+		// (get) Token: 0x06004ACC RID: 19148 RVA: 0x00068B04 File Offset: 0x00066D04
+		// (set) Token: 0x06004ACD RID: 19149 RVA: 0x00068B3D File Offset: 0x00066D3D
 		public TArray<FName> TargetGrids
 		{
 			get
@@ -81,9 +81,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170043BB RID: 17339
-		// (get) Token: 0x06011625 RID: 71205 RVA: 0x001984E4 File Offset: 0x001966E4
-		// (set) Token: 0x06011626 RID: 71206 RVA: 0x0019851D File Offset: 0x0019671D
+		// Token: 0x17000E0D RID: 3597
+		// (get) Token: 0x06004ACE RID: 19150 RVA: 0x00068B4C File Offset: 0x00066D4C
+		// (set) Token: 0x06004ACF RID: 19151 RVA: 0x00068B85 File Offset: 0x00066D85
 		public TArray<FStreamingSourceShape> Shapes
 		{
 			get
@@ -102,9 +102,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170043BC RID: 17340
-		// (get) Token: 0x06011627 RID: 71207 RVA: 0x0019852B File Offset: 0x0019672B
-		// (set) Token: 0x06011628 RID: 71208 RVA: 0x0019853B File Offset: 0x0019673B
+		// Token: 0x17000E0E RID: 3598
+		// (get) Token: 0x06004AD0 RID: 19152 RVA: 0x00068B93 File Offset: 0x00066D93
+		// (set) Token: 0x06004AD1 RID: 19153 RVA: 0x00068BA3 File Offset: 0x00066DA3
 		public unsafe EStreamingSourcePriority Priority
 		{
 			get
@@ -117,9 +117,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170043BD RID: 17341
-		// (get) Token: 0x06011629 RID: 71209 RVA: 0x0019854C File Offset: 0x0019674C
-		// (set) Token: 0x0601162A RID: 71210 RVA: 0x0019855C File Offset: 0x0019675C
+		// Token: 0x17000E0F RID: 3599
+		// (get) Token: 0x06004AD2 RID: 19154 RVA: 0x00068BB4 File Offset: 0x00066DB4
+		// (set) Token: 0x06004AD3 RID: 19155 RVA: 0x00068BC4 File Offset: 0x00066DC4
 		public unsafe bool bStreamingSourceShouldBlockOnSlowStreaming
 		{
 			get
@@ -132,9 +132,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170043BE RID: 17342
-		// (get) Token: 0x0601162B RID: 71211 RVA: 0x0019856D File Offset: 0x0019676D
-		// (set) Token: 0x0601162C RID: 71212 RVA: 0x0019857D File Offset: 0x0019677D
+		// Token: 0x17000E10 RID: 3600
+		// (get) Token: 0x06004AD4 RID: 19156 RVA: 0x00068BD5 File Offset: 0x00066DD5
+		// (set) Token: 0x06004AD5 RID: 19157 RVA: 0x00068BE5 File Offset: 0x00066DE5
 		public unsafe bool bStreamingSourceEnabled
 		{
 			get
@@ -147,47 +147,24 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170043BF RID: 17343
-		// (get) Token: 0x0601162D RID: 71213 RVA: 0x0019858E File Offset: 0x0019678E
-		// (set) Token: 0x0601162E RID: 71214 RVA: 0x0019859E File Offset: 0x0019679E
-		public unsafe EStreamingSourceTargetState TargetState
-		{
-			get
-			{
-				return (EStreamingSourceTargetState)(*(base.NativePtr + (IntPtr)UWorldPartitionStreamingSourceComponent.__PropertyOffset_TargetState));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UWorldPartitionStreamingSourceComponent.__PropertyOffset_TargetState) = (byte)value;
-			}
-		}
-
-		// Token: 0x0601162F RID: 71215 RVA: 0x001985AF File Offset: 0x001967AF
+		// Token: 0x06004AD6 RID: 19158 RVA: 0x00068BF6 File Offset: 0x00066DF6
 		[NullableContext(2)]
 		public void LogStreamingStuckInfo2(TArray<FName> InDataLayerLabels, bool bUseGridLoadingRange, float Radius, bool bRequirePhysicsReady)
 		{
 			UWorldPartitionStreamingSourceComponent.__LogStreamingStuckInfo2_Internal(base.NativePtr, (InDataLayerLabels ?? new TArray<FName>()).NativePtr, bUseGridLoadingRange, Radius, bRequirePhysicsReady);
 		}
 
-		// Token: 0x06011630 RID: 71216 RVA: 0x001985CF File Offset: 0x001967CF
-		[NullableContext(2)]
-		public bool KURO_IsStreamingCompleted(ref FStreamingCompleteContext InParams)
-		{
-			return UWorldPartitionStreamingSourceComponent.__KURO_IsStreamingCompleted_Internal(base.NativePtr, (InParams ?? new FStreamingCompleteContext()).NativePtr);
-		}
-
-		// Token: 0x06011631 RID: 71217 RVA: 0x001985EC File Offset: 0x001967EC
+		// Token: 0x06004AD7 RID: 19159 RVA: 0x00068C18 File Offset: 0x00066E18
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool IsStreamingSourceEnabled()
 		{
 			UWorldPartitionStreamingSourceComponent.__IsStreamingSourceEnabled_FunctionParams* ptr = stackalloc UWorldPartitionStreamingSourceComponent.__IsStreamingSourceEnabled_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UWorldPartitionStreamingSourceComponent.__IsStreamingSourceEnabled_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UWorldPartitionStreamingSourceComponent.__IsStreamingSourceEnabled_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UWorldPartitionStreamingSourceComponent.__IsStreamingSourceEnabled_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UWorldPartitionStreamingSourceComponent.__IsStreamingSourceEnabled_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06011632 RID: 71218 RVA: 0x00198634 File Offset: 0x00196834
+		// Token: 0x06004AD8 RID: 19160 RVA: 0x00068C60 File Offset: 0x00066E60
 		[NullableContext(2)]
 		public unsafe bool IsStreamingCompletedForLayers2(TArray<FName> InDataLayerLabels, bool bUseGridLoadingRange, float Radius, bool bNeedProgress, ref float OutProgress, bool bRequirePhysicsReady)
 		{
@@ -198,71 +175,65 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06011633 RID: 71219 RVA: 0x00198669 File Offset: 0x00196869
+		// Token: 0x06004AD9 RID: 19161 RVA: 0x00068C95 File Offset: 0x00066E95
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void EnableStreamingSource()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UWorldPartitionStreamingSourceComponent.__EnableStreamingSource_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UWorldPartitionStreamingSourceComponent.__EnableStreamingSource_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06011634 RID: 71220 RVA: 0x0019867E File Offset: 0x0019687E
+		// Token: 0x06004ADA RID: 19162 RVA: 0x00068CA9 File Offset: 0x00066EA9
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void DisableStreamingSource()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UWorldPartitionStreamingSourceComponent.__DisableStreamingSource_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UWorldPartitionStreamingSourceComponent.__DisableStreamingSource_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06011635 RID: 71221
+		// Token: 0x06004ADB RID: 19163
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __LogStreamingStuckInfo2_Internal(IntPtr @this, IntPtr InDataLayerLabels, bool bUseGridLoadingRange, float Radius, bool bRequirePhysicsReady);
 
-		// Token: 0x06011636 RID: 71222
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern bool __KURO_IsStreamingCompleted_Internal(IntPtr @this, IntPtr InParams);
-
-		// Token: 0x06011637 RID: 71223
+		// Token: 0x06004ADC RID: 19164
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsStreamingCompletedForLayers2_Internal(IntPtr @this, IntPtr InDataLayerLabels, bool bUseGridLoadingRange, float Radius, bool bNeedProgress, ref float OutProgress, bool bRequirePhysicsReady);
 
-		// Token: 0x06011638 RID: 71224 RVA: 0x00198693 File Offset: 0x00196893
+		// Token: 0x06004ADD RID: 19165 RVA: 0x00068CBD File Offset: 0x00066EBD
 		static UWorldPartitionStreamingSourceComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.WorldPartitionStreamingSourceComponent");
 		}
 
-		// Token: 0x06011639 RID: 71225 RVA: 0x001986A1 File Offset: 0x001968A1
+		// Token: 0x06004ADE RID: 19166 RVA: 0x00068CCB File Offset: 0x00066ECB
 		protected UWorldPartitionStreamingSourceComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040094D4 RID: 38100
+		// Token: 0x04001D81 RID: 7553
 		public new const string __ObjectPath = "/Script/Engine.WorldPartitionStreamingSourceComponent";
 
-		// Token: 0x040094D5 RID: 38101
+		// Token: 0x04001D82 RID: 7554
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040094D6 RID: 38102
+		// Token: 0x04001D83 RID: 7555
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040094D7 RID: 38103
+		// Token: 0x04001D84 RID: 7556
 		internal static int __PropertyOffset_TargetBehavior;
 
-		// Token: 0x040094D8 RID: 38104
+		// Token: 0x04001D85 RID: 7557
 		internal static int __PropertyOffset_DisableBehavior;
 
-		// Token: 0x040094D9 RID: 38105
+		// Token: 0x04001D86 RID: 7558
 		internal static int __PropertyOffset_TargetGrids;
 
-		// Token: 0x040094DA RID: 38106
+		// Token: 0x04001D87 RID: 7559
 		[Nullable(2)]
 		private TArray<FName> _TargetGrids;
 
-		// Token: 0x040094DB RID: 38107
+		// Token: 0x04001D88 RID: 7560
 		internal static int __PropertyOffset_Shapes;
 
-		// Token: 0x040094DC RID: 38108
+		// Token: 0x04001D89 RID: 7561
 		[Nullable(new byte[]
 		{
 			2,
@@ -270,34 +241,31 @@ namespace UnrealEngine
 		})]
 		private TArray<FStreamingSourceShape> _Shapes;
 
-		// Token: 0x040094DD RID: 38109
+		// Token: 0x04001D8A RID: 7562
 		internal static int __PropertyOffset_Priority;
 
-		// Token: 0x040094DE RID: 38110
+		// Token: 0x04001D8B RID: 7563
 		internal static int __PropertyOffset_bStreamingSourceShouldBlockOnSlowStreaming;
 
-		// Token: 0x040094DF RID: 38111
+		// Token: 0x04001D8C RID: 7564
 		internal static int __PropertyOffset_bStreamingSourceEnabled;
 
-		// Token: 0x040094E0 RID: 38112
-		internal static int __PropertyOffset_TargetState;
-
-		// Token: 0x040094E1 RID: 38113
+		// Token: 0x04001D8D RID: 7565
 		private static IntPtr __IsStreamingSourceEnabled_NativeFunctionPtr;
 
-		// Token: 0x040094E2 RID: 38114
+		// Token: 0x04001D8E RID: 7566
 		private static IntPtr __EnableStreamingSource_NativeFunctionPtr;
 
-		// Token: 0x040094E3 RID: 38115
+		// Token: 0x04001D8F RID: 7567
 		private static IntPtr __DisableStreamingSource_NativeFunctionPtr;
 
-		// Token: 0x02002E19 RID: 11801
+		// Token: 0x020009F9 RID: 2553
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsStreamingSourceEnabled_FunctionParams
 		{
-			// Token: 0x0401689E RID: 92318
+			// Token: 0x0400599E RID: 22942
 			[FieldOffset(0)]
 			public bool __Result;
 		}

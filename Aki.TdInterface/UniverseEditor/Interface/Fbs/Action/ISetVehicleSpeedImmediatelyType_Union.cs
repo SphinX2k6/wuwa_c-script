@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070A9 RID: 28841
+	// Token: 0x02007875 RID: 30837
 	public enum ISetVehicleSpeedImmediatelyType_Union : byte
 	{
-		// Token: 0x04011B11 RID: 72465
+		// Token: 0x04012AFF RID: 76543
 		NONE,
-		// Token: 0x04011B12 RID: 72466
+		// Token: 0x04012B00 RID: 76544
 		ISetVehicleSpeedImmediatelyType,
-		// Token: 0x04011B13 RID: 72467
+		// Token: 0x04012B01 RID: 76545
 		ISetTotalVehicleSpeedImmediately,
-		// Token: 0x04011B14 RID: 72468
+		// Token: 0x04012B02 RID: 76546
 		ISetHorizontalVerticalSpeedImmediately
 	}
 }

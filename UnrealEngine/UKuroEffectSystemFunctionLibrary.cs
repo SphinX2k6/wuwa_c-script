@@ -6,51 +6,51 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018D1 RID: 6353
+	// Token: 0x020003EB RID: 1003
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.KuroEffectSystemFunctionLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKuroEffectSystemFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06017811 RID: 96273 RVA: 0x00226941 File Offset: 0x00224B41
+		// Token: 0x06006216 RID: 25110 RVA: 0x0008C3A5 File Offset: 0x0008A5A5
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroEffectSystemFunctionLibrary._ClassPtr;
 		}
 
-		// Token: 0x06017812 RID: 96274 RVA: 0x00226950 File Offset: 0x00224B50
+		// Token: 0x06006217 RID: 25111 RVA: 0x0008C3B4 File Offset: 0x0008A5B4
 		public UKuroEffectSystemFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(UKuroEffectSystemFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06017813 RID: 96275 RVA: 0x00226978 File Offset: 0x00224B78
+		// Token: 0x06006218 RID: 25112 RVA: 0x0008C3DC File Offset: 0x0008A5DC
 		[NullableContext(1)]
 		public UKuroEffectSystemFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroEffectSystemFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06017814 RID: 96276
+		// Token: 0x06006219 RID: 25113
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void UpdateIsGameRunning(bool bIsGameRunning);
 
-		// Token: 0x06017815 RID: 96277
+		// Token: 0x0600621A RID: 25114
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void UpdateBodyEffect(int Id, float Opacity, bool bVisible, bool bCastShadow);
 
-		// Token: 0x06017816 RID: 96278
+		// Token: 0x0600621B RID: 25115
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void TickHandleInEditor(int Id, float Delta);
 
-		// Token: 0x06017817 RID: 96279
+		// Token: 0x0600621C RID: 25116
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void StopLimitedEffectFromEntityImmediately(int EntityId, bool RootOnly);
 
-		// Token: 0x06017818 RID: 96280
+		// Token: 0x0600621D RID: 25117
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void StopEffectFromEntity(int EntityId, FName FilterName, bool Immediately);
 
-		// Token: 0x06017819 RID: 96281 RVA: 0x002269AC File Offset: 0x00224BAC
+		// Token: 0x0600621E RID: 25118 RVA: 0x0008C410 File Offset: 0x0008A610
 		[NullableContext(1)]
 		public unsafe static bool StopEffectById(int Handle, string Reason, bool Immediately, bool bDestroyActor = false)
 		{
@@ -60,7 +60,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601781A RID: 96282 RVA: 0x002269D4 File Offset: 0x00224BD4
+		// Token: 0x0600621F RID: 25119 RVA: 0x0008C438 File Offset: 0x0008A638
 		public unsafe static int SpawnUnloopedEffectFromSkeletalContext(UObject WorldContext, in FTransformDouble Transform, [Nullable(1)] string Path, [Nullable(1)] string Reason, in FKuroSkeletalMeshEffectContext Context, in FKuroEffectBeforeInitCallback BeforeInitCallback, in FKuroEffectInitCallback Callback, in FKuroEffectBeforePlayCallback BeforePlayCallback, in FKuroEffectOnClearCallback OnClearCallback, byte EffectType = 3, bool bPrepare = false, bool bForceCreateActor = false)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -83,7 +83,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601781B RID: 96283 RVA: 0x00226A90 File Offset: 0x00224C90
+		// Token: 0x06006220 RID: 25120 RVA: 0x0008C4F4 File Offset: 0x0008A6F4
 		public unsafe static int SpawnUnloopedEffectFromGhostContext(UObject WorldContext, in FTransformDouble Transform, [Nullable(1)] string Path, [Nullable(1)] string Reason, in FKuroEffectRuntimeGhostEffectContext Context, in FKuroEffectBeforeInitCallback BeforeInitCallback, in FKuroEffectInitCallback Callback, in FKuroEffectBeforePlayCallback BeforePlayCallback, in FKuroEffectOnClearCallback OnClearCallback, byte EffectType = 3, bool bPrepare = false, bool bForceCreateActor = false)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -106,7 +106,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601781C RID: 96284 RVA: 0x00226B4C File Offset: 0x00224D4C
+		// Token: 0x06006221 RID: 25121 RVA: 0x0008C5B0 File Offset: 0x0008A7B0
 		public unsafe static int SpawnUnloopedEffectFromAudioContext(UObject WorldContext, in FTransformDouble Transform, [Nullable(1)] string Path, [Nullable(1)] string Reason, in FKuroEffectAudioContext Context, in FKuroEffectBeforeInitCallback BeforeInitCallback, in FKuroEffectInitCallback Callback, in FKuroEffectBeforePlayCallback BeforePlayCallback, in FKuroEffectOnClearCallback OnClearCallback, byte EffectType = 3, bool bPrepare = false, bool bForceCreateActor = false)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -129,7 +129,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601781D RID: 96285 RVA: 0x00226C08 File Offset: 0x00224E08
+		// Token: 0x06006222 RID: 25122 RVA: 0x0008C66C File Offset: 0x0008A86C
 		public unsafe static int SpawnUnloopedEffect(UObject WorldContext, in FTransformDouble Transform, [Nullable(1)] string Path, [Nullable(1)] string Reason, in FKuroEffectContext Context, in FKuroEffectBeforeInitCallback BeforeInitCallback, in FKuroEffectInitCallback Callback, in FKuroEffectBeforePlayCallback BeforePlayCallback, in FKuroEffectOnClearCallback OnClearCallback, byte EffectType = 3, bool bPrepare = false, bool bForceCreateActor = false)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -152,7 +152,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601781E RID: 96286 RVA: 0x00226CC4 File Offset: 0x00224EC4
+		// Token: 0x06006223 RID: 25123 RVA: 0x0008C728 File Offset: 0x0008A928
 		public unsafe static int SpawnEffectWithActorFromSkeletalContext(UObject WorldContext, AActor Actor, [Nullable(1)] string Path, [Nullable(1)] string Reason, in FKuroSkeletalMeshEffectContext Context, bool bAutoPlay = true, bool bIsExternalActor = true, byte EffectType = 3)
 		{
 			FString fstring = FString.AllocTemp(Path);
@@ -163,7 +163,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601781F RID: 96287 RVA: 0x00226D34 File Offset: 0x00224F34
+		// Token: 0x06006224 RID: 25124 RVA: 0x0008C798 File Offset: 0x0008A998
 		public unsafe static int SpawnEffectWithActorFromGhostContext(UObject WorldContext, AActor Actor, [Nullable(1)] string Path, [Nullable(1)] string Reason, in FKuroEffectRuntimeGhostEffectContext Context, bool bAutoPlay = true, bool bIsExternalActor = true, byte EffectType = 3)
 		{
 			FString fstring = FString.AllocTemp(Path);
@@ -174,7 +174,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06017820 RID: 96288 RVA: 0x00226DA4 File Offset: 0x00224FA4
+		// Token: 0x06006225 RID: 25125 RVA: 0x0008C808 File Offset: 0x0008AA08
 		public unsafe static int SpawnEffectWithActorFromAudioContext(UObject WorldContext, AActor Actor, [Nullable(1)] string Path, [Nullable(1)] string Reason, in FKuroEffectAudioContext Context, bool bAutoPlay = true, bool bIsExternalActor = true, byte EffectType = 3)
 		{
 			FString fstring = FString.AllocTemp(Path);
@@ -185,7 +185,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06017821 RID: 96289 RVA: 0x00226E14 File Offset: 0x00225014
+		// Token: 0x06006226 RID: 25126 RVA: 0x0008C878 File Offset: 0x0008AA78
 		public unsafe static int SpawnEffectWithActor(UObject WorldContext, AActor Actor, [Nullable(1)] string Path, [Nullable(1)] string Reason, in FKuroEffectContext Context, bool bAutoPlay = true, bool bIsExternalActor = true, byte EffectType = 3)
 		{
 			FString fstring = FString.AllocTemp(Path);
@@ -196,7 +196,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06017822 RID: 96290 RVA: 0x00226E84 File Offset: 0x00225084
+		// Token: 0x06006227 RID: 25127 RVA: 0x0008C8E8 File Offset: 0x0008AAE8
 		public unsafe static int SpawnEffectFromSkeletalContext(UObject WorldContext, in FTransformDouble Transform, [Nullable(1)] string Path, [Nullable(1)] string Reason, in FKuroSkeletalMeshEffectContext Context, in FKuroEffectBeforeInitCallback BeforeInitCallback, in FKuroEffectInitCallback Callback, in FKuroEffectBeforePlayCallback BeforePlayCallback, in FKuroEffectOnClearCallback OnClearCallback, byte EffectType = 3, bool bPrepare = false, bool bForceCreateActor = false)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -219,7 +219,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06017823 RID: 96291 RVA: 0x00226F40 File Offset: 0x00225140
+		// Token: 0x06006228 RID: 25128 RVA: 0x0008C9A4 File Offset: 0x0008ABA4
 		public unsafe static int SpawnEffectFromGhostContext(UObject WorldContext, in FTransformDouble Transform, [Nullable(1)] string Path, [Nullable(1)] string Reason, in FKuroEffectRuntimeGhostEffectContext Context, in FKuroEffectBeforeInitCallback BeforeInitCallback, in FKuroEffectInitCallback Callback, in FKuroEffectBeforePlayCallback BeforePlayCallback, in FKuroEffectOnClearCallback OnClearCallback, byte EffectType = 3, bool bPrepare = false, bool bForceCreateActor = false)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -242,7 +242,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06017824 RID: 96292 RVA: 0x00226FFC File Offset: 0x002251FC
+		// Token: 0x06006229 RID: 25129 RVA: 0x0008CA60 File Offset: 0x0008AC60
 		public unsafe static int SpawnEffectFromAudioContext(UObject WorldContext, in FTransformDouble Transform, [Nullable(1)] string Path, [Nullable(1)] string Reason, in FKuroEffectAudioContext Context, in FKuroEffectBeforeInitCallback BeforeInitCallback, in FKuroEffectInitCallback Callback, in FKuroEffectBeforePlayCallback BeforePlayCallback, in FKuroEffectOnClearCallback OnClearCallback, byte EffectType = 3, bool bPrepare = false, bool bForceCreateActor = false)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -265,7 +265,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06017825 RID: 96293 RVA: 0x002270B8 File Offset: 0x002252B8
+		// Token: 0x0600622A RID: 25130 RVA: 0x0008CB1C File Offset: 0x0008AD1C
 		public unsafe static int SpawnEffect(UObject WorldContext, in FTransformDouble Transform, [Nullable(1)] string Path, [Nullable(1)] string Reason, in FKuroEffectContext Context, in FKuroEffectBeforeInitCallback BeforeInitCallback, in FKuroEffectInitCallback Callback, in FKuroEffectBeforePlayCallback BeforePlayCallback, in FKuroEffectOnClearCallback OnClearCallback, byte EffectType = 3, bool bPrepare = false, bool bForceCreateActor = false)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -288,57 +288,61 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06017826 RID: 96294
+		// Token: 0x0600622B RID: 25131
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetUseDebugDrawNew(bool bUseDebugDrawNew);
 
-		// Token: 0x06017827 RID: 96295
+		// Token: 0x0600622C RID: 25132
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetTimeScale(int Id, float TimeScale, bool bIgnoreGlobalTimeScale = false);
 
-		// Token: 0x06017828 RID: 96296
+		// Token: 0x0600622D RID: 25133
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetThreeStageTime(int Id, float StartTime, float LoopTime, float EndTime, bool bResetPassTime);
 
-		// Token: 0x06017829 RID: 96297
+		// Token: 0x0600622E RID: 25134
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetHandleLifeCycle(int Id, float Time);
 
-		// Token: 0x0601782A RID: 96298
+		// Token: 0x0600622F RID: 25135
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetGlobalTimeScale(float InGlobalTimeScale);
 
-		// Token: 0x0601782B RID: 96299
+		// Token: 0x06006230 RID: 25136
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetGlobalStoppingTime(bool bStoppingTime, float PlayTime, int Source = 1);
 
-		// Token: 0x0601782C RID: 96300
+		// Token: 0x06006231 RID: 25137
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		public static extern void SetEntityUltraSkillState(int EntityId, bool InUltraSkill);
+
+		// Token: 0x06006232 RID: 25138
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetEffectStoppingTimeFromEntity(int EntityId, bool bStoppingTime, int Source = 1);
 
-		// Token: 0x0601782D RID: 96301
+		// Token: 0x06006233 RID: 25139
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetEffectStoppingTime(int EffectId, bool bStoppingTime, int Source = 1);
 
-		// Token: 0x0601782E RID: 96302
+		// Token: 0x06006234 RID: 25140
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetEffectQualityLevel(int Id, int QualityLevel);
 
-		// Token: 0x0601782F RID: 96303 RVA: 0x00227172 File Offset: 0x00225372
+		// Token: 0x06006235 RID: 25141 RVA: 0x0008CBD6 File Offset: 0x0008ADD6
 		public static void SetEffectParameterNiagara(int Id, in FKuroEffectNiagaraParametersStruct Parameter)
 		{
 			UKuroEffectSystemFunctionLibrary.__SetEffectParameterNiagara_Internal(Id, (Parameter ?? new FKuroEffectNiagaraParametersStruct()).NativePtr);
 		}
 
-		// Token: 0x06017830 RID: 96304
+		// Token: 0x06006236 RID: 25142
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetEffectLruCapacity(int Capacity);
 
-		// Token: 0x06017831 RID: 96305
+		// Token: 0x06006237 RID: 25143
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetEffectIgnoreVisibilityOptimize(int EffectId, bool bIgnore);
 
-		// Token: 0x06017832 RID: 96306 RVA: 0x0022718C File Offset: 0x0022538C
+		// Token: 0x06006238 RID: 25144 RVA: 0x0008CBF0 File Offset: 0x0008ADF0
 		[NullableContext(1)]
 		public unsafe static void SetEffectHidden(int Handle, bool bHidden, string Reason, bool bIsLogic = false)
 		{
@@ -347,23 +351,23 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06017833 RID: 96307
+		// Token: 0x06006239 RID: 25145
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetEffectExtraState(int EffectId, int ExtraState);
 
-		// Token: 0x06017834 RID: 96308
+		// Token: 0x0600623A RID: 25146
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetEffectDataFloatConstParam(int Id, FName ParamName, float Value);
 
-		// Token: 0x06017835 RID: 96309
+		// Token: 0x0600623B RID: 25147
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetAdditionTimeScaleEnable(int SourceType, bool Enable);
 
-		// Token: 0x06017836 RID: 96310
+		// Token: 0x0600623C RID: 25148
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetAdditionTimeScale(int SourceType, int Id, float TimeScale);
 
-		// Token: 0x06017837 RID: 96311 RVA: 0x002271B4 File Offset: 0x002253B4
+		// Token: 0x0600623D RID: 25149 RVA: 0x0008CC18 File Offset: 0x0008AE18
 		[NullableContext(1)]
 		public unsafe static void ReplayEffect(int Id, string Reason, in FTransformDouble Transform, bool bResetTransform = false)
 		{
@@ -374,11 +378,11 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06017838 RID: 96312
+		// Token: 0x0600623E RID: 25150
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void RemoveFinishCallback(int Id);
 
-		// Token: 0x06017839 RID: 96313 RVA: 0x002271F8 File Offset: 0x002253F8
+		// Token: 0x0600623F RID: 25151 RVA: 0x0008CC5C File Offset: 0x0008AE5C
 		public static void RegisterJsFunction(in FSkeletalMeshSpecOnBodyEffectChangeRetVal InSkeletalMeshSpec_OnBodyEffectChange, in FSkeletalMeshSpecCreateRenderCompRetVal InSkeletalMeshSpec_CreateRenderingComponent, in FSkeletalMeshSpecDestroyRenderingComponent InSkeletalMeshSpec_DestroyRenderingComponent, in FEffectHandleGetEntityOwnerActorRetVal InEffectHandle_GetEntityOwnerActor, in FEffectHandleGetEntityModelConfigIdRetVal InEffectHandle_GetEntityModelConfigId, in FEffectHandleGetOrAddEffectDynamicGroupRetVal InEffectHandle_GetOrAddEffectDynamicGroup, in FAudioSystemGetAkComponentRetVal InAudioSystem_GetAkComponent, in FAudioSystemExecuteActionStop InAudioSystem_ExecuteActionStop, in FAudioSystemPostEventTransformRetVal InAudioSystem_PostEventTransform, in FAudioSystemPostEventAkComponentRetVal InAudioSystem_PostEventAkComponent, in FNiagaraSpecIsNeedQualityBiasRetVal InNiagaraSpec_IsNeedQualityBias, in FPostProcessSpecIsNeedPostEffectRetVal InPostProcessSpec_IsNeedPostEffect, in FPostProcessSpecIsDisableInUltraSkillRetVal InPostProcessSpec_IsDisableInUltraSkill, in FActorSystemGetRetVal InActorSystem_Get, in FActorSystemPutRetVal InActorSystem_Put, in FEffectSystemSetEffectView InEffectSystem_SetEffectView, in FEffectSystemCheckIsNetPlayerRetVal InEffectSystem_CheckIsNetPlayer, in FEffectSystemCheckMobileBlackEffectRetVal InEffectSystem_CheckMobileBlackEffect, in FEffectSpecRegisterBodyEffect InEffectSpec_RegisterBodyEffect, in FEffectSpecUnregisterBodyEffect InEffectSpec_UnregisterBodyEffect, in FMaterialSpecGetRenderingComponentByContextRetVal InMaterialSpec_GetRenderingComponentByContext, in FMaterialSpecGetRenderingComponentBySkeletalRetVal InMaterialSpec_GetRenderingComponentBySkeletal, in FMaterialSpecSpawnRenderActorRetVal InMaterialSpec_SpawnRenderActor, in FMaterialSpecGetRenderingComponentByRenderActorRetVal InMaterialSpec_GetRenderingComponentByRenderActor, in FMaterialSpecAddMaterialControllerDataRetVal InMaterialSpec_AddMaterialControllerData, in FMaterialSpecRemoveMaterialControllerData InMaterialSpec_RemoveMaterialControllerData, in FMaterialSpecDestroyRenderingComponent InMaterialSpec_DestroyRenderingComponent, in FEffectAudioControllerAddPlayEffectAudioRetVal InEffectAudioController_AddPlayEffectAudio, in FEffectAudioControllerAddPlayEffectAudioPriorityRetVal InEffectAudioController_AddPlayEffectAudioPriority, in FEffectAudioControllerOnStopEffectAudio InEffectAudioController_OnStopEffectAudio)
 		{
 			FSkeletalMeshSpecOnBodyEffectChangeRetVal fskeletalMeshSpecOnBodyEffectChangeRetVal = InSkeletalMeshSpec_OnBodyEffectChange;
@@ -443,7 +447,7 @@ namespace UnrealEngine
 			UKuroEffectSystemFunctionLibrary.__RegisterJsFunction_Internal(inSkeletalMeshSpec_OnBodyEffectChange, inSkeletalMeshSpec_CreateRenderingComponent, inSkeletalMeshSpec_DestroyRenderingComponent, inEffectHandle_GetEntityOwnerActor, inEffectHandle_GetEntityModelConfigId, inEffectHandle_GetOrAddEffectDynamicGroup, inAudioSystem_GetAkComponent, inAudioSystem_ExecuteActionStop, inAudioSystem_PostEventTransform, inAudioSystem_PostEventAkComponent, inNiagaraSpec_IsNeedQualityBias, inPostProcessSpec_IsNeedPostEffect, inPostProcessSpec_IsDisableInUltraSkill, inActorSystem_Get, inActorSystem_Put, inEffectSystem_SetEffectView, inEffectSystem_CheckIsNetPlayer, inEffectSystem_CheckMobileBlackEffect, inEffectSpec_RegisterBodyEffect, inEffectSpec_UnregisterBodyEffect, inMaterialSpec_GetRenderingComponentByContext, inMaterialSpec_GetRenderingComponentBySkeletal, inMaterialSpec_SpawnRenderActor, inMaterialSpec_GetRenderingComponentByRenderActor, inMaterialSpec_AddMaterialControllerData, inMaterialSpec_RemoveMaterialControllerData, inMaterialSpec_DestroyRenderingComponent, inEffectAudioController_AddPlayEffectAudio, inEffectAudioController_AddPlayEffectAudioPriority, (feffectAudioControllerOnStopEffectAudio != null) ? feffectAudioControllerOnStopEffectAudio.NativePtr : ((IntPtr)0));
 		}
 
-		// Token: 0x0601783A RID: 96314 RVA: 0x002273E6 File Offset: 0x002255E6
+		// Token: 0x06006240 RID: 25152 RVA: 0x0008CE4A File Offset: 0x0008B04A
 		public static void RefreshEffectForSpecData([Nullable(new byte[]
 		{
 			2,
@@ -457,61 +461,65 @@ namespace UnrealEngine
 			UKuroEffectSystemFunctionLibrary.__RefreshEffectForSpecData_Internal((SpecDataArray ?? new TArray<FKuroEffectSpecData>()).NativePtr, (SpecChildDataArray ?? new TArray<FKuroEffectSpecChildData>()).NativePtr, IsRefresh);
 		}
 
-		// Token: 0x0601783B RID: 96315
+		// Token: 0x06006241 RID: 25153
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void OnUiSceneStateChange(EKuroUI3DState UiSceneState);
 
-		// Token: 0x0601783C RID: 96316
+		// Token: 0x06006242 RID: 25154
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void OnTickSystemPausedChange(bool bIsPaused);
 
-		// Token: 0x0601783D RID: 96317 RVA: 0x0022740E File Offset: 0x0022560E
+		// Token: 0x06006243 RID: 25155 RVA: 0x0008CE72 File Offset: 0x0008B072
 		public static void OnPlayerEffectContainerFormationLoaded(in TArray<FKuroSceneTeamItem> SceneTeamItems)
 		{
 			UKuroEffectSystemFunctionLibrary.__OnPlayerEffectContainerFormationLoaded_Internal((SceneTeamItems ?? new TArray<FKuroSceneTeamItem>()).NativePtr);
 		}
 
-		// Token: 0x0601783E RID: 96318
+		// Token: 0x06006244 RID: 25156
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void OnIsInEditorTickChange(bool bIsInEditorTick);
 
-		// Token: 0x0601783F RID: 96319
+		// Token: 0x06006245 RID: 25157
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void OnGlobalTimeScaleChange();
 
-		// Token: 0x06017840 RID: 96320
+		// Token: 0x06006246 RID: 25158
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void OnEffectQualityBiasRemoteChange(float EffectQualityBiasRemote);
 
-		// Token: 0x06017841 RID: 96321
+		// Token: 0x06006247 RID: 25159
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void OnDisableOtherEffectChange(bool bDisableOtherEffect);
 
-		// Token: 0x06017842 RID: 96322
+		// Token: 0x06006248 RID: 25160
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsPlaying(int Id);
 
-		// Token: 0x06017843 RID: 96323
+		// Token: 0x06006249 RID: 25161
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsHandleFreeze(int Id);
 
-		// Token: 0x06017844 RID: 96324
+		// Token: 0x0600624A RID: 25162
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		public static extern bool IsEntityInUltraSkill(int EntityId);
+
+		// Token: 0x0600624B RID: 25163
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsEffectValid(int Id);
 
-		// Token: 0x06017845 RID: 96325
+		// Token: 0x0600624C RID: 25164
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsEffectSpecDataContainsType(in FName EffectPath, byte Type);
 
-		// Token: 0x06017846 RID: 96326
+		// Token: 0x0600624D RID: 25165
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsEffectActorValid(int Id);
 
-		// Token: 0x06017847 RID: 96327
+		// Token: 0x0600624E RID: 25166
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void InitStaticGlobalData(bool bUseLog, bool bIsInEditorTick, bool bUseDbConfig);
 
-		// Token: 0x06017848 RID: 96328 RVA: 0x00227428 File Offset: 0x00225628
+		// Token: 0x0600624F RID: 25167 RVA: 0x0008CE8C File Offset: 0x0008B08C
 		public static bool Initialize(UGameInstance GameInstance, [Nullable(new byte[]
 		{
 			2,
@@ -525,92 +533,92 @@ namespace UnrealEngine
 			return UKuroEffectSystemFunctionLibrary.__Initialize_Internal((GameInstance != null) ? GameInstance.NativePtr : IntPtr.Zero, (SpecDataArray ?? new TArray<FKuroEffectSpecData>()).NativePtr, (SpecChildDataArray ?? new TArray<FKuroEffectSpecChildData>()).NativePtr, InIsGameRunning, InBoundsVisibleThreshold, InMaxVisibleCullDeltaTime, InWasRecentlyRenderInterval, InUseVisibilityTestPass, EffectViewClass._NativePtr, IsResetSpecData);
 		}
 
-		// Token: 0x06017849 RID: 96329
+		// Token: 0x06006250 RID: 25168
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool HasNiagaraComponentHandle(int Id);
 
-		// Token: 0x0601784A RID: 96330
+		// Token: 0x06006251 RID: 25169
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool HasInitialize();
 
-		// Token: 0x0601784B RID: 96331
+		// Token: 0x06006252 RID: 25170
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool HasEffectForSpecData();
 
-		// Token: 0x0601784C RID: 96332
+		// Token: 0x06006253 RID: 25171
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void HandleSeekToTimeWithProcess(int Id, float Time, bool bSeekContinue = false, float Delta = -1f);
 
-		// Token: 0x0601784D RID: 96333
+		// Token: 0x06006254 RID: 25172
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool HandleSeekToTime(int Id, float Time, bool bAutoLoop, bool bForce = false);
 
-		// Token: 0x0601784E RID: 96334
+		// Token: 0x06006255 RID: 25173
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool GlobalStoppingTime(int Source = 1);
 
-		// Token: 0x0601784F RID: 96335
+		// Token: 0x06006256 RID: 25174
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GlobalStoppingPlayTime(int Source = 1);
 
-		// Token: 0x06017850 RID: 96336
+		// Token: 0x06006257 RID: 25175
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetTotalPassTime(int Id);
 
-		// Token: 0x06017851 RID: 96337 RVA: 0x0022747C File Offset: 0x0022567C
+		// Token: 0x06006258 RID: 25176 RVA: 0x0008CEE0 File Offset: 0x0008B0E0
 		public static UNiagaraComponent GetSureNiagaraComponent(int Id)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UNiagaraComponent>(UKuroEffectSystemFunctionLibrary.__GetSureNiagaraComponent_Internal(Id));
 		}
 
-		// Token: 0x06017852 RID: 96338 RVA: 0x00227489 File Offset: 0x00225689
+		// Token: 0x06006259 RID: 25177 RVA: 0x0008CEED File Offset: 0x0008B0ED
 		public static AActor GetSureEffectActor(int Id)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(UKuroEffectSystemFunctionLibrary.__GetSureEffectActor_Internal(Id));
 		}
 
-		// Token: 0x06017853 RID: 96339
+		// Token: 0x0600625A RID: 25178
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetSeekToTargetTime(int Id);
 
-		// Token: 0x06017854 RID: 96340
+		// Token: 0x0600625B RID: 25179
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int GetPlayerEffectLruSize(int Pos);
 
-		// Token: 0x06017855 RID: 96341 RVA: 0x00227496 File Offset: 0x00225696
+		// Token: 0x0600625C RID: 25180 RVA: 0x0008CEFA File Offset: 0x0008B0FA
 		[NullableContext(1)]
 		public static string GetPath(int Id)
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroEffectSystemFunctionLibrary.__GetPath_Internal(Id));
 		}
 
-		// Token: 0x06017856 RID: 96342
+		// Token: 0x0600625D RID: 25181
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetPassTime(int Id);
 
-		// Token: 0x06017857 RID: 96343
+		// Token: 0x0600625E RID: 25182
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetLastStopTime(int Id);
 
-		// Token: 0x06017858 RID: 96344
+		// Token: 0x0600625F RID: 25183
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetLastPlayTime(int Id);
 
-		// Token: 0x06017859 RID: 96345
+		// Token: 0x06006260 RID: 25184
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern byte GetEffectSpecDataType(in FName EffectPath);
 
-		// Token: 0x0601785A RID: 96346 RVA: 0x002274A3 File Offset: 0x002256A3
+		// Token: 0x06006261 RID: 25185 RVA: 0x0008CF07 File Offset: 0x0008B107
 		public static UEffectModelBase GetEffectModel(int Id)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UEffectModelBase>(UKuroEffectSystemFunctionLibrary.__GetEffectModel_Internal(Id));
 		}
 
-		// Token: 0x0601785B RID: 96347
+		// Token: 0x06006262 RID: 25186
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int GetEffectLruSize();
 
-		// Token: 0x0601785C RID: 96348 RVA: 0x002274B0 File Offset: 0x002256B0
+		// Token: 0x06006263 RID: 25187 RVA: 0x0008CF14 File Offset: 0x0008B114
 		[NullableContext(1)]
 		public unsafe static int GetEffectLruCount(string Path)
 		{
@@ -620,35 +628,35 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601785D RID: 96349
+		// Token: 0x06006264 RID: 25188
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int GetEffectLruCapacity();
 
-		// Token: 0x0601785E RID: 96350
+		// Token: 0x06006265 RID: 25189
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int GetEffectCount();
 
-		// Token: 0x0601785F RID: 96351
+		// Token: 0x06006266 RID: 25190
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool GetAdditionTimeScaleEnable(int SourceType);
 
-		// Token: 0x06017860 RID: 96352
+		// Token: 0x06006267 RID: 25191
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int GetActiveEffectCount();
 
-		// Token: 0x06017861 RID: 96353
+		// Token: 0x06006268 RID: 25192
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void FreezeHandle(int Id, bool bFreeze, bool bForce = false);
 
-		// Token: 0x06017862 RID: 96354
+		// Token: 0x06006269 RID: 25193
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void ForceCheckPendingInit(int Handle);
 
-		// Token: 0x06017863 RID: 96355
+		// Token: 0x0600626A RID: 25194
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EffectIsLoop(int Id);
 
-		// Token: 0x06017864 RID: 96356 RVA: 0x002274D4 File Offset: 0x002256D4
+		// Token: 0x0600626B RID: 25195 RVA: 0x0008CF38 File Offset: 0x0008B138
 		public static void DynamicRegisterSpawnCallback(int EffectId, in FKuroEffectInitCallback Callback, in FKuroEffectOnClearCallback OnClearCallback)
 		{
 			FKuroEffectInitCallback fkuroEffectInitCallback = Callback;
@@ -657,61 +665,65 @@ namespace UnrealEngine
 			UKuroEffectSystemFunctionLibrary.__DynamicRegisterSpawnCallback_Internal(EffectId, callback, (fkuroEffectOnClearCallback != null) ? fkuroEffectOnClearCallback.NativePtr : ((IntPtr)0));
 		}
 
-		// Token: 0x06017865 RID: 96357
+		// Token: 0x0600626C RID: 25196
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void DebugUpdate(int Id, bool bDebugUpdate);
 
-		// Token: 0x06017866 RID: 96358
+		// Token: 0x0600626D RID: 25197
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void DebugPrintEffect();
 
-		// Token: 0x06017867 RID: 96359
+		// Token: 0x0600626E RID: 25198
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void DebugPrintCurrentImportanceEffects();
 
-		// Token: 0x06017868 RID: 96360
+		// Token: 0x0600626F RID: 25199
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void DebugPrintAllErrorEffects();
 
-		// Token: 0x06017869 RID: 96361 RVA: 0x002274FA File Offset: 0x002256FA
+		// Token: 0x06006270 RID: 25200 RVA: 0x0008CF5E File Offset: 0x0008B15E
 		public static void CollectMaterialVectorCurve(int Id, FName Key, in FKuroCurveVector Value)
 		{
 			UKuroEffectSystemFunctionLibrary.__CollectMaterialVectorCurve_Internal(Id, Key, (Value ?? new FKuroCurveVector()).NativePtr);
 		}
 
-		// Token: 0x0601786A RID: 96362 RVA: 0x00227513 File Offset: 0x00225713
+		// Token: 0x06006271 RID: 25201 RVA: 0x0008CF77 File Offset: 0x0008B177
 		public static void CollectMaterialLinearColorCurve(int Id, FName Key, in FKuroCurveLinearColor Value)
 		{
 			UKuroEffectSystemFunctionLibrary.__CollectMaterialLinearColorCurve_Internal(Id, Key, (Value ?? new FKuroCurveLinearColor()).NativePtr);
 		}
 
-		// Token: 0x0601786B RID: 96363 RVA: 0x0022752C File Offset: 0x0022572C
+		// Token: 0x06006272 RID: 25202 RVA: 0x0008CF90 File Offset: 0x0008B190
 		public static void CollectMaterialFloatCurve(int Id, FName Key, in FKuroCurveFloat Value)
 		{
 			UKuroEffectSystemFunctionLibrary.__CollectMaterialFloatCurve_Internal(Id, Key, (Value ?? new FKuroCurveFloat()).NativePtr);
 		}
 
-		// Token: 0x0601786C RID: 96364
+		// Token: 0x06006273 RID: 25203
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		public static extern void ClearUltraSkillState();
+
+		// Token: 0x06006274 RID: 25204
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void ClearPool(bool IsInternal);
 
-		// Token: 0x0601786D RID: 96365
+		// Token: 0x06006275 RID: 25205
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Clear();
 
-		// Token: 0x0601786E RID: 96366 RVA: 0x00227545 File Offset: 0x00225745
+		// Token: 0x06006276 RID: 25206 RVA: 0x0008CFA9 File Offset: 0x0008B1A9
 		public static void AttachToEffectSkeletalMesh(int Id, AActor AttachActor, FName SocketName = default(FName), EAttachmentRule TransformRule = EAttachmentRule.KeepRelative)
 		{
 			UKuroEffectSystemFunctionLibrary.__AttachToEffectSkeletalMesh_Internal(Id, (AttachActor != null) ? AttachActor.NativePtr : IntPtr.Zero, SocketName, TransformRule);
 		}
 
-		// Token: 0x0601786F RID: 96367 RVA: 0x0022755F File Offset: 0x0022575F
+		// Token: 0x06006277 RID: 25207 RVA: 0x0008CFC3 File Offset: 0x0008B1C3
 		public static void AttachSkeletalMesh(int Id, in FKuroSkeletalMeshEffectContext Context)
 		{
 			UKuroEffectSystemFunctionLibrary.__AttachSkeletalMesh_Internal(Id, (Context ?? new FKuroSkeletalMeshEffectContext()).NativePtr);
 		}
 
-		// Token: 0x06017870 RID: 96368 RVA: 0x00227577 File Offset: 0x00225777
+		// Token: 0x06006278 RID: 25208 RVA: 0x0008CFDB File Offset: 0x0008B1DB
 		public static void AddFinishCallback(int Id, in FKuroEffectFinishCallback Callback, in FKuroEffectOnClearCallback OnClearCallback)
 		{
 			FKuroEffectFinishCallback fkuroEffectFinishCallback = Callback;
@@ -720,154 +732,154 @@ namespace UnrealEngine
 			UKuroEffectSystemFunctionLibrary.__AddFinishCallback_Internal(Id, callback, (fkuroEffectOnClearCallback != null) ? fkuroEffectOnClearCallback.NativePtr : ((IntPtr)0));
 		}
 
-		// Token: 0x06017871 RID: 96369
+		// Token: 0x06006279 RID: 25209
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __StopEffectById_Internal(int Handle, in FString Reason, bool Immediately, bool bDestroyActor);
 
-		// Token: 0x06017872 RID: 96370
+		// Token: 0x0600627A RID: 25210
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __SpawnUnloopedEffectFromSkeletalContext_Internal(IntPtr WorldContext, in FTransformDouble Transform, in FString Path, in FString Reason, IntPtr Context, IntPtr BeforeInitCallback, IntPtr Callback, IntPtr BeforePlayCallback, IntPtr OnClearCallback, byte EffectType, bool bPrepare, bool bForceCreateActor);
 
-		// Token: 0x06017873 RID: 96371
+		// Token: 0x0600627B RID: 25211
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __SpawnUnloopedEffectFromGhostContext_Internal(IntPtr WorldContext, in FTransformDouble Transform, in FString Path, in FString Reason, IntPtr Context, IntPtr BeforeInitCallback, IntPtr Callback, IntPtr BeforePlayCallback, IntPtr OnClearCallback, byte EffectType, bool bPrepare, bool bForceCreateActor);
 
-		// Token: 0x06017874 RID: 96372
+		// Token: 0x0600627C RID: 25212
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __SpawnUnloopedEffectFromAudioContext_Internal(IntPtr WorldContext, in FTransformDouble Transform, in FString Path, in FString Reason, IntPtr Context, IntPtr BeforeInitCallback, IntPtr Callback, IntPtr BeforePlayCallback, IntPtr OnClearCallback, byte EffectType, bool bPrepare, bool bForceCreateActor);
 
-		// Token: 0x06017875 RID: 96373
+		// Token: 0x0600627D RID: 25213
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __SpawnUnloopedEffect_Internal(IntPtr WorldContext, in FTransformDouble Transform, in FString Path, in FString Reason, IntPtr Context, IntPtr BeforeInitCallback, IntPtr Callback, IntPtr BeforePlayCallback, IntPtr OnClearCallback, byte EffectType, bool bPrepare, bool bForceCreateActor);
 
-		// Token: 0x06017876 RID: 96374
+		// Token: 0x0600627E RID: 25214
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __SpawnEffectWithActorFromSkeletalContext_Internal(IntPtr WorldContext, IntPtr Actor, in FString Path, in FString Reason, IntPtr Context, bool bAutoPlay, bool bIsExternalActor, byte EffectType);
 
-		// Token: 0x06017877 RID: 96375
+		// Token: 0x0600627F RID: 25215
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __SpawnEffectWithActorFromGhostContext_Internal(IntPtr WorldContext, IntPtr Actor, in FString Path, in FString Reason, IntPtr Context, bool bAutoPlay, bool bIsExternalActor, byte EffectType);
 
-		// Token: 0x06017878 RID: 96376
+		// Token: 0x06006280 RID: 25216
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __SpawnEffectWithActorFromAudioContext_Internal(IntPtr WorldContext, IntPtr Actor, in FString Path, in FString Reason, IntPtr Context, bool bAutoPlay, bool bIsExternalActor, byte EffectType);
 
-		// Token: 0x06017879 RID: 96377
+		// Token: 0x06006281 RID: 25217
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __SpawnEffectWithActor_Internal(IntPtr WorldContext, IntPtr Actor, in FString Path, in FString Reason, IntPtr Context, bool bAutoPlay, bool bIsExternalActor, byte EffectType);
 
-		// Token: 0x0601787A RID: 96378
+		// Token: 0x06006282 RID: 25218
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __SpawnEffectFromSkeletalContext_Internal(IntPtr WorldContext, in FTransformDouble Transform, in FString Path, in FString Reason, IntPtr Context, IntPtr BeforeInitCallback, IntPtr Callback, IntPtr BeforePlayCallback, IntPtr OnClearCallback, byte EffectType, bool bPrepare, bool bForceCreateActor);
 
-		// Token: 0x0601787B RID: 96379
+		// Token: 0x06006283 RID: 25219
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __SpawnEffectFromGhostContext_Internal(IntPtr WorldContext, in FTransformDouble Transform, in FString Path, in FString Reason, IntPtr Context, IntPtr BeforeInitCallback, IntPtr Callback, IntPtr BeforePlayCallback, IntPtr OnClearCallback, byte EffectType, bool bPrepare, bool bForceCreateActor);
 
-		// Token: 0x0601787C RID: 96380
+		// Token: 0x06006284 RID: 25220
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __SpawnEffectFromAudioContext_Internal(IntPtr WorldContext, in FTransformDouble Transform, in FString Path, in FString Reason, IntPtr Context, IntPtr BeforeInitCallback, IntPtr Callback, IntPtr BeforePlayCallback, IntPtr OnClearCallback, byte EffectType, bool bPrepare, bool bForceCreateActor);
 
-		// Token: 0x0601787D RID: 96381
+		// Token: 0x06006285 RID: 25221
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __SpawnEffect_Internal(IntPtr WorldContext, in FTransformDouble Transform, in FString Path, in FString Reason, IntPtr Context, IntPtr BeforeInitCallback, IntPtr Callback, IntPtr BeforePlayCallback, IntPtr OnClearCallback, byte EffectType, bool bPrepare, bool bForceCreateActor);
 
-		// Token: 0x0601787E RID: 96382
+		// Token: 0x06006286 RID: 25222
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEffectParameterNiagara_Internal(int Id, IntPtr Parameter);
 
-		// Token: 0x0601787F RID: 96383
+		// Token: 0x06006287 RID: 25223
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEffectHidden_Internal(int Handle, bool bHidden, in FString Reason, bool bIsLogic);
 
-		// Token: 0x06017880 RID: 96384
+		// Token: 0x06006288 RID: 25224
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReplayEffect_Internal(int Id, in FString Reason, in FTransformDouble Transform, bool bResetTransform);
 
-		// Token: 0x06017881 RID: 96385
+		// Token: 0x06006289 RID: 25225
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RegisterJsFunction_Internal(IntPtr InSkeletalMeshSpec_OnBodyEffectChange, IntPtr InSkeletalMeshSpec_CreateRenderingComponent, IntPtr InSkeletalMeshSpec_DestroyRenderingComponent, IntPtr InEffectHandle_GetEntityOwnerActor, IntPtr InEffectHandle_GetEntityModelConfigId, IntPtr InEffectHandle_GetOrAddEffectDynamicGroup, IntPtr InAudioSystem_GetAkComponent, IntPtr InAudioSystem_ExecuteActionStop, IntPtr InAudioSystem_PostEventTransform, IntPtr InAudioSystem_PostEventAkComponent, IntPtr InNiagaraSpec_IsNeedQualityBias, IntPtr InPostProcessSpec_IsNeedPostEffect, IntPtr InPostProcessSpec_IsDisableInUltraSkill, IntPtr InActorSystem_Get, IntPtr InActorSystem_Put, IntPtr InEffectSystem_SetEffectView, IntPtr InEffectSystem_CheckIsNetPlayer, IntPtr InEffectSystem_CheckMobileBlackEffect, IntPtr InEffectSpec_RegisterBodyEffect, IntPtr InEffectSpec_UnregisterBodyEffect, IntPtr InMaterialSpec_GetRenderingComponentByContext, IntPtr InMaterialSpec_GetRenderingComponentBySkeletal, IntPtr InMaterialSpec_SpawnRenderActor, IntPtr InMaterialSpec_GetRenderingComponentByRenderActor, IntPtr InMaterialSpec_AddMaterialControllerData, IntPtr InMaterialSpec_RemoveMaterialControllerData, IntPtr InMaterialSpec_DestroyRenderingComponent, IntPtr InEffectAudioController_AddPlayEffectAudio, IntPtr InEffectAudioController_AddPlayEffectAudioPriority, IntPtr InEffectAudioController_OnStopEffectAudio);
 
-		// Token: 0x06017882 RID: 96386
+		// Token: 0x0600628A RID: 25226
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RefreshEffectForSpecData_Internal(IntPtr SpecDataArray, IntPtr SpecChildDataArray, bool IsRefresh);
 
-		// Token: 0x06017883 RID: 96387
+		// Token: 0x0600628B RID: 25227
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnPlayerEffectContainerFormationLoaded_Internal(IntPtr SceneTeamItems);
 
-		// Token: 0x06017884 RID: 96388
+		// Token: 0x0600628C RID: 25228
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Initialize_Internal(IntPtr GameInstance, IntPtr SpecDataArray, IntPtr SpecChildDataArray, bool InIsGameRunning, float InBoundsVisibleThreshold, float InMaxVisibleCullDeltaTime, float InWasRecentlyRenderInterval, bool InUseVisibilityTestPass, IntPtr EffectViewClass, bool IsResetSpecData);
 
-		// Token: 0x06017885 RID: 96389
+		// Token: 0x0600628D RID: 25229
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetSureNiagaraComponent_Internal(int Id);
 
-		// Token: 0x06017886 RID: 96390
+		// Token: 0x0600628E RID: 25230
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetSureEffectActor_Internal(int Id);
 
-		// Token: 0x06017887 RID: 96391
+		// Token: 0x0600628F RID: 25231
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetPath_Internal(int Id);
 
-		// Token: 0x06017888 RID: 96392
+		// Token: 0x06006290 RID: 25232
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetEffectModel_Internal(int Id);
 
-		// Token: 0x06017889 RID: 96393
+		// Token: 0x06006291 RID: 25233
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetEffectLruCount_Internal(in FString Path);
 
-		// Token: 0x0601788A RID: 96394
+		// Token: 0x06006292 RID: 25234
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __DynamicRegisterSpawnCallback_Internal(int EffectId, IntPtr Callback, IntPtr OnClearCallback);
 
-		// Token: 0x0601788B RID: 96395
+		// Token: 0x06006293 RID: 25235
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CollectMaterialVectorCurve_Internal(int Id, FName Key, IntPtr Value);
 
-		// Token: 0x0601788C RID: 96396
+		// Token: 0x06006294 RID: 25236
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CollectMaterialLinearColorCurve_Internal(int Id, FName Key, IntPtr Value);
 
-		// Token: 0x0601788D RID: 96397
+		// Token: 0x06006295 RID: 25237
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CollectMaterialFloatCurve_Internal(int Id, FName Key, IntPtr Value);
 
-		// Token: 0x0601788E RID: 96398
+		// Token: 0x06006296 RID: 25238
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AttachToEffectSkeletalMesh_Internal(int Id, IntPtr AttachActor, FName SocketName, EAttachmentRule TransformRule);
 
-		// Token: 0x0601788F RID: 96399
+		// Token: 0x06006297 RID: 25239
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AttachSkeletalMesh_Internal(int Id, IntPtr Context);
 
-		// Token: 0x06017890 RID: 96400
+		// Token: 0x06006298 RID: 25240
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddFinishCallback_Internal(int Id, IntPtr Callback, IntPtr OnClearCallback);
 
-		// Token: 0x06017891 RID: 96401 RVA: 0x0022759D File Offset: 0x0022579D
+		// Token: 0x06006299 RID: 25241 RVA: 0x0008D001 File Offset: 0x0008B201
 		static UKuroEffectSystemFunctionLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.KuroEffectSystemFunctionLibrary");
 		}
 
-		// Token: 0x06017892 RID: 96402 RVA: 0x002275AB File Offset: 0x002257AB
+		// Token: 0x0600629A RID: 25242 RVA: 0x0008D00F File Offset: 0x0008B20F
 		protected UKuroEffectSystemFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400CC8C RID: 52364
+		// Token: 0x040029C5 RID: 10693
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroGameplay.KuroEffectSystemFunctionLibrary";
 
-		// Token: 0x0400CC8D RID: 52365
+		// Token: 0x040029C6 RID: 10694
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400CC8E RID: 52366
+		// Token: 0x040029C7 RID: 10695
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

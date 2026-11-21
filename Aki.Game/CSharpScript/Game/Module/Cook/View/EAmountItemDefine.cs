@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B2C RID: 23340
+	// Token: 0x02004B0D RID: 19213
 	public enum EAmountItemDefine
 	{
-		// Token: 0x0401ECFF RID: 126207
+		// Token: 0x040197BB RID: 104379
 		AddButton,
-		// Token: 0x0401ED00 RID: 126208
+		// Token: 0x040197BC RID: 104380
 		DelButton,
-		// Token: 0x0401ED01 RID: 126209
+		// Token: 0x040197BD RID: 104381
 		ShowButton,
-		// Token: 0x0401ED02 RID: 126210
+		// Token: 0x040197BE RID: 104382
 		SumText
 	}
 }

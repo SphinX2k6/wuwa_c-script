@@ -3,38 +3,38 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.BattleUi.Views;
 using CSharpScript.Game.Module.HonamiStory;
 
-// Token: 0x02001E74 RID: 7796
+// Token: 0x02001336 RID: 4918
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class HonamiStoryQuestDataBase : IStaticVariableResetter
 {
-	// Token: 0x0600ED97 RID: 60823 RVA: 0x0038986E File Offset: 0x00387A6E
+	// Token: 0x0600C1B6 RID: 49590 RVA: 0x0039545E File Offset: 0x0039365E
 	static HonamiStoryQuestDataBase()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(HonamiStoryQuestDataBase.CreateStaticDefaultValue), new Action(HonamiStoryQuestDataBase.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600ED98 RID: 60824 RVA: 0x0038988D File Offset: 0x00387A8D
+	// Token: 0x0600C1B7 RID: 49591 RVA: 0x0039547D File Offset: 0x0039367D
 	public static void CreateStaticDefaultValue()
 	{
 		HonamiStoryQuestDataBase.IdInternal = 0;
 	}
 
-	// Token: 0x0600ED99 RID: 60825 RVA: 0x00389895 File Offset: 0x00387A95
+	// Token: 0x0600C1B8 RID: 49592 RVA: 0x00395485 File Offset: 0x00393685
 	public static void ResetStaticDefaultValue()
 	{
 		HonamiStoryQuestDataBase.IdInternal = 0;
 	}
 
-	// Token: 0x0600ED9A RID: 60826 RVA: 0x0038989D File Offset: 0x00387A9D
+	// Token: 0x0600C1B9 RID: 49593 RVA: 0x0039548D File Offset: 0x0039368D
 	public HonamiStoryQuestDataBase()
 	{
 		this.ActivityData = HonamiStoryModel.Instance.GetActivityData(true);
 		this.Id = HonamiStoryQuestDataBase.IdInternal++;
 	}
 
-	// Token: 0x170012BE RID: 4798
-	// (get) Token: 0x0600ED9B RID: 60827 RVA: 0x003898D0 File Offset: 0x00387AD0
+	// Token: 0x170012E8 RID: 4840
+	// (get) Token: 0x0600C1BA RID: 49594 RVA: 0x003954C0 File Offset: 0x003936C0
 	public bool IsInDungeon
 	{
 		get
@@ -43,47 +43,47 @@ public abstract class HonamiStoryQuestDataBase : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600ED9C RID: 60828 RVA: 0x003898D7 File Offset: 0x00387AD7
+	// Token: 0x0600C1BB RID: 49595 RVA: 0x003954C7 File Offset: 0x003936C7
 	public bool DoMapTrack(bool isTrack)
 	{
 		return this.CanMapTrack() && this.MapTrack(isTrack);
 	}
 
-	// Token: 0x0600ED9D RID: 60829
+	// Token: 0x0600C1BC RID: 49596
 	public abstract string GetNameKey();
 
-	// Token: 0x0600ED9E RID: 60830
+	// Token: 0x0600C1BD RID: 49597
 	public abstract string GetDesc();
 
-	// Token: 0x0600ED9F RID: 60831
+	// Token: 0x0600C1BE RID: 49598
 	public abstract int GetRewardId();
 
-	// Token: 0x0600EDA0 RID: 60832
+	// Token: 0x0600C1BF RID: 49599
 	public abstract bool IsFinished();
 
-	// Token: 0x0600EDA1 RID: 60833
+	// Token: 0x0600C1C0 RID: 49600
 	[NullableContext(2)]
 	public abstract LevelPlayInfo GetLevelPlayInfo();
 
-	// Token: 0x0600EDA2 RID: 60834
+	// Token: 0x0600C1C1 RID: 49601
 	[NullableContext(2)]
 	public abstract BehaviorTreeViewShowData GetTreeShowData();
 
-	// Token: 0x0600EDA3 RID: 60835
+	// Token: 0x0600C1C2 RID: 49602
 	public abstract bool CanMapTrack();
 
-	// Token: 0x0600EDA4 RID: 60836
+	// Token: 0x0600C1C3 RID: 49603
 	public abstract bool MapTrack(bool isTrack);
 
-	// Token: 0x04006E3F RID: 28223
+	// Token: 0x04006F20 RID: 28448
 	public HonamiStoryActivityData ActivityData;
 
-	// Token: 0x04006E40 RID: 28224
+	// Token: 0x04006F21 RID: 28449
 	public EHonamiStoryQuestType TaskType = EHonamiStoryQuestType.Main;
 
-	// Token: 0x04006E41 RID: 28225
+	// Token: 0x04006F22 RID: 28450
 	private static int IdInternal;
 
-	// Token: 0x04006E42 RID: 28226
+	// Token: 0x04006F23 RID: 28451
 	public int Id;
 }

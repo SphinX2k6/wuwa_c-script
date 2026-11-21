@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x02005118 RID: 20760
+	// Token: 0x020040E8 RID: 16616
 	[RequiredMember]
 	public class CardSlotSortInfo
 	{
-		// Token: 0x06035144 RID: 217412 RVA: 0x00C9419A File Offset: 0x00C9239A
+		// Token: 0x0602A03D RID: 172093 RVA: 0x00BE15AE File Offset: 0x00BDF7AE
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public CardSlotSortInfo()
 		{
 		}
 
-		// Token: 0x0401C469 RID: 115817
+		// Token: 0x04016E9E RID: 93854
 		[RequiredMember]
 		public int CardId;
 
-		// Token: 0x0401C46A RID: 115818
+		// Token: 0x04016E9F RID: 93855
 		[RequiredMember]
 		public int Cost;
 
-		// Token: 0x0401C46B RID: 115819
+		// Token: 0x04016EA0 RID: 93856
 		[RequiredMember]
 		public int Element;
 
-		// Token: 0x0401C46C RID: 115820
+		// Token: 0x04016EA1 RID: 93857
 		[RequiredMember]
 		public ECardType CardType;
 	}

@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Core.Fight;
 
-// Token: 0x02002DAA RID: 11690
+// Token: 0x02002304 RID: 8964
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletDataChild
 {
-	// Token: 0x17002156 RID: 8534
-	// (get) Token: 0x06018931 RID: 100657 RVA: 0x00647A4D File Offset: 0x00645C4D
+	// Token: 0x170021B2 RID: 8626
+	// (get) Token: 0x060161D9 RID: 90585 RVA: 0x0066D92D File Offset: 0x0066BB2D
 	public long RowName
 	{
 		get
@@ -21,8 +21,8 @@ public class BulletDataChild
 		}
 	}
 
-	// Token: 0x17002157 RID: 8535
-	// (get) Token: 0x06018932 RID: 100658 RVA: 0x00647A7D File Offset: 0x00645C7D
+	// Token: 0x170021B3 RID: 8627
+	// (get) Token: 0x060161DA RID: 90586 RVA: 0x0066D95D File Offset: 0x0066BB5D
 	public float Delay
 	{
 		get
@@ -35,8 +35,8 @@ public class BulletDataChild
 		}
 	}
 
-	// Token: 0x17002158 RID: 8536
-	// (get) Token: 0x06018933 RID: 100659 RVA: 0x00647AAD File Offset: 0x00645CAD
+	// Token: 0x170021B4 RID: 8628
+	// (get) Token: 0x060161DB RID: 90587 RVA: 0x0066D98D File Offset: 0x0066BB8D
 	public int Num
 	{
 		get
@@ -49,8 +49,8 @@ public class BulletDataChild
 		}
 	}
 
-	// Token: 0x17002159 RID: 8537
-	// (get) Token: 0x06018934 RID: 100660 RVA: 0x00647ADD File Offset: 0x00645CDD
+	// Token: 0x170021B5 RID: 8629
+	// (get) Token: 0x060161DC RID: 90588 RVA: 0x0066D9BD File Offset: 0x0066BBBD
 	public float Interval
 	{
 		get
@@ -63,8 +63,8 @@ public class BulletDataChild
 		}
 	}
 
-	// Token: 0x1700215A RID: 8538
-	// (get) Token: 0x06018935 RID: 100661 RVA: 0x00647B0D File Offset: 0x00645D0D
+	// Token: 0x170021B6 RID: 8630
+	// (get) Token: 0x060161DD RID: 90589 RVA: 0x0066D9ED File Offset: 0x0066BBED
 	public global::EBulletChildrenType Condition
 	{
 		get
@@ -77,8 +77,8 @@ public class BulletDataChild
 		}
 	}
 
-	// Token: 0x1700215B RID: 8539
-	// (get) Token: 0x06018936 RID: 100662 RVA: 0x00647B42 File Offset: 0x00645D42
+	// Token: 0x170021B7 RID: 8631
+	// (get) Token: 0x060161DE RID: 90590 RVA: 0x0066DA22 File Offset: 0x0066BC22
 	public bool BreakOnFail
 	{
 		get
@@ -91,30 +91,30 @@ public class BulletDataChild
 		}
 	}
 
-	// Token: 0x06018937 RID: 100663 RVA: 0x00647B72 File Offset: 0x00645D72
+	// Token: 0x060161DF RID: 90591 RVA: 0x0066DA52 File Offset: 0x0066BC52
 	public BulletDataChild(SReBulletDataChildren data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x0400B64B RID: 46667
+	// Token: 0x0400B9C5 RID: 47557
 	private readonly SReBulletDataChildren Data;
 
-	// Token: 0x0400B64C RID: 46668
+	// Token: 0x0400B9C6 RID: 47558
 	private long? RowNameInternal;
 
-	// Token: 0x0400B64D RID: 46669
+	// Token: 0x0400B9C7 RID: 47559
 	private float? DelayInternal;
 
-	// Token: 0x0400B64E RID: 46670
+	// Token: 0x0400B9C8 RID: 47560
 	private int? NumInternal;
 
-	// Token: 0x0400B64F RID: 46671
+	// Token: 0x0400B9C9 RID: 47561
 	private float? IntervalInternal;
 
-	// Token: 0x0400B650 RID: 46672
+	// Token: 0x0400B9CA RID: 47562
 	private global::EBulletChildrenType? ConditionInternal;
 
-	// Token: 0x0400B651 RID: 46673
+	// Token: 0x0400B9CB RID: 47563
 	private bool? BreakOnFailInternal;
 }

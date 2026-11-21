@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B66 RID: 2918
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C34 RID: 3124
 	public class IPullingCategoryMatchingFoundation : IPullingFoundationType
 	{
-		// Token: 0x0600432D RID: 17197 RVA: 0x000AB409 File Offset: 0x000A9609
+		// Token: 0x06004786 RID: 18310 RVA: 0x000B54CD File Offset: 0x000B36CD
 		public static IPullingCategoryMatchingFoundation Create(IPullingCategoryMatchingFoundation? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700121E RID: 4638
-		// (get) Token: 0x0600432E RID: 17198 RVA: 0x000AB428 File Offset: 0x000A9628
+		// Token: 0x17001319 RID: 4889
+		// (get) Token: 0x06004787 RID: 18311 RVA: 0x000B54EC File Offset: 0x000B36EC
 		public override EPullingFoundation Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700121F RID: 4639
-		// (get) Token: 0x0600432F RID: 17199 RVA: 0x000AB438 File Offset: 0x000A9638
+		// Token: 0x1700131A RID: 4890
+		// (get) Token: 0x06004788 RID: 18312 RVA: 0x000B54FC File Offset: 0x000B36FC
 		public virtual int? InitMatchEntity
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001220 RID: 4640
-		// (get) Token: 0x06004330 RID: 17200 RVA: 0x000AB470 File Offset: 0x000A9670
+		// Token: 0x1700131B RID: 4891
+		// (get) Token: 0x06004789 RID: 18313 RVA: 0x000B5534 File Offset: 0x000B3734
 		public virtual List<ICategoryMatchingConfigBase> MatchingConfigs
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040025EF RID: 9711
+		// Token: 0x04002837 RID: 10295
 		private IPullingCategoryMatchingFoundation Instance;
 
-		// Token: 0x040025F0 RID: 9712
+		// Token: 0x04002838 RID: 10296
 		private List<ICategoryMatchingConfigBase> _MatchingConfigsCache;
 
-		// Token: 0x040025F1 RID: 9713
+		// Token: 0x04002839 RID: 10297
 		private bool _MatchingConfigsInited;
 	}
 }

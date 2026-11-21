@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002443 RID: 9283
+	// Token: 0x020026E4 RID: 9956
 	public static class ESwitchEffectStateEffectTypeExtensions
 	{
-		// Token: 0x0600C9AC RID: 51628 RVA: 0x001D8614 File Offset: 0x001D6814
+		// Token: 0x0600D65C RID: 54876 RVA: 0x001F24DC File Offset: 0x001F06DC
 		public static string ToEnumString(this ESwitchEffectStateEffectType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9AD RID: 51629 RVA: 0x001D864C File Offset: 0x001D684C
+		// Token: 0x0600D65D RID: 54877 RVA: 0x001F2514 File Offset: 0x001F0714
 		public static ESwitchEffectStateEffectType FromString(string name)
 		{
 			ESwitchEffectStateEffectType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9AE RID: 51630 RVA: 0x001D8675 File Offset: 0x001D6875
+		// Token: 0x0600D65E RID: 54878 RVA: 0x001F253D File Offset: 0x001F073D
 		public static bool TryFromString(string name, out ESwitchEffectStateEffectType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C9AF RID: 51631 RVA: 0x001D86AE File Offset: 0x001D68AE
+		// Token: 0x0600D65F RID: 54879 RVA: 0x001F2576 File Offset: 0x001F0776
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C9B0 RID: 51632 RVA: 0x001D86C6 File Offset: 0x001D68C6
+		// Token: 0x0600D660 RID: 54880 RVA: 0x001F258E File Offset: 0x001F078E
 		public static ESwitchEffectStateEffectType[] GetValues()
 		{
 			return new ESwitchEffectStateEffectType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C9B1 RID: 51633 RVA: 0x001D86D2 File Offset: 0x001D68D2
+		// Token: 0x0600D661 RID: 54881 RVA: 0x001F259A File Offset: 0x001F079A
 		public static string[] GetNames()
 		{
 			return new string[]

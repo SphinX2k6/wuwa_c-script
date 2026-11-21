@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Utils.LevelRangeDebug
 {
-	// Token: 0x02004565 RID: 17765
+	// Token: 0x0200348D RID: 13453
 	public enum ELevelRangeType
 	{
-		// Token: 0x0401881D RID: 100381
+		// Token: 0x04012E57 RID: 77399
 		Trigger,
-		// Token: 0x0401881E RID: 100382
+		// Token: 0x04012E58 RID: 77400
 		AirWallManager,
-		// Token: 0x0401881F RID: 100383
+		// Token: 0x04012E59 RID: 77401
 		ReachArea,
-		// Token: 0x04018820 RID: 100384
+		// Token: 0x04012E5A RID: 77402
 		BlockingVolume,
-		// Token: 0x04018821 RID: 100385
+		// Token: 0x04012E5B RID: 77403
 		ClientTrigger,
-		// Token: 0x04018822 RID: 100386
+		// Token: 0x04012E5C RID: 77404
 		RangeEntity
 	}
 }

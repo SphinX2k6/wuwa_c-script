@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack.View
 {
-	// Token: 0x02004F92 RID: 20370
+	// Token: 0x02003F5B RID: 16219
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickHackSkillItem : UiPanelBase
 	{
-		// Token: 0x0603429E RID: 213662 RVA: 0x00C3EE64 File Offset: 0x00C3D064
+		// Token: 0x0602910C RID: 168204 RVA: 0x00B88610 File Offset: 0x00B86810
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603429F RID: 213663 RVA: 0x00C3F01C File Offset: 0x00C3D21C
+		// Token: 0x0602910D RID: 168205 RVA: 0x00B887C8 File Offset: 0x00B869C8
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			extendToggle.OnPointDownCallBack.Bind(new Action<EToggleState>(this.OnPointDown));
 		}
 
-		// Token: 0x060342A0 RID: 213664 RVA: 0x00C3F075 File Offset: 0x00C3D275
+		// Token: 0x0602910E RID: 168206 RVA: 0x00B88821 File Offset: 0x00B86A21
 		public void InitSelectSkillAudioPath(string selectSkillAudioPath)
 		{
 			this.SelectSkillAudioPath = selectSkillAudioPath;
 		}
 
-		// Token: 0x060342A1 RID: 213665 RVA: 0x00C3F07E File Offset: 0x00C3D27E
+		// Token: 0x0602910F RID: 168207 RVA: 0x00B8882A File Offset: 0x00B86A2A
 		public void PlayUseSkillSequence()
 		{
 			if (this.SequencePlayer == null)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.SequencePlayer.PlaySequencePurely("PitchOn", false, false);
 		}
 
-		// Token: 0x060342A2 RID: 213666 RVA: 0x00C3F0A8 File Offset: 0x00C3D2A8
+		// Token: 0x06029110 RID: 168208 RVA: 0x00B88854 File Offset: 0x00B86A54
 		public void PlayDisableSequence()
 		{
 			if (this.SequencePlayer == null)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.SequencePlayer.PlaySequencePurely("Refused", false, false);
 		}
 
-		// Token: 0x060342A3 RID: 213667 RVA: 0x00C3F0D4 File Offset: 0x00C3D2D4
+		// Token: 0x06029111 RID: 168209 RVA: 0x00B88880 File Offset: 0x00B86A80
 		public void Refresh(QuickHackSkillInstance data, bool isSelected, int gridIndex)
 		{
 			int num = (gridIndex < QuickHackDefine.quickHackSkillItemOffsets.Count) ? QuickHackDefine.quickHackSkillItemOffsets[gridIndex] : 0;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x060342A4 RID: 213668 RVA: 0x00C3F1FC File Offset: 0x00C3D3FC
+		// Token: 0x06029112 RID: 168210 RVA: 0x00B889A8 File Offset: 0x00B86BA8
 		protected override void OnBeforeDestroy()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -126,13 +126,13 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.Skill = null;
 		}
 
-		// Token: 0x060342A5 RID: 213669 RVA: 0x00C3F25B File Offset: 0x00C3D45B
+		// Token: 0x06029113 RID: 168211 RVA: 0x00B88A07 File Offset: 0x00B86C07
 		private void OnCheckSkillCanUse(QuickHackSkillConditionResult result)
 		{
 			this.RefreshByState(result.IsSuccess);
 		}
 
-		// Token: 0x060342A6 RID: 213670 RVA: 0x00C3F26C File Offset: 0x00C3D46C
+		// Token: 0x06029114 RID: 168212 RVA: 0x00B88A18 File Offset: 0x00B86C18
 		private void RefreshByState(bool enable)
 		{
 			UUIText text = base.GetText(7);
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			base.GetTexture(9).SetUIActive(!enable);
 		}
 
-		// Token: 0x060342A7 RID: 213671 RVA: 0x00C3F494 File Offset: 0x00C3D694
+		// Token: 0x06029115 RID: 168213 RVA: 0x00B88C40 File Offset: 0x00B86E40
 		public void OnSelected()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -237,14 +237,14 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.RefreshKeyItem(true);
 		}
 
-		// Token: 0x060342A8 RID: 213672 RVA: 0x00C3F4D4 File Offset: 0x00C3D6D4
+		// Token: 0x06029116 RID: 168214 RVA: 0x00B88C80 File Offset: 0x00B86E80
 		public void OnDeselected()
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 			this.RefreshKeyItem(false);
 		}
 
-		// Token: 0x060342A9 RID: 213673 RVA: 0x00C3F4EE File Offset: 0x00C3D6EE
+		// Token: 0x06029117 RID: 168215 RVA: 0x00B88C9A File Offset: 0x00B86E9A
 		private void OnStateChange(EToggleState state)
 		{
 			this.RefreshKeyItem(state == EToggleState.ETT_Checked);
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x060342AA RID: 213674 RVA: 0x00C3F518 File Offset: 0x00C3D718
+		// Token: 0x06029118 RID: 168216 RVA: 0x00B88CC4 File Offset: 0x00B86EC4
 		private void CancelItemBgAsyncLoad()
 		{
 			if (this.ItemBgResourceId != -1)
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x060342AB RID: 213675 RVA: 0x00C3F568 File Offset: 0x00C3D768
+		// Token: 0x06029119 RID: 168217 RVA: 0x00B88D14 File Offset: 0x00B86F14
 		private void RefreshKeyItem(bool isSelected)
 		{
 			UUIItem item = base.GetItem(11);
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x060342AC RID: 213676 RVA: 0x00C3F59F File Offset: 0x00C3D79F
+		// Token: 0x0602911A RID: 168218 RVA: 0x00B88D4B File Offset: 0x00B86F4B
 		private void OnPointDown(EToggleState state)
 		{
 			if (!StringUtils.IsBlank(this.SelectSkillAudioPath))
@@ -287,64 +287,64 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x0401BBAF RID: 113583
+		// Token: 0x04016584 RID: 91524
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0401BBB0 RID: 113584
+		// Token: 0x04016585 RID: 91525
 		[Nullable(2)]
 		private QuickHackSkillInstance Skill;
 
-		// Token: 0x0401BBB1 RID: 113585
+		// Token: 0x04016586 RID: 91526
 		private bool IsEnable = true;
 
-		// Token: 0x0401BBB2 RID: 113586
+		// Token: 0x04016587 RID: 91527
 		private int ItemBgResourceId = -1;
 
-		// Token: 0x0401BBB3 RID: 113587
+		// Token: 0x04016588 RID: 91528
 		private int ItemHoldBgResourceId = -1;
 
-		// Token: 0x0401BBB4 RID: 113588
+		// Token: 0x04016589 RID: 91529
 		private string SelectSkillAudioPath = "";
 
-		// Token: 0x0200B0A6 RID: 45222
+		// Token: 0x02009AD6 RID: 39638
 		[NullableContext(0)]
 		private class EComponentType
 		{
-			// Token: 0x040359FE RID: 219646
+			// Token: 0x04030429 RID: 197673
 			public const int SkillToggle = 0;
 
-			// Token: 0x040359FF RID: 219647
+			// Token: 0x0403042A RID: 197674
 			public const int IconBgSprite = 1;
 
-			// Token: 0x04035A00 RID: 219648
+			// Token: 0x0403042B RID: 197675
 			public const int IconTexture = 2;
 
-			// Token: 0x04035A01 RID: 219649
+			// Token: 0x0403042C RID: 197676
 			public const int StateSprite = 3;
 
-			// Token: 0x04035A02 RID: 219650
+			// Token: 0x0403042D RID: 197677
 			public const int CostText = 4;
 
-			// Token: 0x04035A03 RID: 219651
+			// Token: 0x0403042E RID: 197678
 			public const int NameText = 5;
 
-			// Token: 0x04035A04 RID: 219652
+			// Token: 0x0403042F RID: 197679
 			public const int TagBgSprite = 6;
 
-			// Token: 0x04035A05 RID: 219653
+			// Token: 0x04030430 RID: 197680
 			public const int TagText = 7;
 
-			// Token: 0x04035A06 RID: 219654
+			// Token: 0x04030431 RID: 197681
 			public const int ItemBgSprite = 8;
 
-			// Token: 0x04035A07 RID: 219655
+			// Token: 0x04030432 RID: 197682
 			public const int DisableTexture = 9;
 
-			// Token: 0x04035A08 RID: 219656
+			// Token: 0x04030433 RID: 197683
 			public const int ClickItem = 10;
 
-			// Token: 0x04035A09 RID: 219657
+			// Token: 0x04030434 RID: 197684
 			public const int KeyItem = 11;
 		}
 	}

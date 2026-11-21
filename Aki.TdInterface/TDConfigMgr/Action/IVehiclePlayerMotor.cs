@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002045 RID: 8261
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200228E RID: 8846
 	public class IVehiclePlayerMotor : ITargetVehicle
 	{
-		// Token: 0x0600B58C RID: 46476 RVA: 0x001A57D8 File Offset: 0x001A39D8
+		// Token: 0x0600C0B2 RID: 49330 RVA: 0x001BBF44 File Offset: 0x001BA144
 		private IVehiclePlayerMotor_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B58D RID: 46477 RVA: 0x001A5810 File Offset: 0x001A3A10
+		// Token: 0x0600C0B3 RID: 49331 RVA: 0x001BBF7C File Offset: 0x001BA17C
 		public static IVehiclePlayerMotor Create([Nullable(2)] IVehiclePlayerMotor instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B58E RID: 46478 RVA: 0x001A5823 File Offset: 0x001A3A23
+		// Token: 0x0600C0B4 RID: 49332 RVA: 0x001BBF8F File Offset: 0x001BA18F
 		public static IVehiclePlayerMotor CreateFromSetValue([Nullable(2)] IVehiclePlayerMotor_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B58F RID: 46479 RVA: 0x001A5836 File Offset: 0x001A3A36
+		// Token: 0x0600C0B5 RID: 49333 RVA: 0x001BBFA2 File Offset: 0x001BA1A2
 		public new IVehiclePlayerMotor_SetValue ToSetValue()
 		{
 			return new IVehiclePlayerMotor_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037B7 RID: 14263
-		// (get) Token: 0x0600B590 RID: 46480 RVA: 0x001A5855 File Offset: 0x001A3A55
-		// (set) Token: 0x0600B591 RID: 46481 RVA: 0x001A5880 File Offset: 0x001A3A80
+		// Token: 0x17003A94 RID: 14996
+		// (get) Token: 0x0600C0B6 RID: 49334 RVA: 0x001BBFC1 File Offset: 0x001BA1C1
+		// (set) Token: 0x0600C0B7 RID: 49335 RVA: 0x001BBFEC File Offset: 0x001BA1EC
 		public override ETargetVehicle Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037B8 RID: 14264
-		// (get) Token: 0x0600B592 RID: 46482 RVA: 0x001A5890 File Offset: 0x001A3A90
-		// (set) Token: 0x0600B593 RID: 46483 RVA: 0x001A58CA File Offset: 0x001A3ACA
+		// Token: 0x17003A95 RID: 14997
+		// (get) Token: 0x0600C0B8 RID: 49336 RVA: 0x001BBFFC File Offset: 0x001BA1FC
+		// (set) Token: 0x0600C0B9 RID: 49337 RVA: 0x001BC036 File Offset: 0x001BA236
 		public virtual int? SummonPositionEntityId
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D38 RID: 27960
+		// Token: 0x04007341 RID: 29505
 		[Nullable(2)]
 		protected new IVehiclePlayerMotor FbInstance;
 
-		// Token: 0x04006D39 RID: 27961
+		// Token: 0x04007342 RID: 29506
 		[Nullable(2)]
 		protected new IVehiclePlayerMotor_SetValue PocoInterface;
 	}

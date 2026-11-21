@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Inventory;
 using FilterDefine;
 
-// Token: 0x0200183D RID: 6205
+// Token: 0x02000CF6 RID: 3318
 public class ItemFilter : CommonFilter
 {
-	// Token: 0x0600B5EE RID: 46574 RVA: 0x00292464 File Offset: 0x00290664
+	// Token: 0x060089D9 RID: 35289 RVA: 0x0029CB84 File Offset: 0x0029AD84
 	[NullableContext(1)]
 	private object GetPhantomItemId(object data, Dictionary<int, string> currentSelectMap)
 	{
@@ -26,7 +26,7 @@ public class ItemFilter : CommonFilter
 		return phantomBattleData.GetMonsterId(false);
 	}
 
-	// Token: 0x0600B5EF RID: 46575 RVA: 0x002924B8 File Offset: 0x002906B8
+	// Token: 0x060089DA RID: 35290 RVA: 0x0029CBD8 File Offset: 0x0029ADD8
 	protected override void OnInitFilterMap()
 	{
 		this.FilterMap.Add(FilterDefine.EFilterType.Phantom, new TFilterConfig(this.GetPhantomItemId));

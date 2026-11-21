@@ -6,18 +6,18 @@ using CSharpScript.Game.Module.Plot;
 using CSharpScript.Game.Module.Plot.Sequence;
 using UnrealEngine;
 
-// Token: 0x0200102F RID: 4143
+// Token: 0x020004E3 RID: 1251
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerDialogLogic
 {
-	// Token: 0x06006A5E RID: 27230 RVA: 0x00155373 File Offset: 0x00153573
+	// Token: 0x06003DF3 RID: 15859 RVA: 0x0015DC9B File Offset: 0x0015BE9B
 	public void InitData(IGuessJokerDialogData data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x06006A5F RID: 27231 RVA: 0x0015537C File Offset: 0x0015357C
+	// Token: 0x06003DF4 RID: 15860 RVA: 0x0015DCA4 File Offset: 0x0015BEA4
 	public void PlayDialog(ITalkItemDialog talkData, [Nullable(2)] Action finishCallback = null)
 	{
 		GuessJokerDialogLogic.<>c__DisplayClass7_0 CS$<>8__locals1 = new GuessJokerDialogLogic.<>c__DisplayClass7_0();
@@ -96,7 +96,7 @@ public class GuessJokerDialogLogic
 		}));
 	}
 
-	// Token: 0x06006A60 RID: 27232 RVA: 0x00155554 File Offset: 0x00153754
+	// Token: 0x06003DF5 RID: 15861 RVA: 0x0015DE7C File Offset: 0x0015C07C
 	private void OnDialogEnd()
 	{
 		if (this.Data == null || this.TalkData == null)
@@ -128,7 +128,7 @@ public class GuessJokerDialogLogic
 		this.<OnDialogEnd>g__OnComplete|8_0();
 	}
 
-	// Token: 0x06006A61 RID: 27233 RVA: 0x001555F4 File Offset: 0x001537F4
+	// Token: 0x06003DF6 RID: 15862 RVA: 0x0015DF1C File Offset: 0x0015C11C
 	private EGuessJokerPlayerType GetPlayerType()
 	{
 		if (this.TalkData == null)
@@ -142,7 +142,7 @@ public class GuessJokerDialogLogic
 		return EGuessJokerPlayerType.Me;
 	}
 
-	// Token: 0x06006A62 RID: 27234 RVA: 0x00155644 File Offset: 0x00153844
+	// Token: 0x06003DF7 RID: 15863 RVA: 0x0015DF6C File Offset: 0x0015C16C
 	private void PlayMouthAnim(ITalkItemDialog talkItem)
 	{
 		GuessJokerDialogLogic.<>c__DisplayClass10_0 CS$<>8__locals1 = new GuessJokerDialogLogic.<>c__DisplayClass10_0();
@@ -208,7 +208,7 @@ public class GuessJokerDialogLogic
 		}
 	}
 
-	// Token: 0x06006A63 RID: 27235 RVA: 0x001557A4 File Offset: 0x001539A4
+	// Token: 0x06003DF8 RID: 15864 RVA: 0x0015E0CC File Offset: 0x0015C2CC
 	public void Clear()
 	{
 		this.DialogVersion++;
@@ -241,7 +241,7 @@ public class GuessJokerDialogLogic
 		this.FinishCallback = null;
 	}
 
-	// Token: 0x06006A65 RID: 27237 RVA: 0x00155864 File Offset: 0x00153A64
+	// Token: 0x06003DFA RID: 15866 RVA: 0x0015E18C File Offset: 0x0015C38C
 	[CompilerGenerated]
 	private void <OnDialogEnd>g__OnComplete|8_0()
 	{
@@ -253,24 +253,24 @@ public class GuessJokerDialogLogic
 		this.FinishCallback = null;
 	}
 
-	// Token: 0x04003103 RID: 12547
+	// Token: 0x0400319C RID: 12700
 	[Nullable(2)]
 	private IGuessJokerDialogData Data;
 
-	// Token: 0x04003104 RID: 12548
+	// Token: 0x0400319D RID: 12701
 	[Nullable(2)]
 	private ITalkItemDialog TalkData;
 
-	// Token: 0x04003105 RID: 12549
+	// Token: 0x0400319E RID: 12702
 	private int PlotPlayEventResult;
 
-	// Token: 0x04003106 RID: 12550
+	// Token: 0x0400319F RID: 12703
 	private int MouthAnimLoadingId = -1;
 
-	// Token: 0x04003107 RID: 12551
+	// Token: 0x040031A0 RID: 12704
 	[Nullable(2)]
 	private Action FinishCallback;
 
-	// Token: 0x04003108 RID: 12552
+	// Token: 0x040031A1 RID: 12705
 	private int DialogVersion;
 }

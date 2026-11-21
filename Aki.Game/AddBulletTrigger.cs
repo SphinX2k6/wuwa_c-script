@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002EF6 RID: 12022
+// Token: 0x02002449 RID: 9289
 [NullableContext(1)]
 [Nullable(0)]
 public class AddBulletTrigger : PassiveEffects
 {
-	// Token: 0x06019AF1 RID: 105201 RVA: 0x006AF3DF File Offset: 0x006AD5DF
+	// Token: 0x060173FC RID: 95228 RVA: 0x006D56D3 File Offset: 0x006D38D3
 	public AddBulletTrigger(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019AF2 RID: 105202 RVA: 0x006AF3FC File Offset: 0x006AD5FC
+	// Token: 0x060173FD RID: 95229 RVA: 0x006D56F0 File Offset: 0x006D38F0
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -26,7 +26,7 @@ public class AddBulletTrigger : PassiveEffects
 		}
 	}
 
-	// Token: 0x06019AF3 RID: 105203 RVA: 0x006AF464 File Offset: 0x006AD664
+	// Token: 0x060173FE RID: 95230 RVA: 0x006D5758 File Offset: 0x006D3958
 	[return: Nullable(2)]
 	public unsafe override object OnExecute(params object[] parameters)
 	{
@@ -83,12 +83,12 @@ public class AddBulletTrigger : PassiveEffects
 		return null;
 	}
 
-	// Token: 0x06019AF4 RID: 105204 RVA: 0x006AF5B4 File Offset: 0x006AD7B4
+	// Token: 0x060173FF RID: 95231 RVA: 0x006D58A8 File Offset: 0x006D3AA8
 	public override string GetDebugEffectString()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C0B1 RID: 49329
+	// Token: 0x0400C452 RID: 50258
 	private long[] BulletIds = Array.Empty<long>();
 }

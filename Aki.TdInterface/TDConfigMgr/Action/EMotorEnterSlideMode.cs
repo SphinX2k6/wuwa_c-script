@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200161D RID: 5661
+	// Token: 0x02001789 RID: 6025
 	[EnumExtensions]
 	public enum EMotorEnterSlideMode
 	{
-		// Token: 0x04004BFF RID: 19455
+		// Token: 0x04004FED RID: 20461
 		Jump,
-		// Token: 0x04004C00 RID: 19456
+		// Token: 0x04004FEE RID: 20462
 		Direct
 	}
 }

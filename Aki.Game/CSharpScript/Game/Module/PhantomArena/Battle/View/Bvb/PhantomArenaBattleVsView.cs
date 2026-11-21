@@ -6,24 +6,24 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 {
-	// Token: 0x02005276 RID: 21110
+	// Token: 0x02004246 RID: 16966
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleVsView : UiViewBase
 	{
-		// Token: 0x06035FE6 RID: 221158 RVA: 0x00CC71BA File Offset: 0x00CC53BA
+		// Token: 0x0602AEE1 RID: 175841 RVA: 0x00C148BA File Offset: 0x00C12ABA
 		public PhantomArenaBattleVsView(UiViewInfo uiViewInfo) : base(uiViewInfo)
 		{
 		}
 
-		// Token: 0x06035FE7 RID: 221159 RVA: 0x00CC71C3 File Offset: 0x00CC53C3
+		// Token: 0x0602AEE2 RID: 175842 RVA: 0x00C148C3 File Offset: 0x00C12AC3
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
 			this.SequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnAnimStop), false);
 		}
 
-		// Token: 0x06035FE8 RID: 221160 RVA: 0x00CC71EE File Offset: 0x00CC53EE
+		// Token: 0x0602AEE3 RID: 175843 RVA: 0x00C148EE File Offset: 0x00C12AEE
 		protected override void OnAfterShow()
 		{
 			if (UiManager.Instance.IsViewHide(EUiViewName.PhantomArenaBattleLoading))
@@ -32,19 +32,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			}
 		}
 
-		// Token: 0x06035FE9 RID: 221161 RVA: 0x00CC7207 File Offset: 0x00CC5407
+		// Token: 0x0602AEE4 RID: 175844 RVA: 0x00C14907 File Offset: 0x00C12B07
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnPhantomArenaBattleLoadingHide, new Action(this.OnLoadingHide));
 		}
 
-		// Token: 0x06035FEA RID: 221162 RVA: 0x00CC7225 File Offset: 0x00CC5425
+		// Token: 0x0602AEE5 RID: 175845 RVA: 0x00C14925 File Offset: 0x00C12B25
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnPhantomArenaBattleLoadingHide, new Action(this.OnLoadingHide));
 		}
 
-		// Token: 0x06035FEB RID: 221163 RVA: 0x00CC7244 File Offset: 0x00CC5444
+		// Token: 0x0602AEE6 RID: 175846 RVA: 0x00C14944 File Offset: 0x00C12B44
 		private void OnAnimStop(string _)
 		{
 			PhantomArenaBattleDetailsViewProxy param = new PhantomArenaBattleDetailsViewProxy();
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			});
 		}
 
-		// Token: 0x06035FEC RID: 221164 RVA: 0x00CC7274 File Offset: 0x00CC5474
+		// Token: 0x0602AEE7 RID: 175847 RVA: 0x00C14974 File Offset: 0x00C12B74
 		private void OnLoadingHide()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -66,8 +66,8 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			AudioSystem.Instance.SetState("arena_battle", "battle_3d", true);
 		}
 
-		// Token: 0x06035FED RID: 221165 RVA: 0x00CC72B7 File Offset: 0x00CC54B7
-		protected override string OnGetLoopAudioEvent()
+		// Token: 0x0602AEE8 RID: 175848 RVA: 0x00C149B7 File Offset: 0x00C12BB7
+		protected override string OnGetBgm()
 		{
 			if (PhantomArenaBattleModel.Instance.IsOldBvb)
 			{
@@ -76,41 +76,41 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			return "play_ui_music_3_0_arena_card_battle";
 		}
 
-		// Token: 0x0401C977 RID: 117111
+		// Token: 0x040173AC RID: 95148
 		protected LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0200B478 RID: 46200
+		// Token: 0x02009EB0 RID: 40624
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04036AD4 RID: 223956
+			// Token: 0x04031527 RID: 202023
 			public const int OwnArea = 0;
 
-			// Token: 0x04036AD5 RID: 223957
+			// Token: 0x04031528 RID: 202024
 			public const int OpponentArea = 1;
 
-			// Token: 0x04036AD6 RID: 223958
+			// Token: 0x04031529 RID: 202025
 			public const int BackBtn = 2;
 
-			// Token: 0x04036AD7 RID: 223959
+			// Token: 0x0403152A RID: 202026
 			public const int SkipBtn = 3;
 
-			// Token: 0x04036AD8 RID: 223960
+			// Token: 0x0403152B RID: 202027
 			public const int DraggableComponent = 4;
 
-			// Token: 0x04036AD9 RID: 223961
+			// Token: 0x0403152C RID: 202028
 			public const int NiagaraPoint = 5;
 
-			// Token: 0x04036ADA RID: 223962
+			// Token: 0x0403152D RID: 202029
 			public const int TxtSpeed = 6;
 
-			// Token: 0x04036ADB RID: 223963
+			// Token: 0x0403152E RID: 202030
 			public const int NiagaraPointMe = 7;
 
-			// Token: 0x04036ADC RID: 223964
+			// Token: 0x0403152F RID: 202031
 			public const int CameraMoveItem = 8;
 
-			// Token: 0x04036ADD RID: 223965
+			// Token: 0x04031530 RID: 202032
 			public const int DamageStatisticsItem = 9;
 		}
 	}

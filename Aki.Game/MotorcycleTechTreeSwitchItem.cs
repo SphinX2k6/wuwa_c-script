@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002246 RID: 8774
+// Token: 0x0200172A RID: 5930
 public class MotorcycleTechTreeSwitchItem : GridProxyAbstract<int>
 {
-	// Token: 0x060111D7 RID: 70103 RVA: 0x0042D1A8 File Offset: 0x0042B3A8
+	// Token: 0x0600E66D RID: 58989 RVA: 0x00439D4C File Offset: 0x00437F4C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,14 +24,14 @@ public class MotorcycleTechTreeSwitchItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x060111D8 RID: 70104 RVA: 0x0042D23B File Offset: 0x0042B43B
+	// Token: 0x0600E66E RID: 58990 RVA: 0x00439DDF File Offset: 0x00437FDF
 	protected override void OnStart()
 	{
 		this.CurTechTreeType = MotorcycleDevelopModel.Instance.GetCurTreeType();
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x060111D9 RID: 70105 RVA: 0x0042D260 File Offset: 0x0042B460
+	// Token: 0x0600E66F RID: 58991 RVA: 0x00439E04 File Offset: 0x00438004
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		MotorTechTree? motorTechTreeConfig = MotorConfig.Instance.GetMotorTechTreeConfig(data);
@@ -45,7 +45,7 @@ public class MotorcycleTechTreeSwitchItem : GridProxyAbstract<int>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), motorTechTreeConfig.Value.Name, Array.Empty<object>());
 	}
 
-	// Token: 0x060111DA RID: 70106 RVA: 0x0042D2EA File Offset: 0x0042B4EA
+	// Token: 0x0600E670 RID: 58992 RVA: 0x00439E8E File Offset: 0x0043808E
 	public override void OnSelected(bool fireEvent)
 	{
 		if (this.TechTreeType <= 0)
@@ -60,7 +60,7 @@ public class MotorcycleTechTreeSwitchItem : GridProxyAbstract<int>
 		onClickToggleBack(this.TechTreeType, base.GetExtendToggle(0));
 	}
 
-	// Token: 0x060111DB RID: 70107 RVA: 0x0042D313 File Offset: 0x0042B513
+	// Token: 0x0600E671 RID: 58993 RVA: 0x00439EB7 File Offset: 0x004380B7
 	private void OnClickItem(EToggleState toggleState)
 	{
 		if (this.TechTreeType <= 0)
@@ -75,7 +75,7 @@ public class MotorcycleTechTreeSwitchItem : GridProxyAbstract<int>
 		onClickToggleBack(this.TechTreeType, base.GetExtendToggle(0));
 	}
 
-	// Token: 0x04008253 RID: 33363
+	// Token: 0x04008391 RID: 33681
 	[Nullable(new byte[]
 	{
 		2,
@@ -83,28 +83,28 @@ public class MotorcycleTechTreeSwitchItem : GridProxyAbstract<int>
 	})]
 	public Action<int, UUIExtendToggle> OnClickToggleBack;
 
-	// Token: 0x04008254 RID: 33364
+	// Token: 0x04008392 RID: 33682
 	private int TechTreeType;
 
-	// Token: 0x04008255 RID: 33365
+	// Token: 0x04008393 RID: 33683
 	private int CurTechTreeType;
 
-	// Token: 0x02008785 RID: 34693
+	// Token: 0x0200790E RID: 30990
 	private class EMotorTechTreeSwitchItemComponent
 	{
-		// Token: 0x0402C0C9 RID: 180425
+		// Token: 0x040273E1 RID: 160737
 		public const int TogItem = 0;
 
-		// Token: 0x0402C0CA RID: 180426
+		// Token: 0x040273E2 RID: 160738
 		public const int TexIcon = 1;
 
-		// Token: 0x0402C0CB RID: 180427
+		// Token: 0x040273E3 RID: 160739
 		public const int CurSelectItem = 2;
 
-		// Token: 0x0402C0CC RID: 180428
+		// Token: 0x040273E4 RID: 160740
 		public const int TxtName = 3;
 
-		// Token: 0x0402C0CD RID: 180429
+		// Token: 0x040273E5 RID: 160741
 		public const int TxtName2 = 4;
 	}
 }

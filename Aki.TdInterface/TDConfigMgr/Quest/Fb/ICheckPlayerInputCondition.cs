@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013C7 RID: 5063
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200151E RID: 5406
 	public class ICheckPlayerInputCondition : IQuestCondition
 	{
-		// Token: 0x0600739E RID: 29598 RVA: 0x00115612 File Offset: 0x00113812
-		[NullableContext(1)]
+		// Token: 0x06007A5F RID: 31327 RVA: 0x00123FF7 File Offset: 0x001221F7
 		public static ICheckPlayerInputCondition Create(ICheckPlayerInputCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025E3 RID: 9699
-		// (get) Token: 0x0600739F RID: 29599 RVA: 0x00115631 File Offset: 0x00113831
+		// Token: 0x170027C5 RID: 10181
+		// (get) Token: 0x06007A60 RID: 31328 RVA: 0x00124016 File Offset: 0x00122216
 		public override EChildQuest Type
 		{
 			get
@@ -34,10 +31,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025E4 RID: 9700
-		// (get) Token: 0x060073A0 RID: 29600 RVA: 0x0011563E File Offset: 0x0011383E
+		// Token: 0x170027C6 RID: 10182
+		// (get) Token: 0x06007A61 RID: 31329 RVA: 0x00124023 File Offset: 0x00122223
+		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._PreConditionsInited)
@@ -50,12 +49,10 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025E5 RID: 9701
-		// (get) Token: 0x060073A1 RID: 29601 RVA: 0x00115672 File Offset: 0x00113872
-		[Nullable(1)]
+		// Token: 0x170027C7 RID: 10183
+		// (get) Token: 0x06007A62 RID: 31330 RVA: 0x00124057 File Offset: 0x00122257
 		public virtual ICheckPlayerPressButton CheckInput
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._CheckInputInited)
@@ -68,19 +65,21 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040042ED RID: 17133
+		// Token: 0x0400467E RID: 18046
 		private ICheckPlayerInputCondition Instance;
 
-		// Token: 0x040042EE RID: 17134
+		// Token: 0x0400467F RID: 18047
+		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040042EF RID: 17135
+		// Token: 0x04004680 RID: 18048
 		private bool _PreConditionsInited;
 
-		// Token: 0x040042F0 RID: 17136
+		// Token: 0x04004681 RID: 18049
+		[Nullable(2)]
 		private ICheckPlayerPressButton _CheckInputCache;
 
-		// Token: 0x040042F1 RID: 17137
+		// Token: 0x04004682 RID: 18050
 		private bool _CheckInputInited;
 	}
 }

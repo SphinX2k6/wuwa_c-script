@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045BC RID: 17852
+	// Token: 0x020034E4 RID: 13540
 	public enum ECharAlphaTestState
 	{
-		// Token: 0x040189BE RID: 100798
+		// Token: 0x04012FF9 RID: 77817
 		Init,
-		// Token: 0x040189BF RID: 100799
+		// Token: 0x04012FFA RID: 77818
 		Common,
-		// Token: 0x040189C0 RID: 100800
+		// Token: 0x04012FFB RID: 77819
 		AlphaTest
 	}
 }

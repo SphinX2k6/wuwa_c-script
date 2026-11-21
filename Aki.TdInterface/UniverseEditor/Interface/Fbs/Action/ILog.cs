@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A35 RID: 27189
+	// Token: 0x02007157 RID: 29015
 	public struct ILog : IFlatbufferObject
 	{
-		// Token: 0x1700C9A9 RID: 51625
-		// (get) Token: 0x0602F950 RID: 194896 RVA: 0x0067A052 File Offset: 0x00678252
+		// Token: 0x1700D454 RID: 54356
+		// (get) Token: 0x06032676 RID: 206454 RVA: 0x006D0112 File Offset: 0x006CE312
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F951 RID: 194897 RVA: 0x0067A05F File Offset: 0x0067825F
+		// Token: 0x06032677 RID: 206455 RVA: 0x006D011F File Offset: 0x006CE31F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F952 RID: 194898 RVA: 0x0067A068 File Offset: 0x00678268
+		// Token: 0x06032678 RID: 206456 RVA: 0x006D0128 File Offset: 0x006CE328
 		public static ILog GetRootAsILog(ByteBuffer _bb)
 		{
 			return ILog.GetRootAsILog(_bb, default(ILog));
 		}
 
-		// Token: 0x0602F953 RID: 194899 RVA: 0x0067A084 File Offset: 0x00678284
+		// Token: 0x06032679 RID: 206457 RVA: 0x006D0144 File Offset: 0x006CE344
 		public static ILog GetRootAsILog(ByteBuffer _bb, ILog obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F954 RID: 194900 RVA: 0x0067A0A1 File Offset: 0x006782A1
+		// Token: 0x0603267A RID: 206458 RVA: 0x006D0161 File Offset: 0x006CE361
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F955 RID: 194901 RVA: 0x0067A0B0 File Offset: 0x006782B0
+		// Token: 0x0603267B RID: 206459 RVA: 0x006D0170 File Offset: 0x006CE370
 		public ILog __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C9AA RID: 51626
-		// (get) Token: 0x0602F956 RID: 194902 RVA: 0x0067A0C0 File Offset: 0x006782C0
+		// Token: 0x1700D455 RID: 54357
+		// (get) Token: 0x0603267C RID: 206460 RVA: 0x006D0180 File Offset: 0x006CE380
 		public string Level
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F957 RID: 194903 RVA: 0x0067A0F7 File Offset: 0x006782F7
+		// Token: 0x0603267D RID: 206461 RVA: 0x006D01B7 File Offset: 0x006CE3B7
 		public Span<byte> GetLevelBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0602F958 RID: 194904 RVA: 0x0067A106 File Offset: 0x00678306
+		// Token: 0x0603267E RID: 206462 RVA: 0x006D01C6 File Offset: 0x006CE3C6
 		public byte[] GetLevelArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700C9AB RID: 51627
-		// (get) Token: 0x0602F959 RID: 194905 RVA: 0x0067A114 File Offset: 0x00678314
+		// Token: 0x1700D456 RID: 54358
+		// (get) Token: 0x0603267F RID: 206463 RVA: 0x006D01D4 File Offset: 0x006CE3D4
 		public string Content
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F95A RID: 194906 RVA: 0x0067A14B File Offset: 0x0067834B
+		// Token: 0x06032680 RID: 206464 RVA: 0x006D020B File Offset: 0x006CE40B
 		public Span<byte> GetContentBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602F95B RID: 194907 RVA: 0x0067A15A File Offset: 0x0067835A
+		// Token: 0x06032681 RID: 206465 RVA: 0x006D021A File Offset: 0x006CE41A
 		public byte[] GetContentArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0602F95C RID: 194908 RVA: 0x0067A168 File Offset: 0x00678368
+		// Token: 0x06032682 RID: 206466 RVA: 0x006D0228 File Offset: 0x006CE428
 		public static Offset<ILog> CreateILog(FlatBufferBuilder builder, StringOffset LevelOffset = default(StringOffset), StringOffset ContentOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -110,31 +110,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ILog.EndILog(builder);
 		}
 
-		// Token: 0x0602F95D RID: 194909 RVA: 0x0067A185 File Offset: 0x00678385
+		// Token: 0x06032683 RID: 206467 RVA: 0x006D0245 File Offset: 0x006CE445
 		public static void StartILog(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602F95E RID: 194910 RVA: 0x0067A18E File Offset: 0x0067838E
+		// Token: 0x06032684 RID: 206468 RVA: 0x006D024E File Offset: 0x006CE44E
 		public static void AddLevel(FlatBufferBuilder builder, StringOffset levelOffset)
 		{
 			builder.AddOffset(0, levelOffset.Value, 0);
 		}
 
-		// Token: 0x0602F95F RID: 194911 RVA: 0x0067A19E File Offset: 0x0067839E
+		// Token: 0x06032685 RID: 206469 RVA: 0x006D025E File Offset: 0x006CE45E
 		public static void AddContent(FlatBufferBuilder builder, StringOffset contentOffset)
 		{
 			builder.AddOffset(1, contentOffset.Value, 0);
 		}
 
-		// Token: 0x0602F960 RID: 194912 RVA: 0x0067A1AE File Offset: 0x006783AE
+		// Token: 0x06032686 RID: 206470 RVA: 0x006D026E File Offset: 0x006CE46E
 		public static Offset<ILog> EndILog(FlatBufferBuilder builder)
 		{
 			return new Offset<ILog>(builder.EndTable());
 		}
 
-		// Token: 0x0602F961 RID: 194913 RVA: 0x0067A1BC File Offset: 0x006783BC
+		// Token: 0x06032687 RID: 206471 RVA: 0x006D027C File Offset: 0x006CE47C
 		public ILogT UnPack()
 		{
 			ILogT logT = new ILogT();
@@ -142,14 +142,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return logT;
 		}
 
-		// Token: 0x0602F962 RID: 194914 RVA: 0x0067A1D7 File Offset: 0x006783D7
+		// Token: 0x06032688 RID: 206472 RVA: 0x006D0297 File Offset: 0x006CE497
 		public void UnPackTo(ILogT _o)
 		{
 			_o.Level = this.Level;
 			_o.Content = this.Content;
 		}
 
-		// Token: 0x0602F963 RID: 194915 RVA: 0x0067A1F4 File Offset: 0x006783F4
+		// Token: 0x06032689 RID: 206473 RVA: 0x006D02B4 File Offset: 0x006CE4B4
 		public static Offset<ILog> Pack(FlatBufferBuilder builder, ILogT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ILog.CreateILog(builder, levelOffset, contentOffset);
 		}
 
-		// Token: 0x04011244 RID: 70212
+		// Token: 0x0401213C RID: 74044
 		private Table __p;
 	}
 }

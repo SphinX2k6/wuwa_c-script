@@ -4,20 +4,20 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 {
-	// Token: 0x02006337 RID: 25399
+	// Token: 0x020052B5 RID: 21173
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class PinballMainRootViewBase<TViewModel> : PinballMainRootViewBase
 	{
-		// Token: 0x0603FE7D RID: 261757 RVA: 0x00F7598F File Offset: 0x00F73B8F
+		// Token: 0x06034B3E RID: 215870 RVA: 0x00EBC8EB File Offset: 0x00EBAAEB
 		[NullableContext(1)]
 		public PinballMainRootViewBase(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x1700930B RID: 37643
-		// (get) Token: 0x0603FE7E RID: 261758 RVA: 0x00F75998 File Offset: 0x00F73B98
-		// (set) Token: 0x0603FE7F RID: 261759 RVA: 0x00F759A5 File Offset: 0x00F73BA5
+		// Token: 0x1700666D RID: 26221
+		// (get) Token: 0x06034B3F RID: 215871 RVA: 0x00EBC8F4 File Offset: 0x00EBAAF4
+		// (set) Token: 0x06034B40 RID: 215872 RVA: 0x00EBC901 File Offset: 0x00EBAB01
 		public new TViewModel ViewModel
 		{
 			get

@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D1B RID: 7451
+// Token: 0x020011DD RID: 4573
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueBossTrackedMarker : UiPanelBase
 {
-	// Token: 0x0600E153 RID: 57683 RVA: 0x0034DEA8 File Offset: 0x0034C0A8
+	// Token: 0x0600B570 RID: 46448 RVA: 0x003598D8 File Offset: 0x00357AD8
 	public SurvivorsRogueBossTrackedMarker(int entityId)
 	{
 		this.TrackedEntityId = entityId;
@@ -29,7 +29,7 @@ public class SurvivorsRogueBossTrackedMarker : UiPanelBase
 		this.LimitB = Math.Min(712.5f, (((uiRootItem != null) ? uiRootItem.GetHeight() : 0f) - 495f) / 2f);
 	}
 
-	// Token: 0x0600E154 RID: 57684 RVA: 0x0034DF86 File Offset: 0x0034C186
+	// Token: 0x0600B571 RID: 46449 RVA: 0x003599B6 File Offset: 0x00357BB6
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ public class SurvivorsRogueBossTrackedMarker : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600E155 RID: 57685 RVA: 0x0034DFA9 File Offset: 0x0034C1A9
+	// Token: 0x0600B572 RID: 46450 RVA: 0x003599D9 File Offset: 0x00357BD9
 	protected override void OnStart()
 	{
 		this.DirectionArrow = base.GetItem(0);
@@ -52,7 +52,7 @@ public class SurvivorsRogueBossTrackedMarker : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x0600E156 RID: 57686 RVA: 0x0034DFE4 File Offset: 0x0034C1E4
+	// Token: 0x0600B573 RID: 46451 RVA: 0x00359A14 File Offset: 0x00357C14
 	protected override void OnAfterShow()
 	{
 		base.OnAfterShow();
@@ -63,19 +63,19 @@ public class SurvivorsRogueBossTrackedMarker : UiPanelBase
 		this.AnimSequencePlayer.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x0600E157 RID: 57687 RVA: 0x0034E035 File Offset: 0x0034C235
+	// Token: 0x0600B574 RID: 46452 RVA: 0x00359A65 File Offset: 0x00357C65
 	protected override void OnBeforeShow()
 	{
 		this.TickEnabled = true;
 	}
 
-	// Token: 0x0600E158 RID: 57688 RVA: 0x0034E03E File Offset: 0x0034C23E
+	// Token: 0x0600B575 RID: 46453 RVA: 0x00359A6E File Offset: 0x00357C6E
 	protected override void OnBeforeHide()
 	{
 		this.TickEnabled = false;
 	}
 
-	// Token: 0x0600E159 RID: 57689 RVA: 0x0034E048 File Offset: 0x0034C248
+	// Token: 0x0600B576 RID: 46454 RVA: 0x00359A78 File Offset: 0x00357C78
 	public UniTask CreateByPoolResourceIdAsync(string resourceId, [Nullable(2)] UUIItem parentItem = null)
 	{
 		SurvivorsRogueBossTrackedMarker.<CreateByPoolResourceIdAsync>d__27 <CreateByPoolResourceIdAsync>d__;
@@ -88,7 +88,7 @@ public class SurvivorsRogueBossTrackedMarker : UiPanelBase
 		return <CreateByPoolResourceIdAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E15A RID: 57690 RVA: 0x0034E09C File Offset: 0x0034C29C
+	// Token: 0x0600B577 RID: 46455 RVA: 0x00359ACC File Offset: 0x00357CCC
 	private UniTask CreatePoolActorAsync(string resourceId, [Nullable(2)] UUIItem parentItem = null)
 	{
 		SurvivorsRogueBossTrackedMarker.<CreatePoolActorAsync>d__28 <CreatePoolActorAsync>d__;
@@ -101,13 +101,13 @@ public class SurvivorsRogueBossTrackedMarker : UiPanelBase
 		return <CreatePoolActorAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E15B RID: 57691 RVA: 0x0034E0EF File Offset: 0x0034C2EF
+	// Token: 0x0600B578 RID: 46456 RVA: 0x00359B1F File Offset: 0x00357D1F
 	public void Recycle()
 	{
 		UiActorPool.Instance.RecycleAsync(this.MarkerActor, this.ResourceId);
 	}
 
-	// Token: 0x0600E15C RID: 57692 RVA: 0x0034E108 File Offset: 0x0034C308
+	// Token: 0x0600B579 RID: 46457 RVA: 0x00359B38 File Offset: 0x00357D38
 	public void DelayRecycle()
 	{
 		if (this.AnimSequencePlayer.IsPlayingSequence("Start"))
@@ -121,7 +121,7 @@ public class SurvivorsRogueBossTrackedMarker : UiPanelBase
 		this.AnimSequencePlayer.PlayOrReplaySequenceByName("Close", false, null);
 	}
 
-	// Token: 0x0600E15D RID: 57693 RVA: 0x0034E168 File Offset: 0x0034C368
+	// Token: 0x0600B57A RID: 46458 RVA: 0x00359B98 File Offset: 0x00357D98
 	public void OnTick(float deltaTime)
 	{
 		if (!this.TickEnabled)
@@ -140,7 +140,7 @@ public class SurvivorsRogueBossTrackedMarker : UiPanelBase
 		this.UpdateTargetPosition(kscEntity.K2_GetActorLocation());
 	}
 
-	// Token: 0x0600E15E RID: 57694 RVA: 0x0034E1AC File Offset: 0x0034C3AC
+	// Token: 0x0600B57B RID: 46459 RVA: 0x00359BDC File Offset: 0x00357DDC
 	public void UpdateTargetPosition(FVector targetPosition)
 	{
 		TsCharacterController characterController = Global.CharacterController;
@@ -179,7 +179,7 @@ public class SurvivorsRogueBossTrackedMarker : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E15F RID: 57695 RVA: 0x0034E358 File Offset: 0x0034C558
+	// Token: 0x0600B57C RID: 46460 RVA: 0x00359D88 File Offset: 0x00357F88
 	protected bool ClampToEllipse(Vector2D vector, bool inFront)
 	{
 		double x = vector.X;
@@ -195,75 +195,75 @@ public class SurvivorsRogueBossTrackedMarker : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x04006810 RID: 26640
+	// Token: 0x040068EF RID: 26863
 	private const float MAX_A = 1176f;
 
-	// Token: 0x04006811 RID: 26641
+	// Token: 0x040068F0 RID: 26864
 	private const float MARGIN_A = 1008f;
 
-	// Token: 0x04006812 RID: 26642
+	// Token: 0x040068F1 RID: 26865
 	private const float MAX_B = 712.5f;
 
-	// Token: 0x04006813 RID: 26643
+	// Token: 0x040068F2 RID: 26866
 	private const float MARGIN_B = 495f;
 
-	// Token: 0x04006814 RID: 26644
+	// Token: 0x040068F3 RID: 26867
 	private const float RAD_2_DEG = 57.295776f;
 
-	// Token: 0x04006815 RID: 26645
+	// Token: 0x040068F4 RID: 26868
 	[Nullable(2)]
 	protected UUIItem DirectionArrow;
 
-	// Token: 0x04006816 RID: 26646
+	// Token: 0x040068F5 RID: 26869
 	[Nullable(2)]
 	protected UiPoolActor MarkerActor;
 
-	// Token: 0x04006817 RID: 26647
+	// Token: 0x040068F6 RID: 26870
 	[Nullable(2)]
 	protected string ResourceId;
 
-	// Token: 0x04006818 RID: 26648
+	// Token: 0x040068F7 RID: 26871
 	protected LevelSequencePlayer AnimSequencePlayer;
 
-	// Token: 0x04006819 RID: 26649
+	// Token: 0x040068F8 RID: 26872
 	protected FVector2D ScreenPositionRef;
 
-	// Token: 0x0400681A RID: 26650
+	// Token: 0x040068F9 RID: 26873
 	protected int TrackedEntityId;
 
-	// Token: 0x0400681B RID: 26651
+	// Token: 0x040068FA RID: 26874
 	[Nullable(2)]
 	protected KscEntityHandle TrackedEntity;
 
-	// Token: 0x0400681C RID: 26652
+	// Token: 0x040068FB RID: 26875
 	protected Vector2D ScreenPosition;
 
-	// Token: 0x0400681D RID: 26653
+	// Token: 0x040068FC RID: 26876
 	protected Vector2D LastScreenPosition;
 
-	// Token: 0x0400681E RID: 26654
+	// Token: 0x040068FD RID: 26877
 	protected readonly Vector2D PointTransport = new Vector2D(1.0, -1.0);
 
-	// Token: 0x0400681F RID: 26655
+	// Token: 0x040068FE RID: 26878
 	protected bool InRange;
 
-	// Token: 0x04006820 RID: 26656
+	// Token: 0x040068FF RID: 26879
 	protected Rotator TempRotator;
 
-	// Token: 0x04006821 RID: 26657
+	// Token: 0x04006900 RID: 26880
 	protected float LimitA;
 
-	// Token: 0x04006822 RID: 26658
+	// Token: 0x04006901 RID: 26881
 	protected float LimitB;
 
-	// Token: 0x04006823 RID: 26659
+	// Token: 0x04006902 RID: 26882
 	protected bool TickEnabled;
 
-	// Token: 0x02008311 RID: 33553
+	// Token: 0x0200749A RID: 29850
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402ABF6 RID: 175094
+		// Token: 0x04025F1E RID: 155422
 		public const int DirectionArrow = 0;
 	}
 }

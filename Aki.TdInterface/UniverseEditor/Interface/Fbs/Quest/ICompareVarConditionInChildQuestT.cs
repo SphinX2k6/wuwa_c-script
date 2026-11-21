@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DA1 RID: 15777
+	// Token: 0x020041B8 RID: 16824
 	public class ICompareVarConditionInChildQuestT
 	{
-		// Token: 0x17006C8B RID: 27787
-		// (get) Token: 0x06015EDE RID: 89822 RVA: 0x0032AAF4 File Offset: 0x00328CF4
-		// (set) Token: 0x06015EDF RID: 89823 RVA: 0x0032AAFC File Offset: 0x00328CFC
+		// Token: 0x17007245 RID: 29253
+		// (get) Token: 0x06017416 RID: 95254 RVA: 0x00351E20 File Offset: 0x00350020
+		// (set) Token: 0x06017417 RID: 95255 RVA: 0x00351E28 File Offset: 0x00350028
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x17006C8C RID: 27788
-		// (get) Token: 0x06015EE0 RID: 89824 RVA: 0x0032AB05 File Offset: 0x00328D05
-		// (set) Token: 0x06015EE1 RID: 89825 RVA: 0x0032AB0D File Offset: 0x00328D0D
+		// Token: 0x17007246 RID: 29254
+		// (get) Token: 0x06017418 RID: 95256 RVA: 0x00351E31 File Offset: 0x00350031
+		// (set) Token: 0x06017419 RID: 95257 RVA: 0x00351E39 File Offset: 0x00350039
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x17006C8D RID: 27789
-		// (get) Token: 0x06015EE2 RID: 89826 RVA: 0x0032AB16 File Offset: 0x00328D16
-		// (set) Token: 0x06015EE3 RID: 89827 RVA: 0x0032AB1E File Offset: 0x00328D1E
+		// Token: 0x17007247 RID: 29255
+		// (get) Token: 0x0601741A RID: 95258 RVA: 0x00351E42 File Offset: 0x00350042
+		// (set) Token: 0x0601741B RID: 95259 RVA: 0x00351E4A File Offset: 0x0035004A
 		public EConditionCount Count { get; set; }
 
-		// Token: 0x17006C8E RID: 27790
-		// (get) Token: 0x06015EE4 RID: 89828 RVA: 0x0032AB27 File Offset: 0x00328D27
-		// (set) Token: 0x06015EE5 RID: 89829 RVA: 0x0032AB2F File Offset: 0x00328D2F
+		// Token: 0x17007248 RID: 29256
+		// (get) Token: 0x0601741C RID: 95260 RVA: 0x00351E53 File Offset: 0x00350053
+		// (set) Token: 0x0601741D RID: 95261 RVA: 0x00351E5B File Offset: 0x0035005B
 		public List<ICompareVarInChildQuestT> Conditions { get; set; }
 
-		// Token: 0x06015EE6 RID: 89830 RVA: 0x0032AB38 File Offset: 0x00328D38
+		// Token: 0x0601741E RID: 95262 RVA: 0x00351E64 File Offset: 0x00350064
 		public ICompareVarConditionInChildQuestT()
 		{
 			this.Type = EChildQuest.DoInteract;

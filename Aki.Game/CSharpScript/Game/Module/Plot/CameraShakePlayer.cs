@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FD6 RID: 20438
+	// Token: 0x02003FA0 RID: 16288
 	public class CameraShakePlayer
 	{
-		// Token: 0x060344C3 RID: 214211 RVA: 0x00C483A8 File Offset: 0x00C465A8
+		// Token: 0x06029348 RID: 168776 RVA: 0x00B92104 File Offset: 0x00B90304
 		[NullableContext(1)]
 		public void Play(IFlowCameraShake param)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Plot
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x060344C4 RID: 214212 RVA: 0x00C48400 File Offset: 0x00C46600
+		// Token: 0x06029349 RID: 168777 RVA: 0x00B9215C File Offset: 0x00B9035C
 		public void Stop()
 		{
 			if (!this.IsPlaying)
@@ -48,14 +48,14 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0401BD0F RID: 113935
+		// Token: 0x040166EA RID: 91882
 		private int LoadingId = -1;
 
-		// Token: 0x0401BD10 RID: 113936
+		// Token: 0x040166EB RID: 91883
 		[Nullable(2)]
 		private UMatineeCameraShake CameraShake;
 
-		// Token: 0x0401BD11 RID: 113937
+		// Token: 0x040166EC RID: 91884
 		private bool IsPlaying;
 	}
 }

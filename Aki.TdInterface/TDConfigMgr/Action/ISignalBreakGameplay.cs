@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E6B RID: 7787
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020A0 RID: 8352
 	public class ISignalBreakGameplay : IUiGame
 	{
-		// Token: 0x0600A6AC RID: 42668 RVA: 0x00179178 File Offset: 0x00177378
+		// Token: 0x0600B164 RID: 45412 RVA: 0x0018EE78 File Offset: 0x0018D078
 		private ISignalBreakGameplay_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A6AD RID: 42669 RVA: 0x001791B0 File Offset: 0x001773B0
+		// Token: 0x0600B165 RID: 45413 RVA: 0x0018EEB0 File Offset: 0x0018D0B0
 		public static ISignalBreakGameplay Create([Nullable(2)] ISignalBreakGameplay instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A6AE RID: 42670 RVA: 0x001791C3 File Offset: 0x001773C3
+		// Token: 0x0600B166 RID: 45414 RVA: 0x0018EEC3 File Offset: 0x0018D0C3
 		public static ISignalBreakGameplay CreateFromSetValue([Nullable(2)] ISignalBreakGameplay_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A6AF RID: 42671 RVA: 0x001791D6 File Offset: 0x001773D6
+		// Token: 0x0600B167 RID: 45415 RVA: 0x0018EED6 File Offset: 0x0018D0D6
 		public new ISignalBreakGameplay_SetValue ToSetValue()
 		{
 			return new ISignalBreakGameplay_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700330D RID: 13069
-		// (get) Token: 0x0600A6B0 RID: 42672 RVA: 0x001791F5 File Offset: 0x001773F5
-		// (set) Token: 0x0600A6B1 RID: 42673 RVA: 0x00179220 File Offset: 0x00177420
+		// Token: 0x170035D1 RID: 13777
+		// (get) Token: 0x0600B168 RID: 45416 RVA: 0x0018EEF5 File Offset: 0x0018D0F5
+		// (set) Token: 0x0600B169 RID: 45417 RVA: 0x0018EF20 File Offset: 0x0018D120
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700330E RID: 13070
-		// (get) Token: 0x0600A6B2 RID: 42674 RVA: 0x0017922E File Offset: 0x0017742E
-		// (set) Token: 0x0600A6B3 RID: 42675 RVA: 0x00179259 File Offset: 0x00177459
+		// Token: 0x170035D2 RID: 13778
+		// (get) Token: 0x0600B16A RID: 45418 RVA: 0x0018EF2E File Offset: 0x0018D12E
+		// (set) Token: 0x0600B16B RID: 45419 RVA: 0x0018EF59 File Offset: 0x0018D159
 		public virtual string SignalBreakId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400638A RID: 25482
+		// Token: 0x0400696E RID: 26990
 		[Nullable(2)]
 		protected new ISignalBreakGameplay FbInstance;
 
-		// Token: 0x0400638B RID: 25483
+		// Token: 0x0400696F RID: 26991
 		[Nullable(2)]
 		protected new ISignalBreakGameplay_SetValue PocoInterface;
 	}

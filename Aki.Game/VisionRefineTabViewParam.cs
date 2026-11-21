@@ -2,47 +2,47 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001730 RID: 5936
+// Token: 0x02000BE8 RID: 3048
 public class VisionRefineTabViewParam : IVisionRefineTabViewParam
 {
-	// Token: 0x17000E3D RID: 3645
-	// (get) Token: 0x0600AB84 RID: 43908 RVA: 0x00267D38 File Offset: 0x00265F38
-	// (set) Token: 0x0600AB85 RID: 43909 RVA: 0x00267D40 File Offset: 0x00265F40
+	// Token: 0x17000E5E RID: 3678
+	// (get) Token: 0x06007F66 RID: 32614 RVA: 0x00272110 File Offset: 0x00270310
+	// (set) Token: 0x06007F67 RID: 32615 RVA: 0x00272118 File Offset: 0x00270318
 	public ERefineViewState ViewState { get; set; }
 
-	// Token: 0x17000E3E RID: 3646
-	// (get) Token: 0x0600AB86 RID: 43910 RVA: 0x00267D49 File Offset: 0x00265F49
-	// (set) Token: 0x0600AB87 RID: 43911 RVA: 0x00267D51 File Offset: 0x00265F51
+	// Token: 0x17000E5F RID: 3679
+	// (get) Token: 0x06007F68 RID: 32616 RVA: 0x00272121 File Offset: 0x00270321
+	// (set) Token: 0x06007F69 RID: 32617 RVA: 0x00272129 File Offset: 0x00270329
 	public EVisionRefineRefineType? RefineType { get; set; }
 
-	// Token: 0x17000E3F RID: 3647
-	// (get) Token: 0x0600AB88 RID: 43912 RVA: 0x00267D5A File Offset: 0x00265F5A
-	// (set) Token: 0x0600AB89 RID: 43913 RVA: 0x00267D62 File Offset: 0x00265F62
+	// Token: 0x17000E60 RID: 3680
+	// (get) Token: 0x06007F6A RID: 32618 RVA: 0x00272132 File Offset: 0x00270332
+	// (set) Token: 0x06007F6B RID: 32619 RVA: 0x0027213A File Offset: 0x0027033A
 	public int? UniqueId { get; set; }
 
-	// Token: 0x17000E40 RID: 3648
-	// (get) Token: 0x0600AB8A RID: 43914 RVA: 0x00267D6B File Offset: 0x00265F6B
-	// (set) Token: 0x0600AB8B RID: 43915 RVA: 0x00267D73 File Offset: 0x00265F73
+	// Token: 0x17000E61 RID: 3681
+	// (get) Token: 0x06007F6C RID: 32620 RVA: 0x00272143 File Offset: 0x00270343
+	// (set) Token: 0x06007F6D RID: 32621 RVA: 0x0027214B File Offset: 0x0027034B
 	public bool? ActiveCaptionItem { get; set; }
 
-	// Token: 0x17000E41 RID: 3649
-	// (get) Token: 0x0600AB8C RID: 43916 RVA: 0x00267D7C File Offset: 0x00265F7C
-	// (set) Token: 0x0600AB8D RID: 43917 RVA: 0x00267D84 File Offset: 0x00265F84
+	// Token: 0x17000E62 RID: 3682
+	// (get) Token: 0x06007F6E RID: 32622 RVA: 0x00272154 File Offset: 0x00270354
+	// (set) Token: 0x06007F6F RID: 32623 RVA: 0x0027215C File Offset: 0x0027035C
 	public bool? SlotInteractive { get; set; }
 
-	// Token: 0x17000E42 RID: 3650
-	// (get) Token: 0x0600AB8E RID: 43918 RVA: 0x00267D8D File Offset: 0x00265F8D
-	// (set) Token: 0x0600AB8F RID: 43919 RVA: 0x00267D95 File Offset: 0x00265F95
+	// Token: 0x17000E63 RID: 3683
+	// (get) Token: 0x06007F70 RID: 32624 RVA: 0x00272165 File Offset: 0x00270365
+	// (set) Token: 0x06007F71 RID: 32625 RVA: 0x0027216D File Offset: 0x0027036D
 	public bool? ResultShowTips { get; set; }
 
-	// Token: 0x17000E43 RID: 3651
-	// (get) Token: 0x0600AB90 RID: 43920 RVA: 0x00267D9E File Offset: 0x00265F9E
-	// (set) Token: 0x0600AB91 RID: 43921 RVA: 0x00267DA6 File Offset: 0x00265FA6
+	// Token: 0x17000E64 RID: 3684
+	// (get) Token: 0x06007F72 RID: 32626 RVA: 0x00272176 File Offset: 0x00270376
+	// (set) Token: 0x06007F73 RID: 32627 RVA: 0x0027217E File Offset: 0x0027037E
 	public bool? IsSingleMode { get; set; }
 
-	// Token: 0x17000E44 RID: 3652
-	// (get) Token: 0x0600AB92 RID: 43922 RVA: 0x00267DAF File Offset: 0x00265FAF
-	// (set) Token: 0x0600AB93 RID: 43923 RVA: 0x00267DB7 File Offset: 0x00265FB7
+	// Token: 0x17000E65 RID: 3685
+	// (get) Token: 0x06007F74 RID: 32628 RVA: 0x00272187 File Offset: 0x00270387
+	// (set) Token: 0x06007F75 RID: 32629 RVA: 0x0027218F File Offset: 0x0027038F
 	[Nullable(new byte[]
 	{
 		2,
@@ -58,9 +58,9 @@ public class VisionRefineTabViewParam : IVisionRefineTabViewParam
 		1
 	})] set; }
 
-	// Token: 0x17000E45 RID: 3653
-	// (get) Token: 0x0600AB94 RID: 43924 RVA: 0x00267DC0 File Offset: 0x00265FC0
-	// (set) Token: 0x0600AB95 RID: 43925 RVA: 0x00267DC8 File Offset: 0x00265FC8
+	// Token: 0x17000E66 RID: 3686
+	// (get) Token: 0x06007F76 RID: 32630 RVA: 0x00272198 File Offset: 0x00270398
+	// (set) Token: 0x06007F77 RID: 32631 RVA: 0x002721A0 File Offset: 0x002703A0
 	[Nullable(new byte[]
 	{
 		2,

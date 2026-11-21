@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02003299 RID: 12953
+// Token: 0x0200280A RID: 10250
 public class SquadAddRateModifier : ISquadModifier
 {
-	// Token: 0x170026BE RID: 9918
-	// (get) Token: 0x0601C0A2 RID: 114850 RVA: 0x007CB9D3 File Offset: 0x007C9BD3
+	// Token: 0x17002998 RID: 10648
+	// (get) Token: 0x06019CD0 RID: 105680 RVA: 0x007F2C91 File Offset: 0x007F0E91
 	public ESquadCalcPolicy Type
 	{
 		get
@@ -13,6 +13,6 @@ public class SquadAddRateModifier : ISquadModifier
 		}
 	}
 
-	// Token: 0x0400DD9D RID: 56733
+	// Token: 0x0400E244 RID: 57924
 	public float Value;
 }

@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B7C RID: 19324
+	// Token: 0x02003B26 RID: 15142
 	[NullableContext(1)]
 	public interface ITargetDescribeAndScore
 	{
-		// Token: 0x17007C38 RID: 31800
-		// (get) Token: 0x06032146 RID: 205126
-		// (set) Token: 0x06032147 RID: 205127
+		// Token: 0x17004FE2 RID: 20450
+		// (get) Token: 0x06026ED7 RID: 159447
+		// (set) Token: 0x06026ED8 RID: 159448
 		string DescribeTextKey { get; set; }
 
-		// Token: 0x17007C39 RID: 31801
-		// (get) Token: 0x06032148 RID: 205128
-		// (set) Token: 0x06032149 RID: 205129
+		// Token: 0x17004FE3 RID: 20451
+		// (get) Token: 0x06026ED9 RID: 159449
+		// (set) Token: 0x06026EDA RID: 159450
 		int RewardId { get; set; }
 
-		// Token: 0x17007C3A RID: 31802
-		// (get) Token: 0x0603214A RID: 205130
-		// (set) Token: 0x0603214B RID: 205131
+		// Token: 0x17004FE4 RID: 20452
+		// (get) Token: 0x06026EDB RID: 159451
+		// (set) Token: 0x06026EDC RID: 159452
 		int Score { get; set; }
 	}
 }

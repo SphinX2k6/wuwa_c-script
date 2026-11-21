@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -14,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EFF RID: 20223
+	// Token: 0x02003EC8 RID: 16072
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleSelectTokenView : UiViewBase
 	{
-		// Token: 0x06033DD5 RID: 212437 RVA: 0x00C267A9 File Offset: 0x00C249A9
+		// Token: 0x06028C40 RID: 166976 RVA: 0x00B6FD51 File Offset: 0x00B6DF51
 		public RogueBattleSelectTokenView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06033DD6 RID: 212438 RVA: 0x00C267B4 File Offset: 0x00C249B4
+		// Token: 0x06028C41 RID: 166977 RVA: 0x00B6FD5C File Offset: 0x00B6DF5C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,7 +45,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033DD7 RID: 212439 RVA: 0x00C268D0 File Offset: 0x00C24AD0
+		// Token: 0x06028C42 RID: 166978 RVA: 0x00B6FE78 File Offset: 0x00B6E078
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleSelectTokenView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -57,7 +56,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033DD8 RID: 212440 RVA: 0x00C26914 File Offset: 0x00C24B14
+		// Token: 0x06028C43 RID: 166979 RVA: 0x00B6FEBC File Offset: 0x00B6E0BC
 		private void RefreshTokenLayout()
 		{
 			SelectViewOp selectViewOp = ((MapRogueOpSelectView)MapRogueModel.Instance.GetOpData((int)this.OpenParam)).Data.SelectViewOp;
@@ -79,11 +78,11 @@ namespace CSharpScript.Game.Module.RogueBattle
 				{
 					return;
 				}
-				tokenLayout.RefreshByData(repeatedField2.ToList<RogueResGainData>(), null, false);
+				tokenLayout.RefreshByData(repeatedField2, null, false);
 			}
 		}
 
-		// Token: 0x06033DD9 RID: 212441 RVA: 0x00C2697C File Offset: 0x00C24B7C
+		// Token: 0x06028C44 RID: 166980 RVA: 0x00B6FF1C File Offset: 0x00B6E11C
 		private void OnBtnConfirm()
 		{
 			int selectedGridIndex = this.TokenLayout.GetSelectedGridIndex();
@@ -94,18 +93,18 @@ namespace CSharpScript.Game.Module.RogueBattle
 			((MapRogueOpSelectView)MapRogueModel.Instance.GetOpData((int)this.OpenParam)).Select(selectedGridIndex);
 		}
 
-		// Token: 0x06033DDA RID: 212442 RVA: 0x00C269BA File Offset: 0x00C24BBA
+		// Token: 0x06028C45 RID: 166981 RVA: 0x00B6FF5A File Offset: 0x00B6E15A
 		private void OnBtnRefresh()
 		{
 		}
 
-		// Token: 0x06033DDB RID: 212443 RVA: 0x00C269BC File Offset: 0x00C24BBC
+		// Token: 0x06028C46 RID: 166982 RVA: 0x00B6FF5C File Offset: 0x00B6E15C
 		private void OnClickDetail()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RogueBattleSummary, null, null);
 		}
 
-		// Token: 0x06033DDC RID: 212444 RVA: 0x00C269CF File Offset: 0x00C24BCF
+		// Token: 0x06028C47 RID: 166983 RVA: 0x00B6FF6F File Offset: 0x00B6E16F
 		private RogueBattleTokenItem CreateTokenItem()
 		{
 			return new RogueBattleTokenItem
@@ -114,7 +113,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033DDD RID: 212445 RVA: 0x00C269E8 File Offset: 0x00C24BE8
+		// Token: 0x06028C48 RID: 166984 RVA: 0x00B6FF88 File Offset: 0x00B6E188
 		private void OnSelectToken(int? index)
 		{
 			if (index == null)
@@ -138,7 +137,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			EventSystem.Instance.Emit(EEventName.RogueBattleSelectOptionPreview);
 		}
 
-		// Token: 0x0401B903 RID: 112899
+		// Token: 0x040162D6 RID: 90838
 		[Nullable(new byte[]
 		{
 			2,
@@ -147,7 +146,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		private GenericLayout<RogueBattleTokenItem, RogueResGainData> TokenLayout;
 
-		// Token: 0x0401B904 RID: 112900
+		// Token: 0x040162D7 RID: 90839
 		[Nullable(2)]
 		private RogueBattleTopPanel CaptionComponent;
 	}

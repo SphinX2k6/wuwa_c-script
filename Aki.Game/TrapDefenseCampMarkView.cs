@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnrealEngine;
 
-// Token: 0x02001D2D RID: 7469
+// Token: 0x020011EF RID: 4591
 public class TrapDefenseCampMarkView : TrapDefenseMarkView
 {
-	// Token: 0x0600E23C RID: 57916 RVA: 0x00352517 File Offset: 0x00350717
+	// Token: 0x0600B659 RID: 46681 RVA: 0x0035DF47 File Offset: 0x0035C147
 	public TrapDefenseCampMarkView(int markId) : base(markId)
 	{
 	}
 
-	// Token: 0x0600E23D RID: 57917 RVA: 0x00352520 File Offset: 0x00350720
+	// Token: 0x0600B65A RID: 46682 RVA: 0x0035DF50 File Offset: 0x0035C150
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class TrapDefenseCampMarkView : TrapDefenseMarkView
 		};
 	}
 
-	// Token: 0x0600E23E RID: 57918 RVA: 0x00352544 File Offset: 0x00350744
+	// Token: 0x0600B65B RID: 46683 RVA: 0x0035DF74 File Offset: 0x0035C174
 	protected override void OnBeforeShow()
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -29,10 +29,10 @@ public class TrapDefenseCampMarkView : TrapDefenseMarkView
 		});
 	}
 
-	// Token: 0x02008331 RID: 33585
+	// Token: 0x020074BA RID: 29882
 	private static class EChildComponent
 	{
-		// Token: 0x0402AC90 RID: 175248
+		// Token: 0x04025FB8 RID: 155576
 		public const int Icon = 0;
 	}
 }

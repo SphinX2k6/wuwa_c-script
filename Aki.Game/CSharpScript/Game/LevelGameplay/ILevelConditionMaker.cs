@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006992 RID: 27026
+	// Token: 0x02005AEE RID: 23278
 	[NullableContext(1)]
 	public interface ILevelConditionMaker
 	{
-		// Token: 0x1700984A RID: 38986
-		// (get) Token: 0x06043419 RID: 275481
-		// (set) Token: 0x0604341A RID: 275482
+		// Token: 0x17006D2A RID: 27946
+		// (get) Token: 0x06039451 RID: 234577
+		// (set) Token: 0x06039452 RID: 234578
 		LevelConditionBase LevelCondition { get; set; }
 
-		// Token: 0x1700984B RID: 38987
-		// (get) Token: 0x0604341B RID: 275483
-		// (set) Token: 0x0604341C RID: 275484
+		// Token: 0x17006D2B RID: 27947
+		// (get) Token: 0x06039453 RID: 234579
+		// (set) Token: 0x06039454 RID: 234580
 		List<EEventName> EventNames { get; set; }
 	}
 }

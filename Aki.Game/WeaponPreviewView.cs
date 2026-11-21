@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002CFB RID: 11515
+// Token: 0x02002255 RID: 8789
 [NullableContext(2)]
 [Nullable(0)]
 public class WeaponPreviewView : UiViewBase
 {
-	// Token: 0x06018332 RID: 99122 RVA: 0x006283BC File Offset: 0x006265BC
+	// Token: 0x06015BD3 RID: 89043 RVA: 0x0064E384 File Offset: 0x0064C584
 	[NullableContext(1)]
 	public WeaponPreviewView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06018333 RID: 99123 RVA: 0x006283CC File Offset: 0x006265CC
+	// Token: 0x06015BD4 RID: 89044 RVA: 0x0064E394 File Offset: 0x0064C594
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -35,7 +35,7 @@ public class WeaponPreviewView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06018334 RID: 99124 RVA: 0x00628458 File Offset: 0x00626658
+	// Token: 0x06015BD5 RID: 89045 RVA: 0x0064E420 File Offset: 0x0064C620
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeaponPreviewView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ public class WeaponPreviewView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018335 RID: 99125 RVA: 0x0062849C File Offset: 0x0062669C
+	// Token: 0x06015BD6 RID: 89046 RVA: 0x0064E464 File Offset: 0x0064C664
 	protected override void OnBeforeShow()
 	{
 		WeaponModel.Instance.SetCurSelectViewName(EWeaponViewName.WeaponLevelUpView);
@@ -59,7 +59,7 @@ public class WeaponPreviewView : UiViewBase
 		weaponListComponent.SetCurSelect(weaponPreviewViewParam.SelectedIndex);
 	}
 
-	// Token: 0x06018336 RID: 99126 RVA: 0x006284D6 File Offset: 0x006266D6
+	// Token: 0x06015BD7 RID: 89047 RVA: 0x0064E49E File Offset: 0x0064C69E
 	protected override void OnAfterHide()
 	{
 		WeaponListComponent weaponListComponent = this.WeaponListComponent;
@@ -70,13 +70,13 @@ public class WeaponPreviewView : UiViewBase
 		WeaponModel.Instance.SetCurSelectViewName(EWeaponViewName.None);
 	}
 
-	// Token: 0x06018337 RID: 99127 RVA: 0x006284F4 File Offset: 0x006266F4
+	// Token: 0x06015BD8 RID: 89048 RVA: 0x0064E4BC File Offset: 0x0064C6BC
 	private void OnCloseBtnClick()
 	{
 		UiManager.Instance.CloseView(EUiViewName.WeaponPreviewView, null);
 	}
 
-	// Token: 0x06018338 RID: 99128 RVA: 0x00628508 File Offset: 0x00626708
+	// Token: 0x06015BD9 RID: 89049 RVA: 0x0064E4D0 File Offset: 0x0064C6D0
 	private void OnWeaponChange()
 	{
 		WeaponTrialData weaponTrialData = this.WeaponListComponent.GetCurSelectedData() as WeaponTrialData;
@@ -94,7 +94,7 @@ public class WeaponPreviewView : UiViewBase
 		WeaponController.Instance.OnSelectedWeaponChange(weaponTrialData, this.WeaponObserver, this.WeaponScabbardObserver, -1, this.NeedMeshStreaming);
 	}
 
-	// Token: 0x06018339 RID: 99129 RVA: 0x0062858C File Offset: 0x0062678C
+	// Token: 0x06015BDA RID: 89050 RVA: 0x0064E554 File Offset: 0x0064C754
 	protected override void OnBeforeCreate()
 	{
 		IWeaponPreviewViewParam weaponPreviewViewParam = this.OpenParam as IWeaponPreviewViewParam;
@@ -109,7 +109,7 @@ public class WeaponPreviewView : UiViewBase
 		this.WeaponScabbardObserver = UiSceneManager.Instance.InitWeaponScabbardObserver();
 	}
 
-	// Token: 0x0601833A RID: 99130 RVA: 0x006285F4 File Offset: 0x006267F4
+	// Token: 0x06015BDB RID: 89051 RVA: 0x0064E5BC File Offset: 0x0064C7BC
 	protected override void OnBeforeDestroy()
 	{
 		IWeaponPreviewViewParam weaponPreviewViewParam = this.OpenParam as IWeaponPreviewViewParam;
@@ -123,7 +123,7 @@ public class WeaponPreviewView : UiViewBase
 		this.WeaponScabbardObserver = null;
 	}
 
-	// Token: 0x0601833B RID: 99131 RVA: 0x0062864C File Offset: 0x0062684C
+	// Token: 0x06015BDC RID: 89052 RVA: 0x0064E614 File Offset: 0x0064C814
 	private void OnClickFullLevelToggle(EToggleState state)
 	{
 		WeaponTrialData weaponTrialData = this.WeaponListComponent.GetCurSelectedData() as WeaponTrialData;
@@ -136,33 +136,33 @@ public class WeaponPreviewView : UiViewBase
 		WeaponController.Instance.OnSelectedWeaponChange(weaponTrialData, this.WeaponObserver, this.WeaponScabbardObserver, -1, this.NeedMeshStreaming);
 	}
 
-	// Token: 0x0400B3E3 RID: 46051
+	// Token: 0x0400B758 RID: 46936
 	private WeaponDetailTipsComponent WeaponDetailComponent;
 
-	// Token: 0x0400B3E4 RID: 46052
+	// Token: 0x0400B759 RID: 46937
 	private WeaponListComponent WeaponListComponent;
 
-	// Token: 0x0400B3E5 RID: 46053
+	// Token: 0x0400B75A RID: 46938
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400B3E6 RID: 46054
+	// Token: 0x0400B75B RID: 46939
 	private readonly bool NeedMeshStreaming = true;
 
-	// Token: 0x0400B3E7 RID: 46055
+	// Token: 0x0400B75C RID: 46940
 	private SkeletalObserverHandle WeaponObserver;
 
-	// Token: 0x0400B3E8 RID: 46056
+	// Token: 0x0400B75D RID: 46941
 	private SkeletalObserverHandle WeaponScabbardObserver;
 
-	// Token: 0x02009292 RID: 37522
+	// Token: 0x020084BA RID: 33978
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402F63D RID: 194109
+		// Token: 0x0402ACC7 RID: 175303
 		WeaponDetailItem,
-		// Token: 0x0402F63E RID: 194110
+		// Token: 0x0402ACC8 RID: 175304
 		CaptionItem,
-		// Token: 0x0402F63F RID: 194111
+		// Token: 0x0402ACC9 RID: 175305
 		WeaponScrollView
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001048 RID: 4168
+	// Token: 0x02001176 RID: 4470
 	public class IPhotographTarget_SetValue
 	{
-		// Token: 0x0400383C RID: 14396
+		// Token: 0x04003B84 RID: 15236
 		public EPhotographTargetType Type;
 	}
 }

@@ -6,440 +6,440 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x020043CD RID: 17357
+	// Token: 0x020033E6 RID: 13286
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/SCamera_Setting.SCamera_Setting")]
 	[UnrealStructLayout(168, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 164)]
 	public class SCamera_Setting : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602CF0C RID: 184076 RVA: 0x00A2CD84 File Offset: 0x00A2AF84
+		// Token: 0x06021AE1 RID: 137953 RVA: 0x00966E3E File Offset: 0x0096503E
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SCamera_Setting._ScriptStructPtr != 0) ? SCamera_Setting._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/Camera/SCamera_Setting.SCamera_Setting", ref SCamera_Setting._ScriptStructPtr);
 		}
 
-		// Token: 0x170071AC RID: 29100
-		// (get) Token: 0x0602CF0D RID: 184077 RVA: 0x00A2CDA8 File Offset: 0x00A2AFA8
-		// (set) Token: 0x0602CF0E RID: 184078 RVA: 0x00A2CDBC File Offset: 0x00A2AFBC
+		// Token: 0x1700459E RID: 17822
+		// (get) Token: 0x06021AE2 RID: 137954 RVA: 0x00966E62 File Offset: 0x00965062
+		// (set) Token: 0x06021AE3 RID: 137955 RVA: 0x00966E76 File Offset: 0x00965076
 		public unsafe TEnumAsByte<EFightCameraType> Type
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_Type);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_Type) = value;
 			}
 		}
 
-		// Token: 0x170071AD RID: 29101
-		// (get) Token: 0x0602CF0F RID: 184079 RVA: 0x00A2CDD1 File Offset: 0x00A2AFD1
-		// (set) Token: 0x0602CF10 RID: 184080 RVA: 0x00A2CDE5 File Offset: 0x00A2AFE5
+		// Token: 0x1700459F RID: 17823
+		// (get) Token: 0x06021AE4 RID: 137956 RVA: 0x00966E8B File Offset: 0x0096508B
+		// (set) Token: 0x06021AE5 RID: 137957 RVA: 0x00966E9F File Offset: 0x0096509F
 		public unsafe FGameplayTag Tag
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_Tag);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_Tag) = value;
 			}
 		}
 
-		// Token: 0x170071AE RID: 29102
-		// (get) Token: 0x0602CF11 RID: 184081 RVA: 0x00A2CDFA File Offset: 0x00A2AFFA
-		// (set) Token: 0x0602CF12 RID: 184082 RVA: 0x00A2CE0A File Offset: 0x00A2B00A
+		// Token: 0x170045A0 RID: 17824
+		// (get) Token: 0x06021AE6 RID: 137958 RVA: 0x00966EB4 File Offset: 0x009650B4
+		// (set) Token: 0x06021AE7 RID: 137959 RVA: 0x00966EC4 File Offset: 0x009650C4
 		public unsafe float 默认臂长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_默认臂长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_默认臂长) = value;
 			}
 		}
 
-		// Token: 0x170071AF RID: 29103
-		// (get) Token: 0x0602CF13 RID: 184083 RVA: 0x00A2CE1B File Offset: 0x00A2B01B
-		// (set) Token: 0x0602CF14 RID: 184084 RVA: 0x00A2CE2B File Offset: 0x00A2B02B
+		// Token: 0x170045A1 RID: 17825
+		// (get) Token: 0x06021AE8 RID: 137960 RVA: 0x00966ED5 File Offset: 0x009650D5
+		// (set) Token: 0x06021AE9 RID: 137961 RVA: 0x00966EE5 File Offset: 0x009650E5
 		public unsafe float 默认臂长优先级
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_默认臂长优先级);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_默认臂长优先级) = value;
 			}
 		}
 
-		// Token: 0x170071B0 RID: 29104
-		// (get) Token: 0x0602CF15 RID: 184085 RVA: 0x00A2CE3C File Offset: 0x00A2B03C
-		// (set) Token: 0x0602CF16 RID: 184086 RVA: 0x00A2CE4C File Offset: 0x00A2B04C
+		// Token: 0x170045A2 RID: 17826
+		// (get) Token: 0x06021AEA RID: 137962 RVA: 0x00966EF6 File Offset: 0x009650F6
+		// (set) Token: 0x06021AEB RID: 137963 RVA: 0x00966F06 File Offset: 0x00965106
 		public unsafe float 最大臂长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_最大臂长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_最大臂长) = value;
 			}
 		}
 
-		// Token: 0x170071B1 RID: 29105
-		// (get) Token: 0x0602CF17 RID: 184087 RVA: 0x00A2CE5D File Offset: 0x00A2B05D
-		// (set) Token: 0x0602CF18 RID: 184088 RVA: 0x00A2CE6D File Offset: 0x00A2B06D
+		// Token: 0x170045A3 RID: 17827
+		// (get) Token: 0x06021AEC RID: 137964 RVA: 0x00966F17 File Offset: 0x00965117
+		// (set) Token: 0x06021AED RID: 137965 RVA: 0x00966F27 File Offset: 0x00965127
 		public unsafe float 最大臂长优先级
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_最大臂长优先级);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_最大臂长优先级) = value;
 			}
 		}
 
-		// Token: 0x170071B2 RID: 29106
-		// (get) Token: 0x0602CF19 RID: 184089 RVA: 0x00A2CE7E File Offset: 0x00A2B07E
-		// (set) Token: 0x0602CF1A RID: 184090 RVA: 0x00A2CE8E File Offset: 0x00A2B08E
+		// Token: 0x170045A4 RID: 17828
+		// (get) Token: 0x06021AEE RID: 137966 RVA: 0x00966F38 File Offset: 0x00965138
+		// (set) Token: 0x06021AEF RID: 137967 RVA: 0x00966F48 File Offset: 0x00965148
 		public unsafe float 最小臂长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_最小臂长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_最小臂长) = value;
 			}
 		}
 
-		// Token: 0x170071B3 RID: 29107
-		// (get) Token: 0x0602CF1B RID: 184091 RVA: 0x00A2CE9F File Offset: 0x00A2B09F
-		// (set) Token: 0x0602CF1C RID: 184092 RVA: 0x00A2CEAF File Offset: 0x00A2B0AF
+		// Token: 0x170045A5 RID: 17829
+		// (get) Token: 0x06021AF0 RID: 137968 RVA: 0x00966F59 File Offset: 0x00965159
+		// (set) Token: 0x06021AF1 RID: 137969 RVA: 0x00966F69 File Offset: 0x00965169
 		public unsafe float 最小臂长优先级
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_最小臂长优先级);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_最小臂长优先级) = value;
 			}
 		}
 
-		// Token: 0x170071B4 RID: 29108
-		// (get) Token: 0x0602CF1D RID: 184093 RVA: 0x00A2CEC0 File Offset: 0x00A2B0C0
-		// (set) Token: 0x0602CF1E RID: 184094 RVA: 0x00A2CED0 File Offset: 0x00A2B0D0
+		// Token: 0x170045A6 RID: 17830
+		// (get) Token: 0x06021AF2 RID: 137970 RVA: 0x00966F7A File Offset: 0x0096517A
+		// (set) Token: 0x06021AF3 RID: 137971 RVA: 0x00966F8A File Offset: 0x0096518A
 		public unsafe float 叠加臂长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_叠加臂长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_叠加臂长) = value;
 			}
 		}
 
-		// Token: 0x170071B5 RID: 29109
-		// (get) Token: 0x0602CF1F RID: 184095 RVA: 0x00A2CEE1 File Offset: 0x00A2B0E1
-		// (set) Token: 0x0602CF20 RID: 184096 RVA: 0x00A2CEF5 File Offset: 0x00A2B0F5
+		// Token: 0x170045A7 RID: 17831
+		// (get) Token: 0x06021AF4 RID: 137972 RVA: 0x00966F9B File Offset: 0x0096519B
+		// (set) Token: 0x06021AF5 RID: 137973 RVA: 0x00966FAF File Offset: 0x009651AF
 		public unsafe FVector 镜头偏移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_镜头偏移);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_镜头偏移) = value;
 			}
 		}
 
-		// Token: 0x170071B6 RID: 29110
-		// (get) Token: 0x0602CF21 RID: 184097 RVA: 0x00A2CF0A File Offset: 0x00A2B10A
-		// (set) Token: 0x0602CF22 RID: 184098 RVA: 0x00A2CF1A File Offset: 0x00A2B11A
+		// Token: 0x170045A8 RID: 17832
+		// (get) Token: 0x06021AF6 RID: 137974 RVA: 0x00966FC4 File Offset: 0x009651C4
+		// (set) Token: 0x06021AF7 RID: 137975 RVA: 0x00966FD4 File Offset: 0x009651D4
 		public unsafe float 镜头偏移优先级
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_镜头偏移优先级);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_镜头偏移优先级) = value;
 			}
 		}
 
-		// Token: 0x170071B7 RID: 29111
-		// (get) Token: 0x0602CF23 RID: 184099 RVA: 0x00A2CF2B File Offset: 0x00A2B12B
-		// (set) Token: 0x0602CF24 RID: 184100 RVA: 0x00A2CF3F File Offset: 0x00A2B13F
+		// Token: 0x170045A9 RID: 17833
+		// (get) Token: 0x06021AF8 RID: 137976 RVA: 0x00966FE5 File Offset: 0x009651E5
+		// (set) Token: 0x06021AF9 RID: 137977 RVA: 0x00966FF9 File Offset: 0x009651F9
 		public unsafe FVector 相机臂偏移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_相机臂偏移);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_相机臂偏移) = value;
 			}
 		}
 
-		// Token: 0x170071B8 RID: 29112
-		// (get) Token: 0x0602CF25 RID: 184101 RVA: 0x00A2CF54 File Offset: 0x00A2B154
-		// (set) Token: 0x0602CF26 RID: 184102 RVA: 0x00A2CF64 File Offset: 0x00A2B164
+		// Token: 0x170045AA RID: 17834
+		// (get) Token: 0x06021AFA RID: 137978 RVA: 0x0096700E File Offset: 0x0096520E
+		// (set) Token: 0x06021AFB RID: 137979 RVA: 0x0096701E File Offset: 0x0096521E
 		public unsafe float 相机臂偏移优先级
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_相机臂偏移优先级);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_相机臂偏移优先级) = value;
 			}
 		}
 
-		// Token: 0x170071B9 RID: 29113
-		// (get) Token: 0x0602CF27 RID: 184103 RVA: 0x00A2CF75 File Offset: 0x00A2B175
-		// (set) Token: 0x0602CF28 RID: 184104 RVA: 0x00A2CF85 File Offset: 0x00A2B185
+		// Token: 0x170045AB RID: 17835
+		// (get) Token: 0x06021AFC RID: 137980 RVA: 0x0096702F File Offset: 0x0096522F
+		// (set) Token: 0x06021AFD RID: 137981 RVA: 0x0096703F File Offset: 0x0096523F
 		public unsafe float 进入状态相机延迟速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_进入状态相机延迟速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_进入状态相机延迟速度) = value;
 			}
 		}
 
-		// Token: 0x170071BA RID: 29114
-		// (get) Token: 0x0602CF29 RID: 184105 RVA: 0x00A2CF96 File Offset: 0x00A2B196
-		// (set) Token: 0x0602CF2A RID: 184106 RVA: 0x00A2CFA6 File Offset: 0x00A2B1A6
+		// Token: 0x170045AC RID: 17836
+		// (get) Token: 0x06021AFE RID: 137982 RVA: 0x00967050 File Offset: 0x00965250
+		// (set) Token: 0x06021AFF RID: 137983 RVA: 0x00967060 File Offset: 0x00965260
 		public unsafe float 退出状态相机延迟速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_退出状态相机延迟速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_退出状态相机延迟速度) = value;
 			}
 		}
 
-		// Token: 0x170071BB RID: 29115
-		// (get) Token: 0x0602CF2B RID: 184107 RVA: 0x00A2CFB7 File Offset: 0x00A2B1B7
-		// (set) Token: 0x0602CF2C RID: 184108 RVA: 0x00A2CFC7 File Offset: 0x00A2B1C7
+		// Token: 0x170045AD RID: 17837
+		// (get) Token: 0x06021B00 RID: 137984 RVA: 0x00967071 File Offset: 0x00965271
+		// (set) Token: 0x06021B01 RID: 137985 RVA: 0x00967081 File Offset: 0x00965281
 		public unsafe float 相机延迟速度优先级
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_相机延迟速度优先级);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_相机延迟速度优先级) = value;
 			}
 		}
 
-		// Token: 0x170071BC RID: 29116
-		// (get) Token: 0x0602CF2D RID: 184109 RVA: 0x00A2CFD8 File Offset: 0x00A2B1D8
-		// (set) Token: 0x0602CF2E RID: 184110 RVA: 0x00A2CFE8 File Offset: 0x00A2B1E8
+		// Token: 0x170045AE RID: 17838
+		// (get) Token: 0x06021B02 RID: 137986 RVA: 0x00967092 File Offset: 0x00965292
+		// (set) Token: 0x06021B03 RID: 137987 RVA: 0x009670A2 File Offset: 0x009652A2
 		public unsafe float 最大延迟距离
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_最大延迟距离);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_最大延迟距离) = value;
 			}
 		}
 
-		// Token: 0x170071BD RID: 29117
-		// (get) Token: 0x0602CF2F RID: 184111 RVA: 0x00A2CFF9 File Offset: 0x00A2B1F9
-		// (set) Token: 0x0602CF30 RID: 184112 RVA: 0x00A2D009 File Offset: 0x00A2B209
+		// Token: 0x170045AF RID: 17839
+		// (get) Token: 0x06021B04 RID: 137988 RVA: 0x009670B3 File Offset: 0x009652B3
+		// (set) Token: 0x06021B05 RID: 137989 RVA: 0x009670C3 File Offset: 0x009652C3
 		public unsafe float 最大延迟距离优先级
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_17);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_最大延迟距离优先级);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_17) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_最大延迟距离优先级) = value;
 			}
 		}
 
-		// Token: 0x170071BE RID: 29118
-		// (get) Token: 0x0602CF31 RID: 184113 RVA: 0x00A2D01A File Offset: 0x00A2B21A
-		// (set) Token: 0x0602CF32 RID: 184114 RVA: 0x00A2D02A File Offset: 0x00A2B22A
+		// Token: 0x170045B0 RID: 17840
+		// (get) Token: 0x06021B06 RID: 137990 RVA: 0x009670D4 File Offset: 0x009652D4
+		// (set) Token: 0x06021B07 RID: 137991 RVA: 0x009670E4 File Offset: 0x009652E4
 		public unsafe float FOV
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_FOV);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_FOV) = value;
 			}
 		}
 
-		// Token: 0x170071BF RID: 29119
-		// (get) Token: 0x0602CF33 RID: 184115 RVA: 0x00A2D03B File Offset: 0x00A2B23B
-		// (set) Token: 0x0602CF34 RID: 184116 RVA: 0x00A2D04B File Offset: 0x00A2B24B
+		// Token: 0x170045B1 RID: 17841
+		// (get) Token: 0x06021B08 RID: 137992 RVA: 0x009670F5 File Offset: 0x009652F5
+		// (set) Token: 0x06021B09 RID: 137993 RVA: 0x00967105 File Offset: 0x00965305
 		public unsafe float FOV优先级
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_19);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_FOV优先级);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_19) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_FOV优先级) = value;
 			}
 		}
 
-		// Token: 0x170071C0 RID: 29120
-		// (get) Token: 0x0602CF35 RID: 184117 RVA: 0x00A2D05C File Offset: 0x00A2B25C
-		// (set) Token: 0x0602CF36 RID: 184118 RVA: 0x00A2D06C File Offset: 0x00A2B26C
+		// Token: 0x170045B2 RID: 17842
+		// (get) Token: 0x06021B0A RID: 137994 RVA: 0x00967116 File Offset: 0x00965316
+		// (set) Token: 0x06021B0B RID: 137995 RVA: 0x00967126 File Offset: 0x00965326
 		public unsafe float FadeInTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_20);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_FadeInTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_20) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_FadeInTime) = value;
 			}
 		}
 
-		// Token: 0x170071C1 RID: 29121
-		// (get) Token: 0x0602CF37 RID: 184119 RVA: 0x00A2D07D File Offset: 0x00A2B27D
-		// (set) Token: 0x0602CF38 RID: 184120 RVA: 0x00A2D08D File Offset: 0x00A2B28D
+		// Token: 0x170045B3 RID: 17843
+		// (get) Token: 0x06021B0C RID: 137996 RVA: 0x00967137 File Offset: 0x00965337
+		// (set) Token: 0x06021B0D RID: 137997 RVA: 0x00967147 File Offset: 0x00965347
 		public unsafe float FadeOutTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_21);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_FadeOutTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_21) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_FadeOutTime) = value;
 			}
 		}
 
-		// Token: 0x170071C2 RID: 29122
-		// (get) Token: 0x0602CF39 RID: 184121 RVA: 0x00A2D09E File Offset: 0x00A2B29E
-		// (set) Token: 0x0602CF3A RID: 184122 RVA: 0x00A2D0AE File Offset: 0x00A2B2AE
+		// Token: 0x170045B4 RID: 17844
+		// (get) Token: 0x06021B0E RID: 137998 RVA: 0x00967158 File Offset: 0x00965358
+		// (set) Token: 0x06021B0F RID: 137999 RVA: 0x00967168 File Offset: 0x00965368
 		public unsafe bool AutoCamera
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_22) != 0;
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_AutoCamera) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_22) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_AutoCamera) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170071C3 RID: 29123
-		// (get) Token: 0x0602CF3B RID: 184123 RVA: 0x00A2D0BF File Offset: 0x00A2B2BF
-		// (set) Token: 0x0602CF3C RID: 184124 RVA: 0x00A2D0CF File Offset: 0x00A2B2CF
+		// Token: 0x170045B5 RID: 17845
+		// (get) Token: 0x06021B10 RID: 138000 RVA: 0x00967179 File Offset: 0x00965379
+		// (set) Token: 0x06021B11 RID: 138001 RVA: 0x00967189 File Offset: 0x00965389
 		public unsafe bool ModifyCamera
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_23) != 0;
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_ModifyCamera) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_23) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_ModifyCamera) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170071C4 RID: 29124
-		// (get) Token: 0x0602CF3D RID: 184125 RVA: 0x00A2D0E0 File Offset: 0x00A2B2E0
-		// (set) Token: 0x0602CF3E RID: 184126 RVA: 0x00A2D0F0 File Offset: 0x00A2B2F0
+		// Token: 0x170045B6 RID: 17846
+		// (get) Token: 0x06021B12 RID: 138002 RVA: 0x0096719A File Offset: 0x0096539A
+		// (set) Token: 0x06021B13 RID: 138003 RVA: 0x009671AA File Offset: 0x009653AA
 		public unsafe bool AdjustCamera
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_24) != 0;
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_AdjustCamera) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_24) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_AdjustCamera) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170071C5 RID: 29125
-		// (get) Token: 0x0602CF3F RID: 184127 RVA: 0x00A2D101 File Offset: 0x00A2B301
-		// (set) Token: 0x0602CF40 RID: 184128 RVA: 0x00A2D111 File Offset: 0x00A2B311
+		// Token: 0x170045B7 RID: 17847
+		// (get) Token: 0x06021B14 RID: 138004 RVA: 0x009671BB File Offset: 0x009653BB
+		// (set) Token: 0x06021B15 RID: 138005 RVA: 0x009671CB File Offset: 0x009653CB
 		public unsafe bool FocusCamera
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_25) != 0;
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_FocusCamera) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_25) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_FocusCamera) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170071C6 RID: 29126
-		// (get) Token: 0x0602CF41 RID: 184129 RVA: 0x00A2D122 File Offset: 0x00A2B322
-		// (set) Token: 0x0602CF42 RID: 184130 RVA: 0x00A2D132 File Offset: 0x00A2B332
+		// Token: 0x170045B8 RID: 17848
+		// (get) Token: 0x06021B16 RID: 138006 RVA: 0x009671DC File Offset: 0x009653DC
+		// (set) Token: 0x06021B17 RID: 138007 RVA: 0x009671EC File Offset: 0x009653EC
 		public unsafe float 自动偏转最大角速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_26);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_自动偏转最大角速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_26) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_自动偏转最大角速度) = value;
 			}
 		}
 
-		// Token: 0x170071C7 RID: 29127
-		// (get) Token: 0x0602CF43 RID: 184131 RVA: 0x00A2D143 File Offset: 0x00A2B343
-		// (set) Token: 0x0602CF44 RID: 184132 RVA: 0x00A2D153 File Offset: 0x00A2B353
+		// Token: 0x170045B9 RID: 17849
+		// (get) Token: 0x06021B18 RID: 138008 RVA: 0x009671FD File Offset: 0x009653FD
+		// (set) Token: 0x06021B19 RID: 138009 RVA: 0x0096720D File Offset: 0x0096540D
 		public unsafe bool 是否启用自动俯仰角修正
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_27) != 0;
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_是否启用自动俯仰角修正) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_27) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_是否启用自动俯仰角修正) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170071C8 RID: 29128
-		// (get) Token: 0x0602CF45 RID: 184133 RVA: 0x00A2D164 File Offset: 0x00A2B364
-		// (set) Token: 0x0602CF46 RID: 184134 RVA: 0x00A2D1A7 File Offset: 0x00A2B3A7
+		// Token: 0x170045BA RID: 17850
+		// (get) Token: 0x06021B1A RID: 138010 RVA: 0x00967220 File Offset: 0x00965420
+		// (set) Token: 0x06021B1B RID: 138011 RVA: 0x00967263 File Offset: 0x00965463
 		[Nullable(1)]
 		public TArray<float> 自动俯仰角参数
 		{
@@ -450,7 +450,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 				TArray<float> result;
 				if ((result = this._自动俯仰角参数) == null)
 				{
-					result = (this._自动俯仰角参数 = new TArray<float>(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_28, base.MemoryOwner ?? this));
+					result = (this._自动俯仰角参数 = new TArray<float>(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_自动俯仰角参数, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -461,267 +461,228 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 			}
 		}
 
-		// Token: 0x170071C9 RID: 29129
-		// (get) Token: 0x0602CF47 RID: 184135 RVA: 0x00A2D1B5 File Offset: 0x00A2B3B5
-		// (set) Token: 0x0602CF48 RID: 184136 RVA: 0x00A2D1C5 File Offset: 0x00A2B3C5
+		// Token: 0x170045BB RID: 17851
+		// (get) Token: 0x06021B1C RID: 138012 RVA: 0x00967271 File Offset: 0x00965471
+		// (set) Token: 0x06021B1D RID: 138013 RVA: 0x00967281 File Offset: 0x00965481
 		public unsafe float 自动俯仰角参数优先级
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_29);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_自动俯仰角参数优先级);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_29) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_自动俯仰角参数优先级) = value;
 			}
 		}
 
-		// Token: 0x170071CA RID: 29130
-		// (get) Token: 0x0602CF49 RID: 184137 RVA: 0x00A2D1D6 File Offset: 0x00A2B3D6
-		// (set) Token: 0x0602CF4A RID: 184138 RVA: 0x00A2D1E6 File Offset: 0x00A2B3E6
+		// Token: 0x170045BC RID: 17852
+		// (get) Token: 0x06021B1E RID: 138014 RVA: 0x00967292 File Offset: 0x00965492
+		// (set) Token: 0x06021B1F RID: 138015 RVA: 0x009672A2 File Offset: 0x009654A2
 		public unsafe float 锁定镜头偏角
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_30);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_锁定镜头偏角);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_30) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_锁定镜头偏角) = value;
 			}
 		}
 
-		// Token: 0x170071CB RID: 29131
-		// (get) Token: 0x0602CF4B RID: 184139 RVA: 0x00A2D1F7 File Offset: 0x00A2B3F7
-		// (set) Token: 0x0602CF4C RID: 184140 RVA: 0x00A2D207 File Offset: 0x00A2B407
+		// Token: 0x170045BD RID: 17853
+		// (get) Token: 0x06021B20 RID: 138016 RVA: 0x009672B3 File Offset: 0x009654B3
+		// (set) Token: 0x06021B21 RID: 138017 RVA: 0x009672C3 File Offset: 0x009654C3
 		public unsafe float 锁定镜头偏角优先级
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_31);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_锁定镜头偏角优先级);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_31) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_锁定镜头偏角优先级) = value;
 			}
 		}
 
-		// Token: 0x170071CC RID: 29132
-		// (get) Token: 0x0602CF4D RID: 184141 RVA: 0x00A2D218 File Offset: 0x00A2B418
-		// (set) Token: 0x0602CF4E RID: 184142 RVA: 0x00A2D228 File Offset: 0x00A2B428
+		// Token: 0x170045BE RID: 17854
+		// (get) Token: 0x06021B22 RID: 138018 RVA: 0x009672D4 File Offset: 0x009654D4
+		// (set) Token: 0x06021B23 RID: 138019 RVA: 0x009672E4 File Offset: 0x009654E4
 		public unsafe float 自动镜头额外臂水平偏移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_32);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_自动镜头额外臂水平偏移);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_32) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_自动镜头额外臂水平偏移) = value;
 			}
 		}
 
-		// Token: 0x170071CD RID: 29133
-		// (get) Token: 0x0602CF4F RID: 184143 RVA: 0x00A2D239 File Offset: 0x00A2B439
-		// (set) Token: 0x0602CF50 RID: 184144 RVA: 0x00A2D249 File Offset: 0x00A2B449
+		// Token: 0x170045BF RID: 17855
+		// (get) Token: 0x06021B24 RID: 138020 RVA: 0x009672F5 File Offset: 0x009654F5
+		// (set) Token: 0x06021B25 RID: 138021 RVA: 0x00967305 File Offset: 0x00965505
 		public unsafe float 自动镜头额外臂水平偏移优先级
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_33);
+				return *(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_自动镜头额外臂水平偏移优先级);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_33) = value;
+				*(base.NativePtr + (IntPtr)SCamera_Setting.__PropertyOffset_自动镜头额外臂水平偏移优先级) = value;
 			}
 		}
 
-		// Token: 0x0602CF51 RID: 184145 RVA: 0x00A2D25A File Offset: 0x00A2B45A
+		// Token: 0x06021B26 RID: 138022 RVA: 0x00967316 File Offset: 0x00965516
 		public SCamera_Setting()
 		{
 		}
 
-		// Token: 0x0602CF52 RID: 184146 RVA: 0x00A2D264 File Offset: 0x00A2B464
-		public SCamera_Setting(TEnumAsByte<EFightCameraType> Type, FGameplayTag Tag, float 默认臂长, float 默认臂长优先级, float 最大臂长, float 最大臂长优先级, float 最小臂长, float 最小臂长优先级, float 叠加臂长, FVector 镜头偏移, float 镜头偏移优先级, FVector 相机臂偏移, float 相机臂偏移优先级, float 进入状态相机延迟速度, float 退出状态相机延迟速度, float 相机延迟速度优先级, float 最大延迟距离, float 最大延迟距离优先级, float FOV, float FOV优先级, float FadeInTime, float FadeOutTime, bool AutoCamera, bool ModifyCamera, bool AdjustCamera, bool FocusCamera, float 自动偏转最大角速度, bool 是否启用自动俯仰角修正, [Nullable(1)] TArray<float> 自动俯仰角参数, float 自动俯仰角参数优先级, float 锁定镜头偏角, float 锁定镜头偏角优先级, float 自动镜头额外臂水平偏移, float 自动镜头额外臂水平偏移优先级)
-		{
-			this.Type = Type;
-			this.Tag = Tag;
-			this.默认臂长 = 默认臂长;
-			this.默认臂长优先级 = 默认臂长优先级;
-			this.最大臂长 = 最大臂长;
-			this.最大臂长优先级 = 最大臂长优先级;
-			this.最小臂长 = 最小臂长;
-			this.最小臂长优先级 = 最小臂长优先级;
-			this.叠加臂长 = 叠加臂长;
-			this.镜头偏移 = 镜头偏移;
-			this.镜头偏移优先级 = 镜头偏移优先级;
-			this.相机臂偏移 = 相机臂偏移;
-			this.相机臂偏移优先级 = 相机臂偏移优先级;
-			this.进入状态相机延迟速度 = 进入状态相机延迟速度;
-			this.退出状态相机延迟速度 = 退出状态相机延迟速度;
-			this.相机延迟速度优先级 = 相机延迟速度优先级;
-			this.最大延迟距离 = 最大延迟距离;
-			this.最大延迟距离优先级 = 最大延迟距离优先级;
-			this.FOV = FOV;
-			this.FOV优先级 = FOV优先级;
-			this.FadeInTime = FadeInTime;
-			this.FadeOutTime = FadeOutTime;
-			this.AutoCamera = AutoCamera;
-			this.ModifyCamera = ModifyCamera;
-			this.AdjustCamera = AdjustCamera;
-			this.FocusCamera = FocusCamera;
-			this.自动偏转最大角速度 = 自动偏转最大角速度;
-			this.是否启用自动俯仰角修正 = 是否启用自动俯仰角修正;
-			this.自动俯仰角参数 = 自动俯仰角参数;
-			this.自动俯仰角参数优先级 = 自动俯仰角参数优先级;
-			this.锁定镜头偏角 = 锁定镜头偏角;
-			this.锁定镜头偏角优先级 = 锁定镜头偏角优先级;
-			this.自动镜头额外臂水平偏移 = 自动镜头额外臂水平偏移;
-			this.自动镜头额外臂水平偏移优先级 = 自动镜头额外臂水平偏移优先级;
-		}
-
-		// Token: 0x0602CF53 RID: 184147 RVA: 0x00A2D384 File Offset: 0x00A2B584
+		// Token: 0x06021B27 RID: 138023 RVA: 0x0096731E File Offset: 0x0096551E
 		protected override IntPtr GetUStructPtr()
 		{
 			return SCamera_Setting.StaticStruct();
 		}
 
-		// Token: 0x0602CF54 RID: 184148 RVA: 0x00A2D390 File Offset: 0x00A2B590
+		// Token: 0x06021B28 RID: 138024 RVA: 0x0096732A File Offset: 0x0096552A
 		[NullableContext(2)]
 		public SCamera_Setting(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602CF55 RID: 184149 RVA: 0x00A2D39A File Offset: 0x00A2B59A
+		// Token: 0x06021B29 RID: 138025 RVA: 0x00967334 File Offset: 0x00965534
 		public SCamera_Setting(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602CF56 RID: 184150 RVA: 0x00A2D3A5 File Offset: 0x00A2B5A5
+		// Token: 0x06021B2A RID: 138026 RVA: 0x0096733F File Offset: 0x0096553F
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SCamera_Setting(Pointer, false, true);
 		}
 
-		// Token: 0x0602CF57 RID: 184151 RVA: 0x00A2D3AF File Offset: 0x00A2B5AF
+		// Token: 0x06021B2B RID: 138027 RVA: 0x00967349 File Offset: 0x00965549
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SCamera_Setting(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017D93 RID: 97683
+		// Token: 0x040128DE RID: 75998
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/Camera/SCamera_Setting.SCamera_Setting";
 
-		// Token: 0x04017D94 RID: 97684
+		// Token: 0x040128DF RID: 75999
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017D95 RID: 97685
-		internal static int __PropertyOffset_0;
+		// Token: 0x040128E0 RID: 76000
+		internal static int __PropertyOffset_Type;
 
-		// Token: 0x04017D96 RID: 97686
-		internal static int __PropertyOffset_1;
+		// Token: 0x040128E1 RID: 76001
+		internal static int __PropertyOffset_Tag;
 
-		// Token: 0x04017D97 RID: 97687
-		internal static int __PropertyOffset_2;
+		// Token: 0x040128E2 RID: 76002
+		internal static int __PropertyOffset_默认臂长;
 
-		// Token: 0x04017D98 RID: 97688
-		internal static int __PropertyOffset_3;
+		// Token: 0x040128E3 RID: 76003
+		internal static int __PropertyOffset_默认臂长优先级;
 
-		// Token: 0x04017D99 RID: 97689
-		internal static int __PropertyOffset_4;
+		// Token: 0x040128E4 RID: 76004
+		internal static int __PropertyOffset_最大臂长;
 
-		// Token: 0x04017D9A RID: 97690
-		internal static int __PropertyOffset_5;
+		// Token: 0x040128E5 RID: 76005
+		internal static int __PropertyOffset_最大臂长优先级;
 
-		// Token: 0x04017D9B RID: 97691
-		internal static int __PropertyOffset_6;
+		// Token: 0x040128E6 RID: 76006
+		internal static int __PropertyOffset_最小臂长;
 
-		// Token: 0x04017D9C RID: 97692
-		internal static int __PropertyOffset_7;
+		// Token: 0x040128E7 RID: 76007
+		internal static int __PropertyOffset_最小臂长优先级;
 
-		// Token: 0x04017D9D RID: 97693
-		internal static int __PropertyOffset_8;
+		// Token: 0x040128E8 RID: 76008
+		internal static int __PropertyOffset_叠加臂长;
 
-		// Token: 0x04017D9E RID: 97694
-		internal static int __PropertyOffset_9;
+		// Token: 0x040128E9 RID: 76009
+		internal static int __PropertyOffset_镜头偏移;
 
-		// Token: 0x04017D9F RID: 97695
-		internal static int __PropertyOffset_10;
+		// Token: 0x040128EA RID: 76010
+		internal static int __PropertyOffset_镜头偏移优先级;
 
-		// Token: 0x04017DA0 RID: 97696
-		internal static int __PropertyOffset_11;
+		// Token: 0x040128EB RID: 76011
+		internal static int __PropertyOffset_相机臂偏移;
 
-		// Token: 0x04017DA1 RID: 97697
-		internal static int __PropertyOffset_12;
+		// Token: 0x040128EC RID: 76012
+		internal static int __PropertyOffset_相机臂偏移优先级;
 
-		// Token: 0x04017DA2 RID: 97698
-		internal static int __PropertyOffset_13;
+		// Token: 0x040128ED RID: 76013
+		internal static int __PropertyOffset_进入状态相机延迟速度;
 
-		// Token: 0x04017DA3 RID: 97699
-		internal static int __PropertyOffset_14;
+		// Token: 0x040128EE RID: 76014
+		internal static int __PropertyOffset_退出状态相机延迟速度;
 
-		// Token: 0x04017DA4 RID: 97700
-		internal static int __PropertyOffset_15;
+		// Token: 0x040128EF RID: 76015
+		internal static int __PropertyOffset_相机延迟速度优先级;
 
-		// Token: 0x04017DA5 RID: 97701
-		internal static int __PropertyOffset_16;
+		// Token: 0x040128F0 RID: 76016
+		internal static int __PropertyOffset_最大延迟距离;
 
-		// Token: 0x04017DA6 RID: 97702
-		internal static int __PropertyOffset_17;
+		// Token: 0x040128F1 RID: 76017
+		internal static int __PropertyOffset_最大延迟距离优先级;
 
-		// Token: 0x04017DA7 RID: 97703
-		internal static int __PropertyOffset_18;
+		// Token: 0x040128F2 RID: 76018
+		internal static int __PropertyOffset_FOV;
 
-		// Token: 0x04017DA8 RID: 97704
-		internal static int __PropertyOffset_19;
+		// Token: 0x040128F3 RID: 76019
+		internal static int __PropertyOffset_FOV优先级;
 
-		// Token: 0x04017DA9 RID: 97705
-		internal static int __PropertyOffset_20;
+		// Token: 0x040128F4 RID: 76020
+		internal static int __PropertyOffset_FadeInTime;
 
-		// Token: 0x04017DAA RID: 97706
-		internal static int __PropertyOffset_21;
+		// Token: 0x040128F5 RID: 76021
+		internal static int __PropertyOffset_FadeOutTime;
 
-		// Token: 0x04017DAB RID: 97707
-		internal static int __PropertyOffset_22;
+		// Token: 0x040128F6 RID: 76022
+		internal static int __PropertyOffset_AutoCamera;
 
-		// Token: 0x04017DAC RID: 97708
-		internal static int __PropertyOffset_23;
+		// Token: 0x040128F7 RID: 76023
+		internal static int __PropertyOffset_ModifyCamera;
 
-		// Token: 0x04017DAD RID: 97709
-		internal static int __PropertyOffset_24;
+		// Token: 0x040128F8 RID: 76024
+		internal static int __PropertyOffset_AdjustCamera;
 
-		// Token: 0x04017DAE RID: 97710
-		internal static int __PropertyOffset_25;
+		// Token: 0x040128F9 RID: 76025
+		internal static int __PropertyOffset_FocusCamera;
 
-		// Token: 0x04017DAF RID: 97711
-		internal static int __PropertyOffset_26;
+		// Token: 0x040128FA RID: 76026
+		internal static int __PropertyOffset_自动偏转最大角速度;
 
-		// Token: 0x04017DB0 RID: 97712
-		internal static int __PropertyOffset_27;
+		// Token: 0x040128FB RID: 76027
+		internal static int __PropertyOffset_是否启用自动俯仰角修正;
 
-		// Token: 0x04017DB1 RID: 97713
-		internal static int __PropertyOffset_28;
+		// Token: 0x040128FC RID: 76028
+		internal static int __PropertyOffset_自动俯仰角参数;
 
-		// Token: 0x04017DB2 RID: 97714
+		// Token: 0x040128FD RID: 76029
 		[Nullable(2)]
 		private TArray<float> _自动俯仰角参数;
 
-		// Token: 0x04017DB3 RID: 97715
-		internal static int __PropertyOffset_29;
+		// Token: 0x040128FE RID: 76030
+		internal static int __PropertyOffset_自动俯仰角参数优先级;
 
-		// Token: 0x04017DB4 RID: 97716
-		internal static int __PropertyOffset_30;
+		// Token: 0x040128FF RID: 76031
+		internal static int __PropertyOffset_锁定镜头偏角;
 
-		// Token: 0x04017DB5 RID: 97717
-		internal static int __PropertyOffset_31;
+		// Token: 0x04012900 RID: 76032
+		internal static int __PropertyOffset_锁定镜头偏角优先级;
 
-		// Token: 0x04017DB6 RID: 97718
-		internal static int __PropertyOffset_32;
+		// Token: 0x04012901 RID: 76033
+		internal static int __PropertyOffset_自动镜头额外臂水平偏移;
 
-		// Token: 0x04017DB7 RID: 97719
-		internal static int __PropertyOffset_33;
+		// Token: 0x04012902 RID: 76034
+		internal static int __PropertyOffset_自动镜头额外臂水平偏移优先级;
 	}
 }

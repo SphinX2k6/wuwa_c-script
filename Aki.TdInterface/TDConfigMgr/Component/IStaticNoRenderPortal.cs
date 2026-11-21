@@ -8,13 +8,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200071F RID: 1823
+	// Token: 0x020007C0 RID: 1984
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IStaticNoRenderPortal : INoRenderPortalMode
 	{
-		// Token: 0x0600273B RID: 10043 RVA: 0x000686E0 File Offset: 0x000668E0
-		[NullableContext(1)]
+		// Token: 0x06002A5D RID: 10845 RVA: 0x0006F804 File Offset: 0x0006DA04
+		[NullableContext(0)]
 		private IStaticNoRenderPortal_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -29,8 +29,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600273C RID: 10044 RVA: 0x00068718 File Offset: 0x00066918
-		[NullableContext(1)]
+		// Token: 0x06002A5E RID: 10846 RVA: 0x0006F83C File Offset: 0x0006DA3C
+		[NullableContext(0)]
 		public static IStaticNoRenderPortal Create([Nullable(2)] IStaticNoRenderPortal instance)
 		{
 			if (instance == null)
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600273D RID: 10045 RVA: 0x0006872B File Offset: 0x0006692B
-		[NullableContext(1)]
+		// Token: 0x06002A5F RID: 10847 RVA: 0x0006F84F File Offset: 0x0006DA4F
+		[NullableContext(0)]
 		public static IStaticNoRenderPortal CreateFromSetValue([Nullable(2)] IStaticNoRenderPortal_SetValue value)
 		{
 			if (value == null)
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600273E RID: 10046 RVA: 0x00068740 File Offset: 0x00066940
-		[NullableContext(1)]
+		// Token: 0x06002A60 RID: 10848 RVA: 0x0006F864 File Offset: 0x0006DA64
+		[NullableContext(0)]
 		public new IStaticNoRenderPortal_SetValue ToSetValue()
 		{
 			return new IStaticNoRenderPortal_SetValue
@@ -66,6 +66,7 @@ namespace Aki.TDConfigMgr.Component
 				Type = this.Type,
 				PortalModel = this.PortalModel,
 				LinkPortalEntityId = this.LinkPortalEntityId,
+				CubeMapBinding = this.CubeMapBinding,
 				TeleportSceneEffect = this.TeleportSceneEffect,
 				TeleportLoadingEffect = this.TeleportLoadingEffect,
 				Condition = this.Condition,
@@ -79,9 +80,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A4F RID: 2639
-		// (get) Token: 0x0600273F RID: 10047 RVA: 0x000687EE File Offset: 0x000669EE
-		// (set) Token: 0x06002740 RID: 10048 RVA: 0x00068819 File Offset: 0x00066A19
+		// Token: 0x17000B0E RID: 2830
+		// (get) Token: 0x06002A61 RID: 10849 RVA: 0x0006F91E File Offset: 0x0006DB1E
+		// (set) Token: 0x06002A62 RID: 10850 RVA: 0x0006F949 File Offset: 0x0006DB49
 		public override ENoRenderPortalType Type
 		{
 			get
@@ -102,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A50 RID: 2640
-		// (get) Token: 0x06002741 RID: 10049 RVA: 0x00068827 File Offset: 0x00066A27
-		// (set) Token: 0x06002742 RID: 10050 RVA: 0x00068852 File Offset: 0x00066A52
+		// Token: 0x17000B0F RID: 2831
+		// (get) Token: 0x06002A63 RID: 10851 RVA: 0x0006F957 File Offset: 0x0006DB57
+		// (set) Token: 0x06002A64 RID: 10852 RVA: 0x0006F982 File Offset: 0x0006DB82
 		public override EPortalModel PortalModel
 		{
 			get
@@ -125,9 +126,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A51 RID: 2641
-		// (get) Token: 0x06002743 RID: 10051 RVA: 0x00068860 File Offset: 0x00066A60
-		// (set) Token: 0x06002744 RID: 10052 RVA: 0x0006888B File Offset: 0x00066A8B
+		// Token: 0x17000B10 RID: 2832
+		// (get) Token: 0x06002A65 RID: 10853 RVA: 0x0006F990 File Offset: 0x0006DB90
+		// (set) Token: 0x06002A66 RID: 10854 RVA: 0x0006F9BB File Offset: 0x0006DBBB
 		public virtual int LinkPortalEntityId
 		{
 			get
@@ -148,9 +149,39 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A52 RID: 2642
-		// (get) Token: 0x06002745 RID: 10053 RVA: 0x0006889C File Offset: 0x00066A9C
-		// (set) Token: 0x06002746 RID: 10054 RVA: 0x000688FD File Offset: 0x00066AFD
+		// Token: 0x17000B11 RID: 2833
+		// (get) Token: 0x06002A67 RID: 10855 RVA: 0x0006F9CC File Offset: 0x0006DBCC
+		// (set) Token: 0x06002A68 RID: 10856 RVA: 0x0006FA2D File Offset: 0x0006DC2D
+		public virtual ICubeMapBinding CubeMapBinding
+		{
+			get
+			{
+				if (this._CubeMapBindingInited)
+				{
+					return this._CubeMapBindingCache;
+				}
+				this._CubeMapBindingInited = true;
+				if (this.FbInstance != null)
+				{
+					this._CubeMapBindingCache = ICubeMapBinding.Create(this.FbInstance.CubeMapBinding);
+				}
+				else
+				{
+					IStaticNoRenderPortal_SetValue pocoInterface = this.PocoInterface;
+					this._CubeMapBindingCache = ((pocoInterface != null) ? pocoInterface.CubeMapBinding : null);
+				}
+				return this._CubeMapBindingCache;
+			}
+			set
+			{
+				this.GetOrCreatePoco().CubeMapBinding = value;
+				this._CubeMapBindingInited = false;
+			}
+		}
+
+		// Token: 0x17000B12 RID: 2834
+		// (get) Token: 0x06002A69 RID: 10857 RVA: 0x0006FA44 File Offset: 0x0006DC44
+		// (set) Token: 0x06002A6A RID: 10858 RVA: 0x0006FAA5 File Offset: 0x0006DCA5
 		public virtual ITeleportSceneEffect TeleportSceneEffect
 		{
 			get
@@ -178,9 +209,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A53 RID: 2643
-		// (get) Token: 0x06002747 RID: 10055 RVA: 0x00068912 File Offset: 0x00066B12
-		// (set) Token: 0x06002748 RID: 10056 RVA: 0x00068939 File Offset: 0x00066B39
+		// Token: 0x17000B13 RID: 2835
+		// (get) Token: 0x06002A6B RID: 10859 RVA: 0x0006FABA File Offset: 0x0006DCBA
+		// (set) Token: 0x06002A6C RID: 10860 RVA: 0x0006FAE1 File Offset: 0x0006DCE1
 		public virtual ITeleportTransitionType TeleportLoadingEffect
 		{
 			get
@@ -202,9 +233,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A54 RID: 2644
-		// (get) Token: 0x06002749 RID: 10057 RVA: 0x00068948 File Offset: 0x00066B48
-		// (set) Token: 0x0600274A RID: 10058 RVA: 0x000689A9 File Offset: 0x00066BA9
+		// Token: 0x17000B14 RID: 2836
+		// (get) Token: 0x06002A6D RID: 10861 RVA: 0x0006FAF0 File Offset: 0x0006DCF0
+		// (set) Token: 0x06002A6E RID: 10862 RVA: 0x0006FB51 File Offset: 0x0006DD51
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -232,9 +263,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A55 RID: 2645
-		// (get) Token: 0x0600274B RID: 10059 RVA: 0x000689C0 File Offset: 0x00066BC0
-		// (set) Token: 0x0600274C RID: 10060 RVA: 0x00068A21 File Offset: 0x00066C21
+		// Token: 0x17000B15 RID: 2837
+		// (get) Token: 0x06002A6F RID: 10863 RVA: 0x0006FB68 File Offset: 0x0006DD68
+		// (set) Token: 0x06002A70 RID: 10864 RVA: 0x0006FBC9 File Offset: 0x0006DDC9
 		public virtual VectorInfo TeleportToSelfPos
 		{
 			get
@@ -262,9 +293,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A56 RID: 2646
-		// (get) Token: 0x0600274D RID: 10061 RVA: 0x00068A38 File Offset: 0x00066C38
-		// (set) Token: 0x0600274E RID: 10062 RVA: 0x00068A99 File Offset: 0x00066C99
+		// Token: 0x17000B16 RID: 2838
+		// (get) Token: 0x06002A71 RID: 10865 RVA: 0x0006FBE0 File Offset: 0x0006DDE0
+		// (set) Token: 0x06002A72 RID: 10866 RVA: 0x0006FC41 File Offset: 0x0006DE41
 		public virtual IGravityFlipTeleportConfig GravityConfig
 		{
 			get
@@ -292,9 +323,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A57 RID: 2647
-		// (get) Token: 0x0600274F RID: 10063 RVA: 0x00068AB0 File Offset: 0x00066CB0
-		// (set) Token: 0x06002750 RID: 10064 RVA: 0x00068AEA File Offset: 0x00066CEA
+		// Token: 0x17000B17 RID: 2839
+		// (get) Token: 0x06002A73 RID: 10867 RVA: 0x0006FC58 File Offset: 0x0006DE58
+		// (set) Token: 0x06002A74 RID: 10868 RVA: 0x0006FC92 File Offset: 0x0006DE92
 		public virtual bool? NoBlindSpot
 		{
 			get
@@ -316,9 +347,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A58 RID: 2648
-		// (get) Token: 0x06002751 RID: 10065 RVA: 0x00068AF8 File Offset: 0x00066CF8
-		// (set) Token: 0x06002752 RID: 10066 RVA: 0x00068B32 File Offset: 0x00066D32
+		// Token: 0x17000B18 RID: 2840
+		// (get) Token: 0x06002A75 RID: 10869 RVA: 0x0006FCA0 File Offset: 0x0006DEA0
+		// (set) Token: 0x06002A76 RID: 10870 RVA: 0x0006FCDA File Offset: 0x0006DEDA
 		public virtual ETeleportActionType? ActionAfterTeleport
 		{
 			get
@@ -340,9 +371,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A59 RID: 2649
-		// (get) Token: 0x06002753 RID: 10067 RVA: 0x00068B40 File Offset: 0x00066D40
-		// (set) Token: 0x06002754 RID: 10068 RVA: 0x00068B67 File Offset: 0x00066D67
+		// Token: 0x17000B19 RID: 2841
+		// (get) Token: 0x06002A77 RID: 10871 RVA: 0x0006FCE8 File Offset: 0x0006DEE8
+		// (set) Token: 0x06002A78 RID: 10872 RVA: 0x0006FD0F File Offset: 0x0006DF0F
 		public virtual List<int> NpcMonsterEntityIds
 		{
 			get
@@ -364,9 +395,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A5A RID: 2650
-		// (get) Token: 0x06002755 RID: 10069 RVA: 0x00068B78 File Offset: 0x00066D78
-		// (set) Token: 0x06002756 RID: 10070 RVA: 0x00068BD9 File Offset: 0x00066DD9
+		// Token: 0x17000B1A RID: 2842
+		// (get) Token: 0x06002A79 RID: 10873 RVA: 0x0006FD20 File Offset: 0x0006DF20
+		// (set) Token: 0x06002A7A RID: 10874 RVA: 0x0006FD81 File Offset: 0x0006DF81
 		public virtual IAfterTeleportConfig AfterTeleportConfig
 		{
 			get
@@ -394,9 +425,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A5B RID: 2651
-		// (get) Token: 0x06002757 RID: 10071 RVA: 0x00068BF0 File Offset: 0x00066DF0
-		// (set) Token: 0x06002758 RID: 10072 RVA: 0x00068C2A File Offset: 0x00066E2A
+		// Token: 0x17000B1B RID: 2843
+		// (get) Token: 0x06002A7B RID: 10875 RVA: 0x0006FD98 File Offset: 0x0006DF98
+		// (set) Token: 0x06002A7C RID: 10876 RVA: 0x0006FDD2 File Offset: 0x0006DFD2
 		public virtual int? TeleportStreamRadius
 		{
 			get
@@ -418,45 +449,52 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001A79 RID: 6777
+		// Token: 0x04001C7B RID: 7291
 		protected new IStaticNoRenderPortal FbInstance;
 
-		// Token: 0x04001A7A RID: 6778
+		// Token: 0x04001C7C RID: 7292
 		protected new IStaticNoRenderPortal_SetValue PocoInterface;
 
-		// Token: 0x04001A7B RID: 6779
-		[Nullable(1)]
+		// Token: 0x04001C7D RID: 7293
+		[Nullable(0)]
+		private ICubeMapBinding _CubeMapBindingCache;
+
+		// Token: 0x04001C7E RID: 7294
+		private bool _CubeMapBindingInited;
+
+		// Token: 0x04001C7F RID: 7295
+		[Nullable(0)]
 		private ITeleportSceneEffect _TeleportSceneEffectCache;
 
-		// Token: 0x04001A7C RID: 6780
+		// Token: 0x04001C80 RID: 7296
 		private bool _TeleportSceneEffectInited;
 
-		// Token: 0x04001A7D RID: 6781
-		[Nullable(1)]
+		// Token: 0x04001C81 RID: 7297
+		[Nullable(0)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04001A7E RID: 6782
+		// Token: 0x04001C82 RID: 7298
 		private bool _ConditionInited;
 
-		// Token: 0x04001A7F RID: 6783
-		[Nullable(1)]
+		// Token: 0x04001C83 RID: 7299
+		[Nullable(0)]
 		private VectorInfo _TeleportToSelfPosCache;
 
-		// Token: 0x04001A80 RID: 6784
+		// Token: 0x04001C84 RID: 7300
 		private bool _TeleportToSelfPosInited;
 
-		// Token: 0x04001A81 RID: 6785
-		[Nullable(1)]
+		// Token: 0x04001C85 RID: 7301
+		[Nullable(0)]
 		private IGravityFlipTeleportConfig _GravityConfigCache;
 
-		// Token: 0x04001A82 RID: 6786
+		// Token: 0x04001C86 RID: 7302
 		private bool _GravityConfigInited;
 
-		// Token: 0x04001A83 RID: 6787
-		[Nullable(1)]
+		// Token: 0x04001C87 RID: 7303
+		[Nullable(0)]
 		private IAfterTeleportConfig _AfterTeleportConfigCache;
 
-		// Token: 0x04001A84 RID: 6788
+		// Token: 0x04001C88 RID: 7304
 		private bool _AfterTeleportConfigInited;
 	}
 }

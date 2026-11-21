@@ -12,14 +12,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 {
-	// Token: 0x02005153 RID: 20819
+	// Token: 0x02004123 RID: 16675
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaRoleSelectTabView : PhantomArenaChildViewBase
 	{
-		// Token: 0x17008109 RID: 33033
-		// (get) Token: 0x06035390 RID: 218000 RVA: 0x00C99B08 File Offset: 0x00C97D08
-		// (set) Token: 0x06035391 RID: 218001 RVA: 0x00C99B15 File Offset: 0x00C97D15
+		// Token: 0x170054C9 RID: 21705
+		// (get) Token: 0x0602A28C RID: 172684 RVA: 0x00BE7008 File Offset: 0x00BE5208
+		// (set) Token: 0x0602A28D RID: 172685 RVA: 0x00BE7015 File Offset: 0x00BE5215
 		public new IPhantomArenaRoleSelectTabViewModel ViewModel
 		{
 			get
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			}
 		}
 
-		// Token: 0x06035392 RID: 218002 RVA: 0x00C99B20 File Offset: 0x00C97D20
+		// Token: 0x0602A28E RID: 172686 RVA: 0x00BE7020 File Offset: 0x00BE5220
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			};
 		}
 
-		// Token: 0x06035393 RID: 218003 RVA: 0x00C99C80 File Offset: 0x00C97E80
+		// Token: 0x0602A28F RID: 172687 RVA: 0x00BE7180 File Offset: 0x00BE5380
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaRoleSelectTabView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035394 RID: 218004 RVA: 0x00C99CC4 File Offset: 0x00C97EC4
+		// Token: 0x0602A290 RID: 172688 RVA: 0x00BE71C4 File Offset: 0x00BE53C4
 		protected override void OnBeforeShow()
 		{
 			this.ViewModel.SetViewTitle("PhantomArenaRoleSelectTabView_Name");
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			this.ViewModel.ShowRoleTexture(true);
 		}
 
-		// Token: 0x06035395 RID: 218005 RVA: 0x00C99D54 File Offset: 0x00C97F54
+		// Token: 0x0602A291 RID: 172689 RVA: 0x00BE7254 File Offset: 0x00BE5454
 		protected IPhantomArenaRoleSelectionItemData CreateCardRoleItemData(int cardRoleId)
 		{
 			bool flag = PhantomArenaModel.Instance.IsRoleUnlock(cardRoleId);
@@ -96,19 +96,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			};
 		}
 
-		// Token: 0x06035396 RID: 218006 RVA: 0x00C99DC2 File Offset: 0x00C97FC2
+		// Token: 0x0602A292 RID: 172690 RVA: 0x00BE72C2 File Offset: 0x00BE54C2
 		protected int GetSelectedCardRoleId()
 		{
 			return this.CardRoleDataList[this.SelectedRoleIndex].CardRoleId;
 		}
 
-		// Token: 0x06035397 RID: 218007 RVA: 0x00C99DDA File Offset: 0x00C97FDA
+		// Token: 0x0602A293 RID: 172691 RVA: 0x00BE72DA File Offset: 0x00BE54DA
 		protected IPhantomArenaRoleSelectionItemData GetSelectedCardRoleData()
 		{
 			return this.CardRoleDataList[this.SelectedRoleIndex];
 		}
 
-		// Token: 0x06035398 RID: 218008 RVA: 0x00C99DF0 File Offset: 0x00C97FF0
+		// Token: 0x0602A294 RID: 172692 RVA: 0x00BE72F0 File Offset: 0x00BE54F0
 		public void SelectCardRoleByCardRoleId(int cardRoleId, bool bPlayRoleChangeAnim)
 		{
 			int num = this.CardRoleDataList.FindIndex((IPhantomArenaRoleSelectionItemData value) => value.CardRoleId == cardRoleId);
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			this.SelectCardRoleByIndex(num, bPlayRoleChangeAnim);
 		}
 
-		// Token: 0x06035399 RID: 218009 RVA: 0x00C99E30 File Offset: 0x00C98030
+		// Token: 0x0602A295 RID: 172693 RVA: 0x00BE7330 File Offset: 0x00BE5530
 		public void SelectCardRoleByIndex(int index, bool bPlayRoleChangeAnim)
 		{
 			if (index == -1)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			this.RefreshDetailView();
 		}
 
-		// Token: 0x0603539A RID: 218010 RVA: 0x00C99E88 File Offset: 0x00C98088
+		// Token: 0x0602A296 RID: 172694 RVA: 0x00BE7388 File Offset: 0x00BE5588
 		protected void RefreshDetailView()
 		{
 			if (this.SelectedRoleIndex == -1 || this.SelectedRoleIndex >= this.CardRoleDataList.Count)
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			this.RefreshSkillDetailView();
 		}
 
-		// Token: 0x0603539B RID: 218011 RVA: 0x00C9A038 File Offset: 0x00C98238
+		// Token: 0x0602A297 RID: 172695 RVA: 0x00BE7538 File Offset: 0x00BE5738
 		public void RefreshStates()
 		{
 			IPhantomArenaRoleSelectionItemData selectedCardRoleData = this.GetSelectedCardRoleData();
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			}
 		}
 
-		// Token: 0x0603539C RID: 218012 RVA: 0x00C9A1D4 File Offset: 0x00C983D4
+		// Token: 0x0602A298 RID: 172696 RVA: 0x00BE76D4 File Offset: 0x00BE58D4
 		public void RefreshSkillDetailView()
 		{
 			if (this.SelectedSkillIndex == -1)
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(7), tuple.Item1, tuple.Item2);
 		}
 
-		// Token: 0x0603539D RID: 218013 RVA: 0x00C9A38C File Offset: 0x00C9858C
+		// Token: 0x0602A299 RID: 172697 RVA: 0x00BE788C File Offset: 0x00BE5A8C
 		private PhantomArenaRoleSelectionItem CreateRoleItem()
 		{
 			PhantomArenaRoleSelectionItem phantomArenaRoleSelectionItem = new PhantomArenaRoleSelectionItem();
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			return phantomArenaRoleSelectionItem;
 		}
 
-		// Token: 0x0603539E RID: 218014 RVA: 0x00C9A3B8 File Offset: 0x00C985B8
+		// Token: 0x0602A29A RID: 172698 RVA: 0x00BE78B8 File Offset: 0x00BE5AB8
 		private void ToggleFunction(MediumItemGridExtendCallback callbackParameter)
 		{
 			if (callbackParameter.State == EToggleState.ETT_Checked)
@@ -301,13 +301,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			}
 		}
 
-		// Token: 0x0603539F RID: 218015 RVA: 0x00C9A3E7 File Offset: 0x00C985E7
+		// Token: 0x0602A29B RID: 172699 RVA: 0x00BE78E7 File Offset: 0x00BE5AE7
 		protected bool CanExecuteChange(object data, bool isForceSelected, EToggleState state)
 		{
 			return state != EToggleState.ETT_Checked || (data as IPhantomArenaRoleSelectionItemData).CardRoleId != this.GetSelectedCardRoleId();
 		}
 
-		// Token: 0x060353A0 RID: 218016 RVA: 0x00C9A408 File Offset: 0x00C98608
+		// Token: 0x0602A29C RID: 172700 RVA: 0x00BE7908 File Offset: 0x00BE5B08
 		private void OnSkillItemSelect(int gridIndex)
 		{
 			if (gridIndex == this.SelectedSkillIndex)
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			this.RefreshSkillDetailView();
 		}
 
-		// Token: 0x060353A1 RID: 218017 RVA: 0x00C9A463 File Offset: 0x00C98663
+		// Token: 0x0602A29D RID: 172701 RVA: 0x00BE7963 File Offset: 0x00BE5B63
 		private void OnConfirmBtnClick()
 		{
 			this.ViewModel.SelectedCardRoleId = this.GetSelectedCardRoleId();
@@ -331,14 +331,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			base.CloseMe();
 		}
 
-		// Token: 0x060353A2 RID: 218018 RVA: 0x00C9A488 File Offset: 0x00C98688
+		// Token: 0x0602A29E RID: 172702 RVA: 0x00BE7988 File Offset: 0x00BE5B88
 		private void OnRewardItemClicked(MediumItemGridExtendCallback _)
 		{
 			int selectedCardRoleId = this.GetSelectedCardRoleId();
 			PhantomArenaController.Instance.RoleRewardRequest(selectedCardRoleId, new Action<int>(this.OnRoleReward));
 		}
 
-		// Token: 0x060353A3 RID: 218019 RVA: 0x00C9A4B4 File Offset: 0x00C986B4
+		// Token: 0x0602A29F RID: 172703 RVA: 0x00BE79B4 File Offset: 0x00BE5BB4
 		private void OnRoleReward(int cardRoleId)
 		{
 			int i = 0;
@@ -368,71 +368,71 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			this.RefreshDetailView();
 		}
 
-		// Token: 0x0401C52B RID: 116011
+		// Token: 0x04016F60 RID: 94048
 		private readonly List<IPhantomArenaRoleSelectionItemData> CardRoleDataList = new List<IPhantomArenaRoleSelectionItemData>();
 
-		// Token: 0x0401C52C RID: 116012
+		// Token: 0x04016F61 RID: 94049
 		private int SelectedRoleIndex = -1;
 
-		// Token: 0x0401C52D RID: 116013
+		// Token: 0x04016F62 RID: 94050
 		private int SelectedSkillIndex = -1;
 
-		// Token: 0x0401C52E RID: 116014
+		// Token: 0x04016F63 RID: 94051
 		private MiniElementItem ElementItem;
 
-		// Token: 0x0401C52F RID: 116015
+		// Token: 0x04016F64 RID: 94052
 		private LoopScrollView<PhantomArenaRoleSelectionItem, IPhantomArenaRoleSelectionItemData> RoleLoopScrollView;
 
-		// Token: 0x0401C530 RID: 116016
+		// Token: 0x04016F65 RID: 94053
 		private readonly List<PhantomArenaRoleSkillItem> SkillItemList = new List<PhantomArenaRoleSkillItem>();
 
-		// Token: 0x0401C531 RID: 116017
+		// Token: 0x04016F66 RID: 94054
 		private readonly List<PhantomArenaRoleSkillItemData> SkillItemDataList = new List<PhantomArenaRoleSkillItemData>();
 
-		// Token: 0x0401C532 RID: 116018
+		// Token: 0x04016F67 RID: 94055
 		private CommonItemSmallItemGrid RewardItem;
 
-		// Token: 0x0200B2B6 RID: 45750
+		// Token: 0x02009CEF RID: 40175
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x04036233 RID: 221747
+			// Token: 0x04030C88 RID: 199816
 			public const int RoleScrollView = 0;
 
-			// Token: 0x04036234 RID: 221748
+			// Token: 0x04030C89 RID: 199817
 			public const int RoleItem = 1;
 
-			// Token: 0x04036235 RID: 221749
+			// Token: 0x04030C8A RID: 199818
 			public const int RoleNameText = 2;
 
-			// Token: 0x04036236 RID: 221750
+			// Token: 0x04030C8B RID: 199819
 			public const int ElementItem = 3;
 
-			// Token: 0x04036237 RID: 221751
+			// Token: 0x04030C8C RID: 199820
 			public const int SkillItem1 = 4;
 
-			// Token: 0x04036238 RID: 221752
+			// Token: 0x04030C8D RID: 199821
 			public const int SkillItem2 = 5;
 
-			// Token: 0x04036239 RID: 221753
+			// Token: 0x04030C8E RID: 199822
 			public const int SkillNameText = 6;
 
-			// Token: 0x0403623A RID: 221754
+			// Token: 0x04030C8F RID: 199823
 			public const int SkillDescText = 7;
 
-			// Token: 0x0403623B RID: 221755
+			// Token: 0x04030C90 RID: 199824
 			public const int ConfirmBtn = 8;
 
-			// Token: 0x0403623C RID: 221756
+			// Token: 0x04030C91 RID: 199825
 			public const int RewardItem = 9;
 
-			// Token: 0x0403623D RID: 221757
+			// Token: 0x04030C92 RID: 199826
 			public const int RewardGridItem = 10;
 
-			// Token: 0x0403623E RID: 221758
+			// Token: 0x04030C93 RID: 199827
 			public const int LockItem = 11;
 
-			// Token: 0x0403623F RID: 221759
+			// Token: 0x04030C94 RID: 199828
 			public const int LockText = 12;
 		}
 	}

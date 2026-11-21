@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200065A RID: 1626
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006F7 RID: 1783
 	public class IRangeAdsorptionFoundation : IItemFoundationType
 	{
-		// Token: 0x060022C8 RID: 8904 RVA: 0x0005F7F0 File Offset: 0x0005D9F0
+		// Token: 0x060025CE RID: 9678 RVA: 0x00066504 File Offset: 0x00064704
 		private IRangeAdsorptionFoundation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060022C9 RID: 8905 RVA: 0x0005F828 File Offset: 0x0005DA28
+		// Token: 0x060025CF RID: 9679 RVA: 0x0006653C File Offset: 0x0006473C
 		public static IRangeAdsorptionFoundation Create([Nullable(2)] IRangeAdsorptionFoundation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022CA RID: 8906 RVA: 0x0005F83B File Offset: 0x0005DA3B
+		// Token: 0x060025D0 RID: 9680 RVA: 0x0006654F File Offset: 0x0006474F
 		public static IRangeAdsorptionFoundation CreateFromSetValue([Nullable(2)] IRangeAdsorptionFoundation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022CB RID: 8907 RVA: 0x0005F850 File Offset: 0x0005DA50
+		// Token: 0x060025D1 RID: 9681 RVA: 0x00066564 File Offset: 0x00064764
 		public new IRangeAdsorptionFoundation_SetValue ToSetValue()
 		{
 			return new IRangeAdsorptionFoundation_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700093C RID: 2364
-		// (get) Token: 0x060022CC RID: 8908 RVA: 0x0005F89E File Offset: 0x0005DA9E
-		// (set) Token: 0x060022CD RID: 8909 RVA: 0x0005F8C9 File Offset: 0x0005DAC9
+		// Token: 0x170009F3 RID: 2547
+		// (get) Token: 0x060025D2 RID: 9682 RVA: 0x000665B2 File Offset: 0x000647B2
+		// (set) Token: 0x060025D3 RID: 9683 RVA: 0x000665DD File Offset: 0x000647DD
 		public override EItemFoundation Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700093D RID: 2365
-		// (get) Token: 0x060022CE RID: 8910 RVA: 0x0005F8D8 File Offset: 0x0005DAD8
-		// (set) Token: 0x060022CF RID: 8911 RVA: 0x0005F939 File Offset: 0x0005DB39
+		// Token: 0x170009F4 RID: 2548
+		// (get) Token: 0x060025D4 RID: 9684 RVA: 0x000665EC File Offset: 0x000647EC
+		// (set) Token: 0x060025D5 RID: 9685 RVA: 0x0006664D File Offset: 0x0006484D
 		public virtual ICategoryMatchingCondition Condition
 		{
 			get
@@ -116,9 +114,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700093E RID: 2366
-		// (get) Token: 0x060022D0 RID: 8912 RVA: 0x0005F950 File Offset: 0x0005DB50
-		// (set) Token: 0x060022D1 RID: 8913 RVA: 0x0005F9B1 File Offset: 0x0005DBB1
+		// Token: 0x170009F5 RID: 2549
+		// (get) Token: 0x060025D6 RID: 9686 RVA: 0x00066664 File Offset: 0x00064864
+		// (set) Token: 0x060025D7 RID: 9687 RVA: 0x000666C5 File Offset: 0x000648C5
 		public virtual IAdsorptionMatchingAnimation Animation
 		{
 			get
@@ -146,9 +144,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700093F RID: 2367
-		// (get) Token: 0x060022D2 RID: 8914 RVA: 0x0005F9C8 File Offset: 0x0005DBC8
-		// (set) Token: 0x060022D3 RID: 8915 RVA: 0x0005FA29 File Offset: 0x0005DC29
+		// Token: 0x170009F6 RID: 2550
+		// (get) Token: 0x060025D8 RID: 9688 RVA: 0x000666DC File Offset: 0x000648DC
+		// (set) Token: 0x060025D9 RID: 9689 RVA: 0x0006673D File Offset: 0x0006493D
 		[Nullable(2)]
 		public virtual ICategoryMatchingAnimation CategoryAnimation
 		{
@@ -179,9 +177,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000940 RID: 2368
-		// (get) Token: 0x060022D4 RID: 8916 RVA: 0x0005FA40 File Offset: 0x0005DC40
-		// (set) Token: 0x060022D5 RID: 8917 RVA: 0x0005FAA1 File Offset: 0x0005DCA1
+		// Token: 0x170009F7 RID: 2551
+		// (get) Token: 0x060025DA RID: 9690 RVA: 0x00066754 File Offset: 0x00064954
+		// (set) Token: 0x060025DB RID: 9691 RVA: 0x000667B5 File Offset: 0x000649B5
 		[Nullable(2)]
 		public virtual ICategoryMatchingSucceed Callback
 		{
@@ -212,36 +210,36 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001824 RID: 6180
+		// Token: 0x04001A16 RID: 6678
 		[Nullable(2)]
 		protected new IRangeAdsorptionFoundation FbInstance;
 
-		// Token: 0x04001825 RID: 6181
+		// Token: 0x04001A17 RID: 6679
 		[Nullable(2)]
 		protected new IRangeAdsorptionFoundation_SetValue PocoInterface;
 
-		// Token: 0x04001826 RID: 6182
+		// Token: 0x04001A18 RID: 6680
 		private ICategoryMatchingCondition _ConditionCache;
 
-		// Token: 0x04001827 RID: 6183
+		// Token: 0x04001A19 RID: 6681
 		private bool _ConditionInited;
 
-		// Token: 0x04001828 RID: 6184
+		// Token: 0x04001A1A RID: 6682
 		private IAdsorptionMatchingAnimation _AnimationCache;
 
-		// Token: 0x04001829 RID: 6185
+		// Token: 0x04001A1B RID: 6683
 		private bool _AnimationInited;
 
-		// Token: 0x0400182A RID: 6186
+		// Token: 0x04001A1C RID: 6684
 		private ICategoryMatchingAnimation _CategoryAnimationCache;
 
-		// Token: 0x0400182B RID: 6187
+		// Token: 0x04001A1D RID: 6685
 		private bool _CategoryAnimationInited;
 
-		// Token: 0x0400182C RID: 6188
+		// Token: 0x04001A1E RID: 6686
 		private ICategoryMatchingSucceed _CallbackCache;
 
-		// Token: 0x0400182D RID: 6189
+		// Token: 0x04001A1F RID: 6687
 		private bool _CallbackInited;
 	}
 }

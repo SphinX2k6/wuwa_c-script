@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C60 RID: 3168
+	// Token: 0x02000D44 RID: 3396
 	public struct FavorLevel : IFlatbufferObject
 	{
-		// Token: 0x17001066 RID: 4198
-		// (get) Token: 0x06006CE0 RID: 27872 RVA: 0x0022B8DC File Offset: 0x00229ADC
+		// Token: 0x170010C3 RID: 4291
+		// (get) Token: 0x060072EB RID: 29419 RVA: 0x0024AC2C File Offset: 0x00248E2C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006CE1 RID: 27873 RVA: 0x0022B8E9 File Offset: 0x00229AE9
+		// Token: 0x060072EC RID: 29420 RVA: 0x0024AC39 File Offset: 0x00248E39
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006CE2 RID: 27874 RVA: 0x0022B8F0 File Offset: 0x00229AF0
+		// Token: 0x060072ED RID: 29421 RVA: 0x0024AC40 File Offset: 0x00248E40
 		public static FavorLevel GetRootAsFavorLevel(ByteBuffer _bb)
 		{
 			return FavorLevel.GetRootAsFavorLevel(_bb, default(FavorLevel));
 		}
 
-		// Token: 0x06006CE3 RID: 27875 RVA: 0x0022B90C File Offset: 0x00229B0C
+		// Token: 0x060072EE RID: 29422 RVA: 0x0024AC5C File Offset: 0x00248E5C
 		public static FavorLevel GetRootAsFavorLevel(ByteBuffer _bb, FavorLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006CE4 RID: 27876 RVA: 0x0022B929 File Offset: 0x00229B29
+		// Token: 0x060072EF RID: 29423 RVA: 0x0024AC79 File Offset: 0x00248E79
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006CE5 RID: 27877 RVA: 0x0022B938 File Offset: 0x00229B38
+		// Token: 0x060072F0 RID: 29424 RVA: 0x0024AC88 File Offset: 0x00248E88
 		public FavorLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001067 RID: 4199
-		// (get) Token: 0x06006CE6 RID: 27878 RVA: 0x0022B948 File Offset: 0x00229B48
+		// Token: 0x170010C4 RID: 4292
+		// (get) Token: 0x060072F1 RID: 29425 RVA: 0x0024AC98 File Offset: 0x00248E98
 		public int Level
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001068 RID: 4200
-		// (get) Token: 0x06006CE7 RID: 27879 RVA: 0x0022B984 File Offset: 0x00229B84
+		// Token: 0x170010C5 RID: 4293
+		// (get) Token: 0x060072F2 RID: 29426 RVA: 0x0024ACD4 File Offset: 0x00248ED4
 		public int LevelUpExp
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004CAB RID: 19627
+		// Token: 0x0400528F RID: 21135
 		private Table __p;
 	}
 }

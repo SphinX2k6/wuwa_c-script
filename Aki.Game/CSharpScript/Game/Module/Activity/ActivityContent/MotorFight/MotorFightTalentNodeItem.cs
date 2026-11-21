@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
@@ -9,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200641B RID: 25627
+	// Token: 0x02005399 RID: 21401
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorFightTalentNodeItem : UiPanelBase
 	{
-		// Token: 0x0604072C RID: 263980 RVA: 0x00F98158 File Offset: 0x00F96358
+		// Token: 0x060353ED RID: 218093 RVA: 0x00EDF0F8 File Offset: 0x00EDD2F8
 		public MotorFightTalentNodeItem(UUIItem parent, MotorFightTalentData data, UUIItem gridPanelItem)
 		{
 			this.Data = data2;
@@ -22,7 +21,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.GridPanelItem = gridPanelItem;
 		}
 
-		// Token: 0x0604072D RID: 263981 RVA: 0x00F981B0 File Offset: 0x00F963B0
+		// Token: 0x060353EE RID: 218094 RVA: 0x00EDF150 File Offset: 0x00EDD350
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -63,13 +62,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604072E RID: 263982 RVA: 0x00F983A4 File Offset: 0x00F965A4
+		// Token: 0x060353EF RID: 218095 RVA: 0x00EDF344 File Offset: 0x00EDD544
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).bLockStateOnSelect = true;
 		}
 
-		// Token: 0x0604072F RID: 263983 RVA: 0x00F983B4 File Offset: 0x00F965B4
+		// Token: 0x060353F0 RID: 218096 RVA: 0x00EDF354 File Offset: 0x00EDD554
 		[NullableContext(2)]
 		public unsafe void Refresh(MotorFightTalentData data = null)
 		{
@@ -78,8 +77,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			Span<int> preNode = this.Data.PreNode;
 			int i;
 			Action<AActor> <>9__0;
-			int j;
-			for (i = 0; i < preNode.Length; i = j + 1)
+			int k;
+			for (i = 0; i < preNode.Length; i = k + 1)
 			{
 				int offset = motorFightActivityData.GetMotorFightTalentData(*preNode[i]).Row - this.Data.Row;
 				UUIItem prePosItem = this.GetPrePosItem(offset);
@@ -102,7 +101,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 							});
 							if (this.LineComponentList.Count <= i)
 							{
-								this.LineComponentList.AddRange(Enumerable.Repeat<MotorFightTalentLine>(null, i - this.LineComponentList.Count + 1));
+								int num = i - this.LineComponentList.Count + 1;
+								for (int j = 0; j < num; j++)
+								{
+									this.LineComponentList.Add(null);
+								}
 							}
 							this.LineComponentList[i] = component;
 						});
@@ -113,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 				{
 					this.LineComponentList[i].Refresh(this.Data.IsUnLock);
 				}
-				j = i;
+				k = i;
 			}
 			bool flag = motorFightActivityData.GetTalentCoinNum() >= this.Data.Cost;
 			bool flag2 = motorFightActivityData.IsPreNodeAllUnlock(this.Data);
@@ -134,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x06040730 RID: 263984 RVA: 0x00F98600 File Offset: 0x00F96800
+		// Token: 0x060353F1 RID: 218097 RVA: 0x00EDF5A0 File Offset: 0x00EDD7A0
 		public UUIItem GetPrePosItem(int offset)
 		{
 			if (offset > 0)
@@ -148,7 +151,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return base.GetItem(2);
 		}
 
-		// Token: 0x06040731 RID: 263985 RVA: 0x00F98621 File Offset: 0x00F96821
+		// Token: 0x060353F2 RID: 218098 RVA: 0x00EDF5C1 File Offset: 0x00EDD7C1
 		private void OnToggleClick(EToggleState _)
 		{
 			if (this.OnClickCallback != null)
@@ -157,70 +160,70 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x06040732 RID: 263986 RVA: 0x00F98637 File Offset: 0x00F96837
+		// Token: 0x060353F3 RID: 218099 RVA: 0x00EDF5D7 File Offset: 0x00EDD7D7
 		public void SetToggleState(EToggleState state)
 		{
 			base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x0402181F RID: 137247
+		// Token: 0x0401C14E RID: 115022
 		[Nullable(2)]
 		public MotorFightTalentData Data;
 
-		// Token: 0x04021820 RID: 137248
+		// Token: 0x0401C14F RID: 115023
 		[Nullable(2)]
 		public UUIItem PreItem;
 
-		// Token: 0x04021821 RID: 137249
+		// Token: 0x0401C150 RID: 115024
 		public List<MotorFightTalentLine> LineComponentList = new List<MotorFightTalentLine>();
 
-		// Token: 0x04021822 RID: 137250
+		// Token: 0x0401C151 RID: 115025
 		[Nullable(2)]
 		public UUIItem GridPanelItem;
 
-		// Token: 0x04021823 RID: 137251
+		// Token: 0x0401C152 RID: 115026
 		public Action<MotorFightTalentNodeItem> OnClickCallback = delegate(MotorFightTalentNodeItem data)
 		{
 		};
 
-		// Token: 0x0200C643 RID: 50755
+		// Token: 0x0200B02A RID: 45098
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BDBA RID: 245178
+			// Token: 0x04036717 RID: 222999
 			public const int Toggle = 0;
 
-			// Token: 0x0403BDBB RID: 245179
+			// Token: 0x04036718 RID: 223000
 			public const int PrePos1 = 1;
 
-			// Token: 0x0403BDBC RID: 245180
+			// Token: 0x04036719 RID: 223001
 			public const int PrePos2 = 2;
 
-			// Token: 0x0403BDBD RID: 245181
+			// Token: 0x0403671A RID: 223002
 			public const int PrePos3 = 3;
 
-			// Token: 0x0403BDBE RID: 245182
+			// Token: 0x0403671B RID: 223003
 			public const int OutPos1 = 4;
 
-			// Token: 0x0403BDBF RID: 245183
+			// Token: 0x0403671C RID: 223004
 			public const int OutPos2 = 5;
 
-			// Token: 0x0403BDC0 RID: 245184
+			// Token: 0x0403671D RID: 223005
 			public const int OutPos3 = 6;
 
-			// Token: 0x0403BDC1 RID: 245185
+			// Token: 0x0403671E RID: 223006
 			public const int SpriteLock = 7;
 
-			// Token: 0x0403BDC2 RID: 245186
+			// Token: 0x0403671F RID: 223007
 			public const int SpriteCanUnlock = 8;
 
-			// Token: 0x0403BDC3 RID: 245187
+			// Token: 0x04036720 RID: 223008
 			public const int SpriteUnlock = 9;
 
-			// Token: 0x0403BDC4 RID: 245188
+			// Token: 0x04036721 RID: 223009
 			public const int SpriteIcon = 10;
 
-			// Token: 0x0403BDC5 RID: 245189
+			// Token: 0x04036722 RID: 223010
 			public const int SpriteUp = 11;
 		}
 	}

@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200078C RID: 1932
+	// Token: 0x0200015E RID: 350
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/EndlessCity.LoopVolumeDynamicStreamingSource")]
 	[UnrealStructLayout(1240, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1240)]
 	public class ALoopVolumeDynamicStreamingSource : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600648A RID: 25738 RVA: 0x0009047E File Offset: 0x0008E67E
+		// Token: 0x06001374 RID: 4980 RVA: 0x0001EB7F File Offset: 0x0001CD7F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ALoopVolumeDynamicStreamingSource._ClassPtr;
 		}
 
-		// Token: 0x0600648B RID: 25739 RVA: 0x0009048C File Offset: 0x0008E68C
+		// Token: 0x06001375 RID: 4981 RVA: 0x0001EB8C File Offset: 0x0001CD8C
 		public ALoopVolumeDynamicStreamingSource() : this(BuiltinUtils.AllocNativeUObject(ALoopVolumeDynamicStreamingSource.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600648C RID: 25740 RVA: 0x000904B4 File Offset: 0x0008E6B4
+		// Token: 0x06001376 RID: 4982 RVA: 0x0001EBB4 File Offset: 0x0001CDB4
 		public ALoopVolumeDynamicStreamingSource(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ALoopVolumeDynamicStreamingSource.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170017D9 RID: 6105
-		// (get) Token: 0x0600648D RID: 25741 RVA: 0x000904E7 File Offset: 0x0008E6E7
-		// (set) Token: 0x0600648E RID: 25742 RVA: 0x000904F7 File Offset: 0x0008E6F7
+		// Token: 0x170001DF RID: 479
+		// (get) Token: 0x06001377 RID: 4983 RVA: 0x0001EBE7 File Offset: 0x0001CDE7
+		// (set) Token: 0x06001378 RID: 4984 RVA: 0x0001EBF7 File Offset: 0x0001CDF7
 		public unsafe bool bMasterEnabled
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017DA RID: 6106
-		// (get) Token: 0x0600648F RID: 25743 RVA: 0x00090508 File Offset: 0x0008E708
-		// (set) Token: 0x06006490 RID: 25744 RVA: 0x0009051C File Offset: 0x0008E71C
+		// Token: 0x170001E0 RID: 480
+		// (get) Token: 0x06001379 RID: 4985 RVA: 0x0001EC08 File Offset: 0x0001CE08
+		// (set) Token: 0x0600137A RID: 4986 RVA: 0x0001EC1C File Offset: 0x0001CE1C
 		[Nullable(2)]
 		public unsafe AVolume BoundsVolume
 		{
@@ -62,72 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017DB RID: 6107
-		// (get) Token: 0x06006491 RID: 25745 RVA: 0x00090534 File Offset: 0x0008E734
-		// (set) Token: 0x06006492 RID: 25746 RVA: 0x0009056D File Offset: 0x0008E76D
-		public FLoopAxisPredictionSetting AxisX
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FLoopAxisPredictionSetting result;
-				if ((result = this._AxisX) == null)
-				{
-					result = (this._AxisX = new FLoopAxisPredictionSetting(base.NativePtr + (IntPtr)ALoopVolumeDynamicStreamingSource.__PropertyOffset_AxisX, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLoopAxisPredictionSetting.StaticStruct(), base.NativePtr + (IntPtr)ALoopVolumeDynamicStreamingSource.__PropertyOffset_AxisX, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170017DC RID: 6108
-		// (get) Token: 0x06006493 RID: 25747 RVA: 0x00090590 File Offset: 0x0008E790
-		// (set) Token: 0x06006494 RID: 25748 RVA: 0x000905C9 File Offset: 0x0008E7C9
-		public FLoopAxisPredictionSetting AxisY
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FLoopAxisPredictionSetting result;
-				if ((result = this._AxisY) == null)
-				{
-					result = (this._AxisY = new FLoopAxisPredictionSetting(base.NativePtr + (IntPtr)ALoopVolumeDynamicStreamingSource.__PropertyOffset_AxisY, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLoopAxisPredictionSetting.StaticStruct(), base.NativePtr + (IntPtr)ALoopVolumeDynamicStreamingSource.__PropertyOffset_AxisY, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170017DD RID: 6109
-		// (get) Token: 0x06006495 RID: 25749 RVA: 0x000905EC File Offset: 0x0008E7EC
-		// (set) Token: 0x06006496 RID: 25750 RVA: 0x00090625 File Offset: 0x0008E825
-		public FLoopAxisPredictionSetting AxisZ
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FLoopAxisPredictionSetting result;
-				if ((result = this._AxisZ) == null)
-				{
-					result = (this._AxisZ = new FLoopAxisPredictionSetting(base.NativePtr + (IntPtr)ALoopVolumeDynamicStreamingSource.__PropertyOffset_AxisZ, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLoopAxisPredictionSetting.StaticStruct(), base.NativePtr + (IntPtr)ALoopVolumeDynamicStreamingSource.__PropertyOffset_AxisZ, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170017DE RID: 6110
-		// (get) Token: 0x06006497 RID: 25751 RVA: 0x00090646 File Offset: 0x0008E846
-		// (set) Token: 0x06006498 RID: 25752 RVA: 0x00090656 File Offset: 0x0008E856
+		// Token: 0x170001E1 RID: 481
+		// (get) Token: 0x0600137B RID: 4987 RVA: 0x0001EC31 File Offset: 0x0001CE31
+		// (set) Token: 0x0600137C RID: 4988 RVA: 0x0001EC41 File Offset: 0x0001CE41
 		public unsafe float BufferDistance
 		{
 			get
@@ -140,9 +77,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017DF RID: 6111
-		// (get) Token: 0x06006499 RID: 25753 RVA: 0x00090667 File Offset: 0x0008E867
-		// (set) Token: 0x0600649A RID: 25754 RVA: 0x00090677 File Offset: 0x0008E877
+		// Token: 0x170001E2 RID: 482
+		// (get) Token: 0x0600137D RID: 4989 RVA: 0x0001EC52 File Offset: 0x0001CE52
+		// (set) Token: 0x0600137E RID: 4990 RVA: 0x0001EC62 File Offset: 0x0001CE62
 		public unsafe bool bDiagonalPrediction
 		{
 			get
@@ -155,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017E0 RID: 6112
-		// (get) Token: 0x0600649B RID: 25755 RVA: 0x00090688 File Offset: 0x0008E888
-		// (set) Token: 0x0600649C RID: 25756 RVA: 0x00090698 File Offset: 0x0008E898
+		// Token: 0x170001E3 RID: 483
+		// (get) Token: 0x0600137F RID: 4991 RVA: 0x0001EC73 File Offset: 0x0001CE73
+		// (set) Token: 0x06001380 RID: 4992 RVA: 0x0001EC83 File Offset: 0x0001CE83
 		public unsafe bool bStreamingSourceShouldBlockOnSlowStreaming
 		{
 			get
@@ -170,9 +107,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017E1 RID: 6113
-		// (get) Token: 0x0600649D RID: 25757 RVA: 0x000906A9 File Offset: 0x0008E8A9
-		// (set) Token: 0x0600649E RID: 25758 RVA: 0x000906B9 File Offset: 0x0008E8B9
+		// Token: 0x170001E4 RID: 484
+		// (get) Token: 0x06001381 RID: 4993 RVA: 0x0001EC94 File Offset: 0x0001CE94
+		// (set) Token: 0x06001382 RID: 4994 RVA: 0x0001ECA4 File Offset: 0x0001CEA4
 		public unsafe bool bDisablePredictedCellRender
 		{
 			get
@@ -185,9 +122,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017E2 RID: 6114
-		// (get) Token: 0x0600649F RID: 25759 RVA: 0x000906CA File Offset: 0x0008E8CA
-		// (set) Token: 0x060064A0 RID: 25760 RVA: 0x000906DA File Offset: 0x0008E8DA
+		// Token: 0x170001E5 RID: 485
+		// (get) Token: 0x06001383 RID: 4995 RVA: 0x0001ECB5 File Offset: 0x0001CEB5
+		// (set) Token: 0x06001384 RID: 4996 RVA: 0x0001ECC5 File Offset: 0x0001CEC5
 		public unsafe float PredictedLoadingRangeScale
 		{
 			get
@@ -200,24 +137,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017E3 RID: 6115
-		// (get) Token: 0x060064A1 RID: 25761 RVA: 0x000906EB File Offset: 0x0008E8EB
-		// (set) Token: 0x060064A2 RID: 25762 RVA: 0x000906FB File Offset: 0x0008E8FB
-		public unsafe EStreamingSourceTargetState PredictedTargetState
-		{
-			get
-			{
-				return (EStreamingSourceTargetState)(*(base.NativePtr + (IntPtr)ALoopVolumeDynamicStreamingSource.__PropertyOffset_PredictedTargetState));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)ALoopVolumeDynamicStreamingSource.__PropertyOffset_PredictedTargetState) = (byte)value;
-			}
-		}
-
-		// Token: 0x170017E4 RID: 6116
-		// (get) Token: 0x060064A3 RID: 25763 RVA: 0x0009070C File Offset: 0x0008E90C
-		// (set) Token: 0x060064A4 RID: 25764 RVA: 0x0009071C File Offset: 0x0008E91C
+		// Token: 0x170001E6 RID: 486
+		// (get) Token: 0x06001385 RID: 4997 RVA: 0x0001ECD6 File Offset: 0x0001CED6
+		// (set) Token: 0x06001386 RID: 4998 RVA: 0x0001ECE6 File Offset: 0x0001CEE6
 		public unsafe EStreamingSourceTargetBehavior PredictedTargetBehavior
 		{
 			get
@@ -230,9 +152,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017E5 RID: 6117
-		// (get) Token: 0x060064A5 RID: 25765 RVA: 0x00090730 File Offset: 0x0008E930
-		// (set) Token: 0x060064A6 RID: 25766 RVA: 0x00090769 File Offset: 0x0008E969
+		// Token: 0x170001E7 RID: 487
+		// (get) Token: 0x06001387 RID: 4999 RVA: 0x0001ECF8 File Offset: 0x0001CEF8
+		// (set) Token: 0x06001388 RID: 5000 RVA: 0x0001ED31 File Offset: 0x0001CF31
 		public TArray<FName> PredictedTargetGrids
 		{
 			get
@@ -251,9 +173,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017E6 RID: 6118
-		// (get) Token: 0x060064A7 RID: 25767 RVA: 0x00090777 File Offset: 0x0008E977
-		// (set) Token: 0x060064A8 RID: 25768 RVA: 0x00090787 File Offset: 0x0008E987
+		// Token: 0x170001E8 RID: 488
+		// (get) Token: 0x06001389 RID: 5001 RVA: 0x0001ED3F File Offset: 0x0001CF3F
+		// (set) Token: 0x0600138A RID: 5002 RVA: 0x0001ED4F File Offset: 0x0001CF4F
 		public unsafe bool bUseGlobalStreamingPortalPriority
 		{
 			get
@@ -266,9 +188,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017E7 RID: 6119
-		// (get) Token: 0x060064A9 RID: 25769 RVA: 0x00090798 File Offset: 0x0008E998
-		// (set) Token: 0x060064AA RID: 25770 RVA: 0x000907A8 File Offset: 0x0008E9A8
+		// Token: 0x170001E9 RID: 489
+		// (get) Token: 0x0600138B RID: 5003 RVA: 0x0001ED60 File Offset: 0x0001CF60
+		// (set) Token: 0x0600138C RID: 5004 RVA: 0x0001ED70 File Offset: 0x0001CF70
 		public unsafe EStreamingSourcePriority PredictedPriority
 		{
 			get
@@ -281,9 +203,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017E8 RID: 6120
-		// (get) Token: 0x060064AB RID: 25771 RVA: 0x000907B9 File Offset: 0x0008E9B9
-		// (set) Token: 0x060064AC RID: 25772 RVA: 0x000907C9 File Offset: 0x0008E9C9
+		// Token: 0x170001EA RID: 490
+		// (get) Token: 0x0600138D RID: 5005 RVA: 0x0001ED81 File Offset: 0x0001CF81
+		// (set) Token: 0x0600138E RID: 5006 RVA: 0x0001ED91 File Offset: 0x0001CF91
 		public unsafe bool bPredictedUseVelocityContributionToCellsSorting
 		{
 			get
@@ -296,9 +218,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017E9 RID: 6121
-		// (get) Token: 0x060064AD RID: 25773 RVA: 0x000907DA File Offset: 0x0008E9DA
-		// (set) Token: 0x060064AE RID: 25774 RVA: 0x000907EA File Offset: 0x0008E9EA
+		// Token: 0x170001EB RID: 491
+		// (get) Token: 0x0600138F RID: 5007 RVA: 0x0001EDA2 File Offset: 0x0001CFA2
+		// (set) Token: 0x06001390 RID: 5008 RVA: 0x0001EDB2 File Offset: 0x0001CFB2
 		public unsafe bool bPredictedForce2D
 		{
 			get
@@ -311,111 +233,87 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060064AF RID: 25775 RVA: 0x000907FB File Offset: 0x0008E9FB
+		// Token: 0x06001391 RID: 5009 RVA: 0x0001EDC3 File Offset: 0x0001CFC3
 		public void SetMasterEnabled(bool bEnabled)
 		{
 			ALoopVolumeDynamicStreamingSource.__SetMasterEnabled_Internal(base.NativePtr, bEnabled);
 		}
 
-		// Token: 0x060064B0 RID: 25776 RVA: 0x00090809 File Offset: 0x0008EA09
+		// Token: 0x06001392 RID: 5010 RVA: 0x0001EDD1 File Offset: 0x0001CFD1
 		public void ForceUpdateStreamingSources()
 		{
 			ALoopVolumeDynamicStreamingSource.__ForceUpdateStreamingSources_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060064B1 RID: 25777
+		// Token: 0x06001393 RID: 5011
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMasterEnabled_Internal(IntPtr @this, bool bEnabled);
 
-		// Token: 0x060064B2 RID: 25778
+		// Token: 0x06001394 RID: 5012
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ForceUpdateStreamingSources_Internal(IntPtr @this);
 
-		// Token: 0x060064B3 RID: 25779 RVA: 0x00090816 File Offset: 0x0008EA16
+		// Token: 0x06001395 RID: 5013 RVA: 0x0001EDDE File Offset: 0x0001CFDE
 		static ALoopVolumeDynamicStreamingSource()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/EndlessCity.LoopVolumeDynamicStreamingSource");
 		}
 
-		// Token: 0x060064B4 RID: 25780 RVA: 0x00090824 File Offset: 0x0008EA24
+		// Token: 0x06001396 RID: 5014 RVA: 0x0001EDEC File Offset: 0x0001CFEC
 		protected ALoopVolumeDynamicStreamingSource(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040030BB RID: 12475
+		// Token: 0x04000647 RID: 1607
 		public new const string __ObjectPath = "/Script/EndlessCity.LoopVolumeDynamicStreamingSource";
 
-		// Token: 0x040030BC RID: 12476
+		// Token: 0x04000648 RID: 1608
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040030BD RID: 12477
+		// Token: 0x04000649 RID: 1609
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040030BE RID: 12478
+		// Token: 0x0400064A RID: 1610
 		internal static int __PropertyOffset_bMasterEnabled;
 
-		// Token: 0x040030BF RID: 12479
+		// Token: 0x0400064B RID: 1611
 		internal static int __PropertyOffset_BoundsVolume;
 
-		// Token: 0x040030C0 RID: 12480
-		internal static int __PropertyOffset_AxisX;
-
-		// Token: 0x040030C1 RID: 12481
-		[Nullable(2)]
-		private FLoopAxisPredictionSetting _AxisX;
-
-		// Token: 0x040030C2 RID: 12482
-		internal static int __PropertyOffset_AxisY;
-
-		// Token: 0x040030C3 RID: 12483
-		[Nullable(2)]
-		private FLoopAxisPredictionSetting _AxisY;
-
-		// Token: 0x040030C4 RID: 12484
-		internal static int __PropertyOffset_AxisZ;
-
-		// Token: 0x040030C5 RID: 12485
-		[Nullable(2)]
-		private FLoopAxisPredictionSetting _AxisZ;
-
-		// Token: 0x040030C6 RID: 12486
+		// Token: 0x0400064C RID: 1612
 		internal static int __PropertyOffset_BufferDistance;
 
-		// Token: 0x040030C7 RID: 12487
+		// Token: 0x0400064D RID: 1613
 		internal static int __PropertyOffset_bDiagonalPrediction;
 
-		// Token: 0x040030C8 RID: 12488
+		// Token: 0x0400064E RID: 1614
 		internal static int __PropertyOffset_bStreamingSourceShouldBlockOnSlowStreaming;
 
-		// Token: 0x040030C9 RID: 12489
+		// Token: 0x0400064F RID: 1615
 		internal static int __PropertyOffset_bDisablePredictedCellRender;
 
-		// Token: 0x040030CA RID: 12490
+		// Token: 0x04000650 RID: 1616
 		internal static int __PropertyOffset_PredictedLoadingRangeScale;
 
-		// Token: 0x040030CB RID: 12491
-		internal static int __PropertyOffset_PredictedTargetState;
-
-		// Token: 0x040030CC RID: 12492
+		// Token: 0x04000651 RID: 1617
 		internal static int __PropertyOffset_PredictedTargetBehavior;
 
-		// Token: 0x040030CD RID: 12493
+		// Token: 0x04000652 RID: 1618
 		internal static int __PropertyOffset_PredictedTargetGrids;
 
-		// Token: 0x040030CE RID: 12494
+		// Token: 0x04000653 RID: 1619
 		[Nullable(2)]
 		private TArray<FName> _PredictedTargetGrids;
 
-		// Token: 0x040030CF RID: 12495
+		// Token: 0x04000654 RID: 1620
 		internal static int __PropertyOffset_bUseGlobalStreamingPortalPriority;
 
-		// Token: 0x040030D0 RID: 12496
+		// Token: 0x04000655 RID: 1621
 		internal static int __PropertyOffset_PredictedPriority;
 
-		// Token: 0x040030D1 RID: 12497
+		// Token: 0x04000656 RID: 1622
 		internal static int __PropertyOffset_bPredictedUseVelocityContributionToCellsSorting;
 
-		// Token: 0x040030D2 RID: 12498
+		// Token: 0x04000657 RID: 1623
 		internal static int __PropertyOffset_bPredictedForce2D;
 	}
 }

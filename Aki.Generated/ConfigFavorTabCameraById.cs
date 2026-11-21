@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002B8 RID: 696
+	// Token: 0x020002CD RID: 717
 	public class ConfigFavorTabCameraById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001055 RID: 4181 RVA: 0x000B5C73 File Offset: 0x000B3E73
+		// Token: 0x060010D3 RID: 4307 RVA: 0x000BC17F File Offset: 0x000BA37F
 		static ConfigFavorTabCameraById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFavorTabCameraById.CreateStaticDefaultValue), new Action(ConfigFavorTabCameraById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001056 RID: 4182 RVA: 0x000B5C94 File Offset: 0x000B3E94
+		// Token: 0x060010D4 RID: 4308 RVA: 0x000BC1A0 File Offset: 0x000BA3A0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFavorTabCameraById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001057 RID: 4183 RVA: 0x000B5D13 File Offset: 0x000B3F13
+		// Token: 0x060010D5 RID: 4309 RVA: 0x000BC21F File Offset: 0x000BA41F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFavorTabCameraById.LogPair = null;
 			ConfigFavorTabCameraById.HandleId = 0;
 		}
 
-		// Token: 0x06001058 RID: 4184 RVA: 0x000B5D21 File Offset: 0x000B3F21
+		// Token: 0x060010D6 RID: 4310 RVA: 0x000BC22D File Offset: 0x000BA42D
 		public static void Init()
 		{
 			ConfigFavorTabCameraById.HandleId = ConfigCommon.InitDataStatement(ConfigFavorTabCameraById.HandleId, "db_favor.db", "select BinData from `FavorTabCamera` where Id=?");
 		}
 
-		// Token: 0x06001059 RID: 4185 RVA: 0x000B5D3C File Offset: 0x000B3F3C
+		// Token: 0x060010D7 RID: 4311 RVA: 0x000BC248 File Offset: 0x000BA448
 		public static FavorTabCamera? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFavorTabCameraById.HandleId, ConfigFavorTabCameraById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FavorTabCamera?(rootAsFavorTabCamera);
 		}
 
-		// Token: 0x040012EC RID: 4844
+		// Token: 0x0400137F RID: 4991
 		private const string DB = "db_favor.db";
 
-		// Token: 0x040012ED RID: 4845
+		// Token: 0x04001380 RID: 4992
 		private const string FILE = "h.好感度.xlsx";
 
-		// Token: 0x040012EE RID: 4846
+		// Token: 0x04001381 RID: 4993
 		private const string TABLE = "FavorTabCamera";
 
-		// Token: 0x040012EF RID: 4847
+		// Token: 0x04001382 RID: 4994
 		private const string COMMAND = "select BinData from `FavorTabCamera` where Id=?";
 
-		// Token: 0x040012F0 RID: 4848
+		// Token: 0x04001383 RID: 4995
 		private const string KEY_PREFIX = "FavorTabCameraById";
 
-		// Token: 0x040012F1 RID: 4849
+		// Token: 0x04001384 RID: 4996
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040012F2 RID: 4850
+		// Token: 0x04001385 RID: 4997
 		private static int HandleId;
 	}
 }

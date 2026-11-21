@@ -9,13 +9,13 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Area
 {
-	// Token: 0x02005EA2 RID: 24226
+	// Token: 0x02004E87 RID: 20103
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class AreaModel : ModelBase
 	{
-		// Token: 0x0603DA4A RID: 252490 RVA: 0x00EE25AC File Offset: 0x00EE07AC
+		// Token: 0x060329DA RID: 207322 RVA: 0x00E33AE4 File Offset: 0x00E31CE4
 		protected override bool OnInit()
 		{
 			this.SetAreaInfo(1);
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Area
 			return true;
 		}
 
-		// Token: 0x0603DA4B RID: 252491 RVA: 0x00EE25D9 File Offset: 0x00EE07D9
+		// Token: 0x060329DB RID: 207323 RVA: 0x00E33B11 File Offset: 0x00E31D11
 		protected override bool OnClear()
 		{
 			this.AreaStates.Clear();
@@ -33,8 +33,8 @@ namespace CSharpScript.Game.Module.Area
 			return true;
 		}
 
-		// Token: 0x17008EA8 RID: 36520
-		// (get) Token: 0x0603DA4C RID: 252492 RVA: 0x00EE2608 File Offset: 0x00EE0808
+		// Token: 0x1700627A RID: 25210
+		// (get) Token: 0x060329DC RID: 207324 RVA: 0x00E33B40 File Offset: 0x00E31D40
 		[Nullable(2)]
 		public string AreaName
 		{
@@ -49,8 +49,8 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x17008EA9 RID: 36521
-		// (get) Token: 0x0603DA4D RID: 252493 RVA: 0x00EE2644 File Offset: 0x00EE0844
+		// Token: 0x1700627B RID: 25211
+		// (get) Token: 0x060329DD RID: 207325 RVA: 0x00E33B7C File Offset: 0x00E31D7C
 		[Nullable(2)]
 		public string AreaHintName
 		{
@@ -75,14 +75,14 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA4E RID: 252494 RVA: 0x00EE26BF File Offset: 0x00EE08BF
+		// Token: 0x060329DE RID: 207326 RVA: 0x00E33BF7 File Offset: 0x00E31DF7
 		public void SetEnableAreaNamePrompt(bool disable)
 		{
 			this.EnableAreaNamePrompt = !disable;
 		}
 
-		// Token: 0x17008EAA RID: 36522
-		// (get) Token: 0x0603DA4F RID: 252495 RVA: 0x00EE26CB File Offset: 0x00EE08CB
+		// Token: 0x1700627C RID: 25212
+		// (get) Token: 0x060329DF RID: 207327 RVA: 0x00E33C03 File Offset: 0x00E31E03
 		public Area? AreaInfo
 		{
 			get
@@ -91,8 +91,8 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x17008EAB RID: 36523
-		// (get) Token: 0x0603DA50 RID: 252496 RVA: 0x00EE26D3 File Offset: 0x00EE08D3
+		// Token: 0x1700627D RID: 25213
+		// (get) Token: 0x060329E0 RID: 207328 RVA: 0x00E33C0B File Offset: 0x00E31E0B
 		public Dictionary<int, TsTriggerVolume> AllAreas
 		{
 			get
@@ -101,13 +101,13 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA51 RID: 252497 RVA: 0x00EE26DB File Offset: 0x00EE08DB
+		// Token: 0x060329E1 RID: 207329 RVA: 0x00E33C13 File Offset: 0x00E31E13
 		public int GetCurrentAreaId(EAreaLevel? areaLevel = null)
 		{
 			return this.GetAreaId(this.CurAreaInfo.Value, areaLevel);
 		}
 
-		// Token: 0x0603DA52 RID: 252498 RVA: 0x00EE26F0 File Offset: 0x00EE08F0
+		// Token: 0x060329E2 RID: 207330 RVA: 0x00E33C28 File Offset: 0x00E31E28
 		public int GetAreaId(Area targetAreaInfo, EAreaLevel? areaLevel = null)
 		{
 			if (areaLevel == null)
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Area
 			return num;
 		}
 
-		// Token: 0x0603DA53 RID: 252499 RVA: 0x00EE2760 File Offset: 0x00EE0960
+		// Token: 0x060329E3 RID: 207331 RVA: 0x00E33C98 File Offset: 0x00E31E98
 		public List<int> GetAllAreaIdInheritable(Area targetAreaInfo)
 		{
 			List<int> list = new List<int>();
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Area
 			return list;
 		}
 
-		// Token: 0x0603DA54 RID: 252500 RVA: 0x00EE27E4 File Offset: 0x00EE09E4
+		// Token: 0x060329E4 RID: 207332 RVA: 0x00E33D1C File Offset: 0x00E31F1C
 		public List<int> GetAllAreaIdInheritableById(int targetAreaId)
 		{
 			List<int> list = new List<int>();
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Area
 			return list;
 		}
 
-		// Token: 0x0603DA55 RID: 252501 RVA: 0x00EE2880 File Offset: 0x00EE0A80
+		// Token: 0x060329E5 RID: 207333 RVA: 0x00E33DB8 File Offset: 0x00E31FB8
 		public void SetAreaInfo(int areaId)
 		{
 			if (areaId == 0)
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.Area
 			instance.SetNumberPropById(EPlayerInfoNumber.AreaId, areaId);
 		}
 
-		// Token: 0x0603DA56 RID: 252502 RVA: 0x00EE28F8 File Offset: 0x00EE0AF8
+		// Token: 0x060329E6 RID: 207334 RVA: 0x00E33E30 File Offset: 0x00E32030
 		public void SetAreaName(int areaId, bool timerIgnore = false)
 		{
 			int? p = (this.CurAreaInfo != null) ? new int?(this.CurAreaInfo.GetValueOrDefault().AreaId) : null;
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.Area
 			EventSystem.Instance.Emit<int?, int>(EEventName.ChangeArea, p, areaId);
 		}
 
-		// Token: 0x0603DA57 RID: 252503 RVA: 0x00EE2A18 File Offset: 0x00EE0C18
+		// Token: 0x060329E7 RID: 207335 RVA: 0x00E33F50 File Offset: 0x00E32150
 		public unsafe void AddArea(int inAreaId, TsTriggerVolume inArea)
 		{
 			if (this.Areas.ContainsKey(inAreaId))
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.Area
 			this.Areas[inAreaId] = inArea;
 		}
 
-		// Token: 0x0603DA58 RID: 252504 RVA: 0x00EE2B08 File Offset: 0x00EE0D08
+		// Token: 0x060329E8 RID: 207336 RVA: 0x00E34040 File Offset: 0x00E32240
 		public unsafe void AddWatchArea(int inAreaId)
 		{
 			Log instance = Log.Instance;
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.Area
 			this.StreamingBlockedAreas.Add(inAreaId);
 		}
 
-		// Token: 0x0603DA59 RID: 252505 RVA: 0x00EE2BCC File Offset: 0x00EE0DCC
+		// Token: 0x060329E9 RID: 207337 RVA: 0x00E34104 File Offset: 0x00E32304
 		[NullableContext(2)]
 		public TsTriggerVolume GetArea(int inAreaId)
 		{
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Module.Area
 			return result;
 		}
 
-		// Token: 0x0603DA5A RID: 252506 RVA: 0x00EE2BEC File Offset: 0x00EE0DEC
+		// Token: 0x060329EA RID: 207338 RVA: 0x00E34124 File Offset: 0x00E32324
 		public unsafe void RemoveArea(int inAreaId)
 		{
 			this.Areas.Remove(inAreaId);
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA5B RID: 252507 RVA: 0x00EE2CCC File Offset: 0x00EE0ECC
+		// Token: 0x060329EB RID: 207339 RVA: 0x00E34204 File Offset: 0x00E32404
 		public bool? GetAreaState(int inAreaId)
 		{
 			bool value;
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Module.Area
 			return null;
 		}
 
-		// Token: 0x0603DA5C RID: 252508 RVA: 0x00EE2CFC File Offset: 0x00EE0EFC
+		// Token: 0x060329EC RID: 207340 RVA: 0x00E34234 File Offset: 0x00E32434
 		public void ToggleAreaState(int inAreaId, bool inEnable)
 		{
 			TsTriggerVolume tsTriggerVolume2;
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA5D RID: 252509 RVA: 0x00EE2D70 File Offset: 0x00EE0F70
+		// Token: 0x060329ED RID: 207341 RVA: 0x00E342A8 File Offset: 0x00E324A8
 		public void InitAreaStates(IReadOnlyList<Area> defaultAreaInfos, IReadOnlyList<SceneAreaState> modifiedAreaStates)
 		{
 			this.AreaStates.Clear();
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA5E RID: 252510 RVA: 0x00EE2E1C File Offset: 0x00EE101C
+		// Token: 0x060329EE RID: 207342 RVA: 0x00E34354 File Offset: 0x00E32554
 		public void InitArea(IReadOnlyList<SceneAreaState> initModifiedAreaStates)
 		{
 			List<Area> defaultAreaInfos = AreaConfig.Instance.GetAllAreaInfo() ?? new List<Area>();
@@ -343,13 +343,13 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA5F RID: 252511 RVA: 0x00EE2E80 File Offset: 0x00EE1080
+		// Token: 0x060329EF RID: 207343 RVA: 0x00E343B8 File Offset: 0x00E325B8
 		public IReadOnlyDictionary<int, bool> GetAreaStates()
 		{
 			return this.AreaStates;
 		}
 
-		// Token: 0x0603DA60 RID: 252512 RVA: 0x00EE2E88 File Offset: 0x00EE1088
+		// Token: 0x060329F0 RID: 207344 RVA: 0x00E343C0 File Offset: 0x00E325C0
 		public int? GetAreaCountryId()
 		{
 			if (this.CurAreaInfo == null)
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.Area
 			return new int?(this.CurAreaInfo.Value.CountryId);
 		}
 
-		// Token: 0x0603DA61 RID: 252513 RVA: 0x00EE2F44 File Offset: 0x00EE1144
+		// Token: 0x060329F1 RID: 207345 RVA: 0x00E3447C File Offset: 0x00E3267C
 		public AreaModel.EAreaDangerLevel GetAreaDangerLevel()
 		{
 			RoleInstance[] roleList = RoleModel.Instance.GetRoleList();
@@ -414,7 +414,7 @@ namespace CSharpScript.Game.Module.Area
 			return AreaModel.EAreaDangerLevel.Normal;
 		}
 
-		// Token: 0x0603DA62 RID: 252514 RVA: 0x00EE3050 File Offset: 0x00EE1250
+		// Token: 0x060329F2 RID: 207346 RVA: 0x00E34588 File Offset: 0x00E32788
 		public string GetAreaDangerText(AreaModel.EAreaDangerLevel dangerLevel)
 		{
 			if (dangerLevel == AreaModel.EAreaDangerLevel.High)
@@ -428,14 +428,14 @@ namespace CSharpScript.Game.Module.Area
 			return TextConfig.Instance.GetTextById("AreaHighMidText");
 		}
 
-		// Token: 0x0603DA63 RID: 252515 RVA: 0x00EE3080 File Offset: 0x00EE1280
+		// Token: 0x060329F3 RID: 207347 RVA: 0x00E345B8 File Offset: 0x00E327B8
 		public bool IsExistRecommendPlayPoint()
 		{
 			ExploreAreaData currentExploreAreaData = this.GetCurrentExploreAreaData();
 			return currentExploreAreaData != null && currentExploreAreaData.IsShowRecommendPlayPoint();
 		}
 
-		// Token: 0x0603DA64 RID: 252516 RVA: 0x00EE3094 File Offset: 0x00EE1294
+		// Token: 0x060329F4 RID: 207348 RVA: 0x00E345CC File Offset: 0x00E327CC
 		[NullableContext(2)]
 		public ExploreAreaData GetCurrentExploreAreaData()
 		{
@@ -443,7 +443,7 @@ namespace CSharpScript.Game.Module.Area
 			return ExploreProgressModel.Instance.GetExploreAreaData(worldMapLevelOneAreaId);
 		}
 
-		// Token: 0x0603DA65 RID: 252517 RVA: 0x00EE30B4 File Offset: 0x00EE12B4
+		// Token: 0x060329F5 RID: 207349 RVA: 0x00E345EC File Offset: 0x00E327EC
 		public string GetDebugString()
 		{
 			string text = "";
@@ -459,11 +459,10 @@ namespace CSharpScript.Game.Module.Area
 			string str3 = "\t关联区块:";
 			areaInfo = this.AreaInfo;
 			text = str2 + str3 + ((areaInfo != null) ? areaInfo.GetValueOrDefault().AreaName : null) + "\n";
-			while (num != null)
+			while (num != null && num.GetValueOrDefault() > 0)
 			{
 				num = new int?(AreaConfig.Instance.GetParentAreaId(num.Value));
-				int? num2 = num;
-				if (num2 == null)
+				if (!(num > 0))
 				{
 					break;
 				}
@@ -481,8 +480,8 @@ namespace CSharpScript.Game.Module.Area
 			return text;
 		}
 
-		// Token: 0x17008EAC RID: 36524
-		// (get) Token: 0x0603DA66 RID: 252518 RVA: 0x00EE320B File Offset: 0x00EE140B
+		// Token: 0x1700627E RID: 25214
+		// (get) Token: 0x060329F6 RID: 207350 RVA: 0x00E34757 File Offset: 0x00E32957
 		public static AreaModel Instance
 		{
 			get
@@ -491,7 +490,7 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA67 RID: 252519 RVA: 0x00EE3212 File Offset: 0x00EE1412
+		// Token: 0x060329F7 RID: 207351 RVA: 0x00E3475E File Offset: 0x00E3295E
 		public static AreaModel GetOrCreateInstance()
 		{
 			if (AreaModel._Instance == null)
@@ -501,7 +500,7 @@ namespace CSharpScript.Game.Module.Area
 			return AreaModel._Instance;
 		}
 
-		// Token: 0x0603DA68 RID: 252520 RVA: 0x00EE3226 File Offset: 0x00EE1426
+		// Token: 0x060329F8 RID: 207352 RVA: 0x00E34772 File Offset: 0x00E32972
 		public static bool CreateInstance()
 		{
 			if (AreaModel._Instance != null)
@@ -512,63 +511,63 @@ namespace CSharpScript.Game.Module.Area
 			return true;
 		}
 
-		// Token: 0x0603DA69 RID: 252521 RVA: 0x00EE323C File Offset: 0x00EE143C
+		// Token: 0x060329F9 RID: 207353 RVA: 0x00E34788 File Offset: 0x00E32988
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603DA6A RID: 252522 RVA: 0x00EE323E File Offset: 0x00EE143E
+		// Token: 0x060329FA RID: 207354 RVA: 0x00E3478A File Offset: 0x00E3298A
 		public static void ResetStaticDefaultValue()
 		{
 			AreaModel._Instance = null;
 		}
 
-		// Token: 0x0603DA6B RID: 252523 RVA: 0x00EE3246 File Offset: 0x00EE1446
+		// Token: 0x060329FB RID: 207355 RVA: 0x00E34792 File Offset: 0x00E32992
 		static AreaModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AreaModel.CreateStaticDefaultValue), new Action(AreaModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04020290 RID: 131728
+		// Token: 0x0401AD57 RID: 109911
 		private const int DEFAULT_AREA_ID = 1;
 
-		// Token: 0x04020291 RID: 131729
+		// Token: 0x0401AD58 RID: 109912
 		private Area? CurAreaInfo;
 
-		// Token: 0x04020292 RID: 131730
+		// Token: 0x0401AD59 RID: 109913
 		private string CurAreaDisplayNameId = "";
 
-		// Token: 0x04020293 RID: 131731
+		// Token: 0x0401AD5A RID: 109914
 		private readonly Dictionary<int, TsTriggerVolume> Areas = new Dictionary<int, TsTriggerVolume>();
 
-		// Token: 0x04020294 RID: 131732
+		// Token: 0x0401AD5B RID: 109915
 		private readonly Dictionary<int, bool> AreaStates = new Dictionary<int, bool>();
 
-		// Token: 0x04020295 RID: 131733
+		// Token: 0x0401AD5C RID: 109916
 		private readonly Dictionary<int, int> TipsLastShowTime = new Dictionary<int, int>();
 
-		// Token: 0x04020296 RID: 131734
+		// Token: 0x0401AD5D RID: 109917
 		private int TipsShowCd;
 
-		// Token: 0x04020297 RID: 131735
+		// Token: 0x0401AD5E RID: 109918
 		private readonly HashSet<int> StreamingBlockedAreas = new HashSet<int>();
 
-		// Token: 0x04020298 RID: 131736
+		// Token: 0x0401AD5F RID: 109919
 		private bool EnableAreaNamePrompt = true;
 
-		// Token: 0x04020299 RID: 131737
+		// Token: 0x0401AD60 RID: 109920
 		[Nullable(2)]
 		private static AreaModel _Instance;
 
-		// Token: 0x0200C213 RID: 49683
+		// Token: 0x0200AC22 RID: 44066
 		[NullableContext(0)]
 		public enum EAreaDangerLevel
 		{
-			// Token: 0x0403AA45 RID: 240197
+			// Token: 0x04035437 RID: 218167
 			High,
-			// Token: 0x0403AA46 RID: 240198
+			// Token: 0x04035438 RID: 218168
 			Mid,
-			// Token: 0x0403AA47 RID: 240199
+			// Token: 0x04035439 RID: 218169
 			Normal
 		}
 	}

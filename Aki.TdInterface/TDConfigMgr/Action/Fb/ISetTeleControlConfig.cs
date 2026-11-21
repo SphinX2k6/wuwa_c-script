@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029AF RID: 10671
+	// Token: 0x02002C9C RID: 11420
 	public class ISetTeleControlConfig
 	{
-		// Token: 0x0600EC14 RID: 60436 RVA: 0x00227E67 File Offset: 0x00226067
-		[NullableContext(1)]
+		// Token: 0x0600FAAB RID: 64171 RVA: 0x002457EC File Offset: 0x002439EC
 		public static ISetTeleControlConfig Create(ISetTeleControlConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A78 RID: 19064
-		// (get) Token: 0x0600EC15 RID: 60437 RVA: 0x00227E86 File Offset: 0x00226086
+		// Token: 0x17004E21 RID: 20001
+		// (get) Token: 0x0600FAAC RID: 64172 RVA: 0x0024580B File Offset: 0x00243A0B
 		public virtual ESetTeleControlType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A79 RID: 19065
-		// (get) Token: 0x0600EC16 RID: 60438 RVA: 0x00227E93 File Offset: 0x00226093
+		// Token: 0x17004E22 RID: 20002
+		// (get) Token: 0x0600FAAD RID: 64173 RVA: 0x00245818 File Offset: 0x00243A18
 		public virtual int EntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008201 RID: 33281
+		// Token: 0x040088F2 RID: 35058
 		private ISetTeleControlConfig Instance;
 	}
 }

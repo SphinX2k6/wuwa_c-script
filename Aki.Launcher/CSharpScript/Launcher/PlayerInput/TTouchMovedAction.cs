@@ -3,7 +3,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.PlayerInput
 {
-	// Token: 0x02000123 RID: 291
-	// (Invoke) Token: 0x0600093C RID: 2364
+	// Token: 0x02000127 RID: 295
+	// (Invoke) Token: 0x06000970 RID: 2416
 	public delegate void TTouchMovedAction(int inTouchID, FVector inTouchPointPosition);
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000741 RID: 1857
+	// Token: 0x02000759 RID: 1881
 	public class ConfigPlayerExpByPlayerLevelArea : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002B97 RID: 11159 RVA: 0x0014FF3C File Offset: 0x0014E13C
+		// Token: 0x06002C27 RID: 11303 RVA: 0x001569B8 File Offset: 0x00154BB8
 		static ConfigPlayerExpByPlayerLevelArea()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPlayerExpByPlayerLevelArea.CreateStaticDefaultValue), new Action(ConfigPlayerExpByPlayerLevelArea.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002B98 RID: 11160 RVA: 0x0014FF5C File Offset: 0x0014E15C
+		// Token: 0x06002C28 RID: 11304 RVA: 0x001569D8 File Offset: 0x00154BD8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPlayerExpByPlayerLevelArea.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002B99 RID: 11161 RVA: 0x0014FFDB File Offset: 0x0014E1DB
+		// Token: 0x06002C29 RID: 11305 RVA: 0x00156A57 File Offset: 0x00154C57
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPlayerExpByPlayerLevelArea.LogPair = null;
 			ConfigPlayerExpByPlayerLevelArea.HandleId = 0;
 		}
 
-		// Token: 0x06002B9A RID: 11162 RVA: 0x0014FFE9 File Offset: 0x0014E1E9
+		// Token: 0x06002C2A RID: 11306 RVA: 0x00156A65 File Offset: 0x00154C65
 		public static void Init()
 		{
 			ConfigPlayerExpByPlayerLevelArea.HandleId = ConfigCommon.InitDataStatement(ConfigPlayerExpByPlayerLevelArea.HandleId, "db_player_exp.db", "select BinData from `PlayerExp` where PlayerLevel >= ? AND PlayerLevel < ?");
 		}
 
-		// Token: 0x06002B9B RID: 11163 RVA: 0x00150004 File Offset: 0x0014E204
+		// Token: 0x06002C2B RID: 11307 RVA: 0x00156A80 File Offset: 0x00154C80
 		[NullableContext(2)]
 		public static IReadOnlyList<PlayerExp> GetConfigList(int p0PlayerLevel, int p1PlayerLevel, bool useCache = true)
 		{
@@ -99,22 +99,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040032AD RID: 12973
+		// Token: 0x04003355 RID: 13141
 		private const string DB = "db_player_exp.db";
 
-		// Token: 0x040032AE RID: 12974
+		// Token: 0x04003356 RID: 13142
 		private const string FILE = "j.经验.xlsx";
 
-		// Token: 0x040032AF RID: 12975
+		// Token: 0x04003357 RID: 13143
 		private const string TABLE = "PlayerExp";
 
-		// Token: 0x040032B0 RID: 12976
+		// Token: 0x04003358 RID: 13144
 		private const string COMMAND = "select BinData from `PlayerExp` where PlayerLevel >= ? AND PlayerLevel < ?";
 
-		// Token: 0x040032B1 RID: 12977
+		// Token: 0x04003359 RID: 13145
 		private const string KEY_PREFIX = "PlayerExpByPlayerLevelArea";
 
-		// Token: 0x040032B2 RID: 12978
+		// Token: 0x0400335A RID: 13146
 		[Nullable(new byte[]
 		{
 			2,
@@ -124,7 +124,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040032B3 RID: 12979
+		// Token: 0x0400335B RID: 13147
 		private static int HandleId;
 	}
 }

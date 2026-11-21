@@ -5,13 +5,13 @@ using CSharpScript.Core.Common;
 using CSharpScript.Core.Utils.StaticVariableReset;
 using UnrealEngine;
 
-// Token: 0x02002C85 RID: 11397
+// Token: 0x020021DE RID: 8670
 [NullableContext(2)]
 [Nullable(0)]
 [StaticVariablePriority(100)]
 public class UiModelControlRotateComponent : UiModelComponentBase
 {
-	// Token: 0x06017CE2 RID: 97506 RVA: 0x0060E11C File Offset: 0x0060C31C
+	// Token: 0x06015555 RID: 87381 RVA: 0x00633BE4 File Offset: 0x00631DE4
 	protected override void OnInit()
 	{
 		this.ActorComponent = base.Owner.CheckGetComponent<UiModelActorComponent>();
@@ -30,14 +30,14 @@ public class UiModelControlRotateComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017CE3 RID: 97507 RVA: 0x0060E188 File Offset: 0x0060C388
+	// Token: 0x06015556 RID: 87382 RVA: 0x00633C50 File Offset: 0x00631E50
 	[NullableContext(1)]
 	public void InitDataByConfig(SUiModelRotateSetting config)
 	{
 		this.InitData(config.旋转中轴, config.旋转偏移, config.倍化手柄输入倍率, config.移动端旋转输入倍率, config.模型Yaw灵敏度系数, config.模型Pitch灵敏度系数, config.Yaw限制Min, config.Yaw限制Max, config.Pitch限制Min, config.Pitch限制Max);
 	}
 
-	// Token: 0x06017CE4 RID: 97508 RVA: 0x0060E1D8 File Offset: 0x0060C3D8
+	// Token: 0x06015557 RID: 87383 RVA: 0x00633CA0 File Offset: 0x00631EA0
 	[NullableContext(1)]
 	public void InitData(string originCase, float rotateOffset, float gamepadInputRate, float mobileRotateInputRate, float sensitivityYaw, float sensitivityPitch, float yawLimitMin, float yawLimitMax, float pitchLimitMin, float pitchLimitMax)
 	{
@@ -53,7 +53,7 @@ public class UiModelControlRotateComponent : UiModelComponentBase
 		this.PitchLimitMax = pitchLimitMax;
 	}
 
-	// Token: 0x06017CE5 RID: 97509 RVA: 0x0060E232 File Offset: 0x0060C432
+	// Token: 0x06015558 RID: 87384 RVA: 0x00633CFA File Offset: 0x00631EFA
 	public void Activate()
 	{
 		this.AutoSetOriginActorByCase();
@@ -70,13 +70,13 @@ public class UiModelControlRotateComponent : UiModelComponentBase
 		this.ApplyRotation();
 	}
 
-	// Token: 0x06017CE6 RID: 97510 RVA: 0x0060E26C File Offset: 0x0060C46C
+	// Token: 0x06015559 RID: 87385 RVA: 0x00633D34 File Offset: 0x00631F34
 	public void Deactivate()
 	{
 		this.NeedTick = false;
 	}
 
-	// Token: 0x06017CE7 RID: 97511 RVA: 0x0060E275 File Offset: 0x0060C475
+	// Token: 0x0601555A RID: 87386 RVA: 0x00633D3D File Offset: 0x00631F3D
 	protected override void OnTick(float deltaTime)
 	{
 		this.HandleAxisInput(deltaTime);
@@ -85,13 +85,13 @@ public class UiModelControlRotateComponent : UiModelComponentBase
 		this.ApplyRotation();
 	}
 
-	// Token: 0x06017CE8 RID: 97512 RVA: 0x0060E290 File Offset: 0x0060C490
+	// Token: 0x0601555B RID: 87387 RVA: 0x00633D58 File Offset: 0x00631F58
 	public void SetIsRotatePlus(bool isRotatePlus)
 	{
 		this.IsRotatePlus = isRotatePlus;
 	}
 
-	// Token: 0x06017CE9 RID: 97513 RVA: 0x0060E299 File Offset: 0x0060C499
+	// Token: 0x0601555C RID: 87388 RVA: 0x00633D61 File Offset: 0x00631F61
 	private AActor GetOriginActor()
 	{
 		if (!string.IsNullOrEmpty(this.OriginCase))
@@ -116,7 +116,7 @@ public class UiModelControlRotateComponent : UiModelComponentBase
 		return actorComponent2.Actor;
 	}
 
-	// Token: 0x06017CEA RID: 97514 RVA: 0x0060E2D8 File Offset: 0x0060C4D8
+	// Token: 0x0601555D RID: 87389 RVA: 0x00633DA0 File Offset: 0x00631FA0
 	private void AutoSetOriginActorByCase()
 	{
 		if (string.IsNullOrEmpty(this.OriginCase))
@@ -128,7 +128,7 @@ public class UiModelControlRotateComponent : UiModelComponentBase
 		this.OriginActor = ((dynamicFName == null) ? null : UKuroCollectActorComponent.GetActorWithTag(dynamicFName.Value, ECollectActorType.UI));
 	}
 
-	// Token: 0x06017CEB RID: 97515 RVA: 0x0060E328 File Offset: 0x0060C528
+	// Token: 0x0601555E RID: 87390 RVA: 0x00633DF0 File Offset: 0x00631FF0
 	private void CaptureBaseRotator()
 	{
 		AActor originActor = this.GetOriginActor();
@@ -142,7 +142,7 @@ public class UiModelControlRotateComponent : UiModelComponentBase
 		this.BaseRotator.Yaw += this.RotateOffset;
 	}
 
-	// Token: 0x06017CEC RID: 97516 RVA: 0x0060E374 File Offset: 0x0060C574
+	// Token: 0x0601555F RID: 87391 RVA: 0x00633E3C File Offset: 0x0063203C
 	public void SyncRotatorFromActor()
 	{
 		UiModelActorComponent actorComponent = this.ActorComponent;
@@ -155,14 +155,14 @@ public class UiModelControlRotateComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017CED RID: 97517 RVA: 0x0060E3B3 File Offset: 0x0060C5B3
+	// Token: 0x06015560 RID: 87392 RVA: 0x00633E7B File Offset: 0x0063207B
 	public void ResumeFromCurrentActorRotation()
 	{
 		this.SyncRotatorFromActor();
 		this.NeedTick = true;
 	}
 
-	// Token: 0x06017CEE RID: 97518 RVA: 0x0060E3C4 File Offset: 0x0060C5C4
+	// Token: 0x06015561 RID: 87393 RVA: 0x00633E8C File Offset: 0x0063208C
 	public void HandleAxisInput(float deltaTime)
 	{
 		UiModelInputDataComponent inputDataComponent = this.InputDataComponent;
@@ -198,7 +198,7 @@ public class UiModelControlRotateComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017CEF RID: 97519 RVA: 0x0060E500 File Offset: 0x0060C700
+	// Token: 0x06015562 RID: 87394 RVA: 0x00633FC8 File Offset: 0x006321C8
 	private void UpdateYaw()
 	{
 		if (this.Rotator == null || this.BaseRotator == null)
@@ -213,7 +213,7 @@ public class UiModelControlRotateComponent : UiModelComponentBase
 		this.Rotator.Yaw = this.BaseRotator.Yaw + num;
 	}
 
-	// Token: 0x06017CF0 RID: 97520 RVA: 0x0060E58C File Offset: 0x0060C78C
+	// Token: 0x06015563 RID: 87395 RVA: 0x00634054 File Offset: 0x00632254
 	private void UpdatePitch()
 	{
 		if (this.Rotator == null || this.BaseRotator == null)
@@ -225,7 +225,7 @@ public class UiModelControlRotateComponent : UiModelComponentBase
 		this.Rotator.Pitch = this.BaseRotator.Pitch + num;
 	}
 
-	// Token: 0x06017CF1 RID: 97521 RVA: 0x0060E5F8 File Offset: 0x0060C7F8
+	// Token: 0x06015564 RID: 87396 RVA: 0x006340C0 File Offset: 0x006322C0
 	private void ApplyRotation()
 	{
 		UiModelActorComponent actorComponent = this.ActorComponent;
@@ -237,52 +237,52 @@ public class UiModelControlRotateComponent : UiModelComponentBase
 		aactor.K2_SetActorRotation(this.Rotator.ToUeRotator(), false);
 	}
 
-	// Token: 0x0400B16D RID: 45421
+	// Token: 0x0400B4D8 RID: 46296
 	private UiModelActorComponent ActorComponent;
 
-	// Token: 0x0400B16E RID: 45422
+	// Token: 0x0400B4D9 RID: 46297
 	private UiModelInputDataComponent InputDataComponent;
 
-	// Token: 0x0400B16F RID: 45423
+	// Token: 0x0400B4DA RID: 46298
 	private AActor OriginActor;
 
-	// Token: 0x0400B170 RID: 45424
+	// Token: 0x0400B4DB RID: 46299
 	private Rotator Rotator;
 
-	// Token: 0x0400B171 RID: 45425
+	// Token: 0x0400B4DC RID: 46300
 	private Rotator BaseRotator;
 
-	// Token: 0x0400B172 RID: 45426
+	// Token: 0x0400B4DD RID: 46301
 	private float GamepadInputRate;
 
-	// Token: 0x0400B173 RID: 45427
+	// Token: 0x0400B4DE RID: 46302
 	private float MobileRotateInputRate;
 
-	// Token: 0x0400B174 RID: 45428
+	// Token: 0x0400B4DF RID: 46303
 	private float SensitivityYaw;
 
-	// Token: 0x0400B175 RID: 45429
+	// Token: 0x0400B4E0 RID: 46304
 	private float SensitivityPitch;
 
-	// Token: 0x0400B176 RID: 45430
+	// Token: 0x0400B4E1 RID: 46305
 	private float YawLimitMin;
 
-	// Token: 0x0400B177 RID: 45431
+	// Token: 0x0400B4E2 RID: 46306
 	private float YawLimitMax;
 
-	// Token: 0x0400B178 RID: 45432
+	// Token: 0x0400B4E3 RID: 46307
 	private float PitchLimitMin;
 
-	// Token: 0x0400B179 RID: 45433
+	// Token: 0x0400B4E4 RID: 46308
 	private float PitchLimitMax;
 
-	// Token: 0x0400B17A RID: 45434
+	// Token: 0x0400B4E5 RID: 46309
 	[Nullable(1)]
 	private string OriginCase = string.Empty;
 
-	// Token: 0x0400B17B RID: 45435
+	// Token: 0x0400B4E6 RID: 46310
 	private float RotateOffset;
 
-	// Token: 0x0400B17C RID: 45436
+	// Token: 0x0400B4E7 RID: 46311
 	private bool IsRotatePlus;
 }

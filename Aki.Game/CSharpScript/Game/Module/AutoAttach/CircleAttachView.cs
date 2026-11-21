@@ -5,7 +5,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AutoAttach
 {
-	// Token: 0x02005E82 RID: 24194
+	// Token: 0x02004E67 RID: 20071
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,24 +15,24 @@ namespace CSharpScript.Game.Module.AutoAttach
 	})]
 	public class CircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : AutoAttachBaseView<T, TAttachItem> where TAttachItem : AutoAttachItem<T>
 	{
-		// Token: 0x0603D8DC RID: 252124 RVA: 0x00EDAF02 File Offset: 0x00ED9102
+		// Token: 0x0603286C RID: 206956 RVA: 0x00E2C48E File Offset: 0x00E2A68E
 		public CircleAttachView(AActor controllerActor, bool isNeedScrollCallback = false) : base(controllerActor, isNeedScrollCallback)
 		{
 		}
 
-		// Token: 0x0603D8DD RID: 252125 RVA: 0x00EDAF0C File Offset: 0x00ED910C
+		// Token: 0x0603286D RID: 206957 RVA: 0x00E2C498 File Offset: 0x00E2A698
 		public override TAttachItem FindAutoAttachItem()
 		{
 			return base.FindNearestMiddleItem();
 		}
 
-		// Token: 0x0603D8DE RID: 252126 RVA: 0x00EDAF14 File Offset: 0x00ED9114
+		// Token: 0x0603286E RID: 206958 RVA: 0x00E2C4A0 File Offset: 0x00E2A6A0
 		protected override float RecalculateMoveOffset(float offset)
 		{
 			return offset;
 		}
 
-		// Token: 0x0603D8DF RID: 252127 RVA: 0x00EDAF18 File Offset: 0x00ED9118
+		// Token: 0x0603286F RID: 206959 RVA: 0x00E2C4A4 File Offset: 0x00E2A6A4
 		protected override void ReloadItems(int showItemNum, T[] data, int attachTo = 0)
 		{
 			if (showItemNum < this.ShowItemNum)
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			base.AttachToIndex(attachTo, true);
 		}
 
-		// Token: 0x0603D8E0 RID: 252128 RVA: 0x00EDB060 File Offset: 0x00ED9260
+		// Token: 0x06032870 RID: 206960 RVA: 0x00E2C5EC File Offset: 0x00E2A7EC
 		[NullableContext(2)]
 		protected override TAttachItem FindNextDirectionItem(int direction)
 		{
@@ -105,13 +105,13 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return result;
 		}
 
-		// Token: 0x0603D8E1 RID: 252129 RVA: 0x00EDB137 File Offset: 0x00ED9337
+		// Token: 0x06032871 RID: 206961 RVA: 0x00E2C6C3 File Offset: 0x00E2A8C3
 		public override bool GetIfCircle()
 		{
 			return true;
 		}
 
-		// Token: 0x0603D8E2 RID: 252130 RVA: 0x00EDB13C File Offset: 0x00ED933C
+		// Token: 0x06032872 RID: 206962 RVA: 0x00E2C6C8 File Offset: 0x00E2A8C8
 		public void MoveToNextItem(int direction)
 		{
 			if (base.MovingState())

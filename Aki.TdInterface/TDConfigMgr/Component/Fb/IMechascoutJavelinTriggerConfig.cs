@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B53 RID: 2899
+	// Token: 0x02000C21 RID: 3105
 	public class IMechascoutJavelinTriggerConfig : ITeleCtrlTriggerConfig
 	{
-		// Token: 0x060042C2 RID: 17090 RVA: 0x000AA5F9 File Offset: 0x000A87F9
-		[NullableContext(1)]
+		// Token: 0x0600471B RID: 18203 RVA: 0x000B46BD File Offset: 0x000B28BD
 		public static IMechascoutJavelinTriggerConfig Create(IMechascoutJavelinTriggerConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011D9 RID: 4569
-		// (get) Token: 0x060042C3 RID: 17091 RVA: 0x000AA618 File Offset: 0x000A8818
+		// Token: 0x170012D4 RID: 4820
+		// (get) Token: 0x0600471C RID: 18204 RVA: 0x000B46DC File Offset: 0x000B28DC
 		public override ETeleCtrlTriggerType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002598 RID: 9624
+		// Token: 0x040027E0 RID: 10208
 		private IMechascoutJavelinTriggerConfig Instance;
 	}
 }

@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200605D RID: 24669
+	// Token: 0x02004FDB RID: 20443
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 	})]
 	public class SpringManorAlbumTaskItem : GridProxyAbstract<AlbumTaskData>
 	{
-		// Token: 0x0603E691 RID: 255633 RVA: 0x00F133E0 File Offset: 0x00F115E0
+		// Token: 0x06033355 RID: 209749 RVA: 0x00E5A1A4 File Offset: 0x00E583A4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E692 RID: 255634 RVA: 0x00F1349F File Offset: 0x00F1169F
+		// Token: 0x06033356 RID: 209750 RVA: 0x00E5A263 File Offset: 0x00E58463
 		private void OnClick(EToggleState state)
 		{
 			if (this.OnToggleCallBack != null && this.Data != null)
@@ -43,25 +43,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E693 RID: 255635 RVA: 0x00F134C8 File Offset: 0x00F116C8
+		// Token: 0x06033357 RID: 209751 RVA: 0x00E5A28C File Offset: 0x00E5848C
 		public void SetToggleCallBack(Action<AlbumTaskData, int> callBack)
 		{
 			this.OnToggleCallBack = callBack;
 		}
 
-		// Token: 0x0603E694 RID: 255636 RVA: 0x00F134D1 File Offset: 0x00F116D1
+		// Token: 0x06033358 RID: 209752 RVA: 0x00E5A295 File Offset: 0x00E58495
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelectedState(true);
 		}
 
-		// Token: 0x0603E695 RID: 255637 RVA: 0x00F134DA File Offset: 0x00F116DA
+		// Token: 0x06033359 RID: 209753 RVA: 0x00E5A29E File Offset: 0x00E5849E
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelectedState(false);
 		}
 
-		// Token: 0x0603E696 RID: 255638 RVA: 0x00F134E4 File Offset: 0x00F116E4
+		// Token: 0x0603335A RID: 209754 RVA: 0x00E5A2A8 File Offset: 0x00E584A8
 		public override void Refresh(AlbumTaskData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			item.SetUIActive(flag);
 		}
 
-		// Token: 0x0603E697 RID: 255639 RVA: 0x00F13646 File Offset: 0x00F11846
+		// Token: 0x0603335B RID: 209755 RVA: 0x00E5A40A File Offset: 0x00E5860A
 		public void SetSelectedState(bool isSelected)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.SetSelectedIcon(isSelected);
 		}
 
-		// Token: 0x0603E698 RID: 255640 RVA: 0x00F1366C File Offset: 0x00F1186C
+		// Token: 0x0603335C RID: 209756 RVA: 0x00E5A430 File Offset: 0x00E58630
 		private void SetSelectedIcon(bool isSelected)
 		{
 			string text = null;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x040209D2 RID: 133586
+		// Token: 0x0401B2FF RID: 111359
 		[Nullable(new byte[]
 		{
 			2,
@@ -157,14 +157,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private Action<AlbumTaskData, int> OnToggleCallBack;
 
-		// Token: 0x040209D3 RID: 133587
+		// Token: 0x0401B300 RID: 111360
 		[Nullable(2)]
 		private AlbumTaskData Data;
 
-		// Token: 0x040209D4 RID: 133588
+		// Token: 0x0401B301 RID: 111361
 		private EBrochureType CurTaskType = EBrochureType.Brochure;
 
-		// Token: 0x040209D5 RID: 133589
+		// Token: 0x0401B302 RID: 111362
 		private int Index;
 	}
 }

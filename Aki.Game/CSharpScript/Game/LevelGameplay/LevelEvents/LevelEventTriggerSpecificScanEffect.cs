@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006BAE RID: 27566
+	// Token: 0x02005D26 RID: 23846
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventTriggerSpecificScanEffect : LevelEventBase
 	{
-		// Token: 0x06044316 RID: 279318 RVA: 0x010CEB0D File Offset: 0x010CCD0D
+		// Token: 0x0603A46C RID: 238700 RVA: 0x01078999 File Offset: 0x01076B99
 		public LevelEventTriggerSpecificScanEffect(int Id) : base(Id)
 		{
 		}
 
-		// Token: 0x06044317 RID: 279319 RVA: 0x010CEB18 File Offset: 0x010CCD18
+		// Token: 0x0603A46D RID: 238701 RVA: 0x010789A4 File Offset: 0x01076BA4
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			TriggerSpecificScanEffect triggerSpecificScanEffect = inParams as TriggerSpecificScanEffect;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			FlyingFeatherController.Instance.StartFlyingFeatherScanEffect(transform);
 		}
 
-		// Token: 0x06044318 RID: 279320 RVA: 0x010CEBBC File Offset: 0x010CCDBC
+		// Token: 0x0603A46E RID: 238702 RVA: 0x01078A48 File Offset: 0x01076C48
 		[return: Nullable(2)]
 		private Vector GetSpawnLocation(ISpecificScanEffect config)
 		{
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return vector;
 		}
 
-		// Token: 0x04023974 RID: 145780
+		// Token: 0x0401EC16 RID: 125974
 		[Nullable(2)]
 		private Vector SpawnLocation;
 	}

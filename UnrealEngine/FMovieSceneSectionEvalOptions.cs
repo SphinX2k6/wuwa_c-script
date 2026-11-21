@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002429 RID: 9257
+	// Token: 0x02000787 RID: 1927
 	[UnrealObjectPath("/Script/MovieScene.MovieSceneSectionEvalOptions")]
 	[UnrealStructLayout(2, 1, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 2)]
 	public class FMovieSceneSectionEvalOptions : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06022AF4 RID: 142068 RVA: 0x00334D75 File Offset: 0x00332F75
+		// Token: 0x0600A63A RID: 42554 RVA: 0x000F5A89 File Offset: 0x000F3C89
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMovieSceneSectionEvalOptions._ScriptStructPtr != 0) ? FMovieSceneSectionEvalOptions._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/MovieScene.MovieSceneSectionEvalOptions", ref FMovieSceneSectionEvalOptions._ScriptStructPtr);
 		}
 
-		// Token: 0x17008573 RID: 34163
-		// (get) Token: 0x06022AF5 RID: 142069 RVA: 0x00334D99 File Offset: 0x00332F99
-		// (set) Token: 0x06022AF6 RID: 142070 RVA: 0x00334DA9 File Offset: 0x00332FA9
+		// Token: 0x17001EE0 RID: 7904
+		// (get) Token: 0x0600A63B RID: 42555 RVA: 0x000F5AAD File Offset: 0x000F3CAD
+		// (set) Token: 0x0600A63C RID: 42556 RVA: 0x000F5ABD File Offset: 0x000F3CBD
 		public unsafe bool bCanEditCompletionMode
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008574 RID: 34164
-		// (get) Token: 0x06022AF7 RID: 142071 RVA: 0x00334DBA File Offset: 0x00332FBA
-		// (set) Token: 0x06022AF8 RID: 142072 RVA: 0x00334DCA File Offset: 0x00332FCA
+		// Token: 0x17001EE1 RID: 7905
+		// (get) Token: 0x0600A63D RID: 42557 RVA: 0x000F5ACE File Offset: 0x000F3CCE
+		// (set) Token: 0x0600A63E RID: 42558 RVA: 0x000F5ADE File Offset: 0x000F3CDE
 		public unsafe EMovieSceneCompletionMode CompletionMode
 		{
 			get
@@ -46,60 +46,53 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06022AF9 RID: 142073 RVA: 0x00334DDB File Offset: 0x00332FDB
+		// Token: 0x0600A63F RID: 42559 RVA: 0x000F5AEF File Offset: 0x000F3CEF
 		public FMovieSceneSectionEvalOptions()
 		{
 		}
 
-		// Token: 0x06022AFA RID: 142074 RVA: 0x00334DE3 File Offset: 0x00332FE3
-		public FMovieSceneSectionEvalOptions(bool bCanEditCompletionMode, EMovieSceneCompletionMode CompletionMode)
-		{
-			this.bCanEditCompletionMode = bCanEditCompletionMode;
-			this.CompletionMode = CompletionMode;
-		}
-
-		// Token: 0x06022AFB RID: 142075 RVA: 0x00334DF9 File Offset: 0x00332FF9
+		// Token: 0x0600A640 RID: 42560 RVA: 0x000F5AF7 File Offset: 0x000F3CF7
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMovieSceneSectionEvalOptions.StaticStruct();
 		}
 
-		// Token: 0x06022AFC RID: 142076 RVA: 0x00334E05 File Offset: 0x00333005
+		// Token: 0x0600A641 RID: 42561 RVA: 0x000F5B03 File Offset: 0x000F3D03
 		[NullableContext(2)]
 		public FMovieSceneSectionEvalOptions(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06022AFD RID: 142077 RVA: 0x00334E0F File Offset: 0x0033300F
+		// Token: 0x0600A642 RID: 42562 RVA: 0x000F5B0D File Offset: 0x000F3D0D
 		public FMovieSceneSectionEvalOptions(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06022AFE RID: 142078 RVA: 0x00334E1A File Offset: 0x0033301A
+		// Token: 0x0600A643 RID: 42563 RVA: 0x000F5B18 File Offset: 0x000F3D18
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMovieSceneSectionEvalOptions(Pointer, false, true);
 		}
 
-		// Token: 0x06022AFF RID: 142079 RVA: 0x00334E24 File Offset: 0x00333024
+		// Token: 0x0600A644 RID: 42564 RVA: 0x000F5B22 File Offset: 0x000F3D22
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMovieSceneSectionEvalOptions(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04012886 RID: 75910
+		// Token: 0x04004741 RID: 18241
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/MovieScene.MovieSceneSectionEvalOptions";
 
-		// Token: 0x04012887 RID: 75911
+		// Token: 0x04004742 RID: 18242
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04012888 RID: 75912
+		// Token: 0x04004743 RID: 18243
 		internal static int __PropertyOffset_bCanEditCompletionMode;
 
-		// Token: 0x04012889 RID: 75913
+		// Token: 0x04004744 RID: 18244
 		internal static int __PropertyOffset_CompletionMode;
 	}
 }

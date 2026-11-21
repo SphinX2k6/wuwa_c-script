@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x0200181F RID: 6175
+// Token: 0x02000CD8 RID: 3288
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,12 +13,12 @@ using UnrealEngine;
 })]
 public class OneTextTitleItem : TitleItemBase<TableTextArgNew>
 {
-	// Token: 0x0600B521 RID: 46369 RVA: 0x0028E331 File Offset: 0x0028C531
+	// Token: 0x0600890C RID: 35084 RVA: 0x00298A51 File Offset: 0x00296C51
 	public OneTextTitleItem(UUIItem uiItem) : base(uiItem)
 	{
 	}
 
-	// Token: 0x0600B522 RID: 46370 RVA: 0x0028E33C File Offset: 0x0028C53C
+	// Token: 0x0600890D RID: 35085 RVA: 0x00298A5C File Offset: 0x00296C5C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -30,17 +30,17 @@ public class OneTextTitleItem : TitleItemBase<TableTextArgNew>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B523 RID: 46371 RVA: 0x0028E384 File Offset: 0x0028C584
+	// Token: 0x0600890E RID: 35086 RVA: 0x00298AA4 File Offset: 0x00296CA4
 	public override void ShowTemp(TableTextArgNew data, DropDownItemBase<TableTextArgNew> selectedItemObj)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.TextKey, data.Params);
 	}
 
-	// Token: 0x02007E0B RID: 32267
+	// Token: 0x02006F91 RID: 28561
 	[NullableContext(0)]
 	private class ECompDefine
 	{
-		// Token: 0x040293FE RID: 168958
+		// Token: 0x04024729 RID: 149289
 		public const int Title = 0;
 	}
 }

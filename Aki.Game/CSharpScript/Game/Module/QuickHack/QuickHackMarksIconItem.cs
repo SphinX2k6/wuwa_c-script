@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F87 RID: 20359
+	// Token: 0x02003F50 RID: 16208
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class QuickHackMarksIconItem : UiPanelBase
 	{
-		// Token: 0x06034209 RID: 213513 RVA: 0x00C3B7A0 File Offset: 0x00C399A0
+		// Token: 0x06029077 RID: 168055 RVA: 0x00B84F4C File Offset: 0x00B8314C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -34,13 +34,13 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603420A RID: 213514 RVA: 0x00C3B86C File Offset: 0x00C39A6C
+		// Token: 0x06029078 RID: 168056 RVA: 0x00B85018 File Offset: 0x00B83218
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603420B RID: 213515 RVA: 0x00C3B880 File Offset: 0x00C39A80
+		// Token: 0x06029079 RID: 168057 RVA: 0x00B8502C File Offset: 0x00B8322C
 		protected override void OnBeforeDestroy()
 		{
 			this.StopLoopAudio();
@@ -65,13 +65,13 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x0603420C RID: 213516 RVA: 0x00C3B8E3 File Offset: 0x00C39AE3
+		// Token: 0x0602907A RID: 168058 RVA: 0x00B8508F File Offset: 0x00B8328F
 		public int GetMarkId()
 		{
 			return this.MarkId;
 		}
 
-		// Token: 0x0603420D RID: 213517 RVA: 0x00C3B8EC File Offset: 0x00C39AEC
+		// Token: 0x0602907B RID: 168059 RVA: 0x00B85098 File Offset: 0x00B83298
 		[NullableContext(1)]
 		public void StartPerform(QuickHackMarkInstance mark, Action<int> onFinish)
 		{
@@ -109,20 +109,20 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.UpdateProgress(mark.GetCurrentProgress());
 		}
 
-		// Token: 0x0603420E RID: 213518 RVA: 0x00C3B9FF File Offset: 0x00C39BFF
+		// Token: 0x0602907C RID: 168060 RVA: 0x00B851AB File Offset: 0x00B833AB
 		private void UpdateProgress(double progress)
 		{
 			base.GetSprite(1).SetFillAmount((float)progress);
 			base.GetTexture(3).SetFillAmount((float)progress);
 		}
 
-		// Token: 0x0603420F RID: 213519 RVA: 0x00C3BA1D File Offset: 0x00C39C1D
+		// Token: 0x0602907D RID: 168061 RVA: 0x00B851C9 File Offset: 0x00B833C9
 		private void OnStateChange(EQuickHackMarkState lastState, EQuickHackMarkState state)
 		{
 			this.UpdateState(new EQuickHackMarkState?(lastState), state);
 		}
 
-		// Token: 0x06034210 RID: 213520 RVA: 0x00C3BA2C File Offset: 0x00C39C2C
+		// Token: 0x0602907E RID: 168062 RVA: 0x00B851D8 File Offset: 0x00B833D8
 		private void UpdateState(EQuickHackMarkState? lastState, EQuickHackMarkState state)
 		{
 			if (state == EQuickHackMarkState.Upload)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034211 RID: 213521 RVA: 0x00C3BAEC File Offset: 0x00C39CEC
+		// Token: 0x0602907F RID: 168063 RVA: 0x00B85298 File Offset: 0x00B83498
 		private void FinishPerform()
 		{
 			this.Timer = null;
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.Mark = null;
 		}
 
-		// Token: 0x06034212 RID: 213522 RVA: 0x00C3BB40 File Offset: 0x00C39D40
+		// Token: 0x06029080 RID: 168064 RVA: 0x00B852EC File Offset: 0x00B834EC
 		private void StartLoopAudio()
 		{
 			if (this.LoopAudioEventHandle != 0)
@@ -213,13 +213,13 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034213 RID: 213523 RVA: 0x00C3BB8C File Offset: 0x00C39D8C
+		// Token: 0x06029081 RID: 168065 RVA: 0x00B85338 File Offset: 0x00B83538
 		private void OnQuickHackClose()
 		{
 			this.StopLoopAudio();
 		}
 
-		// Token: 0x06034214 RID: 213524 RVA: 0x00C3BB94 File Offset: 0x00C39D94
+		// Token: 0x06029082 RID: 168066 RVA: 0x00B85340 File Offset: 0x00B83540
 		private void StopLoopAudio()
 		{
 			if (this.LoopAudioEventHandle == 0)
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			EventSystem.Instance.Remove(EEventName.OnQuickHackClose, new Action(this.OnQuickHackClose));
 		}
 
-		// Token: 0x06034215 RID: 213525 RVA: 0x00C3BBE8 File Offset: 0x00C39DE8
+		// Token: 0x06029083 RID: 168067 RVA: 0x00B85394 File Offset: 0x00B83594
 		private void UpdateColorStyle(bool isRed)
 		{
 			string hexStr = isRed ? "#FF4F4BFF" : "#6CF4F8FF";
@@ -240,41 +240,41 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.SetSpriteByPath(UiResourceConfig.Instance.GetResourcePath(isRed ? "QuickHackMarkProgressRed" : "QuickHackMarkProgressBlue"), base.GetSprite(1), false, null, null);
 		}
 
-		// Token: 0x0401BB72 RID: 113522
+		// Token: 0x04016547 RID: 91463
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0401BB73 RID: 113523
+		// Token: 0x04016548 RID: 91464
 		private QuickHackMarkInstance Mark;
 
-		// Token: 0x0401BB74 RID: 113524
+		// Token: 0x04016549 RID: 91465
 		private int MarkId;
 
-		// Token: 0x0401BB75 RID: 113525
+		// Token: 0x0401654A RID: 91466
 		private Action<int> OnFinish;
 
-		// Token: 0x0401BB76 RID: 113526
+		// Token: 0x0401654B RID: 91467
 		private TimerHandle Timer;
 
-		// Token: 0x0401BB77 RID: 113527
+		// Token: 0x0401654C RID: 91468
 		private int LoopAudioEventHandle;
 
-		// Token: 0x0200B099 RID: 45209
+		// Token: 0x02009AC9 RID: 39625
 		[NullableContext(0)]
 		private class EComponentType
 		{
-			// Token: 0x04035978 RID: 219512
+			// Token: 0x040303A3 RID: 197539
 			public const int IconItem = 0;
 
-			// Token: 0x04035979 RID: 219513
+			// Token: 0x040303A4 RID: 197540
 			public const int ProgressSprite = 1;
 
-			// Token: 0x0403597A RID: 219514
+			// Token: 0x040303A5 RID: 197541
 			public const int SkillIconTexture = 2;
 
-			// Token: 0x0403597B RID: 219515
+			// Token: 0x040303A6 RID: 197542
 			public const int SkillIconMaskTexture = 3;
 
-			// Token: 0x0403597C RID: 219516
+			// Token: 0x040303A7 RID: 197543
 			public const int BgSprite = 4;
 		}
 	}

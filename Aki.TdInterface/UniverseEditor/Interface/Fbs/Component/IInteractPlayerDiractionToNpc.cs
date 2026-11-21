@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200545E RID: 21598
+	// Token: 0x020059E4 RID: 23012
 	public struct IInteractPlayerDiractionToNpc : IFlatbufferObject
 	{
-		// Token: 0x17009F0A RID: 40714
-		// (get) Token: 0x06023883 RID: 145539 RVA: 0x004EA578 File Offset: 0x004E8778
+		// Token: 0x1700A744 RID: 42820
+		// (get) Token: 0x0602593B RID: 153915 RVA: 0x005275EC File Offset: 0x005257EC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023884 RID: 145540 RVA: 0x004EA585 File Offset: 0x004E8785
+		// Token: 0x0602593C RID: 153916 RVA: 0x005275F9 File Offset: 0x005257F9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023885 RID: 145541 RVA: 0x004EA58C File Offset: 0x004E878C
+		// Token: 0x0602593D RID: 153917 RVA: 0x00527600 File Offset: 0x00525800
 		public static IInteractPlayerDiractionToNpc GetRootAsIInteractPlayerDiractionToNpc(ByteBuffer _bb)
 		{
 			return IInteractPlayerDiractionToNpc.GetRootAsIInteractPlayerDiractionToNpc(_bb, default(IInteractPlayerDiractionToNpc));
 		}
 
-		// Token: 0x06023886 RID: 145542 RVA: 0x004EA5A8 File Offset: 0x004E87A8
+		// Token: 0x0602593E RID: 153918 RVA: 0x0052761C File Offset: 0x0052581C
 		public static IInteractPlayerDiractionToNpc GetRootAsIInteractPlayerDiractionToNpc(ByteBuffer _bb, IInteractPlayerDiractionToNpc obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023887 RID: 145543 RVA: 0x004EA5C5 File Offset: 0x004E87C5
+		// Token: 0x0602593F RID: 153919 RVA: 0x00527639 File Offset: 0x00525839
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023888 RID: 145544 RVA: 0x004EA5D4 File Offset: 0x004E87D4
+		// Token: 0x06025940 RID: 153920 RVA: 0x00527648 File Offset: 0x00525848
 		public IInteractPlayerDiractionToNpc __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009F0B RID: 40715
-		// (get) Token: 0x06023889 RID: 145545 RVA: 0x004EA5E4 File Offset: 0x004E87E4
+		// Token: 0x1700A745 RID: 42821
+		// (get) Token: 0x06025941 RID: 153921 RVA: 0x00527658 File Offset: 0x00525858
 		public EInteractPlayerDiractionType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602388A RID: 145546 RVA: 0x004EA620 File Offset: 0x004E8820
+		// Token: 0x06025942 RID: 153922 RVA: 0x00527694 File Offset: 0x00525894
 		public static Offset<IInteractPlayerDiractionToNpc> CreateIInteractPlayerDiractionToNpc(FlatBufferBuilder builder, EInteractPlayerDiractionType Type = EInteractPlayerDiractionType.Npc)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IInteractPlayerDiractionToNpc.EndIInteractPlayerDiractionToNpc(builder);
 		}
 
-		// Token: 0x0602388B RID: 145547 RVA: 0x004EA636 File Offset: 0x004E8836
+		// Token: 0x06025943 RID: 153923 RVA: 0x005276AA File Offset: 0x005258AA
 		public static void StartIInteractPlayerDiractionToNpc(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602388C RID: 145548 RVA: 0x004EA63F File Offset: 0x004E883F
+		// Token: 0x06025944 RID: 153924 RVA: 0x005276B3 File Offset: 0x005258B3
 		public static void AddType(FlatBufferBuilder builder, EInteractPlayerDiractionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602388D RID: 145549 RVA: 0x004EA64A File Offset: 0x004E884A
+		// Token: 0x06025945 RID: 153925 RVA: 0x005276BE File Offset: 0x005258BE
 		public static Offset<IInteractPlayerDiractionToNpc> EndIInteractPlayerDiractionToNpc(FlatBufferBuilder builder)
 		{
 			return new Offset<IInteractPlayerDiractionToNpc>(builder.EndTable());
 		}
 
-		// Token: 0x0602388E RID: 145550 RVA: 0x004EA658 File Offset: 0x004E8858
+		// Token: 0x06025946 RID: 153926 RVA: 0x005276CC File Offset: 0x005258CC
 		public IInteractPlayerDiractionToNpcT UnPack()
 		{
 			IInteractPlayerDiractionToNpcT interactPlayerDiractionToNpcT = new IInteractPlayerDiractionToNpcT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return interactPlayerDiractionToNpcT;
 		}
 
-		// Token: 0x0602388F RID: 145551 RVA: 0x004EA673 File Offset: 0x004E8873
+		// Token: 0x06025947 RID: 153927 RVA: 0x005276E7 File Offset: 0x005258E7
 		public void UnPackTo(IInteractPlayerDiractionToNpcT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06023890 RID: 145552 RVA: 0x004EA684 File Offset: 0x004E8884
+		// Token: 0x06025948 RID: 153928 RVA: 0x005276F8 File Offset: 0x005258F8
 		public static Offset<IInteractPlayerDiractionToNpc> Pack(FlatBufferBuilder builder, IInteractPlayerDiractionToNpcT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IInteractPlayerDiractionToNpc.CreateIInteractPlayerDiractionToNpc(builder, _o.Type);
 		}
 
-		// Token: 0x0400E6D8 RID: 59096
+		// Token: 0x0400F309 RID: 62217
 		private Table __p;
 	}
 }

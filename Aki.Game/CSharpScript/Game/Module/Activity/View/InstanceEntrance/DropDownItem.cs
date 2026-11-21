@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F11 RID: 24337
+	// Token: 0x02004EF8 RID: 20216
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,12 +15,12 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 	})]
 	public class DropDownItem : DropDownItemBase<ActivityEntranceDropDownContentData>
 	{
-		// Token: 0x0603DD5F RID: 253279 RVA: 0x00EF1ECC File Offset: 0x00EF00CC
+		// Token: 0x06032CFA RID: 208122 RVA: 0x00E43BD4 File Offset: 0x00E41DD4
 		public DropDownItem(UUIItem uiItem) : base(uiItem)
 		{
 		}
 
-		// Token: 0x0603DD60 RID: 253280 RVA: 0x00EF1ED8 File Offset: 0x00EF00D8
+		// Token: 0x06032CFB RID: 208123 RVA: 0x00E43BE0 File Offset: 0x00E41DE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DD61 RID: 253281 RVA: 0x00EF1F44 File Offset: 0x00EF0144
+		// Token: 0x06032CFC RID: 208124 RVA: 0x00E43C4C File Offset: 0x00E41E4C
 		protected override void OnShowDropDownItemBase(ActivityEntranceDropDownContentData data)
 		{
 			string newText = data.GetTogOptionText() ?? "";
@@ -46,20 +46,20 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			text.SetText(newText, true);
 		}
 
-		// Token: 0x0603DD62 RID: 253282 RVA: 0x00EF1F74 File Offset: 0x00EF0174
+		// Token: 0x06032CFD RID: 208125 RVA: 0x00E43C7C File Offset: 0x00E41E7C
 		protected override UUIExtendToggle GetDropDownToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x0200C240 RID: 49728
+		// Token: 0x0200AC4D RID: 44109
 		[NullableContext(0)]
 		private class EDropDownItemComponent
 		{
-			// Token: 0x0403AAF8 RID: 240376
+			// Token: 0x040354EA RID: 218346
 			public const int TogOption = 0;
 
-			// Token: 0x0403AAF9 RID: 240377
+			// Token: 0x040354EB RID: 218347
 			public const int TxtOption = 1;
 		}
 	}

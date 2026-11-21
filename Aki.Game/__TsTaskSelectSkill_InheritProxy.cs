@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020036B0 RID: 14000
+// Token: 0x02002C25 RID: 11301
 public class __TsTaskSelectSkill_InheritProxy : TsTaskSelectSkill
 {
-	// Token: 0x0601E367 RID: 123751 RVA: 0x00884E74 File Offset: 0x00883074
+	// Token: 0x0601C080 RID: 114816 RVA: 0x008AC84C File Offset: 0x008AAA4C
 	[NullableContext(1)]
 	public __TsTaskSelectSkill_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskSelectSkill.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E368 RID: 123752 RVA: 0x00884EA7 File Offset: 0x008830A7
+	// Token: 0x0601C081 RID: 114817 RVA: 0x008AC87F File Offset: 0x008AAA7F
 	protected __TsTaskSelectSkill_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E369 RID: 123753 RVA: 0x00884EB0 File Offset: 0x008830B0
+	// Token: 0x0601C082 RID: 114818 RVA: 0x008AC888 File Offset: 0x008AAA88
 	protected unsafe override void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

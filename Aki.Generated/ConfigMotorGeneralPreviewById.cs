@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005A5 RID: 1445
+	// Token: 0x020005BC RID: 1468
 	public class ConfigMotorGeneralPreviewById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060021EB RID: 8683 RVA: 0x0011967C File Offset: 0x0011787C
+		// Token: 0x06002275 RID: 8821 RVA: 0x0011FF64 File Offset: 0x0011E164
 		static ConfigMotorGeneralPreviewById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMotorGeneralPreviewById.CreateStaticDefaultValue), new Action(ConfigMotorGeneralPreviewById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060021EC RID: 8684 RVA: 0x0011969C File Offset: 0x0011789C
+		// Token: 0x06002276 RID: 8822 RVA: 0x0011FF84 File Offset: 0x0011E184
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMotorGeneralPreviewById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060021ED RID: 8685 RVA: 0x0011971B File Offset: 0x0011791B
+		// Token: 0x06002277 RID: 8823 RVA: 0x00120003 File Offset: 0x0011E203
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMotorGeneralPreviewById.LogPair = null;
 			ConfigMotorGeneralPreviewById.HandleId = 0;
 		}
 
-		// Token: 0x060021EE RID: 8686 RVA: 0x00119729 File Offset: 0x00117929
+		// Token: 0x06002278 RID: 8824 RVA: 0x00120011 File Offset: 0x0011E211
 		public static void Init()
 		{
 			ConfigMotorGeneralPreviewById.HandleId = ConfigCommon.InitDataStatement(ConfigMotorGeneralPreviewById.HandleId, "db_motorgeneralpreview.db", "select BinData from `MotorGeneralPreview` where Id=?");
 		}
 
-		// Token: 0x060021EF RID: 8687 RVA: 0x00119744 File Offset: 0x00117944
+		// Token: 0x06002279 RID: 8825 RVA: 0x0012002C File Offset: 0x0011E22C
 		public static MotorGeneralPreview? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMotorGeneralPreviewById.HandleId, ConfigMotorGeneralPreviewById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MotorGeneralPreview?(rootAsMotorGeneralPreview);
 		}
 
-		// Token: 0x04002767 RID: 10087
+		// Token: 0x04002808 RID: 10248
 		private const string DB = "db_motorgeneralpreview.db";
 
-		// Token: 0x04002768 RID: 10088
+		// Token: 0x04002809 RID: 10249
 		private const string FILE = "m.摩托车通用预览.xlsx";
 
-		// Token: 0x04002769 RID: 10089
+		// Token: 0x0400280A RID: 10250
 		private const string TABLE = "MotorGeneralPreview";
 
-		// Token: 0x0400276A RID: 10090
+		// Token: 0x0400280B RID: 10251
 		private const string COMMAND = "select BinData from `MotorGeneralPreview` where Id=?";
 
-		// Token: 0x0400276B RID: 10091
+		// Token: 0x0400280C RID: 10252
 		private const string KEY_PREFIX = "MotorGeneralPreviewById";
 
-		// Token: 0x0400276C RID: 10092
+		// Token: 0x0400280D RID: 10253
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400276D RID: 10093
+		// Token: 0x0400280E RID: 10254
 		private static int HandleId;
 	}
 }

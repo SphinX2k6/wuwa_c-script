@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Utils;
 
-// Token: 0x02002FE6 RID: 12262
+// Token: 0x0200253B RID: 9531
 [NullableContext(1)]
 [Nullable(0)]
 public class TagStackTrigger : Trigger
 {
-	// Token: 0x06019FDC RID: 106460 RVA: 0x006CD6F0 File Offset: 0x006CB8F0
+	// Token: 0x06017910 RID: 96528 RVA: 0x006F55BC File Offset: 0x006F37BC
 	[NullableContext(2)]
 	public TagStackTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x06019FDD RID: 106461 RVA: 0x006CD704 File Offset: 0x006CB904
+	// Token: 0x06017911 RID: 96529 RVA: 0x006F55D0 File Offset: 0x006F37D0
 	public override void OnInitParams(string[] triggerParams)
 	{
 		string tagName = (triggerParams.Length != 0) ? triggerParams[0].Trim() : string.Empty;
@@ -22,7 +22,7 @@ public class TagStackTrigger : Trigger
 		this.InitBehavior = (TagTrigger.ETagTriggerInitBehavior)Convert.ToInt32((triggerParams.Length > 1) ? triggerParams[1] : "0");
 	}
 
-	// Token: 0x06019FDE RID: 106462 RVA: 0x006CD74C File Offset: 0x006CB94C
+	// Token: 0x06017912 RID: 96530 RVA: 0x006F5618 File Offset: 0x006F3818
 	protected override void OnActive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -61,7 +61,7 @@ public class TagStackTrigger : Trigger
 		baseTagComponent2.AddTagChangedListener(this.TagId, new BaseTagComponent.TTagChangedCallback(this.OnEvent), null);
 	}
 
-	// Token: 0x06019FDF RID: 106463 RVA: 0x006CD800 File Offset: 0x006CBA00
+	// Token: 0x06017913 RID: 96531 RVA: 0x006F56CC File Offset: 0x006F38CC
 	protected override void OnInactive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -83,7 +83,7 @@ public class TagStackTrigger : Trigger
 		baseTagComponent2.RemoveTagChangedListener(this.TagId, new BaseTagComponent.TTagChangedCallback(this.OnEvent));
 	}
 
-	// Token: 0x06019FE0 RID: 106464 RVA: 0x006CD848 File Offset: 0x006CBA48
+	// Token: 0x06017914 RID: 96532 RVA: 0x006F5714 File Offset: 0x006F3914
 	protected void OnEvent(int newCount, int tagId, int exactTagId, int oldCount)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -97,18 +97,18 @@ public class TagStackTrigger : Trigger
 		this.OldCount = newCount;
 	}
 
-	// Token: 0x06019FE1 RID: 106465 RVA: 0x006CD8A4 File Offset: 0x006CBAA4
+	// Token: 0x06017915 RID: 96533 RVA: 0x006F5770 File Offset: 0x006F3970
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4BD RID: 50365
+	// Token: 0x0400C885 RID: 51333
 	protected int TagId;
 
-	// Token: 0x0400C4BE RID: 50366
+	// Token: 0x0400C886 RID: 51334
 	protected int OldCount;
 
-	// Token: 0x0400C4BF RID: 50367
+	// Token: 0x0400C887 RID: 51335
 	protected TagTrigger.ETagTriggerInitBehavior InitBehavior;
 }

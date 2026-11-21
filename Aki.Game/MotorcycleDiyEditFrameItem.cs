@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002275 RID: 8821
+// Token: 0x02001759 RID: 5977
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class MotorcycleDiyEditFrameItem : GridProxyAbstract<MotorcycleDiyEditFrameItemData>
 {
-	// Token: 0x060113AA RID: 70570 RVA: 0x00433830 File Offset: 0x00431A30
+	// Token: 0x0600E840 RID: 59456 RVA: 0x0044043C File Offset: 0x0043E63C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class MotorcycleDiyEditFrameItem : GridProxyAbstract<MotorcycleDiyEditFra
 		};
 	}
 
-	// Token: 0x060113AB RID: 70571 RVA: 0x00433934 File Offset: 0x00431B34
+	// Token: 0x0600E841 RID: 59457 RVA: 0x00440540 File Offset: 0x0043E740
 	[NullableContext(1)]
 	public override void Refresh(MotorcycleDiyEditFrameItemData data, bool isSelected, int gridIndex)
 	{
@@ -74,13 +74,13 @@ public class MotorcycleDiyEditFrameItem : GridProxyAbstract<MotorcycleDiyEditFra
 		base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x060113AC RID: 70572 RVA: 0x00433AA0 File Offset: 0x00431CA0
+	// Token: 0x0600E842 RID: 59458 RVA: 0x004406AC File Offset: 0x0043E8AC
 	public override void OnSelected(bool fireEvent)
 	{
 		this.OnClickItem(EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x060113AD RID: 70573 RVA: 0x00433AA9 File Offset: 0x00431CA9
+	// Token: 0x0600E843 RID: 59459 RVA: 0x004406B5 File Offset: 0x0043E8B5
 	private void OnClickItem(EToggleState toggleState)
 	{
 		if (this.FrameId == 0)
@@ -95,10 +95,10 @@ public class MotorcycleDiyEditFrameItem : GridProxyAbstract<MotorcycleDiyEditFra
 		onClickToggleBack(this.FrameId, base.GetExtendToggle(0), base.GetItem(6));
 	}
 
-	// Token: 0x0400831B RID: 33563
+	// Token: 0x04008459 RID: 33881
 	private int FrameId;
 
-	// Token: 0x0400831C RID: 33564
+	// Token: 0x0400845A RID: 33882
 	[Nullable(new byte[]
 	{
 		2,
@@ -107,34 +107,34 @@ public class MotorcycleDiyEditFrameItem : GridProxyAbstract<MotorcycleDiyEditFra
 	})]
 	public Action<int, UUIExtendToggle, UUIItem> OnClickToggleBack;
 
-	// Token: 0x020087B8 RID: 34744
+	// Token: 0x02007941 RID: 31041
 	private class EEditFrameItemComponent
 	{
-		// Token: 0x0402C1AE RID: 180654
+		// Token: 0x040274C6 RID: 160966
 		public const int TogFrame = 0;
 
-		// Token: 0x0402C1AF RID: 180655
+		// Token: 0x040274C7 RID: 160967
 		public const int TexIcon = 1;
 
-		// Token: 0x0402C1B0 RID: 180656
+		// Token: 0x040274C8 RID: 160968
 		public const int TexQuality1 = 2;
 
-		// Token: 0x0402C1B1 RID: 180657
+		// Token: 0x040274C9 RID: 160969
 		public const int TexQuality2 = 3;
 
-		// Token: 0x0402C1B2 RID: 180658
+		// Token: 0x040274CA RID: 160970
 		public const int PnlSelect = 4;
 
-		// Token: 0x0402C1B3 RID: 180659
+		// Token: 0x040274CB RID: 160971
 		public const int Pnllock = 5;
 
-		// Token: 0x0402C1B4 RID: 180660
+		// Token: 0x040274CC RID: 160972
 		public const int NewItem = 6;
 
-		// Token: 0x0402C1B5 RID: 180661
+		// Token: 0x040274CD RID: 160973
 		public const int BanItem = 7;
 
-		// Token: 0x0402C1B6 RID: 180662
+		// Token: 0x040274CE RID: 160974
 		public const int PreviewItem = 8;
 	}
 }

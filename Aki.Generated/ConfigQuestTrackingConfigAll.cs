@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200078A RID: 1930
+	// Token: 0x020007A4 RID: 1956
 	public class ConfigQuestTrackingConfigAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002D4E RID: 11598 RVA: 0x0015947F File Offset: 0x0015767F
+		// Token: 0x06002DEA RID: 11754 RVA: 0x0016038B File Offset: 0x0015E58B
 		static ConfigQuestTrackingConfigAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuestTrackingConfigAll.CreateStaticDefaultValue), new Action(ConfigQuestTrackingConfigAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002D4F RID: 11599 RVA: 0x001594A0 File Offset: 0x001576A0
+		// Token: 0x06002DEB RID: 11755 RVA: 0x001603AC File Offset: 0x0015E5AC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuestTrackingConfigAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002D50 RID: 11600 RVA: 0x0015951F File Offset: 0x0015771F
+		// Token: 0x06002DEC RID: 11756 RVA: 0x0016042B File Offset: 0x0015E62B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuestTrackingConfigAll.LogPair = null;
 			ConfigQuestTrackingConfigAll.HandleId = 0;
 		}
 
-		// Token: 0x06002D51 RID: 11601 RVA: 0x0015952D File Offset: 0x0015772D
+		// Token: 0x06002DED RID: 11757 RVA: 0x00160439 File Offset: 0x0015E639
 		public static void Init()
 		{
 			ConfigQuestTrackingConfigAll.HandleId = ConfigCommon.InitDataStatement(ConfigQuestTrackingConfigAll.HandleId, "db_questtrackingconfig.db", "select BinData from `QuestTrackingConfig`");
 		}
 
-		// Token: 0x06002D52 RID: 11602 RVA: 0x00159548 File Offset: 0x00157748
+		// Token: 0x06002DEE RID: 11758 RVA: 0x00160454 File Offset: 0x0015E654
 		[NullableContext(2)]
 		public static IReadOnlyList<QuestTrackingConfig> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040034AC RID: 13484
+		// Token: 0x04003562 RID: 13666
 		private const string DB = "db_questtrackingconfig.db";
 
-		// Token: 0x040034AD RID: 13485
+		// Token: 0x04003563 RID: 13667
 		private const string FILE = "k.可视化编辑/c.Csv/r.任务追踪配置/*.csv*";
 
-		// Token: 0x040034AE RID: 13486
+		// Token: 0x04003564 RID: 13668
 		private const string TABLE = "QuestTrackingConfig";
 
-		// Token: 0x040034AF RID: 13487
+		// Token: 0x04003565 RID: 13669
 		private const string COMMAND = "select BinData from `QuestTrackingConfig`";
 
-		// Token: 0x040034B0 RID: 13488
+		// Token: 0x04003566 RID: 13670
 		private const string KEY_PREFIX = "QuestTrackingConfigAll";
 
-		// Token: 0x040034B1 RID: 13489
+		// Token: 0x04003567 RID: 13671
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040034B2 RID: 13490
+		// Token: 0x04003568 RID: 13672
 		private static int HandleId;
 	}
 }
